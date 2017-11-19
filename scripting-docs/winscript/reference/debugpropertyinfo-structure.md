@@ -1,63 +1,66 @@
 ---
-title: "DebugPropertyInfo 構造体 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "DebugPropertyInfo 構造体 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: DebugPropertyInfo
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "DebugPropertyInfo 構造体"
+helpviewer_keywords: DebugPropertyInfo structure
 ms.assetid: 3246efbc-c212-4024-8f07-6414c2f85e75
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c9baade1a742a06c952906c05c574e752806bc9c
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# DebugPropertyInfo 構造体
-名前、型、および値を持つ階層的な性質オブジェクトを表します。  ローカル変数のデバッグ プロパティを、パラメーター、ウォッチ変数、式、およびレジスタ記述するために使用されます。  
+# <a name="debugpropertyinfo-structure"></a>DebugPropertyInfo 構造体
+名前、型、および値を持つ階層的な性質のオブジェクトについて説明します。 ローカル変数やパラメーター、変数のウォッチ式のデバッグ プロパティを表すために使用し、登録します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 typedef struct DebugPropertyInfo{  
-   DBGPROP_INFO_FLAGS  dwValidFields;  
-   BSTR  bstrName;  
-   BSTR  bstrType;  
-   BSTR  bstrValue;  
-   BSTR  bstrFullName;  
-   DBGPROP_ATTRIB_FLAGS  dwAttrib;  
-   IDebugProperty*  pDebugProp;  
+   DBGPROP_INFO_FLAGS  dwValidFields;  
+   BSTR  bstrName;  
+   BSTR  bstrType;  
+   BSTR  bstrValue;  
+   BSTR  bstrFullName;  
+   DBGPROP_ATTRIB_FLAGS  dwAttrib;  
+   IDebugProperty*  pDebugProp;  
 };  
 ```  
   
-## メンバー  
+## <a name="members"></a>メンバー  
  dwValidFields  
- フィールドが初期化される場所を指定する列挙型。  
+ 列挙型のフィールドが初期化されますを指定するために使用します。  
   
  bstrName  
- コンテキスト内のプロパティ名。  
+ コンテキスト内でプロパティ名。  
   
  bstrType  
- 書式設定された文字列としてプロパティ型。  
+ プロパティの型、書式設定された文字列。  
   
  bstrValue  
- 書式設定された文字列としてプロパティ値。  
+ プロパティの値を書式設定された文字列です。  
   
  bstrFullName  
  プロパティの完全名。  
   
  dwAttrib  
- デバッグ プロパティのフラグを指定する列挙種別です。  
+ デバッグ プロパティの属性のフラグを指定する列挙です。  
   
  pDebugProp  
- この `DebugPropertyInfo` の構造で情報で説明されている `IDebugProperty`。  
+ `IDebugProperty`この情報によって記述`DebugPropertyInfo`構造体。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProperty インターフェイス](../../winscript/reference/idebugproperty-interface.md)   
- [DBGPROP\_ATTRIB\_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)   
- [DBGPROP\_INFO\_FLAGS](../../winscript/reference/dbgprop-info-flags.md)
+ [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)   
+ [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)

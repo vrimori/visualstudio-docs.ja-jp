@@ -1,49 +1,50 @@
 ---
-title: "decodeURIComponent 関数 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "decodeURIComponent"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "decodeURIComponent メソッド"
+title: "decodeURIComponent 関数 (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: decodeURIComponent
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: decodeURIComponent method
 ms.assetid: 486ccee2-afd7-4863-97ce-4adb50cf39c0
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: ef7bdcd374a328bad632381d19e9823853d37f01
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# decodeURIComponent 関数 (JavaScript)
-エンコード前の URI \(Uniform Resource Identifier\) コンポーネントを取得します。  
+# <a name="decodeuricomponent-function-javascript"></a>decodeURIComponent 関数 (JavaScript)
+エンコードされていないバージョンのエンコードされたコンポーネントの Uniform Resource Identifier () を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 decodeURIComponent(encodedURIString)  
 ```  
   
-## 解説  
- `encodedURIString` 引数は必須で、エンコードされた URI コンポーネントを表す値を指定します。  
+## <a name="remarks"></a>コメント  
+ 必要な`encodedURIString`引数には、エンコードされた URI コンポーネントを表す値です。  
   
- URIComponent は完全な URI の一部です。  
+ 完全な URI の一部である、URIComponent です。  
   
- `encodedURIString` が無効な場合は URIError が発生します。  
+ 場合、`encodedURIString`が有効でない、URIError が発生します。  
   
-## 使用例  
- 次のコードでは、URI をエンコードしてからデコードします。  
+## <a name="example"></a>例  
+ 次のコードでは、最初にエンコードし、URI をデコードします。  
   
-```javascript  
+```JavaScript  
 var uriEncode = encodeURI ("http://www.Not a URL.com");  
 var uriDecode = decodeURIComponent(uriEncode);  
   
@@ -56,9 +57,9 @@ document.write (uriDecode);
 // http://www.Not a URL.com  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv55](../../javascript/reference/includes/jsv55-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [decodeURI 関数](../../javascript/reference/decodeuri-function-javascript.md)   
  [encodeURI 関数](../../javascript/reference/encodeuri-function-javascript.md)

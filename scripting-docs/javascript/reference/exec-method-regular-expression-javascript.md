@@ -1,58 +1,60 @@
 ---
-title: "exec メソッド (Regular Expression) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "exec"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "Exec メソッド"
-  - "対応する文字列"
+title: "exec メソッド (Regular Expression) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: exec
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- matching strings
+- Exec method
 ms.assetid: 83092452-60cc-4218-b4ae-af9e3cb96c34
-caps.latest.revision: 17
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 426cc1a8162b03090289cf737a03d64a75df77e9
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# exec メソッド (Regular Expression) (JavaScript)
-正規表現パターンを使って文字列に対して検索を実行し、検索結果を配列に格納して返します。  
+# <a name="exec-method-regular-expression-javascript"></a>exec メソッド (Regular Expression) (JavaScript)
+正規表現パターンを使用して文字列の検索を実行し、その検索の結果を含む配列を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 rgExp.exec(str)   
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `rgExp`  
- 必須です。  検索に使用する正規表現のパターンと適用できるフラグを格納した **Regular Expression** オブジェクトのインスタンスです。  
+ 必須です。 インスタンス、**正規表現**正規表現パターンおよび適用できるフラグを含むオブジェクト。  
   
  `str`  
- 必須です。  検索対象とする `String` オブジェクトの名前またはリテラル文字列を指定します。  
+ 必須です。 検索対象とする `String` オブジェクトの名前またはリテラル文字列を指定します。  
   
-## 解説  
- パターンに一致する文字列が見つからなかった場合、`exec` メソッドは `null` を返します。  一致する文字列が見つかった場合は、`exec` は配列を返し、さらにグローバルな `RegExp` オブジェクトのプロパティが検索結果を反映して更新されます。  配列の要素 0 には一致結果全体が、要素が 1 から *n* には、一致結果の中に副次的に含まれる一致の内容が格納されます。  この処理は、グローバル フラグ \(**g**\) が設定されていない場合の `match` メソッドの処理と同じです。  
+## <a name="remarks"></a>コメント  
+ パターンに一致する文字列が見つからなかった場合、`exec` メソッドは `null` を返します。 一致する文字列が見つかった場合、`exec` は配列を返し、さらにグローバルな `RegExp` オブジェクトのプロパティが検索結果を反映して更新されます。 配列の要素 0 には、一致した文字列全体、要素が 1 - が含まれています。  *n* 一致内で発生した任意の副次的に含まれています。 動作に同じ動作であり、`match`グローバル フラグを設定しないメソッド (**g**) を設定します。  
   
- 正規表現でグローバル フラグが設定されている場合、`exec` により、`lastIndex` の値で指定された位置から文字列の検索が開始されます。  グローバル フラグが設定されていない場合、`exec` により、`lastIndex` の値に関係なく、検索は文字列の先頭から開始されます。  
+ 正規表現では、グローバル フラグが設定されている場合`exec`の値によって示される位置から始まる文字列を検索`lastIndex`です。 グローバル フラグが設定されていない場合`exec`の値を無視`lastIndex`検索文字列の先頭から開始します。  
   
- `exec` メソッドが返す配列には、**input**、**index**、および **lastIndex** の 3 つのプロパティがあります。**input** プロパティには、検索された文字列全体が格納されます。  **index** プロパティには、検索された文字列内の一致した部分文字列の位置が格納されます。  `lastIndex` プロパティには、一致文字列の末尾の文字に続く位置が格納されます。  
+ によって返される配列、`exec`メソッドが 3 つのプロパティを持つ**入力**、**インデックス**と**lastIndex です。** **入力**プロパティには、検索した文字列全体が含まれています。 **インデックス**プロパティには、検索された文字列内で一致した部分文字列の位置が含まれています。 `lastIndex`プロパティには、一致している最後の文字の直後の位置が含まれています。  
   
-## 使用例  
- `exec` メソッドの使用例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、使用、`exec`メソッド。  
   
-```javascript  
+```JavaScript  
 function RegExpTest()  
 {  
    var ver = Number(ScriptEngineMajorVersion() + "." + ScriptEngineMinorVersion())  
@@ -79,15 +81,15 @@ function RegExpTest()
 }  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv3](../../javascript/reference/includes/jsv3-md.md)]  
   
- **対象**: [Regular Expression オブジェクト](../../javascript/reference/regular-expression-object-javascript.md)  
+ **適用されます**: [Regular Expression オブジェクト](../../javascript/reference/regular-expression-object-javascript.md)  
   
-## 参照  
- [match メソッド \(String\)](../../javascript/reference/match-method-string-javascript.md)   
+## <a name="see-also"></a>関連項目  
+ [match メソッド (String)](../../javascript/reference/match-method-string-javascript.md)   
  [RegExp オブジェクト](../../javascript/reference/regexp-object-javascript.md)   
- [Regular Expression Syntax \(JavaScript\)](http://msdn.microsoft.com/ja-jp/ab0766e1-7037-45ed-aa23-706f58358c0e)   
- [search メソッド \(String\)](../../javascript/reference/search-method-string-javascript.md)   
- [test メソッド \(Regular Expression\)](../../javascript/reference/test-method-regular-expression-javascript.md)   
- [Regular Expression Programming \(JavaScript\)](http://msdn.microsoft.com/ja-jp/3b62e27c-4f07-4726-a95b-6e841807bfaf)
+ [正規表現の構文 (JavaScript)](http://msdn.microsoft.com/en-us/ab0766e1-7037-45ed-aa23-706f58358c0e)   
+ [search メソッド (String)](../../javascript/reference/search-method-string-javascript.md)   
+ [test メソッド (Regular Expression)](../../javascript/reference/test-method-regular-expression-javascript.md)   
+ [正規表現プログラミング (JavaScript)](http://msdn.microsoft.com/en-us/3b62e27c-4f07-4726-a95b-6e841807bfaf)

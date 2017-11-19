@@ -4,39 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- http://schemas.microsoft.com/developer/vstemplate/2005#Project
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#Project
 helpviewer_keywords:
 - Project element [Visual Studio Templates]
 - <Project> element [Visual Studio Templates]
 ms.assetid: 1da15ea6-26e2-462b-a03e-584ef4996579
-caps.latest.revision: 16
+caps.latest.revision: "16"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f2995f6486ebb8d3e305c70c03fb543fab04b67a
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 6b4a60bdd81d2e6428d0fdafa6547227a496f862
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="project-element-visual-studio-templates"></a>Project 要素 (Visual Studio テンプレート)
 ファイルまたはプロジェクトに追加するディレクトリを指定します。  
@@ -64,10 +48,10 @@ ms.lasthandoff: 02/22/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|`File`|必須の属性です。<br /><br /> テンプレートの .zip ファイルで、プロジェクト ファイルの名前を指定します。|  
-|`ReplaceParameters`|省略可能な属性です。<br /><br /> プロジェクト ファイルが、テンプレートからプロジェクトが作成されるときに置き換える必要があるパラメーターの値を持つかどうかを指定するブール値。 既定値は `false` です。|  
-|`TargetFileName`|省略可能な属性です。<br /><br /> プロジェクトが、テンプレートから作成されたときに、プロジェクト ファイルの名前を指定します。|  
-|`IgnoreProjectParameter`|省略可能な属性です。<br /><br /> 現在のソリューションにプロジェクトを追加するかどうかを指定します。 場合は、カスタム パラメーターの値"$*myCustomParameter*$"が存在するプロジェクトの作成が現在開いているソリューションの一部として追加しないと、パラメーター置換ファイル内です。|  
+|`File`|必須の属性です。<br /><br /> テンプレートの .zip ファイルには、プロジェクト ファイルの名前を指定します。|  
+|`ReplaceParameters`|省略可能な属性です。<br /><br /> プロジェクト ファイルがテンプレートからプロジェクトの作成時に置き換える必要があるパラメーター値を持つかどうかを指定するブール値。 既定値は `false`にする必要があります。|  
+|`TargetFileName`|省略可能な属性です。<br /><br /> テンプレートからプロジェクトの作成時に、プロジェクト ファイルの名前を指定します。|  
+|`IgnoreProjectParameter`|省略可能な属性です。<br /><br /> 現在のソリューションにプロジェクトを追加するかどうかを指定します。 場合、カスタム パラメーターの値"$*myCustomParameter*$"が存在するパラメーター置換ファイルでプロジェクトを作成しても、現在開いているソリューションの一部として追加できません。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -85,11 +69,11 @@ ms.lasthandoff: 02/22/2017
 ## <a name="remarks"></a>コメント  
  `Project` は、`TemplateContent` の子要素で、省略可能な要素です。  
   
- `Project`要素は、プロジェクトを指定するために使用および、そのため、プロジェクト テンプレートで有効なだけです。  
+ `Project`要素は、プロジェクトを指定するために使用し、そのため、のみが有効ではプロジェクトのテンプレートです。  
   
- `Project`要素があることができます[フォルダー](../extensibility/folder-element-visual-studio-project-templates.md)子要素または[ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md)子要素が、両方の混在させないように`Folder`と`ProjectItem`子要素です。  
+ `Project`要素を持つことができます[フォルダー](../extensibility/folder-element-visual-studio-project-templates.md)子要素または[ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md) 、子要素が、両方の混在させないように`Folder`と`ProjectItem`子要素です。  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ユーザーが入力した名前に基づいて、プロジェクト ファイル名が自動的に変更、**新しいプロジェクト** ダイアログ ボックス。 使用して、`TargetFileName`属性の場合は、テンプレートを使用して作成されたプロジェクト ファイルの別のファイル名を指定します。  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ユーザーが入力した名前に基づいてプロジェクト ファイルの名前が自動的に変更、**新しいプロジェクト** ダイアログ ボックス。 使用して、`TargetFileName`属性の場合は、テンプレートで作成したプロジェクト ファイルの別のファイル名を指定する場合します。  
   
 ## <a name="example"></a>例  
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] アプリケーションでのプロジェクト テンプレートのメタデータの例を次に示します。  
@@ -120,6 +104,6 @@ ms.lasthandoff: 02/22/2017
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [プロジェクトおよび項目テンプレートを作成します。](../ide/creating-project-and-item-templates.md)   
+ [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
  [ProjectItem 要素 (Visual Studio プロジェクト テンプレート)](../extensibility/projectitem-element-visual-studio-project-templates.md)   
  [Folder 要素 (Visual Studio プロジェクト テンプレート)](../extensibility/folder-element-visual-studio-project-templates.md)

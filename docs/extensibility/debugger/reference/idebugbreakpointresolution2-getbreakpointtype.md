@@ -1,54 +1,54 @@
 ---
-title: "IDebugBreakpointResolution2::GetBreakpointType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBreakpointResolution2::GetBreakpointType"
-helpviewer_keywords: 
-  - "IDebugBreakpointResolution2::GetBreakpointType"
+title: "IDebugBreakpointResolution2::GetBreakpointType |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugBreakpointResolution2::GetBreakpointType
+helpviewer_keywords: IDebugBreakpointResolution2::GetBreakpointType
 ms.assetid: 2b707fb9-f703-4c78-91bf-7434f57790a0
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d0870a805e834f48b0d2a7e6d6f66a0f9bb2d7fe
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugBreakpointResolution2::GetBreakpointType
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-この解決によって表されるブレークポイントの種類を取得します。  
+# <a name="idebugbreakpointresolution2getbreakpointtype"></a>IDebugBreakpointResolution2::GetBreakpointType
+この解像度によって表されるブレークポイントの種類を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetBreakpointType(   
-   BP_TYPE* pBPType  
+```cpp  
+HRESULT GetBreakpointType(   
+   BP_TYPE* pBPType  
 );  
 ```  
   
-```c#  
-int GetBreakpointType(   
-   out enum_ BP_TYPE pBPType  
+```csharp  
+int GetBreakpointType(   
+   out enum_ BP_TYPE pBPType  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pBPType`  
- \[出力\] ブレークポイントの [BP\_TYPE](../../../extensibility/debugger/reference/bp-type.md) の種類を指定する列挙型の値を返します。  
+ [out]値を返します、 [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)このブレークポイントの種類を指定する列挙です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コードを返します。  [BP\_RESOLUTION\_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) に関連付けられた構造体の `bpResLocation` のフィールドが無効な場合は E\_FAIL を返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`です。 それ以外の場合はエラー コードを返します。 E_FAIL が返された場合、`bpResLocation`フィールドに関連付けられた[BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)構造が無効です。  
   
-## 解説  
- ブレークポイントはコードまたはデータ ブレークポイントである場合があります。  
+## <a name="remarks"></a>コメント  
+ ブレークポイントがあります、コードまたはデータ ブレークポイント例を示します。  
   
-## 使用例  
- 次の例に [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) インターフェイスを公開する `CDebugBreakpointResolution` の単純なオブジェクトに対してこのメソッドを実装する方法を示します。  
+## <a name="example"></a>例  
+ 次の例は、単純なは、このメソッドを実装する方法を示します`CDebugBreakpointResolution`を公開するオブジェクト、 [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md)インターフェイスです。  
   
 ```  
 HRESULT CDebugBreakpointResolution::GetBreakpointType(BP_TYPE* pBPType)    
@@ -81,9 +81,9 @@ HRESULT CDebugBreakpointResolution::GetBreakpointType(BP_TYPE* pBPType)
 }    
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md)   
- [BP\_TYPE](../../../extensibility/debugger/reference/bp-type.md)   
- [BPRESI\_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)   
- [BP\_RESOLUTION\_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)   
- [BP\_RESOLUTION\_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)
+ [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)   
+ [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)   
+ [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)   
+ [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)

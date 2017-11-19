@@ -4,37 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- IDebugBinder3::GetTypeArgumentCount
-helpviewer_keywords:
-- IDebugBinder3::GetTypeArgumentCount method
+f1_keywords: IDebugBinder3::GetTypeArgumentCount
+helpviewer_keywords: IDebugBinder3::GetTypeArgumentCount method
 ms.assetid: caf68de6-6f7c-4efd-b803-121347a5032e
-caps.latest.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: fcb2dec4b7ea626035af5b6db4205b70d8c2b7e3
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: b6db87ba6ebb2dbe9e6bcd70ffc691e3c3857c1a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="idebugbinder3gettypeargumentcount"></a>IDebugBinder3::GetTypeArgumentCount
 このメソッドは、このオブジェクトに関連付けられている引数の型の数を返します。  
@@ -47,7 +31,7 @@ HRESULT GetTypeArgumentCount(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetTypeArgumentCount(  
    out uint uCount  
 );  
@@ -58,10 +42,10 @@ int GetTypeArgumentCount(
  [out]このオブジェクトに関連付けられている引数の型の数です。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="remarks"></a>コメント  
- このメソッドによって返される値はで使用するための配列を割り当てるために使用することができます、 [GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md)メソッドです。  
+ このメソッドによって返される値は、配列を割り当ててで使用するために使用できます、 [GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md)メソッドです。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)   

@@ -1,54 +1,56 @@
 ---
-title: "方法: SharePoint ソリューションをローカルの SharePoint サイトに配置および発行する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "配置 [Visual Studio での SharePoint 開発]"
-  - "Visual Studio での SharePoint 開発, 配置"
+title: "方法: 展開し、SharePoint ソリューションをローカル SharePoint サイトにパブリッシュ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- deploying [SharePoint development in Visual Studio]
+- SharePoint development in Visual Studio, deploying
 ms.assetid: 73f8d6a9-4c64-4bba-ae0e-9474baf8df26
-caps.latest.revision: 18
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 4959334c9d6949e199ad18934e69ea46e1172b55
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: SharePoint ソリューションをローカルの SharePoint サイトに配置および発行する
-  開発コンピューター上のローカル SharePoint サーバーに SharePoint ソリューションを配置または発行できます。  配置プロセスでは、.wsp ファイルが SharePoint サーバーにコピーされ、ソリューションがインストールされて、フィーチャーがアクティブ化されます。  発行プロセスは SharePoint サーバーにのみ、.wsp ファイルをコピーし、インストールされます。  手動で SharePoint のトレースを有効にするように行う必要があります。  
+# <a name="how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site"></a>方法: SharePoint ソリューションをローカルの SharePoint サイトに配置および発行する
+  展開したり、開発用コンピューター上のローカル SharePoint サーバーに SharePoint ソリューションを発行することができます。 展開プロセスは、SharePoint サーバーに .wsp ファイルをコピー、ソリューションをインストールし、機能をアクティブにし、します。 発行プロセスは、SharePoint サーバーに .wsp ファイルをコピーおよびインストールのみです。 SharePoint で有効にすることがアクティブ化する必要があります手動でします。  
   
-## SharePoint ソリューションをローカルの SharePoint サーバーに配置するには  
+## <a name="to-deploy-a-sharepoint-solution-to-the-local-sharepoint-server"></a>ローカルの SharePoint サーバーに SharePoint ソリューションを展開するには  
   
-1.  **\[ソリューション エクスプローラー\]** で、配置するプロジェクトを選択します。  
+1.  **ソリューション エクスプ ローラー**、配置するプロジェクトを選択します。  
   
-2.  メニュー バーで、**\[ソリューションの配置\]\[ビルド\]** をクリックします。  
+2.  メニュー バーで、次のように選択します。**ビルド**、**ソリューションの配置**です。  
   
-     .wsp ファイルが作成され、ローカルの SharePoint サーバーにインストールされます。  また、フィーチャーがアクティブ化されます。  
+     .Wsp ファイルが作成され、ローカルの SharePoint サーバーにインストールします。 また、機能がアクティブにします。  
   
-## SharePoint ソリューションをローカルの SharePoint サーバーに発行するには  
+## <a name="to-publish-a-sharepoint-solution-to-a-local-sharepoint-server"></a>SharePoint ソリューションをローカル SharePoint サーバーに発行するには  
   
-1.  **\[ソリューション エクスプローラー\]** で **\[発行\]** をクリックします発行および対象の SharePoint のプロジェクトのショートカット メニューを開きます。  
+1.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、SharePoint プロジェクトを発行し、選択するを**発行**です。  
   
-2.  **\[発行\]** ダイアログ ボックスで、**\[ファイル システムに発行する\]** のオプション ボタンを選択します。  
+2.  **発行** ダイアログ ボックスで、選択、**ファイル システムに公開**オプション ボタンをクリックします。  
   
-3.  **\[ターゲットの場所\]** のテキスト ボックスで、ローカル パスを入力し、**\[発行\]** ボタンをクリックします。  
+3.  **ターゲットの場所**テキスト ボックスは、ローカル パスを入力し、、**発行**ボタンをクリックします。  
   
-     発行の進行状況は Visual Studio の **\[出力\]** ウィンドウに表示されます。  プロセスが完了したら、ソリューション \(.wsp\) ファイルは、ローカル SharePoint サーバーにインストールされています。  ただし、SharePoint で使用されることを行う必要があります。  ソリューション ファイルが既に存在する場合、エラーが発生し、既存のファイルを上書きするかどうかを切り替えます。  パッケージのアップグレードの詳細については、[方法: リモート サーバー上で SharePoint ソリューションを配置、発行、およびアップグレードする](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)のリモート パッケージのアップグレードのセクションを参照してください。  
+     Visual Studio で発行の進行状況が表示される**出力**ウィンドウです。 プロセスが完了したら、ソリューション (.wsp) ファイルはローカル SharePoint サーバーにインストールされます。 ただし、その必要がありますまだアクティブに SharePoint で使用します。 ソリューション ファイルが既に存在する場合、エラーが発生し、既存のファイルを上書きするかどうかを確認します。 パッケージをアップグレードする方法についてでリモート パッケージのアップグレードに関するセクションを参照して[する方法: 配置、発行、およびリモート サーバー上の SharePoint ソリューションのアップグレード](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)です。  
   
-## 参照  
- [方法: リモート サーバー上で SharePoint ソリューションを配置、発行、およびアップグレードする](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)   
+## <a name="see-also"></a>関連項目  
+ [方法: 配置、発行、およびリモート サーバー上で SharePoint ソリューションのアップグレード](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)   
  [SharePoint ソリューション パッケージの作成](../sharepoint/creating-sharepoint-solution-packages.md)   
- [方法: SharePoint ソリューション パッケージをカスタマイズする](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)   
+ [方法: SharePoint ソリューション パッケージをカスタマイズします。](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)   
  [方法: パッケージ デザイナーを使用してパッケージのフィーチャーおよび項目を追加および削除する](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md)  
   
   

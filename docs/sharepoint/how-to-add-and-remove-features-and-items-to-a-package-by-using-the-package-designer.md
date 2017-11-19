@@ -1,69 +1,68 @@
 ---
-title: "方法: パッケージ デザイナーを使用してパッケージのフィーチャーおよび項目を追加および削除する | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.RAD.PackageDesignerDesign"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での SharePoint 開発, パッケージ"
+title: "方法: して追加および削除のフィーチャーおよび項目をパッケージにパッケージ デザイナーを使用して |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VS.SharePointTools.RAD.PackageDesignerDesign
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords: SharePoint development in Visual Studio, packages
 ms.assetid: 7dfa2c5d-3ac7-4573-abac-12a5e16efd1d
-caps.latest.revision: 22
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 9da26de3b5a3a71927e7518ff126a7186c01d7e5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: パッケージ デザイナーを使用してパッケージのフィーチャーおよび項目を追加および削除する
-  SharePoint ソリューションを作成すると、既定の SharePoint フィーチャーが自動的にソリューション内のパッケージに追加されます。  最終的に配置する前であれば、SharePoint のプロジェクト項目およびフィーチャーを追加または削除することによって、SharePoint パッケージを変更できます。  
+# <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer"></a>方法: パッケージ デザイナーを使用してパッケージのフィーチャーおよび項目を追加および削除する
+  SharePoint ソリューションを作成するときに、Visual Studio は、ソリューション内のパッケージに、既定の SharePoint 機能を追加します。 最終的なデプロイは、前に、追加し、SharePoint プロジェクト項目と SharePoint のパッケージを変更する機能を削除します。  
   
- また、パッケージング エクスプローラーを使用して、SharePoint プロジェクト項目を追加および削除することもできます。  パッケージ \(.wsp\) に追加された SharePoint のプロジェクト項目およびフィーチャーの階層を表示して変更することもできます。  詳細については、「[方法: パッケージング エクスプローラーを使用してパッケージのフィーチャーおよび項目を追加および削除する](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md)」を参照してください。  
+ または、パッケージング エクスプ ローラーを使用して、追加し、SharePoint プロジェクト項目を削除することができます。 表示して、SharePoint プロジェクト項目とパッケージ (.wsp) に格納される機能の階層を変更します。 詳細については、次を参照してください。[する方法: して追加および削除のフィーチャーおよび項目をパッケージにパッケージング エクスプ ローラーを使用して](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md)です。  
   
-## SharePoint パッケージへのフィーチャーの追加  
- SharePoint パッケージにフィーチャーを追加するには、パッケージ デザイナーを使用します。  
+## <a name="adding-features-to-a-sharepoint-package"></a>SharePoint パッケージへの機能の追加  
+ パッケージ デザイナーを使用すると、SharePoint のパッケージに機能を追加します。  
   
-#### パッケージ デザイナーを使用して SharePoint フィーチャーを追加するには  
+#### <a name="to-add-sharepoint-features-with-the-package-designer"></a>パッケージ デザイナーでの SharePoint 機能を追加するには  
   
-1.  **パッケージ デザイナー**を開きます。  
+1.  開く、**パッケージ デザイナー**です。  
   
-     詳細については、「[方法: SharePoint ソリューション パッケージをカスタマイズする](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)」を参照してください。  
+     詳細については、次を参照してください。[する方法: SharePoint ソリューション パッケージをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)です。  
   
-2.  次の手順の一つまたは複数を実行して、一つ以上の SharePoint フィーチャーを追加する:  
+2.  1 つ以上の次の手順を実行することによって、1 つまたは複数の SharePoint 機能を追加します。  
   
-    1.  追加する **\[ソリューション内の項目\]** 内の各項目をダブルクリックします。  
+    1.  内の各項目をダブルクリックして、**ソリューション内の項目**を追加するリスト。  
   
-    2.  追加するカウンターを選択し、**\[追加\]** をクリックして、項目 \(\>\)。  
+    2.  クリックして、追加する項目を選択して、**追加**ボタン (>)。  
   
-    3.  すべての項目を一度に追加するに **\[すべて追加\]** ボタン \(\>\>\) をクリックします。  
+    3.  選択、**すべて追加**ボタン (>>) すべての項目を一度に追加します。  
   
-     たとえば、**\[パッケージ内の項目\]** の一覧に追加するに **\[ソリューション内の項目\]** ボックスの一覧で項目をダブルクリックします。  
+     内の項目をダブルクリックするなど、**ソリューション内の項目**一覧に追加する、**パッケージ内の項目** ボックスの一覧です。  
   
-     **\[パッケージ内の項目\]** ボックスの一覧に SharePoint のプロジェクト項目およびフィーチャーが表示されます。  
+     SharePoint プロジェクト項目と機能が表示されます、**パッケージ内の項目** ボックスの一覧です。  
   
-## SharePoint パッケージからのフィーチャーの削除  
- SharePoint パッケージからフィーチャーを削除するには、パッケージ デザイナーを使用します。  
+## <a name="removing-features-from-a-sharepoint-package"></a>SharePoint パッケージからの機能の削除  
+ SharePoint パッケージへの機能を削除するのには、パッケージ デザイナーを使用できます。  
   
-#### パッケージ デザイナーを使用して SharePoint フィーチャーを削除するには  
+#### <a name="to-remove-sharepoint-features-with-the-package-designer"></a>パッケージ デザイナーでの SharePoint 機能を削除するには  
   
-1.  **\[パッケージ内の項目\]** の一覧で、削除する作業フォルダーを選択し、**\[削除\]** \(\<\) をクリックするか、すべての項目を削除するに **\[すべて削除\]** ボタン \(\<\<\) をクリックして、項目を示します。  
+1.  **パッケージ内の項目**一覧で、削除、および順に選択する項目を選択して、**削除**(<) ボタンをクリックするかを選択して、**すべて削除**ボタン (<<) を削除するにはすべての項目。  
   
-     **\[ソリューション内の項目\]** ボックスの一覧に SharePoint アイテムが表示されます。  
+     SharePoint 項目に表示されます、**ソリューション内の項目** ボックスの一覧です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューション パッケージの作成](../sharepoint/creating-sharepoint-solution-packages.md)   
- [方法: SharePoint ソリューション パッケージをカスタマイズする](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)   
- [NOT IN BUILD: How to: Modify Package Properties](http://msdn.microsoft.com/ja-jp/372089ce-cda9-4c21-beb2-f964990b96ee)   
- [How to: Create a Package](http://msdn.microsoft.com/ja-jp/b24be45c-e91d-49bb-afb0-7b265404214b)  
+ [方法: SharePoint ソリューション パッケージをカスタマイズする](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)  
+ [方法: パッケージの作成](http://msdn.microsoft.com/en-us/b24be45c-e91d-49bb-afb0-7b265404214b)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Create a Windows Form to search data | Microsoft Docs
+title: "データを検索する Windows フォームの作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,125 +13,122 @@ helpviewer_keywords:
 - data [Visual Studio], parameterizing queries
 - data [Visual Studio], searching
 ms.assetid: 65ca79a9-7458-466c-af55-978cd24c549e
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
-ms.openlocfilehash: a16cf197f58c6306b5042357d880f3ace530cadc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: 2799e2425ec9748075fc082881243658c363e327
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/07/2017
 ---
-# <a name="create-a-windows-form-to-search-data"></a>Create a Windows Form to search data
-A common application scenario is to display selected data on a form. For example, you might want to display the orders for a specific customer or the details of a specific order. In this scenario, a user enters information into a form, and then a query is executed with the user's input as a parameter; that is, the data is selected based on a parameterized query. The query returns only the data that satisfies the criteria entered by the user. This walkthrough shows how to create a query that returns customers in a specific city, and modify the user interface so that users can enter a city's name and press a button to execute the query.  
+# <a name="create-a-windows-form-to-search-data"></a>データを検索する Windows フォームを作成します。
+一般的なアプリケーションのシナリオでは、選択したデータをフォーム上に表示します。 たとえば、特定の顧客の注文、特定の注文の明細などを表示する場合があります。 このシナリオでは、ユーザーがフォームに情報を入力した後、ユーザーの入力をパラメーターとして使用してクエリが実行されます。つまり、パラメーター クエリに基づいてデータが選択されます。 クエリは、ユーザーが入力した条件を満たすデータのみを返します。 ここでは、特定の都市にいる顧客を返すクエリを作成する方法、およびユーザー インターフェイスを変更して、ユーザーが都市の名前を入力してクエリを実行するボタンを押すことができるようにする方法について説明します。  
   
- Using parameterized queries helps make your application efficient by letting the database do the work it is best at — quickly filtering records. In contrast, if you request an entire database table, transfer it over the network, and then use application logic to find the records you want, your application can become slow and inefficient.  
+ パラメーター クエリを使用することにより、データベースが最も得意とする作業 (レコードの迅速なフィルター処理) をデータベースに任せることができるため、アプリケーションの効率が高まります。 これに対し、要求した場合、データベース全体のテーブル、ネットワーク経由で転送するレコードを検索するアプリケーション ロジックを使用、アプリケーションになる低速で効率がよくないです。  
   
- You can add parameterized queries to any TableAdapter (and controls to accept parameter values and execute the query), using the **Search Criteria Builder** dialog box. Open the dialog box by selecting the **Add Query** command on the **Data** menu (or on any TableAdapter smart tag).  
+ パラメーター化クエリを追加するには、TableAdapter (コントロールのパラメーター値をそのまま使用し、クエリを実行する) を使用する、**検索条件ビルダー**  ダイアログ ボックス。 選択して、ダイアログ ボックスが開き、**クエリの追加**コマンドを**データ**メニュー (または TableAdapter スマート タグ)。  
   
- Tasks illustrated in this walkthrough include:  
+ このチュートリアルでは、以下のタスクを行います。  
   
--   Creating a new Windows Forms Application project.  
+-   新しい Windows フォーム アプリケーション プロジェクトを作成します。  
   
--   Creating and configuring the data source in your application with the **Data Source Configuration** wizard.  
+-   使用してアプリケーションでのデータ ソースの構成の作成と、**データ ソース構成**ウィザード。  
   
--   Setting the drop type of the items in the **Data Sources**window.  
+-   内の項目のドロップ タイプを設定、**データソース**ウィンドウです。  
   
--   Creating controls that display data by dragging items from the **Data Sources** window onto a form.  
+-   項目をドラッグしてデータを表示するコントロールを作成する、**データソース**ウィンドウからフォームにします。  
   
--   Adding controls to display the data on the form.  
+-   データを表示するコントロールをフォームに追加します。  
   
--   Completing the **Search Criteria Builder** dialog box.  
+-   完了、**検索条件ビルダー**  ダイアログ ボックス。  
   
--   Entering parameters into the form and executing the parameterized query.  
+-   フォームにパラメーターを入力し、パラメーター化クエリを実行します。  
   
-## <a name="prerequisites"></a>Prerequisites  
- In order to complete this walkthrough, you need:  
+## <a name="prerequisites"></a>必須コンポーネント  
+このチュートリアルでは、SQL Server Express LocalDB と、Northwind サンプル データベースを使用します。  
   
--   Access to the Northwind sample database.  
+1.  SQL Server Express LocalDB をお持ちでない場合は、インストールのいずれかから、 [SQL Server のエディションのダウンロード ページ](https://www.microsoft.com/en-us/server-cloud/Products/sql-server-editions/sql-server-express.aspx)、または、 **Visual Studio インストーラー**です。 一部として、Visual Studio インストーラーで、SQL Server Express LocalDB をインストールすることができます、**データ ストレージと処理**ワークロード、または個々 のコンポーネントとして。  
   
-## <a name="create-the-windows-forms-application"></a>Create the Windows Forms Application  
- The first step is to create a **Windows Forms Application**. Assigning a name to the project is optional at this step, but you'll give it a name here because you'll save the project later.  
-  
-#### <a name="to-create-the-new-windows-forms-application-project"></a>To create the new Windows Forms Application project  
-  
-1. In Visual Studio, on the **File** menu, select **New**, **Project...**.  
-  
-2. Expand either **Visual C#** or **Visual Basic** in the left-hand pane, then select **Windows Classic Desktop**.  
+2.  次の手順に従って、Northwind サンプル データベースをインストールします。  
 
-3. In the middle pane, select the **Windows Forms App** project type.  
+    1. Visual Studio で開く、 **SQL Server オブジェクト エクスプ ローラー**ウィンドウです。 (の一部として SQL Server オブジェクト エクスプ ローラーがインストールされている、**データ ストレージと処理**Visual Studio インストーラーでのワークロードです)。展開して、 **SQL Server**ノード。 LocalDB インスタンスを右クリックし、選択**新しいクエリしています.**.  
 
-4. Name the project **WindowsSearchForm**, and then choose **OK**. 
+       クエリ エディター ウィンドウが開きます。  
+
+    2. コピー、 [Northwind TRANSACT-SQL スクリプト](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true)をクリップボードにします。 この T-SQL スクリプトは、最初から、Northwind データベースを作成し、データを設定します。  
+
+    3. T-SQL スクリプトをクエリ エディターに貼り付けを選択し、 **Execute**ボタンをクリックします。  
+
+       短期間のうち、クエリの実行が終了し、Northwind データベースを作成します。  
   
-     The **WindowsSearchForm** project is created and added to **Solution Explorer**.  
+## <a name="create-the-windows-forms-application"></a>Windows フォーム アプリケーションを作成します。  
+ 作成するには、まず、 **Windows フォーム アプリケーション**です。 プロジェクトに名前が割り当てられてこの手順で、省略可能なはするが名前を付けますここため、後でプロジェクトを保存します。  
   
-## <a name="create-the-data-source"></a>Create the data source  
- This step creates a data source from a database using the **Data Source Configuration** wizard. You must have access to the Northwind sample database to create the connection. For information on setting up the Northwind sample database, see [Install SQL Server sample databases](../data-tools/install-sql-server-sample-databases.md).  
+#### <a name="to-create-the-new-windows-forms-application-project"></a>新しい Windows フォーム アプリケーション プロジェクトを作成するには  
   
-#### <a name="to-create-the-data-source"></a>To create the data source  
+1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.  
   
-1.  On the **Data** menu, click **Show Data Sources**.  
+2. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。  
+
+3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。  
+
+4. プロジェクトに名前を**WindowsSearchForm**を選択し**OK**です。 
   
-2.  In the **Data Sources** window, select **Add New Data Source** to start the **Data Source Configuration** wizard.  
+     **WindowsSearchForm**プロジェクトが作成され、追加**ソリューション エクスプ ローラー**です。  
   
-3.  Select **Database** on the **Choose a Data Source Type** page, and then click **Next**.  
+## <a name="create-the-data-source"></a>データ ソースを作成します。  
+この手順を使用してデータベースからのデータ ソースの作成、**データ ソース構成**ウィザード。  
   
-4.  On the **Choose your Data Connection** page do one of the following:  
+#### <a name="to-create-the-data-source"></a>データ ソースを作成するには  
   
-    -   If a data connection to the Northwind sample database is available in the drop-down list, select it.  
+1.  **[データ]** メニューの **[データ ソースの表示]**をクリックします。  
   
-    -   Select **New Connection** to launch the **Add/Modify Connection** dialog box.  
+2.  **データソース**ウィンドウで、**新しいデータ ソースの追加**を開始する、**データ ソース構成**ウィザード。  
   
-5.  If your database requires a password, select the option to include sensitive data, and then click **Next**.  
+3.  **[データソースの種類を選択]** ページで、 **[データベース]** をクリックし、 **[次へ]**をクリックします。  
   
-6.  On the **Save connection string to the Application Configuration file** page, click **Next**.  
+4.  **データ接続の選択**ページは、次のいずれか。  
   
-7.  On the **Choose your Database Objects** page, expand the **Tables** node.  
+    -   Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は選択します。  
   
-8.  Select the **Customers** table, and then click **Finish**.  
+    -   選択**新しい接続**を起動する、**接続接続の追加/変更** ダイアログ ボックス。  
   
-     The **NorthwindDataSet** is added to your project, and the **Customers** table appears in the **Data Sources** window.  
+5.  データベースは、パスワードを必要とする場合は、機密データを含めるし、をクリックするオプションを選択**次**です。  
   
-## <a name="create-the-form"></a>Create the form  
- You can create the data-bound controls by dragging items from the **Data Sources** window onto your form.  
+6.  **接続文字列をアプリケーション構成ファイルに保存** ページで、をクリックして**次**です。  
   
-#### <a name="to-create-data-bound-controls-on-the-form"></a>To create data-bound controls on the form  
+7.  **データベース オブジェクトの選択** ページで、展開、**テーブル**ノード。  
   
-1.  Expand the **Customers** node in the **Data Sources** window.  
+8.  選択、**顧客**テーブル、およびをクリックして**完了**です。  
   
-2.  Drag the **Customers** node from the **Data Sources** window to your form.  
+     **NorthwindDataSet**をプロジェクトに追加され、**顧客**テーブルに表示されます、**データ ソース**ウィンドウです。  
   
-     A <xref:System.Windows.Forms.DataGridView> and a tool strip (<xref:System.Windows.Forms.BindingNavigator>) for navigating records appear on the form. A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource>, and <xref:System.Windows.Forms.BindingNavigator> appear in the component tray.  
+## <a name="create-the-form"></a>フォームを作成します。  
+ 項目をドラッグして、データ バインド コントロールを作成することができます、**データソース**ウィンドウからフォームにします。  
   
-## <a name="add-parameterization-search-functionality-to-the-query"></a>Add parameterization (search functionality) to the query  
- You can add a WHERE clause to the original query using the **Search Criteria Builder** dialog box.  
+#### <a name="to-create-data-bound-controls-on-the-form"></a>フォームにデータ バインド コントロールを作成するには  
   
-#### <a name="to-create-a-parameterized-query-and-controls-to-enter-the-parameters"></a>To create a parameterized query and controls to enter the parameters  
+1.  展開、**顧客**内のノード、**データソース**ウィンドウです。  
   
-1.  Select the <xref:System.Windows.Forms.DataGridView> control, and then choose **Add Query** on the **Data** menu.  
+2.  ドラッグ、**顧客**ノードから、**データ ソース**ウィンドウ、フォームにします。  
   
-2.  Type `FillByCity` in the **New query name** area on the **Search Criteria Builder** dialog box.  
+     <xref:System.Windows.Forms.DataGridView> と、レコード間を移動するためのツール ストリップ (<xref:System.Windows.Forms.BindingNavigator>) がフォーム上に表示されます。 A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、CustomersTableAdapter、 <xref:System.Windows.Forms.BindingSource>、および<xref:System.Windows.Forms.BindingNavigator>コンポーネント トレイに表示されます。  
   
-3.  Add `WHERE City = @City` to the query in the **Query Text** area.  
+## <a name="add-parameterization-search-functionality-to-the-query"></a>クエリにパラメーター化 (検索機能) を追加します。  
+ 使用して元のクエリに WHERE 句を追加することができます、**検索条件ビルダー**  ダイアログ ボックス。  
   
-     The query should be similar to the following:  
+#### <a name="to-create-a-parameterized-query-and-controls-to-enter-the-parameters"></a>パラメーター クエリとコントロールを作成してパラメーターを入力するには  
+  
+1.  選択、<xref:System.Windows.Forms.DataGridView>コントロールをクリックして**クエリの追加**上、**データ**メニュー。  
+  
+2.  型`FillByCity`で、**新しいクエリ名**上の領域、**検索条件ビルダー**  ダイアログ ボックス。  
+  
+3.  追加`WHERE City = @City`でクエリを**クエリ テキスト**領域。  
+  
+     クエリは次のようになります。  
   
      ```sql
      SELECT CustomerID, CompanyName, ContactName, ContactTitle,  
@@ -141,29 +138,29 @@ A common application scenario is to display selected data on a form. For example
      ```
   
     > [!NOTE]
-    >  Access and OLE DB data sources use the question mark ('?') to denote parameters, so the WHERE clause would look like this: `WHERE City = ?`.  
+    >  アクセスおよび OLE DB データ ソースは疑問符 () を使用して ('? ') パラメーターを表すので、WHERE 句は次のとおり:`WHERE City = ?`です。  
   
-4.  Click **OK** to close the **Search Criteria Builder** dialog box.  
+4.  をクリックして**OK**を閉じる、**検索条件ビルダー**  ダイアログ ボックス。  
   
-     A **FillByCityToolStrip** is added to the form.  
+     A **FillByCityToolStrip**フォームに追加します。  
   
-## <a name="testing-the-application"></a>Testing the application  
- Running the application opens your form ready to take the parameter as input.  
+## <a name="testing-the-application"></a>アプリケーションのテスト  
+ アプリケーションを実行すると、パラメーターを入力として取得できる状態のフォームが開きます。  
   
-#### <a name="to-test-the-application"></a>To test the application  
+#### <a name="to-test-the-application"></a>アプリケーションをテストするには  
   
-1.  Press F5 to run the application.  
+1.  F5 キーを押してアプリケーションを実行します。  
   
-2.  Type **London** into the **City** text box, and then click **FillByCity**.  
+2.  型**ロンドン**に、**市区町村**テキスト ボックス、およびクリック**FillByCity**です。  
   
-     The data grid is populated with customers that meet the criteria. In this example, the data grid only displays customers that have a value of **London** in their **City** column.  
+     データ グリッドには、条件を満たす顧客が取得されます。 この例では、データ グリッドのみが表示されますの値を持つ顧客**ロンドン**でその**市区町村**列です。  
   
-## <a name="next-steps"></a>Next Steps  
- Depending on your application requirements, there are several steps you may want to perform after creating a parameterized form. Some enhancements you could make to this walkthrough include:  
+## <a name="next-steps"></a>次の手順  
+ アプリケーションの要件に応じて、パラメーター付きのフォームを作成した後に、追加の操作を実行できます。 このチュートリアルで行うことができる拡張には次のものがあります。  
   
--   Adding controls that display related data. For more information, see [Relationships in Datasets](relationships-in-datasets.md).  
+-   関連するデータを表示するコントロールを追加します。 詳細については、次を参照してください。[データセットのリレーションシップ](relationships-in-datasets.md)です。  
   
--   Editing the dataset to add or remove database objects. For more information, see [Create and configure datasets](../data-tools/create-and-configure-datasets-in-visual-studio.md).  
+-   データセットを編集し、データベース オブジェクトの追加または削除を行います。 詳細については、[データセットの作成と構成](../data-tools/create-and-configure-datasets-in-visual-studio.md)に関するページを参照してください。  
   
-## <a name="see-also"></a>See Also  
- [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
+## <a name="see-also"></a>関連項目  
+ [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

@@ -1,170 +1,171 @@
 ---
-title: "チュートリアル: プライバシー プロンプトを表示するためのカスタム ブートストラップの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ClickOnce 配置, 必要条件"
-  - "依存関係 [.NET Framework], カスタム ブートストラップ パッケージ"
-  - "配置 (アプリケーションを) [Visual Studio], カスタムの必須コンポーネント"
-  - "必要条件 [.NET Framework], カスタム ブートストラップ パッケージ"
-  - "Windows インストーラーの配置, 必要条件"
+title: "チュートリアル: プライバシー プロンプトを表示するためのカスタム ブートス トラップの作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- FSharp
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- ClickOnce deployment, prerequisites
+- dependencies [.NET Framework], custom bootstrapper package
+- deploying applications [Visual Studio], custom prerequisites
+- Windows Installer deployment, prerequisites
+- prerequisites [.NET Framework], custom bootstrapper package
 ms.assetid: 2f3edd6a-84d1-4864-a1ae-6a13c5732aae
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: f84abe8354f1affc566cc05d119edc4cbc030712
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# チュートリアル: プライバシー プロンプトを表示するためのカスタム ブートストラップの作成
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-ClickOnce アプリケーションは、アセンブリに含まれるファイルおよびアセンブリの新しいバージョンが利用できるようになったときに自動的に更新されるように構成できます。  この動作に同意することをユーザーに確認するには、プライバシー プロンプトを表示します。  このプロンプトで、ユーザーはアプリケーションの自動更新を許可するかどうかを選択できます。  アプリケーションの自動更新が許可されなかった場合、インストールは行われません。  
+# <a name="walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt"></a>チュートリアル: プライバシー プロンプトを表示するためのカスタム ブートストラップの作成
+新しいファイルおよびアセンブリのバージョンを持つアセンブリが使用可能になると自動的に更新する ClickOnce アプリケーションを構成することができます。 をお客様がこれに同意することを確認するために、プライバシー プロンプトを表示できます。 次に、自動的に更新するアプリケーションへのアクセス許可を付与するかどうかを選択できます。 アプリケーションが自動的に更新する許可されていない場合はインストールされません。  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-## 必須コンポーネント  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   Visual Studio 2010  
+-   Visual Studio 2010。  
   
-## 更新の同意を求めるダイアログ ボックスを作成する  
- プライバシー プロンプトを表示するには、アプリケーションの自動更新についてユーザーの同意を求めるアプリケーションを作成します。  
+## <a name="creating-an-update-consent-dialog-box"></a>更新プログラムの同意 ダイアログ ボックスを作成します。  
+ プライバシー プロンプトを表示するには、アプリケーションの自動更新することに同意を求める、アプリケーションを作成します。  
   
-#### 同意を求めるダイアログ ボックスを作成するには  
+#### <a name="to-create-a-consent-dialog-box"></a>同意を求めるダイアログ ボックスを作成するには  
   
-1.  **\[ファイル\]** メニューの **\[新規作成\]** をポイントし、**\[プロジェクト\]** をクリックします。  
+1.  **[ファイル]** メニューの **[新規作成]**をポイントし、 **[プロジェクト]**をクリックします。  
   
-2.  **\[新しいプロジェクト\]** ダイアログ ボックスで、**\[ウィンドウ\]** をクリックし、**\[Windows フォーム アプリケーション\]** をクリックします。  
+2.  **新しいプロジェクト**ダイアログ ボックスで、をクリックして**Windows**、クリックして**WindowsFormsApplication**です。  
   
-3.  **\[名前\]** に「ConsentDialog」と入力し、**\[OK\]** をクリックします。  
+3.  **名前**、型**ConsentDialog**、順にクリック**OK**です。  
   
 4.  デザイナーでフォームをクリックします。  
   
-5.  **\[プロパティ\]** ウィンドウで、**Text** プロパティを「Update Consent Dialog」に変更します。  
+5.  **プロパティ**ウィンドウで、変更、**テキスト**プロパティを**更新同意を求めるダイアログ**です。  
   
-6.  **ツールボックス**で **\[すべての Windows フォーム\]** を展開し、**Label** コントロールをフォームにドラッグします。  
+6.  **ツールボックス**、展開**すべての Windows フォーム**、ドラッグ、**ラベル**をフォームにコントロールです。  
   
-7.  デザイナーでラベル コントロールをクリックします。  
+7.  デザイナーで、ラベル コントロールをクリックします。  
   
-8.  **\[プロパティ\]** ウィンドウで、**Appearance** の **Text** プロパティを次のように変更します。  
+8.  **プロパティ**ウィンドウで、変更、**テキスト**プロパティの **外観**以下。  
   
-     インストールしようとしているアプリケーションでは、Web で最新の更新プログラムがチェックされます。  \[同意する\] をクリックして承認すると、インターネットに接続して自動的に更新プログラムの確認とインストールが行われます。  
+     インストールしようとしているアプリケーションは、Web 上の最新の更新プログラムをチェックします。 「同意」をクリックするでは、アプリケーションを確認し、インターネットから更新プログラムを自動的にインストールを承認します。  
   
-9. **ツールボックス**の **Checkbox** コントロールをフォームの中央にドラッグします。  
+9. **ツールボックス**、ドラッグ、**チェック**フォームの中央にコントロールです。  
   
-10. **\[プロパティ\]** ウィンドウで、**Layout** の **Text** プロパティを「同意する」に変更します。  
+10. **プロパティ**ウィンドウで、変更、**テキスト**プロパティの **レイアウト**に**同意**です。  
   
-11. **ツールボックス**の **Button** コントロールをフォームの左下へドラッグします。  
+11. **ツールボックス**、ドラッグ、**ボタン**コントロールをフォームの左下にします。  
   
-12. **\[プロパティ\]** ウィンドウで、**Layout** の **Text** プロパティを「続行」に変更します。  
+12. **プロパティ**ウィンドウで、変更、**テキスト**プロパティの **レイアウト**に**続行**です。  
   
-13. **\[プロパティ\]** ウィンドウで、**Design** の **\(Name\)** プロパティを「ProceedButton」に変更します。  
+13. **プロパティ**ウィンドウで、変更、 **(名)**プロパティの **デザイン**に**ProceedButton**です。  
   
-14. **ツールボックス**の **Button** コントロールをフォームの右下へドラッグします。  
+14. **ツールボックス**、ドラッグ、**ボタン**コントロールをフォームの右下にします。  
   
-15. **\[プロパティ\]** ウィンドウで、**Layout** の **Text** プロパティを「キャンセル」に変更します。  
+15. **プロパティ**ウィンドウで、変更、**テキスト**プロパティの **レイアウト**に**キャンセル**です。  
   
-16. **\[プロパティ\]** ウィンドウで、**Design** の **\(Name\)** プロパティを「CancelButton」に変更します。  
+16. **プロパティ**ウィンドウで、変更、 **(名)**プロパティの **デザイン**に**CancelButton**です。  
   
-17. デザイナーで、**\[同意する\]** チェック ボックスをダブルクリックして、CheckedChanged イベント ハンドラーを生成します。  
+17. デザイナーをダブルクリックして、**同意**CheckedChanged イベント ハンドラーを生成する チェック ボックスです。  
   
-18. Form1 コード ファイルで、CheckedChanged イベント ハンドラーに次のコードを追加します。  
+18. Form1 コード ファイルでは、次の CheckedChanged イベント ハンドラーのコードを追加します。  
   
-     [!code-cs[ConsentDialog#1](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_1.cs)]
+     [!code-csharp[ConsentDialog#1](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_1.cs)]
      [!code-vb[ConsentDialog#1](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_1.vb)]  
   
-19. クラス コンストラクターを更新して、**\[続行\]** ボタンを既定で無効にします。  
+19. 更新を無効にするクラスのコンス トラクター、**続行**既定ボタンをクリックします。  
   
-     [!code-cs[ConsentDialog#6](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_2.cs)]
+     [!code-csharp[ConsentDialog#6](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_2.cs)]
      [!code-vb[ConsentDialog#6](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_2.vb)]  
   
-20. Form1 コード ファイルで、エンド ユーザーがオンライン更新に同意したかどうかをブール変数で追跡するために次のコードを追加します。  
+20. Form1 コード ファイルでは、エンドユーザーがオンライン更新に同意した場合は、追跡するブール値変数に次のコードを追加します。  
   
-     [!code-cs[ConsentDialog#3](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_3.cs)]
+     [!code-csharp[ConsentDialog#3](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_3.cs)]
      [!code-vb[ConsentDialog#3](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_3.vb)]  
   
-21. デザイナーで、**\[続行\]** ボタンをダブルクリックして、Click イベント ハンドラーを生成します。  
+21. デザイナーをダブルクリックして、**続行**ボタン クリック イベント ハンドラーを生成します。  
   
-22. Form1 コード ファイルで、**\[続行\]** ボタンの Click イベント ハンドラーに次のコードを追加します。  
+22. Form1 コード ファイル内の Click イベント ハンドラーに次のコードを追加、**続行**ボタンをクリックします。  
   
-     [!code-cs[ConsentDialog#2](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_4.cs)]
+     [!code-csharp[ConsentDialog#2](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_4.cs)]
      [!code-vb[ConsentDialog#2](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_4.vb)]  
   
-23. デザイナーで、**\[キャンセル\]** ボタンをダブルクリックして、Click イベント ハンドラーを生成します。  
+23. デザイナーをダブルクリックして、**キャンセル**ボタン クリック イベント ハンドラーを生成します。  
   
-24. Form1 コード ファイルで、**\[キャンセル\]** ボタンの Click イベント ハンドラーに次のコードを追加します。  
+24. Form1 コード ファイル内のクリック イベント ハンドラーに次のコードを追加、**キャンセル**ボタンをクリックします。  
   
-     [!code-cs[ConsentDialog#4](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_5.cs)]
+     [!code-csharp[ConsentDialog#4](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_5.cs)]
      [!code-vb[ConsentDialog#4](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_5.vb)]  
   
-25. アプリケーションを更新して、エンド ユーザーがオンライン更新に同意しなかった場合にエラーを返すようにします。  
+25. アプリケーションを更新して、エンドユーザーがオンライン更新に同意しない場合、エラーを返します。  
   
-     Visual Basic 開発者用の手順は次のとおりです。  
+     Visual Basic 開発者の場合のみ。  
   
-    1.  **ソリューション エクスプローラー**で、**\[ConsentDialog\]** をクリックします。  
+    1.  **ソリューション エクスプ ローラー**をクリックして**ConsentDialog**です。  
   
-    2.  **\[プロジェクト\]** メニューの **\[モジュールの追加\]** をクリックし、**\[追加\]** をクリックします。  
+    2.  **プロジェクト** メニューのをクリックして**モジュールの追加**、クリックして**追加**です。  
   
-    3.  Module1.vb コード ファイルで、次のコードを追加します。  
+    3.  Module1.vb コード ファイルでは、次のコードを追加します。  
   
          [!code-vb[ConsentDialog#7](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_6.vb)]  
   
-    4.  **\[プロジェクト\]** メニューの **\[ConsentDialog のプロパティ\]** をクリックし、**\[アプリケーション\]** タブをクリックします。  
+    4.  **プロジェクト** メニューのをクリックして**ConsentDialog プロパティ**、をクリックし、**アプリケーション**タブです。  
   
-    5.  **\[アプリケーション フレームワークを有効にする\]** チェック ボックスをオフにします。  
+    5.  オフにして**有効にするアプリケーション フレームワーク**です。  
   
-    6.  **\[スタートアップ オブジェクト\]** ドロップダウン メニューの **\[Module1\]** を選択します。  
+    6.  **スタートアップ オブジェクト**ドロップダウン メニューで、 **Module1**です。  
   
         > [!NOTE]
-        >  アプリケーション フレームワークを無効にすると、Windows XP の視覚スタイル、アプリケーション イベント、スプラッシュ スクリーン、単一インスタンス アプリケーションなどの機能は無効になります。  詳細については、「[\[アプリケーション\] ページ \(プロジェクト デザイナー\) \(Visual Basic\)](../Topic/Application%20Page,%20Project%20Designer%20\(Visual%20Basic\).md)」を参照してください。  
+        >  アプリケーション フレームワークを無効にするには、Windows XP の視覚スタイル、アプリケーション イベント、スプラッシュ スクリーン、単一インスタンス アプリケーションなどの機能が無効にします。 詳細については、「[[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)」を参照してください。  
   
-     C\# 開発者用の手順は次のとおりです。  
+     Visual c# 開発者の場合のみ。  
   
-     Program.cs コード ファイルを開いて、次のコードを追加します。  
+     Program.cs コード ファイルを開き、次のコードを追加します。  
   
-     [!code-cs[ConsentDialog#5](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_7.cs)]  
+     [!code-csharp[ConsentDialog#5](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_7.cs)]  
   
-26. **\[ビルド\]** メニューの **\[ソリューションのビルド\]** をクリックします。  
+26. **ビルド**] メニューのをクリックして**[ソリューションのビルド**です。  
   
-## カスタム ブートストラップ パッケージを作成する  
- エンド ユーザーにプライバシー プロンプトを表示するには、更新の同意を求めるダイアログを表示するアプリケーションのカスタム ブートスラップ パッケージを作成し、必須コンポーネントとしてすべての ClickOnce アプリケーションに含めます。  
+## <a name="creating-the-custom-bootstrapper-package"></a>カスタム ブートス トラップ パッケージを作成します。  
+ エンドユーザーに、プライバシー プロンプトを表示するには、同意を求めるダイアログの更新アプリケーション用のカスタム ブートス トラップ パッケージを作成し、ClickOnce アプリケーションのすべての前提条件として含めるです。  
   
- ここでは、次のドキュメントを作成してカスタム ブートストラップ パッケージを作成する方法を示します。  
+ この手順では、次のドキュメントを作成することで、カスタム ブートス トラップ パッケージを作成する方法を示します。  
   
--   ブートスラップの内容を記述した product.xml マニフェスト ファイル。  
+-   Product.xml マニフェストのファイルに、ブートス トラップの内容を記述します。  
   
--   パッケージのローカリゼーション固有の特性 \(文字列、ソフトウェア ライセンス条項など\) を記述した package.xml マニフェスト ファイル。  
+-   文字列と、ソフトウェア ライセンス条項など、パッケージのローカライズに固有の要素の一覧を表示する package.xml のマニフェスト ファイル。  
   
--   ソフトウェア ライセンス条項のドキュメント。  
+-   ソフトウェア ライセンス条項のドキュメントです。  
   
-#### 手順 1: ブートストラップ ディレクトリを作成するには  
+#### <a name="step-1-to-create-the-bootstrapper-directory"></a>手順 1: ブートス トラップ ディレクトリを作成するには  
   
-1.  UpdateConsentDialog という名前のディレクトリを %PROGRAMFILES%\\Microsoft SDKs\\Windows\\v7.0A\\Bootstrapper\\Packages に作成します。  
-  
-    > [!NOTE]
-    >  このフォルダーを作成するには、管理特権が必要な場合があります。  
-  
-2.  UpdateConsentDialog ディレクトリに「en」という名前のサブディレクトリを作成します。  
+1.  という名前のディレクトリを作成する**UpdateConsentDialog** %PROGRAMFILES%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages にします。  
   
     > [!NOTE]
-    >  ロケールごとに新しいディレクトリを作成します。  たとえば、fr および de のロケールのサブディレクトリを作成し、  必要に応じて、フランス語とドイツ語の文字列や言語パックを含めることができます。  
+    >  このフォルダーを作成する管理者特権を必要があります。  
   
-#### 手順 2: product.xml マニフェスト ファイルを作成するには  
+2.  UpdateConsentDialog ディレクトリでは、en という名前のサブディレクトリを作成します。  
   
-1.  `product.xml` というテキスト ファイルを作成します。  
+    > [!NOTE]
+    >  ロケールごとに新しいディレクトリを作成します。 たとえば、fr および de ロケールのサブディレクトリを追加することができます。 必要に応じて、フランス語とドイツ語の文字列と言語パック、これらのディレクトリが含まれます。  
   
-2.  product.xml ファイルに次の XML コードを追加します。  既存の XML コードは上書きしないように注意してください。  
+#### <a name="step-2-to-create-the-productxml-manifest-file"></a>手順 2: product.xml マニフェスト ファイルを作成するには  
+  
+1.  という名前のテキスト ファイルを作成する`product.xml`です。  
+  
+2.  Product.xml ファイルでは、次の XML コードを追加します。 既存の XML コードを上書きしないことを確認します。  
   
     ```  
     <Product  
@@ -190,13 +191,13 @@ ClickOnce アプリケーションは、アセンブリに含まれるファイ�
     </Product>  
     ```  
   
-3.  ファイルを UpdateConsentDialog ブートストラップ ディレクトリに保存します。  
+3.  UpdateConsentDialog ブートス トラップ ディレクトリにファイルを保存します。  
   
-#### 手順 3: package.xml マニフェスト ファイルとソフトウェア ライセンス条項を作成するには  
+#### <a name="step-3-to-create-the-packagexml-manifest-file-and-the-software-license-terms"></a>手順 3: package.xml マニフェストを作成するには、ファイルと、ソフトウェア ライセンス条項  
   
-1.  `package.xml` というテキスト ファイルを作成します。  
+1.  という名前のテキスト ファイルを作成する`package.xml`です。  
   
-2.  package.xml ファイルに次の XML コードを追加して、ロケールを定義し、ソフトウェア ライセンス条項を含めます。  既存の XML コードは上書きしないように注意してください。  
+2.  Package.xml ファイルでは、ロケールを定義し、ソフトウェア ライセンス条項を含めるには、次の XML コードを追加します。 既存の XML コードを上書きしないことを確認します。  
   
     ```  
     <Package   
@@ -218,91 +219,91 @@ ClickOnce アプリケーションは、アセンブリに含まれるファイ�
     </Package>  
     ```  
   
-3.  ファイルを UpdateConsentDialog ブートストラップ ディレクトリの en サブディレクトリに保存します。  
+3.  UpdateConsentDialog ブートス トラップ ディレクトリに en サブディレクトリにファイルを保存します。  
   
-4.  eula.rtf というソフトウェア ライセンス条項のドキュメントを作成します。  
-  
-    > [!NOTE]
-    >  ソフトウェア ライセンス条項には、ライセンス、保証、責任、法律などに関する情報を含めます。  これらのファイルはロケール固有の内容にする必要があるため、MBCS または UNICODE の文字をサポートするファイル形式で保存します。  ソフトウェア ライセンス条項の内容については、法務部に確認してください。  
-  
-5.  ドキュメントを UpdateConsentDialog ブートストラップ ディレクトリの en サブディレクトリに保存します。  
-  
-6.  必要に応じて、ロケールごとに新しい package.xml マニフェスト ファイルと新しいソフトウェア ライセンス条項の eula.rtf ドキュメントを作成します。  たとえば、fr と de のロケールのサブディレクトリを作成した場合、それぞれの package.xml マニフェスト ファイルとソフトウェア ライセンス条項を作成し、fr サブディレクトリと de サブディレクトリにそれぞれ保存します。  
-  
-## 更新の同意を求めるアプリケーションを必須コンポーネントとして設定する  
- Visual Studio で、更新の同意を求めるアプリケーションを必須コンポーネントとして設定できます。  
-  
-#### 更新の同意を求めるアプリケーションを必須コンポーネントとして設定するには  
-  
-1.  **ソリューション エクスプローラー**で、配置するアプリケーションの名前をクリックします。  
-  
-2.  **\[プロジェクト\]** メニューの **\[*プロジェクト名*のプロパティ\]** をクリックします。  
-  
-3.  **\[発行\]** ページをクリックし、**\[必須コンポーネント\]** をクリックします。  
-  
-4.  **\[Update Consent Dialog\]** を選択します。  
+4.  ソフトウェア ライセンス条項 eula.rtf というドキュメントを作成します。  
   
     > [!NOTE]
-    >  Visual Studio をいったん閉じて開き直さないと \[必須コンポーネント\] ダイアログ ボックスに Update Consent Dialog が表示されない場合があります。  
+    >  ソフトウェア ライセンス条項は、ライセンス、保証、負債、および地域の法律によってに関する情報を含める必要があります。 これらのファイルはロケール固有、MBCS または UNICODE 文字をサポートする形式でファイルを保存するかどうかを必ずようにする必要があります。 ソフトウェア ライセンス条項のコンテンツに関する法務部門に問い合わせてください。  
   
-5.  **\[OK\]** をクリックします。  
+5.  UpdateConsentDialog ブートス トラップ ディレクトリに en サブディレクトリに、ドキュメントを保存します。  
   
-## セットアップ プログラムを作成してテストする  
- 更新の同意を求めるアプリケーションを必須コンポーネントとして設定したら、アプリケーションのインストーラーとブートストラップを生成できます。  
+6.  必要に応じて、各ロケールのソフトウェア ライセンス条項を新しい package.xml マニフェスト ファイルと新しい eula.rtf ドキュメントを作成します。 たとえば、fr および de ロケールのサブディレクトリを作成する場合は、package.xml 個別マニフェスト ファイルおよびソフトウェア ライセンス条項を作成し、fr および de サブディレクトリに保存します。  
   
-#### セットアップ プログラムを作成して \[同意する\] をクリックしない場合の動作をテストするには  
+## <a name="setting-the-update-consent-application-as-a-prerequisite"></a>前提条件として更新プログラムの同意を求めるアプリケーションの設定  
+ Visual Studio で、前提条件として更新プログラムの同意を求めるアプリケーションを設定できます。  
   
-1.  **ソリューション エクスプローラー**で、配置するアプリケーションの名前をクリックします。  
+#### <a name="to-set-the-update-consent-application-as-a-prerequisite"></a>前提条件として更新プログラムの同意を求めるアプリケーションを設定するには  
   
-2.  **\[プロジェクト\]** メニューの **\[*プロジェクト名*のプロパティ\]** をクリックします。  
+1.  **ソリューション エクスプ ローラー**を展開する、アプリケーションの名前をクリックします。  
   
-3.  **\[発行\]** ページをクリックし、**\[今すぐ発行\]** をクリックします。  
+2.  **プロジェクト** メニューのをクリックして*ProjectName* **プロパティ**です。  
   
-4.  発行の出力が自動的に開かない場合は発行の出力に移動します。  
+3.  クリックして、**発行** ページで、クリックして**の前提条件**です。  
+  
+4.  選択**同意ダイアログを更新**です。  
+  
+    > [!NOTE]
+    >  必須コンポーネント ダイアログ ボックスで更新プログラムの同意を求めるダイアログを表示する Visual Studio を閉じて再度開くことがあります。  
+  
+5.  **[OK]** をクリックします。  
+  
+## <a name="creating-and-testing-the-setup-program"></a>作成して、セットアップ プログラムをテストします。  
+ 前提条件として更新プログラムの同意を求めるアプリケーションを設定した後、アプリケーションのインストーラーとブートス トラップを生成できます。  
+  
+#### <a name="to-create-and-test-the-setup-program-by-not-clicking-i-agree"></a>作成していない をクリックして、セットアップ プログラムをテストするには、ことに同意します。  
+  
+1.  **ソリューション エクスプ ローラー**を展開する、アプリケーションの名前をクリックします。  
+  
+2.  **プロジェクト** メニューのをクリックして*ProjectName* **プロパティ**です。  
+  
+3.  クリックして、**発行**] ページで、クリックして**[今すぐ発行**です。  
+  
+4.  発行の出力が自動的に開かない場合は、発行の出力に移動します。  
   
 5.  Setup.exe プログラムを実行します。  
   
-     セットアップ プログラムで、Update Consent Dialog のソフトウェア ライセンス条項が表示されます。  
+     セットアップ プログラムは、更新プログラムの同意ダイアログのソフトウェア使用許諾契約書を示しています。  
   
-6.  ソフトウェア ライセンス条項を読み、**\[同意する\]** をクリックします。  
+6.  ソフトウェアの使用許諾契約を読み、クリックして**Accept**です。  
   
-     Update Consent Dialog アプリケーションが表示され、"インストールしようとしているアプリケーションでは、Web で最新の更新プログラムがチェックされます。  \[同意する\] をクリックして承認すると、インターネットに接続して自動的に更新プログラムの確認とインストールが行われます。" というテキストが表示されます。  
+     更新プログラムの同意ダイアログ アプリケーションが表示され、次のテキスト: インストールしようとしているアプリケーションが Web 上の最新の更新プログラムをチェックします。 同意をクリックするでは、インターネットに自動的に更新プログラムを確認するためのアプリケーションを承認します。  
   
-7.  アプリケーションを閉じるか、\[キャンセル\] をクリックします。  
+7.  アプリケーションを閉じるか、[キャンセル] をクリックします。  
   
-     アプリケーションで、"*ApplicationName* のシステム コンポーネントのインストール中にエラーが発生しました。  すべてのシステム コンポーネントが正常にインストールされるまで、セットアップは続行できません。" というエラーが表示されます。  
+     アプリケーションはエラーを示します: のシステム コンポーネントのインストール中にエラーが発生しました。 *ApplicationName*です。 すべてのシステム コンポーネントが正常にインストールされるまで、セットアップを続行できません。  
   
-8.  \[詳細\] をクリックします。"コンポーネント Update Consent Dialog のインストールに失敗し、次のエラー メッセージが生成されました: "The automatic update agreement is not accepted."次のコンポーネントをインストールできませんでした: \- Update Consent Dialog" というエラー メッセージが表示されます。  
+8.  次のエラー メッセージを表示するための詳細 をクリックします。 コンポーネントの更新に同意するもののダイアログ ボックスは、次のエラー メッセージとインストールに失敗しました:"自動更新の契約に同意しない"です。 次のコンポーネントがインストールに失敗しました:-更新プログラムの同意ダイアログ  
   
-9. **\[閉じる\]** をクリックします。  
+9. **[閉じる]**をクリックします。  
   
-#### セットアップ プログラムを作成して \[同意する\] をクリックした場合の動作をテストするには  
+#### <a name="to-create-and-test-the-setup-program-by-clicking-i-agree"></a>作成しをクリックして、セットアップ プログラムをテストするには、ことに同意します。  
   
-1.  **ソリューション エクスプローラー**で、配置するアプリケーションの名前をクリックします。  
+1.  **ソリューション エクスプ ローラー**を展開する、アプリケーションの名前をクリックします。  
   
-2.  **\[プロジェクト\]** メニューの **\[*プロジェクト名*のプロパティ\]** をクリックします。  
+2.  **プロジェクト** メニューのをクリックして*ProjectName* **プロパティ**です。  
   
-3.  **\[発行\]** ページをクリックし、**\[今すぐ発行\]** をクリックします。  
+3.  クリックして、**発行**] ページで、クリックして**[今すぐ発行**です。  
   
-4.  発行の出力が自動的に開かない場合は発行の出力に移動します。  
+4.  発行の出力が自動的に開かない場合は、発行の出力に移動します。  
   
 5.  Setup.exe プログラムを実行します。  
   
-     セットアップ プログラムで、Update Consent Dialog のソフトウェア ライセンス条項が表示されます。  
+     セットアップ プログラムは、更新プログラムの同意ダイアログのソフトウェア使用許諾契約書を示しています。  
   
-6.  ソフトウェア ライセンス条項を読み、**\[同意する\]** をクリックします。  
+6.  ソフトウェアの使用許諾契約を読み、クリックして**Accept**です。  
   
-     Update Consent Dialog アプリケーションが表示され、"インストールしようとしているアプリケーションでは、Web で最新の更新プログラムがチェックされます。  \[同意する\] をクリックして承認すると、インターネットに接続して自動的に更新プログラムの確認とインストールが行われます。" というテキストが表示されます。  
+     更新プログラムの同意ダイアログ アプリケーションが表示され、次のテキスト: インストールしようとしているアプリケーションが Web 上の最新の更新プログラムをチェックします。 同意をクリックするでは、インターネットに自動的に更新プログラムを確認するためのアプリケーションを承認します。  
   
-7.  **\[同意する\]** をクリックし、**\[続行\]** をクリックします。  
+7.  をクリックして**同意**、クリックして**続行**です。  
   
-     アプリケーションでインストールが開始されます。  
+     アプリケーションは、インストールを開始します。  
   
-8.  \[アプリケーションのインストール\] ダイアログ ボックスで、**\[インストール\]** をクリックします。  
+8.  アプリケーションのインストール ダイアログ ボックスが表示されたら、クリックして**インストール**です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [アプリケーション配置の必要条件](../deployment/application-deployment-prerequisites.md)   
- [ブートストラップ パッケージの作成](../deployment/creating-bootstrapper-packages.md)   
- [方法: 製品マニフェストを作成する](../deployment/how-to-create-a-product-manifest.md)   
- [方法: パッケージ マニフェストを作成する](../deployment/how-to-create-a-package-manifest.md)   
+ [ブートス トラップ パッケージを作成します。](../deployment/creating-bootstrapper-packages.md)   
+ [方法: 製品マニフェストを作成します。](../deployment/how-to-create-a-product-manifest.md)   
+ [方法: パッケージ マニフェストを作成します。](../deployment/how-to-create-a-package-manifest.md)   
  [製品およびパッケージ スキーマ リファレンス](../deployment/product-and-package-schema-reference.md)

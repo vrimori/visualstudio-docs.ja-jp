@@ -1,51 +1,53 @@
 ---
-title: "delete 演算子 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "delete_JavaScriptKeyword"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "配列要素、削除"
-  - "プロパティ、削除"
-  - "delete 演算子"
+title: "delete 演算子 (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: delete_JavaScriptKeyword
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- array elements, deleting
+- properties, deleting
+- delete operator
 ms.assetid: 55c6487e-96ea-455b-a7ed-dc35c41ac2f3
-caps.latest.revision: 16
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: ee3def1977c0b29ee14ebf836f2d9ebb51d5a5ef
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# delete 演算子 (JavaScript)
-オブジェクトのプロパティ、または配列の要素を削除します。  
+# <a name="delete-operator-javascript"></a>delete 演算子 (JavaScript)
+オブジェクトからプロパティを削除するか、または配列から要素を削除します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 delete expression  
 ```  
   
-## 解説  
- `expression` 引数は、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] の有効な式です。通常はその結果がプロパティ名または配列要素になります。  
+## <a name="remarks"></a>コメント  
+ `expression`引数は有効な[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]プロパティの名前または配列の要素で通常、式の結果します。  
   
- `expression` の結果がオブジェクトで、`expression` で指定されたプロパティが存在し、さらにオブジェクトがそのプロパティの削除を禁止している場合は、`false` が返されます。  
+ 場合の結果`expression`オブジェクトで指定されたプロパティは、`expression`存在する場合、オブジェクトは許可されていない、削除して`false`が返されます。  
   
- その他の場合は、`true` が返されます。  
+ その他のすべてのケースで`true`が返されます。  
   
-## 使用例  
- 配列から要素を削除する方法の例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、配列から要素を削除する方法を示します。  
   
-```javascript  
+```JavaScript  
 // Create an array.  
 var ar = new Array (10, 11, 12, 13, 14);  
   
@@ -61,10 +63,10 @@ document.write ("array: " + ar);
 //  array: 10,,12,13,14  
 ```  
   
-## 使用例  
- オブジェクトからプロパティを削除する方法の例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、オブジェクトからプロパティを削除する方法を示します。  
   
-```javascript  
+```JavaScript  
 // Create an object and add expando properties.  
 var myObj = new Object();  
 myObj.name = "Fred";  
@@ -83,9 +85,9 @@ document.write ("count: " + myObj.count);
 //  count: undefined  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv3](../../javascript/reference/includes/jsv3-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [演算子の優先順位](../../javascript/operator-subtractprecedence-javascript.md)   
- [演算子の一覧 \(JavaScript\)](../../javascript/misc/operator-subtractsummary-javascript.md)
+ [演算子の一覧 (JavaScript)](../../javascript/misc/operator-subtractsummary-javascript.md)

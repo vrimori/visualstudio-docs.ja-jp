@@ -1,11 +1,10 @@
 ---
-title: 'CA1041: Provide ObsoleteAttribute message | Microsoft Docs'
+title: "1041: ObsoleteAttribute メッセージを指定します |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,56 +14,42 @@ helpviewer_keywords:
 - ProvideObsoleteAttributeMessage
 - CA1041
 ms.assetid: be5bee69-d2d2-44e1-be2e-3ea451969003
-caps.latest.revision: 16
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: bd0bbbc6604802eb945f9f7430e4474e22352753
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 5d6c0ac4d5972e06768306be51a92e93da763ce0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1041-provide-obsoleteattribute-message"></a>CA1041: Provide ObsoleteAttribute message
+# <a name="ca1041-provide-obsoleteattribute-message"></a>CA1041: ObsoleteAttribute メッセージを指定します
 |||  
 |-|-|  
 |TypeName|ProvideObsoleteAttributeMessage|  
 |CheckId|CA1041|  
-|Category|Microsoft.Design|  
-|Breaking Change|Non-breaking|  
+|カテゴリ|Microsoft.Design|  
+|互換性に影響する変更点|なし|  
   
-## <a name="cause"></a>Cause  
- A type or member is marked by using a <xref:System.ObsoleteAttribute?displayProperty=fullName> attribute that does not have its <xref:System.ObsoleteAttribute.Message%2A?displayProperty=fullName> property specified.  
+## <a name="cause"></a>原因  
+ 使用して、型またはメンバーになって、<xref:System.ObsoleteAttribute?displayProperty=fullName>属性を持たないその<xref:System.ObsoleteAttribute.Message%2A?displayProperty=fullName>プロパティが指定されています。  
   
-## <a name="rule-description"></a>Rule Description  
- <xref:System.ObsoleteAttribute> is used to mark deprecated library types and members. Library consumers should avoid the use of any type or member that is marked obsolete. This is because it might not be supported and will eventually be removed from later versions of the library. When a type or member marked by using <xref:System.ObsoleteAttribute> is compiled, the <xref:System.ObsoleteAttribute.Message%2A> property of the attribute is displayed. This gives the user information about the obsolete type or member. This information generally includes how long the obsolete type or member will be supported by the library designers and the preferred replacement to use.  
+## <a name="rule-description"></a>規則の説明  
+ <xref:System.ObsoleteAttribute>非推奨のライブラリの型およびメンバーを示すために使用します。 ライブラリのコンシューマーは、任意の種類または旧式とマークされているメンバーの使用を避ける必要があります。 これはサポートされない可能性があり、、最終的に以降のバージョンのライブラリから削除されるためです。 型またはメンバーをマークされている場合を使用して<xref:System.ObsoleteAttribute>をコンパイルすると、<xref:System.ObsoleteAttribute.Message%2A>属性のプロパティが表示されます。 これによって、ユーザーは旧式の型またはメンバーに関する情報を知ることができます。 この情報には通常、旧式の型がどのくらいの時間が含まれています。 またはメンバーを使用するには、ライブラリのデザイナーと優先の交換によってサポートされます。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, add the `message` parameter to the <xref:System.ObsoleteAttribute> constructor.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには追加、`message`パラメーターを<xref:System.ObsoleteAttribute>コンス トラクターです。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule because the <xref:System.ObsoleteAttribute.Message%2A> property provides critical information about the obsolete type or member.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告は抑制しないでください、<xref:System.ObsoleteAttribute.Message%2A>プロパティは旧式の型またはメンバーに関する重要な情報を提供します。  
   
-## <a name="example"></a>Example  
- The following example shows an obsolete member that has a correctly declared <xref:System.ObsoleteAttribute>.  
+## <a name="example"></a>例  
+ 次の例は、旧式のメンバーを持つ、正しく宣言されている<xref:System.ObsoleteAttribute>です。  
   
- [!code-cpp[FxCop.Design.ObsoleteAttributeOnMember#1](../code-quality/codesnippet/CPP/ca1041-provide-obsoleteattribute-message_1.cpp)] [!code-csharp[FxCop.Design.ObsoleteAttributeOnMember#1](../code-quality/codesnippet/CSharp/ca1041-provide-obsoleteattribute-message_1.cs)] [!code-vb[FxCop.Design.ObsoleteAttributeOnMember#1](../code-quality/codesnippet/VisualBasic/ca1041-provide-obsoleteattribute-message_1.vb)]  
+ [!code-cpp[FxCop.Design.ObsoleteAttributeOnMember#1](../code-quality/codesnippet/CPP/ca1041-provide-obsoleteattribute-message_1.cpp)]
+ [!code-csharp[FxCop.Design.ObsoleteAttributeOnMember#1](../code-quality/codesnippet/CSharp/ca1041-provide-obsoleteattribute-message_1.cs)]
+ [!code-vb[FxCop.Design.ObsoleteAttributeOnMember#1](../code-quality/codesnippet/VisualBasic/ca1041-provide-obsoleteattribute-message_1.vb)]  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  <xref:System.ObsoleteAttribute?displayProperty=fullName>

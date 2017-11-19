@@ -1,35 +1,37 @@
 ---
-title: "構文エラー (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.WebClient.Help.SCRIPT1002"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "構文エラー (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: javascript
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VS.WebClient.Help.SCRIPT1002
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: e4a9d980-f3ef-4092-b192-bf4a45981d30
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a0df8de8df8e390cd1e361159a378da190518f43
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 構文エラー (JavaScript)
-[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] の 1 つ以上の文法規則に違反するステートメントを作成しました。  
+# <a name="syntax-error-javascript"></a>構文エラー (JavaScript)
+1 つまたは複数の文法の規則に違反するステートメントを作成して[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]です。  
   
-### このエラーを解決するには  
+### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   プログラムの構文内で指摘されている行番号を再度確認します。  
+-   示されている行番号のプログラムの構文を再確認してください。  
   
--   かっこや中かっこの使用に間違いがないかを確認します。  
+-   間違った宛て先に送信かっこまたは中かっこを探します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Error オブジェクト](../../javascript/reference/error-object-javascript.md)

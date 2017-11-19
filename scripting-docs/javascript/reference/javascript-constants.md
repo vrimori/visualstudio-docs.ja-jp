@@ -1,54 +1,56 @@
 ---
-title: "JavaScript 定数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "定数 [JavaScript]"
+title: "JavaScript 定数 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: constants [JavaScript]
 ms.assetid: 35b141cc-8116-47b1-bc0b-0f22e182f7e7
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 776abf10ff9bf382299c143d968ff9112aff49c4
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# JavaScript 定数
-次の表に、式で使用できる定義済みの [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 定数を示します。  
+# <a name="javascript-constants"></a>JavaScript 定数
+次の表に定義済みリスト[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]定数式で使用できます。  
   
-## 定数  
+## <a name="constants"></a>定数  
   
-|定数|Description|[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] オブジェクト|  
-|--------|-----------------|-----------------------------------------------------------------------|  
-|[E](../../javascript/reference/math-constants-javascript.md)|数学定数 e。  これはオイラー数で、自然対数の底です。|`Math`|  
-|[Infinity](../../javascript/reference/infinity-constant-javascript.md)|最大の浮動小数点数を超える値。  負の無限大 \(\-Infinity\) は、最小の浮動小数点数より小さくなります。|`Global`|  
+|定数|説明|[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] オブジェクト|  
+|--------------|-----------------|-----------------------------------------------------------------------|  
+|[E](../../javascript/reference/math-constants-javascript.md)|数学定数 e。 オイラー数、自然対数の底です。|`Math`|  
+|[無限大](../../javascript/reference/infinity-constant-javascript.md)|値が最大の浮動小数点数よりも大きいです。 負の無限大 (-無限大) が最小の浮動より小さい数をポイントします。|`Global`|  
 |[LN2](../../javascript/reference/math-constants-javascript.md)|2 の自然対数。|`Math`|  
 |[LN10](../../javascript/reference/math-constants-javascript.md)|10 の自然対数。|`Math`|  
-|[LOG2E](../../javascript/reference/math-constants-javascript.md)|e の底 2 の対数。|`Math`|  
-|[LOG10E](../../javascript/reference/math-constants-javascript.md)|e の底 10 の対数。|`Math`|  
-|[MAX\_VALUE](../../javascript/reference/number-constants-javascript.md)|[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] で表現のできる最大の数値。|`Number`|  
-|[MIN\_VALUE](../../javascript/reference/number-constants-javascript.md)|[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] で表現できる最も 0 に近い数値。|`Number`|  
-|[NaN](../../javascript/reference/number-constants-javascript.md)|算術式が非数の値を返したことを示します。|`Number`|  
-|[NaN \(Global\)](../../javascript/reference/nan-constant-javascript.md)|式が非数であることを示す値。|`Global`|  
-|[NEGATIVE\_INFINITY](../../javascript/reference/number-constants-javascript.md)|最小の浮動小数点数未満の値。|`Number`|  
-|[null 定数 \(JavaScript\)](../../javascript/reference/null-constant-javascript.md)|有効なデータを指さない変数の値。|`Global`|  
-|[PI](../../javascript/reference/math-constants-javascript.md)|パイ。  これは円の円周を直径で割った値です \(円周率\)。|`Math`|  
-|[POSITIVE\_INFINITY](../../javascript/reference/number-constants-javascript.md)|A value that is larger than the largest floating point number.|`Number`|  
-|[SQRT1\_2](../../javascript/reference/math-constants-javascript.md)|0.5 の平方根の値 \(1 を 2 の平方根で割った値\) を返します。|`Math`|  
+|[LOG2E](../../javascript/reference/math-constants-javascript.md)|2 を底とする e の対数。|`Math`|  
+|[LOG10E](../../javascript/reference/math-constants-javascript.md)|10 を底とする e の対数。|`Math`|  
+|[MAX_VALUE](../../javascript/reference/number-constants-javascript.md)|[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] で表せる最大の数値。|`Number`|  
+|[MIN_VALUE](../../javascript/reference/number-constants-javascript.md)|[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] で表せるゼロに最も近い数値。|`Number`|  
+|[NaN](../../javascript/reference/number-constants-javascript.md)|算術式が数値ではない値を返すことを示します。|`Number`|  
+|[NaN (Global)](../../javascript/reference/nan-constant-javascript.md)|式が数値ではないことを示す値。|`Global`|  
+|[NEGATIVE_INFINITY](../../javascript/reference/number-constants-javascript.md)|最小の浮動よりも小さい値は小数点数です。|`Number`|  
+|[null 定数 (JavaScript)](../../javascript/reference/null-constant-javascript.md)|有効なデータをポイントしていない変数の値。|`Global`|  
+|[PI](../../javascript/reference/math-constants-javascript.md)|Pi。 円周率です。|`Math`|  
+|[POSITIVE_INFINITY](../../javascript/reference/number-constants-javascript.md)|値が最大の浮動小数点数よりも大きいです。|`Number`|  
+|[SQRT1_2](../../javascript/reference/math-constants-javascript.md)|0.5 の平方根、または 1 を 2 の平方根で除算しても同じです。|`Math`|  
 |[SQRT2](../../javascript/reference/math-constants-javascript.md)|2 の平方根。|`Math`|  
-|[未定義](../../javascript/reference/undefined-constant-javascript.md)|宣言されたが、初期化されていない変数の値。|`Global`|  
+|[未定義](../../javascript/reference/undefined-constant-javascript.md)|された宣言されているが初期化されていない変数の値。|`Global`|  
   
-## 参照  
- [Global オブジェクト](../../javascript/reference/global-object-javascript.md)   
+## <a name="see-also"></a>関連項目  
+ [グローバル オブジェクト](../../javascript/reference/global-object-javascript.md)   
  [Math オブジェクト](../../javascript/reference/math-object-javascript.md)   
  [Number オブジェクト](../../javascript/reference/number-object-javascript.md)   
  [JavaScript リファレンス](../../javascript/reference/javascript-reference.md)

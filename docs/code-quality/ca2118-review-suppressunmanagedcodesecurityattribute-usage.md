@@ -1,11 +1,10 @@
 ---
-title: 'CA2118: Review SuppressUnmanagedCodeSecurityAttribute usage | Microsoft Docs'
+title: "2118: ca SuppressUnmanagedCodeSecurityAttribute のレビュー使用法 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,82 +14,67 @@ helpviewer_keywords:
 - ReviewSuppressUnmanagedCodeSecurityUsage
 - CA2118
 ms.assetid: 4cb8d2fc-4e44-4dc3-9b74-7f5838827d41
-caps.latest.revision: 20
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: cdec0f1446b87f23be8f9da9014cd4fd3d3d05e2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "20"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 92728eae21d4a3035f0396957fa643d14ef06e1c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2118-review-suppressunmanagedcodesecurityattribute-usage"></a>CA2118: Review SuppressUnmanagedCodeSecurityAttribute usage
+# <a name="ca2118-review-suppressunmanagedcodesecurityattribute-usage"></a>CA2118: SuppressUnmanagedCodeSecurityAttribute の使用法をレビューします
 |||  
 |-|-|  
 |TypeName|ReviewSuppressUnmanagedCodeSecurityUsage|  
 |CheckId|CA2118|  
-|Category|Microsoft.Security|  
-|Breaking Change|Breaking|  
+|カテゴリ|Microsoft.Security|  
+|互換性に影響する変更点|あり|  
   
-## <a name="cause"></a>Cause  
- A public or protected type or member has the <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> attribute.  
+## <a name="cause"></a>原因  
+ パブリックまたはプロテクト型またはメンバーが、<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName>属性。  
   
-## <a name="rule-description"></a>Rule Description  
- <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> changes the default security system behavior for members that execute unmanaged code using COM interop or platform invocation. Generally, the system makes a [Data and Modeling](/dotnet/framework/data/index) for unmanaged code permission. This demand occurs at run time for every invocation of the member, and checks every caller in the call stack for permission. When the attribute is present, the system makes a [Link Demands](/dotnet/framework/misc/link-demands) for the permission: the permissions of the immediate caller are checked when the caller is JIT-compiled.  
+## <a name="rule-description"></a>規則の説明  
+ <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>COM 相互運用またはプラットフォーム呼び出しを使用してアンマネージ コードを実行するメンバーの既定のセキュリティ システムの動作を変更します。 一般に、システムにより、[データとモデリング](/dotnet/framework/data/index)アンマネージ コードのアクセス許可のです。 この要求は、メンバーの呼び出しのたびに、実行時に発生し、アクセス許可の呼び出し履歴内のすべての呼び出し元をチェックします。 システムは、属性が存在する場合、[リンク確認要求](/dotnet/framework/misc/link-demands)のアクセス許可: 呼び出し元が JIT でコンパイルされたときに、直前の呼び出し元の権限はチェックされます。  
   
- This attribute is primarily used to increase performance; however, the performance gains come with significant security risks. If you place the attribute on public members that call native methods, the callers in the call stack (other than the immediate caller) do not need unmanaged code permission to execute unmanaged code. Depending on the public member's actions and input handling, it might allow untrustworthy callers to access functionality normally restricted to trustworthy code.  
+ この属性は、主にパフォーマンスを向上するために使用されますが、パフォーマンスが向上するとセキュリティ上のリスクも高くなります。 ネイティブ メソッドを呼び出すのパブリック メンバーに属性を配置する場合、(直前の呼び出し元) 以外の呼び出し履歴内の呼び出し元はアンマネージ コードのアクセス許可をアンマネージ コードを実行する必要はありません。 によっては、パブリック メンバーのアクションおよび入力の処理には、信頼できない呼び出し元が信頼できるコードを通常どおりに制限されている機能にアクセスすることが可能です。  
   
- The [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] relies on security checks to prevent callers from gaining direct access to the current process's address space. Because this attribute bypasses normal security, your code poses a serious threat if it can be used to read or write to the process's memory. Note that the risk is not limited to methods that intentionally provide access to process memory; it is also present in any scenario where malicious code can achieve access by any means, for example, by providing surprising, malformed, or invalid input.  
+ [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]に対する呼び出し元が現在のプロセスのアドレス空間に直接アクセスするを防ぐためのセキュリティ チェックに依存しています。 この属性が通常のセキュリティをバイパスするので、コードは、プロセスのメモリに対する読み取りまたは書き込みに使用できる場合、重大な脅威を招きます。 リスクが意図的にメモリをプロセスへのアクセスを提供するメソッドに制限されていないことに注意してください。どのシナリオでも、悪意のあるコードを実現できますアクセスした場合、たとえば、ことにより意外、形式が正しくない、または無効な入力を提供することによって表示もできます。  
   
- The default security policy does not grant unmanaged code permission to an assembly unless it is executing from the local computer or is a member of one of the following groups:  
+ ローカル コンピューターから実行する、次のグループのいずれかのメンバーである場合を除き、既定のセキュリティ ポリシーは、アセンブリにアンマネージ コードのアクセス許可を付与されず。  
   
--   My Computer Zone Code Group  
+-   コンピューターのゾーンのコード グループ  
   
--   Microsoft Strong Name Code Group  
+-   Microsoft 厳密な名前のコード グループ  
   
--   ECMA Strong Name Code Group  
+-   ECMA 厳密な名前のコード グループ  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- Carefully review your code to ensure that this attribute is absolutely necessary. If you are unfamiliar with managed code security, or do not understand the security implications of using this attribute, remove it from your code. If the attribute is required, you must ensure that callers cannot use your code maliciously. If your code does not have permission to execute unmanaged code, this attribute has no effect and should be removed.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この属性がどうしても必要なことを確認するコードを慎重に確認します。 マネージ コードのセキュリティに習熟していないか、この属性を使用するセキュリティへの影響を理解していない、設定した場合は、コードから削除します。 属性が必要な場合は、呼び出し元がコードを悪意を持って使用できないことを確認する必要があります。 コードがアンマネージ コードを実行するアクセス許可を持たない場合、この属性は影響を与えませんし、削除する必要があります。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- To safely suppress a warning from this rule, you must ensure that your code does not provide callers access to native operations or resources that can be used in a destructive manner.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告を安全に抑制するには、ネイティブの操作または破壊的な方法で使用できるリソースへのアクセスを呼び出し元に提供していないを確認する必要があります。  
   
-## <a name="example"></a>Example  
- The following example violates the rule.  
+## <a name="example"></a>例  
+ 次の例では、この規則に違反します。  
   
  [!code-csharp[FxCop.Security.TypesDoNotSuppress#1](../code-quality/codesnippet/CSharp/ca2118-review-suppressunmanagedcodesecurityattribute-usage_1.cs)]  
   
-## <a name="example"></a>Example  
- In the following example, the `DoWork` method provides a publicly accessible code path to the platform invocation method `FormatHardDisk`.  
+## <a name="example"></a>例  
+ 次の例で、`DoWork`メソッドは、プラットフォーム呼び出しメソッドをパブリックにアクセスできるコード パスを提供`FormatHardDisk`です。  
   
  [!code-csharp[FxCop.Security.PInvokeAndSuppress#1](../code-quality/codesnippet/CSharp/ca2118-review-suppressunmanagedcodesecurityattribute-usage_2.cs)]  
   
-## <a name="example"></a>Example  
- In the following example, the public method `DoDangerousThing` causes a violation. To resolve the violation, `DoDangerousThing` should be made private, and access to it should be through a public method secured by a security demand, as illustrated by the `DoWork` method.  
+## <a name="example"></a>例  
+ 次の例では、そのパブリック メソッドで`DoDangerousThing`違反が発生します。 違反を解決するのには`DoDangerousThing`加える必要のあるプライベート、およびに示すようへのアクセス権が、セキュリティ確認要求によって保護されているパブリック メソッドを使用する必要があります、`DoWork`メソッドです。  
   
  [!code-csharp[FxCop.Security.TypeInvokeAndSuppress#1](../code-quality/codesnippet/CSharp/ca2118-review-suppressunmanagedcodesecurityattribute-usage_3.cs)]  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName>   
- [Secure Coding Guidelines](/dotnet/standard/security/secure-coding-guidelines)   
- [Security Optimizations](http://msdn.microsoft.com/en-us/cf255069-d85d-4de3-914a-e4625215a7c0)   
- [Data and Modeling](/dotnet/framework/data/index)  
- [Link Demands](/dotnet/framework/misc/link-demands)  
+ [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)   
+ [セキュリティの最適化](http://msdn.microsoft.com/en-us/cf255069-d85d-4de3-914a-e4625215a7c0)   
+ [データとモデリング](/dotnet/framework/data/index)  
+ [リンク確認要求](/dotnet/framework/misc/link-demands)  
   

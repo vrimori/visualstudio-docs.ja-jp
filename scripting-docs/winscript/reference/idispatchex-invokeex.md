@@ -1,27 +1,30 @@
 ---
-title: "IDispatchEx::InvokeEx | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IDispatchEx::InvokeEx |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IDispatchEx.InvokeEx
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "InvokeEx メソッド"
+helpviewer_keywords: InvokeEx method
 ms.assetid: d90783e6-4b89-4423-8a56-a9c8b4b2c813
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 6302228b110e2b0a6296190079bf60b3d92980bd
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IDispatchEx::InvokeEx
-`IDispatchEx` のオブジェクトによって公開されるプロパティとメソッドにアクセスできます。  
+# <a name="idispatchexinvokeex"></a>IDispatchEx::InvokeEx
+プロパティとによって公開されるメソッドにアクセスできるように、`IDispatchEx`オブジェクト。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT InvokeEx(  
@@ -35,84 +38,84 @@ HRESULT InvokeEx(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `id`  
- メンバーを識別します。  ディスパッチ ID を取得または `GetNextDispID` 使用 `GetDispID`。  
+ メンバーを識別します。 使用して`GetDispID`または`GetNextDispID`ディスパッチ識別子を取得します。  
   
  `lcid`  
- 引数を解釈する対象のロケール コンテキスト。  `lcid` は `InvokeEx` にオブジェクトがロケール固有の引数を解釈するために渡されます。  
+ 引数を解釈する対象のロケール コンテキスト。 `lcid`に渡される`InvokeEx`ロケールに固有の引数を解釈するオブジェクトを許可します。  
   
  `wFlags`  
- `wFlags` の有効な値は次のとおりです:  
+ 値は、法的`wFlags`は。  
   
- DISPATCH\_PROPERTYGET &#124; DISPATCH\_METHOD &#124; DISPATCH\_PROPERTYPUT &#124; DISPATCH\_PROPERTYPUTREF &#124; DISPATCH\_CONSTRUCT  
+ DISPATCH_PROPERTYGET &#124;です。DISPATCH_METHOD &#124;です。DISPATCH_PROPERTYPUT &#124;です。DISPATCH_PROPERTYPUTREF &#124;です。DISPATCH_CONSTRUCT  
   
- `InvokeEx` の呼び出しのコンテキストを表すフラグ:  
+ コンテキストを記述するフラグ、`InvokeEx`呼び出し。  
   
 |値|説明|  
-|-------|--------|  
-|DISPATCH\_METHOD|メンバーは、メソッドとして起動されます。  プロパティの名前が同じであり、これ DISPATCH\_PROPERTYGET フラグが設定されている場合があります \( `IDispatch`で定義\) です。|  
-|DISPATCH\_PROPERTYGET|メンバーには、プロパティやデータ メンバーとして取得されます \( `IDispatch`で定義\) です。|  
-|DISPATCH\_PROPERTYPUT|メンバーは、プロパティやデータ メンバーとして変更されます \( `IDispatch`で定義\) です。|  
-|DISPATCH\_PROPERTYPUTREF|メンバーは、値の代入ではなく参照の割り当てによって変更されます。  このフラグは、プロパティがオブジェクトへの参照を受け入れる場合のみ有効です \( `IDispatch`で定義\) です。|  
-|DISPATCH\_CONSTRUCT|メンバーは、コンストラクターとして使用されます。   \(これは `IDispatchEx`で定義されている新しい値\)。  `wFlags` の有効な値は次のとおりです:<br /><br /> DISPATCH\_PROPERTYGET DISPATCH\_METHOD DISPATCH\_PROPERTYPUT DISPATCH\_PROPERTYPUTREF DISPATCH\_CONSTRUCT|  
+|-----------|-------------|  
+|DISPATCH_METHOD|メソッドとメンバーが呼び出されます。 これと DISPATCH_PROPERTYGET フラグを設定することがあります、プロパティには、同じ名前が付いている場合 (によって定義された`IDispatch`)。|  
+|DISPATCH_PROPERTYGET|メンバーは、プロパティまたはデータ メンバーとして取得 (によって定義された`IDispatch`)。|  
+|DISPATCH_PROPERTYPUT|メンバーが変更されたプロパティまたはデータ メンバー (によって定義された`IDispatch`)。|  
+|DISPATCH_PROPERTYPUTREF|値の代入ではなく、参照の割り当てによって、メンバーが変更されます。 このフラグが有効では、プロパティがオブジェクトへの参照を受け入れる場合にのみ (によって定義された`IDispatch`)。|  
+|DISPATCH_CONSTRUCT|メンバーは、コンス トラクターとして使用されています。 (これは、新しい値によって定義された`IDispatchEx`)。 値は、法的`wFlags`は。<br /><br /> DISPATCH_PROPERTYGET DISPATCH_METHOD DISPATCH_PROPERTYPUT DISPATCH_PROPERTYPUTREF DISPATCH_CONSTRUCT|  
   
  `pdp`  
- 引数の配列、名前付き引数の DISPID の配列、配列内の要素数のカウントを格納している構造体へのポインター。  DISPPARAMS の構造の詳細については、`IDispatch` ドキュメントを参照してください。  
+ 引数の配列、名前付き引数の DISPID の配列、配列内の要素数のカウントを格納している構造体へのポインター。 参照してください、 `IDispatch` DISPPARAMS 構造体の詳細についてはドキュメントです。  
   
  `pVarRes`  
- 呼び出し元が結果を期待する結果が格納されている場所または null へのポインター。  この引数は DISPATCH\_PROPERTYPUT か DISPATCH\_PROPERTYPUTREF を指定した場合は無視されます。  
+ 結果が保存または呼び出し元が結果を持たない場合は Null にする場所へのポインター。 DISPATCH_PROPERTYPUT または DISPATCH_PROPERTYPUTREF が指定されている場合、この引数は無視されます。  
   
  `pei`  
- 例外情報を格納する構造体へのポインター。  この構造は `DISP_E_EXCEPTION` が返されると指定してください。  null にすることができます。  `EXCEPINFO` の構造の詳細については、`IDispatch` ドキュメントを参照してください。  
+ 例外情報を格納する構造体へのポインター。 この構造体の場合に塗りつぶしが必要`DISP_E_EXCEPTION`が返されます。 Null にすることができます。 参照してください、`IDispatch`ドキュメントの完全な説明を`EXCEPINFO`構造体。  
   
  `pspCaller`  
- オブジェクトが呼び出し元からサービスを取得できるようにする呼び出し元が提供するサービス プロバイダー オブジェクトへのポインター。  null にすることができます。  
+ により、オブジェクトがサービスを取得する呼び出し元から呼び出し元によって指定されたサービス プロバイダー オブジェクトへのポインター。 Null にすることができます。  
   
- `IDispatchEx::InvokeEx` は `IDispatch::Invoke` と同じ機能がすべて用意し、いくつかの拡張子を追加します:  
+ `IDispatchEx::InvokeEx`同じ機能をすべて提供`IDispatch::Invoke`し、一部の拡張機能を追加します。  
   
 |||  
 |-|-|  
-|DISPATCH\_CONSTRUCT|項目がコンストラクターとして使用されていることを示します。|  
-|`pspCaller`|`pspCaller` は、呼び出し元が提供するサービスのオブジェクトへのアクセスを許可します。  特定のサービスで呼び出し元自身で処理されるか、または呼び出しチェーンの上位の呼び出し元のように代入される場合があります。  たとえば、ブラウザー内のスクリプト エンジンが外部オブジェクトに `InvokeEx` の呼び出しを行う場合、オブジェクトはスクリプト エンジンまたはブラウザーからサービスを取得するに `pspCaller` チェーンをたどってできます。   \(呼び出しチェーンがコンテナーのチェーンまたはサイトのチェーンと呼ばれる作成のチェーンまたはとは異なる注意してください。  チェーンは `IObjectWithSite`の作成などの機構を通じて使用できる場合があります\)。|  
-|`this` ポインター|DISPATCH\_METHOD `wFlags`がに設定されている場合、この値「」の「名前付きパラメーター」である場合があります。  DISPID は DISPID\_THIS であり、最初の名前付きパラメーターである必要があります。|  
+|DISPATCH_CONSTRUCT|コンス トラクターとして、項目を使用していることを示します。|  
+|`pspCaller`|`pspCaller`呼び出し元が提供するサービス オブジェクトへのアクセス許可。 特定のサービス自体、呼び出し元によって処理されるまたは呼び出しチェーンの上にさらに呼び出し元に委任します。 たとえば、内のスクリプト エンジンの場合、ブラウザーで、`InvokeEx`外部オブジェクト、オブジェクトへの呼び出しは、`pspCaller`チェーンをスクリプト エンジンまたはブラウザーからサービスを取得します。 (呼び出しチェーンがない作成チェーンと同じ-コンテナー チェーンまたはサイト チェーンとも呼ばれます。 作成チェーンできる場合がありますの他のメカニズムによってなど`IObjectWithSite`)。|  
+|`this` ポインター|設定すると DISPATCH_METHOD が`wFlags`、"this"値「名前付きパラメーター」である可能性があります。 DISPID は DISPID_THIS であり、最初の名前付きパラメーターがあります。|  
   
- `IDispatch::Invoke` の `riid` の未使用のパラメーターが削除されました。  
+ 未使用`riid`パラメーター`IDispatch::Invoke`は削除されました。  
   
- `IDispatch::Invoke` の `puArgArr` のパラメーターが削除されました。  
+ `puArgArr`パラメーター`IDispatch::Invoke`は削除されました。  
   
- 次の例については、のドキュメントを参照してください `IDispatch::Invoke` :  
+ 参照してください、`IDispatch::Invoke`例については、次のドキュメント。  
   
- 「引数なしでメソッドを呼び出します」。  
+ 「引数なしでのメソッドを呼び出すと」  
   
- 「get プロパティを」  
+ 「を取得するプロパティを設定」  
   
- 「パラメーター」を渡します  
+ 「パラメーターの引き渡し」  
   
- 「インデックス付きプロパティを」  
+ [インデックスのプロパティ]  
   
- 「例外を発生時に呼び出します」。  
+ 「Invoke 中に例外を発生させる」  
   
- 「戻る」エラー  
+ 「エラーを返す」  
   
-## 戻り値  
- 次の値の場合: 1  
+## <a name="return-value"></a>戻り値  
+ 次のいずれかの値を返します。  
   
 |||  
 |-|-|  
 |`S_OK`|成功。|  
-|DISP\_E\_BADPARAMCOUNT|DISPPARAMS に指定された要素の数は、メソッドまたはプロパティが受け取る引数の数とは異なります。|  
-|DISP\_E\_BADVARTYPE|`rgvarg` 引数の 1 つが有効なさまざまな型ではありません。|  
-|DISP\_E\_EXCEPTION|アプリケーションは例外を発生させる必要があります。  この場合、`pei` で渡された構造が表示されます。|  
-|DISP\_E\_MEMBERNOTFOUND|要求されたメンバーが存在しない、または `InvokeEx` の呼び出しは読み取り専用のプロパティの値を設定しようとしました。|  
-|DISP\_E\_NONAMEDARGS|この `IDispatch` の実装は名前付き引数はサポートされていません。|  
-|DISP\_E\_OVERFLOW|`rgvarg` 引数の 1 つがは、指定された型に変換できません。|  
-|DISP\_E\_PARAMNOTFOUND|パラメーターの DISPID の 1 つが、メソッドのパラメーターに対応しません。|  
-|DISP\_E\_TYPEMISMATCH|一つ以上の引数に変換できませんでした。|  
-|DISP\_E\_UNKNOWNLCID|開始するメンバーは LCID に従って文字列引数を解釈し、LCID は検証されません。  LCID が引数を解釈するために必要ない場合、このエラーを返す必要はありません。|  
-|DISP\_E\_PARAMNOTOPTIONAL|必須パラメーターが省略されています。|  
+|DISP_E_BADPARAMCOUNT|DISPPARAMS に提供される要素の数とは異なりますメソッドまたはプロパティで受け入れられる引数の数です。|  
+|DISP_E_BADVARTYPE|引数のいずれかの`rgvarg`は無効な variant 型ではありません。|  
+|DISP_E_EXCEPTION|アプリケーションは、例外を発生させる必要があります。 ここでは、構造体渡された`pei`に入力する必要があります。|  
+|DISP_E_MEMBERNOTFOUND|要求されたメンバーが存在しないかへの呼び出し`InvokeEx`読み取り専用プロパティの値を設定しようとしています。|  
+|DISP_E_NONAMEDARGS|この実装`IDispatch`名前付き引数をサポートしていません。|  
+|DISP_E_OVERFLOW|引数のいずれかの`rgvarg`指定された型には強制されませんでした。|  
+|DISP_E_PARAMNOTFOUND|Dispid パラメーターの 1 つは、メソッドのパラメーターに対応していません。|  
+|DISP_E_TYPEMISMATCH|1 つ以上の引数は、強制されませんでした。|  
+|DISP_E_UNKNOWNLCID|呼び出されているメンバーは、LCID に従って文字列引数を解釈し、LCID は認識されません。 LCID が引数を解釈する必要がない場合、このエラーが返されません必要があります。|  
+|DISP_E_PARAMNOTOPTIONAL|必須のパラメーターが省略されました。|  
   
-## 使用例  
+## <a name="example"></a>例  
   
 ```  
 VARIANT var;  
@@ -130,7 +133,7 @@ VARIANT var;
    }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDispatchEx インターフェイス](../../winscript/reference/idispatchex-interface.md)   
  [IDispatchEx::GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)

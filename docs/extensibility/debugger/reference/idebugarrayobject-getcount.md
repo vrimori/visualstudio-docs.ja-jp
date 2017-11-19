@@ -1,53 +1,53 @@
 ---
-title: "IDebugArrayObject::GetCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugArrayObject::GetCount"
-helpviewer_keywords: 
-  - "IDebugArrayObject::GetCount メソッド"
+title: "IDebugArrayObject::GetCount |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugArrayObject::GetCount
+helpviewer_keywords: IDebugArrayObject::GetCount method
 ms.assetid: 7931f3f7-033c-4bf8-8abd-95183952ebb0
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 7c7a860dd1039f5b2e5a2049674ba78a91af7741
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugArrayObject::GetCount
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-配列の要素の数を取得します。  
+# <a name="idebugarrayobjectgetcount"></a>IDebugArrayObject::GetCount
+配列内の要素の数を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 [C++]  
-HRESULT GetCount(   
-   DWORD* pdwElements  
+HRESULT GetCount(   
+   DWORD* pdwElements  
 );  
 ```  
   
 ```  
 [C#]  
 int GetCount(  
-   out uint pdwElements  
+   out uint pdwElements  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pdwElements`  
- \[入力\] 数を返します。  
+ [out]カウントを返します。  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## 解説  
- このメソッドは次元配列として配列オブジェクトが多次元配列でも配列オブジェクトの要素をすべて表示されます。  たとえば配列 `myarray[3][2][6]` はこのメソッドは `pdwElements` パラメーターの 36 を返します。  個々の要素を一つずつ取得するために [GetElement](../Topic/IDebugArrayObject::GetElement.md) のメソッドを使用します。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、1 次元の配列として、配列オブジェクトがマルチ ディメンションの場合でもすべての要素の配列オブジェクトのように表示されます。 たとえば、配列を指定`myarray[3][2][6]`、メソッドは 36 で、`pdwElements`パラメーター。 使用して、 [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md)を一度に 1 つの個々 の要素を取得する方法です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

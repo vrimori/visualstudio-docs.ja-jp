@@ -1,42 +1,42 @@
 ---
-title: "IDiaSymbol::get_isAcceleratorGroupSharedLocal | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "IDiaSymbol::get_isAcceleratorGroupSharedLocal |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 17a20542-5b45-478f-bb80-0d56031aadb5
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 53585bb1bd4b5185fa7ecc1dd998d48736d3b094
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_isAcceleratorGroupSharedLocal
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-シンボルは、. AMP C\+\+ のアクセラレータ用にコンパイルされたコード グループの共有ローカル変数に対応するかどうかを示すフラグを取得します。  
+# <a name="idiasymbolgetisacceleratorgroupsharedlocal"></a>IDiaSymbol::get_isAcceleratorGroupSharedLocal
+C++ AMP のアクセラレータのコンパイルされたコードでグループの共有ローカル変数にシンボルが対応しているかどうかを示すフラグを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp  
+```C++  
 HRESULT get_isAcceleratorGroupSharedLocal(   
    BOOL* pFlag);  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pFlag`  
- \[入力\] シンボルが C \+\+. AMP のアクセラレータ用にコンパイルされたコード グループの共有ローカル変数に対応するかどうかを示す `BOOL` へのポインター。  変数の格納場所の情報を取得して入力に `TRUE`、`get_baseDataSlot` と `get_baseDataOffset` のメソッドを使用できます。  
+ [out]ポインター、`BOOL`シンボルは、C++ AMP のアクセラレータのコンパイルされたコードでグループの共有ローカル変数に対応するかどうかを示すです。 場合`TRUE`、`get_baseDataSlot`と`get_baseDataOffset`メソッドを使用して、変数の記憶域の場所情報を取得することです。  
   
-## 戻り値  
- 成功した場合は `S_OK` を返し、それ以外の場合は `S_FALSE` またはエラー コードを返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [IDiaSymbol::get\_baseDataSlot](../../debugger/debug-interface-access/idiasymbol-get-basedataslot.md)   
- [IDiaSymbol::get\_baseDataOffset](../../debugger/debug-interface-access/idiasymbol-get-basedataoffset.md)
+ [IDiaSymbol::get_baseDataSlot](../../debugger/debug-interface-access/idiasymbol-get-basedataslot.md)   
+ [IDiaSymbol::get_baseDataOffset](../../debugger/debug-interface-access/idiasymbol-get-basedataoffset.md)

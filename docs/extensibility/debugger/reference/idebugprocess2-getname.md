@@ -1,54 +1,54 @@
 ---
-title: "IDebugProcess2::GetName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProcess2::GetName"
-helpviewer_keywords: 
-  - "IDebugProcess2::GetName"
+title: "IDebugProcess2::GetName |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProcess2::GetName
+helpviewer_keywords: IDebugProcess2::GetName
 ms.assetid: a2f66ab5-53e5-4cdc-a1b5-3b8afa8ee646
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 7d8382cf5e356725f5ca50348d422290b4363c35
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProcess2::GetName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-プロセスのタイトル表示名またはファイル名を取得します。  
+# <a name="idebugprocess2getname"></a>IDebugProcess2::GetName
+タイトル、フレンドリ名、または、プロセスのファイル名を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetName(   
-   GETNAME_TYPE  gnType,  
-   BSTR*         pbstrName  
+```cpp  
+HRESULT GetName(   
+   GETNAME_TYPE  gnType,  
+   BSTR*         pbstrName  
 );  
 ```  
   
-```c#  
-int GetName(   
-   enum_GETNAME_TYPE  gnType,  
-   out string         pbstrName  
+```csharp  
+int GetName(   
+   enum_GETNAME_TYPE  gnType,  
+   out string         pbstrName  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `gnType`  
- \[入力\] 取得するような名前を指定する [GETNAME\_TYPE](../../../extensibility/debugger/reference/getname-type.md) の列挙体の値。  
+ [in]値、 [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)返す名の種類を指定する列挙です。  
   
  `pbstrName`  
- \[入力\] プロセスの名前を返します。  
+ [out]プロセスの名前を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
- [GETNAME\_TYPE](../../../extensibility/debugger/reference/getname-type.md)
+ [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)

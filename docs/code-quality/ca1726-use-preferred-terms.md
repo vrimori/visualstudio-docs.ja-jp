@@ -1,73 +1,73 @@
 ---
-title: "CA1726: 適切な用語を使用します | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "UsePreferredTerms"
-  - "CA1726"
-helpviewer_keywords: 
-  - "UsePreferredTerms"
+title: "Ca 1726: 適切な用語を使用 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- UsePreferredTerms
+- CA1726
+helpviewer_keywords: UsePreferredTerms
 ms.assetid: 642b2acd-3a33-4d1f-b0a7-67073ae73be2
-caps.latest.revision: 23
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 2ae02d0eb136d45bc2b8af7dde5f897765493050
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA1726: 適切な用語を使用します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1726-use-preferred-terms"></a>CA1726: 適切な用語を使用します
 |||  
 |-|-|  
 |TypeName|UsePreferredTerms|  
 |CheckId|CA1726|  
-|分類|Microsoft.Naming|  
-|互換性に影響する変更点|あり – アセンブリで発生した場合<br /><br /> なし – 型パラメーター上で発生した場合|  
+|カテゴリ|Microsoft.Naming|  
+|互換性に影響する変更点|– アセンブリで発生した場合<br /><br /> 改行の型パラメーターで発生した場合|  
   
-## 原因  
- 外部から参照可能な識別子の名前に含まれている用語に対応する、別の推奨される用語があります。  あるいは、名前に Flag または Flags という語が含まれています。  
+## <a name="cause"></a>原因  
+ 外部から参照可能な識別子の名前に含まれている用語に対応する、別の推奨される用語があります。 また、名前には、フラグまたはフラグという語が含まれています。  
   
-## 規則の説明  
- この規則では、識別子をトークンとして解析します。  単一のトークン、および隣接する 2 つのトークンの組み合わせが、規則に組み込まれている用語やカスタム ディクショナリの Deprecated セクションの用語と比較されます。  この規則に組み込まれている用語と、その代わりに推奨される用語を次の表に示します。  
+## <a name="rule-description"></a>規則の説明  
+ このルールは、識別子をトークンに解析します。 単一のトークンと連続する 2 つのトークンの組み合わせとカスタム ディクショナリの非推奨のセクションではルールに組み込まれている用語が比較されます。 次の表は、ルールとその推奨される代替手段に組み込まれている条件を示します。  
   
-|廃止された用語|推奨される用語|  
-|-------------|-------------|  
-|Arent|AreNot|  
-|Cancelled|Canceled|  
-|Cant|Cannot|  
+|廃止された用語|推奨用語|  
+|-------------------|--------------------|  
+|されない|されません|  
+|取り消し済み|Canceled|  
+|できません。|できません。|  
 |ComPlus|EnterpriseServices|  
-|Couldnt|CouldNot|  
+|Couldnt|でした|  
 |Didnt|DidNot|  
-|Doesnt|DoesNot|  
-|Dont|DoNot|  
-|Flag または Flags|代わりになる用語はありません。  使用しないでください。|  
-|Hadnt|HadNot|  
-|Hasn’t|HadNot|  
-|Havent|HaveNot|  
-|Indices|Indexes|  
-|Isnt|IsNot|  
-|LogIn|LogOn|  
-|LogOut|LogOff|  
-|Shouldnt|ShouldNot|  
-|SignOn|SignIn|  
-|SignOff|SignOut|  
+|セーフモード|含まれていません|  
+|Dont|ください|  
+|フラグまたはフラグ|置換用語はありません。 使用しないでください。|  
+|いた|HadNot|  
+|していません。|妥当|  
+|していません。|プロファ|  
+|インデックス|Indexes|  
+|ありません。|IsNot|  
+|ログイン|ログオン|  
+|ログアウト|ログオフ|  
+|Shouldnt|マクロ|  
+|サインオン|サインイン|  
+|サインオフ|サインアウト|  
 |Wasnt|WasNot|  
-|Werent|WereNot|  
-|Wont|WillNot|  
-|Wouldnt|WouldNot|  
-|Writeable|Writable|  
+|でした。|WereNot|  
+|しない|自分|  
+|Wouldnt|ユースケース|  
+|書き込み可能です|書き込み可能です|  
   
-## 違反の修正方法  
- この規則の違反を修正するには、その用語を推奨される用語に置き換えます。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、推奨される代替用語でという用語を置き換えます。  
   
-## 警告を抑制する状況  
- 識別子の名前に推奨される用語を使用せず、名前が意図的な場合、かつ名前を以前の用語に個別に関連付けている場合にのみ、この規則による警告を抑制してください。  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 識別子の名前が意図的なとが推奨される用語ではなく元の用語に特に関連する場合にのみ、この規則による警告を抑制します。  
   
-## 関連規則  
+## <a name="related-rules"></a>関連規則  
  [名前付けに関する警告](../code-quality/naming-warnings.md)

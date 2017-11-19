@@ -1,58 +1,60 @@
 ---
-title: "方法: プロジェクトに固有のエディターを開く | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プロジェクトの種類のプロジェクトに固有のエディターを開く"
-  - "プロジェクトに固有のエディターを開くエディター [Visual Studio SDK]"
-  - "プロジェクト [Visual Studio SDK] フォルダーを開く"
+title: "方法: プロジェクトに固有のエディターを開く |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- project types, opening a project-specific editor
+- editors [Visual Studio SDK], opening project-specific editors
+- projects [Visual Studio SDK], opening folders
 ms.assetid: 83e56d39-c97b-4c6b-86d6-3ffbec97e8d1
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: bb60f482edeea1271c0f864fd5b907138e83d103
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: プロジェクトに固有のエディターを開く
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-プロジェクト項目によって開かれたファイルにはプロジェクトに固有のエディター主にバインドされている場合プロジェクト固有のエディターを使用してファイルを開く必要があります。  ファイルにはエディターを選択するための IDE 機能に代行させることはできません。  たとえば標準ビットマップ エディターを使用する代わりにプロジェクトに固有のファイルの情報を認識する特定のビットマップ エディターを指定する場合はこのプロジェクト固有のエディター オプションを使用できます。  
+# <a name="how-to-open-project-specific-editors"></a>方法: プロジェクトに固有のエディターを開く
+プロジェクトで開かれる項目のファイルは本質的に、そのプロジェクトの特定のエディターにバインドする場合、プロジェクトは、プロジェクト固有のエディターを使用してファイルを開く必要があります。 ファイルは、エディターを選択するため、IDE のメカニズムに委任することはできません。 たとえば、標準のビットマップ エディターを使用して、代わりには、プロジェクトに一意のファイル内の情報を認識する特定のビットマップ エディターを指定するのにこのプロジェクト固有のエディター オプションを使用できます。  
   
- IDE ではプロジェクト ファイルで開く必要がある場合に <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> のメソッドを呼び出します。  詳細については、「[ファイルを開くコマンドを使用してファイルを表示します。](../extensibility/internals/displaying-files-by-using-the-open-file-command.md)」を参照してください。  `OpenItem` のメソッドをプロジェクトに固有のエディターでプロジェクト ファイルが開きますを持つように実行するには次のガイドラインを使用します。  
+ IDE の呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A>メソッドによって、特定のプロジェクト ファイルが開かれることを決定する場合。 詳細については、次を参照してください。 [、開いているファイルのコマンドを使用してファイルを表示する](../extensibility/internals/displaying-files-by-using-the-open-file-command.md)です。 次のガイドラインを使用して実装する、`OpenItem`メソッドに、プロジェクトをプロジェクトに固有のエディターを使用してファイルを開きます。  
   
-### プロジェクト固有のエディターで OpenItem のメソッドを実装します。  
+### <a name="to-implement-the-openitem-method-with-a-project-specific-editor"></a>プロジェクトに固有のエディターを使用して OpenItem メソッドの実装  
   
-1.  ドキュメント データ ファイル \(オブジェクト\) が開いているかどうかを調べるに <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A> のメソッド \(RDT\_EditLock\) を呼び出します。  
+1.  呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A>メソッド (RDT_EditLock) をファイル (ドキュメント データ オブジェクト) が既に開いているかどうかを判断します。  
   
     > [!NOTE]
-    >  ドキュメント データとドキュメントのビュー オブジェクトの詳細については[ドキュメント データとカスタム エディターでドキュメント ビュー](../extensibility/document-data-and-document-view-in-custom-editors.md) を参照してください。  
+    >  ドキュメント データおよびドキュメント ビュー オブジェクトの詳細については、次を参照してください。[ドキュメント データとのカスタム エディターのドキュメント ビュー](../extensibility/document-data-and-document-view-in-custom-editors.md)です。  
   
-2.  ファイルが既に開いている場合 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.IsDocumentOpen%2A> のメソッドを呼び出して`grfIDO` のパラメーターに IDO\_ActivateIfOpen の値を指定してファイルに新しい表紙を付けます。  
+2.  ファイルを既に開いている場合は、呼び出すことによって、ファイルを再び表面化、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.IsDocumentOpen%2A>メソッドとの IDO_ActivateIfOpen の値を指定する、`grfIDO`パラメーター。  
   
-     ファイルが開いてでありドキュメントが呼び出し元のプロジェクト以外のプロジェクトによって所有されている場合警告が開かれているエディターが別のプロジェクトからのあるユーザーに表示されます。  ファイルのウィンドウは現れます。  
+     ファイルが開いていて、ドキュメントが、呼び出し元プロジェクト以外のプロジェクトによって所有されている、開いているエディターは、別のプロジェクトからのユーザーに、警告が表示されます。 [ファイル] ウィンドウが表示される、します。  
   
-3.  テキスト バッファー \(ドキュメント\) データ オブジェクトが既に開いて次のように別のビューをアタッチするにはされているビューをフックする必要があります。  プロジェクトのドキュメントのビュービュー \(\) オブジェクトをインスタンス化する代わりに推奨される方法は次のとおりです。:  
+3.  テキスト バッファー (ドキュメント データ オブジェクト) が既に開いているして別のビューをアタッチする場合は、ユーザーは、そのビューをフック担当します。 プロジェクトから、表示 (ドキュメント ビュー オブジェクト) をインスタンス化するための推奨アプローチは次のとおりです。  
   
-    1.  <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2> インターフェイスへのポインターを取得 <xref:Microsoft.VisualStudio.Shell.Interop.SLocalRegistry> サービスの呼び出し `QueryService`。  
+    1.  呼び出す`QueryService`上、<xref:Microsoft.VisualStudio.Shell.Interop.SLocalRegistry>へのポインターを取得するサービス、<xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2>インターフェイスです。  
   
-    2.  ドキュメントのビュー クラスのインスタンスを作成するに <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> のメソッドを呼び出します。  
+    2.  呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A>メソッドをドキュメント ビュー クラスのインスタンスを作成します。  
   
-4.  ドキュメントのビュー オブジェクトを指定する <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A> のメソッドを呼び出します。  
+4.  呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A>メソッドをドキュメント ビュー オブジェクトを指定します。  
   
-     このメソッドはドキュメント ウィンドウのドキュメントのオブジェクトで配置します。  
+     このメソッドは、ドキュメント ウィンドウにドキュメント ビュー オブジェクトをサイトです。  
   
-5.  <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat.InitNew%2A> または <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat.Load%2A> のメソッドに適切な呼び出しを実行します。  
+5.  いずれかに適切な呼び出しを行う、<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat.InitNew%2A>または<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat.Load%2A>メソッドです。  
   
-     この時点でビューは完全に初期化して開くために完了する必要があります。  
+     この時点では、ビューでは、完全に初期化されを開く準備をする必要があります。  
   
-6.  ビューを表示し開くに <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A> のメソッドを呼び出します。  
+6.  呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A>メソッドを表示し、ビューを開きます。  
   
-## 参照  
- [開く、プロジェクト項目を保存します。](../extensibility/internals/opening-and-saving-project-items.md)   
+## <a name="see-also"></a>関連項目  
+ [開くと、プロジェクト項目の保存](../extensibility/internals/opening-and-saving-project-items.md)   
  [方法: 標準のエディターを開く](../extensibility/how-to-open-standard-editors.md)   
  [方法: 開いているドキュメントのエディターを開く](../extensibility/how-to-open-editors-for-open-documents.md)

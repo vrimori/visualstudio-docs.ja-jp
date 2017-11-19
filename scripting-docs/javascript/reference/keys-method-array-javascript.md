@@ -1,49 +1,52 @@
 ---
-title: "keys メソッド (Array) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "keys メソッド (Array) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: fc5b6a30-642c-4bd7-ad31-a42667af2f3f
-caps.latest.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f600facc91dd10219196f580abd0f52537010dfd
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# keys メソッド (Array) (JavaScript)
+# <a name="keys-method-array-javascript"></a>keys メソッド (Array) (JavaScript)
 配列のインデックス値を返す反復子を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 arrayObj.keys();  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `arrayObj`  
- 必須です。  Array オブジェクト。  
+ 必須です。 Array オブジェクト。  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
-## 使用例  
+## <a name="example"></a>例  
  次の例では、配列のキー値を取得する方法を示します。  
   
-```javascript  
+```JavaScript  
 var k = ["a", "b", "c"].keys();  
 // k.next().value == 0  
 // k.next().value == 1  
 // k.next().value == 2   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv12](../../javascript/reference/includes/jsv12-md.md)]

@@ -1,52 +1,53 @@
 ---
-title: "CA1823: 使用されていないプライベート フィールドを使用しません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "AvoidUnusedPrivateFields"
-  - "CA1823"
-helpviewer_keywords: 
-  - "AvoidUnusedPrivateFields"
-  - "CA1823"
+title: ": Ca 1823 使用されていないプライベート フィールド |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- AvoidUnusedPrivateFields
+- CA1823
+helpviewer_keywords:
+- AvoidUnusedPrivateFields
+- CA1823
 ms.assetid: 614f94f6-0dc7-430f-8124-cb889a4a720f
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 8f4be67d74c3b0b01092d43d70c3c37a776def14
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA1823: 使用されていないプライベート フィールドを使用しません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1823-avoid-unused-private-fields"></a>CA1823: 使用されていないプライベート フィールドを使用しません
 |||  
 |-|-|  
 |TypeName|AvoidUnusedPrivateFields|  
 |CheckId|CA1823|  
-|分類|Microsoft.Performance|  
+|カテゴリ|Microsoft.Performance|  
 |互換性に影響する変更点|なし|  
   
-## 原因  
- この規則は、コード内にプライベート フィールドが存在しているが、コード パスで使用されていない場合に報告されます。  
+## <a name="cause"></a>原因  
+ このルールは、コード内のプライベート フィールドが存在しますが、任意のコード パスで使用されていない場合に報告されます。  
   
-## 規則の説明  
+## <a name="rule-description"></a>規則の説明  
  アセンブリ内でアクセスされていないと思われるプライベート フィールドが検出されました。  
   
-## 違反の修正方法  
- この規則違反を修正するには、そのフィールドを削除するか、そのフィールドを使用するコードを追加します。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、フィールドを削除するか、それを使用するコードを追加します。  
   
-## 警告を抑制する状況  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
  この規則による警告を抑制しても安全です。  
   
-## 関連規則  
- [CA1812: インスタンス化されていない内部クラスを使用しないでください](../Topic/CA1812:%20Avoid%20uninstantiated%20internal%20classes.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA1812: インスタンス化されていない内部クラスを使用しないでください](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)  
   
- [CA1801: 使用されていないパラメーターを再確認します](../Topic/CA1801:%20Review%20unused%20parameters.md)  
+ [CA1801: 使用されていないパラメーターをレビューします](../code-quality/ca1801-review-unused-parameters.md)  
   
  [CA1804: 使用されていないローカルを削除します](../code-quality/ca1804-remove-unused-locals.md)  
   

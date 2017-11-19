@@ -4,38 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- http://schemas.microsoft.com/developer/vstemplate/2005#Reference
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#Reference
 helpviewer_keywords:
 - Reference element [Visual Studio templates]
 - <Reference> element [Visual Studio templates]
 ms.assetid: 852772ea-c324-42e9-8c8a-6d565414a109
-caps.latest.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 719f75aa28b642b61e053e69d9ebb8123d7bee6b
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 2f25b39178141f3e3a40899645a0a1af6c8417ab
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="reference-element-visual-studio-templates"></a>Reference 要素 (Visual Studio テンプレート)
 項目がプロジェクトに追加されたときに追加するアセンブリ参照を指定します。  
@@ -63,7 +48,7 @@ ms.lasthandoff: 02/22/2017
   
 |要素|説明|  
 |-------------|-----------------|  
-|[Assembly](../extensibility/assembly-element-visual-studio-templates.md)|必須の要素です。<br /><br /> そのアセンブリの参照をプロジェクトに追加したり、テンプレートを使用して、アセンブリに関する情報を指定します。 1 つあります`Assembly`内の要素すべて`Reference`要素。|  
+|[Assembly](../extensibility/assembly-element-visual-studio-templates.md)|必須の要素です。<br /><br /> そのアセンブリの参照をプロジェクトに追加するテンプレートを使用して、アセンブリに関する情報を指定します。 必要がある 1 つ`Assembly`内の要素すべて`Reference`要素。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -74,7 +59,7 @@ ms.lasthandoff: 02/22/2017
 ## <a name="remarks"></a>コメント  
  `Reference` は `References` に必須の子要素です。  
   
- `Reference`と`References`要素は、.vstemplate ファイルでのみ使用できます、`Type`属性の値の`Item`です。  
+ `Reference`と`References`要素は、.vstemplate ファイルでのみ使用できます、`Type`属性の値の`Item`します。  
   
 ## <a name="example"></a>例  
  次の例を示しています、`TemplateContent`項目テンプレートの要素。 この XML は、System.dll および System.Data.dll アセンブリへの参照を追加します。  

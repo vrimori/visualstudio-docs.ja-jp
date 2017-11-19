@@ -1,48 +1,47 @@
 ---
-title: "IDiaEnumSectionContribs::Item | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumSectionContribs::Item メソッド"
+title: "Idiaenumsectioncontribs::item |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumSectionContribs::Item method
 ms.assetid: 63a28f23-0ca0-44a7-b11b-ca0206d642a0
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 9338d1297263ebd55748f6438bbbec2d4ee4f044
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumSectionContribs::Item
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-インデックスによる取得のセクションの情報。  
+# <a name="idiaenumsectioncontribsitem"></a>IDiaEnumSectionContribs::Item
+インデックスを使用してセクション貢献度を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT Item (   
-   DWORD                index,  
-   IDiaSectionContrib** section  
+```C++  
+HRESULT Item (   
+   DWORD                index,  
+   IDiaSectionContrib** section  
 );  
 ```  
   
-#### パラメーター  
- index  
- \[入力\] 取得する [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) のオブジェクトのインデックス。  インデックスは 0 ~ \-1 `count` に `count` が [IDiaEnumSectionContribs::get\_Count](../Topic/IDiaEnumSectionContribs::get_Count.md) のメソッドによって返される場合になります。  
+#### <a name="parameters"></a>パラメーター  
+ インデックス  
+ [in]インデックス、 [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)を取得するオブジェクト。 インデックスが範囲 0 `count`-1 で、ここで`count`によって返される、 [idiaenumsectioncontribs::get_count](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-count.md)メソッドです。  
   
- セクション  
- \[入力\] [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) に目的のセクションの情報を返します。  
+ section  
+ [out]返します、 [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)目的セクションの貢献を表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
- [IDiaEnumSectionContribs::get\_Count](../Topic/IDiaEnumSectionContribs::get_Count.md)   
+## <a name="see-also"></a>関連項目  
+ [Idiaenumsectioncontribs::get_count](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-count.md)   
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

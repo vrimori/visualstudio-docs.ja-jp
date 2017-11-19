@@ -4,41 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- http://schemas.microsoft.com/developer/vstemplate/2005#SupportsLanguageDropDown
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#SupportsLanguageDropDown
 helpviewer_keywords:
 - SupportsLanguageDropDown element [Visual Studio Templates]
 - <SupportsLanguageDropDown> element [Visual Studio Templates]
 ms.assetid: 641197d5-f724-4c06-bc47-2e22dad3fbfb
-caps.latest.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c5d2043ec03eb26d9327c59323f008bc9cd9ed2b
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 4ff2e2167daa0cb22abac7d8c1a545d17b2faa36
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="supportslanguagedropdown-element-visual-studio-templates"></a>SupportsLanguageDropDown 要素 (Visual Studio テンプレート)
-Web の項目テンプレートが複数の言語と同じであるかどうかとするかどうかを指定、**言語**のオプションが有効になっている、**新しい項目の追加** ダイアログ ボックス。  
+かどうかと、Web 項目テンプレートが複数の言語と同じかどうかを指定します、**言語**のオプションが有効になっている、**新しい項目の追加** ダイアログ ボックス。  
   
  \<VSTemplate >  
  \<TemplateData >  
@@ -68,17 +53,17 @@ Web の項目テンプレートが複数の言語と同じであるかどうか�
 ## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
   
- テキストには、いずれかでなければなりません`true`または`false`ことを示すかどうか、**言語**オプションは使用できます、**新しい項目の追加** ダイアログ ボックス。  
+ テキストはいずれかである必要があります`true`または`false`ことを示すかどうか、**言語**オプションはから利用可能な**新しい項目の追加** ダイアログ ボックス。  
   
 ## <a name="remarks"></a>コメント  
  `SupportsLanguageDropDown` は、省略可能な要素です。 既定値は `false` です。  
   
- `SupportsLanguageDropDown`要素は、Web 項目テンプレートの使用のみです。  
+ `SupportsLanguageDropDown`要素は、Web 項目テンプレートの使用のみ。  
   
- この要素の値が設定されている場合`true`、項目テンプレートは、すべてのプログラミング言語に同じものとし、および**言語**オプションが有効で、**新しい項目の追加** ダイアログ ボックス。 このオプションでは、テンプレートから作成する新しい項目のプログラミング言語を選択することができます。  
+ この要素の値が設定されている場合`true`、項目テンプレートはすべてのプログラミング言語と同じと**言語**でオプションが有効になっている、**新しい項目の追加** ダイアログ ボックス。 このオプションでは、テンプレートから作成する新しい項目のプログラミング言語を選択することができます。  
   
 ## <a name="example"></a>例  
- 次の例は、表示するように指定、**言語** オプションを削除します。  
+ 次の例は、表示を指定します、**言語**オプションをドロップダウンします。  
   
 ```  
 <VSTemplate Version="3.0.0" Type="Project"  

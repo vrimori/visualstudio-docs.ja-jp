@@ -1,36 +1,37 @@
 ---
-title: "&lt;entryPoint&gt; 要素 (ClickOnce アプリケーション) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "urn:schemas-microsoft-com:asm.v2#commandLine"
-  - "urn:schemas-microsoft-com:asm.v2#entryPoint"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "<entryPoint> 要素 [ClickOnce アプリケーション マニフェスト]"
-  - "マニフェスト [ClickOnce], entryPoint 要素"
+title: "&lt;entryPoint&gt;要素 (ClickOnce アプリケーション) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- urn:schemas-microsoft-com:asm.v2#commandLine
+- urn:schemas-microsoft-com:asm.v2#entryPoint
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- <entryPoint> element [ClickOnce application manifest]
+- manifests [ClickOnce], entryPoint element
 ms.assetid: 10ad3083-10c1-4189-a870-9bba2eab244f
-caps.latest.revision: 33
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 33
+caps.latest.revision: "33"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: eb280684f0c06391bc6c0596093c01f260f685d3
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# &lt;entryPoint&gt; 要素 (ClickOnce アプリケーション)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-この [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションをクライアント コンピューター上で実行するときに実行されるアセンブリを指定します。  
+# <a name="ltentrypointgt-element-clickonce-application"></a>&lt;entryPoint&gt;要素 (ClickOnce アプリケーション)
+識別する必要のあるアセンブリ実行すると実行この[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]クライアント コンピューターでアプリケーションを実行します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -52,53 +53,53 @@ caps.handback.revision: 33
 </entryPoint>  
 ```  
   
-## 要素と属性  
- `entryPoint` 要素は必須です。この要素は `urn:schemas-microsoft-com:asm.v2` 名前空間にあります。  アプリケーション マニフェストには `entryPoint` 要素を 1 つだけ定義できます。  
+## <a name="elements-and-attributes"></a>要素と属性  
+ `entryPoint` 要素は必須です。この要素は `urn:schemas-microsoft-com:asm.v2` 名前空間に属します。 のみがありますいずれかの`entryPoint`アプリケーション マニフェストで定義された要素。  
   
- `entryPoint` 要素には、次の属性があります。  
+ `entryPoint`要素には、次の属性です。  
   
-|属性|Description|  
-|--------|-----------------|  
-|`name`|省略可能です。  この値は .NET Frameworkでは使用されません。|  
+|属性|説明|  
+|---------------|-----------------|  
+|`name`|省略可能です。 この値は、.NET Framework では使用されません。|  
   
- `entryPoint` には、以下の要素があります。  
+ `entryPoint`次の要素があります。  
   
-## assemblyIdentity  
- 必ず指定します。  `assemblyIdentity` の役割および属性は、「[\<assemblyIdentity\> 要素](../deployment/assemblyidentity-element-clickonce-application.md)」で定義されています。  
+## <a name="assemblyidentity"></a>assemblyIdentity  
+ 必須です。 役割`assemblyIdentity`でその属性が定義されていると[ \<assemblyIdentity > 要素](../deployment/assemblyidentity-element-clickonce-application.md)です。  
   
- この要素の `processorArchitecture` 属性と、アプリケーション マニフェストの別の場所で `assemblyIdentity` に定義されている `processorArchitecture` 属性は、一致している必要があります。  
+ `processorArchitecture`この要素の属性と`processorArchitecture`属性で定義されている、`assemblyIdentity`別の場所で、アプリケーション マニフェストと一致しなければなりません。  
   
-## commandLine  
- 必ず指定します。  `entryPoint` 要素の子である必要があります。  子要素は持たず、次の属性があります。  
+## <a name="commandline"></a>コマンドライン  
+ 必ず指定します。 子である必要があります、`entryPoint`要素。 子要素が存在しないと、次の属性があります。  
   
-|属性|Description|  
-|--------|-----------------|  
-|`file`|必ず指定します。  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションのスタートアップ アセンブリへのローカル参照です。  この値には、フォワード スラッシュ \(\/\) またはバックスラッシュ \(\\\) のパス区切り記号を含めることができません。|  
-|`parameters`|必ず指定します。  エントリ ポイントで実行するアクションを説明します。  唯一の有効な値は `run` です。空白文字列を指定した場合、`run` が指定されていると仮定されます。|  
+|属性|説明|  
+|---------------|-----------------|  
+|`file`|必須です。 ローカル アセンブリへの参照、スタートアップの[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。 この値は、スラッシュ (/) または円記号を含めることはできません (\\) パスの区切り記号。|  
+|`parameters`|必須です。 エントリ ポイントで実行するアクションを説明します。 唯一の有効な値は`run`以外の場合は、空の文字列を指定すると、`run`と見なされます。|  
   
-## customHostRequired  
- 省略可能です。  この属性を含めると、配置には、カスタム ホストの内側に配置されるコンポーネントが含まれ、スタンドアロン アプリケーションではないことを指定できます。  
+## <a name="customhostrequired"></a>customHostRequired  
+ 省略可能です。 含まれる場合は、この展開にはでのカスタム ホスト内で展開されるコンポーネントが含まれているを指定し、スタンドアロンのアプリケーションではありません。  
   
- この要素を指定する場合、`assemblyIdentity` 要素と `commandLine` 要素は指定できません。  これらの要素を指定すると、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] によって、インストール中に妥当性確認エラーが表示されます。  
+ この要素が存在する場合、`assemblyIdentity`と`commandLine`要素もすることはできませんに存在します。 その場合は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]インストール中に検証エラーが発生します。  
   
- この要素には、属性も子もありません。  
+ この要素にはない属性と子はありません。  
   
-## customUX  
- 省略可能です。  カスタム インストーラーによってアプリケーションがインストールおよび保守されることを示します。また、\[スタート\] メニュー エントリ、ショートカット、\[プログラムの追加または削除\] エントリは作成されません。  
+## <a name="customux"></a>customUX  
+ 省略可能です。 アプリケーションがインストールされているとカスタム インストーラーによって管理されるとはされませんスタート メニュー エントリ、ショートカット、または追加作成するか指定しますプログラム エントリを削除します。  
   
 ```  
 <customUX xmlns="urn:schemas-microsoft-com:clickonce.v1" />  
 ```  
   
- customUX 要素を含むアプリケーションは、<xref:System.Deployment.Application.InPlaceHostingManager> クラスを使用してインストール操作を実行するカスタム インストーラーを用意する必要があります。  この要素を使用するアプリケーションは、マニフェストや setup.exe の必須コンポーネント ブートストラップをダブルクリックする方法でインストールすることはできません。  カスタム インストーラーによって、\[スタート\] メニュー エントリ、ショートカット、\[プログラムの追加または削除\] エントリを作成できます。  カスタム インストーラーによって \[プログラムの追加または削除\] エントリを作成しない場合、<xref:System.Deployment.Application.GetManifestCompletedEventArgs.SubscriptionIdentity%2A> プロパティが示すサブスクリプション識別子を保存し、ユーザーが <xref:System.Deployment.Application.InPlaceHostingManager.UninstallCustomUXApplication%2A> メソッドを呼び出して後でアプリケーションをアンインストールできるようにする必要があります。  詳細については、「[チュートリアル: ClickOnce アプリケーションのカスタム インストーラーの作成](../deployment/walkthrough-creating-a-custom-installer-for-a-clickonce-application.md)」を参照してください。  
+ アプリケーションを customUX 要素を含む必要がありますを提供するカスタム インストーラーを使用して、<xref:System.Deployment.Application.InPlaceHostingManager>を実行するクラスは、操作をインストールします。 この要素を持つアプリケーションは、そのマニフェストまたは setup.exe 前提条件となるブートス トラップをダブルクリックしてインストールできません。 カスタム インストーラーには、スタート メニュー エントリ、ショートカット、およびプログラム追加と削除のエントリを作成できます。 によって提供されたサブスクリプション識別子を格納する必要があります、カスタム インストーラーが追加または削除するプログラムのエントリを作成できない場合、<xref:System.Deployment.Application.GetManifestCompletedEventArgs.SubscriptionIdentity%2A>プロパティと有効にするアプリケーションをアンインストールした後で呼び出すことによって、ユーザー、<xref:System.Deployment.Application.InPlaceHostingManager.UninstallCustomUXApplication%2A>メソッドです。 詳細については、次を参照してください。[チュートリアル: ClickOnce アプリケーションのカスタム インストーラーを作成する](../deployment/walkthrough-creating-a-custom-installer-for-a-clickonce-application.md)です。  
   
-## 解説  
- この要素は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションのアセンブリおよびエントリ ポイントを識別します。  
+## <a name="remarks"></a>コメント  
+ この要素のアセンブリとエントリ ポイントを識別する、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。  
   
- 実行時に `commandLine` を使用して、アプリケーションにパラメーターを渡すことはできません。  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置のクエリ文字列パラメーターには、アプリケーションの <xref:System.AppDomain> からアクセスできます。  詳細については、「[方法 : オンライン ClickOnce アプリケーションでクエリ文字列を取得する](../Topic/How%20to:%20Retrieve%20Query%20String%20Information%20in%20an%20Online%20ClickOnce%20Application.md)」を参照してください。  
+ 使用することはできません`commandLine`パラメーターを渡すを実行時にアプリケーションにします。 クエリ文字列パラメーターにアクセスすることができます、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]からアプリケーションの展開<xref:System.AppDomain>です。 詳細については、次を参照してください。[する方法: オンライン ClickOnce アプリケーションを使用したクエリ文字列情報を取得](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md)です。  
   
-## 使用例  
- 次のコード例は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションのアプリケーション マニフェスト内の `entryPoint` 要素を示しています。  このコード例は、「[ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)」で使用されているより詳細な例の一部です。  
+## <a name="example"></a>例  
+ 次のコード例を示しています、`entryPoint`アプリケーション マニフェストの要素、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。 このコード例に示されている例の一部である、 [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)トピックです。  
   
 ```  
 <!-- Identify the main code entrypoint. -->  
@@ -113,5 +114,5 @@ caps.handback.revision: 33
   </entryPoint>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)

@@ -1,12 +1,10 @@
 ---
-title: 'How to: Add a Creator Method | Microsoft Docs'
+title: "方法: Creator メソッドを追加 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -22,63 +20,63 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], adding entities
 - Business Data Connectivity service [SharePoint development in Visual Studio], Creator
 ms.assetid: 52f0382f-10a0-4a51-83fe-6f22f4647df8
-caps.latest.revision: 30
-author: kempb
-ms.author: kempb
+caps.latest.revision: "30"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: c73fc212baa6284b8915a5866cb4d13232231149
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 354d3f574515fcc9e8417e817363f9bbe7327f06
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-add-a-creator-method"></a>How to: Add a Creator Method
-  A Creator method adds new data to the data source of an entity. The Business Data Connectivity (BDC) service calls this method when users choose the **New Item** button on the Ribbon of a list that is based on the model. For more information, see [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md).  
+# <a name="how-to-add-a-creator-method"></a>方法: Creator メソッドを追加する
+  Creator メソッドは、エンティティのデータ ソースに新しいデータを追加します。 クリックすると、ビジネス データ接続 (BDC) サービスがこのメソッドを呼び出して、**新しい項目の**モデルに基づいているリストのリボンのボタンです。 詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
   
-### <a name="to-add-a-creator-method"></a>To add a Creator method  
+### <a name="to-add-a-creator-method"></a>Creator メソッドを追加するには  
   
-1.  On the BDC designer, choose an entity.  
+1.  BDC デザイナーでは、エンティティを選択します。  
   
-2.  On the menu bar, choose **View**, **Other Windows**, **BDC Method Details**.  
+2.  メニュー バーで、次のように選択します。**ビュー**、**その他のウィンドウ**、 **BDC メソッドの詳細**です。  
   
-     The **BDC Method Details** window opens. For more information about that window, see [BDC Model Design Tools Overview](../sharepoint/bdc-model-design-tools-overview.md).  
+     **BDC メソッドの詳細**ウィンドウが開きます。 そのウィンドウの詳細については、次を参照してください。 [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)です。  
   
-3.  In the **Add a Method** list, choose **Create Creator Method**.  
+3.  **メソッドを追加**一覧で、選択**Creator メソッドの作成**です。  
   
-     Visual Studio adds the following elements to the model, and these elements appear in the **BDC Method Details** window.  
+     Visual Studio は、モデルを次の要素を追加し、これらの要素に表示、 **BDC メソッドの詳細**ウィンドウです。  
   
-    -   A method named **Create**.  
+    -   という名前のメソッド**作成**です。  
   
-    -   An input parameter for the method.  
+    -   メソッドの入力パラメーター。  
   
-    -   A return parameter for the method.  
+    -   メソッドの戻り値のパラメーターです。  
   
-    -   Type descriptors for the parameters.  
+    -   パラメーターの記述子を入力します。  
   
-    -   A method instance for the method.  
+    -   メソッドのメソッドのインスタンス。  
   
-     For more information, see [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md).  
+     詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
   
-4.  In **Solution Explorer**, open the shortcut menu of the service code file that was generated for the entity, and then choose **View Code**.  
+4.  **ソリューション エクスプ ローラー**エンティティには、生成されたサービス コード ファイルのショートカット メニューを開きを選択し、**コードの表示**です。  
   
-     The entity service code file opens in the Code Editor. For more information about the entity service code file, see [Creating a Business Data Connectivity Model](../sharepoint/creating-a-business-data-connectivity-model.md).  
+     エンティティ サービス コード ファイルでは、コード エディターで開きます。 エンティティ サービス コード ファイルの詳細については、次を参照してください。[ビジネス データ接続モデルを作成する](../sharepoint/creating-a-business-data-connectivity-model.md)です。  
   
-5.  Add code to the Creator method that adds data to the data source. The following example adds a contact to the AdventureWorks sample database for SQL Server.  
+5.  データ ソースにデータを追加する Creator メソッドにコードを追加します。 次の例では、SQL Server の AdventureWorks サンプル データベースに連絡先を追加します。  
   
     > [!NOTE]  
-    >  Replace the value of the `ServerName` field with the name of your server.  
+    >  値を置き換える、`ServerName`フィールドに、サーバーの名前。  
   
-     [!code-csharp[SP_BDC#4](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#4)]  [!code-vb[SP_BDC#4](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#4)]  
+     [!code-csharp[SP_BDC#4](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#4)]
+     [!code-vb[SP_BDC#4](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#4)]  
   
-## <a name="see-also"></a>See Also  
- [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md)   
- [How to: Add a Finder Method](../sharepoint/how-to-add-a-finder-method.md)   
- [How to: Add a Specific Finder Method](../sharepoint/how-to-add-a-specific-finder-method.md)   
- [How to: Add a Deleter Method](../sharepoint/how-to-add-a-deleter-method.md)   
- [How to: Add an Updater Method](../sharepoint/how-to-add-an-updater-method.md)   
- [BDC Model Design Tools Overview](../sharepoint/bdc-model-design-tools-overview.md)   
- [How to: Add a Parameter to a Method](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
- [How to: Define a Method Instance](../sharepoint/how-to-define-a-method-instance.md)  
+## <a name="see-also"></a>関連項目  
+ [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)   
+ [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
+ [方法: Specificfinder メソッドを追加します。](../sharepoint/how-to-add-a-specific-finder-method.md)   
+ [方法: Deleter メソッドを追加](../sharepoint/how-to-add-a-deleter-method.md)   
+ [方法: Updater メソッドを追加](../sharepoint/how-to-add-an-updater-method.md)   
+ [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   
+ [方法: メソッドにパラメーターを追加](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
+ [方法: メソッド インスタンスを定義する](../sharepoint/how-to-define-a-method-instance.md)  
   
   

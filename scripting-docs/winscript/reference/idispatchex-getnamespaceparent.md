@@ -1,27 +1,30 @@
 ---
-title: "IDispatchEx::GetNameSpaceParent | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IDispatchEx::GetNameSpaceParent |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IDispatchEx.GetNameSpaceParent
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "GetNameSpaceParent メソッド"
+helpviewer_keywords: GetNameSpaceParent method
 ms.assetid: 0b077d39-2fd6-4390-8cd5-128d9b8dc90c
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 12168ddb5f65c62e81a8f724cacf8b3fd4a1b3a9
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IDispatchEx::GetNameSpaceParent
+# <a name="idispatchexgetnamespaceparent"></a>IDispatchEx::GetNameSpaceParent
 オブジェクトの名前空間の親のインターフェイスを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT GetNameSpaceParent(  
@@ -29,12 +32,12 @@ HRESULT GetNameSpaceParent(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppunk`  
- 名前空間の親のインターフェイスを受け取る `IUnknown` のインターフェイス ポインターのアドレス。  
+ アドレス、`IUnknown`名前空間の親のインターフェイスを受信するためのインターフェイス ポインター。  
   
-## 戻り値  
- または OLE 定義のエラー コード別の方法で成功した場合 `S_OK` を返します。  
+## <a name="return-value"></a>戻り値  
+ 返します`S_OK`正常終了した場合、またはそれ以外の場合、OLE 定義のエラー コード。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDispatchEx インターフェイス](../../winscript/reference/idispatchex-interface.md)

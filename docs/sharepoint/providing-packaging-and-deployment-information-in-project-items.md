@@ -1,42 +1,44 @@
 ---
-title: "プロジェクト項目でのパッケージ化と配置の情報の提供"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.Project.SafeControlEntries"
-  - "VS.SharePointTools.Project.ProjectOutputReference"
-  - "VS.SharePointTools.Project.FeatureProperties"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "フィーチャーのプロパティ [Visual Studio での SharePoint 開発]"
-  - "フィーチャー レシーバー [Visual Studio での SharePoint 開発]"
-  - "プロジェクト出力参照 [Visual Studio での SharePoint 開発]"
-  - "安全なコントロール [Visual Studio での SharePoint 開発]"
-  - "Visual Studio での SharePoint 開発, 高度なパッケージ化ツール"
-  - "Visual Studio での SharePoint 開発, フィーチャーのプロパティ"
-  - "Visual Studio での SharePoint 開発, フィーチャー レシーバー"
-  - "Visual Studio での SharePoint 開発, プロジェクト出力参照"
-  - "Visual Studio での SharePoint 開発, 安全なコントロール"
+title: "パッケージとプロジェクト アイテムの展開情報を提供する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.SharePointTools.Project.SafeControlEntries
+- VS.SharePointTools.Project.ProjectOutputReference
+- VS.SharePointTools.Project.FeatureProperties
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, safe controls
+- project output references [SharePoint development in Visual Studio]
+- SharePoint development in Visual Studio, feature properties
+- SharePoint development in Visual Studio, project output references
+- SharePoint development in Visual Studio, advanced packaging tools
+- feature properties [SharePoint development in Visual Studio]
+- SharePoint development in Visual Studio, feature receiver
+- feature receiver [SharePoint development in Visual Studio]
+- safe controls [SharePoint development in Visual Studio]
 ms.assetid: 209ff3b9-d701-4d27-9d24-005fcc811cbe
-caps.latest.revision: 10
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 5f12b3af8f49270cc914e47a37077265794bf0be
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# プロジェクト項目でのパッケージ化と配置の情報の提供
-  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] のすべての SharePoint プロジェクト項目には、プロジェクトが SharePoint に配置されるときに追加のデータを提供するために使用できるプロパティがあります。  選択できるプロパティは次のとおりです。  
+# <a name="providing-packaging-and-deployment-information-in-project-items"></a>プロジェクト項目でのパッケージ化と配置の情報の提供
+  すべての SharePoint プロジェクト項目[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]プロジェクトが SharePoint に配置されるときに、追加のデータを指定するのに使用できるプロパティがあります。 選択できるプロパティは次のとおりです。  
   
 -   フィーチャーのプロパティ  
   
@@ -46,56 +48,56 @@ caps.handback.revision: 9
   
 -   安全なコントロール エントリ  
   
- これらのプロパティは **\[プロパティ\]** ウィンドウに表示されます。  
+ これらのプロパティに表示されます、**プロパティ**ウィンドウです。  
   
-## フィーチャーのプロパティ  
- フィーチャーが使用するデータを指定するには、**\[フィーチャーのプロパティ\]** プロパティを使用します。  フィーチャーのプロパティのデータは、フィーチャーが SharePoint に配置されるときに一緒に含まれる一連の値 \(キー\/値のペアとして格納されます\) です。  フィーチャーが配置されると、そのプロパティ値にコードでアクセスできるようになります。  
+## <a name="feature-properties"></a>機能のプロパティ  
+ 使用して、**フィーチャーのプロパティ**プロパティをこの機能を使用するデータを指定します。 機能のプロパティのデータは、SharePoint に展開するときに、機能に含まれている値 (キー/値のペアとして格納されます) のセットです。 フィーチャーが配置されると、そのプロパティ値にコードでアクセスできるようになります。  
   
- プロジェクト項目にフィーチャーのプロパティの値を追加すると、その値は、その項目のフィーチャー マニフェストに要素として追加されます。  以下は、Business Data Connectivity \(BDC\) モデル プロジェクトの ModelFileName というフィーチャーのプロパティの例です。  
+ プロジェクト アイテムをフィーチャーのプロパティの値を追加すると、値は、アイテムのフィーチャーのマニフェスト内の要素として追加されます。 ビジネス データ接続 (BDC) モデル プロジェクトでは、たとえば、ModelFileName 機能のプロパティとして表示されます。  
   
 ```  
 <Property Key="ModelFileName" Value="BdcModel1\BdcModel1.bdcm" />   
 ```  
   
- フィーチャーのプロパティの値を設定すると、その値は、プロジェクトの .spdata ファイルに FeatureProperty 要素として追加されます。  SharePoint のプロパティにアクセスする方法については、"参照してください [SPFeaturePropertyCollection クラス](http://go.microsoft.com/fwlink/?LinkId=177391)。  
+ 機能プロパティ値を設定した後は、プロジェクトの .spdata ファイルで FeatureProperty 要素として追加されます。 SharePoint でプロパティにアクセスする方法については、次を参照してください。 [SPFeaturePropertyCollection クラス](http://go.microsoft.com/fwlink/?LinkId=177391)です。  
   
- フィーチャー マニフェストでは、同じフィーチャーのプロパティの値がすべてのプロジェクト項目についてマージされますが、  2 つの異なるプロジェクト項目で指定されているフィーチャーのプロパティのキーが同じで値が違っていると、検証エラーが発生します。  
+ すべてのプロジェクト項目からプロパティ値を同一の機能は、フィーチャーのマニフェストで一緒にマージされます。 ただし、2 つの別のプロジェクト項目は、一致しない値を持つ同一の機能プロパティのキーを指定する場合、検証エラーが発生します。  
   
- フィーチャーのプロパティを直接フィーチャー ファイル \(\*.feature\) に追加するには、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint オブジェクト モデルの <xref:Microsoft.VisualStudio.SharePoint.Features.IPropertyCollection.Add%2A> メソッドを呼び出します。  このメソッドを使用する場合は、同じフィーチャーのプロパティの値の追加について、\[フィーチャーのプロパティ\] を使用する場合と同じ規則が、直接フィーチャー ファイルに追加するプロパティにも適用されることに注意してください。  
+ 機能ファイルに直接フィーチャーのプロパティを追加する (* .feature) を呼び出し、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint オブジェクト モデルのメソッド<xref:Microsoft.VisualStudio.SharePoint.Features.IPropertyCollection.Add%2A>です。 このメソッドを使用する場合、同じルール フィーチャーのプロパティで同一のフィーチャーのプロパティ値を追加する方法も適用されている機能ファイルに直接追加のプロパティに注意してください。  
   
-## フィーチャー レシーバー  
- フィーチャー レシーバーとは、プロジェクト項目の対象フィーチャーで特定のイベントが発生した場合に実行されるコードです。  たとえば、フィーチャーがインストールされたときや、アクティブ化されたときや、アップグレードされたときに実行されるフィーチャー レシーバーを定義することができます。  フィーチャー レシーバーを追加するには、「[チュートリアル: フィーチャーのイベント レシーバーの追加](../sharepoint/walkthrough-add-feature-event-receivers.md)」の説明に従って直接フィーチャーに追加する方法と、  **\[フィーチャー レシーバー\]** プロパティでフィーチャー レシーバーのクラス名とアセンブリを参照する方法があります。  
+## <a name="feature-receiver"></a>フィーチャー レシーバー  
+ フィーチャー レシーバーは、プロジェクト項目に特定のイベントが発生するときに実行されるコードの対象フィーチャーでです。 たとえば、機能がインストールされている、アクティブ化、またはアップグレード時に実行されるフィーチャー レシーバーを定義できます。 説明に従って、機能に直接追加するフィーチャー レシーバーを追加する方法の 1 つ[チュートリアル: フィーチャー イベント レシーバーの追加](../sharepoint/walkthrough-add-feature-event-receivers.md)です。 別の方法は、フィーチャー レシーバーのクラス名とでアセンブリを参照する、**フィーチャー レシーバー**プロパティです。  
   
-### 直接追加する方法  
- フィーチャー レシーバーを直接フィーチャーに追加すると、ソリューション エクスプローラーの **\[フィーチャー\]** ノードにコード ファイルが配置されます。  SharePoint ソリューションをビルドすると、そのコードがアセンブリにコンパイルされて SharePoint に配置されます。  フィーチャーのプロパティの **\[レシーバー アセンブリ\]** と **\[レシーバー クラス\]** は既定でそのクラス名とアセンブリを参照します。  
+### <a name="direct-method"></a>直接的な方法  
+ コード ファイルが下に置かれて、機能するフィーチャー レシーバーを直接追加する場合、**機能**ソリューション エクスプ ローラー内のノードです。 SharePoint ソリューションをビルドするときに、コードは、アセンブリにコンパイルされ、SharePoint に配置します。 既定では、フィーチャーのプロパティ**レシーバー アセンブリ**と**レシーバー クラス**クラス名とアセンブリを参照します。  
   
-### 参照する方法  
- フィーチャー レシーバーを追加するもう 1 つの方法では、プロジェクト項目の **\[フィーチャー レシーバー\]** プロパティを使用してフィーチャー レシーバー アセンブリを参照します。  \[フィーチャー レシーバー\] プロパティ値には、**\[アセンブリ\]** と **\[クラス名\]** という 2 つのサブプロパティがあります。  \[アセンブリ\] にはアセンブリの "厳密な" 完全修飾名を、\[クラス名\] にはクラスの完全な型名を指定する必要があります。  詳細については、参照します [Strong\-Named Assemblies](http://go.microsoft.com/fwlink/?LinkID=169573)。  ソリューションを SharePoint に配置すると、フィーチャーがその参照先のフィーチャー レシーバーを使用してフィーチャー イベントを処理するようになります。  
+### <a name="reference-method"></a>Reference メソッド  
+ フィーチャー レシーバーを追加する別の方法を使用して、**フィーチャー レシーバー**フィーチャー レシーバー アセンブリを参照するプロジェクト アイテムのプロパティです。 フィーチャー レシーバーのプロパティの値が 2 つのサブプロパティ:**アセンブリ**と**クラス名**です。 アセンブリが完全修飾を使用する必要があります、「強力な」名とクラス名が完全な型名にする必要があります。 詳細については、「[厳密な名前付きアセンブリ](http://go.microsoft.com/fwlink/?LinkID=169573)」を参照してください。 を SharePoint にソリューションを配置した後は、の機能は、フィーチャーのイベントを処理するのに参照先のフィーチャー レシーバーを使用します。  
   
- ソリューションのビルド時に、フィーチャーとそのプロジェクトのフィーチャー レシーバー プロパティの値がマージされて、SharePoint ソリューション \(.wsp\) ファイルのフィーチャー マニフェストで Feature 要素の ReceiverAssembly 属性と ReceiverClass 属性が設定されます。  したがって、プロジェクト項目とフィーチャーの両方で \[アセンブリ\] プロパティと \[クラス名\] プロパティの値が指定されている場合は、プロジェクト項目とフィーチャーのプロパティの値が一致する必要があります。  値が一致しない場合は検証エラーが返されます。  フィーチャーで使用されているのとは別のフィーチャー レシーバー アセンブリをプロジェクト項目で参照するには、そのプロジェクト項目を別のフィーチャーに移動します。  
+ ソリューションのビルド時に機能とそのプロジェクトでフィーチャー レシーバーのプロパティ値は、SharePoint ソリューション (.wsp) ファイルのフィーチャー マニフェストの機能の要素の ReceiverAssembly と ReceiverClass 属性を設定するをマージします。 そのため、プロジェクト項目および機能のアセンブリとクラス名のプロパティ値がどちらも指定されている場合、プロジェクト項目およびフィーチャーのプロパティ値は一致しなければなりません。 値が一致しない場合、検証エラーが表示されます。 プロジェクト項目を使用する場合は、その機能を使用して、異なるフィーチャー レシーバー アセンブリを参照する、別の機能に移動します。  
   
- まだサーバー上にないフィーチャー レシーバー アセンブリを参照する場合は、そのアセンブリ ファイルもパッケージに含める必要があります。[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] では追加されません。  フィーチャーを配置すると、そのアセンブリ ファイルがシステムの[!INCLUDE[TLA#tla_gac](../sharepoint/includes/tlasharptla-gac-md.md)] か SharePoint 物理ディレクトリの Bin フォルダーにコピーされます。  詳細については、「[方法: アセンブリを追加および削除する](../sharepoint/how-to-add-and-remove-additional-assemblies.md)」を参照してください。  
+ パッケージにアセンブリ ファイル自体を含める必要がありますもされていないサーバーにフィーチャー レシーバー アセンブリを参照する場合[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]するには追加できません。 システムのアセンブリ ファイルをコピー、機能を展開するときに[!INCLUDE[TLA#tla_gac](../sharepoint/includes/tlasharptla-gac-md.md)]または SharePoint の物理ディレクトリにある Bin フォルダーです。 詳細については、次を参照してください。 方法:[する方法: 追加およびその他のアセンブリを削除する](../sharepoint/how-to-add-and-remove-additional-assemblies.md)です。  
   
- フィーチャー レシーバーの詳細については、[フィー チャーのイベント レシーバー](http://go.microsoft.com/fwlink/?LinkID=169574) 参照します [フィー チャーのイベント](http://go.microsoft.com/fwlink/?LinkID=169575)。  
+ フィーチャー レシーバーの詳細については、次を参照してください。[フィーチャー イベント レシーバー](http://go.microsoft.com/fwlink/?LinkID=169574)と[機能イベント](http://go.microsoft.com/fwlink/?LinkID=169575)です。  
   
-## プロジェクト出力参照  
- \[プロジェクト出力参照\] プロパティは、プロジェクト項目の実行に必要な依存関係 \(アセンブリなど\) を指定します。  たとえば、ソリューションに BDC プロジェクトとクラス プロジェクトがあり、  クラス プロジェクトの出力であるアセンブリに BDC プロジェクトが依存している場合は、そのアセンブリを BDC プロジェクトの \[プロジェクト出力参照\] プロパティで参照できます。  これにより、BDC プロジェクトがパッケージ化されるときにその依存アセンブリがパッケージに含まれるようになります。  
+## <a name="project-output-references"></a>プロジェクト出力参照  
+ プロジェクト出力参照プロパティには、プロジェクト項目の実行に必要なアセンブリなど、依存関係を指定します。 たとえば、ソリューションに、BDC プロジェクトとクラス プロジェクトとします。 BDC プロジェクトには、クラス プロジェクトによって出力されるアセンブリの依存関係が存在する場合は、BDC プロジェクトのプロジェクト出力参照プロパティ内のアセンブリを参照できます。 BDC プロジェクトがパッケージされるときは、パッケージの依存アセンブリが含まれています。  
   
- プロジェクト出力参照はアセンブリであるのが一般的ですが、場合によっては \(Silverlight プロジェクトの場合など\)、その他の種類のファイルであることもあります。  
+ プロジェクト出力参照は、通常、アセンブリが、場合によっては (Silverlight プロジェクトの場合) などの他のファイルの種類を指定できます。  
   
- 詳細については、「[方法: プロジェクト出力参照を追加する](../sharepoint/how-to-add-a-project-output-reference.md)」を参照してください。  
+ 詳細については、次を参照してください。[する方法: プロジェクト出力参照を追加](../sharepoint/how-to-add-a-project-output-reference.md)です。  
   
-## 安全なコントロール エントリ  
- SharePoint には、安全なコントロール エントリと呼ばれるセキュリティ機構があります。これにより、信頼されていないユーザーのアクセスを特定のコントロールで制限できます。  SharePoint では、信頼されていないユーザーも SharePoint サーバーに ASPX ページをアップロードしたり作成したりできるようになっていますが、  ASPX ページにアンセーフ コードが追加されるのを防ぐために、信頼されていないユーザーの*安全なコントロール*へのアクセスが制限されます。  安全なコントロールとは、安全として指定されている ASPX コントロールと Web パーツで、サイトのユーザーはだれでも使用できます。  詳細については、参照します [手順 4: 安全なコントロールのリストに Web パーツを追加します。](http://go.microsoft.com/fwlink/?LinkID=171014)。  
+## <a name="safe-control-entries"></a>安全なコントロール エントリ  
+ SharePoint では、特定のコントロールに信頼されていないユーザーへのアクセスを制限するための安全なコントロール エントリのセキュリティ メカニズムを提供します。 仕様では、SharePoint できる信頼されていないアップロードし、SharePoint サーバー上の ASPX ページを作成します。 SharePoint へのアクセスが制限をこれらのユーザーが安全でないコードの ASPX ページを追加することを防ぐために*安全なコントロール*です。 安全なコントロール ASPX コントロールと Web パーツがセキュリティで保護されたとして指定され、サイト上のすべてのユーザーが使用できます。 詳細については、次を参照してください。[手順 4: セーフ コントロール リストに、Web パーツの追加](http://go.microsoft.com/fwlink/?LinkID=171014)です。  
   
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] のすべての SharePoint プロジェクト項目に **\[安全なコントロール エントリ\]** という 2 ブール サブプロパティを含むプロパティがあります: **\[安全\]** と **\[スクリプトに対して安全\]**。  安全プロパティは、信頼されていないユーザーがコントロールにアクセスできるかどうかを指定します。  \[スクリプトに対して安全\] プロパティは、信頼されていないユーザーがコントロールのプロパティを表示したり変更したりできるかどうかを指定します。  
+ 内のすべての SharePoint プロジェクト項目[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]というプロパティを持つ**安全なコントロール エントリ**を持つ 2 つのブール サブプロパティ:**セーフ**と**スクリプトに対して安全**です。 [安全] プロパティでは、信頼されていないユーザーがコントロールにアクセスできるかどうかを指定します。 スクリプトに対して安全プロパティは、信頼されていないユーザーが表示して、コントロールのプロパティを変更するかどうかを指定します。  
   
- 安全なコントロール エントリはアセンブリに基づいて参照されます。  安全なコントロール エントリをプロジェクトのアセンブリに追加するには、それらをプロジェクト項目の **\[安全なコントロール エントリ\]** プロパティに入力します。  パッケージに追加のアセンブリを追加するときに、**パッケージ デザイナー**の **\[詳細設定\]** タブを使用して追加することもできます。  詳細については、[方法: コントロールを安全なコントロールとしてマークする](../sharepoint/how-to-mark-controls-as-safe-controls.md) を参照します [安全なコントロールとして Web Part Assembly の登録](http://go.microsoft.com/fwlink/?LinkID=171013)。  
+ 安全なコントロール エントリは、アセンブリごとに参照されます。 プロジェクト アイテムの入力することによって、プロジェクトのアセンブリに安全なコントロール エントリを追加する**安全なコントロール エントリ**プロパティです。 ただし、追加することも安全なコントロール エントリを通じて、プロジェクトのアセンブリを**詳細** タブで、**パッケージ デザイナー**パッケージに追加のアセンブリを追加するとします。 詳細については、次を参照してください。[する方法: 安全なコントロールとしてマーク コントロール](../sharepoint/how-to-mark-controls-as-safe-controls.md)または[Web パーツ アセンブリを登録する安全なコントロールとして](http://go.microsoft.com/fwlink/?LinkID=171013)です。  
   
-### 安全なコントロールの XML エントリ  
- プロジェクト項目やプロジェクトのアセンブリに安全なコントロール エントリを追加すると、パッケージ マニフェストに次の形式で参照が書き込まれます。  
+### <a name="xml-entries-for-safe-controls"></a>XML の安全なコントロール エントリ  
+ プロジェクト項目またはプロジェクトのアセンブリに安全なコントロール エントリを追加するときの参照は、次の形式でパッケージ マニフェストに書き込まれます。  
   
-```  
+```xml  
 <Assemblies>  
     <Assembly Location="<assembly name>.dll"     
       DeploymentTarget="<'GlobalAssemblyCache' or 'WebApplication'">>  
@@ -109,9 +111,8 @@ caps.handback.revision: 9
 </Assemblies>  
 ```  
   
-## 参照  
- [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)   
- [モジュールを使用してソリューションにファイルを追加する](../sharepoint/using-modules-to-include-files-in-the-solution.md)   
- [Extending SharePoint Packaging and Deployment](../sharepoint/extending-sharepoint-packaging-and-deployment.md)  
-  
+## <a name="see-also"></a>関連項目  
+ [パッケージ化と SharePoint ソリューションの配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)   
+ [モジュールを使用して、ソリューション内のファイルのインクルード](../sharepoint/using-modules-to-include-files-in-the-solution.md)   
+ [SharePoint のパッケージ化と配置の拡張](../sharepoint/extending-sharepoint-packaging-and-deployment.md)  
   

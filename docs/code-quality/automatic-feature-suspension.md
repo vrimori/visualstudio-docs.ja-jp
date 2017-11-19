@@ -1,0 +1,66 @@
+---
+title: "自動機能停止 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full solution analysis
+- performance
+- low-memory
+ms.assetid: 572c15aa-1fd0-468c-b6be-9fa50e170914
+caps.latest.revision: "6"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.technology: vs-ide-code-analysis
+ms.openlocfilehash: a2c836364092aa71f40d4d7aa4566b2d12def00e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
+---
+# <a name="automatic-feature-suspension"></a>自動機能中断
+場合は、使用可能なシステム メモリを少なくなると、200 MB を以下に、Visual Studio コード エディターで、次のメッセージが表示されます。  
+  
+ ![完全ソリューション解析を中断する警告テキスト](../code-quality/media/fsa_alert.png "FSA_Alert")  
+  
+ Visual Studio では、メモリ不足の状態を検出すると、安定性を維持するために特定の高度な機能が自動的に中断します。 高度な機能停止の警告が表示されますし、Visual Studio が同様に機能し続けますが、そのパフォーマンスは若干低下します。  
+  
+ メモリ不足の状態で、以下の処理が行われます。  
+  
+-   Visual c# および Visual Basic の完全なソリューション分析は無効です。  
+  
+-   [ガベージ コレクション](/dotnet/standard/garbage-collection/index)Visual c# と Visual Basic (GC) の低待機時間モードが無効になっています。  
+  
+-   Visual Studio のキャッシュをフラッシュします。  
+  
+## <a name="improve-visual-studio-performance"></a>Visual Studio のパフォーマンスを向上させる  
+ ヒントとトリックで大規模なソリューションまたはメモリの少ない状況を処理する場合は、Visual Studio のパフォーマンスを向上させる方法は、次を参照してください。[大規模なソリューションのパフォーマンスに関する考慮事項](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)です。  
+  
+## <a name="full-solution-analysis-suspended"></a>完全ソリューション解析を中断  
+ 既定では、完全なソリューション分析は、Visual Basic および無効になっている Visual c# 可能です。 ただし、メモリ不足の状態で完全ソリューション解析を自動的に無効 Visual Basic および Visual C# の場合、両方のオプション ダイアログ ボックスで、設定に関係なくです。 ただしを再度有効にする完全なソリューション分析を選択して、**再度有効にする**、情報バーに表示されたとき を選択してボタン、**完全ソリューション解析を有効にする**オプション ダイアログ ボックスで、チェック ボックスVisual Studio を再起動しています。 オプション ダイアログ ボックスでは、分析の設定が現在、完全なソリューションが常に表示します。 詳細については、次を参照してください。[する方法: 有効化と無効の完全なソリューション分析](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md)です。  
+  
+## <a name="gc-low-latency-disabled"></a>GC 低待機時間無効になっています  
+ GC 低待機時間モードを再度有効にするには、するには、Visual Studio を再起動します。  既定では、Visual Studio GC 低待機時間モードを有効にして、入力文字列での GC 操作をブロックしないことを確認入力としているときにします。 ただし、メモリ不足の状況によって自動保留警告を表示する Visual Studio は、GC 低待機時間モードはそのセッションで無効です。 Visual Studio を再起動すると、既定の GC 動作を再度有効にされます。 詳細については、次を参照してください。[そこで列挙](http://msdn.microsoft.com/Library/057757a5-cd62-4d13-8a40-370eb7f47c87)です。  
+  
+## <a name="visual-studio-caches-flushed"></a>Visual Studio キャッシュがフラッシュ  
+ Visual Studio のすべてのキャッシュは、すぐに空になるが、現在の開発セッションを続行するか、Visual Studio を再起動する場合の再作成が開始されます。 フラッシュされたキャッシュには、次の機能のキャッシュが含まれます。  
+  
+-   すべての参照を検索します。  
+  
+-   [移動]  
+  
+-   Using の追加します。  
+  
+ さらに、Visual Studio の内部操作に使用されるキャッシュもクリアされます。  
+  
+> [!NOTE]
+>  自動機能保留警告は、セッションごとの単位ではなく、ソリューションごとに 1 回だけ発生します。 つまり、Visual Basic から Visual c# (またはその逆) に切り替える別のメモリ不足の状態に実行すると、別の自動機能保留警告を取得可能性のあることができます。  
+  
+## <a name="see-also"></a>関連項目  
+ [方法: を有効にして、完全なソリューション分析を無効にします。](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md)   
+ [ガベージ コレクションの基礎](/dotnet/standard/garbage-collection/fundamentals)   
+ [大規模なソリューションのパフォーマンスに関する考慮事項](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)

@@ -1,51 +1,54 @@
 ---
-title: "String.raw 関数 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "String.raw 関数 (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: b1038b73-3944-4645-b075-3a674b313762
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 53df2bf0e455da8b1ccc6de3cbf3f4e3ebee4c09
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# String.raw 関数 (JavaScript)
-テンプレート文字列から未加工の文字列を返します。  
+# <a name="stringraw-function-javascript"></a>String.raw 関数 (JavaScript)
+テンプレート文字列の未加工の文字列形式を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 String.raw`templateStr`;  
 String.raw(obj, ...substitutions);  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `templateStr`  
- 必須。  テンプレート文字列。  
+ 必須です。 テンプレート文字列。  
   
  `obj`  
- 必須。  { raw: 'value' }.などのオブジェクト リテラル表記を使用して指定された正しい形式のオブジェクト。  
+ 必須です。 { raw: 'value' }.などのオブジェクト リテラル表記を使用して指定された正しい形式のオブジェクト。  
   
  `...substitutions`  
- 省略可能です。  1 つ以上の置換値で構成される配列 \([rest パラメーター](../../javascript/functions-javascript.md)\)。  
+ 省略可能です。 配列 (、 [rest パラメーター](../../javascript/functions-javascript.md)) の 1 つ以上の置換値で構成されます。  
   
-## 解説  
- `String.raw` 関数は、[テンプレート文字列](../../javascript/advanced/template-strings-javascript.md)と一緒に使用するよう意図されています。  未加工の文字列には、文字列内に存在するすべてのエスケープ文字と円記号が含まれます。  
+## <a name="remarks"></a>コメント  
+ `String.raw`関数で使用される[テンプレート文字列](../../javascript/advanced/template-strings-javascript.md)です。 未加工の文字列には、文字列内に存在するすべてのエスケープ文字と円記号が含まれます。  
   
  `obj` が正しい形式のオブジェクトではない場合には、エラーがスローされます。  
   
-## 使用例  
+## <a name="example"></a>例  
   
 ```  
 function log(arg) {  
@@ -65,9 +68,8 @@ log(String.raw({ raw: 'fred'}, 'F', 'R', 'E'));
 // Output:  
 // hello   bob  
 // hello \tbob  
-// fFrReEd  
-  
+// fFrReEd   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv12](../../javascript/reference/includes/jsv12-md.md)]

@@ -1,50 +1,50 @@
 ---
-title: "IDebugDynamicField | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDynamicField"
-helpviewer_keywords: 
-  - "IDebugDynamicField インターフェイス"
+title: "IDebugDynamicField |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugDynamicField
+helpviewer_keywords: IDebugDynamicField interface
 ms.assetid: caffbd95-7596-4714-84b1-b964e89a78bb
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5bb632d2ca51090f88b33ea6a8365fa9ac13ba9f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugDynamicField
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このインターフェイスは変数の型を表します。  
+# <a name="idebugdynamicfield"></a>IDebugDynamicField
+このインターフェイスは、変数の型を表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugDynamicField : IDebugField  
 ```  
   
-## 実装についてのメモ  
- このインターフェイスは実行時に決定する必要がある型の基本クラスとしてシンボルのプロバイダーによって実装されます。  これはマネージ コード専用です。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ このインターフェイスは、実行時に決定できる任意の型の基底クラスとしてシンボル プロバイダーによって実装されます。 これは、マネージ コード専用です。  
   
-## 呼び出し元のメモ  
- このインターフェイスはインターフェイスを取得できます。特化した基本クラスを表します。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ このインターフェイスより専門的なインターフェイスの派生元の基本クラスを表します。  
   
-## Vtable の順序でメソッド  
- このインターフェイスは `IDebugField` から継承されていないメソッドは用意されていません。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ このインターフェイスから継承されたもの以外の任意の方法で提供されない`IDebugField`です。  
   
-## 必要条件  
- ヘッダー : sh.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: sh.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [シンボルのプロバイダー インターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
+## <a name="see-also"></a>関連項目  
+ [シンボル プロバイダー インターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

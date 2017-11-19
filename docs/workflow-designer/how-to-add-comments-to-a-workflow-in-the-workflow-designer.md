@@ -1,23 +1,26 @@
 ---
-title: "ワークフロー デザイナーでワークフローにコメントを追加する方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "System.Activities.Presentation.Annotations.Annotation.UI"
-  - "Annotation"
+title: "方法: ワークフロー デザイナーでワークフローにコメントを追加 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- System.Activities.Presentation.Annotations.Annotation.UI
+- Annotation
 ms.assetid: 9aa0e8d6-8129-4438-8389-d460611581a7
-caps.latest.revision: 7
-caps.handback.revision: 5
-ms.author: "sdanie"
-manager: "erikre"
+caps.latest.revision: "7"
+ms.author: sdanie
+manager: erikre
+ms.openlocfilehash: 22a96549b70ebf1627b8a94a7c8cd5e2d5835194
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# ワークフロー デザイナーでワークフローにコメントを追加する方法
-より大きく複雑なワーク フローを作成を容易にするために、[!INCLUDE[net_v45](../ide/includes/net_v45_md.md)] では開発者が次の種類のデザイナーの項目に注釈を追加できます。  
+# <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>ワークフロー デザイナーでワークフローにコメントを追加する方法
+より大きく複雑なワーク フローを簡単に作成するため、[!INCLUDE[net_v45](../ide/includes/net_v45_md.md)] では開発者がデザイナーで次の種類の項目に注釈を追加できます。  
   
 -   <xref:System.Activities.Activity>  
   
@@ -25,65 +28,65 @@ manager: "erikre"
   
 -   <xref:System.Activities.Statements.Transition>  
   
--   <xref:System.Activities.Statements.FlowNode> の派生クラス  
+-   クラス (派生) <xref:System.Activities.Statements.FlowNode>  
   
 -   <xref:System.Activities.Variable>  
   
 -   <xref:System.Activities.Argument>  
   
 > [!IMPORTANT]
->  注釈の内容はワーク フローに関連付けられた XAML ファイルにテキスト形式で保存され、他のユーザーが読み取る可能性があります。注釈に機密情報を入力する場合は注意してください。  
+>  注釈の内容はワーク フローに関連付けられた XAML ファイルにテキスト形式で保存され、他のユーザーに読み取られる可能性があります。 注釈に機密情報を入力する場合は注意してください。  
   
-### デザイナーのアクティビティへの注釈の追加  
+### <a name="adding-an-annotation-to-an-activity-in-the-designer"></a>デザイナーのアクティビティへの注釈の追加  
   
-1.  ワークフロー デザイナーで、ワークフロー デザイナーの項目を右クリックし、**\[注釈\]**、**\[注釈の追加\]** をクリックします。  
+1.  ワークフロー デザイナーと選択内の項目を右クリックし、ワークフロー デザイナーで**注釈**、**注釈の追加**です。  
   
 2.  注釈のテキストを提供された領域に追加します。  
   
-3.  項目に注釈アイコンが表示されます。注釈アイコン上にカーソルを置くと、注釈のテキストが表示されます。  
+3.  項目に注釈アイコンが表示されます。 注釈アイコン上にカーソルを置くと、注釈のテキストが表示されます。  
   
-     ![Sequence アクティビティで注釈を表示している](../debugger/debug-interface-access/annotation.md "Annotation")  
+     ![注釈を表示するアクティビティをシーケンス](../debugger/debug-interface-access/annotation.md "注釈")  
   
-### アクティビティのデザイナーへの注釈の表示  
+### <a name="displaying-an-annotation-in-an-activitys-designer"></a>アクティビティのデザイナーへの注釈の表示  
   
-1.  アクティビティの外部に注釈を表示するアクティビティ デザイナーで、注釈の装飾の**ピン** アイコンをクリックします。  
+1.  アクティビティの外部に注釈表示するアクティビティ デザイナー、をクリックして、 **Pin**注釈の装飾のアイコン。  
   
-2.  注釈がアクティビティ デザイナーに表示されます。次スクリーンショットでは、「ワーク フローのアクティビティを開始する」という注釈がアクティビティ デザイナーに表示されています。  
+2.  注釈がアクティビティ デザイナーに表示されます。 次のスクリーンショットでは、「ワーク フローのアクティビティを開始する」という注釈がアクティビティ デザイナーに表示されています。  
   
      ![注釈がアクティビティ デザイナーに表示されている](../workflow-designer/media/annotationindesigner.png "AnnotationInDesigner")  
   
-3.  アクティビティ デザイナーの外部に注釈を表示するには、アクティビティのデザイナーの注釈の領域にカーソルを置き、**ピン解除**アイコンをクリックします。  
+3.  アクティビティ デザイナーの外部に注釈を表示するアクティビティ デザイナーの注釈の領域を合わせるし をクリックして、**ピン解除** アイコン  
   
-     ![注釈がアクティビティ デザイナーの外部に表示されている](../workflow-designer/media/annotationoutsidedesigner.png "AnnotationOutsideDesigner")  
+     ![アクティビティのデザイナーの外部に表示される注釈](../workflow-designer/media/annotationoutsidedesigner.png "AnnotationOutsideDesigner")  
   
-### すべての注釈の表示または非表示  
+### <a name="showing-or-hiding-all-annotations"></a>すべての注釈の表示または非表示  
   
-1.  注釈を持つアクティビティを右クリックします。**\[注釈\]**、**\[すべての注釈を表示\]** をクリックします。  
+1.  注釈を持つアクティビティを右クリックします。 選択**注釈**、**すべての注釈を表示する**です。  
   
 2.  すべての注釈がアクティビティのデザイナーに表示されます。  
   
-3.  アクティビティのデザイナーの外部のすべての注釈を表示するには、アクティビティを右クリックし、**\[注釈\]**、**\[すべての注釈を非表示\]** をクリックします。  
+3.  クリックし、アクティビティを右クリックし、アクティビティのデザイナーの外部のすべての注釈を表示する**注釈**、**すべての注釈を非表示に**です。  
   
-### アクティビティの注釈の編集または削除  
+### <a name="editing-or-deleting-an-annotation-for-an-activity"></a>アクティビティの注釈の編集または削除  
   
 1.  注釈を持つアクティビティを右クリックします。  
   
-2.  **\[注釈\]**、**\[注釈の編集\]** または **\[注釈の削除\]** をクリックします。  
+2.  選択**注釈**、 **注釈の編集**または**注釈を削除**です。  
   
 3.  編集または削除用に注釈が開きます。  
   
-4.  すべての注釈を一度に削除するには、ワークフロー デザイナーを右クリックし、**\[注釈\]**、**\[すべての注釈を削除\]** をクリックします。  
+4.  すべての注釈を一度に削除するには、ワークフロー デザイナーと選択を右クリックして**注釈**、**注釈をすべて削除**です。  
   
-### 変数または引数の注釈の追加、編集、削除  
+### <a name="adding-editing-and-deleting-an-annotation-for-a-variable-or-argument"></a>変数または引数の注釈の追加、編集、削除  
   
-1.  変数または引数を右クリックし、\[注釈の追加\] をクリックします。  
+1.  変数または引数を右クリックし、[注釈の追加] をクリックします。  
   
-2.  注釈のテキストを入力します。変数または引数に注釈アイコンが表示されます。  
+2.  注釈のテキストを入力します。 変数または引数に注釈アイコンが表示されます。  
   
-3.  注釈を持つ変数または引数を右クリックします。\[注釈の編集\] をクリックします。  
+3.  注釈を持つ変数または引数を右クリックします。 [注釈の編集] をクリックします。  
   
 4.  編集用に注釈が開きます。  
   
-5.  注釈を持つ変数または引数を右クリックします。\[注釈の削除\] をクリックします。  
+5.  注釈を持つ変数または引数を右クリックします。 [注釈の削除] をクリックします。  
   
 6.  注釈が削除されます。

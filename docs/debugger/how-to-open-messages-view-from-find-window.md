@@ -1,56 +1,57 @@
 ---
-title: "方法: [ウィンドウ検索] からメッセージ ビューを開く | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "メッセージ ビューを Spy++ で、開く"
-  - "開く (メッセージ ビューを Spy++ で)"
+title: "方法: [検索] ウィンドウからメッセージ ビューを開く |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Messages View in Spy++, opening
+- opening Messages View in Spy++
 ms.assetid: 601a193e-432a-417b-9406-6fec9e401264
-caps.latest.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f69a79cbc80df206cd1c12abc9a34aa78eeb6194
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: [ウィンドウ検索] からメッセージ ビューを開く
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-場合によっては、\[ウィンドウ検索\] ダイアログ ボックスを使用して対象のウィンドウを選択し、そのウィンドウのメッセージ ビューを開くと便利です。  
+# <a name="how-to-open-messages-view-from-find-window"></a>方法: [ウィンドウ検索] からメッセージ ビューを開く
+使用できると便利な場合があります、**ウィンドウ検索**を対象のウィンドウを選択し、そのウィンドウのメッセージ ビューを開く ダイアログ ボックス。  
   
-### \[ウィンドウ検索\] ダイアログ ボックスを使用してメッセージ ビュー ウィンドウを開くには  
+### <a name="to-open-a-messages-view-window-using-the-find-window-dialog-box"></a>[ウィンドウ検索] ダイアログ ボックスを使用してメッセージ ビュー ウィンドウを開く  
   
-1.  Spy\+\+ と対象のウィンドウの両方が表示されるように、ウィンドウの位置を調整します。  
+1.  Spy++ と対象のウィンドウの両方が表示されるように、ウィンドウを整列します。  
   
-2.  \[スパイ\] メニューの \[ウィンドウ検索\] をクリックします。  
+2.  **スパイ**] メニューの [選択**ウィンドウ検索**です。  
   
-     [&#91;ウィンドウ検索&#93; ダイアログ ボックス](../debugger/find-window-dialog-box.md)が表示されます。  
+     [ウィンドウの検索 ダイアログ ボックス](../debugger/find-window-dialog-box.md)が開きます。  
   
-3.  \[ウィンドウ\] タブから対象のウィンドウの上にファインダー ツールをドラッグします。  ツールをドラッグすると、\[ウィンドウ検索\] ダイアログ ボックスに選択したウィンドウの詳細が表示されます。  
+3.  **Windows**  タブで、ドラッグ、**ファインダー ツール**対象ウィンドウの上です。 このツールをドラッグすると、**ウィンドウ検索** ダイアログ ボックスでは、選択したウィンドウの詳細が表示されます。  
   
-     または  
+     - または  
   
-     デバッガーからコピーするなどして、調べるウィンドウのハンドルがわかっている場合は、それを \[ハンドル\] ボックスに入力できます。  
+     場合 (たとえば、デバッガーからコピー) を確認するウィンドウのハンドルがある場合は、入力に、**処理**テキスト ボックス。  
   
-4.  \[表示\] で \[メッセージ\] を選択します。  
+4.  **表示****メッセージ**です。  
   
-5.  **\[OK\]** をクリックします。  
+5.  Press **OK**.  
   
-     空の[メッセージ ビュー](../debugger/messages-view.md) ウィンドウが開き、\[メッセージ\] メニューが Spy\+\+ ツール バーに追加されます。  
+     空白[メッセージ ビュー](../debugger/messages-view.md)ウィンドウが開き、および**メッセージ**spy++ ツールバーにメニューが追加されます。  
   
-6.  \[メッセージ\] メニューの \[ログ オプション\] をクリックします。  
+6.  **メッセージ**] メニューの [選択**ログ オプション**です。  
   
-     [&#91;メッセージ オプション&#93; ダイアログ ボックス](../debugger/message-options-dialog-box.md)が開きます。  
+     [メッセージ オプション ダイアログ ボックス](../debugger/message-options-dialog-box.md)が開きます。  
   
 7.  表示するメッセージのオプションを選択します。  
   
-8.  \[OK\] をクリックし、メッセージのログ出力を開始します。  
+8.  キーを押して**OK**をメッセージのログ記録を開始します。  
   
-     選択したオプションに応じて、アクティブなメッセージ ビュー ウィンドウへのメッセージのストリーミングが開始されます。  
+     選択したオプションによっては、メッセージは、アクティブなメッセージ ビュー ウィンドウにストリーミングを開始します。  
   
-9. 十分なメッセージが出力されたら、\[メッセージ\] メニューの \[ログ終了\] をクリックします。
+9. 十分なメッセージを使用する場合は、選択**ログの停止**から、**メッセージ**メニュー。

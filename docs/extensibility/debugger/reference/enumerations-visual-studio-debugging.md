@@ -1,255 +1,257 @@
 ---
-title: "列挙体 (Visual Studio のデバッグ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "列挙型 [Visual Studio SDK]"
-  - "[デバッグ SDK] の列挙体のデバッグ"
+title: "列挙体 (Visual Studio のデバッグ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- enumerations [Visual Studio SDK]
+- debugging [Debugging SDK], enumerations
 ms.assetid: 557065bf-081f-4d57-8744-bae02b8a5a6e
-caps.latest.revision: 15
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 339ebce7ddc338656abd1484d4dbdddbc02c060d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 列挙体 (Visual Studio のデバッグ)
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-ここではSDK のデバッグ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] の列挙型です。  
+# <a name="enumerations-visual-studio-debugging"></a>列挙体 (Visual Studio のデバッグ)
+列挙体は次のとおり、 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] SDK のデバッグします。  
   
- [AD\_PROCESS\_ID\_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md)  
- [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md) の構造のプロセス ID を解釈する方法を指定します。  
+ [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md)  
+ プロセス ID を解釈する方法を指定します、 [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)構造体。  
   
- [ADDRESS\_KIND](../../../extensibility/debugger/reference/address-kind.md)  
+ [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)  
  アドレスの種類を指定します。  
   
  [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md)  
  アセンブリの場所を指定します。  
   
- [ATTACH\_REASON](../../../extensibility/debugger/reference/attach-reason.md)  
- プログラムのノードにアタッチされるデバッグ エンジン \(DE\) の理由を指定します。  
+ [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md)  
+ デバッグ エンジン (DE)、[プログラム] ノードにアタッチする理由を指定します。  
   
- [BP\_COND\_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md)  
- 保留中およびバインド ブレークポイントの場合ブレークポイント条件のスタイルを指定します。  
+ [BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md)  
+ 保留中のブレークポイントの条件のスタイルを指定し、ブレークポイントをバインドします。  
   
- [BP\_ERROR\_TYPE](../../../extensibility/debugger/reference/bp-error-type.md)  
+ [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md)  
  ブレークポイントのエラーの種類を指定します。  
   
- [BP\_FLAGS](../../../extensibility/debugger/reference/bp-flags.md)  
- ブレークポイントを設定したときに追加情報を指定するために使用できるオプションのフラグを指定します。  
+ [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md)  
+ ブレークポイントを設定するときに、追加情報を指定するために使用する省略可能なフラグを提供します。  
   
- [BP\_FLAGS90](../../../extensibility/debugger/reference/bp-flags90.md)  
- ブレークポイントを設定したときに追加情報を指定するために使用できるオプションのフラグの有効な値を列挙します。  この列挙体は [BP\_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) の列挙型を拡張します。  
+ [BP_FLAGS90](../../../extensibility/debugger/reference/bp-flags90.md)  
+ ブレークポイントを設定するときに、追加情報を指定するために使用する省略可能なフラグの有効な値を列挙します。 この列挙体を拡張、 [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md)列挙します。  
   
- [BP\_LOCATION\_TYPE](../../../extensibility/debugger/reference/bp-location-type.md)  
- ブレークポイントの要求に対してブレークポイントの場所の種類を指定します。  
+ [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md)  
+ ブレークポイントの要求のブレークポイントの場所の種類を指定します。  
   
- [BP\_PASSCOUNT\_STYLE](../../../extensibility/debugger/reference/bp-passcount-style.md)  
- ブレークポイントを発生させるブレークポイントのパスの数に関連付けられた条件を指定します。  
+ [BP_PASSCOUNT_STYLE](../../../extensibility/debugger/reference/bp-passcount-style.md)  
+ ブレークポイントが発生すると、ブレークポイントのパスの数に関連付けられている条件を指定します。  
   
- [BP\_RES\_DATA\_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md)  
- データ ブレークポイントはハードウェアでエミュレートされるか実行されるかどうかを指定します。  
+ [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md)  
+ データ ブレークポイントがエミュレートされるかどうか、または実装されているハードウェアを指定します。  
   
- [BP\_STATE](../../../extensibility/debugger/reference/bp-state.md)  
- 有効にするかどうかをバインド ブレークポイントのプロシージャを指定します。  
+ [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)  
+ バインドされたブレークポイントと有効になっているかどうかの存在を指定します。  
   
- [BP\_TYPE](../../../extensibility/debugger/reference/bp-type.md)  
- ブレークポイントはコード位置にデータの場所かブレークポイントのもう一つの型であるかどうかを指定します。  
+ [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)  
+ かどうか、ブレークポイントがコード位置にある、データの場所は、または別の種類のブレークポイントを指定します。  
   
- [BP\_UNBOUND\_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md)  
- ブレークポイントが解放された理由を示します。  
+ [BP_UNBOUND_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md)  
+ ブレークポイントがバインドできなかった理由を説明します。  
   
- [BPERESI\_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md)  
- ブレークポイントまたはエラーの解決方法について取得する情報を指定します。  
+ [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md)  
+ ブレークポイントの失敗の解決策について取得するには、どのような情報を指定します。  
   
- [BPREQI\_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)  
- ブレークポイントの要求に関して取得する情報を指定します。  
+ [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)  
+ ブレークポイントの要求に関するを取得するには、どのような情報を指定します。  
   
- [BPREQI\_FIELDS90](../../../extensibility/debugger/reference/bpreqi-fields90.md)  
- ブレークポイントの要求に関して取得される情報を指定する有効な値を列挙します。  この列挙体は [BPREQI\_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) の列挙型を拡張します。  
+ [BPREQI_FIELDS90](../../../extensibility/debugger/reference/bpreqi-fields90.md)  
+ 取得する要求に関する情報は、ブレークポイントを指定する有効な値を列挙します。 この列挙体を拡張、 [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)列挙します。  
   
- [BPRESI\_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)  
- どの情報をブレークポイントを解決に関して取得するかを指定します。  
+ [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)  
+ ブレークポイントの解決方法の成功を取得する情報の種類を指定します。  
   
- [CANSTOP\_REASON](../../../extensibility/debugger/reference/canstop-reason.md)  
- プログラムを実行するので特定のポイントに到達した後で実行を停止できるかどうかを確認するために使用します。  
+ [CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md)  
+ プログラムが実行の特定のポイントに到達した後の実行を停止するかどうかを判断するために使用します。  
   
- [CONNECTION\_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md)  
- デバッグのサーバーとデバッグのパッケージの間の通信に使用されるプロトコルを示す値。  
+ [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md)  
+ デバッグ サーバーとデバッグのパッケージ間の通信に使用されているプロトコルを示す値です。  
   
- [CONSTRUCTOR\_ENUM](../../../extensibility/debugger/reference/constructor-enum.md)  
- コンストラクターの種類を選択します。  
+ [CONSTRUCTOR_ENUM](../../../extensibility/debugger/reference/constructor-enum.md)  
+ さまざまな種類のコンス トラクターを選択します。  
   
- [CONTEXT\_COMPARE](../../../extensibility/debugger/reference/context-compare.md)  
- 2 個のメモリのコンテキストを比較するための条件を指定します。  
+ [CONTEXT_COMPARE](../../../extensibility/debugger/reference/context-compare.md)  
+ 2 つのメモリ コンテキストを比較するための条件を指定します。  
   
- [CONTEXT\_INFO\_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)  
- メモリのコンテキストに関して取得する情報を指定します。  
+ [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)  
+ メモリのコンテキストに関するを取得するには、どのような情報を指定します。  
   
- [DBG\_ATTRIB\_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)  
- [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) または [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) インターフェイスのさまざまな属性を記述します。  
+ [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)  
+ さまざまな属性について説明します、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)または[IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)インターフェイスです。  
   
- [DEBUG\_REASON](../../../extensibility/debugger/reference/debug-reason.md)  
- プロセスはデバッグに開始理由を指定します。  
+ [DEBUG_REASON](../../../extensibility/debugger/reference/debug-reason.md)  
+ デバッグ プロセスを起動した理由を指定します。  
   
- [DEBUGPROP\_INFO\_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)  
- デバッグのオブジェクトまたはプロパティに関して取得する情報を指定します。  
+ [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)  
+ Debug プロパティ オブジェクトの概要を取得するには、どのような情報を指定します。  
   
- [DEBUGREF\_INFO\_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)  
- デバッグの参照オブジェクトに関して取得する情報を指定します。  
+ [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)  
+ Debug 参照オブジェクトの概要を取得するには、どのような情報を指定します。  
   
- [DISASSEMBLY\_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)  
- 構成のフラグを指定します。  
+ [DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)  
+ 混合モードのフラグを指定します。  
   
- [DISASSEMBLY\_STREAM\_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md)  
- アセンブリのフィールドに関して取得する情報を指定します。  
+ [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md)  
+ [逆アセンブル] フィールドの詳細を取得するには、どのような情報を指定します。  
   
- [DISASSEMBLY\_STREAM\_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md)  
- 構成ストリームの範囲を指定します。  
+ [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md)  
+ [逆アセンブル] ストリームのスコープを指定します。  
   
  [DisplayKind](../../../extensibility/debugger/reference/displaykind.md)  
- からユーザーに [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) のオブジェクトと表示を行うための情報の種類を表す有効な値を列挙します。  
+ 列挙から取得する情報の種類を表す有効な値を[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクトをユーザーに表示します。  
   
- [DOCCONTEXT\_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md)  
- 2 種類のコンテキストを比較するための条件を指定します。  
+ [DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md)  
+ 2 つのドキュメントのコンテキストを比較するための条件を指定します。  
   
  [DUMPTYPE](../../../extensibility/debugger/reference/dumptype.md)  
- ダンプするプログラムの状態がどの程度指定します。  
+ ダンプするプログラムの状態の量を指定します。  
   
- [dwTYPE\_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)  
- [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) のオブジェクト型を解釈する方法を指定します。  
+ [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)  
+ 型を解釈する方法を指定します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。  
   
  [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md)  
- エディット コンティニュで使用できない理由を表します。  
+ エディット コンティニュが利用できない理由を表します。  
   
  [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)  
  式の評価を制御するフラグを指定します。  
   
  [EVALFLAGS90](../../../extensibility/debugger/reference/evalflags90.md)  
- 式の評価を制御するフラグの有効な値を列挙します。  この列挙体は [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) の列挙型を拡張します。  
+ 式の評価を制御するフラグの有効な値を列挙します。 この列挙体を拡張、 [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)列挙します。  
   
- [複数](../../../extensibility/debugger/reference/eventattributes.md)  
+ [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md)  
  イベント属性を指定します。  
   
- [EXCEPTION\_STATE](../../../extensibility/debugger/reference/exception-state.md)  
- 例外の状態を指定します。  
+ [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md)  
+ 例外状態を指定します。  
   
- [FIELD\_INFO\_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md)  
- [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) のオブジェクトに関して取得する情報を指定します。  
+ [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md)  
+ 取得するには、どのような情報を指定します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。  
   
- [FIELD\_KIND](../../../extensibility/debugger/reference/field-kind.md)  
- [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) のオブジェクトに含まれるフィールドの種類を指定します。  
+ [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md)  
+ 含まれるフィールドの種類を指定します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。  
   
- [FIELD\_KIND\_EX](../../../extensibility/debugger/reference/field-kind-ex.md)  
- [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) のオブジェクトが持つことができるそのほかの種類のフィールドを列挙します。  この列挙体は [FIELD\_KIND](../../../extensibility/debugger/reference/field-kind.md) の列挙型を拡張します。  
+ [FIELD_KIND_EX](../../../extensibility/debugger/reference/field-kind-ex.md)  
+ フィールドの他の種類を列挙、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクトを含めることができます。 この列挙体を拡張、 [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md)列挙します。  
   
- [FIELD\_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)  
- フィールドの種類の修飾子を指定します。  
+ [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)  
+ フィールドの型の修飾子を指定します。  
   
- [FRAMEINFO\_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)  
- 情報をスタック フレームのオブジェクトについて取得するように指定します。  
+ [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)  
+ スタック フレーム オブジェクトは取得する情報を指定します。  
   
- [GETHOSTNAME\_TYPE](../../../extensibility/debugger/reference/gethostname-type.md)  
+ [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md)  
  ホスト名の種類を指定します。  
   
- [GETNAME\_TYPE](../../../extensibility/debugger/reference/getname-type.md)  
- ファイル名の型を取得するように指定します。  
+ [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)  
+ 取得するファイルの名前の種類を指定します。  
   
- [INTERCEPT\_EXCEPTION\_ACTION](../../../extensibility/debugger/reference/intercept-exception-action.md)  
- 例外を受け取るときに実行するアクションを指定します。  
+ [INTERCEPT_EXCEPTION_ACTION](../../../extensibility/debugger/reference/intercept-exception-action.md)  
+ 例外をインターセプトするときに実行するアクションを指定します。  
   
- [LAUNCH\_FLAGS](../../../extensibility/debugger/reference/launch-flags.md)  
- プログラムの起動方法を指定します。  
+ [LAUNCH_FLAGS](../../../extensibility/debugger/reference/launch-flags.md)  
+ プログラムを起動する方法を指定します。  
   
- [MACHINE\_INFO\_FIELDS](../../../extensibility/debugger/reference/machine-info-fields.md)  
- 特定のコンピューターのために取得するような情報を指定します。  
+ [MACHINE_INFO_FIELDS](../../../extensibility/debugger/reference/machine-info-fields.md)  
+ 特定のコンピューターを取得する情報の種類を指定します。  
   
- [MACHINE\_INFO\_FLAGS](../../../extensibility/debugger/reference/machine-info-flags.md)  
- マシンを記述するために使用します。  
+ [MACHINE_INFO_FLAGS](../../../extensibility/debugger/reference/machine-info-flags.md)  
+ コンピューターの記述に使用します。  
   
- [メッセージの種類](../../../extensibility/debugger/reference/messagetype.md)  
- メッセージの種類と理由を指定します。  
+ [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md)  
+ メッセージの種類および理由を指定します。  
   
- [MODULE\_FLAGS](../../../extensibility/debugger/reference/module-flags.md)  
- モジュールを記述するために使用します。  
+ [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md)  
+ モジュールの記述に使用します。  
   
- [MODULE\_INFO\_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)  
+ [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)  
  モジュールのデバッグ情報のフラグを指定します。  
   
- [MODULE\_INFO\_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md)  
- モジュールにシンボルの状態を指定します。  
+ [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md)  
+ モジュールのシンボルの状態を指定します。  
   
- [NAME\_MATCH](../../../extensibility/debugger/reference/name-match.md)  
- 一致する名前のケースをクリックします。  
+ [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md)  
+ 一致する名前の大文字のオプションを選択します。  
   
- [OBJECT\_TYPE](../../../extensibility/debugger/reference/object-type.md)  
- 式エバリュエーターのオブジェクトの種類を指定します。  
+ [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md)  
+ 式エバリュエーターからのオブジェクトの種類を指定します。  
   
  [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md)  
  式を解析する方法を指定します。  
   
- [PENDING\_BP\_STATE](../../../extensibility/debugger/reference/pending-bp-state.md)  
- 保留中のブレークポイント \(まだ関連付けられていない\) のブレークポイント条件を指定します。  
+ [PENDING_BP_STATE](../../../extensibility/debugger/reference/pending-bp-state.md)  
+ 保留中のブレークポイント (バインドされていないブレークポイント) の状態を指定します。  
   
- [PENDING\_BP\_STATE\_FLAGS](../../../extensibility/debugger/reference/pending-bp-state-flags.md)  
+ [PENDING_BP_STATE_FLAGS](../../../extensibility/debugger/reference/pending-bp-state-flags.md)  
  保留中のブレークポイントの状態フラグを指定します。  
   
- [PORT\_SUPPLIER\_DESCRIPTION\_FLAGS](../../../extensibility/debugger/reference/port-supplier-description-flags.md)  
- ポートの仕入先に関して取得できるメタデータを定義します。  
+ [PORT_SUPPLIER_DESCRIPTION_FLAGS](../../../extensibility/debugger/reference/port-supplier-description-flags.md)  
+ ポートのサプライヤーの目的で取得できるメタデータを定義します。  
   
- [PROCESS\_INFO\_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md)  
- プロセスのために取得するような情報を指定します。  
+ [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md)  
+ プロセスを取得する情報の種類を指定します。  
   
- [PROCESS\_INFO\_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md)  
- プロセスのプロパティを記述したり指定します。  
+ [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md)  
+ 説明またはプロセスのプロパティを指定します。  
   
- [PROGRAM\_DESTROY\_FLAGS](../../../extensibility/debugger/reference/program-destroy-flags.md)  
- プログラムの破棄フラグの有効な値を列挙します。  
+ [PROGRAM_DESTROY_FLAGS](../../../extensibility/debugger/reference/program-destroy-flags.md)  
+ 有効な列挙がプログラムの値は、フラグを破棄します。  
   
- [PROVIDER\_FIELDS](../../../extensibility/debugger/reference/provider-fields.md)  
- プログラムのプロバイダーに関連付けられたプロパティを指定します。  
+ [PROVIDER_FIELDS](../../../extensibility/debugger/reference/provider-fields.md)  
+ プログラムの提供に関連付けられたプロパティを指定します。  
   
- [PROVIDER\_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)  
- プログラムによってプロバイダーから取得されるプロパティを望みました。  
+ [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)  
+ プログラム プロバイダーから取得するための必要なプロパティを指定します。  
   
- [REFERENCE\_COMPARE](../../../extensibility/debugger/reference/reference-compare.md)  
- 参照を比較の種類を指定します。  
+ [REFERENCE_COMPARE](../../../extensibility/debugger/reference/reference-compare.md)  
+ 参照の比較の種類を指定します。  
   
- [REFERENCE\_TYPE](../../../extensibility/debugger/reference/reference-type.md)  
+ [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md)  
  参照型を指定します。  
   
- [SEEK\_START](../../../extensibility/debugger/reference/seek-start.md)  
- アセンブリの検索を開始する場所を指定します。  
+ [SEEK_START](../../../extensibility/debugger/reference/seek-start.md)  
+ 逆アセンブリ内の検索を開始する位置を指定します。  
   
  [STEPKIND](../../../extensibility/debugger/reference/stepkind.md)  
- ステップについての種類を指定します。  
+ ステップ実行のステップの種類を指定します。  
   
  [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md)  
- 手順の増分単位を指定します。  
+ ステップ実行のステップ単位を指定します。  
   
- [SYMBOL\_SEARCH\_INFO\_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md)  
- 取得するなどのシンボル情報を指定します。  
+ [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md)  
+ 取得するシンボル情報の種類を指定します。  
   
- [TEXT\_DOC\_ATTR\_2](../../../extensibility/debugger/reference/text-doc-attr-2.md)  
- ドキュメントの属性を記述します。  
+ [TEXT_DOC_ATTR_2](../../../extensibility/debugger/reference/text-doc-attr-2.md)  
+ ドキュメントの属性について説明します。  
   
- [THREADPROPERTY\_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)  
- 取得されるスレッドに関するされる情報を指定します。  
+ [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)  
+ 取得する対象のスレッドに関する情報を指定します。  
   
  [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md)  
  スレッドの状態を指定します。  
   
-## 要件  
- ヘッダー : msdbg.hsh.hまたは ee.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h、sh.h、または ee.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [API リファレンス](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

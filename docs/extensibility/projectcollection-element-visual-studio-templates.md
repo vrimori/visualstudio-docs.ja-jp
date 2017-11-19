@@ -1,30 +1,35 @@
 ---
-title: "ProjectCollection 要素 (Visual Studio Templates) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#ProjectCollection"
-helpviewer_keywords: 
-  - "<ProjectCollection> 要素 [Visual Studio テンプレート]"
-  - "ProjectCollection 要素 [Visual Studio テンプレート]"
+title: "ProjectCollection 要素 (Visual Studio テンプレート) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#ProjectCollection
+helpviewer_keywords:
+- <ProjectCollection> element [Visual Studio Templates]
+- ProjectCollection element [Visual Studio Templates]
 ms.assetid: deb27180-2035-49ed-b835-c47bb3cd2f8f
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d043d9963ad9f2bf9bd06b7a8cc543ffaee50e19
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ProjectCollection 要素 (Visual Studio Templates)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="projectcollection-element-visual-studio-templates"></a>ProjectCollection 要素 (Visual Studio Templates)
 複数プロジェクトのテンプレートの構成と内容を指定します。  
   
-## 構文  
+ \<VSTemplate >  
+ \<TemplateContent >  
+ \<ProjectCollection >  
+  
+## <a name="syntax"></a>構文  
   
 ```  
 <ProjectCollection>  
@@ -33,30 +38,30 @@ caps.handback.revision: 8
 </ProjectCollection>  
 ```  
   
-## 属性および要素  
+## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
-### 属性  
+### <a name="attributes"></a>属性  
  なし。  
   
-### 子要素  
+### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
-|--------|--------|  
-|[ProjectTemplateLink](../extensibility/projecttemplatelink-element-visual-studio-templates.md)|省略可能な要素です。<br /><br /> 複数プロジェクトのテンプレートのプロジェクトを指定します。|  
+|-------------|-----------------|  
+|[ProjectTemplateLink](../extensibility/projecttemplatelink-element-visual-studio-templates.md)|省略可能な要素です。<br /><br /> 複数プロジェクトのテンプレートでプロジェクトを指定します。|  
 |[SolutionFolder](../extensibility/solutionfolder-element-visual-studio-templates.md)|省略可能な要素です。<br /><br /> 複数プロジェクトのテンプレートをグループ化します。|  
   
-### 親要素  
+### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
-|--------|--------|  
-|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|必須の要素。<br /><br /> テンプレートの内容を指定します。|  
+|-------------|-----------------|  
+|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートの内容を指定します。|  
   
-## 解説  
- 複数プロジェクトのテンプレートは、2 つ以上のプロジェクトのコンテナーとして機能します。  `ProjectCollection` 要素は、テンプレートに含めるプロジェクトを指定するために使用します。  複数プロジェクトのテンプレートの詳細については、「[方法 : 複数プロジェクトのテンプレートを作成する](../ide/how-to-create-multi-project-templates.md)」を参照してください。  
+## <a name="remarks"></a>コメント  
+ 複数プロジェクトのテンプレートは、2 つ以上のプロジェクトのコンテナーとして機能します。 `ProjectCollection`要素を使用して、テンプレートに、プロジェクトを指定します。 複数プロジェクトのテンプレートの詳細については、次を参照してください。[する方法: 複数のプロジェクト テンプレートを作成する](../ide/how-to-create-multi-project-templates.md)です。  
   
-## 使用例  
- 簡単なマルチプロジェクトのルート .vstemplate ファイルの例を次に示します。  この例では、テンプレートには `My Windows Application` と `My Class Library` の 2 つのプロジェクトが含まれています。  `ProjectTemplateLink` 要素の `ProjectName` 属性は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] がこのプロジェクトに割り当てる名前を設定します。  `ProjectName` 属性が存在しない場合、.vstemplate ファイルの名前がプロジェクト名として使用されます。  
+## <a name="example"></a>例  
+ 簡単なマルチプロジェクトのルート .vstemplate ファイルの例を次に示します。 この例では、テンプレートには `My Windows Application` と `My Class Library` の 2 つのプロジェクトが含まれています。 `ProjectName` 要素の `ProjectTemplateLink` 属性は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] がこのプロジェクトに割り当てる名前を設定します。 `ProjectName` 属性が存在しない場合、.vstemplate ファイルの名前がプロジェクト名として使用されます。  
   
 ```  
 <VSTemplate Version="3.0.0" Type="ProjectGroup"  
@@ -80,7 +85,7 @@ caps.handback.revision: 8
 </VSTemplate>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [カスタム プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
+ [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
  [方法 : 複数プロジェクトのテンプレートを作成する](../ide/how-to-create-multi-project-templates.md)

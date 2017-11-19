@@ -1,66 +1,67 @@
 ---
-title: "charAt メソッド (String) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "charAt"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "文字列オブジェクト、返す (文字を)"
-  - "charAt メソッド"
-  - "文字、返す (一部を)"
+title: "charAt メソッド (String) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: charAt
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- String object, returning characters
+- charAt method
+- characters, returning part of
 ms.assetid: 63173e15-17f6-47c5-8f94-98ef1eb04c1a
-caps.latest.revision: 14
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 201d85fec4ba184f0842c7401d986650b9ee078c
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# charAt メソッド (String) (JavaScript)
+# <a name="charat-method-string-javascript"></a>charAt メソッド (String) (JavaScript)
 指定されたインデックス番号の位置にある文字を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 strObj. charAt(index)  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `strObj`  
- 必須です。  `String` オブジェクトまたはリテラル文字列。  
+ 必須です。 どの`String`オブジェクトまたは文字列リテラルです。  
   
  `index`  
- 必須です。  文字の位置を 0 から始まるインデックスで指定します。  
+ 必須です。 目的の文字の 0 から始まるインデックス。  
   
-## 解説  
- `charAt` メソッドの戻り値は、指定された `index` にある文字です。  文字列内の 1 文字目のインデックス番号は 0、2 文字目のインデックス番号は 1 となります。  有効範囲外の `index` の値を指定した場合は空の文字列を返します。  
+## <a name="remarks"></a>コメント  
+ `charAt`メソッドが、指定した位置にある文字と等しい文字の値を返します`index`です。 文字列の最初の文字インデックス 0 には、2 つ目はインデックス 1 など。 値を`index`が範囲外に戻り値、空の文字列。  
   
-## 使用例  
- `charAt` メソッドの使用例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、使用、`charAt`メソッド。  
   
-```javascript  
+```JavaScript  
 var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";  
 document.write(str.charAt(str.length - 1));  
   
 // Output: Z  
-  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
- **対象**: [String オブジェクト](../../javascript/reference/string-object-javascript.md)  
+ **適用されます**:[文字列オブジェクト](../../javascript/reference/string-object-javascript.md)  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [String オブジェクト](../../javascript/reference/string-object-javascript.md)

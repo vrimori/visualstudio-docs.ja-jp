@@ -1,47 +1,46 @@
 ---
-title: "IDiaAddressMap::get_imageAlign | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaAddressMap::get_imageAlign メソッド"
+title: "Idiaaddressmap::get_imagealign |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaAddressMap::get_imageAlign method
 ms.assetid: f1ba8071-669c-4cf7-9ac0-02f26d99f366
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: e3c9400fe8261b8983c76d59a55e7c457d35e572
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaAddressMap::get_imageAlign
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idiaaddressmapgetimagealign"></a>IDiaAddressMap::get_imageAlign
 現在のイメージの配置を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_imageAlign (   
-   DWORD* pRetVal  
+```C++  
+HRESULT get_imageAlign (   
+   DWORD* pRetVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- \[入力\] 実行可能ファイルからイメージの配置の値を返します。  
+ [out]実行可能ファイルからイメージの配置の値を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- イメージは特定のメモリの境界にイメージが読み込まれ作成されたかに配置されています。  Placement が 12481632または 64 バイト境界に通常です。  イメージの配置を [IDiaAddressMap::put\_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md) メソッドへの呼び出しで設定できます。  
+## <a name="remarks"></a>コメント  
+ イメージは、イメージが読み込まれ、作成方法に応じて特定のメモリ境界に配置します。 配置は、1、2、4、8、16、32、または 64 バイト境界に通常です。 イメージの配置への呼び出しで設定できる、 [idiaaddressmap::put_imagealign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md)メソッドです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   
- [IDiaAddressMap::put\_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md)
+ [IDiaAddressMap::put_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md)

@@ -1,52 +1,53 @@
 ---
-title: "IntelliSense をホストしています。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "エディター [Visual Studio SDK] レガシーの IntelliSense をホストしています。"
+title: "IntelliSense をホストしている |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: editors [Visual Studio SDK], legacy - IntelliSense hosting
 ms.assetid: 20c61f8a-d32d-47e2-9c67-bf721e2cbead
-caps.latest.revision: 17
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 850e4b2ef6d455bb141827fa125c4c7c6860b652
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IntelliSense をホストしています。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Visual Studio ではIntelliSense のホストを可能にします。  IntellSense のホストはVisual Studio テキスト エディターでホスティングコード用の IntelliSense を提供することができます。  
+# <a name="intellisense-hosting"></a>IntelliSense をホストしています。
+Visual Studio では IntelliSense をホストします。 ホストにより IntellSense IntelliSense を Visual Studio テキスト エディターによってホストされていないコードを提供します。  
   
-## ホスト IntelliSense を使用  
- Visual Studio でのコードは入力候補セットへのアクセスとテキスト バッファーはユーザー インターフェイスからの IntelliSense ウィンドウの任意の場所にを取得できます \(UI\)。  次の例のシナリオは\[ENT0ENT\] ウィンドウでブレークポイントのプロパティ ウィンドウの条件のフィールドを完了します。  
+## <a name="intellisense-hosting-usage"></a>ホスト使用率の IntelliSense  
+ Visual Studio で、入力候補のセットとテキスト バッファーにアクセスするすべてのコードは、どこからでも IntelliSense ウィンドウを取得できます、ユーザー インターフェイス (UI) にします。 このシナリオ例で補完、**ウォッチ**ウィンドウやブレークポイントのプロパティ ウィンドウの 状態 フィールドにします。  
   
-### インターフェイスの実装  
+### <a name="implementation-interfaces"></a>実装インターフェイス  
   
-#### IVsIntellisenseHost  
- IntelliSense のポップアップ ウィンドウをホストする UI コンポーネントが <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> インターフェイスをサポートする必要があります。  既定のコア エディターのテキスト ビューではIntelliSense の現在の機能を保持するに <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> の標準的なインターフェイスの実装が含まれています。  ほとんどの場合<xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> のインターフェイスのメソッドは実行される項目の <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> インターフェイスのサブセットを表します。  IntelliSense のサブセットはキャレット UI 処理と選択操作や単純なテキストの置換の機能が含まれます。  また<xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> のインターフェイスでは IntelliSense がコンテキストに使用されるテキスト バッファーにない件名に提供できるようにIntelliSense を 「あります」。context 」内。  
+#### <a name="ivsintellisensehost"></a>IVsIntellisenseHost  
+ IntelliSense のポップアップ ウィンドウをホストしている UI コンポーネントをサポートする必要があります、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost>インターフェイスです。 既定のコア エディターのテキスト ビューには、株式が含まれています。<xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost>インターフェイスの現在の IntelliSense 機能を保持する実装。 ほとんどの場合、メソッド、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost>表しますに新機能のサブセットを実装するインターフェイス、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>インターフェイスです。 サブセットには、IntelliSense UI 処理、カレット、選択操作、および単純なテキストの置換機能が含まれています。 さらに、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost>インターフェイスを使用する別の IntelliSense"subject"および「コンテキスト」コンテキストが使用されているテキスト バッファーに直接存在しないのサブジェクトは、IntelliSense を提供できるようにします。  
   
-#### IVsIntellisenseHost.GetHostFlags  
- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> インターフェイスのプロバイダーはどのような IntelliSense のサポートがホストを使用するかを判断します。クライアントができるように <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.GetHostFlags%2A> のメソッドを実装する必要があります。  
+#### <a name="ivsintellisensehostgethostflags"></a>IVsIntellisenseHost.GetHostFlags  
+ <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost>プロバイダーのインターフェイスを実装する必要があります、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.GetHostFlags%2A> IntelliSense の種類、ホストの機能を決定するクライアントを有効にするメソッドをサポートしています。  
   
- [IntelliSenseHostFlags](../extensibility/intellisensehostflags.md) で定義されているホストでフラグは次に示します。  
+ 定義されているホスト フラグは、 [IntelliSenseHostFlags](../extensibility/intellisensehostflags.md)、以下にまとめます。  
   
-|IntelliSense のホストのフラグ|Description|  
-|---------------------------|-----------------|  
-|IHF\_READONLYCONTEXT|このフラグを設定するとコンテキスト バッファーが読み取り専用であり編集がサブジェクト テキスト内でのみ発生することを意味します。|  
-|IHF\_NOSEPERATESUBJECT|このフラグを設定するとIntelliSense の別の項目がないことを示します。  キーワードは <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 従来の IntelliSense システムなどのコンテキスト バッファーになります。|  
-|IHF\_SINGLELINESUBJECT|このフラグを設定するとサブジェクトが複数行できないことを意味します ENT0ENT \[出力\] ウィンドウに単一の行の編集など\)。|  
-|IHF\_FORCECOMMITTOCONTEXT|このフラグが設定されコンテキスト バッファーを更新する必要がある場合ホストは続行するに無視するコンテキスト バッファーおよび編集の読み取り専用フラグを有効にします。|  
-|IHF\_OVERTYPE|編集が上書き入力モードで \(サブジェクト\) またはコンテキストにする必要があります。|  
+|IntelliSense ホスト フラグ|説明|  
+|----------------------------|-----------------|  
+|IHF_READONLYCONTEXT|読み取り専用と編集が、件名のテキスト内でのみが発生したフラグつまりコンテキスト バッファーを設定します。|  
+|IHF_NOSEPERATESUBJECT|設定このフラグは、意味がある別の IntelliSense サブジェクトはありません。 サブジェクトに存在するコンテキスト バッファーなど、従来の<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>IntelliSense システムです。|  
+|IHF_SINGLELINESUBJECT|設定のサブジェクトがないフラグとは、こので、編集可能な 1 行のようにこのような複数行、**ウォッチ**ウィンドウです。|  
+|IHF_FORCECOMMITTOCONTEXT|このフラグが設定されてとコンテキスト バッファーを更新する必要があります、ホストによって、読み取り専用フラグを無視するように、コンテキスト バッファーと編集を続行します。|  
+|IHF_OVERTYPE|(サブジェクトまたはコンテキスト) での編集は、上書きモードで行う必要があります。|  
   
-#### IVsIntellisenseHost.BeforeCompletorCommit と IVsIntellisenseHost.AfterCompletorCommit  
- これらのメソッドはコールバックの前処理後処理の完了時にウィンドウでテキストがコミットされる前に呼び出されます。  
+#### <a name="ivsintellisensehostbeforecompletorcommit-and-ivsintellisensehostaftercompletorcommit"></a>IVsIntellisenseHost.BeforeCompletorCommit と IVsIntellisenseHost.AfterCompletorCommit  
+ これらのコールバック メソッドは、前に、およびテキストは、前処理と後処理を有効にコミットされた後に補完ウィンドウによって呼び出されます。  
   
-#### IVsIntellisenseCompletor  
- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseCompletor> のインターフェイスは統合開発環境で使用される標準の完了時にウィンドウの共同作成できるバージョンです \(IDE\)。  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> のすべてのインターフェイスがこの completor のインターフェイスを使用するとIntelliSense を実行できます。  
+#### <a name="ivsintellisensecompletor"></a>IVsIntellisenseCompletor  
+ <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseCompletor>インターフェイスは、統合開発環境 (IDE) で使用される標準の補完ウィンドウの共同作成可能なバージョンです。 どの<xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost>インターフェイスがこの completor インターフェイスを使用して IntelliSense を簡単に実装できます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.TextManager.Interop>

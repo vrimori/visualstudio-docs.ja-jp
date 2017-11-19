@@ -1,60 +1,64 @@
 ---
-title: "EnableLocationBrowseButton 要素 (Visual Studio テンプレート) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#EnableLocationBrowseButton"
-helpviewer_keywords: 
-  - "EnableLocationBrowseButton [Visual Studio プロジェクト テンプレート]"
+title: "EnableLocationBrowseButton 要素 (Visual Studio テンプレート) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#EnableLocationBrowseButton
+helpviewer_keywords: EnableLocationBrowseButton [Visual Studio project templates]
 ms.assetid: a12d10d8-af49-482a-af77-e084fd07a47d
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: e9271df96f5fa84044b33550e0d73750030d7e66
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# EnableLocationBrowseButton 要素 (Visual Studio テンプレート)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-**\[新しいプロジェクト\]** ダイアログ ボックスの **\[参照\]** ボタンを使用できるようにするかどうかを指定します。このボタンが使用できると、新規プロジェクトを保存するための既定ディレクトリを簡単に変更できます。  
+# <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>EnableLocationBrowseButton 要素 (Visual Studio テンプレート)
+指定するかどうか、**参照**でボタンは使用、**新しいプロジェクト** ダイアログ ボックスで、新しいプロジェクトが保存されている既定のディレクトリを簡単に変更できるようにします。  
   
-## 構文  
+ \<VSTemplate >  
+ \<TemplateData >  
+ \<EnableLocationBrowseButton >  
+  
+## <a name="syntax"></a>構文  
   
 ```  
 <EnableLocationBrowseButton> true/false </EnableLocationBrowseButton>  
 ```  
   
-## 属性および要素  
+## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
-### 属性  
+### <a name="attributes"></a>属性  
  なし。  
   
-### 子要素  
+### <a name="child-elements"></a>子要素  
  なし。  
   
-### 親要素  
+### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
-|--------|--------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素。<br /><br /> テンプレートをカテゴリに分類し、**\[新しいプロジェクト\]** ダイアログ ボックス、または **\[新しい項目の追加\]** ダイアログ ボックスでどのように表示させるかを定義します。|  
+|-------------|-----------------|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートをカテゴリに分類し、 **[新しいプロジェクト]** ダイアログ ボックス、または **[新しい項目の追加]** ダイアログ ボックスでどのように表示させるかを定義します。|  
   
-## テキスト値  
+## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
   
- `true` または `false` のいずれかを設定する必要があります。これは、**\[新しいプロジェクト\]** ダイアログ ボックスの **\[参照\]** ボタンを表示するかどうかを示します。  
+ テキストはいずれかである必要があります`true`または`false`、表示するかどうかを示す、**参照**のボタンでは、**新しいプロジェクト** ダイアログ ボックス。  
   
-## 解説  
- `EnableLocationBrowseButton` は、省略可能な要素です。  既定値は `true` です。これにより、**\[新しいプロジェクト\]** ダイアログ ボックスの **\[参照\]** ボタンが表示されます。  
+## <a name="remarks"></a>コメント  
+ `EnableLocationBrowseButton` は、省略可能な要素です。 既定値は`true`が表示される、**参照**ボタンをクリックして、**新しいプロジェクト** ダイアログ ボックス。  
   
- **\[新しいプロジェクト\]** ダイアログ ボックスの **\[場所\]** ボックスで、新規プロジェクトを保存するディレクトリを指定します。  **\[参照\]** ボタンで、**\[プロジェクトの場所\]** ダイアログ ボックスを表示してこのディレクトリを変更できます。これにより、自分のコンピューターから利用できる別のディレクトリへ簡単に移動でき、そのディレクトリを新規プロジェクトの保存先として選択できます。  
+ **新しいプロジェクト** ダイアログ ボックスで、**場所**テキスト ボックスは、新しいプロジェクトが保存されているディレクトリを指定します。 **参照**ボタンでは、このディレクトリを表示することによって変更できます、**プロジェクトの場所**簡単に別のコンピューターから使用可能なディレクトリに移動できますが、ダイアログ ボックスと。新しいプロジェクトが保存されているディレクトリとそれを選択します。  
   
-## 使用例  
+## <a name="example"></a>例  
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows アプリケーションでのメタデータの例を次に示します。  
   
 ```  
@@ -82,6 +86,6 @@ caps.handback.revision: 11
 </VSTemplate>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [カスタム プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+ [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

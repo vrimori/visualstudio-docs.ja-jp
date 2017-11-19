@@ -1,78 +1,80 @@
 ---
-title: "方法 : Word 文書に XMLNodes コントロールを追加する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "コントロール [Visual Studio での Office 開発], 追加 (ドキュメントに)"
-  - "XMLNodes コントロール, 追加 (ドキュメントに)"
+title: "方法: Word 文書に XMLNodes コントロールを追加する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- XMLNodes control, adding to documents
+- controls [Office development in Visual Studio], adding to documents
 ms.assetid: 315c6def-51f6-4ba6-bd9e-55cdf70f15bf
-caps.latest.revision: 28
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 27
+caps.latest.revision: "28"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 791eabb83ffd020672b7955e0ceb283d5196621f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : Word 文書に XMLNodes コントロールを追加する
-  **重要** は、マイクロソフトが米国カスタムにある場合や、実行用のプログラム、2010年1月1日の前のMicrosoftによってライセンスMicrosoft Word製品使用している個々の利点のためにMicrosoft Wordに関するこのトピックに記載されているMicrosoft情報がMicrosoft WordからカスタムXMLに関連する特定の機能の実装を削除したときに、使用、および組織。  ここに記載されている Microsoft Word に関する情報を、2010 年 1 月以降にマイクロソフトがライセンスを供与した Microsoft Word 製品上で実行されるプログラムを使用または開発する、米国およびその領土内の個人または組織が参照および使用することはお勧めしません。これに該当する製品は、この日付以前にライセンスが供与された製品、および米国外での使用を目的として購入またはライセンスが供与された製品と同様には動作しません。  
+# <a name="how-to-add-xmlnodes-controls-to-word-documents"></a>方法 : Word 文書に XMLNodes コントロールを追加する
+  **重要な**Microsoft Word に関するこのトピックに設定された情報が、利点と個人ユーザーおよびユーザーは、米国およびその区域外部にあるまたはを使用しているユーザーは、組織の使用専用に示された、または開発上で実行されるプログラム、Microsoft が特定の機能の実装を削除する場合、2010 年 1 月前に Microsoft によってライセンス供与された Microsoft Word 製品に関連するカスタムの XML から Microsoft Word。 Microsoft Word に関する情報はこの可能性がありますいない読み取りまたは個人または米国またはその区域、2010 年 1 月 10 日後に Microsoft によってライセンス供与された Microsoft Word 製品上で実行されるプログラムの開発を使用して、ユーザーの組織で使用されます。;これらの製品では、その日付の前にライセンスまたは購入し、米国外の利用に対してライセンス供与の製品と同じ動作がしません。  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
   
- 繰り返し XML スキーマ要素を Microsoft Office Word 文書にマップすると、Visual Studio によって <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールが文書に自動的に追加されます。  
+ Microsoft Office Word 文書に繰り返される XML スキーマ要素をマップすると、Visual Studio は自動的に追加、<xref:Microsoft.Office.Tools.Word.XMLNodes>をドキュメントにコントロールできます。  
   
- 非繰り返し XML スキーマ要素のマップの詳細については、「[方法 : Word 文書に XMLNode コントロールを追加する](../vsto/how-to-add-xmlnode-controls-to-word-documents.md)」を参照してください。  
+ XML スキーマ要素の非繰り返しのマッピングについては、次を参照してください。[する方法: Word 文書に XMLNode コントロールを追加](../vsto/how-to-add-xmlnode-controls-to-word-documents.md)です。  
   
 > [!NOTE]  
->  <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールは、**ツールボックス**や **\[データ ソース\]** ウィンドウからは使用できません。また、プログラムで作成することもできません。  
+>  <xref:Microsoft.Office.Tools.Word.XMLNodes>コントロールからは使用できない、**ツールボックス**または**データソース**ウィンドウ、したり、プログラムで作成する必要があります。  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-### 文書に XMLNodes コントロールを追加するには  
+### <a name="to-add-an-xmlnodes-control-to-a-document"></a>文書に XMLNodes コントロールを追加するには  
   
-1.  Visual Studio デザイナーの文書のリボンで **\[開発\]** タブをクリックします。  
+1.  リボンで、Visual Studio デザイナーで、ドキュメント内をクリックして、**開発者**タブです。  
   
     > [!NOTE]  
-    >  **\[開発\]** タブが表示されていない場合は、最初にこれを表示する必要があります。  詳細については、「[方法 :タブをリボンに表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)」を参照してください。  
+    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、「 [How to: Show the Developer Tab on the Ribbon](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)」を参照してください。  
   
-2.  **\[XML\]** グループで、**\[スキーマ\]** をクリックします。  
+2.  **XML**グループで、**スキーマ**です。  
   
-     **\[テンプレートとアドイン\]** ダイアログ ボックスが表示されます。  
+     **テンプレートとアドイン** ダイアログ ボックスが表示されます。  
   
-3.  **\[XML スキーマ\]** タブをクリックします。  
+3.  クリックして、 **XML スキーマ**タブです。  
   
-4.  **\[スキーマの追加\]** をクリックします。  
+4.  をクリックして**スキーマを追加**です。  
   
-     **\[スキーマの追加\]** ダイアログ ボックスが表示されます。  
+     **スキーマの追加** ダイアログ ボックスが表示されます。  
   
-5.  繰り返しスキーマ要素を含む XML スキーマを選択して **\[開く\]** をクリックします。  
+5.  繰り返しのスキーマ要素とクリックを含む XML スキーマを選択**開く**です。  
   
-     **\[スキーマの設定\]** ダイアログ ボックスが表示されます。  
+     **スキーマ設定** ダイアログ ボックスが表示されます。  
   
-6.  エイリアスを割り当てるか、**\[OK\]** をクリックしてエイリアスなしでスキーマを割り当てます。  
+6.  エイリアスを割り当てるかをクリックして**OK**エイリアスがなければ、スキーマを追加します。  
   
-     **\[スキーマの追加\]** ダイアログ ボックスにスキーマが追加されます。  
+     スキーマを追加、**スキーマの追加** ダイアログ ボックス。  
   
-7.  **\[スキーマの追加\]** ダイアログ ボックスで、**\[OK\]** をクリックします。  
+7.  **スキーマの追加**ダイアログ ボックスで、をクリックして**OK**です。  
   
-     **\[XML データ構造\]** 作業ウィンドウが表示されます。  
+     **XML 構造**作業ウィンドウが表示されます。  
   
-8.  **\[XML データ構造\]** 作業ウィンドウの繰り返しスキーマ要素をクリックして文書に追加します。  
+8.  繰り返しのスキーマ要素をクリックして、 **XML 構造**作業ウィンドウをドキュメントに追加します。  
   
-     <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールが作成され、プロジェクトに追加されます。  
+     <xref:Microsoft.Office.Tools.Word.XMLNodes>コントロールが作成され、プロジェクトに追加します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [XMLNodes コントロール](../vsto/xmlnodes-control.md)   
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
- [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
+ [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
  [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
   
   

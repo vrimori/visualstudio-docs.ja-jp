@@ -1,83 +1,83 @@
 ---
-title: "BP_CONDITION | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_CONDITION"
-helpviewer_keywords: 
-  - "BP_CONDITION 構造体"
+title: "BP_CONDITION |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BP_CONDITION
+helpviewer_keywords: BP_CONDITION structure
 ms.assetid: 407f87a3-2878-429b-8c65-b68feb36622a
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 2e243ca1919368c8ea863383255b92a42befefe8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# BP_CONDITION
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-ブレークポイントが発生する条件を説明します。  
+# <a name="bpcondition"></a>BP_CONDITION
+ブレークポイントが発生する条件をについて説明します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-typedef struct _BP_CONDITION {   
-   IDebugThread2* pThread;  
-   BP_COND_STYLE  styleCondition;  
-   BSTR           bstrContext;  
-   BSTR           bstrCondition;  
-   UINT           nRadix;  
+```cpp  
+typedef struct _BP_CONDITION {   
+   IDebugThread2* pThread;  
+   BP_COND_STYLE  styleCondition;  
+   BSTR           bstrContext;  
+   BSTR           bstrCondition;  
+   UINT           nRadix;  
 } BP_CONDITION;  
 ```  
   
-```c#  
-public struct BP_CONDITION {   
-   public IDebugThread2 pThread;  
-   public uint          styleCondition;  
-   public string        bstrContext;  
-   public string        bstrCondition;  
-   public uint          nRadix;  
+```csharp  
+public struct BP_CONDITION {   
+   public IDebugThread2 pThread;  
+   public uint          styleCondition;  
+   public string        bstrContext;  
+   public string        bstrCondition;  
+   public uint          nRadix;  
 };  
 ```  
   
-## メンバー  
+## <a name="members"></a>メンバー  
  `pThread`  
- ブレークポイントを含むアプリケーションのアクティブなスレッドを表すオブジェクトの [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)。  
+ [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)ブレークポイントが含まれているアプリケーションのアクティブなスレッドを表すオブジェクト。  
   
  `styleCondition`  
- ブレークポイント条件のスタイルを記述する [BP\_COND\_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md) の列挙体の値。  
+ 値、 [BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md)このブレークポイントの条件のスタイルを説明する列挙です。  
   
  `bstrContext`  
- ブレークポイントの位置。  
+ ブレークポイントの場所です。  
   
  `bstrCondition`  
- ブレークポイントが条件。  
+ ブレークポイントの発生条件です。  
   
  `nRadix`  
- 数値情報の評価で使用する基数。  
+ 任意の数値情報を評価する際に使用する基数。  
   
-## 解説  
- この構造は [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md) と [BP\_REQUEST\_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) の構造体のメンバーです。  
+## <a name="remarks"></a>コメント  
+ この構造体のメンバーである、 [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)と[BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)構造体。  
   
- この構造体には[SetCondition](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md) と [SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md) のメソッドにパラメーターとして渡します。  
+ この構造体がパラメーターとして渡されるも、 [SetCondition](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md)と[SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md)メソッドです。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md)   
- [BP\_REQUEST\_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)   
+ [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)   
+ [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)   
  [SetCondition](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md)   
  [SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
- [BP\_COND\_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md)
+ [BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md)

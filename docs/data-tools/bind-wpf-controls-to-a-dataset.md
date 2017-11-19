@@ -1,5 +1,5 @@
 ---
-title: Bind WPF controls to a dataset | Microsoft Docs
+title: "WPF コントロールをデータセットにバインド |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,152 +9,135 @@ ms.topic: article
 dev_langs:
 - VB
 - CSharp
-- C++
-- aspx
 helpviewer_keywords:
 - WPF, data binding in Visual Studio
 - WPF data binding [Visual Studio], walkthroughs
 - WPF Designer, data binding
 ms.assetid: 177420b9-568b-4dad-9d16-1b0e98a24d71
-caps.latest.revision: 32
-author: mikeblome
-ms.author: mblome
+caps.latest.revision: "32"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: c67929edfa1b81cf6b8da9b8aea816277e9ddfa1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/22/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: d7609215f7145ae05d978ba10d556782c886ee3b
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="bind-wpf-controls-to-a-dataset"></a>Bind WPF controls to a dataset
-In this walkthrough, you will create a WPF application that contains data-bound controls. The controls are bound to product records that are encapsulated in a dataset. You will also add buttons to browse through products and save changes to product records.  
+# <a name="bind-wpf-controls-to-a-dataset"></a>データセットへの WPF コントロールをバインドします。
+このチュートリアルでは、データ バインド コントロールが含まれた WPF アプリケーションを作成します。 コントロールは、データセットでカプセル化された製品レコードにバインドされます。 また、製品を参照するためのボタンの追加と、製品レコードへの変更の保存も行います。  
   
- This walkthrough illustrates the following tasks:  
+このチュートリアルでは、次の作業について説明します。  
   
--   Creating a WPF application and a dataset that is generated from data in the AdventureWorksLT sample database.  
+- WPF アプリケーションと、AdventureWorksLT サンプル データベースのデータから生成されるデータセットを作成する。  
   
--   Creating a set of data-bound controls by dragging a data table from the **Data Sources** window to a window in the WPF Designer.  
+- データ テーブルをドラッグして、データ バインド コントロールのセットを作成する、**データソース**WPF デザイナーでウィンドウをウィンドウです。  
   
--   Creating buttons that navigate forward and backward through product records.  
+- 製品レコード間を前後に移動するためのボタンを作成する。  
   
--   Creating a button that saves changes that users make to the product records to the data table and the underlying data source.  
+- ユーザーが製品レコードに加えた変更を、データ テーブルおよび基になるデータ ソースに保存するボタンを作成する。  
   
-     [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>必須コンポーネント  
+このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]  
   
--   Access to a running instance of SQL Server or SQL Server Express that has the AdventureWorksLT sample database attached to it. You can download the AdventureWorksLT database from the [CodePlex Web site](http://go.microsoft.com/fwlink/?linkid=87843).  
+-   AdventureWorksLT サンプル データベースが添付された、SQL Server または SQL Server Express の実行中のインスタンスへのアクセス権。 AdventureWorksLT データベースをダウンロードすることができます、 [CodePlex Web サイト](http://go.microsoft.com/fwlink/?linkid=87843)です。  
   
- Prior knowledge of the following concepts is also helpful, but not required to complete the walkthrough:  
+次の概念に関する知識があると役立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
   
--   Datasets and TableAdapters. For more information, see [Dataset tools in Visual Studio](../data-tools/dataset-tools-in-visual-studio.md) and [TableAdapter](../data-tools/create-and-configure-tableadapters.md).  
+-   データセットおよび TableAdapter。 詳細については、次を参照してください。 [Visual Studio でのデータセット ツール](../data-tools/dataset-tools-in-visual-studio.md)と[TableAdapter](../data-tools/create-and-configure-tableadapters.md)です。  
   
--   Working with the WPF Designer. For more information, see [WPF and Silverlight Designer Overview](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62).  
+-   WPF デザイナーの操作。 詳細については、次を参照してください。 [WPF と Silverlight デザイナーの概要](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62)です。  
   
--   WPF data binding. For more information, see [Data Binding Overview](/dotnet/framework/wpf/data/data-binding-overview).  
+-   WPF データ バインディング。 詳しくは、「 [データ バインディングの概要](/dotnet/framework/wpf/data/data-binding-overview)」をご覧ください。  
   
-## <a name="create-the-project"></a>Create the project  
- Create a new WPF project. The project will display product records.  
+## <a name="create-the-project"></a>プロジェクトの作成  
+ 新しい WPF プロジェクトを作成します。 このプロジェクトでは、製品レコードを表示します。  
   
-#### <a name="to-create-the-project"></a>To create the project  
+#### <a name="to-create-the-project"></a>プロジェクトを作成するには  
   
-1.  Start Visual Studio.  
+1.  Visual Studio を起動します。  
   
-2.  On the **File** menu, point to **New**, and then click **Project**.  
+2.  **[ファイル]** メニューの **[新規作成]**をポイントし、 **[プロジェクト]**をクリックします。  
   
-3.  Expand **Visual Basic** or **Visual C#**, and then select **Windows**.  
+3.  展開**Visual Basic**または**Visual c#**、し、[ **Windows**です。  
   
-4.  Select the **WPF Application** project template.  
+4.  選択、 **WPF アプリケーション**プロジェクト テンプレート。  
   
-5.  In the **Name** box, type `AdventureWorksProductsEditor` and click **OK**.  
+5.  **名前**ボックスに、入力`AdventureWorksProductsEditor`] をクリック**OK**です。  
   
-     Visual Studio creates the `AdventureWorksProductsEditor` project.  
+     Visual Studio によって作成、`AdventureWorksProductsEditor`プロジェクト。  
   
-## <a name="create-a-dataset-for-the-application"></a>Create a dataset for the application  
- Before you can create data-bound controls, you must define a data model for your application and add it to the **Data Sources** window. In this walkthrough, you create a dataset to use as the data model.  
+## <a name="create-a-dataset-for-the-application"></a>アプリケーションのデータセットを作成します。  
+ データ バインド コントロールを作成することができます、前に、アプリケーションのデータ モデルを定義しを追加する必要があります、**データソース**ウィンドウです。 このチュートリアルでは、データ モデルとして使用するデータセットを作成します。  
   
-#### <a name="to-create-a-dataset"></a>To create a dataset  
+#### <a name="to-create-a-dataset"></a>データセットを作成するには  
   
-1.  On the **Data** menu, click **Show Data Sources**.  
+1.  **[データ]** メニューの **[データ ソースの表示]**をクリックします。  
   
-     The **Data Sources** window opens.  
+     **データソース**ウィンドウが開きます。  
   
-2.  In the **Data Sources** window, click **Add New Data Source**.  
+2.  **[データ ソース]** ウィンドウで、 **[新しいデータ ソースの追加]**をクリックします。  
   
-     The **Data Source Configuration** wizard opens.  
+     **データ ソース構成**ウィザードが開きます。  
   
-3.  On the **Choose a Data Source Type** page, select **Database**, and then click **Next**.  
+3.  **データ ソースの種類を選択**] ページで、[**データベース**、順にクリック**次**です。  
   
-4.  On the **Choose a Database Model** page, select **Dataset**, and then click **Next**.  
+4.  **データベース モデルの選択**] ページで、[**データセット**、順にクリック**次**です。  
   
-5.  On the **Choose Your Data Connection** page, select one of the following options:  
+5.  **データ接続の選択**] ページで、次のオプションのいずれかを選択します。  
   
-    -   If a data connection to the AdventureWorksLT sample database is available in the drop-down list, select it and then click **Next**.  
+    -   AdventureWorksLT サンプル データベースへのデータ接続がドロップダウン リストで使用可能な場合は、選択し、をクリックして**次**です。  
   
-    -   Click **New Connection**, and create a connection to the AdventureWorksLT database.  
+    -   をクリックして**新しい接続**、AdventureWorksLT データベースへの接続を作成します。  
   
-6.  On the **Save the Connection String to the Application Configure File** page, select the **Yes, save the connection as** check box, and then click **Next**.  
+6.  **アプリケーション構成ファイルへの接続文字列を保存**] ページで、[、**接続を保存、**チェック ボックスをクリックして**[次へ]**です。  
   
-7.  On the **Choose Your Database Objects** page, expand **Tables**, and then select the **Product (SalesLT)** table.  
+7.  **データベース オブジェクトの選択**] ページで、展開**テーブル**、クリックして、 **Product (SalesLT)**テーブル。  
   
-8.  Click **Finish**.  
+8.  **[完了]**をクリックします。  
   
-     Visual Studio adds a new `AdventureWorksLTDataSet.xsd` file to the project, and it adds a corresponding **AdventureWorksLTDataSet** item to the **Data Sources** window. The `AdventureWorksLTDataSet.xsd` file defines a typed dataset named `AdventureWorksLTDataSet` and a TableAdapter named `ProductTableAdapter`. Later in this walkthrough, you will use the `ProductTableAdapter` to fill the dataset with data and save changes back to the database.  
+     Visual Studio が新しく追加`AdventureWorksLTDataSet.xsd`ファイル、プロジェクトを追加、対応する**AdventureWorksLTDataSet**項目を**データソース**ウィンドウ。 `AdventureWorksLTDataSet.xsd`ファイルという名前の型指定されたデータセットを定義する`AdventureWorksLTDataSet`およびという名前の TableAdapter`ProductTableAdapter`です。 このチュートリアルの後半で、`ProductTableAdapter` を使用してデータセットにデータを読み込み、変更をデータベースに保存します。  
   
-9. Build the project.  
+9. プロジェクトをビルドします。  
   
-## <a name="edit-the-default-fill-method-of-the-tableadapter"></a>Edit the default fill method of the TableAdapter  
- To fill the dataset with data, use the `Fill` method of the `ProductTableAdapter`. By default, the `Fill` method fills the `ProductDataTable` in the `AdventureWorksLTDataSet` with all rows of data from the Product table. You can modify this method to return only a subset of the rows. For this walkthrough, modify the `Fill` method to return only rows for products that have photos.  
+## <a name="edit-the-default-fill-method-of-the-tableadapter"></a>TableAdapter の既定の fill メソッドを編集します。  
+ データセットにデータを読み込むには、`Fill` の `ProductTableAdapter` メソッドを使用します。 既定では、`Fill` メソッドによって、`ProductDataTable` の `AdventureWorksLTDataSet` に Product テーブルのすべてのデータ行が読み込まれます。 このメソッドは、行のサブセットのみを返すように変更できます。 このチュートリアルでは、写真付きの製品の行のみを返すように `Fill` メソッドを変更します。  
   
-#### <a name="to-load-product-rows-that-have-photos"></a>To load product rows that have photos  
+#### <a name="to-load-product-rows-that-have-photos"></a>写真付きの製品の行を読み込むには  
   
-1.  In **Solution Explorer**, double-click the `AdventureWorksLTDataSet.xsd` file.  
+1.  **ソリューション エクスプ ローラー**をダブルクリックして、`AdventureWorksLTDataSet.xsd`ファイル。  
   
-     The Dataset designer opens.  
+     データセット デザイナーが開きます。  
   
-2.  In the designer, right-click the **Fill, GetData()** query and select **Configure**.  
+2.  デザイナーを右クリックし、**塗りつぶし、GetData()**を選択し、**構成**です。  
   
-     The **TableAdapter Configuration** wizard opens.  
+     **TableAdapter 構成**ウィザードが開きます。  
   
-3.  In the **Enter a SQL Statement** page, add the following WHERE clause after the `SELECT` statement in the text box.  
+3.  **SQL ステートメントを入力**] ページで、追加した後は、次の WHERE 句、`SELECT`テキスト ボックス内のステートメント。  
   
     ```  
     WHERE ThumbnailPhotoFileName <> 'no_image_available_small.gif'  
     ```  
   
-4.  Click **Finish**.  
+4.  **[完了]**をクリックします。  
   
-## <a name="define-the-user-interface"></a>Define the user interface  
- Add several buttons to the window by modifying the XAML in the WPF Designer. Later in this walkthrough, you will add code that enables users to scroll through and save changes to products records by using these buttons.  
+## <a name="define-the-user-interface"></a>ユーザー インターフェイスを定義します。  
+ WPF デザイナーで XAML を変更して、いくつかのボタンをウィンドウに追加します。 これらのボタンを使用して製品レコード間をスクロールしたり、製品レコードへの変更を保存したりできるようにするコードは、このチュートリアルで後で追加します。  
   
-#### <a name="to-define-the-user-interface-of-the-window"></a>To define the user interface of the window  
+#### <a name="to-define-the-user-interface-of-the-window"></a>ウィンドウのユーザー インターフェイスを定義するには  
   
-1.  In **Solution Explorer**, double-click MainWindow.xaml.  
+1.  **ソリューション エクスプ ローラー**MainWindow.xaml をダブルクリックします。  
   
-     The window opens in the WPF Designer.  
+     WPF デザイナーでウィンドウが開きます。  
   
-2.  In the [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] view of the designer, add the following code between the `<Grid>` tags:  
+2.  デザイナーの [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] ビューで、`<Grid>` タグの間に次のコードを追加します。  
   
-    ```  
+    ```xaml  
     <Grid.RowDefinitions>  
         <RowDefinition Height="75" />  
         <RowDefinition Height="625" />  
@@ -164,18 +147,18 @@ In this walkthrough, you will create a WPF application that contains data-bound 
     <Button HorizontalAlignment="Right" Margin="0,21,46,24" Name="saveButton" Width="110">Save changes</Button>  
     ```  
   
-3.  Build the project.  
+3.  プロジェクトをビルドします。  
   
-## <a name="create-data-bound-controls"></a>Create data-bound controls  
- Create controls that display customer records by dragging the `Product` table from the **Data Sources** window to the WPF Designer.  
+## <a name="create-data-bound-controls"></a>データ バインド コントロールを作成します。  
+ ドラッグすることで顧客レコードを表示するコントロールを作成、`Product`からテーブル、**データソース**WPF デザイナーにウィンドウです。  
   
-#### <a name="to-create-data-bound-controls"></a>To create data-bound controls  
+#### <a name="to-create-data-bound-controls"></a>データ バインド コントロールを作成するには  
   
-1.  In the **Data Sources** window, click the drop-down menu for the **Product** node and select **Details**.  
+1.  **データ ソース**ウィンドウで、ドロップダウン メニューをクリックして、**製品**ノード**詳細**です。  
   
-2.  Expand the **Product** node.  
+2.  展開して、**製品**ノード。  
   
-3.  For this example, some fields will not be displayed, so click the drop-down menu next to the following nodes and select **None**:  
+3.  この例では、いくつかのフィールドは表示されませんので、次のノードの横のドロップダウン メニューをクリックして選択**None**:  
   
     -   ProductCategoryID  
   
@@ -187,89 +170,92 @@ In this walkthrough, you will create a WPF application that contains data-bound 
   
     -   ModifiedDate  
   
-4.  Click the drop-down menu next to the **ThumbNailPhoto** node and select **Image**.  
+4.  次に、ドロップダウン メニューをクリックして、 **ThumbNailPhoto**ノード**イメージ**です。  
   
     > [!NOTE]
-    >  By default, items in the **Data Sources** window that represent pictures have their default control set to **None**. This is because pictures are stored as byte arrays in databases, and byte arrays can contain anything from a simple array of bytes to the executable file of a large application.  
+    >  既定では、[項目を**データ ソース**画像を表す期間設定、既定のコントロールである**None**です。 これは、画像がデータベース内でバイト配列として格納されているためです。バイト配列には、単純なバイト配列から大規模なアプリケーションの実行可能ファイルまで、あらゆるデータを格納できます。  
   
-5.  From the **Data Sources** window, drag the **Product** node to the grid row under the row that contains the buttons.  
+5.  **データ ソース**ウィンドウで、ドラッグ、**製品**ノード下のボタンが含まれる行のグリッド行にします。  
   
-     Visual Studio generates XAML that defines a set of controls that are bound to data in the **Products** table. It also generates code that loads the data. For more information about the generated XAML and code, see [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).  
+     Visual Studio でのデータにバインドされるコントロールのセットを定義する XAML を生成、**製品**テーブル。 また、データを読み込むコードも生成されます。 生成される XAML およびコードの詳細については、次を参照してください。 [Visual Studio でのデータにコントロールをバインドする WPF](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)です。  
   
-6.  In the designer, click the text box next to the **Product ID** label.  
+6.  デザイナーをクリックして、テキスト ボックス] の横に、**プロダクト ID**ラベル。  
   
-7.  In the **Properties** window, select the check box next to the **IsReadOnly** property.  
+7.  **プロパティ**ウィンドウで、横にあるチェック ボックスを選択、 **IsReadOnly**プロパティです。  
   
-## <a name="navigating-product-records"></a>Navigating product records  
- Add code that enables users to scroll through product records by using the **\<** and **>** buttons.  
+## <a name="navigating-product-records"></a>製品レコード間の移動  
+ 使用して製品レコード間をスクロールできるようにするコードを追加、 ** \< **と** > **ボタン。  
   
-#### <a name="to-enable-users-to-navigate-product-records"></a>To enable users to navigate product records  
+#### <a name="to-enable-users-to-navigate-product-records"></a>ユーザーが製品レコード間を移動できるようにするには  
   
-1.  In the designer, double-click the **<** button on the window surface.  
+1.  デザイナーをダブルクリックして、 ** < **ウィンドウ サーフェイスのボタンをクリックします。  
   
-     Visual Studio opens the code-behind file, and creates a new `backButton_Click` event handler for the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.  
+     Visual Studio は、分離コード ファイルを開くし、新たに作成`backButton_Click`のイベント ハンドラー、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
   
-2.  Modify the `Window_Loaded` event handler, so the `ProductViewSource`, `AdventureWorksLTDataSet`, and `AdventureWorksLTDataSetProductTableAdapter` are outside of the method and accessible to the entire form. Declare only these to be global to the form, and assign them within the `Window_Loaded` event handler similar to the following:  
+2.  変更、 `Window_Loaded` 、イベント ハンドラーのため、 `ProductViewSource`、 `AdventureWorksLTDataSet`、および`AdventureWorksLTDataSetProductTableAdapter`はメソッドの外部およびフォーム全体にアクセスします。 これらをフォームにグローバルのみを宣言し、内で、これらを割り当てる、`Window_Loaded`次のようなイベント ハンドラー。  
   
-     [!code-cs[Data_WPFDATASET#1](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_1.cs)]  [!code-vb[Data_WPFDATASET#1](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_1.vb)]  
+     [!code-csharp[Data_WPFDATASET#1](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_1.cs)]
+     [!code-vb[Data_WPFDATASET#1](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_1.vb)]  
   
-3.  Add the following code to the `backButton_Click` event handler:  
+3.  `backButton_Click` イベント ハンドラーに次のコードを追加します。  
   
-     [!code-cs[Data_WPFDATASET#2](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_2.cs)]  [!code-vb[Data_WPFDATASET#2](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_2.vb)]  
+     [!code-csharp[Data_WPFDATASET#2](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_2.cs)]
+     [!code-vb[Data_WPFDATASET#2](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_2.vb)]  
   
-4.  Return to the designer and double-click the **>** button.  
+4.  ダブルクリックして、デザイナーに戻り、 ** > **ボタンをクリックします。  
   
-5.  Add the following code to the `nextButton_Click` event handler:  
+5.  `nextButton_Click` イベント ハンドラーに次のコードを追加します。  
   
-     [!code-cs[Data_WPFDATASET#3](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_3.cs)]  [!code-vb[Data_WPFDATASET#3](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_3.vb)]  
+     [!code-csharp[Data_WPFDATASET#3](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_3.cs)]
+     [!code-vb[Data_WPFDATASET#3](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_3.vb)]  
   
-## <a name="save-changes-to-product-records"></a>Save changes to product records  
- Add code that enables users to save changes to product records by using the **Save changes** button.  
+## <a name="save-changes-to-product-records"></a>製品レコードへの変更を保存します。  
+使用して製品レコードへの変更を保存するようにするコードを追加、**変更を保存**ボタンをクリックします。  
   
-#### <a name="to-add-the-ability-to-save-changes-to-product-records"></a>To add the ability to save changes to product records  
+#### <a name="to-add-the-ability-to-save-changes-to-product-records"></a>製品レコードへの変更を保存する機能を追加するには  
   
-1.  In the designer, double-click the **Save changes** button.  
+1.  デザイナーをダブルクリックして、**変更を保存**ボタンをクリックします。  
   
-     Visual Studio opens the code-behind file, and creates a new `saveButton_Click` event handler for the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.  
+     Visual Studio は、分離コード ファイルを開くし、新たに作成`saveButton_Click`のイベント ハンドラー、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
   
-2.  Add the following code to the `saveButton_Click` event handler:  
+2.  `saveButton_Click` イベント ハンドラーに次のコードを追加します。  
   
-     [!code-cs[Data_WPFDATASET#4](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_4.cs)]  [!code-vb[Data_WPFDATASET#4](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_4.vb)]  
+     [!code-csharp[Data_WPFDATASET#4](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_4.cs)]
+     [!code-vb[Data_WPFDATASET#4](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_4.vb)]  
   
     > [!NOTE]
-    >  This example uses the `Save` method of the `TableAdapter` to save the changes. This is appropriate in this walkthrough, because only one data table is being changed. If you need to save changes to multiple data tables, you can alternatively use the `UpdateAll` method of the `TableAdapterManager` that Visual Studio generates with your dataset. For more information, see [TableAdapters](../data-tools/create-and-configure-tableadapters.md).  
+    >  この例では、`Save` の `TableAdapter` メソッドを使用して変更を保存します。 このチュートリアルでは、データ テーブルが 1 つのみ変更されるため、この方法が適しています。 複数のデータ テーブルへの変更を保存する必要がある場合は、Visual Studio によってデータセットと共に生成される `UpdateAll` の `TableAdapterManager` メソッドを使用することもできます。 詳細については、次を参照してください。 [Tableadapter](../data-tools/create-and-configure-tableadapters.md)です。  
   
-## <a name="test-the-application"></a>Test the application  
- Build and run the application. Verify that you can view and update product records.  
+## <a name="test-the-application"></a>アプリケーションをテストする  
+ アプリケーションをビルドして実行します。 製品レコードを表示および更新できることを確認します。  
   
-#### <a name="to-test-the-application"></a>To test the application  
+#### <a name="to-test-the-application"></a>アプリケーションをテストするには  
   
-1.  Press **F5**.  
+1.  **F5**キーを押します。  
   
-     The application builds and runs. Verify the following:  
+     アプリケーションがビルドされ、実行されます。 次のことを検証します。  
   
-    -   The text boxes display data from the first product record that has a photo. This product has the product ID 713, and the name **Long-Sleeve Logo Jersey, S**.  
+    -   テキスト ボックスに、写真付きの製品の先頭のレコードのデータが表示されること。 この製品は、製品 ID は 713 でと、名前を持つ**Long-sleeve Logo Jersey, S**です。  
   
-    -   You can click the **>** or **<** buttons to navigate through other product records.  
+    -   クリックすることができます、 ** > **または** < **他の製品レコード間を移動するボタンです。  
   
-2.  In one of the product records, change the **Size** value, and then click **Save changes**.  
+2.  製品レコードの 1 つは、変更、**サイズ**値に設定して、をクリックして**変更を保存**です。  
   
-3.  Close the application, and then restart the application by pressing **F5** in Visual Studio.  
+3.  アプリケーションを閉じるし、キーを押して、アプリケーションを再起動して**f5 キーを押して**Visual Studio でします。  
   
-4.  Navigate to the product record you changed, and verify that the change persisted.  
+4.  変更した製品レコードに移動し、変更が保持されていることを確認します。  
   
-5.  Close the application.  
+5.  アプリケーションを終了します。  
   
-## <a name="next-steps"></a>Next Steps  
- After completing this walkthrough, you can perform the following related tasks:  
+## <a name="next-steps"></a>次の手順  
+ このチュートリアルを完了した後、関連する次のタスクを実行できます。  
   
--   Learn how to use the **Data Sources** window in Visual Studio to bind WPF controls to other types of data sources. For more information, see [Bind WPF controls to a WCF data service](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md).  
+-   使用する方法、**データソース**WPF のバインドを Visual Studio のウィンドウを他の種類のデータ ソースを制御します。 詳細については、次を参照してください。 [WCF データ サービスにコントロールをバインドする WPF](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)です。  
   
--   Learn how to use the **Data Sources** window in Visual Studio to display related data (that is, data in a parent-child relationship) in WPF controls. For more information, see [Walkthrough: Displaying Related Data in a WPF Application](../data-tools/display-related-data-in-wpf-applications.md).  
+-   使用する方法、**データソース**WPF コントロールに関連するデータ (つまり、親子関係にあるデータ) を表示する Visual Studio のウィンドウ。 詳細については、次を参照してください。[チュートリアル: WPF アプリケーションで関連するデータを表示する](../data-tools/display-related-data-in-wpf-applications.md)です。  
   
-## <a name="see-also"></a>See Also  
- [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)   
- [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)   
- [Dataset tools in Visual Studio](../data-tools/dataset-tools-in-visual-studio.md)   
- [WPF and Silverlight Designer Overview](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62)   
- [Data Binding Overview](/dotnet/framework/wpf/data/data-binding-overview)
+## <a name="see-also"></a>関連項目
+[Visual Studio でのデータに WPF コントロールをバインドします。](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)   
+[Visual Studio のデータセット ツール](../data-tools/dataset-tools-in-visual-studio.md)   
+[WPF および Silverlight デザイナーの概要](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62)   
+[データ バインディングの概要](/dotnet/framework/wpf/data/data-binding-overview)

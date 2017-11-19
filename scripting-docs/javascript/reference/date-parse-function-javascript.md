@@ -1,58 +1,60 @@
 ---
-title: "Date.parse 関数 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "parse"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "Date.parse 関数 [JavaScript]"
-  - "parse 関数 [JavaScript]"
+title: "Date.parse 関数 (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: parse
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- parse function [JavaScript]
+- Date.parse function [JavaScript]
 ms.assetid: ed737e50-6398-4462-8779-2af3c03f8325
-caps.latest.revision: 19
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0a73fda66ef24df17a5213a182c04667fc4dfabf
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# Date.parse 関数 (JavaScript)
+# <a name="dateparse-function-javascript"></a>Date.parse 関数 (JavaScript)
 日付を表す文字列を解析し、その日付と 1970 年 1 月 1 日午前 00:00:00 との差を表すミリ秒単位の値を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 Date.parse(dateVal)   
 ```  
   
-## 解説  
- 必須の `dateVal` 引数には、ActiveX オブジェクトまたはその他のオブジェクトから取得した日付または VT\_DATE 値を指定します。  `Date.parse` 関数が解析できる日付文字列については、「[日付と時刻文字列](../../javascript/date-and-time-strings-javascript.md)」を参照してください。  
+## <a name="remarks"></a>コメント  
+ 必須の `dateVal` 引数には、ActiveX オブジェクトまたはその他のオブジェクトから取得した日付または VT_DATE 値を指定します。 文字列を日付に関する情報を`Date.parse`関数を解析できます。 参照してください[日付と時刻文字列](../../javascript/date-and-time-strings-javascript.md)です。  
   
  `Date.parse` 関数は、`dateVal` に指定された日付と 1970 年 1 月 1 日午前 00:00:00 との差をミリ秒単位で表す整数値を返します。  
   
-## 使用例  
+## <a name="example"></a>例  
  `Date.parse` 関数の使用例を次に示します。  
   
-```javascript  
+```JavaScript  
 var dateString = "November 1, 1997 10:15 AM";  
 var mSec = Date.parse(dateString);  
 document.write(mSec);  
 // Output: 878404500000  
 ```  
   
-## 使用例  
- 指定した日付と 1\/1\/1970 の差を返す例を次に示します。  
+## <a name="example"></a>例  
+ 指定した日付と 1/1/1970 の差を返す例を次に示します。  
   
-```javascript  
+```JavaScript  
 var minMilli = 1000 * 60;  
 var hrMilli = minMilli * 60;  
 var dyMilli = hrMilli * 24;  
@@ -70,8 +72,8 @@ document.write(dateStr);
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
-## 参照  
- [getDate メソッド \(Date\)](../../javascript/reference/getdate-method-date-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [getDate メソッド (Date)](../../javascript/reference/getdate-method-date-javascript.md)

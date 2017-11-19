@@ -1,61 +1,61 @@
 ---
-title: "IEnumDebugPortSuppliers2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugPortSuppliers2"
-helpviewer_keywords: 
-  - "IEnumDebugPortSuppliers2"
+title: "IEnumDebugPortSuppliers2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IEnumDebugPortSuppliers2
+helpviewer_keywords: IEnumDebugPortSuppliers2
 ms.assetid: cd0a73dc-dd25-46fd-8c4f-5b011501afeb
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 55481d339d9aad5e668ebdf5e3715af18768ed01
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IEnumDebugPortSuppliers2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このインターフェイスはポートの業者を列挙します。  
+# <a name="ienumdebugportsuppliers2"></a>IEnumDebugPortSuppliers2
+このインターフェイスは、仕入先のポートを列挙します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IEnumDebugPortSuppliers2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- Visual Studio はポートの業者の一覧を表すにはこのインターフェイスを実装します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ Visual Studio では、ポートの仕入先の一覧を表すためには、このインターフェイスを実装します。  
   
-## 呼び出し元のメモ  
- ポートの業者の一覧を取得するに [EnumPortSuppliers](../../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md) を呼び出します。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ 呼び出す[EnumPortSuppliers](../../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md)ポート サプライヤーのリストを取得します。  
   
-## Vtable の順序でメソッド  
- 次の表は `IEnumDebugPortSuppliers2` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IEnumDebugPortSuppliers2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[次へ](../Topic/IEnumDebugPortSuppliers2::Next.md)|列挙体シーケンスのポートのサプライヤーの指定した数を取得します。|  
-|[Skip](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-skip.md)|列挙体シーケンスのポートのサプライヤーの指定した数の要素をスキップします。|  
-|[リセット](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-reset.md)|列挙体シーケンスを先頭にリセットします。|  
-|[複製](../Topic/IEnumDebugPortSuppliers2::Clone.md)|現在の列挙子と同じ列挙状態を含む列挙子を作成します。|  
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-getcount.md)|列挙子のポートのサプライヤーの数を取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[次へ](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-next.md)|列挙のシーケンスのポート仕入先の指定した数を取得します。|  
+|[Skip](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-skip.md)|指定したポートの業者列挙のシーケンスの数をスキップします。|  
+|[リセット](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-reset.md)|列挙のシーケンスを先頭にリセットします。|  
+|[複製](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-clone.md)|現在の列挙子と同じ列挙の状態を含む列挙子を作成します。|  
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-getcount.md)|列挙子でポート サプライヤーの数を取得します。|  
   
-## 解説  
- デバッグ エンジンは通常はこのインターフェイスを取得する必要はありません。  
+## <a name="remarks"></a>コメント  
+ デバッグ エンジンは、通常、このインターフェイスの取得には必要ありません。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [EnumPortSuppliers](../../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md)

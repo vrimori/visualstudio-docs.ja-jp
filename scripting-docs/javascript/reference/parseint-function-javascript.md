@@ -1,65 +1,66 @@
 ---
-title: "parseInt 関数 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "parseInt"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "parseInt メソッド"
+title: "parseInt 関数 (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: parseInt
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: parseInt method
 ms.assetid: e86471af-2a0e-4359-83af-f1ac81e51421
-caps.latest.revision: 24
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 54ee77470d32410ae46a628d54fc3bda97fecc51
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# parseInt 関数 (JavaScript)
+# <a name="parseint-function-javascript"></a>parseInt 関数 (JavaScript)
 文字列を整数に変換します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 parseInt(numString, [radix])   
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `numString`  
- 必須です。  数値に変換する文字列を指定します。  
+ 必須です。 数値に変換する文字列。  
   
  `radix`  
- 省略可能です。  `numString` 内の数値の基数を指定する 2 ～ 38 の値。  この引数を指定しなければ、先頭に '0x' が付いている文字列は 16 進数と見なされます。  これ以外の文字列は、10 進数と見なされます。  
+ 省略可能です。 2 ~ 36 の数値の基数を指定する値`numString`です。 この引数が指定されていない場合は、'0 x' のプレフィックスを持つ文字列が 16 進数と見なされます。 その他のすべての文字列は、10 進数と見なされます。  
   
-## 解説  
- `parseInt` 関数は、`numString` 引数に格納されている数値に等しい整数値を返します。  `numString` 引数の先頭に整数がない場合は、`NaN` \(非数値\) を返します。  
+## <a name="remarks"></a>コメント  
+ `parseInt`関数に含まれている値に等しい整数値を返します`numString`です。 場合のプレフィックスなし`numString`、整数型に正常に解析された`NaN`(非数) が返されます。  
   
-```javascript  
+```JavaScript  
 parseInt("abc");     // Returns NaN.  
 parseInt("12abc");   // Returns 12.  
 ```  
   
- 値が `NaN` かどうかを調べるには、`isNaN` 関数を使用します。  
+ テストできます`NaN`を使用して、`isNaN`関数。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
- **対象**: [Global オブジェクト](../../javascript/reference/global-object-javascript.md)  
+ **適用されます**:[グローバル オブジェクト](../../javascript/reference/global-object-javascript.md)  
   
 > [!NOTE]
->  [!INCLUDE[jsv9textspecific](../../javascript/reference/includes/jsv9textspecific-md.md)] より、`parseInt` 関数は、先頭が '0' の文字列を 8 進数として処理しません。  ただし、`parseInt` 関数を使用しない場合は、先頭が '0' の文字列を 8 進数として解釈できます。  8 の整数については、「[データ型](../../javascript/data-types-javascript.md)」を参照してください。  
+>  以降で[!INCLUDE[jsv9textspecific](../../javascript/reference/includes/jsv9textspecific-md.md)]、`parseInt`関数は、8 進数として '0' のプレフィックスを持つ文字列を処理しません。 使用しない場合、`parseInt`機能は、ただし、'0' のプレフィックスを持つ文字列依然として解釈できるからです。 参照してください[データ型](../../javascript/data-types-javascript.md)については、8 進整数。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [isNaN 関数](../../javascript/reference/isnan-function-javascript.md)   
  [parseFloat 関数](../../javascript/reference/parsefloat-function-javascript.md)   
  [String オブジェクト](../../javascript/reference/string-object-javascript.md)   
- [valueOf メソッド \(Object\)](../../javascript/reference/valueof-method-object-javascript.md)
+ [valueOf メソッド (Object)](../../javascript/reference/valueof-method-object-javascript.md)

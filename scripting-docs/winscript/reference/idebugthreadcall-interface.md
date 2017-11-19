@@ -1,31 +1,34 @@
 ---
-title: "IDebugThreadCall インターフェイス | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IDebugThreadCall インターフェイス"
+title: "IDebugThreadCall インターフェイス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords: IDebugThreadCall interface
 ms.assetid: 9a9a9892-f310-4ef3-8db2-4f868be52d7e
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8b2b1b500aec08520166d9092edfa6a58c1df0fa
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IDebugThreadCall インターフェイス
-`IDebugThreadCall` のインターフェイスは、プロセス デバッグ Manager \(PDM\) が提供する実装を配置する `IDebugThread` のスレッド間の呼び出しを行うコンポーネントによって正常に実行されます。  
+# <a name="idebugthreadcall-interface"></a>IDebugThreadCall インターフェイス
+`IDebugThreadCall`インターフェイスは、通常でクロス スレッド呼び出しを行うコンポーネントによって実装、`IDebugThread`プロセス デバッグ マネージャー (PDM) によって提供される実装をマーシャ リングします。  
   
- PDM は、目的のスレッドの `IDebugThreadCall` のインターフェイスを呼び出し、`IDebugThreadCall` のインターフェイスは、目的の実装に呼び出しをディスパッチします。  `IDebugThreadCall` のインターフェイスは、適切な上にパラメーターを渡すパラメーター情報をキャストします。  
+ PDM 呼び出し、`IDebugThreadCall`で目的のスレッドでは、インターフェイス、および`IDebugThreadCall`インターフェイスが必要な実装への呼び出しをディスパッチします。 `IDebugThreadCall`インターフェイスが適切なページのトップへのパラメーターに渡されたパラメーター情報をキャストします。  
   
- `IDebugThreadCall` のインターフェイスは、フリー スレッド オブジェクトです。  
+ `IDebugThreadCall`インターフェイスは、フリー スレッドのオブジェクト。  
   
-## メソッド  
- `IUnknown` から継承するメソッドに加え、`IDebugThreadCall` インターフェイスは次のメソッドを公開します。  
+## <a name="methods"></a>メソッド  
+ 継承されたメソッドだけでなく`IUnknown`、`IDebugThreadCall`インターフェイスは、次のメソッドを公開します。  
   
 |メソッド|説明|  
-|----------|--------|  
-|[IDebugThreadCall::ThreadCallHandler](../../winscript/reference/idebugthreadcall-threadcallhandler.md)|別のスレッドでコードを実行するハンドルを呼び出します。|
+|------------|-----------------|  
+|[IDebugThreadCall::ThreadCallHandler](../../winscript/reference/idebugthreadcall-threadcallhandler.md)|コードを実行する別のスレッドの呼び出しを処理します。|

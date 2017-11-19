@@ -1,60 +1,62 @@
 ---
-title: "lastIndexOf メソッド (String) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "lastIndexOf"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "lastIndexOf メソッド、string"
-  - "string、lastIndexOf メソッド"
+title: "lastIndexOf メソッド (String) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: lastIndexOf
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- lastIndexOf method, string
+- string, lastIndexOf method
 ms.assetid: 1ed36ccd-0f0b-4f16-be45-0567207670af
-caps.latest.revision: 14
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0fa0f35e970435a4d0296493c20afdeaac128cae
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# lastIndexOf メソッド (String) (JavaScript)
-文字列における部分文字列の最後のオカレンスを返します。  
+# <a name="lastindexof-method-string-javascript"></a>lastIndexOf メソッド (String) (JavaScript)
+文字列の最後に見つかった部分文字列を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 strObj.lastIndexOf(substring[, startindex])  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `strObj`  
- 必須です。  `String` オブジェクトまたはリテラル文字列。  
+ 必須です。 `String` オブジェクトまたは文字列リテラル。  
   
  `substring`  
- 必須です。  検索対象の部分文字列。  
+ 必須です。 検索する部分文字列です。  
   
  `startindex`  
- 省略可能です。  検索の開始位置を示すインデックス。  省略した場合は、文字列の末尾から検索が開始されます。  
+ 省略可能です。 検索を開始する位置を示すインデックス。 省略した場合、文字列の末尾から検索を開始します。  
   
-## 解説  
- **lastIndexOf** メソッドの戻り値は、`String` オブジェクト内で見つかった検索文字列の先頭位置を示す整数値です。  検索文字列が見つからなかった場合は、\-1 が返されます。  
+## <a name="remarks"></a>コメント  
+ **LastIndexOf**メソッド内の部分文字列の先頭を示す整数値を返します、`String`オブジェクト。 部分文字列が見つからない場合、-1 が返されます。  
   
- `startindex` に負の値を指定すると、`startindex` は 0 として扱われます。  また、最大位置番号より大きい値を指定した場合は、最大位置番号として処理されます。  
+ `startindex` に負の値を指定すると、`startindex` は 0 として扱われます。 最大の文字位置のインデックスよりも大きい場合は、最大の可能なインデックスとして扱われます。  
   
- 検索は文字列の最後の文字から実行されます。  この点を除けば、このメソッドは **indexOf** と同じ処理を行います。  
+ 検索すると、文字列の最後の文字で始まるが実行されます。 このメソッドは、それ以外の場合と同じ**indexOf**です。  
   
- **lastIndexOf** メソッドの使用例を次に示します。  
+ 次の例では、使用、 **lastIndexOf**メソッドです。  
   
-```javascript  
+```JavaScript  
 var str = "time, time";  
   
 var s = "";  
@@ -69,10 +71,10 @@ document.write(s);
 // abc is at position -1  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
- **対象**: [String オブジェクト](../../javascript/reference/string-object-javascript.md)  
+ **適用されます**:[文字列オブジェクト](../../javascript/reference/string-object-javascript.md)  
   
-## 参照  
- [indexOf メソッド \(String\)](../../javascript/reference/indexof-method-string-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [indexOf メソッド (String)](../../javascript/reference/indexof-method-string-javascript.md)

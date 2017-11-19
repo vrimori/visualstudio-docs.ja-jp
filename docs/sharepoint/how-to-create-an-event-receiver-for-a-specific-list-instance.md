@@ -1,94 +1,96 @@
 ---
-title: "方法: 特定のリスト インスタンスに対するイベント レシーバーを作成する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "イベント レシーバー [Visual Studio での SharePoint 開発]"
-  - "Visual Studio での SharePoint 開発, イベント レシーバー"
+title: "方法: 特定のリスト インスタンスのイベント レシーバーを作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, event receivers
+- event receivers [SharePoint development in Visual Studio]
 ms.assetid: 4b4b3564-161a-4327-8963-50896c084ac2
-caps.latest.revision: 13
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 3db5af044b1e3eb25e68c96a42335082fd3523f1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: 特定のリスト インスタンスに対するイベント レシーバーを作成する
-  リスト インスタンス イベント レシーバーは、リスト定義のインスタンスで発生したイベントに応答します。  イベント レシーバー テンプレートでは、特定のリスト インスタンスをターゲットにすることはできませんが、リスト定義をスコープとするイベント レシーバーを特定のリスト インスタンス内のイベントに応答するように変更できます。  
+# <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>方法: 特定のリスト インスタンスに対するイベント レシーバーを作成する
+  リスト インスタンスのイベント レシーバーは、リスト定義の任意のインスタンスで発生するイベントに応答します。 イベント レシーバーのテンプレートでは、特定のリスト インスタンスのターゲット設定は有効にしません、対象とする特定のリスト インスタンス内のイベントに応答するリストの定義には、イベント レシーバーを変更することができます。  
   
- 特定のリスト インスタンスをターゲットにするには、イベント レシーバーの Elements.xml で `ListTemplateId` を `ListUrl` に置き換え、リスト インスタンスの URL を追加します。  
+ イベント レシーバーを Elements.xml での特定のリスト インスタンスを対象に置き換える`ListTemplateId`で`ListUrl`し、リスト インスタンスの URL を追加します。  
   
-## リスト インスタンス イベント レシーバーの作成  
- 次の手順では、リスト項目イベント レシーバーをカスタムお知らせリスト インスタンスで発生したイベントにのみ応答するように変更する方法を示します。  
+## <a name="creating-a-list-instance-event-receiver"></a>リスト インスタンス イベント レシーバーを作成します。  
+ 次の手順では、カスタムのお知らせリスト インスタンスで発生するイベントにのみ応答するには、リスト アイテム イベント レシーバーを変更する方法を示します。  
   
-#### イベント レシーバーを特定のリスト インスタンスに応答するように変更するには  
+#### <a name="to-modify-an-event-receiver-to-respond-to-a-specific-list-instance"></a>特定のリスト インスタンスに応答するイベント レシーバーを変更するには  
   
 1.  ブラウザーで SharePoint サイトを開きます。  
   
-2.  ナビゲーション ペインで、**\[リスト\]** リンク。  
+2.  ナビゲーション ウィンドウで、**一覧**リンクします。  
   
-3.  **\[すべてのサイト コンテンツ\]** ページで、**\[作成\]** リンクをクリックします。  
+3.  **すべてのサイト コンテンツ**ページで、選択、**作成**リンクします。  
   
-4.  **\[作成\]** ダイアログ ボックスで、**\[お知らせ\]** の種類を選択し、TestAnnouncements お知らせを付けておくと、**\[作成\]** ボタンをクリックします。  
+4.  **作成** ダイアログ ボックスで、選択、**お知らせ**型、お知らせを名前**TestAnnouncements**を選択し、**作成**ボタンをクリックします。  
   
-5.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で、イベント レシーバー プロジェクトを作成します。  
+5.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、イベント レシーバー プロジェクトを作成します。  
   
-6.  **\[使用するイベント レシーバーの種類\]** の一覧で、**\[リスト項目イベント\]** をクリックします。  
+6.  **イベント レシーバーの種類が必要ですか?**一覧で、選択**リスト項目イベント**です。  
   
     > [!NOTE]  
-    >  リスト定義をスコープとする他の種類のイベント レシーバーも選択できます \(**\[リスト電子メール イベント\]** や **\[リスト ワークフロー イベント\]** など\)。  
+    >  その他の種類のリストの定義に、スコープのイベント レシーバーを選択することもできます。**リスト電子メール イベント**または**リスト ワークフロー イベント**です。  
   
-7.  **\[イベント ソースとなる項目\]** の一覧で、**\[お知らせ\]** をクリックします。  
+7.  **イベント ソースとなる項目?**一覧で、選択**お知らせ**です。  
   
-8.  **\[次のイベントを処理\]** の一覧で、**\[項目が追加されています\]** のチェック ボックスをオンにし、**\[完了\]** ボタンをクリックします。  
+8.  **、次のイベントを処理**一覧で、、**項目が追加されている**チェック ボックスをオンにして、**完了**ボタンをクリックします。  
   
-9. **\[ソリューション エクスプローラー\]** で、EventReceiver1 で、Elements.xml ファイルを開きます。  
+9. **ソリューション エクスプ ローラー**EventReceiver1、下にある Elements.xml を開きます。  
   
-     イベント レシーバーは、次の行で、現在、お知らせリスト定義を参照する:  
+     イベント レシーバーは、現在次の行を使用してお知らせリストの定義を参照します。  
   
     ```  
     <Receivers ListTemplateId="104">  
     ```  
   
-     次のテキストに次の行を変更する:  
+     この行を次のテキストに変更します。  
   
     ```  
     <Receivers ListUrl="Lists/TestAnnouncements">  
     ```  
   
-     この行は、作成したばかりの新しい **TestAnnouncements** お知らせリストで発生したイベントだけに応答するようにイベント レシーバーに命令します。  `ListURL` 属性は、SharePoint サーバーの任意のリスト インスタンスを参照するように変更できます。  
+     これにより、新しいで発生するイベントにのみ応答するイベント レシーバー **TestAnnouncements**先ほど作成したお知らせリスト。 変更することができます、 `ListURL` SharePoint サーバー上の任意のリスト インスタンスを参照する属性。  
   
-10. イベント レシーバーのコード ファイルを開き、ItemAdding メソッドの中にブレークポイントを配置します。  
+10. イベント レシーバーにコード ファイルを開き、ItemAdding メソッドにブレークポイントを設定します。  
   
-11. ソリューションをビルドして実行するには、F5 キーを押します。  
+11. F5 キーをソリューションをビルドおよび実行を選択します。  
   
-12. SharePoint のナビゲーション ペインで、**\[TestAnnouncements\]** リンクをクリックします。  
+12. SharePoint では、選択、 **TestAnnouncements**ナビゲーション ウィンドウでリンクします。  
   
-13. **\[新しいお知らせの追加\]** リンクをクリックします。  
+13. 選択、**新しいお知らせの追加**リンクします。  
   
-14. お知らせのタイトルを入力し、**\[保存\]** ボタンをクリックします。  
+14. 発表については、タイトルを入力し、、**保存**ボタンをクリックします。  
   
-     カスタムお知らせリストに新しい項目が追加されると、ブレークポイントにヒットします。  
+     カスタムのお知らせリストに新しい項目が追加されたときに、ブレークポイントにヒットすることに注意してください。  
   
-15. 再開するには、F5 キーを押します。  
+15. 再開する、F5 キーを選択します。  
   
-16. ナビゲーション ペインで、**\[リスト\]** リンクを選択し、**\[お知らせ\]** リンクをクリックします。  
+16. ナビゲーション ウィンドウで、選択、**を一覧表示**リンクをクリックして、**お知らせ**リンクします。  
   
 17. 新しいお知らせを追加します。  
   
-     このイベント レシーバーは、カスタムお知らせリスト インスタンス **TestAnnouncements** のイベントにのみ応答するように構成されているので、新しいお知らせではトリガーされません。  
+     イベント レシーバーでは、カスタム アナウンス リスト インスタンス内のイベントにのみ応答する、受信者が構成されているために、新しいお知らせで発生しません通知**TestAnnouncements**です。  
   
-## 参照  
- [方法: イベント レシーバーを作成する](../sharepoint/how-to-create-an-event-receiver.md)   
- [Developing SharePoint Solutions](../sharepoint/developing-sharepoint-solutions.md)  
+## <a name="see-also"></a>関連項目  
+ [方法: イベント レシーバーを作成します。](../sharepoint/how-to-create-an-event-receiver.md)   
+ [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   
   

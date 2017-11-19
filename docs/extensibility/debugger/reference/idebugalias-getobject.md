@@ -1,49 +1,49 @@
 ---
-title: "IDebugAlias::GetObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugAlias::GetObject"
-helpviewer_keywords: 
-  - "IDebugAlias::GetObject メソッド"
+title: "IDebugAlias::GetObject |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugAlias::GetObject
+helpviewer_keywords: IDebugAlias::GetObject method
 ms.assetid: 97bc3af6-6e55-4940-8a6d-692c61257806
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: c5258b1b17572ce1b6fdc82a00fca074a84385aa
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugAlias::GetObject
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このエイリアスが存在するオブジェクトを取得します。  
+# <a name="idebugaliasgetobject"></a>IDebugAlias::GetObject
+このエイリアスが適用されるオブジェクトを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT GetObject(  
-   IDebugObject2** ppObject  
+HRESULT GetObject(  
+   IDebugObject2** ppObject  
 );  
 ```  
   
-```c#  
-int GetObject(  
-   Out IDebugObject2 ppObject  
+```csharp  
+int GetObject(  
+   Out IDebugObject2 ppObject  
 )  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppObject`  
- \[出力\] このエイリアスが表す [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)。  
+ [out][IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)このエイリアスを表します。  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)   
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

@@ -1,188 +1,186 @@
 ---
-title: 'Walkthrough: Designing an Outlook Form Region | Microsoft Docs'
+title: "チュートリアル: Outlook フォーム領域のデザイン |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - VB
 - CSharp
-helpviewer_keywords:
-- form regions [Office development in Visual Studio], creating
+helpviewer_keywords: form regions [Office development in Visual Studio], creating
 ms.assetid: b033fc06-cdeb-4d7f-804b-86d15bfa022a
-caps.latest.revision: 41
-author: kempb
-ms.author: kempb
+caps.latest.revision: "41"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: e75921b287578f25ed0c112e859129941f21c0f7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: f2d8e1f8ad116bd6db12eca288e567a652e502a5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-designing-an-outlook-form-region"></a>Walkthrough: Designing an Outlook Form Region
-  Custom form regions extend standard or custom Microsoft Office Outlook forms. In this walkthrough, you will design a custom form region that appears as a new page in the Inspector window of a contact item. This form region displays a map of each address that is listed for the contact, by sending the address information to the Windows Live Local Search Web site. For information about form regions, see [Creating Outlook Form Regions](../vsto/creating-outlook-form-regions.md).  
+# <a name="walkthrough-designing-an-outlook-form-region"></a>チュートリアル : Outlook フォーム領域のデザイン
+  カスタム フォーム領域は、標準またはカスタムの Microsoft Office Outlook フォームを拡張します。 このチュートリアルでは、連絡先アイテムのインスペクター ウィンドウに新しいページとして表示するカスタム フォーム領域をデザインします。 このフォーム領域では、アドレス情報を Windows Live Local Search の Web サイトに送信することによって、連絡先に設定された個々の住所の地図を表示します。 フォーム領域の詳細については、次を参照してください。 [Outlook フォーム領域を作成する](../vsto/creating-outlook-form-regions.md)です。  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
- This walkthrough illustrates the following tasks:  
+ このチュートリアルでは、次の作業について説明します。  
   
--   Creating a new Outlook VSTO Add-in project.  
+-   新しい Outlook VSTO アドイン プロジェクトの作成。  
   
--   Adding a form region to the VSTO Add-in project.  
+-   VSTO アドイン プロジェクトへのフォーム領域の追加。  
   
--   Designing the layout of the form region.  
+-   フォーム領域のレイアウトのデザイン。  
   
--   Customizing the behavior of the form region.  
+-   フォーム領域の動作のカスタマイズ。  
   
--   Testing the Outlook form region.  
+-   Outlook フォーム領域のテスト。  
   
 > [!NOTE]  
->  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
+>  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Outlook_15_short](../vsto/includes/outlook-15-short-md.md)] or [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)].  
+-   [!INCLUDE[Outlook_15_short](../vsto/includes/outlook-15-short-md.md)] または [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)]。  
   
- ![link to video](../vsto/media/playvideo.gif "link to video") For a video version of this topic, see [Video How to: Designing an Outlook Form Region](http://go.microsoft.com/fwlink/?LinkID=140824).  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")、このトピックのビデオ版については、次を参照してください。[ビデオ デモ: Outlook フォーム領域のデザイン](http://go.microsoft.com/fwlink/?LinkID=140824)です。  
   
-## <a name="creating-a-new-outlook-vsto-add-in-project"></a>Creating a New Outlook VSTO Add-in Project  
- First create a basic VSTO Add-in project.  
+## <a name="creating-a-new-outlook-vsto-add-in-project"></a>新しい Outlook VSTO アドイン プロジェクトの作成  
+ まず、基本的な VSTO アドイン プロジェクトを作成します。  
   
-#### <a name="to-create-a-new-outlook-vsto-add-in-project"></a>To create a new Outlook VSTO Add-in project  
+#### <a name="to-create-a-new-outlook-vsto-add-in-project"></a>新しい Outlook VSTO アドイン プロジェクトを作成するには  
   
-1.  In [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], create an Outlook VSTO Add-in project with the name **MapItAddIn**.  
+1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、名前の Outlook VSTO アドイン プロジェクトを作成**MapItAddIn**です。  
   
-2.  In the **New Project** dialog box, select **Create directory for solution**.  
+2.  **[新しいプロジェクト]** ダイアログ ボックスの **[ソリューションのディレクトリを作成]**チェック ボックスをオンにします。  
   
-3.  Save the project to any directory.  
+3.  プロジェクトを任意のディレクトリに保存します。  
   
-     For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+     詳細については、「 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
   
-## <a name="adding-a-form-region-to-the-outlook-vsto-add-in-project"></a>Adding a Form Region to the Outlook VSTO Add-in Project  
- An Outlook VSTO Add-in solution can contain one or more Outlook form region items. Add a form region item to your project by using the **New Outlook Form Region** wizard.  
+## <a name="adding-a-form-region-to-the-outlook-vsto-add-in-project"></a>Outlook VSTO アドイン プロジェクトへのフォーム領域の追加  
+ Outlook VSTO アドイン ソリューションには、1 つ以上の Outlook フォーム領域アイテムを格納できます。 使用して、プロジェクトにフォーム領域アイテムを追加、**新しい Outlook フォーム領域**ウィザード。  
   
-#### <a name="to-add-a-form-region-to-the-outlook-vsto-add-in-project"></a>To add a form region to the Outlook VSTO Add-in project  
+#### <a name="to-add-a-form-region-to-the-outlook-vsto-add-in-project"></a>Outlook VSTO アドイン プロジェクトにフォーム領域を追加するには  
   
-1.  In **Solution Explorer**, select the **MapItAddIn** project.  
+1.  **ソリューション エクスプ ローラー**、select、 **MapItAddIn**プロジェクト。  
   
-2.  On the **Project** menu, click **Add New Item**.  
+2.  **[プロジェクト]** メニューの **[新しい項目の追加]**をクリックします。  
   
-3.  In the **Add New Item** dialog box, select **Outlook Form Region**, name the file **MapIt**, and then click **Add**.  
+3.  **新しい項目の追加**ダイアログ ボックスで、 **Outlook フォーム領域**、ファイルの名前**MapIt**、クリックして**追加**です。  
   
-     The **NewOutlook Form Region** wizard starts.  
+     **NewOutlook フォーム領域**ウィザードが起動します。  
   
-4.  On the **Select how you want to create the form region** page, click **Design a new form region**, and then click **Next**.  
+4.  **フォーム領域を作成する方法を選択** ページで、をクリックして**新しいフォーム領域をデザイン**、順にクリック**次**です。  
   
-5.  On the **Select the type of form region you want to create** page, click **Separate**, and then click **Next**.  
+5.  **を作成するフォーム領域の種類を選択** ページで、をクリックして**個別**、クリックして**次へ**です。  
   
-     A *separate* form region adds a new page to an Outlook form. For more information about form region types, see [Creating Outlook Form Regions](../vsto/creating-outlook-form-regions.md).  
+     A*個別*フォーム領域を Outlook フォームを新しいページに追加します。 フォーム領域の種類の詳細については、「 [Creating Outlook Form Regions](../vsto/creating-outlook-form-regions.md)」参照してください。  
   
-6.  On the **Supply descriptive text and select your display preferences** page, type **Map It** in the **Name** box.  
+6.  **説明のテキストを指定し、表示設定を選択します。**  ページで、入力**Map It**で、**名前**ボックス。  
   
-     This name appears on the Ribbon of the Inspector window when the contact item is open.  
+     この名前は、連絡先アイテムを開いたときにインスペクター ウィンドウのリボンに表示されます。  
   
-7.  Select **Inspectors that are in compose mode** and **Inspectors that are in read mode**, and then click **Next**.  
+7.  選択**作成モードのインスペクター内にある**と**読み取りモードのインスペクター**、順にクリック**[次へ]**です。  
   
-8.  On the **Identify the message classes that will display this form region** page, clear **Mail Message**, select **Contact**, and then click **Finish**.  
+8.  **このフォーム領域を表示するメッセージ クラスを識別します**] ページでクリア**メール メッセージ**[**にお問い合わせください**、順にクリック**[完了]**.  
   
-     A MapIt.cs or MapIt.vb file is added to your project.  
+     MapIt.cs または MapIt.vb ファイルがプロジェクトに追加されます。  
   
-## <a name="designing-the-layout-of-the-form-region"></a>Designing the Layout of the Form Region  
- Develop form regions visually by using the *form region designer*. You can drag managed controls to the form region designer surface. Use the designer and the **Properties** window to adjust control layout and appearance.  
+## <a name="designing-the-layout-of-the-form-region"></a>フォーム領域のレイアウトのデザイン  
+ 使用して、フォーム領域を視覚的な開発、*フォーム領域デザイナー*です。 フォーム領域デザイナーの画面にマネージ コントロールをドラッグできます。 デザイナーを使用して、**プロパティ**コントロールのレイアウトと外観を調整するウィンドウです。  
   
-#### <a name="to-design-the-layout-of-the-form-region"></a>To design the layout of the form region  
+#### <a name="to-design-the-layout-of-the-form-region"></a>フォーム領域のレイアウトをデザインするには  
   
-1.  In **Solution Explorer**, expand the **MapItAddIn** project, and then double-click MapIt.cs or MapIt.vb to open the Form Region Designer.  
+1.  **ソリューション エクスプ ローラー**、展開、 **MapItAddIn**プロジェクト、およびフォーム領域デザイナーを開くには、MapIt.cs または MapIt.vb をダブルクリックします。  
   
-2.  Right-click the designer, and then click **Properties**.  
+2.  デザイナーを右クリックし、をクリックして**プロパティ**です。  
   
-3.  In the **Properties** window, set **Size** to **664, 469**.  
+3.  **プロパティ**ウィンドウで、設定**サイズ**に**664, 469**です。  
   
-     This ensures that the form region will be large enough to display a map.  
+     これにより、フォーム領域が地図を表示するのに十分な大きさになります。  
   
-4.  On the **View** menu, click **Toolbox**.  
+4.  **[表示]** メニューの **[ツールボックス]**をクリックします。  
   
-5.  From the **Common Controls** tab of the **Toolbox**, add a **WebBrowser** to the form region.  
+5.  **コモン コントロール**のタブ、**ツールボックス**、追加、 **WebBrowser**フォーム領域にします。  
   
-     The **WebBrowser** will display a map of each address that is listed for the contact.  
+     **WebBrowser**連絡先に表示されている各住所の地図を表示します。  
   
-## <a name="customizing-the-behavior-of-the-form-region"></a>Customizing the Behavior of the Form Region  
- Add code to form region event handlers to customize the way a form region behaves at run time. For this form region, the code examines the properties of an Outlook item and determines whether to display the Map It form region. If it displays the form region, the code navigates to Windows Live Local Search and loads a map of each address listed in the Outlook contact item.  
+## <a name="customizing-the-behavior-of-the-form-region"></a>フォーム領域の動作のカスタマイズ  
+ フォーム領域の実行時の動作をカスタマイズするには、フォーム領域のイベント ハンドラーにコードを追加します。 このフォーム領域に対して、コードは Outlook アイテムのプロパティを調べ、Map It フォーム領域を表示するかどうかを決定します。 フォーム領域を表示する場合、コードは Windows Live Local Search に接続し、Outlook 連絡先アイテムに設定された各住所の地図を読み込みます。  
   
-#### <a name="to-customize-the-behavior-of-the-form-region"></a>To customize the behavior of the form region  
+#### <a name="to-customize-the-behavior-of-the-form-region"></a>フォーム領域の動作をカスタマイズするには  
   
-1.  In **Solution Explorer**, right click MapIt.cs or MapIt.vb, and then click **View Code**.  
+1.  **ソリューション エクスプ ローラー**MapIt.cs または MapIt.vb を右クリックしてをクリックして**コードの表示**です。  
   
-     MapIt.cs or MapIt.vb opens in the Code Editor.  
+     MapIt.cs または MapIt.vb がコード エディターで開きます。  
   
-2.  Expand the **Form Region Factory** code region.  
+2.  展開して、**フォーム領域ファクトリ**コード領域です。  
   
-     The form region factory class named `MapItFactory` is exposed.  
+     `MapItFactory` という名前のフォーム領域ファクトリ クラスが公開されます。  
   
-3.  Add the following code to the `MapItFactory_FormRegionInitializing` event handler. This event handler is called when the user opens a contact item. The following code determines whether the contact item contains an address. If the contact item does not contain an address, this code sets the <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> property of the <xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs> class to **true** and the form region is not displayed. Otherwise, the VSTO Add-in raises the <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> event and displays the form region.  
+3.  `MapItFactory_FormRegionInitializing` イベント ハンドラーに次のコードを追加します。 このイベント ハンドラーは、ユーザーが連絡先アイテムを開いたときに呼び出されます。 次のコードは、連絡先アイテムに住所が含まれているかどうかを判定します。 このコードを設定、連絡先アイテムに住所が含まれていない場合、<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>のプロパティ、<xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs>クラスを**true**とフォーム領域は表示されません。 それ以外の場合は、VSTO アドインで <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> イベントが発生し、フォーム領域が表示されます。  
   
-     [!code-csharp[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#1)]  [!code-vb[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#1)]  
+     [!code-csharp[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#1)]
+     [!code-vb[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#1)]  
   
-4.  Add the following code to the <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> event handler. This code performs the following tasks:  
+4.  <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> イベント ハンドラーに次のコードを追加します。 このコードは次のタスクを実行します。  
   
-    -   Concatenates each address in the contact item and creates a URL string.  
+    -   連絡先アイテムの各住所を連結し、URL 文字列を作成します。  
   
-    -   Calls the <xref:System.Windows.Forms.WebBrowser.Navigate%2A> method of the <xref:System.Windows.Forms.WebBrowser> object and passes the URL string as a parameter.  
+    -   <xref:System.Windows.Forms.WebBrowser> オブジェクトの <xref:System.Windows.Forms.WebBrowser.Navigate%2A> メソッドを呼び出し、パラメーターとして URL 文字列を渡します。  
   
-     The Local Search Web site appears in the Map It form region and presents each address in the scratch pad.  
+     Map It フォーム領域に Local Search の Web サイトが表示され、スクラッチ パッドに各住所が表示されます。  
   
-     [!code-csharp[Trin_Outlook_FR_Separate#2](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#2)] [!code-vb[Trin_Outlook_FR_Separate#2](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#2)]  
+     [!code-csharp[Trin_Outlook_FR_Separate#2](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#2)]
+     [!code-vb[Trin_Outlook_FR_Separate#2](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#2)]  
   
-## <a name="testing-the-outlook-form-region"></a>Testing the Outlook Form Region  
- When you run the project, Visual Studio opens Outlook. Open a contact item to view the Map It form region. The Map It form region appears as a page in the form of any contact item that contains an address.  
+## <a name="testing-the-outlook-form-region"></a>Outlook フォーム領域のテスト  
+ プロジェクトを実行すると、Visual Studio によって Outlook が開かれます。 連絡先アイテムを開くと、Map It フォーム領域が表示されます。 Map It フォーム領域は、住所が含まれる連絡先アイテムのフォームのページとして表示されます。  
   
-#### <a name="to-test-the-map-it-form-region"></a>To test the Map It form region  
+#### <a name="to-test-the-map-it-form-region"></a>Map It フォーム領域をテストするには  
   
-1.  Press F5 to run the project.  
+1.  F5 キーを押してプロジェクトを実行します。  
   
-     Outlook opens.  
+     Outlook が開きます。  
   
-2.  In Outlook, on the **Home** tab, click **New Items**, and then click **Contact**.  
+2.  Outlook では、上、**ホーム** タブで、をクリックして**新しい項目**、順にクリック**連絡先**です。  
   
-3.  In the contact form, type **Ann Beebe** as the contact name, and then specify the following three addresses.  
+3.  連絡先のフォームでは、次のように入力します。 **Ann Beebe**連絡先としてこの名前を指定すると、し、次の 3 つのアドレスを指定します。  
   
-    |Address Type|Address|  
+    |住所の種類|アドレス|  
     |------------------|-------------|  
-    |**Business**|**4567 Main St. Buffalo, NY**|  
-    |**Home**|**1234 North St. Buffalo, NY**|  
-    |**Other**|**3456 Main St. Seattle, WA**|  
+    |**ビジネス**|**4567 Main st. ツーソン, アリゾナ州**|  
+    |**ホーム**|**1234 北 st. ツーソン, アリゾナ州**|  
+    |**その他**|**3456 Main st. シアトル、ワシントン州**|  
   
-4.  Save and close the contact item.  
+4.  連絡先アイテムを保存して閉じます。  
   
-5.  Re-open the **Ann Beebe** contact item.  
+5.  開き直す、 **Ann Beebe**連絡先アイテムです。  
   
-6.  In the **Show** group of the item's Ribbon, click **Map It** to open the Map It form region.  
+6.  **表示**アイテムのリボンのグループをクリックして**Map It**を開くには、Map It フォーム領域。  
   
-     The Map It form region appears, and displays the Local Search Web site. The **Business**, **Home**, and **Other** addresses appear in the scratch pad. In the scratch pad, select an address that you want to map.  
+     Map It フォーム領域が開き、Local Search の Web サイトが表示されます。 **ビジネス**、**ホーム**、および**他**アドレス スクラッチ パッドに表示されます。 スクラッチ パッドで、地図を表示する住所を選択します。  
   
-## <a name="next-steps"></a>Next Steps  
- You can learn more about how to customize the UI of an Outlook application from these topics:  
+## <a name="next-steps"></a>次の手順  
+ Outlook アプリケーションの UI をカスタマイズする方法の詳細については、次のトピックを参照してください。  
   
--   To learn about how to customize the Ribbon of an Outlook item, see [Customizing a Ribbon for Outlook](../vsto/customizing-a-ribbon-for-outlook.md).  
+-   Outlook アイテムのリボンをカスタマイズする方法の詳細については、「 [Customizing a Ribbon for Outlook](../vsto/customizing-a-ribbon-for-outlook.md)」を参照してください。  
   
-## <a name="see-also"></a>See Also  
- [Accessing a Form Region at Run Time](../vsto/accessing-a-form-region-at-run-time.md)   
- [Creating Outlook Form Regions](../vsto/creating-outlook-form-regions.md)   
- [Guidelines for Creating Outlook Form Regions](../vsto/guidelines-for-creating-outlook-form-regions.md)   
- [Walkthrough: Importing a Form Region That Is Designed in Outlook](../vsto/walkthrough-importing-a-form-region-that-is-designed-in-outlook.md)   
- [How to: Add a Form Region to an Outlook Add-in Project](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)   
- [Associating a Form Region with an Outlook Message Class](../vsto/associating-a-form-region-with-an-outlook-message-class.md)   
- [Custom Actions in Outlook Form Regions](../vsto/custom-actions-in-outlook-form-regions.md)   
- [How to: Prevent Outlook from Displaying a Form Region](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)  
+## <a name="see-also"></a>関連項目  
+ [実行時にフォーム領域へのアクセス](../vsto/accessing-a-form-region-at-run-time.md)   
+ [Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)   
+ [Outlook フォーム領域の作成に関するガイドライン](../vsto/guidelines-for-creating-outlook-form-regions.md)   
+ [チュートリアル: Outlook でデザインしたフォーム領域のインポート](../vsto/walkthrough-importing-a-form-region-that-is-designed-in-outlook.md)   
+ [方法: フォーム領域を Outlook アドイン プロジェクトに追加します。](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)   
+ [Outlook メッセージ クラスとフォーム領域の関連付け](../vsto/associating-a-form-region-with-an-outlook-message-class.md)   
+ [Outlook フォーム領域のカスタム動作](../vsto/custom-actions-in-outlook-form-regions.md)   
+ [方法: Outlook にフォーム領域が表示されないようにする](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)  
   
   

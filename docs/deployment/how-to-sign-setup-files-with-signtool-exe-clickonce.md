@@ -1,65 +1,65 @@
 ---
-title: "方法: SignTool.exe を使用してセットアップ ファイルに署名する (ClickOnce) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ClickOnce アプリケーション, 再署名 (setup.exe への)"
-  - "ClickOnce アプリケーション, signtool.exe"
-  - "ClickOnce 配置, 再署名 (setup.exe への)"
-  - "ClickOnce 配置, signtool.exe"
-  - "配置 (アプリケーションを) [ClickOnce], 再署名 (setup.exe への)"
+title: "方法: 符号 SignTool.exe (ClickOnce) を持つファイルをセットアップする |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- ClickOnce applications, signtool.exe
+- deploying applications [ClickOnce], re-signing setup.exe
+- ClickOnce deployment, signtool.exe
+- ClickOnce applications, re-signing setup.exe
+- ClickOnce deployment, re-signing setup.exe
 ms.assetid: 545a4005-d283-4110-9821-c78a9833c250
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
+caps.latest.revision: "8"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 9cf5b1b9680d2c4267fde5798cb0b41297f72153
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 方法: SignTool.exe を使用してセットアップ ファイルに署名する (ClickOnce)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-SignTool.exe を使用して、セットアップ プログラム \(setup.exe\) に署名できます。  このプロセスによって、改ざんされたファイルがエンド ユーザーのコンピューターにインストールされないようにすることができます。  
+# <a name="how-to-sign-setup-files-with-signtoolexe-clickonce"></a>方法: SignTool.exe を使用してセットアップ ファイルに署名する (ClickOnce)
+SignTool.exe を使用して、セットアップ プログラム (setup.exe) に署名できます。 このプロセスによって、改ざんされたファイルがエンド ユーザーのコンピューターにインストールされないようにすることができます。  
   
- 既定で、ClickOnce には複数の署名されたマニフェストと、1 つの署名されたセットアップ プログラムがあります。  ただし、後でセットアップ プログラムのパラメーターを変更する場合、セットアップ プログラムに後で署名する必要があります。  セットアップ プログラムの署名後にパラメーターを変更すると、署名が破損します。  
+ 既定で、ClickOnce には複数の署名されたマニフェストと、1 つの署名されたセットアップ プログラムがあります。 ただし、後でセットアップ プログラムのパラメーターを変更する場合、セットアップ プログラムに後で署名する必要があります。 セットアップ プログラムの署名後にパラメーターを変更すると、署名が破損します。  
   
- 次の手順では、未署名のマニフェストと未署名のセットアップ プログラムを生成します。  次に、ClickOnce の署名を Visual Studio で有効にし、署名されたマニフェストを生成します。  セットアップ プログラムは未署名のままなので、ユーザーは自分の証明書を使用して実行可能ファイルに署名できます。  
+ 次の手順では、未署名のマニフェストと未署名のセットアップ プログラムを生成します。 次に、ClickOnce の署名を Visual Studio で有効にし、署名されたマニフェストを生成します。 セットアップ プログラムは未署名のままなので、ユーザーは自分の証明書を使用して実行可能ファイルに署名できます。  
   
-### 未署名のセットアップ プログラムを生成し、後で署名するには  
+### <a name="to-generate-an-unsigned-setup-program-and-sign-later"></a>未署名のセットアップ プログラムを生成し、後で署名するには  
   
 1.  マニフェストに署名する証明書を開発用コンピューターにインストールします。  
   
-2.  **ソリューション エクスプローラー**でプロジェクトを選択します。  
+2.  プロジェクトを選択**ソリューション エクスプ ローラー**です。  
   
-3.  **\[プロジェクト\]** メニューの **\[*プロジェクト名*のプロパティ\]** をクリックします。  
+3.  **プロジェクト** メニューのをクリックして*ProjectName* **プロパティ**です。  
   
-4.  **\[署名\]** ページの **\[ClickOnce マニフェストに署名する\]** をオフにします。  
+4.  **署名** ページでクリア**ClickOnce マニフェストに署名**です。  
   
-5.  **\[発行\]** ページで、**\[必須コンポーネント\]** をクリックします。  
+5.  **発行**] ページで [**の前提条件**です。  
   
-6.  すべての必須コンポーネントが選択されていることを確認し、**\[OK\]** をクリックします。  
+6.  すべての前提条件が選択されていることを確認し、をクリックして**OK**です。  
   
-7.  **\[発行\]** ページで発行設定を確認し、**\[今すぐ発行\]** をクリックします。  
+7.  **発行**] ページで、発行設定を確認してをクリックして**[今すぐ発行**です。  
   
      ソリューションは、未署名のアプリケーション マニフェスト、未署名の配置マニフェスト、バージョン固有のファイル、および未署名のセットアップ プログラムを発行フォルダーに発行します。  
   
-8.  **\[発行\]** ページで、**\[必須コンポーネント\]** をクリックします。  
+8.  **発行**] ページで [**の前提条件**です。  
   
-9. **\[必須コンポーネント\]** ダイアログ ボックスで、**\[必須コンポーネントをインストールするセットアップ プログラムを作成する\]** をオフにします。  
+9. **の前提条件**ダイアログ ボックスで、クリア**前提条件コンポーネントをインストールするセットアップ プログラムを作成する**です。  
   
-10. **\[発行\]** ページで発行設定を確認し、**\[今すぐ発行\]** をクリックします。  
+10. **発行**] ページで、発行設定を確認してをクリックして**[今すぐ発行**です。  
   
-     ソリューションは、署名済みのアプリケーション マニフェスト、署名済みの配置マニフェスト、およびバージョン固有のファイルを発行フォルダーに発行します。  未署名のセットアップ プログラムは発行プロセスで上書きされません。  
+     ソリューションは、署名済みのアプリケーション マニフェスト、署名済みの配置マニフェスト、およびバージョン固有のファイルを発行フォルダーに発行します。 未署名のセットアップ プログラムは発行プロセスで上書きされません。  
   
 11. 顧客側でコマンド プロンプトを開きます。  
   
@@ -79,5 +79,5 @@ SignTool.exe を使用して、セットアップ プログラム \(setup.exe\) 
     signtool sign /f CertFileName Setup.exe  
     ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [方法: アプリケーション マニフェストおよび配置マニフェストに再署名する](../deployment/how-to-re-sign-application-and-deployment-manifests.md)

@@ -1,45 +1,45 @@
 ---
-title: "IEnumDebugCodeContexts2::Reset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugCodeContexts2::Reset"
-helpviewer_keywords: 
-  - "IEnumDebugCodeContexts2::Reset"
+title: "IEnumDebugCodeContexts2::Reset |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IEnumDebugCodeContexts2::Reset
+helpviewer_keywords: IEnumDebugCodeContexts2::Reset
 ms.assetid: df6cf1e3-2ef8-4d38-81a0-8e9adf151884
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 894b6fd22e6b0d3624ab82e2d270672b1800908e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IEnumDebugCodeContexts2::Reset
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-最初の要素には列挙型をリセットします。  
+# <a name="ienumdebugcodecontexts2reset"></a>IEnumDebugCodeContexts2::Reset
+最初の要素に列挙体をリセットします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT Reset(  
-   void  
+   void  
 );  
 ```  
   
-```c#  
+```csharp  
 int Reset();  
 ```  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- このメソッドが呼び出された後[次へ](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-next.md) のメソッドの回復列挙型の最初の要素。  
+## <a name="remarks"></a>コメント  
+ このメソッドが呼び出された後、次の呼び出し、[次](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-next.md)メソッドが列挙体の最初の要素を返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)

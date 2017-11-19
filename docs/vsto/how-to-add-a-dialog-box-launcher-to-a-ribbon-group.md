@@ -1,58 +1,60 @@
 ---
-title: "方法 : リボン グループにダイアログ ボックス起動ツールを追加する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ダイアログ ボックス起動ツール [Visual Studio での Office 開発]"
-  - "リボン [Visual Studio での Office 開発], ダイアログ ボックス起動ツール"
+title: "方法: リボン グループにダイアログ ボックス起動ツールを追加 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- dialog box launcher [Office development in Visual Studio]
+- Ribbon [Office development in Visual Studio], dialog box launcher
 ms.assetid: 5972664f-4e37-4dc6-90d0-69cedd057e60
-caps.latest.revision: 19
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: a8b5158bb17470ce63dbc22dc5b501a314ebda8b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : リボン グループにダイアログ ボックス起動ツールを追加する
-  リボンの任意のグループにダイアログ ボックス起動ツールを追加できます。  ダイアログ ボックス起動ツールは、グループ内に表示される小さいアイコンです。  ユーザーがこのアイコンをクリックすると、関連付けられたダイアログ ボックスまたは作業ウィンドウが開き、そのグループに関連のある他のオプションが表示されます。  
+# <a name="how-to-add-a-dialog-box-launcher-to-a-ribbon-group"></a>方法 : リボン グループにダイアログ ボックス起動ツールを追加する
+  ダイアログ ボックス起動ツールは、リボン上の任意のグループに追加できます。 ダイアログ ボックス起動ツールは、グループに表示される小さなアイコンです。 ユーザーは、関連するダイアログ ボックスまたはグループに関連する他のオプションを提供する作業ウィンドウを開くには、このアイコンをクリックします。  
   
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]  
   
-### リボン グループにダイアログ ボックス起動ツールを追加するには  
+### <a name="to-add-a-dialog-box-launcher-to-a-ribbon-group"></a>リボン グループにダイアログ ボックス起動ツールを追加するには  
   
-1.  **ソリューション エクスプローラー**でリボン コード ファイル \(.vb ファイルまたは .cs ファイル\) を選択します。  
+1.  リボン コード ファイル (.vb または .cs ファイル) を選択**ソリューション エクスプ ローラー**です。  
   
-2.  **\[表示\]** メニューの **\[デザイナー\]** をクリックします。  
+2.  **ビュー**  メニューのをクリックして**デザイナー**です。  
   
-3.  リボン デザイナーで、任意のグループを右クリックし、**\[DialogBoxLauncher の追加\]** をクリックします。  
+3.  リボン デザイナーで任意のグループを右クリックし、をクリックして**追加 DialogBoxLauncher**です。  
   
-     グループの <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.DialogLauncherClick> イベントにコードを追加し、カスタム ダイアログ ボックスまたは組み込みダイアログ ボックスを開きます。  
+     コードを追加して、<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.DialogLauncherClick>カスタムまたは組み込みのダイアログ ボックスを開くグループのイベントです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [リボンの概要](../vsto/ribbon-overview.md)   
- [実行時のリボンへのアクセス](../vsto/accessing-the-ribbon-at-run-time.md)   
+ [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
  [リボン デザイナー](../vsto/ribbon-designer.md)   
  [リボン オブジェクト モデルの概要](../vsto/ribbon-object-model-overview.md)   
  [リボン XML](../vsto/ribbon-xml.md)   
- [方法 : リボンをリボン デザイナーからリボン XML にエクスポートする](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)   
- [方法: リボンのタブの位置を変更する](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)   
- [方法 : 組み込みタブをカスタマイズする](../vsto/how-to-customize-a-built-in-tab.md)   
- [方法: Backstage ビューにコントロールを追加する](../vsto/how-to-add-controls-to-the-backstage-view.md)   
+ [方法: リボン デザイナーからリボン XML にエクスポート](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)   
+ [方法: リボンのタブの位置を変更](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)   
+ [方法: 組み込みタブをカスタマイズします。](../vsto/how-to-customize-a-built-in-tab.md)   
+ [方法: コントロール Backstage ビューを追加します。](../vsto/how-to-add-controls-to-the-backstage-view.md)   
  [Outlook のリボンのカスタマイズ](../vsto/customizing-a-ribbon-for-outlook.md)   
- [方法 : リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)   
- [方法 : アドインのユーザー インターフェイス エラーを表示する](../vsto/how-to-show-add-in-user-interface-errors.md)   
- [チュートリアル : リボン デザイナーを使用したカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   
- [チュートリアル : 実行時のリボン コントロールの更新](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)   
- [チュートリアル : リボン XML によるカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)  
+ [方法: リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)   
+ [方法: アドイン ユーザー インターフェイス エラーを表示します。](../vsto/how-to-show-add-in-user-interface-errors.md)   
+ [チュートリアル: リボン デザイナーを使用してカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   
+ [チュートリアル: 実行時にリボン コントロールの更新](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)   
+ [チュートリアル: リボン XML によるカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)  
   
   

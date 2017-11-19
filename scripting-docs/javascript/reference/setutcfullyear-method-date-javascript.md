@@ -1,67 +1,69 @@
 ---
-title: "setUTCFullYear メソッド (Date) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "setUTCFullYear"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "日付, UTC"
-  - "setUTCFullYear メソッド"
-  - "UTC 日付, 設定"
+title: "setUTCFullYear メソッド (Date) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: setUTCFullYear
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- dates, UTC
+- setUTCFullYear method
+- UTC dates, setting
 ms.assetid: e6c51b49-0149-4f9a-aa74-c73c0306f98e
-caps.latest.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 2dda8b75dd8bc8dac87ea383546f392b064c1d63
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# setUTCFullYear メソッド (Date) (JavaScript)
-`Date` オブジェクトの日付の年の部分を世界協定時刻 \(UTC\) で設定します。  
+# <a name="setutcfullyear-method-date-javascript"></a>setUTCFullYear メソッド (Date) (JavaScript)
+年の値を設定、`Date`オブジェクト世界協定時刻 (UTC) を使用します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 dateObj.setUTCFullYear(numYear[, numMonth[, numDate]])   
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dateObj`  
- 必須です。  任意の `Date` オブジェクトを指定します。  
+ 必須です。 任意の `Date` オブジェクトを指定します。  
   
  `numYear`  
- 必須です。  年を表す数値を指定します。  
+ 必須です。 数値に相当する値の年。  
   
  `numMonth`  
- 省略可能です。  設定する月を表す数値を指定します。  1 月の値は 0 で、2 月以降の値はそれに続く連続した数字です。  *numDate* 引数を指定する場合は、この引数を指定する必要があります。  
+ 省略可能です。 数値を指定する月。 年 1 月の値は 0、およびその他の月の値が連続的に従います。 場合を指定する必要があります*numDate*を指定します。  
   
  *numDate*  
- 省略可能です。  月の日付と等しい数値を指定します。  
+ 省略可能です。 数値を指定する月の日です。  
   
-## 解説  
- 省略可能な引数を指定せずに、**set** で始まる名前の各メソッドを使用した場合、省略した設定の部分には対応する **get** で始まる名前のメソッドで返される値が設定されます。  たとえば、`numMonth` 引数を指定しなかった場合、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] では、`getUTCMonth` メソッドで返される値が使用されます。  
+## <a name="remarks"></a>コメント  
+ すべて**設定**対応から返される値を使用する省略可能な引数を取るメソッド**取得**メソッド、省略可能な引数が指定されていない場合。 たとえば場合、`numMonth`引数が指定されていない[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]から返される値を使用して、`getUTCMonth`メソッドです。  
   
- 引数に有効範囲を超える値や負の値を指定すると、値に応じて格納されている他の値が変更されます。  
+ また、引数の値が大きい場合をその範囲や負の値数、その他の格納された値を適宜変更されます。  
   
- 年の設定をローカル時間で行うには、`setFullYear` メソッドを使用してください。  
+ ローカル時刻を使用して、年を設定するには、使用、`setFullYear`メソッドです。  
   
- `Date` オブジェクトでサポートされている年の範囲は、1970 年の前後の約 285,616 年です。  
+ サポートされている年の範囲、`Date`オブジェクトは、1970 年の約 285,616 年です。  
   
-## 使用例  
+## <a name="example"></a>例  
  `setUTCFullYear` メソッドの使用例を次に示します。  
   
-```javascript  
+```JavaScript  
 var dtFirst = new Date();  
 dtFirst.setUTCFullYear(2007);  
   
@@ -74,12 +76,12 @@ document.write ("<br />");
 document.write (dtSecond.toUTCString());  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv3](../../javascript/reference/includes/jsv3-md.md)]  
   
- **対象**: [Date オブジェクト](../../javascript/reference/date-object-javascript.md)  
+ **適用対象**: [Date Object](../../javascript/reference/date-object-javascript.md)  
   
-## 参照  
- [getFullYear メソッド \(Date\)](../../javascript/reference/getfullyear-method-date-javascript.md)   
- [getUTCFullYear メソッド \(Date\)](../../javascript/reference/getutcfullyear-method-date-javascript.md)   
- [setFullYear メソッド \(Date\)](../../javascript/reference/setfullyear-method-date-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [getFullYear メソッド (Date)](../../javascript/reference/getfullyear-method-date-javascript.md)   
+ [getUTCFullYear メソッド (Date)](../../javascript/reference/getutcfullyear-method-date-javascript.md)   
+ [setFullYear メソッド (Date)](../../javascript/reference/setfullyear-method-date-javascript.md)

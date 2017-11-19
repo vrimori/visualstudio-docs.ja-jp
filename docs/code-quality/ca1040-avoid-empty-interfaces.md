@@ -1,11 +1,10 @@
 ---
-title: 'CA1040: Avoid empty interfaces | Microsoft Docs'
+title: ": Ca 1040 空のインターフェイス |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,54 +14,41 @@ helpviewer_keywords:
 - AvoidEmptyInterfaces
 - CA1040
 ms.assetid: 120a741b-5fd1-4836-8453-7857e0cd0380
-caps.latest.revision: 16
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: e61c17e0c1dec573b60b241eaf57dbb27c6bca41
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 7e086ffc1b0166ec17954323b8cf7871fd758ea0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1040-avoid-empty-interfaces"></a>CA1040: Avoid empty interfaces
+# <a name="ca1040-avoid-empty-interfaces"></a>CA1040: 空のインターフェイスは使用しないでください
 |||  
 |-|-|  
 |TypeName|AvoidEmptyInterfaces|  
 |CheckId|CA1040|  
-|Category|Microsoft.Design|  
-|Breaking Change|Breaking|  
+|カテゴリ|Microsoft.Design|  
+|互換性に影響する変更点|あり|  
   
-## <a name="cause"></a>Cause  
- The interface does not declare any members or implement two or more other interfaces.  
+## <a name="cause"></a>原因  
+ インターフェイスのメンバーの宣言またはその他の 2 つ以上のインターフェイスを実装はできません。  
   
-## <a name="rule-description"></a>Rule Description  
- Interfaces define members that provide a behavior or usage contract. The functionality that is described by the interface can be adopted by any type, regardless of where the type appears in the inheritance hierarchy. A type implements an interface by providing implementations for the members of the interface. An empty interface does not define any members. Therefore, it does not define a contract that can be implemented.  
+## <a name="rule-description"></a>規則の説明  
+ インターフェイスには、動作や使用のコントラクトを実現するメンバーが定義されます。 インターフェイスで示される機能は、継承の階層構造内に型が存在するかどうかにかかわらず、どの型からも適用できます。 型ではインターフェイスのメンバーに実装することで、インターフェイスが実装されます。 空のインターフェイスでは、すべてのメンバーは定義しません。 したがって、実装できるコントラクトは定義しません。  
   
- If your design includes empty interfaces that types are expected to implement, you are probably using an interface as a marker or a way to identify a group of types. If this identification will occur at run time, the correct way to accomplish this is to use a custom attribute. Use the presence or absence of the attribute, or the properties of the attribute, to identify the target types. If the identification must occur at compile time, then it is acceptable to use an empty interface.  
+ デザインに空白を含める場合は、型のインターフェイスの実装が期待される、マーカーまたはの種類のグループを識別する方法として、インターフェイスを使用している可能性があります。 この id は、実行時に発生する可能性は、これを実現するための正しい方法は、カスタム属性を使用するです。 存在するか、属性がない場合や、属性のプロパティを使用して、対象の種類を識別します。 Id は、空のインターフェイスを使用することができますし、コンパイル時に行う必要がある場合。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- Remove the interface or add members to it. If the empty interface is being used to label a set of types, replace the interface with a custom attribute.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ インターフェイスを削除するか、メンバーを追加します。 空のインターフェイスが、一連の型のラベル付けに使用される場合は、カスタム属性を持つインターフェイスを置き換えます。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule when the interface is used to identify a set of types at compile time.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ インターフェイスを使用して、コンパイル時に一連の型を識別するこの規則による警告を抑制しても安全です。  
   
-## <a name="example"></a>Example  
- The following example shows an empty interface.  
+## <a name="example"></a>例  
+ 次の例では、空のインターフェイスを示します。  
   
- [!code-csharp[FxCop.Design.InterfacesNotEmpty#1](../code-quality/codesnippet/CSharp/ca1040-avoid-empty-interfaces_1.cs)] [!code-cpp[FxCop.Design.InterfacesNotEmpty#1](../code-quality/codesnippet/CPP/ca1040-avoid-empty-interfaces_1.cpp)] [!code-vb[FxCop.Design.InterfacesNotEmpty#1](../code-quality/codesnippet/VisualBasic/ca1040-avoid-empty-interfaces_1.vb)]
+ [!code-csharp[FxCop.Design.InterfacesNotEmpty#1](../code-quality/codesnippet/CSharp/ca1040-avoid-empty-interfaces_1.cs)]
+ [!code-cpp[FxCop.Design.InterfacesNotEmpty#1](../code-quality/codesnippet/CPP/ca1040-avoid-empty-interfaces_1.cpp)]
+ [!code-vb[FxCop.Design.InterfacesNotEmpty#1](../code-quality/codesnippet/VisualBasic/ca1040-avoid-empty-interfaces_1.vb)]

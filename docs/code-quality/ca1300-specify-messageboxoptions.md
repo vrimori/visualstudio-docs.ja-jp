@@ -1,11 +1,10 @@
 ---
-title: 'CA1300: Specify MessageBoxOptions | Microsoft Docs'
+title: "CA1300: MessageBoxOptions を指定 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,57 +14,42 @@ helpviewer_keywords:
 - SpecifyMessageBoxOptions
 - CA1300
 ms.assetid: 9357a724-026e-4a3d-a03a-f14635064ec6
-caps.latest.revision: 19
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 7d4799fa48ea21c98603ce9aee5de1353618960c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: e4ce736aa64cba9d66d770f3c4297c1685d690f6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1300-specify-messageboxoptions"></a>CA1300: Specify MessageBoxOptions
+# <a name="ca1300-specify-messageboxoptions"></a>CA1300: MessageBoxOption を指定します
 |||  
 |-|-|  
 |TypeName|SpecifyMessageBoxOptions|  
 |CheckId|CA1300|  
-|Category|Microsoft.Globalization|  
-|Breaking Change|Non-breaking|  
+|カテゴリ|Microsoft.Globalization|  
+|互換性に影響する変更点|なし|  
   
-## <a name="cause"></a>Cause  
- A method calls an overload of the <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> method that does not take a <xref:System.Windows.Forms.MessageBoxOptions?displayProperty=fullName> argument.  
+## <a name="cause"></a>原因  
+ メソッドのオーバー ロードを呼び出して、<xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName>を受け取らないメソッド、<xref:System.Windows.Forms.MessageBoxOptions?displayProperty=fullName>引数。  
   
-## <a name="rule-description"></a>Rule Description  
- To display a message box correctly for cultures that use a right-to-left reading order, the <xref:System.Windows.Forms.MessageBoxOptions> and <xref:System.Windows.Forms.MessageBoxOptions> members of the <xref:System.Windows.Forms.MessageBoxOptions> enumeration must be passed to the <xref:System.Windows.Forms.MessageBox.Show%2A> method. Examine the <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=fullName> property of the containing control to determine whether to use a right-to-left reading order.  
+## <a name="rule-description"></a>規則の説明  
+ 右から左への読み取り順序を使用するカルチャで正しくメッセージ ボックスを表示する、<xref:System.Windows.Forms.MessageBoxOptions>と<xref:System.Windows.Forms.MessageBoxOptions>のメンバー、<xref:System.Windows.Forms.MessageBoxOptions>に列挙体を渡す必要があります、<xref:System.Windows.Forms.MessageBox.Show%2A>メソッドです。 確認、<xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=fullName>右から左への読み取り順序を使用するかどうかを決定するコンテナー コントロールのプロパティです。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, call an overload of the <xref:System.Windows.Forms.MessageBox.Show%2A> method that takes a <xref:System.Windows.Forms.MessageBoxOptions> argument.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、オーバー ロードを呼び出し、<xref:System.Windows.Forms.MessageBox.Show%2A>を受け取るメソッド、<xref:System.Windows.Forms.MessageBoxOptions>引数。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule when the code library will not be localized for a culture that uses a right-to-left reading order.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ コード ライブラリを右から左への読み取り順序を使用するカルチャのローカライズしないときにこの規則による警告を抑制しても安全です。  
   
-## <a name="example"></a>Example  
- The following example shows a method that displays a message box that has options that are appropriate for the reading order of the culture. A resource file, which is not shown, is required to build the example. Follow the comments in the example to build the example without a resource file and to test the right-to-left feature.  
+## <a name="example"></a>例  
+ 次の例では、カルチャの読み取り順序に対応するオプションがメッセージ ボックスを表示する方法を示します。 例をビルドするには、示されていませんが、リソース ファイルが必要です。 リソース ファイルなしの例をビルドし、右から左への機能をテストする例のコメントに従います。  
   
- [!code-vb[FxCop.Globalization.SpecifyMBOptions#1](../code-quality/codesnippet/VisualBasic/ca1300-specify-messageboxoptions_1.vb)] [!code-csharp[FxCop.Globalization.SpecifyMBOptions#1](../code-quality/codesnippet/CSharp/ca1300-specify-messageboxoptions_1.cs)]  
+ [!code-vb[FxCop.Globalization.SpecifyMBOptions#1](../code-quality/codesnippet/VisualBasic/ca1300-specify-messageboxoptions_1.vb)]
+ [!code-csharp[FxCop.Globalization.SpecifyMBOptions#1](../code-quality/codesnippet/CSharp/ca1300-specify-messageboxoptions_1.cs)]  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  <xref:System.Resources.ResourceManager?displayProperty=fullName>   
- [Resources in Desktop Apps](/dotnet/framework/resources/index)
+ [デスクトップ アプリケーションのリソース](/dotnet/framework/resources/index)

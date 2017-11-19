@@ -1,47 +1,48 @@
 ---
-title: "CA1720: 識別子には型名を含めないでください | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1720"
-  - "IdentifiersShouldNotContainTypeNames"
-helpviewer_keywords: 
-  - "IdentifiersShouldNotContainTypeNames"
-  - "CA1720"
+title: "Ca 1720: 識別子が型名含めることはできません |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1720
+- IdentifiersShouldNotContainTypeNames
+helpviewer_keywords:
+- IdentifiersShouldNotContainTypeNames
+- CA1720
 ms.assetid: c95ee48f-f23a-45f0-ac9e-a3c1ecfabdea
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 5418bc8d265c32057911df2d3a15aaddacf1398e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA1720: 識別子には型名を含めないでください
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1720-identifiers-should-not-contain-type-names"></a>CA1720: 識別子には型名を含めないでください
 |||  
 |-|-|  
 |TypeName|IdentifiersShouldNotContainTypeNames|  
 |CheckId|CA1720|  
-|分類|Microsoft.Naming|  
+|カテゴリ|Microsoft.Naming|  
 |互換性に影響する変更点|あり|  
   
-## 原因  
- 外部から参照できるメンバーのパラメーター名に、データ型の名前が含まれます。  
+## <a name="cause"></a>原因  
+ 外部から参照できるメンバーのパラメーターの名前には、データ型の名前が含まれています。  
   
  または  
   
- 外部から参照できるメンバーの名前に、言語固有のデータ型名が含まれます。  
+ 外部から参照できるメンバーの名前には、言語固有のデータ型の名前が含まれています。  
   
-## 規則の説明  
- パラメーターとメンバーの名前では、パラメーターとメンバーの型ではなく意味を伝えるようにします。パラメーターとメンバーの型は、開発ツールで表示されるためです。  メンバー名でデータ型名を使用する必要がある場合は、言語固有の型名ではなく、言語に依存しない型名を使用します。  たとえば、C\# の型名である "int" ではなく、言語に依存しないデータ型名の "Int32" を使用します。  
+## <a name="rule-description"></a>規則の説明  
+ パラメーターの名前とメンバーは、その型は、開発ツールによって提供されると予想されるを説明するよりもその意味を通信するためにより使用されます。 データ型の名前を使用する場合、メンバーの名前は、言語固有のものではなく言語非依存の名前を使用します。 たとえば、c# の型名 'int' ではなく Int32 言語に依存しないデータ型の名前を使用します。  
   
- パラメーター名またはメンバー名の各トークンは、大文字と小文字を区別しない方法で、次の言語固有のデータ型名が含まれているかどうかチェックされます。  
+ 各トークン パラメーターまたはメンバーの名前は、大文字と小文字で、次の言語に固有のデータ型名に対してチェックされます。  
   
 -   Bool  
   
@@ -59,7 +60,7 @@ caps.handback.revision: 15
   
 -   UInt  
   
--   Integer  
+-   整数  
   
 -   UInteger  
   
@@ -67,23 +68,23 @@ caps.handback.revision: 15
   
 -   ULong  
   
--   Unsigned  
+-   符号なし  
   
--   Signed  
+-   符号付き  
   
--   Float  
+-   浮動小数点型  
   
 -   Float32  
   
 -   Float64  
   
- さらに、パラメーター名は、大文字と小文字を区別しない方法で、次の言語に依存しないデータ型名が含まれているかどうかもチェックされます。  
+ さらに、パラメーターの名前もチェックインに対して次の言語に依存しないデータ型名では、大文字と小文字。  
   
 -   オブジェクト  
   
--   Obj  
+-   obj  
   
--   Boolean  
+-   ブール型  
   
 -   Char  
   
@@ -121,25 +122,25 @@ caps.handback.revision: 15
   
 -   Single  
   
--   Double  
+-   倍精度浮動小数点型  
   
--   10 進数  
+-   Decimal (10 進数型)  
   
 -   Guid  
   
-## 違反の修正方法  
- **パラメーターの場合**  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ **パラメーターに対して発生します。 場合**  
   
- パラメーター名のデータ型の識別子を、そのパラメーターの意味をよく表す用語、または "value" などの汎用的な用語で置き換えます。  
+ データ型の識別子、パラメーターの名前をより深くの意味を説明する用語または 'value' などの汎用的な用語のいずれかに置き換えます。  
   
- **メンバーの場合**  
+ **メンバーに対して発生します。 場合、**  
   
- メンバー名の言語固有のデータ型の識別子を、そのメンバーの意味をよく表す、言語に依存しない用語、または "value" などの汎用的な用語で置き換えます。  
+ 用語の意味、言語に無関係なまたは 'value' などの汎用的な用語をよく表すを言語固有のデータ型識別子、メンバーの名前に置き換えます。  
   
-## 警告を抑制する状況  
- 型に基づくパラメーター名およびメンバー名の方が適切な場合もあります。  ただし、新たに開発する場合、この規則による警告を抑制する必要がある状況は発生しません。  以前に提供済みのライブラリの場合は、この規則による警告の抑制が必要となることもあります。  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 時折を型に基づくパラメーター名およびメンバー名の使用は適切なにあります。 ただし、新規の開発、されていないシナリオでは、この規則による警告を抑制する必要がありますが発生します。 ライブラリが付属してで以前では、この規則による警告を抑制する必要があります。  
   
-## 関連規則  
+## <a name="related-rules"></a>関連規則  
  [CA1709: 識別子では、大文字と小文字が正しく区別されなければなりません](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)  
   
  [CA1708: 識別子は、大文字と小文字の区別以外にも相違していなければなりません](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)  

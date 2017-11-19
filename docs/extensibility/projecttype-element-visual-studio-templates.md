@@ -4,40 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- http://schemas.microsoft.com/developer/vstemplate/2005#ProjectType
-helpviewer_keywords:
-- ProjectType element [Visual Studio project templates]
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#ProjectType
+helpviewer_keywords: ProjectType element [Visual Studio project templates]
 ms.assetid: ccf9d83f-c7f3-49c7-a31f-e1f22bec004c
-caps.latest.revision: 19
+caps.latest.revision: "19"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d23be61b83cd3c62b6ab33a271968f500ad8ff81
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: fb177139491236cf518aba4e7f2effd213c1a469
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="projecttype-element-visual-studio-templates"></a>ProjectType 要素 (Visual Studio テンプレート)
-指定したグループ内の下に表示されるように、プロジェクト テンプレートをカテゴリに分類、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。  
+指定されたグループの下に表示されるように、プロジェクト テンプレートをカテゴリに分類、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。  
   
 > [!WARNING]
 >  プロジェクト テンプレートは、Visual Studio 2012 以降の C++ でサポートされています。 これらは、Visual Studio 2010 以前のバージョンの C++ ではサポートされていません。  
@@ -76,12 +60,12 @@ ms.lasthandoff: 02/22/2017
   
 -   `VisualBasic` : テンプレートが [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] のプロジェクトまたはアイテムを作成するよう指定します。  
   
--   `Web` : テンプレートが Web プロジェクトまたは Web アイテムを作成するよう指定します。 場合、`ProjectType`要素は、この値を含むで、プロジェクトまたはアイテムの言語が定義されている、 [ProjectSubType 要素 (Visual Studio テンプレート)](../extensibility/projectsubtype-element-visual-studio-templates.md)します。  
+-   `Web` : テンプレートが Web プロジェクトまたは Web アイテムを作成するよう指定します。 場合、`ProjectType`要素には、この値が含まれていますでプロジェクトまたはアイテムの言語が定義されている、 [ProjectSubType 要素 (Visual Studio テンプレート)](../extensibility/projectsubtype-element-visual-studio-templates.md)です。  
   
 ## <a name="remarks"></a>コメント  
  `ProjectType` は `TemplateData` に必須の子要素です。  
   
- 値、`ProjectType`要素内のテンプレートの場所を指定する、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。 テンプレートなど、`ProjectType`の値`CSharp`下に表示されます、 **Visual c#**内のノード、**新しいプロジェクト** ダイアログ ボックス。  
+ 値、`ProjectType`要素は、内のテンプレートの場所を指定します、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。 テンプレートなど、`ProjectType`の値`CSharp`下に表示されます、 **Visual c#**内のノード、**新しいプロジェクト** ダイアログ ボックス。  
   
  使用してテンプレートのサブタイプを指定することができます、 [ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md)要素。  
   
@@ -114,5 +98,5 @@ ms.lasthandoff: 02/22/2017
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [プロジェクトおよび項目テンプレートを作成します。](../ide/creating-project-and-item-templates.md)   
+ [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
  [ProjectSubType 要素 (Visual Studio テンプレート)](../extensibility/projectsubtype-element-visual-studio-templates.md)

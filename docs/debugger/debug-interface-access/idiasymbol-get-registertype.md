@@ -1,40 +1,40 @@
 ---
-title: "IDiaSymbol::get_registerType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "IDiaSymbol::get_registerType |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: f1c98ab0-8aef-4a07-a686-28b8a54418ef
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a6cf6e6efbd5db235a7ea95b0705eeebd50e845d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_registerType
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-登録の型を取得します。  
+# <a name="idiasymbolgetregistertype"></a>IDiaSymbol::get_registerType
+登録の種類を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp  
+```C++  
 HRESULT get_registerType(   
    DWORD* pRetVal);  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- \[入力\] 登録型を保持 `DWORD` へのポインター。  
+ [out]ポインター、`DWORD`レジスタ型を保持します。  
   
-## 戻り値  
- 成功した場合は `S_OK` を返し、それ以外の場合は `S_FALSE` またはエラー コードを返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

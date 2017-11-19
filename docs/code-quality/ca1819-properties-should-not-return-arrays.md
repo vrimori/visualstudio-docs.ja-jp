@@ -1,11 +1,10 @@
 ---
-title: 'CA1819: Properties should not return arrays | Microsoft Docs'
+title: "Ca 1819: プロパティは配列を返すできません |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,94 +14,83 @@ helpviewer_keywords:
 - PropertiesShouldNotReturnArrays
 - CA1819
 ms.assetid: 85fcf312-57f8-438a-8b10-34441fe0bdeb
-caps.latest.revision: 22
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: c8e145afcff87a0ac3250509758762db3d6e2de7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 2bd2aae360789646c78fa6b292b1ad97490fc2da
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1819-properties-should-not-return-arrays"></a>CA1819: Properties should not return arrays
+# <a name="ca1819-properties-should-not-return-arrays"></a>CA1819: プロパティは、配列を返すことはできません
 |||  
 |-|-|  
 |TypeName|PropertiesShouldNotReturnArrays|  
 |CheckId|CA1819|  
-|Category|Microsoft.Performance|  
-|Breaking Change|Breaking|  
+|カテゴリ|Microsoft.Performance|  
+|互換性に影響する変更点|あり|  
   
-## <a name="cause"></a>Cause  
- A public or protected property in a public type returns an array.  
+## <a name="cause"></a>原因  
+ パブリック型の public または protected のプロパティは、配列を返します。  
   
-## <a name="rule-description"></a>Rule Description  
- Arrays returned by properties are not write-protected, even if the property is read-only. To keep the array tamper-proof, the property must return a copy of the array. Typically, users will not understand the adverse performance implications of calling such a property. Specifically, they might use the property as an indexed property.  
+## <a name="rule-description"></a>規則の説明  
+ プロパティによって返される配列は書き込みで保護されている場合でも、このプロパティは読み取り専用 配列の改ざんを防ぐには、プロパティで配列のコピーを返す必要があります。 一般に、このようなプロパティを呼び出すときのパフォーマンス低下は理解されません。 具体的には、インデックス付きプロパティとしてプロパティを使用する可能性があります。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, either make the property a method or change the property to return a collection.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、か、プロパティ、メソッドまたはコレクションを取得するプロパティを変更します。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Attributes can contain properties that return arrays, but cannot contain properties that return collections. You can suppress a warning that is raised for a property of an attribute that is derived from the <xref:System.Attribute> class. Otherwise, do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 属性は、配列を返すプロパティを含めることができますが、コレクションを返すプロパティを含めることはできません。 派生した属性のプロパティに対して生成される警告を抑制することができます、<xref:System.Attribute>クラスです。 それ以外の場合、この規則による警告は抑制しないでください。  
   
-## <a name="example-violation"></a>Example Violation  
+## <a name="example-violation"></a>違反の例  
   
-### <a name="description"></a>Description  
- The following example shows a property that violates this rule.  
+### <a name="description"></a>説明  
+ 次の例では、この規則に違反するプロパティを示します。  
   
-### <a name="code"></a>Code  
- [!code-csharp[FxCop.Performance.PropertyArrayViolation#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_1.cs)] [!code-vb[FxCop.Performance.PropertyArrayViolation#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_1.vb)]  
+### <a name="code"></a>コード  
+ [!code-csharp[FxCop.Performance.PropertyArrayViolation#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_1.cs)]
+ [!code-vb[FxCop.Performance.PropertyArrayViolation#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_1.vb)]  
   
-### <a name="comments"></a>Comments  
- To fix a violation of this rule, either make the property a method or change the property to return a collection instead of an array.  
+### <a name="comments"></a>コメント  
+ この規則違反を修正するには、か、プロパティ、メソッドまたは配列ではなくコレクションを取得するプロパティを変更します。  
   
-## <a name="change-the-property-to-a-method-example"></a>Change the Property to a Method Example  
+## <a name="change-the-property-to-a-method-example"></a>プロパティ メソッドの例を変更します  
   
-### <a name="description"></a>Description  
- The following example fixes the violation by changing the property to a method.  
+### <a name="description"></a>説明  
+ 次の例では、メソッド、プロパティを変更することで違反を修正します。  
   
-### <a name="code"></a>Code  
- [!code-vb[FxCop.Performance.PropertyArrayFixedMethod#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_2.vb)] [!code-csharp[FxCop.Performance.PropertyArrayFixedMethod#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_2.cs)]  
+### <a name="code"></a>コード  
+ [!code-vb[FxCop.Performance.PropertyArrayFixedMethod#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_2.vb)]
+ [!code-csharp[FxCop.Performance.PropertyArrayFixedMethod#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_2.cs)]  
   
-## <a name="return-a-collection-example"></a>Return a Collection Example  
+## <a name="return-a-collection-example"></a>コレクションを返す例  
   
-### <a name="description"></a>Description  
- The following example fixes the violation by changing the property to return a  
+### <a name="description"></a>説明  
+ 次の例は、返されるプロパティを変更することで違反を修正します。  
   
- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=fullName>.  
+ <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=fullName>。  
   
-### <a name="code"></a>Code  
- [!code-csharp[FxCop.Performance.PropertyArrayFixedCollection#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_3.cs)] [!code-vb[FxCop.Performance.PropertyArrayFixedCollection#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_3.vb)]  
+### <a name="code"></a>コード  
+ [!code-csharp[FxCop.Performance.PropertyArrayFixedCollection#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_3.cs)]
+ [!code-vb[FxCop.Performance.PropertyArrayFixedCollection#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_3.vb)]  
   
-## <a name="allowing-users-to-modify-a-property"></a>Allowing Users to Modify a Property  
+## <a name="allowing-users-to-modify-a-property"></a>プロパティを変更するユーザーを許可します。  
   
-### <a name="description"></a>Description  
- You might want to allow the consumer of the class to modify a property. The following example shows a read/write property that violates this rule.  
+### <a name="description"></a>説明  
+ クラスのプロパティを変更するコンシューマーを許可する場合があります。 次の例では、この規則に違反する読み取り/書き込みプロパティを示します。  
   
-### <a name="code"></a>Code  
- [!code-csharp[FxCop.Performance.PropertyModifyViolation#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_4.cs)] [!code-vb[FxCop.Performance.PropertyModifyViolation#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_4.vb)]  
+### <a name="code"></a>コード  
+ [!code-csharp[FxCop.Performance.PropertyModifyViolation#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_4.cs)]
+ [!code-vb[FxCop.Performance.PropertyModifyViolation#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_4.vb)]  
   
-### <a name="comments"></a>Comments  
- The following example fixes the violation by changing the property to return a <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName>.  
+### <a name="comments"></a>コメント  
+ 次の例は、返されるプロパティを変更することで違反を修正、<xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName>です。  
   
-### <a name="code"></a>Code  
- [!code-vb[FxCop.Performance.PropertyModifyFixed#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_5.vb)] [!code-csharp[FxCop.Performance.PropertyModifyFixed#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_5.cs)]  
+### <a name="code"></a>コード  
+ [!code-vb[FxCop.Performance.PropertyModifyFixed#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_5.vb)]
+ [!code-csharp[FxCop.Performance.PropertyModifyFixed#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_5.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1024: Use properties where appropriate](../code-quality/ca1024-use-properties-where-appropriate.md)
+## <a name="related-rules"></a>関連規則  
+ [CA1024: 適切な場所にプロパティを使用します](../code-quality/ca1024-use-properties-where-appropriate.md)

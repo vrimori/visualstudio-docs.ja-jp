@@ -1,34 +1,36 @@
 ---
-title: "while ステートメント (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "while_JavaScriptKeyword"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "ループ構造、while ステートメント"
-  - "while ステートメント"
+title: "while ステートメント (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: while_JavaScriptKeyword
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- loop structures, while statements
+- while statement
 ms.assetid: d63777cf-0e1a-4555-8d3a-334381001f48
-caps.latest.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: de64bf9181a0fc86a528fa7af21216b99530f217
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# while ステートメント (JavaScript)
-指定された条件が `false` になるまで \(一連の\) ステートメントを実行します。  
+# <a name="while-statement-javascript"></a>while ステートメント (JavaScript)
+指定された条件がなるまでステートメントまたは一連のステートメント実行`false`です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 while (expression) {  
@@ -36,20 +38,20 @@ while (expression) {
 }   
 ```  
   
-## Parameters  
+## <a name="parameters"></a>パラメーター  
  `expression`  
- Required.  ループの各反復処理の前にチェックするブール式を指定します。  `expression` が `true` の場合、ループが実行されます。  If `expression` is `false`, the loop is terminated.  
+ 必須です。 ループの各反復処理する前にチェックインされるブール式です。 場合`expression`は`true`ループを実行します。 場合`expression`は`false`ループは終了します。  
   
  `statements`  
- Optional.  `expression` が `true` の場合に実行する 1 つ以上のステートメントを指定します。  
+ 省略可能です。 場合に実行されるステートメントを 1 つまたは複数`expression`は`true`します。  
   
-## 解説  
- `while` ステートメントでは、ループが初めて実行される前に `expression` がチェックされます。  この時点で `expression` が `false` の場合、ループは一度も実行されません。  
+## <a name="remarks"></a>コメント  
+ `while`ステートメント チェック`expression`ループを最初に実行する前にします。 場合`expression`は`false`現時点では、ループは実行されません。  
   
-## 使用例  
- 次のコードは、`while` ステートメントの使用例です。  
+## <a name="example"></a>例  
+ 次の例は、`while` ステートメントの使用方法を示します。  
   
-```javascript  
+```JavaScript  
 var i = 0;  
 var j = 10;  
 while (i < 100) {  
@@ -63,10 +65,10 @@ document.write(i);
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [break ステートメント](../../javascript/reference/break-statement-javascript.md)   
  [continue ステートメント](../../javascript/reference/continue-statement-javascript.md)   
  [do...while ステートメント](../../javascript/reference/do-dot-dot-dot-while-statement-javascript.md)   

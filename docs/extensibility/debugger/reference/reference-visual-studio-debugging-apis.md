@@ -1,36 +1,38 @@
 ---
-title: "参照 (Visual Studio の Api のデバッグ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Debugging SDK の参照"
-  - "[デバッグの SDK] をデバッグするを参照します。"
-  - "デバッグ SDK リファレンス"
+title: "参照 (Visual Studio のデバッグ Api) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reference, Debugging SDK
+- debugging [Debugging SDK], reference
+- Debugging SDK, reference
 ms.assetid: 9810fc50-43c7-4916-9916-1cf333037b51
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 492b86581f567aa6bcca7f782e588ca82f1878f3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 参照 (Visual Studio の Api のデバッグ)
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-Visual Studio Debugging SDK の参照はデバッガーとコンポーネントのランタイム アーキテクチャと機能の基本的なモデルについて説明します。  ドキュメントで説明するインターフェイスやコンポーネントについていくつかの判断できるようにするインターフェイスを通じて定義される動作とは。  
+# <a name="reference-visual-studio-debugging-apis"></a>参照 (Visual Studio のデバッグ Api)
+Visual Studio Debugging SDK の参照は、実行時のアーキテクチャと、デバッガーとそのコンポーネントの機能の基本的なモデルを示しています。 ドキュメントは、記述されているインターフェイスを定義する動作とは別のコンポーネントとインターフェイスについてできるだけ少ない想定です。  
   
- 参照セクションの目的は同様にさまざまにサポートを一連の言語ランタイムおよびオペレーティング システムで指定できるようにします。  
+ 参照セクションの目的は、可能な言語、実行時間、およびオペレーティング システムのセットを多様なサポートを提供します。  
   
-## このセクションの内容  
- [API のリファレンス](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)  
- Visual Studio のデバッグ API の列挙子インターフェイスおよび構造体のドキュメントが含まれています。  
+## <a name="in-this-section"></a>このセクションの内容  
+ [API リファレンス](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)  
+ インターフェイス、列挙子、および Visual Studio のデバッグ API の構造体のドキュメントが含まれています。  
   
  [用語集](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md)  
- デバッグに関連する用語を定義します。  
+ デバッグ関連の用語とその定義の一覧を示します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio デバッガーの拡張性](../../../extensibility/debugger/visual-studio-debugger-extensibility.md)

@@ -1,47 +1,48 @@
 ---
-title: "Math.max 関数 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "max"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "max メソッド"
+title: "Math.max 関数 (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: max
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: max method
 ms.assetid: f3ea1b8a-5fd0-482a-971b-b7f8e2b9b7eb
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: adf66164346f3802d92f8e0de82356df49bad5fa
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# Math.max 関数 (JavaScript)
-指定された数式の中で大きい方の数式を返します。  
+# <a name="mathmax-function-javascript"></a>Math.max 関数 (JavaScript)
+指定された数値式のセットのうち、大きい方を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 Math.max([number1[, number2[... [, numberN]]]])   
 ```  
   
-## 解説  
- `number1, number2, ..., numberN` の省略可能な引数が評価される数値式です。  
+## <a name="remarks"></a>コメント  
+ 省略可能な`number1, number2, ..., numberN`引数が評価される数値式です。  
   
- 引数を指定しない場合の戻り値は、[Number.NEGATIVE\_INFINITY](../../javascript/reference/number-constants-javascript.md) に等しくなります。  いずれかの引数が `NaN` の場合、戻り値も `NaN` になります。  
+ 引数が指定されていない場合、戻り値は[Number.NEGATIVE_INFINITY](../../javascript/reference/number-constants-javascript.md)です。 場合、引数が`NaN`、戻り値も`NaN`します。  
   
-## 使用例  
- 次のコードに、2 つの式の大きい方を取得する方法の例を次のコードに示します。  
+## <a name="example"></a>例  
+ 次のコードは、2 つの式のうち、大きい方を取得する方法を示しています。  
   
-```javascript  
+```JavaScript  
 var x = Math.max(107 - 3,  48 * 90);  
 document.write(x);  
   
@@ -50,8 +51,8 @@ document.write(x);
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Math.min 関数](../../javascript/reference/math-min-function-javascript.md)

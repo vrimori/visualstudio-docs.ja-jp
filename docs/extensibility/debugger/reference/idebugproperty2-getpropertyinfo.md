@@ -1,76 +1,76 @@
 ---
-title: "IDebugProperty2::GetPropertyInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProperty2::GetPropertyInfo"
-helpviewer_keywords: 
-  - "IDebugProperty2::GetPropertyInfo"
+title: "IDebugProperty2::GetPropertyInfo |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProperty2::GetPropertyInfo
+helpviewer_keywords: IDebugProperty2::GetPropertyInfo
 ms.assetid: 39d6e942-df72-4c84-a5d9-a386d112714c
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 7769eab2bb7f160854b1961c27bcf2d3570cd4af
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProperty2::GetPropertyInfo
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-プロパティを説明する [DEBUG\_PROPERTY\_INFO](../../../extensibility/debugger/reference/debug-property-info.md) の構造体を取得します。  
+# <a name="idebugproperty2getpropertyinfo"></a>IDebugProperty2::GetPropertyInfo
+取得、 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)プロパティを記述する構造体。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetPropertyInfo (   
-   DEBUGPROP_INFO_FLAGS dwFields,  
-   DWORD                nRadix,  
-   DWORD                dwTimeout,  
-   IDebugReference2**   rgpArgs,  
-   DWORD                dwArgCount,  
-   DEBUG_PROPERTY_INFO* pPropertyInfo  
+```cpp  
+HRESULT GetPropertyInfo (   
+   DEBUGPROP_INFO_FLAGS dwFields,  
+   DWORD                nRadix,  
+   DWORD                dwTimeout,  
+   IDebugReference2**   rgpArgs,  
+   DWORD                dwArgCount,  
+   DEBUG_PROPERTY_INFO* pPropertyInfo  
 );  
 ```  
   
-```cpp#  
-int GetPropertyInfo (   
-   enum_DEBUGPROP_INFO_FLAGS dwFields,  
-   uint                      nRadix,  
-   uint                      dwTimeout,  
-   IDebugReference2[]        rgpArgs,  
-   uint                      dwArgCount,  
-   DEBUG_PROPERTY_INFO[]     pPropertyInfo  
+```cpp  
+int GetPropertyInfo (   
+   enum_DEBUGPROP_INFO_FLAGS dwFields,  
+   uint                      nRadix,  
+   uint                      dwTimeout,  
+   IDebugReference2[]        rgpArgs,  
+   uint                      dwArgCount,  
+   DEBUG_PROPERTY_INFO[]     pPropertyInfo  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `dwFields`  
- \[入力\] フィールドが `pPropertyInfo` の構造で表示するかを指定します [DEBUGPROP\_INFO\_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) の列挙体の値の組み合わせ。  
+ [in]値の組み合わせ、 [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)で入力するフィールドを指定する列挙体、`pPropertyInfo`構造体。  
   
  `nRadix`  
- \[入力\] 情報を数値書式で使用する小数点。  
+ [in]任意の数値情報を書式設定で使用する基数。  
   
  `dwTimeout`  
- \[出力\] このメソッドから制御が戻るまで待機するミリ秒単位の最大時間を指定します。  無期限に待機するために `INFINITE` を使用します。  
+ [in]このメソッドから戻る前に待機するミリ秒単位で最大の時間を指定します。 使用して`INFINITE`無制限に待機します。  
   
  `rgpArgs`  
- \[入力出力\] 将来使用するために予約されています ; null 値に設定します。  
+ [入力、出力].将来使用するために予約されていますnull 値に設定されます。  
   
  `dwArgCount`  
- \[入力\] 将来使用するために予約されています ; ゼロに設定します。  
+ [in]将来使用するために予約されています0 に設定します。  
   
  `pPropertyInfo`  
- \[入力\] プロパティの説明が格納されます [DEBUG\_PROPERTY\_INFO](../../../extensibility/debugger/reference/debug-property-info.md) の構造体。  
+ [out]A [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)プロパティの説明が入力構造です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コードを返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`; エラー コードを返しますそれ以外の場合。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
- [DEBUGPROP\_INFO\_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)   
+ [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)   
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)   
- [DEBUG\_PROPERTY\_INFO](../../../extensibility/debugger/reference/debug-property-info.md)
+ [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)

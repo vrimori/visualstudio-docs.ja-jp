@@ -1,42 +1,45 @@
 ---
-title: "valueOf メソッド (Boolean) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "valueOf メソッド (Boolean) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: ac6ad343-7663-406a-a2b7-4cc5025ca3d6
-caps.latest.revision: 2
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c36eda63fb38886df4d8bffec7cfdbb6c6d05eb8
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# valueOf メソッド (Boolean)
-指定されたブールのプリミティブ値を返します。  
+# <a name="valueof-method-boolean"></a>valueOf メソッド (Boolean)
+指定したブール型のプリミティブ値を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 boolean.valueOf()  
 ```  
   
-## 戻り値  
- ブールのプリミティブ値 \(true または false\) を返します。  
+## <a name="return-value"></a>戻り値  
+ ブール型のプリミティブ値 (true または false)。  
   
-## 解説  
- このメソッドの使用例を次のコードに示します。  
+## <a name="remarks"></a>コメント  
+ 次のコードでは、このメソッドを使用する方法を示します。  
   
-```javascript  
+```JavaScript  
 var bool = new Boolean("true");  
 var s = bool.valueOf();  
 document.write(s);  
@@ -45,5 +48,5 @@ document.write(s);
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv2](../../javascript/reference/includes/jsv2-md.md)]

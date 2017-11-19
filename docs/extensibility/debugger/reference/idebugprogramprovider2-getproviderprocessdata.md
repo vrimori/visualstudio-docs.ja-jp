@@ -1,84 +1,84 @@
 ---
-title: "IDebugProgramProvider2::GetProviderProcessData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramProvider2::GetProviderProcessData"
-helpviewer_keywords: 
-  - "IDebugProgramProvider2::GetProviderProcessData"
+title: "IDebugProgramProvider2::GetProviderProcessData |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgramProvider2::GetProviderProcessData
+helpviewer_keywords: IDebugProgramProvider2::GetProviderProcessData
 ms.assetid: 90cf7b7f-53d2-487e-b793-94501a6e24dd
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: ae46cd5e90b4cdd23b0c7fafa147c43805974283
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgramProvider2::GetProviderProcessData
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-指定したプロセスで実行中のプログラムの一覧を取得します。  
+# <a name="idebugprogramprovider2getproviderprocessdata"></a>IDebugProgramProvider2::GetProviderProcessData
+指定されたプロセスから実行しているプログラムの一覧を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT GetProviderProcessData(  
-   PROVIDER_FLAGS         Flags,  
-   IDebugDefaultPort2*    pPort,  
-   AD_PROCESS_ID          processId,  
-   CONST_GUID_ARRAY       EngineFilter,  
-   PROVIDER_PROCESS_DATA* pProcess  
+HRESULT GetProviderProcessData(  
+   PROVIDER_FLAGS         Flags,  
+   IDebugDefaultPort2*    pPort,  
+   AD_PROCESS_ID          processId,  
+   CONST_GUID_ARRAY       EngineFilter,  
+   PROVIDER_PROCESS_DATA* pProcess  
 );  
 ```  
   
-```c#  
-int GetProviderProcessData(  
-   enum_PROVIDER_FLAGS     Flags,  
-   IDebugDefaultPort2      pPort,  
-   AD_PROCESS_ID           ProcessId,  
-   CONST_GUID_ARRAY        EngineFilter,  
-   PROVIDER_PROCESS_DATA[] pProcess  
+```csharp  
+int GetProviderProcessData(  
+   enum_PROVIDER_FLAGS     Flags,  
+   IDebugDefaultPort2      pPort,  
+   AD_PROCESS_ID           ProcessId,  
+   CONST_GUID_ARRAY        EngineFilter,  
+   PROVIDER_PROCESS_DATA[] pProcess  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `Flags`  
- \[入力\] [PROVIDER\_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) の列挙体のフラグの組み合わせ。  次のフラグはこの呼び出しのために一般的です :  
+ [in]フラグの組み合わせ、 [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)列挙します。 次のフラグがこの呼び出しに一般的です。  
   
-|フラグ|Description|  
-|---------|-----------------|  
-|`PFLAG_REMOTE_PORT`|呼び出し元はリモート コンピューターで実行されています。|  
-|`PFLAG_DEBUGGEE`|呼び出し元が現在デバッグ中 \(配置に関する追加情報は各ノードに対してを返します\)。|  
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|呼び出し元がにアタッチされているデバッガーによって呼び出されます。|  
-|`PFLAG_GET_PROGRAM_NODES`|呼び出し元はプログラムのノードの一覧を返すことを依頼します。|  
+|フラグ|説明|  
+|----------|-----------------|  
+|`PFLAG_REMOTE_PORT`|呼び出し元は、リモート マシンで実行されています。|  
+|`PFLAG_DEBUGGEE`|呼び出し元は現在デバッグされている (ノードごとにマーシャ リングに関する追加情報が返されます)。|  
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|呼び出し元にアタッチされているが、デバッガーによって起動されません。|  
+|`PFLAG_GET_PROGRAM_NODES`|呼び出し元は、返されるプログラム ノードのリストが求めています。|  
   
  `pPort`  
- \[入力\] 呼び出しプロセスが実行されているポート。  
+ [in]ポートが呼び出しプロセスが行われています。  
   
  `processId`  
- \[入力\] 対象のプログラムを含むプロセスの ID を保持 [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md) の構造体。  
+ [in][AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)対象のプログラムを含むプロセスの ID を保持する構造体。  
   
  `EngineFilter`  
- \[出力\] このプロセスのデバッグ用のデバッグ エンジンの GUID の配列 \(基づいて指定されたエンジンのサポートに実際に返されるフィルター処理にこれらのプログラムを使用します ; エンジンが指定されていない場合すべてのプログラムが返されます\)。  
+ [in]このプロセスを (それらが使用されますに基づいて指定されたエンジンのサポート。 エンジンが指定されていない場合、すべてのプログラムが返されますが、実際に返されるプログラムをフィルター処理する) をデバッグに割り当てられているデバッグ エンジンの Guid の配列。  
   
  `pProcess`  
- \[入力\] 要求された情報が格納される [PROVIDER\_PROCESS\_DATA](../../../extensibility/debugger/reference/provider-process-data.md) の構造体。  
+ [out]A [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)構造を要求された情報が入力されます。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- このメソッドはプロセスによって通常プロセスで実行されているプログラムの一覧を取得します。  返された情報は [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) オブジェクトのリストです。  
+## <a name="remarks"></a>コメント  
+ このメソッドは通常、そのプロセスで実行するプログラムの一覧を取得するプロセスによって呼び出されます。 返される情報の一覧は、 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)オブジェクト。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)   
  [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)   
- [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md)   
- [CONST\_GUID\_ARRAY](../../../extensibility/debugger/reference/const-guid-array.md)   
- [PROVIDER\_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)   
- [PROVIDER\_PROCESS\_DATA](../../../extensibility/debugger/reference/provider-process-data.md)   
+ [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)   
+ [CONST_GUID_ARRAY](../../../extensibility/debugger/reference/const-guid-array.md)   
+ [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)   
+ [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

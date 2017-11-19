@@ -1,56 +1,56 @@
 ---
-title: "IDebugEngineLaunch2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngineLaunch2"
-helpviewer_keywords: 
-  - "IDebugEngineLaunch2 インターフェイス"
+title: "IDebugEngineLaunch2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugEngineLaunch2
+helpviewer_keywords: IDebugEngineLaunch2 interface
 ms.assetid: 5eaf2ad8-3fbf-446e-b48b-5327ad3f5255
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 989bea1fc3398be376c7c2d5c41ce390e59c228f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugEngineLaunch2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-プログラムを起動し終了するときにデバッグ エンジン \(DE\) によって使用されます。  
+# <a name="idebugenginelaunch2"></a>IDebugEngineLaunch2
+起動およびプログラムを終了するデバッグ エンジン (DE) で使用します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
-IDebugEngineLaunch2 : IDebugEngine2  
+IDebugEngineLaunch2 : IDebugEngine2  
 ```  
   
-## 実装についてのメモ  
- このインターフェイスはカスタム de\-DE にカスタム ポートによって完全に処理できないプロセスを起動するための特別な要件がある場合実行されます。  これはインタープリターしますがプロセスのデバッグはスクリプトである場合に同じです : インタープリターが最初に起動する必要があります。にスクリプトが読み込まれ開始されます。  ポートはインタープリターに起動できますがスクリプト \(de\-DE にロールを持つ場合\) である特別な処理を必要とする場合があります。  このインターフェイスは処理するカスタム ポートができないプログラムを起動するための固有の要件がある場合にだけ実行されます。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ このインターフェイスは、カスタム ポートでまったく処理できない、プロセスを起動するための特別な要件がある場合、カスタム DE によって実装されます。 これは、通常、ケース、DE、インタープリターの一部であるし、デバッグ中のプロセスは、スクリプト: インタープリターが最初を起動する必要があると、スクリプトが読み込まれ、起動し、します。 ポートは、インタープリターを起動できますが、スクリプトは特別な処理 (つまり、DE がロールを持つ) 必要があります。 カスタム ポートを処理できないプログラムを起動するための一意の要件がある場合にのみ、このインターフェイスを実装します。  
   
-## 呼び出し元のメモ  
- このインターフェイスはデバッグ セッションのマネージャー \(SDM\) によって SDM が [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) のインターフェイスからこのインターフェイスを取得できますが呼び出されます \(QueryInterface を使用します。  このインターフェイスを取得できますがSDM は de\-DE には特別な要件があることを確認しポートの起動が表示される代わりにプログラムを起動するにはこのインターフェイスをにを呼び出します。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ このインターフェイスと呼ばれるセッション デバッグ マネージャー (SDM) によって、SDM はこのインターフェイスを取得できる場合から、 [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)インターフェイス (QueryInterface を使用)。 このインターフェイスを取得できること、DE 特別な要件があり、これを起動し、ポートではなくプログラムを起動するには、このインターフェイスを呼び出し、SDM 認識しています。  
   
-## Vtable の順序でメソッド  
- 次の表は `IDebugEngineLaunch2` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugEngineLaunch2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)|でプロセスを開始します。|  
-|[ResumeProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md)|再開が実行を処理します。|  
-|[CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md)|プロセスを終了できるかどうかを判定します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)|デを使用して、プロセスを起動します。|  
+|[ResumeProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md)|再開では、実行を処理します。|  
+|[CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md)|プロセスが終了するかどうかを判断します。|  
 |[TerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-terminateprocess.md)|プロセスを終了します。|  
   
-## 必要条件  
- ヘッダー : Msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

@@ -1,12 +1,10 @@
 ---
-title: Late Binding in Office Solutions | Microsoft Docs
+title: "Office ソリューションの遅延バインディング |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,61 +16,62 @@ helpviewer_keywords:
 - automation [Office development in Visual Studio], casting objects
 - casting, object to specific type
 ms.assetid: 80b0d23e-df68-4ea9-a02b-238aee8ca9c0
-caps.latest.revision: 49
-author: kempb
-ms.author: kempb
+caps.latest.revision: "49"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: a028772bd74c8160724f34e71489674809b8188f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 932a7ccc3f52d80e4f75999f401c61b2663095f5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="late-binding-in-office-solutions"></a>Late Binding in Office Solutions
-  Some types in the object models of Office applications provide functionality that is available through late-binding features. For example, some methods and properties can return different types of objects depending on the context of the Office application, and some types can expose different methods or properties in different contexts.  
+# <a name="late-binding-in-office-solutions"></a>Office ソリューションの遅延バインディング
+  Office アプリケーションのオブジェクト モデルの種類によっては、遅延バインディング機能を介して使用可能な機能を提供します。 たとえば、一部のメソッドとプロパティは、異なる種類の Office アプリケーションのコンテキストによってオブジェクトを返すことができ、一部の型は、さまざまな方法または別のコンテキストでのプロパティを公開できます。  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
- Visual Basic projects where **Option Strict** is off and Visual C# projects that target the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] can work directly with types that employ these late-binding features.  
+ Visual Basic プロジェクト where **Option Strict** off および Visual c# プロジェクトをターゲットとするには、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]または[!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]これら遅延バインディングの機能を利用している型を直接操作できます。  
   
-## <a name="implicit-and-explicit-casting-of-object-return-values"></a>Implicit and Explicit Casting of Object Return Values  
- Many methods and properties in the Microsoft Office primary interop assemblies (PIAs) return <xref:System.Object> values, because they can return several different types of objects. For example, the <xref:Microsoft.Office.Tools.Excel.Workbook.ActiveSheet%2A> property returns an <xref:System.Object> because its return value can be a <xref:Microsoft.Office.Interop.Excel.Worksheet> or <xref:Microsoft.Office.Interop.Excel.Chart> object, depending on what the active sheet is.  
+## <a name="implicit-and-explicit-casting-of-object-return-values"></a>オブジェクトの戻り値の明示的および暗黙的なキャスト  
+ 多くのメソッドとプロパティには、Microsoft Office プライマリ相互運用機能アセンブリ (Pia) を返す<xref:System.Object>値は、いくつかの異なる種類のオブジェクトを返せるためです。 たとえば、<xref:Microsoft.Office.Tools.Excel.Workbook.ActiveSheet%2A>プロパティから返される、<xref:System.Object>その戻り値ができるので、<xref:Microsoft.Office.Interop.Excel.Worksheet>または<xref:Microsoft.Office.Interop.Excel.Chart>によっては、アクティブなシート オブジェクトです。  
   
- When a method or property returns a <xref:System.Object>, you must explicitly convert (in Visual Basic) the object to the correct type in Visual Basic projects where **Option Strict** is on. You do not have to explicitly cast <xref:System.Object> return values in Visual Basic projects where **Option Strict** is off.  
+ メソッドまたはプロパティが返されるときに、 <xref:System.Object>、する必要があります明示的に変換する (Visual Basic) のオブジェクトを Visual Basic プロジェクトで正しい型場所**Option Strict**にします。 明示的にキャストする必要はありません<xref:System.Object>Visual Basic プロジェクトで値を返す場所**Option Strict**がオフです。  
   
- In most cases, the reference documentation lists the possible types of the return value for a member that returns an <xref:System.Object>. Converting or casting the object enables IntelliSense for the object in the Code Editor.  
+ ほとんどの場合、参照ドキュメントを返すメンバーの戻り値の種類を一覧表示、<xref:System.Object>です。 オブジェクトをキャストまたは変換オブジェクト コード エディターでの IntelliSense を有効にします。  
   
- For information about conversion in Visual Basic, see [Implicit and Explicit Conversions &#40;Visual Basic&#41;](/dotnet/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions) and [CType Function &#40;Visual Basic&#41;](/dotnet/visual-basic/language-reference/functions/ctype-function).  
+ Visual Basic での変換については、次を参照してください。[暗黙的および明示的な変換 &#40;です。Visual Basic &#41;](/dotnet/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions)と[CType 関数 &#40;です。Visual Basic &#41;](/dotnet/visual-basic/language-reference/functions/ctype-function).  
   
-### <a name="examples"></a>Examples  
- The following code example demonstrates how to cast an object to a specific type in a Visual Basic project where **Option Strict** is on. In this type of project, you must explicitly cast the <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Cells%2A> property to a <xref:Microsoft.Office.Interop.Excel.Range>. This example requires a document-level Excel project with a worksheet class named `Sheet1`.  
+### <a name="examples"></a>例  
+ 次のコード例を Visual Basic プロジェクトでオブジェクトを特定の型にキャストする方法を示しています、 **Option Strict**にします。 このプロジェクトの種類である必要があります明示的にキャストする、<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Cells%2A>プロパティを<xref:Microsoft.Office.Interop.Excel.Range>です。 この例では、という名前のワークシート クラスとドキュメント レベルの Excel プロジェクトが必要があります`Sheet1`です。  
   
  [!code-vb[Trin_VstcoreProgramming#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#9)]  
   
- The following code example demonstrates how to implicitly cast an object to a specific type in a Visual Basic project where **Option Strict** is off or in a Visual C# project that targets the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]. In these types of projects, the <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Cells%2A> property is implicitly cast to a <xref:Microsoft.Office.Interop.Excel.Range>. This example requires a document-level Excel project with a worksheet class named `Sheet1`.  
+ 次のコード例を Visual Basic プロジェクトでオブジェクトを特定の型に暗黙的にキャストする方法を示しています、 **Option Strict**入っていないか、Visual c# プロジェクトを対象とする、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]です。 これらの種類のプロジェクトで、<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Cells%2A>プロパティに暗黙的にキャスト、<xref:Microsoft.Office.Interop.Excel.Range>です。 この例では、という名前のワークシート クラスとドキュメント レベルの Excel プロジェクトが必要があります`Sheet1`です。  
   
- [!code-vb[Trin_VstcoreProgramming#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#10)] [!code-csharp[Trin_VstcoreProgramming#10](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs#10)]  
+ [!code-vb[Trin_VstcoreProgramming#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#10)]
+ [!code-csharp[Trin_VstcoreProgramming#10](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs#10)]  
   
-## <a name="accessing-members-that-are-available-only-through-late-binding"></a>Accessing Members That Are Available Only Through Late Binding  
- Some properties and methods in the Office PIAs are available only through late binding. In Visual Basic projects where **Option Strict** is off or in Visual C# projects that target the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], you can use the late binding features in these languages to access late-bound members. In Visual Basic projects where **Option Strict** is on, you must use reflection to access these members.  
+## <a name="accessing-members-that-are-available-only-through-late-binding"></a>遅延バインディングでのみ利用可能なメンバーへのアクセス  
+ 一部のプロパティと、Office Pia のメソッドは、遅延バインディングを介してのみ使用します。 Visual Basic のプロジェクトの場所**Option Strict**がオフまたは Visual c# プロジェクトをターゲットとする、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]または[!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]、遅延バインディング メンバーにアクセスするこれらの言語で遅延バインディング機能を使用することができます。 Visual basic プロジェクト where **Option Strict**は、リフレクションを使用してこれらのメンバーにアクセスする必要があります。  
   
-### <a name="examples"></a>Examples  
- The following code example demonstrates how to access late-bound members in a Visual Basic project where **Option Strict** is off or in a Visual C# project that targets the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]. This example accesses the late-bound **Name** property of the **File Open** dialog box in Word. To use this example, run it from the `ThisDocument` or `ThisAddIn` class in a Word project.  
+### <a name="examples"></a>例  
+ 次のコード例を Visual Basic プロジェクトで遅延バインディング メンバーにアクセスする方法を示しています、 **Option Strict**入っていないか、Visual c# プロジェクトを対象とする、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]です。 この例は、遅延バインディング**名前**のプロパティ、**ファイルを開く**Word のダイアログ ボックス。 この例を使用する実行から、`ThisDocument`または`ThisAddIn`Word プロジェクトのクラスです。  
   
- [!code-vb[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#122)] [!code-csharp[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#122)]  
+ [!code-vb[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#122)]
+ [!code-csharp[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#122)]  
   
- The following code example demonstrates how to use reflection to accomplish the same task in a Visual Basic project where **Option Strict** is on.  
+ 次のコード例では、リフレクションを使用して、Visual Basic プロジェクトで同じタスクを実行する場所**Option Strict**にします。  
   
  [!code-vb[Trin_VstcoreWordAutomation#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#102)]  
   
-## <a name="see-also"></a>See Also  
- [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)   
- [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)   
- [Using Type dynamic &#40;C&#35; Programming Guide&#41;](/dotnet/csharp/programming-guide/types/using-type-dynamic)   
- [Option Strict Statement](/dotnet/visual-basic/language-reference/statements/option-strict-statement)   
- [Reflection (C#)](/dotnet/csharp/programming-guide/concepts/reflection)  
- [Reflection (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/reflection)  
- [Designing and Creating Office Solutions](../vsto/designing-and-creating-office-solutions.md)  
+## <a name="see-also"></a>関連項目  
+ [Office ソリューションのコードの記述](../vsto/writing-code-in-office-solutions.md)   
+ [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)   
+ [Dynamic 型 &#40; を使用します。C &#35;です。プログラミング ガイド &#41;](/dotnet/csharp/programming-guide/types/using-type-dynamic)   
+ [Option Strict ステートメント](/dotnet/visual-basic/language-reference/statements/option-strict-statement)   
+ [リフレクション (C#)](/dotnet/csharp/programming-guide/concepts/reflection)  
+ [リフレクション (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/reflection)  
+ [Office ソリューションのデザインと作成](../vsto/designing-and-creating-office-solutions.md)  
   
   

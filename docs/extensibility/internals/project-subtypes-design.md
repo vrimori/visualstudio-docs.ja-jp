@@ -1,93 +1,94 @@
 ---
-title: "プロジェクトのサブタイプの設計 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プロジェクトのサブタイプの設計"
+title: "Project 型のサブタイプ デザイン |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: project subtypes, design
 ms.assetid: 405488bb-1362-40ed-b0f1-04a57fc98c56
-caps.latest.revision: 32
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 32
+caps.latest.revision: "32"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 70d16c90ad8ef4837ad9d131e46ed2027dd6c543
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# プロジェクトのサブタイプの設計
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-プロジェクトのサブタイプはVSPackages が Microsoft Build Engine \(MSBuild\) に基づいてプロジェクトを拡張できるようにします。  集計の使用は[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] で実行されるコア マネージ プロジェクト システムの大部分を再利用するために特定のシナリオにおける動作をカスタマイズできるようにします。  
+# <a name="project-subtypes-design"></a>プロジェクトのサブタイプの設計
+プロジェクトのサブタイプは、Microsoft Build Engine (MSBuild) に基づくプロジェクトを拡張する Vspackage を使用できます。 集計の使用、コア管理プロジェクト システムで実装の大部分を再利用できます。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]まだ特定のシナリオの動作をカスタマイズします。  
   
- 次のトピックではプロジェクトのサブタイプの基本デザインと実装の詳細 :  
+ 次のトピックでは、基本的な設計と実装のプロジェクト サブタイプのについて詳しく説明します。  
   
--   プロジェクトのサブタイプのデザイン。  
+-   プロジェクトのサブタイプ設計します。  
   
--   複数レベルの総計。  
+-   複数レベルの集計です。  
   
--   インターフェイスのサポート。  
+-   インターフェイスをサポートします。  
   
-## プロジェクトのサブタイプのデザイン  
- プロジェクトのサブタイプの初期化は <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject> の主要な <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> とオブジェクトの集約します。  この集計はプロジェクトの基本機能のほとんどをオーバーライドしたりすることなくプロジェクトのサブタイプを有効にします。  プロジェクトのサブタイプは<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> と <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> を使用して <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> プロパティを使用してコマンドおよび <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3> を使用してプロジェクト項目管理を行う最初の可能性を取得します。  プロジェクトのサブタイプは拡張できます :  
+## <a name="project-subtype-design"></a>プロジェクトのサブタイプの設計  
+ プロジェクトのサブタイプの初期化は、メインを集計することによって実現<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>オブジェクト。 この集計は、プロジェクトのサブタイプをオーバーライドしたり、ほとんどの基本プロジェクトの機能を拡張したりできます。 プロジェクトのサブタイプを使用してプロパティを処理する最初の機会を取得する<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>、コマンドを使用して<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>、プロジェクト項目を使用して管理および<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>です。 プロジェクトのサブタイプを拡張することがもできます。  
   
 -   プロジェクト構成オブジェクト。  
   
--   構成依存のオブジェクト。  
+-   構成に依存するオブジェクト。  
   
--   構成に依存しないオブジェクトを参照します。  
+-   構成に依存しない参照オブジェクト。  
   
--   プロジェクト オートメーション オブジェクト。  
+-   オートメーション オブジェクトを射影します。  
   
--   プロジェクト オートメーションのプロパティ コレクション。  
+-   プロジェクトのオートメーション プロパティのコレクション。  
   
- プロジェクトのサブタイプによる拡張機能の詳細については[プロパティとプロジェクトのサブタイプによって拡張メソッド](../../extensibility/internals/properties-and-methods-extended-by-project-subtypes.md) を参照してください。  
+ プロジェクトのサブタイプで拡張機能の詳細については、次を参照してください。[プロパティとメソッドは、プロジェクトのサブタイプで拡張](../../extensibility/internals/properties-and-methods-extended-by-project-subtypes.md)です。  
   
-##### ポリシー ファイル  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の環境はポリシー ファイルの実装のプロジェクトのサブタイプを基本プロジェクト システムを拡張する例を示します。  ポリシー ファイルはソリューション エクスプローラーENT0ENT \[出力\] ダイアログ ボックス \[ENT1ENT\] ダイアログ ボックスと \[ENT2ENT\] ダイアログ ボックスのある機能を管理すること [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の環境を可能にします。  ポリシーのサブタイプは<xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg>`IOleCommandTarget` と <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> の実装によってこれらの機能をオーバーライドおよび拡張します。  
+##### <a name="policy-files"></a>ポリシー ファイル  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]環境には、ポリシー ファイルの実装でのプロジェクト サブタイプに基本プロジェクト システムの拡張の例が用意されています。 ポリシー ファイルを使用しての整形、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ソリューション エクスプ ローラーが含まれた機能を管理することによって環境**プロジェクトの追加**ダイアログ ボックスで、**新しい項目の追加** ダイアログ ボックスおよび**プロパティ** ダイアログ ボックス。 ポリシー サブタイプが上書きされ、これらの機能を強化<xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg>、`IOleCommandTarget`と<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>実装します。  
   
-##### 集計の機能  
- この環境でプロジェクトのサブタイプの集計の機能は集計の複数のレベルをサポートしておりそれ以上の flavoring によって実装されている高度なサブタイプを風味が付けられたプロジェクトします。  またはプロジェクトのサブタイプをサポートするオブジェクトは<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg> などレイヤー表示の複数のレベルを使用するように設計されています。  内部のサブタイプまたは基本プロジェクトを有効にする COM クライアントと COM の集計の制約の影響を受ける規則はデリゲートのメソッド呼び出しと管理の参照カウントに含めるプロジェクトのサブタイプ基本的にプロジェクトのプログラムを作成する必要があります。  つまり集約をサポートするために集計されたプロジェクトはプログラムする必要があります。  
+##### <a name="aggregation-mechanism"></a>集計メカニズム  
+ 環境内のプロジェクト サブタイプ集計メカニズムには、複数レベルのため、高度なサブタイプさらに flavoring フレーバー プロジェクトによって実装されることが、集計がサポートしています。 また、プロジェクトのサポート オブジェクトは、サブタイプなど<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg>、重ね順の複数のレベルを許可するよう設計されています。 COM と COM の制約に従って集計ルール、プロジェクトのサブタイプと基本プロジェクト必要がありますに正しく参加メソッドの呼び出しを委任し、参照カウントを管理するには、内部のサブタイプまたはベースのプロジェクトを有効に協調的なプログラムを作成するには. 集計するプロジェクトは、集計をサポートするためにプログラムを作成します。  
   
- 次の図は複数レベルのプロジェクトのサブタイプの集計のグラフィカル的な表現を示します。  
+ 次の図は、複数レベルのプロジェクト サブタイプ集計の概略表現を示します。  
   
- ![Visual Studio マルチレベル projectflavor グラフィック](~/extensibility/internals/media/vs_multilevelprojectflavor.gif "VS\_MultilevelProjectFlavor")  
-複数レベルのプロジェクトのサブタイプ  
+ ![Visual Studio マルチレベル projectflavor グラフィック](../../extensibility/internals/media/vs_multilevelprojectflavor.gif "VS_MultilevelProjectFlavor")  
+複数レベルのプロジェクト サブタイプ  
   
- 複数レベルのプロジェクトのサブタイプの集合で 3 レベルプロジェクトのサブタイプで集計する基本プロジェクトから高度なプロジェクトのサブタイプすると集計する構成されます。  図は[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] プロジェクトのサブタイプ アーキテクチャの一部がサポートするインターフェイスの一部について説明します。  
+ 複数レベルのプロジェクト サブタイプ集計は、基本プロジェクト、プロジェクトのサブタイプを使用して集計し、さらに、高度なプロジェクトのサブタイプを使用して集計する、3 つのレベルで構成されます。 一部として用意されているサポート インターフェイスの一部で、図に焦点を当てています、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]プロジェクトのサブタイプ アーキテクチャ。  
   
-##### 配置機能  
- プロジェクトのサブタイプからの基本プロジェクト システム機能の多くの内側に配置機能です。  プロジェクトのサブタイプは<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider> の QueryInterface を呼び出して取得された構成インターフェイスを実装することで配置の機能に影響します \(<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> と <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> など\)。  プロジェクトのサブタイプと高度なプロジェクトのサブタイプの両方が異なる構成の実装を追加する場合高度なプロジェクトのサブタイプの `IUnknown`Foundation プロジェクトの呼び出し `QueryInterface`。  内部のプロジェクトのサブタイプを行うとプロジェクトの構成の実装が含まれている場合は実装への高度なプロジェクトの SubType デリゲートはプロジェクトのサブタイプに用意されています。  1 個の集約レベルから別の状態に維持できる状態非永続化ファイル プロジェクトにビルドするプロジェクトのサブタイプのすべてのレベル <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> 関連 XML データを実行します。  詳細については、「[MSBuild プロジェクト ファイルでデータを保持します。](../../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)」を参照してください。   プロジェクトのサブタイプのオートメーション エクステンダーを取得するに <xref:EnvDTE80.IInternalExtenderProvider> 機能は として実装されます。  
+##### <a name="deployment-mechanisms"></a>展開メカニズム  
+ 基本プロジェクト システムの多くの間では、プロジェクトのサブタイプで強化された機能は、展開の機構です。 プロジェクトのサブタイプ構成インターフェイスを実装することによって展開メカニズムに影響を与えます (など<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg>) での QueryInterface を呼び出すことにより取得される<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider>です。 基本のプロジェクトを呼び出すシナリオでは、プロジェクトのサブタイプと高度なプロジェクトのサブタイプの両方が別の構成の実装を追加する場所、`QueryInterface`で高度なプロジェクトのサブタイプの`IUnknown`します。 内部のプロジェクトのサブタイプに基本プロジェクトが要求している構成の実装が含まれている場合、高度なプロジェクトのサブタイプは、内部のプロジェクトのサブタイプで提供される実装に委任されます。 1 つの集計レベルから別の状態を維持するためのメカニズム、全レベルのプロジェクト サブタイプ実装<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>ビルド非永続化するには、プロジェクト ファイルに XML データを関連します。 詳細については、次を参照してください。 [MSBuild プロジェクト ファイル内のデータの永続化](../../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)です。 <xref:EnvDTE80.IInternalExtenderProvider>プロジェクト サブタイプからオートメーション エクステンダーを取得するためのメカニズムとして実装されます。  
   
- 次の図はオートメーション エクステンダーの実装にプロジェクト構成されたオブジェクトを参照しますが基本プロジェクト システムを拡張するにはプロジェクトのサブタイプに使用するついて説明します。  
+ 次の図は、焦点を当てていますプロジェクト構成の参照オブジェクトをオートメーション エクステンダー実装の具体的には、プロジェクトのサブタイプ基本プロジェクト システムを拡張するために使用します。  
   
- ![VS プロジェクト フレーバー オート エクステンダー グラフィック](~/extensibility/internals/media/vs_projectflavorautoextender.gif "VS\_ProjectFlavorAutoExtender")  
-プロジェクトのサブタイプのオートメーション エクステンダー。  
+ ![VS プロジェクト フレーバー オート エクステンダー グラフィック](../../extensibility/internals/media/vs_projectflavorautoextender.gif "VS_ProjectFlavorAutoExtender")  
+プロジェクトのサブタイプのオートメーション エクステンダーです。  
   
- プロジェクトのサブタイプはオートメーション オブジェクト モデルを拡張することにより基本プロジェクト システムを拡張できます。  これらがとして DTE オートメーション オブジェクトの部分定義されプロジェクトのオブジェクト`ProjectItem` のオブジェクトと `Configuration` のオブジェクトを拡張するために使用されます。  詳細については、「[ベースのプロジェクトのオブジェクト モデルの拡張](../../extensibility/internals/extending-the-object-model-of-the-base-project.md)」を参照してください。  
+ プロジェクトのサブタイプは、オートメーション オブジェクト モデルを拡張することにより、基本プロジェクト システムをさらに拡張できます。 これらは DTE オートメーション オブジェクトの一部として定義され、プロジェクト オブジェクトを拡張するために使用、`ProjectItem`オブジェクトおよび`Configuration`オブジェクト。 詳細については、「[ベース プロジェクトのオブジェクト モデルの拡張](../../extensibility/internals/extending-the-object-model-of-the-base-project.md)です。  
   
-## 複数レベルの集計  
- 低レベルのプロジェクトのサブタイプをラップするプロジェクトのサブタイプの実装はプロジェクトのサブタイプが正しく機能する協調的に設定する必要があります。  プログラミングの責任の一覧を次に示します。:  
+## <a name="multi-level-aggregation"></a>複数レベルの集計  
+ 下位レベルのプロジェクト サブタイプをラップするプロジェクトのサブタイプ実装は、内部のプロジェクトのサブタイプが正常に機能を使用できるように協調的なプログラムを作成する必要があります。 プログラミングの責任の一覧は次のとおりです。  
   
--   内部のサブタイプをラップするプロジェクトのサブタイプの <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> の実装は <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> に <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A><xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A> とメソッドの両方の内部のプロジェクトのサブタイプの実装に代入する必要があります。  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>に代行させる内部のサブタイプの折り返しはプロジェクトのサブタイプの実装、<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>両方の内部プロジェクトのサブタイプの実装<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A>と<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A>メソッドです。  
   
--   ラッパーのプロジェクトのサブタイプの <xref:EnvDTE80.IInternalExtenderProvider> の実装はプロジェクトのサブタイプのスキーマに移動する必要があります。  特に名前の文字列を内部のプロジェクトのサブタイプから取得しエクステンダーとして追加する文字列を連結する必要の <xref:EnvDTE80.IInternalExtenderProvider.GetExtenderNames%2A> を実装します。  
+-   <xref:EnvDTE80.IInternalExtenderProvider>ラッパー プロジェクトのサブタイプの実装をその内部のプロジェクト サブタイプに委任する必要があります。 特にの実装で<xref:EnvDTE80.IInternalExtenderProvider.GetExtenderNames%2A>内部プロジェクトのサブタイプから名の文字列を取得し、extender として追加する文字列を連結する必要があります。  
   
--   ラッパーのプロジェクトのサブタイプの <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider> の実装はラッパーのプロジェクトの SubType 構成オブジェクトであることを行うとプロジェクトの構成オブジェクトに直接対応のためのプロジェクト内部のサブタイプの <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg> のオブジェクトをインスタンス化しプライベート デリゲートとして適用する必要があります。  アンマネージ プロジェクトのサブタイプは最初に直接処理する構成インターフェイスをクリックし内部のプロジェクトのサブタイプの <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg.get_CfgType%2A> の実装に他の処理します。  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider>ラッパー プロジェクト サブタイプの実装のインスタンスを作成する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg>オブジェクト、内部のプロジェクトのサブタイプ、押したままにプライベートのデリゲートとして後だけで、基本プロジェクトのプロジェクト構成のオブジェクトが直接ことを認識ラッパープロジェクトのサブタイプ構成オブジェクトが存在します。 外部プロジェクトのサブタイプを直接処理する必要がある構成インターフェイスを最初に選択しの内部のプロジェクト サブタイプの実装に残りの部分を委任<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg.get_CfgType%2A>です。  
   
-## インターフェイスのサポート  
- 基本プロジェクトは実装のさまざまな側面を拡張するプロジェクトのサブタイプによって追加されたサポートするインターフェイスの呼び出しに委任します。  これは拡張プロジェクト構成オブジェクトとさまざまなプロパティ ブラウザーのオブジェクトが含まれます。  これらのインターフェイスは最も外側のプロジェクトのサブタイプ アグリゲーターの `punkOuter` \(`IUnknown` へのポインター\) `QueryInterface` を呼び出して取得されます。  
+## <a name="supporting-interfaces"></a>インターフェイスのサポート  
+ 基本のプロジェクトは、その実装のさまざまな側面を拡張するインターフェイスのプロジェクトのサブタイプで追加のサポートへの呼び出しを代行させます。 これには、プロジェクト構成のオブジェクトとさまざまなプロパティ ブラウザーのオブジェクトの拡張が含まれます。 これらのインターフェイスを呼び出すことによって取得されます`QueryInterface`で`punkOuter`(へのポインター、 `IUnknown`) 最も外側のプロジェクト サブタイプ アグリゲーターのです。  
   
-|Interface|サブタイプを参照してください|  
-|---------------|--------------------|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg>|プロジェクトのサブタイプを使用する :<br /><br /> -   <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> の実装を用意します。<br />-   プロジェクトのサブタイプを <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg> の独自の実装を提供することによってデバッガーの起動を制御します。<br />-   適切に <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.QueryDebugLaunch%2A> の実装の `DBGLAUNCH_DesignTimeExprEval` の例を処理することにより無効のデザイン時の式評価。|  
-|<xref:EnvDTE80.IInternalExtenderProvider>|プロジェクトのサブタイプを使用する :<br /><br /> -   プロジェクト構成の個別のプロパティを追加または削除するプロジェクトの <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> を拡張します。<br />-   プロジェクトのオートメーション オブジェクト <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>\(\) を拡張します。<br /><br /> 上のプロパティ値は <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> の列挙体から取得されます。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject>|プロジェクトのサブタイプを参照するオブジェクトを <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg> にプロジェクト構成を持つオブジェクトを割り当てることができます。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsBrowseObject>|プロジェクトのサブタイプを <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> にマップするようにまたはプロジェクトの構成が `VSITEMID` のオブジェクトでオブジェクトを参照します。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>|プロジェクトのサブタイプを任意の XML の構造化データをプロジェクト ファイルに保持できるようにします \(.csproj または .vbproj\)。  このデータはMSBuild に表示されません。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>|プロジェクトのサブタイプを使用する :<br /><br /> -   保存する MSBuild の新しいプロパティを追加します。<br />-   MSBuild からの削除の不要なプロパティ。<br />-   MSBuild プロパティの現在の値を照会します。<br />-   MSBuild プロパティの現在の値を変更します。|  
+|インターフェイス|プロジェクトのサブタイプ|  
+|---------------|---------------------|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg>|プロジェクトのサブタイプを使用できます。<br /><br /> -の実装を提供する<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>です。<br />-独自の実装を提供するプロジェクトのサブタイプを許可することで、デバッガーの起動を制御する<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg>です。<br />-無効にするデザイン時の式評価適切に処理することによって、`DBGLAUNCH_DesignTimeExprEval`の実装でケース<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.QueryDebugLaunch%2A>です。|  
+|<xref:EnvDTE80.IInternalExtenderProvider>|プロジェクトのサブタイプを使用できます。<br /><br /> -拡張、<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>のようにプロジェクトを追加または削除するプロジェクトの独立したプロパティを構成します。<br />、プロジェクトのオートメーション オブジェクトを拡張する (<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>) のプロジェクトです。<br /><br /> 上記のプロパティ値から取得されます<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2>列挙します。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject>|により、プロジェクトのサブタイプがへのマッピングに、<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg>プロジェクト構成の参照オブジェクトを指定されたオブジェクト。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsBrowseObject>|により、プロジェクトのサブタイプがへのマッピングに、<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>または`VSITEMID`プロジェクト構成の参照オブジェクトを指定されたオブジェクト。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>|プロジェクト ファイル (.vbproj ファイルまたは .csproj) に任意の XML の構造化データを保持するプロジェクトのサブタイプを使用できます。 このデータでは、MSBuild に表示されません。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>|プロジェクトのサブタイプを使用できます。<br /><br /> -永続化する新しい MSBuild プロパティを追加します。<br />-MSBuild から不要なプロパティを削除します。<br />MSBuild プロパティの現在の値をクエリします。<br />-MSBuild プロパティの現在の値を変更します。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID>   
  <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID2>

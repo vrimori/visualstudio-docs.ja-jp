@@ -1,43 +1,45 @@
 ---
-title: "デバッグ用の SDK ヘルパー | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dbgmetric.lib"
-  - "レジストリ、SDK のデバッグ"
-  - "SDK では、レジストリの場所のデバッグ"
-  - "dbgmetric.h"
-  - "メトリック [SDK のデバッグ]"
+title: "デバッグ用の SDK ヘルパー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dbgmetric.lib
+- registry, Debugging SDK
+- Debugging SDK, registry locations
+- dbgmetric.h
+- metrics [Debugging SDK]
 ms.assetid: 80a52e93-4a04-4ab2-8adc-a7847c2dc20b
-caps.latest.revision: 28
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d9c5d24c8a3a2bb81c87b2cc405a6885b8f23374
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# デバッグ用の SDK ヘルパー
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-これらの関数と宣言はC\+\+ のデバッグ エンジン式エバリュエーターとシンボルのプロバイダーを実装するためのグローバルなヘルパー関数です。  
+# <a name="sdk-helpers-for-debugging"></a>デバッグ用の SDK ヘルパー
+これらの関数と宣言は、C++ でのデバッグ エンジン、式の評価者、およびシンボル プロバイダーを実装するためのグローバルなヘルパー関数です。  
   
 > [!NOTE]
->  これらの関数と宣言のマネージ バージョンは現時点ではありません。  
+>  この時点では、これらの関数と宣言の管理対象のバージョンはありません。  
   
-## 概要  
- デバッグ エンジン式エバリュエーターと Visual Studio を使用したシンボルのプロバイダーには登録する必要があります。  これはレジストリのキーとそのエントリを設定して構成しますが「メトリックとして以外の場合はと呼ばれます」。次のグローバル関数がこれらの測度を更新するプロセスを簡単にするために設計されています。  これらの関数によって更新される各レジストリ キーの項目のレイアウトを確認するためにレジストリの場所のセクションを参照してください。  
+## <a name="overview"></a>概要  
+ Visual Studio で使用するデバッグ エンジン、式の評価者、およびシンボル プロバイダーの順序でこれらを登録してください。 これは、レジストリ サブキーとエントリ、それ以外の場合「メトリックを設定します」と呼ばれる設定で 次のグローバル関数は、これらのメトリックを更新するプロセスを容易に設計されています。 これらの関数によって更新される各レジストリ サブキーのレイアウトを確認するレジストリの場所には、セクションを参照してください。  
   
-## 概要メトリック関数  
- これらはデバッグ エンジンで使用される一般的な関数です。  式エバリュエーターとシンボルのプロバイダー用に特化された関数は後で詳しく説明します。  
+## <a name="general-metric-functions"></a>一般的なメトリック関数  
+ これらは、デバッグ エンジンで使用される一般的な機能です。 式エバリュエーターの関数に特殊化し、プロバイダーのシンボルが後で詳しく説明します。  
   
-### GetMetric のメソッド  
- レジストリからメトリック値を取得します。  
+### <a name="getmetric-method"></a>GetMetric メソッド  
+ レジストリからメトリックの値を取得します。  
   
-```cpp#  
+```cpp  
 HRESULT GetMetric(  
    LPCWSTR pszMachine,  
    LPCWSTR pszType,  
@@ -48,19 +50,19 @@ HRESULT GetMetric(
 );  
 ```  
   
-|パラメーター|Description|  
-|------------|-----------------|  
-|pszMachine|\[入力\] 登録を書き込むリモート コンピューターの名前 \(`NULL` ローカル コンピューターを意味します。|  
-|pszType|\[入力\] メトリックスの種類の 1 つが。|  
-|guidSection|\[入力\] 特定のエンジンエバリュエーター例外などの GUID   これは特定の要素にメトリックスの種類の下のサブセクションを指定します。|  
-|pszMetric|\[入力\] 取得される測度。  これは特定の値の名前に対応します。|  
-|pdwValue|\[入力\] メトリックスの値の格納場所。  ダブル ワード型 \(この例に示すようにGUID の BSTRGUIDまたは配列を返すことができます GetMetric の複数の特徴があります。|  
-|pszAltRoot|\[入力\] 使用される代替のレジストリ ルート。  既定値を使用する場合 `NULL` に設定します。|  
+|パラメーター|説明|  
+|---------------|-----------------|  
+|pszMachine|[in]レジスタが書き込まれる可能性のあるリモート コンピューターの名前 (`NULL`ローカル コンピューターのことを意味する)。|  
+|pszType|[in]メトリックの種類のいずれか。|  
+|guidSection|[in]特定のエンジン、エバリュエーター、例外などの GUID です。これには、特定の要素のメトリックの種類の下のサブセクションを指定します。|  
+|pszMetric|[in]取得するメトリックです。 これは、特定の値の名前に対応します。|  
+|pdwValue|[in]メトリックの値の格納場所。 (この例では) のように DWORD、BSTR、GUID、または Guid の配列を返すことができる GetMetric の一部のエディションがあります。|  
+|pszAltRoot|[in]使用する別のレジストリ ルート。 設定`NULL`既定値を使用します。|  
   
-### SetMetric のメソッド  
- レジストリ指定のメトリック値を設定します。  
+### <a name="setmetric-method"></a>SetMetric メソッド  
+ レジストリで指定されたメトリックの値を設定します。  
   
-```cpp#  
+```cpp  
 HRESULT SetMetric(  
          LPCWSTR pszType,  
          REFGUID guidSection,  
@@ -71,19 +73,19 @@ HRESULT SetMetric(
 );  
 ```  
   
-|パラメーター|Description|  
-|------------|-----------------|  
-|pszType|\[入力\] メトリックスの種類の 1 つが。|  
-|guidSection|\[入力\] 特定のエンジンエバリュエーター例外などの GUID   これは特定の要素にメトリックスの種類の下のサブセクションを指定します。|  
-|pszMetric|\[入力\] 取得される測度。  これは特定の値の名前に対応します。|  
-|dwValue|\[入力\] メトリックスの値の格納場所。  ダブル ワード型 \(この例ではGUID\) の BSTRGUIDまたは配列を格納できる SetMetric の複数の特徴があります。|  
-|fUserSpecific|\[入力\] メトリックをユーザー別およびローカル コンピューター ハイブではなくユーザー書き込まれたらハイブに変更します。|  
-|pszAltRoot|\[入力\] 使用される代替のレジストリ ルート。  既定値を使用する場合 `NULL` に設定します。|  
+|パラメーター|説明|  
+|---------------|-----------------|  
+|pszType|[in]メトリックの種類のいずれか。|  
+|guidSection|[in]特定のエンジン、エバリュエーター、例外などの GUID です。これには、特定の要素のメトリックの種類の下のサブセクションを指定します。|  
+|pszMetric|[in]取得するメトリックです。 これは、特定の値の名前に対応します。|  
+|dwValue|[in]メトリックの値の格納場所。 (この例では) では、DWORD、BSTR、GUID、または Guid の配列に格納できる SetMetric の一部のエディションがあります。|  
+|fUserSpecific|[in]TRUE のメトリックがユーザーに固有である場合や、ローカル マシン ハイブではなく、ユーザーのハイブに書き込む必要があります。|  
+|pszAltRoot|[in]使用する別のレジストリ ルート。 設定`NULL`既定値を使用します。|  
   
-### RemoveMetric のメソッド  
- レジストリから指定したメトリックを削除します。  
+### <a name="removemetric-method"></a>RemoveMetric メソッド  
+ レジストリから指定されたメトリックを削除します。  
   
-```cpp#  
+```cpp  
 HRESULT RemoveMetric(  
    LPCWSTR pszType,  
    REFGUID guidSection,  
@@ -92,17 +94,17 @@ HRESULT RemoveMetric(
 );  
 ```  
   
-|パラメーター|Description|  
-|------------|-----------------|  
-|pszType|\[入力\] メトリックスの種類の 1 つが。|  
-|guidSection|\[入力\] 特定のエンジンエバリュエーター例外などの GUID   これは特定の要素にメトリックスの種類の下のサブセクションを指定します。|  
-|pszMetric|\[入力\] 削除される測度。  これは特定の値の名前に対応します。|  
-|pszAltRoot|\[入力\] 使用される代替のレジストリ ルート。  既定値を使用する場合 `NULL` に設定します。|  
+|パラメーター|説明|  
+|---------------|-----------------|  
+|pszType|[in]メトリックの種類のいずれか。|  
+|guidSection|[in]特定のエンジン、エバリュエーター、例外などの GUID です。これには、特定の要素のメトリックの種類の下のサブセクションを指定します。|  
+|pszMetric|[in]削除するメトリックです。 これは、特定の値の名前に対応します。|  
+|pszAltRoot|[in]使用する別のレジストリ ルート。 設定`NULL`既定値を使用します。|  
   
-### EnumMetricSections のメソッド  
- レジストリのさまざまなメトリック セクションを列挙します。  
+### <a name="enummetricsections-method"></a>EnumMetricSections メソッド  
+ さまざまなメトリック セクションでは、レジストリを列挙します。  
   
-```cpp#  
+```cpp  
 HRESULT EnumMetricSections(  
    LPCWSTR pszMachine,  
    LPCWSTR pszType,  
@@ -112,318 +114,318 @@ HRESULT EnumMetricSections(
 );  
 ```  
   
-|パラメーター|Description|  
-|------------|-----------------|  
-|pszMachine|\[入力\] 登録を書き込むリモート コンピューターの名前 \(`NULL` ローカル コンピューターを意味します。|  
-|pszType|\[入力\] メトリックスの種類の 1 つが。|  
-|rgguidSections|\[入力出力\] 入力する GUID の割り当て済みの配列。|  
-|pdwSize|\[入力\] `rgguidSections` の配列に格納できる GUID の最大数。|  
-|pszAltRoot|\[入力\] 使用される代替のレジストリ ルート。  既定値を使用する場合 `NULL` に設定します。|  
+|パラメーター|説明|  
+|---------------|-----------------|  
+|pszMachine|[in]レジスタが書き込まれる可能性のあるリモート コンピューターの名前 (`NULL`ローカル コンピューターのことを意味する)。|  
+|pszType|[in]メトリックの種類のいずれか。|  
+|rgguidSections|[入力、出力].格納される Guid の事前に割り当てられた配列。|  
+|pdwSize|[in]格納できる Guid の最大数、`rgguidSections`配列。|  
+|pszAltRoot|[in]使用する別のレジストリ ルート。 設定`NULL`既定値を使用します。|  
   
-## 式エバリュエーターの関数  
+## <a name="expression-evaluator-functions"></a>式エバリュエーター機能  
   
-|Function|Description|  
+|関数|説明|  
 |--------------|-----------------|  
-|GetEEMetric|レジストリからメトリック値を取得します。|  
-|SetEEMetric|レジストリ指定のメトリック値を設定します。|  
-|RemoveEEMetric|レジストリから指定したメトリックを削除します。|  
-|GetEEMetricFile|ファイル名を指定しから派生し読み込みファイルの内容を文字列として返します。|  
+|GetEEMetric|レジストリからメトリックの値を取得します。|  
+|SetEEMetric|レジストリで指定されたメトリックの値を設定します。|  
+|RemoveEEMetric|レジストリから指定されたメトリックを削除します。|  
+|GetEEMetricFile|指定されたメトリックからファイル名を取得し、ファイルの内容を文字列として返す、読み込みます。|  
   
-## 例外関数  
+## <a name="exception-functions"></a>例外関数  
   
-|Function|Description|  
+|関数|説明|  
 |--------------|-----------------|  
-|GetExceptionMetric|レジストリからメトリック値を取得します。|  
-|SetExceptionMetric|レジストリ指定のメトリック値を設定します。|  
-|RemoveExceptionMetric|レジストリから指定したメトリックを削除します。|  
+|GetExceptionMetric|レジストリからメトリックの値を取得します。|  
+|SetExceptionMetric|レジストリで指定されたメトリックの値を設定します。|  
+|RemoveExceptionMetric|レジストリから指定されたメトリックを削除します。|  
 |RemoveAllExceptionMetrics|レジストリからすべての例外のメトリックを削除します。|  
   
-## シンボルのプロバイダーの関数  
+## <a name="symbol-provider-functions"></a>シンボル プロバイダー関数  
   
-|Function|Description|  
+|関数|説明|  
 |--------------|-----------------|  
-|GetSPMetric|レジストリからメトリック値を取得します。|  
-|SetSPMetric|レジストリ指定のメトリック値を設定します。|  
-|RemoveSPMetric|レジストリから指定したメトリックを削除します。|  
+|GetSPMetric|レジストリからメトリックの値を取得します。|  
+|SetSPMetric|レジストリで指定されたメトリックの値を設定します。|  
+|RemoveSPMetric|レジストリから指定されたメトリックを削除します。|  
   
-## 列挙関数  
+## <a name="enumeration-functions"></a>列挙関数  
   
-|Function|Description|  
+|関数|説明|  
 |--------------|-----------------|  
-|EnumMetricSections|指定のメトリックのすべてのメトリックを列挙します。|  
-|EnumDebugEngine|登録されたデバッグ エンジンを列挙します。|  
-|EnumEEs|登録された式エバリュエーターを列挙します。|  
+|EnumMetricSections|指定された指標の種類のすべてのメトリックを列挙します。|  
+|EnumDebugEngine|登録されているデバッグ エンジンを列挙します。|  
+|EnumEEs|登録済みの式エバリュエーターを列挙します。|  
 |EnumExceptionMetrics|すべての例外のメトリックを列挙します。|  
   
-## 非常定義  
- これらの定義は定義済みのメトリック名前を使用できます。  ワイド文字列で定義された名前が対応するすべてさまざまなレジストリ キーとレジストリ値の名前です : たとえば`extern LPCWSTR metrictypeEngine`。  
+## <a name="metric-definitions"></a>メトリックの定義  
+ これらの定義は、定義済みのメトリック名を使用できます。 名前はさまざまなレジストリ キーと値の名前とワイド文字列として定義されているがすべてに対応します。 たとえば、`extern LPCWSTR metrictypeEngine`です。  
   
-|定義済みのメトリックの種類|例 : 基本キーのです。|  
-|-------------------|------------------|  
-|metrictypeEngine|すべてのエンジンのメトリックをデバッグします。|  
-|metrictypePortSupplier|すべてがサプライヤーのメトリックを移植します。|  
-|metrictypeException|すべての例外の測度。|  
-|metricttypeEEExtension|すべての式エバリュエーターを拡張。|  
+|メトリックの定義済みの型|説明: 基本のキーをしています.|  
+|-----------------------------|---------------------------------------|  
+|metrictypeEngine|すべてのデバッグ エンジン メトリック。|  
+|metrictypePortSupplier|すべてのポート業者メトリック。|  
+|metrictypeException|すべての例外のメトリック。|  
+|metricttypeEEExtension|すべての式エバリュエーターの拡張機能です。|  
   
-|エンジンのプロパティのデバッグ|Description|  
-|---------------------|-----------------|  
-|metricAddressBP|アドレス ブレークポイントのサポートを示す\) 以外に設定します。|  
-|metricAlwaysLoadLocal|以外に設定デバッグ エンジンを常にローカルに読み込む場合は。|  
-|metricLoadInDebuggeeSession|使用しない|  
-|metricLoadedByDebuggee|デバッグ エンジンはデバッグ対象プログラムとして常に読み込まれたことを示すためにゼロ以外に設定します。|  
-|metricAttach|既存のプログラムに添付ファイルをサポートする場合はに設定します。|  
-|metricCallStackBP|呼び出し履歴のブレークポイントのサポートを示す\) 以外に設定します。|  
-|metricConditionalBP|条件付きブレークポイントの設定をサポートする場合はに設定します。|  
-|metricDataBP|データの変更のブレークポイントの設定をサポートする場合はに設定します。|  
-|metricDisassembly|逆アセンブリの一覧を開発する場合をサポートする場合はに設定します。|  
-|metricDumpWriting|ダンプの記述 \(出力デバイスに対するメモリ ダンプ\) のサポートを示す\) 以外に設定します。|  
-|metricENC|編集のサポートを示す場合はそれ以外に設定します。 **Note:**  カスタムのデバッグ エンジンでは設定しないでくださいしを 0 にして常に設定する必要があります。|  
-|metricExceptions|例外のサポートを示す\) 以外に設定します。|  
-|metricFunctionBP|名前付きブレークポイント \(のサポートを特定の関数名が呼び出されたときに中断ブレークポイント示す\) 以外に設定します。|  
-|metricHitCountBP|「ヒット」 \(位置のブレークポイントの設定のサポートが発生した後のみ設定されたブレークポイントにヒットすると時間\) する場合はに設定します。|  
-|metricJITDebug|例外は実行中のプロセスに発生する場合\) Just\-In\-Time デバッグのサポートを表示する以外に設定します。デバッガーが起動します。|  
-|metricMemory|使用しない|  
-|metricPortSupplier|1 つが実行されるポートのサプライヤーの CLSID を設定します。|  
-|metricRegisters|使用しない|  
-|metricSetNextStatement|\(ゼロ以外に設定するをサポートする中間ステートメントの実行を省略\) 次のステートメントを指定します。|  
-|metricSuspendThread|スレッドの実行を中断できます。をサポートする場合はに設定します。|  
-|metricWarnIfNoSymbols|シンボルがない場合はユーザーに通知する必要があることを示すためにゼロ以外に設定します。|  
-|metricProgramProvider|プログラムのプロバイダーの CLSID を設定します。|  
-|metricAlwaysLoadProgramProviderLocal|プログラムのプロバイダーが常にローカルにあることを示すためにゼロ以外に設定します。|  
-|metricEngineCanWatchProcess|デバッグ エンジンはプログラムのプロバイダーではなくプロセス イベントを監視できます。を表示する以外に設定します。|  
-|metricRemoteDebugging|リモート デバッグのサポートを表示する以外に設定します。|  
-|metricEncUseNativeBuilder|示すためにを以外の値に設定を編集しアプリケーションをデバッグ エンジンの encbuild.dll を編集する場合は次の行で使用する必要があります。 **Note:**  カスタムのデバッグ エンジンでは設定しないでくださいしを 0 にして常に設定する必要があります。|  
-|metricLoadUnderWOW64|64 ビット プロセスをデバッグするときにデバッグ エンジンが WOW のデバッグ対象プロセスに読み込まれることを示すためにゼロ以外に設定します。; はデバッグ エンジン \(WOW64 で実行されているの Visual Studio プロセス読み込まれます。|  
-|metricLoadProgramProviderUnderWOW64|WOW の下の 64 ビット プロセスをデバッグするとプログラムのプロバイダーがデバッグ対象のプロセスで読み込まれることを示すためにゼロ以外に設定します。; それ以外の場合はVisual Studio プロセスに読み込まれます。|  
-|metricStopOnExceptionCrossingManagedBoundary|ハンドルされない例外がマネージ コードとアンマネージ コードの境界を越えてスローされるプロセスが停止する必要があることを示すためにゼロ以外に設定します。|  
-|metricAutoSelectPriority|デバッグ エンジンの自動選択の優先順位を設定します \(の値は優先順位に等しい場合\)。|  
-|metricAutoSelectIncompatibleList|自動選択を無視するデバッグ エンジンに対して GUID を指定するエントリを含むレジストリ キー。  これらのエントリは文字列として表現される GUID の最初の \(012 など\) です。|  
-|metricIncompatibleList|このデバッグ エンジンに対応しないデバッグ エンジンに対して GUID を指定するエントリを含むレジストリ キー。|  
-|metricDisableJITOptimization|最適化が Just\-In\-Time デバッグ時に \(マネージ コードの場合\) に無効にする必要があることを示すためにゼロ以外に設定します。|  
+|デバッグ エンジン プロパティ|説明|  
+|-----------------------------|-----------------|  
+|metricAddressBP|アドレスのブレークポイントのサポートを示すために 0 以外に設定します。|  
+|metricAlwaysLoadLocal|常にローカルでデバッグ エンジンを読み込むために 0 以外に設定します。|  
+|metricLoadInDebuggeeSession|使用しません|  
+|metricLoadedByDebuggee|デバッグ エンジンは常に読み込むこと、またはデバッグ中のプログラムでを示すために 0 以外に設定します。|  
+|metricAttach|既存のプログラムに添付ファイルのサポートを示すために 0 以外に設定します。|  
+|metricCallStackBP|呼び出し履歴のブレークポイントのサポートを示すために 0 以外に設定します。|  
+|metricConditionalBP|条件付きブレークポイントの設定のサポートを示すために 0 以外に設定します。|  
+|metricDataBP|データの変更のブレークポイントの設定のサポートを示すために 0 以外に設定します。|  
+|metricDisassembly|[逆アセンブル] の一覧の運用環境のサポートを示すために 0 以外に設定します。|  
+|metricDumpWriting|ダンプ (ダンプの出力デバイス メモリ) を記述のサポートを示すために 0 以外に設定します。|  
+|metricENC|エディット コンティニュのサポートを示すために 0 以外に設定します。 **注:**カスタム デバッグ エンジンは、これは設定しないでまたは常に 0 に設定します。|  
+|metricExceptions|例外のサポートを示すために 0 以外に設定します。|  
+|metricFunctionBP|名前付きのブレークポイント (特定の関数名が呼び出されるときに中断するブレークポイント) のサポートを示すために 0 以外に設定します。|  
+|metricHitCountBP|「ポイントをヒット」ブレークポイント (される回数だけのヒット後にのみトリガーされるブレークポイント) の設定のサポートを示すために 0 以外に設定します。|  
+|metricJITDebug|ジャスト イン タイムのデバッグ (デバッガーは実行中のプロセスで例外が発生したときの起動) のサポートを示すために 0 以外に設定します。|  
+|metricMemory|使用しません|  
+|metricPortSupplier|いずれかが実装された場合、ポート供給業者の CLSID を設定します。|  
+|metricRegisters|使用しません|  
+|metricSetNextStatement|(中級者向けのステートメントの実行をスキップ) を次のステートメントを設定するためのサポートを示すために 0 以外に設定します。|  
+|metricSuspendThread|スレッドの実行を中断する前にサポートを示すために 0 以外に設定します。|  
+|metricWarnIfNoSymbols|シンボルが存在しない場合、ユーザーに通知することを示すために 0 以外に設定します。|  
+|metricProgramProvider|プログラムのプロバイダーの CLSID に設定します。|  
+|metricAlwaysLoadProgramProviderLocal|0 以外を指定すること、プログラムのプロバイダーは常に読み込まれたローカルに設定します。|  
+|metricEngineCanWatchProcess|これを設定プログラム プロバイダーではなくプロセス イベントは、デバッグ エンジンをウォッチことを示すために 0 以外の値。|  
+|metricRemoteDebugging|これに設定をリモート デバッグのサポートを示す 0 以外の値。|  
+|metricEncUseNativeBuilder|編集と続行マネージャーを使用するデバッグ エンジンの encbuild.dll エディット コンティニュ用にビルドするには 0 以外に設定します。 **注:**カスタム デバッグ エンジンは、これは設定しないでまたは常に 0 に設定します。|  
+|metricLoadUnderWOW64|これを設定して、デバッグ エンジンを読み込むこと wow デバッグ対象のプロセスで 64 ビット プロセスをデバッグするときを示すためには 0 以外。それ以外の場合、デバッグ エンジンは、Visual Studio のプロセス (WOW64 の下で実行されている) に読み込まれます。|  
+|metricLoadProgramProviderUnderWOW64|これを設定して wow; 64 ビット プロセスをデバッグするときにプログラム プロバイダーをデバッグ対象のプロセスに読み込まれている必要があるように指定する 0 以外の値それ以外の場合、Visual Studio プロセスに読み込まれます。|  
+|metricStopOnExceptionCrossingManagedBoundary|これに設定をマネージ/アンマネージ コードの境界を越えて、未処理の例外がスローされた場合、プロセスを停止するかを示す 0 以外の値。|  
+|metricAutoSelectPriority|デバッグ エンジン (より高い値 equals より高い優先度) の自動選択の優先順位を設定します。|  
+|metricAutoSelectIncompatibleList|レジストリ キーが自動選択で無視するようにデバッグ エンジンの Guid を指定するエントリが格納されます。 これらのエントリが数値 (0、1、2、およびなど) を文字列として表される GUID を使用します。|  
+|metricIncompatibleList|このデバッグ エンジンと互換性がないデバッグ エンジンの Guid を指定するエントリを含むレジストリ キー。|  
+|metricDisableJITOptimization|これを設定デバッグ中に (マネージ コード) の・ イン タイムの最適化機能を無効にすることを示すために 0 以外の値。|  
   
-|式エバリュエーターのプロパティ|Description|  
-|---------------------|-----------------|  
-|metricEngine|これは指定されたの式エバリュエーターをサポートするデバッグ エンジンの値が保持されます。|  
-|metricPreloadModules|式エバリュエーターはプログラムに対して起動時にモジュールが事前に積まれる必要があることを示すためにゼロ以外に設定します。|  
-|metricThisObjectName|このオブジェクト名 「」に設定します。|  
+|式エバリュエーターのプロパティ|説明|  
+|-------------------------------------|-----------------|  
+|metricEngine|これは、指定された式エバリュエーターをサポートするデバッグ エンジンの数を保持します。|  
+|metricPreloadModules|これを設定、式エバリュエーターが、プログラムに対して起動されるときにモジュールをプリロードすることを示すために 0 以外の値。|  
+|metricThisObjectName|"This"オブジェクトの名前を設定します。|  
   
-|式エバリュエーターを拡張プロパティ|Description|  
-|-----------------------|-----------------|  
-|metricExtensionDll|この拡張機能をサポートするにはdll の名前。|  
-|metricExtensionRegistersSupported|サポートされているレジスタの一覧。|  
-|metricExtensionRegistersEntryPoint|登録にアクセスするためのエントリ ポイント。|  
-|metricExtensionTypesSupported|サポートされる型のリスト。|  
-|metricExtensionTypesEntryPoint|型にアクセスするためのエントリ ポイント。|  
+|式エバリュエーターの拡張機能プロパティ|説明|  
+|-----------------------------------------------|-----------------|  
+|metricExtensionDll|この拡張機能をサポートする dll の名前です。|  
+|metricExtensionRegistersSupported|サポートされているレジスタの一覧です。|  
+|metricExtensionRegistersEntryPoint|レジスタへのアクセスのエントリ ポイント。|  
+|metricExtensionTypesSupported|サポートされる型の一覧です。|  
+|metricExtensionTypesEntryPoint|型へのアクセスのエントリ ポイント。|  
   
-|サプライヤーのプロパティを移植します。|Description|  
-|-------------------------|-----------------|  
-|metricPortPickerCLSID|ポートの指定 \(ポートをクリックしてデバッグに使用するポートを追加するためにユーザーが使用できる CLSID\) ダイアログ ボックスが表示されます。|  
-|metricDisallowUserEnteredPorts|ユーザーが入力したポートがサプライヤーのポート \(追加できない場合はこれ以外はポート ピッカー ダイアログ ボックスで主に読み取り専用にします\)。|  
-|metricPidBase|プロセス ID を割り当てるときのサプライヤーのポートで使用される基本のプロセス ID。|  
+|ポート仕入先のプロパティ|説明|  
+|------------------------------|-----------------|  
+|metricPortPickerCLSID|(ポートを選択し、デバッグに使用するポートを追加する ダイアログ ボックス、ユーザーが使用できます)、ポート ピッカーの CLSID。|  
+|metricDisallowUserEnteredPorts|ユーザーが入力したポートをポートの仕入先を追加できない場合は 0 以外 (これにより、ポートの選択 ダイアログ ボックス本質的に読み取り専用)。|  
+|metricPidBase|プロセス Id を割り当てるときに、ポート業者で使用される基本のプロセス ID。|  
   
-|定義済みの SP ストアの種類|Description|  
-|---------------------|-----------------|  
-|storetypeFile|シンボルが別のファイルに格納されます。|  
-|storetypeMetadata|シンボルはアセンブリ内にメタデータとして格納されます。|  
+|定義済みの SP ストアの種類|説明|  
+|-------------------------------|-----------------|  
+|storetypeFile|シンボルは、別のファイルに格納されます。|  
+|storetypeMetadata|シンボルは、アセンブリ内にメタデータとして格納されます。|  
   
-|そのほかのプロパティ|Description|  
-|----------------|-----------------|  
-|metricShowNonUserCode|非使用者コードを表示する以外に設定します。|  
-|metricJustMyCodeStepping|手順ではユーザー コードでのみ実行できることを示すためにゼロ以外に設定します。|  
-|metricCLSID|特定のメトリックの種類のオブジェクトの CLSID。|  
-|metricName|特定のメトリックの種類のオブジェクトのわかりやすい名前。|  
-|metricLanguage|言語名。|  
+|その他のプロパティ|説明|  
+|------------------------------|-----------------|  
+|metricShowNonUserCode|設定 0 以外に、非ユーザー コードを表示します。|  
+|metricJustMyCodeStepping|これに設定をステップ実行がユーザー コードでのみ発生することがあるかを示す 0 以外の値。|  
+|metricCLSID|特定のメトリック型のオブジェクトの CLSID。|  
+|MetricName|特定のメトリック型のオブジェクトのユーザー フレンドリ名。|  
+|metricLanguage|言語の名前です。|  
   
-## レジストリの場所  
- メトリックスはから読み込まれ`VisualStudio` のサブ キーのレジストリに書き込まれます \(特に。  
-  
-> [!NOTE]
->  ほとんどの場合メトリックスは HKEY\_LOCAL\_MACHINE キーに書き込まれます。  ただしHKEY\_CURRENT\_USER は対象のキーです。  Dbgmetric.lib は両方のキーを処理します。  メトリックを取得するとHKEY\_CURRENT\_USER とHKEY\_LOCAL\_MACHINE 最初に検索します。  これはメトリックを設定する場合パラメーターを使用すると最上位レベルのキーを指定します。  
-  
- *\[入力\] レジストリ キー* \\  
-  
- `Software`\\  
-  
- `Microsoft`\\  
-  
- `VisualStudio`\\  
-  
- *\[出力\] バージョンのルート* \\  
-  
- *\[ルート メトリック\]*\\  
-  
- *\[入力出力\]*\\  
-  
- *\[メトリック\] \= \[メトリック値\]*  
-  
- *\[メトリック\] \= \[メトリック値\]*  
-  
- *\[メトリック\] \= \[メトリック値\]*  
-  
-|プレースホルダー|Description|  
-|--------------|-----------------|  
-|*\[入力\] レジストリ キー*|`HKEY_CURRENT_USER` または `HKEY_LOCAL_MACHINE`。|  
-|*\[出力\] バージョンのルート*|Visual Studio のバージョン \(`7.0``7.1`または `8.0`\)。  ただしこのルートは**devenv.exe** への **\/rootsuffix** スイッチを使用して変更できます。  VSIP ではこの修飾子はExp. であるためバージョンのルートは8.0Exp です。|  
-|*\[ルート メトリック\]*|これは dbgmetric.lib のデバッグ バージョンを使用するかどうかを `AD7Metrics` または `AD7Metrics(Debug)`です。 **Note:**  dbgmetric.lib が使用されたかこの名前付け規則はレジストリに反映するリリース バージョンとデバッグの違いが従う必要があります。|  
-|*\[入力出力\]*|書き込むメトリックスの型 : `Engine``ExpressionEvaluator``SymbolProvider` など\)   これらはすべてが特定の種類の名前と dbgmetric.h のように定義されます。|  
-|*\[メトリック\]*|値を割り当てるエントリの名前を設定します。  メトリックスの実際の整理やメトリックスの種類によって異なります。|  
-|*\[メトリック値\]*|メトリックスに割り当てられた値。  値がで \(文字列数値など\) で必要な型が決まります。|  
+## <a name="registry-locations"></a>レジストリの場所  
+ メトリックの読み込みおよびで具体的には、レジストリに書き込まれる、`VisualStudio`サブキー。  
   
 > [!NOTE]
->  すべての GUID は `{GUID}` の形式で格納されます。  たとえば、`{123D150B-FA18-461C-B218-45B3E4589F9B}` のようにします。  
+>  ほとんどの場合、メトリックが HKEY_LOCAL_MACHINE キーに書き込まれます。 ただし、場合もあります HKEY_CURRENT_USER キーとなる、変換先です。 Dbgmetric.lib は、両方のキーを処理します。 HKEY_CURRENT_USER 検索メトリックを取得するときに最初に、次に HKEY_LOCAL_MACHINE です。 メトリックの設定には、パラメーターは使用するどの最上位のキーを指定します。  
   
-### デバッグ エンジン  
- 次はレジストリのデバッグ エンジンの測度の構成です。  `Engine` はデバッグ エンジン メトリック型名で最上位のレジストリのサブ ツリーの *\[入力出力\]* に対応します。  
+ *[レジストリ キー]*\  
   
- `Engine`\\  
+ `Software`\  
   
- *\[エンジン guid\]*\\  
+ `Microsoft`\  
   
- `CLSID` \= *\[クラス guid\]*  
+ `VisualStudio`\  
   
- *\[メトリック\] \= \[メトリック値\]*  
+ *[バージョン ルート]*\  
   
- *\[メトリック\] \= \[メトリック値\]*  
+ *[メトリックのルート]*\  
   
- *\[メトリック\] \= \[メトリック値\]*  
+ *[メトリックの種類]*\  
   
- `PortSupplier`\\  
+ *[metric] = [メトリックの値]*  
   
- `0` \= *\[ポートのサプライヤー guid\]*  
+ *[metric] = [メトリックの値]*  
   
- `1` \= *\[ポートのサプライヤー guid\]*  
+ *[metric] = [メトリックの値]*  
   
-|プレースホルダー|Description|  
-|--------------|-----------------|  
-|*\[エンジン guid\]*|デバッグ エンジンの GUID。|  
-|*\[クラス guid\]*|このデバッグ エンジンを実装するクラスの GUID。|  
-|*\[ポートのサプライヤー guid\]*|ポートのサプライヤーの GUID です \(存在する場合\)。  多くのデバッグ エンジンは既定のポートの業者を使用して独自の業者を指定しません。  この場合そのキー `PortSupplier` は属性です。|  
-  
-### ポートのサプライヤー  
- 次はレジストリのポートのサプライヤーのメトリックの構成です。  `PortSupplier` はポートのサプライヤー メトリック型名で*\[入力出力\]* に対応します。  
-  
- `PortSupplier`\\  
-  
- *\[ポートのサプライヤー guid\]*\\  
-  
- `CLSID` \= *\[クラス guid\]*  
-  
- *\[メトリック\] \= \[メトリック値\]*  
-  
- *\[メトリック\] \= \[メトリック値\]*  
-  
-|プレースホルダー|Description|  
-|--------------|-----------------|  
-|*\[ポートのサプライヤー guid\]*|ポートのサプライヤーの GUID|  
-|*\[クラス guid\]*|このポートの業者を実装するクラスの GUID|  
-  
-### シンボルのプロバイダー  
- 次はレジストリのシンボルがサプライヤーのメトリックの構成です。  `SymbolProvider` はシンボルのメトリック プロバイダーの型名で*\[入力出力\]* に対応します。  
-  
- `SymbolProvider`\\  
-  
- *\[シンボルのプロバイダーの GUID 入力\]*\\  
-  
- `file`\\  
-  
- `CLSID` \= *\[クラス guid\]*  
-  
- *\[メトリック\] \= \[メトリック値\]*  
-  
- *\[メトリック\] \= \[メトリック値\]*  
-  
- `metadata`\\  
-  
- `CLSID` \= *\[クラス guid\]*  
-  
- *\[メトリック\] \= \[メトリック値\]*  
-  
- *\[メトリック\] \= \[メトリック値\]*  
-  
-|プレースホルダー|Description|  
-|--------------|-----------------|  
-|*\[シンボルのプロバイダーの GUID 入力\]*|シンボルのプロバイダーの GUID|  
-|*\[クラス guid\]*|このシンボルのプロバイダーを実装するクラスの GUID|  
-  
-### 式エバリュエーター  
- 次はレジストリの式エバリュエーターの測度の構成です。  `ExpressionEvaluator` は式エバリュエーター メトリック型名で*\[入力出力\]* に対応します。  
+|プレースホルダー|説明|  
+|-----------------|-----------------|  
+|*[レジストリ キー]*|`HKEY_CURRENT_USER` または `HKEY_LOCAL_MACHINE`。|  
+|*[バージョン ルート]*|Visual Studio のバージョン (たとえば、 `7.0`、 `7.1`、または`8.0`)。 ただし、このルートを変更することもを使用して、 **/rootsuffix**に切り替える**devenv.exe**です。 VSIP、この修飾子は、通常**Exp**バージョン ルートである場合はたとえば、8.0Exp のため、します。|  
+|*[メトリックのルート]*|これは、いずれかの`AD7Metrics`または`AD7Metrics(Debug)`dbgmetric.lib のデバッグ バージョンを使用するかどうかに応じて、します。 **注:**デバッグとリリースの違いがある場合、この名前付け規則に従う必要があります dbgmetric.lib を使用すると、かどうかのバージョンをレジストリに反映する必要があります。|  
+|*[メトリックの種類]*|書き込まれるメトリックの種類: `Engine`、 `ExpressionEvaluator`、 `SymbolProvider`, などです。これらすべてとして dbgmetric.h のように定義されます`metricTypeXXXX`ここで、`XXXX`特定の種類の名前を指定します。|  
+|*[metric]*|メトリックを設定するために値を割り当てるためのエントリの名前。 メトリックの実際の組織は、メトリックの種類によって異なります。|  
+|*[メトリックの値]*|メトリックに割り当てられた値。 値は、(文字列、数値など) を持つ必要があります型は、メトリックによって異なります。|  
   
 > [!NOTE]
->  `ExpressionEvaluator` のメトリックの種類は dbgmetric.h の式エバリュエーターのすべての変更は非常に適切な式エバリュエーター メトリック関数によって進むことが想定されるため定義されていません \(`ExpressionEvaluator` のサブ キーのレイアウトは若干複雑です。つまり詳細は dbgmetric.lib 内で非表示になります\)。  
+>  すべての Guid の形式で格納`{GUID}`です。 たとえば、`{123D150B-FA18-461C-B218-45B3E4589F9B}` のようにします。  
   
- `ExpressionEvaluator`\\  
+### <a name="debug-engines"></a>デバッグ エンジン  
+ レジストリのデバッグ エンジンのメトリックの構成を次に示します。 `Engine`デバッグ エンジンのメトリックの種類の名前に対応する*[メトリックの種類]*上記のレジストリ サブツリーでします。  
   
- *\[言語 guid\]*\\  
+ `Engine`\  
   
- *\[販売元 guid\]*\\  
+ *[エンジン guid]*\  
   
- `CLSID` \= *\[クラス guid\]*  
+ `CLSID` = *[クラス guid]*  
   
- *\[メトリック\] \= \[メトリック値\]*  
+ *[metric] = [メトリックの値]*  
   
- *\[メトリック\] \= \[メトリック値\]*  
+ *[metric] = [メトリックの値]*  
   
- `Engine`\\  
+ *[metric] = [メトリックの値]*  
   
- `0` \= *\[デバッグ エンジン guid\]*  
+ `PortSupplier`\  
   
- `1` \= *\[デバッグ エンジン guid\]*  
+ `0` = *[ポートのサプライヤーの guid]*  
   
-|プレースホルダー|Description|  
-|--------------|-----------------|  
-|*\[言語 guid\]*|言語の GUID|  
-|*\[販売元 guid\]*|販売元の GUID|  
-|*\[クラス guid\]*|この式エバリュエーターを実装するクラスの GUID|  
-|*\[デバッグ エンジン guid\]*|この式エバリュエーターを使用してデバッグ エンジンの GUID|  
+ `1` = *[ポートのサプライヤーの guid]*  
   
-### 式エバリュエーターの拡張子  
- 次はレジストリの式エバリュエーターを拡張したメトリックの構成です。  `EEExtensions` は式エバリュエーターを拡張したメトリック型名で*\[入力出力\]* に対応します。  
+|プレースホルダー|説明|  
+|-----------------|-----------------|  
+|*[エンジン guid]*|デバッグ エンジンの GUID です。|  
+|*[クラス guid]*|このデバッグ エンジンを実装するクラスの GUID です。|  
+|*[ポートのサプライヤーの guid]*|存在する場合、ポート サプライヤーの GUID です。 多くのデバッグ エンジンは、既定ポート業者を使用し、独自の仕入先を指定しません。 この場合、サブキー`PortSupplier`は出力されません。|  
   
- `EEExtensions`\\  
+### <a name="port-suppliers"></a>ポートの仕入先  
+ レジストリで、ポート供給業者のメトリックの組織を次に示します。 `PortSupplier`ポートのサプライヤーのメトリックの種類の名前に対応する*[メトリックの種類]*です。  
   
- *\[拡張子 guid\]*\\  
+ `PortSupplier`\  
   
- *\[メトリック\] \= \[メトリック値\]*  
+ *[ポートのサプライヤーの guid]*\  
   
- *\[メトリック\] \= \[メトリック値\]*  
+ `CLSID` = *[クラス guid]*  
   
-|プレースホルダー|Description|  
-|--------------|-----------------|  
-|*\[拡張子 guid\]*|式エバリュエーターを拡張子の GUID|  
+ *[metric] = [メトリックの値]*  
   
-### 例外  
- 次はレジストリの例外の測度の構成です。  `Exception` は例外のメトリック型名で*\[入力出力\]* に対応します。  
+ *[metric] = [メトリックの値]*  
   
- `Exception`\\  
+|プレースホルダー|説明|  
+|-----------------|-----------------|  
+|*[ポートのサプライヤーの guid]*|ポートのサプライヤーの GUID|  
+|*[クラス guid]*|このポート業者を実装するクラスの GUID|  
   
- *\[デバッグ エンジン guid\]*\\  
+### <a name="symbol-providers"></a>プロバイダーのシンボル  
+ レジストリでシンボル供給業者のメトリックの構成を次に示します。 `SymbolProvider`シンボルのプロバイダーのメトリックの種類の名前に対応する*[メトリックの種類]*です。  
   
- *\[入力\] 例外の種類* \\  
+ `SymbolProvider`\  
   
- *\[例外\]*\\  
+ *[シンボル プロバイダー guid]*\  
   
- *\[メトリック\] \= \[メトリック値\]*  
+ `file`\  
   
- *\[メトリック\] \= \[メトリック値\]*  
+ `CLSID` = *[クラス guid]*  
   
- *\[例外\]*\\  
+ *[metric] = [メトリックの値]*  
   
- *\[メトリック\] \= \[メトリック値\]*  
+ *[metric] = [メトリックの値]*  
   
- *\[メトリック\] \= \[メトリック値\]*  
+ `metadata`\  
   
-|プレースホルダー|Description|  
-|--------------|-----------------|  
-|*\[デバッグ エンジン guid\]*|そのデバッグ エンジンの GUID は例外をサポートします。|  
-|*\[入力\] 例外の種類*|処理できる例外のクラスを識別するキーの概要のタイトル。  一般的な名前 **C\+\+ Exceptions** は**Win32 ExceptionsCommon Language Runtime Exceptions** と **Native Run\-Time Checks** です。  これらの名前がユーザーに固有の例外クラスを識別するために使用されます。|  
-|*\[例外\]*|例外名 : たとえば**\_com\_error** または **Control\-Break**。  これらの名前がユーザーに特定の例外を識別するために使用されます。|  
+ `CLSID` = *[クラス guid]*  
   
-## 要件  
- これらのファイルは [!INCLUDE[vs_dev10_ext](../../../extensibility/debugger/reference/includes/vs_dev10_ext_md.md)] SDK のインストール ディレクトリ \(既定では *ドライブ \[入力\]*\\ Program Files \\ Microsoft Visual Studio 2010 SDK \\\) にあります。  
+ *[metric] = [メトリックの値]*  
   
- ヘッダー : INCLUDE \\ dbgmetric.h  
+ *[metric] = [メトリックの値]*  
   
- ライブラリ : Lib \\ \\ ad2de.lib ライブラリ dbgmetric.lib  
+|プレースホルダー|説明|  
+|-----------------|-----------------|  
+|*[シンボル プロバイダー guid]*|シンボルのプロバイダーの GUID|  
+|*[クラス guid]*|このシンボル プロバイダーを実装するクラスの GUID|  
   
-## 参照  
+### <a name="expression-evaluators"></a>式エバリュエーター  
+ レジストリで、式エバリュエーターのメトリックの組織を次に示します。 `ExpressionEvaluator`式エバリュエーターのメトリックの種類の名前に対応する*[メトリックの種類]*です。  
+  
+> [!NOTE]
+>  指標の種類の`ExpressionEvaluator`式エバリュエーターのメトリックの変更がすべてが適切な式エバリュエーターのメトリック関数を介して送られることが前提として、dbgmetric.h で定義されていない (のレイアウト、`ExpressionEvaluator`サブキーがある程度複雑になり、dbgmetric.lib 内部に詳細が隠されたように) します。  
+  
+ `ExpressionEvaluator`\  
+  
+ *[言語の guid]*\  
+  
+ *[ベンダー guid]*\  
+  
+ `CLSID` = *[クラス guid]*  
+  
+ *[metric] = [メトリックの値]*  
+  
+ *[metric] = [メトリックの値]*  
+  
+ `Engine`\  
+  
+ `0` = *[デバッグ エンジン guid]*  
+  
+ `1` = *[デバッグ エンジン guid]*  
+  
+|プレースホルダー|説明|  
+|-----------------|-----------------|  
+|*[言語の guid]*|言語の GUID|  
+|*[ベンダー guid]*|仕入先の GUID|  
+|*[クラス guid]*|この式エバリュエーターを実装するクラスの GUID|  
+|*[デバッグ エンジン guid]*|この式エバリュエーターで動作するデバッグ エンジンの GUID|  
+  
+### <a name="expression-evaluator-extensions"></a>式エバリュエーターの拡張機能  
+ 式エバリュエーター拡張子メトリックは、レジストリ内の組織を次に示します。 `EEExtensions`指標の種類名、式エバリュエーターの拡張機能ありに対応しています*[メトリックの種類]*です。  
+  
+ `EEExtensions`\  
+  
+ *[拡張機能の guid]*\  
+  
+ *[metric] = [メトリックの値]*  
+  
+ *[metric] = [メトリックの値]*  
+  
+|プレースホルダー|説明|  
+|-----------------|-----------------|  
+|*[拡張機能の guid]*|式エバリュエーターの拡張機能の GUID|  
+  
+### <a name="exceptions"></a>例外  
+ レジストリの例外のメトリックの構成を次に示します。 `Exception`例外のメトリックの種類の名前に対応する*[メトリックの種類]*です。  
+  
+ `Exception`\  
+  
+ *[デバッグ エンジン guid]*\  
+  
+ *[例外の種類]*\  
+  
+ *[例外]*\  
+  
+ *[metric] = [メトリックの値]*  
+  
+ *[metric] = [メトリックの値]*  
+  
+ *[例外]*\  
+  
+ *[metric] = [メトリックの値]*  
+  
+ *[metric] = [メトリックの値]*  
+  
+|プレースホルダー|説明|  
+|-----------------|-----------------|  
+|*[デバッグ エンジン guid]*|例外をサポートするデバッグ エンジンの GUID です。|  
+|*[例外の種類]*|処理できる例外のクラスを識別するサブキーの一般的なタイトルです。 一般的な名前は**C++ 例外**、 **Win32 例外**、 **Common Language Runtime Exceptions**、および**ネイティブ ランタイム チェック**です。 これらの名前は、ユーザーには例外の特定のクラスにも使われます。|  
+|*[例外]*|例外の名前。 たとえば、 **_com_error**または**コントロール ブレーク**です。 これらの名前は、ユーザーに特定の例外を識別するも使われます。|  
+  
+## <a name="requirements"></a>要件  
+ これらのファイルにある、 [!INCLUDE[vs_dev10_ext](../../../extensibility/debugger/reference/includes/vs_dev10_ext_md.md)] SDK のインストール ディレクトリ (既定では、 *[ドライブ]*\Program Files\Microsoft Visual Studio 2010 SDK\\)。  
+  
+ ヘッダー: includes\dbgmetric.h  
+  
+ ライブラリ: libs\ad2de.lib、libs\dbgmetric.lib  
+  
+## <a name="see-also"></a>関連項目  
  [API リファレンス](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

@@ -1,16 +1,13 @@
 ---
-title: 'How to: Add an Entity to a Model | Microsoft Docs'
+title: "方法: エンティティをモデルに追加 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- EntityTool
+f1_keywords: EntityTool
 dev_langs:
 - VB
 - CSharp
@@ -22,44 +19,44 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], entity
 - BDC [SharePoint development in Visual Studio], adding an entity
 ms.assetid: 139a6639-dabe-4e14-bb64-e5f4efb6f2fb
-caps.latest.revision: 23
-author: kempb
-ms.author: kempb
+caps.latest.revision: "23"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 16dc2a7c05f1b7290596be337cdec0fe2637bf32
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: d8cc1bf4871ef91c5b08cb77963a70e422ee3cdc
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-add-an-entity-to-a-model"></a>How to: Add an Entity to a Model
-  To create an entity, add an entity control from the Visual Studio **Toolbox** onto the Business Data Connectivity (BDC) designer.  
+# <a name="how-to-add-an-entity-to-a-model"></a>方法: モデルにエンティティを追加する
+  エンティティを作成するには、Visual Studio からエンティティ コントロールを追加**ツールボックス**ビジネス データ接続 (BDC) をデザイナーにします。  
   
-### <a name="to-add-an-entity-to-the-model"></a>To add an entity to the model  
+### <a name="to-add-an-entity-to-the-model"></a>モデルにエンティティを追加するには  
   
-1.  Create a BDC project, or open an existing BDC project. For more information, see [Creating a Business Data Connectivity Model](../sharepoint/creating-a-business-data-connectivity-model.md).  
+1.  BDC プロジェクトを作成するか、既存の BDC プロジェクトを開きます。 詳細については、次を参照してください。[ビジネス データ接続モデルを作成する](../sharepoint/creating-a-business-data-connectivity-model.md)です。  
   
-2.  In the **Toolbox**, from the **BusinessDataCatalog** group, add an **Entity** control onto the designer.  
+2.  **ツールボックス**から、 **BusinessDataCatalog**グループで、追加、**エンティティ**コントロールをデザイナーにします。  
   
-     The new entity appears on the designer. Visual Studio adds an `<Entity>` element to the XML of the BDC model file in your project. For more information about the attributes of an Entity element, see [Entity](http://go.microsoft.com/fwlink/?LinkId=169296).  
+     デザイナーに新しいエンティティが表示されます。 Visual Studio は追加、`<Entity>`要素を BDC モデル ファイル、プロジェクト内の XML にします。 エンティティ要素の属性に関する詳細については、次を参照してください。[エンティティ](http://go.microsoft.com/fwlink/?LinkId=169296)です。  
   
-3.  On the designer, open the shortcut menu for the entity, choose **Add**, and then choose **Identifier**.  
+3.  デザイナーで、エンティティのショートカット メニューを開き、選択**追加**を選択し**識別子**です。  
   
-     A new identifier appears on the entity.  
+     エンティティに新しい識別子が表示されます。  
   
     > [!NOTE]  
-    >  You can change the name of the entity and the identifier in the **Properties** window.  
+    >  エンティティとの識別子の名前を変更することができます、**プロパティ**ウィンドウです。  
   
-4.  Define the fields of the entity in a class. You can either add a new class to the project or use an existing class created by using other tools such as the Object Relational Designer (O/R Designer). The following example shows an entity class named Contact.  
+4.  クラスでは、エンティティのフィールドを定義します。 プロジェクトに新しいクラスを追加するか、オブジェクト リレーショナル デザイナー (O/R デザイナー) などの他のツールを使用して作成された既存のクラスを使用します。 次の例では、連絡先を名前付きエンティティ クラスを示します。  
   
-     [!code-csharp[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/CSharp/sp_bdc_entity_data_class/bdcmodel1/contact.cs#1)]  [!code-vb[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/VisualBasic/sp_bdc_entity_data_class/bdcmodel1/contact.vb#1)]  
+     [!code-csharp[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/CSharp/sp_bdc_entity_data_class/bdcmodel1/contact.cs#1)]
+     [!code-vb[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/VisualBasic/sp_bdc_entity_data_class/bdcmodel1/contact.vb#1)]  
   
-## <a name="see-also"></a>See Also  
- [How to: Add a Creator Method](../sharepoint/how-to-add-a-creator-method.md)   
- [How to: Add a Deleter Method](../sharepoint/how-to-add-a-deleter-method.md)   
- [How to: Add an Updater Method](../sharepoint/how-to-add-an-updater-method.md)   
- [How to: Add a Finder Method](../sharepoint/how-to-add-a-finder-method.md)   
- [How to: Add a Specific Finder Method](../sharepoint/how-to-add-a-specific-finder-method.md)  
+## <a name="see-also"></a>関連項目  
+ [方法: Creator メソッドを追加](../sharepoint/how-to-add-a-creator-method.md)   
+ [方法: Deleter メソッドを追加](../sharepoint/how-to-add-a-deleter-method.md)   
+ [方法: Updater メソッドを追加](../sharepoint/how-to-add-an-updater-method.md)   
+ [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
+ [方法: SpecificFinder メソッドを追加する](../sharepoint/how-to-add-a-specific-finder-method.md)  
   
   

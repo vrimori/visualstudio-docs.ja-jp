@@ -1,56 +1,55 @@
 ---
-title: "IDiaReadExeAtRVACallback | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaReadExeAtRVACallback インターフェイス"
+title: "IDiaReadExeAtRVACallback |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaReadExeAtRVACallback interface
 ms.assetid: b2892513-3952-4f99-9b98-60cb9b1fdc91
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 09a570f27200dc677d292d645973fae8f9460f95
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaReadExeAtRVACallback
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-相対仮想アドレスで指定された実行可能ファイルのバイト列を指定するクライアント アプリケーションを作成できます。  
+# <a name="idiareadexeatrvacallback"></a>IDiaReadExeAtRVACallback
+相対仮想アドレスで指定された実行可能ファイルのバイト数を指定するクライアント アプリケーションを有効にします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
-IDiaReadExeAtRVACallback : IUnknown  
+IDiaReadExeAtRVACallback : IUnknown  
 ```  
   
-## Vtable の順序でメソッド  
- 次の表は `IDiaReadExeAtRVACallback` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDiaReadExeAtRVACallback`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[IDiaReadExeAtRVACallback::ReadExecutableAtRVA](../../debugger/debug-interface-access/idiareadexeatrvacallback-readexecutableatrva.md)|実行可能ファイルから指定した相対仮想アドレスから始まる指定 \(RVA\) したバイト数を読み取ります。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[IDiaReadExeAtRVACallback::ReadExecutableAtRVA](../../debugger/debug-interface-access/idiareadexeatrvacallback-readexecutableatrva.md)|指定した数の指定された相対仮想アドレス (RVA) 実行可能ファイルからで始まるバイトを読み取ります。|  
   
-## 解説  
- クライアント アプリケーションは実行可能ファイルへの相対仮想アドレスを使う実行形式のバイトを作成するにはこのインターフェイスを実装します。  絶対ファイルのオフセットを使用するには[IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)インターフェイスを実装します。  
+## <a name="remarks"></a>コメント  
+ クライアント アプリケーションでは、実行可能ファイルのファイルへの相対仮想アドレスを使用して実行可能ファイルのバイト数を提供するためにこのインターフェイスを実装します。 絶対ファイル オフセットを使用するのには、実装、 [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)インターフェイスです。  
   
-## 呼び出し元のメモ  
- このメソッドはクライアント アプリケーションによって実装され[IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) にファイルを読み取るための代替メソッドとしてメソッドに渡されます。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ このメソッドは、クライアント アプリケーションによって実装されに渡される、 [idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)メソッドとして、ファイルの読み取りの代替方法です。  
   
-## 必要条件  
- ヘッダー : Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Dia2.h  
   
- ライブラリ : diaguids.lib  
+ ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## 参照  
- [インターフェイス \(Debug Interface Access SDK\)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
- [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)   
+## <a name="see-also"></a>関連項目  
+ [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
+ [Idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)   
  [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)

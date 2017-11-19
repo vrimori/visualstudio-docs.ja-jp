@@ -1,52 +1,54 @@
 ---
-title: "toJSON メソッド (Date) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "toJSON メソッド"
+title: "toJSON メソッド (Date) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: toJSON method
 ms.assetid: f91df030-e9c9-425e-8e6d-b46bdda66cb6
-caps.latest.revision: 27
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a131c7b248ca0486ab0b3b02d40e4351136c37c9
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# toJSON メソッド (Date) (JavaScript)
-[JSON.stringify](../../javascript/reference/json-stringify-function-javascript.md) メソッドで使用され、オブジェクトのデータを JSON \(JavaScript Object Notation\) シリアル化できます。  
+# <a name="tojson-method-date-javascript"></a>toJSON メソッド (Date) (JavaScript)
+によって使用される、 [JSON.stringify](../../javascript/reference/json-stringify-function-javascript.md) JavaScript Object Notation (JSON) シリアル化のため、オブジェクトのデータの変換を有効にするメソッド。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 objectname.toJSON()  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `objectname`  
- 必須です。  JSON シリアル化を行うオブジェクトを指定します。  
+ 必須です。 どの JSON のシリアル化が必要なオブジェクトです。  
   
-## 解説  
- `toJSON` メソッドは、`JSON.stringify` 関数によって使用されます。  `JSON.stringify` は、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 値を JSON テキストに シリアル化します。  `JSON.stringify` で `toJSON` メソッドを使用できる場合は、`JSON.stringify` が呼び出されたときに `toJSON` メソッドが呼び出されます。  
+## <a name="remarks"></a>コメント  
+ `toJSON`メソッドを使って、`JSON.stringify`関数。 `JSON.stringify`シリアル化、 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] JSON テキストの値。 場合、`toJSON`に用意されているメソッド`JSON.stringify`、`toJSON`メソッドが呼び出されます`JSON.stringify`と呼びます。  
   
- `toJSON` メソッドは、[Date](../../javascript/reference/date-object-javascript.md) [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] オブジェクトの組み込みメンバーです。  これは、サフィックス Z で示される UTC のタイム ゾーンの ISO 形式の日付文字列を返します。  
+ `toJSON`メソッドは、組み込みのメンバー、[日付](../../javascript/reference/date-object-javascript.md)[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]オブジェクト。 UTC タイム ゾーン (サフィックス Z で示されます) を ISO 形式の日付の文字列を返します。  
   
- `Date` 型の `toJSON` メソッドをオーバーライドするか、または他のオブジェクト型に対して `toJSON` メソッドを定義すると、JSON シリアル化の前に特定のオブジェクト型のデータを変換できます。  
+ オーバーライドすることができます、`toJSON`のメソッド、`Date`入力するか、定義、 `toJSON` JSON のシリアル化する前に特定のオブジェクトの種類のデータの変換を実現するために他のオブジェクト型のメソッドです。  
   
-## 使用例  
- `toJSON` メソッドを使用して、文字列のメンバー値を大文字でシリアル化する例を次に示します。  `toJSON` メソッドは、`JSON.stringify` メソッドが呼び出されるときに呼び出されます。  
+## <a name="example"></a>例  
+ 次の例では、`toJSON`を大文字に変換された文字列メンバーの値をシリアル化するメソッド。 `toJSON`メソッドが呼び出されます`JSON.stringify`と呼びます。  
   
-```javascript  
+```JavaScript  
 var contact = new Object();  
 contact.firstname = "Jesper";  
 contact.surname = "Aaberg";  
@@ -72,10 +74,10 @@ var jsonText = JSON.stringify(contact);
 */  
 ```  
   
-## 使用例  
- [Date](../../javascript/reference/date-object-javascript.md) オブジェクトの組み込みメンバーである `toJSON` メソッドを使用する方法の例を次に示します。  
+## <a name="example"></a>例  
+ 次の例を使用する方法を示しています、`toJSON`の組み込みメンバーであるメソッド、[日付](../../javascript/reference/date-object-javascript.md)オブジェクト。  
   
-```javascript  
+```JavaScript  
 var dt = new Date('8/24/2009');  
 dt.setUTCHours(7, 30, 0);  
 var jsonText = JSON.stringify(dt);  
@@ -85,10 +87,10 @@ var jsonText = JSON.stringify(dt);
 */  
 ```  
   
-## 必要条件  
- [!INCLUDE[jsv58](../../javascript/reference/includes/jsv58-md.md)]  **対象:**  [Date オブジェクト](../../javascript/reference/date-object-javascript.md)  
+## <a name="requirements"></a>要件  
+ [!INCLUDE[jsv58](../../javascript/reference/includes/jsv58-md.md)]**に適用されます:** [オブジェクトの日付](../../javascript/reference/date-object-javascript.md)  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [JSON オブジェクト](../../javascript/reference/json-object-javascript.md)   
  [JSON.parse 関数](../../javascript/reference/json-parse-function-javascript.md)   
  [JSON.stringify 関数](../../javascript/reference/json-stringify-function-javascript.md)   

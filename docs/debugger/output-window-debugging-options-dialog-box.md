@@ -1,42 +1,43 @@
 ---
-title: "出力ウィンドウ ([オプション] ダイアログ ボックス - [デバッグ]) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.options.OutputWindow"
-  - "VS.ToolsOptionsPages.Debugger.OutputWindow"
-  - "vs.debug.options.Output"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "デバッグするには、出力 ウィンドウのオプション ダイアログ ボックス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.options.OutputWindow
+- VS.ToolsOptionsPages.Debugger.OutputWindow
+- vs.debug.options.Output
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
 ms.assetid: d67387c2-39e9-4790-93bc-e41bff12fb9c
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: e9272df85e6761078b4c84024f3d5318b216a0de
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 出力ウィンドウ ([オプション] ダイアログ ボックス - [デバッグ])
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-**出力**ウィンドウに表示されるデバッグ情報の種類を指定できます。  これらのオプションを表示するには、**\[ツール\]** メニューを開き、**\[オプション\]** をクリックし、**\[デバッグ\]** ノードを展開し、**\[出力ウィンドウ\]** をクリックします。  
+# <a name="output-window-debugging-options-dialog-box"></a>出力ウィンドウ ([オプション] ダイアログ ボックス - [デバッグ])
+表示されるデバッグ情報の種類を指定することができます、**出力**ウィンドウです。 これらのオプションを表示するを開き、**ツール** メニューのをクリックして**オプション**、展開、**デバッグ** ノードをクリック**出力ウィンドウ**します。  
   
- **\[出力の全般設定\]**  
- このカテゴリには、一般的なデバッグ メッセージを**出力**ウィンドウに表示するかどうかを決定するコントロールが含まれます。  種類ごとにメッセージを表示するかどうかを指定できます。  
+ **出力の全般設定**  
+ このカテゴリにはで一般的なデバッグ メッセージを表示するかどうかを決定するコントロールが含まれています、**出力**ウィンドウです。 種類ごとにメッセージを表示するかどうかを指定できます。  
   
- **\[WPF トレース設定\]**  
- このカテゴリには、**出力**ウィンドウに表示する WPF トレース メッセージのレベルを決定するコントロールが含まれます。  種類ごとにメッセージを表示するかどうかを指定し、**\[重大\]** から **\[すべて\]** までのレベルを指定することができます。  
+ **WPF トレース設定**  
+ このカテゴリに表示される WPF トレース メッセージのレベルを決定するコントロールが含まれています、**出力**ウィンドウです。 各メッセージの種類が表示されまでのレベルを指定するかどうかを指定できます**重大**に**すべて**です。  
   
- 詳細については、「[方法: WPF トレース情報を表示する](../debugger/how-to-display-wpf-trace-information.md)」を参照してください。  
+ 詳細については、次を参照してください。[する方法: WPF トレース情報を表示](../debugger/how-to-display-wpf-trace-information.md)です。  
   
-## 参照  
- [\[デバッグ\] \(\[オプション\] ダイアログ ボックス\)](../Topic/Debugging,%20Options%20Dialog%20Box.md)   
- [\[出力\] ウィンドウ](../Topic/Output%20Window.md)
+## <a name="see-also"></a>関連項目  
+ [デバッグ オプション ダイアログ ボックス](../debugger/debugging-options-dialog-box.md)   
+ [[出力] ウィンドウ](../ide/reference/output-window.md)

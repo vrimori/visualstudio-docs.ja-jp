@@ -1,57 +1,57 @@
 ---
-title: "IDebugDocument2::GetName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocument2::GetName"
-helpviewer_keywords: 
-  - "IDebugDocument2::GetName"
+title: "IDebugDocument2::GetName |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugDocument2::GetName
+helpviewer_keywords: IDebugDocument2::GetName
 ms.assetid: 6f09ff09-b0cf-4472-8fc8-143991f0ceb1
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 717a1eb794e3712427d6b905851c32796c3865c5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugDocument2::GetName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-複数のフォームの 1 種類のドキュメントの名前を取得します。  
+# <a name="idebugdocument2getname"></a>IDebugDocument2::GetName
+いくつかの形式のいずれかで、ドキュメントの名前を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetName(   
-   GETNAME_TYPE gnType,  
-   BSTR*        pbstrFileName  
+```cpp  
+HRESULT GetName(   
+   GETNAME_TYPE gnType,  
+   BSTR*        pbstrFileName  
 );  
 ```  
   
-```c#  
-int GetName(   
-   enum_GETNAME_TYPE gnType,  
-   out string        pbstrFileName  
+```csharp  
+int GetName(   
+   enum_GETNAME_TYPE gnType,  
+   out string        pbstrFileName  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `gnType`  
- \[出力\] 返される名前の型を決定 [GETNAME\_TYPE](../../../extensibility/debugger/reference/getname-type.md) の列挙体の値。  
+ [in]値、 [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)列挙体を返す名前の型を決定します。  
   
  `pbstrFileName`  
- \[入力\] ドキュメント名文字列を返します。  
+ [out]ドキュメント名を含む文字列を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- このメソッドはタイトルまたはファイル名またはファイル名の一部としてたとえばドキュメントの名前を返すことができます。  
+## <a name="remarks"></a>コメント  
+ タイトル、または、ファイル名またはファイル名の偶数の一部として、このメソッドは、ドキュメントの名前を返すなどのことができます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)   
- [GETNAME\_TYPE](../../../extensibility/debugger/reference/getname-type.md)
+ [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)

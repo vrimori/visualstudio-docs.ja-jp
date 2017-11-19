@@ -1,108 +1,109 @@
 ---
-title: "方法 : 高パフォーマンス クラスター上でデバッグする | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "クラスター デバッグ"
-  - "高パフォーマンス デバッグ"
+title: "方法: 高パフォーマンス クラスター上でのデバッグ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- cluster debugging
+- high-perfomance debugging
 ms.assetid: a2f0eb07-840e-4f95-a1b1-9509217e5b8f
-caps.latest.revision: 24
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: eb07ad37e8522e2a893edbc7fba86e359893b812
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : 高パフォーマンス クラスター上でデバッグする
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-高パフォーマンス クラスター上でのマルチプロセス プログラムのデバッグは、リモート コンピューター上での通常のプログラムのデバッグと似ています。  ただし、追加の考慮事項がいくつかあります。  一般的なリモート セットアップ要件については、「[リモート デバッグ](../debugger/remote-debugging.md)」を参照してください。  
+# <a name="how-to-debug-on-a-high-performance-cluster"></a>方法 : 高パフォーマンス クラスター上でデバッグする
+高パフォーマンス クラスター上でのマルチプロセス プログラムのデバッグは、リモート コンピューター上での通常のプログラムのデバッグと似ています。 ただし、追加の考慮事項がいくつかあります。 一般的なリモート セットアップ要件は、次を参照してください。[リモート デバッグ](../debugger/remote-debugging.md)です。  
   
- 高パフォーマンス クラスター上でデバッグするときは、リモート デバッグに使用できる [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のデバッグ ウィンドウとデバッグ手法をすべて使用できます。  ただし、リモートでデバッグするため、外部のコンソール ウィンドウは使用できません。  
+ 高パフォーマンス クラスター上でデバッグするときは、リモート デバッグに使用できる [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のデバッグ ウィンドウとデバッグ手法をすべて使用できます。 ただし、リモートでデバッグするため、外部のコンソール ウィンドウは使用できません。  
   
- **\[スレッド\]** ウィンドウと **\[プロセス\]** ウィンドウは、並列アプリケーションをデバッグする際に特に役立ちます。  これらのウィンドウの使い方に関するヒントについては、「[How to: Use the Processes Window](http://msdn.microsoft.com/ja-jp/0207ce2f-8ceb-4fe7-b2b5-4dd35b035ed7)」および「[方法 : \[スレッド\] ウィンドウを使用する](../Topic/How%20to:%20Use%20the%20Threads%20Window.md)」を参照してください。  
+ **スレッド**ウィンドウと**プロセス**ウィンドウは並列アプリケーションをデバッグするために特に役立ちます。 これらのウィンドウを使用する方法のヒントについては、次を参照してください。[する方法: [プロセス] ウィンドウを使用して](http://msdn.microsoft.com/en-us/0207ce2f-8ceb-4fe7-b2b5-4dd35b035ed7)と[チュートリアル: [スレッド] ウィンドウを使用してデバッグ](../debugger/how-to-use-the-threads-window.md)です。  
   
  以下の手順では、高パフォーマンス クラスター上でのデバッグに特に役立つ手法を示します。  
   
- 並列アプリケーションをデバッグするときは、特定のスレッド、プロセス、またはコンピューターにブレークポイントを設定することが必要になる場合があります。  これを行うには、通常のブレークポイントを作成してから、ブレークポイント フィルターを追加します。  
+ 並列アプリケーションをデバッグするときは、特定のスレッド、プロセス、またはコンピューターにブレークポイントを設定することが必要になる場合があります。 これを行うには、通常のブレークポイントを作成してから、ブレークポイント フィルターを追加します。  
   
-### \[ブレークポイントのフィルター\] ダイアログ ボックスを開くには  
+### <a name="to-open-the-breakpoint-filter-dialog-box"></a>[ブレークポイントのフィルター] ダイアログ ボックスを開くには  
   
-1.  ソース ウィンドウ、**\[逆アセンブル\]** ウィンドウ、**\[呼び出し履歴\]** ウィンドウ、または **\[ブレークポイント\]** ウィンドウでブレークポイント グリフを右クリックします。  
+1.  ソース ウィンドウでブレークポイント グリフを右クリックして、**逆アセンブル** ウィンドウで、**呼び出し履歴**ウィンドウで、または**ブレークポイント**ウィンドウです。  
   
-2.  ショートカット メニューの **\[フィルター\]** をクリックします。  このオプションは、最上位レベルまたは **\[ブレークポイント\]** のサブメニューとして表示されます。  
+2.  ショートカット メニューをクリックして**フィルター**です。 このオプションは、レベル、またはサブメニューで下の最上部に表示可能性があります**ブレークポイント**です。  
   
-### 特定のコンピューターにブレークポイントを設定するには  
+### <a name="to-set-a-breakpoint-on-a-specific-computer"></a>特定のコンピューターにブレークポイントを設定するには  
   
-1.  **\[プロセス\]** ウィンドウでコンピューター名を確認します。  
+1.  コンピューター名を取得、**プロセス**ウィンドウです。  
   
-2.  ブレークポイントを選択し、前記の手順に従って **\[ブレークポイントのフィルター\]** ダイアログ ボックスを開きます。  
+2.  ブレークポイントを選択し、開く、**ブレークポイント フィルター**  ダイアログ ボックスの前の手順に従ってします。  
   
-3.  **\[ブレークポイントのフィルター\]** ダイアログ ボックスに次の文字列を入力します。  
+3.  **ブレークポイント フィルター**ダイアログ ボックスで、種類。  
   
-     MachineName \=*yourmachinename*  
+     MachineName =*yourmachinename*  
   
-     より複雑なフィルターを作成する場合は、AND 演算子 \(`&`\)、OR 演算子 \(`||`\)、NOT 演算子 \(`!`\)、およびかっこを使って句を結合できます。  
+     より複雑なフィルターを作成する場合は、AND 演算子 (`&`)、OR 演算子 (`||`)、NOT 演算子 (`!`)、およびかっこを使って句を結合できます。  
   
-4.  **\[OK\]** をクリックします。  
+4.  **[OK]** をクリックします。  
   
-### 特定のプロセスにブレークポイントを設定するには  
+### <a name="to-set-a-breakpoint-on-a-specific-process"></a>特定のプロセスにブレークポイントを設定するには  
   
-1.  **\[プロセス\]** ウィンドウで、プロセス名またはプロセス ID 番号を取得します。  
+1.  このプロセスの名前を取得またはプロセス ID 番号を**プロセス**ウィンドウです。  
   
-2.  ブレークポイントを選択し、最初の手順に従って **\[ブレークポイントのフィルター\]** ダイアログ ボックスを開きます。  
+2.  ブレークポイントを選択し、開く、**ブレークポイント フィルター**  ダイアログ ボックスの最初の手順と同様にします。  
   
-3.  **\[ブレークポイントのフィルター\]** ダイアログ ボックスに次の文字列を入力します。  
+3.  **ブレークポイント フィルター**ダイアログ ボックスで、種類。  
   
      `ProcessName =`  *yourprocessname*  
   
      または  
   
-     `ProcessID =` *yourprocessIDnumber*  
+     `ProcessID =`*yourprocessIDnumber*  
   
-     より複雑なフィルターを作成する場合は、AND 演算子 \(`&`\)、OR 演算子 \(`||`\)、NOT 演算子 \(`!`\)、およびかっこを使って句を結合できます。  
+     より複雑なフィルターを作成する場合は、AND 演算子 (`&`)、OR 演算子 (`||`)、NOT 演算子 (`!`)、およびかっこを使って句を結合できます。  
   
-4.  **\[OK\]** をクリックします。  
+4.  **[OK]** をクリックします。  
   
-### 特定のスレッドにブレークポイントを設定するには  
+### <a name="to-set-a-breakpoint-on-a-specific-thread"></a>特定のスレッドにブレークポイントを設定するには  
   
-1.  **\[スレッド\]** ウィンドウで、スレッド名またはスレッド ID 番号を取得します。  
+1.  スレッド名を取得またはスレッド ID 番号を**スレッド**ウィンドウです。  
   
-2.  ブレークポイントを選択し、最初の手順に従って **\[ブレークポイントのフィルター\]** ダイアログ ボックスを開きます。  
+2.  ブレークポイントを選択し、開く、**ブレークポイント フィルター**  ダイアログ ボックスの最初の手順に従ってします。  
   
-3.  **\[ブレークポイントのフィルター\]** ダイアログ ボックスに次の文字列を入力します。  
+3.  **ブレークポイント フィルター**ダイアログ ボックスで、種類。  
   
-     `ThreadName =` *yourthreadname*  
+     `ThreadName =`*yourthreadname*  
   
      または  
   
-     `ThreadID =` *yourthreadIDnumber*  
+     `ThreadID =`*yourthreadIDnumber*  
   
-     より複雑なフィルターを作成する場合は、AND 演算子 \(`&`\)、OR 演算子 \(`||`\)、NOT 演算子 \(`!`\)、およびかっこを使って句を結合できます。  
+     より複雑なフィルターを作成する場合は、AND 演算子 (`&`)、OR 演算子 (`||`)、NOT 演算子 (`!`)、およびかっこを使って句を結合できます。  
   
-4.  **\[OK\]** をクリックします。  
+4.  **[OK]** をクリックします。  
   
-## 使用例  
+## <a name="example"></a>例  
  次の例は、`marvin` というコンピューターと `fourier1` というスレッドを対象とするブレークポイントのフィルターを作成する方法を示しています。  
   
 ```  
 (MachineName = marvin) & (ThreadName = fourier1)  
 ```  
   
-## 参照  
- [マルチスレッド アプリケーションのデバッグ](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+## <a name="see-also"></a>関連項目  
+ [マルチ スレッド アプリケーションをデバッグします。](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [リモート デバッグ](../debugger/remote-debugging.md)   
- [How to: Use the Processes Window](http://msdn.microsoft.com/ja-jp/0207ce2f-8ceb-4fe7-b2b5-4dd35b035ed7)   
- [方法 : \[スレッド\] ウィンドウを使用する](../Topic/How%20to:%20Use%20the%20Threads%20Window.md)   
- [Threads and Processes](http://msdn.microsoft.com/ja-jp/73d87480-9af3-4d1b-baf5-397d5d876ae6)   
+ [方法: [プロセス] ウィンドウの使用](http://msdn.microsoft.com/en-us/0207ce2f-8ceb-4fe7-b2b5-4dd35b035ed7)   
+ [マルチ スレッド アプリケーションのデバッグの開始します。](../debugger/get-started-debugging-multithreaded-apps.md)   
+ [スレッドとプロセス](http://msdn.microsoft.com/en-us/73d87480-9af3-4d1b-baf5-397d5d876ae6)   
  [ブレークポイントの使用](../debugger/using-breakpoints.md)

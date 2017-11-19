@@ -1,52 +1,52 @@
 ---
-title: "IDebugMethodField::GetGlobalContainer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugMethodField::GetGlobalContainer"
-helpviewer_keywords: 
-  - "IDebugMethodField::GetGlobalContainer メソッド"
+title: "IDebugMethodField::GetGlobalContainer |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugMethodField::GetGlobalContainer
+helpviewer_keywords: IDebugMethodField::GetGlobalContainer method
 ms.assetid: 041ac5aa-0b80-4310-b9ae-b88f8e7e0e5f
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: ffeb7c7c1abe6e5a816c2d7a67ad6820e0921bc8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugMethodField::GetGlobalContainer
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-メソッドのグローバルなコンテナーを取得します。  
+# <a name="idebugmethodfieldgetglobalcontainer"></a>IDebugMethodField::GetGlobalContainer
+メソッドのグローバルのコンテナーを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT GetGlobalContainer(  
-   IDebugClassField** ppClass  
+   IDebugClassField** ppClass  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetGlobalContainer(  
-   out IDebugClassField ppClass  
+   out IDebugClassField ppClass  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppClass`  
- \[出力\] このメソッドが定義されているモジュールを表す [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) を返します。  
+ [out]返します、 [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)このメソッドが定義されているモジュールを表すです。  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## 解説  
- [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) 返されたオブジェクトはモジュール全体を表し人為的なオブジェクトでありつまりモジュール自体は実際のクラスを備えなくて `IDebugClassField` のオブジェクトで表すことができます。列挙し検出されるとしてモジュールのさまざまな要素ができます。  
+## <a name="remarks"></a>コメント  
+ 返された[IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)オブジェクトはモジュール全体を表し、人為的なオブジェクトしますつまり、モジュール自体には、実際のクラスはありませんがで表すことができます、`IDebugClassField`さまざまなをすることにより、オブジェクト。列挙され、検出するモジュールの要素です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

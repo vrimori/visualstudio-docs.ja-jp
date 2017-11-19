@@ -4,40 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SccBackgroundGet
-helpviewer_keywords:
-- SccBackgroundGet function
+f1_keywords: SccBackgroundGet
+helpviewer_keywords: SccBackgroundGet function
 ms.assetid: 69817e52-b9ac-4f4d-820b-2cc9c384f0dc
-caps.latest.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 8bc845c2ef3cb4ece3e52dca272fdc75208e8dbd
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 85b700f0cb1e3a364cae69ff6c628151ea6a7bd3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="sccbackgroundget-function"></a>SccBackgroundGet 関数
-この関数は、ソース管理から各指定されたファイルのユーザー操作なしに取得します。  
+この関数は、ソース管理から各指定されたファイルのユーザー操作なしで取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,13 +37,13 @@ SCCRTN SccBackgroundGet(
   
 #### <a name="parameters"></a>パラメーター  
  pContext  
- [in]ソース管理プラグインのコンテキストのポインター。  
+ [in]ソース管理プラグイン コンテキスト ポインターです。  
   
  nFiles  
  [in]指定されたファイルの数、`lpFileNames`配列。  
   
  lpFileNames  
- [入力、出力]取得するファイルの名前の配列。  
+ [入力、出力].取得するファイルの名前の配列。  
   
 > [!NOTE]
 >  名前は、完全修飾のローカル ファイル名である必要があります。  
@@ -71,19 +55,19 @@ SCCRTN SccBackgroundGet(
  [in]この操作に関連付けられている一意の値。  
   
 ## <a name="return-value"></a>戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |SCC_OK|操作が正常に完了しました。|  
-|SCC_E_BACKGROUNDGETINPROGRESS|バック グラウンドの取得が既に進行中 (ソース管理プラグインを返すこの同時バッチ処理がサポートしない場合にのみ)。|  
+|SCC_E_BACKGROUNDGETINPROGRESS|バック グラウンドの取得が既に進行中 (ソース管理プラグインを返すこの同時バッチ操作はサポートされていない場合にのみ)。|  
 |SCC_I_OPERATIONCANCELED|操作が完了する前に取り消されました。|  
   
 ## <a name="remarks"></a>コメント  
- この関数は常に、ソース管理プラグインが読み込まれている&1; つから別のスレッドで呼び出されます。 この関数が返すが終了するまでに予期されていませんただし、そのことができます複数回呼び出す複数同時にすべてのファイルのリストにします。  
+ この関数は常にソース管理プラグインが読み込まれている 1 つから別のスレッドで呼び出されます。 この関数が完了するまでを返す必要はありません。ただし、その複数回と共に呼び出せる複数同時にすべてのファイルのリスト。  
   
- 使用、`dwFlags`引数と同じ、 [SccGet](../extensibility/sccget-function.md)します。  
+ 使用、`dwFlags`と同じ引数が、 [SccGet](../extensibility/sccget-function.md)です。  
   
 ## <a name="see-also"></a>関連項目  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
+ [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccGet](../extensibility/sccget-function.md)

@@ -1,46 +1,47 @@
 ---
-title: "CA1713: イベントは、before または after プレフィックスを含むことはできません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "EventsShouldNotHaveBeforeOrAfterPrefix"
-  - "CA1713"
-helpviewer_keywords: 
-  - "CA1713"
-  - "EventsShouldNotHaveBeforeOrAfterPrefix"
+title: "1713: イベントはありませんは before または after プレフィックス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- EventsShouldNotHaveBeforeOrAfterPrefix
+- CA1713
+helpviewer_keywords:
+- CA1713
+- EventsShouldNotHaveBeforeOrAfterPrefix
 ms.assetid: 855772a4-aa9e-410b-88c1-c5fba1ca63da
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: c211d2f2cc65c12fd11782058c5e8b8a3aaf47b6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA1713: イベントは、before または after プレフィックスを含むことはできません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1713-events-should-not-have-before-or-after-prefix"></a>CA1713: イベントは、before または after プレフィックスを含むことはできません
 |||  
 |-|-|  
 |TypeName|EventsShouldNotHaveBeforeOrAfterPrefix|  
 |CheckId|CA1713|  
-|分類|Microsoft.Naming|  
+|カテゴリ|Microsoft.Naming|  
 |互換性に影響する変更点|あり|  
   
-## 原因  
- イベント名が "Before" または "After" で始まります。  
+## <a name="cause"></a>原因  
+ イベントの名前は、'Before' や 'After' を開始します。  
   
-## 規則の説明  
- イベントには、イベントを発生させるアクションを示す名前を付けます。  特定のシーケンスで発生する関連イベントに名前を付ける場合、現在時制または過去時制を使用して、アクション シーケンスの相対的な位置を示します。  たとえば、リソースを閉じるときに発生するイベントのペアに名前を付けるとき、"BeforeClose" と "AfterClose" ではなく、"Closing" と "Closed" にします。  
+## <a name="rule-description"></a>規則の説明  
+ イベント名は、イベントを発生させるアクションを記述する必要があります。 特定のシーケンスで発生する関連イベントに名前を付ける場合、現在時制または過去時制を使用して、アクション シーケンスの相対的な位置を示します。 たとえば、リソースを終了するときに発生するイベントのペアの名前に、ときに可能性がありますの名前を付ける '終了' および 'BeforeClose' および 'AfterClose' の代わりに ' Closed'、します。  
   
- 名前付け規則では、共通言語ランタイムをターゲットとするライブラリの統一的な名前の付け方が規定されています。  これにより、新しいソフトウェア ライブラリを習得するまでの時間を短縮でき、マネージ コード開発の専門家によってライブラリが開発されたという信頼を顧客に与えることができます。  
+ 名前付け規則では、共通言語ランタイムをターゲットとするライブラリの統一的な名前の付け方が規定されています。 これにより、新しいソフトウェア ライブラリを習得するまでの時間を短縮でき、マネージ コード開発の専門家によってライブラリが開発されたという信頼を顧客に与えることができます。  
   
-## 違反の修正方法  
- イベント名からプレフィックスを削除し、動詞の現在時制か過去時制を使用した名前に変更するように検討します。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ イベント名のプレフィックスを削除して、現在時制または過去時制動詞に使用する名前の変更を検討してください。  
   
-## 警告を抑制する状況  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
  この規則による警告は抑制しないでください。

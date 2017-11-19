@@ -1,49 +1,50 @@
 ---
-title: "undefined 定数 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "undefined"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "undefined プロパティ"
+title: "undefined 定数 (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: undefined
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: undefined property
 ms.assetid: 2a689d7d-00b0-48fb-9c95-5c2867bde006
-caps.latest.revision: 20
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8ba7fa8b160e4f5d954c8d6545da5fae41c2f74b
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# undefined 定数 (JavaScript)
-初期化されていない変数など、定義されていない値。  
+# <a name="undefined-constant-javascript"></a>undefined 定数 (JavaScript)
+値が定義されていない、初期化されていない変数などです。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 undefined  
 ```  
   
-## 解説  
- `undefined` 定数は `Global` オブジェクトのメンバーで、スクリプト エンジンが初期化されたときに使用できるようになります。  変数を宣言し、初期化していない場合、その値は **undefined** になります。  
+## <a name="remarks"></a>コメント  
+ `undefined`定数のメンバーである、`Global`オブジェクト、およびスクリプト エンジンが初期化されたときに使用可能になります。 変数が宣言されましたが、初期化されていませんが場合、その値は**未定義**です。  
   
- 変数を宣言していない場合、その変数と `undefined` は比較できません。ただし、その変数の型と文字列 "undefined" は比較できます。  
+ 変数が宣言されていない場合に比較できません`undefined`文字列"undefined"を変数の型を比較することができますが、します。  
   
- `undefined` 定数は、変数に undefined を明示的に設定するときまたはテストするときに便利です。  
+ `undefined`定数にする場合に利用を明示的にはテストまたは未定義変数を設定します。  
   
-## 使用例  
- `undefined` 定数を使用する方法の例を次に示します。  
+## <a name="example"></a>例  
+ 次の例を使用する方法を示しています、`undefined`定数。  
   
-```javascript  
+```JavaScript  
 // A variable that has not been initialized.  
 var declared;  
   
@@ -66,10 +67,10 @@ document.write("typeof notDeclared is " + typeof(notDeclared));
 // typeof notDeclared is undefined  
 ```  
   
-## 必要条件  
- `undefined` プロパティは [!INCLUDE[jsv55text](../../javascript/reference/includes/jsv55text-md.md)] で導入され、[!INCLUDE[jsv9textspecific](../../javascript/reference/includes/jsv9textspecific-md.md)] で読み取り専用になりました。  
+## <a name="requirements"></a>要件  
+ `undefined`プロパティで導入された[!INCLUDE[jsv55text](../../javascript/reference/includes/jsv55text-md.md)]、および読み取り専用に行った[!INCLUDE[jsv9textspecific](../../javascript/reference/includes/jsv9textspecific-md.md)]です。  
   
- **対象**: [Global オブジェクト](../../javascript/reference/global-object-javascript.md)  
+ **適用されます**:[グローバル オブジェクト](../../javascript/reference/global-object-javascript.md)  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [typeof 演算子](../../javascript/reference/typeof-operator-decrementjavascript.md)

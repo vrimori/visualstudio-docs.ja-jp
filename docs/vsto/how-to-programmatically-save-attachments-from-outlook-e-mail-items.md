@@ -1,12 +1,10 @@
 ---
-title: 'How to: Programmatically Save Attachments from Outlook E-Mail Items | Microsoft Docs'
+title: "方法: プログラムによって Outlook の電子メール アイテムから添付ファイルを保存 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,32 +17,31 @@ helpviewer_keywords:
 - mail items [Office development in Visual Studio], attachments
 - attachments [Office development in Visual Studio]
 ms.assetid: 2f05e2bb-ae4f-407c-a6da-a3b1a4c31ab3
-caps.latest.revision: 23
-author: kempb
-ms.author: kempb
+caps.latest.revision: "23"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 860e0506aebbeeaa1829cf052cc1dbc87685c3fd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 50673163fdbdd1c0927f6efa56eae39e8cc2e3c8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-programmatically-save-attachments-from-outlook-e-mail-items"></a>How to: Programmatically Save Attachments from Outlook E-Mail Items
-  This example saves e-mail attachments to a specified folder when the mail is received in the inbox.  
+# <a name="how-to-programmatically-save-attachments-from-outlook-e-mail-items"></a>方法: プログラムによって Outlook の電子メール アイテムから添付ファイルを保存する
+  この例では、メールを受信トレイで受け取ったときに、電子メールの添付ファイルを指定されたフォルダーに保存します。  
   
 > [!IMPORTANT]  
->  This example works only if you add a folder named **TestFileSave** at the root of the C directory.  
+>  この例は、という名前のフォルダーを追加する場合にのみ**TestFileSave** C ディレクトリのルートに位置します。  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>例  
  [!code-csharp[Trin_OL_SaveAttachments#1](../vsto/codesnippet/CSharp/Trin_OL_SaveAttachments/thisaddin.cs#1)]  
   
-## <a name="see-also"></a>See Also  
- [Working with Mail Items](../vsto/working-with-mail-items.md)   
- [How to: Programmatically Retrieve a Folder by Name](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)   
- [How to: Programmatically Perform Actions When an E-Mail Message Is Received](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)   
- [How to: Programmatically Search Within a Specific Folder](../vsto/how-to-programmatically-search-within-a-specific-folder.md)  
+## <a name="see-also"></a>関連項目  
+ [メール アイテムの操作](../vsto/working-with-mail-items.md)   
+ [方法: プログラムによって名前のフォルダーを取得します。](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)   
+ [方法: プログラムによって電子メール メッセージが受信したときにアクションを実行](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)   
+ [方法: プログラムによって特定のフォルダー内を検索する](../vsto/how-to-programmatically-search-within-a-specific-folder.md)  
   
   

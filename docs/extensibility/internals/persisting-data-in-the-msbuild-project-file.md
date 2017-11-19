@@ -1,71 +1,72 @@
 ---
-title: "MSBuild プロジェクト ファイルでデータを保持します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プロジェクト ファイル内のデータを永続化します。"
+title: "MSBuild プロジェクト ファイルでデータの永続化 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: project files, persisting data in
 ms.assetid: 6a920cb7-453d-4ffd-af1c-6f3084bd03f7
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5d41a4776362f450d5d55552b049c3bba1bc781b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# MSBuild プロジェクト ファイルでデータを保持します。
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-プロジェクトのサブタイプはデータをプロジェクト ファイルにサブタイプに固有の後で使用できるように保持する必要があります。  プロジェクトのサブタイプは次の要件を満たすためにプロジェクト ファイルの永続性が使用されます :  
+# <a name="persisting-data-in-the-msbuild-project-file"></a>MSBuild プロジェクト ファイルでデータを保持します。
+プロジェクトのサブタイプは、後で使用できるプロジェクト ファイルにサブタイプに固有のデータを保持する必要があります。 プロジェクトのサブタイプでは、プロジェクト ファイルの永続化を使用して、次の要件を満たします。  
   
-1.  プロジェクトをビルドの一部として使用されるデータが保持されます。  \(Microsoft Build Engine の詳細については[MSBuild](http://msdn.microsoft.com/ja-jp/7c49aba1-ee6c-47d8-9de1-6f29a906e20b) を参照してください\)。ビルド関連の情報は次のいずれかあります :  
+1.  プロジェクトのビルドの一部として使用されるデータを保持します。 (Microsoft Build Engine の詳細については、次を参照してください[MSBuild](../../msbuild/msbuild.md)。)。ビルド関連の情報をするか、実行できます。  
   
-    1.  構成に依存しないデータ。  つまり空白またはその条件の MSBuild の要素に格納されているデータ。  
+    1.  構成に依存しないデータ。 つまり、空白または不足している条件を持つ MSBuild 要素に格納されているデータ。  
   
-    2.  構成依存します。  つまり特定のプロジェクト構成に調整される MSBuild の要素に格納されているデータ。  次に例を示します。  
+    2.  構成に依存するデータ。 つまり、データを特定のプロジェクト構成には、規定 MSBuild 要素に格納します。 例:  
   
         ```  
         <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">  
         ```  
   
-2.  ビルド関連しないデータが保持されます。  このデータはXML スキーマに対して検証されない自由形式の XML で表すことができます。  
+2.  ないビルドに関連するデータを保持します。 XML スキーマに対して検証されません自由形式の XML では、このデータを表現することができます。  
   
     1.  構成に依存しないデータ。  
   
-    2.  構成依存します。  
+    2.  構成に依存するデータ。  
   
-## ビルド関連の情報の保持  
- プロジェクトのビルドに必要なデータの永続性は MSBuild によって処理されます。  MSBuild システムはビルド関連情報のマスター テーブルを保持します。  プロジェクトのサブタイプを取得するにはこのデータとプロパティの設定の値にアクセスを行います。  プロジェクトのサブタイプは保存する追加のプロパティを追加しプロパティを削除することでビルドに関するデータ テーブルを大きくすると保持されません。  
+## <a name="persisting-build-related-information"></a>ビルド関連の情報を永続化します。  
+ プロジェクトを作成するために役立つデータの永続化は、MSBuild によって処理されます。 MSBuild システムでは、ビルドに関連する情報のマスター テーブルを保持します。 プロジェクトのサブタイプでは、このデータを取得し、プロパティ値の設定にアクセスする担当します。 永続化する他のプロパティを追加することは保存されませんので、プロパティを削除することで、プロジェクトのサブタイプはビルドに関連するデータ テーブルを強化もできます。  
   
- MSBuild のデータを変更するにはプロジェクトのサブタイプは基本プロジェクト システム取得する必要があるから <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> して MSBuild のプロパティをオブジェクト。  <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> は `QueryInterface` を実行してそのための主要なプロジェクト システムおよび集計のプロジェクトのサブタイプのクエリで実装されるインターフェイスです。  
+ MSBuild のデータを変更するには、プロジェクトのサブタイプは、により、基本プロジェクト システムから MSBuild プロパティ オブジェクトを取得するため<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>です。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>実行してそのコア プロジェクト システムと集計のプロジェクト サブタイプ クエリで実装されるインターフェイスは、`QueryInterface`です。  
   
- 次の手順では<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> を使用してプロパティを削除する手順について説明します。  
+ 次の手順を使用してプロパティを削除する手順の概要<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>です。  
   
-#### MSBuild のプロパティをプロジェクト ファイルから削除します。  
+#### <a name="to-remove-a-property-from-an-msbuild-project-file"></a>MSBuild プロジェクト ファイルからプロパティを削除するには  
   
-1.  プロジェクトのサブタイプの <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> の `QueryInterface` を呼び出します。  
+1.  呼び出す`QueryInterface`で<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>のプロジェクトのサブタイプ。  
   
-2.  削除するプロパティに `pszPropName` の設定との呼び出しの <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.RemoveProperty%2A>。  
+2.  呼び出す<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.RemoveProperty%2A>で`pszPropName`を削除するプロパティを設定します。  
   
-### 非永続化のビルドの関連情報  
- ビルドに重要ではないプロジェクト ファイル内のデータの永続性は<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> によって処理されます。  
+### <a name="persisting-non-build-related-information"></a>永続化非ビルド関連情報  
+ ビルドには重要ではないプロジェクト ファイル内のデータの持続性がによって処理される<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>です。  
   
- `project subtype aggregator` の主要な `project subtype project configuration` オブジェクトオブジェクトまたは両方の <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> を実行できます。  
+ 実装できます<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>、メイン`project subtype aggregator`オブジェクト、`project subtype project configuration`オブジェクト、またはその両方です。  
   
- 以下はビルドの関連情報の永続性に関する主要な概念について説明します。  
+ 次の点では、非ビルド関連情報の永続化に関する主な概念を説明します。  
   
--   メイン プロジェクトのサブタイプ \(つまり最も外側のプロジェクトのサブタイプ\) アグリゲーター Foundation プロジェクトでは構成に依存しないデータの読み込みと保存にオブジェクトと構成に依存のデータの読み込みまたは保存するにはプロジェクトのサブタイプのプロジェクト構成オブジェクトでを呼び出します。  
+-   読み込んで、構成の独立したデータを保存するメイン プロジェクトのサブタイプ (つまり、最も外側にあるプロジェクトのサブタイプ) アグリゲーター オブジェクトの基本プロジェクトを呼び出すし、プロジェクトのサブタイプ プロジェクト構成オブジェクトの読み込みまたは依存構成を保存する上で呼び出しますデータ。  
   
--   基本プロジェクトはプロジェクトのサブタイプの集計の各レベルの <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> に複数のメソッドを呼び出して各レベルの GUID を渡します。  
+-   基本のプロジェクトのメソッドを呼び出して、<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>複数のプロジェクト サブタイプの集計の各レベルには時刻および各レベルに対応する GUID を渡します。  
   
--   基本プロジェクトは渡すかまたは特定のプロジェクトのサブタイプに専用の受信し集約レベル間の状態の永続化の方法としてこの機能を XML フラグメントを使用します。  
+-   基本のプロジェクトでは、成功または専用の特定のプロジェクト サブタイプ、集計レベルの間で状態を保持する手段としてこのメカニズムを使用して XML フラグメントを受信します。  
   
--   基本プロジェクトはGUID を渡す最も外側のプロジェクトのサブタイプの <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> の実装を呼び出します。  GUID が最も外側のプロジェクトのサブタイプに属している場合呼び出し自体を処理します ; それ以外の場合は内部のプロジェクトのサブタイプに GUID はに対応するプロジェクトのサブタイプが見つかるまで呼び出しなどに委任します。  
+-   基本のプロジェクトを呼び出す最も外側にあるプロジェクトのサブタイプの<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>実装の GUID を渡します。 自体、呼び出しを処理する場合は、GUID は、最も外側にあるプロジェクトのサブタイプに属する、それ以外の場合、GUID に対応するプロジェクトのサブタイプが見つかるまで、内部のプロジェクト サブタイプに呼び出しを委任します。  
   
--   プロジェクトのサブタイプは内部のプロジェクトのサブタイプの呼び出しに転送する前または後に XML フラグメントを変更できます。  次の例はプロジェクトのサブタイプにプロジェクト ファイルの一部をプロジェクトのサブタイプに固有のプロパティを含むファイルの名前を渡す示します。  
+-   プロジェクトのサブタイプは、内部のプロジェクト サブタイプへの呼び出しを代行させる後または前に XML フラグメントを変更することもします。 次の例では、そのプロジェクトのサブタイプに渡されたはプロジェクトのサブタイプに固有のプロパティを含むファイルの名前は、プロジェクト ファイルからの抜粋を示します。  
   
     ```  
     <ProjectExtensions>  
@@ -77,5 +78,5 @@ caps.handback.revision: 12
       </ProjectExtensions>  
     ```  
   
-## 参照  
- [プロジェクトのサブタイプ](../../extensibility/internals/project-subtypes.md)
+## <a name="see-also"></a>関連項目  
+ [プロジェクト サブタイプ](../../extensibility/internals/project-subtypes.md)

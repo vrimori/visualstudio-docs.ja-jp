@@ -1,39 +1,40 @@
 ---
-title: "m_taskId フィールド | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "m_taskId フィールドに、タスク クラス [.NET Framework のデバッグ エンジン]"
+title: "m_taskId フィールド |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: m_taskId field, Task class [.NET Framework debug engines]
 ms.assetid: 9e4b827e-7c41-4fa3-b646-830aba2ec736
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 4bec5033f6a824d217d0ba9b96fd4787b7d558e2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# m_taskId フィールド
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-バッキング フィールド、 <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=fullName> プロパティです。  
+# <a name="mtaskid-field"></a>m_taskId フィールド
+バッキング フィールド、<xref:System.Threading.Tasks.Task.Id%2A?displayProperty=fullName>プロパティです。  
   
- **名前空間:** <xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Namespace:**<xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **アセンブリ:** \(mscorlib.dll\) の mscorlib  
+ **アセンブリ:** (mscorlib.dll) の mscorlib  
   
- .NET Framework からこの内部のメンバーにアクセスできないため、次の構文は共通中間言語 \(CIL\) に提供されます。  
+ .NET Framework からこの内部のメンバーにアクセスすることはできません、ため、次の構文は共通中間言語 (CIL) に提供されます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 .field private int32 m_taskId  
 ```  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Task クラス](../../extensibility/debugger/task-class-internal-members.md)

@@ -1,89 +1,89 @@
 ---
-title: "TYPE_INFO | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TYPE_INFO"
-helpviewer_keywords: 
-  - "TYPE_INFO 構造体"
+title: "TYPE_INFO |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: TYPE_INFO
+helpviewer_keywords: TYPE_INFO structure
 ms.assetid: d725cb68-a565-49d1-a16f-ff0445c587a0
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5dc77aa5b633c4160fc34717c0b9382d89d9f0e9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# TYPE_INFO
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-この構造体はさまざまな種類のフィールドの種類に関する情報を指定します。  
+# <a name="typeinfo"></a>TYPE_INFO
+この構造体では、さまざまな種類のフィールドの型に関する情報を指定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 struct _tagTYPE_INFO_UNION {  
-   dwTYPE_KIND dwKind;  
-   union {  
-      METADATA_TYPE typeMeta;  
-      PDB_TYPE      typePdb;  
-      BUILT_TYPE    typeBuilt;  
-      DWORD         unused;  
-   } type;  
+   dwTYPE_KIND dwKind;  
+   union {  
+      METADATA_TYPE typeMeta;  
+      PDB_TYPE      typePdb;  
+      BUILT_TYPE    typeBuilt;  
+      DWORD         unused;  
+   } type;  
 } TYPE_INFO;  
 ```  
   
-```c#  
+```csharp  
 public struct TYPE_INFO {  
-   public uint   dwKind;  
-   public IntPtr unionmember;  
+   public uint   dwKind;  
+   public IntPtr unionmember;  
 };  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  dwKind  
- 共用体を解釈する方法を決定 [dwTYPE\_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) の列挙体の値。  
+ 値、 [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)和集合を解釈する方法を決定する列挙です。  
   
  type.typeMeta  
- \[C\+\+\] `dwKind` のみが `TYPE_KIND_METADATA` 場合 [METADATA\_TYPE](../../../extensibility/debugger/reference/metadata-type.md) 構造を設定します。  
+ [C++ のみ]含まれています、 [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md)場合構造体`dwKind`は`TYPE_KIND_METADATA`します。  
   
  type.typePdb  
- \[C\+\+\] `dwKind` のみが `TYPE_KIND_PDB` 場合 [PDB\_TYPE](../../../extensibility/debugger/reference/pdb-type.md) 構造を設定します。  
+ [C++ のみ]含まれています、 [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md)場合構造体`dwKind`は`TYPE_KIND_PDB`します。  
   
  type.typeBuilt  
- \[C\+\+\] `dwKind` のみが `TYPE_KIND_BUILT` 場合 [BUILT\_TYPE](../../../extensibility/debugger/reference/built-type.md) 構造を設定します。  
+ [C++ のみ]含まれています、 [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md)場合構造体`dwKind`は`TYPE_KIND_BUILT`します。  
   
  type.unused  
- 未使用の埋め込み。  
+ 未使用のパディングです。  
   
- type  
- 共用体の名前。  
+ 型  
+ 共用体の名前です。  
   
  unionmember  
- \[C\#\] `dwKind` のみに基づいて適切な構造体の型にマーシャリングします。  
+ [C# の場合のみ]マーシャ リングに基づく適切な構造体の型にこの`dwKind`です。  
   
-## 解説  
- この構造が表示される [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) のメソッドに渡されます。  構造体の内容がどのように解釈されるか `dwKind` のフィールドに基づいています。  
+## <a name="remarks"></a>コメント  
+ この構造体に渡される、 [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)で塗り分けはメソッドです。 構造体の内容を解釈する方法がに基づいて、`dwKind`フィールドです。  
   
 > [!NOTE]
->  `dwKind` が `TYPE_KIND_BUILT` と等しい場合のみ\[C\+\+\] `TYPE_INFO` の構造を破棄するとき [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) の基になるオブジェクトを解放する必要があります。  これは `typeInfo.type.typeBuilt.pUnderlyingField->Release()` を呼び出してされます。  
+>  [C++ のみ]場合`dwKind`equals `TYPE_KIND_BUILT`、基になるを解放する必要があるし、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクトを破棄するとき、`TYPE_INFO`構造体。 これは、`typeInfo.type.typeBuilt.pUnderlyingField->Release()` を呼び出すことによって行われます。  
   
- \[C\# のみそれぞれの型の `unionmember` のメンバーを解釈する方法\] 次の表に示します。  これは1 種類の種類用にする方法の例を次に示します。  
+ [C# の場合のみ]次の表を解釈する方法を示しています、`unionmember`各種類の型のメンバーです。 この例では、1 つの種類の型にこれを行う方法を示します。  
   
-|`dwKind`|`unionmember` は型として解釈します|  
-|--------------|------------------------------|  
-|`TYPE_KIND_METADATA`|[METADATA\_TYPE](../../../extensibility/debugger/reference/metadata-type.md)|  
-|`TYPE_KIND_PDB`|[PDB\_TYPE](../../../extensibility/debugger/reference/pdb-type.md)|  
-|`TYPE_KIND_BUILT`|[BUILT\_TYPE](../../../extensibility/debugger/reference/built-type.md)|  
+|`dwKind`|`unionmember`として解釈されます。|  
+|--------------|----------------------------------|  
+|`TYPE_KIND_METADATA`|[METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md)|  
+|`TYPE_KIND_PDB`|[PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md)|  
+|`TYPE_KIND_BUILT`|[BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md)|  
   
-## 使用例  
- この例ではC\# の `TYPE_INFO` の構造体の `unionmember` のメンバーをデコードする方法を示します。  この例では1 種類だけ \(\)`TYPE_KIND_METADATA` 解釈する例では同じとして解釈されます。  
+## <a name="example"></a>例  
+ この例を解釈する方法を示しています、`unionmember`のメンバー、 `TYPE_INFO` c# の構造体。 この例では、1 種類だけを解釈する (`TYPE_KIND_METADATA`) が、他のユーザーはまったく同じように解釈されます。  
   
-```c#  
+```csharp  
 using System;  
 using System.Runtime.Interop.Services;  
 using Microsoft.VisualStudio.Debugger.Interop;  
@@ -104,17 +104,17 @@ namespace MyPackage
 }  
 ```  
   
-## 必要条件  
- ヘッダー : sh.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: sh.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [dwTYPE\_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)   
+ [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)   
  [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)   
- [METADATA\_TYPE](../../../extensibility/debugger/reference/metadata-type.md)   
- [PDB\_TYPE](../../../extensibility/debugger/reference/pdb-type.md)   
- [BUILT\_TYPE](../../../extensibility/debugger/reference/built-type.md)
+ [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md)   
+ [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md)   
+ [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md)

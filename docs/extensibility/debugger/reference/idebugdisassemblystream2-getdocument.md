@@ -1,57 +1,57 @@
 ---
-title: "IDebugDisassemblyStream2::GetDocument | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDisassemblyStream2::GetDocument"
-helpviewer_keywords: 
-  - "IDebugDisassemblyStream2::GetDocument"
+title: "IDebugDisassemblyStream2::GetDocument |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugDisassemblyStream2::GetDocument
+helpviewer_keywords: IDebugDisassemblyStream2::GetDocument
 ms.assetid: 3d039a44-ebaa-4413-ac18-7cfd92c408bd
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 9bbf3ca1c35de6ef8742d5a6dcc5fba4721dc440
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugDisassemblyStream2::GetDocument
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-ソース ドキュメントをこの入力ストリームに関連付けられているを取得します。  
+# <a name="idebugdisassemblystream2getdocument"></a>IDebugDisassemblyStream2::GetDocument
+この入力ストリームに関連付けられているソース ドキュメントを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetDocument(   
-   BSTR              bstrDocumentUrl,  
-   IDebugDocument2** ppDocument  
+```cpp  
+HRESULT GetDocument(   
+   BSTR              bstrDocumentUrl,  
+   IDebugDocument2** ppDocument  
 );  
 ```  
   
-```c#  
-int GetDocument(   
-   string              bstrDocumentUrl,  
-   out IDebugDocument2 ppDocument  
+```csharp  
+int GetDocument(   
+   string              bstrDocumentUrl,  
+   out IDebugDocument2 ppDocument  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `bstrDocumentUrl`  
- \[入力\] ドキュメントの URL です。  
+ [in]ドキュメントの URL。  
   
  `ppDocument`  
- \[入力\] ドキュメントの [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) 表すオブジェクトを返します。  
+ [out]返します、 [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)ドキュメントを表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- このメソッドは実際のファイルに格納されないテキスト ドキュメントを持つデバッグ エンジンによって実装されます。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、実際のファイルに格納されていないテキスト ドキュメントのデバッグ エンジンによって実装されます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

@@ -1,83 +1,83 @@
 ---
-title: "IDebugProgramProvider2::GetProviderProgramNode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramProvider2::GetProviderProgramNode"
-helpviewer_keywords: 
-  - "IDebugProgramProvider2::GetProviderProgramNode"
+title: "IDebugProgramProvider2::GetProviderProgramNode |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgramProvider2::GetProviderProgramNode
+helpviewer_keywords: IDebugProgramProvider2::GetProviderProgramNode
 ms.assetid: e62e8e83-acbb-4c52-aedf-ffbd4670db29
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 4ad5540d1f93e44b069cac4873880e9db9d96919
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgramProvider2::GetProviderProgramNode
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-特定のプログラムのプログラムのノードを取得します。  
+# <a name="idebugprogramprovider2getproviderprogramnode"></a>IDebugProgramProvider2::GetProviderProgramNode
+特定のプログラムの [プログラム] ノードを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT GetProviderProgramNode(  
-   PROVIDER_FLAGS       Flags,  
-   IDebugDefaultPort2*  pPort,  
-   AD_PROCESS_ID        processId,  
-   REFGUID              guidEngine,  
-   UINT64               programId,  
-   IDebugProgramNode2** ppProgramNode  
+HRESULT GetProviderProgramNode(  
+   PROVIDER_FLAGS       Flags,  
+   IDebugDefaultPort2*  pPort,  
+   AD_PROCESS_ID        processId,  
+   REFGUID              guidEngine,  
+   UINT64               programId,  
+   IDebugProgramNode2** ppProgramNode  
 );  
 ```  
   
-```c#  
-int GetProviderProgramNode(  
-   enum_PROVIDER_FLAGS    Flags,  
-   IDebugDefaultPort2     pPort,  
-   AD_PROCESS_ID          ProcessId,  
-   ref Guid               guidEngine,  
-   ulong                  programId,  
-   out IDebugProgramNode2 ppProgramNode  
+```csharp  
+int GetProviderProgramNode(  
+   enum_PROVIDER_FLAGS    Flags,  
+   IDebugDefaultPort2     pPort,  
+   AD_PROCESS_ID          ProcessId,  
+   ref Guid               guidEngine,  
+   ulong                  programId,  
+   out IDebugProgramNode2 ppProgramNode  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `Flags`  
- \[入力\] [PROVIDER\_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) の列挙体のフラグの組み合わせ。  次のフラグはこの呼び出しのために一般的です :  
+ [in]フラグの組み合わせ、 [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)列挙します。 次のフラグがこの呼び出しに一般的です。  
   
-|フラグ|Description|  
-|---------|-----------------|  
-|`PFLAG_REMOTE_PORT`|呼び出し元はリモート コンピューターで実行されています。|  
-|`PFLAG_DEBUGGEE`|呼び出し元が現在デバッグ中 \(配置に関する追加情報は各ノードに対してを返します\)。|  
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|呼び出し元がにアタッチされているデバッガーによって呼び出されます。|  
+|フラグ|説明|  
+|----------|-----------------|  
+|`PFLAG_REMOTE_PORT`|呼び出し元は、リモート マシンで実行されています。|  
+|`PFLAG_DEBUGGEE`|呼び出し元は現在デバッグされている (ノードごとにマーシャ リングに関する追加情報が返されます)。|  
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|呼び出し元にアタッチされているが、デバッガーによって起動されません。|  
   
  `pPort`  
- \[入力\] 呼び出しプロセスが実行されているポート。  
+ [in]ポートが呼び出しプロセスが行われています。  
   
  `processId`  
- \[入力\] 対象のプログラムを含むプロセスの ID を保持 [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md) の構造体。  
+ [in][AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)対象のプログラムを含むプロセスの ID を保持する構造体。  
   
  `guidEngine`  
- \[入力\] プログラムがアタッチされているデバッグ エンジンの GUID \(存在する場合\)。  
+ [in]プログラムは、(存在する場合) にアタッチされているデバッグ エンジンの GUID です。  
   
  `programId`  
- \[入力\] プログラムのノードを取得するプログラム ID。  
+ [in][プログラム] ノードを取得する対象のプログラムの ID。  
   
  `ppProgramNode`  
- \[入力\] [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) に要求されたプログラムのノード。  
+ [out][IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)要求されたプログラム ノードを表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)   
- [PROVIDER\_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)   
- [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md)   
+ [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)   
+ [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)   
  [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

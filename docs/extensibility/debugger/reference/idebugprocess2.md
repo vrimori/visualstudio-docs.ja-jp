@@ -1,80 +1,80 @@
 ---
-title: "IDebugProcess2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProcess2"
-helpviewer_keywords: 
-  - "IDebugProcess2 インターフェイス"
+title: "IDebugProcess2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProcess2
+helpviewer_keywords: IDebugProcess2 interface
 ms.assetid: 99f6cd06-4076-45ee-b2ae-fa2ad627fd18
-caps.latest.revision: 19
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d8b349bee09f068a5777ecc212223c36951236ee
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProcess2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このインターフェイスはポートで実行中のプロセスを表します。  ポートがローカルの場合`IDebugProcess2` はローカル コンピューターの物理的なプロセスを表します。  
+# <a name="idebugprocess2"></a>IDebugProcess2
+このインターフェイスは、ポートで実行中のプロセスを表します。 ポートの場合、ローカル ポートし`IDebugProcess2`通常、ローカル コンピューター上の物理プロセスを表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugProcess2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- このインターフェイスはカスタム ポートの仕入先によってグループとしてプログラムを管理するために実装されます。  このインターフェイスはポートの仕入先に実装する必要があります。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ このインターフェイスは、グループとしてプログラムを管理するカスタム ポート業者によって実装されます。 ポート業者によっては、このインターフェイスを実装する必要があります。  
   
- デバッグ エンジンは[LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) してプログラムを起動サポートする場合このインターフェイスを実装します。  
+ デバッグ エンジンは、によるプログラムの起動をサポートしている場合もこのインターフェイスを実装[LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)です。  
   
-## 呼び出し元のメモ  
- このインターフェイスはデバッグ セッションのマネージャー \(SDM\) によってこのプロセスで識別されるプログラムのグループと対話するため主に呼び出されます。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ このインターフェイスは、このプロセスで識別されたプログラムのグループと対話するために、主にセッション デバッグ マネージャー (SDM) によって呼び出されます。  
   
- このインターフェイスを取得するに [GetProcess](../../../extensibility/debugger/reference/idebugprogram2-getprocess.md) または [GetProcess](../Topic/IDebugPort2::GetProcess.md) を呼び出します。  このインターフェイスは`IDebugEngineLaunch2::LaunchSuspended` を呼び出すことによって返されます。  
+ 呼び出す[GetProcess](../../../extensibility/debugger/reference/idebugprogram2-getprocess.md)または[GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)このインターフェイスを取得します。 このインターフェイスは呼び出すことによっても返されます`IDebugEngineLaunch2::LaunchSuspended`です。  
   
-## Vtable の順序でメソッド  
- 次の表は `IDebugProcess2` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugProcess2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)|プロセスの詳細を取得します。|  
-|[EnumPrograms](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)|このプロセスに含まれるプログラムを列挙します。|  
-|[GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)|プロセスのタイトル表示名またはファイル名を取得します。|  
-|[GetServer](../../../extensibility/debugger/reference/idebugprocess2-getserver.md)|このプロセスが実行されているコンピューターにサーバーのインスタンスを取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)|プロセスの説明を取得します。|  
+|[EnumPrograms](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)|このプロセスに含まれているプログラムを列挙します。|  
+|[GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)|タイトル、フレンドリ名、または、プロセスのファイル名を取得します。|  
+|[GetServer](../../../extensibility/debugger/reference/idebugprocess2-getserver.md)|このプロセスが実行されるマシン server のインスタンスを取得します。|  
 |[終了](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)|プロセスを終了します。|  
-|[Attach](../../../extensibility/debugger/reference/idebugprocess2-attach.md)|プロセスにアタッチされます。|  
-|[CanDetach](../../../extensibility/debugger/reference/idebugprocess2-candetach.md)|SDM がプロセスをデタッチできるかどうかを判断します。|  
-|[Detach](../../../extensibility/debugger/reference/idebugprocess2-detach.md)|プロセスからデバッガーをデタッチします。|  
-|[GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)|システムのプロセス識別子を取得します。|  
-|[GetProcessId](../../../extensibility/debugger/reference/idebugprocess2-getprocessid.md)|このプロセスのグローバル一意識別子を取得します。|  
-|[GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)<br /><br /> \[deprecated\]|プロセスをデバッグ セッションの名前を取得します。<br /><br /> \[deprecated。  `E_NOTIMPL` を常に返す必要です。\]|  
+|[添付](../../../extensibility/debugger/reference/idebugprocess2-attach.md)|プロセスにアタッチします。|  
+|[CanDetach](../../../extensibility/debugger/reference/idebugprocess2-candetach.md)|SDM がプロセスを切り離すことができるかどうかを判断します。|  
+|[デタッチ](../../../extensibility/debugger/reference/idebugprocess2-detach.md)|プロセスからデバッガーをデタッチします。|  
+|[GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)|システム プロセス識別子を取得します。|  
+|[GetProcessId](../../../extensibility/debugger/reference/idebugprocess2-getprocessid.md)|このプロセスには、グローバルに一意の識別子を取得します。|  
+|[GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)<br /><br /> [DEPRECATED]|プロセスのデバッグは、セッションの名前を取得します。<br /><br /> [非推奨です。 常に返す必要があります`E_NOTIMPL`]。|  
 |[EnumThreads](../../../extensibility/debugger/reference/idebugprocess2-enumthreads.md)|プロセスで実行中のスレッドを列挙します。|  
-|[CauseBreak](../../../extensibility/debugger/reference/idebugprocess2-causebreak.md)|停止要求このプロセスの次のプログラム コードを実行する。|  
-|[GetPort](../../../extensibility/debugger/reference/idebugprocess2-getport.md)|このプロセスが実行されているポートを取得します。|  
+|[CauseBreak](../../../extensibility/debugger/reference/idebugprocess2-causebreak.md)|このプロセスの停止にコードを実行している次のプログラムを要求します。|  
+|[GetPort](../../../extensibility/debugger/reference/idebugprocess2-getport.md)|このプロセスで実行されているポートを取得します。|  
   
-## 解説  
- `IDebugProcess2` は [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) の一つ以上のインターフェイスが含まれています。  
+## <a name="remarks"></a>コメント  
+ `IDebugProcess2` 1 つ以上含む[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)インターフェイスです。  
   
-## 必要条件  
- ヘッダー : Msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
- [GetProcess](../Topic/IDebugPort2::GetProcess.md)   
+ [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)   
  [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)   
  [GetProcess](../../../extensibility/debugger/reference/idebugprogram2-getprocess.md)   
- [次へ](../../../extensibility/debugger/reference/ienumdebugprocesses2-next.md)   
+ [次に](../../../extensibility/debugger/reference/ienumdebugprocesses2-next.md)   
  [イベント](../../../extensibility/debugger/reference/idebugportevents2-event.md)   
  [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)   
  [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)   

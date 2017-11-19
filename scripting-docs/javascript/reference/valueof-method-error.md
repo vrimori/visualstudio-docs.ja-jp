@@ -1,45 +1,48 @@
 ---
-title: "valueOf メソッド (エラー) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "valueOf メソッド (エラー) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: ca25c57d-c9ad-445b-8235-561390de680c
-caps.latest.revision: 2
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c7593937530469142265f8081bf3472fa4935aee
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# valueOf メソッド (エラー)
+# <a name="valueof-method-error"></a>valueOf メソッド (エラー)
 エラーの文字列値を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 error.valueOf()  
 ```  
   
-#### パラメーター  
- `error` オブジェクトは、Error の任意のインスタンスです。  
+#### <a name="parameters"></a>パラメーター  
+ `error`オブジェクトがエラーの任意のインスタンス。  
   
-## 戻り値  
- 文字列 "Error: " およびエラー メッセージを返します。  
+## <a name="return-value"></a>戻り値  
+ 文字列"エラー:"さらに、エラー メッセージ。  
   
-## 使用例  
- 日付を指定した `valueOF` メソッドの使用例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、使用、`valueOF`日付を持つメソッドです。  
   
-```javascript  
+```JavaScript  
 var myError = new Error();  
 myError.message = "This is an error.";  
 var value = myError.valueOf();  
@@ -49,5 +52,5 @@ document.write(value);
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv2](../../javascript/reference/includes/jsv2-md.md)]

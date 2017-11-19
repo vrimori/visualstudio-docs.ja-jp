@@ -1,36 +1,39 @@
 ---
-title: "方法 : ユーザー アカウントでワーカー プロセスを実行する | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ユーザー アカウント、aspnet_wp.exe"
-  - "ASP.NET、Web アプリケーションのデバッグ"
-  - "ツール、aspnet_wp.exe"
-  - "ASP.NET ツール"
-  - "aspnet_wp.exe"
+title: "方法: ユーザー アカウントでワーカー プロセスを実行 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- user accounts, aspnet_wp.exe
+- ASP.NET, debugging Web applications
+- tools, aspnet_wp.exe
+- ASP.NET, tools
+- aspnet_wp.exe
 ms.assetid: b58e97b1-e62a-4318-aea4-52276ea20735
-caps.latest.revision: 32
-caps.handback.revision: 32
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "32"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8b823675623f20df49edb87582f3e40695aec50e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : ユーザー アカウントでワーカー プロセスを実行する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="how-to-run-the-worker-process-under-a-user-account"></a>方法 : ユーザー アカウントでワーカー プロセスを実行する
 ユーザー アカウントを使用して [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセス (aspnet_wp.exe または w3wp.exe) を実行できるようにコンピューターを設定するには、次の手順を実行します。  
+
+ > [!IMPORTANT]
+ > Windows Server 2008 R2 以降では、ことをお勧めの使用、 [ApplicationPoolIdentity](https://docs.microsoft.com/en-us/iis/manage/configuring-security/application-pool-identities)各アプリケーション プールの id として。
   
 ## <a name="procedure"></a>プロシージャ  
   
@@ -38,21 +41,21 @@ manager: "ghogen"
   
 1.  コンピューターでランタイムをインストールしたパスの CONFIG フォルダーにある machine.config ファイルを開きます。  
   
-2.  検索、 &lt;processModel&gt; セクションし、ユーザー名とパスワードの属性を名前と aspnet_wp.exe を実行するユーザー アカウントのパスワードに変更します。  
+2.  検索、 &lt;processModel&gt;セクション属性を変更したり、ユーザー名とパスワードを名前および aspnet_wp.exe を実行するユーザー アカウントのパスワード。  
   
 3.  machine.config ファイルを保存します。  
   
 4.  [!INCLUDE[winxpsvr](../debugger/includes/winxpsvr_md.md)] では、既定で、IIS 6.0 がインストールされます。 対応するワーカー プロセスは w3wp.exe です。aspnet_wp.exe をワーカー プロセスとして IIS 6.0 モードで実行するには、次の手順を実行します。  
   
-    1.  をクリックして **開始**, 、] をクリックして **管理ツール** にして **インターネット インフォメーション サービス**します。  
+    1.  をクリックして**開始**をクリックして**管理ツール**を選択し**インターネット インフォメーション サービス**です。  
   
-    2.   **インターネット インフォメーション サービス** ] ダイアログ ボックスを右クリックし、 **Web サイト** フォルダーを選択して **プロパティ**です。  
+    2.  **インターネット インフォメーション サービス**ダイアログ ボックスを右クリックし、 **Websites**フォルダーを選択し、**プロパティ**です。  
   
-    3.   **Web サイトのプロパティ** ] ダイアログ ボックスで、選択 **サービス**します。  
+    3.  **Web サイトのプロパティ** ダイアログ ボックスで、選択**サービス**です。  
   
-    4.  選択 **iis 6.0 では分離モードで実行 WWW サービスを**します。  
+    4.  選択**iis 6.0 プロセス分離モードで実行 WWW サービス**です。  
   
-    5.  閉じる、 **プロパティ** ] ダイアログ ボックスと **インターネット サービス マネージャー**します。  
+    5.  閉じる、**プロパティ** ダイアログ ボックスと**インターネット サービス マネージャー**です。  
   
 5.  Windows のコマンド プロンプトを開き、次を実行してサーバーをリセットします。  
   
@@ -66,24 +69,25 @@ manager: "ghogen"
     net start w3svc  
     ```  
   
-6.  [Temporary [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Files] フォルダーを探します。このフォルダーは、[CONFIG] フォルダーと同じパスにあります。 一時領域を右クリックし [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Files] フォルダーと選択 **プロパティ** 、ショートカット メニュー。  
+6.  [Temporary [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Files] フォルダーを探します。このフォルダーは、[CONFIG] フォルダーと同じパスにあります。 一時領域を右クリックして[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]Files] フォルダーと選択**プロパティ**ショートカット メニューの [します。  
   
-7.   **Temporary ASP.NET Files のプロパティ** ダイアログ ボックスで、をクリックして、 **セキュリティ** ] タブをクリックします。  
+7.  **Temporary ASP.NET Files のプロパティ**ダイアログ ボックスで、をクリックして、**セキュリティ**タブです。  
   
-8.  [ **詳細設定**] をクリックします。  
+8.  **[ 詳細設定]** をクリックします。  
   
-9.  **Temporary ASP.Net Files のセキュリティの詳細設定** ] ダイアログ ボックスをクリックして **追加**します。  
+9. **Temporary ASP.Net Files のセキュリティの詳細設定**ダイアログ ボックスで、をクリックして**追加**です。  
   
-     **] ダイアログ ボックスの [ユーザー、コンピューター、またはグループ** が表示されます。  
+    **] ダイアログ ボックスの [ユーザー、コンピューター、またはグループ**が表示されます。  
   
-10. ユーザー名を入力、 **を選択するオブジェクト名を入力** ボックスをクリックして **OK**します。 ユーザー名は、「ドメイン名\ユーザー名」の形式で入力する必要があります。  
+10. ユーザー名を入力、**を選択するオブジェクト名を入力**ボックスし、をクリックして**OK**です。 ユーザー名は、「ドメイン名\ユーザー名」の形式で入力する必要があります。  
   
-11.  **Temporary ASP.NET Files のアクセス許可エントリ** ] ダイアログ ボックスで、ユーザーに、 **フル コントロール**, 、] をクリックし、 **[ok]** を閉じる、 **ASP.NET 一時ファイルのエントリ** ] ダイアログ ボックス。  
+11. **Temporary ASP.NET Files のアクセス許可エントリ** ダイアログ ボックスで、ユーザーに付与**フル コントロール**、クリックして**ok**を閉じる、**一時的な ASP のエントリ.NET ファイル** ダイアログ ボックス。  
   
-12. A **セキュリティ** ] ダイアログ ボックスが表示され、システム フォルダーのアクセス許可を変更するかどうかは確認します。 **[はい]**をクリックします。  
+12. A**セキュリティ** ダイアログ ボックスが表示され、システム フォルダーのアクセス許可を変更するかどうかは確認します。 **[はい]**をクリックします。  
   
-13. をクリックして **OK** を閉じる、 **Temporary ASP.NET Files のプロパティ** ] ダイアログ ボックス。  
+13. をクリックして**OK**を閉じる、 **Temporary ASP.NET Files のプロパティ** ダイアログ ボックス。  
   
 ## <a name="see-also"></a>関連項目  
-[ASP.NET のデバッグ: システム要件](../debugger/aspnet-debugging-system-requirements.md)  
+[ASP.NET アプリケーションをデバッグします。](../debugger/how-to-enable-debugging-for-aspnet-applications.md)   
+[ASP.NET のデバッグ : システム要件](../debugger/aspnet-debugging-system-requirements.md)  
   

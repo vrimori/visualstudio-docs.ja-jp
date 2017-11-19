@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,32 +12,18 @@ helpviewer_keywords:
 - font and color control [Visual Studio SDK], categories
 - colors, accessing built-in schemes
 ms.assetid: 6905845e-e88e-4805-adcf-21da39108ec7
-caps.latest.revision: 23
+caps.latest.revision: "23"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: f646bb0a1606bd5944c945c5db89083fa265afbd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: ae5c64d0272b998d27a9eb5753c04ae764c3af8f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-access-the-built-in-fonts-and-color-scheme"></a>方法: 組み込みのフォントと配色へのアクセス
-Visual Studio 統合開発環境 (IDE) では、エディター ウィンドウに関連付けられているフォントおよび色のスキームがします。 このスキームを通じてアクセスできる、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>インターフェイス</xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>。  
+Visual Studio 統合開発環境 (IDE) では、エディター ウィンドウに関連付けられているフォントおよび色のスキームがします。 このスキームを通じてアクセスできる、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>インターフェイスです。  
   
  組み込みのフォントおよびカラー スキームを使用するのには、VSPackage 必要があります。  
   
@@ -57,7 +42,7 @@ Visual Studio 統合開発環境 (IDE) では、エディター ウィンドウ�
      この GUID を使用して、カテゴリを一意に識別**です。** このカテゴリには、IDE の既定のフォントおよび色の仕様が再利用します。  
   
     > [!NOTE]
-    >  フォントおよびカラーのデータを取得するときに、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents>またはその他のインターフェイスでは、Vspackage この GUID を使用して組み込まれている情報を参照します</xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents>。  
+    >  フォントおよびカラーのデータを取得するときに、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents>またはその他のインターフェイスでは、Vspackage この GUID を使用して組み込まれている情報を参照します。  
   
 2.  カテゴリの名前は、IDE で表示されるときに、必要に応じてローカライズできるように、ファイル内で、VSPackage のリソース (.rc)、文字列テーブルに追加する必要があります。  
   
@@ -67,7 +52,7 @@ Visual Studio 統合開発環境 (IDE) では、エディター ウィンドウ�
   
 1.  次の場所にレジストリ エントリのカテゴリの特殊な型を作成します。  
   
-     [Hklm \software\microsoft \Visual Studio\\*\<バージョンの Visual Studio >*\FontAndColors\\*\<カテゴリ >*]  
+     [Hklm \software\microsoft \Visual Studio\\*\<Visual Studio version >*\FontAndColors\\*\<カテゴリ >*]  
   
      *\<カテゴリ >*カテゴリのローカライズされていない名前を指定します。  
   
@@ -76,9 +61,9 @@ Visual Studio 統合開発環境 (IDE) では、エディター ウィンドウ�
     |名前|型|データ|説明|  
     |----------|----------|----------|-----------------|  
     |カテゴリ|REG_SZ|GUID|ストック フォントおよびカラー スキームを格納するカテゴリを識別する任意の GUID です。|  
-    |パッケージ|REG_SZ|GUID|{F5E7E71D-1401-11D1-883B-0000F87579D2}<br /><br /> この GUID は、既定のフォントと色の構成を使用するすべての Vspackage を使用します。|  
+    |Package|REG_SZ|GUID|{F5E7E71D-1401-11D1-883B-0000F87579D2}<br /><br /> この GUID は、既定のフォントと色の構成を使用するすべての Vspackage を使用します。|  
     |NameID|REG_DWORD|ID|VSPackage のローカライズ可能なカテゴリ名のリソース ID です。|  
-    |ToolWindowPackage|REG_SZ|GUID|VSPackage の実装の GUID、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>インターフェイス</xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>。|  
+    |ToolWindowPackage|REG_SZ|GUID|VSPackage の実装の GUID、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>インターフェイスです。|  
   
 3.  
   
@@ -86,9 +71,9 @@ Visual Studio 統合開発環境 (IDE) では、エディター ウィンドウ�
   
 1.  インスタンスを作成、`T:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer`ウィンドウの実装と初期化の一部としてインターフェイスです。  
   
-2.  呼び出す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer.GetPropertyCategory%2A>のインスタンスを取得するメソッド、`T:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer`現在に対応するインターフェイス<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>インスタンス</xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView></xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer.GetPropertyCategory%2A>。  
+2.  呼び出す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer.GetPropertyCategory%2A>のインスタンスを取得するメソッド、`T:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer`現在に対応するインターフェイス<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>インスタンス。  
   
-3.  呼び出す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A>2 回クリックします</xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A>。  
+3.  呼び出す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A>2 回クリックします。  
   
     -   1 回呼び出す`VSEDITPROPID_ViewGeneral_ColorCategory`を引数として。  
   

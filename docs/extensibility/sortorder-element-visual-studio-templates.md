@@ -1,64 +1,69 @@
 ---
-title: "SortOrder 要素 (Visual Studio テンプレート) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#SortOrder"
-helpviewer_keywords: 
-  - "<SortOrder> 要素 [Visual Studio テンプレート]"
-  - "SortOrder 要素 [Visual Studio テンプレート]"
+title: "SortOrder 要素 (Visual Studio テンプレート) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#SortOrder
+helpviewer_keywords:
+- SortOrder element [Visual Studio Templates]
+- <SortOrder> element [Visual Studio Templates]
 ms.assetid: 151932c1-f08a-4f78-a8d0-bd2f32211a9c
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: eb16ed870697a84152761f2cabdb7d42b1b1fd32
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# SortOrder 要素 (Visual Studio テンプレート)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-同じカテゴリ内のテンプレートを並べ替えるための値を指定します。これは **\[新しいプロジェクト\]** ダイアログ ボックスまたは **\[新しい項目の追加\]** ダイアログ ボックスで表示されるときの順番になります。  
+# <a name="sortorder-element-visual-studio-templates"></a>SortOrder 要素 (Visual Studio テンプレート)
+いずれかに表示される、同じカテゴリ内のテンプレートのテンプレートの配置に使用する値を示す、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。  
   
-## 構文  
+ \<VSTemplate >  
+ \<TemplateData >  
+ \<SortOrder >  
+  
+## <a name="syntax"></a>構文  
   
 ```  
 <SortOrder> ... </SortOrder>  
 ```  
   
-## 属性および要素  
+## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
-### 属性  
+### <a name="attributes"></a>属性  
  なし。  
   
-### 子要素  
+### <a name="child-elements"></a>子要素  
  なし。  
   
-### 親要素  
+### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
-|--------|--------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素。<br /><br /> テンプレートをカテゴリに分類し、**\[新しいプロジェクト\]** ダイアログ ボックス、または **\[新しい項目の追加\]** ダイアログ ボックスでどのように表示させるかを定義します。|  
+|-------------|-----------------|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートをカテゴリに分類し、 **[新しいプロジェクト]** ダイアログ ボックス、または **[新しい項目の追加]** ダイアログ ボックスでどのように表示させるかを定義します。|  
   
-## テキスト値  
+## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
   
- 順序を示す `integer` を設定します。  
+ `integer`並べ替え順序の値を表すです。  
   
-## 解説  
- `SortOrder` は、省略可能な要素です。  既定値は 100 です。値はすべて 10 の倍数である必要があります。  
+## <a name="remarks"></a>コメント  
+ `SortOrder` は、省略可能な要素です。 既定値は 100、およびすべての値は 10 の倍数である必要があります。  
   
- `SortOrder` 要素は、ユーザーが作成したテンプレートでは無視されます。  ユーザーによって作成されたテンプレートはすべてアルファベット順に並べ替えられます。  
+ `SortOrder`ユーザーが作成したテンプレートの要素は無視されます。 すべてのユーザーが作成したテンプレートは、アルファベット順に並べ替えられます。  
   
- 順序の値が低いテンプレートから順に **\[新しいプロジェクト\]** ダイアログ ボックス または **\[新しい項目の追加\]** ダイアログ ボックスに表示されます。  
+ いずれかで低の並べ替え順序の値を持つテンプレートが表示されます、**新しいプロジェクト**または**新しい項目の追加**高の並べ替え順序の値を持つテンプレートの前に ダイアログ ボックス。  
   
-## 使用例  
- 標準的な [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] クラス テンプレートのメタデータの例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、標準のメタデータ[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]クラス テンプレートです。  
   
 ```  
 <VSTemplate Type="Item" Version="3.0.0"  
@@ -77,8 +82,8 @@ caps.handback.revision: 10
 </VSTemplate>  
 ```  
   
- この例では、`SortOrder` 要素に比較的大きい数値が入っています。  他の [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 項目テンプレートは、`290` よりも低い `SortOrder` 値になる場合がほとんどなので、このテンプレートよりも先に **\[新しいアイテム\]** ダイアログ ボックスに表示されます。  
+ この例では、`SortOrder`要素は相対的に高いです。 可能性がありますの他の[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]項目テンプレートには、`SortOrder`よりも小さい値`290`され、前にこのテンプレートに表示されます、**新しい項目の** ダイアログ ボックス。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [カスタム プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+ [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

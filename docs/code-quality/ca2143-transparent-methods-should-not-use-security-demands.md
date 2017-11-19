@@ -1,66 +1,48 @@
 ---
-title: 'CA2143: Transparent methods should not use security demands | Microsoft Docs'
+title: "Ca 2143: 透過的メソッドはセキュリティ確認要求を使用しない |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- CA2143
+f1_keywords: CA2143
 ms.assetid: 5d3923d7-cf40-4512-bc5c-0db0e0d6e25a
-caps.latest.revision: 12
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 7a1a4fc4f5b76137c59b73a8fd42e12fac1b1d3e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "12"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 22adac09d7890f9d15e0bf50f46235f4b48d73dd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2143-transparent-methods-should-not-use-security-demands"></a>CA2143: Transparent methods should not use security demands
+# <a name="ca2143-transparent-methods-should-not-use-security-demands"></a>CA2143: 透過的メソッドは、セキュリティ確認要求を使用してはならない
 |||  
 |-|-|  
 |TypeName|TransparentMethodsShouldNotDemand|  
 |CheckId|CA2143|  
-|Category|Microsoft.Security|  
-|Breaking Change|Breaking|  
+|カテゴリ|Microsoft.Security|  
+|互換性に影響する変更点|あり|  
   
-## <a name="cause"></a>Cause  
- A tranparent type or method is declaratively marked with a <xref:System.Security.Permissions.SecurityAction?displayProperty=fullName>`.Demand` demand or the method calls the <xref:System.Security.CodeAccessPermission.Demand%2A?displayProperty=fullName> method.  
+## <a name="cause"></a>原因  
+ Tranparent 型またはメソッドが宣言とマークされている、 <xref:System.Security.Permissions.SecurityAction?displayProperty=fullName> `.Demand`要求時またはメソッドの呼び出し、<xref:System.Security.CodeAccessPermission.Demand%2A?displayProperty=fullName>メソッドです。  
   
-## <a name="rule-description"></a>Rule Description  
- Security transparent code should not be responsible for verifying the security of an operation, and therefore should not demand permissions. Security transparent code should use full demands to make security decisions and safe-critical code should not rely on transparent code to have made the full demand. Any code that performs security checks, such as security demands, should be safe-critical instead.  
+## <a name="rule-description"></a>規則の説明  
+ 透過的セキュリティ コードでは、操作のセキュリティ検証を行うことができないため、アクセス許可を要求できません。 透過的セキュリティ コードは、フル アクセス要求を使用して、セキュリティ上の決定を行う必要があります。セーフ クリティカルなコードでは、透過的なコードを使用してフル アクセス要求を行うことはできません。 セキュリティ確認要求などのセキュリティ チェックを実行するすべてのコードは、代わりに上安全-重要にする必要があります。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- In general, to fix a violation of this rule, mark the method with the <xref:System.Security.SecuritySafeCriticalAttribute> attribute. You can also remove the demand.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ 一般に、この規則違反を修正するを使用してメソッドをマーク、<xref:System.Security.SecuritySafeCriticalAttribute>属性。 要求を削除することもできます。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告は抑制しないでください。  
   
-## <a name="example"></a>Example  
- The rule files on the following code because a transparent method makes a declarative security demand.  
+## <a name="example"></a>例  
+ ルールは、透過的メソッドは、宣言セキュリティ確認要求のために、次のコードのファイルです。  
   
  [!code-csharp[FxCop.Security.CA2143.TransparentMethodsShouldNotDemand#1](../code-quality/codesnippet/CSharp/ca2143-transparent-methods-should-not-use-security-demands_1.cs)]  
   
-## <a name="see-also"></a>See Also  
- [CA2142: Transparent code should not be protected with LinkDemands](../code-quality/ca2142-transparent-code-should-not-be-protected-with-linkdemands.md)
+## <a name="see-also"></a>関連項目  
+ [CA2142: 透過的コードは、LinkDemand を使用して保護されてはならない](../code-quality/ca2142-transparent-code-should-not-be-protected-with-linkdemands.md)

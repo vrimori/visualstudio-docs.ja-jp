@@ -1,56 +1,55 @@
 ---
-title: "IDiaSymbol::get_hfaDouble | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_hfaDouble メソッド"
+title: "Idiasymbol::get_hfadouble |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_hfaDouble method
 ms.assetid: efc247b9-c16e-4fa3-89b0-901caf7b74c3
-caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 599f83a4b6813cf18addcd9e860b7b8e9ec7f776
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_hfaDouble
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-ユーザー定義型は型の同種小数点の集約 \(UDT\) \(\) HFA のデータが含まれているかどうかを指定するフラグを取得します。  
+# <a name="idiasymbolgethfadouble"></a>IDiaSymbol::get_hfaDouble
+ユーザー定義型 (UDT) が同種浮動小数点 (HFA) の集計データは double 型を含むかどうかを指定するフラグを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_hfaDouble(   
-   BOOL* pRetVal  
+```C++  
+HRESULT get_hfaDouble(   
+   BOOL* pRetVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- \[入力\] がない型の HFA のデータが含まれている場合はを返します `TRUE` ; それ以外の場合戻り `FALSE`。  
+ [out]返します`TRUE`UDT HFA データ型の 2 倍です。 それ以外の場合がある場合を返します`FALSE`です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合戻り `S_FALSE` またはエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  `S_FALSE` の戻り値はプロパティのシンボルで使用できないことを意味します。  
+>  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
-## 必要条件  
- ヘッダー : Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Dia2.h  
   
- ライブラリ : diaguids.lib  
+ ライブラリ: diaguids.lib  
   
  DLL: msdia100.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [IDiaSymbol::get\_udtKind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md)
+ [IDiaSymbol::get_udtKind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md)

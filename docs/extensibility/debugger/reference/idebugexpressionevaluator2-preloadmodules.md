@@ -1,55 +1,57 @@
 ---
-title: "IDebugExpressionEvaluator2::PreloadModules | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugExpressionEvaluator2::PreloadModules"
-  - "PreloadModules"
+title: "IDebugExpressionEvaluator2::PreloadModules |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugExpressionEvaluator2::PreloadModules
+- PreloadModules
 ms.assetid: bcf9b968-ee14-4a92-88ad-926268a44e03
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: eaceac744b06a44e3ef73de6cc9eda7255e59cb8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugExpressionEvaluator2::PreloadModules
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-指定したシンボルのプロバイダーを指定するモジュールを指定積みます。  
+# <a name="idebugexpressionevaluator2preloadmodules"></a>IDebugExpressionEvaluator2::PreloadModules
+指定されたシンボル プロバイダーによって指定されたモジュールを再度読み込みます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT PreloadModules (  
-   IDebugSymbolProvider* pSym  
+   IDebugSymbolProvider* pSym  
 );  
 ```  
   
-```c#  
+```csharp  
 int PreloadModules (  
-   IDebugSymbolProvider pSym  
+   IDebugSymbolProvider pSym  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pSym`  
- \[入力\] モジュールが事前に積まれるシンボルのプロバイダー。  
+ [in]シンボルのプロバイダーが対象のモジュールは、事前に読み込まれます。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- このオプションのメソッドはホスティングプロセスのアタッチを行う場合に使用されます。  これは 「 attach の一部として warm 引き渡せるようにEE 可能性があります。  
+## <a name="remarks"></a>コメント  
+ ホスト プロセスのアタッチを行うと、この省略可能なメソッドが使用されます。 これにより、EE 'ウォーム アップする ' 接続には、一部として。  
   
-## 使用例  
- 次の例に [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) インターフェイスを公開する **ExpressionEvaluatorPackage の**  オブジェクトに対してこのメソッドを実装する方法を示します。  
+## <a name="example"></a>例  
+ 次の例に対して、このメソッドを実装する方法を示しています、 **ExpressionEvaluatorPackage**を公開するオブジェクト、 [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)インターフェイスです。  
   
-```cpp#  
+```cpp  
 STDMETHODIMP ExpressionEvaluatorPackage::PreloadModules  
 (  
     IDebugSymbolProvider *pSym  
@@ -75,5 +77,5 @@ Error:
 }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

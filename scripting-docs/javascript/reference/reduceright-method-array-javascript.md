@@ -1,112 +1,115 @@
 ---
-title: "reduceRight メソッド (Array) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "配列 [JavaScript], reduceRight メソッド"
-  - "reduceRight メソッド [JavaScript]"
+title: "reduceRight メソッド (Array) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- arrays [JavaScript], reduceRight method
+- reduceRight method [JavaScript]
 ms.assetid: 85963761-da11-407c-8bce-278c930e61bd
-caps.latest.revision: 19
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0d7fd2794157eadacefa7404f9333c51aed9425c
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# reduceRight メソッド (Array) (JavaScript)
-配列のすべての要素に対して、降順で指定されたコールバック関数を呼び出します。  コールバック関数の戻り値は累積結果であり、次のコールバック関数の呼び出しで引数として渡されます。  
+# <a name="reduceright-method-array-javascript"></a>reduceRight メソッド (Array) (JavaScript)
+降順で、配列内のすべての要素には、指定されたコールバック関数を呼び出します。 コールバック関数の戻り値は収集された結果で、コールバック関数の次の呼び出しの引数として提供されます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 array1.reduceRight(callbackfn[, initialValue])  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
   
 |パラメーター|定義|  
-|------------|--------|  
-|`array1`|必須です。  配列オブジェクト。|  
-|`callbackfn`|必須です。  引数を 4 つまで受け取る関数。  `reduceRight` メソッドは、配列内の各要素に対して `callbackfn` 関数を 1 回呼び出します。|  
-|`initialValue`|省略可能です。  `initialValue` が指定されている場合は、積算を開始するための初期値として使用されます。  この値は、`callbackfn` 関数の最初の呼び出しによって、配列の値の代わりに引数として提供されます。|  
+|---------------|----------------|  
+|`array1`|必須です。 配列オブジェクト。|  
+|`callbackfn`|必須です。 最大 4 つの引数を受け取る関数。 `reduceRight` メソッドは、配列内の各要素に対して `callbackfn` 関数を 1 回呼び出します。|  
+|`initialValue`|省略可能です。 場合`initialValue`を指定すると、蓄積を開始する初期値として使用されます。 最初の呼び出し、`callbackfn`関数は配列の値の代わりに、引数としてこの値を提供します。|  
   
-## 戻り値  
- 最後のコールバック関数の呼び出しで収集された結果を含むオブジェクト。  
+## <a name="return-value"></a>戻り値  
+ コールバック関数の最後の呼び出しから収集された結果を格納するオブジェクト。  
   
-## 例外  
- 次のどちらかの条件に当てはまる場合は、`TypeError` 例外がスローされます。  
+## <a name="exceptions"></a>例外  
+ A`TypeError`例外がスローされたときに、次の条件のいずれかが true:  
   
--   `callbackfn` 引数が関数オブジェクトではない。  
+-   `callbackfn`引数が関数オブジェクトではありません。  
   
--   配列に要素がなく、`initialValue` も提供されていない。  
+-   配列に要素が含まれていないと`initialValue`が指定されていません。  
   
-## 解説  
- `initialValue` を指定すると、`reduceRight` メソッドは、配列の各要素に対して `callbackfn` 関数をインデックスの降順で 1 回呼び出します。  `initialValue` を指定しない場合、`reduceRight` メソッドは、各要素に対して `callbackfn` 関数を最後から 2 番目の要素から開始してインデックスの降順で呼び出します。  
+## <a name="remarks"></a>コメント  
+ 場合、`initialValue`が指定されて、`reduceRight`メソッドの呼び出し、`callbackfn`関数をインデックス順に並べられて、配列の各要素に対して 1 回です。 ない場合は`initialValue`が指定されて、`reduceRight`メソッドの呼び出し、`callbackfn`インデックスを降順で、最後から 2 番目の要素から始めて、各要素に対して関数。  
   
- コールバック関数の戻り値は、コールバック関数の次の呼び出しに `previousValue` 引数として渡されます。  コールバック関数の最後の呼び出しの戻り値は、`reduceRight` メソッドの戻り値です。  
+ コールバック関数の戻り値として提供される、`previousValue`コールバック関数に次の呼び出しで引数。 コールバック関数の最後の呼び出しの戻り値は、戻り値の`reduceRight`メソッドです。  
   
  配列内で欠落している要素に対しては、コールバック関数は呼び出されません。  
   
- インデックスの昇順で結果を収集するには、[reduce メソッド \(Array\)](../../javascript/reference/reduce-method-array-javascript.md) を使用します。  
+ インデックスの昇順で結果を蓄積するを使用して、 [reduce メソッド (Array)](../../javascript/reference/reduce-method-array-javascript.md)です。  
   
-## コールバック関数の構文  
+## <a name="callback-function-syntax"></a>コールバック関数の構文  
  コールバック関数の構文は次のとおりです。  
   
  `function callbackfn(previousValue, currentValue, currentIndex, array1)`  
   
- コールバック関数は、パラメーターを 4 つまで使用して宣言できます。  
+ 最大 4 つのパラメーターを使用して、コールバック関数を宣言することができます。  
   
  コールバック関数パラメーターの一覧を次の表に示します。  
   
-|コールバックの引数|定義|  
-|---------------|--------|  
-|`previousValue`|前のコールバック関数呼び出しで得られた値。  `reduceRight` メソッドに `initialValue` が渡された場合は、関数が初めて呼び出されるときに `previousValue` が `initialValue` になります。|  
-|`currentValue`|現在の配列の要素の値。|  
+|コールバック引数|定義|  
+|-----------------------|----------------|  
+|`previousValue`|コールバック関数には、前の呼び出しからの値。 場合、`initialValue`に提供される、 `reduceRight` 、メソッド、`previousValue`は`initialValue`初めて関数が呼び出されたとき。|  
+|`currentValue`|現在の配列要素の値。|  
 |`currentIndex`|現在の配列要素の数値インデックス。|  
 |`array1`|要素を格納している配列オブジェクト。|  
   
-## コールバック関数の最初の呼び出し  
- コールバック関数が初めて呼び出されるときに引数として渡される値は、`reduceRight` メソッドに `initialValue` 引数があるかどうかによって異なります。  
+## <a name="first-call-to-the-callback-function"></a>コールバック関数への最初の呼び出し  
+ 初めて、コールバック関数が呼び出されたとき、引数として渡された値依存かどうか、`reduceRight`メソッドには、`initialValue`引数。  
   
- `reduceRight` メソッドに `initialValue` が渡される場合:  
+ 場合、`initialValue`に提供される、`reduceRight`メソッド。  
   
--   `previousValue` 引数は `initialValue` になります。  
+-   `previousValue` 引数が `initialValue` です。  
   
--   `currentValue` 引数が配列内の最後の要素の値になります。  
+-   `currentValue`の引数は、最後の要素を配列内に存在します。  
   
- `initialValue` が指定されていない場合:  
+ 場合、`initialValue`が指定されていません。  
   
--   `previousValue` 引数が配列内の最後の要素の値になります。  
+-   `previousValue`の引数は、最後の要素を配列内に存在します。  
   
--   `currentValue` 引数が配列内の最後から 2 番目の要素の値になります。  
+-   `currentValue`引数は、最後から 2 番目の要素の値、配列内に存在します。  
   
-## 配列オブジェクトの変更  
+## <a name="modifying-the-array-object"></a>配列オブジェクトの変更  
  配列オブジェクトはコールバック関数で変更できます。  
   
  `reduceRight` メソッドの開始後に配列オブジェクトを変更した結果を次の表に示します。  
   
 |`reduceRight` メソッドの開始後の条件|要素がコールバック関数に渡されるか?|  
-|-------------------------------|------------------------|  
+|-----------------------------------------------------|------------------------------------------|  
 |要素が配列の元の長さを越えて追加されている。|いいえ。|  
-|要素はが、配列内の欠落した要素を補うために追加されている。|はい \(そのインデックスがまだコールバック関数に渡されていない場合\)。|  
-|要素が変更されている。|はい \(その要素がまだコールバック関数に渡されていない場合\)。|  
-|要素が配列から削除されている。|いいえ \(その要素が既にコールバック関数に渡されている場合を除く\)。|  
+|要素はが、配列内の欠落した要素を補うために追加されている。|はい (そのインデックスがまだコールバック関数に渡されていない場合)。|  
+|要素が変更されている。|はい (その要素がまだコールバック関数に渡されていない場合)。|  
+|要素が配列から削除されている。|いいえ (その要素が既にコールバック関数に渡されている場合を除く)。|  
   
-## 使用例  
- 次の例では、配列の値を "::" で区切って文字列に連結します。  `reduceRight` メソッドに初期値が指定されていないので、コールバック関数への最初の呼び出しの `previousValue` 引数として 456、`currentValue` 引数として 123 が指定されます。  
+## <a name="example"></a>例  
+ 次の例では、配列の値を連結で値を分離する、文字列に"::"です。 初期値が提供されていないため、`reduceRight`メソッド、コールバック関数に最初の呼び出しでとして 456、`previousValue`引数と同様の 123、`currentValue`引数。  
   
-```javascript  
+```JavaScript  
 // Define the callback function.  
 function appendCurrent (previousValue, currentValue) {  
     return previousValue + "::" + currentValue;  
@@ -125,10 +128,10 @@ document.write(result);
 //  456::123::def::abc  
 ```  
   
-## 使用例  
- 配列要素を 2 乗した値の合計を算出する例を次に示します。  `reduceRight` メソッドは初期値 0 で呼び出されます。  
+## <a name="example"></a>例  
+ 次の例では、配列の要素の 2 乗の合計を検索します。 `reduceRight` 0 の初期値を持つメソッドが呼び出されます。  
   
-```javascript  
+```JavaScript  
 // Define the callback function.  
 function Process(previousValue, currentValue, index, array) {  
     // Add the previous value to the current value squared.  
@@ -153,10 +156,10 @@ document.write("sum of squares=" + sumOfSquares);
 //  sum of squares=50  
 ```  
   
-## 使用例  
- 値が 1 ～ 10 の間にある配列内の要素を取得例を次に示します。  `reduceRight` メソッドの初期値は、空の配列です。  
+## <a name="example"></a>例  
+ 次の例では、配列の値を持つの 1 ~ 10 のそれらの要素を取得します。 指定された初期値、`reduceRight`メソッドは空の配列。  
   
-```javascript  
+```JavaScript  
 function Process2(previousArray, currentValue) {  
     // If currentValue is between 1 and 10,   
     // append currentValue to the array.  
@@ -186,10 +189,10 @@ document.write("result array=" + resultArray);
 //  result array=3,6,1  
 ```  
   
-## 使用例  
- `reduceRight` メソッドは、文字列に適用できます。  このメソッドを使用して、文字列内の文字を逆転する方法の例を次に示します。  
+## <a name="example"></a>例  
+ `reduceRight` メソッドは、文字列に適用できます。 次の例では、このメソッドを使用して、文字列内の文字を反転する方法を示します。  
   
-```javascript  
+```JavaScript  
 // Define the callback function.  
 function AppendToArray(previousValue, currentValue) {  
     return previousValue + currentValue;  
@@ -208,8 +211,8 @@ document.write(result);
 // the computer  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv9](../../javascript/includes/jsv9-md.md)]  
   
-## 参照  
- [reduce メソッド \(Array\)](../../javascript/reference/reduce-method-array-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [reduce メソッド (Array)](../../javascript/reference/reduce-method-array-javascript.md)

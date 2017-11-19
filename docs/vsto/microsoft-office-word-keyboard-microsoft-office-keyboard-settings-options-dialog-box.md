@@ -1,45 +1,46 @@
 ---
-title: "[Microsoft Office Word Keyboard] ([オプション] ダイアログ ボックス - [Microsoft Office Keyboard 設定]) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Microsoft_Office_Tools.Microsoft_Office_Word.Keyboard"
-  - "VS.ToolsOptionsPages.Microsoft_Office_Keyboard_Settings.Microsoft_Office_Word_Keyboard"
-  - "VST.WordOptions.KeyboardMappingScheme"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "キーボード ショートカット、Visual Studio での Office 開発"
+title: "Microsoft Office Word キーボード、Microsoft Office Keyboard 設定オプション ダイアログ ボックス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.ToolsOptionsPages.Microsoft_Office_Tools.Microsoft_Office_Word.Keyboard
+- VS.ToolsOptionsPages.Microsoft_Office_Keyboard_Settings.Microsoft_Office_Word_Keyboard
+- VST.WordOptions.KeyboardMappingScheme
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords: keyboard shortcuts, Office development in Visual Studio
 ms.assetid: d98edaab-846a-4baa-b190-702b1134754c
-caps.latest.revision: 18
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: bbce725246356086ac64b1810b80b91839caea3c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# [Microsoft Office Word Keyboard] ([オプション] ダイアログ ボックス - [Microsoft Office Keyboard 設定])
-  Microsoft Office Word と Visual Studio のどちらにも、ショートカット キーの機能があります。  同じショートカット キーが、Word と Visual Studio でそれぞれ別々のコマンドを表していることがあります。  Visual Studio のドキュメント レベルのプロジェクト内で Word を開いているときは、一度に 1 つのアプリケーションだけがショートカット キー コマンドを受け取ります。  既定では Visual Studio がすべてのショートカット キー コマンドを受け取りますが、**\[ダイナミック キーボード スキーム\]** を選択すると、文書にフォーカスがある場合は Word にショートカット キー コマンドを受け取らせることができます。  
+# <a name="microsoft-office-word-keyboard-microsoft-office-keyboard-settings-options-dialog-box"></a>[Microsoft Office Word Keyboard] ([オプション] ダイアログ ボックス - [Microsoft Office Keyboard 設定])
+  Microsoft Office Word および Visual Studio 両方のショートカット キーを処理します。 同じショートカット キーの組み合わせは、Word では Visual Studio での異なるコマンドのスタンバイことができます。 Word で開いている場合、ドキュメント レベルのプロジェクトを Visual Studio で、一度に 1 つだけのアプリケーションは、ショートカット キーのコマンドを受信します。 既定では、Visual Studio はすべてのショートカット キー コマンドを受け取りますが、Word のドキュメントにフォーカスがある場合を選択して受信を行うことができます**ダイナミック キーボード スキーム**です。  
   
- 使用したショートカット キーが、現在ショートカット キーを処理しているアプリケーションのコマンドに割り当てられていない場合、そのショートカット キーはもう 1 つのアプリケーションに渡されます。  
+ ショートカット キーが処理されているアプリケーションでのコマンドに割り当てられているショートカット キーを使用する場合、その他のアプリケーションには、ショートカット キーは渡されます。  
   
- 選択したオプションは、変更するまでは Word プロジェクト内で有効です。  この選択は、Microsoft Office Excel プロジェクトには影響を与えません。Excel の設定を変更するには、Microsoft Office Excel Keyboard のオプションを使用します。  
+ 選択したオプションは、変更するまで Word プロジェクトの有効になります。 選択範囲では Microsoft Office Excel プロジェクトには影響しませんMicrosoft Office Excel キーボード オプションを使用して Excel 用のすべての変更を行う必要があります。  
   
-## UIElement の一覧  
+## <a name="uielement-list"></a>UIElement の一覧  
  **Visual Studio キーボード スキーム**  
- Word 文書にフォーカスがある場合でも、Visual Studio がすべてのショートカット キー コマンドを受け取ります。  たとえば、文書にフォーカスがあるときに F5 キーを押した場合は、Visual Studio がソリューションのデバッグを開始します。  
+ Visual Studio は、Word 文書にフォーカスがある場合でも、すべてのショートカット キー コマンドを受信します。 たとえば、ドキュメントにフォーカスがあるときに、F5 キーを押すと、Visual Studio は、ソリューションのデバッグを開始します。  
   
- **ダイナミック キーボード スキーム**  
- Visual Studio にフォーカスがあるときに限り、Visual Studio がショートカット キー コマンドを受け取ります。  Word 文書にフォーカスがある場合は、Word がすべてのショートカット キー コマンドを受け取ります。  たとえば、Word 文書にフォーカスがあるときに F5 キーを押した場合は、Word の **\[検索と置換\]** ダイアログ ボックスが **\[ジャンプ\]** タブを選択した状態で表示されます。  Visual Studio にフォーカスがあるときに F5 を押した場合は、Visual Studio がソリューションのデバッグを開始します。  
+ **動的なキーボード スキーム**  
+ Visual Studio は、フォーカスがあるときにのみ、ショートカット キーのコマンドを受信します。 Word 文書にフォーカスがある場合は、Word がショートカット キーのすべてのコマンドを受信します。 たとえば、Word 文書にフォーカスがあるときに、F5 キーを押すと、開かれます、**検索し、置換** ダイアログ ボックスで、**ジャンプ**タブを選択します。 Visual Studio にフォーカスがあるときに、f5 キーを押して、Visual Studio は、ソリューションのデバッグを開始します。  
   
-## 参照  
- [&#91;Microsoft Office Excel Keyboard&#93; &#40;&#91;オプション&#93; ダイアログ ボックス - &#91;Microsoft Office Keyboard 設定&#93;&#41;](../vsto/microsoft-office-excel-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md)  
+## <a name="see-also"></a>関連項目  
+ [[Microsoft Office Excel Keyboard] ([オプション] ダイアログ ボックス - [Microsoft Office Keyboard 設定])](../vsto/microsoft-office-excel-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md)  
   
   

@@ -1,58 +1,58 @@
 ---
-title: "IDebugDocumentText2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentText2"
-helpviewer_keywords: 
-  - "IDebugDocumentText2 インターフェイス"
+title: "IDebugDocumentText2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugDocumentText2
+helpviewer_keywords: IDebugDocumentText2 interface
 ms.assetid: e85f50a3-211c-4220-a9f4-789950ba2782
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: ebcb90f570ad29f38eabe8712928b484fd6961c0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugDocumentText2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このインターフェイスはテキスト ドキュメントを表します。  
+# <a name="idebugdocumenttext2"></a>IDebugDocumentText2
+このインターフェイスは、テキスト ドキュメントを表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
-IDebugDocumentText2 : IDebugDocument2  
+IDebugDocumentText2 : IDebugDocument2  
 ```  
   
-## 実装についてのメモ  
- デバッグ エンジンは指定する \(DE\) 必要があるソース・コードをテキスト形式である場合このインターフェイスを実装します。  これは最も一般的なケースであるためimplements しますが[IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) インターフェイス`IDebugDocumentText2` のインターフェイスを実装します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ デバッグ エンジン (DE) は、テキスト形式では、ソース コードを指定する必要があるときに、このインターフェイスを実装します。 デを実装する場合は、最も一般的なケースのため、 [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)インターフェイスが実装する必要も、`IDebugDocumentText2`インターフェイスです。  
   
-## 呼び出し元のメモ  
- `IDebugDocument2` のインターフェイスからこのインターフェイスを取得するに `QueryInterface` のメソッドを使用します。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ 使用して、`QueryInterface`からこのインターフェイスを取得するメソッド、`IDebugDocument2`インターフェイスです。  
   
-## Vtable の順序でメソッド  
- `IDebugDocument2` のインターフェイスのメソッド以外にもこのインターフェイスには次のメソッドを実行します :  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ メソッドだけでなく、`IDebugDocument2`インターフェイス、このインターフェイスは、次のメソッドを実装します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[GetSize](../../../extensibility/debugger/reference/idebugdocumenttext2-getsize.md)|ドキュメントのこの位置にあるテキストのサイズを取得します。|  
-|[GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)|ドキュメント内の指定した位置からテキストを取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[GetSize](../../../extensibility/debugger/reference/idebugdocumenttext2-getsize.md)|ドキュメントのこの位置でテキストのサイズを取得します。|  
+|[GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)|ドキュメント内の指定位置からテキストを取得します。|  
   
-## 解説  
- 実装はこのインターフェイス [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md) のオブジェクトの <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint> のインターフェイスを提供する <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer> のインターフェイスを実装する必要があります。オブジェクト。  
+## <a name="remarks"></a>コメント  
+ このインターフェイスを実装するオブジェクトを実装する必要がありますも、<xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer>インターフェイス、ランダウン、<xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint>のためのインターフェイス、 [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)オブジェクト。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)   
  [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)

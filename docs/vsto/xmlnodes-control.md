@@ -1,47 +1,49 @@
 ---
-title: "XMLNodes コントロール"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "XMLNodes コントロール"
-  - "XMLNodes コントロール, イベント"
+title: "XMLNodes コントロール |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- XMLNodes control, events
+- XMLNodes control
 ms.assetid: 25ba7a21-aabb-4cce-b0d7-57b4add3b485
-caps.latest.revision: 36
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 36
+caps.latest.revision: "36"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 2950d1c9bf2edb0715ad588180cec3b5e17da265
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# XMLNodes コントロール
-  **重要** は、マイクロソフトが米国カスタムにある場合や、実行用のプログラム、2010年1月1日の前のMicrosoftによってライセンスMicrosoft Word製品使用している個々の利点のためにMicrosoft Wordに関するこのトピックに記載されているMicrosoft情報がMicrosoft WordからカスタムXMLに関連する特定の機能の実装を削除したときに、使用、および組織。  ここに記載されている Microsoft Word に関する情報を、2010 年 1 月以降にマイクロソフトがライセンスを供与した Microsoft Word 製品上で実行されるプログラムを使用または開発する、米国およびその領土内の個人または組織が参照および使用することはお勧めしません。これに該当する製品は、この日付以前にライセンスが供与された製品、および米国外での使用を目的として購入またはライセンスが供与された製品と同様には動作しません。  
+# <a name="xmlnodes-control"></a>XMLNodes コントロール
+  **重要な**Microsoft Word に関するこのトピックに設定された情報が、利点と個人ユーザーおよびユーザーは、米国およびその区域外部にあるまたはを使用しているユーザーは、組織の使用専用に示された、または開発上で実行されるプログラム、Microsoft が特定の機能の実装を削除する場合、2010 年 1 月前に Microsoft によってライセンス供与された Microsoft Word 製品に関連するカスタムの XML から Microsoft Word。 Microsoft Word に関する情報はこの可能性がありますいない読み取りまたは個人または米国またはその区域、2010 年 1 月 10 日後に Microsoft によってライセンス供与された Microsoft Word 製品上で実行されるプログラムの開発を使用して、ユーザーの組織で使用されます。;これらの製品では、その日付の前にライセンスまたは購入し、米国外の利用に対してライセンス供与の製品と同じ動作がしません。  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
   
- <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールは、マップされた XML ノード オブジェクトのコレクションで、イベントを公開しています。  <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールは、繰り返しスキーマ要素が Microsoft Office Word 文書にマップされるときにのみ作成されます。  繰り返し要素に子要素が含まれる場合、各子要素も <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールとして作成されます。  
+ <xref:Microsoft.Office.Tools.Word.XMLNodes>コントロールは、マップされた XML ノードのオブジェクトのコレクションであり、イベントを公開します。 <xref:Microsoft.Office.Tools.Word.XMLNodes>繰り返されるスキーマ要素は、Microsoft Office Word 文書に対応している場合にのみ、コントロールが作成されます。 としても作成、子要素の各反復される要素の子要素が含まれている場合、<xref:Microsoft.Office.Tools.Word.XMLNodes>コントロール。  
   
- Visual Studio が XML ノードのコレクションを作成すると、Word オブジェクト モデルを走査せずに、コントロールを直接プログラミングできます。  <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールは、文書から要素のマッピングを削除することによってのみ削除できます。  
+ Visual Studio では、XML ノードのコレクションが作成された後は、Word オブジェクト モデルを走査する必要なく、直接コントロールに対してプログラミングできます。 <xref:Microsoft.Office.Tools.Word.XMLNodes>コントロールをドキュメントから要素のマッピングを削除することでのみ削除できます。  
   
 > [!NOTE]  
->  <xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A> プロパティを通じて <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールの子要素にアクセスすると、<xref:Microsoft.Office.Tools.Word.XMLNode> コントロールではなく、<xref:Microsoft.Office.Interop.Word.XMLNode> オブジェクトが返されます。  詳細については、「[ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)」を参照してください。  
+>  子要素にアクセスする場合、<xref:Microsoft.Office.Tools.Word.XMLNodes>を介して制御、<xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A>プロパティが返されます、<xref:Microsoft.Office.Interop.Word.XMLNode>オブジェクトではなく、<xref:Microsoft.Office.Tools.Word.XMLNode>コントロール。 詳細については、「 [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)」を参照してください。  
   
-## コントロールへのデータのバインド  
- <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールでは、データ バインディングはサポートされません。  これは、<xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールには複合データ バインディング機能がなく、単純データ バインディングでは繰り返しデータを表せないためです。  
+## <a name="binding-data-to-the-control"></a>コントロールへのデータのバインド  
+ <xref:Microsoft.Office.Tools.Word.XMLNodes>コントロールがデータ バインディングをサポートしていません。 これは、ため、<xref:Microsoft.Office.Tools.Word.XMLNodes>コントロールにバインディングの機能、複雑なデータがないと、単純データ バインディングが表すことができないデータを繰り返しです。  
   
-## 書式設定  
- 文書内のテキストに適用できる書式設定は、<xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールにも適用できます。  
+## <a name="formatting"></a>書式設定  
+ ドキュメント内のテキストに適用できる書式設定を適用できる、<xref:Microsoft.Office.Tools.Word.XMLNodes>コントロール。  
   
-## イベント  
- <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールで使用できるイベントは次のとおりです。  
+## <a name="events"></a>イベント  
+ 利用可能なイベント、<xref:Microsoft.Office.Tools.Word.XMLNodes>コントロールは。  
   
 -   <xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>  
   
@@ -59,8 +61,8 @@ caps.handback.revision: 36
   
 -   <xref:Microsoft.Office.Tools.Word.XMLNodes.ValidationError>  
   
-## イベントの比較  
- 特定の <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールのコンテキスト内でユーザーがポインターを移動したときに、イベントをキャプチャすることができます。  たとえば、`Customer` という名前の <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールがあり、`Company` という名前の子 <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールを持つものとします。`Company` には、次に示すように、`CompanyName` および `CompanyRegion` という名前の、2 つの子 <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールがあります。  
+## <a name="comparing-events"></a>イベントの比較  
+ ユーザーが特定のコンテキスト内の自分のカーソルを移動したときにイベントをキャプチャする<xref:Microsoft.Office.Tools.Word.XMLNodes>コントロール。 たとえば、する必要があります、<xref:Microsoft.Office.Tools.Word.XMLNodes>という名前のコントロール`Customer`子を持つ<xref:Microsoft.Office.Tools.Word.XMLNodes>という名前のコントロール`Company`、および`Company`2 つの子を持つ<xref:Microsoft.Office.Tools.Word.XMLNodes>という名前のコントロール`CompanyName`と`CompanyRegion`次のように。  
   
 ```  
 <Customer>  
@@ -69,24 +71,24 @@ caps.handback.revision: 36
         <CompanyRegion>  
 ```  
   
- ポインターが `Company` ノードの内部に移動したときに操作ウィンドウにコントロールを表示する場合、ポインターが `CompanyName` と `CompanyRegion` のどちらの中にあっても違いはありません。両方とも `Company` のコンテキスト内にあるからです。  この場合は、`Company` の <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> イベントにコードを作成できます。  
+ 場合は、[操作] ウィンドウでコントロールを表示するときにカーソルが移動に、`Company`ノード、重要ではありません、カーソルがあるかどうか`CompanyName`または`CompanyRegion`両方のコンテキスト内であるため`Company`です。 この例コードを記述することができます、<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>のイベント`Company`です。  
   
- 多くの場合、カーソルが <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールに入ると、<xref:Microsoft.Office.Tools.Word.XMLNodes.Select> および <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> の両イベントが発生します。  この 2 つのイベントの相違点を次の表に示します。  
+ ほとんどの場合、カーソルが入ったときに、<xref:Microsoft.Office.Tools.Word.XMLNodes>両方の制御、<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>と<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>イベントが発生します。 次の表は、これらのイベント間の相違点を示します。  
   
-|Select イベント|ContextEnter イベント|  
-|-----------------|-----------------------|  
-|カーソルが、<xref:Microsoft.Office.Tools.Word.XMLNodes> コレクションのノードの 1 つの内側に置かれると発生します。|カーソルが、ノードのコンテキストの外側の領域から、<xref:Microsoft.Office.Tools.Word.XMLNodes> コレクションのノードの 1 つ、または子孫ノードの内側に置かれると発生します。  つまり、コンテキストが変化する場合にのみ発生し、入れ子になった複数の <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールで発生する可能性があります。|  
+|イベントを選択します|ContextEnter イベント|  
+|------------------|------------------------|  
+|内のノードのいずれかのカーソルを配置しているときに発生、<xref:Microsoft.Office.Tools.Word.XMLNodes>コレクション。|カーソルがノードの子孫ノードのいずれかの内側にある場合に発生、<xref:Microsoft.Office.Tools.Word.XMLNodes>ノードのコンテキスト外での領域からのコレクション。 つまり、これは、コンテキストが変更されたときにのみ、入れ子になった複数発生する可能性と<xref:Microsoft.Office.Tools.Word.XMLNodes>コントロール。|  
   
- たとえば、ポインターを `Customer` の外部から `CompanyName` に移動すると、`Customer`、`Company`、および `CompanyName` で <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> イベントが発生します。  ポインターを `CompanyName` から `CompanyRegion` に移動した場合、`Company` と `Customer` ではコンテキストが同じであるため、`CompanyRegion` でのみ <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> イベントが発生します。  文書内では、複数の `Company` ノードを持つことができます。  ある `Company` の `CompanyName` ノードから別の `Company` の `CompanyName` ノードへポインターを移動した場合、コンテキストが同じであるため、<xref:Microsoft.Office.Tools.Word.XMLNodes.Select> イベントだけが発生します。  
+ などの外部からカーソルを移動する`Customer`に`CompanyName`、<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>イベントを`Customer`、 `Company`、および`CompanyName`が発生します。 カーソルを移動する場合`CompanyName`に`CompanyRegion`、<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>イベントのみを`CompanyRegion`が発生すると、コンテキストがの両方で同じであるため`Company`と`Customer`です。 複数`Company`ドキュメント内のノードです。 カーソルを移動する場合、`CompanyName`ノードの 1 つ`Company`を`CompanyName`別のノード`Company`、コンテキストは、同じで、のみ、<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>イベントが発生します。  
   
- これと同じ違いは、<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave> イベントと <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect> イベントにもあります。  
+ 同じの違いがあります、<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>イベントおよび<xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>イベント。  
   
-## 参照  
- [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
+## <a name="see-also"></a>関連項目  
+ [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
  [XMLNode コントロール](../vsto/xmlnode-control.md)   
- [方法 : Word 文書に XMLNodes コントロールを追加する](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md)   
- [方法 : Visual Studio 内で Word 文書にスキーマを割り当てる](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)   
+ [方法: Word 文書に XMLNodes コントロールを追加します。](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md)   
+ [方法: Visual Studio 内で Word 文書にスキーマをマップ](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)   
  [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
   
   

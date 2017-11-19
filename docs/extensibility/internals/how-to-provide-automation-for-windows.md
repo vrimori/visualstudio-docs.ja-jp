@@ -1,44 +1,46 @@
 ---
-title: "方法: Windows 用の自動化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "オートメーション [Visual Studio SDK] ツール ウィンドウ"
-  - "オートメーションのツール ウィンドウ"
+title: "方法: Windows の自動化機能を提供 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- automation [Visual Studio SDK], tool windows
+- tool windows, automation
 ms.assetid: 512ab2a4-7987-4912-8f40-8804bf66f829
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 945eeb8b81ecb26d43da9528db154d133c4f868c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: Windows 用の自動化
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-ドキュメント ウィンドウとツール ウィンドウにオートメーションを指定できます。  オートメーションを指定するとタスク一覧とするようにウィンドウでオートメーション オブジェクトを使用できるようにする環境は既製のオートメーション オブジェクトを提供するたびに勧められ。  
+# <a name="how-to-provide-automation-for-windows"></a>方法: Windows 用のオートメーションの提供
+ドキュメントとツール ウィンドウのオートメーションを使用できます。 オートメーションは適切では、ウィンドウのオートメーション オブジェクトを使用できるようにして、環境が存在しないときに提供することは、タスク一覧で、既製のオートメーション オブジェクトを提供します。  
   
-## ツール ウィンドウのオートメーション  
- 環境はツール ウィンドウで次の手順で説明するように <xref:EnvDTE.Window> の標準のオブジェクトを返すことによってオートメーションを提供します :  
+## <a name="automation-for-tool-windows"></a>ツール ウィンドウのオートメーション  
+ 環境については、オートメーション ツール ウィンドウ、標準的なを返すことによって<xref:EnvDTE.Window>オブジェクトのように、次の手順で説明します。  
   
-#### オートメーションのツール ウィンドウに提供します。  
+#### <a name="to-provide-automation-for-tool-windows"></a>ツール ウィンドウのための自動化を提供するには  
   
-1.  `Window` のオブジェクトを取得するに `VSFPROPID` のパラメーターとして <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID> の環境で <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> のメソッドを呼び出します。  
+1.  呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>環境を使用して方法<xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>として`VSFPROPID`を取得するパラメーター、`Window`オブジェクト。  
   
-2.  呼び出し元が <xref:EnvDTE.Window.Object%2A> でツール ウィンドウに VSPackage 固有のオートメーション オブジェクトが要求されると環境は `IExtensibleObject`<xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibleObject>または `IDispatch` インターフェイスの `QueryInterface` を呼び出します。  `IExtensibleObject` と `IVsExtensibleObject` は<xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibleObject.GetAutomationObject%2A> のメソッドを提供します。  
+2.  呼び出し元が、ツール ウィンドウの VSPackage に固有のオートメーション オブジェクトを要求したとき<xref:EnvDTE.Window.Object%2A>、環境の呼び出し`QueryInterface`の`IExtensibleObject`、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibleObject>、または`IDispatch`インターフェイスです。 両方`IExtensibleObject`と`IVsExtensibleObject`提供、<xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibleObject.GetAutomationObject%2A>メソッドです。  
   
-3.  環境は`NULL` を渡す `GetAutomationObject` のメソッドを呼び出すとVSPackage 固有のオブジェクトを渡して応答します。  
+3.  環境を呼び出すと、`GetAutomationObject`メソッド`NULL`、渡すことによって、応答は、VSPackage に固有のオブジェクトをバックアップします。  
   
-4.  `IExtensibleObject` と `IVsExtensibleObject` の `QueryInterface` の呼び出しは失敗し環境は `IDispatch` の `QueryInterface` を呼び出します。  
+4.  呼び出す場合`QueryInterface`の`IExtensibleObject`と`IVsExtensibleObject`失敗した場合、環境が呼び出します`QueryInterface`の`IDispatch`します。  
   
-## ドキュメント ウィンドウのオートメーション  
- 標準の <xref:EnvDTE.Document> のオブジェクトはエディターは `IExtensibleObject` のインターフェイスを実装し`GetAutomationObject` に応答することにより `T:EnvDTE.Document` のオブジェクトの独自の実装を指定できますが環境でも使用できます。  
+## <a name="automation-for-document-windows"></a>ドキュメント ウィンドウのための自動化  
+ 標準的な<xref:EnvDTE.Document>オブジェクトは、エディターは、独自の実装を持つことができますが、環境からも、`T:EnvDTE.Document`実装することによってオブジェクト`IExtensibleObject`インターフェイスに応答して`GetAutomationObject`です。  
   
- また`IVsExtensibleObject` または `IExtensibleObject` インターフェイスの実装によって <xref:EnvDTE.Document.Object%2A> のメソッドによって取得される VSPackage 固有のオートメーション オブジェクトを提供できます。  [VSSDK のサンプル](../../misc/vssdk-samples.md) は RTF ドキュメント固有のオートメーション オブジェクトを提供します。  
+ さらに、エディターが使用して取得、VSPackage に固有のオートメーション オブジェクトを提供できます、<xref:EnvDTE.Document.Object%2A>メソッドを実装することによって、`IVsExtensibleObject`または`IExtensibleObject`インターフェイスです。 [VSSDK のサンプル](http://aka.ms/vs2015sdksamples)RTF ドキュメント固有のオートメーション オブジェクトを提供します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibleObject>

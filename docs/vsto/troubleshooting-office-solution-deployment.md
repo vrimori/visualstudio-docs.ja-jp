@@ -1,94 +1,96 @@
 ---
-title: "Office ソリューション配置のトラブルシューティング"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ClickOnce 配置 [Visual Studio での Office 開発]、トラブルシューティング"
-  - "Visual Studio での Office 開発、トラブルシューティング"
-  - "配置 (アプリケーションを) [Visual Studio での Office 開発]、トラブルシューティング"
+title: "Office ソリューションの配置のトラブルシューティング |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- ClickOnce deployment [Office development in Visual Studio], troubleshooting
+- Office development in Visual Studio, troubleshooting
+- deploying applications [Office development in Visual Studio], troubleshooting
 ms.assetid: 2206aeb6-44b3-4786-ba99-9c7dad5cce7c
-caps.latest.revision: 74
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 73
+caps.latest.revision: "74"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 50df21e315aaaa9b0ecbc7d961fbc7b568646785
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Office ソリューション配置のトラブルシューティング
+# <a name="troubleshooting-office-solution-deployment"></a>Office ソリューション配置のトラブルシューティング
   このトピックでは、Office ソリューションを配置するときに発生する可能性がある一般的な問題を解決する方法について説明します。  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
-## イベント ビューアーを使用した Office ソリューションのトラブルシューティング  
- Windows のイベント ビューアーを使用すると、Office ソリューションのインストール時またはアンインストール時に [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] でキャプチャされるエラー メッセージを表示できます。 イベント ロガーからのこれらのメッセージを使用して、インストールと配置の問題を解決できます。 詳細については、「[Office ソリューションのイベント ログ](../vsto/event-logging-for-office-solutions.md)」を参照してください。  
+## <a name="troubleshooting-office-solutions-by-using-the-event-viewer"></a>イベント ビューアーを使用した Office ソリューションのトラブルシューティング  
+ Windows のイベント ビューアーを使用すると、Office ソリューションのインストール時またはアンインストール時に [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] でキャプチャされるエラー メッセージを表示できます。 イベント ロガーからのこれらのメッセージを使用して、インストールと配置の問題を解決できます。 詳細については、「 [Event Logging for Office Solutions](../vsto/event-logging-for-office-solutions.md)」を参照してください。  
   
-## アセンブリ名の変更は競合発生の原因となる  
- ソリューションを配置した後に、**\[プロジェクト デザイナー\]** の **\[アプリケーション\]** ページで **\[アセンブリ名\]** の値を変更すると、発行ツールによってセットアップ パッケージが変更され、1 つの Setup.exe ファイルに 2 つの配置マニフェストが存在することになります。 2 つのマニフェスト ファイルを配置すると、次のような状況が発生する場合があります。  
+## <a name="changing-the-assembly-name-causes-conflicts"></a>アセンブリ名の変更は競合発生の原因となる  
+ 変更した場合、**アセンブリ名**値で、**アプリケーション**のページ、**プロジェクト デザイナー**発行ツールによって変更は、ソリューションを配置した後、セットアップ パッケージ 1 つの Setup.exe ファイルと 2 つの配置マニフェストが必要です。 2 つのマニフェスト ファイルを配置すると、次のような状況が発生する場合があります。  
   
 -   エンド ユーザーが両方のバージョンをインストールすると、アプリケーションは両方の VSTO アドインを読み込みます。  
   
 -   VSTO アドインがインストールされている状態でアセンブリの名前を変更すると、エンド ユーザーが更新を受け取ることはなくなります。  
   
- これらの状況を回避するには、ソリューションを配置した後にソリューションの **\[アセンブリ名\]** の値を変更しないようにします。  
+ これらの条件を回避するのには、ソリューションの変更しない**アセンブリ名**ソリューションを配置した後の値します。  
   
-## 更新プログラムのチェックに長い時間がかかる  
+## <a name="checking-for-updates-takes-a-long-time"></a>更新プログラムのチェックに長い時間がかかる  
  Visual Studio 2010 Tools for Office Runtime には、マニフェストやソリューションをダウンロードするときのタイムアウト値を設定するために管理者が使用できるように、レジストリ エントリが用意されています。  
   
-#### タイムアウト値を設定するには  
+#### <a name="to-set-the-time-out-value"></a>タイムアウト値を設定するには  
   
 1.  レジストリで、次のキーに移動します。  
   
-     HKEY\_CURRENT\_USER\\Software\\Microsoft\\VSTA  
+     HKEY_CURRENT_USER\Software\Microsoft\VSTA  
   
 2.  **AddInTimeout** サブキーに、タイムアウト値をミリ秒単位で設定します。  
   
-     **\[AddInTimeout\]** サブキーが存在しない場合は、DWORD として作成します。  
+     **[AddInTimeout]** サブキーが存在しない場合は、DWORD として作成します。  
   
-## ネットワーク ファイル共有に対する更新または発行ができない  
+## <a name="cant-update-or-publish-to-a-network-file-share"></a>ネットワーク ファイル共有に対する更新または発行ができない  
  ネットワーク ファイル共有にある Office ソリューションは、更新の発行プロセスでソリューションの Setup.exe ファイルがロックされると、誤解を招くメッセージを表示することがあります。 たとえば、"'setup.exe' を Web サイトに追加できません。 ファイル 'setup.exe' はこの Web サイトに既に存在します。" というメッセージが表示されることがあります。  
   
  ファイルがロックされないようにするには、エンド ユーザーに対して共有を読み取り専用に設定します。 ただし、共有上にドキュメントがあると、このドキュメントもエンド ユーザーに対して読み取り専用になります。  
   
-## Microsoft Office の必須コンポーネントがインストールされていない  
- セットアップ パッケージには、Office ソリューションと共に配置される必須コンポーネントとして、.NET Framework、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]、および Office プライマリ相互運用機能アセンブリを追加できます。 プライマリ相互運用機能アセンブリをインストールする方法については、「[Office ソリューションを開発できるようにコンピューターを構成する](../vsto/configuring-a-computer-to-develop-office-solutions.md)」および「[方法 : Office のプライマリ相互運用機能アセンブリをインストールする](../vsto/how-to-install-office-primary-interop-assemblies.md)」をご覧ください。  
+## <a name="prerequisites-for-microsoft-office-arent-installed"></a>Microsoft Office の必須コンポーネントがインストールされていない  
+ セットアップ パッケージには、Office ソリューションと共に配置される必須コンポーネントとして、.NET Framework、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]、および Office プライマリ相互運用機能アセンブリを追加できます。 プライマリ相互運用機能アセンブリをインストールする方法については、次を参照してください。 [Office ソリューションの開発コンピューターを構成する](../vsto/configuring-a-computer-to-develop-office-solutions.md)と[する方法: Office のプライマリ相互運用機能アセンブリをインストール](../vsto/how-to-install-office-primary-interop-assemblies.md)です。  
   
-## "Localhost" を使用して発行するとインストール問題が生じることがある  
- ドキュメント レベルのソリューションの発行場所またはインストール先として "http:\/\/localhost" を使用した場合、この文字列は **\[発行ウィザード\]** で実際のコンピューター名に変換されません。 この場合は、ソリューションを開発用コンピューター上にインストールする必要があります。 配置ソリューションに開発用コンピューター上の IIS を使用させるには、HTTP、HTTPS、FTP のすべての場所について、localhost ではなく完全修飾名を使用します。  
+## <a name="publishing-using-localhost-can-cause-installation-problems"></a>"Localhost" を使用して発行するとインストール問題が生じることがある  
+ ドキュメント レベルのソリューションの発行場所またはインストール先として "http://localhost" を使用した場合、この文字列は **[発行ウィザード]** で実際のコンピューター名に変換されません。 この場合は、ソリューションを開発用コンピューター上にインストールする必要があります。 配置ソリューションに開発用コンピューター上の IIS を使用させるには、HTTP、HTTPS、FTP のすべての場所について、localhost ではなく完全修飾名を使用します。  
   
-## 更新済みのアセンブリではなくキャッシュしたアセンブリが読み込まれる  
+## <a name="cached-assemblies-are-loaded-instead-of-updated-assemblies"></a>更新済みのアセンブリではなくキャッシュしたアセンブリが読み込まれる  
  プロジェクトの出力パスがネットワーク ファイル共有上にあり、アセンブリが厳密な名前で署名されていて、カスタマイズ アセンブリのバージョンが変更されていない場合、.NET Framework アセンブリ ローダーである fusion は、キャッシュしたアセンブリのコピーを読み込みます。 アセンブリを更新しても、これらの条件が満たされるとキャッシュしたコピーが読み込まれるため、プロジェクトを次回実行するときに更新は表示されません。  
   
  Visual Studio を構成し、プロジェクトを実行するたびに fusion がアセンブリをダウンロードするように設定できます。  
   
-#### キャッシュしたコピーではなくアセンブリをダウンロードするには  
+#### <a name="to-download-assemblies-instead-of-loading-cached-copies"></a>キャッシュしたコピーではなくアセンブリをダウンロードするには  
   
-1.  メニュー バーで、**\[プロジェクト\]**、\[*ProjectName* **のプロパティ\]** の順に選びます。  
+1.  メニュー バーで、 **[プロジェクト]**、[ *ProjectName***のプロパティ]**」を参照してください。  
   
-2.  **\[アプリケーション\]** ページで、**\[アセンブリ情報\]** を選択します。  
+2.  **[アプリケーション]** ページで、 **[アセンブリ情報]**を選択します。  
   
-3.  最初の **\[アセンブリ バージョン\]** ボックスでアスタリスク \(\*\) を入力し、**\[OK\]** ボタンを選択します。  
+3.  最初の**アセンブリ バージョン**ボックスで、アスタリスクを入力 (\*) を選択し、 **[ok]**ボタンをクリックします。  
   
  アセンブリのバージョンを変更したら、厳密な名前でアセンブリに署名します。fusion が最新バージョンのカスタマイズを読み込むようになります。  
   
-## URI に US\-ASCII 以外の文字が含まれているとインストールが失敗する  
- Office ソリューションを HTTP、HTTPS、または FTP のいずれかの場所に発行する場合、US\-ASCII ではない Unicode 文字をパスに含めることはできません。 これらの文字を使用すると、セットアップ プログラムで一貫性のない動作が実行されることがあります。 インストール パスには、US\-ASCII 文字を使用してください。  
+## <a name="installation-fails-when-the-uri-has-characters-that-aret-us-ascii"></a>URI に US-ASCII 以外の文字が含まれているとインストールが失敗する  
+ Office ソリューションを HTTP、HTTPS、または FTP のいずれかの場所に発行する場合、US-ASCII ではない Unicode 文字をパスに含めることはできません。 これらの文字を使用すると、セットアップ プログラムで一貫性のない動作が実行されることがあります。 インストール パスには、US-ASCII 文字を使用してください。  
   
-## 開発用コンピューターにソリューションを発行およびインストールすると手動でアンインストールするよう求めるプロンプトが表示される  
+## <a name="prompt-to-manually-uninstall-appears-when-you-publish-and-install-a-solution-on-the-development-computer"></a>開発用コンピューターにソリューションを発行およびインストールすると手動でアンインストールするよう求めるプロンプトが表示される  
  Office ソリューションをビルドすると、そのビルド バージョンが自動的に登録されます。 開発用コンピューターに同じソリューションを以前に発行およびインストールしていた場合は、次のビルド後、リビルド後、または発行後に、発行されたバージョンとビルドされたバージョンのインストール パスが違うことが [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] によって検出されます。 "現在他のバージョンがインストールされており、この場所からアップグレードすることはできないため、このカスタマイズをインストールすることはできません。" というエラー メッセージが表示されます。 レジストリ キーは、ソリューションがビルドされるたびに更新されます。 したがって、新しいバージョンを発行、デバッグ、または実行する前に、以前のバージョンをアンインストールする必要があります。  
   
  このメッセージが表示されないようにするには、開発用コンピューターで別のユーザー アカウントを作成して配置をテストします。 または、次回のソリューションの発行、デバッグ、またはリビルドの前に、コンピューター上にインストールされているプログラムの一覧からそのバージョンをアンインストールできます。  
   
-## ソリューションをインストールするときキャッチされない例外やメソッドが見つからないエラーが発生する  
- 配置マニフェスト \(.vsto ファイル\)、Office アプリケーション、ドキュメント、またはブックを開いて Office ソリューションをインストールすると、次の状態に対するエラー メッセージが表示される場合があります。  
+## <a name="uncaught-exception-or-method-not-found-error-when-you-install-a-solution"></a>ソリューションをインストールするときキャッチされない例外やメソッドが見つからないエラーが発生する  
+ 配置マニフェスト (.vsto ファイル)、Office アプリケーション、ドキュメント、またはブックを開いて Office ソリューションをインストールすると、次の状態に対するエラー メッセージが表示される場合があります。  
   
 -   メソッドが見つからない  
   
@@ -100,34 +102,34 @@ caps.handback.revision: 73
   
  セットアップ プログラムを実行せずにソリューションをインストールする場合、インストーラーでは、必須コンポーネントの有無のチェックや、それらのインストールは行われません。 セットアップ プログラムは、正しいバージョンの必須コンポーネントをチェックし、必要に応じて、これらをインストールします。  
   
-## InstallShield Limited Edition プロジェクトをビルドした後にアドイン用マニフェスト レジストリ キーが変わる  
+## <a name="manifest-registry-keys-for-add-ins-change-after-an-installshield-limited-edition-project-is-built"></a>InstallShield Limited Edition プロジェクトをビルドした後にアドイン用マニフェスト レジストリ キーが変わる  
  VSTO アドイン セットアップ プログラムに含まれるマニフェスト レジストリ キーが、InstallShield Limited Edition プロジェクトのビルド時に .vsto から .dll.manifest に変わる場合があります。  
   
  この問題の発生を防ぐには、InstallShield Limited Edition プロジェクトを別のソリューションで作成するか、レジストリ キー値として VSTO アドイン名が含まれる CompanyName.AddinName を使用します。  
   
-## Office ソリューションの ClickOnce インストーラーがプライマリ相互運用機能アセンブリをインストールしない  
- Office ソリューション用に ClickOnce が作成するセットアップ プログラムを実行すると、Office プライマリ相互運用機能アセンブリ \(PIA\) がまだインストールされていない場合のみ、PIA のインストーラーが実行されます。  
+## <a name="the-clickonce-installer-for-your-office-solution-doesnt-install-the-primary-interop-assemblies"></a>Office ソリューションの ClickOnce インストーラーがプライマリ相互運用機能アセンブリをインストールしない  
+ Office ソリューション用に ClickOnce が作成するセットアップ プログラムを実行すると、Office プライマリ相互運用機能アセンブリ (PIA) がまだインストールされていない場合のみ、PIA のインストーラーが実行されます。  
   
  セットアップ プログラムで PIA が正しくインストールされない場合、インストール ディレクトリから o2007pia.msi というインストーラー ファイルを実行して PIA を手動でインストールします。  
   
-## Office ソリューションを再インストールすると、引数が範囲外という例外が発生する  
- Office ソリューションを再インストールするときに、<xref:System.ArgumentOutOfRangeException> 例外が発生し、"指定された引数は、有効な値の範囲内にありません" というエラー メッセージが表示される場合があります。  
+## <a name="reinstalling-office-solutions-causes-an-argument-out-of-range-exception"></a>Office ソリューションを再インストールすると、引数が範囲外という例外が発生する  
+ Office ソリューションを再インストールするときに、 <xref:System.ArgumentOutOfRangeException> 例外が発生し、"指定された引数は、有効な値の範囲内にありません" というエラー メッセージが表示される場合があります。  
   
- インストール場所の URL の大文字と小文字が違っていると、この状況が発生します。 たとえば、Office ソリューションを最初は [http:\/\/fabrikam.com\/ExcelSolution.vsto](http://fabrikam.com/ExcelSolution.vsto) からインストールし、次に [http:\/\/fabrikam.com\/excelsolution.vsto](http://fabrikam.com/excelsolution.vsto) を使用すると、このエラーが発生します。  
+ インストール場所の URL の大文字と小文字が違っていると、この状況が発生します。 たとえば、Office ソリューションを最初は [http://fabrikam.com/ExcelSolution.vsto](http://fabrikam.com/ExcelSolution.vsto) からインストールし、次に [http://fabrikam.com/excelsolution.vsto](http://fabrikam.com/excelsolution.vsto) を使用すると、このエラーが発生します。  
   
  このエラー メッセージが表示されないようにするには、Office ソリューションのインストール時に、同じ大文字と小文字の組み合わせを使用します。  
   
-## Web で配置マニフェストを開いても ClickOnce ソリューションをインストールできない  
- ユーザーは、Web で配置マニフェストを開くことにより、Office ソリューションをインストールできます。 ただし、一部のインターネット インフォメーション サービス \(IIS\) がインストールされていると、.vsto ファイル名拡張子はブロックされます。 IIS を使用して Office ソリューションを配置する前に、IIS で MIME の種類を定義する必要があります。  
+## <a name="cant-install-a-clickonce-solution-by-opening-the-deployment-manifest-from-the-web"></a>Web で配置マニフェストを開いても ClickOnce ソリューションをインストールできない  
+ ユーザーは、Web で配置マニフェストを開くことにより、Office ソリューションをインストールできます。 ただし、一部のインターネット インフォメーション サービス (IIS) がインストールされていると、.vsto ファイル名拡張子はブロックされます。 IIS を使用して Office ソリューションを配置する前に、IIS で MIME の種類を定義する必要があります。  
   
- IIS 6 で MIME の種類を定義する方法については、「[MIME の種類を構成する \(IIS 6.0\)](http://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/cd72c0dc-c5b8-42e4-96c2-b3c656f99ead.mspx?mfr=true)」をご覧ください。  
+ IIS 6 で MIME の種類を定義する方法については、「 [MIME の種類を構成する (IIS 6.0)](http://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/cd72c0dc-c5b8-42e4-96c2-b3c656f99ead.mspx?mfr=true)」をご覧ください。  
   
- IIS 7 で MIME の種類を定義する方法については、「[MIME の種類を追加する \(IIS 7\)](http://technet.microsoft.com/library/cc725608(WS.10).aspx)」をご覧ください。  
+ IIS 7 で MIME の種類を定義する方法については、「 [MIME の種類を追加する (IIS 7)](http://technet.microsoft.com/library/cc725608(WS.10).aspx)」をご覧ください。  
   
- 拡張子を **.vsto** に、MIME の種類を "**application\/x\-ms\-vsto**" に設定します。  
+ 拡張子を **.vsto** に、MIME の種類を " **application/x-ms-vsto**" に設定します。  
   
-## 参照  
- [ClickOnce 配置のトラブルシューティング](../deployment/troubleshooting-clickonce-deployments.md)   
+## <a name="see-also"></a>関連項目  
+ [ClickOnce 配置のトラブルシューティング](/visualstudio/deployment/troubleshooting-clickonce-deployments)   
  [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)  
   
   

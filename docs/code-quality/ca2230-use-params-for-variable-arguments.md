@@ -1,11 +1,10 @@
 ---
-title: 'CA2230: Use params for variable arguments | Microsoft Docs'
+title: "2230: 可変引数に対して使用します params |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,58 +14,43 @@ helpviewer_keywords:
 - CA2230
 - UseParamsForVariableArguments
 ms.assetid: bf98b733-4855-4110-9f16-eba5a9e79421
-caps.latest.revision: 15
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 8e7037e7b642aa36bb1a351113e7d09dc1ea2537
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 10920c4ff9083b52e2d35f7fa151644b89bb1102
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2230-use-params-for-variable-arguments"></a>CA2230: Use params for variable arguments
+# <a name="ca2230-use-params-for-variable-arguments"></a>CA2230: 可変引数に対して param を使用します
 |||  
 |-|-|  
 |TypeName|UseParamsForVariableArguments|  
 |CheckId|CA2230|  
-|Category|Microsoft.Usage|  
-|Breaking Change|Breaking|  
+|カテゴリ|Microsoft.Usage|  
+|互換性に影響する変更点|あり|  
   
-## <a name="cause"></a>Cause  
- A public or protected type contains a public or protected method that uses the `VarArgs` calling convention.  
+## <a name="cause"></a>原因  
+ パブリックまたはプロテクト型に使用するパブリックまたはプロテクト メソッドが含まれています、`VarArgs`呼び出し規約です。  
   
-## <a name="rule-description"></a>Rule Description  
- The `VarArgs` calling convention is used with certain method definitions that take a variable number of parameters. A method using the `VarArgs` calling convention is not Common Language Specification (CLS) compliant and might not be accessible across programming languages.  
+## <a name="rule-description"></a>規則の説明  
+ `VarArgs`呼び出し規約は、可変個のパラメーターを受け取る特定のメソッド定義で使用します。 メソッドを使用して、`VarArgs`共通言語仕様 (CLS) 準拠ではない呼び出し規約、およびプログラミング言語間でアクセスできない可能性があります。  
   
- In C#, the `VarArgs` calling convention is used when a method's parameter list ends with the `__arglist` keyword. Visual Basic does not support the `VarArgs` calling convention, and Visual C++  allows its use only in unmanaged code that uses the ellipse `...` notation.  
+ C# で、`VarArgs`呼び出し規約は、メソッドのパラメーター リストの最後にときに使用、`__arglist`キーワード。 Visual Basic はサポートしません、`VarArgs`省略記号ボタンを使用するアンマネージ コードでのみ、使用は、呼び出し規約、および Visual C`...`表記します。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule in C#, use the [params](/dotnet/csharp/language-reference/keywords/params) keyword instead of `__arglist`.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正する C# の場合、使用、 [params](/dotnet/csharp/language-reference/keywords/params)キーワードの代わりに`__arglist`です。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告は抑制しないでください。  
   
-## <a name="example"></a>Example  
- The following example shows two methods, one that violates the rule and one that satisfies the rule.  
+## <a name="example"></a>例  
+ 次の例では、ルールに違反している使用し、規則に適合するいずれかを使用する、2 つの方法を示します。  
   
  [!code-csharp[FxCop.Usage.UseParams#1](../code-quality/codesnippet/CSharp/ca2230-use-params-for-variable-arguments_1.cs)]  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  <xref:System.Reflection.CallingConventions?displayProperty=fullName>   
- [Language Independence and Language-Independent Components](http://msdn.microsoft.com/Library/4f0b77d0-4844-464f-af73-6e06bedeafc6)
+ [言語への非依存性、および言語非依存コンポーネント](http://msdn.microsoft.com/Library/4f0b77d0-4844-464f-af73-6e06bedeafc6)

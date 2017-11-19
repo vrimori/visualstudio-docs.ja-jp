@@ -1,28 +1,29 @@
 ---
-title: "方法: エスケープ シーケンスを使用してテンプレートからテンプレートを生成する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "テキスト テンプレート, 生成 (テンプレートからテンプレートを)"
+title: "方法: エスケープ シーケンスを使用して、テンプレートからテンプレートを生成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: text templates, generating templates from templates
 ms.assetid: 4126156a-7cea-48b8-925e-7790806cfe6c
-caps.latest.revision: 35
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 35
+caps.latest.revision: "35"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 421b8a8bde2bb383889bcb58915fa8a3acb027cf
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 方法: エスケープ シーケンスを使用してテンプレートからテンプレートを生成する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-生成されるテキスト出力として別のテキスト テンプレートを作成するテキスト テンプレートを作成できます。  そのためには、エスケープ シーケンスを使用してテキスト テンプレート タグを記述する必要があります。  エスケープ シーケンスを使用しないと、生成されたテキスト テンプレートは、定義済みの意味を持つことになります。  テキスト テンプレートにおけるエスケープ シーケンスの使用の詳細については、「[テキスト テンプレートでのエスケープ シーケンスの使用](../modeling/using-escape-sequences-in-text-templates.md)」を参照してください。  
+# <a name="how-to-generate-templates-from-templates-by-using-escape-sequences"></a>方法: エスケープ シーケンスを使用してテンプレートからテンプレートを生成する
+生成されたテキスト出力として別のテキスト テンプレートを作成するテキスト テンプレートを作成することができます。 これを行うには、テキスト テンプレートのタグを区切るためにエスケープ シーケンスを使用する必要があります。 エスケープ シーケンスを使用しない場合、生成されたテキスト テンプレートは定義済みの意味を持ちます。 テキスト テンプレートでエスケープ シーケンスの使用の詳細については、次を参照してください。[テキスト テンプレートでエスケープ シーケンスを使用して](../modeling/using-escape-sequences-in-text-templates.md)です。  
   
-### テキスト テンプレート内からテキスト テンプレートを生成するには  
+### <a name="to-generate-a-text-template-from-within-a-text-template"></a>テキスト テンプレート内のテキスト テンプレートを生成するには  
   
--   テキスト テンプレート内で、別のテキスト テンプレート ファイルのディレクティブ、ステートメント、式、およびクラス機能に必要なマークアップ タグを生成するには、エスケープ文字として円記号 \(\\\) を使用します。  
+-   バック スラッシュを使用して (\\) ディレクティブ、ステートメント、式、テキスト テンプレート内で必要なマークアップ タグを作成し、別のテキスト テンプレート ファイル内の機能のクラスにエスケープ文字として。  
   
     ```  
     \<#@ directive \#>  
@@ -31,10 +32,10 @@ caps.handback.revision: 35
     \<#+ classfeature \#>  
     ```  
   
-## 使用例  
- 次の例では、エスケープ文字を使用して、テキスト テンプレートからテキスト テンプレートを生成します。  `output` ディレクティブによって、生成されるファイルの種類をテキスト テンプレートのファイル形式 \(.tt\) に設定します。  
+## <a name="example"></a>例  
+ 次の例では、エスケープ文字を使用して、テキスト テンプレートからのテキスト テンプレートを生成します。 `output`ディレクティブは、テキスト テンプレート ファイルの種類 (.tt) に変換先ファイルの種類を設定します。  
   
-```c#  
+```csharp  
 \<#@ output extension=".tt" \#>  
 \<#@ assembly name="System.Xml.dll" \#>  
 \<#@ import namespace="System.Xml" \#>  
@@ -53,7 +54,7 @@ XmlDocument xDoc = new XmlDocument();
 \#>  
 ```  
   
- 生成されるテキスト出力はテキスト テンプレートです。  
+ 生成されたテキスト出力は、テキスト テンプレートです。  
   
 ```  
 <#@ output extension=".tt" #>  

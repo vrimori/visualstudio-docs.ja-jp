@@ -1,52 +1,52 @@
 ---
-title: "IDebugObject2::GetField | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject2::GetField"
-helpviewer_keywords: 
-  - "IDebugObject2::GetField メソッド"
+title: "IDebugObject2::GetField |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugObject2::GetField
+helpviewer_keywords: IDebugObject2::GetField method
 ms.assetid: add6a6b5-e752-47dd-9613-29206ea809b0
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: cf00254e4a967e318711945d70dfff5fba70c9bd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugObject2::GetField
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このオブジェクトの型を取得します。  
+# <a name="idebugobject2getfield"></a>IDebugObject2::GetField
+このオブジェクトの種類を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT GetField(  
- IDebugField** ppField  
+HRESULT GetField(  
+ IDebugField** ppField  
 );  
 ```  
   
-```c#  
-int GetField(  
-   out IDebugField ppField  
+```csharp  
+int GetField(  
+   out IDebugField ppField  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppField`  
- \[入力\] [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) のオブジェクトが存在しない場合は null 値を返します。  
+ [out]返します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) null 値でない場合にオブジェクト。  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## 解説  
- フィールドはオブジェクトの種類について説明します。  
+## <a name="remarks"></a>コメント  
+ フィールドでは、オブジェクトの型について説明します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

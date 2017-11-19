@@ -1,47 +1,46 @@
 ---
-title: "IDiaFrameData::get_cplusplusExceptionHandling | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaFrameData::get_cplusplusExceptionHandling メソッド"
+title: "Idiaframedata::get_cplusplusexceptionhandling |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaFrameData::get_cplusplusExceptionHandling method
 ms.assetid: 54ee9cde-ce8e-45f1-809c-6fbad800d850
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 130ef97cefd04e34652ee664007ad503438b1ccb
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaFrameData::get_cplusplusExceptionHandling
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-C\+\+ 例外処理が有効かどうかを示すフラグを取得します。  
+# <a name="idiaframedatagetcplusplusexceptionhandling"></a>IDiaFrameData::get_cplusplusExceptionHandling
+C++ 例外処理が有効であるかどうかを示すフラグを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_cplusplusExceptionHandling (   
-   BOOL* pRetVal  
+```C++  
+HRESULT get_cplusplusExceptionHandling (   
+   BOOL* pRetVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- \[入力\] C\+\+ 例外処理が有効な場合はを返します `TRUE` ; それ以外の場合戻り `FALSE`。  
+ [out]返します`TRUE`C++ 例外処理が有効で、それ以外を返す場合`FALSE`です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK` このプロパティをサポートする必要 `S_FALSE` を返します。  それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`です。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## 解説  
- \(C\+\+ 例外処理と大きく異なります\) 構造化例外処理が有効かどうかを調べるには[IDiaFrameData::get\_systemExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-systemexceptionhandling.md) のメソッドを呼び出します。  
+## <a name="remarks"></a>コメント  
+ 構造化例外を確認する処理は有効で (これは C++ 例外処理とは大きく異なります)、呼び出す、 [idiaframedata::get_systemexceptionhandling](../../debugger/debug-interface-access/idiaframedata-get-systemexceptionhandling.md)メソッドです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)   
- [IDiaFrameData::get\_systemExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-systemexceptionhandling.md)
+ [IDiaFrameData::get_systemExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-systemexceptionhandling.md)

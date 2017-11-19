@@ -1,27 +1,30 @@
 ---
-title: "IActiveScriptAuthor::GetScriptTextAttributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IActiveScriptAuthor::GetScriptTextAttributes |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScriptAuthor.GetScriptTextAttributes
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IActiveScriptAuthor::GetScriptTextAttributes"
+helpviewer_keywords: IActiveScriptAuthor::GetScriptTextAttributes
 ms.assetid: a53451de-cc5c-4b53-8e5f-81e196364caf
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 6aa96623b4356f0a3d17c8b2631840953dac2d51
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScriptAuthor::GetScriptTextAttributes
+# <a name="iactivescriptauthorgetscripttextattributes"></a>IActiveScriptAuthor::GetScriptTextAttributes
 スクリプト ブロックのテキスト属性を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT GetScriptTextAttributes(  
@@ -33,37 +36,37 @@ HRESULT GetScriptTextAttributes(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pszCode`  
- \[入力、size\_is \(`cch`\) \] スクリプト ブロックのテキスト。  この終了する文字列が null である必要はありません。  
+ [size_is で (`cch`)]、スクリプト ブロックのテキスト。 この文字列は null 終端ではありません。  
   
  `cch`  
- \[入力\] `pszCode` と `pattr` パラメーターとして使用できるサイズ。  
+ [in]使用するサイズ、`pszCode`と`pattr`パラメーター。  
   
  `pszDelimiter`  
- \[入力\]終わりのスクリプトの区切り記号のアドレス。  `pszCode` がテキスト ストリームから解析されると、通常ホストは、スクリプトレットの終了を検出するために、区切り記号 \(2 三つの単一引用符など\) を使用します。  スクリプト ブロックの末尾を識別する区切り記号がない場合は無効にするには、このパラメーターをに設定します。  
+ [in]スクリプトの終わり区切り記号のアドレス。 ときに`pszCode`解析は、テキストのストリームからホスト通常 (など、2 つ単一引用符)、区切り記号を使用してスクリプトレットの末尾を検出します。 スクリプト ブロックの末尾を識別する区切り記号がない場合は、このパラメーターを NULL に設定します。  
   
  `dwFlags`  
- \[入力\]スクリプト ブロックのテキスト属性に関連付けられているフラグ。  次の値の組み合わせがあります:  
+ [in]スクリプト ブロックのテキスト属性に関連付けられているフラグです。 次の値の組み合わせが可能です。  
   
 |定数|値|説明|  
-|--------|-------|--------|  
-|GETATTRTYPE\_DEPSCAN|0x0001|SOURCETEXT\_ATTR\_IDENTIFIER の属性を持つ識別し、SOURCETEXT\_ATTR\_MEMBERLOOKUP の属性を持つドット演算子を識別子を指定します。|  
-|GETATTRFLAG\_THIS|0x0100|SOURCETEXT\_ATTR\_THIS の属性を持つ現在のオブジェクトを識別します。|  
-|GETATTRFLAG\_HUMANTEXT|0x8000|文字列の内容をと SOURCETEXT\_ATTR\_HUMANTEXT の属性を持つコメントのテキストを指定します。|  
+|--------------|-----------|-----------------|  
+|GETATTRTYPE_DEPSCAN|0x0001|SOURCETEXT_ATTR_IDENTIFIER 属性を持つ識別子を特定し、SOURCETEXT_ATTR_MEMBERLOOKUP 属性を持つドット演算子を識別します。|  
+|GETATTRFLAG_THIS|0x0100|SOURCETEXT_ATTR_THIS 属性を持つ現在のオブジェクトを識別します。|  
+|GETATTRFLAG_HUMANTEXT|0x8000|SOURCETEXT_ATTR_HUMANTEXT 属性を持つ文字列のコンテンツおよびコメントのテキストを識別します。|  
   
  `pattr`  
- \[入力、size\_is \(`cch`\) \] スクリプト ブロックのコードの色の情報。  
+ [入力、出力、size_is (`cch`)]、スクリプト ブロックのコードの色の情報です。  
   
-## 戻り値  
- `HRESULT`。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ `HRESULT`。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IActiveScriptAuthor インターフェイス](../../winscript/reference/iactivescriptauthor-interface.md)   
- [SOURCE\_TEXT\_ATTR 列挙型](../../winscript/reference/source-text-attr-enumeration.md)
+ [SOURCE_TEXT_ATTR 列挙型](../../winscript/reference/source-text-attr-enumeration.md)

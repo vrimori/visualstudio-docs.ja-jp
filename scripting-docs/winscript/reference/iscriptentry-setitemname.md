@@ -1,27 +1,30 @@
 ---
-title: "IScriptEntry::SetItemName | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IScriptEntry::SetItemName |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IScriptEntry.SetItemName
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IScriptEntry::SetItemName"
+helpviewer_keywords: IScriptEntry::SetItemName
 ms.assetid: 9551a7ec-38f8-466a-9722-09367763f380
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 483d3cdc1c8b8de9342003a99427fc2c727ad67f
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IScriptEntry::SetItemName
-`IScriptEntry` のオブジェクトを識別する項目の名前を設定します。  
+# <a name="iscriptentrysetitemname"></a>IScriptEntry::SetItemName
+識別する項目の名前を設定、`IScriptEntry`オブジェクト。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT SetItemName(  
@@ -29,23 +32,23 @@ HRESULT SetItemName(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `psz`  
- \[入力\]の項目の名前を含むバッファーのアドレス。  ホストによって項目の名前にエントリを識別するために使用されます。  
+ [in]項目の名前を格納するバッファーのアドレス。 ホストによって、項目の名前を使用して、エントリを識別します。  
   
-## 戻り値  
- `HRESULT`。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ `HRESULT`。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
 |`E_FAIL`|メソッドは成功しませんでした。|  
   
-## 解説  
- `IScriptEntry` のオブジェクト、このメソッドは `S_OK`を返します。  
+## <a name="remarks"></a>コメント  
+ `IScriptEntry`オブジェクトをこのメソッドが戻る`S_OK`です。  
   
- `IScriptEntry` \(から派生\) に `IScriptScriptlet` のオブジェクト `E_FAIL`、このメソッドはを返します。  `IScriptScriptlet` のオブジェクト、項目の名前は [IActiveScriptAuthor::AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md) によって設定され、変更できません。  
+ `IScriptScriptlet`オブジェクト (から派生する`IScriptEntry`)、このメソッドが戻る`E_FAIL`です。 `IScriptScriptlet`オブジェクト、によって、項目の名前を設定[IActiveScriptAuthor::AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md)は変更できません。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IScriptEntry インターフェイス](../../winscript/reference/iscriptentry-interface.md)   
  [IScriptEntry::GetItemName](../../winscript/reference/iscriptentry-getitemname.md)

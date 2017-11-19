@@ -1,40 +1,38 @@
 ---
-title: "方法 : ランタイム エラー レポート関数を記述する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "レポート関数"
-  - "ランタイム エラー, レポート関数"
+title: "方法: 実行時エラー レポート関数を記述 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- run-time errors, reporting functions
+- reporting function
 ms.assetid: 989bf312-5038-44f3-805f-39a34d18760e
-caps.latest.revision: 15
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 4d140606382367d5968871f65034db619fb9325e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : ランタイム エラー レポート関数を記述する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-ランタイム エラーのカスタム レポート関数には、`_CrtDbgReportW` と同じ宣言を使用する必要があります。  デバッガーへの戻り値は 1 です。  
+# <a name="how-to-write-a-run-time-error-reporting-function"></a>方法 : ランタイム エラー レポート関数を記述する
+ランタイム エラーのカスタム レポート関数には、`_CrtDbgReportW` と同じ宣言を使用する必要があります。 デバッガーへの戻り値は 1 です。  
   
  次の例は、カスタム レポート関数の定義方法を示しています。  
   
-## 使用例  
+## <a name="example"></a>例  
   
 ```  
 #include <stdio.h>  
@@ -65,8 +63,8 @@ int MyErrorFunc(int errorType, const wchar_t *filename,
 }  
 ```  
   
-## 使用例  
- 次の例は、より複雑なカスタム レポート関数を示しています。  この例では、switch ステートメントによって、各種のエラーが `_CrtDbgReportW` の `reportType` パラメーターの定義に従って処理されます。  `_CrtDbgReportW` を置き換えるため、`_CrtSetReportMode` は使用できません。  関数では、出力を処理する必要があります。  この関数の最初の可変個の引数には、ランタイム エラー番号を使用します。  詳細については、「[\_RTC\_SetErrorType](/visual-cpp/c-runtime-library/reference/rtc-seterrortype)」を参照してください。  
+## <a name="example"></a>例  
+ 次の例は、より複雑なカスタム レポート関数を示しています。 この例では、switch ステートメントによって、各種のエラーが `reportType` の `_CrtDbgReportW` パラメーターの定義に従って処理されます。 `_CrtDbgReportW` を置き換えるため、`_CrtSetReportMode` は使用できません。 関数では、出力を処理する必要があります。 この関数の最初の可変個の引数には、ランタイム エラー番号を使用します。 詳細については、次を参照してください。 [_RTC_SetErrorType](/cpp/c-runtime-library/reference/rtc-seterrortype)です。  
   
 ```  
 #include <windows.h>  
@@ -110,8 +108,8 @@ int Catch_RTC_Failure(int errType, const wchar_t *file, int line,
 #pragma runtime_checks("", restore)  
 ```  
   
-## 使用例  
- `_CrtDbgReportW` の代わりにカスタム関数を組み込むには、`_RTC_SetErrorFuncW` を使用します。  詳細については、「[\_RTC\_SetErrorFuncW](/visual-cpp/c-runtime-library/reference/rtc-seterrorfuncw)」を参照してください。  `_RTC_SetErrorFuncW` の戻り値は、直前のレポート関数であり、必要に応じて保存して復元できます。  
+## <a name="example"></a>例  
+ `_RTC_SetErrorFuncW` の代わりにカスタム関数を組み込むには、`_CrtDbgReportW` を使用します。 詳細については、次を参照してください。 [_RTC_SetErrorFuncW](/cpp/c-runtime-library/reference/rtc-seterrorfuncw)です。 `_RTC_SetErrorFuncW` の戻り値は、直前のレポート関数であり、必要に応じて保存して復元できます。  
   
 ```  
 #include <rtcapi.h>  
@@ -126,5 +124,5 @@ int main()
 }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ネイティブ ランタイム チェックのカスタマイズ](../debugger/native-run-time-checks-customization.md)

@@ -1,42 +1,43 @@
 ---
-title: "ClickOnce がアプリケーションの更新を実行するしくみ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ClickOnce 配置, 更新"
-  - "配置 (アプリケーションを) [ClickOnce], アプリケーションの更新プログラム"
-  - "更新, ClickOnce"
+title: "ClickOnce がアプリケーションの更新プログラムを実行する方法 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- updates, ClickOnce
+- ClickOnce deployment, updates
+- deploying applications [ClickOnce], application updates
 ms.assetid: d54313c2-cf0c-420d-b151-99953a95f0bb
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 32e0b56ab5d4507c971948b98c8f7660650e70cc
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# ClickOnce がアプリケーションの更新を実行するしくみ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-ClickOnce は、アプリケーションの配置マニフェストに指定されたファイル バージョン情報を使用して、アプリケーションのファイルを更新するかどうかを決定します。  更新が開始されると、ClickOnce は*ファイル パッチ*と呼ばれる技術を使用して、アプリケーション ファイルが重複してダウンロードされないようにします。  
+# <a name="how-clickonce-performs-application-updates"></a>ClickOnce がアプリケーションの更新を実行するしくみ
+ClickOnce では、アプリケーションの配置マニフェストで指定されたファイル バージョン情報を使用して、アプリケーションのファイルを更新するかどうかを決定します。 ClickOnce と呼ばれる手法を使用して更新プログラムの開始後*ファイル パッチ*をアプリケーション ファイルが重複してダウンロードを回避します。  
   
-## ファイル パッチ  
- ClickOnce は、アプリケーションを更新する際に、ファイルが変更されていない限り、新しいバージョンのアプリケーションに対応するすべてのファイルをダウンロードするわけではありません。  代わりに、現在のアプリケーションのアプリケーション マニフェストに指定されたファイルのハッシュ署名を、新しいバージョンのマニフェストに指定された署名と比較します。  ファイルの署名が異なっていれば、ClickOnce は新しいバージョンをダウンロードします。  署名が一致する場合、ファイルは元のバージョンから変更されていません。  この場合、ClickOnce は既存のファイルをコピーし、それを新しいバージョンのアプリケーションで使用します。  この手法により ClickOnce は、数ファイルのみが変更された場合にアプリケーション全体をダウンロードし直さなくても済むようにしています。  
+## <a name="file-patching"></a>ファイル パッチ  
+ アプリケーションを更新するときに ClickOnce をダウンロードしませんのすべてのアプリケーションの新しいバージョンのファイルのファイルが変更された場合を除き、します。 代わりに、新しいバージョンのマニフェストに署名に対して現在のアプリケーションのアプリケーション マニフェストで指定されたファイルのハッシュ署名を比較します。 ファイルの署名が異なる場合は、ClickOnce は、新しいバージョンをダウンロードします。 署名が一致する場合、ファイルが変更されていない 1 つのバージョンから、次にします。 この場合、ClickOnce では、既存のファイルをコピーし、新しいバージョンのアプリケーションで使用します。 この手法により、ClickOnce は、1 つまたは 2 つのファイルが変更された場合でも、アプリケーション全体をダウンロードすることです。  
   
- ファイル パッチは、必要に応じて <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup%2A> メソッドおよび <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync%2A> メソッドを使用してダウンロードされるアセンブリにも対応します。  
+ 使用してオンデマンドでダウンロードされたアセンブリに対しても機能ファイルが修正プログラム、<xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup%2A>と<xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync%2A>メソッドです。  
   
- Visual Studio を使用してアプリケーションをコンパイルした場合は、プロジェクト全体をビルドし直すたびに、すべてのファイルに対して新しいハッシュ署名が生成されます。  この状況では、数個のアセンブリのみが変更された場合でも、すべてのアセンブリがクライアントにダウンロードされます。  
+ Visual Studio を使用して、アプリケーションをコンパイルする場合、プロジェクト全体を再構築するときにすべてのファイルに対して新しいハッシュ署名が生成されます。 ここでは、すべてのアセンブリはいくつかのアセンブリだけが変更された可能性がありますが、クライアントにダウンロードされます。  
   
- データとしてマークされ、データ ディレクトリに格納されているファイルには、ファイル パッチが機能しません。  これらのファイルは、そのハッシュ署名に関係なく常にダウンロードされます。  データ ディレクトリの詳細については、「[ClickOnce アプリケーションにおけるローカル データおよびリモート データへのアクセス](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)」を参照してください。  
+ データとしてマークされ、データ ディレクトリに格納されているファイルのファイルが修正プログラムは機能しません。 これらは、ファイルのハッシュの署名に関係なく常にダウンロードします。 データ ディレクトリの詳細については、次を参照してください。[ローカルへのアクセスと ClickOnce アプリケーションでのリモート データ](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce の更新方法の選択](../deployment/choosing-a-clickonce-update-strategy.md)   
  [ClickOnce 配置ストラテジの選択](../deployment/choosing-a-clickonce-deployment-strategy.md)

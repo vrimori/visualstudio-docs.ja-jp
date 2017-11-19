@@ -1,54 +1,56 @@
 ---
-title: "concat メソッド (String) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "concat"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "concat メソッド (String)"
-  - "Concat メソッド"
+title: "concat メソッド (String) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: concat
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- concat method (String)
+- Concat method
 ms.assetid: 5d28ebb2-d534-4179-9297-a4c821ee9f24
-caps.latest.revision: 14
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 1b6419cc6404e06fc780802a30a3b4add8320881
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# concat メソッド (String) (JavaScript)
-指定された複数の文字列を連結した文字列を返します。  
+# <a name="concat-method-string-javascript"></a>concat メソッド (String) (JavaScript)
+2 つ以上の文字列の連結を表す文字列を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 string1. concat([string2[, string3[, . . . [, stringN]]]])  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `string1`  
- 必須です。  指定した他の文字列がすべて連結される `String` オブジェクトまたはリテラル文字列を指定します。  
+ 必須です。 `String`オブジェクトまたは文字列を他のすべてのリテラル文字列が連結されたを指定します。  
   
  `string2,. . ., stringN`  
- 省略可能です。  `string1` の末尾に追加する文字列。  
+ 省略可能です。 文字列の末尾に追加する`string1`です。  
   
-## 解説  
- `concat` メソッドの結果は次のように記述した場合と同じです。`result` \= `string1` \+ `string2` \+ `string3` \+ `stringN`。  元の文字列と結果の文字列のどちらか一方が変更された場合でも、その変更はもう一方の文字列には反映されません。  引数が文字列でない場合は、文字列に変換された後 `string1` に連結されます。  
+## <a name="remarks"></a>コメント  
+ 結果、`concat`メソッドは等価: `result`  =  `string1`  +  `string2`  +  `string3`  + `stringN`です。 ソースまたは結果の文字列内の値の変更は、他の文字列の値には影響しません。 任意の引数が文字列でない場合はまず文字列に変換に連結される前に`string1`です。  
   
-## 使用例  
- `concat` メソッドを文字列に対して使用した例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、使用、`concat`メソッド (string) で使用する場合。  
   
-```javascript  
+```JavaScript  
 var str1 = "ABCD"  
 var str2 = "EFGH";  
 var str3 = "1234";  
@@ -59,10 +61,10 @@ document.write(str1.concat(str2, str3, str4));
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv3](../../javascript/reference/includes/jsv3-md.md)]  
   
- **対象**: [String オブジェクト](../../javascript/reference/string-object-javascript.md)  
+ **適用されます**:[文字列オブジェクト](../../javascript/reference/string-object-javascript.md)  
   
-## 参照  
- [加算演算子 \(\+\)](../../javascript/reference/addition-operator-decrement-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [加算演算子 (+)](../../javascript/reference/addition-operator-decrement-javascript.md)

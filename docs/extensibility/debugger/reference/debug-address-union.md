@@ -1,116 +1,116 @@
 ---
-title: "DEBUG_ADDRESS_UNION | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DEBUG_ADDRESS_UNION"
-helpviewer_keywords: 
-  - "DEBUG_ADDRESS_UNION 共用体"
+title: "DEBUG_ADDRESS_UNION |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DEBUG_ADDRESS_UNION
+helpviewer_keywords: DEBUG_ADDRESS_UNION union
 ms.assetid: e3d11aab-de0d-4109-b5dc-11e07e64382d
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: e7f2f01ee30949fc5b82f2bba868e433a4f3a14e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# DEBUG_ADDRESS_UNION
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-アドレスの種類について説明します。  
+# <a name="debugaddressunion"></a>DEBUG_ADDRESS_UNION
+アドレスのさまざまな種類をについて説明します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 typedef struct _tagDEBUG_ADDRESS_UNION {  
-   ADDRESS_KIND dwKind;  
-   union {  
-      NATIVE_ADDRESS                  addrNative;  
-      UNMANAGED_ADDRESS_THIS_RELATIVE addrThisRel;  
-      UNMANAGED_ADDRESS_PHYSICAL      addrUPhysical;  
-      METADATA_ADDRESS_METHOD         addrMethod;  
-      METADATA_ADDRESS_FIELD          addrField;  
-      METADATA_ADDRESS_LOCAL          addrLocal;  
-      METADATA_ADDRESS_PARAM          addrParam;  
-      METADATA_ADDRESS_ARRAYELEM      addrArrayElem;  
-      METADATA_ADDRESS_RETVAL         addrRetVal;  
-      DWORD                           unused;  
-   } addr;  
+   ADDRESS_KIND dwKind;  
+   union {  
+      NATIVE_ADDRESS                  addrNative;  
+      UNMANAGED_ADDRESS_THIS_RELATIVE addrThisRel;  
+      UNMANAGED_ADDRESS_PHYSICAL      addrUPhysical;  
+      METADATA_ADDRESS_METHOD         addrMethod;  
+      METADATA_ADDRESS_FIELD          addrField;  
+      METADATA_ADDRESS_LOCAL          addrLocal;  
+      METADATA_ADDRESS_PARAM          addrParam;  
+      METADATA_ADDRESS_ARRAYELEM      addrArrayElem;  
+      METADATA_ADDRESS_RETVAL         addrRetVal;  
+      DWORD                           unused;  
+   } addr;  
 } DEBUG_ADDRESS_UNION;  
 ```  
   
-```c#  
+```csharp  
 public struct DEBUG_ADDRESS_UNION {  
-   public ADDRESS_KIND dwKind;  
-   public IntPtr       unionmember;  
+   public ADDRESS_KIND dwKind;  
+   public IntPtr       unionmember;  
 }  
 ```  
   
-## 用語  
+## <a name="terms"></a>用語  
  dwKind  
- 指定する [ADDRESS\_KIND](../../../extensibility/debugger/reference/address-kind.md) の列挙値の共用体を解釈する方法を示します。  
+ 値、 [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)列挙体、共用体を解釈する方法を指定します。  
   
  addr.addrNative  
- \[C\+\+\] [NATIVE\_ADDRESS](../../../extensibility/debugger/reference/native-address.md) のみの構造を `dwKind` \= `dwKind``dwKind` ADDRESS\_KIND\_NATIVE 含まれています。  
+ [C++ のみ]含まれています、 [NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md)場合構造体`dwKind`ADDRESS_KIND_NATIVE を = です。  
   
  addr.addrThisRel  
- \[C\+\+\][UNMANAGED\_ADDRESS\_THIS\_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) のみの構造を `dwKind` \= `dwKind``dwKind` ADDRESS\_KIND\_UNMANAGED\_THIS\_RELATIVE 含まれています。  
+ [C++ のみ]含まれています、[UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md)場合構造体`dwKind`ADDRESS_KIND_UNMANAGED_THIS_RELATIVE を = です。  
   
  addr.addUPhysical  
- \[C\+\+\][UNMANAGED\_ADDRESS\_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md) のみの構造を `dwKind` \= `dwKind``dwKind` ADDRESS\_KIND\_UNMANAGED\_PHYSICAL 含まれています。  
+ [C++ のみ]含まれています、[UNMANAGED_ADDRESS_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md)場合構造体`dwKind`ADDRESS_KIND_UNMANAGED_PHYSICAL を = です。  
   
  addr.addrMethod  
- \[C\+\+\][METADATA\_ADDRESS\_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md) のみの構造を `dwKind` \= `dwKind``dwKind` ADDRESS\_KIND\_METHOD 含まれています。  
+ [C++ のみ]含まれています、[METADATA_ADDRESS_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md)場合構造体`dwKind`ADDRESS_KIND_METHOD を = です。  
   
  addr.addrField  
- \[C\+\+\][METADATA\_ADDRESS\_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md) のみの構造を `dwKind` \= `dwKind``dwKind` ADDRESS\_KIND\_FIELD 含まれています。  
+ [C++ のみ]含まれています、[METADATA_ADDRESS_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md)場合構造体`dwKind`ADDRESS_KIND_FIELD を = です。  
   
  addr.addrLocal  
- \[C\+\+\][METADATA\_ADDRESS\_LOCAL](../../../extensibility/debugger/reference/metadata-address-local.md) のみの構造を `dwKind` \= `dwKind``dwKind` ADDRESS\_KIND\_LOCAL 含まれています。  
+ [C++ のみ]含まれています、[METADATA_ADDRESS_LOCAL](../../../extensibility/debugger/reference/metadata-address-local.md)場合構造体`dwKind`ADDRESS_KIND_LOCAL を = です。  
   
  addr.addrParam  
- \[C\+\+\][METADATA\_ADDRESS\_PARAM](../../../extensibility/debugger/reference/metadata-address-param.md) のみの構造を `dwKind` \= `dwKind``dwKind` ADDRESS\_KIND\_PARAM 含まれています。  
+ [C++ のみ]含まれています、[METADATA_ADDRESS_PARAM](../../../extensibility/debugger/reference/metadata-address-param.md)場合構造体`dwKind`ADDRESS_KIND_PARAM を = です。  
   
  addr.addrArrayElem  
- \[C\+\+\][METADATA\_ADDRESS\_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md) のみの構造を `dwKind` \= `dwKind``dwKind` ADDRESS\_KIND\_ARRAYELEM 含まれています。  
+ [C++ のみ]含まれています、[METADATA_ADDRESS_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md)場合構造体`dwKind`ADDRESS_KIND_ARRAYELEM を = です。  
   
  addr.addrRetVal  
- \[C\+\+\][METADATA\_ADDRESS\_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md) のみの構造を `dwKind` \= `dwKind``dwKind` ADDRESS\_KIND\_RETVAL 含まれています。  
+ [C++ のみ]含まれています、[METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md)場合構造体`dwKind`ADDRESS_KIND_RETVAL を = です。  
   
  addr.unused  
- \[C\+\+\] " だけです。  
+ [C++ のみ] のパディングです。  
   
- アドレス  
- \[C\+\+\] のみ共用体の名前。  
+ addr  
+ [C++ のみ]共用体の名前です。  
   
  unionmember  
- \[C\#\] `dwKind` この値はのみに基づいて適切な構造体の型にマーシャリングする必要があります。  共用体の `dwKind` と解釈間の関連付けについては" 解説 " を参照してください。  
+ [C# の場合のみ]この値は、基に適切な構造体の型にマーシャ リングする必要があります`dwKind`です。 間の関連付けの「解説」を参照してください`dwKind`と共用体の解釈します。  
   
-## 解説  
- この構造は [DEBUG\_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) の構造の一部でありアドレスの一部の 1 を表します \(`DEBUG_ADDRESS` の構造は [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) メソッドの呼び出しによって入力されます\)。  
+## <a name="remarks"></a>コメント  
+ この構造体の一部である、 [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)構造体し、アドレスのさまざまな種類の数のいずれかを表します (、`DEBUG_ADDRESS`構造への呼び出しによって入力されます、 [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)メソッド)。  
   
- \[C\# のみそれぞれのアドレスの `unionmember` のメンバーを解釈する方法\] 次の表に示します。  これは1 種類のアドレス用にする方法の例に示します。  
+ [C# の場合のみ]次の表を解釈する方法を示しています、`unionmember`アドレスの種類ごとにメンバー。 この例では、1 つの種類のアドレスにこれを行う方法を示します。  
   
-|`dwKind`|`unionmember` は型として解釈します|  
-|--------------|------------------------------|  
-|`ADDRESS_KIND_NATIVE`|[NATIVE\_ADDRESS](../../../extensibility/debugger/reference/native-address.md)|  
-|`ADDRESS_KIND_UNMANAGED_THIS_RELATIVE`|[UNMANAGED\_ADDRESS\_THIS\_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md)|  
-|`ADDRESS_KIND_UNMANAGED_PHYSICAL`|[UNMANAGED\_ADDRESS\_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md)|  
-|`ADDRESS_KIND_METHOD`|[METADATA\_ADDRESS\_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md)|  
-|`ADDRESS_KIND_FIELD`|[METADATA\_ADDRESS\_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md)|  
-|`ADDRESS_KIND_LOCAL`|[METADATA\_ADDRESS\_LOCAL](../../../extensibility/debugger/reference/metadata-address-local.md)|  
-|`ADDRESS_KIND_PARAM`|[METADATA\_ADDRESS\_PARAM](../../../extensibility/debugger/reference/metadata-address-param.md)|  
-|`ADDRESS_KIND_ARRAYELEM`|[METADATA\_ADDRESS\_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md)|  
-|`ADDRESS_KIND_RETVAL`|[METADATA\_ADDRESS\_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md)|  
+|`dwKind`|`unionmember`として解釈されます。|  
+|--------------|----------------------------------|  
+|`ADDRESS_KIND_NATIVE`|[NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md)|  
+|`ADDRESS_KIND_UNMANAGED_THIS_RELATIVE`|[UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md)|  
+|`ADDRESS_KIND_UNMANAGED_PHYSICAL`|[UNMANAGED_ADDRESS_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md)|  
+|`ADDRESS_KIND_METHOD`|[METADATA_ADDRESS_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md)|  
+|`ADDRESS_KIND_FIELD`|[METADATA_ADDRESS_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md)|  
+|`ADDRESS_KIND_LOCAL`|[METADATA_ADDRESS_LOCAL](../../../extensibility/debugger/reference/metadata-address-local.md)|  
+|`ADDRESS_KIND_PARAM`|[METADATA_ADDRESS_PARAM](../../../extensibility/debugger/reference/metadata-address-param.md)|  
+|`ADDRESS_KIND_ARRAYELEM`|[METADATA_ADDRESS_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md)|  
+|`ADDRESS_KIND_RETVAL`|[METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md)|  
   
-## 使用例  
- この例では1 種類の C\# `DEBUG_ADDRESS_UNION` の構造体のアドレス \(`METADATA_ADDRESS_ARRAYELEM`\) をデコードする方法を示します。  残りの要素は同じように解釈できます。  
+## <a name="example"></a>例  
+ この例は、1 つの種類のアドレスを解釈する方法を示しています (`METADATA_ADDRESS_ARRAYELEM`) の`DEBUG_ADDRESS_UNION`c# の構造体。 残りの要素は、まったく同じように解釈できます。  
   
-```c#  
+```csharp  
 using System;  
 using System.Runtime.Interop.Services;  
 using Microsoft.VisualStudio.Debugger.Interop;  
@@ -132,15 +132,15 @@ namespace MyPackage
 }  
 ```  
   
-## 必要条件  
- ヘッダー : sh.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: sh.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [DEBUG\_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)   
- [ADDRESS\_KIND](../../../extensibility/debugger/reference/address-kind.md)   
+ [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)   
+ [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)   
  [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)

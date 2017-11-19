@@ -1,114 +1,119 @@
 ---
-title: "方法: LocalDB にアップロードするか、SQL Server Express の使用を続行する | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "LocalDB"
-  - "SQL Server Express"
-  - "SQL Server LocalDB"
-  - "SQLEXPRESS"
-  - "アップグレード (SQLExpress に)"
-  - "アップグレード (LocalDB に)"
+title: ".Mdf ファイルをアップグレード |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Express
+- SQL Server LocalDB
+- LocalDB
+- SQLEXPRESS
+- upgrading SQLExpress to SQLExpress
+- upgrading to LocalDB
 ms.assetid: 14ca6f76-f80e-4926-8020-3fee2d802b75
-caps.latest.revision: 33
-caps.handback.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "33"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 robots: noindex,nofollow
+ms.technology: vs-data-tools
+ms.openlocfilehash: 8ed511eed7b0ace46bbc61c1d486ade608d4b5a5
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# 方法: LocalDB にアップロードするか、SQL Server Express の使用を続行する
-このトピックでは [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 説明をインストールし、次のタスクの順序がと、データベース ファイル \(.mdf\) をアップグレードするためのオプションを:  
+# <a name="upgrade-mdf-files"></a>.Mdf ファイルをアップグレードします。
+このトピックでは、新しいバージョンの Visual Studio をインストールした後、データベース ファイル (.mdf) をアップグレードするためのオプションについて説明します。 次のタスクの手順が含まれています。  
   
--   LocalDB を使用するデータベースをアップグレードします。  
+-   新しいバージョンの SQL Server Express LocalDB を使用するデータベース ファイルをアップグレードします。  
   
--   SQL Server Express の新しいバージョンを使用するようにデータベース ファイルをアップグレードします。  
+-   SQL Server Express の新しいバージョンを使用するデータベース ファイルをアップグレードします。  
   
--   [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] のデータベース ファイルを使用しますが、[!INCLUDE[ssKatmai_exp](../data-tools/includes/sskatmai_exp_md.md)]の互換性を保持します。  
+-   Visual Studio でのデータベース ファイルと連携しますが、古いバージョンの SQL Server Express または LocalDB との互換性を保持します。  
   
--   SQL Server Express に既定のデータベース エンジンを実行します。  
+-   既定のデータベース エンジンを SQL Server Express を行う  
   
- SQL Server Express の古いバージョンを使用して作成されたデータベース ファイル \(.mdf\) を含むプロジェクトを開くために [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] を使用できます。  ただし、[!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]のプロジェクトを開発し続けるように、または同じにインストールされている SQL Server Express のバージョンが Visual Studio としてコンピューターを使用、または SQL Server Express データベース ファイルに LocalDB をアップグレードする必要があります。必要があります。  データベース ファイルをアップグレードする場合、SQL Server Express の古いバージョンにアクセスします。  
+Visual Studio を使用すると、古いバージョンの SQL Server Express または LocalDB を使用して作成されたデータベース ファイル (.mdf) を含むプロジェクトを開きます。 ただし、Visual Studio でプロジェクトの開発を続行するには、そのバージョンの SQL Server Express または LocalDB は、Visual Studio と同じコンピューターにインストールされているであるか、データベース ファイルをアップグレードする必要があります。 データベース ファイルをアップグレードする場合は、古いバージョンの SQL Server Express または LocalDB を使用してアクセスできません。  
   
- また [!INCLUDE[sql_Denali_exp](../data-tools/includes/sql_denali_exp_md.md)] を使用してファイルのバージョンが現在インストールされている SQL Server Express のインスタンスとの互換性がある作成したデータベース ファイルをアップグレードするように要求できます。  問題を解決するには、Visual Studio は、SQL Server Express の新しいバージョンにファイルをアップグレードするように求めるメッセージが表示されます。  
+また、ファイルのバージョンが SQL Server Express または現在インストールされている LocalDB のインスタンスと互換性がない場合は、SQL Server Express または LocalDB の以前のバージョンで作成されたデータベース ファイルをアップグレードするように求め可能性があります。 この問題を解決するには、Visual Studio は、ファイルをアップグレードすることを求められます。  
   
 > [!IMPORTANT]
->  ここでは、アップグレードする前にデータベースをバックアップすることをお勧めします。  
+> アップグレードする前に、データベース ファイルをバックアップすることをお勧めします。  
   
- データベースをアップグレードする前に、次の条件を考慮する必要があります:  
+> [!WARNING]
+> LocalDB 2014 (V12) LocalDB 2016 (V13) を 32 ビットまたはそれ以降に作成された .mdf ファイルをアップグレードする場合、32 ビット バージョンの LocalDB でファイルをもう一度開くことはできません。
   
--   [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] と [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]両方のプロジェクトに使用する場合は、アップグレードしないでください。  
+データベースをアップグレードする前に、次の条件を考慮してください。  
   
--   アプリケーションが LocalDB ではなく SQL Server Express を使用する環境で使用される向上します。  
+-   以前のバージョンと新しいバージョンの Visual Studio の両方で、プロジェクトで作業する場合、アップグレードしません。  
   
--   LocalDB がそれらをサポートしないため、アプリケーションがリモート接続を使用して向上します。  
+-   代わりに使用する SQL Server Express LocalDB の環境でアプリケーションを使用する場合、アップグレードしません。  
   
--   アプリケーションが Internet Information Services \(IIS\) に依存していた場合です向上します。  
+-   LocalDB が受理しないために、アプリケーションは、リモート接続を使用する場合にアップグレードしません。  
   
--   サンドボックスの環境でデータベース アプリケーションをテストする必要があるが、データベースを管理するようにアップグレードすることを検討してください。  
+-   アプリケーションには、インターネット インフォメーション サービス (IIS) が依存している場合、アップグレードしません。  
   
-### データベース ファイルを LocalDB を使用するようにアップグレードするには  
+-   サンド ボックス環境でのデータベース アプリケーションをテストするたくないデータベースを管理する場合は、アップグレードを検討します。  
   
-1.  **\[サーバー エクスプローラー\]**では、**\[データベースへの接続\]** のボタンをクリックします。  
+### <a name="to-upgrade-a-database-file-to-use-the-localdb-version"></a>LocalDB のバージョンを使用するデータベース ファイルをアップグレードするには
   
-2.  **\[接続の追加\]** のダイアログ ボックスで、次の情報を指定する:  
+1.  **サーバー エクスプ ローラー**、select、**データベースへの接続**ボタンをクリックします。  
   
-    -   **データ ソース:** Microsoft SQL Server \(SqlClient\)  
+2.  **接続の追加** ダイアログ ボックスで、次の情報を指定します。  
   
-    -   **サーバー名:** \(LocalDB\) \\v11.0  
+    -   **データ ソース**:`Microsoft SQL Server (SqlClient)`  
   
-    -   *\[パス\]* が主要 .mdf ファイルの物理パスです**データベース ファイルを添付する:**、*\[パス\]*。  
+    -   **サーバー名**:  
   
-    -   *\[名前\]* が、ファイルで使用する名前です。**論理名:**、*\[名前\]*。  
+        -   既定のバージョンを使用する:`(localdb)\MSSQLLocalDB`です。  これは、指定 ProjectV12 または ProjectV13 のいずれかによって、どのバージョンの Visual Studio がインストールされているし、最初の LocalDB インスタンスの作成時にします。 **MSSQLLocalDB**内のノード**SQL Server オブジェクト エクスプ ローラー**ポイントをどのバージョンを示しています。  
   
-3.  **\[OK\]** を選択します。  
+        -   特定のバージョンを使用する:`(localdb)\ProjectsV12`または`(localdb)\ProjectsV13`V12 は LocalDB 2014、V13、LocalDB 2016。  
   
-4.  メッセージが表示されたら、ファイルをアップグレードするに **あり** のボタンをクリックします。  
+    -   **データベース ファイルを添付**: プライマリ .mdf ファイルの物理パス。  
   
- データベースは LocalDB のデータベース エンジンにアタッチされて、その [!INCLUDE[ssKatmai_exp](../data-tools/includes/sskatmai_exp_md.md)]と互換性のあるアップグレードしない。  
+    -   **論理名**: とファイルを使用する名前。  
   
- また、開いて、**\[接続の変更\]**接続を選択することによって LocalDB をショートカット メニューを使用するに SQLExpress の接続を変更できます。  **\[接続の変更\]** のダイアログ ボックスで、LocalDB \(\) \\v11.0 にサーバー名を変更します。  **\[詳細プロパティ\]** のダイアログ ボックスで、**ユーザー インスタンス** が false に設定されていることを確認します。  
+3.  **[OK]** ボタンを選択します。  
   
-### SQL Server Express の新しいバージョンにアップグレードします。  
+4.  メッセージが表示されたら、選択、**はい**ファイルをアップグレードするボタンをクリックします。  
   
-1.  データベースへの接続のショートカット メニューで、**\[接続の変更\]**を選択します。  
+    データベースをアップグレードするには、LocalDB データベース エンジンに接続されておよび LocalDB の古いバージョンと互換性がありません。  
   
-2.  **\[接続の変更\]** のダイアログ ボックスで、**\[詳細設定\]** のボタンをクリックします。  
+SQL Server Express を接続のショートカット メニューを開きを選択し、LocalDB を使用する接続を変更することもできます。**接続の変更**です。 **接続の変更** ダイアログ ボックスで、サーバーの名前を変更`(LocalDB)\MSSQLLocalDB`です。 **プロパティの詳細** ダイアログ ボックスで、ことを確認して**ユーザー インスタンス**に設定されている**False**です。
+
+### <a name="to-upgrade-a-database-file-to-use-the-sql-server-express-version"></a>SQL Server Express のバージョンを使用するデータベース ファイルをアップグレードするには  
   
-3.  **\[詳細プロパティ\]** のダイアログ ボックスで、サーバー名を変更せずに **\[OK\]** のボタンをクリックします。  
+1.  ショートカット メニューで、データベースへの接続に、次のように選択します。**接続の変更**です。  
   
- データベース ファイルは [!INCLUDE[sql_Denali_exp](../data-tools/includes/sql_denali_exp_md.md)]の現在のバージョンに一致するようにアップグレードされます。  
+2.  **接続の変更**ダイアログ ボックスで、**詳細**ボタンをクリックします。  
   
-### [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] のデータベースを使用するには、[!INCLUDE[ssKatmai_exp](../data-tools/includes/sskatmai_exp_md.md)]の互換性を保持する  
+3.  **プロパティの詳細**ダイアログ ボックスで、 **OK**サーバー名を変更することがなくボタンをクリックします。  
   
-1.  [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]では、アップグレードせずにプロジェクトを開きます。  
+    データベース ファイルは、SQL Server Express の現在のバージョンを一致するようにアップグレードします。  
   
-    -   プロジェクトを実行するには、F5 キーを選択します。  
+### <a name="to-work-with-the-database-in-visual-studio-but-retain-compatibility-with-sql-server-express"></a>SQL Server Express との互換性を保持する必要が Visual Studio でデータベースを使用するには  
   
-    -   、[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]で行ったように、データベースを編集するには、**\[ソリューション エクスプローラー\]**の .mdf ファイルを開き、データベースを使用するに **\[サーバー エクスプローラー\]** のノードを展開します。  
+-   Visual Studio では、アップグレードしなくても、プロジェクトを開きます。  
   
-### SQL Server Express に既定のデータベース エンジンをするには  
+    -   実行するには、プロジェクトを選択、 **f5 キーを押して**キー。  
   
-1.  メニュー バーで、**\[ツール\]**、**\[オプション\]**を選択します。  
+    -   データベースを編集するに .mdf ファイルを開きます**ソリューション エクスプ ローラー**でノードを展開および**サーバー エクスプ ローラー**データベースを使用します。  
   
-2.  **\[オプション\]** のダイアログ ボックスで、**\[データ ツール\]** の選択を展開し、**\[データ接続\]** のノードを選択します。  
+### <a name="to-make-sql-server-express-the-default-database-engine"></a>既定のデータベース エンジンを SQL Server Express を作成するには  
   
-3.  **\[SQL Server のインスタンス名\]** のテキスト ボックスで、使用する SQL Server Express のインスタンスの名前を指定します。  インスタンスが示されなかったら、`。\SQLEXPRESS`を指定します。  
+1.  メニュー バーで、次のように選択します。**ツール**、**オプション**です。  
   
-4.  **\[OK\]** を選択します。  
+2.  **オプション** ダイアログ ボックスで、展開、**データベース ツール**オプション、および選択**データ接続**です。  
   
- SQL Server Express は、アプリケーションの既定のデータベース エンジンです。  
+3.  **SQL Server インスタンス名**テキスト ボックスで、SQL Server Express またはを使用する LocalDB のインスタンスの名前を指定します。 指定する場合は、インスタンスがという名前が、`.\SQLEXPRESS or (LocalDB)\MSSQLLocalDB`です。  
   
-## 参照  
- [ローカル データの概要](../data-tools/local-data-overview.md)   
- [チュートリアル: ローカル データベース ファイル内のデータへの接続 \(Windows フォーム\)](../Topic/Walkthrough:%20Connecting%20to%20Data%20in%20a%20Local%20Database%20File%20\(Windows%20Forms\).md)
+4.  **[OK]** ボタンを選択します。  
+  
+    SQL Server Express をアプリケーションの既定のデータベース エンジンとなります。
+
+## <a name="see-also"></a>関連項目
+[Visual Studio でのデータへのアクセス](accessing-data-in-visual-studio.md)

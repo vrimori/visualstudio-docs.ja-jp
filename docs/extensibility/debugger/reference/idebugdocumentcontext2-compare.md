@@ -1,67 +1,67 @@
 ---
-title: "IDebugDocumentContext2::Compare | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentContext2::Compare"
-helpviewer_keywords: 
-  - "IDebugDocumentContext2::Compare"
+title: "IDebugDocumentContext2::Compare |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugDocumentContext2::Compare
+helpviewer_keywords: IDebugDocumentContext2::Compare
 ms.assetid: 2327b1ba-52d0-42fb-a01e-63cb4b332d2f
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 4ed45c54b406d0e12a2909439755faf934f65941
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugDocumentContext2::Compare
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-ドキュメントのコンテキストの指定された配列にこのドキュメントのコンテキストを比較します。  
+# <a name="idebugdocumentcontext2compare"></a>IDebugDocumentContext2::Compare
+ドキュメントのコンテキストの指定した配列にこのドキュメントのコンテキストを比較します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT Compare(   
-   DOCCONTEXT_COMPARE       compare,  
-   IDebugDocumentContext2** rgpDocContextSet,  
-   DWORD                    dwDocContextSetLen,  
-   DWORD*                   pdwDocContext  
+```cpp  
+HRESULT Compare(   
+   DOCCONTEXT_COMPARE       compare,  
+   IDebugDocumentContext2** rgpDocContextSet,  
+   DWORD                    dwDocContextSetLen,  
+   DWORD*                   pdwDocContext  
 );  
 ```  
   
-```c#  
-int Compare(   
-   enum_ DOCCONTEXT_COMPARE compare,  
-   IDebugDocumentContext2[] rgpDocContextSet,  
-   uint                     dwDocContextSetLen,  
-   out uint                 pdwDocContext  
+```csharp  
+int Compare(   
+   enum_ DOCCONTEXT_COMPARE compare,  
+   IDebugDocumentContext2[] rgpDocContextSet,  
+   uint                     dwDocContextSetLen,  
+   out uint                 pdwDocContext  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `compare`  
- \[入力\] 比較の種類を指定する [DOCCONTEXT\_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md) の列挙体の値。  
+ [in]値、 [DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md)比較の種類を指定する列挙です。  
   
  `rgpDocContextSet`  
- \[入力\] 比較するドキュメントのコンテキストを表すこと [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) のオブジェクトの配列。  
+ [in]配列[IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)と比較されているドキュメントのコンテキストを表すオブジェクト。  
   
  `dwDocContextSetLen`  
- \[入力\] 比較するドキュメントのコンテキストの配列の長さ。  
+ [in]比較するドキュメントのコンテキストの配列の長さ。  
   
  `pdwDocContext`  
- \[入力\] 比較を満たす最初のドキュメントのコンテキストの `rgpDocContextSet` の配列にインデックスを返します。  
+ [out]インデックスを返します、`rgpDocContextSet`比較で一致する最初のドキュメント コンテキストの配列。  
   
-## 戻り値  
- 一致が見つからなかった `S_OK` を返します。  一致が見つからなかった `S_FALSE` を返します。  それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 返します`S_OK`場合は、一致が見つかりませんでした。 返します`S_FALSE`一致が検出されない場合。 それ以外の場合はエラー コードを返します。  
   
-## 解説  
- 配列に渡される [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) のオブジェクトは `IDebugDocumentContext2` のオブジェクトを実装する同じデバッグ エンジンで実装する必要が ; は比較は無効です。  
+## <a name="remarks"></a>コメント  
+ [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)を実装する、同じデバッグ エンジンで配列に渡されたオブジェクトを実装する必要があります、`IDebugDocumentContext2`オブジェクトの場合は、呼び出されて、比較は無効です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)   
- [DOCCONTEXT\_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md)
+ [DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md)

@@ -1,51 +1,51 @@
 ---
-title: "IEnumDebugObjects::GetCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugObjects::GetCount"
-helpviewer_keywords: 
-  - "IEnumDebugObjects::GetCount メソッド"
+title: "IEnumDebugObjects::GetCount |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IEnumDebugObjects::GetCount
+helpviewer_keywords: IEnumDebugObjects::GetCount method
 ms.assetid: 9cbc5db4-03ae-479f-a664-13cad66ad210
-caps.latest.revision: 5
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 464eca2473518cdc700e0035289a6b601f6fc5d5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IEnumDebugObjects::GetCount
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このメソッドは列挙体の要素の数。  
+# <a name="ienumdebugobjectsgetcount"></a>IEnumDebugObjects::GetCount
+このメソッドは、列挙体の要素の数を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT GetCount(  
-   [out] ULONG* pcelt  
+   [out] ULONG* pcelt  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetCount(  
-   out uint pcelt  
+   out uint pcelt  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pcelt`  
- \[入力\] 列挙体の要素数を返します。  
+ [out]列挙体の要素の数を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- このメソッドは実行される次に複製スキップおよびリセットする必要があるだけを指定する通常の COM 列挙インターフェイスの一部ではありません。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、実装するのには、[次へ、複製、スキップ]、およびリセット必要がありますを指定する、一般的な列挙の COM インターフェイスの一部ではありません。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md)

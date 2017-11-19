@@ -1,27 +1,30 @@
 ---
-title: "IDebugApplicationNodeEvents::onAttach | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IDebugApplicationNodeEvents::onAttach |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IDebugApplicationNodeEvents.onAttach
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IDebugApplicationNodeEvents::onAttach"
+helpviewer_keywords: IDebugApplicationNodeEvents::onAttach
 ms.assetid: b610c7e4-1c96-47ee-958e-3a1f5f621af3
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a45fff15ce4f7faf6cf8714cbf01289e69f67691
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IDebugApplicationNodeEvents::onAttach
-イベントを親ノードにデバッグ アプリケーションのオブジェクト ノードがアタッチされたことを示します処理します。  
+# <a name="idebugapplicationnodeeventsonattach"></a>IDebugApplicationNodeEvents::onAttach
+デバッグ アプリケーション ノード オブジェクトが親ノードに接続されていることを示すイベントを処理します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT onAttach(  
@@ -29,23 +32,23 @@ HRESULT onAttach(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `prddpParent`  
- \[出力\]このノードの親であるデバッグ アプリケーションのノード。  
+ [in]このノードの親であるデバッグ アプリケーション ノード。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
- このメソッドはイベントを親ノードにデバッグ アプリケーションのオブジェクト ノードがアタッチされたことを示します処理します。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、デバッグ アプリケーション ノード オブジェクトが親ノードに接続されていることを示すイベントを処理します。  
   
- `IDebugApplicationNode` のインターフェイスの実装では、このイベントを発生させます。  
+ 実装、`IDebugApplicationNode`インターフェイスは、このイベントを発生させます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugApplicationNodeEvents インターフェイス](../../winscript/reference/idebugapplicationnodeevents-interface.md)   
  [IDebugApplicationNodeEvents::onDetach](../../winscript/reference/idebugapplicationnodeevents-ondetach.md)   
  [IDebugApplicationNode インターフェイス](../../winscript/reference/idebugapplicationnode-interface.md)

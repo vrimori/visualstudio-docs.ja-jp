@@ -1,67 +1,69 @@
 ---
-title: "getMonth メソッド (Date) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "getMonth"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "Date オブジェクト"
-  - "日付、月の値"
-  - "Month メソッド"
-  - "GetMonth メソッド"
+title: "getMonth メソッド (Date) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: getMonth
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- Date object
+- dates, month value
+- Month method
+- GetMonth method
 ms.assetid: c20dd8ba-1d78-42f1-8717-ed3dfd2362dd
-caps.latest.revision: 14
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: eeffd7ffc7bee5fa63607e342a9a9dced7088d35
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# getMonth メソッド (Date) (JavaScript)
-月の値を現地時間で取得します。  
+# <a name="getmonth-method-date-javascript"></a>getMonth メソッド (Date) (JavaScript)
+ローカル時刻を使用して、月を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 dateObj.getMonth()   
 ```  
   
-#### パラメーター  
- `dateObj` 参照は必須で、`Date` オブジェクトを指定します。  
+#### <a name="parameters"></a>パラメーター  
+ 必要な `dateObj` 参照は `Date` オブジェクトです。  
   
-## 戻り値  
- `getMonth` メソッドは、月を表す 0 \(1 月\) ～ 11 \(12 月\) の範囲内の整数を返します。  "Jan 5, 1996" を使って構築されている `Date` の場合、`getMonth` は 0 を返します。  
+## <a name="return-value"></a>戻り値  
+ `getMonth`メソッドは、0 (1 月) および 11 (12 月) の整数を返します。 `Date` 「1996 年 1 月 5日」で構築された`getMonth`0 を返します。  
   
-## 解説  
- 世界協定時刻 \(UTC\) を使用して月の値を取得するには、`getUTCMonth` メソッドを使用します。  
+## <a name="remarks"></a>コメント  
+ 世界協定時刻 (UTC) を使用して月の値を取得する、`getUTCMonth`メソッドです。  
   
-## 使用例  
+## <a name="example"></a>例  
  `getMonth` メソッドを使用する方法の例を次に示します。  
   
-```javascript  
+```JavaScript  
 var date = new Date("1/1/2001");  
 document.write(date.getMonth());  
   
 // Output: 0  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
- **対象**: [Date オブジェクト](../../javascript/reference/date-object-javascript.md)  
+ **適用対象**: [Date Object](../../javascript/reference/date-object-javascript.md)  
   
-## 参照  
- [getUTCMonth メソッド \(Date\)](../../javascript/reference/getutcmonth-method-date-javascript.md)   
- [setMonth メソッド \(Date\)](../../javascript/reference/setmonth-method-date-javascript.md)   
- [setUTCMonth メソッド \(Date\)](../../javascript/reference/setutcmonth-method-date-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [getUTCMonth メソッド (Date)](../../javascript/reference/getutcmonth-method-date-javascript.md)   
+ [setMonth メソッド (Date)](../../javascript/reference/setmonth-method-date-javascript.md)   
+ [setUTCMonth メソッド (Date)](../../javascript/reference/setutcmonth-method-date-javascript.md)

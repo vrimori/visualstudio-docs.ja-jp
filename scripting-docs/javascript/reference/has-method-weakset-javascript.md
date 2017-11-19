@@ -1,48 +1,51 @@
 ---
-title: "has メソッド (WeakSet) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "has メソッド (WeakSet) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: e24f0876-26bd-4007-b12a-360bb6fa0951
-caps.latest.revision: 2
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0dbc7e17e3fd73730386293c5e3f894455e41a93
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# has メソッド (WeakSet) (JavaScript)
+# <a name="has-method-weakset-javascript"></a>has メソッド (WeakSet) (JavaScript)
 指定された要素が `WeakSet` にある場合は `true` を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```javascript  
+```JavaScript  
 setObj.has(obj)  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `setObj`  
- 必須。  `WeakSet` オブジェクト。  
+ 必須です。 `WeakSet` オブジェクト。  
   
  `obj`  
- 必須。  テストする要素。  
+ 必須です。 テストする要素。  
   
-## プロパティ値\/戻り値  
+## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  セットに指定された要素がある場合は `true` です。  
   
-## 使用例  
+## <a name="example"></a>例  
  次の例は、`WeakSet` にメンバーを追加し、セット内の特定メンバーの存在を確認する方法を示します。  
   
-```javascript  
+```JavaScript  
 var ws = new WeakSet();  
   
 var str = new String("Thomas Jefferson");  
@@ -61,8 +64,7 @@ console.log(ws.has(str));
 // true  
 // true  
 // false  
-  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv12](../../javascript/reference/includes/jsv12-md.md)]

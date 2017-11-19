@@ -1,62 +1,64 @@
 ---
-title: "IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GetTypeFromTypeDef"
-  - "IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef"
+title: "IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GetTypeFromTypeDef
+- IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef
 ms.assetid: 7f6cd3d3-f4da-4893-be91-8dd104be8010
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 4ff4d4df3051719e62af2b0a2fad8a238387ba5b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-トークンの型を取得します。  
+# <a name="idebugdynamicfieldcomplusgettypefromtypedef"></a>IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef
+指定したトークンの種類を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT GetTypeFromTypeDef(  
-   ULONG32       ulAppDomainID,  
-   GUID          guidModule,  
-   _mdToken      tokClass,  
-   IDebugField** ppType  
+   ULONG32       ulAppDomainID,  
+   GUID          guidModule,  
+   _mdToken      tokClass,  
+   IDebugField** ppType  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetTypeFromTypeDef(  
-   uint            ulAppDomainID,  
-   Guid            guidModule,  
-   int             tokClass,  
-   out IDebugField ppType  
+   uint            ulAppDomainID,  
+   Guid            guidModule,  
+   int             tokClass,  
+   out IDebugField ppType  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ulAppDomainID`  
- \[出力\] アプリケーション ドメインの ID。  
+ [in]アプリケーション ドメインの識別子。  
   
  `guidModule`  
- \[出力\] モジュールの一意の識別子。  
+ [in]モジュールの一意の識別子。  
   
  `tokClass`  
- \[入力\] 型を表すトークン。  
+ [in]トークンを表す型。  
   
  `ppType`  
- \[出力\] 型を含む [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) のオブジェクトを返します。  
+ [out]返します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)型を含むオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugDynamicFieldCOMPlus](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus.md)

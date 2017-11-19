@@ -1,52 +1,52 @@
 ---
-title: "IDebugCustomAttributeQuery2::EnumCustomAttributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCustomAttributeQuery2::EnumCustomAttributes"
-helpviewer_keywords: 
-  - "IDebugCustomAttributeQuery2::EnumCustomAttributes"
+title: "IDebugCustomAttributeQuery2::EnumCustomAttributes |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugCustomAttributeQuery2::EnumCustomAttributes
+helpviewer_keywords: IDebugCustomAttributeQuery2::EnumCustomAttributes
 ms.assetid: 94bfce74-aa3d-45f0-8e04-5715faf85217
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 47b643c8f08de60bb873f3daf69ee93e0816d31f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugCustomAttributeQuery2::EnumCustomAttributes
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このフィールドに割り当てられているすべてのカスタム属性の列挙子を取得します。  
+# <a name="idebugcustomattributequery2enumcustomattributes"></a>IDebugCustomAttributeQuery2::EnumCustomAttributes
+このフィールドに接続されているすべてのカスタム属性の列挙子を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT EnumCustomAttributes(   
-   IEnumDebugCustomAttributes** ppEnum  
+```cpp  
+HRESULT EnumCustomAttributes(   
+   IEnumDebugCustomAttributes** ppEnum  
 );  
 ```  
   
-```c#  
+```csharp  
 int EnumCustomAttributes(  
-   out IEnumDebugCustomAttributes ppEnum  
+   out IEnumDebugCustomAttributes ppEnum  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppEnum`  
- \[入力\] [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) のオブジェクトを表すカスタム属性の一覧を返します ; はカスタム属性がない場合null 値を返します。  
+ [out]返します、 [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)カスタム属性の一覧を表すオブジェクト。 それ以外の場合、カスタム属性がない場合に null 値を返します。  
   
-## 戻り値  
- は S\_OKまたは S\_FALSE 成功するとこのフィールドにカスタム属性を返します。  それ以外の場合はエラー コード ;  
+## <a name="return-value"></a>戻り値  
+ 成功した場合は、S_OK または S_FALSE をこのフィールドでカスタム属性がない場合は、返します。 それ以外の場合、エラー コードを返します。  
   
-## 解説  
- フィールドに複数のカスタム属性を持つことができます。  
+## <a name="remarks"></a>コメント  
+ フィールドには、複数のカスタム属性を持つことができます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)   
  [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

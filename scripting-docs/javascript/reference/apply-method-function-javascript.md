@@ -1,54 +1,55 @@
 ---
-title: "apply メソッド (Function) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "apply"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "Apply メソッド"
+title: "apply メソッド (Function) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: apply
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: Apply method
 ms.assetid: b36df78e-b14b-46ca-b5cb-de752d80f40a
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 5a06a37006937b07214bf5a314d5151c3b658acf
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# apply メソッド (Function) (JavaScript)
-関数の `this` 値を指定のオブジェクトで置き換え、関数の引数を配列を置き換えて関数を呼び出します。  
+# <a name="apply-method-function-javascript"></a>apply メソッド (Function) (JavaScript)
+関数の代わりに、指定したオブジェクトを呼び出し、`this`関数、および関数の引数の指定された配列の値。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 apply([thisObj[,argArray]])  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `thisObj`  
- 省略可能です。  `this` オブジェクトとして使用するオブジェクトを指定します。  
+ 省略可能です。 として使用するオブジェクト、`this`オブジェクト。  
   
  `argArray`  
- 省略可能です。  関数に渡す引数のセットを指定します。  
+ 省略可能です。 一連の関数に渡される引数。  
   
-## 解説  
- `argArray` が有効なオブジェクトでない場合、「オブジェクトが必要です」エラーが発生します。  
+## <a name="remarks"></a>コメント  
+ 場合`argArray`「オブジェクトが必要です」エラーが発生し、有効なオブジェクトではありません。  
   
- `argArray` と `thisObj` のどちらも指定しない場合は、元の `this` オブジェクトが `thisObj` として使用され、引数は渡されません。  
+ どちらの場合`argArray`も`thisObj`が提供されたオリジナル`this`としてオブジェクトを使用して`thisObj`引数が渡されないとします。  
   
-## 使用例  
- apply メソッドの使用例を次のコードに示します。  
+## <a name="example"></a>例  
+ 次のコードでは、適用方法を使用する方法を示します。  
   
-```javascript  
+```JavaScript  
 function callMe(arg1, arg2){  
     var s = "";  
   
@@ -81,8 +82,8 @@ document.write(callMe.apply(3, [ 4, 5 ]));
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv55](../../javascript/reference/includes/jsv55-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Function オブジェクト](../../javascript/reference/function-object-javascript.md)

@@ -1,57 +1,56 @@
 ---
-title: "IDiaSourceFile::get_checksumType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSourceFile::get_checksumType メソッド"
+title: "Idiasourcefile::get_checksumtype |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSourceFile::get_checksumType method
 ms.assetid: 4c363e61-a6a9-409a-9cc0-d06eb2bee645
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8fafd9e813c22b899603a2e62c5a2c90ece1a709
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSourceFile::get_checksumType
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-チェックサムの種類を取得します。  
+# <a name="idiasourcefilegetchecksumtype"></a>IDiaSourceFile::get_checksumType
+チェックサム タイプを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_checksumType (   
-   DWORD* pRetVal  
+```C++  
+HRESULT get_checksumType (   
+   DWORD* pRetVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- \[出力\] チェックサムの型を返します。  
+ [out]チェックサム タイプを返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- チェックサムの型はチェックサム アルゴリズムにマップできる値です。  たとえば標準 PDB ファイル形式は通常の値が 1 である可能性があります :  
+## <a name="remarks"></a>コメント  
+ チェックサム タイプは、チェックサム アルゴリズムに割り当てられる値です。 たとえば、標準の PDB ファイル形式では、次の値のいずれかを持つ通常ことができます。  
   
-|チェックサムの型|CryptoAPI のラベル|Description|  
-|--------------|--------------------|-----------------|  
-|0|なし|チェックサムが用意されていません。|  
-|1|`CALG_MD5`|MD5 ハッシュ アルゴリズムで生成されたチェックサム。|  
-|2|`CALG_SHA1`|SHA1 ハッシュ アルゴリズムで生成されたチェックサム。|  
+|チェックサム タイプ|CryptoAPI ラベル|説明|  
+|-------------------|---------------------|-----------------|  
+|0|\<なし >|チェックサムを表示します。|  
+|1|`CALG_MD5`|チェックサム MD5 ハッシュ アルゴリズムを使用して生成します。|  
+|2|`CALG_SHA1`|チェックサムは、SHA1 ハッシュ アルゴリズムを使用して生成します。|  
   
- `CryptoAPI` のラベルは `ALG_ID` の列挙体です。  ハッシュ アルゴリズムの詳細についてはMicrosoft [!INCLUDE[winsdkshort](../../debugger/debug-interface-access/includes/winsdkshort_md.md)] の `CryptoAPI` のセクションを参照してください。  
+ `CryptoAPI`ラベルはからでは、`ALG_ID`列挙します。 ハッシュ アルゴリズムの詳細についてを参照してください、 `CryptoAPI` 、マイクロソフトの「[!INCLUDE[winsdkshort](../../debugger/debug-interface-access/includes/winsdkshort_md.md)]です。  
   
- ソース ファイルのチェックサム実際のバイトを取得するには[IDiaSourceFile::get\_checksum](../../debugger/debug-interface-access/idiasourcefile-get-checksum.md) のメソッドを呼び出します。  
+ ソース ファイルの実際のチェックサム バイトを取得するを呼び出して、 [idiasourcefile::get_checksum](../../debugger/debug-interface-access/idiasourcefile-get-checksum.md)メソッドです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)   
- [IDiaSourceFile::get\_checksum](../../debugger/debug-interface-access/idiasourcefile-get-checksum.md)
+ [IDiaSourceFile::get_checksum](../../debugger/debug-interface-access/idiasourcefile-get-checksum.md)

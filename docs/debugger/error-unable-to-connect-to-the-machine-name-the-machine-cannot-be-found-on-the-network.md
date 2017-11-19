@@ -1,33 +1,31 @@
 ---
-title: "エラー: コンピューター &lt;name&gt; に接続できません。このコンピューターはネットワーク上に見つかりません。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.remote.dcom_disabled"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "DCOM, 接続できないエラー"
+title: "エラー: コンピューターに接続できません。&lt;名前&gt;です。 ネットワーク上、マシンが見つかりません。 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.debug.remote.dcom_disabled
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords: DCOM, unable to connect error
 ms.assetid: b584b5db-ef52-45ed-8561-1314da3cc5b8
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: e8ed30ca3baeb29f92c4d5f02b64c581ef9a37a7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# エラー: コンピューター &lt;name&gt; に接続できません。このコンピューターはネットワーク上に見つかりません。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>エラー: コンピューターに接続できません。&lt;名前&gt;です。 ネットワーク上、マシンが見つかりません。
 このエラーは、次の条件のいずれかが満たされると発生します。  
   
 -   リモート コンピューターへの接続が解除された。  
@@ -36,9 +34,9 @@ manager: "ghogen"
   
 -   リモート コンピューターのパスワードの有効期限が切れている。  
   
-### この問題を解決するには  
+### <a name="to-resolve-this-behavior"></a>この問題を解決するには  
   
--   ローカル コンピューターとリモート コンピューターが同じネットワーク上に存在することを確認します。  これを行うには、Microsoft Windows エクスプローラー \(ファイル エクスプローラー\) を使用してリモート コンピューターにアクセスしてみます。  
+-   ローカル コンピューターとリモート コンピューターが同じネットワーク上に存在することを確認します。 これを行うには、Microsoft Windows エクスプローラー (ファイル エクスプローラー) を使用してリモート コンピューターにアクセスしてみます。  
   
      および  
   
@@ -48,6 +46,6 @@ manager: "ghogen"
   
 -   リモート コンピューターへの接続に使用しているパスワードが有効であり、有効期限が切れていないことを確認します。  
   
-## 参照  
- [デバイスのリモート ツールのセットアップ](../Topic/Set%20Up%20the%20Remote%20Tools%20on%20the%20Device.md)   
- [デバッグの設定と準備](../debugger/debugger-settings-and-preparation.md)
+## <a name="see-also"></a>関連項目  
+ [リモート デバッグ](../debugger/remote-debugging.md)   
+ [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)

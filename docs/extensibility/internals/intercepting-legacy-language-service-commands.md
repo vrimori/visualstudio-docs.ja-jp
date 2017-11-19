@@ -1,40 +1,42 @@
 ---
-title: "従来の言語サービスのコマンドを受信 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "言語サービスをインターセプトするコマンド"
-  - "コマンドをインターセプトする言語サービス"
+title: "言語サービスのレガシのコマンドをインターセプトし、|Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- commands, intercepting language service
+- language services, intercepting commands
 ms.assetid: eea69f03-349c-44bb-bd4f-4925c0dc3e55
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 73524ce47dfea2d30e44e51e97bf584a95a86482
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 従来の言語サービスのコマンドを受信
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を使用するとテキスト ビューは処理するコマンドが傍受言語サービスを使用できます。  これはテキスト ビューを管理する言語固有の動作に便利です。  言語サービスのテキスト ビューに一つ以上のコマンドのフィルターを追加することでこれらのコマンドを受け取ることができます。  
+# <a name="intercepting-legacy-language-service-commands"></a>言語サービスのレガシのコマンドをインターセプトし、
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、テキスト ビューの処理とそれ以外の場合、言語サービス切片コマンドことができます。 これは、テキスト ビューが管理していない言語固有の動作に役立ちます。 テキスト ビューに、言語サービスから 1 つまたは複数のコマンドのフィルターを追加することによってこれらのコマンドをインターセプトすることができます。  
   
-## コマンドを取得し転送します  
- コマンドのフィルターは <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> のオブジェクト。モニターの特定の文字シーケンスまたはショートカット キーです。  単一のテキスト ビューに複数のコマンドのフィルターを関連付けることができます。  各テキスト ビュー フィルターは系統コマンドを保持します。  新しいコマンドのフィルターを作成した後適切なテキスト ビューのチェーンにフィルターを追加します。  
+## <a name="getting-and-routing-the-command"></a>取得して、コマンドをルーティング  
+ コマンドのフィルターは、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>特定の文字のシーケンスまたはキーのコマンドを監視するオブジェクト。 コマンドの 2 つ以上のフィルターを 1 つのテキスト ビューと関連付けることができます。 各テキスト ビューでは、チェーンのコマンドのフィルターを保持します。 新しいコマンド フィルターを作成した後は、適切なテキスト ビューのチェーンにフィルターを追加します。  
   
- フィルター チェーンにコマンドを追加するに <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> の <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> のメソッドを呼び出します。  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> を呼び出すと[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] はコマンドのフィルターが処理されないコマンドを渡すことができる別のコマンドのフィルターを返します。  
+ 呼び出す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A>メソッドを<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>チェーンに、コマンドのフィルターを追加します。 呼び出すと<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A>、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]コマンド フィルターが処理しないコマンドを渡せる別のコマンド フィルターを返します。  
   
- コマンドを処理するための次のオプションがあります :  
+ 次のコマンドの処理オプションがあります。  
   
--   コマンドを処理しチェーン内の次のコマンドのフィルターに渡します。  
+-   コマンドを処理し、チェーンの次のコマンドのフィルターにコマンドを渡します。  
   
--   コマンドを処理し次のコマンドのフィルターに渡さないでください。  
+-   コマンドを処理し、次のコマンドのフィルターにコマンドを渡さないでください。  
   
--   コマンドを処理しないでください。ただし次のコマンドのフィルターに渡します。  
+-   コマンドを処理しないが、次のコマンドのフィルターにコマンドを渡します。  
   
--   コマンドを無視します。  現在のフィルターで処理されること次のフィルターに渡さないでください。  
+-   コマンドを無視します。 現在のフィルターで処理しないし、次のフィルターには渡されない。  
   
- 方法の詳細についてのコマンドを処理する言語サービスが必要であるか[言語サービスのフィルターの重要なコマンド](../../extensibility/internals/important-commands-for-language-service-filters.md) を参照してください。
+ 言語サービスが処理するどのコマンドの詳細については、次を参照してください。[言語サービスのフィルターの重要なコマンド](../../extensibility/internals/important-commands-for-language-service-filters.md)です。

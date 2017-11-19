@@ -1,42 +1,45 @@
 ---
-title: "WriteLine アクティビティ デザイナー | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "System.Activities.Statements.WriteLine.UI"
+title: "WriteLine アクティビティ デザイナー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: System.Activities.Statements.WriteLine.UI
 ms.assetid: 1b5f29a8-b7fd-477e-949e-2f689cae3c96
-caps.latest.revision: 5
-author: "ErikRe"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ErikRe
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 615cfb46222dfbf6e6b3cb1ba6741cde7c7bf708
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# WriteLine アクティビティ デザイナー
-**WriteLine** アクティビティ デザイナーは、<xref:System.Activities.Statements.WriteLine> アクティビティを作成および構成するために使用します。  
+# <a name="writeline-activity-designer"></a>WriteLine アクティビティ デザイナー
+**WriteLine**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.WriteLine>アクティビティ。  
   
-## WriteLine アクティビティ  
- <xref:System.Activities.Statements.Writeline> アクティビティは、指定された <xref:System.IO.TextWriter> オブジェクトにテキストを書き込みます。<xref:System.IO.TextWriter> を指定しない場合、<xref:System.Activities.Statements.Writeline> はテキストをコンソールに書き込みます。  
+## <a name="the-writeline-activity"></a>WriteLine アクティビティ  
+ <xref:System.Activities.Statements.WriteLine> アクティビティは、指定された <xref:System.IO.TextWriter> オブジェクトにテキストを書き込みます。 <xref:System.IO.TextWriter> を指定しない場合、<xref:System.Activities.Statements.WriteLine> はテキストをコンソールに書き込みます。  
   
-### WriteLine アクティビティ デザイナーの使用  
- **WriteLine** アクティビティ デザイナーは、**\[ツールボックス\]** の **\[プリミティブ\]** カテゴリにあります。\[ツールボックス\] にアクセスするには、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]の**\[ツールボックス\]** タブをクリックします \(または、**\[表示\]** メニューの **\[ツール バー\]** をクリックするか、Ctrl キーと Alt キーを押しながら X キーを押します\)。  
+### <a name="using-the-writeline-activity-designer"></a>WriteLine アクティビティ デザイナーの使用  
+ **WriteLine**アクティビティ デザイナーは含まれて、**プリミティブ**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**のタブ、 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] (または、選択**ツールバー**から、**ビュー**メニューのまたは CTRL + ALT + X です)。  
   
- **WriteLine** アクティビティ デザイナーは、**\[ツールボックス\]** からドラッグして、アクティビティを通常配置している[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]の任意の画面 \(<xref:System.Activities.Statements.Sequence> 内など\) にドロップできます。この操作により、WriteLine という既定の <xref:System.Activities.Activity.DisplayName%2A> を持つ <xref:System.Activities.Statements.WriteLine> アクティビティが作成されます。<xref:System.Activities.Activity.DisplayName%2A> は、**WriteLine** アクティビティ デザイナーのヘッダー、またはプロパティ グリッドの **\[DisplayName\]** ボックスで編集できます。  
+ **WriteLine**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**に、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]サーフェス任意の場所、アクティビティを通常配置など内、<xref:System.Activities.Statements.Sequence>です。 この操作により、WriteLine という既定の <xref:System.Activities.Statements.WriteLine> を持つ <xref:System.Activities.Activity.DisplayName%2A> アクティビティが作成されます。 <xref:System.Activities.Activity.DisplayName%2A>のヘッダーで編集できる、 **WriteLine**アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。  
   
-### WriteLine プロパティ  
- 次の表に、<xref:System.Activities.Statements.WriteLine> のプロパティと、デザイナーでのその使用方法を示します。これらのプロパティは、プロパティ グリッドで編集できます。また、一部のプロパティは、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]のデザイナー画面で編集できます。  
+### <a name="the-writeline-properties"></a>WriteLine プロパティ  
+ 次の表に、<xref:System.Activities.Statements.WriteLine> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドで編集できます。また、一部のプロパティは、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]のデザイナー画面で編集できます。  
   
-|プロパティ名|必須|使用法|  
-|------------|--------|---------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|省略可|<xref:System.Activities.Statements.WriteLine> アクティビティの表示名。既定値は WriteLine です。<xref:System.Activities.Activity.DisplayName%2A> は必須ではありませんが、使用することをお勧めします。|  
-|<xref:System.Activities.Statements.WriteLine.Text%2A>|False|書き込むテキスト。このプロパティを設定するには、**WriteLine** アクティビティ デザイナーの **\[テキスト\]** ボックスまたはプロパティ グリッドに、Visual Basic の式を入力します。|  
-|<xref:System.Activities.Statements.WriteLine.TextWriter%2A>|省略可|<xref:System.Activities.Statements.WriteLine> による <xref:System.Activities.Statements.WriteLine.Text%2A> の書き込み先の <xref:System.IO.TextWriter>。既定はコンソールです。|  
+|プロパティ名|必須|使用方法|  
+|-------------------|--------------|-----------|  
+|<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.WriteLine> アクティビティの表示名。 既定値は WriteLine です。 <xref:System.Activities.Activity.DisplayName%2A> は必須ではありませんが、使用することをお勧めします。|  
+|<xref:System.Activities.Statements.WriteLine.Text%2A>|False|書き込むテキスト。 プロパティを設定するには、Visual Basic の式を入力、**テキスト**ボックスに、 **WriteLine**アクティビティ デザイナーまたはプロパティ グリッドでします。|  
+|<xref:System.Activities.Statements.WriteLine.TextWriter%2A>|False|<xref:System.IO.TextWriter> による <xref:System.Activities.Statements.WriteLine> の書き込み先の <xref:System.Activities.Statements.WriteLine.Text%2A>。 既定はコンソールです。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [プリミティブ](../workflow-designer/primitives-activity-designers.md)   
- [Assign](../workflow-designer/assign-activity-designer.md)   
- [Delay](../workflow-designer/delay-activity-designer.md)   
- [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md)
+ [割り当てる](../workflow-designer/assign-activity-designer.md)   
+ [遅延](../workflow-designer/delay-activity-designer.md)   
+ [メソッドの呼び出し](../workflow-designer/invokemethod-activity-designer.md)

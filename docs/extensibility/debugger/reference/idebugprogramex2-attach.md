@@ -1,65 +1,65 @@
 ---
-title: "IDebugProgramEx2::Attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramEx2::Attach"
-helpviewer_keywords: 
-  - "IDebugProgramEx2::Attach"
+title: "IDebugProgramEx2::Attach |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgramEx2::Attach
+helpviewer_keywords: IDebugProgramEx2::Attach
 ms.assetid: 33b22b2f-431e-4205-9441-d28a9c928c97
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: b8d025d4e788ac63ab0c75429e08c48215b9c902
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgramEx2::Attach
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-プログラムでセッションを追加します。  
+# <a name="idebugprogramex2attach"></a>IDebugProgramEx2::Attach
+プログラムにセッションをアタッチします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT Attach(   
-   IDebugEventCallback2* pCallback,  
-   DWORD                 dwReason,  
-   IDebugSession2*       pSession  
+```cpp  
+HRESULT Attach(   
+   IDebugEventCallback2* pCallback,  
+   DWORD                 dwReason,  
+   IDebugSession2*       pSession  
 );  
 ```  
   
 ```  
 [C#]  
-int Attach(   
-   IDebugEventCallback2 pCallback,  
-   uint                 dwReason,  
-   IDebugSession2       pSession  
+int Attach(   
+   IDebugEventCallback2 pCallback,  
+   uint                 dwReason,  
+   IDebugSession2       pSession  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pCallback`  
- \[入力\] アタッチされたデバッグ エンジンはイベントを送信 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) コールバック関数を表すオブジェクト。  
+ [in][IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)にイベントをアタッチされたデバッグ エンジンに送信するコールバック関数を表すオブジェクト。  
   
  `dwReason`  
- \[入力\] アタッチ操作の理由を説明する [ATTACH\_REASON](../../../extensibility/debugger/reference/attach-reason.md) の列挙体の値。  
+ [in]値、 [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md)アタッチ操作の理由を説明する列挙体です。  
   
  `pSession`  
- \[入力\] プログラムにアタッチしているセッションを識別する値。  
+ [in]プログラムにアタッチされているセッションを一意に識別する値。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コードを返します。  このメソッドはプログラムが既にアタッチされている `E_ATTACH_DEBUGGER_ALREADY_ATTACHED` を返す必要があります。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`です。 それ以外の場合はエラー コードを返します。 このメソッドが返す`E_ATTACH_DEBUGGER_ALREADY_ATTACHED`プログラムが既にアタッチされている場合。  
   
-## 解説  
- プログラムを含むポートは `pSession` でのセッションがプログラムにアタッチするかを確認するには値を使用できます。  たとえばポートに 1 人のデバッグ セッションがプロセスにアタッチする一度に確保したポートは同じセッションのプロセスの他のプログラムに既にアタッチされているかどうかを確認できます。  
+## <a name="remarks"></a>コメント  
+ プログラムが含まれているポートの値を使用できます`pSession`をプログラムにアタッチしようとしてセッションを確認します。 たとえば、ポートは、プロセスにアタッチする、一度に 1 つのみのデバッグ セッションを許可している場合、ポートを判断できます、同じセッションが既にプロセス内の他のプログラムにアタッチされているかどうか。  
   
 > [!NOTE]
->  渡されたインターフェイス`pSession`このプログラムにアタッチしているマネージャーのデバッグ セッションを識別する値として扱う必要があります。; 指定されたインターフェイスのメソッドが機能しません。  
+>  インターフェイスが渡される`pSession`のみ、クッキー、セッション デバッグ マネージャーです。 このプログラムへのアタッチを一意に識別する値として扱われますが、指定されたインターフェイスのメソッドのいずれも機能します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)

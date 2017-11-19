@@ -1,59 +1,61 @@
 ---
-title: "reverse メソッド (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "reverse"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "配列 [Visual Studio]、反転 (要素の)"
-  - "reverse メソッド"
-  - "置換 (要素を)"
+title: "reverse メソッド (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: reverse
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- arrays [Visual Studio], reversing elements
+- reverse method
+- transposing elements
 ms.assetid: 02ab051b-79b8-4646-b502-381671e78c12
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 9a34385ccf89557688698b50384b3dfe359478df
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# reverse メソッド (JavaScript)
-`Array` の要素を反転させます。  
+# <a name="reverse-method-javascript"></a>reverse メソッド (JavaScript)
+内の要素を反転する`Array`です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 arrayObj.reverse()   
 ```  
   
-## Parameters  
+## <a name="parameters"></a>パラメーター  
  `arrayObj`  
- 必須です。  任意の `Array` オブジェクトを指定します。  
+ 必須です。 任意の `Array` オブジェクトを指定します。  
   
-## 戻り値  
+## <a name="return-value"></a>戻り値  
  逆順の配列。  
   
-## 解説  
- `arrayObj` 参照は必須で、`Array` オブジェクトを指定します。  
+## <a name="remarks"></a>コメント  
+ 必要な`arrayObj`参照は、`Array`オブジェクト。  
   
- `reverse` メソッドは、`Array` オブジェクト内で要素の位置を反転させます。  このメソッドを実行しても、新しい `Array` オブジェクトは作成されません。  
+ `reverse`メソッドの要素を反転させます、`Array`インプレース オブジェクト。 作成されません新しい`Array`オブジェクトの実行中にします。  
   
- 配列内の要素が連続していない場合、`reverse` メソッドを実行すると新しい要素が作成され、配列内の連続していない要素の間に挿入されます。  作成された要素の値は、`undefined` になります。  
+ 配列は、連続したがない場合、`reverse`メソッドは、配列内のギャップを配列内の要素を作成します。 値を持つ要素を作成してこれらの各`undefined`です。  
   
-## 使用例  
+## <a name="example"></a>例  
  `reverse` メソッドの使用例を次に示します。  
   
-```javascript  
+```JavaScript  
 var arr = new Array(0,1,2,3,4);   
 var reverseArr = arr.reverse();  
 document.write(reverseArr);  
@@ -63,8 +65,8 @@ document.write(reverseArr);
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv2](../../javascript/reference/includes/jsv2-md.md)]  
   
-## 参照  
- [concat メソッド \(Array\)](../../javascript/reference/concat-method-array-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [concat メソッド (Array)](../../javascript/reference/concat-method-array-javascript.md)

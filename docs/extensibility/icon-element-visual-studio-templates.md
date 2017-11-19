@@ -1,29 +1,33 @@
 ---
-title: "Icon 要素 (Visual Studio テンプレート) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#Icon"
-helpviewer_keywords: 
-  - "Icon 要素 [Visual Studio プロジェクト テンプレート]"
+title: "Icon 要素 (Visual Studio テンプレート) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#Icon
+helpviewer_keywords: Icon element [Visual Studio project templates]
 ms.assetid: ec01d903-f4c2-4ca2-9cbc-e939ec84016c
-caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 00dd81c93e089a840c99efbd6165f005aff88b57
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Icon 要素 (Visual Studio テンプレート)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-**\[新しいプロジェクト\]** ダイアログ ボックスまたは **\[新しい項目の追加\]** ダイアログ ボックスに表示されるテンプレートのアイコンとして使われるイメージ ファイルのパスとファイル名を指定します。  
+# <a name="icon-element-visual-studio-templates"></a>Icon 要素 (Visual Studio テンプレート)
+パスと、いずれかで表示されるアイコンとして使用するイメージ ファイルのファイル名を指定します、**新しいプロジェクト**または**新しい項目の追加**テンプレートのダイアログ ボックス。  
   
-## 構文  
+ \<VSTemplate >  
+ \<TemplateData >  
+ \<アイコン >  
+  
+## <a name="syntax"></a>構文  
   
 ```  
 <Icon>  
@@ -35,34 +39,34 @@ caps.handback.revision: 14
 <Icon Package="{PackageID}" ID="ResourceID" />  
 ```  
   
-## 属性および要素  
+## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
-### 属性  
+### <a name="attributes"></a>属性  
   
 |属性|説明|  
-|--------|--------|  
-|`Package`|省力可能な属性です。上級ユーザーが使用する場合に適しています。<br /><br /> Visual Studio のパッケージ ID を指定します。|  
-|`ID`|省力可能な属性です。上級ユーザーが使用する場合に適しています。<br /><br /> Visual Studio のリソース ID を指定します。|  
+|---------------|-----------------|  
+|`Package`|高度なユーザー シナリオについての省略可能な属性です。<br /><br /> Visual Studio のパッケージを指定する GUID id です。|  
+|`ID`|高度なユーザー シナリオについての省略可能な属性です。<br /><br /> Visual Studio のリソース ID を指定します|  
   
-### 子要素  
+### <a name="child-elements"></a>子要素  
  なし。  
   
-### 親要素  
+### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
-|--------|--------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素。<br /><br /> テンプレートをカテゴリに分類し、**\[新しいプロジェクト\]** ダイアログ ボックス、または **\[新しい項目の追加\]** ダイアログ ボックスでどのように表示させるかを定義します。|  
+|-------------|-----------------|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートをカテゴリに分類し、 **[新しいプロジェクト]** ダイアログ ボックス、または **[新しい項目の追加]** ダイアログ ボックスでどのように表示させるかを定義します。|  
   
-## テキスト値  
- `Package` 属性、および `ID` 属性が使用されていない場合は、テキスト値は必須です。  
+## <a name="text-value"></a>テキスト値  
+ しない限り、テキスト値が必要な`Package`と`ID`属性を使用します。  
   
- テキストは **\[新しいプロジェクト\]** ダイアログ ボックスに表示されるテンプレート アイコンのパスとファイル名になります。  
+ テキストに表示されるテンプレート アイコンのパスとファイル名を提供する、**新しいプロジェクト** ダイアログ ボックス。  
   
-## 解説  
+## <a name="remarks"></a>コメント  
  `Icon` は `TemplateData` に必須の子要素です。  
   
-## 使用例  
+## <a name="example"></a>例  
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] アプリケーションでのプロジェクト テンプレートのメタデータの例を次に示します。  
   
 ```  
@@ -89,6 +93,6 @@ caps.handback.revision: 14
 </VSTemplate>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [カスタム プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+ [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

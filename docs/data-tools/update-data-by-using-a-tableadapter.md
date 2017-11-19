@@ -1,5 +1,5 @@
 ---
-title: Update data by using a TableAdapter | Microsoft Docs
+title: "TableAdapter を使用してデータ更新 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,8 +9,6 @@ ms.topic: article
 dev_langs:
 - VB
 - CSharp
-- C++
-- aspx
 helpviewer_keywords:
 - data [Visual Studio], saving
 - data [Visual Studio], TableAdapters
@@ -19,54 +17,40 @@ helpviewer_keywords:
 - data [Visual Studio], updating
 - saving data
 ms.assetid: 5e32e10e-9bac-4969-9bdd-b8f6919d3516
-caps.latest.revision: 15
-author: mikeblome
-ms.author: mblome
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: 01b4ce90aa021ba48a8f719cd6b3f58a59e028f8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/22/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: 7d49f0ddc965327334aea471b1276b4e78987ec2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="update-data-by-using-a-tableadapter"></a>Update data by using a TableAdapter
-After the data in your dataset has been modified and validated, you can send the updated data back to a database by calling the `Update` method of a [TableAdapter](../data-tools/create-and-configure-tableadapters.md). The `Update` method updates a single data table and runs the correct command (INSERT, UPDATE, or DELETE) based on the <xref:System.Data.DataRow.RowState%2A> of each data row in the table. When a dataset has related tables, Visual Studio generates a TableAdapterManager class that you  use to do the updates. The TableAdapterManager class ensures that updates are made in the correct order based on the foreign-key constraints that are defined in the database. When you use data-bound controls, the databinding architecture creates a member variable of the TableAdapterManager class called tableAdapterManager. 
+# <a name="update-data-by-using-a-tableadapter"></a>TableAdapter を使用してデータを更新します。
+データセット内のデータを変更して検証後に送信できます、更新されたデータをデータベースに戻すを呼び出して、`Update`のメソッド、 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)です。 `Update`メソッドを 1 つのデータ テーブルを更新して、に基づいて正しいコマンド (INSERT、UPDATE、または DELETE) を実行、<xref:System.Data.DataRow.RowState%2A>テーブル内の各データ行のです。 データセット関連テーブルがあるときに、Visual Studio は、更新プログラムを実行するために使用 TableAdapterManager クラスを生成します。 TableAdapterManager クラスにより、更新プログラムがデータベースで定義されている外部キー制約に基づく正しい順序で行われること。 データ バインド コントロールを使用する場合、データ バインディング アーキテクチャは、tableAdapterManager と呼ばれる TableAdapterManager クラスのメンバー変数を作成します。 
   
 > [!NOTE]
->  When you try to update a data source with the contents of a dataset, you can get errors.To avoid errors, we recommend that you put the code that calls the adapter's `Update` method inside a `try`/`catch` block.  
+>  データセットの内容でデータ ソースを更新しようとすると、エラーが発生することができます。エラーを回避することをお勧め、アダプターを呼び出すコードを配置すること`Update`メソッドの中、 `try` / `catch`ブロックします。  
   
- The exact procedure for updating a data source can vary depending on business needs, but  includes the following steps:  
+ データ ソースを更新する詳細な手順は、ビジネス ニーズによって異なることができますが、次の手順が含まれています。  
   
-1.  Call the adapter's `Update` method in a `try`/`catch` block.  
+1.  呼び出し、アダプターの`Update`メソッドで、 `try` / `catch`ブロックします。  
   
-2.  If an exception is caught, locate the data row that caused the error. 
+2.  例外が検出された場合は、エラーを引き起こしたデータ行を探します。 
   
-3.  Reconcile the problem in the data row (programmatically if you can, or by presenting the invalid row to the user for modification), and then try the update again (<xref:System.Data.DataRow.HasErrors%2A>, <xref:System.Data.DataTable.GetErrors%2A>).  
+3.  データの問題を調整 (プログラムですることはできますかに無効な行を変更するためのユーザーに提示することにより) を行し、更新プログラムをもう一度やり直して (<xref:System.Data.DataRow.HasErrors%2A>、 <xref:System.Data.DataTable.GetErrors%2A>)。  
   
-## <a name="save-data-to-a-database"></a>Save data to a database  
- Call the `Update` method of a TableAdapter. Pass the name of the data table that contains the values to be written to the database.  
+## <a name="save-data-to-a-database"></a>データをデータベースに保存します。  
+ 呼び出す、 `Update` TableAdapter のメソッドです。 データベースに書き込まれる値を含むデータ テーブルの名前を渡します。  
   
-#### <a name="to-update-a-database-by-using-a-tableadapter"></a>To update a database by using a TableAdapter  
+#### <a name="to-update-a-database-by-using-a-tableadapter"></a>TableAdapter を使用してデータベースを更新するには  
   
--   Enclose the TableAdapter's`Update` method in a `try`/`catch` block. The following example shows how to  update  the contents of the `Customers` table in `NorthwindDataSet` from within a `try`/`catch` block .  
+-   TableAdapter を囲む`Update`メソッドで、 `try` / `catch`ブロックします。 次の例の内容を更新する方法を示しています、`Customers`テーブルに`NorthwindDataSet`内から、 `try` / `catch`ブロックします。  
   
-     [!code-cs[VbRaddataSaving#9](../data-tools/codesnippet/CSharp/update-data-by-using-a-tableadapter_1.cs)]  [!code-vb[VbRaddataSaving#9](../data-tools/codesnippet/VisualBasic/update-data-by-using-a-tableadapter_1.vb)]  
+     [!code-csharp[VbRaddataSaving#9](../data-tools/codesnippet/CSharp/update-data-by-using-a-tableadapter_1.cs)]
+     [!code-vb[VbRaddataSaving#9](../data-tools/codesnippet/VisualBasic/update-data-by-using-a-tableadapter_1.vb)]  
   
-## <a name="see-also"></a>See Also  
- [Save data back to the database](../data-tools/save-data-back-to-the-database.md)
+## <a name="see-also"></a>関連項目  
+ [データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)

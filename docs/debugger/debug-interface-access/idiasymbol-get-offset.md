@@ -1,57 +1,56 @@
 ---
-title: "IDiaSymbol::get_offset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_offset メソッド"
+title: "Idiasymbol::get_offset |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_offset method
 ms.assetid: 8292bb08-4dc8-4663-beb4-258f5d5a448d
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: bd3fa794da188e228f44b0930bcf5b27f4b3a0fb
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_offset
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-シンボルの場所のオフセットを取得します。  [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md) が `LocIsRegRel` または `LocIsBitField` である場合はを使用します。  
+# <a name="idiasymbolgetoffset"></a>IDiaSymbol::get_offset
+シンボルの場所のオフセットを取得します。 使用する場合、 [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)は`LocIsRegRel`または`LocIsBitField`です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_offset (   
-   LONG* pRetVal  
+```C++  
+HRESULT get_offset (   
+   LONG* pRetVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- \[入力\] シンボルの場所のバイト オフセットを返します。  
+ [out]シンボルの場所のバイト オフセットを返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合戻り `S_FALSE` またはエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  `S_FALSE` の戻り値はプロパティのシンボルで使用できないことを意味します。  
+>  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-## 解説  
- オフセットはあらかじめ定義した既知の点からです。  たとえば`LocIsBitField` の場所の種類のオフセットはコンテナー クラス先頭からです。  
+## <a name="remarks"></a>コメント  
+ 以前の既知の時点からのオフセットです。 オフセットなど、`LocIsBitField`場所の型は、含んでいるクラスの先頭から、通常します。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
   
-|必要条件|Description|  
-|----------|-----------------|  
+|必要条件|説明|  
+|-----------------|-----------------|  
 |ヘッダー:|dia2.h|  
-|バージョン :|DIA SDK v7.0|  
+|バージョン:|DIA SDK v7.0|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)

@@ -1,54 +1,53 @@
 ---
-title: "デバッグ バージョンのヒープ割り当て関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.crt"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "_CRTDBG_MAP_ALLOC マクロ"
-  - "_malloc_dbg 関数"
-  - "デバッグ [CRT], ヒープ割り当て関数"
-  - "デバッグ (メモリ リークの), CRT デバッグ ライブラリ関数"
-  - "ヒープ割り当て, デバッグ"
-  - "malloc 関数"
-  - "メモリ リーク, CRT デバッグ ライブラリ関数"
+title: "ヒープ割り当て関数のデバッグ バージョン |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.debug.crt
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- _CRTDBG_MAP_ALLOC macro
+- debugging [CRT], heap allocation functions
+- debugging memory leaks, CRT debug library functions
+- malloc function
+- memory leaks, CRT debug library functions
+- heap allocation, debug
+- _malloc_dbg function
 ms.assetid: 91748bdc-f4cd-4d8b-ab98-0493dab7ed0d
-caps.latest.revision: 17
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c05354363821d7da7c7ff38f1543900dcfa0c4e0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# デバッグ バージョンのヒープ割り当て関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-C ランタイム ライブラリには、デバッグ バージョンの特殊なヒープ割り当て関数があります。  これらの関数は、リリース バージョンの関数名の末尾に "\_dbg" を追加した名前になっています。  ここでは、CRT 関数のリリース バージョンと \_dbg バージョンとの相違点について、`malloc` と `_malloc_dbg` を例にして説明します。  
+# <a name="debug-versions-of-heap-allocation-functions"></a>デバッグ バージョンのヒープ割り当て関数
+C ランタイム ライブラリには、デバッグ バージョンの特殊なヒープ割り当て関数があります。 これらの関数は、リリース バージョンの関数名の末尾に "_dbg" を追加した名前になっています。 ここでは、CRT 関数のリリース バージョンと _dbg バージョンとの相違点について、`malloc` と `_malloc_dbg` を例にして説明します。  
   
- [\_DEBUG](/visual-cpp/c-runtime-library/debug) が定義されている場合、CRT はすべての [malloc](/visual-cpp/c-runtime-library/reference/malloc) 呼び出しを [\_malloc\_dbg](/visual-cpp/c-runtime-library/reference/malloc-dbg) に置き換えます。  したがって、`malloc` の代わりに `_malloc_dbg` を使用するようにコードを書き直さなくても、デバッグ中は利用できます。  
+ ときに[_DEBUG](/cpp/c-runtime-library/debug)が定義されている場合、CRT すべてマップ[malloc](/cpp/c-runtime-library/reference/malloc)呼び出し[_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg)です。 したがって、`_malloc_dbg` の代わりに `malloc` を使用するようにコードを書き直さなくても、デバッグ中は利用できます。  
   
- しかし、明示的に `_malloc_dbg` を呼び出すこともできます。  明示的に `_malloc_dbg` を呼び出すと、さらに次の利点があります。  
+ しかし、明示的に `_malloc_dbg` を呼び出すこともできます。 明示的に `_malloc_dbg` を呼び出すと、さらに次の利点があります。  
   
 -   `_CLIENT_BLOCK` 型の割り当てを追跡できます。  
   
 -   割り当て要求が発生したソース ファイルと行番号を格納できます。  
   
- `malloc` 呼び出しを `_malloc_dbg` 呼び出しに変換せずに、ソース ファイル情報を取得するには、[\_CRTDBG\_MAP\_ALLOC](/visual-cpp/c-runtime-library/crtdbg-map-alloc) を定義します。これにより、`malloc` のラッパーを利用するのではなく、プリプロセッサがすべての `malloc` 呼び出しを直接 `_malloc_dbg` に置き換えます。  
+ 変換したくない場合、`malloc`呼び出し`_malloc_dbg`、定義することで、ソース ファイル情報を取得することができます[_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc)、プリプロセッサに直接マップを停止すると、すべての呼び出しを`malloc`に`_malloc_dbg`をラップするラッパーではなく`malloc`です。  
   
- クライアント ブロック内の個々の割り当て型を追跡するには、`blockType` パラメーターを `_CLIENT_BLOCK` に設定して、直接 `_malloc_dbg` を呼び出す必要があります。  
+ クライアント ブロック内の個々の割り当て型を追跡するには、`_malloc_dbg` パラメーターを `blockType` に設定して、直接 `_CLIENT_BLOCK` を呼び出す必要があります。  
   
- \_DEBUG が定義されていない場合は、`malloc` 呼び出しはそのままですが、`_malloc_dbg` 呼び出しは `malloc` に変換されます。また、[\_CRTDBG\_MAP\_ALLOC](/visual-cpp/c-runtime-library/crtdbg-map-alloc) が定義されていても無視されるため、割り当て要求に関連するソース ファイル情報を取得することはできません。  `malloc` にはブロック型を指定するパラメーターがないため、`_CLIENT_BLOCK` 型への割り当て要求は標準の割り当てとして扱われます。  
+ _DEBUG が定義されていないと呼び出しを`malloc`に影響しませんが、呼び出し`_malloc_dbg`に解決される`malloc`の定義[_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc)は無視され、ソース ファイルの情報に関連する、割り当て要求が指定されていません。 `malloc` にはブロック型を指定するパラメーターがないため、`_CLIENT_BLOCK` 型への割り当て要求は標準の割り当てとして扱われます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [CRT のデバッグ技術](../debugger/crt-debugging-techniques.md)

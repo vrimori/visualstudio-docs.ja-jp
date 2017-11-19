@@ -1,54 +1,54 @@
 ---
-title: "IDebugThread2::Resume | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugThread2::Resume"
-helpviewer_keywords: 
-  - "IDebugThread2::Resume"
+title: "IDebugThread2::Resume |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugThread2::Resume
+helpviewer_keywords: IDebugThread2::Resume
 ms.assetid: 36aad682-b0b9-40a2-b3fc-f0e61d41cdbc
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 25b0f663b6f512cbe8ea6eaafa2167a6828280c9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugThread2::Resume
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebugthread2resume"></a>IDebugThread2::Resume
 スレッドの実行を再開します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT Resume (   
-   DWORD *pdwSuspendCount  
+```cpp  
+HRESULT Resume (   
+   DWORD *pdwSuspendCount  
 );  
 ```  
   
-```c#  
-int Resume (   
-   out uint pdwSuspendCount  
+```csharp  
+int Resume (   
+   out uint pdwSuspendCount  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pdwSuspendCount`  
- \[入力\] 再開操作の後で中断の数を返します。  
+ [out]再開操作の後に、中断カウントを返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- このメソッドが呼び出されるたびに実際に実行が再開される時点で 0 に達するまで中断カウントをデクリメントします。  これは  **スレッド**  のデバッグ ウィンドウで中断数を表示します。  
+## <a name="remarks"></a>コメント  
+ このメソッドをデクリメントする中断カウントを呼び出して各実行が再開に実際には 0 に達すると、その時点、までです。 この中断の数が表示されます、**スレッド**デバッグ ウィンドウです。  
   
- このメソッドを呼び出すたびに[Suspend](../Topic/IDebugThread2::Suspend.md) のメソッドへの前の呼び出しが必要です。  中断の数は時間を `IDebugThread2::Suspend` のメソッドがここまで呼び出されたかを判定します。  
+ このメソッドを呼び出すたびに、必要がありますを前回呼び出したとき、 [Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md)メソッドです。 何回中断カウントの決定、`IDebugThread2::Suspend`メソッドがこれまで呼び出されます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
- [Suspend](../Topic/IDebugThread2::Suspend.md)
+ [Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md)

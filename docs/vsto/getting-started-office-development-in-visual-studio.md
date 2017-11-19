@@ -1,35 +1,39 @@
 ---
-title: "はじめに (Visual Studio での Office 開発)"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での Office 開発, はじめに"
+title: "はじめに (Visual Studio での Office 開発) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords: Office development in Visual Studio, getting started
 ms.assetid: fc27e84c-dca2-4b0a-8794-f57a2a886262
-caps.latest.revision: 56
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 52
+caps.latest.revision: "56"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 04e0419fe3c56ef51656aafb20f16d78045dabab
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# はじめに (Visual Studio での Office 開発)
+# <a name="getting-started-office-development-in-visual-studio"></a>はじめに (Visual Studio での Office 開発)
   このセクションには、Visual Studio の Microsoft Office Developer Tools の使用に役立つトピックが含まれています。  
   
-## このセクションの内容  
- [Office ソリューションの開発の概要 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)  
+> [!NOTE]  
+>  間での Office エクスペリエンスを拡張するソリューションの開発に関心のある[複数のプラットフォーム](https://dev.office.com/add-in-availability)しますか? チェック アウト新しい[Office アドイン モデル](https://dev.office.com/docs/add-ins/overview/office-add-ins)です。 Office アドインは VSTO アドインやソリューションと比較して、小さなフット プリントを持ち、ほぼすべての web プログラミング HTML5、JavaScript、CSS3、XML などのテクノロジを使用してそれらをビルドすることができます。  
+  
+## <a name="in-this-section"></a>このセクションの内容  
+ [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)  
  Visual Studio での Office ソリューションの開発に必要な背景情報を示します。  
   
  [.NET Framework 4 または .NET Framework 4.5 を対象とする Office プロジェクトのデザインの変更](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
- [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とする Office プロジェクトの新しいデザインについて説明し、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降に移行する Office プロジェクトのコードに加えられた重大な変更点の一覧を示します。  
+ [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とする Office プロジェクトの新しいデザインについて説明し、 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降に移行する Office プロジェクトのコードに加えられた重大な変更点の一覧を示します。  
   
  [Office アプリケーションおよびプロジェクト タイプ別の使用可能な機能](../vsto/features-available-by-office-application-and-project-type.md)  
  リボン機能拡張、カスタム作業ウィンドウ、操作ウィンドウ、フォーム領域など、Office 開発機能に必要なアプリケーションおよびプロジェクトについて説明します。  
@@ -44,7 +48,7 @@ caps.handback.revision: 52
  Visual Studio を使用して Word 用のドキュメント レベルのカスタマイズを作成するために必要となる重要な概念について、その概要を示します。  
   
  [VSTO アドインのプログラミングについて](../vsto/getting-started-programming-vsto-add-ins.md)  
- Visual Studio を使用して Microsoft Office アプリケーション用のアプリケーション レベルの Visual Studio Tools for Office \(VSTO\) アドインを作成するために必要となる重要な概念について、その概要を示します。  
+ Visual Studio を使用して Microsoft Office アプリケーション用のアプリケーション レベルの Visual Studio Tools for Office (VSTO) アドインを作成するために必要となる重要な概念について、その概要を示します。  
   
  [VBA ソリューションと Visual Studio の Office ソリューションの比較](../vsto/vba-and-office-solutions-in-visual-studio-compared.md)  
  Office ソリューションの開発に Visual Basic for Applications を使用する場合と Visual Studio の Office 開発ツールを使用する場合の相対的なメリットについて説明します。  
@@ -52,7 +56,7 @@ caps.handback.revision: 52
  [Office プログラミングの共通タスク](../vsto/common-tasks-in-office-programming.md)  
  一般的な問題の解決に役立つトピックへのリンクを示します。  
   
-## 関連項目  
+## <a name="related-sections"></a>関連項目  
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)  
  サンプル アプリケーション、および一般的なタスクの詳細な手順を説明するトピックへのリンクを示します。  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 52
  Office ソリューションのコンポーネントと、それらのコンポーネントのデザイン時と実行時における動作について説明します。  
   
  [Office ソリューションのデザインと作成](../vsto/designing-and-creating-office-solutions.md)  
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で Office プロジェクトを作成し、プロジェクトを構成する方法について説明します。  
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]で Office プロジェクトを作成し、プロジェクトを構成する方法について説明します。  
   
  [Office ソリューションの開発](../vsto/developing-office-solutions.md)  
  Office プロジェクトでコードやユーザー インターフェイスのカスタマイズを実装する方法について説明します。  

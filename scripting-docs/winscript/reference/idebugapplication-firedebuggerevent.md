@@ -1,27 +1,30 @@
 ---
-title: "IDebugApplication::FireDebuggerEvent | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IDebugApplication::FireDebuggerEvent |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IDebugApplication.FireDebuggerEvent
 apilocation: pdm.dll
-helpviewer_keywords: 
-  - "IDebugApplication::FireDebuggerEvent"
+helpviewer_keywords: IDebugApplication::FireDebuggerEvent
 ms.assetid: fd1f602e-fc15-4158-a6e7-497ff5b4a509
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c4cb02390602b6b93b8c233f245ede395833d67e
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IDebugApplication::FireDebuggerEvent
-デバッガーの `IApplicationDebugger` のインターフェイスに汎用イベントを発生させます。  
+# <a name="idebugapplicationfiredebuggerevent"></a>IDebugApplication::FireDebuggerEvent
+デバッガーの一般的なイベントを発生させる`IApplicationDebugger`インターフェイスです。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT FireDebuggerEvent(  
@@ -30,28 +33,28 @@ HRESULT FireDebuggerEvent(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `riid`  
- \[入力\]オブジェクトの GUID。  
+ [in]オブジェクトの GUID です。  
   
  `punk`  
- \[入力\]デバッガーに渡すイベント オブジェクト。  
+ [in]デバッガーに渡すイベント オブジェクトです。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
-|`E_NOTIMPL`|メソッドは、現在実行されません。|  
+|`E_NOTIMPL`|メソッドは現在実装されていません。|  
   
-## 解説  
- GUID のセマンティクスと `IUnknown` は完全に定義されたアプリケーションとデバッガーがあります。  
+## <a name="remarks"></a>コメント  
+ GUID のセマンティクスと`IUnknown`が全面的に定義されているアプリケーション/デバッガーです。  
   
- このメソッドは、デバッガーのモデル カスタム拡張を可能にします; これは、現在実行されません。  
+ この方法により、デバッガー モデルのカスタム拡張機能現在実装されていません。  
   
- このメソッドは `IApplicationDebugger::onDebuggerEvent` を呼び出します。  
+ このメソッドにより`IApplicationDebugger::onDebuggerEvent`呼び出せるようにします。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugApplication インターフェイス](../../winscript/reference/idebugapplication-interface.md)   
  [IApplicationDebugger::onDebuggerEvent](../../winscript/reference/iapplicationdebugger-ondebuggerevent.md)

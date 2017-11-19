@@ -1,28 +1,30 @@
 ---
-title: "T4 テキスト テンプレートのディレクティブ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "テキスト テンプレート, アセンブリ ディレクティブ"
-  - "テキスト テンプレート, ディレクティブ"
-  - "テキスト テンプレート, インポート ディレクティブ"
-  - "テキスト テンプレート, インクルード ディレクティブ"
-  - "テキスト テンプレート, 出力ディレクティブ"
-  - "テキスト テンプレート, テンプレート ディレクティブ"
+title: "T4 テキスト テンプレート ディレクティブ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- text templates, import directive
+- text templates, include directive
+- text templates, assembly directive
+- text templates, output directive
+- text templates, directives
+- text templates, template directive
 ms.assetid: 6898ee02-ebb2-4635-a4e9-350774c13cf2
-caps.latest.revision: 81
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 81
+caps.latest.revision: "81"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: e4f3dd4d84e52c8ae98cd5ae2dd8b93ac1e69c59
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# T4 テキスト テンプレートのディレクティブ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="t4-text-template-directives"></a>T4 テキスト テンプレートのディレクティブ
 ディレクティブは、テキスト テンプレート変換エンジンに対する命令です。  
   
  ディレクティブの構文は次のとおりです。  
@@ -31,9 +33,9 @@ caps.handback.revision: 81
 <#@ DirectiveName [AttributeName = "AttributeValue"] ... #>  
 ```  
   
- 属性値はすべて、二重引用符で囲む必要があります。  値そのものに引用符が含まれている場合は、\\ 文字でエスケープする必要があります。  
+ 属性値はすべて、二重引用符で囲む必要があります。 値そのものに引用符が含まれている場合は、\ 文字でエスケープする必要があります。  
   
- 通常、ディレクティブはテンプレート ファイルまたはインクルード ファイル内の最初の要素となります。  コード ブロック \(`<#...#>`\) 内およびクラス機能ブロック \(`<#+...#>`\) の後に、ディレクティブを配置することはできません。  
+ 通常、ディレクティブはテンプレート ファイルまたはインクルード ファイル内の最初の要素となります。 コード ブロック (`<#...#>`) 内およびクラス機能ブロック (`<#+...#>`) の後に、ディレクティブを配置することはできません。  
   
  [T4 テンプレート ディレクティブ](../modeling/t4-template-directive.md)  
  ```  
@@ -70,4 +72,4 @@ caps.handback.revision: 81
 <#@ CleanupBehavior processor="T4VSHost" CleanupAfterProcessingtemplate="true" #>  
 ```  
   
- 独自のディレクティブを作成することもできます。  詳細については、「[カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成](../modeling/creating-custom-t4-text-template-directive-processors.md)」を参照してください。  Visualization and Modeling SDK を使用してドメイン固有言語 \(DSL\) を作成すると、DSL の一部としてディレクティブ プロセッサが生成されます。
+ 独自のディレクティブを作成することもできます。 詳細については、次を参照してください。[カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成](../modeling/creating-custom-t4-text-template-directive-processors.md)です。 Visualization and Modeling SDK を使用してドメイン固有言語 (DSL) を作成すると、DSL の一部としてディレクティブ プロセッサが生成されます。

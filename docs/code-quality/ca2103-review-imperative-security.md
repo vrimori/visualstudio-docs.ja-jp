@@ -1,51 +1,51 @@
 ---
-title: "CA2103: 命令型のセキュリティを確認します | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2103"
-  - "ReviewImperativeSecurity"
-helpviewer_keywords: 
-  - "CA2103"
-  - "ReviewImperativeSecurity"
+title: "Ca 2103: 命令型のセキュリティを確認する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2103
+- ReviewImperativeSecurity
+helpviewer_keywords:
+- CA2103
+- ReviewImperativeSecurity
 ms.assetid: d24fde71-bdf6-46c0-8965-9a73dc33c1aa
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: b6047df9ea1b5454d4c4c689a5baef887907779a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA2103: 命令型のセキュリティを確認します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca2103-review-imperative-security"></a>CA2103: 命令型のセキュリティを確認します
 |||  
 |-|-|  
 |TypeName|ReviewImperativeSecurity|  
 |CheckId|CA2103|  
-|分類|Microsoft.Security|  
+|カテゴリ|Microsoft.Security|  
 |互換性に影響する変更点|あり|  
   
-## 原因  
+## <a name="cause"></a>原因  
  メソッドが強制セキュリティを使用しています。また、そのメソッドで、確認要求がアクティブな場合に変更できるステータス情報または戻り値を使用して、アクセス許可を構築している可能性があります。  
   
-## 規則の説明  
- 強制セキュリティでは、マネージ オブジェクトを使用して、コード実行時のアクセス許可とセキュリティ アクションを指定しています。一方、宣言セキュリティでは、属性を使用して、メタデータにアクセス許可とアクションを格納しています。  強制セキュリティには、アクセス許可オブジェクトの状態を設定し、実行時まで使用できない情報を使用してセキュリティ アクションを選択できるという高い柔軟性があります。  この柔軟性は、アクセス許可の状態を判断するときに使用する実行時の情報が、アクションの実行中に変更されるリスクにもつながります。  
+## <a name="rule-description"></a>規則の説明  
+ 命令型のセキュリティでは、マネージ オブジェクトを使用して、宣言セキュリティは、属性を使用してアクセス許可と操作をメタデータに格納すると比較して、コードの実行中にアクセス許可とセキュリティ アクションを指定します。 命令型のセキュリティでは非常に柔軟なアクセス許可オブジェクトの状態を設定し、実行時までは利用できない情報を使用してセキュリティ アクションを選択することができます。 柔軟性は、アクションで設定されている限り、権限の状態を判断するを使用するランタイム情報が変更されるリスクをものです。  
   
- できる限り、宣言セキュリティを使用します。  宣言的な確認要求は理解が容易です。  
+ できる限り、宣言セキュリティを使用します。 宣言型の要求が理解しやすくします。  
   
-## 違反の修正方法  
- 強制セキュリティの確認要求を再確認し、アクセス許可の状態が、そのアクセス許可の使用中に変更できる情報に依存しないようにします。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ アクセス許可の状態に頼りませんについては、アクセス許可が使用されている限り、変更できるかどうかを確認する命令型のセキュリティ確認要求を確認してください。  
   
-## 警告を抑制する状況  
- アクセス許可が変化するデータに依存していない場合は、この規則による警告を抑制しても安全です。  ただし、強制の確認要求を宣言の確認要求に変更することをお勧めします。  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ アクセス許可が変化するデータに依存しない場合は、この規則による警告を抑制するのには安全です。 ただし、等価な宣言型に強制確認要求を変更することをお勧めします。  
   
-## 参照  
- [安全なコーディングのガイドライン](../Topic/Secure%20Coding%20Guidelines.md)   
- [データとモデリング](../Topic/Data%20and%20Modeling%20in%20the%20.NET%20Framework.md)
+## <a name="see-also"></a>関連項目  
+ [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)   
+ [データとモデリング](/dotnet/framework/data/index)

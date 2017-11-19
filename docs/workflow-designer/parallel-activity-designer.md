@@ -1,45 +1,48 @@
 ---
-title: "Parallel アクティビティ デザイナー | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "System.Activities.Statements.Parallel.UI"
+title: "アクティビティ デザイナーの並列 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: System.Activities.Statements.Parallel.UI
 ms.assetid: 0306dc3b-075a-4091-ac3a-96486fbabed5
-caps.latest.revision: 10
-author: "ErikRe"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: ErikRe
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b6b6c0498b98f38b786ce846fd6d975287a2c75e
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# Parallel アクティビティ デザイナー
+# <a name="parallel-activity-designer"></a>Parallel アクティビティ デザイナー
 <xref:System.Activities.Statements.Parallel> アクティビティは、一連の子アクティビティを同時に実行するアクティビティです。  
   
-## Parallel アクティビティ  
- <xref:System.Activities.Statements.Parallel> アクティビティは、子アクティビティを <xref:System.Activities.Statements.Parallel.Branches%2A> コレクションに格納します。一部の子アクティビティがアイドル状態になる可能性がある場合は、<xref:System.Activities.Statements.Sequence> アクティビティの代わりに <xref:System.Activities.Statements.Parallel> アクティビティを使用してください。  
+## <a name="the-parallel-activity"></a>Parallel アクティビティ  
+ <xref:System.Activities.Statements.Parallel> アクティビティは、子アクティビティを <xref:System.Activities.Statements.Parallel.Branches%2A> コレクションに格納します。 一部の子アクティビティがアイドル状態になる可能性がある場合は、<xref:System.Activities.Statements.Parallel> アクティビティの代わりに <xref:System.Activities.Statements.Sequence> アクティビティを使用してください。  
   
- <xref:System.Activities.Statements.Parallel> アクティビティには、ユーザーによって指定された [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 式を保持する <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> プロパティがあります。このプロパティは、各分岐の完了後に、<xref:System.Activities.Statements.Parallel> アクティビティによって評価されます。評価結果が **True** の場合、<xref:System.Activities.Statements.Parallel> アクティビティは他の分岐を実行せずに完了します。<xref:System.Activities.Statements.Parallel.CompletionCondition%2A> が **True** に評価されない場合は、すべての子アクティビティが完了するまで <xref:System.Activities.Statements.Parallel> アクティビティが継続されます。  
+ <xref:System.Activities.Statements.Parallel> アクティビティには、ユーザーによって指定された <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> 式を保持する [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] プロパティがあります。 このプロパティは、各分岐の完了後に、<xref:System.Activities.Statements.Parallel> アクティビティによって評価されます。 評価結果が場合**True**、<xref:System.Activities.Statements.Parallel>アクティビティは他の分岐を実行せずに完了します。 場合、<xref:System.Activities.Statements.Parallel.CompletionCondition%2A>に評価されない**True**、<xref:System.Activities.Statements.Parallel>アクティビティのすべての子アクティビティが完了したときに完了します。  
   
-### Parallel アクティビティ デザイナーの使用  
- **Parallel** アクティビティ デザイナーは、**\[ツールボックス\]** の **\[制御フロー\]** カテゴリにあります。\[ツールボックス\] にアクセスするには、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]の左側にある **\[ツールボックス\]** タブをクリックします \(または、**\[表示\]** メニューの **\[ツール バー\]** をクリックするか、Ctrl キーと Alt キーを押しながら X キーを押します\)。  
+### <a name="using-the-parallel-activity-designer"></a>Parallel アクティビティ デザイナーの使用  
+ **並列**アクティビティ デザイナーは含まれて、**制御フロー**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス** タブの左側にある、 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] (または、選択**ツールバー**から、**ビュー**メニューのまたは CTRL + ALT + X です)。  
   
- **Parallel** アクティビティ デザイナーは、**\[ツールボックス\]** からドラッグして、アクティビティ デザイナーを通常配置している[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]画面の任意の場所 \(**Sequence** アクティビティ デザイナー内など\) にドロップできます。このアクティビティ デザイナーを[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]にドロップすると、<xref:System.Activities.Statements.Parallel> アクティビティが作成されます。既定では、このアクティビティに **Parallel** の <xref:System.Activities.Activity.DisplayName%2A> が含まれます。  
+ **並列**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**に、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]サーフェス任意の場所アクティビティ デザイナーを通常配置しているなど、の内部で**シーケンス**アクティビティ デザイナー。 ドロップすた後、 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]、作成、<xref:System.Activities.Statements.Parallel>アクティビティで、既定で含まれて、<xref:System.Activities.Activity.DisplayName%2A>の**並列**  
   
- 並列アクティビティの <xref:System.Activities.Statements.Parallel.Branches%2A> コレクションにアクティビティを追加するには、**\[ツールボックス\]** から他のアクティビティ デザイナーをドラッグし、**Parallel** アクティビティ デザイナー内の三角形にドロップします。分岐に含まれるアクティビティのそばに三角形が配置されます。この手順を繰り返すことによって、さらにアクティビティを追加できます。アクティビティを並べ替えるには、**Parallel** アクティビティ デザイナー内でアクティビティをドラッグ アンド ドロップします。  
+ 活動を追加する、 <xref:System.Activities.Statements.Parallel.Branches%2A> 、並列アクティビティのコレクションから他のアクティビティ デザイナーをドラッグして、**ツールボックス**内の三角形の上にドロップし、**並列**アクティビティ デザイナー。 分岐に含まれるアクティビティのそばに三角形が配置されます。 この手順を繰り返すことによって、さらにアクティビティを追加できます。 ドラッグ アンド ドロップします内でアクティビティを並べ替えることができます、**並列**アクティビティ デザイナー。  
   
-### ワークフロー デザイナーでの Parallel アクティビティのプロパティ  
+### <a name="parallel-activity-properties-in-the-workflow-designer"></a>ワークフロー デザイナーでの Parallel アクティビティのプロパティ  
  次の表に、Parallel アクティビティのプロパティと、デザイナーでのその使用方法を示します。  
   
 |プロパティ名|必須|使用方法|  
-|------------|--------|----------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|省略可|ヘッダーのアクティビティ デザイナーの表示名を指定します。既定値は **Parallel** です。この値は、**\[プロパティ\]** グリッドで編集することも、アクティビティ デザイナーのヘッダーで直接編集することもできます。|  
-|<xref:System.Activities.Statements.Parallel.Branches%2A>|必須|実行される子アクティビティのコレクションが格納されます。|  
-|<xref:System.Activities.Statements.Parallel.CompletionCondition%2A>|省略可|分岐の完了後に評価されます。**True** であると評価する場合、スケジュールされた保留分岐はキャンセルされます。このプロパティが設定されていないか、**False** であると評価する場合は、すべての子アクティビティが完了するまでアクティビティが継続されます。既定値は、**null** です。|  
+|-------------------|--------------|-----------|  
+|<xref:System.Activities.Activity.DisplayName%2A>|False|ヘッダーのアクティビティ デザイナーの表示名を指定します。 既定値は**並列**です。 値を必要に応じて編集できます、**プロパティ**グリッド アクティビティ デザイナーのヘッダーで直接またはします。|  
+|<xref:System.Activities.Statements.Parallel.Branches%2A>|True|実行される子アクティビティのコレクションが格納されます。|  
+|<xref:System.Activities.Statements.Parallel.CompletionCondition%2A>|False|分岐の完了後に評価されます。 評価された場合**True**、スケジュールされた保留分岐はキャンセルされます。 このプロパティが設定されていないかに評価される場合**False**、すべての子アクティビティが完了すると、アクティビティが完了します。 既定値は**null**です。|  
   
-## 参照  
- [Sequence](../workflow-designer/sequence-activity-designer.md)   
- [ParallelForEach\<T\>](../workflow-designer/parallelforeach-t-activity-designer.md)   
+## <a name="see-also"></a>関連項目  
+ [シーケンス](../workflow-designer/sequence-activity-designer.md)   
+ [ParallelForEach\<T >](../workflow-designer/parallelforeach-t-activity-designer.md)   
  [制御フロー](../workflow-designer/control-flow-activity-designers.md)

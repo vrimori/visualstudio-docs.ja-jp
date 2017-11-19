@@ -1,65 +1,66 @@
 ---
-title: "方法 : ClickOnce アプリケーションの発行ページを指定する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ClickOnce 配置, 指定 (発行ページを)"
-  - "配置 (アプリケーションを) [ClickOnce], 指定 (発行ページを)"
-  - "Publish Page プロパティ"
-  - "発行, ClickOnce"
+title: "方法: ClickOnce アプリケーションの発行ページを指定する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- deploying applications [ClickOnce], specifying publish page
+- Publish Page property
+- publishing, ClickOnce
+- ClickOnce deployment, specifying publish page
 ms.assetid: 9d70eebb-bdee-4b42-8e7e-7a07e199bdf7
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: e05718d2a00df76d2c78e16c5b4473ab48d43a39
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 方法 : ClickOnce アプリケーションの発行ページを指定する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを発行するとき、既定の Web ページ \(publish.htm\) が生成され、アプリケーションと共に発行されます。  このページには、アプリケーションの名前、アプリケーションや必須コンポーネント \(指定されている場合\) をインストールするためのリンク、および、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] について説明するヘルプ トピックへのリンクが含まれています。  プロジェクトの **"ページの発行"** プロパティで、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションの Web ページの名前を指定できます。  
+# <a name="how-to-specify-a-publish-page-for-a-clickonce-application"></a>方法: ClickOnce アプリケーションの発行ページを指定する
+発行するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションで、既定の Web ページ (publish.htm) が生成され、アプリケーションと共に発行します。 このページは、アプリケーション、アプリケーションや、前提条件のインストールへのリンク、および説明するヘルプ トピックへのリンクの名前を含む[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]です。 **ページを公開**、プロジェクトのプロパティでは、Web ページの名前を指定することができます、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。  
   
- 発行ページを指定すると、次に発行したときにそのページが発行場所にコピーされます。再び発行してもページは上書きされません。  ページの外観をカスタマイズする場合は、変更内容を失うことなくカスタマイズを実行できます。  詳細については、「[方法 : ClickOnce の既定の Web ページをカスタマイズする](../deployment/how-to-customize-the-default-web-page-for-a-clickonce-application.md)」を参照してください。  
+ [発行] ページを指定すると、次回発行するには場所にコピーする、発行;これは上書きされませんを再発行する場合。 ページの外観をカスタマイズする場合は、これを行う、変更内容を失うことがなくです。 詳細については、次を参照してください。[する方法: ClickOnce の既定の Web ページをカスタマイズ](../deployment/how-to-customize-the-default-web-page-for-a-clickonce-application.md)です。  
   
- **"ページの発行"** プロパティは、**\[発行オプション\]** ダイアログ ボックスで設定できます。このダイアログ ボックスは、**プロジェクト デザイナー**の **\[発行\]** ペインからアクセスできます。  
+ **ページを公開**プロパティを設定することができます、**発行オプション**ダイアログ ボックスからアクセスできる、**発行**のペイン、**プロジェクト デザイナー**.  
   
-### ClickOnce アプリケーションにカスタム Web ページを指定するには  
+### <a name="to-specify-a-custom-web-page-for-a-clickonce-application"></a>ClickOnce アプリケーションのカスタム Web ページを指定するには  
   
-1.  **ソリューション エクスプローラー**でプロジェクトが選択されている状態で、**\[プロジェクト\]** メニューの **\[プロパティ\]** をクリックします。  
+1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
   
-2.  **\[発行\]** ペインをクリックします。  
+2.  選択、**発行**ウィンドウです。  
   
-3.  **\[オプション\]** をクリックして **\[発行オプション\]** ダイアログ ボックスを開きます。  
+3.  クリックして、**オプション**を開く ボタン、**発行オプション** ダイアログ ボックス。  
   
-4.  **\[配置\]** をクリックします。  
+4.  をクリックして**展開**です。  
   
-5.  **\[発行オプション\]** ダイアログ ボックスで、**\[発行後に配置 Web ページを開く\]** チェック ボックスがオンであることを確認します \(既定ではオンです\)。  
+5.  **発行オプション** ダイアログ ボックスで、ことを確認して、**発行後に web ページを開いている配置** チェック ボックスをオン (既定では、選択する必要があります)。  
   
-6.  **\[配置 Web ページ:\]** ボックスに Web ページの名前を入力し、**\[OK\]** をクリックします。  
+6.  **配置 web ページ:**ボックスで、Web ページの名前を入力し、をクリックして**OK**です。  
   
-### 発行するたびに発行ページが起動されないようにするには  
+### <a name="to-prevent-the-publish-page-from-launching-each-time-you-publish"></a>[発行] ページを発行するたびを起動できないようにするには  
   
-1.  **ソリューション エクスプローラー**でプロジェクトが選択されている状態で、**\[プロジェクト\]** メニューの **\[プロパティ\]** をクリックします。  
+1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
   
-2.  **\[発行\]** ペインをクリックします。  
+2.  選択、**発行**ウィンドウです。  
   
-3.  **\[オプション\]** をクリックして **\[発行オプション\]** ダイアログ ボックスを開きます。  
+3.  クリックして、**オプション**を開く ボタン、**発行オプション** ダイアログ ボックス。  
   
-4.  **\[配置\]** をクリックします。  
+4.  をクリックして**展開**です。  
   
-5.  **\[発行オプション\]** ダイアログ ボックスで、**\[発行後に配置 Web ページを開く\]** チェック ボックスをオフにします。  
+5.  **発行オプション**ダイアログ ボックスで、クリア、**発行後に web ページを開いている配置**チェック ボックスをオンします。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
- [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../Topic/How%20to:%20Publish%20a%20ClickOnce%20Application%20using%20the%20Publish%20Wizard.md)   
- [方法 : ClickOnce の既定の Web ページをカスタマイズする](../deployment/how-to-customize-the-default-web-page-for-a-clickonce-application.md)
+ [方法: 発行ウィザードを使用して ClickOnce アプリケーションの発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
+ [方法: ClickOnce の既定の Web ページをカスタマイズします。](../deployment/how-to-customize-the-default-web-page-for-a-clickonce-application.md)

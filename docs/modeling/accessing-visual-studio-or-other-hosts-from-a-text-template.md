@@ -1,32 +1,34 @@
 ---
-title: "テキスト テンプレートから Visual Studio またはその他のホストへのアクセス | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "テキスト テンプレートから Visual Studio またはその他のホストにアクセスする |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a68886da-7416-4785-8145-3796bb382cba
-caps.latest.revision: 5
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 6b75a3b3e57ee72afc11013a1cf7a041b222b204
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# テキスト テンプレートから Visual Studio またはその他のホストへのアクセス
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-テキスト テンプレートでは、テンプレートを実行するホスト \([!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] など\) によって公開されるメソッドとプロパティを使用できます。  
+# <a name="accessing-visual-studio-or-other-hosts-from-a-text-template"></a>テキスト テンプレートから Visual Studio またはその他のホストへのアクセス
+メソッドとように、テンプレートを実行するホストによって公開されるプロパティを使用する、テキスト テンプレートで[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
   
- これは、前処理されたテキスト テンプレートではなく、標準のテキスト テンプレートに当てはまります。  
+ これは、通常のテキスト テンプレート、いない前処理されたテキスト テンプレートに適用されます。  
   
-## ホストへのアクセスの取得  
- `template` ディレクティブで `hostspecific="true"` を設定します。  これにより、<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> 型の `this.Host` を使用できるようになります。  この型は、ファイル名の解決やエラー ログの記録などに使用できるメンバーを持ちます。  
+## <a name="obtaining-access-to-the-host"></a>ホストへのアクセスを取得します。  
+ 設定`hostspecific="true"`で、`template`ディレクティブです。 使用できます`this.Host`、型を持つ<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>します。 この型には、使用できる、たとえば、ファイル名を解決するのには、エラーをログにメンバーがあります。  
   
-### ファイル名の解決  
- テキスト テンプレートに関連するファイルの完全パスを確認するには、this.Host.ResolvePath\(\) を使用します。  
+### <a name="resolving-file-names"></a>ファイル名を解決します。  
+ テキスト テンプレートに関連するファイルの完全なパスを検索するには、これを使用します。Host.ResolvePath() です。  
   
-```c#  
+```csharp  
 <#@ template hostspecific="true" language="C#" #>  
 <#@ output extension=".txt" #>  
 <#@ import namespace="System.IO" #>  
@@ -39,10 +41,10 @@ Content of myFile is:
   
 ```  
   
-### エラー メッセージの表示  
- この例では、テンプレートの変換時にメッセージ ログを記録します。  ホストが [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の場合は、エラー ウィンドウにメッセージ ログが追加されます。  
+### <a name="displaying-error-messages"></a>エラー メッセージを表示します。  
+ この例は、テンプレートを変換するときにメッセージを記録します。 ホストがある場合[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、エラー ウィンドウに追加されます。  
   
-```c#  
+```csharp  
 <#@ template hostspecific="true" language="C#" #>  
 <#@ output extension=".txt" #>  
 <#@ import namespace="System.CodeDom.Compiler" #>  
@@ -57,14 +59,14 @@ Content of myFile is:
   
 ```  
   
-## Visual Studio API の使用  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でテキスト テンプレートを実行する場合は、`this.Host` を使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によって提供されるサービスと、読み込まれたパッケージまたは拡張機能にアクセスできます。  
+## <a name="using-the-visual-studio-api"></a>Visual Studio API の使用  
+ テキスト テンプレートを実行している場合[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、使用することができます`this.Host`によって提供されるサービスへのアクセス[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]とパッケージまたは読み込まれている拡張機能です。  
   
- hostspecific\="true" を設定し、`this.Host` を <xref:System.IServiceProvider> にキャストします。  
+ 設定 hostspecific ="true"とキャスト`this.Host`に<xref:System.IServiceProvider>です。  
   
- この例では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] API である <xref:EnvDTE.DTE> をサービスとして取得します。  
+ この例では取得、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] API、 <xref:EnvDTE.DTE>、サービスとして。  
   
-```c#  
+```csharp  
 <#@ template hostspecific="true" language="C#" #>  
 <#@ output extension=".txt" #>  
 <#@ assembly name="EnvDTE" #>  
@@ -77,5 +79,5 @@ Number of projects in this solution: <#=  dte.Solution.Projects.Count #>
   
 ```  
   
-## テンプレートの継承があったホスト固有の使用  
- 指定`hostspecific="trueFromBase"`もを使用する場合は、 `inherits`属性を指定のテンプレートから継承する場合は、 `hostspecific="true"`。  これは、コンパイラ警告が避けることができますは、プロパティ`Host` 2 回宣言されています。
+## <a name="using-hostspecific-with-template-inheritance"></a>テンプレートの継承で hostSpecific の使用  
+ 指定`hostspecific="trueFromBase"`使用する場合は、`inherits`属性を指定したテンプレートから継承する場合と`hostspecific="true"`です。 これは、影響を及ぼすコンパイラの警告を回避できますをプロパティ`Host`2 回宣言されています。

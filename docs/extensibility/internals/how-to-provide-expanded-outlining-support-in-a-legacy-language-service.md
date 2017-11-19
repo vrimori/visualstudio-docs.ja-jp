@@ -1,11 +1,10 @@
 ---
-title: "言語サービスでのサポートをアウトライン表示を提供します |。Microsoft ドキュメント"
+title: "アウトラインの言語サービスでのサポートを提供 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,61 +12,48 @@ helpviewer_keywords:
 - language services, supporting outlining
 - outlining, supporting
 ms.assetid: df759e89-8193-418c-8038-6626304d387b
-caps.latest.revision: 16
+caps.latest.revision: "16"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: d5bc147592bfc36247c35f23ac2885055d096af3
-ms.openlocfilehash: fc502e4430a49284cffe14386249999d82085f1c
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 0fd353e39e3e3edbdbdb929fa16abb74126dbbc9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-provide-expanded-outlining-support-in-a-legacy-language-service"></a>方法: レガシ言語サービスでの展開のアウトライン サポートを提供
-使用する言語をサポートする以外のアウトラインのサポートを拡張するための&2; つのオプションがある、**定義に縮小**コマンドです。 エディター コントロールのアウトライン領域を追加し、クライアント制御のアウトライン領域を追加できます。  
+使用する言語をサポートする以外のアウトラインのサポートを拡張するための 2 つのオプションがある、**定義に縮小**コマンド。 エディター コントロールのアウトライン領域を追加し、クライアント管理されているアウトライン領域を追加できます。  
   
 ## <a name="adding-editor-controlled-outline-regions"></a>エディター コントロールのアウトライン領域を追加します。  
- 折りたたまれているアウトライン領域を作成し、領域が展開されているかどうかを処理するエディターを使用し、この方法を使用してなどです。 アウトラインのサポートを提供する&2; つのオプションは、このオプションは、少なくとも堅牢です。 このオプションで<xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A>。</xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A>を使用してテキストの指定した範囲に新しいアウトライン領域を作成します。 この領域を作成した後、その動作は、エディターによって制御されます。 次の手順を使用すると、エディター コントロールのアウトライン領域を実装します。  
+ 折りたたまれている場合、アウトライン領域を作成し、エディターで、領域が展開されているかどうかの処理を許可するこの方法を使用してなど。 アウトラインのサポートを提供する 2 つのオプションのこのオプションは、少なくとも堅牢です。 このオプションのテキストを使用する指定されたスパン経由で新しいアウトライン領域を作成する<xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A>です。 この領域を作成した後、その動作は、エディターによって制御されます。 次の手順を使用すると、エディター コントロールのアウトライン領域を実装します。  
   
 #### <a name="to-implement-an-editor-controlled-outline-region"></a>エディター コントロールのアウトライン領域を実装するには  
   
-1.  呼び出す`QueryService`の<xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager></xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>  
+1.  呼び出す`QueryService`の<xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>  
   
-     <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager>。</xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager>へのポインターを返します  
+     ポインターが返されます。<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager>です。  
   
-2.  呼び出す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.GetHiddenTextSession%2A>を渡すことで指定されたテキスト バッファーのポインター</xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.GetHiddenTextSession%2A> 。 ポインターが返されます、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession>バッファーのオブジェクト</xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession>。  
+2.  呼び出す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.GetHiddenTextSession%2A>テキストを指定したバッファーのポインターに渡します。 ポインターが返されます、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession>バッファーのオブジェクト。  
   
-3.  <xref:System.Runtime.InteropServices.Marshal.QueryInterface%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession>。</xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession>へのポインターの</xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession>上</xref:System.Runtime.InteropServices.Marshal.QueryInterface%2A>を呼び出す  
+3.  呼び出す<xref:System.Runtime.InteropServices.Marshal.QueryInterface%2A>で<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession>へのポインターの<xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession>します。  
   
-4.  呼び出す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A>を追加したりより新しい一度に領域の概要を説明します</xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A>。  
+4.  呼び出す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A>を追加したりより新しい、一度に領域を説明します。  
   
-     このメソッドでは、アウトライン、既存のアウトライン領域を削除または、保持するかどうか、アウトライン領域を広げる場合または既定で折りたたまれているかどうかをテキストの範囲を指定することができます。  
+     このメソッドでは、アウトライン、既存のアウトライン領域を削除または、保持するかどうか、アウトライン領域が展開または既定で折りたたまれているかどうかをテキストの範囲を指定することができます。  
   
 ## <a name="adding-client-controlled-outline-regions"></a>クライアント管理されているアウトライン領域を追加します。  
- アウトラインのクライアント管理の対象 (スマート) を実装するには、この方法では、使用すると同様に使用する、[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]と[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]言語サービスです。 独自のアウトライン表示を管理する言語サービスは、それらが無効になったときに古いアウトライン領域を破棄するために、必要に応じて新しいアウトライン領域を作成する、テキスト バッファーの内容を監視します。  
+ によって使用されるアウトラインのクライアント管理の対象 (スマート) を実装するには、この方法などを使用して、[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]と[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]言語サービス。 独自のアウトライン表示を管理する言語サービスは、無効になったときに古いアウトライン領域を破棄するために、必要に応じて新しいアウトライン領域を作成するテキスト バッファーの内容を監視します。  
   
 #### <a name="to-implement-a-client-controlled-outline-region"></a>クライアント管理されているアウトライン領域を実装するには  
   
-1.  呼び出す`QueryService` <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager></xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager> 。 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager>。</xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager>へのポインターを返します  
+1.  呼び出す`QueryService`の<xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>します。 ポインターが返されます。<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager>です。  
   
-2.  呼び出す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.GetHiddenTextSession%2A>を渡すことで指定されたテキスト バッファーのポインター</xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.GetHiddenTextSession%2A> 。 これは、バッファーの非表示のテキストのセッションを既にが存在するかどうかを決定します。  
+2.  呼び出す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.GetHiddenTextSession%2A>テキストを指定したバッファーのポインターに渡します。 これは、バッファーのテキストの非表示セッションを既にが存在するかどうかを判断します。  
   
-3.  テキスト セッションは既に存在するかどうかは、1 つ、および既存へのポインターを作成する必要はありません<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession>オブジェクトが返されます</xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession>。 このポインターを使用して、列挙し、アウトライン領域を作成します。 それ以外の場合、呼び出す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.CreateHiddenTextSession%2A>バッファーの非表示のテキストのセッションを作成します</xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.CreateHiddenTextSession%2A>。 ポインター、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession>オブジェクトが返されます</xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession>。  
+3.  テキスト セッションは既に存在するかどうかは、1 つ、および既存へのポインターを作成する必要はありません<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession>オブジェクトが返されます。 列挙し、アウトライン領域を作成するには、このポインターを使用します。 それ以外の場合、呼び出す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.CreateHiddenTextSession%2A>バッファーのテキストの非表示セッションを作成します。 ポインター、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession>オブジェクトが返されます。  
   
     > [!NOTE]
-    >  呼び出すと<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.CreateHiddenTextSession%2A>、非表示のテキストのクライアントを指定できます (つまり、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextClient>オブジェクト).</xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextClient> </xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.CreateHiddenTextSession%2A> このクライアントに通知するときに非表示のテキストまたはアウトライン領域を展開するか、ユーザーが折りたたまれています。  
+    >  呼び出すと<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.CreateHiddenTextSession%2A>、非表示テキストのクライアントを指定できます (つまり、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextClient>オブジェクト)。 このクライアントに通知するときに非表示テキストまたはにアウトライン領域を展開するか、ユーザーが折りたたまれています。  
   
-4.  呼び出す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession.AddHiddenRegions%2A>構造) パラメーター: の値を指定して<xref:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_TYPE>で、`iType`のメンバー、<xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion>構造を非表示の領域ではなく、アウトライン領域を作成することを示します</xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion></xref:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_TYPE></xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession.AddHiddenRegions%2A>。 リージョンがクライアント コントロールまたはエディター管理対象で配置するかどうかを指定、`dwBehavior`のメンバー、<xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion>構造体</xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion>。 スマートなアウトライン ニーズは、さまざまなエディターとクライアント制御のアウトライン領域を含めることができます。 アウトライン領域は折りたたまれ、「...」などのときに表示されるバナー テキストを指定する、`pszBanner`のメンバー、<xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion>構造体</xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion>。 エディターの既定のバナー テキストを非表示の領域は、「...」です。
+4.  呼び出す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession.AddHiddenRegions%2A>構造体) パラメーター: の値を指定して<xref:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_TYPE>で、`iType`のメンバー、<xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion>構造を非表示の領域ではなく、アウトライン領域を作成することを示します。 地域がクライアント制御またはでエディター制御するかどうかを指定、`dwBehavior`のメンバー、<xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion>構造体。 スマート アウトライン実装では、さまざまなエディターとクライアントの制御にアウトライン領域を含めることができます。 アウトライン領域が折りたたまれている、「...」などのときに表示されるバナー テキストを指定、`pszBanner`のメンバー、<xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion>構造体。 エディターの既定のバナー テキストを非表示の領域は、「...」です。

@@ -1,49 +1,51 @@
 ---
-title: "Math.random 関数 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "random"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "Math オブジェクト"
-  - "擬似乱数"
-  - "random メソッド"
+title: "Math.random 関数 (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: random
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- psuedorandom numbers
+- random method
+- Math object
 ms.assetid: a28c5c66-c42f-4082-9b71-9a5ee4652cd7
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 2c142b5adafb6bceeba8f0d72c88b0612ac24d4c
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# Math.random 関数 (JavaScript)
-0 ～ 1 の範囲の擬似乱数を返します。  
+# <a name="mathrandom-function-javascript"></a>Math.random 関数 (JavaScript)
+0 ～ 1 間の疑似乱数を返します。  
   
-## 構文  
-  
-```  
-  
-Math.random( )  
+## <a name="syntax"></a>構文  
   
 ```  
   
-## 解説  
- 生成される擬似乱数は 0 ～ 1 の範囲内の値になります \(0 は含まれ、1 は含まれません\)。つまり、戻り値が 0 になることはあっても 1 になることはありません。  乱数ジェネレーターのシードは、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] が初めて読み込まれた時点で自動的に生成されます。  
+Math.random( )  
   
-## 必要条件  
+```  
+  
+## <a name="remarks"></a>コメント  
+ 生成される擬似乱数は (包括) の 0 から 1 (排他) には、返される数は 0 を指定できます。 ただしは常に 1 より小さくします。 乱数ジェネレーターのシードはときに自動的に[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]が最初に読み込まれます。  
+  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
- **対象**: [Math オブジェクト](../../javascript/reference/math-object-javascript.md)  
+ **適用されます**: [Math オブジェクト](../../javascript/reference/math-object-javascript.md)  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Math.pow 関数](../../javascript/reference/math-pow-function-javascript.md)

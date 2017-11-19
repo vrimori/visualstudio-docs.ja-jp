@@ -1,51 +1,54 @@
 ---
-title: "setUint32 メソッド (DataView) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "setUint32 メソッド (DataView) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: ab2894fe-4cdc-40c8-9503-951e42ca61e7
-caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 4e4d2bf075c46f84c75a174b0ca5954b9cedf154
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# setUint32 メソッド (DataView)
-指定されたビューの先頭からのバイト オフセット位置に Uint32 値を設定します。  配置の制約はありません。オフセットにマルチバイト値が設定されている場合があります。  
+# <a name="setuint32-method-dataview"></a>setUint32 メソッド (DataView)
+ビューの先頭から指定したバイト オフセット位置にある Uint32 値を設定します。 配置制約はありません。任意のオフセット位置にマルチ バイト値を設定することがあります。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 dataView.setUint32 (byteOffset, value, littleEndian);   
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `byteOffset`  
- 値が取得されるバッファーの位置。  
+ 値を取得するバッファー内の場所。  
   
  `value`  
  設定する値。  
   
  `littleEndian`  
- 省略可能です。  false または未定義の場合は、ビッグ エンディアンの値が書き込まれます。それ以外の場合はリトル エンディアンの値が書き込まれます。  
+ 省略可能です。 False または定義されていない場合、ビッグ エンディアン値を記述する必要があります、それ以外の場合、リトル エンディアンの値を書き込む必要があります。  
   
-## 解説  
- これらのメソッドでは、ビューの終端を越えて書き込まれる場合に例外が発生します。  
+## <a name="remarks"></a>コメント  
+ これらのメソッドでは、ビューの末尾を越える書きがある場合に例外が発生します。  
   
-## 使用例  
- 次の例は、DataView の最初の Uint32 を設定する方法を示します。  
+## <a name="example"></a>例  
+ 次の例では、DataView で最初の Uint32 を設定する方法を示します。  
   
-```javascript  
+```JavaScript  
 var req = new XMLHttpRequest();  
     req.open('GET', "http://www.example.com");  
     req.responseType = "arraybuffer";  
@@ -61,5 +64,5 @@ var req = new XMLHttpRequest();
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv10](../../javascript/reference/includes/jsv10-md.md)]

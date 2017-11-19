@@ -1,219 +1,228 @@
 ---
-title: "データセットのデータの保存 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "データ [Visual Studio], 保存"
-  - "データの妥当性検査, データセット"
-  - "データセット [Visual Basic], データセットの概要"
-  - "データセット [Visual Basic], 制約"
-  - "データセット [Visual Basic], マージ"
-  - "データセット [Visual Basic], 検証 (データを)"
-  - "行のバージョン"
-  - "保存 (データを), データ保存の概要"
-  - "TableAdapter"
-  - "更新, 制約 (データセットでの)"
-  - "更新 (データセットを), 制約"
+title: "データをデータベースに保存 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- datasets [Visual Basic], validating data
+- data validation, datasets
+- data [Visual Studio], saving
+- row version
+- updating datasets, constraints
+- datasets [Visual Basic], about datasets
+- datasets [Visual Basic], merging
+- updates, constraints in datasets
+- saving data, about saving data
+- datasets [Visual Basic], constraints
+- TableAdapters
 ms.assetid: afe6cb8a-dc6a-428b-b07b-903ac02c890b
-caps.latest.revision: 27
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.technology: vs-data-tools
+ms.openlocfilehash: 2c309bd30fb364c36b9e98640a02eb3cf2611aef
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# データセットのデータの保存
-データ保存は、アプリケーションで変更されたデータを元のデータ ストア \(通常は SQL Server などのリレーショナル データベース\) に戻して保持するプロセスです。  
+# <a name="save-data-back-to-the-database"></a>データをデータベースに保存します。
+データセットは、データのメモリ内のコピーです。 そのデータを変更する場合は、これらの変更をデータベースに保存することをお勧めします。 これには 3 つの方法のいずれかの操作を行います。  
   
- データセットは実際にはデータのキャッシュ \(インメモリ コピー\) であるため、元のデータ ソースに情報を書き込むプロセスはデータセットのデータを変更するのとは別のプロセスです。  データセット内の更新されたデータをデータベースに送り返すには、TableAdapter の `Update` メソッドのいずれかを呼び出すか、TableAdapter の DBDirect メソッドのいずれかを呼び出します。  
+-   TableAdapter の更新方法のいずれかを呼び出す  
   
- データセットへの変更をデータベースに戻す方法の詳細については、「[方法 : TableAdapter を使用してデータを更新する](../data-tools/update-data-by-using-a-tableadapter.md)」および「[方法 : データセットの変更をデータベースに保存する](../Topic/How%20to:%20Save%20Dataset%20Changes%20to%20a%20Database.md)」を参照してください。  
+-   TableAdapter の DBDirect メソッドのいずれかを呼び出す  
   
- Visual Studio には、関連テーブルにデータを保存する際の保存の実行に役立つ `TableAdapterManager` コンポーネントが用意されています。  このコンポーネントにより、データベースで定義された外部キー制約に基づく適切な順序で保存されるようになります。  詳細については、「[階層更新の概要](../Topic/Hierarchical%20Update%20Overview.md)」を参照してください。  
+-   Visual Studio で生成する、データセットには、データセット内の他のテーブルに関連付けられているテーブルが含まれている場合、TableAdapterManager で UpdateAll メソッドを呼び出すことにより  
   
- データセット内でデータを変更する方法については、「[アプリケーションでのデータ編集](../data-tools/editing-data-in-your-application.md)」を参照してください。  
+Windows フォームまたは XAML ページ上のコントロールをデータセット テーブルをバインドするデータとデータ バインディング アーキテクチャは、すべての作業を行います。  
   
-## 2 段階の更新  
- データセットを介してデータ ソースを更新するには、2 段階のプロセスがあります。  第 1 段階のプロセスは、新しい情報 \(新しいレコード、変更されたレコード、または削除されたレコード\) によるデータセットの更新です。  アプリケーションがデータセットだけを扱う \(たとえば、更新したデータセットは次の処理のために別のアプリケーションに送信される\) 場合は、第 1 段階で更新処理を完了します。  
+Tableadapter に慣れている場合は、次のトピックのいずれかに直接ジャンプできます。  
   
-> [!NOTE]
->  Windows フォームでは、データ バインディング アーキテクチャが、データ バインド コントロールからデータセットへの変更の送信を処理します。独自のコードでデータセットを明示的に更新する必要はありません。  詳細については、「[Windows フォームでのデータ バインド](../Topic/Windows%20Forms%20Data%20Binding.md)」を参照してください。  
+|トピック|説明|  
+|-----------|-----------------|  
+|[データベースに新しいレコードを挿入する](../data-tools/insert-new-records-into-a-database.md)|実行する方法が更新し、Tableadapter またはコマンド オブジェクトを使用して挿入します。|  
+|[TableAdapter を使用してデータを更新する](../data-tools/update-data-by-using-a-tableadapter.md)|Tableadapter が更新を実行する方法|  
+|[階層更新](../data-tools/hierarchical-update.md)|2 つ以上の関連するテーブルを含むデータセットから更新プログラムを実行する方法|  
+|[同時実行例外を処理する](../data-tools/handle-a-concurrency-exception.md)|2 つのユーザーを同時に、データベース内の同じデータを変更するときに例外を処理する方法|  
+|[方法: トランザクションを使用してデータを保存](../data-tools/save-data-by-using-a-transaction.md)|System.Transactions 名前空間と TransactionScope オブジェクトを使用して、トランザクションでデータを保存する方法|  
+|[チュートリアル: トランザクション内のデータを保存します。](../data-tools/save-data-in-a-transaction.md)|トランザクション内のデータベースへのデータの保存を示すために Windows フォーム アプリケーションを作成するチュートリアル|  
+|[データベースへのデータの保存 (複数テーブル)](../data-tools/save-data-to-a-database-multiple-tables.md)|レコードを編集し、データベースに複数のテーブルで変更を保存する方法|  
+|[オブジェクトからデータベースにデータを保存する](../data-tools/save-data-from-an-object-to-a-database.md)|TableAdapter DbDirect メソッドを使用して、データセットをデータベースに含まれないオブジェクトからデータを渡す方法|  
+|[TableAdapter DBDirect メソッドを使用してデータを保存する](../data-tools/save-data-with-the-tableadapter-dbdirect-methods.md)|TableAdapter を使用して、データベースに直接 SQL クエリを送信する方法|  
+|[データセットを XML として保存する](../data-tools/save-a-dataset-as-xml.md)|XML ドキュメントにデータセットを保存する方法|  
   
- データ ソース \(データベースなど\) を更新する場合は、第 2 段階のプロセスでデータセットの変更内容を元のデータ ソースに送ります。  第 1 段階のデータセット更新プロセスでは基になるデータ ソースに変更内容が書き込まれないので、第 2 段階の更新プロセスを明示的に実行する必要があります。  データ ソース更新プロセスを明示的に実行するには、通常、データセットにレコードを読み込むのに使用したのと同じ TableAdapter \(またはデータ アダプター\) の Update メソッドを呼び出します。ただし、別のアダプターを使用して 1 つのデータ ソースから別のデータ ソースにデータを移動したり、複数のデータ ソースを更新したりすることもできます。  
+## <a name="two-stage-updates"></a>2 段階の更新  
+ 2 段階のプロセスは、データ ソースを更新します。 最初の手順では、新しいレコード、変更されたレコード、または削除されたレコードでデータセットを更新します。 アプリケーションは、データ ソースに戻ることはありませんこれらの変更を送信する場合を完了すると、更新プログラムはします。  
+  
+ データベースに変更を送信する場合、2 番目の手順が必要です。 データ バインド コントロールを使用していない場合は、手動でデータセットを作成するために使用する同じ TableAdapter (またはデータ アダプター) の Update メソッドを呼び出す必要があります。 ただし、1 つのデータ ソースからデータを移動する、または複数のデータ ソースを更新するも別のアダプターを使用することができます。 データ バインディングを使用するいないし、関連テーブルに対して変更の保存は、TableAdapterManager、自動生成されたクラスの変数を手動でインスタンス化し、その UdpateAll メソッドを呼び出す必要があります。  
   
  ![Visual Basic データセット更新](../data-tools/media/vbdatasetupdates.gif "vbDatasetUpdates")  
 2 段階の更新プロセスと、正常な更新における DataRowVersion の役割  
   
- 構造的にデータセットではデータをコレクションの集合として利用できます。  データセットにはテーブルのコレクションが含まれます。  テーブルには行のコレクションが含まれます。  テーブルは <xref:System.Data.DataSet> オブジェクトのコレクションとして公開され、レコードは <xref:System.Data.DataTable> オブジェクトの <xref:System.Data.DataTable.Rows%2A> コレクションで利用できます。  基本コレクション メソッドを使って単にコレクションを操作するだけでデータセットのデータを変更できますが、基になるデータ ソースを更新する場合は、データセットの変更専用にデザインされたメソッドを使う必要があります。  
+ データセットには、行のコレクションを含むテーブルのコレクションが含まれています。 後で、基になるデータ ソースを更新する場合は、DataTable.DataRowCollection プロパティの追加または行を削除するときにメソッドを使用する必要があります。 これらのメソッドは、データ ソースの更新のために必要な変更の追跡を実行します。 行のプロパティで RemoveAt コレクションを呼び出すと場合、削除がデータベースに戻されて伝えするされません。  
   
- たとえば、データ テーブルからレコードを削除するのにテーブルの <xref:System.Data.DataTable.Rows%2A> コレクションの [RemoveAt メソッド](https://msdn.microsoft.com/en-us/library/system.data.datarowcollection.removeat.aspx)を呼び出すと、レコードはデータセットから物理的に削除されます。  データセットをデータの構造化ストアとしてだけ使用し、変更情報を別のアプリケーションに転送する予定がない場合は、この方法でコレクションを操作してデータセットを更新しても問題ありません。  
+## <a name="merge-datasets"></a>データセットをマージします。  
+ によってデータセットの内容を更新する*マージ*別のデータセットにします。 内容をコピーするためにこの、*ソース*に呼び出し元のデータセットのデータセット (と呼ばれる、*ターゲット*データセット)。 データセットをマージすると、ソース データセットの新しいレコードはターゲット データセットに追加されます。 また、ソース データセットのその他の列もターゲット データセットに追加されます。 ローカルのデータセットを用意して、別のアプリケーションから 2 番目のデータセットを取得する場合は、データセットをマージすると便利です。 XML web サービスなどのコンポーネントから 2 番目のデータセットを取得する場合、または複数のデータセットからデータを統合する必要がある場合にも便利です。  
   
- ただし、変更内容をデータ ソースまたは別のアプリケーションに送信する場合は、それぞれの更新に関して変更情報 \(メタデータ\) を保持しておく必要があります。  後で変更内容をデータ ソースまたはアプリケーションに送信するときに、適切なレコードを探して更新するのに必要な情報をプロセスに与えるためです。  たとえば、データセット内のレコードを削除する場合、削除したレコードに関する情報をデータセット内に保持しておく必要があります。  このようにすると、TableAdapter の `DeleteCommand` が呼び出されたとき、データ ソースの元のレコードを特定する十分な履歴情報があるので、そのレコードを削除できます。  詳細については、後の「変更に関する情報の保持」を参照してください。  
-  
-## データセットのマージ  
- データセットの内容は*マージ*により更新できます。あるデータセット \(*ソース*データセットと呼ぶ\) の内容を呼び出し元のデータセット \(*ターゲット* データセットと呼ぶ\) にコピーするのがマージです。  データセットをマージすると、ソース データセットの新しいレコードはターゲット データセットに追加されます。  また、ソース データセットのその他の列もターゲット データセットに追加されます。  データセットのマージは、ローカル データセットを持っていて別のアプリケーションまたは XML Web サービスのようなコンポーネントから 2 つ目のデータセットを取得する場合に特に役立ちます。  また、複数のデータセットのデータを統合する必要がある場合にも役立ちます。  
-  
- データセットをマージするときにオプションのブール型の引数 \(`preserveChanges`\) を渡し、ターゲット データセットの既存の変更を保持するかどうかを <xref:System.Data.DataSet.Merge%2A> メソッドに指定することもできます。  データセットはレコードの複数のバージョンを保持しているため、レコードの複数のバージョンがマージされるということに留意することは重要です。  マージする 2 つのデータセットのレコードを次の表に示します。  
+ データセットをマージする場合は、ブール型の引数を渡すことができます (`preserveChanges`) ことが示されます、<xref:System.Data.DataSet.Merge%2A>メソッドはターゲット データセットの既存の変更を保持するかどうか。 データセットは、レコードの複数のバージョンを維持、ために、レコードの 1 つ以上のバージョンがマージされることに注意してください必要があります。 次の表は、2 つのデータセット内のレコードをマージする方法を示しています。  
   
 |DataRowVersion|ターゲット データセット|ソース データセット|  
-|--------------------|------------------|----------------|  
-|元|James Wilson|James C.  Wilson|  
-|\[現在\]|Jim Wilson|James C.  Wilson|  
+|--------------------|--------------------|--------------------|  
+|元|James Wilson|James C. Wilson|  
+|現在|Jim Wilson|James C. Wilson|  
   
- `preserveChanges=false targetDataset.Merge(sourceDataset)` である場合にこの表について <xref:System.Data.DataSet.Merge%2A> メソッドを呼び出すと、結果は次のようになります。  
-  
-|DataRowVersion|ターゲット データセット|ソース データセット|  
-|--------------------|------------------|----------------|  
-|元|James C.  Wilson|James C.  Wilson|  
-|\[現在\]|James C.  Wilson|James C.  Wilson|  
-  
- `preserveChanges = true targetDataset.Merge(sourceDataset, true)` である場合に <xref:System.Data.DataSet.Merge%2A> メソッドを呼び出すと、結果は次のようになります。  
+ 呼び出す、<xref:System.Data.DataSet.Merge%2A>メソッドで、前の表を`preserveChanges=false targetDataset.Merge(sourceDataset)`結果、次の。  
   
 |DataRowVersion|ターゲット データセット|ソース データセット|  
-|--------------------|------------------|----------------|  
-|元|James C.  Wilson|James C.  Wilson|  
-|\[現在\]|Jim Wilson|James C.  Wilson|  
+|--------------------|--------------------|--------------------|  
+|元|James C. Wilson|James C. Wilson|  
+|現在|James C. Wilson|James C. Wilson|  
+  
+ <xref:System.Data.DataSet.Merge%2A> である場合に `preserveChanges = true targetDataset.Merge(sourceDataset, true)` メソッドを呼び出すと、結果は次のようになります。  
+  
+|DataRowVersion|ターゲット データセット|ソース データセット|  
+|--------------------|--------------------|--------------------|  
+|元|James C. Wilson|James C. Wilson|  
+|現在|Jim Wilson|James C. Wilson|  
   
 > [!CAUTION]
->  `preserveChanges = true` の場合にターゲット データセットのレコードに対して <xref:System.Data.DataSet.RejectChanges%2A> メソッドが呼び出されると、そのレコードは *"ソース"* データセットの元のデータに戻ります。  これは、ターゲット データセットによって元のデータ ソースを更新しようとする場合に、更新する元の行を見つけることができない場合があることを意味しています。  ただし、データ ソースの更新されているレコードを別のデータセットに格納してからマージを行うことで、同時実行違反を回避できます \(同時実行違反は、データセットにレコードが格納された後で別のユーザーがデータ ソース内のレコードを変更すると発生します\)。  
+>  `preserveChanges = true`シナリオでは場合、<xref:System.Data.DataSet.RejectChanges%2A>メソッドは、ターゲット データセットのレコードにし、元のデータに戻ります、*ソース*データセット。 つまりターゲット データセットによって元のデータ ソースを更新しようとする場合にできないことがありますを更新する元の行を検出できません。 別のデータセット、データ ソースから更新されたレコードに格納し、同時実行制御違反を防ぐためにマージを実行することによって、同時実行制御違反を防ぐことができます。 (同時実行違反は、データセットにレコードが格納された後で別のユーザーがデータ ソース内のレコードを変更すると発生します)。  
   
-## 更新の制約  
- 既存のデータ行を変更するには、各列のデータを追加または更新します。  データセットに制約 \(外部キーの制約や null 非許容の制約など\) が含まれている場合は、レコードを更新するとき \(1 つの列の更新が終了した後、次の列の更新を始める前\) にレコードが一時的にエラー状態になることがあります。  
+## <a name="update-constraints"></a>更新の制約  
+ 既存のデータ行を変更するには、追加または個々 の列のデータを更新します。 データセットに制約 (外部キー、null 非許容の制約など) が含まれている場合は、レコード一時的にできること、エラー状態に更新すると考えられるです。 つまり、できます、エラー状態に 1 つの列の更新の終了後、次のいずれかを取得する前にします。  
   
- 早期に制約違反を防ぐために、更新制約を一時的に中断できます。  これには 2 つの目的があります。  
+ 早期に制約違反を防ぐために、更新制約を一時的に中断できます。 これには 2 つの目的があります。  
   
--   1 つの列を更新した後、別の列を更新する前にエラーがスローされるのを防ぐ。  
+-   エラーが 1 つの列の更新が完了しましたが、別の更新を開始していない後にスローされるを防ぐ。  
   
--   特定の更新イベント \(検証によく使われるイベント\) の発生を中断する。  
-  
- 更新が完了した後で制約チェックを再び有効にできます。これにより更新イベントも再び有効になり、更新イベントが発生します。  
-  
+-   これにより、特定の更新イベントの発生 (検証によく使われるイベント)。  
+   
 > [!NOTE]
->  Windows フォームでは、データ グリッドに組み込まれたデータ バインディング アーキテクチャによりフォーカスが行の外に移るまで制約チェックを中断できます。<xref:System.Data.DataRow.BeginEdit%2A> メソッド、<xref:System.Data.DataRow.EndEdit%2A> メソッド、または <xref:System.Data.DataRow.CancelEdit%2A> メソッドを明示的に呼び出す必要はありません。  
+>  Windows フォームでのデータ グリッドに組み込まれているデータ バインディング アーキテクチャは、フォーカスが、行外に移動し、明示的に呼び出していないまで制約チェックを中断、 <xref:System.Data.DataRow.BeginEdit%2A>、 <xref:System.Data.DataRow.EndEdit%2A>、または<xref:System.Data.DataRow.CancelEdit%2A>メソッドです。  
   
- データセットで <xref:System.Data.DataSet.Merge%2A> メソッドが呼び出されると、制約は自動的に無効になります。  マージが完了したときに、有効にできない制約がデータセットにあると、<xref:System.Data.ConstraintException> がスローされます。  この場合、<xref:System.Data.DataSet.EnforceConstraints%2A> プロパティが `false` に設定されるので、すべての制約違反を解決してから <xref:System.Data.DataSet.EnforceConstraints%2A> プロパティを `true` に設定し直す必要があります。  
+ データセットで <xref:System.Data.DataSet.Merge%2A> メソッドが呼び出されると、制約は自動的に無効になります。 マージが完了したら、有効にするデータセットに制約がある場合、<xref:System.Data.ConstraintException>がスローされます。 この場合、<xref:System.Data.DataSet.EnforceConstraints%2A> プロパティが `false,` に設定されるので、すべての制約違反を解決してから <xref:System.Data.DataSet.EnforceConstraints%2A> プロパティを `true` に設定し直す必要があります。  
   
- 更新が完了した後で制約チェックを再び有効にできます。これにより更新イベントも再び有効になり、更新イベントが発生します。  
+ 更新プログラムを完了すると、再利用できます制約チェックをこれも更新イベントを再度有効になり、それらを発生させます。  
   
- イベントの中断の詳細については、「[方法 : データセットの読み込み中に制約をオフにする](../data-tools/turn-off-constraints-while-filling-a-dataset.md)」を参照してください。  
+ イベントの中断に関する詳細については、次を参照してください。[データセットの読み込み中に制約をオフに](../data-tools/turn-off-constraints-while-filling-a-dataset.md)です。  
   
-## データセットの更新エラー  
- データセットのレコードを更新するときにエラーが発生する場合があります。  たとえば、データ型が不適切な列、データが長すぎる列、その他の整合性問題がある列にデータを誤って書き込んだ場合などです。  また、更新イベントのいずれかの段階においてカスタム エラーを引き起こす可能性がある、アプリケーション固有の有効性の確認が実行される場合があります。  詳細については、「[データセットのデータの検証](../data-tools/validate-data-in-datasets.md)」を参照してください。  
+## <a name="dataset-update-errors"></a>データセットの更新エラー  
+ データセットのレコードを更新するときにエラーが発生する場合があります。 たとえば、列に正しくない型のデータまたは非常に長いデータまたは他の整合性の問題のあるデータを誤って書き込んだ場合します。 または、更新イベントのいずれかの段階においてカスタム エラーを引き起こすアプリケーション固有の検証チェックする必要があります。 詳細については、次を参照してください。[データセット内のデータを検証](../data-tools/validate-data-in-datasets.md)です。  
   
-## 変更に関する情報の保持  
- データセットの変更に関する情報を保持するには、行が変更されているかどうかを示すフラグを設定する方法 \(<xref:System.Data.DataRow.RowState%2A>\)、レコードの複数のコピーを保持する方法 \(<xref:System.Data.DataRowVersion>\) の 2 とおりがあります。  変更に関する情報を使用することにより、プロセスはデータセットの変更内容を確認し、適切な更新内容をデータ ソースに送信できます。  
+## <a name="maintaining-information-about-changes"></a>変更に関する情報を保持します。  
+ データセットの変更に関する情報を保持する 2 つの方法: 行が変更されたことを示すフラグを設定 (<xref:System.Data.DataRow.RowState%2A>)、およびレコードの複数のコピーを保持することで (<xref:System.Data.DataRowVersion>)。 変更に関する情報を使用することにより、プロセスはデータセットの変更内容を確認し、適切な更新内容をデータ ソースに送信できます。  
   
-### RowState プロパティ  
- <xref:System.Data.DataRow> オブジェクトの <xref:System.Data.DataRow.RowState%2A> プロパティは、データの特定の行のステータスに関する情報を提供する値です。  
+### <a name="rowstate-property"></a>RowState プロパティ  
+ <xref:System.Data.DataRow.RowState%2A> オブジェクトの <xref:System.Data.DataRow> プロパティは、データの特定の行のステータスに関する情報を提供する値です。  
   
  <xref:System.Data.DataRowState> 列挙定数に使用できる値の詳細を次の表に示します。  
   
 |DataRowState 列挙定数の値|説明|  
-|-------------------------|--------|  
-|<xref:System.Data.DataRowState>|行は項目として <xref:System.Data.DataRowCollection> に追加されました。この状態にある行に対応する元のバージョンはありません。最後の <xref:System.Data.DataRow.AcceptChanges%2A> メソッドが呼び出されたときにこの行は存在していなかったからです。|  
-|<xref:System.Data.DataRowState>|行は <xref:System.Data.DataRow> オブジェクトの <xref:System.Data.DataRow.Delete%2A> を使用して削除されました。|  
-|<xref:System.Data.DataRowState>|行は作成されましたが、<xref:System.Data.DataRowCollection> の一部ではありません。  <xref:System.Data.DataRow> オブジェクトがこの状態になるのは、作成直後でコレクションに追加される前、またはコレクションから削除された場合です。|  
-|<xref:System.Data.DataRowState>|行内の列の値はなんらかの方法で変更されました。|  
-|<xref:System.Data.DataRowState>|行は <xref:System.Data.DataRow.AcceptChanges%2A> が最後に呼び出されてから変更されていません。|  
+|------------------------|-----------------|  
+|<xref:System.Data.DataRowState.Added>|行は項目として <xref:System.Data.DataRowCollection> に追加されました。 (この状態の行が対応する元のバージョンが存在しないため場合、最後<xref:System.Data.DataRow.AcceptChanges%2A>メソッドが呼び出されました)。|  
+|<xref:System.Data.DataRowState.Deleted>|行は <xref:System.Data.DataRow.Delete%2A> オブジェクトの <xref:System.Data.DataRow> を使用して削除されました。|  
+|<xref:System.Data.DataRowState.Detached>|行は作成されましたが、<xref:System.Data.DataRowCollection> の一部ではありません。 A<xref:System.Data.DataRow>がコレクションから削除された後、それが作成された後に追加された、コレクションにすぐに、オブジェクトがこの状態にします。|  
+|<xref:System.Data.DataRowState.Modified>|行の列の値が何らかの方法で変更します。|  
+|<xref:System.Data.DataRowState.Unchanged>|行は <xref:System.Data.DataRow.AcceptChanges%2A> が最後に呼び出されてから変更されていません。|  
   
-### DataRowVersion 列挙定数  
- データセットはレコードの複数のバージョンを保持します。  <xref:System.Data.DataRow> オブジェクトの <xref:System.Data.DataRowVersion> 列挙定数を使用すると、特定のバージョンの <xref:System.Data.DataRow> オブジェクトを取得できます。  
+### <a name="datarowversion-enumeration"></a>DataRowVersion 列挙型  
+データセットはレコードの複数のバージョンを保持します。 <xref:System.Data.DataRowVersion>で見つかった値を取得する場合に、フィールドを使用できます、<xref:System.Data.DataRow>を使用して、<xref:System.Data.DataRow.Item%2A>プロパティまたは<xref:System.Data.DataRow.GetChildRows%2A>のメソッド、<xref:System.Data.DataRow>オブジェクト。  
   
- <xref:System.Data.DataRowVersion> 列挙定数に使用できる値の詳細を次の表に示します。  
+<xref:System.Data.DataRowVersion> 列挙定数に使用できる値の詳細を次の表に示します。  
   
 |DataRowVersion 列挙定数の値|説明|  
-|---------------------------|--------|  
-|<xref:System.Data.DataRowVersion>|レコードの現在のバージョンには、<xref:System.Data.DataRow.AcceptChanges%2A> が最後に呼び出された後のレコードへの変更がすべて含まれています。  行が削除されている場合、現在のバージョンは存在しません。|  
-|<xref:System.Data.DataRowVersion>|データセット スキーマまたはデータ ソースにより定義されたレコードの既定値です。|  
-|<xref:System.Data.DataRowVersion>|レコードの元のバージョンは、データセットで最後の変更がコミットされたときのレコードのコピーです。  つまり、通常はデータ ソースから読み込まれたときのレコードのバージョンです。|  
-|<xref:System.Data.DataRowVersion>|更新の実行中、つまり <xref:System.Data.DataRow.BeginEdit%2A> メソッドの呼び出しと <xref:System.Data.DataRow.EndEdit%2A> メソッドの呼び出しの間に一時的に利用できる、レコードの提案されたバージョンです。  通常は <xref:System.Data.DataTable.RowChanging> などのイベントのハンドラーで、レコードの提案されたバージョンにアクセスします。  <xref:System.Data.DataRow.CancelEdit%2A> メソッドを呼び出すと、変更は無効になり、データ行の提案されたバージョンは削除されます。|  
+|--------------------------|-----------------|  
+|<xref:System.Data.DataRowVersion.Current>|現在のバージョン レコードのレコードで前回実行されたすべての変更が含まれています<xref:System.Data.DataRow.AcceptChanges%2A>が呼び出されました。 行が削除された場合、現在のバージョンはありません。|  
+|<xref:System.Data.DataRowVersion.Default>|データセット スキーマまたはデータ ソースにより定義されたレコードの既定値です。|  
+|<xref:System.Data.DataRowVersion.Original>|レコードの元のバージョンは、データセットで最後の変更がコミットされたときのレコードのコピーです。 つまり、通常はデータ ソースから読み込まれたときのレコードのバージョンです。|  
+|<xref:System.Data.DataRowVersion.Proposed>|一時的の実行中の更新に使用できるレコードの提案されたバージョン: されるは、までの時間を呼び出す、<xref:System.Data.DataRow.BeginEdit%2A>メソッドおよび<xref:System.Data.DataRow.EndEdit%2A>メソッドです。 通常は <xref:System.Data.DataTable.RowChanging> などのイベントのハンドラーで、レコードの提案されたバージョンにアクセスします。 <xref:System.Data.DataRow.CancelEdit%2A> メソッドを呼び出すと、変更は無効になり、データ行の提案されたバージョンは削除されます。|  
   
- 元のバージョンおよび現在のバージョンは、更新情報をデータ ソースに送信する場合に役立ちます。  通常、更新情報をデータ ソースに送信すると、データベースの新しい情報がレコードの現在のバージョンに含まれます。  元のバージョンの情報は、更新するレコードを見つけるために使用されます。  たとえば、レコードの主キーが変更された場合に備え、変更を更新するためにデータ ソースの適切なレコードを探す方法を用意しておく必要があります。  元のバージョンがなかった場合、レコードはデータ ソースに追加される可能性が高く、結果として不要なレコードが作成されるだけでなく、不正確な古いレコードが 1 つ作成されることになります。  2 つのバージョンは同時実行制御にも使用できます。元のバージョンをデータ ソースのレコードと比較し、レコードがデータセットに最後に読み込まれた後で変更されているかどうかを確認します。  
+ 元のバージョンおよび現在のバージョンは、更新情報をデータ ソースに送信する場合に役立ちます。 通常、更新情報をデータ ソースに送信すると、データベースの新しい情報がレコードの現在のバージョンに含まれます。 元のバージョンの情報は、更新するレコードを見つけるために使用されます。  
+  
+ たとえば、レコードの主キーが変更されている場合は、変更内容を更新するために、データ ソース内で適切なレコードを検索する方法が必要です。 元のバージョンがなかった場合、レコードはデータ ソースに追加される可能性が高く、結果として不要なレコードが作成されるだけでなく、不正確な古いレコードが 1 つ作成されることになります。 2 つのバージョンは、同時実行制御でも使用されます。 元のバージョンを特定のレコードがデータセットに読み込まれてから変更されていないデータ ソース内のレコードを比較できます。  
   
  提案されたバージョンは、実際に変更をデータセットにコミットする前に検証が必要な場合に役立ちます。  
   
- レコードが変更されていても、その行の元のバージョンまたは現在のバージョンが必ず存在するわけではありません。  新しい行をテーブルに挿入した場合、元のバージョンは存在せず、現在のバージョンがあるだけです。  同様に、テーブルの `Delete` メソッドを呼び出すことにより行を削除した場合、元のバージョンはありますが現在のバージョンはありません。  
+ レコードが変更されていても、その行の元のバージョンまたは現在のバージョンが必ず存在するわけではありません。 新しい行をテーブルに挿入した場合、元のバージョンは存在せず、現在のバージョンがあるだけです。 同様に、テーブルの `Delete` メソッドを呼び出すことにより行を削除した場合、元のバージョンはありますが現在のバージョンはありません。  
   
- データ行の <xref:System.Data.DataRow.HasVersion%2A> メソッドを照会することにより、レコードの特定のバージョンが存在するかどうかを確認するテストを行うことができます。  列の値を要求するときに <xref:System.Data.DataRowVersion> 列挙値をオプションの引数として渡すことにより、レコードのいずれかのバージョンにアクセスできます。  
+ データ行の <xref:System.Data.DataRow.HasVersion%2A> メソッドを照会することにより、レコードの特定のバージョンが存在するかどうかを確認するテストを行うことができます。 列の値を要求するときに <xref:System.Data.DataRowVersion> 列挙値をオプションの引数として渡すことにより、レコードのいずれかのバージョンにアクセスできます。  
   
-## 変更されたレコードの取得  
- 一般に、データセットの各レコードをすべて更新することはありません。  たとえば、多数のレコードを表示する Windows フォームの <xref:System.Windows.Forms.DataGridView> コントロールをユーザーが使用しているとします。  このとき、ユーザーが一部のレコードだけを更新し、レコードを 1 つ削除し、新しいレコードを 1 つ挿入したとします。  そのような場合のために、データセットおよびデータ テーブルには、変更された行だけを返すためのメソッド \(`GetChanges`\) が用意されています。  
+## <a name="getting-changed-records"></a>変更されたレコードを取得します。  
+ データセットのすべてのレコードを更新しないように一般的なことをお勧めします。 たとえば、多数のレコードを表示する Windows フォームの <xref:System.Windows.Forms.DataGridView> コントロールをユーザーが使用しているとします。 このとき、ユーザーが一部のレコードだけを更新し、レコードを 1 つ削除し、新しいレコードを 1 つ挿入したとします。 そのような場合のために、データセットおよびデータ テーブルには、変更された行だけを返すためのメソッド (`GetChanges`) が用意されています。  
   
- データ テーブルの `GetChanges` メソッド \(<xref:System.Data.DataTable.GetChanges%2A>\) またはデータセットの `GetChanges` メソッド \(<xref:System.Data.DataSet.GetChanges%2A>\) を使って、変更されたレコードのサブセットを作成できます。  データ テーブルのメソッドを呼び出すと、変更されたレコードだけを含むテーブルのコピーが返されます。  同様に、データセットのメソッドを呼び出すと、変更されたレコードだけを含む新しいデータセットを取得できます。  `GetChanges` を単独で呼び出すと、変更されたすべてのレコードが返されます。  これに対し、必要な <xref:System.Data.DataRowState> をパラメーターとして `GetChanges` メソッドに渡すと、変更されたレコードのうち、新しく追加されたレコード、削除とマークされたレコード、分離されたレコード、変更されたレコード、のいずれか必要なサブセットを指定できます。  
+ データ テーブルの `GetChanges` メソッド (<xref:System.Data.DataTable.GetChanges%2A>) またはデータセットの <xref:System.Data.DataSet.GetChanges%2A> メソッド () を使って、変更されたレコードのサブセットを作成できます。 データ テーブルのメソッドを呼び出すと、変更されたレコードだけを含むテーブルのコピーが返されます。 同様に、データセットのメソッドを呼び出すと、変更されたレコードだけを含む新しいデータセットを取得できます。  
   
- 変更されたレコードのサブセットの取得は、レコードを処理するために別のコンポーネントに送信する場合に特に役立ちます。  データセット全体を送信する代わりに、コンポーネントが必要としているレコードだけを取得することにより、ほかのコンポーネントとの通信によるオーバーヘッドを小さくできます。  詳細については、「[方法 : 変更された行を取得する](../Topic/How%20to:%20Retrieve%20Changed%20Rows.md)」を参照してください。  
+ `GetChanges`それ自体では、変更されたすべてのレコードを返します。 目的を渡すことによってこれに対し、<xref:System.Data.DataRowState>へのパラメーターとして、`GetChanges`メソッド、か変更されたレコードのサブセットを指定することができます。 新たにデタッチされた、レコードのレコード、削除対象としてマークされているレコードを追加または変更されたレコード。  
   
-## データセットの変更のコミット  
- データセットを変更すると、変更された行の <xref:System.Data.DataRow.RowState%2A> プロパティが設定されます。  <xref:System.Data.DataRowView.RowVersion%2A> プロパティによって、レコードの元のバージョンおよび現在のバージョンが確立されて保持され、利用可能になります。  これらのプロパティには変更内容を表すメタデータが格納され、このメタデータは適切な更新内容をデータ ソースに送信するのに必要です。  
+ レコードを処理するための別のコンポーネントに送信する場合は、変更されたレコードのサブセットを取得すると便利です。 データセット全体を送信する代わりに、コンポーネントが必要としているレコードだけを取得することにより、ほかのコンポーネントとの通信によるオーバーヘッドを小さくできます。   
   
- 変更内容がデータ ソースの現在の状態を反映している場合は、この情報を保持する必要はなくなります。  通常、データセットとそのソースの同期は以下の 2 とおりの場合に保持されます。  
+## <a name="committing-changes-in-the-dataset"></a>データセットの変更をコミットします。  
+ データセットを変更すると、変更された行の <xref:System.Data.DataRow.RowState%2A> プロパティが設定されます。 レコードの元と現在のバージョンが確立、維持されて、および利用可能で、<xref:System.Data.DataRowView.RowVersion%2A>プロパティです。 これらの変更された行のプロパティに格納されているメタデータは、データ ソースに適切な更新プログラムを送信する必要があります。  
+  
+ 変更内容がデータ ソースの現在の状態を反映している場合は、この情報を保持する必要はなくなります。 通常が 2 つありますが、データセットとそのソースの同期。  
   
 -   ソースからデータを読み込んだときなど、情報をデータセットに読み込んだ直後。  
   
--   変更内容をデータセットからデータ ソースに送信した後。データベースに変更内容を送信するのに必要な変更情報が失われてしまうため、送信前ではありません。  
+-   データセットからデータ ソースへの変更の送信後に (前に、ではありません、ため、変更をデータベースに送信するために必要な変更情報を失います)。  
   
- 保留中の変更は、<xref:System.Data.DataSet.AcceptChanges%2A> メソッドを呼び出してデータセットにコミットできます。  通常、<xref:System.Data.DataSet.AcceptChanges%2A> はアプリケーションにおいて次の場合に呼び出されます。  
+保留中の変更は、<xref:System.Data.DataSet.AcceptChanges%2A> メソッドを呼び出してデータセットにコミットできます。 通常、<xref:System.Data.DataSet.AcceptChanges%2A>は次のタイミングで呼び出されます。  
   
--   データセットを読み込んだ後。  TableAdapter の `Fill` メソッドを呼び出すことによりデータセットを読み込んだ場合、TableAdapter により変更が自動的にコミットされます。  ただし、別のデータセットをマージすることによりデータセットを読み込む場合は、変更を手動でコミットする必要があります。  
+-   した後、データセットを読み込みます。 TableAdapter の `Fill` メソッドを呼び出すことによりデータセットを読み込んだ場合、TableAdapter により変更が自動的にコミットされます。 ただし、別のデータセットをマージすることによりデータセットを読み込む場合は、変更を手動でコミットする必要があります。  
   
     > [!NOTE]
-    >  `Fill` メソッドが呼び出されたときに TableAdapter が変更を自動的にコミットしないようにするには、TableAdapter の `AcceptChangesDuringFill` プロパティを `false` に設定します。  `false` に設定した場合、読み込み中に挿入された各行の <xref:System.Data.DataRow.RowState%2A> は <xref:System.Data.DataRowState> に設定されます。  
+    >  アダプターが防止を呼び出すときに自動的に変更をコミットすることができます、`Fill`を設定することによって、`AcceptChangesDuringFill`アダプターのプロパティ`false`です。 設定されている場合`false`、続いて、<xref:System.Data.DataRow.RowState%2A>の読み込み中に挿入される行ごとに設定されている<xref:System.Data.DataRowState.Added>です。  
   
--   データセットの変更内容を別のプロセス \(Web サービスなど\) に送信した後。  
+-   後に、データセットの変更内容を XML Web サービスなどの別のプロセスに送信します。  
   
     > [!CAUTION]
-    >  この方法で変更をコミットすると、変更情報はすべて削除されます。  データセットへの変更内容に依存するアプリケーションの操作が終了するまでは、変更をコミットしないでください。  
+    >  この方法で変更をコミットすると、変更情報はすべて削除されます。 ない変更をコミットするまでした後をデータセットにどのような変更が加えられた次のトピックに、アプリケーションを必要とする操作の実行を完了します。  
   
- この方法で実行できる処理は次のとおりです。  
+この方法で実行できる処理は次のとおりです。  
   
--   レコードの <xref:System.Data.DataRowVersion> バージョンを <xref:System.Data.DataRowVersion> バージョンに書き込み、元のバージョンを上書きする。  
+-   書き込みます、<xref:System.Data.DataRowVersion.Current>にレコードのバージョンの<xref:System.Data.DataRowVersion.Original>バージョンと元のバージョンを上書きします。  
   
--   <xref:System.Data.DataRow.RowState%2A> プロパティが <xref:System.Data.DataRowState> に設定されている行をすべて削除する。  
+-   任意の行を削除位置、<xref:System.Data.DataRow.RowState%2A>プロパティに設定されている<xref:System.Data.DataRowState.Deleted>です。  
   
--   レコードの <xref:System.Data.DataRow.RowState%2A> プロパティを <xref:System.Data.DataRowState> に設定する。  
+-   レコードの <xref:System.Data.DataRow.RowState%2A> プロパティを <xref:System.Data.DataRowState.Unchanged> に設定する。  
   
- <xref:System.Data.DataSet.AcceptChanges%2A> メソッドは、3 つのレベルで利用可能です。  このメソッドを <xref:System.Data.DataRow> オブジェクトで呼び出すと、その行の変更だけがコミットされます。  また、<xref:System.Data.DataTable> オブジェクトで呼び出すとテーブル内のすべての行がコミットされ、<xref:System.Data.DataSet> オブジェクトで呼び出すとデータセットの全テーブルの全レコードの保留中の変更がすべてコミットされます。  
+<xref:System.Data.DataSet.AcceptChanges%2A> メソッドは、3 つのレベルで利用可能です。 呼び出せる、<xref:System.Data.DataRow>行にだけコミットするオブジェクトを変更します。 も呼び出すことができます、<xref:System.Data.DataTable>テーブル内のすべての行をコミットするオブジェクト。 最後に、それを呼び出せます、<xref:System.Data.DataSet>データセットのすべてのテーブルの全レコードの保留中のすべての変更をコミットするオブジェクト。  
   
- メソッドが呼び出されたオブジェクトに基づいてコミットされる変更を次の表に示します。  
+メソッドが呼び出されたオブジェクトに基づいてコミットされる変更を次の表に示します。  
   
 |メソッド|結果|  
-|----------|--------|  
-|<xref:System.Data.DataRow.AcceptChanges%2A?displayProperty=fullName>|変更は特定の行にだけコミットされます。|  
-|<xref:System.Data.DataTable.AcceptChanges%2A?displayProperty=fullName>|変更は特定のテーブルのすべての行にコミットされます。|  
-|<xref:System.Data.DataSet.AcceptChanges%2A?displayProperty=fullName>|変更はデータセットのすべてのテーブルのすべての行にコミットされます。|  
+|------------|------------|  
+|<xref:System.Data.DataRow.AcceptChanges%2A?displayProperty=fullName>|変更は、特定の行にだけコミットされます。|  
+|<xref:System.Data.DataTable.AcceptChanges%2A?displayProperty=fullName>|変更は、特定のテーブルのすべての行にコミットされます。|  
+|<xref:System.Data.DataSet.AcceptChanges%2A?displayProperty=fullName>|変更は、データセットのすべてのテーブルのすべての行にコミットされます。|  
   
 > [!NOTE]
->  TableAdapter の `Fill` メソッドを呼び出すことによってデータセットを読み込む場合は、変更を明示的に受け入れる必要はありません。`Fill` メソッドは、データ テーブルへの読み込みが終了すると既定で `AcceptChanges` メソッドを呼び出します。  
+>  TableAdapter を呼び出すことによって、データセットを読み込んだかどうか`Fill`メソッドがない明示的に変更を確定します。 既定では、`Fill`メソッドの呼び出し、`AcceptChanges`メソッド テーブルのデータ設定が終了した後です。  
   
- 関連メソッド `RejectChanges` は、レコードの <xref:System.Data.DataRowVersion> バージョンを <xref:System.Data.DataRowVersion> バージョンにコピーし、各レコードの <xref:System.Data.DataRow.RowState%2A> を <xref:System.Data.DataRowState> に設定し直すことで、変更による影響を元に戻します。  
+ 関連するメソッドでは、 <xref:System.Data.DataSet.RejectChanges%2A>、コピーして変更の効果を元に戻します、<xref:System.Data.DataRowVersion.Original>に戻るバージョン、<xref:System.Data.DataRowVersion.Current>レコードのバージョン。 また、設定、<xref:System.Data.DataRow.RowState%2A>各レコードの<xref:System.Data.DataRowState.Unchanged>します。  
   
-## データの検証  
- アプリケーションのデータが、渡される対象プロセスの要件を満たしているかどうかを検査するために、検証を追加することが必要な場合もあります。  この検証には、フォームへのユーザーの入力が適切かどうかの確認、別のアプリケーションから送られたデータの検証、またはコンポーネント内で計算された情報がデータ ソースおよびアプリケーションの制約を満たしているかどうかの確認が含まれます。  
+## <a name="data-validation"></a>データの検証  
+ アプリケーションのデータが、渡される対象プロセスの要件を満たしているかどうかを検査するために、検証を追加することが必要な場合もあります。 フォームのユーザーのエントリが正しいこと、他のアプリケーションによって、アプリケーションに送信されるデータの検証またはでもチェック コンポーネント内で計算される情報が、データ ソースの制約内にあることを確認でこのが含まれますアプリケーションの要件です。  
   
  データを検証するには次の方法があります。  
   
--   ビジネス層で、データを検証するコードをアプリケーションに追加する。  データセットでこれを行うことができます。  データセットでは、列および行の値が変更されるたびに変更を検証する機能など、バック エンド検証を活用できます。  詳細については、「[データセットのデータの検証](../data-tools/validate-data-in-datasets.md)」を参照してください。  
+-   ビジネス層で、データを検証するコードをアプリケーションに追加する。 データセットでこれを行うことができます。 データセットでは、列および行の値が変更されるたびに変更を検証する機能など、バック エンド検証を活用できます。 詳細については、次を参照してください。[データセット内のデータを検証](../data-tools/validate-data-in-datasets.md)です。  
   
--   プレゼンテーション層で、検証をフォームに追加する。  詳細については、「[Windows フォームでのユーザー入力の検証](../Topic/User%20Input%20Validation%20in%20Windows%20Forms.md)」を参照してください。  
+-   プレゼンテーション層で、検証をフォームに追加する。 詳細については、次を参照してください。 [Windows フォームでのユーザーの入力検証](/dotnet/framework/winforms/user-input-validation-in-windows-forms)です。  
   
--   データのバック エンドで、データをデータベースなどのデータ ソースに送信し、データの受け入れまたは拒否を行うことができるようにする。  データの検証やエラー情報を提供する洗練された機能を備えたデータベースを使用している場合、実用的なアプローチになります。データのソースが何であるかにかかわらずデータを検証できるからです。  ただし、アプリケーション固有の検証要件には適応できない可能性があります。  また、データ ソースでデータを検証した場合に、バック エンドによって発生する検証エラーを解決する方法によってはデータへのラウンド トリップが多数発生する場合があります。  
+-   データのバック エンドで、データをデータベースなどのデータ ソースに送信し、データの受け入れまたは拒否を行うことができるようにする。 データの検証やエラー情報を提供する洗練された機能を備えたデータベースを使用している場合、実用的なアプローチになります。データのソースが何であるかにかかわらずデータを検証できるからです。 ただし、このアプローチでは、アプリケーション固有の検証の要件が対応いない可能性があります。 また、アプリケーションが、バック エンドによって発生する検証エラーの解決を容易にする方法に応じて、データ ソースにラウンド トリップが多数データ ソースでデータを検証の結果ことができます。  
   
     > [!IMPORTANT]
-    >  <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> プロパティを <xref:System.Data.CommandType> に設定したデータ コマンドを使用するときは、クライアントから送信された情報をデータベースに渡す前に、その情報を十分にチェックしてください。  悪意のあるユーザーが、承認なしでデータベースにアクセスしたり、データベースを破壊したりする目的で、変更した SQL ステートメントや追加の SQL ステートメントの送信 \(挿入\) を試みる場合があります。  ユーザーの入力をデータベースに転送する前に、その情報が有効であることを常に検証する必要があります。できる限り、常にパラメーター化されたクエリまたはストアド プロシージャを使用することをお勧めします。  詳細については、「[Script Exploits Overview](../Topic/Script%20Exploits%20Overview.md)」を参照してください。  
+    >  データ コマンドを使用する場合、<xref:System.Data.SqlClient.SqlCommand.CommandType%2A>プロパティに設定されている<xref:System.Data.CommandType.Text>、慎重に、データベースに渡す前に、クライアントから送信される情報を確認します。 悪意のあるユーザーが、承認なしでデータベースにアクセスしたり、データベースを破壊したりする目的で、変更した SQL ステートメントや追加の SQL ステートメントの送信 (挿入) を試みる場合があります。 データベースへのユーザー入力を転送する前に、常に情報が有効なことを確認します。 常にパラメーター化クエリまたはストアド プロシージャ可能な場合に使用することをお勧めします。 詳細については、「[スクリプトによる攻略の概要](http://msdn.microsoft.com/Library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)」を参照してください。  
   
- データセットを変更した後で、変更内容をデータ ソースに転送できます。  一般に、これは TableAdapter \(またはデータ アダプター\) の `Update` メソッドを呼び出すことによって行います。  このメソッドによりデータ テーブルの各レコードに対してループを実行し、更新が必要な場合はその種類 \(更新、挿入、または削除\) を確認し、適切なコマンドを実行します。  
-  
-## 更新内容をデータ ソースに転送する方法  
- 更新を実行する方法を説明するために、1 つのデータ テーブルを含むデータセットをアプリケーションで使用する場合を考えます。  アプリケーションはデータベースから 2 つの行をフェッチします。  行の取得後、インメモリ データ テーブルは次のようになります。  
+## <a name="transmitting-updates-to-the-data-source"></a>データ ソースへの送信の更新  
+データセットを変更した後で、変更内容をデータ ソースに転送できます。 一般に、これは TableAdapter (またはデータ アダプター) の `Update` メソッドを呼び出すことによって行います。 メソッドをループし、データ テーブル内の各レコードは、必要な更新プログラムの種類を決定 (update、insert、または delete) 存在する場合、適切なコマンドを実行します。  
+
+ 更新を行う方法の図解は、アプリケーションを 1 つのデータ テーブルを含むデータセットを使用する場合を考えます。 アプリケーションはデータベースから 2 つの行をフェッチします。 行の取得後、インメモリ データ テーブルは次のようになります。  
   
 ```  
 (RowState)     CustomerID   Name             Status  
@@ -221,7 +230,7 @@ manager: "ghogen"
 (Unchanged)    c400         Nancy Buchanan    Pending  
 ```  
   
- アプリケーションによって Nancy Buchanan のステータスが "Preferred" に変更されます。この変更の結果、その行の <xref:System.Data.DataRow.RowState%2A> プロパティの値は、<xref:System.Data.DataRowState> から <xref:System.Data.DataRowState> に変更されます。  最初の行の <xref:System.Data.DataRow.RowState%2A> プロパティの値は、<xref:System.Data.DataRowState> のままです。  データ テーブルは次のようになります。  
+ アプリケーションによって Nancy Buchanan のステータスが "Preferred" に変更されます。 この変更の結果、その行の <xref:System.Data.DataRow.RowState%2A> プロパティの値は、<xref:System.Data.DataRowState.Unchanged> から <xref:System.Data.DataRowState.Modified> に変更されます。 最初の行の <xref:System.Data.DataRow.RowState%2A> プロパティの値は、<xref:System.Data.DataRowState.Unchanged> のままです。 データ テーブルは次のようになります。  
   
 ```  
 (RowState)     CustomerID   Name             Status  
@@ -229,57 +238,35 @@ manager: "ghogen"
 (Modified)     c400         Nancy Buchanan    Preferred  
 ```  
   
- アプリケーションは `Update` メソッドを呼び出し、データセットをデータベースに転送します。  このメソッドは各行を順に調べます。  最初の行はデータベースからフェッチされた行であり、変更されていないため、SQL ステートメントはデータベースに転送されません。  
+ アプリケーションは `Update` メソッドを呼び出し、データセットをデータベースに転送します。 このメソッドは各行を順に調べます。 最初の行にメソッド SQL ステートメントに転送されません、データベースの該当する行が変更されていないため、データベースからフェッチされました。  
   
- 一方、2 番目の行については、`Update` メソッドによって適切なデータ コマンドが自動的に呼び出され、データベースに転送されます。  SQL ステートメント固有の構文は、基になるデータ ストアがサポートする SQL の言語によって異なります。  ただし、転送される SQL ステートメントには次のような一般的な特徴があります。  
+ 2 番目の行、ただし、`Update`メソッドは自動的に正しいデータ コマンドを呼び出すし、データベースに転送されます。 SQL ステートメントの特定の構文は、基になるデータ ストアでサポートされている SQL の言語に依存します。 ただし、転送される SQL ステートメントには次のような一般的な特徴があります。  
   
--   転送される SQL ステートメントは UPDATE ステートメントである。  <xref:System.Data.DataRow.RowState%2A> プロパティの値が <xref:System.Data.DataRowState> であるため、このアダプターは UPDATE ステートメントを使用します。  
+-   転送される SQL ステートメントは UPDATE ステートメントである。 <xref:System.Data.DataRow.RowState%2A> プロパティの値が <xref:System.Data.DataRowState.Modified> であるため、このアダプターは UPDATE ステートメントを使用します。  
   
--   転送される SQL ステートメントには、UPDATE ステートメントの転送先が `CustomerID = 'c400'` の行であることを示す WHERE 句が含まれている。  `CustomerID` は転送先のテーブルの主キーであるため、SELECT ステートメントのこの部分により転送先の行を他の行と区別します。  行を識別するのに必要な値が変更されてしまった場合に備え、WHERE 句の情報はレコードの元のバージョン \(`DataRowVersion.Original`\) から派生しています。  
+-   転送される SQL ステートメントには、UPDATE ステートメントの対象が行であることを示す WHERE 句が含まれています。 ここで`CustomerID = 'c400'`です。 `CustomerID` は転送先のテーブルの主キーであるため、SELECT ステートメントのこの部分により転送先の行を他の行と区別します。 WHERE 句の派生のレコードの元のバージョンに関する情報 (`DataRowVersion.Original`)、行を識別するために必要な値が変更された場合に、します。  
   
 -   転送される SQL ステートメントには SET 句が含まれており、変更された列の新しい値を設定する。  
   
     > [!NOTE]
-    >  TableAdapter の `UpdateCommand` プロパティにストアド プロシージャの名前が設定されている場合、TableAdapter は SQL ステートメントを作成しません。  その代わりに、適切なパラメーターを渡してストアド プロシージャを呼び出します。  
+    >  TableAdapter の `UpdateCommand` プロパティにストアド プロシージャの名前が設定されている場合、TableAdapter は SQL ステートメントを作成しません。 その代わりに、適切なパラメーターを渡してストアド プロシージャを呼び出します。  
   
-## パラメーターの引き渡し  
- データベース内で更新するレコードの値は、通常、パラメーターを使って渡されます。  TableAdapter の `Update` メソッドは、UPDATE ステートメントを実行するときにパラメーター値を設定する必要があります。  この値は、該当するデータ コマンドの `Parameters` コレクションから取得します。この場合は TableAdapter の `UpdateCommand` オブジェクトです。  
+## <a name="passing-parameters"></a>パラメーターを渡す  
+ 通常、パラメーターを使用するには、データベースで更新するレコードの値を渡します。  ときに、TableAdapter の`Update`メソッドには UPDATE ステートメントが実行され、パラメーター値を設定する必要があります。 この値は、該当するデータ コマンドの `Parameters` コレクションから取得します。この場合は TableAdapter の `UpdateCommand` オブジェクトです。  
   
- Visual Studio ツールを使ってデータ アダプターを生成した場合は、ステートメントの各パラメーター プレースホルダーに対応するパラメーターのコレクションが `UpdateCommand` オブジェクトに含まれます。  
+ データ アダプターを生成する Visual Studio のツールを使用した場合、`UpdateCommand`オブジェクトには、ステートメント内の各パラメーター プレース ホルダーに対応するパラメーターのコレクションが含まれています。  
   
- 各パラメーターの <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A?displayProperty=fullName> プロパティは、データ テーブル内の列を指しています。  たとえば、`au_id` パラメーターおよび `Original_au_id` パラメーターの `SourceColumn` プロパティには、データ テーブルの author id を含む列が設定されます。  アダプターの `Update` メソッドを実行すると、更新されるレコードから author id 列が読み取られ、ステートメントに値が設定されます。  
+ 各パラメーターの <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A?displayProperty=fullName> プロパティは、データ テーブル内の列を指しています。 たとえば、`SourceColumn` パラメーターおよび `au_id` パラメーターの `Original_au_id` プロパティには、データ テーブルの author id を含む列が設定されます。ときに、アダプターの`Update`メソッドを実行する、作成者 id 列から読み取るレコードが更新されると、ステートメントに値を設定します。  
   
- UPDATE ステートメントにおいては、レコードに書き込まれる新しい値と、更新されるレコードをデータベースで見つけるために必要な古い値を両方とも指定する必要があります。  したがって、それぞれの値に、SET 句のパラメーターと WHERE 句の 2 つのパラメーターがあります。  両方のパラメーターは更新されるレコードからデータを読み込みますが、各パラメーターの [SqlParameter.SourceVersion プロパティ](https://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqlparameter.sourceversion.aspx)に基づいて、列ごとのバージョンを取得します。  SET 句のパラメーターは現在のバージョンを取得し、WHERE 句のパラメーターは元のバージョンを取得します。  
+ UPDATE ステートメントでは、(レコードに書き込まれるもの) 両方の新しい値をできるだけでなく、古い値が (レコードは、データベース内にあることができます) を指定する必要があります。 したがって、それぞれの値に、SET 句のパラメーターと WHERE 句の 2 つのパラメーターがあります。 両方のパラメーターが、更新されるレコードからデータを読み取りますが、異なるバージョンのパラメーターの列の値の[SqlParameter.SourceVersion プロパティ](https://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqlparameter.sourceversion.aspx)です。 SET 句のパラメーターは現在のバージョンを取得し、WHERE 句のパラメーターは元のバージョンを取得します。  
   
 > [!NOTE]
 >  `Parameters` コレクションの値はコードで設定することもできます。通常はデータ アダプターの <xref:System.Data.DataTable.RowChanging> イベントのイベント ハンドラーで設定します。  
   
-## 関連テーブルの更新  
- データセットに複数のテーブルが含まれている場合は、各データ アダプターの `Update` メソッドを個別に呼び出してそれぞれのテーブルを更新する必要があります。  テーブルに親子関係がある場合は、特定の順序で更新内容をデータベースに送信する必要があります。  通常、親レコードおよび関連する子レコード \(たとえば、新しい顧客レコードと 1 つ以上の関連する注文レコード\) の両方をデータセットに追加したような場合です。  データベース自体に関係整合性の規則を適用する場合は、親レコードが作成される前に新しい子レコードをデータベースに送信するとエラーが発生します。  
-  
- これに対して、データセットの関連レコードを削除する場合は、一般に逆の順序、つまり先に子テーブル、次に親テーブルという順序で更新内容を送信する必要があります。  この順序に従わないとデータベースでエラーが発生する可能性が高くなります。参照整合性の規則により、関連する子レコードが存在している間は親レコードを削除できないからです。  
-  
- 関連テーブルの更新に関する一般的な規則に基づき、次の順序に従います。  
-  
-1.  子テーブル : レコードを削除する。  
-  
-2.  親テーブル : レコードを挿入、更新、および削除する。  
-  
-3.  子テーブル : レコードを挿入および更新する。  
-  
-4.  詳細については、「[チュートリアル : データベースへのデータの保存 \(複数テーブル\)](../data-tools/save-data-to-a-database-multiple-tables.md)」を参照してください。  
-  
-## 同時実行制御  
- データセットはデータ ソースから切断されているため、データ ソースのレコードにロックを保持できません。  したがって、データベースを更新する場合に同時実行制御を維持することがアプリケーションにとって重要であると、データベースのレコードによってデータセットのレコードを調整する必要があります。  たとえば、最後にデータセットを更新した後でデータベースのレコードが変更されていることがわかったとします。  その場合は、アプリケーションに適したロジックを実行し、データベースのレコードや変更されたレコードに対応するデータセット内のレコードの処理方法を指定する必要があります。  
-  
-## 参照  
- [TableAdapter の概要](../data-tools/tableadapter-overview.md)   
- [方法 : TableAdapter を使用してデータを更新する](../data-tools/update-data-by-using-a-tableadapter.md)   
- [Visual Studio のデータ アプリケーションの概要](../data-tools/overview-of-data-applications-in-visual-studio.md)   
- [Visual Studio でのデータへの接続](../data-tools/connecting-to-data-in-visual-studio.md)   
- [アプリケーションでデータを受け取る準備](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [アプリケーションへのデータのフェッチ](../data-tools/fetching-data-into-your-application.md)   
- [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [アプリケーションでのデータ編集](../data-tools/editing-data-in-your-application.md)   
- [データの検証](../Topic/Validating%20Data.md)   
- [データの保存](../data-tools/saving-data.md)
+## <a name="see-also"></a>関連項目
+[Visual Studio のデータセット ツール](../data-tools/dataset-tools-in-visual-studio.md)   
+[作成し、Tableadapter を構成します。](create-and-configure-tableadapters.md)  
+[TableAdapter を使用してデータを更新します。](../data-tools/update-data-by-using-a-tableadapter.md)   
+[Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)   
+[データの検証](validate-data-in-datasets.md)   
+[データの保存](../data-tools/saving-data.md)

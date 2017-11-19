@@ -1,58 +1,58 @@
 ---
-title: "CustomParameter 要素 (Visual Studio テンプレート) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#CustomParameter"
-helpviewer_keywords: 
-  - "CustomParameters 要素 [Visual Studio プロジェクト テンプレート]"
+title: "CustomParameter 要素 (Visual Studio テンプレート) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#CustomParameter
+helpviewer_keywords: CustomParameters element [Visual Studio project templates]
 ms.assetid: 743c4489-74ac-403a-bbaa-eed7d785a3ac
-caps.latest.revision: 6
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d52d22e3b4200cee0bd5d3dd3eab3e5356f0dbbd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CustomParameter 要素 (Visual Studio テンプレート)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-テンプレートからプロジェクトまたはアイテムを作成するときに使用する、カスタムのパラメーター名およびパラメーター値を含みます。  
+# <a name="customparameter-element-visual-studio-templates"></a>CustomParameter 要素 (Visual Studio テンプレート)
+カスタム パラメーターの名前と、テンプレートからプロジェクトまたは項目を作成するときに使用する値が含まれています。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 <CustomParameter Name="name" Value="value">  
 ```  
   
-## 属性および要素  
+## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
-### 属性  
+### <a name="attributes"></a>属性  
   
 |属性|説明|  
-|--------|--------|  
-|`Name`|必須。  パラメーターの名前。  パラメーターの書式は $*name*$ となります。|  
-|`Value`|必須。  パラメーターの置換値です。|  
+|---------------|-----------------|  
+|`Name`|必須です。 パラメーターの名前。 パラメーターの形式は $*名前*$ です。|  
+|`Value`|必須です。 パラメーターの置換値。|  
   
-### 子要素  
+### <a name="child-elements"></a>子要素  
  なし。  
   
-### 親要素  
+### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
-|--------|--------|  
-|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|ウィザードがパラメーターの置換を実行するときにテンプレート ウィザードに渡される、カスタム パラメーターをグループ化します。|  
+|-------------|-----------------|  
+|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|ウィザードを使用するパラメーターの置換時に、テンプレート ウィザードに渡すカスタム パラメーターをグループ化します。|  
   
-## 解説  
- テンプレートに `CustomParameter` 要素がある場合、作成されたプロジェクト ファイルまたはアイテム ファイル内で、`Name` 属性が `Value` 属性に置き換えられます。  
+## <a name="remarks"></a>コメント  
+ テンプレートが含まれている場合`CustomParameter`要素、すべてのインスタンス、`Name`属性に置き換え、`Value`作成したプロジェクトまたはアイテムのファイル内の属性です。  
   
-## 使用例  
- テンプレートでカスタム パラメーターを使用する方法を次に示します。  次のカスタム パラメーターを使用してテンプレートからプロジェクトまたはアイテムが作成されると、テンプレート ファイル内のすべての `$color1$` が `Red` に、すべての `$color2$` が `Blue` に置換されます。  
+## <a name="example"></a>例  
+ 次の例では、テンプレートでいくつかのカスタム パラメーターを使用する方法を示します。 次のカスタム パラメーターのすべてのインスタンスを持つテンプレートからプロジェクトまたは項目を作成するときに`$color1$`と`$color2$`テンプレートのファイルが置き換えられます`Red`と`Blue`、それぞれします。  
   
 ```  
 <CustomParameters>  
@@ -61,7 +61,7 @@ caps.handback.revision: 6
 </CustomParameters>  
 ```  
   
-## 参照  
- [CustomParameters 要素 \(Visual Studio テンプレート\)](../extensibility/customparameters-element-visual-studio-templates.md)   
- [テンプレート名](../ide/template-parameters.md)   
+## <a name="see-also"></a>関連項目  
+ [CustomParameters 要素 (Visual Studio テンプレート)](../extensibility/customparameters-element-visual-studio-templates.md)   
+ [テンプレート パラメーター](../ide/template-parameters.md)   
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)

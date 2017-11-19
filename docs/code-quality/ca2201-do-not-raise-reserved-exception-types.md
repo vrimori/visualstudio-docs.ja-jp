@@ -1,41 +1,42 @@
 ---
-title: "CA2201: 予約された例外の種類を発生させません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DoNotRaiseReservedExceptionTypes"
-  - "CA2201"
-helpviewer_keywords: 
-  - "CA2201"
-  - "DoNotRaiseReservedExceptionTypes"
+title: "Ca 2201: 予約済みの例外の種類を発生させません |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DoNotRaiseReservedExceptionTypes
+- CA2201
+helpviewer_keywords:
+- CA2201
+- DoNotRaiseReservedExceptionTypes
 ms.assetid: dd14ef5c-80e6-41a5-834e-eba8e2eae75e
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 713018b96aed70d52b1b11e75b0c2993312ef474
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA2201: 予約された例外の種類を発生させません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca2201-do-not-raise-reserved-exception-types"></a>CA2201: 予約された例外の種類を発生させません
 |||  
 |-|-|  
 |TypeName|DoNotRaiseReservedExceptionTypes|  
 |CheckId|CA2201|  
-|分類|Microsoft.Usage|  
+|カテゴリ|Microsoft.Usage|  
 |互換性に影響する変更点|あり|  
   
-## 原因  
- メソッドによって、汎用的すぎる例外の種類、またはランタイムによって予約されている例外の種類が発生しています。  
+## <a name="cause"></a>原因  
+ メソッドは、一般的すぎるか、ランタイムによって予約されている例外の種類を発生させます。  
   
-## 規則の説明  
- 次の例外の種類は汎用的すぎて、ユーザーに与える情報が不十分です。  
+## <a name="rule-description"></a>規則の説明  
+ 次の例外の種類をユーザーに十分な情報を提供する汎用的なのとおりです。  
   
 -   <xref:System.Exception?displayProperty=fullName>  
   
@@ -43,7 +44,7 @@ caps.handback.revision: 16
   
 -   <xref:System.SystemException?displayProperty=fullName>  
   
- 次の例外の種類は共通言語ランタイムによって予約済みであり、共通言語ランタイムのみがスローします。  
+ 次の例外の種類は予約されていると、共通言語ランタイムによってのみスローされる必要があります。  
   
 -   <xref:System.ExecutionEngineException?displayProperty=fullName>  
   
@@ -53,39 +54,39 @@ caps.handback.revision: 16
   
 -   <xref:System.OutOfMemoryException?displayProperty=fullName>  
   
- **汎用的な例外をスローしないでください**  
+ **汎用的な例外をスローしないでください。**  
   
- ライブラリまたはフレームワークの <xref:System.Exception> や <xref:System.SystemException> などの汎用的な例外の種類をスローする場合、コンシューマーは、処理方法のわからない不明な例外を含むすべての例外をキャッチするよう強制されます。  
+ など、一般的な例外型をスローするかどうか<xref:System.Exception>または<xref:System.SystemException>コンシューマーすべてをキャッチするように強制ライブラリまたはフレームワークでの処理方法がわからない不明な例外を含む例外。  
   
- 代わりに、フレームワーク内の既存の派生型をスローするか、または <xref:System.Exception> から派生する独自の型を作成してください。  
+ 代わりに、フレームワークに既に存在するより強い派生型をスローするか作成から派生する独自の型<xref:System.Exception>です。  
   
- **特定の例外をスローします**  
+ **特定の例外をスローします。**  
   
- 次の表は、パラメーターおよびパラメーターの検証時にスローする例外を示しています。プロパティの set アクセサーの値パラメーターも記載されています。  
+ 次の表に、パラメーターおよびプロパティの set アクセサー内で、値パラメーターを含め、パラメーターを検証する場合にスローされる例外。  
   
-|パラメーターの説明|Exception|  
-|---------------|---------------|  
-|`null` 参照|<xref:System.ArgumentNullException?displayProperty=fullName>|  
-|有効値の範囲外 \(コレクションまたは一覧のインデックスなど\)|<xref:System.ArgumentOutOfRangeException?displayProperty=fullName>|  
-|無効な `enum` 値|<xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=fullName>|  
-|メソッドのパラメーターの仕様に一致していない書式 \(`ToString(String)` の書式文字列など\) が含まれます。|<xref:System.FormatException?displayProperty=fullName>|  
-|それ以外の場合は無効|<xref:System.ArgumentException?displayProperty=fullName>|  
+|パラメーターの説明|例外|  
+|---------------------------|---------------|  
+|`null`参照|<xref:System.ArgumentNullException?displayProperty=fullName>|  
+|(コレクションまたは一覧のインデックス) などの値の許容範囲外|<xref:System.ArgumentOutOfRangeException?displayProperty=fullName>|  
+|無効な`enum`値|<xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=fullName>|  
+|メソッドのパラメーターの仕様を満たしていない形式が含まれています (などの書式指定文字列`ToString(String)`)|<xref:System.FormatException?displayProperty=fullName>|  
+|それ以外の場合が無効です。|<xref:System.ArgumentException?displayProperty=fullName>|  
   
- オブジェクトの現在の状態に対して操作が無効な場合    <xref:System.InvalidOperationException?displayProperty=fullName> をスローします。  
+ 操作がオブジェクト throw の現在の状態に対して無効な場合<xref:System.InvalidOperationException?displayProperty=fullName>  
   
- 破棄されたオブジェクトで操作が実行される場合    <xref:System.ObjectDisposedException?displayProperty=fullName> をスローします。  
+ 破棄されたオブジェクトで操作が実行されるとスローします。<xref:System.ObjectDisposedException?displayProperty=fullName>  
   
- 操作がサポートされない場合 \(読み取り用として開かれたストリームのオーバーライドされた **Stream.Write** など\)    <xref:System.NotSupportedException?displayProperty=fullName> をスローします。  
+ 操作がサポートされていない場合 (など、オーバーライドされた**Stream.Write**読み取り用に開くストリームの) スロー<xref:System.NotSupportedException?displayProperty=fullName>  
   
- 変換によってオーバーフローが発生する場合 \(明示的なキャスト演算子のオーバーロードなど\)    <xref:System.OverflowException?displayProperty=fullName> スローします。  
+ スローする変換を実行すると、オーバーフロー (明示的なキャスト演算子のオーバー ロードなど) があるとき<xref:System.OverflowException?displayProperty=fullName>  
   
- その他のすべての状況では、<xref:System.Exception> から派生する独自の型の作成を検討し、その型をスローしてください。  
+ その他のすべての状況から派生する独自の型の作成を検討して<xref:System.Exception>をスローします。  
   
-## 違反の修正方法  
- この規則違反を修正するには、スローされる例外の種類を、予約済みの種類ではない特定の種類に変更します。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、予約済みの種類のいずれかではない特定の種類にスローされた例外の種類を変更します。  
   
-## 警告を抑制する状況  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
  この規則による警告は抑制しないでください。  
   
-## 関連規則  
- [CA1031: 一般的な例外の種類はキャッチしません](../Topic/CA1031:%20Do%20not%20catch%20general%20exception%20types.md)
+## <a name="related-rules"></a>関連規則  
+ [CA1031: 一般的な例外の種類はキャッチしません](../code-quality/ca1031-do-not-catch-general-exception-types.md)

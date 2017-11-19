@@ -1,59 +1,58 @@
 ---
-title: "IDiaEnumDebugStreamData::Item | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumDebugStreamData::Item メソッド"
+title: "Idiaenumdebugstreamdata::item |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumDebugStreamData::Item method
 ms.assetid: 761e61a5-44a6-4d5d-a98e-c2e9b89d2343
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 28cc2177d82c71f257812fd2b7106001ce4ea066
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumDebugStreamData::Item
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idiaenumdebugstreamdataitem"></a>IDiaEnumDebugStreamData::Item
 指定されたレコードを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT Item (   
-   DWORD  index,  
-   DWORD  cbData,  
-   DWORD* pcbData,  
-   BYTE   data[]  
+```C++  
+HRESULT Item (   
+   DWORD  index,  
+   DWORD  cbData,  
+   DWORD* pcbData,  
+   BYTE   data[]  
 );  
 ```  
   
-#### パラメーター  
- index  
- \[入力\] 取得するレコードのインデックス。  インデックスは 0 ~ \-1 `count` に `count` が [IDiaEnumDebugStreamData::get\_Count](../Topic/IDiaEnumDebugStreamData::get_Count.md) によって返される場合になります。  
+#### <a name="parameters"></a>パラメーター  
+ インデックス  
+ [in]取得するレコードのインデックス。 インデックスが範囲 0 `count`-1 で、ここで`count`によって返される[idiaenumdebugstreamdata::get_count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)です。  
   
  cbData  
- byte \[入力\] バッファーのサイズ。  
+ [in](バイト単位)、データ バッファーのサイズ。  
   
  pcbData  
- \[出力\] 返されるバイト数を返します。  `data` が `NULL` 場合`pcbData` は指定されたレコードのデータの合計バイト数。  
+ [out]返されるバイト数を返します。 場合`data`は`NULL`、し`pcbData`指定されたレコードで使用できるデータのバイト数合計にはが含まれています。  
   
- \[データ\]  
- \[入力\] デバッグ ストリームのレコードのデータが格納されるバッファー。  
+ データ  
+ [out]デバッグ ストリーム レコードのデータが入力バッファー。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  `index` のパラメーターが範囲外の場合は無効なパラメーターの戻り`E_INVALIDARG`。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 返します`E_INVALIDARG`無効なパラメーターの場合は、`index`パラメーターが範囲外です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)   
- [IDiaEnumDebugStreamData::Next](../../debugger/debug-interface-access/idiaenumdebugstreamdata-next.md)   
- [IDiaEnumDebugStreams::Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)   
- [IDiaEnumDebugStreamData::get\_Count](../Topic/IDiaEnumDebugStreamData::get_Count.md)   
- [IDiaEnumDebugStreamData::Skip](../Topic/IDiaEnumDebugStreamData::Skip.md)
+ [Idiaenumdebugstreamdata::next](../../debugger/debug-interface-access/idiaenumdebugstreamdata-next.md)   
+ [Idiaenumdebugstreams::item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)   
+ [Idiaenumdebugstreamdata::get_count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)   
+ [IDiaEnumDebugStreamData::Skip](../../debugger/debug-interface-access/idiaenumdebugstreamdata-skip.md)

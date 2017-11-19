@@ -1,36 +1,38 @@
 ---
-title: "文書内のテキストの操作"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ドキュメント [Visual Studio での Office 開発], テキスト"
-  - "Office ドキュメント [Visual Studio での Office 開発, テキスト"
-  - "テキスト [Visual Studio での Office 開発]"
-  - "Word [Visual Studio での Office 開発], テキスト"
+title: "ドキュメント内のテキストの操作 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office documents [Office development in Visual Studio, text
+- Word [Office development in Visual Studio], text
+- text [Office development in Visual Studio]
+- documents [Office development in Visual Studio], text
 ms.assetid: 6f9e5a35-8c29-4237-bd44-f3a79e6a5f1c
-caps.latest.revision: 15
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: c3d9ef7af80e7840405433ec7d87f647b90442c5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 文書内のテキストの操作
+# <a name="working-with-text-in-documents"></a>文書内のテキストの操作
   このセクションのトピックでは、Microsoft Office Word のオブジェクト モデルを使用して Office プロジェクト内のテキストを操作する手順とコード例を示します。  
   
  以下のタスクは、VSTO アドインとドキュメント レベルのカスタマイズとで実行方法が異なる場合があります。  
   
 |タスク|プロシージャ|  
-|---------|------------|  
+|----------|---------------|  
 |さまざまな条件に基づいて範囲を定義し、それらを選択します。|[方法: プログラムによって文書に複数の範囲を定義して選択する](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)|  
 |範囲の開始文字と終了文字を取得します。|[方法: 範囲の開始文字と終了文字をプログラムによって取得する](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)|  
 |段落を、段落記号を含めずに選択し、テキストを移動します。|[方法: 範囲を作成するときにプログラムによって段落記号を除外する](../vsto/how-to-programmatically-exclude-paragraph-marks-when-creating-ranges.md)|  
@@ -48,8 +50,8 @@ caps.handback.revision: 14
 |文書を印刷する前に、ブックマーク内のテキストを非表示にします。|[方法: プログラムによって文書内のテキストを非表示にする](../vsto/how-to-programmatically-hide-text-in-documents.md)|  
 |テキストにコメントを追加します。|[方法: プログラムによって文書内のテキストにコメントを追加する](../vsto/how-to-programmatically-add-comments-to-text-in-documents.md)|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)   
- [Office ソリューションの開発の概要 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)  
+ [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)  
   
   

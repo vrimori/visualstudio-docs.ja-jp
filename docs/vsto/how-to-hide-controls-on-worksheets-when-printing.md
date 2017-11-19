@@ -1,52 +1,54 @@
 ---
-title: "方法 : 印刷時にワークシートのコントロールを非表示にする"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "コントロール [Visual Studio での Office 開発], 非表示 (出力中は)"
-  - "印刷 [Visual Studio での Office 開発], 非表示 (コントロールを)"
-  - "印刷 [Visual Studio での Office 開発], ワークシート"
-  - "ワークシート, 非表示 (出力時コントロールを)"
+title: "方法: 印刷時にワークシートのコントロールを非表示にする |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- printing [Office development in Visual Studio], worksheets
+- controls [Office development in Visual Studio], hiding while printing
+- printing [Office development in Visual Studio], hiding controls
+- worksheets, hiding controls when printing
 ms.assetid: a637fe9a-9de1-4162-8ff6-fe28ccd62389
-caps.latest.revision: 28
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: e89c2f986ffc71892682b9fc8ab60b8810850c2a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : 印刷時にワークシートのコントロールを非表示にする
-  Windows フォーム コントロールが含まれる Microsoft Office Excel ドキュメントを印刷すると、コントロールが表示されたワークシートが印刷されます。  ワークシートの印刷時にコントロールを非表示にすることができます。  
+# <a name="how-to-hide-controls-on-worksheets-when-printing"></a>方法 : 印刷時にワークシートのコントロールを非表示にする
+  Windows フォーム コントロールを含む Microsoft Office Excel ドキュメントを印刷する場合、コントロールは、印刷するワークシートに表示されます。 ワークシートを印刷する場合は、コントロールを非表示にすることができます。  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
 > [!NOTE]  
->  <xref:Microsoft.Office.Tools.Excel.Controls.TextBox> など、データを表示するコントロールを非表示にすると、印刷されたワークシートではそのコントロール内のデータが表示されなくなります。  
+>  など、データを表示するコントロールを非表示にするかどうか、<xref:Microsoft.Office.Tools.Excel.Controls.TextBox>コントロール内のデータは、印刷するワークシートに表示されません。  
   
 > [!NOTE]  
->  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。  これらの要素は、使用する Visual Studio のエディションとその設定によって決まります。  詳細については、「[Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-### ワークシートの印刷時にコントロールを非表示にするには  
+### <a name="to-hide-controls-when-a-worksheet-is-printed"></a>コントロールとワークシートを非表示には、印刷します。  
   
-1.  Visual Studio で Excel プロジェクトを作成するか開いて、デザイナーに **\[Sheet1\]** が表示されることを確認します。  プロジェクトの作成の詳細については、「[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+1.  作成または Visual Studio で Excel プロジェクトを開きをことを確認**Sheet1**デザイナーに表示されます。 プロジェクトを作成する方法の詳細については、次を参照してください。[する方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
-2.  **\[ツールボックス\]** の **\[コモン コントロール\]** タブから <xref:Microsoft.Office.Tools.Excel.Controls.Button> コントロールを `Sheet1` のセルへドラッグします。  
+2.  **コモン コントロール**のタブ、**ツールボックス**、ドラッグ、<xref:Microsoft.Office.Tools.Excel.Controls.Button>でコントロールのセルを`Sheet1`です。  
   
-3.  **\[プロパティ\]** ウィンドウで、<xref:Microsoft.Office.Tools.Excel.Controls.Button.PrintObject%2A> プロパティを **False** に設定します。  
+3.  **プロパティ**ウィンドウで、設定、<xref:Microsoft.Office.Tools.Excel.Controls.Button.PrintObject%2A>プロパティを**False**です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
- [Office ドキュメントでの Windows フォーム コントロールの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)   
- [方法 : Office ドキュメントに Windows フォーム コントロールを追加する](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
- [方法 : ワークシートのセル内のコントロールをサイズ変更する](../vsto/how-to-resize-controls-within-worksheet-cells.md)  
+ [Windows フォームでコントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)   
+ [方法: Windows フォーム コントロールの Office ドキュメントへの追加](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
+ [方法: ワークシートのセル内のコントロールをサイズ変更する](../vsto/how-to-resize-controls-within-worksheet-cells.md)  
   
   

@@ -1,11 +1,10 @@
 ---
-title: 'CA2215: Dispose methods should call base class dispose | Microsoft Docs'
+title: "2215: ca Dispose メソッドを呼び出します基底クラス dispose |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,62 +15,46 @@ helpviewer_keywords:
 - DisposeMethodsShouldCallBaseClassDispose
 - CA2215
 ms.assetid: c772e7a6-a87e-425c-a70e-912664ae9042
-caps.latest.revision: 16
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 2fc05a4489fbd8b4d30cb3e9c3e9c0e86c2c26a5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 0659b9ec82353e3c658f1ba89f07fad197dd8670
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2215-dispose-methods-should-call-base-class-dispose"></a>CA2215: Dispose methods should call base class dispose
+# <a name="ca2215-dispose-methods-should-call-base-class-dispose"></a>CA2215: Dispose メソッドから基本クラスの破棄を呼び出します
 |||  
 |-|-|  
 |TypeName|DisposeMethodsShouldCallBaseClassDispose|  
 |CheckId|CA2215|  
-|Category|Microsoft.Usage|  
-|Breaking Change|Non Breaking|  
+|カテゴリ|Microsoft.Usage|  
+|互換性に影響する変更点|中断なし|  
   
-## <a name="cause"></a>Cause  
- A type that implements <xref:System.IDisposable?displayProperty=fullName> inherits from a type that also implements <xref:System.IDisposable>. The <xref:System.IDisposable.Dispose%2A> method of the inheriting type does not call the <xref:System.IDisposable.Dispose%2A> method of the parent type.  
+## <a name="cause"></a>原因  
+ 実装する型<xref:System.IDisposable?displayProperty=fullName>も実装する型から継承<xref:System.IDisposable>です。 <xref:System.IDisposable.Dispose%2A>継承する型のメソッドは呼び出しません、<xref:System.IDisposable.Dispose%2A>親の型のメソッドです。  
   
-## <a name="rule-description"></a>Rule Description  
- If a type inherits from a disposable type, it must call the <xref:System.IDisposable.Dispose%2A> method of the base type from within its own <xref:System.IDisposable.Dispose%2A> method. Calling the base type method Dispose ensures that any resources created by the base type are released.  
+## <a name="rule-description"></a>規則の説明  
+ 呼び出す必要がありますが、型は、破棄可能な型から継承している場合、<xref:System.IDisposable.Dispose%2A>独自内から基本型のメソッド<xref:System.IDisposable.Dispose%2A>メソッドです。 Dispose 基本データ型メソッドを呼び出すと、基本型で作成されたすべてのリソースが解放されるようにします。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, call `base`.<xref:System.IDisposable.Dispose%2A> in your <xref:System.IDisposable.Dispose%2A> method.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、呼び出す`base`.<xref:System.IDisposable.Dispose%2A>で、<xref:System.IDisposable.Dispose%2A>メソッドです。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule if the call to `base`.<xref:System.IDisposable.Dispose%2A> occurs at a deeper calling level than the rule checks.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 場合、この規則による警告を抑制するのには安全ではへの呼び出し`base`.<xref:System.IDisposable.Dispose%2A>ルール チェックよりも深い呼び出しレベルで発生します。  
   
-## <a name="example"></a>Example  
- The following example shows a type `TypeA` that implements <xref:System.IDisposable>.  
+## <a name="example"></a>例  
+ 次の例は、型を示しています。`TypeA`を実装する<xref:System.IDisposable>です。  
   
  [!code-csharp[FxCop.Usage.IDisposablePattern#1](../code-quality/codesnippet/CSharp/ca2215-dispose-methods-should-call-base-class-dispose_1.cs)]  
   
-## <a name="example"></a>Example  
- The following example shows a type `TypeB` that inherits from type `TypeA` and correctly calls its <xref:System.IDisposable.Dispose%2A> method.  
+## <a name="example"></a>例  
+ 次の例は、型を示しています。`TypeB`型から継承する`TypeA`正常に呼び出し、およびその<xref:System.IDisposable.Dispose%2A>メソッドです。  
   
  [!code-vb[FxCop.Usage.IDisposableBaseCalled#1](../code-quality/codesnippet/VisualBasic/ca2215-dispose-methods-should-call-base-class-dispose_2.vb)]  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  <xref:System.IDisposable?displayProperty=fullName>   
- [Dispose Pattern](/dotnet/standard/design-guidelines/dispose-pattern)
+ [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern)

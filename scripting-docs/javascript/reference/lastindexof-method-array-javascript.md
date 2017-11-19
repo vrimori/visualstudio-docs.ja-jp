@@ -1,62 +1,65 @@
 ---
-title: "lastIndexOf メソッド (Array) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "配列 [JavaScript], lastIndexOf メソッド"
-  - "lastIndexOf メソッド [JavaScript]"
+title: "lastIndexOf メソッド (Array) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- arrays [JavaScript], lastIndexOf method
+- lastIndexOf method [JavaScript]
 ms.assetid: 04f5145d-007e-498f-b06f-11ab384c2968
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 12d2a0fca7a7cd82543a83ea19aca49d3cbb93b6
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# lastIndexOf メソッド (Array) (JavaScript)
+# <a name="lastindexof-method-array-javascript"></a>lastIndexOf メソッド (Array) (JavaScript)
 指定した値が配列内で最後に見つかった位置のインデックスを返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 array1.lastIndexOf(searchElement[, fromIndex])  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
   
 |パラメーター|定義|  
-|------------|--------|  
-|`array1`|必須です。  検索する配列オブジェクト。|  
-|`searchElement`|必須です。  `array1` 内で検索される値。|  
-|`fromIndex`|省略可能です。  検索の開始位置を示す配列インデックス。  `fromIndex` を省略すると、検索は配列の最後のインデックスから開始されます。|  
+|---------------|----------------|  
+|`array1`|必須です。 検索する配列オブジェクト。|  
+|`searchElement`|必須です。 内で検索する値`array1`です。|  
+|`fromIndex`|省略可能です。 検索を開始する位置を示す配列のインデックス。 場合`fromIndex`は省略すると、検索は、配列内の最後のインデックスから開始します。|  
   
-## 戻り値  
- `searchElement` が配列内で最後に見つかった位置のインデックス。`searchElement` が見つからなかった場合は \-1。  
+## <a name="return-value"></a>戻り値  
+ 最後に見つかった位置のインデックス`searchElement`、配列の場合は-1`searchElement`が見つかりません。  
   
-## 解説  
- `lastIndexOf` メソッドは、指定された値を配列で検索します。  メソッドは、最初に見つかった位置のインデックスを返します。指定された値が見つからない場合は \-1 を返します。  
+## <a name="remarks"></a>コメント  
+ `lastIndexOf`メソッドは、指定した値の配列を検索します。 メソッドは、指定した値が見つからない場合に、最初に見つかった位置のインデックスを返します。  
   
- インデックスの降順に \(最後のメンバーを最初に\) 検索します。  昇順に検索するには、[indexOf メソッド \(Array\)](../../javascript/reference/indexof-method-array-javascript.md) を使用します。  
+ 検索はインデックスを降順で発生 (最後のメンバーの最初)。 昇順で検索するには、使用、 [indexOf メソッド (Array)](../../javascript/reference/indexof-method-array-javascript.md)です。  
   
- 配列要素は `===` の演算子での比較のような厳密等価で `searchElement` 値と比較されます。  詳細については、「[比較演算子](../../javascript/reference/comparison-operators-javascript.md)」を参照してください。  
+ 配列要素を比較する、`searchElement`値厳密等価、による比較に似ていますが、`===`演算子。 詳細については、次を参照してください。[比較演算子](../../javascript/reference/comparison-operators-javascript.md)です。  
   
- 省略可能な `fromIndex` 引数には、検索を開始する配列インデックスを指定します。  `fromIndex` が配列の長さ以上である場合は、配列全体が検索されます。  `fromIndex` が負の場合、検索は配列の長さに `fromIndex` を加えた位置から開始されます。  計算されたインデックスが 0 未満の場合、\-1 が返されます。  
+ 省略可能な`fromIndex`引数は、検索を開始する位置を示す配列インデックスを指定します。 場合`fromIndex`がより大きいまたは配列の長さと等しい、配列全体が検索されます。 場合`fromIndex`はプラスの配列の長さに負の場合、検索開始`fromIndex`です。 計算されたインデックスが 0 未満の場合は、-1 が返されます。  
   
-## 使用例  
- `lastIndexOf` メソッドの使用例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、使用、`lastIndexOf`メソッドです。  
   
-```javascript  
+```JavaScript  
 // Create an array.  
 var ar = ["ab", "cd", "ef", "ab", "cd"];  
   
@@ -83,10 +86,10 @@ document.write(ar.lastIndexOf("ab", -3) + "<br/>");
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv9](../../javascript/includes/jsv9-md.md)]  
   
-## 参照  
- [indexOf メソッド \(Array\)](../../javascript/reference/indexof-method-array-javascript.md)   
+## <a name="see-also"></a>関連項目  
+ [indexOf メソッド (Array)](../../javascript/reference/indexof-method-array-javascript.md)   
  [Array オブジェクト](../../javascript/reference/array-object-javascript.md)   
  [配列の使用](../../javascript/advanced/using-arrays-javascript.md)

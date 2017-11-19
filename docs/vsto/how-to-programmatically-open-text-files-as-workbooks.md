@@ -1,12 +1,10 @@
 ---
-title: 'How to: Programmatically Open Text Files as Workbooks | Microsoft Docs'
+title: "方法: プログラムによってブックとしてテキスト ファイルを開く |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,38 +15,38 @@ helpviewer_keywords:
 - text [Office development in Visual Studio], text files
 - text files, opening as workbooks
 ms.assetid: 056ae3d0-7fe7-4c28-a2a5-5a948baee0e6
-caps.latest.revision: 47
-author: kempb
-ms.author: kempb
+caps.latest.revision: "47"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 9966164165f768f438516ba9df993c09a6197b5b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: b4148a9a8a8de627ed56f5e1abc6da3469399330
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-programmatically-open-text-files-as-workbooks"></a>How to: Programmatically Open Text Files as Workbooks
-  You can open a text file as a workbook. You must pass in the name of the text file you want to open. You can specify several optional parameters, such as which row number to start parsing on and the column format of the data in the file.  
+# <a name="how-to-programmatically-open-text-files-as-workbooks"></a>方法: プログラムによってテキスト ファイルをブックとして開く
+  ブックとしてテキスト ファイルを開くことができます。 開きたいテキスト ファイルの名前を渡す必要があります。 ファイル内のデータの列の形式、解析を開始する行番号など、いくつかの省略可能なパラメーターを指定することができます。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
-## <a name="example"></a>Example  
- [!code-csharp[Trin_VstcoreExcelAutomation#80](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#80)] [!code-vb[Trin_VstcoreExcelAutomation#80](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#80)]  
+## <a name="example"></a>例  
+ [!code-csharp[Trin_VstcoreExcelAutomation#80](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#80)]
+ [!code-vb[Trin_VstcoreExcelAutomation#80](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#80)]  
   
-## <a name="compiling-the-code"></a>Compiling the Code  
- This example requires the following components:  
+## <a name="compiling-the-code"></a>コードのコンパイル  
+ この例では、次のコンポーネントが必要です。  
   
--   A comma-delimited text file named `Test.txt` that contains at least three lines of text.  
+-   という名前のコンマ区切りのテキスト ファイル`Test.txt`少なくとも 3 つの行のテキストを格納しています。  
   
--   The text file `Test.txt` to be stored on drive C.  
+-   テキスト ファイル`Test.txt`C ドライブに保存します。  
   
-## <a name="see-also"></a>See Also  
- [Working with Workbooks](../vsto/working-with-workbooks.md)   
- [How to: Programmatically Open Workbooks](../vsto/how-to-programmatically-open-workbooks.md)   
- [How to: Programmatically Create New Workbooks](../vsto/how-to-programmatically-create-new-workbooks.md)   
- [How to: Programmatically Save Workbooks](../vsto/how-to-programmatically-save-workbooks.md)   
- [How to: Programmatically Close Workbooks](../vsto/how-to-programmatically-close-workbooks.md)   
- [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="see-also"></a>関連項目  
+ [ブックの操作](../vsto/working-with-workbooks.md)   
+ [方法: プログラムによってブックを開く](../vsto/how-to-programmatically-open-workbooks.md)   
+ [方法: プログラムによって新しいブックを作成します。](../vsto/how-to-programmatically-create-new-workbooks.md)   
+ [方法: プログラムによってブックを保存](../vsto/how-to-programmatically-save-workbooks.md)   
+ [方法: プログラムによってブックを閉じる](../vsto/how-to-programmatically-close-workbooks.md)   
+ [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
   
   

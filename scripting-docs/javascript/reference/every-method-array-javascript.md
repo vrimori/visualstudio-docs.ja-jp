@@ -1,93 +1,96 @@
 ---
-title: "every メソッド (Array) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "配列 [JavaScript], every メソッド"
-  - "every メソッド"
+title: "every メソッド (Array) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- every method
+- arrays [JavaScript], every method
 ms.assetid: dc4ee2f8-fb9e-4c9f-af5a-fe836e40ddd1
-caps.latest.revision: 15
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 4a05263ae45df61c47a3580d474863c8d4ff3dd1
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# every メソッド (Array) (JavaScript)
-配列のすべてのメンバーが指定されているテストを満たすかどうかを判定します。  
+# <a name="every-method-array-javascript"></a>every メソッド (Array) (JavaScript)
+配列のすべてのメンバーが、指定したテストを満たすかどうかを判断します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 array1.every(callbackfn[, thisArg])  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
   
 |パラメーター|定義|  
-|------------|--------|  
-|`array1`|必須です。  配列オブジェクト。|  
-|`callbackfn`|必須です。  引数を 3 つまで受け取る関数。  `every` メソッドは、`array1` の各要素に対して、`callbackfn` が `false` を返すか、または配列の末尾に到達するまで `callbackfn` 関数を呼び出します。|  
-|`thisArg`|省略可能です。  `this` のキーワードが `callbackfn` 関数内で参照できるオブジェクト。  `thisArg` を省略すると、`undefined` が `this` 値として使用されます。|  
+|---------------|----------------|  
+|`array1`|必須です。 配列オブジェクト。|  
+|`callbackfn`|必須です。 3 つまでの引数を受け取る関数。 `every`メソッドの呼び出し、`callbackfn`の各要素に対して関数`array1`まで、`callbackfn`返します`false`、または配列の末尾までです。|  
+|`thisArg`|省略可能です。 `this` のキーワードが `callbackfn` 関数内で参照できるオブジェクト。 `thisArg` を省略すると、`undefined` が `this` 値として使用されます。|  
   
-## 戻り値  
- 配列のすべての要素に対して `callbackfn` 関数が `true` を返す場合は `true`、それ以外の場合は `false` です。  配列に要素がない場合、`every` メソッドは `true` を返します。  
+## <a name="return-value"></a>戻り値  
+ `true`場合、`callbackfn`関数が返される`true`のすべての配列の要素。 それ以外の場合、`false`です。 配列の要素を持たない場合、`every`メソッドを返します。`true`です。  
   
-## 例外  
+## <a name="exceptions"></a>例外  
  `callbackfn` 引数が関数オブジェクトではない場合は、`TypeError` 例外がスローされます。  
   
-## 解説  
- `every` メソッドは、`callbackfn` 関数が `false` を返すまで、各配列要素に対してインデックスの昇順で `callbackfn` 関数を 1 回ずつ呼び出します。  `callbackfn` が `false` を返す原因になっている要素が見つかると、`every` メソッドは即座に `false` を返します。  それ以外の場合、`every` メソッドは `true` を返します。  
+## <a name="remarks"></a>コメント  
+ `every`メソッドの呼び出し、`callbackfn`関数を昇順でインデックス、まで、配列の要素ごとに 1 回、`callbackfn`関数が返される`false`です。 場合の原因となる要素`callbackfn`を返す`false`が見つかると、`every`メソッドが直ちに返されます`false`です。 それ以外の場合、`every`メソッドを返します。`true`です。  
   
  配列内で欠落している要素に対しては、コールバック関数は呼び出されません。  
   
- 配列オブジェクトに加えて、`every` メソッドは `length` プロパティを保有し、数値インデックス付きプロパティ名を保有する任意のオブジェクトに対して使用できます。  
+ 配列オブジェクトに加えて、`every` メソッドは、`length` プロパティを持つオブジェクトおよび数値インデックス付きプロパティ名を持つオブジェクトで使用できます。  
   
 > [!NOTE]
->  [some メソッド \(Array\)](../../javascript/reference/some-method-array-javascript.md) を使用すると、コールバック関数が配列のすべての要素に対して `true` を返すかどうかを確認できます。  
+>  使用することができます、 [some メソッド (Array)](../../javascript/reference/some-method-array-javascript.md)コールバック関数が返すかどうかを確認する`true`任意配列の要素。  
   
-## コールバック関数の構文  
+## <a name="callback-function-syntax"></a>コールバック関数の構文  
  コールバック関数の構文は次のとおりです。  
   
  `function callbackfn(value, index, array1)`  
   
- コールバック関数は、パラメーターを 3 つまで指定して宣言できます。  
+ 最大 3 つのパラメーターを使用して、コールバック関数を宣言することができます。  
   
  コールバック関数パラメーターの一覧を次の表に示します。  
   
-|Callback パラメーター|定義|  
-|---------------------|--------|  
+|コールバック パラメーター|定義|  
+|------------------------|----------------|  
 |`value`|配列の要素の値。|  
 |`index`|配列要素の数値インデックス。|  
 |`array1`|要素を格納している配列オブジェクト。|  
   
-## 配列オブジェクトの変更  
+## <a name="modifying-the-array-object"></a>配列オブジェクトの変更  
  配列オブジェクトはコールバック関数で変更できます。  
   
  `every` メソッドの開始後に配列オブジェクトを変更した結果を次の表に示します。  
   
 |`every` メソッドの開始後の条件|要素がコールバック関数に渡されるか?|  
-|-------------------------|------------------------|  
+|-----------------------------------------------|------------------------------------------|  
 |要素が配列の元の長さを越えて追加されている。|いいえ。|  
-|要素はが、配列内の欠落した要素を補うために追加されている。|はい \(そのインデックスがまだコールバック関数に渡されていない場合\)。|  
-|要素が変更されている。|はい \(その要素がまだコールバック関数に渡されていない場合\)。|  
-|要素が配列から削除されている。|いいえ \(その要素が既にコールバック関数に渡されている場合を除く\)。|  
+|要素はが、配列内の欠落した要素を補うために追加されている。|はい (そのインデックスがまだコールバック関数に渡されていない場合)。|  
+|要素が変更されている。|はい (その要素がまだコールバック関数に渡されていない場合)。|  
+|要素が配列から削除されている。|いいえ (その要素が既にコールバック関数に渡されている場合を除く)。|  
   
-## 使用例  
+## <a name="example"></a>例  
  `every` メソッドの使用例を次に示します。  
   
-```javascript  
+```JavaScript  
 // Define the callback function.  
 function CheckIfEven(value, index, ar) {  
     document.write(value + " ");  
@@ -112,10 +115,10 @@ else
 // 2 4 5 Some are not even.  
 ```  
   
-## 使用例  
- `this` キーワードで参照できるオブジェクトを指定する `thisArg` 引数の使用例を次に示します。  
+## <a name="example"></a>例  
+ `thisArg` キーワードで参照できるオブジェクトを指定する `this` 引数の使用例を次に示します。  
   
-```javascript  
+```JavaScript  
 // Create a function that returns true if the value is  
 // numeric and within range.  
 var checkNumericRange = function(value) {  
@@ -145,11 +148,11 @@ else
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv9](../../javascript/includes/jsv9-md.md)]  
   
-## 参照  
- [some メソッド \(Array\)](../../javascript/reference/some-method-array-javascript.md)   
- [filter メソッド \(Array\)](../../javascript/reference/filter-method-array-javascript.md)   
+## <a name="see-also"></a>関連項目  
+ [some メソッド (Array)](../../javascript/reference/some-method-array-javascript.md)   
+ [filter メソッド (Array)](../../javascript/reference/filter-method-array-javascript.md)   
  [Array オブジェクト](../../javascript/reference/array-object-javascript.md)   
  [配列の使用](../../javascript/advanced/using-arrays-javascript.md)

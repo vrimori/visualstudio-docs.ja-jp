@@ -1,48 +1,48 @@
 ---
-title: "IDebugAlias::GetName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugAlias::GetName"
-helpviewer_keywords: 
-  - "IDebugAlias::GetName メソッド"
+title: "IDebugAlias::GetName |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugAlias::GetName
+helpviewer_keywords: IDebugAlias::GetName method
 ms.assetid: ac2d8891-56b5-40ef-9866-ed74f18bb043
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 26b9eec300d93695785605549fa109099008d799
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugAlias::GetName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このエイリアス名を取得します。  
+# <a name="idebugaliasgetname"></a>IDebugAlias::GetName
+このエイリアスの名前を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT GetName(  
-   BSTR* pbstrName  
+HRESULT GetName(  
+   BSTR* pbstrName  
 );  
 ```  
   
-```c#  
-int GetName(  
-   out string pbstrName  
+```csharp  
+int GetName(  
+   out string pbstrName  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pbstrName`  
- \[入力\] エイリアスの名前。  
+ [out]エイリアスの名前です。  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

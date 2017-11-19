@@ -1,68 +1,68 @@
 ---
-title: "SccRename 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccRename"
-helpviewer_keywords: 
-  - "SccRename 関数"
+title: "SccRename 関数 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SccRename
+helpviewer_keywords: SccRename function
 ms.assetid: b467ade6-a1db-4c0b-b60f-7850ec4f79eb
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 2936c2ea4425ad6eaccc2d23853f4174e1c9c2a2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# SccRename 関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="sccrename-function"></a>SccRename 関数
 この関数は、ソース管理システムでファイルを変更します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 SCCRTN SccRename(  
-   LPVOID pvContext,  
-   HWND   hWnd,  
-   LPCSTR lpFileName,  
-   LPCSTR lpNewName  
+   LPVOID pvContext,  
+   HWND   hWnd,  
+   LPCSTR lpFileName,  
+   LPCSTR lpNewName  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  pvContext  
- \[in\]ソース管理プラグイン コンテキスト構造体。  
+ [in]ソース管理プラグイン コンテキスト構造体。  
   
- hwnd の分離  
- \[in\]ソース管理プラグインは、それによって提供されるダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
+ hWnd  
+ [in]ソース管理プラグインで提供されるダイアログ ボックスをすべての親として使用できる IDE ウィンドウへのハンドル。  
   
  lpFileName  
- \[in\]名前を変更するファイルの完全修飾ファイル名。  
+ [in]名前が変更されるファイルの完全修飾ファイル名。  
   
  lpNewName  
- \[in\]完全修飾の新しい名前。 ディレクトリ パスが異なる場合、ファイルは移動 1 つのサブディレクトリから間です。  
+ [in]完全修飾の新しい名前。 ディレクトリ パスが異なる場合は、し、ファイルが 1 つのサブディレクトリからに移動別です。  
   
-## 戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+## <a name="return-value"></a>戻り値  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
 |値|説明|  
-|-------|--------|  
-|SCC\_OK|名前の変更操作が正常に完了しました。|  
-|SCC\_E\_PROJNOTOPEN|プロジェクトは、ソース管理下で開かれていません。|  
-|SCC\_E\_FILENOTCONTROLLED|ファイルはソース管理されていません。|  
-|SCC\_E\_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題が原因と思わのアクセスに関する問題が発生しました。|  
-|SCC\_E\_NOTAUTHORIZED|ユーザーは、この操作を実行する権限がありません。|  
-|SCC\_E\_COULDNOTCREATEPROJECT|名前の変更プロセスの一部として、プロジェクトを作成できませんでした。|  
-|SCC\_E\_OPNOTPERFORMED|操作は実行されませんでした。|  
-|SCC\_E\_NONSPECIFICERROR|指定されていないか、一般的なエラーが発生しました。|  
+|-----------|-----------------|  
+|SCC_OK|名前変更操作が正常に完了しました。|  
+|SCC_E_PROJNOTOPEN|プロジェクトは、ソース管理下で開かれていません。|  
+|SCC_E_FILENOTCONTROLLED|ファイルはソース管理されません。|  
+|SCC_E_ACCESSFAILURE|ソース管理システムのネットワークや競合の問題の可能性があるためのアクセスに関する問題が発生しました。|  
+|SCC_E_NOTAUTHORIZED|ユーザーは、この操作を実行する権限がありません。|  
+|SCC_E_COULDNOTCREATEPROJECT|名前の変更プロセスの一部として、プロジェクトを作成できませんでした。|  
+|SCC_E_OPNOTPERFORMED|操作は実行されませんでした。|  
+|SCC_E_NONSPECIFICERROR|指定されていないか、一般的なエラーが発生しました。|  
   
-## 解説  
- この関数は、ファイル名を変更または 1 つの場所からに移動別、ソース管理システムで使用できます。 ソース管理プラグインでは、ディスク上のファイルにアクセスされません。 ローカル ファイルの名前を変更する IDE の役目です。  
+## <a name="remarks"></a>コメント  
+ この関数は、ファイル名を変更または移動する、1 つの場所から別に、ソース管理システムで使用できます。 ソース管理プラグインは、ディスク上のファイルへのアクセスはされません。 ローカル ファイルの名前を変更する、IDE の責任です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

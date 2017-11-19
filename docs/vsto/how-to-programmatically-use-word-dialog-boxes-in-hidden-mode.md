@@ -1,12 +1,10 @@
 ---
-title: 'How to: Programmatically Use Word Dialog Boxes in Hidden Mode | Microsoft Docs'
+title: "方法: プログラムによって Word のダイアログ ボックスを非表示モードで使用して |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,38 +15,38 @@ helpviewer_keywords:
 - Word [Office development in Visual Studio], dialog boxes
 - dialog boxes, hidden mode in Word
 ms.assetid: a5619325-8b54-41f1-becb-3f6eae7e4a6b
-caps.latest.revision: 48
-author: kempb
-ms.author: kempb
+caps.latest.revision: "48"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 527b6c37d87f7a04d93e96692f6d40d4e25e8f39
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: daf5cfb79c16a26b871e2c4d07ec304c17cb6a33
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-programmatically-use-word-dialog-boxes-in-hidden-mode"></a>How to: Programmatically Use Word Dialog Boxes in Hidden Mode
-  You can perform complex operations with one method call by invoking the built-in dialog boxes in Microsoft Office Word without displaying them to the user. You can do this by using the <xref:Microsoft.Office.Interop.Word.Dialog.Execute%2A> method of the <xref:Microsoft.Office.Interop.Word.Dialog> object without calling the <xref:Microsoft.Office.Interop.Word.Dialog.Display%2A> method.  
+# <a name="how-to-programmatically-use-word-dialog-boxes-in-hidden-mode"></a>方法: プログラムによって Word のダイアログ ボックスを非表示モードで使用する
+  ユーザーに表示することがなく、Microsoft Office Word の組み込みダイアログ ボックスを呼び出すことによって、1 つのメソッドの呼び出しで複雑な操作を行うことができます。 使用してこれを行う、<xref:Microsoft.Office.Interop.Word.Dialog.Execute%2A>のメソッド、<xref:Microsoft.Office.Interop.Word.Dialog>オブジェクトを呼び出さず、<xref:Microsoft.Office.Interop.Word.Dialog.Display%2A>メソッドです。  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-## <a name="examples"></a>Examples  
- The following code examples demonstrate how to use the **Page Setup** dialog box in hidden mode to set multiple page setup properties with no user input. The examples use a <xref:Microsoft.Office.Interop.Word.Dialog> object to configure a custom page size. The specific settings for page setup, such as the top margin, bottom margin, and so on, are available as late-bound properties of the <xref:Microsoft.Office.Interop.Word.Dialog> object. These properties are dynamically created by Word at run time.  
+## <a name="examples"></a>例  
+ 次のコード例を使用する方法を示します、**ページ セットアップ**プロパティを設定する複数のページのセットアップ ユーザー入力なしで非表示モードでのダイアログ ボックス。 例を使用して、<xref:Microsoft.Office.Interop.Word.Dialog>カスタム ページ サイズを構成するオブジェクト。 ページ設定 の上余白、下の余白などの特定の設定はの遅延バインディングのプロパティとして使用できます、<xref:Microsoft.Office.Interop.Word.Dialog>オブジェクト。 これらのプロパティは、実行時に Word によって動的に作成されます。  
   
- The following example demonstrates how to perform this task in Visual Basic projects where **Option Strict** is off and in Visual C# projects that target the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]. In these projects, you can use late binding features in the Visual Basic and Visual C# compilers. To use this example, run it from the `ThisDocument` or `ThisAddIn` class in your project.  
+ 次の例は、Visual Basic プロジェクトでこのタスクを実行する方法を示します、 **Option Strict**は off および Visual c# プロジェクトで、対象とする、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]です。 これらのプロジェクトでは、Visual Basic および Visual c# コンパイラで遅延のバインド機能を使用できます。 この例を使用する実行から、`ThisDocument`または`ThisAddIn`プロジェクト内のクラスです。  
   
- [!code-vb[Trin_VstcoreWordAutomation#123](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#123)] [!code-csharp[Trin_VstcoreWordAutomation#123](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#123)]  
+ [!code-vb[Trin_VstcoreWordAutomation#123](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#123)]
+ [!code-csharp[Trin_VstcoreWordAutomation#123](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#123)]  
   
- The following example demonstrates how to perform this task in Visual Basic projects where **Option Strict** is on. In these projects, you must use reflection to access the late-bound properties. To use this example, run it from the `ThisDocument` or `ThisAddIn` class in your project.  
+ 次の例は、Visual Basic プロジェクトでこのタスクを実行する方法を示します、 **Option Strict**にします。 これらのプロジェクトでは、リフレクションを使用して、遅延バインディングのプロパティにアクセスする必要があります。 この例を使用する実行から、`ThisDocument`または`ThisAddIn`プロジェクト内のクラスです。  
   
  [!code-vb[Trin_VstcoreWordAutomation#104](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#104)]  
   
-## <a name="see-also"></a>See Also  
- [How to: Programmatically Use Built-In Dialog Boxes in Word](../vsto/how-to-programmatically-use-built-in-dialog-boxes-in-word.md)   
- [Word Object Model Overview](../vsto/word-object-model-overview.md)   
- [Late Binding in Office Solutions](../vsto/late-binding-in-office-solutions.md)   
- [Reflection (C#)](/dotnet/csharp/programming-guide/concepts/reflection)  
- [Reflection (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/reflection)  
+## <a name="see-also"></a>関連項目  
+ [方法: プログラムによって Word の組み込みダイアログ ボックスを使用](../vsto/how-to-programmatically-use-built-in-dialog-boxes-in-word.md)   
+ [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)   
+ [Office ソリューションの遅延バインディング](../vsto/late-binding-in-office-solutions.md)   
+ [リフレクション (C#)](/dotnet/csharp/programming-guide/concepts/reflection)  
+ [リフレクション (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/reflection)  
   
   

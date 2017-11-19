@@ -1,48 +1,51 @@
 ---
-title: "getUint8 メソッド (DataView) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "getUint8 メソッド (DataView) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: 9fbf4be3-4c0b-4963-a7a1-d57f1501b4cf
-caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 315baa2ca5abfe006a7f8d524619479d99a11fc9
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# getUint8 メソッド (DataView)
-指定されたビューの先頭からのバイト オフセット位置にある Uint8 値を取得します。  配置の制約はありません。オフセットからマルチバイト値がフェッチされている場合があります。  
+# <a name="getuint8-method-dataview"></a>getUint8 メソッド (DataView)
+指定されたビューの先頭からのバイト オフセット位置にある Uint8 値を取得します。 配置制約はありません。マルチ バイト値は、任意のオフセットからフェッチすることがあります。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 var testInt = dataView.getUint8(byteOffset);   
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `testInt`  
- 必須です。  メソッドから返される Uint8 値を指定します。  
+ 必須です。 メソッドから返される Uint8 値。  
   
  `byteOffset`  
- 値が取得されるバッファーの位置。  
+ 値を取得するバッファー内の場所。  
   
-## 解説  
- これらのメソッドでは、ビューの終端を越えて読み取られる場合に例外が発生します。  
+## <a name="remarks"></a>コメント  
+ これらのメソッド ビューの末尾を越える読み取りは、例外が発生します。  
   
-## 使用例  
- DataView の最初の Uint8 を取得する方法の例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、DataView で最初の Uint8 を取得する方法を示します。  
   
-```javascript  
+```JavaScript  
 var req = new XMLHttpRequest();  
     req.open('GET', "http://www.example.com");  
     req.responseType = "arraybuffer";  
@@ -58,5 +61,5 @@ var req = new XMLHttpRequest();
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv10](../../javascript/reference/includes/jsv10-md.md)]

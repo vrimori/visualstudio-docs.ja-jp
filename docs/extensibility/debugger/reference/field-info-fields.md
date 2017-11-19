@@ -1,82 +1,82 @@
 ---
-title: "FIELD_INFO_FIELDS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FIELD_INFO_FIELDS"
-helpviewer_keywords: 
-  - "FIELD_INFO_FIELDS 列挙型"
+title: "FIELD_INFO_FIELDS |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: FIELD_INFO_FIELDS
+helpviewer_keywords: FIELD_INFO_FIELDS enumeration
 ms.assetid: a69487d2-e701-4165-804a-8a011df9a3bd
-caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d1aa1c2363ecf3cb6bfd9531112c87d8bcaeefe4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# FIELD_INFO_FIELDS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-[IDebugField](../../../extensibility/debugger/reference/idebugfield.md) のオブジェクトに関して取得する情報を指定します。  
+# <a name="fieldinfofields"></a>FIELD_INFO_FIELDS
+取得するには、どのような情報を指定します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-enum enum_FIELD_INFO_FIELDS {   
-   FIF_FULLNAME  = 0x0001,  
-   FIF_NAME      = 0x0002,  
-   FIF_TYPE      = 0x0004,  
-   FIF_MODIFIERS = 0x0008,  
-   FIF_ALL       = 0xffffffff,  
-   FIF_NONE      = 0x0000  
+```cpp  
+enum enum_FIELD_INFO_FIELDS {   
+   FIF_FULLNAME  = 0x0001,  
+   FIF_NAME      = 0x0002,  
+   FIF_TYPE      = 0x0004,  
+   FIF_MODIFIERS = 0x0008,  
+   FIF_ALL       = 0xffffffff,  
+   FIF_NONE      = 0x0000  
 };  
 typedef DWORD FIELD_INFO_FIELDS;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_FIELD_INFO_FIELDS {  
-   FIF_FULLNAME  = 0x0001,  
-   FIF_NAME      = 0x0002,  
-   FIF_TYPE      = 0x0004,  
-   FIF_MODIFIERS = 0x0008,  
-   FIF_ALL       = 0xffffffff,  
-   FIF_NONE      = 0x0000  
+   FIF_FULLNAME  = 0x0001,  
+   FIF_NAME      = 0x0002,  
+   FIF_TYPE      = 0x0004,  
+   FIF_MODIFIERS = 0x0008,  
+   FIF_ALL       = 0xffffffff,  
+   FIF_NONE      = 0x0000  
 };  
 ```  
   
-## メンバー  
- FIF\_FULLNAME  
- [FIELD\_INFO](../../../extensibility/debugger/reference/field-info.md) の構造体の初期化と `bstrFullName` のフィールドを使用します。  
+## <a name="members"></a>メンバー  
+ FIF_FULLNAME  
+ 初期化/を使用して、`bstrFullName`フィールドで、 [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)構造体。  
   
- FIF\_NAME  
- `FIELD_INFO` の構造体の初期化と `bstrName` のフィールドを使用します。  
+ FIF_NAME  
+ 初期化/を使用して、`bstrName`フィールドで、`FIELD_INFO`構造体。  
   
- FIF\_TYPE  
- `FIELD_INFO` の構造体の初期化と `bstrType` のフィールドを使用します。  
+ FIF_TYPE  
+ 初期化/を使用して、`bstrType`フィールドで、`FIELD_INFO`構造体。  
   
- FIF\_MODIFIERS  
- `FIELD_INFO` の構造体の初期化と `bstrModifiers` のフィールドを使用します。  
+ FIF_MODIFIERS  
+ 初期化/を使用して、`bstrModifiers`フィールドで、`FIELD_INFO`構造体。  
   
-## 解説  
- [FIELD\_INFO](../../../extensibility/debugger/reference/field-info.md) の構造体のフィールドが初期化する方法を指定するには次の値も [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) ため引数のメソッドに渡されます。  
+## <a name="remarks"></a>コメント  
+ これらの値が引数として渡されるも、 [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)のどのフィールドを指定する方法、 [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)構造が初期化するのには。  
   
- `FIELD_INFO` の構造体の `dwFields` のメンバーはこれらの値がどのフィールドが使用され有効かを示すために使用されます。  
+ これらの値はでも使用、`dwFields`のメンバー、`FIELD_INFO`構造のどのフィールドが使用されていると有効なことを示します。  
   
- これらのフラグはビットごと `OR` に組み合わせることがあります。  
+ これらのフラグは、ビットごとと組み合わせること`OR`です。  
   
-## 必要条件  
- ヘッダー : sh.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: sh.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [FIELD\_INFO](../../../extensibility/debugger/reference/field-info.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)

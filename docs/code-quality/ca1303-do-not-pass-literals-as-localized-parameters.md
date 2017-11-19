@@ -1,11 +1,10 @@
 ---
-title: 'CA1303: Do not pass literals as localized parameters | Microsoft Docs'
+title: "Ca 1303: パラメーターが渡されないリテラルにローカライズされた |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,65 +15,52 @@ helpviewer_keywords:
 - DoNotPassLiteralsAsLocalizedParameters
 - CA1303
 ms.assetid: 904d284e-76d0-4b8f-a4df-0094de8d7aac
-caps.latest.revision: 22
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 98989e398166e8fc5a5fc0c765b10a11a12d5083
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: ce6ed64a6991342b4dc1506b8384f7691cc90b8f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1303-do-not-pass-literals-as-localized-parameters"></a>CA1303: Do not pass literals as localized parameters
+# <a name="ca1303-do-not-pass-literals-as-localized-parameters"></a>CA1303: ローカライズされたパラメーターとしてリテラルを渡さないでください
 |||  
 |-|-|  
 |TypeName|DoNotPassLiteralsAsLocalizedParameters|  
 |CheckId|CA1303|  
-|Category|Microsoft.Globalization|  
-|Breaking Change|Non Breaking|  
+|カテゴリ|Microsoft.Globalization|  
+|互換性に影響する変更点|中断なし|  
   
-## <a name="cause"></a>Cause  
- A method passes a string literal as a parameter to a constructor or method in the [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] class library and that string should be localizable.  
+## <a name="cause"></a>原因  
+ メソッドを文字列リテラルをパラメーターとして渡しコンス トラクターまたはメソッドに、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]クラス ライブラリとその文字列はローカライズ可能です。  
   
- This warning is raised when a literal string is passed as a value to a parameter or property and one or more of the following cases is true:  
+ この警告は、リテラル文字列がパラメーターまたはプロパティに値として渡され、1 つ以上の次の場合は true。  
   
--   The <xref:System.ComponentModel.LocalizableAttribute> attribute of the parameter or property is set to true.  
+-   <xref:System.ComponentModel.LocalizableAttribute>パラメーターまたはプロパティの属性が設定を true にします。  
   
--   The parameter or property name contains "Text", "Message", or "Caption".  
+-   パラメーターまたはプロパティ名には、"Text"、「メッセージ」または「キャプション」が含まれています。  
   
--   The name of the string parameter that is passed to a Console.Write or Console.WriteLine method is either "value" or "format".  
+-   Console.Write または Console.WriteLine メソッドに渡される文字列パラメーターの名前は"value"か"format"。  
   
-## <a name="rule-description"></a>Rule Description  
- String literals that are embedded in source code are difficult to localize.  
+## <a name="rule-description"></a>規則の説明  
+ ソース コードに埋め込まれている文字列リテラルは、ローカライズするが困難です。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, replace the string literal with a string retrieved through an instance of the <xref:System.Resources.ResourceManager> class.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、インスタンスを使用して取得文字列では、リテラル文字列を置き換えます、<xref:System.Resources.ResourceManager>クラスです。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule if the code library will not be localized, or if the string is not exposed to the end user or a developer using the code library.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ コード ライブラリをローカライズしない、または文字列が、エンドユーザーまたはコード ライブラリを使用する開発者に公開されていない場合は、この規則による警告を抑制しても安全です。  
   
- Users can eliminate noise against methods which should not be passed localized strings by either renaming the parameter or property named, or by marking these items as conditional.  
+ ユーザーは、メソッドを渡すことはできませんローカライズされた文字列パラメーターまたは名前付き、プロパティを変更するか、これらのアイテムを条件付きとしてマークすることによっているに対してノイズを除去できます。  
   
-## <a name="example"></a>Example  
- The following example shows a method that throws an exception when either of its two arguments are out of range. For the first argument, the exception constructor is passed a literal string, which violates this rule. For the second argument, the constructor is correctly passed a string retrieved through a <xref:System.Resources.ResourceManager>.  
+## <a name="example"></a>例  
+ 次の例では、2 つの引数のいずれかが範囲外と例外をスローするメソッドを示します。 最初の引数では、例外のコンス トラクターは、この規則に違反するリテラル文字列で渡されます。 2 番目の引数のコンス トラクターは正常に渡されますを介して取得された文字列、<xref:System.Resources.ResourceManager>です。  
   
- [!code-cpp[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/CPP/ca1303-do-not-pass-literals-as-localized-parameters_1.cpp)] [!code-vb[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/VisualBasic/ca1303-do-not-pass-literals-as-localized-parameters_1.vb)] [!code-csharp[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/CSharp/ca1303-do-not-pass-literals-as-localized-parameters_1.cs)]  
+ [!code-cpp[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/CPP/ca1303-do-not-pass-literals-as-localized-parameters_1.cpp)]
+ [!code-vb[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/VisualBasic/ca1303-do-not-pass-literals-as-localized-parameters_1.vb)]
+ [!code-csharp[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/CSharp/ca1303-do-not-pass-literals-as-localized-parameters_1.cs)]  
   
-## <a name="see-also"></a>See Also  
- [Resources in Desktop Apps](/dotnet/framework/resources/index)
+## <a name="see-also"></a>関連項目  
+ [デスクトップ アプリケーションのリソース](/dotnet/framework/resources/index)

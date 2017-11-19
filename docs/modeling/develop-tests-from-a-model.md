@@ -6,42 +6,25 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- tests and requirements
+helpviewer_keywords: tests and requirements
 ms.assetid: 40f87192-ba85-4552-8804-314a678261ae
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 08aabdfe0e268f93ef7723076375b7f65b15ccf3
-ms.openlocfilehash: b7cb109d11669f411b5ca3bdf3c4c32a63ac53a1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: ea0753130b6fa1da60cf83cf15c0ee5c7f4010c2
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="develop-tests-from-a-model"></a>モデルからテストを開発する
-システムとそのコンポーネントのテストを編成する際に、要件モデルとアーキテクチャ モデルを使用できます。 こうすることで、ユーザーやその他の利害関係者にとって重要な要求をテストしやすくなり、要求が変更された場合にすばやくテストを更新することができます。 
-          [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] を使用した場合、モデルとテストの間のリンクを維持することもできます。  
+システムとそのコンポーネントのテストを編成する際に、要件モデルとアーキテクチャ モデルを使用できます。 こうすることで、ユーザーやその他の利害関係者にとって重要な要求をテストしやすくなり、要求が変更された場合にすばやくテストを更新することができます。 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] を使用した場合、モデルとテストの間のリンクを維持することもできます。  
   
- これらの機能をサポートする Visual Studio のバージョンを確認するに、次を参照してください。[アーキテクチャとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)します。  
+ これらの機能をサポートする Visual Studio のバージョンを参照してください[アーキテクチャおよびモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)です。  
   
 ## <a name="system-and-subsystem-testing"></a>システムとサブシステムのテスト  
- *システム テスト、*とも呼ばれる*受け入れテスト*ユーザーのニーズが満たされているかどうかをテストします。 このようなテストでは内部の設計ではなく、外部から確認できるシステムの動作に焦点が当てられます。  
+ *システム テスト、*とも呼ばれる*受け入れテスト*ユーザーのニーズが満たされているかどうかをテストすることを意味します。 このようなテストでは内部の設計ではなく、外部から確認できるシステムの動作に焦点が当てられます。  
   
  システムの拡張またはシステムの再設計を行う場合、システム テストは非常に価値があります。 これらのテストにより、コードの変更時にバグの発生を回避することができます。  
   
@@ -52,11 +35,10 @@ ms.lasthandoff: 02/22/2017
  サブシステムのテストでは、システムの主要コンポーネントに同じ原則が適用されます。 各コンポーネントは、他のコンポーネントとは別個にテストされます。 サブシステムのテストでは、コンポーネントのユーザー インターフェイスまたは API で確認できる動作を集中的にテストします。  
   
 ## <a name="deriving-system-tests-from-a-requirements-model"></a>要求モデルからシステム テストを派生させる  
- システム テストと要求モデル間の関係を作成して、それを維持することができます。 この関係を確立するには、要求モデルの主要な要素に対応するテストを作成します。 Visual Studio を使用すると、テストとモデルの部分間のリンクを作成することで、その関係を維持できます。 要求モデルの詳細については、次を参照してください。[ユーザー要件をモデリングして](../modeling/model-user-requirements.md)します。  
+ システム テストと要求モデル間の関係を作成して、それを維持することができます。 この関係を確立するには、要求モデルの主要な要素に対応するテストを作成します。 Visual Studio を使用すると、テストとモデルの部分間のリンクを作成することで、その関係を維持できます。 要求モデルの詳細については、次を参照してください。[ユーザー要件をモデリング](../modeling/model-user-requirements.md)です。  
   
 ### <a name="write-tests-for-each-use-case"></a>各ユース ケースのテストの作成  
- 
-          [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] を使用している場合、要求モデル内で定義した各ユース ケースに対して、一連のテストを作成することができます。 たとえば、Create Order および Add Item to Order を含んでいる Order a Meal というユース ケースがある場合、全体に対するテストと、これらのユース ケースの細部に対する両方のテストを作成できます。 
+ [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] を使用している場合、要求モデル内で定義した各ユース ケースに対して、一連のテストを作成することができます。 たとえば、Create Order および Add Item to Order を含んでいる Order a Meal というユース ケースがある場合、全体に対するテストと、これらのユース ケースの細部に対する両方のテストを作成できます。 
   
  次のガイドラインが役立つ場合があります。  
   
@@ -68,23 +50,22 @@ ms.lasthandoff: 02/22/2017
   
     -   要求のさまざまな側面に関する変更は、多くの場合、独立して発生します。 テストをこのようにさまざまな側面に切り離すことで、要求が変更された場合に、テストを更新することが簡単になります。  
   
-    -   開発計画により、別の側面を実装する前にユース ケースの&1; つの側面を実装した場合、開発の進捗に合わせて、テストを個別に有効にすることができます。  
+    -   開発計画により、別の側面を実装する前にユース ケースの 1 つの側面を実装した場合、開発の進捗に合わせて、テストを個別に有効にすることができます。  
   
 -   テストを設計するときに、事後条件が満たされたかどうかを判断するコードやスクリプトから、選択したテスト データを切り離してください。 たとえばシンプルな算術関数のテストの場合、Input 4; verify that the output is 2 などになります。 代わりに、Choose an input; multiply the output by itself, verify that the result is the original input などのスクリプトを設計します。 このスタイルを使うと、テストの本体を変更することなく、テストの入力を変更できます。  
   
 #### <a name="linking-tests-to-use-cases"></a>ユース ケースへのテストのリンク  
- 使用している場合[!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]デザインをテストの実行は、要件、ユース ケース、またはユーザー ストーリーの作業項目の下でテストを整理することができます。 モデル内のユース ケースを、このような作業項目にリンクできます。 これにより、要求の変更を迅速に追跡してテストすることができます。また、各ユース ケースの進捗も追跡しやすくなります。  
+ 使用している場合[!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]を設計およびテストの実行、要件、ユース ケース、またはユーザー ストーリーの作業項目の下でテストを整理することができます。 モデル内のユース ケースを、このような作業項目にリンクできます。 これにより、要求の変更を迅速に追跡してテストすることができます。また、各ユース ケースの進捗も追跡しやすくなります。  
   
 ###### <a name="to-link-tests-to-a-use-case"></a>テストをユース ケースにリンクするには  
   
-1.  
-          [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] で要求を作成し、その要求に対してテスト スイートを作成します。
+1.  [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] で要求を作成し、その要求に対してテスト スイートを作成します。
   
-     作成した要求は、[!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] の作業項目になります。 これは、[!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] でプロジェクトが使用するプロセス テンプレートに応じて、ユーザー ストーリー、要求、ユース ケースの作業項目などになります。 詳細については、次を参照してください。 [Visual Studio チームのサービスまたは Team Foundation Server を使用して作業の追跡](http://msdn.microsoft.com/Library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)します。  
+     作成した要求は、[!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] の作業項目になります。 これは、[!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] でプロジェクトが使用するプロセス テンプレートに応じて、ユーザー ストーリー、要求、ユース ケースの作業項目などになります。 詳細については、次を参照してください。 [Visual Studio Team Services または Team Foundation Server を使用して作業を追跡](http://msdn.microsoft.com/Library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)です。  
   
-2.  モデル内の&1; つまたは複数のユース ケースに対して、要求の作業項目をリンクします。  
+2.  モデル内の 1 つまたは複数のユース ケースに対して、要求の作業項目をリンクします。  
   
-     ユース ケース図、ユース ケースを右クリックしをクリックして**作業項目へリンク**します。 詳細については、次を参照してください。[モデル要素のリンクと作業項目](../modeling/link-model-elements-and-work-items.md)します。  
+     ユース ケース図のユース ケースを右クリックし、をクリックして**作業項目へリンク**です。 
   
 3.  テスト スイートに追加して、ユース ケースを確認するケースをテストします。  
   
@@ -131,7 +112,7 @@ Assert (countAfter == countBefore = 1);
 ## <a name="deriving-subsystem-tests-from-models"></a>モデルからサブシステム テストを派生させる  
  大規模システムのハイレベル設計では、コンポーネントまたはサブシステムを特定できます。 これらは、個別に設計可能なパーツ、別のコンピューターに配置できるパーツ、さまざまな方法で再結合できる再利用可能モジュールなどを表しています。 
   
- システム全体に対して使用した原則と同じ原則が、各主要コンポーネントに対しても適用できます。 大規模なプロジェクトでは、各コンポーネントは、独自の要求モデルを持つことができます。 小さいプロジェクトでは、アーキテクチャ モデルやハイレベル設計を作成して、主要コンポーネントとその相互作用を表わすことができます。 詳細については、次を参照してください。 [、アプリケーションのアーキテクチャをモデル](../modeling/model-your-app-s-architecture.md)します。  
+ システム全体に対して使用した原則と同じ原則が、各主要コンポーネントに対しても適用できます。 大規模なプロジェクトでは、各コンポーネントは、独自の要求モデルを持つことができます。 小さいプロジェクトでは、アーキテクチャ モデルやハイレベル設計を作成して、主要コンポーネントとその相互作用を表わすことができます。 詳細については、次を参照してください。[アプリのアーキテクチャをモデル](../modeling/model-your-app-s-architecture.md)です。  
   
  いずれの場合でも、要求モデルとシステム テスト間と同じ方法で、モデル要素とサブシステム テスト間の関係を確立することができます。  
   
@@ -166,20 +147,18 @@ Assert (countAfter == countBefore = 1);
   
 #### <a name="to-link-tests-to-a-model-element-or-relationship"></a>テストをモデル要素または関係にリンクするには  
   
-1.  
-          [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] で要求を作成し、その要求に対してテスト スイートを作成します。 
+1.  [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] で要求を作成し、その要求に対してテスト スイートを作成します。 
   
-     作成した要求は、[!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] の作業項目になります。 これは、[!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] でプロジェクトが使用するプロセス テンプレートに応じて、ユーザー ストーリー、要求、ユース ケースの作業項目などになります。 詳細については、次を参照してください。 [Visual Studio チームのサービスまたは Team Foundation Server を使用して作業の追跡](http://msdn.microsoft.com/Library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)します。  
+     作成した要求は、[!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] の作業項目になります。 これは、[!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] でプロジェクトが使用するプロセス テンプレートに応じて、ユーザー ストーリー、要求、ユース ケースの作業項目などになります。 詳細については、次を参照してください。 [Visual Studio Team Services または Team Foundation Server を使用して作業を追跡](http://msdn.microsoft.com/Library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)です。  
   
-2.  モデル内の&1; つまたは複数の要素に対して、要求の作業項目をリンクします。  
+2.  モデル内の 1 つまたは複数の要素に対して、要求の作業項目をリンクします。  
   
-     モデリング図の要素、コメントまたはリレーションシップを右クリックし、**作業項目へリンク**します。 詳細については、次を参照してください。[モデル要素のリンクと作業項目](../modeling/link-model-elements-and-work-items.md)します。  
+     モデリング図では、要素、コメントまたはリレーションシップを右クリックし、をクリックして**作業項目へリンク**です。
   
 3.  テスト スイーツに追加し、モデル要素内で表された要求を検証するケースをテストします。  
   
 ## <a name="see-also"></a>関連項目  
- [アプリケーションのモデルを作成します。](../modeling/create-models-for-your-app.md)   
- [モデルのユーザーの要件](../modeling/model-user-requirements.md)   
+ [アプリのモデルを作成します。](../modeling/create-models-for-your-app.md)   
+ [ユーザー要件のモデリング](../modeling/model-user-requirements.md)   
  [モデルのアプリのアーキテクチャ](../modeling/model-your-app-s-architecture.md)   
  [アーキテクチャの分析およびモデリング](../modeling/analyze-and-model-your-architecture.md)
-

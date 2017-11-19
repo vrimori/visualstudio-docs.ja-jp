@@ -1,57 +1,56 @@
 ---
-title: "IDiaAddressMap::set_addressMap | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaAddressMap::set_addressMap メソッド"
+title: "Idiaaddressmap::set_addressmap |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaAddressMap::set_addressMap method
 ms.assetid: 81e82073-089b-43d5-af39-49d7a4907c7a
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 49dc861b6c250c83a6c30e2dbd0fb5035671ff28
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaAddressMap::set_addressMap
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-サポートのイメージの移動に Address マップを提供します。  
+# <a name="idiaaddressmapsetaddressmap"></a>IDiaAddressMap::set_addressMap
+イメージのレイアウトの翻訳をサポートするために、アドレス マップを提供します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT set_addressMap (   
-   DWORD                     cbData,  
-   struct DiaAddressMapEntry data[],  
-   BOOL                      imagetoSymbols  
+```C++  
+HRESULT set_addressMap (   
+   DWORD                     cbData,  
+   struct DiaAddressMapEntry data[],  
+   BOOL                      imagetoSymbols  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `cbData`  
- \[入力\] `data` のパラメーターの要素数。  
+ [in]内の要素の数、`data`パラメーター。  
   
  `data[]`  
- \[移動\] マップを定義する [DiaAddressMapEntry 構造体](../../debugger/debug-interface-access/diaaddressmapentry.md) の構造体の配列。  
+ [in]配列[DiaAddressMapEntry 構造体](../../debugger/debug-interface-access/diaaddressmapentry.md)変換マップを定義する構造体。  
   
  `imagetoSymbols`  
- \(デバッグ シンボル\) と\[入力\] `data` のパラメーターが新しいイメージのレイアウトから元のレイアウトにマップを定義する `TRUE`。  `data` が元のレイアウトから取得される新しいイメージのレイアウトにマップされて `FALSE`。  
+ [in]`TRUE`場合、 `data` (デバッグ シンボルで記述された) としてパラメーターを新しいイメージのレイアウトから元のレイアウトへのマップを定義します。 `FALSE`場合`data`の元のレイアウトから取得した新しいイメージのレイアウトにマップします。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- 通常DIAプログラム データベース \(.pdb\) ファイルからアドレス変換 \(マップを取得します。  これらの値がない場合[IDiaAddressMap::set\_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md) のメソッドは `TRUE` への `imagetoSymbols` 設定されたパラメーター `FALSE` 一度に `imagetoSymbols` のパラメーター セットに重複して一度だけ呼び出されます。  Address マップの移動は [IDiaAddressMap::put\_addressMapEnabled](../Topic/IDiaAddressMap::put_addressMapEnabled.md) のメソッドを使用して移動のマップが両方とも提供する有効にできません。  
+## <a name="remarks"></a>コメント  
+ 通常、DIA は、プログラム データベース (.pdb) ファイルからアドレス変換マップを取得します。 これらの値は、不足している場合、 [idiaaddressmap::set_imageheaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)メソッドは、2 回呼び出されますが 1 回、`imagetoSymbols`パラメーターに設定`TRUE`とが 1 回、`imagetoSymbols`パラメーターに設定`FALSE`です。 使用してアドレスのマップの変換を有効にすることはできません、 [idiaaddressmap::put_addressmapenabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md)メソッド両方の変換マップを指定しない限り、します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [DiaAddressMapEntry 構造体](../../debugger/debug-interface-access/diaaddressmapentry.md)   
  [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   
- [IDiaAddressMap::put\_addressMapEnabled](../Topic/IDiaAddressMap::put_addressMapEnabled.md)   
- [IDiaAddressMap::set\_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)
+ [Idiaaddressmap::put_addressmapenabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md)   
+ [IDiaAddressMap::set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)

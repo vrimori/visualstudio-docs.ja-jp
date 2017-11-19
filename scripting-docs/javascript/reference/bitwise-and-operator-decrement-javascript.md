@@ -1,67 +1,69 @@
 ---
-title: "ビットごとの AND 演算子 (&amp;) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "&"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "代入演算子、ビットごとの [JavaScript]"
-  - "& 演算子、& 演算子の概要"
-  - "AND 演算子"
-  - "& 演算子"
-  - "ビット処理演算子、AND 演算子"
-  - "& 演算子、ビット処理演算子"
+title: "ビットごとの AND 演算子 (&amp;) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: '&'
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- assignment operators, bitwise [JavaScript]
+- '& operator, about & operator'
+- AND operator
+- '& operator'
+- bitwise operators, AND operator
+- '& operator, bitwise operators'
 ms.assetid: a8c17a55-2599-4518-98d7-671699f4d5f3
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: fa8b3eec0cbd7c172d08b16120fb54f3be3c6a48
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# ビットごとの AND 演算子 (&amp;) (JavaScript)
-2 つの 32 ビット式のビットごとの AND 演算を実行します。  
+# <a name="bitwise-and-operator-amp-javascript"></a>ビットごとの AND 演算子 (&amp;) (JavaScript)
+32 ビットの 2 つの式でビットごとの AND 演算を実行します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 result = expression1 & expression2  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `result`  
- 演算の結果。  
+ 操作の結果。  
   
  `expression1`  
- 任意の式を指定します。  
+ 任意の式。  
   
  `expression2`  
- 任意の式を指定します。  
+ 任意の式。  
   
-## 解説  
- `&` は、2 個の 32 ビット式のそれぞれのビットに対してビットごとの AND 演算を実行します。  ビットの両方が 1 の場合、結果は 1 です。  それ以外の場合、結果は 0 になります。  
+## <a name="remarks"></a>コメント  
+ `&`は 32 ビットの 2 つの式のビットの各ビットごとの AND 演算します。 1 ビットの両方の場合は、結果は 1 です。 それ以外の場合、結果は 0 です。  
   
-|Bit1|Bit2|ANDed 値|  
-|----------|----------|-------------|  
+|Bit1|Bit2|値の and 演算|  
+|----------|----------|-----------------|  
 |0|0|0|  
 |1|1|1|  
 |1|0|0|  
 |0|1|0|  
   
- `&` 演算子を使用する方法の例を次に示します。  
+ 次の例を使用する方法を示して、`&`演算子。  
   
-```javascript  
+```JavaScript  
 // 9 is 00000000000000000000000000001001  
 var expr1 = 9;  
   
@@ -75,10 +77,10 @@ document.write(result);
 // Output: 1  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
-## 参照  
- [ビットごとの AND 代入演算子 \(&\=\)](../../javascript/reference/bitwise-and-assignment-operator-decrement-equal-javascript.md)   
+## <a name="see-also"></a>関連項目  
+ [ビットごとの AND 代入演算子 (& =)](../../javascript/reference/bitwise-and-assignment-operator-decrement-equal-javascript.md)   
  [演算子の優先順位](../../javascript/operator-subtractprecedence-javascript.md)   
- [演算子の一覧 \(JavaScript\)](../../javascript/misc/operator-subtractsummary-javascript.md)
+ [演算子の一覧 (JavaScript)](../../javascript/misc/operator-subtractsummary-javascript.md)

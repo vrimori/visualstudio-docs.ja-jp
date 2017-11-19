@@ -1,35 +1,37 @@
 ---
-title: "description プロパティ (Error) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Description"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "Description プロパティ"
-  - "エラー処理, エラーの説明"
-  - "エラー, 記述"
+title: "description プロパティ (Error) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: Description
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- error handling, error description
+- Description property
+- errors, description
 ms.assetid: ea727f1e-2041-4400-965c-67e6d47a1ff0
-caps.latest.revision: 18
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 6135951fdf65698ed48b9bbacdcc55c1aac22d41
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# description プロパティ (Error) (JavaScript)
-特定のエラーに関連付けられたエラーを説明する文字列を設定または返します。  
+# <a name="description-property-error-javascript"></a>description プロパティ (Error) (JavaScript)
+特定のエラーと関連付けられたエラーを説明する文字列を設定するか、または返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -37,22 +39,22 @@ object
 .description [= stringExpression]  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  *object*  
- 必須です。  `Error` オブジェクトの任意のインスタンスを指定します。  
+ 必須です。 任意のインスタンス、`Error`オブジェクト。  
   
  `stringExpression`  
- 省略可能です。  エラーの説明を含む文字列表現を指定します。  
+ 省略可能です。 エラーの説明を含む文字列式です。  
   
-## 解説  
- **description** プロパティは、特定のエラーに関連付けられたエラー メッセージを格納する文字列です。  このプロパティを使用して、エラーをユーザーに通知します。  
+## <a name="remarks"></a>コメント  
+ **説明**プロパティには、特定のエラーに関連付けられているエラー メッセージ文字列が含まれています。 ユーザーは、エラーのアラートを生成するには、このプロパティに含まれている値を使用します。  
   
- **description** プロパティと **message** プロパティの機能は同じです。**description** プロパティは下位互換性を提供し、**message** プロパティは ECMA 規格に準拠しています。  
+ **説明**と**メッセージ**プロパティは、同じ機能を提供;**説明**プロパティは下位互換性を提供; **メッセージ**プロパティは、ECMA 規格に準拠しています。  
   
-## 使用例  
- **description** プロパティの使用例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、使用、**説明**プロパティです。  
   
-```javascript  
+```JavaScript  
 try  
 {  
 // Cause an error:  
@@ -74,12 +76,12 @@ catch(e)
 }  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv5](../../javascript/reference/includes/jsv5-md.md)]  
   
- **対象**: [Error オブジェクト](../../javascript/reference/error-object-javascript.md)  
+ **適用されます**: [Error オブジェクト](../../javascript/reference/error-object-javascript.md)  
   
-## 参照  
- [number プロパティ \(Error\)](../../javascript/reference/number-property-error-javascript.md)   
- [message プロパティ \(Error\)](../../javascript/reference/message-property-error-javascript.md)   
- [name プロパティ \(Error\)](../../javascript/reference/name-property-error-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [number プロパティ (Error)](../../javascript/reference/number-property-error-javascript.md)   
+ [message プロパティ (Error)](../../javascript/reference/message-property-error-javascript.md)   
+ [name プロパティ (Error)](../../javascript/reference/name-property-error-javascript.md)

@@ -1,93 +1,97 @@
 ---
-title: "How to: Add, Update, or Remove a WCF Data Service Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "service references [Visual Studio]"
-  - "WCF Data Service reference"
-  - "WCF data service references"
-  - "ADO.NET service references"
-  - "ADO.NET Data Service reference"
+title: "方法: 追加、更新、または WCF データ サービス参照の削除 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- service references [Visual Studio]
+- WCF Data Service reference
+- WCF data service references
+- ADO.NET service references
+- ADO.NET Data Service reference
 ms.assetid: 892ebf37-3af4-472e-8744-92837677d611
-caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.technology: vs-data-tools
+ms.openlocfilehash: c6a46a506ecbe0ca461de927f2ec1297d43c710b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# How to: Add, Update, or Remove a WCF Data Service Reference
-*サービス参照*を使用すると、プロジェクトで 1 つ以上の [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] にアクセスできます。  [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] を検索するには、**\[サービス参照の追加\]** ダイアログ ボックスを使用します。ローカル エリア ネットワーク上にある現在のソリューションのサービスをローカルで検索することも、インターネット上のサービスを検索することもできます。  
+# <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>方法: WCF データ サービス参照を追加、更新、または削除する
+A*サービス リファレンス*によって、プロジェクトで 1 つまたは複数のアクセスを[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]です。 使用して、**サービス参照の追加**を検索 ダイアログ ボックス[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]ローカル、ローカル エリア ネットワーク、またはインターネット上の現在のソリューションにします。  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-## サービス参照の追加  
+## <a name="adding-a-service-reference"></a>サービス参照の追加  
   
-#### 外部サービスへの参照を追加するには  
+#### <a name="to-add-a-reference-to-an-external-service"></a>外部サービスへの参照を追加するには  
   
-1.  **ソリューション エクスプローラー**で、サービスを追加するプロジェクトの名前を右クリックし、**\[サービス参照の追加\]** をクリックします。  
+1.  **ソリューション エクスプ ローラー**、クリックして、サービスを追加するプロジェクトの名前を右クリックして**サービス参照の追加**です。  
   
-     **\[サービス参照の追加\]** ダイアログ ボックスが表示されます。  
+     **サービス参照の追加** ダイアログ ボックスが表示されます。  
   
-2.  **\[アドレス\]** ボックスにサービスの URL を入力し、**\[移動\]** をクリックしてサービスを検索します。  サービスにユーザー名とパスワードによるセキュリティが実装されている場合は、ユーザー名とパスワードの入力を求められることがあります。  
-  
-    > [!NOTE]
-    >  参照するのは、信頼できる送信元からのサービスのみにしてください。  信頼関係のないソースからの参照を追加すると、セキュリティが損なわれる場合があります。  
-  
-     前回有効なサービス メタデータが見つかった 15 件の URL を含む **\[アドレス\]** リストから、URL を選択することもできます。  
-  
-     検索の実行中はプログレス バーが表示されます。  **\[停止\]**をクリックすると、検索をいつでも停止できます。  
-  
-3.  **\[サービス\]** ボックスで、使用するサービスのノードを展開し、エンティティ セットを選択します。  
-  
-4.  **\[名前空間\]** ボックスで、参照に使用する名前空間を入力します。  
-  
-5.  **\[OK\]** をクリックして、プロジェクトに参照を追加します。  
-  
-     サービス クライアント \(プロキシ\) が生成され、サービスを記述したメタデータが app.config ファイルに追加されます。  
-  
-#### 現在のソリューションのサービスへの参照を追加するには  
-  
-1.  **ソリューション エクスプローラー**で、サービスを追加するプロジェクトの名前を右クリックし、**\[サービス参照の追加\]** をクリックします。  
-  
-     **\[サービス参照の追加\]** ダイアログ ボックスが表示されます。  
-  
-2.  **\[探索\]** をクリックします。  
-  
-     **\[サービス\]** ボックスに、現在のソリューションに含まれるすべてのサービス \([!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] および WCF サービス\) が追加されます。  
-  
-3.  **\[サービス\]** ボックスで、使用するサービスのノードを展開し、エンティティ セットを選択します。  
-  
-4.  **\[名前空間\]** ボックスで、参照に使用する名前空間を入力します。  
-  
-5.  **\[OK\]** をクリックして、プロジェクトに参照を追加します。  
-  
-     サービス クライアント \(プロキシ\) が生成され、サービスを記述したメタデータが app.config ファイルに追加されます。  
-  
-## サービス参照の更新  
- [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] の Entity Data Model は変更されることがあります。  そのような場合は、サービス参照を更新する必要があります。  
-  
-#### サービス参照を更新するには  
-  
--   **ソリューション エクスプローラー**で、サービス参照を右クリックし、**\[サービス参照の更新\]** をクリックします。  
-  
-     参照が元の場所から更新されている間、プログレス ダイアログ ボックスが表示され、メタデータの変更を反映してサービス クライアントが再生成されます。  
-  
-## サービス参照の削除  
- サービス参照が使用されなくなった場合は、ソリューションから削除できます。  
-  
-#### サービス参照を削除するには  
-  
--   **ソリューション エクスプローラー**で、サービス参照を右クリックし、**\[削除\]** をクリックします。  
-  
-     ソリューションからサービス クライアントが削除され、サービスを記述したメタデータが app.config ファイルから削除されます。  
+2.  **アドレス**ボックスで、サービスの URL を入力し、をクリックして**移動**サービスを検索します。 サービスは、ユーザー名とパスワードのセキュリティを実装する場合、ユーザー名とパスワードを求めるメッセージが表示します。  
   
     > [!NOTE]
-    >  サービス参照を参照するコードがある場合は、手動で削除する必要があります。  
+    >  のみ、信頼されたソースからサービスを参照する必要があります。 信頼できないソースからの参照を追加するには、セキュリティが危険にさらす可能性があります。  
   
-## 参照  
- [Add Service Reference Dialog Box](../Topic/Add%20Service%20Reference%20Dialog%20Box.md)
+     URL を選択することも、**アドレス**一覧で、有効なサービスのメタデータを検出する位置を前の 15 の Url を格納します。  
+  
+     検索の実行中は進行状況バーが表示されます。 クリックして、いつでも検索を停止できます**停止**です。  
+  
+3.  **Services**一覧で、使用して、エンティティ セットを選択するサービスのノードを展開します。  
+  
+4.  **Namespace**ボックスで、参照に使用する名前空間を入力します。  
+  
+5.  をクリックして**OK**プロジェクトに参照を追加します。  
+  
+     サービス クライアント (プロキシ) が生成され、サービスを記述したメタデータが app.config ファイルに追加します。  
+  
+#### <a name="to-add-a-reference-to-a-service-in-the-current-solution"></a>現在のソリューションに、サービスへの参照を追加するには  
+  
+1.  **ソリューション エクスプ ローラー**、クリックして、サービスを追加するプロジェクトの名前を右クリックして**サービス参照の追加**です。  
+  
+     **サービス参照の追加** ダイアログ ボックスが表示されます。  
+  
+2.  をクリックして**検出**です。  
+  
+     すべてのサービス (両方[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]および WCF サービス) で、現在のソリューションに追加されます、 **Services**  ボックスの一覧です。  
+  
+3.  **Services**一覧で、使用して、エンティティ セットを選択するサービスのノードを展開します。  
+  
+4.  **Namespace**ボックスで、参照に使用する名前空間を入力します。  
+  
+5.  をクリックして**OK**プロジェクトに参照を追加します。  
+  
+     サービス クライアント (プロキシ) が生成され、サービスを記述したメタデータが app.config ファイルに追加します。  
+  
+## <a name="updating-a-service-reference"></a>サービス参照の更新  
+ エンティティ データ モデル、[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]が変わることがあります。 この場合、サービス参照を更新する必要があります。  
+  
+#### <a name="to-update-a-service-reference"></a>サービス参照を更新するには  
+  
+-   **ソリューション エクスプ ローラー**サービス参照を右クリックし、クリックして**サービス参照の更新**です。  
+  
+     元の場所から参照が更新され、メタデータの変更を反映して、サービス クライアントが再生成中に、進行状況 ダイアログ ボックスが表示されます。  
+  
+## <a name="removing-a-service-reference"></a>サービス参照の削除  
+ サービス参照が使用されていないが場合、は、ソリューションから削除できます。  
+  
+#### <a name="to-remove-a-service-reference"></a>サービス参照を削除するには  
+  
+-   **ソリューション エクスプ ローラー**サービス参照を右クリックし、クリックして**削除**です。  
+  
+     サービス クライアントは、ソリューションから削除され、サービスを記述したメタデータが app.config ファイルから削除されます。  
+  
+    > [!NOTE]
+    >  サービス参照を参照するすべてのコードは、手動で削除する必要があります。  
+  
+## <a name="see-also"></a>関連項目  
+ [Visual Studio での Windows Communication Foundation サービスと WCF データ サービス](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

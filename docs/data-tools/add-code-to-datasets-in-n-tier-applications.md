@@ -1,5 +1,5 @@
 ---
-title: Add code to datasets in n-tier applications | Microsoft Docs
+title: "N 層アプリケーションのデータセットにコードを追加 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,72 +9,53 @@ ms.topic: article
 dev_langs:
 - VB
 - CSharp
-- C++
-- aspx
-helpviewer_keywords:
-- n-tier applications, extending datasets
+helpviewer_keywords: n-tier applications, extending datasets
 ms.assetid: d43c2ccd-4902-43d8-b1a8-d10ca5d3210c
-caps.latest.revision: 20
-author: mikeblome
-ms.author: mblome
+caps.latest.revision: "20"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: ee1a0cf1b392fe6407fb66cf64a2372cc2208a69
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/22/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: 26dd5500f50b185c31809d9882e03e56541a567a
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="add-code-to-datasets-in-n-tier-applications"></a>Add code to datasets in n-tier applications
-You can extend the functionality of a dataset by creating a partial class file for the dataset and adding code to it (instead of adding code to the *DatasetName*.Dataset.Designer file). Partial classes enable code for a specific class to be divided among multiple physical files. For more information, see [Partial](/dotnet/visual-basic/language-reference/modifiers/partial) or [Partial Classes and Methods](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods).  
+# <a name="add-code-to-datasets-in-n-tier-applications"></a>N 層アプリケーションのデータセットにコードを追加します。
+データセットの部分クラス ファイルを作成し、コードを追加して、データセットの機能を拡張することができます (コードを追加するのではなく、 *DatasetName*です。Dataset.Designer ファイル) です。 部分クラスでは、コードを複数の物理ファイルに分割する特定のクラスを有効にします。 詳細については、次を参照してください。[部分](/dotnet/visual-basic/language-reference/modifiers/partial)または[部分クラスとメソッド](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)です。  
   
- The code that defines a dataset is generated every time changes are made to the dataset definition (in the typed dataset). This code is also generated when you make changes during the running of any wizard that modifies the configuration of a dataset. To prevent your code from being deleted during the regeneration of a dataset, add code to the dataset's partial class file.  
+(型指定されたデータセット) のデータセット定義を変更するたびに、データセットを定義するコードが生成されます。 データセットの構成を変更するウィザードの実行中に変更を加えると、このコードは生成されます。 コードが、データセットの再生時に削除されないようにするには、データセットの部分クラス ファイルにコードを追加します。  
   
- By default, after you separate the dataset and `TableAdapter` code, the result is a discrete class file in each project. The original project has a file named *DatasetName*.Designer.vb (or *DatasetName*.Designer.cs) that contains the `TableAdapter` code. The project that's designated in the **Dataset Project** property has a file that's named *DatasetName*.DataSet.Designer.vb (or *DatasetName*.DataSet.Designer.cs).This file contains the dataset code.  
-  
-> [!NOTE]
->  When you separate datasets and `TableAdapter`s (by setting the **DataSet Project** property), existing partial dataset classes in the project won't be moved automatically. Existing dataset partial classes must be moved manually to the dataset project.  
+既定では、データセットと TableAdapter のコードを分離する、結果は、プロジェクトごとに別個のクラス ファイルです。 元のプロジェクトがという名前のファイル*DatasetName*です。(または*DatasetName*です。Designer.cs) TableAdapter のコードを含むです。 指定されているプロジェクト、 **Dataset プロジェクト**プロパティという名前のファイルは、 *DatasetName*です。DataSet.Designer.vb (または*DatasetName*です。DataSet.Designer.cs)。このファイルには、データセット コードが含まれています。  
   
 > [!NOTE]
->  When validation code needs to be added, the typed dataset provides functionality for generating <xref:System.Data.DataTable.ColumnChanging> and <xref:System.Data.DataTable.RowChanging> event handlers. For more information, see [Add validation to an n-tier dataset](../data-tools/add-validation-to-an-n-tier-dataset.md).  
+>  データセットと Tableadapter を分離する場合 (設定して、 **DataSet プロジェクト**プロパティ)、プロジェクト内の既存のデータセット部分クラスを自動的に移動されません。 既存のデータセット部分クラスは、手動でデータセット プロジェクトに移動する必要があります。  
   
-### <a name="to-add-code-to-datasets-in-n-tier-applications"></a>To add code to datasets in n-tier applications  
+> [!NOTE]
+>  検証コードを追加する必要があると、型指定されたデータセットが生成するための機能を提供<xref:System.Data.DataTable.ColumnChanging>と<xref:System.Data.DataTable.RowChanging>イベント ハンドラー。 詳細については、次を参照してください。 [n 層データセットに検証を追加](../data-tools/add-validation-to-an-n-tier-dataset.md)です。  
   
-1.  Locate the project that contains the .xsd file. 
+## <a name="to-add-code-to-datasets-in-n-tier-applications"></a>N 層アプリケーションのデータセットにコードを追加するには  
   
-2.  Select the **.xsd** file to open the dataset.  
+1.  .Xsd ファイルを含むプロジェクトを見つけます。 
   
-3.  Right-click the data table to which you want to add code (the table name in the title bar), and then select **View Code**.  
+2.  選択、 **.xsd**ファイルを開くには、データセットです。  
   
-     A partial class is created and opens in the Code Editor.  
+3.  コード (タイトル バーにテーブル名) を追加し、選択するデータ テーブルを右クリックして**コードの表示**です。  
   
-4.  Add code inside the partial class declaration.  
+     部分クラスが作成され、コード エディターで開きます。  
   
-     The following example shows where to add code to the CustomersDataTable in the NorthwindDataSet:  
+4.  部分クラス宣言内のコードを追加します。  
   
-    ```vb#  
+     次の例は、NorthwindDataSet 内 CustomersDataTable にコードを追加する場所を示しています。  
+  
+    ```vb  
     Partial Public Class CustomersDataTable  
         ' Add code here to add functionality   
         ' to the CustomersDataTable.  
     End Class  
-    ```  
-  
-    ```c#  
+    ```    
+    ```csharp  
     partial class CustomersDataTable  
     {  
         // Add code here to add functionality  
@@ -82,10 +63,9 @@ You can extend the functionality of a dataset by creating a partial class file f
     }  
     ```  
   
-## <a name="see-also"></a>See Also  
- [N-Tier Data Applications Overview](../data-tools/n-tier-data-applications-overview.md)   
- [Add code to TableAdapters in n-tier applications](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)   
- [Create and Configure TableAdapters](create-and-configure-tableadapters.md)   
- [Create and Configure TableAdapters](create-and-configure-tableadapters.md)   
- [Hierarchical Update Overview](hierarchical-update.md)     
- [Dataset tools in Visual Studio](../data-tools/dataset-tools-in-visual-studio.md)
+## <a name="see-also"></a>関連項目
+[N 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)   
+[n 層アプリケーションの TableAdapters にコードを追加する](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)  
+[作成し、Tableadapter を構成します。](create-and-configure-tableadapters.md)  
+[階層更新の概要](hierarchical-update.md)     
+[Visual Studio のデータセット ツール](../data-tools/dataset-tools-in-visual-studio.md)

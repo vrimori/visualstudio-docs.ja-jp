@@ -1,55 +1,56 @@
 ---
-title: "CA1059: メンバーは特定の具象型を公開できません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1059"
-  - "MembersShouldNotExposeCertainConcreteTypes"
-helpviewer_keywords: 
-  - "CA1059"
-  - "MembersShouldNotExposeCertainConcreteTypes"
+title: "Ca 1059: メンバーは特定の具象型を公開できません |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1059
+- MembersShouldNotExposeCertainConcreteTypes
+helpviewer_keywords:
+- MembersShouldNotExposeCertainConcreteTypes
+- CA1059
 ms.assetid: 59f61f52-8d6c-49cb-aefb-191910523a3c
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: d5b8b4a50ce23a7ed50f2e608334f9b438a0b090
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA1059: メンバーは特定の具象型を公開できません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1059-members-should-not-expose-certain-concrete-types"></a>CA1059: メンバーは特定の具象型を公開できません
 |||  
 |-|-|  
 |TypeName|MembersShouldNotExposeCertainConcreteTypes|  
 |CheckId|CA1059|  
-|分類|Microsoft.Design|  
+|カテゴリ|Microsoft.Design|  
 |互換性に影響する変更点|あり|  
   
-## 原因  
- 外部から参照可能なメンバーは特定の具象型であるか、パラメーターの 1 つまたは戻り値を使用して特定の具象型を公開します。  現在、この規則によって次の具象型の脆弱性が報告されています。  
+## <a name="cause"></a>原因  
+ 外部から参照できるメンバーは、特定の具象型は、またはそのパラメーターのいずれかで特定の具象型を公開または戻り値。 現時点では、このルールは、次の具体的な種類の公開をレポートします。  
   
--   <xref:System.Xml.XmlNode?displayProperty=fullName> の派生型。  
+-   派生した型<xref:System.Xml.XmlNode?displayProperty=fullName>です。  
   
-## 規則の説明  
- 具象型は、完全な実装を含む型であるため、インスタンス化できます。  このメンバーを広範囲に使用するには、具象型を推奨インターフェイスと置き換えます。  これにより、メンバーはそのインターフェイスを実装する任意の型を受け入れられるようになったり、そのインターフェイスを実装する型が求められる場所で使用できるようになったりします。  
+## <a name="rule-description"></a>規則の説明  
+ 具象型は、完全な実装を含む型であるため、インスタンス化できます。 メンバーを広範囲に使用を許可するのには、具象型に推奨のインターフェイスを置き換えます。 これにより、インターフェイスを実装する任意の型を受け入れるか、インターフェイスを実装する型が必要な場所を使用するメンバー。  
   
- 次の表に、対象となる具象型およびそれと置き換えることが推奨されるインターフェイスを示します。  
+ 次の表には、対象となる具象型とその推奨される代替が一覧表示します。  
   
-|具象型|置き換え|  
-|---------|----------|  
-|<xref:System.Xml.XPath.XPathDocument>|<xref:System.Xml.XPath.IXPathNavigable?displayProperty=fullName>.<br /><br /> このインターフェイスを使用することで、XML データ ソースの特定の実装からメンバーを切り離します。|  
+|具象型|Replacement|  
+|-------------------|-----------------|  
+|<xref:System.Xml.XPath.XPathDocument>|<xref:System.Xml.XPath.IXPathNavigable?displayProperty=fullName>。<br /><br /> インターフェイスを使用して、XML データ ソースの特定の実装からメンバーを切り離します。|  
   
-## 違反の修正方法  
- この規則違反を修正するには、具象型を推奨インターフェイスに変更します。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、推奨のインターフェイスに具象型を変更します。  
   
-## 警告を抑制する状況  
- 具象型によって実現されている特定の機能が必要な場合は、この規則によるメッセージを抑制しても安全です。  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ これは具象型で提供される特定の機能が必要な場合は、この規則からのメッセージを抑制しても安全です。  
   
-## 関連規則  
+## <a name="related-rules"></a>関連規則  
  [CA1011: 基本型をパラメーターとして渡すことを考慮します](../code-quality/ca1011-consider-passing-base-types-as-parameters.md)

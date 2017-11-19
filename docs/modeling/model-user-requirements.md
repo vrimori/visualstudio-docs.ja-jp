@@ -10,35 +10,20 @@ helpviewer_keywords:
 - requirements
 - stories
 ms.assetid: 359900f8-6d69-493d-bfdf-2c9069c74a26
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 08aabdfe0e268f93ef7723076375b7f65b15ccf3
-ms.openlocfilehash: 60866c46920bb85927498992082763f9e34b4137
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 064d2819a9a7bd3e72539ff7624299e3619f4e94
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="model-user-requirements"></a>ユーザー要件のモデリング
 Visual Studio を使用すると、ユーザーの目標達成を支援する際に、彼らのアクティビティやシステムが果たしている役割に関する図を描画することで、ユーザー ニーズを理解し、検討し、やり取りすることができます。 要求モデルとはこのような一連の図のことで、それぞれの図では、ユーザー ニーズの異なる側面に注目しています。 ビデオ デモについては、「 [ビジネス ドメインのモデリング](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-3-Modeling-the-Business-Domain/)」を参照してください。  
   
- どのバージョンの Visual Studio モデルの種類ごとのサポートを確認するには、次を参照してください。[アーキテクチャとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)します。  
+ どのバージョンの Visual Studio が各モデルの種類をサポートしているかについては、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
  要求モデルの特長:  
   
@@ -56,10 +41,10 @@ Visual Studio を使用すると、ユーザーの目標達成を支援する際
   
 -   システム テストのベースとしてモデルを使用して、テストと要求間の関係を明確にします。 要求が変更された場合、この関係により、テストを正しく更新できます。 これにより、システムが新しい要求を満たしていることを確認します。  
   
- 要求モデルは、ユーザーまたはユーザーの代表者との話し合いに集中する場合や、各反復処理の開始時に再検討する場合に使用すると、最大のメリットが得られます。 コードを作成する前に、要求モデルを細部まで完成させる必要はありません。 通常、非常に簡略化された状態で部分的にしか動作していないアプリケーションでも、ユーザーと要求について検討する場合に、非常に効果の上がるベースとなります。 このモデルは、これらの話し合いの結果を要約する効果的な方法です。 詳細については、次を参照してください。[開発プロセスでモデルを使用して](../modeling/use-models-in-your-development-process.md)します。  
+ 要求モデルは、ユーザーまたはユーザーの代表者との話し合いに集中する場合や、各反復処理の開始時に再検討する場合に使用すると、最大のメリットが得られます。 コードを作成する前に、要求モデルを細部まで完成させる必要はありません。 通常、非常に簡略化された状態で部分的にしか動作していないアプリケーションでも、ユーザーと要求について検討する場合に、非常に効果の上がるベースとなります。 このモデルは、これらの話し合いの結果を要約する効果的な方法です。 詳細については、次を参照してください。[モデルを使用して、開発工程で](../modeling/use-models-in-your-development-process.md)です。  
   
 > [!NOTE]
->  これらのトピックでは、"システム" という用語は、開発中のシステムまたはアプリケーションを意味します。 システムは、数多くのソフトウェアおよびハードウェア コンポーネントが大規模に収集されたものを指す場合があります。また、1 つのアプリケーションの場合もあれば、大規模なシステム内の&1; つのソフトウェア コンポーネントを指すこともあります。 いずれの場合でも、要求モデルは、ユーザー インターフェイスを使用するか、API を使用するかにかかわらず、システムの外側から確認できる動作を記述します。  
+>  これらのトピックでは、"システム" という用語は、開発中のシステムまたはアプリケーションを意味します。 システムは、数多くのソフトウェアおよびハードウェア コンポーネントが大規模に収集されたものを指す場合があります。また、1 つのアプリケーションの場合もあれば、大規模なシステム内の 1 つのソフトウェア コンポーネントを指すこともあります。 いずれの場合でも、要求モデルは、ユーザー インターフェイスを使用するか、API を使用するかにかかわらず、システムの外側から確認できる動作を記述します。  
   
 ## <a name="common-tasks"></a>一般的なタスク  
  ユーザー要求について、複数の異なるビューを作成することができます。  各ビューは、特定の種類の情報を提供します。  これらのビューを作成するときは、頻繁にビューを切り替えることをお勧めします。 任意のビューから開始することができます。  
@@ -67,12 +52,12 @@ Visual Studio を使用すると、ユーザーの目標達成を支援する際
 |図またはドキュメント|要求モデルに記載されている内容|セクション|  
 |-------------------------|-----------------------------------------------|-------------|  
 |概念クラス図|要求の記述に使用する型の用語集。システムのインターフェイスで確認できる型。||  
-|追加のドキュメントまたは作業項目|パフォーマンス、セキュリティ、使いやすさ、および信頼性の条件。|[サービス品質要求を記述します。](#QoSRequirements)|  
+|追加のドキュメントまたは作業項目|パフォーマンス、セキュリティ、使いやすさ、および信頼性の条件。|[サービス品質要求の記述](#QoSRequirements)|  
 |追加のドキュメントまたは作業項目|特定のユース ケースに固有でない制約とルール|[ビジネス ルールの表示](#BusinessRules)|  
   
- ほとんどの種類の図が、他の目的に使用できることに注意してください。 図の種類の概要については、次を参照してください。[アプリのモデルを作成](../modeling/create-models-for-your-app.md)します。
+ ほとんどの種類の図が、他の目的に使用できることに注意してください。 ダイアグラムの種類の概要については、次を参照してください。[アプリのモデルを作成](../modeling/create-models-for-your-app.md)です。
   
-##  <a name="a-namebusinessrulesa-showing-business-rules"></a><a name="BusinessRules"></a>ビジネス ルールの表示  
+##  <a name="BusinessRules"></a> Showing Business Rules  
  ビジネス ルールとは、特定のユース ケースに関連付けられておらず、システム全体で認められる要求です。  
   
  多くのビジネス ルールは、概念クラス間の関係に関する制約です。 概念クラス図では、これらの *静的な**ビジネス ルール* を、関連するクラスに関連付けられたコメントとして記述できます。 例:  
@@ -91,7 +76,7 @@ Visual Studio を使用すると、ユーザーの目標達成を支援する際
 |--------------------|----------|  
 |ビジネス ルールに準拠しているコードを開発する方法|[アプリのアーキテクチャをモデル化する](../modeling/model-your-app-s-architecture.md)|  
   
-##  <a name="a-nameqosrequirementsa-describing-quality-of-service-requirements"></a><a name="QoSRequirements"></a>サービス品質要求を記述します。  
+##  <a name="QoSRequirements"></a> Describing Quality of Service Requirements  
  サービス品質要求には、いくつかのカテゴリがあります。 次に例を示します。  
   
 -   パフォーマンス  
@@ -116,6 +101,5 @@ Visual Studio を使用すると、ユーザーの目標達成を支援する際
 |サービス品質要求に準拠しているコードを開発する方法|[アプリのアーキテクチャをモデル化する](../modeling/model-your-app-s-architecture.md)|  
   
 ## <a name="see-also"></a>関連項目  
- [開発プロセスでモデルを使用します。](../modeling/use-models-in-your-development-process.md)   
+ [モデルを使用して、開発工程で](../modeling/use-models-in-your-development-process.md)   
  [アプリのアーキテクチャをモデル化する](../modeling/model-your-app-s-architecture.md)   
-

@@ -1,52 +1,53 @@
 ---
-title: "コマンド処理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "エディター [Visual Studio SDK] - レガシ コマンド処理"
+title: "コマンド処理 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: editors [Visual Studio SDK], legacy - command handling
 ms.assetid: 78f67d92-77f7-45cb-ad75-6e3346379cc3
-caps.latest.revision: 20
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 0cb2bf52c038b0abbac742aafa942f2f7ea7ea1d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# コマンド処理
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-エディターには、新しいコマンドを定義できます。 コマンドは通常、メニュー、ツール バーやコンテキスト メニューに表示されます。  
+# <a name="command-handling"></a>コマンド処理
+エディターには、新しいコマンドを定義できます。 コマンドは通常、ツールバー、またはコンテキスト メニューのメニューに表示されます。  
   
- コマンドおよびメニューを定義する方法の詳細については、次を参照してください。 [コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)します。  
+ コマンドおよびメニューの定義の詳細については、次を参照してください。[コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)です。  
   
- 言語サービスがインターセプトすることで、エディターで表示されるコンテキスト メニューを制御することができます、 <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> 列挙します。 代わりに、マーカー単位ごとに、コンテキスト メニューを制御できます。 詳細については、次を参照してください。 [言語サービスのフィルターの重要なコマンド](../extensibility/internals/important-commands-for-language-service-filters.md)します。  
+ 言語サービスがインターセプトし、エディターで、表示されるコンテキスト メニューを制御することができます、<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>列挙します。 代わりに、マーカーあたりごとに、コンテキスト メニューを制御できます。 詳細については、次を参照してください。[言語サービスのフィルターの重要なコマンド](../extensibility/internals/important-commands-for-language-service-filters.md)です。  
   
 ## <a name="adding-commands-to-the-editor-context-menu"></a>エディター コンテキスト メニューにコマンドを追加します。  
- コンテキスト メニューにコマンドを追加するには、最初に、特定のグループに属するメニュー コマンドのセットを定義する必要があります。 次の例は、チュートリアルの一部として生成された .vsct ファイルから取得 [チュートリアル: カスタム エディターに追加する機能](../extensibility/walkthrough-adding-features-to-a-custom-editor.md):  
+ コンテキスト メニューにコマンドを追加するには、最初一連の特定のグループに属しているメニュー コマンドを定義する必要があります。 次の例は、このチュートリアルの一部として生成 .vsct ファイルから取得[チュートリアル: カスタム エディターに追加する機能](../extensibility/walkthrough-adding-features-to-a-custom-editor.md):  
   
- \< メニュー guid"guidCustomEditorCmdSet"id ="IDMX_RTF"優先度の = ="0x0000"型"context">  
+ \<メニューの guid"guidCustomEditorCmdSet"id ="IDMX_RTF"優先度を = ="0x0000"種類"context">  
   
- \< 親 guid ="guidCustomEditorCmdSet"id =「0」/>  
+ \<親 guid ="guidCustomEditorCmdSet"id =「0」/>  
   
- \< 文字列>  
+ \<文字列 >  
   
- \< ButtonText>CustomEditor コンテキスト メニュー \</アドイン>  
+ \<ButtonText > CustomEditor コンテキスト メニュー\</ButtonText >  
   
- \< CommandName>CustomEditorContextMenu \</CommandName>  
+ \<CommandName > CustomEditorContextMenu\</CommandName >  
   
- \< 文字列/>  
+ \</文字列 >  
   
- \</メニュー>  
+ \</メニュー >  
   
- \</メニュー>  
+ \</メニュー >  
   
- 上のテキストがテキストでコンテキスト メニュー コマンドを追加 **CustomEditor コンテキスト メニュー**します。 メニューの GUID は、このエディターを使用して作成される一連のコマンドの種類は「コンテキスト」です。  
+ 上記のテキストを追加、コンテキスト メニューのコマンドをテキスト**CustomEditor コンテキスト メニュー**です。 メニュー GUID は、このエディターでは、コマンド セットの作成され、型が「コンテキスト」ことです。  
   
- .Vsct ファイルで定義する必要はありませんが、定義済みのコマンドを使用することもできます。 たとえば、Visual Studio パッケージ テンプレートによって生成された EditorPane.cs ファイルを調べると、見つかった場合、一連の定義済みのコマンドなど <xref:Microsoft.VisualStudio.VSConstants.VSStd97CmdID> によって定義された <xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>, 、onSelectAll メソッドなどのコマンド ハンドラーで処理されます。  
+ .Vsct ファイルで定義する必要はありません定義済みのコマンドを使用することもできます。 たとえば、Visual Studio パッケージ テンプレートによって生成された EditorPane.cs ファイルを確認する場合と考えることが、定義済みのコマンドのセットなど<xref:Microsoft.VisualStudio.VSConstants.VSStd97CmdID>によって定義された<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>、onSelectAll メソッドなどのコマンド ハンドラーで処理されます。  
   
-## <a name="see-also"></a>参照  
- [コマンド、メニューのおよびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)
+## <a name="see-also"></a>関連項目  
+ [コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)

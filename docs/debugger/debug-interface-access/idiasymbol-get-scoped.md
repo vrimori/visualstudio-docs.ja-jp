@@ -1,46 +1,45 @@
 ---
-title: "IDiaSymbol::get_scoped | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_scoped メソッド"
+title: "Idiasymbol::get_scoped |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_scoped method
 ms.assetid: 588163f7-958e-4072-bf66-db5c5f07d3cb
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 502f0e40d0047d931fb31376abddd4a98fec11e0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_scoped
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-ユーザー定義データ型はグローバルではない構文のスコープで表示されるかどうかを指定するフラグを取得します。  
+# <a name="idiasymbolgetscoped"></a>IDiaSymbol::get_scoped
+グローバルではないの構文のスコープで、ユーザー定義データ型を表示するかどうかを指定するフラグを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_scoped (   
-   BOOL* pRetVal  
+```C++  
+HRESULT get_scoped (   
+   BOOL* pRetVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- \[入力\] ユーザー定義データ型がグローバルではない構文のスコープにある場合はを返します `TRUE` ; それ以外の場合戻り `FALSE`。  
+ [out]返します`TRUE`非グローバルの構文のスコープ以外に、ユーザー定義データ型が表示される場合を返しますそれ以外の場合、`FALSE`です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合戻り `S_FALSE` またはエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  `S_FALSE` の戻り値はプロパティのシンボルで使用できないことを意味します。  
+>  戻り値の`S_FALSE`プロパティが、シンボルを使用できないことを意味します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,34 +1,33 @@
 ---
-title: "&lt;assembly&gt; 要素 (ClickOnce アプリケーション) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "urn:schemas-microsoft-com:asm.v2#assembly"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "<assembly> 要素 [ClickOnce アプリケーション マニフェスト]"
+title: "&lt;アセンブリ&gt;要素 (ClickOnce アプリケーション) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: urn:schemas-microsoft-com:asm.v2#assembly
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords: <assembly> element [ClickOnce application manifest]
 ms.assetid: 51410569-10f9-4c0a-96b5-d39185edbefc
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: fafc5df1a2aa32fa60c1f41077f7e3fff29ddef7
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# &lt;assembly&gt; 要素 (ClickOnce アプリケーション)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-アプリケーション マニフェストのトップレベルの要素です。  
+# <a name="ltassemblygt-element-clickonce-application"></a>&lt;アセンブリ&gt;要素 (ClickOnce アプリケーション)
+アプリケーション マニフェストの最上位要素です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -37,8 +36,8 @@ caps.handback.revision: 15
 />  
 ```  
   
-## 要素と属性  
- `assembly` 要素はルート要素であり、必ず指定します。  この要素に最初に含まれる要素は `assemblyIdentity` でなければなりません。  マニフェスト要素は次のいずれかの名前空間に含まれている必要があります。  
+## <a name="elements-and-attributes"></a>要素と属性  
+ `assembly`要素はルート要素がありが必要です。 その最初の構成要素である必要があります、`assemblyIdentity`要素。 マニフェストの要素は、次の名前空間のいずれかである必要があります。  
   
  `urn:schemas-microsoft-com:asm.v1`  
   
@@ -46,16 +45,16 @@ caps.handback.revision: 15
   
  `http://www.w3.org/2000/09/xmldsig#`  
   
- アセンブリの子要素は、継承またはタグ設定によってこれらの名前空間にも配置する必要があります。  
+ アセンブリの子要素は、これらの名前空間を継承またはタグ付けによってもする必要があります。  
   
- `assembly` 要素には、次の属性があります。  
+ `assembly`要素には、次の属性です。  
   
-|属性|Description|  
-|--------|-----------------|  
-|`manifestVersion`|必ず指定します。  `manifestVersion` 属性は `1.0` に設定する必要があります。|  
+|属性|説明|  
+|---------------|-----------------|  
+|`manifestVersion`|必須です。 `manifestVersion`に属性を設定する必要があります`1.0`です。|  
   
-## 使用例  
- 次のコード例は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションのアプリケーション マニフェスト内の `assembly` 要素を示しています。  このコード例は、「[ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)」で示されている例の一部の抜粋です。  
+## <a name="example"></a>例  
+ 次のコード例を示しています、`assembly`アプリケーション マニフェストの要素、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。 このコード例に示されている例の一部である[ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)です。  
   
 ```  
 <asmv1:assembly   
@@ -71,6 +70,6 @@ caps.handback.revision: 15
   xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)   
- [\<assembly\> 要素](../deployment/assembly-element-clickonce-deployment.md)
+ [\<アセンブリ > 要素](../deployment/assembly-element-clickonce-deployment.md)

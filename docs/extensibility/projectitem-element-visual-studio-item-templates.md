@@ -1,33 +1,38 @@
 ---
-title: "ProjectItem 要素 (Visual Studio 項目テンプレート) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#ProjectItem"
-helpviewer_keywords: 
-  - "<ProjectItem> 要素 [Visual Studio 項目テンプレート]"
-  - "ProjectItem 要素 [Visual Studio 項目テンプレート]"
+title: "ProjectItem 要素 (Visual Studio 項目テンプレート) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#ProjectItem
+helpviewer_keywords:
+- <ProjectItem> element [Visual Studio item templates]
+- ProjectItem element [Visual Studio item templates]
 ms.assetid: 9ed94112-0c38-49df-b728-0dd2d0d1eb47
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 035e698b0b8f34cbbefc665cc96f38a87a812e2d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ProjectItem 要素 (Visual Studio 項目テンプレート)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="projectitem-element-visual-studio-item-templates"></a>ProjectItem 要素 (Visual Studio 項目テンプレート)
 項目テンプレートに含まれているファイルを指定します。  
   
 > [!NOTE]
->  `ProjectItem` 要素は、テンプレートがプロジェクト用かアイテム用かによって受け入れる属性が異なります。  ここでは、アイテムの `ProjectItem` 要素について説明します。  プロジェクト テンプレートの `ProjectItem` 要素については、「[ProjectItem 要素 \(Visual Studio プロジェクト テンプレート\)](../extensibility/projectitem-element-visual-studio-project-templates.md)」を参照してください。  
+>  `ProjectItem`要素は、テンプレートが、プロジェクトまたは項目があるかによって異なる属性を受け入れます。 このトピックの内容について説明します、`ProjectItem`項目の要素。 詳細について、`ProjectItem`プロジェクト テンプレートの要素を参照してください[ProjectItem 要素 (Visual Studio プロジェクト テンプレート)](../extensibility/projectitem-element-visual-studio-project-templates.md)です。  
   
-## 構文  
+ \<VSTemplate >  
+ \<TemplateContent >  
+ \<ProjectItem >  
+  
+## <a name="syntax"></a>構文  
   
 ```  
 <ProjectItem  
@@ -40,46 +45,46 @@ caps.handback.revision: 13
 </ProjectItem>  
 ```  
   
-## 属性および要素  
+## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
-### 属性  
+### <a name="attributes"></a>属性  
   
 |属性|説明|  
-|--------|--------|  
-|`SubType`|省略可能な属性です。<br /><br /> 複数ファイルの項目テンプレートにあるアイテムのサブタイプを指定します。  この値を使って、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] がアイテムを開くときに使用するエディターを指定します。|  
-|`CustomTool`|省略可能な属性です。<br /><br /> プロジェクト ファイルの項目の CustomTool を設定します。|  
-|`ItemType`|省略可能な属性です。<br /><br /> プロジェクト ファイルの項目の ItemType を設定します。|  
-|`ReplaceParameters`|省略可能な属性です。<br /><br /> ブール値を使用します。これは、プロジェクトがテンプレートから作成されるときに、置換する必要のあるパラメーター値がアイテムに存在するかどうかを指定します。  既定値は `false`です。|  
-|`TargetFileName`|省略可能な属性です。<br /><br /> テンプレートから作成されるアイテムの名前を指定します。  この属性は、アイテム名を作成するためにパラメーター置換をする場合に便利です。|  
+|---------------|-----------------|  
+|`SubType`|省略可能な属性です。<br /><br /> 複数ファイルの項目テンプレートのアイテムのサブタイプを指定します。 この値は、エディターの決定に使用する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]アイテムを開いてから使用されます。|  
+|`CustomTool`|省略可能な属性です。<br /><br /> プロジェクト ファイルで、項目の CustomTool を設定します。|  
+|`ItemType`|省略可能な属性です。<br /><br /> プロジェクト ファイルで、項目の ItemType を設定します。|  
+|`ReplaceParameters`|省略可能な属性です。<br /><br /> アイテムが、テンプレートからプロジェクトの作成時に置き換える必要があるパラメーターの値があるかどうかを指定するブール値。 既定値は `false`にする必要があります。|  
+|`TargetFileName`|省略可能な属性です。<br /><br /> テンプレートから作成された項目の名前を指定します。 この属性は、パラメーター置換を使用して、アイテムの名前を作成するのに役立ちます。|  
   
-### 子要素  
+### <a name="child-elements"></a>子要素  
  なし。  
   
-### 親要素  
+### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
-|--------|--------|  
+|-------------|-----------------|  
 |[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|テンプレートの内容を指定します。|  
   
-## テキスト値  
+## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
   
- `string` は、テンプレート .zip ファイルにあるファイルの名前を示します。  
+ A`string`テンプレート .zip ファイル内のファイルの名前を表します。  
   
-## 解説  
- `ProjectItem` は `TemplateContent` の省略可能な子要素です。  
+## <a name="remarks"></a>コメント  
+ `ProjectItem`省略可能な子の`TemplateContent`します。  
   
- `TargetFileName` 属性は、パラメーターでファイルの名前を変更する場合にも使用できます。  たとえば、`MyFile.vb` というファイルがテンプレート .zip ファイルのルートにあるとします。このファイルを **\[新しい項目の追加\]** ダイアログ ボックスで入力したファイル名に基づいた名前に変更するには、次の XML を使用します。  
+ `TargetFileName`パラメーターを持つファイルの名前を変更する属性を使用できます。 たとえば場合、ファイル`MyFile.vb`する名前を指定するファイル名を基に、ファイル内のユーザーによって提供されるテンプレート .zip ファイルのルート ディレクトリに存在する、**新しい項目の追加**ダイアログ ボックスで、次の XML を使用すると。  
   
 ```  
 <ProjectItem TargetFileName="$fileinputname$.vb">MyFile.vb</ProjectItem>  
 ```  
   
- このテンプレートからアイテムが作成されると、ファイルには **\[新しい項目の追加\]** ダイアログ ボックスで入力した名前に基づいた名前が付けられます。  これは、複数ファイルの項目テンプレートを作成する場合に便利です。  詳細については、「[方法 : 複数ファイルの項目テンプレートを作成する](../ide/how-to-create-multi-file-item-templates.md)」および「[テンプレート名](../ide/template-parameters.md)」を参照してください。  
+ ファイル名はで、ユーザーが入力した名前に基づいて、項目がこのテンプレートから作成されると、**新しい項目の追加** ダイアログ ボックス。 これは、機能は、複数ファイルの項目テンプレートを作成するときに便利です。 詳細については、次を参照してください。[する方法: 複数ファイルの項目テンプレートを作成する](../ide/how-to-create-multi-file-item-templates.md)と[テンプレート パラメーター](../ide/template-parameters.md)です。  
   
-## 使用例  
- [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] クラスでの標準的な項目テンプレートのメタデータの例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、メタデータの標準項目テンプレートを[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]クラスです。  
   
 ```  
 <VSTemplate Type="Item" Version="3.0.0"  
@@ -97,8 +102,8 @@ caps.handback.revision: 13
 </VSTemplate>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [カスタム プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
+ [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
  [方法 : 複数ファイルの項目テンプレートを作成する](../ide/how-to-create-multi-file-item-templates.md)   
- [テンプレート名](../ide/template-parameters.md)
+ [テンプレート パラメーター](../ide/template-parameters.md)

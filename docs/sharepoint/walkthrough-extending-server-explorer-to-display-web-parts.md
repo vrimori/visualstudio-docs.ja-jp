@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Extending Server Explorer to Display Web Parts | Microsoft Docs'
+title: "チュートリアル: サーバー エクスプ ローラー Web パーツ表示するための拡張 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,120 +16,113 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending SharePoint Connections node in Server Explorer
 - SharePoint Connections [SharePoint development in Visual Studio], creating a new node type
 ms.assetid: 5b1f104a-0eaf-4929-9f1f-d7afcfc8b707
-caps.latest.revision: 54
-author: kempb
-ms.author: kempb
+caps.latest.revision: "54"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 54e01f4db7fa98d808696b7ca8d85b1c4c038f02
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 0dce1b5ecafbccfdf9816bbc4ef3e8fee3e5c2fc
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-extending-server-explorer-to-display-web-parts"></a>Walkthrough: Extending Server Explorer to Display Web Parts
-  In Visual Studio, you can use the **SharePoint Connections** node of **Server Explorer** to view components on SharePoint sites. However, **Server Explorer** doesn't display some components by default. In this walkthrough, you'll extend **Server Explorer** so that it displays the Web Part gallery on each connected SharePoint site.  
+# <a name="walkthrough-extending-server-explorer-to-display-web-parts"></a>チュートリアル: サーバー エクスプローラーを拡張して Web パーツを表示する
+  Visual Studio で、使用することができます、 **SharePoint 接続**のノード**サーバー エクスプ ローラー**を SharePoint サイト上のコンポーネントを表示します。 ただし、**サーバー エクスプ ローラー**既定では一部のコンポーネントが表示されません。 このチュートリアルで拡張する**サーバー エクスプ ローラー** SharePoint サイトが接続されている各 Web パーツ ギャラリーで表示するようです。  
   
- This walkthrough demonstrates the following tasks:  
+ このチュートリアルでは、次のタスクについて説明します。  
   
--   Creating a Visual Studio extension that extends **Server Explorer** in the following ways:  
+-   Visual Studio 拡張機能の作成を拡張**サーバー エクスプ ローラー**次のようにします。  
   
-    -   The extension adds a **Web Part Gallery** node under each SharePoint site node in **Server Explorer**. This new node contains child nodes that represent each Web Part in the Web Part gallery on the site.  
+    -   拡張機能を追加、 **Web パーツ ギャラリー**ノードの下にある各 SharePoint サイト**サーバー エクスプ ローラー**です。 この新しいノードには、サイトの Web パーツ ギャラリーでは、各 Web パーツを表す子ノードが含まれています。  
   
-    -   The extension defines a new type of node that represents a Web Part instance. This new node type is the basis for the child nodes under the new **Web Part Gallery** node. The new Web Part node type displays information in the **Properties** window about the Web Part that it represents. The node type also includes a custom shortcut menu item that you can use as a starting point for performing other tasks that relate to the Web Part.  
+    -   拡張機能では、Web パーツ インスタンスを表すノードの新しい型を定義します。 このノード型で、新しい子ノードの基礎となる**Web パーツ ギャラリー**ノード。 新しい Web パーツのノードの種類の情報が表示されます、**プロパティ**それが表す Web パーツのウィンドウ。 ノードの種類には、Web パーツに関連するその他のタスクを実行するための出発点として使用できるカスタムのショートカット メニュー項目も含まれています。  
   
--   Creating two custom SharePoint commands that the the extension assembly calls. SharePoint commands are methods that can be called by extension assemblies to use APIs in the server object model for SharePoint. In this walkthrough, you create commands that retrieve Web Part information from the local SharePoint site on the development computer. For more information, see [Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md).  
+-   2 つのカスタム SharePoint コマンドを作成する、拡張機能アセンブリの呼び出しです。 SharePoint コマンドは、SharePoint のサーバー オブジェクト モデルで Api を使用する拡張機能アセンブリを呼び出すことができるメソッドです。 このチュートリアルでは、開発用コンピューター上のローカルの SharePoint サイトから Web パーツの情報を取得するコマンドを作成します。 詳細については、次を参照してください。[の SharePoint オブジェクト モデルを呼び出す](../sharepoint/calling-into-the-sharepoint-object-models.md)です。  
   
--   Building a Visual Studio Extension (VSIX) package to deploy the extension.  
+-   拡張機能を配置する Visual Studio Extension (VSIX) パッケージを作成します。  
   
--   Debugging and testing the extension.  
+-   デバッグと、拡張機能をテストします。  
   
 > [!NOTE]  
->  For an alternate version of this walkthrough that uses the client object model for SharePoint instead of its server object model, see [Walkthrough: Calling into the SharePoint Client Object Model in a Server Explorer Extension](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md).  
+>  For SharePoint クライアント オブジェクト モデルを使用してそのサーバー オブジェクト モデルではなくこのチュートリアルの別のバージョンを参照してください。[チュートリアル: サーバー エクスプ ローラー拡張機能では、SharePoint クライアント オブジェクト モデルを呼び出す](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)です。  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components on the development computer to complete this walkthrough:  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
   
--   Supported editions of Windows, SharePoint and Visual Studio. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
+-   Windows、SharePoint、および Visual Studio のエディションをサポートします。 詳細については、次を参照してください。 [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)です。  
   
--   The Visual Studio SDK. This walkthrough uses the **VSIX Project** template in the SDK to create a VSIX package to deploy the project item. For more information, see [Extending the SharePoint Tools in Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md).  
+-   Visual Studio SDK。 このチュートリアルでは、 **VSIX プロジェクト**sdk をプロジェクト項目を配置するための VSIX パッケージを作成するテンプレートです。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツール拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)です。  
   
- Knowledge of the following concepts is helpful, but not required, to complete the walkthrough:  
+ 次の概念に関する知識があると役に立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
   
--   Using the server object model for SharePoint. For more information, see [Using the SharePoint Foundation Server-Side Object Model](http://go.microsoft.com/fwlink/?LinkId=177796).  
+-   For SharePoint サーバー オブジェクト モデルを使用します。 詳細については、次を参照してください。 [SharePoint Foundation サーバー側オブジェクト モデルを使用して](http://go.microsoft.com/fwlink/?LinkId=177796)です。  
   
--   Web Parts in SharePoint solutions. For more information, see [Web Parts Overview](http://go.microsoft.com/fwlink/?LinkId=177803).  
+-   SharePoint ソリューションの web パーツ。 詳細については、次を参照してください。 [Web パーツの概要](http://go.microsoft.com/fwlink/?LinkId=177803)です。  
   
-## <a name="creating-the-projects"></a>Creating the Projects  
- To complete this walkthrough, you must create three projects:  
+## <a name="creating-the-projects"></a>プロジェクトの作成  
+ このチュートリアルを完了するには、3 つのプロジェクトを作成する必要があります。  
   
--   A VSIX project to create the VSIX package to deploy the extension.  
+-   拡張機能を配置するための VSIX パッケージを作成する VSIX プロジェクト。  
   
--   A class library project that implements the extension. This project must target the .NET Framework 4.5.  
+-   拡張機能を実装するクラス ライブラリ プロジェクト。 このプロジェクトは、.NET Framework 4.5 を対象する必要があります。  
   
--   A class library project that defines the custom SharePoint commands. This project must target the.NET Framework 3.5.  
+-   カスタムの SharePoint コマンドを定義するクラス ライブラリ プロジェクト。 このプロジェクトは .NET Framework 3.5 を対象にする必要があります。  
   
- Start the walkthrough by creating the projects.  
+ この 2 つのプロジェクトを作成することから始めます。  
   
-#### <a name="to-create-the-vsix-project"></a>To create the VSIX project  
+#### <a name="to-create-the-vsix-project"></a>VSIX プロジェクトを作成するには  
   
-1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
+1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を起動します。  
   
-2.  On the menu bar, choose **File**, **New**, **Project**.  
+2.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
   
-3.  In the  **New Project** dialog box, expand the **Visual C#** or **Visual Basic** nodes, and then choose the **Extensibility** node.  
-  
-    > [!NOTE]  
-    >  The **Extensibility** node is available only if you install the Visual Studio SDK. For more information, see the prerequisites section earlier in this topic.  
-  
-4.  At the top of the dialog box, choose **.NET Framework 4.5** in the list of versions of the .NET Framework.  
-  
-5.  Choose the **VSIX Project** template, name the project **WebPartNode**, and then choose the **OK** button.  
-  
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **WebPartNode** project to **Solution Explorer**.  
-  
-#### <a name="to-create-the-extension-project"></a>To create the extension project  
-  
-1.  In **Solution Explorer**, open the shortcut menu for the solution node, choose **Add**, and then choose **New Project**.  
+3.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#**または**Visual Basic** 、ノードを選択し、 **Extensibility**ノード。  
   
     > [!NOTE]  
-    >  In Visual Basic projects, the solution node appears in **Solution Explorer** only when the **Always show solution** check box is selected in the [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).  
+    >  **Extensibility**ノードは、Visual Studio SDK をインストールする場合にのみ使用できます。 詳細については、このトピックで前に説明した「前提条件」を参照してください。  
   
-2.  In the **New Project** dialog box, expand the **Visual C#** node or **Visual Basic** node, and then the choose **Windows** node.  
+4.  ダイアログ ボックスの上部には、次のように選択します。 **.NET Framework 4.5** 、.NET Framework のバージョンの一覧にします。  
   
-3.  At the top of the dialog box, choose **.NET Framework 4.5** in the list of versions of the .NET Framework.  
+5.  選択、 **VSIX プロジェクト**名では、プロジェクト テンプレートは、 **WebPartNode**を選択し、 **OK**ボタンをクリックします。  
   
-4.  In the list of project templates, choose **Class Library**, name the project **WebPartNodeExtension**, and then choose the **OK** button.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **WebPartNode**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **WebPartNodeExtension** project to the solution and opens the default Class1 code file.  
+#### <a name="to-create-the-extension-project"></a>拡張機能プロジェクトを作成するには  
   
-5.  Delete the Class1 code file from the project.  
+1.  **ソリューション エクスプ ローラー**でソリューション ノードのショートカット メニューを開き、**追加**を選択し**新しいプロジェクト**です。  
   
-#### <a name="to-create-the-sharepoint-commands-project"></a>To create the SharePoint commands project  
+2.  **新しいプロジェクト**] ダイアログ ボックスで、展開、 **Visual c#**ノードまたは**Visual Basic**ノードを展開し、[ **Windows**ノード。  
   
-1.  In **Solution Explorer**, open the shortcut menu for the solution node, choose **Add**, and then choose **New Project**.  
+3.  ダイアログ ボックスの上部には、次のように選択します。 **.NET Framework 4.5** 、.NET Framework のバージョンの一覧にします。  
   
-    > [!NOTE]  
-    >  In Visual Basic projects, the solution node appears in **Solution Explorer** only when the **Always show solution** check box is selected in the [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).  
+4.  プロジェクト テンプレートの一覧で選択**クラス ライブラリ**、プロジェクトに名前を**WebPartNodeExtension**を選択し、 **OK**ボタンをクリックします。  
   
-2.  In the  **New Project** dialog box, expand the **Visual C#** node or **Visual Basic** node, and then choose the **Windows** node.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **WebPartNodeExtension**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
   
-3.  At the top of the dialog box, choose **.NET Framework 3.5** in the list of versions of the .NET Framework.  
+5.  Class1 コード ファイルをプロジェクトから削除します。  
+  
+#### <a name="to-create-the-sharepoint-commands-project"></a>SharePoint コマンド プロジェクトを作成するには  
+  
+1.  **ソリューション エクスプ ローラー**でソリューション ノードのショートカット メニューを開き、**追加**を選択し**新しいプロジェクト**です。  
+  
+2.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#**ノードまたは**Visual Basic**  ノードを選択し、 **Windows**ノード。  
+  
+3.  ダイアログ ボックスの上部には、次のように選択します。 **.NET Framework 3.5** 、.NET Framework のバージョンの一覧にします。  
   
 4.  
   
-5.  In the list of project templates, choose **Class Library**, name the project **WebPartCommands**, and then choose the **OK** button.  
+5.  プロジェクト テンプレートの一覧で選択**クラス ライブラリ**、プロジェクトに名前を**WebPartCommands**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **WebPartCommands** project to the solution and opens the default Class1 code file.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **WebPartCommands**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
   
-6.  Delete the Class1 code file from the project.  
+6.  Class1 コード ファイルをプロジェクトから削除します。  
   
-## <a name="configuring-the-projects"></a>Configuring the Projects  
- Before you write code to create the extension, you must add code files and assembly references, and configure the project settings.  
+## <a name="configuring-the-projects"></a>プロジェクトの構成  
+ 拡張機能を作成するコードを記述する前に、コード ファイルおよびアセンブリ参照を追加し、プロジェクト設定を構成する必要があります。  
   
-#### <a name="to-configure-the-webpartnodeextension-project"></a>To configure the WebPartNodeExtension project  
+#### <a name="to-configure-the-webpartnodeextension-project"></a>WebPartNodeExtension プロジェクトを構成するには  
   
-1.  In the WebPartNodeExtension project, add four code files that have the following names:  
+1.  WebPartNodeExtension プロジェクトでは、次の名前を持つ 4 つのコード ファイルを追加します。  
   
     -   SiteNodeExtension  
   
@@ -141,248 +132,253 @@ ms.lasthandoff: 08/30/2017
   
     -   WebPartCommandIds  
   
-2.  Open the shortcut menu for the **WebPartNodeExtension** project, and then choose **Add Reference**.  
+2.  ショートカット メニューを開き、 **WebPartNodeExtension**プロジェクトをクリックして**参照の追加**です。  
   
-3.  In the **Reference Manager - WebPartNodeExtension** dialog box, choose the **Framework** tab, and then select the check box for each of the following assemblies:  
+3.  **参照マネージャー - WebPartNodeExtension**  ダイアログ ボックスで、選択、 **Framework**タブをクリックし、次のアセンブリの各チェック ボックスを選択。  
   
     -   System.ComponentModel.Composition  
   
     -   System.Windows.Forms  
   
-4.  Choose the **Extensions** tab, select the check box for the Microsoft.VisualStudio.SharePoint assembly, and then choose the **OK** button.  
+4.  選択、**拡張機能**] タブ、Microsoft.VisualStudio.SharePoint アセンブリのチェック ボックスを選択し、[、 **OK**ボタンをクリックします。  
   
-5.  In **Solution Explorer**, open the shortcut menu for the **WebPartNodeExtension** project node, and then choose **Properties**.  
+5.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **WebPartNodeExtension**プロジェクト ノードをクリックして**プロパティ**です。  
   
-     The **Project Designer** opens.  
+     **プロジェクト デザイナー**が開きます。  
   
-6.  Choose the **Application** tab.  
+6.  **[アプリケーション]** タブを選択します。  
   
-7.  In the **Default namespace** box (C#) or **Root namespace** box ([!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]), enter **ServerExplorer.SharePointConnections.WebPartNode**.  
+7.  **既定の名前空間**ボックス (c#) または**ルート名前空間**ボックス ([!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)])、入力**ServerExplorer.SharePointConnections.WebPartNode**です。  
   
-#### <a name="to-configure-the-webpartcommands-project"></a>To configure the WebPartCommands project  
+#### <a name="to-configure-the-webpartcommands-project"></a>WebPartCommands プロジェクトを構成するには  
   
-1.  In the WebPartCommands project, add a code file that's named WebPartCommands.  
+1.  プロジェクトで、WebPartCommands WebPartCommands というコード ファイルを追加します。  
   
-2.  In **Solution Explorer**, open the shortcut menu for the **WebPartCommands** project node, choose **Add**, and then choose **Existing Item**.  
+2.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **WebPartCommands**プロジェクト ノードを選択して**追加**を選択し**既存項目の**.  
   
-3.  In the **Add Existing Item** dialog box, browse to the folder that contains the code files for the WebPartNodeExtension project, and then choose the WebPartNodeInfo and WebPartCommandIds code files.  
+3.  **既存項目の追加** ダイアログ ボックスが WebPartNodeExtension プロジェクトのコード ファイルを含むフォルダーを参照し、WebPartNodeInfo と WebPartCommandIds コード ファイルを選択します。  
   
-4.  Choose the arrow next to the **Add** button, and then choose **Add As Link** in the menu that appears.  
+4.  横の矢印を選択、**追加**ボタンをクリックし、**リンクとして追加**表示されるメニュー。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the code files to the WebPartCommands project as links. As a result, the code files are located in the WebPartNodeExtension project, but the code in the files are also compiled in the WebPartCommands project.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]WebPartCommands プロジェクトへのリンクとしてコード ファイルを追加します。 この結果、WebPartNodeExtension プロジェクト内のコード ファイルにあるが、ファイル内のコードは WebPartCommands プロジェクトでもコンパイルします。  
   
-5.  Open the shortcut menu for the **WebPartCommands** project again, and choose **Add Reference**.  
+5.  ショートカット メニューを開き、 **WebPartCommands**プロジェクトをもう一度、**参照の追加**です。  
   
-6.  In the **Reference Manager - WebPartCommands** dialog box, choose the **Extensions** tab, select the check box for each of the following assemblies, and then choose the **OK** button:  
+6.  **参照マネージャー - WebPartCommands**  ダイアログ ボックスで、選択、**拡張** タブ、次のアセンブリの各チェック ボックスを選択し、、 **OK**ボタンをクリックします。  
   
     -   Microsoft.SharePoint  
   
     -   Microsoft.VisualStudio.SharePoint.Commands  
   
-7.  In **Solution Explorer**, open the shortcut menu for the **WebPartCommands** project again, and then choose **Properties**.  
+7.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **WebPartCommands**クリックして、もう一度、プロジェクト**プロパティ**です。  
   
-     The **Project Designer** opens.  
+     **プロジェクト デザイナー**が開きます。  
   
-8.  Choose the **Application** tab.  
+8.  **[アプリケーション]** タブを選択します。  
   
-9. In the **Default namespace** box (C#) or **Root namespace** box ([!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]), enter **ServerExplorer.SharePointConnections.WebPartNode**.  
+9. **既定の名前空間**ボックス (c#) または**ルート名前空間**ボックス ([!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)])、入力**ServerExplorer.SharePointConnections.WebPartNode**です。  
   
-## <a name="creating-icons-for-the-new-nodes"></a>Creating Icons for the New Nodes  
- Create two icons for the **Server Explorer** extension: an icon for the new **Web Part Gallery** node, and another icon for each child Web Part node under the **Web Part Gallery** node. Later in this walkthrough, you will write code that associates these icons with the nodes.  
+## <a name="creating-icons-for-the-new-nodes"></a>新しいノードのアイコンの作成  
+ 2 つのアイコンを作成、**サーバー エクスプ ローラー**拡張機能: 新しいアイコン**Web パーツ ギャラリー**ノード、および各子 Web パーツのノードの下の別のアイコン、 **Web パーツ ギャラリー**ノードです。 このチュートリアルの後半では、ノードにこれらのアイコンを関連付けるコードを記述します。  
   
-#### <a name="to-create-icons-for-the-nodes"></a>To create icons for the nodes  
+#### <a name="to-create-icons-for-the-nodes"></a>ノードのアイコンを作成するには  
   
-1.  In **Solution Explorer**, open the shortcut menu for the **WebPartNodeExtension** project, and then choose **Properties**.  
+1.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **WebPartNodeExtension**プロジェクトをクリックして**プロパティ**です。  
   
-2.  The **Project Designer** opens.  
+2.  **プロジェクト デザイナー**が開きます。  
   
-3.  Choose the **Resources** tab, and then choose the **This project does not contain a default resources file. Click here to create one** link.  
+3.  選択、**リソース** タブをクリックして、**このプロジェクトに既定のリソース ファイルが含まれていません。作成するのにはここをクリックして**リンクします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] creates a resource file and opens it in the designer.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]リソース ファイルを作成し、デザイナーで開かれます。  
   
-4.  At the top of the designer, choose the arrow next to the **Add Resource** menu command, and then choose **Add New Icon** in the menu that appears.  
+4.  デザイナーの上部にあるに横に矢印をクリックして、**リソースの追加**メニュー コマンドを使用し、**新しいアイコンの追加**表示されるメニュー。  
   
-5.  In the **Add New Resource** dialog box, name the new icon **WebPartsNode**, and then choose the **Add** button.  
+5.  **新しいリソースの追加** ダイアログ ボックスに、名前、新規アイコン**WebPartsNode**を選択し、**追加**ボタンをクリックします。  
   
-     The new icon opens in the **Image Editor**.  
+     新しいアイコンが表示されます、**イメージ エディター**です。  
   
-6.  Edit the 16x16 version of the icon so that it has a design that you can easily recognize.  
+6.  16 x 16 版のアイコンを編集して、デザイン簡単に識別できるようにします。  
   
-7.  Open the shortcut menu for the 32x32 version of the icon, and then choose **Delete Image Type**.  
+7.  アイコンのサイズは 32 x 32 のバージョンについては、ショートカット メニューを開き、選択**イメージ タイプの削除**です。  
   
-8.  Repeat steps 5 through 8 to add a second icon to the project resources, and name this icon **WebPart**.  
+8.  手順 5. ~ 8. をプロジェクトのリソースに 2 番目のアイコンを追加して、このアイコンの名前を付けます**WebPart**です。  
   
-9. In **Solution Explorer**, under the **Resources** folder for the **WebPartNodeExtension** project, open the shortcut menu for **WebPartsNode.ico**.  
+9. **ソリューション エクスプ ローラー**下で、**リソース**用のフォルダー、 **WebPartNodeExtension**プロジェクトで、ショートカット メニューを開き、 **WebPartsNode.ico**.  
   
-10. In the **Properties** window, choose the arrow next to **Build Action**, and then choose **Embedded Resource** on the menu that appears.  
+10. **プロパティ**ウィンドウで、横の矢印を選択**ビルド アクション**を選択し**埋め込まれたリソース**表示されるメニュー。  
   
-11. Repeat the last two steps for **WebPart.ico**.  
+11. 最後の 2 つの手順を繰り返します**WebPart.ico**です。  
   
-## <a name="adding-the-web-part-gallery-node-to-server-explorer"></a>Adding the Web Part Gallery Node to Server Explorer  
- Create a class that adds the new **Web Part Gallery** node to each SharePoint site node. To add the new node, the class implements the <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> interface. Implement this interface whenever you want to extend the behavior of an existing node in **Server Explorer**, such as adding a child node to a node.  
+## <a name="adding-the-web-part-gallery-node-to-server-explorer"></a>サーバー エクスプ ローラー Web パーツ ギャラリー ノードを追加します。  
+ 新しいを追加するクラスを作成**Web パーツ ギャラリー** SharePoint サイトの各ノードにノードです。 クラスを実装して、新しいノードを追加する、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension>インターフェイスです。 既存のノードでの動作を拡張するには必ず、このインターフェイスを実装して**サーバー エクスプ ローラー**ノードに子ノードを追加するなどです。  
   
-#### <a name="to-add-the-web-part-gallery-node-to-server-explorer"></a>To add the Web Part Gallery node to Server Explorer  
+#### <a name="to-add-the-web-part-gallery-node-to-server-explorer"></a>サーバー エクスプ ローラー Web パーツ ギャラリーのノードを追加するには  
   
-1.  In the WebPartNodeExtension project, open the SiteNodeExtension code file, and then paste the following code into it.  
+1.  WebPartNodeExtension プロジェクトで SiteNodeExtension コード ファイルを開くし、に、次のコードを貼り付けます。  
   
     > [!NOTE]  
-    >  After you add this code, the project will have some compile errors, but they'll go away when you add code in later steps.  
+    >  このコードを追加する、プロジェクトは、一部のコンパイル エラーが解消されます後に追加するとコード後の手順で。  
   
-     [!code-csharp[SPExtensibility.SPExplorer.WebPartNodeWithCommands#1](../sharepoint/codesnippet/CSharp/WebPartNode/webpartnodeextension/sitenodeextension.cs#1)]  [!code-vb[SPExtensibility.SPExplorer.WebPartNodeWithCommands#1](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnodewithcommands.webpartnode/webpartnodeextension/sitenodeextension.vb#1)]  
+     [!code-csharp[SPExtensibility.SPExplorer.WebPartNodeWithCommands#1](../sharepoint/codesnippet/CSharp/WebPartNode/webpartnodeextension/sitenodeextension.cs#1)]
+     [!code-vb[SPExtensibility.SPExplorer.WebPartNodeWithCommands#1](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnodewithcommands.webpartnode/webpartnodeextension/sitenodeextension.vb#1)]  
   
-## <a name="defining-a-node-type-that-represents-a-web-part"></a>Defining a Node Type that Represents a Web Part  
- Create a class that defines a new type of node that represents a Web Part. Visual Studio uses this new node type to display child nodes under the **Web Part Gallery** node. Each child node represents a single Web Part on the SharePoint site.  
+## <a name="defining-a-node-type-that-represents-a-web-part"></a>Web パーツを表すノードの種類の定義  
+ Web パーツを表すノードの新しい型を定義するクラスを作成します。 Visual Studio で子ノードを表示するこの新しいノード型を使用して、 **Web パーツ ギャラリー**ノード。 それぞれの子ノードでは、SharePoint サイトで単一の Web パーツを表します。  
   
- To define the new node type, the class implements the <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider> interface. Implement this interface whenever you want to define a new type of node in **Server Explorer**.  
+ 新しいノードの種類をクラスを実装を定義する、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider>インターフェイスです。 内のノードの新しい型を定義するには必ず、このインターフェイスを実装して**サーバー エクスプ ローラー**です。  
   
-#### <a name="to-define-the-web-part-node-type"></a>To define the Web Part node type  
+#### <a name="to-define-the-web-part-node-type"></a>Web パーツのノード型を定義するには  
   
-1.  In the WebPartNodeExtension project, open the WebPartNodeTypeProvder code file, and then paste the following code into it.  
+1.  WebPartNodeExtension プロジェクトで WebPartNodeTypeProvder コード ファイルを開くし、に、次のコードを貼り付けます。  
   
-     [!code-vb[SPExtensibility.SPExplorer.WebPartNodeWithCommands#2](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnodewithcommands.webpartnode/webpartnodeextension/webpartnodetypeprovider.vb#2)]  [!code-csharp[SPExtensibility.SPExplorer.WebPartNodeWithCommands#2](../sharepoint/codesnippet/CSharp/WebPartNode/webpartnodeextension/webpartnodetypeprovider.cs#2)]  
+     [!code-vb[SPExtensibility.SPExplorer.WebPartNodeWithCommands#2](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnodewithcommands.webpartnode/webpartnodeextension/webpartnodetypeprovider.vb#2)]
+     [!code-csharp[SPExtensibility.SPExplorer.WebPartNodeWithCommands#2](../sharepoint/codesnippet/CSharp/WebPartNode/webpartnodeextension/webpartnodetypeprovider.cs#2)]  
   
-## <a name="defining-the-web-part-data-class"></a>Defining the Web Part Data Class  
- Define a class that contains data about a single Web Part on the SharePoint site. Later in this walkthrough, you will create a custom SharePoint command that retrieves data about each Web Part on the site and then assigns the data to instances of this class.  
+## <a name="defining-the-web-part-data-class"></a>Web パーツのデータ クラスを定義します。  
+ SharePoint サイトで単一の Web パーツに関するデータを格納するクラスを定義します。 このチュートリアルの後半では、サイト上の各 Web パーツに関するデータを取得し、このクラスのインスタンスにデータを割り当てますカスタム SharePoint コマンドを作成します。  
   
-#### <a name="to-define-the-web-part-data-class"></a>To define the Web Part data class  
+#### <a name="to-define-the-web-part-data-class"></a>Web パーツ データ クラスを定義するには  
   
-1.  In the WebPartNodeExtension project, open the WebPartNodeInfo code file, and then paste the following code into it.  
+1.  WebPartNodeExtension プロジェクトで WebPartNodeInfo コード ファイルを開くし、に、次のコードを貼り付けます。  
   
-     [!code-vb[SPExtensibility.SPExplorer.WebPartNodeWithCommands#3](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnodewithcommands.webpartnode/webpartnodeextension/webpartnodeinfo.vb#3)]  [!code-csharp[SPExtensibility.SPExplorer.WebPartNodeWithCommands#3](../sharepoint/codesnippet/CSharp/WebPartNode/webpartnodeextension/webpartnodeinfo.cs#3)]  
+     [!code-vb[SPExtensibility.SPExplorer.WebPartNodeWithCommands#3](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnodewithcommands.webpartnode/webpartnodeextension/webpartnodeinfo.vb#3)]
+     [!code-csharp[SPExtensibility.SPExplorer.WebPartNodeWithCommands#3](../sharepoint/codesnippet/CSharp/WebPartNode/webpartnodeextension/webpartnodeinfo.cs#3)]  
   
-## <a name="defining-the-ids-for-the-sharepoint-command"></a>Defining the IDs for the SharePoint Command  
- Define several strings that identify the custom SharePoint commands. You will implement these commands later in this walkthrough.  
+## <a name="defining-the-ids-for-the-sharepoint-command"></a>SharePoint コマンドの Id を定義します。  
+ カスタムの SharePoint コマンドを識別するいくつかの文字列を定義します。 このチュートリアルの後半では、これらのコマンドを実装します。  
   
-#### <a name="to-define-the-command-ids"></a>To define the command IDs  
+#### <a name="to-define-the-command-ids"></a>コマンド Id を定義するには  
   
-1.  In the WebPartNodeExtension project, open the WebPartCommandIds code file, and then paste the following code into it.  
+1.  WebPartNodeExtension プロジェクトで WebPartCommandIds コード ファイルを開くし、に、次のコードを貼り付けます。  
   
-     [!code-csharp[SPExtensibility.SPExplorer.WebPartNodeWithCommands#4](../sharepoint/codesnippet/CSharp/WebPartNode/webpartnodeextension/webpartcommandids.cs#4)]  [!code-vb[SPExtensibility.SPExplorer.WebPartNodeWithCommands#4](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnodewithcommands.webpartnode/webpartnodeextension/webpartcommandids.vb#4)]  
+     [!code-csharp[SPExtensibility.SPExplorer.WebPartNodeWithCommands#4](../sharepoint/codesnippet/CSharp/WebPartNode/webpartnodeextension/webpartcommandids.cs#4)]
+     [!code-vb[SPExtensibility.SPExplorer.WebPartNodeWithCommands#4](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnodewithcommands.webpartnode/webpartnodeextension/webpartcommandids.vb#4)]  
   
-## <a name="creating-the-custom-sharepoint-commands"></a>Creating the Custom SharePoint Commands  
- Create custom commands that call into the server object model for SharePoint to retrieve data about the Web Parts on the SharePoint site. Each command is a method that has the <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> applied to it.  
+## <a name="creating-the-custom-sharepoint-commands"></a>カスタム SharePoint コマンドの作成  
+ SharePoint サイト上の Web パーツに関するデータを取得するように SharePoint のサーバー オブジェクト モデルを呼び出すカスタム コマンドを作成します。 各コマンドはメソッドを持つ、<xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute>を適用します。  
   
-#### <a name="to-define-the-sharepoint-commands"></a>To define the SharePoint commands  
+#### <a name="to-define-the-sharepoint-commands"></a>SharePoint コマンドを定義するには  
   
-1.  In the WebPartCommands project, open the WebPartCommands code file, and then paste the following code into it.  
+1.  WebPartCommands プロジェクトで WebPartCommands コード ファイルを開くし、に、次のコードを貼り付けます。  
   
-     [!code-csharp[SPExtensibility.SPExplorer.WebPartNodeWithCommands#6](../sharepoint/codesnippet/CSharp/WebPartNode/WebPartCommands/WebPartCommands.cs#6)]  [!code-vb[SPExtensibility.SPExplorer.WebPartNodeWithCommands#6](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnodewithcommands.webpartnode/webpartcommands/webpartcommands.vb#6)]  
+     [!code-csharp[SPExtensibility.SPExplorer.WebPartNodeWithCommands#6](../sharepoint/codesnippet/CSharp/WebPartNode/WebPartCommands/WebPartCommands.cs#6)]
+     [!code-vb[SPExtensibility.SPExplorer.WebPartNodeWithCommands#6](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnodewithcommands.webpartnode/webpartcommands/webpartcommands.vb#6)]  
   
-## <a name="checkpoint"></a>Checkpoint  
- At this point in the walkthrough, all the code for the **Web Part Gallery** node and the SharePoint commands are now in the projects. Build the solution to make sure that both projects compile without errors.  
+## <a name="checkpoint"></a>チェックポイント  
+ この時点で、チュートリアルでは、すべてのコードで、 **Web パーツ ギャラリー**のプロジェクトでノードと SharePoint コマンドは現在します。 ソリューションをビルドして両方のプロジェクトがコンパイル エラーが発生しないことを確認してください。  
   
-#### <a name="to-build-the-solution"></a>To build the solution  
+#### <a name="to-build-the-solution"></a>ソリューションをビルドするには  
   
-1.  On the menu bar, choose **Build**, **Build Solution**.  
+1.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]**の順にクリックします。  
   
     > [!WARNING]  
-    >  At this point, the WebPartNode project may have a build error because the VSIX manifest file doesn't have a value for Author. This error will go away when you add a value in later steps.  
+    >  この時点で、VSIX マニフェスト ファイルでは、作成者の値がなかったために、WebPartNode プロジェクトは、ビルド エラーがあります。 このエラーは解消後の手順で値を追加する場合。  
   
-## <a name="creating-a-vsix-package-to-deploy-the-extension"></a>Creating a VSIX Package to Deploy the Extension  
- To deploy the extension, use the VSIX project in your solution to create a VSIX package. First, configure the VSIX package by modifying the source.extension.vsixmanifest file in the VSIX project. Then, create the VSIX package by building the solution.  
+## <a name="creating-a-vsix-package-to-deploy-the-extension"></a>拡張機能を配置する VSIX パッケージの作成  
+ 拡張機能を配置するには、ソリューションで VSIX プロジェクトを使用して VSIX パッケージを作成します。 まず、VSIX プロジェクトの source.extension.vsixmanifest ファイルを変更することで、VSIX パッケージを構成します。 次に、ソリューションをビルドして VSIX パッケージを作成します。  
   
-#### <a name="to-configure-the-vsix-package"></a>To configure the VSIX package  
+#### <a name="to-configure-the-vsix-package"></a>VSIX パッケージを構成するには  
   
-1.  In **Solution Explorer**, under the WebPartNode project, open the **source.extension.vsixmanifest** file in the manifest editor.  
+1.  **ソリューション エクスプ ローラー**、WebPartNode プロジェクトを開く、 **source.extension.vsixmanifest**マニフェスト エディターでファイル。  
   
-     The source.extension.vsixmanifest file is the basis for the extension.vsixmanifest file that all VSIX packages require. For more information about this file, see [VSIX Extension Schema 1.0 Reference](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).  
+     source.extension.vsixmanifest ファイルが、すべての VSIX パッケージで必要になる extension.vsixmanifest ファイルの基礎となります。 このファイルの詳細については、次を参照してください。 [VSIX 拡張機能スキーマ 1.0 リファレンス](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)です。  
   
-2.  In the **Product Name** box, enter **Web Part Gallery Node for Server Explorer**.  
+2.  **Product Name**ボックスに、入力**用サーバー エクスプ ローラー Web パーツのギャラリー ノード**です。  
   
-3.  In the **Author** box, enter **Contoso**.  
+3.  **作成者**ボックスに、入力**Contoso**です。  
   
-4.  In the **Description** box, enter **Adds a custom Web Part Gallery node to the SharePoint Connections node in Server Explorer. This extension uses a custom SharePoint command to call into the server object model.**  
+4.  **説明**ボックスに、入力**サーバー エクスプ ローラーで、[SharePoint 接続] ノードにカスタム Web パーツ ギャラリー ノードを追加します。この拡張機能では、カスタムの SharePoint コマンドを使用して、サーバー オブジェクト モデルを呼び出します。**  
   
-5.  Choose the **Assets** tab of the editor, and then choose the **New** button.  
+5.  選択、**資産**エディターのタブを選択し、**新規**ボタンをクリックします。  
   
-     The **Add New Asset** dialog box appears.  
+     **新しいアセットの追加** ダイアログ ボックスが表示されます。  
   
-6.  In the **Type** list, choose **Microsoft.VisualStudio.MefComponent**.  
-  
-    > [!NOTE]  
-    >  This value corresponds to the `MefComponent` element in the extension.vsixmanifest file. This element specifies the name of an extension assembly in the VSIX package. For more information, see [NIB: MEFComponent Element (VSX Schema)](http://msdn.microsoft.com/en-us/8a813141-8b73-44c9-b80b-ca85bbac9551).  
-  
-7.  In the  **Source** list, choose **A project in current solution**.  
-  
-8.  In the **Project** list, choose **WebPartNodeExtension** and then choose the **OK** button.  
-  
-9. In the manifest editor, choose the **New** button again.  
-  
-     The **Add New Asset** dialog box appears.  
-  
-10. In the **Type** box, enter **SharePoint.Commands.v4**.  
+6.  **型**一覧で、選択**Microsoft.VisualStudio.MefComponent**です。  
   
     > [!NOTE]  
-    >  This element specifies a custom extension that you want to include in the Visual Studio extension. For more information, see [Asset Element (VSX Schema)](http://msdn.microsoft.com/en-us/9fcfc098-edc7-484b-9d4c-acd17829d737).  
+    >  この値は、extension.vsixmanifest ファイル内の `MefComponent` 要素に対応します。 この要素は、VSIX パッケージ内の拡張機能アセンブリの名前を指定します。 詳細については、次を参照してください。 [MEFComponent 要素 (VSX Schema)](http://msdn.microsoft.com/en-us/8a813141-8b73-44c9-b80b-ca85bbac9551)です。  
   
-11. In the **Source** list, choose the **A project in current solution** list item.  
+7.  **ソース**一覧で、選択**現在のソリューション内のプロジェクト**です。  
   
-12. In the **Project** list, choose **WebPartCommands**, and then choose the **OK** button.  
+8.  **プロジェクト**一覧で、選択**WebPartNodeExtension**を選択し、 **OK**ボタンをクリックします。  
   
-13. On the menu bar, choose **Build**, **Build Solution**, and then make sure that the solution compiles without errors.  
+9. マニフェスト エディターで、選択、**新規**を再度クリックします。  
   
-14. Make sure that the build output folder for the WebPartNode project now contains the WebPartNode.vsix file.  
+     **新しいアセットの追加** ダイアログ ボックスが表示されます。  
   
-     By default, the build output folder is the ..\bin\Debug folder under the folder that contains your project file.  
+10. **型**ボックスに、入力**SharePoint.Commands.v4**です。  
   
-## <a name="testing-the-extension"></a>Testing the Extension  
- You're now ready to test the new **Web Part Gallery** node in **Server Explorer**. First, start debugging the extension in an experimental instance of Visual Studio. Then, use the new **Web Parts** node in the experimental instance of [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
+    > [!NOTE]  
+    >  この要素は、Visual Studio 拡張機能に追加するカスタム拡張機能を指定します。 詳細については、次を参照してください。[資産要素 (VSX Schema)](http://msdn.microsoft.com/en-us/9fcfc098-edc7-484b-9d4c-acd17829d737)です。  
   
-#### <a name="to-start-debugging-the-extension"></a>To start debugging the extension  
+11. **ソース**一覧で、選択、**現在のソリューション内のプロジェクト**リスト項目。  
   
-1.  Restart [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] with administrative credentials, and then open the WebPartNode solution.  
+12. **プロジェクト**一覧で、選択**WebPartCommands**を選択し、 **OK**ボタンをクリックします。  
   
-2.  In the WebPartNodeExtension project, open the SiteNodeExtension code file, and then add a breakpoint to the first line of code in the `NodeChildrenRequested` and `CreateWebPartNodes` methods.  
+13. メニュー バーで、次のように選択します。**ビルド**、**ソリューションのビルド**、し、ソリューションがコンパイル エラーが発生しないことを確認します。  
   
-3.  Choose the F5 key to start debugging.  
+14. WebPartNode プロジェクトのビルド出力フォルダーに今すぐ WebPartNode.vsix ファイルが含まれていることを確認してください。  
   
-     Visual Studio installs the extension to %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Web Part Gallery Node Extension for Server Explorer\1.0 and starts an experimental instance of Visual Studio. You will test the project item in this instance of Visual Studio.  
+     既定では、ビルド出力フォルダーは ..\bin\Debug で、プロジェクト ファイルが格納されているフォルダーの下にあります。  
   
-#### <a name="to-test-the-extension"></a>To test the extension  
+## <a name="testing-the-extension"></a>拡張機能のテスト  
+ 新しいテストする準備ができました**Web パーツ ギャラリー**内のノード**サーバー エクスプ ローラー**です。 まず、Visual Studio の実験用インスタンスで拡張機能のデバッグを開始します。 次に、新しい使用**Web パーツ**の実験用インスタンスでノード[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。  
   
-1.  In the experimental instance of [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], on the menu bar, choose **View**, **Server Explorer**.  
+#### <a name="to-start-debugging-the-extension"></a>拡張機能のデバッグを開始するには  
   
-2.  Perform the following steps if the SharePoint site that you want to use for testing doesn't appear under the **SharePoint Connections** node in **Server Explorer**:  
+1.  再起動[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]管理者の資格情報と WebPartNode ソリューションを開きます。  
   
-    1.  In **Server Explorer**, open the shortcut menu for **SharePoint Connections**, and then choose **Add Connection**.  
+2.  WebPartNodeExtension プロジェクトで SiteNodeExtension コード ファイルを開くし、コードの最初の行にブレークポイントを追加、`NodeChildrenRequested`と`CreateWebPartNodes`メソッドです。  
   
-    2.  In the **Add SharePoint Connection** dialog box, enter the URL for the SharePoint site to which you want to connect, and then choose the **OK** button.  
+3.  F5 キーを押してデバッグを開始します。  
   
-         To specify the SharePoint site on your development computer, enter **http://localhost**.  
+     Visual Studio では、サーバー Explorer\1.0 用 %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Web パーツ ギャラリーのノードの拡張機能を拡張機能をインストールし、Visual Studio の実験用インスタンスを開始します。 このインスタンスの Visual Studio でプロジェクト項目をテストします。  
   
-3.  Expand the site connection node (which displays the URL of your site), and then expand a child site node (for example, **Team Site**).  
+#### <a name="to-test-the-extension"></a>拡張機能をテストするには  
   
-4.  Verify that the code in the other instance of [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] stops on the breakpoint that you set earlier in the `NodeChildrenRequested` method, and then choose F5 to continue to debug the project.  
+1.  実験用インスタンスで[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、メニュー バーで、次のように選択します。**ビュー**、**サーバー エクスプ ローラー**です。  
   
-5.  In the experimental instance of Visual Studio, verify that a new node named **Web Part Gallery** appears under the top-level site node, and then expand the **Web Part Gallery** node.  
+2.  テスト用に使用する SharePoint サイトが表示されない場合は、次の手順を実行、 **SharePoint 接続**内のノード**サーバー エクスプ ローラー**:  
   
-6.  Verify that the code in the other instance of Visual Studio stops on the breakpoint that you set earlier in the `CreateWebPartNodes` method, and then choose the F5 key to continue to debug the project.  
+    1.  **サーバー エクスプ ローラー**、ショートカット メニューを開き、 **SharePoint 接続**を選択し**接続の追加**です。  
   
-7.  In the experimental instance of Visual Studio, verify that all Web Parts on the connected site appear under the **Web Part Gallery** node in **Server Explorer**.  
+    2.  **[SharePoint 接続の追加**] ダイアログ ボックスで、接続し、順に選択する SharePoint サイトの URL を入力、 **OK**ボタンをクリックします。  
   
-8.  In **Server Explorer**, open the shortcut menu for one of the Web Parts, and then choose **Properties**.  
+         開発用コンピューター上には、SharePoint サイトを指定するには、入力**http://localhost**です。  
   
-9. In the instance of [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] that you're debugging, verify that details about the Web Part appear in the **Properties** window.  
+3.  サイト接続ノード (サイトの URL が表示されます) を展開し、サイトの子ノードを展開 (たとえば、**チーム サイト**)。  
   
-## <a name="uninstalling-the-extension-from-visual-studio"></a>Uninstalling the Extension from Visual Studio  
- After you finish testing the extension, uninstall the extension from Visual Studio.  
+4.  いることを確認の他のインスタンス内のコード[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]前に設定したブレークポイントで停止、`NodeChildrenRequested`メソッド、し、f5 キーを押して、プロジェクトのデバッグを続行するとします。  
   
-#### <a name="to-uninstall-the-extension"></a>To uninstall the extension  
+5.  Visual Studio の実験用インスタンスの新しいノードがという名前のことを確認します**Web パーツ ギャラリー**最上位のサイト ノード下に表示し、展開、 **Web パーツ ギャラリー**ノード。  
   
-1.  In the experimental instance of [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], on the menu bar, choose **Tools**, **Extensions and Updates**.  
+6.  Visual Studio の他のインスタンス内のコードが以前に設定したブレークポイントで停止することを確認、`CreateWebPartNodes`メソッド、F5 キーをプロジェクトのデバッグを続行するとします。  
   
-     The **Extensions and Updates** dialog box opens.  
+7.  Visual Studio の実験用インスタンスの接続サイト上のすべての Web パーツが表示されることを確認してください、 **Web パーツ ギャラリー**内のノード**サーバー エクスプ ローラー**です。  
   
-2.  In the list of extensions, choose **Web Part Gallery Node Extension for Server Explorer**, and then choose the **Uninstall** button.  
+8.  **サーバー エクスプ ローラー**Web パーツの 1 つのショートカット メニューを開き、クリックして**プロパティ**です。  
   
-3.  In the dialog box that appears, choose the **Yes** button to confirm that you want to uninstall the extension, and then choose the **Restart Now** button to complete the uninstallation.  
+9. インスタンスで[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、デバッグしているに Web パーツの詳細が表示されることを確認してください、**プロパティ**ウィンドウです。  
   
-4.  Close both instances of Visual Studio (the experimental instance and the instance of Visual Studio in which the WebPartNode solution is open).  
+## <a name="uninstalling-the-extension-from-visual-studio"></a>Visual Studio から拡張機能のアンインストール  
+ 拡張機能のテストが完了したら、Visual Studio から、拡張機能をアンインストールします。  
   
-## <a name="see-also"></a>See Also  
- [Extending the SharePoint Connections Node in Server Explorer](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
- [Walkthrough: Calling into the SharePoint Client Object Model in a Server Explorer Extension](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)   
- [Image Editor for Icons](/cpp/windows/image-editor-for-icons)   
- [Creating an Icon or Other Image &#40;Image Editor for Icons&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
+#### <a name="to-uninstall-the-extension"></a>拡張機能をアンインストールするには  
+  
+1.  実験用インスタンスで[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、メニュー バーで、次のように選択します。**ツール**、**拡張機能と更新プログラム**です。  
+  
+     **[拡張機能と更新プログラム]** ダイアログ ボックスが表示されます。  
+  
+2.  拡張機能の一覧で選択**サーバー エクスプ ローラー用の Web パーツ ギャラリー ノード拡張**を選択し、**アンインストール**ボタンをクリックします。  
+  
+3.  ダイアログ ボックスが表示されますが、選択、 **[はい]** 、拡張機能をアンインストールし、選択することを確認するにはボタン、**今すぐ再起動**ボタンをクリックしてアンインストールを完了します。  
+  
+4.  Visual Studio (実験用インスタンスおよび WebPartNode ソリューションが開いている Visual Studio のインスタンス) の両方のインスタンスを閉じます。  
+  
+## <a name="see-also"></a>関連項目  
+ [サーバー エクスプ ローラーで SharePoint 接続 ノードを拡張します。](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
+ [チュートリアル: サーバー エクスプ ローラー拡張機能に SharePoint クライアント オブジェクト モデルを呼び出す](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)   
+ [アイコン用イメージ エディター](/cpp/windows/image-editor-for-icons)   
+ [アイコン &#41; のアイコンまたはその他のイメージ (&) #40 です。 イメージ エディターを作成します。](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
   
   

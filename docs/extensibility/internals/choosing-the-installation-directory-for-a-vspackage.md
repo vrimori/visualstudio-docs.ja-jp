@@ -1,66 +1,67 @@
 ---
-title: "VSPackage のインストール ディレクトリを選択します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Vspackages にある、インストール ディレクトリ"
+title: "VSPackage のインストール ディレクトリの選択 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: VSPackages, installation directory
 ms.assetid: 01fbbb5b-f747-446c-afe0-2a081626a945
-caps.latest.revision: 17
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 3462104e100ab672373f30dcd8228bc064746f2d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# VSPackage のインストール ディレクトリを選択します。
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-VSPackage とサポート ファイルはユーザーのファイル システムである必要があります。  場所はVSPackage がマネージまたはアンマネージside\-by\-side でのバージョン管理の設定とユーザーの選択範囲であるかどうかによって異なります。  
+# <a name="choosing-the-installation-directory-for-a-vspackage"></a>VSPackage のインストール ディレクトリの選択
+VSPackage とそのサポート ファイルは、ユーザーのファイル システム上でなければなりません。 場所は、VSPackage がかどうかの管理や、アンマネージ、サイド バイ サイドのバージョン管理スキーム、およびユーザーの選択によって異なります。  
   
-## アンマネージ VSPackage  
- アンマネージの VSPackage は任意の場所にインストールできる COM サーバーです。  この登録情報を指定する必要が正確に場所を反映します。  インストーラーのユーザー インターフェイスは \(UI\) ProgramFilesFolder の Windows インストーラーのプロパティのサブディレクトリで既定の場所を指定する必要があります。  次に例を示します。  
+## <a name="unmanaged-vspackages"></a>アンマネージ Vspackage  
+ アンマネージ VSPackage は、任意の場所にインストール可能な COM サーバーです。 その登録情報では、その場所を正確に反映する必要があります。 インストーラーのユーザー インターフェイス (UI) をサブディレクトリとして ProgramFilesFolder Windows インストーラー プロパティの既定の場所を提供する必要があります。 例:  
   
- \[ProgramFilesFolder\] MyCompany \\ \\ \\ MyVSPackageProduct V1.0  
+ [ProgramFilesFolder]MyCompany\MyVSPackageProduct\V1.0\  
   
- ユーザーが初めてパーティションを保持し別の面積のアプリケーションとツールをインストールするユーザーに対応する既定のディレクトリを変更できないようにする必要があります。  
+ 小さなブート パーティションを保持するユーザーに対応する既定のディレクトリを変更し、別のボリューム上のアプリケーションおよびツールをインストールするユーザーを許可する必要があります。  
   
- side\-by\-side でのバージョン管理設定を VSPackage を使用すると異なるバージョンを格納するためにサブディレクトリを使用できます。  次に例を示します。  
+ サイド バイ サイド スキームは、バージョン管理された VSPackage を使用している場合は、異なるバージョンを格納するサブディレクトリを使用できます。 例:  
   
- \[ProgramFilesFolder\] MyCompany \\ \\ MyVSPackageProduct V1.0 \\ 2002 \\  
+ [ProgramFilesFolder]MyCompany\MyVSPackageProduct\V1.0\2002\  
   
- \[ProgramFilesFolder\] MyCompany \\ \\ MyVSPackageProduct V1.0 \\ 2003 \\  
+ [ProgramFilesFolder]MyCompany\MyVSPackageProduct\V1.0\2003\  
   
- \[ProgramFilesFolder\] MyCompany \\ \\ MyVSPackageProduct V1.0 \\ 2005 \\  
+ [ProgramFilesFolder]MyCompany\MyVSPackageProduct\V1.0\2005\  
   
-## マネージ VSPackage  
- マネージ VSPackage は任意の場所にインストールできます。  ただしアセンブリの読み込み時間を短くするにはグローバル アセンブリ キャッシュに \(GAC\) インストール常に検討する必要があります。  マネージ VSPackage が厳密な名前のアセンブリで常にであるためGAC にインストール厳密な名前の署名の検証のインストール時にのみ取得することを意味します。  検証するファイル システム上の他の場所にインストールされて読み込まれるたびに厳密な名前付きアセンブリはの定義が必要です。  GAC のマネージ VSPackage をインストールするとアセンブリの厳密な名前を指すレジストリ エントリを書き込むために regpkg ツールの **\/assembly** スイッチを使用します。  
+## <a name="managed-vspackages"></a>マネージ VSPackage  
+ マネージ Vspackage は、任意の場所にインストールすることもできます。 ただし、常にグローバル アセンブリ キャッシュ (GAC) アセンブリの読み込み時間を短縮するへのインストールを検討してください。 マネージ Vspackage は、厳密な名前付きアセンブリでは常に、GAC にインストールするので、厳密な名前の署名の検証がインストール時にのみを取ることです。 ファイル システムで他の場所にインストールされている厳密な名前のアセンブリの署名が読み込まれるたびに検証が必要です。 マネージ Vspackage を GAC にインストールするときに使用 regpkg ツールの**/assembly**アセンブリの厳密な名前を指すレジストリ エントリを記述するスイッチです。  
   
- GAC 以外の場所のマネージ VSPackage をインストールしたディレクトリ階層の任意のアンマネージ VSPackage に対して指定するための推奨事項に従ってください。  VSPackage のアセンブリのパスを指すレジストリ エントリを書き込むために regpkg ツールの **\/codebase** スイッチを使用します。  
+ GAC 以外の場所にマネージ Vspackage をインストールする場合は、以前アドバイス アンマネージ Vspackage 用のディレクトリ階層を選択に従ってください。 Regpkg ツールの使用**/codebase** VSPackage アセンブリのパスを指すレジストリ エントリを記述するスイッチです。  
   
- 詳細については、「[Vspackage の登録と登録解除しています](../../extensibility/registering-and-unregistering-vspackages.md)」を参照してください。  
+ 詳細については、次を参照してください。[の登録および登録解除 Vspackage](../../extensibility/registering-and-unregistering-vspackages.md)です。  
   
-## サテライト DLL  
- 規則では特定のロケールのリソースを含む VSPackage のサテライト DLL VSPackage ディレクトリのサブディレクトリ \(あります。  サブディレクトリはロケール ID \(LCID\) の値に対応します。  
+## <a name="satellite-dlls"></a>サテライト Dll  
+ 規則では、VSPackage のサテライト Dll — 特定のロケールのリソースを含んでいる: VSPackage のディレクトリのサブディレクトリにあります。 サブディレクトリは、ロケール ID (LCID) の値に対応します。  
   
- [Vspackage を管理します。](../../extensibility/managing-vspackages.md) は [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] がVSPackage のサテライト DLL を検索するレジストリ エントリが設定されていることを示します。  ただし次の順序で LCID 値のという名前のサブディレクトリのサテライト DLL の読み込みを試みます [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]:  
+ [Vspackage を管理する](../../extensibility/managing-vspackages.md)レジストリ エントリが場所を制御することを示す[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]実際には、VSPackage の検索サテライト DLL です。 ただし、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]次の順序で、LCID 値をという名前のサブディレクトリでは、サテライト DLL の読み込みを試みます。  
   
-1.  既定の LCID \(英語の LCID たとえば \\ 1033 "\)  
+1.  既定の LCID (VS LCID 英語用 \1033 など)  
   
-2.  既定のサブ言語の既定の LCID。  
+2.  既定のサブ言語の LCID 既定値です。  
   
-3.  システムの既定の LCID。  
+3.  システム既定の LCID。  
   
-4.  既定のサブ言語のシステムの既定の LCID。  
+4.  既定のサブ言語でシステムの既定 LCID。  
   
-5.  英語版  \(英語。  \\ 1033 または。  \\ 0x409\)。  
+5.  米国英語 (. \1033 または。 \0x409)。  
   
- VSPackage の DLL がそれにリソースと SatelliteDll \\ DllName のレジストリ エントリ ポイントが含まれている場合は[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] は上記の順序で読み込みを試みます。  
+ VSPackage DLL には、リソースと、SatelliteDll\DllName レジストリのエントリ ポイントが含まれている場合[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]が上記の順序でそれらを読み込もうとします。  
   
-## 参照  
- [共有およびバージョン管理の VSPackages の使い分け](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)   
- [Vspackage を管理します。](../../extensibility/managing-vspackages.md)   
- [Managed Package Registration](http://msdn.microsoft.com/ja-jp/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)
+## <a name="see-also"></a>関連項目  
+ [共有とバージョン管理された Vspackage の使い分け](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)   
+ [Vspackage の管理](../../extensibility/managing-vspackages.md)   
+ [マネージ パッケージの登録](http://msdn.microsoft.com/en-us/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)

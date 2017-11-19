@@ -1,71 +1,71 @@
 ---
-title: "IDebugPendingBreakpoint2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPendingBreakpoint2"
-helpviewer_keywords: 
-  - "IDebugPendingBreakpoint2 インターフェイス"
+title: "IDebugPendingBreakpoint2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugPendingBreakpoint2
+helpviewer_keywords: IDebugPendingBreakpoint2 interface
 ms.assetid: d416b095-917e-475e-b796-ec0a03ffb8da
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d02d81d24c7b412f9fc792e815873edc1532832c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugPendingBreakpoint2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このインターフェイスはコード位置にバインドする準備が整ったブレークポイントを表します。  
+# <a name="idebugpendingbreakpoint2"></a>IDebugPendingBreakpoint2
+このインターフェイスは、コードの場所にバインドする準備が整っているブレークポイントを表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugPendingBreakpoint2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- デバッグ エンジンはブレークポイント \(DE\) のサポートの一部としてこのインターフェイスを実装します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ デバッグ エンジン (DE) では、ブレークポイントのサポートの一部としてこのインターフェイスを実装します。  
   
-## 呼び出し元のメモ  
- [CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) の呼び出しは [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) のインターフェイスから保留中のブレークポイントを作成します。  [バインド](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) の呼び出しはプログラムのバインド ブレークポイントを表す `IDebugBreakpoint2` のインターフェイスを作成します。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ 呼び出し[CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md)から保留中のブレークポイントを作成、 [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)インターフェイスです。 呼び出し[バインド](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)を作成、`IDebugBreakpoint2`をプログラムでバインドされたブレークポイントを表すインターフェイス。  
   
-## Vtable の順序でメソッド  
- 次の表は `IDebugPendingBreakpoint2` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugPendingBreakpoint2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[CanBind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)|この保留中のブレークポイントがコード位置にバインドできるかどうかを判定します。|  
-|[バインド](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)|一つ以上のコード位置にこの保留中のブレークポイントをバインドします。|  
-|[GetState](../Topic/IDebugPendingBreakpoint2::GetState.md)|この保留中のブレークポイントの状態を取得します。|  
-|[GetBreakpointRequest](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md)|この保留中のブレークポイントの作成に使用されたブレークポイントの要求を取得します。|  
-|[仮想化します。](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-virtualize.md)|この保留中のブレークポイントの仮想化された状態を切り替えます。|  
-|[\[有効化\]](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)|この保留中のブレークポイントの有効状態を切り替えます。|  
-|[SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md)|この条件が保留中のブレークポイントに関連付けられている変更または設定します。|  
-|[SetPassCount](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setpasscount.md)|パスの数がこの保留中のブレークポイントに関連付けられている変更または設定します。|  
-|[EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)|この保留中のブレークポイントからバインドされたすべてのブレークポイントを列挙します。|  
-|[EnumErrorBreakpoints](../Topic/IDebugPendingBreakpoint2::EnumErrorBreakpoints.md)|この保留中のブレークポイントに発生したすべてのエラーのブレークポイントを列挙します。|  
-|[削除](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)|これからバインドされたこの保留中のブレークポイントとすべてのブレークポイントを削除します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[CanBind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)|この保留中のブレークポイントをコードの場所にバインドできるかどうかを判断します。|  
+|[バインド](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)|1 つまたは複数のコードの場所にこの保留中のブレークポイントをバインドします。|  
+|[GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md)|保留中のブレークポイントの状態を取得します。|  
+|[GetBreakpointRequest](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md)|この保留中のブレークポイントの作成に使用されたブレークポイント要求を取得します。|  
+|[仮想化します。](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-virtualize.md)|ブレークポイントの保留中の仮想化された状態を切り替えます。|  
+|[有効にします。](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)|保留中のブレークポイントの有効な状態を切り替えます。|  
+|[SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md)|設定または保留中のブレークポイントに関連付けられた条件を変更します。|  
+|[SetPassCount](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setpasscount.md)|設定または保留中のブレークポイントに関連付けられたパスの数を変更します。|  
+|[EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)|この保留中のブレークポイントからバインドされているすべてのブレークポイントを列挙します。|  
+|[EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)|この保留中のブレークポイントから生成されるすべてのエラー ブレークポイントを列挙します。|  
+|[削除](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)|この保留中のブレークポイントとそこからバインドされているすべてのブレークポイントを削除します。|  
   
-## 解説  
- `IDebugPendingBreakpoint2` は必要なすべての必要な情報プロバイダーとして扱うコードに 1 一つまたは複数のプログラムに適用できるブレークポイントのバインドが考えることができます。  
+## <a name="remarks"></a>コメント  
+ `IDebugPendingBreakpoint2`1 つまたは複数のプログラムを適用できるコードにブレークポイントをバインドするために必要なすべての必要な情報のプロバイダーとしての考えることができます。  
   
- 保留中のブレークポイントには複数のバインド ブレークポイントを生成できます。  たとえばC. のスタイルとテンプレートのブレークポイントはそのテンプレートの固有のインスタンスにバインドされたブレークポイントを生成できます。  
+ 保留中のブレークポイントは、バインドされた 2 つ以上のブレークポイントを生成可能性があることができます。 など、C++ スタイル テンプレート内のブレークポイントは、そのテンプレートの一意のインスタンスごとにバインドされたブレークポイントを生成する可能性があります。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md)   
  [GetPendingBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-getpendingbreakpoint.md)   
- [GetPendingBreakpoint](../Topic/IDebugBoundBreakpoint2::GetPendingBreakpoint.md)   
+ [GetPendingBreakpoint](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getpendingbreakpoint.md)   
  [GetPendingBreakpoint](../../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md)

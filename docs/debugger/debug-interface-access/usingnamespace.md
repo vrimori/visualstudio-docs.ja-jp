@@ -1,42 +1,41 @@
 ---
-title: "UsingNameSpace | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "UsingNamespace シンボル タグ"
+title: "UsingNameSpace |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: UsingNamespace symbol tag
 ms.assetid: e8e1beb5-7cb9-43b4-9ff4-760d5f91ea2d
-caps.latest.revision: 17
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 970d14e258ca729ab861c966005efeeb218d7071
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# UsingNameSpace
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-一部のシンボルは名前空間によって参照される場合があります。`SymTagUsingNameSpace` のタグで引き続き識別されます。  
+# <a name="usingnamespace"></a>UsingNameSpace
+一部のシンボルの名前空間で参照する可能性がありで識別されて、その後、`SymTagUsingNameSpace`タグ。  
   
 > [!NOTE]
->  UsingNamespace のシンボルのタグはマネージ コードにのみ表示されます。  
+>  UsingNamespace シンボル タグは、マネージ コードでのみが表示されます。  
   
-## プロパティ  
- 次の表はこのシンボルの型に対して有効なプロパティを次に示します。  
+## <a name="properties"></a>プロパティ  
+ 次の表は、この記号の型の有効なプロパティを示します。  
   
-|プロパティ|データ型|Description|  
-|-----------|----------|-----------------|  
-|[IDiaSymbol::get\_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|`IDiaSymbol*`|外側のコンパイル単位ブロックまたは関数のシンボル。|  
-|[IDiaSymbol::get\_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md)|`DWORD`|構文親のシンボル ID。|  
-|[IDiaSymbol::get\_name](../Topic/IDiaSymbol::get_name.md)|`BSTR`|名前空間名。|  
-|[IDiaSymbol::get\_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|シンボルのインデックスの ID。|  
-|[IDiaSymbol::get\_symTag](../Topic/IDiaSymbol::get_symTag.md)|`DWORD`|`SymTagNameSpace` [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md) の値 \(1\) を返します。|  
+|プロパティ|データ型|説明|  
+|--------------|---------------|-----------------|  
+|[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|`IDiaSymbol*`|外側のコンパイル単位、ブロック、または関数の記号。|  
+|[IDiaSymbol::get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md)|`DWORD`|構文上の親の記号の ID です。|  
+|[IDiaSymbol::get_name](../../debugger/debug-interface-access/idiasymbol-get-name.md)|`BSTR`|Namespace 名前です。|  
+|[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|シンボルのインデックスの ID。|  
+|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|返します`SymTagNameSpace`(のいずれか、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)値)。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)

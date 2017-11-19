@@ -1,49 +1,48 @@
 ---
-title: "IDiaSymbol::get_rank | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_rank メソッド"
+title: "Idiasymbol::get_rank |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_rank method
 ms.assetid: 14cc9c4b-a5ec-414a-b01f-4a142c17b7cc
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 623c700c6f9a30b6142faeb7e1b31881d0e0fe11
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_rank
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-FORTRAN 多次元配列のランク \(次元数\) を取得します。  
+# <a name="idiasymbolgetrank"></a>IDiaSymbol::get_rank
+FORTRAN 多次元配列のランク (次元数) を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_rank (   
-   DWORD* pRetVal  
+```C++  
+HRESULT get_rank (   
+   DWORD* pRetVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- \[入力\] FORTRAN 多次元配列の次元数を返します。  
+ [out]FORTRAN 多次元配列の次元数を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合戻り `S_FALSE` またはエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  `S_FALSE` の戻り値はプロパティのシンボルで使用できないことを意味します。  
+>  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-## 解説  
- 順位は配列が `myarray[1,2,3]` として宣言された配列の次元数を参照します。  この例では3 ~ 3 次元のされます。  順位は各次元 \(`myarray[1][2][3]`\) に配列の配列の概念を使用する C\+\+ には適用されません。  
+## <a name="remarks"></a>コメント  
+ ランクとして、配列が宣言されている配列の次元数を指す`myarray[1,2,3]`です。 この例では、3 つおよび 3 つのディメンションのランクがあります。 ランクは、各次元の配列の配列の概念を使用する C++ には適用されません (つまり、 `myarray[1][2][3]`)。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

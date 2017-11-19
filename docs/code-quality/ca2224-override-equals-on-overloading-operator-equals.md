@@ -1,11 +1,10 @@
 ---
-title: 'CA2224: Override equals on overloading operator equals | Microsoft Docs'
+title: "CA2224:、演算子 equals をオーバー ロードで equals をオーバーライド |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,125 +15,110 @@ helpviewer_keywords:
 - OverrideEqualsOnOverloadingOperatorEquals
 - CA2224
 ms.assetid: 7312afd9-84ba-417f-923e-7a159b53bf70
-caps.latest.revision: 15
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 5cd11628a50f44413118c7004c11201c26297f86
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 44ba1c444d9348babcf07bfd807d6b0767bf3de9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2224-override-equals-on-overloading-operator-equals"></a>CA2224: Override equals on overloading operator equals
+# <a name="ca2224-override-equals-on-overloading-operator-equals"></a>CA2224: オーバーロードする演算子 equals で Equals をオーバーライドします
 |||  
 |-|-|  
 |TypeName|OverrideEqualsOnOverloadingOperatorEquals|  
 |CheckId|CA2224|  
-|Category|Microsoft.Usage|  
-|Breaking Change|Non Breaking|  
+|カテゴリ|Microsoft.Usage|  
+|互換性に影響する変更点|中断なし|  
   
-## <a name="cause"></a>Cause  
- A public type implements the equality operator, but does not override <xref:System.Object.Equals%2A?displayProperty=fullName>.  
+## <a name="cause"></a>原因  
+ パブリック型は、等値演算子を実装しますが、オーバーライドしません<xref:System.Object.Equals%2A?displayProperty=fullName>です。  
   
-## <a name="rule-description"></a>Rule Description  
- The equality operator is intended to be a syntactically convenient way to access the functionality of the <xref:System.Object.Equals%2A> method. If you implement the equality operator, its logic must be identical to that of <xref:System.Object.Equals%2A>.  
+## <a name="rule-description"></a>規則の説明  
+ 等値演算子は、の機能にアクセスする構文的に便利な手段をするものでは、<xref:System.Object.Equals%2A>メソッドです。 そのロジックがの場合と同じである必要があります、等値演算子を実装する場合<xref:System.Object.Equals%2A>です。  
   
- The C# compiler issues a warning if your code violates this rule.  
+ C# コンパイラは、コードには、この規則が違反している場合に警告を発行します。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, you should either remove the implementation of the equality operator, or override <xref:System.Object.Equals%2A> and have the two methods return the same values. If the equality operator does not introduce inconsistent behavior, you can fix the violation by providing an implementation of <xref:System.Object.Equals%2A> that calls the <xref:System.Object.Equals%2A> method in the base class.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正する必要がありますか、等値演算子の実装を削除または上書きする<xref:System.Object.Equals%2A>し、2 つのメソッドが同じ値を返します。 実装を提供することで、違反を修正するには、等値演算子は、一貫性のない動作を導入していない場合、<xref:System.Object.Equals%2A>を呼び出す、<xref:System.Object.Equals%2A>基底クラスのメソッドです。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule if the equality operator returns the same value as the inherited implementation of <xref:System.Object.Equals%2A>. The Example section includes a type that could safely suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 等値演算子は、継承した実装と同じ値を返す場合は、この規則による警告を抑制するのには安全では<xref:System.Object.Equals%2A>します。 例」のセクションには、この規則による警告を抑制することが安全にする型が含まれています。  
   
-## <a name="examples-of-inconsistent-equality-definitions"></a>Examples of Inconsistent Equality Definitions  
+## <a name="examples-of-inconsistent-equality-definitions"></a>矛盾した等値の定義の例  
   
-### <a name="description"></a>Description  
- The following example shows a type with inconsistent definitions of equality. `BadPoint` changes the meaning of equality by providing a custom implementation of the equality operator, but does not override <xref:System.Object.Equals%2A> so that it behaves identically.  
+### <a name="description"></a>説明  
+ 次の例では、等値の一貫性のない定義を持つ型を示します。 `BadPoint`等値演算子のカスタム実装を提供することで等値の意味を変更し、オーバーライドしません<xref:System.Object.Equals%2A>同じように動作できるようにします。  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>コード  
  [!code-csharp[FxCop.Usage.OperatorEqualsRequiresEquals#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_1.cs)]  
   
-## <a name="example"></a>Example  
- The following code tests the behavior of `BadPoint`.  
+## <a name="example"></a>例  
+ 次のコードの動作をテストする`BadPoint`です。  
   
  [!code-csharp[FxCop.Usage.TestOperatorEqualsRequiresEquals#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_2.cs)]  
   
- This example produces the following output.  
+ この例を実行すると、次の出力が生成されます。  
   
- **a =  ([0] 1,1) and b = ([1] 2,2) are equal? No**  
-**a == b ? No**  
-**a1 and a are equal? Yes**  
-**a1 == a ? Yes**  
-**b and bcopy are equal ? No**  
-**b == bcopy ? Yes**   
-## <a name="example"></a>Example  
- The following example shows a type that technically violates this rule, but does not behave in an inconsistent manner.  
+ **= ([0] 1, 1) と b ([1] 2, 2) を = が等しいか?違います**  
+**b を = = しますか?違います**  
+**a1 とが等しいか。うん**  
+**a1 = =、ですか?うん**  
+**b と間が等しいか。違います**  
+**b 間の = = しますか?うん**   
+## <a name="example"></a>例  
+ 次の例では、技術的には、この規則に違反していますが、一貫性のある方法で動作しない型を示します。  
   
  [!code-csharp[FxCop.Usage.ValueTypeEquals#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_3.cs)]  
   
-## <a name="example"></a>Example  
- The following code tests the behavior of `GoodPoint`.  
+## <a name="example"></a>例  
+ 次のコードの動作をテストする`GoodPoint`です。  
   
  [!code-csharp[FxCop.Usage.TestValueTypeEquals#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_4.cs)]  
   
- This example produces the following output.  
+ この例を実行すると、次の出力が生成されます。  
   
- **a =  (1,1) and b = (2,2) are equal? No**  
-**a == b ? No**  
-**a1 and a are equal? Yes**  
-**a1 == a ? Yes**  
-**b and bcopy are equal ? Yes**  
-**b == bcopy ? Yes**   
-## <a name="class-example"></a>Class Example  
+ **= (1, 1) と b = (2, 2) が等しいか?違います**  
+**b を = = しますか?違います**  
+**a1 とが等しいか。うん**  
+**a1 = =、ですか?うん**  
+**b と間が等しいか。うん**  
+**b 間の = = しますか?うん**   
+## <a name="class-example"></a>クラスの例  
   
-### <a name="description"></a>Description  
- The following example shows a class (reference type) that violates this rule.  
+### <a name="description"></a>説明  
+ 次の例では、この規則に違反するためのクラス (参照型) を示します。  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>コード  
  [!code-csharp[FxCop.Usage.OverrideEqualsClassViolation#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_5.cs)]  
   
-## <a name="example"></a>Example  
- The following example fixes the violation by overriding <xref:System.Object.Equals%2A?displayProperty=fullName>.  
+## <a name="example"></a>例  
+ 次の例は、オーバーライドすることで違反を修正<xref:System.Object.Equals%2A?displayProperty=fullName>です。  
   
  [!code-csharp[FxCop.Usage.OverrideEqualsClassFixed#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_6.cs)]  
   
-## <a name="structure-example"></a>Structure Example  
+## <a name="structure-example"></a>構造の例  
   
-### <a name="description"></a>Description  
- The following example shows a structure (value type) that violates this rule.  
+### <a name="description"></a>説明  
+ 次の例では、この規則に違反する構造体 (値型) を示します。  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>コード  
  [!code-csharp[FxCop.Usage.OverrideEqualsStructViolation#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_7.cs)]  
   
-## <a name="example"></a>Example  
- The following example fixes the violation by overriding <xref:System.ValueType.Equals%2A?displayProperty=fullName>.  
+## <a name="example"></a>例  
+ 次の例は、オーバーライドすることで違反を修正<xref:System.ValueType.Equals%2A?displayProperty=fullName>です。  
   
  [!code-csharp[FxCop.Usage.OverrideEqualsStructFixed#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_8.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1046: Do not overload operator equals on reference types](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA1046: 参照型で、演算子 equals をオーバーロードしないでください](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)  
   
- [CA2225: Operator overloads have named alternates](../code-quality/ca2225-operator-overloads-have-named-alternates.md)  
+ [CA2225: 演算子オーバーロードには名前付けされた代替が存在します](../code-quality/ca2225-operator-overloads-have-named-alternates.md)  
   
- [CA2226: Operators should have symmetrical overloads](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)  
+ [CA2226: 演算子は対称型オーバーロードを含まなければなりません](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)  
   
- [CA2218: Override GetHashCode on overriding Equals](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)  
+ [CA2218: オーバーライドする Equals で GetHashCode をオーバーライドします](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)  
   
- [CA2231: Overload operator equals on overriding ValueType.Equals](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)
+ [CA2231: ValueType.Equals のオーバーライドで、演算子 equals をオーバーロードします](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)

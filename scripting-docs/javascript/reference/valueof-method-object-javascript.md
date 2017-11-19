@@ -1,60 +1,61 @@
 ---
-title: "valueOf メソッド (Object) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "valueOf"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "valueOf メソッド"
+title: "valueOf メソッド (Object) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: valueOf
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: valueOf method
 ms.assetid: c555e38b-f451-4341-8fcd-4c8b02906a2c
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 677b56fd6fc142ce175b130d2f83291c1ac9535f
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# valueOf メソッド (Object) (JavaScript)
+# <a name="valueof-method-object-javascript"></a>valueOf メソッド (Object) (JavaScript)
 指定されたオブジェクトのプリミティブ値を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
-object.valueOf( )  
+object.valueOf( )  
 ```  
   
-## 解説  
- 必須の `object` 参照には、任意の [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 組み込みオブジェクトを指定します。  
+## <a name="remarks"></a>コメント  
+ 必要な`object`参照が組み込み[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]オブジェクト。  
   
- `valueOf` メソッドは、それぞれの [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 組み込みオブジェクトによって異なります。  
+ `valueOf`メソッドがごとに異なる方法で定義されている組み込み[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]オブジェクト。  
   
-|Object|戻り値|  
-|------------|---------|  
-|Array|配列のインスタンスを返します。|  
-|Boolean|オブジェクトに格納されているブール値を返します。|  
-|Date|世界協定時刻 \(UTC\) の 1970 年 1 月 1 日 0 時 0 分 0 秒からの経過時間を表すミリ秒単位の時刻値。|  
-|関数|関数自体を返します。|  
-|Number|オブジェクトに格納されている数値を返します。|  
-|Object|オブジェクト自体を返します。  これは、既定の設定です。|  
-|文字列|オブジェクトに格納されている文字列を返します。|  
+|オブジェクト|戻り値|  
+|------------|------------------|  
+|配列|配列のインスタンスを返します。|  
+|ブール型|ブール値です。|  
+|日付|午前 0 時、1970 年 1 月 1 日 (utc) 以降のミリ秒数で格納されている時刻の値。|  
+|関数|関数自体です。|  
+|数値|オブジェクトに格納されている数値を返します。|  
+|オブジェクト|オブジェクト自体です。 既定値です。|  
+|String|文字列値。|  
   
- **Math** オブジェクトおよび `Error` オブジェクトには、`valueOf` メソッドはありません。  
+ **Math**と`Error`オブジェクトがない、`valueOf`メソッドです。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv2](../../javascript/reference/includes/jsv2-md.md)]  
   
- **対象**: [Array オブジェクト](../../javascript/reference/array-object-javascript.md)&#124; [Boolean オブジェクト](../../javascript/reference/boolean-object-javascript.md)&#124; [Date オブジェクト](../../javascript/reference/date-object-javascript.md)&#124; [Function オブジェクト](../../javascript/reference/function-object-javascript.md)&#124; [Number オブジェクト](../../javascript/reference/number-object-javascript.md)&#124; [Object オブジェクト](../../javascript/reference/object-object-javascript.md)&#124; [String オブジェクト](../../javascript/reference/string-object-javascript.md)  
+ **適用されます**:[オブジェクトの配列](../../javascript/reference/array-object-javascript.md)&#124;です。[Boolean オブジェクト](../../javascript/reference/boolean-object-javascript.md)&#124;です。[オブジェクトの日付](../../javascript/reference/date-object-javascript.md)&#124;です。[関数オブジェクト](../../javascript/reference/function-object-javascript.md)&#124;です。[オブジェクト番号](../../javascript/reference/number-object-javascript.md)&#124;です。[オブジェクトはオブジェクト](../../javascript/reference/object-object-javascript.md)&#124;です。[文字列オブジェクト](../../javascript/reference/string-object-javascript.md)  
   
-## 参照  
- [toString メソッド \(Object\)](../../javascript/reference/tostring-method-object-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [toString メソッド (Object)](../../javascript/reference/tostring-method-object-javascript.md)

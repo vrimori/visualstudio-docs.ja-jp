@@ -1,60 +1,61 @@
 ---
-title: "charCodeAt メソッド (String) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "charCodeAt"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "charCodeAt メソッド"
+title: "charCodeAt メソッド (String) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: charCodeAt
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: charCodeAt method
 ms.assetid: 5b0290a7-ee4d-4738-a909-c02ef64a2f1a
-caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8e7b8e62dfd29aa42d9816d0c5e27cc90440751a
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# charCodeAt メソッド (String) (JavaScript)
+# <a name="charcodeat-method-string-javascript"></a>charCodeAt メソッド (String) (JavaScript)
 指定した位置にある文字の Unicode 値を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 strObj. charCodeAt(index)  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `strObj`  
- 必須です。  `String` オブジェクトまたはリテラル文字列。  
+ 必須です。 どの`String`オブジェクトまたは文字列リテラルです。  
   
  `index`  
- 必須です。  文字の位置を 0 から始まるインデックスで指定します。  インデックスで指定した位置に文字がない場合は、`NaN` を返します。  
+ 必須です。 目的の文字の 0 から始まるインデックス。 指定したインデックス位置の文字がない場合`NaN`が返されます。  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
-## 使用例  
+## <a name="example"></a>例  
  `charCodeAt` メソッドの使用例を次に示します。  
   
-```javascript  
+```JavaScript  
 var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";   
 document.write(str.charCodeAt(str.length - 1));  
   
 // Output: 90   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv55](../../javascript/reference/includes/jsv55-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [String.fromCharCode 関数](../../javascript/reference/string-fromcharcode-function-javascript.md)

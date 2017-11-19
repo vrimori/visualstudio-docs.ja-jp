@@ -1,63 +1,62 @@
 ---
-title: "Processes View | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.externaltools.spyplus.processesview"
-helpviewer_keywords: 
-  - "Processes view"
+title: "プロセス ビュー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.externaltools.spyplus.processesview
+helpviewer_keywords: Processes view
 ms.assetid: e144e70e-eef2-45a7-a562-a177f177d9a1
-caps.latest.revision: 6
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: b2ca6d0d7f875e376af37fcdcfa5d4156b8f4038
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Processes View
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-プロセス ビューには、システム上でアクティブなすべてのプロセスのツリーが表示されます。  プロセス ID とモジュール名が表示されます。  特定のシステム プロセスを調べるには、プロセス ビューを使用してください。通常、システム プロセスは実行中のプログラムに対応します。  プロセスはモジュール名で識別されます。または、"システム プロセス" と指定されます。  
+# <a name="processes-view"></a>プロセス ビュー
+プロセス ビューには、システム上のすべてのアクティブなプロセスのツリーが表示されます。 プロセス ID とモジュール名が表示されます。 通常、実行中のプログラムに対応する特定のシステム プロセスを確認する場合は、プロセス ビューを使用します。 プロセスが、モジュール名で識別されるか、「システム プロセス」を指定します。  
   
- Microsoft Windows は複数のプロセスをサポートします。  各プロセスは 1 つ以上のスレッドから構成でき、各スレッドには 1 つ以上のトップレベルのウィンドウを関連付けることができます。  それぞれのトップレベルのウィンドウは、一連のウィンドウを所有できます。  \+ 記号は、レベルが折りたたまれていることを示します。  折りたたまれたビューは、プロセスごとに 1 つの行から構成されます。  レベルを展開するには、\+ 記号をクリックします。  
+ Microsoft Windows では、複数のプロセスをサポートします。 各プロセスは、1 つまたは複数のスレッドを持つことができ、各スレッドは 1 つを持つことができます。 または最上位のウィンドウが関連付けられている詳細します。 各トップレベル ウィンドウには、一連のウィンドウを所有できます。 A + 記号は、レベルが折りたたまれていることを示します。 折りたたまれたビューは、プロセスごとに 1 行で構成されます。 クリックして、+ 記号をレベルを展開します。  
   
- 特定のシステム プロセスを調べるには、プロセス ビューを使用してください。通常、システム プロセスは実行中のプログラムに対応します。  プロセスはモジュール名で識別されます。または、"システム プロセス" と指定されます。プロセスを見つけるには、ツリーを折りたたみ、リストを検索します。  
+ 通常、実行中のプログラムに対応する特定のシステム プロセスを確認する場合は、プロセス ビューを使用します。 プロセスが、モジュール名で識別されるか、「システム プロセス」を指定します。 プロセスを検索するには、ツリーを折りたたむし、一覧を検索します。  
   
-## 手順  
+## <a name="procedures"></a>手順  
   
-#### プロセス ビューを開くには  
+#### <a name="to-open-the-processes-view"></a>プロセス ビューを開く  
   
-1.  \[スパイ\] メニューの \[プロセス\] をクリックします。  
+1.  **スパイ**] メニューの [選択**プロセス**です。  
   
- ![Spy&#43;&#43; プロセス ビュー](../debugger/media/spy--_processes.png "Spy\+\+\_Processes")  
-Spy\+\+ プロセス ビュー  
+ ![スパイ &#43; #43 です。プロセス ビュー](../debugger/media/spy--_processes.png "スパイ:operator++ _Processes")  
+Spy++ プロセス ビュー  
   
- 上の図に示されているのは、プロセス ノードとスレッド ノードが展開されている状態のプロセス ビューです。  
+ 上記の図は、展開プロセスとスレッドのノードを持つプロセス ビューを示しています。  
   
-### このセクションの内容  
- [プロセス ビューでのプロセスの検索](../debugger/how-to-search-for-a-process-in-processes-view.md)  
- プロセス ビューで特定のプロセスを検索する方法について説明します。  
+### <a name="in-this-section"></a>このセクションの内容  
+ [[プロセス] ビューでのプロセスの検索](../debugger/how-to-search-for-a-process-in-processes-view.md)  
+ [プロセス] ビューで特定のプロセスを検索する方法について説明します。  
   
- [プロセス プロパティの表示](../debugger/how-to-display-process-properties.md)  
- メッセージの詳細情報を表示する方法について説明します。  
+ [プロセスのプロパティを表示します。](../debugger/how-to-display-process-properties.md)  
+ 詳細については、メッセージを表示する方法について説明します。  
   
-### 関連項目  
- [Spy\+\+ ビュー](../debugger/spy-increment-views.md)  
- ウィンドウ、メッセージ、プロセス、およびスレッドの Spy\+\+ ツリー ビューについて説明します。  
+### <a name="related-sections"></a>関連項目  
+ [Spy++ ビュー](../debugger/spy-increment-views.md)  
+ Windows、メッセージ、プロセス、およびスレッドの spy++ ツリー ビューについて説明します。  
   
- [Spy\+\+ の使用](../debugger/using-spy-increment.md)  
- Spy\+\+ ツールとその使用方法について説明します。  
+ [Spy++ の使用](../debugger/using-spy-increment.md)  
+ Spy++ ツールを紹介し、使用方法について説明します。  
   
- [&#91;プロセス検索&#93; ダイアログ ボックス](../debugger/process-search-dialog-box.md)  
- プロセス ビューで特定のプロセスのノードを検索するために使用します。  
+ [[プロセス検索] ダイアログ ボックス](../debugger/process-search-dialog-box.md)  
+ [プロセス] ビューで特定のプロセスのノードを検索するために使用します。  
   
- [&#91;プロセス プロパティ&#93; ダイアログ ボックス](../debugger/process-properties-dialog-box.md)  
- プロセス ビューで選択したプロセスのプロパティを表示します。  
+ [[プロセス プロパティ] ダイアログ ボックス](../debugger/process-properties-dialog-box.md)  
+ [プロセス] ビューで選択したプロセスのプロパティを表示します。  
   
- [Spy\+\+ リファレンス](../debugger/spy-increment-reference.md)  
- Spy\+\+ の各メニューとダイアログ ボックスについて説明するセクションが含まれます。
+ [Spy++ リファレンス](../debugger/spy-increment-reference.md)  
+ 各 spy++ メニューおよびダイアログ ボックスについて説明するセクションが含まれます。

@@ -1,45 +1,44 @@
 ---
-title: "IDiaEnumStackFrames | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumStackFrames インターフェイス"
+title: "IDiaEnumStackFrames |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumStackFrames interface
 ms.assetid: 3d1e8403-c9fc-42ff-ae35-0ab9a5ed2ad7
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 3cbfea7394a2720ed4341e883fefe90556c86e57
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumStackFrames
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-使用できるさまざまなスタック フレームを列挙します。  
+# <a name="idiaenumstackframes"></a>IDiaEnumStackFrames
+使用可能なさまざまなスタック フレームを列挙します。  
   
-## Vtable の順序でメソッド  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[IDiaEnumStackFrames::Next](../../debugger/debug-interface-access/idiaenumstackframes-next.md)|列挙体シーケンスからスタック フレーム内の指定された数の要素を取得します。|  
-|[IDiaEnumStackFrames::Reset](../../debugger/debug-interface-access/idiaenumstackframes-reset.md)|列挙体シーケンスを先頭にリセットします。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[IDiaEnumStackFrames::Next](../../debugger/debug-interface-access/idiaenumstackframes-next.md)|列挙のシーケンスから、指定した数のスタック フレーム要素を取得します。|  
+|[IDiaEnumStackFrames::Reset](../../debugger/debug-interface-access/idiaenumstackframes-reset.md)|列挙のシーケンスを先頭にリセットします。|  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
-## 呼び出し元のメモ  
- [IDiaStackWalker::getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md) または [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) のメソッドを呼び出してこのインターフェイスを取得します。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ このインターフェイスを呼び出すことによって取得、 [IDiaStackWalker::getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md)または[IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md)メソッドです。  
   
-## 使用例  
- この例で `IDiaEnumStackFrames` のインターフェイスを取得および使用する方法を示します。  `PrintStackFrame` の実装については[IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) のインターフェイスが関数 " を参照してください。  
+## <a name="example"></a>例  
+ この例を入手して使用する方法を示しています、`IDiaEnumStackFrames`インターフェイスです。 参照してください、 [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)インターフェイスの実装については、`PrintStackFrame`関数。  
   
-```cpp#  
+```C++  
 void DumpStackFrames(IDiaStackWalker*     pStackWalker,  
                      IDiaStackWalkHelper* pStackWalkHelper,  
                      CV_CPU_TYPE_e        cpuType)  
@@ -64,15 +63,15 @@ void DumpStackFrames(IDiaStackWalker*     pStackWalker,
 }  
 ```  
   
-## 要件  
- ヘッダー : Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Dia2.h  
   
- ライブラリ : diaguids.lib  
+ ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## 参照  
- [インターフェイス \(Debug Interface Access SDK\)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
+## <a name="see-also"></a>関連項目  
+ [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)   
  [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md)   
  [IDiaStackWalker::getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md)

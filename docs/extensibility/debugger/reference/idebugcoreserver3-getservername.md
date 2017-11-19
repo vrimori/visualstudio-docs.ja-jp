@@ -1,55 +1,55 @@
 ---
-title: "IDebugCoreServer3::GetServerName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCoreServer3::GetServerName"
-helpviewer_keywords: 
-  - "IDebugCoreServer3::GetServerName"
+title: "IDebugCoreServer3::GetServerName |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugCoreServer3::GetServerName
+helpviewer_keywords: IDebugCoreServer3::GetServerName
 ms.assetid: 0fc3fcf5-d6a3-4a00-bf14-458b8645714e
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 103d406c6275697d84a1b29f28df27678b2bfb9f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugCoreServer3::GetServerName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebugcoreserver3getservername"></a>IDebugCoreServer3::GetServerName
 サーバーの名前を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetServerName(  
-   BSTR* pbstrName  
+```cpp  
+HRESULT GetServerName(  
+   BSTR* pbstrName  
 );  
 ```  
   
-```c#  
-int GetServerName(  
-   out string pbstrName  
+```csharp  
+int GetServerName(  
+   out string pbstrName  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pbstrName`  
- \[入力\] サーバーの名前を返します。  
+ [out]サーバーの名前を返します。  
   
 > [!NOTE]
->  呼び出し元は文字列の解放を管理します。  
+>  呼び出し元は、文字列を解放します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- これによりサーバー名には[GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md) のメソッドを呼び出します。  
+## <a name="remarks"></a>コメント  
+ サーバーのフレンドリ名を呼び出して、 [GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md)メソッドです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)   
  [GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md)

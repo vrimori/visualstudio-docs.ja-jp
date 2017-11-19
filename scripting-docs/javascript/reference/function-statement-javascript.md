@@ -1,36 +1,38 @@
 ---
-title: "function ステートメント (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "function_JavaScriptKeyword"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "宣言 (関数を)"
-  - "宣言 (関数を), 構文"
-  - "function ステートメント"
-  - "new 演算子"
+title: "関数のステートメント (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: function_JavaScriptKeyword
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- new operator
+- declaring functions, syntax
+- function statement
+- declaring functions
 ms.assetid: cc9cfd43-1305-41c8-ad67-545d20f4fafe
-caps.latest.revision: 20
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: e5fac3647e9374a9c909a420b73b86354cac69b6
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# function ステートメント (JavaScript)
+# <a name="function-statement-javascript"></a>function ステートメント (JavaScript)
 新しい関数を宣言します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 function functionname ([arg1 [, arg2 [,...[, argN]]]]) {  
@@ -38,38 +40,38 @@ function functionname ([arg1 [, arg2 [,...[, argN]]]]) {
 }   
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `functionname`  
- 必須です。  関数の名前。  
+ 必須です。 関数の名前。  
   
  `arg1...argN`  
- 省略可能です。  関数が解釈できる引数をコンマで区切ったリストを指定します。  
+ 省略可能です。 省略可能な、関数が認識できる引数のコンマ区切りのリスト。  
   
  `statements`  
- 省略可能です。  1 つ以上の [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] ステートメントを指定します。  
+ 省略可能です。 1 つまたは複数[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]ステートメントです。  
   
-## 解説  
- `function` ステートメントを使用して、今後使用するための関数を宣言します。  `statements` に記述するコードは、スクリプトの他の場所でこの関数が呼び出されるまで実行されません。  
+## <a name="remarks"></a>コメント  
+ 使用して、`function`を後で使用するための関数を宣言するステートメント。 含まれているコード`statements`関数が呼び出されるまでから別の場所で、スクリプトでは実行されません。  
   
- [return](../../javascript/reference/return-statement-javascript.md) ステートメントは、関数から値を返すために使用します。  `return` ステートメントは必ずしも必要ではありません。関数の終わりに達すると、プログラムは関数から戻ります。  関数で `return` ステートメントが実行されない場合、または `return` ステートメントに式がない場合、関数は `undefined` 値を返します。  
+ [返す](../../javascript/reference/return-statement-javascript.md)関数から値を返すステートメントを使用します。 使用する必要はありません、`return`ステートメント以外のプログラムは、関数の末尾に達したときに戻ります。 ない場合は`return`ステートメントが関数で実行される場合、または、`return`ステートメントが式を持たず、値を返します`undefined`です。  
   
 > [!NOTE]
->  関数を呼び出すときは、必須の引数とかっこを記述してください。  かっこがない関数を呼び出すと、関数の結果ではなく、関数への参照が返されます。  
+>  関数を呼び出すときに、かっこで囲むと、必要な引数を含めることを確認します。 かっこのない関数を呼び出すには、関数、関数の結果ではないへの参照が返されます。  
   
-## 使用例  
- `function` ステートメントの使用例を次に示します。  
+## <a name="example"></a>例  
+ 次の例は、`function` ステートメントの使用方法を示します。  
   
-```javascript  
+```JavaScript  
 function myfunction (arg1, arg2) {  
     var r = arg1 * arg2;  
     return(r);  
 }  
 ```  
   
-## 使用例  
- 関数は、変数に割り当てることができます。  この例を次に示します。  
+## <a name="example"></a>例  
+ 関数は、変数に代入できます。 このことを次の例で説明します。  
   
-```javascript  
+```JavaScript  
 function AddFive(x) {  
     return x + 5;  
 }  
@@ -92,8 +94,8 @@ var result = MyFunc(123);
 // Output: 133  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [new 演算子](../../javascript/reference/new-operator-decrementjavascript.md)

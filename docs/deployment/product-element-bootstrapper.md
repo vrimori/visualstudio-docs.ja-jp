@@ -1,33 +1,33 @@
 ---
-title: "&lt;Product&gt; 要素 (ブートストラップ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "<product> 要素 [ブートストラップ]"
+title: "&lt;製品&gt;要素 (ブートス トラップ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- FSharp
+- VB
+- CSharp
+- C++
+helpviewer_keywords: <product> element [bootstrapper]
 ms.assetid: 52b414af-ec80-4d2f-ad14-902543cd268e
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: c115fa5cb7191ab1edcff3005620d9ac7835f8a0
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# &lt;Product&gt; 要素 (ブートストラップ)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-`Product` 要素は、製品ファイル内のトップ レベルの XML 要素です。  
+# <a name="ltproductgt-element-bootstrapper"></a>&lt;製品&gt;要素 (ブートス トラップ)
+`Product`要素は、製品ファイル内で最上位の XML 要素です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 <Product  
@@ -139,15 +139,15 @@ ProductCode
 </Package>  
 ```  
   
-## 要素と属性  
- `Product` 要素は、製品ファイルの必須要素です。  次の属性があります。  
+## <a name="elements-and-attributes"></a>要素と属性  
+ `Product`製品ファイルに要素が必要です。 これにより、次の属性があります。  
   
-|属性|Description|  
-|--------|-----------------|  
-|`ProductCode`|製品の一意な識別子です。|  
+|属性|説明|  
+|---------------|-----------------|  
+|`ProductCode`|製品の一意の識別子。|  
   
-## 使用例  
- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] をインストールするための完全な製品ファイルを次のコード例に示します。  
+## <a name="example"></a>例  
+ 次のコード例は、インストールするための完全な製品ファイルを示しています、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]です。  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -251,5 +251,5 @@ ProductCode
 </Product>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [製品およびパッケージ スキーマ リファレンス](../deployment/product-and-package-schema-reference.md)

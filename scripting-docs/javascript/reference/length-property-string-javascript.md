@@ -1,38 +1,40 @@
 ---
-title: "length プロパティ (String) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "length Property"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "文字列 [Visual Studio]、長さ"
-  - "Length プロパティ"
-  - "length プロパティ (String)"
+title: "length プロパティ (String) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: length Property
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- strings [Visual Studio], length
+- Length property
+- length property (String)
 ms.assetid: 7dbd4a0e-c24e-4561-9b5b-e75e649a10a4
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 706a7f6986086f95613e09b9a8355eb5bc2702a7
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# length プロパティ (String) (JavaScript)
+# <a name="length-property-string-javascript"></a>length プロパティ (String) (JavaScript)
 `String` オブジェクトの長さを返します。  
   
 > [!WARNING]
->  JavaScript の文字列は変更不可であるため、文字列の長さは変更できません。  
+>  JavaScript 文字列は不変であるため、文字列の長さを変更できません。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -40,13 +42,13 @@ caps.handback.revision: 9
 "String Literal".length   
 ```  
   
-## 解説  
- `length` プロパティには、`String` オブジェクトの文字数を示す整数が格納されています。  `String` オブジェクトの末尾の文字のインデックス番号は、i`length` \- 1 になります。  
+## <a name="remarks"></a>コメント  
+ `length`プロパティには内の文字の数を示す整数が含まれています、`String`オブジェクト。 最後の文字、`String`オブジェクトのインデックスがありますは`length`- 1。  
   
-## 使用例  
- `length` の使用例を次のコードに示します。  JavaScript の文字列は変更不可で、そのまま変更することはできません。  ただし、逆順にした文字列を配列に書き込み、空の文字で `join` を呼び出して、区切り記号を含まない文字列を生成することができます。  
+## <a name="example"></a>例  
+ `length` の使用例を次のコードに示します。 JavaScript 文字列は不変でありインプレースで変更することはできません。 ただし、配列に逆順にした文字列を作成しを呼び出す`join`に空の文字を区切り文字を含まない文字列が生成されます。  
   
-```javascript  
+```JavaScript  
 var str = "every good boy does fine";  
         var start = 0;  
         var end = str.length - 1;  
@@ -65,5 +67,5 @@ var str = "every good boy does fine";
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]

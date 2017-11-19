@@ -1,88 +1,88 @@
 ---
-title: "THREADPROPERTIES | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "THREADPROPERTIES"
-helpviewer_keywords: 
-  - "THREADPROPERTIES 構造体"
+title: "THREADPROPERTIES |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: THREADPROPERTIES
+helpviewer_keywords: THREADPROPERTIES structure
 ms.assetid: 7d397207-db03-4ec0-9f79-3794056ed89f
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: b4ec394deef3b317d91e6cbe22bbc1d95a6aca5e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# THREADPROPERTIES
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="threadproperties"></a>THREADPROPERTIES
 スレッドのプロパティについて説明します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-typedef struct _tagTHREADPROPERTIES {   
-   THREADPROPERTY_FIELDS dwFields;  
-   DWORD                 dwThreadId;  
-   DWORD                 dwSuspendCount;  
-   DWORD                 dwThreadState;  
-   BSTR                  bstrPriority;  
-   BSTR                  bstrName;  
-   BSTR                  bstrLocation;  
+```cpp  
+typedef struct _tagTHREADPROPERTIES {   
+   THREADPROPERTY_FIELDS dwFields;  
+   DWORD                 dwThreadId;  
+   DWORD                 dwSuspendCount;  
+   DWORD                 dwThreadState;  
+   BSTR                  bstrPriority;  
+   BSTR                  bstrName;  
+   BSTR                  bstrLocation;  
 } THREADPROPERTIES;  
 ```  
   
-```c#  
-public struct THREADPROPERTIES {   
-   public uint   dwFields;  
-   public uint   dwThreadId;  
-   public uint   dwSuspendCount;  
-   public uint   dwThreadState;  
-   public string bstrPriority;  
-   public string bstrName;  
-   public string bstrLocation;  
+```csharp  
+public struct THREADPROPERTIES {   
+   public uint   dwFields;  
+   public uint   dwThreadId;  
+   public uint   dwSuspendCount;  
+   public uint   dwThreadState;  
+   public string bstrPriority;  
+   public string bstrName;  
+   public string bstrLocation;  
 };  
 ```  
   
-## メンバー  
+## <a name="members"></a>メンバー  
  dwFields  
- 記述するこの構造体のフィールドに設定 [THREADPROPERTY\_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) の列挙体のフラグの組み合わせが有効です。  
+ フラグの組み合わせ、 [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)有効ではこの構造体のフィールドを説明する列挙です。  
   
  dwThreadId  
- スレッド ID  
+ スレッドの id。  
   
  dwSuspendCount  
- スレッドの数を中断します。  
+ スレッドは、カウントを中断します。  
   
  dwThreadState  
- のスレッドのオペレーティング [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md) の状態を示す列挙体の値。  
+ 値、 [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md)操作スレッドの状態を示す列挙値。  
   
  bstrPriority  
- 指定した文字スレッドの優先順位 ; たとえば「標準」重要な」normal 」または 「時間の先頭で。  
+ スレッドの優先度を指定する文字列たとえば、"上記 Normal"、"Normal"、または時間で「重大」です。  
   
  bstName  
- スレッドの名前。  
+ スレッド名。  
   
  bstrLocation  
- 通常実行が現在停止するメソッドの名前として表現されるスレッドの場所 \(通常は最上位のスタック フレーム\)。  
+ 通常の実行が中断されているメソッドの名前として表現されるスレッドの場所 (通常、最上位のスタック フレーム)。  
   
-## 解説  
- この構造は [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) メソッドの呼び出しによって格納されます。  返される情報は\[出力\] ウィンドウ ENT0ENT の設定で使用されます。  
+## <a name="remarks"></a>コメント  
+ この構造体への呼び出しによって入力されます、 [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)メソッドです。 情報が返されます。 これが設定で通常使用される、**スレッド**ウィンドウです。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)   
- [THREADPROPERTY\_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)   
+ [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)   
  [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md)

@@ -1,61 +1,61 @@
 ---
-title: "IDebugParsedExpression | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugParsedExpression"
-helpviewer_keywords: 
-  - "IDebugParsedExpression インターフェイス"
+title: "IDebugParsedExpression |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugParsedExpression
+helpviewer_keywords: IDebugParsedExpression interface
 ms.assetid: be6486ed-b070-4898-95b1-58581bcb4447
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 11fc3ddcfd7e5b2a3a46ff6a2db64dfe431fbc69
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugParsedExpression
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebugparsedexpression"></a>IDebugParsedExpression
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されません。 CLR 式エバリュエーターの実装については、次を参照してください [CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) と [マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
+>  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
   
- このインターフェイスは、評価する準備が解析された式を表します。  
+ このインターフェイスは、解析された式を評価する準備ができてを表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugParsedExpression : IUnknown  
 ```  
   
-## 実装についてのメモ  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
  式エバリュエーターでは、評価の準備が整った解析された式を表すためには、このインターフェイスを実装します。  
   
-## 呼び出し元のノート  
- 呼び出し [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) このインターフェイスを返します。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ 呼び出し[解析](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)このインターフェイスを返します。  
   
-## Vtable 順序のメソッド  
- 次の表は、メソッドの `IDebugParsedExpression`です。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugParsedExpression`します。  
   
 |メソッド|説明|  
-|----------|--------|  
+|------------|-----------------|  
 |[EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)|解析された式を評価します。|  
   
-## 解説  
- それを呼び出す呼び出し元の式を評価する準備ができたら [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) を返す、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 評価の結果を格納しています。 この 2 部構成方法により、複数回に評価されるように解析された式を評価する、次の解析、式を解析の時間のかかるプロセスをバイパスして、評価をするには。  
+## <a name="remarks"></a>コメント  
+ これを呼び出す呼び出し元の式を評価する準備ができたら[EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)を返す、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)評価の結果を格納しています。 この 2 部構成方法の評価中、複数回評価されるように解析された式を有効にし、解析、式を解析の時間のかかる処理をバイパスして、評価します。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: ee.h  
   
- 名前空間: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)   
+## <a name="see-also"></a>関連項目  
+ [解析](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)   
  [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

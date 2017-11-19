@@ -1,27 +1,30 @@
 ---
-title: "IActiveScriptParseProcedure::ParseProcedureText | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IActiveScriptParseProcedure::ParseProcedureText |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScriptParseProcedure.ParseProcedureText
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IActiveScriptParseProcedure_ParseProcedureText"
+helpviewer_keywords: IActiveScriptParseProcedure_ParseProcedureText
 ms.assetid: 345a74ae-b4e8-42b2-abd8-633a370e8e7f
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c2a877f6ebc692f9f54d69597e06db501f642802
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScriptParseProcedure::ParseProcedureText
-特定のプロシージャ コードを分析し、名前空間にプロシージャを追加します。  
+# <a name="iactivescriptparseprocedureparseproceduretext"></a>IActiveScriptParseProcedure::ParseProcedureText
+指定したコードのプロシージャを解析し、プロシージャを名前空間に追加します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT ParseProcedureText(  
@@ -38,58 +41,58 @@ HRESULT ParseProcedureText(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pstrCode`  
- \[入力\]評価するプロシージャのテキストのアドレス。  この文字列の解釈はスクリプト言語によって異なります。  
+ [in]評価するプロシージャのテキストのアドレスです。 この文字列の解釈はスクリプト言語によって異なります。  
   
  `pstrFormalParams`  
- \[入力\]プロシージャの仮パラメーター名のアドレス。  パラメーター名は、スクリプト エンジンの適切な区切り記号で区切る必要があります。  名前をかっこで囲む必要ではありません。  
+ [in]プロシージャの仮パラメーター名のアドレスです。 パラメーター名は、スクリプト エンジンの適切な区切り記号で区切る必要があります。 名前は、かっこで囲まれていない必要があります。  
   
  `pstrProcedureName`  
- \[入力\]解析されるプロシージャ名のアドレス。  
+ [in]解析するプロシージャ名のアドレスです。  
   
  `pstrItemName`  
- \[入力\]プロシージャが評価されるコンテキストを提供する項目の名前のアドレス。  このパラメーターがの場合、`NULL`コードは、スクリプト エンジンのグローバル コンテキストで評価されます。  
+ [in]プロシージャが評価されるコンテキスト項目名のアドレスです。 このパラメーターが場合`NULL`コードは、スクリプト エンジンのグローバル コンテキストで評価されます。  
   
  `punkContext`  
- \[入力\]コンテキストのオブジェクトのアドレス。  このオブジェクトは、アクティブなランタイムのコンテキストを表すためにこのようなコンテキストがデバッガーによって提供される可能性があるデバッグ環境用に予約されています。  このパラメーターが `NULL`場合、エンジンはコンテキストを識別するために `pstrItemName` を使用します。  
+ [入力] コンテキスト オブジェクトのアドレス。 このオブジェクトはデバッグ環境用に予約されています。アクティブなランタイム コンテキストを表すためにデバッガーによって指定される場合があります。 場合、このパラメーターは`NULL`、エンジンを使用して`pstrItemName`が、コンテキストを識別します。  
   
  `pstrDelimiter`  
- \[入力\]終わりの手順の区切り記号のアドレス。  `pstrCode` がテキスト ストリームから解析されると、通常ホストは、プロシージャの終了を検出する 2 つ単一引用符などの区切り記号を、\(」\) を使用します。  このパラメーターは、使用するホスト区切り記号を指定します。条件付きのプリミティブな前処理を提供するためにスクリプト エンジンができます \(たとえば、単一引用符を「\[入力\]区切り記号として使用する単一引用符を 2 つに置き換えてください。  は、スクリプト エンジンがどのように使用できます。この情報は、スクリプト エンジンによって異なります \(および\)。  手順の最後を示したためにホストが区切り記号を使用しない場合は `NULL` にこのパラメーターを設定します。  
+ [in]最後の手順の区切り記号のアドレス。 ときに`pstrCode`解析は、テキストのストリームからホスト通常を使用して、区切り記号、2 つの単一引用符 (")、プロシージャの終了を検出するなどです。 このパラメーターには、ホストが使用する区切り文字を指定します。それにより、スクリプト エンジンで何らかの条件付きのプリミティブな前処理が可能になります (単一引用符 (') を区切り文字として使用するために 2 つの単一引用符に置き換えるなど)。 スクリプト エンジンがこの情報を厳密にどのような方法 (条件) で使用するかは、スクリプト エンジンによって異なります。 このパラメーターに設定`NULL`ホストは、プロシージャの最後をマークする、区切り記号を使用しなかった場合。  
   
  `dwSourceContextCookie`  
- \[入力\]デバッグに使用されるアプリケーション定義の値。  
+ [in]デバッグのために使用するアプリケーション定義の値。  
   
  `ulStartingLineNumber`  
- \[入力\]どの行で分析を開始位置を指定する始まる値。  
+ [入力] 解析が開始される行を指定するゼロから始まる値。  
   
  `dwFlags`  
- \[入力\]フラグは、プロシージャに関連付けられています。  これらの値の組み合わせがあります:  
+ [in]プロシージャに関連付けられるフラグ。 次の値の組み合わせが可能です。  
   
 |値|説明|  
-|-------|--------|  
-|SCRIPTPROC\_ISEXPRESSION|`pstrCode` のコードはプロシージャの戻り値を表す式であることを示します。  既定では、コードはプロシージャで許可されるステートメントの式、リスト、またはそれ以外でしょうか。スクリプト言語によって含めることができます。|  
-|SCRIPTPROC\_IMPLICIT\_THIS|`this` のポインターがプロシージャのスコープに含まれていることを示します。|  
-|SCRIPTPROC\_IMPLICIT\_PARENTS|`this` のポインターの親がプロシージャのスコープ内に含まれていることを示します。|  
+|-----------|-------------|  
+|SCRIPTPROC_ISEXPRESSION|示しますコード`pstrCode`プロシージャの戻り値を表す式を指定します。 既定では、コードは、式、ステートメントの一覧、またはそれ以外の場合、スクリプト言語でプロシージャで許可されているものを含めることができます。|  
+|SCRIPTPROC_IMPLICIT_THIS|示します、`this`ポインターが、プロシージャのスコープに含まれます。|  
+|SCRIPTPROC_IMPLICIT_PARENTS|示しますの親、`this`ポインターは、プロシージャのスコープに含まれています。|  
   
  `ppdisp`  
- \[入力\]グローバル スクリプトのメソッドとプロパティを含むオブジェクトのポインターのアドレス。  スクリプト エンジンがこのようなオブジェクトをサポートしていない場合、`NULL` が返されます。  
+ [out]スクリプトのグローバル メソッドとプロパティを含むオブジェクトのポインターのアドレスです。 スクリプト エンジンが、このようなオブジェクトをサポートしていない場合`NULL`が返されます。  
   
-## 戻り値  
- 次の値の場合: 1  
+## <a name="return-value"></a>戻り値  
+ 次のいずれかの値を返します。  
   
 |戻り値|説明|  
-|---------|--------|  
+|------------------|-------------|  
 |`S_OK`|成功。|  
 |`E_INVALIDARG`|引数が無効です。|  
 |`E_POINTER`|無効なポインターが指定されました。|  
-|`E_NOTIMPL`|このメソッドはサポートされていません。  スクリプト エンジンは、名前空間、プロシージャのランタイムの追加をサポートしません。|  
-|`E_UNEXPECTED`|呼び出しが想定されていません \(たとえば、スクリプト エンジンが初期化されていない状態または終了状態にあります\)。|  
-|`OLESCRIPT_E_SYNTAX`|未指定の手順で構文エラーが発生しました。|  
-|`S_FALSE`|スクリプト エンジンはディスパッチ オブジェクトをサポートしていません; `ppdisp` のパラメーターは `NULL`に設定されます。|  
+|`E_NOTIMPL`|このメソッドはサポートされていません。 スクリプト エンジンは、名前空間をプロシージャの実行時の追加をサポートしていません。|  
+|`E_UNEXPECTED`|呼び出しが予期されていませんでした (たとえば、スクリプト エンジンは未初期化または終了状態)。|  
+|`OLESCRIPT_E_SYNTAX`|手順で指定されていない構文エラーが発生しました。|  
+|`S_FALSE`|スクリプト エンジンがディスパッチ オブジェクト; をサポートしていません`ppdisp`にパラメーターが設定されている`NULL`です。|  
   
-## 解説  
- スクリプト コードはこの呼び出し時に評価されることはありません; なく、プロシージャはスクリプトで後で呼び出すことができるスクリプトの状態にコンパイルされます。  
+## <a name="remarks"></a>コメント  
+ この呼び出し中には、スクリプト コードは評価されません。代わりに、プロシージャは、ここで呼び出すことができます、スクリプトによって後でスクリプトの状態にコンパイルされます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IActiveScriptParseProcedure](../../winscript/reference/iactivescriptparseprocedure.md)

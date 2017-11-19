@@ -1,27 +1,30 @@
 ---
-title: "DOCUMENTNAMETYPE 列挙型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "DOCUMENTNAMETYPE 列挙型 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: DOCUMENTNAMETYPE
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "DOCUMENTNAMETYPE 列挙型"
+helpviewer_keywords: DOCUMENTNAMETYPE enumeration
 ms.assetid: d36d550e-efb4-493d-8971-4de267005654
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a0bd21dddd209f21ae64ea2775bbaa0da226f077
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# DOCUMENTNAMETYPE 列挙型
-ついて説明します。ドキュメントのを取得するように入力します。  
+# <a name="documentnametype-enumeration"></a>DOCUMENTNAMETYPE 列挙型
+ドキュメント用に取得する型を記述します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 typedef enum tagDOCUMENTNAMETYPE {  
@@ -29,19 +32,18 @@ typedef enum tagDOCUMENTNAMETYPE {
    DOCUMENTNAMETYPE_TITLE,  
    DOCUMENTNAMETYPE_FILE_TAIL,  
    DOCUMENTNAMETYPE_URL,  
-DOCUMENTNAMETYPE_UNIQUE_TITLE,  
-} DOCUMENTNAMETYPE;  
+DOCUMENTNAMETYPE_UNIQUE_TITLE,} DOCUMENTNAMETYPE;  
 ```  
   
-## メンバー  
+## <a name="members"></a>メンバー  
   
 |メンバー|説明|  
-|----------|--------|  
-|DOCUMENTNAMETYPE\_APPNODE|アプリケーションのツリーに表示される名前を取得します。|  
-|DOCUMENTNAMETYPE\_TITLE|ビューアーのタイトル バーに表示される名前を取得します。|  
-|DOCUMENTNAMETYPE\_FILE\_TAIL|パスを指定せずにファイル名を取得します。|  
-|DOCUMENTNAMETYPE\_URL|ドキュメントの URL を取得します。|  
-|DOCUMENTNAMETYPE\_UNIQUE\_TITLE|タイトルを特定の列挙型が追加されます。|  
+|------------|-----------------|  
+|DOCUMENTNAMETYPE_APPNODE|アプリケーションのツリーに表示される名前を取得します。|  
+|DOCUMENTNAMETYPE_TITLE|ビューアーのタイトル バーに表示される名前を取得します。|  
+|DOCUMENTNAMETYPE_FILE_TAIL|Path を含まないファイル名を取得します。|  
+|DOCUMENTNAMETYPE_URL|ドキュメントの URL を取得します。|  
+|DOCUMENTNAMETYPE_UNIQUE_TITLE|Id の列挙が付いたタイトルを取得します。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [アクティブ スクリプト デバッガーの定数、列挙型、および構造体](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

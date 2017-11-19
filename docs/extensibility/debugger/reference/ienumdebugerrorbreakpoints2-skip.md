@@ -1,51 +1,51 @@
 ---
-title: "IEnumDebugErrorBreakpoints2::Skip | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugErrorBreakpoints2::Skip"
-helpviewer_keywords: 
-  - "IEnumDebugErrorBreakpoints2::Skip"
+title: "IEnumDebugErrorBreakpoints2::Skip |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IEnumDebugErrorBreakpoints2::Skip
+helpviewer_keywords: IEnumDebugErrorBreakpoints2::Skip
 ms.assetid: a5a02b38-4e3a-4f0e-b529-f770c3485c8b
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: f4cc976b0eac235b4ee9a2c1a957384dcd427c6f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IEnumDebugErrorBreakpoints2::Skip
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-指定した数の要素をスキップします。  
+# <a name="ienumdebugerrorbreakpoints2skip"></a>IEnumDebugErrorBreakpoints2::Skip
+指定した要素数をスキップします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT Skip(  
-   ULONG celt  
+   ULONG celt  
 );  
 ```  
   
-```c#  
+```csharp  
 int Skip(  
-   uint celt  
+   uint celt  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `celt`  
- \[入力\] スキップする要素の数。  
+ [in]スキップする要素の数。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK` `celt` の残りの要素の数を超える場合はを返します `S_FALSE` ; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`です。 返します`S_FALSE`場合`celt`残りの要素の数よりも大きいです。 それ以外の場合、エラー コードを返します。  
   
-## 解説  
- `celt` の残りの要素数を超える値を指定する列挙体が最後に`S_FALSE` が返されます。  
+## <a name="remarks"></a>コメント  
+ 場合`celt`数より大きい値を指定して残りの要素の列挙体が最後に設定し、`S_FALSE`が返されます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)

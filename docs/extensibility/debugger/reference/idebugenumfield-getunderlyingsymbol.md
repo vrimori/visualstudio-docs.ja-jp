@@ -1,53 +1,53 @@
 ---
-title: "IDebugEnumField::GetUnderlyingSymbol | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEnumField::GetUnderlyingSymbol"
-helpviewer_keywords: 
-  - "IDebugEnumField::GetUnderlyingSymbol メソッド"
+title: "IDebugEnumField::GetUnderlyingSymbol |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugEnumField::GetUnderlyingSymbol
+helpviewer_keywords: IDebugEnumField::GetUnderlyingSymbol method
 ms.assetid: c3b8a117-6708-4cfd-8ffc-5f007d706bc5
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: fdfec41092d974be90f1b376089fa4a66c45c955
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugEnumField::GetUnderlyingSymbol
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このメソッドは [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 列挙型の名前を示します。  
+# <a name="idebugenumfieldgetunderlyingsymbol"></a>IDebugEnumField::GetUnderlyingSymbol
+このメソッドが戻る、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)列挙体の名前を表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT GetUnderlyingSymbol(  
-   IDebugField** ppField  
+   IDebugField** ppField  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetUnderlyingSymbol(  
-   out IDebugField ppField  
+   out IDebugField ppField  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppField`  
- \[出力\] この列挙型名を記述する [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) を返します。  
+ [out]返します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)この列挙体の名前を記述します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- 列挙型の名前はメモリ位置に [バインド](../../../extensibility/debugger/reference/idebugbinder-bind.md) を使用してバインドされた列挙体の型が含まれています。  
+## <a name="remarks"></a>コメント  
+ 列挙体の名前を使用してメモリの場所にバインドされている列挙体の型も含まれています。[バインド](../../../extensibility/debugger/reference/idebugbinder-bind.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [バインド](../../../extensibility/debugger/reference/idebugbinder-bind.md)

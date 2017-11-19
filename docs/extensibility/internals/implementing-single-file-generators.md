@@ -1,34 +1,35 @@
 ---
-title: "単一ファイル ジェネレーターの実装 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "実装するカスタムのツール"
-  - "プロジェクト [Visual Studio SDK] の機能拡張"
-  - "プロジェクト [Visual Studio SDK] カスタム ツールの管理"
+title: "単一ファイル ジェネレーターの実装 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom tools, implementing
+- projects [Visual Studio SDK], extensibility
+- projects [Visual Studio SDK], managed custom tools
 ms.assetid: fe9ef6b6-4690-4c2c-872c-301c980d17fe
-caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 9894666dd435dcaa110ba8af8307d7e942119bee
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 単一ファイル ジェネレーターの実装
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-カスタム ツール \(単一ファイル ジェネレーターと呼ばれる — [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] と  [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] プロジェクト システムを拡張するために使用できます。  カスタム ツールは <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> のインターフェイスを実装する COM コンポーネントです。  このインターフェイスを使用して単一の出力ファイルに一つの入力ファイルを変換します。  変換の結果はソース・コードまたは役に立つ他の出力がである場合があります。  カスタム ツールによって生成されたコード ファイルの 2 つがの例ではビジュアル デザイナーの変更に応じて生成されるサービス記述言語を使用して生成されたコードとファイルです \(WSDL\)。  
+# <a name="implementing-single-file-generators"></a>単一ファイル ジェネレーターの実装
+カスタム ツール — 単一ファイル ジェネレーターとも呼ば — 拡張に使用できる、[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]と[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]プロジェクト システムで[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 カスタム ツールは、実装する COM コンポーネント、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>インターフェイスです。 このインターフェイスを使用して、カスタム ツールは、1 つの出力ファイルに 1 つの入力ファイルを変換します。 役立つその他の出力または変換の結果は、ソース コードにあります。 カスタム ツールで生成されたコード ファイルの 2 つの例は、ビジュアル デザイナーや Web サービス記述言語 (WSDL) を使用して生成されたファイルの変更に応答で生成されたコードです。  
   
- カスタム ツールが読み込まれたり入力ファイルを保存するとプロジェクト システムは <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A> のメソッドはユーザーがツールに進行状況を報告できる<xref:Microsoft.VisualStudio.Shell.Interop.IVsGeneratorProgress> のコールバック インターフェイスへの参照を渡します。  
+ プロジェクト システムが呼び出されて、カスタム ツールが読み込まれると、入力ファイルが保存される際、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A>メソッドへの参照を渡すと、<xref:Microsoft.VisualStudio.Shell.Interop.IVsGeneratorProgress>ツールが、ユーザーに進行状況を報告するためのコールバック インターフェイス。  
   
- カスタム ツールを生成する出力ファイルが入力ファイルの依存関係がプロジェクトに追加されます。  プロジェクト システムがカスタム ツールの <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> の実装によって返される文字列に基づいて自動的に出力ファイルの名前を決定します。  
+ カスタム ツールを生成する出力ファイルは、入力ファイルに依存して、プロジェクトに追加されます。 プロジェクト システムのカスタム ツールの実装によって返される文字列に基づいて、出力ファイルの名前を自動的に決定する<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A>です。  
   
- カスタム ツールは <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> のインターフェイスを実装する必要があります。  必要に応じて入力ファイルの外部ソースから情報を取得するために <xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite> のインターフェイスをサポートします。  いずれの場合もカスタム ツールを使用するにはシステムまたはの [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のローカルのレジストリに登録する必要があります。  カスタム ツールの登録の詳細については[単一ファイル ジェネレーターを登録します。](../../extensibility/internals/registering-single-file-generators.md) を参照してください。  
+ カスタム ツールを実装する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>インターフェイスです。 必要に応じて、カスタム ツールのサポート、<xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite>入力ファイル以外のソースから情報を取得するインターフェイスです。 いずれの場合は、カスタム ツールを使用することができます、前に登録すると、システム、または、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ローカル レジストリです。 カスタム ツールを登録する方法の詳細については、次を参照してください。[単一ファイル ジェネレーターの登録](../../extensibility/internals/registering-single-file-generators.md)です。  
   
-## 参照  
- [プロジェクトの既定の名前空間の決定](../../misc/determining-the-default-namespace-of-a-project.md)   
- [ビジュアル デザイナーで型を公開します。](../../extensibility/internals/exposing-types-to-visual-designers.md)
+## <a name="see-also"></a>関連項目  
+ [ビジュアル デザイナーへのタイプの公開](../../extensibility/internals/exposing-types-to-visual-designers.md)

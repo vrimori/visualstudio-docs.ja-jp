@@ -1,63 +1,64 @@
 ---
-title: "計算されると、カスタムの記憶域のプロパティ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ドメインのプロパティをプログラミングのドメイン固有言語"
+title: "計算およびカスタムのストレージ プロパティ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Domain-Specific Language, programming domain properties
 ms.assetid: 42b785f9-2b0f-4f13-a6b4-246e5e0d477a
-caps.latest.revision: 19
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 0be1527c82264ef388eb01d3a06702c1c4bb4f7d
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 計算されると、カスタムの記憶域のプロパティ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-ドメイン固有言語 \(DSL\) 内のすべてのドメイン プロパティは、ダイアグラムでクリックし、言語エクスプ ローラーで、ユーザーに表示されることができ、プログラム コードからアクセスできます。 ただし、プロパティは、その値を格納するように異なります。  
+# <a name="calculated-and-custom-storage-properties"></a>計算プロパティおよびカスタム格納プロパティ
+ドメイン固有言語 (DSL) ですべてのドメインのプロパティは、ダイアグラムでし、言語エクスプ ローラーで、ユーザーに表示することができ、プログラム コードによってアクセスできます。 ただし、プロパティは、その値が格納されるように異なります。  
   
-## ドメイン プロパティの種類  
- DSL 定義で設定することができます、 **種類** の次の表に記載されているドメインのプロパティ。  
+## <a name="kinds-of-domain-properties"></a>ドメインのプロパティの種類  
+ DSL 定義で設定することができます、**種類**ドメイン プロパティには、次の表に記載されているの。  
   
 |ドメイン プロパティの種類|説明|  
-|-------------------|--------|  
-|**標準** \(既定\)|ドメイン プロパティに保存されている、 *格納* ファイルにシリアル化されたとします。|  
-|**計算**|ストアでは保存されませんが、その他の値から計算される読み取り専用ドメイン プロパティ。<br /><br /> たとえば、 `Person.Age` から計算でした `Person.BirthDate`します。<br /><br /> 計算を実行するコードを指定する必要があります。 通常、その他のドメインのプロパティから値を計算します。 ただし、外部リソースを使用することもできます。|  
-|**カスタム ストレージ**|ドメイン プロパティがない場合、ストアに直接保存されているが、get および設定できます。<br /><br /> 取得し、値を設定する方法を提供する必要があります。<br /><br /> たとえば、 `Person.FullAddress` に格納 `Person.StreetAddress`, 、`Person.City`, 、および `Person.PostalCode`です。<br /><br /> 取得し、データベースから値を設定する例については、外部のリソースをアクセスすることもできます。<br /><br /> コードでは、ストア内の値を設定する必要がありますと `Store.InUndoRedoOrRollback` は true です。 参照してください [トランザクションとカスタムの set アクセス操作子](#setters)します。|  
+|--------------------------|-----------------|  
+|**標準**(既定)|ドメイン プロパティに保存されている、*格納*ファイルにシリアル化されたとします。|  
+|**計算**|読み取り専用ドメイン プロパティは、ストアに保存されませんが、その他の値から計算されます。<br /><br /> たとえば、`Person.Age`から計算でした`Person.BirthDate`です。<br /><br /> 計算を実行するコードを指定する必要があります。 通常、その他のドメインのプロパティから値を計算します。 ただし、外部リソースを使用することもできます。|  
+|**カスタム ストレージ**|ドメイン プロパティは、ストアに直接保存されませんが、get および set の両方を指定できます。<br /><br /> 取得し、値を設定する方法を提供する必要があります。<br /><br /> たとえば、`Person.FullAddress`に格納`Person.StreetAddress`、 `Person.City`、および`Person.PostalCode`です。<br /><br /> 取得し、データベースから値を設定する例については、外部のリソースをアクセスすることもできます。<br /><br /> コードでは、ストアに値を設定しないでくださいとき`Store.InUndoRedoOrRollback`は true です。 参照してください[トランザクションとカスタム Setter](#setters)です。|  
   
-## 計算された、またはカスタムのストレージ プロパティのコードを提供します。  
- 計算またはカスタム ストレージ ドメイン プロパティの種類を設定する場合は、アクセス方法を指定する必要です。 ソリューションをビルドするときにエラー レポートを教えてくれる何が必要です。  
+## <a name="providing-the-code-for-a-calculated-or-custom-storage-property"></a>計算された、またはカスタムのストレージ プロパティのコードを提供します。  
+ 集計またはカスタムの記憶域をドメイン プロパティの種類を設定した場合は、アクセス方法を指定する必要があります。 ソリューションをビルドするときにエラー レポートがわかります何が必要です。  
   
-#### 集計またはカスタム ストレージ\] プロパティを定義するには  
+#### <a name="to-define-a-calculated-or-custom-storage-property"></a>計算やカスタム ストレージ プロパティを定義するには  
   
-1.  DslDefinition.dsl での図に、または \[ドメイン プロパティを選択 **DSL エクスプ ローラー**します。  
+1.  DslDefinition.dsl でドメイン プロパティの図に、または 選択**DSL のエクスプ ローラー**です。  
   
-2.  **プロパティ** ウィンドウで、設定、 **種類** フィールドを **Calculated** または **カスタム ストレージ**します。  
+2.  **プロパティ**ウィンドウで、設定、**種類**フィールドを**Calculated**または**カスタム ストレージ**です。  
   
-     設定されていることを確認、 **型** 目的にします。  
+     設定されていることを確認、**型**の対象となります。  
   
-3.  クリックして **すべてのテンプレートの変換** のツールバーで **ソリューション エクスプ ローラー**します。  
+3.  をクリックして**すべてのテンプレートの変換**のツールバーに**ソリューション エクスプ ローラー**です。  
   
-4.  **\[ビルド\]** メニューの **\[ソリューションのビルド\]** をクリックします。  
+4.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
   
-     次のエラー メッセージが表示されます:"*YourClass* Get コマンドの定義が含まれていない*YourProperty*."  
+     次のエラー メッセージが表示されます:"*YourClass* Get の定義が含まれていません*YourProperty*"。  
   
 5.  エラー メッセージをダブルクリックします。  
   
-     Dsl\\GeneratedCode\\DomainClasses.cs または DomainRelationships.cs が開きます。 強調表示されているメソッド呼び出しの上コメント Get の実装を提供するよう求める*YourProperty*\(\)。  
+     Dsl\GeneratedCode\DomainClasses.cs または DomainRelationships.cs が開きます。 強調表示されているメソッドを呼び出す上コメント Get の実装を指定するように求め*YourProperty*()。  
   
     > [!NOTE]
-    >  このファイルは、DslDefinition.dsl から生成されます。 このファイルを編集する場合、変更は失われます\] をクリックして、次回 **すべてのテンプレートの変換**します。 代わりに、別のファイルに必要なメソッドを追加します。  
+    >  このファイルは、DslDefinition.dsl から生成されます。 このファイルを編集する場合、変更は失われます をクリックして、次回**すべてのテンプレートの変換**です。 代わりに、別のファイルに必要なメソッドを追加します。  
   
-6.  作成または別のフォルダー、たとえば CustomCode\\ で、クラス ファイルを開きます*YourDomainClass*. cs です。  
+6.  作成したり、別のフォルダー、たとえば CustomCode クラス ファイルを開く\\*YourDomainClass*。 cs です。  
   
-     名前空間が、生成されたコードのように同じであることを確認します。  
+     名前空間が生成されたコードのものと同じであることを確認してください。  
   
-7.  クラス ファイルでは、ドメイン クラスの実装の一部を記述します。 クラスで、不足しているの定義を記述 `Get` メソッドを次の例のようになります。  
+7.  クラス ファイルでは、ドメイン クラスの実装の一部を記述します。 クラスでは、欠落しているの定義を書き込む`Get`メソッドを次の例のようになります。  
   
     ```  
     namespace Company.FamilyTree  
@@ -67,7 +68,7 @@ caps.handback.revision: 19
     }  }  
     ```  
   
-8.  設定した場合 **種類** に **カスタム ストレージ**, 、提供する必要があります、 `Set` メソッドです。 例:  
+8.  設定した場合**種類**に**カスタム ストレージ**、提供する必要があります、`Set`メソッドです。 例:  
   
     ```  
     void SetAgeValue(int value)  
@@ -76,20 +77,20 @@ caps.handback.revision: 19
             System.DateTime.Today.Year - value; }  
     ```  
   
-     コードでは、ストア内の値を設定する必要がありますと `Store.InUndoRedoOrRollback` は true です。 参照してください [トランザクションとカスタムの set アクセス操作子](#setters)します。  
+     コードでは、ストアに値を設定しないでくださいとき`Store.InUndoRedoOrRollback`は true です。 参照してください[トランザクションとカスタム Setter](#setters)です。  
   
 9. ソリューションをビルドして実行します。  
   
-10. プロパティをテストします。 試してみることを確認 **を元に戻す** と **やり直し**します。  
+10. プロパティをテストします。 試してみることを確認してください**を元に戻す**と**やり直し**です。  
   
-##  <a name="setters"></a> トランザクションとカスタムの set アクセス操作子  
- カスタム ストレージ\] プロパティの Set メソッドでないを開くには、トランザクション メソッドは通常、アクティブなトランザクションの内部と呼ばれるためです。  
+##  <a name="setters"></a>トランザクションとカスタムの Setter  
+ カスタム ストレージ プロパティの Set メソッドにするため必要はありませんを開くには、トランザクション、メソッドは通常、アクティブなトランザクションの内部と呼ばれます。  
   
- ただし、Set メソッドは、ユーザーが元に戻したりやり直したりを呼び出す場合、またはトランザクションのロールバックにも呼び出すことがあります。<xref:Microsoft.VisualStudio.Modeling.Store.InUndoRedoOrRollback%2A> が true の場合、Set メソッドを次のように動作する必要があります。  
+ ただし、Set メソッドは、ユーザーが元に戻したり、やり直したりを呼び出した場合、またはトランザクションがロールバックされている場合にも呼び出す可能性があります。 ときに<xref:Microsoft.VisualStudio.Modeling.Store.InUndoRedoOrRollback%2A>が true の場合、Set メソッドに次のように動作する必要があります。  
   
--   他のドメイン プロパティに値の割り当てなどのストアに変更はください必要があります。 アンドゥ マネージャーはその値を設定します。  
+-   変更しないようになどその他のドメインのプロパティに値を割り当てる、ストアにします。 アンドゥ マネージャーはその値を設定します。  
   
--   ただし、データベースまたはファイルの内容、または、ストア外のオブジェクトなど、任意の外部リソースを更新する必要があります。 これにより、それらに格納されている synchronism ストア内の値を持つことを確認します。  
+-   ただし、これデータベースまたはファイルの内容、または外部のストア オブジェクトなど、任意の外部リソースに更新する必要があります。 これにより、それらに格納されている synchronism ストアに値を持つことを確認します。  
   
  例:  
   
@@ -106,9 +107,9 @@ void SetAgeValue(int value)
 }  
 ```  
   
- トランザクションの詳細については、次を参照してください。 [プログラム コードにおけるモデル内の移動およびモデルの更新](../modeling/navigating-and-updating-a-model-in-program-code.md)します。  
+ トランザクションの詳細については、次を参照してください。[を移動すると、プログラム コードでモデルを更新する](../modeling/navigating-and-updating-a-model-in-program-code.md)です。  
   
-## 参照  
- [プログラム コードにおけるモデル内の移動およびモデルの更新](../modeling/navigating-and-updating-a-model-in-program-code.md)   
- [ドメイン プロパティのプロパティ](../modeling/properties-of-domain-properties.md)   
+## <a name="see-also"></a>関連項目  
+ [移動して、プログラム コードでモデルを更新します。](../modeling/navigating-and-updating-a-model-in-program-code.md)   
+ [ドメインのプロパティのプロパティ](../modeling/properties-of-domain-properties.md)   
  [方法: ドメイン固有言語を定義する](../modeling/how-to-define-a-domain-specific-language.md)

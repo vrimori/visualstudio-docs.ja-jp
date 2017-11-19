@@ -1,11 +1,10 @@
 ---
-title: 'CA1011: Consider passing base types as parameters | Microsoft Docs'
+title: "Ca 1011: 基本型をパラメーターとして渡すことを検討してください |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,63 +14,50 @@ helpviewer_keywords:
 - CA1011
 - ConsiderPassingBaseTypesAsParameters
 ms.assetid: ce1e1241-dcf4-419b-9363-1d5bc4989279
-caps.latest.revision: 18
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 2d950f5e6d9d5bdecfec1353f8c00171884f2e21
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: ae6923e369d0f4245759bff2c66dc931dc51baf8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: Consider passing base types as parameters
+# <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: 基本型をパラメーターとして渡すことを考慮します
 |||  
 |-|-|  
 |TypeName|ConsiderPassingBaseTypesAsParameters|  
 |CheckId|CA1011|  
-|Category|Microsoft.Design|  
-|Breaking Change|Breaking|  
+|カテゴリ|Microsoft.Design|  
+|互換性に影響する変更点|あり|  
   
-## <a name="cause"></a>Cause  
- A method declaration includes a formal parameter that is a derived type, and the method calls only members of the base type of the parameter.  
+## <a name="cause"></a>原因  
+ メソッド宣言には、派生型である仮パラメーターが含まれ、メソッドを呼び出して、パラメーターの基本型のメンバーだけです。  
   
-## <a name="rule-description"></a>Rule Description  
- When a base type is specified as a parameter in a method declaration, any type that is derived from the base type can be passed as the corresponding argument to the method. When the argument is used inside the method body, the specific method that is executed depends on the type of the argument. If the additional functionality that is provided by the derived type is not required, use of the base type allows wider use of the method.  
+## <a name="rule-description"></a>規則の説明  
+ メソッドの宣言で基本型をパラメーターとして指定すると、その基本型から派生した型は、メソッドに対応する引数として渡すことができます。 メソッドの本体内の引数を使用する場合に実行される特定のメソッドは、引数の型によって異なります。 派生型によって提供される追加機能が不要で、基本型を使用するメソッドのより広範囲に利用が許可されます。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, change the type of the parameter to its base type.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、その基本型にパラメーターの型を変更します。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告を抑制しても安全です。  
   
--   if the method requires the specific functionality that is provided by the derived type  
+-   メソッドは、派生型によって提供される特定の機能が必要な場合  
   
-     \- or -  
+     \- または  
   
--   to enforce that only the derived type, or a more derived type, is passed to the method.  
+-   派生型のみ、またはより強い派生型を適用するのには、メソッドに渡されます。  
   
- In these cases, the code will be more robust because of the strong type checking that is provided by the compiler and runtime.  
+ このような場合は、コードするより堅牢なため、コンパイラとランタイムによって提供される厳密な型チェックします。  
   
-## <a name="example"></a>Example  
- The following example shows a method, `ManipulateFileStream`, that can be used only with a <xref:System.IO.FileStream> object, which violates this rule. A second method, `ManipulateAnyStream`, satisfies the rule by replacing the <xref:System.IO.FileStream> parameter by using a <xref:System.IO.Stream>.  
+## <a name="example"></a>例  
+ 次の例では、メソッド、`ManipulateFileStream`でのみ使用できる、<xref:System.IO.FileStream>オブジェクトで、この規則に違反します。 2 番目のメソッド`ManipulateAnyStream`、置き換えることで、ルールを満たす、<xref:System.IO.FileStream>パラメーターを使用して、<xref:System.IO.Stream>です。  
   
- [!code-csharp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CSharp/ca1011-consider-passing-base-types-as-parameters_1.cs)] [!code-cpp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CPP/ca1011-consider-passing-base-types-as-parameters_1.cpp)] [!code-vb[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/VisualBasic/ca1011-consider-passing-base-types-as-parameters_1.vb)]  
+ [!code-csharp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CSharp/ca1011-consider-passing-base-types-as-parameters_1.cs)]
+ [!code-cpp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CPP/ca1011-consider-passing-base-types-as-parameters_1.cpp)]
+ [!code-vb[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/VisualBasic/ca1011-consider-passing-base-types-as-parameters_1.vb)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1059: Members should not expose certain concrete types](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)
+## <a name="related-rules"></a>関連規則  
+ [CA1059: メンバーは特定の具象型を公開できません](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)

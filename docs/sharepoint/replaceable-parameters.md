@@ -1,80 +1,82 @@
 ---
-title: "置き換え可能パラメーター"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "置き換え可能パラメーター [Visual Studio での SharePoint 開発]"
-  - "Visual Studio での SharePoint 開発, 置き換え可能パラメーター"
-  - "Visual Studio での SharePoint 開発, トークン"
-  - "トークン [Visual Studio での SharePoint 開発]"
+title: "置き換え可能パラメーター |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, tokens
+- tokens [SharePoint development in Visual Studio]
+- replaceable parameters [SharePoint development in Visual Studio]
+- SharePoint development in Visual Studio, replaceable parameters
 ms.assetid: 3c46bbb1-0a98-495c-9fd1-dc57a6aedc11
-caps.latest.revision: 16
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 80f9770fe0e6a0294ec43e450acc75f55b8ddbe2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 置き換え可能パラメーター
-  SharePoint ソリューション項目に使用される値に関して、デザイン時点では実際の値がわからない場合があります。プロジェクト ファイル内では、そのような値を置き換え可能パラメーター \(*トークン*\) で指定できます。  これらは標準のテンプレート [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] トークンに似ています。  詳細については、「[テンプレート名](../ide/template-parameters.md)」を参照してください。  
+# <a name="replaceable-parameters"></a>置き換え可能パラメーター
+  置き換え可能パラメーターは、または*トークン*、プロジェクト ファイル内の実際の値は、デザイン時に認識されていない SharePoint ソリューションのアイテムの値を提供するのに使用できます。 標準には、関数に似ている[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]テンプレート トークンです。 詳細については、次を参照してください。[テンプレート パラメーター](/visualstudio/ide/template-parameters)です。  
   
-## トークンの形式  
- トークンの先頭と末尾にはドル記号 \($\) が付いています。  配置段階でプロジェクトを SharePoint ソリューション パッケージ \(.wsp\) ファイルにパッケージ化するとき、使用されているトークンがすべて実際の値に置き換えられます。  たとえば、**$SharePoint.Package.Name$** というトークンは、"Test SharePoint Package" などの文字列に解決されます。  
+## <a name="token-format"></a>トークンの形式  
+ トークンの先頭し、末尾にドル記号 ($) 文字を使用します。 使用のすべてのトークンは、展開時にプロジェクトが、SharePoint ソリューション パッケージ (.wsp) ファイルにパッケージ化するときに、実際の値に置き換えられます。 たとえば、トークン**$SharePoint.Package.Name$** 「SharePoint パッケージのテスト」です文字列に解決される可能性があります。  
   
-## トークンの規則  
- トークンには次の規則が適用されます。  
+## <a name="token-rules"></a>トークンの規則  
+ トークンに、次の規則が適用されます。  
   
--   トークンは行内のどの位置でも指定できます。  
+-   トークンは、行内の任意の場所で指定できます。  
   
--   トークンを複数の行にまたがって記述することはできません。  
+-   トークンは、複数行にまたがることはできません。  
   
--   同じトークンを同じ行、同じファイル内で繰り返し指定できます。  
+-   同じファイルの同じ行に、同じトークンを複数回指定することがあります。  
   
--   同じ行に複数の異なるトークンを指定できます。  
+-   同じ行では、さまざまなトークンを指定します。  
   
- 以上の規則に従っていないトークンは無視されます。その場合でも警告やエラーは発生しません。  
+ これらの規則に従っていないトークンは、警告やエラーを指定せずに無視されます。  
   
- 文字列値によるトークンの置き換えは、マニフェストの変換直後に実行されます。そのため、ユーザーが編集するマニフェスト テンプレートからトークンを使用できます。  
+ 文字列値を使用してトークンの置換は、マニフェスト テンプレートがトークンを使用するユーザーが編集できるようにマニフェストを変換し、直後に実行されます。  
   
-### トークン名の解決  
- ほとんどの場合、トークンが含まれる場所にかかわらず、トークンは特定の値に解決されます。  ただし、トークンがパッケージまたはフィーチャーに関連している場合、トークンの値は含まれる場所によって変わります。  たとえば、フィーチャーが Package A にある場合、トークン `$SharePoint.Package.Name$` は値 "Package A" に解決されます。同じフィーチャーが Package B にある場合、`$SharePoint.Package.Name$` は "Package B" に解決されます。  
+### <a name="token-name-resolution"></a>トークン名の解決  
+ ほとんどの場合は、トークンが含まれる場所に関係なく、特定の値に解決されます。 ただし、パッケージまたは機能には、トークンが関連付けられている場合、トークンの値によって異なりますが含まれています。 たとえば、機能とは場合は、パッケージ、トークン`$SharePoint.Package.Name$`「パッケージ A.」の値に解決 かどうか、同じ機能がパッケージ B、し`$SharePoint.Package.Name$`「パッケージ b.」に解決されます  
   
-## トークンの一覧  
- 使用できるトークンの一覧を次の表に示します。  
+## <a name="tokens-list"></a>トークンの一覧  
+ 次の表には、使用可能なトークンが一覧表示します。  
   
 |名前|説明|  
-|--------|--------|  
-|$SharePoint.Project.FileName$|格納しているプロジェクト ファイルの名前 \("NewProj.csproj" など\)。|  
-|$SharePoint.Project.FileNameWithoutExtension$|格納しているプロジェクト ファイルの名前から拡張子を除いた部分。  "NewProj" など。|  
-|$SharePoint.Project.AssemblyFullName$|格納しているプロジェクトの出力アセンブリの表示名 \(厳密な名前\)。|  
-|$SharePoint.Project.AssemblyFileName$|格納しているプロジェクトの出力アセンブリの名前。|  
-|$SharePoint.Project.AssemblyFileNameWithoutExtension$|格納しているプロジェクトの出力アセンブリの名前からファイル名の拡張子を除いた部分。|  
-|$SharePoint.Project.AssemblyPublicKeyToken$|格納しているプロジェクトの出力アセンブリの公開キー トークンを文字列に変換した結果 \("x2" 16 進形式の 16 文字\)。|  
-|$SharePoint.Package.Name$|格納しているパッケージの名前。|  
-|$SharePoint.Package.FileName$|格納しているパッケージの定義ファイルの名前。|  
-|$SharePoint.Package.FileNameWithoutExtension$|格納しているパッケージの定義ファイルの名前から拡張子を除いた部分。|  
-|$SharePoint.Package.Id$|格納しているパッケージの SharePoint ID。  フィーチャーが複数のパッケージで使用されている場合、この値は変わります。|  
-|$SharePoint.Feature.FileName$|格納しているフィーチャーの定義ファイルの名前 \(Feature1.feature など\)。|  
-|$SharePoint.Feature.FileNameWithoutExtension$|フィーチャー定義ファイルの名前から拡張子を除いた部分。|  
-|$SharePoint.Feature.DeploymentPath$|パッケージ内のフィーチャーを格納しているフォルダーの名前。  このトークンは、フィーチャー デザイナーの \[配置パス\] プロパティと同じです。  値の一例を挙げると、"Project1\_Feature1" です。|  
-|$SharePoint.Feature.Id$|格納しているフィーチャーの SharePoint ID。  すべてのフィーチャー レベル トークンと同様に、このトークンには、フィーチャーを介してパッケージに格納されているファイルからのみ使用できます。フィーチャーを使わずに直接パッケージに追加することはできません。|  
-|$SharePoint.ProjectItem.Name$|**ISharePointProjectItem.Name** から取得した、プロジェクト項目の名前 \(ファイル名ではありません\)。|  
-|$SharePoint.Type.GUID.AssemblyQualifiedName$\<\>|トークンの [!INCLUDE[TLA2#tla_guid](../sharepoint/includes/tla2sharptla-guid-md.md)] と一致する型の完全修飾名。  [!INCLUDE[TLA2#tla_guid](../sharepoint/includes/tla2sharptla-guid-md.md)] 形式は小文字は Guid.ToString \(「D」\) の形式 \(xxxxxxxx\-xxxx\-xxxx\-xxxx\-xxxxxxxxxxxx\) に対応します。|  
-|$SharePoint.Type.GUID.FullName$\<\>|トークン内の GUID と一致する型の完全名。  GUID には小文字が使用され、その形式は Guid.ToString\("D"\) の形式 \(xxxxxxxx\-xxxx\-xxxx\-xxxx\-xxxxxxxxxxxx\) に対応します。|  
+|----------|-----------------|  
+|$SharePoint.Project.FileName$|"NewProj.csproj"などを含むプロジェクト ファイルの名前です。|  
+|$SharePoint.Project.FileNameWithoutExtension$|ファイル名拡張子を除いたを含むプロジェクト ファイルの名前。 たとえば、"NewProj"です。|  
+|$SharePoint.Project.AssemblyFullName$|含まれるプロジェクトの表示名 (厳密な名前) には、アセンブリを出力します。|  
+|$SharePoint.Project.AssemblyFileName$|アセンブリの出力を含むプロジェクトの名前。|  
+|$SharePoint.Project.AssemblyFileNameWithoutExtension$|ファイル名拡張子の付かない、アセンブリの出力を含むプロジェクトの名前。|  
+|$SharePoint.Project.AssemblyPublicKeyToken$|含まれるプロジェクトの公開キー トークンの文字列に変換、アセンブリを出力します。 (16 文字"x2"16 進数形式です)。|  
+|$SharePoint.Package.Name$|含まれるパッケージの名前。|  
+|$SharePoint.Package.FileName$|含むパッケージの定義ファイルの名前。|  
+|$SharePoint.Package.FileNameWithoutExtension$|(拡張子なし) を含むパッケージの定義ファイルの名前です。|  
+|$SharePoint.Package.Id$|含まれるパッケージの SharePoint ID。 機能は、1 つ以上のパッケージで使用される、この値は変更されます。|  
+|$SharePoint.Feature.FileName$|Feature1.feature など、含まれている機能の定義ファイルの名前。|  
+|$SharePoint.Feature.FileNameWithoutExtension$|ファイル名拡張子を除いたのフィーチャー定義ファイルの名前。|  
+|$SharePoint.Feature.DeploymentPath$|パッケージ内のフィーチャーが含まれているフォルダーの名前。 このトークンは、フィーチャー デザイナーで、「配置パス」プロパティに相当します。 値の例は、"Project1_Feature1"です。|  
+|$SharePoint.Feature.Id$|含まれている機能の SharePoint ID。 このトークンは、as、機能を使用してパッケージに含まれるファイルだけですべての機能レベル トークンを使用していないに直接追加機能の外部でパッケージ。|  
+|$SharePoint.ProjectItem.Name$|プロジェクト項目の名前のファイル名ではなくから取得した**ISharePointProjectItem.Name**です。|  
+|$SharePoint.Type です。\<GUID > です。AssemblyQualifiedName $|一致する型のアセンブリ修飾名、[!INCLUDE[TLA2#tla_guid](../sharepoint/includes/tla2sharptla-guid-md.md)]トークンのです。 形式、[!INCLUDE[TLA2#tla_guid](../sharepoint/includes/tla2sharptla-guid-md.md)]は小文字と Guid.ToString("D") 形式に対応する (つまり、xxxxxxxx xxxx-xxxx-。)。|  
+|$SharePoint.Type です。\<GUID > です。FullName $|トークン内の GUID と一致する型の完全名。 GUID の形式は小文字と Guid.ToString("D") 形式に対応する (つまり、xxxxxxxx xxxx-xxxx-。)。|  
   
-## トークン置換ファイル拡張子リストに対する拡張子の追加  
- 理論上、トークンは、パッケージ内の SharePoint プロジェクト項目に属しているすべてのファイルで使用できます。ただし、既定では、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] は、パッケージ ファイル、マニフェスト ファイル、および次の拡張子を持つファイルのみでトークンを検索します。  
+## <a name="adding-extensions-to-the-token-replacement-file-extensions-list"></a>トークンの置換に拡張機能を追加するファイル拡張子リスト  
+ トークンは既定では、パッケージに含まれている項目を SharePoint プロジェクトに属しているすべてのファイルでは理論的に使用できますが[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]トークンでは、パッケージ ファイル、マニフェスト ファイル、および次の拡張子を持つファイルのみを検索します。  
   
 -   [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]  
   
@@ -82,18 +84,18 @@ caps.handback.revision: 15
   
 -   ASPX  
   
--   Webpart  
+-   Web パーツ  
   
 -   DWP  
   
- これらの拡張機能は、… \\program\<\>files\\MSBuild\\Microsoft\\VisualStudio\\v11.0\\SharePointTools フォルダーにある Microsoft.VisualStudio.SharePoint.targets ファイルの `<TokenReplacementFileExtensions>` 要素によって定義されます。  
+ これらの拡張機能がによって定義された、 `<TokenReplacementFileExtensions>` Microsoft.VisualStudio.SharePoint.targets ファイル内の要素にある、.\\< プログラム ファイル\>\MSBuild\Microsoft\VisualStudio\v11.0\SharePointTools フォルダーです。  
   
- ただし、このリストには、他のファイル拡張子を追加することができます。  これを行うには、SharePoint のターゲット ファイルのインポート\> の前に定義されている SharePoint プロジェクトの \<すべてのファイルに `<TokenReplacementFileExtensions>` PropertyGroup 要素を追加します。  
+ ただし、一覧に追加のファイル拡張子を追加できます。 これを行うには、追加、`<TokenReplacementFileExtensions>`する前に定義されている SharePoint プロジェクト ファイル内の任意の PropertyGroup 要素、\<インポート > SharePoint ターゲット ファイルのです。  
   
 > [!NOTE]  
->  トークンの置換はプロジェクトのコンパイル後に発生するため、コンパイル対象のファイルの種類のファイル拡張子 \(.cs、.vb、.resx など\) は追加しないでください。  トークンはコンパイルされていないファイルでのみ置換されます。  
+>  トークンの置換は、プロジェクトをコンパイルした後に発生するためには、コンパイルされるファイルの種類は、.cs、.vb、.resx などのファイル拡張子を追加しないでください。 コンパイルされていないファイルだけには、トークンが置き換えられます。  
   
- たとえば、トークン置換ファイル名拡張子のリストに ".myextension" および ".yourextension" というファイル名の拡張子を追加するには、次の内容を .csproj ファイルに追加します。  
+ たとえば、トークンの置換後のファイル名拡張子の一覧に、ファイル名拡張子".myextension"と".yourextension"を追加するに場合は、.csproj ファイルには、次を追加します。  
   
 ```  
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -108,9 +110,9 @@ caps.handback.revision: 15
 </PropertyGroup>  
 ```  
   
- また、拡張子を直接 .targets ファイルに追加する方法もあります。  ただし、この方法では、対象の SharePoint プロジェクトだけではなく、ローカル システム上でパッケージ化されるすべての SharePoint プロジェクトについて、拡張子リストが変更されます。  そのシステムを 1 人の開発者がもっぱら使用する場合や、プロジェクトの大半で同じ要件が適用される場合には便利な方法です。  ただし、変更内容がそのシステムに限定されるため、汎用性は高くありません。したがって、拡張子はプロジェクト ファイルに追加することをお勧めします。  
+ 代わりに、.targets ファイルに直接、拡張機能を追加することができます。 ただし、これを変更するだけでなく、ローカル システムでパッケージ化されたすべての SharePoint プロジェクトの拡張機能の一覧、独自です。 システム上の唯一の開発者の場合、またはほとんどのプロジェクトの必要な場合に便利ですがあります。 ただし、システムに固有である、この方法は非常に移植性ではありませんのでをお勧めするため追加するすべての拡張機能プロジェクト ファイルを代わりにします。  
   
-## 参照  
- [Developing SharePoint Solutions](../sharepoint/developing-sharepoint-solutions.md)  
+## <a name="see-also"></a>関連項目  
+ [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   
   

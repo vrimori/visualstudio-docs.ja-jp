@@ -1,111 +1,42 @@
 ---
-title: "Refactoring (C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.csharp.refactoring.preview"
-  - "vs.csharp.refactoring.issues"
-  - "vs.csharp.refactoring.buildwarning"
-  - "VS.PreviewChanges"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "refactoring [C#]"
+title: "Visual Studio のリファクタリング機能 (c#) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/27/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.csharp.refactoring.preview
+- vs.csharp.refactoring.issues
+- vs.csharp.refactoring.buildwarning
+- VS.PreviewChanges
+dev_langs: CSharp
+helpviewer_keywords: refactoring [C#]
 ms.assetid: a39e656a-f81f-4c87-b484-a23168ff1dfc
-caps.latest.revision: 23
-caps.handback.revision: 23
-author: "BillWagner"
-ms.author: "wiwagn"
-manager: "wpickett"
+caps.latest.revision: "23"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 3c76d0f8a11d28201bd82a7c654c4575fb3ada86
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Refactoring (C#)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+# <a name="refactoring-features-for-c"></a>C# のリファクタリング機能 #
+リファクタリングとは、コードの外部の動作を変更することがなく、コードの内部構造を変更することによって書き込まれた後に、コードを向上させるプロセスです。  次のリファクタリング機能は、c#、Visual Studio で使用。
+  
+* [メソッド シグネチャの変更](refactoring/change-method-signature.md)
+* [フィールドのカプセル化](refactoring/encapsulate-field.md)
+* [インターフェイスの抽出](refactoring/extract-interface.md)
+* [メソッドの抽出](refactoring/extract-method.md)
+* [インラインの一時変数](refactoring/inline-temporary-variable.md)
+* [型を一致するファイルに移動します。](refactoring/move-type-to-matching-file.md)
+* [名前の変更](refactoring/rename.md)
+* [同期の種類とファイル名](refactoring/sync-type-and-file.md)
 
-リファクタリングとは、コードの外部動作は変更せずに、コードの内部構造を変更することで、コードを作成した後で改良するためのプロセスです。  
-  
- Visual C\# には、**\[リファクター\]** メニューに次のリファクタリング コマンドがあります。  
-  
--   [メソッドの抽出リファクタリング \(C\#\)](../csharp-ide/extract-method-refactoring-csharp.md)  
-  
--   [名前の変更リファクタリング \(C\#\)](../csharp-ide/rename-refactoring-csharp.md)  
-  
--   [Encapsulate Field Refactoring \(C\#\)](../csharp-ide/encapsulate-field-refactoring-csharp.md)  
-  
--   [Extract Interface Refactoring \(C\#\)](../csharp-ide/extract-interface-refactoring-csharp.md)  
-  
--   [パラメーターの削除リファクタリング \(C\#\)](../csharp-ide/remove-parameters-refactoring-csharp.md)  
-  
--   [Reorder Parameters Refactoring \(C\#\)](../csharp-ide/reorder-parameters-refactoring-csharp.md)  
-  
-## 複数のプロジェクトのリファクタリング  
- Visual Studio では、同じソリューション内にあるプロジェクトに対して、複数のプロジェクトのリファクタリングがサポートされています。  ファイル間の参照を修正するすべてのリファクタリング操作では、同じ言語を使用するすべてのプロジェクト間で、この種の参照が修正されます。  これは、プロジェクト対プロジェクトのすべての参照に適用されます。  たとえば、クラス ライブラリを参照するコンソール アプリケーションがある場合、`Rename` リファクタリング操作を使用してクラス ライブラリ型の名前を変更すると、コンソール アプリケーションでのこのクラス ライブラリ型への参照も更新されます。  
-  
-## 変更のプレビュー  
- 多くのリファクタリング操作には、リファクタリング操作によってコードで実行される参照の変更すべてを、コミットする前にレビューする機能があります。  このようなリファクタリング操作では、リファクタリング ダイアログ ボックスに **\[参照の変更のプレビュー\]** オプションが表示されます。  このオプションを選択し、リファクタリング操作を受け入れると、**\[変更のプレビュー\]** ダイアログ ボックスが表示されます。  **\[変更のプレビュー\]** ダイアログ ボックスには、2 つのビューがあります。  下部ビューには、リファクタリング操作によって参照がすべて更新された状態で、コードが表示されます。  **\[変更のプレビュー\]** ダイアログ ボックスの **\[キャンセル\]** をクリックすると、リファクタリング操作は中断し、コードは変更されません。  
-  
-## リファクタリングの警告  
- コンパイラがプログラムを完全に理解できず、リファクタリング エンジンがすべての当該参照を更新できなかった可能性がある場合、警告ダイアログ ボックスが表示されます。  また、この警告ダイアログ ボックスには、変更をコミットする前に、**\[変更のプレビュー\]** ダイアログ ボックスでコードをプレビューするための機能も用意されています。  
-  
-> [!NOTE]
->  メソッドに構文エラー \(IDE で赤い波線で示されている部分\) がある場合、リファクタリング エンジンでは、そのメソッドの要素への参照は更新されません。  この動作を次の例に示します。  
-  
- 既定では、参照の変更をプレビューせずにリファクタリング操作を実行し、プログラムでコンパイル エラーが検出されると、開発環境によってこの警告ダイアログ ボックスが表示されます。  
-  
- **\[参照の変更のプレビュー\]** が有効であるリファクタリング操作を実行し、プログラムでコンパイル エラーが検出されると、**\[リファクタリングの警告\]** ダイアログ ボックスが表示される代わりに、**\[変更のプレビュー\]** ダイアログ ボックスの下部に次の警告メッセージが表示されます。  
-  
- **プロジェクトまたはその依存関係の 1 つが現在ビルドしません。  参照が更新されない場合があります。**  
-  
- このリファクタリング警告は、**\[参照の変更のプレビュー\]** が用意されているリファクタリング操作だけで表示されます。  
-  
-## エラーを許容するリファクタリングと検証結果  
- リファクタリングでは、エラーが許容されます。  つまり、ビルドできないプロジェクトでもリファクタリングを実行できます。  ただし、このような場合、あいまいな参照がリファクタリング処理によって正しく更新されないことがあります。  
-  
- リファクタリング エンジンが、コンパイル エラーを検出した場合、またはリファクタリング操作によって、コード参照が当初バインドされていた対象とは異なる対象に意図せずバインドされたこと \(再バインディングの問題\) を検出した場合に、**\[検証結果\]** ダイアログ ボックスから通知を受けることができます。  
-  
- 検証結果機能を有効にするには、**\[ツール\]** メニューの **\[オプション\]** をクリックします。  **\[オプション\]** ダイアログ ボックスで、**\[テキスト エディター\]** を展開し、**\[C\#\]** を展開します。  **\[詳細\]** をクリックし、**\[リファクタリングの結果を確認する\]** チェック ボックスをオンにします。  
-  
- **\[検証結果\]** ダイアログ ボックスでは、2 種類の再バインディングの問題が区別されます。  
-  
-### 参照の定義が名前変更されたシンボルではなくなる場合  
- この種類の再バインディングの問題は、参照が名前変更されたシンボルを参照しなくなった場合に発生します。  次に例を示します。  
-  
-```c#  
-class Example  
-{  
-    private int a;  
-    public Example(int b)  
-    {  
-        a = b;  
-    }  
-}  
-```  
-  
- リファクタリングを使用して `a` を `b` に名前変更すると、このダイアログ ボックスが表示されます。  名前変更された変数 `a` に対する参照は、フィールドにバインドされず、コンストラクターに渡されるパラメーターにバインドされるようになります。  
-  
-### 参照の定義が名前変更されたシンボルになる場合  
- この種類の再バインディングの問題は、名前変更されたシンボルを参照していなかった参照が、名前変更されたシンボルを参照するようになった場合に発生します。  次に例を示します。  
-  
-```c#  
-class Example  
-{  
-    private static void Method(object a) { }  
-    private static void OtherMethod(int a) { }  
-    static void Main(string[] args)  
-    {  
-        Method(5);  
-    }  
-}  
-```  
-  
- リファクタリングを使用して `OtherMethod` を `Method` に名前変更すると、このダイアログ ボックスが表示されます。  `Main` 内の参照は、`object` パラメーターを受け入れるオーバーロードされたメソッドではなく、`int` パラメーターを受け入れるオーバーロードされたメソッドを参照するようになります。  
-  
-## 参照  
- [Using the Visual C\# Development Environment](../csharp-ide/using-the-visual-studio-development-environment-for-csharp.md)   
- [方法 : C\# リファクタリング スニペットを復元する](../Topic/How%20to:%20Restore%20C%23%20Refactoring%20Snippets.md)
+## <a name="see-also"></a>関連項目  
+ [Visual C# 開発環境の使用](using-the-visual-studio-development-environment-for-csharp.md)   
+ 

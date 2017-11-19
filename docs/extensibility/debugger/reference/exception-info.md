@@ -1,55 +1,55 @@
 ---
-title: "EXCEPTION_INFO | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "EXCEPTION_INFO"
-helpviewer_keywords: 
-  - "EXCEPTION_INFO 構造体"
+title: "EXCEPTION_INFO |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: EXCEPTION_INFO
+helpviewer_keywords: EXCEPTION_INFO structure
 ms.assetid: d046957a-b97d-420b-b46b-c67cbaef709e
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 8bb60642857f0f07562feffe7b48e0454a73097e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# EXCEPTION_INFO
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-デバッグするプログラムによってスローされる例外または実行時エラーについて説明します。  
+# <a name="exceptioninfo"></a>EXCEPTION_INFO
+例外またはデバッグ中のプログラムによってスローされた実行時エラーについて説明します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-typedef struct tagEXCEPTION_INFO {   
-   IDebugProgram2* pProgram;  
-   BSTR            bstrProgramName;  
-   BSTR            bstrExceptionName;  
-   DWORD           dwCode;  
-   EXCEPTION_STATE dwState;  
-   GUID            guidType;  
+```cpp  
+typedef struct tagEXCEPTION_INFO {   
+   IDebugProgram2* pProgram;  
+   BSTR            bstrProgramName;  
+   BSTR            bstrExceptionName;  
+   DWORD           dwCode;  
+   EXCEPTION_STATE dwState;  
+   GUID            guidType;  
 } EXCEPTION_INFO;  
 ```  
   
-```c#  
-public struct EXCEPTION_INFO {   
-   public IDebugProgram2 pProgram;  
-   public string         bstrProgramName;  
-   public string         bstrExceptionName;  
-   public uint           dwCode;  
-   public uint           dwState;  
-   public Guid           guidType;  
+```csharp  
+public struct EXCEPTION_INFO {   
+   public IDebugProgram2 pProgram;  
+   public string         bstrProgramName;  
+   public string         bstrExceptionName;  
+   public uint           dwCode;  
+   public uint           dwState;  
+   public Guid           guidType;  
 };  
 ```  
   
-## メンバー  
+## <a name="members"></a>メンバー  
  pProgram  
- 例外が発生した [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) プログラムを表すオブジェクト。  
+ [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)例外が発生したプログラムを表すオブジェクト。  
   
  bstrProgramName  
  例外が発生したプログラムの名前。  
@@ -58,28 +58,28 @@ public struct EXCEPTION_INFO { 
  例外の名前。  
   
  dwCode  
- 例外や実行時エラー コードの ID。  
+ 例外または実行時エラーの識別コードです。  
   
  dwState  
- 例外の状態を定義する [EXCEPTION\_STATE](../../../extensibility/debugger/reference/exception-state.md) の列挙体の値。  
+ 値、 [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md)例外の状態を定義する列挙値。  
   
  guidType  
- GUID の言語識別子 `guidLang`または `guidEng`。  
+ GUID の言語識別子か、`guidLang`または`guidEng`です。  
   
-## 解説  
- この構造は [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) と [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md) のメソッドにパラメーターとして渡します。  この構造体には入力される [GetException](../Topic/IDebugExceptionEvent2::GetException.md) のメソッドに渡されます。  
+## <a name="remarks"></a>コメント  
+ この構造体がパラメーターとして渡される、 [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)と[RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md)メソッドです。 この構造体に渡されます、 [GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md)格納するメソッド。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [EXCEPTION\_STATE](../../../extensibility/debugger/reference/exception-state.md)   
+ [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)   
  [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md)   
- [GetException](../Topic/IDebugExceptionEvent2::GetException.md)
+ [GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md)

@@ -1,44 +1,46 @@
 ---
-title: "展開を管理するためのプロジェクトの構成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プロジェクトの構成、展開を管理します。"
-  - "プロジェクト [Visual Studio SDK] の展開を管理するための構成"
+title: "プロジェクトの展開を管理するための構成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- project configurations, managing deployment
+- projects [Visual Studio SDK], configuration for managing deployment
 ms.assetid: bd5940d9-d94d-4944-beda-4ec1ab2bbde5
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 87098c362e5b37690e2ab3116ffca431d58f129d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 展開を管理するためのプロジェクトの構成
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-配置が物理的にビルド処理からデバッグおよびインストールのための予想される場所への出力項目を移動する操作になります。  たとえばWeb アプリケーションがローカル コンピューターでビルドした後にサーバーに配置される可能性があります。  
+# <a name="project-configuration-for-managing-deployment"></a>展開を管理するためのプロジェクトの構成
+展開は、動作は、デバッグおよびインストールの予期される場所に、ビルド プロセスからの出力項目を物理的に移動します。 たとえば、Web アプリケーションをローカル コンピューター上に構築され、サーバー上に配置しする可能性があります。  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]プロジェクトを配置するには2 とおりの方法をサポートします :  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]プロジェクトを配置に影響すること、2 つの方法をサポートします。  
   
--   配置プロセスの件名を指定します。  
+-   として、展開プロセスの件名です。  
   
--   配置プロセスのマネージャーとします。  
+-   展開プロセスのマネージャーです。  
   
- ソリューションを配置する前に配置オプションを設定する配置プロジェクトを追加する必要があります。  配置プロジェクトが存在しない場合はENT2ENT \[入力\] メニューの \[ENT0ENT\] を選択するかソリューションを右クリックすると 1 を作成する場合はか。  \[入力\] ENT0ENT をクリックする  **リモート配置ウィザード**  選択したプロジェクトの ENT2ENT \[出力\] ダイアログ ボックスを開きます。  
+ ソリューションを展開する前にまず展開オプションを構成するデプロイ プロジェクトを追加する必要があります。 プロジェクトの配置が既に存在しない場合を選択すると、1 つを作成するかどうかは寄せられるは**ソリューションの配置**から、**ビルド**メニューかソリューションを右クリックします。 クリックすると**はい**が表示されます、**新しいプロジェクトの追加** ダイアログ ボックスで、**リモートの展開ウィザード**プロジェクトを選択します。  
   
- 使用するリモート ウィザードを要求します \(Windows\)または Web プロジェクト出力グループに追加しファイルに配置するリモート コンピューターはアプリケーションの種類を含む配置します。  ウィザードの最後のページで選択したオプションの概要が表示されます。  
+ リモートの展開ウィザードでは、アプリケーション (Windows または Web) の種類、含めるプロジェクト出力グループ、すべて追加ファイルを含めるには、およびリモート コンピューターに展開するが求められます。 ウィザードの最後のページには、選択したオプションの概要が表示されます。  
   
- 別の環境に移動する必要がある配置プロセスにより出力アイテムの件名なプロジェクト。  これらの出力項目はプロジェクト出力をグループ化を許可する主な目的 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> インターフェイスのパラメーターとして記述されています。  `IVsProjectCfg2` の実装に関する詳細については[出力のプロジェクト構成](../../extensibility/internals/project-configuration-for-output.md) を参照してください。  
+ 展開プロセスの対象となるプロジェクトでは、代替の環境に移動する必要があります出力項目を生成します。 これらの出力項目の説明をパラメーターとして、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2>インターフェイスを持つプライマリ目的のグループの出力にプロジェクトを許可する場合。 実装に関連する詳細については`IVsProjectCfg2`を参照してください[出力用のプロジェクト構成](../../extensibility/internals/project-configuration-for-output.md)です。  
   
- 配置プロセスを管理する配置プロジェクトはコマンドを選択すると配置のコマンドを有効にし応答します。  配置プロジェクトを配置を<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>実行するにはインターフェイスを実装し呼び出しを報告するためのインターフェイス<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback>にするには状態イベントを展開します。  
+ 配置プロジェクトは、展開プロセスを管理するは、[配置] コマンドを有効にし、このコマンドが選択されている場合に対応します。 デプロイ プロジェクトの実装、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> 、展開を実行して、呼び出しを行うのためのインターフェイス、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback>レポートへのインターフェイスは、ステータス イベントを展開します。  
   
- 構成はビルドまたは配置の動作に影響する依存関係を指定できます。  依存関係を独自の構成がビルドまたは配置される前と後にビルドまたは配置する必要のあるプロジェクト ビルドまたは配置します。  プロジェクトのビルド依存関係が <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency> のインターフェイスで記述され<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency> インターフェイスとの依存関係を展開します。  詳細については、「[構築するためのプロジェクトの構成](../../extensibility/internals/project-configuration-for-building.md)」を参照してください。  
+ 構成は、ビルドまたは配置の動作に影響する依存関係を指定できます。 ビルドまたは配置の依存関係が必要がありますか、ビルドまたは自体の構成をビルドまたは配置される後または前に配置するプロジェクトです。 プロジェクト間でのビルドの依存関係がで説明されている、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency>インターフェイスし、の依存関係を配置、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency>インターフェイスです。 詳細については、次を参照してください。[構築するためのプロジェクト構成](../../extensibility/internals/project-configuration-for-building.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)   
  [構築するためのプロジェクトの構成](../../extensibility/internals/project-configuration-for-building.md)   
- [出力のプロジェクト構成](../../extensibility/internals/project-configuration-for-output.md)
+ [出力のためのプロジェクト構成](../../extensibility/internals/project-configuration-for-output.md)

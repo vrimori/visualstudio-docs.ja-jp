@@ -1,27 +1,30 @@
 ---
-title: "IActiveScriptError::GetSourceLineText | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IActiveScriptError::GetSourceLineText |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScriptError.GetSourceLineText
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IActiveScriptError_GetSourceLineText"
+helpviewer_keywords: IActiveScriptError_GetSourceLineText
 ms.assetid: 64f7f37f-7288-4dbe-b626-a35d90897f36
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: bb886d5f40042313483dc3b298488d1291c30563
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScriptError::GetSourceLineText
-スクリプト エンジンがスクリプトの実行中にエラーが発生したソース ファイル行を取得します。  
+# <a name="iactivescripterrorgetsourcelinetext"></a>IActiveScriptError::GetSourceLineText
+スクリプト エンジンでスクリプトの実行中にエラーが発生したソース ファイル内の行を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT GetSourceLineText(  
@@ -29,12 +32,12 @@ HRESULT GetSourceLineText(
 );  
 ```  
   
-## パラメーター  
+## <a name="parameter"></a>パラメーター  
  `pbstrSourceLine`  
- \[入力\]エラーが発生したソース・コードの行を受け取るバッファーのアドレス。  
+ [out]エラーが発生したソース コードの行を受け取るバッファーのアドレス。  
   
-## 戻り値  
- ソース ファイルの行が取得されていない場合、または `E_FAIL` が成功した場合 `S_OK` 返します。  
+## <a name="return-value"></a>戻り値  
+ 返します`S_OK`成功した場合、または`E_FAIL`場合は、ソース ファイル内の行を取得できませんでした。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IActiveScriptError](../../winscript/reference/iactivescripterror.md)

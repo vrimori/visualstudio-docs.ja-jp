@@ -1,52 +1,52 @@
 ---
-title: "IDebugField::GetContainer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugField::GetContainer"
-helpviewer_keywords: 
-  - "IDebugField::GetContainer メソッド"
+title: "IDebugField::GetContainer |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugField::GetContainer
+helpviewer_keywords: IDebugField::GetContainer method
 ms.assetid: 6d6c8213-6181-4adf-9584-3e4cac163dd8
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 0049ebeb51d385850105d65d5db624829005d7d7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugField::GetContainer
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このメソッドはフィールドのコンテナーを取得します。  
+# <a name="idebugfieldgetcontainer"></a>IDebugField::GetContainer
+このメソッドは、フィールドのコンテナーを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetContainer(   
-   IDebugContainerField** ppContainerField  
+```cpp  
+HRESULT GetContainer(   
+   IDebugContainerField** ppContainerField  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetContainer(  
-   out IDebugContainerField ppContainerField  
+   out IDebugContainerField ppContainerField  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppContainerField`  
- \[入力\] [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) のインターフェイスで表されるようにコンテナーを返します。  
+ [out]によって表されるコンテナーが返されます、 [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)インターフェイスです。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- このフィールドではコンテナーが存在しない場合返される `ppContainerField` は null 値です。  
+## <a name="remarks"></a>コメント  
+ このフィールドが返された、コンテナーを持たないかどうか`ppContainerField`は null 値になります。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)

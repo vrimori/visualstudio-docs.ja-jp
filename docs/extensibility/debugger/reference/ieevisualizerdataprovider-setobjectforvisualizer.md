@@ -1,62 +1,62 @@
 ---
-title: "IEEVisualizerDataProvider::SetObjectForVisualizer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEEVisualizerDataProvider::SetObjectForVisualizer"
-helpviewer_keywords: 
-  - "IEEVisualizerDataProvider::SetObjectForVisualizer メソッド"
+title: "IEEVisualizerDataProvider::SetObjectForVisualizer |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IEEVisualizerDataProvider::SetObjectForVisualizer
+helpviewer_keywords: IEEVisualizerDataProvider::SetObjectForVisualizer method
 ms.assetid: 40dad2be-57ff-4f74-9d82-c48039c125c4
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 76a901401e854611cc987ac5c0cf8eeabb8dfd53
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IEEVisualizerDataProvider::SetObjectForVisualizer
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このメソッドはビジュアライザーを表すオブジェクトを変更します。  
+# <a name="ieevisualizerdataprovidersetobjectforvisualizer"></a>IEEVisualizerDataProvider::SetObjectForVisualizer
+このメソッドは、ビジュアライザーを表すオブジェクトを変更します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT SetObjectForVisualizer(  
-   IDebugObject*  pNewObject,  
-   BSTR*          error,  
-   IDebugObject** pException  
+HRESULT SetObjectForVisualizer(  
+   IDebugObject*  pNewObject,  
+   BSTR*          error,  
+   IDebugObject** pException  
 );  
 ```  
   
-```c#  
-int SetObjectForVisualizer(  
-   IDebugObject     pNewObject,  
-   out string       error,  
-   out IDebugObject pException  
+```csharp  
+int SetObjectForVisualizer(  
+   IDebugObject     pNewObject,  
+   out string       error,  
+   out IDebugObject pException  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pNewObject`  
- \[入力\] 設定するオブジェクト。  
+ [in]設定するオブジェクト。  
   
  `error`  
- オブジェクトを設定するエラーがある場合は \[出力\] この文字列をエラー メッセージ。  
+ [out]オブジェクトを設定中にエラーがあった場合、この文字列は、エラー メッセージを保持します。  
   
  `pException`  
- \[入力\] エラーが発生した場合このオブジェクトはその例外を保持します。  
+ [out]エラーがあった場合、このオブジェクトは、例外情報を格納します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- これはエラー情報を返す方法の決定を実装する必要があります。  ただしエラーが発生した例外オブジェクトがエラーが見つかりこのメソッドは例外オブジェクトを常に返す必要であることを確認するために返されたかどうかを確認するにはいくつかの呼び出し元が確認することができます。  エラー文字列が呼び出し元で利用する場合は指定する必要があります。  
+## <a name="remarks"></a>コメント  
+ エラー情報を返す方法を決定する、実装者の責任です。 ただし、可能であればだけで認識に、例外オブジェクトが返されたかどうかにエラーが発生しました、エラーが発生した場合、このメソッドは例外オブジェクトを返す常にする必要がありますのでがいくつかの呼び出し元に可能性があります。 エラー文字列は、呼び出し元がようにしたい場合にも指定するのに使用します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)   
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

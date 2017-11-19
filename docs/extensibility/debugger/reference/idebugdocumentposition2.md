@@ -1,58 +1,58 @@
 ---
-title: "IDebugDocumentPosition2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentPosition2"
-helpviewer_keywords: 
-  - "IDebugDocumentPosition2 インターフェイス"
+title: "IDebugDocumentPosition2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugDocumentPosition2
+helpviewer_keywords: IDebugDocumentPosition2 interface
 ms.assetid: 0e838ced-12bb-4efc-b811-2b7c034b77b0
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: c73b7ebb1611b6688dbbe5703d5f84ac4c05b3b6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugDocumentPosition2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このインターフェイスはソース ファイルの抽象的な位置を表します。  
+# <a name="idebugdocumentposition2"></a>IDebugDocumentPosition2
+このインターフェイスは、ソース ファイル内の抽象の位置を表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugDocumentPosition2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- Visual Studio はこのインターフェイスを実装します。  デバッグ エンジンは\(DE\) 独自のソース・コードを提供する必要がある場合はこのインターフェイスを実装します \(と同様に機能します [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) implements インターフェイス\)。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ Visual Studio は、通常、このインターフェイスを実装します。 独自のソース コードを提供する必要がある場合は、デバッグ エンジン (DE) はこのインターフェイスを実装も、(として、DE を実装すると、 [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)インターフェイス)。  
   
-## 呼び出し元のメモ  
- このインターフェイスは [EnumCodeContexts](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md) に引数として渡されます。  また保留中のブレークポイントの作成に使用する[BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md) の構造の一部である [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md) の共用体 \(具体的には[BP\_LOCATION\_CODE\_FILE\_LINE](../../../extensibility/debugger/reference/bp-location-code-file-line.md) の構造\) の一部として提供されます。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ このインターフェイスに渡す引数として渡される[EnumCodeContexts](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md)です。 一部としても指定した、 [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)共用体 (具体的には、 [BP_LOCATION_CODE_FILE_LINE](../../../extensibility/debugger/reference/bp-location-code-file-line.md)構造) の一部で、さらに、 [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)構造体保留中のブレークポイントの作成に使用されます。  
   
-## Vtable の順序でメソッド  
- 次の表は `IDebugDocumentPosition2` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugDocumentPosition2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[GetFileName](../../../extensibility/debugger/reference/idebugdocumentposition2-getfilename.md)|このドキュメントの場所を含むソース ファイルの名前を取得します。|  
-|[GetDocument](../../../extensibility/debugger/reference/idebugdocumentposition2-getdocument.md)|含む文書を取得します。|  
-|[IsPositionInDocument](../../../extensibility/debugger/reference/idebugdocumentposition2-ispositionindocument.md)|この場所は特定の文書に含まれているかどうかを判定します。|  
-|[GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)|このドキュメントの場所の範囲を取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[GetFileName](../../../extensibility/debugger/reference/idebugdocumentposition2-getfilename.md)|このドキュメントの位置を含むソース ファイルのファイル名を取得します。|  
+|[GetDocument](../../../extensibility/debugger/reference/idebugdocumentposition2-getdocument.md)|コンテナーのドキュメントを取得します。|  
+|[IsPositionInDocument](../../../extensibility/debugger/reference/idebugdocumentposition2-ispositionindocument.md)|この位置が指定したドキュメントに含まれているかどうかを判断します。|  
+|[GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)|このドキュメントの位置の範囲を取得します。|  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [EnumCodeContexts](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
- [BP\_LOCATION\_CODE\_FILE\_LINE](../../../extensibility/debugger/reference/bp-location-code-file-line.md)
+ [BP_LOCATION_CODE_FILE_LINE](../../../extensibility/debugger/reference/bp-location-code-file-line.md)

@@ -1,55 +1,55 @@
 ---
-title: "IDebugEngine2::DestroyProgram | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngine2::DestroyProgram"
-helpviewer_keywords: 
-  - "IDebugEngine2::DestroyProgram"
+title: "IDebugEngine2::DestroyProgram |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugEngine2::DestroyProgram
+helpviewer_keywords: IDebugEngine2::DestroyProgram
 ms.assetid: 0c9e2698-c70f-4770-a7bb-39650e9c3a1f
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d7efe7c8c4d917e6dd1868625ca1d80996176acb
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugEngine2::DestroyProgram
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-指定されたプログラムが不規則に終了したことおよびしますがプログラムへのすべての参照を削除しプログラムの破棄イベントを送信することデバッグ エンジン \(DE\) に通知します。  
+# <a name="idebugengine2destroyprogram"></a>IDebugEngine2::DestroyProgram
+指定されたプログラムがになって終了したこと、および、DE、プログラムへのすべての参照をクリーンアップする必要がありますのデバッグ エンジン (DE) に通知し、送信プログラムがイベントを破棄します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT DestroyProgram(   
-   IDebugProgram2* pProgram  
+```cpp  
+HRESULT DestroyProgram(   
+   IDebugProgram2* pProgram  
 );  
 ```  
   
-```cpp#  
-int DestroyProgram(   
-   IDebugProgram2 pProgram  
+```cpp  
+int DestroyProgram(   
+   IDebugProgram2 pProgram  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pProgram`  
- \[入力\] 終了したプログラムをオンに [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) 表すオブジェクト。  
+ [in][IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)になって終了されたプログラムを表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- このメソッドが呼び出された後de\-DE はデバッグ セッションのマネージャー \(SDM\) に従って [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) のイベントを返します。  
+## <a name="remarks"></a>コメント  
+ このメソッドが呼び出された後、DE 後に、送信、 [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md)イベント セッションのデバッグ マネージャー (SDM) をバックアップします。  
   
- このメソッドはを返します \(\) `E_NOTIMPL` デバッグ対象プログラムと同じプロセスにします runs 実行されません。  このメソッドは同じにしますが runs SDM として処理する場合にだけ実行されます。  
+ このメソッドは実装されていません (返します`E_NOTIMPL`)、DE がデバッグ中のプログラムと同じプロセスで実行している場合。 このメソッドは、デが、SDM と同じプロセスで実行している場合にのみ実装されます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
  [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

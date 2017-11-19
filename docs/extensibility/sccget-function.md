@@ -1,106 +1,106 @@
 ---
-title: "SccGet 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccGet"
-helpviewer_keywords: 
-  - "SccGet 関数"
+title: "SccGet 関数 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SccGet
+helpviewer_keywords: SccGet function
 ms.assetid: 09a18bd2-b788-411a-9da6-067d806e46f6
-caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 20abad6a195d8493be8849588b86035d03fdc654
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# SccGet 関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-この関数は、1 つまたは複数のファイルを表示して、コンパイルするだけのための編集のコピーを取得します。 ほとんどのシステムでは、ファイルが読み取り専用としてタグ付けされます。  
+# <a name="sccget-function"></a>SccGet 関数
+この関数は、1 つまたは複数のファイルを表示およびコンパイルするためはなく、編集、コピーを取得します。 ほとんどのシステムでは、ファイルが読み取り専用としてタグ付けされます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 SCCRTN SccGet(  
-   LPVOID    pvContext,  
-   HWND      hWnd,  
-   LONG      nFiles,  
-   LPCSTR*   lpFileNames,  
-   LONG      fOptions,  
-   LPCMDOPTS pvOptions  
+   LPVOID    pvContext,  
+   HWND      hWnd,  
+   LONG      nFiles,  
+   LPCSTR*   lpFileNames,  
+   LONG      fOptions,  
+   LPCMDOPTS pvOptions  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  pvContext  
- \[in\]ソース管理プラグインの context 構造体。  
+ [in]ソース管理プラグインの context 構造体。  
   
- hwnd の分離  
- \[in\]ソース管理プラグインは、それによって提供されるダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
+ hWnd  
+ [in]ソース管理プラグインで提供されるダイアログ ボックスをすべての親として使用できる IDE ウィンドウへのハンドル。  
   
  nFiles  
- \[in\]指定されたファイルの数、 `lpFileNames` 配列。  
+ [in]指定されたファイルの数、`lpFileNames`配列。  
   
  lpFileNames  
- \[in\]取得するファイルの完全修飾名の配列。  
+ [in]取得するファイルの完全修飾名の配列。  
   
- される  
- \[in\]コマンドのフラグ \(`SCC_GET_ALL`, 、`SCC_GET_RECURSIVE`\)。  
+ foptions の   
+ [in]コマンドのフラグ (`SCC_GET_ALL`、 `SCC_GET_RECURSIVE`)。  
   
  pvOptions  
- \[in\]ソース管理プラグインに固有のオプションです。  
+ [in]ソース管理プラグインに固有のオプションです。  
   
-## 戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+## <a name="return-value"></a>戻り値  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
 |値|説明|  
-|-------|--------|  
-|SCC\_OK|Get 操作が成功します。|  
-|SCC\_E\_FILENOTCONTROLLED|ファイルはソース管理されていません。|  
-|SCC\_E\_OPNOTSUPPORTED|ソース管理システムでは、この操作はサポートされません。|  
-|SCC\_E\_FILEISCHECKEDOUT|ユーザーがチェック アウトして現在のファイルを取得できません。|  
-|SCC\_E\_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題が原因と思わのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
-|SCC\_E\_NOSPECIFIEDVERSION|無効なバージョンまたは日付\/時刻を指定します。|  
-|SCC\_E\_NONSPECIFICERROR|不特定のエラーです。ファイルは同期されませんでした。|  
-|SCC\_I\_OPERATIONCANCELED|操作が完了する前に取り消されました。|  
-|SCC\_E\_NOTAUTHORIZED|ユーザーは、この操作を実行する権限がありません。|  
+|-----------|-----------------|  
+|SCC_OK|取得操作が成功します。|  
+|SCC_E_FILENOTCONTROLLED|ファイルはソース管理されません。|  
+|SCC_E_OPNOTSUPPORTED|ソース管理システムでは、この操作はサポートしません。|  
+|SCC_E_FILEISCHECKEDOUT|ユーザーがチェック アウトして現在のファイルを取得できません。|  
+|SCC_E_ACCESSFAILURE|ソース管理システムのネットワークや競合の問題の可能性があるためのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
+|SCC_E_NOSPECIFIEDVERSION|無効なバージョンまたは日付/時刻を指定します。|  
+|SCC_E_NONSPECIFICERROR|不特定のエラーです。ファイルは同期されませんでした。|  
+|SCC_I_OPERATIONCANCELED|操作が完了する前に取り消されました。|  
+|SCC_E_NOTAUTHORIZED|ユーザーは、この操作を実行する権限がありません。|  
   
-## 解説  
- この関数は、カウントを取得するファイルの名前の配列で呼び出されます。 IDE は、フラグを渡す場合 `SCC_GET_ALL`, 、つまり内の項目 `lpFileNames` はなく、ファイルが、ディレクトリを取得する指定されたディレクトリでソース管理下にあるすべてのファイルがあるとします。  
+## <a name="remarks"></a>コメント  
+ この関数は、カウントを取得するファイルの名前の配列と呼びます。 IDE は、フラグを渡す場合`SCC_GET_ALL`、つまり、内の項目に`lpFileNames`ファイルはなく、ディレクトリ、および指定したディレクトリ内のソース管理下にあるすべてのファイルを取得します。  
   
- `SCC_GET_ALL` フラグと組み合わせることができます、 `SCC_GET_RECURSIVE` フラグを指定したディレクトリ内のすべてのファイルと同様に、すべてのサブディレクトリを取得します。  
+ `SCC_GET_ALL`フラグと組み合わせることができます、`SCC_GET_RECURSIVE`フラグを指定したディレクトリ内のすべてのファイルと同様のすべてのサブディレクトリを取得します。  
   
 > [!NOTE]
->  `SCC_GET_RECURSIVE` せずに渡す必要があるは決して `SCC_GET_ALL`します。 また、C:\\A および C:\\A\\B ディレクトリが取得再帰的に渡される両方の場合 C:\\A\\B とそのすべてのサブディレクトリは実際に取得すること 2 回に注意してください。 IDE の役目です: プラグインのソースではなくを制御し、配列から重複が次のように格納されているかどうかを確認します。  
+>  `SCC_GET_RECURSIVE`せずに渡す必要がありますは決して`SCC_GET_ALL`です。 また、C:\A および C:\A\B ディレクトリが再帰的に渡された両方の取得が場合 C:\A\B とそのすべてのサブディレクトリが実際に取得すること 2 回に注意してください。 IDE の責任 — およびプラグインのソースではなくが制御 — 配列外このなどの重複部分を保持することを確認します。  
   
- 最後に、ソース管理プラグイン場合でも指定されている、 `SCC_CAP_GET_NOUI` の初期化、Get コマンドのユーザー インターフェイスがないことは、この関数は、ファイルを取得する IDE によっても呼び出されますことを示すフラグ。 フラグは、IDE で Get メニュー項目が表示されない、UI を提供する必要は、プラグインがないことを意味します。  
+ 最後に、場合でも、ソース管理プラグインが指定された、`SCC_CAP_GET_NOUI`の初期化、Get コマンドのユーザー インターフェイスがない、この関数は、ファイルを取得する IDE によっても呼び出されることを示すフラグ。 フラグは、こと、IDE で Get メニュー項目が表示されませんし、UI を提供する予定のプラグインがないことを意味します。  
   
-## 名前を変更して SccGet  
- 状況: ユーザーなどの a.txt ファイルをチェック アウトし、それを変更します。 チェックイン a.txt を前に 2 番目のユーザー a.txt をソース管理データベースに b.txt:」に名前を変更、b.txt: チェック\_アウト、いくつかの変更、ファイルには、およびファイルをチェックインします。 最初のユーザーには、最初のユーザーが「b.txt:」に a.txt ファイルのローカル バージョン名前を変更し、、ファイルに対して get をは、2 番目のユーザー行った変更が希望しています。 ただし、バージョン番号を追跡するローカル キャッシュもと認識 a.txt の最初のバージョンがローカルに格納されているし、ソース管理での相違点を解決できないようにします。  
+## <a name="renaming-and-sccget"></a>名前が変更され SccGet  
+ 状況: ユーザーは、たとえばの a.txt ファイルをチェック アウトし、それを変更します。 A.txt をチェックインすることができます、前に 2 番目のユーザー a.txt をソース管理データベースに b.txt:」に名前を変更、チェック アウト b.txt:、ファイルにいくつかの変更は、およびファイルをチェックインします。 最初のユーザーには、最初のユーザーが「b.txt:」に a.txt ファイルのローカル バージョン名前を変更し、、ファイルの取得には、2 番目のユーザーによって行われた変更が希望していますいます。 ただし、バージョン番号を追跡するローカル キャッシュもと認識 a.txt の最初のバージョンがローカルに格納されているし、ソース管理で相違点を解決できないためです。  
   
- ソース コントロールのバージョンのローカルのキャッシュがソース管理データベースとの同期になったこの状況を解決するのには 2 つの方法があります。  
+ これにはソース コントロールのバージョンのローカル キャッシュがソース管理データベースとの同期にこのような状況を解決するのには 2 つの方法があります。  
   
-1.  現在チェック アウトされているソース管理データベース内のファイルの名前を変更することはできません。  
+1.  現在チェック アウトされているソース管理データベースにファイル名の変更を許可しません。  
   
-2.  "削除の古い"後に「新規追加」と同等の操作を行います。 次のアルゴリズムは、これを実現する 1 つの方法です。  
+2.  "Delete 古い"後「新規追加」と同等の操作を行います。 次のアルゴリズムは、これを実現する 1 つの方法です。  
   
-    1.  呼び出す、 [SccQueryChanges](../extensibility/sccquerychanges-function.md) 関数をソース管理データベースに b.txt:」に a.txt の名前の変更について説明します。  
+    1.  呼び出す、 [SccQueryChanges](../extensibility/sccquerychanges-function.md)関数の詳細については、ソース管理データベースに b.txt:」に a.txt の名前を変更します。  
   
     2.  ローカルの a.txt の「b.txt:」名前を変更します。  
   
-    3.  呼び出す、 `SccGet` a.txt と b.txt: の両方の関数です。  
+    3.  呼び出す、 `SccGet` a.txt と b.txt: の両方の関数。  
   
-    4.  A.txt がソース管理データベースに存在しないために、不足している a.txt バージョン情報のローカル バージョンのキャッシュが消去されます。  
+    4.  A.txt がソース管理データベースに存在しないために、不足している a.txt バージョン情報のローカル バージョンのキャッシュが削除されます。  
   
     5.  チェック アウトされている b.txt: ファイルは、ローカル b.txt: ファイルの内容に結合されます。  
   
-    6.  更新された b.txt: ファイル今すぐチェックインすることができます。  
+    6.  更新された b.txt: ファイルをチェックインにようになりましたことができます。  
   
-## 参照  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
+## <a name="see-also"></a>関連項目  
+ [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [特定のコマンドで使用されるビットフラグ](../extensibility/bitflags-used-by-specific-commands.md)

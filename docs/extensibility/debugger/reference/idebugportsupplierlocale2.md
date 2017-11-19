@@ -1,50 +1,51 @@
 ---
-title: "IDebugPortSupplierLocale2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugPortSupplierLocale2 インターフェイス"
+title: "IDebugPortSupplierLocale2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IDebugPortSupplierLocale2 interface
 ms.assetid: 910e7220-da2a-4339-9fff-9fb1bad3c28c
-caps.latest.revision: 4
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 3a16404dc9e91c6f4383ea58d84a6a1716538c46
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugPortSupplierLocale2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-ポートの仕入先にロケールをサポートします。  
+# <a name="idebugportsupplierlocale2"></a>IDebugPortSupplierLocale2
+ポートのサプライヤーのロケールのサポートを提供します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugPortSupplierLocale2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- カスタム ポートの業者はロケールを設定するにはこのインターフェイスを実装します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ カスタム ポート仕入先では、ロケールを設定するには、このインターフェイスを実装します。  
   
-## メソッド  
- 次の表は **IDebugPortSupplierLocale2** のメソッドを示します。  
+## <a name="methods"></a>メソッド  
+ 次の表は、メソッドの**IDebugPortSupplierLocale2**です。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[Setlocale 関数](../../../extensibility/debugger/reference/idebugportsupplierlocale2-setlocale.md)|ポートのサプライヤーのロケールを設定します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[Setlocale、_wsetlocale](../../../extensibility/debugger/reference/idebugportsupplierlocale2-setlocale.md)|ポートのサプライヤーのロケールを設定します。|  
   
-## 必要条件  
- ヘッダー : Portpriv.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Portpriv.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)   
  [IDebugPortSupplier3](../../../extensibility/debugger/reference/idebugportsupplier3.md)

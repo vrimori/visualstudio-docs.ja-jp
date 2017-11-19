@@ -1,82 +1,83 @@
 ---
-title: "VSIX プロジェクトのテンプレートの概要 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Visual Studio SDK には、VSIX プロジェクト テンプレート"
+title: "VSIX プロジェクト テンプレートの概要 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Visual Studio SDK, VSIX project template
 ms.assetid: 89fac33e-9380-4723-9b45-048a6e16f0ed
-caps.latest.revision: 25
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 33f29ebabbb40e747b2b321fcb1b3b5598284a28
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# VSIX プロジェクトのテンプレートの概要
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-拡張機能を作成するか、パッケージの展開の既存の拡張機能は、VSIX プロジェクト テンプレートを使用できます。 VSIX プロジェクト テンプレートは、Visual Basic と Visual c\# の両方のバージョンを備え、Visual Studio SDK の一部としてインストールします。  
+# <a name="getting-started-with-the-vsix-project-template"></a>VSIX プロジェクト テンプレートの概要
+拡張機能を作成するか、展開の既存の拡張機能をパッケージ化する VSIX プロジェクト テンプレートを使用することができます。 VSIX プロジェクト テンプレートは、Visual Basic および Visual c# の両方のバージョンが存在しては、Visual Studio SDK の一部としてインストールします。  
   
  VSIX プロジェクト テンプレートは、拡張機能に関する情報を含む source.extension.vsixmanifest ファイルと出荷資産だけ構成できます。  
   
- VSIX プロジェクトのテンプレートを検索するには、Visual Studio SDK をインストールする必要があります。 詳細については、「[Visual Studio SDK](../extensibility/visual-studio-sdk.md)」を参照してください。  
+ VSIX プロジェクト テンプレートを検索するには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
   
-## VSIX のプロジェクト テンプレートを使用してカスタム プロジェクト テンプレートを展開します。  
+## <a name="deploying-a-custom-project-template-using-the-vsix-project-template"></a>VSIX プロジェクト テンプレートを使用してカスタム プロジェクト テンプレートを展開します。  
  次の手順では、VSIX プロジェクトを使用して、他の開発者と共有したり、Visual Studio ギャラリーにアップロードできるプロジェクト テンプレートをパッケージ化する方法を示します。  
   
 1.  プロジェクト テンプレートを作成します。  
   
-    1.  テンプレートを作成するためのプロジェクトを開きます。 このプロジェクトは、プロジェクトの種類にできます。  
+    1.  元のテンプレートを作成するプロジェクトを開きます。 このプロジェクトは、任意の種類のプロジェクトすることができます。  
   
-    2.  **\[ファイル\]** メニューの **\[テンプレートのエクスポート\]** をクリックします。 ウィザードの手順を実行します。  
+    2.  **[プロジェクト]** メニューの **[テンプレートのエクスポート]** をクリックします。 ウィザードの手順を実行します。  
   
-         %USERPROFILE%\\My documents \\visual Studio に .zip ファイルが作成 *\< バージョン \>*\\My Exported Templates\\ します。  
+         %USERPROFILE%\My documents \visual Studio に .zip ファイルが作成*\<バージョン >*\My エクスポート テンプレート\\です。  
   
 2.  空の VSIX プロジェクトを作成します。  
   
-     **\[ファイル\]** メニューの **\[新規作成\]** をポイントし、**\[プロジェクト\]** をクリックします。 いずれかを選択 **Visual Basic** または **Visual c\#**します。 選択したノードの \[ **拡張**, 、し、\[ **VSIX プロジェクト**します。  
+     **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]**をクリックします。 いずれかを選択**Visual Basic**または**Visual c#**です。 選択したノードの下にある次のように選択します。 **Extensibility**、し、 **VSIX プロジェクト**です。  
   
-3.  .Zip ファイルをプロジェクトに追加します。 設定の **出力ディレクトリにコピー** プロパティを `Copy Always`します。  
+3.  .Zip ファイルをプロジェクトに追加します。 設定の**出力ディレクトリにコピー**プロパティを`Copy Always`です。  
   
-4.  **ソリューション エクスプ ローラー**, をダブルクリックして、 `source.extension.vsixmanifest` ファイルを開くことで、 **VSIX マニフェスト デザイナー**, 、し、次の変更。  
+4.  **ソリューション エクスプ ローラー**をダブルクリックして、`source.extension.vsixmanifest`で開くファイルを**VSIX マニフェスト デザイナー**、次の変更を行います。  
   
-    -   設定、 **製品名** フィールドを **マイ プロジェクト テンプレート**します。  
+    -   設定、 **Product Name**フィールドを**マイ プロジェクト テンプレート**です。  
   
-    -   設定、 **製品 ID** フィールドを **MyProjectTemplate \- 1**します。  
+    -   設定、**プロダクト ID**フィールドを**MyProjectTemplate - 1**です。  
   
-    -   設定、 **作成者** フィールドを **Fabrikam**します。  
+    -   設定、**作成者**フィールドを**Fabrikam**です。  
   
-    -   設定、 **説明** フィールドを **プロジェクト テンプレート**します。  
+    -   設定、**説明**フィールドを**マイ プロジェクト テンプレート**です。  
   
-    -   **資産** セクションで、追加、 **\[microsoft.visualstudio.projecttemplate\]** を入力し、そのパスを .zip ファイルの名前に設定します。  
+    -   **資産**セクションを追加、 **[microsoft.visualstudio.projecttemplate]**を入力し、そのパスの .zip ファイルの名前を設定します。  
   
 5.  保存して、source.extension.vsixmanifest ファイルを閉じます。  
   
 6.  プロジェクトをビルドします。  
   
-7.  出力ディレクトリで、.vsix ファイルをダブルクリックします。  
+7.  出力ディレクトリでは、.vsix ファイルをダブルクリックします。  
   
-8.  A **VSIX インストーラー** メッセージ ボックスが表示されます。 指示に従って、拡張機能をインストールします。  
+8.  A **VSIX インストーラー**メッセージ ボックスが表示されます。 拡張機能をインストールする手順に従います。  
   
 9. Visual Studio を閉じて再度開きます。  
   
-10. 選択 **拡張機能と更新プログラム** \(上、 **ツール** メニュー\) を選択し、 **テンプレート** カテゴリ。 使用可能な拡張機能の 1 つある必要があります **マイ プロジェクト テンプレート**します。  
+10. 選択**拡張機能と更新プログラム**(上、**ツール**メニュー) を選択し、**テンプレート**カテゴリ。 使用可能な拡張機能の 1 つがあります**マイ プロジェクト テンプレート**です。  
   
-11. 新しいプロジェクト テンプレートが表示される、 **新しいプロジェクト** 元のプロジェクト テンプレートと同じ場所にダイアログ。 という名前のテンプレートを作成した場合など **VB コンソール** Visual Basic コンソール アプリケーションから **VB コンソール** Visual Basic と同じウィンドウに表示されます **コンソール アプリケーション** テンプレートです。  
+11. 新しいプロジェクト テンプレートが表示されます、**新しいプロジェクト**元のプロジェクト テンプレートと同じ場所にダイアログ。 たとえば、という名前のテンプレートを作成した場合**VB コンソール**、Visual Basic コンソール アプリケーションから**VB コンソール**、Visual Basic と同じウィンドウに表示されます**コンソール アプリケーション**テンプレート。  
   
-#### \[新しいプロジェクト\] ダイアログ ボックスで、テンプレートの場所を指定するには  
+#### <a name="to-specify-the-location-of-the-template-in-the-new-project-dialog-box"></a>[新しいプロジェクト] ダイアログ ボックスで、テンプレートの場所を指定するには  
   
-1.  テンプレートのフォルダーは、 *Visual Studio のインストール パス*\\Common7\\IDE\\ProjectTemplates と *Visual Studio のインストール パス*\\Common7\\IDE\\ItemTemplates ディレクトリ。 新しいプロジェクト\] ダイアログの最上位レベルのセクションの名前は完全に一致しないテンプレート フォルダーの名前。 これらが異なる場合は、テンプレート フォルダーの名前を使用します。  
+1.  テンプレート フォルダーがある、 *Visual Studio インストール パス*\Common7\IDE\ProjectTemplates と*Visual Studio インストール パス*\Common7\IDE\ItemTemplates ディレクトリ。 新しいプロジェクト ダイアログの最上位セクションの名前は完全に一致しないテンプレート フォルダーの名前。 これらが異なる場合は、テンプレート フォルダーの名前を使用します。  
   
-     .Vsix ファイルの拡張子を .zip に変更し、ファイルを開きます。  
+     .Vsix ファイル拡張子、.zip を変更し、ファイルを開きます。  
   
-2.  テンプレートが新しいプロジェクト\] ダイアログのセクションと同じ名前の新しいフォルダーを作成します。  
+2.  新しいプロジェクト ダイアログに、テンプレートが表示セクションと同じ名前で新しいフォルダーを作成します。  
   
-3.  テンプレートのサブセクションに含まれる場合、同じ名前のサブフォルダーを作成します。  
+3.  テンプレートのサブセクションに表示される場合、同じ名前のサブフォルダーを作成します。  
   
 4.  テンプレートの .zip ファイルを新しいフォルダに移動します。  
   
@@ -84,4 +85,4 @@ caps.handback.revision: 25
   
 6.  VSIX マニフェストを開きます。  
   
-7.  VSIX マニフェストでは、更新、 **資産** ことは、テンプレート ファイルを含むディレクトリ ツリーのルートを指すためのテンプレートのパス。 など \\CSharp\\Windows にテンプレートがある場合は、参照が \\CSharp\] をポイントする必要があります。
+7.  VSIX マニフェストには、更新、**資産**ことは、テンプレート ファイルを格納するディレクトリ ツリーのルートを指すように、テンプレートのパス。 たとえば、テンプレートが \CSharp\Windows 内にある場合は、参照を指す必要があります \CSharp です。

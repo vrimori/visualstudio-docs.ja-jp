@@ -1,48 +1,47 @@
 ---
-title: "[フォント] ダイアログ ボックス (Microsoft Spy++ ヘルプ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "フォント ダイアログ ボックス"
+title: "フォント ダイアログ ボックス (Microsoft spy ヘルプ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Font dialog box
 ms.assetid: 414c42a5-7168-46a9-bbea-6ab10f2d82a8
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8eee6cf523fe7c327c5be0e5e34d805da80177b0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# [フォント] ダイアログ ボックス (Microsoft Spy++ ヘルプ)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-このダイアログ ボックスを使用すると、[Spy\+\+ ビュー](../debugger/spy-increment-views.md) ウィンドウで使用される文字のフォントを構成できます。  このダイアログ ボックスを表示するには、\[表示\] メニューを展開し、\[フォント\] をクリックします。  
+# <a name="font-dialog-box-microsoft-spy-help"></a>[フォント] ダイアログ ボックス (Microsoft Spy++ ヘルプ)
+使用される文字のフォントを構成するこのダイアログ ボックスを使用して、 [spy++ ビュー](../debugger/spy-increment-views.md)ウィンドウです。 このダイアログ ボックスを表示するには展開、**ビュー**メニュー選択**フォント**です。  
   
- 次の項目があります。  
+ 次の設定を使用できます。  
   
- **\[フォント\]**  
- フォーカスを持つ Spy\+\+ ビュー ウィンドウの文字のフォントです。  
+ **フォント**  
+ フォーカスのある spy++ ビュー ウィンドウの文字のフォント。  
   
- **\[スタイル\]**  
- フォーカスを持つ Spy\+\+ ビュー ウィンドウのフォント スタイルです。  
+ **フォント スタイル**  
+ フォーカスのある spy++ ビュー ウィンドウのフォント スタイル。  
   
- **\[サイズ\]**  
- フォーカスを持つ Spy\+\+ ビュー ウィンドウのフォント サイズです。  
+ **Size**  
+ フォーカスのある spy++ ビュー ウィンドウのフォント サイズ。  
   
- **\[設定を既定値として保存\]**  
- Spy\+\+ ビューを開いたときの既定の設定として、現在のフォント設定を保存します。  
+ **既定値としてフォントを保存します。**  
+ Spy++ ビューを開くときに、ユーザーの設定として現在のフォント設定を保存します。  
   
-## 関連項目  
- [Spy\+\+ ビュー](../debugger/spy-increment-views.md)  
- ウィンドウ、メッセージ、プロセス、およびスレッドの Spy\+\+ ツリー ビューについて説明します。  
+## <a name="related-sections"></a>関連項目  
+ [Spy++ ビュー](../debugger/spy-increment-views.md)  
+ Windows、メッセージ、プロセス、およびスレッドの spy++ ツリー ビューについて説明します。  
   
- [Spy\+\+ の使用](../debugger/using-spy-increment.md)  
- Spy\+\+ ツールとその使用方法について説明します。  
+ [Spy++ の使用](../debugger/using-spy-increment.md)  
+ Spy++ ツールを紹介し、使用方法について説明します。  
   
- [Spy\+\+ リファレンス](../debugger/spy-increment-reference.md)  
- Spy\+\+ の各メニューとダイアログ ボックスについて説明するセクションが含まれます。
+ [Spy++ リファレンス](../debugger/spy-increment-reference.md)  
+ 各 spy++ メニューおよびダイアログ ボックスについて説明するセクションが含まれます。

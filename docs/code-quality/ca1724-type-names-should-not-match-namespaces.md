@@ -1,44 +1,45 @@
 ---
-title: "CA1724: 型名は名前空間と同一にすることはできません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TypeNamesShouldNotMatchNamespaces"
-  - "CA1724"
-helpviewer_keywords: 
-  - "TypeNamesShouldNotMatchNamespaces"
-  - "CA1724"
+title: "1724 ca: 型名がいないと名前空間 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TypeNamesShouldNotMatchNamespaces
+- CA1724
+helpviewer_keywords:
+- TypeNamesShouldNotMatchNamespaces
+- CA1724
 ms.assetid: 329af3b5-5600-4101-831d-531ab3eb7060
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 556fd9eee1bc453d4f9782459050367e18a3193b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA1724: 型名は名前空間と同一にすることはできません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1724-type-names-should-not-match-namespaces"></a>CA1724: 型名は名前空間と同一にすることはできません
 |||  
 |-|-|  
 |TypeName|TypeNamesShouldNotMatchNamespaces|  
 |CheckId|CA1724|  
-|分類|Microsoft.Naming|  
+|カテゴリ|Microsoft.Naming|  
 |互換性に影響する変更点|あり|  
   
-## 原因  
- 大文字と小文字を区別しない比較で、型の名前が [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 名前空間の名前と一致します。  
+## <a name="cause"></a>原因  
+ 型名と一致する、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]大文字と小文字の名前空間の名前。  
   
-## 規則の説明  
- 型の名前は、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] クラス ライブラリで定義されている名前空間の名前と一致しないようにする必要があります。  この規則に違反すると、ライブラリが使いづらくなります。  
+## <a name="rule-description"></a>規則の説明  
+ 型の名前は、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] クラス ライブラリで定義されている名前空間の名前と一致しないようにする必要があります。 この規則に違反すると、ライブラリが使いづらくなります。  
   
-## 違反の修正方法  
- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] クラス ライブラリの名前空間の名前と一致しない型の名前を選択します。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ 名前に一致しない型の名前を選択して、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]クラス ライブラリの名前空間。  
   
-## 警告を抑制する状況  
- 新たに開発する場合、この規則による警告を抑制する必要がある状況は発生しません。  警告を抑制する前に、一致する名前によってライブラリのユーザーの間にどのような混乱が生じる可能性があるかを慎重に検討する必要があります。  ライブラリを同梱する場合、この規則による警告の抑制が必要となることもあります。
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 新しい開発では、されていないシナリオでは、この規則による警告を抑制する必要がありますが発生します。 警告を抑制する前に一致する名前で、ライブラリのユーザーを混同可能性がある方法慎重に検討します。 ライブラリを配布するには、この規則による警告を抑制する必要があります。

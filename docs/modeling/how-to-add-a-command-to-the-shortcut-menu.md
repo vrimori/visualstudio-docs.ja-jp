@@ -10,34 +10,34 @@ helpviewer_keywords:
 - Domain-Specific Language Tools, walkthroughs
 - walkthroughs [Domain-Specific Language Tools]
 ms.assetid: cd550399-05fc-4dbf-be4c-f5094bb752ce
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translationtype: Machine Translation
-ms.sourcegitcommit: 3d07f82ea737449fee6dfa04a61e195654ba35fa
 ms.openlocfilehash: 2504fce27243ff8efeda1961190b07f12561021e
-ms.lasthandoff: 02/22/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>方法: ショートカット メニューにコマンドを追加する
 ドメイン固有言語 (DSL) にメニュー コマンドを追加すると、ユーザーが DSL に固有のタスクを実行できるようになります。 ユーザーが図を右クリックすると、コンテキスト (ショートカット) メニューにコマンドが表示されます。 特定の状況でのみメニューにコマンドが表示されるように、コマンドを定義できます。 たとえば、ユーザーが特定の型の要素または特定の状態の要素をクリックした場合にだけコマンドを表示するようにできます。  
   
  DslPackage プロジェクトで実行する手順の概要を以下に示します。  
   
-1.  [Commands.vsct でコマンドを宣言します。](#VSCT)  
+1.  [Commands.vsct 内のコマンドを宣言します。](#VSCT)  
   
-2.  [Package.tt でパッケージのバージョン番号を更新](#version)します。 Commands.vsct を変更するときには必ずこの操作を実行してください。  
+2.  [Package.tt でパッケージのバージョン番号を更新](#version)です。 Commands.vsct を変更するときには必ずこの操作を実行してください。  
   
-3.  [CommandSet クラスにメソッドを記述](#CommandSet)コマンドが表示されるようにし、定義のコマンドを実行します。  
+3.  [CommandSet クラスにメソッドを記述](#CommandSet)を行うには、コマンドを実行する内容を定義して、コマンドを表示します。  
   
- サンプルについては、次を参照してください。、 [Visualization and Modeling SDK の web サイト](http://go.microsoft.com/fwlink/?LinkID=185579)します。  
+ サンプルについては、次を参照してください。、 [Visualization and Modeling SDK の web サイト](http://go.microsoft.com/fwlink/?LinkID=185579)です。  
   
 > [!NOTE]
->  [切り取り]、[貼り付け]、[すべて選択]、[印刷] など、既存の一部のコマンドの動作を変更することもできます。このためには、CommandSet.cs でメソッドをオーバーライドします。 詳細については、次を参照してください。[方法: 標準メニュー コマンドを変更](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)します。  
+>  [切り取り]、[貼り付け]、[すべて選択]、[印刷] など、既存の一部のコマンドの動作を変更することもできます。このためには、CommandSet.cs でメソッドをオーバーライドします。 詳細については、次を参照してください。[する方法: 標準メニュー コマンドを変更](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)です。  
   
 ## <a name="defining-a-command-using-mef"></a>MEF を使用したコマンドの定義  
- Managed Extension Framework (MEF) には、図のメニューのメニュー コマンドを定義するもう&1;つの方法があります。 これは、ユーザーまたは他のユーザーが DSL を拡張できるようにすることを目的としています。 ユーザーは、DSL だけをインストールするか、または DSL と拡張機能の両方をインストールすることができます。 ただし MEF では、DSL で MEF を使用可能にする初期作業の完了後には、ショートカット メニュー コマンドの定義作業が少なくなります。  
+ Managed Extension Framework (MEF) には、図のメニューのメニュー コマンドを定義するもう 1つの方法があります。 これは、ユーザーまたは他のユーザーが DSL を拡張できるようにすることを目的としています。 ユーザーは、DSL だけをインストールするか、または DSL と拡張機能の両方をインストールすることができます。 ただし MEF では、DSL で MEF を使用可能にする初期作業の完了後には、ショートカット メニュー コマンドの定義作業が少なくなります。  
   
  このトピックで説明する手法は、次の場合に使用してください。  
   
@@ -47,23 +47,22 @@ ms.lasthandoff: 02/22/2017
   
 3.  他のユーザーが各自のコマンドを使用して DSL を拡張できないようにする。  
   
-4.  コマンドを&1; つだけ定義する。  
+4.  コマンドを 1 つだけ定義する。  
   
- 上記に該当しない場合は、MEF 手法を使用してコマンドを定義することを検討してください。 詳細については、次を参照してください。 [MEF による DSL の拡張](../modeling/extend-your-dsl-by-using-mef.md)します。  
+ 上記に該当しない場合は、MEF 手法を使用してコマンドを定義することを検討してください。 詳細については、次を参照してください。 [MEF を使用して、DSL、拡張](../modeling/extend-your-dsl-by-using-mef.md)です。  
   
-##  <a name="a-namevscta-declare-the-command-in-commandsvsct"></a><a name="VSCT"></a>Commands.Vsct でコマンドを宣言します。  
+##  <a name="VSCT"></a>Commands.Vsct 内のコマンドを宣言します。  
  メニュー コマンドは、DslPackage\Commands.vsct で宣言されます。 これらの定義では、メニュー項目のラベルと、メニューでのメニュー項目の表示位置が指定されます。  
   
- Commands.vsct で、ファイルを編集するディレクトリにある複数の .h ファイルから定義をインポートする*Visual Studio SDK インストール パス*\VisualStudioIntegration\Common\Inc します。また、DSL 定義から生成される GeneratedVsct.vsct をインクルードします。  
+ ファイルを編集すると、Commands.vsct、ディレクトリに配置されたいくつかの .h ファイルから定義をインポートする*Visual Studio SDK インストール パス*\VisualStudioIntegration\Common\Inc です。また、DSL 定義から生成される GeneratedVsct.vsct をインクルードします。  
   
- .Vsct ファイルの詳細については、次を参照してください。 [Visual Studio コマンド テーブル (します。Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)します。  
+ .Vsct ファイルの詳細については、次を参照してください。 [Visual Studio コマンド テーブル (です。Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)です。  
   
 #### <a name="to-add-the-command"></a>コマンドを追加するには  
   
-1.  **ソリューション エクスプ ローラー**下で、 **DslPackage**プロジェクトを Commands.vsct を開きます。  
+1.  **ソリューション エクスプ ローラー**下で、 **DslPackage**プロジェクト、Commands.vsct を開きます。  
   
-2.  
-          `Commands` 要素に&1; つ以上のボタンと&1; つのグループを定義します。 A*ボタン*メニュー項目です。 A*グループ*メニュー セクションです。 これらの項目を定義するため、次の要素を追加します。  
+2.  `Commands` 要素に 1 つ以上のボタンと 1 つのグループを定義します。 A*ボタン*メニュー項目。 A*グループ*メニュー内のセクションは、します。 これらの項目を定義するため、次の要素を追加します。  
   
     ```  
     <!-- Define a group - a section in the menu -->  
@@ -90,9 +89,9 @@ ms.lasthandoff: 02/22/2017
     ```  
   
     > [!NOTE]
-    >  各ボタンとグループは、GUID と整数の ID によって識別されます。 同じ GUID を使用して複数のグループとボタンを作成できます。 ただし、それぞれに異なる ID が必要です。 GUID 名と ID 名は実際の Guid と数値 Id に変換される、`<Symbols>`ノードです。  
+    >  各ボタンとグループは、GUID と整数の ID によって識別されます。 同じ GUID を使用して複数のグループとボタンを作成できます。 ただし、それぞれに異なる ID が必要です。 GUID の名前と ID の名前は、実際の Guid と内の数値 Id に変換されます、`<Symbols>`ノード。  
   
-3.  ドメイン固有言語のコンテキストでのみコマンドが読み込まれるようにするため、コマンドに表示制限を追加します。 詳細については、次を参照してください。 [VisibilityConstraints 要素](../extensibility/visibilityconstraints-element.md)します。  
+3.  ドメイン固有言語のコンテキストでのみコマンドが読み込まれるようにするため、コマンドに表示制限を追加します。 詳細については、次を参照してください。 [VisibilityConstraints 要素](../extensibility/visibilityconstraints-element.md)です。  
   
      このためには、`CommandTable` 要素内で `Commands` 要素の後に以下の要素を追加します。  
   
@@ -117,8 +116,7 @@ ms.lasthandoff: 02/22/2017
     </Symbols>  
     ```  
   
-5.  
-          `{000...000}` を、グループとメニュー項目を識別する GUID に置き換えます。 新しい GUID を取得するには、使用、 **GUID の作成**ツールを**ツール**メニュー。  
+5.  `{000...000}` を、グループとメニュー項目を識別する GUID に置き換えます。 新しい GUID を取得するを使用して、 **GUID の作成**ツールを**ツール**メニュー。  
   
     > [!NOTE]
     >  さらにグループやメニュー項目を追加するときには、同じ GUID を使用できます。 ただし、`IDSymbols` に新しい値を使用する必要があります。  
@@ -133,8 +131,8 @@ ms.lasthandoff: 02/22/2017
   
     -   `My Context Menu Command`  
   
-##  <a name="a-nameversiona-update-the-package-version-in-packagett"></a><a name="version"></a>Package.tt でパッケージのバージョンを更新します。  
- 追加または、コマンドを変更するたびに更新、`version`のパラメーター、<xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute>ドメイン固有言語の新しいバージョンをリリースする前に、パッケージ クラスに適用されている</xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute>。  
+##  <a name="version"></a>Package.tt のパッケージ バージョンを更新します。  
+ コマンドを追加または変更するたびに、`version` の <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> パラメーターを更新します。これは、ドメイン固有言語の新しいバージョンをリリースする前にパッケージ クラスに適用されます。  
   
  生成されるファイルでパッケージ クラスが定義されているため、Package.cs ファイルを生成するテキスト テンプレート ファイルで属性を更新します。  
   
@@ -142,17 +140,16 @@ ms.lasthandoff: 02/22/2017
   
 1.  **ソリューション エクスプ ローラー**で、 **DslPackage**プロジェクトで、 **GeneratedCode**フォルダー、Package.tt ファイルを開きます。  
   
-2.  
-          `ProvideMenuResource` 属性を探します。  
+2.  `ProvideMenuResource` 属性を探します。  
   
 3.  この属性の `version` パラメーター (2 番目のパラメーター) の値を大きくします。 必要に応じて、パラメーターの目的を明確にするためパラメーター名を明示的に記述できます。 例:  
   
      `[VSShell::ProvideMenuResource("1000.ctmenu", version: 2 )]`  
   
-##  <a name="a-namecommandseta-define-the-behavior-of-the-command"></a><a name="CommandSet"></a>コマンドの動作を定義します。  
- DSL には、DslPackage\GeneratedCode\CommandSet.cs で宣言される一部のクラスで実装されているコマンドが既に存在しています。 新しいコマンドを追加するには、同じクラスの部分的な宣言を含む新しいファイルを作成して、このクラスを拡張する必要があります。 通常、クラスの名前は* \<YourDslName >*`CommandSet`します。 最初にクラスの名前を検証し、クラスの内容を調べておくと便利です。  
+##  <a name="CommandSet"></a>コマンドの動作を定義します。  
+ DSL には、DslPackage\GeneratedCode\CommandSet.cs で宣言される一部のクラスで実装されているコマンドが既に存在しています。 新しいコマンドを追加するには、同じクラスの部分的な宣言を含む新しいファイルを作成して、このクラスを拡張する必要があります。 クラスの名前は、通常 *\<YourDslName >*`CommandSet`です。 最初にクラスの名前を検証し、クラスの内容を調べておくと便利です。  
   
- コマンド セット クラスは<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>。</xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>から派生します。  
+ コマンド セット クラスは、<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> から派生しています。  
   
 #### <a name="to-extend-the-commandset-class"></a>CommandSet クラスを拡張するには  
   
@@ -162,7 +159,7 @@ ms.lasthandoff: 02/22/2017
   
      `{ ...  internal partial class Language1CommandSet : ...`  
   
-2.  **DslPackage**、という名前のフォルダーを作成する**、カスタム コード**します。 このフォルダーでという名前の新しいクラス ファイルを作成`CommandSet.cs`します。  
+2.  **DslPackage**、という名前のフォルダーを作成する**カスタム コード**です。 このフォルダーにという新しいクラス ファイルを作成する`CommandSet.cs`です。  
   
 3.  新しいファイル内に、生成された部分クラスと同じ名前空間および名前を持つ部分宣言を記述します。 例:  
   
@@ -170,7 +167,7 @@ ms.lasthandoff: 02/22/2017
   
      `{ internal partial class Language1CommandSet { ...`  
   
-     **注**クラス テンプレートを使用すると、新しいファイルを作成した場合は、名前空間とクラス名の両方を修正する必要があります。  
+     **注**クラス テンプレートを使用して、新しいファイルを作成した場合は、名前空間とクラス名の両方を修正する必要があります。  
   
 ### <a name="extend-the-command-set-class"></a>CommandSet クラスを拡張する  
  通常、コマンド セット コードは次の名前空間をインポートする必要があります。  
@@ -195,12 +192,12 @@ namespace Company.Language1 /* Make sure this is correct */
   {  
 ```  
   
- コンテキスト メニューにコマンドが表示される状況を判別するメソッドと、コマンドを実行するメソッドの&2; つを定義する必要があります。 これらのメソッドはオーバーライドではありません。コマンド リストにこれらのメソッドを登録します。  
+ コンテキスト メニューにコマンドが表示される状況を判別するメソッドと、コマンドを実行するメソッドの 2 つを定義する必要があります。 これらのメソッドはオーバーライドではありません。コマンド リストにこれらのメソッドを登録します。  
   
 ### <a name="define-when-the-command-will-be-visible"></a>コマンドを表示する状況を定義します。  
- コマンドごとに、コマンドをメニューに表示するかどうか、およびコマンドを使用可能または灰色表示にするかを判別する `OnStatus...` メソッドを定義します。 次の例に示すように、`Visible` の `Enabled` プロパティと `MenuCommand` プロパティを設定します。 このメソッドは、ユーザーが図を右クリックするたびに、ショートカット メニューを作成するために呼び出されるので、迅速に実行する必要があります。  
+ コマンドごとに、コマンドをメニューに表示するかどうか、およびコマンドを使用可能または灰色表示にするかを判別する `OnStatus...` メソッドを定義します。次の例に示すように、`Visible` の `Enabled` プロパティと `MenuCommand` プロパティを設定します。 このメソッドは、ユーザーが図を右クリックするたびに、ショートカット メニューを作成するために呼び出されるので、迅速に実行する必要があります。  
   
- この例では、ユーザーが特定の種類の図形を選択した場合にのみコマンドが表示され、選択した要素の少なくとも&1; つが特定の状態にある場合にのみ、このコマンドは使用可能になります。 この例は、クラス ダイアグラム DSL テンプレートに基づいており、ClassShape と ModelClass はこの DSL で定義されている型です。  
+ この例では、ユーザーが特定の種類の図形を選択した場合にのみコマンドが表示され、選択した要素の少なくとも 1 つが特定の状態にある場合にのみ、このコマンドは使用可能になります。 この例は、クラス ダイアグラム DSL テンプレートに基づいており、ClassShape と ModelClass はこの DSL で定義されている型です。  
   
 ```  
 private void OnStatusMyContextMenuCommand(object sender, EventArgs e)  
@@ -227,7 +224,7 @@ private void OnStatusMyContextMenuCommand(object sender, EventArgs e)
   
 -   `this.CurrentSelection`。 ユーザーが右クリックした図形は常にこのリストに追加されます。 ユーザーが図の空白部分をクリックした場合、このリストのメンバーは図のみになります。  
   
--   `this.IsDiagramSelected()` - `true`ユーザーには、図の空白部分がクリックするとします。  
+-   `this.IsDiagramSelected()` - `true`ユーザーは、図の空白部分をクリック場合します。  
   
 -   `this.IsCurrentDiagramEmpty()`  
   
@@ -244,7 +241,7 @@ private void OnStatusMyContextMenuCommand(object sender, EventArgs e)
 ### <a name="define-what-the-command-does"></a>コマンドが実行する処理を定義する  
  コマンドごとに、ユーザーがメニュー コマンドをクリックしたときに必要な操作を実行する `OnMenu...` メソッドを定義します。  
   
- モデル要素を変更する場合は、トランザクション内部で変更を行う必要があります。 詳細については、次を参照してください。[方法: 標準メニュー コマンドを変更](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)します。  
+ モデル要素を変更する場合は、トランザクション内部で変更を行う必要があります。 詳細については、次を参照してください。[する方法: 標準メニュー コマンドを変更](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)です。  
   
  この例の `ClassShape`、`ModelClass`、および `Comment` は、クラス ダイアグラム DSL テンプレートから派生した DSL で定義されている型です。  
   
@@ -285,7 +282,7 @@ private void OnMenuMyContextMenuCommand(object sender, EventArgs e)
 }  
 ```  
   
- モデルでは、オブジェクト間を移動する方法およびオブジェクトとリンクを作成する方法についての詳細については、次を参照してください。[方法: 標準メニュー コマンドを変更](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)します。  
+ モデルでは、オブジェクトからオブジェクトを移動する方法およびオブジェクトとリンクを作成する方法についての詳細については、次を参照してください。[する方法: 標準メニュー コマンドを変更](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)です。  
   
 ### <a name="register-the-command"></a>コマンドを登録する  
  CommandSet.vsct の Symbols セクションで記述した GUID 値と ID 値の宣言を C# で繰り返します。  
@@ -297,12 +294,12 @@ private const int grpidMyMenuGroup = 0x01001;
 private const int cmdidMyContextMenuCommand = 1;  
 ```  
   
- 挿入したものと同じ GUID 値を使用して**Commands.vsct**します。  
+ 挿入されると、同じ GUID 値を使用して**Commands.vsct**です。  
   
 > [!NOTE]
 >  VSCT ファイルの Symbols セクションを変更する場合は、これらの宣言も一致するように変更する必要があります。 Package.tt でバージョン番号を増加する必要もあります。  
   
- メニュー コマンドをこのコマンド セットの一部として登録します。 図が初期化されると、`GetMenuCommands()` が&1; 回呼び出されます。  
+ メニュー コマンドをこのコマンド セットの一部として登録します。 図が初期化されると、`GetMenuCommands()` が 1 回呼び出されます。  
   
 ```  
 protected override IList<MenuCommand> GetMenuCommands()  
@@ -326,26 +323,26 @@ protected override IList<MenuCommand> GetMenuCommands()
   
 #### <a name="to-exercise-the-command"></a>コマンドを実行するには  
   
-1.  **ソリューション エクスプ ローラー**ツールバーで、をクリックして**すべてのテンプレートの変換**します。  
+1.  **ソリューション エクスプ ローラー**ツールバーで、をクリックして**すべてのテンプレートの変換**です。  
   
-2.  キーを押して**f5 キーを押して**をソリューションをリビルドし、実験用ビルドでドメイン固有言語のデバッグを開始します。  
+2.  キーを押して**f5 キーを押して**をソリューションをリビルドし、実験用のビルドにおけるドメイン固有言語のデバッグを開始します。  
   
 3.  実験用ビルドでサンプルの図を開きます。  
   
 4.  図の中のさまざまな項目を右クリックして、選択した項目に基づいてコマンドが正しく有効または無効になること、適切に表示または非表示になることを確認します。  
   
 ## <a name="troubleshooting"></a>トラブルシューティング  
- **コマンドは、メニューには表示されません。**  
+ **コマンドは、メニューは表示されません。**  
   
--   DSL パッケージをインストールするまでは、コマンドは Visual Studio のデバッグ インスタンスでのみ表示されます。 詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)します。  
+-   DSL パッケージをインストールするまでは、コマンドは Visual Studio のデバッグ インスタンスでのみ表示されます。 詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)です。  
   
 -   実験用サンプルに、この DSL の正しいファイル名拡張子が含まれていることを確認します。 ファイル名拡張子を確認するには、Visual Studio のメイン インスタンスで DslDefinition.dsl を開きます。 DSL エクスプローラーで [エディター] プロジェクト ノードを右クリックし、[プロパティ] をクリックします。 [プロパティ] ウィンドウで、FileExtension プロパティを調べます。  
   
--   作成した[パッケージのバージョン番号をインクリメント](#version)でしょうか。  
+-   作成した[パッケージのバージョン番号をインクリメント](#version)しますか?  
   
 -   OnStatus メソッドの開始時にブレークポイントを設定します。 このブレークポイントは、図の任意の部分を右クリックしたときにブレークする必要があります。  
   
-     **OnStatus メソッドは呼び出されません**:  
+     **OnStatus メソッドが呼び出されない**:  
   
     -   CommandSet コードの GUID と ID が Commands.vsct の Symbols セクションの GUID と ID に一致することを確認します。  
   
@@ -355,7 +352,7 @@ protected override IList<MenuCommand> GetMenuCommands()
   
 -   OnStatus メソッドをステップ実行し、command.Visible と command.Enabled が true に設定されていることを確認します。  
   
- **誤ったメニュー テキストが表示されたら、または、コマンド、間違った場所に表示される**:  
+ **誤ったメニュー テキストが表示されたら、または間違った場所でのコマンドが表示されます**:  
   
 -   GUID と ID の組み合わせがこのコマンドに固有であることを確認します。  
   
@@ -363,10 +360,9 @@ protected override IList<MenuCommand> GetMenuCommands()
   
 ## <a name="see-also"></a>関連項目  
  [ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
- [方法: 標準のメニュー コマンドの変更](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)   
+ [方法: 標準メニュー コマンドの変更](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)   
  [ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)   
  [サンプル コード: 回路図](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
  
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
  
-

@@ -1,11 +1,10 @@
 ---
-title: 'CA1008: Enums should have zero value | Microsoft Docs'
+title: "1008: Enums は 0 をいなければなりません |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,69 +14,55 @@ helpviewer_keywords:
 - CA1008
 - EnumsShouldHaveZeroValue
 ms.assetid: 3503a73c-360c-416d-8ee4-c2aa44365a05
-caps.latest.revision: 21
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: e361d2406b3b2d8e54d9436d316e42dbb5221a8c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "21"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 84c43a95cd607a13a302e2247cacb091a39a3070
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1008-enums-should-have-zero-value"></a>CA1008: Enums should have zero value
+# <a name="ca1008-enums-should-have-zero-value"></a>CA1008: Enums は 0 値を含んでいなければなりません
 |||  
 |-|-|  
 |TypeName|EnumsShouldHaveZeroValue|  
 |CheckId|CA1008|  
-|Category|Microsoft.Design|  
-|Breaking Change|Non-breaking - When you are prompted to add a **None** value to a non-flag enumeration.Breaking - When you are prompted to rename or remove any enumeration values.|  
+|カテゴリ|Microsoft.Design|  
+|互換性に影響する変更点|以外の区切りを追加するメッセージが表示されたら、 **None**フラグではない列挙値。– 場合名前か、すべての列挙値を削除するように求められます。|  
   
-## <a name="cause"></a>Cause  
- An enumeration without an applied <xref:System.FlagsAttribute?displayProperty=fullName> does not define a member that has a value of zero; or an enumeration that has an applied <xref:System.FlagsAttribute> defines a member that has a value of zero but its name is not 'None', or the enumeration defines multiple zero-valued members.  
+## <a name="cause"></a>原因  
+ せず、適用した列挙体<xref:System.FlagsAttribute?displayProperty=fullName>0 ですまたは、適用した列挙体の値を持つメンバーを一切定義しません<xref:System.FlagsAttribute>メンバーを定義するゼロの値を持つが、その名前が 'None'、または列挙 0 の値を持つ複数の定義。メンバー。  
   
-## <a name="rule-description"></a>Rule Description  
- The default value of an uninitialized enumeration, just like other value types, is zero. A non-flags-attributed enumeration should define a member that has the value of zero so that the default value is a valid value of the enumeration. If appropriate, name the member 'None'. Otherwise, assign zero to the most frequently used member. Note that, by default, if the value of the first enumeration member is not set in the declaration, its value is zero.  
+## <a name="rule-description"></a>規則の説明  
+ その他の値の型と同じように、初期化されていない列挙型の既定値は 0 です。 フラグの属性の列挙をできるように、既定値は、列挙の有効な値に 0 の値を持つメンバーを定義する必要があります。 必要に応じて、メンバーに名前を 'None' です。 それ以外の場合、最も頻繁に使用するメンバーには 0 を割り当てます。 、既定では、宣言では、最初の列挙体メンバーの値が設定されていない場合、値がゼロであることを注意してください。  
   
- If an enumeration that has the <xref:System.FlagsAttribute> applied defines a zero-valued member, its name should be 'None' to indicate that no values have been set in the enumeration. Using a zero-valued member for any other purpose is contrary to the use of the <xref:System.FlagsAttribute> in that the AND and OR bitwise operators are useless with the member. This implies that only one member should be assigned the value zero. Note that if multiple members that have the value zero occur in a flags-attributed enumeration, `Enum.ToString()` returns incorrect results for members that are not zero.  
+ 列挙型を持つ場合、<xref:System.FlagsAttribute>適用値が 0 のメンバーを定義、名前が列挙体の値が設定されていないことを示すために ' None' にする必要があります。 それ以外の目的が使用するとは対照的では、ゼロ値のメンバーを使用して、<xref:System.FlagsAttribute>で AND とまたはビットごとの演算子がメンバーと役に立ちません。 つまり、その 1 つだけのメンバーに値 0 を割り当てる必要があります。 複数のメンバーがある場合、値が 0 発生フラグ属性の列挙にメモ`Enum.ToString()`が 0 でないメンバーを正しくない結果を返します。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule for non-flags-attributed enumerations, define a member that has the value of zero; this is a non-breaking change. For flags-attributed enumerations that define a zero-valued member, name this member 'None' and delete any other members that have a value of zero; this is a breaking change.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ 列挙型のフラグの属性に対するこの規則の違反を修正するには、0 以外の値を持つメンバーを定義しますこれは、互換性に影響する変更点以外です。 フラグ属性列挙型の値が 0 のメンバーを定義する、名前のメンバーを 'None' とゼロ以外の値を持つ他のメンバーを削除します。これは、互換性に影響する変更点です。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule except for flags-attributed enumerations that have previously shipped.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 以前にリリース済みフラグ属性の列挙体を除く、この規則による警告は抑制しないでください。  
   
-## <a name="example"></a>Example  
- The following example shows two enumerations that satisfy the rule and an enumeration, `BadTraceOptions`, that violates the rule.  
+## <a name="example"></a>例  
+ 次の例は、ルールに適合する 2 つの列挙型、および列挙体、`BadTraceOptions`規則に違反しています。  
   
- [!code-cpp[FxCop.Design.EnumsZeroValue#1](../code-quality/codesnippet/CPP/ca1008-enums-should-have-zero-value_1.cpp)] [!code-csharp[FxCop.Design.EnumsZeroValue#1](../code-quality/codesnippet/CSharp/ca1008-enums-should-have-zero-value_1.cs)] [!code-vb[FxCop.Design.EnumsZeroValue#1](../code-quality/codesnippet/VisualBasic/ca1008-enums-should-have-zero-value_1.vb)]  
+ [!code-cpp[FxCop.Design.EnumsZeroValue#1](../code-quality/codesnippet/CPP/ca1008-enums-should-have-zero-value_1.cpp)]
+ [!code-csharp[FxCop.Design.EnumsZeroValue#1](../code-quality/codesnippet/CSharp/ca1008-enums-should-have-zero-value_1.cs)]
+ [!code-vb[FxCop.Design.EnumsZeroValue#1](../code-quality/codesnippet/VisualBasic/ca1008-enums-should-have-zero-value_1.vb)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA2217: Do not mark enums with FlagsAttribute](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA2217: enums を FlagsAttribute に設定しません](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)  
   
- [CA1700: Do not name enum values 'Reserved'](../code-quality/ca1700-do-not-name-enum-values-reserved.md)  
+ [CA1700: enum 値に 'Reserved' という名前を指定しません](../code-quality/ca1700-do-not-name-enum-values-reserved.md)  
   
- [CA1712: Do not prefix enum values with type name](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)  
+ [CA1712: enum 値を型名のプレフィックスにしません](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)  
   
- [CA1028: Enum storage should be Int32](../code-quality/ca1028-enum-storage-should-be-int32.md)  
+ [CA1028: 列挙ストレージは Int32 でなければなりません](../code-quality/ca1028-enum-storage-should-be-int32.md)  
   
- [CA1027: Mark enums with FlagsAttribute](../code-quality/ca1027-mark-enums-with-flagsattribute.md)  
+ [CA1027: FlagsAttribute で列挙値をマークします](../code-quality/ca1027-mark-enums-with-flagsattribute.md)  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  <xref:System.Enum?displayProperty=fullName>

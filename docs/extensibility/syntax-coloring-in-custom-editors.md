@@ -1,62 +1,63 @@
 ---
-title: "構文のカスタム エディターの色指定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "エディター [Visual Studio SDK] - カスタム構文の色分け表示"
+title: "カスタム エディターの構文の色分け |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: editors [Visual Studio SDK], custom - syntax coloring
 ms.assetid: 74900b9a-baef-432a-8231-4568fb5e19ad
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 8c7a63c077207fdc85f3ad8b57119e1c7d1ca30b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 構文のカスタム エディターの色指定
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Visual Studio SDK 環境のエディターはコア エディターを含む特定の構文の項目を識別し特定のドキュメントのビューの指定された色で表示する言語サービスを使用します。  
+# <a name="syntax-coloring-in-custom-editors"></a>カスタム エディターの構文の色分け
+コア エディターなど、visual Studio 環境 SDK エディターは、構文上の特定の項目を識別し、特定のドキュメント ビューの指定した色で表示する言語サービスを使用します。  
   
-## 要件の色付け  
- 言語サービスの colorizer を実装するすべてのエディターがあります :  
+## <a name="colorization-requirements"></a>色付け要件  
+ すべてのエディターが言語サービスの colorizer を実装する必要があります。  
   
-1.  colorized するテキストテキスト ドキュメントのビューを提供する <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> を実装するオブジェクトを管理するに <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> を実装するオブジェクトを使用します。  
+1.  実装するオブジェクトを使用して<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>色で表示するテキストと実装するオブジェクトを管理する<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>テキストのドキュメントを確認することです。  
   
-2.  言語に関するサービスを識別する GUID を使用する VSPackage サービス プロバイダーを呼び出すことによって特定の言語サービスにインターフェイスを取得します。  
+2.  言語サービスの識別する GUID を使用して、VSPackage のサービス プロバイダーのクエリを実行して特定の言語サービスへのインターフェイスを取得します。  
   
-3.  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> を実装するオブジェクトの <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer.SetLanguageServiceID%2A> のメソッドを呼び出します。  このメソッドは colorized テキストを管理するにはVSPackage を使用する <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> の実装と言語サービスを関連付けます。  
+3.  呼び出す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer.SetLanguageServiceID%2A>メソッドを実装するオブジェクトの<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>します。 このメソッドは、使用して、言語サービスを関連付けます、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>色で表示されるテキストを管理する VSPackage を使用して実装します。  
   
-## 言語サービスの Colorizer のコア エディターの使用  
- colorizer を持つ言語サービスはコア エディターのインスタンスを通じて取得された場合は言語サービスの colorizer してテキストを解析およびレンダリングはのそのほかの実行を必要とせずに自動的に行われます。  
+## <a name="core-editor-usage-of-a-language-services-colorizer"></a>言語サービスの Colorizer のコア エディターの使用方法  
+ コア エディター、解析および言語サービスの colorizer によるテキストのレンダリングのインスタンスによって、colorizer に言語サービスを取得する場合は、さらに、一部の介入を必要とせずに自動的に発生します。  
   
- 透過的に IDE:  
+ IDE に透過的にします。  
   
--   これは <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> の実装で追加または変更されたと同様に必要 colorizer をテキストを解析および分析するために呼び出されます。  
+-   呼び出しを解析し、テキストの分析が追加または変更の実装で colorizer に応じて<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>です。  
   
--   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> の実装によって提供されるドキュメント ビューが提供するが表示 colorizer によって返される情報を使用して更新され描画されることを確認します。  
+-   提供されるドキュメント ビューによって提供される表示により、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>実装が更新され、colorizer によって返される情報を使用して再描画します。  
   
-## 言語サービスの主要 Colorizerエディターの使用  
- 非主要エディターのインスタンスは言語サービスの構文の色づけサービスを使用できますが明示的に取得しサービスの colorizer を適用しドキュメントを再描画するために自身を表示します。  
+## <a name="non-core-editor-usage-of-a-language-services-colorizer"></a>言語サービスの Colorizer の非コア エディターの使用方法  
+ 非コア エディター インスタンスことができますもを使用言語サービスの構文の色づけサービスが必要があります明示的に取得およびサービスの colorizer を適用、ドキュメント ビュー自体を再描画します。  
   
- これを行うには主要エディターが必要です :  
+ これを行うには、非コア エディターが必要です。  
   
-1.  \(`T:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer` と <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer2> を実行する\) 言語サービスの colorizer オブジェクトを取得します。  VSPackage は言語サービスのインターフェイス <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetColorizer%2A> のメソッドを呼び出すことで実現されます。  
+1.  言語サービスの colorizer オブジェクトを取得します (を実装する`T:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer`と<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer2>)。 VSPackage は、呼び出すことによって、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetColorizer%2A>言語サービスのインターフェイスのメソッドです。  
   
-2.  テキストの特定の範囲が colorized 要求する <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> のメソッドを呼び出します。  
+2.  呼び出す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A>テキストの特定範囲の一覧を要求するメソッド。  
   
-     <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> メソッドの戻り値colorized テキスト範囲の各文字に 1 の配列。  またコメントキーワードデータ型などの色設定可能項目の特定の型としてテキスト範囲を指定します。  
+     <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A>メソッドの値の配列を返します、色分け表示されているにまたがるテキストでは、各文字を 1 つです。 また、コメント、キーワード、またはデータ型などの装飾が可能な項目の特定の型としてのテキスト範囲を識別します。  
   
-3.  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> によって返される情報テキストを再描画および表示に色づけを使用します。  
+3.  によって返される色付け情報を使用して<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A>を再描画し、そのテキストが表示されます。  
   
 > [!NOTE]
->  言語サービスの colorizer の汎用 Visual Studio 環境 SDK のテキスト色指定機能を使用するために使用できるだけでなくVSPackage を選択できます。  この機能の詳細については[フォントおよび色を使用します。](../extensibility/using-fonts-and-colors.md) を参照してください。  
+>  言語サービスの colorizer 以外にも、VSPackage が、汎用的な Visual Studio 環境 SDK テキストの色指定メカニズムを使用できます。 このメカニズムの詳細については、次を参照してください。[を使用するフォントおよび色](../extensibility/using-fonts-and-colors.md)です。  
   
-## 参照  
- [構文の色分けで従来の言語サービス](../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)   
+## <a name="see-also"></a>関連項目  
+ [従来の言語サービスの構文の色分け](../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)   
  [構文の色分けを実装します。](../extensibility/internals/implementing-syntax-coloring.md)   
- [方法: ビルトインの装飾が可能な項目を使用して](../extensibility/internals/how-to-use-built-in-colorable-items.md)   
- [カスタムの装飾が可能な項目](../extensibility/internals/custom-colorable-items.md)
+ [方法: 組み込みの装飾が可能な項目を使用して](../extensibility/internals/how-to-use-built-in-colorable-items.md)   
+ [カスタムの配色可能な項目](../extensibility/internals/custom-colorable-items.md)

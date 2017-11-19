@@ -1,34 +1,35 @@
 ---
-title: "プロパティ ウィンドウのオブジェクトの一覧 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "オブジェクトの一覧の [プロパティ] ウィンドウ"
+title: "プロパティ ウィンドウ オブジェクトのリスト |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Properties window, object list
 ms.assetid: 6c159c9d-345d-4b23-8ddd-9839d338b62f
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: dad79623bbc721c67c19a37436d2bf5e64b93c59
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# プロパティ ウィンドウのオブジェクトの一覧
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-\[入力\] ENT0ENT ウィンドウのオブジェクト リストは一つ以上の選択したウィンドウ内で使用できるそのほかのオブジェクトに選択項目を変更するドロップダウン リストです。  オンにすると新しいオブジェクトが選択されていることを通知する環境の呼び出しを <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> この一覧から内で異なるオブジェクトをトリガーします。  \[ENT0ENT\] ウィンドウで表示される情報はに関連付けられているプロパティを表示するために選択したオブジェクトに変更されます。  
+# <a name="properties-window-object-list"></a>プロパティ ウィンドウ オブジェクトの一覧
+オブジェクトの一覧で、**プロパティ**ウィンドウがドロップダウン リストを 1 つまたは複数の選択したウィンドウ内で使用できる他のオブジェクトへの選択を変更することができます。 呼び出しをトリガー内でのこの一覧から別のオブジェクトを選択すると<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A>に新しいオブジェクトが選択されている環境を通知します。 表示される情報、**プロパティ**ウィンドウは、新しく選択したオブジェクトに関連付けられたプロパティを表示する変更です。  
   
-## オブジェクト リスト  
- オブジェクト リストは 2 個のフィールドで構成されます : オブジェクト名 \(太字で表示されます\) とオブジェクトの型。  
+## <a name="the-object-list"></a>オブジェクトの一覧  
+ オブジェクトの一覧は、2 つのフィールドで構成されています: (太字で表示されます) オブジェクトの名前とオブジェクトの種類。  
   
- 太字のオブジェクトの種類の左側に表示されるオブジェクトの名前は <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo> のインターフェイスに備わっている `Name` のプロパティを使用してオブジェクト自体から取得されます。  <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo.GetClassInfo%2A> の <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo> のメソッドはインターフェイスのコクラスの <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo> を返します。  ドロップダウン リスト オブジェクト名として表示するコクラスの名前を取得 ENT0ENT \[出力\] ウィンドウの使用 <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo>。  
+ 太字でオブジェクトの種類の左側に表示されるオブジェクト名が、オブジェクト自体から取得されるを使用して、`Name`プロパティによって提供される、<xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo>インターフェイスです。 <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo.GetClassInfo%2A>、、唯一の方法で<xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo>、返します<xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo>インターフェイスのコクラスのです。 **プロパティ**ウィンドウを使用して<xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo>ドロップダウン リストでオブジェクト名として表示されるコクラスの名前を取得します。  
   
- オブジェクトに `Name` のプロパティがない場合名前はオブジェクト リストの名前の領域に表示されます。  オブジェクト リストに表示される名前が必要な場合はオブジェクトにプロパティを追加できます。  
+ オブジェクトがない場合、`Name`プロパティ、名前は、名前、オブジェクトの一覧の領域に表示されません。 オブジェクトの一覧に表示名を使用する場合は、オブジェクトに Name プロパティを追加できます。  
   
- COM オブジェクトが <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo> を実行する ENT0ENT\[出力\] ウィンドウに表示されるリストの左側のオブジェクト名の代わりにインターフェイスの名前。  
+ COM オブジェクトを実装しない場合<xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo>、**プロパティ**ウィンドウには、一覧の左側にあるオブジェクト名の代わりにインターフェイス名が表示されます。  
   
-## 参照  
- [プロパティを拡張します。](../../extensibility/internals/extending-properties.md)
+## <a name="see-also"></a>関連項目  
+ [プロパティの拡張](../../extensibility/internals/extending-properties.md)

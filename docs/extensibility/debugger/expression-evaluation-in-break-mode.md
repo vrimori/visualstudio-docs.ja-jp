@@ -1,44 +1,46 @@
 ---
-title: "中断モードでの式の評価 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "中断モードでは、式の評価"
-  - "[デバッグ SDK] の式の評価のデバッグ"
-  - "式の評価、中断モード"
+title: "中断モードでの式の評価 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- break mode, expression evaluation
+- debugging [Debugging SDK], expression evaluation
+- expression evaluation, break mode
 ms.assetid: 34fe5b58-15d5-4387-a266-72120f90a4b6
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 766f00475971da1ca009737f9360952422177814
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 中断モードでの式の評価
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-次にデバッガーが中断モードで式の評価を行う必要があるときに発生するプロセスについて説明します。  
+# <a name="expression-evaluation-in-break-mode"></a>中断モードでの式の評価
+次に、デバッガーが中断モードであり、式の評価を実施する必要があるときに発生するプロセスについて説明します。  
   
-## 式の評価の手順  
- これらは式の評価に関連する基本的な手順を示します :  
+## <a name="expression-evaluation-process"></a>式の評価プロセス  
+ 式の評価に関係する基本的な手順を次に示します。  
   
-1.  デバッグ セッションのマネージャーは \(SDM\)式のコンテキスト インターフェイス[IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) を取得するに [IDebugStackFrame2:: GetExpressionContext](../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) を呼び出します。  
+1.  セッションのデバッグ マネージャー (SDM) を呼び出す[IDebugStackFrame2::GetExpressionContext](../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md)式コンテキスト インターフェイスを取得する[IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md)です。  
   
-2.  SDM は解析対象の文字列に [IDebugExpressionContext2:: ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) を呼び出します。  
+2.  SDM を呼び出して[IDebugExpressionContext2::ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)解析する文字列を使用します。  
   
-3.  ParseText が S\_OK を返すエラーの原因が返されます。  
+3.  ParseText が S_OK を返さない場合は、エラーの原因が返されます。  
   
-     \- は  
+     それ以外の場合-  
   
-     ParseText が S\_OK を返す場合SDM は解析された式から最終値を取得するに [IDebugExpression2:: EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) または [IDebugExpression2:: EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) を呼び出すことができます。  
+     ParseText は S_OK を返す場合、SDM 呼び出すことができますし、いずれかの[IDebugExpression2::EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)または[IDebugExpression2::EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)解析された式から、最終的な値を取得します。  
   
-    -   `IDebugExpression2::EvaluateSync` の評価で進行中のプロセスを知らせるのに使用する場合は特定のコールバック インターフェイスが使用されます。  最終値は [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) のインターフェイスに返されます。  
+    -   使用されている場合`IDebugExpression2::EvaluateSync`評価の進行中のプロセスが通信するために、指定されたコールバック インターフェイスを使用します。 最終的な値が返されます、 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)インターフェイスです。  
   
-    -   `IDebugExpression2::EvaluateAsync` の評価で進行中のプロセスを知らせるのに使用する場合は特定のコールバック インターフェイスが使用されます。  評価が終わったらEvaluateAsync はコールバックによって [IDebugExpressionEvaluationCompleteEvent2](../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) のインターフェイスを送信します。  このイベントのインターフェイスを使用すると最終値は [GetResult](../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2-getresult.md) を使用して取得できます。  
+    -   使用されている場合`IDebugExpression2::EvaluateAsync`評価の進行中のプロセスが通信するために、指定されたコールバック インターフェイスを使用します。 評価が完了したら、EvaluateAsync 送信、 [IDebugExpressionEvaluationCompleteEvent2](../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)コールバックを介して、インターフェイスです。 このイベント インターフェイスでの最終的な値を取得できます[GetResult](../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2-getresult.md)です。  
   
-## 参照  
- [デバッガー イベントの呼び出し](../../extensibility/debugger/calling-debugger-events.md)
+## <a name="see-also"></a>関連項目  
+ [デバッガーのイベントの呼び出し](../../extensibility/debugger/calling-debugger-events.md)

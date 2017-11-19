@@ -1,101 +1,102 @@
 ---
-title: "Troubleshooting Service References | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "msvse_wcf.Err.ReferenceGroup_NamespaceConflictsOther"
-  - "msvse_wcf.Err.AddSvcRefDlg_NothingSelectedOnGo"
-  - "msvse_wcf.Err.ErrorOnOK"
-  - "msvse_wcf.cfg.ConfigurationErrorsException"
-helpviewer_keywords: 
-  - "service references [Visual Studio], troubleshooting"
-  - "WCF services, troubleshooting"
+title: "サービス参照のトラブルシューティング |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- msvse_wcf.Err.ReferenceGroup_NamespaceConflictsOther
+- msvse_wcf.Err.AddSvcRefDlg_NothingSelectedOnGo
+- msvse_wcf.Err.ErrorOnOK
+- msvse_wcf.cfg.ConfigurationErrorsException
+helpviewer_keywords:
+- service references [Visual Studio], troubleshooting
+- WCF services, troubleshooting
 ms.assetid: 3b531120-1325-4734-90c6-6e6113bd12ac
-caps.latest.revision: 22
-caps.handback.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.technology: vs-data-tools
+ms.openlocfilehash: e46c8bf778ff18ea25096e524716bcb44916f460
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Troubleshooting Service References
-ここでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] 参照または [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] 参照を使用するときに発生する可能性のある一般的な問題について説明します。  
+# <a name="troubleshooting-service-references"></a>サービス参照のトラブルシューティング
+このトピックの一覧を使用する場合に発生する一般的な問題[!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)]または[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]では、参照[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
   
-## サービスからデータを返すときのエラー  
- サービスから `DataSet` または `DataTable` を返す場合に、"受信メッセージの最大メッセージ サイズ クォータが超過されました" という例外が発生することがあります。  既定では、サービス拒否攻撃を受けるリスクを低減するために、一部のバインディングの `MaxReceivedMessageSize` プロパティが比較的小さい値に設定されています。  この値を大きくすると、例外の発生を避けることができます。  詳細については、「<xref:System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize%2A>」を参照してください。  
+## <a name="error-returning-data-from-a-service"></a>サービスからデータを返すときのエラー  
+ 戻るとき、`DataSet`または`DataTable`サービスから「受信メッセージの最大サイズ クォータを超えました」例外が発生する可能性があります。 既定では、`MaxReceivedMessageSize`一部のバインドのプロパティがサービス拒否攻撃への露出を制限する比較的小さな値に設定します。 例外を防ぐためにこの値を大きくことができます。 詳細については、「<xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A>」を参照してください。  
   
- このエラーを修復するには、次の処理を行います。  
+ このエラーを解決するには。  
   
-1.  **ソリューション エクスプローラー**で、app.config ファイルをダブルクリックして開きます。  
+1.  **ソリューション エクスプ ローラー**、app.config ファイルを開くをダブルクリックします。  
   
-2.  `MaxReceivedMessageSize` プロパティを探して、大きい値に変更します。  
+2.  検索、`MaxReceivedMessageSize`プロパティより大きい値に変更します。  
   
-## \[マイ ソリューション\] でサービスが見つからない  
- **\[サービス参照の追加\]** ダイアログ ボックスの **\[探索\]** ボタンをクリックしても、ソリューション内の 1 つ以上の WCF サービス ライブラリ プロジェクトがサービスの一覧に表示されないことがあります。  これは、ソリューションにサービス ライブラリが追加されただけで、まだコンパイルされていない場合に発生することがあります。  
+## <a name="cannot-find-a-service-in-my-solution"></a>ソリューションでサービスを見つけることができません。  
+ クリックすると、 **Discover**ボタンをクリックして、**サービス参照の追加**ダイアログ ボックスで、サービスの一覧で、ソリューション内の 1 つまたは複数の WCF サービス ライブラリ プロジェクトは表示されません。 これは、サービス ライブラリは、ソリューションに追加されましたが、まだコンパイルされていない場合に発生することができます。  
   
- このエラーを修復するには、次の処理を行います。  
+ このエラーを解決するには。  
   
--   **ソリューション エクスプローラー**で WCF サービス ライブラリ プロジェクトを右クリックし、**\[ビルド\]** をクリックします。  
+-   **ソリューション エクスプ ローラー**を WCF サービス ライブラリ プロジェクトを右クリックし、をクリックして**ビルド**です。  
   
-## リモート デスクトップ経由でサービスにアクセスするときのエラー  
- Web ホストされた WCF サービスにユーザーがリモート デスクトップ接続経由でアクセスしたとき、そのユーザーに管理者権限がないと、NTLM 認証が使用されます。  ユーザーが管理者権限を持たない場合、このユーザーに対して次のようなメッセージが出される場合があります。"この HTTP 要求は、クライアントの認証方式 '匿名' では承認されません。  サーバーから受信した認証ヘッダーは "NTLM" でした。"  
+## <a name="error-accessing-a-service-over-a-remote-desktop"></a>リモート デスクトップ経由でサービスへのアクセス エラー  
+ ユーザーがアクセスするときに、Web でホストされる WCF サービス経由でリモート デスクトップ接続と、ユーザーには、管理アクセス許可がありません、NTLM 認証を使用します。 ユーザーが管理者権限を持っていない場合、ユーザーは、次のエラー メッセージを受け取ります可能性があります:"HTTP 要求はクライアントの認証方式 'Anonymous' で承認されていません。 サーバーから受信した認証ヘッダーは NTLM でした。"  
   
- このエラーを修復するには、次の処理を行います。  
+ このエラーを解決するには。  
   
-1.  Web サイト プロジェクトで、**\[プロパティ\]** ページを開きます。  
+1.  Web サイト プロジェクトで開き、**プロパティ**ページ。  
   
-2.  **\[開始オプション\]** タブの **\[NTLM 認証\]** チェック ボックスをオフにします。  
+2.  **開始オプション**タブで、、 **NTLM 認証**チェック ボックスをオンします。  
   
     > [!NOTE]
-    >  NTLM 認証をオフにするのは、WCF サービスだけを含む Web サイトの場合に限定してください。  WCF サービスのセキュリティは、web.config ファイルの構成によって管理されます。  そのため、NTLM 認証は必要ありません。  
+    >  NTLM 認証の排他的 WCF サービスを含む Web サイトでのみ無効にする必要があります。 WCF サービスのセキュリティは、web.config ファイルで構成を通じて管理されます。 これにより、NTLM 認証が不要にします。  
   
- 詳細については、「[例外のトラブルシューティング : System.ServiceModel.Security.MessageSecurityException](../misc/troubleshooting-exceptions-system-servicemodel-security-messagesecurityexception.md)」を参照してください。  
+## <a name="access-level-for-generated-classes-setting-has-no-effect"></a>生成されたクラスのアクセス レベルの設定が影響を与えません  
+ 設定、**アクセス レベルが生成されたクラスの**オプション、**サービス参照の構成**ダイアログ ボックスを**内部**または**フレンド**常に動作しません。 アクセス レベルの結果として得られるサポート クラスが生成されます ダイアログ ボックスで設定するオプションが表示されたら、にもかかわらず`Public`です。  
   
-## \[生成されたクラスのアクセス レベル\] の設定に効果がない  
- **\[サービス参照の構成\]** ダイアログ ボックスの **\[生成されたクラスのアクセス レベル\]** オプションを **\[内部\]** または **\[Friend\]** に設定しても、その設定が機能しない場合があります。  ダイアログ ボックスでこのオプションが設定されているように見えても、生成されるサポート クラスのアクセス レベルは `Public` になります。  
+ これは、特定の型を使用してシリアル化などの既知の制限事項、<xref:System.Xml.Serialization.XmlSerializer>です。  
   
- これは、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化された型など、特定の型に対する既知の制限事項です。  
+## <a name="error-debugging-service-code"></a>サービス コードのデバッグ エラー  
+ クライアント コードから、WCF サービスのコードにステップ インすると、シンボルが見つからないことに関するエラーが表示される可能性があります。 これは、ソリューションの一部であったサービスが移動またはソリューションから削除されたときに発生します。  
   
-## デバッグ サービス コードのエラー  
- WCF サービスのコードにクライアント コードからステップ インした場合に、シンボルが見つからないことを示すエラーが返されることがあります。  これは、ソリューションの一部であったサービスがソリューションから移動または削除されると発生します。  
+ 最初に、現在のソリューションに含まれている WCF サービスへの参照を追加すると、サービス プロジェクトとサービス クライアント プロジェクト間で、明示的なビルドの依存関係が追加されます。 これにより、クライアント常にアクセスする最新のサービスのバイナリはクライアント コードからサービス コードにステップ インなどのシナリオのデバッグに特に重要です。  
   
- 現在のソリューションの一部である WCF サービスに最初に参照を追加したときに、サービス プロジェクトとサービス クライアント プロジェクトの間に明示的なビルド依存関係が追加されます。  これにより、クライアントが常に最新のサービス バイナリにアクセスすることが保証されます。これは、クライアント コードからサービス コードにステップ インするなどのデバッグ シナリオにおいて特に重要です。  
+ サービス プロジェクトをソリューションから削除する場合、この明示的なビルドの依存関係は無効になります。 Visual Studio 不要になったことを保証できるサービス プロジェクトを再構築することを必要に応じて。  
   
- サービス プロジェクトがソリューションから削除されると、明示的なビルド依存関係が無効になります。  Visual Studio では、必要に応じてサービス プロジェクトが再度ビルドされることが保証されなくなりました。  
+ このエラーを解決するには、手動でサービス プロジェクトを再構築が必要。  
   
- このエラーを修復するには、次の手順に従ってサービス プロジェクトを手動で再度ビルドする必要があります。  
+1.  **[ツール]** メニューの **[オプション]**をクリックします。  
   
-1.  **\[ツール\]** メニューの **\[オプション\]** をクリックします。  
+2.  **オプション**] ダイアログ ボックスで、展開**プロジェクトおよびソリューション**、し、[**全般**です。  
   
-2.  **\[オプション\]** ダイアログ ボックスで、**\[プロジェクトおよびソリューション\]** を展開し、**\[全般\]** をクリックします。  
+3.  確認して、 **Show advanced ビルド構成** チェック ボックスを選択して、をクリックして**OK**です。  
   
-3.  **\[ビルド構成の詳細を表示\]** チェック ボックスがオンになっていることを確認して **\[OK\]** をクリックします。  
+4.  WCF サービス プロジェクトを読み込みます。  
   
-4.  WCF サービス プロジェクトを読み込みます。  詳細については、「[方法 : 複数のプロジェクトから成るソリューションを作成する](http://msdn.microsoft.com/ja-jp/02ecd6dd-0114-46fe-b335-ba9c5e3020d6)」を参照してください。  
+5.  **Configuration Manager**ダイアログ ボックスで、設定、**アクティブ ソリューション構成**に**デバッグ**です。 詳細については、「[How to: Create and Edit Configurations](../ide/how-to-create-and-edit-configurations.md)」(方法 : 構成を作成および編集する) を参照してください。  
   
-5.  **\[構成マネージャー\]** ダイアログ ボックスで、**\[アクティブ ソリューション構成\]** を **\[デバッグ\]** に設定します。  詳細については、「[方法 : 構成を作成および編集する](../ide/how-to-create-and-edit-configurations.md)」を参照してください。  
+6.  **ソリューション エクスプ ローラー**、WCF サービス プロジェクトを選択します。  
   
-6.  **ソリューション エクスプローラー**で WCF サービス プロジェクトを選択します。  
+7.  **ビルド** メニューのをクリックして**を再構築**を WCF サービス プロジェクトをリビルドします。  
   
-7.  **\[ビルド\]** メニューの **\[リビルド\]** をクリックして、WCF サービス プロジェクトを再度ビルドします。  
+## <a name="wcf-data-services-do-not-display-in-the-browser"></a>WCF Data Services は、ブラウザーで表示されません。  
+ 内のデータの XML 表現を表示しようとするときに、 [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]、Internet Explorer に RSS フィードとしてデータが誤って解釈可能性があります。 RSS フィードを表示するオプションが無効になっていることを確認してください。  
   
-## WCF Data Services がブラウザーに表示されない  
- [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] のデータの XML 表記を表示しようとすると、Internet Explorer はこのデータを RSS フィードと間違って解釈します。  RSS フィードを表示するオプションが無効になっていることを確認してください。  
+ このエラーを修正するのには、RSS フィードを無効にします。  
   
- このエラーを修復するには、RSS フィードを無効にします。  
+1.  Internet Explorer で、上、**ツール** メニューのをクリックして**インターネット オプション**です。  
   
-1.  Internet Explorer で、**\[ツール\]** メニューの **\[インターネット オプション\]** をクリックします。  
+2.  **コンテンツ**] タブで、**フィード**セクションで、[**設定**です。  
   
-2.  **\[コンテンツ\]** タブの **\[フィード\]** で、**\[設定\]** をクリックします。  
+3.  **フィードの設定**ダイアログ ボックスで、クリア、**フィードの読み取りビューを有効に**チェック ボックスをクリックして**[ok]**です。  
   
-3.  **\[フィードの設定\]** ダイアログ ボックスで、**\[フィードの読み取りビューを有効にする\]** チェック ボックスをオフにし、**\[OK\]** をクリックします。  
+4.  をクリックして**OK**を閉じる、**インターネット オプション** ダイアログ ボックス。  
   
-4.  **\[OK\]** をクリックして、**\[インターネット オプション\]** ダイアログ ボックスを閉じます。  
-  
-## 参照  
- [Windows Communication Foundation Services and WCF Data Services in Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)   
- [Consuming ASMX and WCF Services Sample](http://msdn.microsoft.com/ja-jp/788ddf2c-2ac1-416b-8789-2fbb1e29b8fe)
+## <a name="see-also"></a>関連項目  
+ [Visual Studio での Windows Communication Foundation サービスと WCF データ サービス](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

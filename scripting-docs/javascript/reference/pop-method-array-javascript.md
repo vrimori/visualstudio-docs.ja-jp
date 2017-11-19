@@ -1,50 +1,51 @@
 ---
-title: "pop メソッド (Array) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "pop"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "Pop メソッド"
+title: "pop メソッド (Array) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: pop
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: Pop method
 ms.assetid: 4fae7f98-29f1-4041-ba43-601f2e5145ec
-caps.latest.revision: 14
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f7635ddcc1b3d336f5e3de66e62714bd93a06158
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# pop メソッド (Array) (JavaScript)
+# <a name="pop-method-array-javascript"></a>pop メソッド (Array) (JavaScript)
 配列の最後の要素を削除し、削除した要素を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 arrayObj.pop( )  
 ```  
   
-## 解説  
- [push](../../javascript/reference/push-method-array-javascript.md) メソッドと `pop` メソッドを使用すると、後入れ先出し \(LIFO: Last In First Out\) の原則に従ってデータを格納するスタックをシミュレートできます。  
+## <a name="remarks"></a>コメント  
+ [プッシュ](../../javascript/reference/push-method-array-javascript.md)と`pop`メソッドを使用すると、シミュレート、スタックは、まず先出し (LIFO) のデータを格納するには、最後の原則を使用します。  
   
- `arrayObj` 参照は必須で、`Array` オブジェクトを指定します。  
+ 必要な`arrayObj`参照は、`Array`オブジェクト。  
   
- 配列が空の場合は、`undefined` を返します。  
+ 配列が空の場合、`undefined`が返されます。  
   
-## 使用例  
+## <a name="example"></a>例  
  `pop` メソッドの使用例を次に示します。  
   
-```javascript  
+```JavaScript  
 var number;  
 var my_array = new Array();  
   
@@ -61,8 +62,8 @@ while (number != undefined)
 // Output: 9 8 7 6 5  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv55](../../javascript/reference/includes/jsv55-md.md)]  
   
-## 参照  
- [push メソッド \(Array\)](../../javascript/reference/push-method-array-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [push メソッド (Array)](../../javascript/reference/push-method-array-javascript.md)

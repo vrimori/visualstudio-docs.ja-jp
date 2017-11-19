@@ -1,99 +1,99 @@
 ---
-title: "CONTEXT_COMPARE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CONTEXT_COMPARE"
-helpviewer_keywords: 
-  - "CONTEXT_COMPARE 列挙型"
+title: "CONTEXT_COMPARE |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CONTEXT_COMPARE
+helpviewer_keywords: CONTEXT_COMPARE enumeration
 ms.assetid: 701ed61c-a320-4c20-a335-0b840024abc0
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 48043375ebdf904a7fafbae5e4193b42d8ba8269
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CONTEXT_COMPARE
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-2 個のメモリのコンテキストを比較するための条件を指定します。  
+# <a name="contextcompare"></a>CONTEXT_COMPARE
+2 つのメモリ コンテキストを比較するための条件を指定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-enum enum_CONTEXT_COMPARE {   
-   CONTEXT_EQUAL                 = 0x0001,  
-   CONTEXT_LESS_THAN             = 0x0002,  
-   CONTEXT_GREATER_THAN          = 0x0003,  
-   CONTEXT_LESS_THAN_OR_EQUAL    = 0x0004,  
-   CONTEXT_GREATER_THAN_OR_EQUAL = 0x0005,  
-   CONTEXT_SAME_SCOPE            = 0x0006,  
-   CONTEXT_SAME_FUNCTION         = 0x0007,  
-   CONTEXT_SAME_MODULE           = 0x0008,  
-   CONTEXT_SAME_PROCESS          = 0x0009  
+```cpp  
+enum enum_CONTEXT_COMPARE {   
+   CONTEXT_EQUAL                 = 0x0001,  
+   CONTEXT_LESS_THAN             = 0x0002,  
+   CONTEXT_GREATER_THAN          = 0x0003,  
+   CONTEXT_LESS_THAN_OR_EQUAL    = 0x0004,  
+   CONTEXT_GREATER_THAN_OR_EQUAL = 0x0005,  
+   CONTEXT_SAME_SCOPE            = 0x0006,  
+   CONTEXT_SAME_FUNCTION         = 0x0007,  
+   CONTEXT_SAME_MODULE           = 0x0008,  
+   CONTEXT_SAME_PROCESS          = 0x0009  
 };  
 typedef DWORD CONTEXT_COMPARE;  
 ```  
   
-```c#  
-public enum enum_CONTEXT_COMPARE {   
-   CONTEXT_EQUAL                 = 0x0001,  
-   CONTEXT_LESS_THAN             = 0x0002,  
-   CONTEXT_GREATER_THAN          = 0x0003,  
-   CONTEXT_LESS_THAN_OR_EQUAL    = 0x0004,  
-   CONTEXT_GREATER_THAN_OR_EQUAL = 0x0005,  
-   CONTEXT_SAME_SCOPE            = 0x0006,  
-   CONTEXT_SAME_FUNCTION         = 0x0007,  
-   CONTEXT_SAME_MODULE           = 0x0008,  
-   CONTEXT_SAME_PROCESS          = 0x0009  
+```csharp  
+public enum enum_CONTEXT_COMPARE {   
+   CONTEXT_EQUAL                 = 0x0001,  
+   CONTEXT_LESS_THAN             = 0x0002,  
+   CONTEXT_GREATER_THAN          = 0x0003,  
+   CONTEXT_LESS_THAN_OR_EQUAL    = 0x0004,  
+   CONTEXT_GREATER_THAN_OR_EQUAL = 0x0005,  
+   CONTEXT_SAME_SCOPE            = 0x0006,  
+   CONTEXT_SAME_FUNCTION         = 0x0007,  
+   CONTEXT_SAME_MODULE           = 0x0008,  
+   CONTEXT_SAME_PROCESS          = 0x0009  
 };  
 ```  
   
-## メンバー  
- CONTEXT\_EQUAL  
- ターゲットのメモリのコンテキストと同じリストの最初のメモリのコンテキストを探します。  
+## <a name="members"></a>メンバー  
+ CONTEXT_EQUAL  
+ ターゲット メモリ コンテキストに相当するリスト内の最初のメモリ コンテキストを求めます。  
   
- CONTEXT\_LESS\_THAN  
- ターゲットであるメモリのコンテキストより小さいリストの最初のメモリのコンテキストを探します。  
+ CONTEXT_LESS_THAN  
+ ターゲット メモリ コンテキストよりも小さいリスト内の最初のメモリ コンテキストを求めます。  
   
- CONTEXT\_GREATER\_THAN  
- ターゲットのメモリのコンテキストより大きなリストの最初のメモリのコンテキストを探します。  
+ CONTEXT_GREATER_THAN  
+ ターゲット メモリ コンテキストよりも大きいリスト内の最初のメモリ コンテキストを求めます。  
   
- CONTEXT\_LESS\_THAN\_OR\_EQUAL  
- ターゲットのメモリのコンテキスト以下であるリストの最初のメモリのコンテキストを探します。  
+ CONTEXT_LESS_THAN_OR_EQUAL  
+ 以下をターゲット メモリ コンテキストには、一覧に最初のメモリ コンテキストを検索します。  
   
- CONTEXT\_GREATER\_THAN\_OR\_EQUAL  
- より大きい \[ターゲットのメモリのコンテキストに設定します。リストの最初のメモリをコンテキスト。  
+ CONTEXT_GREATER_THAN_OR_EQUAL  
+ 大きいかメモリのターゲット コンテキストを等しい値をリスト内の最初のメモリ コンテキストを求めます。  
   
- CONTEXT\_SAME\_SCOPE  
- ターゲットのメモリのコンテキストと同じスコープ内にあるリストの最初のメモリのコンテキストを探します。  
+ CONTEXT_SAME_SCOPE  
+ メモリのターゲット コンテキストと同じスコープ内にある一覧で最初のメモリ コンテキストを検索します。  
   
- CONTEXT\_SAME\_FUNCTION  
- ターゲットのメモリの範囲と同じ機能にあるリストの最初のメモリのコンテキストを探します。  
+ CONTEXT_SAME_FUNCTION  
+ ターゲット メモリの範囲と同じ関数内にあるリストの最初のメモリ コンテキストを検索します。  
   
- CONTEXT\_SAME\_MODULE  
- ターゲットのメモリのコンテキストと同じモジュールにあるリストの最初のメモリのコンテキストを探します。  
+ CONTEXT_SAME_MODULE  
+ メモリのターゲット コンテキストと同じモジュールであるリストの最初のメモリ コンテキストを検索します。  
   
- CONTEXT\_SAME\_PROCESS  
- ターゲットのメモリのコンテキストと同じプロセスにあるリストの最初のメモリのコンテキストを探します。  
+ CONTEXT_SAME_PROCESS  
+ メモリのターゲット コンテキストと同じプロセス内にある一覧で最初のメモリ コンテキストを検索します。  
   
-## 解説  
- [比較](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md) のメソッドに引数として渡されます。  
+## <a name="remarks"></a>コメント  
+ 引数として渡される、[比較](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)メソッドです。  
   
- これらの値は指定した比較条件を満たすリスト内の最初のメモリのコンテキストを検索するために使用されます。  メモリの `IDebugMemoryContext2::Compare` のコンテキストがメソッドを介してに対して自身を比較するメモリのコンテキストの一覧を示します。  比較演算子を `true` なリストに対するメモリの最初のコンテキストはを返します。  
+ これらの値は、指定した比較条件を満たすリスト内の最初のメモリ コンテキストの検索に使用されます。 メモリ コンテキストを通じて自体に対して比較するメモリ コンテキストの一覧を指定、`IDebugMemoryContext2::Compare`メソッドです。 比較演算子の一覧の最初のメモリ コンテキスト`true`次が返されます。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [比較](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Compare](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)

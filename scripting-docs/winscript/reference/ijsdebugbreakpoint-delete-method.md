@@ -1,37 +1,41 @@
 ---
-title: "IJsDebugBreakPoint::Delete メソッド | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Ijsdebugbreakpoint::delete メソッド |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IJSDebugBreakPoint.Delete
 apilocation: jscript9diag.dll
 ms.assetid: 9739070c-cc62-4912-9937-76467fd1b3dc
-caps.latest.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f61da0754147e0a449663cc9815501dc8d38e6f5
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IJsDebugBreakPoint::Delete メソッド
-Deletes the breakpoint.  
+# <a name="ijsdebugbreakpointdelete-method"></a>IJsDebugBreakPoint::Delete メソッド
+ブレークポイントを削除します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT Delete(void);  
 ```  
   
-## 戻り値  
+## <a name="return-value"></a>戻り値  
   
-## 解説  
- 削除されたブレークポイントで呼び出された場合は S\_FALSE 返します。  
+## <a name="remarks"></a>コメント  
+ 削除されたブレークポイントで呼び出された場合は S_FALSE 返します。  
   
-## 必要条件  
- **Header:** jscript9diag.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** jscript9diag.h です  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IJsDebugBreakPoint インターフェイス](../../winscript/reference/ijsdebugbreakpoint-interface.md)

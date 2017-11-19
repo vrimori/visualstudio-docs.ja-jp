@@ -1,11 +1,10 @@
 ---
-title: "[Content_types] .xml ファイルの構造 |Microsoft ドキュメント"
+title: "[Content_types] .xml ファイルの構造体 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,37 +13,24 @@ helpviewer_keywords:
 - opc
 - vsix
 ms.assetid: 9c399598-b9fa-4da7-84b5-defbf82e9335
-caps.latest.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 7278fb37984b92a6a07823c552db5c59a446d0d2
-ms.openlocfilehash: 6f45707a88a27fa54840825d9562f859385ce4b7
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: f399cb0c88e044224d554cf8e17cc4d217498e87
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="the-structure-of-the-contenttypesxml-file"></a>[Content_types] .xml ファイルの構造
-VSIX パッケージ内のコンテンツの種類についてを説明します。 Visual Studio は [Content_Types] .xml ファイルを使用して、パッケージのインストールが、ファイル自体はインストールされません。  
+VSIX パッケージ内のコンテンツの種類についてを説明します。 Visual Studio は、パッケージをインストールする [Content_Types] .xml ファイルを使用しますが、ファイル自体はインストールされません。  
   
 > [!NOTE]
->  [Content_Types] .xml ファイルの種類の一部は、このトピックの VSIX パッケージで使用されている [Content_Type] .xml ファイルにのみ適用されますが、 *Open Packaging Conventions (OPC)*標準です。 詳細については、次を参照してください。 [OPC: A 新しい標準のパッケージ化、データ](http://go.microsoft.com/fwlink/?LinkID=148207)MSDN Web サイトです。  
+>  このトピックでは、VSIX パッケージで使用されている [Content_Type] .xml ファイルにのみ、[Content_Types] .xml ファイルの種類の一部、 *Open Packaging Conventions (OPC)*標準です。 詳細については、次を参照してください。 [OPC: A 新しい標準のパッケージ化、データ](http://go.microsoft.com/fwlink/?LinkID=148207)MSDN Web サイトです。  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
- 次のセクションでは、ルート要素とその属性と子要素について説明します。  
+ 次のセクションでは、ルート要素とその属性や子要素について説明します。  
   
 ### <a name="root-element"></a>ルート要素  
   
@@ -56,20 +42,20 @@ VSIX パッケージ内のコンテンツの種類についてを説明します
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Xmlns`|(必須) この [Content_Types] .xml ファイルを使用するスキーマの場所。|  
+|`Xmlns`|(必須) この [Content_Types] .xml ファイルを使用するスキーマの場所です。|  
   
-### <a name="attribute-name-attribute"></a>{属性 name}属性  
+### <a name="attribute-name-attribute"></a>{属性名}属性  
   
 |値|説明|  
 |-----------|-----------------|  
-|http://schemas.openformats.org/package/2006/content-types|コンテンツの種類のスキーマの場所。|  
+|http://schemas.openformats.org/package/2006/content-types|コンテンツの種類のスキーマの場所です。|  
   
 ### <a name="child-elements"></a>子要素  
  `Types`要素は、任意の数を含めることができます`Default`要素。  
   
 |要素|説明|  
 |-------------|-----------------|  
-|`Default`|VSIX パッケージ内のコンテンツの種類について説明します。 パッケージのすべてのファイル タイプがあります独自`Default`要素。|  
+|`Default`|VSIX パッケージ内のコンテンツの種類について説明します。 パッケージ内のすべてのファイル種類があります独自`Default`要素。|  
   
 ### <a name="attributes"></a>属性  
   
@@ -78,8 +64,8 @@ VSIX パッケージ内のコンテンツの種類についてを説明します
 |`Extension`|VSIX パッケージ内のファイルのファイル名拡張子。|  
 |`ContentType`|ファイル名拡張子に関連付けられているコンテンツの種類について説明します。|  
   
-### <a name="attribute-name-attribute"></a>{属性 name}属性  
- Visual Studio は、次を認識`ContentType`関連付けられた値`Extension`型です。  
+### <a name="attribute-name-attribute"></a>{属性名}属性  
+ Visual Studio は、次を認識`ContentType`関連付けられている値`Extension`型です。  
   
 |拡張子|ContentType|  
 |---------------|-----------------|  
@@ -87,16 +73,16 @@ VSIX パッケージ内のコンテンツの種類についてを説明します
 |pkgdef|テキスト/プレーン|  
 |xml|text/xml|  
 |vsixmanifest|text/xml|  
-|htm ファイルや html|テキストと html|  
+|htm ファイルや html|テキスト/html|  
 |rtf|アプリケーション/rtf|  
 |pdf|アプリケーション/pdf|  
-|gif|gif イメージ/|  
-|jpg または jpeg|jpg イメージ/|  
-|tiff|tiff イメージ/|  
-|vsix|アプリケーション/zip|  
-|zip|アプリケーション/zip|  
-|dll|アプリケーションまたはオクテット ストリーム|  
-|その他のすべてのファイルの種類|アプリケーションまたはオクテット ストリーム|  
+|gif|イメージ/gif|  
+|jpg または jpeg|/jpg イメージ|  
+|tiff|tiff/image|  
+|vsix|アプリケーションまたは zip|  
+|Zip 圧縮します。|アプリケーションまたは zip|  
+|dll|application/octet-stream|  
+|その他のすべてのファイルの種類|application/octet-stream|  
   
 ## <a name="example"></a>例  
   
@@ -119,4 +105,4 @@ VSIX パッケージ内のコンテンツの種類についてを説明します
 ## <a name="see-also"></a>関連項目  
  [VSIX パッケージの構造](../extensibility/anatomy-of-a-vsix-package.md)   
  [VSIX 拡張機能スキーマ 1.0 リファレンス](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)   
- [OPC: データのパッケージ化するための新しい標準](http://go.microsoft.com/fwlink/?LinkID=148207)
+ [OPC: データをパッケージ化するための新しい標準](http://go.microsoft.com/fwlink/?LinkID=148207)

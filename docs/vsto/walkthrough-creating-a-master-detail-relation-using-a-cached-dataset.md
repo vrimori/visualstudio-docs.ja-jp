@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Creating a Master Detail Relation Using a Cached Dataset | Microsoft Docs'
+title: "チュートリアル: キャッシュされたデータセットを使用してマスターの詳細関係の作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,186 +14,188 @@ helpviewer_keywords:
 - master-detail tables [Office development in Visual Studio], walkthroughs
 - data caching [Office development in Visual Studio], Master/Detail Relation
 ms.assetid: 419f4e07-c67f-4fc9-973a-bc794f349ac3
-caps.latest.revision: 41
-author: kempb
-ms.author: kempb
+caps.latest.revision: "41"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: fb02770a5cb607cc13a5db2be2cc7128a699d569
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: b392b4de0288478c73fba8cecd88be1f701cd5ae
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-creating-a-master-detail-relation-using-a-cached-dataset"></a>Walkthrough: Creating a Master Detail Relation Using a Cached Dataset
-  This walkthrough demonstrates creating a master/detail relation on a worksheet, and caching the data so that the solution can be used offline.  
+# <a name="walkthrough-creating-a-master-detail-relation-using-a-cached-dataset"></a>チュートリアル: キャッシュされたデータセットを使用してマスターの詳細関係の作成
+  このチュートリアルでは、ワークシートで、マスター/詳細関係を作成して、ソリューションをオフラインで使用できるように、データのキャッシュを示します。  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- During this walkthrough, you will learn how to:  
+ このチュートリアルでは、次の作業を行う方法について説明します。  
   
--   Add controls to a worksheet.  
+-   コントロールをワークシートに追加します。  
   
--   Set up a dataset to be cached in a worksheet.  
+-   ワークシート内でキャッシュされるデータセットを設定します。  
   
--   Add code to enable scrolling through the records.  
+-   レコードのスクロールを有効にするコードを追加します。  
   
--   Test your project.  
+-   プロジェクトをテストします。  
   
 > [!NOTE]  
->  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
+>  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] or [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
+-   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] または [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]。  
   
--   Access to the Northwind SQL Server sample database. The database can be on your development computer or on a server.  
+-   Northwind SQL Server サンプル データベースにアクセスします。 データベースには、開発用コンピューター上またはサーバーを指定できます。  
   
--   Permissions to read from and write to the SQL Server database.  
+-   読み取りと書き込みの SQL Server データベースにアクセスを許可します。  
   
-## <a name="creating-a-new-project"></a>Creating a New Project  
- In this step, you will create an Excel Workbook project.  
+## <a name="creating-a-new-project"></a>新規プロジェクトの作成  
+ このステップでは、Excel ブック プロジェクトを作成します。  
   
-#### <a name="to-create-a-new-project"></a>To create a new project  
+#### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
-1.  Create an Excel Workbook project with the name **My Master-Detail**, using either Visual Basic or C#. Make sure that **Create a new document** is selected. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+1.  名前の Excel ブック プロジェクトを作成**マイ マスター/詳細**、Visual Basic または c# を使用します。 確認して**新しいドキュメントを作成する**が選択されています。 詳細については、「 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
   
- Visual Studio opens the new Excel workbook in the designer and adds the **My Master-Detail** project to **Solution Explorer**.  
+ デザイナーで新しい Excel ブックを開き、**マイ マスター/詳細**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
-## <a name="creating-the-data-source"></a>Creating the Data Source  
- Use the **Data Sources** window to add a typed dataset to your project.  
+## <a name="creating-the-data-source"></a>データ ソースの作成  
+ **[データ ソース]** ウィンドウを使用して、型指定されたデータセットをプロジェクトに追加します。  
   
-#### <a name="to-create-the-data-source"></a>To create the data source  
+#### <a name="to-create-the-data-source"></a>データ ソースを作成するには  
   
-1.  If the **Data Sources** window is not visible, display it by, on the menu bar, choosing **View**, **Other Windows**, **Data Sources**.  
+1.  **[データ ソース]** ウィンドウが表示されていない場合は、メニュー バーの **[表示]**、 **[その他のウィンドウ]**、 **[データ ソース]**の順にクリックして表示します。  
   
-2.  Choose **Add New Data Source** to start the **Data Source Configuration Wizard**.  
+2.  **[新しいデータ ソースの追加]** をクリックして **データ ソース構成ウィザード**を開始します。  
   
-3.  Select **Database** and then click **Next**.  
+3.  選択**データベース** をクリックし、**次**です。  
   
-4.  Select a data connection to the Northwind sample SQL Server database, or add a new connection by using the **New Connection** button.  
+4.  Northwind サンプル SQL Server データベースへのデータ接続を選択するかを使用して新しい接続を追加、**新しい接続**ボタンをクリックします。  
   
-5.  After selecting or creating a connection, click **Next**.  
+5.  選択するか、接続を作成するをクリックして**次**です。  
   
-6.  Clear the option to save the connection if it is selected, and then click **Next**.  
+6.  クリックしてオンになっている場合、接続を保存するオプションをオフに**次**です。  
   
-7.  Expand the **Tables** node in the **Database objects** window.  
+7.  展開して、**テーブル**内のノード、**データベース オブジェクト**ウィンドウです。  
   
-8.  Select the **Orders** table and the **Order Details** table.  
+8.  選択、 **Orders**テーブルおよび**Order Details**テーブル。  
   
-9. Click **Finish**.  
+9. **[完了]**をクリックします。  
   
- The wizard adds the two tables to the **Data Sources** window. It also adds a typed dataset to your project that is visible in **Solution Explorer**.  
+ ウィザードは、2 つのテーブルを追加、**データソース**ウィンドウです。 表示されているプロジェクトにも型指定されたデータセットを追加**ソリューション エクスプ ローラー**です。  
   
-## <a name="adding-controls-to-the-worksheet"></a>Adding Controls to the Worksheet  
- In this step, you will add a named range, a list object, and two buttons to the first worksheet. First, add the named range and the list object from the **Data Sources** window so that they are automatically bound to the data source. Next, add the buttons from the **Toolbox**.  
+## <a name="adding-controls-to-the-worksheet"></a>ワークシートへのコントロールの追加  
+ この手順では、最初のワークシートに、名前付き範囲、リスト オブジェクト、および 2 つのボタンを追加します。 最初に、名前付き範囲とオブジェクトを追加、一覧から、**データ ソース**ウィンドウに自動的にデータ ソースにバインドされるようにします。 次に、追加のボタン、**ツールボックス**です。  
   
-#### <a name="to-add-a-named-range-and-a-list-object"></a>To add a named range and a list object  
+#### <a name="to-add-a-named-range-and-a-list-object"></a>名前付き範囲およびリスト オブジェクトを追加するには  
   
-1.  Verify that the **My Master-Detail.xlsx** workbook is open in the Visual Studio designer, with **Sheet1** displayed.  
+1.  いることを確認、**マイ マスター Detail.xlsx** 、Visual Studio デザイナーで開いているブックで**Sheet1**が表示されます。  
   
-2.  Open the **Data Sources** window and expand the **Orders** node.  
+2.  開く、**データ ソース**ウィンドウを展開し、 **Orders**ノード。  
   
-3.  Select the **OrderID** column, and then click the drop-down arrow that appears.  
+3.  選択、 **OrderID**列で、表示されるドロップダウン矢印をクリックします。  
   
-4.  Click **NamedRange** in the drop-down list, and then drag the **OrderID** column to cell **A2**.  
+4.  をクリックして**NamedRange**をドラッグし、ドロップダウン一覧で、 **OrderID**セルに列**A2**です。  
   
-     A <xref:Microsoft.Office.Tools.Excel.NamedRange> control named `OrderIDNamedRange` is created in cell **A2**. At the same time, a <xref:System.Windows.Forms.BindingSource> named `OrdersBindingSource`, a table adapter, and a <xref:System.Data.DataSet> instance are added to the project. The control is bound to the <xref:System.Windows.Forms.BindingSource>, which in turn is bound to the <xref:System.Data.DataSet> instance.  
+     A<xref:Microsoft.Office.Tools.Excel.NamedRange>という名前のコントロール`OrderIDNamedRange`セルで作成された**A2**です。 同時に、<xref:System.Windows.Forms.BindingSource>という名前`OrdersBindingSource`、テーブルのアダプターでは、および<xref:System.Data.DataSet>インスタンスは、プロジェクトに追加されます。 コントロールがバインドされている、 <xref:System.Windows.Forms.BindingSource>、さらにこれがバインドに、<xref:System.Data.DataSet>インスタンス。  
   
-5.  Scroll down past the columns that are under the **Orders** table. At the bottom of the list is the **Order Details** table; it is here because it is a child of the **Orders** table. Select this **Order Details** table, not the one that is at the same level as the **Orders** table, and then click the drop-down arrow that appears.  
+5.  過去の下にある列を下にスクロール、 **Orders**テーブル。 一覧の下部には、 **Order Details**テーブルです。 ここでは、の子になっているため、 **Orders**テーブル。 このオプションを選択**Order Details**テーブルと同じレベルにあるものではなく、 **Orders**テーブル、および、表示されるドロップダウン矢印をクリックします。  
   
-6.  Click **ListObject** in the drop-down list, and then drag the **OrderDetails** table to cell **A6**.  
+6.  をクリックして**ListObject**をドラッグし、ドロップダウン一覧で、 **OrderDetails**テーブル セルに**A6**です。  
   
-7.  A <xref:Microsoft.Office.Tools.Excel.ListObject> control named **Order_DetailsListObject** is created in cell **A6**, and bound to the <xref:System.Windows.Forms.BindingSource>.  
+7.  A<xref:Microsoft.Office.Tools.Excel.ListObject>という名前のコントロール**Order_DetailsListObject**セルで作成された**A6**にバインドされていると、<xref:System.Windows.Forms.BindingSource>です。  
   
-#### <a name="to-add-two-buttons"></a>To add two buttons  
+#### <a name="to-add-two-buttons"></a>2 つのボタンを追加するには  
   
-1.  From the **Common Controls** tab of the **Toolbox**, add a <xref:System.Windows.Forms.Button> control to cell **A3** of the worksheet.  
+1.  **コモン コントロール**のタブ、**ツールボックス**、追加、<xref:System.Windows.Forms.Button>コントロールをセル**A3**ワークシートのです。  
   
-     This button is named `Button1`.  
+     このボタンの名前は`Button1`します。  
   
-2.  Add another <xref:System.Windows.Forms.Button> control to cell **B3** of the worksheet.  
+2.  もう 1 つ追加<xref:System.Windows.Forms.Button>コントロールをセル**B3**ワークシートのです。  
   
-     This button is named `Button2`.  
+     このボタンの名前は`Button2`します。  
   
- Next, mark the dataset to be cached in the document.  
+ 次に、ドキュメントでキャッシュされるデータセットをマークします。  
   
-## <a name="caching-the-dataset"></a>Caching the Dataset  
- Mark the dataset to be cached in the document by making the dataset public and setting the **CacheInDocument** property.  
+## <a name="caching-the-dataset"></a>データセットのキャッシュ  
+ データセットをパブリック、設定は、データセットをすることで、ドキュメントでキャッシュをマーク、 **CacheInDocument**プロパティです。  
   
-#### <a name="to-cache-the-dataset"></a>To cache the dataset  
+#### <a name="to-cache-the-dataset"></a>データセットをキャッシュするには  
   
-1.  Select **NorthwindDataSet** in the component tray.  
+1.  選択**NorthwindDataSet**コンポーネント トレイにします。  
   
-2.  In the **Properties** window, change the **Modifiers** property to **Public**.  
+2.  **プロパティ**ウィンドウで、変更、**修飾子**プロパティを**パブリック**です。  
   
-     Datasets must be public before caching is enabled.  
+     キャッシュを有効にする前に、データセットはパブリックである必要があります。  
   
-3.  Change the **CacheInDocument** property to **True**.  
+3.  変更、 **CacheInDocument**プロパティを**True**です。  
   
- The next step is to add text to the buttons, and in C# add code to hook up the event handlers.  
+ 次の手順では、ボタンにテキストを追加し、C# の場合、イベント ハンドラーをフックするコードを追加します。  
   
-## <a name="initializing-the-controls"></a>Initializing the Controls  
- Set the button text and add event handlers during the <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> event.  
+## <a name="initializing-the-controls"></a>コントロールの初期化  
+ ボタンのテキストを設定中にイベント ハンドラーを追加して、<xref:Microsoft.Office.Tools.Excel.Workbook.Startup>イベント。  
   
-#### <a name="to-initialize-the-data-and-the-controls"></a>To initialize the data and the controls  
+#### <a name="to-initialize-the-data-and-the-controls"></a>データと、コントロールを初期化するには  
   
-1.  In **Solution Explorer**, right-click **Sheet1.vb** or **Sheet1.cs**, and then click **View Code** on the shortcut menu.  
+1.  **ソリューション エクスプ ローラー**を右クリックして**Sheet1.vb**または**Sheet1.cs**、クリックして**コードの表示**ショートカット メニューの します。  
   
-2.  Add the following code to the `Sheet1_Startup` method to set the text for the buttons.  
+2.  次のコードを追加、`Sheet1_Startup`ボタンのテキストを設定します。  
   
-     [!code-vb[Trin_VstcoreDataExcel#15](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#15)]  [!code-csharp[Trin_VstcoreDataExcel#15](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#15)]  
+     [!code-vb[Trin_VstcoreDataExcel#15](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#15)]
+     [!code-csharp[Trin_VstcoreDataExcel#15](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#15)]  
   
-3.  For C# only, add event handlers for the button click events to the `Sheet1_Startup` method.  
+3.  C# の場合のみ、追加、ボタンのイベント ハンドラーにイベントをクリックして、`Sheet1_Startup`メソッドです。  
   
      [!code-csharp[Trin_VstcoreDataExcel#16](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#16)]  
   
-## <a name="adding-code-to-enable-scrolling-through-the-records"></a>Adding Code to Enable Scrolling Through the Records  
- Add code to the <xref:System.Windows.Forms.Control.Click> event handler of each button to move through the records.  
+## <a name="adding-code-to-enable-scrolling-through-the-records"></a>レコードのスクロールを有効にするコードを追加します。  
+ コードを追加して、<xref:System.Windows.Forms.Control.Click>レコード間を移動するには、各ボタンのイベント ハンドラー。  
   
-#### <a name="to-scroll-through-the-records"></a>To scroll through the records  
+#### <a name="to-scroll-through-the-records"></a>レコードをスクロールするには  
   
-1.  Add an event handler for the <xref:System.Windows.Forms.Control.Click> event of `Button1`, and add the following code to move backwards through the records:  
+1.  イベント ハンドラーを追加、<xref:System.Windows.Forms.Control.Click>のイベント`Button1`レコードを前後に移動するには、次のコードを追加します。  
   
-     [!code-vb[Trin_VstcoreDataExcel#17](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#17)]  [!code-csharp[Trin_VstcoreDataExcel#17](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#17)]  
+     [!code-vb[Trin_VstcoreDataExcel#17](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#17)]
+     [!code-csharp[Trin_VstcoreDataExcel#17](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#17)]  
   
-2.  Add an event handler for the <xref:System.Windows.Forms.Control.Click> event of `Button2`, and add the following code to advance through the records:  
+2.  イベント ハンドラーを追加、<xref:System.Windows.Forms.Control.Click>のイベント`Button2`レコードに進むには、次のコードを追加します。  
   
-     [!code-vb[Trin_VstcoreDataExcel#18](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#18)]  [!code-csharp[Trin_VstcoreDataExcel#18](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#18)]  
+     [!code-vb[Trin_VstcoreDataExcel#18](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#18)]
+     [!code-csharp[Trin_VstcoreDataExcel#18](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#18)]  
   
-## <a name="testing-the-application"></a>Testing the Application  
- Now you can test your workbook to make sure that the data appears as expected, and that you can use the solution offline.  
+## <a name="testing-the-application"></a>アプリケーションのテスト  
+ これで、想定どおりにデータが表示されると、ソリューションをオフライン使用できるかどうかを確認するブックをテストできます。  
   
-#### <a name="to-test-the-data-caching"></a>To test the data caching  
+#### <a name="to-test-the-data-caching"></a>データ キャッシュをテストするには  
   
-1.  Press **F5**.  
+1.  **F5**キーを押します。  
   
-2.  Verify that the named range and the list object are filled with data from the data source.  
+2.  名前付き範囲およびリスト オブジェクトで塗りつぶされて、データ ソースからデータを確認します。  
   
-3.  Scroll through some of the records by clicking the buttons.  
+3.  ボタンをクリックして、レコードの一部をスクロールします。  
   
-4.  Save the workbook, and then close the workbook and Visual Studio.  
+4.  ブックを保存し、ブックと Visual Studio を閉じます。  
   
-5.  Disable the connection to the database. Unplug the network cable from your computer if the database is located on a server, or stop the SQL Server service if the database is on your development computer.  
+5.  データベースへの接続を無効にします。 サーバーでは、データベースがある場合は、コンピューターからネットワーク ケーブルを外します。 またはデータベースが開発用コンピューター上にある場合は、SQL Server サービスを停止します。  
   
-6.  Open Excel, and then open **My Master-Detail.xlsx** from the \bin directory (\My Master-Detail\bin in Visual Basic or \My Master-Detail\bin\debug in C#).  
+6.  Excel を開き**マイ マスター Detail.xlsx** \bin ディレクトリ (Visual Basic で \My Master-Detail\bin または c# で \My Master-Detail\bin\debug) からです。  
   
-7.  Scroll through some of the records to see that the worksheet operates normally when disconnected.  
+7.  切断されている場合、ワークシートが通常どおり動作するを表示するレコードの一部をスクロールします。  
   
-8.  Reconnect to the database. Connect your computer to the network again if the database is located on a server, or start the SQL Server service if the database is on your development computer.  
+8.  データベースに再接続します。 サーバーでは、データベースがある場合に、ネットワークにコンピューターをもう一度接続またはデータベースが開発用コンピューター上にある場合は、SQL Server サービスを開始します。  
   
-## <a name="next-steps"></a>Next Steps  
- This walkthrough shows the basics of creating a master/detail data relationship on a worksheet and caching a dataset. Here are some tasks that might come next:  
+## <a name="next-steps"></a>次の手順  
+ このチュートリアルでは、ワークシートにマスター/詳細形式のデータ リレーションシップを作成して、データセットのキャッシュの基礎を説明します。 ここでは、次の作業を行います。  
   
--   Deploy the solution. For more information, see [Deploying an Office Solution](../vsto/deploying-an-office-solution.md)  
+-   ソリューションを展開します。 詳細については、次を参照してください[Office ソリューションの配置。](../vsto/deploying-an-office-solution.md)  
   
-## <a name="see-also"></a>See Also  
- [Binding Data to Controls in Office Solutions](../vsto/binding-data-to-controls-in-office-solutions.md)   
- [Data in Office Solutions](../vsto/data-in-office-solutions.md)   
- [Caching Data](../vsto/caching-data.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)  
+## <a name="see-also"></a>関連項目  
+ [Office ソリューションでのコントロールへのデータをバインディング](../vsto/binding-data-to-controls-in-office-solutions.md)   
+ [Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)   
+ [データのキャッシュ](../vsto/caching-data.md)   
+ [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)  
   
   

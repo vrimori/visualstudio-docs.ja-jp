@@ -1,62 +1,62 @@
 ---
-title: "IDebugCustomAttribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCustomAttribute"
-helpviewer_keywords: 
-  - "IDebugCustomAttribute インターフェイス"
+title: "IDebugCustomAttribute |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugCustomAttribute
+helpviewer_keywords: IDebugCustomAttribute interface
 ms.assetid: c5ae41e9-00b9-4cca-871d-b8de9ef390d1
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 54bde0062fc6d79268a3c0d0a39989e493f4fb5c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugCustomAttribute
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このインターフェイスはカスタム属性を表し属性の名前および親クラス型を指定できます。  
+# <a name="idebugcustomattribute"></a>IDebugCustomAttribute
+このインターフェイスは、カスタム属性を表すし、名前、親、および属性のクラス型を提供できます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
-IDebugCustomAttribute : IUnknown  
+IDebugCustomAttribute : IUnknown  
 ```  
   
-## 実装についてのメモ  
- シンボルのプロバイダーはシンボルに関連付けられたカスタム属性をサポートするにはこのインターフェイスを実装します。  これは通常各オブジェクトを独自に実装されます。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ シンボル プロバイダーは、シンボルに関連付けられているカスタム属性をサポートするために、このインターフェイスを実装します。 これは通常、独自のオブジェクトで実装されます。  
   
-## 呼び出し元のメモ  
- [次へ](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md) の呼び出しはこのインターフェイスを返します。  [EnumCustomAttributes](../../../extensibility/debugger/reference/idebugcustomattributequery2-enumcustomattributes.md) のメソッドの呼び出し [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) のインターフェイス。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ 呼び出し[次](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md)このインターフェイスを返します。 呼び出し、 [EnumCustomAttributes](../../../extensibility/debugger/reference/idebugcustomattributequery2-enumcustomattributes.md)メソッドを返します、 [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)インターフェイスです。  
   
-## Vtable の順序でメソッド  
- 次の表は `IDebugCustomAttribute` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugCustomAttribute`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[GetParentField](../Topic/IDebugCustomAttribute::GetParentField.md)|現在の属性がアタッチされているフィールドを取得します。|  
-|[GetAttributeTypeField](../../../extensibility/debugger/reference/idebugcustomattribute-getattributetypefield.md)|カスタム属性クラス型を取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[GetParentField](../../../extensibility/debugger/reference/idebugcustomattribute-getparentfield.md)|現在の属性が関連付けられているフィールドを取得します。|  
+|[GetAttributeTypeField](../../../extensibility/debugger/reference/idebugcustomattribute-getattributetypefield.md)|カスタム属性クラスの型を取得します。|  
 |[GetName](../../../extensibility/debugger/reference/idebugcustomattribute-getname.md)|カスタム属性の名前を取得します。|  
-|[GetAttributeBytes](../../../extensibility/debugger/reference/idebugcustomattribute-getattributebytes.md)|バイトの BLOB として属性情報を取得します。|  
+|[GetAttributeBytes](../../../extensibility/debugger/reference/idebugcustomattribute-getattributebytes.md)|バイトの blob として属性情報を取得します。|  
   
-## 解説  
- カスタム属性は特定のクラスまたはメソッドに関連付けられたカスタムのメタデータを指定する C\# の構造体です。  
+## <a name="remarks"></a>コメント  
+ カスタム属性は、C# の場合、特定のクラスまたはメソッドに関連付けられているカスタムのメタデータを提供する構造です。  
   
-## 必要条件  
- ヘッダー : sh.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: sh.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [シンボルのプロバイダー インターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
+## <a name="see-also"></a>関連項目  
+ [シンボル プロバイダー インターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)   
  [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

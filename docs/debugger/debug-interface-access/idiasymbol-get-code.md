@@ -1,53 +1,52 @@
 ---
-title: "IDiaSymbol::get_code | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_code メソッド"
+title: "Idiasymbol::get_code |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_code method
 ms.assetid: 5f425fa3-7ba6-4979-8b3e-0fcd06cbba73
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8ca47b8160a7ecc70f9971110ece5b1c228217c0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_code
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-シンボルがコード アドレスを表示するかどうかを指定するフラグを取得します。  
+# <a name="idiasymbolgetcode"></a>IDiaSymbol::get_code
+シンボルはコードのアドレスを参照するかどうかを指定するフラグを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_code (   
-   BOOL* pRetVal  
+```C++  
+HRESULT get_code (   
+   BOOL* pRetVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- \[入力\] シンボルがコード アドレスを返します。それ以外の場合は`FALSE` 参照 `TRUE` を返します。  
+ [out]返します`TRUE`シンボルは、コードのアドレスを参照している場合を返しますそれ以外の場合、`FALSE`です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合戻り `S_FALSE` またはエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  `S_FALSE` の戻り値はプロパティのシンボルで使用できないことを意味します。  
+>  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
   
-|必要条件|Description|  
-|----------|-----------------|  
+|必要条件|説明|  
+|-----------------|-----------------|  
 |ヘッダー:|dia2.h|  
-|バージョン :|DIA SDK v7.0|  
+|バージョン:|DIA SDK v7.0|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

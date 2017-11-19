@@ -1,25 +1,29 @@
 ---
-title: "アクティビティ デザイナーの使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Visual Studio 2010 ワークフロー デザイナー [WFD], アクティビティ デザイナー"
-  - "ワークフロー デザイナー [WFD], アクティビティ デザイナー"
+title: "アクティビティ デザイナーの使用 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Workflow Designer [WFD], activity designer
+- Visual Studio 2010 Workflow Designer [WFD], activity designer
 ms.assetid: 3c2725c3-091b-49ab-81e7-d4c7028d47a2
-caps.latest.revision: 9
-author: "ErikRe"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: ErikRe
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 91ce5811be2aae3744afb7444ab35a9a3da54a20
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# アクティビティ デザイナーの使用
-[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]には、システムによって提供されるさまざまなアクティビティが用意されており、これらを、アクティビティおよびワークフローの構築時に使用できます。このセクションでは、システムによって提供されるアクティビティとその利用可能なデザイナーの分類について説明します。それぞれの分類に属する個々のアクティビティとそのデザイナーに関するトピックでは、アクティビティの機能とその使用方法を説明しています。  
+# <a name="using-the-activity-designers"></a>アクティビティ デザイナーの使用
+[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]には、システムによって提供されるさまざまなアクティビティが用意されており、これらを、アクティビティおよびワークフローの構築時に使用できます。 このセクションでは、システムによって提供されるアクティビティとその利用可能なデザイナーの分類について説明します。 それぞれの分類に属する個々のアクティビティとそのデザイナーに関するトピックでは、アクティビティの機能とその使用方法を説明しています。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  [制御フロー](../workflow-designer/control-flow-activity-designers.md)  
  ワークフロー内のフロー制御を目的としたアクティビティ デザイナー。  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 9
  [ランタイム](../workflow-designer/runtime-activity-designers.md)  
  ワークフロー アクティビティを保持および終了するために使用するアクティビティ デザイナー。  
   
- [プリミティブ](../workflow-designer/primitives-activity-designers.md)  
+ [Primitives](../workflow-designer/primitives-activity-designers.md)  
  assign や delay などのプリミティブ アクティビティの管理に使用するアクティビティ デザイナー。  
   
  [トランザクション](../workflow-designer/transaction-activity-designers.md)  
@@ -48,12 +52,12 @@ caps.handback.revision: 9
  エラー処理アクティビティの管理に使用するアクティビティ デザイナー。  
   
  [移行](../workflow-designer/migration-activity-designers.md)  
- [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] および [!INCLUDE[netfx35_short](../workflow-designer/includes/netfx35_short_md.md)] のワークフローと [!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)] のワークフローの間の相互運用に使用するアクティビティ デザイナー。  
+ アクティビティ デザイナー間で相互運用するために使用[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] / [!INCLUDE[netfx35_short](../workflow-designer/includes/netfx35_short_md.md)]と[!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)]ワークフローです。  
   
-## 関連項目  
+## <a name="reference"></a>参照  
  <xref:System.Activities.Presentation.Toolbox.ToolboxCategory>  
   
-## 関連項目  
+## <a name="related-sections"></a>関連項目  
  [ワークフロー デザイナーの使用](../workflow-designer/using-the-workflow-designer.md)  
   
  [ワークフロー デザイナーを使用したワークフローのデバッグ](../workflow-designer/debugging-workflows-with-the-workflow-designer.md)  

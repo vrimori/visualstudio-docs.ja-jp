@@ -1,27 +1,30 @@
 ---
-title: "IActiveScriptSite::OnScriptTerminate | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IActiveScriptSite::OnScriptTerminate |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScriptSite.OnScriptTerminate
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IActiveScriptSite_OnScriptTerminate"
+helpviewer_keywords: IActiveScriptSite_OnScriptTerminate
 ms.assetid: 3301ddf4-5929-404c-81d3-1a720e589008
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: eef8bd2a3f2e2a4eb4fd4b5f0e35fcd9acfe5bc9
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScriptSite::OnScriptTerminate
-スクリプトが実行を完了したことをホストに通知します。  
+# <a name="iactivescriptsiteonscriptterminate"></a>IActiveScriptSite::OnScriptTerminate
+スクリプトの実行が完了したことをホストに通知します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT OnScriptTerminate(  
@@ -30,18 +33,18 @@ HRESULT OnScriptTerminate(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pvarResult`  
- \[入力\]スクリプトが結果を生まなかったらスクリプトの結果を格納する変数のアドレス、または `NULL`。  
+ [in]スクリプトの結果を格納する変数のアドレスまたは`NULL`場合は、スクリプトに結果が生成されません。  
   
  `pexcepinfo`  
- \[入力\]例外情報を含む `EXCEPINFO` の構造体のアドレスは、例外が生成されなかった場合、スクリプトがいつ完了するか、`NULL` 発生させます。  
+ [in]アドレス、`EXCEPINFO`スクリプトが終了した場合に生成された例外情報を格納する構造体または`NULL`例外が生成されない場合。  
   
-## 戻り値  
+## <a name="return-value"></a>戻り値  
  正常に終了した場合は `S_OK` を返します。  
   
-## 解説  
- スクリプト エンジンは [IActiveScriptSite::OnStateChange](../../winscript/reference/iactivescriptsite-onstatechange.md) メソッドの呼び出しでは、SCRIPTSTATE\_INITIALIZED のフラグのセットと、完了前にこのメソッドを呼び出します。  このメソッドがホストに完了ステータスと結果を返すために使用できます。  ホストから沈降のイベントに基づいて、多くのスクリプト言語にホストで定義されている期間があることに注意してください。  この場合、このメソッドは、呼び出されることがあります。  
+## <a name="remarks"></a>コメント  
+ スクリプト エンジンが呼び出しの前に、このメソッドを呼び出して、 [IActiveScriptSite::OnStateChange](../../winscript/reference/iactivescriptsite-onstatechange.md) 、SCRIPTSTATE_INITIALIZED フラグを設定して、メソッドが完了します。 このメソッドは、ホストに完了の状態と結果を返しますを使用できます。 基づくホストからイベントをシンク、多くのスクリプト言語がホストによって定義されている有効期限があることに注意してください。 この場合、このメソッドは呼び出すことはありません。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)

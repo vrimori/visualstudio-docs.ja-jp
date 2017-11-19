@@ -1,57 +1,58 @@
 ---
-title: "PORT_SUPPLIER_DESCRIPTION_FLAGS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PORT_SUPPLIER_DESCRIPTION_FLAGS 列挙型"
+title: "PORT_SUPPLIER_DESCRIPTION_FLAGS |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: PORT_SUPPLIER_DESCRIPTION_FLAGS enumeration
 ms.assetid: 5acee0ee-3a20-41c9-a7dc-0dadae6a5ba5
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: f0fe828d4f1aaa537cdccbb8dd353383cebb9df0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# PORT_SUPPLIER_DESCRIPTION_FLAGS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-ポートの仕入先に関して取得できるメタデータを定義します。  
+# <a name="portsupplierdescriptionflags"></a>PORT_SUPPLIER_DESCRIPTION_FLAGS
+ポートのサプライヤーの目的で取得できるメタデータを定義します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 enum enum_PORT_SUPPLIER_DESCRIPTION_FLAGS  
 {  
-   PSDFLAG_SHOW_WARNING_ICON = 0x1  
+   PSDFLAG_SHOW_WARNING_ICON = 0x1  
 };  
 typedef DWORD PORT_SUPPLIER_DESCRIPTION_FLAGS;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_PORT_SUPPLIER_DESCRIPTION_FLAGS  
 {  
-   PSDFLAG_SHOW_WARNING_ICON = 0x1  
+   PSDFLAG_SHOW_WARNING_ICON = 0x1  
 };  
 ```  
   
-## 用語  
- PSDFLAG\_SHOW\_WARNING\_ICON  
- を選択すると警告アイコンは UI に表示されます。  
+## <a name="terms"></a>用語  
+ PSDFLAG_SHOW_WARNING_ICON  
+ 選択した場合、UI に警告アイコンが表示されます。  
   
-## 解説  
- この列挙体は [GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md) のメソッドによって返されます。  
+## <a name="remarks"></a>コメント  
+ この列挙体は、によって返される、 [GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md)メソッドです。  
   
-## 必要条件  
- ヘッダー : Msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md)

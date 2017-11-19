@@ -1,79 +1,78 @@
 ---
-title: "IDiaSymbol::get_undecoratedNameEx | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_undecoratedNameEx メソッド"
+title: "Idiasymbol::get_undecoratednameex |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_undecoratedNameEx method
 ms.assetid: 579aed0b-c57d-41a1-a94a-3bf665fd4a9d
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 1dac35a0e01890488e6290759b563d25f7067067
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_undecoratedNameEx
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-取得はは. の C\+\+ リンケージで修飾された名前 \(\) すべて非装飾名の部分。  
+# <a name="idiasymbolgetundecoratednameex"></a>IDiaSymbol::get_undecoratedNameEx
+C++ の非装飾の名前の取得の一部またはすべての装飾 (リンケージ) 名です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_undecoratedNameEx(   
-   DWORD undecorateOptions,  
-   BSTR* pRetval  
+```C++  
+HRESULT get_undecoratedNameEx(   
+   DWORD undecorateOptions,  
+   BSTR* pRetval  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `undecoratedOptions`  
- \[出力\] 返されるかを制御するフラグの組み合わせを指定します。  処理を特定の値については" 解説 " を参照してください。  
+ [in]返される結果を制御するフラグの組み合わせを指定します。 特定の値とその実行内容の「解説」セクションを参照してください。  
   
  `pRetVal`  
- \[入力\] C.C\+\+ の装飾名の装飾名を返します。  
+ [out]C++ の装飾されていない名前の装飾名を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合戻り `S_FALSE` またはエラー コード。  
-  
-> [!NOTE]
->  `S_FALSE` の戻り値はプロパティのシンボルで使用できないことを意味します。  
-  
-## 解説  
- `undecorateOptions`次のフラグの組み合わせです。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  フラグの名前は DIA SDK で定義されていない宣言をコードに追加すると基になる値を使用するため必要があります。  
+>  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-|フラグ|値|Description|  
-|---------|-------|-----------------|  
-|UNDNAME\_COMPLETE|0x0000|有効な完全な undecoration。|  
-|UNDNAME\_NO\_LEADING\_UNDERSCORES|0x0001|Microsoft から先頭にアンダースコア \(\) が拡張されたキーワードを削除します。|  
-|UNDNAME\_NO\_MS\_KEYWORDS|0x0002|Microsoft の配置を拡張するキーワードを無効にします。|  
-|UNDNAME\_NO\_FUNCTION\_RETURNS|0x0004|主要な宣言の戻り値の型の展開を無効にします。|  
-|UNDNAME\_NO\_ALLOCATION\_MODEL|0x0008|宣言モデルの配置を無効にします。|  
-|UNDNAME\_NO\_ALLOCATION\_LANGUAGE|0x0010|宣言の言語指定子の配置を無効にします。|  
-|UNDNAME\_RESERVED1|0x0020|予約済み。|  
-|UNDNAME\_RESERVED2|0x0040|予約済み。|  
-|UNDNAME\_NO\_THISTYPE|0x0060|`this` の種類のすべての修飾子を無効にします。|  
-|UNDNAME\_NO\_ACCESS\_SPECIFIERS|0x0080|メンバーのアクセス指定子の配置を無効にします。|  
-|UNDNAME\_NO\_THROW\_SIGNATURES|0x0100|関数は関数ポインターとの定義 「は」展開を無効にします。|  
-|UNDNAME\_NO\_MEMBER\_TYPE|0x0200|`static` または `virtual` のメンバーの配置を無効にします。|  
-|UNDNAME\_NO\_RETURN\_UDT\_MODEL|0x0400|UDT を返すための Microsoft のモデルの配置を無効にします。|  
-|UNDNAME\_32\_BIT\_DECODE|0x0800|Undecorates 32 ビットの装飾名。|  
-|UNDNAME\_NAME\_ONLY|0x1000|主要な宣言の名前のみを取得します ; の戻り\[範囲\]:: 名前。  テンプレート パラメーターを展開します。|  
-|UNDNAME\_TYPE\_ONLY|0x2000|入力は型のエンコーディングです ; 抽象的な宣言を構成します。|  
-|UNDNAME\_HAVE\_PARAMETERS|0x4000|実際のテンプレート パラメーターを使用できます。|  
-|UNDNAME\_NO\_ECSU|0x8000|列挙と非表示の class\/struct\/union。|  
-|UNDNAME\_NO\_IDENT\_CHAR\_CHECK|0x10000|非表示が有効な識別子文字をチェックします。|  
-|UNDNAME\_NO\_PTR64|0x20000|出力に ptr64 は含まれません。|  
+## <a name="remarks"></a>コメント  
+ `undecorateOptions`次のフラグの組み合わせが可能です。  
   
-## 参照  
+> [!NOTE]
+>  フラグ名は、コードに、宣言を追加するか、生の値を使用する必要がありますので DIA SDK で定義されていません。  
+  
+|フラグ|値|説明|  
+|----------|-----------|-----------------|  
+|UNDNAME_COMPLETE|0x0000|Undecoration を完全に有効にします。|  
+|UNDNAME_NO_LEADING_UNDERSCORES|0x0001|Microsoft 拡張キーワードの先頭のアンダー スコアを削除します。|  
+|UNDNAME_NO_MS_KEYWORDS|0x0002|Microsoft 拡張キーワードの拡張を無効にします。|  
+|UNDNAME_NO_FUNCTION_RETURNS|0x0004|プライマリの宣言の戻り値の型の拡張を無効にします。|  
+|UNDNAME_NO_ALLOCATION_MODEL|0x0008|宣言のモデルの拡張を無効にします。|  
+|UNDNAME_NO_ALLOCATION_LANGUAGE|0x0010|宣言の言語指定子の拡張を無効にします。|  
+|UNDNAME_RESERVED1|0x0020|予約されています。|  
+|UNDNAME_RESERVED2|0x0040|予約されています。|  
+|UNDNAME_NO_THISTYPE|0x0060|すべての修飾子で無効にして、`this`型です。|  
+|UNDNAME_NO_ACCESS_SPECIFIERS|0x0080|メンバーのアクセス指定子の拡張を無効にします。|  
+|UNDNAME_NO_THROW_SIGNATURES|0x0100|「Throw 署名」の関数および関数へのポインターの拡張を無効にします。|  
+|UNDNAME_NO_MEMBER_TYPE|0x0200|拡張を無効に`static`または`virtual`メンバー。|  
+|UNDNAME_NO_RETURN_UDT_MODEL|0x0400|UDT を返します、Microsoft のモデルの拡張を無効にします。|  
+|UNDNAME_32_BIT_DECODE|0x0800|32 ビットの装飾名を undecorates です。|  
+|UNDNAME_NAME_ONLY|0x1000|プライマリの宣言の名前のみを取得します。だけを返します [スコープ::] の名前。  テンプレート パラメーターを展開します。|  
+|UNDNAME_TYPE_ONLY|0x2000|入力がエンコード; 種類のみ抽象宣言子を構成します。|  
+|UNDNAME_HAVE_PARAMETERS|0x4000|実際のテンプレート パラメーターは、使用できます。|  
+|UNDNAME_NO_ECSU|0x8000|列挙型/クラス/構造体/共用体を抑制します。|  
+|UNDNAME_NO_IDENT_CHAR_CHECK|0x10000|有効な識別子の文字のチェックを抑制します。|  
+|UNDNAME_NO_PTR64|0x20000|出力に ptr64 は含まれません。|  
+  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

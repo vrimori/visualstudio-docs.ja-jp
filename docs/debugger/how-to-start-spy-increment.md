@@ -1,49 +1,48 @@
 ---
-title: "How to: Start Spy++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Spy++, starting"
+title: "方法: spy++ を起動 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Spy++, starting
 ms.assetid: 1d36813a-dc2a-4fda-9b3d-a38928a62ced
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: b301d16c96878974c12b94879f717c727d129a7c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# How to: Start Spy++
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Spy\+\+ は、Visual Studio から起動することも、コマンド プロンプトから起動することもできます。  
+# <a name="how-to-start-spy"></a>方法: Spy++ を起動する
+まず、spy++、コマンド プロンプトまたは Visual Studio からします。  
   
- Spy\+\+ を起動したときに、コンピューターに変更を加えることの許可を求めるメッセージが表示された場合は、**\[はい\]** をクリックします。  
+ 開始すると spy++、するには、コンピューターに変更を加えるをクリックしてアクセス許可を確認するメッセージが表示されている場合**はい**です。  
   
 > [!NOTE]
->  Spy\+\+ のインスタンスは 1 つしか実行できません。  別のインスタンスを実行しようとした場合は、現在実行中のインスタンスがフォーカスを受け取ります。  
+>  Spy++ の 1 つだけのインスタンスを実行することができます。 別のインスタンスを実行しようとする場合、フォーカスを取得する現在実行中のインスタンスだけさせます。  
   
-### Spy\+\+ を Visual Studio から起動するには  
+### <a name="to-start-spy-from-visual-studio"></a>Visual Studio から spy++ を起動するには  
   
--   **\[ツール\]** メニューの **\[Spy\+\+\]** をクリックします。  
+-   **ツール** メニューのをクリックして**spy++**です。  
   
-     Spy\+\+ は独立して動作するため、Spy\+\+ を起動した後に Visual Studio を終了できます。  
+     Spy++ で実行されるためいない個別に開始した後、Visual Studio を閉じることができます。  
   
     > [!NOTE]
-    >  Spy\+\+ でメッセージをログに記録すると、オペレーティング システムの実行速度が遅くなる場合があります。  
+    >  Spy++ でメッセージを記録する場合は、パフォーマンスが低下するオペレーティング システムをしまう可能性があります。  
   
-### Spy\+\+ をコマンド プロンプトから起動するには  
+### <a name="to-start-spy-at-a-command-prompt"></a>Spy++ は、コマンド プロンプトを開始するには  
   
-1.  コマンド プロンプト ウィンドウで、ディレクトリを spyxx.exe が格納されているフォルダーに変更します。  通常、このフォルダーのパスは   \\*Visual Studio インストール フォルダー*\\Common7\\Tools\\ です。  
+1.  コマンド プロンプト ウィンドウでは、spyxx.exe を含むフォルダーにディレクトリを変更します。 通常、このフォルダーのパスには.\\ *Visual Studio インストール フォルダー*\Common7\Tools\\です。  
   
-2.  「**spyxx.exe**」と入力し、Enter キーを押します。  
+2.  型**spyxx.exe**し、ENTER キーを押します。  
   
-## 参照  
- [Using Spy\+\+](../debugger/using-spy-increment.md)   
- [Spy\+\+ Views](../debugger/spy-increment-views.md)   
- [Spy\+\+ Reference](../debugger/spy-increment-reference.md)
+## <a name="see-also"></a>関連項目  
+ [Spy++ の使用](../debugger/using-spy-increment.md)   
+ [Spy++ ビュー](../debugger/spy-increment-views.md)   
+ [Spy++ リファレンス](../debugger/spy-increment-reference.md)

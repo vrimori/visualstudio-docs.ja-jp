@@ -1,52 +1,52 @@
 ---
-title: "IDiaSymbol::findSymbolsByRVAForAcceleratorPointerTag | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "IDiaSymbol::findSymbolsByRVAForAcceleratorPointerTag |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 024ccd78-5867-4ca7-bc26-548758e9ac53
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f12417323d0553fc6dd9ca33c65c566229454c99
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::findSymbolsByRVAForAcceleratorPointerTag
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-対応するタグの値の場合、このメソッドは、指定した相対仮想アドレスのスタブこの関数に含まれるシンボルの列挙体を返します。  
+# <a name="idiasymbolfindsymbolsbyrvaforacceleratorpointertag"></a>IDiaSymbol::findSymbolsByRVAForAcceleratorPointerTag
+対応するタグの値を指定するには、このメソッドは、指定の相対仮想アドレスにある場合は、このスタブ関数に含まれている記号の列挙を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp  
+```C++  
 HRESULT findSymbolsByRVAForAcceleratorPointerTag (   
    DWORD             tagValue,  
    DWORD             rva,  
    IDiaEnumSymbols** ppResult);  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `tagValue`  
- \[入力\] pointee のシンボルを記録するポインターのタグの値はです。  
+ [in]Pointee シンボル レコードを検出するポインターのタグ値。  
   
  `rva`  
- \[出力\] 指定したタグの値と pointee の変数に対応するシンボルをフィルター処理に使用する rva。  
+ [in]指定したタグの値を持つ pointee 変数に対応するシンボルをフィルター処理に使用される rva です。  
   
  `ppResult`  
- \[入力\] 結果で初期化される `IDiaEnumSymbols` のインターフェイス ポインターへのポインター。  
+ [out]ポインター、`IDiaEnumSymbols`結果で初期化されたインターフェイス ポインター。  
   
-## 戻り値  
- 成功した場合は `S_OK` を返し、それ以外の場合は `S_FALSE` またはエラー コードを返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
-## 解説  
- アクセラレータのスタブの関数に対応する `IDiaSymbol` のインターフェイスのみ、このメソッドを呼び出します。  
+## <a name="remarks"></a>コメント  
+ のみこのメソッドを呼び出して、`IDiaSymbol`アクセラレータ スタブ関数に対応するインターフェイスです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

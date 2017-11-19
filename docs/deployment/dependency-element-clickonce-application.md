@@ -1,44 +1,45 @@
 ---
-title: "&lt;dependency&gt; 要素 (ClickOnce アプリケーション) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "urn:schemas-microsoft-com:asm.v2#osVersionInfo"
-  - "urn:schemas-microsoft-com:asm.v2#os"
-  - "http://www.w3.org/2000/09/xmldsig#Transform"
-  - "urn:schemas-microsoft-com:asm.v2#dependency"
-  - "http://www.w3.org/2000/09/xmldsig#DigestValue"
-  - "urn:schemas-microsoft-com:asm.v2#assemblyIdentity"
-  - "http://www.w3.org/2000/09/xmldsig#DigestMethod"
-  - "http://www.w3.org/2000/09/xmldsig#Transforms"
-  - "urn:schemas-microsoft-com:asm.v2#hash"
-  - "urn:schemas-microsoft-com:asm.v2#dependentAssembly"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "<dependency> 要素 [ClickOnce アプリケーション マニフェスト]"
-  - "マニフェスト [ClickOnce], dependency 要素"
+title: "&lt;依存関係&gt;要素 (ClickOnce アプリケーション) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- urn:schemas-microsoft-com:asm.v2#osVersionInfo
+- urn:schemas-microsoft-com:asm.v2#os
+- http://www.w3.org/2000/09/xmldsig#Transform
+- urn:schemas-microsoft-com:asm.v2#dependency
+- http://www.w3.org/2000/09/xmldsig#DigestValue
+- urn:schemas-microsoft-com:asm.v2#assemblyIdentity
+- http://www.w3.org/2000/09/xmldsig#DigestMethod
+- http://www.w3.org/2000/09/xmldsig#Transforms
+- urn:schemas-microsoft-com:asm.v2#hash
+- urn:schemas-microsoft-com:asm.v2#dependentAssembly
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- manifests [ClickOnce], dependency element
+- <dependency> element [ClickOnce application manifest]
 ms.assetid: 09d6a1e0-60f8-4fbd-843b-8e49ee3115a3
-caps.latest.revision: 34
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 34
+caps.latest.revision: "34"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 7a0604113161fed432219f84ac6c4d8a6a4d7666
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# &lt;dependency&gt; 要素 (ClickOnce アプリケーション)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-アプリケーションに必須のプラットフォーム依存関係またはアセンブリ依存関係を識別します。  
+# <a name="ltdependencygt-element-clickonce-application"></a>&lt;依存関係&gt;要素 (ClickOnce アプリケーション)
+アプリケーションに必要なプラットフォームやアセンブリ依存関係を識別します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -88,91 +89,91 @@ caps.handback.revision: 34
 </dependency>  
 ```  
   
-## 要素と属性  
- `dependency` 要素は必須です。  同じアプリケーション マニフェストに `dependency` のインスタンスが複数存在してもかまいません。  
+## <a name="elements-and-attributes"></a>要素と属性  
+ `dependency`要素が必要です。 複数のインスタンスがある可能性があります`dependency`同じアプリケーション マニフェストにします。  
   
- `dependency` 要素は属性がなく、次の子要素を含みます。  
+ `dependency`要素、属性を持っていないと、次の子要素が含まれています。  
   
-### dependentOS  
- 省略可能です。  `osVersionInfo` 要素を含みます。  `dependentOS` 要素と `dependentAssembly` 要素は相互に排他的です。`dependency` 要素にはいずれか一方が必要ですが、両方は指定できません。  
+### <a name="dependentos"></a>dependentOS  
+ 省略可能です。 含まれています、`osVersionInfo`要素。 `dependentOS`と`dependentAssembly`要素が相互に排他的な: のどちらか一方に存在する必要があります、`dependency`要素が、両方は使用できません。  
   
- `dependentOS` は、以下の属性をサポートします。  
+ `dependentOS`次の属性をサポートしています。  
   
-|属性|Description|  
-|--------|-----------------|  
-|`supportUrl`|省略可能です。  依存関係にあるプラットフォームのサポート URL を指定します。  必要なプラットフォームが見つかると、この URL がユーザーに表示されます。|  
-|`description`|省略可能です。  `dependentOS` 要素に記述したオペレーティング システムについて、ユーザーが認識できる形式で記述します。|  
+|属性|説明|  
+|---------------|-----------------|  
+|`supportUrl`|省略可能です。 依存するプラットフォームのサポート URL を指定します。 必要なプラットフォームが見つかった場合、この URL はユーザーに表示されます。|  
+|`description`|省略可能です。 記述されているオペレーティング システムを人間が判読できる形式は、説明、`dependentOS`要素。|  
   
-### osVersionInfo  
- 必ず指定します。  この要素は `dependentOS` 要素の子であり、`os` 要素が含まれています。  この要素に属性はありません。  
+### <a name="osversioninfo"></a>osVersionInfo  
+ 必ず指定します。 この要素は `dependentOS` 要素の子であり、`os` 要素を含んでいます。 この要素には属性はありません。  
   
-### os  
- 必ず指定します。  この要素は `osVersionInfo` 要素の子です。  この要素には、次の属性があります。  
+### <a name="os"></a>os  
+ 必ず指定します。 この要素は `osVersionInfo` 要素の子です。 この要素には、次の属性があります。  
   
-|属性|Description|  
-|--------|-----------------|  
-|`majorVersion`|必ず指定します。  OS のメジャー バージョン番号を指定します。|  
-|`minorVersion`|必ず指定します。  OS のマイナー バージョン番号を指定します。|  
-|`buildNumber`|必ず指定します。  OS のビルド番号を指定します。|  
-|`servicePackMajor`|必ず指定します。  OS のサービス パックのメジャー番号を指定します。|  
-|`servicePackMinor`|省略可能です。  OS のサービス パックのマイナー番号を指定します。|  
-|`productType`|省略可能です。  製品の種類を識別します。  有効値は `server`、`workstation`、および `domainController` です。  たとえば、Windows 2000 Professional の場合、この属性は `workstation` です。|  
-|`suiteType`|省略可能です。  システムで使用できる製品スイート、またはシステムの構成の種類を識別します。  有効値は、`backoffice`、`blade`、`datacenter`、`enterprise`、`home`、`professional`、`smallbusiness`、`smallbusinessRestricted`、および `terminal` です。  たとえば、Windows 2000 Professional の場合、この属性は `professional` です。|  
+|属性|説明|  
+|---------------|-----------------|  
+|`majorVersion`|必須です。 OS のメジャー バージョン番号を指定します。|  
+|`minorVersion`|必須です。 OS のマイナー バージョン番号を指定します。|  
+|`buildNumber`|必須です。 OS のビルド番号を指定します。|  
+|`servicePackMajor`|必須です。 OS のサービス パックのメジャー番号を指定します。|  
+|`servicePackMinor`|省略可能です。 OS のサービス パックのマイナー番号を指定します。|  
+|`productType`|省略可能です。 Product 型の値を識別します。 有効な値は `server`、`workstation`、`domainController` です。 たとえば、Windows 2000 Professional では、この属性値は`workstation`します。|  
+|`suiteType`|省略可能です。 システム、またはシステムの構成の種類で使用できる製品スイートを識別します。 有効な値は`backoffice`、 `blade`、 `datacenter`、 `enterprise`、 `home`、 `professional`、 `smallbusiness`、 `smallbusinessRestricted`、および`terminal`です。 たとえば、Windows 2000 Professional では、この属性値は`professional`します。|  
   
-### dependentAssembly  
- 省略可能です。  `assemblyIdentity` 要素を含みます。  `dependentOS` 要素と `dependentAssembly` 要素は相互に排他的です。`dependency` 要素にはいずれか一方が必要ですが、両方は指定できません。  
+### <a name="dependentassembly"></a>dependentAssembly  
+ 省略可能です。 含まれています、`assemblyIdentity`要素。 `dependentOS`と`dependentAssembly`要素が相互に排他的な: のどちらか一方に存在する必要があります、`dependency`要素が、両方は使用できません。  
   
- `dependentAssembly` には、以下の属性があります。  
+ `dependentAssembly`次の属性があります。  
   
-|属性|Description|  
-|--------|-----------------|  
-|`dependencyType`|必ず指定します。  依存関係の種類を指定します。  有効値は `preprequisite` または `install` です。  `install` アセンブリは、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションの一部としてインストールされます。  `prerequisite` アセンブリは、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションをインストールする前にグローバル アセンブリ キャッシュ \(GAC: Global Assembly Cache\) に存在している必要があります。|  
-|`allowDelayedBinding`|必ず指定します。  実行時にアセンブリをプログラムで読み込むことができるかどうかを指定します。|  
-|`group`|省略可能です。  `dependencyType` 属性が `install` に設定されている場合は、要求に応じてのみインストールされるアセンブリの名前付きグループを指定します。  詳細については、「[チュートリアル : デザイナーを使用し、ClickOnce 配置 API で必要に応じてアセンブリをダウンロードする](../Topic/Walkthrough:%20Downloading%20Assemblies%20on%20Demand%20with%20the%20ClickOnce%20Deployment%20API%20Using%20the%20Designer.md)」を参照してください。<br /><br /> これが `framework` に設定され、`dependencyType` 属性が `prerequisite` に設定されている場合は、アセンブリを .NET Framework の一部として指定します。  [!INCLUDE[net_v40_short](../debugger/includes/net_v40_short_md.md)] 以降のバージョンにインストールする場合、GAC にこのアセンブリが存在するかどうかはチェックされません。|  
-|`codeBase`|`dependencyType` 属性が `install` に設定されている場合には必須です。  依存関係のアセンブリのパスです。  絶対パスまたはマニフェストのコード ベースに対する相対パスで指定します。  アセンブリ マニフェストが有効であるためには、このパスが有効な URI であることが必要です。|  
-|`size`|`dependencyType` 属性が `install` に設定されている場合には必須です。  依存関係のアセンブリのサイズ \(バイト単位\) です。|  
+|属性|説明|  
+|---------------|-----------------|  
+|`dependencyType`|必須です。 依存関係の種類を指定します。 有効値は `preprequisite` または `install` です。 `install`アセンブリがの一部としてインストールされている、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。 A`prerequisite`アセンブリは、前に、グローバル アセンブリ キャッシュ (GAC) 内に存在する必要があります、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションをインストールできます。|  
+|`allowDelayedBinding`|必須です。 アセンブリが実行時にプログラムによってアンロードできるかどうかを指定します。|  
+|`group`|省略可能です。 場合、`dependencyType`属性に設定されている`install`アセンブリの名前付きグループの要求時にのみインストールを指定します。 詳細については、「[チュートリアル : デザイナーを使用し、ClickOnce 配置 API で必要に応じてアセンブリをダウンロードする](../deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer.md)」を参照してください。<br /><br /> 場合に設定`framework`と`dependencyType`属性に設定されている`prerequisite`、.NET Framework の一部として、アセンブリを指定します。 このアセンブリをインストールする場合、グローバル アセンブリ キャッシュ (GAC) はチェックされません[!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)]以降のバージョン。|  
+|`codeBase`|必要なときに、`dependencyType`属性に設定されている`install`です。 依存アセンブリへのパス。 可能性があります絶対パス、またはマニフェストのコードへの相対パスのいずれか基本。 このパスは有効であるアセンブリ マニフェストの順序で、有効な URI である必要があります。|  
+|`size`|必要なときに、`dependencyType`属性に設定されている`install`です。 バイト単位で、依存アセンブリのサイズ。|  
   
-### assemblyIdentity  
- 必ず指定します。  この要素は `dependentAssembly` 要素の子であり、以下の属性があります。  
+### <a name="assemblyidentity"></a>assemblyIdentity  
+ 必ず指定します。 この要素は `dependentAssembly` 要素の子であり、以下の属性があります。  
   
-|属性|Description|  
-|--------|-----------------|  
-|`name`|必ず指定します。  アプリケーションの名前を指定します。|  
-|`version`|必ず指定します。  `major.minor.build.revision` の形式で、アプリケーションのバージョン番号を指定します。|  
-|`publicKeyToken`|省略可能です。  アプリケーションまたはアセンブリに署名するために使用する公開キーの `SHA-1` ハッシュ値のうち、最後の 8 バイトを表す 16 文字の 16 進文字列を指定します。  カタログに署名するために使用する公開キーは、2048 ビット以上である必要があります。|  
-|`processorArchitecture`|省略可能です。  プロセッサを指定します。  有効な値は、32 ビット Windows の場合 `x86`、64 ビット Windows の場合 `I64` です。|  
-|`language`|省略可能です。  EN\-US など 2 つの部分から構成されるアセンブリの言語コードを識別します。|  
+|属性|説明|  
+|---------------|-----------------|  
+|`name`|必須です。 アプリケーションの名前を識別します。|  
+|`version`|必須です。 次の形式で、アプリケーションのバージョン番号を指定します。`major.minor.build.revision`|  
+|`publicKeyToken`|省略可能です。 最後の 8 バイトを表す 16 文字の 16 進文字列を指定、`SHA-1`アプリケーションまたはアセンブリが署名に使用された公開キーのハッシュ値。 カタログに署名するために使用する公開キーは、2048 ビット以上にする必要があります。|  
+|`processorArchitecture`|省略可能です。 プロセッサを指定します。 有効な値は`x86`32 ビット Windows 用と`I64`64 ビット Windows 用です。|  
+|`language`|省略可能です。 アセンブリの EN-US など、2 部構成の言語コードを識別します。|  
   
-### hash  
- `hash` 要素は、`assemblyIdentity` 要素の子要素で、省略可能です。  `hash` 要素に属性はありません。  
+### <a name="hash"></a>hash  
+ `hash`要素の省略可能な子では、`assemblyIdentity`要素。 `hash`要素に属性がありません。  
   
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] では、セキュリティをチェックするために、アプリケーション内の全ファイルで計算したハッシュを使用して、配置後にどのファイルも変更されていないことを確認できるようにしています。  `hash` 要素が含まれていない場合、このチェックは実行されません。したがって、`hash` 要素を省略することは推奨できません。  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開後に変更されたファイルがないことを確認するのには、セキュリティ チェックとして、アプリケーション内のすべてのファイルのアルゴリズムのハッシュを使用します。 場合、`hash`要素が含まれていない、このチェックは実行されません。 そのため、省略すると、`hash`要素はお勧めしません。  
   
-### dsig:Transforms  
- `dsig:Transforms` 要素は、`hash` 要素に必須の子です。  `dsig:Transforms` 要素には属性がありません。  
+### <a name="dsigtransforms"></a>dsig:Transforms  
+ `dsig:Transforms`要素の必須の子では、`hash`要素。 `dsig:Transforms`要素に属性がありません。  
   
-### dsig:Transform  
- `dsig:Transform` 要素は、`dsig:Transforms` 要素に必須の子です。  `dsig:Transform` 要素には、次の属性があります。  
+### <a name="dsigtransform"></a>dsig:Transform  
+ `dsig:Transform`要素の必須の子では、`dsig:Transforms`要素。 `dsig:Transform`要素には、次の属性です。  
   
-|属性|Description|  
-|--------|-----------------|  
-|`Algorithm`|このファイルのダイジェストを計算するために使用するアルゴリズムです。  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] が現在使用している唯一の値は、`urn:schemas-microsoft-com:HashTransforms.Identity` です。|  
+|属性|説明|  
+|---------------|-----------------|  
+|`Algorithm`|このファイルのダイジェストを計算するために使用するアルゴリズムです。 現在、唯一の値で使用される[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]は`urn:schemas-microsoft-com:HashTransforms.Identity`します。|  
   
-### dsig:DigestMethod  
- `dsig:DigestMethod` 要素は、`hash` 要素に必須の子です。  `dsig:DigestMethod` 要素には、次の属性があります。  
+### <a name="dsigdigestmethod"></a>dsig:DigestMethod  
+ `dsig:DigestMethod`要素の必須の子では、`hash`要素。 `dsig:DigestMethod`要素には、次の属性です。  
   
-|属性|Description|  
-|--------|-----------------|  
-|`Algorithm`|このファイルのダイジェストを計算するために使用するアルゴリズムです。  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] が現在使用している唯一の値は、`http://www.w3.org/2000/09/xmldsig#sha1` です。|  
+|属性|説明|  
+|---------------|-----------------|  
+|`Algorithm`|このファイルのダイジェストを計算するために使用するアルゴリズムです。 現在、唯一の値で使用される[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]は`http://www.w3.org/2000/09/xmldsig#sha1`します。|  
   
-### dsig:DigestValue  
- `dsig:DigestValue` 要素は、`hash` 要素に必須の子です。  `dsig:DigestValue` 要素に属性はありません。  このテキスト値は、指定のファイルで計算されたハッシュです。  
+### <a name="dsigdigestvalue"></a>目的  
+ `dsig:DigestValue`要素の必須の子では、`hash`要素。 `dsig:DigestValue`要素に属性がありません。 テキスト値は、指定したファイルの計算されたハッシュです。  
   
-## 解説  
- アプリケーションで使用するすべてのアセンブリには、対応する `dependency` 要素が必要です。  プラットフォーム アセンブリとしてグローバル アセンブリ キャッシュにプレインストールする必要のあるアセンブリは、依存関係のアセンブリには含まれません。  
+## <a name="remarks"></a>コメント  
+ アプリケーションによって使用されるすべてのアセンブリの対応する必要があります`dependency`要素。 依存アセンブリでは、プラットフォーム アセンブリとしてアセンブリをグローバル アセンブリ キャッシュにプレインストールする必要がありますあるアセンブリは含まれません。  
   
-## 使用例  
- 次のコード例は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェスト内の `dependency` 要素を示しています。  このコード例は、「[ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)」トピックで提供されているより詳細な例の一部です。  
+## <a name="example"></a>例  
+ 次のコード例を示しています`dependency`内の要素、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 このコード例に示されている例の一部である、 [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)トピックです。  
   
 ```  
 <dependency>  
@@ -218,6 +219,6 @@ caps.handback.revision: 34
 </dependency>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)   
- [\<dependency\> 要素](../deployment/dependency-element-clickonce-deployment.md)
+ [\<依存関係 > 要素](../deployment/dependency-element-clickonce-deployment.md)

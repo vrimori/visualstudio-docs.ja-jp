@@ -1,41 +1,42 @@
 ---
-title: "プロパティ ウィンドウのボタン | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "[プロパティ] ウィンドウのボタン"
+title: "プロパティ ウィンドウのボタン |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Properties window, buttons
 ms.assetid: bdd2e3a7-ae6e-4e88-be1a-e0e3b7ddbbcc
-caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: c4cd83a8d8e72c18f8a6929e8985f7a8635a940d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# プロパティ ウィンドウのボタン
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-開発言語や製品の種類によっては特定のボタンは ENT0ENT \[出力\] ウィンドウのツール バーに既定で表示されます。  いずれの場合も **項目別 \*\*\* Alphabetized \*\*\* プロパティ**  と  **プロパティ ページ**  のボタンが表示されます。  Visual C\# と Visual Basic では\[\] ボタンの ENT0ENT 表示されます。  Visual C\+\+ のプロジェクトでは**\*\*\* VC\+\+ Messages \*\*\*** と **\*\*\* VC Overrides \*\*\*** のボタンが表示されます。  追加のボタンは他の種類のプロジェクトに表示されないことがあります。  \[入力\] ENT2ENT ウィンドウのボタンに関する詳細については[プロパティ ウィンドウ](../../ide/reference/properties-window.md) を参照してください。  
+# <a name="properties-window-buttons"></a>プロパティ ウィンドウのボタン
+開発言語、製品の種類に応じて特定のボタンがツールバーに既定で表示される、**プロパティ**ウィンドウです。 すべての場合、 **Categorized**、 **Alphabetized**、**プロパティ**、および**プロパティ ページ**ボタンが表示されます。 Visual c# および Visual Basic で、**イベント**ボタンも表示されます。 特定の Visual C プロジェクトで、 **vc++ メッセージ**と**VC オーバーライド**ボタンが表示されます。 その他のプロジェクトの種類の他のボタンが表示されます。 ボタンの詳細については、**プロパティ**ウィンドウを参照してください[プロパティ ウィンドウ](../../ide/reference/properties-window.md)します。  
   
-## プロパティ ウィンドウのボタンの実装。  
- \[入力\] ENT0ENT ボタンをクリックするとカテゴリ別にプロパティを使用してフォーカスを保持するオブジェクトの <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> のインターフェイスを呼び出します。  <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> は ENT0ENT \[出力\] ウィンドウに表示 `IDispatch` のオブジェクトに対して実行されます。  
+## <a name="implementation-of-properties-window-buttons"></a>プロパティ ウィンドウのボタンの実装  
+ クリックすると、 **Categorized**  ボタン、Visual Studio の呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties>カテゴリでそのプロパティを並べ替えるにフォーカスがあるオブジェクトのインターフェイスです。 <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties>実装される、`IDispatch`に提供されるオブジェクト、**プロパティ**ウィンドウです。  
   
- 負の値である 11 の定義済みプロパティのカテゴリがあります。  カスタム カテゴリを定義できますが定義済みのカテゴリを区別するために正の値を割り当てることをお勧めします。  
+ これには、負の値である必要が 11 の定義済みプロパティ カテゴリがあります。 カスタムのカテゴリを定義できますを割り当てることに正の値が定義済みのカテゴリと区別することをお勧めします。  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties.MapPropertyToCategory%2A> のメソッドは指定したプロパティの適切なプロパティのカテゴリの値。  <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties.GetCategoryName%2A> のメソッドはカテゴリ名を含む文字列。  Visual Studio の標準プロパティのカテゴリの値がわかっているためカスタム カテゴリの値だけをサポートする必要があります。  
+ <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties.MapPropertyToCategory%2A>メソッドは、指定したプロパティの適切なプロパティ カテゴリ値を返します。 <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties.GetCategoryName%2A>メソッドをカテゴリ名を含む文字列を返します。 のみ、Visual Studio には、標準的なプロパティのカテゴリの値が認識しているために、カスタム カテゴリ値のサポートを提供する必要があります。  
   
- \[入力\] ENT0ENT ボタンをクリックするとプロパティは名前に基づいてアルファベット順に表示されます。  名前にはローカライズされた並べ替えアルゴリズムに従って `IDispatch` で取得します。  
+ クリックすると、 **Alphabetized**ボタン、プロパティは名前でアルファベット順に表示されます。 名前が取得`IDispatch`ローカライズされた並べ替えアルゴリズムに従ってします。  
   
- \[ENT0ENT\] ウィンドウを開くと\[ENT1ENT\] ボタンをクリックすると自動的に表示されます。  環境内の他の部分では同じボタンが表示されます ENT0ENT\[出力\] ウィンドウに示すようにをクリックします。  
+ ときに、**プロパティ** ウィンドウが開いて、**プロパティ**ボタンが自動的に表示される選択された状態でします。 環境の他の部分で同じボタンが表示されをクリックして表示することができます、**プロパティ**ウィンドウです。  
   
- `ISpecifyPropertyPages` 選択したオブジェクトに実装する必要 ENT3ENT \[入力\] ボタンを使用できません。  ソリューションとプロジェクトに通常関連付けられたプロパティ ページに表示する構成依存プロパティはプロジェクト項目に関連付けられにすることもできます \(Visual C\+\+\)。  
+ **プロパティ ページ**ボタンが使用できない場合`ISpecifyPropertyPages`選択したオブジェクトが実装されていません。 プロパティ ページを通常ソリューションやプロジェクトに関連付けられている表示の構成に依存するプロパティでもかまいませんするも (たとえば、Visual C) でプロジェクト項目に関連付けられます。  
   
 > [!NOTE]
->  \[ENT4ENT\] ウィンドウでアンマネージ コードを使用してツール バー ボタンを追加できません。  ツール バー ボタンを追加するには<xref:System.Windows.Forms.Design.PropertyTab> から派生するマネージ オブジェクトを作成する必要があります。  
+>  ツール バー ボタンを追加することはできません、**プロパティ**ウィンドウでは、アンマネージ コードを使用します。 ツール バー ボタンを追加するから派生するマネージ オブジェクトを作成する必要があります<xref:System.Windows.Forms.Design.PropertyTab>です。  
   
-## 参照  
- [プロパティを拡張します。](../../extensibility/internals/extending-properties.md)
+## <a name="see-also"></a>関連項目  
+ [プロパティの拡張](../../extensibility/internals/extending-properties.md)

@@ -1,62 +1,62 @@
 ---
-title: "IDebugSymbolProvider::GetLanguage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugSymbolProvider::GetLanguage"
-helpviewer_keywords: 
-  - "IDebugSymbolProvider::GetLanguage メソッド"
+title: "IDebugSymbolProvider::GetLanguage |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugSymbolProvider::GetLanguage
+helpviewer_keywords: IDebugSymbolProvider::GetLanguage method
 ms.assetid: e4142183-3d8b-418f-907f-4ee4c753d8ce
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: b327207f9082cc5df6e20a178798e98daddc67f3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugSymbolProvider::GetLanguage
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このメソッドはデバッグのアドレスのコードをコンパイルするために使用した言語を取得します。  
+# <a name="idebugsymbolprovidergetlanguage"></a>IDebugSymbolProvider::GetLanguage
+このメソッドは、デバッグ アドレスでコードをコンパイルするために使用された言語を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetLanguage(   
-   IDebugAddress* pAddress,  
-   GUID*          pguidLanguage,  
-   GUID*          pguidLanguageVendor  
+```cpp  
+HRESULT GetLanguage(   
+   IDebugAddress* pAddress,  
+   GUID*          pguidLanguage,  
+   GUID*          pguidLanguageVendor  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetLanguage(  
-   IDebugAddress pAddress,   
-   out Guid      pguidLanguage,   
-   out Guid      pguidLanguageVendor  
+   IDebugAddress pAddress,   
+   out Guid      pguidLanguage,   
+   out Guid      pguidLanguageVendor  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pAddress`  
- \[入力\] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) のインターフェイスで表されるオブジェクトのアドレス。  
+ [in]によって表されるアドレス オブジェクト、 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)インターフェイスです。  
   
  `pguidLanguage`  
- \[入力\] `GUID` を返します言語を指定します。  
+ [out]返します、`GUID`言語を指定します。  
   
  `pguidLanguageVendor`  
- \[入力\] `GUID` を返します言語ベンダーを指定します。  
+ [out]返します、`GUID`言語の販売元を指定します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- デバッグ エンジンは正しい式エバリュエーターを選択する必要がある情報を取得するときにこのメソッドを呼び出します。  
+## <a name="remarks"></a>コメント  
+ デバッグ エンジンは、正しい式エバリュエーターを選択する必要がある情報を取得するには、このメソッドを呼び出します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)

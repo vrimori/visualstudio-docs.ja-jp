@@ -1,57 +1,57 @@
 ---
-title: "IDebugModule2::ReloadSymbols_Deprecated | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugModule2::ReloadSymbols"
-helpviewer_keywords: 
-  - "IDebugModule2::ReloadSymbols メソッド"
+title: "IDebugModule2::ReloadSymbols_Deprecated |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugModule2::ReloadSymbols
+helpviewer_keywords: IDebugModule2::ReloadSymbols method
 ms.assetid: 0f9f0133-7d58-4cd9-a6ca-1141e095749d
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 3923431ed4936cf34a077d8d5d818c96e9630221
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugModule2::ReloadSymbols_Deprecated
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-互換性のために残されています。  使用しないでください。  このモジュールのシンボルを再読み込みします。  
+# <a name="idebugmodule2reloadsymbolsdeprecated"></a>IDebugModule2::ReloadSymbols_Deprecated
+互換性のために残されています。 使用しないでください。 このモジュールのシンボルを再読み込みします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT ReloadSymbols(   
-   LPCOLESTR pszUrlToSymbols,  
-   BSTR*     pbstrDebugMessage  
+```cpp  
+HRESULT ReloadSymbols(   
+   LPCOLESTR pszUrlToSymbols,  
+   BSTR*     pbstrDebugMessage  
 );  
 ```  
   
-```c#  
-int ReloadSymbols(   
-   string     pszUrlToSymbols,  
-   out string pbstrDebugMessage  
+```csharp  
+int ReloadSymbols(   
+   string     pszUrlToSymbols,  
+   out string pbstrDebugMessage  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pszUrlToSymbols`  
- \[入力\] シンボル ストアへのパス。  
+ [in]シンボル ストアへのパス。  
   
  `pbstrDebugMessage`  
- \[出力\] モジュールのウィンドウのモジュール名の右側に表示されるエラー メッセージまたは返しますステータスなどの情報メッセージが表示されます。  
+ [out][モジュール] ウィンドウで、モジュール名の右側に表示される、状態やエラー メッセージなどの情報メッセージを返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  デバッグ エンジンは`E_FAIL` を常に返す必要です。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 デバッグ エンジンを常に返します`E_FAIL`です。  
   
-## 解説  
- このメソッドは現在サポートされていません。  [LoadSymbols](../Topic/IDebugModule3::LoadSymbols.md) の代わりにメソッドを実装します。  
+## <a name="remarks"></a>コメント  
+ このメソッドは現在サポートされていません。 実装、 [LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md)メソッド代わりにします。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)   
- [LoadSymbols](../Topic/IDebugModule3::LoadSymbols.md)
+ [LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md)

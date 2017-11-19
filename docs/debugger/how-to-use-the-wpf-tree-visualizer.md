@@ -1,70 +1,69 @@
 ---
-title: "方法: WPF ツリー ビジュアライザーを使用する | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "デバッグ, WPF"
-  - "WPF, デバッグ"
+title: "方法: WPF ツリー ビジュアライザーを使用して |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- WPF, debugging
+- debugging, WPF
 ms.assetid: 2a1bf1cd-90f9-4d06-9fb4-1bfc925afef3
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: e30d1fbd8cd23a514d1036bc43c809626c665d73
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: WPF ツリー ビジュアライザーを使用する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-WPF ツリー ビジュアライザーを使用すると、WPF オプションのビジュアル ツリーを調べたり、ツリーに含まれるオブジェクトの WPF 依存関係プロパティを表示したりすることができます。  ビジュアル ツリーの詳細については、「[WPF のツリー](../Topic/Trees%20in%20WPF.md)」を参照してください。  依存関係プロパティの詳細については、「[依存関係プロパティの概要](../Topic/Dependency%20Properties%20Overview.md)」を参照してください。  
+# <a name="how-to-use-the-wpf-tree-visualizer"></a>方法: WPF ツリー ビジュアライザーを使用する
+WPF ツリー ビジュアライザーを使用すると、WPF オプションのビジュアル ツリーを調べたり、ツリーに含まれるオブジェクトの WPF 依存関係プロパティを表示したりすることができます。 ビジュアル ツリーの詳細については、次を参照してください。 [wpf ツリー](/dotnet/framework/wpf/advanced/trees-in-wpf)です。 依存関係プロパティの詳細については、次を参照してください。[依存関係プロパティの概要](/dotnet/framework/wpf/advanced/dependency-properties-overview)です。  
   
- WPF ツリー ビジュアライザーを開くと、左側に **\[ビジュアル ツリー\]** ウィンドウ、右側に **\[*Name*:*Type* のプロパティ\]** ウィンドウの 2 つのウィンドウが表示されます。  任意のオブジェクトを **\[ビジュアル ツリー\]** ウィンドウで選択すると、**\[*Name*:*Type* のプロパティ\]** ウィンドウが自動的に更新され、そのオブジェクトのプロパティが表示されます。  
+ WPF ツリー ビジュアライザーを開くときに、2 つのペインが表示されます。**ビジュアル ツリー**左側、**のプロパティ***名前***:** *型*右側のペインです。 内のオブジェクトを選択して、**ビジュアル ツリー**  ウィンドウで、および**のプロパティ***名前***:***型*ウィンドウがそのオブジェクトのプロパティを表示するのに自動的に更新します。  
   
-### WPF ツリー ビジュアライザーを開くには  
+### <a name="to-open-the-wpf-tree-visualizer"></a>WPF ツリー ビジュアライザーを開くには  
   
-1.  データヒント、**\[ウォッチ\]** ウィンドウ、**\[自動変数\]** ウィンドウ、または **\[ローカル\]** ウィンドウで、WPF オブジェクト名の横の、虫眼鏡アイコンの横にある矢印をクリックします。  
+1.  データヒントで、**ウォッチ**ウィンドウ、 **[自動変数]**ウィンドウ、または**[ローカル]** WPF オブジェクトの名前の横のウィンドウは、虫眼鏡アイコンの横にある矢印をクリックします。  
   
      ビジュアライザーの一覧が表示されます。  
   
-2.  **\[WPF ツリー ビジュアライザー\]** をクリックします。  
+2.  をクリックして**WPF ツリー ビジュアライザー**です。  
   
-### ビジュアル ツリーを検索するには  
+### <a name="to-search-the-visual-tree"></a>ビジュアル ツリーを検索するには  
   
--   **\[ビジュアル ツリー\]** ウィンドウで、検索する文字列を **\[検索\]** ボックスに入力します。  
+-   **ビジュアル ツリー**ウィンドウ内で検索する文字列を入力、**検索**ボックス。  
   
-     WPF ツリー ビジュアライザーで、入力した文字列と一致するビジュアル ツリー内の最初のオブジェクトが即時に検索されます。  より正確に一致する項目を検索するには、次の文字を入力します。  
+     WPF ツリー ビジュアライザーで、入力した文字列と一致するビジュアル ツリー内の最初のオブジェクトが即時に検索されます。 より正確に一致する項目を検索するには、次の文字を入力します。  
   
-    -   ビジュアル ツリー内の次の一致項目に移動するには、**\[次へ\]** をクリックします。  
+    -   ビジュアル ツリー内の次の一致項目に移動するクリックして**次**です。  
   
-    -   前の一致項目に戻るには、**\[前へ\]** をクリックします。  
+    -   前の一致に戻って、をクリックして**Prev**です。  
   
-    -   検索条件を消去するには、**\[クリア\]** をクリックします。  
+    -   検索条件をクリアする をクリックして**オフ**です。  
   
-### プロパティ リストを検索するには  
+### <a name="to-search-the-properties-list"></a>プロパティ リストを検索するには  
   
--   **\[*Name*:*Type* のプロパティ\]** ウィンドウで、検索する文字列を **\[フィルター\]** ボックスに入力します。  
+-   **のプロパティ***名前***:***型*ウィンドウ内で検索する文字列を入力、 **をフィルター処理**ボックス。  
   
-     WPF ツリー ビジュアライザーで、入力した文字列と一致するプロパティが即時に検索され、入力した文字列と一致したこれらのプロパティのみが一覧に表示されます。  より正確に一致する項目を検索するには、次の文字を入力します。  
+     WPF ツリー ビジュアライザーで、入力した文字列と一致するプロパティが即時に検索され、入力した文字列と一致したこれらのプロパティのみが一覧に表示されます。 より正確に一致する項目を検索するには、次の文字を入力します。  
   
-    -   検索条件を消去するには、**\[クリア\]** をクリックします。  
+    -   検索条件をクリアする をクリックして**オフ**です。  
   
-### ビジュアライザーを閉じるには  
+### <a name="to-close-the-visualizer"></a>ビジュアライザーを閉じるには  
   
--   ダイアログ ボックスの右上隅にある **\[閉じる\]** をクリックします。  
+-   クリックして、**閉じる** ダイアログ ボックスの右上隅のアイコン。  
   
-## 参照  
- [方法 : ビジュアライザーを使用する](../Topic/How%20to:%20Use%20a%20Visualizer.md)   
- [ビジュアライザー](../debugger/create-custom-visualizers-of-data.md)   
- [WPF のツリー](../Topic/Trees%20in%20WPF.md)   
- [依存関係プロパティの概要](../Topic/Dependency%20Properties%20Overview.md)
+## <a name="see-also"></a>関連項目  
+ [カスタム ビジュアライザーを作成します。](../debugger/create-custom-visualizers-of-data.md)   
+ [WPF のツリー](/dotnet/framework/wpf/advanced/trees-in-wpf)   
+ [依存関係プロパティの概要](/dotnet/framework/wpf/advanced/dependency-properties-overview)

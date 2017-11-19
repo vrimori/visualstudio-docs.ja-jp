@@ -1,56 +1,59 @@
 ---
-title: "Object.getOwnPropertyNames 関数 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "getOwnPropertyNames メソッド [JavaScript]"
-  - "Object.getOwnPropertyNames メソッド [JavaScript]"
+title: "Object.getOwnPropertyNames 関数 (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- getOwnPropertyNames method [JavaScript]
+- Object.getOwnPropertyNames method [JavaScript]
 ms.assetid: 59f4b6b1-02be-44b3-a06c-a5ca8f70c3d8
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 76ca0036b9dedf7b4cee7b543469939e35dfe8d1
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# Object.getOwnPropertyNames 関数 (JavaScript)
-オブジェクト独自のプロパティの名前を返します。  オブジェクト独自のプロパティとは、そのオブジェクトで直接定義され、オブジェクトのプロトタイプから継承されないプロパティです。  オブジェクトのプロパティには、フィールド \(オブジェクト\) と関数の両方が含まれます。  
+# <a name="objectgetownpropertynames-function-javascript"></a>Object.getOwnPropertyNames 関数 (JavaScript)
+オブジェクトの独自のプロパティの名前を返します。 オブジェクトの独自のプロパティは、そのオブジェクトで直接定義され、オブジェクトのプロトタイプから継承していないされることです。 オブジェクトのプロパティには、(オブジェクト) のフィールドと関数の両方が含まれます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```javascript  
+```JavaScript  
 Object.getOwnPropertyNames(object)  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
   
 |パラメーター|定義|  
-|------------|--------|  
-|`object`|必須です。  独自のプロパティを格納するオブジェクトを指定します。|  
+|---------------|----------------|  
+|`object`|必須です。 独自のプロパティを含むオブジェクト。|  
   
-## 戻り値  
- オブジェクト独自のプロパティの名前を含む配列を指定します。  
+## <a name="return-value"></a>戻り値  
+ オブジェクトの独自のプロパティの名前を格納する配列。  
   
-## 例外  
- `object` 引数に指定された値がオブジェクトの名前ではない場合、`TypeError` 例外がスローされます。  
+## <a name="exceptions"></a>例外  
+ 値が指定した場合、`object`引数が、オブジェクトの名前ではありません、`TypeError`例外がスローされます。  
   
-## 解説  
- `getOwnPropertyNames` メソッドは、列挙可能および列挙可能でないプロパティとメソッドの名前を返します。  列挙可能なプロパティとメソッドの名前のみを返すには、[Object.keys 関数](../../javascript/reference/object-keys-function-javascript.md) メソッドを使用します。  
+## <a name="remarks"></a>コメント  
+ `getOwnPropertyNames`メソッドが列挙可能でない列挙可能なプロパティとメソッドの両方の名前を返します。 列挙可能なプロパティとメソッドの名前のみを返すを使用することができます、 [Object.keys 関数](../../javascript/reference/object-keys-function-javascript.md)です。  
   
-## 使用例  
- 次の例では、3 種類のプロパティおよびメソッドを持つオブジェクトを作成します。  その後、`getOwnPropertyNames` メソッドを使用して、オブジェクト独自のプロパティ \(メソッドを含む\) を取得します。  
+## <a name="example"></a>例  
+ 次の例では、3 つのプロパティとメソッドを持つオブジェクトを作成します。 次を使用して、`getOwnPropertyNames`オブジェクトの own プロパティ (メソッドを含む) を取得します。  
   
-```javascript  
+```JavaScript  
 function Pasta(grain, width, shape) {  
     // Define properties.  
     this.grain = grain;  
@@ -72,10 +75,10 @@ document.write (arr);
 //   grain,width,shape,toString  
 ```  
   
-## 使用例  
- Pasta コンストラクターで作成した spaghetti オブジェクトの文字 "s" で始まるプロパティの名前を表示する例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、先頭文字のプロパティの名前 ' で、**スパゲッティ**でオブジェクトが構築された、**パスタ**コンス トラクターです。  
   
-```javascript  
+```JavaScript  
 function Pasta(grain, size, shape) {  
     this.grain = grain;   
     this.size = size;   
@@ -99,8 +102,8 @@ function CheckKey(value) {
 // size,shape  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv9](../../javascript/includes/jsv9-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Object.keys 関数](../../javascript/reference/object-keys-function-javascript.md)

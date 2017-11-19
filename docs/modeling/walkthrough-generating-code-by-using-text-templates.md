@@ -1,24 +1,26 @@
 ---
-title: "チュートリアル: テキスト テンプレートを使用したコード生成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "チュートリアル [テキスト テンプレート], アプリケーション コードの生成"
-  - "チュートリアル [テキスト テンプレート]"
+title: "チュートリアル: テキスト テンプレートを使用してコードを生成する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- walkthroughs [text templates], generating application code
+- walkthroughs [text templates]
 ms.assetid: 24602ade-baca-425e-a6ce-be09a2c7f7e1
-caps.latest.revision: 11
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: b39d142a44a99cc0fde362249d5717ee75c09323
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# チュートリアル: テキスト テンプレートを使用したコード生成
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="walkthrough-generating-code-by-using-text-templates"></a>チュートリアル: テキスト テンプレートを使用したコード生成
 コード生成を使用すると、厳密に型指定され、ソース モデルが変わった場合でも簡単に変更できるプログラム コードを作成できます。 コード生成とは対照的に、構成ファイルを使用する完全に汎用的なプログラムを作成する他の手法もあります。構成ファイルを使用すると、柔軟ではありますが、読むのも変更するのも容易ではなく、パフォーマンスもそれほどよくありません。 このチュートリアルでは、コード生成の利点について説明します。  
   
 ## <a name="typed-code-for-reading-xml"></a>XML 読み取り用の型指定されたコード  
@@ -85,7 +87,7 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
   
 1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]**をクリックします。  
   
-2.   **[Visual C#]** ノードをクリックし、 **[テンプレート]** ウィンドウで **[コンソール アプリケーション]**をクリックします。  
+2.  **[Visual C#]** ノードをクリックし、 **[テンプレート]** ウィンドウで **[コンソール アプリケーション]**をクリックします。  
   
 ### <a name="add-a-prototype-xml-file-to-the-project"></a>プロトタイプの XML ファイルをプロジェクトに追加する  
  このファイルの目的は、アプリケーションで読み取ることができるようにする XML ノード型のサンプルを提供することです。 このファイルは、アプリケーションのテストにも使用できます。 このテンプレートで、ファイル内の各ノード型について C# クラスが生成されます。  
@@ -102,7 +104,7 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
   
 4.  このチュートリアルでは、ファイルに `exampleXml.xml`と名前を付けます。 前のセクションで示した XML のようにファイルの内容を設定します。  
   
- ..  
+ .  
   
 ### <a name="add-a-test-code-file"></a>テスト コード ファイルを追加する  
  C# ファイルをプロジェクトに追加し、どのような記述方法を実現したいかを踏まえて、そのファイルにコードのサンプルを記述します。 例:  

@@ -1,54 +1,55 @@
 ---
-title: "unescape 関数 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "unescape"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "Unescape メソッド"
+title: "unescape 関数 (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: unescape
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: Unescape method
 ms.assetid: 4adf0270-88b5-4d54-8110-d879d6ae97c2
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 96601fc21f47c86aec8c3702a6861c3676aacacf
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# unescape 関数 (JavaScript)
-`escape` 関数を使ってエンコードされた `String` オブジェクトの文字列をデコードします。  使用しないでください。  
+# <a name="unescape-function-javascript"></a>unescape 関数 (JavaScript)
+デコード`String`でエンコードされたオブジェクト、`escape`関数。 使用しないでください。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 unescape(charString)   
 ```  
   
-## 解説  
- 必須の `charString` 引数は、デコードする `String` オブジェクトまたはリテラルです。  
+## <a name="remarks"></a>コメント  
+ 必要な`charString`引数は、`String`オブジェクトまたはリテラルをデコードできません。  
   
- `charstring` 関数は、`unescape` のコンテンツを文字列値として返します。  16 進の %*xx* 形式でエンコードされたすべての文字は、ASCII 文字セットの対応する文字に置き換えられます。  
+ `unescape`関数の内容を含む文字列値を返します`charstring`です。 % でエンコードされた文字をすべて*xx* 16 進数形式が ASCII 文字セット値で置き換えられます。  
   
- **%u** *xxxx* 形式 \(Unicode 文字\) にエンコードされた文字は、Unicode 文字に置き換えられます。その際、*xxxx* は 16 進数に変換されます。  
+ エンコードされた文字**%u** *xxxx* (Unicode 文字) の形式は 16 進エンコードを使用して Unicode 文字に置き換えられます*xxxx*です。  
   
 > [!NOTE]
->  `unescape` 関数を URI \(Uniform Resource Identifier\) のデコードに使用しないでください。  代わりに、`decodeURI` 関数または `decodeURIComponent` 関数の使用をお勧めします。  
+>  `unescape` Uniform Resource Identifier (URI) をデコードする関数を使用する必要があります。 使用して`decodeURI`と`decodeURIComponent`代わりに機能します。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
- **対象**: [Global オブジェクト](../../javascript/reference/global-object-javascript.md)  
+ **適用されます**:[グローバル オブジェクト](../../javascript/reference/global-object-javascript.md)  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [decodeURI 関数](../../javascript/reference/decodeuri-function-javascript.md)   
  [decodeURIComponent 関数](../../javascript/reference/decodeuricomponent-function-javascript.md)   
  [escape 関数](../../javascript/reference/escape-function-javascript.md)   

@@ -1,37 +1,40 @@
 ---
-title: "IRemoteDebugApplication110::GetCurrentDebuggerOptions | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IRemoteDebugApplication110::GetCurrentDebuggerOptions"
+title: "IRemoteDebugApplication110::GetCurrentDebuggerOptions |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords: IRemoteDebugApplication110::GetCurrentDebuggerOptions
 ms.assetid: a6e9cae1-e8f3-4d62-b133-52e9ca12ba7a
-caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 89223cb283a31ea01610bd70a8f64187947cacc9
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IRemoteDebugApplication110::GetCurrentDebuggerOptions
+# <a name="iremotedebugapplication110getcurrentdebuggeroptions"></a>IRemoteDebugApplication110::GetCurrentDebuggerOptions
 現在有効になっているオプションのセットを返します。  
   
 > [!IMPORTANT]
->  [IRemoteDebugApplication インターフェイス](../../winscript/reference/iremotedebugapplication-interface.md) は PDM v11.0 を超えるによって実装されます。  activdbg100.h.である。  
+>  [IRemoteDebugApplication インターフェイス](../../winscript/reference/iremotedebugapplication-interface.md)は、PDM v11.0 以降によって実装されている値を超えています。 activdbg100.h にあります。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetCurrentDebuggerOptions([out] enum SCRIPT_DEBUGGER_OPTIONS* pCurrentOptions);  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pCurrentOptions`  
- \[入力\]現在の選択。  
+ [out]現在のオプションです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IRemoteDebugApplication インターフェイス](../../winscript/reference/iremotedebugapplication-interface.md)   
  [IRemoteDebugApplication110 インターフェイス](../../winscript/reference/iremotedebugapplication110-interface.md)

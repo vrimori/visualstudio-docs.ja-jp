@@ -1,44 +1,46 @@
 ---
-title: "グローバル設定を監視するためのテキスト マネージャーの使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "エディター [Visual Studio SDK] の従来のグローバル設定を監視します。"
-  - "エディター [Visual Studio SDK] レガシー - テキスト マネージャー"
+title: "グローバル設定を監視するテキスト マネージャーを使用して |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- editors [Visual Studio SDK], legacy - monitor global settings
+- editors [Visual Studio SDK], legacy - text manager
 ms.assetid: 023e7671-cf65-419c-9bc1-3c4ee92aa436
-caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: f9687e4f0be16fb42f13c6f9dd20a2cb39be50cd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# グローバル設定を監視するためのテキスト マネージャーの使用
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-コア エディターを実装するとこれらの変更がエディターのインスタンスに影響する可能性があるためグローバル設定に対する変更を監視する必要があります。  待機してテキスト マネージャーが発生させたイベントに対する変更を追跡できます。  たとえばコア エディターでコンポーネントの外観と動作にグローバル設定をドキュメント データ オブジェクトなどテキスト ストアこのマネージャーの情報を指定し影響を受けるすべてのクライアントと通信します。  
+# <a name="using-the-text-manager-to-monitor-global-settings"></a>テキスト マネージャーを使用して、グローバル設定を監視するには
+コア エディターを実装すると場合、は、これらの変更は、エディターのインスタンスを与える可能性がありますので、グローバル設定に加えられた変更を監視する必要があります。 変更を追跡するには、テキスト マネージャーによって生成されるイベントをリッスンしています。 たとえば、コア エディターで、そのドキュメント データ オブジェクトなどの表示やコンポーネントの動作のグローバル設定を指定するときにテキスト マネージャーはこの情報を格納し、影響を受けるすべてのクライアントに通信します。  
   
-## テキスト マネージャーの関数  
- テキスト マネージャーは次のような多数の設定のイベントを発生させる :  
+## <a name="text-manager-functions"></a>テキスト マネージャー関数  
+ テキスト マネージャーは、いくつかの設定は、次のようにイベントを発生させます。  
   
--   バッファーはソース・コード管理下にあるかどうか  
+-   バッファーはソース コード管理下にある、かどうか  
   
--   ファイル変更通知用に登録する方法  
+-   ファイル変更通知を登録する方法  
   
--   追跡する方法ビューが特定のバッファーに関連付けられた  
+-   どのビューは、特定のバッファーに関連付けられているを追跡する方法  
   
--   テキストの色づけの設定  
+-   テキストの色づけの基本設定  
   
--   空白とタブの設定  
+-   タブ領域の基本設定との比較  
   
- 特定の言語に固有の設定はマネージャーによってマネージ実行されません。  これらの設定は各言語サービスで管理する必要があります。  
+ 特定の言語に固有の設定は、テキスト マネージャーで管理されていません。 これらの設定は、各言語サービスで管理する必要があります。  
   
- テキスト マネージャーのイベント通知は <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManagerEvents> のインターフェイスによって提供されます。  イベントを処理するためにクライアント オブジェクトこのインターフェイスを育てましたテキスト マネージャーを実行します。  これらのイベントのテキスト マネージャーの <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer> インターフェイスを使用して登録します。  
+ テキスト マネージャーのイベント通知は、によって提供される、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManagerEvents>インターフェイスです。 このインターフェイスを実装して、クライアントでテキスト マネージャーに発生するイベントを処理するオブジェクト。 使用してこれらのイベントの登録、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer>テキスト マネージャー上のインターフェイスです。  
   
-## 参照  
- [コア エディターの内部](../extensibility/inside-the-core-editor.md)   
- [Editor Features](http://msdn.microsoft.com/ja-jp/bdac940d-1f14-4019-a01f-fd0bb3dc7198)
+## <a name="see-also"></a>関連項目  
+ [コア エディター内](../extensibility/inside-the-core-editor.md)   
+ [エディターの機能](http://msdn.microsoft.com/en-us/bdac940d-1f14-4019-a01f-fd0bb3dc7198)

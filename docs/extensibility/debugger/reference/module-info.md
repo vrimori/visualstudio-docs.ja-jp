@@ -1,115 +1,115 @@
 ---
-title: "MODULE_INFO | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MODULE_INFO"
-helpviewer_keywords: 
-  - "MODULE_INFO 構造体"
+title: "MODULE_INFO |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: MODULE_INFO
+helpviewer_keywords: MODULE_INFO structure
 ms.assetid: f2e06180-1ab3-4eb5-a428-7994cceb61b6
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: e5d86bf829c904acd56ca9ab37aa94a0f4038214
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# MODULE_INFO
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-特定のモジュール \(DLLEXEまたはアセンブリ\) について説明します。  
+# <a name="moduleinfo"></a>MODULE_INFO
+特定のモジュール (DLL、exe ファイルまたはアセンブリ) について説明します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-typedef struct tagMODULE_INFO {   
-   MODULE_INFO_FIELDS dwValidFields;  
-   BSTR               m_bstrName;  
-   BSTR               m_bstrUrl;  
-   BSTR               m_bstrVersion;  
-   BSTR               m_bstrDebugMessage;  
-   UINT64             m_addrLoadAddress;  
-   UINT64             m_addrPreferredLoadAddress;  
-   DWORD              m_dwSize;  
-   DWORD              m_dwLoadOrder;  
-   FILETIME           m_TimeStamp;  
-   BSTR               m_bstrUrlSymbolLocation;  
-   MODULE_FLAGS       m_dwModuleFlags;  
+```cpp  
+typedef struct tagMODULE_INFO {   
+   MODULE_INFO_FIELDS dwValidFields;  
+   BSTR               m_bstrName;  
+   BSTR               m_bstrUrl;  
+   BSTR               m_bstrVersion;  
+   BSTR               m_bstrDebugMessage;  
+   UINT64             m_addrLoadAddress;  
+   UINT64             m_addrPreferredLoadAddress;  
+   DWORD              m_dwSize;  
+   DWORD              m_dwLoadOrder;  
+   FILETIME           m_TimeStamp;  
+   BSTR               m_bstrUrlSymbolLocation;  
+   MODULE_FLAGS       m_dwModuleFlags;  
 } MODULE_INFO;  
 ```  
   
-```c#  
-public struct MODULE_INFO {   
-   public uint     dwValidFields;  
-   public string   m_bstrName;  
-   public string   m_bstrUrl;  
-   public string   m_bstrVersion;  
-   public string   m_bstrDebugMessage;  
-   public ulong    m_addrLoadAddress;  
-   public ulong    m_addrPreferredLoadAddress;  
-   public uint     m_dwSize;  
-   public uint     m_dwLoadOrder;  
-   public FILETIME m_TimeStamp;  
-   public string   m_bstrUrlSymbolLocation;  
-   public uint     m_dwModuleFlags;  
+```csharp  
+public struct MODULE_INFO {   
+   public uint     dwValidFields;  
+   public string   m_bstrName;  
+   public string   m_bstrUrl;  
+   public string   m_bstrVersion;  
+   public string   m_bstrDebugMessage;  
+   public ulong    m_addrLoadAddress;  
+   public ulong    m_addrPreferredLoadAddress;  
+   public uint     m_dwSize;  
+   public uint     m_dwLoadOrder;  
+   public FILETIME m_TimeStamp;  
+   public string   m_bstrUrlSymbolLocation;  
+   public uint     m_dwModuleFlags;  
 };  
 ```  
   
-## メンバー  
+## <a name="members"></a>メンバー  
  dwValidFields  
- どのフィールドを表示するかを指定する [MODULE\_INFO\_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) の列挙体のフラグの組み合わせ。  
+ フラグの組み合わせ、 [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)のどのフィールドが埋められますを指定する列挙です。  
   
- m\_bstrName  
+ m_bstrName  
  モジュール名。  
   
- m\_bstrUrl  
+ m_bstrUrl  
  モジュールの URL です。  
   
- m\_bstrVersion  
+ m_bstrVersion  
  モジュールのバージョン。  
   
- m\_bstrDebugMessage  
- モジュールのオプションのメッセージは「シンボルを読み込むことができません」。  
+ m_bstrDebugMessage  
+ オプションのメッセージ、モジュールに関するたとえば、「シンボルを読み込めません」  
   
- m\_addrLoadAddress  
+ m_addrLoadAddress  
  モジュールの読み込みアドレス。  
   
- m\_addrPreferredLoadAddress  
- モジュールの高い負荷のアドレス。  
+ m_addrPreferredLoadAddress  
+ モジュールの優先読み込みアドレス。  
   
- m\_dwSize  
+ m_dwSize  
  モジュールのサイズ。  
   
- m\_dwLoadOrder  
- モジュールの読み込み順。  
+ m_dwLoadOrder  
+ モジュールの読み込み順序。  
   
- m\_TimeStamp  
- 時間シンボル ファイルの最終変更しました。  
+ m_TimeStamp  
+ シンボル ファイルが最後に変更された時刻。  
   
- m\_bstrUrlSymbolLocation  
- シンボル ファイルの場所 \(たとえば「。  \\ 」\) モジュールで指定されます。  モジュールにシンボルの検索の開始点として使用されます。  
+ m_bstrUrlSymbolLocation  
+ シンボル ファイルの場所 (たとえば、".\\")、モジュールで指定します。 モジュールのシンボルを検索する開始位置として使用します。  
   
- m\_dwModuleFlags  
- モジュールを説明する [MODULE\_FLAGS](../../../extensibility/debugger/reference/module-flags.md) の列挙体のフラグの組み合わせ。  
+ m_dwModuleFlags  
+ フラグの組み合わせ、 [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md)モジュールを表す列挙体です。  
   
-## 解説  
- この構造が表示される [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) のメソッドに渡されます。  
+## <a name="remarks"></a>コメント  
+ この構造体に渡される、 [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)で塗り分けはメソッドです。  
   
- この構造体には\[出力\] ウィンドウに表示されます ENT0ENT の各モジュールに対応します。  
+ この構造は、各モジュールの記載に対応しています、**モジュール**ウィンドウです。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [MODULE\_INFO\_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)   
- [MODULE\_FLAGS](../../../extensibility/debugger/reference/module-flags.md)   
+ [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)   
+ [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)

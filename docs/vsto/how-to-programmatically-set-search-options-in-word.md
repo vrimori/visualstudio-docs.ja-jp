@@ -1,12 +1,10 @@
 ---
-title: 'How to: Programmatically Set Search Options in Word | Microsoft Docs'
+title: "方法: プログラムによって Word の検索オプションを設定 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,49 +16,49 @@ helpviewer_keywords:
 - Word, searching options
 - searching, Word options
 ms.assetid: 4412b4e8-2868-4afb-a593-983603ef9b02
-caps.latest.revision: 46
-author: kempb
-ms.author: kempb
+caps.latest.revision: "46"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 6ba2389591a19d657fb2d533ac7be1d0b15d0c19
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 2dda729e49e003482ce19870b9386f61923b154e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-programmatically-set-search-options-in-word"></a>How to: Programmatically Set Search Options in Word
-  There are two ways to set search options for selections in Microsoft Office Word documents:  
+# <a name="how-to-programmatically-set-search-options-in-word"></a>方法: プログラムによって Word の検索オプションを設定する
+  これには Microsoft Office Word ドキュメントで選択内容の検索オプションを設定する 2 つの方法があります。  
   
--   Set individual properties of a <xref:Microsoft.Office.Interop.Word.Find> object.  
+-   個々 のプロパティの設定、<xref:Microsoft.Office.Interop.Word.Find>オブジェクト。  
   
--   Use arguments of the <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> method of a <xref:Microsoft.Office.Interop.Word.Find> object.  
+-   引数を使用して、<xref:Microsoft.Office.Interop.Word.Find.Execute%2A>のメソッド、<xref:Microsoft.Office.Interop.Word.Find>オブジェクト。  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-## <a name="using-properties-of-a-find-object"></a>Using Properties of a Find Object  
- The following code sets properties of a <xref:Microsoft.Office.Interop.Word.Find> object to search for text within the current selection. Notice that the search criteria, such as searching forward, wrapping, and text to search for, are properties of the <xref:Microsoft.Office.Interop.Word.Find> object.  
+## <a name="using-properties-of-a-find-object"></a>Find オブジェクトのプロパティの使用  
+ 次のコードのプロパティを設定する、<xref:Microsoft.Office.Interop.Word.Find>オブジェクトの現在の選択範囲内のテキストを検索します。 プロパティに、検索するには、転送の折り返し、およびテキストを検索するなど、検索条件が、<xref:Microsoft.Office.Interop.Word.Find>オブジェクト。  
   
- Setting each of the properties of the <xref:Microsoft.Office.Interop.Word.Find> object is not useful when you write C# code because you must specify the same properties as parameters in the <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> method. Therefore this example contains only Visual Basic code.  
+ それぞれのプロパティの設定、<xref:Microsoft.Office.Interop.Word.Find>オブジェクト役に立ちますいないでパラメーターとして、同じプロパティを指定する必要がありますので、c# コードを記述するときに、<xref:Microsoft.Office.Interop.Word.Find.Execute%2A>メソッドです。 そのためこの例には、Visual Basic コードのみが含まれています。  
   
-#### <a name="to-set-search-options-using-a-find-object"></a>To set search options using a Find object  
+#### <a name="to-set-search-options-using-a-find-object"></a>Find オブジェクトを使用して検索オプションを設定するには  
   
-1.  Set the properties of a <xref:Microsoft.Office.Interop.Word.Find> object to search forward through a selection for the text **find me**.  
+1.  プロパティを設定、<xref:Microsoft.Office.Interop.Word.Find>のテキスト選択範囲を前方に検索するオブジェクト**find me」**です。  
   
      [!code-vb[Trin_VstcoreWordAutomation#76](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#76)]  
   
-## <a name="using-execute-method-arguments"></a>Using Execute Method Arguments  
- The following code uses the <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> method of a <xref:Microsoft.Office.Interop.Word.Find> object to search for text within the current selection. Notice that the search criteria, such as searching forward, wrapping, and text to search for, are passed as parameters of the <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> method.  
+## <a name="using-execute-method-arguments"></a>メソッドの引数を使用すると実行  
+ 次のコードでは、<xref:Microsoft.Office.Interop.Word.Find.Execute%2A>のメソッド、<xref:Microsoft.Office.Interop.Word.Find>オブジェクトの現在の選択範囲内のテキストを検索します。 パラメーターとして渡されるを検索するには、転送の折り返し、およびテキストを検索するなど、検索条件に注意してください、<xref:Microsoft.Office.Interop.Word.Find.Execute%2A>メソッドです。  
   
-#### <a name="to-set-search-options-using-execute-method-arguments"></a>To set search options using Execute method arguments  
+#### <a name="to-set-search-options-using-execute-method-arguments"></a>Execute メソッドの引数を使用して検索オプションを設定するには  
   
-1.  Pass search criteria as parameters of the <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> method to search forward through a selection for the text **find me**.  
+1.  検索条件のパラメーターとして渡す、<xref:Microsoft.Office.Interop.Word.Find.Execute%2A>のテキスト選択範囲を前方に検索するメソッド**find me」**です。  
   
-     [!code-vb[Trin_VstcoreWordAutomation#77](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#77)]  [!code-csharp[Trin_VstcoreWordAutomation#77](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#77)]  
+     [!code-vb[Trin_VstcoreWordAutomation#77](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#77)]
+     [!code-csharp[Trin_VstcoreWordAutomation#77](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#77)]  
   
-## <a name="see-also"></a>See Also  
- [How to: Programmatically Search for and Replace Text  in Documents](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)   
- [How to: Programmatically Loop Through Found Items in Documents](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)   
- [How to: Programmatically Restore Selections After Searches](../vsto/how-to-programmatically-restore-selections-after-searches.md)  
+## <a name="see-also"></a>関連項目  
+ [方法: プログラムによって検索し、文書内のテキストを置換](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)   
+ [方法: 文書で見つかった項目をプログラムによってループ](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)   
+ [方法: プログラムによって検索後に選択範囲を復元する](../vsto/how-to-programmatically-restore-selections-after-searches.md)  
   
   

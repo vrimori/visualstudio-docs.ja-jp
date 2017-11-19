@@ -1,42 +1,41 @@
 ---
-title: "シンボルとシンボル タグ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "シンボル [DIA SDK]"
+title: "シンボルとシンボル タグ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: symbols [DIA SDK]
 ms.assetid: 2ee3a262-cda6-48bf-b799-a37edde6c8b8
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 347ea483fda44d43d73b147a41a55f0945e515e9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# シンボルとシンボル タグ
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-コンパイル済みプログラムのデバッグ情報がプログラム データベース \(.pdb\) ファイルで Debug Interface Access SDK の API を使用してアクセスできるシンボルとして \(DIA\) 格納されます。  すべてのシンボルに [IDiaSymbol::get\_symTag](../Topic/IDiaSymbol::get_symTag.md) と [IDiaSymbol::get\_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md) のプロパティがあります。  `symTag` のプロパティは [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md) の列挙型で定義されているシンボルの種類を示します。  `symIndexId` のプロパティはシンボルのすべてのインスタンスの一意識別子を含む `DWORD` の値です。  
+# <a name="symbols-and-symbol-tags"></a>シンボルとシンボル タグ
+コンパイル済みのプログラムに関するデバッグ情報は、シンボルとデバッグ インターフェイス アクセス (DIA) SDK の Api を使用してアクセス可能であるプログラム データベース (.pdb) ファイルに格納されます。 すべてのシンボルが、 [idiasymbol::get_symtag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)と[idiasymbol::get_symindexid](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)プロパティです。 `symTag`で定義されているプロパティがシンボルの種類を示す、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)列挙します。 `symIndexId`プロパティは、`DWORD`シンボルのすべてのインスタンスの一意の識別子を含む値です。  
   
- シンボルに最も頻繁に [IDiaSymbol::get\_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md) または [IDiaSymbol::get\_classParent](../Topic/IDiaSymbol::get_classParent.md) シンボルに関する追加情報およびへの参照を他のシンボル指定できるプロパティがあります。  参照を含むプロパティを呼び出すと参照は [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) のオブジェクトを返します。  このようなプロパティと同じ名前で別のプロパティと常に使用されますが「 ID 」たとえば[IDiaSymbol::get\_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md) と [IDiaSymbol::get\_classParentId](../Topic/IDiaSymbol::get_classParentId.md) をサフィックスとして付けられます。  [シンボルの場所](../../debugger/debug-interface-access/symbol-locations.md)[シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md) と [シンボル型のクラス階層](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md) のアウトラインのシンボル テーブルの種類ごとにプロパティ。  これらのプロパティは関連情報に関するそのほかのシンボルへの参照がある場合があります。  `*Id` のプロパティが関連プロパティのではなく数値順序の識別子であるため以降の説明では省略されます。  はパラメーターについては必要に応じてだけで参照されます。  
+ シンボルがシンボルに加え、他のシンボルへの参照に関する追加情報ほとんどの場合に指定できるプロパティを持つも、 [idiasymbol::get_lexicalparent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)または[idiasymbol::get_classparent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md). として参照が返される参照を含んでいるプロパティをクエリするとき、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)オブジェクト。 などのプロパティは常にペアになって別のプロパティ名"Id"と付加が同じでなど[idiasymbol::get_lexicalparentid](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md)と[idiasymbol::get_classparentid](../../debugger/debug-interface-access/idiasymbol-get-classparentid.md)です。 内のテーブル[シンボルの場所](../../debugger/debug-interface-access/symbol-locations.md)、[シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)、および[シンボル型のクラス階層](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)さまざまな種類の各プロパティの概要のシンボル。 これらのプロパティには、関連する情報またはその他のシンボルへの参照があります。 `*Id`プロパティは、関連するプロパティを単に数値の序数に基づく識別子、さらにディスカッションから省略されています。 それらはパラメーターの説明で必要な場合のみです。  
   
- プロパティにアクセスしようとしたときにエラーが発生しないしシンボルのプロパティに値が割り当てられプロパティはメソッドの戻り `S_OK` 「」を取得します。  `S_FALSE` の戻り値はプロパティが現在のシンボルに対して無効であることを示します。  
+ エラーが発生しないと、シンボルのプロパティに値が割り当てられる場合、プロパティにアクセスしようとすると、プロパティの"get"メソッドを返します`S_OK`です。 戻り値の`S_FALSE`プロパティが現在のシンボルに対して有効でないことを示します。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  [シンボルの場所](../../debugger/debug-interface-access/symbol-locations.md)  
- シンボルを使用できる場所の種類について説明します。  
+ シンボルの場所のさまざまな種類をについて説明します。  
   
  [シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)  
- ファイルモジュール関数のような構文を使用してシンボル階層の型について説明します。  
+ ファイル、モジュール、関数などの構文上の階層を形成するシンボルの型について説明します。  
   
  [シンボル型のクラス階層](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)  
- クラス配列および関数の戻り値の型など異なる言語要素に対応するシンボルの型について説明します。  
+ クラス、配列、および関数型を返すように、別の言語要素に対応するシンボルの型について説明します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Debug Interface Access SDK](../../debugger/debug-interface-access/debug-interface-access-sdk.md)

@@ -1,61 +1,61 @@
 ---
-title: "IEnumDebugProcesses2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugProcesses2"
-helpviewer_keywords: 
-  - "IEnumDebugProcesses2"
+title: "IEnumDebugProcesses2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IEnumDebugProcesses2
+helpviewer_keywords: IEnumDebugProcesses2
 ms.assetid: 06a1368f-10f0-44eb-af61-e388c2327111
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 6e5be156ec0a30f736b96cfe6451b893dfb8eacf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IEnumDebugProcesses2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このインターフェイスはデバッグ ポートで実行されているプロセスを列挙します。  
+# <a name="ienumdebugprocesses2"></a>IEnumDebugProcesses2
+このインターフェイスは、デバッグ ポートで実行中のプロセスを列挙します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IEnumDebugProcesses : IUnknown  
 ```  
   
-## 実装についてのメモ  
- カスタム ポートの業者はポートで実行されているプロセスの一覧を表示するにはこのインターフェイスを実装します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ カスタム ポート仕入先では、ポートで実行されているプロセスの一覧を提供するには、このインターフェイスを実装します。  
   
-## 呼び出し元のメモ  
- Visual Studio はこのインターフェイスを取得するに [EnumProcesses](../Topic/IDebugPort2::EnumProcesses.md) を呼び出します。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ Visual Studio 呼び出し[EnumProcesses](../../../extensibility/debugger/reference/idebugport2-enumprocesses.md)このインターフェイスを取得します。  
   
-## Vtable の順序でメソッド  
- 次の表は `IEnumDebugProcesses2` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IEnumDebugProcesses2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[次へ](../../../extensibility/debugger/reference/ienumdebugprocesses2-next.md)|列挙体シーケンス内の指定したプロセスの数を取得します。|  
-|[Skip](../../../extensibility/debugger/reference/ienumdebugprocesses2-skip.md)|列挙体シーケンスのプロセスの指定した数の要素をスキップします。|  
-|[リセット](../../../extensibility/debugger/reference/ienumdebugprocesses2-reset.md)|列挙体シーケンスを先頭にリセットします。|  
-|[複製](../Topic/IEnumDebugProcesses2::Clone.md)|現在の列挙子と同じ列挙状態を含む列挙子を作成します。|  
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugprocesses2-getcount.md)|プロセスの列挙子の数を取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[次へ](../../../extensibility/debugger/reference/ienumdebugprocesses2-next.md)|列挙のシーケンス内のプロセスの指定した数を取得します。|  
+|[Skip](../../../extensibility/debugger/reference/ienumdebugprocesses2-skip.md)|指定した列挙のシーケンス内のプロセス数をスキップします。|  
+|[リセット](../../../extensibility/debugger/reference/ienumdebugprocesses2-reset.md)|列挙のシーケンスを先頭にリセットします。|  
+|[複製](../../../extensibility/debugger/reference/ienumdebugprocesses2-clone.md)|現在の列挙子と同じ列挙の状態を含む列挙子を作成します。|  
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugprocesses2-getcount.md)|列挙子のプロセスの数を取得します。|  
   
-## 解説  
- Visual Studio には\[出力\] ウィンドウ ENT0ENT を取得するためこのインターフェイスを使用します。  
+## <a name="remarks"></a>コメント  
+ Visual Studio では、このインターフェイスを使用して、事前設定、**プロセス**ウィンドウです。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
- [EnumProcesses](../Topic/IDebugPort2::EnumProcesses.md)
+ [EnumProcesses](../../../extensibility/debugger/reference/idebugport2-enumprocesses.md)

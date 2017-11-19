@@ -1,55 +1,56 @@
 ---
-title: "toFixed メソッド (Number) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "toFixed"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "toFixed メソッド"
+title: "toFixed メソッド (Number) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: toFixed
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: toFixed method
 ms.assetid: b5f03400-865e-4ab2-818c-f734c0f6d6f0
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: dd51dd67632f4e6417fee72fd19575025423bbf1
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# toFixed メソッド (Number) (JavaScript)
-固定小数点表記の数を表します。  
+# <a name="tofixed-method-number-javascript"></a>toFixed メソッド (Number) (JavaScript)
+固定小数点表記の数値を表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 numObj.toFixed([fractionDigits])  
 ```  
   
-## Parameters  
+## <a name="parameters"></a>パラメーター  
  `numObj`  
- 必須。`Number` オブジェクトを指定します。  
+ 必要な A`Number`オブジェクト。  
   
  `fractionDigits`  
- Optional.  小数点以下の桁数を指定します。  0 ～ 20 の範囲で指定します。  
+ 省略可能です。 小数点後の数字の数。 0 ~ 20 の範囲でなければなりません。  
   
-## 戻り値  
- 小数点以下 `fractionDigits` 桁を含む数値を固定小数点表記で表した文字列を返します。  
+## <a name="return-value"></a>戻り値  
+ 固定小数点表記法で数値の文字列形式を返しますを含む`fractionDigits`小数点後の数字です。  
   
- `fractionDigits` を指定していない場合、または **undefined** である場合、既定値は 0 です。  
+ 場合`fractionDigits`が指定されていないか、**未定義**既定値は 0 です。  
   
-## 使用例  
+## <a name="example"></a>例  
  `toFixed` の使用例を次のコードに示します。  
   
-```javascript  
+```JavaScript  
 var num = new Number(123);  
 var fix = num.toFixed();  
 document.write(fix);  
@@ -65,11 +66,11 @@ document.write(fix);
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv55](../../javascript/reference/includes/jsv55-md.md)]  
   
- **対象**: [Number オブジェクト](../../javascript/reference/number-object-javascript.md)  
+ **適用されます**:[オブジェクトの数](../../javascript/reference/number-object-javascript.md)  
   
-## 参照  
- [toExponential メソッド \(Number\)](../../javascript/reference/toexponential-method-number-javascript.md)   
- [toPrecision メソッド \(Number\)](../../javascript/reference/toprecision-method-number-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [toExponential メソッド (Number)](../../javascript/reference/toexponential-method-number-javascript.md)   
+ [toPrecision メソッド (Number)](../../javascript/reference/toprecision-method-number-javascript.md)

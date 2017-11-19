@@ -1,12 +1,10 @@
 ---
-title: 'How to: Export a Ribbon from the Ribbon Designer to Ribbon XML | Microsoft Docs'
+title: "方法: リボン デザイナーからリボン XML にエクスポート |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -21,60 +19,60 @@ helpviewer_keywords:
 - Ribbon Designer [Office development in Visual Studio]
 - exporting Ribbon
 ms.assetid: 96e0e9ed-4392-4f45-ac33-b6f7c22ea321
-caps.latest.revision: 37
-author: kempb
-ms.author: kempb
+caps.latest.revision: "37"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: cf3b9b66e0626328bccac92ab473dee33326b0f2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: b73bff8170e351e9e22e95d53ae446895cfdbd2b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>How to: Export a Ribbon from the Ribbon Designer to Ribbon XML
-  The **Ribbon (Visual Designer)** item does not support all possible types of Ribbon customization. To customize the Ribbon in advanced ways, you can export the Ribbon from the designer to Ribbon XML and edit the XML directly.  
+# <a name="how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>方法 : リボンをリボン デザイナーからリボン XML にエクスポートする
+  **リボン (ビジュアル デザイナー)**項目がリボンのカスタマイズのすべての種類をサポートしていません。 高度な方法でリボンをカスタマイズするには、リボンをデザイナーからリボン XML にエクスポートし、XML を直接編集します。  
   
 > [!NOTE]  
->  Not all property values appear in the Ribbon XML file. For more information, see [Ribbon Overview](../vsto/ribbon-overview.md).  
+>  リボン XML ファイルにないすべてのプロパティ値が表示されます。 詳細については、次を参照してください。[リボンの概要](../vsto/ribbon-overview.md)です。  
   
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]  
   
-### <a name="to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>To export a Ribbon from the Ribbon Designer to Ribbon XML  
+### <a name="to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>リボンをリボン デザイナーからリボン XML にエクスポートするには  
   
-1.  Right-click the Ribbon code file in **Solution Explorer**, and then click **View Designer**.  
+1.  リボン コード ファイルを右クリックして**ソリューション エクスプ ローラー**、クリックして**ビュー デザイナー**です。  
   
-2.  Right-click the Ribbon Designer, and then click **Export Ribbon to XML**.  
+2.  リボン デザイナーを右クリックし、をクリックして**リボンを XML にエクスポート**です。  
   
-     Visual Studio adds a Ribbon XML file and a Ribbon XML code file to your project.  
+     Visual Studio は、プロジェクトにリボン XML ファイルとリボン XML コード ファイルを追加します。  
   
-3.  In the Ribbon code class, locate the comments that start with `TODO:`.  
+3.  リボン コード クラスで始まるコメントを探します`TODO:`です。  
   
-4.  Copy the code block in these comments to the **ThisAddin**, **ThisWorkbook**, or **ThisDocument** class, depending on which type of solution you are developing.  
+4.  これらのコメント内のコード ブロックのコピー、 **ThisAddin**、 **ThisWorkbook**、または**ThisDocument**クラスを開発しているソリューションの種類によって異なります。  
   
-     This code enables the Microsoft Office application to discover and load your custom Ribbon. For more information, see [Ribbon XML](../vsto/ribbon-xml.md).  
+     このコードにより、Microsoft Office アプリケーションを検出して、カスタム リボンを読み込みます。 詳細については、「 [Ribbon XML](../vsto/ribbon-xml.md)」を参照してください。  
   
-5.  In the **ThisAddin**, **ThisWorkbook**, or **ThisDocument** class, uncomment the code block.  
+5.  **ThisAddin**、 **ThisWorkbook**、または**ThisDocument**クラス、コード ブロックのコメントを解除します。  
   
-     After you uncomment the code, it should resemble the following example. In this example, the Ribbon class is called `MyRibbon`.  
+     コード コメントを解除すると後、次の例のようにします。 この例では、リボン クラスが呼び出されます`MyRibbon`です。  
   
-     [!code-csharp[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs#1)]  [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb#1)]  
+     [!code-csharp[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs#1)]
+     [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb#1)]  
   
-6.  Switch to the Ribbon XML code file and find the `Ribbon Callbacks` region.  
+6.  リボン XML コード ファイルに切り替えるし、検索、`Ribbon Callbacks`領域。  
   
-     This is where you write callback methods to handle user actions, such as clicking a button.  
+     これは、ボタンのクリックしてなどのユーザー アクションを処理するコールバック メソッドを記述します。  
   
-7.  Create a callback method for each event handler that you wrote in the Ribbon Designer code.  
+7.  リボン デザイナー コードで記述したそれぞれのイベント ハンドラーのコールバック メソッドを作成します。  
   
-8.  Move all your event handler code from the event handlers to the callback methods, and modify the code to work with the Ribbon extensibility (RibbonX) programming model.  
+8.  イベント ハンドラーからすべてのイベント ハンドラー コードをコールバック メソッドに移動し、リボン機能拡張 (RibbonX) プログラミング モデルを使用するコードを変更します。  
   
-     For information about writing callback methods and using the RibbonX programming model, see [Ribbon XML](../vsto/ribbon-xml.md).  
+     コールバック メソッドの記述と RibbonX プログラミング モデルの使用については、次を参照してください。[リボン XML](../vsto/ribbon-xml.md)です。  
   
-## <a name="see-also"></a>See Also  
- [Ribbon Overview](../vsto/ribbon-overview.md)   
- [Ribbon Designer](../vsto/ribbon-designer.md)   
- [Ribbon XML](../vsto/ribbon-xml.md)   
- [Walkthrough: Creating a Custom Tab by Using the Ribbon Designer](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   
- [Walkthrough: Creating a Custom Tab by Using Ribbon XML](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)  
+## <a name="see-also"></a>関連項目  
+ [リボンの概要](../vsto/ribbon-overview.md)   
+ [リボン デザイナー](../vsto/ribbon-designer.md)   
+ [リボン XML](../vsto/ribbon-xml.md)   
+ [チュートリアル: リボン デザイナーを使用してカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   
+ [チュートリアル: リボン XML によるカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)  
   
   

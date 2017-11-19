@@ -1,39 +1,41 @@
 ---
-title: "型のビジュアライザーとカスタム ビューアー | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "[デバッグ SDK] カスタム ビューアーのデバッグ"
-  - "[デバッグ SDK] 型のビジュアライザーのデバッグ"
+title: "ビジュアライザーとカスタム ビューアー入力 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- debugging [Debugging SDK], custom viewer
+- debugging [Debugging SDK], type visualizer
 ms.assetid: fd3691e6-9c78-4767-846f-43f85ada4375
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 80798887beee6116b3a93b5d8ec86b14269b5475
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 型のビジュアライザーとカスタム ビューアー
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-型のビジュアライザーはきわめて特殊な形式の任意のデータを表示するコンポーネントです。  この形式はビジュアライザーのエンド ユーザーやサードパーティのサプライヤーに応じてビジュアライザーの実装によって完全にあります。  
+# <a name="type-visualizer-and-custom-viewer"></a>型のビジュアライザーとカスタム ビューアー
+型のビジュアライザーは、非常に特定の形式でデータを表示するコンポーネントです。 この形式は、ビジュアライザーの実行者の次第、エンドユーザーまたはビジュアライザー サード パーティ製品を供給します。  
   
- カスタム ビューアーは特定の形式の任意のデータを表示するカスタムの式エバリュエーターの一部です。  この形式はカスタム ビューアーの実装によって完全にあるため形式の式エバリュエーターの実装によってあることを意味 \(EE\) します。  
+ カスタム ビューアーは、非常に特定の形式でデータを表示するカスタム式エバリュエーターの一部です。 この形式では、つまり形式は、式の評価 (EE) の実装者は、カスタム ビューアーの実行者の次第です。  
   
-## 式エバリュエーター型のビジュアライザーのサポート  
- EE はビジュアライザーにアクセスできる一連のインターフェイスをサポートしてビジュアライザーをサポートする型 : [IEEVisualizerService](../../extensibility/debugger/reference/ieevisualizerservice.md) と [IEEVisualizerDataProvider](../../extensibility/debugger/reference/ieevisualizerdataprovider.md) などのインターフェイス。  EEが型のビジュアライザー自体の実装を担当していないので注意してください : EE は型情報に外部ビジュアライザーのアクセスを許可します。  このようなビジュアライザーは EE とともに出荷されそのほかのサードパーティ販売元によってもエンド ユーザーが指定する Visual Studio の適切な場所にインストールされる場合もあります。  
+## <a name="support-for-type-visualizers-in-an-expression-evaluator"></a>式エバリュエーターの種類のビジュアライザーのサポート  
+ ビジュアライザーにアクセスできるインターフェイスのセットをサポートすることにより、EE が型のビジュアライザーをサポートできます: ようなインターフェイス[IEEVisualizerService](../../extensibility/debugger/reference/ieevisualizerservice.md)と[IEEVisualizerDataProvider](../../extensibility/debugger/reference/ieevisualizerdataprovider.md)です。 ただし、EE がそれ自体の種類のビジュアライザーを実装する責任がないこと: EE だけを実行により、外部のビジュアライザーの型情報へのアクセス。 このようなビジュアライザーを EE と共に出荷されたおよび他のサード パーティ ベンダーまたはエンドユーザーによっても提供している Visual Studio での適切な場所にインストールされている可能性があります。  
   
-## 式エバリュエーターのカスタム ビューアーのサポート  
- EE はEE 自体がデータ型をレンダリングするためのコードを記述するカスタム ビューアーをサポートできます。  カスタム ビューアーは形式を有効にするデータを表示するのすべての関税を処理 [IDebugCustomViewer](../../extensibility/debugger/reference/idebugcustomviewer.md) のインターフェイスを実装しています ; ビューアーが表示されを完全に管理しデータの変更を許可できます。  製品に付属すると EE を指定するカスタム ビューアーが EE があります。  
+## <a name="support-for-custom-viewers-in-an-expression-evaluator"></a>式エバリュエーターでのカスタム ビューアーのサポート  
+ EE は、EE 自体が、データ型を表示するためのコードを提供するカスタム ビューアーにもサポートできます。 カスタム ビューアーを実装して、 [IDebugCustomViewer](../../extensibility/debugger/reference/idebugcustomviewer.md)どのような形式でデータを表示するすべての職務を処理するインターフェイスが必要な以外の場合は、ビューアーの表示を完全に制御があり、変更するデータを許可することができますも。 EE によって提供される任意のカスタム ビューアーは、製品に付属しているときに、EE が付属します。  
   
-## 参照  
- [デバッガーのコンポーネント](../../extensibility/debugger/debugger-components.md)   
+## <a name="see-also"></a>関連項目  
+ [デバッガー コンポーネント](../../extensibility/debugger/debugger-components.md)   
  [式エバリュエーター](../../extensibility/debugger/expression-evaluator.md)   
- [エンジンをデバッグします。](../../extensibility/debugger/debug-engine.md)   
+ [デバッグ エンジン](../../extensibility/debugger/debug-engine.md)   
  [IDebugCustomViewer](../../extensibility/debugger/reference/idebugcustomviewer.md)   
  [IEEVisualizerService](../../extensibility/debugger/reference/ieevisualizerservice.md)   
  [IEEVisualizerDataProvider](../../extensibility/debugger/reference/ieevisualizerdataprovider.md)

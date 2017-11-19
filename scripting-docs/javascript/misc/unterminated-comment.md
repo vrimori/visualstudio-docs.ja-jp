@@ -1,38 +1,40 @@
 ---
-title: "未終了のコメントです。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.WebClient.Help.SCRIPT1016"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "未終了のコメント |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: javascript
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VS.WebClient.Help.SCRIPT1016
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: d4286315-814b-4966-b4c4-1ee19d796eff
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 9fde5d5edd7e81060b088e4940d752aa05e65ded
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 未終了のコメントです。
-複数行コメント ブロックを開始しましたが、適切に終了していません。  複数行コメントは "\/\*" で開始し、これを逆にした "\*\/" で終了する必要があります。  次に例を示します。  
+# <a name="unterminated-comment"></a>未終了のコメントです。
+複数行のコメント ブロックを開始しましたが、正常に終了しませんでしたが。 複数行コメントが始まる、"/*"逆で終わると組み合わせ、"\*/"の組み合わせ。 次に例を示します。  
   
-```javascript  
+```JavaScript  
 /* This is a comment  
 This is another part of the same comment.*/  
 ```  
   
-### このエラーを解決するには  
+### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   複数行コメントは、必ず "\*\/" で終了するようにします。  
+-   複数行コメントが終了することを確認する"*/"です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コメント ステートメント](../../javascript/reference/comment-statements-javascript.md)

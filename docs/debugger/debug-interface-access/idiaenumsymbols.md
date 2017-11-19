@@ -1,67 +1,66 @@
 ---
-title: "IDiaEnumSymbols | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumSymbols インターフェイス"
+title: "IDiaEnumSymbols |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumSymbols interface
 ms.assetid: 649f7bfd-86ac-49a5-8533-aff77e1bc62e
-caps.latest.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 372279d82f9f316edf0d1aed203be1ce4e48e236
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumSymbols
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idiaenumsymbols"></a>IDiaEnumSymbols
 データ ソースに含まれるさまざまなシンボルを列挙します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
-IDiaEnumSymbols : IUnknown  
+IDiaEnumSymbols : IUnknown  
 ```  
   
-## Vtable の順序でメソッド  
- 次の表は `IDiaEnumSymbols` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDiaEnumSymbols`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[IDiaEnumSymbols::get\_\_NewEnum](../../debugger/debug-interface-access/idiaenumsymbols-get-newenum.md)|この列挙子の `IEnumVARIANT Interface` のバージョンを取得します。|  
-|[IDiaEnumSymbols::get\_Count](../../debugger/debug-interface-access/idiaenumsymbols-get-count.md)|シンボルの数を取得します。|  
-|[IDiaEnumSymbols::Item](../../debugger/debug-interface-access/idiaenumsymbols-item.md)|インデックスでシンボルを取得します。|  
-|[IDiaEnumSymbols::Next](../../debugger/debug-interface-access/idiaenumsymbols-next.md)|列挙体シーケンス内の指定したシンボルの数を取得します。|  
-|[IDiaEnumSymbols::Skip](../../debugger/debug-interface-access/idiaenumsymbols-skip.md)|列挙体シーケンス内のシンボルの指定した数の要素をスキップします。|  
-|[IDiaEnumSymbols::Reset](../../debugger/debug-interface-access/idiaenumsymbols-reset.md)|列挙体シーケンスを先頭にリセットします。|  
-|[IDiaEnumSymbols::Clone](../../debugger/debug-interface-access/idiaenumsymbols-clone.md)|現在の列挙子と同じ列挙状態を含む列挙子を作成します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[IDiaEnumSymbols::get__NewEnum](../../debugger/debug-interface-access/idiaenumsymbols-get-newenum.md)|取得、`IEnumVARIANT Interface`この列挙子のバージョン。|  
+|[IDiaEnumSymbols::get_Count](../../debugger/debug-interface-access/idiaenumsymbols-get-count.md)|シンボルの数を取得します。|  
+|[IDiaEnumSymbols::Item](../../debugger/debug-interface-access/idiaenumsymbols-item.md)|インデックスを使用してシンボルを取得します。|  
+|[IDiaEnumSymbols::Next](../../debugger/debug-interface-access/idiaenumsymbols-next.md)|列挙のシーケンス内のシンボルの指定した数を取得します。|  
+|[IDiaEnumSymbols::Skip](../../debugger/debug-interface-access/idiaenumsymbols-skip.md)|列挙のシーケンス内のシンボルの指定した数をスキップします。|  
+|[IDiaEnumSymbols::Reset](../../debugger/debug-interface-access/idiaenumsymbols-reset.md)|列挙のシーケンスを先頭にリセットします。|  
+|[IDiaEnumSymbols::Clone](../../debugger/debug-interface-access/idiaenumsymbols-clone.md)|現在の列挙子と同じ列挙の状態を含む列挙子を作成します。|  
   
-## 解説  
- このインターフェイスは \(たとえば`SymTagUDT` ユーザー定義型 \(\) または `SymTagBaseClass` の種類にグループ化されたシンボルを提供します。  アドレスにグループ化されたシンボルを使用するには [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md) のインターフェイスを使用します。  
+## <a name="remarks"></a>コメント  
+ このインターフェイスは、記号などの特定の種類でグループ化されているシンボル`SymTagUDT`(ユーザー定義型) または`SymTagBaseClass`です。 アドレスによるグループ化されているシンボルを使用するを使用して、 [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)インターフェイスです。  
   
-## 呼び出し元のメモ  
- 次のメソッドを呼び出してこのインターフェイスを取得します :  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ 次のメソッドを呼び出すことによってこのインターフェイスを取得します。  
   
 -   [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)  
   
 -   [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)  
   
--   [IDiaSourceFile::get\_compilands](../../debugger/debug-interface-access/idiasourcefile-get-compilands.md)  
+-   [IDiaSourceFile::get_compilands](../../debugger/debug-interface-access/idiasourcefile-get-compilands.md)  
   
-## 使用例  
- この例で `IDiaEnumSymbols` のインターフェイスを取得しユーザー定義型の一覧を表示するには列挙型を使用する方法を \(UDTs\) 示します。  
+## <a name="example"></a>例  
+ この例は、取得する方法を示します、`IDiaEnumSymbols`インターフェイスし、一覧のユーザー定義型 (Udt) をその列挙体を使用します。  
   
 > [!NOTE]
->  `CDiaBSTR` はインスタンス化がスコープ外に出ると文字列を解放する `BSTR` を自動的に処理をラップするクラスです。  
+>  `CDiaBSTR`ラップするクラスには、`BSTR`し、自動的に処理をインスタンス化がスコープ外に出るときに、文字列を解放します。  
   
-```cpp#  
+```C++  
 void ShowUDTs(IDiaSymbol *pGlobals)  
 {  
     CComPtr<IDiaEnumSymbols> pEnum;  
@@ -87,15 +86,15 @@ void ShowUDTs(IDiaSymbol *pGlobals)
 }  
 ```  
   
-## 必要条件  
- ヘッダー : Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Dia2.h  
   
- ライブラリ : diaguids.lib  
+ ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## 参照  
- [インターフェイス \(Debug Interface Access SDK\)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
- [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
- [IDiaSourceFile::get\_compilands](../../debugger/debug-interface-access/idiasourcefile-get-compilands.md)   
+## <a name="see-also"></a>関連項目  
+ [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
+ [Idiasession::findchildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
+ [Idiasourcefile::get_compilands](../../debugger/debug-interface-access/idiasourcefile-get-compilands.md)   
  [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)

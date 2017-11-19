@@ -1,76 +1,77 @@
 ---
-title: "方法: フィーチャーの依存関係を追加および削除する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MICROSOFT.VISUALSTUDIO.SHAREPOINT.DESIGNERS.CUSTOMDEPENDENCYWINDOW"
-  - "VS.SHAREPOINTTOOLS.RAD.FEATUREDESIGNERDEPENDENCY"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での SharePoint 開発, 機能"
+title: "方法: 追加および機能の依存関係を削除する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MICROSOFT.VISUALSTUDIO.SHAREPOINT.DESIGNERS.CUSTOMDEPENDENCYWINDOW
+- VS.SHAREPOINTTOOLS.RAD.FEATUREDESIGNERDEPENDENCY
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords: SharePoint development in Visual Studio, features
 ms.assetid: 2b34c8d9-c975-4fe9-b8e0-52db4a6014ea
-caps.latest.revision: 13
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: d758c5d4f410881989492f64dd7a7e5b8dc73804
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: フィーチャーの依存関係を追加および削除する
-  SharePoint フィーチャーが、他のフィーチャーの機能またはデータに依存している場合があります。  その場合は、このフィーチャーの依存関係として、これらの他のフィーチャーをマークできます。  これにより、依存元のフィーチャーがアクティブ化される前に、依存先のフィーチャーが確実にアクティブ化されます。  
+# <a name="how-to-add-and-remove-feature-dependencies"></a>方法: フィーチャーの依存関係を追加および削除する
+  SharePoint の機能は、機能やデータの他の機能によって異なります。 このような場合は、これら他の機能を機能の依存関係としてマークできます。 これにより、SharePoint サーバーにより、機能をアクティブ化する前に、依存する機能がアクティブ化されます。  
   
-## 依存関係の追加  
- ソリューション内の他のフィーチャーを依存関係として追加できます。  これにより、依存元のフィーチャーがインストールされる前に、必要なフィーチャーが確実にインストールされます。  
+## <a name="adding-dependencies"></a>依存関係の追加  
+ 依存関係として、ソリューション内の他の機能を追加できます。 このようにすることができます必要な機能がインストールされ、機能をインストールする前にアクティブ化されていることを確認します。  
   
-#### ソリューション内のフィーチャーの依存関係を追加するには  
+#### <a name="to-add-a-dependency-on-a-feature-in-the-solution"></a>ソリューション内のフィーチャーの依存関係を追加するには  
   
-1.  フィーチャー デザイナーを開き、**\[フィーチャー アクティブ化依存関係\]** ノードを展開し、**\[追加\]** ボタンをクリックします。  
+1.  フィーチャー デザイナーを開き、展開、**機能のアクティブ化依存関係** ノードを選択し、**追加**ボタンをクリックします。  
   
-2.  **\[フィーチャー アクティブ化依存関係の追加\]** ダイアログ ボックスで、**\[フィーチャーの依存関係をソリューションに追加する\]** のオプション ボタンを選択し、依存関係として追加する次へをクリックします **\[追加\]** をクリックして、フィーチャーのタイトルを指定します。  
+2.  **機能のアクティブ化依存関係の追加** ダイアログ ボックスで、選択、**ソリューションの機能の依存関係を追加** ボタンをオプションで、依存関係として追加する機能のタイトルを選択し、選択、**追加**ボタンをクリックします。  
   
-     複数のタイトルを選択し、複数の機能を追加するには、Ctrl キーを押しながら。  
+     1 つ以上の機能を追加するには、Ctrl キーを押しながら複数のタイトルを選択します。  
   
-## カスタム依存関係の追加  
- SharePoint サーバーに既に配置されているフィーチャーを依存関係として追加できます。  これにより、依存元のフィーチャーがインストールされる前に、依存先のフィーチャーがすべてアクティブ化されていることが SharePoint のアクティブ化プロセスによって確認されます。  
+## <a name="adding-custom-dependencies"></a>カスタム依存関係の追加  
+ 依存関係として、SharePoint サーバーに既に配置されている機能を追加できます。 これにより、SharePoint のライセンス認証プロセスは、機能をインストールする前に、すべての依存する機能をアクティブ化されるかどうかを確認するを確認します。  
   
-#### 依存関係をフィーチャー ID で追加するには  
+#### <a name="to-add-a-dependency-by-the-feature-id"></a>機能 ID で依存関係を追加するには  
   
-1.  フィーチャー デザイナーを開き、**\[フィーチャー アクティブ化依存関係\]** ノードを展開し、**\[追加\]** ボタンをクリックします。  
+1.  フィーチャー デザイナーを開き、展開、**機能のアクティブ化依存関係** ノードを選択し、**追加**ボタンをクリックします。  
   
-2.  **\[フィーチャー アクティブ化依存関係の追加\]** ダイアログ ボックスで、**\[カスタム依存関係を追加する\]** のオプション ボタンを選択します。  
+2.  **機能のアクティブ化依存関係の追加** ダイアログ ボックスで、選択、**カスタム依存関係を追加**オプション ボタンをクリックします。  
   
-3.  **\[フィーチャー ID\]** のテキスト ボックスに、アクティブ化の依存関係としてマークする入力し、**\[追加\]** をクリックして、フィーチャーの GUID を。  
+3.  **機能 ID**テキスト ボックスに、アクティブ化依存関係としてマークし、選択する機能の GUID を入力、**追加**ボタンをクリックします。  
   
-## カスタム依存関係の編集  
- 過去に追加したカスタム依存関係は編集することができます。  ただし、ソリューション内にある依存先のフィーチャーは削除できるだけであり、編集することはできません。  
+## <a name="editing-custom-dependencies"></a>カスタム依存関係の編集  
+ 前に追加したカスタムの依存関係を編集することができます。 ただしはソリューションできますのみが削除される、依存する機能は編集できません。  
   
-#### ソリューション内のフィーチャーの依存関係を変更するには  
+#### <a name="to-change-a-dependency-on-a-feature-in-the-solution"></a>ソリューション内のフィーチャーの依存関係を変更するには  
   
-1.  フィーチャー デザイナーを開き、**\[フィーチャー アクティブ化依存関係\]** ノードを展開します。  
+1.  フィーチャー デザイナーを開き、展開、**機能のアクティブ化依存関係**ノード。  
   
-2.  編集するを選択し、**\[編集\]** ボタンをクリックします。機能の名前を指定します。  
+2.  クリックして、編集する機能の名前を選択して、**編集**ボタンをクリックします。  
   
-3.  **\[カスタム フィーチャー アクティブ化依存関係の編集\]** ダイアログ ボックスのタイトルを変更すると、ID、または説明を提供し、**\[送信\]** ボタンをクリックします。  
+3.  **カスタム フィーチャー アクティブ化依存関係を編集**] ダイアログ ボックスは、タイトル フィーチャー ID、または説明を変更し、[、**送信**ボタンをクリックします。  
   
-## 依存関係の削除  
+## <a name="removing-dependencies"></a>依存関係を削除します。  
   
-#### ソリューション内のフィーチャーの依存関係を削除するには  
+#### <a name="to-remove-a-dependency-on-a-feature-in-the-solution"></a>ソリューションのフィーチャーの依存関係を削除するには  
   
-1.  フィーチャー デザイナーで、**\[フィーチャー アクティブ化依存関係\]** ノードを選択し、削除するを選択して、次へを **\[削除\]** ボタンを展開します。機能の名前を指定します。  
+1.  フィーチャー デザイナーで、展開、**機能のアクティブ化依存関係** ノードを削除して、順に選択する機能の名前を選択、**削除**ボタンをクリックします。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint フィーチャーの作成](../sharepoint/creating-sharepoint-features.md)   
- [方法: SharePoint フィーチャーをカスタマイズする](../sharepoint/how-to-customize-a-sharepoint-feature.md)   
+ [方法: SharePoint フィーチャーをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md)   
  [方法: SharePoint フィーチャーの項目を追加および削除する](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md)  
   
   

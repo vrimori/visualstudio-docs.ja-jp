@@ -1,37 +1,39 @@
 ---
-title: "式エバリュエーターを実装します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "式エバリュエーター"
-  - "[デバッグ SDK] の式エバリュエーターのデバッグ"
+title: "式エバリュエーターを実装する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- expression evaluators
+- debugging [Debugging SDK], expression evaluators
 ms.assetid: e9ada7be-845e-4baa-bf8f-e4890e7ba490
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: b8cb80098edf4f05de550c8b8a22e0ed0649ca26
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 式エバリュエーターを実装します。
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="implementing-an-expression-evaluator"></a>式エバリュエーターを実装します。
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されません。 CLR 式エバリュエーターの実装については、次を参照してください [CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) と [マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
+>  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
   
- デバッグ エンジン \(DE\)、シンボル プロバイダー \(SP\)、バインダー オブジェクトおよび式エバリュエーター \(EE\) 自体の間の複雑な相互作用は、式を評価します。 1 つのコンポーネントによって実装され、別の作業で使用するインターフェイスでは、これら 4 つのコンポーネントが接続されています。  
+ デバッグ エンジン (DE)、シンボル プロバイダー (SP)、バインダー オブジェクト、および、式エバリュエーター自体 (EE) の間の複雑な相互作用は、式を評価します。 これら 4 つのコンポーネントは、1 つのコンポーネントによって実装され、他で使用されるインターフェイスによって接続されます。  
   
- EE は、式では、文字列の形式で DE から取得し、解析または評価します。 EE は、DE によって使用されて、次のインターフェイスを実装します。  
+ EE は、文字列の形式で DE から式を取得および解析または評価します。 EE は、DE で使用される、次のインターフェイスを実装します。  
   
 -   [IDebugExpressionEvaluator](../../extensibility/debugger/reference/idebugexpressionevaluator.md)  
   
 -   [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md)  
   
- EE は、シンボルとオブジェクトの値を取得、DE によって提供される、バインダー オブジェクトを呼び出します。 EE は、デによって実装されている次のインターフェイスを使用します。  
+ EE は、シンボルとオブジェクトの値を取得、DE、によって提供される、バインダー オブジェクトを呼び出します。 EE は、デを実装する次のインターフェイスを使用します。  
   
 -   [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)  
   
@@ -47,9 +49,9 @@ caps.handback.revision: 12
   
 -   [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)  
   
- EE を実装して [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)します。`IDebugProperty2` ローカル変数、プリミティブ、または Visual Studio で、該当する情報を表示する、オブジェクトなど、式の評価の結果を記述するための機構を提供、 **ローカル**, 、**ウォッチ**, 、または **イミディ エイト** ウィンドウです。  
+ EE 実装[IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)です。 `IDebugProperty2`ローカル変数、プリミティブまたは Visual Studio は、適切な情報を表示する、オブジェクトなど、式の評価の結果を記述するためのメカニズムを提供、**ローカル**、 **ウォッチ**、または**イミディ エイト**ウィンドウです。  
   
- SP は、詳細メッセージが表示されたら、DE、EE に付与されます。 SP には、アドレスと、次のインターフェイスと、そのなどのフィールドを記述するインターフェイスを実装します。  
+ SP は、情報のメッセージが表示されたら、DE、EE に付与されます。 SP では、アドレスと、次のインターフェイスとその派生物などのフィールドを表すインターフェイスを実装します。  
   
 -   [IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md)  
   
@@ -59,9 +61,9 @@ caps.handback.revision: 12
   
  EE は、これらのインターフェイスのすべてを使用します。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  [式エバリュエーターの実装方法](../../extensibility/debugger/expression-evaluator-implementation-strategy.md)  
- 式エバリュエーター \(EE\) の実装方法の 3 段階のプロセスを定義します。  
+ 式エバリュエーター (EE) の実装方法の 3 段階のプロセスを定義します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [CLR 式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

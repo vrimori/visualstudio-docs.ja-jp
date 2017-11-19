@@ -1,11 +1,10 @@
 ---
-title: 'Error: Unable to Start Debugging on the Web Server | Microsoft Docs'
+title: "エラー: Web サーバーでデバッグを開始できません |。Microsoft ドキュメント"
 ms.custom: 
 ms.date: 05/23/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,124 +27,139 @@ helpviewer_keywords:
 - debugging ASP.NET Web applications, unable to start debugging error
 - remote debugging, errors
 ms.assetid: f62e378a-3a99-4f78-9d97-8bb63a4da181
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: 13122e526d60f7817339f481df8da3eb90354312
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/22/2017
-
+ms.openlocfilehash: 5332933bf1452ca730b5c49716e10f49851fd749
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="error-unable-to-start-debugging-on-the-web-server"></a>Error: Unable to Start Debugging on the Web Server
+# <a name="error-unable-to-start-debugging-on-the-web-server"></a>エラー ： Web サーバーでデバッグを開始できません
 
-When you try to debug an ASP.NET application running on a Web server, you may get this error message: `Unable to start debugging on the Web server`.
+Web サーバーで実行されている ASP.NET アプリケーションをデバッグしようとすると、このエラー メッセージが表示する可能性があります:`Unable to start debugging on the Web server`です。
 
-Often, this error occurs because an error or configuration change has occurred that requires an update to your Application Pools, an IIS reset, or both.
+多くの場合、アプリケーション プール、IIS をリセット、またはその両方に更新が必要なエラーまたは構成の変更が発生したため、このエラーが発生します。 管理者特権でコマンド プロンプトを開く」と入力し、IIS をリセットできます`iisreset`です。 
 
-## <a name="specificerrors"></a>What is the detailed error message?
+## <a name="specificerrors"></a>詳細なエラー メッセージとは何ですか。
 
-The `Unable to start debugging on the Web server` message is generic. Usually, a more specific message is included in the error string and that may help you identify the cause of the problem or search for a more exact fix. Here are a few of the more common error messages that are appended to the main error message:
+`Unable to start debugging on the Web server`メッセージはジェネリックです。 通常、詳細メッセージがエラーの文字列に含まれ、可能性がありますより正確な修正プログラムの検索、問題の原因を特定します。 次より一般的なエラー メッセージをメインのエラー メッセージに追加されたいくつかを示します。
 
-- [IIS does not list a website that matches the launch url](#IISlist)
-- [Unable to connect to the webserver](#unabletoconnect)
-- [The web server did not respond in a timely manner](#webservertimeout)
-- [The microsoft visual studio remote debugging monitor(msvsmon.exe) does not appear to be running on the remote computer](#msvsmon)
-- [Could not start ASP.NET debugging](#aspnet)
+- [IIS での起動に一致する web サイトが表示されない url](#IISlist)
+- [Web サーバーが正しく構成されていません](#web_server_config)
+- [Web サーバーに接続できません。](#unabletoconnect)
+- [Web サーバーは、適切なタイミングで反応しませんでした。](#webservertimeout)
+- [Microsoft visual studio リモート デバッグ monitor(msvsmon.exe) がないが、リモート コンピューターで実行されています。](#msvsmon)
+- [リモート サーバーがエラーを返しました](#server_error)
+- [ASP.NET のデバッグを開始できませんでした。](#aspnet)
+- [デバッガーがリモート コンピューターに接続できません。](#cannot_connect)
+- [表示については、一般的な構成エラーです。デバッガーの外で web ページを実行している可能性があります詳細情報を提供します。](#see_help)
 
-## <a name="IISlist"></a> IIS does not list a website that matches the launch url
+## <a name="IISlist"></a>IIS での起動に一致する web サイトが表示されない url
 
-- Try starting Visual Studio as an Administrator and retry. (Some ASP.NET debugging scenarios require elevated privileges.) You can configure Visual Studio to always run as an Administrator by right-clicking the Visual Studio shortcut icon, choosing **Properties > Advanced**, and then choosing to always run as an Administrator.
+- 管理者として Visual Studio を再起動して、デバッグを再試行してください。 (一部 ASP.NET のデバッグ シナリオには、高度な特権が必要があります)。
 
-## <a name="unabletoconnect"></a> Unable to connect to the webserver
+    常に、Visual Studio のショートカット アイコンを右クリックして、管理者として実行する Visual Studio を構成することができますを選択する**プロパティ > [詳細設定]**、し、常に管理者として実行を選択します。
 
-- Are you running Visual Studio and the Web server on the same machine? Open your project properties and make sure that the project is configured to connect to the correct Web server or launch URL. (Open **Properties > Web > Servers** or **Properties > Debug** depending on your project type.)
+## <a name="web_server_config"></a>Web サーバーが正しく構成されていません
 
-- If the Web server is remote, try restarting your Application Pools and then reset IIS. For more information, see [Check your IIS Configuration](#vxtbshttpservererrorsthingstocheck).
+- 参照してください[エラー: web サーバーが正しく構成されていない](../debugger/error-the-web-server-is-not-configured-correctly.md)です。
 
-## <a name="webservertimeout"></a> The web server did not respond in a timely manner
+## <a name="unabletoconnect"></a>Web サーバーに接続できません。
 
-- Try an IIS reset and retry debugging. Multiple debugger instances may be attached to the IIS process; a reset terminates them. For more information, see [Check your IIS Configuration](#vxtbshttpservererrorsthingstocheck).
+- Visual Studio と Web サーバーを同じコンピューターで実行されているを使用したデバッグ**f5 キーを押して**(の代わりに**プロセスにアタッチする**)? プロジェクトのプロパティを開きを適切な Web サーバーに接続し、URL を起動して、プロジェクトが構成されていることを確認します。 (開いている**プロパティ > Web > サーバー**または**プロパティ > デバッグ**プロジェクトの種類によって異なります。 Web フォームは、プロジェクトを開く**プロパティ ページ > 開始オプション > サーバー**)。
 
-## <a name="msvsmon"></a> The microsoft visual studio remote debugging monitor(msvsmon.exe) does not appear to be running on the remote computer
+- それ以外の場合、アプリケーション プールを再起動し、IIS をリセットします。 詳細については、次を参照してください。 [IIS 構成を調べて](#vxtbshttpservererrorsthingstocheck)です。
 
-- If you are debugging on a remote machine, make sure you have [installed and are running the remote debugger](../debugger/remote-debugging.md). If the message mentions a firewall, make sure the [correct ports in the firewall](../debugger/remote-debugger-port-assignments.md) are open, especially if you are using a third party firewall.
-- If you are using a HOSTS file, make sure it is configured correctly. For example, it needs to include the same project URL as in your project properties, **Web** tab.
+## <a name="webservertimeout"></a>Web サーバーは、適切なタイミングで反応しませんでした。
 
-## <a name="aspnet"></a> Could not start ASP.NET debugging
+- IIS をリセットして、デバッグを再試行してください。 デバッガーの複数のインスタンスが接続されて、IIS プロセスです。リセットは終了します。 詳細については、次を参照してください。 [IIS 構成を調べて](#vxtbshttpservererrorsthingstocheck)です。
 
-- Try restarting the Application Pool and do an IIS reset. For more information, see [Check your IIS Configuration](#vxtbshttpservererrorsthingstocheck).
-- If you are doing URL rewrites, test a basic web.config with no URL rewrites. See the **Note** about the URL Rewrite Module in [Check your IIS Configuration](#vxtbshttpservererrorsthingstocheck).
+## <a name="msvsmon"></a>Microsoft visual studio リモート デバッグ monitor(msvsmon.exe) がないが、リモート コンピューターで実行されています。
 
-##  <a name="vxtbshttpservererrorsthingstocheck"></a> Check your IIS configuration
+- リモート コンピューターでデバッグする場合があることを確認[インストールされ、リモート デバッガーを実行している](../debugger/remote-debugging.md)です。 メッセージには、ファイアウォールが特記しています場合、確認、[ファイアウォールでポートを解決](../debugger/remote-debugger-port-assignments.md)が開いて、サードパーティ製のファイアウォールを使用している場合に特にです。
+- HOSTS ファイルを使用している場合は、正しく構成されていることを確認してください。 たとえばを使用したデバッグ**f5 キーを押して**(の代わりに**プロセスにアタッチする**)、ホスト ファイルをプロジェクトのプロパティと同様に、同じプロジェクト URL を含める必要があります**プロパティ > Web > サーバー**または**プロパティ > デバッグ**プロジェクトの種類によって異なります。
 
-After taking steps to resolve an issue detailed here, and before trying again to debug, you may also need to reset IIS. You can do that by opening an Administrator command prompt and typing `iisreset`, or you can perform a reset  in IIS Manager. 
+## <a name="server_error"></a>リモート サーバーがエラーを返しました
 
-* Stop and restart your Application Pools, then retry.
+問題の原因を識別できるように、メッセージで返されるエラー コードを確認します。 ここでは、いくつかの一般的なエラー コードです。
+- (403) 許可されていません。 正しいサーバーの種類と URL に接続していることを確認してください (で**プロパティ > Web > サーバー**または**プロパティ > デバッグ**プロジェクトの種類に応じて、)。 また、サーバーの web.config に含まれていることを確認`debug=true`compilation 要素にします。 これらの設定は既に修正いる場合は、Web アプリケーションのフォルダーが正しいフォルダーの権限を持っていることを確認します。 詳細については、次を参照してください。 [IIS 構成を調べて](#vxtbshttpservererrorsthingstocheck)です。
+- (503) サーバーは利用できません。 アプリケーション プールを停止して、エラーまたは構成の変更により可能性があります。 アプリケーション プールを再起動します。
+- (404) not Found です。 ASP.NET の正しいバージョンのアプリケーション プールが構成されていることを確認します。
 
-    The Application Pool may have stopped as a result of an error. Or, another configuration change that you made may require that you stop and restart your Application Pool.
+## <a name="aspnet"></a>ASP.NET のデバッグを開始できませんでした。
+
+- アプリケーション プールを再起動し、IIS をリセットします。 詳細については、次を参照してください。 [IIS 構成を調べて](#vxtbshttpservererrorsthingstocheck)です。
+- URL 書き換えを行う場合は、基本の web.config でない URL 書き換えをテストします。 参照してください、**注**URL に関する内のモジュールを書き直してください。 [IIS 構成を調べて](#vxtbshttpservererrorsthingstocheck)です。
+
+## <a name="cannot_connect"></a>デバッガーがリモート コンピューターに接続できません。
+
+ローカルで、デバッグしている場合、Visual Studio は、32 ビット アプリケーションを 64 ビット バージョンのリモート デバッガーを使用して 64 ビット アプリケーションをデバッグするためにこのエラーが発生する可能性があります。 プロジェクトのプロパティを開き、プロジェクトが正しく、Web サーバーと URL への接続に構成されていることを確認してください。 (開いている**プロパティ > Web > サーバー**または**プロパティ > デバッグ**プロジェクトの種類によって異なります)。
+
+また、HOSTS ファイルを使用している場合は、正しく構成されていることを確認してください。 たとえば、ホストがプロジェクトのプロパティと同様に、同じプロジェクト URL を含める必要がありますをファイル**プロパティ > Web > サーバー**または**プロパティ > デバッグ**プロジェクトの種類に応じて、します。
+
+## <a name="see_help"></a>表示については、一般的な構成エラーです。 デバッガーの外で web ページを実行している可能性があります詳細情報を提供します。
+
+- 実行している Visual Studio と Web サーバー、同じコンピューター上か。 プロジェクトのプロパティを開きを適切な Web サーバーに接続し、URL を起動して、プロジェクトが構成されていることを確認します。 (開いている**プロパティ > Web > サーバー**または**プロパティ > デバッグ**プロジェクトの種類によって異なります)。
+
+- 機能しない、またはリモートでデバッグする、手順に従ってください[IIS 構成を調べて](#vxtbshttpservererrorsthingstocheck)です。
+
+##  <a name="vxtbshttpservererrorsthingstocheck"></a>IIS 構成を確認します。
+
+問題を解決するのにはここで詳細な手順を行った後、デバッグを再試行する前に、IIS をリセットする必要もあります。 管理者特権でコマンド プロンプトを開く」と入力しを実行できます`iisreset`です。 
+
+* 停止し、IIS アプリケーション プールを再起動しますを再試行してください。 
+
+    エラーの結果として、アプリケーション プールを停止した可能性があります。 またはを停止するアプリケーション プールを再起動した別の構成の変更があります。
     
     > [!NOTE]
-    > If the Application Pool keeps stopping, you may need to uninstall the URL Rewrite Module from the Control Panel. You can reinstall it using the Web Platform Installer (WPI). This issue may occur after a significant system upgrade.
+    > アプリケーション プールを停止して保持する場合、は、コントロール パネルから URL Rewrite モジュールをアンインストールする必要があります。 Web Platform Installer (WebPI) を使用して再インストールすることができます。 この問題は、大量のシステムのアップグレード後に発生する可能性があります。
 
-* Check your Application Pool configuration, correct it if needed, and then retry.
+* アプリケーション プール構成を調べて、修正が必要な場合、再試行してください。
 
-    If password credentials have changed, you may need to update them in your Application Pool. Also, if you have recently installed ASP.NET, the Application Pool may be configured for the wrong version of ASP.NET. Fix the issue and restart the Application Pool.
+    Visual Studio プロジェクトに一致しない ASP.NET のバージョンについては、アプリケーション プールを構成できます。 アプリケーション プールの ASP.NET バージョンを更新し、それを再起動します。 詳細については、次を参照してください。 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。
+
+    また、パスワードの資格情報を変更している場合場合があります、アプリケーション プールまたは Web サイトで更新する必要があります。  アプリケーション プール内での資格情報を更新**詳細設定 > プロセス モデル > Identity**です。 Web サイトでの資格情報を更新**基本設定 > として接続しています.**.アプリケーション プールを再起動します。
     
-* Check that your Web Application folder has the right permissions.
+* Web アプリケーションのフォルダーが適切なアクセス許可を持つことを確認してください。
 
-    Make sure that you give IIS_IUSRS, IUSR, or the specific user associated with the Application Pool read and execute rights for the Web Application folder. Fix the issue and restart your Application Pool.
+    IIS_IUSRS、iusr アカウント、またはアプリケーション プールの読み取りに関連付けられている特定のユーザーに付与し、Web アプリケーション フォルダーの権限を実行することを確認してください。 問題を修正し、アプリケーション プールを再起動します。
 
-* Make sure that the correct version of ASP.NET is installed on IIS.  See [Host on Windows with IIS](https://docs.asp.net/en/latest/publishing/iis.html).
+* IIS で ASP.NET の正しいバージョンがインストールされていることを確認します。
 
-    Mismatched versions of ASP.NET on IIS and in your Visual Studio project may cause this issue. You may need to set the framework version in web.config.
+    Visual Studio プロジェクトと IIS で ASP.NET のバージョンが一致しないには、この問題が発生します。 Web.config のフレームワークのバージョンを設定する必要があります。IIS で ASP.NET をインストールするには、使用、 [Web Platform Installer (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)です。 またを参照してください[IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)または ASP.NET Core [IIS と Windows 上のホスト](https://docs.asp.net/en/latest/publishing/iis.html)です。
   
-* Resolve authentication errors if you are using only the IP address
+* IP アドレスのみを使用している場合は、認証エラーを解決します
 
-     By default, IP addresses are assumed to be part of the Internet, and NTLM authentication is not done over the Internet. If your web site is configured in IIS to require authentication, this authentication fails. To correct this problem, you can specify the name of the remote computer instead of the IP address.
+     既定では、IP アドレスはインターネットの一部と見なされ、インターネット上では NTLM 認証が行われません。 Web サイトが認証を要求するように IIS で構成されている場合、この認証は失敗します。 この問題を解決するには、IP アドレスの代わりに、リモート コンピューターの名前を指定できます。
      
-## <a name="other-causes"></a>Other causes
+## <a name="other-causes"></a>その他の原因
 
-If the IIS configuration is not causing the issue, try these steps:
+IIS 構成が原因でない、次の手順を試してください。
 
-- Restart Visual Studio with Administrator privileges and try again.
+- 管理者特権で Visual Studio を再起動してからやり直してください。
 
-    Some ASP.NET debugging scenarios such as using Web Deploy require elevated privileges for Visual Studio.
+    Web Deploy を使用するなどの ASP.NET のデバッグ シナリオでは、Visual Studio の高度な特権が必要です。
     
-- If multiple instances of Visual Studio are running, reopen your project in one instance of Visual Studio (with Administrator privileges), and try again.
+- Visual Studio の複数のインスタンスが実行されている場合 (と管理者特権の場合)、Visual Studio の 1 つのインスタンスでプロジェクトを閉じてもう一度やり直してください。
 
-- If you are using a HOSTS file with local addresses, try using the loopback address instead of the machine's IP address.
+- ローカル アドレスを持つホスト ファイルを使用している場合は、コンピューターの IP アドレスの代わりに、ループバック アドレスを使用して再試行してください。
 
-    If you are not using local addresses, make sure your HOSTS file includes the same project URL as in your project properties, **Web** tab.
+    ローカル アドレスを使用していない場合、HOSTS ファイルには、プロジェクトのプロパティと同様に、同じプロジェクト URL が含まれています確認**プロパティ > Web > サーバー**または**プロパティ > デバッグ**に応じて、。プロジェクトの種類。
 
-## <a name="more-troubleshooting-steps"></a>More troubleshooting steps
+## <a name="more-troubleshooting-steps"></a>さらにトラブルシューティング手順
 
-* Bring up the localhost page in the browser on the server.
+* サーバー上のブラウザーで localhost ページを表示します。
 
-     If IIS is not installed correctly, you should get errors when you type `http://localhost` in a browser.
+     IIS が正しくインストールされていない場合、ブラウザーに `http://localhost` を入力するとエラーが表示されます。
      
-     For more information on deploying to IIS, see [Host on Windows with IIS](https://docs.asp.net/en/latest/publishing/iis.html).
+     IIS に展開する方法の詳細については、次を参照してください。 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)および ASP.NET Core [IIS と Windows 上のホスト](https://docs.asp.net/en/latest/publishing/iis.html)です。
 
-* Create a basic ASP.NET application on the server (or use a basic web.config file).
+* サーバー上の基本的な ASP.NET アプリケーションの作成 (または、基本的な web.config ファイルを使用)。
 
-    If you can't get your app to work with the debugger, try creating a basic ASP.NET application locally on the server, and try to debug the basic app. (You might want to use the default ASP.NET MVC template.) If you can debug a basic app, that may help you identify what's different between the two configurations. Look for differences in settings in the web.config file, such as URL rewrite rules.
+    デバッガーを使用するアプリを入手できない場合は、サーバーで、基本的な ASP.NET アプリケーションをローカルに作成してみてください、基本的なアプリをデバッグしようとします。 (既定の ASP.NET MVC テンプレートを使用する可能性があります)。基本的なアプリをデバッグする場合に役立つ 2 つの構成間で異なるかを確認します。 URL 書き換えルールなどは、web.config ファイルで設定の相違を探します。
 
-## <a name="see-also"></a>See Also  
- [Debugging Web Applications: Errors and Troubleshooting](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
+## <a name="see-also"></a>関連項目  
+ [Web アプリケーションのデバッグ : エラーおよびトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

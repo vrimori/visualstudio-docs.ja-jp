@@ -1,58 +1,57 @@
 ---
-title: "IDiaEnumDebugStreams | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumDebugStreams インターフェイス"
+title: "IDiaEnumDebugStreams |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumDebugStreams interface
 ms.assetid: 611caf4f-7a5f-4aa4-b909-52feeb3cc752
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 023cb5f92abb9c67a94eeaf0f7202c95f097248d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumDebugStreams
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idiaenumdebugstreams"></a>IDiaEnumDebugStreams
 データ ソースに含まれるさまざまなデバッグ ストリームを列挙します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
-IDiaEnumDebugStreams : IUnknown  
+IDiaEnumDebugStreams : IUnknown  
 ```  
   
-## Vtable の順序でメソッド  
- 次の表は `IDiaEnumDebugStreams` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDiaEnumDebugStreams`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[IDiaEnumDebugStreams::get\_\_NewEnum](../Topic/IDiaEnumDebugStreams::get__NewEnum.md)|この列挙子の `IEnumVARIANT` のバージョンを取得します。|  
-|[IDiaEnumDebugStreams::get\_Count](../../debugger/debug-interface-access/idiaenumdebugstreams-get-count.md)|デバッグのストリームの数を取得します。|  
-|[IDiaEnumDebugStreams::Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)|インデックスでデバッグ ストリームを取得します。|  
-|[IDiaEnumDebugStreams::Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md)|列挙体シーケンスのデバッグのストリームから指定した数の要素を取得します。|  
-|[IDiaEnumDebugStreams::Skip](../../debugger/debug-interface-access/idiaenumdebugstreams-skip.md)|列挙体シーケンスのデバッグのストリームから指定した数の要素をスキップします。|  
-|[IDiaEnumDebugStreams::Reset](../../debugger/debug-interface-access/idiaenumdebugstreams-reset.md)|列挙体シーケンスを先頭にリセットします。|  
-|[IDiaEnumDebugStreams::Clone](../../debugger/debug-interface-access/idiaenumdebugstreams-clone.md)|現在の列挙子と同じ列挙状態を含む列挙子を作成します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[IDiaEnumDebugStreams::get__NewEnum](../../debugger/debug-interface-access/idiaenumdebugstreams-get-newenum.md)|取得、`IEnumVARIANT`この列挙子のバージョン。|  
+|[IDiaEnumDebugStreams::get_Count](../../debugger/debug-interface-access/idiaenumdebugstreams-get-count.md)|デバッグ ストリームの数を取得します。|  
+|[IDiaEnumDebugStreams::Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)|インデックスを使用してデバッグ ストリームを取得します。|  
+|[IDiaEnumDebugStreams::Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md)|列挙のシーケンス内のデバッグ ストリームの指定した数を取得します。|  
+|[IDiaEnumDebugStreams::Skip](../../debugger/debug-interface-access/idiaenumdebugstreams-skip.md)|指定した列挙のシーケンス内のデバッグ ストリーム数をスキップします。|  
+|[IDiaEnumDebugStreams::Reset](../../debugger/debug-interface-access/idiaenumdebugstreams-reset.md)|列挙のシーケンスを先頭にリセットします。|  
+|[IDiaEnumDebugStreams::Clone](../../debugger/debug-interface-access/idiaenumdebugstreams-clone.md)|現在の列挙子と同じ列挙の状態を含む列挙子を作成します。|  
   
-## 解説  
- デバッグのストリームの内容は実装に依存しデータ形式は文書化されていません。  
+## <a name="remarks"></a>コメント  
+ デバッグ ストリームの内容が実装に依存して、データ形式のドキュメント化されていません。  
   
-## 呼び出し元のメモ  
- `IDiaEnumDebugStreams` のオブジェクトを取得するに [IDiaSession::getEnumDebugStreams](../Topic/IDiaSession::getEnumDebugStreams.md) のメソッドを呼び出します。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ 呼び出す、 [idiasession::getenumdebugstreams](../../debugger/debug-interface-access/idiasession-getenumdebugstreams.md)を取得するメソッド、`IDiaEnumDebugStreams`オブジェクト。  
   
-## 使用例  
- この例ではこのインターフェイスから使用できるデータ ストリームにアクセスする方法を示しています。  `PrintStreamData` の実装については[IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) のインターフェイスが関数 " を参照してください。  
+## <a name="example"></a>例  
+ この例では、このインターフェイスから使用可能なデータ ストリームにアクセスする方法を示します。 参照してください、 [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)インターフェイスの実装については、`PrintStreamData`関数。  
   
-```cpp#  
+```C++  
 void DumpAllDebugStreams( IDiaSession* pSession)  
 {  
     IDiaEnumDebugStreams* pEnumStreams;  
@@ -79,14 +78,14 @@ void DumpAllDebugStreams( IDiaSession* pSession)
 }  
 ```  
   
-## 必要条件  
- ヘッダー : Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Dia2.h  
   
- ライブラリ : diaguids.lib  
+ ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## 参照  
- [インターフェイス \(Debug Interface Access SDK\)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
+## <a name="see-also"></a>関連項目  
+ [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)   
- [IDiaSession::getEnumDebugStreams](../Topic/IDiaSession::getEnumDebugStreams.md)
+ [IDiaSession::getEnumDebugStreams](../../debugger/debug-interface-access/idiasession-getenumdebugstreams.md)

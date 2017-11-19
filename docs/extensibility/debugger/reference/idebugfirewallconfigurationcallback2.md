@@ -1,45 +1,46 @@
 ---
-title: "IDebugFirewallConfigurationCallback2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugFirewallConfigurationCallback2 インターフェイス"
+title: "IDebugFirewallConfigurationCallback2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IDebugFirewallConfigurationCallback2 interface
 ms.assetid: 0827361c-b97c-4851-9898-ab6d88c81811
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: ab632bc7db06f01c6a88070a065c6939e4dbb91f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugFirewallConfigurationCallback2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] の UI を呼び出すためにファイアウォールがリモート デバッグをブロックするために DCOM が使用するデバッグ エンジンを有効にします。  
+# <a name="idebugfirewallconfigurationcallback2"></a>IDebugFirewallConfigurationCallback2
+DCOM を使用するように依頼するデバッグ エンジンを有効に、 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] UI をファイアウォールをリモート デバッグするブロックはしないことを確認してください。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugFirewallConfigurationCallback2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- デバッグ セッションのマネージャーのポートのオブジェクトによって実装されます。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ セッションのデバッグ マネージャーのポート オブジェクトによって実装されます。  
   
-## メソッド  
- 次の表は `IDebugFirewallConfigurationCallback2` のメソッドを示します。  
+## <a name="methods"></a>メソッド  
+ 次の表は、メソッドの`IDebugFirewallConfigurationCallback2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[EnsureDCOMUnblocked](../../../extensibility/debugger/reference/idebugfirewallconfigurationcallback2-ensuredcomunblocked.md)|要求にファイアウォールをブロックしないリモート デバッグします。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[EnsureDCOMUnblocked](../../../extensibility/debugger/reference/idebugfirewallconfigurationcallback2-ensuredcomunblocked.md)|ファイアウォールをブロックしないことのリモート デバッグを要求します。|  
   
-## 必要条件  
- ヘッダー : Msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll

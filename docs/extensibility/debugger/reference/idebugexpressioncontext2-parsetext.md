@@ -1,83 +1,83 @@
 ---
-title: "IDebugExpressionContext2::ParseText | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugExpressionContext2::ParseText"
-helpviewer_keywords: 
-  - "IDebugExpressionContext2::ParseText"
+title: "IDebugExpressionContext2::ParseText |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugExpressionContext2::ParseText
+helpviewer_keywords: IDebugExpressionContext2::ParseText
 ms.assetid: f58575db-f926-4ac8-83ff-7b3b86ab61e2
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 4418dc3503f710701b50c37e0869a4b80c160a5f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugExpressionContext2::ParseText
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebugexpressioncontext2parsetext"></a>IDebugExpressionContext2::ParseText
 以降の評価のテキスト形式の式を解析します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT ParseText(   
-   LPCOLESTR           pszCode,  
-   PARSEFLAGS          dwFlags,  
-   UINT                nRadix,  
-   IDebugExpression2** ppExpr,  
-   BSTR*               pbstrError,  
-   UINT*               pichError  
+```cpp  
+HRESULT ParseText(   
+   LPCOLESTR           pszCode,  
+   PARSEFLAGS          dwFlags,  
+   UINT                nRadix,  
+   IDebugExpression2** ppExpr,  
+   BSTR*               pbstrError,  
+   UINT*               pichError  
 );  
 ```  
   
-```c#  
-int ParseText(   
-   string                pszCode,  
-   enum_PARSEFLAGS       dwFlags,  
-   uint                  nRadix,  
-   out IDebugExpression2 ppExpr,  
-   out string            pbstrError,  
-   out uint              pichError  
+```csharp  
+int ParseText(   
+   string                pszCode,  
+   enum_PARSEFLAGS       dwFlags,  
+   uint                  nRadix,  
+   out IDebugExpression2 ppExpr,  
+   out string            pbstrError,  
+   out uint              pichError  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pszCode`  
- \[入力\] 解析される式。  
+ [in]解析される式。  
   
  `dwFlags`  
- \[出力\] この [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) の列挙体のフラグの組み合わせ。解析を制御します。  
+ [in]フラグの組み合わせ、 [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md)解析を制御する列挙です。  
   
  `nRadix`  
- \[入力\] `pszCode` の数値情報の解析に使用する基数。  
+ [in]内の数値情報を解析中に使用する基数`pszCode`です。  
   
  `ppExpr`  
- \[入力\] バインディングおよび評価の準備が整った解析された式を表す [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) のオブジェクトを返します。  
+ [out]返します、 [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)バインディング、および evaluation の準備ができて、解析された式を表すオブジェクト。  
   
  `pbstrError`  
- \[入力\] 式にエラーがある場合エラー メッセージを返します。  
+ [out]式にエラーが含まれている場合は、エラー メッセージを返します。  
   
  `pichError`  
- \[入力\] 式にエラーがある場合 `pszCode` のエラー文字のインデックスを返します。  
+ [out]内のエラーの文字インデックスを返します`pszCode`式にエラーが含まれている場合。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- このメソッドが呼び出されるとデバッグ エンジンは式を \(DE\) 解析し正確性の検証する必要があります。  `pbstrError` と `pichError` のパラメーターは式が無効な場合に表示されることがあります。  
+## <a name="remarks"></a>コメント  
+ このメソッドが呼び出されると、デバッグ エンジン (DE) を式を解析し、正しいかどうかを検証します。 `pbstrError`と`pichError`式が有効でない場合パラメーターを入力する場合があります。  
   
- 解析される式は評価されないことに注意してください。  [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) または [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) のメソッドの以降の呼び出しでは解析対象の式を評価します。  
+ 式は評価されず、解析のみに注意してください。 以降の呼び出し、 [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)または[EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)メソッドが解析された式を評価します。  
   
-## 使用例  
- 次の例に [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) インターフェイスを公開する `CEnvBlock` の単純なオブジェクトに対してこのメソッドを実装する方法を示します。  この例は式が環境変数の名前として解析されると見なされるためその変数の値を取得します。  
+## <a name="example"></a>例  
+ 次の例は、単純なは、このメソッドを実装する方法を示します`CEnvBlock`を公開するオブジェクト、 [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md)インターフェイスです。 この例では、環境変数の名前として解析される式を考慮し、その変数から値を取得します。  
   
-```cpp#  
+```cpp  
 HRESULT CEnvBlock::ParseText(  
    LPCOLESTR           pszCode,  
    PARSEFLAGS          dwFlags,  
@@ -123,7 +123,7 @@ HRESULT CEnvBlock::ParseText(
 }    
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md)   
  [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md)   
  [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)   

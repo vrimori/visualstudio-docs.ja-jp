@@ -1,57 +1,57 @@
 ---
-title: "IDebugBinder3::FindAlias | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBinder3::FindAlias"
-helpviewer_keywords: 
-  - "IDebugBinder3::FindAlias メソッド"
+title: "IDebugBinder3::FindAlias |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugBinder3::FindAlias
+helpviewer_keywords: IDebugBinder3::FindAlias method
 ms.assetid: b8333701-2718-4983-8513-0875fb7cb730
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: f209829e3b6c76571a53370c11c6d6d7343b088c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugBinder3::FindAlias
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このメソッドは名前を持つエイリアスを検索します。  これによりプログラムのすべてのエイリアスを検索します。  
+# <a name="idebugbinder3findalias"></a>IDebugBinder3::FindAlias
+このメソッドは、名前を指定、別名を検索します。 これは、プログラムのすべてのエイリアスを検索します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT FindAlias(  
-   LPCOLESTR     pcstrName,  
-   IDebugAlias** ppAlias  
+HRESULT FindAlias(  
+   LPCOLESTR     pcstrName,  
+   IDebugAlias** ppAlias  
 );  
 ```  
   
-```c#  
-int FindAlias(  
-   string          pcstrName,  
-   out IDebugAlias ppAlias  
+```csharp  
+int FindAlias(  
+   string          pcstrName,  
+   out IDebugAlias ppAlias  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pcstrName`  
- \[入力\] 検索するエイリアスの名前。  
+ [in]検索するエイリアスの名前です。  
   
  `ppAlias`  
- \[入力\] エイリアスがある [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) のインターフェイスによって表される見つかりました。  
+ [out]によって表されるエイリアスが見つかりました (存在する場合)、 [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)インターフェイスです。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合戻り `S_FALSE` \(エイリアス\) がある場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`(エイリアスが見つからない) 場合はエラー コード。  
   
-## 解説  
- このメソッドを呼び出す前にnull 値にオブジェクトを初期化します ; その後NULL 値のエイリアスが見つかったかどうかを判断するためにそのテストします。  
+## <a name="remarks"></a>コメント  
+ このメソッドを呼び出す; 前に null に変換先オブジェクトを初期化します。エイリアスが見つかりましたかどうかを決定した後に null 値をテストします。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)   
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

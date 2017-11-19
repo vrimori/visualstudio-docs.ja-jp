@@ -1,11 +1,10 @@
 ---
-title: 'CA1408: Do not use AutoDual ClassInterfaceType | Microsoft Docs'
+title: "Ca 1408: AutoDual ClassInterfaceType を使用しないで |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,65 +14,50 @@ helpviewer_keywords:
 - CA1408
 - DoNotUseAutoDualClassInterfaceType
 ms.assetid: 60ca5e02-3c51-42dd-942b-4f950eecfa0f
-caps.latest.revision: 16
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 2cceb66b5687cd06d2455396bc875bf11ea80208
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: ffdbbfb8f28a6150888f3f127aa66ae82d31b4b8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1408-do-not-use-autodual-classinterfacetype"></a>CA1408: Do not use AutoDual ClassInterfaceType
+# <a name="ca1408-do-not-use-autodual-classinterfacetype"></a>CA1408: AutoDual ClassInterfaceType を使用しないでください
 |||  
 |-|-|  
 |TypeName|DoNotUseAutoDualClassInterfaceType|  
 |CheckId|CA1408|  
-|Category|Microsoft.Interoperability|  
-|Breaking Change|Breaking|  
+|カテゴリ|Microsoft.Interoperability|  
+|互換性に影響する変更点|あり|  
   
-## <a name="cause"></a>Cause  
- A Component Object Model (COM) visible type is marked with the <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> attribute set to the `AutoDual` value of <xref:System.Runtime.InteropServices.ClassInterfaceType>.  
+## <a name="cause"></a>原因  
+ コンポーネント オブジェクト モデル (COM) 参照できる型が付いて、<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>属性に設定、`AutoDual`値<xref:System.Runtime.InteropServices.ClassInterfaceType>です。  
   
-## <a name="rule-description"></a>Rule Description  
- Types that use a dual interface enable clients to bind to a specific interface layout. Any changes in a future version to the layout of the type or any base types will break COM clients that bind to the interface. By default, if the <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> attribute is not specified, a dispatch-only interface is used.  
+## <a name="rule-description"></a>規則の説明  
+ デュアル インターフェイスを使用する型を使用することで、クライアントを特定のインターフェイス レイアウトに対応付けることができます。 将来のバージョンで、この型またはその基本型のレイアウトに変更が加えられると、インターフェイスに対応付けられた COM クライアントが切り離されます。 既定では場合、<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>属性が指定されていない、ディスパッチ専用インターフェイスを使用します。  
   
- Unless marked otherwise, all public nongeneric types are visible to COM; all nonpublic and generic types are invisible to COM.  
+ 他のマークがない限り、すべてのパブリックの非ジェネリック型は COM; から参照できます。すべてのパブリックでないとジェネリック型を COM に表示されません。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, change the value of the <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> attribute to the `None` value of <xref:System.Runtime.InteropServices.ClassInterfaceType> and explicitly define the interface.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、値を変更、<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>属性を`None`の値<xref:System.Runtime.InteropServices.ClassInterfaceType>し、明示的にインターフェイスを定義します。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule unless it is certain that the layout of the type and its base types will not change in a future version.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 将来のバージョンでは、型およびその基本型のレイアウトを変更しないというが確実である場合を除き、この規則による警告は抑制しないでください。  
   
-## <a name="example"></a>Example  
- The following example shows a class that violates the rule and a re-declaration of the class to use an explicit interface.  
+## <a name="example"></a>例  
+ 次の例では、規則に違反すると、明示的なインターフェイスを使用してクラスの再宣言するクラスを示します。  
   
- [!code-csharp[FxCop.Interoperability.AutoDual#1](../code-quality/codesnippet/CSharp/ca1408-do-not-use-autodual-classinterfacetype_1.cs)] [!code-vb[FxCop.Interoperability.AutoDual#1](../code-quality/codesnippet/VisualBasic/ca1408-do-not-use-autodual-classinterfacetype_1.vb)]  
+ [!code-csharp[FxCop.Interoperability.AutoDual#1](../code-quality/codesnippet/CSharp/ca1408-do-not-use-autodual-classinterfacetype_1.cs)]
+ [!code-vb[FxCop.Interoperability.AutoDual#1](../code-quality/codesnippet/VisualBasic/ca1408-do-not-use-autodual-classinterfacetype_1.vb)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1403: Auto layout types should not be COM visible](../code-quality/ca1403-auto-layout-types-should-not-be-com-visible.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA1403: Auto 配置の型を COM 参照可能にすることはできません](../code-quality/ca1403-auto-layout-types-should-not-be-com-visible.md)  
   
- [CA1412: Mark ComSource Interfaces as IDispatch](../code-quality/ca1412-mark-comsource-interfaces-as-idispatch.md)  
+ [CA1412: ComSource インターフェイスを IDispatch として設定します](../code-quality/ca1412-mark-comsource-interfaces-as-idispatch.md)  
   
-## <a name="see-also"></a>See Also  
- [Introducing the Class Interface](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)   
- [Qualifying .NET Types for Interoperation](/dotnet/framework/interop/qualifying-net-types-for-interoperation)   
- [Interoperating with Unmanaged Code](/dotnet/framework/interop/index)
+## <a name="see-also"></a>関連項目  
+ [クラス インターフェイスの概要](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)   
+ [要件 (相互運用のための .NET 型の)](/dotnet/framework/interop/qualifying-net-types-for-interoperation)   
+ [アンマネージ コードとの相互運用](/dotnet/framework/interop/index)

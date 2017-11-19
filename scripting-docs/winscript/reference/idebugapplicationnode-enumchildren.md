@@ -1,27 +1,30 @@
 ---
-title: "IDebugApplicationNode::EnumChildren | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IDebugApplicationNode::EnumChildren |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IDebugApplicationNode.EnumChildren
 apilocation: pdm.dll
-helpviewer_keywords: 
-  - "IDebugApplicationNode::EnumChildren"
+helpviewer_keywords: IDebugApplicationNode::EnumChildren
 ms.assetid: d79b362b-23d5-4a5e-a214-5a78618eaf71
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a8ab13f3a284b1b36550367e68ca5fe600db3be6
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IDebugApplicationNode::EnumChildren
+# <a name="idebugapplicationnodeenumchildren"></a>IDebugApplicationNode::EnumChildren
 このアプリケーション ノードの子ノードを列挙します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT EnumChildren(  
@@ -29,19 +32,19 @@ HRESULT EnumChildren(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pperddp`  
- \[出力\]このノードの子ノードの列挙体。  
+ [out]このノードの子ノードの列挙です。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
+## <a name="remarks"></a>コメント  
  このメソッドは、このアプリケーション ノードの子ノードを列挙します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugApplicationNode インターフェイス](../../winscript/reference/idebugapplicationnode-interface.md)

@@ -1,51 +1,51 @@
 ---
-title: "IDebugArrayField::GetRank | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugArrayField::GetRank"
-helpviewer_keywords: 
-  - "IDebugArrayField::GetRank メソッド"
+title: "IDebugArrayField::GetRank |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugArrayField::GetRank
+helpviewer_keywords: IDebugArrayField::GetRank method
 ms.assetid: 2364b876-5be1-4bab-9b8f-3b6121da35c6
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 2467c8d4ed85a685de80511d68a20e24c047306e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugArrayField::GetRank
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-配列のランクまたはの次元数を取得します。  
+# <a name="idebugarrayfieldgetrank"></a>IDebugArrayField::GetRank
+ランクまたは配列の次元数を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetRank(   
-   DWORD* pdwRank  
+```cpp  
+HRESULT GetRank(   
+   DWORD* pdwRank  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetRank(  
-   out uint pdwRank  
+   out uint pdwRank  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pdwRank`  
- \[入力\] 順位を返します。  
+ [out]順位を返します。  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## 解説  
- 配列のランクは次元数に対応します。  したがってC\+\+ および C\# では多次元配列は配列の配列で次元配列できます \(と常に `GetRank` のメソッドは考慮する 1\)。  で[!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]一方多次元配列は異なる方法で処理されこのような配列のランクがディメンション反映します （メソッドおよびメソッドの`GetRank`数の次元数を常に返します）。  
+## <a name="remarks"></a>コメント  
+ 配列のランクは、ディメンションの数に対応します。 C++ および C# の場合、多次元配列は配列の配列で、実際には、したがって対象となる 1 次元配列のみ (および`GetRank`メソッドは常に 1 を返します)。 [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]、その一方で、多次元配列の異なる方法で処理およびそのような配列のランクがディメンションの数を表します (および`GetRank`メソッドは常にディメンションの数を返します)。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)

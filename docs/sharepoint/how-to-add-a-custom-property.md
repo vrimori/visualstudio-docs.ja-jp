@@ -1,56 +1,57 @@
 ---
-title: "方法: カスタム プロパティを追加する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.BDC.Property_Editor"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "BDC [Visual Studio での SharePoint 開発], カスタムのプロパティ"
-  - "BDC [Visual Studio での SharePoint 開発], プロパティ"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], カスタムのプロパティ"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], プロパティ"
+title: "方法: カスタム プロパティの追加 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VS.SharePointTools.BDC.Property_Editor
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- BDC [SharePoint development in Visual Studio], properties
+- Business Data Connectivity service [SharePoint development in Visual Studio], properties
+- Business Data Connectivity service [SharePoint development in Visual Studio], custom properties
+- BDC [SharePoint development in Visual Studio], custom properties
 ms.assetid: 670c7fff-a8fb-499f-8694-d5aecc432c16
-caps.latest.revision: 10
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: b087ae9f767ed762b6d9269f60f2612127bdc705
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: カスタム プロパティを追加する
-  **プロパティ エディター**を使用してモデルにカスタム プロパティを追加すると、  コードでそれらのプロパティにアクセスして接続文字列などの情報を実行時に取得できます。  
+# <a name="how-to-add-a-custom-property"></a>方法: カスタム プロパティを追加する
+  カスタム プロパティをモデルに追加するにを使用して、**プロパティ エディター**です。 接続文字列などの情報と実行時にその他のデータを取得するためのコードでこれらのプロパティにアクセスできます。  
   
-### カスタム プロパティを追加するには  
+### <a name="to-add-a-custom-property"></a>カスタム プロパティを追加するには  
   
-1.  **\[BDC エクスプローラー\]** で、カスタム プロパティを適用するモデル要素を表すノードを選択します。  
+1.  **BDC エクスプ ローラー**、カスタム プロパティを適用するモデル要素を表すノードを選択します。  
   
-2.  メニュー バーで、**\[表示\]**、**\[プロパティ ウィンドウ\]** の順に選択します。  
+2.  メニュー バーで、次のように選択します。**ビュー**、**プロパティ ウィンドウ**します。  
   
-3.  **\[プロパティ\]** ウィンドウで、**\[カスタム プロパティ\]** のプロパティを選択し、省略記号ボタン\(...\)を選択します \(![ASP.NET モバイル デザイナー楕円](~/sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円")\)。  
+3.  **プロパティ**ウィンドウで、選択、**カスタム プロパティ**プロパティ、省略記号ボタンをクリックして (![ASP.NET モバイル デザイナー楕円](../sharepoint/media/mwellipsis.gif "ASP です。NET モバイル デザイナー楕円"))。  
   
-     **\[プロパティ エディター\]** ダイアログ ボックスが表示されます。  
+     **プロパティ エディター**  ダイアログ ボックスが表示されます。  
   
-4.  **\[名前\]** 列のテキスト ボックスで、プロパティの名前を指定します。  
+4.  テキスト ボックスに、**名前**列、プロパティの名前を指定します。  
   
-5.  カスタム プロパティの **\[種類\]** フィールドで、適切なデータ型を選択します。  
+5.  **型**フィールド、カスタム プロパティの適切なデータ型を選択します。  
   
-6.  カスタム プロパティの **\[値\]** フィールドに、値を指定し、**\[OK\]** ボタンをクリックします。  
+6.  **値**、カスタム プロパティのフィールドの値を指定し、、 **ok**ボタンをクリックします。  
   
-## 参照  
- [Business Data Connectivity モデルのデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)   
- [Business Data Connectivity モデルのデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)   
- [ビジネス データ接続モデルの作成](../sharepoint/creating-a-business-data-connectivity-model.md)   
+## <a name="see-also"></a>関連項目  
+ [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)   
+ [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)   
+ [ビジネス データ接続モデルを作成します。](../sharepoint/creating-a-business-data-connectivity-model.md)   
  [SharePoint へのビジネス データの統合](../sharepoint/integrating-business-data-into-sharepoint.md)  
   
   

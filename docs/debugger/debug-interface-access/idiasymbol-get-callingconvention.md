@@ -1,54 +1,53 @@
 ---
-title: "IDiaSymbol::get_callingConvention | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_callingConvention メソッド"
+title: "Idiasymbol::get_callingconvention |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_callingConvention method
 ms.assetid: 355d3877-b6b6-45fd-a1d8-baed428d8f96
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: d44002f239c42635b154b574bfbd580b809107b5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_callingConvention
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-メソッドの呼び出し規約インジケーターを返します。  
+# <a name="idiasymbolgetcallingconvention"></a>IDiaSymbol::get_callingConvention
+呼び出し規約、メソッドのインジケーターを返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_callingConvention (   
-   DWORD* pRetVal  
+```C++  
+HRESULT get_callingConvention (   
+   DWORD* pRetVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- \[入力\] メソッドの呼び出し規約を指定する [CV\_call\_e 列挙型](../../debugger/debug-interface-access/cv-call-e.md) の列挙型の値を返します。  
+ [out]値を返します、 [CV_call_e 列挙型](../../debugger/debug-interface-access/cv-call-e.md)メソッドを指定する列挙体の呼び出し規約です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合戻り `S_FALSE` またはエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  `S_FALSE` の戻り値はプロパティのシンボルで使用できないことを意味します。  
+>  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
   
-|必要条件|Description|  
-|----------|-----------------|  
+|必要条件|説明|  
+|-----------------|-----------------|  
 |ヘッダー:|dia2.h|  
-|バージョン :|DIA SDK v7.0|  
+|バージョン:|DIA SDK v7.0|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [CV\_call\_e 列挙型](../../debugger/debug-interface-access/cv-call-e.md)
+ [CV_call_e 列挙型](../../debugger/debug-interface-access/cv-call-e.md)

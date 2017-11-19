@@ -1,52 +1,51 @@
 ---
-title: "IDiaLineNumber::get_addressOffset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaLineNumber::get_addressOffset メソッド"
+title: "Idialinenumber::get_addressoffset |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaLineNumber::get_addressOffset method
 ms.assetid: 3bcb5500-b26c-4d3c-9d81-0a389a3715c3
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 81bf7cb5e1ff2a48563e225d88777f25263735f4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaLineNumber::get_addressOffset
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-ブロックの開始メモリ アドレスのオフセットの部分を取得します。  
+# <a name="idialinenumbergetaddressoffset"></a>IDiaLineNumber::get_addressOffset
+ブロックの開始位置、メモリ アドレスのオフセットの部分を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_addressOffset (   
-   DWORD* pRetVal  
+```C++  
+HRESULT get_addressOffset (   
+   DWORD* pRetVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- \[入力\] メモリ ブロックの開始アドレスのオフセットの一部を返します。  
+ [out]ブロックの開始位置、メモリ アドレスのオフセットの部分を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK` このプロパティをサポートする必要 `S_FALSE` を返します。  それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`です。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## 使用例  
+## <a name="example"></a>例  
   
-```cpp#  
+```C++  
 CComPtr< IDiaLineNumber > pLine;  
 DWORD offset;  
 pLine->get_addressOffset( &offset);  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)   
- [IDiaLineNumber::get\_addressSection](../../debugger/debug-interface-access/idialinenumber-get-addresssection.md)
+ [IDiaLineNumber::get_addressSection](../../debugger/debug-interface-access/idialinenumber-get-addresssection.md)

@@ -1,51 +1,52 @@
 ---
-title: "方法: Visual Studio がファイルをコピーする場所を指定する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "Publish Location プロパティ"
-  - "発行, 指定 (場所を)"
+title: "方法: Visual Studio がファイルをコピーする場所を指定して |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- publishing, specifying location
+- Publish Location property
 ms.assetid: 6c552700-dda3-49fe-af98-4717344fda07
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 0e1bfe41d34c1c507818f7bb255425d31dc2f343
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 方法: Visual Studio がファイルをコピーする場所を指定する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-ClickOnce を使用してアプリケーションを発行する場合、`Publish Location` プロパティによってアプリケーション ファイルとマニフェストが配置される場所が指定されます。  これには、ファイル パスまたは FTP サーバーへのパスを指定できます。  
+# <a name="how-to-specify-where-visual-studio-copies-the-files"></a>方法: Visual Studio がファイルをコピーする場所を指定する
+ClickOnce を使用してアプリケーションを発行する場合、`Publish Location` プロパティによってアプリケーション ファイルとマニフェストが配置される場所が指定されます。 これには、ファイル パスまたは FTP サーバーへのパスを指定できます。  
   
- `Publish Location`\[プロジェクト デザイナー\] の **\[発行\]** ページで、または、発行ウィザードを使用して  **プロパティを指定することができます。** 詳細については、「[方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../Topic/How%20to:%20Publish%20a%20ClickOnce%20Application%20using%20the%20Publish%20Wizard.md)」を参照してください。  
+ 指定することができます、`Publish Location`プロパティを**発行**のページ、**プロジェクト デザイナー**、または発行ウィザードを使用しています。 詳細については、次を参照してください。[する方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)です。  
   
 > [!NOTE]
->  ClickOnce を使用してアプリケーションの複数のバージョンをインストールすると、以前のバージョンのアプリケーションは、指定した発行場所の Archive というフォルダーに移されます。  以前のバージョンがこのようにアーカイブされることで、インストール ディレクトリが以前のバージョンのフォルダーから分離されます。  
+>  ClickOnce を使用してアプリケーションの複数のバージョンをインストールすると、以前のバージョンのアプリケーションは、指定した発行場所の Archive というフォルダーに移されます。 以前のバージョンがこのようにアーカイブされることで、インストール ディレクトリが以前のバージョンのフォルダーから分離されます。  
   
-### 発行場所を指定するには  
+### <a name="to-specify-a-publishing-location"></a>発行場所を指定するには  
   
-1.  **ソリューション エクスプ ローラー**で、プロジェクトを選択し、**\[プロジェクト\]** メニューの **\[プロパティ\]** をクリックします。  
+1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
   
-2.  **\[発行\]** タブをクリックします。  
+2.  クリックして、**発行**タブです。  
   
-3.  **\[発行場所\]** フィールドに、次の形式のいずれかを使用して、発行場所を入力します。  
+3.  **発行場所**フィールドに、次の形式のいずれかを使用して、発行場所を入力します。  
   
-    -   ファイル共有またはディスク パスを発行するには、UNC パス \(\\\\Server\\ApplicationName\) またはファイル パス \(C:\\Deploy\\ApplicationName\) のいずれかを使用して、パスを入力します。  
+    -   ファイル共有またはディスク パスに発行する場合に、UNC パスを使用して、パスを入力 (\\\Server\ApplicationName) またはファイル パス (C:\Deploy\ApplicationName)。  
   
-    -   FTP サーバーを発行するには、ftp:\/\/ftp.microsoft.com\/ApplicationName という形式を使用して、パスを入力します。  
+    -   FTP サーバーを発行するには、ftp://ftp.microsoft.com/ApplicationName という形式を使用して、パスを入力します。  
   
-     **\[発行場所\]** ボックスでは、テキストは参照 \(**\[...\]**\) ボタンが機能する順番で並んでいる必要があります。  
+     テキスト内に存在する必要があります、**発行場所**ボックスの 参照の順序で (**.**) ボタンが機能します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
- [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../Topic/How%20to:%20Publish%20a%20ClickOnce%20Application%20using%20the%20Publish%20Wizard.md)
+ [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

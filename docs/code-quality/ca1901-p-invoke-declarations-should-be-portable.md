@@ -1,81 +1,82 @@
 ---
-title: "CA1901: P/Invoke 宣言はポータブルでなければなりません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1901"
-  - "PInvokeDeclarationsShouldBePortable"
-helpviewer_keywords: 
-  - "CA1901"
-  - "PInvokeDeclarationsShouldBePortable"
+title: "Ca 1901: プラットフォーム呼び出しの宣言はポータブルでなければなりません |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1901
+- PInvokeDeclarationsShouldBePortable
+helpviewer_keywords:
+- CA1901
+- PInvokeDeclarationsShouldBePortable
 ms.assetid: 90361812-55ca-47f7-bce9-b8775d3b8803
-caps.latest.revision: 23
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: c3c048ae73e2b15035c9be8afd6a82c860544bb5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA1901: P/Invoke 宣言はポータブルでなければなりません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1901-pinvoke-declarations-should-be-portable"></a>CA1901: P/Invoke 宣言はポータブルでなければなりません
 |||  
 |-|-|  
 |TypeName|PInvokeDeclarationsShouldBePortable|  
 |CheckId|CA1901|  
-|分類|Microsoft.Portability|  
-|互換性に影響する変更点|あり \- P\/Invoke がアセンブリの外部で参照できる場合  なし – P\/Invoke がアセンブリの外部で参照できない場合|  
+|カテゴリ|Microsoft.Portability|  
+|互換性に影響する変更点|–、P/invoke は、アセンブリ外部から参照できる場合です。 なし -、P/invoke がアセンブリの外側に表示されていない場合。|  
   
-## 原因  
- この規則では、P\/Invoke の各パラメーターのサイズと戻り値が評価され、32 ビット プラットフォームおよび 64 ビット プラットフォームのアンマネージ コードにマーシャリングされたときのサイズが正しいことが検証されます。  この規則の違反で最も一般的なものは、プラットフォームに依存するポインター サイズの変数が必要な場所に、固定サイズの整数を渡すことです。  
+## <a name="cause"></a>原因  
+ このルールは、各パラメーターのサイズ、P/invoke の戻り値を評価し、32 ビットおよび 64 ビット プラットフォームでは、アンマネージ コードにマーシャ リングされる場合、そのサイズが正しいことを確認します。 このルールの最も一般的な違反では、プラットフォームに依存し、ポインター サイズの変数が必要な場所に固定サイズの整数を渡します。  
   
-## 規則の説明  
- この規則に違反する次のいずれかのシナリオで発生します。  
+## <a name="rule-description"></a>規則の説明  
+ このルールに違反する次のシナリオのいずれかが発生します。  
   
--   戻り値またはパラメーターを `IntPtr` 型と指定しなければならないときに固定サイズの整数型と指定しています。  
+-   戻り値またはパラメーターとして型指定された固定サイズの整数として型指定しなければならないときに、`IntPtr`です。  
   
--   戻り値またはパラメーターを固定サイズの整数型と指定しなければならないときに `IntPtr` 型と指定しています。  
+-   戻り値またはパラメーターとして型指定されて、`IntPtr`固定サイズの整数としてときに入力する必要があります。  
   
-## 違反の修正方法  
- この違反を修正するには、`Int32` や `UInt32` ではなく `IntPtr` または `UIntPtr` を使用してハンドルを表します。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ 使用してこの違反を修正する`IntPtr`または`UIntPtr`の代わりにハンドルを表す`Int32`または`UInt32`です。  
   
-## 警告を抑制する状況  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
  この警告は抑制しないでください。  
   
-## 使用例  
- この規則に違反する場合を次の例に示します。  
+## <a name="example"></a>例  
+ 次の例では、この規則違反を示します。  
   
-```c#  
+```csharp  
 internal class NativeMethods  
 {  
-    [DllImport("shell32.dll", CharSet=CharSet.Auto)]  
-    internal static extern IntPtr ExtractIcon(IntPtr hInst,   
-        string lpszExeFileName, IntPtr nIconIndex);  
+    [DllImport("shell32.dll", CharSet=CharSet.Auto)]  
+    internal static extern IntPtr ExtractIcon(IntPtr hInst,   
+        string lpszExeFileName, IntPtr nIconIndex);  
 }  
 ```  
   
- この例では、32 ビット プラットフォームでは 4 バイト、64 ビット プラットフォームでは 8 バイトです `nIconIndex` パラメーターは  `IntPtr`として宣言されています。  その後のアンマネージ宣言では、`nIconIndex` がすべてのプラットフォームでは 4 バイトの符号なし整数として参照できます。  
+ この例では、`nIconIndex`として宣言されたパラメーター、 `IntPtr`、これは、32 ビット プラットフォームと 64 ビット プラットフォームで 8 バイトに 4 バイト。 宣言では、アンマネージに続くことがわかります`nIconIndex`は、すべてのプラットフォームで 4 バイト符号なし整数。  
   
-```c#  
+```csharp  
 HICON ExtractIcon(HINSTANCE hInst, LPCTSTR lpszExeFileName,   
-    UINT nIconIndex);  
+    UINT nIconIndex);  
 ```  
   
-## 使用例  
- この規則違反を修正するには、宣言を次のように変更します。  
+## <a name="example"></a>例  
+ 違反を修正するには、宣言を次のように変更します。  
   
-```c#  
+```csharp  
 internal class NativeMethods{  
-    [DllImport("shell32.dll", CharSet=CharSet.Auto)]   
-    internal static extern IntPtr ExtractIcon(IntPtr hInst,   
-        string lpszExeFileName, uint nIconIndex);  
+    [DllImport("shell32.dll", CharSet=CharSet.Auto)]   
+    internal static extern IntPtr ExtractIcon(IntPtr hInst,   
+        string lpszExeFileName, uint nIconIndex);  
 }  
 ```  
   
-## 参照  
- [移植性に関する警告](../code-quality/portability-warnings.md)
+## <a name="see-also"></a>関連項目  
+ [Portability Warnings](../code-quality/portability-warnings.md)

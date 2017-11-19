@@ -1,48 +1,48 @@
 ---
-title: "IDebugPortSupplier2::GetPortSupplierName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPortSupplier2::GetPortSupplierName"
-helpviewer_keywords: 
-  - "IDebugPortSupplier2::GetPortSupplierName"
+title: "IDebugPortSupplier2::GetPortSupplierName |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugPortSupplier2::GetPortSupplierName
+helpviewer_keywords: IDebugPortSupplier2::GetPortSupplierName
 ms.assetid: e4c368ab-640d-4b5b-9f74-810dc9364d8f
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 085437520d1c96043efcb80d097aeaedbb4af4ca
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugPortSupplier2::GetPortSupplierName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-ポートのサプライヤーの名前を取得します。  
+# <a name="idebugportsupplier2getportsuppliername"></a>IDebugPortSupplier2::GetPortSupplierName
+ポートの仕入先の名前を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetPortSupplierName(   
-   BSTR* pbstrName  
+```cpp  
+HRESULT GetPortSupplierName(   
+   BSTR* pbstrName  
 );  
 ```  
   
-```c#  
-int GetPortSupplierName(   
-   out string pbstrName  
+```csharp  
+int GetPortSupplierName(   
+   out string pbstrName  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pbstrName`  
- \[入力\] ポートのサプライヤーの名前を返します。  
+ [out]ポートの業者の名前を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)

@@ -1,42 +1,44 @@
 ---
-title: "呼び出しスタックの評価 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "[デバッグ SDK] 呼び出しスタックの評価のデバッグ"
-  - "呼び出し履歴、評価版"
+title: "スタック評価を呼び出す |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- debugging [Debugging SDK], call stack evaluation
+- call stacks, evaluation
 ms.assetid: 373d6b49-0459-4cce-816e-05745a44fe49
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 21626804ae60ca14b360f23acf17b3e336fa600b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 呼び出しスタックの評価
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-中断モードでは呼び出し履歴のスタック フレームを表示するには[EnumFrameInfo](../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) のメソッドを実装する必要があります。  
+# <a name="call-stack-evaluation"></a>呼び出しスタックの評価
+中断モード中に、呼び出し履歴のスタック フレームを表示するために実装する必要があります、 [EnumFrameInfo](../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)メソッドです。  
   
-## 評価のメソッド  
- 単純なデバッグ エンジン \(DE\) では1 種類のスタック フレームである場合があります。  中断モード時にスタック フレームを確認するには[IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md) の次のメソッドを実装する必要があります。  
+## <a name="methods-for-evaluation"></a>評価のためのメソッド  
+ 単純なデバッグ エンジン (DE) には、1 つのみのスタック フレームが可能性があります。 中断モード中にスタック フレームを検証するには、次のメソッドを実装する必要があります[IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md)です。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[GetCodeContext](../Topic/IDebugStackFrame2::GetCodeContext.md)|スタック フレームのコード コンテキストを取得します。  コード コンテキストにはスタック フレームの現在の命令ポインターを表します。|  
-|[GetDocumentContext](../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md)|スタック フレームのドキュメントのコンテキストを取得します。  ドキュメントのコンテキストスタック フレームのソース・コードの現在位置を表します。  プログラムで停止するときにソース・コードを表示する場合に必要です。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[GetCodeContext](../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md)|スタック フレームのコードのコンテキストを取得します。 コードのコンテキストでは、現在の命令ポインターのスタック フレームを表します。|  
+|[GetDocumentContext](../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md)|スタック フレームのドキュメントのコンテキストを取得します。 ドキュメントのコンテキストでは、スタック フレームのソース コードの現在の場所を表します。 プログラムが停止したときに、ソース コードを表示するために必要です。|  
   
- これらのメソッドは複数のコンテキストに関連するインターフェイスおよびメソッドの実装が必要です。  したがって[IDebugDocumentContext2](../../extensibility/debugger/reference/idebugdocumentcontext2.md) の [GetDocumentContext](../Topic/IDebugCodeContext2::GetDocumentContext.md) の次のメソッドとメソッドを実装する必要があります。  
+ これらのメソッドでは、いくつかのコンテキストに関連するインターフェイスとメソッドの実装が必要です。 したがって、実装する必要があります、 [GetDocumentContext](../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md)メソッドと、次の方法の[IDebugDocumentContext2](../../extensibility/debugger/reference/idebugdocumentcontext2.md)です。  
   
-|メソッド|Description|  
-|----------|-----------------|  
+|メソッド|説明|  
+|------------|-----------------|  
 |[GetStatementRange](../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)|ドキュメントのコンテキストのファイルのステートメントの範囲を取得します。|  
   
- コード コンテキストを列挙するには[IEnumDebugCodeContexts2](../../extensibility/debugger/reference/ienumdebugcodecontexts2.md) のすべてのメソッドを実装する必要があります。  
+ コードのコンテキストを列挙するには、すべてのメソッドを実装する必要があります[IEnumDebugCodeContexts2](../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [実行の制御と状態の評価](../../extensibility/debugger/execution-control-and-state-evaluation.md)

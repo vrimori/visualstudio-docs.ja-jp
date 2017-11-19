@@ -1,64 +1,65 @@
 ---
-title: "sort メソッド (Array) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "sort"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "Sort メソッド"
+title: "sort メソッド (Array) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: sort
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: Sort method
 ms.assetid: 9bd8b54a-c838-4806-85c8-62eebe6bc48c
-caps.latest.revision: 15
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 2d098b47591ca7bbb4e3e8da5e5c14f8c0e9b255
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# sort メソッド (Array) (JavaScript)
-`Array` を並べ替えます。  
+# <a name="sort-method-array-javascript"></a>sort メソッド (Array) (JavaScript)
+並べ替え、`Array`です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 arrayobj.sort(sortFunction)   
 ```  
   
-## Parameters  
+## <a name="parameters"></a>パラメーター  
  `arrayObj`  
- Required.  任意の `Array` オブジェクトを指定します。  
+ 必須です。 任意の `Array` オブジェクトを指定します。  
   
  `sortFunction`  
- Optional.  要素の順序を決定するために使用する関数の名前を指定します。  省略した場合、要素は ASCII 文字の昇順で並べ替えられます。  
+ 省略可能です。 要素の順序を決定するための関数の名前。 省略した場合、要素は ASCII 文字の順序の昇順で並べ替えられます。  
   
-## 戻り値  
+## <a name="return-value"></a>戻り値  
  並べ替えられた配列。  
   
-## 解説  
- `sort` メソッドは、指定された `Array` オブジェクト内の要素を並べ替えます。このメソッドを実行しても、新しい `Array` オブジェクトは作成されません。  
+## <a name="remarks"></a>コメント  
+ `sort`メソッドの並べ替え、`Array`インプレース オブジェクト; いいえ新しい`Array`実行中にオブジェクトを作成します。  
   
- 引数 `sortFunction` を指定する場合は、次の戻り値を返すような関数を指定する必要があります。  
+ 内の関数を指定する場合、`sortFunction`引数を返す必要があります、次の値のいずれか。  
   
--   1 つ目の引数が 2 つ目の引数よりも小さい場合は、負の値を返す関数。  
+-   負の値を使用している場合は、渡される最初の引数が 2 番目の引数未満です。  
   
--   2 つの引数が等しい場合は 0 を返す関数。  
+-   2 つの引数が等しい場合は 0 を返します。  
   
--   1 つ目の引数が 2 つ目の引数よりも大きい場合は、正の値を返す関数。  
+-   最初の引数が 2 番目の引数より大きい場合は、正値です。  
   
-## 使用例  
+## <a name="example"></a>例  
  `sort` メソッドを使用する方法の例を次に示します。  
   
-```javascript  
+```JavaScript  
 var a = new Array(4, 11, 2, 10, 3, 1);  
   
 var b = a.sort();  
@@ -86,5 +87,5 @@ function CompareForSort(first, second)
 }  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv2](../../javascript/reference/includes/jsv2-md.md)]

@@ -1,48 +1,50 @@
 ---
-title: "ツールバー] メニューの [コント ローラーの追加 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ツールバー [Visual Studio] メニューのコント ローラーの追加"
-  - "メニュー、ツールバーを] メニューの [コント ローラーの追加"
-  - "ツールバーへの追加] メニューの [コント ローラー"
+title: "ツールバーにメニュー コント ローラーの追加 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- toolbars [Visual Studio], adding menu controllers
+- menus, adding menu controllers to toolbars
+- menu controllers, adding to toolbars
 ms.assetid: 6af9b0b4-037f-404c-bb40-aaa1970768ea
-caps.latest.revision: 38
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 38
+caps.latest.revision: "38"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 786d7c8841f680d5af5c539e30723289df4db0f5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ツールバー] メニューの [コント ローラーの追加
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-このチュートリアルに基づき、 [ツール ウィンドウに、ツールバーを追加します。](../extensibility/adding-a-toolbar-to-a-tool-window.md) チュートリアルにツール ウィンドウのツールバー\] メニューの \[コント ローラーを追加する方法を示しています。 以下に示す手順もに適用できるで作成されたツールバー、 [ツールバーを追加します。](../extensibility/adding-a-toolbar.md) チュートリアルです。  
+# <a name="adding-a-menu-controller-to-a-toolbar"></a>ツールバーにメニュー コント ローラーを追加します。
+このチュートリアルの[ツール ウィンドウにツールバーを追加する](../extensibility/adding-a-toolbar-to-a-tool-window.md)チュートリアルし、ツール ウィンドウのツールバーにメニュー コント ローラーを追加する方法を示しています。 次に示す手順もに適用できますで作成される、ツールバー、[ツールバーを追加する](../extensibility/adding-a-toolbar.md)チュートリアルです。  
   
- メニューの \[コント ローラーは、分割コントロールです。 メニューの \[コント ローラーの左側にあるは最後に使用されたコマンドを示しをクリックして実行できます。 メニューの \[コント ローラーの右側にある矢印はをクリックすると、その他のコマンドの一覧を表示します。 リストで、コマンドの実行\] をクリックして、メニュー コント ローラーの左側にあるコマンドが置き換えられます。 この方法では\] メニューの \[コント ローラーは、一覧から最後に使用されたコマンドが常に表示されるコマンド ボタンのように動作します。  
+ メニュー コント ローラーは、分割コントロールです。 メニュー コント ローラーの左側にあるは、最後に使用されたコマンドを示しをクリックして実行できます。 メニュー コント ローラーの右側にある矢印はをクリックすると、その他のコマンドの一覧が表示されます。 一覧で、コマンドの実行コマンドをクリックして、メニュー コント ローラーの左側にあるコマンドに置き換えます。 この方法では、メニュー コント ローラーは、一覧から、最後に使用されたコマンドが常に表示されるコマンド ボタンのように動作します。  
   
- コント ローラーのメニューがメニューに表示できますが、ツールバーに最もよく使用されます。  
+ メニュー コント ローラーがメニューに表示できますが、ツールバーによく使用されます。  
   
-## 必須コンポーネント  
- Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、「[Visual Studio SDK をインストールします。](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。  
+## <a name="prerequisites"></a>必須コンポーネント  
+ Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
   
-## メニューの \[コント ローラーの作成  
+## <a name="creating-a-menu-controller"></a>メニュー コント ローラーの作成  
   
-#### メニューの \[コント ローラーを作成するには  
+#### <a name="to-create-a-menu-controller"></a>メニュー コント ローラーを作成するには  
   
-1.  説明する手順に従います [ツール ウィンドウに、ツールバーを追加します。](../extensibility/adding-a-toolbar-to-a-tool-window.md) ツールバーのあるツール ウィンドウを作成します。  
+1.  記載された手順に従って[ツール ウィンドウにツールバーを追加する](../extensibility/adding-a-toolbar-to-a-tool-window.md)ツールバーのあるツール ウィンドウを作成します。  
   
-2.  TWTestCommandPackage.vsct、Symbols セクションに移動します。 指定された GuidSymbol 要素で **guidTWTestCommandPackageCmdSet**, 、\] メニューの \[コント ローラー、\] メニューの \[コント ローラーのグループ、および 3 つのメニュー項目を宣言します。  
+2.  TWTestCommandPackage.vsct、シンボル セクションに移動します。 指定された GuidSymbol 要素で**guidTWTestCommandPackageCmdSet**、メニュー コント ローラー、メニュー コント ローラーのグループ、および 3 つのメニュー項目を宣言します。  
   
     ```xml  
     <IDSymbol name="TestMenuController" value="0x1300" /><IDSymbol name="TestMenuControllerGroup" value="0x1060" /><IDSymbol name="cmdidMCItem1" value="0x0130" /><IDSymbol name="cmdidMCItem2" value="0x0131" /><IDSymbol name="cmdidMCItem3" value="0x0132" />  
     ```  
   
-3.  メニュー」のセクションで、最後のメニュー エントリの後に、メニューとして\] メニューの \[コント ローラーを定義します。  
+3.  セクションでは、メニュー、最後のメニュー エントリ後でメニューとメニュー コント ローラーを定義します。  
   
     ```xml  
     <Menu guid="guidTWTestCommandPackageCmdSet" id="TestMenuController" priority="0x0100" type="MenuController">  
@@ -57,9 +59,9 @@ caps.handback.revision: 38
     </Menu>  
     ```  
   
-     `TextChanges` と `TextIsAnchorCommand` フラグは、選択した最後のコマンドを反映するように、メニュー コント ローラーを有効に含める必要があります。  
+     `TextChanges`と`TextIsAnchorCommand`フラグは、選択した最後のコマンドを反映するように、メニュー コント ローラーを有効に含める必要があります。  
   
-4.  グループの最後のグループのエントリの後のセクション\] メニューの \[コント ローラーのグループを追加します。  
+4.  グループのセクションで、最後のグループのエントリの後にメニュー コント ローラーのグループを追加します。  
   
     ```xml  
     <Group guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" priority="0x000">  
@@ -67,9 +69,9 @@ caps.handback.revision: 38
     </Group>  
     ```  
   
-     メニューの \[コント ローラーを親として設定することにより、このグループに配置されたすべてのコマンドは、メニュー コント ローラーに表示されます。`priority` 属性を省略すると、既定値は 0 に設定する\] メニューの \[コント ローラーのみのグループとなります。  
+     メニュー コント ローラーを親として設定することにより、このグループに配置されたすべてのコマンドは、メニュー コント ローラーに表示されます。 `priority`属性を省略すると、0、既定値に設定するために、メニュー コント ローラーのみのグループです。  
   
-5.  \[ボタン\] セクションで、最後のボタンのエントリの後に、メニュー項目の各 Button 要素を追加します。  
+5.  セクションでは、ボタン、最後のボタン エントリ後に、メニュー項目の各ボタンの要素を追加します。  
   
     ```xml  
     <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem1" priority="0x0000" type="Button">  
@@ -101,35 +103,35 @@ caps.handback.revision: 38
     </Button>  
     ```  
   
-6.  この時点では、\] メニューの \[コント ローラーで確認することができます。 プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
+6.  この時点では、メニュー コント ローラーで確認することができます。 プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
   
-    1.  **ビュー\/その他のウィンドウ** \] メニューの \[開く **テスト ツール ウィンドウ**します。  
+    1.  **ビュー/その他のウィンドウ**] メニューの [開いている**テスト ToolWindow**です。  
   
-    2.  \[ツール\] ウィンドウ ツールバー\] メニューの \[コント ローラーが表示されます。  
+    2.  ツール ウィンドウのツールバーにメニュー コント ローラーが表示されます。  
   
-    3.  次の 3 つの可能なコマンドを参照してください\] メニューの \[コント ローラーの右側にある矢印をクリックします。  
+    3.  次の 3 つの可能なコマンドを表示するメニュー コント ローラーの右側にある矢印をクリックします。  
   
-     コマンドをクリックすると、そのコマンドを表示する\] メニューの \[コント ローラーのタイトルが変更に注意してください。 次のセクションでは、これらのコマンドをアクティブ化するコードを追加します。  
+     コマンドをクリックすると、メニュー コント ローラーのタイトルに変更されているそのコマンドを表示することを確認します。 次のセクションでは、これらのコマンドをアクティブ化するコードを追加します。  
   
-## コント ローラーのメニュー コマンドを実装します。  
+## <a name="implementing-the-menu-controller-commands"></a>コント ローラーのメニュー コマンドを実装します。  
   
-1.  TWTestCommandPackageGuids.cs では、既存のコマンド Id の後に 3 つのメニュー項目のコマンド Id を追加します。  
+1.  TWTestCommandPackageGuids.cs では、既存のコマンド Id の後に、3 つのメニュー項目のコマンド Id を追加します。  
   
-    ```c#  
-    public const int cmdidMCItem1 = 0x130;  
-    public const int cmdidMCItem2 = 0x131;  
-    public const int cmdidMCItem3 = 0x132;  
+    ```csharp  
+    public const int cmdidMCItem1 = 0x130;  
+    public const int cmdidMCItem2 = 0x131;  
+    public const int cmdidMCItem3 = 0x132;  
     ```  
   
 2.  TWTestCommand.cs では、TWTestCommand クラスの上部にある次のコードを追加します。  
   
-    ```c#  
-    private int currentMCCommand; // The currently selected menu controller command  
+    ```csharp  
+    private int currentMCCommand; // The currently selected menu controller command  
     ```  
   
-3.  TWTestCommand コンス トラクターの最後の呼び出しの後で、 `AddCommand` メソッドでは、同じ処理を使ったコマンドごとにイベントをルーティングするためのコードを追加します。  
+3.  TWTestCommand コンス トラクターの最後の呼び出しの後で、`AddCommand`メソッド、コマンドごとに、同じ処理を使ったイベントにルーティングするコードを追加します。  
   
-    ```c#  
+    ```csharp  
     for (int i = TWTestCommandPackageGuids.cmdidMCItem1; i <=  
         TWTestCommandPackageGuids.cmdidMCItem3; i++)  
     {  
@@ -139,7 +141,7 @@ caps.handback.revision: 38
           EventHandler(OnMCItemClicked), cmdID);  
         mc.BeforeQueryStatus += new EventHandler(OnMCItemQueryStatus);  
         commandService.AddCommand(mc);  
-        // The first item is, by default, checked.   
+        // The first item is, by default, checked.   
         if (TWTestCommandPackageGuids.cmdidMCItem1 == i)  
         {  
             mc.Checked = true;  
@@ -148,10 +150,10 @@ caps.handback.revision: 38
     }  
     ```  
   
-4.  Checked のように選択したコマンドをマークする TWTestCommand クラスにイベント ハンドラーを追加します。  
+4.  Checked として選択したコマンドをマークする TWTestCommand クラスにイベント ハンドラーを追加します。  
   
-    ```c#  
-    private void OnMCItemQueryStatus(object sender, EventArgs e)  
+    ```csharp  
+    private void OnMCItemQueryStatus(object sender, EventArgs e)  
     {  
         OleMenuCommand mc = sender as OleMenuCommand;  
         if (null != mc)  
@@ -161,10 +163,10 @@ caps.handback.revision: 38
     }  
     ```  
   
-5.  ユーザーが\] メニューの \[コント ローラーでコマンドを選択したときに、メッセージ ボックスを表示するイベント ハンドラーを追加します。  
+5.  ユーザーがメニュー コント ローラーでコマンドを選択したときに、メッセージ ボックスを表示するイベント ハンドラーを追加します。  
   
-    ```c#  
-    private void OnMCItemClicked(object sender, EventArgs e)  
+    ```csharp  
+    private void OnMCItemClicked(object sender, EventArgs e)  
     {  
         OleMenuCommand mc = sender as OleMenuCommand;  
         if (null != mc)  
@@ -211,20 +213,20 @@ caps.handback.revision: 38
     }  
     ```  
   
-## メニューの \[コント ローラーのテスト  
+## <a name="testing-the-menu-controller"></a>メニュー コント ローラーのテスト  
   
 1.  プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
   
-2.  開いている、 **テスト ツール ウィンドウ** 上、 **ビュー\/その他のウィンドウ** メニュー。  
+2.  開く、**テスト ToolWindow**上、**ビュー/その他のウィンドウ**メニュー。  
   
-     メニューの \[コント ローラーがツール ウィンドウのツールバーに表示され **MC アイテム 1**します。  
+     メニュー コント ローラーがツール ウィンドウのツールバーに表示され**MC 項目 1**です。  
   
-3.  矢印の左側にあるメニュー コント ローラー ボタンをクリックします。  
+3.  矢印の左側にメニュー コント ローラーのボタンをクリックします。  
   
-     まずが選択されており、そのアイコンを囲む強調表示の 3 つの項目が表示されます。 クリックして **MC 項目 3**します。  
+     最初が選択されており、そのアイコンを囲む強調表示ボックスの 3 つの項目が表示されます。 をクリックして**MC 項目 3**です。  
   
-     ダイアログ ボックスが、メッセージが表示されます **コント ローラーのメニュー項目 3 を選択した**します。 コント ローラーのメニュー ボタンのテキストにメッセージが対応していることを確認します。 コント ローラーのメニュー ボタンが表示されます **MC 項目 3**します。  
+     ダイアログ ボックスが、メッセージが表示されます**メニュー コント ローラーのアイテム 3 を選択した**です。 メニュー コント ローラー ボタンのテキストにメッセージが対応していることを確認します。 メニュー コント ローラー ボタンを表示するようになりました**MC 項目 3**です。  
   
-## 参照  
- [ツール ウィンドウに、ツールバーを追加します。](../extensibility/adding-a-toolbar-to-a-tool-window.md)   
- [ツールバーを追加します。](../extensibility/adding-a-toolbar.md)
+## <a name="see-also"></a>関連項目  
+ [ツール ウィンドウにツールバーを追加します。](../extensibility/adding-a-toolbar-to-a-tool-window.md)   
+ [ツール バーの追加](../extensibility/adding-a-toolbar.md)

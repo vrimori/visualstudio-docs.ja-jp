@@ -1,72 +1,72 @@
 ---
-title: "BP_STATE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_STATE"
-helpviewer_keywords: 
-  - "BP_STATE 列挙型"
+title: "BP_STATE |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BP_STATE
+helpviewer_keywords: BP_STATE enumeration
 ms.assetid: 08aa6a3f-3e5f-4c83-8eca-7b7b5f8e208d
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 51574fd91a338f7d05d38755884412202d33637b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# BP_STATE
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-バインドされたブレークポイントの手順が指定され有効な指定します。  
+# <a name="bpstate"></a>BP_STATE
+バインドされたブレークポイントの存在を指定しもが有効になっているかどうかを指定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-enum enum_BP_STATE {   
-   BPS_NONE     = 0x0000,  
-   BPS_DELETED  = 0x0001,  
-   BPS_DISABLED = 0x0002,  
-   BPS_ENABLED  = 0x0003  
+```cpp  
+enum enum_BP_STATE {   
+   BPS_NONE     = 0x0000,  
+   BPS_DELETED  = 0x0001,  
+   BPS_DISABLED = 0x0002,  
+   BPS_ENABLED  = 0x0003  
 };  
 typedef DWORD BP_STATE;  
 ```  
   
-```c#  
-public enum enum_BP_STATE {   
-   BPS_NONE     = 0x0000,  
-   BPS_DELETED  = 0x0001,  
-   BPS_DISABLED = 0x0002,  
-   BPS_ENABLED  = 0x0003  
+```csharp  
+public enum enum_BP_STATE {   
+   BPS_NONE     = 0x0000,  
+   BPS_DELETED  = 0x0001,  
+   BPS_DISABLED = 0x0002,  
+   BPS_ENABLED  = 0x0003  
 };  
 ```  
   
-## メンバー  
- BPS\_NONE  
- ブレークポイントは指定されません。  
+## <a name="members"></a>メンバー  
+ BPS_NONE  
+ ブレークポイントが存在しないことを指定します。  
   
- BPS\_DELETED  
- ブレークポイントが削除されたことを示します。  
+ BPS_DELETED  
+ ブレークポイントが削除されたことを指定します。  
   
- BPS\_DISABLED  
- ブレークポイントが無効であることを指定します。  
+ BPS_DISABLED  
+ ブレークポイントが無効になっていることを指定します。  
   
- BPS\_ENABLED  
- ブレークポイントが有効であることを指定します。  
+ BPS_ENABLED  
+ ブレークポイントが有効になっていることを指定します。  
   
-## 解説  
- [GetState](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md) のメソッドから返される値。  
+## <a name="remarks"></a>コメント  
+ 返される、 [GetState](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md)メソッドです。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetState](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md)

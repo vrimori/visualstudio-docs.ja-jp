@@ -1,67 +1,50 @@
 ---
-title: 'CA2132: Default constructors must be at least as critical as base type default constructors | Microsoft Docs'
+title: "CA2132: 既定のコンス トラクターは、少なくとも基本データ型の既定のコンス トラクターとしてほど重要である必要があります |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- CA2132
+f1_keywords: CA2132
 ms.assetid: e758afa1-8bde-442a-8a0a-bd1ea7b0ce4d
-caps.latest.revision: 11
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: e8ef93606186f838a7ecda65928eca78e804c959
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "11"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 7ead60f427a513af263502dbecb3237c776ef776
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2132-default-constructors-must-be-at-least-as-critical-as-base-type-default-constructors"></a>CA2132: Default constructors must be at least as critical as base type default constructors
+# <a name="ca2132-default-constructors-must-be-at-least-as-critical-as-base-type-default-constructors"></a>CA2132: 既定のコンストラクターは、基本型の既定コンストラクターと同程度以上、重要であることが必要
 |||  
 |-|-|  
 |TypeName|DefaultConstructorsMustHaveConsistentTransparency|  
 |CheckId|CA2132|  
-|Category|Microsoft.Security|  
-|Breaking Change|Breaking|  
+|カテゴリ|Microsoft.Security|  
+|互換性に影響する変更点|あり|  
   
 > [!NOTE]
->  This warning is only applied to code that is running the CoreCLR (the version of the CLR that is specific to Silverlight Web applications).  
+>  この警告は、CoreCLR (Silverlight Web アプリケーションに固有である CLR のバージョン) を実行しているコードにのみ適用されます。  
   
-## <a name="cause"></a>Cause  
- The transparency attribute of the default constructor of a derived class is not as critical as the transparency of the base class.  
+## <a name="cause"></a>原因  
+ 派生クラスの既定のコンス トラクターの透過性属性が基底クラスの透明度ほど重要ではありません。  
   
-## <a name="rule-description"></a>Rule Description  
- Types and members that have the <xref:System.Security.SecurityCriticalAttribute> cannot be used by Silverlight application code. Security-critical types and members can be used only by trusted code in the .NET Framework for Silverlight class library. Because a public or protected construction in a derived class must have the same or greater transparency than its base class, a class in an application cannot be derived from a class marked SecurityCritical.  
+## <a name="rule-description"></a>規則の説明  
+ 型およびメンバーを持つ、 <xref:System.Security.SecurityCriticalAttribute> Silverlight アプリケーション コードで使用することはできません。 セキュリティが重要な型やメンバーは、.NET Framework for Silverlight クラス ライブラリの信頼されているコードからのみ使用できます。 派生クラスにおけるパブリックな構築または保護された構築の透過性は、基本クラスと同程度以上である必要があるため、アプリケーション内のクラスを、SecurityCritical としてマークされたクラスから派生させることはできません。  
   
- For CoreCLR platform code, if a base type has a public or protected non-transparent default constructor then the derived type must obey the default constructor inheritance rules. The derived type must also have a default constructor and that constructor must be at least as critical default constructor of the base type.  
+ CoreCLR プラットフォーム コードでは、基本データ型は、public または protected の非透過の既定のコンス トラクターを持つ場合、派生型従う必要があります既定コンス トラクターの継承規則。 派生型は既定のコンス トラクターにも必要し、そのコンス トラクターが、基本型の重要な既定のコンス トラクターとして以上である必要があります。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix the violation, remove the type or do not derive from security non-transparent type.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ 違反を修正するには、型を削除するか、セキュリティ透過的でない型から派生していません。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress warnings from this rule. Violations of this rule by application code will result in the CoreCLR refusing to load the type with a <xref:System.TypeLoadException>.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告は抑制しないでください。 CoreCLR で型の読み込みを拒否しているアプリケーション コードでは、この規則の違反が発生、<xref:System.TypeLoadException>です。  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>コード  
  [!code-csharp[FxCop.Security.CA2132.DefaultConstructorsMustHaveConsistentTransparency#1](../code-quality/codesnippet/CSharp/ca2132-default-constructors-must-be-at-least-as-critical-as-base-type-default-constructors_1.cs)]  
   
-### <a name="comments"></a>Comments
+### <a name="comments"></a>コメント

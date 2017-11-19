@@ -1,48 +1,47 @@
 ---
-title: "IDiaStackWalkHelper::symbolForVA | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaStackWalkHelper::symbolForVA メソッド"
+title: "Idiastackwalkhelper::symbolforva |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaStackWalkHelper::symbolForVA method
 ms.assetid: 8dd9455d-d44c-4dd6-a0aa-31131cbea2aa
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: cc9f22d1be5c98e5dd1eda420b1b327aea11741a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaStackWalkHelper::symbolForVA
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-指定された仮想アドレスを含むシンボルを取得します。  
+# <a name="idiastackwalkhelpersymbolforva"></a>IDiaStackWalkHelper::symbolForVA
+指定した仮想アドレスを含んでいるシンボルを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT symbolForVA(   
-   ULONGLONG     va,  
-   IDiaSymbol**  ppSymbol  
+```C++  
+HRESULT symbolForVA(   
+   ULONGLONG     va,  
+   IDiaSymbol**  ppSymbol  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `va`  
- \[入力\] 要求されたシンボルに含まれている仮想アドレス。  シンボルは `SymTagFunctionType` である \([SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md) の列挙体からの値があります。  
+ [in]要求されたシンボルに含まれている仮想アドレス。 シンボルがある必要があります、 `SymTagFunctionType` (から値、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)列挙型)。  
   
  `ppSymbol`  
- \[出力\] 指定したアドレスにあるシンボルを表す [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) のオブジェクト。  
+ [out][IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)を指定したアドレスにシンボルを表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

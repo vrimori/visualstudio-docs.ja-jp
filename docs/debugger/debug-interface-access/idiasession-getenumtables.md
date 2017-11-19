@@ -1,48 +1,47 @@
 ---
-title: "IDiaSession::getEnumTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSession::getEnumTables メソッド"
+title: "Idiasession::getenumtables |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSession::getEnumTables method
 ms.assetid: 66e0fba2-ca63-4e24-a46a-c99c7fb61dd1
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 59061e02dcfefb1e841ea5b6a8947bb1a8af4bfa
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSession::getEnumTables
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-シンボル ストアに含まれるすべてのテーブルの列挙子を取得します。  
+# <a name="idiasessiongetenumtables"></a>IDiaSession::getEnumTables
+シンボル ストアに含まれているすべてのテーブルの列挙子を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT getEnumTables (   
-   IDiaEnumTables** ppEnumTables  
+```C++  
+HRESULT getEnumTables (   
+   IDiaEnumTables** ppEnumTables  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppEnumTables`  
- \[入力\] [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md) のオブジェクトを返します。  シンボル ストアのテーブルを列挙するにはこのインターフェイスを使用します。  
+ [out]返します、 [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)オブジェクト。 シンボル ストアにテーブルを列挙するのにには、このインターフェイスを使用します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 使用例  
- この例では特定の列挙子オブジェクトを取得するために `getEnumTables` のメソッドを使用する一般的な機能を示します。  列挙子がの場合関数の戻り値必要なインターフェイス ポインターにキャストできる ; そうしないと関数の戻り値 `NULL`。  
+## <a name="example"></a>例  
+ この例を使用する一般的な関数の表示、`getEnumTables`特定の列挙子オブジェクトを取得するメソッド。 関数が、必要なインターフェイスにキャスト可能なポインターを返します、列挙子が見つかった場合、関数を返しますそれ以外の場合、`NULL`です。  
   
-```cpp#  
+```C++  
 IUnknown *GetTable(IDiaSession *pSession, REFIID iid)  
 {  
     IUnknown *pUnknown = NULL;  
@@ -68,6 +67,6 @@ IUnknown *GetTable(IDiaSession *pSession, REFIID iid)
 }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

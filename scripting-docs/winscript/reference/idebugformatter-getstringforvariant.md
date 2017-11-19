@@ -1,27 +1,30 @@
 ---
-title: "IDebugFormatter::GetStringForVariant | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IDebugFormatter::GetStringForVariant |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IDebugFormatter.GetStringForVariant
 apilocation: jscript.dll
-helpviewer_keywords: 
-  - "IDebugFormatter::GetStringForVariant"
+helpviewer_keywords: IDebugFormatter::GetStringForVariant
 ms.assetid: 95189d03-1126-433e-8513-659107b3df16
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: bfc31b0fdbf6d1f4a29b1322dc3a3c4015f9c8ff
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IDebugFormatter::GetStringForVariant
-特定の変数の値を表す文字列を返します。  
+# <a name="idebugformattergetstringforvariant"></a>IDebugFormatter::GetStringForVariant
+指定されたバリアント値を表す文字列を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT GetStringForVariant(  
@@ -31,25 +34,25 @@ HRESULT GetStringForVariant(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pvar`  
- \[入力\]文字列として表現されるバリアント。  
+ [in]文字列として表現するバリアント。  
   
  `nRadix`  
- \[入力\]数値で使用する基数。  
+ [in]数値の値に対して使用する基数。  
   
  `pbstrValue`  
- \[入力\] `pvar`を表す文字列。  
+ [out]文字列を表す`pvar`です。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
- このメソッドは、指定された変数の値を表す文字列を返します。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、指定されたバリアント型の値を表す文字列を返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugFormatter インターフェイス](../../winscript/reference/idebugformatter-interface.md)

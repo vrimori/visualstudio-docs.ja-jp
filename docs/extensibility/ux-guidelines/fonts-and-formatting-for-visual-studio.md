@@ -4,42 +4,27 @@ ms.custom:
 ms.date: 04/26/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c3c3df69-83b4-4fd0-b5b1-e18c33f39376
-caps.latest.revision: 5
+caps.latest.revision: "5"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9524ecc3cadef58821fba857de8e82e59eea9b43
-ms.openlocfilehash: c55c135034f5b3b2dd09ccf94e22e56e8f04797e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/04/2017
-
+ms.openlocfilehash: 5a252e22cda234f6a45bee084522b2add2bafada
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Visual Studio のフォントと書式
 ##  <a name="BKMK_TheEnvironmentFont"></a>環境フォント  
  Visual Studio 内のすべてのフォントは、カスタマイズのユーザーに公開する必要があります。 主に、これには、**フォントおよび色** ページで、**ツール > オプション**ダイアログ。 フォントの設定の 3 つのカテゴリは次のとおりです。  
   
--   **環境フォント**— プライマリ フォント IDE (統合開発環境) のダイアログ ボックス、メニューのツール ウィンドウおよびドキュメント ウィンドウを含む、すべてのインターフェイス要素を使用します。 既定では、環境フォントは現在のバージョンの Windows で 9 pt Segoe UI として表示されるシステム フォントに関連付けられています。 インターフェイスのすべての要素の 1 つのフォントを使用すると、IDE 全体で一貫したフォントの外観を確認できます。  
+-   **環境フォント**-IDE (統合開発環境) のプライマリ フォント ダイアログ ボックス、メニューのツール ウィンドウおよびドキュメント ウィンドウを含む、すべてのインターフェイス要素を使用します。 既定では、環境フォントは現在のバージョンの Windows で 9 pt Segoe UI として表示されるシステム フォントに関連付けられています。 インターフェイスのすべての要素の 1 つのフォントを使用すると、IDE 全体で一貫したフォントの外観を確認できます。  
   
--   **テキスト エディター** — ことでコードおよびその他の画面エディターのテキスト ベース カスタマイズできるテキスト エディターで要素をページに**ツール > オプション**です。  
+-   **テキスト エディター** -ことでコードおよびその他の画面エディターのテキスト ベース カスタマイズできるテキスト エディターで要素をページに**ツール > オプション**です。  
   
 -   **特定のコレクション**-独自の設定 ページで、設計に特有のフォントが公開されるインターフェイス要素のユーザーによるカスタマイズを提供しているデザイナーのウィンドウが画面**ツール > オプション**です。  
   
@@ -96,7 +81,7 @@ window.ShowModal()
   
  `ShowModal`ブール値を返します。 (null 許容のブール値) で、 `DialogResult`、必要な場合に使用されます。 戻り値は true を設定すると、ダイアログ ボックスが閉じられました**OK**です。  
   
- 独自のダイアログ ボックスではありませんし、ホストされている一部 WPF UI を表示する必要がある場合`HwndSource`、ポップアップ ウィンドウ、または Win32/WinForms の親ウィンドウの WPF 子ウィンドウなどを設定する必要があります、`FontFamily`と`FontSize`WPF 要素のルート要素にします。 (シェル メイン ウィンドウで、プロパティを設定するが、過去の継承されません、 `HWND`)。 シェルは、プロパティをバインドする、次のようにリソースを提供します。  
+ 独自のダイアログ ボックスではありませんし、ホストされている一部 WPF UI を表示する必要がある場合`HwndSource`、ポップアップ ウィンドウ、または Win32/WinForms の親ウィンドウの WPF 子ウィンドウなどを設定する必要があります、`FontFamily`と`FontSize`WPF e のルート要素にlement です。 (シェル メイン ウィンドウで、プロパティを設定するが、過去の継承されません、 `HWND`)。 シェルは、プロパティをバインドする、次のようにリソースを提供します。  
   
 ```  
 <Setter property="FontFamily" Value="{DynamicResource VsFont.EnvironmentFontFamily}" />  
@@ -300,11 +285,11 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 ### <a name="testing-the-environment-font"></a>環境フォントのテスト  
  UI が環境フォントを使用して、サイズの設定を尊重を開きます**ツール > オプション > 環境 > フォントおよび色**「環境フォント」を選択し、"設定の表示:"ドロップ ダウン メニュー。  
   
- ![フォントおよび色の設定、ツールで&gt;オプション ダイアログ ボックス](~/extensibility/ux-guidelines/media/0201-a_optionsfonts.png "0201-a_OptionsFonts")<br />フォントおよび色の設定、ツールで&gt;オプション ダイアログ ボックス
+ ![フォントおよび色の設定、ツールで&gt;オプション ダイアログ ボックス](../../extensibility/ux-guidelines/media/0201-a_optionsfonts.png "0201 a_OptionsFonts")<br />フォントおよび色の設定、ツールで&gt;オプション ダイアログ ボックス
   
  フォント サイズを既定値とは非常に異なるものに設定します。 明白な UI が更新されないが、("Times New Roman") などのセリフ フォントを選択し、非常に大きいサイズを設定します。 次に、環境を考慮することを確認するように UI をテストします。 ライセンス ダイアログを使用する例を次に示します。  
   
- ![環境フォントを考慮せず UI テキストの例](~/extensibility/ux-guidelines/media/0201-b_wrongfontdialog.png "0201-b_WrongFontDialog")<br />環境フォントを考慮せず UI テキストの例
+ ![環境フォントを考慮せず UI テキストの例の](../../extensibility/ux-guidelines/media/0201-b_wrongfontdialog.png "0201 b_WrongFontDialog")<br />環境フォントを考慮せず UI テキストの例
   
  この場合、「製品情報」、「ユーザー情報」が、このフォントを考慮しはありません。 場合によっては、明示的な設計の選択肢可能性がありますが、赤線仕様の一部として、明示的なフォントが指定されていない場合、バグであることができます。  
   
@@ -362,7 +347,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 |---------------|--------------|  
 |別の品詞または最初の単語を変更する分詞形である場合に、複合語で 2 番目の単語|再開の方法|  
 |この記事のタイトルの最初の単語は、いずれかの場合を除き、|a、an、the|  
-|接続詞を調整します。|nor、または|  
+|接続詞を調整します。|のも、または|  
 |動詞の句の外部で 4 つ以下の文字の文字が含まれる前置詞|上の場合と同様の上部の出力|  
 |「を」無限長の句で使用する場合|「、ハード_ディスクをフォーマットする方法」|  
   
@@ -387,7 +372,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
   
 -   ソリューション エクスプ ローラーで、アクティブなプロジェクトを指定します。  
   
--   ツールのプロパティ ウィンドウで値のオーバーライド  
+-   プロパティの [ツール] ウィンドウで値のオーバーライド  
   
 -   Visual Basic エディターのドロップダウン リストに特定のイベント  
   
@@ -395,7 +380,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
   
 -   複雑なダイアログまたはデザイナーの UI セクション ヘッダー  
   
-#### <a name="italics"></a>斜体  
+#### <a name="italics"></a>[斜体]  
  Visual Studio では、斜体または太字になっているのいずれかの斜体文字は使用しません。  
   
 #### <a name="color"></a>色  
@@ -408,14 +393,14 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
   
     -   特定の部分に注目するには  
   
-    -   標準的な暗いグレーと黒の環境のテキストの色のリリーフを提供するには  
+    -   標準の濃い灰色/黒環境テキストの色のリリーフを提供するには  
   
 -   見出しの色には、既存 Visual Studio のブランドの色、主に、メイン紫、#FF68217A を利用します。  
   
--   準拠する必要がありますを見出しで色を使用する場合、 [Windows カラー ガイドライン](https://msdn.microsoft.com/en-us/library/dn742482.aspx)コントラスト比やその他のユーザー補助機能に関する考慮事項など、します。  
+-   準拠する必要がありますを見出しで色を使用する場合、 [Windows 色ガイドライン](https://msdn.microsoft.com/en-us/library/dn742482.aspx)コントラスト比やその他のユーザー補助機能に関する考慮事項など、します。  
   
 ### <a name="font-size"></a>Font Size  
- Visual Studio の UI の設計では、複数の空白文字で軽量の外観を備えています。 可能であれば、chrome とタイトル バーを削減または削除されているがします。 情報密度は、Visual Studio での要件は、文字体裁引き続きより多くの行間隔とフォント サイズ、および重みのバリエーションに重点を置いて、重要になります。  
+ Visual Studio の UI の設計では、複数の空白文字で軽量の外観を備えています。 可能であれば、chrome とタイトル バー削減されたり削除します。 情報密度は、Visual Studio での要件は、文字体裁引き続きより多くの行間隔とフォント サイズ、および重みのバリエーションに重点を置いて、重要になります。  
   
  次の表には、デザインの詳細と Visual Studio で使用される表示フォントを視覚的な例が含まれています。 いくつか表示フォントのバリエーションは、サイズと Semilight などの外観にコード化された光の重みの両方があります。  
   
@@ -431,50 +416,50 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
   
 |||  
 |-|-|  
-|**使用法:**<br /><br /> 署名のダイアログ ボックスより大きな見出し<br />-メイン レポートの見出し<br /><br /> **操作を行います。**<br /><br /> -のみ大文字を使用します。<br />-常に使用軽量<br /><br /> **できません：**<br /><br /> 使い UI のスタート ページなどの UI の署名以外<br />-太字、斜体、または太字斜体<br />本文の使用<br />ツール ウィンドウで使用します。|**として表示されます:** 28 pt Segoe UI Light<br /><br /> **ビジュアルの使用例:**<br /><br /> ![310% 環境フォント &#43; の例Light の見出し](../../extensibility/ux-guidelines/media/0202-a_ef310.png "0202-a_EF310")|  
+|**使用法:**<br /><br /> 署名のダイアログ ボックスより大きな見出し<br />-メイン レポートの見出し<br /><br /> **操作を行います。**<br /><br /> -のみ大文字を使用します。<br />-常に使用軽量<br /><br /> **できません：**<br /><br /> 使い UI のスタート ページなどの UI の署名以外<br />-太字、斜体、または太字斜体<br />本文の使用<br />ツール ウィンドウで使用します。|**として表示されます:** 28 pt Segoe UI Light<br /><br /> **ビジュアルの使用例:**<br /><br /> ![310% 環境フォント &#43; の例Light の見出し](../../extensibility/ux-guidelines/media/0202-a_ef310.png "0202 a_EF310")|  
   
 #### <a name="200-environment-font--semilight"></a>200% 環境フォント + Semilight  
   
 |||  
 |-|-|  
-|**使用法:**<br /><br /> -小見出し<br />小規模および中規模のダイアログ ボックスのタイトル<br /><br /> **操作を行います。**<br /><br /> -のみ大文字を使用します。<br />-常に Semilight 重み付けを使用します。<br /><br /> **できません：**<br /><br /> -太字、斜体、または太字斜体<br />本文の使用<br />ツール ウィンドウで使用します。|**として表示されます:** 18 pt Segoe UI Semillight<br /><br /> **ビジュアルの使用例:**<br /><br /> ![#43 です。 (&)、200% 環境フォントの例Semilight](../../extensibility/ux-guidelines/media/0202-b_ef200.png "0202-b_EF200")|  
+|**使用法:**<br /><br /> -小見出し<br />小規模および中規模のダイアログ ボックスのタイトル<br /><br /> **操作を行います。**<br /><br /> -のみ大文字を使用します。<br />-常に Semilight 重み付けを使用します。<br /><br /> **できません：**<br /><br /> -太字、斜体、または太字斜体<br />本文の使用<br />ツール ウィンドウで使用します。|**として表示されます:** 18 pt Segoe UI Semillight<br /><br /> **ビジュアルの使用例:**<br /><br /> ![#43; (&)、200% 環境フォントの例Semilight](../../extensibility/ux-guidelines/media/0202-b_ef200.png "0202 b_EF200")|  
   
 #### <a name="155-environment-font"></a>155% 環境フォント  
   
 |||  
 |-|-|  
-|**使用法:**<br /><br /> のドキュメント内セクションの見出しと共に UI<br />-レポート<br /><br /> **操作を行います**のみ大文字を使用。<br /><br /> **できません：**<br /><br /> -太字、斜体、または太字斜体<br />本文の使用<br />-Visual Studio の標準コントロールで使用します。<br />ツール ウィンドウで使用します。|**として表示されます:** 14 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![155% 環境フォントの見出しの例](~/extensibility/ux-guidelines/media/0202-c_ef155.png "0202-c_EF155")|  
+|**使用法:**<br /><br /> のドキュメント内セクションの見出しと共に UI<br />-レポート<br /><br /> **操作を行います**のみ大文字を使用。<br /><br /> **できません：**<br /><br /> -太字、斜体、または太字斜体<br />本文の使用<br />-Visual Studio の標準コントロールで使用します。<br />ツール ウィンドウで使用します。|**として表示されます:** 14 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![155% 環境フォントの見出しの例](../../extensibility/ux-guidelines/media/0202-c_ef155.png "0202 c_EF155")|  
   
 #### <a name="133-environment-font"></a>133% 環境フォント  
   
 |||  
 |-|-|  
-|**使用法:**<br /><br /> 署名のダイアログ ボックスで小さく小見出し<br />にドキュメント内より小さな小見出しでも UI<br /><br /> **操作を行います**のみ大文字を使用。<br /><br /> **できません：**<br /><br /> -太字、斜体、または太字斜体<br />本文の使用<br />-Visual Studio の標準コントロールで使用します。<br />ツール ウィンドウで使用します。|**として表示されます:** 12 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![133% 環境フォントの見出しの例](../../extensibility/ux-guidelines/media/0202-d_ef133.png "0202-d_EF133")|  
+|**使用法:**<br /><br /> 署名のダイアログ ボックスで小さく小見出し<br />にドキュメント内より小さな小見出しでも UI<br /><br /> **操作を行います**のみ大文字を使用。<br /><br /> **できません：**<br /><br /> -太字、斜体、または太字斜体<br />本文の使用<br />-Visual Studio の標準コントロールで使用します。<br />ツール ウィンドウで使用します。|**として表示されます:** 12 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![133% 環境フォントの見出しの例](../../extensibility/ux-guidelines/media/0202-d_ef133.png "0202 d_EF133")|  
   
 #### <a name="122-environment-font"></a>122% 環境フォント  
   
 |||  
 |-|-|  
-|**使用法:**<br /><br /> 署名のダイアログ ボックスのセクション見出し<br />のツリー ビュー内最上位ノード<br />-垂直タブ ナビゲーション<br /><br /> **操作を行います**のみ大文字を使用。<br /><br /> **できません：**<br /><br /> -太字、斜体、または太字斜体<br />本文の使用<br />-Visual Studio の標準コントロールで使用します。<br />ツール ウィンドウで使用します。|**として表示されます:** 11 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![122% 環境フォントの見出しの例](../../extensibility/ux-guidelines/media/0202-e_ef122.png "0202-e_EF122")|  
+|**使用法:**<br /><br /> 署名のダイアログ ボックスのセクション見出し<br />のツリー ビュー内最上位ノード<br />-垂直タブ ナビゲーション<br /><br /> **操作を行います**のみ大文字を使用。<br /><br /> **できません：**<br /><br /> -太字、斜体、または太字斜体<br />本文の使用<br />-Visual Studio の標準コントロールで使用します。<br />ツール ウィンドウで使用します。|**として表示されます:** 11 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![122% 環境フォントの見出しの例](../../extensibility/ux-guidelines/media/0202-e_ef122.png "0202 e_EF122")|  
   
 #### <a name="environment-font--bold"></a>環境フォント + 太字  
   
 |||  
 |-|-|  
-|**使用法:**<br /><br /> -ラベルや署名ダイアログの小見出し<br />-ラベルやレポートでの小見出し<br />-ラベルとそのドキュメント内の小見出しおよび UI<br /><br /> **操作を行います。**<br /><br /> -のみ大文字を使用します。<br />-太字を使用します。<br /><br /> **できません：**<br /><br /> -斜体または太字斜体<br />本文の使用<br />-Visual Studio の標準コントロールで使用します。<br />ツール ウィンドウで使用します。|**として表示されます:**太字になっている 9 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![#43 です。 (&)、環境フォントの例太字の見出し](../../extensibility/ux-guidelines/media/0202-f_efb.png "0202-f_EFB")|  
+|**使用法:**<br /><br /> -ラベルや署名ダイアログの小見出し<br />-ラベルやレポートでの小見出し<br />-ラベルとそのドキュメント内の小見出しおよび UI<br /><br /> **操作を行います。**<br /><br /> -のみ大文字を使用します。<br />-太字を使用します。<br /><br /> **できません：**<br /><br /> -斜体または太字斜体<br />本文の使用<br />-Visual Studio の標準コントロールで使用します。<br />ツール ウィンドウで使用します。|**として表示されます:**太字になっている 9 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![#43; (&)、環境フォントの例太字の見出し](../../extensibility/ux-guidelines/media/0202-f_efb.png "0202 f_EFB")|  
   
 #### <a name="environment-font"></a>環境フォント  
   
 |||  
 |-|-|  
-|**使用法:**その他のすべてのテキスト<br /><br /> **操作を行います**のみ大文字を使用。<br /><br /> **しない:**斜体太字斜体または|**として表示されます:** 9 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![環境フォントの例](../../extensibility/ux-guidelines/media/0202-g_ef.png "0202-g_EF")|  
+|**使用法:**その他のすべてのテキスト<br /><br /> **操作を行います**のみ大文字を使用。<br /><br /> **しない:**斜体太字斜体または|**として表示されます:** 9 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![環境フォントの例](../../extensibility/ux-guidelines/media/0202-g_ef.png "0202 g_EF")|  
   
 ### <a name="padding-and-spacing"></a>余白および間隔  
  見出しでは、それらに適切な強調の周囲のスペースが必要です。 この領域は、ポイントのサイズと水平方向のルールや環境フォントのテキストの行など、見出し、近くの他に何がに応じて異なります。  
   
 -   単独で、見出しの理想的な余白は、大文字の文字の高さの容量の 90% にする必要があります。 たとえば、28 pt Segoe UI Light の見出しは 26 pt のキャップの高さを持ち 23 pt、または約 31 ピクセル、余白が約する必要があります。  
   
--   最小の周囲のスペース、見出しは、大文字の文字の高さの 50% にする必要があります。 ルールまたは他の緊密な調整要素は、見出しと共に発生する場合は、領域が少なくを使用する可能性があります。  
+-   最小の周囲のスペース、見出しには、大文字の文字の高さの 50% をする必要があります。 ルールまたは他の緊密な調整要素は、見出しと共に発生する場合は、領域が少なくを使用する可能性があります。  
   
 -   太字になっている環境フォントのテキストは、既定の行の高さの間隔とスペースに従う必要があります。  
   

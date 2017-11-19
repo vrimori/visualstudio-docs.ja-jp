@@ -1,74 +1,74 @@
 ---
-title: "SccRunScc 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccRunScc"
-helpviewer_keywords: 
-  - "SccRunScc 関数"
+title: "SccRunScc 関数 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SccRunScc
+helpviewer_keywords: SccRunScc function
 ms.assetid: bbe7c931-b17a-4779-9cf6-59e5f9f0c172
-caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d9ac82ac0363428ade1b6010a9060e15284db224
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# SccRunScc 関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-この関数は、ソース管理の管理ツールを呼び出します。  
+# <a name="sccrunscc-function"></a>SccRunScc 関数
+この関数は、ソース管理の管理ツールを起動します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 SCCRTN SccRunScc(  
-   LPVOID  pvContext,  
-   HWND    hWnd,  
-   LONG    nFiles,  
-   LPCSTR* lpFileNames  
+   LPVOID  pvContext,  
+   HWND    hWnd,  
+   LONG    nFiles,  
+   LPCSTR* lpFileNames  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  pvContext  
- \[in\]ソース管理プラグイン コンテキスト構造体。  
+ [in]ソース管理プラグイン コンテキスト構造体。  
   
- hwnd の分離  
- \[in\]ソース管理プラグインは、それによって提供されるダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
+ hWnd  
+ [in]ソース管理プラグインで提供されるダイアログ ボックスをすべての親として使用できる IDE ウィンドウへのハンドル。  
   
  nFiles  
- \[in\]指定されたファイルの数、 `lpFileNames` 配列。  
+ [in]指定されたファイルの数、`lpFileNames`配列。  
   
  lpFileNames  
- \[in\]選択したファイル名の配列。  
+ [in]選択したファイル名の配列。  
   
-## 戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+## <a name="return-value"></a>戻り値  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
 |値|説明|  
-|-------|--------|  
-|SCC\_OK|ソース管理の管理ツールが正常に呼び出されます。|  
-|SCC\_I\_OPERATIONCANCELED|操作が取り消されました。|  
-|SCC\_E\_INITIALIZEFAILED|ソース管理システムを初期化できませんでした。|  
-|SCC\_E\_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題が原因と思わのアクセスに関する問題が発生しました。|  
-|SCC\_E\_CONNECTIONFAILURE|ソース管理システムに接続できませんでした。|  
-|SCC\_E\_FILENOTCONTROLLED|選択したファイルはソース管理下ではありません。|  
-|SCC\_E\_NONSPECIFICERROR|不特定のエラーです。|  
+|-----------|-----------------|  
+|SCC_OK|ソース コントロール管理ツールが正常に呼び出されます。|  
+|SCC_I_OPERATIONCANCELED|操作が取り消されました。|  
+|SCC_E_INITIALIZEFAILED|ソース管理システムを初期化できませんでした。|  
+|SCC_E_ACCESSFAILURE|ソース管理システムのネットワークや競合の問題の可能性があるためのアクセスに関する問題が発生しました。|  
+|SCC_E_CONNECTIONFAILURE|ソース管理システムへの接続に失敗しました。|  
+|SCC_E_FILENOTCONTROLLED|選択したファイルはソース管理下ではありません。|  
+|SCC_E_NONSPECIFICERROR|不特定のエラーです。|  
   
-## 解説  
- この関数には、外部の管理ツールを介してさまざまなソース管理システムの機能にアクセスする呼び出し元ができます。 ソース管理システムがユーザー インターフェイスを持たない場合、ソース管理プラグインは必要な管理機能を実行するためのインターフェイスを実装できます。  
+## <a name="remarks"></a>コメント  
+ この関数には、外部管理ツールを使ってさまざまなソース管理システムの機能にアクセスする呼び出し元ができます。 ソース管理システムがユーザー インターフェイスを持たない場合、ソース管理プラグインは、必要な管理機能を実行するインターフェイスを実装できます。  
   
- この関数の数と、現在選択されているファイルのファイル名の配列。 管理インターフェイス内のファイルを事前に選択するファイルの一覧を使用できる、管理ツールをサポートする場合はそれ以外の場合、一覧を無視できます。  
+ この関数は、数と現在選択されているファイルのファイル名の配列を使用します。 管理インターフェイス内のファイルを事前に選択するファイルの一覧を使用できる管理ツールでサポートされる場合、それ以外の場合、一覧を無視できます。  
   
- この関数は通常、ユーザーが選択したときに呼び出さ、 **起動 \< ソース管理サーバー \>** から、 **ファイル** \]\-\> \[ **ソース管理** メニュー。 これは、 **起動** メニュー オプションを常に無効になっているか、レジストリ エントリを設定しても非表示です。 詳細については、「[方法: ソース管理プラグインのインストール](../extensibility/internals/how-to-install-a-source-control-plug-in.md)」を参照してください。 場合にのみ、この関数が呼び出されます [SccInitialize](../extensibility/sccinitialize-function.md) 返します、 `SCC_CAP_RUNSCC` 機能ビット \(を参照してください [機能フラグ](../extensibility/capability-flags.md) 詳細についてはこのデバイスとその他の機能のビットで\)。  
+ ユーザーを選択すると、この関数は通常呼び出されます、**起動\<ソース管理サーバー >**から、**ファイル** -> **ソース管理**メニューです。 これは、**起動**メニュー オプションを常に無効になっているやレジストリ エントリを設定しても非表示にします。 参照してください[する方法: ソース管理プラグインをインストール](../extensibility/internals/how-to-install-a-source-control-plug-in.md)詳細についてはします。 場合にのみ、この関数が呼び出されます[SccInitialize](../extensibility/sccinitialize-function.md)を返します、`SCC_CAP_RUNSCC`機能ビット (を参照してください[機能フラグ](../extensibility/capability-flags.md)の詳細については、これとその他の機能ビット)。  
   
-## 参照  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
+## <a name="see-also"></a>関連項目  
+ [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [方法: ソース管理プラグインのインストール](../extensibility/internals/how-to-install-a-source-control-plug-in.md)   
  [機能フラグ](../extensibility/capability-flags.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)

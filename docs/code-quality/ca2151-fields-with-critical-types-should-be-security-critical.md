@@ -1,49 +1,33 @@
 ---
-title: 'CA2151: Fields with critical types should be security critical | Microsoft Docs'
+title: "CA2151: クリティカル型のフィールドはセキュリティ クリティカルなをする必要があります |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 09db9d25-7d58-4725-a252-4a07baadf046
-caps.latest.revision: 4
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: c312bf4cd90dff17ff10063ab8a293161e2fa328
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "4"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 9a703dec98c93c03a2df51d3bd3d4ecf870f2031
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2151-fields-with-critical-types-should-be-security-critical"></a>CA2151: Fields with critical types should be security critical
+# <a name="ca2151-fields-with-critical-types-should-be-security-critical"></a>CA2151: クリティカル型のフィールドはセキュリティ クリティカルである必要があります
 |||  
 |-|-|  
 |TypeName||  
 |CheckId|CA2151|  
-|Category|Microsoft.Security|  
-|Breaking Change|Breaking|  
+|カテゴリ|Microsoft.Security|  
+|互換性に影響する変更点|あり|  
   
-## <a name="cause"></a>Cause  
- A security transparent field or a safe critical field is declared. Its type is specified as security critical. For example:  
+## <a name="cause"></a>原因  
+ 透過的セキュリティ フィールドまたはセーフ クリティカル フィールドが宣言されました。 その型は、セキュリティ クリティカルとして指定されています。 例:  
   
 ```csharp  
 [assembly: AllowPartiallyTrustedCallers]  
@@ -58,13 +42,13 @@ ms.lasthandoff: 08/30/2017
   
 ```  
   
- In this example, `m_field` is a security transparent field of a type that is security critical.  
+ この例では、`m_field` はセキュリティ クリティカルな型の透過的セキュリティ フィールドです。  
   
-## <a name="rule-description"></a>Rule Description  
- To use security critical types, the code that references the type must be either security critical or security safe critical. This is true even if the reference is indirect. For example, when you reference a transparent field that has a critical type, your code must be either security critical or security safe. Therefore, having a security transparent or security safe critical field is misleading because transparent code will still be unable to access the field.  
+## <a name="rule-description"></a>規則の説明  
+ セキュリティ クリティカルな型を使用するには、型を参照するコードがセキュリティ クリティカルであるか、セキュリティ セーフ クリティカルである必要があります。 これは、参照が間接的である場合にも当てはまります。 たとえば、クリティカルな型を持つ透過的フィールドを参照する場合、コードはセキュリティ クリティカルであるか、セキュリティ セーフである必要があります。 そのため、透過的セキュリティまたはセキュリティ セーフ クリティカルなフィールドが存在すると、透過的なコードはこのフィールドにアクセスできないので、紛らわしくなります。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, mark the field with the <xref:System.Security.SecurityCriticalAttribute> attribute, or make the type that is referenced by the field eith security transparent or safe critical.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、フィールドを <xref:System.Security.SecurityCriticalAttribute> 属性でマークするか、フィールドによって参照される型を透過的セキュリティまたはセーフ クリティカルにします。  
   
 ```csharp  
 // Fix 1: Make the referencing field security critical  
@@ -92,10 +76,10 @@ ms.lasthandoff: 08/30/2017
   
 ```  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告は抑制しないでください。  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>コード  
  [!code-csharp[FxCop.Security.CA2145.TransparentMethodsShouldNotUseSuppressUnmanagedCodeSecurity#1](../code-quality/codesnippet/CSharp/ca2151-fields-with-critical-types-should-be-security-critical_1.cs)]  
   
-### <a name="comments"></a>Comments
+### <a name="comments"></a>コメント

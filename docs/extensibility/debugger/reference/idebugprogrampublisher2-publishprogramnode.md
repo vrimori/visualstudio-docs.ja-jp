@@ -1,55 +1,55 @@
 ---
-title: "IDebugProgramPublisher2::PublishProgramNode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramPublisher2::PublishProgramNode"
-helpviewer_keywords: 
-  - "IDebugProgramPublisher2::PublishProgramNode"
+title: "IDebugProgramPublisher2::PublishProgramNode |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgramPublisher2::PublishProgramNode
+helpviewer_keywords: IDebugProgramPublisher2::PublishProgramNode
 ms.assetid: d4b72e04-f726-46cf-8e56-5203ff205b12
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 49b510ec131a58778941ae925120fb58097b1db7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgramPublisher2::PublishProgramNode
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-デバッグ エンジン \(DEs\) とデバッグ セッションのマネージャー \(SDM\) によって使用されるプログラムのノードを使用できます。  
+# <a name="idebugprogrampublisher2publishprogramnode"></a>IDebugProgramPublisher2::PublishProgramNode
+使用可能プログラム ノード デバッグ エンジン (DEs) で使用して、セッションのデバッグ マネージャー (SDM)。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT PublishProgramNode(  
-   IDebugProgramNode2 *pProgramNode  
+HRESULT PublishProgramNode(  
+   IDebugProgramNode2 *pProgramNode  
 );  
 ```  
   
-```c#  
-int PublishProgramNode(  
-   IDebugProgramNode2 pProgramNode  
+```csharp  
+int PublishProgramNode(  
+   IDebugProgramNode2 pProgramNode  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pProgramNode`  
- \[出力\] 使用できるようにプログラムのノードを表す [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) のオブジェクト。  
+ [in][IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)を使用できるようにするプログラムのノードを表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- このメソッドはプログラムのデバッグの設定を選択しを呼び出す前については問い合わせを受けるようにします。  
+## <a name="remarks"></a>コメント  
+ このメソッドを選択して、デバッグを起動したりする前に情報に対してクエリを実行するプログラムを使用します。  
   
- 可用性プログラムからノードを削除するには[UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md) のメソッドを呼び出します。  
+ 可用性から、[プログラム] ノードを削除するには、呼び出し、 [UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md)メソッドです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)   
  [UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md)

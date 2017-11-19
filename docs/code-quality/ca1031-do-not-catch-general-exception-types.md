@@ -1,11 +1,10 @@
 ---
-title: 'CA1031: Do not catch general exception types | Microsoft Docs'
+title: "Ca 1031: 一般的な例外の種類はキャッチしません |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,59 +14,45 @@ helpviewer_keywords:
 - CA1031
 - DoNotCatchGeneralExceptionTypes
 ms.assetid: cbc283ae-2a46-4ec0-940e-85aa189b118f
-caps.latest.revision: 20
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: c42f8d7207d87fa10c1dc6f87893015fc492654b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "20"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 681785bad04a9f16ca68a1f619700e143c01cb58
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1031-do-not-catch-general-exception-types"></a>CA1031: Do not catch general exception types
+# <a name="ca1031-do-not-catch-general-exception-types"></a>CA1031: 一般的な例外の種類はキャッチしません
 |||  
 |-|-|  
 |TypeName|DoNotCatchGeneralExceptionTypes|  
 |CheckId|CA1031|  
-|Category|Microsoft.Design|  
-|Breaking Change|Non-breaking|  
+|カテゴリ|Microsoft.Design|  
+|互換性に影響する変更点|なし|  
   
-## <a name="cause"></a>Cause  
- A general exception such as <xref:System.Exception?displayProperty=fullName> or <xref:System.SystemException?displayProperty=fullName> is caught in a `catch` statement, or a general catch clause such as `catch()` is used.  
+## <a name="cause"></a>原因  
+ など、一般的な例外<xref:System.Exception?displayProperty=fullName>または<xref:System.SystemException?displayProperty=fullName>でキャッチされましたが、`catch`ステートメント、またはなどの一般的な catch 句`catch()`を使用します。  
   
-## <a name="rule-description"></a>Rule Description  
- General exceptions should not be caught.  
+## <a name="rule-description"></a>規則の説明  
+ 汎用的な例外はキャッチしないでください。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, catch a more specific exception, or rethrow the general exception as the last statement in the `catch` block.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、例外をキャッチする具体的なまたは最後のステートメントで、汎用的な例外を再スロー、`catch`ブロックします。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule. Catching general exception types can hide run-time problems from the library user and can make debugging more difficult.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告は抑制しないでください。 一般的な例外の種類をキャッチして、ライブラリ ユーザーから、実行時の問題を隠すことができる、デバッグが困難なです。  
   
 > [!NOTE]
->  Starting with the [!INCLUDE[net_v40_long](../code-quality/includes/net_v40_long_md.md)], the common language runtime (CLR) no longer delivers corrupted state exceptions that occur in the operating system and managed code, such as access violations in [!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)], to be handled by managed code. If you want to compile an application in the [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] or later versions and maintain handling of corrupted state exceptions, you can apply the <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> attribute to the method that handles the corrupted state exception.  
+>  以降で、 [!INCLUDE[net_v40_long](../code-quality/includes/net_v40_long_md.md)]、共通言語ランタイム (CLR) は、オペレーティング システムとのアクセス違反などのマネージ コードで発生する破損状態例外を不要になった配信[!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)]、マネージ コードで処理されることです。 アプリケーションをコンパイルする場合、[!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)]以降のバージョン管理と破損状態例外の処理、割り当てることができます、<xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>属性を破損状態例外を処理するメソッドをします。  
   
-## <a name="example"></a>Example  
- The following example shows a type that violates this rule and a type that correctly implements the `catch` block.  
+## <a name="example"></a>例  
+ 次の例は、この規則に違反する型と正しく実装する型、`catch`ブロックします。  
   
- [!code-cpp[FxCop.Design.ExceptionAndSystemException#1](../code-quality/codesnippet/CPP/ca1031-do-not-catch-general-exception-types_1.cpp)] [!code-vb[FxCop.Design.ExceptionAndSystemException#1](../code-quality/codesnippet/VisualBasic/ca1031-do-not-catch-general-exception-types_1.vb)] [!code-csharp[FxCop.Design.ExceptionAndSystemException#1](../code-quality/codesnippet/CSharp/ca1031-do-not-catch-general-exception-types_1.cs)]  
+ [!code-cpp[FxCop.Design.ExceptionAndSystemException#1](../code-quality/codesnippet/CPP/ca1031-do-not-catch-general-exception-types_1.cpp)]
+ [!code-vb[FxCop.Design.ExceptionAndSystemException#1](../code-quality/codesnippet/VisualBasic/ca1031-do-not-catch-general-exception-types_1.vb)]
+ [!code-csharp[FxCop.Design.ExceptionAndSystemException#1](../code-quality/codesnippet/CSharp/ca1031-do-not-catch-general-exception-types_1.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA2200: Rethrow to preserve stack details](../code-quality/ca2200-rethrow-to-preserve-stack-details.md)
+## <a name="related-rules"></a>関連規則  
+ [CA2200: スタック詳細を保持するために再度スローします](../code-quality/ca2200-rethrow-to-preserve-stack-details.md)

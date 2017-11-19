@@ -1,39 +1,40 @@
 ---
-title: "方法: 検索の実装とメカニズムを置換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "エディター [Visual Studio SDK] の従来の検索し、置換"
+title: "方法: 検索の実装とメカニズムを置換 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: editors [Visual Studio SDK], legacy - find and replace
 ms.assetid: bbd348db-3d19-42eb-99a2-3e808528c0ca
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 8c12e300a3537d1927710b0a4c3550ec3f5fd762
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: 検索の実装とメカニズムを置換
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Visual Studio に検索または置換を実行する 2 とおりの方法を示します。  1 番目の方法はシェルにテキストのイメージを渡すとその文字列の検索強調表示および置換を処理するようにします。  ユーザーが複数のテキスト範囲を指定することができます。  またVSPackage ではこの機能自体を制御できます。  どちらの場合も開いているすべてのドキュメントの現在のターゲットとターゲットのシェルに通知する必要があります。  
+# <a name="how-to-implement-the-find-and-replace-mechanism"></a>方法: 検索の実装とメカニズムを置換
+Visual Studio には、検索と置換を実装する 2 つの方法が用意されています。 1 つの方法では、テキスト、イメージをシェルに渡すし、検索、強調表示、および置換テキストを処理できます。 これにより、ユーザーが複数のテキスト範囲を指定できます。 また、VSPackage では、この機能自体を制御できます。 どちらの場合も、現在のターゲットとすべての開いているドキュメントのターゲットについて、シェルに通知する必要があります。  
   
-### 検索または置換を実行します。  
+### <a name="to-implement-findreplace"></a>検索と置換を実装するには  
   
-1.  フレームのプロパティ <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID> または <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID> によって返されるオブジェクトの 1 種類の <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget>インターフェイスを実装します。  カスタム エディターを作成する場合はカスタム エディター クラスの一部としてこのインターフェイスを実装します。  
+1.  実装、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget>フレームのプロパティによって返されるオブジェクトの 1 つのインターフェイス<xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>または<xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>です。 カスタム エディターを作成する場合は、カスタム エディターのクラスの一部としてこのインターフェイスを実装する必要があります。  
   
-2.  テキスト エディターのサポートのイメージ検索を実行するかどうかを示します。オプションを指定するに <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.GetCapabilities%2A> のメソッドを使用します。  
+2.  使用して、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.GetCapabilities%2A>メソッドとテキストの画像の検索を実装するかどうかを示すために、エディターをサポートするオプションを指定します。  
   
-     エディターのサポートを検索するイメージをショートサーキット メッセージを送信 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.GetSearchImage%2A> を実行します。  
+     エディターでは、テキストの画像の検索をサポートする場合は、実装<xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.GetSearchImage%2A>です。  
   
-     それ以外の場合は実装の <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Find%2A> と <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Replace%2A>。  
+     それ以外の場合、実装<xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Find%2A>と<xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Replace%2A>です。  
   
-3.  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Find%2A> と <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Replace%2A> のメソッドを実装する場合<xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindHelper> のインターフェイスを呼び出すことで取得タスクを簡略化できます。  
+3.  実装する場合、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Find%2A>と<xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Replace%2A>メソッドを呼び出すことによって、検索タスクを簡略化できます、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindHelper>インターフェイスです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindHelper>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Find%2A>   

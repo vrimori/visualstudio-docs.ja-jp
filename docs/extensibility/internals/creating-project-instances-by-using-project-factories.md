@@ -1,54 +1,56 @@
 ---
-title: "プロジェクトのファクトリを使用して、プロジェクトのインスタンスを作成します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プロジェクトのファクトリ"
-  - "プロジェクト [Visual Studio SDK] プロジェクト ファクトリ"
+title: "プロジェクトのファクトリを使用してプロジェクトのインスタンスを作成する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- project factories
+- projects [Visual Studio SDK], project factories
 ms.assetid: 94c90012-8669-459c-af8e-307ac242c8c4
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 7175bd4e2d0b07640dd45b38aa246c649def32ef
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# プロジェクトのファクトリを使用して、プロジェクトのインスタンスを作成します。
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の種類のプロジェクトではプロジェクトのオブジェクトのインスタンスを作成するには *プロジェクト ファクトリを*  使用します。  プロジェクト ファクトリは cocreatable COM オブジェクトの標準クラス ファクトリに似ています。  ただしプロジェクトのオブジェクトは cocreatable ではありません : 項目はプロジェクト ファクトリを使用してしか作成できません。  
+# <a name="creating-project-instances-by-using-project-factories"></a>プロジェクトのファクトリを使用してプロジェクトのインスタンスを作成します。
+プロジェクトの種類に[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を使用して、*プロジェクト ファクトリ*プロジェクトのオブジェクトのインスタンスを作成します。 プロジェクト ファクトリは、cocreatable の COM オブジェクトの標準のクラス ファクトリに似ています。 ただし、プロジェクトのオブジェクトは、cocreatable: プロジェクト ファクトリを使用してのみ作成します。  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE はユーザーが既存のプロジェクトを読み込むか[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] で新しいプロジェクトを作成するときにプロジェクト ファクトリを VSPackage で実行されて呼び出されます。  新しいプロジェクトのオブジェクトは設定のソリューション エクスプローラーに十分な情報を IDE にあります。  新しいプロジェクトのオブジェクトにはIDE による関連するすべての UI 操作をサポートするように要求インターフェイスを提供します。  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE は、ユーザーが既存のプロジェクトをロードまたはで新しいプロジェクトを作成するときに、VSPackage の実装プロジェクト ファクトリを呼び出す[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 新しいプロジェクトのオブジェクトは、ソリューション エクスプ ローラーを設定するための十分な情報を使用して IDE を提供します。 新しいプロジェクトのオブジェクトでは、IDE によって開始されたすべての関連する UI 操作をサポートするため、必要なインターフェイスも提供します。  
   
- プロジェクトのクラスの <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory> のインターフェイスを実装できます。  通常は独自のモジュールに存在します。  
+ 実装することができます、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory>プロジェクト内のクラスのインターフェイスです。 通常、独自のモジュールに存在します。  
   
- `IVsProjectFactory` のインターフェイスの実装の例については[Basic Project](http://msdn.microsoft.com/ja-jp/385fd2a3-d9f1-4808-87c2-a3f05a91fc36) サンプル ディレクトリに含まれる PrjFac.cpp を参照してください。  
+ 実装の例については、`IVsProjectFactory`インターフェイスに含まれている PrjFac.cpp を参照してください、[基本的なプロジェクト](http://msdn.microsoft.com/en-us/385fd2a3-d9f1-4808-87c2-a3f05a91fc36)サンプル ディレクトリ。  
   
- 所有者によって集約をサポートするプロジェクトではプロジェクト ファイルに保持する必要があります。キーの所有者  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A> のメソッドがオーナーのキーでプロジェクトの場合所有するプロジェクトはプロジェクト ファクトリの GUID を所有者のキーを変換し実際のを作成するにはこのプロジェクト ファクトリの `CreateProject` のメソッドを呼び出します。  
+ 所有者によって集計されるをサポートするプロジェクトには、そのプロジェクト ファイルで、所有者キーが永続化する必要があります。 ときに、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>所有者キーを使用して、プロジェクトでメソッドは、所有されているプロジェクトは、その所有者のキーを GUID を呼び出してプロジェクト ファクトリに変換します、`CreateProject`を実際の作成を行うには、このプロジェクト ファクトリ メソッド。  
   
-## 所有されたプロジェクトの作成  
- 所有者は 2 段階の所有されたプロジェクトを作成します :  
+## <a name="creating-an-owned-project"></a>所有されているプロジェクトを作成します。  
+ 所有者は、2 つのフェーズに所有されているプロジェクトを作成します。  
   
-1.  <xref:Microsoft.VisualStudio.Shell.Interop.IVsOwnedProjectFactory.PreCreateForOwner%2A> メソッドを呼び出します。  これは所有するプロジェクトに `IUnknown` を制御する入力に基づいて集約されたプロジェクトのオブジェクトを作成する可能性があります。  所有するプロジェクトはプロジェクトの所有者に対して内部の `IUnknown` と集約オブジェクトを渡します。  これは所有されたプロジェクト内の `IUnknown` を格納する可能性があります。  
+1.  呼び出して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsOwnedProjectFactory.PreCreateForOwner%2A>メソッドです。 これは、方法により所有されているプロジェクト入力の制御に基づく集計プロジェクト オブジェクトを作成する`IUnknown`です。 所有されているプロジェクト渡します内部`IUnknown`と所有者のプロジェクトに集計されたオブジェクト。 これは、方法により所有されているプロジェクトを内部に格納する`IUnknown`です。  
   
-2.  <xref:Microsoft.VisualStudio.Shell.Interop.IVsOwnedProjectFactory.InitializeForOwner%2A> メソッドを呼び出します。  所有するプロジェクトは所有されていないプロジェクトの場合を実行する場合はこのメソッドが `IVsProjectFactory::CreateProject` の代わりに入っているすべてをインスタンス化します。  入力 `VSOWNEDPROJECTOBJECT` の列挙型は通常集計所有されているプロジェクトです。  所有するプロジェクトはクッキーが null 値ではありません\) プロジェクトのオブジェクトが既に作成されているかどうかを確認するにはこの変数を使用することを作成する必要があります \(クッキー\) からの null 値\)。  
+2.  呼び出して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsOwnedProjectFactory.InitializeForOwner%2A>メソッドです。 呼び出す代わりにこのメソッドが呼び出されたときに、所有されているプロジェクトは、すべてのインスタンス生成`IVsProjectFactory::CreateProject`が所有していないプロジェクトの場合と同様です。 入力`VSOWNEDPROJECTOBJECT`列挙体は、通常、集計の所有されているプロジェクト。 所有されているプロジェクトは、そのプロジェクトのオブジェクトが既に作成されているかどうかを決定するこの変数を使用できます (cookie は NULL は等しくない) か、(cookie 等しい NULL) を作成する必要があります。  
   
- プロジェクトの種類は cocreatable COM オブジェクトの CLSID と同様に一意のプロジェクトの GUID で識別されます。  通常 1 プロジェクト ファクトリのハンドルを持つことができる複数のプロジェクトの GUID ですが一つのプロジェクトでの型のインスタンスを作成する 1 種類のプロジェクト ファクトリのハンドル。  
+ プロジェクトの種類は、一意のプロジェクト GUID、cocreatable COM オブジェクトの CLSID に似ていますによって識別されます。 通常、1 つのプロジェクト ファクトリを設定することが、1 つのプロジェクトの種類のインスタンスを作成する 1 つのプロジェクト ファクトリ ハンドルは、1 つ以上のプロジェクトの種類の GUID を処理します。  
   
- プロジェクトの種類は特定のファイル名拡張子に関連付けられます。  ユーザーが既存のプロジェクト ファイルを開こうとしたかテンプレートを複製することで新しいプロジェクトを作成しようとするとIDE では対応するプロジェクトの GUID を確認するにはファイルの拡張子を使用します。  
+ プロジェクトの種類は、特定のファイル名拡張子に関連付けられます。 ユーザーは、既存のプロジェクト ファイルを開こうとしたか、テンプレートを複製して新しいプロジェクトを作成しようとしています、IDE、拡張子を使用してファイルに対応するプロジェクトの GUID を決定します。  
   
- 新しいプロジェクトを作成するか特定の型の既存のプロジェクトを開く IDE があるかどうかを決定したら IDE にはVSPackage が必要なプロジェクト ファクトリを実装するシステム レジストリの検索の情報を \[HKEY\_LOCAL\_MACHINE \\ Software \\ Microsoft \\ VisualStudio \\ 8.0 \\ Projects\] を使用します。  IDE ではこの VSPackage を読み込みます。  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> のメソッドではVSPackage は <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterProjectTypes.RegisterProjectType%2A> のメソッドを呼び出してIDE のプロジェクト ファクトリを登録する必要があります。  
+ IDE では、IDE が、かを調べる [HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\8.0\Projects] の下のシステム レジストリの情報を使用して新しいプロジェクトを作成するか、特定の種類の既存のプロジェクトを開く必要があります、かどうかを判断するとすぐにVSPackage では、必要なプロジェクト ファクトリを実装します。 IDE には、この VSPackage が読み込まれます。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>メソッド、VSPackage は呼び出すことにより、IDE を使用してそのプロジェクト ファクトリを登録する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterProjectTypes.RegisterProjectType%2A>メソッドです。  
   
- `IVsProjectFactory` インターフェイスの基本的な方法は 2 種類のシナリオを処理するか <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A> です : 新しいプロジェクトと既存のプロジェクトを開きます。  ほとんどのプロジェクトではプロジェクト ファイルでプロジェクトの状態を保存します。  通常は新しいプロジェクトはコピーを `CreateProject` のメソッドに渡されるテンプレート ファイルの作成コピーを開くことによって作成されます。  既存のプロジェクトを直接 `CreateProject` のメソッドに渡されるプロジェクト ファイルを開くことによってインスタンス化されます。  `CreateProject` のメソッドは必要に応じてユーザーの UI の機能を表示できます。  
+ 主な方法、`IVsProjectFactory`インターフェイスは<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>2 つのシナリオを処理する必要があります: 既存のプロジェクトを開き、新しいプロジェクトを作成します。 ほとんどのプロジェクトでは、プロジェクト ファイル内のプロジェクト状態を格納します。 渡されるテンプレート ファイルのコピーすることで新しいプロジェクトを作成する通常、`CreateProject`メソッドおよびコピーします。 直接に渡されるプロジェクト ファイルを開き、既存のプロジェクトはによってインスタンス化`CreateProject`メソッドです。 `CreateProject`メソッドは、必要に応じて、ユーザーに追加の UI 機能を表示できます。  
   
- 代わりにプロジェクトはデータベースまたは Web サーバーなどファイル システム以外のストレージ機構でプロジェクトの状態を格納するためにあるファイルを使用します。  この場合`CreateProject` のメソッドに渡されたファイル名パラメーターは実際にファイル システム パスではありませんが一意の文字列はURL にプロジェクトのデータを識別します。  実行する適切なコンストラクターのシーケンスを生成するに `CreateProject` に渡されるテンプレート ファイルをコピーする必要はありません。  
+ プロジェクトは、ファイルも使用しないでき、代わりに、データベースや Web サーバーなど、ファイル システム以外のストレージ メカニズムにそのプロジェクトの状態を格納できます。 この例では、ファイル名のパラメーターが渡される、`CreateProject`メソッドではありませんが、ファイル システム パスを実際には、一意の文字列-URL: プロジェクト データを識別します。 渡されるテンプレート ファイルをコピーする必要はありません`CreateProject`を実行する適切な構築シーケンスをトリガーします。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsOwnedProjectFactory>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterProjectTypes>   
- [チェックリスト: 新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)
+ [チェック リスト: 新しいプロジェクト タイプの作成](../../extensibility/internals/checklist-creating-new-project-types.md)

@@ -1,54 +1,53 @@
 ---
-title: "IDiaEnumTables::Item | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumTables::Item メソッド"
+title: "Idiaenumtables::item |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumTables::Item method
 ms.assetid: d65ab262-10c6-48ce-95a3-b5e4cb2c85af
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 26acf7b8f9ad54a1ef1ed25497cd408c51c745c5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumTables::Item
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-インデックスまたは名前でテーブルを取得します。  
+# <a name="idiaenumtablesitem"></a>IDiaEnumTables::Item
+インデックスまたは名前を使用してテーブルを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT Item (   
-   VARIANT     index,  
-   IDiaTable** table  
+```C++  
+HRESULT Item (   
+   VARIANT     index,  
+   IDiaTable** table  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `index`  
- \[入力\] 取得する [IDiaTable](../../debugger/debug-interface-access/idiatable.md) のキーの名前。  整数のバリアントを使用すると`count` が [IDiaEnumTables::get\_Count](../../debugger/debug-interface-access/idiaenumtables-get-count.md) のメソッドによって返されるように設定されている `count`0 ~ \-1 にする必要があります。  
+ [in]インデックスまたは名前、 [IDiaTable](../../debugger/debug-interface-access/idiatable.md)を取得します。 整数バリアントを使用する場合に 0 の範囲であります`count`-1 で、ここで`count`によって返されるは、 [idiaenumtables::get_count](../../debugger/debug-interface-access/idiaenumtables-get-count.md)メソッドです。  
   
  `table`  
- \[入力\] [IDiaTable](../../debugger/debug-interface-access/idiatable.md) テーブルを表すオブジェクトを返します。  
+ [out]返します、 [IDiaTable](../../debugger/debug-interface-access/idiatable.md)目的のテーブルを表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- 文字列のバリアントを指定すると文字列名特定のテーブル。  名前は [定数 \(Debug Interface Access SDK\)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md) で定義されているテーブル名の 1 つが必要があります。  
+## <a name="remarks"></a>コメント  
+ バリアント型を文字列が指定されている場合、文字列は、特定のテーブルを名前します。 名前は指定のテーブルの名前で定義されている[定数 (デバッグ インターフェイス Access SDK)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)です。  
   
-## 使用例  
+## <a name="example"></a>例  
   
-```cpp#  
+```C++  
 VARIANT var;  
 var.vt = VT_BSTR;  
 var.bstrVal = SysAllocString(DiaTable_Symbols );  
@@ -56,8 +55,8 @@ IDiaTable* pTable;
 pEnumTables->Item( var, &pTable );  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)   
  [IDiaTable](../../debugger/debug-interface-access/idiatable.md)   
- [IDiaEnumTables::get\_Count](../../debugger/debug-interface-access/idiaenumtables-get-count.md)   
- [定数 \(Debug Interface Access SDK\)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)
+ [Idiaenumtables::get_count](../../debugger/debug-interface-access/idiaenumtables-get-count.md)   
+ [定数 (Debug Interface Access SDK)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)

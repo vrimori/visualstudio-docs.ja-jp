@@ -1,27 +1,30 @@
 ---
-title: "IDebugDocumentHelper::Init | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IDebugDocumentHelper::Init |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IDebugDocumentHelper.Init
 apilocation: pdm.dll
-helpviewer_keywords: 
-  - "IDebugDocumentHelper::Init"
+helpviewer_keywords: IDebugDocumentHelper::Init
 ms.assetid: 1dd5a01f-0779-4109-8c6c-f16f5a3835bf
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 45cd57e4ba9e86bf84f927f487c637d61aa5339b
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IDebugDocumentHelper::Init
-`Init` のメソッドは、名前と最初の属性のデバッグのドキュメントのヘルパーを初期化します。  
+# <a name="idebugdocumenthelperinit"></a>IDebugDocumentHelper::Init
+`Init`メソッドは、名前と初期属性を持つデバッグ ドキュメント ヘルパーを初期化します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT Init(  
@@ -32,32 +35,32 @@ HRESULT Init(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pda`  
- \[出力\]このドキュメントに関連付けられたデバッグ アプリケーション。  
+ [in]このドキュメントに関連付けられているデバッグ アプリケーション。  
   
  `pszShortName`  
- \[入力\]ドキュメントの短い名前を含む文字列が null で終了します。  
+ [in]ドキュメントの短い名前を表す、null で終わる文字列。  
   
  `pszLongName`  
- \[入力\]ドキュメントの長い名前を含む文字列が null で終了します。  
+ [in]ドキュメントの長い名前を表す、null で終わる文字列。  
   
  `docAttr`  
- \[入力\]テキスト ドキュメントの属性を指定します。  
+ [in]テキスト ドキュメントの属性を指定します。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
- このメソッドは、名前と最初の属性のデバッグのドキュメントのヘルパーを初期化します。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、名前と最初の属性を持つデバッグ ドキュメント ヘルパーを初期化します。  
   
- このドキュメントでは、ツリー `IDebugDocumentHelper::Attach` が呼び出されるまで表示されません。  
+ このドキュメントはまでツリーにない`IDebugDocumentHelper::Attach`と呼びます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugDocumentHelper::Attach](../../winscript/reference/idebugdocumenthelper-attach.md)   
  [IDebugDocumentHelper インターフェイス](../../winscript/reference/idebugdocumenthelper-interface.md)   
- [TEXT\_DOC\_ATTR 定数](../../winscript/reference/text-doc-attr-constants.md)
+ [TEXT_DOC_ATTR 定数](../../winscript/reference/text-doc-attr-constants.md)

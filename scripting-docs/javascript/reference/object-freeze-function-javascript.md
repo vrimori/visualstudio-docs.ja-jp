@@ -1,79 +1,82 @@
 ---
-title: "Object.freeze 関数 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "freeze 関数"
-  - "Object.freeze 関数"
+title: "Object.freeze 関数 (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- Object.freeze function
+- freeze function
 ms.assetid: 83ffe193-0a37-4e0c-9b66-44c422765fb3
-caps.latest.revision: 20
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: ec08b34c3c8b32245928e6e75f5df1fbdfe2d4a6
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# Object.freeze 関数 (JavaScript)
+# <a name="objectfreeze-function-javascript"></a>Object.freeze 関数 (JavaScript)
 既存のプロパティ属性と値の変更、および新しいプロパティの追加を防止します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```javascript  
+```JavaScript  
 Object.freeze(object)  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `object`  
- 必須です。  属性をロックするオブジェクトを指定します。  
+ 必須です。 属性をロックする対象となるオブジェクト。  
   
-## 戻り値  
- 関数に渡されたオブジェクト。  
+## <a name="return-value"></a>戻り値  
+ 関数に渡されるオブジェクト。  
   
-## 例外  
- `object` 引数がオブジェクトではない場合は、`TypeError` 例外がスローされます。  
+## <a name="exceptions"></a>例外  
+ 場合、`object`引数は、オブジェクトではない、`TypeError`例外がスローされます。  
   
-## 解説  
- `Object.freeze` 関数は次の処理を行います。  
+## <a name="remarks"></a>コメント  
+ `Object.freeze`関数は、次を実行します。  
   
--   新しいプロパティを追加できないようにするために、オブジェクトを拡張不能にします。  
+-   により、オブジェクト以外拡張されるために新しいプロパティを追加することはできません。  
   
--   オブジェクトのすべてのプロパティの `configurable` 属性を `false` に設定します。  `configurable` が `false` に設定されていると、プロパティ属性の変更およびプロパティの削除ができなくなります。  
+-   セット、`configurable`属性を`false`オブジェクトのすべてのプロパティです。 ときに`configurable`は`false`プロパティの属性を変更することはできません、およびプロパティを削除することはできません。  
   
--   オブジェクトのすべてのデータ プロパティの `writable` 属性を`false` に設定します。  `writable` が false の場合、データ プロパティ値は変更できません。  
+-   セット、`writable`属性を`false`オブジェクトのすべてのデータ プロパティです。 ときに`writable`が false の場合、データのプロパティ値を変更することはできません。  
   
- プロパティ属性の設定方法の詳細については、「[Object.defineProperty 関数](../../javascript/reference/object-defineproperty-function-javascript.md)」を参照してください。  プロパティの属性を取得するには、[Object.getOwnPropertyDescriptor 関数](../../javascript/reference/object-getownpropertydescriptor-function-javascript.md) を使用できます。  
+ プロパティの属性を設定する方法の詳細については、次を参照してください。 [Object.defineProperty 関数](../../javascript/reference/object-defineproperty-function-javascript.md)です。 プロパティの属性を取得するには、使用することができます、 [Object.getOwnPropertyDescriptor 関数](../../javascript/reference/object-getownpropertydescriptor-function-javascript.md)です。  
   
-## 関連する関数  
- 関連する次の関数は、オブジェクトの属性の変更を防止します。  
+## <a name="related-functions"></a>関連する関数  
+ 次の関連する関数は、オブジェクトの属性の変更を禁止します。  
   
-|関数|オブジェクトを拡張不能にするか|`configurable` が各プロパティで `false` に設定される|`writable` が各プロパティで `false` に設定される|  
-|--------|---------------------|--------------------------------------------|----------------------------------------|  
-|[Object.preventExtensions](../../javascript/reference/object-preventextensions-function-javascript.md)|Yes|いいえ|いいえ|  
-|[Object.seal](../../javascript/reference/object-seal-function-javascript.md)|Yes|Yes|いいえ|  
-|`Object.freeze`|Yes|Yes|Yes|  
+|関数|オブジェクトが拡張不能。|`configurable`設定されている`false`の各プロパティについて|`writable`設定されている`false`の各プロパティについて|  
+|--------------|------------------------------------|--------------------------------------------------------|----------------------------------------------------|  
+|[Object.preventExtensions](../../javascript/reference/object-preventextensions-function-javascript.md)|はい|いいえ|いいえ|  
+|[Object.seal](../../javascript/reference/object-seal-function-javascript.md)|はい|はい|いいえ|  
+|`Object.freeze`|はい|はい|はい|  
   
- 次の関数は、次の表でマークされた条件がすべて当てはまる場合 `true` を返します。  
+ 次の関数の戻り値`true`のすべての次の表にマークされている条件に該当する場合。  
   
-|関数|オブジェクトは拡張可能?|`configurable` はすべてのプロパティで `false`?|`writable` はすべてのデータ プロパティで `false`?|  
-|--------|------------------|-----------------------------------------|-----------------------------------------|  
-|[Object.isExtensible](../../javascript/reference/object-isextensible-function-javascript.md)|Yes|いいえ|いいえ|  
-|[Object.isSealed](../../javascript/reference/object-issealed-function-javascript.md)|いいえ|Yes|Yes|  
-|[Object.isFrozen](../../javascript/reference/object-isfrozen-function-javascript.md)|いいえ|Yes|Yes|  
+|関数|オブジェクトが拡張可能ですか。|`configurable``false`すべてのプロパティのですか?|`writable``false`すべてのデータ プロパティのですか?|  
+|--------------|---------------------------|---------------------------------------------------|----------------------------------------------------|  
+|[Object.isExtensible](../../javascript/reference/object-isextensible-function-javascript.md)|はい|いいえ|いいえ|  
+|[Object.isSealed](../../javascript/reference/object-issealed-function-javascript.md)|いいえ|はい|はい|  
+|[Object.isFrozen](../../javascript/reference/object-isfrozen-function-javascript.md)|いいえ|はい|はい|  
   
-## 使用例  
+## <a name="example"></a>例  
  `Object.freeze` 関数の使用例を次に示します。  
   
-```javascript  
+```JavaScript  
 // Create an object that has two properties.  
 var obj = { pasta: "spaghetti", length: 10 };  
   
@@ -101,10 +104,10 @@ document.write(obj.pasta);
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv9](../../javascript/includes/jsv9-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Object.preventExtensions 関数](../../javascript/reference/object-preventextensions-function-javascript.md)   
  [Object.seal 関数](../../javascript/reference/object-seal-function-javascript.md)   
  [Object.isExtensible 関数](../../javascript/reference/object-isextensible-function-javascript.md)   

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,36 +12,23 @@ helpviewer_keywords:
 - Visual Studio integration SDK roadmap
 - integration roadmap, Visual Studio SDK
 ms.assetid: 9118eaa4-0453-4dc5-9e16-c7062d254869
-caps.latest.revision: 30
+caps.latest.revision: "30"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 565aaeb189ad129d5e4e26d9c73c080de2e77676
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: ebba0ea11781a4b5a3d01aabb718b0ad778daab9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="inside-the-visual-studio-sdk"></a>Visual Studio SDK 内
+# <a name="inside-the-visual-studio-sdk"></a>Visual Studio SDK の内部
 このセクションでは、Visual Studio アーキテクチャ、コンポーネント、サービス、スキーマ、ユーティリティ、および、like をなど、Visual Studio 拡張機能に関する詳細情報を提供します。  
   
 ## <a name="extensibility-architecture"></a>拡張可能アーキテクチャ  
- 次の図は、Visual Studio の拡張可能アーキテクチャを示します。 Vspackage では、サービスとして、IDE 全体で共有されるアプリケーションの機能を提供します。 標準的な IDE では、サービスの広範な範囲など<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>、IDE の windowing 機能へのアクセスを提供します</xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>。  
+ 次の図は、Visual Studio の拡張可能アーキテクチャを示します。 Vspackage では、サービスとして、IDE 全体で共有されるアプリケーションの機能を提供します。 標準的な IDE では、サービスの広範な範囲など<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>IDE の windowing 機能へのアクセスを提供します。  
   
- ![環境アーキテクチャ グラフィック](~/extensibility/internals/media/environment.gif "environment")  
+ ![環境アーキテクチャ グラフィック](../../extensibility/internals/media/environment.gif "環境")  
 Visual Studio アーキテクチャの汎用化されたビュー  
   
 ## <a name="vspackages"></a>VSPackages  
@@ -59,7 +45,7 @@ Visual Studio アーキテクチャの汎用化されたビュー
   
  Visual Studio を拡張する場合に、コマンドを作成され、Visual Studio シェルに登録します。 これらのコマンドがでどのように表示 IDE では、たとえば、メニューやツールバーを指定することができます。 通常にカスタム コマンドが表示されます、**ツール**で表示されるメニューのおよびツール ウィンドウを表示するためのコマンド、**その他のウィンドウ**のサブメニュー、**ビュー**メニュー。  
   
- コマンドを作成するときに、そのイベント ハンドラーを作成することも必要があります。 イベント ハンドラーは、ときにコマンドは、表示するか有効になっているテキストを変更することができ、コマンドをアクティブ化されたときに適切に応答することを保証を決定します。 ほとんどの場合、IDE 処理コマンドを使用して、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>インターフェイス</xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>。 Visual Studio でのコマンドは、以降、ローカルの選択に基づいており、グローバルの選択に基づいて最も外側のコンテキストを続行する、最も内側のコマンドのコンテキストで処理されます。 メイン メニューに追加したコマンドは、すぐにスクリプトに利用できます。  
+ コマンドを作成するときに、そのイベント ハンドラーを作成することも必要があります。 イベント ハンドラーは、ときにコマンドは、表示するか有効になっているテキストを変更することができ、コマンドをアクティブ化されたときに適切に応答することを保証を決定します。 ほとんどの場合、IDE 処理コマンドを使用して、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>インターフェイスです。 Visual Studio でのコマンドは、以降、ローカルの選択に基づいており、グローバルの選択に基づいて最も外側のコンテキストを続行する、最も内側のコマンドのコンテキストで処理されます。 メイン メニューに追加したコマンドは、すぐにスクリプトに利用できます。  
   
  詳細については、次を参照してください。[コマンド、メニュー、およびツールバー](../../extensibility/internals/commands-menus-and-toolbars.md)です。  
   
@@ -75,11 +61,11 @@ Visual Studio アーキテクチャの汎用化されたビュー
   
  Visual Studio は、いくつかのツール ウィンドウを含むは、次の図を検討してください。  
   
- ![スクリーン ショット](~/extensibility/internals/media/t1gui.png "T1gui")  
+ ![スクリーン ショット](../../extensibility/internals/media/t1gui.png "T1gui")  
   
  ツール ウィンドウの一部は、1 つのペインがソリューション エクスプ ローラー ツール ウィンドウを表示し、他のツール ウィンドウを非表示にタブをクリックして使用可能になりますにまとめてドッキングされます。 図は、他の 2 つのツール ウィンドウを示しています、**エラー一覧**と**出力**ウィンドウで、1 つのペインにまとめてドッキングします。  
   
- また、いくつかのエディター ウィンドウを表示するメイン ドキュメント ウィンドウも示します。 ツール ウィンドウは通常 1 つのインスタンスが (たとえば、1 つだけを開くことができます**ソリューション エクスプ ローラー**)、エディター ウィンドウが個別のドキュメントの編集に使用されるが、これらはすべて同じウィンドウにドッキングしている複数のインスタンスを持つことができます。 この図では 2 つのエディター ウィンドウ、フォームの 1 つのデザイナー ウィンドウとスタート ページがブラウザー ウィンドウを持つドキュメント ウィンドウを使用します。 [タブ] をクリックして、ドキュメント ウィンドウ内のすべてのウィンドウは使用できますが、EditorPane.cs ファイルを含む、エディター ウィンドウが表示され、アクティブなです。  
+ また、いくつかのエディター ウィンドウを表示するメイン ドキュメント ウィンドウも示します。 ツール ウィンドウは通常 1 つのインスタンスが (たとえば、1 つだけを開くことができます**ソリューション エクスプ ローラー**)、エディター ウィンドウが、個別のドキュメントの編集に使用されるそれぞれの複数インスタンスですべてのドッキングを持つことができます同じウィンドウです。 この図では 2 つのエディター ウィンドウ、フォームの 1 つのデザイナー ウィンドウとスタート ページがブラウザー ウィンドウを持つドキュメント ウィンドウを使用します。 [タブ] をクリックして、ドキュメント ウィンドウ内のすべてのウィンドウは使用できますが、EditorPane.cs ファイルを含む、エディター ウィンドウが表示され、アクティブなです。  
   
  Visual Studio を拡張する場合に、拡張子を持つ windows ユーザーが Visual Studio できる対話ツールを作成できます。 Visual Studio ユーザーがドキュメントを編集できる、独自のエディターを作成することもできます。 ツール ウィンドウおよびエディターは、Visual Studio に統合をプログラミングをドッキングするか、正しくタブに表示することはできません。 Visual Studio で正しく登録されているときに自動的には、一般的なツール ウィンドウと Visual Studio のドキュメント ウィンドウの機能。 詳細については、次を参照してください。[の拡張とツール ウィンドウのカスタマイズ](../../extensibility/extending-and-customizing-tool-windows.md)です。  
   
@@ -118,7 +104,7 @@ Visual Studio アーキテクチャの汎用化されたビュー
  詳細については、次を参照してください。[プロジェクトに追加するとプロジェクト項目テンプレート](../../extensibility/internals/adding-project-and-project-item-templates.md)です。  
   
 ## <a name="properties-and-options"></a>プロパティとオプション  
- **プロパティ**ウィンドウが 1 つまたは複数選択した項目のプロパティを表示:[の拡張プロパティ](../../extensibility/internals/extending-properties.md)オプション ページには、プログラミング言語や VSPackage など、特定のコンポーネントに関連するオプションのセットが含まれて:[オプションと [オプション] ページ](../../extensibility/internals/options-and-options-pages.md)です。 設定は、インポート、エクスポートされた通常の UI 関連の機能:[ユーザー設定のサポート](../../extensibility/internals/support-for-user-settings.md)です。  
+ **プロパティ**ウィンドウが 1 つまたは複数選択した項目のプロパティを表示:[の拡張プロパティ](../../extensibility/internals/extending-properties.md)オプション ページがなど、特定のコンポーネントに関連するオプションのセットを含む、プログラミング言語または VSPackage:[オプションと [オプション] ページ](../../extensibility/internals/options-and-options-pages.md)です。 設定は、インポート、エクスポートされた通常の UI 関連の機能:[ユーザー設定のサポート](../../extensibility/internals/support-for-user-settings.md)です。  
   
 ## <a name="visual-studio-services"></a>Visual Studio サービス  
  サービスは、特定のコンポーネントを使用するインターフェイスのセットを提供します。 Visual Studio では、一連の拡張機能を含め、すべてのコンポーネントで使用できるサービスを提供します。 たとえば、Visual Studio services には、ツール ウィンドウを表示するか、ヘルプ、ステータス バー、または UI イベントへのアクセスを有効にする、動的に非表示が有効にします。 Visual Studio エディターには、エディターの拡張機能をインポートできるサービスも用意されています。 詳細については、次を参照してください。[を使用するとサービスを提供する](../../extensibility/using-and-providing-services.md)です。  

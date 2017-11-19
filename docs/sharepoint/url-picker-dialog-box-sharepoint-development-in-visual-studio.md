@@ -1,66 +1,66 @@
 ---
-title: "URL ピッカー ダイアログ ボックス (Visual Studio での SharePoint 開発)"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.VWD.URLPicker"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での SharePoint 開発, デザイナー"
-  - "Visual Studio での SharePoint 開発, URL ピッカー"
+title: "URL ピッカー ダイアログ ボックス (Visual Studio での SharePoint 開発) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VS.SharePointTools.VWD.URLPicker
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, URL picker
+- SharePoint development in Visual Studio, designer
 ms.assetid: 33f8f521-e1f8-4242-a580-8a4bd9cb5ddc
-caps.latest.revision: 15
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: c97bd5e6fb9ad320a9f353eaa67114931a0d1b54
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# URL ピッカー ダイアログ ボックス (Visual Studio での SharePoint 開発)
-  URL ピッカー ダイアログ ボックスで、プロジェクトにまたは SharePoint を実行しているローカル サーバー上に存在するマスター ページ ファイルまたはイメージ ファイルなどのファイルを選択できます。  
+# <a name="url-picker-dialog-box-sharepoint-development-in-visual-studio"></a>URL ピッカー ダイアログ ボックス (Visual Studio での SharePoint 開発)
+  URL ピッカー ダイアログ ボックスでは、SharePoint を実行しているローカル サーバー上には、マスター ページ ファイルまたはイメージ ファイルは、プロジェクト内、または配置をなどのファイルを選択できます。  
   
- このダイアログ ボックスは、プロパティを設定するファイルを選択できる場合に表示されます。  省略記号\(...\)ボタンをクリックして **\[プロパティ\]** ウィンドウのさまざまなプロパティの横にあるこのダイアログ ボックス \(![ASP.NET モバイル デザイナー楕円](~/sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円")\) を開くことができます。  省略記号ボタンは、デザイナーの**ソース** ビューで特定の属性に値を割り当てるときに、IntelliSense プロンプトとしても表示されます。  
+ プロパティを設定するファイルを選択するオプションがある場合、このダイアログ ボックスが表示されます。 省略記号ボタンをクリックしてこのダイアログ ボックスを開くことができます (![ASP.NET モバイル デザイナー楕円](../sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円")) にさまざまなプロパティの横にある、 **のプロパティ**ウィンドウです。 省略記号ボタンとしても表示されます、IntelliSense がプロンプトで特定の属性に値を割り当てるときに、**ソース**デザイナーのビューです。  
   
-## UIElement の一覧  
- **\[プロジェクト フォルダー\]**  
- プロジェクト内またはローカル SharePoint を実行しているサーバーで定義されたフォルダーの一覧を表示します。  サブフォルダーを表示するには、展開ボタンをクリックします。  
+## <a name="uielement-list"></a>UIElement の一覧  
+ **プロジェクト フォルダー**  
+ プロジェクトまたは SharePoint を実行しているローカル サーバー上で定義されたフォルダーの一覧を表示します。 サブフォルダーを表示する展開ボタンを選択します。  
   
- プロジェクトのファイルを選択するに **\[プロジェクト\]** ノードを展開します。  プロジェクトのファイルがダイアログ ボックスで選択可能なファイルとして表示されるのは、次の条件を満たしている場合です。  
+ 展開、**プロジェクト**ノードをプロジェクトにファイルを選択します。 いうような表示 ダイアログ ボックスで、プロジェクト内のファイルは、次の条件を満たす必要があります。  
   
--   ファイルは、マップされたフォルダーに存在する必要があります。  
+-   ファイルは、マップされたフォルダーに含まれる必要があります。  
   
--   ファイルは、ソリューション パッケージに追加される必要があります。  
+-   ファイルは、ソリューション パッケージに追加する必要があります。  
   
 -   ファイルは、別のプロジェクトに存在することはできません。  
   
- これらの条件を満たさないファイルを参照する必要がある場合は、ファイルのパスを手動で入力する必要があります。  
+ これらの条件を満たしていないファイルを参照する場合は、ファイルのパスを手動で入力する必要があります。  
   
- SharePoint を実行しているローカル サーバーに存在するファイルを選択するに **\[サーバー\]** ノードを展開します。  これらのファイルがダイアログ ボックスで選択可能なファイルとして表示されるのは、次の条件を満たしている場合です。  
+ 展開して、**サーバー** SharePoint が実行されているローカル サーバーに配置されているファイルを選択するノードです。 いうような表示 ダイアログ ボックスで、これらのファイルは、次の条件を満たす必要があります。  
   
--   ファイルは、マップされたフォルダー **Images**、**Layouts**、**ControlTemplates** のいずれかに存在する必要があります。  
+-   ファイルは、次のマップされたフォルダーのいずれかである必要があります:**イメージ**、**レイアウト**、または**全体について**です。  
   
--   ファイルは、SharePoint コンテンツ データベース内に存在することはできません。  
+-   ファイルは、SharePoint コンテンツ データベースに存在することはできません。  
   
- これらの条件を満たさないファイルを参照する必要がある場合は、ファイルのパスを手動で入力する必要があります。  
+ これらの条件を満たしていないファイルを参照する場合は、ファイルのパスを手動で入力する必要があります。  
   
- **\[フォルダーの内容\]**  
- 選択したフォルダーに格納されているファイルの一覧を表示します。  ファイルを選択し、ダイアログ ボックスを閉じた後で元のプロセスに選択内容を送信するように **\[OK\]** ボタンをクリックします。  
+ **フォルダーの内容**  
+ 選択したフォルダーに格納されているファイルの一覧を表示します。 ファイルを選択し、[、 **OK** ] ダイアログ ボックスを閉じ、選択内容がその呼び出し元プロセスに送信するボタンをクリックします。  
   
- **\[ファイルの種類\]**  
- タスクに適したファイルの一覧から選択するか。  
+ **ファイルの種類**  
+ 実行しているタスクに対応するファイルの一覧から選択できます。  
   
-## 参照  
- [SharePoint のアプリケーション ページの作成](../sharepoint/creating-application-pages-for-sharepoint.md)   
+## <a name="see-also"></a>関連項目  
+ [For SharePoint アプリケーション ページの作成](../sharepoint/creating-application-pages-for-sharepoint.md)   
  [SharePoint の Web パーツの作成](../sharepoint/creating-web-parts-for-sharepoint.md)   
  [Web パーツまたはアプリケーション ページの再利用できるコントロールの作成](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)   
- [Visual Studio Web Development Content Map](http://msdn.microsoft.com/ja-jp/9c31f93b-c8fb-4599-9b14-6194ec8c7539)  
   
   

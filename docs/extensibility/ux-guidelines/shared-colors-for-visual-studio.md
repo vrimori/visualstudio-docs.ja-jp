@@ -4,34 +4,19 @@ ms.custom:
 ms.date: 04/26/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8d11b9a0-6175-4f2e-8e7f-79daee1bfd41
-caps.latest.revision: 5
+caps.latest.revision: "5"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9524ecc3cadef58821fba857de8e82e59eea9b43
-ms.openlocfilehash: 027e57a8d6ba4b4d317289cbdb74aa064de2ef4e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/04/2017
-
+ms.openlocfilehash: ccc530a741aaefd7e1faf1bd5f8974e27d9c7fb5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="shared-colors-for-visual-studio"></a>Visual Studio 用の共有の色
 共通の Visual Studio シェル要素を使用する UI を設計するまたはインターフェイス要素に同様の機能と一致するか場合、は、パッケージ定義ファイルに既存のトークン名を使用して、選択し、色を割り当てます。 これにより、UI が Visual Studio 環境全体で一貫性を保ち、テーマが追加された場合や更新された場合に自動的に更新されるようになります。  
@@ -59,11 +44,11 @@ ms.lasthandoff: 05/04/2017
 
 | 使用しています. | 使用しない. |
 | --- | --- |
-| ... for Visual Studio のテーマ (ライト、濃色、青、またはシステム ハイ コントラストのテーマ) と統合するドキュメント ウェル内のボタン。 | ... for Visual Studio のテーマの一部ではないカスタム背景に対して表示されるボタン。 |
+| ... for Visual Studio のテーマ (淡色、濃色、青、またはシステム ハイ コントラストのテーマ) と統合するドキュメント ウェル内のボタン。 | ... for Visual Studio のテーマの一部ではないカスタム背景に対して表示されるボタン。 |
 
 **標準的な状態のボタンをクリックします。**
 
-![標準のボタン](../../extensibility/ux-guidelines/media/03.03.Button.Standard.png "03.03.Button.Standard")<br />標準のボタン
+![標準的なボタン](../../extensibility/ux-guidelines/media/03.03.Button.Standard.png "03.03.Button.Standard")<br />標準のボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -116,7 +101,7 @@ ms.lasthandoff: 05/04/2017
 | ボタンの境界線 | `CommonControls.ButtonBorderFocused` |
 
 ### <a name="check-box-controls"></a>チェック ボックス コントロール  
-![チェック ボックスをオン (赤線)](../../extensibility/ux-guidelines/media/0303-161_checkboxredline.png "0303-161_CheckboxRedline")<br />チェック ボックスをオン (赤線)  
+![チェック ボックスをオン (赤線)](../../extensibility/ux-guidelines/media/0303-161_checkboxredline.png "0303 161_CheckboxRedline")<br />チェック ボックスをオン (赤線)  
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -124,7 +109,7 @@ ms.lasthandoff: 05/04/2017
 
 **チェック ボックスをオンします既定の状態。**  
 
-![チェック ボックス](../../extensibility/ux-guidelines/media/0303-162_checkbox.png "0303-162_Checkbox")<br />既定のチェック ボックス
+![チェック ボックスをオン](../../extensibility/ux-guidelines/media/0303-162_checkbox.png "0303 162_Checkbox")<br />既定のチェック ボックス
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -135,7 +120,7 @@ ms.lasthandoff: 05/04/2017
 
 **チェック ボックスをオン: 無効の状態**  
 
-![無効にする チェック ボックス](../../extensibility/ux-guidelines/media/0303-163_checkboxdisabled.png "0303-163_CheckboxDisabled")<br />無効にする チェック ボックス  
+![無効にする チェック ボックス](../../extensibility/ux-guidelines/media/0303-163_checkboxdisabled.png "0303 163_CheckboxDisabled")<br />無効にする チェック ボックス  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -146,7 +131,7 @@ ms.lasthandoff: 05/04/2017
 
 **チェック ボックスをオン: 状態をホバー**  
 
- ![ホバー時のチェック ボックス](../../extensibility/ux-guidelines/media/0303-164_checkboxhover.png "0303-164_CheckboxHover")<br />ホバー時のチェック ボックス
+ ![ホバー時のチェック ボックス](../../extensibility/ux-guidelines/media/0303-164_checkboxhover.png "0303 164_CheckboxHover")<br />ホバー時のチェック ボックス
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -157,7 +142,7 @@ ms.lasthandoff: 05/04/2017
 
 **チェック ボックスをオン: 押された状態**  
 
-![押されたチェック ボックス](../../extensibility/ux-guidelines/media/0303-165_checkboxpressed.png "0303-165_CheckboxPressed")<br />押されたチェック ボックス  
+![押されたチェック ボックス](../../extensibility/ux-guidelines/media/0303-165_checkboxpressed.png "0303 165_CheckboxPressed")<br />押されたチェック ボックス  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -168,7 +153,7 @@ ms.lasthandoff: 05/04/2017
 
 **チェック ボックスをオン: フォーカスを得た状態**  
 
-![フォーカスされたチェック ボックス](../../extensibility/ux-guidelines/media/0303-166_checkboxfocused.png "0303-166_CheckboxFocused")<br />フォーカスされたチェック ボックス  
+![フォーカスされたチェック ボックスをオン](../../extensibility/ux-guidelines/media/0303-166_checkboxfocused.png "0303 166_CheckboxFocused")<br />フォーカスされたチェック ボックス  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -178,16 +163,16 @@ ms.lasthandoff: 05/04/2017
 | グリフ | `CommonControls.CheckBoxGlyphFocused` |
 
 ### <a name="drop-downs-and-combo-boxes"></a>ドロップダウンとコンボ ボックス
-![ドロップダウン/コンボ ボックス (赤線)](../../extensibility/ux-guidelines/media/0303-167_dropdowncomboboxredline.png "0303-167_DropDownComboBoxRedline")<br />ドロップダウン/コンボ ボックス (赤線)  
+![ドロップダウン/コンボ ボックス (赤線)](../../extensibility/ux-guidelines/media/0303-167_dropdowncomboboxredline.png "0303 167_DropDownComboBoxRedline")<br />ドロップダウン/コンボ ボックス (赤線)  
 
 | 使用しています. | 使用しない. |
 | --- | --- |
-| ... ドロップダウンとコンボ ボックス、ドキュメントでもします。 | ... for ドロップダウンまたはコンボ ボックスがない UI。 |  
+| ... ドロップダウンとコンボ ボックスで、ドキュメントもします。 | ... for ドロップダウンまたはコンボ ボックスがない UI。 |  
 | | コマンド バーの...[ドロップダウン](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandDropDown)または[コンボ ボックス](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandComboBox)です。 |
 
 **ドロップダウンとコンボ ボックス: 既定の状態**  
 
-![既定値のドロップダウン/コンボ ボックス](../../extensibility/ux-guidelines/media/0303-168_dropdowncombobox.png "0303-168_DropDownComboBox")<br />既定値のドロップダウン/コンボ ボックス
+![既定値のドロップダウン/コンボ ボックス](../../extensibility/ux-guidelines/media/0303-168_dropdowncombobox.png "0303 168_DropDownComboBox")<br />既定値のドロップダウン/コンボ ボックス
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -200,7 +185,7 @@ ms.lasthandoff: 05/04/2017
 
 **ドロップダウンとコンボ ボックス: 無効の状態**  
 
-![無効にするドロップダウン/コンボ ボックス](../../extensibility/ux-guidelines/media/0303-169_dropdowncomboboxdisabled.png "0303-169_DropDownComboBoxDisabled")<br />無効にするドロップダウン/コンボ ボックス
+![無効にするドロップダウン/コンボ ボックス](../../extensibility/ux-guidelines/media/0303-169_dropdowncomboboxdisabled.png "0303 169_DropDownComboBoxDisabled")<br />無効にするドロップダウン/コンボ ボックス
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -213,7 +198,7 @@ ms.lasthandoff: 05/04/2017
 
 **ドロップダウンとコンボ ボックス: 状態をホバー**  
 
-![ホバー時のドロップダウン/コンボ ボックス](../../extensibility/ux-guidelines/media/0303-170_dropdowncomboboxhover.png "0303-170_DropDownComboBoxHover")<br />ホバー時のドロップダウン/コンボ ボックス
+![ホバー時のドロップダウン/コンボ ボックス](../../extensibility/ux-guidelines/media/0303-170_dropdowncomboboxhover.png "0303 170_DropDownComboBoxHover")<br />ホバー時のドロップダウン/コンボ ボックス
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -226,7 +211,7 @@ ms.lasthandoff: 05/04/2017
 
 **ドロップダウンとコンボ ボックス: 押された状態**  
 
-![押されたドロップダウン/コンボ ボックス](../../extensibility/ux-guidelines/media/0303-171_dropdowncomboboxpressed.png "0303-171_DropDownComboBoxPressed")<br />押されたドロップダウン/コンボ ボックス  
+![押されたドロップダウン/コンボ ボックス](../../extensibility/ux-guidelines/media/0303-171_dropdowncomboboxpressed.png "0303 171_DropDownComboBoxPressed")<br />押されたドロップダウン/コンボ ボックス  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -239,7 +224,7 @@ ms.lasthandoff: 05/04/2017
 
 **ドロップダウンとコンボ ボックスのリスト項目ビュー: 押された状態**  
 
- ![リスト項目のビューが押されたドロップダウン/コンボ ボックス](../../extensibility/ux-guidelines/media/0303-174_dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")<br />リスト項目のビューが押されたドロップダウン/コンボ ボックス  
+ ![リスト項目のビューが押されたドロップダウン/コンボ ボックス](../../extensibility/ux-guidelines/media/0303-174_dropdowncomboboxlistview.png "0303 174_DropDownComboBoxListView")<br />リスト項目のビューが押されたドロップダウン/コンボ ボックス  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -250,7 +235,7 @@ ms.lasthandoff: 05/04/2017
 
 **ドロップダウンとコンボ ボックス: フォーカスを得た状態**  
 
-![フォーカスを持つドロップダウン/コンボ ボックス](../../extensibility/ux-guidelines/media/0303-172_dropdowncomboboxfocused.png "0303-172_DropDownComboBoxFocused")<br />フォーカスを持つドロップダウン/コンボ ボックス
+![フォーカスを持つドロップダウン/コンボ ボックス](../../extensibility/ux-guidelines/media/0303-172_dropdowncomboboxfocused.png "0303 172_DropDownComboBoxFocused")<br />フォーカスを持つドロップダウン/コンボ ボックス
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -263,7 +248,7 @@ ms.lasthandoff: 05/04/2017
 
 **ドロップダウンとコンボ ボックス: テキスト入力の選択**  
 
-![ドロップダウン/コンボ ボックスのテキスト入力の選択](../../extensibility/ux-guidelines/media/0303-173_dropdowncomboboxtextinput.png "0303-173_DropDownComboBoxTextInput")<br />ドロップダウン/コンボ ボックスのテキスト入力の選択  
+![ドロップダウン/コンボ ボックスのテキスト入力選択](../../extensibility/ux-guidelines/media/0303-173_dropdowncomboboxtextinput.png "0303 173_DropDownComboBoxTextInput")<br />ドロップダウン/コンボ ボックスのテキスト入力の選択  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -272,7 +257,7 @@ ms.lasthandoff: 05/04/2017
 ### <a name="tabular-data-grid-controls"></a>表形式のデータ (グリッド) コントロール  
 表形式のデータ コントロール (グリッド コントロールとも呼ばれる) は、複数列の大量のデータを表示するために使用する Visual Studio のコモン コントロールです。 標準の表形式のデータ コントロールは、[エラー一覧] ツール ウィンドウ、IntelliTrace レポート、メモリ ヒープ ビューなど、Visual Studio 内の複数の場所にあります。 提供される標準の表形式のデータ コントロールを常に使用します。 まれに、標準の表形式のデータ コントロールにアクセスできないことがあります。 このような場合は、次のトークン名を使用して、UI が Visual Studio の他の表形式のデータ コントロールと一貫性を保つようにします。  
 
-![表形式のデータ/グリッド コントロール (赤線)](../../extensibility/ux-guidelines/media/0303-197_tabulardatagridcontrolredline.png "0303-197_TabularDataGridControlRedline")<br />表形式のデータ/グリッド コントロール (赤線)
+![表形式のデータ/グリッド コントロール (赤線)](../../extensibility/ux-guidelines/media/0303-197_tabulardatagridcontrolredline.png "0303 197_TabularDataGridControlRedline")<br />表形式のデータ/グリッド コントロール (赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -315,7 +300,7 @@ ms.lasthandoff: 05/04/2017
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
-| 背景 | 透過的 |
+| 背景 | 透明 |
 | 前景 (テキスト) | `Environment.CommandBarTextActive` |
 | 境界線 | なし |
 
@@ -347,7 +332,7 @@ ms.lasthandoff: 05/04/2017
 | 前景 (テキスト) | `Environment.ControlText` |
 
 #### <a name="secondary-instructional-text"></a>セカンダリの説明テキスト
-テキストとコントロールの多くは、ドキュメントのページでは、いくつか説明のテキストは、さまざまな色の値を使用します。 これは、大切な情報を伝達し、UI 要素の全体的な密度を抑えるために役立ちます。 (参照、以下のセクションにヒント テキストが表示されます)。
+テキストとコントロールの多くは、ドキュメントのページでは、いくつか説明のテキストは、さまざまな色の値を使用します。 これは、大切な情報を伝達し、UI 要素の全体的な密度を抑えるために役立ちます。 (参照、ヒントのテキストのセクションの下)。
 
 ![セカンダリの説明テキスト](../../extensibility/ux-guidelines/media/0303_SecondaryInstructionalText.png "0303_SecondaryInstructionalText.png")<br />セカンダリの説明テキスト
 
@@ -368,7 +353,7 @@ ms.lasthandoff: 05/04/2017
 
 **必要なヒント テキスト**
 
-![必要なヒント テキスト](../../extensibility/ux-guidelines/media/0303_RequiredHintText.png "0303_RequiredHintText.png")<br />必要なヒント テキスト
+![ヒント テキストが必要な](../../extensibility/ux-guidelines/media/0303_RequiredHintText.png "0303_RequiredHintText.png")<br />必要なヒント テキスト
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -379,7 +364,7 @@ ms.lasthandoff: 05/04/2017
 
 > 参照してください[検索ボックス](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_SearchBoxes)検索コントロールに関連するその他の色トークンです。
 
-![検索ボックス コントロールのテキスト](../../extensibility/ux-guidelines/media/0303_SearchBoxControl.png "0303_SearchBoxControl.png")<br />検索ボックス コントロールのテキスト
+![ボックス コントロールのテキストを検索](../../extensibility/ux-guidelines/media/0303_SearchBoxControl.png "0303_SearchBoxControl.png")<br />検索ボックス コントロールのテキスト
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -388,7 +373,7 @@ ms.lasthandoff: 05/04/2017
 ### <a name="hyperlink"></a>ハイパーリンク  
 ハイパーリンクは、前景色と背景の組み合わせを持たない 1 つのコントロールです。 すべてのケースでは、濃色、灰色、白の背景で正しく表示されますフォア グラウンドのハイパーリンクの色を使用します。 ハイパーリンク コントロールの色トークンを使用しない場合は、既定のシステム カラー「押されている、」赤で点滅はこれが表示されます。 コントロールが正しい環境の色トークンを使用していないことを示します。  
 
-![ハイパーリンク (赤線)](../../extensibility/ux-guidelines/media/0303-133_hyperlinkredline.png "0303-133_HyperlinkRedline")<br />ハイパーリンク (赤線)
+![ハイパーリンク (赤線)](../../extensibility/ux-guidelines/media/0303-133_hyperlinkredline.png "0303 133_HyperlinkRedline")<br />ハイパーリンク (赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -396,7 +381,7 @@ ms.lasthandoff: 05/04/2017
 
 **ハイパーリンク: 既定の状態**  
 
-![既定のハイパーリンク](../../extensibility/ux-guidelines/media/0303-134_hyperlink.png "0303-134_Hyperlink")<br />既定のハイパーリンク
+![既定のハイパーリンク](../../extensibility/ux-guidelines/media/0303-134_hyperlink.png "0303 134_Hyperlink")<br />既定のハイパーリンク
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -404,7 +389,7 @@ ms.lasthandoff: 05/04/2017
 
 **ハイパーリンク: ホバー時の状態**
 
-![ホバー時のハイパーリンク](../../extensibility/ux-guidelines/media/0303-135_hyperlinkhover.png "0303-135_HyperlinkHover")<br />ホバー時のハイパーリンク  
+![ホバー時のハイパーリンク](../../extensibility/ux-guidelines/media/0303-135_hyperlinkhover.png "0303 135_HyperlinkHover")<br />ホバー時のハイパーリンク  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -412,7 +397,7 @@ ms.lasthandoff: 05/04/2017
 
 **ハイパーリンク: 押された状態**
 
-![押されたハイパーリンク](../../extensibility/ux-guidelines/media/0303-136_hyperlinkpressed.png "0303-136_HyperlinkPressed")<br />押されたハイパーリンク  
+![押されたハイパーリンク](../../extensibility/ux-guidelines/media/0303-136_hyperlinkpressed.png "0303 136_HyperlinkPressed")<br />押されたハイパーリンク  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -420,7 +405,7 @@ ms.lasthandoff: 05/04/2017
 
 **ハイパーリンク: 無効な状態**
 
-![無効なハイパーリンク](../../extensibility/ux-guidelines/media/0303-137_hyperlinkdisabled.png "0303-137_HyperlinkDisabled")<br />無効なハイパーリンク  
+![無効なハイパーリンク](../../extensibility/ux-guidelines/media/0303-137_hyperlinkdisabled.png "0303 137_HyperlinkDisabled")<br />無効なハイパーリンク  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -429,7 +414,7 @@ ms.lasthandoff: 05/04/2017
 ### <a name="infobars"></a>情報バー  
 情報バーは該当するコンテキストの詳細を提供するために使用され、常にドキュメント ウィンドウまたはツール ウィンドウの上部に表示されます。  
 
-![情報バー (赤線)](../../extensibility/ux-guidelines/media/0303-138_infobarredline.png "0303-138_InfobarRedline")<br />情報バー (赤線)
+![情報バー (赤線)](../../extensibility/ux-guidelines/media/0303-138_infobarredline.png "0303 138_InfobarRedline")<br />情報バー (赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -437,7 +422,7 @@ ms.lasthandoff: 05/04/2017
 
 **情報バー: 既定の状態**
 
-![既定の情報バー](../../extensibility/ux-guidelines/media/0303-139_infobar.png "0303-139_Infobar")<br />既定の情報バー
+![既定の情報バー](../../extensibility/ux-guidelines/media/0303-139_infobar.png "0303 139_Infobar")<br />既定の情報バー
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -477,7 +462,7 @@ ms.lasthandoff: 05/04/2017
 
 **情報バー ハイパーリンク ボタンをクリックします既定の状態。**
 
-![既定の情報バーのハイパーリンクのボタン](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonDefault.png "0303_InfobarHyperlinkButtonDefault.png")<br />既定の情報バーのハイパーリンクのボタン
+![既定の情報バーのハイパーリンク ボタン](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonDefault.png "0303_InfobarHyperlinkButtonDefault.png")<br />既定の情報バーのハイパーリンクのボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -493,7 +478,7 @@ ms.lasthandoff: 05/04/2017
 
 **[ハイパーリンク] ボタンの情報バー: 押された状態**
 
-![押された情報バーの [ハイパーリンク] ボタン](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonPressed.png "0303_InfobarHyperlinkButtonPressed.png")<br />押された情報バーの [ハイパーリンク] ボタン
+![情報バーが押されたハイパーリンク ボタン](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonPressed.png "0303_InfobarHyperlinkButtonPressed.png")<br />押された情報バーの [ハイパーリンク] ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -555,7 +540,7 @@ ms.lasthandoff: 05/04/2017
 
 **情報バーのボタン: 無効の状態**
 
-![無効な情報バー ボタン](../../extensibility/ux-guidelines/media/0303_InfobarButtonDisabled.png "0303_InfobarButtonDisabled.png")<br />無効な情報バー ボタン
+![情報バーを無効になっているボタン](../../extensibility/ux-guidelines/media/0303_InfobarButtonDisabled.png "0303_InfobarButtonDisabled.png")<br />無効な情報バー ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -576,7 +561,7 @@ ms.lasthandoff: 05/04/2017
 ### <a name="scroll-bars"></a>スクロール バー  
 スクロール バーは、Visual Studio 環境によってスタイルが設定されてし、テーマを指定する必要はありません。 ただし、常に、UI が Visual Studio 環境のこの部分と一貫性が表示されるように、スクロール バーで使用する色を活用することを決定する可能性があります。  
 
-![スクロール バー (赤線)](../../extensibility/ux-guidelines/media/0303-140_scrollbarredline.png "0303-140_ScrollbarRedline")<br />スクロール バー (赤線)
+![スクロール バー (赤線)](../../extensibility/ux-guidelines/media/0303-140_scrollbarredline.png "0303 140_ScrollbarRedline")<br />スクロール バー (赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -584,7 +569,7 @@ ms.lasthandoff: 05/04/2017
 
 **スクロール バー: 既定の状態**  
 
-![既定のスクロール バー](../../extensibility/ux-guidelines/media/0303-141_scrollbar.png "0303-141_Scrollbar")<br />既定のスクロール バー
+![既定のスクロール バー](../../extensibility/ux-guidelines/media/0303-141_scrollbar.png "0303 141_Scrollbar")<br />既定のスクロール バー
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -593,7 +578,7 @@ ms.lasthandoff: 05/04/2017
 
 **スクロール バー: 状態をホバー**
 
-![ホバー時のスクロール バー](../../extensibility/ux-guidelines/media/0303-143_scrollbarhover.png "0303-143_ScrollbarHover")<br />ホバー時のスクロール バー
+![ホバー時のスクロール バー](../../extensibility/ux-guidelines/media/0303-143_scrollbarhover.png "0303 143_ScrollbarHover")<br />ホバー時のスクロール バー
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -602,7 +587,7 @@ ms.lasthandoff: 05/04/2017
 
 *スクロール バー: 押された状態**
 
-![押されたスクロール バー](../../extensibility/ux-guidelines/media/0303-145_scrollbarpressed.png "0303-145_ScrollbarPressed")<br />押されたスクロール バー  
+![押されたスクロール バー](../../extensibility/ux-guidelines/media/0303-145_scrollbarpressed.png "0303 145_ScrollbarPressed")<br />押されたスクロール バー  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -611,7 +596,7 @@ ms.lasthandoff: 05/04/2017
 
 **スクロール バーの矢印: 既定の状態**  
 
-![既定のスクロール バーの矢印](../../extensibility/ux-guidelines/media/0303-142_scrollbararrow.png "0303-142_ScrollbarArrow")<br />既定のスクロール バーの矢印
+![既定のスクロール バーの矢印](../../extensibility/ux-guidelines/media/0303-142_scrollbararrow.png "0303 142_ScrollbarArrow")<br />既定のスクロール バーの矢印
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -620,7 +605,7 @@ ms.lasthandoff: 05/04/2017
 
 **スクロール バーの矢印: 状態をホバー**
 
-![ホバー時のスクロール バーの矢印](../../extensibility/ux-guidelines/media/0303-144_scrollbararrowhover.png "0303-144_ScrollbarArrowHover")<br />ホバー時のスクロール バーの矢印  
+![スクロール バーのホバー時の矢印](../../extensibility/ux-guidelines/media/0303-144_scrollbararrowhover.png "0303 144_ScrollbarArrowHover")<br />ホバー時のスクロール バーの矢印  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -629,7 +614,7 @@ ms.lasthandoff: 05/04/2017
 
 **スクロール バーの矢印: 押された状態**  
 
-![押されたスクロール バーの矢印](../../extensibility/ux-guidelines/media/0303-146_scrollbararrowpressed.png "0303-146_ScrollbarArrowPressed")<br />押されたスクロール バーの矢印
+![押されたスクロール バーの矢印](../../extensibility/ux-guidelines/media/0303-146_scrollbararrowpressed.png "0303 146_ScrollbarArrowPressed")<br />押されたスクロール バーの矢印
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -649,7 +634,7 @@ ms.lasthandoff: 05/04/2017
 
 -   "無効" は、現在のコンテキストに対して検索機能がオフになっていることを意味します。  
 
-![検索ボックス (赤線)](../../extensibility/ux-guidelines/media/0303-110_searchboxredline.png "0303-110_SearchBoxRedline")<br />検索ボックス (赤線)  
+![検索ボックス (赤線)](../../extensibility/ux-guidelines/media/0303-110_searchboxredline.png "0303 110_SearchBoxRedline")<br />検索ボックス (赤線)  
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -658,7 +643,7 @@ ms.lasthandoff: 05/04/2017
 
 **フォーカスされた検索入力フィールド**
 
-![フォーカスされた検索入力フィールド](../../extensibility/ux-guidelines/media/0303-111_searchinputfieldfocused.png "0303-111_SearchInputFieldFocused")<br />フォーカスされた検索入力フィールド  
+![フォーカスされた検索入力フィールド](../../extensibility/ux-guidelines/media/0303-111_searchinputfieldfocused.png "0303 111_SearchInputFieldFocused")<br />フォーカスされた検索入力フィールド  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -669,7 +654,7 @@ ms.lasthandoff: 05/04/2017
 
 **フォーカスされていない、アクティブな検索入力フィールド**
 
-![検索入力フィールドがフォーカスされていません。](../../extensibility/ux-guidelines/media/0303-114_searchinputfieldunfocused.png "0303-114_SearchInputFieldUnfocused")<br />フォーカスされていない、アクティブな検索入力フィールド
+![検索入力フィールドがフォーカスされていない](../../extensibility/ux-guidelines/media/0303-114_searchinputfieldunfocused.png "0303 114_SearchInputFieldUnfocused")<br />フォーカスされていない、アクティブな検索入力フィールド
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -680,7 +665,7 @@ ms.lasthandoff: 05/04/2017
 
 **フォーカスされていない、非アクティブな検索入力フィールド**
 
-![フォーカスされていない、非アクティブな検索入力フィールド](../../extensibility/ux-guidelines/media/0303-114-1_searchinputfieldunfocusedinactive.png "0303-114-1_SearchInputFieldUnfocusedInactive")<br />フォーカスされていない、非アクティブな検索入力フィールド  
+![フォーカスされていない、非アクティブな検索入力フィールド](../../extensibility/ux-guidelines/media/0303-114-1_searchinputfieldunfocusedinactive.png "0303 114-1_SearchInputFieldUnfocusedInactive")<br />フォーカスされていない、非アクティブな検索入力フィールド  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -691,7 +676,7 @@ ms.lasthandoff: 05/04/2017
 
 **強調表示された検索入力フィールド (テキストのみ)**
 
-![強調表示された検索入力フィールド](../../extensibility/ux-guidelines/media/0303-120_searchinputfieldhighlight.png "0303-120_SearchInputFieldHighlight")<br />強調表示された検索入力フィールド
+![強調表示された検索入力フィールド](../../extensibility/ux-guidelines/media/0303-120_searchinputfieldhighlight.png "0303 120_SearchInputFieldHighlight")<br />強調表示された検索入力フィールド
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -702,7 +687,7 @@ ms.lasthandoff: 05/04/2017
 
 **無効な検索入力フィールド**
 
-![無効な検索入力フィールド](../../extensibility/ux-guidelines/media/0303-121_searchinputfielddisabled.png "0303-121_SearchInputFieldDisabled")<br />無効な検索入力フィールド
+![無効な検索入力フィールド](../../extensibility/ux-guidelines/media/0303-121_searchinputfielddisabled.png "0303 121_SearchInputFieldDisabled")<br />無効な検索入力フィールド
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -713,7 +698,7 @@ ms.lasthandoff: 05/04/2017
 
 **フォーカスされた検索操作ボタン**
 
-![フォーカスされた検索操作ボタン](../../extensibility/ux-guidelines/media/0303-112_searchactionbuttonfocused.png "0303-112_SearchActionButtonFocused")<br />フォーカスされた検索操作ボタン
+![フォーカスされた検索操作ボタン](../../extensibility/ux-guidelines/media/0303-112_searchactionbuttonfocused.png "0303 112_SearchActionButtonFocused")<br />フォーカスされた検索操作ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -725,7 +710,7 @@ ms.lasthandoff: 05/04/2017
 
 **フォーカスされていない検索操作ボタン**  
 
-![フォーカスされていない検索操作ボタン](../../extensibility/ux-guidelines/media/0303-115_searchactionbuttonunfocused.png "0303-115_SearchActionButtonUnfocused")<br />フォーカスされていない検索操作ボタン
+![フォーカスされていない検索操作ボタン](../../extensibility/ux-guidelines/media/0303-115_searchactionbuttonunfocused.png "0303 115_SearchActionButtonUnfocused")<br />フォーカスされていない検索操作ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -737,7 +722,7 @@ ms.lasthandoff: 05/04/2017
 
 **押された検索操作ボタン**
 
-![押された検索操作ボタン](../../extensibility/ux-guidelines/media/0303-116-1_searchactionbuttonpressed.png "0303-116-1_SearchActionButtonPressed")<br />押された検索操作ボタン
+![押された検索操作ボタン](../../extensibility/ux-guidelines/media/0303-116-1_searchactionbuttonpressed.png "0303 116-1_SearchActionButtonPressed")<br />押された検索操作ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -747,7 +732,7 @@ ms.lasthandoff: 05/04/2017
 
 **無効な検索操作ボタン**
 
-![検索操作ボタンを無効になっています](../../extensibility/ux-guidelines/media/0303-122_searchactionbuttondisabled.png "0303-122_SearchActionButtonDisabled")<br />無効な検索操作ボタン
+![検索操作ボタンを無効になっている](../../extensibility/ux-guidelines/media/0303-122_searchactionbuttondisabled.png "0303 122_SearchActionButtonDisabled")<br />無効な検索操作ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -757,7 +742,7 @@ ms.lasthandoff: 05/04/2017
 
 **フォーカスされた検索ドロップダウン ボタン**
 
-![フォーカスされた検索ドロップダウン ボタン](../../extensibility/ux-guidelines/media/0303-113_searchdropdownbuttonfocused.png "0303-113_SearchDropdownButtonFocused")<br />フォーカスされた検索ドロップダウン ボタン
+![フォーカスされた検索ドロップダウン ボタン](../../extensibility/ux-guidelines/media/0303-113_searchdropdownbuttonfocused.png "0303 113_SearchDropdownButtonFocused")<br />フォーカスされた検索ドロップダウン ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -767,7 +752,7 @@ ms.lasthandoff: 05/04/2017
 
 **フォーカスされていない検索ドロップダウン ボタン**
 
-![フォーカスされていない検索ドロップダウン ボタン](../../extensibility/ux-guidelines/media/0303-116_searchdropdownbuttonunfocused.png "0303-116_SearchDropdownButtonUnfocused")<br />フォーカスされていない検索ドロップダウン ボタン
+![フォーカスされていない検索ドロップダウン ボタン](../../extensibility/ux-guidelines/media/0303-116_searchdropdownbuttonunfocused.png "0303 116_SearchDropdownButtonUnfocused")<br />フォーカスされていない検索ドロップダウン ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -777,7 +762,7 @@ ms.lasthandoff: 05/04/2017
 
 **押された検索ドロップダウン ボタン**
 
-![押された検索ドロップダウン ボタン](../../extensibility/ux-guidelines/media/0303-116-2_searchdropdownbuttonpressed.png "0303-116-2_SearchDropdownButtonPressed")<br />押された検索ドロップダウン ボタン
+![押された検索ドロップダウン ボタン](../../extensibility/ux-guidelines/media/0303-116-2_searchdropdownbuttonpressed.png "0303 116-2_SearchDropdownButtonPressed")<br />押された検索ドロップダウン ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -787,7 +772,7 @@ ms.lasthandoff: 05/04/2017
 
 **無効化された検索ドロップダウン ボタン**
 
-![無効化された検索ドロップダウン ボタン](../../extensibility/ux-guidelines/media/0303-123_searchdropdownbuttondisabled.png "0303-123_SearchDropdownButtonDisabled")<br />無効化された検索ドロップダウン ボタン
+![無効な検索ドロップダウン ボタン](../../extensibility/ux-guidelines/media/0303-123_searchdropdownbuttondisabled.png "0303 123_SearchDropdownButtonDisabled")<br />無効化された検索ドロップダウン ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |  
@@ -798,7 +783,7 @@ ms.lasthandoff: 05/04/2017
 #### <a name="search-drop-down-lists"></a>検索ドロップダウン リスト  
 検索ボックスのドロップダウン メニューには、Visual Studio の他のドロップダウン メニューより少し複雑である可能性があります。 「提案される検索」と「検索オプション」のセクションでは、またはメニューで、両方を表示できるし、それぞれが個別に色が設定されます。 これらの 2 つのセクションが一緒に表示される場合は線で区切られ、ドロップダウン メニュー全体が境界線で囲まれます。  
 
-![検索ボックスの一覧 (赤線)](../../extensibility/ux-guidelines/media/0303-124_searchdropdownredline.png "0303-124_SearchDropdownRedline")<br />検索ボックスの一覧 (赤線)
+![検索ボックスの一覧 (赤線)](../../extensibility/ux-guidelines/media/0303-124_searchdropdownredline.png "0303 124_SearchDropdownRedline")<br />検索ボックスの一覧 (赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -815,7 +800,7 @@ ms.lasthandoff: 05/04/2017
 
 **検索を提案します既定の状態。**
 
-![既定の提案される検索](../../extensibility/ux-guidelines/media/0303-125_searchsuggested.png "0303-125_SearchSuggested")<br />既定の提案される検索  
+![既定の提案される検索](../../extensibility/ux-guidelines/media/0303-125_searchsuggested.png "0303 125_SearchSuggested")<br />既定の提案される検索  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -824,7 +809,7 @@ ms.lasthandoff: 05/04/2017
 
 **検索を提案します状態をホバー。**
 
-![ホバー時の提案される検索](../../extensibility/ux-guidelines/media/0303-128_searchsuggestedhover.png "0303-128_SearchSuggestedHover")<br />ホバー時の提案される検索
+![ホバー時の検索を提案](../../extensibility/ux-guidelines/media/0303-128_searchsuggestedhover.png "0303 128_SearchSuggestedHover")<br />ホバー時の提案される検索
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -834,9 +819,9 @@ ms.lasthandoff: 05/04/2017
 
 **検索オプション: 既定の状態**
 
-![検索チェック ボックス](../../extensibility/ux-guidelines/media/0303-126_searchcheckbox.png "0303-126_SearchCheckbox")<br />既定の検索オプション (チェック ボックス)  
+![検索チェック ボックス](../../extensibility/ux-guidelines/media/0303-126_searchcheckbox.png "0303 126_SearchCheckbox")<br />既定の検索オプション (チェック ボックス)  
 
-![検索オプション](../../extensibility/ux-guidelines/media/0303-127_searchoptions.png "0303-127_SearchOptions")<br />既定の検索オプション (リンク)  
+![検索オプション](../../extensibility/ux-guidelines/media/0303-127_searchoptions.png "0303 127_SearchOptions")<br />既定の検索オプション (リンク)  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -848,9 +833,9 @@ ms.lasthandoff: 05/04/2017
 
 **検索オプション: 状態をホバー**
 
-![ホバー時の検索オプション (チェック ボックス)](../../extensibility/ux-guidelines/media/0303-129_searchcheckboxhover.png "0303-129_SearchCheckboxHover")<br />ホバー時の検索オプション (チェック ボックス)  
+![ホバー時の検索オプション (チェック ボックス)](../../extensibility/ux-guidelines/media/0303-129_searchcheckboxhover.png "0303 129_SearchCheckboxHover")<br />ホバー時の検索オプション (チェック ボックス)  
 
-![ホバー時の検索オプション (リンク)](../../extensibility/ux-guidelines/media/0303-130_searchoptionshover.png "0303-130_SearchOptionsHover")<br />ホバー時の検索オプション (リンク)  
+![ホバー時の検索オプション (リンク)](../../extensibility/ux-guidelines/media/0303-130_searchoptionshover.png "0303 130_SearchOptionsHover")<br />ホバー時の検索オプション (リンク)  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -861,9 +846,9 @@ ms.lasthandoff: 05/04/2017
 
 **検索オプション: 押された状態**  
 
-![押された検索オプション (チェック ボックス)](../../extensibility/ux-guidelines/media/0303-131_searchsuggestedpressed.png "0303-131_SearchSuggestedPressed")<br />押された検索オプション (チェック ボックス)   
+![押された検索オプション (チェック ボックス)](../../extensibility/ux-guidelines/media/0303-131_searchsuggestedpressed.png "0303 131_SearchSuggestedPressed")<br />押された検索オプション (チェック ボックス)   
 
-![押された検索オプション (リンク)](../../extensibility/ux-guidelines/media/0303-132_searchoptionspressed.png "0303-132_SearchOptionsPressed")<br />押された検索オプション (リンク)  
+![押された検索オプション (リンク)](../../extensibility/ux-guidelines/media/0303-132_searchoptionspressed.png "0303 132_SearchOptionsPressed")<br />押された検索オプション (リンク)  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -875,7 +860,7 @@ ms.lasthandoff: 05/04/2017
 ###  <a name="BKMK_TreeView"></a>ツリー ビュー  
 ソリューション エクスプ ローラー、サーバー エクスプ ローラー、クラス ビューなど、いくつかのツール ウィンドウの色が色の名前によって制御される階層組織スキームを実装する、`TreeView`カテゴリ。 ツリー ビューのすべての項目に背景色とテキスト色があります。 入れ子にされた子要素がある項目には、項目が展開されているか折りたたまれているかを示すグリフもあります。  
 
-![ツリー ビュー (赤線)](../../extensibility/ux-guidelines/media/0303-147_treeviewredline.png "0303-147_TreeViewRedline")<br />ツリー ビュー (赤線)
+![ツリー ビュー (赤線)](../../extensibility/ux-guidelines/media/0303-147_treeviewredline.png "0303 147_TreeViewRedline")<br />ツリー ビュー (赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -884,7 +869,7 @@ ms.lasthandoff: 05/04/2017
 
 **ツリー ビューの項目: 既定の状態**
 
-![既定のツリー ビューのアイテム](../../extensibility/ux-guidelines/media/0303-148_treeview.png "0303-148_TreeView")<br />既定のツリー ビューのアイテム
+![既定のツリー ビューのアイテム](../../extensibility/ux-guidelines/media/0303-148_treeview.png "0303 148_TreeView")<br />既定のツリー ビューのアイテム
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -895,7 +880,7 @@ ms.lasthandoff: 05/04/2017
 
 **ツリー ビューの項目: 状態をホバー**
 
-![ホバー時のツリー ビューのアイテム](../../extensibility/ux-guidelines/media/0303-149_treeviewhover.png "0303-149_TreeViewHover")<br />ホバー時のツリー ビューのアイテム
+![ホバー時のツリー ビューのアイテム](../../extensibility/ux-guidelines/media/0303-149_treeviewhover.png "0303 149_TreeViewHover")<br />ホバー時のツリー ビューのアイテム
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -906,7 +891,7 @@ ms.lasthandoff: 05/04/2017
 
 **ツリー ビューの項目: 状態の上にドラッグ**
 
-![ツリー ビューのアイテムをドラッグします。](../../extensibility/ux-guidelines/media/0303-150_treeviewdragover.png "0303-150_TreeViewDragOver")<br />ツリー ビューのアイテムをドラッグします。  
+![ツリー ビューの項目のドラッグでの経由で](../../extensibility/ux-guidelines/media/0303-150_treeviewdragover.png "0303 150_TreeViewDragOver")<br />ツリー ビューのアイテムをドラッグします。  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -917,7 +902,7 @@ ms.lasthandoff: 05/04/2017
 
 **ツリー ビューの項目: 選択した場合、フォーカスを得た状態**
 
-![選択したとフォーカスされたツリー ビューの項目](../../extensibility/ux-guidelines/media/0303-151_treeviewfocused.png "0303-151_TreeViewFocused")<br />選択したとフォーカスされたツリー ビューの項目
+![選択されているし、フォーカスされたツリー ビュー アイテム](../../extensibility/ux-guidelines/media/0303-151_treeviewfocused.png "0303 151_TreeViewFocused")<br />選択したとフォーカスされたツリー ビューの項目
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -928,7 +913,7 @@ ms.lasthandoff: 05/04/2017
 
 **ツリー ビューの項目: 選択すると、フォーカスされていない状態**  
 
-![選択したとフォーカスされていないツリー ビューの項目](../../extensibility/ux-guidelines/media/0303-152_treeviewunfocused.png "0303-152_TreeViewUnfocused")<br />選択したとフォーカスされていないツリー ビューの項目
+![選択したとフォーカスされていないツリー ビューのアイテム](../../extensibility/ux-guidelines/media/0303-152_treeviewunfocused.png "0303 152_TreeViewUnfocused")<br />選択したとフォーカスされていないツリー ビューの項目
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -939,7 +924,7 @@ ms.lasthandoff: 05/04/2017
 
 **ツリー ビューの項目: 置かれている、選択すると、フォーカスを得た状態**
 
-![ホバー時の焦点を当てており、選択されたツリー ビューのアイテム](../../extensibility/ux-guidelines/media/0303-153_treeviewfocusedhover.png "0303-153_TreeViewFocusedHover")<br />ホバー時の焦点を当てており、選択されたツリー ビューのアイテム  
+![選択されているし、ツリー ビューの項目をホバー時のフォーカスされた](../../extensibility/ux-guidelines/media/0303-153_treeviewfocusedhover.png "0303 153_TreeViewFocusedHover")<br />ホバー時の焦点を当てており、選択されたツリー ビューのアイテム  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -950,7 +935,7 @@ ms.lasthandoff: 05/04/2017
 
 **ツリー ビューの項目: フォーカスされていない、選択した場合は、ホバー時の状態**
 
-![ホバー時の選択とフォーカスされていないツリー ビューのアイテム](../../extensibility/ux-guidelines/media/0303-154_treeviewunfocusedhover.png "0303-154_TreeViewUnfocusedHover")<br />ホバー時の選択とフォーカスされていないツリー ビューのアイテム  
+![ホバー時のビューの項目の選択とフォーカスされていないツリー](../../extensibility/ux-guidelines/media/0303-154_treeviewunfocusedhover.png "0303 154_TreeViewUnfocusedHover")<br />ホバー時の選択とフォーカスされていないツリー ビューのアイテム  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -964,7 +949,7 @@ ms.lasthandoff: 05/04/2017
 ### <a name="background"></a>背景  
 環境の背景色は、2 つのレイヤーで構成されます。 下部レイヤーは、IDE 全体にわたる単色です。 上部レイヤーは、コマンド シェルフの下、および IDE の左端と右端のツール ウィンドウ自動非表示チャネルの間に収まります。 上部と下部の背景レイヤーは、ライト テーマとダーク テーマで同じ色に設定されます。  
 
-![Visual Studio シェル バック グラウンド (赤線)](../../extensibility/ux-guidelines/media/0303-187_shellbackgroundredline.png "0303-187_ShellBackgroundRedline")<br />Visual Studio シェル バック グラウンド (赤線)
+![Visual Studio シェル バック グラウンド (赤線)](../../extensibility/ux-guidelines/media/0303-187_shellbackgroundredline.png "0303 187_ShellBackgroundRedline")<br />Visual Studio シェル バック グラウンド (赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -988,7 +973,7 @@ ms.lasthandoff: 05/04/2017
 ### <a name="command-shelf"></a>コマンド シェルフ  
 コマンド シェルフの背景には 2 セットのトークン名が使用されます。1 セットはメニュー バーが位置する場所、もう 1 セットはコマンド バーが位置する場所に使用されます。 個々のコマンド バー グループには、独自の背景色値があります。これについては「コマンド バー」セクションで詳しく説明しています。 メニュー バーとコマンド バーのテキストについては、それぞれメニューとコマンド バーのセクションで説明しています。  
 
-![Visual Studio コマンド シェルフ (赤線)](../../extensibility/ux-guidelines/media/0303-188_commandshelfredline.png "0303-188_CommandShelfRedline")<br />Visual Studio コマンド シェルフ (赤線)  
+![Visual Studio コマンド シェルフ (赤線)](../../extensibility/ux-guidelines/media/0303-188_commandshelfredline.png "0303 188_CommandShelfRedline")<br />Visual Studio コマンド シェルフ (赤線)  
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -1014,7 +999,7 @@ ms.lasthandoff: 05/04/2017
 ## <a name="manifest-designer"></a>マニフェスト デザイナー  
 マニフェスト デザイナーは、Windows 8 および Windows Phone 8 プロジェクトのマニフェスト ファイルを編集しやすくするための手段として設計されています。 使用可能な共有フレームワークはありませんが、向き/ナビゲーション タブと全体的な構造のデザイン レイアウトおよび色を一致させることが適切な場合があります。 レイアウトの詳細については、次を参照してください。 [for Visual Studio のレイアウト](../../extensibility/ux-guidelines/layout-for-visual-studio.md)です。  
 
-![マニフェスト デザイナー (赤線)](../../extensibility/ux-guidelines/media/0303-175_manifestdesignerredline.png "0303-175_ManifestDesignerRedline")<br />マニフェスト デザイナー (赤線)
+![マニフェスト デザイナー (赤線)](../../extensibility/ux-guidelines/media/0303-175_manifestdesignerredline.png "0303 175_ManifestDesignerRedline")<br />マニフェスト デザイナー (赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -1058,7 +1043,7 @@ ms.lasthandoff: 05/04/2017
 ###  <a name="BKMK_CommandMenus"></a>メニュー  
 メニューは、Visual Studio 内で複数の場所で発生することができます。 埋め込まれたドキュメントまたはツール ウィンドウ、または IDE 全体のさまざまな場所で右クリックして、メイン メニュー バーです。 他の UI 要素に関連付けられたメニューの実装については、それぞれの要素のセクションで説明します。 Visual Studio 環境で提供される標準のメニュー実装を常に使用してください。 ただし、まれに、標準の Visual Studio メニューにアクセスできないことがあります。 このような場合は、次のトークン名を使用して、UI が Visual Studio の他のメニューと一貫性を保つようにします。  
 
-![Visual Studio のメニュー (赤線)](../../extensibility/ux-guidelines/media/0303-000_menuredline.png "0303-000_MenuRedline")<br />Visual Studio のメニュー (赤線)
+![Visual Studio のメニュー (赤線)](../../extensibility/ux-guidelines/media/0303-000_menuredline.png "0303 000_MenuRedline")<br />Visual Studio のメニュー (赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -1068,7 +1053,7 @@ ms.lasthandoff: 05/04/2017
 #### <a name="menu-titles"></a>メニュー タイトル  
 メニュー タイトルは、背景、境界線、タイトル テキスト、および通常、メニューがコマンド バーにあるときは、オプションのグリフで構成されます。  
 
-![メニュー タイトル (赤線)](../../extensibility/ux-guidelines/media/0303-001_menutitleredline.png "0303-001_MenuTitleRedline")<br />メニュー タイトル (赤線)  
+![メニュー タイトル (赤線)](../../extensibility/ux-guidelines/media/0303-001_menutitleredline.png "0303 001_MenuTitleRedline")<br />メニュー タイトル (赤線)  
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -1077,9 +1062,9 @@ ms.lasthandoff: 05/04/2017
 
 **メニュー タイトル: 既定の状態**
 
-![既定のメニュー タイトル](../../extensibility/ux-guidelines/media/0303-002_menutitledefault.png "0303-002_MenuTitleDefault")<br />既定のメニュー タイトル
+![既定のメニュー タイトル](../../extensibility/ux-guidelines/media/0303-002_menutitledefault.png "0303 002_MenuTitleDefault")<br />既定のメニュー タイトル
 
-![グリフのメニュー タイトルが既定値](../../extensibility/ux-guidelines/media/0303-003_menutitlewithglyphdefault.png "0303-003_MenuTitleWithGlyphDefault")<br />グリフのメニュー タイトルが既定値
+![既定のグリフのメニュー タイトル](../../extensibility/ux-guidelines/media/0303-003_menutitlewithglyphdefault.png "0303 003_MenuTitleWithGlyphDefault")<br />グリフのメニュー タイトルが既定値
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1090,9 +1075,9 @@ ms.lasthandoff: 05/04/2017
 
 **メニュー タイトル: 状態をホバー**  
 
-![ホバー時のメニュー タイトル](../../extensibility/ux-guidelines/media/0303-004_menutitlehover.png "0303-004_MenuTitleHover")<br />ホバー時のメニュー タイトル  
+![ホバー時のメニュー タイトル](../../extensibility/ux-guidelines/media/0303-004_menutitlehover.png "0303 004_MenuTitleHover")<br />ホバー時のメニュー タイトル  
 
-![ホバー時のグリフのメニュー タイトル](../../extensibility/ux-guidelines/media/0303-005_menutitlewithglyphhover.png "0303-005_MenuTitleWithGlyphHover")<br />ホバー時のグリフのメニュー タイトル
+![ホバー時のグリフのメニュー タイトル](../../extensibility/ux-guidelines/media/0303-005_menutitlewithglyphhover.png "0303 005_MenuTitleWithGlyphHover")<br />ホバー時のグリフのメニュー タイトル
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1103,9 +1088,9 @@ ms.lasthandoff: 05/04/2017
 
 **メニュー タイトル: 押された状態**  
 
-![押されたメニュー タイトル](../../extensibility/ux-guidelines/media/0303-006_menutitlepressed.png "0303-006_MenuTitlePressed")<br />押されたメニュー タイトル
+![押されたメニュー タイトル](../../extensibility/ux-guidelines/media/0303-006_menutitlepressed.png "0303 006_MenuTitlePressed")<br />押されたメニュー タイトル
 
-![押されたグリフのメニュー タイトル](../../extensibility/ux-guidelines/media/0303-007_menutitlewithglyphpressed.png "0303-007_MenuTitleWithGlyphPressed")<br />押されたグリフのメニュー タイトル
+![押されたグリフのメニュー タイトル](../../extensibility/ux-guidelines/media/0303-007_menutitlewithglyphpressed.png "0303 007_MenuTitleWithGlyphPressed")<br />押されたグリフのメニュー タイトル
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1116,7 +1101,7 @@ ms.lasthandoff: 05/04/2017
 
 **メニュー タイトル: 無効の状態**  
 
-![グリフの無効化されたメニュー タイトル](../../extensibility/ux-guidelines/media/0303-008_menutitlewithglyphdisabled.png "0303-008_MenuTitleWithGlyphDisabled")<br />グリフの無効化されたメニュー タイトル
+![グリフのメニュー タイトルを無効になっている](../../extensibility/ux-guidelines/media/0303-008_menutitlewithglyphdisabled.png "0303 008_MenuTitleWithGlyphDisabled")<br />グリフの無効化されたメニュー タイトル
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1137,7 +1122,7 @@ ms.lasthandoff: 05/04/2017
 
 **メニュー項目: 既定の状態**
 
-![既定のメニュー項目](../../extensibility/ux-guidelines/media/0303-010_menudefault.png "0303-010_MenuDefault")<br />既定のメニュー項目  
+![既定のメニュー項目](../../extensibility/ux-guidelines/media/0303-010_menudefault.png "0303 010_MenuDefault")<br />既定のメニュー項目  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1151,9 +1136,9 @@ ms.lasthandoff: 05/04/2017
 
 **メニュー項目: チェックされ、状態の選択**  
 
-![チェックされたメニュー](../../extensibility/ux-guidelines/media/0303-011_menuchecked.png "0303-011_MenuChecked")<br />チェックされたメニュー項目
+![チェックされたメニュー](../../extensibility/ux-guidelines/media/0303-011_menuchecked.png "0303 011_MenuChecked")<br />チェックされたメニュー項目
 
-![選択されたメニュー](../../extensibility/ux-guidelines/media/0303-012_menuselected.png "0303-012_MenuSelected")<br />選択されたメニュー項目    
+![選択されたメニュー](../../extensibility/ux-guidelines/media/0303-012_menuselected.png "0303 012_MenuSelected")<br />選択されたメニュー項目    
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1164,11 +1149,11 @@ ms.lasthandoff: 05/04/2017
 
 **メニュー項目: 状態をホバー**  
 
-![メニュー ホバー](../../extensibility/ux-guidelines/media/0303-013_menuhover.png "0303-013_MenuHover")<br />ホバー時のメニュー項目
+![メニュー ホバー](../../extensibility/ux-guidelines/media/0303-013_menuhover.png "0303 013_MenuHover")<br />ホバー時のメニュー項目
 
-![チェックされたメニュー ホバー](../../extensibility/ux-guidelines/media/0303-014_menuhoverchecked.png "0303-014_MenuHoverChecked")<br />ホバー時のメニュー項目のチェック
+![チェックされたメニュー ホバー](../../extensibility/ux-guidelines/media/0303-014_menuhoverchecked.png "0303 014_MenuHoverChecked")<br />ホバー時のメニュー項目のチェック
 
-![選択されたメニュー ホバー](../../extensibility/ux-guidelines/media/0303-015_menuhoverselected.png "0303-015_MenuHoverSelected")<br />ホバー時の選択されたメニュー項目
+![選択されたメニュー ホバー](../../extensibility/ux-guidelines/media/0303-015_menuhoverselected.png "0303 015_MenuHoverSelected")<br />ホバー時の選択されたメニュー項目
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1182,9 +1167,9 @@ ms.lasthandoff: 05/04/2017
 
 **メニュー項目: 無効の状態**  
 
-![メニューの無効化](../../extensibility/ux-guidelines/media/0303-016_menudisabled.png "0303-016_MenuDisabled")<br />無効なメニュー項目
+![メニューの無効化](../../extensibility/ux-guidelines/media/0303-016_menudisabled.png "0303 016_MenuDisabled")<br />無効なメニュー項目
 
-![メニューを無効化チェック](../../extensibility/ux-guidelines/media/0303-017_menudisabledchecked.png "0303-017_MenuDisabledChecked")<br />チェック マークを無効になっているメニュー項目
+![メニューを無効化チェック](../../extensibility/ux-guidelines/media/0303-017_menudisabledchecked.png "0303 017_MenuDisabledChecked")<br />チェック マークを無効になっているメニュー項目
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1198,9 +1183,9 @@ ms.lasthandoff: 05/04/2017
 
 通常は、Visual Studio 環境で提供される標準のコマンド バー実装を常に使用してください。 標準メカニズムを使用すると、すべての表示の詳細が正しく表示され、対話型要素が他の Visual Studio のコマンド バーのコントロールと一貫して動作するようになります。 ただし、独自のコマンド バーを作成する必要がある場合は、次のトークン名を使用してスタイルを正しく設定してください。  
 
-![コマンド バーの赤線](../../extensibility/ux-guidelines/media/0303-018_commandbarredline.png "0303-018_CommandBarRedline")<br />コマンド バー (赤線)  
+![コマンド バーの赤線](../../extensibility/ux-guidelines/media/0303-018_commandbarredline.png "0303 018_CommandBarRedline")<br />コマンド バー (赤線)  
 
-![オーバーフロー ボタンを赤線します。](../../extensibility/ux-guidelines/media/0303-019_overflowbuttonredline.png "0303-019_OverflowButtonRedline")<br />オーバーフロー ボタン (赤線)  
+![オーバーフロー ボタンの赤線](../../extensibility/ux-guidelines/media/0303-019_overflowbuttonredline.png "0303 019_OverflowButtonRedline")<br />オーバーフロー ボタン (赤線)  
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -1210,7 +1195,7 @@ ms.lasthandoff: 05/04/2017
 #### <a name="command-bar-groups"></a>コマンド バー グループ  
 コマンド バー グループは、関連する一連のコマンド バー コントロールで構成され、任意の数のボタン、分割ボタン、ドロップダウン メニュー、コンボ ボックス、またはメニューを含めることができます。 これらのコントロールの色は別々のトークン名によって制御され、このガイドの他の場所で個別に説明されています。 区切り線を使用して、コマンド バー グループを関連するサブグループに分割します。  
 
-![コマンド バー グループを赤線します。](../../extensibility/ux-guidelines/media/0303-020_commandbargroupredline.png "0303-020_CommandBarGroupRedline")<br />コマンド バー グループ (赤線)
+![コマンド バー グループの赤線](../../extensibility/ux-guidelines/media/0303-020_commandbargroupredline.png "0303 020_CommandBarGroupRedline")<br />コマンド バー グループ (赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |  
@@ -1227,9 +1212,9 @@ ms.lasthandoff: 05/04/2017
 | 区切り記号 | `Environment.CommandBarToolBarSeparator`<br />`Environment.CommandBarToolBarSeparatorHighlight` |
 
 #### <a name="command-icons"></a>コマンド アイコン  
-![コマンド アイコンを赤線します。](../../extensibility/ux-guidelines/media/0303-021_commandiconredline1.png "0303-021_CommandIconRedline1")<br />コマンド アイコン (赤線)  
+![コマンド アイコンの赤線](../../extensibility/ux-guidelines/media/0303-021_commandiconredline1.png "0303 021_CommandIconRedline1")<br />コマンド アイコン (赤線)  
 
-![テキストを含むコマンド アイコンを赤線します。](../../extensibility/ux-guidelines/media/0303-022_commandiconredline2.png "0303-022_CommandIconRedline2")<br />テキストを含むコマンド アイコン (赤線)  
+![テキストを含むコマンド アイコンの赤線](../../extensibility/ux-guidelines/media/0303-022_commandiconredline2.png "0303 022_CommandIconRedline2")<br />テキストを含むコマンド アイコン (赤線)  
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -1238,7 +1223,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド アイコン: 既定の状態**  
 
-![コマンド アイコンの既定値](../../extensibility/ux-guidelines/media/0303-023_commandicondefault.png "0303-023_CommandIconDefault")<br />コマンドの既定のアイコン
+![アイコンの既定値をコマンド](../../extensibility/ux-guidelines/media/0303-023_commandicondefault.png "0303 023_CommandIconDefault")<br />コマンドの既定のアイコン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1248,7 +1233,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド アイコン: 既定の状態、選択されています。**
 
-![既定では選択されたコマンド アイコン](../../extensibility/ux-guidelines/media/0303-024_commandicondefaultselected.png "0303-024_CommandIconDefaultSelected")<br />既定では選択されたコマンド アイコン  
+![既定で選択したコマンドのアイコンは](../../extensibility/ux-guidelines/media/0303-024_commandicondefaultselected.png "0303 024_CommandIconDefaultSelected")<br />既定では選択されたコマンド アイコン  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1258,7 +1243,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド アイコン: ホバー時のフォーカス状態**  
 
-![コマンド アイコン ホバーまたはフォーカスを](../../extensibility/ux-guidelines/media/0303-025_commandiconhover.png "0303-025_CommandIconHover")<br />コマンド アイコン ホバーまたはフォーカスを
+![コマンド アイコン ホバーまたはフォーカスを](../../extensibility/ux-guidelines/media/0303-025_commandiconhover.png "0303 025_CommandIconHover")<br />コマンド アイコン ホバーまたはフォーカスを
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1268,7 +1253,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド アイコン: ホバー時またはフォーカスの状態、選択されています。**
 
-![選択したコマンド アイコン ホバーまたはフォーカスを](../../extensibility/ux-guidelines/media/0303-026_commandiconhoverselected.png "0303-026_CommandIconHoverSelected")<br />選択したコマンド アイコン ホバーまたはフォーカスを
+![選択されたコマンド アイコン ホバーまたはフォーカスを](../../extensibility/ux-guidelines/media/0303-026_commandiconhoverselected.png "0303 026_CommandIconHoverSelected")<br />選択したコマンド アイコン ホバーまたはフォーカスを
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1278,7 +1263,7 @@ ms.lasthandoff: 05/04/2017
 
  **コマンド アイコン: 押された状態**  
 
-![押されたコマンド アイコン](../../extensibility/ux-guidelines/media/0303-027_commandiconpressed.png "0303-027_CommandIconPressed")<br />押されているコマンド アイコン
+![押されたコマンド アイコン](../../extensibility/ux-guidelines/media/0303-027_commandiconpressed.png "0303 027_CommandIconPressed")<br />押されているコマンド アイコン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1288,7 +1273,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド アイコン: 無効の状態**  
 
-![無効化されたコマンド アイコン](../../extensibility/ux-guidelines/media/0303-028_commandicondisabled.png "0303-028_CommandIconDisabled")<br />無効化されたコマンド アイコン
+![無効化されたコマンド アイコン](../../extensibility/ux-guidelines/media/0303-028_commandicondisabled.png "0303 028_CommandIconDisabled")<br />無効化されたコマンド アイコン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1301,7 +1286,7 @@ ms.lasthandoff: 05/04/2017
 > [!IMPORTANT]
 > コンボ ボックスはドロップダウンに似ていますが、編集可能なテキスト領域が含まれます。 ドロップダウンに編集可能なテキスト領域が含まれていない場合は、色のトークンを使用して[コマンド バーのドロップダウンで](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandDropDown)です。  
 
-![コマンド バー コンボ ボックスを赤線します。](../../extensibility/ux-guidelines/media/0303-029_comboboxredline.png "0303-029_ComboBoxRedline")<br />コマンド バーのコンボ ボックス (赤線)  
+![コマンド バーのコンボ ボックスの赤線](../../extensibility/ux-guidelines/media/0303-029_comboboxredline.png "0303 029_ComboBoxRedline")<br />コマンド バーのコンボ ボックス (赤線)  
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -1310,7 +1295,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのコンボ ボックスの入力 フィールド: 既定の状態**
 
-![コマンド バー コンボ ボックスの入力フィールド](../../extensibility/ux-guidelines/media/0303-030_comboboxinputfield.png "0303-030_ComboBoxInputField")<br />コマンド バー コンボ ボックスの入力フィールド  
+![コマンド バー コンボ ボックスの入力フィールド](../../extensibility/ux-guidelines/media/0303-030_comboboxinputfield.png "0303 030_ComboBoxInputField")<br />コマンド バー コンボ ボックスの入力フィールド  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1321,7 +1306,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのドロップダウン ボタン: 既定の状態**  
 
-![コンボ ボックス ドロップ &#45; 下矢印ボタン](../../extensibility/ux-guidelines/media/0303-031_comboboxdropdownbutton.png "0303-031_ComboBoxDropdownButton")<br />コマンド バーのドロップダウン ボタン
+![コンボ ボックス ドロップ &#45; 下矢印ボタン](../../extensibility/ux-guidelines/media/0303-031_comboboxdropdownbutton.png "0303 031_ComboBoxDropdownButton")<br />コマンド バーのドロップダウン ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1330,7 +1315,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのドロップダウン リスト: 既定の状態**
 
-![コマンド バーのドロップダウン リスト](../../extensibility/ux-guidelines/media/0303-032_comboboxdropdownlist.png "0303-032_ComboBoxDropdownList")<br />コマンド バーのドロップダウン リスト
+![コマンド バーのドロップダウン リスト](../../extensibility/ux-guidelines/media/0303-032_comboboxdropdownlist.png "0303 032_ComboBoxDropdownList")<br />コマンド バーのドロップダウン リスト
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1340,7 +1325,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのコンボ ボックスの入力 フィールド: 状態をホバー**  
 
-![コマンド バー コンボ ボックスの入力フィールドのホバー時](../../extensibility/ux-guidelines/media/0303-033_comboboxinputfieldhover.png "0303-033_ComboBoxInputFieldHover")<br />コマンド バー コンボ ボックスの入力フィールドのホバー時  
+![コマンド バー コンボ ボックスの入力フィールドのホバー時](../../extensibility/ux-guidelines/media/0303-033_comboboxinputfieldhover.png "0303 033_ComboBoxInputFieldHover")<br />コマンド バー コンボ ボックスの入力フィールドのホバー時  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1351,7 +1336,7 @@ ms.lasthandoff: 05/04/2017
 
  **コマンド バーのドロップダウン ボタン: 状態をホバー**  
 
-![ホバー時のコマンド バーのドロップダウン ボタン](../../extensibility/ux-guidelines/media/0303-034_comboboxdropdownbuttonhover.png "0303-034_ComboBoxDropdownButtonHover")<br />ホバー時のコマンド バーのドロップダウン ボタン
+![ホバー時のコマンド バーのドロップダウン ボタン](../../extensibility/ux-guidelines/media/0303-034_comboboxdropdownbuttonhover.png "0303 034_ComboBoxDropdownButtonHover")<br />ホバー時のコマンド バーのドロップダウン ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1360,7 +1345,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのドロップダウン リスト: 状態をホバー**
 
- ![ホバー時のコマンド バーのドロップダウン リスト](../../extensibility/ux-guidelines/media/0303-035_comboboxdropdownlisthover.png "0303-035_ComboBoxDropdownListHover")<br />ホバー時のコマンド バーのドロップダウン リスト  
+ ![ホバー時のコマンド バーのドロップダウン リスト](../../extensibility/ux-guidelines/media/0303-035_comboboxdropdownlisthover.png "0303 035_ComboBoxDropdownListHover")<br />ホバー時のコマンド バーのドロップダウン リスト  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1370,7 +1355,7 @@ ms.lasthandoff: 05/04/2017
 
  **コマンド バーのコンボ ボックスの入力 フィールド: フォーカスを得た状態**  
 
-![フォーカスされたコマンド バー コンボ ボックスの入力フィールド](../../extensibility/ux-guidelines/media/0303-036_comboboxinputfieldfocused.png "0303-036_ComboBoxInputFieldFocused")<br />フォーカスされたコマンド バー コンボ ボックスの入力フィールド
+![コマンド バーのコンボ ボックスの入力フィールドに重点を置いて](../../extensibility/ux-guidelines/media/0303-036_comboboxinputfieldfocused.png "0303 036_ComboBoxInputFieldFocused")<br />フォーカスされたコマンド バー コンボ ボックスの入力フィールド
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1381,7 +1366,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのドロップダウン ボタン: フォーカスを得た状態**  
 
-![フォーカスのあるコマンド バーのドロップダウン ボタン](../../extensibility/ux-guidelines/media/0303-037_comboboxdropdownbuttonfocused.png "0303-037_ComboBoxDropdownButtonFocused")<br />フォーカスのあるコマンド バーのドロップダウン ボタン
+![コマンド バーのドロップダウン ボタンのフォーカスされた](../../extensibility/ux-guidelines/media/0303-037_comboboxdropdownbuttonfocused.png "0303 037_ComboBoxDropdownButtonFocused")<br />フォーカスのあるコマンド バーのドロップダウン ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1390,7 +1375,7 @@ ms.lasthandoff: 05/04/2017
 
  **コマンド バーのコンボ ボックスの入力 フィールド: 押された状態**  
 
-![押されたコマンド バー コンボ ボックスの入力フィールド](../../extensibility/ux-guidelines/media/0303-038_comboboxinputfieldpressed.png "0303-038_ComboBoxInputFieldPressed")<br />押されたコマンド バー コンボ ボックスの入力フィールド
+![コマンドを押されたコンボ ボックスの入力フィールド バー](../../extensibility/ux-guidelines/media/0303-038_comboboxinputfieldpressed.png "0303 038_ComboBoxInputFieldPressed")<br />押されたコマンド バー コンボ ボックスの入力フィールド
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1401,7 +1386,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのドロップダウン ボタン: 押された状態**
 
-![コマンド バーのドロップダウン ボタンを押す](../../extensibility/ux-guidelines/media/0303-039_comboboxdropdownbuttonpressed.png "0303-039_ComboBoxDropdownButtonPressed")<br />コマンド バーのドロップダウン ボタンを押す  
+![コマンド バーのドロップダウン ボタンが押された](../../extensibility/ux-guidelines/media/0303-039_comboboxdropdownbuttonpressed.png "0303 039_ComboBoxDropdownButtonPressed")<br />コマンド バーのドロップダウン ボタンを押す  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1410,7 +1395,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのコンボ ボックスの入力 フィールド: 無効の状態**  
 
-![無効なコマンド バーのコンボ ボックスの入力フィールド](../../extensibility/ux-guidelines/media/0303-041_comboboxinputfielddisabled.png "0303-041_ComboBoxInputFieldDisabled")<br />無効なコマンド バーのコンボ ボックスの入力フィールド  
+![コマンド バーのコンボ ボックスの入力フィールドを無効になっている](../../extensibility/ux-guidelines/media/0303-041_comboboxinputfielddisabled.png "0303 041_ComboBoxInputFieldDisabled")<br />無効なコマンド バーのコンボ ボックスの入力フィールド  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1421,7 +1406,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのドロップダウン ボタン: 無効の状態**  
 
-![無効なコマンド バーのドロップダウン ボタン](../../extensibility/ux-guidelines/media/0303-040_comboboxdropdownbuttondisabled.png "0303-040_ComboBoxDropdownButtonDisabled")<br />無効なコマンド バーのドロップダウン ボタン
+![コマンド バーのドロップダウン ボタンを無効になっている](../../extensibility/ux-guidelines/media/0303-040_comboboxdropdownbuttondisabled.png "0303 040_ComboBoxDropdownButtonDisabled")<br />無効なコマンド バーのドロップダウン ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1433,7 +1418,7 @@ ms.lasthandoff: 05/04/2017
 > [!IMPORTANT]
 >  ドロップダウンはコンボ ボックスに似ていますが、編集可能なテキスト領域がありません。 ドロップダウンに編集可能なテキスト領域が含まれている場合は、色のトークンを使用して[コマンド バー コンボ ボックス](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandComboBox)です。  
 
-![ドロップダウン バー コマンド (赤線)](../../extensibility/ux-guidelines/media/0303-042_dropdownredline.png "0303-042_DropdownRedline")<br />ドロップダウン バー コマンド (赤線)
+![ドロップダウン バー コマンド (赤線)](../../extensibility/ux-guidelines/media/0303-042_dropdownredline.png "0303 042_DropdownRedline")<br />ドロップダウン バー コマンド (赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -1442,7 +1427,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのドロップダウンの選択フィールド: 既定の状態**  
 
-![コマンド バーの既定のドロップダウンの選択フィールド](../../extensibility/ux-guidelines/media/0303-043_dropdownselectionfield.png "0303-043_DropdownSelectionField")<br />コマンド バーの既定のドロップダウンの選択フィールド  
+![既定のコマンド バーのドロップダウンの選択フィールド](../../extensibility/ux-guidelines/media/0303-043_dropdownselectionfield.png "0303 043_DropdownSelectionField")<br />コマンド バーの既定のドロップダウンの選択フィールド  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1453,7 +1438,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのドロップダウン ボタン: 既定の状態**
 
-![既定のコマンド バーのドロップダウン ボタン](../../extensibility/ux-guidelines/media/0303-044_dropdownbutton.png "0303-044_DropdownButton")<br />既定のコマンド バーのドロップダウン ボタン  
+![既定のコマンド バーのドロップダウン ボタン](../../extensibility/ux-guidelines/media/0303-044_dropdownbutton.png "0303 044_DropdownButton")<br />既定のコマンド バーのドロップダウン ボタン  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1462,7 +1447,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのドロップダウン リスト: 既定の状態**
 
-![既定のコマンド バーのドロップダウン リスト](../../extensibility/ux-guidelines/media/0303-045_dropdownlist.png "0303-045_DropdownList")<br />既定のコマンド バーのドロップダウン リスト  
+![既定のコマンド バーのドロップダウン リスト](../../extensibility/ux-guidelines/media/0303-045_dropdownlist.png "0303 045_DropdownList")<br />既定のコマンド バーのドロップダウン リスト  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1473,7 +1458,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのドロップダウンの選択フィールド: 状態をホバー**  
 
-![ホバー時のコマンド バーのドロップダウンの選択フィールド](../../extensibility/ux-guidelines/media/0303-046_dropdownselectionfieldhover.png "0303-046_DropdownSelectionFieldHover")<br />ホバー時のコマンド バーのドロップダウンの選択フィールド  
+![ホバー時のコマンド バーのドロップダウンの選択フィールド](../../extensibility/ux-guidelines/media/0303-046_dropdownselectionfieldhover.png "0303 046_DropdownSelectionFieldHover")<br />ホバー時のコマンド バーのドロップダウンの選択フィールド  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1484,7 +1469,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのドロップダウン ボタン: 状態をホバー**  
 
-![ホバー時のコマンド バーのドロップダウン ボタン](../../extensibility/ux-guidelines/media/0303-047_dropdownbuttonhover.png "0303-047_DropdownButtonHover")<br />ホバー時のコマンド バーのドロップダウン ボタン  
+![ホバー時のコマンド バーのドロップダウン ボタン](../../extensibility/ux-guidelines/media/0303-047_dropdownbuttonhover.png "0303 047_DropdownButtonHover")<br />ホバー時のコマンド バーのドロップダウン ボタン  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1493,7 +1478,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのドロップダウン リスト: 状態をホバー**  
 
-![ホバー時のコマンド バーのドロップダウン リスト](../../extensibility/ux-guidelines/media/0303-048_dropdownlisthover.png "0303-048_DropdownListHover")<br />ホバー時のコマンド バーのドロップダウン リスト  
+![ホバー時のコマンド バーのドロップダウン リスト](../../extensibility/ux-guidelines/media/0303-048_dropdownlisthover.png "0303 048_DropdownListHover")<br />ホバー時のコマンド バーのドロップダウン リスト  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1503,7 +1488,7 @@ ms.lasthandoff: 05/04/2017
 
  **コマンド バーのドロップダウンの選択フィールド: 押された状態**  
 
-![ドロップ &#45; 下の押された選択フィールド](../../extensibility/ux-guidelines/media/0303-049_dropdownselectionfieldpressed.png "0303-049_DropdownSelectionFieldPressed")<br />コマンドを押されたドロップダウンの選択フィールド バー
+![ドロップ &#45; 押された選択フィールド ダウン](../../extensibility/ux-guidelines/media/0303-049_dropdownselectionfieldpressed.png "0303 049_DropdownSelectionFieldPressed")<br />コマンドを押されたドロップダウンの選択フィールド バー
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1514,7 +1499,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのドロップダウン ボタン: 押された状態**
 
-![コマンド バーのドロップダウン ボタンを押す](../../extensibility/ux-guidelines/media/0303-050_dropdownbuttonpressed.png "0303-050_DropdownButtonPressed")<br />コマンド バーのドロップダウン ボタンを押す  
+![コマンド バーのドロップダウン ボタンが押された](../../extensibility/ux-guidelines/media/0303-050_dropdownbuttonpressed.png "0303 050_DropdownButtonPressed")<br />コマンド バーのドロップダウン ボタンを押す  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1523,7 +1508,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのドロップダウンの選択フィールド: 無効の状態**  
 
-![無効なコマンド バーのドロップダウンの選択フィールド](../../extensibility/ux-guidelines/media/0303-051_dropdownselectionfielddisabled.png "0303-051_DropdownSelectionFieldDisabled")<br />無効なコマンド バーのドロップダウンの選択フィールド
+![コマンド バーのドロップダウンの選択フィールドを無効になっている](../../extensibility/ux-guidelines/media/0303-051_dropdownselectionfielddisabled.png "0303 051_DropdownSelectionFieldDisabled")<br />無効なコマンド バーのドロップダウンの選択フィールド
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1534,7 +1519,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーのドロップダウン ボタン: 無効の状態**
 
-![無効なコマンド バーのドロップダウン ボタン](../../extensibility/ux-guidelines/media/0303-052_dropdownbuttondisabled.png "0303-052_DropdownButtonDisabled")<br />無効なコマンド バーのドロップダウン ボタン
+![コマンド バーのドロップダウン ボタンを無効になっている](../../extensibility/ux-guidelines/media/0303-052_dropdownbuttondisabled.png "0303 052_DropdownButtonDisabled")<br />無効なコマンド バーのドロップダウン ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1544,7 +1529,7 @@ ms.lasthandoff: 05/04/2017
 #### <a name="command-bar-split-buttons"></a>コマンド バーの分割ボタン
 分割ボタンは、ボタン、メニュー、コマンド バー テキストなど、他のコマンド バー コントロールと多くのトークン名を共有します。 ここでは利便性のために、すべての必要なアクション ボタンとドロップダウン ボタンのトークン名を繰り返しています。 分割ボタンのドロップダウン リストの実装は、[コマンドのメニュー バー](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandMenus)です。  
 
-![分割ボタンを赤線します。](../../extensibility/ux-guidelines/media/0303-053_splitbuttonredline.png "0303-053_SplitButtonRedline")<br />コマンド バーの分割ボタン (赤線)  
+![分割ボタンの赤線](../../extensibility/ux-guidelines/media/0303-053_splitbuttonredline.png "0303 053_SplitButtonRedline")<br />コマンド バーの分割ボタン (赤線)  
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -1553,7 +1538,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーの分割ボタンをクリックします既定の状態。**  
 
-![既定のコマンド バーの分割ボタン](../../extensibility/ux-guidelines/media/0303-054_splitbutton.png "0303-054_SplitButton")<br />既定のコマンド バーの分割ボタン  
+![既定のコマンド バーの分割ボタン](../../extensibility/ux-guidelines/media/0303-054_splitbutton.png "0303 054_SplitButton")<br />既定のコマンド バーの分割ボタン  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1565,7 +1550,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーの分割ボタン: 状態をホバー**  
 
-![コマンド バーの分割ホバー時のボタン](../../extensibility/ux-guidelines/media/0303-055_splitbuttonhover.png "0303-055_SplitButtonHover")<br />コマンド バーの分割ホバー時のボタン
+![コマンド バーはホバー時のボタンを分割](../../extensibility/ux-guidelines/media/0303-055_splitbuttonhover.png "0303 055_SplitButtonHover")<br />コマンド バーの分割ホバー時のボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1577,7 +1562,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーの分割ボタン: 押された状態**  
 
-![押されたコマンド バーの分割ボタン](../../extensibility/ux-guidelines/media/0303-056_splitbuttonpressed.png "0303-056_SplitButtonPressed")<br />押されたコマンド バーの分割ボタン  
+![コマンド バーの分割ボタンが押された](../../extensibility/ux-guidelines/media/0303-056_splitbuttonpressed.png "0303 056_SplitButtonPressed")<br />押されたコマンド バーの分割ボタン  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1589,7 +1574,7 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーの分割ボタン: 無効の状態**
 
-![無効化されたコマンド バーの分割ボタン](../../extensibility/ux-guidelines/media/0303-057_splitbuttondisabled.png "0303-057_SplitButtonDisabled")<br />無効化されたコマンド バーの分割ボタン
+![コマンド バーの分割ボタンを無効になっている](../../extensibility/ux-guidelines/media/0303-057_splitbuttondisabled.png "0303 057_SplitButtonDisabled")<br />無効化されたコマンド バーの分割ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1602,7 +1587,7 @@ ms.lasthandoff: 05/04/2017
 #### <a name="command-bar-more-options-and-overflow-buttons"></a>コマンド バーの他のオプション および オーバーフロー ボタン  
 [その他のオプション] ボタンは、関連するコマンド バー ボタンを追加または削除して、コマンド バー グループをカスタマイズできる場合に使用します。 [オーバーフロー] ボタンは、横のスペースが不足しているためにコマンド バーが切り詰められた場合に表示され、クリックすると、表示できないコマンド バー ボタンを含むメニューが表示されます。 これら 2 つのボタンの色は、同じトークン名のセットによって制御されます。  
 
-![コマンド バーの [複数のオプション] ボタン (赤線)](../../extensibility/ux-guidelines/media/0303-058_moreoptionsredline.png "0303-058_MoreOptionsRedline")<br />コマンド バーの [複数のオプション] ボタン (赤線)  
+![コマンド バーの [複数のオプション] ボタン (赤線)](../../extensibility/ux-guidelines/media/0303-058_moreoptionsredline.png "0303 058_MoreOptionsRedline")<br />コマンド バーの [複数のオプション] ボタン (赤線)  
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -1610,9 +1595,9 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーの他のオプション と「オーバーフロー」ボタン: 既定の状態**  
 
-![既定のコマンド バーの [複数のオプション] ボタン](../../extensibility/ux-guidelines/media/0303-059_moreoptions.png "0303-059_MoreOptions")<br />既定のコマンド バーの [複数のオプション] ボタン
+![コマンド バーの [複数のオプション] ボタンの既定](../../extensibility/ux-guidelines/media/0303-059_moreoptions.png "0303 059_MoreOptions")<br />既定のコマンド バーの [複数のオプション] ボタン
 
-![既定のコマンド バーの [オーバーフロー] ボタン](../../extensibility/ux-guidelines/media/0303-060_overflow.png "0303-060_Overflow")<br />既定のコマンド バーの [オーバーフロー] ボタン
+![既定のコマンド バーの「オーバーフロー」ボタン](../../extensibility/ux-guidelines/media/0303-060_overflow.png "0303 060_Overflow")<br />既定のコマンド バーの [オーバーフロー] ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1621,9 +1606,9 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーの他のオプション と「オーバーフロー」ボタン: 状態をホバー**
 
-![ホバー時の 'より多くのオプション' ボタン バー コマンドします。](../../extensibility/ux-guidelines/media/0303-061_moreoptionshover.png "0303-061_MoreOptionsHover")<br />ホバー時の 'より多くのオプション' ボタン バー コマンドします。  
+![コマンド バーのホバー時の 'より多くのオプション' ボタン](../../extensibility/ux-guidelines/media/0303-061_moreoptionshover.png "0303 061_MoreOptionsHover")<br />ホバー時の 'より多くのオプション' ボタン バー コマンドします。  
 
-![ホバー時のコマンド バー「オーバーフロー」ボタン](../../extensibility/ux-guidelines/media/0303-062_overflowoptions.png "0303-062_OverflowOptions")<br />ホバー時のコマンド バー「オーバーフロー」ボタン   
+![ホバー時のコマンド バー「オーバーフロー」ボタン](../../extensibility/ux-guidelines/media/0303-062_overflowoptions.png "0303 062_OverflowOptions")<br />ホバー時のコマンド バー「オーバーフロー」ボタン   
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1632,9 +1617,9 @@ ms.lasthandoff: 05/04/2017
 
 **コマンド バーの他のオプション と「オーバーフロー」ボタン: 押された状態**  
 
-![コマンド バーの [複数のオプション] ボタンを押す](../../extensibility/ux-guidelines/media/0303-063_moreoptionspressed.png "0303-063_MoreOptionsPressed")<br />コマンド バーの [複数のオプション] ボタンを押す  
+![コマンド バーの [複数のオプション] ボタンが押された](../../extensibility/ux-guidelines/media/0303-063_moreoptionspressed.png "0303 063_MoreOptionsPressed")<br />コマンド バーの [複数のオプション] ボタンを押す  
 
-![押されたオーバーフローします。](../../extensibility/ux-guidelines/media/0303-064_overflowpressed.png "0303-064_OverflowPressed")<br />コマンド バーの「オーバーフロー」ボタンを押す  
+![押されたオーバーフロー](../../extensibility/ux-guidelines/media/0303-064_overflowpressed.png "0303 064_OverflowPressed")<br />コマンド バーの「オーバーフロー」ボタンを押す  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1647,15 +1632,15 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 ドキュメント ウィンドウの色のトークンを使用する場合は、類似の要素に対してのみ、常にペアで使用するように注意します。 行わないと、可能性があります、UI に予期しない結果が得られます。  
 
 ### <a name="document-window-frames"></a>ドキュメント ウィンドウ フレーム  
-ドキュメント ウィンドウは IDE にドッキングしたり、別のウィンドウとしてフローティングさせたりすることができます。 ドキュメント ウィンドウは IDE の外部で浮動小数点型、ときに、ドキュメント ウェルに置かれたまだし背景、境界線、テキスト、および IDE の一部である場合と同じタブの色を持っています。 ただし、ドキュメントは、独自の背景、境界線、テキストの色を持つフレーム内に配置されます。 ツール ウィンドウをドキュメント ウェルにドッキングした場合、ツール ウィンドウはタブの動作と色をドキュメント ウィンドウのトークン名から継承します。  
+ドキュメント ウィンドウは IDE にドッキングしたり、別のウィンドウとしてフローティングさせたりすることができます。 ドキュメント ウィンドウは IDE の外部で浮動小数点型、ときにいます、ドキュメント ウェル内に存在、背景、境界線、テキスト、および IDE の一部である場合と同じタブの色がします。 ただし、ドキュメントは、独自の背景、境界線、テキストの色を持つフレーム内に配置されます。 ツール ウィンドウをドキュメント ウェルにドッキングした場合、ツール ウィンドウはタブの動作と色をドキュメント ウィンドウのトークン名から継承します。  
 
-![ドッキングされたドキュメント ウィンドウ (赤線)](../../extensibility/ux-guidelines/media/0303-065_dockeddocumentwindowredline.png "0303-065_DockedDocumentWindowRedline")<br />ドッキングされたドキュメント ウィンドウ (赤線)  
+![ドッキングされたドキュメント ウィンドウ (赤線)](../../extensibility/ux-guidelines/media/0303-065_dockeddocumentwindowredline.png "0303 065_DockedDocumentWindowRedline")<br />ドッキングされたドキュメント ウィンドウ (赤線)  
 
-![フローティング ドキュメント ウィンドウ (赤線)](../../extensibility/ux-guidelines/media/0303-066_floatingdocumentwindowredline.png "0303-066_FloatingDocumentWindowRedline")<br />フローティング ドキュメント ウィンドウ (赤線)  
+![フローティング ドキュメント ウィンドウ (赤線)](../../extensibility/ux-guidelines/media/0303-066_floatingdocumentwindowredline.png "0303 066_FloatingDocumentWindowRedline")<br />フローティング ドキュメント ウィンドウ (赤線)  
 
 | 使用しています. | 使用しない. |
 | --- | --- |
-| . 任意の場所のドキュメント ウィンドウを一致させる UI を作成しています。 | ... すべてを自動的に変更しない場合の ui シェルにテーマの更新 |
+| . 任意の場所のドキュメント ウィンドウを一致させる UI を作成します。 | ... すべてを自動的に変更しない場合の ui シェルにテーマの更新 |
 
 **ドッキングまたはフローティング ドキュメント ウィンドウ: 既定の状態**  
 
@@ -1667,7 +1652,7 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 
 **フォーカスのある、フローティング ドキュメント ウィンドウ フレーム: 既定の状態**
 
-![既定の重点を置いて、フローティング ドキュメント ウィンドウ フレーム](../../extensibility/ux-guidelines/media/0303-067_framefocused.png "0303-067_FrameFocused")<br />既定の重点を置いて、フローティング ドキュメント ウィンドウ フレーム
+![既定の重点を置いて、フローティング ドキュメント ウィンドウ フレーム](../../extensibility/ux-guidelines/media/0303-067_framefocused.png "0303 067_FrameFocused")<br />既定の重点を置いて、フローティング ドキュメント ウィンドウ フレーム
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1679,7 +1664,7 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 
 **フォーカスされていない、フローティング ドキュメント ウィンドウ フレーム: 既定の状態**  
 
-![既定のフォーカスされていない、フローティング ドキュメント ウィンドウ フレーム](../../extensibility/ux-guidelines/media/0303-068_frameunfocused.png "0303-068_FrameUnfocused")<br />既定のフォーカスされていない、フローティング ドキュメント ウィンドウ フレーム
+![既定のフォーカスされていない、フローティング ドキュメント ウィンドウ フレーム](../../extensibility/ux-guidelines/media/0303-068_frameunfocused.png "0303 068_FrameUnfocused")<br />既定のフォーカスされていない、フローティング ドキュメント ウィンドウ フレーム
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1691,7 +1676,7 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 
 **フォーカスのある、フローティング ドキュメント ウィンドウ フレーム: 状態をホバー**
 
-![フォーカスのある、ホバー時のフローティング ドキュメント ウィンドウ フレーム](../../extensibility/ux-guidelines/media/0303-069_framefocusedhover.png "0303-069_FrameFocusedHover")<br />フォーカスのある、ホバー時のフローティング ドキュメント ウィンドウ フレーム  
+![フォーカスのある、ホバー時のフローティング ドキュメント ウィンドウ フレーム](../../extensibility/ux-guidelines/media/0303-069_framefocusedhover.png "0303 069_FrameFocusedHover")<br />フォーカスのある、ホバー時のフローティング ドキュメント ウィンドウ フレーム  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1701,7 +1686,7 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 
 **フォーカスされていない、フローティング ドキュメント ウィンドウ フレーム: 状態をホバー**  
 
-![ホバー時のフォーカスされていない、フローティング ドキュメント ウィンドウ フレーム](../../extensibility/ux-guidelines/media/0303-070_frameunfocusedhover.png "0303-070_FrameUnfocusedHover")<br />ホバー時のフォーカスされていない、フローティング ドキュメント ウィンドウ フレーム
+![ホバー時のフォーカスされていない、フローティング ドキュメント ウィンドウ フレーム](../../extensibility/ux-guidelines/media/0303-070_frameunfocusedhover.png "0303 070_FrameUnfocusedHover")<br />ホバー時のフォーカスされていない、フローティング ドキュメント ウィンドウ フレーム
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1711,7 +1696,7 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 
 **フォーカスのある、フローティング ドキュメント ウィンドウ フレーム: 押された状態**  
 
-![フォーカスのある、ドキュメント ウィンドウ フレームにキーを押して浮動](../../extensibility/ux-guidelines/media/0303-071_framefocusedpressed.png "0303-071_FrameFocusedPressed")<br />フォーカスのある、ドキュメント ウィンドウ フレームにキーを押して浮動
+![フォーカスのある、ドキュメント ウィンドウ フレームにキーを押して浮動](../../extensibility/ux-guidelines/media/0303-071_framefocusedpressed.png "0303 071_FrameFocusedPressed")<br />フォーカスのある、ドキュメント ウィンドウ フレームにキーを押して浮動
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1722,7 +1707,7 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 ### <a name="document-tabs"></a>ドキュメント タブ  
 ドキュメント タブはタブ チャネル内に存在し、現在どのドキュメントが開いているか、およびどのドキュメントが現在選択されているか、またはアクティブなドキュメントであるかを示します。 ツール ウィンドウも、ユーザーが配置した場合、ドキュメント タブ チャネルにドッキングできます。 この場合、ツール ウィンドウではドキュメント ウィンドウと同じタブの色が使用されます。 ドキュメント ウィンドウの色と常に一致する UI を作成する場合は (テーマの更新や、新しいテーマがインストールされた場合を含む)、これらの色のトークンを参照します。  
 
-![ドキュメント タブ (の赤線)](../../extensibility/ux-guidelines/media/0303-072_documenttabredline.png "0303-072_DocumentTabRedline")<br />ドキュメント タブ (の赤線)
+![ドキュメント タブ (の赤線)](../../extensibility/ux-guidelines/media/0303-072_documenttabredline.png "0303 072_DocumentTabRedline")<br />ドキュメント タブ (の赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -1733,9 +1718,9 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 
 -   選択されているタブは、現在ドキュメント ウェルに表示されているドキュメントを表します。 選択されているタブには、ドキュメント ウェルの上端にまたがって拡張するドキュメントの境界線があります。  
 
--   背景タブは、現在選択されていないドキュメント タブです。 クリックすると、それらは選択されたタブになり、トークン名からすべての背景、境界線、テキストの色を取得します。  
+-   背景タブは、現在選択されていないドキュメント タブです。クリックすると、それらは選択されたタブになり、トークン名からすべての背景、境界線、テキストの色を取得します。  
 
-![開いているドキュメント タブ (の赤線)](../../extensibility/ux-guidelines/media/0303-073_opendocumenttabredline.png "0303-073_OpenDocumentTabRedline")<br />開いているドキュメント タブ (の赤線)
+![開いているドキュメント タブ (の赤線)](../../extensibility/ux-guidelines/media/0303-073_opendocumenttabredline.png "0303 073_OpenDocumentTabRedline")<br />開いているドキュメント タブ (の赤線)
 
 | 使用しています.  | 使用しない. |
 | --- | --- |
@@ -1744,7 +1729,7 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 
 **選択すると、フォーカスのあるドキュメント タブ**  
 
-![選択すると、フォーカスのあるドキュメント タブ](../../extensibility/ux-guidelines/media/0303-074_selectedtabfocused.png "0303-074_SelectedTabFocused")<br />選択すると、フォーカスのあるドキュメント タブ
+![選択した場合、ドキュメント タブに重点を置いて](../../extensibility/ux-guidelines/media/0303-074_selectedtabfocused.png "0303 074_SelectedTabFocused")<br />選択すると、フォーカスのあるドキュメント タブ
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1755,7 +1740,7 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 
 **選択すると、フォーカスされていないドキュメント タブ**
 
-![選択すると、フォーカスされていないドキュメント タブ](../../extensibility/ux-guidelines/media/0303-075_selectedtabunfocused.png "0303-075_SelectedTabUnfocused")<br />選択すると、フォーカスされていないドキュメント タブ
+![選択すると、フォーカスされていないドキュメント タブ](../../extensibility/ux-guidelines/media/0303-075_selectedtabunfocused.png "0303 075_SelectedTabUnfocused")<br />選択すると、フォーカスされていないドキュメント タブ
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1766,7 +1751,7 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 
 **バック グラウンド ドキュメント タブ: 既定の状態**  
 
-![既定の背景のドキュメント タブ](../../extensibility/ux-guidelines/media/0303-076_backgroundtab.png "0303-076_BackgroundTab")<br />既定の背景のドキュメント タブ  
+![既定の背景のドキュメント タブ](../../extensibility/ux-guidelines/media/0303-076_backgroundtab.png "0303 076_BackgroundTab")<br />既定の背景のドキュメント タブ  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1776,7 +1761,7 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 
 **バック グラウンド ドキュメント タブ: ホバー状態**  
 
-![ホバー時のドキュメント タブの背景](../../extensibility/ux-guidelines/media/0303-077_backgroundtabhover.png "0303-077_BackgroundTabHover")<br />ホバー時のドキュメント タブの背景  
+![ホバー時のドキュメント タブの背景](../../extensibility/ux-guidelines/media/0303-077_backgroundtabhover.png "0303 077_BackgroundTabHover")<br />ホバー時のドキュメント タブの背景  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1785,18 +1770,18 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 | 境界線 | `Environment.FileTabHotBorder`<br />(背景と同じ色に設定します。) |
 
 #### <a name="preview-tab"></a>プレビュー タブ  
-「開」タブとも呼ばれます。 プレビュー タブは、ユーザーがソリューション エクスプローラーのツール ウィンドウで項目をクリックすると、ドキュメント タブ チャネルの右側に表示されます。 プレビュー タブはドキュメントのプレビューとして機能し、ユーザーはドキュメント タブ チャネルの左側でドキュメントを開いたままにできます。 プレビュー タブは一度に 1 つのみ開くことができます。 プレビュー タブには、開いているタブと同様に、背景と選択された状態の両方があり、アクティブな状態でフォーカスされている場合とフォーカスされていない場合があります。  
+「開」タブとも呼ばれます。プレビュー タブは、ユーザーがソリューション エクスプローラーのツール ウィンドウで項目をクリックすると、ドキュメント タブ チャネルの右側に表示されます。 プレビュー タブはドキュメントのプレビューとして機能し、ユーザーはドキュメント タブ チャネルの左側でドキュメントを開いたままにできます。 プレビュー タブは一度に 1 つのみ開くことができます。 プレビュー タブには、開いているタブと同様に、背景と選択された状態の両方があり、アクティブな状態でフォーカスされている場合とフォーカスされていない場合があります。  
 
-![[プレビュー] タブ (の赤線)](../../extensibility/ux-guidelines/media/0303-078_previewtabredline.png "0303-078_PreviewTabRedline")<br />[プレビュー] タブ (の赤線)
+![[プレビュー] タブ (の赤線)](../../extensibility/ux-guidelines/media/0303-078_previewtabredline.png "0303 078_PreviewTabRedline")<br />[プレビュー] タブ (の赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
-| ... 開作成している任意の場所をプレビューし、現在のプレビュー タブの色を一致するようにいくつかの要素を使用します。 | あらゆる種類のドキュメントまたは一時的ではない タブの... (プレビュー)。 |
+| ... 開作成している任意の場所をプレビューし、現在のプレビュー タブの色を一致するようにいくつかの要素を使用します。 | . 任意の種類のドキュメントまたは一時的ではない タブ (プレビュー)。 |
 | | ... 場合に自動的に変更しない ui シェルにテーマの更新 |
 
 **フォーカスのある、選択した [プレビュー] タブ**  
 
-![フォーカスのある、選択した [プレビュー] タブ](../../extensibility/ux-guidelines/media/0303-079_previewtabfocused.png "0303-079_PreviewTabFocused")<br />フォーカスのある、選択した [プレビュー] タブ
+![フォーカスのある、選択されたプレビュー タブ](../../extensibility/ux-guidelines/media/0303-079_previewtabfocused.png "0303 079_PreviewTabFocused")<br />フォーカスのある、選択した [プレビュー] タブ
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1807,7 +1792,7 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 
 **フォーカスされていない、選択した [プレビュー] タブ**  
 
-![フォーカスされていない、選択した [プレビュー] タブ](../../extensibility/ux-guidelines/media/0303-080_previewtabunfocused.png "0303-080_PreviewTabUnfocused")<br />フォーカスされていない、選択した [プレビュー] タブ
+![フォーカスされていない、選択されたプレビュー タブ](../../extensibility/ux-guidelines/media/0303-080_previewtabunfocused.png "0303 080_PreviewTabUnfocused")<br />フォーカスされていない、選択した [プレビュー] タブ
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1818,7 +1803,7 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 
 **背景プレビュー タブ: 既定の状態**  
 
-![既定の背景プレビュー タブ](../../extensibility/ux-guidelines/media/0303-081_previewbackgroundtab.png "0303-081_PreviewBackgroundTab")<br />既定の背景プレビュー タブ  
+![既定の背景プレビュー タブ](../../extensibility/ux-guidelines/media/0303-081_previewbackgroundtab.png "0303 081_PreviewBackgroundTab")<br />既定の背景プレビュー タブ  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1828,7 +1813,7 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 
 **背景プレビュー タブ: ホバー状態**  
 
-![ホバー時の背景プレビュー タブ](../../extensibility/ux-guidelines/media/0303-082_previewbackgroundtabhover.png "0303-082_PreviewBackgroundTabHover")<br />ホバー時の背景プレビュー タブ  
+![ホバー時の背景プレビュー タブ](../../extensibility/ux-guidelines/media/0303-082_previewbackgroundtabhover.png "0303 082_PreviewBackgroundTabHover")<br />ホバー時の背景プレビュー タブ  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1837,9 +1822,9 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 | 境界線 | `Environment.FileTabProvisionalHoverBorder`<br />(背景と同じ色に設定します。) |
 
 #### <a name="document-overflow-button"></a>ドキュメント オーバーフロー ボタン  
-ドキュメント オーバーフロー ボタンは、すべてのドキュメント タブに適した垂直スペースが現在の構成にあるかどうかに関係なく、1 つ以上のドキュメントが開いている場合に表示されます。 制御されるドキュメント オーバーフロー ドロップダウン メニュー、[コマンド メニュー バー](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandMenus)色、表示と非表示の両方の開いているすべてのドキュメント、および、すべての開いているドキュメントがタブ チャネルに表示されるかどうかに応じて、オーバーフロー グリフの変更の一覧を表示します。  
+ドキュメント オーバーフロー ボタンは、すべてのドキュメント タブに適した垂直スペースが現在の構成にあるかどうかに関係なく、1 つ以上のドキュメントが開いている場合に表示されます。 制御されるドキュメント オーバーフロー ドロップダウン メニュー、[コマンド メニュー バー](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandMenus)色、表示と非表示の両方の開いているすべてのドキュメントと、すべての開いているドキュメントがかどうかに応じて、オーバーフロー グリフの変更の一覧が表示されますタブ チャネルに表示されます。  
 
-![ドキュメント オーバーフロー ボタン (赤線)](../../extensibility/ux-guidelines/media/0303-083_overflowredline.png "0303-083_OverflowRedline")<br />ドキュメント オーバーフロー ボタン (赤線)
+![ドキュメント オーバーフロー ボタン (赤線)](../../extensibility/ux-guidelines/media/0303-083_overflowredline.png "0303 083_OverflowRedline")<br />ドキュメント オーバーフロー ボタン (赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -1848,7 +1833,7 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 
 **ドキュメント オーバーフロー ボタン: 既定の状態**  
 
-![既定のドキュメント オーバーフロー ボタン](../../extensibility/ux-guidelines/media/0303-084_overflow.png "0303-084_Overflow")<br />既定のドキュメント オーバーフロー ボタン
+![既定のドキュメント オーバーフロー ボタン](../../extensibility/ux-guidelines/media/0303-084_overflow.png "0303 084_Overflow")<br />既定のドキュメント オーバーフロー ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1858,7 +1843,7 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 
 **ドキュメント オーバーフロー ボタン: 状態をホバー**
 
-![ホバー時のドキュメント オーバーフロー ボタン](../../extensibility/ux-guidelines/media/0303-085_overflowhover.png "0303-085_OverflowHover")<br />ホバー時のドキュメント オーバーフロー ボタン
+![ホバー時のドキュメント オーバーフロー ボタン](../../extensibility/ux-guidelines/media/0303-085_overflowhover.png "0303 085_OverflowHover")<br />ホバー時のドキュメント オーバーフロー ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1868,7 +1853,7 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 
 **ドキュメント オーバーフロー ボタン: 押された状態**  
 
-![キーを押してのドキュメント オーバーフロー ボタン](../../extensibility/ux-guidelines/media/0303-086_overflowpressed.png "0303-086_OverflowPressed")<br />キーを押してのドキュメント オーバーフロー ボタン
+![ドキュメント オーバーフロー ボタンでキーを押して](../../extensibility/ux-guidelines/media/0303-086_overflowpressed.png "0303 086_OverflowPressed")<br />キーを押してのドキュメント オーバーフロー ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1879,7 +1864,7 @@ Visual Studio 環境で提供しているために、ドキュメント ウィ�
 ### <a name="tagging"></a>タグ付け  
 Visual Studio は、タグ付けをサポートしています。タグ付けにより、ユーザーは追跡のために検索可能なキーワードを宣言できます。 たとえば、プロジェクト マネージャーと開発者は、Team Foundation Server (TFS) を使用して作業項目にタグを付けることができます。 次の表に、タグ自体と、ホバー時および選択済み状態で表示される "アイコンを閉じる" グリフの両方の色の名前を示します。  
 
-![Visual Studio でのタグ付け (赤線)](../../extensibility/ux-guidelines/media/0303-176_taggingredline.png "0303-176_TaggingRedline")<br />Visual Studio でのタグ付け (赤線)  
+![Visual Studio でのタグ付け (赤線)](../../extensibility/ux-guidelines/media/0303-176_taggingredline.png "0303 176_TaggingRedline")<br />Visual Studio でのタグ付け (赤線)  
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -1889,7 +1874,7 @@ Visual Studio は、タグ付けをサポートしています。タグ付けに
 
 **タグ: 既定の状態**
 
-![既定のタグ](../../extensibility/ux-guidelines/media/0303-177_tag.png "0303-177_Tag")<br />既定のタグ
+![既定のタグ](../../extensibility/ux-guidelines/media/0303-177_tag.png "0303 177_Tag")<br />既定のタグ
 
 | 要素 | トークン名: Category.color |
 | --- | --- |  
@@ -1898,7 +1883,7 @@ Visual Studio は、タグ付けをサポートしています。タグ付けに
 
 **タグ: ホバー時の状態**  
 
-![ホバー時のタグします。](../../extensibility/ux-guidelines/media/0303-178_taghover.png "0303-178_TagHover")<br />ホバー時のタグ  
+![ホバー時のタグ](../../extensibility/ux-guidelines/media/0303-178_taghover.png "0303 178_TagHover")<br />ホバー時のタグ  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |  
@@ -1907,7 +1892,7 @@ Visual Studio は、タグ付けをサポートしています。タグ付けに
 
 **押された状態のタグ。**
 
-![押されたタグ](../../extensibility/ux-guidelines/media/0303-179_tagpressed.png "0303-179_TagPressed")<br />押されたタグ  
+![押されたタグ](../../extensibility/ux-guidelines/media/0303-179_tagpressed.png "0303 179_TagPressed")<br />押されたタグ  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1916,7 +1901,7 @@ Visual Studio は、タグ付けをサポートしています。タグ付けに
 
 **タグ: 選択された状態**
 
-![選択されたタグ](../../extensibility/ux-guidelines/media/0303-180_tagselected.png "0303-180_TagSelected")<br />選択されたタグ  
+![タグを選択](../../extensibility/ux-guidelines/media/0303-180_tagselected.png "0303 180_TagSelected")<br />選択されたタグ  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1927,7 +1912,7 @@ Visual Studio は、タグ付けをサポートしています。タグ付けに
 
 **閉じる (&times;) グリフのタグを付ける: 既定の状態**
 
-![既定の閉じる (&times;) タグ グリフ](../../extensibility/ux-guidelines/media/0303-181_tagglyph.png "0303-181_TagGlyph")<br />既定の閉じる (&times;) タグ グリフ
+![既定の閉じる (&times;) グリフのタグを付ける](../../extensibility/ux-guidelines/media/0303-181_tagglyph.png "0303 181_TagGlyph")<br />既定の閉じる (&times;) タグ グリフ
 
 | 要素 | トークン名: Category.color |
 | --- | --- |  
@@ -1936,7 +1921,7 @@ Visual Studio は、タグ付けをサポートしています。タグ付けに
 
 **閉じる (&times;) グリフのタグを付ける: 状態をホバー**
 
-![閉じる (&times;) ホバー時のグリフのタグ](../../extensibility/ux-guidelines/media/0303-182_tagglyphhover.png "0303-182_TagGlyphHover")<br />閉じる (&times;) ホバー時のグリフのタグ
+![閉じる (&times;) ホバー時のグリフのタグ](../../extensibility/ux-guidelines/media/0303-182_tagglyphhover.png "0303 182_TagGlyphHover")<br />閉じる (&times;) ホバー時のグリフのタグ
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1946,7 +1931,7 @@ Visual Studio は、タグ付けをサポートしています。タグ付けに
 
 **閉じる (&times;) グリフのタグを付ける: 押された状態**
 
-![押された閉じる (&times;) タグ グリフ](../../extensibility/ux-guidelines/media/0303-183_tagglyphpressed.png "0303-183_TagGlyphPressed")<br />押された閉じる (&times;) タグ グリフ
+![押された閉じる (&times;) グリフのタグを付ける](../../extensibility/ux-guidelines/media/0303-183_tagglyphpressed.png "0303 183_TagGlyphPressed")<br />押された閉じる (&times;) タグ グリフ
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1956,7 +1941,7 @@ Visual Studio は、タグ付けをサポートしています。タグ付けに
 
 **閉じるとタグを選択 (&times;) グリフ: 既定の状態**
 
-![既定の選択されたタグを閉じる (&times;) グリフ](../../extensibility/ux-guidelines/media/0303-184_tagselected.png "0303-184_TagSelected")<br />既定の選択されたタグを閉じる (&times;) グリフ
+![既定の選択されたタグを閉じる (&times;) グリフ](../../extensibility/ux-guidelines/media/0303-184_tagselected.png "0303 184_TagSelected")<br />既定の選択されたタグを閉じる (&times;) グリフ
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1965,7 +1950,7 @@ Visual Studio は、タグ付けをサポートしています。タグ付けに
 
 **閉じるとタグを選択 (&times;) グリフ: 状態をホバー**  
 
-![閉じるとタグを選択 (&times;) ホバー時のグリフ](../../extensibility/ux-guidelines/media/0303-185_tagselectedhover.png "0303-185_TagSelectedHover")<br />閉じるとタグを選択 (&times;) ホバー時のグリフ  
+![閉じるとタグを選択 (&times;) ホバー時のグリフ](../../extensibility/ux-guidelines/media/0303-185_tagselectedhover.png "0303 185_TagSelectedHover")<br />閉じるとタグを選択 (&times;) ホバー時のグリフ  
 
 
 | 要素 | トークン名: Category.color |
@@ -1976,7 +1961,7 @@ Visual Studio は、タグ付けをサポートしています。タグ付けに
 
 **閉じるとタグを選択 (&times;) グリフ: 押された状態**  
 
-![押されたタグを閉じると、選択されている (&times;) グリフ](../../extensibility/ux-guidelines/media/0303-186_tagselectedpressed.png "0303-186_TagSelectedPressed")<br />押されたタグを閉じると、選択されている (&times;) グリフ
+![押されたタグを閉じると、選択されている (&times;) グリフ](../../extensibility/ux-guidelines/media/0303-186_tagselectedpressed.png "0303 186_TagSelectedPressed")<br />押されたタグを閉じると、選択されている (&times;) グリフ
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1987,7 +1972,7 @@ Visual Studio は、タグ付けをサポートしています。タグ付けに
 ## <a name="tool-windows"></a>ツール ウィンドウ  
 Visual Studio 環境で提供しているために、ツール ウィンドウをレプリケートする必要はありません。 ただし、UI が Visual Studio 環境のこの部分と常に一貫性のある状態で表示されるように、ツール ウィンドウで使用する色を活用することができます。  
 
-![ツール ウィンドウ (赤線)](../../extensibility/ux-guidelines/media/0303-087_toolwindowredline.png "0303-087_ToolWindowRedline")<br />ツール ウィンドウ (赤線)
+![ツール ウィンドウ (赤線)](../../extensibility/ux-guidelines/media/0303-087_toolwindowredline.png "0303 087_ToolWindowRedline")<br />ツール ウィンドウ (赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -1996,7 +1981,7 @@ Visual Studio 環境で提供しているために、ツール ウィンドウ�
 ### <a name="tool-window-frame"></a>ツール ウィンドウ フレーム  
 Visual Studio のツール ウィンドウはさまざまなタスクに使用され、いくつかの異なる状態の 1 つで配置できます。 ツール ウィンドウが開いている場合、ドキュメント領域の 4 辺のいずれかに割り当てることができます。 ツール ウィンドウは IDE の外部でフローティングさせることもでき、ユーザーの画面内の任意の場所に再配置できます。 フローティング ウィンドウは、常に IDE の一番上に配置されます。 最後に、ツール ウィンドウはドキュメント ウィンドウとしてドッキングし、ドキュメント ウェルのタブとして表示できます。 ドキュメント ウィンドウとしてドッキングされたツール ウィンドウは、ドキュメント ウィンドウのトークン名を使用して一部の色が付けられます。  
 
-![ツール ウィンドウ フレーム (赤線)](../../extensibility/ux-guidelines/media/0303-088_toolwindowframeredline.png "0303-088_ToolWindowFrameRedline")<br />ツール ウィンドウ フレーム (赤線)
+![ツール ウィンドウ フレーム (赤線)](../../extensibility/ux-guidelines/media/0303-088_toolwindowframeredline.png "0303 088_ToolWindowFrameRedline")<br />ツール ウィンドウ フレーム (赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -2004,7 +1989,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **ドッキングされたツール ウィンドウ**  
 
-![ドッキングされたツール ウィンドウ](../../extensibility/ux-guidelines/media/0303-089_toolwindowdocked.png "0303-089_ToolWindowDocked")<br />ドッキングされたツール ウィンドウ  
+![ドッキングされたツール ウィンドウ](../../extensibility/ux-guidelines/media/0303-089_toolwindowdocked.png "0303 089_ToolWindowDocked")<br />ドッキングされたツール ウィンドウ  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2013,7 +1998,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **ツール ウィンドウのフォーカスされた浮動小数点型、**
 
-![ツール ウィンドウのフォーカスされた浮動小数点型、](../../extensibility/ux-guidelines/media/0303-090_toolwindowfocused.png "0303-090_ToolWindowFocused")<br />ツール ウィンドウのフォーカスされた浮動小数点型、
+![ツール ウィンドウのフォーカスされた浮動小数点型、](../../extensibility/ux-guidelines/media/0303-090_toolwindowfocused.png "0303 090_ToolWindowFocused")<br />ツール ウィンドウのフォーカスされた浮動小数点型、
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2022,7 +2007,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **フローティング、フォーカスされていないツール ウィンドウ**  
 
-![フローティング、フォーカスされていないツール ウィンドウ](../../extensibility/ux-guidelines/media/0303-091_toolwindowunfocused.png "0303-091_ToolWindowUnfocused")<br />フローティング、フォーカスされていないツール ウィンドウ  
+![ツール ウィンドウのフローティング、フォーカスされていない](../../extensibility/ux-guidelines/media/0303-091_toolwindowunfocused.png "0303 091_ToolWindowUnfocused")<br />フローティング、フォーカスされていないツール ウィンドウ  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2032,7 +2017,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 ### <a name="toolbox-like-windows"></a>ツールボックスのようなウィンドウ
 ツールボックスでは、Visual Studio で頻繁に使用される一般的なツール ウィンドウの 1 つです。 特別なテーマとスタイルが適用されたツリー コントロールでは基本的にすることをお勧めします。  
 
-![ツールボックスのようなウィンドウ (赤線)](../../extensibility/ux-guidelines/media/0303-189_toolboxredline.png "0303-189_ToolboxRedline")<br />ツールボックスのようなウィンドウ (赤線)
+![ツールボックスのようなウィンドウ (赤線)](../../extensibility/ux-guidelines/media/0303-189_toolboxredline.png "0303 189_ToolboxRedline")<br />ツールボックスのようなウィンドウ (赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -2040,9 +2025,9 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **[ツールボックス] ノード: 既定の状態**
 
-![既定のツールボックスの親ノード](../../extensibility/ux-guidelines/media/0303-190_toolboxparentnode.png "0303-190_ToolboxParentNode")<br />既定のツールボックスの親ノード
+![既定のツールボックスの親ノード](../../extensibility/ux-guidelines/media/0303-190_toolboxparentnode.png "0303 190_ToolboxParentNode")<br />既定のツールボックスの親ノード
 
-![既定のツールボックスの子ノード](../../extensibility/ux-guidelines/media/0303-191_toolboxchildnode.png "0303-191_ToolboxChildNode")<br />既定のツールボックスの子ノード
+![既定のツールボックスの子ノード](../../extensibility/ux-guidelines/media/0303-191_toolboxchildnode.png "0303 191_ToolboxChildNode")<br />既定のツールボックスの子ノード
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2054,7 +2039,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **ツールボックスの子ノード: 状態をホバー**
 
-![ホバー時のツールボックスの子ノード](../../extensibility/ux-guidelines/media/0303-192_toolboxchildnodehover.png "0303-192_ToolboxChildNodeHover")<br />ホバー時のツールボックスの子ノード  
+![ホバー時のツールボックスの子ノード](../../extensibility/ux-guidelines/media/0303-192_toolboxchildnodehover.png "0303 192_ToolboxChildNodeHover")<br />ホバー時のツールボックスの子ノード  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2064,9 +2049,9 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **[ツールボックス] ノードを選択しますフォーカスを得た状態。**
 
-![フォーカスのある、選択したツールボックスの親ノード](../../extensibility/ux-guidelines/media/0303-193_toolboxparentnodefocused.png "0303-193_ToolboxParentNodeFocused")<br />フォーカスのある、選択したツールボックスの親ノード  
+![フォーカスのある、選択したツールボックスの親ノード](../../extensibility/ux-guidelines/media/0303-193_toolboxparentnodefocused.png "0303 193_ToolboxParentNodeFocused")<br />フォーカスのある、選択したツールボックスの親ノード  
 
-![フォーカスのある、選択したツールボックスの子ノード](../../extensibility/ux-guidelines/media/0303-194_toolboxchildnodefocused.png "0303-194_ToolboxChildNodeFocused")<br />フォーカスのある、選択したツールボックスの子ノード
+![フォーカスのある、選択したツールボックスの子ノード](../../extensibility/ux-guidelines/media/0303-194_toolboxchildnodefocused.png "0303 194_ToolboxChildNodeFocused")<br />フォーカスのある、選択したツールボックスの子ノード
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2077,9 +2062,9 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **選択したツールボックス ノード: フォーカスされていない状態**
 
-![選択すると、フォーカスされていないツールボックスの親ノード](../../extensibility/ux-guidelines/media/0303-195_toolboxparentnodeunfocused.png "0303-195_ToolboxParentNodeUnfocused")<br />選択すると、フォーカスされていないツールボックスの親ノード  
+![選択すると、フォーカスされていないツールボックスの親ノード](../../extensibility/ux-guidelines/media/0303-195_toolboxparentnodeunfocused.png "0303 195_ToolboxParentNodeUnfocused")<br />選択すると、フォーカスされていないツールボックスの親ノード  
 
-![選択すると、フォーカスされていないツールボックスの子ノード](../../extensibility/ux-guidelines/media/0303-196_toolboxchildnodeunfocused.png "0303-196_ToolboxChildNodeUnfocused")<br />選択すると、フォーカスされていないツールボックスの子ノード  
+![選択すると、フォーカスされていないツールボックスの子ノード](../../extensibility/ux-guidelines/media/0303-196_toolboxchildnodeunfocused.png "0303 196_ToolboxChildNodeUnfocused")<br />選択すると、フォーカスされていないツールボックスの子ノード  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2091,7 +2076,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 ### <a name="tool-window-title-bar"></a>ツール ウィンドウのタイトル バー  
 タイトル バーの境界線実際の境界線のない、太い線、タイトル バーの上部にまたがってです。 トークンの名前、フォーカスされていない状態の必要はありません。  
 
-![ツール ウィンドウのタイトル バー (赤線)](../../extensibility/ux-guidelines/media/0303-092_toolwindowtitlebarredline.png "0303-092_ToolWindowTitleBarRedline")<br />ツール ウィンドウのタイトル バー (赤線)
+![ツール ウィンドウのタイトル バー (赤線)](../../extensibility/ux-guidelines/media/0303-092_toolwindowtitlebarredline.png "0303 092_ToolWindowTitleBarRedline")<br />ツール ウィンドウのタイトル バー (赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -2099,7 +2084,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **フォーカスされたタイトル バー**
 
-![フォーカスされたタイトル バー](../../extensibility/ux-guidelines/media/0303-093_titlebarfocused.png "0303-093_TitleBarFocused")<br />フォーカスされたタイトル バー
+![フォーカスされたタイトル バー](../../extensibility/ux-guidelines/media/0303-093_titlebarfocused.png "0303 093_TitleBarFocused")<br />フォーカスされたタイトル バー
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2110,7 +2095,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **フォーカスされていないタイトル バー**  
 
-![フォーカスされていないタイトル バー](../../extensibility/ux-guidelines/media/0303-094_titlebarunfocused.png "0303-094_TitleBarUnfocused")<br />フォーカスされていないタイトル バー
+![フォーカスされていないタイトル バー](../../extensibility/ux-guidelines/media/0303-094_titlebarunfocused.png "0303 094_TitleBarUnfocused")<br />フォーカスされていないタイトル バー
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2120,7 +2105,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 | ドラッグ ハンドル | `Environment.TitleBarDragHandle` |
 
 #### <a name="tool-window-title-bar-buttons"></a>ツール ウィンドウのタイトル バー ボタン  
-![タイトル バー ボタン (赤線)](../../extensibility/ux-guidelines/media/0303-095_titlebarbuttonredline.png "0303-095_TitleBarButtonRedline")<br />タイトル バー ボタン (赤線)  
+![タイトル バー ボタン (赤線)](../../extensibility/ux-guidelines/media/0303-095_titlebarbuttonredline.png "0303 095_TitleBarButtonRedline")<br />タイトル バー ボタン (赤線)  
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -2129,7 +2114,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **フォーカスされたタイトル バーのボタン: 既定の状態**
 
-![既定では、フォーカスされたタイトル バー ボタン](../../extensibility/ux-guidelines/media/0303-096_titlebarbuttonfocused.png "0303-096_TitleBarButtonFocused")<br />既定では、フォーカスされたタイトル バー ボタン  
+![既定の特定のタイトル バー ボタン](../../extensibility/ux-guidelines/media/0303-096_titlebarbuttonfocused.png "0303 096_TitleBarButtonFocused")<br />既定では、フォーカスされたタイトル バー ボタン  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2139,7 +2124,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **フォーカスされていないタイトル バーのボタン: 既定の状態**
 
-![既定では、フォーカスされていないタイトル バー ボタン](../../extensibility/ux-guidelines/media/0303-097_titlebarbuttonunfocused.png "0303-097_TitleBarButtonUnfocused")<br />既定では、フォーカスされていないタイトル バー ボタン    
+![既定値、フォーカスされていないタイトル バー ボタン](../../extensibility/ux-guidelines/media/0303-097_titlebarbuttonunfocused.png "0303 097_TitleBarButtonUnfocused")<br />既定では、フォーカスされていないタイトル バー ボタン    
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2149,7 +2134,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **フォーカスされたタイトル バーのボタン: 状態をホバー**  
 
-![ホバー時のフォーカスされたタイトル バー ボタン](../../extensibility/ux-guidelines/media/0303-098_titlebarbuttonfocusedhover.png "0303-098_TitleBarButtonFocusedHover")<br />ホバー時のフォーカスされたタイトル バー ボタン
+![タイトル バー ボタンをホバー時のフォーカスされた](../../extensibility/ux-guidelines/media/0303-098_titlebarbuttonfocusedhover.png "0303 098_TitleBarButtonFocusedHover")<br />ホバー時のフォーカスされたタイトル バー ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2159,7 +2144,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **フォーカスされていないタイトル バーのボタン: 状態をホバー**  
 
-![ホバー時のフォーカスされていないタイトル バー ボタン](../../extensibility/ux-guidelines/media/0303-099_titlebarbuttonunfocusedhover.png "0303-099_TitleBarButtonUnfocusedHover")<br />ホバー時のフォーカスされていないタイトル バー ボタン
+![ホバー時のフォーカスされていないタイトル バー ボタン](../../extensibility/ux-guidelines/media/0303-099_titlebarbuttonunfocusedhover.png "0303 099_TitleBarButtonUnfocusedHover")<br />ホバー時のフォーカスされていないタイトル バー ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2169,7 +2154,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **フォーカスされたタイトル バーのボタン: 押された状態**
 
-![キーを押してのフォーカスされたタイトル バー ボタン](../../extensibility/ux-guidelines/media/0303-100_titlebarbuttonfocusedpressed.png "0303-100_TitleBarButtonFocusedPressed")<br />キーを押してのフォーカスされたタイトル バー ボタン
+![タイトル バー ボタンを押してに重点を置いて](../../extensibility/ux-guidelines/media/0303-100_titlebarbuttonfocusedpressed.png "0303 100_TitleBarButtonFocusedPressed")<br />キーを押してのフォーカスされたタイトル バー ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2179,7 +2164,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **フォーカスされていないタイトル バーのボタン: 押された状態**
 
-![キーを押してのフォーカスされていないタイトル バー ボタン](../../extensibility/ux-guidelines/media/0303-101_titlebarbuttonunfocusedpressed.png "0303-101_TitleBarButtonUnfocusedPressed")<br />キーを押してのフォーカスされていないタイトル バー ボタン  
+![キーを押してのフォーカスされていないタイトル バー ボタン](../../extensibility/ux-guidelines/media/0303-101_titlebarbuttonunfocusedpressed.png "0303 101_TitleBarButtonUnfocusedPressed")<br />キーを押してのフォーカスされていないタイトル バー ボタン  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2188,7 +2173,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 | 境界線 | `Environment.ToolWindowButtonDownBorder` |
 
 ### <a name="tool-window-tabs"></a>ツール ウィンドウ タブ  
-![ツール ウィンドウ タブ (の赤線)](../../extensibility/ux-guidelines/media/0303-102_toolwindowtabredline.png "0303-102_ToolWindowTabRedline")<br />ツール ウィンドウ タブ (の赤線)
+![ツール ウィンドウ タブ (の赤線)](../../extensibility/ux-guidelines/media/0303-102_toolwindowtabredline.png "0303 102_ToolWindowTabRedline")<br />ツール ウィンドウ タブ (の赤線)
 
 | 使用しています. | 使用しない. |
 | --- | --- |
@@ -2196,7 +2181,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **選択した、フォーカスのあるツール ウィンドウ タブ**
 
-![選択した、フォーカスのあるツール ウィンドウ タブ](../../extensibility/ux-guidelines/media/0303-103_toolwindowtabfocused.png "0303-103_ToolWindowTabFocused")<br />選択され、フォーカスされたツール ウィンドウ タブ
+![選択した場合、フォーカスされたツール ウィンドウ タブ](../../extensibility/ux-guidelines/media/0303-103_toolwindowtabfocused.png "0303 103_ToolWindowTabFocused")<br />選択され、フォーカスされたツール ウィンドウ タブ
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2206,7 +2191,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **選択した、フォーカスされていないツール ウィンドウ タブ**  
 
-![選択した、フォーカスされていないツール ウィンドウ タブ](../../extensibility/ux-guidelines/media/0303-104_toolwindowtabunfocused.png "0303-104_ToolWindowTabUnfocused")<br />選択され、フォーカスされていないツール ウィンドウ タブ
+![選択した、フォーカスされていないツール ウィンドウ タブ](../../extensibility/ux-guidelines/media/0303-104_toolwindowtabunfocused.png "0303 104_ToolWindowTabUnfocused")<br />選択され、フォーカスされていないツール ウィンドウ タブ
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2216,7 +2201,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **背景ツール ウィンドウ タブ: 既定の状態**
 
-![既定の背景ツール ウィンドウ タブ](../../extensibility/ux-guidelines/media/0303-105_toolwindowbackgroundtab.png "0303-105_ToolWindowBackgroundTab")<br />既定の背景ツール ウィンドウ タブ  
+![既定の背景ツール ウィンドウ タブ](../../extensibility/ux-guidelines/media/0303-105_toolwindowbackgroundtab.png "0303 105_ToolWindowBackgroundTab")<br />既定の背景ツール ウィンドウ タブ  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2226,7 +2211,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **背景ツール ウィンドウ タブ: ホバー状態**
 
-![ホバー時の背景ツール ウィンドウ タブ](../../extensibility/ux-guidelines/media/0303-106_toolwindowbackgroundtabhover.png "0303-106_ToolWindowBackgroundTabHover")<br />ホバー時の背景ツール ウィンドウ タブ
+![ホバー時の背景ツール ウィンドウ タブ](../../extensibility/ux-guidelines/media/0303-106_toolwindowbackgroundtabhover.png "0303 106_ToolWindowBackgroundTabHover")<br />ホバー時の背景ツール ウィンドウ タブ
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2244,7 +2229,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **自動非表示タブ: 既定の状態**  
 
-![既定の自動非表示タブ](../../extensibility/ux-guidelines/media/0303-108_autohidetab.png "0303-108_AutoHideTab")<br />既定の自動非表示タブ
+![既定の自動非表示タブ](../../extensibility/ux-guidelines/media/0303-108_autohidetab.png "0303 108_AutoHideTab")<br />既定の自動非表示タブ
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -2254,11 +2239,10 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 **自動非表示タブ: ホバー状態**
 
-![ホバー時の自動非表示タブ](../../extensibility/ux-guidelines/media/0303-109_autohidetabhover.png "0303-109_AutoHideTabHover")<br />ホバー時の [自動非表示] タブ  
+![ホバー時の自動非表示タブ](../../extensibility/ux-guidelines/media/0303-109_autohidetabhover.png "0303 109_AutoHideTabHover")<br />ホバー時の [自動非表示] タブ  
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
 | 背景 | `Environment.AutoHideTabMouseOverBackgroundBegin`<br />(グラデーション境界は、このトークンのテーマの UI では使用されません。) |
 | 前景 (テキスト) | `Environment.AutoHideTabMouseOverText` |
 | 境界線 | `Environment.AutoHideTabMouseOverBorder` |
-

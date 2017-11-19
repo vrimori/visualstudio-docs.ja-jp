@@ -1,58 +1,60 @@
 ---
-title: "方法 : アクセス許可が制限されたドキュメントでの分離コードの実行を許可する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "コード [Visual Studio での Office 開発], 実行 (制限されたドキュメントで分離コードを)"
-  - "ドキュメント [Visual Studio での Office 開発], 制限されたアクセス許可"
-  - "Information Rights Management [Visual Studio での Office 開発]"
-  - "IRM [Visual Studio での Office 開発]"
-  - "Office ドキュメント [Visual Studio での Office 開発, 制限されたアクセス許可"
-  - "アクセス許可 [Visual Studio での Office 開発]"
+title: "方法: アクセス許可の制限のドキュメントの背後に実行するようにコードを許可 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Information Rights Management [Office development in Visual Studio]
+- permissions [Office development in Visual Studio]
+- IRM [Office development in Visual Studio]
+- code [Office development in Visual Studio], running behind restricted documents
+- documents [Office development in Visual Studio], restricted permissions
+- Office documents [Office development in Visual Studio, restricted permissions
 ms.assetid: d037eae5-cf83-4be0-85ba-05e9f7d570e1
-caps.latest.revision: 27
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 26
+caps.latest.revision: "27"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 1d5ab02ea2eb2d34a82607b8f7fd4fbf3f02dd76
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : アクセス許可が制限されたドキュメントでの分離コードの実行を許可する
-  Microsoft Office の Information Rights Management \(IRM\) 機能を使用して、文書やブックに対するアクセス許可を制限できます。  既定では、制限された Microsoft Office Word 文書や Microsoft Office Excel ブックの分離コードは実行できません。  この既定値を変更すると、マネージ コード拡張機能がオブジェクト モデルにアクセスできるようになり、ソリューションが動作します。  
+# <a name="how-to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>方法 : アクセス許可が制限されたドキュメントでの分離コードの実行を許可する
+  Microsoft Office の Information Rights Management (IRM) 機能を使用して、文書またはブックへのアクセス許可を制限することができます。 既定では、制限された Microsoft Office Word 文書または Microsoft Office Excel ブックのコードは実行できません。 既定値を変更するには、オブジェクト モデルにアクセスできる、マネージ コード拡張機能と、ソリューションが動作できるようにします。  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- アクセス許可設定を変更するには、ドキュメントまたはブックの作成者であるか、フル コントロール アクセスを保持している必要があります。  
+ 文書またはブックの作成者またはフル コントロール アクセス許可設定を変更できる必要があります。  
   
-### アクセス許可が制限されたドキュメントでの分離コードの実行を許可するには  
+### <a name="to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>ドキュメントの背後にあるアクセス許可の制限を実行するコードを許可するには  
   
-1.  Word または Excel で文書またはブックを開きます。  
+1.  Word または Excel の文書またはブックを開きます。  
   
-2.  **\[ファイル\]** のタブをクリックし、**\[配布準備\]**をポイントし、**\[アクセスの制限\]**をポイントし、**\[アクセス制限あり\]**をクリックします。  
+2.  をクリックして、**ファイル** タブで、 をポイント**準備**、 をポイント**を制限するアクセス許可**、順にクリック**制限付きアクセス**です。  
   
     > [!NOTE]  
-    >  初めて使用する場合は、Windows Rights Management クライアントをインストールするようにメッセージが表示されます。  クライアントをインストールした後で、手順を繰り返すことが必要になる場合があります。  
+    >  初めて使用する場合は、Windows Rights Management クライアントのインストールに求められます。 クライアントをインストールした後は、同じ手順を繰り返す必要があります。  
   
-3.  **\[アクセス権\]**  ダイアログ ボックスで、**\[このドキュメントへのアクセスを制限する\]** を選択し、**\[その他のオプション\]** をクリックします。  
+3.  **権限**ダイアログ ボックスで、**この文書へのアクセスを制限する**、順にクリック**オプションより**です。  
   
-4.  **\[ユーザーの追加権限\]** で、**\[プログラムを使ってコンテンツにアクセスする\]** を選択します。  
+4.  **ユーザーの追加権限****コンテンツをプログラムでアクセス**です。  
   
- Word または Excel が、プログラムを利用してオブジェクト モデルにアクセスできるようになります。  
+ Word または Excel オブジェクト モデルへのプログラムによるアクセスが許可されます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Information Rights Management とマネージ コード拡張機能の概要](../vsto/information-rights-management-and-managed-code-extensions-overview.md)   
- [ドキュメント レベルのソリューションにおけるドキュメントの保護](../vsto/document-protection-in-document-level-solutions.md)   
+ [ドキュメント レベルのソリューションでドキュメントの保護](../vsto/document-protection-in-document-level-solutions.md)   
  [Office ドキュメントのパスワード保護](../vsto/password-protection-on-office-documents.md)   
- [Office ソリューションのデザインと作成](../vsto/designing-and-creating-office-solutions.md)   
+ [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)   
  [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)  
   

@@ -1,36 +1,38 @@
 ---
-title: "入れ子になったプロジェクトのアンロードと再ロードに関する考慮事項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "入れ子になったプロジェクトをアンロードして再読み込みします。"
-  - "プロジェクト [Visual Studio SDK] アンロード中で入れ子になったの再読み込み"
+title: "入れ子にプロジェクトのアンロードと再読み込みに関する考慮事項 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- nested projects, unloading and reloading
+- projects [Visual Studio SDK], unloading and reloading nested
 ms.assetid: 06c3427e-c874-45b1-b9af-f68610ed016c
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: cf34a3fe708a6ecab200262224da395b9fa37ecb
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 入れ子になったプロジェクトのアンロードと再ロードに関する考慮事項
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-入れ子になったプロジェクトを実行するとプロジェクトのアンロードと再読み込みすると追加の手順を実行する必要があります。  正しくソリューションのイベントのリスナーに通知するために正しく `OnBeforeUnloadProject` と `OnAfterLoadProject` のイベントを発生させる必要があります。  
+# <a name="considerations-for-unloading-and-reloading-nested-projects"></a>入れ子になったプロジェクトのアンロードと再読み込みに関する考慮事項
+入れ子になったプロジェクトの種類を実装するときに、アンロード、プロジェクトを再読み込みすると、追加の手順を行う必要があります。 正しくソリューション イベントをリスナーに通知を正しく上げる必要があります、`OnBeforeUnloadProject`と`OnAfterLoadProject`イベント。  
   
- このようにこれらのイベントを発生させる必要があるのは1 から SCC `Get` 操作が \(SCC\) ソース・コード管理にサーバーから項目を削除し新しいものとして追加しないことです。  この場合新しいファイルが異なる場合 SCC から読み込まれすべてのファイルのアンロードと再読み込みする必要があります。  SCC は `ReloadItem` を呼び出します。  その呼び出しの実装ではプロジェクトを削除し`OnBeforeUnloadProject` と `OnAfterLoadProject` を呼び出すに `IVsFireSolutionEvents` を実行してから再作成することです。  この実装を行うとSCC はプロジェクトを一時的に削除され再度追加されたことを通知を受け取ります。  したがってSCC はプロジェクトがサーバーから実際に削除され再度追加されているプロジェクトについては動作しません。  
+ この方法でこれらのイベントを発生させる必要があります理由の 1 つは、ソース コード管理 (SCC) をサーバーからアイテムを削除し、追加として新しいものがある場合をしないようにする、 `Get` SCC から操作します。 この場合は、新しいファイルを SCC から読み込むされをアンロードし、それらが異なる場合に、すべてのファイルを再読み込みする必要があります。 SCC 呼び出し`ReloadItem`です。 その呼び出しの実装が、プロジェクトを削除して再作成し直して実装することによって、`IVsFireSolutionEvents`を呼び出す`OnBeforeUnloadProject`と`OnAfterLoadProject`です。 この実装を実行するときに、SCC は、プロジェクトの削除し、再追加が一時的に通知されます。 したがって、SCC は動作しませんプロジェクトの場合と、プロジェクトが実際には、サーバーから削除してから再び追加。  
   
-## プロジェクトを再読み込みする  
- 入れ子になったプロジェクトの再読み込みをサポートするには<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.ReloadItem%2A> のメソッドを実装します。  `ReloadItem` の実装では入れ子になったプロジェクトを閉じてから再作成します。  
+## <a name="reloading-projects"></a>プロジェクトを再読み込み  
+ 実装する入れ子になったプロジェクトが再読み込みをサポートする、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.ReloadItem%2A>メソッドです。 実装で`ReloadItem`、再作成して、入れ子になったプロジェクトを閉じます。  
   
- 通常プロジェクトが再読み込みされる場合に<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnBeforeUnloadProject%2A> と `M:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterLoadProject(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy)` のイベントを発生させます。  ただし削除され再読み込みされたプロジェクトの場合親プロジェクトはIDE ではなくプロセスを開始します。  親プロジェクトをソリューション内のイベントは発生せずIDE のプロセスの初期化に関する情報がないためイベントは発生しません。  
+ 通常、プロジェクトが再読み込みされるときに、IDE を発生させる、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnBeforeUnloadProject%2A>と`M:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterLoadProject(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy)`イベント。 ただし、入れ子になったプロジェクトは削除され、再読み込みでは、親プロジェクトは、プロセスでは、IDE ではないを開始します。 親プロジェクトはソリューションのイベントを発生させません IDE には、プロセスの初期化に関する情報がないため、イベントは発生しません。  
   
- このプロセスは<xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents> インターフェイスの親プロジェクトでは `QueryInterface`<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution> のインターフェイスから処理します。  `IVsFireSolutionEvents` 入れ子に したプロジェクトをアンロードするにはIDE を `OnBeforeUnloadProject` のイベントを発生させる指示すると同じプロジェクトを再読み込みするに `OnAfterLoadProject` の関数がイベントを発生させます。  
+ このプロセスでは、親プロジェクト呼び出しを処理するために`QueryInterface`上、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents>オフ インターフェイス、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution>インターフェイスです。 `IVsFireSolutionEvents`発生するための IDE に指示する関数、`OnBeforeUnloadProject`を入れ子になったプロジェクトをアンロードし、発生するイベント、`OnAfterLoadProject`同じプロジェクトの再読み込みするイベントです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3>   
- [入れ子のプロジェクト](../../extensibility/internals/nesting-projects.md)
+ [入れ子になったプロジェクト](../../extensibility/internals/nesting-projects.md)

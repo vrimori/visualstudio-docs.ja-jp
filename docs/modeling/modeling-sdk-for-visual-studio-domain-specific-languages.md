@@ -1,43 +1,28 @@
 ---
-title: "Modeling SDK for Visual Studio - ドメイン固有言語 |Microsoft ドキュメント"
+title: "Visual Studio - ドメイン固有言語のモデリング SDK |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-techdebt
+ms.technology: vs-devops-techdebt
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Domain-Specific Language Tools
 - Domain-Specific Language
 ms.assetid: 17a531e2-1964-4a9d-84fd-6fb1b4aee662
-caps.latest.revision: 77
+caps.latest.revision: "77"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3d07f82ea737449fee6dfa04a61e195654ba35fa
-ms.openlocfilehash: 86e70eb82260cdced1ee4d74965832fbc7fa56ab
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 48cb7e5a274092a3ed82d2e41137633d12c3be01
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>Modeling SDK for Visual Studio - ドメイン固有言語
-Modeling SDK for を使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]に統合できる強力なモデルに基づく開発ツールを作成できる[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 同様に、1 つ以上のモデル定義を作成して、一連のツールと統合できます。  
+Modeling SDK for を使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]に統合できる強力なモデル ベースの開発ツールを作成する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 同様に、1 つ以上のモデル定義を作成して、一連のツールと統合できます。  
   
  MSDK の中核は、業務分野の概念を表すために作成するモデルの定義です。 図式ビュー、コードおよびその他の成果物の生成機能、モデルを変換するためのコマンド、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のコードやその他のオブジェクトとの対話機能などのさまざまなツールでモデルを囲むことができます。 モデルを開発するとき、他のモデルやツールと組み合わせて、開発の中央に配置される強力なツール セットを形成することができます。  
   
@@ -59,7 +44,7 @@ Modeling SDK for を使用して、[!INCLUDE[vsprvs](../code-quality/includes/vs
  
  [関連するブログの投稿](https://blogs.msdn.microsoft.com/visualstudioalm/tag/code-index/)
   
- 高度なテクニックとトラブルシューティングに関するガイダンスについては、次を参照してください。 [Visual Studio DSL >/documents/report1.rdl」のモデリング ツールの機能拡張フォーラム](http://go.microsoft.com/fwlink/?LinkID=186074)します。  
+ 高度なテクニックとトラブルシューティングに関するガイダンスについては、次を参照してください。[モデリング ツールの機能拡張 (&)、Visual Studio DSL フォーラム](http://go.microsoft.com/fwlink/?LinkID=186074)です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ドメイン固有言語の概要](../modeling/getting-started-with-domain-specific-languages.md)  
@@ -93,4 +78,3 @@ Modeling SDK for を使用して、[!INCLUDE[vsprvs](../code-quality/includes/vs
  [方法: ドメイン固有言語を新バージョンに移行する](../modeling/how-to-migrate-a-domain-specific-language-to-a-new-version.md)  
   
  [Modeling SDK for Visual Studio の API リファレンス](../modeling/api-reference-for-modeling-sdk-for-visual-studio.md)
-

@@ -1,42 +1,40 @@
 ---
-title: "チュートリアル : デザイン時のデバッグ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ブレークポイント, デザイン時デバッグ"
-  - "デバッグ [Visual Studio], デザイン時"
-  - "デザイン時デバッグ"
-  - "イミディエイト ウィンドウ, デザイン時デバッグ"
+title: "チュートリアル: デザイン時のデバッグ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- debugging [Visual Studio], design-time
+- breakpoints, design-time debugging
+- Immediate window, design-time debugging
+- design-time debugging
 ms.assetid: 35bfdd2c-6f60-4be1-ba9d-55fce70ee4d8
-caps.latest.revision: 20
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 1d497535f8511c3f9e6c55e80157507ed36184b0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# チュートリアル : デザイン時のデバッグ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Visual Studio の **\[イミディエイト\]** ウィンドウを使用すると、アプリケーションを実行しなくても、関数やサブルーチンを実行できます。  関数またはサブルーチンにブレークポイントが含まれているとき、適切なポイントで実行を中断します。  デバッガー ウィンドウを使用して、プログラムの状態を確認できます。  この機能は、デザイン時のデバッグと呼ばれます。  
+# <a name="walkthrough-debugging-at-design-time"></a>チュートリアル : デザイン時のデバッグ
+Visual Studio を使用することができます**イミディ エイト**ウィンドウで、アプリケーションが実行されていないときに、関数またはサブルーチンを実行します。 関数またはサブルーチンにブレークポイントが含まれているとき、適切なポイントで実行を中断します。 デバッガー ウィンドウを使用して、プログラムの状態を確認できます。 この機能は、デザイン時のデバッグと呼ばれます。  
   
  次に、この機能の操作手順を説明します。  
   
-### \[イミディエイト\] ウィンドウからブレークポイントにヒットするには  
+### <a name="to-hit-breakpoints-from-the-immediate-window"></a>[イミディエイト] ウィンドウからブレークポイントにヒットするには  
   
 1.  次のコードを Visual Basic コンソール アプリケーションに貼り付けます。  
   
@@ -64,22 +62,22 @@ Visual Studio の **\[イミディエイト\]** ウィンドウを使用する�
   
 2.  `s="Add BreakPoint Here"` という行にブレークポイントを設定します。  
   
-3.  **\[イミディエイト\]** ウィンドウに「`?MyFunction<enter>`」と入力します。  
+3.  次のように入力、**イミディ エイト**ウィンドウ。`?MyFunction<enter>`  
   
 4.  ブレークポイントにヒットしたことと、呼び出し履歴が正確であることを確認します。  
   
-5.  **\[デバッグ\]** の **\[続行\]** をクリックし、まだデザイン モードであることを確認します。  
+5.  **デバッグ** メニューのをクリックして**続行**、まだデザイン モードであることを確認してください。  
   
-6.  **\[イミディエイト\]** ウィンドウに「`?MyFunction<enter>`」と入力します。  
+6.  次のように入力、**イミディ エイト**ウィンドウ。`?MyFunction<enter>`  
   
-7.  **\[イミディエイト\]** ウィンドウに「`?MySub<enter>`」と入力します。  
+7.  次のように入力、**イミディ エイト**ウィンドウ。`?MySub<enter>`  
   
-8.  ブレークポイントにヒットすることを確認し、**\[ローカル\]** ウィンドウで静的変数 `i` の値を調べます。  3 という値が表示されます。  
+8.  ブレークポイントにヒットし、静的変数の値を調べることを確認`i`で、**ローカル**ウィンドウです。 3 という値が表示されます。  
   
 9. 呼び出し履歴が正確であることを確認します。  
   
-10. **\[デバッグ\]** の **\[続行\]** をクリックし、まだデザイン モードであることを確認します。  
+10. **デバッグ** メニューのをクリックして**続行**、まだデザイン モードであることを確認してください。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [デバッガーの基本事項](../debugger/debugger-basics.md)

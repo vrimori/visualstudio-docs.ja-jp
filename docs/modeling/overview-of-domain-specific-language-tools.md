@@ -1,45 +1,46 @@
 ---
-title: "ドメイン固有言語ツールの概要 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ドメイン固有言語"
+title: "ドメイン固有言語ツールの概要 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Domain-Specific Language
 ms.assetid: 50d93ea2-8c88-4522-853b-40ab194953db
-caps.latest.revision: 54
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 54
+caps.latest.revision: "54"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 20d4222f96958a730c563ff9bc84b2b5d0b08538
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# ドメイン固有言語ツールの概要
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-ユーザーは言語に基づいてモデルを作成[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]するために必要となるホスト ドメイン固有言語をデザインしすべてを生成できるツール ドメイン固有言語 （DSL ツール）。  
+# <a name="overview-of-domain-specific-language-tools"></a>ドメイン固有言語ツールの概要
+ホストされるドメイン固有言語ツール (DSL ツール)[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]では、ドメイン固有言語の設計および言語に基づくモデルを作成するためのユーザーが必要なすべてのものを生成します。  
   
- 次のツールはDSL ツールに含まれています :  
+ DSL ツールでは、次のツールが含まれています。  
   
--   役立つ複数のソリューション テンプレートを使用してプロジェクト ウィザード ドメイン固有言語の開発を開始します。  
+-   ドメイン固有言語の開発を開始するために別のソリューション テンプレートを使用するプロジェクト ウィザード。  
   
--   ドメイン固有言語定義を作成および編集するためのグラフィカル デザイナー。  
+-   作成して、ドメイン固有言語定義を編集するためのグラフィカルなデザイナーです。  
   
--   ドメイン固有言語定義が正しい形式であることを検証するエンジンは問題が発生した場合エラーと警告が表示されます。  
+-   ドメイン固有言語の定義が整形式では、し、問題がある場合に、エラーおよび警告を表示する検証エンジン。  
   
--   入力としてドメイン固有言語定義を受け取り出力としてソース・コードを生成するコード ジェネレーター。  
+-   入力として、ドメイン固有言語定義を受け取り、出力としてソース コードを生成するコード ジェネレーター。  
   
-## DSL ツールのソリューションには  
- デザイナーのドメイン固有のウィザードは次のソリューション テンプレートが用意されています :  
+## <a name="the-dsl-tools-solution"></a>DSL ツールのソリューション  
+ ドメイン固有のデザイナーのウィザードには、次のソリューション テンプレートが用意されています。  
   
--   タスクのフロー  
+-   タスク フロー  
   
 -   クラス ダイアグラム  
   
 -   最小限の言語  
   
--   構成モデル  
+-   コンポーネント モデル  
   
 -   最小限の WPF  
   
@@ -47,34 +48,34 @@ caps.handback.revision: 54
   
 -   DSL ライブラリ  
   
- 詳細については、「[ドメイン固有言語ソリューション テンプレートの選択](../modeling/choosing-a-domain-specific-language-solution-template.md)」を参照してください。  
+ 詳細については、次を参照してください。[ドメイン固有言語ソリューション テンプレートを選択する](../modeling/choosing-a-domain-specific-language-solution-template.md)です。  
   
- このウィザードでは次の [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトを含むソリューションを作成します :  
+ ウィザードで作成、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]次のプロジェクトが含まれるソリューション。  
   
 -   Dsl  
   
-     Dsl プロジェクトはドメイン固有言語および編集し処理ツールを定義します。  
+     Dsl プロジェクトでは、ドメイン固有言語と、編集および処理ツールを定義します。  
   
 -   **DslPackage**  
   
-     DslPackage プロジェクトは言語ツールが [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] との統合方法を決定します。  
+     言語のツールを統合する方法を決定 DslPackage プロジェクト[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
   
-## DSL はグラフィカル インターフェイスに Tools  
- ドメイン固有言語の要素および関係を追加するにはDSL ツールのグラフィカル インターフェイスを使用できます。  要素を追加した後図形に割り当てること色定義をカスタマイズしデコレータを追加すると外観を指定できます。  またツールボックスに要素を追加します。  
+## <a name="the-dsl-tools-graphical-interface"></a>DSL ツールのグラフィカル インターフェイス  
+ DSL ツールのグラフィカル インターフェイスを使用するには、ドメイン固有言語に要素および関係を追加します。 要素を追加した後は、図形にマッピングすること、色のカスタマイズ、およびデコレーターを追加することによって、外観を定義できます。 ツールボックスに要素を追加することもできます。  
   
-## DSL ツールの検証  
- Dsl はドメイン モデルがコードを生成するための基本的な要件を満たしていることを確認する検証の 1 レベルを示します。  通常独自のドメイン固有言語を作成する場合はビジネス ロジック ルールを表現する独自の検証を追加します。  カスタム検証の詳細については[ドメイン固有言語における検証](../modeling/validation-in-a-domain-specific-language.md) を参照してください。  
+## <a name="validation-in-dsl-tools"></a>DSL ツールでの検証  
+ Dsl は、ドメイン モデルがコード生成のための基本的な要件を満たしているかどうかを確認する検証の 1 つのレベルを提供します。 通常、独自のドメイン固有言語を作成するときに、ビジネス ロジック ルールを表現する独自の検証を追加します。 カスタム検証の詳細については、次を参照してください。[ドメイン固有言語で検証](../modeling/validation-in-a-domain-specific-language.md)です。  
   
- これはデザイン時にドメイン固有言語を頻繁に検証することをお勧めします。  ドメイン固有言語に検証エラーがある場合ソース・コードを生成できません。  テンプレートからソース・コードを生成するプロセスはソリューション エクスプローラーのツール バーの \[ENT0ENT\] をクリックして行われます。  言語定義を変更するたびに **すべてのテンプレートの変換 \(&T\)** があります。  詳細については、「[方法: ドメイン固有言語ソリューションを作成する](../modeling/how-to-create-a-domain-specific-language-solution.md)」を参照してください。  
+ 設計する際に多くの場合、ドメイン固有言語を検証することをお勧めします。 ドメイン固有言語には、検証エラーが発生した場合は、ソース コードを生成できません。 クリックして、テンプレートからソース コードを生成するプロセスが実行される**すべてのテンプレートの変換**ソリューション エクスプ ローラーのツールバーにします。 言語の定義を変更するたびにも必ず**すべてのテンプレートの変換**です。 詳細については、次を参照してください。[する方法: ドメイン固有言語ソリューションを作成する](../modeling/how-to-create-a-domain-specific-language-solution.md)です。  
   
-## DSL ツールのカスタマイズ  
- モデルの動作を調整し言語上の制約を定義する追加のコードを記述できます。  必要に応じてテキスト テンプレートの変更によって重要な変更を加えることができます。  
+## <a name="customization-of-dsl-tools"></a>DSL ツールのカスタマイズ  
+ モデルの動作を設定し直すと、言語で制約を定義するための追加のコードを提供できます。 必要な場合は、テキスト テンプレートを変更することで大幅な変更をすることができます。  
   
-## DSL のソリューションの配置  
- DSL ツールは [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でホスティングパッケージを生成します。  パッケージはツールボックスDSL のエクスプローラーおよびユーザーがドメイン固有言語を使用してモデルを作成できる他の UI 要素を表示します。  
+## <a name="distributing-your-dsl-solution"></a>DSL ソリューションを配布します。  
+ DSL ツールでホストされているパッケージを生成する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 パッケージには、ツールボックス、DSL のエクスプ ローラーでは、およびその他のユーザーが、ドメイン固有言語を使用してモデルを作成できる UI 要素が表示されます。  
   
- DSL を示して [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のソリューションをビルドして実行し[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の 2 番目のインスタンスはドメイン固有言語の言語のユーザーにどのように表示されるかを示します。  すべてが正しく動作することを確認したらDslPackage プロジェクトのビルド フォルダーにある `.vsix` ファイルを配布できます。  このファイルには他のコンピューターの [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の拡張として DSL のインストールに使用できます。  詳細については、「[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)」を参照してください。  
+ ビルドおよび DSL ツールのソリューションを実行するときに[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、2 番目のインスタンスの[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ドメイン固有言語が言語のユーザーに表示する方法を示しています。 すべてが正常に動作することを確認する後に割り当てることができます、`.vsix`ファイル DslPackage プロジェクトのビルド フォルダーに表示されます。 このファイルを使用して、インストールとして DSL、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]他のコンピューター上の拡張機能です。  詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [実験用インスタンス](../extensibility/the-experimental-instance.md)   
- [Domain\-Specific Language Tools Glossary](http://msdn.microsoft.com/ja-jp/ca5e84cb-a315-465c-be24-76aa3df276aa)
+ [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)

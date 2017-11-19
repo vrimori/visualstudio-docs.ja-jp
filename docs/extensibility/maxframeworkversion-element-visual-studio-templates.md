@@ -1,58 +1,63 @@
 ---
-title: "MaxFrameworkVersion 要素 (Visual Studio テンプレート) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "<MaxFrameworkVersion> 要素 (Visual Studio テンプレート)"
-  - "MaxFrameworkVersion 要素 (Visual Studio テンプレート)"
+title: "MaxFrameworkVersion 要素 (Visual Studio テンプレート) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <MaxFrameworkVersion> Element (Visual Studio Templates)
+- MaxFrameworkVersion Element (Visual Studio Templates)
 ms.assetid: f732a9d3-fc29-405b-9298-01ea83fc58b8
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: da1b30274254c5c1dd81ad20dd64e8749672f96e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# MaxFrameworkVersion 要素 (Visual Studio テンプレート)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-テンプレートで必要な .NET Framework の最大のバージョンを指定します。  これにより、**\[新しいプロジェクトの追加\]** ダイアログ ボックスの **\[対象の Framework バージョン\]** ボックスで選択された値に基づいて、テンプレートが **\[新しいプロジェクトの追加\]** ダイアログ ボックスの **\[テンプレート\]** セクションに表示されるかどうかが決まります。  
+# <a name="maxframeworkversion-element-visual-studio-templates"></a>MaxFrameworkVersion 要素 (Visual Studio テンプレート)
+テンプレートで必要とされる .NET Framework の最大バージョンを指定します。 テンプレートが表示されるかどうかを判定、**テンプレート**のセクションで、**新しいプロジェクトの追加**で選択されている値に基づいて、ダイアログ ボックス、 **ターゲットフレームワークのバージョン**のボックス、**新しいプロジェクトの追加** ダイアログ ボックス。  
   
-## 構文  
+ \<VSTemplate >  
+ \<MaxFrameworkVersion >  
+  
+## <a name="syntax"></a>構文  
   
 ```  
 <MaxFrameworkVersion> ... </MaxFrameworkVersion>  
 ```  
   
-## 属性および要素  
+## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
-### 属性  
+### <a name="attributes"></a>属性  
  なし。  
   
-### 子要素  
+### <a name="child-elements"></a>子要素  
  なし。  
   
-### 親要素  
+### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
-|--------|--------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素。<br /><br /> テンプレートをカテゴリに分類し、**\[新しいプロジェクト\]** ダイアログ ボックス、または **\[新しい項目の追加\]** ダイアログ ボックスでどのように表示させるかを定義します。|  
+|-------------|-----------------|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートをカテゴリに分類し、いずれかでの表示方法を定義、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。|  
   
-## テキスト値  
+## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
   
- このテキストは、テンプレートで許可される .NET Framework の最上位のバージョン番号である必要があります。  
+ テキストは、テンプレートで許可されている .NET Framework の最新のバージョン番号があります。  
   
-## 解説  
- `MaxFrameworkVersion` は、省略可能な要素です。  .vstemplate ファイルの `TemplateData` セクションの要素は、**\[新しいプロジェクトの追加\]** ダイアログ ボックスの **\[テンプレート\]** セクションのフィルターとして機能します。  **\[新しいプロジェクトの追加\]** ダイアログ ボックスの **\[対象の Framework バージョン\]** ボックスで選択された値に基づいて、.NET Framework の要件が `MaxFrameworkVersion` 要素の値より小さいテンプレートのみが表示されます。  新しいバージョンの .NET Framework と共に使用されたときにテンプレートが不用意に表示されることを防ぐため、必要な場合以外は `MaxFrameworkVersion` 要素を省略してください。  
+## <a name="remarks"></a>コメント  
+ `MaxFrameworkVersion` は、省略可能な要素です。 内の要素、 `TemplateData` .vstemplate ファイルのセクションでは、のフィルターとして機能、**テンプレート**のセクションで、**新しいプロジェクトの追加** ダイアログ ボックス。 .NET Framework の要件は次のテンプレートのみより小さい`MaxFrameworkVersion`要素の値が表示されますで選択されている値に基づいて、**ターゲット フレームワークのバージョン**のボックス、**新しいプロジェクトの追加** ダイアログ ボックス。 `MaxFrameworkVersion`から .NET Framework の新しいバージョンで使用している場合に表示されているテンプレートを誤って原因にならないように、必要である場合を除き、要素を省略する必要があります。  
   
-## 使用例  
- 標準的な [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] クラス テンプレートのメタデータの例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、標準のメタデータ[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]クラス テンプレートです。  
   
 ```  
 <VSTemplate Type="Item" Version="3.0.0"  
@@ -71,8 +76,8 @@ caps.handback.revision: 9
 </VSTemplate>  
 ```  
   
- この例では、テンプレートで必要な .NET Framework の最大バージョン \(`MaxFrameworkVersion`\) は 3.5 です。  このテンプレートは、**\[新しいプロジェクトの追加\]** ダイアログ ボックスの **\[対象の Framework バージョン\]** ボックスで 3.0 または 3.5 を選択した場合にのみ表示されます。  
+ この例では、テンプレートで必要とされる .NET Framework の最大バージョンによって表される`MaxFrameworkVersion`、3.5。 3.0 または 3.5 インチのいずれかを選択する場合にのみ、上記のテンプレートが表示されます、**ターゲット フレームワークのバージョン**ボックスに、**新しいプロジェクトの追加** ダイアログ ボックス。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [カスタム プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+ [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

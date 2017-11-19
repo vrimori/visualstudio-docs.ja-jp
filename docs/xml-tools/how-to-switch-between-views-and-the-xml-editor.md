@@ -1,39 +1,40 @@
 ---
-title: "方法: ビューと XML エディターを切り替える | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "方法: ビューと XML エディターを切り替える |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cb69fbbd-d99c-439e-9498-5df9050f8df0
-caps.latest.revision: 2
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 8aeec1914acc64fe748d8c5d0f487b5349b84e59
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: ビューと XML エディターを切り替える
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-このトピックでは、XML スキーマ デザイナー \(XSD デザイナー\) のビューと XML エディターを切り替える方法について説明します。この例では、[購買発注書のスキーマ](../xml-tools/sample-xsd-file-simple-schema.md)を使用します。  
+# <a name="how-to-switch-between-views-and-the-xml-editor"></a>方法: ビューと XML エディターを切り替える
+このトピックでは、XML スキーマ デザイナー (XSD デザイナー) のビューと XML エディターを切り替える方法について説明します。 この例では、[購買発注書スキーマ](../xml-tools/sample-xsd-file-simple-schema.md)です。  
   
-### ビューと XML エディターを切り替えるには  
+### <a name="to-switch-between-the-views-and-the-xml-editor"></a>ビューと XML エディターを切り替えるには  
   
-1.  新しい XML スキーマ ファイルを作成して編集するには、「[方法: XSD スキーマ ファイルを作成して編集する](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)」の手順に従います。  
+1.  作成し、新しい XML スキーマ ファイルを編集して、手順を[する方法: を作成し、XSD スキーマ ファイルを編集](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)です。  
   
-2.  XML エディターから XML スキーマ デザイナーに切り替えるには、XML エディター内を右クリックし、**\[デザイナーの表示\]** をクリックします。  
+2.  XML エディターから XML スキーマ デザイナーに切り替えをクリックして任意の場所、XML エディターでを選択**ビュー デザイナー**です。  
   
-3.  ウォーターマークを使用してグラフ ビューに切り替えるには、スタート ビューの **\[ノード間のリレーションシップを表示するには、グラフ ビューを使用します\]** リンクをクリックします。  
+3.  透かしを使用してグラフ ビューに切り替えるをクリックして、**グラフ ビューを使用して、ノード間のリレーションシップを参照してください**スタート ビューにリンクします。  
   
-4.  XML スキーマ エクスプローラーからグラフ ビューに `USAddress` ノードをドラッグします。グラフ ビューで `USAddress` ノードを右クリックし、コンテキスト メニューの **\[コンテンツ モデル ビューで表示\]** をクリックします。  
+4.  XML スキーマ エクスプローラーからグラフ ビューに `USAddress` ノードをドラッグします。 右クリックし、`USAddress`クリックし、グラフ ビューでノード**コンテンツ モデル ビューに表示する**コンテキスト メニュー。  
   
      `USAddress` ノードの詳細を示したコンテンツ モデル ビューが表示されます。  
   
 5.  ツール バーを使用してコンテンツ モデル ビューからスタート ビューに切り替えるには、XSD ツール バーのスタート ビュー ボタンをクリックします。  
   
-6.  ホット キーを使用してビューを切り替える場合、スタート ビューに切り替えるには Ctrl \+ 1、グラフ ビューに切り替えるには Ctrl \+ 2、およびコンテンツ モデル ビューに切り替えるには Ctrl \+ 3 を押します。  
+6.  ホット キーを使用してビューを切り替える場合、スタート ビューに切り替えるには Ctrl + 1、グラフ ビューに切り替えるには Ctrl + 2、およびコンテンツ モデル ビューに切り替えるには Ctrl + 3 を押します。  
   
-7.  コンテンツ モデル ビューから XML エディターに切り替えるには、ノードを右クリックし、コンテキスト メニューの **\[コードの表示\]** をクリックします。
+7.  移動する XML エディターに、コンテンツ モデル ビューからノードを右クリックし、選択**コードの表示**コンテキスト メニュー。

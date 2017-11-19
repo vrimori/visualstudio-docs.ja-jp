@@ -1,54 +1,53 @@
 ---
-title: "IDiaSymbol::get_noReturn | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_noReturn メソッド"
+title: "Idiasymbol::get_noreturn |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_noReturn method
 ms.assetid: 704c1cc0-5b84-4334-a02a-70f43aff39d5
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0f25fdf93cbe70f3a867e7c8c581e9d7601cc136
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_noReturn
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-指定するフラグを取得する関数とマークされていないかどうかを [noreturn](/visual-cpp/cpp/noreturn) のように属性が返されます。  
+# <a name="idiasymbolgetnoreturn"></a>IDiaSymbol::get_noReturn
+関数を返すことはありませんとしてマークされているかどうかを指定するフラグを取得、 [noreturn](/cpp/cpp/noreturn)属性。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp  
+```C++  
 HRESULT get_noReturn(  
-   BOOL *pFlag  
+   BOOL *pFlag  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  pFlag  
- \[出力\] 返される `TRUE` 関数を宣言していない場合 `noreturn` の属性ではように ; それ以外の場合戻り `FALSE`。  
+ [out]返します`TRUE`に戻らないと、関数が宣言されたかどうか、`noreturn`属性です。 それ以外の場合、`FALSE`です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合戻り `S_FALSE` またはエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  `S_FALSE` の戻り値はプロパティのシンボルで使用できないことを意味します。  
+>  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
   
-|必要条件|Description|  
-|----------|-----------------|  
+|必要条件|説明|  
+|-----------------|-----------------|  
 |ヘッダー:|dia2.h|  
-|バージョン :|DIA SDK v8.0|  
+|バージョン:|DIA SDK バージョン 8.0|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [noreturn](/visual-cpp/cpp/noreturn)
+ [noreturn](/cpp/cpp/noreturn)

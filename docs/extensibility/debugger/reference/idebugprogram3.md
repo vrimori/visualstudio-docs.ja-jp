@@ -1,62 +1,63 @@
 ---
-title: "IDebugProgram3 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugProgram3 インターフェイス"
+title: "IDebugProgram3 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IDebugProgram3 interface
 ms.assetid: 4301ba23-c00c-4ce5-8b1e-3f27da312034
-caps.latest.revision: 5
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 2da4dcb4911488bd82c358efc3b8075f1941af6f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgram3
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このインターフェイスはプロセスで実行されている表しスレッドの情報を指定してプログラムを [実行](../../../extensibility/debugger/reference/idebugprogram2-execute.md) を拡張します。  
+# <a name="idebugprogram3"></a>IDebugProgram3
+このインターフェイスを表しますが、プロセスで実行され、拡張するプログラム[Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md)スレッドに関する情報を提供することによりします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugProgram3 : IDebugProgram3  
 ```  
   
-## 実装についてのメモ  
- デバッグ エンジン \(DE\) とカスタム ポートの業者はプロセスのプログラムを表すためこのインターフェイスを実装します。  デバッグ セッションのマネージャーは \(SDM\)[Attach](../../../extensibility/debugger/reference/idebugprogram2-attach.md) に情報を提供するにはこのインターフェイスを実装します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ デバッグ エンジン (DE) とそのカスタム ポート業者は、プロセスでプログラムを表すためには、このインターフェイスを実装します。 セッションのデバッグ マネージャー (SDM) も情報を提供するには、このインターフェイスを実装[アタッチ](../../../extensibility/debugger/reference/idebugprogram2-attach.md)です。  
   
-## 呼び出し元のメモ  
- [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) のイベントは新しいプログラムのこのインターフェイスを返します。  このインターフェイスは複数のインターフェイスの多くのメソッドのパラメーターとして使用されます。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md)イベントが新しいプログラムのこのインターフェイスを返します。 このインターフェイスは、複数のインターフェイスの多くのメソッドのパラメーターとしても使用されます。  
   
-## Vtable の順序でメソッド  
- 次の表は `IDebugProgram3` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugProgram3`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[ExecuteOnThread](../../../extensibility/debugger/reference/idebugprogram3-executeonthread.md)|プログラムを実行します。  スレッドはデバッガーにスレッドが実行するユーザーに表示する情報を提供するために戻ります。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[ExecuteOnThread](../../../extensibility/debugger/reference/idebugprogram3-executeonthread.md)|プログラムを実行します。 実行するときに、ユーザーを表示するスレッドでデバッガーの情報を提供し、スレッドが返されます。|  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 解説  
- プログラムはプロセスは一つ以上のプログラムから成るが特定のランタイム アーキテクチャで実行中のスレッドのコンテナーです。  
+## <a name="remarks"></a>コメント  
+ プログラムは、プロセスで構成される 1 つまたは複数のプログラムの中に、特定のランタイムのアーキテクチャで実行されているスレッド コンテナーです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
- [GetProgram](../Topic/IDebugThread2::GetProgram.md)   
- [次へ](../Topic/IEnumDebugPrograms2::Next.md)   
+ [GetProgram](../../../extensibility/debugger/reference/idebugthread2-getprogram.md)   
+ [次に](../../../extensibility/debugger/reference/ienumdebugprograms2-next.md)   
  [イベント](../../../extensibility/debugger/reference/idebugportevents2-event.md)   
- [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)   
+ [アタッチ](../../../extensibility/debugger/reference/idebugengine2-attach.md)   
  [DestroyProgram](../../../extensibility/debugger/reference/idebugengine2-destroyprogram.md)   
  [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)   
- [Attach\_V7](../../../extensibility/debugger/reference/idebugprogramnode2-attach-v7.md)
+ [Attach_V7](../../../extensibility/debugger/reference/idebugprogramnode2-attach-v7.md)

@@ -1,41 +1,43 @@
 ---
-title: "論理 AND 演算子 (&amp;&amp;) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "&&"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "&& 演算子"
-  - "論理 AND 演算子"
+title: "論理 AND 演算子 (&amp;&amp;) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: '&&'
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- logical AND operator
+- '&& operator'
 ms.assetid: 4714dea9-1999-444a-8acd-72f0851e4f65
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 2107eb89c5ca964cf08172050b49307cb150590f
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 論理 AND 演算子 (&amp;&amp;) (JavaScript)
+# <a name="logical-and-operator-ampamp-javascript"></a>論理 AND 演算子 (&amp;&amp;) (JavaScript)
 2 つの式について、論理積を実行します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 result = expression1 && expression2   
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `result`  
  任意の変数。  
   
@@ -45,8 +47,8 @@ result = expression1 && expression2
  `expression2`  
  任意の式。  
   
-## 解説  
- `expression1` が `false` に評価された場合、`result` は `expression1` です。  それ以外の場合、`result` は `expression2` です。  その結果、両方のオペランドが true である場合は、`true` が返され、それ以外の場合は、`false` が返されます。  
+## <a name="remarks"></a>コメント  
+ `expression1` が `false` に評価された場合、`result` は `expression1` です。 それ以外の場合、`result` は `expression2` です。 その結果、両方のオペランドが true である場合は、`true` が返され、それ以外の場合は、`false` が返されます。  
   
  [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] は次の規則を使用して、非ブール値をブール値に変換します。  
   
@@ -58,9 +60,9 @@ result = expression1 && expression2
   
 -   数値は、ゼロである場合、`false` となります。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [演算子の優先順位](../../javascript/operator-subtractprecedence-javascript.md)   
- [演算子の一覧 \(JavaScript\)](../../javascript/misc/operator-subtractsummary-javascript.md)
+ [演算子の一覧 (JavaScript)](../../javascript/misc/operator-subtractsummary-javascript.md)

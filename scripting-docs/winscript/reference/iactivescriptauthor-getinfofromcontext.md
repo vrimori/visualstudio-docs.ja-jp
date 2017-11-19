@@ -1,27 +1,30 @@
 ---
-title: "IActiveScriptAuthor::GetInfoFromContext | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IActiveScriptAuthor::GetInfoFromContext |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScriptAuthor.GetInfoFromContext
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IActiveScriptAuthor::GetInfoFromContext"
+helpviewer_keywords: IActiveScriptAuthor::GetInfoFromContext
 ms.assetid: 9891b095-6eb5-4473-87c0-c2e5cd2afc1a
-caps.latest.revision: 15
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 27c13dbe51bb1150554275b5fbeacd00be2e445f
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScriptAuthor::GetInfoFromContext
-戻り値は情報を入力し、コード ブロックの特定の文字の位置を固定します。  これは、メンバーの IntelliSense、グローバル リスト、およびパラメーターのヒントについて説明します。  
+# <a name="iactivescriptauthorgetinfofromcontext"></a>IActiveScriptAuthor::GetInfoFromContext
+情報と、指定された文字のアンカー位置は、コードのブロックの型を返します。 IntelliSense、グローバル リスト、およびパラメーターのヒントのメンバーについて情報を提供します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT GetInfoFromContext(  
@@ -38,64 +41,64 @@ HRESULT GetInfoFromContext(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pszCode`  
- \[入力\]情報の生成に使用されたコード ブロックの文字列のアドレスが発生します。  
+ [in]情報の結果の生成に使用されるコード ブロックの文字列のアドレス。  
   
  `cchCode`  
- \[入力\]コード ブロックの長さ。  
+ [in]コード ブロックの長さ。  
   
  `ichCurrentPosition`  
- \[入力\]ブロックの先頭に関連する文字の位置。  
+ [in]ブロックの先頭からの相対文字の位置。  
   
  `dwListTypesRequested`  
- \[入力\]要求されたリストの種類。  次の値の組み合わせがあります:  
+ [in]要求されたリストの種類。 次の値の組み合わせが可能です。  
   
 |定数|値|説明|  
-|--------|-------|--------|  
-|SCRIPT\_CMPL\_NOLIST|0x0000|リストはありません。|  
-|SCRIPT\_CMPL\_MEMBERLIST|0x0001|メンバーの一覧。|  
-|SCRIPT\_CMPL\_ENUMLIST|0x0002|enum のリスト。|  
-|SCRIPT\_CMPL\_PARAMLIST|0x0004|呼び出しのメソッドのパラメーター リスト。|  
-|SCRIPT\_CMPL\_GLOBALLIST|0x0008|グローバル リスト。|  
+|--------------|-----------|-----------------|  
+|SCRIPT_CMPL_NOLIST|0x0000|一覧がありません。|  
+|SCRIPT_CMPL_MEMBERLIST|0x0001|メンバーの一覧です。|  
+|SCRIPT_CMPL_ENUMLIST|0x0002|Enum の一覧です。|  
+|SCRIPT_CMPL_PARAMLIST|0x0004|メソッド パラメーター リストを呼び出します。|  
+|SCRIPT_CMPL_GLOBALLIST|0x0008|グローバル リストです。|  
   
- SCRIPT\_CMPL\_GLOBALLIST の型は他の入力候補項目を使用するか、演算子で結合できる既定の入力候補項目として扱われます。  エンジンの作成スクリプトが最初に他のコンプリート リスト項目の型情報を設定しようとします。  失敗した場合、SCRIPT\_CMPL\_GLOBALLIST のエンジンがに読み込まれます。  
+ SCRIPT_CMPL_GLOBALLIST 型は、既定の入力候補アイテムに他の入力候補の項目を OR 演算子を使用して組み合わせることとして扱われます。 エンジンをまず作成スクリプトは、他の入力候補一覧アイテムの種類の情報を設定しようとします。 失敗した場合、エンジンが SCRIPT_CMPL_GLOBALLIST に追加されます。  
   
  `pdwListTypesProvided`  
- \[入力\]指定されたリストの型。  
+ [out]指定されたリストの型。  
   
  `pichListAnchorPosition`  
- \[出力\]現在位置を含むコンテキストの開始インデックス。  開始インデックスは、ブロックの先頭を基準にします。  
+ [out]現在の位置を格納しているコンテキストの開始インデックス。 開始インデックス ブロックの開始相対パスです。  
   
- これは `dwListTypesRequested` が SCRIPT\_CMPL\_MEMBERLIST、SCRIPT\_CMPL\_ENUMLIST、または SCRIPT\_CMPL\_GLOBALLIST が含まれている場合にのみ表示されます。  他の要求されたリストの型の場合、結果は未定義になります。  
+ これが設定される場合にのみ`dwListTypesRequested`SCRIPT_CMPL_MEMBERLIST、SCRIPT_CMPL_ENUMLIST、または SCRIPT_CMPL_GLOBALLIST が含まれています。 他の要求されたリストの種類では、結果は定義されません。  
   
  `pichFuncAnchorPosition`  
- \[出力\]現在位置を含む関数呼び出しの開始インデックス。  開始インデックスは、ブロックの先頭を基準にします。  
+ [out]現在の位置を含む関数呼び出しの開始インデックス。 開始インデックス ブロックの開始相対パスです。  
   
- これは現在位置を含むコンテキストが関数呼び出しの場合にのみ、`dwListTypesRequested` が SCRIPT\_CMPL\_PARAMLIST が含まれている場合に表示されます。  それ以外の場合、結果は未定義です。  
+ 現在の位置を格納しているコンテキストが、関数呼び出しである場合にのみ、これは設定されます`dwListTypesRequested`SCRIPT_CMPL_PARAMLIST が含まれています。 それ以外の場合、結果は定義されません。  
   
  `pmemid`  
- \[入力\] `IProvideMultipleClassInfo``ppunk` のによって定義された関数の MEMBERID、パラメーターの型。  
+ [out]内の型によって定義された関数の MEMBERID、 `IProvideMultipleClassInfo``ppunk` out パラメーターです。  
   
- これは `dwListTypesRequested` が SCRIPT\_CMPL\_PARAMLIST が含まれている場合にのみ表示されます。  
+ これが設定される場合にのみ`dwListTypesRequested`SCRIPT_CMPL_PARAMLIST が含まれています。  
   
  `piCurrentParameter`  
- \[出力\]現在位置を含むパラメーターのインデックス。  現在位置が関数名にある場合、\-1 が返されます。  
+ [out]現在の位置が格納されているパラメーターのインデックス。 現在の位置がオンの場合、関数名は-1 が返されます。  
   
- `piCurrentParameter` の値は `dwListTypesRequested` が SCRIPT\_CMPL\_PARAMLIST が含まれている場合にのみ表示されます。  
+ `piCurrentParameter`値が設定される場合にのみ`dwListTypesRequested`SCRIPT_CMPL_PARAMLIST が含まれています。  
   
  `ppunk`  
- `IProvideMultipleClassInfo` のオブジェクトの形式で提供される型の情報。  
+ 型については、の形式で提供される、`IProvideMultipleClassInfo`オブジェクト。  
   
-## 戻り値  
- `HRESULT`。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ `HRESULT`。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
-## 参照  
- <xref:Microsoft.VisualStudio.OLE.Interop.IProvideMultipleClassInfo>   
+## <a name="see-also"></a>関連項目  
+ [IProvideMultipleClassInfo インターフェイス](https://msdn.microsoft.com/library/microsoft.visualstudio.ole.interop.iprovidemultipleclassinfo.aspx)   
  [IActiveScriptAuthor インターフェイス](../../winscript/reference/iactivescriptauthor-interface.md)

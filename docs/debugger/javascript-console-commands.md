@@ -1,38 +1,38 @@
 ---
-title: "JavaScript Console commands | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "JavaScript コンソール コマンド [Windows ストア アプリ]"
-  - "JavaScript デバッグ、コンソール [Windows ストア アプリ]"
-  - "JavaScript のデバッグ、コンソール [Windows ストア アプリ]"
+title: "Visual Studio での JavaScript コンソール コマンド |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 07/17/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- JavaScript Console commands [UWP apps]
+- JavaScript debugging, console [UWP apps]
+- debugging JavaScript, console [UWP apps]
 ms.assetid: 359e2b24-6bb7-48e7-8b55-b570df0cb774
-caps.latest.revision: 47
-caps.handback.revision: 47
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "47"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: d9808c664e5e3d06558faf8f9b44a6a2bb6e9b83
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
-# JavaScript Console commands
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-![Windows と Windows Phone に適用されます](~/debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
+# <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio での JavaScript コンソール コマンド
+![Windows と Windows Phone に適用](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
- Visual Studio では、JavaScript コンソール ウィンドウでコマンドを使用して、メッセージを送信したり他のタスクを実行したりすることができます。 そのウィンドウの使用方法を示す例については、次を参照してください。 [クイック スタート: JavaScript のデバッグ](../debugger/quickstart-debug-javascript-using-the-console.md)します。 このトピックの情報は、Windows ストア アプリ、Windows Phone ストア アプリ、および Visual Studio Tools for Apache Cordova を使用して作成されたアプリに適用されます。 Cordova アプリでサポートされているコンソール コマンドについては、「 [Debug Your App](../Topic/Debug%20Your%20App%20Built%20with%20Visual%20Studio%20Tools%20for%20Apache%20Cordova.md)」を参照してください。 Internet Explorer F12 ツールのコンソールの使用については、 [このトピック](http://msdn.microsoft.com/library/ie/dn255006.aspx)を参照してください。  
+ Visual Studio では、JavaScript コンソール ウィンドウでコマンドを使用して、メッセージを送信したり他のタスクを実行したりすることができます。 そのウィンドウを使用する方法を示す例については、次を参照してください。[クイック スタート: JavaScript のデバッグ](../debugger/quickstart-debug-javascript-using-the-console.md)です。 このトピックの情報は、UWP アプリと Visual Studio Tools Apache Cordova を使って作成されたアプリに適用されます。 Cordova アプリでサポートされているコンソール コマンドについては、次を参照してください。[アプリのデバッグ](https://taco.visualstudio.com/en-us/docs/debug-using-visual-studio/)です。 Internet Explorer F12 ツールのコンソールの使用については、 [このトピック](http://msdn.microsoft.com/library/ie/dn255006.aspx)を参照してください。  
   
- Visual Studio でデバッグしながら、閉じた JavaScript コンソール ウィンドウを再び開くには、 **[デバッグ]** > **[ウィンドウ]** > **[JavaScript コンソール]**  
+ JavaScript コンソール ウィンドウが閉じている場合を開くことができますを選択して Visual Studio でデバッグしながら**デバッグ** > **Windows** > **JavaScriptコンソール**です。  
   
 > [!NOTE]
 >  デバッグ セッション中にウィンドウが使用できない場合、プロジェクトのデバッグのプロパティで、デバッガーの種類が **Script** であることを確認してください。  
@@ -59,10 +59,10 @@ manager: "ghogen"
 |`groupEnd()`|現在のグループを終了します。<br /><br /> 要件:<br /><br /> Visual Studio 2013|`group` のコマンドの例を参照してください。|  
 |`info(message)`|`message` をコンソール ウィンドウに送信します。 メッセージの前に情報シンボルが付きます。|`console.info("info message");`<br /><br /> 他の例については、このトピックで後述する「 [Formatting console.log output](#ConsoleLog) 」を参照してください。|  
 |`log(message)`|`message` をコンソール ウィンドウに送信します。<br /><br /> オブジェクトを渡すと、このコマンドによりオブジェクトがコンソール ウィンドウに送信され、オブジェクトのビジュアライザーに表示されます。 ビジュアライザーを使用して、コンソール ウィンドウのプロパティを検査できます。|`console.log("logging message");`|  
-|`msIsIndependentlyComposed(element)`|Web アプリで使用されます。 JavaScript を使用したストア アプリではサポートされていません。|サポートされていません。|  
-|`profile(reportName)`|Web アプリで使用されます。 JavaScript を使用したストア アプリではサポートされていません。|サポートされていません。|  
-|`profileEnd()`|Web アプリで使用されます。 JavaScript を使用したストア アプリではサポートされていません。|サポートされていません。|  
-|`select(element)`|`element` DOM Explorer [で指定された HTML](../debugger/quickstart-debug-html-and-css.md)を選択します。|console.select (要素);|  
+|`msIsIndependentlyComposed(element)`|Web アプリで使用されます。 JavaScript を使用して、UWP アプリでサポートされていません。|サポートされていません。|  
+|`profile(reportName)`|Web アプリで使用されます。 JavaScript を使用して、UWP アプリでサポートされていません。|サポートされていません。|  
+|`profileEnd()`|Web アプリで使用されます。 JavaScript を使用して、UWP アプリでサポートされていません。|サポートされていません。|  
+|`select(element)`|指定された HTML を選択`element`で、 [DOM Explorer](../debugger/quickstart-debug-html-and-css.md)です。|console.select (要素);|  
 |`time (name)`|`name` オプション パラメーターによって識別されるタイマーを開始します。 `console.timeEnd`と共に使用すると、 `time` から `timeEnd`までの経過時間を計算し、 `name` 文字列をプレフィックスとして使用して、結果 (ミリ秒単位) をコンソールに送信します。 アプリ コードのインストルメンテーションを有効にして、パフォーマンスを測定するために使用します。|`console.time("app start");  app.start();  console.timeEnd("app start");`|  
 |`timeEnd(name)`|`name` オプション パラメーターによって識別されるタイマーを停止します。 `time` コンソール コマンドを参照してください。|`console.time("app start"); app.start(); console.timeEnd("app start");`|  
 |`trace()`|スタック トレースをコンソール ウィンドウに送信します。 このトレースには、完全なコール スタックと、ファイル名、行番号、列番号などの情報が含まれます。|`console.trace();`|  
@@ -77,7 +77,7 @@ manager: "ghogen"
 |`$(id)`|要素を ID で返します。 これは `document.getElementById(id)`のショートカット コマンドであり、 `id` は要素の ID を表す文字列です。|`$("contenthost")`|  
 |`$$(selector)`|CSS セレクター構文を使用して、指定されたセレクターと一致する要素の配列を返します。 これは `document.querySelectorAll()`のショートカット コマンドです。|`$$(".itemlist")`|  
 |`cd()`<br /><br /> `cd(window)`|式の評価のコンテキストを、既定であるページのトップレベル ウィンドウから指定したフレームのウィンドウに変更できます。 `cd()` をパラメーターの指定なしで呼び出すと、コンテキストがトップレベル ウィンドウに戻ります。|`cd();`<br /><br /> `cd(myframe);`|  
-|`select(element)`|[DOM Explorer](../debugger/quickstart-debug-html-and-css.md)で指定された要素を選択します。|`select(document.getElementById("element"));`<br /><br /> `select($("element"));`<br /><br /> `select($1);`|  
+|`select(element)`|指定した要素を選択[DOM Explorer](../debugger/quickstart-debug-html-and-css.md)です。|`select(document.getElementById("element"));`<br /><br /> `select($("element"));`<br /><br /> `select($1);`|  
 |`dir(object)`|指定されたオブジェクトのビジュアライザーを返します。 ビジュアライザーを使用して、コンソール ウィンドウのプロパティを検査できます。|`dir(obj);`|  
   
 ## <a name="checking-whether-a-console-command-exists"></a>コンソール コマンドが存在するかどうかを確認  
@@ -93,7 +93,7 @@ if (console && console.log) {
 ## <a name="examining-objects-in-the-javascript-console-window"></a>JavaScript コンソール ウィンドウを使ったオブジェクトの検査  
  JavaScript コンソール ウィンドウを使用すると、スコープ内のオブジェクトと対話できます。 コンソール ウィンドウでスコープ外のオブジェクトを検査するには、コードから `console.log` 、 `console.dir`、または他のコマンドを使用します。 または、コードでブレークポイントを設定 (**[ブレークポイント]** > **Insert [ブレークポイント]**の順にクリック) すると、コンソール ウィンドウからスコープ内のオブジェクトと対話できます。  
   
-##  <a name="a-nameconsoleloga-formatting-consolelog-output"></a><a name="ConsoleLog"></a> Console.log 出力のフォーマット  
+##  <a name="ConsoleLog"></a>Console.log 出力の書式設定  
  複数の引数を `console.log`に渡すと、コンソールはその引数を配列として処理し、出力を連結します。  
   
 ```javascript  
@@ -137,6 +137,6 @@ console.log("%s is %f years old!", user.first, user.age);
 // Fred is 10.01 years old!  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [クイック スタート: JavaScript をデバッグします。](../debugger/quickstart-debug-javascript-using-the-console.md)   
- [クイック スタート: HTML および CSS をデバッグします。](../debugger/quickstart-debug-html-and-css.md)
+ [クイック スタート: HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)

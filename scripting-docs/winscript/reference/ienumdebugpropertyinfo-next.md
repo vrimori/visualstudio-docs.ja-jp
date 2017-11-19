@@ -1,49 +1,52 @@
 ---
-title: "IEnumDebugPropertyInfo::Next | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IEnumDebugPropertyInfo::Next |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IEnumDebugPropertyInfo.Next
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IEnumDebugPropertyInfo::Next"
+helpviewer_keywords: IEnumDebugPropertyInfo::Next
 ms.assetid: 052837ac-1599-49cc-9a5a-ba90f992eeff
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: bc1e25a865ab1e21ab011e3a5bd0cc3b74f4abf2
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IEnumDebugPropertyInfo::Next
-列挙体シーケンスの `DebugPropertyInfo` の構造の指定した数を取得します。  
+# <a name="ienumdebugpropertyinfonext"></a>IEnumDebugPropertyInfo::Next
+指定した数を取得`DebugPropertyInfo`列挙のシーケンス内の構造体。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT Next (  
-   ULONG celt,  
-   DebugPropertyInfo*rgelt,  
-   ULONG* pceltFetched  
+   ULONGcelt,  
+   DebugPropertyInfo*rgelt,  
+   ULONG* pceltFetched  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `celt`  
- \[入力\]取得する `DebugPropertyInfo`の構造体の数。  
+ [in]数`DebugPropertyInfo`構造体を取得します。  
   
  `rgelt`  
- \[出力\]取得された `DebugPropertyInfo` の構造体の配列。  
+ [out]配列`DebugPropertyInfo`構造体を取得します。  
   
  `pceltFetched`  
- \[出力\]実際に取得される `DebugPropertyInfo` の構造体の数を返します。  
+ [out]数を返します`DebugPropertyInfo`構造が実際に取得します。  
   
-## 戻り値  
- 有効な `HRESULT`、通常 `S_OK`を返します。  
+## <a name="return-value"></a>戻り値  
+ 有効な返します`HRESULT`通常`S_OK`です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IEnumDebugPropertyInfo インターフェイス](../../winscript/reference/ienumdebugpropertyinfo-interface.md)   
  [DebugPropertyInfo 構造体](../../winscript/reference/debugpropertyinfo-structure.md)

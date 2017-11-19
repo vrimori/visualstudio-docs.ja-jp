@@ -1,47 +1,49 @@
 ---
-title: "IDebugPointerObject3::GetPointerAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GetPointerAddress"
-  - "IDebugPointerObject3::GetPointerAddress"
+title: "IDebugPointerObject3::GetPointerAddress |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GetPointerAddress
+- IDebugPointerObject3::GetPointerAddress
 ms.assetid: 4cc5af04-9e70-420d-8230-ef3108df6d51
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: aff3dcc29c58038e95bfb80a52e8c38928d802d6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugPointerObject3::GetPointerAddress
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-ポインター アドレスを取得します。  
+# <a name="idebugpointerobject3getpointeraddress"></a>IDebugPointerObject3::GetPointerAddress
+ポインターのアドレスを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT GetPointerAddress (  
-   UINT64* puAddress  
+   UINT64* puAddress  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetPointerAddress (  
-   out ulong puAddress  
+   out ulong puAddress  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `puAddress`  
- \[出力\] ポインターのアドレスを返します。  
+ [out]ポインターのアドレスを返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugPointerObject3](../../../extensibility/debugger/reference/idebugpointerobject3.md)

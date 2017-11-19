@@ -1,12 +1,10 @@
 ---
-title: 'How to: Add a Filter Descriptor to a Finder Method | Microsoft Docs'
+title: "方法: Finder メソッドにフィルター記述子を追加 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -20,67 +18,67 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], add a filter
 - BDC [SharePoint development in Visual Studio], filter descriptors
 ms.assetid: 228a6190-8cb8-4182-b6d9-d4c656f4a164
-caps.latest.revision: 14
-author: kempb
-ms.author: kempb
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: fea1eb561889f545fd4d97bb05855d83b4070ddb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 37aff0510af501b75aafe190fc412a0d4b9fd625
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-add-a-filter-descriptor-to-a-finder-method"></a>How to: Add a Filter Descriptor to a Finder Method
-  Filter descriptors enable consumers of the model to pass values to methods before they execute. For more information, see [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md).  
+# <a name="how-to-add-a-filter-descriptor-to-a-finder-method"></a>方法: Finder メソッドにフィルター記述子を追加する
+  フィルター記述子には、値を渡すメソッドを実行する前に、モデルのコンシューマーが有効にします。 詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
   
- One common scenario is that users in SharePoint want to retrieve instances of an external content type that match some criteria. You can support this scenario by adding a filter descriptor to a Finder method.  
+ 1 つの一般的なシナリオは、SharePoint 内のユーザーがいくつかの条件に一致する外部コンテンツ タイプのインスタンスを取得することです。 Finder メソッドにフィルター記述子を追加することで、このシナリオをサポートできます。  
   
-### <a name="to-add-a-filter-descriptor-to-a-finder-method"></a>To add a filter descriptor to a Finder method  
+### <a name="to-add-a-filter-descriptor-to-a-finder-method"></a>Finder メソッドにフィルター記述子を追加するには  
   
-1.  In the **BDC Method Details** window, expand the node of a Finder method, expand the **Parameters** node, and then add an input parameter. For more information, see [How to: Add a Parameter to a Method](../sharepoint/how-to-add-a-parameter-to-a-method.md).  
+1.  **BDC メソッドの詳細**ウィンドウ、Finder メソッドのノードを展開し、**パラメーター**ノード、し、入力パラメーターを追加します。 詳細については、次を参照してください。[する方法: メソッドにパラメーターを追加](../sharepoint/how-to-add-a-parameter-to-a-method.md)です。  
   
-2.  In the **Method Details** window, choose the type descriptor of the parameter.  
+2.  **メソッドの詳細**ウィンドウで、パラメーターの型記述子を選択します。  
   
-3.  On the menu bar, choose **View**, **Properties Window**.  
+3.  メニュー バーで、次のように選択します。**ビュー**、**プロパティ ウィンドウ**します。  
   
-4.  In the **Properties** window, set the **Type Name** property to a data type that is appropriate for the filter.  
+4.  **プロパティ**ウィンドウで、設定、**型名**プロパティをフィルターを適切なデータ型。  
   
-     For example, a filter might use an order date to limit the number of sales orders returned by the method. To support that filter, the **Type Name** property of the type descriptor must be set to **System.DateTime**.  
+     たとえば、フィルターで注文日を使用して、メソッドによって返される販売注文数を制限する可能性があります。 そのフィルターをサポートするために、**型名**に、型記述子のプロパティを設定する必要があります**System.DateTime**です。  
   
-5.  In the **Method Details** window, expand the **Filter Descriptors** node.  
+5.  **メソッドの詳細**ウィンドウで、展開、**フィルター記述子**ノード。  
   
-6.  In **Add a Filter Descriptor** list, choose **Create Filter Descriptor**.  
+6.  **フィルター記述子を追加**一覧で、選択**フィルター記述子の作成**です。  
   
-     A new filter descriptor appears underneath the **Filter Descriptors** node.  
+     新しいフィルター記述子が下に表示されます、**フィルター記述子**ノード。  
   
-7.  On the menu bar, choose **View**, **Properties Window**.  
+7.  メニュー バーで、次のように選択します。**ビュー**、**プロパティ ウィンドウ**します。  
   
-8.  In the **Properties** window, choose the **Type** property.  
+8.  **プロパティ**ウィンドウで、選択、**型**プロパティです。  
   
-9. In the list that appears for the **Type** property, choose the filtering pattern that you want.  
+9. に対して表示される一覧で、**型**プロパティかフィルター パターンを選択します。  
   
-     For example, to create a filter that uses an order date to limit the number of sales orders returned in a Finder method, choose **Comparison**. A Comparison filter ensures that a finder method returns only instances that meet a specific condition. For more information about each filtering pattern, see [Types of Filters Supported by the BDC](http://go.microsoft.com/fwlink/?LinkId=169287).  
+     たとえば、注文日を使用して Finder メソッドで返される販売注文の数を制限するフィルターを作成する次のように選択します。**比較**です。 比較フィルターでは、finder メソッドを特定の条件を満たすインスタンスのみを返すことを保証します。 各フィルター パターンの詳細については、次を参照してください。[型のフィルターでサポート、BDC](http://go.microsoft.com/fwlink/?LinkId=169287)です。  
   
-10. In the **Properties** window, choose the **Associated Type Descriptors** property.  
+10. **プロパティ**ウィンドウで、選択、**関連付けられた型記述子**プロパティです。  
   
-11. In the list that appears for the **Associated Type Descriptors** property, choose the type descriptor that you created earlier in this procedure. This relates the filter to the input parameter of the Finder method.  
+11. 表示される一覧で、**型記述子の関連付けられている**プロパティでは、この手順の前半で作成した型記述子を選択します。 これにより、フィルターが Finder メソッドの入力パラメーターに関連しています。  
   
-12. Add code to the Finder method that returns data. You can use the input parameter as a condition in a select query.  
+12. データを返す Finder メソッドにコードを追加します。 Select クエリの条件として入力パラメーターを使用することができます。  
   
-     The following example returns sales orders that have the specified order date.  
+     次の例では、指定した注文日の販売注文を返します。  
   
     > [!NOTE]  
-    >  Replace the value of the `ServerName` field with the name of your server.  
+    >  値を置き換える、`ServerName`フィールドに、サーバーの名前。  
   
-     [!code-csharp[SP_BDC#11](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs#11)]  [!code-vb[SP_BDC#11](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#11)]  
+     [!code-csharp[SP_BDC#11](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs#11)]
+     [!code-vb[SP_BDC#11](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#11)]  
   
-## <a name="see-also"></a>See Also  
- [How to: Add a Finder Method](../sharepoint/how-to-add-a-finder-method.md)   
- [How to: Add a Specific Finder Method](../sharepoint/how-to-add-a-specific-finder-method.md)   
- [How to: Add a Parameter to a Method](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
- [How to: Define the Type Descriptor of a Parameter](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   
- [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md)   
- [Integrating Business Data into SharePoint](../sharepoint/integrating-business-data-into-sharepoint.md)  
+## <a name="see-also"></a>関連項目  
+ [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
+ [方法: Specificfinder メソッドを追加します。](../sharepoint/how-to-add-a-specific-finder-method.md)   
+ [方法: メソッドにパラメーターを追加](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
+ [方法: パラメーターの型記述子を定義します。](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   
+ [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)   
+ [SharePoint へのビジネス データの統合](../sharepoint/integrating-business-data-into-sharepoint.md)  
   
   

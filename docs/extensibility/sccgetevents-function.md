@@ -1,66 +1,66 @@
 ---
-title: "SccGetEvents 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccGetEvents"
-helpviewer_keywords: 
-  - "SccGetEvents 関数"
+title: "SccGetEvents 関数 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SccGetEvents
+helpviewer_keywords: SccGetEvents function
 ms.assetid: 32f8147d-6dcc-465e-b07b-42da5824f9b0
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5eed4b08398b2acd9a136ba0ccf67527a574f16f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# SccGetEvents 関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="sccgetevents-function"></a>SccGetEvents 関数
 この関数は、キューに置かれた状態のイベントを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 SCCRTN SccGetEvents (  
-   LPVOID pvContext,  
-   LPSTR  lpFileName,  
-   LPLONG lpStatus,  
-   LPLONG pnEventsRemaining  
+   LPVOID pvContext,  
+   LPSTR  lpFileName,  
+   LPLONG lpStatus,  
+   LPLONG pnEventsRemaining  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  pvContext  
- \[in\]ソース管理プラグイン コンテキスト構造体。  
+ [in]ソース管理プラグイン コンテキスト構造体。  
   
  lpFileName  
- \[入力、出力\]ソース管理プラグインが返されたファイル名 \(最大 \_MAX\_PATH 文字\) を格納するバッファー。  
+ [入力、出力].ソース管理プラグインが返されたファイル名 (最大 _MAX_PATH 文字) を格納するバッファー。  
   
  lpStatus  
- \[入力、出力\]ステータス コードを返します \(を参照してください [ファイルの状態コード](../extensibility/file-status-code-enumerator.md) 指定できる値について\)。  
+ [入力、出力].ステータス コードを返します (を参照してください[ファイル ステータス コード](../extensibility/file-status-code-enumerator.md)使用可能な値)。  
   
  pnEventsRemaining  
- \[入力、出力\]この呼び出しの後、キューに残してエントリの数を返します。 呼び出すことが、呼び出し元がこの数値が大きい場合、 [SccQueryInfo](../extensibility/sccqueryinfo-function.md) 情報を一度にすべてを取得します。  
+ [入力、出力].この呼び出しの後、キュー内の残りのエントリの数を返します。 呼び出すことが呼び出し元がこの数値が大きい場合は、 [SccQueryInfo](../extensibility/sccqueryinfo-function.md)情報を一度にすべてを取得します。  
   
-## 戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+## <a name="return-value"></a>戻り値  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
 |値|説明|  
-|-------|--------|  
-|SCC\_OK|成功したイベントを取得します。|  
-|SCC\_E\_OPNOTSUPPORTED|この関数がサポートされていません。|  
-|SCC\_E\_NONSPECIFICERROR|不特定のエラーです。|  
+|-----------|-----------------|  
+|SCC_OK|成功したイベントを取得します。|  
+|SCC_E_OPNOTSUPPORTED|この関数はサポートされていません。|  
+|SCC_E_NONSPECIFICERROR|不特定のエラーです。|  
   
-## 解説  
- この関数は加えられていないかどうか、ソース管理下にあるファイルのステータスの更新を表示するアイドル状態の処理中に呼び出されます。 ソース管理プラグインが知っているすべてのファイルのステータスを維持し、変更されるたびに状態がによって示されたプラグイン、状態と関連付けられているファイルは、キューに格納します。 ときに `SccGetEvents` が呼び出されると、一番上のキューの要素が取得され、返されます。 この関数は、以前にキャッシュされた唯一の情報を返す制約し、非常に短時間 \(つまり、なし、ディスクの読み取り、または状態にソース管理システムを要求すること\)。 必要があります。それ以外の場合、IDE のパフォーマンスが低下する開始できます。  
+## <a name="remarks"></a>コメント  
+ この関数は加えられていないかどうか、ソース管理下にあるファイルのステータスの更新を表示するアイドル状態の処理中に呼び出されます。 ソース管理プラグインを知っている、すべてのファイルの状態を維持し、変更されるたびに状態がによって示されたプラグイン、状態と関連付けられているファイルは、キューに格納します。 ときに`SccGetEvents`が呼び出されると、上部、キューの要素が取得され、返されます。 この関数は以前にキャッシュされた情報のみを返すには制限し、非常に迅速なターンアラウンドが実現 (つまり、なし、ディスクの読み取り、または状態のソース管理システムを求める); 必要があります。それ以外の場合、IDE のパフォーマンスが低下することに開始されます。  
   
- ソース管理プラグインが指すバッファーに空の文字列を格納するレポートへのステータスの更新がない場合は、 `lpFileName`です。 それ以外の場合、プラグインを格納、ファイルの完全なパス名にステータス情報が変更された適切なステータス コードが返されます \(で詳細に説明値の 1 つ [ファイルの状態コード](../extensibility/file-status-code-enumerator.md)\)。  
+ レポートへのステータスの更新がない場合は、ソース管理プラグインは、空の文字列を指すバッファーに格納`lpFileName`です。 それ以外の場合、プラグインを格納、ファイルの完全なパス名のステータス情報が変更され、適切なステータス コードを返します (で詳細に説明値の 1 つ[ファイル ステータス コード](../extensibility/file-status-code-enumerator.md))。  
   
-## 参照  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
+## <a name="see-also"></a>関連項目  
+ [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [ファイルの状態コード](../extensibility/file-status-code-enumerator.md)

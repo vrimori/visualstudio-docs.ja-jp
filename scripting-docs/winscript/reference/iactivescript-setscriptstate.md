@@ -1,27 +1,30 @@
 ---
-title: "IActiveScript::SetScriptState | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IActiveScript::SetScriptState |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScript.SetScriptState
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IActiveScript_SetScriptState"
+helpviewer_keywords: IActiveScript_SetScriptState
 ms.assetid: f2b2700c-0c8d-40db-ad84-dc751c5d9bc2
-caps.latest.revision: 6
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 146cd5e4f2b6137fc6fe6e32e8ca153c3aab8fd5
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScript::SetScriptState
-特定の状態にスクリプト エンジンを入力します。  このメソッドは、ベースの呼び出しによりオブジェクトをホストするまたは [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md) のインターフェイスに非ベースのスレッドから外部に呼び出すことができます。  
+# <a name="iactivescriptsetscriptstate"></a>IActiveScript::SetScriptState
+スクリプト エンジンを実行すると、指定された状態になります。 このメソッドは、ホスト オブジェクトまたはベース以外吹き出しの結果として得られることがなくベース以外のスレッドから呼び出すことができます、 [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)インターフェイスです。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT SetScriptState(  
@@ -29,25 +32,25 @@ HRESULT SetScriptState(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ss`  
- \[入力\]特定の状態にスクリプト エンジンを設定します。  [SCRIPTSTATE 列挙型](../../winscript/reference/scriptstate-enumeration.md) の列挙型で定義されている値の 1 つがあります。  
+ [in]指定された状態をスクリプト エンジンを設定します。 定義されている値のいずれかになります、 [SCRIPTSTATE 列挙](../../winscript/reference/scriptstate-enumeration.md)列挙します。  
   
-## 戻り値  
- 次の値の場合: 1  
+## <a name="return-value"></a>戻り値  
+ 次のいずれかの値を返します。  
   
 |戻り値|説明|  
-|---------|--------|  
+|------------------|-------------|  
 |`S_OK`|成功。|  
-|`E_FAIL`|スクリプト エンジンが初期化された状態への遷移をサポートしていません。  ホストは、このスクリプト エンジンを破棄し、新しいスクリプト エンジンを作成して初期化し、同じ効果を得るために読み込む必要があります。|  
-|`E_UNEXPECTED`|呼び出し \(たとえば、スクリプト エンジンはまだ読み込まれていないか、初期化されず、および\) がありません。したがって失敗されていません。|  
-|`OLESCRIPT_S_PENDING`|メソッドは正常に列を実行しましたが、状態は変更しません。  状態の変化が [IActiveScriptSite::OnStateChange](../../winscript/reference/iactivescriptsite-onstatechange.md) のメソッドによって、サイトが呼び出されたとき。|  
-|`S_FALSE`|メソッドが成功したスクリプトが特定の状態には既に存在していました。|  
+|`E_FAIL`|スクリプト エンジンが初期化された状態に遷移をサポートしていません。 ホストする必要がありますこのスクリプト エンジンを破棄し作成、初期化、および同じ効果を実現するために新しいスクリプト エンジンを読み込みます。|  
+|`E_UNEXPECTED`|呼び出しが予期されていませんでした (たとえば、スクリプト エンジンがされていないされて読み込まれたまたは初期化) し、そのために失敗しました。|  
+|`OLESCRIPT_S_PENDING`|メソッドが正常にキューに登録が状態がまだ変更されていません。 ときに状態の変化、サイトがコールバックされるを通じて、 [IActiveScriptSite::OnStateChange](../../winscript/reference/iactivescriptsite-onstatechange.md)メソッドです。|  
+|`S_FALSE`|メソッドが成功しましたが、スクリプトは、既に指定した状態にあった。|  
   
-## 解説  
- スクリプト エンジンの状態に関する詳細については、[Windows スクリプト エンジン](../../winscript/windows-script-engines.md) のスクリプト エンジンの状態のセクションを参照してください。  
+## <a name="remarks"></a>コメント  
+ スクリプト エンジンの状態に関する詳細については、のスクリプト エンジンの状態を参照してください[Windows スクリプト エンジン](../../winscript/windows-script-engines.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IActiveScript::Clone](../../winscript/reference/iactivescript-clone.md)   
  [IActiveScript::GetScriptDispatch](../../winscript/reference/iactivescript-getscriptdispatch.md)   
  [IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md)   

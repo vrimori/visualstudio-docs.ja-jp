@@ -1,52 +1,51 @@
 ---
-title: "IDiaAddressMap::put_relativeVirtualAddressEnabled | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaAddressMap::put_relativeVirtualAddressEnabled メソッド"
+title: "Idiaaddressmap::put_relativevirtualaddressenabled |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaAddressMap::put_relativeVirtualAddressEnabled method
 ms.assetid: 767c078e-8ad7-4940-9e00-cae7704aadee
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: d248c573ee9952fd3783f6994f5e0022c94ba436
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaAddressMap::put_relativeVirtualAddressEnabled
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-クライアントが相対仮想アドレスの計算および使用を有効または無効に \(RVA\) できます。  
+# <a name="idiaaddressmapputrelativevirtualaddressenabled"></a>IDiaAddressMap::put_relativeVirtualAddressEnabled
+クライアントは有効にするにまたは、計算と相対仮想アドレス (RVA) の使用を無効にできます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT put_relativeVirtualAddressEnabled (   
-   BOOL NewVal  
+```C++  
+HRESULT put_relativeVirtualAddressEnabled (   
+   BOOL NewVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  NewVal  
- \[入力\] `TRUE` に有効または無効に `FALSE` に設定します。  
+ [in]設定`TRUE`を有効にするのにまたは`FALSE`を無効にします。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- DIA のインターフェイスによって実行可能ファイルのイメージ ベースに関連して記述される相対仮想アドレスとしてデバッグのオブジェクトのアドレスは取得できます。  
+## <a name="remarks"></a>コメント  
+ DIA インターフェイス、および実行可能ファイルのイメージのベースを基準とした説明されているデバッグ オブジェクトのアドレスは、相対仮想アドレスとして取得することができます。  
   
- RVA を使用する部分が PDB ファイルから最初に読み込まれたときに有効になります。  RVA の現在の状態を取得するには[IDiaAddressMap::get\_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md) のメソッドを呼び出します。  
+ セグメントが PDB ファイルから最初に読み込まれるときに、Rva の使用が有効にします。 Rva の使用の現在の状態を取得する、 [idiaaddressmap::get_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md)メソッドです。  
   
- `put_relativeVirtualAddress` のメソッドは [IDiaAddressMap::set\_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md) のメソッドの呼び出しが正常な新しいイメージのヘッダーを確立したら RVA を有効にするために呼び出す必要があります。  
+ `put_relativeVirtualAddress`呼び出しに成功した後の Rva を有効にするメソッドを呼び出す必要があります、 [idiaaddressmap::set_imageheaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)メソッドが新しいイメージのヘッダーを確立します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   
- [IDiaAddressMap::get\_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md)   
- [IDiaAddressMap::set\_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)
+ [Idiaaddressmap::get_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md)   
+ [IDiaAddressMap::set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)

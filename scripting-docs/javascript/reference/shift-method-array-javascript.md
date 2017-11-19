@@ -1,49 +1,50 @@
 ---
-title: "shift メソッド (Array) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "shift"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "shift メソッド"
+title: "shift メソッド (Array) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: shift
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: shift method
 ms.assetid: f33baec5-f67e-4760-b7c1-553727bd0423
-caps.latest.revision: 15
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 664c3f764950b329cea8356f5b350ee917f0a60f
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# shift メソッド (Array) (JavaScript)
+# <a name="shift-method-array-javascript"></a>shift メソッド (Array) (JavaScript)
 配列の先頭の要素を削除し、削除した要素を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 arrayObj.shift( )  
 ```  
   
-#### パラメーター  
- The required `arrayObj` reference is an `Array` object.  
+#### <a name="parameters"></a>パラメーター  
+ 必要な`arrayObj`参照は、`Array`オブジェクト。  
   
-## 戻り値  
- 配列から削除された要素を返します。  
+## <a name="return-value"></a>戻り値  
+ 配列から削除する要素を返します。  
   
-## 解説  
+## <a name="remarks"></a>コメント  
  `shift` メソッドの使用例を次に示します。  
   
-```javascript  
+```JavaScript  
 var arr = new Array(10, 11, 12);  
 while (arr.length > 0)  
     {  
@@ -55,8 +56,8 @@ while (arr.length > 0)
 // 10 11 12  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv55](../../javascript/reference/includes/jsv55-md.md)]  
   
-## 参照  
- [unshift メソッド \(Array\)](../../javascript/reference/unshift-method-array-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [unshift メソッド (Array)](../../javascript/reference/unshift-method-array-javascript.md)

@@ -1,55 +1,56 @@
 ---
-title: "debugger ステートメント (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "debugger_JavaScriptKeyword"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "debugger ステートメント"
+title: "デバッガーのステートメント (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: debugger_JavaScriptKeyword
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: debugger statement
 ms.assetid: c6d2e193-c1f7-4fb3-8a4e-cc9823174ae4
-caps.latest.revision: 17
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 9e64e860cebd065f357857484e932b4aea3f05ea
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# debugger ステートメント (JavaScript)
-実行を中断するステートメントです。  
+# <a name="debugger-statement-javascript"></a>debugger ステートメント (JavaScript)
+実行を中断します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 debugger  
 ```  
   
-## 解説  
- `debugger` ステートメントは、プロシージャ内の任意の場所に置いて、実行を中断できます。  `debugger` ステートメントは、プログラム コードのブレークポイントと同じ動作をします。  
+## <a name="remarks"></a>コメント  
+ 配置できる`debugger`ステートメントの実行を中断するプロシージャに任意の場所。 使用して、`debugger`ステートメントは、コードでブレークポイントの設定に似ています。  
   
- `debugger` ステートメントは実行を中断しますが、ファイルを閉じたり、変数をクリアしたりはしません。  
-  
-> [!NOTE]
->  スクリプトをデバッグする場合を除いて、`debugger` ステートメントの影響はありません。  
-  
-## 使用例  
- `debugger` ステートメントを使用して、`for` ループを繰り返すごとに実行を中断する例を次に示します。  
+ `debugger`ステートメントが実行を中断しますが、任意のファイルを閉じてまたは任意の変数をオフにしません。  
   
 > [!NOTE]
->  この例を実行するには、スクリプト デバッガーをインストールし、スクリプトをデバッグ モードで実行する必要があります。  
+>  `debugger`ステートメント及ぼしませんしない限り、スクリプトをデバッグします。  
+  
+## <a name="example"></a>例  
+ この例では、`debugger`ステートメントの各繰り返しの実行を中断、`for`ループします。  
+  
+> [!NOTE]
+>  この例を実行するには、スクリプト デバッガーをインストールが必要し、スクリプトがデバッグ モードで実行する必要があります。  
 >   
->  Internet Explorer 8 には、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] デバッガーが含まれています。  Internet Explorer の旧バージョンを使用する場合は、「[方法: Internet Explorer でスクリプトのデバッグを有効にして起動する](http://go.microsoft.com/fwlink/?LinkId=133801)」を参照してください。  
+>  Internet Explorer 8 が含まれています、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]デバッガーです。 以前のバージョンの Internet Explorer を使用している場合は、「 [方法 : Internet Explorer でスクリプトのデバッグを有効にして起動する](http://go.microsoft.com/fwlink/?LinkId=133801)」をご覧ください。  
   
-```javascript  
+```JavaScript  
 for(i = 1; i<5; i++) {  
    // Print i to the Output window.  
    Debug.write("loop index is " + i);  
@@ -58,9 +59,9 @@ for(i = 1; i<5; i++) {
 }  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv3](../../javascript/reference/includes/jsv3-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [JavaScript ステートメント](../../javascript/reference/javascript-statements.md)   
  [条件付きコンパイル](../../javascript/advanced/conditional-compilation-javascript.md)

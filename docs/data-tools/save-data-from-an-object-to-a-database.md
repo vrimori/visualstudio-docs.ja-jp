@@ -1,90 +1,81 @@
 ---
-title: "方法 : オブジェクトからデータベースにデータを保存する | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "データ [Visual Studio], 保存"
-  - "データ アクセス [Visual Studio], オブジェクト"
-  - "保存 (データを)"
+title: "オブジェクトからデータをデータベースに保存する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- data [Visual Studio], saving
+- data access [Visual Studio], objects
+- saving data
 ms.assetid: efd6135a-40cf-4b0d-8f8b-41a5aaea7057
-caps.latest.revision: 9
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.technology: vs-data-tools
+ms.openlocfilehash: 1c7e99ce49df969fae439afac5d65369fae9c37a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : オブジェクトからデータベースにデータを保存する
-オブジェクトのデータは、オブジェクトから値を TableAdapter の DBDirect のメソッドの 1 つ \(`TableAdapter.Insert` など\) に渡すことによってデータベースに保存できます。  詳細については、「[TableAdapter の概要](../data-tools/tableadapter-overview.md)」を参照してください。  
+# <a name="save-data-from-an-object-to-a-database"></a>オブジェクトからデータをデータベースに保存します。
+オブジェクトをデータベースでデータを保存するには、TableAdapter の DBDirect メソッドのいずれかに、オブジェクトから値を渡すことで (たとえば、 `TableAdapter.Insert`)。 詳細については、次を参照してください。 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)です。  
   
- オブジェクトのコレクションからデータを保存するには、for\-next ループなどを使用してオブジェクトのコレクションを反復処理し、TableAdapter の DBDirect のメソッドの 1 つを使用して各オブジェクトの値をデータベースに送ります。  
+ オブジェクトのコレクションからデータを保存するには、(次のループなど) のオブジェクトのコレクションをループし、TableAdapter の DBDirect メソッドのいずれかを使用して、各オブジェクトの値をデータベースに送信します。  
   
- DBDirect のメソッドは既定で TableAdapter に作成され、データベースに対して直接実行できます。  この一連のメソッドは直接呼び出すことができ、変更内容を反映してデータベースに送るために、<xref:System.Data.DataSet> オブジェクトまたは <xref:System.Data.DataTable> オブジェクトを必要としません。  
+ 既定では、DBDirect メソッドは、データベースに対して直接実行できる TableAdapter で作成されます。 これらのメソッドは、直接呼び出すことができ、必要としない<xref:System.Data.DataSet>または<xref:System.Data.DataTable>データベースへの更新を送信するために変更を反映させるためのオブジェクト。  
   
 > [!NOTE]
->  TableAdapter を構成する際に、メイン クエリは DBDirect のメソッドを作成するために十分な情報を提供する必要があります。  たとえば、主キー列が定義されていないテーブルのデータを照会するように TableAdapter が構成されている場合、DBDirect のメソッドは生成されません。  
+>  TableAdapter を構成する際、メインのクエリは DBDirect メソッドを作成するのに十分な情報を提供する必要があります。 たとえば、TableAdapter が定義されている主キー列がないテーブルからデータのクエリに構成されている場合に生成しません DBDirect メソッド。  
   
-|TableAdapter DBDirect のメソッド|Description|  
-|---------------------------------|-----------------|  
-|`TableAdapter.Insert`|個々の列値をメソッド パラメーターとして渡して、新しいレコードをデータベースに追加します。|  
-|`TableAdapter.Update`|データベースの既存のレコードを更新します。  `Update` メソッドは、元の列値と新しい列値をメソッド パラメーターとして受け取ります。  元の値は元のレコードを探すために使用し、新しい値はレコードを更新するために使用します。<br /><br /> `TableAdapter.Update` メソッドも <xref:System.Data.DataSet>、<xref:System.Data.DataTable>、<xref:System.Data.DataRow>、または <xref:System.Data.DataRow> の配列をメソッド パラメーターとして受け取って、データセットの変更内容をデータベースに反映して戻すために使用します。|  
-|`TableAdapter.Delete`|メソッド パラメーターとして渡された元の列値に基づいてデータベースから既存のレコードを削除します。|  
+|TableAdapter DBDirect メソッド|説明|  
+|----------------------------------|-----------------|  
+|`TableAdapter.Insert`|データベースに新しいレコードを追加して、個々 の列の値をメソッド パラメーターとして渡すことができます。|  
+|`TableAdapter.Update`|既存のデータベース内のレコードを更新します。 `Update`メソッドはメソッド パラメーターとして元と新しい列の値を受け取ります。 元の値は、元のレコードを検索するために使用され、そのレコードを更新する、新しい値が使用されます。<br /><br /> `TableAdapter.Update`データセットの変更をデータベースに実行することで調整するためにメソッドを使用しても、 <xref:System.Data.DataSet>、 <xref:System.Data.DataTable>、 <xref:System.Data.DataRow>、または配列の<xref:System.Data.DataRow>メソッド パラメーターとして。|  
+|`TableAdapter.Delete`|メソッドのパラメーターとして渡された元の列値に基づいて、データベースから既存のレコードを削除します。|  
   
-### オブジェクトからデータベースに新規レコードを保存するには  
+### <a name="to-save-new-records-from-an-object-to-a-database"></a>オブジェクトから新しいレコードをデータベースに保存するには  
   
--   `TableAdapter.Insert` メソッドに値を渡してレコードを作成します。  
+-   値を渡すことによって、レコードを作成、`TableAdapter.Insert`メソッドです。  
   
-     `currentCustomer` オブジェクトの値を `TableAdapter.Insert` メソッドに渡して、`Customers` テーブルに顧客レコードを新規作成する例を次に示します。  
+     次の例で、新しい顧客レコードを作成する、`Customers`テーブル内の値を渡すことによって、`currentCustomer`オブジェクトを`TableAdapter.Insert`メソッドです。  
   
-     [!code-cs[VbRaddataSaving#23](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_1.cs)]
+     [!code-csharp[VbRaddataSaving#23](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_1.cs)]
      [!code-vb[VbRaddataSaving#23](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_1.vb)]  
   
-### オブジェクトからデータベースに既存レコードを更新するには  
+### <a name="to-update-existing-records-from-an-object-to-a-database"></a>オブジェクトからデータベースへの既存のレコードを更新するには  
   
--   `TableAdapter.Update` メソッドを呼び出し、元の値を渡してレコードの場所を探し、新しい値を渡してレコードを更新してレコードを変更します。  
+-   呼び出すことによって、レコードの編集、`TableAdapter.Update`メソッドをレコードを更新する新しい値を渡すと、レコードを検索する元の値を渡します。  
   
     > [!NOTE]
-    >  オブジェクトは、`Update` メソッドに渡すために元の値を維持する必要があります。  この例では、`orig` プリフィックスを付けたプロパティを使用して元の値を格納します。  
+    >  オブジェクトに渡すために、元の値を維持するために必要のある、`Update`メソッドです。 この例でのプロパティを使用して、`orig`元の値を格納するプレフィックスです。  
   
-     `Customer` オブジェクトの新しい値と元の値を `TableAdapter.Update` メソッドに渡して、`Customers` テーブルの既存のレコードを更新する例を次に示します。  
+     次の例の既存のレコードを更新する、`Customers`テーブルに新しいと元の値を渡すことによって、`Customer`オブジェクトを`TableAdapter.Update`メソッドです。  
   
-     [!code-cs[VbRaddataSaving#24](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_2.cs)]
+     [!code-csharp[VbRaddataSaving#24](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_2.cs)]
      [!code-vb[VbRaddataSaving#24](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_2.vb)]  
   
-### データベースから既存のレコードを削除するには  
+### <a name="to-delete-existing-records-from-a-database"></a>データベースから既存のレコードを削除するには  
   
--   `TableAdapter.Delete` メソッドを呼び出し、元の値を渡してレコードを探して削除します。  
+-   呼び出すことにより、レコードを削除、`TableAdapter.Delete`メソッドと、レコードを検索する元の値を渡すことです。  
   
     > [!NOTE]
-    >  オブジェクトは、`Delete` メソッドに渡すために元の値を維持する必要があります。  この例では、`orig` プリフィックスを付けたプロパティを使用して元の値を格納します。  
+    >  オブジェクトに渡すために、元の値を維持するために必要のある、`Delete`メソッドです。 この例でのプロパティを使用して、`orig`元の値を格納するプレフィックスです。  
   
-     `Customer` オブジェクトの元の値を `TableAdapter.Delete` メソッドに渡して、`Customers` テーブルからレコードを削除する例を次に示します。  
+     次の例からレコードを削除する、`Customers`テーブルの元の値を渡すことによって、`Customer`オブジェクトを`TableAdapter.Delete`メソッドです。  
   
-     [!code-cs[VbRaddataSaving#25](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_3.cs)]
+     [!code-csharp[VbRaddataSaving#25](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_3.cs)]
      [!code-vb[VbRaddataSaving#25](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_3.vb)]  
   
-## .NET Framework セキュリティ  
- データベースのテーブルで INSERT、UPDATE、または DELETE を実行するアクセス許可が必要です。  
+## <a name="net-framework-security"></a>.NET Framework セキュリティ  
+ 選択した挿入を実行する権限が必要更新、または、データベース内のテーブルを削除します。  
   
-## 参照  
- [Visual Studio におけるオブジェクトのバインド](../data-tools/bind-objects-in-visual-studio.md)   
- [方法: オブジェクトのデータに接続する](../Topic/How%20to:%20Connect%20to%20Data%20in%20Objects.md)   
- [チュートリアル: オブジェクトのデータへの接続 \(Windows フォーム\)](../Topic/Walkthrough:%20Connecting%20to%20Data%20in%20Objects%20\(Windows%20Forms\).md)   
- [方法 : TableAdapter で直接データベースにアクセスする](../data-tools/directly-access-the-database-with-a-tableadapter.md)   
- [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Visual Studio でのデータへの接続](../data-tools/connecting-to-data-in-visual-studio.md)   
- [アプリケーションでデータを受け取る準備](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [アプリケーションへのデータのフェッチ](../data-tools/fetching-data-into-your-application.md)   
- [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [アプリケーションでのデータ編集](../data-tools/editing-data-in-your-application.md)   
- [データの検証](../Topic/Validating%20Data.md)   
- [データの保存](../data-tools/saving-data.md)
+## <a name="see-also"></a>関連項目  
+ [データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)

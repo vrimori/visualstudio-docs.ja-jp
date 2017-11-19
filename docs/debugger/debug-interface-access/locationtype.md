@@ -1,95 +1,94 @@
 ---
-title: "LocationType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LocationType 列挙型"
+title: "LocationType |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: LocationType enumeration
 ms.assetid: d3e1eedc-bfd3-4c91-881b-d69565138d0f
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: d5a6a14b3e5e1731c7b9f1fd58181be7adb870d9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# LocationType
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-シンボルに含まれている場所情報の種類を示します。  
+# <a name="locationtype"></a>LocationType
+シンボルの場所の情報の種類を示します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-enum LocationType {   
-   LocIsNull,  
-   LocIsStatic,  
-   LocIsTLS,  
-   LocIsRegRel,  
-   LocIsThisRel,  
-   LocIsEnregistered,  
-   LocIsBitField,  
-   LocIsSlot,  
-   LocIsIlRel,  
-   LocInMetaData,  
-   LocIsConstant,  
-   LocTypeMax  
+```C++  
+enum LocationType {   
+   LocIsNull,  
+   LocIsStatic,  
+   LocIsTLS,  
+   LocIsRegRel,  
+   LocIsThisRel,  
+   LocIsEnregistered,  
+   LocIsBitField,  
+   LocIsSlot,  
+   LocIsIlRel,  
+   LocInMetaData,  
+   LocIsConstant,  
+   LocTypeMax  
 };  
 ```  
   
-## Elements  
+## <a name="elements"></a>Elements  
  `LocIsNull`  
- 位置情報は使用できません。  
+ 場所の情報は使用できません。  
   
  `LocIsStatic`  
  場所は静的です。  
   
  `LocIsTLS`  
- 場所はスレッド ローカル ストレージにあります。  
+ 場所は、スレッド ローカル ストレージです。  
   
  `LocIsRegRel`  
- 場所は登録相対的です。  
+ 場所は、レジスタの相対です。  
   
  `LocIsThisRel`  
- 場所は `this`\- 相対パスです。  
+ 場所は`this`-相対します。  
   
  `LocIsEnregistered`  
- 位置がレジスタにあります。  
+ 場所は、レジスタでです。  
   
  `LocIsBitField`  
- 位置がビット フィールドです。  
+ 場所は、ビット フィールドです。  
   
  `LocIsSlot`  
- 場所は Microsoft Intermediate Language \(MSIL\) のスロットです。  
+ 場所は、Microsoft Intermediate Language (MSIL) のスロットです。  
   
  `LocIsIlRel`  
- 場所は MSIL 相対的です。  
+ 場所は、MSIL relative です。  
   
  `LocInMetaData`  
- 場所はメタデータにあります。  
+ 場所は、メタデータでです。  
   
  `LocIsConstant`  
- 場所は定数値に設定されます。  
+ 場所は、定数値です。  
   
  `LocTypeMax`  
  この列挙体の場所の種類の数。  
   
-## 解説  
- [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) のインターフェイスで使用できるプロパティはイメージ ファイル内のシンボルの位置によって決まります。  詳細については、「[シンボルの場所](../../debugger/debug-interface-access/symbol-locations.md)」を参照してください。  
+## <a name="remarks"></a>コメント  
+ 使用できるプロパティ、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)インターフェイスは、イメージ ファイル内のシンボルの場所によって異なります。 詳細については、次を参照してください。[シンボルの場所](../../debugger/debug-interface-access/symbol-locations.md)です。  
   
- この列挙体の値は [IDiaSymbol::get\_locationType](../Topic/IDiaSymbol::get_locationType.md) メソッドの呼び出しによって返されます。  
+ この列挙体の値がへの呼び出しによって返される、 [idiasymbol::get_locationtype](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md)メソッドです。  
   
-## 必要条件  
- ヘッダー : cvconst.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: cvconst.h  
   
-## 参照  
- [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙体と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [IDiaSymbol::get\_locationType](../Topic/IDiaSymbol::get_locationType.md)   
+ [Idiasymbol::get_locationtype](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md)   
  [シンボルの場所](../../debugger/debug-interface-access/symbol-locations.md)

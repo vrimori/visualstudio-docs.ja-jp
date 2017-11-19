@@ -1,60 +1,60 @@
 ---
-title: "IDebugMethodField::EnumLocals | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugMethodField::EnumLocals"
-helpviewer_keywords: 
-  - "IDebugMethodField::EnumLocals メソッド"
+title: "IDebugMethodField::EnumLocals |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugMethodField::EnumLocals
+helpviewer_keywords: IDebugMethodField::EnumLocals method
 ms.assetid: b0456a6d-2b96-49e2-a871-516571b4f6a5
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: aa4ab5a8963ae8364e35cdc0e2a5237a75d35994
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugMethodField::EnumLocals
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-メソッドの選択されたローカル変数の列挙子を作成します。  
+# <a name="idebugmethodfieldenumlocals"></a>IDebugMethodField::EnumLocals
+メソッドの選択したローカル変数の列挙子を作成します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT EnumLocals(   
-   IDebugAddress*     pAddress,  
-   IEnumDebugFields** ppLocals  
+```cpp  
+HRESULT EnumLocals(   
+   IDebugAddress*     pAddress,  
+   IEnumDebugFields** ppLocals  
 );  
 ```  
   
-```c#  
+```csharp  
 int EnumLocals(  
-   IDebugAddress        pAddress,   
-   out IEnumDebugFields ppLocals  
+   IDebugAddress        pAddress,   
+   out IEnumDebugFields ppLocals  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pAddress`  
- \[入力\] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) を表すオブジェクトを取得するローカル スコープまたはコンテキストを選択するデバッグのアドレス。  
+ [in][IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)コンテキストまたはローカル変数の取得元のスコープを選択するデバッグ アドレスを表すオブジェクト。  
   
  `ppLocals`  
- \[入力\] [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) にローカルの一覧を返します ; ローカルである場合null 値を返します。  
+ [out]返します、 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)ローカル変数の一覧を表すオブジェクト。 それ以外の場合、ローカル変数が存在しない場合、null 値を返します。  
   
-## 戻り値  
- S\_FALSEは S\_OK または成功している場合を返します。  それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。 または、ローカル変数が存在しない場合は S_FALSE を返します。 それ以外の場合はエラー コードを返します。  
   
-## 解説  
- 特定のデバッグのアドレスを含むブロック内で定義されている変数のみを列挙します。  すべてのコンパイラが生成したローカルを含むすべてのローカルに応じて[EnumAllLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md) のメソッドを呼び出します。  
+## <a name="remarks"></a>コメント  
+ 指定されたデバッグ アドレスを含むブロック内で定義されている変数のみが列挙されます。 すべてコンパイラによって生成されたローカル変数を含むすべてのローカル変数が必要な場合は、呼び出し、 [EnumAllLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md)メソッドです。  
   
- メソッドのコンテキストまたはスコープは複数のブロックを含めることができます。  たとえば次の考案されているメソッドは 3 個の範囲は2 種類の内部ブロックとメソッド本体自体が含まれています。  
+ メソッドは、複数のスコープのコンテキストまたはブロックを含めることができます。 たとえば、次の不自然なメソッドには、3 つのスコープ、2 つの内部ブロックと、メソッド本体が含まれています。  
   
-```c#  
+```csharp  
 public void func(int index)  
 {  
     // Method body scope  
@@ -72,9 +72,9 @@ public void func(int index)
 }  
 ```  
   
- [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) のオブジェクトは `func` のメソッド自体を表します。  [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) の `EnumLocals` のメソッドを呼び出します `Inner Scope 1` のアドレスの戻り値に `temp1` の変数を含む列挙型などを設定します。  
+ [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)オブジェクトが表す、`func`メソッド自体です。 呼び出す、`EnumLocals`メソッドを[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)に設定、`Inner Scope 1`アドレスを含む列挙を返します、`temp1`例については、変数です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   
  [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)   

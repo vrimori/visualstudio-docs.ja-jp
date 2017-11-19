@@ -1,36 +1,36 @@
 ---
-title: "&lt;Strings&gt; 要素 (ブートストラップ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MSBuild.GenerateBootstrapper.NoStringsForCulture"
-  - "MSBuild.GenerateBootstrapper.ProductCultureNotFound"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "<Strings> 要素 [ブートストラップ]"
+title: "&lt;文字列&gt;要素 (ブートス トラップ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MSBuild.GenerateBootstrapper.NoStringsForCulture
+- MSBuild.GenerateBootstrapper.ProductCultureNotFound
+dev_langs:
+- FSharp
+- VB
+- CSharp
+- C++
+helpviewer_keywords: <Strings> element [bootstrapper]
 ms.assetid: d5ea3613-5fc9-4a11-bef3-46a01178bf60
-caps.latest.revision: 4
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 19c4c961dd226ada84fe825643af6d1c7eacc925
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# &lt;Strings&gt; 要素 (ブートストラップ)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-製品名、パッケージ名、およびインストール エラー メッセージをローカライズした文字列を定義します。  
+# <a name="ltstringsgt-element-bootstrapper"></a>&lt;文字列&gt;要素 (ブートス トラップ)
+製品名、パッケージ名、およびインストールのエラー メッセージのローカライズされた文字列を定義します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 <Strings>  
@@ -41,20 +41,20 @@ caps.handback.revision: 4
 </Strings>  
 ```  
   
-## 要素と属性  
- `Strings` 要素は、`Package` 要素に必須の子です。  属性はありません。  
+## <a name="elements-and-attributes"></a>要素と属性  
+ `Strings`要素の子では、`Package`要素。 属性ではありません。  
   
-## \[文字列\]  
- `String` 要素は、`Strings` 要素に必須の子です。  `Strings` 要素は `String` 要素を 1 つ以上持つことができます。  
+## <a name="string"></a>String  
+ `String`要素の子では、`Strings`要素。 A`Strings`要素が 1 つまたは複数あります`String`要素。  
   
- `String` には、以下の属性があります。  
+ `String`次の属性があります。  
   
-|属性|Description|  
-|--------|-----------------|  
-|`Name`|必ず指定します。  文字列の名前です。|  
+|属性|説明|  
+|---------------|-----------------|  
+|`Name`|必須です。 文字列の名前。|  
   
-## 使用例  
- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] インストーラー用にすべての英語文字列を指定するコード例を次に示します。  
+## <a name="example"></a>例  
+ 次のコード例では、すべての英語の文字列を指定します、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]インストーラーです。  
   
 ```  
 <Strings>  
@@ -75,5 +75,5 @@ caps.handback.revision: 4
 </Strings>  
 ```  
   
-## 参照  
- [\<Package\> 要素](../deployment/package-element-bootstrapper.md)
+## <a name="see-also"></a>関連項目  
+ [\<パッケージ > 要素](../deployment/package-element-bootstrapper.md)

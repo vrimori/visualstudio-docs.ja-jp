@@ -1,29 +1,33 @@
 ---
-title: "アクティブ スクリプト デバッガー インターフェイス | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "アクティブ スクリプト デバッガー インターフェイス"
-  - "activdbg.h"
+title: "アクティブ スクリプト デバッガー インターフェイス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Active Script Debugger interfaces
+- activdbg.h
 ms.assetid: bf4750b1-4e58-442b-ab56-254e640de61d
-caps.latest.revision: 15
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: d4a3d17a8ff43bb3bd18641c2298f5436f40d925
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# アクティブ スクリプト デバッガー インターフェイス
+# <a name="active-script-debugger-interfaces"></a>アクティブ スクリプト デバッガー インターフェイス
 activdbg.h および activdbg100.h ヘッダー ファイルは、このセクションに記載されているインターフェイス、列挙型、および構造体を提供します。 これらはデバッグ スクリプト用です。  
   
 > [!NOTE]
 >  `IJSDebug*` インターフェイスおよび `IEnumJsStackFrames` インターフェイスは、スクリプトを含むネイティブ コードのデバッグ用に最初に Internet Explorer 11 でリリースされました。 これらのインターフェイスのヘッダー ファイルは jscript9diag.h です。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  次のインターフェイスによって、言語およびホストに依存しないデバッグが可能になります。  
   
 -   [アクティブ スクリプト デバッガーの定数、列挙型、および構造体](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)  
@@ -36,7 +40,7 @@ activdbg.h および activdbg100.h ヘッダー ファイルは、このセク�
   
 -   [IActiveScriptSiteDebug インターフェイス](../../winscript/reference/iactivescriptsitedebug-interface.md)  
   
--   [IActiveScriptSiteDebug32 Interface](../../winscript/reference/iactivescriptsitedebug32-interface.md)  
+-   [IActiveScriptSiteDebug32 インターフェイス](../../winscript/reference/iactivescriptsitedebug32-interface.md)  
   
 -   [IActiveScriptSiteDebugEx インターフェイス](../../winscript/reference/iactivescriptsitedebugex-interface.md)  
   
@@ -178,5 +182,5 @@ activdbg.h および activdbg100.h ヘッダー ファイルは、このセク�
   
 -   [アクティブ スクリプト デバッガーの定数、列挙型、および構造体](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [アクティブ スクリプトのデバッグの概要](../../winscript/active-script-debugging-overview.md)

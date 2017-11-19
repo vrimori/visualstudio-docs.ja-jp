@@ -1,11 +1,10 @@
 ---
-title: "VSIX パッケージに署名する |Microsoft ドキュメント"
+title: "VSIX パッケージへの署名 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,53 +14,40 @@ helpviewer_keywords:
 - vsix
 - packages
 ms.assetid: e34cfc2c-361c-44f8-9cfe-9f2be229d248
-caps.latest.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: da489f0fd0483cddbefb2899eb91bd1d56735d62
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: d5a27b4e76e0cd8f986441778ed39c7fbb5a2211
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="signing-vsix-packages"></a>VSIX パッケージに署名します。
-拡張機能アセンブリは、Visual Studio で実行できますが、これを行うことをお勧めする前に署名する必要はありません。  
+拡張機能アセンブリは、Visual Studio で実行することができますが、これを行うことをお勧めする前に署名する必要はありません。  
   
- 拡張機能をセキュリティで保護し、改ざんされていないことを確認する場合は、VSIX パッケージにデジタル署名を追加できます。 VSIX は、署名済み、VSIX インストーラーによって、署名があるの詳細については、署名自体を加えたことを示すメッセージが表示されます。 VSIX のコンテンツが変更されて、VSIX に再度署名されていない場合は、署名が無効である VSIX インストーラーが表示されます。 インストールが停止していないが、ユーザーに警告が表示されます。  
+ 拡張機能をセキュリティで保護し、改ざんされていないことを確認する場合は、VSIX パッケージにデジタル署名を追加できます。 VSIX は署名済み、VSIX インストーラーには署名されていること、さらの詳細については、署名自体を示すメッセージが表示されます。 VSIX の内容が変更された、VSIX が再度署名されていない場合は、署名が無効である VSIX インストーラーが表示されます。 インストールは停止されませんが、ユーザーに警告が表示されます。  
   
 > [!IMPORTANT]
->  2015 以降では、VSIX パッケージには SHA256 暗号化以外のものを使用して署名が無効な署名を持つとして識別されます。 VSIX のインストールはブロックされませんが、ユーザーに警告が表示されます。  
+>  2015 以降で、VSIX パッケージには SHA256 暗号化以外のものを使用して署名が無効なシグネチャを持つものとして示されます。 VSIX のインストールはブロックされませんが、ユーザーに警告が表示されます。  
   
 ## <a name="signing-a-vsix-with-vsixsigntool"></a>VSIXSignTool で VSIX の署名  
- 署名ツールから利用可能には SHA256 暗号化されることは[VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility)で nuget.org で[VsixSignTool](http://www.nuget.org/packages/Microsoft.VSSDK.Vsixsigntool)します。  
+ 署名ツールから利用可能な SHA256 暗号化が[VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility)で nuget.org に[VsixSignTool](http://www.nuget.org/packages/Microsoft.VSSDK.Vsixsigntool)です。  
   
 #### <a name="to-use-the-vsixsigntool"></a>VSIXSignTool を使用するには  
   
 1.  プロジェクトに、VSIX を追加します。  
   
-2.  ソリューション エクスプ ローラーでプロジェクト ノードを右クリックを選択すると**追加 |NuGet パッケージの管理**します。  詳細については、NuGet を追加して NuGet パッケージを参照してください[NuGet 概要](http://docs.nuget.org/)と[NuGet パッケージを使用して管理ダイアログ](http://docs.nuget.org/Consume/Package-Manager-Dialog)します。  
+2.  ソリューション エクスプ ローラーでプロジェクト ノードを右クリックを選択すると**追加 &#124;です。NuGet パッケージの管理**です。  NuGet と NuGet パッケージの参照の追加の詳細についてを参照してください。、 [NuGet のドキュメント](http://docs.microsoft.com/NuGet)と[パッケージ マネージャー UI](http://docs.microsoft.com/NuGet/Tools/Package-Manager-UI)トピックです。  
   
-3.  VSIXSignTool VisualStudioExtensibility から検索し、NuGet パッケージをインストールします。  
+3.  VisualStudioExtensibility から VSIXSignTool を検索し、NuGet パッケージをインストールします。  
   
-4.  プロジェクトのローカル パッケージの場所から、VSIXSignTool を実行できます。 署名のシナリオでは、ツールのコマンド ライン ヘルプを参照してください (VSIXSignTool.exe/?)。  
+4.  プロジェクトのローカル パッケージの場所から、VSIXSignTool を実行できます。 署名のシナリオでは、ツールのコマンド ライン ヘルプを参照してください (VSIXSignTool.exe/?) です。  
   
- たとえば、パスワード保護されている証明書ファイルを使用して署名します。  
+ たとえば、パスワードでサインインするために証明書ファイルを保護しました。  
   
  VSIXSignTool.exe 記号/f \<certfile >/p\<パスワード > \<VSIXfile >  
   
 ## <a name="see-also"></a>関連項目  
- [Visual Studio 拡張機能を配布](../extensibility/shipping-visual-studio-extensions.md)
+ [Visual Studio 拡張機能の配布](../extensibility/shipping-visual-studio-extensions.md)

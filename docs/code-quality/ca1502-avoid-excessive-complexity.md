@@ -1,11 +1,10 @@
 ---
-title: 'CA1502: Avoid excessive complexity | Microsoft Docs'
+title: "CA1502: 過剰な複雑さを回避する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,91 +14,83 @@ helpviewer_keywords:
 - CA1502
 - AvoidExcessiveComplexity
 ms.assetid: d735454b-2f8f-47ce-907d-f7a5a5391221
-caps.latest.revision: 30
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: c04ac5e357556722770067fb61378580173f3462
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "30"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 3c45ca232b555af1441502586a38c80f43c41edc
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1502-avoid-excessive-complexity"></a>CA1502: Avoid excessive complexity
+# <a name="ca1502-avoid-excessive-complexity"></a>CA1502: メソッドの実装を複雑にしすぎないでください
 |||  
 |-|-|  
 |TypeName|AvoidExcessiveComplexity|  
 |CheckId|CA1502|  
-|Category|Microsoft.Maintainability|  
-|Breaking Change|Non-breaking|  
+|カテゴリ|Microsoft.Maintainability|  
+|互換性に影響する変更点|なし|  
   
-## <a name="cause"></a>Cause  
- A method has an excessive cyclomatic complexity.  
+## <a name="cause"></a>原因  
+ メソッドの名前がサイクロマティック複雑です。  
   
-## <a name="rule-description"></a>Rule Description  
- *Cyclomatic complexity* measures the number of linearly independent paths through the method, which is determined by the number and complexity of conditional branches. A low cyclomatic complexity generally indicates a method that is easy to understand, test, and maintain. The cyclomatic complexity is calculated from a control flow graph of the method and is given as follows:  
+## <a name="rule-description"></a>規則の説明  
+ *サイクロマティック複雑度*線形独立の条件付き分岐の複雑さと数によって決定されるメソッド経路数を計測します。 低のサイクロマティック複雑では、理解、テスト、および保守しやすい方法通常を示します。 サイクロマティック複雑度は、メソッドの制御フロー グラフから計算され、次のように指定します。  
   
- cyclomatic complexity = the number of edges - the number of nodes + 1  
+ サイクロマティック複雑度端のノードの数は + 1 の数を =  
   
- where a node represents a logic branch point and an edge represents a line between nodes.  
+ ノードが、論理的な分岐ポイントとエッジを表すノードの間に行を表します。  
   
- The rule reports a violation when the cyclomatic complexity is more than 25.  
+ ルールは、サイクロマティック複雑度が 25 以上の違反を報告します。  
   
- You can learn more about code metrics at [Measuring Complexity and Maintainability of Managed Code](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md),  
+ コード メトリックに関する詳細については、[複雑性の測定とマネージ コードの保守容易性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)、  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, refactor the method to reduce its cyclomatic complexity.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、サイクロマティック複雑度を減らすための方法をリファクターします。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule if the complexity cannot easily be reduced and the method is easy to understand, test, and maintain. In particular, a method that contains a large `switch` (`Select` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) statement is a candidate for exclusion. The risk of destabilizing the code base late in the development cycle or introducing an unexpected change in runtime behavior in previously shipped code might outweigh the maintainability benefits of refactoring the code.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 複雑さを簡単に低下させることはできず、メソッドを簡単に理解して、テスト、および保守場合は、この規則による警告を抑制しても安全です。 特に、大規模なを含むメソッド`switch`(`Select`で[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) ステートメントは、除外の対象です。 コード ベースで以前にリリース済みのコードでのランタイム動作の予期しない変更を導入したり、開発サイクル遅延は、コードのリファクタリングの保守容易性のメリットを上回る場合がありますが不安定になるリスクです。  
   
-## <a name="how-cyclomatic-complexity-is-calculated"></a>How Cyclomatic Complexity is Calculated  
- The cyclomatic complexity is calculated by adding 1 to the following:  
+## <a name="how-cyclomatic-complexity-is-calculated"></a>サイクロマティック複雑度を計算する方法  
+ サイクロマティック複雑度は、次に 1 を加算して計算されます。  
   
--   Number of branches (such as `if`, `while`, and `do`)  
+-   分岐の数 (など`if`、 `while`、および`do`)  
   
--   Number of `case` statements in a `switch`  
+-   数`case`内のステートメント、`switch`  
   
- The following examples show methods that have varying cyclomatic complexities.  
+ 次の例では、さまざまなサイクロマティック複雑な作業の方法を示します。  
   
-## <a name="example"></a>Example  
- **Cyclomatic Complexity of 1**  
+## <a name="example"></a>例  
+ **1 のサイクロマティック複雑度**  
   
- [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#1](../code-quality/codesnippet/CPP/ca1502-avoid-excessive-complexity_1.cpp)] [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#1](../code-quality/codesnippet/VisualBasic/ca1502-avoid-excessive-complexity_1.vb)] [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#1](../code-quality/codesnippet/CSharp/ca1502-avoid-excessive-complexity_1.cs)]  
+ [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#1](../code-quality/codesnippet/CPP/ca1502-avoid-excessive-complexity_1.cpp)]
+ [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#1](../code-quality/codesnippet/VisualBasic/ca1502-avoid-excessive-complexity_1.vb)]
+ [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#1](../code-quality/codesnippet/CSharp/ca1502-avoid-excessive-complexity_1.cs)]  
   
-## <a name="example"></a>Example  
- **Cyclomatic Complexity of 2**  
+## <a name="example"></a>例  
+ **2 のサイクロマティック複雑度**  
   
- [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#2](../code-quality/codesnippet/CPP/ca1502-avoid-excessive-complexity_2.cpp)] [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#2](../code-quality/codesnippet/VisualBasic/ca1502-avoid-excessive-complexity_2.vb)] [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#2](../code-quality/codesnippet/CSharp/ca1502-avoid-excessive-complexity_2.cs)]  
+ [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#2](../code-quality/codesnippet/CPP/ca1502-avoid-excessive-complexity_2.cpp)]
+ [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#2](../code-quality/codesnippet/VisualBasic/ca1502-avoid-excessive-complexity_2.vb)]
+ [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#2](../code-quality/codesnippet/CSharp/ca1502-avoid-excessive-complexity_2.cs)]  
   
-## <a name="example"></a>Example  
- **Cyclomatic Complexity of 3**  
+## <a name="example"></a>例  
+ **3 のサイクロマティック複雑度**  
   
- [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#3](../code-quality/codesnippet/CPP/ca1502-avoid-excessive-complexity_3.cpp)] [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#3](../code-quality/codesnippet/VisualBasic/ca1502-avoid-excessive-complexity_3.vb)] [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#3](../code-quality/codesnippet/CSharp/ca1502-avoid-excessive-complexity_3.cs)]  
+ [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#3](../code-quality/codesnippet/CPP/ca1502-avoid-excessive-complexity_3.cpp)]
+ [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#3](../code-quality/codesnippet/VisualBasic/ca1502-avoid-excessive-complexity_3.vb)]
+ [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#3](../code-quality/codesnippet/CSharp/ca1502-avoid-excessive-complexity_3.cs)]  
   
-## <a name="example"></a>Example  
- **Cyclomatic Complexity of 8**  
+## <a name="example"></a>例  
+ **8 のサイクロマティック複雑度**  
   
- [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#4](../code-quality/codesnippet/CPP/ca1502-avoid-excessive-complexity_4.cpp)] [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#4](../code-quality/codesnippet/VisualBasic/ca1502-avoid-excessive-complexity_4.vb)] [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#4](../code-quality/codesnippet/CSharp/ca1502-avoid-excessive-complexity_4.cs)]  
+ [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#4](../code-quality/codesnippet/CPP/ca1502-avoid-excessive-complexity_4.cpp)]
+ [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#4](../code-quality/codesnippet/VisualBasic/ca1502-avoid-excessive-complexity_4.vb)]
+ [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#4](../code-quality/codesnippet/CSharp/ca1502-avoid-excessive-complexity_4.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1501: Avoid excessive inheritance](../code-quality/ca1501-avoid-excessive-inheritance.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA1501: 継承を使用しすぎないでください](../code-quality/ca1501-avoid-excessive-inheritance.md)  
   
-## <a name="see-also"></a>See Also  
- [Measuring Complexity and Maintainability of Managed Code](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)
+## <a name="see-also"></a>関連項目  
+ [マネージ コードの複雑さと保守性の測定](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)

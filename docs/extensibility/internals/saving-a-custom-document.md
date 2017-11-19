@@ -1,48 +1,50 @@
 ---
-title: "カスタム ドキュメントの保存 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "永続化、カスタム ドキュメントの保存"
-  - "プロジェクト [Visual Studio SDK] カスタム ドキュメントの保存"
-  - "カスタムの文書を保存するエディター [Visual Studio SDK]"
+title: "図面を保存するカスタム |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- persistence, saving custom documents
+- projects [Visual Studio SDK], saving custom documents
+- editors [Visual Studio SDK], saving custom documents
 ms.assetid: 040b36d6-1f0a-4579-971c-40fbb46ade1d
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: c3cd6f5f45736a7b2578bc9df80a8472d3b50c3d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# カスタム ドキュメントの保存
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-環境 **Save** ハンドル**Save As** と **Save All** コマンド。  ユーザーが \[ENT0ENT\] をクリックすると **名前を付けて保存** ENT4ENT \[入力\] メニューの **\*\*\* or Save All \*\*\*** はすべて保存によってソリューションを閉じます次のプロセスに発生します。  
+# <a name="saving-a-custom-document"></a>カスタム ドキュメントの保存
+環境ハンドル、**保存**、**名前を付けて保存**、および**すべて保存**コマンド。 ユーザーがクリックしたとき**保存**、**名前を付けて保存**、**すべてを保存または**上、**ファイル**メニューまたはすべてを保存、次の結果として得られる、ソリューションを閉じる処理が行われます。  
   
- ![カスタマー エディター保存](~/extensibility/internals/media/private.gif "Private")  
-\[名前を付けて保存保存しカスタム エディターのイベントを処理するすべてのコマンドを保存します。  
+ ![カスタマー エディター保存](../../extensibility/internals/media/private.gif "プライベート")  
+保存、名前を付けて保存、および処理のカスタム エディターをすべて保存 コマンド  
   
- このプロセスは次の手順で詳しく説明します :  
+ このプロセスは、次の手順の詳細を示します。  
   
-1.  **保存**  と  **名前を付けて保存**  のコマンドでは環境はアクティブ ドキュメント ウィンドウを決定するために <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> サービスを使用してどの項目が格納されるかその。  アクティブ ドキュメント ウィンドウがわかっている場合は環境が実行中のドキュメントの表のドキュメントの階層のポインターと itemID アイテム ID \(\) を検索します。  詳細については、「[実行中のドキュメント テーブル](../../extensibility/internals/running-document-table.md)」を参照してください。  
+1.  **保存**と**名前を付けて保存**コマンド、環境を使用して、<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>サービスのアクティブなドキュメント ウィンドウを特定して、どのような項目を保存するためです。 アクティブなドキュメント ウィンドウが判明すると、環境は、実行中のドキュメント テーブル内のドキュメントの階層のポインターとアイテム識別子 (itemID) を検索します。 詳細については、次を参照してください。[を実行しているドキュメント テーブル](../../extensibility/internals/running-document-table.md)です。  
   
-     保存にすべてのコマンドを実行してドキュメントのテーブルに格納するには環境すべての項目の一覧をコンパイルするために情報を使用します。  
+     すべて保存 コマンドの環境情報を使用して実行中のドキュメント テーブルで保存するすべての項目の一覧をコンパイルします。  
   
-2.  ソリューションは <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> の呼び出しを受信すると選択した項目 \(つまり<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> サービスが公開する複数選択\) のセットを反復処理します。  
+2.  ソリューションが受信すると、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>呼び出し、選択した項目のセットを反復処理 (によって公開されている複数の選択は、<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>サービス)。  
   
-3.  選択した項目ごとにソリューションは保存のメニュー コマンドが有効かどうかを確認するに <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IsItemDirty%2A> のメソッドを呼び出すことによって階層のポインターを使用します。  一つ以上の項目を汚れて場合保存\] コマンドが有効になります。  階層が標準エディターを使用すると階層がエディターに <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.IsDocDataDirty%2A> のメソッドを呼び出してダーティな状態の問い合わせに委任します。  
+3.  選択範囲内の各項目に、ソリューション ポインターを使用して階層を呼び出す、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IsItemDirty%2A>  メニューの 保存 コマンドを有効にするかどうかを調べます。 1 つまたは複数の項目がダーティの場合は、[保存] コマンドは有効です。 場合は、階層は、標準のエディターを使用して、し、クエリを実行する階層デリゲート ダーティ状態、エディターを呼び出すことによって、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.IsDocDataDirty%2A>メソッドです。  
   
-4.  がダーティ選択した各項目にソリューションは適切な階層の <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.SaveItem%2A> のメソッドを呼び出すことによって階層のポインターを使用します。  
+4.  各選択したアイテムでダーティである、ソリューション ポインターを使用して階層を呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.SaveItem%2A>適切な階層のメソッドです。  
   
-     カスタム エディターの場合はドキュメント データ オブジェクトとプロジェクト間の通信はプライベートです。  したがって特別な永続性の問題がこの二つのオブジェクト間で処理されます。  
+     カスタムのエディターの場合は、ドキュメント データ オブジェクトと、プロジェクト間の通信はプライベートです。 したがって、任意の特殊な永続化に関する注意事項は、これら 2 つのオブジェクト間で処理されます。  
   
     > [!NOTE]
-    >  独自の永続性を実装する場合はメソッドを <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFiles%2A> の時間を節約するために呼び出すください。  このメソッドはファイルを保存しても安全であることを確認します \(たとえばファイルが読み取り専用ではありません\)。  
+    >  独自の永続化を実装する場合を呼び出すことを確認する、<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFiles%2A>時間を節約するメソッド。 このメソッドは、ファイルを保存しても安全であるかどうかを確認するチェック (たとえば、ファイルは読み取り専用)。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>   
- [開く、プロジェクト項目を保存します。](../../extensibility/internals/opening-and-saving-project-items.md)
+ [プロジェクト項目のオープンと保存](../../extensibility/internals/opening-and-saving-project-items.md)

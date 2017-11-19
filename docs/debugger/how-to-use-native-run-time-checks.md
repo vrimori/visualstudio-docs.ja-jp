@@ -1,56 +1,53 @@
 ---
-title: "方法 : ネイティブ ランタイム チェックを使用する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.runtime.errorchecks"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "/O コンパイラ オプション, /RTC オプション"
-  - "/RTC コンパイラ オプション [C++], /O コンパイラ オプション"
-  - "配列 [Visual Studio], デバッグ"
-  - "デバッガー, ネイティブ ランタイム チェック"
-  - "デバッガー, ランタイム エラー"
-  - "デバッグ (配列を)"
-  - "ネイティブ ランタイム チェック"
-  - "O コンパイラ オプション, /RTC オプション"
-  - "最適化されたビルド オプション"
-  - "RTC コンパイラ オプション, /O コンパイラ オプション"
-  - "ランタイム チェック"
-  - "ランタイム チェック, native"
-  - "ランタイム エラー, デバッグ"
-  - "ランタイム エラー, エラー チェック"
-  - "runtime_checks プラグマ"
-  - "スタック ポインター"
-  - "スタック ポインター, 破損"
-  - "スタック, ポインターの破損"
-  - "変数 [デバッガー], キャッチ (初期化されていないローカル変数の依存関係を)"
-  - "変数 [デバッガー], 損失 (データの)"
+title: "方法: ネイティブ ランタイム チェックの使用 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: c.runtime.errorchecks
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- /RTC compiler option [C++], /O compiler option
+- run-time checks, native
+- stack, pointer corruption
+- stack pointers, corruption
+- /O compiler option, /RTC option
+- run-time errors, error checks
+- O compiler option, /RTC option
+- debugger, runtime errors
+- variables [debugger], loss of data
+- runtime_checks pragma
+- variables [debugger], catching dependencies on uninitialized local variables
+- run-time errors, debugging
+- debugger, native run-time checks
+- optimized build option
+- RTC compiler option, /O compiler option
+- native run-time checks
+- run-time checks
+- debugging arrays
+- stack pointers
+- arrays [Visual Studio], debugging
 ms.assetid: dc7b2f1e-5ff6-42e0-89b3-dc9dead83ee1
-caps.latest.revision: 19
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f6dd581882231b64af03d34f53c3a5a67fa921e3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : ネイティブ ランタイム チェックを使用する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Visual C\+\+ では、ネイティブ [runtime\_checks](/visual-cpp/preprocessor/runtime-checks) を使用して、次のような一般的なランタイム エラーをキャッチできます。  
+# <a name="how-to-use-native-run-time-checks"></a>方法 : ネイティブ ランタイム チェックを使用する
+Visual C++ では、ネイティブ [runtime_checks](/cpp/preprocessor/runtime-checks) を使用して、次のような一般的なランタイム エラーをキャッチできます。  
   
 -   スタック ポインターの破損  
   
@@ -62,9 +59,9 @@ Visual C\+\+ では、ネイティブ [runtime\_checks](/visual-cpp/preprocessor
   
 -   短い変数への代入によるデータの消失  
   
- 最適化された \(**\/RTC**\) ビルドで **\/O** を使用すると、コンパイラ エラーが発生します。`runtime_checks` プラグマを最適化されたビルドに使用しても効果はありません。  
+ 最適化された ( **/RTC** ) ビルドで**/O**を使用すると、コンパイラ エラーが発生します。 `runtime_checks` プラグマを最適化されたビルドに使用しても効果はありません。  
   
- ランタイム チェックが有効になっている状態のプログラムをデバッグすると、既定の動作では、ランタイム エラーの発生時にプログラムが停止し、デバッガーが起動されます。 この既定の動作は、任意のランタイム チェックで変更できます。 詳細については、「[デバッガーでの例外の管理](../debugger/managing-exceptions-with-the-debugger.md)」を参照してください。  
+ ランタイム チェックが有効になっている状態のプログラムをデバッグすると、既定の動作では、ランタイム エラーの発生時にプログラムが停止し、デバッガーが起動されます。 この既定の動作は、任意のランタイム チェックで変更できます。 詳細については、次を参照してください。[デバッガーでは、例外を管理する](../debugger/managing-exceptions-with-the-debugger.md)です。  
   
  次の手順で、デバッグ ビルドでネイティブ ランタイム チェックを有効にする方法と、ネイティブ ランタイム チェックの動作を変更する方法を説明します。  
   
@@ -74,15 +71,16 @@ Visual C\+\+ では、ネイティブ [runtime\_checks](/visual-cpp/preprocessor
   
 -   [C ランタイム ライブラリなしのランタイム チェックの使用方法](../debugger/using-run-time-checks-without-the-c-run-time-library.md)  
   
-### デバッグ ビルドでネイティブ ランタイム チェックを有効にするには  
+### <a name="to-enable-native-run-time-checks-in-a-debug-build"></a>デバッグ ビルドでネイティブ ランタイム チェックを有効にするには  
   
--   **\/RTC** オプションを使用して、C ランタイム ライブラリのデバッグ バージョン \(\/MDd など\) とリンクします。  
+-   **/RTC** オプションを使用して、C ランタイム ライブラリのデバッグ バージョン (/MDd など) とリンクします。  
   
-### ネイティブ ランタイム チェックの動作を変更するには  
+### <a name="to-modify-native-run-time-check-behavior"></a>ネイティブ ランタイム チェックの動作を変更するには  
   
 -   `runtime_checks` プラグマを使用します。  
   
-## 参照  
- [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)   
- [runtime\_checks](/visual-cpp/preprocessor/runtime-checks)   
- [ランタイム エラー チェック](/visual-cpp/c-runtime-library/run-time-error-checking)
+## <a name="see-also"></a>関連項目  
+ [Visual Studio でのデバッグ](../debugger/index.md)  
+ [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)   
+ [runtime_checks](/cpp/preprocessor/runtime-checks)   
+ [ランタイム エラー チェック](/cpp/c-runtime-library/run-time-error-checking)

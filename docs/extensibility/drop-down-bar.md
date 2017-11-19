@@ -1,53 +1,54 @@
 ---
-title: "ドロップダウン バー | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "エディター [Visual Studio SDK] レガシ - ドロップダウン バー"
+title: "ドロップダウン バー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: editors [Visual Studio SDK], legacy - drop-down bar
 ms.assetid: 4bb621bd-72f5-43d5-916f-9f66617da049
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 2f5da476bb9b54b536cb296112d578574822e410
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ドロップダウン バー
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-ドロップダウン バーはコード ウィンドウの上部に提供され2 個のドロップダウン リストが含まれています。  
+# <a name="drop-down-bar"></a>ドロップダウン バー
+ドロップダウン バーは、コード ウィンドウの上部に提供され、2 つのドロップダウン リストが含まれています。  
   
-## ドロップ ダウン バーのインターフェイス  
- [!INCLUDE[vcprvc](../debugger/includes/vcprvc_md.md)] ではドロップダウン バーは次の図に示すように [!INCLUDE[vcprvc](../debugger/includes/vcprvc_md.md)] の項目と [!INCLUDE[vcprvc](../debugger/includes/vcprvc_md.md)] 項目のメンバー関数のリストが含まれます。  
+## <a name="drop-down-bar-interfaces"></a>ドロップダウン バー インターフェイス  
+ [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]、たとえば、ドロップダウン バーには、リストが含まれます。[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]アイテムと[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]アイテム メンバー関数は、次の図に示すようにします。  
   
- ![ドロップダウン バー](~/extensibility/media/vsdropdown_bar.gif "vsDropdown\_bar")  
-ドロップ ダウン バー  
+ ![ドロップ &#45; バーを下](../extensibility/media/vsdropdown_bar.gif "vsDropdown_bar")  
+ドロップダウン バー  
   
- ドロップダウン バーを実行すると主要な重要度 4 のインターフェイスがあります :  
+ ドロップダウン バーを実装する場合は、プライマリの重要度の 4 つのインターフェイスがあります。  
   
 -   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarClient>  
   
-     ドロップダウン バーの内容を挿入するにはこのインターフェイスを実装します。  それぞれのドロップダウン組み合わせはプレーンテキストまたは豪華なテキスト \(太字斜体下線\) を含めることができますがウィンドウのテキストのフォントの色指定を灰色のフォントの色指定されドロップダウン項目の横に応じて小さいビットマップを指定できます。  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet> インターフェイスビットマップ イメージと同様にイメージ リストで指定します。  それぞれのドロップダウン リストと別のイメージを指定できます。; ただし各イメージ リストは同じ高さのイメージを含める必要があります。  また<xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarClient.GetComboTipText%2A> のメソッドを使用して各組み合わせにヒントを提供できます。  
+     ドロップダウン バーのコンテンツを挿入するには、このインターフェイスを実装します。 各ドロップダウンの組み合わせは、テキスト形式またはテキストを含めることができます (太字、下線、または [斜体])、ウィンドウのテキストのフォントの色指定または色分け、グレーのフォントを持つことができ、必要に応じてドロップダウン項目の横にある小さいビットマップを指定できます。 ような<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet>インターフェイス、ビットマップ イメージがイメージ リストで提供されます。 ドロップダウンの組み合わせごとに、別のイメージ リストを持つことができます。ただし、各イメージ リストは、同じ高さのイメージを含める必要があります。 さらを使用して、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarClient.GetComboTipText%2A>メソッドの組み合わせごとに、ツールヒントを指定することができます。  
   
 -   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarManager>  
   
-     このインターフェイスを作成または破棄します。コード ウィンドウのドロップダウン バーを呼び出します。  このインターフェイスがドロップダウン バーがコード ウィンドウに <xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarManager.GetDropdownBar%2A> のメソッドを呼び出して既にアタッチされているかどうかを確認するために使用できます。  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow> から <xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarManager> の呼び出し <xref:System.Runtime.InteropServices.Marshal.QueryInterface%2A>。  
+     作成するか、コード ウィンドウのドロップダウン バーを破棄するには、このインターフェイスを呼び出します。 このインターフェイスは、呼び出すことによって、コード ウィンドウにドロップダウン バーを既に接続かどうかを確認にも使用できます、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarManager.GetDropdownBar%2A>メソッドです。 呼び出す<xref:System.Runtime.InteropServices.Marshal.QueryInterface%2A>の<xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarManager>から<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>です。  
   
 -   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBar>  
   
-     ドロップダウン バーと直接通信するにはこのインターフェイスを呼び出します。  ドロップダウン バーのコンテンツの更新を強制するかリスト ボックスの 1 種類の選択を変更するにはこのインターフェイスを使用できます。  
+     ドロップダウン バーと直接通信するには、このインターフェイスを呼び出します。 このインターフェイスを使用するには、ドロップダウン リストの更新を強制バーの内容またはリスト ボックスのいずれかで選択を変更します。  
   
 -   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManagerEvents>  
   
-     言語サービスのレジストリ キーの `ShowDropdownBarOption` を登録した場合はコード ウィンドウ マネージャーはドロップダウン バーを表示するかどうかをユーザー設定に関する同期するにはこのイベントを監視する必要があります。  言語サービスのキーはこのオプションを登録しないとドロップダウン バーを表示または非表示にするオプションは\[入力\] メニューの ENT0ENT 無効になります。  
+     登録されている場合、`ShowDropdownBarOption`言語サービスのレジストリ キーにし、コード ウィンドウ マネージャー監視する必要がありますドロップダウン バーを表示するかどうかに関するユーザー設定と同期するには、このイベント。 言語サービス キーでは、このオプションを登録しないかどうかで、ドロップダウン バーを非表示オプションが無効になっている、**オプション**メニュー。  
   
-## コード ウィンドウにドロップダウン バーのアタッチ  
- 作成したコード ウィンドウにドロップダウン バーをアタッチするには言語サービスはドロップダウン バーに <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager.AddAdornments%2A> のメソッドが呼び出されたときにアタッチする必要があります。  ドロップダウン バーがまだ存在しないことを <xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarManager.GetDropdownBar%2A> メソッドの呼び出しが示している場合 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarManager.AddDropdownBar%2A> を呼び出します。  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> の実装がアタッチされたときに <xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarManager> のインターフェイスにアクセスするには<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow> のポインターからの呼び出し <xref:System.Runtime.InteropServices.Marshal.QueryInterface%2A> はに戻ります。  
+## <a name="attaching-a-drop-down-bar-to-a-code-window"></a>コード ウィンドウにドロップダウン バーをアタッチします。  
+ ドロップダウン リストに言語サービスをアタッチするドロップダウン バーが作成されると、コード ウィンドウに関連付けると、バーの場合、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager.AddAdornments%2A>メソッドが呼び出されます。 呼び出し、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarManager.GetDropdownBar%2A>メソッドは、ドロップダウン バーの存在しない場合、呼び出しが存在しないことを示します。<xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarManager.AddDropdownBar%2A>です。 アクセスする、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarManager>インターフェイスでは、呼び出す<xref:System.Runtime.InteropServices.Marshal.QueryInterface%2A>から、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>ポインターにする場合に返されます、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>実装がアタッチされています。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [レガシ API を使用してコード ウィンドウをカスタマイズします。](../extensibility/customizing-code-windows-by-using-the-legacy-api.md)   
- [従来の言語サービス内のナビゲーション バーのサポート](../extensibility/internals/support-for-the-navigation-bar-in-a-legacy-language-service.md)
+ [従来の言語サービスでのナビゲーション バーのサポート](../extensibility/internals/support-for-the-navigation-bar-in-a-legacy-language-service.md)

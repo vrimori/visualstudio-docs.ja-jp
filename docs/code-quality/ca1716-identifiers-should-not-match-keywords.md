@@ -1,54 +1,55 @@
 ---
-title: "CA1716: 識別子はキーワードと同一にすることはできません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IdentifiersShouldNotMatchKeywords"
-  - "CA1716"
-helpviewer_keywords: 
-  - "IdentifiersShouldNotMatchKeywords"
-  - "CA1716"
+title: "1716: 識別子はキーワードといない |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IdentifiersShouldNotMatchKeywords
+- CA1716
+helpviewer_keywords:
+- IdentifiersShouldNotMatchKeywords
+- CA1716
 ms.assetid: 900cc8a1-1089-4069-a4ce-10b109ac4fab
-caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 619fc7867d14a26f2c3b674b4b8ac8b2d8fba114
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA1716: 識別子はキーワードと同一にすることはできません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1716-identifiers-should-not-match-keywords"></a>CA1716: 識別子はキーワードと同一にすることはできません
 |||  
 |-|-|  
 |TypeName|IdentifiersShouldNotMatchKeywords|  
 |CheckId|CA1716|  
-|分類|Microsoft.Naming|  
+|カテゴリ|Microsoft.Naming|  
 |互換性に影響する変更点|あり|  
   
-## 原因  
- 名前空間、型、仮想メンバー、またはインターフェイス メンバーの名前が、プログラミング言語で予約済みのキーワードと一致します。  
+## <a name="cause"></a>原因  
+ 名前空間、型、または viritual またはインターフェイス メンバーの名前では、プログラミング言語の予約されたキーワードと一致します。  
   
-## 規則の説明  
- 名前空間、型、仮想メンバー、およびインターフェイス メンバーの識別子は、共通言語ランタイムを対象にする言語で定義されているキーワードと一致しないようにします。  使用している言語とキーワードによっては、コンパイラのエラーや不明確さによってライブラリの操作が困難になります。  
+## <a name="rule-description"></a>規則の説明  
+ 識別子の名前空間、型、および仮想インターフェイスのメンバーが、共通言語ランタイムを対象とする言語で定義されているキーワードと一致する必要があります。 によって使用される言語とキーワードの場合は、コンパイラのエラーやあいまいさが困難ライブラリを使用します。  
   
- この規則は、以下の言語のキーワードをチェックします。  
+ このルールは、次の言語のキーワードをチェックします。  
   
 -   Visual Basic  
   
--   C\#  
+-   C#  
   
--   C\+\+\/CLI  
+-   C++/CLI  
   
- [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] キーワードの比較では大文字小文字が区別されず、その他の言語の比較では大文字小文字が区別されます。  
+ 大文字と小文字はため[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]キーワードと区別する比較は、その他の言語に使用します。  
   
-## 違反の修正方法  
- キーワードの一覧にない名前を選択します。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ キーワードの一覧に表示されていない名前を選択します。  
   
-## 警告を抑制する状況  
- 識別子によって API のユーザーが混乱しないこと、およびライブラリが [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] の使用可能なすべての言語で使用できることを確認できる場合、この規則による警告を抑制できます。
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告を抑制するには、識別子は、API のユーザーを混同しないことと、ライブラリが使用可能なすべての言語で使用可能であると確信している場合、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]です。

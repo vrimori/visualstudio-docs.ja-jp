@@ -1,85 +1,85 @@
 ---
-title: "メッセージの種類 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MESSAGETYPE"
-helpviewer_keywords: 
-  - "MESSAGETYPE の列挙型"
+title: "MESSAGETYPE |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: MESSAGETYPE
+helpviewer_keywords: MESSAGETYPE enumeration
 ms.assetid: 800cc77d-3c27-4763-a9df-552a9384bd49
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 7cbb3ddd27c7cbb92c7e248c5091d6fe0e21dc3e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# メッセージの種類
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-メッセージの種類と理由を指定します。  
+# <a name="messagetype"></a>MESSAGETYPE
+メッセージの種類および理由を指定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-enum enum_MESSAGETYPE {   
-   MT_OUTPUTSTRING      = 0x0000001,  
-   MT_MESSAGEBOX        = 0x00000002,  
-   MT_TYPE_MASK         = 0x000000FF,  
-   MT_REASON_EXCEPTION  = 0x00000100,  
-   MT_REASON_TRACEPOINT = 0x00000200,  
-   MT_REASON_MASK       = 0x0000FF00  
+```cpp  
+enum enum_MESSAGETYPE {   
+   MT_OUTPUTSTRING      = 0x0000001,  
+   MT_MESSAGEBOX        = 0x00000002,  
+   MT_TYPE_MASK         = 0x000000FF,  
+   MT_REASON_EXCEPTION  = 0x00000100,  
+   MT_REASON_TRACEPOINT = 0x00000200,  
+   MT_REASON_MASK       = 0x0000FF00  
 };  
 typedef DWORD MESSAGETYPE;  
 ```  
   
-```c#  
-public enum enum_MESSAGETYPE {   
-   MT_OUTPUTSTRING      = 0x0000001,  
-   MT_MESSAGEBOX        = 0x00000002,  
-   MT_TYPE_MASK         = 0x000000FF,  
-   MT_REASON_EXCEPTION  = 0x00000100,  
-   MT_REASON_TRACEPOINT = 0x00000200,  
-   MT_REASON_MASK       = 0x0000FF00  
+```csharp  
+public enum enum_MESSAGETYPE {   
+   MT_OUTPUTSTRING      = 0x0000001,  
+   MT_MESSAGEBOX        = 0x00000002,  
+   MT_TYPE_MASK         = 0x000000FF,  
+   MT_REASON_EXCEPTION  = 0x00000100,  
+   MT_REASON_TRACEPOINT = 0x00000200,  
+   MT_REASON_MASK       = 0x0000FF00  
 };  
 ```  
   
-## メンバー  
- MT\_OUTPUTSTRING  
- メッセージが出力ウィンドウに送信する必要があることを示します。  これは `MT_MESSAGEBOX` から相互に排他的です。  
+## <a name="members"></a>メンバー  
+ MT_OUTPUTSTRING  
+ 出力ウィンドウにメッセージを送信する必要がありますされることを示します。 これはから相互に排他的な`MT_MESSAGEBOX`します。  
   
- MT\_MESSAGEBOX  
- メッセージをメッセージ ボックスに表示されることを示します。  これは `MT_OUTPUTSTRING` から相互に排他的です。  
+ MT_MESSAGEBOX  
+ メッセージ ボックスに、メッセージを表示するかを示します。 これはから相互に排他的な`MT_OUTPUTSTRING`します。  
   
- MT\_TYPE\_MASK  
- メッセージのコピー先を分離するマスクの値。  
+ MT_TYPE_MASK  
+ メッセージの送信先を分離するマスクの値。  
   
- MT\_REASON\_EXCEPTION  
- メッセージ ボックスで例外の結果として表示されることを示します。  これは `MT_REASON_TRACEPOINT` から相互に排他的です。  
+ MT_REASON_EXCEPTION  
+ 例外の結果として、メッセージ ボックスが表示されていることを示します。 これはから相互に排他的な`MT_REASON_TRACEPOINT`します。  
   
- MT\_REASON\_TRACEPOINT  
- メッセージ ボックスでトレース ポイントの衝突の結果として表示されることを示します。  これは `MT_REASON_EXCEPTION` に相互に排他的です。  
+ MT_REASON_TRACEPOINT  
+ トレース ポイントをヒットした結果として、メッセージ ボックスが表示されていることを示します。 これは、相互に排他的`MT_REASON_EXCEPTION`です。  
   
- MT\_REASON\_MASK  
- 表示されるメッセージの原因を特定するマスクの値。  
+ MT_REASON_MASK  
+ マスクの値を表示されているメッセージの原因を特定します。  
   
-## 解説  
- これらの値は [GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md) と [GetErrorMessage](../../../extensibility/debugger/reference/idebugerrorevent2-geterrormessage.md) のメソッドから返されます。  
+## <a name="remarks"></a>コメント  
+ これらの値から返される、 [GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md)と[GetErrorMessage](../../../extensibility/debugger/reference/idebugerrorevent2-geterrormessage.md)メソッドです。  
   
- 理由値の 1 つがを使用して出力の終了値の 1 と `OR` ビットごとにまとめることができます。  
+ 理由の値のいずれかと組み合わせて使用できます、出力先を使用して値、ビットごとの 1 つ`OR`です。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md)   
  [GetErrorMessage](../../../extensibility/debugger/reference/idebugerrorevent2-geterrormessage.md)

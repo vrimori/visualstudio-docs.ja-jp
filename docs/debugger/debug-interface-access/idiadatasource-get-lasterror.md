@@ -1,50 +1,49 @@
 ---
-title: "IDiaDataSource::get_lastError | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaDataSource::get_lastError メソッド"
+title: "Idiadatasource::get_lasterror |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaDataSource::get_lastError method
 ms.assetid: cf08850b-8b75-4e8c-90bd-bd0214756f99
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 349477bed67450e897ec60a00635fb65442eb1ba
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaDataSource::get_lastError
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idiadatasourcegetlasterror"></a>IDiaDataSource::get_lastError
 最後の読み込みエラーのファイル名を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```C++  
 HRESULT get_lastError (  
-   BSTR* pRetVal  
+   BSTR* pRetVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  pRetVal  
- \[出力\] 最後の読み込みエラーと関連付けられた .pdb ファイル名を含む文字列を返します。  
+ [out]最後の読み込みエラーに関連付けられている .pdb ファイルの名前を含む文字列を返します。  
   
-## 戻り値  
- 読み取り操作による最終エラー コードを返します。  `pRetVal` のパラメーターが `NULL` 場合 `E_INVALIDARG` を返します。  
+## <a name="return-value"></a>戻り値  
+ ロード操作によって発生した最後のエラー コードを返します。 返します`E_INVALIDARG`場合、`pRetVal`パラメーターは`NULL`します。  
   
-## 使用例  
+## <a name="example"></a>例  
   
-```cpp#  
+```C++  
 BSTR    fileName;  
 HRESULT errorCode = pSource->get_lastError( &fileName );  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)

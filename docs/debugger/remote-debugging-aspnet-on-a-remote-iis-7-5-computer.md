@@ -1,121 +1,111 @@
 ---
-title: Remote Debug ASP.NET on a Remote IIS Computer | Microsoft Docs
+title: "リモートの IIS のリモート コンピューター上の ASP.NET のデバッグ |Microsoft ドキュメント"
 ms.custom: remotedebugging
 ms.date: 07/26/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9cb339b5-3caf-4755-aad1-4a5da54b2a23
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 1d4298d60886d8fe8b402b59b1838a4171532ab1
-ms.openlocfilehash: cbe4157280645977b74c65a2e1bf16b7a234e9ab
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 730a69894c8e38dd7b9d191fa7fe3396509148d4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>Remote Debug ASP.NET on a Remote IIS Computer
-To debug an ASP.NET application that has been deployed to IIS, install and run the remote tools on the computer where you deployed your app, and then attach to your running app from Visual Studio.
+# <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>IIS: リモート コンピューター上の ASP.NET のリモート デバッグ
+IIS に配置されている ASP.NET アプリケーションをデバッグするには、インストールし、アプリが展開されているコンピューターでリモート ツールを実行して Visual Studio から、実行中のアプリにアタッチし、します。
 
-![Remote debugger components](../debugger/media/remote-debugger-aspnet.png "Remote_debugger_components")
+![リモート デバッガー コンポーネント](../debugger/media/remote-debugger-aspnet.png "Remote_debugger_components")
 
-This guide explains how to set up and configure a Visual Studio 2017 ASP.NET MVC 4.5.2 application, deploy it to IIS, and attach the remote debugger from Visual Studio. To remote debug ASP.NET Core, see [Remote Debug ASP.NET Core on an IIS Computer](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md). You can also deploy and debug on IIS using Azure. For more information, see [Remote debug on Azure](../debugger/remote-debugging-azure.md).
+このガイドでは、設定、Visual Studio 2017 ASP.NET MVC 4.5.2 アプリケーションを構成して、IIS に展開、および Visual Studio からリモート デバッガーをアタッチする方法について説明します。 ASP.NET Core リモート デバッグを参照してください。 [IIS コンピューター上のリモート デバッグ ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)です。 配置して、Azure を使用して IIS 上でデバッグすることもできます。 詳細については、次を参照してください。 [Azure 上でリモート デバッグ](../debugger/remote-debugging-azure.md)です。
 
-These procedures have been tested on these server configurations:
-* Windows Server 2012 R2 and IIS 10 (For Windows Server 2008 R2, server steps are different)
+これらの手順は、これらのサーバー構成でテストされています。
+* Windows Server 2012 R2 と IIS 10 (Windows Server 2008 R2 のサーバーの手順が異なる)
 
-## <a name="create-the-aspnet-452-application-on-the-visual-studio-computer"></a>Create the ASP.NET 4.5.2 application on the Visual Studio computer
+## <a name="requirements"></a>要件
+
+リモート デバッガーは、Windows Server の Windows Server 2008 Service Pack 2 以降ではサポートします。 要件の一覧については、次を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)です。
+
+> [!NOTE]
+> プロキシを介して接続されている 2 台のコンピューター間でのデバッグはサポートされていません。 国の間での待機時間の長いまたはダイヤルアップ、インターネットなどの低帯域幅接続またはインターネット経由でのデバッグはお勧めしませんが失敗することも非常に遅くします。
+
+## <a name="create-the-aspnet-452-application-on-the-visual-studio-computer"></a>ASP.NET 4.5.2 を作成する Visual Studio コンピューターにアプリケーション
   
-1. Create a new MVC ASP.NET application. (**File > New > Project**, then select **Visual C# > Web > ASP.NET Web Application** . In the **ASP.NET 4.5.2** templates section, select **MVC**. Make sure that **Enable Docker Support** is not selected and that **Authentication** is set to **No Authentication**. Name the project **MyASPApp**.)
+1. MVC の ASP.NET アプリケーションを新規作成します。 (**ファイル > 新規 > プロジェクト**選択してから、* * Visual c# > Web > ASP.NET Web アプリケーションです。 **[ASP.NET 4.5.2** テンプレート] セクションで、 **[MVC]**を選択します。 確認して**Docker のサポートを有効にする**が選択されていないことと**認証**に設定されている**認証なし**です。 プロジェクトに名前を**MyASPApp**)。
 
-2. Open the  HomeController.cs file, and set a breakpoint in the `About()` method.
+2. HomeController.cs ファイルを開き、 `About()` メソッドにブレークポイントを設定します。
 
-## <a name="bkmk_configureIIS"></a> Install and Configure IIS on Windows Server
+## <a name="bkmk_configureIIS"></a>インストールして Windows Server で IIS を構成します。
 
 [!INCLUDE [remote-debugger-install-iis-role](../debugger/includes/remote-debugger-install-iis-role.md)]
 
-## <a name="update-browser-security-settings-on-windows-server"></a>Update browser security settings on Windows Server
+## <a name="update-browser-security-settings-on-windows-server"></a>Windows Server 上のブラウザーのセキュリティ設定を更新します。
 
-Depending on your security settings, it may save you time to add the following trusted sites to your browser so you can easily download the software described in this tutorial. Access to these sites may be needed:
+設定によっては、セキュリティには、このチュートリアルで説明されているソフトウェアを簡単にダウンロードするため、お使いのブラウザーに次の信頼済みサイトを追加するときに保存可能性があります。 これらのサイトへのアクセスは必要な場合があります。
 
 - microsoft.com
 - go.microsoft.com
 - download.microsoft.com
 - visualstudio.com
 
-If you are using Internet Explorer, you can add the trusted sites by going to **Internet Options > Security > Trusted Sites > Sites**. These steps are different for other browsers.
+Internet Explorer を使用している場合に移動して、信頼済みサイトを追加できます**インターネット オプション > セキュリティ > 信頼済みサイト > サイト**です。 これらの手順は、その他のブラウザーによって異なります。
 
-When you download the software, you may get requests to grant permission to load various web site scripts and resources. In most cases, these additional resources are not required to install the software.
+ソフトウェアをダウンロードするときに、さまざまな web サイトのスクリプトおよびリソースを読み込むための権限を許可する要求を取得することがあります。 これらの追加リソースは、ほとんどの場合、ソフトウェアをインストールする必要はありません。
 
-## <a name="BKMK_deploy_asp_net"></a> Install ASP.NET 4.5 on Windows Server
+## <a name="BKMK_deploy_asp_net"></a>Windows Server に ASP.NET 4.5 をインストールします。
 
-If you want more detailed information to install ASP.NET on IIS, see [IIS 8.0 Using ASP.NET 3.5 and ASP.NET 4.5](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45).
+詳細な情報を IIS で ASP.NET をインストールする場合は、「 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。
 
-1. Use the Web Platform Installer (WebPI) to install ASP.NET 4.5 (from the Server node in Windows Server 2012 R2, choose **Get New Web Platform Components** and then search for ASP.NET)
+1. Web Platform Installer (WebPI) を使用して ASP.NET 4.5 をインストールする (Windows Server 2012 R2 で、サーバー ノードから次のように選択します**新しい Web Platform コンポーネントの取得**、ASP.NET の検索)。
 
     ![RemoteDBG_IIS_AspNet_45](../debugger/media/remotedbg_iis_aspnet_45.png "RemoteDBG_IIS_AspNet_45")
 
     > [!NOTE]
-    > If you are using Windows Server 2008 R2, install ASP.NET 4 instead using this command:
+    > Windows Server 2008 R2 を使用している場合は、代わりにこのコマンドを使用して ASP.NET 4 をインストールします。
 
-     **C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -ir**
+     **C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe ir**
 
-2. Restart the system (or execute **net stop was /y** followed by **net start w3svc** from a command prompt to pick up a change to the system PATH).
+2. システムを再起動 (実行または**net stop が/y**続く**net 開始 w3svc**システム パスへの変更を取得するコマンド プロンプトから)。
 
-## <a name="BKMK_install_webdeploy"></a> (Optional) Install Web Deploy 3.6 on Windows Server
+## <a name="BKMK_install_webdeploy"></a>(省略可能)インストール Web 3.6 Windows Server での展開します。
 
 [!INCLUDE [remote-debugger-install-web-deploy](../debugger/includes/remote-debugger-install-web-deploy.md)]
 
-## <a name="BKMK_deploy_asp_net"></a> Configure ASP.NET Web site on the Windows Server computer
+## <a name="BKMK_deploy_asp_net"></a>Windows Server コンピューターで ASP.NET Web サイトを構成します。
 
-1. Open Windows Explorer and create a new folder, **C:\Publish**, where you will later deploy the ASP.NET project.
+1. Windows エクスプ ローラーを開き、新しいフォルダーを作成**C:\Publish**、ASP.NET プロジェクトを後で配置されます。
 
-2. Open the **Internet Information Services (IIS) Manager**. (In the left pane of Server Manager, select **IIS**. Right-click the server and select **Internet Information Services (IIS) Manager**.)
+2. 開く、**インターネット インフォメーション サービス (IIS) マネージャー**です。 (サーバー マネージャーの左側のウィンドウで選択**IIS**です。 サーバーを右クリックし **インターネット インフォメーション サービス (IIS) マネージャー**)。
 
-3. Under **Connections** in the left pane, go to **Sites**.
+3. **接続**左側のウィンドウに移動**サイト**です。
 
-4. Select the **Default Web Site**, choose **Basic Settings**, and set the **Physical path** to **C:\Publish**.
+4. 選択、**既定の Web サイト**、選択**基本設定**、設定と、**物理パス**に**C:\Publish**です。
 
-5. Right-click the **Default Web Site** node and select **Add Application**.
+5. **[既定の Web サイト]** ノードを右クリックして、 **[アプリケーションの追加]**を選択します。
 
-6. Set the **Alias** field to **MyASPApp**, accept the default Application Pool (**DefaultAppPool**), and set the **Physical path** to **C:\Publish**.
+6. 設定、**エイリアス**フィールドを**MyASPApp**、既定のアプリケーション プール (**DefaultAppPool**)、し、設定、**物理パス**に**C:\Publish**です。
 
-7. Under **Connections**, select **Application Pools**. Open **DefaultAppPool** and set the Application pool field to **ASP.NET v4.0** (ASP.NET 4.5 is not an option for the Application pool).
+7. **接続****アプリケーション プール**です。 開いている**DefaultAppPool**にアプリケーション プール フィールドを設定および**ASP.NET v4.0** (ASP.NET 4.5 は、アプリケーション プールのオプションではありません)。
 
-8. With the site selected in the IIS Manager, choose **Edit Permissions**, and make sure that IUSR, IIS_IUSRS, or the user configured for the Application Pool is an authorized user with Read & Execute rights. If none of these are present, add IUSR as a user with Read & Execute rights.
+8. IIS マネージャーで選択されているサイトで次のように選択します。**アクセス許可の編集**、その IUSR、IIS_IUSRS、または読み取りと実行権限を持つ承認済みユーザーにアプリケーション プールが構成されているユーザーを確認します。 これらのユーザーが存在しない場合、読み取りと実行権限を持つユーザーとして IUSR を追加します。
 
-## <a name="bkmk_webdeploy"></a> (Optional) Publish and deploy the app using Web Deploy from Visual Studio
+## <a name="bkmk_webdeploy"></a>(省略可能)発行し、Visual Studio からの Web デプロイを使用してアプリを配置
 
 [!INCLUDE [remote-debugger-deploy-app-web-deploy](../debugger/includes/remote-debugger-deploy-app-web-deploy.md)]
 
-Also, you may need to read the section on [Troubleshooting ports](#bkmk_openports).
+またのセクションを参照する必要があります[ポートのトラブルシューティング](#bkmk_openports)です。
 
-## <a name="optional-publish-and-deploy-the-app-by-publishing-to-a-local-folder-from-visual-studio"></a>(Optional) Publish and Deploy the app by publishing to a local folder from Visual Studio
+## <a name="optional-publish-and-deploy-the-app-by-publishing-to-a-local-folder-from-visual-studio"></a>(省略可能)発行および Visual Studio から、ローカル フォルダーに発行してアプリを配置
 
-You can also publish and deploy the app using the file system or other tools.
+発行し、ファイル システムまたはその他のツールを使用してアプリを展開することもできます。
 
-1. (ASP.NET 4.5.2) Make sure that the web.config file lists the correct version of the .NET Framework.  For example, if you are targeting ASP.NET 4.5.2, make sure this version is listed in web.config.
+1. (ASP.NET 4.5.2)Web.config ファイルが .NET Framework の正しいバージョンを一覧表示されることを確認してください。  など、ASP.NET 4.5.2 を対象とする場合は、web.config でこのバージョンが表示されていることを確認してください。
   
     ```xml
     <system.web>
@@ -128,79 +118,74 @@ You can also publish and deploy the app using the file system or other tools.
   
     ```
 
-    For example, the version should be 4.0 if you install ASP.NET 4 instead of 4.5.2.
+    たとえば、4.5.2 ではなく ASP.NET 4 をインストールする場合は、バージョンは 4.0 をする必要があります。
 
 [!INCLUDE [remote-debugger-deploy-app-local](../debugger/includes/remote-debugger-deploy-app-local.md)]
 
-## <a name="BKMK_msvsmon"></a> Download and Install the Remote Tools on Windows Server
+## <a name="BKMK_msvsmon"></a>ダウンロードして、Windows Server でリモート ツールのインストール
 
-In this tutorial, we are using Visual Studio 2017.
+このチュートリアルでは、Visual Studio 2017 を使用します。
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 
 > [!TIP]
-> In some scenarios, it can be most efficient to run the remote debugger from a file share. For more information, see [Run the remote debugger from a file share](../debugger/remote-debugging.md#fileshare_msvsmon).
-
-## <a name="requirements"></a>Requirements
-
-The remote debugger is supported on Windows Server starting with Windows Server 2008 Service Pack 2 and is also supported on Windows 7 and newer. For a complete list of requirements, see [Requirements](../debugger/remote-debugging.md#requirements_msvsmon).
-
-> [!NOTE]
->  The remote computer and the Visual Studio computer must be connected over a network, workgroup, or homegroup, or else connected directly through an Ethernet cable. Debugging over the Internet is not supported in this scenario.
+> 一部のシナリオでは、ファイル共有から、リモート デバッガーを実行する最も効率的なができます。 詳細については、次を参照してください。[ファイル共有からのリモート デバッガーの実行](../debugger/remote-debugging.md#fileshare_msvsmon)です。
   
-## <a name="BKMK_setup"></a> Set up the remote debugger on Windows Server
+## <a name="BKMK_setup"></a>Windows Server のリモート デバッガーを設定します。
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
 > [!NOTE]
-> If you need to add permissions for additional users, change the authentication mode, or port number for the remote debugger, see [Configure the remote debugger](../debugger/remote-debugging.md#configure_msvsmon).
+> 必要があるその他のユーザーのアクセス許可を追加または変更した場合、認証モード リモート デバッガーのポート番号を参照してください。[リモート デバッガーを構成する](../debugger/remote-debugging.md#configure_msvsmon)です。
 
-## <a name="BKMK_attach"></a> Attach to the ASP.NET application from the Visual Studio computer
+サービスとしてリモート デバッガーを実行する方法については、次を参照してください。[リモート デバッガーをサービスとして実行](../debugger/remote-debugging.md#bkmk_configureService)です。
 
-1. On the Visual Studio computer, open the **MyASPApp** solution.
-2. In Visual Studio, click **Debug > Attach to Process** (Ctrl + Alt + P).
+## <a name="BKMK_attach"></a> Visual Studio コンピューターから ASP.NET アプリケーションにアタッチする
+
+1. Visual Studio コンピューターで開く、 **MyASPApp**ソリューションです。
+2. Visual Studio で、**デバッグ > プロセスにアタッチする**(Ctrl + Alt + P)。
 
     > [!TIP]
-    > In Visual Studio 2017, you can re-attach to the same process you previously attached to by using **Debug > Reattach to Process...** (Shift+Alt+P). 
+    > Visual Studio 2017 を使用して、以前にアタッチした同じプロセスを再アタッチできます**デバッグ > プロセスを再アタッチしています.**(Shift + Alt + P)。 
 
-3. Set the Qualifier field to **\<remote computer name>:4022**.
-4. Click **Refresh**.
-    You should see some processes appear in the **Available Processes** window.
+3. 修飾子のフィールドに設定**\<リモート コンピューター名 >: 4022**です。
+4. をクリックして**更新**です。
+    **[選択可能なプロセス]** ウィンドウにプロセスがいくつか表示されます。
 
-    If you don't see any processes, try using the IP address instead of the remote computer name (the port is required). You can use `ipconfig` in a command line to get the IPv4 address.
+    すべてのプロセスが見つからない場合は、(ポートが必要です) リモート コンピューター名の代わりに IP アドレスを使用して再試行してください。 使用することができます`ipconfig`IPv4 アドレスを取得するコマンド ラインでします。
 
-5. Check  **Show processes from all users**.
-6. Type the first letter of a process name to quickly find **w3wp.exe** for ASP.NET 4.5.
+5. **[すべてのユーザーからのプロセスを表示する]**をオンにします。
+6. すばやく検索するプロセス名の最初の文字を入力**w3wp.exe** ASP.NET 4.5 用です。
 
     ![RemoteDBG_AttachToProcess](../debugger/media/remotedbg_attachtoprocess.png "RemoteDBG_AttachToProcess")
 
-7. Click **Attach**
+7. をクリックして**アタッチ**
 
-8. Open the remote computer's website. In a browser, go to **http://\<remote computer name>**.
+8. リモート コンピューターの Web サイトを開きます。 ブラウザーに移動**http://\<リモート コンピューター名 >**です。
     
-    You should see the ASP.NET web page.
-9. In the running ASP.NET application, click the link to the **About** page.
+    ASP.NET の Web ページが表示されるはずです。
+9. ASP.NET アプリケーションの実行では、リンクをクリックして、**に関する**ページ。
 
-    The breakpoint should be hit in Visual Studio.
+    Visual Studio で、ブレークポイントにヒットするはずです。
 
-## <a name="bkmk_openports"></a> Troubleshooting: Open required ports on Windows Server
+## <a name="bkmk_openports"></a>Windows Server で必要なポートを開くのトラブルシューティング。
 
-In most setups, required ports are opened by the installation of ASP.NET and the remote debugger. However, you may need to verify that ports are open.
+ほとんどの設定では、ASP.NET とリモート デバッガーのインストールに必要なポートが開かれます。 ただし、ポートが開いていることを確認する必要があります。
 
 > [!NOTE]
-> On an Azure VM, you must open ports through the [Network security group](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-hero-role#open-port-80). 
+> Azure vm を使用して、ポートを開く必要があります、[ネットワーク セキュリティ グループ](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-hero-role#open-port-80)です。 
 
-Required ports:
+必要なポート:
 
-- 80 - Required for IIS
-- 8172 - (Optional) Required for Web Deploy to deploy the app from Visual Studio
-- 4022 - Required for remote debugging from Visual Studio 2017 (see [Remote Debugger Port Assignments](../debugger/remote-debugger-port-assignments.md) for detailed information.
-- UDP 3702 - (Optional) Discovery port enables you to the **Find** button when attaching to the remote debugger in Visual Studio.
+- 80 - IIS の必要な
+- 8172 - (Web は、Visual Studio からアプリを展開する展開のために必要な省略可能)
+- 4022-Visual Studio 2017 からのリモート デバッグに必要な (を参照してください[リモート デバッガーのポート割り当て](../debugger/remote-debugger-port-assignments.md)詳細です。
+- UDP 3702 - (省略可能) 検出ポートを使用する、**検索**Visual Studio でリモート デバッガーをアタッチするときにボタンをクリックします。
 
-1. To open a port on Windows Server, open the **Start** menu, search for **Windows Firewall with Advanced Security**.
+1. Windows Server 上のポートを開く、**開始**メニューで、検索**セキュリティが強化された Windows ファイアウォール**です。
 
-2. Then choose **Inbound Rules > New Rule > Port**. Choose **Next** and under **Specific local ports**, enter the port number, click **Next**, then **Allow the Connection**, click **Next** and add the name (**IIS**, **Web Deploy**, or **msvsmon**) for the Inbound Rule.
+2. 選択し、**受信の規則 > 新しいルールの追加 > ポート**です。 選択**次へ**し、**特定のローカル ポート**をポート番号を入力し、をクリックして**次へ**、し**接続を許可する**、次へ をクリックし、名前を追加 (**IIS**、 **Web Deploy**、または**msvsmon**)、受信の規則にします。
 
-    If you want more details on configuring Windows Firewall, see [Configure the Windows Firewall for Remote Debugging](../debugger/configure-the-windows-firewall-for-remote-debugging.md).
+    詳細について Windows ファイアウォールを構成する場合を参照してください。[リモート デバッグ用の Windows ファイアウォールを構成する](../debugger/configure-the-windows-firewall-for-remote-debugging.md)です。
 
-3. Create additional rules for the other required ports.
+3. 必要なその他のポートの追加の規則を作成します。

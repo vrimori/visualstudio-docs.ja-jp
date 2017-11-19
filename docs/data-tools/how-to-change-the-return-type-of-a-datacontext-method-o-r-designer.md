@@ -1,45 +1,49 @@
 ---
-title: "How to: Change the Return Type of a DataContext Method (O/R Designer) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "方法: DataContext メソッド (O R デザイナー) の戻り値の型を変更する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c5b66bff-6dbb-43c0-bffa-317133ca5b9e
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.technology: vs-data-tools
+ms.openlocfilehash: 869460f4ac40aece5421611cd83aad6a7f11ef57
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# How to: Change the Return Type of a DataContext Method (O/R Designer)
-ストアド プロシージャまたは関数に基づいて作成された <xref:System.Data.Linq.DataContext> メソッドの戻り値の型は、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]でストアド プロシージャまたは関数をドロップした場所に応じて異なります。既存のエンティティ クラスに項目を直接ドロップすると、そのエンティティ クラスを戻り値の型とする <xref:System.Data.Linq.DataContext> メソッドが作成されます \(ストアド プロシージャまたは関数によって返されるデータのスキーマがエンティティ クラスの形状と一致する場合\)。[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]の空の領域に項目をドロップすると、自動生成された型を返す <xref:System.Data.Linq.DataContext> メソッドが作成されます。<xref:System.Data.Linq.DataContext> メソッドをメソッド ペインに追加した後に、その戻り値の型を変更できます。<xref:System.Data.Linq.DataContext> メソッドの戻り値の型を確認または変更するには、**\[プロパティ\]** ウィンドウでメソッドを選択し、**\[Return Type\]** プロパティをクリックします。  
+# <a name="how-to-change-the-return-type-of-a-datacontext-method-or-designer"></a>方法: DataContext メソッド (O/R デザイナー) の戻り値の型を変更します。
+ストアド プロシージャまたは関数に基づいて作成された <xref:System.Data.Linq.DataContext> メソッドの戻り値の型は、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]でストアド プロシージャまたは関数をドロップした場所に応じて異なります。 既存のエンティティ クラスに項目を直接ドロップすると、そのエンティティ クラスを戻り値の型とする <xref:System.Data.Linq.DataContext> メソッドが作成されます (ストアド プロシージャまたは関数によって返されるデータのスキーマがエンティティ クラスの形状と一致する場合)。 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]の空の領域に項目をドロップすると、自動生成された型を返す <xref:System.Data.Linq.DataContext> メソッドが作成されます。 <xref:System.Data.Linq.DataContext> メソッドをメソッド ペインに追加した後に、その戻り値の型を変更できます。 検査または戻り値の型を変更する、<xref:System.Data.Linq.DataContext>メソッドを選択し、クリックして、**戻り値の型**プロパティに、**プロパティ**ウィンドウです。  
   
 > [!NOTE]
->  **\[プロパティ\]** ウィンドウを使用しても、戻り値の型がエンティティ クラスに設定されている <xref:System.Data.Linq.DataContext> メソッドは、自動生成型を返すようには変更できません。自動生成型を返すように <xref:System.Data.Linq.DataContext> メソッドを戻すには、元のデータベース オブジェクトをもう一度 O\/R デザイナーにドラッグする必要があります。  
+>  元に戻すことはできません<xref:System.Data.Linq.DataContext>をエンティティ クラスを返すように設定、自動生成型を使用して戻り値の型を持つメソッドを**プロパティ**ウィンドウです。 自動生成型を返すように <xref:System.Data.Linq.DataContext> メソッドを戻すには、元のデータベース オブジェクトをもう一度 O/R デザイナーにドラッグする必要があります。  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-### DataContext メソッドの戻り値の型を、自動生成型からエンティティ クラスに変更するには  
+## <a name="to-change-the-return-type-of-a-datacontext-method-from-the-auto-generated-type-to-an-entity-class"></a>DataContext メソッドの戻り値の型を、自動生成型からエンティティ クラスに変更するには  
   
 1.  メソッド ペインで <xref:System.Data.Linq.DataContext> メソッドを選択します。  
   
-2.  **\[プロパティ\]** ウィンドウの **\[Return Type\]** を選択し、**\[Return Type\]** の一覧で使用可能なエンティティ クラスを選択します。目的のエンティティ クラスが一覧にない場合は、そのエンティティ クラスを追加するか、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]で作成して一覧に追加します。  
+2.  選択**戻り値の型**で、**プロパティ**ウィンドウ クリックし、使用可能なエンティティ クラスの**戻り値の型** ボックスの一覧です。 目的のエンティティ クラスが一覧にない場合は、それを追加またはで作成、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]一覧に追加します。  
   
 3.  .dbml ファイルを保存します。  
   
-### DataContext メソッドの戻り値の型を、エンティティ クラスから自動生成型に変更するには  
+## <a name="to-change-the-return-type-of-a-datacontext-method-from-an-entity-class-back-to-the-auto-generated-type"></a>DataContext メソッドの戻り値の型を、エンティティ クラスから自動生成型に変更するには  
   
 1.  メソッド ペインで <xref:System.Data.Linq.DataContext> メソッドを選択し、削除します。  
   
-2.  **サーバー エクスプローラー**または**データベース エクスプローラー**から、データベース オブジェクトを O\/R デザイナーの空の領域にドラッグします。  
+2.  データベース オブジェクトをドラッグして**サーバー エクスプ ローラー**/**データベース エクスプ ローラー** O/R デザイナーの空の領域にします。  
   
 3.  .dbml ファイルを保存します。  
   
-## 参照  
- [Object Relational Designer \(O\/R Designer\)](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
- [DataContext Methods \(O\/R Designer\)](../data-tools/datacontext-methods-o-r-designer.md)   
- [How to: Create DataContext Methods Mapped to Stored Procedures and Functions \(O\/R Designer\)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)
+## <a name="see-also"></a>関連項目
+[LINQ to Visual Studio での SQL ツール](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+[LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)   
+[DataContext メソッド (O/R デザイナー)](../data-tools/datacontext-methods-o-r-designer.md)   
+[方法: ストアド プロシージャおよび関数 (O/R デザイナー) にマップされる DataContext メソッドの作成](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)

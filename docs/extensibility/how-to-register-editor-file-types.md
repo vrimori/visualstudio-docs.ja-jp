@@ -1,31 +1,32 @@
 ---
-title: "方法: エディター ファイルの種類の登録 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "エディター [Visual Studio SDK] の従来のファイルの種類を登録します。"
+title: "方法: エディター ファイルの種類の登録 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: editors [Visual Studio SDK], legacy - register file types
 ms.assetid: 54846779-8290-48de-90ab-81011559d9a5
-caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d9f2837dff6c5dd62c03da2ab340fca287a1da56
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: エディター ファイルの種類の登録
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-エディターでファイルの種類を登録する最も簡単な方法は[!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] のマネージ パッケージ フレームワーク \(MPF\) クラスの一部として指定されたレジスタの属性を使用します。  ネイティブ [!INCLUDE[vcprvc](../debugger/includes/vcprvc_md.md)] パッケージを実行する場合エディターと関連付けられた拡張子を登録するレジストリ スクリプトを記述できます。  
+# <a name="how-to-register-editor-file-types"></a>方法: エディター ファイルの種類の登録
+エディターのファイルの種類を登録する最も簡単な方法は、の一部として定義されている登録属性を使用して、 [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] managed package framework (MPF) クラス。 ネイティブに、パッケージを実装する場合は[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]エディターと関連付けられている拡張機能を登録するレジストリ スクリプトを記述することもできます。  
   
-## MPF のクラスを使用して登録  
+## <a name="registration-using-mpf-classes"></a>MPF クラスを使用して登録  
   
-#### エディターでファイルの種類を MPF のクラスを使用して登録するには  
+#### <a name="to-register-editor-file-types-using-mpf-classes"></a>MPF クラスを使用するエディター ファイルの種類を登録するには  
   
-1.  VSPackage のクラスのエディター適切なパラメーターを <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute> のクラスに指定します。  
+1.  提供、 <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute> VSPackage のクラスで、エディターの適切なパラメーターを持つクラス。  
   
     ```  
     [Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute(typeof(EditorFactory), ".Sample", 32,   
@@ -34,17 +35,17 @@ caps.handback.revision: 14
          NameResourceID = 106)]  
     ```  
   
-     「 where。この例では」エディター用に登録し「 32 " は優先順位が拡張機能です。  
+     ここで"です。サンプル"は、このエディターに対して登録されている拡張機能と、「32」が、優先順位。  
   
-     `projectGuid` は <xref:Microsoft.VisualStudio.VSConstants.CLSID_MiscellaneousFilesProject> で定義されているそのほかのファイルの種類の GUID です。  そのほかの種類のファイルは生成されたファイルはビルド処理の一部であることを実行しないように提供されます。  
+     `projectGuid`で定義されているその他のファイルの種類の guid<xref:Microsoft.VisualStudio.VSConstants.CLSID_MiscellaneousFilesProject>です。 その他のファイルの種類が提供されるため、結果として得られるファイルは、ビルド プロセスの一部であるしません。  
   
-     `TemplateDir` はマネージ基本的なエディターの例に含まれているテンプレート ファイルを含むフォルダーを表します。  
+     `TemplateDir`管理対象の基本的なエディターのサンプルに含まれているテンプレート ファイルを含むフォルダーを表します。  
   
-     `NameResourceID` は BasicEditorUI プロジェクトの Resources.h ファイルで定義され「 My 」エディターとしてエディターを指定します。  
+     `NameResourceID`BasicEditorUI プロジェクトの Resources.h ファイルで定義し、「My エディター」としてエディターを識別します。  
   
 2.  <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> メソッドをオーバーライドします。  
   
-     <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> のメソッドの実装では<xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> のメソッドを呼び出して以下に示すようにエディターのファクトリのインスタンスを渡します。  
+     実装で、<xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>メソッドを呼び出し、<xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A>メソッドおよびパスとして、エディター ファクトリのインスタンスを以下に示します。  
   
     ```  
     protected override void Initialize()  
@@ -58,22 +59,22 @@ caps.handback.revision: 14
     }  
     ```  
   
-     この手順ではエディターのファクトリとエディターでファイル拡張子の両方を登録します。  
+     このステップでは、エディター ファクトリとエディター ファイルの拡張機能の両方を登録します。  
   
-3.  エディターのファクトリの登録を解除します。  
+3.  エディター ファクトリの登録を解除します。  
   
-     エディターのファクトリは自動的に VSPackage が破棄されるときに登録が解除されます。  エディターのファクトリ オブジェクトが <xref:System.IDisposable> のインターフェイスを実装する場合は`Dispose` のはファクトリ メソッドが [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] に登録解除された後に呼び出されます。  
+     VSPackage が破棄されるときにエディター ファクトリは自動的に登録を解除します。 エディター ファクトリ オブジェクトを実装する場合、<xref:System.IDisposable>インターフェイス、その`Dispose`メソッドが呼び出されると、ファクトリが登録解除されて[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
   
-## レジストリ スクリプトを使用して登録  
- ネイティブ [!INCLUDE[vcprvc](../debugger/includes/vcprvc_md.md)] エディターのファクトリとファイルの種類を登録するにはレジストリ スクリプトを使用すると次に示すようにウィンドウにレジストリを作成するためです。  
+## <a name="registration-using-a-registry-script"></a>レジストリ スクリプトを使用して登録  
+ エディター ファクトリおよびファイルの種類のネイティブ登録[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]はで、次に示すように、windows レジストリに書き込むレジストリ スクリプトを使用しています。  
   
-#### レジストリ エディターを使用してのファイルの種類を登録するにはスクリプトを作成します  
+#### <a name="to-register-editor-file-types-using-a-registry-script"></a>レジストリ スクリプトを使用してエディター ファイルの種類を登録するには  
   
-1.  レジストリ スクリプトでは次のレジストリ スクリプトの `GUID_BscEditorFactory` のセクションで説明したエディターのファクトリとエディターのファクトリの GUID 文字列を定義します。  またエディター拡張子の拡張や優先順位の定義 :  
+1.  レジストリ スクリプト エディター ファクトリおよび定義エディター ファクトリ GUID 文字列で示すように、`GUID_BscEditorFactory`次のレジストリ スクリプトのセクションでします。 また、拡張機能およびエディター拡張機能の優先度を定義します。  
   
     ```  
   
-                NoRemove Editors     {         %GUID_BscEditorFactory% = s 'RTF Editor'         {             val Package = s '%CLSID_Package%'             val DisplayName = s 'An RTF Editor'             val ExcludeDefTextEditor = d 1             val AcceptBinaryFiles = d 0  
+          NoRemove Editors     {         %GUID_BscEditorFactory% = s 'RTF Editor'         {             val Package = s '%CLSID_Package%'             val DisplayName = s 'An RTF Editor'             val ExcludeDefTextEditor = d 1             val AcceptBinaryFiles = d 0  
   
             LogicalViews  
             {  
@@ -84,18 +85,18 @@ caps.handback.revision: 14
             {  
             }  
   
-            Extensions             {                 val rtf = d 50             }  
+            Extensions            {                val rtf = d 50            }  
         }  
     }  
     ```  
   
-     この例のエディターの .rtf ファイル拡張子は 「」および優先度が 「 50 " であるとして識別されます。  GUID 文字列は BscEdit サンプル プロジェクトの Resource.h ファイルで定義されます。  
+     この例では、エディターのファイル拡張子は".rtf"として識別され、その優先度が「50」です。 GUID の文字列は、Resource.h ファイル BscEdit サンプル プロジェクトで定義されます。  
   
 2.  VSPackage を登録します。  
   
-3.  エディターのファクトリを登録します。  
+3.  エディター ファクトリを登録します。  
   
-     エディターのファクトリは <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A> の実装に登録されます。  
+     エディター ファクトリが登録されている、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A>実装します。  
   
     ```  
     // create editor factory.  
@@ -126,4 +127,4 @@ caps.handback.revision: 14
     }  
     ```  
   
-     GUID 文字列は BscEdit プロジェクトの Resource.h ファイルで定義されます。
+     GUID の文字列は、Resource.h ファイルの BscEdit プロジェクトで定義されます。

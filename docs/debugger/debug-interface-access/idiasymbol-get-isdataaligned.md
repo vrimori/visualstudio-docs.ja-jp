@@ -1,56 +1,55 @@
 ---
-title: "IDiaSymbol::get_isDataAligned | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_isDataAligned メソッド"
+title: "Idiasymbol::get_isdataaligned |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_isDataAligned method
 ms.assetid: ddd11a41-6c00-4829-acf4-aa1ace8c21a7
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 9a654db4e9da3490950e390d74fa0148a974fdd2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_isDataAligned
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-ユーザー定義型には特定のメモリの境界に \(UDT\) 配置されているかどうかを指定するフラグを取得します。  
+# <a name="idiasymbolgetisdataaligned"></a>IDiaSymbol::get_isDataAligned
+ユーザー定義型 (UDT) がいくつかの特定のメモリ境界に配置されたかどうかを指定するフラグを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp  
+```C++  
 HRESULT get_isDataAligned(  
-   BOOL *pFlag  
+   BOOL *pFlag  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pFlag`  
- \[入力\] メモリが UDT の境界に配置されている場合はを返します `TRUE` ; それ以外の場合戻り `FALSE`。  
+ [out]返します`TRUE`UDT がいくつかメモリ境界に配置された場合、それを返します`FALSE`です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合戻り `S_FALSE` またはエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  `S_FALSE` の戻り値はプロパティのシンボルで使用できないことを意味します。  
+>  戻り値の`S_FALSE`プロパティが、シンボルを使用できないことを意味します。  
   
-## 解説  
- このプロパティは実行可能ファイルの既定以外のデータを配置してコンパイルした場合に設定されます。  たとえばMicrosoft C\+\+ のコンパイラは *\#* がバイトの値である場合にコマンド ライン オプション\/Zp*\#* のデータの配置を変更できます。  
+## <a name="remarks"></a>コメント  
+ 既定以外のデータの整列の実行可能ファイルがコンパイルされるときに、このプロパティを設定、通常は。 たとえば、Microsoft C コンパイラがコマンド ライン オプションを使用してデータのアラインメントを変更できます/Zp*#*ここで、  *#* バイト値です。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
   
-|必要条件|Description|  
-|----------|-----------------|  
+|必要条件|説明|  
+|-----------------|-----------------|  
 |ヘッダー:|dia2.h|  
-|バージョン :|DIA SDK v8.0|  
+|バージョン:|DIA SDK バージョン 8.0|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

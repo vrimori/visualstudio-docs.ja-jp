@@ -7,16 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 51eb2af9-00e7-4725-a87d-62fb4f39f444
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: ae3a0d952b8ff88f2df4d297509d01d1a6731d56
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="updating-shapes-and-connectors-to-reflect-the-model"></a>シェイプおよびコネクタの更新とモデルへの反映
 ドメイン固有言語[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、基になるモデルの状態を反映する図形の外観を行うことができます。  
@@ -158,4 +157,3 @@ public partial class ArrowConnector // My connector class.
  `AssociateValueWith()`登録するドメインの各プロパティにつき 1 回として呼び出す必要があります。 指定したプロパティへの変更が呼び出すことが呼び出された後`OnAssociatedPropertyChanged()`プロパティのモデル要素を表示するすべての図形にします。  
   
  呼び出す必要はありません`AssociateValueWith()`インスタンスごとにします。 InitializeResources には、インスタンス メソッドが、各図形クラスに対して 1 回だけ呼び出されます。
-

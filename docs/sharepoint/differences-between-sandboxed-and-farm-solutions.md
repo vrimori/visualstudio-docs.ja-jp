@@ -1,48 +1,50 @@
 ---
-title: "サンドボックス ソリューションとファーム ソリューションの違い"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ファーム ソリューション [Visual Studio での SharePoint 開発]"
-  - "サンドボックス ソリューション [Visual Studio での SharePoint 開発]"
-  - "Visual Studio での SharePoint 開発, ファーム ソリューション"
-  - "Visual Studio での SharePoint 開発, サンドボックス ソリューション"
+title: "サンド ボックス間の相違点とファーム ソリューション |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, sandboxed solutions
+- sandboxed solutions [SharePoint development in Visual Studio]
+- SharePoint development in Visual Studio, farm solutions
+- farm solutions [SharePoint development in Visual Studio]
 ms.assetid: 43beb7e7-0cd9-4a8f-bb72-6b1e0cba5be8
-caps.latest.revision: 12
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: d82bc012b2be9736b83fc07f7d0a83d354dda002
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# サンドボックス ソリューションとファーム ソリューションの違い
-  SharePoint ソリューションをコンパイルすると、ソリューションは SharePoint サーバー上に配置され、デバッグ用にデバッガーがアタッチされます。  ソリューションのデバッグに使用されるプロセスは、\[サンドボックス ソリューション\] プロパティの設定 \(サンドボックス ソリューションまたはファーム ソリューション\) によって異なります。  
+# <a name="differences-between-sandboxed-and-farm-solutions"></a>サンドボックス ソリューションとファーム ソリューションの違い
+  SharePoint ソリューションをコンパイルするときに、SharePoint サーバーに展開しをデバッグするデバッガーをアタッチします。 ソリューションのデバッグに使用するプロセスは、サンド ボックス ソリューション プロパティの設定によって異なります。: サンド ボックス ソリューションまたはファーム ソリューションです。  
   
- 詳細については、「[サンドボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)」を参照してください。  
+ 詳細については、次を参照してください。[サンド ボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)です。  
   
-## ファーム ソリューション  
- ファーム ソリューションは、IIS ワーカー プロセス \(W3WP.exe\) でホストされ、ファーム全体に影響するコードを実行します。  \[サンドボックス ソリューション\] プロパティが "ファーム ソリューション" に設定されている SharePoint プロジェクトをデバッグすると、IIS ワーカー プロセスによってロックされたすべてのファイルが解放されるように SharePoint が機能を取り消すまたは配置する前に、システムの IIS アプリケーション プールがリサイクルされます。  SharePoint プロジェクトのサイト URL にサービスを提供する IIS アプリケーション プールのみがリサイクルされます。  
+## <a name="farm-solutions"></a>ファーム ソリューション  
+ IIS ワーカー プロセス (W3WP.exe) でホストされる、ファーム ソリューションでは、ファーム全体に影響を与えるコードを実行します。 サンド ボックス ソリューション プロパティが設定される「ファーム ソリューション」を SharePoint プロジェクトをデバッグするときに SharePoint の取り消しまたは IIS ワーカー プロセスによってロックされているすべてのファイルが解放されるように機能を展開する前に、システムの IIS アプリケーション プールがリサイクルされます。 SharePoint プロジェクトのサイトの URL を提供している IIS アプリケーション プールのみがリサイクルされます。  
   
-## サンドボックス ソリューション  
- サンドボックス ソリューションは、SharePoint ユーザー コード ソリューション ワーカー プロセス \(SPUCWorkerProcess.exe\) でホストされ、ソリューションのサイト コレクションにのみ影響するコードを実行します。  サンドボックス ソリューションは IIS ワーカー プロセスでは実行されないため、IIS アプリケーション プールと IIS サーバーはどちらも再起動する必要がありません。  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] は、SharePoint の SPUserCodeV4 サービスが自動的にトリガーして制御する SPUCWorkerProcess プロセスにデバッガーをアタッチします。  SPUCWorkerProcess プロセスをリサイクルしてソリューションの最新バージョンを読み込む必要はありません。  
+## <a name="sandboxed-solutions"></a>サンド ボックス ソリューション  
+ サンド ボックス ソリューションは、SharePoint ユーザーのコード ソリューション ワーカー プロセス (SPUCWorkerProcess.exe) でホストするは、ソリューションのサイト コレクションにのみ影響を与えるコードを実行します。 サンド ボックス ソリューションは、IIS ワーカー プロセスでは実行されない、ため、IIS アプリケーション プールでも、IIS サーバーを再起動する必要があります。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint で SPUserCodeV4 サービスが自動的にトリガーする SPUCWorkerProcess プロセスとコントロールにデバッガーをアタッチします。 SPUCWorkerProcess プロセスがソリューションの最新バージョンの読み込みをリサイクルする必要はありません。  
   
-## いずれかの種類のソリューション  
- いずれかの種類のソリューションを使用して、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] はブラウザーにもデバッガーをアタッチし、クライアント側スクリプトのデバッグを有効にします。  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] は、この目的のためにスクリプト デバッグ エンジンを使用します。  スクリプト デバッグを有効にするには、メッセージが表示されたときに既定のブラウザーの設定を変更する必要があります。  
+## <a name="either-type-of-solution"></a>ソリューションのいずれかの種類  
+ どちらのソリューションの種類と[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]も、ブラウザー クライアント側スクリプトのデバッグを有効にするデバッガーをアタッチします。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]スクリプトのデバッグをこの目的のエンジンを使用します。 スクリプトのデバッグを有効にするには、入力を求められたら、既定のブラウザー設定を変更する必要があります。  
   
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] は、現在のサイトを実行している W3WP または SPUCWorkerProcess プロセスにのみ、デバッガーをアタッチします。  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] は、マネージ COM\+ およびワークフローのデバッグ エンジンもアタッチします。  
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]現在のサイトを実行している W3WP または SPUCWorkerProcess プロセスにのみ、デバッガーをアタッチします。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]また、マネージ COM + とワークフローのデバッグ エンジンをアタッチします。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションのデバッグ](../sharepoint/debugging-sharepoint-solutions.md)   
  [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)   
  [サンドボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)  

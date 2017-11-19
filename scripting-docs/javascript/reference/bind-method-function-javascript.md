@@ -1,60 +1,63 @@
 ---
-title: "bind メソッド (Function) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "引数 [JavaScript], bind メソッド"
-  - "bind メソッド [JavaScript]"
-  - "パラメーター [JavaScript], bind メソッド"
-  - "this キーワード [JavaScript], bind メソッド"
+title: "bind メソッド (Function) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- parameters [JavaScript], bind method
+- arguments [JavaScript], bind method
+- bind method [JavaScript]
+- this keyword [JavaScript], bind method
 ms.assetid: 28946f47-b758-48cf-b508-610a0f2f6e19
-caps.latest.revision: 21
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: dd7fc752df9bd41f8625ac2cb484486dfd19558d
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# bind メソッド (Function) (JavaScript)
-指定された関数に対して、元の関数と同じ本体を持つ、バインディングされた関数を作成します。  バインディングされた関数では、`this` オブジェクトは、渡されたオブジェクトに解決します。  バインディングされた関数には、指定された初期パラメーターがあります。  
+# <a name="bind-method-function-javascript"></a>bind メソッド (Function) (JavaScript)
+指定された関数に対して、元の関数と同じ本体を持つ、バインディングされた関数を作成します。 バインディングされた関数では、`this` オブジェクトは、渡されたオブジェクトに解決します。 バインディングされた関数には、指定された初期パラメーターがあります。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 function.bind(thisArg[,arg1[,arg2[,argN]]])  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `function`  
- 必須です。  関数オブジェクトを指定します。  
+ 必須です。 関数オブジェクトを指定します。  
   
  `thisArg`  
- 必須です。  新しい関数内で `this` キーワードが参照できるオブジェクトを指定します。  
+ 必須です。 新しい関数内で `this` キーワードが参照できるオブジェクトを指定します。  
   
- `arg1`\[,`arg2`\[,`argN`\]\]\]  
- 省略可能です。  新しい関数に渡す引数のリストを指定します。  
+ `arg1`[,`arg2`[,`argN`]]]  
+ 省略可能です。 新しい関数に渡す引数のリストを指定します。  
   
-## 戻り値  
- `thisArg` オブジェクトと初期引数以外は `function` 関数と同じ新しい関数。  
+## <a name="return-value"></a>戻り値  
+ `function` オブジェクトと初期引数以外は `thisArg` 関数と同じ新しい関数。  
   
-## 例外  
+## <a name="exceptions"></a>例外  
  指定した `function` が関数ではない場合は、`TypeError` 例外がスローされます。  
   
-## 使用例  
+## <a name="example"></a>例  
  `bind` メソッドの使用例を次のコードに示します。  
   
-```javascript  
+```JavaScript  
 // Define the original function.  
 var checkNumericRange = function (value) {  
     if (typeof value !== 'number')  
@@ -76,10 +79,10 @@ document.write(result);
 // Output: true  
 ```  
   
-## 使用例  
+## <a name="example"></a>例  
  次の例では、`thisArg` オブジェクトは元のメソッドを含むオブジェクトとは異なります。  
   
-```javascript  
+```JavaScript  
 // Create an object that contains the original function.  
 var originalObject = {  
     minimum: 50,  
@@ -109,10 +112,10 @@ document.write(result);
 // Output: true  
 ```  
   
-## 使用例  
- `arg1[,arg2[,argN]]]` 引数の使用例を次のコードに示します。  バインディングされた関数は、`bind` メソッドで指定されたパラメーターを 1 番目と 2 番目のパラメーターとして使用します。  バインディングされた関数が呼び出されたときに指定されたパラメーターは、3 番目、4 番目などのパラメーターとして使用されます。  
+## <a name="example"></a>例  
+ `arg1[,arg2[,argN]]]` 引数の使用例を次のコードに示します。 バインディングされた関数は、`bind` メソッドで指定されたパラメーターを 1 番目と 2 番目のパラメーターとして使用します。 バインディングされた関数が呼び出されたときに指定されたパラメーターは、3 番目、4 番目などのパラメーターとして使用されます。  
   
-```javascript  
+```JavaScript  
 // Define the original function with four parameters.  
 var displayArgs = function (val1, val2, val3, val4) {  
     document.write(val1 + " " + val2 + " " + val3 + " " + val4);  
@@ -130,11 +133,11 @@ displayArgs2("b", "c");
 // Output: 12 a b c   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv9](../../javascript/includes/jsv9-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Function オブジェクト](../../javascript/reference/function-object-javascript.md)   
- [filter メソッド \(Array\)](../../javascript/reference/filter-method-array-javascript.md)   
- [bind メソッドの使用](../../javascript/advanced/using-the-bind-method-javascript.md)   
- [Hilo JavaScript のサンプル アプリ \(Windows ストア\)](http://hilojs.codeplex.com/SourceControl/latest)
+ [filter メソッド (Array)](../../javascript/reference/filter-method-array-javascript.md)   
+ [Bind メソッドの使用](../../javascript/advanced/using-the-bind-method-javascript.md)   
+ [Hilo JavaScript のサンプル アプリ (Windows ストア)](http://hilojs.codeplex.com/SourceControl/latest)

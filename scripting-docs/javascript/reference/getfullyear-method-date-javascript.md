@@ -1,54 +1,56 @@
 ---
-title: "getFullYear メソッド (Date) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "getFullYear"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "日付、返す (年を)"
-  - "Date オブジェクト"
-  - "getFullYear メソッド"
+title: "getFullYear メソッド (Date) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: getFullYear
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- dates, returning year
+- Date object
+- getFullYear method
 ms.assetid: f9ec1262-02e9-4791-90b5-48f33b1dc4bc
-caps.latest.revision: 15
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 211d6c86435e39eb75b9b1ce3415738541ca07db
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# getFullYear メソッド (Date) (JavaScript)
-年の値を現地時間で取得します。  
+# <a name="getfullyear-method-date-javascript"></a>getFullYear メソッド (Date) (JavaScript)
+ローカル時刻を使用して、年を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 dateObj.getFullYear()   
 ```  
   
-#### パラメーター  
- `dateObj` 参照は必須で、`Date` オブジェクトを指定します。  
+#### <a name="parameters"></a>パラメーター  
+ 必要な `dateObj` 参照は `Date` オブジェクトです。  
   
-## 戻り値  
- 年 \(4 桁の数値\)。  たとえば、1976 年の場合は "1976" を返します。  `Date` コンストラクターまたは `setFullYear` で 2 桁として指定した年は 20 世紀であると見なされるため、"5\/14\/12" を指定すると、`getFullYear` は "1912" を返します。  
+## <a name="return-value"></a>戻り値  
+ 年 (4 桁の数値)。 たとえば、1976 年は、1976年として返されます。 2 桁の数字として指定された年、`Date`コンス トラクターまたは`setFullYear`想定する、20 世紀のため、「5/14/12」を付ける`getFullYear`「1912」を返します。  
   
-## 解説  
- 世界協定時刻 \(UTC\) を使用して年を取得するには、`getUTCFullYear` メソッドを使用します。  
+## <a name="remarks"></a>コメント  
+ 世界協定時刻 (UTC) を使用して、年を取得する、`getUTCFullYear`メソッドです。  
   
-## 使用例  
- **getFullYear** メソッドの使用例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、使用、 **getFullYear**メソッドです。  
   
-```javascript  
+```JavaScript  
 var date = new Date("1/1/01");  
 document.write(date.getFullYear());  
   
@@ -56,12 +58,12 @@ document.write(date.getFullYear());
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv3](../../javascript/reference/includes/jsv3-md.md)]  
   
- **対象**: [Date オブジェクト](../../javascript/reference/date-object-javascript.md)  
+ **適用対象**: [Date Object](../../javascript/reference/date-object-javascript.md)  
   
-## 参照  
- [getUTCFullYear メソッド \(Date\)](../../javascript/reference/getutcfullyear-method-date-javascript.md)   
- [setFullYear メソッド \(Date\)](../../javascript/reference/setfullyear-method-date-javascript.md)   
- [setUTCFullYear メソッド \(Date\)](../../javascript/reference/setutcfullyear-method-date-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [getUTCFullYear メソッド (Date)](../../javascript/reference/getutcfullyear-method-date-javascript.md)   
+ [setFullYear メソッド (Date)](../../javascript/reference/setfullyear-method-date-javascript.md)   
+ [setUTCFullYear メソッド (Date)](../../javascript/reference/setutcfullyear-method-date-javascript.md)

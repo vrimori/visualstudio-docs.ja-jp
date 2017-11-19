@@ -1,30 +1,32 @@
 ---
-title: "カスタム パラメーター | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ウィザードでは、カスタム パラメーター"
-  - "カスタム パラメーター"
+title: "カスタム パラメーター |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- wizards, custom parameters
+- custom parameters
 ms.assetid: ba5c364b-66e6-47ea-9760-a0b70de8f0a0
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 3f04251ea8141d07a52499beae46b2881814eec9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# カスタム パラメーター
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-カスタム パラメーターはウィザードが起動したらウィザードの操作を制御します。  関連 .vsz ファイルはウィザードの起動時に統合開発環境でパッケージ化され\(IDE\) ウィザードに文字列の配列として渡されるユーザー定義のパラメーターが用意されています。  ウィザードは文字列の配列を解析しウィザードの実際の処理を制御するために情報を使用します。  こうすると.vsz ファイルで機能をカスタマイズできます。  
+# <a name="custom-parameters"></a>カスタム パラメーター
+カスタム パラメーターは、ウィザードが開始した後に、ウィザードの操作を制御します。 関連の .vsz ファイルは、統合開発環境 (IDE) でパッケージ化され、ウィザードが開始されたときに、文字列の配列として、ウィザードに渡されるをユーザー定義のパラメーターの配列を提供します。 ウィザードは、文字列の配列を解析し、情報を使用して、ウィザードの実際の操作を制御します。 この方法では、ウィザードが .vsz ファイルの内容によって機能をカスタマイズできます。  
   
- コンテキスト パラメーターはウィザードの起動時にプロジェクトのステータスを定義します。  詳細については、「[コンテキスト パラメーター](../../extensibility/internals/context-parameters.md)」を参照してください。  
+ コンテキスト パラメーターは、その一方には、ウィザードが開始されたときに、プロジェクトの状態の機能を定義します。 詳細については、次を参照してください。[コンテキスト パラメーター](../../extensibility/internals/context-parameters.md)です。  
   
- ここではカスタム パラメーターを持つ .vsz ファイルの例です :  
+ カスタム パラメーターを持つ .vsz ファイルの例を次に示します。  
   
 ```  
 VSWIZARD 8.0  
@@ -36,14 +38,14 @@ Param="PREPROCESS_FUNCTION = CanAddATLSupport"
 Param="PROJECT_TYPE = CSPROJ"  
 ```  
   
- .vsz ファイルの作成者はパラメーターの値を追加します。  ユーザーが \[ファイル\] メニューのまたは  **ソリューション エクスプローラー**  でプロジェクトを右クリックして **新しい項目の追加**  \[入力\] ENT0ENT を選択するとIDE では文字列の配列に値を収集します。  IDE では<xref:Microsoft.VisualStudio.Shell.Interop.VSADDITEMOPERATION> フラグを設定してプロジェクトの <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.AddItem%2A> のメソッドを呼び出してウィザードを実行し結果を返す原因となった <xref:EnvDTE.IVsExtensibility.RunWizardFile%2A> のメソッドを呼び出します。  
+ .Vsz ファイルの作成者は、パラメーターの値を追加します。 ユーザーが選択すると**新しいプロジェクト**または**新しい項目の追加**でプロジェクトを右クリックし、[ファイル] メニュー**ソリューション エクスプ ローラー**IDE の配列にこれらの値を収集します。文字列。 IDE、プロジェクトの呼び出します<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.AddItem%2A>メソッドを<xref:Microsoft.VisualStudio.Shell.Interop.VSADDITEMOPERATION>フラグのセット、およびプロジェクトの呼び出し、<xref:EnvDTE.IVsExtensibility.RunWizardFile%2A>メソッドには、ウィザードを実行し、結果を返すことを担当します。  
   
- ウィザードは文字列の配列を適切に解析と文字列の機能があります。  これによりカスタム パラメーターを実行してさまざまな機能を実行する 1 人のウィザードを作成できます。  つまり1 人のウィザードは3 種類の .vsz ファイルがあるとします。  各ファイルはさまざまな場合はウィザードの動作を制御するカスタム パラメーターのセットを渡します。  
+ ウィザードは、文字列の配列を解析し、その文字列に対して適切に機能しています。 カスタム パラメーターを実装することによって、この方法でさまざまな機能を実行する 1 つのウィザードを作成できます。 つまり、1 つのウィザードでは、次の 3 つの異なる .vsz ファイルを可能性があります。 各ファイルは、異なる動作を制御するさまざまな状況で、ウィザードのカスタム パラメーターのセットを渡します。  
   
- 詳細については、「[ウィザード \(します。Vsz\) ファイル](../../extensibility/internals/wizard-dot-vsz-file.md)」を参照してください。  
+ 詳細については、次を参照してください。[ウィザード (です。Vsz) ファイル](../../extensibility/internals/wizard-dot-vsz-file.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>   
  [コンテキスト パラメーター](../../extensibility/internals/context-parameters.md)   
  [ウィザード](../../extensibility/internals/wizards.md)   
- [ウィザード \(します。Vsz\) ファイル](../../extensibility/internals/wizard-dot-vsz-file.md)
+ [ウィザード (.Vsz) ファイル](../../extensibility/internals/wizard-dot-vsz-file.md)

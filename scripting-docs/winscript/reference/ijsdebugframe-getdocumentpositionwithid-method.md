@@ -1,25 +1,29 @@
 ---
-title: "IJsDebugFrame::GetDocumentPositionWithId メソッド | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Ijsdebugframe::getdocumentpositionwithid メソッド |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IJsDebugFrame.GetDocumentPositionWithId
 apilocation: jscript9diag.dll
 ms.assetid: 48f8eb26-8ae4-4d5c-bd94-796023b03bcb
-caps.latest.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f11e9ad51094522adec99ef82681f42ac500a251
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IJsDebugFrame::GetDocumentPositionWithId メソッド
-Returns the current position of this stack frame within the user\-level document.  
+# <a name="ijsdebugframegetdocumentpositionwithid-method"></a>IJsDebugFrame::GetDocumentPositionWithId メソッド
+ユーザー レベルのドキュメント内でのこのスタック フレームの現在の位置を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT GetDocumentPositionWithId(  
@@ -29,20 +33,20 @@ HRESULT GetDocumentPositionWithId(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pDocumentId`  
- \[出力\] ソース ドキュメントの一意の ID \(IDebugDocumentText へのポインター\)。  
+ [出力] ソース ドキュメントの一意の ID (IDebugDocumentText へのポインター)。  
   
  `pCharacterOffset`  
- \[出力\] スクリプトの先頭からの 0 から始まるオフセット。  
+ [出力] スクリプトの先頭からの 0 から始まるオフセット。  
   
  `pStatementCharCount`  
- \[出力\] \*pCharacterOffset から始まる現在のステートメントの長さ \(文字数\)。  
+ [出力] *pCharacterOffset から始まる現在のステートメントの長さ (文字数)。  
   
-## 戻り値  
+## <a name="return-value"></a>戻り値  
   
-## 必要条件  
- **Header:** jscript9diag.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** jscript9diag.h です  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IJsDebugFrame インターフェイス](../../winscript/reference/ijsdebugframe-interface.md)

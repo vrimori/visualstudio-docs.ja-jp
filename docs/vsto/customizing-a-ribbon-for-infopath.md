@@ -1,12 +1,10 @@
 ---
-title: Customizing a Ribbon for InfoPath | Microsoft Docs
+title: "InfoPath のリボンをカスタマイズ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,61 +14,61 @@ helpviewer_keywords:
 - InfoPath [Office development in Visual Studio], Ribbon
 - Ribbon [Office development in Visual Studio], InfoPath
 ms.assetid: 498c6457-679a-46f2-939f-c0597a17b7ec
-caps.latest.revision: 19
-author: kempb
-ms.author: kempb
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: befccdbf740c8ff166cb9d57e1998b07a1c24619
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: c3f4612b3e8dc272b0f51bae80d66d8afe97938e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="customizing-a-ribbon-for-infopath"></a>Customizing a Ribbon for InfoPath
-  When you customize the Ribbon in Microsoft Office InfoPath, you must consider where your custom Ribbon will appear in the application. [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)] can display the Ribbon in the following three types of InfoPath application windows:  
+# <a name="customizing-a-ribbon-for-infopath"></a>InfoPath のリボンのカスタマイズ
+  Microsoft Office InfoPath でリボンをカスタマイズする場合、アプリケーションのどこにカスタム リボンを表示するかを検討する必要があります。 [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)] では、次の 3 種類の InfoPath アプリケーション ウィンドウにリボンを表示できます。  
   
--   Windows that display a form template that is opened in design mode.  
+-   デザイン モードで開くフォーム テンプレートを表示するウィンドウ。  
   
--   Windows that display a form that is based on a form template.  
+-   フォーム テンプレートを基にしたフォームを表示するウィンドウ。  
   
--   The Print Preview window.  
+-   [印刷プレビュー] ウィンドウ。  
   
- **Applies to:** The information in this topic applies to VSTO Add-in projects for InfoPath 2010. For more information, see [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md).  
+ **対象:** このトピックの情報は、InfoPath 2010 の VSTO アドインのプロジェクトに適用されます。 詳細については、「 [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md)」を参照してください。  
   
- Users and designers open a form template in design mode to modify the appearance and layout of the template. Users open forms that are based in a form template to add content.  
+ ユーザーとデザイナーは、フォーム テンプレートをデザイン モードで開き、テンプレートの外観とレイアウトを変更します。 ユーザーは、フォーム テンプレートを基にしたフォームを開き、コンテンツを追加します。  
   
- The Print Preview window enables designers and users to preview the pages of a form or form template before they print them.  
+ [印刷プレビュー] ウィンドウでは、デザイナーとユーザーがフォームまたはフォーム テンプレートを印刷前にプレビューできます。  
   
 > [!NOTE]  
->  The **AddIns** tab does not appear in the Print Preview window. If you want a custom tab to appear in the Print Preview window, make sure that the **OfficeId** property of the tab is not set to **TabAddIns**.  
+>  [印刷プレビュー] ウィンドウには **[アドイン]** タブは表示されません。 [印刷プレビュー] ウィンドウにカスタム タブを表示する場合は、タブの **OfficeId** プロパティが **TabAddIns**に設定されていないことを確認してください。  
   
- You must specify the Ribbon type of each window in which you want your Ribbon to appear.  
+ リボンを表示する各ウィンドウのリボンの種類を指定する必要があります。  
   
-## <a name="specifying-the-ribbon-type-in-the-ribbon-designer"></a>Specifying the Ribbon Type in the Ribbon Designer  
- If you are using the **Ribbon (Visual Designer)** item, click the **RibbonType** property of the Ribbon in the **Properties** window, and then select any of the Ribbon ID's described in the following table.  
+## <a name="specifying-the-ribbon-type-in-the-ribbon-designer"></a>リボン デザイナーでのリボンの種類の指定  
+ **リボン (ビジュアルなデザイナー)** 項目を使用する場合は、 **[プロパティ]** ウィンドウでリボンの **[RibbonType]** プロパティをクリックし、次の表に示すリボン ID を選択します。  
   
-|Ribbon ID|Window in which the Ribbon will appear when you run the project|  
+|リボン ID|プロジェクトの実行時にリボンが表示されるウィンドウ|  
 |---------------|---------------------------------------------------------------------|  
-|**Microsoft.InfoPath.Designer**|Windows that display a form template that is opened in design mode.|  
-|**Microsoft.InfoPath.Editor**|Windows that display a form that is based on a form template.|  
-|**Microsoft.InfoPath.PrintPreview**|The Print Preview window.|  
+|**Microsoft.InfoPath.Designer**|デザイン モードで開くフォーム テンプレートを表示するウィンドウ。|  
+|**Microsoft.InfoPath.Editor**|フォーム テンプレートを基にしたフォームを表示するウィンドウ。|  
+|**Microsoft.InfoPath.PrintPreview**|[印刷プレビュー] ウィンドウ。|  
   
- You can add more than one Ribbon to a project. If more than one Ribbon share a Ribbon ID, override the CreateRibbonExtensibilityObject method in the `ThisAddin` class of your project to specify which Ribbon to display at run time. For more information, see [Ribbon Overview](../vsto/ribbon-overview.md).  
+ 1 つのプロジェクトに複数のリボンを追加することができます。 1 つ以上のリボンは、リボン ID を共有している場合で CreateRibbonExtensibilityObject メソッドをオーバーライド、`ThisAddin`実行時に表示するリボンを指定するようにプロジェクトのクラスです。 詳細については、次を参照してください。[リボンの概要](../vsto/ribbon-overview.md)です。  
   
-## <a name="specifying-the-ribbon-type-by-using-ribbon-xml"></a>Specifying the Ribbon Type by Using Ribbon XML  
- If you are using the **Ribbon (XML)** item, check the value of the *ribbonID* parameter in the <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> method and return the appropriate Ribbon.  
+## <a name="specifying-the-ribbon-type-by-using-ribbon-xml"></a>リボン XML を使用したリボンの種類の指定  
+ 使用している場合、**リボン (XML)**項目の値を確認して、 *ribbonID*内のパラメーター、<xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A>メソッドと、適切なリボンを戻り値。  
   
- The <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> method is automatically generated by Visual Studio in the Ribbon code file. The *ribbonID* parameter is a string that identifies the type of InfoPath window that is opening.  
+ <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> メソッドは、Visual Studio によってリボン コード ファイルに自動的に生成されます。 *ribbonID* パラメーターは、開いている InfoPath ウィンドウの種類を識別する文字列です。  
   
- The following code example demonstrates how to display a custom Ribbon only in a window that displays a form template in design mode. The Ribbon to display is specified in the `GetResourceText()` method, which is generated in the Ribbon class. For more information about the Ribbon class, see [Ribbon XML](../vsto/ribbon-xml.md).  
+ デザイン モードでフォーム テンプレートを表示するウィンドウにのみカスタム リボンを表示する方法を次のコード例に示します。 表示するリボンは、リボン クラスで生成される `GetResourceText()` メソッドで指定します。 リボン クラスの詳細については、「 [Ribbon XML](../vsto/ribbon-xml.md)」を参照してください。  
   
- [!code-csharp[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/CSharp/myinfopathproject/ribbon.cs#1)] [!code-vb[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/VisualBasic/myinfopathproject/ribbon.vb#1)]  
+ [!code-csharp[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/CSharp/myinfopathproject/ribbon.cs#1)]
+ [!code-vb[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/VisualBasic/myinfopathproject/ribbon.vb#1)]  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
- [Ribbon Overview](../vsto/ribbon-overview.md)   
- [Ribbon Designer](../vsto/ribbon-designer.md)   
- [Ribbon XML](../vsto/ribbon-xml.md)  
+ [リボンの概要](../vsto/ribbon-overview.md)   
+ [リボン デザイナー](../vsto/ribbon-designer.md)   
+ [リボン XML](../vsto/ribbon-xml.md)  
   
   

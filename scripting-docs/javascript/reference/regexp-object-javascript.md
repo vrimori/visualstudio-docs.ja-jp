@@ -1,130 +1,77 @@
 ---
-title: "RegExp オブジェクト (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "RegExp"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "RegExp オブジェクト"
-  - "RegExp オブジェクト, 概要"
+title: "RegExp オブジェクト (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: RegExp
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- RegExp object, overview
+- RegExp object
 ms.assetid: 7f6b1073-8cbb-49ed-94b6-56833ba663c5
-caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: b7319e4556721bcfd397061ce525acfb3278c6b9
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# RegExp オブジェクト (JavaScript)
-正規表現パターン一致の結果についての情報を保存する組み込みのグローバルなオブジェクトです。  
+# <a name="regexp-object-javascript"></a>RegExp オブジェクト (JavaScript)
+正規表現パターンの結果に関する情報を格納する組み込みのグローバル オブジェクトに一致します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 RegExp.property   
 ```  
   
-## 解説  
- 必須の *property* 引数には、`RegExp` オブジェクトのいずれかのプロパティを指定できます。  
+## <a name="remarks"></a>コメント  
+ 必要な*プロパティ*引数のいずれかを指定できます、`RegExp`オブジェクト プロパティです。  
   
- `RegExp` オブジェクトは、直接作成することはできませんが、いつでも使用できます。  正規表現の検索が成功するまでの `RegExp` オブジェクトのさまざまなプロパティの初期値を次の表に示します。  
+ `RegExp`オブジェクトを直接作成することはできませんが、使用可能では常にします。 成功した正規表現の検索が完了するまで、さまざまなプロパティの初期値、`RegExp`オブジェクトは、次のとおり。  
   
-|プロパティ|略式|初期値|  
-|-----------|--------|---------|  
-|index||\-1|  
-|input|$\_|空の文字列|  
-|lastIndex||\-1|  
-|lastMatch|$&|空の文字列|  
-|lastParen|$\+|空の文字列|  
-|leftContext|$\`|空の文字列|  
-|rightContext|$'|空の文字列|  
-|$1 \- $9|$1 \- $9|空の文字列|  
+|プロパティ|短縮形|初期値|  
+|--------------|---------------|-------------------|  
+|インデックス||-1|  
+|入力|$_|空の文字列。|  
+|lastindex プロパティの値||-1|  
+|lastMatch|$&|空の文字列。|  
+|lastParen|$+|空の文字列。|  
+|leftContext|$`|空の文字列。|  
+|rightContext|$'|空の文字列。|  
+|$1 - $9|$1 - $9|空の文字列。|  
   
- このプロパティは、正規表現の検索が正常に完了するまで値としては定義されません。  
+ そのプロパティが成功した正規表現の検索が完了するまで、それらの値として定義されていません。  
   
- グローバルな `RegExp` オブジェクトを **Regular Expression** オブジェクトと混同しないようにしてください。  これらは同じのように見えますが明確な違いがあります。  グローバルな `RegExp` オブジェクトのプロパティには、一致が検出されるたびに更新される情報が格納されるのに対し、**Regular Expression** オブジェクトのプロパティには、**Regular Expression** のそのインスタンスによる一致に関する情報だけが格納されます。  
+ グローバル`RegExp`オブジェクトがないと混同しないでください、**正規表現**オブジェクト。 見えますが、同じように、それらは明確な違いです。 グローバル プロパティ`RegExp`オブジェクトには、これが発生すると、プロパティの中に一致した各文字列は継続的に更新された情報が含まれて、**正規表現**オブジェクトが発生した一致に関する情報のみを含みますインスタンスを**正規表現**です。  
   
-## 使用例  
- 正規表現の検索を実行する例を次に示します。  この例では、グローバルな `RegExp` オブジェクトおよび `exec` メソッドによって返される配列から一致とサブマッチを表示します。  
+## <a name="example"></a>例  
+ 次の例では、正規表現の検索を実行します。 一致項目が表示され、グローバルから submatches`RegExp`オブジェクト、およびによって返される配列から、`exec`メソッドです。  
   
-```javascript  
-var newLine = "<br />";  
-  
-var re = /(\w+)@(\w+)\.(\w+)/g  
-var src = "Please send mail to george@contoso.com and someone@example.com. Thanks!"  
-  
-var result;  
-var s = "";  
-  
-// Get the first match.  
-result = re.exec(src);  
-  
-while (result != null) {  
-    // Show the entire match.  
-    s += newLine;  
-  
-    // Show the match and submatches from the RegExp global object.  
-    s += "RegExp.lastMatch: " + RegExp.lastMatch + newLine;  
-    s += "RegExp.$1: " + RegExp.$1 + newLine;  
-    s += "RegExp.$2: " + RegExp.$2 + newLine;  
-    s += "RegExp.$3: " + RegExp.$3 + newLine;  
-  
-    // Show the match and submatches from the array that is returned  
-    // by the exec method.  
-    for (var index = 0; index < result.length; index++) {  
-        s +=  index + ": ";  
-        s += result[index];  
-        s += newLine;  
-    }  
-  
-    // Get the next match.  
-    result = re.exec(src);  
-}  
-document.write(s);  
-  
-// Output:  
-//  RegExp.lastMatch: george@contoso.com  
-//  RegExp.$1: george  
-//  RegExp.$2: contoso  
-//  RegExp.$3: com  
-//  0: george@contoso.com  
-//  1: george  
-//  2: contoso  
-//  3: com  
-  
-//  RegExp.lastMatch: someone@example.com  
-//  RegExp.$1: someone  
-//  RegExp.$2: example  
-//  RegExp.$3: com  
-//  0: someone@example.com  
-//  1: someone  
-//  2: example  
-//  3: com  
-  
-```  
-  
+<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
 <a name="js56jsobjregexpprop"></a>   
-## プロパティ  
- [$1...$9 プロパティ](../../javascript/reference/dollar-1-dot-dot-dot-dollar-9-properties-regexp-javascript.md) &#124; [index プロパティ](../../javascript/reference/index-property-regexp-javascript.md) &#124; [input プロパティ](../../javascript/reference/input-property-dollar-regexp-javascript.md) &#124; [lastIndex プロパティ](../../javascript/reference/lastindex-property-regexp-javascript.md) &#124; [lastMatch プロパティ](../../javascript/reference/lastmatch-property-dollar-regexp-javascript.md) &#124; [lastParen プロパティ](../../javascript/reference/lastparen-property-dollar-regexp-javascript.md) &#124; [leftContext プロパティ](../../javascript/reference/leftcontext-property-dollar-grave-regexp-javascript.md) &#124; [rightContext プロパティ](../../javascript/reference/rightcontext-property-dollar-regexp-javascript.md)  
+## <a name="properties"></a>プロパティ  
+ [$1... 9 ドル プロパティ](../../javascript/reference/dollar-1-dot-dot-dot-dollar-9-properties-regexp-javascript.md)&#124;です。[インデックス プロパティ](../../javascript/reference/index-property-regexp-javascript.md)&#124;です。[input プロパティ](../../javascript/reference/input-property-dollar-regexp-javascript.md)&#124;です。[lastIndex プロパティ](../../javascript/reference/lastindex-property-regexp-javascript.md)&#124;です。[lastMatch プロパティ](../../javascript/reference/lastmatch-property-dollar-regexp-javascript.md)&#124;です。[lastParen プロパティ](../../javascript/reference/lastparen-property-dollar-regexp-javascript.md)&#124;です。[leftContext プロパティ](../../javascript/reference/leftcontext-property-dollar-grave-regexp-javascript.md)&#124;です。[rightContext プロパティ](../../javascript/reference/rightcontext-property-dollar-regexp-javascript.md)  
   
-## メソッド  
- `RegExp` オブジェクトには、メソッドはありません。  
+## <a name="methods"></a>メソッド  
+ `RegExp`オブジェクトにメソッドがありません。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv3](../../javascript/reference/includes/jsv3-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Regular Expression オブジェクト](../../javascript/reference/regular-expression-object-javascript.md)   
- [Regular Expression Syntax \(JavaScript\)](http://msdn.microsoft.com/ja-jp/ab0766e1-7037-45ed-aa23-706f58358c0e)   
+ [正規表現の構文 (JavaScript)](http://msdn.microsoft.com/en-us/ab0766e1-7037-45ed-aa23-706f58358c0e)   
  [String オブジェクト](../../javascript/reference/string-object-javascript.md)

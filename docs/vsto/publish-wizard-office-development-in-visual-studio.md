@@ -1,75 +1,77 @@
 ---
-title: "発行ウィザード (Visual Studio での Office 開発)"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VST.ProjectProperties.PublishWizard"
-  - "VST.PublishWizard.Publish.2007System"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ClickOnce 配置 [Visual Studio での Office 開発]、発行ウィザード"
-  - "アプリケーションの配置 [Visual Studio での Office 開発]、発行ウィザード"
-  - "Office アプリケーション [Visual Studio での Office 開発]、発行ウィザード"
-  - "発行ウィザード、Office ソリューション"
+title: "発行ウィザード (Visual Studio での Office 開発) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VST.ProjectProperties.PublishWizard
+- VST.PublishWizard.Publish.2007System
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- ClickOnce deployment [Office development in Visual Studio], Publish Wizard
+- deploying applications [Office development in Visual Studio], Publish Wizard
+- Office applications [Office development in Visual Studio], Publish Wizard
+- Publish Wizard, Office solutions
 ms.assetid: 793314b6-b6a6-4509-8f1c-dd9466cf5190
-caps.latest.revision: 17
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 8eeb0a002e2d62b9066165a99ce474cf7a01a88f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 発行ウィザード (Visual Studio での Office 開発)
-  指定した場所にソリューション ファイルをコピーするに **発行ウィザード** を使用してマニフェスト ファイルやセットアップ プログラムを作成します。  
+# <a name="publish-wizard-office-development-in-visual-studio"></a>発行ウィザード (Visual Studio での Office 開発)
+  使用して、**発行ウィザード**ソリューション ファイルを指定した場所にコピーするマニフェストのファイルを作成し、セットアップ プログラムを作成します。  
   
- このウィザードに、 **ビルド** のメニューにアクセスするには、 **発行** *ソリューション名*を選択します。  **ソリューション エクスプローラー**から**発行ウィザード**にアクセスすることもできます。  プロジェクト ノードのショートカット メニューを開き、 **発行**を選択します。  
+ このウィザードにアクセスする、**ビルド**] メニューの [選択**発行** *SolutionName*です。 アクセスすることも、**発行ウィザード**から**ソリューション エクスプ ローラー**です。 プロジェクト ノードのショートカット メニューを開き、選択**発行**です。  
   
  以下の各セクションでは、ウィザードのページについて説明します。  
   
-## \[アプリケーションをどこに発行しますか?\]  
- **\[このアプリケーションを発行する場所を指定してください\]**  
- 必ず指定します。  発行場所は、**発行ウィザード**がソリューション ファイル \(マニュフェスト、アセンブリ、一時的な証明書、ビルドのその他のファイルなど\) をコピーする先のディレクトリです。  このディレクトリに対する書き込みアクセスが必要です。  
+## <a name="where-do-you-want-to-publish-the-application"></a>アプリケーションを発行する場所ですか。  
+ **このアプリケーションを発行する場所を指定します。**  
+ 必須です。 発行場所のディレクトリは、ここで、**発行ウィザード**ビルドのマニフェスト、アセンブリ、一時的な証明書、およびその他のファイルなどのソリューション ファイルをコピーします。 このディレクトリへの書き込みアクセス権が必要です。  
   
- 場所は、ディスク パス、ファイル共有、 FTP サイト、または Web サイトの URL として入力するか、場所の参照するに **参照** のボタンをクリックします。  パスは、次の形式で指定します。  
+ ディスクのパス、ファイル共有、FTP サイトまたは web サイトの URL と場所を入力またはクリックして、**参照**場所を参照するボタンをクリックします。 パスは、これらの形式で指定できます。  
   
--   標準的な Windows 形式の相対パスまたは絶対パス \(たとえば C:\\Deploy\\MyApplication または \\MyApplication\)  
+-   C:\Deploy\MyApplication または \MyApplication など、Windows の標準の形式で相対パスまたは絶対パス。  
   
--   UNC \(Universal Naming Convention\) パス \(たとえば \\\\ServerName\\MyApplication\\\)  
+-   汎用名前付け規則 (UNC) パスなど\\\ServerName\MyApplication\\です。  
   
--   http:\/\/www.microsoft.com\/MyApplication などの Web サイトの URL。  
+-   Http://www.microsoft.com/MyApplication などの web サイトの URL です。  
   
- 既定では、IIS がインストールされている場合の発行場所は *http:\/\/localhost\/projectname\/* で、IIS がインストールされていない場合の発行場所は publish\\ directory ディレクトリになります。  
+ 既定の発行場所は、IIS をインストールしている場合は *http://localhost/projectname/* 、IIS をインストールしていない場合は、publish\ ディレクトリです。  
   
 > [!NOTE]  
->  ターゲット コンピューターで Windows Vista が実行されている場合は、さらに考慮すべき事項があります。  ローカルな発行オプションを使用するには、Windows Vista コンピューターに管理者としてログオンすることが必要です。  また、IIS がインストールされているかどうかにかかわらず、既定の場所は常に *publish\\* ディレクトリになります。  
+>  他の考慮事項があるターゲット コンピューターが Windows Vista を実行している場合。 ローカルの発行オプションを使用するには、Windows Vista コンピュータの管理者である必要がある必要があります。 さらに、既定の場所は、常に、*発行\\* IIS をインストールがあるかどうかに関係なく、ディレクトリです。  
   
-## \[エンド ユーザーのコンピューター上での、既定のインストール パスを指定してください\]  
- インストール パスは省略できます。  インストール パスは、後で設定することもできます。  詳細については、「[方法: Office ソリューションのインストール パスを変更する](http://msdn.microsoft.com/ja-jp/d0eaa07b-2d72-4902-899f-2f9fb165b8fd)」を参照してください。  
+## <a name="what-is-the-default-installation-path-on-end-user-computers"></a>エンドユーザーのコンピューター上の既定のインストール パスとは何ですか。  
+ インストール パスはオプションです。 たい場合は、後で、インストール パスを設定できます。 詳細については、「[する方法: Office ソリューションのインストール パスを変更して](http://msdn.microsoft.com/en-us/d0eaa07b-2d72-4902-899f-2f9fb165b8fd)です。  
   
- インストール パスは、エンド ユーザーがカスタマイズのインストールを実行するディレクトリです。  更新プログラムのチェックを行うためにソリューションが使用するパスでもあります。  この場所が、前のページの **\[このアプリケーションを発行する場所を指定してください\]** ボックスに入力したパスと同じでない限り、**発行ウィザード**はこの場所にソリューションを配置しません。  
+ インストール パスは、エンドユーザーがカスタマイズをインストールするディレクトリです。 このディレクトリは、ソリューションで更新プログラムを確認するために使用するパスでもあります。 **発行ウィザード**に入力したものと同じパスがない限り、この場所にソリューションを展開しないは、**このアプリケーションを発行する場所を指定**前のページのボックスです。  
   
- **\[Web サイトから\]**  
- エンド ユーザーがソリューションをインストールするのに使用する URL を指定します。  
+ **Web サイトから**  
+ エンドユーザーは、ソリューションをインストールするには、URL を指定します。  
   
- **\[UNC パスまたはファイル共有から\]**  
- エンド ユーザーがソリューションをインストールするのに使用する UNC パスを指定します。  
+ **UNC パスまたはファイル共有から**  
+ エンドユーザーは、ソリューションをインストールするには UNC パスを指定します。  
   
- **\[CD\-ROM または DVD\-ROM から\]**  
- このオプションの場合、インストール パスは必要ありません。  
+ **CD-ROM または DVD-ROM から**  
+ このオプションでは、インストール パスは必要ありません。  
   
- Visual Studio は CD または DVD への書き込みを行いません。  出力を手動で CD または DVD にコピーする必要があります。  
+ Visual Studio は、CD または DVD には書き込みできません。 CD または DVD に出力を手動でコピーする必要があります。  
   
-## 参照  
- [ClickOnce を使用した Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
- [プロジェクト デザイナーの &#91;発行&#93; ページ &#40;Visual Studio での Office 開発&#41;](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)   
+## <a name="see-also"></a>関連項目  
+ [ClickOnce を使用して Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
+ [Visual Studio &#41; でのページ、プロジェクト デザイナー (&) #40 です。 の Office 開発を発行します。](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)   
  [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)  
   
   

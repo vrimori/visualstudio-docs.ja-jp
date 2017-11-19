@@ -1,39 +1,41 @@
 ---
-title: "ポートのサプライヤーを実装します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "[デバッグの SDK] のデバッグ、ポート サプライヤーを実装します。"
-  - "ポートの供給業者を実装します。"
+title: "ポートのサプライヤーを実装する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- debugging [Debugging SDK], implementing port suppliers
+- port suppliers, implementing
 ms.assetid: 6b8579df-58df-4c7f-8112-6015993e8765
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 3bc985bf9fb55b67b5a332f007abe98c6718fbf2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ポートのサプライヤーを実装します。
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-デバッグ セッションのマネージャー \(SDM\) にポートのサプライヤーの要求次第提供ポートです。  ポートの業者は新しいデバイスをサポートする必要がある場合DCOM マシンにデバッグ時または実行する必要があります。  たとえば携帯電話でデバッグを提供するために携帯電話に接続するポート \(IR またはセルの接続で使用\) や電話プログラムで実行されているプロセスを列挙するポートの業者を実行する場合があります。  
+# <a name="implementing-a-port-supplier"></a>ポートのサプライヤーを実装します。
+ポート サプライヤーは、セッションのデバッグ マネージャー (SDM) への要求でポートを指定します。 ポートのサプライヤーは、非 DCOM マシンをデバッグするときに、または新しいデバイスをサポートする必要がある場合に実装する必要があります。 たとえば、携帯電話をデバッグするには、(おそらく IR またはセルの接続) から携帯電話に接続して、プロセスと、電話で実行されているプログラムを列挙するポートを提供するポートのサプライヤーを実装する可能性があります。  
   
- Windows ベースのコンピューターでプログラムをデバッグするにはリモート デバッグ\)ネイティブなポートの業者を提供し共通言語ランタイム \(CLR\) ではこのため独自のポートの業者をこの場合実行する必要はありません。  
+ (リモート デバッグを含む)、Windows ベースのマシン上のデバッグ プログラムは、のため、このような場合に、独自のポートのサプライヤーを実装する必要はありません、Visual Studio はネイティブ モードと共通言語ランタイム (CLR) のプロセス、ポートのサプライヤーを提供します。  
   
-## このセクションの内容  
- [実装して、ポート サプライヤーを登録します。](../../extensibility/debugger/implementing-and-registering-a-port-supplier.md)  
- SDM がサプライヤーのポートとポートとやり取りする方法について説明します。  
+## <a name="in-this-section"></a>このセクションの内容  
+ [ポート サプライヤーの実装および登録](../../extensibility/debugger/implementing-and-registering-a-port-supplier.md)  
+ SDM がポート サプライヤーとそのポートとやり取りする方法について説明します。  
   
- [必要なポート サプライヤー インターフェイス](../../extensibility/debugger/required-port-supplier-interfaces.md)  
- ポートの業者を取得するために必要なインターフェイスについて説明します。  
+ [必須のポート サプライヤー インターフェイス](../../extensibility/debugger/required-port-supplier-interfaces.md)  
+ ポート業者を取得するために実装する必要があります、インターフェイスについて説明します。  
   
-## 関連項目  
+## <a name="related-sections"></a>関連項目  
  [デバッガーの概念](../../extensibility/debugger/debugger-concepts.md)  
- デバッグの主要なアーキテクチャの概念について説明します。  
+ デバッグ アーキテクチャ、主要な概念をについて説明します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio デバッガーの拡張性](../../extensibility/debugger/visual-studio-debugger-extensibility.md)

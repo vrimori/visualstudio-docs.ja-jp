@@ -1,32 +1,34 @@
 ---
-title: "シンボル要素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "シンボル要素 (VSCT XML スキーマ)"
-  - "VSCT XML スキーマの要素、シンボル"
+title: "要素をシンボル |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Symbols element (VSCT XML schema)
+- VSCT XML schema elements, Symbols
 ms.assetid: 1cda43d8-42a5-4b1b-a3c8-cf0401c3202f
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 4ef5b215e18163b10c8002affc959bd80b586cf0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# シンボル要素
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Guid およびその他の VSCT 要素によって使用されている Id を定義します。 アンマネージ コードは、この情報通常は、ヘッダー ファイルで指定されている [Extern 要素](../extensibility/extern-element.md)します。 マネージ コードがこの情報を定義する記号要素の子要素です。  
+# <a name="symbols-element"></a>シンボル要素
+Guid および他の VSCT 要素によって使用されている Id を定義します。 アンマネージ コードは、この情報、通常で指定されているヘッダー ファイルから[Extern 要素](../extensibility/extern-element.md)です。 マネージ コードが、要素の子要素、シンボルをこの情報を定義します。  
   
- 既存の .cto ファイルから .vsct ファイルを作成する場合、シンボルはシンボル要素の子として生成されます。 詳細については、「[方法: 既存の .Cto ファイルから .Vsct ファイルを作成する](../Topic/How%20to:%20Create%20a%20.Vsct%20File%20from%20an%20Existing%20.Cto%20File.md)」を参照してください。  
+ 既存の .cto ファイルから .vsct ファイルを作成する場合、シンボルがシンボル要素の子として生成されます。 詳細については、次を参照してください。[する方法: を作成します。既存の Vsct ファイルです。Cto ファイル](../extensibility/internals/how-to-create-a-dot-vsct-file.md#how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file)です。  
   
- シンボル要素混同しないようにと、 [要素を定義します。](../extensibility/define-element.md), 、プリプロセッサで使用するための名前と値のペアを定義します。  
+ シンボル要素がないと混同しないでください、[定義要素](../extensibility/define-element.md)プリプロセッサで使用するための名前と値のペアを定義します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 <Symbols>  
@@ -35,33 +37,40 @@ Guid およびその他の VSCT 要素によって使用されている Id を�
 </Symbols>  
 ```  
   
-## 属性および要素  
+## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
-### 属性  
+### <a name="attributes"></a>属性  
   
 |属性|説明|  
-|--------|--------|  
+|---------------|-----------------|  
 |なし||  
   
-### 子要素  
+### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
-|--------|--------|  
-|GuidSymbol|GUID 記号を定義します。 GuidSymbol が 2 つの必須属性: 名前と値。 名前は、シンボルの名前と、値を文字列として GUID の値です。<br /><br /> 例: \< GuidSymbol 名前 \="guidVsPackage1Pkg"値 \="{c5f54698\-101a\-4846\-84d3\-dc748f9cd848}"\/\>|  
-|IDSymbol|シンボルを定義します。 IDSymbol が 2 つの必須属性: 名前と値。 名前は、シンボルの名前と値は、文字列としての記号の値。<br /><br /> 例: \< IDSymbol 名前 \="MyMenuGroup"値"0x1020"\=\/\>|  
+|-------------|-----------------|  
+|GuidSymbol|GUID 記号を定義します。 GuidSymbol は 2 つの必須属性を持つ: 名前と値。 名前は、シンボルの名前と値は GUID を文字列としての値。<br /><br /> 例:\<GuidSymbol 名"guidVsPackage1Pkg"の値を = ="{c5f54698-101a-4846-84d3-dc748f9cd848}"/>|  
+|IDSymbol|シンボルを定義します。 IDSymbol は 2 つの必須属性を持つ: 名前と値。 名前は、シンボルの名前と値が文字列としての記号の値。<br /><br /> 例:\<IDSymbol 名"MyMenuGroup"の値を = ="0x1020"/>|  
   
-### 親要素  
+### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
-|--------|--------|  
+|-------------|-----------------|  
 |[CommandTable 要素](../extensibility/commandtable-element.md)|.Vsct ファイルのルート要素です。|  
   
-## 使用例  
+## <a name="example"></a>例  
   
 ```  
-<Symbols> <GuidSymbol name="guidVsPackage1Pkg" value="{c5f54698-101a-4846-84d3-dc748f9cd848}" /> <GuidSymbol name="guidVsPackage1CmdSet" value="{cb9dfd7f-2fcc-4a3e-aae8-f7fe30b1cfac}"> <IDSymbol name="MyMenuGroup" value="0x1020" /> <IDSymbol name="cmdidMyCommand" value="0x0100" /> <IDSymbol name="cmdidMyTool" value="0x0101" /> </GuidSymbol> </Symbols>  
+<Symbols>  
+  <GuidSymbol name="guidVsPackage1Pkg" value="{c5f54698-101a-4846-84d3-dc748f9cd848}" />  
+  <GuidSymbol name="guidVsPackage1CmdSet" value="{cb9dfd7f-2fcc-4a3e-aae8-f7fe30b1cfac}">  
+    <IDSymbol name="MyMenuGroup" value="0x1020" />  
+    <IDSymbol name="cmdidMyCommand" value="0x0100" />  
+    <IDSymbol name="cmdidMyTool" value="0x0101" />  
+  </GuidSymbol>  
+</Symbols>  
 ```  
   
-## 参照  
- [Visual Studio コマンド テーブル \(します。Vsct\) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>関連項目  
+ [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

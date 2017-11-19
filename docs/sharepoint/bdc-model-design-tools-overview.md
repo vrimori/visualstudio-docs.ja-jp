@@ -1,94 +1,96 @@
 ---
-title: "BDC モデルのデザイン ツールの概要"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.BDC.Method_Details"
-  - "VS.SharePointTools.BDC.Explorer"
-  - "VS.SharePointTools.BDC.Diagram"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "BDC [Visual Studio での SharePoint 開発], BDC エクスプローラー"
-  - "BDC [Visual Studio での SharePoint 開発], デザイナー"
-  - "BDC [Visual Studio での SharePoint 開発], メソッドの詳細"
-  - "BDC [Visual Studio での SharePoint 開発], ビジュアル ツール"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], BDC エクスプローラー"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], デザイナー"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], メソッドの詳細"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], ビジュアル ツール"
+title: "BDC モデルのデザイン ツールの概要 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.SharePointTools.BDC.Method_Details
+- VS.SharePointTools.BDC.Explorer
+- VS.SharePointTools.BDC.Diagram
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- BDC [SharePoint development in Visual Studio], visual tools
+- Business Data Connectivity service [SharePoint development in Visual Studio], visual tools
+- Business Data Connectivity service [SharePoint development in Visual Studio], BDC Explorer
+- BDC [SharePoint development in Visual Studio], method details
+- Business Data Connectivity service [SharePoint development in Visual Studio], designer
+- Business Data Connectivity service [SharePoint development in Visual Studio], method details
+- BDC [SharePoint development in Visual Studio], BDC Explorer
+- BDC [SharePoint development in Visual Studio], designer
 ms.assetid: dbd7b746-9e93-4ed4-a546-4a6f17a4725f
-caps.latest.revision: 16
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: eaf6871f7ad9316ba2dbdaa8fa29b4810b1d6a3d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# BDC モデルのデザイン ツールの概要
-  BDC デザイナー、**\[BDC メソッドの詳細\]** ウィンドウ、および **BDC エクスプローラー**を使用して、ビジネス データ接続 \(BDC\) モデルをデザインできます。  
+# <a name="bdc-model-design-tools-overview"></a>BDC モデルのデザイン ツールの概要
+  BDC デザイナーを使用してビジネス データ接続 (BDC) モデルを設計することができます、 **BDC メソッドの詳細**ウィンドウ、および**BDC エクスプ ローラー**です。  
   
- **BDC エクスプローラー**を使用すると、モデルの参照、モデルの検索、および型記述子の定義を行うことができます。  
+ **BDC エクスプ ローラー**モデルの参照し、モデルを検索、型記述子を定義することができます。  
   
-## BDC デザイナー  
- BDC デザイナーを使用すると、モデル内のエンティティを定義し、相互の関係性を視覚的に整理することができます。  BDC デザイナーは、次のタスクを実行するときに使用します。  
+## <a name="bdc-designer"></a>BDC デザイナー  
+ BDC デザイナーでは、モデルのエンティティを定義して、相互の関係を視覚的に整理できます。 次のタスクを実行するのに BDC デザイナーを使用します。  
   
--   モデルにエンティティを追加する。  
+-   モデルにエンティティを追加します。  
   
--   モデルからエンティティを削除する。  
+-   モデルからエンティティを削除します。  
   
--   エンティティ間の関連性を定義する。  
+-   エンティティ間のリレーションシップを定義します。  
   
- BDC デザイナーを開き、プロジェクトのモデル ファイルをダブルクリックするか、またはモデル ファイルのショートカット メニューを開き、**\[開く\]** をクリックします。  デザイナーに **\[ツールボックス\]** から **\[エンティティ\]** をドラッグするか、またはコピーすることで、モデルにエンティティを追加します。  2 個のエンティティ間に関連付けを作成するには、**\[ツールボックス\]** の **\[関連付け\]** のコントロールを選択し、最初のエンティティを選択し、2 番目のエンティティを選択します。  
+ BDC デザイナーを開くには、そのプロジェクトで、モデル ファイルをダブルクリックし、モデル ファイルのショートカット メニューを開くまたはを選択し、**開く**です。 エンティティ モデルを追加、ドラッグまたはコピーして、**エンティティ**から、**ツールボックス**デザイナーにします。 2 つのエンティティ間の関連付けを作成するには、選択、**アソシエーション**で制御、**ツールボックス**を最初のエンティティを選択して、2 番目のエンティティを選択します。  
   
-## \[BDC メソッドの詳細\] ウィンドウ  
- **\[BDC メソッドの詳細\]** ウィンドウを使用して、メソッドのパラメーター、インスタンス、およびフィルターの記述子を定義します。  
+## <a name="bdc-method-details-window"></a>BDC メソッドの詳細 ウィンドウ  
+ 使用して、 **BDC メソッドの詳細**パラメーターのインスタンスを定義して、メソッドの記述子をフィルター処理するウィンドウです。  
   
- **\[BDC メソッドの詳細\]** ウィンドウを使用すると、Finder、SpecificFinder、Creator、Updater、および Deleter の各メソッドを簡単に生成できます。  これらのメソッドを生成すると、パラメーター、インスタンス、型記述子などのメタデータがメソッドに追加されます。  独自のシナリオに合わせて、このメタデータを変更することもできます。  
+ Finder、固有の検索、作成者、アップデーター、および削除子のメソッドをすばやく生成することができます、 **BDC メソッドの詳細**ウィンドウです。 これらのメソッドを生成するときに、Visual Studio は、メソッドにパラメーター、インスタンス、および型記述子などのメタデータを追加します。 特定のシナリオを満たすためには、このメタデータを変更することができます。  
   
- **\[BDC メソッドの詳細\]** ウィンドウのメニュー バーで開くには、**\[その他のウィンドウ\]**、**\[BDC メソッドの詳細\]\[表示\]** をクリックします。  
+ 開くには、 **BDC メソッドの詳細**ウィンドウ、メニュー バーを選択して**ビュー**、**その他のウィンドウ**、 **BDC メソッドの詳細**です。  
   
- **\[BDC メソッドの詳細\]** ウィンドウのメソッドを表示するには、BDC デザイナーでエンティティを選択します。  選択したエンティティのメソッドが **\[BDC メソッドの詳細\]** ウィンドウに表示されます。  BDC デザイナーでエンティティを選択すると、**\[BDC メソッドの詳細\]** ウィンドウに情報が表示されません。  
+ 内のメソッドを表示する、 **BDC メソッドの詳細**ウィンドウで、BDC デザイナーで、エンティティを選択します。 選択したエンティティのメソッドに表示、 **BDC メソッドの詳細**ウィンドウです。 BDC デザイナーにエンティティを選択しない場合、 **BDC メソッドの詳細**ウィンドウに情報が表示されません。  
   
- **\[BDC メソッドの詳細\]** ウィンドウのノードを展開したり折りたたんだりして、パラメーター、インスタンス、およびフィルターの記述子を定義します。  **BDC エクスプローラー**を使用して型記述子を定義します。  
+ 展開または折りたたみの内のノード、 **BDC メソッドの詳細**インスタンス、パラメーターを定義して記述子をフィルター処理するウィンドウです。 使用して、 **BDC エクスプ ローラー**型記述子を定義します。  
   
-## BDC エクスプローラー  
- **BDC エクスプローラー**には、モデルを構成する要素が表示されます。  **\[BDC エクスプローラー\]** のメニュー バーで開くには、**\[その他のウィンドウ\]**、**\[BDC エクスプローラー\]\[表示\]** をクリックします。  モデルを参照するには、**BDC エクスプローラー**のノードを展開します。  各ノードは、モデル ファイルの XML に含まれる 1 つの要素を表します。  
+## <a name="bdc-explorer"></a>BDC エクスプローラー  
+ **BDC エクスプ ローラー**モデルを構成する要素が表示されます。 開くには、 **BDC エクスプ ローラー**、メニュー バーで、次のように選択します。**ビュー**、**その他のウィンドウ**、 **BDC エクスプ ローラー**です。 モデルを参照するときにノードを展開、 **BDC エクスプ ローラー**です。 各ノードは、モデル ファイルの XML の要素を表します。  
   
- **\[BDC エクスプローラー\]** のノードを選択すると、選択した各ノードの **\[プロパティ\]** はプロパティ ウィンドウに表示されます。  このようなプロパティの多くは、モデル ファイルの属性に対応しています。  **BDC エクスプローラー**の上部にある検索ボックスを使用して、モデルを検索することもできます。  
-  
-> [!NOTE]  
->  **BDC エクスプローラー**には、識別子、カスタム プロパティ、ローカライズした文字列、関連付けグループ、操作、フィルター記述子、アクション制御リスト、および既定のパラメーターの値が表示されません。  
-  
-### 型記述子の定義  
- **BDC エクスプローラー**を使用して型記述子を定義します。  BDC エクスプローラーを使用すると、1 回で型記述子を定義し、モデルの他の場所でその型記述子を再利用できるようになります。  この場合、型記述子をコピーし、他のパラメーターまたは型記述子に貼り付けます。  
+ 内のノードを選択すると、 **BDC エクスプ ローラー**、選択した各ノードのプロパティに表示されます、**プロパティ**ウィンドウです。 これらのプロパティの多くは、モデル ファイル内の属性に対応します。 上部にある検索ボックスを使用して、モデルを検索することができます、 **BDC エクスプ ローラー**です。  
   
 > [!NOTE]  
->  元の型記述子が変更されても、型記述子のコピーに影響はありません。  
+>  **BDC エクスプ ローラー**識別子、カスタム プロパティをローカライズされた文字列、関連付けグループ、アクション、フィルター記述子、アクションのコントロール リスト、および既定のパラメーター値は表示されません。  
   
- 詳細については、「[How to: Define the Type Descriptor of a Parameter](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)」を参照してください。  
+### <a name="defining-type-descriptors"></a>型記述子を定義します。  
+ 使用して、 **BDC エクスプ ローラー**型記述子を定義します。 BDC エクスプ ローラーを使用すると、1 回、型記述子を定義し、モデルの他の場所には、その型記述子を再利用できます。 これを実現するには、型記述子をコピーし、その他のパラメーターに貼り付けるか記述子を入力します。  
   
-## 参照  
- [方法: BDC モデルを作成する](../sharepoint/how-to-create-a-bdc-model.md)   
- [方法: モデルにエンティティを追加する](../sharepoint/how-to-add-an-entity-to-a-model.md)   
- [方法: Finder メソッドを追加する](../sharepoint/how-to-add-a-finder-method.md)   
- [方法: SpecificFinder メソッドを追加する](../sharepoint/how-to-add-a-specific-finder-method.md)   
- [方法: Creator メソッドを追加する](../sharepoint/how-to-add-a-creator-method.md)   
- [方法: Deleter メソッドを追加する](../sharepoint/how-to-add-a-deleter-method.md)   
- [方法: Updater メソッドを追加する](../sharepoint/how-to-add-an-updater-method.md)   
- [エンティティ間の関連付けの作成](../sharepoint/creating-an-association-between-entities.md)   
- [チュートリアル: ビジネス データを使用した SharePoint での外部リストの作成](../sharepoint/walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data.md)   
- [SharePoint へのビジネス データの統合](../sharepoint/integrating-business-data-into-sharepoint.md)   
- [ビジネス データ接続モデルの作成](../sharepoint/creating-a-business-data-connectivity-model.md)   
+> [!NOTE]  
+>  元の型記述子への変更は、その型記述子のコピーには影響しません。  
+  
+ 詳細については、次を参照してください。[する方法: パラメーターの型記述子を定義する](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)です。  
+  
+## <a name="see-also"></a>関連項目  
+ [方法: BDC モデルを作成](../sharepoint/how-to-create-a-bdc-model.md)   
+ [方法: エンティティをモデルに追加します。](../sharepoint/how-to-add-an-entity-to-a-model.md)   
+ [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
+ [方法: Specificfinder メソッドを追加します。](../sharepoint/how-to-add-a-specific-finder-method.md)   
+ [方法: Creator メソッドを追加](../sharepoint/how-to-add-a-creator-method.md)   
+ [方法: Deleter メソッドを追加](../sharepoint/how-to-add-a-deleter-method.md)   
+ [方法: Updater メソッドを追加](../sharepoint/how-to-add-an-updater-method.md)   
+ [エンティティ間の関連付けを作成します。](../sharepoint/creating-an-association-between-entities.md)   
+ [チュートリアル: sharepoint ビジネス データを使用して外部リストを作成します。](../sharepoint/walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data.md)   
+ [SharePoint にビジネス データの統合](../sharepoint/integrating-business-data-into-sharepoint.md)   
+ [ビジネス データ接続モデルを作成します。](../sharepoint/creating-a-business-data-connectivity-model.md)   
  [Business Data Connectivity モデルのデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)  
   
   

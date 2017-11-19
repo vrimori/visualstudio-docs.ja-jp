@@ -1,70 +1,73 @@
 ---
-title: "方法 : Visual Studio ソリューションに含まれていない実行可能ファイルをデバッグする | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "デバッグ [Visual Studio], 実行可能ファイル"
-  - "実行可能ファイル, デバッグ (プロジェクト外部での)"
-  - "実行可能ファイル, インポート"
+title: "方法: Visual Studio ソリューションの一部ではない実行可能ファイルのデバッグ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- debugging [Visual Studio], executables
+- executable files, importing
+- executable files, debugging outside of projects
 ms.assetid: 3ea176e8-1ce5-42c4-b7a2-abe3a2765033
-caps.latest.revision: 23
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: be07be0e1374360a96b6672b095dcc039c6bb4f0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : Visual Studio ソリューションに含まれていない実行可能ファイルをデバッグする
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+# <a name="how-to-debug-an-executable-that-is-not-part-of-a-visual-studio-solution"></a>方法: Visual Studio ソリューションの一部ではない実行可能ファイルのデバッグ
+実行可能ファイル (.exe ファイル) ではないをデバッグする場合もありますの一部、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の外部で作成された実行可能ファイルや、他の人から受け取った実行可能ファイルなどがその例です。  
+  
+この問題を解決するには、通常、Visual Studio 外部の実行可能ファイルを起動して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッガーを使用してそのファイルにアタッチします。 詳細については、次を参照してください。[実行中のプロセスにアタッチ](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)です。  
+  
+アプリケーションへのアタッチは、一部を手動で実行する必要があります。この処理には数秒かかります。 アプリケーションの起動時に発生する問題をデバッグする場合は、このわずかな遅延のため、アタッチが役に立ちません。 また、ユーザー入力を待たず、すぐに終了するプログラムをデバッグする場合は、アタッチしている時間がないこともあります。 使用していれば[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]と[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]インストールされている場合、このようなプログラムの EXE プロジェクトを作成することができます。
 
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトに含まれない実行可能ファイルをデバッグすることが必要な場合もあります。  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の外部で作成された実行可能ファイルや、他の人から受け取った実行可能ファイルなどがその例です。  
+> [!NOTE]
+>  EXE プロジェクトをサポートしていないプログラミング言語もあります。
+
+Visual Studio ソリューションの一部ではない実行可能ファイルをデバッグする際に利用できるデバッグ機能は限定されます、実行可能ファイルの実行中にアタッチする実行可能ファイルを追加するか、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューションです。
+
+- ソース コードがある場合は、そのソース コードを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] にインポートして、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で実行可能ファイルのデバッグ ビルドを作成するのが最適です。
+- ソース コードがあるない場合、および実行可能ファイルなしでビルドされました[デバッグ情報](../debugger/how-to-set-debug-and-release-configurations.md)互換性のある形式で利用できるデバッグ機能は非常に限定します。 
   
- この問題を解決するには、通常、Visual Studio 外部の実行可能ファイルを起動して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッガーを使用してそのファイルにアタッチします。  詳細については、「[実行中のプロセスへのアタッチ](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)」を参照してください。  
+### <a name="to-create-an-exe-project-for-an-existing-executable"></a>既存の実行可能ファイルの EXE プロジェクトを作成するには  
   
- アプリケーションへのアタッチは、一部を手動で実行する必要があります。この処理には数秒かかります。  アプリケーションの起動時に発生する問題をデバッグする場合は、このわずかな遅延のため、アタッチが役に立ちません。  また、ユーザー入力を待たず、すぐに終了するプログラムをデバッグする場合は、アタッチしている時間がないこともあります。  [!INCLUDE[vcprvc](../debugger/includes/vcprvc_md.md)] がインストールされている場合は、このようなプログラムの EXE プロジェクトを作成できます。  
+1.  **ファイル** メニューのをクリックして**開く**選択**プロジェクト**です。  
   
-### 既存の実行可能ファイルの EXE プロジェクトを作成するには  
+2.  **プロジェクトを開く**ダイアログ ボックスで、ドロップダウン リストの次へ をクリック、**ファイル名**ボックス、および選択**すべてのプロジェクト ファイル**です。  
   
-1.  **\[ファイル\]** メニューの **\[開く\]** をポイントし、**\[プロジェクト\]** をクリックします。  
+3.  実行可能ファイルを見つけてクリックして**OK**です。  
+
+    これにより、実行可能ファイルを格納する一時的なソリューションが作成されます。
+
+5.  などの実行コマンドを選択して、実行可能ファイルを開始します。**開始**、から、**デバッグ**メニュー。    
   
-2.  **\[プロジェクトを開く\]** ダイアログ ボックスで、**\[ファイル名\]** ボックスの横のドロップダウン リストをクリックし、**\[すべてのプロジェクト ファイル\]** を選択します。  
+### <a name="to-import-an-executable-into-a-visual-studio-solution"></a>Visual Studio ソリューションに実行可能ファイルをインポートするには  
   
-3.  目的の実行可能ファイルを指定して **\[OK\]** をクリックします。  
+1.  **ファイル** メニューのをポイント**プロジェクトの追加**、クリックして**既存のプロジェクト**です。  
   
-     これにより、実行可能ファイルを格納する一時的なソリューションが作成されます。  
-  
-### Visual Studio ソリューションに実行可能ファイルをインポートするには  
-  
-1.  **\[ファイル\]** メニューの **\[プロジェクトの追加\]** をポイントし、**\[既存のプロジェクト\]** をクリックします。  
-  
-2.  **\[既存プロジェクトの追加\]** ダイアログ ボックスで、**\[ファイル名\]** ボックスの横のドロップダウン リストをクリックし、**\[すべてのプロジェクト ファイル\]** を選択します。  
+2.  **既存プロジェクトの追加**ダイアログ ボックスで、ドロップダウン リストの次へ をクリック、**ファイル名**ボックス、および選択**すべてのプロジェクト ファイル**です。  
   
 3.  目的の実行可能ファイルを見つけ、選択します。  
   
-4.  **\[OK\]** をクリックします。  
+4.  **[OK]** をクリックします。  
   
-5.  **\[デバッグ\]** メニューの **\[開始\]** などの実行コマンドを選択することで、実行可能ファイルを起動します。  
+5.  などの実行コマンドを選択して、実行可能ファイルを開始します。**開始**、から、**デバッグ**メニュー。    
   
-    > [!NOTE]
-    >  EXE プロジェクトをサポートしていないプログラミング言語もあります。  この機能を使用する必要がある場合は、[!INCLUDE[vcprvc](../debugger/includes/vcprvc_md.md)] をインストールしてください。  
-  
-     ソース コードなしで実行可能ファイルをデバッグする場合は、実行中の実行可能ファイルにアタッチするか、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューションに実行可能ファイルを追加するかにかかわらず、利用できるデバッグ機能が限られます。  実行可能ファイルが、互換性のある形式のデバッグ情報を持たずにビルドされていた場合、利用できる機能はさらに限られます。  ソース コードがある場合は、そのソース コードを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] にインポートして、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で実行可能ファイルのデバッグ ビルドを作成するのが最適です。  
-  
-## 参照  
- [デバッグの設定と準備](../debugger/debugger-settings-and-preparation.md)   
+## <a name="see-also"></a>関連項目  
+ [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)   
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
- [DBG Files](http://msdn.microsoft.com/ja-jp/91e449e9-8b65-4123-960f-2107cd1f1cfd)
+ [DBG ファイル](http://msdn.microsoft.com/en-us/91e449e9-8b65-4123-960f-2107cd1f1cfd)

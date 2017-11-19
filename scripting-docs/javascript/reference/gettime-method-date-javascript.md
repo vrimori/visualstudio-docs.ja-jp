@@ -1,61 +1,63 @@
 ---
-title: "getTime メソッド (Date) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "getTime"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "GetTime メソッド"
-  - "time メソッド"
+title: "getTime メソッド (Date) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: getTime
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- GetTime method
+- time method
 ms.assetid: f0da1d4e-337c-497d-9205-093defbc6d3d
-caps.latest.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a31e542445e89a0e2f3364d36ae44f8d2d4cf9bb
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# getTime メソッド (Date) (JavaScript)
-時刻値 \(ミリ秒\) を取得します。  
+# <a name="gettime-method-date-javascript"></a>getTime メソッド (Date) (JavaScript)
+ミリ秒単位で時間の値を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 dateObj.getTime()   
 ```  
   
-#### パラメーター  
- `dateObj` 参照は必須で、`Date` オブジェクトを指定します。  
+#### <a name="parameters"></a>パラメーター  
+ 必要な `dateObj` 参照は `Date` オブジェクトです。  
   
-## 戻り値  
- 1970 年 1 月 1 日午前 00:00:00 と `Date` オブジェクトに格納されている時刻値との差をミリ秒単位で返します。  日付の範囲は、1970 年 1 月 1 日午前 00:00:00 の前後およそ 285,616 年です。  負数は、1970 年以前の日付を示します。  
+## <a name="return-value"></a>戻り値  
+ 午前 0 時、1970 年 1 月 1 日と時刻の値の間 (ミリ秒) の数を返します、`Date`オブジェクト。 日付の範囲は、午前 0 時、1970 年 1 月 1 日の約 285,616 年です。 負の数値は、1970 年以前の日付を示します。  
   
-## 解説  
- 複数の日付や時刻を使って計算する場合は、1 日、1 時間、1 分間などの時間をミリ秒単位で表す変数を定義しておくことをお勧めします。  次に例を示します。  
+## <a name="remarks"></a>コメント  
+ 複数の日付と時刻の計算を行う場合は、日、時間、または分でミリ秒単位の数と同じ変数を定義します。 例:  
   
-```javascript  
+```JavaScript  
 var minute = 1000 * 60;  
 var hour = minute * 60;  
 var day = hour * 24;  
 ```  
   
- `getTime` メソッドの使用方法の詳細については、「[日付と時刻の計算 \(JavaScript\)](../../javascript/calculating-dates-and-times-javascript.md)」を参照してください。  
+ 参照してください[を計算する日付と時刻 (JavaScript)](../../javascript/calculating-dates-and-times-javascript.md)の使用方法に関する詳細について、`getTime`メソッドです。  
   
-## 使用例  
+## <a name="example"></a>例  
  `getTime` メソッドを使用する方法の例を次に示します。  
   
-```javascript  
+```JavaScript  
 var minute = 1000 * 60;  
 var hour = minute * 60;  
 var day = hour * 24;  
@@ -66,13 +68,12 @@ var time = date.getTime();
 document.write(Math.round(time / day) + " days from 1/1/1970 to 1/1/2001");  
   
 // Output: 11323 days from 1/1/1970 to 1/1/2001  
-  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
- **対象**: [Date オブジェクト](../../javascript/reference/date-object-javascript.md)  
+ **適用対象**: [Date Object](../../javascript/reference/date-object-javascript.md)  
   
-## 参照  
- [setTime メソッド \(Date\)](../../javascript/reference/settime-method-date-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [setTime メソッド (Date)](../../javascript/reference/settime-method-date-javascript.md)

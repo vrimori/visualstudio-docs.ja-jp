@@ -1,46 +1,49 @@
 ---
-title: "TransactedReceiveScope アクティビティ デザイナー | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "System.ServiceModel.Activities.TransactedReceiveScope.UI"
+title: "TransactedReceiveScope アクティビティ デザイナー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: System.ServiceModel.Activities.TransactedReceiveScope.UI
 ms.assetid: 7ca93aad-4e83-4d81-90f4-998ee114d9b6
-caps.latest.revision: 4
-author: "ErikRe"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ErikRe
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 77f7b4e0131eb5afc4585a68097c8d419145096b
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# TransactedReceiveScope アクティビティ デザイナー
-**TransactedReceiveScope** アクティビティ デザイナーは、<xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティを作成および構成するために使用します。  
+# <a name="transactedreceivescope-activity-designer"></a>TransactedReceiveScope アクティビティ デザイナー
+**TransactedReceiveScope**デザイナーを使用して作成し、構成、<xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティ。  
   
-## TransactedReceiveScope アクティビティ  
+## <a name="the-transactedreceivescope-activity"></a>TransactedReceiveScope アクティビティ  
  <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティを使用すると、ワークフローまたはディスパッチャーによって作成されたサーバー トランザクションにトランザクションをフローできます。  
   
-### TransactedReceiveScope アクティビティ デザイナーの使用  
- **TransactedReceiveScope** アクティビティ デザイナーは、**\[ツールボックス\]** の **\[メッセージング\]** カテゴリにあります。\[ツールボックス\] にアクセスするには、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]の **\[ツールボックス\]** タブをクリックします \(または、**\[表示\]** メニューの **\[ツール バー\]** をクリックするか、Ctrl キーと Alt キーを押しながら X キーを押します\)。  
+### <a name="using-the-transactedreceivescope-activity-designer"></a>TransactedReceiveScope アクティビティ デザイナーの使用  
+ **TransactedReceiveScope**アクティビティ デザイナーは含まれて、**メッセージング**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**タブに[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)](または、選択**ツールバー**から、**ビュー**メニューのまたは CTRL + ALT + X です)。  
   
- **TransactedReceiveScope** アクティビティ デザイナーは、**\[ツールボックス\]** からドラッグして、アクティビティを通常配置している[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]画面の任意の場所にドロップできます。この操作により、TransactedReceiveScope という既定の **DisplayName** を持つ <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティが作成されます。<xref:System.Activities.Activity.DisplayName%2A> 値は、**TransactedReceiveScope** アクティビティ デザイナーのヘッダーか、プロパティ グリッドの **\[DisplayName\]** ボックスで編集できます。  
+ **TransactedReceiveScope**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**に、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]サーフェス任意の場所のアクティビティを通常配置しています。 これを作成、 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 、既定値を持つアクティビティ**DisplayName** TransactedReceiveScope のです。 <xref:System.Activities.Activity.DisplayName%2A>のヘッダーで編集できる、 **TransactedReceiveScope**アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。  
   
- **TransactedReceiveScope** デザイナーには、**\[Request\]** ボックスと **\[Body\]** ボックスがあります。これらは、<xref:System.ServiceModel.Activities.TransactedReceiveScope.Request%2A> プロパティを構成するために使用します。このプロパティでは、<xref:System.ServiceModel.Activities.Receive> アクティビティと、他の <xref:System.Activities.Activity> を指定する <xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A> プロパティを指定します。<xref:System.ServiceModel.Activities.TransactedReceiveScope.Request%2A> によって、トランザクションが作成されます。その後、トランザクションはこのスコープのアンビエント トランザクションになり、<xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A> のスコープ内のあらゆるアクティビティは、このトランザクション内で実行されます。  
+ **TransactedReceiveScope**デザイナーが含まれています**要求**と**本文**ボックス。 これらは、<xref:System.ServiceModel.Activities.TransactedReceiveScope.Request%2A> プロパティを構成するために使用します。このプロパティでは、<xref:System.ServiceModel.Activities.Receive> アクティビティと、他の <xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A> を指定する <xref:System.Activities.Activity> プロパティを指定します。 <xref:System.ServiceModel.Activities.TransactedReceiveScope.Request%2A> によって、トランザクションが作成されます。 その後、トランザクションはこのスコープのアンビエント トランザクションになり、<xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A> のスコープ内のあらゆるアクティビティは、このトランザクション内で実行されます。  
   
-### TransactedReceiveScope のプロパティ  
- 次の表に、<xref:System.ServiceModel.Activities.TransactedReceiveScope> のプロパティと、デザイナーでのその使用方法を示します。<xref:System.Activities.Activity.DisplayName%2A> プロパティはプロパティ グリッドまたは[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]画面で編集できますが、他のプロパティはデザイン画面で編集する必要があります。  
+### <a name="the-transactedreceivescope-properties"></a>TransactedReceiveScope のプロパティ  
+ 次の表に、<xref:System.ServiceModel.Activities.TransactedReceiveScope> のプロパティと、デザイナーでのその使用方法を示します。 <xref:System.Activities.Activity.DisplayName%2A> プロパティはプロパティ グリッドまたは[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]画面で編集できますが、他のプロパティはデザイン画面で編集する必要があります。  
   
-|プロパティ名|必須|使用法|  
-|------------|--------|---------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|省略可|<xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティの省略可能な表示名。既定値は、TransactedReceiveScope です。<br /><br /> <xref:System.Activities.Activity.DisplayName%2A> 名は必須ではありませんが、使用することをお勧めします。|  
-|<xref:System.ServiceModel.Activities.TransactedReceiveScope.Request%2A>|必須|アクティビティ デザイナー画面の **\[Request\]** ブロックに <xref:System.ServiceModel.Activities.Receive> アクティビティをドロップします。|  
-|<xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A>|省略可|<xref:System.Activities.Activity> アクティビティをアクティビティ デザイナー画面の **\[Body\]** ブロックにドロップします。|  
+|プロパティ名|必須|使用方法|  
+|-------------------|--------------|-----------|  
+|<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティの省略可能な表示名。 既定値は、TransactedReceiveScope です。<br /><br /> <xref:System.Activities.Activity.DisplayName%2A> 名は必須ではありませんが、使用することをお勧めします。|  
+|<xref:System.ServiceModel.Activities.TransactedReceiveScope.Request%2A>|True|削除操作を行う、<xref:System.ServiceModel.Activities.Receive>にアクティビティ、**要求**アクティビティ デザイナー画面上のブロックです。|  
+|<xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A>|False|削除操作を行う、<xref:System.Activities.Activity>に、**本文**アクティビティ デザイナー画面上のブロックです。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [CorrelationScope](../workflow-designer/correlationscope-activity-designer.md)   
  [InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md)   
- [Receive](../workflow-designer/receive-activity-designer.md)   
+ [受信](../workflow-designer/receive-activity-designer.md)   
  [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)   
- [Send](../workflow-designer/send-activity-designer.md)   
+ [送信](../workflow-designer/send-activity-designer.md)   
  [SendAndReceiveReply](../workflow-designer/sendandreceivereply-template-designer.md)

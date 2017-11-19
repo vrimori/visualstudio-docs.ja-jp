@@ -1,48 +1,50 @@
 ---
-title: "方法: BDC モデルを作成する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "BDC [Visual Studio での SharePoint 開発], 作成 (モデルを)"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], 作成 (モデルを)"
+title: "方法: BDC モデルを作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- BDC [SharePoint development in Visual Studio], creating a model
+- Business Data Connectivity service [SharePoint development in Visual Studio], creating a model
 ms.assetid: e8b888d4-a531-4d13-9ebf-efbbd33eebc6
-caps.latest.revision: 15
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: da7bb2ea8918a0a01716ed090253af8f2f28dbbe
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: BDC モデルを作成する
-  ビジネス データ接続 \(BDC: Business Data Connectivity\) モデルを作成するには、アイテムの種類に対応するテンプレートを使用し、モデルを任意の SharePoint プロジェクトに追加します。  詳細については、「[ビジネス データ接続モデルの作成](../sharepoint/creating-a-business-data-connectivity-model.md)」を参照してください。  モデルのデザイン方法の詳細については、「[Business Data Connectivity モデルのデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)」を参照してください。  
+# <a name="how-to-create-a-bdc-model"></a>方法: BDC モデルを作成する
+  ビジネス データ接続 (BDC: Business Data Connectivity) モデルを作成するには、アイテムの種類に対応するテンプレートを使用し、モデルを任意の SharePoint プロジェクトに追加します。 詳細については、次を参照してください。[ビジネス データ接続モデルを作成する](../sharepoint/creating-a-business-data-connectivity-model.md)です。 モデルを設計する方法の詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
   
-### BDC プロジェクトを作成するには  
+### <a name="to-create-a-bdc-project"></a>BDC プロジェクトを作成するには  
   
-1.  メニュー バーで **\[ファイル\]**、**\[新規\]**、**\[プロジェクト\]** の順にクリックします。  
+1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
   
     > [!NOTE]  
-    >  IDE が Visual Basic 開発設定を使用するように設定されている場合は、**\[ファイル\]**、**\[新しいプロジェクト\]** の順にクリックします。  
+    >  IDE が Visual Basic 開発設定を使用する設定、**ファイル**、**新しいプロジェクト**です。  
   
-     **\[新しいプロジェクト\]** ダイアログ ボックスが表示されます。  
+     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  **\[Visual Basic\]** または **\[Visual C\#\]** で、**\[Office\/SharePoint\]**、**\[SharePoint ソリューション\]** の順にクリックします。  
+2.  いずれかで**Visual Basic**または**Visual c#**、選択**Office/sharepoint**、 **SharePoint ソリューション**です。  
   
-3.  **\[テンプレート\]** ペインで、**\[SharePoint 2013 \- 空のプロジェクト\]** アイテムをクリックし、**\[OK\]** をクリックします。  
+3.  **テンプレート** ウィンドウで、選択、 **SharePoint 2013 - 空のプロジェクト**項目をクリックして、 **OK**ボタンをクリックします。  
   
      **SharePoint カスタマイズ ウィザード**が開きます。  
   
-4.  **\[デバッグのサイトとセキュリティ レベルの指定\]** ページで、ローカル コンピューター上の SharePoint サイトの URL を指定して、**\[ファーム ソリューションとして配置する\]** をクリックし、**\[完了\]** をクリックします。  
+4.  **デバッグのサイトとセキュリティ レベルを指定**] ページで、ローカル コンピューター上、SharePoint サイトの URL を指定して、選択、**ファーム ソリューションとして配置**オプションをクリックし、[、 **完了**ボタンをクリックします。  
   
      指定した SharePoint サイトでモデルをテストします。  
   
@@ -51,20 +53,20 @@ caps.handback.revision: 14
   
      空の SharePoint プロジェクトが作成されます。  
   
-5.  メニュー バーで **\[プロジェクト\]**、**\[新しい項目の追加\]** の順に選択します。  
+5.  メニュー バーで、次のように選択します。**プロジェクト**、**新しい項目の追加**です。  
   
-6.  **\[新しい項目の追加\]** ダイアログ ボックスで、**\[Office\/SharePoint\]** ノードを選択します。  
+6.  **新しい項目の追加** ダイアログ ボックスで、選択、 **Office/sharepoint**ノード。  
   
-7.  SharePoint テンプレートの一覧で、**\[ビジネス データ接続モデル \(ファーム ソリューションのみ\)\]** をクリックします。  
+7.  SharePoint テンプレートの一覧で選択**ビジネス データ接続モデル (ファーム ソリューションのみ)**です。  
   
-8.  **\[名前\]** ボックスに BDC モデルの名前を入力し、**\[追加\]** をクリックします。  
+8.  **名前**ボックス、BDC モデルの名前を指定し、選択、**追加**ボタンをクリックします。  
   
-     **ビジネス データ接続モデル** アイテムがプロジェクトに追加されます。  既定で、BDC デザイナーにモデルが表示されます。  詳細については、「[ビジネス データ接続モデルの作成](../sharepoint/creating-a-business-data-connectivity-model.md)」を参照してください。  
+     A**ビジネス データ接続モデル**項目は、プロジェクトに追加します。 既定で、BDC デザイナーにモデルが表示されます。 詳細については、次を参照してください。[ビジネス データ接続モデルを作成する](../sharepoint/creating-a-business-data-connectivity-model.md)です。  
   
-## 参照  
- [ビジネス データ接続モデルの作成](../sharepoint/creating-a-business-data-connectivity-model.md)   
- [方法: 既存の BDC モデル ファイルを SharePoint プロジェクトに追加する](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)   
- [方法: リソース ファイルを使用して、ローカライズした名前、プロパティ、およびアクセス許可を指定する](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)   
+## <a name="see-also"></a>関連項目  
+ [ビジネス データ接続モデルを作成します。](../sharepoint/creating-a-business-data-connectivity-model.md)   
+ [方法: SharePoint プロジェクトに既存の BDC モデル ファイルを追加](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)   
+ [方法: リソース ファイルを使用して、ローカライズされた名前、プロパティ、およびアクセス許可](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)   
  [方法: BDC 機能にカスタム アセンブリを含める](../sharepoint/how-to-include-a-custom-assembly-in-a-bdc-feature.md)   
  [SharePoint へのビジネス データの統合](../sharepoint/integrating-business-data-into-sharepoint.md)  
   

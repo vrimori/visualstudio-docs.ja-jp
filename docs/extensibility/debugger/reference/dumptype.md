@@ -4,44 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- DUMPTYPE
-helpviewer_keywords:
-- DUMPTYPE enumeration
+f1_keywords: DUMPTYPE
+helpviewer_keywords: DUMPTYPE enumeration
 ms.assetid: ea8160db-8732-4056-a1d7-892ef72da71e
-caps.latest.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 8a64d0d3c074b1d0b852afbd492aaa7ec9d37609
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 26e2836215ac5563a6ebaefb9d31d682348c7e89
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="dumptype"></a>DUMPTYPE
-プログラムの状態 (実行中のスレッド、スタック フレームでは、現在の命令アドレスなど) の量を指定をダンプします。  
+量を指定 (実行中のスレッド、スタック フレーム、および現在の命令アドレス) など、プログラムの状態をダンプします。  
   
 ## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 enum enum_DUMPTYPE {   
    DUMP_MINIDUMP = 0,  
    DUMP_FULLDUMP = 1  
@@ -49,7 +33,7 @@ enum enum_DUMPTYPE {
 typedef DWORD DUMPTYPE;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_DUMPTYPE {   
    DUMP_MINIDUMP = 0,  
    DUMP_FULLDUMP = 1  
@@ -58,7 +42,7 @@ public enum enum_DUMPTYPE {
   
 ## <a name="members"></a>メンバー  
  DUMP_MINIDUMP  
- 小規模かつコンパクトなダンプを指定します。  
+ 小規模でコンパクトなダンプを指定します。  
   
  DUMP_FULLDUMP  
  大規模な完全なダンプを指定します。  

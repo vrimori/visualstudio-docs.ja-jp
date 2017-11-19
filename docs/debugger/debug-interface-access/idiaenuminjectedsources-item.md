@@ -1,48 +1,47 @@
 ---
-title: "IDiaEnumInjectedSources::Item | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumInjectedSources::Item メソッド"
+title: "Idiaenuminjectedsources::item |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumInjectedSources::Item method
 ms.assetid: 14846955-7270-451d-91d2-9cb34bb65187
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 6b53112756a35c190668e76ba3bb1114ec60eb85
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumInjectedSources::Item
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-インデックスによって挿入されたソースを取得します。  
+# <a name="idiaenuminjectedsourcesitem"></a>IDiaEnumInjectedSources::Item
+インデックスを使用して、挿入されたソースを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT Item (   
-   DWORD                index,  
-   IDiaInjectedSource** injectedSource  
+```C++  
+HRESULT Item (   
+   DWORD                index,  
+   IDiaInjectedSource** injectedSource  
 );  
 ```  
   
-#### パラメーター  
- index  
- \[入力\] 取得する [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) のオブジェクトのインデックス。  インデックスは `count` が [IDiaEnumInjectedSources::get\_Count](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md) のメソッドによって返される場合に0 ~ \-1 です。`count`  
+#### <a name="parameters"></a>パラメーター  
+ インデックス  
+ [in]インデックス、 [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)を取得するオブジェクト。 インデックスが範囲 0 `count`-1 で、ここで`count`によって返される、 [idiaenuminjectedsources::get_count](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md)メソッドです。  
   
  injectedSource  
- \[入力\] [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) を表す挿入されたソース オブジェクトを返します。  
+ [out]返します、 [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)挿入されたソースを表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)   
  [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

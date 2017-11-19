@@ -1,29 +1,32 @@
 ---
-title: "IMachineDebugManagerEvents インターフェイス | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IMachineDebugManagerEvents インターフェイス"
+title: "IMachineDebugManagerEvents インターフェイス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords: IMachineDebugManagerEvents interface
 ms.assetid: 468de2f4-49e0-4f6f-ba0c-0f5f6832c092
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 369dc8d182efe7bf9697454d0e4b1c9c1a10c027
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IMachineDebugManagerEvents インターフェイス
-コンピューターで保持される実行中のアプリケーションのリストの変更通知のは、マネージャーをデバッグします。  デバッガーの IDE でこのインターフェイスはアプリケーションの動的な一覧を表示するために使用できます。  
+# <a name="imachinedebugmanagerevents-interface"></a>IMachineDebugManagerEvents インターフェイス
+実行では、変更の通知は、machine デバッグ manager によって管理されるアプリケーションの一覧です。 このインターフェイスは、アプリケーションの動的な一覧を表示する、デバッガーの IDE で使用できます。  
   
- `IUnknown` から継承するメソッドに加え、`IMachineDebugManagerEvents` インターフェイスは次のメソッドを公開します。  
+ 継承されたメソッドだけでなく`IUnknown`、`IMachineDebugManagerEvents`インターフェイスは、次のメソッドを公開します。  
   
-## Vtable 順序のメソッド  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
   
 |メソッド|説明|  
-|----------|--------|  
-|[IMachineDebugManagerEvents::onAddApplication](../../winscript/reference/imachinedebugmanagerevents-onaddapplication.md)|アプリケーションが実行中のアプリケーションのリストに追加されたときにイベントを処理します。|  
-|[IMachineDebugManagerEvents::onRemoveApplication](../../winscript/reference/imachinedebugmanagerevents-onremoveapplication.md)|アプリケーションが実行中のアプリケーションのリストから削除されたときにイベントを処理します。|
+|------------|-----------------|  
+|[IMachineDebugManagerEvents::onAddApplication](../../winscript/reference/imachinedebugmanagerevents-onaddapplication.md)|アプリケーションが実行に追加されたときにイベントを処理するアプリケーションの一覧です。|  
+|[IMachineDebugManagerEvents::onRemoveApplication](../../winscript/reference/imachinedebugmanagerevents-onremoveapplication.md)|アプリケーションが実行中から削除されたときにイベントを処理するアプリケーションの一覧です。|

@@ -1,39 +1,38 @@
 ---
-title: "&lt;assemblyIdentity&gt; 要素 (ClickOnce 配置) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "urn:schemas-microsoft-com:asm.v2#assemblyIdentity"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "<assemblyIdentity> 要素 [ClickOnce 配置マニフェスト]"
+title: "&lt;assemblyIdentity&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: urn:schemas-microsoft-com:asm.v2#assemblyIdentity
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords: <assemblyIdentity> element [ClickOnce deployment manifest]
 ms.assetid: f4a3bb83-c800-47d0-9905-9a5ae2486838
-caps.latest.revision: 23
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 26debb7d29458ab6452a2063e8e5c7e2f43fa7d0
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# &lt;assemblyIdentity&gt; 要素 (ClickOnce 配置)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションのプライマリ アセンブリを指定します。  
+# <a name="ltassemblyidentitygt-element-clickonce-deployment"></a>&lt;assemblyIdentity&gt;要素 (ClickOnce 配置)
+プライマリ アセンブリを識別、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
-      <assemblyIdentity    
-   name   
+      <assemblyIdentity    
+   name   
    version  
    publicKeyToken  
    processorArchitecture  
@@ -41,21 +40,21 @@ caps.handback.revision: 23
 />  
 ```  
   
-## 要素と属性  
- `assemblyIdentity` 要素は必須です。  子要素を含まず、次の属性を持ちます。  
+## <a name="elements-and-attributes"></a>要素と属性  
+ `assemblyIdentity`要素が必要です。 これは、子要素が含まれていない、次の属性です。  
   
-|属性|Description|  
-|--------|-----------------|  
-|`name`|必ず指定します。  配置の名前を情報として表示するために、ユーザーが認識できる形式で指定します。<br /><br /> `name` に単一引用符または二重引用符などの特殊文字が含まれていると、アプリケーションがアクティブ化に失敗する場合があります。|  
-|`version`|必ず指定します。  `major.minor.build.revision` の形式で、アセンブリのバージョン番号を指定します。<br /><br /> この値は、アプリケーションの更新がトリガーされるように、更新したマニフェストで増やす必要があります。|  
-|`publicKeyToken`|必ず指定します。  配置マニフェストに署名するために使用した公開キーの SHA\-1 ハッシュ値のうち、最後の 8 バイトを表す 16 文字の 16 進文字列を指定します。  署名に使用する公開キーは、2048 ビット以上であることが必要です。<br /><br /> アセンブリへの署名は省略可能ですが、できるだけ実行することをお勧めします。ただし、この属性は必須です。  署名されないアセンブリの場合は、自己署名されたアセンブリから値をコピーするか、すべてをゼロにした "ダミー" の値を使用します。|  
-|`processorArchitecture`|必ず指定します。  プロセッサを指定します。  有効な値は、`msil` \(すべてのプロセッサ\)、`x86` \(32 ビット Windows\)、`IA64` \(64 ビット Windows\)、および `Itanium` \(Intel 64 ビット Itanium プロセッサ\) です。|  
-|`type`|必ず指定します。  Windows の side\-by\-side インストール テクノロジとの互換性のためにあります。  唯一許容される値は、`win32` です。|  
+|属性|説明|  
+|---------------|-----------------|  
+|`name`|必須です。 情報提供を目的の配置の人間が判読できる名前を指定します。<br /><br /> 場合`name`の特殊文字が含まれています、一重引用符または二重引用符など、アプリケーションがアクティブ化に失敗可能性があります。|  
+|`version`|必須です。 次の形式で、アセンブリのバージョン番号を指定します:`major.minor.build.revision`です。<br /><br /> この値は、アプリケーションの更新をトリガーする、更新したマニフェストの増加する必要があります。|  
+|`publicKeyToken`|必須です。 配置マニフェストに署名する公開キーの sha-1 ハッシュ値の最後の 8 バイトを表す 16 文字の 16 進文字列を指定します。 署名に使用する公開キーは 2048 ビットである必要がありますか値を超えています。<br /><br /> アセンブリに署名する推奨であり、省略可能なこの属性が必要です。 アセンブリが署名付きでない場合は、自己署名されたアセンブリから値をコピーするか、「ダミー」値がすべてゼロを使用する必要があります。|  
+|`processorArchitecture`|必須です。 プロセッサを指定します。 有効な値は`msil`すべてのプロセッサに対して`x86`32 ビット Windows の`IA64`64 ビット windows の場合と`Itanium`Intel 64 ビット Itanium プロセッサ用です。|  
+|`type`|必須です。 Windows サイド バイ サイド インストール テクノロジとの互換性を維持します。 許可されている値だけ`win32`です。|  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
-## 使用例  
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置マニフェスト内の `assemblyIdentity` 要素を次のコード例に示します。  このコード例は、「[ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)」で紹介されている大きな例の一部です。  
+## <a name="example"></a>例  
+ 次のコード例を示しています、`assemblyIdentity`内の要素、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置マニフェスト。 このコード例に示されている例の一部である、 [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)トピックです。  
   
 ```  
 <!-- Identify the deployment. -->  
@@ -68,6 +67,6 @@ caps.handback.revision: 23
   xmlns="urn:schemas-microsoft-com:asm.v1" />  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)   
- [\<assemblyIdentity\> 要素](../deployment/assemblyidentity-element-clickonce-application.md)
+ [\<assemblyIdentity > 要素](../deployment/assemblyidentity-element-clickonce-application.md)

@@ -1,12 +1,10 @@
 ---
-title: Programming Document-Level Customizations | Microsoft Docs
+title: "ドキュメント レベルのカスタマイズのプログラミング |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,44 +28,43 @@ helpviewer_keywords:
 - document-level customizations [Office development in Visual Studio], programming
 - application development [Office development in Visual Studio], document-level customizations
 ms.assetid: 6c421055-7bea-4db4-a4c9-539b8c78d4ee
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5c220066a2354fd86864e9bc3f3eb798f14bb90a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 68135e13a0e78e0250b087713ab459825018ff84
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="programming-document-level-customizations"></a>Programming Document-Level Customizations
-  When you extend Microsoft Office Word or Microsoft Office Excel by using a document-level customization, you can perform the following tasks:  
+# <a name="programming-document-level-customizations"></a>ドキュメント レベルのカスタマイズのプログラミング
+  ドキュメント レベルのカスタマイズを使用して、Microsoft Office Word または Microsoft Office Excel を拡張する場合に、次のタスクを実行できます。  
   
--   Automate the application by using its object model.  
+-   オブジェクト モデルを使用してアプリケーションを自動化します。  
   
--   Add controls to the surface of the document.  
+-   ドキュメントの画面にコントロールを追加します。  
   
--   Call Visual Basic for Applications (VBA) code in the document from the customization assembly.  
+-   カスタマイズ アセンブリから、ドキュメント内に Visual Basic for Applications (VBA) コードを呼び出します。  
   
--   Call code in the customization assembly from VBA.  
+-   VBA からカスタマイズ アセンブリ内のコードを呼び出します。  
   
--   Manage certain aspects of the document while it is on a server that does not have Microsoft Office installed.  
+-   Microsoft Office がインストールされていないサーバー上にドキュメントがあるときに、そのドキュメントの特定の要素を管理します。  
   
--   Customize the user interface (UI) of the application.  
+-   アプリケーションのユーザー インターフェイス (UI) をカスタマイズします。  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- Some aspects of writing code in document-level projects are different from other types of projects in Visual Studio. Many of these differences are caused by the way the Office object models are exposed to managed code. For more information, see [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md).  
+ ドキュメント レベルのプロジェクトのコードの記述には、Visual Studio の他のプロジェクトの種類とは異なる点があります。 相違点の多くは、Office オブジェクト モデルがマネージ コードに公開される方法に起因しています。 詳細については、「 [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)」を参照してください。  
   
- For general information about document-level customizations and other types of solutions you can create by using the Office development tools in Visual Studio, see [Office Solutions Development Overview &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).  
+ Visual Studio での Office 開発ツールを使用して作成できるドキュメント レベルのカスタマイズとソリューションの他の種類に関する全般については、次を参照してください。 [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md).  
   
-## <a name="using-the-generated-classes-in-document-level-projects"></a>Using the Generated Classes in Document-Level Projects  
- When you create a document-level project, Visual Studio automatically generates a class in the project that you can use to start writing your code. Visual Studio generates different classes for Word and Excel:  
+## <a name="using-the-generated-classes-in-document-level-projects"></a>ドキュメント レベルのプロジェクトで生成されるクラスの使用  
+ ドキュメント レベルのプロジェクトを作成するときに、Visual Studio は、コードの記述を開始できるプロジェクト クラスを自動的に生成します。 Visual Studio は、Word と Excel 用のさまざまなクラスを生成します。  
   
--   In document-level projects for Word, the class is called `ThisDocument` by default.  
+-   Word 用のドキュメント レベルのプロジェクトでは、クラスは既定で `ThisDocument` と呼ばれます。  
   
--   Document-level projects for Excel have multiple generated classes: one for the workbook itself, and one for each worksheet. By default, these classes have the following names:  
+-   Excel 用のドキュメント レベルのプロジェクトには、生成されたクラスが複数あり、ワークブック自体のために 1 つ、各ワークシート用に 1 つずつです。 既定では、それらのクラスの名前は次のようになります。  
   
     -   `ThisWorkbook`  
   
@@ -77,23 +74,23 @@ ms.lasthandoff: 08/28/2017
   
     -   `Sheet3`  
   
- The generated class includes event handlers that are called when the document is opened or closed. To run code when the document is opened, add code to the `Startup` event handler. To run code just before the document is closed, add code to the `Shutdown` event handler. For more information, see [Events in Office Projects](../vsto/events-in-office-projects.md).  
+ 生成されたクラスには、ドキュメントを開いたり閉じたりしたときに呼び出されるイベント ハンドラーが含まれています。 ドキュメントを開いたときにコードを実行するには、 `Startup` イベント ハンドラーにコードを追加します。 ドキュメントを閉じたときにコードを実行するには、 `Shutdown` イベント ハンドラーにコードを追加します。 詳細については、「 [Events in Office Projects](../vsto/events-in-office-projects.md)」を参照してください。  
   
-### <a name="understanding-the-design-of-the-generated-classes"></a>Understanding the Design of the Generated Classes  
- In projects that target the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], the host item types in the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] are interfaces, so the generated classes cannot derive their implementation from them. Instead, the generated classes derive most of their members from the following base classes:  
+### <a name="understanding-the-design-of-the-generated-classes"></a>生成されたクラスの設計について  
+ [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] または [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]を対象とするプロジェクトでは、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] のホスト項目の種類はインターフェイスなので、生成されたクラスがそこから実装を派生させることはできません。 代わりに、生成されたクラスでは、次の基本クラスからそのほとんどのメンバーが派生します。  
   
--   `ThisDocument`: derives from <xref:Microsoft.Office.Tools.Word.DocumentBase>.  
+-   `ThisDocument`: <xref:Microsoft.Office.Tools.Word.DocumentBase>から派生します。  
   
--   `ThisWorkbook`: derives from <xref:Microsoft.Office.Tools.Excel.WorkbookBase>.  
+-   `ThisWorkbook`: <xref:Microsoft.Office.Tools.Excel.WorkbookBase>から派生します。  
   
--   `Sheet` *n*: derives from <xref:Microsoft.Office.Tools.Excel.WorksheetBase>.  
+-   `Sheet` *n*: <xref:Microsoft.Office.Tools.Excel.WorksheetBase>から派生します。  
   
- These base classes redirect all calls to their members to internal implementations of the corresponding host item interfaces in the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]. For example, if you call the <xref:Microsoft.Office.Tools.Word.DocumentBase.Protect%2A> method of the `ThisDocument` class, the <xref:Microsoft.Office.Tools.Word.DocumentBase> class redirects this call to the internal implementation of the <xref:Microsoft.Office.Tools.Word.Document> interface in the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)].  
+ これらの基本クラスは、そのメンバーのすべての呼び出しを [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]の対応するホスト項目インターフェイスの内部実装にリダイレクトします。 たとえば、 <xref:Microsoft.Office.Tools.Word.DocumentBase.Protect%2A> クラスの `ThisDocument` メソッドを呼び出す場合、 <xref:Microsoft.Office.Tools.Word.DocumentBase> クラスはこの呼び出しを <xref:Microsoft.Office.Tools.Word.Document> の [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]インターフェイスの内部実装にリダイレクトします。  
   
-## <a name="accessing-the-object-model-of-the-host-application"></a>Accessing the Object Model of the Host Application  
- To access the object model of the host application, use members of the generated class in your project. Each of these classes corresponds to an object in the object model of Excel or Word, and they contain most of the same properties, methods, and events. For example, the `ThisDocument` class in a document-level project for Word provides most of the same members as the <xref:Microsoft.Office.Interop.Word.Document> object in the Word object model.  
+## <a name="accessing-the-object-model-of-the-host-application"></a>ホスト アプリケーションのオブジェクト モデルにアクセスする  
+ ホスト アプリケーションのオブジェクト モデルにアクセスするには、プロジェクト内で生成されたクラスのメンバーを使用します。 これらの各クラスは Excel または Word のオブジェクト モデル内のオブジェクトに対応しており、同じプロパティ、メソッド、およびイベントのほとんどが含まれています。 たとえば、Word のドキュメント レベルのプロジェクトの `ThisDocument` クラスは、Word オブジェクト モデルの <xref:Microsoft.Office.Interop.Word.Document> オブジェクトとほとんど同じメンバーを提供します。  
   
- The following code example shows how to use the Word object model to save the document that is part of a document-level customization for Word. This example is intended to be run from the `ThisDocument` class.  
+ 次のコード例では、Word オブジェクト モデルを使用して、Word のドキュメント レベルのカスタマイズの一部であるドキュメントを保存する方法を示します。 この例は `ThisDocument` クラスから実行することを意図しています。  
   
 ```vb  
 Me.Save()  
@@ -103,7 +100,7 @@ Me.Save()
 this.Save();  
 ```  
   
- To do the same thing from outside the `ThisDocument` class, use the `Globals` object to access the `ThisDocument` class. For example, you can add this code to an actions pane code file if you want to include a **Save** button in the actions pane UI.  
+ 同じ処理を `ThisDocument` クラスの外から行うには、 `Globals` オブジェクトを使用して `ThisDocument` クラスにアクセスします。 たとえば、[操作] ウィンドウ UI に **[保存]** ボタンUI を組み込む場合は、このコードを [操作] ウィンドウのコード ファイルに追加します。  
   
 ```vb  
 Globals.ThisDocument.Save()  
@@ -113,71 +110,71 @@ Globals.ThisDocument.Save()
 Globals.ThisDocument.Save();  
 ```  
   
- Because the `ThisDocument` class obtains most of its members from the <xref:Microsoft.Office.Tools.Word.Document> host item, the `Save` method that is called in this code is really the <xref:Microsoft.Office.Tools.Word.Document.Save%2A> method of the <xref:Microsoft.Office.Tools.Word.Document> host item. This method corresponds to the <xref:Microsoft.Office.Interop.Word._Document.Save%2A> method of the <xref:Microsoft.Office.Interop.Word.Document> object in the Word object model.  
+ `ThisDocument` クラスはそのほとんどのメンバーを <xref:Microsoft.Office.Tools.Word.Document> ホストの項目から取得するので、実際には、このコードで呼び出される `Save` メソッドは <xref:Microsoft.Office.Tools.Word.Document.Save%2A> ホスト項目の <xref:Microsoft.Office.Tools.Word.Document> メソッドです。 このメソッドは、Word オブジェクト モデルの <xref:Microsoft.Office.Interop.Word._Document.Save%2A> オブジェクトの <xref:Microsoft.Office.Interop.Word.Document> メソッドに対応しています。  
   
- For more information about using the object models of Word and Excel, see [Word Object Model Overview](../vsto/word-object-model-overview.md) and [Excel Object Model Overview](../vsto/excel-object-model-overview.md).  
+ Word と Excel のオブジェクト モデルの使用方法の詳細については、「 [Word Object Model Overview](../vsto/word-object-model-overview.md) 」および「 [Excel Object Model Overview](../vsto/excel-object-model-overview.md)」を参照してください。  
   
- For more information about the `Globals` object, see [Global Access to Objects in Office Projects](../vsto/global-access-to-objects-in-office-projects.md).  
+ 詳細については、`Globals`オブジェクトを参照してください[Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)です。  
   
-## <a name="adding-controls-to-documents"></a>Adding Controls to Documents  
- To customize the UI of the document, you can add Windows Forms controls or *host controls* to the document surface. By combining different sets of controls and writing code, you can bind the controls to data, collect information from the user, and respond to user actions.  
+## <a name="adding-controls-to-documents"></a>ドキュメントへのコントロールの追加  
+ ドキュメントの UI をカスタマイズするには、Windows フォーム コントロールまたは *ホスト コントロール* をドキュメントの画面に追加します。 さまざまな種類のコントロールを組み合わせ、コードを記述することによって、コントロールのデータへのバインド、ユーザー情報の収集、およびユーザーの操作への応答を実行できます。  
   
- Host controls are classes that extend some of the objects in the Word and Excel object model. For example, the <xref:Microsoft.Office.Tools.Excel.ListObject> host control provides all of the functionality of the <xref:Microsoft.Office.Interop.Excel.ListObject> in Excel. However, the <xref:Microsoft.Office.Tools.Excel.ListObject> host control also has additional events and data binding capabilities.  
+ ホスト コントロールは Word オブジェクト モデルと Excel オブジェクト モデルの一部のオブジェクトを拡張するクラスです。 たとえば、 <xref:Microsoft.Office.Tools.Excel.ListObject> ホスト コントロールには、Excel の <xref:Microsoft.Office.Interop.Excel.ListObject> のすべての機能が用意されています。 ただし、 <xref:Microsoft.Office.Tools.Excel.ListObject> ホスト コントロールには追加のイベントやデータ バインディング機能もあります。  
   
- For more information, see [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md) and [Windows Forms Controls on Office Documents Overview](../vsto/windows-forms-controls-on-office-documents-overview.md).  
+ 詳細については、次のトピックを参照してください。 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md) および [Windows Forms Controls on Office Documents Overview](../vsto/windows-forms-controls-on-office-documents-overview.md).  
   
-## <a name="combining-vba-and-document-level-customizations"></a>Combining VBA and Document-Level Customizations  
- You can use VBA code in a document that is part of a document-level customization. You can call VBA code in the document from the customization assembly, and you can also configure your project to enable VBA code in the document to call code in the customization assembly.  
+## <a name="combining-vba-and-document-level-customizations"></a>VBA とドキュメント レベルのカスタマイズの結合  
+ ドキュメント レベルのカスタマイズの一部であるドキュメントに VBA コードを使用できます。 カスタマイズ アセンブリからドキュメント内の VBA コードを呼び出したり、ドキュメント内の VBA コードがカスタマイズ アセンブリのコードを呼び出せるようにプロジェクトを構成したりすることができます。  
   
- For more information, see [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md).  
+ 詳細については、「 [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md)」を参照してください。  
   
-## <a name="managing-documents-on-a-server"></a>Managing Documents on a Server  
- You can manage several different aspects of document-level customizations on a server that does not have Microsoft Office Word or Microsoft Office Excel installed. For example, you can access and modify data in the data cache of the document. You can also manage the customization assembly that is associated with the document. For example, you can programmatically remove the assembly from the document so that the document no longer runs your code, or you can programmatically attach an assembly to a document.  
+## <a name="managing-documents-on-a-server"></a>サーバー上のドキュメントの管理  
+ Microsoft Office Word または Microsoft Office Excel がインストールされていないサーバーで、ドキュメント レベルのカスタマイズのさまざまな要素を管理することができます。 たとえば、ドキュメントのデータ キャッシュにあるデータにアクセスし、変更することができます。 また、ドキュメントに関連付けられているカスタマイズ アセンブリも管理できます。 たとえば、プログラムを使用してドキュメントからアセンブリを削除して、ドキュメントがコードを実行しないようにしたり、プログラムを使用してアセンブリをドキュメントにアタッチすることができます。  
   
- For more information, see [Managing Documents on a Server by Using the ServerDocument Class](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md).  
+ 詳細については、「 [Managing Documents on a Server by Using the ServerDocument Class](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)」を参照してください。  
   
-## <a name="customizing-the-user-interface-of-microsoft-office-applications"></a>Customizing the User Interface of Microsoft Office Applications  
- You can customize the UI of Word and Excel in the following ways by using a document-level customization:  
+## <a name="customizing-the-user-interface-of-microsoft-office-applications"></a>Microsoft Office アプリケーションのユーザー インターフェイスをカスタマイズする  
+ ドキュメント レベルのカスタマイズを使用して、次の方法で、Excel や Word の UI をカスタマイズできます。  
   
--   Add host controls or Windows Forms controls to the document surface.  
+-   ホスト コントロールまたは Windows フォーム コントロールをドキュメントの画面に追加します。  
   
-     For more information, see [Automating Word by Using Extended Objects](../vsto/automating-word-by-using-extended-objects.md), [Automating Excel by Using Extended Objects](../vsto/automating-excel-by-using-extended-objects.md), and [Windows Forms Controls on Office Documents Overview](../vsto/windows-forms-controls-on-office-documents-overview.md).  
+     詳細については、「 [Automating Word by Using Extended Objects](../vsto/automating-word-by-using-extended-objects.md)「 [Automating Excel by Using Extended Objects](../vsto/automating-excel-by-using-extended-objects.md)および「 [Windows Forms Controls on Office Documents Overview](../vsto/windows-forms-controls-on-office-documents-overview.md)」を参照してください。  
   
--   Add an actions pane to the document.  
+-   文書に操作ウィンドウを追加する。  
   
-     For more information, see [Actions Pane Overview](../vsto/actions-pane-overview.md).  
+     詳細については、「 [Actions Pane Overview](../vsto/actions-pane-overview.md)」を参照してください。  
   
--   Add custom tabs to the ribbon.  
+-   リボンにカスタム タブを追加します。  
   
-     For more information, see [Ribbon Overview](../vsto/ribbon-overview.md).  
+     詳細については、次を参照してください。[リボンの概要](../vsto/ribbon-overview.md)です。  
   
--   Add custom groups to a built-in tab on the ribbon.  
+-   リボン上の組み込みタブにカスタム グループを追加します。  
   
-     For more information, see [How to: Customize a Built-in Tab](../vsto/how-to-customize-a-built-in-tab.md).  
+     詳細については、「 [How to: Customize a Built-in Tab](../vsto/how-to-customize-a-built-in-tab.md)」を参照してください。  
   
- For more information about customizing the UI of Microsoft Office applications, see [Office UI Customization](../vsto/office-ui-customization.md).  
+ 詳細については、Microsoft Office アプリケーションの UI をカスタマイズする、次を参照してください。 [Office UI のカスタマイズ](../vsto/office-ui-customization.md)です。  
   
-## <a name="getting-extended-objects-from-native-office-objects-in-document-level-customizations"></a>Getting Extended Objects from Native Office Objects in Document-Level Customizations  
- Many event handlers for Office events receive a native Office object that represents the workbook, worksheet, or document that raised the event. In some cases, you might want to run some code only if the workbook or document in your document-level customization raised the event. For example, in a document-level customization for Excel, you might want to run some code when the user activates one of the worksheets in the customized workbook, but not when the user activates a worksheet in some other workbook that happens to be open at the same time.  
+## <a name="getting-extended-objects-from-native-office-objects-in-document-level-customizations"></a>ドキュメント レベルのカスタマイズでのネイティブの Office オブジェクトからの拡張オブジェクトの取得  
+ Office イベントの多くのイベント ハンドラーでは、イベントが発生するワークブック、ワークシート、またはドキュメントを表すネイティブの Office オブジェクトを受け取ります。 場合によっては、いくつかのコードはドキュメント レベルのカスタマイズでワークブックやドキュメントによってイベントが発生した場合のみ実行します。 たとえば、Excel のドキュメント レベルのカスタマイズでは、カスタマイズされたワークブック内でワークシートを 1 つアクティブ化したときに一部のコードを実行し、同時に開いている他のワークブックでワークシートをアクティブ化したときには実行しないようにします。  
   
- When you have a native Office object, you can test whether that object has been extended into a *host item* or *host control* in a document-level customization. Host items and host controls are types provided by the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] that add functionality to objects that exist natively in the Word or Excel object models (called *native Office objects*). Collectively, host items and host controls are also called *extended objects*. For more information about host items and host controls, see [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md).  
+ ネイティブの Office オブジェクトがある場合は、そのオブジェクトがドキュメント レベルのカスタマイズで *ホスト項目* または *ホスト コントロール* に拡張されているかどうかをテストできます。 ホスト項目とホスト コントロールは、Word または Excel オブジェクト モデルにネイティブで存在するオブジェクト ( [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] ネイティブの Office オブジェクト *) に機能を追加する*が提供する種類のインスタンスです。 総称して、ホスト項目とホスト コントロールは *拡張オブジェクト*とも呼ばれます。 ホスト項目とホスト コントロールの詳細については、「 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)」を参照してください。  
   
-## <a name="understanding-the-getvstoobject-and-hasvstoobject-methods"></a>Understanding the GetVstoObject and HasVstoObject Methods  
- To test a native Office object, use the HasVstoObject and GetVstoObject methods in your project:  
+## <a name="understanding-the-getvstoobject-and-hasvstoobject-methods"></a>GetVstoObject メソッドと HasVstoObject メソッドの理解  
+ ネイティブな Office オブジェクトをテストするには、プロジェクトで HasVstoObject と GetVstoObject メソッドを使用します。  
   
--   Use the HasVstoObject method if you want to determine whether the native Office object has an extended object in your customization. This method returns **true** if the native Office object has an extended object, and **false** otherwise.  
+-   HasVstoObject メソッドを使用して、カスタマイズ、拡張オブジェクトをネイティブな Office オブジェクトがあるかどうかを判断する場合。 このメソッドは、ネイティブの Office オブジェクトに拡張オブジェクトがある場合は **true** を返し、ない場合は **false** を返します。  
   
--   Use the GetVstoObject method if you want to get the extended object for a native Office object. This method returns a <xref:Microsoft.Office.Tools.Excel.ListObject>, <xref:Microsoft.Office.Tools.Excel.Workbook>, <xref:Microsoft.Office.Tools.Excel.Worksheet>, or <xref:Microsoft.Office.Tools.Word.Document> object if the specified native Office object has one. Otherwise, GetVstoObject returns **null**. For example, the GetVstoObject method returns a <xref:Microsoft.Office.Tools.Word.Document> if the specified <xref:Microsoft.Office.Interop.Word.Document> is the underlying object for the document in your Word document project.  
+-   GetVstoObject メソッドは、ネイティブ Office オブジェクトに対して拡張オブジェクトを取得する場合に使用します。 このメソッドは、指定したネイティブの Office オブジェクトに拡張オブジェクトがあれば、 <xref:Microsoft.Office.Tools.Excel.ListObject>、 <xref:Microsoft.Office.Tools.Excel.Workbook>、 <xref:Microsoft.Office.Tools.Excel.Worksheet>、または <xref:Microsoft.Office.Tools.Word.Document> オブジェクトを返します。 Getvstoobject メソッドを返しますそれ以外の場合、 **null**です。 たとえば、GetVstoObject メソッドが返されます、<xref:Microsoft.Office.Tools.Word.Document>場合、指定した<xref:Microsoft.Office.Interop.Word.Document>Word ドキュメント プロジェクトのドキュメントの基になるオブジェクトです。  
   
- In document-level projects, you cannot use the GetVstoObject method to create a new <xref:Microsoft.Office.Tools.Excel.Workbook>, <xref:Microsoft.Office.Tools.Excel.Worksheet>, or <xref:Microsoft.Office.Tools.Word.Document> host item at run time. You can use this method only to access existing host items that are generated in your project at design time. If you want to create new host items at run time, you must develop an VSTO Add-in project. For more information, see [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md) and [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).  
+ ドキュメント レベルのプロジェクトでは、新しい GetVstoObject メソッドを使うことはできません<xref:Microsoft.Office.Tools.Excel.Workbook>、 <xref:Microsoft.Office.Tools.Excel.Worksheet>、または<xref:Microsoft.Office.Tools.Word.Document>ホスト項目を実行時にします。 このメソッドは、デザイン時にプロジェクトで生成される既存のホスト項目へのアクセスにのみ使用できます。 実行時に新しいホスト項目を作成する場合は、VSTO アドイン プロジェクトを開発する必要があります。 詳細については、次のトピックを参照してください。 [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md) および [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).  
   
-## <a name="using-the-getvstoobject-and-hasvstoobject-methods"></a>Using the GetVstoObject and HasVstoObject Methods  
- To call the HasVstoObject and GetVstoObject method, use the Globals.Factory.GetVstoObject or Globals.Factory.HasVstoObject method, and pass in the native Word or Excel object (such as a <xref:Microsoft.Office.Interop.Word.Document> or <xref:Microsoft.Office.Interop.Excel.Worksheet>) that you want to test.  
+## <a name="using-the-getvstoobject-and-hasvstoobject-methods"></a>GetVstoObject メソッドと HasVstoObject メソッドの使用  
+ HasVstoObject と GetVstoObject メソッドを呼び出すには、Globals.Factory.GetVstoObject または Globals.Factory.HasVstoObject メソッドを使用し、ネイティブの Word または Excel オブジェクトを渡す (など、<xref:Microsoft.Office.Interop.Word.Document>または<xref:Microsoft.Office.Interop.Excel.Worksheet>) テストを実行します。  
   
-## <a name="see-also"></a>See Also  
- [Controls on Office Documents](../vsto/controls-on-office-documents.md)   
+## <a name="see-also"></a>関連項目  
+ [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
  [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md)   
- [Managing Documents on a Server by Using the ServerDocument Class](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)   
- [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)  
+ [ServerDocument クラスを使用してサーバー上のドキュメントを管理します。](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)   
+ [Office ソリューションのコードの記述](../vsto/writing-code-in-office-solutions.md)  
   
   

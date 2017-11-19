@@ -1,52 +1,51 @@
 ---
-title: "IDiaAddressMap::put_imageAlign | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaAddressMap::put_imageAlign メソッド"
+title: "Idiaaddressmap::put_imagealign |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaAddressMap::put_imageAlign method
 ms.assetid: f9ce875d-c263-43e5-a534-f34c37f9866f
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 38856520641ff2ea191e3f712a1f355e841e1aff
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaAddressMap::put_imageAlign
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idiaaddressmapputimagealign"></a>IDiaAddressMap::put_imageAlign
 イメージの配置を設定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT put_imageAlign (   
-   DWORD NewVal  
+```C++  
+HRESULT put_imageAlign (   
+   DWORD NewVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  NewVal  
- \[入力\] 実行可能ファイルに対して新しいイメージの配置の値。  
+ [in]実行可能ファイルの新しいイメージの配置の値。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- 読み込まれたイメージ \(実行可能ファイル\) は指定したメモリの境界に配置します。  この配置は現在のシステムのアーキテクチャおよびリンク時のオプションの影響を受ける可能性があります。  イメージの配置をバイト境界上に常にです。  次のイメージの位置の値が有効です : 12481632および 64 バイト境界。  
+## <a name="remarks"></a>コメント  
+ イメージ (読み込まれて実行可能ファイル) は、指定されたメモリ境界に配置されます。 この配置は、コンパイル、リンク時のオプションと現在のシステム アーキテクチャによって、影響を受けることができます。 イメージの配置は、バイト境界には常にします。 次のイメージの配置の値は有効では: 1、2、4、8、16、32、および 64 バイトの境界。  
   
- 現在のイメージの配置を [IDiaAddressMap::get\_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md) のメソッドを呼び出すことで取得できます。  
+ 現在のイメージの配置への呼び出しで取得できる、 [idiaaddressmap::get_imagealign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md)メソッドです。  
   
 > [!NOTE]
->  イメージはこのメソッドを呼び出すことができるまでに読み込まれます。  `put_imageAlign` のメソッドはイメージが新しい配置に必要な移動されたまたは変更され使用されます。  
+>  イメージは、このメソッドを呼び出すことができる時間によって既に読み込まれています。 `put_imageAlign`メソッドは、新しい配置が必要と画像が移動または変更されたときに通常使用されます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   
- [IDiaAddressMap::get\_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md)
+ [IDiaAddressMap::get_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md)

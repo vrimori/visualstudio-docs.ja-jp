@@ -1,11 +1,10 @@
 ---
-title: 'CA1049: Types that own native resources should be disposable | Microsoft Docs'
+title: "Ca 1049: ネイティブ リソースを所有する型は、破棄可能でなければなりません |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,68 +14,53 @@ helpviewer_keywords:
 - TypesThatOwnNativeResourcesShouldBeDisposable
 - CA1049
 ms.assetid: 084e587d-0e45-4092-b767-49eed30d6a35
-caps.latest.revision: 17
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: bbc23ac5da56b6de5a1e6bb713eb209e8a63698e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: ebcb3325cfefdfeeb95b30477c4b266a70f40eb0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1049-types-that-own-native-resources-should-be-disposable"></a>CA1049: Types that own native resources should be disposable
+# <a name="ca1049-types-that-own-native-resources-should-be-disposable"></a>CA1049: ネイティブ リソースを所有する型は、破棄可能でなければなりません
 |||  
 |-|-|  
 |TypeName|TypesThatOwnNativeResourcesShouldBeDisposable|  
 |CheckId|CA1049|  
-|Category|Microsoft.Design|  
-|Breaking Change|Non-breaking|  
+|カテゴリ|Microsoft.Design|  
+|互換性に影響する変更点|なし|  
   
-## <a name="cause"></a>Cause  
- A type references a <xref:System.IntPtr?displayProperty=fullName> field, a <xref:System.UIntPtr?displayProperty=fullName> field, or a <xref:System.Runtime.InteropServices.HandleRef?displayProperty=fullName> field, but does not implement <xref:System.IDisposable?displayProperty=fullName>.  
+## <a name="cause"></a>原因  
+ 型を参照、<xref:System.IntPtr?displayProperty=fullName>フィールド、<xref:System.UIntPtr?displayProperty=fullName>フィールド、または<xref:System.Runtime.InteropServices.HandleRef?displayProperty=fullName>フィールドでは実装されません<xref:System.IDisposable?displayProperty=fullName>です。  
   
-## <a name="rule-description"></a>Rule Description  
- This rule assumes that <xref:System.IntPtr>, <xref:System.UIntPtr>, and <xref:System.Runtime.InteropServices.HandleRef> fields store pointers to unmanaged resources. Types that allocate unmanaged resources should implement <xref:System.IDisposable> to let callers to release those resources on demand and shorten the lifetimes of the objects that hold the resources.  
+## <a name="rule-description"></a>規則の説明  
+ このルールでは<xref:System.IntPtr>、 <xref:System.UIntPtr>、および<xref:System.Runtime.InteropServices.HandleRef>フィールドは、アンマネージ リソースへのポインターを保存します。 アンマネージ リソースを割り当てる型を実装する<xref:System.IDisposable>呼び出し元を要求時にリソースを解放し、リソースを保持するオブジェクトの有効期間を短縮できるようにします。  
   
- The recommended design pattern to clean up unmanaged resources is to provide both an implicit and an explicit means to free those resources by using the <xref:System.Object.Finalize%2A?displayProperty=fullName> method and the <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> method, respectively. The garbage collector calls the <xref:System.Object.Finalize%2A> method of an object at some indeterminate time after the object is determined to be no longer reachable. After <xref:System.Object.Finalize%2A> is called, an additional garbage collection is required to free the object. The <xref:System.IDisposable.Dispose%2A> method allows the caller to explicitly release resources on demand, earlier than the resources would be released if left to the garbage collector. After it cleans up the unmanaged resources, <xref:System.IDisposable.Dispose%2A> should call the <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> method to let the garbage collector know that <xref:System.Object.Finalize%2A> no longer has to be called; this eliminates the need for the additional garbage collection and shortens the lifetime of the object.  
+ アンマネージ リソースをクリーンアップする推奨されるデザイン パターンは、暗黙的なとを使用してそれらのリソースを解放する明示的な手段を提供する、<xref:System.Object.Finalize%2A?displayProperty=fullName>メソッドおよび<xref:System.IDisposable.Dispose%2A?displayProperty=fullName>メソッド、それぞれします。 ガベージ コレクターの呼び出し、<xref:System.Object.Finalize%2A>不確定からしばらく経った時点に到達可能で不要になったオブジェクトを特定のオブジェクトのメソッドです。 後に<xref:System.Object.Finalize%2A>が呼び出されると、追加のオブジェクトを解放するガベージ コレクションが必要です。 <xref:System.IDisposable.Dispose%2A>メソッドにより、呼び出し元が明示的に要求時、ガベージ コレクターの場合に、リソースを解放するとより前にリソースを解放します。 、アンマネージ リソースをクリーンアップ後<xref:System.IDisposable.Dispose%2A>呼び出す必要があります、<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>メソッドをガベージ コレクターのことに注意して<xref:System.Object.Finalize%2A>がなくなりました。 呼び出される追加のガベージ コレクションが不要し、が短縮され、この、オブジェクトの有効期間。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, implement <xref:System.IDisposable>.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、実装<xref:System.IDisposable>です。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule if the type does not reference an unmanaged resource. Otherwise, do not suppress a warning from this rule because failure to implement <xref:System.IDisposable> can cause unmanaged resources to become unavailable or underused.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 種類は、アンマネージ リソースを参照していない場合は、この規則による警告を抑制するのには安全です。 この規則による警告は抑制しないでくださいそれ以外の場合、実装する障害<xref:System.IDisposable>アンマネージ リソースを使用できないか、使用率の低いになる可能性があります。  
   
-## <a name="example"></a>Example  
- The following example shows a type that implements <xref:System.IDisposable> to clean up an unmanaged resource.  
+## <a name="example"></a>例  
+ 次の例を実装する型を示しています。<xref:System.IDisposable>アンマネージ リソースをクリーンアップします。  
   
- [!code-csharp[FxCop.Design.UnmanagedResources#1](../code-quality/codesnippet/CSharp/ca1049-types-that-own-native-resources-should-be-disposable_1.cs)] [!code-vb[FxCop.Design.UnmanagedResources#1](../code-quality/codesnippet/VisualBasic/ca1049-types-that-own-native-resources-should-be-disposable_1.vb)]  
+ [!code-csharp[FxCop.Design.UnmanagedResources#1](../code-quality/codesnippet/CSharp/ca1049-types-that-own-native-resources-should-be-disposable_1.cs)]
+ [!code-vb[FxCop.Design.UnmanagedResources#1](../code-quality/codesnippet/VisualBasic/ca1049-types-that-own-native-resources-should-be-disposable_1.vb)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA2115: Call GC.KeepAlive when using native resources](../code-quality/ca2115-call-gc-keepalive-when-using-native-resources.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA2115: ネイティブ リソースを使用しているときには GC.KeepAlive を呼び出します](../code-quality/ca2115-call-gc-keepalive-when-using-native-resources.md)  
   
- [CA1816: Call GC.SuppressFinalize correctly](../code-quality/ca1816-call-gc-suppressfinalize-correctly.md)  
+ [CA1816: GC.SuppressFinalize を正しく呼び出します](../code-quality/ca1816-call-gc-suppressfinalize-correctly.md)  
   
- [CA2216: Disposable types should declare finalizer](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)  
+ [CA2216: 破棄できる型ではファイナライザーを宣言します](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)  
   
- [CA1001: Types that own disposable fields should be disposable](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)  
+ [CA1001: 破棄可能なフィールドを所有する型は、破棄可能でなければなりません](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)  
   
-## <a name="see-also"></a>See Also  
- [Cleaning Up Unmanaged Resources](/dotnet/standard/garbage-collection/unmanaged)   
- [Dispose Pattern](/dotnet/standard/design-guidelines/dispose-pattern)
+## <a name="see-also"></a>関連項目  
+ [アンマネージ リソースのクリーンアップ](/dotnet/standard/garbage-collection/unmanaged)   
+ [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern)

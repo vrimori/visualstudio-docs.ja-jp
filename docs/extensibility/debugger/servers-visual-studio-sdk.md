@@ -4,45 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - servers, debugging
 - debugging [Debugging SDK], servers
 ms.assetid: 62236d64-7956-448c-9ac3-5528f3edac1d
-caps.latest.revision: 17
+caps.latest.revision: "17"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2db4c9968cb585cab40c8b0138e610812483952d
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 496e9b361dbb7f5c3eb5cf5197a1351a1182af3e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="servers-visual-studio-sdk"></a>サーバー (Visual Studio SDK)
-デバッガーのアーキテクチャの観点から、 **server**:  
+デバッガーのアーキテクチャの観点から、**サーバー**:  
   
--   ポートおよびポートの仕入先のコンテナーは、セッションのデバッグ マネージャー (SDM) と通信ポートとポート サプライヤーとデバッグ エンジンに使用されます。  
+-   ポートとポートの仕入先のコンテナーでありと通信するためのポートおよびポート サプライヤー セッション デバッグ マネージャー (SDM) をデバッグ エンジンを使用します。  
   
--   名前では自身を識別し、そのポートとポート サプライヤーを列挙できます。  
+-   名前では自身を識別し、そのポートとポートのサプライヤーを列挙できます。  
   
--   によって表される、 [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md) Visual Studio (Visual Studio の実行中の各インスタンスのサーバーの&1; つのインスタンス) によってのみ実装されているインターフェイス。  
+-   によって表される、 [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md) Visual Studio (Visual Studio の実行中の各インスタンスのサーバーの 1 つのインスタンス) でのみ実装されたインターフェイスです。  
   
 ## <a name="see-also"></a>関連項目  
  [ポート](../../extensibility/debugger/ports.md)   

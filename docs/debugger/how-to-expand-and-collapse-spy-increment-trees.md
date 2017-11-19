@@ -1,47 +1,46 @@
 ---
-title: "How to: Expand and Collapse Spy++ Trees | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Expanding and Collapsing Spy++ Trees"
+title: "方法: spy++ ツリーを閉じたり |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Expanding and Collapsing Spy++ Trees
 ms.assetid: 22993182-7026-4155-8046-b84fd99f803c
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 6628ad8decf04fdb4a031c62c2dc3c4af5b179d2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# How to: Expand and Collapse Spy++ Trees
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-ウィンドウ、プロセス、およびスレッドの各ビューは、2 とおりの方法 \(ウィンドウ内のアイコンをクリックするか、**\[ツリー\]** メニューを使用する\) で展開したり、折りたたんだりできます。  ツリーの \+ アイコンと \- アイコンは、Visual C\+\+ プロジェクト ウィンドウの \+ アイコンおよび \- アイコンと同じ役割を果たします。  
+# <a name="how-to-expand-and-collapse-spy-trees"></a>方法: Spy++ ツリーの展開と折りたたみを行う
+2 つのメソッドを使用して、Windows、プロセス、およびスレッド ビューを閉じたりできます: ウィンドウで、またはを使用してアイコンをクリックすると、**ツリー**メニュー。 +/Visual C プロジェクトのウィンドウで同じように、ツリー内のアイコンが動作します。  
   
- **\[ツリー\]** メニューには 4 つのコマンドがあります。  
+ **ツリー**メニューには、4 つのコマンドが含まれています。  
   
-|メニュー コマンド|Description|  
-|---------------|-----------------|  
-|**\[1 つ下の階層を表示\]**|現在選択されている項目を次のレベルまで展開します。|  
-|**\[ブランチを表示\]**|現在選択されている項目を完全に展開します。|  
-|**すべて展開**|ウィンドウ内のすべての項目を完全に展開します。|  
-|**折りたたむ**|現在選択されている項目を完全に折りたたみます。|  
+|メニュー コマンド|説明|  
+|------------------|-----------------|  
+|**1 つのレベルを拡張します。**|次のレベルには、現在選択されている項目を展開します。|  
+|**展開します。**|現在選択されている項目を完全に展開します。|  
+|**すべて展開します。**|ウィンドウ内のすべての項目を完全に展開します。|  
+|**折りたたみ**|現在選択されている項目を完全に折りたたみます。|  
   
 > [!TIP]
->  プロセスを展開すると、そのプロセスが所有しているすべてのスレッドが表示されます。  スレッドを展開すると、そのスレッドが所有しているすべてのウィンドウの一覧が表示されます。  
+>  プロセスを展開する場合、プロセスを所有しているすべてのスレッドを参照してください。 スレッドを拡張する場合、所有するすべてのウィンドウの一覧を参照してください。  
   
-### Spy\+\+ ツリーの展開または折りたたみを行うには  
+### <a name="to-expand-or-collapse-spy-trees"></a>展開または spy++ ツリーを折りたたむ  
   
-1.  ウィンドウ、プロセス、スレッドのいずれかのビューで、いずれかの項目を強調表示します。  
+1.  Windows、プロセス、またはスレッド ビュー内の項目のいずれかを選択します。  
   
-2.  **\[ツリー\]** メニューで、いずれかの展開コマンドまたは折りたたみコマンドを選択します。  
+2.  **ツリー**  メニューの 展開 のいずれかを選択するか折りたたみコマンド。  
   
-## 参照  
- [Using Spy\+\+](../debugger/using-spy-increment.md)   
- [Spy\+\+ Views](../debugger/spy-increment-views.md)   
- [Spy\+\+ Reference](../debugger/spy-increment-reference.md)
+## <a name="see-also"></a>関連項目  
+ [Spy++ の使用](../debugger/using-spy-increment.md)   
+ [Spy++ ビュー](../debugger/spy-increment-views.md)   
+ [Spy++ リファレンス](../debugger/spy-increment-reference.md)

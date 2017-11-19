@@ -1,52 +1,51 @@
 ---
-title: "IDiaSymbol::get_optimizedCodeDebugInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_optimizedCodeDebugInfo メソッド"
+title: "Idiasymbol::get_optimizedcodedebuginfo |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_optimizedCodeDebugInfo method
 ms.assetid: 57ef4170-37a9-46b0-8217-c1a674725113
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 241db981561f6d1307d5c7472e05014744ce8093
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_optimizedCodeDebugInfo
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-関数は、最適化されたコードに対して指定されたデバッグ情報を含めるかどうかを示すフラグを取得します。  
+# <a name="idiasymbolgetoptimizedcodedebuginfo"></a>IDiaSymbol::get_optimizedCodeDebugInfo
+関数が最適化されたコードに対して指定されたデバッグ情報を格納するかどうかを示すフラグを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp  
+```C++  
 HRESULT get_optimizedCodeDebugInfo(  
-   BOOL *pFlag  
+   BOOL *pFlag  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pFlag`  
- \[出力\] 最適化された関数またはラベルにデバッグ情報が含まれている場合は `TRUE` を返します。それ以外の場合は `FALSE` を返します。  
+ [out]返します`TRUE`最適化された関数またはラベルにデバッグ情報が含まれている場合を返しますそれ以外の場合、`FALSE`です。  
   
-## 戻り値  
- 成功した場合は `S_OK` を返し、それ以外の場合は `S_FALSE` またはエラー コードを返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  `S_FALSE` の戻り値は、プロパティがシンボルに対して使用できないことを意味します。  
+>  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
   
 |必要条件|説明|  
-|----------|--------|  
+|-----------------|-----------------|  
 |ヘッダー:|dia2.h|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

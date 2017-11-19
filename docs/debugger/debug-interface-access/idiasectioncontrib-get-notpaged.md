@@ -1,43 +1,42 @@
 ---
-title: "IDiaSectionContrib::get_notPaged | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSectionContrib::get_notPaged メソッド"
+title: "Idiasectioncontrib::get_notpaged |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSectionContrib::get_notPaged method
 ms.assetid: bb6baa40-fece-4a4c-aba9-f4b41f418f8b
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 25003d786b9467f62756fad164df135112c25f62
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSectionContrib::get_notPaged
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-セクションはメモリからページングできるかどうかを示すフラグを取得します。  
+# <a name="idiasectioncontribgetnotpaged"></a>IDiaSectionContrib::get_notPaged
+メモリ不足のセクションをページングことはできないかどうかを示すフラグを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_notPaged (   
-   BOOL* pRetVal  
+```C++  
+HRESULT get_notPaged (   
+   BOOL* pRetVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- \[out\] セクションを編集して場合はを返します `TRUE` ; それ以外の場合戻り `FALSE`。  
+ [out, retval]返します`TRUE`場合は、セクションは、それ以外のページできません、返します`FALSE`です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK` このプロパティをサポートする必要 `S_FALSE` を返します。  それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`です。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

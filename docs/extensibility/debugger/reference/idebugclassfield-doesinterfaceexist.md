@@ -1,51 +1,51 @@
 ---
-title: "IDebugClassField::DoesInterfaceExist | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugClassField::DoesInterfaceExist"
-helpviewer_keywords: 
-  - "IDebugClassField::DoesInterfaceExist メソッド"
+title: "IDebugClassField::DoesInterfaceExist |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugClassField::DoesInterfaceExist
+helpviewer_keywords: IDebugClassField::DoesInterfaceExist method
 ms.assetid: cc0c8642-1a76-4fda-a309-7018a34883c9
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 07a4760064003a45af55aa747192e044edca8e0c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugClassField::DoesInterfaceExist
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-特定のインターフェイスが定義されているかどうかを判定します。  
+# <a name="idebugclassfielddoesinterfaceexist"></a>IDebugClassField::DoesInterfaceExist
+特定のインターフェイスが、クラスで定義されているかどうかを判断します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT DoesInterfaceExist(   
-   LPCOLESTR pszInterfaceName  
+```cpp  
+HRESULT DoesInterfaceExist(   
+   LPCOLESTR pszInterfaceName  
 );  
 ```  
   
-```c#  
+```csharp  
 int DoesInterfaceExist(  
-   [In] string pszInterfaceName  
+   [In] string pszInterfaceName  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pszInterfaceName`  
- \[入力\] 文字列検索するインターフェイス名。  
+ [in]検索するインターフェイス名を含む文字列。  
   
-## 戻り値  
- 成功するとインターフェイスがない場合は S\_OKS\_FALSE を返します ; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します、S_FALSE を返す場合は、インターフェイスが存在しません。それ以外の場合、エラー コードを返します。  
   
-## 解説  
- このメソッドはすべてのインターフェイスの列挙体を取得し対応するインターフェイスのリストを検索します。  
+## <a name="remarks"></a>コメント  
+ 有効で、このメソッドは、すべてのインターフェイスの列挙体を取得し、一致するインターフェイスのリストを検索します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

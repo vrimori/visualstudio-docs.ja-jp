@@ -4,34 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3a01d333-6e31-423f-ae06-5091a4fcb7a9
-caps.latest.revision: 22
+caps.latest.revision: "22"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 7ef1e10f0f19d7134b00d6dd3d37f7e7e6a1ede5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 8db7d203b599c11ce8fea07ed3647771c879a256
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="faq-converting-add-ins-to-vspackage-extensions"></a>FAQ: アドインを VSPackage 拡張に変換する
 現在、アドインは推奨されていません。 新しい Visual Studio 拡張機能をするためには、VSIX 拡張機能を作成する必要があります。 ここでは、VSIX 拡張機能を Visual Studio アドインを変換する方法についてよく寄せられる質問に対する回答を示します。  
@@ -83,7 +68,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  メニュー コマンドを含む VSPackage を作成します。 (詳細については、次を参照してください[メニュー コマンドを使用して、拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)。)。  
   
-2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである* \<、プロジェクト名 >*Package.cs)。  
+2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである *\<、プロジェクト名 >*Package.cs)。  
   
 3.  ファイルに次の `using` ステートメントを追加します。  
   
@@ -177,7 +162,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  メニュー コマンド、としてする VSPackage を作成、 [VSIX 拡張機能の開発を開始する方法ですか?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping)セクションです。  
   
-2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである* \<、プロジェクト名 >*Package.cs)。  
+2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである *\<、プロジェクト名 >*Package.cs)。  
   
 3.  次の `using` ステートメントを追加します。  
   
@@ -225,7 +210,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  メニュー コマンド、としてする VSPackage を作成、 [VSIX 拡張機能の開発を開始する方法ですか?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping)セクションです。  
   
-2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである* \<、プロジェクト名 >*Package.cs)。  
+2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである *\<、プロジェクト名 >*Package.cs)。  
   
 3.  次の `using` ステートメントを追加します。  
   

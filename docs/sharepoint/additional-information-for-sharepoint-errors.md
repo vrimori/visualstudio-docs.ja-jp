@@ -1,37 +1,39 @@
 ---
-title: "SharePoint のエラーに関する追加情報"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.errors.general"
-  - "VS.SharePointTools.Project.Errors.General"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での SharePoint 開発, エラー"
-  - "Visual Studio での SharePoint 開発, トラブルシューティング"
+title: "SharePoint のエラーに関する追加情報 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.SharePointTools.errors.general
+- VS.SharePointTools.Project.Errors.General
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, errors
+- SharePoint development in Visual Studio, troubleshooting
 ms.assetid: 83d20a81-fd81-4cbd-8f28-bb6bddeb06de
-caps.latest.revision: 9
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 4323bb31cb1b63e26c4964bb8e1ce71f010a249e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# SharePoint のエラーに関する追加情報
-  トラブルシューティングのトピックおよび MSDN \(Microsoft Developer Network\) のパブリック フォーラムでは、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint ツールで発生したエラーおよび警告のトラブルシューティングに役立つ情報を参照できます。  
+# <a name="additional-information-for-sharepoint-errors"></a>SharePoint のエラーに関する追加情報
+  トラブルシューティングに役立つことができます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint ツールのエラーや警告のトラブルシューティングのトピックと、Microsoft Developer Network (MSDN) のパブリック フォーラム。  
   
-## エラーおよび問題のトラブルシューティング  
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint ツールで発生する一般的なエラーおよびその他の問題については、次のトピックを参照してください。  
+## <a name="troubleshooting-errors-and-issues"></a>エラーおよび問題のトラブルシューティング  
+ 一般的なエラーとその他の問題でサポートが必要な[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint ツールには、次のトピックを参照してください。  
   
 -   [SharePoint ソリューションのトラブルシューティング](../sharepoint/troubleshooting-sharepoint-solutions.md)  
   
@@ -39,18 +41,18 @@ caps.handback.revision: 8
   
 -   [SharePoint のパッケージ化と配置のトラブルシューティング](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)  
   
-## その他のリソース  
- MSDN で利用できる [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint ツール関連のフォーラムおよびその他のリソースの一覧を次に示します。  
+## <a name="other-resources"></a>その他の参照情報  
+ 次の表、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint ツールのフォーラムや MSDN で利用できるその他のリソース。  
   
-|語句|定義|  
-|--------|--------|  
-|[SharePoint 開発](http://go.microsoft.com/fwlink/?LinkId=179593)|[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] での SharePoint 開発について質問するためのフォーラムです。|  
-|[Visual Studio フォーラム](http://go.microsoft.com/fwlink/?LinkID=150452)|[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] に関するトピックについて質問できるフォーラムです。|  
-|[Microsoft ヘルプとサポート](http://go.microsoft.com/fwlink/?LinkID=108287)|サポート技術情報 \(KB: Knowledge Base\) の文書、ダウンロード ファイルや更新プログラム、Support Webcast、およびその他のサービスへのアクセスを提供します。|  
+|用語|定義|  
+|----------|----------------|  
+|[SharePoint 開発](http://go.microsoft.com/fwlink/?LinkId=179593)|SharePoint 開発に関する質問をフォーラムを提供[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。|  
+|[Visual Studio フォーラム](http://go.microsoft.com/fwlink/?LinkID=150452)|に関する質問については、フォーラムを提供[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。|  
+|[Microsoft ヘルプおよびサポート](http://go.microsoft.com/fwlink/?LinkID=108287)|サポート技術情報 (KB: Knowledge Base) の文書、ダウンロード ファイルや更新プログラム、Support Webcast、およびその他のサービスへのアクセスを提供します。|  
   
- 必要な回答が得られない場合は、オンライン サポートをご利用ください。マイクロソフト プロダクト サポート サービスにお問い合わせいただくことも、サポート技術情報の記事を検索していただくこともできます。  詳細については、ページを [Microsoft ヘルプとサポート](http://go.microsoft.com/fwlink/?LinkID=155371) 参照します。  
+ 必要な回答が見つからない場合は、マイクロソフト製品サポート サービスに連絡またはサポート技術情報の記事を検索などのオンライン サポート オプションを表示できます。 詳細については、次を参照してください。、 [Microsoft ヘルプとサポート](http://go.microsoft.com/fwlink/?LinkID=155371)ページ。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
   
   

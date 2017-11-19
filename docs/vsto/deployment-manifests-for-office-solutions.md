@@ -1,45 +1,47 @@
 ---
-title: "Office ソリューション用配置マニフェスト"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Office アプリケーション [Visual Studio での Office 開発]、配置マニフェスト"
-  - "配置マニフェスト [Visual Studio での Office 開発]"
-  - "マニフェスト [Visual Studio での Office 開発]、配置"
-  - "Visual Studio での Office 開発、配置マニフェスト"
+title: "Office ソリューション用配置マニフェスト |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office applications [Office development in Visual Studio], deployment manifests
+- deployment manifests [Office development in Visual Studio]
+- manifests [Office development in Visual Studio], deployment
+- Office development in Visual Studio, deployment manifests
 ms.assetid: 3fb29743-fb96-4d61-a99a-9b1bbafeee13
-caps.latest.revision: 22
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: f6569c8c4a2420949862b8d09532c217606073d8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Office ソリューション用配置マニフェスト
-  配置マニフェストは、Office ソリューションの配置設定について記述した XML ファイルであり、アプリケーションの現在のバージョンを識別します。  
+# <a name="deployment-manifests-for-office-solutions"></a>Office ソリューション用配置マニフェスト
+  配置マニフェストとは、Office ソリューションの配置設定を記述および現在のアプリケーションのバージョンを指定する XML ファイルです。  
   
- Visual Studio での Office 開発では、「[ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)」のリファレンスで定義されている [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 配置マニフェスト スキーマを使用します。  
+ Visual Studio での Office 開発を使用して、[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]配置マニフェストのスキーマで定義されている、 [ClickOnce 配置マニフェスト](/visualstudio/deployment/clickonce-deployment-manifest)参照します。  
   
-## 解説  
- Office ソリューションの配置マニフェスト ファイルは、現在のバージョンやその他の配置設定を指定します。  配置マニフェストは、ソリューションの現在のバージョンとソリューションに含まれるすべてのファイルについて記述したアプリケーション マニフェストを参照します。  
+## <a name="remarks"></a>コメント  
+ Office ソリューション用配置マニフェスト ファイルは、現在のバージョンとその他の展開設定を識別します。 ソリューションとそのすべてのソリューションに含まれているファイルの現在のバージョンを記述するアプリケーション マニフェストを参照します。  
   
-## ファイル名の構文  
- 配置マニフェスト ファイルの名前は .vsto という拡張子で終わる必要があります。  これが [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] の標準の配置マニフェストですが、ファイルの処理を Office ランタイムの Visual Studio ツールを有効にするために拡張子が異なります。  
+## <a name="file-name-syntax"></a>ファイル名の構文  
+ 配置マニフェスト ファイルの名前は、.vsto 拡張子で終わる必要があります。 これは標準が[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]配置マニフェスト ファイルの処理に Visual Studio Tools for Office ランタイムを有効にする拡張機能が異なります。  
   
-## 使用例  
- 次のコード例は、 Office ソリューションの Visual Studio ツールの配置マニフェストについて説明します。  
+## <a name="example"></a>例  
+ 次のコード例では、Office ソリューション用の Visual Studio Tools の配置マニフェストを示しています。  
   
 ```  
-  
+<?xml version="1.0" encoding="utf-8"?>  
 <asmv1:assembly   
   xsi:schemaLocation=  
     "urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd"   
@@ -185,7 +187,7 @@ caps.handback.revision: 21
 </asmv1:assembly>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)  
   
   

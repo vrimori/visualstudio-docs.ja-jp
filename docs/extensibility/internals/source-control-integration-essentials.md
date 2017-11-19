@@ -1,57 +1,59 @@
 ---
-title: "ソース管理の統合 Essentials | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ソース管理の統合、essentials"
-  - "ソース管理の統合, 概要"
-  - "essentials、ソース管理の統合"
+title: "ソース コントロール Essentials の統合 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Source Control Integration, essentials
+- Source Control Integration,overview
+- essentials, Source Control Integration
 ms.assetid: 442057cb-fd54-4283-96f8-2f6dc8bf2de7
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 09e96719bd7d9a2091bf31dc343036f0312c02fc
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ソース管理の統合 Essentials
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-サポート [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のソース管理の統合の 2 種類 : 基本機能を提供しソース管理プラグイン API を使用してビルド ソース管理プラグイン以前の API \(MSSCCI\)より信頼性の高い機能を提供する VSPackage ベースのソース管理の統合のソリューション。  
+# <a name="source-control-integration-essentials"></a>ソース コントロール Essentials の統合
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ソース管理の統合の 2 つの種類をサポートします: ソース管理プラグインを基本的な機能を提供し、使用して (旧称 MSSCCI API)、ソース管理プラグイン API と VSPackage に基づくソース コントロールの統合ソリューションをビルドします。堅牢な機能を提供します。  
   
-## ソース管理プラグイン  
- ソース管理プラグインはソース管理プラグイン API を実装する DLL として作成されます。  登録とソース管理システムの統合機能はAPI が提供されます。  この方法を実行しソース管理や VSPackage よりほとんどのソース管理操作に [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の \(UI\) ユーザー インターフェイスを使用します。  
+## <a name="source-control-plug-in"></a>ソース管理プラグイン  
+ ソース管理プラグインは、ソース管理プラグイン API を実装する DLL として書き込まれます。 登録とソース管理の統合機能は、API を通じて提供されます。 この方法は簡単にソース コントロール VSPackage よりも実装を使用して、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ソース管理操作のほとんどのユーザー インターフェイス (UI)。  
   
- ソース管理プラグイン API を使用してソース管理プラグインを実行するには次の手順を実行する :  
+ プラグイン ソース管理プラグイン API を使用してソース管理を実装するのには、次の手順を実行します。  
   
-1.  [ソース管理プラグイン](../../extensibility/source-control-plug-ins.md) に指定された関数を実装する DLL を作成します。  
+1.  指定された関数を実装する DLL を作成する[ソース管理プラグイン](../../extensibility/source-control-plug-ins.md)です。  
   
-2.  [方法: ソース管理プラグインのインストール](../../extensibility/internals/how-to-install-a-source-control-plug-in.md) に説明されているように適切なレジストリ エントリを作成して DLL を登録します。  
+2.  」の説明に従って、適切なレジストリ エントリをすることで、DLL を登録[する方法: ソース管理プラグインをインストール](../../extensibility/internals/how-to-install-a-source-control-plug-in.md)です。  
   
-3.  ソース管理のアダプターのパッケージを求められたらヘルパーの UI を作成し表示します \(その [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のコンポーネントはソース管理のプラグインを使用してソース管理機能を処理します\)。  
+3.  ヘルパー UI を作成し、ソース コントロール アダプター パッケージによってメッセージが表示されたらそれを表示します (、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ソース管理プラグインをソース管理機能を処理するコンポーネント)。  
   
- 詳細については、「[ソース管理プラグインの作成](../../extensibility/internals/creating-a-source-control-plug-in.md)」を参照してください。  
+ 詳細については、次を参照してください。[ソース管理プラグインを作成する](../../extensibility/internals/creating-a-source-control-plug-in.md)です。  
   
-## ソース管理 VSPackage  
- ソース管理の VSPackage の実装の割り当て [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のソース管理の UI のカスタマイズされた置換を作成できます。  この方法はソース管理の統合の詳細に制御しますがUI 要素を提供しプラグインで別の方法で提供されるソース管理インターフェイスを実装する必要があります。  
+## <a name="source-control-vspackage"></a>ソース コントロールの VSPackage  
+ ソース管理 VSPackage 実装では、代わりにカスタマイズを開発することができます、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ソース UI コントロールです。 これにより、ソース管理の統合を完全に制御が、UI 要素を提供し、それ以外の場合、プラグインのアプローチの下で提供がソース コントロールのインターフェイスを実装する必要があります。  
   
- ソース管理 VSPackage を実行するには次の操作が必要です :  
+ ソース管理の VSPackage を実装するのには、次の必要があります。  
   
-1.  [登録と選択](../../extensibility/internals/registration-and-selection-source-control-vspackage.md) に説明されているように独自のソース管理 VSPackage を作成および登録します。  
+1.  作成し、独自のソース管理、VSPackage を登録」の説明に従って[登録と選択](../../extensibility/internals/registration-and-selection-source-control-vspackage.md)です。  
   
-2.  カスタム UI と既定のソース コントロールの UI を置き換えます。  「[カスタム ユーザー インターフェイス](../../extensibility/internals/custom-user-interface-source-control-vspackage.md)」を参照してください。  
+2.  既定のソース管理 UI をカスタムの UI に置き換えます。 参照してください[カスタム ユーザー インターフェイス](../../extensibility/internals/custom-user-interface-source-control-vspackage.md)です。  
   
-3.  使用するグリフを指定し  **ソリューション エクスプローラー**  グリフのイベントを処理します。  「[グリフ コントロール](../../extensibility/internals/glyph-control-source-control-vspackage.md)」を参照してください。  
+3.  使用して、処理するグリフを指定**ソリューション エクスプ ローラー**グリフ イベント。 参照してください[グリフ コントロール](../../extensibility/internals/glyph-control-source-control-vspackage.md)です。  
   
-4.  ハンドル クエリの編集やクエリが [クエリを保存クエリの編集](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md) に示すようにイベントを格納します。  
+4.  ように、クエリを編集し、クエリの保存のイベントを処理[クエリ編集のクエリの保存](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)です。  
   
- 詳細については、「[ソース コントロール VSPackage を作成します。](../../extensibility/internals/creating-a-source-control-vspackage.md)」を参照してください。  
+ 詳細については、次を参照してください。[ソース コントロールの VSPackage を作成する](../../extensibility/internals/creating-a-source-control-vspackage.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [概要](../../extensibility/internals/source-control-integration-overview.md)   
- [ソース管理プラグインの作成](../../extensibility/internals/creating-a-source-control-plug-in.md)   
- [ソース コントロール VSPackage を作成します。](../../extensibility/internals/creating-a-source-control-vspackage.md)
+ [ソース管理プラグインを作成します。](../../extensibility/internals/creating-a-source-control-plug-in.md)   
+ [ソース管理 VSPackage の作成](../../extensibility/internals/creating-a-source-control-vspackage.md)

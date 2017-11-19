@@ -1,28 +1,30 @@
 ---
-title: "Visual Studio SDK のリファレンス | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Visual Studio SDK を参照"
-  - "Visual Studio SDK の参照"
+title: "Visual Studio SDK リファレンス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Visual Studio SDK, reference
+- reference, Visual Studio SDK
 ms.assetid: a6930db5-a112-4651-8de3-e520df851f82
-caps.latest.revision: 28
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 29
+caps.latest.revision: "28"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 40c900b2f266be4ea88921b5f7cd0db02991a091
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Visual Studio SDK のリファレンス
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-このセクションには、Visual Studio SDK を使用する開発者向けの Visual Studio 名前空間、関連する名前空間、およびその他の分野に関する情報が含まれています。  
+# <a name="visual-studio-sdk-reference"></a>Visual Studio SDK リファレンス
+このセクションには、Visual Studio SDK を使用する開発者の Visual Studio の名前空間、関連する名前空間、および関心のある他の領域に関する情報が含まれています。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  <xref:Microsoft.VisualStudio.TextManager.Interop>  
  従来のインターフェイスを相互運用機能は、エディターと言語のサービスを使用します。  
   
@@ -30,7 +32,7 @@ caps.handback.revision: 29
  新しいエディターで使用されるクラス。  
   
  <xref:Microsoft.VisualStudio.Language.Intellisense>  
- クラスの新しいエディターでは IntelliSense で使用します。  
+ クラスの新しいエディターで IntelliSense を使用します。  
   
  <xref:Microsoft.VisualStudio.Language.StandardClassification>  
  新しいエディターで使用されるクラス。  
@@ -42,10 +44,10 @@ caps.handback.revision: 29
  クラスの表示要素の新しいエディターに使用します。  
   
  <xref:Microsoft.VisualStudio.Text.Classification>  
- 新しいエディターで分類に使用されるクラスです。  
+ 分類のための新しいエディターで使用されるクラス。  
   
  <xref:Microsoft.VisualStudio.Text.Differencing>  
- では、差分の新しいエディターで使用されるクラス。  
+ 差分の新しいエディターで使用されるクラス。  
   
  <xref:Microsoft.VisualStudio.Text.Document>  
  ドキュメントの新しいエディターで使用されるクラス。  
@@ -60,7 +62,7 @@ caps.handback.revision: 29
  新しいエディターで使用されるクラス。  
   
  <xref:Microsoft.VisualStudio.Text.Formatting>  
- 書式設定するための新しいエディターで使用されるクラス。  
+ 書式設定の新しいエディターで使用されるクラス。  
   
  <xref:Microsoft.VisualStudio.Text.IncrementalSearch>  
  インクリメンタル検索の新しいエディターで使用されるクラス。  
@@ -69,55 +71,55 @@ caps.handback.revision: 29
  新しいエディターで使用されるクラス。  
   
  <xref:Microsoft.VisualStudio.Text.Outlining>  
- アウトラインの新しいエディターで使用されるクラス。  
+ アウトライン表示の新しいエディターで使用されるクラス。  
   
  <xref:Microsoft.VisualStudio.Text.Projection>  
  投影の新しいエディターで使用されるクラス。  
   
  <xref:Microsoft.VisualStudio.Text.Tagging>  
- タグの新しいエディターで使用されるクラス。  
+ タグ付けの新しいエディターで使用されるクラス。  
   
  <xref:Microsoft.VisualStudio.Utilities>  
  新しいエディターで使用されるクラス。  
   
  <xref:Microsoft.Internal.VisualStudio.PlatformUI>  
- 主に Microsoft 内部使用のみです。  
+ 主に Microsoft 内部使用のみ。  
   
  <xref:Microsoft.Internal.VisualStudio.Shell.Interop>  
- Microsoft 内部使用のみです。  
+ マイクロソフト内部でのみ使用。  
   
  <xref:Microsoft.VisualStudio>  
- Visual Studio の定数とヘルパー クラスです。  
+ Visual Studio の定数とヘルパー クラス。  
   
  <xref:Microsoft.VisualStudio.CommandBars>  
- Visual Studio のコマンド バーのクラス。  
+ Visual Studio のコマンド バーのクラスです。  
   
  <xref:Microsoft.VisualStudio.ComponentModelHost>  
- 機能拡張フレームワーク MEF \(Managed\) Visual Studio で使用されるクラス。  
+ に対して、フレームワーク MEF (Managed Extensibility) Visual Studio で使用されるクラス。  
   
  <xref:Microsoft.VisualStudio.Designer.Interfaces>  
  Visual Studio デザイナーを使用するインターフェイスです。  
   
  <xref:Microsoft.VisualStudio.ManagedInterfaces.ProjectDesigner>  
- Visual Studio プロジェクト デザイナーを使用するインターフェイスです。  
+ Visual Studio プロジェクト デザイナーで使用するインターフェイスです。  
   
  <xref:Microsoft.VisualStudio.ManagedInterfaces.Publish>  
- アプリケーションの発行に使用されるクラスです。  
+ アプリケーションの発行に使用されるクラス。  
   
  <xref:Microsoft.VisualStudio.OLE.Interop>  
- OLE コンポーネントの Visual Studio で使用する相互運用機能のインターフェイスです。  
+ 相互運用機能のインターフェイスが OLE コンポーネントの Visual Studio で使用します。  
   
  <xref:Microsoft.VisualStudio.Package>  
- Visual Studio のマネージ言語サービスに使用されるクラスです。  
+ Visual Studio のマネージ言語サービスに使用されるクラス。  
   
  <xref:Microsoft.VisualStudio.PlatformUI>  
  Visual Studio シェルで使用されるクラス。  
   
  <xref:Microsoft.VisualStudio.PlatformUI.OleComponentSupport>  
- Microsoft 内部使用のみです。  
+ マイクロソフト内部でのみ使用。  
   
  <xref:Microsoft.VisualStudio.ProjectAggregator>  
- Visual Studio プロジェクトに使用されるクラスです。  
+ クラスが Visual Studio プロジェクトに使用されます。  
   
  <xref:Microsoft.VisualStudio.Settings>  
  Visual Studio シェルで使用されるクラス。  
@@ -135,68 +137,169 @@ caps.handback.revision: 29
  Visual Studio シェルで使用されるクラス。  
   
  <xref:Microsoft.VisualStudio.Shell.Flavor>  
- Visual Studio プロジェクトに使用されるクラスです。  
+ クラスが Visual Studio プロジェクトに使用されます。  
   
  <xref:Microsoft.VisualStudio.Shell.Interop>  
- 相互運用機能のインターフェイスが Visual Studio シェルの使用します。  
+ Visual Studio シェルを使用する相互運用機能のインターフェイス。  
   
  <xref:Microsoft.VisualStudio.Shell.Settings>  
  Visual Studio シェルで使用されるクラス。  
   
  <xref:Microsoft.VisualStudio.VSHelp>  
- ヘルプに使用されるクラスです。  
+ ヘルプに使用されるクラス。  
   
  <xref:VSLangProj>  
  サービス プロジェクトの言語で使用されるクラス。  
   
  <xref:XamlGeneratedNamespace>  
- Microsoft 内部使用のみです。  
+ マイクロソフト内部でのみ使用。  
   
  <xref:Microsoft.VisualStudio.ManagedInterfaces9>  
  Visual Studio のためのインターフェイスです。  
   
  <xref:Microsoft.VisualStudio.WCFReference.Interop>  
- Windows Communication Framework に使用されるクラスです。  
+ Windows Communication Framework に使用されるクラス。  
   
  <xref:Microsoft.VisualStudio.TestTools.Vsip>  
- テスト ツールに使用されるクラスです。  
+ テスト ツールに使用するクラス。  
   
- <xref:Microsoft.VisualStudio.ExtensionManager>  
- クラスは、Visual Studio 拡張機能マネージャーを使用します。  
+ <xref:EnvDTE>  
+ Visual Studio オートメーションを使用します。  
   
- [IntelliSenseHostFlags](../extensibility/intellisensehostflags.md) 列挙体  
- IntelliSense のホストのフラグを指定します。  
+ <xref:Extensibility>  
+ Visual Studio オートメーションを使用します。  
+  
+ <xref:EnvDTE80>  
+ Visual Studio オートメーションを使用します。  
+  
+ <xref:EnvDTE90>  
+ Visual Studio オートメーションを使用します。  
+  
+ <xref:EnvDTE90a>  
+ Visual Studio オートメーションを使用します。  
+  
+ <xref:EnvDTE100>  
+ Visual Studio オートメーションを使用します。  
+  
+ <xref:Microsoft.VisualStudio.VCCodeModel>  
+ Visual C プロジェクトの自動化に使用されます。  
+  
+ <xref:Microsoft.VisualStudio.VCProject>  
+ Visual C プロジェクトの自動化に使用されるクラス。  
+  
+ <xref:Microsoft.VisualStudio.VCProjectEngine>  
+ Visual C プロジェクトの自動化に使用されます。  
+  
+ <xref:Microsoft.VisualStudio.VsWizard>  
+ Visual Studio のウィザードを使用します。  
+  
+ <xref:VSLangProj>  
+ C# および Visual Basic プロジェクトの自動化に使用されます。  
+  
+ <xref:VSLangProj2>  
+ C# および Visual Basic プロジェクトの自動化に使用されます。  
+  
+ <xref:VSLangProj80>  
+ C# および Visual Basic プロジェクトの自動化に使用されます。  
+  
+ <xref:VSLangProj90>  
+ C# および Visual Basic プロジェクトの自動化に使用されます。  
+  
+ <xref:VSLangProj100>  
+ C# および Visual Basic プロジェクトの自動化に使用されます。  
+  
+ <xref:VSLangProj110>  
+ C# および Visual Basic プロジェクトの自動化に使用されます。  
+  
+ <xref:VSLangProj140>  
+ C# および Visual Basic プロジェクトの自動化に使用されます。  
+  
+ <xref:Microsoft.VisualStudio.Language.CallHierarchy>  
+ C# および Visual Basic の自動化に使用されます。  
+  
+ <xref:Microsoft.VisualStudio.Language.NavigateTo.Interfaces>  
+ C# および Visual Basic の自動化に使用されます。  
+  
+ <xref:Microsoft.VisualStudio.Threading>  
+ Visual Studio によるスレッド処理のために使用します。  
+  
+ [Microsoft.VisualStudio.ConnectedServices Namespace](https://msdn.microsoft.com/library/microsoft.visualstudio.connectedservices.aspx)接続されている Visual Studio services に使用します。  
+  
+ [IntelliSenseHostFlags](../extensibility/intellisensehostflags.md)列挙型  
+ IntelliSense ホスト フラグを指定します。  
   
  [VSCT XML スキーマ リファレンス](../extensibility/vsct-xml-schema-reference.md)  
- Visual Studio コマンド テーブルのスキーマ要素のテーブルごとに要素と属性に、許可されている子を提供します。  
+ Visual Studio コマンド テーブルのスキーマの要素のテーブルの各要素と属性に、許可されている子と共に提供します。  
   
- [VSIX 拡張機能スキーマ 2.0 リファレンス](../extensibility/vsix-extension-schema-2-0-reference.md)  
- 拡張機能のデプロイ用の VSIX スキーマの要素を示します。  
-  
- [VSX 言語パックのスキーマ リファレンス](../extensibility/vsx-language-pack-schema-reference.md)  
- ローカライズされた拡張機能のデプロイ用の VSIX 言語パック スキーマの要素を示します。  
-  
- [Guid と定数](../extensibility/guids-and-constants-in-the-visual-studio-sdk.md)  
+ [Guid および定数](../extensibility/guids-and-constants-in-the-visual-studio-sdk.md)  
  SDK 全体で使用される Guid の一覧を表示します。  
   
- [マネージ コードで COM 定数](../extensibility/com-constants-in-managed-code.md)  
+ [マネージ コードの COM 定数](../extensibility/com-constants-in-managed-code.md)  
  環境 SDK 全体で使用されるユーザー インターフェイス要素には、識別子の一覧を表示します。  
   
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)  
- ソース管理プラグインの API のトピックへのリンク。  
+ ソース管理プラグイン API についてのトピックにリンクします。  
   
  [コマンド ライン スイッチ](../extensibility/command-line-switches-visual-studio-sdk.md)  
  開発者が、コマンドラインからのいくつかのタスクを自動化する方法について説明するトピックへのリンク。  
   
  [エラー処理と戻り値](../extensibility/error-handling-and-return-values.md)  
- これは他の Windows プログラミングで採用されているものと同じ vspackages にあるのエラーのアーキテクチャを説明します。  
+ アーキテクチャについて説明します、エラー、Vspackage の他の Windows プログラミングで採用されているものと同じです。  
   
  [オブジェクト](../extensibility/objects.md)  
  環境で使用されるオブジェクトの一覧を表示します。  
   
  [用語集](../extensibility/visual-studio-sdk-glossary.md)  
- Visual Studio SDK のドキュメントを読んでいるときに、役立つ用語と使用するためには、その定義の一覧を提供します。  
+ Visual Studio SDK のドキュメントを開いたときは、便利な用語と使用するためには、その定義の一覧を提供します。  
   
-## 関連項目  
+ <xref:Microsoft.Build.BuildEngine>  
+ MSBuild を使用します。  
+  
+ <xref:Microsoft.Build.Construction>  
+ MSBuild を使用します。  
+  
+ <xref:Microsoft.Build.Conversion>  
+ MSBuild を使用します。  
+  
+ <xref:Microsoft.Build.Debugging>  
+ MSBuild を使用します。  
+  
+ <xref:Microsoft.Build.Evaluation>  
+ MSBuild を使用します。  
+  
+ <xref:Microsoft.Build.Exceptions>  
+ MSBuild を使用します。  
+  
+ <xref:Microsoft.Build.Execution>  
+ MSBuild を使用します。  
+  
+ <xref:Microsoft.Build.Framework>  
+ MSBuild を使用します。  
+  
+ <xref:Microsoft.Build.Framework.XamlTypes>  
+ MSBuild を使用します。  
+  
+ <xref:Microsoft.Build.Logging>  
+ MSBuild を使用します。  
+  
+ <xref:Microsoft.Build.Tasks>  
+ MSBuild を使用します。  
+  
+ <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper>  
+ MSBuild を使用します。  
+  
+ <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities>  
+ MSBuild を使用します。  
+  
+ <xref:Microsoft.Build.Tasks.Hosting>  
+ MSBuild を使用します。  
+  
+ <xref:Microsoft.Build.Tasks.Xaml>  
+ MSBuild を使用します。  
+  
+ <xref:Microsoft.Build.Utilities>  
+ MSBuild を使用します。  
+  
+## <a name="related-sections"></a>関連項目  
  [Visual Studio SDK](../extensibility/visual-studio-sdk.md)  
- ドキュメント、サンプル、およびと統合する製品を開発するためにコードを含む、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 製品ファミリです。
+ ドキュメント、サンプル、および Visual Studio と統合する製品を開発するためのコードが含まれます。

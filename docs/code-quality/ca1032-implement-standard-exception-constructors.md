@@ -1,11 +1,10 @@
 ---
-title: 'CA1032: Implement standard exception constructors | Microsoft Docs'
+title: "Ca 1032: 標準例外コンス トラクターを実装して |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,63 +14,47 @@ helpviewer_keywords:
 - CA1032
 - ImplementStandardExceptionConstructors
 ms.assetid: a8623c56-273a-4c95-8d83-95911a042be7
-caps.latest.revision: 16
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 42fd1ecaab987ba35fe180c99a6f54f48a30067c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 7300465ce9cef97cf322a7667e775852e22edb4e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1032-implement-standard-exception-constructors"></a>CA1032: Implement standard exception constructors
+# <a name="ca1032-implement-standard-exception-constructors"></a>CA1032: 標準例外コンストラクターを実装します
 |||  
 |-|-|  
 |TypeName|ImplementStandardExceptionConstructors|  
 |CheckId|CA1032|  
-|Category|Microsoft.Design|  
-|Breaking Change|Non-breaking|  
+|カテゴリ|Microsoft.Design|  
+|互換性に影響する変更点|なし|  
   
-## <a name="cause"></a>Cause  
- A type extends <xref:System.Exception?displayProperty=fullName> and does not declare all the required constructors.  
+## <a name="cause"></a>原因  
+ 型拡張<xref:System.Exception?displayProperty=fullName>し、必要なすべてのコンス トラクターを宣言しません。  
   
-## <a name="rule-description"></a>Rule Description  
- Exception types must implement the following constructors:  
+## <a name="rule-description"></a>規則の説明  
+ 例外の種類は、次のコンス トラクターを実装する必要があります。  
   
--   public NewException()  
+-   パブリック NewException()  
   
--   public NewException(string)  
+-   パブリック NewException(string)  
   
--   public NewException(string, Exception)  
+-   パブリック NewException (string, 例外)  
   
--   protected or private NewException(SerializationInfo, StreamingContext)  
+-   保護されているかプライベート NewException (SerializationInfo、StreamingContext)  
   
- Failure to provide the full set of constructors can make it difficult to correctly handle exceptions. For example, the constructor that has the signature `NewException(string, Exception)` is used to create exceptions that are caused by other exceptions. Without this constructor you cannot create and throw an instance of your custom exception that contains an inner (nested) exception, which is what managed code should do in such a situation. The first three exception constructors are public by convention. The fourth constructor is protected in unsealed classes, and private in sealed classes. For more information, see [CA2229: Implement serialization constructors](../code-quality/ca2229-implement-serialization-constructors.md)  
+ コンストラクターを完全に宣言していないと、例外を正しく処理するのが困難になります。 たとえば、コンス トラクターは、シグネチャを持つ`NewException(string, Exception)`他の例外によって引き起こされる例外を作成するために使用します。 このコンス トラクターがない作成して、カスタムの例外を内部の (入れ子になった) 例外を含むインスタンスをスローすることはできません、どのようなマネージ コードは、このような状況で行う必要がありますはします。 最初の 3 つの例外のコンス トラクターは、規約によってパブリックです。 4 番目のコンス トラクターは、封印されていないクラスで保護されているシール クラスではプライベートです。 詳細については、次を参照してください[ca 2229: シリアル化コンス トラクターを実装する。](../code-quality/ca2229-implement-serialization-constructors.md)  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, add the missing constructors to the exception, and make sure that they have the correct accessibility.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、例外に必要なコンス トラクターを追加し、適切なアクセシビリティであるかどうかを確認します。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule when the violation is caused by using a different access level for the public constructors.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ パブリック コンス トラクターを異なるアクセス レベルを使用して、違反が発生する場合は、この規則による警告を抑制するのには安全です。  
   
-## <a name="example"></a>Example  
- The following example contains an exception type that violates this rule and an exception type that is correctly implemented.  
+## <a name="example"></a>例  
+ 次の例には、この規則に違反する例外の種類と正しく実装されている例外の種類が含まれています。  
   
  [!code-csharp[FxCop.Design.ExceptionMultipleCtors#1](../code-quality/codesnippet/CSharp/ca1032-implement-standard-exception-constructors_1.cs)]

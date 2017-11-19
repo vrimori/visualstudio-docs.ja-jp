@@ -1,63 +1,62 @@
 ---
-title: "IDiaDataSource::loadDataFromPdb | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaDataSource::loadDataFromPdb メソッド"
+title: "Idiadatasource::loaddatafrompdb |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaDataSource::loadDataFromPdb method
 ms.assetid: 02159073-8144-47f8-a0b0-aa0edcb92b5b
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 4b9192484e2ac9c957bc53a2e5a5a5965fd7a46a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaDataSource::loadDataFromPdb
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-を開きデバッグ データ ソースとしてプログラム データベース \(.pdb\) ファイルを準備します。  
+# <a name="idiadatasourceloaddatafrompdb"></a>IDiaDataSource::loadDataFromPdb
+開き、デバッグ データ ソースとしてのプログラム データベース (.pdb) ファイルを用意します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```C++  
 HRESULT loadDataFromPdb (  
-   LPCOLESTR pdbPath  
+   LPCOLESTR pdbPath  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  pdbPath  
- \[入力\] .pdb ファイルへのパス。  
+ [in].Pdb ファイルへのパス。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  次の表はこのメソッドの有効な戻り値を示します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 次の表は、このメソッドの戻り値を示します。  
   
-|値|Description|  
-|-------|-----------------|  
-|E\_PDB\_NOT\_FOUND|またはファイルを開きますいないかファイルに無効な書式指定があると判断しました。|  
-|E\_PDB\_FORMAT|旧式の形式のファイルにアクセスしようとしました。|  
-|E\_INVALIDARG|無効なパラメーター。|  
-|E\_UNEXPECTED|データ ソースが既に用意されています。|  
+|値|説明|  
+|-----------|-----------------|  
+|E_PDB_NOT_FOUND|開くには、ファイルが失敗したか、ファイル、無効な形式であることを確認します。|  
+|E_PDB_FORMAT|旧形式のファイルにアクセスしようとしています。|  
+|E_INVALIDARG|無効なパラメーター。|  
+|E_UNEXPECTED|データ ソースは、既に準備されています。|  
   
-## 解説  
- このメソッドは.pdb ファイルからデバッグ直接データを読み込みます。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、.pdb ファイルから直接デバッグ データを読み込みます。  
   
- 特定の条件に対して .pdb ファイルを検証するには[IDiaDataSource::loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md) のメソッドを使用します。  
+ 特定の条件に対して .pdb ファイルを検証するを使用して、 [idiadatasource::loadandvalidatedatafrompdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)メソッドです。  
   
- データの読み込みプロセスにアクセスするにはコールバック機構を通じて[IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) のメソッドを使用します。  
+ アクセスするデータの読み込みプロセス (コールバック機構) を通じてを使用して、 [idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)メソッドです。  
   
- メモリの .pdb ファイルを直接読み込むには[IDiaDataSource::loadDataFromIStream](../Topic/IDiaDataSource::loadDataFromIStream.md) のメソッドを使用します。  
+ メモリから直接読み込む .pdb ファイルを使用して、 [idiadatasource::loaddatafromistream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)メソッドです。  
   
-## 使用例  
+## <a name="example"></a>例  
   
-```cpp#  
+```C++  
 HRESULT hr = pSource->loadDataFromPdb( L"myprog.pdb" );  
 if (FAILED(hr))  
 {  
@@ -65,8 +64,8 @@ if (FAILED(hr))
 }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)   
- [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)   
- [IDiaDataSource::loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)   
- [IDiaDataSource::loadDataFromIStream](../Topic/IDiaDataSource::loadDataFromIStream.md)
+ [Idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)   
+ [Idiadatasource::loadandvalidatedatafrompdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)   
+ [IDiaDataSource::loadDataFromIStream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)

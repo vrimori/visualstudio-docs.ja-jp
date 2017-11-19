@@ -1,74 +1,73 @@
 ---
-title: "IDiaSectionContrib | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSectionContrib インターフェイス"
+title: "IDiaSectionContrib |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSectionContrib interface
 ms.assetid: 371d40f6-ca0e-4d7e-9210-64d3768996c6
-caps.latest.revision: 14
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f7effcc96286fc548b42c810789d1cb902bb3c18
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSectionContrib
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-セクションの情報コンパイル単位にイメージに使用されるメモリのつまり連続したブロックを記述したデータを取得します。  
+# <a name="idiasectioncontrib"></a>IDiaSectionContrib
+セクション貢献度を記述するデータを取得、つまり、連続するメモリ ブロックから提供されたイメージに、コンパイル単位です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
-IDiaSectionContrib : IUnknown  
+IDiaSectionContrib : IUnknown  
 ```  
   
-## Vtable の順序でメソッド  
- 次の表は `IDiaSectionContrib` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDiaSectionContrib`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[IDiaSectionContrib::get\_compiland](../../debugger/debug-interface-access/idiasectioncontrib-get-compiland.md)|このセクションを提供するコンパイル単位のシンボルへの参照を取得します。|  
-|[IDiaSectionContrib::get\_addressSection](../../debugger/debug-interface-access/idiasectioncontrib-get-addresssection.md)|指定のアドレスでの部分を取得します。|  
-|[IDiaSectionContrib::get\_addressOffset](../../debugger/debug-interface-access/idiasectioncontrib-get-addressoffset.md)|指定のアドレスのオフセットの部分を取得します。|  
-|[IDiaSectionContrib::get\_relativeVirtualAddress](../Topic/IDiaSectionContrib::get_relativeVirtualAddress.md)|要素の \(RVA\) イメージの相対仮想アドレスを取得します。|  
-|[IDiaSectionContrib::get\_virtualAddress](../../debugger/debug-interface-access/idiasectioncontrib-get-virtualaddress.md)|処理の \(VA\) 仮想アドレスを取得します。|  
-|[IDiaSectionContrib::get\_length](../../debugger/debug-interface-access/idiasectioncontrib-get-length.md)|セクションのバイト数を取得します。|  
-|[IDiaSectionContrib::get\_notPaged](../../debugger/debug-interface-access/idiasectioncontrib-get-notpaged.md)|セクションはメモリからページングできるかどうかを示すフラグを取得します。|  
-|[IDiaSectionContrib::get\_nopad](../../debugger/debug-interface-access/idiasectioncontrib-get-nopad.md)|セクションに次メモリの境界に埋められた必要であるかどうかを示すフラグを取得します。|  
-|[IDiaSectionContrib::get\_code](../Topic/IDiaSectionContrib::get_code.md)|セクションには実行可能コードが含まれているかどうかを示すフラグを取得します。|  
-|[IDiaSectionContrib::get\_code16bit](../../debugger/debug-interface-access/idiasectioncontrib-get-code16bit.md)|では 16 ビット コードが含まれているかどうかを示すフラグを取得します。|  
-|[IDiaSectionContrib::get\_initializedData](../../debugger/debug-interface-access/idiasectioncontrib-get-initializeddata.md)|セクションは初期化済みデータが含まれているかどうかを示すフラグを取得します。|  
-|[IDiaSectionContrib::get\_uninitializedData](../Topic/IDiaSectionContrib::get_uninitializedData.md)|セクションでは初期化されていないデータが含まれているかどうかを示すフラグを取得します。|  
-|[IDiaSectionContrib::get\_informational](../../debugger/debug-interface-access/idiasectioncontrib-get-informational.md)|セクションがコメントまたは類似した情報が含まれているかどうかを示すフラグを取得します。|  
-|[IDiaSectionContrib::get\_remove](../../debugger/debug-interface-access/idiasectioncontrib-get-remove.md)|これはインメモリ イメージの一部に実行する前にセクションが削除されているかどうかを示すフラグを取得します。|  
-|[IDiaSectionContrib::get\_comdat](../../debugger/debug-interface-access/idiasectioncontrib-get-comdat.md)|セクションは COMDAT の記録中であるかどうかを示すフラグを取得します。|  
-|[IDiaSectionContrib::get\_discardable](../../debugger/debug-interface-access/idiasectioncontrib-get-discardable.md)|セクションでは破棄できるかどうかを示すフラグを取得します。|  
-|[IDiaSectionContrib::get\_notCached](../../debugger/debug-interface-access/idiasectioncontrib-get-notcached.md)|セクションをキャッシュできるかどうかを示すフラグを取得します。|  
-|[IDiaSectionContrib::get\_share](../../debugger/debug-interface-access/idiasectioncontrib-get-share.md)|セクションはメモリで共有できるかどうかを示すフラグを取得します。|  
-|[IDiaSectionContrib::get\_execute](../../debugger/debug-interface-access/idiasectioncontrib-get-execute.md)|セクションではコードとして実行できるかどうかを示すフラグを取得します。|  
-|[IDiaSectionContrib::get\_read](../../debugger/debug-interface-access/idiasectioncontrib-get-read.md)|セクションを読み取ることができるかどうかを示すフラグを取得します。|  
-|[IDiaSectionContrib::get\_write](../../debugger/debug-interface-access/idiasectioncontrib-get-write.md)|セクションを書き込むことができるかどうかを示すフラグを取得します。|  
-|[IDiaSectionContrib::get\_dataCrc](../../debugger/debug-interface-access/idiasectioncontrib-get-datacrc.md)|セクションのデータ \(CRC\) を巡回詳細チェックを取得します。|  
-|[IDiaSectionContrib::get\_relocationsCrc](../../debugger/debug-interface-access/idiasectioncontrib-get-relocationscrc.md)|セクションの再配置の詳細に CRC を取得します。|  
-|[IDiaLineNumber::get\_compilandId](../../debugger/debug-interface-access/idialinenumber-get-compilandid.md)|セクションのコンパイル単位の識別子を取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[IDiaSectionContrib::get_compiland](../../debugger/debug-interface-access/idiasectioncontrib-get-compiland.md)|このセクションの内容を引き起こしているコンパイル単位シンボルへの参照を取得します。|  
+|[IDiaSectionContrib::get_addressSection](../../debugger/debug-interface-access/idiasectioncontrib-get-addresssection.md)|コントリビューションのアドレスのセクションの一部を取得します。|  
+|[IDiaSectionContrib::get_addressOffset](../../debugger/debug-interface-access/idiasectioncontrib-get-addressoffset.md)|コントリビューションのアドレスのオフセットの部分を取得します。|  
+|[IDiaSectionContrib::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasectioncontrib-get-relativevirtualaddress.md)|イメージの相対仮想アドレス (RVA) への投稿を取得します。|  
+|[IDiaSectionContrib::get_virtualAddress](../../debugger/debug-interface-access/idiasectioncontrib-get-virtualaddress.md)|影響度の仮想アドレス (VA) を取得します。|  
+|[IDiaSectionContrib::get_length](../../debugger/debug-interface-access/idiasectioncontrib-get-length.md)|セクション内のバイト数を取得します。|  
+|[IDiaSectionContrib::get_notPaged](../../debugger/debug-interface-access/idiasectioncontrib-get-notpaged.md)|メモリ不足のセクションをページングことはできないかどうかを示すフラグを取得します。|  
+|[IDiaSectionContrib::get_nopad](../../debugger/debug-interface-access/idiasectioncontrib-get-nopad.md)|セクションを次のメモリ境界に埋め込まれませんかどうかを示すフラグを取得します。|  
+|[IDiaSectionContrib::get_code](../../debugger/debug-interface-access/idiasectioncontrib-get-code.md)|セクションに、実行可能コードが含まれているかどうかを示すフラグを取得します。|  
+|[IDiaSectionContrib::get_code16bit](../../debugger/debug-interface-access/idiasectioncontrib-get-code16bit.md)|セクションに 16 ビットのコードが含まれているかどうかを示すフラグを取得します。|  
+|[IDiaSectionContrib::get_initializedData](../../debugger/debug-interface-access/idiasectioncontrib-get-initializeddata.md)|セクションに初期化されたデータが含まれているかどうかを示すフラグを取得します。|  
+|[IDiaSectionContrib::get_uninitializedData](../../debugger/debug-interface-access/idiasectioncontrib-get-uninitializeddata.md)|セクションに初期化されていないデータが含まれているかどうかを示すフラグを取得します。|  
+|[IDiaSectionContrib::get_informational](../../debugger/debug-interface-access/idiasectioncontrib-get-informational.md)|セクションには、コメント、または同様の情報が含まれるかどうかを示すフラグを取得します。|  
+|[IDiaSectionContrib::get_remove](../../debugger/debug-interface-access/idiasectioncontrib-get-remove.md)|メモリ内のイメージの一部になる前に、セクションが削除されたかどうかを示すフラグを取得します。|  
+|[IDiaSectionContrib::get_comdat](../../debugger/debug-interface-access/idiasectioncontrib-get-comdat.md)|セクションが COMDAT レコードであるかどうかを示すフラグを取得します。|  
+|[IDiaSectionContrib::get_discardable](../../debugger/debug-interface-access/idiasectioncontrib-get-discardable.md)|セクションを破棄できるかどうかを示すフラグを取得します。|  
+|[IDiaSectionContrib::get_notCached](../../debugger/debug-interface-access/idiasectioncontrib-get-notcached.md)|セクションをキャッシュすることはできないかどうかを示すフラグを取得します。|  
+|[IDiaSectionContrib::get_share](../../debugger/debug-interface-access/idiasectioncontrib-get-share.md)|メモリ内のセクションを共有できるかどうかを示すフラグを取得します。|  
+|[IDiaSectionContrib::get_execute](../../debugger/debug-interface-access/idiasectioncontrib-get-execute.md)|セクションがコードとして実行可能かどうかを示すフラグを取得します。|  
+|[IDiaSectionContrib::get_read](../../debugger/debug-interface-access/idiasectioncontrib-get-read.md)|セクションを読み取ることができるかどうかを示すフラグを取得します。|  
+|[IDiaSectionContrib::get_write](../../debugger/debug-interface-access/idiasectioncontrib-get-write.md)|セクションが書き込まれるかどうかを示すフラグを取得します。|  
+|[IDiaSectionContrib::get_dataCrc](../../debugger/debug-interface-access/idiasectioncontrib-get-datacrc.md)|セクション内のデータの巡回冗長検査 (CRC) を取得します。|  
+|[IDiaSectionContrib::get_relocationsCrc](../../debugger/debug-interface-access/idiasectioncontrib-get-relocationscrc.md)|セクションの情報を再配置の CRC を取得します。|  
+|[IDiaLineNumber::get_compilandId](../../debugger/debug-interface-access/idialinenumber-get-compilandid.md)|セクションのコンパイル単位の識別子を取得します。|  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
-## 呼び出し元のメモ  
- このインターフェイスは [IDiaEnumSectionContribs::Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md) と [IDiaEnumSectionContribs::Next](../Topic/IDiaEnumSectionContribs::Next.md) のメソッドを呼び出すことになります。  `IDiaSectionContrib` インターフェイスを取得する例については[IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) のインターフェイスを参照してください。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ このインターフェイスは呼び出すことによって取得、 [idiaenumsectioncontribs::item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md)と[idiaenumsectioncontribs::next](../../debugger/debug-interface-access/idiaenumsectioncontribs-next.md)メソッドです。 参照してください、 [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)インターフェイスを取得する例については、`IDiaSectionContrib`インターフェイスです。  
   
-## 使用例  
- この関数は関連するシンボルとともに各セクションのアドレスを示します。  `IDiaSectionContrib` のインターフェイスがどのように取得されたかについて [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) のインターフェイスを参照してください。  
+## <a name="example"></a>例  
+ この関数は、関連付けられているシンボルと共に各セクションのアドレスを示しています。 参照してください、 [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)インターフェイスを表示する方法、`IDiaSectionContrib`インターフェイスを取得します。  
   
-```cpp#  
+```C++  
 void PrintSectionContrib(IDiaSectionContrib* pSecContrib, IDiaSession* pSession)  
 {  
     if (pSecContrib != NULL && pSession != NULL)  
@@ -128,15 +127,15 @@ void PrintSectionContrib(IDiaSectionContrib* pSecContrib, IDiaSession* pSession)
 }  
 ```  
   
-## 必要条件  
- ヘッダー : Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Dia2.h  
   
- ライブラリ : diaguids.lib  
+ ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## 参照  
- [インターフェイス \(Debug Interface Access SDK\)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
+## <a name="see-also"></a>関連項目  
+ [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)   
- [IDiaEnumSectionContribs::Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md)   
- [IDiaEnumSectionContribs::Next](../Topic/IDiaEnumSectionContribs::Next.md)
+ [Idiaenumsectioncontribs::item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md)   
+ [IDiaEnumSectionContribs::Next](../../debugger/debug-interface-access/idiaenumsectioncontribs-next.md)

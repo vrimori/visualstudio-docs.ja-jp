@@ -1,11 +1,10 @@
 ---
-title: 'CA1405: COM visible type base types should be COM visible | Microsoft Docs'
+title: "Ca 1405: COM 参照可能な型の基本型は COM 参照可能である必要があります |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,58 +14,43 @@ helpviewer_keywords:
 - CA1405
 - ComVisibleTypeBaseTypesShouldBeComVisible
 ms.assetid: a762ea2f-5285-4f73-bfb9-9eb10aea4290
-caps.latest.revision: 18
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 19fe7efdab29246d723f5a2d06fd5180529aef23
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 91634d5d46d63165874deded9c5ac67e7d4afa07
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1405-com-visible-type-base-types-should-be-com-visible"></a>CA1405: COM visible type base types should be COM visible
+# <a name="ca1405-com-visible-type-base-types-should-be-com-visible"></a>CA1405: COM 参照可能な型の基本型は COM 参照可能でなければなりません
 |||  
 |-|-|  
 |TypeName|ComVisibleTypeBaseTypesShouldBeComVisible|  
 |CheckId|CA1405|  
-|Category|Microsoft.Interoperability|  
-|Breaking Change|DependsOnFix|  
+|カテゴリ|Microsoft.Interoperability|  
+|互換性に影響する変更点|DependsOnFix|  
   
-## <a name="cause"></a>Cause  
- A Component Object Model (COM) visible type derives from a type that is not COM visible.  
+## <a name="cause"></a>原因  
+ コンポーネント オブジェクト モデル (COM) 参照できる型は、COM 参照可能ではない型から派生します。  
   
-## <a name="rule-description"></a>Rule Description  
- When a COM visible type adds members in a new version, it must abide by strict guidelines to avoid breaking COM clients that bind to the current version. A type that is invisible to COM presumes it does not have to follow these COM versioning rules when it adds new members. However, if a COM visible type derives from the COM invisible type and exposes a class interface of <xref:System.Runtime.InteropServices.ClassInterfaceType?displayProperty=fullName> or <xref:System.Runtime.InteropServices.ClassInterfaceType> (the default), all public members of the base type (unless they are specifically marked as COM invisible, which would be redundant) are exposed to COM. If the base type adds new members in a subsequent version, any COM clients that bind to the class interface of the derived type might break. COM visible types should derive only from COM visible types to reduce the chance of breaking COM clients.  
+## <a name="rule-description"></a>規則の説明  
+ COM 参照可能な型では、新しいバージョンのメンバーを追加、ときに、現在のバージョンにバインドする COM クライアントを破損しないようにする厳密なガイドラインに従う必要があります。 COM に表示される種類は、新しいメンバーを追加したときに COM バージョン管理規則に従う必要はありませんを開始します。 場合は COM 参照可能型の COM の非表示の型から派生し、クラス インターフェイスの公開<xref:System.Runtime.InteropServices.ClassInterfaceType?displayProperty=fullName>または<xref:System.Runtime.InteropServices.ClassInterfaceType>(既定) の場合、基本型のすべてのパブリック メンバー (具体的にとしてマークされている COM 非表示、しない限り、れる冗長)COM に公開されます。 基本データ型は、それ以降のバージョンに新しいメンバーを追加する場合は、派生型のクラスのインターフェイスに関連付けているすべての COM クライアントが壊れる可能性があります。 COM 参照可能な型は、COM クライアントを中断する可能性を低減する COM 参照可能な型からのみ派生する必要があります。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, make the base types COM visible or the derived type COM invisible.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、COM 参照の基本型または派生型を COM を非表示にします。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告は抑制しないでください。  
   
-## <a name="example"></a>Example  
- The following example shows a type that violates the rule.  
+## <a name="example"></a>例  
+ 次の例は、規則に違反する型を示しています。  
   
- [!code-vb[FxCop.Interoperability.ComBaseTypes#1](../code-quality/codesnippet/VisualBasic/ca1405-com-visible-type-base-types-should-be-com-visible_1.vb)] [!code-csharp[FxCop.Interoperability.ComBaseTypes#1](../code-quality/codesnippet/CSharp/ca1405-com-visible-type-base-types-should-be-com-visible_1.cs)]  
+ [!code-vb[FxCop.Interoperability.ComBaseTypes#1](../code-quality/codesnippet/VisualBasic/ca1405-com-visible-type-base-types-should-be-com-visible_1.vb)]
+ [!code-csharp[FxCop.Interoperability.ComBaseTypes#1](../code-quality/codesnippet/CSharp/ca1405-com-visible-type-base-types-should-be-com-visible_1.cs)]  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  <xref:System.Runtime.InteropServices.ClassInterfaceAttribute?displayProperty=fullName>   
- [Introducing the Class Interface](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)   
- [Interoperating with Unmanaged Code](/dotnet/framework/interop/index)
+ [クラス インターフェイスの概要](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)   
+ [アンマネージ コードとの相互運用](/dotnet/framework/interop/index)

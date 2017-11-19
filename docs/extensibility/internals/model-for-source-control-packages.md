@@ -1,45 +1,46 @@
 ---
-title: "ソース管理パッケージのモデル | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ソース管理 [Visual Studio SDK] モデル"
+title: "ソース管理パッケージのモデル |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: source control [Visual Studio SDK], model
 ms.assetid: 6164b2d3-a622-4de8-bef3-a6de985e9ebd
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: a8dacc0a3dfc230085c7575960238711d16d1ef8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ソース管理パッケージのモデル
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-次のモデルはソース管理の実装例を表します。  モデルで実行する必要があると照会する必要のある環境のサービスに会議のインターフェイス。  すべてのサービスと同様に実際にはサービスを通じて取得されたインターフェイスのメソッドを呼び出します。  クラス名はソース管理をどのように実行されるかを容易に識別されます。  
+# <a name="model-for-source-control-packages"></a>ソース管理パッケージのモデル
+次のようなモデルでは、ソース コントロールの実装の例を表します。 モデルでは、インターフェイスを実装する必要があり、環境サービスを呼び出してくださいを参照してください。 すべてのサービスと同様には、実際には、サービスを使用して取得する特定のインターフェイスのメソッドを呼び出します。 クラスの名前は、ソース管理の実行方法を表示するが容易に識別されます。  
   
- ![SCC&#95;TUP の例](~/extensibility/internals/media/scc_tup.gif "SCC\_TUP")  
+ ![SCC &#95;です。TUP 例](../../extensibility/internals/media/scc_tup.gif "SCC_TUP")  
 ソース管理プロジェクトの例  
   
-## インターフェイス  
- 次の表に示すインターフェイスの一覧を使用してVisual Studio で新しいプロジェクトのソース管理を実行できます。  
+## <a name="interfaces"></a>インターフェイス  
+ 次の表に示されるインターフェイスのリストを使用して Visual Studio で、新しいプロジェクトの種類のソース管理を実装できます。  
   
-|Interface|\[条件\]|  
-|---------------|------------|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>|\(ダーティ\) ファイルを保存または変更する前にプロジェクトおよびエディターによって呼び出されます。  このインターフェイスは <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave> サービスを使用してアクセスします。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>|ファイルまたはディレクトリを追加削除または名前を変更するアクセス許可を要求するプロジェクトによって呼び出されます。  このインターフェイスは環境を通知するプロジェクトで承認がアクションがすべて追加削除または名前を変更すると呼び出されます。  これは <xref:Microsoft.VisualStudio.Shell.Interop.SVsTrackProjectDocuments> サービスを使用してアクセスします。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2>|プロジェクトに追加するときに通知されるように登録する任意の要素によって実装され名前を変更したりファイルまたはディレクトリの削除します。  イベント通知を登録するには<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2.AdviseTrackProjectDocumentsEvents%2A> を呼び出します。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>|パッケージ ソース管理してソース管理のステータス情報を取得するプロジェクトによって呼び出されます。  このインターフェイスは <xref:Microsoft.VisualStudio.Shell.Interop.SVsSccManager> サービスを使用してアクセスします。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>|ファイルのソース管理の情報要求に応答しプロジェクト ファイルに必要なソース管理の設定を取得するプロジェクトによって実装されます。|  
+|インターフェイス|用途|  
+|---------------|---------|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>|プロジェクトおよび変更 (ダーティ) ファイルまたは保存する前にエディターによって呼び出されます。 このインターフェイスを使用してアクセスは、<xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave>サービス。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>|追加、削除、またはファイルまたはディレクトリの名前を変更する許可を要求するプロジェクトによって呼び出されます。 このインターフェイスは、完全な承認された追加、削除、またはアクションの名前を変更するときに、環境を通知するためにプロジェクトによっても呼び出されます。 アクセスを使用して、<xref:Microsoft.VisualStudio.Shell.Interop.SVsTrackProjectDocuments>サービス。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2>|プロジェクトの追加、名前の変更、またはファイルまたはディレクトリを削除するときに通知を登録するすべてのエンティティによって実装されます。 イベント通知を登録するには、呼び出す<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2.AdviseTrackProjectDocumentsEvents%2A>です。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>|ソース管理パッケージに登録して、ソース管理の状態に関する情報を取得プロジェクトによって呼び出されます。 このインターフェイスを使用してアクセスは、<xref:Microsoft.VisualStudio.Shell.Interop.SVsSccManager>サービス。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>|プロジェクト ファイルに関する情報のソース コントロールの要求に応答して、設定を取得するソース管理プロジェクト ファイルに必要なによって実装されます。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2.AdviseTrackProjectDocumentsEvents%2A>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2>   
- [ソース管理をサポートします。](../../extensibility/internals/supporting-source-control.md)
+ [ソース管理のサポート](../../extensibility/internals/supporting-source-control.md)

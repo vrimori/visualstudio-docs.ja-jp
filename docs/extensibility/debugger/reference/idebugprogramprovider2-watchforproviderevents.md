@@ -1,88 +1,88 @@
 ---
-title: "IDebugProgramProvider2::WatchForProviderEvents | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramProvider2::WatchForProviderEvents"
-helpviewer_keywords: 
-  - "IDebugProgramProvider2::WatchForProviderEvents"
+title: "IDebugProgramProvider2::WatchForProviderEvents |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgramProvider2::WatchForProviderEvents
+helpviewer_keywords: IDebugProgramProvider2::WatchForProviderEvents
 ms.assetid: 2eb93653-b5fb-45b6-b136-56008c5d25ef
-caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 25dd140a13856d5fd20288d8740cfcb331f52cd6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgramProvider2::WatchForProviderEvents
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-プロセスがポートのイベントを通知できます。  
+# <a name="idebugprogramprovider2watchforproviderevents"></a>IDebugProgramProvider2::WatchForProviderEvents
+ポートのイベントの通知プロセスを許可します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT WatchForProviderEvents(  
-   PROVIDER_FLAGS       Flags,  
-   IDebugDefaultPort2*  pPort,  
-   AD_PROCESS_ID        processId,  
-   CONST_GUID_ARRAY     EngineFilter,  
-   REFGUID              guidLaunchingEngine,  
-   IDebugPortNotify2*   pEventCallback  
+HRESULT WatchForProviderEvents(  
+   PROVIDER_FLAGS       Flags,  
+   IDebugDefaultPort2*  pPort,  
+   AD_PROCESS_ID        processId,  
+   CONST_GUID_ARRAY     EngineFilter,  
+   REFGUID              guidLaunchingEngine,  
+   IDebugPortNotify2*   pEventCallback  
 );  
 ```  
   
-```c#  
-int WatchForProviderEvents(  
-   enum_PROVIDER_FLAGS   Flags,  
-   IDebugDefaultPort2    pPort,  
-   AD_PROCESS_ID         ProcessId,  
-   CONST_GUID_ARRAY      EngineFilter,  
-   ref Guid              guidLaunchingEngine,  
-   IDebugPortNotify2     pEventCallback  
+```csharp  
+int WatchForProviderEvents(  
+   enum_PROVIDER_FLAGS   Flags,  
+   IDebugDefaultPort2    pPort,  
+   AD_PROCESS_ID         ProcessId,  
+   CONST_GUID_ARRAY      EngineFilter,  
+   ref Guid              guidLaunchingEngine,  
+   IDebugPortNotify2     pEventCallback  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `Flags`  
- \[入力\] [PROVIDER\_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) の列挙体のフラグの組み合わせ。  次のフラグはこの呼び出しのために一般的です :  
+ [in]フラグの組み合わせ、 [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)列挙します。 次のフラグがこの呼び出しに一般的です。  
   
-|フラグ|Description|  
-|---------|-----------------|  
-|`PFLAG_REMOTE_PORT`|呼び出し元はリモート コンピューターで実行されています。|  
-|`PFLAG_DEBUGGEE`|呼び出し元が現在デバッグ中 \(配置に関する追加情報は各ノードに対してを返します\)。|  
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|呼び出し元がにアタッチされているデバッガーによって呼び出されます。|  
-|`PFLAG_REASON_WATCH`|呼び出し元ではイベントの確認する必要があります。  このフラグは設定されません。  次にコールバック イベントが削除され呼び出し元は通知は受け取りません。|  
+|フラグ|説明|  
+|----------|-----------------|  
+|`PFLAG_REMOTE_PORT`|呼び出し元は、リモート マシンで実行されています。|  
+|`PFLAG_DEBUGGEE`|呼び出し元は現在デバッグされている (各ノードのマーシャ リングに関する追加情報が返されます)。|  
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|呼び出し元にアタッチされているが、デバッガーによって起動されません。|  
+|`PFLAG_REASON_WATCH`|呼び出し元がイベントを監視します。 このフラグが設定されていません。 場合、 コールバック イベントは削除され、呼び出し元が通知を受け取ることはなくなります。|  
   
  `pPort`  
- \[入力\] 呼び出しプロセスが実行されているポート。  
+ [in]ポートが呼び出しプロセスが行われています。  
   
  `processId`  
- \[入力\] 対象のプログラムを含むプロセスの ID を保持 [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md) の構造体。  
+ [in][AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)対象のプログラムを含むプロセスの ID を保持する構造体。  
   
  `EngineFilter`  
- \[入力\] プロセスに関連付けられたデバッグ エンジンの GUID の配列。  
+ [in]プロセスに関連付けられているデバッグ エンジンの Guid の配列。  
   
  `guidLaunchingEngine`  
- \[出力\] このプロセスを開始デバッグ エンジンの GUID \(存在する場合\)。  
+ [in](存在する場合) は、このプロセスを起動するデバッグ エンジンの GUID です。  
   
  `pEventCallback`  
- \[入力\] イベント通知を受け取る [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) のオブジェクト。  
+ [in][IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)イベント通知を受け取るオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- 呼び出し元がこの前のメソッドの呼び出しで設定されたイベント ハンドラーを削除する場合呼び出し元は最初にと `PFLAG_REASON_WATCH`リーフ以外にはフラグ同じパラメーターを渡します。  
+## <a name="remarks"></a>コメント  
+ オフが、最初の時刻と同じように、呼び出し元が同じパラメーターを渡す、呼び出し元は、このメソッドを前回呼び出したときに設定されているイベント ハンドラーを削除する必要があるときに、`PFLAG_REASON_WATCH`フラグ。  
   
-## 使用例  
- 次の例に [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) インターフェイスを公開する **CDebugEngine の**  オブジェクトに対してこのメソッドを実装する方法を示します。  
+## <a name="example"></a>例  
+ 次の例に対して、このメソッドを実装する方法を示しています、 **CDebugEngine**を公開するオブジェクト、 [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)インターフェイスです。  
   
-```cpp#  
+```cpp  
 STDMETHODIMP CDebugEngine::WatchForProviderEvents(  
     PROVIDER_FLAGS Flags,   
     IDebugDefaultPort2 *pPort,   
@@ -208,10 +208,10 @@ STDMETHODIMP CDebugEngine::WatchForProviderEvents(
 }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)   
- [PROVIDER\_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)   
- [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md)   
- [CONST\_GUID\_ARRAY](../../../extensibility/debugger/reference/const-guid-array.md)   
+ [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)   
+ [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)   
+ [CONST_GUID_ARRAY](../../../extensibility/debugger/reference/const-guid-array.md)   
  [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)   
  [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)

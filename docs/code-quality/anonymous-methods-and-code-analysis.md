@@ -1,52 +1,53 @@
 ---
-title: "匿名メソッドとコード分析 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "匿名メソッド, コード分析"
-  - "コード分析, 匿名メソッド"
-  - "メソッド, 匿名"
+title: "匿名メソッドとコード分析 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- methods, anonymous
+- code analysis, anonymous methods
+- anonymous methods, code analysis
 ms.assetid: bf0a1a9b-b954-4d46-9c0b-cee65330ad00
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 8ebf550ca92cbefbed684e2b11e0b20b62661133
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 匿名メソッドとコード分析
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-*匿名メソッド*は、名前を持たないメソッドです。  匿名メソッドは、コード ブロックをデリゲート パラメーターとして渡すために最も頻繁に使用されます。  
+# <a name="anonymous-methods-and-code-analysis"></a>匿名メソッドとコード分析
+*匿名メソッド*メソッド名を持っていないです。 匿名メソッドは、コード ブロックをデリゲートのパラメーターとして渡すを最も頻繁に使用されます。  
   
- このトピックでは、匿名メソッドに関連付けられた警告やメトリックスがコード分析でどのように処理されるかについて説明します。  
+ このトピックでは、コード分析で警告と匿名メソッドに関連付けられているメトリックを処理する方法について説明します。  
   
-## メンバー内で宣言された匿名メソッド  
- メソッドやアクセサーなど、メンバーで宣言されている匿名メソッドの警告やメトリックスは、メソッドを宣言するメンバーに関連付けられます。  メソッドを呼び出すメンバーには関連付けられません。  
+## <a name="anonymous-methods-declared-in-a-member"></a>メンバーで宣言された匿名メソッド  
+ 警告と匿名メソッドのメソッドまたはアクセサーなどのメンバーで宣言されているメトリックは、メソッドを宣言するメンバーに関連付けられます。 メソッドを呼び出すメンバーに関連付けられていません。  
   
- たとえば、次のクラスでは、**anonymousMethod** の宣言内にあるすべての警告は、**Method2** ではなく **Method1** に対して発生させる必要があります。  
+ たとえば、次のクラスの宣言内にあるすべての警告で**anonymousMethod**に対して発生する必要がある**Method1**および not **Method2**です。  
   
-```vb#  
+```vb  
   
-        Delegate Function ADelegate(ByVal value As Integer) As Boolean  
+      Delegate Function ADelegate(ByVal value As Integer) As Boolean  
 Class AClass  
   
     Sub Method1()  
-        Dim anonymousMethod As ADelegate = Function(ByVal value As  Integer) value > 5  
+        Dim anonymousMethod As ADelegate = Function(ByVal value As Integer) value > 5  
         Method2(anonymousMethod)  
-    End Sub Sub Method2(ByVal anonymousMethod As ADelegate)  
+    End SubSub Method2(ByVal anonymousMethod As ADelegate)  
         anonymousMethod(10)  
-    End Sub End Class  
+    End SubEnd Class  
 ```  
   
-```c#  
+```csharp  
   
-        delegate void Delegate();  
+      delegate void Delegate();  
 class Class  
 {  
     void Method1()  
@@ -65,26 +66,26 @@ class Class
 }  
 ```  
   
-## インラインの匿名メソッド  
- フィールドへのインラインの代入として宣言された匿名メソッドの警告やメトリックスは、コンストラクターに関連付けられます。  フィールドが `static` \([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 内の `Shared`\) として宣言されている場合、警告とメトリックスはクラス コンストラクターに関連付けらます。それ以外の場合は、インスタンス コンストラクターに関連付けられます。  
+## <a name="inline-anonymous-methods"></a>インラインの匿名メソッド  
+ 警告およびフィールドへの代入をインラインとして宣言されている匿名メソッドのメトリックは、コンス トラクターに関連付けられます。 フィールドとして宣言されている場合`static`(`Shared`で[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)])、警告およびメトリックは、それ以外のクラスのコンス トラクターに関連付け、インスタンス コンス トラクターに関連付けられています。  
   
- たとえば、次のクラスでは、**anonymousMethod1** の宣言内にあるすべての警告は、暗黙的に生成された **Class** の既定のコンストラクターに対して発生します。  一方、**anonymousMethod2** 内にある警告は、暗黙的に生成されたクラス コンストラクターに対して適用されます。  
+ たとえば、次のクラスの宣言内にあるすべての警告で**anonymousMethod1**の暗黙的に生成された既定のコンス トラクターに対してが生成されます**クラス**です。 一方で見つかったもの**anonymousMethod2**暗黙的に生成されたクラスのコンス トラクターに対して適用されます。  
   
-```vb#  
+```vb  
   
-    Delegate Function ADelegate(ByVal value As Integer) As Boolean Class AClass  
-Dim anonymousMethod1 As ADelegate = Function(ByVal value As     Integer) value > 5  
-Shared anonymousMethod2 As ADelegate = Function(ByVal value As      Integer) value > 5  
+  Delegate Function ADelegate(ByVal value As Integer) As BooleanClass AClass  
+Dim anonymousMethod1 As ADelegate = Function(ByVal value As    Integer) value > 5  
+Shared anonymousMethod2 As ADelegate = Function(ByVal value As     Integer) value > 5  
   
 Sub Method1()  
     anonymousMethod1(10)  
     anonymousMethod2(10)  
-End Sub End Class  
+End SubEnd Class  
 ```  
   
-```c#  
+```csharp  
   
-        delegate void Delegate();  
+      delegate void Delegate();  
 class Class  
 {  
     Delegate anonymousMethod1 = delegate()   
@@ -105,27 +106,27 @@ class Class
 }  
 ```  
   
- クラスには、複数のコンストラクターを持つフィールドに値を割り当てる、インラインの匿名メソッドが含まれることがあります。  この場合、そのコンストラクターが同じクラスの別のコンストラクターにチェーンしている限り、警告とメトリックスはすべてのコンストラクターに関連付けられます。  
+ クラスには、複数のコンス トラクターを持つフィールドに値を代入するインラインの匿名メソッドが含まれます。 この場合、警告とメトリックが関連付けられますコンス トラクターをすべて同じクラス内の別のコンス トラクターがコンス トラクターのチェーンしない限り、します。  
   
- たとえば、次のクラスでは、**anonymousMethod** の宣言内にあるすべての警告は、**Class\(int\)** および **Class\(string\)** に対して発生させる必要がありますが、**Class\(\)** に対して発生させる必要はありません。  
+ たとえば、次のクラスの宣言内にあるすべての警告で**anonymousMethod**に対して発生する必要がある**Class(int)**と**class (string)**が、に対してではなく**Class()**です。  
   
-```vb#  
+```vb  
   
-    Delegate Function ADelegate(ByVal value As Integer) As Boolean Class AClass  
+  Delegate Function ADelegate(ByVal value As Integer) As BooleanClass AClass  
   
 Dim anonymousMethod As ADelegate = Function(ByVal value As Integer)   
 value > 5  
   
-Sub New()  
+SubNew()  
     New(CStr(Nothing))  
-End Sub Sub New(ByVal a As Integer)  
-End Sub Sub New(ByVal a As String)  
-End Sub End Class  
+End SubSub New(ByVal a As Integer)  
+End SubSub New(ByVal a As String)  
+End SubEnd Class  
 ```  
   
-```c#  
+```csharp  
   
-        delegate void Delegate();  
+      delegate void Delegate();  
 class Class  
 {  
     Delegate anonymousMethod = delegate()   
@@ -147,9 +148,9 @@ class Class
 }  
 ```  
   
- 予想外に思えるかもしれませんが、これは、コンパイラが別のコンストラクターにチェーンしていないすべてのコンストラクターに一意のメソッドを出力するために発生します。  この動作のため、**anonymousMethod** 内で発生するすべての違反は個別に抑制する必要があります。  また、新しいコンストラクターが導入された場合は、それまで **Class\(int\)** と **Class\(string\)** に対して抑制していた警告を、新しいコンストラクターに対しても抑制する必要があります。  
+ これは、予期しない見える可能性があります、これは、コンパイラは別のコンス トラクターをチェーンしていないすべてのコンス トラクターに一意のメソッドを出力です。 この動作のための違反で発生**anonymousMethod**とは別に抑制する必要があります。 つまり場合は、新しいコンス トラクターは、導入された、警告を抑制していたを**Class(int)**と**class (string)**新しいコンス トラクターに対しても抑制する必要があります。  
   
- この問題は、2 つの方法のいずれかで回避することができます。  すべてのコンストラクターにチェーンしている共通のコンストラクター内に **anonymousMethod** を宣言します。  または、すべてのコンストラクターから呼び出される初期化メソッド内に宣言します。  
+ 2 つの方法でこの問題を回避することができます。 宣言すること**anonymousMethod**で共通のコンス トラクターをすべてのコンス トラクター チェーン。 または、すべてのコンス トラクターによって呼び出される初期化メソッドで宣言する可能性があります。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [マネージ コードの品質の分析](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)

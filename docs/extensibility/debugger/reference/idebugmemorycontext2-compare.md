@@ -1,68 +1,69 @@
 ---
-title: "IDebugMemoryContext2::Compare | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugMemoryContext2::Compare"
-helpviewer_keywords: 
-  - "IDebugMemoryContext2::Compare メソッド"
-  - "Compare メソッド"
+title: "IDebugMemoryContext2::Compare |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugMemoryContext2::Compare
+helpviewer_keywords:
+- IDebugMemoryContext2::Compare method
+- Compare method
 ms.assetid: c51b5128-848e-4d8e-b2e9-1161339763c3
-caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: dbcb3f93a4db6a14775cfe518ed257e60282f1fb
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugMemoryContext2::Compare
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-表示方法を指定された配列の各コンテキストがメモリのコンテキストを比較して一致する最初のコンテキストのインデックスを返すフラグを比較します。  
+# <a name="idebugmemorycontext2compare"></a>IDebugMemoryContext2::Compare
+比較フラグ、一致する最初のコンテキストのインデックスを返すことによって示されるように指定した配列内の各コンテキストにメモリ コンテキストを比較します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT Compare(   
-   CONTEXT_COMPARE        compare,  
-   IDebugMemoryContext2** rgpMemoryContextSet,  
-   DWORD                  dwMemoryContextSetLen,  
-   DWORD*                 pdwMemoryContext  
+```cpp  
+HRESULT Compare(   
+   CONTEXT_COMPARE        compare,  
+   IDebugMemoryContext2** rgpMemoryContextSet,  
+   DWORD                  dwMemoryContextSetLen,  
+   DWORD*                 pdwMemoryContext  
 );  
 ```  
   
-```c#  
+```csharp  
 int Compare(  
-   enum_CONTEXT_COMPARE   compare,   
-   IDebugMemoryContext2[] rgpMemoryContextSet,   
-   uint                   dwMemoryContextSetLen,   
-   out uint               pdwMemoryContext  
+   enum_CONTEXT_COMPARE   compare,   
+   IDebugMemoryContext2[] rgpMemoryContextSet,   
+   uint                   dwMemoryContextSetLen,   
+   out uint               pdwMemoryContext  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `compare`  
- \[入力\] 比較の種類を決定 [CONTEXT\_COMPARE](../../../extensibility/debugger/reference/context-compare.md) の列挙体の値。  
+ [in]値、 [CONTEXT_COMPARE](../../../extensibility/debugger/reference/context-compare.md)比較の種類を決定する列挙です。  
   
  `rgpMemoryContextSet`  
- \[入力\] [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) への参照の配列はとして比較します。  
+ [in]参照の配列、 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)と比較するオブジェクト。  
   
  `dwMemoryContextSetLen`  
- \[入力\] 配列の `rgpMemoryContextSet` コンテキストの数。  
+ [in]内のコンテキストの数、`rgpMemoryContextSet`配列。  
   
  `pdwMemoryContext`  
- \[入力\] 比較を満たす最初のメモリのコンテキストのインデックスを返します。  
+ [out]比較で一致する最初のメモリ コンテキストのインデックスを返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  2 個のコンテキストを比較する場合 `E_COMPARE_CANNOT_COMPARE` を返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 返します`E_COMPARE_CANNOT_COMPARE`場合は 2 つのコンテキストを比較することはできません。  
   
-## 解説  
- デバッグ エンジンは比較 \(DE\) のすべての型をサポートする必要はありません `CONTEXT_EQUAL`少なくとも `CONTEXT_LESS_THAN``CONTEXT_GREATER_THAN` と `CONTEXT_SAME_SCOPE` をサポートする必要があります。  
+## <a name="remarks"></a>コメント  
+ デバッグ エンジン (DE) は、比較のすべての種類をサポートする必要はありませんが、少なくともをサポートする必要があります`CONTEXT_EQUAL`、 `CONTEXT_LESS_THAN`、`CONTEXT_GREATER_THAN`と`CONTEXT_SAME_SCOPE`です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)   
- [CONTEXT\_COMPARE](../../../extensibility/debugger/reference/context-compare.md)
+ [CONTEXT_COMPARE](../../../extensibility/debugger/reference/context-compare.md)

@@ -1,45 +1,48 @@
 ---
-title: "IDebugAsyncOperation::QueryIsComplete | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IDebugAsyncOperation::QueryIsComplete |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IDebugAsyncOperation.QueryIsComplete
 apilocation: pdm.dll
-helpviewer_keywords: 
-  - "IDebugAsyncOperation::QueryIsComplete"
+helpviewer_keywords: IDebugAsyncOperation::QueryIsComplete
 ms.assetid: fcf6e229-4d40-46d9-ab81-d3561bc8e084
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: e985697e425ec4966f2260792a9698fa50b4c98d
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IDebugAsyncOperation::QueryIsComplete
-デバッグ操作が完了したかどうかを判定します。  
+# <a name="idebugasyncoperationqueryiscomplete"></a>IDebugAsyncOperation::QueryIsComplete
+デバッグ操作が完了したかどうかを判断します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT QueryIsComplete();  
 ```  
   
-#### パラメーター  
- このメソッドは、パラメーターを受け取りません。  
+#### <a name="parameters"></a>パラメーター  
+ このメソッドには、パラメーターはありません。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
-|`S_OK`|操作が完了します。|  
-|`S_FALSE`|操作が完了していません。|  
+|-----------|-----------------|  
+|`S_OK`|操作が完了しました。|  
+|`S_FALSE`|操作は完了しません。|  
   
-## 解説  
- このメソッドはデバッグ操作が完了したかどうかを判定します。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、デバッグ操作が完了したかどうかを判断します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugAsyncOperation インターフェイス](../../winscript/reference/idebugasyncoperation-interface.md)

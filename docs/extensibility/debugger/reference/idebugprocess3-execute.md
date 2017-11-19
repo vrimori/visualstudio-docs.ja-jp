@@ -1,60 +1,60 @@
 ---
-title: "IDebugProcess3::Execute | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProcess3::Execute"
-helpviewer_keywords: 
-  - "IDebugProcess3::Execute"
+title: "IDebugProcess3::Execute |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProcess3::Execute
+helpviewer_keywords: IDebugProcess3::Execute
 ms.assetid: d831cd81-d7bf-4172-8517-aa699867791f
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 96b18bdb8aa0097071369a01013772dc3bd0d5bd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProcess3::Execute
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このプロセスを停止状態から実行する Continues。  の実行前の状態 \(ステップなど\) を再度実行するプロセスを開始します。  
+# <a name="idebugprocess3execute"></a>IDebugProcess3::Execute
+このプロセスを停止状態から実行が続行されます。 (ステップ) など、以前の実行状態をクリアしを再度実行してプロセスを起動します。  
   
 > [!NOTE]
->  このメソッドは [実行](../../../extensibility/debugger/reference/idebugprogram2-execute.md) の代わりに使用されます。  
+>  このメソッドは、の代わりに使用する必要があります[Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md)です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT Execute(  
-   IDebugThread2* pThread  
+HRESULT Execute(  
+   IDebugThread2* pThread  
 );  
 ```  
   
-```c#  
-int Execute(  
-   IDebugThread2 pThread  
+```csharp  
+int Execute(  
+   IDebugThread2 pThread  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pThread`  
- \[入力\] [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) に実行するスレッド。  
+ [in][IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)スレッドの実行を表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- ユーザーが他のプロセスのスレッドが停止状態から実行を開始する場合このメソッドはプロセスに対して呼び出されます。  このメソッドはユーザーが IDE の ENT1ENT \[入力\] メニューの  **開始**  でを選択するときに呼び出されます。  このメソッドの実装ではことができます。プロセスに現在のスレッドの [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md) のメソッドを呼び出して簡単です。  
+## <a name="remarks"></a>コメント  
+ ユーザーは、他のプロセスのスレッドを停止状態から実行を起動するときに、このプロセスでこのメソッドが呼び出されます。 ユーザーを選択すると、このメソッドが呼び出されますも、**開始**コマンドを**デバッグ**IDE のメニュー。 このメソッドの実装を呼び出すなどの単純な可能性があります、[再開](../../../extensibility/debugger/reference/idebugthread2-resume.md)プロセスの現在のスレッドでのメソッドです。  
   
 > [!WARNING]
->  この呼び出しを処理している [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) に停止のイベントまたは直接の同期イベント \(\) を送信します ; デバッガーはハングする場合があります。  
+>  停止イベントまたは直接 (同期) イベントを送信しない[イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)です。 この呼び出しを処理中にそれ以外の場合、デバッガーがハングアップします。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
- [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)   
- [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [再開](../../../extensibility/debugger/reference/idebugthread2-resume.md)   
+ [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

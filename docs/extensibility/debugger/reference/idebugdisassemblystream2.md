@@ -1,65 +1,65 @@
 ---
-title: "IDebugDisassemblyStream2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDisassemblyStream2"
-helpviewer_keywords: 
-  - "IDebugDisassemblyStream2 インターフェイス"
+title: "IDebugDisassemblyStream2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugDisassemblyStream2
+helpviewer_keywords: IDebugDisassemblyStream2 interface
 ms.assetid: b03cab0c-3f0b-4cc6-88dc-acb3b48c567a
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d3c15e358a415bd3efc95b81daa2058320d79478
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugDisassemblyStream2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このインターフェイスは命令ストリームを表します。  
+# <a name="idebugdisassemblystream2"></a>IDebugDisassemblyStream2
+このインターフェイスは、命令のストリームを表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugDisassemblyStream2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- デバッグ エンジンはプログラム コードの作成をサポートするにはこのインターフェイスを実装します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ デバッグ エンジンでは、プログラム コードの逆アセンブルをサポートするためにこのインターフェイスを実装します。  
   
-## 呼び出し元のメモ  
- [GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md) のメソッドの呼び出しこのインターフェイス。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ 呼び出し、 [GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md)メソッドは、このインターフェイスを返します。  
   
-## Vtable の順序でメソッド  
- 次の表は `IDebugDisassemblyStream2` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugDisassemblyStream2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[読み取り](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)|構成ストリームの現在位置から始めて命令を読み取ります。|  
-|[シーク](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md)|指定した位置に対する命令の指定した数値の逆アセンブル\] ストリームの読み取りポインターを移動します。|  
-|[GetCodeLocationId](../Topic/IDebugDisassemblyStream2::GetCodeLocationId.md)|特定のコード コンテキストのコード位置の識別子を返します。|  
-|[GetCodeContext](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md)|コード識別子の指定位置に対応するコード コンテキスト オブジェクトを返します。|  
-|[GetCurrentLocation](../Topic/IDebugDisassemblyStream2::GetCurrentLocation.md)|現在のコード位置を表すコード位置の識別子を返します。|  
-|[GetDocument](../../../extensibility/debugger/reference/idebugdisassemblystream2-getdocument.md)|ソース ドキュメントをアセンブルこのストリームに関連付けられているを取得します。|  
-|[GetScope](../Topic/IDebugDisassemblyStream2::GetScope.md)|この構成ストリームの範囲を取得します。|  
-|[GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md)|この構成ストリームのサイズを取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[読み取り](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)|逆アセンブル ストリーム内の現在位置から開始する指示を読み取ります。|  
+|[シーク](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md)|[逆アセンブル] ストリームを指定した位置を基準とした命令数が特定の読み取りのポインターを移動します。|  
+|[GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md)|特定のコードのコンテキストのコードの場所の識別子を返します。|  
+|[GetCodeContext](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md)|指定されたコードの場所 id に対応するコード コンテキスト オブジェクトを返します。|  
+|[GetCurrentLocation](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md)|現在のコードの場所を表すコード場所識別子を返します。|  
+|[GetDocument](../../../extensibility/debugger/reference/idebugdisassemblystream2-getdocument.md)|[逆アセンブル] のこのストリームに関連付けられているソース ドキュメントを取得します。|  
+|[GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md)|[逆アセンブル] のこのストリームのスコープを取得します。|  
+|[GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md)|[逆アセンブル] のこのストリームのサイズを取得します。|  
   
-## 解説  
- 構成ストリームは空間内のアドレス空間または関数またはモジュールを表すために作成できます。  各命令は [読み取り](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) メソッドの呼び出しによって返される [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) の構造体によって表されます。  
+## <a name="remarks"></a>コメント  
+ アドレス空間全体または単なる関数または領域内のモジュールを表すため、逆アセンブル ストリームを作成できます。 各命令がによって表される、 [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)への呼び出しによって返される構造体、[読み取り](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)メソッドです。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md)   
  [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)

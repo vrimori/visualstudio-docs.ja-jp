@@ -1,80 +1,80 @@
 ---
-title: "IDebugReference2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugReference2"
-helpviewer_keywords: 
-  - "IDebugReference2 インターフェイス"
+title: "IDebugReference2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugReference2
+helpviewer_keywords: IDebugReference2 interface
 ms.assetid: 3cfed312-f532-4bce-84a5-1677c14567d7
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 27e880dbf5b602c1bd0b98c6ce5ccc2fdf88e37a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugReference2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このインターフェイスにはスタック フレームのプロパティやそのほかのプロパティへの参照を表します。  
+# <a name="idebugreference2"></a>IDebugReference2
+このインターフェイスは、スタック フレームのプロパティまたはその他のいくつかのプロパティへの参照を表します。  
   
 > [!NOTE]
->  `IDebugReference2` は今後使用するために予約されてメソッドはすべて `E_NOTIMPL` を返す必要があります。  
+>  `IDebugReference2`将来使用して、そのメソッドが返す必要がありますすべてに予約されている`E_NOTIMPL`です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugReference2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- DE implements 値の特定の型への参照を表します。このインターフェイス  たとえば値が式の評価メモリの表示に使用されるメモリのコンテキストまたは登録の一覧と値の結果として数値を使用できます。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ デでは、特定の種類の値への参照を表すためには、このインターフェイスを実装します。 たとえば、値では、数値式の評価、メモリ、またはレジスタとその値の一覧を表示するためのメモリ コンテキストの結果として可能性があります。  
   
-## 呼び出し元のメモ  
- このインターフェイスを取得します [GetReference](../../../extensibility/debugger/reference/idebugproperty2-getreference.md)。  [GetParent](../../../extensibility/debugger/reference/idebugreference2-getparent.md) と [GetDerivedMostReference](../Topic/IDebugReference2::GetDerivedMostReference.md) はこのインターフェイスを返します。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ 呼び出す[GetReference](../../../extensibility/debugger/reference/idebugproperty2-getreference.md)このインターフェイスを取得します。 [GetParent](../../../extensibility/debugger/reference/idebugreference2-getparent.md)と[GetDerivedMostReference](../../../extensibility/debugger/reference/idebugreference2-getderivedmostreference.md)このインターフェイスを返すこともできます。  
   
-## Vtable の順序でメソッド  
- 次の表は `IDebugReference2` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugReference2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md)|この参照を記述する [DEBUG\_REFERENCE\_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) の構造体を取得します。|  
-|[SetValueAsString](../../../extensibility/debugger/reference/idebugreference2-setvalueasstring.md)|文字列からこの参照の値を設定します。|  
-|[SetValueAsReference](../Topic/IDebugReference2::SetValueAsReference.md)|別の参照からこの参照の値を設定します。|  
-|[EnumChildren](../Topic/IDebugReference2::EnumChildren.md)|この参照の子を列挙します。|  
-|[GetParent](../../../extensibility/debugger/reference/idebugreference2-getparent.md)|この参照の親を取得します。|  
-|[GetDerivedMostReference](../Topic/IDebugReference2::GetDerivedMostReference.md)|この参照は最派生の参照を取得します。|  
-|[GetMemoryBytes](../../../extensibility/debugger/reference/idebugreference2-getmemorybytes.md)|をこの参照によって参照されるメモリのバイト取得します。|  
-|[GetMemoryContext](../../../extensibility/debugger/reference/idebugreference2-getmemorycontext.md)|この参照のメモリのコンテキストを取得します。|  
-|[GetSize](../../../extensibility/debugger/reference/idebugreference2-getsize.md)|サイズがこの参照のサイズ \(バイト単位\) を取得します。|  
-|[SetReferenceType](../Topic/IDebugReference2::SetReferenceType.md)|この参照型を設定します。|  
-|[比較](../../../extensibility/debugger/reference/idebugreference2-compare.md)|別のこの参照を比較します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md)|取得、 [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)この参照を記述する構造体。|  
+|[SetValueAsString](../../../extensibility/debugger/reference/idebugreference2-setvalueasstring.md)|この参照文字列からの値を設定します。|  
+|[SetValueAsReference](../../../extensibility/debugger/reference/idebugreference2-setvalueasreference.md)|この参照を別の参照からの値を設定します。|  
+|[EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)|この参照の子を列挙します。|  
+|[GetParent](../../../extensibility/debugger/reference/idebugreference2-getparent.md)|このリファレンスの親を取得します。|  
+|[GetDerivedMostReference](../../../extensibility/debugger/reference/idebugreference2-getderivedmostreference.md)|この参照の参照を最も多く派生を取得します。|  
+|[GetMemoryBytes](../../../extensibility/debugger/reference/idebugreference2-getmemorybytes.md)|この参照が参照するメモリのバイト数を取得します。|  
+|[GetMemoryContext](../../../extensibility/debugger/reference/idebugreference2-getmemorycontext.md)|このリファレンスのメモリのコンテキストを取得します。|  
+|[GetSize](../../../extensibility/debugger/reference/idebugreference2-getsize.md)|このリファレンスのバイト単位のサイズを取得します。|  
+|[SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md)|この参照型を設定します。|  
+|[Compare](../../../extensibility/debugger/reference/idebugreference2-compare.md)|他のこの参照を比較します。|  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  「プロパティ」をこのように使用するとその `IDebugReference2` がこのようなエンティティをできますがクラスのメンバー変数混同しないようにしてください。  
+>  この"property"の使用する必要がありますと混同しない、つまり、クラスのメンバー変数が、`IDebugReference2`そのエンティティを表すことができます。  
   
- [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) は `IDebugReference2` はプロパティへの参照を表しますがおよびプロパティをデバッグするプログラムのオブジェクトへの参照表します。  
+ [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 、プロパティを表すときに`IDebugReference2`、デバッグ中のプログラム内のオブジェクトへの参照を通常のプロパティの参照を表します。  
   
- プロパティで参照との主な相違点は参照がないインスタンスを示していますがプロパティがオブジェクトの名前付きインスタンスを参照していることです。  たとえばプロパティは `"a.b"` とプログラムのヒープのオブジェクトを示している可能性があります。  別のプロパティが `"c.d"` と同じオブジェクトを示している可能性があります。  このプロパティを表示する方法は`"a.b"` が必要です。または `"c.d"` がスコープ内にあります。  このオブジェクトへの参照がない。; オブジェクトはそのオブジェクトのメモリが有効な場合に参照できます。  
+ プロパティとの参照の主な違いは、名前のないインスタンスを参照中に、プロパティが、オブジェクトの名前付きインスタンスを指すことです。 によって、プログラムのヒープのオブジェクトにプロパティは参照など、`"a.b"`です。 同じオブジェクトを別のプロパティは参照`"c.d"`です。 このプロパティを参照する方法では、する必要があります`"a.b"`または`"c.d"`スコープ内にあります。 この同じオブジェクトへの参照が無名です。オブジェクトは、そのオブジェクトのメモリが有効な場合に限りを参照できます。  
   
- 名前型およびアドレスでの `IDebugProperty2` のインターフェイスは値と考えることができます。  `IDebugReference2` は型としてアドレスと考えることができます。  
+ `IDebugProperty2`名前、型、およびアドレスの値としてのインターフェイスを考えることができます。 `IDebugReference2`、別のに対して、型、およびアドレスと見なすことができます。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
- [DEBUG\_REFERENCE\_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)   
+ [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [GetReference](../../../extensibility/debugger/reference/idebugproperty2-getreference.md)

@@ -1,44 +1,45 @@
 ---
-title: "CA2003: ファイバーをスレッドとして扱いません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2003"
-  - "DoNotTreatFibersAsThreads"
-helpviewer_keywords: 
-  - "CA2003"
-  - "DoNotTreatFibersAsThreads"
+title: "Ca 2003: スレッドとファイバーを処理しません |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2003
+- DoNotTreatFibersAsThreads
+helpviewer_keywords:
+- CA2003
+- DoNotTreatFibersAsThreads
 ms.assetid: 15398fb1-f384-4bcc-ad93-00e1c0fa9ddf
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 4ca9b0649950be50dcff5103258d60f6f924f12a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA2003: ファイバーをスレッドとして扱いません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca2003-do-not-treat-fibers-as-threads"></a>CA2003: ファイバーをスレッドとして扱いません
 |||  
 |-|-|  
 |TypeName|DoNotTreatFibersAsThreads|  
 |CheckId|CA2003|  
-|分類|Microsoft.Reliability|  
+|カテゴリ|Microsoft.Reliability|  
 |互換性に影響する変更点|なし|  
   
-## 原因  
- マネージ スレッドが Win32 スレッドとして扱われています。  
+## <a name="cause"></a>原因  
+ マネージ スレッドは Win32 スレッドとして扱われています。  
   
-## 規則の説明  
- マネージ スレッドが Win32 スレッドであるとは限りません。  マネージ スレッドはファイバーです。  共通言語ランタイム \(CLR: Common Language Runtime\) は、SQL によって所有される実際のスレッドのコンテキストでマネージ スレッドをファイバーとして実行します。  これらのスレッドは、AppDomains および SQL Server プロセスのデータベースで共有できます。  マネージ スレッド ローカル ストレージの使用は有効ですが、アンマネージ スレッド ローカル ストレージは使用できません。また、コードが現在の OS スレッドで再度実行されるとは限りません。  スレッドのロケールなどの設定を変更しないでください。  ロックを開始するスレッドはロックの終了も実行する必要があるので、CreateCriticalSection または CreateMutex を P\/Invoke 経由で呼び出さないでください。  ファイバーを使用する場合はその必要はないため、Win32 クリティカル セクションおよびミューテックスは SQL では無効になります。  System.Thread マネージ オブジェクトのほとんどの状態を安全に使用できます。  これには、マネージ スレッド ローカル ストレージやスレッドの現在のユーザー インターフェイス \(UI\) カルチャが含まれます。  ただし、モデルのプログラミング上の理由から、SQL を使用するときにスレッドの現在のカルチャを変更できません。変更は新しいアクセス許可によって行われます。  
+## <a name="rule-description"></a>規則の説明  
+ マネージ スレッドが Win32 スレッドとは限りません。 ファイバーすることをお勧めします。 共通言語ランタイム (CLR) は、SQL によって所有されている実際のスレッドのコンテキストでファイバーとして、マネージ スレッドが実行されます。 これらのスレッドは、SQL Server プロセスの AppDomains ともデータベースで共有することができます。 マネージ スレッドのローカル記憶域が動作するが可能性がありますいないを使用するアンマネージ スレッド ローカル ストレージか、コードで実行される現在の OS スレッドもう一度前提としています。 などのスレッドのロケールの設定を変更することはできません。 呼び出す必要はありませんロケールなどの設定は変更 P/invoke ロックに入り、スレッドがロックを終了する必要がありますも必要なためです。 これができないため、ケース ファイバーを使用するときに、Win32 のクリティカル セクションとミュー テックスは SQL で使用できません。 ほとんどの状態は、System.Thread マネージ オブジェクトに安全に使用可能性があります。 これには、マネージ スレッド ローカル ストレージとのスレッドの現在のユーザー インターフェイス (UI) カルチャが含まれます。 ただし、モデル上の理由から、プログラミングのないことができますを SQL; を使用するときに、スレッドの現在のカルチャを変更するにはこれは、新しいアクセス許可を介して適用されます。  
   
-## 違反の修正方法  
- スレッドの使用状況を調べて、状況に応じてコードを変更してください。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ スレッドの使用状況を確認し、それに応じてコードを変更します。  
   
-## 警告を抑制する状況  
- この規則は抑制しないでください。
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ このルールは抑制しないでください。

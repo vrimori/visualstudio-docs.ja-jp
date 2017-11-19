@@ -1,55 +1,55 @@
 ---
-title: "IDebugExceptionEvent2::PassToDebuggee | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugExceptionEvent2::PassToDebuggee"
-helpviewer_keywords: 
-  - "IDebugExceptionEvent2::PassToDebuggee"
+title: "IDebugExceptionEvent2::PassToDebuggee |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugExceptionEvent2::PassToDebuggee
+helpviewer_keywords: IDebugExceptionEvent2::PassToDebuggee
 ms.assetid: a20d0f0b-2ca0-4437-bd22-9213c81d2738
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 4abb59c9bf9717089353683087c38425d3bf88ed
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugExceptionEvent2::PassToDebuggee
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-実行を再開したときまたは例外が破棄例外をデバッグ中のプログラムに渡す必要があるかどうかを指定します。  
+# <a name="idebugexceptionevent2passtodebuggee"></a>IDebugExceptionEvent2::PassToDebuggee
+例外を破棄する必要がある場合または実行が再開したときにデバッグするプログラムを例外を渡す必要があるかどうかを指定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT PassToDebuggee(  
-   BOOL fPass  
+```cpp  
+HRESULT PassToDebuggee(  
+   BOOL fPass  
 );  
 ```  
   
-```c#  
-int PassToDebuggee(  
-   int fPass  
+```csharp  
+int PassToDebuggee(  
+   int fPass  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `fPass`  
- \[入力\] 例外が破棄実行を再開すると例外がデバッグ対象のプログラムに渡された場合 \(\)`TRUE` 場合はゼロ \(`FALSE`\)。  
+ [in]0 以外 (`TRUE`) 場合は、例外は、実行が再開されるとときに、デバッグするプログラムまたはゼロ渡す必要があります (`FALSE`) 場合は、例外を破棄する必要があります。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- このメソッドを呼び出して実際にはコードをデバッグするプログラムの実行されません。  呼び出しは次のコードの実行の状態を設定します。  たとえば[CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md) メソッドの呼び出しが [EXCEPTION\_INFO](../../../extensibility/debugger/reference/exception-info.md) を除く `S_OK` を返すことがあります。`EXCEPTION_STOP_SECOND_CHANCE` への `dwState` のフィールド セット。  
+## <a name="remarks"></a>コメント  
+ このメソッドを呼び出すことも、デバッグ中のプログラムで実行するためのコードは実際には発生しません。 呼び出しは、次のコード実行の状態を設定するだけです。 たとえば、呼び出し、 [CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md)メソッドが返す可能性があります`S_OK`で、 [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)です。`dwState` フィールドに設定`EXCEPTION_STOP_SECOND_CHANCE`です。  
   
- IDE で [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md) イベントを受け取り[続行](../../../extensibility/debugger/reference/idebugprogram2-continue.md) メソッドを呼び出すことがあります。  デバッグ エンジンは \(DE\)`PassToDebuggee` のメソッドが呼び出されなかった場合既定の動作が必要です。  
+ IDE が表示される、 [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)イベントと呼び出し、[続行](../../../extensibility/debugger/reference/idebugprogram2-continue.md)メソッドです。 デバッグ エンジン (DE) 場合を処理する既定の動作を持つ必要があります、`PassToDebuggee`メソッドは呼び出されません。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)   
  [CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md)   
- [続行](../../../extensibility/debugger/reference/idebugprogram2-continue.md)
+ [Continue](../../../extensibility/debugger/reference/idebugprogram2-continue.md)

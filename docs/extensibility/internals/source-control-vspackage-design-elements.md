@@ -1,36 +1,37 @@
 ---
-title: "ソース コントロールの vs パッケージのデザイン要素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ソース管理パッケージのデザイン要素"
+title: "ソース コントロールの VSPackage のデザイン要素 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: source control packages, design elements
 ms.assetid: edd3f2ff-ca32-4465-8ace-4330493b67bb
-caps.latest.revision: 15
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: c78e6a8a93a89d39434552694b5d969698bea45e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ソース コントロールの vs パッケージのデザイン要素
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-このセクションのトピックではソース管理する VSPackage を統合するために実行する必要がある構造体について説明します。  また[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の他のコンポーネントから実行できる VSPackage ソース管理およびインターフェイスについてソース管理 VSPackage を使用してソース管理のモデルと機能をサポートするにはインターフェイスのサービスとサービス。  
+# <a name="source-control-vspackage-design-elements"></a>ソース コントロールの VSPackage のデザイン要素
+このセクションのトピックでは、構造体の緊密な統合の VSPackage を実装する必要があります、ソース管理を説明します。 インターフェイスも一覧表示されますとサービスが、ソースが VSPackage を制御することができます実装し、インターフェイス、およびサービス ソース管理 VSPackage ことができますを他の[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]そのソースをサポートするコンポーネントは、モデルと機能を制御します。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  [VSPackage の構造体](../../extensibility/internals/vspackage-structure-source-control-vspackage.md)  
  ソース管理 VSPackage の構造を定義します。  
   
  [関連するサービスとインターフェイス](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)  
- リストのソース管理のパッケージに関連するサービスとインターフェイス。  
+ ソース コントロールのパッケージに関連するインターフェイスとサービスを一覧表示します。  
   
  [提供されるサービス](../../extensibility/internals/services-provided-source-control-vspackage.md)  
- ソース管理 VSPackage に用意されているソース管理サービスについて説明します。  
+ ソース管理 VSPackage によって提供されるソース管理サービスをについて説明します。  
   
-## 関連項目  
- [ソース コントロール VSPackage を作成します。](../../extensibility/internals/creating-a-source-control-vspackage.md)  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のソース管理の UI をカスタマイズするためのソース管理機能のみ使用できます。ソース管理 VSPackage を作成する方法について説明します。
+## <a name="related-sections"></a>関連項目  
+ [ソース管理 VSPackage の作成](../../extensibility/internals/creating-a-source-control-vspackage.md)  
+ ソース コントロールするだけでなくソース管理機能を提供することはできますをカスタマイズする VSPackage を作成する方法について説明します、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ソース UI コントロールです。

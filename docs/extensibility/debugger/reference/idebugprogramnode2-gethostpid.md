@@ -1,53 +1,53 @@
 ---
-title: "IDebugProgramNode2::GetHostPid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramNode2::GetHostPid"
-helpviewer_keywords: 
-  - "IDebugProgramNode2::GetHostPid"
+title: "IDebugProgramNode2::GetHostPid |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgramNode2::GetHostPid
+helpviewer_keywords: IDebugProgramNode2::GetHostPid
 ms.assetid: e65b4b15-46d8-4ca7-9456-2b4c078f7cf9
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 163999e160baeaaad618ee793a1879da694e35ea
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgramNode2::GetHostPid
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-プロセスホスティングのシステム プロセス識別子にプログラムを取得します。  
+# <a name="idebugprogramnode2gethostpid"></a>IDebugProgramNode2::GetHostPid
+プログラムをホストしているプロセスのシステム プロセス識別子を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetHostPid (   
-   AD_PROCESS_ID * pdwHostPid  
+```cpp  
+HRESULT GetHostPid (   
+   AD_PROCESS_ID * pdwHostPid  
 );  
 ```  
   
-```c#  
-int GetHostPid (   
-   out AD_PROCESS_ID pdwHostPid  
+```csharp  
+int GetHostPid (   
+   out AD_PROCESS_ID pdwHostPid  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pdwHostPid`  
- \[入力\] ホスティングプロセスのシステム プロセス識別子を返します。  
+ [out]ホスト プロセスのシステム プロセス識別子を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 使用例  
- 次の例に `CProgram` の単純なオブジェクトに対してこのメソッドを実装する方法を実装するインターフェイスの [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) 示します。  
+## <a name="example"></a>例  
+ 次の例は、単純なは、このメソッドを実装する方法を示します`CProgram`を実装するオブジェクト、 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)インターフェイスです。  
   
-```cpp#  
+```cpp  
 HRESULT CProgram::GetHostPid(DWORD* pdwHostPid) {    
     // Check for valid argument.    
    if (pdwHostPid)    
@@ -62,5 +62,5 @@ HRESULT CProgram::GetHostPid(DWORD* pdwHostPid) {
 }    
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

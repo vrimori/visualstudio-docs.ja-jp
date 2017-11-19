@@ -1,57 +1,56 @@
 ---
-title: "IDiaSymbol::get_isAggregated | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_isAggregated メソッド"
+title: "Idiasymbol::get_isaggregated |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_isAggregated method
 ms.assetid: 24d280ef-6ea3-4958-9418-4ad3ca7c67c1
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0da925fa76eb477a5995815f74a664899e721640
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_isAggregated
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-データ シンボルをシンボルの集計またはコレクションの一部であるかどうかを指定するフラグを取得します ; コンパイラは別のエンティティとして集約されたシンボルを処理しますが実際には一つ以上のシンボルの一部です。  
+# <a name="idiasymbolgetisaggregated"></a>IDiaSymbol::get_isAggregated
+データ シンボル集計またはシンボルのコレクションの一部であるかどうかを指定するフラグを取得しますコンパイラでは、集計されたシンボルは個別のエンティティとして扱いますが、実際に 1 つの大きなシンボルの一部です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```C++  
 HRESULT get_isAggregated(  
-   BOOL *pFlag  
+   BOOL *pFlag  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pFlag`  
- \[入力\] データを親のシンボルのシンボルの分割線の集計に含まれている場合はを返します `TRUE` ; それ以外の場合戻り `FALSE`。  
+ [out]返します`TRUE`場合は、データは親シンボル; から分割されたシンボルの集計の一部を返しますそれ以外の場合、`FALSE`です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合戻り `S_FALSE` またはエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  `S_FALSE` の戻り値はプロパティのシンボルで使用できないことを意味します。  
+>  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-## 解説  
- [IDiaSymbol::get\_isSplitted](../../debugger/debug-interface-access/idiasymbol-get-issplitted.md) のメソッドは集約されたシンボルの親のシンボルの `TRUE` です。  
+## <a name="remarks"></a>コメント  
+ [Idiasymbol::get_issplitted](../../debugger/debug-interface-access/idiasymbol-get-issplitted.md)メソッドは`TRUE`集計されたシンボルの親であるシンボル。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
   
-|必要条件|Description|  
-|----------|-----------------|  
+|必要条件|説明|  
+|-----------------|-----------------|  
 |ヘッダー:|dia2.h|  
-|バージョン :|DIA SDK v8.0|  
+|バージョン:|DIA SDK バージョン 8.0|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [IDiaSymbol::get\_isSplitted](../../debugger/debug-interface-access/idiasymbol-get-issplitted.md)
+ [IDiaSymbol::get_isSplitted](../../debugger/debug-interface-access/idiasymbol-get-issplitted.md)

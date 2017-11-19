@@ -1,70 +1,70 @@
 ---
-title: "IDebugExpressionEvaluator | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugExpressionEvaluator"
-helpviewer_keywords: 
-  - "IDebugExpressionEvaluator インターフェイス"
+title: "IDebugExpressionEvaluator |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugExpressionEvaluator
+helpviewer_keywords: IDebugExpressionEvaluator interface
 ms.assetid: 0636d8c3-625a-49fa-94b6-516f22b7e1bc
-caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 3b7cc2e6c0d25ceebd41648b227405978d1fb67d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugExpressionEvaluator
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebugexpressionevaluator"></a>IDebugExpressionEvaluator
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されません。 CLR 式エバリュエーターの実装については、次を参照してください [CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) と [マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
+>  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
   
  このインターフェイスは、式エバリュエーターを表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugExpressionEvaluator : IUnknown  
 ```  
   
-## 実装についてのメモ  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
  式エバリュエーターでは、このインターフェイスを実装する必要があります。  
   
-## 呼び出し元のノート  
- このインターフェイスを取得するには、を通じて、式エバリュエーターをインスタンス化、 `CoCreateInstance` エバリュエーターのクラス ID \(CLSID\) を使用してメソッドです。 この例を参照してください。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ このインターフェイスを取得するには、を通じて、式エバリュエーターをインスタンス化、`CoCreateInstance`エバリュエーターのクラス ID (CLSID) を使用してメソッドです。 この例を参照してください。  
   
-## Vtable 順序のメソッド  
- 次の表は、のメソッドを示しています。 `IDebugExpressionEvaluator`します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugExpressionEvaluator`します。  
   
 |メソッド|説明|  
-|----------|--------|  
-|[Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)|式の文字列を解析された式に変換します。|  
+|------------|-----------------|  
+|[解析](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)|式の文字列を解析された式に変換します。|  
 |[GetMethodProperty](../../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md)|ローカル変数、引数、およびメソッドの他のプロパティを取得します。|  
-|[GetMethodLocationProperty](../Topic/IDebugExpressionEvaluator::GetMethodLocationProperty.md)|メモリ アドレス、メソッドの場所とのオフセットに変換します。|  
-|[Setlocale 関数](../../../extensibility/debugger/reference/idebugexpressionevaluator-setlocale.md)|印刷可能な結果を作成するのに使用する言語を決定します。|  
-|[SetRegistryRoot](../../../extensibility/debugger/reference/idebugexpressionevaluator-setregistryroot.md)|レジストリのルートを設定します。 サイド バイ サイドのデバッグに使用します。|  
+|[GetMethodLocationProperty](../../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodlocationproperty.md)|メモリ アドレスには、メソッドの場所とオフセットを変換します。|  
+|[Setlocale、_wsetlocale](../../../extensibility/debugger/reference/idebugexpressionevaluator-setlocale.md)|印刷可能な結果の作成に使用する言語を決定します。|  
+|[SetRegistryRoot](../../../extensibility/debugger/reference/idebugexpressionevaluator-setregistryroot.md)|レジストリ ルートを設定します。 サイド バイ サイドのデバッグに使用します。|  
   
-## 解説  
- 一般的な状況で \(DE\) のデバッグ エンジンのインスタンスを作成、式エバリュエーター \(EE\) への呼び出しの結果として [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)します。 デがレジストリから EE の CLSID を取得、DE には、言語として使用する EE のベンダーが認識している、ため \(、 [デバッグ用の SDK ヘルパー](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) 関数の場合、 `GetEEMetric`, は、この検索に役立ちます\)。  
+## <a name="remarks"></a>コメント  
+ 一般的な状況で、デバッグ エンジン (DE) インスタンスを作成、式エバリュエーター (EE) への呼び出しの結果として[ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)です。 デがレジストリから EE の CLSID を取得、DE には、言語および使用したい EE の仕入先が認識している、ため (、[をデバッグ用の SDK ヘルパー](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)関数、`GetEEMetric`取得に役立ちます)。  
   
- EE がインスタンス化された後、DE を呼び出す [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) 式を解析し、保存、 [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) オブジェクトです。 その後への呼び出し [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) 式を評価します。  
+ EE はインスタンス化した後、DE を呼び出す[解析](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)に式を解析し、保存、 [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md)オブジェクト。 その後への呼び出し[EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)式を評価します。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: ee.h  
   
- 名前空間: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 使用例  
- この例では、ソース コードで指定されているシンボル プロバイダーは、アドレス式エバリュエーターをインスタンス化する方法を示します。 この例は、関数を使用して `GetEEMetric`, から、 [デバッグ用の SDK ヘルパー](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) ライブラリ、dbgmetric.lib です。  
+## <a name="example"></a>例  
+ この例では、ソース コードでシンボル プロバイダーとアドレスを指定された式エバリュエーターをインスタンス化する方法を示します。 この例では、`GetEEMetric`から、[をデバッグ用の SDK ヘルパー](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)ライブラリ、dbgmetric.lib です。  
   
-```cpp#  
+```cpp  
 IDebugExpressionEvaluator GetExpressionEvaluator(IDebugSymbolProvider pSymbolProvider,  
                                                  IDebugAddress *pSourceAddress)  
 {  
@@ -103,8 +103,8 @@ IDebugExpressionEvaluator GetExpressionEvaluator(IDebugSymbolProvider pSymbolPro
 }  
 ```  
   
-## 参照  
- [式評価インターフェイス](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)   
+## <a name="see-also"></a>関連項目  
+ [式の評価インターフェイス](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)   
  [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)   
  [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md)   
  [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)   

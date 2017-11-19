@@ -1,50 +1,52 @@
 ---
-title: "ButtonText 要素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ButtonText 要素 (VSCT XML スキーマ)"
-  - "ButtonText、VSCT XML スキーマ要素"
+title: "ButtonText 要素 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ButtonText element (VSCT XML schema)
+- VSCT XML schema elements, ButtonText
 ms.assetid: 56aba884-0356-4894-ae4e-32d3938f6865
-caps.latest.revision: 6
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: b17492b0cc8531ac892bf8ead1c309f403d1da48
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ButtonText 要素
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-このフィールドでは、さまざまなメニューに表示されるテキストを指定できます。 既定では、 `ButtonText` \] メニューの \[コント ローラーに要素が表示されます。`ButtonText` 要素は既定値にもなります、他のテキスト フィールドが空白だった場合。`ButtonText` 場合でも、他のテキスト フィールドが指定されている要素を空にすることはできません。  
+# <a name="buttontext-element"></a>ButtonText 要素
+このフィールドでは、さまざまなメニューに表示されるテキストを指定できます。 既定では、`ButtonText`要素は、メニュー コント ローラーに表示されます。 `ButtonText`他のテキスト フィールドが空白の場合に要素が既定値にもになります。 `ButtonText`場合でも、他のテキスト フィールドが指定された要素を空白にすることはできません。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 <ButtonText>My Command</ButtonText>  
 ```  
   
-## 属性および要素  
+## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
-### 属性  
+### <a name="attributes"></a>属性  
  なし。  
   
-### 子要素  
+### <a name="child-elements"></a>子要素  
  なし。  
   
-### 親要素  
+### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
-|--------|--------|  
-|[文字列の要素](../extensibility/strings-element.md)|などのテキスト要素をグループ化 `ButtonText` と `CommandName`です。|  
+|-------------|-----------------|  
+|[ 要素](../extensibility/strings-element.md)|などのテキスト要素をグループ化`ButtonText`と`CommandName`です。|  
   
-## テキスト値  
- テキスト値、 `ButtonText` 要素がメニュー項目、コンボ、およびその他のユーザー インターフェイス \(UI\) 要素を表示されるテキストを持つに対して表示されるテキストを提供します。  
+## <a name="text-value"></a>テキスト値  
+ テキスト値、`ButtonText`要素は、メニュー項目、コンボ、および表示のテキストがあるその他のユーザー インターフェイス (UI) 要素について表示されるテキストを提供します。  
   
-## 参照  
- [Visual Studio コマンド テーブル \(します。Vsct\) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>関連項目  
+ [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

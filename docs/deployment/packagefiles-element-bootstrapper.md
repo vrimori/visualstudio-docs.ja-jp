@@ -1,33 +1,33 @@
 ---
-title: "&lt;PackageFiles&gt; 要素 (ブートストラップ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "<PackageFiles> 要素 [ブートストラップ]"
+title: "&lt;PackageFiles&gt;要素 (ブートス トラップ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- FSharp
+- VB
+- CSharp
+- C++
+helpviewer_keywords: <PackageFiles> element [bootstrapper]
 ms.assetid: 3ea252d7-18a3-47d8-af83-47feebcfe82b
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: a85b06bfc5c82e7d4bd08bef8f768ad2e28a2ab0
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# &lt;PackageFiles&gt; 要素 (ブートストラップ)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-`PackageFiles` 要素には、`Command` 要素の結果として実行されるインストール パッケージを定義する `PackageFile` 要素が含まれます。  
+# <a name="ltpackagefilesgt-element-bootstrapper"></a>&lt;PackageFiles&gt;要素 (ブートス トラップ)
+`PackageFiles`要素が含まれます`PackageFile`の結果として実行されるインストール パッケージを定義する要素、`Command`要素。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 <PackageFiles  
@@ -43,28 +43,28 @@ caps.handback.revision: 16
 </PackageFiles>  
 ```  
   
-## 要素と属性  
- `PackageFiles` 要素には、次の属性があります。  
+## <a name="elements-and-attributes"></a>要素と属性  
+ `PackageFiles`要素には、次の属性です。  
   
-|属性|Description|  
-|--------|-----------------|  
-|`CopyAllPackageFiles`|省略可能です。  `false` に設定した場合、`Command` 要素から参照されているファイルだけがインストーラーによってダウンロードされます。  `true` に設定した場合、すべてのファイルがダウンロードされます。<br /><br /> `IfNotHomesite` に設定した場合で、かつ、`ComponentsLocation` を `HomeSite` に設定した場合、インストーラーは `False` に設定されたものとして動作します。それ以外の場合は、`True` と同じ動作になります。  この設定を使用すると、HomeSite のシナリオにおいて、それ自体がブートストラップであるパッケージに独自の動作を実行させることができます。<br /><br /> 既定値は `true` です。|  
+|属性|説明|  
+|---------------|-----------------|  
+|`CopyAllPackageFiles`|省略可能です。 場合設定`false`、インストーラーから参照されているファイルをダウンロードのみ、`Command`要素。 場合設定`true`、すべてのファイルがダウンロードされます。<br /><br /> 場合に設定`IfNotHomesite`、インストーラーの動作は同じとして`False`場合`ComponentsLocation`に設定されている`HomeSite`、それ以外の場合は、同様の動作ととして`True`です。 この設定を使用するパッケージ自体である、ブートス トラップ HomeSite シナリオでは、独自の動作を実行することができます。<br /><br /> 既定値は、`true` です。|  
   
-## PackageFile  
- `PackageFile` 要素は、`PackageFiles` 要素に必須の子です。  1 つの `PackageFiles` 要素には、少なくとも 1 つの `PackageFile` 要素が必要です。  
+## <a name="packagefile"></a>パッケージファイル  
+ `PackageFile`要素の子では、`PackageFiles`要素。 A`PackageFiles`要素が少なくとも 1 つあります`PackageFile`要素。  
   
- `PackageFile` には、以下の属性があります。  
+ `PackageFile`次の属性があります。  
   
-|属性|Description|  
-|--------|-----------------|  
-|`Name`|必ず指定します。  パッケージ ファイルの名前です。  この名前は、パッケージをインストールするための条件を定義する場合に、`Command` 要素が参照する名前です。  この値は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] などのツールがパッケージを記述するために使用するローカライズされた名前を取得するために、`Strings` テーブルを検索するためのキーとしても使用されます。|  
-|`HomeSite`|省略可能です。  インストーラーに含まれていない場合の、パッケージのリモート サーバー上の場所です。|  
-|`CopyOnBuild`|省略可能です。  ビルド時にブートストラップがパッケージ ファイルをディスクにコピーするかどうかを指定します。  既定値は true です。|  
-|`PublicKey`|パッケージ証明書の署名者の暗号化された公開キーです。  `HomeSite` を使用する場合は必ず指定します。その他の場合は、省略可能です。|  
-|`Hash`|省略可能です。  パッケージ ファイルの SHA1 ハッシュです。  インストール時にファイルの整合性を検証するために使用されます。  パッケージ ファイルから同一のハッシュを計算できなかった場合、パッケージはインストールされません。|  
+|属性|説明|  
+|---------------|-----------------|  
+|`Name`|必須です。 パッケージ ファイルの名前です。 これは、名前を`Command`パッケージをインストールするための条件を定義する場合に、要素を参照します。 この値にキーとしても使用、`Strings`などのツールをローカライズされた名前を取得するテーブル[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を使用して、パッケージの説明をします。|  
+|`HomeSite`|省略可能です。 インストーラーに含まれていない場合は、リモート サーバー上でパッケージの場所です。|  
+|`CopyOnBuild`|省略可能です。 ブートス トラップがビルド時に、ディスク上にパッケージ ファイルをコピーするかどうかを指定します。 既定値は true です。|  
+|`PublicKey`|パッケージの証明書の署名者の公開暗号化キー。 場合は必須`HomeSite`以外の場合はそれ以外の場合、省略可能です。|  
+|`Hash`|省略可能です。 パッケージ ファイルの SHA1 ハッシュです。 インストール時に、ファイルの整合性の確認に使用されます。 パッケージ ファイルから同一のハッシュを計算することはできません、パッケージはインストールされていません。|  
   
-## 使用例  
- 次のコード例では、Windows インストーラーなど、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 再頒布可能パッケージとその依存ファイル用のパッケージを定義しています。  
+## <a name="example"></a>例  
+ 次のコード例は、のパッケージを定義、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]再頒布可能パッケージとその依存関係、Windows インストーラーなどです。  
   
 ```  
 <PackageFiles>  
@@ -75,7 +75,7 @@ caps.handback.revision: 16
 </PackageFiles>  
 ```  
   
-## 参照  
- [\<Product\> 要素](../deployment/product-element-bootstrapper.md)   
- [\<Package\> 要素](../deployment/package-element-bootstrapper.md)   
+## <a name="see-also"></a>関連項目  
+ [\<Product > 要素](../deployment/product-element-bootstrapper.md)   
+ [\<パッケージ > 要素](../deployment/package-element-bootstrapper.md)   
  [製品およびパッケージ スキーマ リファレンス](../deployment/product-and-package-schema-reference.md)

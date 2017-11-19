@@ -1,49 +1,49 @@
 ---
-title: "IDebugErrorBreakpoint2::GetPendingBreakpoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugErrorBreakpoint2::GetPendingBreakpoint"
-helpviewer_keywords: 
-  - "IDebugErrorBreakpoint2::GetPendingBreakpoint"
+title: "IDebugErrorBreakpoint2::GetPendingBreakpoint |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugErrorBreakpoint2::GetPendingBreakpoint
+helpviewer_keywords: IDebugErrorBreakpoint2::GetPendingBreakpoint
 ms.assetid: 59d0defc-99fd-445c-bdac-8224d5dea3f9
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: c92a8463d0a92293dc448272a889524127d703e9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugErrorBreakpoint2::GetPendingBreakpoint
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-エラーを起こした保留中のブレークポイントを取得します。  
+# <a name="idebugerrorbreakpoint2getpendingbreakpoint"></a>IDebugErrorBreakpoint2::GetPendingBreakpoint
+エラーが発生した保留中のブレークポイントを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetPendingBreakpoint (   
-   IDebugPendingBreakpoint2** ppPendingBreakpoint  
+```cpp  
+HRESULT GetPendingBreakpoint (   
+   IDebugPendingBreakpoint2** ppPendingBreakpoint  
 );  
 ```  
   
-```c#  
-int GetPendingBreakpoint (   
-   out IDebugPendingBreakpoint2 ppPendingBreakpoint  
+```csharp  
+int GetPendingBreakpoint (   
+   out IDebugPendingBreakpoint2 ppPendingBreakpoint  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppPendingBreakpoint`  
- \[入力\] バインドされていない保留中のブレークポイントを表す [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) のオブジェクトを返します。  
+ [out]返します、 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)バインドに失敗した保留中のブレークポイントを表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)   
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

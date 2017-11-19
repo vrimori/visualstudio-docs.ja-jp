@@ -1,49 +1,50 @@
 ---
-title: "ドキュメント データとカスタム エディターでドキュメント ビュー | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "エディター [Visual Studio SDK] カスタムでは、データを文書化し、文書の表示"
+title: "カスタム エディターでドキュメントのデータおよびドキュメントを表示 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: editors [Visual Studio SDK], custom - document data and document view
 ms.assetid: 71eea623-f566-4feb-84cd-ca1ba71bc493
-caps.latest.revision: 23
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: ab3506a6906c4223888a14132339cbe5499c92d1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ドキュメント データとカスタム エディターでドキュメント ビュー
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-2 つの部分で構成されるカスタム エディター: ドキュメントのデータ オブジェクトとドキュメント ビュー オブジェクト。 名前からわかるようには、ドキュメントのデータ オブジェクトが表示されるテキスト データを表す、ドキュメント ビュー オブジェクト \(または「ビュー」\) は、ドキュメントのデータ オブジェクトを表示するための 1 つまたは複数の windows を表します。  
+# <a name="document-data-and-document-view-in-custom-editors"></a>ドキュメント データとカスタム エディターでドキュメント ビュー
+2 つの部分で構成されるカスタム エディター: ドキュメント データ オブジェクトとドキュメント ビュー オブジェクト。 名前からわかるように、ドキュメント データ オブジェクト テキスト データを表示するには、表しドキュメント ビュー オブジェクト (または"view") は、ドキュメント データ オブジェクトを表示するための 1 つまたは複数の windows を表します。  
   
-## ドキュメント データ オブジェクト  
- ドキュメント データ オブジェクトは、テキスト バッファー内のテキストのデータ表現です。 これは、ドキュメントのテキストとその他の情報を格納、処理するドキュメントの持続性のデータの複数のビュー可能にする COM オブジェクト。 詳細については、次のトピックを参照してください。  
+## <a name="document-data-object"></a>ドキュメント データ オブジェクト  
+ ドキュメント データ オブジェクトは、テキスト バッファー内のテキストのデータ表現です。 これは、ドキュメントのテキストとその他の情報を格納、ドキュメントの永続化を処理し、データの複数のビューを有効化する COM オブジェクトです。 詳細については、次のトピックを参照してください。  
   
- <xref:EnvDTE80.Window2.DocumentData%2A> および [ドキュメント ウィンドウ](../extensibility/internals/document-windows.md)。  
+ <xref:EnvDTE80.Window2.DocumentData%2A>および[ドキュメント ウィンドウ](../extensibility/internals/document-windows.md)します。  
   
- カスタム エディターやデザイナーを選択できる、 <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> オブジェクトまたは独自のカスタムのバッファー。<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> 標準エディターの簡略化された埋め込みモデルに依存して、複数のビューをサポートしているおよびイベント インターフェイスを使用して複数のビューの管理を提供します。  
+ カスタム エディターおよびデザイナーを使用することを選択できます、<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>オブジェクトまたは独自のカスタムのバッファー。 <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>標準エディターの簡略化された埋め込みモデルに依存して、複数のビューをサポートおよびの複数のビューの管理に使用されるイベント インターフェイスを提供します。  
   
-## ドキュメント ビュー オブジェクト  
- コードとその他のテキストを表示するウィンドウがドキュメントと呼ばれる表示または表示します。 エディターを作成するときに、1 つのウィンドウでテキストを表示する 1 つのビューまたは複数のビュー、複数のウィンドウでのテキストの表示のいずれかを選択できます。 選択は、アプリケーションによって異なります。 たとえば、サイド バイ サイドで編集する場合は、複数のビューを選択します。 各ビューは、統合開発環境での \(IDE\) の document テーブルの \(RDT\) を実行しているエントリに関連付けられます。 ビューのウィンドウが、プロジェクトに属するまたは <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> オブジェクトです。  
+## <a name="document-view-object"></a>ドキュメント ビュー オブジェクト  
+ コードおよびその他のテキストを表示するウィンドウがドキュメントと呼ばれるビューまたはビュー。 エディターを作成するときに、1 つのウィンドウでテキストを表示する、1 つのビューまたは複数のウィンドウでテキストを表示する複数のビューのいずれかを選択できます。 選択は、アプリケーションによって異なります。 たとえば、サイド バイ サイドで編集する場合は、複数のビューを選択します。 各ビューは、統合開発環境での (IDE) document テーブル (RDT) を実行しているエントリに関連付けられます。 ビューのウィンドウがプロジェクトに属している、または<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>オブジェクト。  
   
- エディターでは、ドキュメント データ オブジェクトの複数のビューをサポートする場合は、ドキュメント データおよびドキュメント ビューのオブジェクトを区切る必要があります。 それ以外の場合、グループ化できます。 詳細については、「[複数のドキュメント ビューをサポートします。](../extensibility/supporting-multiple-document-views.md)」を参照してください。  
+ エディターでは、ドキュメント データ オブジェクトの複数のビューをサポートする場合は、ドキュメント データおよびドキュメント ビュー オブジェクトを区切る必要があります。 それ以外の場合、グループ化できます。 詳細については、次を参照してください。[複数ドキュメントのビューをサポートする](../extensibility/supporting-multiple-document-views.md)です。  
   
- IDE では、実行中の document テーブルのエントリごとにアイテム識別子 \(ItemID\) を照合することで \(たとえば、ドキュメントを含むソリューションが閉じられたときなど\) のイベントに関するビューを通知します。 詳細については、「[実行中のドキュメント テーブル](../extensibility/internals/running-document-table.md)」を参照してください。  
+ IDE では、実行中のドキュメント テーブル内の各エントリのアイテム識別子 (ItemID) を照合することで (たとえば、ドキュメントを含むソリューションが閉じられたときなど) のイベントに関するビューを通知します。 詳細については、次を参照してください。[を実行しているドキュメント テーブル](../extensibility/internals/running-document-table.md)です。  
   
- カスタム エディターのビューを作成するための 2 つのオプションがあります。 1 つは、インプレース アクティブ化モデル、ビューが ActiveX コントロール、またはドキュメントのデータ オブジェクトを使用して、ウィンドウでホストされている場所です。 2 番目は、ビューがによってホストされている場所、シンプルな埋め込みモデル [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] と <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> がウィンドウのコマンドを処理するために実装します。 インプレース アクティブ化モデルについては、次を参照してください。 [埋め込み先編集の有効化](../misc/in-place-activation.md)します。 簡略化された埋め込みモデルについては、次を参照してください。 [簡略化された埋め込み](../extensibility/simplified-embedding.md)します。  
+ カスタム エディターのビューを作成するための 2 つのオプションがあります。 1 つは、インプレース アクティブ化モデル、ビューが ActiveX コントロールまたはドキュメント データ オブジェクトを使用して、ウィンドウでホストされている場所です。 2 つ目は、ビューがによってホストされている場所の簡易埋め込みモデル[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]と<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>ウィンドウ コマンドを処理するために実装がします。 インプレース アクティブ化モデルの詳細については、次を参照してください。 [、インプレース アクティブ化](../extensibility/in-place-activation.md)です。 簡略化された埋め込みモデルについては、次を参照してください。[簡略化された埋め込み](../extensibility/simplified-embedding.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [複数のドキュメント ビューをサポートします。](../extensibility/supporting-multiple-document-views.md)   
- [簡略化された埋め込み](../extensibility/simplified-embedding.md)   
- [方法: データを文書化するビューのアタッチ](../extensibility/how-to-attach-views-to-document-data.md)   
+ [埋め込み簡素化されます。](../extensibility/simplified-embedding.md)   
+ [方法: 添付ドキュメント データへのビュー](../extensibility/how-to-attach-views-to-document-data.md)   
  [ドキュメントのロック所有者の管理](../extensibility/document-lock-holder-management.md)   
- [単一および複数のタブ ビュー](../extensibility/single-and-multi-tab-views.md)   
+ [単一サブネットおよびマルチ タブのビュー](../extensibility/single-and-multi-tab-views.md)   
  [標準的なドキュメントの保存](../extensibility/internals/saving-a-standard-document.md)   
- [永続化と実行中の Document テーブル](../extensibility/internals/persistence-and-the-running-document-table.md)   
- [どのエディターが開き、プロジェクト内のファイルを決定します。](../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md)   
+ [永続化と実行中のドキュメント テーブル](../extensibility/internals/persistence-and-the-running-document-table.md)   
+ [どのエディターが開き、プロジェクトのファイルを決定します。](../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md)   
  [エディター ファクトリ](../extensibility/editor-factories.md)

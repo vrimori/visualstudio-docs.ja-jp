@@ -1,66 +1,67 @@
 ---
-title: "CA1704: 識別子は正しく入力されなければなりません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1704"
-  - "IdentifiersShouldBeSpelledCorrectly"
-helpviewer_keywords: 
-  - "CA1704"
-  - "IdentifiersShouldBeSpelledCorrectly"
+title: "Ca 1704: 識別子は正しく入力されなければ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1704
+- IdentifiersShouldBeSpelledCorrectly
+helpviewer_keywords:
+- CA1704
+- IdentifiersShouldBeSpelledCorrectly
 ms.assetid: f2c7a44d-1690-44ca-9cd0-681b04b12b2a
-caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: e43e3340cdbc05ec00c909542e201692199ccfef
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA1704: 識別子は正しく入力されなければなりません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1704-identifiers-should-be-spelled-correctly"></a>CA1704: 識別子は正しく入力されなければなりません
 |||  
 |-|-|  
 |TypeName|IdentifiersShouldBeSpelledCorrectly|  
 |CheckId|CA1704|  
-|分類|Microsoft.Naming|  
+|カテゴリ|Microsoft.Naming|  
 |互換性に影響する変更点|あり|  
   
-## 原因  
- 識別子の名前に Microsoft スペル チェック ライブラリで認識されない語が 1 つ以上含まれています。  この規則では、コンストラクターや get および set プロパティ アクセサーなどの特殊な名前のメンバーはチェックの対象となりません。  
+## <a name="cause"></a>原因  
+ 識別子の名前には、Microsoft スペル チェック ライブラリで認識されない語が 1 つ以上が含まれています。 このルールのコンス トラクターまたは get などの特別な名前のメンバーを確認および set プロパティ アクセサーはありません。  
   
-## 規則の説明  
- この規則では、識別子をトークンに分割し、個々のトークンのスペルをチェックします。  解析アルゴリズムにより、次の変換が行われます。  
+## <a name="rule-description"></a>規則の説明  
+ このルールは、トークンに識別子を解析し、各トークンのスペルをチェックします。 解析のアルゴリズムでは、次の変換を実行します。  
   
--   大文字で始まる語が 1 つのトークンと見なされます。  たとえば、MyNameIsJoe は "My"、"Name"、"Is"、"Joe" にトークン化されます。  
+-   大文字の使用は、新しいトークンを開始します。 たとえば、"My"、"Name"、"Is"、"Joe"MyNameIsJoe がトークン化です。  
   
--   複数の大文字が続く場合は、最後の大文字が次のトークンの先頭となります。  たとえば、GUIEditor は "GUI" と "Editor" にトークン化されます。  
+-   複数の英大文字は、最後の文字の大文字は新しいトークンを開始します。 たとえば、"gui"、「エディター」GUIEditor がトークン化です。  
   
--   先頭および末尾のアポストロフィは削除されます。  たとえば、'sender' は "sender" にトークン化されます。  
+-   先頭および末尾のアポストロフィは削除されます。 たとえば、'sender' は、「送信者」にトークン化です。  
   
--   アンダースコアはトークンの終わりを意味し、削除されます。  たとえば、Hello\_world は "Hello" と "world" にトークン化されます。  
+-   アンダー スコアは、トークンの最後を示すされ、削除されます。 「こんにちは」に Hello_world がトークン化などの"world"です。  
   
--   途中に挿入されたアンパサンドは削除されます。  たとえば、形式は&」format "に「トークン化します。  
+-   埋め込みのアンパサンドは削除されます。 たとえば、(& a) マットが"format"にトークン化します。  
   
- 既定では、スペル チェック機能の英語 \(en\) バージョンが使用されます。  現時点では、他の言語の辞書は使用できません。  
+ 既定では、スペル チェックの英語 (en) バージョンを使用します。 その他の言語の辞書は現在利用できません。  
   
-## 違反の修正方法  
- この規則違反を修正するには、単語のスペルを修正するか、違反とされた単語をカスタム辞書 CustomDictionary.xml に追加します。  この辞書は、ツールのインストール ディレクトリ、プロジェクト ディレクトリ、またはユーザーのプロファイルに属するツール固有のディレクトリ \(%USERPROFILE%\\Application Data\\...\) に置きます。  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のプロジェクトにカスタム辞書を追加する方法については、「[方法 : コード分析辞書をカスタマイズする](../Topic/How%20to:%20Customize%20the%20Code%20Analysis%20Dictionary.md)」を参照してください。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、単語のスペルを訂正または CustomDictionary.xml をという名前のユーザー辞書に単語を追加します。 プロジェクト ディレクトリは、ツールのインストール ディレクトリまたはユーザーのプロファイルの下にあるツールに関連付けられているディレクトリにディクショナリに配置 (%USERPROFILE%\Application データ\\...)。プロジェクトにカスタム辞書を追加する方法について[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を参照してください[する方法: コード分析辞書をカスタマイズします。](../code-quality/how-to-customize-the-code-analysis-dictionary.md)  
   
--   違反としない語を Dictionary\/Words\/Recognized パスに追加します。  
+-   ディクショナリ/語/認識パスの下の違反が発生する必要がありますの単語を追加します。  
   
--   違反とする語を Dictionary\/Words\/Unrecognized パスに追加します。  
+-   認識不能ディクショナリ/語/パスの下の違反の原因には単語を追加します。  
   
--   旧式として分類する語を Dictionary\/Words\/Deprecated パスに追加します。  詳細については、関連のトピック「[CA1726: 適切な用語を使用します](../code-quality/ca1726-use-preferred-terms.md)」を参照してください。  
+-   推奨されなくなったディクショナリ/語/パス 不使用としてフラグを設定する必要がある単語を追加します。 関連するルールを参照してください[CA1726: 適切な用語を使用して](../code-quality/ca1726-use-preferred-terms.md)詳細についてはします。  
   
--   頭字語の規則に対する例外を Dictionary\/Acronyms\/CasingExceptions パスに追加します。  
+-   ディクショナリ/頭字語/CasingExceptions パスに略語の大文字と小文字の規則には、例外を追加します。  
   
- カスタム辞書ファイルの構造の例を次に示します。  
+ ユーザー辞書ファイルの構造の例を次に示します。  
   
 ```  
 <Dictionary>  
@@ -85,10 +86,10 @@ caps.handback.revision: 25
 </Dictionary>  
 ```  
   
-## 警告を抑制する状況  
- 誤ったスペルの語を意図的に使用し、その語がライブラリの一部の辞書に該当する場合のみ、この規則による警告を抑制してください。  正しいスペルの単語を使用すると、新しいソフトウェア ライブラリの習得に要する時間を短縮できます。  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 単語が意図的にスペル ミスがあると、単語が限定されたライブラリのセットに適用される場合にのみこの規則による警告は抑制されます。 正しく単語のスペルは習得するまで新しいソフトウェア ライブラリに必要な時間を減らします。  
   
-## 関連規則  
+## <a name="related-rules"></a>関連規則  
  [CA2204: リテラルは正しく入力されていなければなりません](../code-quality/ca2204-literals-should-be-spelled-correctly.md)  
   
  [CA1703: リソース文字列は正しく入力されなければなりません](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)  
@@ -101,5 +102,5 @@ caps.handback.revision: 25
   
  [CA1726: 適切な用語を使用します](../code-quality/ca1726-use-preferred-terms.md)  
   
-## 参照  
- [方法 : コード分析辞書をカスタマイズする](../Topic/How%20to:%20Customize%20the%20Code%20Analysis%20Dictionary.md)
+## <a name="see-also"></a>関連項目  
+ [方法 : コード分析辞書をカスタマイズする](../code-quality/how-to-customize-the-code-analysis-dictionary.md)

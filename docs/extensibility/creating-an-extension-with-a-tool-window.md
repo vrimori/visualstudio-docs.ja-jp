@@ -1,39 +1,41 @@
 ---
-title: "ツール ウィンドウで、拡張機能を作成します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ツール ウィンドウで、拡張機能の作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 585b0a3a-f85b-4f92-81bb-9ca499bb8a89
-caps.latest.revision: 5
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: cda2d9bc4bde1c0bf9d9dd82c48864725f0e25f0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ツール ウィンドウで、拡張機能を作成します。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-この手順では、VSIX プロジェクト テンプレートを使用する方法を説明し、 **カスタム ツール ウィンドウ** ツール ウィンドウで、拡張機能を作成する項目テンプレートです。  
+# <a name="creating-an-extension-with-a-tool-window"></a>ツール ウィンドウで、拡張機能の作成
+この手順では、VSIX プロジェクト テンプレートを使用する方法を説明し、**カスタムのツール ウィンドウ**項目テンプレート、ツール ウィンドウで、拡張機能を作成します。  
   
-## 必須コンポーネント  
- Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、「[Visual Studio SDK をインストールします。](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。  
+## <a name="prerequisites"></a>必須コンポーネント  
+ Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
   
-### ツール ウィンドウを作成します。  
+### <a name="creating-a-tool-window"></a>ツール ウィンドウを作成します。  
   
-1.  という名前の VSIX プロジェクトを作成する **最初**します。 VSIX プロジェクトのテンプレートを見つけることができます、 **新しいプロジェクト** \] ダイアログ ボックス \[ **Visual c\#\/機能拡張**します。  
+1.  という名前の VSIX プロジェクトを作成する**最初**です。 VSIX プロジェクトのテンプレートを見つけることができます、**新しいプロジェクト**] ダイアログ ボックス [ **Visual c#/機能拡張**です。  
   
-2.  プロジェクトを開いたら、という名前のツール ウィンドウの項目テンプレートを追加 **最初**します。**ソリューション エクスプ ローラー**, プロジェクト ノードを右クリックして、選択 **追加\/\[新しい項目の**します。**新しい項目の追加** ダイアログ ボックスに移動 **Visual c\#\/機能拡張** を選択して **カスタム ツール ウィンドウ**します。**名** ウィンドウの下部にあるフィールドに、ツール ウィンドウ ファイル名を変更 **FirstWindow.cs**します。  
+2.  プロジェクトを開いたら、という名前のツール ウィンドウの項目テンプレートを追加**MyWindow**です。 **ソリューション エクスプ ローラー**プロジェクト ノードを右クリックし、選択、**追加/新しい項目の**します。 **新しい項目の追加**ダイアログ ボックスに移動して**Visual c#/機能拡張**選択と**カスタムのツール ウィンドウ**します。 **名前**ウィンドウの下部にあるフィールドに、ツール ウィンドウのファイル名に変更**MyWindow.cs**です。  
   
 3.  プロジェクトをビルドし、デバッグを開始します。  
   
-     Visual Studio の実験用インスタンスが表示されます。 実験用インスタンスの詳細については、次を参照してください。 [実験用インスタンス](../extensibility/the-experimental-instance.md)します。  
+     Visual Studio の実験用インスタンスが表示されます。 実験用インスタンスの詳細については、次を参照してください。 [、実験用インスタンス](../extensibility/the-experimental-instance.md)です。  
   
-4.  実験用インスタンスでに移動 **ビュー\/その他のウィンドウ**します。  
+4.  実験用インスタンスに移動**ビュー/その他のウィンドウ**します。  
   
-     メニュー項目が表示 **最初**します。 クリックします。  
+     メニュー項目を表示する必要があります**MyWindow**です。 クリックします。  
   
-     タイトルのツール ウィンドウが表示されます **最初** とボタン言って **Click Me\!.**
+     タイトルのツール ウィンドウに表示する必要があります**MyWindow**とボタン言って**Click Me!**

@@ -1,78 +1,78 @@
 ---
-title: "FIELD_INFO | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FIELD_INFO"
-helpviewer_keywords: 
-  - "FIELD_INFO 構造体"
+title: "FIELD_INFO |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: FIELD_INFO
+helpviewer_keywords: FIELD_INFO structure
 ms.assetid: bfafef6d-0c83-43d7-a779-1f0d24b166a1
-caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5b7b3bfae3923a7df3f5c499bfac5cde12d1388b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# FIELD_INFO
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-この構造体にはローカル変数パラメーターまたはそのほかのフィールドついて説明します。  
+# <a name="fieldinfo"></a>FIELD_INFO
+この構造体は、ローカル変数、パラメーター、またはその他のフィールドについて説明します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-typedef struct _tagFieldInfo {   
-   FIELD_INFO_FIELDS dwFields;  
-   BSTR              bstrFullName;  
-   BSTR              bstrName;  
-   BSTR              bstrType;  
-   FIELD_MODIFIERS   dwModifiers;  
+```cpp  
+typedef struct _tagFieldInfo {   
+   FIELD_INFO_FIELDS dwFields;  
+   BSTR              bstrFullName;  
+   BSTR              bstrName;  
+   BSTR              bstrType;  
+   FIELD_MODIFIERS   dwModifiers;  
 } FIELD_INFO;  
 ```  
   
-```c#  
+```csharp  
 public struct FIELD_INFO {  
-   public uint   dwFields;  
-   public string bstrFullName;  
-   public string bstrName;  
-   public string bstrType;  
-   public uint   dwModifiers;  
+   public uint   dwFields;  
+   public string bstrFullName;  
+   public string bstrName;  
+   public string bstrType;  
+   public uint   dwModifiers;  
 };  
 ```  
   
-## メンバー  
+## <a name="members"></a>メンバー  
  dwFields  
- メンバーが設定されるかを指定する [FIELD\_INFO\_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) の列挙体のフラグの組み合わせ。  
+ フラグの組み合わせ、 [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md)のどのメンバーは、入力を指定する列挙です。  
   
  bstrFullName  
  フィールドの完全名。  
   
  bstrName  
- フィールドの短い形式の名前。  
+ フィールドの短い名前。  
   
  bstrType  
  フィールドの型。  
   
  dwModifiers  
- フィールドを説明する [FIELD\_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) の列挙体のフラグの組み合わせ。  
+ フラグの組み合わせ、 [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)フィールドを説明する列挙です。  
   
-## 解説  
- この構造が表示される [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) のメソッドに渡されます。  
+## <a name="remarks"></a>コメント  
+ この構造体に渡される、 [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)で塗り分けはメソッドです。  
   
-## 必要条件  
- ヘッダー : sh.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: sh.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [FIELD\_INFO\_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md)   
- [FIELD\_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)   
+ [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md)   
+ [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)

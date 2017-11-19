@@ -1,53 +1,54 @@
 ---
-title: "$1...$9 プロパティ (RegExp) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "$1...$9"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "$1...$9 プロパティ"
+title: "$1... 9 ドル プロパティ (RegExp) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: $1...$9
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: $1...$9 properties
 ms.assetid: 8bd84851-f62f-4eb1-a93d-b67135ea091a
-caps.latest.revision: 18
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: fc1926d6281c9003c432c9c9e89a73a48a584ef4
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# $1...$9 プロパティ (RegExp) (JavaScript)
-パターン一致で検出された、記憶されている最新の 9 つの部分を返します。  読み取り専用です。  
+# <a name="19-properties-regexp-javascript"></a>$1...$9 プロパティ (RegExp) (JavaScript)
+9 つが最近記憶されているパターン マッチ時に見つかった部分を返します。 読み取り専用です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 RegExp.$n   
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `RegExp`  
- 常にグローバルな `RegExp` オブジェクトを指定します。  
+ 常にグローバル`RegExp`オブジェクト。  
   
  `n`  
- 1 ～ 9 の任意の整数を指定します。  
+ 1 ~ 9 の任意の整数  
   
-## 解説  
- **$1...$9** のプロパティの値は、かっこで囲まれたパターンの検索が成功するたびに変更されます。  正規表現パターン内に指定できるかっこで囲んだ部分の数に制限はありませんが、保存されるのは最後に見つかった 9 つだけです。  
+## <a name="remarks"></a>コメント  
+ 値、 **$1... 9 ドル**成功かっこで囲まれた一致が行われたときにプロパティを変更します。 正規表現パターンは、かっこで囲まれた部分文字列の任意の数を指定することがありますが、最新の 9 のみを格納することができます。  
   
-## 使用例  
- 正規表現の検索を実行する例を次に示します。  これにより、グローバルな `RegExp` オブジェクトによる一致とサブマッチが表示されます。  サブマッチは、`$1…$9` のプロパティに含まれるかっこで囲まれた連続した一致です。  この例では、グローバルな `exec` メソッドによって返される配列からの一致とサブマッチも表示されます。  
+## <a name="example"></a>例  
+ 次の例では、正規表現の検索を実行します。 一致項目が表示され、グローバルから submatches`RegExp`オブジェクト。 サブマッチが正常にかっこで囲まれた一致に含まれている、`$1...$9`プロパティです。 この例は、また一致を表示し、によって返される配列から submatches、`exec`メソッドです。  
   
-```javascript  
+```JavaScript  
 var newLine = "<br />";  
   
 var re = /(\w+)@(\w+)\.(\w+)/g  
@@ -103,10 +104,10 @@ document.write(s);
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
- **対象**: [RegExp オブジェクト](../../javascript/reference/regexp-object-javascript.md)  
+ **適用されます**: [RegExp オブジェクト](../../javascript/reference/regexp-object-javascript.md)  
   
-## 参照  
- [Regular Expression Syntax \(JavaScript\)](http://msdn.microsoft.com/ja-jp/ab0766e1-7037-45ed-aa23-706f58358c0e)
+## <a name="see-also"></a>関連項目  
+ [正規表現の構文 (JavaScript)](http://msdn.microsoft.com/en-us/ab0766e1-7037-45ed-aa23-706f58358c0e)

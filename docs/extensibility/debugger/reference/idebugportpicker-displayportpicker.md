@@ -1,52 +1,54 @@
 ---
-title: "IDebugPortPicker::DisplayPortPicker | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DisplayPortPicker"
-  - "IDebugPortPicker::DisplayPortPicker"
+title: "IDebugPortPicker::DisplayPortPicker |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DisplayPortPicker
+- IDebugPortPicker::DisplayPortPicker
 ms.assetid: 08511ef5-be64-4069-b169-a569cc94bc64
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: bf6dee7f9c79e82d9e952e481c638c870308e890
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugPortPicker::DisplayPortPicker
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-ポートをユーザーが選択できるように指定するダイアログ ボックスが表示されます。  
+# <a name="idebugportpickerdisplayportpicker"></a>IDebugPortPicker::DisplayPortPicker
+ユーザーがポートを選択できる指定されたダイアログ ボックスが表示されます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT DisplayPortPicker(  
-   HWND hwndParentDialog,  
-   BSTR* pbstrPortId  
+   HWND hwndParentDialog,  
+   BSTR* pbstrPortId  
 );  
 ```  
   
-```c#  
+```csharp  
 public int DisplayPortPicker(  
-   int hwndParentDialog,  
-   out string pbstrPortId  
+   int hwndParentDialog,  
+   out string pbstrPortId  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `hwndParentDialog`  
- \[入力\] 親ダイアログ ボックスのハンドル。  
+ [in]親ダイアログ ボックスのハンドルです。  
   
  `pbstrPortId`  
- \[入力\] ポートの識別子の文字列。  
+ [out]ポートの識別子の文字列です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  ユーザーが \[ENT1ENT\] をクリックしを `S_FALSE` の戻り値 \(または `NULL` への `BSTR` に設定 `S_OK` の戻り値\) を表示します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 戻り値の`S_FALSE`(または戻り値の`S_OK`で、 `BSTR` 'éý' `NULL`)、ユーザーがクリックされたことを示します**キャンセル**です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugPortPicker](../../../extensibility/debugger/reference/idebugportpicker.md)

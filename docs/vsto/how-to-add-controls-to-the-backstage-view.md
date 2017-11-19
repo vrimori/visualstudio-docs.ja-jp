@@ -1,52 +1,54 @@
 ---
-title: "方法: Backstage ビューにコントロールを追加する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "コントロール, リボン"
-  - "カスタム リボン, メニュー"
-  - "カスタマイズ (リボンを), メニュー"
-  - "メニュー, カスタマイズ"
-  - "Microsoft Office ボタン"
-  - "Microsoft Office メニュー"
-  - "Office ボタン"
-  - "リボン, カスタマイズ"
-  - "リボン, メニュー"
+title: "方法: コントロール Backstage ビューを追加する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- customizing the Ribbon, menus
+- controls, Ribbon
+- menus, customizing
+- Microsoft Office Button
+- custom Ribbon, menus
+- Ribbon, customizing
+- Office button
+- Ribbon, menus
+- Microsoft Office Menu
 ms.assetid: 4fda1278-9aea-4d54-928a-269a81584494
-caps.latest.revision: 30
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 29
+caps.latest.revision: "30"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 7a16c564b39afdc2ec3cf3e15883fc05b2a13f5d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: Backstage ビューにコントロールを追加する
-  **\[ファイル\]** のタブをクリックしたときに表示されるメニューにコントロールを追加するには、リボン デザイナーを使用できます。  アプリケーションを実行するときは、**\[ファイル\]** のタブに追加したコントロールは **\[アドイン\]**という名前のグループ表示されます。  
+# <a name="how-to-add-controls-to-the-backstage-view"></a>方法: Backstage ビューにコントロールを追加する
+  リボン デザイナーを使用するには、をクリックしたときに表示されるメニューにコントロールを追加、**ファイル**タブ コントロールに追加するアプリケーションを実行するときに、**ファイル** タブに表示されるという名前のグループ**アドイン**です。  
   
- 組み込みコントロールの前または後にVisual Studioのリボン デザイナーを使用してコントロールを配置することはできません。  組み込みコントロールは、Backstageビューで既に表示されるコントロールです。  組み込みコントロールの前または後ろにコントロールを配置するには、リボン XML を使用する必要があります。  **\[リボン \(XML\)\]**に関する詳細については、[リボン XML](../vsto/ribbon-xml.md)を参照してください。  Backstage ビューのカスタマイズ方法の詳細については、「[Introduction to the Office 2010 Backstage View for Developers \(開発者向け Office 2010 Backstage ビューの概要\)](http://go.microsoft.com/fwlink/?LinkId=182189)」および「[Customizing the Office 2010 Backstage View for Developers \(Office 2010 Backstage ビューをカスタマイズする \(開発者向け\)\)](http://go.microsoft.com/fwlink/?LinkId=182188)」を参照してください。  
+ Visual Studio でリボン デザイナーを使用して、組み込みのコントロールの前後にコントロールを配置できません。 ビルトイン コントロールは、Backstage ビューで既に表示されているコントロールです。 組み込みコントロールの前後にコントロールを配置する場合は、リボン XML を使用する必要があります。 詳細については**リボン (XML)**を参照してください[リボン XML](../vsto/ribbon-xml.md)です。 Backstage ビューのカスタマイズの詳細については、次を参照してください。[開発者向けの Office 2010 の Backstage ビューの概要](http://go.microsoft.com/fwlink/?LinkId=182189)と[開発者向けの Office 2010 の Backstage ビューをカスタマイズする](http://go.microsoft.com/fwlink/?LinkId=182188)です。  
   
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]  
   
-### Backstageビューにコントロールを追加するには  
+### <a name="to-add-controls-to-backstage-view"></a>Backstage ビューにコントロールを追加するには  
   
-1.  デザイン ビューでリボン項目を開きます。  
+1.  デザイン ビューで、リボン項目を開きます。  
   
-     プロジェクトに **\[リボン \(ビジュアル デザイナー\)\]** 項目を追加する方法の詳細については、「[方法 : リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)」を参照してください。  
+     追加する方法については、**リボン (ビジュアル デザイナー)**をプロジェクトに項目を参照してください[する方法: リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)です。  
   
-2.  リボン デザイナーで、**\[ファイル\]** のタブをクリックします。  
+2.  リボン デザイナーで、をクリックして、**ファイル**タブです。  
   
-     メニュー デザイナーが表示されます。  このデザイン サーフェイスにコントロールは含まれていません。  
+     メニューのデザイナーが表示されます。 このデザイン サーフェイスにコントロールが含まれていません。  
   
-3.  **\[ツールボックス\]** の **\[Office リボン コントロール\]** タブから、次に挙げるコントロールの中から任意のものをメニュー デザイナーにドラッグします。  
+3.  **Office リボン コントロール**のタブ、**ツールボックス**、次のコントロールのメニュー デザイナーにドラッグします。  
   
     -   ボタン  
   
@@ -56,19 +58,19 @@ caps.handback.revision: 29
   
     -   メニュー  
   
-    -   \[Separator\]  
+    -   区切り記号  
   
     -   SplitButton  
   
     -   ToggleButton  
   
-4.  コントロールをドラッグし、メニュー上の新しい位置に移動します。  
+4.  メニューの新しい位置に移動するコントロールをドラッグします。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [リボンの概要](../vsto/ribbon-overview.md)   
  [リボン デザイナー](../vsto/ribbon-designer.md)   
  [リボン XML](../vsto/ribbon-xml.md)   
- [方法 : リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)   
- [チュートリアル : リボン デザイナーを使用したカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)  
+ [方法: リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)   
+ [チュートリアル: リボン デザイナーを使用したカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)  
   
   

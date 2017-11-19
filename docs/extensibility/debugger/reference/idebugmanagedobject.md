@@ -4,43 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- IDebugManagedObject
-helpviewer_keywords:
-- IDebugManagedObject interface
+f1_keywords: IDebugManagedObject
+helpviewer_keywords: IDebugManagedObject interface
 ms.assetid: 3ae09d34-112c-4285-80ee-9f7f8dc414d7
-caps.latest.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d991b417a054073918cd92bfb097926e3e1d49a2
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: d876fd9b536a0d16ae0aef4daed7f4c92c62f250
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="idebugmanagedobject"></a>IDebugManagedObject
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されません。 CLR 式エバリュエーターの実装については、次を参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
+>  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
   
- このインターフェイスは、式エバリュエーターを値クラスのインスタンスに対するプロパティまたはメソッドを呼び出すには、(EE) を使用する (たとえば、 `System.Decimal`) 呼び出さずに、値に設定する[評価](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md)デバッグ中のプログラムにします。  
+ このインターフェイスにより、式エバリュエーターを値クラスのインスタンスに対するプロパティまたはメソッドを呼び出すには、(EE) (たとえば、 `System.Decimal`) を呼び出さずに、値を設定して[評価](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md)デバッグ中のプログラムにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -60,10 +44,10 @@ IDebugManagedObject : IDebugObject
 |メソッド|説明|  
 |------------|-----------------|  
 |[GetManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject-getmanagedobject.md)|マネージ コード オブジェクトを表すし、適切なマネージ コードのインターフェイスを取得できるインターフェイスを返します。|  
-|[SetFromManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject-setfrommanagedobject.md)|このオブジェクトの値を指定したマネージ コード オブジェクトの値に設定します。|  
+|[SetFromManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject-setfrommanagedobject.md)|指定したマネージ コード オブジェクトの値をこのオブジェクトの値を設定します。|  
   
 ## <a name="remarks"></a>コメント  
- 式エバリュエーターは、解析ツリーで、マネージ コードの格納に、このインターフェイスを使用します。  
+ 式エバリュエーターでは、このインターフェイスを使用して、解析ツリーで、マネージ コード オブジェクトを格納します。  
   
 ## <a name="requirements"></a>要件  
  ヘッダー: ee.h  
@@ -73,5 +57,5 @@ IDebugManagedObject : IDebugObject
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
- [式評価インターフェイス](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)   
+ [式の評価インターフェイス](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)   
  [評価します。](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md)

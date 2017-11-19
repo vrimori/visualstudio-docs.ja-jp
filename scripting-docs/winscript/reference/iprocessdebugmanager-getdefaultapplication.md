@@ -1,27 +1,30 @@
 ---
-title: "IProcessDebugManager::GetDefaultApplication | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IProcessDebugManager::GetDefaultApplication |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IProcessDebugManager.GetDefaultApplication
 apilocation: pdm.dll
-helpviewer_keywords: 
-  - "IProcessDebugManager::GetDefaultApplication"
+helpviewer_keywords: IProcessDebugManager::GetDefaultApplication
 ms.assetid: 6c991faa-ea40-4d18-a1b8-6e7d0de6dd43
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 27fc46e8a5e07c4eb25c5e246db138a27e5511ae
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IProcessDebugManager::GetDefaultApplication
+# <a name="iprocessdebugmanagergetdefaultapplication"></a>IProcessDebugManager::GetDefaultApplication
 現在のプロセスの既定のアプリケーション オブジェクトを返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT GetDefaultApplication(  
@@ -29,21 +32,21 @@ HRESULT GetDefaultApplication(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppda`  
- \[出力\]このアプリケーションのデバッグ アプリケーション オブジェクト。  
+ [out]このアプリケーションのデバッグ アプリケーションのオブジェクト。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
- このメソッドは、新しいデバッグ アプリケーション オブジェクトを作成し、実行中のアプリケーションの一覧に、必要に応じて追加します。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、新しいデバッグ アプリケーションのオブジェクトを作成し、実行に追加、必要に応じて、アプリケーションの一覧です。  
   
- 言語のエンジンは、アプリケーションを提供しないホストで実行 `GetDefaultApplication` のメソッドで指定されたアプリケーションを使用する必要があります。  
+ 言語エンジンがで指定されたアプリケーションを使用する必要があります、`GetDefaultApplication`メソッド アプリケーションが用意されていないホストで実行されている場合。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IProcessDebugManager インターフェイス](../../winscript/reference/iprocessdebugmanager-interface.md)

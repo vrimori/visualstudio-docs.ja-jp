@@ -1,11 +1,10 @@
 ---
-title: 'CA1038: Enumerators should be strongly typed | Microsoft Docs'
+title: "CA1038: 列挙子は厳密に型指定 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,41 +14,26 @@ helpviewer_keywords:
 - EnumeratorsShouldBeStronglyTyped
 - CA1038
 ms.assetid: 8919f526-d487-42a4-87dc-2b2ee25260c4
-caps.latest.revision: 16
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 5ba630f68e9c49c755ab047a14a907822bee42e5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: c08d8ce661e46f76da6d2880bd6b4e833f0b4d1d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1038-enumerators-should-be-strongly-typed"></a>CA1038: Enumerators should be strongly typed
+# <a name="ca1038-enumerators-should-be-strongly-typed"></a>CA1038: 列挙子は厳密に型指定されていなければなりません
 |||  
 |-|-|  
 |TypeName|EnumeratorsShouldBeStronglyTyped|  
 |CheckId|CA1038|  
-|Category|Microsoft.Design|  
-|Breaking Change|Breaking|  
+|カテゴリ|Microsoft.Design|  
+|互換性に影響する変更点|あり|  
   
-## <a name="cause"></a>Cause  
- A public or protected type implements <xref:System.Collections.IEnumerator?displayProperty=fullName> but does not provide a strongly typed version of the <xref:System.Collections.IEnumerator.Current%2A?displayProperty=fullName> property. Types that are derived from the following types are exempt from this rule:  
+## <a name="cause"></a>原因  
+ パブリックまたはプロテクト型が実装する<xref:System.Collections.IEnumerator?displayProperty=fullName>の厳密に型指定されたバージョンは提供されません、<xref:System.Collections.IEnumerator.Current%2A?displayProperty=fullName>プロパティです。 次の種類から派生した型は、この規則から除外されます。  
   
 -   <xref:System.Collections.CollectionBase?displayProperty=fullName>  
   
@@ -57,26 +41,26 @@ ms.lasthandoff: 08/30/2017
   
 -   <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>  
   
-## <a name="rule-description"></a>Rule Description  
- This rule requires <xref:System.Collections.IEnumerator> implementations to also provide a strongly typed version of the <xref:System.Collections.IEnumerator.Current%2A> property so that users are not required to cast the return value to the strong type when they use the functionality that is provided by the interface. This rule assumes that the type that implements <xref:System.Collections.IEnumerator> contains a collection of instances of a type that is stronger than <xref:System.Object>.  
+## <a name="rule-description"></a>規則の説明  
+ この規則で<xref:System.Collections.IEnumerator>厳密に型指定されたバージョンの指定を実装する、<xref:System.Collections.IEnumerator.Current%2A>プロパティ ユーザーは、インターフェイスによって提供される機能を使用するときに、厳密な型への戻り値をキャストする必要がないようにします。 このルールは、ある型を実装する前提としています。<xref:System.Collections.IEnumerator>よりも厳密な型のインスタンスのコレクションを含んでいます<xref:System.Object>です。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, implement the interface property explicitly (declare it as `IEnumerator.Current`). Add a public strongly typed version of the property, declared as `Current`, and have it return a strongly typed object.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、インターフェイスのプロパティを明示的に実装 (として宣言`IEnumerator.Current`)。 パブリックの厳密に型指定されたバージョンとして宣言されている、プロパティの追加`Current`、厳密に型指定されたオブジェクトを返すことがあるとします。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Suppress a warning from this rule when you implement an object-based enumerator for use with an object-based collection, such as a binary tree. Types that extend the new collection will define the strongly typed enumerator and expose the strongly typed property.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ バイナリ ツリーなどのオブジェクト ベースのコレクションで使用するオブジェクトに基づく列挙子を実装する場合は、この規則による警告を抑制します。 新しいコレクションを拡張する型は厳密に型指定の列挙子を定義し、厳密に型指定のプロパティを公開します。  
   
-## <a name="example"></a>Example  
- The following example demonstrates the correct way to implement a strongly typed <xref:System.Collections.IEnumerator> type.  
+## <a name="example"></a>例  
+ 次の例では、厳密に型を実装するための正しい方法<xref:System.Collections.IEnumerator>型です。  
   
  [!code-csharp[FxCop.Design.IEnumeratorStrongTypes#1](../code-quality/codesnippet/CSharp/ca1038-enumerators-should-be-strongly-typed_1.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1035: ICollection implementations have strongly typed members](../code-quality/ca1035-icollection-implementations-have-strongly-typed-members.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA1035: ICollection の実装は、厳密に型指定されたメンバーを含んでいます](../code-quality/ca1035-icollection-implementations-have-strongly-typed-members.md)  
   
- [CA1039: Lists are strongly typed](../code-quality/ca1039-lists-are-strongly-typed.md)  
+ [CA1039: リストは厳密に型指定されています](../code-quality/ca1039-lists-are-strongly-typed.md)  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  <xref:System.Collections.IEnumerator?displayProperty=fullName>   
  <xref:System.Collections.CollectionBase?displayProperty=fullName>   
  <xref:System.Collections.DictionaryBase?displayProperty=fullName>   

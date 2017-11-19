@@ -1,72 +1,69 @@
 ---
-title: Improving the Performance of a VSTO Add-in | Microsoft Docs
+title: "VSTO アドインのパフォーマンスを向上させる |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - VB
 - CSharp
 ms.assetid: 03ef25c2-6308-4737-a655-74bbbb472dc2
-caps.latest.revision: 14
-author: kempb
-ms.author: kempb
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: ad0f4edffa387c89e5ef404117852f3f04574ca2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: aa8aba456e6912569480305922511f6ffebe674b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="improving-the-performance-of-a-vsto-add-in"></a>Improving the Performance of a VSTO Add-in
-  You can give your users a better experience by optimizing VSTO Add-ins that you create for Office applications so that they quickly start up, shut down, open items, and perform other tasks. If your VSTO Add-in is for Outlook, you can also reduce the chance that your VSTO Add-in will be disabled because of poor performance. You can increase the performance of your VSTO Add-in by implementing the following strategies:  
+# <a name="improving-the-performance-of-a-vsto-add-in"></a>VSTO アドインのパフォーマンスの向上
+  Office アプリケーション用に作成した VSTO アドインを最適化して、そのアドインの開始、終了、また、項目を開くなどのタスクの実行を素早く行えるようにして、ユーザー エクスペリエンスを向上させることができます。 VSTO アドインが Outlook を対象にしている場合は、不十分なパフォーマンスが原因で VSTO アドインが無効にされる可能性を低くすることができます。 次の方針を導入すると、VSTO アドインのパフォーマンスを向上させることができます。  
   
--   [Load VSTO Add-ins on demand](#Load).  
+-   [必要に応じた VSTO アドインの読み込み](#Load)。  
   
--   [Publish Office solutions by using Windows Installer](#Publish).  
+-   [Windows インストーラーを使用した Office ソリューションの発行](#Publish)。  
   
--   [Bypass ribbon reflection](#Bypass).  
+-   [リボン リフレクションのバイパス](#Bypass)。  
   
--   [Perform expensive operations in a separate execution thread](#Perform).  
+-   [負荷の高い操作を単独の実行スレッドで実行](#Perform)。  
   
- For more information about how to optimize an Outlook VSTO Add-in, see [Performance criteria for keeping VSTO Add-ins enabled](http://go.microsoft.com/fwlink/?LinkID=266503).  
+ Outlook VSTO アドインを最適化する方法の詳細については、「 [アドインを有効に保つためのパフォーマンス基準](http://go.microsoft.com/fwlink/?LinkID=266503)」を参照してください。  
   
-##  <a name="Load"></a> Load VSTO Add-ins on demand  
- You can configure a VSTO Add-in to load only under the following circumstances:  
+##  <a name="Load"></a> 必要に応じた VSTO アドインの読み込み  
+ 次の状況でのみ読み込まれるように VSTO アドインを構成できます。  
   
--   The first time that the user starts the application after the VSTO Add-in is installed.  
+-   VSTO アドインのインストール後にユーザーがアプリケーションを初めて起動するとき。  
   
--   The first time that the user interacts with the VSTO Add-in after starting the application any subsequent time.  
+-   それ以降にアプリケーションを起動した後、ユーザーが初めて VSTO アドインを操作するとき。  
   
- For example, your VSTO Add-in might populate a worksheet with data when the user chooses a custom button that's labeled **Get My Data**. The application must load your VSTO Add-in at least one time so that the **Get My Data** button can appear in the ribbon. However, the VSTO Add-in doesn't load again when the user starts the application the next time. The VSTO Add-in loads only when the user chooses the **Get My Data** button.  
+ たとえば、VSTO アドインの可能性がありますをワークシートに読み込むデータというラベルの付いたカスタム ボタンを選択したときに**自分のデータを取得**です。 **[自分のデータを取得]** ボタンがリボンに表示されるように、アプリケーションはこの VSTO アドインを少なくとも 1 回読み込む必要があります。 ただし、VSTO アドインは読み込まれません、ユーザーが次回アプリケーションを起動するとき。 VSTO アドインが読み込まれるのは、ユーザーが **[自分のデータを取得]** ボタンをクリックしたときのみです。  
   
-#### <a name="to-configure-a-clickonce-solution-to-load-vsto-add-ins-on-demand"></a>To configure a ClickOnce solution to load VSTO Add-ins on demand  
+#### <a name="to-configure-a-clickonce-solution-to-load-vsto-add-ins-on-demand"></a>必要に応じて VSTO アドインを読み込むように ClickOnce ソリューションを構成するには  
   
-1.  In **Solution Explorer**, choose the project node.  
+1.  **ソリューション エクスプローラー**で、プロジェクト ノードを選択します。  
   
-2.  On the menu bar, choose **View**, **Property Pages**.  
+2.  メニュー バーの **[表示]**、 **[プロパティ ページ]**の順にクリックします。  
   
-3.  On the **Publish** tab, choose the **Options** button.  
+3.  **[発行]** タブの **[オプション]** をクリックします。  
   
-4.  In the **Publish Options** dialog box, choose the **Office Settings** list item, choose the **Load on Demand** option, and then choose the **OK** button.  
+4.  **[発行オプション]** ダイアログ ボックスで、 **[Office の設定]** リスト項目を選択し、 **[必要に応じて読み込む]** オプションを選択してから、 **[OK]** をクリックします。  
   
-#### <a name="to-configure-a-windows-installer-solution-to-load-vsto-add-ins-on-demand"></a>To configure a Windows Installer solution to load VSTO Add-ins on demand  
+#### <a name="to-configure-a-windows-installer-solution-to-load-vsto-add-ins-on-demand"></a>必要に応じて VSTO アドインを読み込むように Windows インストーラー ソリューションを構成するには  
   
-1.  In the registry, set the `LoadBehavior` entry of the *Root*\Software\Microsoft\Office\\*ApplicationName*\Addins\\*Add-in ID* key to **0x10**.  
+1.  レジストリで、設定、`LoadBehavior`のエントリ、*ルート*\Software\Microsoft\Office\\*ApplicationName*\Addins\\*add-in ID*キーを**0x10**です。  
   
-     For more information, see [Registry Entries for VSTO Add-ins](../vsto/registry-entries-for-vsto-add-ins.md).  
+     詳細については、「 [Registry Entries for VSTO Add-ins](../vsto/registry-entries-for-vsto-add-ins.md)」を参照してください。  
   
-#### <a name="to-configure-a-solution-to-load-vsto-add-ins-on-demand-while-you-debug-the-solution"></a>To configure a solution to load VSTO Add-ins on demand while you debug the solution  
+#### <a name="to-configure-a-solution-to-load-vsto-add-ins-on-demand-while-you-debug-the-solution"></a>ソリューションのデバッグ中に必要に応じて VSTO アドインを読み込むようにソリューションを構成するには  
   
-1.  Create a script that sets the `LoadBehavior` entry of the *Root*\Software\Microsoft\Office\\*ApplicationName*\Addins\\*Add-in ID* key to **0x10**.  
+1.  設定するスクリプトを作成、`LoadBehavior`のエントリ、*ルート*\Software\Microsoft\Office\\*ApplicationName*\Addins\\*add-in ID*キーを**0x10**です。  
   
-     The following code shows an example of this script.  
+     このスクリプトの例を次のコードに示します。  
   
     ```  
     [HKEY_CURRENT_USER\Software\Microsoft\Office\Excel\Addins\MyAddIn]  
@@ -77,53 +74,54 @@ ms.lasthandoff: 08/30/2017
   
     ```  
   
-2.  Create a post-build event that updates the registry by using the script.  
+2.  スクリプトを使用してレジストリを更新するビルド後のイベントを作成します。  
   
-     The following code shows an example of a command string that you might add to a post-build event.  
+     次のコードに、ビルド後のイベントに追加できるコマンド文字列の例を示します。  
   
     ```  
     regedit /s "$(SolutionDir)$(SolutionName).reg"  
   
     ```  
   
-     For information about how to create post-build event in a C# project, see [How to: Specify Build Events &#40;C&#35;&#41;](/visualstudio/ide/how-to-specify-build-events-csharp).  
+     C# プロジェクトでビルド後のイベントを作成する方法については、次を参照してください。[する方法: ビルド イベントの指定 &#40;です。C# 35; &#41;](/visualstudio/ide/how-to-specify-build-events-csharp).  
   
-     For information about how to create a post-build event in a Visual Basic project, see [How to: Specify Build Events &#40;Visual Basic&#41;](/visualstudio/ide/how-to-specify-build-events-visual-basic).  
+     Visual Basic プロジェクトでビルド後のイベントを作成する方法については、次を参照してください。[する方法: ビルド イベントの指定 &#40;です。Visual Basic &#41;](/visualstudio/ide/how-to-specify-build-events-visual-basic).  
   
 ##  <a name="Publish"></a> Publish Office Solutions by Using Windows Installer  
- If you publish your solution by using Windows Installer, the Visual Studio 2010 Tools for Office Runtime bypasses the following steps when the VSTO Add-in loads.  
+ Windows インストーラーを使用してソリューションを発行する場合は、Visual Studio 2010 Tools for Office Runtime は、VSTO アドインを読み込むときに次の手順をスキップします。  
   
--   Validating the manifest schema.  
+-   マニフェスト スキーマの検証。  
   
--   Automatically checking for updates.  
+-   更新プログラムの自動的な確認。  
   
--   Validating the digital signatures of the deployment manifests.  
+-   配置マニフェストのデジタル署名の検証。  
   
     > [!NOTE]  
-    >  This approach isn't necessary if you deploy your VSTO Add-in to a secure location on the users' computers.  
+    >  この方法は、ユーザーのコンピューター上の安全な場所に、VSTO アドインで展開する場合は必要ありません。  
   
- For more information, see [Deploying an Office Solution by Using Windows Installer](../vsto/deploying-an-office-solution-by-using-windows-installer.md).  
+ 詳細については、「 [Deploying an Office Solution by Using Windows Installer](../vsto/deploying-an-office-solution-by-using-windows-installer.md)」を参照してください。  
   
 ##  <a name="Bypass"></a> Bypass Ribbon Reflection  
- If you build a solution by using [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)], ensure that your users have installed the most recent version of the Visual Studio 2010 Tools for Office Runtime when you deploy the solution. Older versions of that runtime reflected into solution assemblies to locate ribbon customizations. This process can cause the VSTO Add-in to load more slowly.  
+ [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]を使用してソリューションをビルドする場合は、ソリューションを配置するときに、ユーザーが Visual Studio 2010 Tools for Office Runtime の最新バージョンを既にインストールしていることを確認します。 このランタイムの古いバージョンでは、リボンのカスタマイズを識別するために、ソリューションのアセンブリのリフレクションが実行されていました。 このプロセスを実行すると、VSTO アドインの読み込み速度がさらに低下する可能性があります。  
   
- As an alternative, you can prevent any version of the Visual Studio 2010 Tools for Office Runtime from using reflection to identify ribbon customizations. To follow this strategy, override the `CreateRibbonExtensibility` method, and explicitly return ribbon objects. If your VSTO Add-in doesn't contain any ribbon customizations, return `null` inside of the method.  
+ 別の方針として、Visual Studio 2010 Tools for Office Runtime のどのバージョンを使用する場合でも、リボンのカスタマイズを識別することを目的としたリフレクションを防止することもできます。 この方針に従うには、 `CreateRibbonExtensibility` メソッドをオーバーライドし、明示的にリボン オブジェクトを返します。 場合は、VSTO アドインで、リボンのカスタマイズが含まれていない、返す`null`メソッド内で。  
   
- The following example returns a ribbon object based on the value of a field.  
+ 次の例では、フィールドの値に基づいてリボン オブジェクトを返します。  
   
- [!code-vb[Trin_Ribbon_Choose_Ribbon#1](../vsto/codesnippet/VisualBasic/trin_ribbon_choose_ribbon_4/ThisWorkbook.vb#1)] [!code-csharp[Trin_Ribbon_Choose_Ribbon#1](../vsto/codesnippet/CSharp/trin_ribbon_choose_ribbon_4/ThisWorkbook.cs#1)]  
+ [!code-vb[Trin_Ribbon_Choose_Ribbon#1](../vsto/codesnippet/VisualBasic/trin_ribbon_choose_ribbon_4/ThisWorkbook.vb#1)]
+ [!code-csharp[Trin_Ribbon_Choose_Ribbon#1](../vsto/codesnippet/CSharp/trin_ribbon_choose_ribbon_4/ThisWorkbook.cs#1)]  
   
 ##  <a name="Perform"></a> Perform Expensive Operations in a Separate Execution Thread  
- Consider performing time-consuming tasks (such as long running tasks, database connections, or other sorts of network calls) in a separate thread. For more information, see [Threading Support in Office](../vsto/threading-support-in-office.md).  
+ 時間を要するタスク (長時間実行されるタスク、データベース接続、または他の種類のネットワークの呼び出しなど) を単独のスレッドで実行することを検討してください。 詳細については、「 [Threading Support in Office](../vsto/threading-support-in-office.md)」を参照してください。  
   
 > [!NOTE]  
->  All code that calls into the Office object model must execute in the main thread.  
+>  Office オブジェクト モデルを呼び出すすべてのコードは、メイン スレッドで実行する必要があります。  
   
-## <a name="see-also"></a>See Also  
- [Demand-Loading VSTO Add-ins](http://blogs.msdn.com/b/andreww/archive/2008/07/14/demand-loading-vsto-add-ins.aspx)   
- [Delay-loading the CLR in Office Add-ins](http://blogs.msdn.com/b/andreww/archive/2008/04/19/delay-loading-the-clr-in-office-add-ins.aspx)   
- [VSTO Performance: Delay Loading and You (Stephen Peters)](http://blogs.msdn.com/b/vsto/archive/2010/01/07/vsto-performance-delay-loading-and-you.aspx)   
- [Performance Improvements Coming Soon to a Service Pack Near You (Stephen Peters)](http://blogs.msdn.com/b/vsto/archive/2010/11/30/performance-improvements-coming-soon-to-a-service-pack-near-you-stephen-peters.aspx)   
- [VSTO Performance: Ribbon Reflection (Stephen Peters)](http://blogs.msdn.com/b/vsto/archive/2010/06/03/vsto-performance-ribbon-reflection.aspx)  
+## <a name="see-also"></a>関連項目  
+ [VSTO アドインの必要に応じた読み込み](http://blogs.msdn.com/b/andreww/archive/2008/07/14/demand-loading-vsto-add-ins.aspx)   
+ [Office アドインの CLR を遅延読み込み](http://blogs.msdn.com/b/andreww/archive/2008/04/19/delay-loading-the-clr-in-office-add-ins.aspx)   
+ [VSTO のパフォーマンス: 遅延読み込みと開発者 (Stephen Peters)](http://blogs.msdn.com/b/vsto/archive/2010/01/07/vsto-performance-delay-loading-and-you.aspx)   
+ [近日公開予定開発者 (Stephen Peters) の近くの Service Pack にパフォーマンスの向上](http://blogs.msdn.com/b/vsto/archive/2010/11/30/performance-improvements-coming-soon-to-a-service-pack-near-you-stephen-peters.aspx)   
+ [VSTO のパフォーマンス: リボン リフレクション (Stephen Peters)](http://blogs.msdn.com/b/vsto/archive/2010/06/03/vsto-performance-ribbon-reflection.aspx)  
   
   

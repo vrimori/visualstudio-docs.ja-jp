@@ -1,40 +1,39 @@
 ---
-title: "IDiaLoadCallback2::RestrictOriginalPathAccess | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaLoadCallback2::RestrictOriginalPathAccess メソッド"
+title: "Idialoadcallback 2::restrictoriginalpathaccess |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaLoadCallback2::RestrictOriginalPathAccess method
 ms.assetid: 31fde3af-2824-4b0f-8d0d-cee6046596f6
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 826cebba9d4eaf8e2bcf6d055a2ce524e1cf17d0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaLoadCallback2::RestrictOriginalPathAccess
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-これは元の Debug ディレクトリの .pdb ファイルを検索することが適切かどうかを判定します。  
+# <a name="idialoadcallback2restrictoriginalpathaccess"></a>IDiaLoadCallback2::RestrictOriginalPathAccess
+かどうかが元のデバッグ ディレクトリに .pdb ファイルを検索するかを決定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```C++  
 HRESULT RestrictOriginalPathAccess ();  
 ```  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- `S_OK` 以外のリターン コードは元の Debug ディレクトリの .pdb ファイルを検索するようにします。  元の Debug ディレクトリが実行可能ファイルにコンパイル シンボル ファイルをデバッグするとパスです。  このパスは実行可能ファイルが存在するパスと必ずしも同じではありません。  
+## <a name="remarks"></a>コメント  
+ すべてのコード以外のリターン`S_OK`により、元のデバッグ ディレクトリに .pdb ファイルを検索します。 元のデバッグ ディレクトリは、デバッグがオンにすると、実行可能ファイルにコンパイル シンボル ファイルへのパスです。 このパスは必ずしも実行可能ファイルが存在するパスと同じです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

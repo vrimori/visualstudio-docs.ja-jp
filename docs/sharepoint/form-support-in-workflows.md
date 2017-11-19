@@ -1,56 +1,58 @@
 ---
-title: "ワークフローでのフォームのサポート"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での SharePoint 開発, ワークフロー"
-  - "ワークフロー [Visual Studio での SharePoint 開発]"
+title: "ワークフローでのサポートを形成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, workflows
+- workflows [SharePoint development in Visual Studio]
 ms.assetid: 1706f6a2-ea84-4234-85ae-19feb8540507
-caps.latest.revision: 12
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: e2c63af83c6ca8249e87d60f23043c0639c7fd43
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ワークフローでのフォームのサポート
-  ワークフローでは、関連付け、初期化、タスク、および変更という 4 種類のフォームを使用できます。  これらの種類のフォームは、ASPX フォームまたは InfoPath フォームに基づいて作成できます。  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] が特定のフォームに対して提供するサポートのレベルは、さまざまな要素によって決まります。それらを表で説明します。  ワークフロー フォーム形式の詳細については MSDN Web サイト [ワークフロー Forms Overview](http://go.microsoft.com/fwlink/?LinkId=185228) で、参照します。  
+# <a name="form-support-in-workflows"></a>ワークフローでのフォームのサポート
+  次の 4 つの種類のフォームをワークフローで使用できます: アソシエーション、開始に使用する、タスク、および変更します。 これらのフォーム型は、ASPX フォームまたはフォームのいずれかに基づいて作成できます。 レベルをサポートする[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]特定のフォームは、次の表で説明されるいくつかの要因によって異なります。 を提供します。 フォームの種類のワークフローの詳細については、次を参照してください。[ワークフロー フォームの概要](http://go.microsoft.com/fwlink/?LinkId=185228)MSDN Web サイトです。  
   
-## XML ファクタリング  
- ASPX 関連付けまたは初期化フォームを [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ワークフロー プロジェクト項目に追加すると、フォーム名または配置パスが更新されたとき、またはフォームが削除されたときに、関連付けまたは初期化フォームを参照する属性が常に一致するように、ワークフローの Elements.xml ファイル内の XML が [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によって自動的にリファクタリングされます。  ただし、ワークフローで他の種類のフォーム \(タスクや変更フォームなど\) を使用した場合、Elements.xml ファイルはリファクタリングされません。  
+## <a name="xml-refactoring"></a>XML のリファクタリング  
+ ASPX アソシエーションまたは開始フォームを追加すると、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]ワークフロー プロジェクト項目、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]の同期の関連付けまたは開始フォームを参照する属性を保持するワークフローの Elements.xml ファイル内の XML が自動的にリファクタリングしました。フォームの名前または配置パスを更新するたびにまたはフォームを削除します。 ただし、タスクまたは更新フォームなどのワークフローで他のフォームの種類を使用すると、Elements.xml ファイルいないリファクターされています。  
   
-## 新しい Visual Studio ワークフローでのフォームのサポート  
- 次の表に、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で作成されたワークフロー内の ASPX フォームまたは InfoPath フォームの異なる種類のフォームに対する [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] のサポートを示します。  
+## <a name="form-support-in-new-visual-studio-workflows"></a>Visual Studio の新しいワークフローでのフォームのサポート  
+ 次の表にリスト[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]で作成したワークフローの ASPX または InfoPath のフォーム上のさまざまなフォーム型のサポート[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。  
   
-|フォームの種類|Visual Studio で ASPX フォームを使用して作成されたワークフロー|Visual Studio で InfoPath フォームを使用して作成されたワークフロー|  
-|-------------|-----------------------------------------------|---------------------------------------------------|  
-|関連付け|-   ASPX 関連付けフォームは、**ワークフロー関連付けフォーム**項目テンプレートを使用してワークフローに追加できます。<br />-   ワークフローの Elements.xml ファイルは、フォームの追加、名前の変更、削除が実行されたとき、またはその配置パスが変更されたときにリファクタリングされます。<br />-   詳細については、「[チュートリアル: 関連付けフォームと開始フォームを持つワークフローの作成](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)」を参照してください。|-   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] には InfoPath 関連付けフォーム テンプレートはありません。<br />-   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] と InfoPath Designer は統合されていません。<br />-   ワークフローの Elements.xml ファイルはリファクタリングされません。|  
-|開始|-   ASPX 初期化フォームは、**ワークフロー初期化フォーム**項目テンプレートを使用してワークフローに追加できます。<br />-   ワークフローの Elements.xml ファイルは、フォームの追加、名前の変更、削除が実行されたとき、またはその配置パスが変更されたときにリファクタリングされます。<br />-   詳細については、「[チュートリアル: 関連付けフォームと開始フォームを持つワークフローの作成](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)」を参照してください。|-   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] には InfoPath 関連付けフォーム テンプレートはありません。<br />-   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] と InfoPath Designer は統合されていません。<br />-   ワークフローの Elements.xml ファイルはリファクタリングされません。|  
-|タスク|-   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で使用できる ASPX タスク フォームはありません。  アプリケーション ページを作成し、そのページにコードを追加する必要があります。<br />-   ワークフローの Elements.xml ファイルはリファクタリングされません。<br />-   詳細については、参照します [ワークフロー タスクがフォーム \(SharePoint Foundation\)](http://go.microsoft.com/fwlink/?LinkId=187674)|-   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] には InfoPath タスク フォーム テンプレートはありません。<br />-   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] と InfoPath Designer は統合されていません。<br />-   ワークフローの Elements.xml ファイルはリファクタリングされません。|  
-|変更|-   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で使用できる ASPX 変更フォームはありません。  変更フォームを追加するには、アプリケーション ページを作成し、そのページにコードを追加する必要があります。<br />-   ワークフローの Elements.xml ファイルはリファクタリングされません。  必要に応じて手動で編集する必要があります。<br />-   詳細については、参照します [ワークフローの変更のフォーム \(SharePoint Foundation\)](http://go.microsoft.com/fwlink/?LinkId=187675)|-   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] には InfoPath 変更フォーム テンプレートはありません。<br />-   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] と InfoPath Designer は統合されていません。<br />-   ワークフローの Elements.xml ファイルはリファクタリングされません。|  
+|フォームの種類|ASPX フォームでの Visual Studio で作成したワークフロー|InfoPath フォームを使用して Visual Studio で作成されたワークフロー|  
+|---------------|---------------------------------------------------------|-----------------------------------------------------------------|  
+|関連付け|ASPX の関連付けフォームを使用して、ワークフローに追加できる、**ワークフロー関連付けフォーム**項目テンプレート。<br />-ワークフローの Elements.xml ファイルは、フォームの追加、名前変更、または削除すると、ときに、またはその配置パスが変更されたときにリファクターされています。<br />詳細については、次を参照してください。[チュートリアル: アソシエーションと開始フォームを使用するワークフローを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)です。|テンプレートはありません。 InfoPath の関連付けフォームで[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。<br />-がない間の統合[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]および InfoPath デザイナー。<br />-ワークフローの Elements.xml ファイルをリファクタリングできません。|  
+|開始に使用します。|-使用して、ワークフローに ASPX 開始フォームを追加することができます、**ワークフロー開始フォーム**項目テンプレート。<br />-ワークフローの Elements.xml ファイルは、フォームの追加、名前変更、または削除すると、ときに、またはその配置パスが変更されたときにリファクターされています。<br />詳細については、次を参照してください。[チュートリアル: アソシエーションと開始フォームを使用するワークフローを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)です。|テンプレートはありません。 InfoPath の関連付けフォームで[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。<br />-がない間の統合[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]および InfoPath デザイナー。<br />-ワークフローの Elements.xml ファイルをリファクタリングできません。|  
+|タスク|ASPX タスク フォームのテンプレートで使用できる[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 アプリケーション ページを作成し、コードを追加する必要があります。<br />-ワークフローの Elements.xml ファイルをリファクタリングできません。<br />詳細については、次を参照してください[ワークフロー タスク フォーム (SharePoint Foundation)。](http://go.microsoft.com/fwlink/?LinkId=187674)|テンプレートはありません。 InfoPath タスク フォームで[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。<br />-がない間の統合[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]および InfoPath デザイナー。<br />-ワークフローの Elements.xml ファイルをリファクタリングできません。|  
+|変更|ASPX の変更のフォーム テンプレートがある-で[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 修正フォームを追加するには、アプリケーション ページを作成し、コードを追加する必要があります。<br />-ワークフローの Elements.xml ファイルをリファクタリングできません。 必要に応じて手動で編集する必要があります。<br />詳細については、次を参照してください[ワークフロー修正フォーム (SharePoint Foundation)。](http://go.microsoft.com/fwlink/?LinkId=187675)|テンプレートはありません。 InfoPath 修正フォームで[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。<br />-がない間の統合[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]および InfoPath デザイナー。<br />-ワークフローの Elements.xml ファイルをリファクタリングできません。|  
   
-## インポートされた SharePoint 再利用可能ワークフローでのフォームのサポート  
- 次の表に、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] にインポートされた再利用可能ワークフロー内の ASPX フォームまたは InfoPath フォームの異なる種類のフォームに対する [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] のサポートを示します。  
+## <a name="form-support-in-imported-sharepoint-reusable-workflows"></a>インポートされた SharePoint 再利用可能なワークフローでのフォームのサポート  
+ 次の表にリスト[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]にインポートされる SharePoint の再利用可能なワークフローの ASPX または InfoPath のフォーム上のさまざまなフォーム型のサポート[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。  
   
-|フォームの種類|SharePoint Designer からインポートされた ASPX フォームを含む再利用可能ワークフロー|SharePoint Designer からインポートされた InfoPath フォームを含む再利用可能ワークフロー|  
-|-------------|------------------------------------------------------------|----------------------------------------------------------------|  
-|関連付け|-   フォームは、ワークフローの Elements.xml ファイルで参照されます。<br />-   ワークフローの Elements.xml ファイルは、フォームの名前の変更または削除が実行されたとき、またはその配置パスが変更されたときにリファクタリングされます。|-   フォームはインポートされますが、ワークフローの Elements.xml ファイルでは参照されません。<br />-   ワークフローの Elements.xml ファイルはリファクタリングされません。|  
-|開始|-   フォームは、ワークフローの Elements.xml ファイル内でワークフローによって参照されます。<br />-   ワークフローの Elements.xml ファイルは、フォームの名前の変更または削除が実行されたとき、またはその配置パスが変更されたときにリファクタリングされます。|-   フォームはインポートされますが、ワークフローの Elements.xml ファイルでは参照されません。<br />-   ワークフローの Elements.xml ファイルはリファクタリングされません。 **Note:**  これを動作させるには、ルールとプロパティを追加して変更する必要があります。|  
-|タスク|-   フォームは、ワークフローの Elements.xml ファイルで参照されます。<br />-   ワークフローの Elements.xml ファイルはリファクタリングされません。|-   フォームはインポートされますが、ワークフローの Elements.xml ファイルでは参照されません。<br />-   ワークフローの Elements.xml ファイルはリファクタリングされません。 **Note:**  これを動作させるには、ルールとプロパティを追加して変更する必要があります。|  
-|変更|使用できません。  ASPX 変更フォームは SharePoint Designer では作成できません。|使用できません。  InfoPath 変更フォームは SharePoint Designer では作成されません。ただし、組み込みの SharePoint Server ワークフローは別であり、これはワークフローのエクスポート時に .wsp ファイルに含まれません。|  
+|フォームの種類|SharePoint Designer からインポートされた ASPX 形式を持つ再利用可能なワークフロー|SharePoint Designer からインポートした InfoPath フォームが再利用可能なワークフロー|  
+|---------------|-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
+|関連付け|-フォームは、ワークフローの Elements.xml ファイルで参照されています。<br />-ワークフローの Elements.xml ファイルは、フォームの名前を変更または削除すると、ときに、またはその配置パスが変更されたときにリファクターされています。|-フォームは、インポートしますが、ワークフローの Elements.xml で参照されていません。<br />-ワークフローの Elements.xml ファイルをリファクタリングできません。|  
+|開始に使用します。|-フォームは、ワークフローの Elements.xml ファイル内のワークフローで参照されます。<br />-ワークフローの Elements.xml ファイルは、フォームの名前を変更または削除すると、ときに、またはその配置パスが変更されたときにリファクターされています。|-フォームは、インポートしますが、ワークフローの Elements.xml で参照されていません。<br />-ワークフローの Elements.xml ファイルをリファクタリングできません。 **注:**ルールとプロパティを追加およびこのシナリオを実現する変更する必要があります。|  
+|タスク|-フォームは、ワークフローの Elements.xml ファイルで参照されています。<br />-ワークフローの Elements.xml ファイルをリファクタリングできません。|-フォームは、インポートしますが、ワークフローの Elements.xml で参照されていません。<br />-ワークフローの Elements.xml ファイルをリファクタリングできません。 **注:**ルールとプロパティを追加およびこのシナリオを実現する変更する必要があります。|  
+|変更|該当なし。 SharePoint Designer の ASPX の変更のフォームを作成できません。|該当なし。 組み込みの SharePoint サーバーのワークフローは、ワークフローをエクスポートする場合、.wsp ファイルに含まれていないを除く SharePoint デザイナーで変更の InfoPath フォームを作成できません。|  
   
-## 参照  
- [チュートリアル: 関連付けフォームと開始フォームを持つワークフローの作成](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)   
- [SharePoint ワークフロー ソリューションの作成](../sharepoint/creating-sharepoint-workflow-solutions.md)   
- [既存の SharePoint サイトからのアイテムのインポート](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)  
+## <a name="see-also"></a>関連項目  
+ [チュートリアル: アソシエーションと開始フォーム、ワークフローを作成します。](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)   
+ [SharePoint ワークフロー ソリューションを作成します。](../sharepoint/creating-sharepoint-workflow-solutions.md)   
+ [既存の SharePoint サイトからの項目のインポート](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)  
   
   

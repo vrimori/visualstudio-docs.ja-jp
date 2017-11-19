@@ -1,56 +1,57 @@
 ---
-title: "削除する ~ SAK ファイル | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "一時ファイル"
-  - "~ sak ファイル"
-  - "ソース管理プラグイン ~ SAK ファイル"
+title: "削除する ~ SAK ファイル |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- temporary files
+- ~sak files
+- source control plug-ins, ~SAK files
 ms.assetid: 5277b5fa-073b-4bd1-8ba1-9dc913aa3c50
-caps.latest.revision: 15
-caps.handback.revision: 15
-ms.author: "gregvanl"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: e487acefcb06c4fa0cd2070bfcf20bd065d500ce
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 削除する ~ SAK ファイル
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-ソース管理プラグイン API 1.2 では ~SAK ファイルが検出できるフラグと新しい関数とソース管理プラグインは MSSCCPRJ ファイルと共有チェック アウトをサポートするかどうか置き換えられました。  
+# <a name="elimination-of-sak-files"></a>削除する ~ SAK ファイル
+ソース管理プラグイン API 1.2 では、~ SAK ファイルが置き換えられて機能フラグと、ソース管理プラグインは、MSSCCPRJ ファイルと共有チェック アウトをサポートするかどうかを検出する新しい関数。  
   
-## ~SAK ファイル  
- Visual Studio .NET 2003 では ~SAK が付けられた一時ファイルを作成します。  これらのファイルがソース管理のプラグインでサポートするかどうかを確認するために使用されています :  
+## <a name="sak-files"></a>~ SAK ファイル  
+ Visual Studio .NET 2003 が付きます。 一時ファイルを作成した ~ SAK です。 これらのファイルは、ソース管理プラグインをサポートしているかどうかに使用されます。  
   
--   MSSCCPRJ.SCC ファイル。  
+-   MSSCCPRJ です。SCC ファイルです。  
   
--   複数のチェック アウト \(共有\)。  
+-   複数 (共有) のチェック アウトします。  
   
- サポートするプラグインの最新機能はソース管理プラグイン API で 1.2 以降のセクションでは詳細な新機能フラグを使用して一時ファイルを作成せずにこれらの IDE 機能を検出すると関数提供します。  
+ プラグイン ソース管理プラグイン API 1.2 で提供される高度な機能をサポートする、IDE は、新機能、フラグ、および、次のセクションで詳しく関数を使用して一時ファイルを作成するこれらの機能を検出できます。  
   
-## 新しい機能のフラグ  
+## <a name="new-capability-flags"></a>新しい機能フラグ  
  `SCC_CAP_SCCFILE`  
   
  `SCC_CAP_MULTICHECKOUT`  
   
-## 新しい関数  
+## <a name="new-functions"></a>新しい関数  
  [SccWillCreateSccFile](../../extensibility/sccwillcreatesccfile-function.md)  
   
  [SccIsMultiCheckoutEnabled](../../extensibility/sccismulticheckoutenabled-function.md)  
   
- ソース管理プラグイン内で複数のチェック アウト \(共有\)および参照が `SCC_CAP_MULTICHECKOUT` の機能を宣言し`SccIsMultiCheckOutEnabled` の関数を実行します。  この関数はチェック アウト操作がソース・コード管理プロジェクトに発生するたびに呼び出されます。  
+ ソース管理プラグインは、(共有) の複数のチェック アウトをサポートしているかどうかは、宣言、`SCC_CAP_MULTICHECKOUT`機能と実装、`SccIsMultiCheckOutEnabled`関数。 この関数は、ソース管理対象のプロジェクトのいずれかをチェック アウト操作が発生するたびに呼び出されます。  
   
- ソース管理プラグインを作成および MSSCCPRJ.SCC ファイルを使用するとサポート `SCC_CAP_SCCFILE` の機能を宣言し[SccWillCreateSccFile](../../extensibility/sccwillcreatesccfile-function.md) を実行します。  この関数はファイル リストと呼びます。  Visual Studio がそのページ用に MSSCCPRJ.SCC ファイルを使用するかどうかを示す各ファイルの関数の戻り値 `TRUE/FALSE`。  これらの新機能と機能をサポートしていないためソース管理プラグインを選択した場合はこれらのファイルの作成を無効にするには次のレジストリ キーを使用して :  
+ 場合は、ソース管理プラグインは、作成して、MSSCCPRJ の使用をサポートします。SCC ファイル、その宣言、`SCC_CAP_SCCFILE`機能と実装、 [SccWillCreateSccFile](../../extensibility/sccwillcreatesccfile-function.md)です。 この関数は、ファイルの一覧と呼びます。 この関数を返します`TRUE/FALSE`Visual Studio が、MSSCCPRJ を使用するかどうかを示すためにファイルごとにします。そのファイルを SCC です。 ソース管理プラグインは、これらの新機能と機能をサポートしないように選択した場合、は、次のレジストリ キーを使用して、これらのファイルの作成を無効にすることができます。  
   
- \[HKEY\_CURRENT\_USER \\ Software \\ Microsoft \\ VisualStudio \\ 8.0 \\ SourceControl 入力\] DoNotCreateTemporaryFilesInSourceControl 「 " \=dword: 00000001  
+ [HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl]"DoNotCreateTemporaryFilesInSourceControl"= dword:00000001  
   
 > [!NOTE]
->  このレジストリ キーがダブル ワードに設定されている場合 : 00000000 の場合存在しないキーであるとVisual Studio は一時ファイルを作成しようとします。  ただしレジストリ キーがダブル ワードに設定されている場合 : Visual Studio 00000001 では一時ファイルを作成できません。  代わりにソース管理プラグインが MSSCCPRJ.SCC ファイルをサポートしないため共有チェック アウトをサポートしないと仮定します。  
+>  このレジストリ キーが dword:00000000 に設定されている場合は、存在しない、されているキーと等価である Visual Studio はまだ一時ファイルを作成しようとします。 ただし、レジストリ キーが dword:00000001 に設定されている場合 Visual Studio はしよう一時ファイルを作成します。 代わりに、ソース管理プラグインが、MSSCCPRJ をサポートしていないことを想定します。SCC ファイル共有チェック アウトをサポートしていません。  
   
-## 参照  
- [ソース管理プラグイン API バージョン 1.2 の新機能します。](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)
+## <a name="see-also"></a>関連項目  
+ [ソース管理プラグイン API バージョン 1.2 の新機能](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

@@ -1,64 +1,65 @@
 ---
-title: "プロジェクトの種類を作成する場合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プロジェクトの種類を作成するための条件"
+title: "プロジェクトの種類を作成する場合 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: project types, conditions for creating
 ms.assetid: 26adc860-ee4a-4f5c-95e1-e41b207dd7e6
-caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: b532ad4e72fb15cd9409c362259347f6f3833d2e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# プロジェクトの種類を作成する場合
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-新しいプロジェクトを作成するとユーザーの [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] をカスタマイズするための基本機能を提供します。  ただし新しいプロジェクトを作成すると[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のすべてのカスタマイズは必要ではありません。  次のガイドラインでは新しいプロジェクトでのシナリオに必要かどうかを判断する必要があります。  
+# <a name="when-to-create-project-types"></a>プロジェクトの種類を作成する場合
+カスタマイズするための基礎を提供新しいプロジェクトの種類を作成する[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ユーザー向けです。 ただし、新しいプロジェクトの種類を作成する必要はありませんすべて[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]カスタマイズします。 次のガイドラインには、新しいプロジェクトの種類が、シナリオに必要かどうかを判断するのに役立ちます。  
   
-## 新しいプロジェクトを作成します。  
- 次の一つ以上で動作するように [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] をカスタマイズする場合はプロジェクトを作成する必要があります :  
+## <a name="create-a-new-project-type"></a>新しいプロジェクトの種類を作成します。  
+ カスタマイズする場合は、プロジェクトの種類を作成する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]次の方法の 1 つ以上で動作します。  
   
--   加わりましたり構成およびビルド ソース管理はに配置します。  
+-   配置、構成、およびソース管理、ビルドに参加します。  
   
--   はデバッグのサポート。  
+-   デバッグのサポートを提供します。  
   
--   **ソリューション エクスプローラー**  のプロジェクト項目。  
+-   プロジェクト項目を表示**ソリューション エクスプ ローラー**です。  
   
--   **プロジェクトを開く**  または \[ENT2ENT\] ダイアログ ボックスを使用します。  
+-   使用して、**プロジェクトを開く**または**新しいプロジェクト** ダイアログ ボックス。  
   
--   サポートプロジェクトの入れ子。  
+-   プロジェクトの入れ子をサポートします。  
   
-## 既存のプロジェクトの種類を拡張します。  
- [!INCLUDE[vcprvc](../../debugger/includes/vcprvc_md.md)] プロジェクトのビルド処理を変更する既存のプロジェクト タイプの動作を変更または拡張する場合などに [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を次のように使用できる新しいプロジェクトを作成するかも知れません :  
+## <a name="extend-an-existing-project-type"></a>既存のプロジェクトの種類を拡張します。  
+ 使用できる新しいプロジェクトの種類を作成する場合があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]変更または既存のプロジェクトの種類の動作を拡張する次の方法でのビルド プロセスを変更するなど、[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]プロジェクト。  
   
--   一つの単位として複数のファイルを使用します。  
+-   1 つの単位として複数のファイルを使用します。  
   
--   サブ項目の階層で一つのファイルが表示されます。  
+-   サブ項目の階層として 1 つのファイルを表示します。  
   
--   エディターで囲むコマンドのコンテキストを表示します。  
+-   エディターの周囲コマンド コンテキストを表示します。  
   
 -   エディターのサービス コンテキストを表示します。  
   
-## 既存のプロジェクトを使用します。  
- 新しいプロジェクトを作成することは必要ではありません。  次の表はプロジェクトの種類を作成する必要がないするタスクを示しています。  
+## <a name="use-an-existing-project-type"></a>既存のプロジェクトの種類を使用します。  
+ 新しいプロジェクトを作成する必要がありますされません。 次の表は、プロジェクトの種類を作成する必要がないタスクを示します。  
   
-|タスク|Description|  
-|---------|-----------------|  
-|コマンドの処理|VSPackage でもコマンドを処理できます。|  
-|エディターのビルド|カスタム エディターを登録できます。  詳細については、「[Document Windows and Editors](http://msdn.microsoft.com/ja-jp/603625e1-62b6-413a-bc44-089346e166bc)」を参照してください。|  
-|ウィンドウの所有|新しいプロジェクトを追加せずにツール ウィンドウとドキュメント ウィンドウを作成できます。|  
-|\[プロパティ\] ウィンドウのプロパティの公開|すべてのオブジェクトがプロパティを公開できます。|  
+|タスク|説明|  
+|----------|-----------------|  
+|コマンドの処理|任意の VSPackage では、コマンドを処理できます。|  
+|エディターの構築|カスタム エディターを登録することができます。 詳細については、次を参照してください。[ドキュメント ウィンドウおよびエディター](http://msdn.microsoft.com/en-us/603625e1-62b6-413a-bc44-089346e166bc)です。|  
+|Windows を所有しています。|新しいプロジェクトの種類を追加することがなく、両方のツールとドキュメント ウィンドウを作成できます。|  
+|[プロパティ] ウィンドウでプロパティを公開します。|すべてのオブジェクトには、プロパティを公開できます。|  
   
-## プロジェクトのサブタイプを作成します。  
- 新しいプロジェクトを作成しなくてもマネージ プロジェクトの種類を拡張するにはプロジェクトのサブタイプを使用できます。  プロジェクトのサブタイプはMicrosoft [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] または  [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] で記述されたマネージ プロジェクトを拡張するために COM の集計を使用します。  COM の集計を使用してもマネージ プロジェクトのシステムの実装の大部分を再利用して特定のシナリオにインターフェイスをサポートする集計を使用してカスタマイズできます。  プロジェクトの一部の種類の詳細については[プロジェクトのサブタイプ](../../extensibility/internals/project-subtypes.md) を参照してください。  
+## <a name="create-a-project-subtype"></a>プロジェクトのサブタイプを作成します。  
+ プロジェクトのサブタイプを使用すると、新しいプロジェクトの種類を作成するのにことがなく、マネージ プロジェクトの種類を拡張します。 プロジェクトのサブタイプでは、COM 集成を使用して、Microsoft で記述されたマネージ プロジェクトを拡張する[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]または[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]です。 COM 集成マネージ プロジェクト システムの実装の大部分を再利用でき、まだ集約とインターフェイスのサポートの使用から特定のシナリオ用にカスタマイズできます。 プロジェクトのサブタイプの詳細については、次を参照してください。[プロジェクト サブタイプ](../../extensibility/internals/project-subtypes.md)です。  
   
-## 参照  
- [Document Windows and Editors](http://msdn.microsoft.com/ja-jp/603625e1-62b6-413a-bc44-089346e166bc)   
+## <a name="see-also"></a>関連項目  
+ [ドキュメント ウィンドウおよびエディター](http://msdn.microsoft.com/en-us/603625e1-62b6-413a-bc44-089346e166bc)   
  [チェックリスト: 新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)   
  [Visual Studio での階層](../../extensibility/internals/hierarchies-in-visual-studio.md)

@@ -1,56 +1,56 @@
 ---
-title: "IDebugErrorBreakpointResolution2::GetResolutionInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugErrorBreakpointResolution2::GetResolutionInfo"
-helpviewer_keywords: 
-  - "IDebugErrorBreakpointResolution2::GetResolutionInfo"
+title: "IDebugErrorBreakpointResolution2::GetResolutionInfo |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugErrorBreakpointResolution2::GetResolutionInfo
+helpviewer_keywords: IDebugErrorBreakpointResolution2::GetResolutionInfo
 ms.assetid: d94c4f60-8796-4848-86ee-186bbaa613f5
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 91922b09c3dff38b65473978f352f96ea12732a0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugErrorBreakpointResolution2::GetResolutionInfo
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-ブレークポイントのエラーの解決方法を取得します。  
+# <a name="idebugerrorbreakpointresolution2getresolutioninfo"></a>IDebugErrorBreakpointResolution2::GetResolutionInfo
+ブレークポイント エラーの解決策情報を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetResolutionInfo(   
-   BPERESI_FIELDS            dwFields,  
-   BP_ERROR_RESOLUTION_INFO* pErrorResolutionInfo  
+```cpp  
+HRESULT GetResolutionInfo(   
+   BPERESI_FIELDS            dwFields,  
+   BP_ERROR_RESOLUTION_INFO* pErrorResolutionInfo  
 );  
 ```  
   
-```c#  
-int GetResolutionInfo(   
-   enum_BPERESI_FIELDS        dwFields,  
-   BP_ERROR_RESOLUTION_INFO[] pErrorResolutionInfo  
+```csharp  
+int GetResolutionInfo(   
+   enum_BPERESI_FIELDS        dwFields,  
+   BP_ERROR_RESOLUTION_INFO[] pErrorResolutionInfo  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `dwFields`  
- \[入力\] `pErrorResolutionInfo` のフィールドが設定する方法を決定 [BPERESI\_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) の列挙体のフラグの組み合わせ。  
+ [in]フラグの組み合わせ、 [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md)のフィールドを決定する列挙体`pErrorResolutionInfo`に記入することができます。  
   
  `pErrorResolutionInfo`  
- \[入力出力\] ブレークポイントの解決の説明が格納されます [BP\_ERROR\_RESOLUTION\_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) の構造体。  
+ [入力、出力].[BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)ブレークポイント解像度の説明が入力構造です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 使用例  
- 次の例では [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) インターフェイスを公開する `CDebugErrorBreakpointResolution` の単純なオブジェクトに対してこのメソッドを実装します。  
+## <a name="example"></a>例  
+ 次の例は、単純なは、このメソッドを実装`CDebugErrorBreakpointResolution`を公開するオブジェクト、 [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md)インターフェイスです。  
   
 ```  
 HRESULT CDebugErrorBreakpointResolution::GetResolutionInfo(  
@@ -150,7 +150,7 @@ HRESULT CDebugErrorBreakpointResolution::CopyBP_ERROR_RESOLUTION_INFO(
 }    
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md)   
- [BPERESI\_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md)   
- [BP\_ERROR\_RESOLUTION\_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)
+ [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md)   
+ [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)

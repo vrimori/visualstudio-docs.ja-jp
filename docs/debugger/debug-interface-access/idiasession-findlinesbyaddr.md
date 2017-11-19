@@ -1,60 +1,59 @@
 ---
-title: "IDiaSession::findLinesByAddr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSession::findLinesByAddr メソッド"
+title: "Idiasession::findlinesbyaddr |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSession::findLinesByAddr method
 ms.assetid: 640403c0-14cf-403c-ad19-38b3bdc28ca8
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 05e4ecac42acc1bf9eab27fb5e095dfc883ff3ad
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSession::findLinesByAddr
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-指定したアドレスを含む指定したコンパイル単位の行を取得します。  
+# <a name="idiasessionfindlinesbyaddr"></a>IDiaSession::findLinesByAddr
+指定コンパイル単位で指定されたアドレスを含む行を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT findLinesByAddr (   
-   DWORD                 seg,  
-   DWORD                 offset,  
-   DWORD                 length,  
-   IDiaEnumLineNumbers** ppResult  
+```C++  
+HRESULT findLinesByAddr (   
+   DWORD                 seg,  
+   DWORD                 offset,  
+   DWORD                 length,  
+   IDiaEnumLineNumbers** ppResult  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `seg`  
- \[入力\] 絶対アドレスのセクションのコンポーネントを指定します。  
+ [in]特定のアドレスのセクションのコンポーネントを指定します。  
   
  `offset`  
- \[入力\] 絶対アドレスのオフセット コンポーネントを指定します。  
+ [in]特定のアドレスのオフセットのコンポーネントを指定します。  
   
  `length`  
- \[入力\] アドレス範囲のバイト数をこのクエリでカバーするを指定します。  
+ [in]このクエリに対応するアドレスの範囲のバイト数を指定します。  
   
  `ppResult`  
- \[出力\] 指定したアドレスの範囲をサポートするすべての行番号の一覧を含む [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) のオブジェクトを返します。  
+ [out]返します、 [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)すべての行の一覧を含むオブジェクト番号を指定したアドレス範囲をカバーします。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 使用例  
- この例では関数アドレスおよび長さを使用して関数に含まれるすべての行番号を取得する関数を示しています。  
+## <a name="example"></a>例  
+ この例では、関数のアドレスと長さを使用する関数に含まれているすべての行番号を取得する関数を使用します。  
   
-```cpp#  
+```C++  
 IDiaEnumLineNumbers* GetLineNumbersByAddr(IDiaSymbol *pFunc,  
                                           IDiaSession *pSession)  
 {  
@@ -73,7 +72,7 @@ IDiaEnumLineNumbers* GetLineNumbersByAddr(IDiaSymbol *pFunc,
 }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSession::findLinesByVA](../../debugger/debug-interface-access/idiasession-findlinesbyva.md)

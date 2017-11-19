@@ -1,87 +1,87 @@
 ---
-title: "BPERESI_FIELDS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BPERESI_FIELDS"
-helpviewer_keywords: 
-  - "BPERESI_FIELDS 列挙型"
+title: "BPERESI_FIELDS |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BPERESI_FIELDS
+helpviewer_keywords: BPERESI_FIELDS enumeration
 ms.assetid: dd7dd89c-1043-46a1-a929-099cc039c344
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: e758309c10f9d5dace6a95337130599f34fdb76d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# BPERESI_FIELDS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-ブレークポイントのエラーの解決方法について取得する情報を指定します。  
+# <a name="bperesifields"></a>BPERESI_FIELDS
+ブレークポイントの失敗の解決策について取得する情報を指定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-enum enum_BPERESI_FIELDS {   
-   PERESI_BPRESLOCATION = 0x0001,  
-   BPERESI_PROGRAM      = 0x0002,  
-   BPERESI_THREAD       = 0x0004,  
-   BPERESI_MESSAGE      = 0x0008,  
-   BPERESI_TYPE         = 0x0010,  
-   BPERESI_ALLFIELDS    = 0xffffffff  
+```cpp  
+enum enum_BPERESI_FIELDS {   
+   PERESI_BPRESLOCATION = 0x0001,  
+   BPERESI_PROGRAM      = 0x0002,  
+   BPERESI_THREAD       = 0x0004,  
+   BPERESI_MESSAGE      = 0x0008,  
+   BPERESI_TYPE         = 0x0010,  
+   BPERESI_ALLFIELDS    = 0xffffffff  
 };  
 typedef DWORD BPERESI_FIELDS;  
 ```  
   
-```c#  
-public enum enum_BPERESI_FIELDS {   
-   PERESI_BPRESLOCATION = 0x0001,  
-   BPERESI_PROGRAM      = 0x0002,  
-   BPERESI_THREAD       = 0x0004,  
-   BPERESI_MESSAGE      = 0x0008,  
-   BPERESI_TYPE         = 0x0010,  
-   BPERESI_ALLFIELDS    = 0xffffffff  
+```csharp  
+public enum enum_BPERESI_FIELDS {   
+   PERESI_BPRESLOCATION = 0x0001,  
+   BPERESI_PROGRAM      = 0x0002,  
+   BPERESI_THREAD       = 0x0004,  
+   BPERESI_MESSAGE      = 0x0008,  
+   BPERESI_TYPE         = 0x0010,  
+   BPERESI_ALLFIELDS    = 0xffffffff  
 };  
 ```  
   
-## メンバー  
- PERESI\_BPRESLOCATION  
- [BP\_ERROR\_RESOLUTION\_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) の構造体の `bpResLocation` \(ブレークポイントの解決の位置\) フィールドと初期化を使用します。  
+## <a name="members"></a>メンバー  
+ PERESI_BPRESLOCATION  
+ 初期化/を使用して、 `bpResLocation` (ブレークポイントの解像度の位置) フィールドの[BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)構造体。  
   
- BPERESI\_PROGRAM  
- `BP_ERROR_RESOLUTION_INFO` の構造体の初期化と `pProgram` のフィールドを使用します。  
+ BPERESI_PROGRAM  
+ 初期化/を使用して、`pProgram`のフィールド、`BP_ERROR_RESOLUTION_INFO`構造体。  
   
- BPERESI\_THREAD  
- `BP_ERROR_RESOLUTION_INFO` の構造体の初期化と `pThread` のフィールドを使用します。  
+ BPERESI_THREAD  
+ 初期化/を使用して、`pThread`のフィールド、`BP_ERROR_RESOLUTION_INFO`構造体。  
   
- BPERESI\_MESSAGE  
- `BP_ERROR_RESOLUTION_INFO` の構造体の初期化と `bstrMessage` のフィールドを使用します。  
+ BPERESI_MESSAGE  
+ 初期化/を使用して、`bstrMessage`のフィールド、`BP_ERROR_RESOLUTION_INFO`構造体。  
   
- BPERESI\_TYPE  
- `BP_ERROR_RESOLUTION_INFO` の構造体の `dwType` \(ブレークポイントの型のフィールドと初期化を使用します。  
+ BPERESI_TYPE  
+ 初期化/を使用して、 `dwType` (ブレークポイントの種類) フィールドの`BP_ERROR_RESOLUTION_INFO`構造体。  
   
- BPERESI\_ALLFIELDS  
- `BP_ERROR_RESOLUTION_INFO` の構造体のすべてのフィールドと初期化を使用します。  
+ BPERESI_ALLFIELDS  
+ すべてのフィールドを使用して初期化、`BP_ERROR_RESOLUTION_INFO`構造体。  
   
-## 解説  
- [BP\_ERROR\_RESOLUTION\_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) の構造体のフィールドが初期化する必要があるかのようにパラメーター [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) のメソッドに渡されます。  
+## <a name="remarks"></a>コメント  
+ パラメーターとして渡される、 [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)メソッドのどのフィールドを示すために、 [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)構造が初期化するのには。  
   
- この構造が返されるとこれらの値が `BP_ERROR_RESOLUTION_INFO` の構造体のフィールドで使用される有効かを示すために使用されます。  
+ これらの値がでどのフィールドを示すためにも使用、`BP_ERROR_RESOLUTION_INFO`構造使用されていて有効な場合、その構造が返されます。  
   
- これらの値はビットごとの `OR` と組み合わせることがあります。  
+ これらの値は、ビットごとと組み合わせること`OR`です。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [BP\_ERROR\_RESOLUTION\_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)   
  [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)

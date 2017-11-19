@@ -1,26 +1,27 @@
 ---
-title: "チュートリアル: XSLT IntelliSense の使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "チュートリアル: XSLT IntelliSense の使用 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 079d95ac-2eaf-4ae1-9cd3-2c81a961a942
-caps.latest.revision: 2
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: ae58db5ac642bca1e68d3ad074d4a69062a1f294
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# チュートリアル: XSLT IntelliSense の使用
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="walkthrough-using-xslt-intellisense"></a>チュートリアル: XSLT IntelliSense の使用
 このチュートリアルでは、XSLT IntelliSense を使用して一部の属性値のオートコンプリートを行う方法について説明します。  
   
-### xsl:with\-param 要素と xsl:call\-template 要素の name 属性に IntelliSense を使用するには  
+### <a name="to-use-intellisense-in-the-name-attribute-of-xslwith-param-and-xslcall-template-elements"></a>xsl:with-param 要素と xsl:call-template 要素の name 属性に IntelliSense を使用するには  
   
 1.  新しい XSLT ファイルを作成して、次のコードをコピーします。  
   
@@ -46,24 +47,24 @@ caps.handback.revision: 2
     </xsl:stylesheet>  
     ```  
   
-2.  `<xsl:template name="msg23" match="msg23">` の後ろにカーソルを置き、Enter キーを押します。その後、次の `xsl:call-template` 要素を入力します。  
+2.  `<xsl:template name="msg23" match="msg23">` の後ろにカーソルを置き、Enter キーを押します。 その後、次の `xsl:call-template` 要素を入力します。  
   
     ```  
     <xsl:call-template name="localized-message">  
     </xsl:call-template>  
     ```  
   
-     入力中、`xsl:call-template` 要素の `name=""` 属性にテンプレート名の一覧が表示されます。  
+     入力中、`name=""` 要素の `xsl:call-template` 属性にテンプレート名の一覧が表示されます。  
   
-3.  `<xsl:call-template name="localized-message">` の後ろにカーソルを置き、Enter キーを押します。その後、次の `xsl:with-param` 要素を入力します。  
+3.  `<xsl:call-template name="localized-message">` の後ろにカーソルを置き、Enter キーを押します。 その後、次の `xsl:with-param` 要素を入力します。  
   
     ```  
     <xsl:with-param name="msgcode">msg23</xsl:with-param>  
     ```  
   
-     `xsl:with-param` 要素の `name=""` 属性にパラメーター名の一覧が表示されます。  
+     `name=""` 要素の `xsl:with-param` 属性にパラメーター名の一覧が表示されます。  
   
-### xsl:apply\-templates 要素の mode 属性に IntelliSense を使用するには  
+### <a name="to-use-intellisense-in-the-mode-attribute-of-an-xslapply-templates-element"></a>xsl:apply-templates 要素の mode 属性に IntelliSense を使用するには  
   
 1.  新しい XSLT ファイルを作成して、次のコードをコピーします。  
   
@@ -112,15 +113,15 @@ caps.handback.revision: 2
     </xsl:stylesheet>  
     ```  
   
-2.  `<xsl:apply-templates select="phone" />` の後ろにカーソルを置き、Enter キーを押します。その後、次の `xsl: apply-templates` 要素を入力します。  
+2.  `<xsl:apply-templates select="phone" />` の後ろにカーソルを置き、Enter キーを押します。 その後、次の `xsl: apply-templates` 要素を入力します。  
   
     ```  
     <xsl:apply-templates select="phone"  mode="accountNumber">  
     ```  
   
-     `xsl:apply-templates` 要素の `mode=""` 属性にテンプレート モードの一覧が表示されます。  
+     `mode=""` 要素の `xsl:apply-templates` 属性にテンプレート モードの一覧が表示されます。  
   
-### xsl:namespace\-alias 要素の stylesheet\-prefix 属性および result\-prefix 属性に IntelliSense を使用するには  
+### <a name="to-use-intellisense-in-the-stylesheet-prefix-and-result-prefix-attributes-of-an-xslnamespace-alias-element"></a>xsl:namespace-alias 要素の stylesheet-prefix 属性および result-prefix 属性に IntelliSense を使用するには  
   
 1.  新しい XSLT ファイルを作成して、次のコードをコピーします。  
   
@@ -153,13 +154,13 @@ caps.handback.revision: 2
     </xsl:stylesheet>  
     ```  
   
-2.  `<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:alt="http://www.w3.org/1999/XSL/Transform-alternate" version="1.0">` の後ろにカーソルを置き、Enter キーを押します。その後、次の `xsl:namespace-alias` 要素を入力します。  
+2.  `<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:alt="http://www.w3.org/1999/XSL/Transform-alternate" version="1.0">` の後ろにカーソルを置き、Enter キーを押します。 その後、次の `xsl:namespace-alias` 要素を入力します。  
   
     ```  
     <xsl:namespace-alias stylesheet-prefix="alt" result-prefix="xsl"/>  
     ```  
   
-     `xsl:namespace-alias` 要素の `stylesheet-prefix` 属性と `result-prefix` 属性にどのようにプレフィックスの一覧が表示されるかを確認してください。  
+     `stylesheet-prefix` 要素の `result-prefix` 属性と `xsl:namespace-alias` 属性にどのようにプレフィックスの一覧が表示されるかを確認してください。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [XML エディターの IntelliSense 機能](../xml-tools/xml-editor-intellisense-features.md)

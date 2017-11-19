@@ -1,69 +1,69 @@
 ---
-title: "IDebugDisassemblyStream2::Seek | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDisassemblyStream2::Seek"
-helpviewer_keywords: 
-  - "IDebugDisassemblyStream2::Seek"
+title: "IDebugDisassemblyStream2::Seek |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugDisassemblyStream2::Seek
+helpviewer_keywords: IDebugDisassemblyStream2::Seek
 ms.assetid: afec3008-b1e0-4803-ad24-195dbfb6497e
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 61ef1e649a80fcda5ec3ce4be6c74b154c17f9a4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugDisassemblyStream2::Seek
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-指定した位置に対する命令の指定した数値の逆アセンブル\] ストリームの読み取りポインターを移動します。  
+# <a name="idebugdisassemblystream2seek"></a>IDebugDisassemblyStream2::Seek
+[逆アセンブル] ストリームを指定した位置を基準とした命令数が特定の読み取りのポインターを移動します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT Seek(   
-   SEEK_START          dwSeekStart,  
-   IDebugCodeContext2* pCodeContext,  
-   UINT64              uCodeLocationId,  
-   INT64               iInstructions  
+```cpp  
+HRESULT Seek(   
+   SEEK_START          dwSeekStart,  
+   IDebugCodeContext2* pCodeContext,  
+   UINT64              uCodeLocationId,  
+   INT64               iInstructions  
 );  
 ```  
   
-```c#  
-int Seek(   
-   enum_SEEK_START    dwSeekStart,  
-   IDebugCodeContext2 pCodeContext,  
-   ulong              uCodeLocationId,  
-   long               iInstructions  
+```csharp  
+int Seek(   
+   enum_SEEK_START    dwSeekStart,  
+   IDebugCodeContext2 pCodeContext,  
+   ulong              uCodeLocationId,  
+   long               iInstructions  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `dwSeekStart`  
- \[入力\] シーク プロセスを開始する相対位置を指定する [SEEK\_START](../../../extensibility/debugger/reference/seek-start.md) の列挙体の値。  
+ [in]値、 [SEEK_START](../../../extensibility/debugger/reference/seek-start.md)シーク プロセスを開始する相対位置を指定する列挙体です。  
   
  `pCodeContext`  
- \[入力\] シーク操作が相対的であること [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) にコード コンテキスト。  このパラメーターは`dwSeekStart``dwSeekStart` のみ `dwSeekStart` \= `SEEK_START_CODECONTEXT` 使用されています ; それ以外の場合このパラメーターは無視されnull 値を指定できます。  
+ [in][IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)を基準には、シーク操作コードのコンテキストを表すオブジェクト。 場合にのみ、このパラメーターは使用`dwSeekStart`  = `SEEK_START_CODECONTEXT`以外の場合、このパラメーターは無視され、null 値を指定できます。  
   
  `uCodeLocationId`  
- \[入力\] シーク操作が相対位置にあるコードの識別子。  このパラメーターが `dwSeekStart``dwSeekStart``dwSeekStart` \= `SEEK_START_CODELOCID` 使用されています ; それ以外の場合このパラメーターは無視され0 に設定します。  コード位置の識別子について [GetCodeLocationId](../Topic/IDebugDisassemblyStream2::GetCodeLocationId.md) のメソッドについては" 解説 " を参照してください。  
+ [in]相対シーク操作は、コードの場所の識別子です。 このパラメーターを使用`dwSeekStart`  = `SEEK_START_CODELOCID`以外の場合、このパラメーターは無視され、0 に設定することができます。 については、「解説」セクションを参照してください、 [GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md)コード場所識別子の詳細についてはメソッドです。  
   
  `iInstructions`  
- \[入力\] `dwSeekStart` で指定した場所に移動して関連する命令数。  この値は後方に値が負になる場合があります。  
+ [in]指定された位置を基準に移動する命令の数`dwSeekStart`です。 この値は、負の値を前後に移動することができます。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK` シークの場所が使用可能な命令リストを越えるポイントにある `S_FALSE` を返します。  それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`です。 返します`S_FALSE`シーク位置が使用可能な命令の一覧より後ろにあった場合。 それ以外の場合はエラー コードを返します。  
   
-## 解説  
- リストの先頭がリストの最初の命令に読み取られた場所に設定される前にシークある場所に存在します。  リストの末尾がリストの最後の命令に読み取られた場所に設定すると表示の場所にある場合は。  
+## <a name="remarks"></a>コメント  
+ リストの先頭より前に、の位置をシークであった場合は、読み取り位置が、一覧の最初の命令に設定されます。 参照は、リストの末尾後の位置には、読み取り位置は設定最後の命令一覧にされます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   
- [SEEK\_START](../../../extensibility/debugger/reference/seek-start.md)   
+ [SEEK_START](../../../extensibility/debugger/reference/seek-start.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)   
- [GetCodeLocationId](../Topic/IDebugDisassemblyStream2::GetCodeLocationId.md)
+ [GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md)

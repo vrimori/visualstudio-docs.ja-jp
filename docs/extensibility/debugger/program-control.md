@@ -1,51 +1,52 @@
 ---
-title: "プログラムの制御 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "実行の [デバッグ SDK] コントロールのデバッグ"
+title: "コントロールをプログラム |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: debugging [Debugging SDK], control of execution
 ms.assetid: 6be80904-e66c-4cae-8891-1113b799fb01
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: cb69afe513010a7da4b4a85669bbc5f145f8dbc5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# プログラムの制御
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-Visual Studio のデバッグでは次のステップ実行や継続ルーチンはすべてプログラムレベルで実行されます :  
+# <a name="program-control"></a>プログラムの制御
+Visual Studio で、次のステップ実行のすべてのデバッグとルーチンを続行がプログラムのレベルで発生します。  
   
--   特定のフレームの環境で実行される次の命令にコンピューターを設定する次のステートメントをつまり設定します  
+-   特定のフレームの環境で実行される次の命令をコンピューターに設定は、次のステートメントを設定するには、  
   
--   つまりステップの実行モードを終了します。  
+-   ステップ実行モードを終了する継続を実行するとは、  
   
--   次の手順について  
+-   次の命令をステップ実行  
   
--   現在のステップ モードで継続  
+-   現在のステップ実行モードを続行  
   
--   プログラムに含まれるスレッドを中断します  
+-   プログラムが含まれているスレッドの中断  
   
--   プログラムに含まれるスレッドを再開します  
+-   プログラムが含まれているスレッドを再開します。  
   
 > [!NOTE]
->  呼び出し履歴を表示するにはスレッド レベルで実行されます。  スレッドの呼び出し履歴を表示する[IEnumDebugFrameInfo2](../../extensibility/debugger/reference/ienumdebugframeinfo2.md) インターフェイスのすべてのメソッドを実装する必要があるときにフレームの情報を列挙します。  
+>  呼び出し履歴の表示は、スレッド レベルで実装されます。 スレッドの呼び出し履歴を表示するときにフレームの情報を列挙するには、すべてのメソッドを実装する必要があります、 [IEnumDebugFrameInfo2](../../extensibility/debugger/reference/ienumdebugframeinfo2.md)インターフェイスです。  
   
-## プログラムの制御のメソッド  
- 次の表は最小限の機能デバッグ エンジン \(DE\) および実行制御するために必要な [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) のメソッドを示します。  
+## <a name="methods-of-program-control"></a>プログラムの制御のメソッド  
+ 次の表は、メソッドの[IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)最小限の機能のデバッグ エンジン (DE) と実行の制御を実装する必要があります。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[IDebugProgram2:: 実行](../../extensibility/debugger/reference/idebugprogram2-execute.md)|プログラムに含まれる停止状態からすべてのスレッドを実行する Continues。  実行制御の場合に必要です。|  
-|[IDebugProgram2:: 続行](../../extensibility/debugger/reference/idebugprogram2-continue.md)|プログラムに含まれる停止状態からすべてのスレッドを実行する Continues。  実行制御の場合に必要です。|  
-|[IDebugProgram2:: 手順](../../extensibility/debugger/reference/idebugprogram2-step.md)|特定のスレッドの手順を実行します。  プログラムに含まれる他のすべてのスレッドを実行する Continues。  実行制御の場合に必要です。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[IDebugProgram2::Execute](../../extensibility/debugger/reference/idebugprogram2-execute.md)|停止状態からプログラムに含まれるすべてのスレッドの実行が続行されます。 実行の制御に必要です。|  
+|[IDebugProgram2::Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md)|停止状態からプログラムに含まれるすべてのスレッドの実行が続行されます。 実行の制御に必要です。|  
+|[IDebugProgram2::Step](../../extensibility/debugger/reference/idebugprogram2-step.md)|特定のスレッドで、手順を実行します。 引き続き、プログラムに含まれるその他のすべてのスレッドを実行します。 実行の制御に必要です。|  
   
- マルチスレッド プログラムでは[IEnumDebugThreads2](../../extensibility/debugger/reference/ienumdebugthreads2.md) のインターフェイス [IDebugProgram2:: EnumThreads](../../extensibility/debugger/reference/idebugprogram2-enumthreads.md) のすべてのメソッドとメソッドを実装する必要があります。  
+ マルチ スレッド プログラムの必要がありますも実装する、 [IDebugProgram2::EnumThreads](../../extensibility/debugger/reference/idebugprogram2-enumthreads.md)メソッドとのすべてのメソッド、 [IEnumDebugThreads2](../../extensibility/debugger/reference/ienumdebugthreads2.md)インターフェイスです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [実行の制御と状態の評価](../../extensibility/debugger/execution-control-and-state-evaluation.md)

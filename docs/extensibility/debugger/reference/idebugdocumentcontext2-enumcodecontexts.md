@@ -1,56 +1,56 @@
 ---
-title: "IDebugDocumentContext2::EnumCodeContexts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentContext2::EnumCodeContexts"
-helpviewer_keywords: 
-  - "IDebugDocumentContext2::EnumCodeContexts"
+title: "IDebugDocumentContext2::EnumCodeContexts |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugDocumentContext2::EnumCodeContexts
+helpviewer_keywords: IDebugDocumentContext2::EnumCodeContexts
 ms.assetid: 627af69c-5cce-4e1d-8233-5f4d8dbc62e5
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: a11ec6d678fce60cbecbc1dc9e2b7c61eb1e5867
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugDocumentContext2::EnumCodeContexts
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このドキュメントのコンテキストに関連するすべてのコード コンテキスト リストを取得します。  
+# <a name="idebugdocumentcontext2enumcodecontexts"></a>IDebugDocumentContext2::EnumCodeContexts
+このドキュメントのコンテキストに関連付けられているすべてのコード コンテキストの一覧を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT EnumCodeContexts(   
-   IEnumDebugCodeContexts2** ppEnumCodeCxts  
+```cpp  
+HRESULT EnumCodeContexts(   
+   IEnumDebugCodeContexts2** ppEnumCodeCxts  
 );  
 ```  
   
-```c#  
-int EnumCodeContexts(   
-   out IEnumDebugCodeContexts2 ppEnumCodeCxts  
+```csharp  
+int EnumCodeContexts(   
+   out IEnumDebugCodeContexts2 ppEnumCodeCxts  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppEnumCodeCxts`  
- \[入力\] コード コンテキスト リストを含む [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md) のオブジェクトを返します。  
+ [out]返します、 [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)コード コンテキストの一覧を含むオブジェクトです。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- 単一ドキュメントのコンテキストではドキュメントを生成するテンプレートを使用しているかファイルを参照しているコードを含む複数のコンテキスト。  
+## <a name="remarks"></a>コメント  
+ 1 つのドキュメントのコンテキストでは、テンプレートを使用しているとき、ドキュメントに複数のコードのコンテキストを生成したり、ファイルを含めることができます。  
   
-## 使用例  
- 次の例に [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) インターフェイスを公開する `CDebugContext` の単純なオブジェクトに対してこのメソッドを実装する方法を示します。  
+## <a name="example"></a>例  
+ 次の例は、単純なは、このメソッドを実装する方法を示します`CDebugContext`を公開するオブジェクト、 [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)インターフェイスです。  
   
-```cpp#  
+```cpp  
 HRESULT CDebugContext::EnumCodeContexts(IEnumDebugCodeContexts2 **ppEnumCodeCxts)    
 {    
    HRESULT hr;    
@@ -106,6 +106,6 @@ HRESULT CDebugContext::EnumCodeContexts(IEnumDebugCodeContexts2 **ppEnumCodeCxts
 }    
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)   
  [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)

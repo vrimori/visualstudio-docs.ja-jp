@@ -1,46 +1,45 @@
 ---
-title: "IDiaImageData::get_imageBase | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaImageData::get_imageBase メソッド"
+title: "Idiaimagedata::get_imagebase |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaImageData::get_imageBase method
 ms.assetid: 4ba3d9e4-b205-4ee6-a41d-6996972f1f85
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: daaaf26e0a33ce8e90b2b8ac621ed47d299c8276
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaImageData::get_imageBase
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-イメージの基になる必要があるメモリ位置を取得します。  
+# <a name="idiaimagedatagetimagebase"></a>IDiaImageData::get_imageBase
+イメージが基づいているメモリ位置を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_imageBase (   
-   ULONGLONG* pRetVal  
+```C++  
+HRESULT get_imageBase (   
+   ULONGLONG* pRetVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- \[出力\] 指定したイメージの基本値を返します。  
+ [out]推奨されるイメージのベース値を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- イメージの基本クラスが原因で読み込まれるとイメージは未使用のメモリ位置に自動的にベース変更されている可能性がある競合しています。  コンパイル時のモジュールに格納されている場合このメソッドは基本情報 \(推奨されるメモリ位置\)。  
+## <a name="remarks"></a>コメント  
+ イメージ ベースの競合が原因イメージは、可能性があります再配置されます自動的に使用されていないメモリ位置に読み込まれるとき。 このメソッドは、コンパイル時に、モジュールに格納されていたベースのヒント (推奨されるメモリの場所) を返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)

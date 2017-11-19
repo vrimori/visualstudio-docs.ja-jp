@@ -1,61 +1,61 @@
 ---
-title: "IDebugProgramEngines2::EnumPossibleEngines | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramEngines2::EnumPossibleEngines"
-helpviewer_keywords: 
-  - "IDebugProgramEngines2::EnumPossibleEngines"
+title: "IDebugProgramEngines2::EnumPossibleEngines |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgramEngines2::EnumPossibleEngines
+helpviewer_keywords: IDebugProgramEngines2::EnumPossibleEngines
 ms.assetid: 993d70a4-f6a5-4e47-a603-0b162b9fde00
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d1cf3eead4b268dbbca5ad4333adcc647522b051
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgramEngines2::EnumPossibleEngines
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このプログラムをデバッグできるすべての可能なデバッグ エンジン \(DE\) の GUID を返します。  
+# <a name="idebugprogramengines2enumpossibleengines"></a>IDebugProgramEngines2::EnumPossibleEngines
+すべての使用可能なデバッグ エンジン (DE) このプログラムをデバッグできる対応する Guid を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT EnumPossibleEngines(   
-   DWORD  celtBuffer,  
-   GUID*  rgguidEngines,  
-   DWORD* pceltEngines  
+```cpp  
+HRESULT EnumPossibleEngines(   
+   DWORD  celtBuffer,  
+   GUID*  rgguidEngines,  
+   DWORD* pceltEngines  
 );  
 ```  
   
-```c#  
-int EnumPossibleEngines(   
-   uint      celtBuffer,  
-   GUID[]    rgguidEngines,  
-   ref DWORD pceltEngines  
+```csharp  
+int EnumPossibleEngines(   
+   uint      celtBuffer,  
+   GUID[]    rgguidEngines,  
+   ref DWORD pceltEngines  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `celtBuffer`  
- \[出力\] 返されるします GUIDs の数。  これは`rgguidEngines` の配列の最大サイズを指定します。  
+ [in]返す DE Guid の数。 これも、最大のサイズを指定、`rgguidEngines`配列。  
   
  `rgguidEngines`  
- \[入力出力\] 入力されるします GUIDs の配列。  
+ [入力、出力].格納する DE Guid の配列。  
   
  `pceltEngines`  
- \[入力\] します GUIDs の実際の数を返す返します。  
+ [out]返される DE Guid の実際の数を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  バッファーのサイズが十分な大きさは `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` \[C\+\+\] または \[C\#\] 0x8007007A。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 [C++] が返されます`HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)`または [c#] 0x8007007A、バッファーの大きさがない場合。  
   
-## 解説  
- 多くの場合エンジンは一度に 0 `celtBuffer` 場合パラメーターの設定および NULL 値に `rgguidEngines` のパラメーターをに設定してこのメソッドを呼び出すかを確認します。  これは `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` \(C\# の場合\) 0x8007007A を返し`pceltEngines` のパラメーターが必要なバッファーのサイズを返します。  
+## <a name="remarks"></a>コメント  
+ エンジンの数を決定するためにこのメソッドが 1 回、`celtBuffer`パラメーター 0 に設定され、`rgguidEngines`パラメーターが null の値に設定します。 返されます。 `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` (0x8007007A C# の場合)、および`pceltEngines`パラメーターが必要とするバッファーのサイズを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProgramEngines2](../../../extensibility/debugger/reference/idebugprogramengines2.md)

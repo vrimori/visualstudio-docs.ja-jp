@@ -1,31 +1,32 @@
 ---
-title: "[新しいプロジェクト] ダイアログ ボックスにディレクトリを追加します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "新しいプロジェクト] ダイアログ ボックスを拡張します。"
+title: "[新しいプロジェクト] ダイアログ ボックスにディレクトリを追加する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: New Project dialog box, extending
 ms.assetid: 53b328f5-20bb-49a3-bf9e-1818f4fbdf50
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: f24fd3c3a0ffb537c63346ef867a2a43481acfa9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# [新しいプロジェクト] ダイアログ ボックスにディレクトリを追加します。
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-新しいプロジェクトを作成するときにテンプレートとして使用するためにそれらを表示するに ENT0ENT \[出力\] ダイアログ ボックスに新しいディレクトリを登録できます。  次のコード例では新しいディレクトリ \(ノードを登録する方法について説明します。  例ではVSPackage CLSID\_Package が公開するテンプレートは登録されます。  その結果ENT2ENT \[出力\] ダイアログ ボックスの左側には Folder\_Label\_ResID 特定のリソースで名前が追加されたノードを提供します。  このリソースはVSPackage のサテライト DLL から読み込まれます。  
+# <a name="adding-directories-to-the-new-project-dialog-box"></a>[新しいプロジェクト] ダイアログ ボックスにディレクトリを追加します。
+新しいプロジェクトの種類を作成するときに登録することもできる、新しいディレクトリに、**新しいプロジェクト**ダイアログ ボックスを使用するためのテンプレートとして表示します。 次のコード例では、ノードとも呼ばれる、新しいディレクトリを登録する方法について説明します。 例では、VSPackage CLSID_Package によって公開されているテンプレートが登録されます。 その結果の左側にある、**新しいプロジェクト** ダイアログ ボックスは Folder_Label_ResID リソースによって決まります名、追加のノードを提供します。 このリソースは、VSPackage サテライト DLL から読み込まれます。  
   
- **フォルダー**  の値は Folder\_Label\_ResID ノードが表示されているフォルダーの GUID を表します。  例ではGUID は ENT2ENT \[出力\] ダイアログ ボックスの \[ENT1ENT\] ペインの \[ENT0ENT\] フォルダーを表します。  **\*\*\* Other Projects \*\*\*** の値がない場合ラベルは最上位に配置されます。  
+ **フォルダー**値は Folder_Label_ResID ノードが表示されるフォルダーの GUID を表します。 例では、GUID を表します、**その他のプロジェクト**内のフォルダー、**プロジェクトの種類**のペイン、**新しいプロジェクト** ダイアログ ボックス。 場合、**その他のプロジェクト**値が存在しない場合、最上位レベルにラベルを配置します。  
   
- TemplatesDir の値はプロジェクト テンプレートが格納されているディレクトリの完全パスを指定します。  これらのファイルは.vsz ファイルまたは複製する一般的なテンプレート ファイルを指定できます。  
+ TemplatesDir 値では、プロジェクト テンプレートを格納するディレクトリの完全なパスを指定します。 これらのファイルには、.vsz ファイルまたはクローンを作成する一般的なテンプレート ファイルのいずれかを指定できます。  
   
- TemplatesLocalizedSubDir を指定するとローカライズされたテンプレートを保持 TemplatesDir のサブディレクトリを付ける文字列リソースの ID である必要があります。  1 の場合 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] はサテライト DLL の文字列リソースを読み込むための場合サテライト DLL は別のサブディレクトリの名前を含めることができます。 SortPriority の値は並べ替え優先順位を指定します。  
+ TemplatesLocalizedSubDir を指定する場合、ローカライズされたテンプレートを保持する TemplatesDir のサブディレクトリの名前を示す文字列のリソース ID があります。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]文字列リソースを読み込みますサテライト DLL からある場合、各サテライト DLL 含めることができます、異なるサブディレクトリ名にします。 SortPriority 値は、並べ替えの優先順位を指定します。  
   
 ```  
 NoRemove NewProjectTemplates  
@@ -46,7 +47,7 @@ NoRemove NewProjectTemplates
 }  
 ```  
   
-## 参照  
- [プロジェクトおよび項目テンプレートを登録します。](../../extensibility/internals/registering-project-and-item-templates.md)   
- [項目を追加、新しい項目の追加\] ダイアログ ボックス](../Topic/Adding%20Items%20to%20the%20Add%20New%20Item%20Dialog%20Boxes.md)   
- [ディレクトリを追加する、新しい項目\] ダイアログ ボックスを追加](../Topic/Adding%20Directories%20to%20the%20Add%20New%20Item%20Dialog%20Box.md)
+## <a name="see-also"></a>関連項目  
+ [プロジェクトと項目テンプレートの登録](../../extensibility/internals/registering-project-and-item-templates.md)   
+ [項目を追加する、新しい項目の追加 ダイアログ ボックス](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)   
+ [[新しい項目の追加] ダイアログ ボックスへの新しいディレクトリの追加](../../extensibility/internals/adding-directories-to-the-add-new-item-dialog-box.md)

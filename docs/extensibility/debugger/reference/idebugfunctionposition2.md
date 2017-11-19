@@ -1,60 +1,60 @@
 ---
-title: "IDebugFunctionPosition2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugFunctionPosition2"
-helpviewer_keywords: 
-  - "IDebugFunctionPosition2 インターフェイス"
+title: "IDebugFunctionPosition2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugFunctionPosition2
+helpviewer_keywords: IDebugFunctionPosition2 interface
 ms.assetid: a835f65b-91b0-48ad-8485-04534c814b1b
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 3ae7a0dd442d8a48d6c69ecfd51b2fc17a2eb2fe
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugFunctionPosition2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このインターフェイスはソース ドキュメントの関数の抽象的な位置を表します。  
+# <a name="idebugfunctionposition2"></a>IDebugFunctionPosition2
+このインターフェイスは、ソース ドキュメント内の関数の抽象の位置を表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugFunctionPosition2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- デバッグ エンジンは \(DE\)ソース ドキュメント内の関数の位置を表すためこのインターフェイスを実装します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ デバッグ エンジン (DE) では、ソース ドキュメント内の関数の位置を表すためには、このインターフェイスを実装します。  
   
-## 呼び出し元のメモ  
- このインターフェイスは保留中のブレークポイントの作成に使用する [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md) の共用体の一部として \(具体的には[BP\_LOCATION\_CODE\_FUNC\_OFFSET](../../../extensibility/debugger/reference/bp-location-code-func-offset.md) の構造体\)[BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md) の構造の一部として提供されます。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ このインターフェイスがの一部として提供される、 [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)共用体 (具体的には、 [BP_LOCATION_CODE_FUNC_OFFSET](../../../extensibility/debugger/reference/bp-location-code-func-offset.md)構造) の一部で、さらに、 [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)この構造を使用して、保留中のブレークポイントの作成に使用します。  
   
-## Vtable の順序でメソッド  
- 次の表は `IDebugFunctionPosition2` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugFunctionPosition2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[GetFunctionName](../../../extensibility/debugger/reference/idebugfunctionposition2-getfunctionname.md)|この場所は相対的です。関数の名前を取得します。|  
-|[GetOffset](../Topic/IDebugFunctionPosition2::GetOffset.md)|関数の先頭からのオフセットを取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[GetFunctionName](../../../extensibility/debugger/reference/idebugfunctionposition2-getfunctionname.md)|この位置を基準には、関数の名前を取得します。|  
+|[GetOffset](../../../extensibility/debugger/reference/idebugfunctionposition2-getoffset.md)|関数の先頭からのオフセットを取得します。|  
   
-## 解説  
- このインターフェイスで表される位置は特に基づいてテキスト [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md) 構造です。  
+## <a name="remarks"></a>コメント  
+ このインターフェイスによって表される位置は、テキスト ベース、具体的には、 [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)構造体。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
- [BP\_LOCATION\_CODE\_FUNC\_OFFSET](../../../extensibility/debugger/reference/bp-location-code-func-offset.md)   
- [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
- [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md)
+ [BP_LOCATION_CODE_FUNC_OFFSET](../../../extensibility/debugger/reference/bp-location-code-func-offset.md)   
+ [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
+ [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

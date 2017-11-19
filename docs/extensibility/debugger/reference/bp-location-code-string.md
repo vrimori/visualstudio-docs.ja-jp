@@ -1,54 +1,54 @@
 ---
-title: "BP_LOCATION_CODE_STRING | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_LOCATION_CODE_STRING"
-helpviewer_keywords: 
-  - "BP_LOCATION_CODE_STRING 構造体"
+title: "BP_LOCATION_CODE_STRING |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BP_LOCATION_CODE_STRING
+helpviewer_keywords: BP_LOCATION_CODE_STRING structure
 ms.assetid: a4cd71c6-5052-45fe-907b-ebc6ca1df2e4
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5ee54e8576d14e70e75372592501afc96517f5fc
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# BP_LOCATION_CODE_STRING
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-コード ブレークポイントをユーザーが統合開発環境から入力できる文字列に基づいて設定するために使用 \(IDE\) されます。  
+# <a name="bplocationcodestring"></a>BP_LOCATION_CODE_STRING
+統合開発環境 (IDE) から、ユーザーが入力できる文字列に基づくコードのブレークポイントを設定するために使用します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-typedef struct _BP_LOCATION_CODE_STRING {   
-   BSTR bstrContext;  
-   BSTR bstrCodeExpr;  
+```cpp  
+typedef struct _BP_LOCATION_CODE_STRING {   
+   BSTR bstrContext;  
+   BSTR bstrCodeExpr;  
 } BP_LOCATION_CODE_STRING;  
 ```  
   
-## メンバー  
+## <a name="members"></a>メンバー  
  `bstrContext`  
- コード内のブレークポイントのコンテキスト \(通常は呼び出し履歴に表示されるメソッドまたは関数名。  
+ 通常は、ブレークポイント、コード内で、呼び出し履歴に見られるようメソッドまたは関数名のコンテキスト。  
   
  `bstrCodeExpr`  
- この文字列ブレークポイント コードを記述したユーザー タイプ。  
+ この文字列は、ユーザーがコードのブレークポイントを記述する型です。  
   
-## 解説  
- この構造体共用体の一部として [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md) の構造体のメンバーです。  
+## <a name="remarks"></a>コメント  
+ この構造体のメンバーである、 [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)構造体、共用体の一部として。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md)
+ [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)

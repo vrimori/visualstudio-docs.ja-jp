@@ -1,47 +1,48 @@
 ---
-title: "CA1020: 型をほとんど含まない名前空間を使用しません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1020"
-  - "AvoidNamespacesWithFewTypes"
-helpviewer_keywords: 
-  - "AvoidNamespacesWithFewTypes"
-  - "CA1020"
+title: ": Ca 1020 名前空間のいくつかの種類 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1020
+- AvoidNamespacesWithFewTypes
+helpviewer_keywords:
+- CA1020
+- AvoidNamespacesWithFewTypes
 ms.assetid: 9cb272f6-a3ff-45af-b35d-70dea620b074
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: c09f3fa7855f2dadfce7a22914c4a7010b84f210
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA1020: 型をほとんど含まない名前空間を使用しません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1020-avoid-namespaces-with-few-types"></a>CA1020: 型をほとんど含まない名前空間を使用しません
 |||  
 |-|-|  
 |TypeName|AvoidNamespacesWithFewTypes|  
 |CheckId|CA1020|  
-|分類|Microsoft.Design|  
+|カテゴリ|Microsoft.Design|  
 |互換性に影響する変更点|あり|  
   
-## 原因  
- グローバル名前空間以外に、型数が 5 つ未満である名前空間があります。  
+## <a name="cause"></a>原因  
+ グローバル名前空間以外の名前空間には、5 台未満の型が含まれています。  
   
-## 規則の説明  
- 配置する型数の少ない名前空間を作成する場合、各名前空間を論理的に構成し、有効な理由を付けます。  名前空間には、ほとんどの状況で併用される型を含めます。  このとき、複数のアプリケーションが同時に指定できなければ、型を別の名前空間に配置します。  たとえば、<xref:System.Web.UI> 名前空間には Web アプリケーションで使用される型を含め、<xref:System.Windows.Forms> 名前空間には [!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)] ベースのアプリケーションで使用される型を含めます。  名前空間の両方にユーザー インターフェイス \(UI\) を制御する型が含まれる場合でも、これらの型は同じアプリケーションで使用するためのものではありません。  そのため、別の名前空間にあります。  名前空間を慎重に構築することで、機能の発見可能性も改善されます。  名前空間の階層構造を検討することで、ライブラリを使用するときに、機能を実装する型の位置を特定できるようになります。  
+## <a name="rule-description"></a>規則の説明  
+ 論理構造を持つ各名前空間を付けます名前空間の型を配置する正当な理由が存在することを確認します。 名前空間には、ほとんどのシナリオで一緒に使用される型を含める必要があります。 各自のアプリケーションが相互に排他的な場合は、型にあるはず個別の名前空間。 たとえば、<xref:System.Web.UI>名前空間には、Web アプリケーションで使用される型が含まれています。 および<xref:System.Windows.Forms>名前空間には、で使用される型が含まれています。 [!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)]-ベースのアプリケーションです。 両方の名前空間では、ユーザー インターフェイスの側面を制御する型がある、でも、これらの型では、同じアプリケーションで使用する設計されていません。 そのため、ファイルは別の名前空間に配置します。 名前空間を慎重組織も役に立ちます機能の探索可能性を向上するため。 名前空間階層構造を確認するには、ライブラリのコンシューマーは、機能を実装する型を特定することにする必要があります。  
   
 > [!NOTE]
->  このガイドラインに準拠するには、デザイン時の型とアクセス許可を別の名前空間にマージしないようにします。  このような型は、メインの名前空間の下位にある独自の名前空間に所属します。また、名前空間の末尾にはそれぞれ `.Design` と `.Permissions` が付きます。  
+>  デザイン時の型とアクセス許可をこのガイドラインに準拠するその他の名前空間にマージされません必要があります。 これらの型が、メインの名前空間の下に独自の名前空間に属しているし、名前空間の末尾には`.Design`と`.Permissions`、それぞれします。  
   
-## 違反の修正方法  
- この規則違反を修正するには、型数が少ない複数の名前空間を 1 つの名前空間に結合します。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するのには、単一の名前空間に、一部の種類を含む名前空間を結合する再試行してください。  
   
-## 警告を抑制する状況  
- 名前空間に別の名前空間の型と併用される型が含まれない場合は、この規則による警告を抑制しても安全です。
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 名前空間には、他の名前空間内の型で使用される型が含まれていない場合、この規則による警告を抑制しても安全です。
