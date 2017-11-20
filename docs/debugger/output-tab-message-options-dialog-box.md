@@ -1,58 +1,58 @@
 ---
-title: "[出力] タブ ([メッセージ オプション] ダイアログ ボックス) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "メッセージ オプション、出力"
+title: "タブの出力、オプション ダイアログ ボックスのメッセージ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: message options, Output
 ms.assetid: 22dd48c2-6d17-41b1-b84c-9ddeaef68411
-caps.latest.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0de62e38a3be36ae144b2311b89b51aac0c45b01
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# [出力] タブ ([メッセージ オプション] ダイアログ ボックス)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-\[出力\] タブを使用すると、各メッセージのどのデータを[メッセージ ビュー](../debugger/messages-view.md)に表示するかを指定できます。  [&#91;メッセージ オプション&#93; ダイアログ ボックス](../debugger/message-options-dialog-box.md)を表示するには、\[スパイ\] メニューの \[メッセージのログ出力\] をクリックします。  
+# <a name="output-tab-message-options-dialog-box"></a>[出力] タブ ([メッセージ オプション] ダイアログ ボックス)
+使用して、**出力**タブの一覧に各メッセージからデータを指定する[メッセージ ビュー](../debugger/messages-view.md)です。 表示する、[メッセージ オプション ダイアログ ボックス](../debugger/message-options-dialog-box.md)、選択**ログ メッセージ**から、**スパイ**メニュー。  
   
- \[出力\] タブには、次の項目があります。  
+ 次の設定が [利用可能な**出力**] タブ。  
   
- **\[行番号\]**  
+ **行番号**  
  行番号を表示します。  
   
- **\[メッセージの入れ子のレベル\]**  
- レベルごとに 1 つのピリオドが挿入された、プレフィックスの入れ子のメッセージです。  
+ **メッセージの入れ子レベル**  
+ レベルごとに 1 つのピリオドで入れ子になったメッセージをプレフィックスします。  
   
- **\[生のメッセージ パラメーター\]**  
- 16 進数の **wParam** 値と **lParam** 値を表示します。  
+ **未処理のメッセージ パラメーター**  
+ 16 進数値を表示**wParam**と**lParam**値。  
   
- **\[デコードされたメッセージ パラメーター\]**  
- **wParam** 値と **lParam** 値のメッセージ固有のデコードの結果を表示します。  
+ **デコードされたメッセージのパラメーター**  
+ 特定のメッセージのデコード結果を表示、 **wParam**と**lParam**値。  
   
- **\[生の戻り値\]**  
- 16 進数の **lResult** 戻り値を表示します。  
+ **生の値の戻り値**  
+ 16 進数値を表示**lResult**値を返します。  
   
- **\[デコードされた戻り値\]**  
- **lResult** 戻り値のメッセージ固有のデコードの結果を表示します。  
+ **デコードされた戻り値**  
+ 特定のメッセージのデコード結果を表示、 **lResult**値を返します。  
   
- **\[メッセージのポストされた時間\]**  
- Windows システムの起動後に経過した時間 \(ポストされたメッセージのみ\) です。  
+ **メッセージのポストされた時間**  
+ Windows システムが開始されました (ポストされたメッセージのみ) からの経過時間。  
   
- **\[マウスの位置\]**  
- メッセージがポストされたときのマウスの画面座標 \(ポストされたメッセージのみ\) です。  
+ **マウスの位置**  
+ メッセージが (ポストされたメッセージのみ) のポストされたときのマウスの画面座標。  
   
- **\[最大行数\]**  
+ **最大の行**  
  現在選択されているメッセージ ビューで保持される行の数を制限します。  
   
- **\[メッセージ ログをファイルにも出力\]**  
- メッセージ ログの出力ファイルを指定します。  この出力ファイルには、メッセージ ログ ウィンドウと同時に書き込みが行われます。  
+ **メッセージをログ ファイルにも**  
+ メッセージ ログの出力ファイルを指定します。 この出力ファイルは、メッセージ ログ ウィンドウを同時に書き込まれます。  
   
- **\[設定を既定値として保存\]**  
- 後のメッセージ ストリーム ウィンドウ用に、前の設定を保存します。  これらの設定は、Spy\+\+ を終了したときに保存されます。
+ **設定を既定として保存します。**  
+ 新しいメッセージ ストリームの windows の設定を保存します。 これらの設定は、spy++ を終了するときに保存されます。

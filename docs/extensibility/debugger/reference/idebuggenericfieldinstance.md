@@ -1,43 +1,44 @@
 ---
-title: "IDebugGenericFieldInstance | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugGenericFieldInstance インターフェイス"
+title: "IDebugGenericFieldInstance |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IDebugGenericFieldInstance interface
 ms.assetid: f68b4761-be8b-4801-9d4b-cde90e01d95e
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 7d7a0a16a6e7eb9f5901cecb5765d1ea2de2fb98
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugGenericFieldInstance
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebuggenericfieldinstance"></a>IDebugGenericFieldInstance
 マネージ コードのジェネリック型のフィールドのインスタンスを表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugGenericFieldInstance : IUnknown  
 ```  
   
-## メソッド  
- このインターフェイスは以下のメソッドを実行します :  
+## <a name="methods"></a>メソッド  
+ このインターフェイスでは、次のメソッドを実装します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
+|メソッド|説明|  
+|------------|-----------------|  
 |[GetTypeArguments](../../../extensibility/debugger/reference/idebuggenericfieldinstance-gettypearguments.md)|このインスタンスの型パラメーターの引数を取得します。|  
-|[TypeArgumentCount](../../../extensibility/debugger/reference/idebuggenericfieldinstance-typeargumentcount.md)|このインスタンスの型パラメーターの引数の数を返します。|  
+|[TypeArgumentCount](../../../extensibility/debugger/reference/idebuggenericfieldinstance-typeargumentcount.md)|このインスタンスのパラメーターの引数型の数を返します。|  
   
-## 必要条件  
- ヘッダー : Sh.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Sh.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll

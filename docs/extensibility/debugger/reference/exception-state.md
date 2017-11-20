@@ -1,140 +1,140 @@
 ---
-title: "EXCEPTION_STATE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "EXCEPTION_STATE"
-helpviewer_keywords: 
-  - "EXCEPTION_STATE 列挙型"
+title: "EXCEPTION_STATE |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: EXCEPTION_STATE
+helpviewer_keywords: EXCEPTION_STATE enumeration
 ms.assetid: 597f4f4c-9b70-485c-b5dc-3c2e3aecc664
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 6237e061028ad568c0fdc0ed344d9eb86300c463
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# EXCEPTION_STATE
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-例外の状態を指定します。  
+# <a name="exceptionstate"></a>EXCEPTION_STATE
+例外状態を指定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-enum enum_EXCEPTION_STATE {   
-   EXCEPTION_NONE                          = 0x0000,  
-   EXCEPTION_STOP_FIRST_CHANCE             = 0x0001,  
-   EXCEPTION_STOP_SECOND_CHANCE            = 0x0002,  
-   EXCEPTION_STOP_USER_FIRST_CHANCE        = 0x0010,  
-   EXCEPTION_STOP_USER_UNCAUGHT            = 0x0020,  
-   EXCEPTION_STOP_ALL                      = 0x00FF,  
-   EXCEPTION_CANNOT_BE_CONTINUED           = 0x0100,  
+```cpp  
+enum enum_EXCEPTION_STATE {   
+   EXCEPTION_NONE                          = 0x0000,  
+   EXCEPTION_STOP_FIRST_CHANCE             = 0x0001,  
+   EXCEPTION_STOP_SECOND_CHANCE            = 0x0002,  
+   EXCEPTION_STOP_USER_FIRST_CHANCE        = 0x0010,  
+   EXCEPTION_STOP_USER_UNCAUGHT            = 0x0020,  
+   EXCEPTION_STOP_ALL                      = 0x00FF,  
+   EXCEPTION_CANNOT_BE_CONTINUED           = 0x0100,  
   
-   // These are for exception types only  
-   EXCEPTION_CODE_SUPPORTED                = 0x1000,  
-   EXCEPTION_CODE_DISPLAY_IN_HEX           = 0x2000,  
-   EXCEPTION_JUST_MY_CODE_SUPPORTED        = 0x4000,  
-   EXCEPTION_MANAGED_DEBUG_ASSISTANT       = 0x8000,  
+   // These are for exception types only  
+   EXCEPTION_CODE_SUPPORTED                = 0x1000,  
+   EXCEPTION_CODE_DISPLAY_IN_HEX           = 0x2000,  
+   EXCEPTION_JUST_MY_CODE_SUPPORTED        = 0x4000,  
+   EXCEPTION_MANAGED_DEBUG_ASSISTANT       = 0x8000,  
   
-   // These are no longer used  
-   EXCEPTION_STOP_FIRST_CHANCE_USE_PARENT      = 0x0004,  
-   EXCEPTION_STOP_SECOND_CHANCE_USE_PARENT     = 0x0008,  
-   EXCEPTION_STOP_USER_FIRST_CHANCE_USE_PARENT = 0x0040,  
-   EXCEPTION_STOP_USER_UNCAUGHT_USE_PARENT     = 0x0080,  
+   // These are no longer used  
+   EXCEPTION_STOP_FIRST_CHANCE_USE_PARENT      = 0x0004,  
+   EXCEPTION_STOP_SECOND_CHANCE_USE_PARENT     = 0x0008,  
+   EXCEPTION_STOP_USER_FIRST_CHANCE_USE_PARENT = 0x0040,  
+   EXCEPTION_STOP_USER_UNCAUGHT_USE_PARENT     = 0x0080,  
 };  
 typedef DWORD EXCEPTION_STATE;  
 ```  
   
-```c#  
-public enum enum_EXCEPTION_STATE {   
-   EXCEPTION_NONE                          = 0x0000,  
-   EXCEPTION_STOP_FIRST_CHANCE             = 0x0001,  
-   EXCEPTION_STOP_SECOND_CHANCE            = 0x0002,  
-   EXCEPTION_STOP_USER_FIRST_CHANCE        = 0x0010,  
-   EXCEPTION_STOP_USER_UNCAUGHT            = 0x0020,  
-   EXCEPTION_STOP_ALL                      = 0x00FF,  
-   EXCEPTION_CANNOT_BE_CONTINUED           = 0x0100,  
+```csharp  
+public enum enum_EXCEPTION_STATE {   
+   EXCEPTION_NONE                          = 0x0000,  
+   EXCEPTION_STOP_FIRST_CHANCE             = 0x0001,  
+   EXCEPTION_STOP_SECOND_CHANCE            = 0x0002,  
+   EXCEPTION_STOP_USER_FIRST_CHANCE        = 0x0010,  
+   EXCEPTION_STOP_USER_UNCAUGHT            = 0x0020,  
+   EXCEPTION_STOP_ALL                      = 0x00FF,  
+   EXCEPTION_CANNOT_BE_CONTINUED           = 0x0100,  
   
-   // These are for exception types only  
-   EXCEPTION_CODE_SUPPORTED                = 0x1000,  
-   EXCEPTION_CODE_DISPLAY_IN_HEX           = 0x2000,  
-   EXCEPTION_JUST_MY_CODE_SUPPORTED        = 0x4000,  
-   EXCEPTION_MANAGED_DEBUG_ASSISTANT       = 0x8000,  
+   // These are for exception types only  
+   EXCEPTION_CODE_SUPPORTED                = 0x1000,  
+   EXCEPTION_CODE_DISPLAY_IN_HEX           = 0x2000,  
+   EXCEPTION_JUST_MY_CODE_SUPPORTED        = 0x4000,  
+   EXCEPTION_MANAGED_DEBUG_ASSISTANT       = 0x8000,  
   
-   // These are no longer used  
-   EXCEPTION_STOP_FIRST_CHANCE_USE_PARENT      = 0x0004,  
-   EXCEPTION_STOP_SECOND_CHANCE_USE_PARENT     = 0x0008,  
-   EXCEPTION_STOP_USER_FIRST_CHANCE_USE_PARENT = 0x0040,  
-   EXCEPTION_STOP_USER_UNCAUGHT_USE_PARENT     = 0x0080,  
+   // These are no longer used  
+   EXCEPTION_STOP_FIRST_CHANCE_USE_PARENT      = 0x0004,  
+   EXCEPTION_STOP_SECOND_CHANCE_USE_PARENT     = 0x0008,  
+   EXCEPTION_STOP_USER_FIRST_CHANCE_USE_PARENT = 0x0040,  
+   EXCEPTION_STOP_USER_UNCAUGHT_USE_PARENT     = 0x0080,  
 };  
 ```  
   
-## メンバー  
- EXCEPTION\_NONE  
- 例外で中断しないようにします。  
+## <a name="members"></a>メンバー  
+ EXCEPTION_NONE  
+ 例外では停止されません。  
   
- EXCEPTION\_STOP\_FIRST\_CHANCE  
- 例外の最初のオカレンスで停止します。  例外イベントを記述する場合はこのフラグは例外イベントの初回例外イベントであることを示します。  
+ EXCEPTION_STOP_FIRST_CHANCE  
+ 例外の最初の起動処理を停止します。 例外イベントを記述する場合、このフラグは、例外イベントが初回例外イベントを示します。  
   
- EXCEPTION\_STOP\_SECOND\_CHANCE  
- 例外の 2 番目の実行で停止します。  例外イベントを記述する場合は例外イベントがセカンド チャンス例外のイベントであることを示します。  
+ EXCEPTION_STOP_SECOND_CHANCE  
+ 例外の 2 つ目の実行を停止します。 例外イベントを記述する場合は、例外イベントでは、次の例外イベントを示します。  
   
- EXCEPTION\_STOP\_USER\_FIRST\_CHANCE  
- ユーザー モード例外の最初のオカレンスで停止します。  例外イベントを記述すると例外イベントの初回例外のユーザーのイベントであることを示します。  
+ EXCEPTION_STOP_USER_FIRST_CHANCE  
+ ユーザー モード例外の最初の起動処理を停止します。 例外イベントを記述する場合は、例外イベントでは、ユーザーの初回例外イベントを示します。  
   
- EXCEPTION\_STOP\_USER\_UNCAUGHT  
- ユーザー モード例外がキャッチされないときは停止します。  例外イベントを記述すると例外イベントの状態でユーザー モード例外イベントであることを示します。  
+ EXCEPTION_STOP_USER_UNCAUGHT  
+ ユーザー モード例外がキャッチされない場合は停止します。 例外イベントを記述する場合、例外イベントがキャッチされていないユーザー モード例外イベントことを示します。  
   
- EXCEPTION\_STOP\_ALL  
- すべての例外で停止します。  例外イベントについての場合は使用されていません。  
+ EXCEPTION_STOP_ALL  
+ すべての例外で停止します。 例外イベントを記述する場合は使用されません。  
   
- EXCEPTION\_CAN のない \_BE\_CONTINUED  
- 例外イベントを記述する場合は例外を続行できないことを示します。  
+ EXCEPTION_CANNOT_BE_CONTINUED  
+ 例外イベントを記述する場合から例外を続行することはできませんを示します。  
   
- EXCEPTION\_CODE\_SUPPORTED  
- 例外にはをサポートするコードがあることを示します。  例外の表示で使用される  
+ EXCEPTION_CODE_SUPPORTED  
+ 例外のコードをサポートしていることを示します。 例外を表示するために使用します。  
   
- EXCEPTION\_CODE\_DISPLAY\_IN\_HEX  
- 例外コードが 16 進数で表示する必要があることを示します。  例外の表示に使用します。  
+ EXCEPTION_CODE_DISPLAY_IN_HEX  
+ 例外コードを 16 進数で表示することを示します。 例外を表示するために使用されます。  
   
- EXCEPTION\_JUST\_MY\_CODE\_SUPPORTED  
- 例外コードの JustMyCode をサポートすることを示します。  例外の表示に使用します。  
+ EXCEPTION_JUST_MY_CODE_SUPPORTED  
+ 例外コードが JustMyCode をサポートしていることを示します。 例外を表示するために使用されます。  
   
- EXCEPTION\_MANAGED\_DEBUG\_ASSISTANT  
- 例外処理があるとマネージ コードのデバッガー示します。  設定しないと既定のデバッガー例外を処理する場合。  これは [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) のメソッドに渡され[EXCEPTION\_INFO](../../../extensibility/debugger/reference/exception-info.md) の構造体は使用されません。  
+ EXCEPTION_MANAGED_DEBUG_ASSISTANT  
+ マネージ コードのデバッガーが例外を処理することを示します。 指定しない場合、セット、既定のデバッガーが例外を処理します。 これは渡される、 [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md)メソッドで使用されていないと、 [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)構造体。  
   
- EXCEPTION\_STOP\_FIRST\_CHANCE\_USE\_PARENT  
- 互換性のため使用しないでください。  
+ EXCEPTION_STOP_FIRST_CHANCE_USE_PARENT  
+ 旧式で、使用しないでください。  
   
- EXCEPTION\_STOP\_SECOND\_CHANCE\_USE\_PARENT  
- 互換性のため使用しないでください。  
+ EXCEPTION_STOP_SECOND_CHANCE_USE_PARENT  
+ 旧式で、使用しないでください。  
   
- EXCEPTION\_STOP\_USER\_FIRST\_CHANCE\_USE\_PARENT  
- 互換性のため使用しないでください。  
+ EXCEPTION_STOP_USER_FIRST_CHANCE_USE_PARENT  
+ 旧式で、使用しないでください。  
   
- EXCEPTION\_STOP\_USER\_SECOND\_CHANCE\_USE\_PARENT  
- 互換性のため使用しないでください。  
+ EXCEPTION_STOP_USER_SECOND_CHANCE_USE_PARENT  
+ 旧式で、使用しないでください。  
   
-## 解説  
- 実行できる操作については例外の状態を示すために [EXCEPTION\_INFO](../../../extensibility/debugger/reference/exception-info.md) の構造体の `dwState` のメンバーとして使用することもできます。  
+## <a name="remarks"></a>コメント  
+ として使用される、`dwState`のメンバー、 [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)例外とは何を実行できる状態を示すための構造体。  
   
- これらの値は[SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) のメソッドはすべての例外の状態を設定するために渡されます。  
+ これらの値が渡されるも、 [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md)すべての例外の状態を設定します。  
   
- これらのフラグはまたはこれらのビットごとに組み合わせることがあります。  
+ これらのフラグは、ビットごとの OR と組み合わせることがあります。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [EXCEPTION\_INFO](../../../extensibility/debugger/reference/exception-info.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)   
  [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md)

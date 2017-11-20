@@ -1,62 +1,62 @@
 ---
-title: "CODE_PATH | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CODE_PATH"
-helpviewer_keywords: 
-  - "CODE_PATH 構造体"
+title: "CODE_PATH |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CODE_PATH
+helpviewer_keywords: CODE_PATH structure
 ms.assetid: 2d4b2890-4c9d-47e1-83c0-df9c6436427f
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: aad85bd41537073a54b319b2830ea621fd4bece4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CODE_PATH
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-メソッドまたは関数呼び出しについて説明します。  
+# <a name="codepath"></a>CODE_PATH
+メソッドまたは関数呼び出しをについて説明します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-typedef struct tagCODE_PATH {   
-   BSTR                bstrName;  
-   IDebugCodeContext2* pCode;  
+```cpp  
+typedef struct tagCODE_PATH {   
+   BSTR                bstrName;  
+   IDebugCodeContext2* pCode;  
 } CODE_PATH;  
 ```  
   
-```c#  
+```csharp  
 public struct CODE_PATH {  
    public string            bstrName;  
    public IDebugCodeContext pCode;  
 }  
 ```  
   
-## メンバー  
+## <a name="members"></a>メンバー  
  bstrName  
- コード パス名。  
+ コード パスの名前。  
   
  pCode  
- コード内の関数にステップ インするには[IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) 識別するオブジェクト。  
+ [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)関数にステップ インするコードの場所を識別するオブジェクト。  
   
-## 解説  
- この構造体を関数にステップを実行するために使用されます。  [EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md) でプログラムの現在位置からすべての呼び出しを返します。  この構造は1 種類のこのような呼び出しを表します。  
+## <a name="remarks"></a>コメント  
+ この構造体を使用して、関数にステップ インを実装できます。 [EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md)デバッグ中のプログラムの現在の場所からすべての呼び出しが返されます。 この構造体では、このような 1 つの呼び出しを表します。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)   
  [EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md)

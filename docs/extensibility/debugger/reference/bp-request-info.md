@@ -1,111 +1,111 @@
 ---
-title: "BP_REQUEST_INFO | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_REQUEST_INFO"
-helpviewer_keywords: 
-  - "BP_REQUEST_INFO 構造体"
+title: "BP_REQUEST_INFO |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BP_REQUEST_INFO
+helpviewer_keywords: BP_REQUEST_INFO structure
 ms.assetid: 42a31412-5b6b-47fe-a762-0c2bc769e1cc
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 64f39aa59d566d85147b953ca8df4930d2a49eca
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# BP_REQUEST_INFO
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-ブレークポイントを実行するために必要な情報が含まれています。  
+# <a name="bprequestinfo"></a>BP_REQUEST_INFO
+ブレークポイントの実装に必要な情報が含まれています。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-typedef struct _BP_REQUEST_INFO {  
-   BPREQI_FIELDS   dwFields;  
-   GUID            guidLanguage;  
-   BP_LOCATION     bpLocation;  
-   IDebugProgram2* pProgram;  
-   BSTR            bstrProgramName;  
-   IDebugThread2*  pThread;  
-   BSTR            bstrThreadName;  
-   BP_CONDITION    bpCondition;  
-   BP_PASSCOUNT    bpPassCount;  
-   BP_FLAGS        dwFlags;  
-} BP_REQUEST_INFO;  
+```cpp  
+typedef struct _BP_REQUEST_INFO {  
+   BPREQI_FIELDS   dwFields;  
+   GUID            guidLanguage;  
+   BP_LOCATION     bpLocation;  
+   IDebugProgram2* pProgram;  
+   BSTR            bstrProgramName;  
+   IDebugThread2*  pThread;  
+   BSTR            bstrThreadName;  
+   BP_CONDITION    bpCondition;  
+   BP_PASSCOUNT    bpPassCount;  
+   BP_FLAGS        dwFlags;  
+} BP_REQUEST_INFO;  
 ```  
   
-```c#  
-public struct BP_REQUEST_INFO {  
-   public uint           dwFields;  
-   public Guid           guidLanguage;  
-   public BP_LOCATION    bpLocation;  
-   public IDebugProgram2 pProgram;  
-   public string         bstrProgramName;  
-   public IDebugThread2  pThread;  
-   public string         bstrThreadName;  
-   public BP_CONDITION   bpCondition;  
-   public BP_PASSCOUNT   bpPassCount;  
-   public uint           dwFlags;  
+```csharp  
+public struct BP_REQUEST_INFO {  
+   public uint           dwFields;  
+   public Guid           guidLanguage;  
+   public BP_LOCATION    bpLocation;  
+   public IDebugProgram2 pProgram;  
+   public string         bstrProgramName;  
+   public IDebugThread2  pThread;  
+   public string         bstrThreadName;  
+   public BP_CONDITION   bpCondition;  
+   public BP_PASSCOUNT   bpPassCount;  
+   public uint           dwFlags;  
 };  
 ```  
   
-## メンバー  
+## <a name="members"></a>メンバー  
  `dwFields`  
- どのフィールドを表示するかを指定する [BPREQI\_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) の列挙体のフラグの組み合わせ。  
+ フラグの組み合わせ、 [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)のどのフィールドが埋められますを指定する列挙です。  
   
  `guidLanguage`  
  言語の GUID。  
   
  `bpLocation`  
- ブレークポイントの位置の種類を指定する [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md) の構造体。  
+ [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)をブレークポイントの場所の種類を指定します。  
   
  `pProgram`  
- ブレークポイントが発生したアプリケーション [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) を表すオブジェクト。  
+ [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)ブレークポイントが発生したアプリケーションを表すオブジェクト。  
   
  `bstrProgramName`  
- ブレークポイントが発生するアプリケーションの名前。  
+ ブレークポイントが発生したアプリケーションの名前。  
   
  `pThread`  
- ブレークポイントが発生したスレッドを表す [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) のオブジェクト。  
+ [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)ブレークポイントが発生したスレッドを表すオブジェクト。  
   
  `bstrThreadName`  
  ブレークポイントが発生したスレッドの名前。  
   
  `bpCondition`  
- ブレークポイントが発生する条件を示す [BP\_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) の構造体。  
+ [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)ブレークポイントが発生する条件を記述する構造体。  
   
  `bpPassCount`  
- ブレークポイントのパスの数の情報を含む [BP\_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) の構造体。  
+ [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)ブレークポイントのパスの行数の情報を格納する構造体。  
   
  `dwFlags`  
- 要求されたブレークポイントのフラグを指定する [BP\_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) の列挙体のフラグの組み合わせ。  
+ フラグの組み合わせ、 [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md)要求されたブレークポイントのフラグを指定する列挙です。  
   
-## 解説  
- この構造は [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) のメソッドによって返されます。  
+## <a name="remarks"></a>コメント  
+ この構造体は、によって返される、 [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md)メソッドです。  
   
- デバッグ エンジンの販売元の GUIDブレークポイントの制約またはトレース ポイントを取得する必要がある場合は [BP\_REQUEST\_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) の構造体を参照してください。  
+ ブレークポイント制約またはトレース ポイントを参照して、デバッグ エンジン ベンダー GUID を取得する必要がある場合、 [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)構造体。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md)   
- [BPREQI\_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)   
- [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
+ [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)   
+ [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
- [BP\_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)   
- [BP\_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)   
- [BP\_FLAGS](../../../extensibility/debugger/reference/bp-flags.md)   
- [BP\_REQUEST\_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)
+ [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)   
+ [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)   
+ [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md)   
+ [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)

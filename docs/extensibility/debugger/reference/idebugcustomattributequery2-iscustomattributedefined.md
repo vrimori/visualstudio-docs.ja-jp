@@ -1,51 +1,51 @@
 ---
-title: "IDebugCustomAttributeQuery2::IsCustomAttributeDefined | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCustomAttributeQuery2::IsCustomAttributeDefined"
-helpviewer_keywords: 
-  - "IDebugCustomAttributeQuery2::IsCustomAttributeDefined"
+title: "IDebugCustomAttributeQuery2::IsCustomAttributeDefined |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugCustomAttributeQuery2::IsCustomAttributeDefined
+helpviewer_keywords: IDebugCustomAttributeQuery2::IsCustomAttributeDefined
 ms.assetid: 5c07cc52-6d2d-42df-9d76-9f1f769641db
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 2f1311beccfb36364bb8039f75bbe2955cbc9fca
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugCustomAttributeQuery2::IsCustomAttributeDefined
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-カスタム属性を名前であるかどうかを判定します。  
+# <a name="idebugcustomattributequery2iscustomattributedefined"></a>IDebugCustomAttributeQuery2::IsCustomAttributeDefined
+名前でカスタム属性が存在するかどうかを判断します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT IsCustomAttributeDefined(   
-   LPCOLESTR pszCustomAttributeName  
+```cpp  
+HRESULT IsCustomAttributeDefined(   
+   LPCOLESTR pszCustomAttributeName  
 );  
 ```  
   
-```c#  
+```csharp  
 int IsCustomAttributeDefined(  
-   [In] string pszCustomAttributeName  
+   [In] string pszCustomAttributeName  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pszCustomAttributeName`  
- \[入力\] 文字列検索するカスタム属性の名前。  
+ [in]検索するカスタム属性の名前を含む文字列。  
   
-## 戻り値  
- カスタム属性がこのフィールドで定義されている場合は S\_OK を返します。それ以外の場合は S\_FALSE を返します。  
+## <a name="return-value"></a>戻り値  
+ S_OK でこのフィールドは、カスタム属性が定義されている場合は、それ以外の場合は S_FALSE を返しますを返します。  
   
-## 解説  
- カスタム属性に関連付けられた属性のバイトを取得するには [GetCustomAttributeByName](../Topic/IDebugCustomAttributeQuery2::GetCustomAttributeByName.md) のメソッドを呼び出します。  
+## <a name="remarks"></a>コメント  
+ カスタム属性に関連付けられている属性のバイト数を取得するを呼び出して、 [GetCustomAttributeByName](../../../extensibility/debugger/reference/idebugcustomattributequery2-getcustomattributebyname.md)メソッドです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)

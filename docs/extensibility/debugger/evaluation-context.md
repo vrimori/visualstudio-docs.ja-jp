@@ -1,43 +1,45 @@
 ---
-title: "評価コンテキスト | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "[デバッグ SDK] の式の評価のデバッグ"
-  - "式の評価、コンテキスト"
+title: "評価コンテキスト |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- debugging [Debugging SDK], expression evaluation
+- expression evaluation, context
 ms.assetid: 008a20c7-1b27-4013-bf96-d6a3f510da02
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5a44d7ce7cffa2afc40971b0ea6f88a6f62617f3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 評価コンテキスト
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="evaluation-context"></a>評価コンテキスト
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されません。 CLR 式エバリュエーターの実装については、次を参照してください [CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) と [マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
+>  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
   
- 3 つの引数が渡されるデバッグ エンジン \(DE\) を呼び出すと、式エバリュエーター \(EE\)、 [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) 次の表に示すように検出して、シンボルを評価するためのコンテキストを決定します。  
+ 3 つの引数が渡されるデバッグ エンジン (DE) を呼び出すと、式エバリュエーター (EE)、 [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)次の表に示すように検索すると、シンボルを評価するコンテキストを決定します。  
   
-## 引数  
+## <a name="arguments"></a>引数  
   
 |引数|説明|  
-|--------|--------|  
-|`pSymbolProvider`|[IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md) シンボルを識別するために使用するシンボル ハンドラー \(SH\) を指定するインターフェイスです。|  
-|`pAddress`|[IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md) 実行の現在位置を指定するインターフェイスです。 実行対象のコードを含むメソッドを検索するために使用できます。|  
-|`pBinder`|[IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md) 値と指定した名前のシンボルの型を検索するために使用するインターフェイスです。|  
+|--------------|-----------------|  
+|`pSymbolProvider`|[IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md)シンボルの識別に使用するシンボル ハンドラー (SH) を指定するインターフェイスです。|  
+|`pAddress`|[IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md)実行の現在のポイントを指定するインターフェイスです。 実行対象のコードが含まれるメソッドを検索するために使用できます。|  
+|`pBinder`|[IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)値と指定した名前のシンボルの型を検索するために使用するインターフェイスです。|  
   
- `IDebugParsedExpression::EvaluateSync` 返します、 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) 結果の値とその型を表すインターフェイスです。  
+ `IDebugParsedExpression::EvaluateSync`返します、 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)結果の値とその型を表すインターフェイス。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [キー式エバリュエーター インターフェイス](../../extensibility/debugger/key-expression-evaluator-interfaces.md)   
- [\[ローカル\] を表示します。](../Topic/Displaying%20Locals.md)   
+ [ローカル変数を表示します。](../../extensibility/debugger/displaying-locals.md)   
  [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)   
  [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)   
  [IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md)   

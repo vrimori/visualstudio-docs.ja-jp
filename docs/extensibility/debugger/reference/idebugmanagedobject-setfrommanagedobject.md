@@ -1,51 +1,51 @@
 ---
-title: "IDebugManagedObject::SetFromManagedObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugManagedObject::SetFromManagedObject"
-helpviewer_keywords: 
-  - "IDebugManagedObject::SetFromManagedObject メソッド"
+title: "IDebugManagedObject::SetFromManagedObject |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugManagedObject::SetFromManagedObject
+helpviewer_keywords: IDebugManagedObject::SetFromManagedObject method
 ms.assetid: 8700ee8d-2704-4580-bccc-046837a24edd
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: a3f73236b45edea7a9dea003a1f3604669eb3739
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugManagedObject::SetFromManagedObject
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-パラメーターとして指定される値クラスのインスタンスの値クラスのオブジェクト インスタンスの値を設定します。  
+# <a name="idebugmanagedobjectsetfrommanagedobject"></a>IDebugManagedObject::SetFromManagedObject
+パラメーターとして指定する値クラスのインスタンスから値クラスのオブジェクトのインスタンスの値を設定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT SetFromManagedObject(   
-   IUnknown* pManagedObject  
+```cpp  
+HRESULT SetFromManagedObject(   
+   IUnknown* pManagedObject  
 );  
 ```  
   
-```c#  
+```csharp  
 int SetFromManagedObject(  
-   object pManagedObject  
+   object pManagedObject  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pManagedObject`  
- \[入力\] 値が設定されているマネージ オブジェクトを表すインターフェイス。  
+ [in]新しい値を含むマネージ オブジェクトを表すインターフェイスです。  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## 解説  
- このメソッドが [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) のオブジェクトによって表されるいるマネージ オブジェクトを変更するために使用されます。  
+## <a name="remarks"></a>コメント  
+ このメソッドで表される管理対象オブジェクトを変更するのには使用、 [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)オブジェクト。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

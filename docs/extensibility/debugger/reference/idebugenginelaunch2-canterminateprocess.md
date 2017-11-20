@@ -1,53 +1,53 @@
 ---
-title: "IDebugEngineLaunch2::CanTerminateProcess | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngineLaunch2::CanTerminateProcess"
-helpviewer_keywords: 
-  - "IDebugEngineLaunch2::CanTerminateProcess"
+title: "IDebugEngineLaunch2::CanTerminateProcess |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugEngineLaunch2::CanTerminateProcess
+helpviewer_keywords: IDebugEngineLaunch2::CanTerminateProcess
 ms.assetid: 7973454d-c957-4123-a0ee-80ebcdbbd2d1
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 78b5a55f79c0f7d6e30574c1bfff954566c500b2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugEngineLaunch2::CanTerminateProcess
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-プロセスを終了できるかどうかを判定します。  
+# <a name="idebugenginelaunch2canterminateprocess"></a>IDebugEngineLaunch2::CanTerminateProcess
+プロセスが終了するかどうかを判断します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT CanTerminateProcess (   
-   IDebugProcess2* pProcess  
+```cpp  
+HRESULT CanTerminateProcess (   
+   IDebugProcess2* pProcess  
 );  
 ```  
   
-```c#  
-int CanTerminateProcess (   
-   IDebugProcess2 pProcess  
+```csharp  
+int CanTerminateProcess (   
+   IDebugProcess2 pProcess  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pProcess`  
- \[入力\] 終了するプロセスを表すオブジェクトの [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)。  
+ [in][IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)を終了するプロセスを表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コードを返します。  アクセスが拒否されるためエンジンはプロセスを終了できない場合たとえば `S_FALSE` を返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`です。 それ以外の場合はエラー コードを返します。 返します`S_FALSE`かどうか、エンジンことはできません、プロセスの終了など、アクセスが拒否されました。  
   
-## 解説  
- この実際プロセスが終了するにはメソッドの戻り `S_OK` の [TerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-terminateprocess.md) その後でメソッドを呼び出すことができます。  
+## <a name="remarks"></a>コメント  
+ このメソッドが戻る場合`S_OK`、次に、 [TerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-terminateprocess.md)を実際には、プロセスを終了するメソッドを呼び出すことができます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
  [TerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-terminateprocess.md)

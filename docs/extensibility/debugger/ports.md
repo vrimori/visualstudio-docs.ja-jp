@@ -1,38 +1,40 @@
 ---
-title: "ポート | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ポート"
-  - "[デバッグの SDK] をデバッグするには、ポートします。"
+title: "ポート |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ports
+- debugging [Debugging SDK], ports
 ms.assetid: 1d7f3aa7-7eff-4cab-bc53-0a566b1a9363
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 926f5e9a80a91da57d843c11175865f78775e38c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ポート
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-デバッガーのアーキテクチャという点では **ポート** :  
+# <a name="ports"></a>ポート
+デバッガーのアーキテクチャの観点から、**ポート**:  
   
--   一連のサーバーで実行されているプロセスのコンテナーです。  たとえばシリアル ポートはネットワーク ケーブルがまたは非 DCOM マシンへの接続を Windows CE ベースのデバイスを表すことがあります。  ローカル ポートという 1 種類の特別なポートがローカル コンピューターで実行しているすべてのプロセスが含まれています。  
+-   サーバーで実行するプロセスのセットのコンテナーです。 たとえば、ポートは、シリアル ケーブルの場合は、Windows CE ベースのデバイスまたは DCOM 以外のネットワークに接続されたコンピューターの接続を表す場合があります。 ローカルのポートと呼ばれる 1 つの特殊なポートには、ローカル コンピューターで実行されているすべてのプロセスが含まれています。  
   
--   自身または識別子を名前で指定できます。  
+-   名前または識別子をそれ自体を特定できます。  
   
--   ポートで実行されているプロセスを列挙しこれらのプロセスを開始および終了できます。  
+-   できますとポートで実行されているすべてのプロセスを列挙し、起動し、これらのプロセスを終了します。  
   
--   [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) に [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) の引数を渡すことによって作成された [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) のインターフェイスで表されます。  
+-   によって表される、 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)を渡すことによって作成されるインターフェイス、 [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md)引数[AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md)です。  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] はすべての Windows ベースのプロセス \(ネイティブおよびマネージ\) を処理する既定のを指定します。  カスタム ポートはWindows ベースではない外部デバイスを使用して接続に対して実行する必要があります。  このようなカスタム ポートを実装するカスタム ポートの仕入先を指定する必要があります。  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]すべて Windows ベースのプロセス、ネイティブおよびマネージを処理する既定のポートを指定します。 Windows ベースではない外部のデバイスでは、接続のカスタム ポートを実装しなければなりません。 このようなカスタム ポートを指定するには、カスタム ポート業者も実装する必要があります。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [サーバー](../../extensibility/debugger/servers-visual-studio-sdk.md)   
  [プロセス](../../extensibility/debugger/processes.md)   
  [デバッガーの概念](../../extensibility/debugger/debugger-concepts.md)   

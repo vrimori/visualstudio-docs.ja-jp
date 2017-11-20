@@ -1,70 +1,70 @@
 ---
-title: "[メッセージ プロパティ] ダイアログ ボックス | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "メッセージ オプション"
-  - "メッセージ オプション、全般"
+title: "メッセージのプロパティ ダイアログ ボックス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- message options
+- message options, General
 ms.assetid: 58e9dc24-baf6-4ab8-916c-aea28b72e3b0
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: e4a1516219df404b6447a9e95ae676d482cea7f7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# [メッセージ プロパティ] ダイアログ ボックス
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-このダイアログ ボックスを使用すると、特定のメッセージの詳細を確認できます。  このダイアログ ボックスを表示するには、[メッセージ ビュー](../debugger/messages-view.md) ウィンドウにフォーカスを移動します。  ツリーで任意のメッセージ ノードを選択し、\[表示\] メニューの \[プロパティ\] をクリックします。  
+# <a name="message-properties-dialog-box"></a>[メッセージ プロパティ] ダイアログ ボックス
+このダイアログ ボックスを使用して、特定のメッセージについて詳しく調べます。 このダイアログ ボックスを表示するには、フォーカスを移動、[メッセージ ビュー](../debugger/messages-view.md)ウィンドウです。 ツリーで、メッセージの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  
   
- 表示されるタブは \[全般\] タブだけです。  次の項目があります。  
+ **全般**タブは表示のみのタブです。 次の設定を使用できます。  
   
- **\[ウィンドウ ハンドル\]**  
- このウィンドウの一意の ID です。  ウィンドウ ハンドルの番号は再利用されます。これらは、ウィンドウが有効な間にのみそのウィンドウを識別します。  このウィンドウのプロパティを表示するには、この値をクリックします。  
+ **ウィンドウ ハンドル**  
+ このウィンドウの一意の ID。 ウィンドウ ハンドルの番号が再利用されます。これらは、そのウィンドウの有効期間にのみ、ウィンドウを識別します。 このウィンドウのプロパティを表示するのには、この値をクリックします。  
   
- **\[入れ子のレベル\]**  
- このメッセージの入れ子の深さです。入れ子になっていない場合は 0 です。  
+ **入れ子のレベル**  
+ このメッセージの入れ子の深さ 0 です。  
   
- **\[メッセージ\]**  
- 選択したウィンドウ メッセージの番号、ステータス、および名前です。  
+ **[メッセージ]**  
+ 数、ステータス、および選択された windows メッセージの名前。  
   
- **\[lResult\]**  
- *lResult* パラメーターの値です \(存在する場合\)。  
+ **lResult**  
+ 値、 *lResult*パラメーター、存在する場合。  
   
- **\[wParam\]**  
- *wParam* パラメーターの値です \(存在する場合\)。  
+ **wParam**  
+ 値、 *wParam*パラメーター、存在する場合。  
   
- **\[lParam\]**  
- *lParam* パラメーターの値です \(存在する場合\)。  文字列または構造体へのポインターである場合、この値はデコードされます。  
+ **lParam**  
+ 値、 *lParam*パラメーター、存在する場合。 この値は文字列型または構造体へのポインターである場合にデコードされます。  
   
-## 関連項目  
- [&#91;メッセージ オプション&#93; ダイアログ ボックス](../debugger/message-options-dialog-box.md)  
- アクティブなメッセージ ビューに一覧表示するメッセージを選択するために使用します。  
+## <a name="related-sections"></a>関連項目  
+ [[メッセージ オプション] ダイアログ ボックス](../debugger/message-options-dialog-box.md)  
+ どのメッセージがアクティブなメッセージ ビューで一覧表示を選択するために使用します。  
   
- [&#91;メッセージ検索&#93; ダイアログ ボックス](../debugger/message-search-dialog-box.md)  
+ [[メッセージ検索] ダイアログ ボックス](../debugger/message-search-dialog-box.md)  
  メッセージ ビューで特定のメッセージのノードを検索するために使用します。  
   
- [Spy\+\+ リファレンス](../debugger/spy-increment-reference.md)  
- Spy\+\+ の各メニューとダイアログ ボックスについて説明するセクションが含まれます。  
+ [Spy++ リファレンス](../debugger/spy-increment-reference.md)  
+ 各 spy++ メニューおよびダイアログ ボックスについて説明するセクションが含まれます。  
   
- [&#91;ウィンドウ検索&#93; からメッセージ ビューを開く](_asug_choosing_message_options)  
- \[ウィンドウ検索\] ダイアログ ボックスからメッセージ ビューを開く方法について説明します。  
+ [[検索] ウィンドウからメッセージ ビューを開く](../debugger/how-to-open-messages-view-from-find-window.md)  
+ [ウィンドウ検索] ダイアログ ボックスからメッセージ ビューを開く方法について説明します。  
   
- [メッセージ ビューでのメッセージの検索](../Topic/How%20to:%20Search%20for%20a%20Message%20in%20Messages%20View.md)  
- メッセージ ビューで特定のメッセージを検索する方法について説明します。  
+ [メッセージ ビューでメッセージの検索](../debugger/how-to-search-for-a-message-in-messages-view.md)  
+ メッセージ ビューで、特定のメッセージを検索する方法について説明します。  
   
  [メッセージ ビュー](../debugger/messages-view.md)  
  ウィンドウ、プロセス、またはスレッドに関連付けられているメッセージ ストリームを表示します。  
   
- [Spy\+\+ ビュー](../debugger/spy-increment-views.md)  
- ウィンドウ、メッセージ、プロセス、およびスレッドの Spy\+\+ ツリー ビューについて説明します。  
+ [Spy++ ビュー](../debugger/spy-increment-views.md)  
+ Windows、メッセージ、プロセス、およびスレッドの spy++ ツリー ビューについて説明します。  
   
- [Spy\+\+ の使用](../debugger/using-spy-increment.md)  
- Spy\+\+ ツールとその使用方法について説明します。
+ [Spy++ の使用](../debugger/using-spy-increment.md)  
+ Spy++ ツールを紹介し、使用方法について説明します。

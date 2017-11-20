@@ -1,62 +1,62 @@
 ---
-title: "AD_PROCESS_ID_TYPE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "AD_PROCESS_ID_TYPE"
-helpviewer_keywords: 
-  - "AD_PROCESS_ID_TYPE 列挙型"
+title: "AD_PROCESS_ID_TYPE |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: AD_PROCESS_ID_TYPE
+helpviewer_keywords: AD_PROCESS_ID_TYPE enumeration
 ms.assetid: 0aab80e9-285a-4697-94ac-c864d42a6aaa
-caps.latest.revision: 6
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 75904ef6e06ef7ccd6d126091f8ec0fbe523ac9a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# AD_PROCESS_ID_TYPE
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-[AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md) の構造のプロセス ID を解釈する方法を指定します。  
+# <a name="adprocessidtype"></a>AD_PROCESS_ID_TYPE
+プロセス ID を解釈する方法を指定します、 [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)構造体。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 enum enum_AD_PROCESS_ID {  
-   AD_PROCESS_ID_SYSTEM = 0,  
-   AD_PROCESS_ID_GUID   = 1  
+   AD_PROCESS_ID_SYSTEM = 0,  
+   AD_PROCESS_ID_GUID   = 1  
 };  
 typedef DWORD AD_PROCESS_ID_TYPE;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_AD_PROCESS_ID {  
-   AD_PROCESS_ID_SYSTEM = 0,  
-   AD_PROCESS_ID_GUID   = 1  
+   AD_PROCESS_ID_SYSTEM = 0,  
+   AD_PROCESS_ID_GUID   = 1  
 };  
 ```  
   
-## メンバー  
- AD\_PROCESS\_ID\_SYSTEM  
- プロセス ID はシステム識別子です。  [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md) の構造体の `ProcessId.dwProcessId` のフィールドを使用します。  
+## <a name="members"></a>メンバー  
+ AD_PROCESS_ID_SYSTEM  
+ プロセス ID は、システム識別子です。 使用して、`ProcessId.dwProcessId`のフィールド、 [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)構造体。  
   
- AD\_PROCESS\_ID\_GUID  
- プロセス ID は GUID です。  `AD_PROCESS_ID` の構造体の `ProcessId.guidProcessId` のフィールドを使用します。  
+ AD_PROCESS_ID_GUID  
+ プロセス ID は GUID です。 使用して、`ProcessId.guidProcessId`のフィールド、`AD_PROCESS_ID`構造体。  
   
-## 解説  
- 構造体に含まれているプロセス ID の種類を識別するために [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md) の構造体のメンバー `ProcessIdType` に使用されます。  構造体の `ProcessId` の共用体を解釈する方法を示します。  
+## <a name="remarks"></a>コメント  
+ 使用、`ProcessIdType`のメンバー、 [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)構造に含まれているプロセス ID の種類を識別する構造体。 解釈する方法を決定、`ProcessId`共用体、構造体の。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md)
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)

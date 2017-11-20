@@ -1,53 +1,53 @@
 ---
-title: "IDebugField::GetTypeInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugField::GetTypeInfo"
-helpviewer_keywords: 
-  - "IDebugField::GetTypeInfo メソッド"
+title: "IDebugField::GetTypeInfo |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugField::GetTypeInfo
+helpviewer_keywords: IDebugField::GetTypeInfo method
 ms.assetid: bb5acfa3-04c3-4088-be84-9ff8926cd16f
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 11b04ce148fbfe8129f62c21da0a0b015ed6e8f3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugField::GetTypeInfo
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このメソッドはシンボルまたは型の型に依存しない情報を取得します。  
+# <a name="idebugfieldgettypeinfo"></a>IDebugField::GetTypeInfo
+このメソッドは、シンボルまたは型の型に依存しない情報を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetTypeInfo(   
-   TYPE_INFO* pTypeInfo  
+```cpp  
+HRESULT GetTypeInfo(   
+   TYPE_INFO* pTypeInfo  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetTypeInfo(  
-   TYPE_INFO[] pTypeInfo  
+   TYPE_INFO[] pTypeInfo  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pTypeInfo`  
- \[入力\] [TYPE\_INFO](../../../extensibility/debugger/reference/type-info.md)指定された構造体の型情報を返します。  
+ [out]返しますが、示された情報を入力[TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)構造体。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- 型に依存しない情報はシンボルを含むたとえばAppDomainモジュールおよびクラスが含まれます。  
+## <a name="remarks"></a>コメント  
+ 型に依存しない情報が含まれます、たとえば、AppDomain、モジュール、および記号を格納するクラス。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [GetType](../../../extensibility/debugger/reference/idebugfield-gettype.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
- [TYPE\_INFO](../../../extensibility/debugger/reference/type-info.md)
+ [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)

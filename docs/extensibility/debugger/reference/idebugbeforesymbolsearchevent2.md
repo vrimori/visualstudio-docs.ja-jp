@@ -1,48 +1,49 @@
 ---
-title: "IDebugBeforeSymbolSearchEvent2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugBeforeSymbolSearchEvent2 インターフェイス"
+title: "IDebugBeforeSymbolSearchEvent2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IDebugBeforeSymbolSearchEvent2 interface
 ms.assetid: 679fd7b1-765a-41a8-a046-63240c09a499
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 9541c7008129f47df93e2e4cf2c3e8248742b0c8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugBeforeSymbolSearchEvent2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-デバッグ エンジンはセッション \(DE\) マネージャー \(SDM\) にデバッグ シンボルの読み込み中にステータス バーのメッセージを設定するにはこのインターフェイスを送信します。  
+# <a name="idebugbeforesymbolsearchevent2"></a>IDebugBeforeSymbolSearchEvent2
+デバッグ エンジン (DE) は、シンボルの読み込み中にバーのメッセージをセッション デバッグ マネージャーの状態を設定するには、(SDM) のこのインターフェイスを送信します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugBeforeSymbolSearchEvent2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- シンボルの実行中にステータス バーのメッセージを設定するときにこのインターフェイスを読み込む implements します。  このインターフェイスが実装され動作またはスクリプトのインタープリターの一部にデバッグ エンジンになります。  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) のインターフェイスはこのインターフェイス \(インターフェイスにアクセス **IDebugEvent2** SDM の **QueryInterface** 使用\) と同じオブジェクトで実行する必要があります。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ これには、シンボルの読み込み中に、ステータス バー メッセージを設定する必要があります、デはこのインターフェイスを実装します。 このインターフェイスは、デバッグ エンジンの操作やスクリプトに対するインタープリターの役割の一部であることによってのみ実装されます。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)このインターフェイスと同じオブジェクトのインターフェイスを実装する必要があります (、SDM を使用して**QueryInterface**にアクセスする、 **IDebugEvent2**インターフェイス)。  
   
-## 呼び出し元のメモ  
- DE はシンボルの読み込み中にステータス バーのメッセージを設定する必要がある場合はこのイベント オブジェクトを作成し送信します。  イベントはSDM によって提供される [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) のコールバック関数を使用してデバッグ対象のプログラムにアタッチしたときに送信されます。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ デは、作成し、これには、シンボルの読み込み中に、ステータス バー メッセージを設定する必要があります、このイベント オブジェクトを送信します。 使用して、イベントが送信される、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)デバッグ中のプログラムに添付するときに、SDM によって提供されるコールバック関数。  
   
-## メソッド  
- 次の表は `IDebugBeforeSymbolSearchEvent2` のメソッドを示します。  
+## <a name="methods"></a>メソッド  
+ 次の表は、メソッドの`IDebugBeforeSymbolSearchEvent2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[GetModuleName](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2-getmodulename.md)|現在デバッグ モジュールの名前を取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[GetModuleName](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2-getmodulename.md)|現在デバッグ中のモジュールの名前を取得します。|  
   
-## 必要条件  
- ヘッダー : Msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll

@@ -1,12 +1,10 @@
 ---
-title: Customizing a Ribbon for Outlook | Microsoft Docs
+title: "Outlook のリボンをカスタマイズ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,47 +17,47 @@ helpviewer_keywords:
 - custom Ribbon, about customizing the Ribbon
 - Ribbon [Office development in Visual Studio], Outlook
 ms.assetid: 11d10e72-806d-4d5e-b080-139bd8633eaa
-caps.latest.revision: 42
-author: kempb
-ms.author: kempb
+caps.latest.revision: "42"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: d1c65aa089a66e24b57bab3bcec5e0cf835d0fd4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 56cd2e51a50f610c8165f86ab17eef18044cc6b5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="customizing-a-ribbon-for-outlook"></a>Customizing a Ribbon for Outlook
-  When you customize the ribbon in Microsoft Office Outlook, you must consider where your custom ribbon will appear in the application. Outlook displays the ribbon in the main application user interface (UI) and in windows that open when users perform certain tasks, such as creating e-mail messages. These application windows are named inspectors.  
+# <a name="customizing-a-ribbon-for-outlook"></a>Outlook のリボンのカスタマイズ
+  Microsoft Office Outlook でリボンをカスタマイズする場合、アプリケーションのどこにカスタム リボンを表示するかを検討する必要があります。 Outlook によりメイン アプリケーション ユーザー インターフェイス (UI) にリボンが表示されます。また、ユーザーが電子メール メッセージの作成など、特定のタスクを実行すると、ウィンドウが開いてリボンが表示されます。 これらのアプリケーション ウィンドウをインスペクターと呼びます。  
   
- ![link to video](../vsto/media/playvideo.gif "link to video") For a related video demonstration, see [How Do I: Use the Ribbon Designer to Customize the Ribbon in Outlook?](http://go.microsoft.com/fwlink/?LinkID=130312).  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[操作方法: 使用リボン デザイナーを Outlook でリボンをカスタマイズしますか?](http://go.microsoft.com/fwlink/?LinkID=130312)です。  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## <a name="adding-a-custom-ribbon-to-the-main-application-ui"></a>Adding a Custom Ribbon to the Main Application UI  
- The main application UI in Outlook is called the Explorer. If you are using the **Ribbon (Visual Designer)** item, you can add a ribbon to the Explorer by clicking the **RibbonType** property of the ribbon in the **Properties** window, and then selecting **Microsoft.Outlook.Explorer**.  
+## <a name="adding-a-custom-ribbon-to-the-main-application-ui"></a>メイン アプリケーション UI へのカスタム リボンの追加  
+ Outlook のメインのアプリケーション UI は、エクスプローラーと呼ばれます。 使用している場合、**リボン (ビジュアル デザイナー)**  をクリックしてエクスプ ローラーにリボンを追加する項目を**RibbonType**でリボンのプロパティ、**プロパティ**ウィンドウで、クリックして**microsoft.outlook.explorer**です。  
   
-## <a name="assigning-a-ribbon-to-an-inspector"></a>Assigning a Ribbon to an Inspector  
- You identify the inspector you want to customize by specifying the ribbon type that corresponds to the message class for the Inspector.  
+## <a name="assigning-a-ribbon-to-an-inspector"></a>インスペクターへのリボンの割り当て  
+ インスペクターのメッセージ クラスに対応するリボンの種類を指定することによって、カスタマイズするインスペクターを指定します。  
   
- If you are using the **Ribbon (Visual Designer)** item, click the **RibbonType** property of the ribbon in the **Properties** window, and then select one or more ribbon IDs from the list of values.  
+ 使用している場合、**リボン (ビジュアル デザイナー)**項目をクリックして、 **[ribbontype]**でリボンのプロパティ、**プロパティ**ウィンドウ、および選択し、1 つまたは複数のリボンからの Id値のリスト。  
   
- You can add more than one ribbon to a project. If more than one ribbon shares a ribbon ID, override the CreateRibbonExtensibilityObject method in the `ThisAddin` class of your project to specify which ribbon to display at run time. For more information, see [Ribbon Overview](../vsto/ribbon-overview.md). For more information about each ribbon type, see the technical article [Customizing the Ribbon in Outlook 2007](http://msdn.microsoft.com/en-us/946e97ea-f556-4e84-8fac-01cd9214e170).  
+ 1 つのプロジェクトに複数のリボンを追加することができます。 1 つ以上のリボンがリボン ID を共有する場合で CreateRibbonExtensibilityObject メソッドをオーバーライド、`ThisAddin`実行時に表示するリボンを指定するプロジェクトのクラスです。 詳細については、次を参照してください。[リボンの概要](../vsto/ribbon-overview.md)です。 各リボンの種類の詳細については、技術記事を参照してください。 [Outlook 2007 におけるリボンのカスタマイズ](http://msdn.microsoft.com/en-us/946e97ea-f556-4e84-8fac-01cd9214e170)です。  
   
-## <a name="specifying-the-ribbon-type-by-using-ribbon-xml"></a>Specifying the Ribbon Type by Using Ribbon XML  
- If you are using the **Ribbon (XML)** item, check the value of the *ribbonID* parameter in the <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> method and return the appropriate ribbon.  
+## <a name="specifying-the-ribbon-type-by-using-ribbon-xml"></a>リボン XML を使用したリボンの種類の指定  
+ 使用している場合、**リボン (XML)**項目の値を確認して、 *ribbonID*内のパラメーター、<xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A>メソッドと、適切なリボンを戻り値。  
   
- The <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> method is automatically generated by Visual Studio in the ribbon code file. The *ribbonID* parameter is a string that identifies the Explorer or a specific type of inspector. For a complete list of the possible values of the *ribbonID* parameter, see the technical article [Customizing the Ribbon in Outlook 2007](http://msdn.microsoft.com/en-us/946e97ea-f556-4e84-8fac-01cd9214e170).  
+ <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> メソッドは、Visual Studio によってリボン コード ファイルに自動的に生成されます。 *RibbonID*パラメーターは、エクスプ ローラーまたはインスペクターの特定の種類を識別する文字列。 有効な値の完全な一覧については、 *ribbonID*パラメーター、技術記事を参照してください[Outlook 2007 におけるリボンのカスタマイズ](http://msdn.microsoft.com/en-us/946e97ea-f556-4e84-8fac-01cd9214e170)です。  
   
- The following code example demonstrates how to display a custom ribbon only in the `Microsoft.Outlook.Mail.Compose` inspector. This is the inspector that opens when a user creates a new e-mail message. The ribbon to display is specified in the `GetResourceText()` method, which is generated in the **Ribbon** class. For more information about the **Ribbon** class, see [Ribbon XML](../vsto/ribbon-xml.md).  
+ 次のコード例は、`Microsoft.Outlook.Mail.Compose` インスペクターにのみカスタム リボンを表示する方法を示しています。 これは、ユーザーが新しい電子メール メッセージを作成するときに表示されるインスペクターです。 表示するリボンがで指定された、`GetResourceText()`で生成されるメソッド、**リボン**クラスです。 詳細については、**リボン**クラスを参照してください[リボン XML](../vsto/ribbon-xml.md)です。  
   
- [!code-csharp[Trin_RibbonOutlookBasic#1](../vsto/codesnippet/CSharp/Trin_RibbonOutlookBasic/Ribbon1.cs#1)] [!code-vb[Trin_RibbonOutlookBasic#1](../vsto/codesnippet/VisualBasic/Trin_RibbonOutlookBasic/Ribbon1.vb#1)]  
+ [!code-csharp[Trin_RibbonOutlookBasic#1](../vsto/codesnippet/CSharp/Trin_RibbonOutlookBasic/Ribbon1.cs#1)]
+ [!code-vb[Trin_RibbonOutlookBasic#1](../vsto/codesnippet/VisualBasic/Trin_RibbonOutlookBasic/Ribbon1.vb#1)]  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
- [Ribbon Overview](../vsto/ribbon-overview.md)   
- [Ribbon Designer](../vsto/ribbon-designer.md)   
- [Ribbon XML](../vsto/ribbon-xml.md)  
+ [リボンの概要](../vsto/ribbon-overview.md)   
+ [リボン デザイナー](../vsto/ribbon-designer.md)   
+ [リボン XML](../vsto/ribbon-xml.md)  
   
   

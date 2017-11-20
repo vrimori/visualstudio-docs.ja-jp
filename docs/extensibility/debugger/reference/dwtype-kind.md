@@ -1,72 +1,72 @@
 ---
-title: "dwTYPE_KIND | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "dwTYPE_KIND"
-helpviewer_keywords: 
-  - "dwTYPE_KIND 列挙型"
+title: "dwTYPE_KIND |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: dwTYPE_KIND
+helpviewer_keywords: dwTYPE_KIND enumeration
 ms.assetid: 6ff56b0f-c502-4e6c-9829-bfa05361b783
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5207bbb9ff81a274d60ffb5957d2b5f31c73dbf7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# dwTYPE_KIND
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-[IDebugField](../../../extensibility/debugger/reference/idebugfield.md) のオブジェクト型を解釈する方法を指定します。  
+# <a name="dwtypekind"></a>dwTYPE_KIND
+型を解釈する方法を指定します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 enum enum_dwTYPE_KIND {  
-   TYPE_KIND_METADATA = 0x0001,  
-   TYPE_KIND_PDB      = 0x0002,  
-   TYPE_KIND_BUILT    = 0x0003,  
+   TYPE_KIND_METADATA = 0x0001,  
+   TYPE_KIND_PDB      = 0x0002,  
+   TYPE_KIND_BUILT    = 0x0003,  
 };  
   
 typedef DWORD dwTYPE_KIND;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_dwTYPE_KIND {  
-   TYPE_KIND_METADATA = 0x0001,  
-   TYPE_KIND_PDB      = 0x0002,  
-   TYPE_KIND_BUILT    = 0x0003,  
+   TYPE_KIND_METADATA = 0x0001,  
+   TYPE_KIND_PDB      = 0x0002,  
+   TYPE_KIND_BUILT    = 0x0003,  
 };  
 ```  
   
-#### パラメーター  
- TYPE\_KIND\_METADATA  
- [TYPE\_INFO](../../../extensibility/debugger/reference/type-info.md) の共用体は [METADATA\_TYPE](../../../extensibility/debugger/reference/metadata-type.md) の構造として解釈されます。  
+#### <a name="parameters"></a>パラメーター  
+ TYPE_KIND_METADATA  
+ [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)として共用体を解釈するか、 [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md)構造体。  
   
- TYPE\_KIND\_PDB  
- `TYPE_INFO` の共用体は [PDB\_TYPE](../../../extensibility/debugger/reference/pdb-type.md) の構造として解釈されます。  
+ TYPE_KIND_PDB  
+ `TYPE_INFO`として共用体を解釈するか、 [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md)構造体。  
   
- TYPE\_KIND\_BUILT  
- `TYPE_INFO` の共用体は [BUILT\_TYPE](../../../extensibility/debugger/reference/built-type.md) の構造として解釈されます。  
+ TYPE_KIND_BUILT  
+ `TYPE_INFO`として共用体を解釈するか、 [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md)構造体。  
   
-## 解説  
- この列挙体の値は [TYPE\_INFO](../../../extensibility/debugger/reference/type-info.md) の構造体の `dwKind` のフィールドに表示され確認するには `type` のクラスを解釈する方法を使用します。  `TYPE_INFO` の構造は [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) メソッドの呼び出しによって返されます。  
+## <a name="remarks"></a>コメント  
+ この列挙体の値に表示されます、`dwKind`のフィールド、 [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)構造体を使用して、解釈する方法、`type`共用体のメンバーです。 `TYPE_INFO`への呼び出しによって返される構造体、 [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)メソッドです。  
   
-## 必要条件  
- ヘッダー : sh.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: sh.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [TYPE\_INFO](../../../extensibility/debugger/reference/type-info.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)   
  [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)   
- [METADATA\_TYPE](../../../extensibility/debugger/reference/metadata-type.md)   
- [PDB\_TYPE](../../../extensibility/debugger/reference/pdb-type.md)   
- [BUILT\_TYPE](../../../extensibility/debugger/reference/built-type.md)
+ [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md)   
+ [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md)   
+ [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md)

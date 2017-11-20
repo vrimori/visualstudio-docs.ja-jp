@@ -1,54 +1,54 @@
 ---
-title: "IDebugCoreServer2::GetPortSupplier | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCoreServer2::GetPortSupplier"
-helpviewer_keywords: 
-  - "IDebugCoreServer2::GetPortSupplier"
+title: "IDebugCoreServer2::GetPortSupplier |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugCoreServer2::GetPortSupplier
+helpviewer_keywords: IDebugCoreServer2::GetPortSupplier
 ms.assetid: acf181d4-ef42-4aa5-86f9-95fd5467ea31
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: e03a3f73ac98ae736d719201444255dff18273e9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugCoreServer2::GetPortSupplier
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-特定のポートの業者を取得します。  
+# <a name="idebugcoreserver2getportsupplier"></a>IDebugCoreServer2::GetPortSupplier
+特定のポートのサプライヤーを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetPortSupplier(   
-   REFGUID               guidPortSupplier,  
-   IDebugPortSupplier2** ppPortSupplier  
+```cpp  
+HRESULT GetPortSupplier(   
+   REFGUID               guidPortSupplier,  
+   IDebugPortSupplier2** ppPortSupplier  
 );  
 ```  
   
-```c#  
-int GetPortSupplier(   
-   ref Guid                guidPortSupplier,  
-   out IDebugPortSupplier2 ppPortSupplier  
+```csharp  
+int GetPortSupplier(   
+   ref Guid                guidPortSupplier,  
+   out IDebugPortSupplier2 ppPortSupplier  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `guidPortSupplier`  
- \[出力\] 取得されたポートのサプライヤーの GUID。  
+ [in]取得するポートのサプライヤーの GUID です。  
   
  `ppPortSupplier`  
- \[入力\] [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) に目的のポートのサプライヤーを返します。  
+ [out]返します、 [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)ポートが必要なサプライヤーを表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)   
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)
