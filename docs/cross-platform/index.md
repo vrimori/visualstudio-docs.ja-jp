@@ -3,15 +3,14 @@ layout: LandingPage
 author: jasongroce
 ms.author: apexprodleads
 ms.topic: landing-page
-title: "C++ ドキュメントによるモバイル開発"
+title: "C++ によるモバイル開発のドキュメント | Microsoft Docs"
 description: "iOS、Android、Windows 用のネイティブ C++ アプリを Visual Studio で作成します。"
-translationtype: Human Translation
-ms.sourcegitcommit: f161d39701feb5df93bfcfa3c0496f60fb366323
-ms.openlocfilehash: 58c1a8a76456caad830406758e6921de8b4ad1af
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 2d7dc3860091e11ab7b8983d9f1b739ffd383ba3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="mobile-development-with-c-documentation"></a>C++ ドキュメントによるモバイル開発
 
 iOS、Android、Windows 用のネイティブ C++ アプリを Visual Studio で作成します。
@@ -28,7 +27,7 @@ iOS、Android、Windows 用のネイティブ C++ アプリを Visual Studio で
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Install Visual C++ for Cross-Platform Mobile Development</h3>
+                        <h3>Visual C++ for Cross-Platform Mobile Development のインストール</h3>
                         <p>クロス プラットフォーム モバイル アプリの構築に必要なツールをセットアップします。</p>
                     </div>
                 </div>

@@ -366,4 +366,4 @@
 ##### [CvWriteFlag 関数](cvwriteflag-function.md)
 ##### [CvWriteMessage 関数](cvwritemessage-function.md)
 ### [同時実行ビジュアライザー コマンドライン ユーティリティ (CVCollectionCmd)](concurrency-visualizer-command-line-utility-cvcollectioncmd.md)
-## [ストア アプリでのエネルギー使用の分析](analyze-energy-use-in-store-apps.md)
+## [UWP アプリでのエネルギー使用の分析](analyze-energy-use-in-store-apps.md)

@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/08/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 46b0a1e3-7e69-47c9-9d8d-a1815d6c3896
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: BertanAygun
 ms.author: bertaygu
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 7ff2aeecfbabb055f0fa9740623bc2bd949b11c7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: b78a02b9d780b9556cbbf42fce04b1da06e22833
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="measuring-extension-impact-in-startup"></a>スタートアップの拡張機能への影響を測定
 
@@ -195,4 +179,3 @@ PerfView はより詳細な分析のための独自のヘルプ] メニューの
 ## <a name="summary"></a>概要
 
 Visual Studio の起動で継続的にフィードバックを取得して、領域のいずれかを指定しました。 前述の目標はすべてのユーザーに対して発生するコンポーネントと、インストールされている拡張機能に関係なく一貫したスタートアップしたいし、思います所有者がその目標を達成するために役立つ拡張機能を使用します。 挙げたガイダンスは、スタートアップ、拡張機能への影響を理解するか、負荷を自動またはユーザーの生産性への影響を最小限に抑えるに非同期的にロードする必要を回避したりするために便利にする必要があります。
-

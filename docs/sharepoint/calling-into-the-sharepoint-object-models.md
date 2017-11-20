@@ -1,64 +1,66 @@
 ---
-title: "Calling into the SharePoint Object Models"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "SharePoint development in Visual Studio, client object model"
-  - "SharePoint development in Visual Studio, server object model"
-  - "SharePoint commands [SharePoint development in Visual Studio]"
-  - "SharePoint development in Visual Studio, extensibility features"
+title: "SharePoint オブジェクト モデルの呼び出し |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, client object model
+- SharePoint development in Visual Studio, server object model
+- SharePoint commands [SharePoint development in Visual Studio]
+- SharePoint development in Visual Studio, extensibility features
 ms.assetid: 99934f9e-901e-464e-ac8c-22c6c86440f4
-caps.latest.revision: 38
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 37
+caps.latest.revision: "38"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 3bd3f81580af908d06fe7389c04a6559d14f1075
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Calling into the SharePoint Object Models
-  Visual Studio の SharePoint ツールの拡張機能を作成するとき、特定のタスクを実行するために SharePoint の API をダイヤルする必要がある場合があります。  たとえば、SharePoint プロジェクトに対してカスタムの配置手順を作成する場合、ソリューションを配置するためのいくつかのタスクを実行する関係上、SharePoint API を呼び出す必要があります。  
+# <a name="calling-into-the-sharepoint-object-models"></a>SharePoint オブジェクト モデルの呼び出し
+  Visual Studio で SharePoint ツールの拡張機能を作成するときに、特定のタスクを実行する SharePoint Api を呼び出す必要があります。 たとえば、SharePoint プロジェクト用のカスタム配置手順を作成する場合はいくつかのソリューションを展開するタスクを実行する SharePoint Api を呼び出す必要があります。  
   
- [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] および [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] には、SharePoint ツールの拡張機能に使用できるオブジェクト モデルが 2 種類あります。サーバー オブジェクト モデルとクライアント オブジェクト モデルです。  SharePoint ツールの拡張機能からこれらのオブジェクト モデルを使用する場合、どちらのオブジェクト モデルにも長所と短所があります。  
+ [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)]および[!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]SharePoint ツール拡張機能で使用できる 2 つの別のオブジェクト モデルを提供します。 サーバー オブジェクト モデルとクライアント オブジェクト モデルです。 オブジェクトが各モデルに利点と欠点があります SharePoint ツール拡張機能のコンテキストでします。  
   
- SharePoint のオブジェクト モデルの概要については、「[Overview of the Programming Model of SharePoint Tools Extensions](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)」を参照してください。  
+ SharePoint オブジェクト モデルの概要については、次を参照してください。[プログラミング モデルの SharePoint ツール拡張機能の概要](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)です。  
   
-## 拡張機能プロジェクトでのクライアント オブジェクト モデルの使用  
- クライアント オブジェクト モデルは、SharePoint ツールの拡張機能を開発する場合に、プロジェクトから、他のあらゆるマネージ API と同じように使用できます。  クライアント オブジェクト モデルのアセンブリをプロジェクトから参照設定することによって、クライアント オブジェクト モデルの API を直接コードから呼び出すことができます。  
+## <a name="using-the-client-object-model-in-extension-projects"></a>拡張機能プロジェクトでのクライアント オブジェクト モデルの使用  
+ SharePoint ツール拡張機能を開発する場合は、マネージ Api の他の任意のセットと同様に、プロジェクトのクライアント オブジェクト モデルを使用することができます。 クライアント オブジェクト モデルのアセンブリへの参照を追加するには、プロジェクトにして、コードから直接クライアント オブジェクト モデルの Api を呼び出すことができます。  
   
- ただし、SharePoint ツールの拡張機能からクライアント オブジェクト モデルを使用する場合、次の 2 つの短所があります。  
+ ただし、クライアント オブジェクト モデルでは、SharePoint ツール拡張機能のコンテキストで 2 つの欠点があります。  
   
--   クライアント オブジェクト モデルが提供するのは、サーバー オブジェクト モデルのサブセットのみです。  クライアント オブジェクト モデルでは公開されていない SharePoint の機能を使用する必要がある場合は、サーバー オブジェクト モデルを使用する必要があります。  
+-   クライアント オブジェクト モデルでは、サーバー オブジェクト モデルのサブセットのみを提供します。 クライアント オブジェクト モデルで公開されていない SharePoint 機能を使用した場合は、サーバー オブジェクト モデルを使用する必要があります。  
   
--   SharePoint ツールの拡張機能でクライアント オブジェクト モデルを使用した場合、ほとんどのケースでは問題がないものの、クライアント オブジェクト モデルへの呼び出しがうまくいかない状況もあります。  クライアント オブジェクト モデルは、クライアント アプリケーションで、リモート サーバーまたはリモート ファームの SharePoint サイトに対して呼び出しを行うために使用されるように設計されています。  Visual Studio の SharePoint ツールは、開発コンピューターにインストールされたローカルの SharePoint 環境でのみ使用できます。  したがって、SharePoint ツールの拡張機能でクライアント オブジェクト モデルを使用する場合、呼び出し先はローカル コンピューター上のローカルの SharePoint サイトであり、これはクライアント オブジェクト モデルの意図された使用方法ではありません。  
+-   SharePoint ツール拡張機能で、クライアント オブジェクト モデルを使用すると、ほとんどの場合が動作するはずですが、場所としてクライアント オブジェクト モデルへの呼び出しは正常に動作しない一部のシナリオが発生する可能性があります。 クライアント オブジェクト モデルは、リモート サーバーまたはファームで SharePoint サイトへの呼び出しをクライアント アプリケーションで使用するよう設計されています。 Visual Studio での SharePoint ツールは、開発用コンピューターにローカル SharePoint のインストールでのみ動作します。 したがって、クライアント オブジェクト モデルを SharePoint ツール拡張機能を使用する場合を呼び出して、SharePoint サイトにないクライアント オブジェクト モデルの設計方法を使用するには、ローカル コンピューターでします。  
   
- SharePoint の拡張機能でクライアント オブジェクト モデルを使用する方法を Visual Studio のツールを使用する示すチュートリアルについては、 [Walkthrough: Calling into the SharePoint Client Object Model in a Server Explorer Extension](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)" " を参照してください。  
+ Visual Studio での SharePoint ツールの拡張機能に、クライアント オブジェクト モデルを使用する方法について説明するチュートリアルでは、次を参照してください。[チュートリアル: サーバー エクスプ ローラー拡張機能では、SharePoint クライアント オブジェクト モデルを呼び出す](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)です。  
   
-## 拡張機能プロジェクトでのサーバー オブジェクト モデルの使用  
- サーバー オブジェクト モデルは、クライアント オブジェクト モデルのスーパーセットです。  サーバー オブジェクト モデルを使用した場合、[!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] および [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] が公開しているすべての機能をプログラムから使用することができます。  
+## <a name="using-the-server-object-model-in-extension-projects"></a>拡張機能プロジェクトで、サーバー オブジェクト モデルの使用  
+ サーバー オブジェクト モデルは、クライアント オブジェクト モデルのスーパー セットです。 サーバー オブジェクト モデルを使用する場合は、すべての機能を使用することができますを[!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)]と[!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]プログラムを公開します。  
   
- サーバー オブジェクト モデルの API は、SharePoint ツールの拡張機能から使用することはできますが、API を直接呼び出すことはできません。  サーバー オブジェクト モデルは、.NET Framework 3.5 をターゲット フレームワークとする 64 ビット プロセスから呼び出すことができます。  一方、SharePoint ツールの拡張機能は [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] を使用し、32 ビットの Visual Studio プロセスで動作します。  そのため、SharePoint ツールの拡張機能は、SharePoint サーバー オブジェクト モデルのアセンブリを直接参照することができません。  
+ SharePoint ツール拡張機能は、サーバー オブジェクト モデルで Api を使用することができますが、直接、Api を呼び出すことはできません。 サーバー オブジェクト モデルは、.NET Framework 3.5 を対象と 64 ビット プロセスからのみ呼び出すことができます。 ただし、SharePoint ツール拡張機能が必要、 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] Visual Studio の 32 ビット プロセスで実行するとします。 これは SharePoint ツール拡張機能が SharePoint サーバー オブジェクト モデル内のアセンブリを直接参照することを防ぎます。  
   
- SharePoint ツールの拡張機能でサーバー オブジェクト モデルを使用する必要がある場合は、API を呼び出すためのカスタム *SharePoint コマンド*を作成する必要があります。  SharePoint コマンドは、サーバー オブジェクト モデルを直接呼び出すことができる補助的なアセンブリで定義します。  拡張機能プロジェクトからは、<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> オブジェクトの ExecuteCommand メソッドを使用して、SharePoint コマンドを間接的に呼び出します。  
+ を SharePoint ツール拡張機能で、サーバー オブジェクト モデルを使用する場合は、カスタムを作成する必要があります*SharePoint コマンド*API を呼び出すためです。 SharePoint コマンドは、サーバー オブジェクト モデルを直接呼び出すことができるセカンダリ アセンブリで定義します。 拡張機能のプロジェクトでしていない SharePoint コマンドを直接呼び出すの ExecuteCommand メソッドを使用して、<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection>オブジェクト。  
   
- SharePoint コマンドの作成および使用の詳細については、「[How to: Create a SharePoint Command](../sharepoint/how-to-create-a-sharepoint-command.md)」および「[How to: Execute a SharePoint Command](../sharepoint/how-to-execute-a-sharepoint-command.md)」を参照してください。  SharePoint コマンドの配置方法の詳細については、「[Deploying Extensions for the SharePoint Tools in Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)」を参照してください。  
+ 作成と SharePoint コマンドの使用に関する詳細については、次を参照してください。[する方法: SharePoint コマンドを作成する](../sharepoint/how-to-create-a-sharepoint-command.md)と[する方法: SharePoint コマンドを実行](../sharepoint/how-to-execute-a-sharepoint-command.md)です。 SharePoint コマンドを展開する方法については、次を参照してください。 [Visual Studio での SharePoint ツールの拡張機能の配置](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)です。  
   
- SharePoint コマンドの作成方法と使用方法を説明したチュートリアルは、「[Walkthrough: Creating a Custom Deployment Step for SharePoint Projects](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)」および「[Walkthrough: Extending Server Explorer to Display Web Parts](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)」を参照してください。  
+ 作成し、SharePoint のコマンドを使用する方法を示すチュートリアルについては、次を参照してください[チュートリアル: SharePoint プロジェクトのカスタム配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)と[チュートリアル: サーバー エクスプ ローラー表示 Web に拡張します。。パーツ](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)です。  
   
-### SharePoint コマンドを実行する方法について  
- SharePoint コマンドを定義するアセンブリは、vssphost4.exe という 64 ビット ホスト プロセスに読み込まれます。  SharePoint ツール拡張機能で SharePoint コマンドを呼び出した後は、そのコマンドは 32 ビットの Visual Studio プロセス \(devenv.exe\) ではなく、vssphost4.exe で実行されます。  SharePoint コマンドを実行する方法について一部の側面を制御するには、レジストリに値を設定します。  詳細については、「[Debugging Extensions for the SharePoint Tools in Visual Studio](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)」を参照してください。  
+### <a name="understanding-how-sharepoint-commands-are-executed"></a>Understanding のどの SharePoint コマンドを実行します。  
+ SharePoint コマンドを定義するアセンブリは vssphost4.exe をという名前の 64 ビット ホスト プロセスに読み込まれます。 SharePoint ツール拡張機能での SharePoint コマンドを呼び出すと、コマンドは、32 ビット Visual Studio プロセス (devenv.exe) ではなく vssphost4.exe によって実行されます。 レジストリ内の値を設定して SharePoint コマンドを実行する方法の一部の側面を制御できます。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールの拡張機能のデバッグ](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)です。  
   
-## 参照  
- [How to: Create a SharePoint Command](../sharepoint/how-to-create-a-sharepoint-command.md)   
- [How to: Execute a SharePoint Command](../sharepoint/how-to-execute-a-sharepoint-command.md)   
- [Overview of the Programming Model of SharePoint Tools Extensions](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)  
+## <a name="see-also"></a>関連項目  
+ [方法: SharePoint コマンドを作成します。](../sharepoint/how-to-create-a-sharepoint-command.md)   
+ [方法: SharePoint コマンドを実行](../sharepoint/how-to-execute-a-sharepoint-command.md)   
+ [SharePoint ツール拡張機能のプログラミング モデルの概要](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)  
   
   

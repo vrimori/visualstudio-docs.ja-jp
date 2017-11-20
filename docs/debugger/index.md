@@ -1,11 +1,13 @@
 ---
 layout: LandingPage
-title: "Visual Studio でのデバッグ"
-translationtype: Human Translation
-ms.sourcegitcommit: dac3cb1d7767c2ff76ac25f6a486ad30a8d54831
-ms.openlocfilehash: cf5f50b1e02fa87a6302e1cf9d0b8d9a5ef91b77
-ms.lasthandoff: 03/03/2017
-
+title: "Visual Studio でのアプリのデバッグ | Microsoft Docs"
+description: "Visual Studio 2017 を使用して、ご使用のプラットフォームとデバイス向けに任意の言語でアプリケーション、サービス、ツールをデバッグする方法について説明します。"
+ms.technology: vs-ide-debug
+ms.openlocfilehash: d00ef04d3d8f73b607c91f33f9af53429666ba5f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="debugging-in-visual-studio"></a>Visual Studio でのデバッグ
 
@@ -67,7 +69,7 @@ Visual Studio デバッガーを使用すると、プログラムの実行時の
         </a>
     </li>
         <li>
-        <a href="https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6">
+        <a href="https://docs.microsoft.com/en-us/visualstudio/debugger/getting-started-with-the-debugger#video">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -132,6 +134,24 @@ Visual Studio デバッガーを使用すると、プログラムの実行時の
                     </div>
                     <div class="cardText">
                         <h3>IntelliTrace の詳細 (Visual Studio Enterprise)</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://docs.microsoft.com/en-us/visualstudio/debugger/debugger-tips-and-tricks">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/en-us/media/common/i_debug.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>デバッガーのヒントと秘訣</h3>
                     </div>
                 </div>
             </div>

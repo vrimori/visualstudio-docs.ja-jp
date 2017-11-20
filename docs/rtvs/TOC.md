@@ -1,10 +1,13 @@
-# [R Tools for Visual Studio](index.md)
+# 概要
+## [R Tools for Visual Studio](index.md)
 ## [ データ サイエンスと分析のアプリケーション ワークロード](data-science-workload.md)
+# クイック スタート
 ## [インストール](installation.md)
+## [ヘルプ情報の入手](getting-started-help.md)
+# チュートリアル
 ## [R の概要](getting-started-with-r.md)
-### [サンプル](getting-started-samples.md)
-### [ヘルプ情報の入手](getting-started-help.md)
-### [オプション](options.md)
+# [サンプル](getting-started-samples.md)
+# 使い方ガイド
 ## [R プロジェクト](projects.md)
 ### [パッケージ マネージャー](package-manager.md)
 ### [ワークスペース](workspaces.md)
@@ -18,3 +21,5 @@
 ## [データの視覚化](visualizing-data.md)
 ## [Variable Explorer](variable-explorer.md)
 ## [デバッグ](debugging.md)
+# 参照
+## [オプション](options.md)

@@ -1,121 +1,100 @@
 ---
-title: Add new data sources | Microsoft Docs
+title: "新しいデータ ソースの追加 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.datasource.datasourcefieldspicker
-dev_langs:
-- VB
-- CSharp
-- C++
-- aspx
+f1_keywords: vs.datasource.datasourcefieldspicker
 helpviewer_keywords:
 - data [Visual Studio], data sources
 - data sources
 ms.assetid: ed28c625-bb89-4037-bfde-cfa435d182a2
-caps.latest.revision: 56
-author: mikeblome
-ms.author: mblome
+caps.latest.revision: "56"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: b8e9d2a517e673cd7f44f1a392d6179f1c6b0801
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/22/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: 0c83367d383ab72194e5f83609b0f93d8602fdcd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="add-new-data-sources"></a>Add new data sources
-In the context of .NET data tools in Visual Studio, the term *data source* refers to .NET objects that connect to a data store and expose the data to a .NET application. The Visual Studio designers can consume the output of the data source to generate the boilerplate code that binds the data to forms when you drag and drop database objects from the **Data Sources** window. This kind of data source can be:  
+# <a name="add-new-data-sources"></a>新しいデータ ソースを追加します。
+Visual Studio での .NET data tools のコンテキストで用語*データ ソース*データ ストアに接続し、.NET アプリケーションにデータを公開する .NET オブジェクトを参照します。 Visual Studio のデザイナーにドラッグしてから、データベース オブジェクトをドロップすると、フォームにデータをバインドする定型コードを生成するデータ ソースの出力を使用できる、**データソース**ウィンドウです。 この種類のデータ ソースを指定できます。  
   
--   A class in an Entity Framework model that is associated with some kind of database.  
+-   いくつかの種類のデータベースに関連付けられている Entity Framework モデル内のクラスです。  
   
--   A dataset that is associated with some kind of database.  
+-   いくつかの種類のデータベースに関連付けられているデータセットです。  
   
--   A class that represents a network service such as a Windows Communication Foundation (WCF) data service or a REST service.  
+-   Windows Communication Foundation (WCF) データ サービスまたは REST サービスなどのネットワーク サービスを表すクラス。  
   
--   A class that represents a SharePoint service.  
+-   SharePoint サービスを表すクラスです。  
   
--   A class or collection in your solution.  
+-   クラスまたはソリューション内のコレクション。  
   
 > [!NOTE]
->  If you are not using data-binding features, datasets, Entity Framework, LINQ to SQL, WCF, or SharePoint, the concept of a "data source" does not apply. Just connect directly to the database by using the SQLCommand objects and communicate directly with the database.  
+>  データ バインディング機能を使用していないデータセットや Entity Framework、LINQ to SQL、WCF、SharePoint、"data source"の概念は適用されません。 SQLCommand オブジェクトを使用して、データベースに直接接続して、データベースと直接通信だけです。  
   
- You create and edit data sources by using the **Data Source Configuration Wizard** in a Windows Forms or Windows Presentation Foundation application. For Entity Framework, first create your entity classes, and then start the wizard by selecting **Project** > **Add New Data Source** (described in more detail later in this article).  
+ 作成しを使用してデータ ソースの編集、**データ ソース構成ウィザード**Windows フォームや Windows Presentation Foundation アプリケーションでします。 Entity Framework では、まず、エンティティ クラスを作成し、 を選択して、ウィザードを開始して**プロジェクト** > **新しいデータ ソースの追加**(この記事の後半で詳しく説明します)。  
   
- ![Data Source Configuration Wizard](../data-tools/media/data-source-configuration-wizard.png "Data Source Configuration Wizard")  
+ ![データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png "データ ソース構成ウィザード")  
   
- After you create a data source, it appears in the **Data Sources** tool window (Shift+Alt+D or **View** > **Other Windows** > **Data Source**). You can drag a data source from the **Data Sources** window onto a form design surface or control. This causes boilerplate code to be generated—code that displays the data that originates in the data store to the user. The following illustration shows a dataset that has been dropped onto a Windows form. If you selected F5 on the application, the data from the underlying database would appear in the form's controls.  
+ データ ソースを作成するに表示され、**データソース**ツール ウィンドウ (Shift + Alt + D または**ビュー** > **その他のウィンドウ** >  **データソース**)。 データ ソースをドラッグすることができます、**データソース**ウィンドウ、フォームのデザイン サーフェイスまたはコントロールからにします。 これにより、定型的なコードを生成する-ユーザーにデータ ストアで生成されたデータを表示するコードです。 次の図は、Windows フォームからドロップするデータセットを示します。 アプリケーションで f5 キーを選択した場合、データベースのデータを基になると、フォームのコントロールに表示されます。  
   
- ![Data Source drag operation](../data-tools/media/raddata-data-source-drag-operation.png "raddata Data Source drag operation")  
+ ![データ ソースはドラッグ操作](../data-tools/media/raddata-data-source-drag-operation.png "raddata データ ソースはドラッグ操作")  
   
-## <a name="data-source-for-a-database-or-a-database-file"></a>Data source for a database or a database file  
+## <a name="data-source-for-a-database-or-a-database-file"></a>データベースまたはデータベース ファイルのデータ ソース  
   
-### <a name="dataset"></a>Dataset  
- To create a dataset as a data source, run the **Data Source Configuration Wizard** (**Project** > **Add New Data Source**) and choose the **Database** data-source type. Follow the prompts to specify a new or existing database connection, or a database file.  
+### <a name="dataset"></a>データセット  
+ データ ソースとしてデータセットを作成するには、実行、**データ ソース構成ウィザード**(**プロジェクト** > **新しいデータ ソースの追加**) を選択し、 **データベース**データ ソースの種類。 指示に従って、新規または既存のデータベース接続、またはデータベース ファイルを指定します。  
   
-### <a name="entity-classes"></a>Entity classes  
- To create an Entity Framework model as a data source, first run the **Entity Data Model Wizard** to create the entity classes (**Project** > **Add New Item** > **ADO.NET Entity Data Model**).  
+### <a name="entity-classes"></a>エンティティ クラス  
+ データ ソースとして Entity Framework モデルを作成するには、最初に実行、 **Entity Data Model ウィザード**エンティティ クラスを作成する (**プロジェクト** > **新しい項目の追加** >  **ADO.NET Entity Data Model**)。  
   
- ![New Entity Framework model project item](../data-tools/media/raddata-new-entity-framework-model-project-item.png "raddata New Entity Framework model project item")  
+ ![新しいモデル プロジェクト項目の Entity Framework](../data-tools/media/raddata-new-entity-framework-model-project-item.png "raddata Entity Framework の新しいモデル プロジェクト項目")  
   
- Choose the method by which you want to generate the model.  
+ モデルを生成するメソッドを選択します。  
   
- ![Entity Data Model Wizard](../data-tools/media/raddata-entity-data-model-wizard.png "raddata Entity Data Model Wizard")  
+ ![Entity Data Model ウィザード](../data-tools/media/raddata-entity-data-model-wizard.png "raddata Entity Data Model ウィザード")  
   
- Add the model as a data source. The classes that were generated appear in the **Data Source Configuration Wizard** when you choose the **Objects** category.  
+ データ ソースとしてモデルを追加します。 生成されたクラスが表示されます、**データ ソース構成ウィザード**を選択すると、**オブジェクト**カテゴリ。  
   
- ![Data Source Configuration Wizard with Entity Classes](../data-tools/media/raddata-data-source-configuration-wizard-with-entity-classes.png "raddata Data Source Configuration Wizard with Entity Classes")  
+ ![エンティティ クラスとデータ ソース構成ウィザード](../data-tools/media/raddata-data-source-configuration-wizard-with-entity-classes.png "raddata エンティティ クラスとデータ ソース構成ウィザード")  
   
-## <a name="data-source-for-a-service"></a>Data source for a service  
- To create a data source from a service, run the **Data Source Configuration Wizard** and choose the **Service** data-source type. This is really just a shortcut to the **Add Service Reference** dialog box, which you can also access by right-clicking the project in **Solution Explorer** and selecting **Add service reference**.  
+## <a name="data-source-for-a-service"></a>サービスのデータ ソース  
+ サービスからデータ ソースを作成するには、実行、**データ ソース構成ウィザード**を選択し、**サービス**データ ソースの種類。 これへのショートカットを実際には、**サービス参照の追加** ダイアログ ボックスで、プロジェクトを右クリックしてアクセスすることもできます**ソリューション エクスプ ローラー**を選択すると**サービス参照の追加。**.  
   
- When you create a data source from a service, Visual Studio adds a service reference to your project. Visual Studio also creates proxy objects that correspond to the objects that the service returns. For example, a service that returns a dataset is represented in your project as a dataset; a service that returns a specific type is represented in your project as the type returned.  
+ サービスからデータ ソースを作成すると、Visual Studio によりサービス参照がプロジェクトに追加されます。 Visual Studio では、サービスで返されるオブジェクトに対応するプロキシ オブジェクトも作成します。 たとえば、データセットを返すサービスは、プロジェクト内でデータセットとして表現され、特定の型を返すサービスは、プロジェクト内で、返される型として表現されます。  
   
- You can create a data source from the following types of services:  
+ 次の種類のサービスからデータ ソースを作成できます。  
   
--   WCF Data Services. For more information, see [Overview](/dotnet/framework/data/wcf/wcf-data-services-overview).  
+-   WCF Data Services。 詳細については、次を参照してください。[概要](/dotnet/framework/data/wcf/wcf-data-services-overview)です。  
   
--   WCF data services. For more information, see [Windows Communication Foundation Services and WCF Data Services in Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md).  
+-   WCF サービス。 詳細については、次を参照してください。 [Windows Communication Foundation サービスと Visual Studio での WCF Data Services](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)です。  
   
--   Web services.  
+-   Web サービス  
   
     > [!NOTE]
-    >  The items that appear in the **Data Sources** window are dependent on the data that the service returns. Some services might not provide enough information for the **Data Source Configuration Wizard** to create bindable objects. For example, if the service returns an untyped dataset, no items will appear in the **Data Sources** window when you complete the wizard. This is because untyped datasets do not provide a schema, and therefore the wizard does not have enough information to create the data source.  
+    >  表示される項目、**データソース**ウィンドウは、サービスから返されるデータに依存します。 一部のサービス可能性がありますのに十分な情報を提供していない、**データ ソース構成ウィザード**バインド可能なオブジェクトを作成します。 などの場合は、サービスでは、型指定されていないデータセットを返します、アイテムにはありません、**データソース**ウィンドウ、ウィザードを完了するとします。 これは、型指定されていないデータセットからはスキーマが提供されず、したがってウィザードでデータ ソースを作成するための十分な情報が得られないためです。  
   
-## <a name="data-source-for-an-object"></a>Data source for an object  
- You can create a data source from any object that exposes one or more public properties by running the **Data Source Configuration Wizard** and then selecting the **Object** data-source type. All public properties of an object are displayed in the **Data Sources** window.   If you are using Entity Framework and have generated a model, this is where you find the entity classes that will be the data sources for your application.  
+## <a name="data-source-for-an-object"></a>オブジェクトのデータ ソース  
+ 実行して、1 つまたは複数のパブリック プロパティを公開する任意のオブジェクトからデータ ソースを作成することができます、**データ ソース構成ウィザード**を選択し、**オブジェクト**データ ソースの種類。 オブジェクトのすべてのパブリック プロパティが表示されます、**データソース**ウィンドウです。   Entity Framework を使用しているモデルを生成していて、これは、アプリケーションのデータ ソースとなるエンティティ クラスを検索します。  
   
- On the **Select the Data Objects** page, expand the nodes in the tree view to locate the objects that you want to bind to. The tree view contains nodes for your project and for assemblies and other projects that are referenced by your project.  
+ **データ オブジェクトの選択** ページで、ツリー ビューにバインドするオブジェクトを特定のノードを展開します。 ツリー ビューには、プロジェクトおよびアセンブリとプロジェクトによって参照されている他のプロジェクトのノードが含まれています。  
   
- If you want to bind to an object in an assembly or project that does not appear in the tree view, click **Add Reference** and use the **Add Reference Dialog Box** to add a reference to the assembly or project. After you add the reference, the assembly or project is added to the tree view.  
-  
-> [!NOTE]
->  You may need to build the project that contains your objects before the objects appear in the tree view.  
+ アセンブリまたはツリー ビューで表示されていないプロジェクト内のオブジェクトにバインドする場合は、クリックして**参照の追加**を使用して、**参照の追加 ダイアログ ボックス**アセンブリまたはプロジェクトへの参照を追加します。 参照を追加した後、アセンブリまたはプロジェクトがツリー ビューに追加されます。  
   
 > [!NOTE]
->  To support drag-and-drop data binding, objects that implement the <xref:System.ComponentModel.ITypedList> or <xref:System.ComponentModel.IListSource> interface must have a default constructor. Otherwise, Visual Studio cannot instantiate the data-source object, and it will display an error when you drag the item to the design surface.  
+>  オブジェクトのツリー ビューに表示される前に、オブジェクトを含むプロジェクトをビルドする必要があります。  
   
-## <a name="data-source-for-a-sharepoint-list"></a>Data source for a SharePoint list  
- You can create a data source from a SharePoint list by running the **Data Source Configuration Wizard** and selecting the **SharePoint** data-source type. SharePoint exposes data through [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)], so creating a SharePoint data source is the same as creating a data source from a service. Selecting the **SharePoint** item in the **Data Source Configuration Wizard** opens the **Add Service Reference** dialog box, where you connect to the SharePoint data service by pointing to the SharePoint server.  This requires the SharePoint SDK.  
+> [!NOTE]
+>  実装するオブジェクトにドラッグ アンド ドロップのデータ バインディングをサポートするために、<xref:System.ComponentModel.ITypedList>または<xref:System.ComponentModel.IListSource>インターフェイスは、既定のコンス トラクターを持つ必要があります。 それ以外の場合、Visual Studio は、データ ソース オブジェクトをインスタンス化できませんし、デザイン サーフェイスに項目をドラッグするときにエラーが表示されます。  
   
-## <a name="see-also"></a>See Also  
- [Visual Studio data tools for .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)
+## <a name="data-source-for-a-sharepoint-list"></a>SharePoint リストのデータ ソース  
+ 実行して、SharePoint リストから、データ ソースを作成することができます、**データ ソース構成ウィザード**を選択して、 **SharePoint**データ ソースの種類。 SharePoint を使用してデータを公開する[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]では、サービスからデータ ソースの作成と同じ SharePoint データ ソースを作成するため、します。 選択すると、 **SharePoint**内の項目、**データ ソース構成ウィザード**開きます、**サービス参照の追加**ダイアログ ボックスで、SharePoint データ サービスに接続します。SharePoint サーバーをポイントします。  これには、SharePoint SDK が必要です。  
+  
+## <a name="see-also"></a>関連項目  
+ [.NET 用の Visual Studio データ ツール](../data-tools/visual-studio-data-tools-for-dotnet.md)

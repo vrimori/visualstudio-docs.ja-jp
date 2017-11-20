@@ -1,6 +1,6 @@
 # [JavaScript ランタイムのホスト処理](javascript-runtime-hosting.md)
 ## [JavaScript ランタイムのホスト](hosting-the-javascript-runtime.md)
-## [Edge エンジンとレガシ エンジンの比較](targeting-edge-vs-legacy-engines-in-jsrt-apis.md)
+## [Edge エンジンとレガシ エンジンの対象化](targeting-edge-vs-legacy-engines-in-jsrt-apis.md)
 ## [リファレンス (JavaScript ランタイム)](reference-javascript-runtime.md)
 ### [JavaScript ランタイムの Typedef、定数、および列挙型](javascript-runtime-typedefs-constants-and-enumerations.md)
 #### [JsBackgroundWorkItemCallback Typedef](jsbackgroundworkitemcallback-typedef.md)

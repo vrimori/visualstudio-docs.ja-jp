@@ -1,53 +1,55 @@
 ---
-title: "方法: SharePoint 接続を追加または削除する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "SharePoint 接続 [Visual Studio での SharePoint 開発]"
-  - "Visual Studio での SharePoint 開発, 参照 (SharePoint サイトを)"
-  - "Visual Studio での SharePoint 開発, SharePoint 接続"
+title: "方法: SharePoint 接続の追加または |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, browsing SharePoint sites
+- SharePoint development in Visual Studio, SharePoint Connections
+- SharePoint Connections [SharePoint development in Visual Studio]
 ms.assetid: 4d551be0-2124-4481-b398-481ded9b5d46
-caps.latest.revision: 14
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 775f342463e32d73cfaee6e492c1417753ec159f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: SharePoint 接続を追加または削除する
-  サーバー エクスプローラーでは、データ接続だけではなく、SharePoint サイトも参照できます。  ただし、SharePoint サイトの内容を参照するには、それを **\[SharePoint 接続\]** ノードにあらかじめ追加しておく必要があります。  
+# <a name="how-to-add-or-remove-sharepoint-connections"></a>方法: SharePoint 接続を追加または削除する
+  サーバー エクスプ ローラーでは、データ接続と同様に SharePoint サイトを参照できます。 ただし、SharePoint サイトのコンテンツを参照する前にする必要がありますに追加、 **SharePoint 接続**ノード。  
   
-### \[SharePoint 接続\] ノードに SharePoint サイトを追加するには  
+### <a name="to-add-a-sharepoint-site-to-the-sharepoint-connections-node"></a>SharePoint サイト、SharePoint 接続 ノードを追加するには  
   
-1.  メニュー バーで、**\[サーバー エクスプローラー\]\[表示\]** をクリックします。  
+1.  メニュー バーで、次のように選択します。**ビュー**、**サーバー エクスプ ローラー**です。  
   
-2.  次に **\[サーバー エクスプローラー\]** で、**\[SharePoint 接続\]** ノードを選択し、メニュー バーで、**\[ツール\]** をクリックします、**\[SharePoint 接続の追加\]** を選択します。  
+2.  **サーバー エクスプ ローラー**、選択、 **SharePoint 接続**ノード、次に、メニュー バーで、次のように選択します**ツール**、 **SharePoint接続の追加**。.  
   
-3.  **\[SharePoint 接続の追加\]** ボックスに、SharePoint サイトの [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] を入力します \(たとえば、http:\/\/testserver\/sites\/unittests\)。  
+3.  **SharePoint 接続の追加**ボックスに、入力、 [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] SharePoint サイト (たとえば、http://testserver/sites/unittests)。  
   
-### \[SharePoint 接続\] ノードから SharePoint サイトを削除するには  
+### <a name="to-delete-a-sharepoint-site-from-the-sharepoint-connections-node"></a>SharePoint 接続 ノードから、SharePoint サイトを削除するには  
   
-1.  メニュー バーで、**\[サーバー エクスプローラー\]** を開くには、**\[サーバー エクスプローラー\]\[表示\]** をクリックします。  
+1.  メニュー バーで、次のように選択します。**ビュー**、**サーバー エクスプ ローラー**を開くには**サーバー エクスプ ローラー**です。  
   
-2.  ユーザーが **\[サーバー エクスプローラー\]** から削除する SharePoint サイトを表示します。**\[SharePoint 接続\]** にノードを展開します。  
+2.  展開して、 **SharePoint 接続**から削除する SharePoint サイトを表示するためにノード**サーバー エクスプ ローラー**です。  
   
-3.  次にサイトを選択し、メニュー バーで選択し、**\[削除\]\[編集\]** をクリックします。  
+3.  サイトを選択し、メニュー バーで、次のように選択します。**編集**、**削除**です。  
   
     > [!NOTE]  
-    >  この手順では、実際のサイトを削除できません; これは **\[サーバー エクスプローラー\]** から接続のみを削除します。  
+    >  ここでは、基になるサイトを削除しません。接続だけが削除**サーバー エクスプ ローラー**です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [サーバー エクスプローラーを使用した SharePoint 接続の参照](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)  
   
   
