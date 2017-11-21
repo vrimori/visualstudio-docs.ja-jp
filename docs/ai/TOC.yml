@@ -1,0 +1,29 @@
+- name: Visual Studio Tools for AI
+  href: index.yml
+  items:
+    - name: 概要
+      items:
+        - name: Visual Studio Tools for AI について
+          href: about-ai-tools.md
+    - name: インストール
+      href: installation.md
+    - name: クイックスタート
+      items:
+        - name: Tensorflow + Python
+          href: tensorflow-local.md
+    - name: チュートリアル
+      items:
+        - name: TensorFlow + Azure ディープ ラーニング VM
+          href: tensorflow-vm.md
+    - name: 使い方ガイド
+      items:
+        - name: 新しいプロジェクトを作成する
+          href: create-project.md
+        - name: モデルをトレーニングする
+          href: train-model.md
+    - name: サンプル
+      items:
+        - name: GitHub
+          href: 'https://github.com/Microsoft/samples-for-ai'
+        - name: Machine Learning ギャラリー
+          href: 'https://gallery.cortanaintelligence.com/projects'

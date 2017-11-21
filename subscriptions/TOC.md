@@ -22,6 +22,8 @@
 ##### [SmartOffice4TFS + ModernRequirements4TFS](vs-modernreq.md)
 ##### [Microsoft Azure の従量課金制](vs-azure-payg.md) 
 #### 教育
+##### [DataCamp](vs-datacamp.md)
+##### [LinkedIn Learning](vs-linkedin-learning.md)
 ##### [Opsgility](vs-opsgility.md)
 ##### [Pluralsight](vs-pluralsight.md)
 ##### [Xamarin University トレーニング](vs-xamarin.md)
