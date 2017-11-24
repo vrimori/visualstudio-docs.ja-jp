@@ -5,39 +5,21 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 08/30/2017
+ms.date: 10/09/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
 - component ID, Visual Studio
 - install Visual Studio, administrator guide
 ms.service: 
-ms.technology:
-- vs-ide-install
+ms.technology: vs-ide-install
 ms.assetid: 7392a100-100c-458c-9394-828695109015
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 53c6c8e3a715a4dfd085fe4df7fb8ad098d21ccd
+ms.sourcegitcommit: 2c7f48ad6073a81fa927568793633f26cc1f0b15
 ms.translationtype: HT
-ms.sourcegitcommit: 96018963278cd1d53b226473baade41da1e98111
-ms.openlocfilehash: 9bc2b7440f61e4940b4ef0b1396724a716f34e84
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
-
 # <a name="visual-studio-feedback-client-2017-component-directory"></a>Visual Studio Feedback Client 2017 のコンポーネント ディレクトリ
 
 このページの表では、コマンド ラインを使用して Visual Studio をインストールするために使用できる ID の一覧を示します。 Visual Studio の更新プログラムがリリースされる際には、さらにコンポーネントが追加される予定です。
@@ -70,6 +52,8 @@ Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback C
 --- | --- | ---
 適用なし | 該当なし | 適用なし
 
+## <a name="get-support"></a>サポートを受ける
+ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング](troubleshooting-installation-issues.md)」ページにあるトラブルシューティングのヒントをご覧ください。 また、Visual Studio IDE の [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから製品の問題を Microsoft に報告していただくことや、[UserVoice](https://visualstudio.uservoice.com/forums/121579) でご提案を共有していただくこともできます。 [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。 [Gitter コミュニティの Visual Studio に関する意見交換](https://gitter.im/Microsoft/VisualStudio) ([GitHub](https://github.com/) アカウントが必要) から、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。
 
 ## <a name="see-also"></a>関連項目
 
@@ -78,4 +62,3 @@ Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback C
 * [コマンド ライン パラメーターを使用して Visual Studio をインストールする](use-command-line-parameters-to-install-visual-studio.md)
   * [コマンド ライン パラメーターの例](command-line-parameter-examples.md)
 * [Visual Studio のオフライン インストールを作成する](create-an-offline-installation-of-visual-studio.md)
-

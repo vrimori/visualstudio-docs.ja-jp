@@ -5,39 +5,21 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 08/30/2017
+ms.date: 10/09/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
 - component ID, Visual Studio
 - install Visual Studio, administrator guide
 ms.service: 
-ms.technology:
-- vs-ide-install
+ms.technology: vs-ide-install
 ms.assetid: b99298df-0280-47fc-af73-44cd7a8ac553
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4c858ade9aaf2ecdc91c3ba435c0f4cd02b7c506
+ms.sourcegitcommit: 2c7f48ad6073a81fa927568793633f26cc1f0b15
 ms.translationtype: HT
-ms.sourcegitcommit: 96018963278cd1d53b226473baade41da1e98111
-ms.openlocfilehash: 86ac70e66b581a2e70dc8efa185b1e61d7d0204c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
-
 # <a name="visual-studio-build-tools-2017-component-directory"></a>Visual Studio Build Tools 2017 のコンポーネント ディレクトリ
 
 このページの表では、コマンドラインを使用して Visual Studio をインストールするために使用できる ID の一覧を示します。 Visual Studio の更新プログラムがリリースされる際には、さらにコンポーネントが追加される予定です。
@@ -76,6 +58,8 @@ Microsoft.VisualStudio.Component.FSharp.MSBuild | F# コンパイラ | 15.0.2660
 コンポーネント ID | 名前 | バージョン | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.Net.Core.Component.SDK | .NET Core 1.0 - 1.1 開発ツール | 15.0.26606.0 | 必須
+Microsoft.VisualStudio.Component.NuGet.BuildTools | NuGet ターゲットとビルド タスク | 15.0.26919.1 | 必須
+Microsoft.Net.Core.Component.SDK.1x | .NET Core 1.0 - 1.1 デスクトップ用開発ツール | 15.0.26919.1 | Optional
 
 ## <a name="visual-c-build-tools"></a>Visual C++ Build Tools
 
@@ -87,31 +71,35 @@ Microsoft.Net.Core.Component.SDK | .NET Core 1.0 - 1.1 開発ツール | 15.0.26
 
 コンポーネント ID | 名前 | バージョン | 依存関係の種類
 --- | --- | --- | ---
-Microsoft.VisualStudio.Component.VC.CoreBuildTools | Visual C++ Build Tools のコア機能 | 15.0.26208.0 | 必須
+Microsoft.VisualStudio.Component.VC.CoreBuildTools | Visual C++ Build Tools のコア機能 | 15.0.26823.1 | 必須
 Microsoft.VisualStudio.Component.VC.Redist.14.Latest | Visual C++ 2017 再頒布可能パッケージ Update | 15.0.26606.0 | 必須
 Microsoft.VisualStudio.Component.Windows10SDK | Windows ユニバーサル C ランタイム | 15.0.26621.2 | 必須
 Component.Microsoft.VisualStudio.RazorExtension | Razor 言語サービス | 15.0.26720.2 | 推奨
 Microsoft.VisualStudio.Component.Roslyn.Compiler | C# および Visual Basic Roslyn コンパイラ | 15.0.26208.0 | 推奨
 Microsoft.VisualStudio.Component.Roslyn.LanguageServices | C# および Visual Basic | 15.0.26711.1 | 推奨
 Microsoft.VisualStudio.Component.Static.Analysis.Tools | スタティック分析ツール | 15.0.26208.0 | 推奨
-Microsoft.VisualStudio.Component.VC.CMake.Project | CMake の Visual C++ ツール | 15.0.26621.2 | 推奨
-Microsoft.VisualStudio.Component.VC.Tools.x86.x64 | VC++ 2017 v141 ツールセット (x86、x64) | 15.0.26621.2 | 推奨
-Microsoft.VisualStudio.Component.Windows10SDK.15063.Desktop | デスクトップ C++ x86 および x64 用 Windows 10 SDK (10.0.15063.0) | 15.0.26621.2 | 推奨
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | UWP 用 Windows 10 SDK (10.0.15063.0): C#、VB、JS | 15.0.26621.2 | 推奨
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP.Native | UWP 用 Windows 10 SDK (10.0.15063.0): C++ | 15.0.26621.2 | 推奨
+Microsoft.VisualStudio.Component.VC.CMake.Project | CMake の Visual C++ ツール | 15.0.27004.2002 | 推奨
+Microsoft.VisualStudio.Component.VC.Tools.x86.x64 | VC++ 2017 v141 ツールセット (x86、x64) | 15.0.26823.1 | 推奨
+Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop | デスクトップ用 Windows 10 SDK (10.0.16299.0) C++ [x86 および x64] | 15.0.27004.2002 | 推奨
+Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP | UWP 用 Windows 10 SDK (10.0.16299.0): C#、VB、JS | 15.0.27004.2002 | 推奨
+Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | UWP 用 Windows 10 SDK (10.0.16299.0): C++ | 15.0.27004.2002 | 推奨
 Microsoft.VisualStudio.ComponentGroup.WebToolsExtensions | ASP.NET と Web 開発 | 15.0.26606.0 | 推奨
 Microsoft.Component.VC.Runtime.UCRTSDK | Windows Universal CRT SDK | 15.0.26208.0 | Optional
 Microsoft.Net.Component.4.6.1.SDK | .NET Framework 4.6.1 SDK | 15.0.26621.2 | Optional
 Microsoft.Net.Component.4.6.1.TargetingPack | .NET Framework 4.6.1 Targeting Pack | 15.0.26621.2 | Optional
 Microsoft.VisualStudio.Component.VC.140 | デスクトップ用 VC++ 2015.3 v140 ツールセット (x86、x64) | 15.0.26720.2 | Optional
-Microsoft.VisualStudio.Component.VC.ATL | Visual C++ ATL のサポート | 15.0.26621.2 | Optional
+Microsoft.VisualStudio.Component.VC.ATL | Visual C++ ATL のサポート | 15.0.26823.1 | Optional
 Microsoft.VisualStudio.Component.VC.ATLMFC | MFC と ATL のサポート (x86 と x64) | 15.0.26621.2 | Optional
-Microsoft.VisualStudio.Component.VC.ClangC2 | Clang/C2 (試験的) | 15.0.26724.1 | Optional
-Microsoft.VisualStudio.Component.VC.CLI.Support | C++/CLI サポート | 15.0.26621.2 | Optional
+Microsoft.VisualStudio.Component.VC.ClangC2 | Clang/C2 (試験的) | 15.0.26823.1 | Optional
+Microsoft.VisualStudio.Component.VC.CLI.Support | C++/CLI サポート | 15.0.26823.1 | Optional
 Microsoft.VisualStudio.Component.VC.Modules.x86.x64 | 標準ライブラリ用モジュール (試験段階) | 15.0.26720.2 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.10240 | Windows 10 SDK (10.0.10240.0) | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.10586 | Windows 10 SDK (10.0.10586.0) | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.14393 | Windows 10 SDK (10.0.14393.0) | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.15063.Desktop | デスクトップ用 Windows 10 SDK (10.0.15063.0) C++ [x86 および x64] | 15.0.26929.2 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | UWP 用 Windows 10 SDK (10.0.15063.0): C#、VB、JS | 15.0.26621.2 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP.Native | UWP 用 Windows 10 SDK (10.0.15063.0): C++ | 15.0.26621.2 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop.arm | デスクトップ用 Windows 10 SDK (10.0.16299.0) C++ [ARM および ARM64] | 15.0.27004.2002 | Optional
 Microsoft.VisualStudio.Component.Windows81SDK | Windows 8.1 SDK | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Win81 | Windows 8.1 SDK と UCRT SDK | 15.0.26208.0 | Optional
 
@@ -136,6 +124,7 @@ Microsoft.Net.Component.4.6.TargetingPack | .NET Framework 4.6 Targeting Pack | 
 Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 Targeting Pack | 15.0.26621.2 | 推奨
 Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 開発ツール | 15.0.26606.0 | 推奨
 Microsoft.Net.Core.Component.SDK | .NET Core 1.0 - 1.1 開発ツール | 15.0.26606.0 | 推奨
+Microsoft.VisualStudio.Component.NuGet.BuildTools | NuGet ターゲットとビルド タスク | 15.0.26919.1 | 推奨
 Microsoft.Net.Component.3.5.DeveloperTools | .NET Framework 3.5 開発ツール | 15.0.26621.2 | Optional
 Microsoft.Net.Component.4.6.2.SDK | .NET Framework 4.6.2 SDK | 15.0.26208.0 | Optional
 Microsoft.Net.Component.4.6.2.TargetingPack | .NET Framework 4.6.2 Targeting Pack | 15.0.26208.0 | Optional
@@ -148,9 +137,13 @@ Microsoft.Net.ComponentGroup.4.7.DeveloperTools | .NET Framework 4.7 開発ツ�
 
 以下のコンポーネントはどのワークロードにも含まれていませんが、個別のコンポーネントとして選択できます。
 
-コンポーネント ID | 名前 | バージョン
+コンポーネント ID | 名前 | Version
 --- | --- | ---
-適用なし | 該当なし | 適用なし
+Microsoft.VisualStudio.Component.VC.Tools.ARM | ARM 用 Visual C++ コンパイラとライブラリ | 15.0.26906.1
+Microsoft.VisualStudio.Component.VC.Tools.ARM64 | ARM64 用 Visual C++ コンパイラとライブラリ | 15.0.26906.1
+
+## <a name="get-support"></a>サポートを受ける
+ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング](troubleshooting-installation-issues.md)」ページにあるトラブルシューティングのヒントをご覧ください。 また、Visual Studio IDE の [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから製品の問題を Microsoft に報告していただくことや、[UserVoice](https://visualstudio.uservoice.com/forums/121579) でご提案を共有していただくこともできます。 [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。 [Gitter コミュニティの Visual Studio に関する意見交換](https://gitter.im/Microsoft/VisualStudio) ([GitHub](https://github.com/) アカウントが必要) から、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。
 
 ## <a name="see-also"></a>関連項目
 
@@ -159,4 +152,3 @@ Microsoft.Net.ComponentGroup.4.7.DeveloperTools | .NET Framework 4.7 開発ツ�
 * [コマンド ライン パラメーターを使用して Visual Studio をインストールする](use-command-line-parameters-to-install-visual-studio.md)
   * [コマンド ライン パラメーターの例](command-line-parameter-examples.md)
 * [Visual Studio のオフライン インストールを作成する](create-an-offline-installation-of-visual-studio.md)
-

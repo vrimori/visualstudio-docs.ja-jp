@@ -5,39 +5,21 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 08/30/2017
+ms.date: 10/09/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
 - component ID, Visual Studio
 - install Visual Studio, administrator guide
 ms.service: 
-ms.technology:
-- vs-ide-install
+ms.technology: vs-ide-install
 ms.assetid: 55aea29b-1066-4e5a-aa99-fc87d4efb6d5
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 517a6aa9b14848aee0d84c0d3c675efda8c275d7
+ms.sourcegitcommit: 2c7f48ad6073a81fa927568793633f26cc1f0b15
 ms.translationtype: HT
-ms.sourcegitcommit: 96018963278cd1d53b226473baade41da1e98111
-ms.openlocfilehash: 78a656f32068055326567223b8ce6cd68095e647
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2017
 ---
-
 # <a name="visual-studio-test-agent-2017-component-directory"></a>Visual Studio Test Agent 2017 のコンポーネント ディレクトリ
 
 このページの表では、コマンド ラインを使用して Visual Studio をインストールするために使用できる ID の一覧を示します。 Visual Studio の更新プログラムがリリースされる際には、さらにコンポーネントが追加される予定です。
@@ -70,6 +52,8 @@ Microsoft.VisualStudio.ComponentGroup.TestTools.TestAgent | Test Agent のコア
 --- | --- | ---
 適用なし | 該当なし | 適用なし
 
+## <a name="get-support"></a>サポートを受ける
+ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング](troubleshooting-installation-issues.md)」ページにあるトラブルシューティングのヒントをご覧ください。 また、Visual Studio IDE の [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから製品の問題を Microsoft に報告していただくことや、[UserVoice](https://visualstudio.uservoice.com/forums/121579) でご提案を共有していただくこともできます。 [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。 [Gitter コミュニティの Visual Studio に関する意見交換](https://gitter.im/Microsoft/VisualStudio) ([GitHub](https://github.com/) アカウントが必要) から、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。
 
 ## <a name="see-also"></a>関連項目
 
@@ -78,4 +62,3 @@ Microsoft.VisualStudio.ComponentGroup.TestTools.TestAgent | Test Agent のコア
 * [コマンド ライン パラメーターを使用して Visual Studio をインストールする](use-command-line-parameters-to-install-visual-studio.md)
   * [コマンド ライン パラメーターの例](command-line-parameter-examples.md)
 * [Visual Studio のオフライン インストールを作成する](create-an-offline-installation-of-visual-studio.md)
-
