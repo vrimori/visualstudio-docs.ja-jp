@@ -12,11 +12,11 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5e111159029710684a1a49be2859f6ac5699a70a
-ms.sourcegitcommit: 2c7f48ad6073a81fa927568793633f26cc1f0b15
+ms.openlocfilehash: 307e32587a7aac6e2595f35488ad057995c04f4b
+ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>スナップショットは、Visual Studio でデバッグするためのトラブルシューティングと既知の問題
 
@@ -30,8 +30,7 @@ ms.lasthandoff: 11/17/2017
 
 これらの手順を実行します。
 
-1. ビルド、およびアプリの配置に使用されたソース コードの同じバージョンであることを確認します。
-1. 展開に適切なシンボルを読み込むことを確認してください。 これを行うには、表示、**モジュール**ウィンドウは、スナップショットのデバッグ中し、シンボル ファイルを示す列が .pdb ファイルをデバッグするモジュールを読み込むことを確認します。 スナップショット デバッガーが自動的にダウンロードして、実際の展開記号を使用して試してみることに注意してください。
+1. ビルドし、配置、app.isua1 に使用されたソース コードの同じバージョンであることを確認します。 展開に適切なシンボルを読み込むことを確認してください。 これを行うには、表示、**モジュール**ウィンドウは、スナップショットのデバッグ中し、シンボル ファイルを示す列が .pdb ファイルをデバッグするモジュールを読み込むことを確認します。 スナップショット デバッガーが自動的にダウンロードして、実際の展開記号を使用して試してみることに注意してください。
 
 ## <a name="issue-symbols-do-not-load-when-i-open-a-snapshot"></a>問題点: シンボルが読み込まれないスナップショットを開く
 
@@ -70,6 +69,7 @@ ms.lasthandoff: 11/17/2017
 - Roslyn IL 最適化は ASP.NET Core プロジェクトに完全にサポートされていません。 ASP.NET Core プロジェクトでは、いないことができますをいくつかの変数を参照してください。 または、条件付きステートメントでいくつかの変数を使用します。 
 - 特別な変数など*$FUNCTION*または*$CALLER*、条件ステートメントやプロジェクトの ASP.NET Core logpoints で評価されることはできません。
 - スナップショットのデバッグはアプリのサービスでは動作しません[ローカル キャッシュ](https://docs.microsoft.com/en-us/azure/app-service/app-service-local-cache)オンにします。
+- スナップショットの API アプリのデバッグは現在サポートされていません。
 
 ## <a name="see-also"></a>関連項目
 
