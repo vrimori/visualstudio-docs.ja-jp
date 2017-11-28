@@ -19,7 +19,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
 ---
 # <a name="targeting-edge-vs-legacy-engines-in-jsrt-apis"></a>JsRT API での Edge エンジンとJsRT API のレガシ エンジン
-Windows 10 以降、Chakra (JavaScript エンジン) に加えられた変更点の 1 つは、2 つの異なる Chakra エンジンをサポートすることです。これは、新しい Edge のレンダリング エンジンをサポートするための Windows 10 のブラウザー戦略に沿った変更です。  
+Windows 10 以降、Chakra (JavaScript エンジン) に加えられた変更点の 1 つは、2 つの異なる Chakra エンジンをサポートすることです。これは、新しい Microsoft Edge のレンダリング エンジンをサポートするための Windows 10 のブラウザー戦略に沿った変更です。  
   
 -   Internet Explorer 11 に付属していてそれをサポートする古い Chakra エンジン (以下では、 *レガシ エンジン* または jscript9.dll とも呼ばれます)。 このエンジンはその時点で凍結され、Win8.1/IE11 リリース以降は基本的に変更されません。  
   
