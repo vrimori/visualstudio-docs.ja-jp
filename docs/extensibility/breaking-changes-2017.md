@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/09/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54d5af60-0b44-4ae1-aa57-45aa03f89f3d
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1d474374a0c7603bc9b6995783bbed96c81c8907
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: MT
-ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
-ms.openlocfilehash: ac7a99673eb4dc23dd53a46c3c93fd735325c255
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 機能拡張の変更
 
@@ -123,8 +107,3 @@ Visual Studio の設定マネージャーを使用して、Visual Studio プロ�
 * 外部コンポーネントは、Visual Studio の場所を見つけることができます[ここガイダンスに従って](https://blogs.msdn.microsoft.com/heaths/2016/09/15/changes-to-visual-studio-15-setup)です。
 * 外部コンポーネントが使用することをお勧め、[外部の設定マネージャー](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.settings.externalsettingsmanager.aspx) Visual Studio のレジストリ キーに直接読み取り/書き込みの代わりにします。
 * 登録のためのもう 1 つの方法は、拡張機能を使用してコンポーネントに実装がかどうかを確認してください。 たとえば、デバッガー拡張機能があります、新しい活用するために[msvsmon JSON ファイルの COM 登録](migrate-debugger-COM-registration.md)です。
-
-## <a name="change-lightweight-solution-load"></a>変更: 軽量のソリューションの読み込み
-
-軽量なソリューションを読み込む (LSL) には、完全には、ユーザーがそれらの作業を開始するまでプロジェクトを読み込むことによりソリューション ロード時間が短縮されます。 これは、プロジェクトが完全に読み込まれると想定される拡張機能に影響を与えます。 参照してください[ライトウェイト ソリューションの読み込み](lightweight-solution-load-extension-impact.md)を拡張機能が受ける可能性があり、拡張機能を更新する方法のガイダンスを入手するかどうかを参照してください。
-

@@ -1,85 +1,85 @@
 ---
-title: "SccDirDiff 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccDirDiff"
-helpviewer_keywords: 
-  - "SccDirDiff 関数"
+title: "SccDirDiff 関数 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SccDirDiff
+helpviewer_keywords: SccDirDiff function
 ms.assetid: 26c9ba92-e3b9-4dd2-bd5e-76b17745e308
-caps.latest.revision: 15
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: ea335ef6bcb2a27b4312c613062be0d365711cbc
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# SccDirDiff 関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-この関数は、クライアントのディスク上の現在のローカル ディレクトリと、対応するプロジェクトをソース管理の違いを表示します。  
+# <a name="sccdirdiff-function"></a>SccDirDiff 関数
+この関数は、クライアントのディスク上の現在のローカル ディレクトリとソース管理下にある対応するプロジェクトの違いを表示します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 SCCRTN SccDirDiff(  
-   LPVOID    pContext,  
-   HWND      hWnd,  
-   LPCSTR    lpDirName,  
-   LONG      dwFlags,  
-   LPCMDOPTS pvOptions  
+   LPVOID    pContext,  
+   HWND      hWnd,  
+   LPCSTR    lpDirName,  
+   LONG      dwFlags,  
+   LPCMDOPTS pvOptions  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  pContext  
- \[in\]ソース管理プラグイン コンテキスト構造体。  
+ [in]ソース管理プラグイン コンテキスト構造体。  
   
- hwnd の分離  
- \[in\]ソース管理プラグインは、それによって提供されるダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
+ hWnd  
+ [in]ソース管理プラグインで提供されるダイアログ ボックスをすべての親として使用できる IDE ウィンドウへのハンドル。  
   
  lpDirName  
- \[in\]視覚的な違いを表示対象のローカル ディレクトリへの完全修飾パス。  
+ [in]視覚的な違いを表示する対象のローカル ディレクトリへの完全修飾パス。  
   
  dwFlags  
- \[in\]コマンドのフラグ \(「解説」を参照してください\] セクション\)。  
+ [in]コマンドのフラグ (「解説」を参照してください セクション)。  
   
  pvOptions  
- \[in\]ソース管理プラグインに固有のオプションです。  
+ [in]ソース管理プラグインに固有のオプションです。  
   
-## 戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+## <a name="return-value"></a>戻り値  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
 |値|説明|  
-|-------|--------|  
-|SCC\_OK|ディスク上のディレクトリは、ソース コード管理のプロジェクトと同じです。|  
-|SCC\_I\_FILESDIFFER|ディスク上のディレクトリは、ソース コード管理で、プロジェクトと異なります。|  
-|SCC\_I\_RELOADFILE|ファイルまたはプロジェクトを再読み込みする必要があります。|  
-|SCC\_E\_FILENOTCONTROLLED|ディレクトリは、ソース コード管理下ではありません。|  
-|SCC\_E\_NOTAUTHORIZED|この操作を実行できません。|  
-|SCC\_E\_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題が原因と思わのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
-|SCC\_E\_NONSPECIFICERROR<br /><br /> SCC\_E\_UNKNOWNERROR|不特定のエラーです。|  
-|SCC\_E\_FILENOTEXIST|ローカルのディレクトリが見つかりませんでした。|  
+|-----------|-----------------|  
+|SCC_OK|ディスク上のディレクトリでは、ソース コード管理で、プロジェクトと同じです。|  
+|SCC_I_FILESDIFFER|ディスク上のディレクトリは、ソース コード管理で、プロジェクトと異なります。|  
+|SCC_I_RELOADFILE|ファイルまたはプロジェクトは、再読み込みする必要があります。|  
+|SCC_E_FILENOTCONTROLLED|ディレクトリはソース コード管理されていません。|  
+|SCC_E_NOTAUTHORIZED|この操作を実行するユーザーが許可されていません。|  
+|SCC_E_ACCESSFAILURE|ソース管理システムのネットワークや競合の問題の可能性があるためのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|不特定のエラーです。|  
+|SCC_E_FILENOTEXIST|ローカルのディレクトリが見つかりませんでした。|  
   
-## 解説  
- この関数は、ソース管理ユーザーに指定したディレクトリへの変更の一覧を表示するプラグインに指示する使用されます。 プラグインは、ディスク上のユーザーのディレクトリと、対応するプロジェクトをバージョン管理の違いを表示する、任意の形式で、独自のウィンドウを開きます。  
+## <a name="remarks"></a>コメント  
+ この関数は、ソース管理プラグインの指定したディレクトリに変更が一覧に、ユーザーに表示するよう指示するために使用されます。 プラグインは、ディスク上のユーザーのディレクトリとバージョン管理下にある対応するプロジェクトの違いを表示する、選択した形式で独自のウィンドウを開きます。  
   
- 場合にすべてのディレクトリのプラグインがサポート比較では、「クイック比較」オプションがサポートされていない場合でも、ファイル名ごとにディレクトリの比較をサポートしてする必要があります。  
+ 場合にすべてのディレクトリのプラグインがサポートの比較、「クイック比較」オプションがサポートされていない場合でも、ファイル名ごとにディレクトリの比較をサポートしてする必要があります。  
   
 |`dwFlags`|解釈|  
-|---------------|--------|  
-|SCC\_DIFF\_IGNORECASE|大文字と小文字は \(クイック diff またはビジュアルのいずれかの使用可能性があります\)。|  
-|SCC\_DIFF\_IGNORESPACE|\(クイック diff または visual 使用可能性があります\) の空白は無視されます。|  
-|SCC\_DIFF\_QD\_CONTENTS|ソース管理プラグインのサポートを何も行わずに、ディレクトリでは、1 バイトずつを比較します。|  
-|SCC\_DIFF\_QD\_CHECKSUM|プラグインでサポートされている、何も行わずに、チェックサムを使用してディレクトリを比較するか、サポートされていない場合はフォールバックして SCC\_DIFF\_QD\_CONTENTS 場合。|  
-|SCC\_DIFF\_QD\_TIME|プラグインでサポートされている、サイレント モードで、タイムスタンプを使用してディレクトリを比較するか、サポートされていない場合はフォールバック SCC\_DIFF\_QD\_CHECKSUM または SCC\_DIFF\_QD\_CONTENTS 場合。|  
+|---------------|--------------------|  
+|SCC_DIFF_IGNORECASE|大文字と小文字は (クイック diff またはビジュアルのいずれかの使用可能性があります)。|  
+|SCC_DIFF_IGNORESPACE|空白文字 (クイック diff またはビジュアルのいずれかの使用可能性があります) を無視します。|  
+|SCC_DIFF_QD_CONTENTS|ソース管理プラグインでサポートされている場合、ディレクトリでは、1 バイトずつをサイレント モードでを比較します。|  
+|SCC_DIFF_QD_CHECKSUM|プラグインでサポートされている、サイレント モードで、チェックサムを使用してディレクトリを比較し、または、サポートされていない場合に戻って、SCC_DIFF_QD_CONTENTS です。|  
+|SCC_DIFF_QD_TIME|プラグインでサポートされている、サイレント モードで、タイムスタンプを使用してディレクトリを比較し、または、サポートされていない場合はフォールバック SCC_DIFF_QD_CHECKSUM または SCC_DIFF_QD_CONTENTS にします。|  
   
 > [!NOTE]
->  この関数と同じコマンドのフラグを使用して、 [SccDiff](../extensibility/sccdiff-function.md)です。 ただし、ソース管理プラグインは、ディレクトリの「クイック比較」操作をサポートしていませんこともできます。  
+>  この関数と同じコマンド フラグを使用して、 [SccDiff](../extensibility/sccdiff-function.md)です。 ただし、ソース管理プラグインはディレクトリの"クイック diff"操作をサポートしないようにできます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

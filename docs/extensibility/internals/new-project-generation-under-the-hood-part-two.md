@@ -4,37 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - projects [Visual Studio], new project dialog
 - projects [Visual Studio], new project generation
 ms.assetid: 73ce91d8-0ab1-4a1f-bf12-4d3c49c01e13
-caps.latest.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5581224b17a7b42f65b69f741f984a144d78fc26
-ms.openlocfilehash: 859eeac9c2fd322dcf231e9c70fe83b92b099111
-ms.contentlocale: ja-jp
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: f7dc04752b034f666dfcb1d72b500f2c12f54fba
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="new-project-generation-under-the-hood-part-two"></a>新しいプロジェクトの生成: フードの第 2 部します。
 [新しいプロジェクトの生成: 短縮、パート 1](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md)見た方法、**新しいプロジェクト** ダイアログ ボックスが表示されます。 選択したと仮定、 **Visual c# の Windows アプリケーション**、情報を入力した、**名前**と**場所**テキスト ボックス、および [ok] のクリックしました。  
@@ -93,7 +78,7 @@ namespace Simple
 </VSTemplate>  
 ```  
   
- について説明しました、 \<TemplateData >」の「、[新しいプロジェクトの生成: 短縮、パート 1](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md)です。 このセクションでタグがの外観の制御に使用される、**新しいプロジェクト** ダイアログ ボックス。  
+ について説明しました、 \<TemplateData > セクションで、[新しいプロジェクトの生成: 短縮、パート 1](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md)です。 このセクションでタグがの外観の制御に使用される、**新しいプロジェクト** ダイアログ ボックス。  
   
  内のタグ、 \<TemplateContent > コントロールを新しいプロジェクトとプロジェクト項目の生成」セクションします。 ここでは、 \<TemplateContent > \Program Files\Microsoft Visual Studio 8\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\WindowsApplication.zip フォルダーに cswindowsapplication.vstemplate ファイルからセクションです。  
   
@@ -137,7 +122,7 @@ namespace Simple
   
  ![SimpleSolution](../../extensibility/internals/media/simplesolution.png "SimpleSolution")  
   
- 最初で唯一\<プロジェクト > テンプレート読み取りタグ。  
+ 最初で唯一\<Project > タグで、テンプレートの読み取り。  
   
 ```  
 <Project File="WindowsApplication.csproj" ReplaceParameters="true">  
@@ -148,7 +133,7 @@ namespace Simple
 ### <a name="designers-and-references"></a>デザイナーとの参照  
  わかりますソリューション エクスプ ローラーで、[プロパティ] フォルダーが存在し、必要なファイルが含まれています。 参照プロジェクトに関する新機能ところですが、Resources.resx を Resources.Designer.cs およびに Form1.cs、Form1.Designer.cs などのデザイナー ファイルの依存関係ですか。  これらで設定 Simple.csproj ファイルの生成時にします。  
   
- ここでは、 \<ItemGroup > プロジェクト参照を作成する Simple.csproj から。  
+ ここでは、 \<ItemGroup > プロジェクトの参照を作成する Simple.csproj から。  
   
 ```  
 <ItemGroup>  
@@ -161,7 +146,7 @@ namespace Simple
 </ItemGroup>  
 ```  
   
- これらは、ソリューション エクスプ ローラーに表示される 6 つのプロジェクト参照であることを確認できます。 別のセクションを次に示します\<ItemGroup > です。 わかりやすくするため、多数のコード行が削除されました。 このセクションでは、Settings.Designer.cs を Settings.settings に依存します。  
+ これらは、ソリューション エクスプ ローラーに表示される 6 つのプロジェクト参照であることを確認できます。 別のセクションを次に示します\<ItemGroup >。 わかりやすくするため、多数のコード行が削除されました。 このセクションでは、Settings.Designer.cs を Settings.settings に依存します。  
   
 ```  
 <ItemGroup>  

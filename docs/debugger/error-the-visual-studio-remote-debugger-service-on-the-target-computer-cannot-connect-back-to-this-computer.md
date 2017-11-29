@@ -1,31 +1,30 @@
 ---
-title: "エラー : 対象コンピューター上の Visual Studio リモート デバッガーが、このコンピューターに接続できません。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.error.service_access_denied_oncallback"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "エラー: 対象のコンピューター上の Visual Studio リモート デバッガー サービスは、このコンピューターに接続できない |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.debug.error.service_access_denied_oncallback
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
 ms.assetid: 89ecf99d-66bf-4da0-a840-aa95b0be1702
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 4f1707f7956557cb8ce764f66431dbf963dcfb79
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# エラー : 対象コンピューター上の Visual Studio リモート デバッガーが、このコンピューターに接続できません。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>エラー : 対象コンピューター上の Visual Studio リモート デバッガーが、このコンピューターに接続できません。
 このエラーは、Visual Studio リモート デバッガー サービスがデバッグを開始したコンピューターに接続するときに、このサービスを実行しているユーザー アカウントを認証できないことを示します。  
   
  コンピューターにアクセスできるアカウントは、次の表のとおりです。  
@@ -33,49 +32,49 @@ manager: "ghogen"
 |||||  
 |-|-|-|-|  
 ||LocalSystem アカウント|ドメイン アカウント|両方のコンピューターに同じユーザー名とパスワードを持つローカル アカウント|  
-|両方のコンピューターが同じドメインにある場合|○|\[はい\]|\[はい\]|  
-|両方のコンピューターが双方向の信頼関係を持つドメインにある場合|x|x|\[はい\]|  
-|一方または両方のコンピューターがワークグループにある場合|x|x|\[はい\]|  
-|コンピューターが異なるドメインにある場合|x|x|\[はい\]|  
+|両方のコンピューターが同じドメインにある場合|はい|はい|はい|  
+|両方のコンピューターが双方向の信頼関係を持つドメインにある場合|いいえ|いいえ|はい|  
+|一方または両方のコンピューターがワークグループにある場合|いいえ|いいえ|はい|  
+|コンピューターが異なるドメインにある場合|いいえ|いいえ|はい|  
   
  また、次の条件を満たす必要があります。  
   
 -   Visual Studio リモート デバッガー サービスを実行するアカウントは、すべてのプロセスをデバッグできるように、リモート コンピューターの管理者アカウントであることが必要です。  
   
--   このアカウントには、ローカル セキュリティ ポリシー管理ツールを使用して、リモート コンピューターに対する `Log on as a service` 特権が与えられている必要もあります。  
+-   アカウントがありますを許可する、`Log on as a service`特権を使用しているリモート コンピューター上、**ローカル セキュリティ ポリシー**管理ツールです。  
   
 -   ローカル アカウントを使用してコンピューターにアクセスしている場合は、ローカル アカウントで Visual Studio リモート デバッガー サービスを実行する必要があります。  
   
-### このエラーを解決するには  
+### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  リモート コンピューターに Visual Studio リモート デバッガー サービスが正しく設定されていることを確認します。  詳細については、「[デバイスのリモート ツールのセットアップ](../Topic/Set%20Up%20the%20Remote%20Tools%20on%20the%20Device.md)」を参照してください。  
+1.  リモート コンピューターに Visual Studio リモート デバッガー サービスが正しく設定されていることを確認します。 詳細については、次を参照してください。[リモート デバッグ](../debugger/remote-debugging.md)です。  
   
 2.  上の表に示した、デバッガー ホスト コンピューターにアクセスできる適切なアカウントを使用して、リモート デバッガー サービスを実行します。  
   
-### "サービスとしてログオンする" 特権を追加するには  
+### <a name="to-add-log-on-as-a-service-privilege"></a>"サービスとしてログオンする" 特権を追加するには  
   
-1.  **\[スタート\]** メニューの **\[コントロール パネル\]** をクリックします。  
+1.  **開始** メニューの 選択**コントロール パネルの **です。  
   
-2.  必要に応じて、\[コントロール パネル\] の **\[クラシック表示に切り替える\]** をクリックします。  
+2.  コントロール パネルで、次のように選択します。**クラシック表示**必要に応じて、します。  
   
-3.  **\[管理ツール\]** をダブルクリックします。  
+3.  **［管理ツール］** をダブルクリックします。  
   
-4.  \[管理ツール\] ウィンドウで、**\[ローカル セキュリティ ポリシー\]** をダブルクリックします。  
+4.  管理ツール ウィンドウでダブルクリック**ローカル セキュリティ ポリシー**です。  
   
-5.  **\[ローカル セキュリティ設定\]** ウィンドウで、**\[ローカル ポリシー\]** フォルダーを展開します。  
+5.  **ローカル セキュリティ設定**ウィンドウで、展開、**ローカル ポリシー**フォルダーです。  
   
-6.  **\[ユーザー権利の割り当て\]** をクリックします。  
+6.  をクリックして**ユーザー権利の割り当て**です。  
   
-7.  **\[ポリシー\]** 列の **\[サービスとしてログオン\]** をダブルクリックすると、現在のローカル グループ ポリシーの割り当てが **\[サービスとしてログオン\]** ダイアログ ボックスに表示されます。  
+7.  **ポリシー**列をダブルクリックして**サービスとしてログオン**で現在のローカル グループ ポリシー割り当てを表示する、**サービスとしてログオン** ダイアログ ボックス。  
   
-8.  新しいユーザーを追加するには、**\[ユーザーまたはグループの追加\]** をクリックします。  
+8.  新しいユーザーを追加する] をクリックして、 **[ユーザーまたはグループ**ボタンをクリックします。  
   
-9. ユーザーの追加作業が終了したら、**\[OK\]** をクリックします。  
+9. ユーザーの追加が完了したら、をクリックして**OK**です。  
   
-### このエラーを回避するには  
+### <a name="to-work-around-this-error"></a>このエラーを回避するには  
   
 -   リモート デバッグ モニターをサービスとして実行する代わりに、アプリケーションとして実行します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)   
- [リモート デバッグ](../debugger/remote-debugging.md)
+ [Remote Debugging](../debugger/remote-debugging.md)

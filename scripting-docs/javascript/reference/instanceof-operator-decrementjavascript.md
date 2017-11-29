@@ -1,56 +1,57 @@
 ---
-title: "instanceof 演算子 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "instanceof_JavaScriptKeyword"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "instanceOf 演算子"
+title: "instanceof 演算子 (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: instanceof_JavaScriptKeyword
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: instanceOf operator
 ms.assetid: 92467bdc-56b5-42dc-adbd-a219776454d2
-caps.latest.revision: 17
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 672047cb066a812d16edc693638c3d6d8295798b
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# instanceof 演算子 (JavaScript)
+# <a name="instanceof-operator-javascript"></a>instanceof 演算子 (JavaScript)
 オブジェクトが特定のクラスのインスタンスかどうかを示すブール値を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 result = object instanceof class  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `result`  
- 必須。  任意の変数。  
+ 必須です。 任意の変数。  
   
  `object`  
- 必須。  任意のオブジェクト式を指定します。  
+ 必須です。 任意のオブジェクト式を指定します。  
   
  `class`  
- 必須。  任意の定義済みオブジェクト クラス。  
+ 必須です。 任意の定義済みオブジェクト クラス。  
   
-## 解説  
- `instanceof` 演算子は、`object` が `class` のインスタンスである場合に `true` を返します。  オブジェクトのプロトタイプ チェーンに `class` が存在する場合は、`true` を返します。  `object` が `class` のインスタンスではない場合、または `object` が `null` の場合は `false` を返します。  
+## <a name="remarks"></a>コメント  
+ `instanceof` 演算子は、`true` が `object` のインスタンスである場合に `class` を返します。 返します`true`場合`true`場合`class`がオブジェクトのプロトタイプ チェーンに存在します。 `false` が `object` のインスタンスではない場合、または `class` が `object` の場合は `null` を返します。  
   
-## 使用例  
+## <a name="example"></a>例  
  `instanceof` 演算子を使用する方法の例を次に示します。  
   
-```javascript  
+```JavaScript  
 function objTest(obj){  
     var i, t, s = "";  
     t = new Array();  
@@ -77,9 +78,9 @@ document.write(objTest(obj));
 // obj is not an instance of Array  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv5](../../javascript/reference/includes/jsv5-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [演算子の優先順位](../../javascript/operator-subtractprecedence-javascript.md)   
- [演算子の一覧 \(JavaScript\)](../../javascript/misc/operator-subtractsummary-javascript.md)
+ [演算子の一覧 (JavaScript)](../../javascript/misc/operator-subtractsummary-javascript.md)

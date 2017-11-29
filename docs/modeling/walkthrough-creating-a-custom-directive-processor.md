@@ -10,30 +10,15 @@ helpviewer_keywords:
 - text templates, custom directive processors
 - walkthroughs [text templates], directive processor
 ms.assetid: b8f35a36-14e1-4467-8f5f-e01402af14d5
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: fd49e497844c85482780c925ef94bc2c422cd80a
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 449a8d80eef26935251c265b526d8aacd471d147
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="walkthrough-creating-a-custom-directive-processor"></a>チュートリアル: カスタム ディレクティブ プロセッサの作成
 *ディレクティブ プロセッサ*コードを追加して職場、*生成された変換クラス*です。 呼び出す場合は、*ディレクティブ*から、*テキスト テンプレート*、テキスト テンプレートに記述するコードの残りの部分は、ディレクティブによって提供される機能に依存できます。  
@@ -983,4 +968,3 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
 3.  ブラウザーで出力を表示する**ソリューション エクスプ ローラー**、TestDP.htm を右クリックし、クリックして**ブラウザーで表示**です。  
   
      HTML 形式が適用される点を除き、出力は元のテキストと同じです。 各項目名は太字で表示されます。
-

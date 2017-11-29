@@ -1,30 +1,32 @@
 ---
-title: "チュートリアル: カスタム テキスト テンプレート ホストの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "テキスト テンプレート, カスタム ホストのチュートリアル"
-  - "チュートリアル [テキスト テンプレート], カスタム ホスト"
+title: "チュートリアル: カスタム テキスト テンプレート ホストの作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- walkthroughs [text templates], custom host
+- text templates, custom host walkthrough
 ms.assetid: d00bc366-65ed-4229-885a-196ef9625f05
-caps.latest.revision: 51
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 51
+caps.latest.revision: "51"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 40e8529dd439060172ead1ae2f68ac3052345eb4
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# チュートリアル: カスタム テキスト テンプレート ホストの作成
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-*テキスト テンプレート* *ホスト*は、*テキスト テンプレート変換エンジン*を実行できる環境を提供します。  ホストは、エンジンとファイル システムとの対話を管理します。  ファイルまたはアセンブリを必要とするエンジンまたは*ディレクティブ プロセッサ*は、ホストに対してリソースを要求できます。  ホストは、要求されたリソースをディレクトリとグローバル アセンブリ キャッシュ内で探すことができます。  詳細については、「[テキスト テンプレート変換プロセス](../modeling/the-text-template-transformation-process.md)」を参照してください。  
+# <a name="walkthrough-creating-a-custom-text-template-host"></a>チュートリアル: カスタム テキスト テンプレート ホストの作成
+A*テキスト テンプレート**ホスト*を有効にする環境を提供、*テキスト テンプレート変換エンジン*を実行します。 ホストは、エンジンとファイル システムとの対話を管理します。 エンジンまたは*ディレクティブ プロセッサ*ファイルが必要なまたはアセンブリは、ホストからリソースを要求することができます。 ホストは、要求されたリソースをディレクトリとグローバル アセンブリ キャッシュ内で探すことができます。 詳細については、次を参照してください。 [、テキスト テンプレート変換プロセス](../modeling/the-text-template-transformation-process.md)です。  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の外部から*テキスト テンプレート変換*機能を使用する場合、またはこの機能をカスタム ツールに統合する場合は、カスタム ホストを作成できます。  カスタム ホストを作成するには、<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> を継承するクラスを作成する必要があります。  個々のメソッドの説明については、「<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>」を参照してください。  
+ 使用するかどうか、カスタム ホストを書き込むことができます、*テキスト テンプレート変換*外から機能[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]またはカスタム ツールにその機能を統合する場合。 カスタム ホストを作成するには、<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> を継承するクラスを作成する必要があります。 個々のメソッドの説明については、「<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>」を参照してください。  
   
 > [!WARNING]
->  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の拡張機能またはパッケージを作成する場合は、独自のホストを作成するのではなく、テキスト テンプレート サービスを使用することを検討してください。  詳細については、「[VS 拡張機能内でのテキスト変換の呼び出し](../modeling/invoking-text-transformation-in-a-vs-extension.md)」を参照してください。  
+>  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の拡張機能またはパッケージを作成する場合は、独自のホストを作成するのではなく、テキスト テンプレート サービスを使用することを検討してください。 詳細については、次を参照してください。 [VS 拡張機能でテキスト変換を呼び出す](../modeling/invoking-text-transformation-in-a-vs-extension.md)です。  
   
  このチュートリアルでは、以下のタスクを行います。  
   
@@ -32,29 +34,29 @@ caps.handback.revision: 51
   
 -   カスタム ホストのテスト。  
   
-## 必須コンポーネント  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを完了するには、次の製品が必要です。  
   
 -   Visual Studio 2010 以降  
   
 -   Visual Studio SDK  
   
-## カスタム テキスト テンプレート ホストの作成  
- このチュートリアルでは、コマンド ラインから呼び出すことのできる実行可能なアプリケーションでカスタム ホストを作成します。  このアプリケーションは、テキスト テンプレート ファイルを引数として受け取り、テンプレートを読み取ります。さらに、エンジンを呼び出してテンプレートを変換し、発生したすべてのエラーをコマンド プロンプト ウィンドウに表示します。  
+## <a name="creating-a-custom-text-template-host"></a>カスタム テキスト テンプレート ホストの作成  
+ このチュートリアルでは、コマンド ラインから呼び出すことのできる実行可能なアプリケーションでカスタム ホストを作成します。 このアプリケーションは、テキスト テンプレート ファイルを引数として受け取り、テンプレートを読み取ります。さらに、エンジンを呼び出してテンプレートを変換し、発生したすべてのエラーをコマンド プロンプト ウィンドウに表示します。  
   
-#### カスタム ホストを作成するには  
+#### <a name="to-create-a-custom-host"></a>カスタム ホストを作成するには  
   
-1.  Visual Studio で、新しい Visual Basic コンソール アプリケーションまたは C\# コンソール アプリケーションを作成し、CustomHost という名前を付けます。  
+1.  Visual Studio で、新しい Visual Basic コンソール アプリケーションまたは C# コンソール アプリケーションを作成し、CustomHost という名前を付けます。  
   
 2.  次のアセンブリへの参照を追加します。  
   
-    -   **Microsoft.VisualStudio.TextTemplating.\*.0**  
+    -   **Microsoft.VisualStudio.TextTemplating です。\*.0**  
   
-    -   **Microsoft.VisualStudio.TextTemplating.Interfaces.10.0 以降のバージョン**  
+    -   **Microsoft.visualstudio.texttemplating.interfaces.10.0 以降のバージョン**  
   
 3.  Program.cs ファイルまたは Module1.vb ファイル内のコードを次のコードに置き換えます。  
   
-    ```c#  
+    ```csharp  
     using System;  
     using System.IO;  
     using System.CodeDom.Compiler;  
@@ -404,7 +406,7 @@ caps.handback.revision: 51
     }  
     ```  
   
-    ```vb#  
+    ```vb  
     Imports System  
     Imports System.IO  
     Imports System.CodeDom.Compiler  
@@ -711,18 +713,18 @@ caps.handback.revision: 51
     End Namespace  
     ```  
   
-4.  [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] の場合にのみ、**\[プロジェクト\]** メニューの **\[CustomHost のプロパティ\]** をクリックします。  **\[スタートアップ オブジェクト\]** ボックスの一覧の **\[CustomHost.Program\]** をクリックします。  
+4.  [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]のみ、開く、**プロジェクト** メニューをクリック**CustomHost のプロパティ**です。 **スタートアップ オブジェクト**一覧で、クリックして**[customhost.program]**です。  
   
-5.  **\[ファイル\]** メニューの **\[すべてを保存\]** をクリックします。  
+5.  **ファイル** メニューのをクリックして**すべて保存**です。  
   
-6.  **\[ビルド\]** メニューの **\[ソリューションのビルド\]** をクリックします。  
+6.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
   
-## カスタム ホストのテスト  
+## <a name="testing-the-custom-host"></a>カスタム ホストのテスト  
  カスタム ホストをテストするには、テキスト テンプレートを作成し、カスタム ホストを実行します。次に、テキスト テンプレートの名前をそのカスタム ホストに渡し、テンプレートが変換されることを確認します。  
   
-#### テキスト テンプレートを作成してカスタム ホストをテストするには  
+#### <a name="to-create-a-text-template-to-test-the-custom-host"></a>テキスト テンプレートを作成してカスタム ホストをテストするには  
   
-1.  テキスト ファイルを作成し、`TestTemplate.tt` という名前を付けます。  
+1.  テキスト ファイルを作成し、名前を付けます`TestTemplate.tt`です。  
   
      ファイルの作成には、メモ帳など、任意のテキスト エディターを使用できます。  
   
@@ -731,7 +733,7 @@ caps.handback.revision: 51
     > [!NOTE]
     >  テキスト テンプレートのプログラミング言語は、カスタム ホストのプログラミング言語と同じでなくてもかまいません。  
   
-    ```c#  
+    ```csharp  
     Text Template Host Test  
   
     <#@ template debug="true" #>  
@@ -749,7 +751,7 @@ caps.handback.revision: 51
     #>  
     ```  
   
-    ```vb#  
+    ```vb  
     Text Template Host Test  
   
     <#@ template debug="true" language="VB"#>  
@@ -771,7 +773,7 @@ caps.handback.revision: 51
   
 3.  ファイルを保存して閉じます。  
   
-#### カスタム ホストをテストするには  
+#### <a name="to-test-the-custom-host"></a>カスタム ホストをテストするには  
   
 1.  コマンド プロンプト ウィンドウを開きます。  
   
@@ -782,7 +784,7 @@ caps.handback.revision: 51
      `<YOUR PATH>CustomHost\bin\Debug\CustomHost.exe`  
   
     > [!NOTE]
-    >  アドレスを入力する代わりに、**Windows エクスプローラー**で CustomHost.exe ファイルを参照し、コマンド プロンプト ウィンドウにドラッグしてもかまいません。  
+    >  アドレスを入力するには、代わりに CustomHost.exe ファイルを参照することができますに**Windows エクスプ ローラー**し、ファイルをコマンド プロンプト ウィンドウにドラッグします。  
   
 3.  空白を入力します。  
   
@@ -793,11 +795,11 @@ caps.handback.revision: 51
      `C:\<YOUR PATH>TestTemplate.tt`  
   
     > [!NOTE]
-    >  アドレスを入力する代わりに、**Windows エクスプローラー**で TestTemplate.tt ファイルを参照し、コマンド プロンプト ウィンドウにドラッグしてもかまいません。  
+    >  アドレスを入力するには、代わりに TestTemplate.tt ファイルを参照することができますに**Windows エクスプ ローラー**し、ファイルをコマンド プロンプト ウィンドウにドラッグします。  
   
      カスタム ホスト アプリケーションが実行され、テキスト テンプレート変換プロセスが完了します。  
   
-5.  **Windows エクスプローラー**で、TestTemplate.tt ファイルが格納されているフォルダーに移動します。  
+5.  **Windows エクスプ ローラー**、TestTemplate.tt ファイルが含まれているフォルダーを参照します。  
   
      このフォルダーには、TestTemplate1.txt ファイルも含まれています。  
   
@@ -813,8 +815,8 @@ caps.handback.revision: 51
     This is a test  
     ```  
   
-## 次の手順  
- このチュートリアルでは、基本的な変換機能をサポートするテキスト テンプレート変換ホストを作成しました。  ホストの機能を拡張して、カスタム ディレクティブ プロセッサまたは生成されたディレクティブ プロセッサを呼び出すテキスト テンプレートをサポートすることもできます。  詳細については、「[チュートリアル: 生成済みディレクティブ プロセッサへのホストの接続](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)」を参照してください。  
+## <a name="next-steps"></a>次の手順  
+ このチュートリアルでは、基本的な変換機能をサポートするテキスト テンプレート変換ホストを作成しました。 ホストの機能を拡張して、カスタム ディレクティブ プロセッサまたは生成されたディレクティブ プロセッサを呼び出すテキスト テンプレートをサポートすることもできます。 詳細については、次を参照してください。[チュートリアル: 生成されたディレクティブ プロセッサにホストに接続する](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>

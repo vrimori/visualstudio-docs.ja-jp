@@ -1,45 +1,47 @@
 ---
-title: "方法: ドメイン固有言語デザイナーの拡張 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "方法: ドメイン固有言語デザイナーを拡張 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fa807f1b-2780-491e-925b-abbfd31b2bfa
-caps.latest.revision: 9
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 44b3ea3d3997ac781b02220316810f00826f2beb
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 方法: ドメイン固有言語デザイナーの拡張
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-DSL 定義を編集するために使用するデザイナー拡張機能を行うことができます。 可能なメニュー コマンドの追加のハンドラーは、ドラッグし、ジェスチャ、および特定の種類の値またはリレーションシップを変更するときにトリガーされるルールをダブルクリックを追加する拡張機能の種類です。 拡張機能は、として、Visual Studio Integration Extension \(VSIX\) をパッケージ化して、その他のユーザーに配布します。  
+# <a name="how-to-extend-the-domain-specific-language-designer"></a>方法: ドメイン固有言語デザイナーを拡張する
+拡張機能は、デザイナー DSL 定義を編集するために使用することができます。 作成できるメニュー コマンドの追加のハンドラーがドラッグし、ジェスチャ、および特定の種類の値またはリレーションシップを変更するときにトリガーされるルールをダブルクリックを追加する拡張機能の種類です。 拡張機能は、として、Visual Studio Integration Extension (VSIX) をパッケージ化し、他のユーザーに配布することができます。  
   
- サンプル コードとこの機能の詳細については、Visual Studio を参照してください。 [Visualization and Modeling SDK \(VMSDK\) Web サイト](http://go.microsoft.com/fwlink/?LinkID=186128)します。  
+ サンプル コードとこの機能の詳細については、Visual Studio を参照してください。[視覚化およびモデリング SDK (VMSDK) の Web サイト](http://go.microsoft.com/fwlink/?LinkID=186128)です。  
   
-## ソリューションのセットアップ  
- プロジェクトをエクスポートする、拡張機能のコードを含むプロジェクトと VSIX プロジェクトを設定します。 ソリューションには、同じ VSIX に採用されている他のプロジェクトを含めることができます。  
+## <a name="setting-up-the-solution"></a>ソリューションを設定します。  
+ プロジェクトをエクスポートする、拡張機能のコードを含むプロジェクトと VSIX プロジェクトを設定します。 ソリューションには、同じ VSIX に組み込まれている他のプロジェクトを含めることができます。  
   
-#### DSL デザイナー拡張機能ソリューションを作成するには  
+#### <a name="to-create-a-dsl-designer-extension-solution"></a>DSL デザイナー拡張機能ソリューションを作成するには  
   
-1.  クラス ライブラリ プロジェクト テンプレートを使用して新しいプロジェクトを作成します。**新しいプロジェクト** ダイアログ ボックスで、をクリックして **Visual c\#** し、中央のウィンドウでをクリックして **クラス ライブラリ**します。  
+1.  クラス ライブラリ プロジェクト テンプレートを使用して新しいプロジェクトを作成します。 **新しいプロジェクト**ダイアログ ボックスで、をクリックして**Visual c#**し、中央のウィンドウでをクリックして**クラス ライブラリ**です。  
   
      このプロジェクトには、拡張機能のコードが含まれます。  
   
-2.  VSIX プロジェクトのテンプレートを使用して新しいプロジェクトを作成します。**新しいプロジェクト** \] ダイアログ ボックスで、展開 **Visual c\#**, 、\] をクリックして **拡張**, 、中央のウィンドウ\] を選択し、\[ **VSIX プロジェクト**します。  
+2.  VSIX プロジェクト テンプレートを使用して新しいプロジェクトを作成します。 **新しいプロジェクト**] ダイアログ ボックスで、展開**Visual c#**をクリックして**機能拡張**、中央のウィンドウを選択し、[ **VSIX プロジェクト**です。  
   
-     選択 **ソリューションに追加**します。  
+     選択**ソリューションに追加**です。  
   
-     Source.extension.vsixmanifest は、VSIX マニフェスト エディターで開きます。  
+     VSIX マニフェスト エディターで Source.extension.vsixmanifest を開きます。  
   
-3.  コンテンツのフィールドの上をクリックして **コンテンツの追加**します。  
+3.  コンテンツのフィールドの上をクリックして**コンテンツの追加**です。  
   
-4.  **コンテンツの追加** ダイアログ ボックスで、セット **コンテンツの種類を選択して** に **MEF コンポーネント**, 、設定と **プロジェクト** クラス ライブラリ プロジェクトにします。  
+4.  **コンテンツの追加**ダイアログ ボックスで、セット**コンテンツの種類を選択**に**MEF コンポーネント**、設定と**プロジェクト**クラス ライブラリ プロジェクトにします。  
   
-5.  をクリックして **\[エディションの** ことを確認 **Visual Studio Enterprise** がオンになっています。  
+5.  をクリックして**エディションの**ことを確認し、 **Visual Studio Enterprise**がオンになっています。  
   
 6.  VSIX プロジェクトがソリューションのスタートアップ プロジェクトであることを確認してください。  
   
@@ -63,27 +65,27 @@ DSL 定義を編集するために使用するデザイナー拡張機能を行�
   
      System.Windows.Forms  
   
-## テストと展開  
- このトピックでは、拡張機能のいずれかをテストするには、ビルドして、ソリューションを実行します。[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用のインスタンスが開きます。 このインスタンスでは、DSL ソリューションを開きます。 DslDefinition ダイアグラムを編集します。 拡張機能の動作を確認できます。  
+## <a name="testing-and-deployment"></a>テストと展開  
+ このトピックでは、拡張機能のいずれかをテストするには、ビルドして、ソリューションを実行します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用のインスタンスが開きます。 このインスタンスでは、DSL ソリューションを開きます。 DslDefinition ダイアグラムを編集します。 拡張機能の動作を確認できます。  
   
- 拡張機能をメインに展開する [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 、他のコンピューターに次の手順に従います。  
+ メインに拡張機能を展開する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、他のコンピューターに次の手順に従います。  
   
-1.  Bin\\\*\\\*.vsix で VSIX プロジェクトで、VSIX のインストール ファイルを検索します。  
+1.  VSIX プロジェクトの箱で、VSIX のインストール ファイルを見つける\\*\\\*.vsix  
   
-2.  対象のコンピュータにこのファイルをコピーし、Windows エクスプ ローラー \(またはファイル エクスプ ローラー\) でそれをダブルクリックします。  
+2.  対象のコンピュータにこのファイルをコピーし、Windows エクスプ ローラー (またはファイル エクスプ ローラー) でそれをダブルクリックします。  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 、拡張機能がインストールされていることを確認する拡張機能マネージャーを開きます。  
+     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張機能がインストールされていることを確認する拡張機能マネージャーを開きます。  
   
  拡張機能をアンインストールするには、次の手順を実行します。  
   
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], の **ツール** \] メニューのをクリックして **拡張機能マネージャー**します。  
+1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]の**ツール** メニューのをクリックして**拡張機能マネージャー**です。  
   
 2.  拡張機能を選択し、それを削除します。  
   
-## ショートカット メニューのコマンドを追加します。  
- DSL デザイナー画面または DSL エクスプ ローラー\] ウィンドウに表示されるショートカット メニューのコマンドをするためには、次のようなクラスを作成します。  
+## <a name="adding-a-shortcut-menu-command"></a>ショートカット メニューのコマンドを追加します。  
+ DSL デザイナー画面または DSL のエクスプ ローラー ウィンドウに表示されるショートカット メニューのコマンドをするためには、次のようなクラスを作成します。  
   
- クラスを実装する必要があります `ICommandExtension` 属性を持つ必要があります `DslDefinitionModelCommandExtension`します。  
+ このクラスを実装する必要があります`ICommandExtension`属性を持つ必要がありますと`DslDefinitionModelCommandExtension`です。  
   
 ```  
 using System.Collections.Generic;  
@@ -145,7 +147,7 @@ namespace Fabrikam.SimpleDslDesignerExtension
 }  
 ```  
   
-## マウス ジェスチャの処理  
+## <a name="handling-mouse-gestures"></a>マウス ジェスチャの処理  
  コードは、メニュー コマンドのコードに似ています。  
   
 ```  
@@ -206,8 +208,8 @@ namespace Fabrikam.SimpleDslDesignerExtension
  }  
 ```  
   
-## 値の変更に応答してください。  
- このハンドラーには、正常に動作するドメイン モデルが必要があります。 単純なドメイン モデルを提供しています。  
+## <a name="responding-to-value-changes"></a>値の変更に応答してください。  
+ このハンドラーには、正常に動作するドメイン モデルが必要があります。 単純なドメイン モデルが提供されています。  
   
 ```  
 using System.Diagnostics;  
@@ -247,7 +249,7 @@ namespace Fabrikam.SimpleDslDesignerExtension
 } }  }  );  
 ```  
   
- 次のコードでは、単純なモデルを実装します。 プレース ホルダーを置き換える新しい GUID を作成します。  
+ 次のコードでは、単純なモデルを実装します。 プレース ホルダーを置換する新しい GUID を作成します。  
   
 ```  
 using System;  

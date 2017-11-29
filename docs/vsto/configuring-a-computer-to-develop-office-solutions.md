@@ -1,57 +1,58 @@
 ---
-title: "Office ソリューションを開発できるようにコンピューターを構成する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での Office 開発、インストール (ツールの)"
+title: "Office ソリューションを開発コンピューターを構成する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords: Office development in Visual Studio, installing tools
 ms.assetid: 0b481186-fd31-43bf-aa4a-591f94309555
-caps.latest.revision: 97
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 96
+caps.latest.revision: "97"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 2d3e0b354375d6116a1bcc0cc2b0d69ecc2f16b5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Office ソリューションを開発できるようにコンピューターを構成する
+# <a name="configuring-a-computer-to-develop-office-solutions"></a>Office ソリューションを開発できるようにコンピューターを構成する
   Microsoft Office の VSTO アドインおよびカスタマイズを作成するには、Visual Studio、.NET Framework、Microsoft Office のサポートされているバージョンをインストールします。  
   
 |ソフトウェア|サポートされているバージョン|  
-|------------|--------------------|  
-|Visual Studio|-   [!INCLUDE[vsPro](../sharepoint/includes/vspro-md.md)]<br />-   [!INCLUDE[vsPreShort](../vsto/includes/vspreshort-md.md)]<br />-   [!INCLUDE[vsUltShort](../vsto/includes/vsultshort-md.md)] **Important:**  セットアップのときに、\[Microsoft Office Developer Tools\] チェック ボックスをオンにしておく必要があります。|  
-|.NET Framework|-   .NET Framework 4 以降|  
-|Microsoft Office|<ul><li>Office Professional Plus for Office 365 を含む Office のいずれかのスイート エディション。</li><li>次のいずれかのスタンドアロン アプリケーション:<br /><br /> <ul><li>Excel</li><li>InfoPath \(Office 2013 および Office 2010 のみ\)</li><li>Outlook</li><li>PowerPoint</li><li>プロジェクト</li><li>Visio</li><li>Word</li></ul></li></ul><br /> Visual Basic for Applications \(VBA\) は Office の一部としてインストールされている必要があります。 **Important:**  Office 2010 アプリケーションのクイック実行バージョンはサポートされていません。|  
+|--------------|------------------------|  
+|Visual Studio|-   [!INCLUDE[vsPro](../sharepoint/includes/vspro-md.md)]<br />-   [!INCLUDE[vsPreShort](../vsto/includes/vspreshort-md.md)]<br />-   [!INCLUDE[vsUltShort](../vsto/includes/vsultshort-md.md)]**重要:**セットアップ中に、Microsoft Office Developer Tools チェック ボックスを選択する必要があります。|  
+|.NET Framework|-.NET Framework 4 以降。|  
+|Microsoft Office|<ul><li>Office Professional Plus for Office 365 を含む Office のいずれかのスイート エディション。</li><li>次のいずれかのスタンドアロン アプリケーション:<br /><br /> <ul><li>Excel</li><li>InfoPath (Office 2013 および Office 2010 のみ)</li><li>Outlook</li><li>PowerPoint</li><li>プロジェクト</li><li>Visio</li><li>Word</li></ul></li></ul><br /> Visual Basic for Applications (VBA) は Office の一部としてインストールされている必要があります。 **重要:** Office 2010 アプリケーションのバージョンを実行するためのクリックがサポートされていません。|  
   
- インストール手順について詳しくは、「[方法: Office ソリューションを開発できるようにコンピューターを構成する](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)」をご覧ください。  
+ 詳細なインストール手順については、次を参照してください。[する方法: Office ソリューションの開発にコンピューターを構成する](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)です。  
   
-## プロジェクト テンプレートが表示されない、または Visual Studio でプロジェクト テンプレートが機能しない場合  
- Visual Studio、.NET Framework、および Microsoft Office のサポートされているバージョンをインストールしても、Visual Studio の **\[新しいプロジェクト\]** ダイアログ ボックスに Office のプロジェクト テンプレートが表示されない、またはプロジェクト テンプレートの使用を試みるとエラーが表示される場合は、以下のことを確認してください。  
+## <a name="if-project-templates-dont-appear-or-they-dont-work-in-visual-studio"></a>プロジェクト テンプレートが表示されない、または Visual Studio では動作しません  
+ Visual Studio、.NET Framework および Microsoft Office のサポートされているバージョンをインストールするか、Office プロジェクト テンプレートが Visual Studio で表示されない場合**新しいプロジェクト**ダイアログ ボックスで、または、1 つを使用しようとすると、エラーが発生次を確認します。  
   
 -   使用するコンピューターに Microsoft Office Developer Tools がインストールされていることを確認します。  
   
-     Office Developer Tools は Visual Studio のオプション コンポーネントですが、通常は Visual Studio とともに自動的にインストールされます。 インストールする機能を指定して Visual Studio のインストールをカスタマイズする場合は、各種ツールをインストールするために、セットアップ時に必ず **\[Microsoft Office Developer Tools\]** を選択してください。  
+     Office Developer Tools は Visual Studio のオプション コンポーネントですが、通常は Visual Studio とともに自動的にインストールされます。 インストールする機能を指定して Visual Studio のインストールをカスタマイズする場合は、各種ツールをインストールするために、セットアップ時に必ず **[Microsoft Office Developer Tools]** を選択してください。  
   
-     これらのツールがインストールされていることを確認するには、Visual Studio のセットアップ プログラムを開始して **\[変更\]** ボタンをクリックします。**\[Microsoft Office Developer Tools\]** チェック ボックスをオンにして **\[更新\]** ボタンをクリックします。  
+     これらのツールがインストールされていることを確認するには、Visual Studio のセットアップ プログラムを開始して **[変更]** ボタンをクリックします。 **[Microsoft Office Developer Tools]** チェック ボックスをオンにして **[更新]** ボタンをクリックします。  
   
--   クイック実行で提供された、Office のバージョンを実行していないことを確認します。 「[方法: コンピューター上の Outlook がクイック実行アプリケーションかどうかを検証する](http://msdn.microsoft.com/library/office/ff864733(v=office.14).aspx)」をご覧ください。  
+-   クイック実行で提供された、Office のバージョンを実行していないことを確認します。 「 [方法: コンピューター上の Outlook がクイック実行アプリケーションかどうかを検証する](http://msdn.microsoft.com/library/office/ff864733(v=office.14).aspx)」をご覧ください。  
   
--   Microsoft Office の 1 つのバージョンのみを実行していることを確認します。  
+-   Microsoft Office のバージョンを 1 つだけを実行していることを確認します。  
   
- 問題が解決しない場合は、「[Office ソリューションのエラーについての追加サポート](../vsto/additional-support-for-errors-in-office-solutions.md)」をご覧ください。  
+ 問題が解決しない場合は、「 [Additional Support for Errors in Office Solutions](../vsto/additional-support-for-errors-in-office-solutions.md)」をご覧ください。  
   
-## 参照  
- [はじめに &#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
- [方法: Office ソリューションを開発できるようにコンピューターを構成する](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)   
- [方法: Visual Studio Tools for Office の再頒布可能なランタイムをインストールする](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)   
- [方法 : Office のプライマリ相互運用機能アセンブリをインストールする](../vsto/how-to-install-office-primary-interop-assemblies.md)   
+## <a name="see-also"></a>関連項目  
+ [作業の開始 (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/getting-started-office-development-in-visual-studio.md)   
+ [方法: Office ソリューションを開発コンピューターを構成します。](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)   
+ [方法: for Office Runtime の再頒布可能パッケージ、Visual Studio Tools をインストール](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)   
+ [方法: Office プライマリ相互運用機能アセンブリをインストール](../vsto/how-to-install-office-primary-interop-assemblies.md)   
  [Office アプリケーションおよびプロジェクト タイプ別の使用可能な機能](../vsto/features-available-by-office-application-and-project-type.md)  
   
   
