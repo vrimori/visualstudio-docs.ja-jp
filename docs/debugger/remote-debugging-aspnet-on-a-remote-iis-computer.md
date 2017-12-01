@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: abbbb1adf829361c5916f91ade5cb1a549444b72
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.openlocfilehash: b73dc5b153813811a0d2b839e69200a7e5f5a1e9
+ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio-2017"></a>Visual Studio 2017 の IIS のリモート コンピューターでリモート デバッグの ASP.NET Core
 IIS に配置されている ASP.NET アプリケーションをデバッグするには、インストールし、アプリが展開されているコンピューターでリモート ツールを実行して Visual Studio から、実行中のアプリにアタッチし、します。
@@ -26,16 +26,16 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 このガイドでは、設定、Visual Studio 2017 ASP.NET Core を構成して、IIS に展開、および Visual Studio からリモート デバッガーをアタッチする方法について説明します。 ASP.NET 4.5.2 リモート デバッグを参照してください。[リモート IIS コンピューター上の ASP.NET のデバッグ](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)です。 配置して、Azure を使用して IIS 上でデバッグすることもできます。 詳細については、次を参照してください。 [Azure 上でリモート デバッグ](../debugger/remote-debugging-azure.md)です。
 
 これらの手順は、これらのサーバー構成でテストされています。
-* Windows Server 2012 R2 と IIS 8.5
+* Windows Server 2012 R2 および IIS 8
 * Windows Server 2016 および IIS 10
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 プロキシを介して接続されている 2 台のコンピューター間でのデバッグはサポートされていません。 国の間での待機時間の長いまたはダイヤルアップ、インターネットなどの低帯域幅接続またはインターネット経由でのデバッグはお勧めしませんが失敗することも非常に遅くします。 要件の一覧については、次を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)です。
 
 ## <a name="create-the-aspnet-core-application-on-the-visual-studio-2017-computer"></a>Visual Studio 2017 コンピューター上の ASP.NET Core アプリケーションを作成します。 
 
-1. 新しい ASP.NET Core アプリケーションを作成します。 (**ファイル > 新規 > プロジェクト**選択してから、 **Visual c# > Web > ASP.NET Core Web アプリケーション (.NET Core)**です。
+1. 新しい ASP.NET Core アプリケーションを作成します。 (**ファイル > 新規 > プロジェクト**選択してから、 **Visual c# > Web > ASP.NET Core Web アプリケーション (.NET Core)**)。
 
     **ASP.NET Core**テンプレート セクションで、 **Web アプリケーション**です。
 
@@ -58,13 +58,13 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 - download.microsoft.com
 - visualstudio.com
 
-Internet Explorer を使用している場合に移動して、信頼済みサイトを追加できます**インターネット オプション > セキュリティ > 信頼済みサイト > サイト**です。 これらの手順は、その他のブラウザーによって異なります。
+Internet Explorer を使用している場合に移動して、信頼済みサイトを追加できます**インターネット オプション > セキュリティ > 信頼済みサイト > サイト**です。 これらの手順は、その他のブラウザーによって異なります。 (My.visualstudio.com からリモート デバッガーの古いバージョンをダウンロードする場合は、いくつか追加の信頼済みサイトが必要にサインインします。)
 
 ソフトウェアをダウンロードするときに、さまざまな web サイトのスクリプトおよびリソースを読み込むための権限を許可する要求を取得することがあります。 これらの追加リソースは、ほとんどの場合、ソフトウェアをインストールする必要はありません。
 
 ## <a name="install-aspnet-core-on-windows-server"></a>Windows Server での ASP.NET Core をインストールします。
 
-1. インストール、 [.NET コア Windows Server をホストしている](https://go.microsoft.com/fwlink/?linkid=844461)ホスト システムにバンドルできます。 バンドルは、.NET Core ランタイム、.NET Core ライブラリ、および ASP.NET Core モジュールをインストールします。
+1. インストール、 [.NET コア Windows Server をホストしている](https://aka.ms/dotnetcore-2-windowshosting)ホスト システムにバンドルできます。 バンドルは、.NET Core ランタイム、.NET Core ライブラリ、および ASP.NET Core モジュールをインストールします。 複数の詳細な手順については、次を参照してください。[を IIS に発行](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)です。
 
     > [!NOTE]
     > システム持っていない場合、インターネット接続を入手してインストール、  *[Microsoft Visual C 2015 Redistributable](https://www.microsoft.com/download/details.aspx?id=53840)*  .NET コア Windows Server をホストしているバンドルをインストールする前にします。
@@ -139,7 +139,6 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
 
 5. **[すべてのユーザーからのプロセスを表示する]**をオンにします。
 6. すばやく検索するプロセス名の最初の文字を入力**dotnet.exe** (用 ASP.NET Core)。
-    >注: ASP.NET Core アプリケーションでは、前のプロセス名 dnx.exe がでした。
 
     ![RemoteDBG_AttachToProcess](../debugger/media/remotedbg_attachtoprocess_aspnetcore.png "RemoteDBG_AttachToProcess")
 
@@ -148,6 +147,7 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
 8. リモート コンピューターの Web サイトを開きます。 ブラウザーに移動**http://\<リモート コンピューター名 >**です。
     
     ASP.NET の Web ページが表示されるはずです。
+
 9. ASP.NET アプリケーションの実行では、リンクをクリックして、**に関する**ページ。
 
     Visual Studio で、ブレークポイントにヒットするはずです。
@@ -157,7 +157,7 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
 ほとんどの設定では、ASP.NET とリモート デバッガーのインストールに必要なポートが開かれます。 ただし、ポートが開いていることを確認する必要があります。
 
 > [!NOTE]
-> Azure vm を使用して、ポートを開く必要があります、[ネットワーク セキュリティ グループ](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-hero-role#open-port-80)です。 
+> Azure vm を使用して、ポートを開く必要があります、[ネットワーク セキュリティ グループ](/azure/virtual-machines/virtual-machines-windows-hero-role#open-port-80)です。 
 
 必要なポート:
 

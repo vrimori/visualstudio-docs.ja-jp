@@ -12,11 +12,11 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fc7ad92e708666baf1ab0429c041ca9b7d2e0f95
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.openlocfilehash: 2e8da202cf8ae5680bede1ec4b2f2c8984624e4e
+ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="view-snapshots-using-intellitrace-step-back"></a>IntelliTrace 手順バックを利用したスナップショットの表示
 IntelliTrace ステップ ライトバックは、ステップのイベント、アプリケーションのすべてのブレークポイントとデバッガーのスナップショットを取得する自動的にします。 記録されたスナップショットを使用すると、前のブレークポイントまたは手順に戻るし、過去になっていたようにアプリケーションの状態を表示できます。 IntelliTrace 手順戻ることができますの以前のアプリケーション状態を確認しますが、デバッグを再起動するか、必要なアプリケーションの状態を再作成したくないです。
@@ -38,7 +38,7 @@ IntelliTrace は、手順とブレークポイントのイベント、各デバ�
 
 ## <a name="navigate-and-view-snapshots"></a>移動し、スナップショットを表示します。
 
-使用してイベント間を移動することができます、**手順旧バージョンと**と**つ進む**デバッグ ツールバーのボタンです。 これらのボタンに表示されるイベントの移動、**イベント** タブで、**診断ツール ウィンドウ**します。 ステップ実行前後イベントに自動的には、選択したイベントでデバッグ履歴が有効にします。
+使用してイベント間を移動することができます、 **(Alt + [) 下位手順**と**つ進む (Alt +])**デバッグ ツールバーのボタンです。 これらのボタンに表示されるイベントの移動、**イベント** タブで、**診断ツール ウィンドウ**します。 ステップ実行前後イベントに自動的には、選択したイベントでデバッグ履歴が有効にします。
 
 ![戻るボタンと進むボタン](../debugger/media/intellitrace-step-back-icons-description.png "旧バージョンとステップとつ進むボタン")
 
@@ -60,7 +60,7 @@ IntelliTrace は、手順とブレークポイントのイベント、各デバ�
 
 ![IntelliTrace ステップ ライトバックの概要](../debugger/media/intellitrace-step-back-overview.png "の概要の IntelliTrace の手順に戻る")
 
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
  Visual Studio での変数を検査する方法については、次を参照してください[デバッガーの機能のツアー。](../debugger/debugger-feature-tour.md)  
  デバッグ履歴の詳細については、次を参照してください。[デバッグ履歴](../debugger/historical-debugging.md)です。  
 

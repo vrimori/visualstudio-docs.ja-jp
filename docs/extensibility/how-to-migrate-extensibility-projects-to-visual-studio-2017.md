@@ -12,11 +12,11 @@ caps.latest.revision: "1"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 89591535b232317abf395c237fdc267c847ca699
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: bb00d2c338ac1ef9e2be6d77d68ebfe2a246d807
+ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>方法: Visual Studio 2017 を機能拡張プロジェクトの移行
 
@@ -102,11 +102,6 @@ Visual Studio のユーザーのインストールは、拡張機能を実行す
   ![roslyn 前提条件を追加します。](media/add-roslyn-prerequisite.png)
 
 * Press **OK**.
-
-## <a name="if-migrating-from-preview-4-or-preview-5"></a>Preview 4 または Preview 5 から移行する場合
-
-* 置き換える`SetupDependencies`で`Prerequisites`の要素を移動して、`Installer`要素。 `Prerequisites`配置を今すぐ直接内側、`PackageManifest`要素。
-* [オプション]削除、`GenerateVsixV3`要素。 (これがプレビュー 5 にのみ必要です。)`GenerateVsixV3` Preview 5 を超えるバージョンでの要素は無視されます。
 
 ## <a name="update-debug-settings-for-project"></a>プロジェクトのデバッグの設定を更新します。
 
@@ -197,3 +192,15 @@ Excel シートに 4 つの列がある:**コンポーネント名**、 **Compon
 
 * デバッガー拡張機能をした VSDebugEng.dll および VSDebug.dll への参照をプロジェクトにいる場合はクリックして [フィルター] ボタン、**バイナリ/ファイル名**ヘッダー。  "VSDebugEng.dll"を検索し、[ok] を選択します。  次に、フィルターのボタンをクリックして、**バイナリ/ファイル名**ヘッダーをもう一度して"VSDebug.dll"を検索します。  「Add 現在の選択項目をフィルター処理する」のチェック ボックスを選択し、[ok] を選択します。  なります、**コンポーネント名**ほとんどは、コンポーネントを検索する拡張機能の種類に関連します。 この例では、ジャスト イン タイムを選択したがデバッガーし、vsixmanifest に追加します。
 * プロジェクトがデバッガー要素を処理する場合は、どのようなコンポーネントには、その名前でデバッガーが含まれているフィルターの検索ボックスに「デバッガー」を検索できます。
+
+## <a name="specifying-a-visual-studio-2017-release"></a>Visual Studio 2017 リリースを指定します。
+
+拡張機能は、Visual Studio 2017 の特定のバージョンを必要とする場合、15.3 でリリースされた機能に依存しているなどの VSIX にビルド番号を指定する必要があります**は InstallationTarget**です。 たとえば、15.3 のリリースでは、'15.0.26730.3' のビルド番号があります。 リリース ビルドの番号へのマッピングを確認できます[ここ](../install/visual-studio-build-numbers-and-release-dates.md)です。 リリース番号 '15.3' を使用してについては、正しく機能しません。
+
+拡張機能 15.3 や以降では、宣言する場合、**は InstallationTarget バージョン**として [15.0.26730.3, 16.0)。
+
+```xml
+<Installation>
+  <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0.26730.3, 16.0)" />
+</Installation>
+```

@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a279b1eddf80a78ad20d137c288e6ee49c1993b9
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.openlocfilehash: ed7ae018725e4ba2da5239609d90276d007827aa
+ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>IIS: リモート コンピューター上の ASP.NET のリモート デバッグ
 IIS に配置されている ASP.NET アプリケーションをデバッグするには、インストールし、アプリが展開されているコンピューターでリモート ツールを実行して Visual Studio から、実行中のアプリにアタッチし、します。
@@ -26,9 +26,9 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 このガイドでは、設定、Visual Studio 2017 ASP.NET MVC 4.5.2 アプリケーションを構成して、IIS に展開、および Visual Studio からリモート デバッガーをアタッチする方法について説明します。 ASP.NET Core リモート デバッグを参照してください。 [IIS コンピューター上のリモート デバッグ ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)です。 配置して、Azure を使用して IIS 上でデバッグすることもできます。 詳細については、次を参照してください。 [Azure 上でリモート デバッグ](../debugger/remote-debugging-azure.md)です。
 
 これらの手順は、これらのサーバー構成でテストされています。
-* Windows Server 2012 R2、および IIS 8.5 (Windows Server 2008 R2 のサーバーの手順が異なる)
+* Windows Server 2012 R2 と IIS 8 (Windows Server 2008 R2 のサーバーの手順が異なる)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 リモート デバッガーは、Windows Server の Windows Server 2008 Service Pack 2 以降ではサポートします。 要件の一覧については、次を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)です。
 
@@ -54,7 +54,7 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 - download.microsoft.com
 - visualstudio.com
 
-Internet Explorer を使用している場合に移動して、信頼済みサイトを追加できます**インターネット オプション > セキュリティ > 信頼済みサイト > サイト**です。 これらの手順は、その他のブラウザーによって異なります。
+Internet Explorer を使用している場合に移動して、信頼済みサイトを追加できます**インターネット オプション > セキュリティ > 信頼済みサイト > サイト**です。 これらの手順は、その他のブラウザーによって異なります。 (My.visualstudio.com からリモート デバッガーの古いバージョンをダウンロードする場合は、いくつか追加の信頼済みサイトが必要にサインインします。)
 
 ソフトウェアをダウンロードするときに、さまざまな web サイトのスクリプトおよびリソースを読み込むための権限を許可する要求を取得することがあります。 これらの追加リソースは、ほとんどの場合、ソフトウェアをインストールする必要はありません。
 

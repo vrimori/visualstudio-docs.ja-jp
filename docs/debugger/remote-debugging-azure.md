@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7b4ad0cdadcb3d56af55af629b853e660dc9d86f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: c0527d33e47ce42449f2ae2bb75ee3e342b04c2b
+ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="remote-debug-aspnet-core-on-iis-and-azure-in-visual-studio-2017"></a>IIS および Visual Studio 2017 で Azure でのリモート デバッグ ASP.NET Core
 IIS を使用して Windows Server コンピューターに ASP.NET Web アプリケーションを配置して、リモート デバッグ用に設定できます。 このガイドでは、設定、Visual Studio 2017 ASP.NET Core アプリケーションを構成して、Azure を使用して IIS に展開、および Visual Studio からリモート デバッガーをアタッチする方法について説明します。
@@ -41,13 +41,13 @@ Azure VM での Azure に Visual Studio からアプリを配置する必要が�
 > [!NOTE]
 > Azure Service Fabric の ASP.NET Core をデバッグするを参照してください。[リモート Service Fabric アプリケーションのデバッグ](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 プロキシを介して接続されている 2 台のコンピューター間でのデバッグはサポートされていません。 国の間での待機時間の長いまたはダイヤルアップ、インターネットなどの低帯域幅接続またはインターネット経由でのデバッグはお勧めしませんが失敗することも非常に遅くします。 要件の一覧については、次を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)です。
 
 ## <a name="create-the-aspnet-core-application-on-the-visual-studio-2017-computer"></a>Visual Studio 2017 コンピューター上の ASP.NET Core アプリケーションを作成します。 
 
-1. 新しい ASP.NET Core アプリケーションを作成します。 (選択**ファイル > 新規 > プロジェクト**選択してから、 **Visual c# > Web > ASP.NET Core Web アプリケーション (.NET Core)**)
+1. 新しい ASP.NET Core アプリケーションを作成します。 (選択**ファイル > 新規 > プロジェクト**選択してから、 **Visual c# > Web > ASP.NET Core Web アプリケーション (.NET Core)**)。
 
     **ASP.NET Core**テンプレート セクションで、 **Web アプリケーション**です。
 
@@ -59,7 +59,7 @@ Azure VM での Azure に Visual Studio からアプリを配置する必要が�
 
 ## <a name="remote-debug-aspnet-core-on-an-azure-app-service"></a>Azure App Service の ASP.NET Core のリモート デバッグ
 
-Visual Studio から簡単に発行し、完全にプロビジョニングされている IIS のインスタンスにアプリのデバッグできます。 ただし、IIS の構成が事前設定し、カスタマイズすることはできません。 詳細については、次を参照してください。 [Visual Studio を使用して Azure に ASP.NET Core web アプリを配置](https://docs.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)です。 (IIS をカスタマイズする機能を実行する場合に、デバッグを実行、 [Azure VM](#BKMK_azure_vm))。 
+Visual Studio から簡単に発行し、完全にプロビジョニングされている IIS のインスタンスにアプリのデバッグできます。 ただし、IIS の構成が事前設定し、カスタマイズすることはできません。 詳細については、次を参照してください。 [Visual Studio を使用して Azure に ASP.NET Core web アプリを配置](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)です。 (IIS をカスタマイズする機能を実行する場合に、デバッグを実行、 [Azure VM](#BKMK_azure_vm))。 
 
 #### <a name="to-deploy-the-app-and-remote-debug"></a>アプリとのリモート デバッグを展開するには
 
@@ -67,7 +67,7 @@ Visual Studio から簡単に発行し、完全にプロビジョニングされ
 
 2. 選択**Microsoft Azure App Service**から、**発行**ダイアログ ボックスで、**新規作成**、発行する指示に従います。
 
-    詳細については、次を参照してください。 [Visual Studio を使用して Azure に ASP.NET Core web アプリを配置](https://docs.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)です。
+    詳細については、次を参照してください。 [Visual Studio を使用して Azure に ASP.NET Core web アプリを配置](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)です。
 
 3. **サーバー エクスプ ローラー**App Service のインスタンスを右クリックし、選択、**デバッガーのアタッチ**です。
 
@@ -81,7 +81,7 @@ Visual Studio から簡単に発行し、完全にプロビジョニングされ
 
 Windows Server 用 Azure VM を作成しをインストールし、IIS およびその他の必要なソフトウェア コンポーネントを構成します。 これは、App Service を Azure に展開するよりも時間がかかるし、このチュートリアルでは、残りの手順に従うことが必要です。
 
-最初で説明されているすべての手順に従います[実行 IIS をインストールして](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-hero-role)です。
+最初で説明されているすべての手順に従います[実行 IIS をインストールして](/azure/virtual-machines/virtual-machines-windows-hero-role)です。
 
 ネットワーク セキュリティ グループでポート 80 を開くときにもリモート デバッガーのポート 4022 を開きます。 このように、後で開くにはできません。
 
@@ -94,13 +94,13 @@ Windows Server 用 Azure VM を作成しをインストールし、IIS および
 - download.microsoft.com
 - visualstudio.com
 
-Internet Explorer を使用している場合に移動して、信頼済みサイトを追加できます**インターネット オプション > セキュリティ > 信頼済みサイト > サイト**です。 これらの手順は、その他のブラウザーによって異なります。
+Internet Explorer を使用している場合に移動して、信頼済みサイトを追加できます**インターネット オプション > セキュリティ > 信頼済みサイト > サイト**です。 これらの手順は、その他のブラウザーによって異なります。 (My.visualstudio.com からリモート デバッガーの古いバージョンをダウンロードする場合は、いくつか追加の信頼済みサイトが必要にサインインします。)
 
 ソフトウェアをダウンロードするときに、さまざまな web サイトのスクリプトおよびリソースを読み込むための権限を許可する要求を取得することがあります。 これらの追加リソースは、ほとんどの場合、ソフトウェアをインストールする必要はありません。
 
 ### <a name="install-aspnet-core-on-windows-server"></a>Windows Server での ASP.NET Core をインストールします。
 
-1. インストール、 [.NET コア Windows Server をホストしている](https://go.microsoft.com/fwlink/?linkid=844461)ホスト システムにバンドルできます。 .NET Core ランタイム、.NET Core ライブラリ、および ASP.NET Core モジュール バンドルがインストールされます。
+1. インストール、 [.NET コア Windows Server をホストしている](https://aka.ms/dotnetcore-2-windowshosting)ホスト システムにバンドルできます。 .NET Core ランタイム、.NET Core ライブラリ、および ASP.NET Core モジュール バンドルがインストールされます。 複数の詳細な手順については、次を参照してください。[を IIS に発行](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)です。
 
     > [!NOTE]
     > システム持っていない場合、インターネット接続を入手してインストール、  *[Microsoft Visual C 2015 Redistributable](https://www.microsoft.com/download/details.aspx?id=53840)*  .NET コア Windows Server をホストしているバンドルをインストールする前にします。
@@ -133,7 +133,7 @@ Web Deploy の Web Platform Installer を使用してをインストールした
 
 2. **ソリューション エクスプローラー**で、プロジェクト ノードを右クリックして **[公開]**を選択します。
 
-3. **発行先の選択****[ Microsoft Azure 仮想マシン]** をクリック**発行**です。
+3. **発行先の選択****[Microsoft Azure 仮想マシン]** をクリック**発行**です。
 
     ![RemoteDBG_Publish_IISl](../debugger/media/remotedbg_azure_vm_profile.png "RemoteDBG_Publish_IIS")
 
@@ -209,7 +209,7 @@ Web Deploy を使用していない場合は、発行およびファイル シ�
 
 ほとんどの設定では、ASP.NET とリモート デバッガーのインストールに必要なポートが開かれます。 ただし、展開に関する問題のトラブルシューティングを行うし、アプリがファイアウォールの背後にホストされているは、正しいポートが開いていることを確認する必要があります。
 
-Azure vm を使用して、ポートを開く必要があります、[ネットワーク セキュリティ グループ](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-hero-role#open-port-80)です。 
+Azure vm を使用して、ポートを開く必要があります、[ネットワーク セキュリティ グループ](/azure/virtual-machines/virtual-machines-windows-hero-role#open-port-80)です。 
 
 必要なポート:
 

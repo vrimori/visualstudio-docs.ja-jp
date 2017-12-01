@@ -17,24 +17,39 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d3f3b54e19d8418f35a733b73ea0616b53bd42ce
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 9f6f1e4739922a2d73999b36c0dc66e6069a6d6b
+ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="how-to-add-a-dependency-to-a-vsix-package"></a>方法: VSIX パッケージへの依存関係の追加
-ターゲット コンピューターに含まれていないすべての依存関係をインストールする VSIX パッケージの配置を設定することができます。 これを実現するには、source.extension.vsixmanifest ファイルを VSIX の依存関係が含まれます。  
-  
-#### <a name="to-add-a-dependency"></a>依存関係を追加するには  
-  
-1.  Source.extension.vsixmanifest ファイルを開き、**デザイン**ビュー。 移動して、**の依存関係** タブでをクリックし、**新規**です。  
-  
-2.  インストールした拡張機能を追加する: で、**新しい依存関係の追加**ダイアログ ボックスで、**拡張機能がインストールされている**し、**名前**一覧に拡張機能を選択します。  
-  
-3.  インストールされていない別の VSIX に追加する:: で、**新しい依存関係の追加**ダイアログ ボックスで、**ファイル システム上のファイル**しを使用して、**参照**VSIX を選択するボタンをクリックします。  
-  
-## <a name="see-also"></a>関連項目  
- [VSIX 拡張機能スキーマ 1.0 リファレンス](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)   
- [VSIX パッケージの構造](../extensibility/anatomy-of-a-vsix-package.md)   
- [Windows インストーラーの配置に関する拡張機能を準備する](../extensibility/preparing-extensions-for-windows-installer-deployment.md)
+
+ターゲット コンピューターに含まれていないすべての依存関係をインストールする VSIX パッケージの配置を設定することができます。 これを実現するには、source.extension.vsixmanifest ファイルを VSIX の依存関係が含まれます。
+
+## <a name="to-add-a-dependency"></a>依存関係を追加するには
+
+1. Source.extension.vsixmanifest ファイルを開き、**デザイン**ビュー。 移動して、**の依存関係** タブでをクリックし、**新規**です。
+
+2. インストールした拡張機能を追加する: で、**新しい依存関係の追加**ダイアログ ボックスで、**拡張機能がインストールされている**し、**名前**一覧に拡張機能を選択します。
+
+3. インストールされていない別の VSIX に追加する:: で、**新しい依存関係の追加**ダイアログ ボックスで、**ファイル システム上のファイル**しを使用して、**参照**VSIX を選択するボタンをクリックします。
+
+## <a name="require-a-specific-visual-studio-release"></a>特定の Visual Studio リリースが必要
+
+拡張機能は、Visual Studio 2017 の特定のバージョンを必要とする場合、15.3 でリリースされた機能に依存しているなどの VSIX にビルド番号を指定することができます**は InstallationTarget**です。 たとえば、15.3 のリリースでは、'15.0.26730.3' のビルド番号があります。 リリース ビルドの番号へのマッピングを確認できます[ここ](../install/visual-studio-build-numbers-and-release-dates.md)です。 リリース番号 '15.3' を使用して、正しく動作しないことに注意してください。
+
+拡張機能 15.3 や以降では、宣言する場合、**は InstallationTarget バージョン**として [15.0.26730.3, 16.0)。
+
+```xml
+<Installation>
+  <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0.26730.3, 16.0)" />
+</Installation>
+```
+
+VSIXInstaller では、Visual Studio の以前のバージョンを検出し、以降の更新プログラムが必要であるユーザーに通知します。
+
+
+## <a name="see-also"></a>関連項目
+
+ [VSIX 拡張機能スキーマ 1.0 リファレンス](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b) [VSIX パッケージの構造は](../extensibility/anatomy-of-a-vsix-package.md) [Windows インストーラーの配置の拡張機能の準備](../extensibility/preparing-extensions-for-windows-installer-deployment.md)
