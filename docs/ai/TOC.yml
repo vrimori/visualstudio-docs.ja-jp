@@ -17,10 +17,26 @@
           href: tensorflow-vm.md
     - name: 使い方ガイド
       items:
-        - name: 新しいプロジェクトを作成する
-          href: create-project.md
+        - name: プロジェクトを作成する
+          items:
+            - name: サンプル ギャラリーからプロジェクトを作成する
+              href: create-project-gallery.md
+            - name: 既存のコードからプロジェクトを作成する
+              href: create-project-existing.md
+            - name: テンプレートからプロジェクトを作成する
+              href: create-project.md
+            - name: GitHub リポジトリからプロジェクトを作成する
+              href: create-project-repo.md
         - name: モデルをトレーニングする
           href: train-model.md
+        - name: ジョブの詳細を表示する
+          href: job-details.md
+        - name: GPU 使用率を監視する
+          href: monitor-gpu.md
+        - name: TensorBoard を監視する
+          href: monitor-tensorboard.md
+        - name: ストレージを監視する
+          href: manage-storage.md
     - name: サンプル
       items:
         - name: GitHub

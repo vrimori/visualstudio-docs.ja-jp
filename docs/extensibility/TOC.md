@@ -50,6 +50,7 @@
 ### [エディター内の Managed Extensibility Framework](managed-extensibility-framework-in-the-editor.md)
 ### [言語サービスとエディターの拡張ポイント](language-service-and-editor-extension-points.md)
 ### [エディターのインポート](editor-imports.md)
+### [EditorConfig のサポート](supporting-editorconfig.md)
 ### [チュートリアル: コンテンツの種類とファイル名拡張子とをリンクさせる](walkthrough-linking-a-content-type-to-a-file-name-extension.md)
 ### [チュートリアル: 余白のグリフの作成](walkthrough-creating-a-margin-glyph.md)
 ### [チュートリアル: テキスト ビューのカスタマイズ](walkthrough-customizing-the-text-view.md)
