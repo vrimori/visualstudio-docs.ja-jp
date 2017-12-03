@@ -10,7 +10,7 @@
 ### [プロダクト キーの使用](product-keys.md)
 ### 利点を生かす方法
 #### ツール
-##### [Visual Studio Enterprise](vs-ide-benefit.md) 
+##### [Visual Studio IDE](vs-ide-benefit.md) 
 ##### [Visual Studio Team Services](vs-vsts.md)
 ##### [Microsoft Azure](vs-azure.md) 
 ##### [Parasoft](vs-parasoft.md)
@@ -33,7 +33,7 @@
 ##### [テクニカル サポート](vs-tech-support.md)
 
 ## 管理者
-### [管理ロールと責任](admin-responsibilities.md)
+### [管理者の概要](admin-responsibilities.md)
 ### [管理者ポータルへのアクセス](access-admin-portal.md)
 ### [管理者ポータルの使用](using-admin-portal.md)
 ### [サブスクリプションを割り当てる](assign-license.md)
