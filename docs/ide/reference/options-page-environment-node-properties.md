@@ -15,11 +15,11 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ae50f2d537836501ec4c9c29e50d86aa3e325661
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 076b48d5526c0cefffb5f18daed9aaaebb031aad
+ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="options-page-environment-node-properties"></a>[環境] ノード プロパティ ([オプション] ページ)
 このドキュメントでは、**[オプション]** ダイアログ ボックスの **[環境]** カテゴリ (`DTE.Properties("Environment", <Property Page>)`) に関連付けられているページ (またはプロパティ コレクション) について説明します。 各サブセクションの見出しは、Properties コレクションにアクセスするための呼び出しです。その下の表では、コレクションのプロパティを示します。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 10/31/2017
 |プロパティ項目名|値|説明|  
 |------------------------|-----------|-----------------|  
 |EnableAdminExtensions|Get/Set (Boolean)|Visual Studio が管理者の資格情報で実行されている場合、ユーザー単位の拡張機能を読み込みます。 この値を変更したら、Visual Studio を再起動する必要があります。|  
-|EnableOnline|Get/Set (Boolean)|Visual Studio ギャラリーの拡張機能にアクセスできるようにします。|  
+|EnableOnline|Get/Set (Boolean)|Visual Studio Marketplace の拡張機能にアクセスできるようにします。|  
 |AutomaticallyCheckForUpdates|Get/Set (Boolean)|インストール済みの拡張機能に対する更新プログラムがあるかどうかを自動的に確認します。|  
   
 ## <a name="find-and-replace"></a>検索と置換  

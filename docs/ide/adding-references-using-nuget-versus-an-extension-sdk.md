@@ -7,16 +7,15 @@ ms.suite:
 ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 2175581e-83cb-444c-bb52-cc1fca8ea196
 caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 40f554f21cc2cee9fb6d457ef9f4a560740cebc6
-ms.sourcegitcommit: cc288456329aefca1fdaa7ce74751ce195985c14
+ms.openlocfilehash: 14e3d3432a62d54564c92a12a02204ffb5e05889
+ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="adding-references-using-nuget-versus-an-extension-sdk"></a>拡張 SDK と比較して NuGet を使用した参照の追加
 
@@ -56,7 +55,7 @@ Visual Studio を対象とする NuGet 拡張機能、またはソフトウェ�
 |このメカニズムでは、開発者のクリーンなコンピューターがサポートされています  (つまり、インストールは必要なく、ソース・コード管理からの単純な取得が機能します)。|N|SDK を参照するには、ソリューションと SDK を個別にチェックインする必要があります。 MSBuild が SDK を反復処理する、レジストリとは異なる 2 つの既定の場所から SDK をチェックインできます (詳細については、「[Creating a Software Development Kit](../extensibility/creating-a-software-development-kit.md)」 (ソフトウェア開発キットの作成) を参照してください)。 代わりに、カスタムの位置に SDK が配置されている場合は、プロジェクト ファイル内で次のコードを指定できます。<br /><br /> `<PropertyGroup>    <SDKReferenceDirectoryRoot>C:\MySDKs</SDKReferenceDirectoryRoot>   </PropertyGroup>`<br /><br /> 次に、その場所に SDK をチェックインします。|Y|ソリューションをチェック アウトすることもでき、その場合は Visual Studio が直ちにファイルを認識して、そのファイルを処理します。|
 |パッケージ作成者から成る既存の大規模コミュニティに参加することもできます。|N/A|このコミュニティは新しく作成されたものです。|Y||
 |パッケージ使用者から成る既存の大規模コミュニティに参加することもできます。|N/A|このコミュニティは新しく作成されたものです。|Y||
-|パートナーのエコシステム (カスタム ギャラリー、リポジトリなど) に参加できます。|N/A|使用可能なリポジトリには、Visual Studio ギャラリー、Microsoft ダウンロード センター、および [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] が含まれます。|Y||
+|パートナーのエコシステム (カスタム ギャラリー、リポジトリなど) に参加できます。|N/A|使用可能なリポジトリとしては、Visual Studio Marketplace、Microsoft ダウンロード センター、および [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] などがあります。|Y||
 |このメカニズムは、パッケージ作成と使用の両方を対象にした、継続的な統合ビルド サーバーに統合されます。|Y|SDK は、チェックインの位置 (SDKReferenceDirectoryRoot プロパティ) をコマンド ラインの一部として MSBuild に渡す必要があります。|Y||
 |このメカニズムでは、安定バージョンとプレリリース パッケージ バージョンの両方がサポートされています。|Y|SDK では、複数のバージョンに対する参照の追加をサポートしています。|Y||
 |このメカニズムでは、インストール済みパッケージの自動更新がサポートされています。|Y|SDK が VSIX として、または Visual Studio の自動更新の一部として提供されている場合は、SDK は自動的な通知を行います。|Y||
