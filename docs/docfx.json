@@ -9,20 +9,7 @@
         "exclude": [
           "**/obj/**",
           "vsdocsdocs/**",
-          "**/includes/**",
-	"sharepoint/**",
-	"vsto/**",
-	"code-quality/**",
-	"csharp-ide/**",
-	"data-tools/**",
-	"debugger/**",
-	"deployment/**",
-	"extensibility/**",
-	"misc/**",
-	"modeling/**",
-	"vb-ide/**",
-	"workflow-designer/**",
-	"xml-tools/**"
+          "**/includes/**"
         ]
       }
     ],
