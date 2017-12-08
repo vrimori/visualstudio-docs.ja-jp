@@ -19,11 +19,11 @@ caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4eab796f0a3c6a7148c94e780439a727ee6fe450
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.openlocfilehash: b0b1d4f79be83f69989064ed7699df43b6930040
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="using-the-tasks-window"></a>[タスク] ウィンドウの使用
 **タスク**ウィンドウに似ています、**スレッド**ことに関する情報を表示するウィンドウで、 <xref:System.Threading.Tasks.Task?displayProperty=fullName>、 [task_handle](/cpp/parallel/concrt/reference/task-group-class.md)、または[WinJS.Promise](http://msdn.microsoft.com/library/windows/apps/br211867.aspx)各スレッドではなくオブジェクト。 スレッドと同様、タスクは、同時に実行できる非同期操作を表します。ただし、複数のタスクが同じスレッドで実行される場合もあります。 
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/11/2017
   
  ネイティブ コードで使用することができます、**タスク**を操作するときにウィンドウ[タスク グループ](/cpp/parallel/concrt/task-parallelism-concurrency-runtime)、[並列アルゴリズム](/cpp/parallel/concrt/parallel-algorithms)、[非同期エージェント](/cpp/parallel/concrt/asynchronous-agents)、および[軽量タスク](/cpp/parallel/concrt/task-scheduler-concurrency-runtime)です。 ネイティブ コードでのタスクの詳細については、次を参照してください。[同時実行ランタイム](/cpp/parallel/concrt/concurrency-runtime)です。  
   
- JavaScript では、promise.then コードを操作するときに [タスク] ウィンドウを使用できます。 参照してください[JavaScript (UWP アプリ) で非同期プログラミング](http://msdn.microsoft.com/library/windows/apps/hh700330.aspx)詳細についてはします。   
+ JavaScript では、promise を使用している場合、[タスク] ウィンドウを使用できます`.then`コード。 参照してください[JavaScript (UWP アプリ) で非同期プログラミング](http://msdn.microsoft.com/library/windows/apps/hh700330.aspx)詳細についてはします。   
   
  使用することができます、**タスク**デバッガーを中断する場合は、常にします。 上でアクセスできる、**デバッグ** をクリックしてメニュー **Windows**クリックし、**タスク**です。 次の図は、**タスク** ウィンドウで、既定のモード。  
   

@@ -1,6 +1,6 @@
 ---
 title: "ライブ ASP.NET Azure アプリの Visual Studio のデバッグ |Microsoft ドキュメント"
-ms.date: 11/13/2017
+ms.date: 12/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-debug
@@ -12,11 +12,11 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 02f91441c493d65e8abcdc80bd85b01f2bd423bf
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.openlocfilehash: 04f3f90f6b3ee8aac2ddf1907569043c9d4b56ea
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>スナップショットのデバッガーを使用してライブの ASP.NET Azure アプリをデバッグします。
 
@@ -33,7 +33,7 @@ Snappoints と logpoints ブレークポイントに似ています。 ブレー
 
 ## <a name="start-the-snapshot-debugger"></a>スナップショットのデバッガーを起動します。
 
-1. インストール、 [Visual Studio Enterprise 15.5 Preview](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-preview-relnotes)またはそれ以降。 前の Visual Studio 2017 プレビューから更新する場合は、Visual Studio インストーラーを実行し、ASP.NET と web 開発ワークロード内のスナップショットのデバッガー コンポーネントを確認します。
+1. インストール[Visual Studio 2017 Enterprise バージョン 15.5](https://www.visualstudio.com/downloads/)またはそれ以降。 以前の Visual Studio 2017 のインストールを更新する場合は、Visual Studio インストーラーを実行し、ASP.NET と web 開発ワークロード内のスナップショットのデバッガー コンポーネントを確認します。
 
 2. スナップショット デバッグするには、プロジェクトを開きます。 
 

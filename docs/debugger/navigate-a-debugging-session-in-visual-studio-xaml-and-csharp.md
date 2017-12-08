@@ -17,11 +17,11 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8c7679aff620b415a8b3c7f7b226d808d0f3f492
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.openlocfilehash: 0c69ff648e2a1ac8c60746f1e7879e80c2063c2a
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="navigate-a-debugging-session-in-visual-studio-xaml-and-c"></a>Visual Studio でのデバッグ セッションのナビゲート (XAML および C#)
 このクイック スタートでは、Visual Studio デバッグ セッション間を移動する方法と、セッションでプログラムの状態を表示および変更する方法を示します。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/11/2017
   
  **MainPage.xaml.cs ソース ファイルを開きます。** XAML エディター内を右クリックして、 **[コードの表示]**を選択します。 MainPage.xaml.cs の分離コード ファイルが表示されます。 ファイルには、 `MainPage()` コンストラクターというメソッドだけがあることに注意してください。  
   
- **MainPage コンストラクターをサンプル コードに置き換えます。** MainPage() メソッドを削除します。 このリンクに従ってください:[デバッガー ナビゲーション (Xaml および C# の場合) のサンプル コード](../debugger/debugger-navigation-sample-code-xaml-and-csharp.md)、しをクリップボードに c# セクションに記載されているコードをコピーします。 (選択**戻る**では、ブラウザーまたはヘルプ ビューアーにこのクイック スタート ページに戻ります)。Visual Studio エディターで、`partial class MainPage` ブロック内にコードを貼り付けます。 Ctrl キーを押しながら S キーを押して、ファイルを保存します。  
+ **MainPage コンストラクターをサンプル コードに置き換えます。** MainPage() メソッドを削除します。 このリンクに従ってください:[デバッガー ナビゲーション (Xaml および C# の場合) のサンプル コード](https://github.com/MicrosoftDocs/visualstudio-docs/raw/master/docs/debugger/samples/debugger-navigation-sample-code-xaml-and-csharp.cs)、しをクリップボードに c# セクションに記載されているコードをコピーします。 (選択**戻る**では、ブラウザーまたはヘルプ ビューアーにこのクイック スタート ページに戻ります)。Visual Studio エディターで、`partial class MainPage` ブロック内にコードを貼り付けます。 Ctrl キーを押しながら S キーを押して、ファイルを保存します。  
   
  これで、このトピックの例を実際に行うことができるようになりました。  
   
