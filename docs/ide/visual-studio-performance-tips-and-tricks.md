@@ -12,11 +12,11 @@ caps.latest.revision: "1"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 173811a4f2d9974755e2432822c801388403ab7c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 936d0df8c838227c5d6c99b0f04f1069eae8a277
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio のパフォーマンスのヒントとテクニック
 
@@ -36,14 +36,6 @@ Visual Studio のパフォーマンスの推奨事項は、まれなケースで
 ## <a name="configure-solution-and-projects"></a>ソリューションとプロジェクトを構成する
 
 多くのプロジェクトを含む非常に大きいソリューションがある場合、次の最適化を行うと効果がある可能性があります。
-
-- **ライトウェイト ソリューション ロードを有効にする**
-
-    **ライトウェイト ソリューション ロード**を使うと、ソリューション内の一部のプロジェクトの読み込みが後回しにされるため、メモリおよび CPU のパフォーマンスが向上する場合があります。 この機能はソリューションごとに有効にすることもできます。 このオプションの既定値はオフです。
-
-    **ライトウェイト ソリューション ロード**を有効にするには、**[ツール] > [オプション] > [プロジェクトおよびソリューション] > [ライトウェイト ソリューション ロード]** の順に選びます。
-
-    このモードでは一部の IDE 機能を使うことができません。 この選択が役立つかどうかを判断するには、[ソリューションの読み込み時間の短縮](https://blogs.msdn.microsoft.com/visualstudio/2016/10/11/shorter-solution-load-time-in-visual-studio-15/)と、[ソリューションの読み込みの最適化](../ide/optimize-solution-loading-in-visual-studio.md)に関する記事をご覧ください。
 
 - **プロジェクトをアンロードする**
 
