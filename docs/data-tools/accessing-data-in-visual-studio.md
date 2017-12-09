@@ -17,11 +17,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: d76ced1c908c832e9fd583eecc3419e57aeb76c7
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.openlocfilehash: 8102301ee098ef662f27c8a6dc586a683a85d177
+ms.sourcegitcommit: 1aa9282b1f0bc2795df3264cbd1e331cc44c23f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="accessing-data-in-visual-studio"></a>Visual Studio でのデータにアクセスします。
 
@@ -38,7 +38,7 @@ JavaScript、Python、PHP、Ruby、または C++ では、アプリケーショ�
 |SQL データベース|DocumentDB|ストレージ (blob、テーブル、キュー、ファイル)|
 |SQL データ ウェアハウス|SQL Server Stretch Database|StorSimple|
 
-しています.
+その他
 
 **SQL**
 
@@ -48,7 +48,7 @@ JavaScript、Python、PHP、Ruby、または C++ では、アプリケーショ�
 |MySQL|Oracle|PostgreSQL|
 |SQLite|||
 
-しています.
+その他
 
 **NoSQL**
 
@@ -58,7 +58,7 @@ JavaScript、Python、PHP、Ruby、または C++ では、アプリケーショ�
 |NDatabase|OrientDB|RavenDB|
 |VelocityDB|||
 
-しています.
+その他
 
 多くのデータベース ベンダーやサード パーティは、NuGet パッケージによって Visual Studio の統合をサポートします。 Nuget.org または Visual Studio で NuGet パッケージ マネージャーで、内容を調べることができます (**ツール** > **NuGet Package Manager** > **NuGet の管理Packages for Solution**)。 他のデータベース製品は、拡張機能として、Visual Studio と統合します。 移動して、Visual Studio Marketplace でこれらの製品を表示できる**ツール**、**拡張機能と更新**を選択し**オンライン**の左側のウィンドウで、ダイアログ ボックス。 詳細については、次を参照してください。 [for Visual Studio の互換性のあるデータベース システム](../data-tools/installing-database-systems-tools-and-samples.md)です。
 

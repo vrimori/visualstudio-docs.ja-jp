@@ -1,7 +1,7 @@
 ---
 title: "IntelliTrace ステップ ライトバック - Visual Studio を使用してスナップショットの表示 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 11/08/2017
+ms.date: 12/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-debug
@@ -12,11 +12,11 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2e8da202cf8ae5680bede1ec4b2f2c8984624e4e
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.openlocfilehash: c05905e8ffeec3aa699aac9dfa46c4b017b86be5
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="view-snapshots-using-intellitrace-step-back"></a>IntelliTrace 手順バックを利用したスナップショットの表示
 IntelliTrace ステップ ライトバックは、ステップのイベント、アプリケーションのすべてのブレークポイントとデバッガーのスナップショットを取得する自動的にします。 記録されたスナップショットを使用すると、前のブレークポイントまたは手順に戻るし、過去になっていたようにアプリケーションの状態を表示できます。 IntelliTrace 手順戻ることができますの以前のアプリケーション状態を確認しますが、デバッグを再起動するか、必要なアプリケーションの状態を再作成したくないです。
@@ -60,7 +60,7 @@ IntelliTrace は、手順とブレークポイントのイベント、各デバ�
 
 ![IntelliTrace ステップ ライトバックの概要](../debugger/media/intellitrace-step-back-overview.png "の概要の IntelliTrace の手順に戻る")
 
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
  Visual Studio での変数を検査する方法については、次を参照してください[デバッガーの機能のツアー。](../debugger/debugger-feature-tour.md)  
  デバッグ履歴の詳細については、次を参照してください。[デバッグ履歴](../debugger/historical-debugging.md)です。  
 
