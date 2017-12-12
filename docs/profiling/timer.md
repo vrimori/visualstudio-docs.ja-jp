@@ -1,66 +1,67 @@
 ---
-title: "Timer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Timer | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1971868e-89fa-4452-8ee7-76e4daf31b66
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 3c259b4a66a6f26443b684a005adb2899e2d77ca
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Timer
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-VSPerfCmd.exe **Timer** オプションは、サンプリングするプロファイリング イベントをプロセッサのクロック サイクルに設定します。また、オプションで、サンプリング間隔のサイクル数を既定の 10,000,000 から変更します。  1 GHz のプロセッサでは、クロック サイクル数 10,000,000 の場合、1 秒あたりのサンプル数は約 100 になります。  指定できる最小サイクル数は、50,000 です。  
+# <a name="timer"></a>タイマー
+VSPerfCmd.exe の **Timer** オプションは、サンプリングするプロファイリング イベントをプロセッサのクロック サイクルに設定し、必要に応じて、サンプリング間隔のサイクル数を既定の 10,000,000 から変更します。 1 GHz のプロセッサでは、クロック サイクル数 10,000,000 の場合、1 秒あたりのサンプル数は約 100 になります。 指定できる最小サイクル数は、50,000 です。  
   
- **Timer** を使用できるのは、サンプリング プロファイリング メソッドを使用する場合のみです。この場合、**Launch** または **Attach** オプションも指定したコマンド ラインでのみ使用できます。  
+ **Timer** を使用できるのは、サンプリング プロファイリング メソッドを使用する場合のみであり、**Launch** または **Attach** オプションも含むコマンド ラインでのみ使用できます。  
   
- 既定では、プロファイラーのサンプリング イベントは、プロセッサのクロック サイクルに設定され、サンプリング間隔は 10,000,000 に設定されます。  **Timer**、**PF**、**Sys**、および **Counter** オプションを使用すると、サンプリング イベントおよびサンプリング間隔を設定できます。  **GC** オプションは、割り当ておよびガベージ コレクション イベントが発生するたびに、.NET メモリ データを収集します。  コマンド ラインには、上記のオプションのいずれか 1 つだけを指定できます。  
+ 既定では、プロファイラーのサンプリング イベントは、プロセッサのクロック サイクルに設定され、サンプリング間隔は 10,000,000 に設定されます。 **Timer**、**PF**、**Sys**、**Counter** の各オプションを使用すると、サンプリング イベントおよびサンプリング間隔を設定できます。 **GC** オプションは、割り当ておよびガベージ コレクション イベントが発生するたびに、.NET メモリ データを収集します。 コマンド ラインには、上記のオプションのいずれか 1 つだけを指定できます。  
   
- サンプリング イベントとサンプリング間隔を設定できるのは、**Launch** または **Attach** オプションを指定した最初のコマンド ラインのみです。  
+ サンプリング イベントおよびサンプリング間隔は、**Launch** オプションまたは **Attach** オプションを含む最初のコマンド ラインでのみ設定できます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 VSPerfCmd.exe {/Launch:AppName|/Attach:PID} /Timer[:Cycles] [Options]  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `Cycles`  
- サンプリング間隔でのプロセッサのクロック サイクル数を指定する整数の値。  ‎`Cycles` が指定されていない場合、間隔は 10,000,000 に設定されます。  コンマを含めずに値を指定してください。  
+ サンプリング間隔でのプロセッサのクロック サイクル数を指定する整数の値。 ‎`Cycles` が指定されていない場合、間隔は 10,000,000 に設定されます。 コンマを含めずに値を指定してください。  
   
-## 必須オプション  
- **Timer** を指定できるのは、以下のいずれかのオプションを指定したコマンド ラインのみです。  
+## <a name="required-options"></a>必須オプション  
+ **Timer** は、以下のいずれかのオプションを含むコマンド ラインでのみ指定できます。  
   
  **Launch:** `AppName`  
  プロファイラーと、`AppName` で指定されたアプリケーションを起動します。  
   
  **Attach:** `PID`  
- プロファイラーをプロセス ID \(`PID`\) で指定されたプロセスにアタッチします。  
+ プロファイラーをプロセス ID (`PID`) で指定されたプロセスにアタッチします。  
   
-## 無効なオプション  
- 以下のオプションを同じコマンド ラインに **Timer** として指定することはできません。  
+## <a name="invalid-options"></a>無効なオプション  
+ 以下のオプションは、**Timer** と同じコマンド ラインに指定することはできません。  
   
- **PF**\[**:**`Events`\]  
- サンプリング イベントをページ フォールトに設定します。オプションで、サンプリング間隔を `Events` に設定します。  既定の PF 間隔は 10 です。  
+ **PF**[**:**`Events`]  
+ サンプリング イベントをページ フォールトに設定します。オプションで、サンプリング間隔を `Events` に設定します。 既定の PF 間隔は 10 です。  
   
- **Sys**\[**:**`Events`\]  
- サンプリング イベントをオペレーティング システムの呼び出しに設定します。オプションで、サンプリング間隔を `Events` に設定します。  既定の Sys 間隔は 10 です。  
+ **Sys**[**:**`Events`]  
+ サンプリング イベントをオペレーティング システムの呼び出しに設定します。オプションで、サンプリング間隔を `Events` に設定します。 既定の Sys 間隔は 10 です。  
   
- **Counter**\[**:**`Name,Reload,FriendlyName`\]  
+ **Counter**[**:**`Name,Reload,FriendlyName`]  
  サンプリング イベントを、`Name` で指定された CPU パフォーマンス カウンターに設定し、サプリング間隔を `Reload` に設定します。  
   
- **GC**\[**:**{**Allocation**&#124;**Lifetime**}\]  
- .NET メモリ データを収集します。  既定 \(**Allocation**\) では、データはメモリ割り当てイベントで収集されます。  **Lifetime** パラメータが指定されている場合、各ガーベッジ コレクション イベントでも、データが収集されます。  
+ **GC**[**:**{**Allocation**&#124;**Lifetime**}]  
+ .NET メモリ データを収集します。 既定 (**Allocation**) では、データはメモリの割り当てイベントごとに収集されます。 **Lifetime** パラメーターが指定されている場合、ガベージ コレクション イベントごとのデータも収集されます。  
   
-## 使用例  
+## <a name="example"></a>例  
  プロファイラーのサンプリング間隔をプロセッサ サイクル数 1,000,000 に設定する方法を次の例に示します。  
   
 ```  
@@ -68,8 +69,8 @@ VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp
 VSPerfCmd.exe /Launch:TestApp.exe /Timer:1000000  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [スタンドアロン アプリケーションのプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [プロファイリング \(サービスの\)](../profiling/command-line-profiling-of-services.md)
+ [プロファイリング (サービスの)](../profiling/command-line-profiling-of-services.md)

@@ -4,38 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11232a83-73ea-46bd-bc0c-46f74f6e3a42
-caps.latest.revision: 33
+caps.latest.revision: "33"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: d3936d44f8591753df102cf65c15d9199a679316
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 8b854bcfcb7227a454023f89ce732706b1e545cc
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="upgrading-coded-ui-tests-from-visual-studio-2010"></a>Visual Studio 2010 からのコード化された UI テストのアップグレード
-[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1 で作成したコード化された UI テストを含むテスト プロジェクトは、Visual Studio 2012 で開いたときに自動的に修復されます。 テスト プロジェクトがソース管理にチェックインされると、プロジェクト ファイルはこの修復のためにチェックアウトされます。 コード化された UI テストを含むこれらのテスト プロジェクトは、一度修復されると、 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1 と [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]の両方で使用できます。  
+[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1 で作成したコード化された UI テストを含むテスト プロジェクトは、Visual Studio 2012 以降で開いたときに自動的に修復されます。 テスト プロジェクトがソース管理にチェックインされると、プロジェクト ファイルはこの修復のためにチェックアウトされます。 コード化された UI テストを含むこれらのテスト プロジェクトは、一度修復されると、 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1 と [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]の両方で使用できます。  
   
  **必要条件**  
   
@@ -45,12 +28,12 @@ ms.lasthandoff: 05/13/2017
 >  Visual Studio には、テスト プロジェクトの種類が複数含まれています。 コード化された UI テストを新しく作成する場合は、コード化された UI テスト プロジェクトの種類で作成されます。 詳しくは、「 [旧バージョンの Visual Studio からのテストのアップグレード](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52)」をご覧ください。  
   
 > [!WARNING]
-> コード化された UI テストを含む [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] テスト プロジェクトは、 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] または [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] と [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]の side-by-side 実行で開くときにリビルドする必要があります。  
+>  コード化された UI テストを含む[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] テスト プロジェクトは、 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] または [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] と [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]の side-by-side 実行で開くときにリビルドする必要があります。  
   
 > [!WARNING]
 >  [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] で作成され、単体テストのみを含むテスト プロジェクトを [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]で開くと、コード化された UI テストを追加することはできません。 同様に、 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]で作成された単体テスト プロジェクトにコード化された UI テストを追加することはできません。  
   
-## <a name="compatibility-issues-between-visual-studio-2010-and-visual-studio-2012"></a>Visual Studio 2010 と Visual Studio 2012 の間の互換性の問題  
+## <a name="compatibility-issues-between-visual-studio-2010-and-visual-studio-2012-or-later"></a>Visual Studio 2010 と Visual Studio 2012 以降の間の互換性の問題  
  [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] と [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]間でコード化された UI テストを移行する際に注意が必要な問題を次の表に示します。  
   
 > [!CAUTION]
@@ -64,7 +47,7 @@ ms.lasthandoff: 05/13/2017
 |[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] では、csproj ファイルの "選択" ステートメント内に参照が追加されました。 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]では、フィードバックのターゲット ファイルを使用して、コード化された UI テスト アセンブリの参照を含めます。|[!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]では、 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] (または SP1) で作成された、コード化された UI テストを含まないテスト プロジェクトに、コード化された UI テストを追加できません。<br /><br /> 修復処理は、ターゲット ファイルと選択ステートメントを追加します。 コード化された UI テストがテスト プロジェクト内にない場合、そのプロジェクトは修復済みとしてマークされ、 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]でコード化された UI テストを追加する際に適切な参照が追加されません。|[!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] を使用して同じソリューション内に新しいテスト プロジェクトを作成し、その中に新しいコード化された UI テストを追加する必要があります。 または、 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1 でテスト プロジェクトにコード化された UI テストを追加し、そのプロジェクトを [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]で開くこともできます。|  
   
 ##  <a name="UpgradingCodedUIFromVS2010_Update"></a> Visual Studio 2010 SP1 更新プログラム  
- Visual Studio 2012 および Windows 8 の互換性をサポートする [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] SP1 の更新プログラムは [Microsoft ダウンロード センター](http://www.microsoft.com/download/details.aspx?id=34677) で Visual Studio 更新プログラムとしてもダウンロードできます。  
+ Visual Studio 2012 以降および Windows 8 以降の互換性をサポートする [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] SP1 の更新プログラムは [Microsoft ダウンロード センター](http://www.microsoft.com/download/details.aspx?id=34677) で Visual Studio 更新プログラムとしてもダウンロードできます。  
   
  更新プログラムを適用すると、次の [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] SP1 のコード化された UI テスト ツール機能が Windows 8 向けに改善されます。  
   
@@ -86,4 +69,3 @@ ms.lasthandoff: 05/13/2017
  [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   
  [既存の操作の記録からのコード化された UI テストの生成](/devops-test-docs/test/generating-a-coded-ui-test-from-an-existing-action-recording)   
  [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
-

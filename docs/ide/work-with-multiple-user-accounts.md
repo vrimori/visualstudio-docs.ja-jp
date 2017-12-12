@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b73c865c-74e0-420e-89cc-43524f4aafd0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 592cde9dac7ea7b49934200469e85caf1fd58f82
-ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 42a66b69bb2c1736ddf3cb4c07e8ef8be86ed4d4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="work-with-multiple-user-accounts"></a>複数のユーザー アカウントを使って作業する
 複数の Microsoft アカウントや職場または学校のアカウントを所有している場合、そのすべてを Visual Studio に追加すると、個別にサインインしなくても、すべてのアカウントのリソースにアクセスできます。 現在、Azure、Application Insights、Team Foundation Server、Office 365 サービスが、簡素化されたサインイン エクスペリエンスをサポートしています。 今後、他のサービスが使用可能になる可能性があります。
@@ -61,15 +44,15 @@ ms.lasthandoff: 02/22/2017
 
 ### <a name="access-your-azure-account-via-add-connected-service-dialog"></a>[接続済みサービスの追加] ダイアログを通して Azure アカウントにアクセスします。  
 
-1.  C# でユニバーサル アプリ プロジェクトを作成します。  
+1.  C# で UWP アプリ プロジェクトを作成します。  
 
 2.  ソリューション エクスプローラーでプロジェクト ノードを選択し、**[追加] > [接続済みサービス]** を選択します。 **[接続済みサービスの追加]** ウィザードが表示され、Visual Studio ログイン ID に関連付けられた Azure アカウントのサービスの一覧が表示されます。 なお、Azure には個別にサインインする必要はありません。 ただし、特定のコンピューターから他のアカウントのリソースへのアクセスを初めて試みるときは、そのアカウントにサインインする必要があります。  
 
     > [!WARNING]
-    >  特定のコンピューターの Visual Studio でストア アプリを初めて作成する場合は、コンピューターの **[設定 &#124; 更新とセキュリティ &#124; 開発者向け]** にアクセスして、デバイスを開発モード用に有効にするようにメッセージが表示されます。 詳細については、「[デバイスを開発用に有効にする](https://msdn.microsoft.com/en-us/library/windows/apps/dn706236.aspx)」を参照してください。  
+    >  特定のコンピューターの Visual Studio で UWP アプリを初めて作成する場合は、コンピューターの **[設定 &#124; 更新とセキュリティ &#124; 開発者向け]** にアクセスして、デバイスを開発モード用に有効にするようにメッセージが表示されます。 詳細については、「[デバイスを開発用に有効にする](https://msdn.microsoft.com/en-us/library/windows/apps/dn706236.aspx)」を参照してください。  
 
 ###  <a name="access_azure"></a>Web プロジェクトで Azure Active Directory にアクセス  
- Azure AD では、ASP.NET MVC の Web アプリケーションでのエンド ユーザー シングル サインオンや、Web API サービスでの AD 認証をサポートしています。 ドメイン認証は個々のユーザー アカウント認証とは異なります。Active Directory ドメインにアクセスできるユーザーは、既存の Azure AD アカウントを使用して、Web アプリケーションに接続できます。 Office 365 アプリでは、ドメイン認証も使用できます。 これを実際に見るには、Web アプリケーションを作成します (**[ファイル]、[新しいプロジェクト]、[C#]、[クラウド]、[ASP.NET Web アプリケーション]**)。 新しい ASP.NET プロジェクトのダイアログで、[ **認証の変更**] を選択します。 認証ウィザードが表示され、アプリケーションで使用する認証の種類を選択できます。  
+ Azure AD では、ASP.NET MVC の Web アプリケーションでのエンド ユーザー シングル サインオンや、Web API サービスでの AD 認証をサポートしています。 ドメイン認証は個々のユーザー アカウント認証とは異なります。Active Directory ドメインにアクセスできるユーザーは、既存の Azure AD アカウントを使用して、Web アプリケーションに接続できます。 Office 365 アプリでは、ドメイン認証も使用できます。 これを実際に見るには、Web アプリケーションを作成します (**[ファイル]、[新しいプロジェクト]、[C#]、[クラウド]、[ASP.NET Web アプリケーション]**)。 新しい ASP.NET プロジェクトのダイアログで、**[認証の変更]** を選択します。 認証ウィザードが表示され、アプリケーションで使用する認証の種類を選択できます。  
 
  ![ASP.NET の認証の変更ダイアログ](../ide/media/vs2015_change_authentication.png "VS2015_change_authentication")  
 
@@ -88,5 +71,7 @@ ms.lasthandoff: 02/22/2017
  ![アカウント マネージャー](../ide/media/vs2015_accountmanager.gif "VS2015_AccountManager")  
 
 ## <a name="revisit-the-add-connected-services-wizard-and-server-explorer"></a>[接続済みサービスの追加] ウィザードおよびサーバー エクスプローラーを再表示します。  
- **サーバー エクスプローラー** に再び移動し、Azure ノードを右クリックして、[ **サブスクリプションの管理とフィルター**] を選択します。 現在のアカウントの横にあるドロップダウン矢印をクリックして新しいアカウントを選択し、サーバー エクスプローラーに表示するサブスクリプションを選択します。 指定したサブスクリプションに関連付けられているすべてのサービスが表示されます。現在 2 番目のアカウントで Visual Studio IDE にサインインしてはいませんが、そのアカウントのサービスとリソースにサインインします。 同じことが **[プロジェクト] > [接続済みサービスの追加]** および **[チーム] > [Team Foundation Server への接続]** にも当てはまります。
+ **サーバー エクスプローラー** に再び移動し、Azure ノードを右クリックして、**[サブスクリプションの管理とフィルター]** を選択します。 現在のアカウントの横にあるドロップダウン矢印をクリックして新しいアカウントを選択し、サーバー エクスプローラーに表示するサブスクリプションを選択します。 指定したサブスクリプションに関連付けられているすべてのサービスが表示されます。現在 2 番目のアカウントで Visual Studio IDE にサインインしてはいませんが、そのアカウントのサービスとリソースにサインインします。 同じことが **[プロジェクト] > [接続済みサービスの追加]** および **[チーム] > [Team Foundation Server への接続]** にも当てはまります。  
 
+ ## <a name="see-also"></a>関連項目  
+[接続されている環境](../ide/connected-environment.md)  

@@ -1,59 +1,60 @@
 ---
-title: "方法 : スタンドアロンのプロファイラーをインストールする | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "パフォーマンス ツール, インストール (スタンドアロンのプロファイラーを)"
-  - "プロファイル ツール, スタンドアロンのプロファイラー"
+title: "方法: スタンドアロンのプロファイラーをインストールする | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- performance tools, installing stand-alone profiler
+- profiling tools, stand-alone profiler
 ms.assetid: cae81c95-83cd-4ab6-8a98-84ef977a2f6d
-caps.latest.revision: 24
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0799a5da2b1596c79a57a6960283c62fca709a8a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : スタンドアロンのプロファイラーをインストールする
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] には、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE をインストールせずに実行できるスタンドアロンのプロファイラーに基づいたコマンド ラインが用意されています。  この状況は、コンピューターに開発環境をインストールしていない場合またはインストールできない場合に発生します。  たとえば、運用 Web サーバーには開発環境をインストールしません。  
+# <a name="how-to-install-the-stand-alone-profiler"></a>方法 : スタンドアロンのプロファイラーをインストールする
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE をインストールしなくても実行できるコマンドライン ベースのスタンドアロン プロファイラーを利用できます。 このような状況は、コンピューターに開発環境がインストールされていないときに発生します。 たとえば、本稼働中の Web サーバーには開発環境をインストールするべきではありません。  
   
 > [!NOTE]
->  スタンドアロン プロファイラーを使用して ASP.NET Web サイトのパフォーマンス データを収集する場合は、[VSPerfCmd](../profiling/vsperfcmd.md) ツールより [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md) ツールが推奨されます。  
+>  スタンドアロン プロファイラーを利用し、ASP.NET Web サイトのパフォーマンス データを集めるときは、[VSPerfCmd](../profiling/vsperfcmd.md) ツールよりも [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md) ライン ツールをお勧めします。  
   
-### スタンドアロンのプロファイラーをインストールするには  
+### <a name="to-install-the-stand-alone-profiler"></a>スタンドアロンのプロファイラーをインストールするには  
   
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] インストール メディアの \\Standalone Profiler というパスを含むディレクトリで、スタンドアロンのプロファイラーのインストーラー \(vs\_profiler.exe\) を探して実行します。  
+1.  \Standalone Profiler パスが含まれるディレクトリの [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] インストール メディアでスタンドアロン プロファイル インストーラー (vs_profiler.exe) を見つけて実行します。  
   
-2.  vsintr.exe および msdis150.dll のパスをシステム パスに追加します。  
+2.  vsintr.exe と msdis150.dll のパスをシステム パスに追加します。  
   
     > [!NOTE]
-    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の既定のインストールでは、vsinstr.exe および msdis150.dll は \\Program Files\\Visual Studio 10\\Team Tools\\Performance Tools にあります。  
+    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の既定のインストールでは、vsinstr.exe と msdis150.dll は \Program Files\Visual Studio 10\Team Tools\Performance Tools にあります。  
   
 3.  コマンド プロンプトで、「**VSInstr**」と入力します。  
   
     > [!NOTE]
-    >  vsinstr.exe の使用方法が表示される場合は、すべてが正しく設定されています。  vsinstr.exe またはその依存関係の 1 つが見つからないことを示すエラーが発生した場合は、手順 2. で説明したように、パスを正しく設定したことを確認してください。  
+    >  vsinstr.exe の利用状況情報が表示された場合、すべてが正しく設定されています。 vsinstr.exe またはその依存関係の 1 つが見つからないというエラーが表示された場合、手順 2 のとおりにパスが正しく設定されていることを確認してください。  
   
-4.  **\_NT\_SYMBOL\_PATH** 変数に **symsrv\*symsrv.dll\*c:\\localcache\*http:\/\/msdl.microsoft.com\/download\/symbols** を設定して、シンボル サーバーを設定します。  
+4.  シンボル サーバーを設定します。**_NT_SYMBOL_PATH** 変数を **symsrv\*symsrv.dll\*c:\localcache\*http://msdl.microsoft.com/download/symbols** に設定してください。  
   
-5.  システム環境変数を使用してシンボル サーバーをセットアップした後、新しいコマンド プロンプトで、コマンド ライン プロファイラー ツールを実行します。  これにより、新しい環境変数が有効になります。  コマンド プロンプト ウィンドウで、次のコマンドを入力します。  
+5.  システム環境変数を利用してシンボル サーバーを設定したら、新しいコマンド プロンプトでコマンドライン プロファイラー ツールを実行します。 実行後、新しい環境変数が適用されます。 [コマンド プロンプト] ウィンドウで、次のコマンド ラインを入力します。  
   
      **start %COMSPEC%**  
   
     > [!NOTE]
-    >  シンボル サーバー パッケージのセットアップ方法の詳細な手順については、「[方法: Windows シンボル情報を参照する](../profiling/how-to-reference-windows-symbol-information.md)」を参照してください。  
+    >  シンボル サーバー パッケージの設定方法については、「[方法: Windows シンボル情報を参照する](../profiling/how-to-reference-windows-symbol-information.md)」を参照してください。  
   
-6.  [VSPerfReport](../profiling/vsperfreport.md) ツールを使用して、シンボルをプロファイリング データ \(.vsp\) ファイルにシリアル化します。  **VSPerfReport \/summary:all \/packsymbols** スイッチを使用します。  データ ファイルにシンボルが挿入されていない場合は、\_NT\_SYMBOL\_PATH 環境変数を設定したことを確認します。  
+6.  [VSPerfReport](../profiling/vsperfreport.md) ツールを利用し、シンボルをシリアル化してプロファイリング データ ファイル (.vsp) を生成します。 **VSPerfReport /summary:all /packsymbols** スイッチを使用します。 データ ファイルにシンボルが挿入されていない場合、_NT_SYMBOL_PATH 環境変数が設定されていることを確認します。  
   
-## 参照  
- [コマンド ラインからのプロファイリング](../profiling/using-the-profiling-tools-from-the-command-line.md)   
- [チュートリアル: サンプリングを使ったコマンド ライン プロファイリング](../Topic/Walkthrough:%20Command-Line%20Profiling%20Using%20Sampling.md)   
+## <a name="see-also"></a>関連項目  
+ [コマンドラインからのプロファイル](../profiling/using-the-profiling-tools-from-the-command-line.md)   
+ [チュートリアル: サンプリングを使ったコマンド ライン プロファイリング](../profiling/walkthrough-command-line-profiling-using-sampling.md)   
  [チュートリアル: インストルメンテーションを使ったコマンド ライン プロファイリング](../profiling/walkthrough-command-line-profiling-using-instrumentation.md)   
  [方法: Windows シンボル情報を参照する](../profiling/how-to-reference-windows-symbol-information.md)   
  [VSPerfReport](../profiling/vsperfreport.md)

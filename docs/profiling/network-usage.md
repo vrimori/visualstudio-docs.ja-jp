@@ -4,36 +4,19 @@ ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45fa397d-d7a1-4c4c-9c97-ede6c21643bd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
-ms.openlocfilehash: a8d9473804b42169b5b33795b023832b753837d0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/30/2017
-
+ms.openlocfilehash: 412b6c2a1dede7438fd5c1564229a0e67f5cf845
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>UWP アプリのネットワーク使用量を分析する
 Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http API](/uwp/api/windows.web.http) を使用して実行されたネットワーク操作についてのデータを収集します。 そのデータを分析すると、アクセスや認証の問題、不適切なキャッシュの使用、表示やダウンロードの低パフォーマンスなどの問題を解決するのに役立ちます。  
@@ -48,7 +31,7 @@ Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http A
   
 1.  Visual Studio でプロジェクトを開きます。  
   
-2.  **[デバッグ]、[パフォーマンス プロファイラー...]** の順にクリックします。 **[ネットワーク]** を選択し、**[開始]** をクリックします。  
+2.  **[デバッグ]、[パフォーマンス プロファイラー...]** の順にクリックします。**[ネットワーク]** を選択し、**[開始]** をクリックします。  
   
 3.  ネットワーク ツールは、アプリの HTTP トラフィックの収集を開始します。  
   
@@ -91,5 +74,8 @@ Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http A
 3.  ([本文] タブ内の) [応答の整形出力] ボタンは、コンテンツをさらに読みやすくして、JSON、XML、HTML、CSS、JavaScript、および TypeScript の応答のペイロードを解析できるようにします。  
   
 ## <a name="see-also"></a>関連項目  
- [デバッガーを使用して、または使用せずに、プロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md) [Visual Studio ブログ: Visual Studio のネットワーク検査の概要](http://go.microsoft.com/fwlink/?LinkId=535022)   
- [Channel 9 ビデオ: VS 診断ツール - 新しいネットワーク プロファイラー](http://channel9.msdn.com/Series/ConnectOn-Demand/206) [Visual Studio でのプロファイリング](../profiling/index.md) [機能のツアーのプロファイリング](../profiling/profiling-feature-tour.md)
+ [デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)  
+ [Visual Studio ブログ: Visual Studio のネットワーク インスペクターの紹介](http://go.microsoft.com/fwlink/?LinkId=535022)   
+ [Channel 9 ビデオ: Visual Studio 診断ツール - 新しいネットワーク プロファイラー](http://channel9.msdn.com/Series/ConnectOn-Demand/206)  
+ [Visual Studio のプロファイル](../profiling/index.md)  
+ [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)

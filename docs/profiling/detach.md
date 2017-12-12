@@ -1,56 +1,57 @@
 ---
-title: "Detach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Detach | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d9d1b52c-7f28-467d-b1e0-512afc4e46c9
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 97d48bdcfe663fe5434622775add890166663276
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Detach
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-VSPerfCmd.exe の **Detach** オプションを使用すると、指定したプロセス、またはすべてのプロセス \(何も指定しない場合\) からプロファイラーがデタッチされます。  プロファイリング実行は、サンプリング メソッドを使用して初期化されている必要があります。  
+# <a name="detach"></a>Detach
+VSPerfCmd.exe **Detach** オプションは、何も指定されていない場合、プロファイラーを指定のプロセスまたはすべてのプロセスから切断します。 サンプリング方法を利用し、プロファイリングを初期化しておく必要があります。  
   
- **Launch** オプションまたは **Attach** オプションを指定して開始されたプロファイリング実行は、**Detach** を使用して切り離すことができます。  後で **Attach** コマンドを使用することにより、プロファイラーを再アタッチできます。  
+ **Launch** オプションまたは **Attach** オプションを指定して開始したプロファイリングは、**Detach** で切断できます。 後続の **Attach** コマンドでプロファイラーを再接続できます。  
   
- **Detach** は、プロファイル データ ファイルを閉じません。  プロファイリング実行を終了し、データ ファイルを閉じるには、**Shutdown** オプションを使用します。  
+ **Detach** では、プロファイリング データ ファイルは閉じられません。 プロファイリングを終了し、データ ファイルを閉じるには、**Shutdown** オプションを使用します。  
   
 > [!NOTE]
->  **Start** オプションと共に **Crosssession** オプションが指定されている場合は、**VSPerfCmd \/Attach** または **VSPerfCmd \/Detach** への呼び出しでも **Crosssession** を指定する必要があります。  
+>  **Start** オプションを **Crosssession** オプションと共に指定した場合、**VSPerfCmd /Attach** または **VSPerfCmd /Detach** を呼び出すには **Crosssession** も指定する必要があります。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 VSPerfCmd.exe /Detach[:PIDs|ProcessNames]  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `PIDs|ProcessNames`  
- `PID` \- 1 つ以上のプロセスの数値のシステム ID。  
+ `PID` - 1 つまたは複数のプロセスの数字のシステム識別子。  
   
- `ProcessNames` \- プロセスの名前。  この名前付きのプロセスの複数インスタンスが実行中の場合、結果は予測できません。  
+ `ProcessNames` - プロセスの名前。 名前付きプロセスの複数のインスタンスが実行されている場合、結果は予想できません。  
   
  複数のプロセスを指定するときは、コンマで区切ります。  
   
- プロセスが指定されない場合、プロファイルされているすべてのプロセスからプロファイラーがデタッチされます。  
+ プロセスが指定されていない場合、プロファイリングされているすべてのプロセスからプロファイラーが切断されます。  
   
-## 有効なオプション  
- **Attach** オプションと組み合わせて 1 行のコマンド ラインで指定できる **VSPerfCmd** オプションを次に示します。  
+## <a name="valid-options"></a>有効なオプション  
+ **Attach** オプションと組み合わせて単一コマンド ラインで指定できる **VSPerfCmd** オプションを以下に示します。  
   
  **Crosssession**  
- ログオン セッション以外のセッションにおけるアプリケーションのプロファイリングを有効にします。  **Start** オプションと共に **Crosssession** オプションが指定された場合は必須です。  
+ ログオン セッション以外のセッションでプロファイリング アプリケーションを有効にします。 **Start** オプションが **Crosssession** オプションと共に指定された場合、必須です。  
   
-## 使用例  
- この例では、**Detach** コマンドでプロファイリング実行が中断され、**Shutdown** コマンドでプロファイラー データ ファイルが閉じられます。  
+## <a name="example"></a>例  
+ この例では、**Detach** コマンドはプロファイリングを一時停止します。**Shutdown** コマンドはプロファイラー データ ファイルを閉じます。  
   
 ```  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
@@ -60,8 +61,8 @@ VSPerfCmd.exe /Detach
 VSPerfCmd.exe /Shutdown  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [スタンドアロン アプリケーションのプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [プロファイリング \(サービスの\)](../profiling/command-line-profiling-of-services.md)
+ [プロファイリング (サービスの)](../profiling/command-line-profiling-of-services.md)

@@ -1,53 +1,53 @@
 ---
-title: "/Edit (devenv.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "/Edit Devenv スイッチ"
-  - "Devenv, /edit スイッチ"
+title: -Edit (devenv.exe) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Devenv, /edit switch
+- /Edit Devenv swtich
 ms.assetid: 02b3d6e7-a2b1-4d83-a747-aa8c2fb758b7
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 05a43cbe880244da1abbb117d23fd928c60da9b9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# /Edit (devenv.exe)
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="edit-devenvexe"></a>/Edit (devenv.exe)
 指定されたファイルを [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の既存のインスタンスで開きます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 Devenv /edit [file1[ file2]]  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  `file1`  
- 省略可能です。  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の既存のインスタンスで開くファイルです。  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のインスタンスが存在しない場合は、簡略化されたウィンドウ レイアウトで新しいインスタンスが作成され、この新しいインスタンスで `file1` が開かれます。  
+ 省略可能です。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の既存のインスタンスで開くファイル。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のインスタンスが存在していない場合は、簡略化されたウィンドウ レイアウトで新しいインスタンスが作成され、新しいインスタンスで `file1` が開かれます。  
   
  `file2`  
- 省略可能です。  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の既存のインスタンスで開く 1 つ以上の追加ファイルです。  
+ 省略可能です。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の既存インスタンスで開く 1 つ以上の追加ファイル。  
   
-## 解説  
- ファイルが指定されず、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の既存のインスタンスが存在する場合は、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の既存のインスタンスがフォーカスを受け取ります。  ファイルが指定されず、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の既存のインスタンスも存在しない場合は、簡略化されたウィンドウ レイアウトで [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の新しいインスタンスが作成されます。  
+## <a name="remarks"></a>コメント  
+ ファイルが指定されておらず、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の既存のインスタンスがある場合は、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の既存のインスタンスがフォーカスを取得します。 ファイルが指定されておらず、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の既存のインスタンスがない場合は、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の新しいインスタンスが簡略化されたウィンドウ レイアウトで作成されます。  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の既存のインスタンスがモーダル状態である \(たとえば、[&#91;オプション&#93; ダイアログ ボックス](../../ide/reference/options-dialog-box-visual-studio.md)が開いている\) 場合は、モーダル状態が終了したときに、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の既存のインスタンスでファイルが開かれます。  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の既存のインスタンスがモーダル状態の場合 (たとえば、[[オプション] ダイアログ ボックス](../../ide/reference/options-dialog-box-visual-studio.md)が開かれている場合)、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] がモーダル状態を終了すると、ファイルが既存のインスタンスで開かれます。  
   
-## 使用例  
- 次の例では、`MyFile.cs` ファイルを [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の既存のインスタンスで開きます。既存のインスタンスが存在しない場合は、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の新しいインスタンスでファイルを開きます。  
+## <a name="example"></a>例  
+ この例では、ファイル `MyFile.cs` が [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の既存インスタンスで開かれるか、またはインスタンスがまだ存在しない場合は [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の新しいインスタンスでファイルが開かれます。  
   
 ```  
 devenv /edit MyFile.cs  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)

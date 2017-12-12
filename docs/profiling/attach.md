@@ -1,82 +1,83 @@
 ---
-title: "Attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Attach | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 79614283-6733-4592-a53a-d428052271ad
-caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: cbba99fd39bff8364e7853cd8d0f73f0e567e1d4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Attach
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-VSPerfCmd.exe の **Attach** オプションは、プロセス ID \(PID\) で指定された実行中のプロセスのサンプル プロファイルを開始します。  
+# <a name="attach"></a>Attach
+VSPerfCmd.exe **Attach** オプションは、プロセス ID (PID) によって指定された実行プロセスのサンプル プロファイリングを開始します。  
   
  **Attach** オプションを使用するには、Start オプションで **Sample** メソッドを指定する必要があります。  
   
 > [!NOTE]
->  **Start** オプションと共に **Crosssession** オプションが指定されている場合は、**VSPerfCmd \/Attach** または **VSPerfCmd \/Detach** への呼び出しでも **Crosssession** を指定する必要があります。  
+>  **Start** オプションを **Crosssession** オプションと共に指定した場合、**VSPerfCmd /Attach** または **VSPerfCmd /Detach** を呼び出すには **Crosssession** も指定する必要があります。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 VSPerfCmd.exe /Attach:ProcessID [Options]  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ProcessID`  
- 実行中のプロセスのプロセス ID \(PID\)。  実行中のプロセスの PID は、Windows タスク マネージャーの \[プロセス\] タブに表示されます。  
+ 実行プロセスのプロセス ID (PID)。 実行プロセスの PID は、Windows タスク マネージャーの [プロセス] タブに一覧表示されます。  
   
-## 有効なオプション  
- **Attach** オプションと組み合わせて 1 行のコマンド ラインで指定できる **VSPerfCmd** オプションを次に示します。  
+## <a name="valid-options"></a>有効なオプション  
+ **Attach** オプションと組み合わせて単一コマンド ラインで指定できる **VSPerfCmd** オプションを以下に示します。  
   
  **Crosssession**  
- ログオン セッション以外のセッションにおけるアプリケーションのプロファイリングを有効にします。  **Start** オプションと共に **Crosssession** オプションが指定された場合は必須です。  
+ ログオン セッション以外のセッションでプロファイリング アプリケーションを有効にします。 **Start** オプションが **Crosssession** オプションと共に指定された場合、必須です。  
   
  **Start:** `Method`  
  コマンド ライン プロファイラー セッションを初期化し、指定されたプロファイル方法を設定します。  
   
  **TargetCLR**  
- プロファイル セッションに複数バージョンの .NET Framework 共通言語ランタイム \(CLR: Common Language Runtime\) が読み込まれている場合に、プロファイルを行う CLR のバージョンを指定します。  既定では、最初に読み込まれたバージョンがプロファイルされます。  
+ プロファイル セッションに複数バージョンの .NET Framework 共通言語ランタイム (CLR) が読み込まれている場合に、プロファイルを行う CLR のバージョンを指定します。 既定では、最初に読み込まれたバージョンがプロファイルされます。  
   
  **GlobalOn GlobalOff**  
- プロファイリングを再開 \(**GlobalOn**\) または一時停止 \(**GlobalOff**\) しますが、プロファイル セッションは終了しません。  
+ プロファイリングを再開 (**GlobalOn**) または一時停止 (**GlobalOff**) しますが、プロファイル セッションは終了しません。  
   
  **ProcessOn:** `PID` **ProcessOff:** `PID`  
- 指定されたプロセスのプロファイリングを再開 \(**ProcessOn**\) または一時停止 \(**ProcessOff**\) します。  
+ 指定されたプロセスのプロファイリングを再開 (**ProcessOn**) または一時停止 (**ProcessOff**) します。  
   
-## 間隔オプション  
- Attach のコマンド ラインでは、次のサンプリング間隔オプションのうちのいずれか 1 つを指定できます。  既定のサンプリング間隔は、プロセッサのクロック サイクル数 10,000,000 です。  
+## <a name="interval-options"></a>間隔のオプション  
+ Attach コマンド ラインでは、次のサンプリング間隔オプションのいずれかを指定できます。 既定のサンプリング間隔は、10,000,000 プロセッサ クロック サイクルです。  
   
- **Timer**\[**:**`Cycles`\]**PF**\[**:**`Events`\]**Sys**\[**:**Events\]**Counter**\[**:**`Name`,`Reload`,`FriendlyName`\]  
+ **Timer**[**:**`Cycles`]**PF**[**:**`Events`]**Sys**[**:**Events]**Counter**[**:**`Name`,`Reload`,`FriendlyName`]  
  サンプリング間隔の数値と種類を指定します。  
   
--   **Timer**: プロセッサのクロック サイクル数が `Cycles` で指定された回数に到達するたびにサンプリングを行います。  `Cycles` が指定されていない場合は、10,000,000 サイクルに設定されます。  
+-   **Timer** - すべての `Cycles` プロセッサ クロック サイクルごとにサンプリングを行います。 `Cycles` が指定されていない場合、10,000,000 サイクルが使用されます。  
   
--   **PF**: ページ フォールト数が `Events` で指定された回数に到達するたびにサンプリングを行います。  `Events` が指定されていない場合は、ページ フォールト数 10 回に設定されます。  
+-   **PF** - `Events` のページ フォールトごとにサンプリングを行います。 `Events` が指定されていない場合は、10 ページ フォールトが使用されます。  
   
--   **Sys**: オペレーティング システムへの呼び出しが `Events` で指定された回数に到達するたびにサンプリングを行います。  `Events` が指定されていない場合は、システム コール 10 回に設定されます。  
+-   **Sys** - オペレーティング システムへの `Events` の呼び出しごとにサンプリングを行います。 `Events` が指定されていない場合は、10 システム呼び出しが使用されます。  
   
--   **Counter**: `Name` で指定された CPU のパフォーマンス カウンターが、`Reload` で指定された数値に到達するたびにサンプリングを行います。  オプションとして、`FriendlyName` でプロファイラー レポート内の列ヘッダーとして使用する文字列を指定できます。  
+-   **Counter** - `Name` で指定された CPU パフォーマンス カウンターの `Reload` の数値ごとにサンプリングを行います。 必要に応じて、`FriendlyName` でプロファイラー レポート内の列ヘッダーとして使用する文字列を指定できます。  
   
-## 使用例  
- 次の例では、アプリケーションの実行中のインスタンス \(プロセス ID 12345\) にプロファイラーをアタッチする方法を示します。  
+## <a name="example"></a>例  
+ この例では、プロセス ID が 12345 のアプリケーションの実行インスタンスにアタッチする方法を示しています。  
   
 ```  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Attach:12345  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [スタンドアロン アプリケーションのプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [プロファイリング \(サービスの\)](../profiling/command-line-profiling-of-services.md)
+ [プロファイリング (サービスの)](../profiling/command-line-profiling-of-services.md)

@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio for Mac のアンインストール"
+title: "Visual Studio for Mac のアンインストール | Microsoft Docs"
 description: "Visual Studio for Mac と関連ツールをアンインストールする方法を説明します。"
 author: asb3993
 ms.author: amburns
@@ -7,14 +7,12 @@ ms.date: 04/14/2017
 ms.topic: article
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
+ms.openlocfilehash: f1e94d08addc4045bfda9ffa34b77755a0a54a89
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 6d021192e8104ec520aa057173d9dec41a62dfd3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="uninstalling-visual-studio-for-mac"></a>Visual Studio for Mac のアンインストール
 
 Visual Studio for Mac のようなスタンドアロン アプリなど、クロスプラットフォーム アプリケーション開発が可能な Xamarin 製品がいくつかあります。
@@ -43,8 +41,8 @@ Xamarin Studio をコンピューターにインストールしてある場合�
 3. スクリプトを実行可能にして、**sudo** で実行します。
 
     ```bash
-    $ chmod +x ./xamarin_uninstall.sh
-    $ sudo ./xamarin_uninstall.sh
+    $ chmod +x ./uninstall-vsmac.sh
+    $ sudo ./uninstall-vsmac.sh
     ```
 4. 最後に、アンインストール スクリプトを削除します。
 
@@ -183,4 +181,3 @@ rm -rf ~/Library/Logs/VisualStudioInstaller/
 rm -rf ~/Library/Preferences/Xamarin/
 rm -rf "~/Library/Preferences/Visual Studio/"
 ```
-

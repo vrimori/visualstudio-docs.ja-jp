@@ -1,23 +1,27 @@
 ---
-title: "Windows スクリプト インターフェイス | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Microsoft スクリプト インターフェイス | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4c750627-6797-4857-9f5e-e5f54371f83c
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 200a1ac1bf273e2515e1e17b6f83c2020ff9884d
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# Windows スクリプト インターフェイス
-Microsoft Windows のスクリプトのインターフェイスは、スクリプトを記述し、OLE オートメーション アプリケーションを追加する方法を提供します。  Windows のスクリプトに依存するスクリプト ホストはコンポーネント間でのスクリプトの実行の管理に複数のソースおよび販売元からスクリプト エンジンを使用できます。  スクリプト自体の言語、構文、永続的なファイル形式、実行モデルの実装は、スクリプトの販売元に、をオン任せられ。  
+# <a name="windows-script-interfaces"></a>Windows スクリプト インターフェイス
+Microsoft Windows スクリプト インターフェイスでは、アプリケーションにスクリプトと OLE オートメーションを追加する手段を提供します。 Windows スクリプトに依存しているスクリプト ホストは、複数のソースおよびベンダーからのスクリプト エンジンを使用して、コンポーネント間のスクリプトを管理することができます。 スクリプト自体の実装 (言語、構文、永続的な形式、実行モデルなど) はスクリプト ベンダーに任されます。  
   
- Windows のスクリプト ドキュメントは、次のセクションに分かれています:  
+ Windows スクリプト ドキュメントは、次のセクションに分かれています。  
   
  [Windows スクリプト ホスト](../winscript/windows-script-hosts.md)  
   
@@ -29,60 +33,60 @@ Microsoft Windows のスクリプトのインターフェイスは、スクリ�
   
  [Windows スクリプト インターフェイスのリファレンス](../winscript/reference/windows-script-interfaces-reference.md)  
   
-## Windows スクリプトのバックグラウンド  
- Windows スクリプトのインターフェイスは 2 種類に分類されます: Windows スクリプトのホストは、エンジンと Windows スクリプトの作成。  ホストは、エンジンのスクリプトを実行するスクリプト エンジンと呼び出しを作成します。  Windows スクリプトのホストの例は次のとおりです。:  
+## <a name="windows-script-background"></a>Windows スクリプトの背景  
+ Windows スクリプト インターフェイスは、Windows スクリプト ホストと Windows スクリプト エンジンという 2 つのカテゴリに分類されます。 ホストは、スクリプト エンジンを作成し、スクリプトを実行するためにエンジンで呼び出します。 Windows スクリプト ホストの例は次のとおりです。  
   
 -   Microsoft Internet Explorer  
   
--   インターネット ツールの作成  
+-   インターネット オーサリング ツール  
   
 -   Shell  
   
- Windows のスクリプト エンジンは、言語またはランタイム環境で開発することができます。次のものが含まれています:  
+ Windows スクリプト エンジンは、次のものを含む任意の言語またはランタイム環境向けに開発できます。  
   
--   Microsoft Visual Basic Scripting Edition \(VBScript\)  
+-   Microsoft Visual Basic Scripting Edition (VBScript)  
   
 -   Perl  
   
 -   Lisp  
   
- ホストの実装を行うには、できる限り柔軟で、Windows のスクリプトの OLE オートメーションのラッパーが用意されています。  ただし、Windows のスクリプトを直接使用している場合は、スクリプト エンジンをインスタンス化するには、このラッパー オブジェクトを使用してホストにランタイムの名前空間、永続化モデルのコントロールの度合いが、などありません。  
+ ホストの実装をできる限り柔軟にするために、Windows スクリプト用の OLE オートメーション ラッパーが提供されています。 ただし、このラッパー オブジェクトを使用してスクリプト エンジンをインスタンス化するホストは、Windows スクリプトを直接使用する場合とは異なり、ランタイム名前空間、永続化モデルなどを細かく制御できません。  
   
- Windows スクリプトのデザインは \(ブラウザーやビューアーなどのホスト nonauthoring ように編集環境でのみ必要なインターフェイス要素を分離すると、スクリプト エンジン \(VBScript\) 軽量保持できます。  
+ Windows スクリプトのデザインは、オーサリング環境でのみ必要なインターフェイス要素を分離するので、非オーサリング ホスト (ブラウザーやビューアーなど) とスクリプト エンジン (たとえば、VBScript) の軽量さを維持することができます。  
   
-## Windows スクリプトの基本アーキテクチャ  
- 次の図は、Windows スクリプトのホストと Windows スクリプト エンジンの間の相互作用を示します。  
+## <a name="windows-script-basic-architecture"></a>Windows スクリプトの基本的なアーキテクチャ  
+ 次の図は、Windows スクリプト ホストと Windows スクリプト エンジン間の相互作用を示しています。  
   
- エンジンとホストの間の相互作用に関する手順は次の一覧に示します。  
+ ホストとエンジン間の相互作用に必要な手順が次の一覧に示されています。  
   
-1.  プロジェクトを作成します。  ホストは、プロジェクトまたはドキュメントを読み込みます。  この手順は、Windows のスクリプトに固有では、期すために、ここに含まれます。\)  
+1.  プロジェクトを作成します。 プロジェクトがプロジェクトまたはドキュメントを読み込みます。 (この手順は、Windows スクリプトに固有ではありませんが、完全を期すために含まれています)。  
   
-2.  Windows のスクリプト エンジンを作成します。  使用する特定のスクリプト エンジンのクラス ID \(CLSID\) を指定する新しいウィンドウのスクリプト エンジンを作成するホストでは `CoCreateInstance`。  たとえば、Internet Explorer の HTML ブラウザーは、HTML の \<OBJECT\> のタグの CLSID\= の属性でスクリプト エンジンのクラス ID を受け取ります。  
+2.  Windows スクリプト エンジンを作成します。 ホストが `CoCreateInstance` を呼び出して新しい Windows スクリプト エンジンを作成し、使用する特定のスクリプト エンジンのクラス ID (CLSID) を指定します。 Internet Explorer の HTML ブラウザーが、HTML \<OBJECT> タグの CLSID= 属性を通じてスクリプト エンジンのクラス ID を受け取ります。  
   
-3.  スクリプトを読み込みます。  スクリプトの内容が保持されている場合、ホストは、スクリプトのストレージ、ストリーム、またはプロパティ バッグにするために、スクリプト エンジンの `IPersist*::Load` のメソッドを呼び出します。  それ以外の場合は、ホストは `IPersist*::InitNew` または null のスクリプトを作成するには [IActiveScriptParse::InitNew](../winscript/reference/iactivescriptparse-initnew.md) のメソッドを使用します。  スクリプト エンジンにスクリプトのテキストに与えるためにテキストが [IActiveScriptParse::ParseScriptText](../winscript/reference/iactivescriptparse-parsescripttext.md) を使用できるようにスクリプトを保持する `IActiveScriptParse::InitNew`を呼び出した後に、ホスト。  
+3.  スクリプトを読み込みます。 スクリプトの内容が永続化されている場合、ホストは、スクリプト エンジンの `IPersist*::Load` メソッドを呼び出して、スクリプト ストレージ、ストリーム、またはプロパティ バッグにフィードします。 それ以外の場合、ホストは、`IPersist*::InitNew` または [IActiveScriptParse::InitNew](../winscript/reference/iactivescriptparse-initnew.md) メソッドを使用して、null スクリプトを作成します。 スクリプトをテキストとして保持するホストは、[IActiveScriptParse::ParseScriptText](../winscript/reference/iactivescriptparse-parsescripttext.md) を使用して、`IActiveScriptParse::InitNew` を呼び出した後で、スクリプトのテキストをスクリプト エンジンにフィードすることができます。  
   
-4.  名前付きの項目を追加します。  スクリプト エンジンの名前空間にインポートそれぞれのトップレベルの項目の名前には、\(ページとフォームなど\) ホストは、エンジンの名前空間のエントリを作成するには [IActiveScript::AddNamedItem](../winscript/reference/iactivescript-addnameditem.md) のメソッドを呼び出します。  この手順では、名前付きのトップレベルの項目が既に手順 3.で読み込まれたスクリプトの永続的な状態の一部である場合は必要ではありません。  ホストは中段で、項目を追加するには `IActiveScript::AddNamedItem` を使用しません \(HTML ページのコントロールなど\) ; なく、エンジンは、ホストの `ITypeInfo` と `IDispatch` のインターフェイスを使用して間接的にトップレベルの項目から中段の項目を取得します。  
+4.  名前付きの項目の追加 スクリプト エンジンの名前空間にインポートされる各最上位レベルの名前付き項目 (ページやフォームなど) について、ホストは、[IActiveScript::AddNamedItem](../winscript/reference/iactivescript-addnameditem.md) メソッドを呼び出して、エンジンの名前空間内にエントリを作成します。 最上位レベルの名前付き項目が、既に手順 3. で読み込まれたスクリプトの永続的な状態の一部になっている場合は、この手順は必要ではありません。 ホストが `IActiveScript::AddNamedItem` を使用してサブレベルの名前付き項目 (HTML ページ上のコントロールなど) を追加するのではなく、エンジンが、ホストの `ITypeInfo` および `IDispatch` インターフェイスを使用して最上位レベルの項目からサブレベルの項目を間接的に取得します。  
   
-5.  スクリプトを実行します。  ホストは、エンジンは [IActiveScript::SetScriptState](../winscript/reference/iactivescript-setscriptstate.md) のメソッドの SCRIPTSTATE\_CONNECTED のフラグを設定してスクリプトの実行が開始します。  この呼び出しは `main()` のスクリプト化された関数と同様の方法で、スクリプト エンジンのアーキテクチャ工事を、イベント \(下記参照\) にしたり、コードを実行する静的な束縛が実行されます。  
+5.  スクリプトを実行します。 ホストは、[IActiveScript::SetScriptState](../winscript/reference/iactivescript-setscriptstate.md) メソッドで SCRIPTSTATE_CONNECTED フラグを設定することによってエンジンでスクリプトの実行を開始させます。 この呼び出しが、静的バインド、イベントのフック (以下参照)、コードの実行などのスクリプト エンジンの構築作業を行う場合があります。これはスクリプト化された `main()` 関数の方法と似ています。  
   
-6.  項目の情報を取得します。  スクリプト エンジンはトップレベルの項目とシンボルを関連付ける必要があるたびに特定の項目に関する情報を返す [IActiveScriptSite::GetItemInfo](../winscript/reference/iactivescriptsite-getiteminfo.md) のメソッドを呼び出します。  
+6.  項目情報を取得します。 スクリプトエンジンは、シンボルと最上位レベルの項目を関連付ける必要があるたびに、[IActiveScriptSite::GetItemInfo](../winscript/reference/iactivescriptsite-getiteminfo.md) メソッドを呼び出し、このメソッドは指定された項目に関する情報を返します。  
   
-7.  イベントをフックする。  実際のスクリプトを開始する前に、スクリプト エンジンは `IConnectionPoint` のインターフェイスを通じて関連するすべてのオブジェクトのイベントに接続します。  
+7.  イベントをフックします。 実際のスクリプトを開始する前に、スクリプト エンジンは、`IConnectionPoint`インターフェイスを介してすべての関連するオブジェクトのイベントに接続します。  
   
-8.  プロパティとメソッドを呼び出します。  スクリプトが実行されると、スクリプト エンジンは `IDispatch::Invoke` またはそのほかの標準 OLE データ バインディング機構を通じてメソッドへの参照と名前付きオブジェクトのプロパティを実現します。  
+8.  プロパティとメソッドを呼び出します。 スクリプトが実行されるときには、スクリプト エンジンが `IDispatch::Invoke` またはその他の標準の OLE バインディング メカニズムを使用して、名前付きのオブジェクトのメソッドとプロパティへの接続を実現します。  
   
-## Windows スクリプトの用語  
- このリストは、このドキュメントで使用するスクリプトを記述し、関連する用語の定義が含まれます。  
+## <a name="windows-script-terms"></a>Windows スクリプトの用語  
+ この一覧には、このドキュメントで使用されるスクリプトに関連する用語の定義が含まれています。  
   
-|語句|定義|  
-|--------|--------|  
-|オブジェクトをコード。|Visual Basic のフォームの分離モジュールなど、名前付きの項目、または名前付き項目に関連付けられた C \+\+.のクラスに関連付けられたスクリプト エンジンによって作成されたインスタンス。  できれば、サポート、OLE オートメーションのホストまたはそのほかの非スクリプトのエンティティが、コード オブジェクトを処理できる OLE のコンポーネント オブジェクト モデルの \(COM\) のオブジェクトです。|  
-|の項目|OLE COM オブジェクト \(ホストがスクリプトに興味深く、OLE オートメーションをサポートする場合は 1\)。  この例には、Web ブラウザーに HTML ページとブラウザー、および Microsoft Word 文書およびダイアログ含まれます。|  
-|スクリプト|スクリプト エンジンが実行するプログラムを構成するデータ。  スクリプトは `pcode`のテキスト、ブロック、またはマシン固有の実行可能コード バイトの部分が含まれている連続的な実行可能なデータである場合もあります。  ホストは `IPersist*` のインターフェイスの 1 回または [IActiveScriptParse](../winscript/reference/iactivescriptparse.md) のインターフェイスを通じてスクリプト エンジンにスクリプトを読み込みます。|  
-|スクリプト エンジン|スクリプトを処理する OLE オブジェクト。  スクリプト エンジンは [IActiveScript](../winscript/reference/iactivescript.md) と、オプションで、[IActiveScriptParse](../winscript/reference/iactivescriptparse.md) のインターフェイスを実装します。|  
-|スクリプト ホスト|Windows のスクリプト エンジンを所有するプログラムまたはアプリケーション。  ホストは [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) と、オプションで、[IActiveScriptSiteWindow](../winscript/reference/iactivescriptsitewindow.md) のインターフェイスを実装します。|  
-|スクリプトレット|取得するスクリプトの部分は [IActiveScriptParse](../winscript/reference/iactivescriptparse.md) のインターフェイスを通じてオブジェクトにアタッチします。  スクリプトレットの集計コレクションは、スクリプトです。|  
-|スクリプト言語|スクリプト \(VBScript など\)、その言語のセマンティクス記述される言語。|  
+|用語|定義|  
+|----------|----------------|  
+|コード オブジェクト|Visual basic でのフォームの背後にあるモジュール、名前付きの項目に関連付けられている C++ クラスなどの、名前付きの項目に関連付けられているスクリプト エンジンによって作成されたインスタンス。 これは、ホストまたはその他のスクリプト以外のエンティティがコード オブジェクトを操作できるように、OLE オートメーションをサポートする OLE コンポーネント オブジェクト モデル (COM) オブジェクトであることが望ましいと言えます。|  
+|名前付き項目|ホストがスクリプトに関連すると考える OLE COM オブジェクト (できれば OLE オートメーションをサポートするオブジェクト)。 たとえば、Web ブラウザーの HTML ページとブラウザー、Microsoft Word 文書の文書とダイアログ ボックスなどがあります。|  
+|スクリプト|スクリプト エンジンが実行するプログラムを構成するデータ。 スクリプトは、任意の連続する実行可能なデータであり、テキストの集まり、`pcode` のブロック、コンピューター固有の実行可能バイト コードなどが含まれます。 ホストは、`IPersist*`インターフェイスまたは [IActiveScriptParse](../winscript/reference/iactivescriptparse.md) インターフェイスのいずれかで、スクリプト エンジンにスクリプトを読み込みます。|  
+|スクリプト エンジン|スクリプトを処理する OLE オブジェクト。 スクリプト エンジンは、[IActiveScript](../winscript/reference/iactivescript.md) を実装し、必要に応じて [IActiveScriptParse](../winscript/reference/iactivescriptparse.md) インターフェイスを実装します。|  
+|スクリプティング ホスト|Windows スクリプト エンジンを所有しているアプリケーションまたはプログラム。 ホストは、[IActiveScriptSite](../winscript/reference/iactivescriptsite.md) を実装し、必要に応じて [IActiveScriptSiteWindow](../winscript/reference/iactivescriptsitewindow.md) インターフェイスを実装します。|  
+|スクリプトレット|[IActiveScriptParse](../winscript/reference/iactivescriptparse.md) インターフェイスを介してオブジェクトにアタッチされるスクリプトの一部。 スクリプトレットを集めたものがスクリプトです。|  
+|スクリプト言語|スクリプトの記述言語 (たとえば VBScript) とその言語のセマンティクスです。|  
   
-## 参照  
- [Windows Script Interfaces](../winscript/windows-script-interfaces.md)
+## <a name="see-also"></a>関連項目  
+ [Windows スクリプト インターフェイス](../winscript/windows-script-interfaces.md)

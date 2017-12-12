@@ -1,41 +1,25 @@
 ---
-title: "Visual Studio でのストア アプリの単体テストの作成および実行 | Microsoft Docs"
+title: "Visual Studio での UWP アプリの単体テストの作成および実行 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- unit tests
+helpviewer_keywords: unit tests
 ms.assetid: d3de7b31-0262-4373-ba84-e74eda7651e4
-caps.latest.revision: 26
+caps.latest.revision: "26"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 5535092565d5e200fbdff13ca26621fc11f5c439
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 5a6a1a314e837b441e2fc563baabf935659adcf8
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
-# <a name="create-and-run-unit-tests-for-a-store-app-in-visual-studio"></a>Visual Studio でのストア アプリの単体テストの作成および実行
-Visual Studio 2012 Express for Windows 8 単体テスト ツールは、ソフトウェア開発作業に単体テストを導入した開発者や開発チームをサポートするように設計されています。 単体テストは、Visual C#、Visual Basic、Visual C++ プロジェクトにおいて、クラスのメソッドの論理エラーを発見するための効率的で維持できる方法を開発者とテスト担当者に提供します。  
+# <a name="create-and-run-unit-tests-for-a-uwp-app-in-visual-studio"></a>Visual Studio での UWP アプリの単体テストの作成および実行
+Visual Studio 単体テスト ツールは、ソフトウェア開発作業に単体テストを導入した開発者や開発チームをサポートするように設計されています。 単体テストは、Visual C#、Visual Basic、Visual C++ プロジェクトにおいて、クラスのメソッドの論理エラーを発見するための効率的で維持できる方法を開発者とテスト担当者に提供します。  
   
 > [!NOTE]
 >  このセクションのトピックでは、Visual Studio 2012 Express for Windows 8 の機能について解説します。 Visual Studio Ultimate、VS Premium、および VS Professional には、単体テストの追加機能が備わっています。  
@@ -52,4 +36,3 @@ Visual Studio 2012 Express for Windows 8 単体テスト ツールは、ソフ�
  [C++ DLL の単体テスト](../test/unit-testing-a-visual-cpp-dll-for-store-apps.md)  
   
  [テスト エクスプローラーでの単体テストの実行](../test/run-unit-tests-for-store-apps-in-visual-studio.md)
-

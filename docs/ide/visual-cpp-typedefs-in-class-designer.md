@@ -4,40 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.classdesigner.typedef
 - vs.classdesigner.aliasofline
-helpviewer_keywords:
-- Class Designer [Visual Studio], typedefs
+helpviewer_keywords: Class Designer [Visual Studio], typedefs
 ms.assetid: c1984108-71fc-4d3a-b4d4-3eac2c6b4ebf
-caps.latest.revision: 12
-author: kempb
-ms.author: kempb
+caps.latest.revision: "12"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: efaec77b5d3a2fb52859ff08fe31aa6f35e4263b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: d6df83d459165b4814fcac129bc36b64d821efb6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="visual-c-typedefs-in-class-designer"></a>クラス デザイナーにおける Visual C++ の typedef
 typedef ステートメントは、名前とその基になる型との間に間接参照のレイヤーを 1 つ以上作成します。 クラス デザイナーでは、キーワード `typedef` などで宣言される C++ の typedef 型をサポートしています。  
@@ -66,7 +49,7 @@ typedef class coord
 };  
 ```  
   
- `typedef` 型の使用法の詳細については、「[(NOTINBUILD) typedef 指定子](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)」を参照してください。  
+ `typedef` 型の使用の詳細については、「[typedef 指定子](https://msdn.microsoft.com/en-us/library/05w82thz.aspx)」を参照してください。  
   
  C++ の typedef 図形には、typedef で指定された型の図形があります。 たとえば、ソースで `typedef class` が宣言されている場合、図形の角が丸くなり、**Class** のラベルが付きます。 `typedef struct` の場合、図形の角は四角で、**Struct** のラベルが付きます。  
   
@@ -218,4 +201,4 @@ class A {
   
 ## <a name="see-also"></a>関連項目  
  [Visual C++ コードの使用 (クラス デザイナー)](../ide/working-with-visual-cpp-code-class-designer.md)   
- [(NOTINBUILD) typedef 指定子](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)
+ [typedef 指定子](https://msdn.microsoft.com/en-us/library/05w82thz.aspx)

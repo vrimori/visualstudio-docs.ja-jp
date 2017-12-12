@@ -4,37 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- msbuild, msbuild properties
+helpviewer_keywords: msbuild, msbuild properties
 ms.assetid: b9da45ae-d6a6-4399-8628-397deed31486
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: cf04644c98062ffb2aee5b4b826f8426070c3d60
-ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: f1a0f6df56cebe769ec514abea49ade0083c512e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="comparing-properties-and-items"></a>プロパティと項目の比較
 MSBuild のプロパティと項目は、いずれもタスクに情報を渡し、条件を評価し、プロジェクト ファイルで参照する値を格納しておくために使用されます。  
@@ -91,9 +74,9 @@ MSBuild のプロパティと項目は、いずれもタスクに情報を渡し
 ## <a name="properties-and-items-in-tasks"></a>タスクのプロパティと項目  
  プロパティと項目は、MSBuild タスクの入力と出力として使用されます。 詳細については、[タスク](../msbuild/msbuild-tasks.md)に関する記事を参照してください。  
   
- プロパティは属性としてタスクに渡されます。 タスク内の MSBuild プロパティは、値を文字列との間で変換できるプロパティの種類で表されます。 サポートされるプロパティの種類には、`bool`、`char`、`DateTime`、`Decimal`、`Double`、`int`、`string`、および <xref:System.Convert.ChangeType%2A> が処理できる任意の種類が含まれます。  
+ プロパティは属性としてタスクに渡されます。 タスク内の MSBuild プロパティは、値を文字列との間で変換できるプロパティの種類で表されます。 サポートされるプロパティの種類には、`bool`、`char`、`DateTime`、`Decimal`、`Double`、`int`、`string` に加え、<xref:System.Convert.ChangeType%2A> が処理できるあらゆる種類が含まれます。  
   
- 項目は <xref:Microsoft.Build.Framework.ITaskItem> オブジェクトとしてタスクに渡されます。 タスク内の <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> は項目の値を表し、<xref:Microsoft.Build.Framework.ITaskItem.GetMetadata%2A> はそのメタデータを取得します。  
+ 項目は <xref:Microsoft.Build.Framework.ITaskItem> オブジェクトとしてタスクに渡されます。 タスク内では、<xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> は項目の値を表し、<xref:Microsoft.Build.Framework.ITaskItem.GetMetadata%2A> はそのメタデータを取得します。  
   
  項目の種類の項目一覧は、`ITaskItem` オブジェクトの配列として渡すことができます。 .NET Framework 3.5 以降、`Remove` 属性を使用してターゲットの項目一覧から項目を削除できるようになりました。 項目は項目一覧から削除できるため、アイテムの種類の項目数が 0 個になる可能性があります。 項目一覧をタスクに渡す場合、タスクのコードでこの可能性をチェックする必要があります。  
   

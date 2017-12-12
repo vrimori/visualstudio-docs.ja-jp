@@ -1,44 +1,45 @@
 ---
 title: "MSBuild の特殊文字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "エスケープ"
-  - "エスケープ文字"
-  - "MSBuild エスケープ文字"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- escape characters
+- escape
+- MSBuild Escape Characters
 ms.assetid: 545e6a59-1093-4514-935e-78679a46fb3c
-caps.latest.revision: 8
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: 04b679ed649bc4fe01a2bccb08a8c5e137b6141d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# MSBuild の特殊文字
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、特定のコンテキストでの使用を目的として、いくつかの文字が予約されています。  そうした予約文字は、予約されているコンテキストでリテラル文字として使用する場合のみエスケープします。  たとえば、アスタリスクは項目定義の `Include` 属性と `Exclude` 属性、および `CreateItem` の呼び出しでのみ特別な意味を持ちます。  これらのコンテキストでアスタリスクをアスタリスクとして使用する場合は、エスケープする必要があります。  これらのコンテキスト以外では、アスタリスクをエスケープせずに記述できます。  
+# <a name="msbuild-special-characters"></a>MSBuild の特殊文字
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、特定の文脈で特別な使い方をするためにいくつかの文字が予約されています。 予約されている文脈でそのような文字を文字通り使用するには、エスケープする必要があります。 たとえば、アスタリスクは、項目定義の `Include` 属性と `Exclude` 属性、ならびに `CreateItem` の呼び出しで特別な意味を持ちます。 このような文脈でアスタリスクをアスタリスクとして表示するには、エスケープする必要があります。 その他の文脈では、アスタリスクを使う場所でそれを入力できます。  
   
- 特殊文字をエスケープするには、%*xx* という構文を使用します。*xx* は文字の ASCII 16 進値を表します。  詳細については、「[方法 : MSBuild で特殊文字をエスケープする](../msbuild/how-to-escape-special-characters-in-msbuild.md)」を参照してください。  
+ 特殊文字をエスケープするには、構文 %*xx* を使用します。*xx* は、文字の ASCII 16 進数値を表します。 詳しくは、「[方法 : MSBuild で特殊文字をエスケープする](../msbuild/how-to-escape-special-characters-in-msbuild.md)」をご覧ください。  
   
-## 特殊文字  
- 次の表は、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] の特殊文字の一覧です。  
+## <a name="special-characters"></a>特殊文字  
+ 次の表は、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] の特殊文字をまとめたものです。  
   
-|**文字**|**ASCII 文字。**|**予約の目的**|  
-|------------|-------------------|---------------|  
-|%|%25|メタデータの参照|  
-|$|%24|プロパティの参照|  
-|@|%40|項目リストの参照|  
-|'|%27|条件およびその他の式|  
-|;|%3B|リストの区切り記号|  
-|?|%3F|`Include` 属性および `Exclude` 属性でファイル名に使用するワイルドカード文字|  
-|\*|%2A|`Include` 属性および `Exclude` 属性でファイル名に使用するワイルドカード文字|  
+|**文字**|**ASCII**|**予約されている使用方法**|  
+|-------------------|---------------|------------------------|  
+|%|%25|メタデータを参照する|  
+|$|%24|プロパティを参照する|  
+|@|%40|項目一覧を参照する|  
+|'|%27|条件とその他の式|  
+|;|%3B|一覧の区切り記号|  
+|?|%3F|`Include` 属性と `Exclude` 属性のファイル名のワイルドカード文字|  
+|*|%2A|`Include` 属性と `Exclude` 属性のファイル名で使用するワイルドカード文字|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [詳細な概念](../msbuild/msbuild-advanced-concepts.md)   
  [項目](../msbuild/msbuild-items.md)

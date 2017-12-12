@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 08/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Projects.VCBuild
+f1_keywords: VS.ToolsOptionsPages.Projects.VCBuild
 helpviewer_keywords:
 - builds [Visual Studio], logs
 - build process [C++]
@@ -19,31 +17,15 @@ helpviewer_keywords:
 - extensions, files built by C or C++ compiler
 - BuildLog.htm
 ms.assetid: 56420efd-6a95-464e-b890-e2b38c48d66a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: b0ccfd3d526cee44a30c8d4c33030f2eb2a585e5
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
 ms.translationtype: HT
-ms.sourcegitcommit: ea1e787c1d509123a650cf2bd20e5fa8bffd5b4e
-ms.openlocfilehash: 2581fdecd9a26c8d4500f83b9abd0e1f967e2ee6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>[VC++ プロジェクトの設定] ([オプション] ダイアログ ボックス - [プロジェクトおよびソリューション])
 このダイアログ ボックスを使用すると、ログ、パフォーマンス、サポートするファイルの種類に関連する [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] のビルド設定とプロジェクト設定を定義できます。  
@@ -53,7 +35,6 @@ ms.lasthandoff: 09/26/2017
 1.  **[ツール]** メニューの **[オプション]**をクリックします。  
   
 2.  **[プロジェクトおよびソリューション]** をクリックし、**[VC++ プロジェクトの設定]** をクリックします。  
-  
  
 ## <a name="build-logging"></a>[ビルドのログ]  
  **はい**  
@@ -95,17 +76,13 @@ ms.lasthandoff: 09/26/2017
  **[すべてのファイルを表示]**  
   プロジェクト内のファイルとディスク上のファイルがプロジェクト フォルダー内に表示されるように、**ソリューション エクスプローラー**を構成します。  
 
-
 ## <a name="enable-project-caching"></a>プロジェクトのキャッシュを有効にする
-**[はい]** Visual Studio がプロジェクト データをキャッシュすることで、次にプロジェクトを開いたときにプロジェクト ファイルから再計算せずにキャッシュされたデータを読み込めるようになります。 キャッシュされたデータを使用すると、プロジェクトの読み込み時間を大幅に短縮できます。   
+**はい**  
+Visual Studio がプロジェクト データをキャッシュすることで、次にプロジェクトを開いたときにプロジェクト ファイルから再計算せずにキャッシュされたデータを読み込めるようになります。 キャッシュされたデータを使用すると、プロジェクトの読み込み時間を大幅に短縮できます。   
 
-**[いいえ]** キャッシュされたプロジェクト データを使用しません。 プロジェクトが読み込まれるたびにプロジェクト ファイルを解析します。
+**No**  
+キャッシュされたプロジェクト データを使用しません。 プロジェクトが読み込まれるたびにプロジェクト ファイルを解析します。
 
-
-  
-
-  
-#
 ## <a name="see-also"></a>関連項目  
  [C/C++ プログラムのビルド](/cpp/build/building-c-cpp-programs)   
  [C/C++ ビルドのリファレンス](/cpp/build/reference/c-cpp-building-reference)

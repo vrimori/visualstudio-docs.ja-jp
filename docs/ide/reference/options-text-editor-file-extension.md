@@ -4,42 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.toolsoptionspages.text_editor.file_extension
+f1_keywords: vs.toolsoptionspages.text_editor.file_extension
 helpviewer_keywords:
 - file extensions, associating to editor
 - Editing Experience
 - Options dialog box
 - Editing Experience, selecting
 ms.assetid: 05298fc5-fc4e-4bb2-b942-1f7d2dcdff0f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: 37e5b813482eae6c4d46051ed4b261594d9e5164
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: 68c2565540d8b22d659b40d5cab4a443cac6439f
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="options-text-editor-file-extension"></a>[オプション]、[テキスト エディター]、[ファイル拡張子]
 この [オプション] ダイアログでは、Visual Studio 統合開発環境 (IDE) で特定のファイル拡張子を持つすべてのファイルを処理する方法を指定できます。 入力した**拡張子**ごとに、[使用したエディター] を選択できます。 これにより、特定の種類の文書を開く IDE のエディターまたはデザイナーを選択できます。 オプションを表示するには、**[ツール]** メニューから **[オプション]** を選択し、**[テキスト エディター]** ノードを展開し、**[ファイル拡張子]** を選択します。  
@@ -62,7 +45,7 @@ ms.lasthandoff: 05/24/2017
  **削除**  
  拡張子一覧から選択したエントリを削除します。  
   
- [拡張子一覧]  
+ **[拡張子一覧]**  
  [使用したエディター] が指定されているすべての拡張子を一覧表示します。  
   
  **[拡張子のないファイルの割り当て先]**  

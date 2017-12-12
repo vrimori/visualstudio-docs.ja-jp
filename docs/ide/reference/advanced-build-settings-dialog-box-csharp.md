@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 06/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- cs.AdvancedBuildSettings
-helpviewer_keywords:
-- Build options [C#], advanced
+f1_keywords: cs.AdvancedBuildSettings
+helpviewer_keywords: Build options [C#], advanced
 ms.assetid: 141f2dee-1563-4ce6-ba37-32920b082519
-caps.latest.revision: 13
-author: kempb
-ms.author: kempb
+caps.latest.revision: "13"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b7b29ffadcb069b6c918dfbe89f0ae49d0da172a
-ms.openlocfilehash: a281313904bb8881d2e96065a024447d151cddbd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/20/2017
-
+ms.openlocfilehash: c7df850e46f8f5d81b9127a9885128452900b84b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="advanced-build-settings-dialog-box-c"></a>[ビルドの詳細設定] ダイアログ ボックス (C#)
 
@@ -46,8 +28,7 @@ ms.lasthandoff: 06/20/2017
 
  次のオプションを使用すると、全般的な詳細設定を有効にできます。
 
- **言語バージョン**
- 使用する言語のバージョンを指定します。 機能セットはバージョンによって異なるので、このオプションを使用して、コンパイラが特定の実装機能のみを許可するように強制したり、既存の標準と互換性のある機能のみを有効にしたりすることができます。 この設定には、次のオプションがあります。
+ **言語バージョン** 使用する言語のバージョンを指定します。 機能セットはバージョンによって異なるので、このオプションを使用して、コンパイラが特定の実装機能のみを許可するように強制したり、既存の標準と互換性のある機能のみを有効にしたりすることができます。 この設定には、次のオプションがあります。
 
  - **default**
 
@@ -72,8 +53,7 @@ ms.lasthandoff: 06/20/2017
 
  次のオプションを使用すると、詳細な出力オプションを指定できます。
 
- **デバッグ情報**
- コンパイラによって生成されるデバッグ情報の種類を指定します。 アプリケーションのデバッグ パフォーマンスを構成する方法については、「[イメージのデバッグの簡略化](http://msdn.microsoft.com/Library/7d90ea7a-150f-4f97-98a7-f9c26541b9a3)」を参照してください。 この設定には、次のオプションがあります。
+ **デバッグ情報** コンパイラによって生成されるデバッグ情報の種類を指定します。 アプリケーションのデバッグ パフォーマンスを構成する方法については、「[イメージのデバッグの簡略化](http://msdn.microsoft.com/Library/7d90ea7a-150f-4f97-98a7-f9c26541b9a3)」を参照してください。 この設定には、次のオプションがあります。
 
 - **none**
 
@@ -102,6 +82,4 @@ ms.lasthandoff: 06/20/2017
 
 ## <a name="see-also"></a>関連項目
 
- [C# コンパイラ オプション](/dotnet/csharp/language-reference/compiler-options/index)
- [[ビルド] ページ (プロジェクト デザイナー) (C#)](../../ide/reference/build-page-project-designer-csharp.md)
-
+ [C# コンパイラ オプション](/dotnet/csharp/language-reference/compiler-options/index) [[ビルド] ページ (プロジェクト デザイナー) (C#)](../../ide/reference/build-page-project-designer-csharp.md)

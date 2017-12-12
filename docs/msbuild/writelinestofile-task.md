@@ -1,54 +1,54 @@
 ---
-title: "WriteLinesToFile Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/msbuild/2003#WriteLinesToFile"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "WriteLinesToFile task [MSBuild]"
-  - "MSBuild, WriteLinesToFile task"
+title: "WriteLinesToFile タスク | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/msbuild/2003#WriteLinesToFile
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- WriteLinesToFile task [MSBuild]
+- MSBuild, WriteLinesToFile task
 ms.assetid: 9c8862ac-8da5-4437-9430-ecc30421f1c9
-caps.latest.revision: 9
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: 60b84cf967e92c1669cae9fbbcdabcc4e5acb159
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# WriteLinesToFile Task
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-指定するアイテムのパスを、指定するテキスト ファイルに書き込みます。  
+# <a name="writelinestofile-task"></a>WriteLinesToFile タスク
+指定したアイテムのパスを指定したテキスト ファイルに書き込みます。  
   
-## タスク パラメーター  
+## <a name="task-parameters"></a>タスク パラメーター  
  `WriteLinestoFile` タスクのパラメーターの説明を次の表に示します。  
   
-|パラメーター|Description|  
-|------------|-----------------|  
-|`File`|必須の <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> アイテムの書き込み先のファイルを指定します。|  
-|`Lines`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> ファイルに書き込むアイテムを指定します。|  
-|`Overwrite`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` に設定すると、ファイル内の既存の内容はすべて上書きされます。|  
-|`Encoding`|省略可能な `String` 型のパラメーターです。<br /><br /> 文字エンコーディング \("Unicode" など\) を選択します。  「<xref:System.Text.Encoding>」も参照してください。|  
+|パラメーター|説明|  
+|---------------|-----------------|  
+|`File`|必須の <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> 項目を書き込むファイルを指定します。|  
+|`Lines`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> ファイルに書き込む項目を指定します。|  
+|`Overwrite`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、タスクはファイル内の既存のコンテンツをすべて上書きします。|  
+|`Encoding`|省略可能な `String` 型のパラメーターです。<br /><br /> 文字エンコードを選択します。たとえば、"Unicode" を選択します。  「<xref:System.Text.Encoding>」も参照してください。|  
   
-## 解説  
- `Overwrite` が `true` の場合は、新しいファイルを作成し、内容をそのファイルに書き込んだ後、ファイルを閉じます。  既存のターゲット ファイルは上書きされます。  `Overwrite` が `false` の場合は、内容をターゲット ファイルに追加します。ターゲット ファイルがまだ存在しない場合は、ファイルが作成されます。  
+## <a name="remarks"></a>コメント  
+ `Overwrite` が `true` の場合、新しいファイルを作成し、内容をそのファイルに書き込んだ後、ファイルを閉じます。 既存のターゲット ファイルは上書きされます。 `Overwrite` が `false` の場合、ファイルにコンテンツを追加します。ターゲット ファイルがまだ存在しない場合は、ファイルを作成します。  
   
- 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。  これらの追加のパラメーターの一覧とその説明については、「[TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
-## 使用例  
- 次の例では、`WriteLinesToFile` タスクを使用して、`MyItems` アイテム コレクション内のアイテムのパスを `MyTextFile` アイテム コレクションで指定されたファイルに書き込んでいます。  
+## <a name="example"></a>例  
+ 次の例では、`WriteLinesToFile` タスクを利用し、`MyTextFile` 項目コレクションにより指定されたファイルに、`MyItems` 項目コレクションの項目のパスを書き込みます。  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
   
     <ItemGroup>  
@@ -67,6 +67,6 @@ caps.handback.revision: 9
 </Project>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
- [Task Reference](../msbuild/msbuild-task-reference.md)
+ [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)

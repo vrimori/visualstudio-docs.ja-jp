@@ -1,55 +1,55 @@
 ---
-title: "/LCID (devenv.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "/l DEVENV スイッチ"
-  - "/lcid Devenv スイッチ"
-  - "Devenv, /LCID スイッチ"
-  - "言語 (既定の)"
-  - "LCID devenv スイッチ"
-  - "ロケール ID"
-  - "ロケール ID, 設定 (IDE に対する)"
+title: -LCID (devenv.exe) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- language default
+- locale IDs, setting for IDE
+- Devenv, /LCID switch
+- locale IDs
+- /l Devenv switch
+- LCID devenv switch
+- /lcid Devenv switch
 ms.assetid: 3a3f4e70-ea66-4351-9d62-acb1dec30e8e
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: aa33b329002991c5629f3d48361c6f4fa3c694e0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# /LCID (devenv.exe)
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-統合開発環境 \(IDE: Integrated Development Environment\) 内の文字列、通貨、およびその他の値に使用する既定の言語を設定します。  
+# <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
+統合開発環境 (IDE) 内の文字列、通貨、およびその他の値に使用する既定の言語を設定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 devenv {/LCID|/l} LocaleID  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  `LocaleID`  
- 必ず指定します。  指定の言語のロケール ID \(LCID: Locale ID\) です。  
+ 必須です。 指定する言語の LCID (ロケール ID)。  
   
-## 解説  
- IDE を読み込み、環境で使用する既定の言語を設定します。  変更内容は複数のセッションを通じて保持され、IDE の **\[オプション\]** ダイアログ ボックスの **\[環境\]** にある **\[国際対応の設定\]** ペインに反映されます。  
+## <a name="remarks"></a>コメント  
+ IDE を読み込み、環境用の既定の自然言語を設定します。 この変更はセッション間で保持され、IDE の **[オプション]** ダイアログ ボックスにある **[環境]** オプションの **[国際対応の設定]** ウィンドウに反映されます。  
   
- 指定した言語がユーザーのシステムで使用できない場合、\/LCID スイッチは無視されます。  
+ 指定した言語がユーザーのシステムで使用できない場合、/LCID スイッチは無視されます。  
   
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] でサポートされる言語の LCID の一覧を次の表に示します。  
   
 |言語|LCID|  
-|--------|----------|  
+|--------------|----------|  
 |簡体字中国語|2052|  
-|繁体字中国語|1028|  
+|では |1028|  
 |英語|1033|  
 |フランス語|1036|  
 |ドイツ語|1031|  
@@ -58,14 +58,14 @@ devenv {/LCID|/l} LocaleID
 |韓国語|1042|  
 |スペイン語|3082|  
   
-## 使用例  
- 英語のリソース文字列を使用して IDE を読み込むコードは次のとおりです。  
+## <a name="example"></a>例  
+ この例では、英語のリソース文字列を使用して IDE を読み込みます。  
   
 ```  
 devenv /LCID 1033  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)   
- [\[国際対応の設定\] \(\[オプション\] ダイアログ ボックス \- \[環境\]\)](../Topic/International%20Settings,%20Environment,%20Options%20Dialog%20Box.md)   
+ [[国際対応の設定] \([オプション] ダイアログ ボックス - [環境])](../../ide/reference/international-settings-environment-options-dialog-box.md)   
  [ウィンドウ レイアウトをカスタマイズする](../../ide/customizing-window-layouts-in-visual-studio.md)

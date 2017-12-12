@@ -1,46 +1,29 @@
 ---
-title: "コード化された UI テストを使用した Windows UWP および 8.1 のストア アプリのテスト | Microsoft Docs"
+title: "コード化された UI テストを使用して Windows UWP アプリをテストする | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8d9c15e-ce3c-401a-86ec-c5c124a239d8
-caps.latest.revision: 23
+caps.latest.revision: "23"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9680f9886e4aeaefe8c476b7e9fff46fb3e24182
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
 ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2a9dc338ce3d08ac61ecc77da8df96d9261b7e62
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
-# <a name="test-windows-uwp-and-81-store-apps-with-coded-ui-tests"></a>コード化された UI テストを使用した Windows UWP および 8.1 のストア アプリのテスト
+# <a name="test-windows-uwp-apps-with-coded-ui-tests"></a>コード化された UI テストを使用して Windows UWP アプリをテストする
 
-このチュートリアルでは、UWP アプリと XAML ベースのストア 8.1 アプリの UI テストを作成します。 
+このチュートリアルでは、UWP アプリと XAML ベースの 8.1 アプリの UI テストを作成します。 
   
-## <a name="create-a-simple-windows-store-app"></a>簡単な Windows ストア アプリを作成する  
+## <a name="create-a-simple-uwp-app"></a>簡単な UWP アプリの作成  
   
-1.  XAML ベースの Windows ストア アプリ用のコード化された UI テストを実行する場合は、 [各コントロールを識別する一意のオートメーション プロパティを設定する](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)必要があります。  
+1.  XAML ベースの UWP アプリ用のコード化された UI テストを実行する場合は、 [各コントロールを識別する一意のオートメーション プロパティを設定する](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)必要があります。  
   
      **[ツール]** メニューの **[オプション]** をポイントし、 **[テキスト エディター]**、 **[XAML]**、 **[その他]**の順に選択します。  
   
@@ -48,13 +31,13 @@ ms.lasthandoff: 09/26/2017
   
      ![その他の XAML オプション](../test/media/cuit_windowsstoreapp_b.png "CUIT_WindowsStoreApp_B")  
   
-2.  Visual C# または Visual Basic テンプレートを使用して、空の XAML ベースの Windows ストア アプリ用の新しいプロジェクトを作成します。  
+2.  Visual C# または Visual Basic テンプレートを使用して、空の XAML ベースの UWP アプリ用の新しいプロジェクトを作成します。  
   
-     ![Windows ストアの空のアプリ &#40;XAML&#41; を作成する](../test/media/cuit_windowsstoreapp_newproject_blankstoreapp.png "CUIT_WindowsStoreApp_NewProject_BlankStoreApp")  
+     ![アプリ &#40;XAML&#41; を作成する](../test/media/cuit_windowsstoreapp_newproject_blankstoreapp.png "CUIT_WindowsStoreApp_NewProject_BlankStoreApp")  
   
 3.  ソリューション エクスプローラーで、MainPage.xaml を開きます。 ツールボックスから、ボタン コントロールとテキスト ボックス コントロールをデザイン サーフェイスにドラッグします。  
   
-     ![Windows ストア アプリをデザインする](../test/media/cuit_windowsstoreapp_design.png "CUIT_WindowsStoreApp_Design")  
+     ![UWP アプリをデザインする](../test/media/cuit_windowsstoreapp_design.png "CUIT_WindowsStoreApp_Design")  
   
 4.  ボタン コントロールをダブルクリックし、次のコードを追加します。  
   
@@ -76,15 +59,15 @@ ms.lasthandoff: 09/26/2017
     End Class  
     ```  
   
-5.  F5 キーを押して、Windows ストア アプリを実行します。  
+5.  F5 キーを押して UWP アプリを実行します。  
   
-## <a name="create-and-run-a-coded-ui-test-for-the-windows-store-app"></a>Windows ストア アプリのコード化された UI テストの作成と実行  
+## <a name="create-and-run-a-coded-ui-test-for-the-uwp-app"></a>UWP アプリのコード化された UI テストの作成と実行  
 
 [ユニバーサル Windows プラットフォーム (UWP) アプリ用のコード化された UI テストは、どのようにして作成できますか?](#uwpapps)
   
-1.  Windows ストア アプリの新しいコード化された UI テスト プロジェクトを作成します。  
+1.  UWP アプリの新しいコード化された UI テスト プロジェクトを作成します。  
   
-     ![新しいコード化された UI テスト プロジェクト &#40;Windows ストア アプリ&#41;](../test/media/cuit_windowsstore_newproject.png "CUIT_WindowsStore_NewProject")  
+     ![新しいコード化された UI テスト プロジェクト &#40;UWP アプリ&#41;](../test/media/cuit_windowsstore_newproject.png "CUIT_WindowsStore_NewProject")  
   
 2.  十字線ツールを使用して UI マップを編集することを選択します。  
   
@@ -94,7 +77,7 @@ ms.lasthandoff: 09/26/2017
   
      ![AutomationId をクリップボードにコピーする](../test/media/cuit_windows_store_tileautomationid.png "CUIT_Windows_Store_TileAutomationID")  
   
-4.  実行中の Windows ストア アプリで、十字線ツールを使用してボタン コントロールとテキスト ボックス コントロールを選択します。 各コントロールを追加した後、コード化された UI テスト ビルダーのツール バーの **[コントロールの UI コントロール マップへの追加]** を選択します。  
+4.  実行中の UWP アプリで、十字線ツールを使用してボタン コントロールとテキスト ボックス コントロールを選択します。 各コントロールを追加した後、コード化された UI テスト ビルダーのツール バーの **[コントロールの UI コントロール マップへの追加]** を選択します。  
   
      ![UI マップにコントロールを追加する](../test/media/cuit_windowsstoreapp_uimap.png "CUIT_WindowsStoreApp_UIMap")  
   
@@ -230,7 +213,7 @@ ms.lasthandoff: 09/26/2017
   
 11. ソリューション エクスプローラーで、CodedUITest1.cs ファイルまたは CodedUITest1.vb ファイルを開きます。 これで、UIMap に追加されるコントロールを使用してテストを実行する必要がある操作の CodedUTTestMethod1 メソッドにコードを追加できます。  
   
-    1.  前にクリップボードにコピーしたオートメーション ID プロパティを使用して、Windows ストア アプリを起動します。  
+    1.  前にクリップボードにコピーしたオートメーション ID プロパティを使用して、UWP アプリを起動します。  
   
         ```csharp  
         XamlWindow.Launch("8ebca7c4-effe-4c86-9998-068daccee452_cyrqexqw8cc7c!App")  
@@ -240,7 +223,7 @@ ms.lasthandoff: 09/26/2017
         XamlWindow myAppWindow = XamlWindow.Launch("7254db3e-20a7-424e-8e05-7c4dabf4f28d_cyrqexqw8cc7c!App");  
         ```  
   
-    2.  ボタン コントロールをタップするジェスチャを追加します。  
+    2.  ボタン コントロールをタップするジェスチャを追加します。ボタン コントロールをタップするジェスチャを追加します。  
   
         ```csharp  
         Gesture.Tap(this.UIMap.UIApp1Window. UIButtonButton);  
@@ -302,7 +285,7 @@ ms.lasthandoff: 09/26/2017
   
      ![コード化された UI テストをテスト エクスプローラーから実行する](../test/media/cuit_windowsstoreapp_runtest.png "CUIT_WindowsStoreApp_RunTest")  
   
-     Windows ストア アプリが起動し、ボタンをタップする操作が完了し、Assert メソッドを使用してテキスト ボックスの Text プロパティが設定され、検証されます。  
+     UWP アプリが起動し、ボタンをタップする操作が完了し、Assert メソッドを使用してテキスト ボックスの Text プロパティが設定され、検証されます。  
   
      ![コード化された UI テストの実行](../test/media/cuit_windowsstoreapp_running.png "CUIT_WindowsStoreApp_Running")  
   
@@ -314,13 +297,13 @@ ms.lasthandoff: 09/26/2017
   
 #### <a name="q-why-dont-i-see-the-option-to-record-my-coded-ui-test-in-the-generate-code-for-a-coded-ui-test-dialog"></a>Q: [コード化された UI テスト] ダイアログの [コードの生成] に、コード化された UI テストを記録するオプションが表示されないのはなぜですか?**  
   
-**A**: 記録するオプションは、Windows ストア アプリではサポートされません。  
+**A**: 記録するオプションは、UWP アプリではサポートされません。  
   
-#### <a name="q-can-i-create-a-coded-ui-test-for-my-windows-store-apps-based-on-winjs"></a>Q: WinJS ベースの Windows ストア アプリのコード化された UI テストを作成できますか?**  
+#### <a name="q-can-i-create-a-coded-ui-test-for-my-uwp-apps-based-on-winjs"></a>Q: WinJS ベースの UWP アプリのコード化された UI テストを作成できますか?**  
 
 **A**: いいえ、XAML ベースのアプリだけがサポートされます。  
   
-#### <a name="q-can-i-create-coded-ui-tests-for-my-windows-store-apps-on-a-system-that-is-not-running-windows-81-or-windows-10"></a>Q: Windows 8.1 または Windows 10 が実行されていないシステムで、Windows ストア アプリのコード化された UI テストを作成できますか?**  
+#### <a name="q-can-i-create-coded-ui-tests-for-my-uwp-apps-on-a-system-that-is-not-running-windows-81-or-windows-10"></a>Q: Windows 8.1 または Windows 10 が実行されていないシステムで、UWP アプリのコード化された UI テストを作成できますか?**  
   
 **A**: いいえ、できません。コード化された UI テスト プロジェクトのテンプレートは、Windows 8.1 および Windows 10 でのみ使用できます。 ユニバーサル Windows プラットフォーム (UWP) アプリ用にオートメーションを作成するには、Windows 10 が必要です。  
 
@@ -329,7 +312,7 @@ ms.lasthandoff: 09/26/2017
   
 **A**: コード化された UI テスト プロジェクトは、UWP アプリをテストしているプラットフォームに応じて、次のいずれかの方法で作成します。  
   
-- ローカル コンピューターで実行している UWP アプリは、ストア アプリとして実行されます。 このアプリをテストする場合、 **コード化された UI テスト プロジェクト (Windows)** のテンプレートを使用します。 新しいプロジェクトの作成時にこのテンプレートを検索するには、 **[Windows]**、 **[ユニバーサル]** ノードに移動します。 あるいは、 **[Windows]**、 **[Windows 8]**、 **[Windows]** ノードに移動します。  
+- ローカル コンピューターで実行している UWP アプリは、UWP アプリとして実行されます。 このアプリをテストする場合、 **コード化された UI テスト プロジェクト (Windows)** のテンプレートを使用します。 新しいプロジェクトの作成時にこのテンプレートを検索するには、 **[Windows]**、 **[ユニバーサル]** ノードに移動します。 あるいは、 **[Windows]**、 **[Windows 8]**、 **[Windows]** ノードに移動します。  
   
 - モバイル デバイスまたはエミュレーターで実行している UWP アプリは、Phone アプリケーションとして実行されます。 このアプリをテストする場合、 **コード化された UI テスト プロジェクト (Windows Phone)** のテンプレートを使用します。 新しいプロジェクトの作成時にこのテンプレートを検索するには、 **[Windows]**、 **[ユニバーサル]** ノードに移動します。 あるいは、 **[Windows]**、 **[Windows 8]**、 **[Windows Phone]** ノードに移動します。  
   
@@ -341,5 +324,4 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="see-also"></a>関連項目  
  [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   
- [テスト用に Windows ストア コントロールの一意のオートメーション プロパティを設定する](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)
-
+ [テスト用に UWP コントロールの一意のオートメーション プロパティを設定する](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)

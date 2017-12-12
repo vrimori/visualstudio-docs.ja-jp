@@ -1,56 +1,56 @@
 ---
 title: "コール ツリー ビュー | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.view.calltree"
-helpviewer_keywords: 
-  - "[呼び出しツリー] ビュー"
-  - "パフォーマンス レポート, [呼び出しツリー] ビュー"
-  - "プロファイル ツールのレポート, [呼び出しツリー] ビュー"
-  - "プロファイル ツール, [呼び出しツリー] ビュー"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.performance.view.calltree
+helpviewer_keywords:
+- Call Tree view
+- profiling tools reports, Call Tree view
+- performance reports, Call Tree view
+- profiling tools, Call Tree view
 ms.assetid: b2dbc033-bf95-4d10-8e51-f9462979133e
-caps.latest.revision: 34
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 34
+caps.latest.revision: "34"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 2e2e7369d57f7a23cf8467d8a8eb5c99447d35e1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# コール ツリー ビュー
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-\[コール ツリー\] ビューには、プロファイリングされるアプリケーションで走査された関数の実行パスが表示されます。  ツリーのルートは、アプリケーションまたはコンポーネントへのエントリ ポイントです。  各関数ノードは、呼び出したすべての関数と、その関数呼び出しに関するパフォーマンス データを表示します。  
+# <a name="call-tree-view"></a>コール ツリー ビュー
+[コール ツリー] ビューには、プロファイリングされるアプリケーションで走査された関数の実行パスが表示されます。 ツリーのルートは、アプリケーションまたはコンポーネントへのエントリ ポイントです。 各関数ノードは、呼び出したすべての関数と、その関数呼び出しに関するパフォーマンス データを表示します。  
   
- \[コール ツリー\] ビューでは、最も時間を消費した関数または最も頻繁にサンプリングされた関数の実行パスを展開および強調表示することもできます。  最もパフォーマンスに負荷のかかるパスを表示するには、関数を右クリックし、**\[ホット パスの展開\]** をクリックします。  
+ [コール ツリー] ビューでは、最も時間を消費した関数や最も頻繁にサンプリングされた関数の実行パスを展開したり強調表示したりすることもできます。 最もパフォーマンス負荷の高いパスを表示するには、関数を右クリックし、**[ホット パスの展開]** をクリックします。  
   
- プロファイリング実行の各プロセスは、ルート ノードとして表示されます。  コール ツリー ビューの開始ノードを設定するには、開始ノードとして設定するノードを右クリックし、**\[ルートの設定\]** をクリックします。  
+ プロファイル実行の各プロセスは、ルート ノードとして表示されます。 コール ツリー ビューの開始ノードを設定するには、開始ノードとして設定するノードを右クリックし、**[ルートの設定]** を選択します。  
   
- ルート ノードを設定すると、選択したノードのサブツリーを除く他のすべてのエントリはビューから除外されます。  ルート ノードをリセットして、表示していたノードに戻すことができます。  \[コール ツリー\] ビューのウィンドウで右クリックし、**\[ルートのリセット\]** をクリックします。  
+ ルート ノードを設定すると、選択したノードのサブツリーを除く他のすべてのエントリはビューから除外されます。 ルート ノードをリセットし、表示していたノードに戻すことができます。 コール ツリー ビュー ウィンドウで、右クリックし、**[ルートのリセット]** を選択します。  
   
- \[コール ツリー\] ビューは、列を追加または削除してカスタマイズできます。  **列名のタイトル バー**を右クリックし、**\[列の追加と削除\]** をクリックします。  
+ コール ツリー ビューをカスタマイズし、列を追加したり、削除したりできます。 **[Column Name Title Bar]\(列名タイトル バー\)** を右クリックし、**[列の追加と削除]** を選択します。  
   
- \[コール ツリー\] ビューは、表示するデータの数を制限して、ノイズを除去するように構成できます。  ノイズ除去を行うことで、ビューでパフォーマンスの問題を発見しやすくなります。  パフォーマンスの問題が特定しやすくなると、分析も容易になります。  詳細については、「[方法: レポート ビューでノイズ除去を設定する](../profiling/how-to-configure-noise-reduction-in-report-views.md)」を参照してください。  
+ コール ツリー ビューは、表示されるデータの数を制限して、ノイズを除去するように構成できます。 ノイズ除去を行うことで、ビューでパフォーマンスの問題を発見しやすくなります。 パフォーマンスの問題が発見しやすくなれば、分析が簡単になります。 詳細については、「[方法: レポート ビューでノイズ除去を設定する](../profiling/how-to-configure-noise-reduction-in-report-views.md)」を参照してください。  
   
 > [!NOTE]
->  ノイズ除去が有効になっているときに警告を表示するように構成すると、レポートに情報バーが表示されます。  
+>  有効にしたときに警告を表示するようにノイズ除去が構成されている場合、レポートに情報バーが表示されます。  
   
- コール ツリー ビューでの列の定義の詳細については、次を参照してください。  
+ コール ツリー ビューの列の定義については、以下をご覧ください。  
   
  [コール ツリー ビュー](../profiling/call-tree-view-sampling-data.md)  
   
  [コール ツリー ビュー](../profiling/call-tree-view-instrumentation-data.md)  
   
- [コール ツリー ビュー \- サンプリング](../profiling/call-tree-view-dotnet-memory-sampling-data.md)  
+ [コール ツリー ビュー - サンプリング](../profiling/call-tree-view-dotnet-memory-sampling-data.md)  
   
  [コール ツリー ビュー](../profiling/call-tree-view-contention-data.md)  
   
-## 参照  
- [プロファイル ツールのレポート ビュー](../profiling/performance-report-views.md)   
+## <a name="see-also"></a>関連項目  
+ [パフォーマンス レポートのビュー](../profiling/performance-report-views.md)   
  [インストルメンテーション データ値について](../profiling/understanding-instrumentation-data-values.md)   
  [サンプリング データ値について](../profiling/understanding-sampling-data-values.md)

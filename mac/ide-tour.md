@@ -1,19 +1,17 @@
 ---
-title: "Visual Studio for Mac ツアー"
+title: "Visual Studio for Mac のツアー | Microsoft Docs"
 description: "Visual Studio for Mac は、iOS、Android、Mac、Xamarin.Forms 用に、ASP.NET Core Web サイトや Xamarin プロジェクトなどの .NET アプリケーションを macOS 上で構築する統合開発環境 (IDE) として利用できます。"
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
+ms.openlocfilehash: 0f8f3ba04d4e5a8949bc57cb8cf61d470690d786
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 04f7ec6474aafedeccdbbf704486c431a4258f61
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="visual-studio-for-mac-tour"></a>Visual Studio for Mac ツアー
 
 Visual Studio for Mac は、Xamarin のモバイルを中心とした IDE である Xamarin Studio を、Mac 上のモバイル優先、クラウド優先の開発環境へと進化させました。 この開発者向けツールから .NET の機能を利用して、対象ユーザーに必要なすべてのプラットフォーム用アプリケーションを作成できます。

@@ -4,41 +4,24 @@ ms.custom: H1Hack27Feb2017
 ms.date: 02/27/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-f1_keywords:
-- vs.performance.wizard.intropage
+f1_keywords: vs.performance.wizard.intropage
 helpviewer_keywords:
 - Profiling Tools, quick start
 - performance tools, wizard
 - Performance Wizard
 ms.assetid: 85161cc4-18ee-49b3-9487-33680e687597
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a13701dd85cfc2339650ec2df641ac1f5f15e75f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 5c28e68b89f6583dc35a91b275693c11e0259dfd
-ms.openlocfilehash: 251b00c479c3853ba4fc00521f3e4cac74a93d27
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/13/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="beginners-guide-to-cpu-sampling"></a>CPU サンプリングの初心者向けガイド
 Visual Studio プロファイリング ツールを使用して、アプリケーションでパフォーマンスの問題を分析することができます。 以下の手順では、**サンプリング データ**の使用方法を示します。
@@ -144,4 +127,6 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 ## <a name="see-also"></a>関連項目  
  [パフォーマンス エクスプローラー](../profiling/performance-explorer.md)   
  [はじめに](../profiling/getting-started-with-performance-tools.md)   
- [概要](../profiling/overviews-performance-tools.md) [Visual Studio のプロファイル](../profiling/index.md) [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)
+ [概要](../profiling/overviews-performance-tools.md)  
+ [Visual Studio のプロファイル](../profiling/index.md)  
+ [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)

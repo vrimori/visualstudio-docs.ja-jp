@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- http://schemas.microsoft.com/developer/msbuild/2003#CreateItem
+f1_keywords: http://schemas.microsoft.com/developer/msbuild/2003#CreateItem
 dev_langs:
 - VB
 - CSharp
@@ -19,29 +17,15 @@ helpviewer_keywords:
 - CreateItem task [MSBuild]
 - MSBuild, CreateItem task
 ms.assetid: c4311f38-979e-4324-b524-9e8c1cbdc41a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: a9eb48e8c695c92a68e75f17cea31d887dfb439d
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 7dbf181f89f6cc673452a595da8ec1ddd3b62529
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="createitem-task"></a>CreateItem タスク
 項目コレクションに入力項目を設定します。 これにより、リスト間で項目をコピーできるようになります。  
@@ -56,11 +40,11 @@ ms.lasthandoff: 02/22/2017
 |---------------|-----------------|  
 |`AdditionalMetadata`|省略可能な `String` 型の配列パラメーターです。<br /><br /> 出力項目にアタッチする追加のメタデータを指定します。  項目のメタデータの名前と値を次の構文で指定します。<br /><br /> *MetadataName* `=` *MetadataValue*<br /><br /> メタデータの名前と値のペアを複数指定する場合は、セミコロンで区切る必要があります。 名前または値にセミコロンまたは他の特殊文字が含まれる場合は、エスケープする必要があります。 詳しくは、「[方法 : MSBuild で特殊文字をエスケープする](../msbuild/how-to-escape-special-characters-in-msbuild.md)」をご覧ください。|  
 |`Exclude`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の出力パラメーターです。<br /><br /> 出力項目コレクションから除外する項目を指定します。 このパラメーターには、ワイルドカードの指定を含めることができます。 詳しくは、「[MSBuild 項目](../msbuild/msbuild-items.md)」および「[方法: ビルドからファイルを除外する](../msbuild/how-to-exclude-files-from-the-build.md)」をご覧ください。|  
-|`Include`|必須の <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 出力項目のコレクションに含める項目を指定します。 このパラメーターには、ワイルドカードの指定を含めることができます。|  
+|`Include`|必須の <xref:Microsoft.Build.Framework.ITaskItem>`[]` パラメーター。<br /><br /> 出力項目のコレクションに含める項目を指定します。 このパラメーターには、ワイルドカードの指定を含めることができます。|  
 |`PreserveExistingMetadata`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `True` の場合は、まだ存在しない場合にのみ追加メタデータを適用します。|  
   
 ## <a name="remarks"></a>コメント  
- このタスクでは、上記のパラメーター以外に、<xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承し、このクラス自体は <xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加パラメーター一覧とそれらの説明については、「[TaskExtension Base Class (TaskExtension 基底クラス)](../msbuild/taskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次のコード例では、項目コレクション `MySourceItems` から、`MySourceItemsWithMetadata` という名前の新しい項目コレクションを作成します。 `CreateItem` タスクは、`MySourceItems` 項目コレクションの項目を新しい項目コレクションに設定します。 その後、名前が `MyMetadata` で値が `Hello` の追加メタデータ エントリを、新しいコレクションの各項目に追加します。  

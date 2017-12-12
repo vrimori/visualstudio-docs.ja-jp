@@ -1,29 +1,32 @@
 ---
 title: "コマンド ラインからの階層相互作用データの追加 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "階層相互作用プロファイル方法"
-  - "プロファイリング ツール、階層相互作用方式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tier interaction profiling method
+- profiling tools,tier interaction method
 ms.assetid: 5a35647f-03f2-4555-8eeb-fda7e0080e67
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a210ce1f6aeac113033bd82306bb5b682a5e21b9
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="adding-tier-interaction-data-from-the-command-line"></a>コマンド ラインからの階層相互作用データの追加
 階層相互作用プロファイリングにより、1 つ以上のデータベースと通信する多階層アプリケーションの関数で同期 [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] の呼び出しの実行時間に関する追加情報が提供されます。  
   
  **Windows 8 と Windows Server 2012**  
   
- Windows 8 デスクトップ アプリおよび Windows Server 2012 アプリで階層相互作用データを収集するには、インストルメンテーション メソッドを使用する必要があります。 Windows ストア アプリで階層相互作用データの収集はサポートされていません。  
+ Windows 8 デスクトップ アプリおよび Windows Server 2012 アプリで階層相互作用データを収集するには、インストルメンテーション メソッドを使用する必要があります。 UWP アプリで階層相互作用データの収集はサポートされていません。  
   
  **Visual Studio のエディション**  
   
@@ -47,7 +50,7 @@ caps.handback.revision: 9
   
 ##### <a name="profiling-a-windows-desktop-application-example"></a>Windows デスクトップ アプリケーションのプロファイルの例  
   
-1.  管理者特権を使用して、コマンド プロンプト ウィンドウを開きます。 [**スタート**] ボタンをクリックし、[**すべてのプログラム**]、[**アクセサリ**] の順にポイントします。 [**コマンド プロンプト**] を右クリックしてから、[**管理者として実行**] をクリックします。  
+1.  管理者特権を使用して、コマンド プロンプト ウィンドウを開きます。 **[スタート]** ボタンをクリックし、**[すべてのプログラム]**、**[アクセサリ]** の順にポイントします。 **[コマンド プロンプト]** を右クリックしてから、**[管理者として実行]** をクリックします。  
   
 2.  .NET プロファイル環境変数と TIP を環境変数初期化します。 次のコマンドを入力します。  
   
@@ -89,7 +92,7 @@ caps.handback.revision: 9
   
 1.  インストールの必要なサービスがあればインストールします。  
   
-2.  管理者特権を使用して、コマンド プロンプト ウィンドウを開きます。 [**スタート**] ボタンをクリックし、[**すべてのプログラム**]、[**アクセサリ**] の順にポイントします。 [**コマンド プロンプト**] を右クリックしてから、[**管理者として実行**] をクリックします。  
+2.  管理者特権を使用して、コマンド プロンプト ウィンドウを開きます。 **[スタート]** ボタンをクリックし、**[すべてのプログラム]**、**[アクセサリ]** の順にポイントします。 **[コマンド プロンプト]** を右クリックしてから、**[管理者として実行]** をクリックします。  
   
 3.  .NET プロファイル環境変数を初期化します。 次のコマンドを入力します。  
   
@@ -151,8 +154,3 @@ vsperfaspnetcmd /tip /trace http://localhost/MyWebApp
 ```  
   
  VSPerfASPNETCmd の詳細については、「[VSPerfASPNETCmd を使用した迅速な Web サイト プロファイリング](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md)」を参照してください。
-
-
-<!--HONumber=Feb17_HO4-->
-
-

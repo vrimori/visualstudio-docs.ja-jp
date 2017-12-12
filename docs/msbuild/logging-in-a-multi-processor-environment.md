@@ -1,47 +1,31 @@
 ---
-title: "マルチプロセッサ環境でのログ記録 |Microsoft ドキュメント"
+title: "マルチプロセッサ環境でのログ | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - MSBuild, multi-processor logging
 - MSBuild, logging
 ms.assetid: dd4dae65-ed04-4883-b48d-59bcb891c4dc
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 437809decb9e7cc96faa1b582fe466e83f2a33fb
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: e78d6c35fa294d2f1a39c91af5e278e9e4519d2d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="logging-in-a-multi-processor-environment"></a>マルチプロセッサ環境でのログ
-MSBuild では複数のプロセッサを使用できるため、プロジェクトのビルド時間が大幅に短縮されますが、同時にログの複雑性も高まります。 シングルプロセッサ環境であれば、logger は、イベント、メッセージ、警告、およびエラーを順序に従った予測可能な方法で処理できます。 それに対し、マルチプロセッサ環境では、イベントが複数のソースから同時に、または誤った順序で送られてくることがあります。 MSBuild は、新しいマルチ マルチプロセッサ対応の logger を提供し、カスタム「転送 logger」を作成できます。  
+MSBuild では複数のプロセッサを使用できるため、プロジェクトのビルド時間が大幅に短縮されますが、同時にログの複雑性も高まります。 シングルプロセッサ環境であれば、logger は、イベント、メッセージ、警告、およびエラーを順序に従った予測可能な方法で処理できます。 それに対し、マルチプロセッサ環境では、イベントが複数のソースから同時に、または誤った順序で送られてくることがあります。 MSBuild には、マルチプロセッサ対応の新しい logger が用意されており、カスタム "転送 logger" を作成できます。  
   
 ## <a name="logging-multiple-processor-builds"></a>マルチプロセッサ ビルドのログ  
- 1 つ以上のプロジェクトをマルチプロセッサ システムまたはマルチコア システムでビルドすると、すべてのプロジェクトの MSBuild ビルド イベントが同時に生成されます。 大量のイベント データは、同時に、または誤った順序 logger にくる可能性があります。 これはビルド時間の増加や不正確な logger 出力も、ビルドが破損の原因し、logger の過です。 これらの問題に対処するには、MSBuild の logger はシーケンスのイベントを処理し、イベントとそのソースを関連付けます。  
+ 1 つ以上のプロジェクトをマルチプロセッサ システムまたはマルチコア システムでビルドすると、すべてのプロジェクトの MSBuild ビルド イベントが同時に生成されます。 大量のイベント データが同時に、または誤った順序で logger に送られてくる可能性があります。 これにより、logger が過負荷となり、ビルド時間の増加や不正確な logger 出力をもたらすだけでなく、ビルドが破損することもあります。 これらの問題を解決するために、MSBuild の logger は順序が誤っているイベントを処理し、イベントとそのソースを関連付けます。  
   
  カスタム転送 logger を作成すると、ログの効率をさらに高めることができます。 カスタム転送 logger はフィルターの役割を果たし、ビルドを開始する前に監視の対象とするイベントを選択できます。 カスタム転送 logger を使用すると、不要なイベントが除外されるため、logger の過負荷、ログの煩雑化、ビルド時間の増加を防ぐことができます。  
   
@@ -76,7 +60,7 @@ public interface IForwardingLogger: INodeLogger
   
  転送 logger 内のイベントを転送するには、<xref:Microsoft.Build.Framework.IEventRedirector.ForwardEvent%2A> インターフェイスの <xref:Microsoft.Build.Framework.IEventRedirector> メソッドを呼び出します。 パラメーターとして、適切な <xref:Microsoft.Build.Framework.BuildEventArgs> または派生クラスを渡します。  
   
- 詳細については、次を参照してください。[転送 Logger を作成する](../msbuild/creating-forwarding-loggers.md)です。  
+ 詳細については、「[転送 logger の作成](../msbuild/creating-forwarding-loggers.md)」を参照してください。  
   
 ### <a name="attaching-a-distributed-logger"></a>分散 logger のアタッチ  
  コマンド ラインでのビルドで分散 logger をアタッチするには、`/distributedlogger` (短縮形は `/dl`) スイッチを使用します。 logger の型名およびクラス名の形式は、`/logger` スイッチの場合と同じです。ただし、分散 logger は転送 logger と中央 logger という 2 つのログ記録クラスから成ります。 分散 logger をアタッチするコードの例を次に示します。  

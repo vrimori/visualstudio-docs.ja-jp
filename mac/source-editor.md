@@ -1,19 +1,17 @@
 ---
-title: "ソース エディター"
+title: "ソース エディター | Microsoft Docs"
 description: "Visual Studio for Mac でのソース エディターの使用"
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: A018A314-C1C4-4F36-BCB6-2D434208FCFE
+ms.openlocfilehash: f52e60c0ade8cebc78b3408b4ef81ef85fcd767b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: aa7635cd2593b871128c0588110f0bfdad5a82ec
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="source-editor"></a>ソース エディター
 
 信頼できるソース エディターは、簡潔かつ効率的にコードを記述するために不可欠です。 Visual Studio for Mac には、IDE との対話の中心になる高機能のソース エディターがあります。 ソース エディターは、構文の強調表示、コード スニペット、コードの折りたたみといった基本的なものから、完全に機能する IntelliSense コード補完などの Roslyn コンパイラとの統合によるものまで、開発者が作業を容易にするために期待するものや必要とする機能が用意されています。
@@ -84,7 +82,6 @@ Visual Studio for Mac には、クロスプラット フォーム開発を可能
 強調表示の色は、何かが割り当てられたり参照されたりしていることを確認するのにも便利です。 割り当てられているものは赤で強調表示され、参照されているものは青で強調表示されます。
 
 ![](media/source-editor-image7.png)
-
 
 
 

@@ -4,35 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MSBuild, properties
+helpviewer_keywords: MSBuild, properties
 ms.assetid: 962912ac-8931-49bf-a88c-0200b6e37362
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
-ms.openlocfilehash: 6a83d555cf8968b6c1419633730e4b80d3b9aa3d
-
+ms.openlocfilehash: 0fe5627c7307b2d06e894a236d60f4188e6cf427
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="msbuild-properties"></a>MSBuild プロパティ
 プロパティはビルドを設定するための名前と値のペアです。 プロパティを使用することで、タスクに値を渡したり、条件を評価したりできるだけでなく、プロジェクト ファイルで参照する値を格納しておくこともできます。  
@@ -68,7 +53,7 @@ ms.openlocfilehash: 6a83d555cf8968b6c1419633730e4b80d3b9aa3d
   
  各 MSBuild プロジェクトには、分離された環境ブロックがあります。各プロジェクトは独自のブロックに対する読み取りと書き込みのみを参照します。  プロジェクト ファイルの評価やビルドを行う前、MSBuild では、プロパティ コレクションが初期化されるときに環境変数のみを読み取ります。 その後で、環境プロパティは静的なプロパティになります。つまり、起動されたツールは、同じ名前と値で実行が開始されます。  
   
- 起動されたツール内から環境変数の現在の値を取得するには、[プロパティ関数](../msbuild/property-functions.md) System.Environment.GetEnvironmentVariable を使用します。 ただし、タスク パラメータ <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A> を使用する方法をお勧めします。 この文字列配列に設定されている環境プロパティは、起動されたツールに渡すことができます。このとき、システム環境変数は影響を受けません。  
+ 起動されたツール内から環境変数の現在の値を取得するには、[プロパティ関数](../msbuild/property-functions.md) System.Environment.GetEnvironmentVariable を使用します。 ただし推奨される方法は、タスク パラメーター <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A> を使用する方法です。 この文字列配列に設定されている環境プロパティは、起動されたツールに渡すことができます。このとき、システム環境変数は影響を受けません。  
   
 > [!TIP]
 >  すべての環境変数が読み取られて、初期プロパティになるわけではありません。 有効な MSBuild プロパティ名 ("386" など) を名前として持っていない環境変数は無視されます。  
@@ -93,7 +78,7 @@ $(registry:Hive\MyKey\MySubKey)
 ```xml  
 <PropertyGroup>  
   <VisualStudioWebBrowserHomePage>  
-    $(registry:HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\12.0\WebBrowser@HomePage)  
+    $(registry:HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\WebBrowser@HomePage)  
   </VisualStudioWebBrowserHomePage>  
 <PropertyGroup>  
 ```  
@@ -107,7 +92,7 @@ $(registry:Hive\MyKey\MySubKey)
 msbuild.exe MyProj.proj /p:Configuration=DEBUG  
 ```  
   
- グローバル プロパティは、MSBuild タスクの `Properties` 属性を使用することで、複数プロジェクトのビルドに含まれる子プロジェクトに対して設定または変更することもできます。 詳細については、「[MSBuild タスク](../msbuild/msbuild-task.md)」を参照してください。  
+ グローバル プロパティは、MSBuild タスクの `Properties` 属性を使用することで、複数プロジェクトのビルドに含まれる子プロジェクトに対して設定または変更することもできます。 グローバル プロパティは、MSBuild タスクの `RemoveProperties` 属性が転送しないプロパティの一覧を指定するために使用されていなければ、子プロジェクトにも転送されます。 詳細については、「[MSBuild タスク](../msbuild/msbuild-task.md)」を参照してください。
   
  プロジェクト タグで `TreatAsLocalProperty` 属性を使用してプロパティを指定する場合、そのグローバル プロパティ値は、プロジェクト ファイルで設定されているプロパティ値をオーバーライドしません。 詳細については、「[Project 要素 (MSBuild)](../msbuild/project-element-msbuild.md)」「[How to: Build the Same Source Files with Different Options (方法: 同じソース ファイルを異なるオプションでビルドする)](../msbuild/how-to-build-the-same-source-files-with-different-options.md)」を参照してください。  
   
@@ -144,7 +129,7 @@ msbuild.exe MyProj.proj /p:Configuration=DEBUG
                     ImageVersion="$(MySupportedVersion)"  
                     Version="$(MySupportedVersion)"/>  
                 <RequiredRuntime  
-                    ImageVersion="$(MyRequiredVersion)  
+                    ImageVersion="$(MyRequiredVersion)"  
                     Version="$(MyRequiredVersion)"  
                     SafeMode="$(MySafeMode)"/>  
             </Startup>  
@@ -161,8 +146,3 @@ msbuild.exe MyProj.proj /p:Configuration=DEBUG
  [方法: 同じソース ファイルを異なるオプションでビルドする](../msbuild/how-to-build-the-same-source-files-with-different-options.md)   
  [MSBuild の予約済みおよび既知のプロパティ](../msbuild/msbuild-reserved-and-well-known-properties.md)   
  [Property 要素 (MSBuild)](../msbuild/property-element-msbuild.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

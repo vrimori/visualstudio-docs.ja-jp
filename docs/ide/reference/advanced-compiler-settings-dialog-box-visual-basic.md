@@ -1,73 +1,72 @@
 ---
-title: "[ビルドの詳細設定] ダイアログ ボックス (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ProjectPropertiesAdvancedCompile"
-helpviewer_keywords: 
-  - "[ビルドの詳細設定] ダイアログ ボックス"
+title: "[コンパイラの詳細設定] ダイアログ ボックス (Visual Basic) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vb.ProjectPropertiesAdvancedCompile
+helpviewer_keywords: Advanced Compiler Settings dialog box
 ms.assetid: 1f81133a-293f-4dba-bc1c-8baafb01d857
-caps.latest.revision: 46
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 46
+caps.latest.revision: "46"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: a6fce612245c07cf3bcd70b56b266857db88765d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# [ビルドの詳細設定] ダイアログ ボックス (Visual Basic)
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-プロジェクトの詳細ビルド構成プロパティを指定するには、**プロジェクト デザイナー**の **\[ビルドの詳細設定\]** ダイアログ ボックスを使用します。  このダイアログ ボックスは、Visual Basic プロジェクトでのみ使用できます。  
+# <a name="advanced-compiler-settings-dialog-box-visual-basic"></a>[ビルドの詳細設定] ダイアログ ボックス (Visual Basic)
+**プロジェクト デザイナー**の **[コンパイラの詳細設定]** ダイアログ ボックスを使用して、プロジェクトの詳細なビルド構成プロパティを指定します。 このダイアログ ボックスは、Visual Basic プロジェクトにのみ適用されます。  
   
-### このダイアログ ボックスを表示するには  
+### <a name="to-access-this-dialog-box"></a>このダイアログ ボックスを表示するには  
   
-1.  **\[ソリューション エクスプローラー\]** で、プロジェクト ノード \(ない **\[ソリューション\]** ノード\) を選択します。  
+1.  **ソリューション エクスプローラー**で、**[ソリューション]** ノードではなくプロジェクト ノードを選びます。  
   
-2.  **\[プロジェクト\]** メニューの **\[プロパティ\]** をクリックします。  **プロジェクト デザイナー**が表示されたら、**\[コンパイル\]** タブをクリックします。  
+2.  **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 **プロジェクト デザイナー**が表示されたら、**[コンパイル]** タブをクリックします。  
   
-3.  [\[コンパイル\] ページ、プロジェクト デザイナー \(Visual Basic\)](../Topic/Compile%20Page,%20Project%20Designer%20\(Visual%20Basic\).md) で、**\[構成\]** と **\[プラットフォーム\]** を選択します。  簡易ビルド構成では、**\[構成\]** および **\[プラットフォーム\]** の一覧は表示されません。  詳細については、「[Debug and Release Project Configurations](http://msdn.microsoft.com/ja-jp/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+3.  [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md) で、**[構成]** と **[プラットフォーム]** を選択します。 簡易ビルド構成では、**[構成]** と **[プラットフォーム]** の一覧は表示されません。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
   
-4.  **\[詳細コンパイル オプション\]** をクリックします。  
+4.  **[詳細コンパイル オプション]** をクリックします。  
   
  [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]  
   
-## 最適化  
- 次のオプションは最適化を指定するもので、プログラムの小型化、プログラムの高速化、またはビルド プロセスの短縮を実現できる場合があります。  
+## <a name="optimizations"></a>最適化  
+ 次のオプションは最適化を指定するもので、プログラム ファイルの小型化、プログラムの実行の高速化、またはビルド プロセスの時間短縮を実現できる場合があります。  
   
- **\[整数オーバーフローのチェックを解除\]**  
- 既定では、このチェック ボックスは整数のオーバーフロー チェックを有効にするには、をオフにします。  整数のオーバーフロー チェックを削除するには、このチェック ボックスをオンにします。  このチェック ボックスをオンにすると、整数の計算は高速場合があります。  ただし、オーバーフロー チェックを削除する場合は、データ型の空きオーバーフローすると、誤った結果が発生するエラーなしで格納される場合があります。  
+ **整数オーバーフローのチェックを解除**  
+ 既定では、このチェック ボックスはオフになっており、整数のオーバーフロー チェックが有効になります。 整数のオーバーフロー チェックを解除するには、このチェック ボックスをオンにします。 このチェック ボックスをオンにすると、整数の計算が高速になる場合があります。 ただし、オーバーフロー チェックを解除し、データ型の容量がオーバーフローした場合、エラーが発生せずに誤った結果が格納される可能性があります。  
   
- オーバーフロー状態と整数演算のオーバーフローがオンの場合、<xref:System.OverflowException> 例外がスローされます。  オーバーフロー状態がチェック アウトされていない場合、整数演算のオーバーフローは例外をスローしません。  
+ オーバーフロー状態がチェックされ、整数演算がオーバーフローした場合、<xref:System.OverflowException> 例外がスローされます。 オーバーフロー状態がチェックされていない場合、整数演算のオーバーフロー時に例外はスローされません。  
   
- **\[最適化を有効にする\]**  
- 既定ではオフに設定され、コンパイラの最適化は無効です。  コンパイラの最適化を有効にするには、このチェック ボックスをオンにします。  コンパイラを最適化すると、出力ファイルのサイズが小さくなり、動作が速くなり、処理の効率が向上します。  ただし、最適化によって出力ファイル内のコードを再配置するため、コンパイラの最適化はデバッグを困難になります。  
+ **最適化を有効にする**  
+ 既定では、このチェック ボックスはオフになっており、コンパイラの最適化は無効になります。 コンパイラの最適化を有効にするには、このチェック ボックスをオンにします。 コンパイラを最適化すると、出力ファイルのサイズが小さくなり、動作が速くなり、処理の効率が向上します。 ただし、最適化によって出力ファイル内のコードが再配置されるため、コンパイラを最適化するとデバッグが困難になる場合があります。  
   
- **\[DLL ベース アドレス\]**  
- このテキスト ボックスには、既定の DLL ベース アドレスが 16 進形式で表示されます。  クラス ライブラリ プロジェクトおよびコントロール ライブラリ プロジェクトでは、このテキスト ボックスを使用して、DLL 作成時に使用されるベース アドレスを指定できます。  
+ **DLL ベース アドレス**  
+ このテキスト ボックスには、既定の DLL ベース アドレスが 16 進形式で表示されます。 クラス ライブラリおよびコントロール ライブラリ プロジェクトでは、このテキスト ボックスを使用して、DLL の作成時に使用されるベース アドレスを指定できます。  
   
- **\[デバッグ情報を作成\]**  
- リストの **\[None\]**、**\[Full\]**、または **\[pdb\-only\]** をクリックします。  **\[None\]** を指定すると、デバッグ情報が生成されません。  **\[Full\]** の場合は、完全なデバッグ情報が生成され、**\[pdb\-only\]** の場合は、PDB デバッグ情報だけが生成されます。  既定では、このオプションは **\[Full\]** に設定されます。  
+ **デバッグ情報を作成**  
+ リストから **[None]**、**[Full]**、または **[pdb-only]** を選択します。 **[None]** を指定すると、デバッグ情報が生成されません。 **[Full]** を指定すると、完全なデバッグ情報が生成され、**[pdb-only]** を指定すると、PDB デバッグ情報のみが生成されます。 既定では、このオプションは **[Full]** に設定されます。  
   
-## コンパイル定数  
- 条件付きコンパイル定数はソース ファイルに [\#Const](/dotnet/visual-basic/language-reference/directives/const-directive) のプリプロセッサ ディレクティブを使用するのと同様の動作をしますが、定義された定数は public で、プロジェクトのすべてのファイルに適用されます。  [\#If… Then… \#Else](/dotnet/visual-basic/language-reference/directives/if-then-else-directives) ディレクティブとともに、ソース ファイルを条件付きでコンパイルに条件付きコンパイル定数を使用できます。  「[Conditional Compilation](/dotnet/visual-basic/programming-guide/program-structure/conditional-compilation)」を参照してください。  
+## <a name="compilation-constants"></a>コンパイル定数  
+ 条件付きコンパイル定数は、ソース ファイルに [#Const](/dotnet/visual-basic/language-reference/directives/const-directive) のプリプロセッサ ディレクティブを使用する場合と同じような効果がありますが、定義された定数は public で、プロジェクトのすべてのファイルに適用されます。 条件付きコンパイル定数を [#If...Then...#Else](/dotnet/visual-basic/language-reference/directives/if-then-else-directives) ディレクティブと共に使用することで、ソース ファイルを条件付きでコンパイルできます。 「[条件付きコンパイル](/dotnet/visual-basic/programming-guide/program-structure/conditional-compilation)」を参照してください。  
   
- **\[DEBUG 定数の定義\]**  
- 既定ではオンになり、DEBUG 定数が設定されます。  
+ **定数 DEBUG の定義**  
+ 既定では、このチェック ボックスはオンになり、DEBUG 定数を設定するように指定されます。  
   
- **\[TRACE 定数の定義\]**  
- 既定ではオンになり、TRACE 定数が設定されます。  
+ **定数 TRACE の定義**  
+ 既定では、このチェック ボックスはオンになり、TRACE 定数を設定するように指定されます。  
   
- **\[カスタム定数\]**  
- このテキスト ボックスには、アプリケーションのカスタム定数を入力します。  エントリはコンマで区切り、「Name1\="Value1",Name2\="Value2",Name3\="Value3"」のような形式で入力します。  
+ **カスタム定数**  
+ このテキスト ボックスには、アプリケーションのカスタム定数を入力します。 エントリは、**Name1="Value1",Name2="Value2",Name3="Value3"** の形式を使用して、コンマで区切る必要があります。  
   
-## 他の設定  
- **\[シリアル化アセンブリの生成\]**  
- コンパイラが XML シリアル化アセンブリを作成するかどうかを指定します。  コード内で型をシリアル化するために <xref:System.Xml.Serialization.XmlSerializer> クラスを使用している場合は、シリアル化アセンブリによってそのクラスの起動効率を改善できます。  既定では、このオプションは **\[自動\]** に設定されています。これは、コード内の型を XML にエンコードするために <xref:System.Xml.Serialization.XmlSerializer> を使用している場合にのみシリアル化アセンブリを生成することを指定します。  **\[オフ\]** は、コードで <xref:System.Xml.Serialization.XmlSerializer> を使用するかどうかに関係なく、シリアル化アセンブリを生成しないことを指定します。  **\[オン\]** の場合、シリアル化アセンブリが必ず生成されます。  シリアル化アセンブリには、`TypeName`.XmlSerializers.dll のように名前が付けられます。  
+## <a name="other-settings"></a>その他の設定  
+ **シリアル化アセンブリの生成**  
+ この設定は、コンパイラが XML シリアル化アセンブリを作成するかどうかを指定します。 コード内で型をシリアル化するために <xref:System.Xml.Serialization.XmlSerializer> クラスを使用している場合は、シリアル化アセンブリによってそのクラスの起動効率を改善できます。 既定では、このオプションは **[自動]** に設定されています。これは、コード内の型を XML にエンコードするために <xref:System.Xml.Serialization.XmlSerializer> を使用している場合にのみシリアル化アセンブリを生成することを指定します。 **[オフ]** は、コードで <xref:System.Xml.Serialization.XmlSerializer> を使用するかどうかに関係なく、シリアル化アセンブリを生成しないことを指定します。 **[オン]** の場合、シリアル化アセンブリが必ず生成されます。 シリアル化アセンブリには、`TypeName`.XmlSerializers.dll のように名前が付けられます。  
   
-## 参照  
- [\[コンパイル\] ページ、プロジェクト デザイナー \(Visual Basic\)](../Topic/Compile%20Page,%20Project%20Designer%20\(Visual%20Basic\).md)
+## <a name="see-also"></a>関連項目  
+ [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md)

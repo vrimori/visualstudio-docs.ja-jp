@@ -1,39 +1,42 @@
 ---
 title: "日付と時刻の計算 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "日付と時刻の演算 [JavaScript]"
-  - "JavaScript、日付と時刻"
-  - "日付の比較 [JavaScript]"
-  - "日付と時刻の計算 [JavaScript]"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- date and time arithmetic [JavaScript]
+- JavaScript, date and time
+- date comparison [JavaScript]
+- date and time calculations [JavaScript]
 ms.assetid: ea976f78-d934-479b-9056-880390d8bddd
-caps.latest.revision: 34
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 34
+caps.latest.revision: "34"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 18b4ff307c8f2c48a37ed9ca50e7c5f1ff693ece
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 日付と時刻の計算 (JavaScript)
-[Date オブジェクト](../javascript/reference/date-object-javascript.md)を使用すると、日付の比較や経過時間の計算など、カレンダーと時計に関する一般的なタスクを実行できます。  
+# <a name="calculating-dates-and-times-javascript"></a>日付と時刻の計算 (JavaScript)
+[Date オブジェクト](../javascript/reference/date-object-javascript.md)を使うと、日付の比較や経過時間の計算など、カレンダーと時計に関する一般的なタスクを実行できます。  
   
-## 現在の日付への日付の設定  
- 日付を指定せずに [Date オブジェクト](../javascript/reference/date-object-javascript.md)のインスタンスを作成すると、年、月、日、時、分、秒、およびミリ秒を含む現在の日付と時刻を表す値が返されます。  その後、この日時値を読み取りまたは変更できます。  
+## <a name="setting-a-date-to-the-current-date"></a>現在の日付への日付の設定  
+ 日付を指定せずに [Date オブジェクト](../javascript/reference/date-object-javascript.md)のインスタンスを作成すると、年、月、日、時、分、秒、およびミリ秒を含む現在の日付と時刻を表す値が返されます。 その後、この日時値を読み取りまたは変更できます。  
   
- パラメーターを使用せずに日付をインスタンス化して *mm\-dd\-yy* の形式で表示する方法の例を次に示します。  
+ パラメーターを使わずに日付をインスタンス化して *mm-dd-yy* の形式で表示する方法の例を次に示します。  
   
-```javascript  
+```JavaScript  
 var dt = new Date();  
   
 // Display the month, day, and year. getMonth() returns a 0-based number.  
@@ -45,10 +48,10 @@ document.write(month + '-' + day + '-' + year);
 // Output: current month, day, year  
 ```  
   
-## 特定の日付の設定  
+## <a name="setting-a-specific-date"></a>特定の日付の設定  
  コンストラクターに日付文字列を渡すことによって、特定の日付を設定できます。  
   
-```javascript  
+```JavaScript  
 var dt = new Date('8/24/2009');  
 document.write(dt);  
   
@@ -59,11 +62,11 @@ document.write(dt);
 > [!IMPORTANT]
 >  日付文字列に表示されるタイム ゾーンは、ローカル コンピューターに設定されているタイム ゾーンに対応します。  
 >   
->  [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] は、パラメーターとして使用する文字列の書式について柔軟性があります。  たとえば、「8\-24\-2009」、「August 24, 2009」、「24 Aug 2009」を入力できます。  
+>  [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] は、パラメーターとして使用する文字列の書式について柔軟性があります。 たとえば、「8-24-2009」、「August 24, 2009」、「24 Aug 2009」を入力できます。  
   
- 時刻を指定することもできます。  ISO 形式で日時を指定する方法の例を次に示します。  "Z" は UTC 時刻を表します。  
+ 時刻を指定することもできます。 ISO 形式で日時を指定する方法の例を次に示します。 "Z" は UTC 時刻を表します。  
   
-```javascript  
+```JavaScript  
 var dt = new Date('2010-06-09T15:20:00Z');  
 document.write(dt);  
 document.write("<br />");  
@@ -74,11 +77,11 @@ document.write(dt.toISOString());
 // 2010-06-09T15:20:00.000Z  
 ```  
   
- ISO などの日付形式の詳細については、「[日付と時刻文字列](../javascript/date-and-time-strings-javascript.md)」を参照してください。  
+ ISO などの日付形式について詳しくは、「[日付と時刻文字列](../javascript/date-and-time-strings-javascript.md)」をご覧ください。  
   
  時刻を指定する別の方法の例を次に示します。  
   
-```javascript  
+```JavaScript  
 var dtA = new Date('8/24/2009 14:52:10');  
   
 // The parameters are year, month, day, hours, minutes, seconds.  
@@ -93,12 +96,12 @@ document.write(dtB);
   
 ```  
   
-## 日、月、および年の加算と除算  
+## <a name="adding-and-subtracting-days-months-and-years"></a>日、月、および年の加算と除算  
  `Date` オブジェクトの getX メソッドと setX メソッドを使用して、特定の日付と時刻を設定できます。  
   
- 次の例は、日付を前日の日付に設定する方法を示しています。  必要に応じて、月、および年の値も変更されることに注意してください。  
+ 次の例は、日付を前日の日付に設定する方法を示しています。 必要に応じて、月、および年の値も変更されることに注意してください。  
   
-```javascript  
+```JavaScript  
 var myDate = new Date("1/1/1990");  
 var dayOfMonth = myDate.getDate();  
 myDate.setDate(dayOfMonth - 1);  
@@ -111,9 +114,9 @@ document.write(myDate);
  次の例では、翌月の最初の日から 1 日を減算することで日付を月の最後の日に設定します。  
   
 > [!TIP]
->  各月には、0 \(1 月\) ～ 11 \(12 月\) の番号が付けられています。  各曜日には、0 \(日曜日\) ～ 6 \(土曜日\) の番号が付けられています。  
+>  各月には、0 (1 月) ～ 11 (12 月) の番号が付けられています。 各曜日には、0 (日曜日) ～ 6 (土曜日) の番号が付けられています。  
   
-```javascript  
+```JavaScript  
 var myDate = new Date("1/1/1990")  
 myDate.setMonth(myDate.getMonth() + 1);  
   
@@ -125,12 +128,12 @@ document.write(myDate);
   
 ```  
   
-## 曜日の操作  
- [getDay メソッド](../javascript/reference/getday-method-date-javascript.md)は、0 \(日曜日\) ～ 6 \(土曜日\) の数値として曜日を取得します \(これは、1 ～ 31 の数値として日付を取得する [getDate メソッド](../javascript/reference/getdate-method-date-javascript.md)とは異なります\)。  
+## <a name="working-with-days-of-the-week"></a>曜日の操作  
+ [getDay メソッド](../javascript/reference/getday-method-date-javascript.md)は、0 (日曜日) から 6 (土曜日) の数値として曜日を取得します  (これは、1 から 31 の数値として日付を取得する [getDate メソッド](../javascript/reference/getdate-method-date-javascript.md)とは異なります)。  
   
- 11 月の第 4 木曜日として定義されている米国の感謝祭の休日の日付を設定する例を次に示します。  このスクリプトは、現在の年の 11 月 1 日を検索し、最初の木曜日を検索した後で、3 週間を加算します。  
+ 11 月の第 4 木曜日として定義されている米国の感謝祭の休日の日付を設定する例を次に示します。 このスクリプトは、現在の年の 11 月 1 日を検索し、最初の木曜日を検索した後で、3 週間を加算します。  
   
-```javascript  
+```JavaScript  
 var myDate = new Date();  
 myDate.setHours(0, 0, 0, 0);  
   
@@ -155,14 +158,14 @@ document.write(myDate);
   
 ```  
   
-## 経過時間の計算  
- [getTime メソッド](../javascript/reference/gettime-method-date-javascript.md)は、1970 年 1 月 1 日午前 00:00:00 から経過したミリ秒数を返します。  それより前の日付に対しては、負数を返します。  
+## <a name="calculating-elapsed-time"></a>経過時間の計算  
+ [getTime メソッド](../javascript/reference/gettime-method-date-javascript.md)は、1970 年 1 月 1 日午前 00:00:00 から経過したミリ秒数を返します。 それより前の日付に対しては、負数を返します。  
   
- 経過時間を計算するために、[getTime メソッド](../javascript/reference/gettime-method-date-javascript.md)を使用して開始時間と終了時間を設定できます。  これにより、数秒間のような小さい単位も、数日間のような大きい単位も計測できます。  
+ 経過時間を計算するために、[getTime メソッド](../javascript/reference/gettime-method-date-javascript.md)を使って開始時間と終了時間を設定できます。 これにより、数秒間のような小さい単位も、数日間のような大きい単位も計測できます。  
   
- 次の例では、秒単位の経過時間を計算します。  [getTime メソッド](../javascript/reference/gettime-method-date-javascript.md)は、ゼロ日付からのミリ秒数を取得します。  
+ 次の例では、秒単位の経過時間を計算します。 [getTime メソッド](../javascript/reference/gettime-method-date-javascript.md)は、ゼロ日付からのミリ秒数を取得します。  
   
-```javascript  
+```JavaScript  
 var startTime = new Date('1/1/1990');  
 var startMsec = startTime.getMilliseconds();  
 startTime.setTime(5000000);  
@@ -173,11 +176,11 @@ document.write(elapsed);
   
 ```  
   
- より扱いやすい単位にするために、[getTime メソッド](../javascript/reference/gettime-method-date-javascript.md)から返されたミリ秒数を適切な数値で除算できます。  たとえば、ミリ秒数を日数に変換するには、値を 86,400,000 \(1000 ミリ秒 x 60 秒 x 60 分 x 24 時間\) で除算します。  
+ より扱いやすい単位にするために、[getTime メソッド](../javascript/reference/gettime-method-date-javascript.md)から返されたミリ秒数を適切な数値で除算できます。 たとえば、ミリ秒数を日数に変換するには、値を 86,400,000 (1000 ミリ秒 x 60 秒 x 60 分 x 24 時間) で除算します。  
   
- 次の例では、指定された年の最初の日からの経過時間を表示します。  除算演算を使用して、日、時、分、および秒単位の経過時間を計算します。  夏時間については考慮しません。  
+ 次の例では、指定された年の最初の日からの経過時間を表示します。 除算演算を使用して、日、時、分、および秒単位の経過時間を計算します。 夏時間については考慮しません。  
   
-```javascript  
+```JavaScript  
 // Set the unit values in milliseconds.  
 var msecPerMinute = 1000 * 60;  
 var msecPerHour = msecPerMinute * 60;  
@@ -215,10 +218,10 @@ document.write(days + " days, " + hours + " hours, " + minutes + " minutes, " + 
 //Output: 164 days, 23 hours, 0 minutes, 0 seconds.  
 ```  
   
-### ユーザーの年齢の計算  
- 次の例では、ユーザーの誕生日を使用してユーザーの年齢を年単位で計算します。  現在の年から誕生年を減算し、現在の年の誕生日がまだ来ていない場合はさらに 1 を減算します。  
+### <a name="determining-the-users-age"></a>ユーザーの年齢の計算  
+ 次の例では、ユーザーの誕生日を使用してユーザーの年齢を年単位で計算します。 現在の年から誕生年を減算し、現在の年の誕生日がまだ来ていない場合はさらに 1 を減算します。  
   
-```javascript  
+```JavaScript  
 var birthday = new Date("8/1/1985");  
 var today = new Date();  
 var years = today.getFullYear() - birthday.getFullYear();  
@@ -237,12 +240,12 @@ document.write("You are " + years + " years old.");
   
 ```  
   
-## 日付の比較  
- [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] の日付を比較するときに、演算子の両側の日付が同じオブジェクトを参照している場合にだけ `==` 演算子が `true` を返すことを念頭に置く必要があります。  したがって、2 つの別々の `Date` オブジェクトが同じ日付に設定されている場合、`date1 == date2` は `false` を返します。  また、時刻なしで日付だけで設定された `Date` オブジェクトは、その日付の午前 0 時に初期化されます。  したがって、たとえば時間を指定せずに設定された 1 つの `Date` を `Date.now` と比較する場合、最初の `Date` は午前 0 時に設定され、`Date.now` は設定されないことに注意してください。  
+## <a name="comparing-dates"></a>日付の比較  
+ [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] の日付を比較するときに、演算子の両側の日付が同じオブジェクトを参照している場合にだけ `==` 演算子が `true` を返すことを念頭に置く必要があります。 したがって、2 つの別々の `Date` オブジェクトが同じ日付に設定されている場合、`date1 == date2` は `false` を返します。 また、時刻なしで日付だけで設定された `Date` オブジェクトは、その日付の午前 0 時に初期化されます。 したがって、たとえば時間を指定せずに設定された 1 つの `Date` を `Date.now` と比較する場合、最初の `Date` は午前 0 時に設定され、`Date.now` は設定されないことに注意してください。  
   
- 次の例では、現在の日付が指定された日付と同じか、それよりも前か、それよりも後かを調べます。  `todayAtMidn` に現在の日付を設定するために、このスクリプトは現在の年、月、および日に対する `Date` オブジェクトを作成します。  
+ 次の例では、現在の日付が指定された日付と同じか、それよりも前か、それよりも後かを調べます。 `todayAtMidn` に現在の日付を設定するために、このスクリプトは現在の年、月、および日に対する `Date` オブジェクトを作成します。  
   
-```javascript  
+```JavaScript  
 // Get the current date at midnight.  
 var now = new Date();   
 var todayAtMidn = new Date(now.getFullYear(), now.getMonth(), now.getDate());  
@@ -266,7 +269,7 @@ else
   
  この例を変更して、指定した日付が特定の範囲内に含まれるかどうかを確認することもできます。  
   
-```javascript  
+```JavaScript  
 // Get the current date at midnight.  
 var now = new Date();  
 var todayAtMidn = new Date(now.getFullYear(), now.getMonth(), now.getDate());  
@@ -288,5 +291,5 @@ else {
 // Output: Specified date is not in this range.  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Date オブジェクト](../javascript/reference/date-object-javascript.md)

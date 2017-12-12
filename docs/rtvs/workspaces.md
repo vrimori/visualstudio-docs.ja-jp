@@ -1,27 +1,24 @@
 ---
 title: "R Tools for Visual Studio のワークスペース | Microsoft Docs"
 ms.custom: 
-ms.date: 6/30/2017
+ms.date: 06/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d610279c-d6c3-4084-939a-bf042f64d4dd
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 559f5832be6d4fa87be39941401f2222e075b7a7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: 4764fb9fc6b0cd2e6160540fdec3f33370d81128
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="controlling-where-r-code-runs-with-workspaces"></a>ワークスペースで R コードが実行する場所を制御する
 
 R Tools for Visual Studio (RTVS) のワークスペースを使用すると、R セッションが実行する場所を構成できます。ローカル コンピューターでもリモート コンピューターでも実行できます。 目的は、どちらでも同じようなユーザー エクスペリエンスで作業できるようにして、クラウド ベースのコンピューターが潜在的に備えるさらに強力な機能を活用することです。
@@ -37,6 +34,7 @@ R Tools for Visual Studio (RTVS) のワークスペースを使用すると、R 
 - [ワークスペースの保存とリセット](#saving-and-resetting-a-workspace)
 - [ローカル ワークスペース](#local-workspaces)
 - [リモート ワークスペース](#remote-workspaces)
+- [リモート ワークスペースのログオン](#remote-workspace-logon)
 - [ワークスペースの切り替え](#switching-between-workspaces)
 - [ローカル コンピューターとリモート コンピューターのディレクトリ](#directories-on-local-and-remote-computers)
 - [リモート ワークスペースへのプロジェクト ファイルのコピー](#copying-project-files-to-remote-workspaces)
@@ -75,6 +73,17 @@ Visual Studio はリモート ワークスペースを自動的に検出しな�
 > [!Note]
 > リモート ワークスペースは実質的にはプレビュー段階です。 将来のリリースの実装でファイル同期の問題を改善する作業が行われており、アイデアやフィードバックを歓迎します。
 
+## <a name="remote-workspace-logon"></a>リモート ワークスペースのログオン
+
+リモート ワークスペースにログオンするには、ユーザー名とパスワードを使用する必要があります。
+
+### <a name="logon-to-windows-workspace"></a>Windows ワークスペースへのログオン
+
+リモート コンピューターがドメイン アカウントを使用するようにセットアップされている場合は、ドメイン ログオンを使用してリモート ワークスペースにアクセスできます。 そうでない場合は、リモート コンピューター上のコンピューター アカウントを使用して、`machine-name\username` 形式でログオンする必要があります。
+
+### <a name="logon-to-linux-workspace"></a>Linux ワークスペースへのログオン
+
+Linux アカウントにログオンするには、`<<unix>>\username` 形式を使用します。 たとえば、`ruser` という名前のアカウントがある場合、ユーザー名を `<<unix>>\ruser` として入力する必要があります。
 
 ## <a name="switching-between-workspaces"></a>ワークスペースの切り替え
 
@@ -139,4 +148,3 @@ Visual Studio で R プロジェクトの作業を行っているときは、リ
 ## <a name="copying-files-from-a-remote-workspace"></a>リモート ワークスペースからのファイルのコピー
 
 R スクリプトがサーバーでファイルを生成する場合、`rtvs::fetch_file` 関数を使ってそれらのファイルをクライアントにコピーして戻すことができます。 この関数は、少なくとも、コンピューターにコピーするファイルのリモート パスと、コンピューター上のターゲット パス (省略可能) を受け取ります。 ローカル コンピューター上のパスを指定しないと、ファイルは `%userprofile%\Downloads` フォルダーにコピーされます。
-

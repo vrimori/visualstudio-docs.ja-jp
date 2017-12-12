@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -14,43 +13,27 @@ dev_langs:
 - FSharp
 - C++
 helpviewer_keywords:
-- performance tools, JavaScript [Store apps]
-- performance, JavaScript [Store apps]
-- performance, HTML [Store apps]
-- performance tools, HTML [Store apps]
+- performance tools, JavaScript [UWP apps]
+- performance, JavaScript [UWP apps]
+- performance, HTML [UWP apps]
+- performance tools, HTML [UWP apps]
 ms.assetid: 7e5a2524-dbf5-4a40-b5d6-2d1ed7fff3de
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 753b4abd76b56ff46406b3a2f5ab5b8fb008c526
-ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: cf4747a1e2c0d9d7c20fe0856becb4cd42d1e847
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="walkthrough-improving-ui-responsiveness-html"></a>チュートリアル: UI の応答性の向上 (HTML)
-このチュートリアルでは、[HTML UI の応答性プロファイラー](../profiling/html-ui-responsiveness.md)を使って、パフォーマンスの問題を特定し修復するプロセスについて説明します。 このプロファイラーは、Visual Studio で、JavaScript を使用した Windows ユニバーサルおよび Windows ストアのアプリに対して使用できます。 このシナリオでは、DOM 要素の更新の頻度が高すぎるパフォーマンス テスト アプリを作成し、この問題をプロファイラーを使用して特定および修正します。  
+このチュートリアルでは、[HTML UI の応答性プロファイラー](../profiling/html-ui-responsiveness.md)を使って、パフォーマンスの問題を特定し修復するプロセスについて説明します。 このプロファイラーは、Visual Studio で、JavaScript を使用した Windows ユニバーサルおよび UWP アプリに対して使用できます。 このシナリオでは、DOM 要素の更新の頻度が高すぎるパフォーマンス テスト アプリを作成し、この問題をプロファイラーを使用して特定および修正します。  
   
 ### <a name="creating-and-running-the-performance-test-app"></a>パフォーマンス テスト アプリを作成して実行する  
   
-1.  Visual Studio で、新しい Windows ユニバーサル JavaScript プロジェクトを作成します。 (**[ファイル]、[新規作成]、[プロジェクト] の順に選択します。**. 左ペインで **[JavaScript]** を選択し、次に **[Windows]**、**[Windows 10]** と選択してから、**[ユニバーサル]** または **[Windows Phone]** を選択します。  
+1.  Visual Studio で、新しい Windows ユニバーサル JavaScript プロジェクトを作成します。 (**[ファイル]、[新規作成]、[プロジェクト] の順に選択します**。 左ペインで **[JavaScript]** を選択し、次に **[Windows]**、**[Windows 10]** と選択してから、**[ユニバーサル]** または **[Windows Phone]** を選択します。  
   
 2.  > [!IMPORTANT]
     >  このトピックで示す診断の結果は、Windows 8 アプリ用です。  
@@ -201,13 +184,13 @@ ms.lasthandoff: 02/22/2017
   
 7.  CPU 使用状況グラフの中程の部分を 1 ～ 2 秒選択します (クリックしてドラッグするか、Tab キーと方向キーを使用します)。 次の図は、選択を行った後の CPU 使用状況グラフを示しています。 共有されていない領域は選択範囲です。  
   
-     ![CPU 使用状況グラフ](~/profiling/media/js_htmlviz_app_cpu.png "JS_HTMLViz_App_CPU")  
+     ![CPU 使用状況グラフ](../profiling/media/js_htmlviz_app_cpu.png "JS_HTMLViz_App_CPU")  
   
 8.  **[拡大]** を選択します。  
   
      グラフが変更されて、選択した期間の詳細が表示されます。 次の図は、拡大した後の CPU 使用状況グラフを示しています。 (特定のデータは変化することがありますが、一般的なパターンは明らかです。)  
   
-     ![拡大表示したビュー](~/profiling/media/js_htmlviz_app_zoom.png "JS_HTMLViz_App_Zoom")  
+     ![拡大表示したビュー](../profiling/media/js_htmlviz_app_zoom.png "JS_HTMLViz_App_Zoom")  
   
      下部のペインの [タイムラインの詳細] に、選択した期間の詳細の例が表示されます。  
   

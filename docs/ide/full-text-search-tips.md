@@ -1,53 +1,22 @@
 ---
-title: "フルテキスト検索のヒント | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- hv_search
-helpviewer_keywords:
-- Help Viewer 2.0, full-text search tips
-- full-text search tips [Help Viewer 2.0]
-ms.assetid: bcaad23d-2ca7-4bec-8b54-b884bc34e70b
-caps.latest.revision: 13
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: b03bbfbe9f96931ad9b64dd8542529ee258f0392
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+redirect_url: /visualstudio/ide/how-to-search-for-topics
+ms.openlocfilehash: a66c168ca81b22c32fc05afddd01266950791d1e
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/07/2017
+---
+title: "フルテキスト検索のヒント | Microsoft Docs" ms.custom: "" ms.date: "11/04/2016" ms.reviewer: "" ms.suite: "" ms.technology: 
+  - "vs-help-viewer" ms.tgt_pltfrm: "" ms.topic: "article" f1_keywords: 
+  - "hv_search" helpviewer_keywords: 
+  - "ヘルプ ビューアー、フルテキスト検索のヒント"
+  - "フルテキスト検索のヒント [ヘルプ ビューアー]" ms.assetid: bcaad23d-2ca7-4bec-8b54-b884bc34e70b caps.latest.revision: 13 author: "gewarren" ms.author: "gewarren" manager: ghogen
 ---
 # <a name="full-text-search-tips"></a>フルテキスト検索のヒント
-ヘルプで情報を見つける簡単な方法の 1 つが、フルテキスト検索を実行することです。 結果を絞り込んだり、カスタマイズしたりするには、構文がクエリに与える効果を理解する必要があります。 このトピックでは、ヒント、手順、構文の詳細をご覧いただけます。効果的なクエリを作成できるようになります。  
-  
-## <a name="full-text-search-tips"></a>フルテキスト検索のヒント  
- クエリで使用した形式がヘルプでどのように解釈されるか理解していれば、自分が興味のあるトピックだけを返すようにターゲットを絞り込んだ検索クエリを作成できます。 形式には、特殊文字、予約語、フィルターがあります。  
+ヘルプで情報を見つける簡単な方法の 1 つが、フルテキスト検索を実行することです。 構文がクエリにどのように影響するかを理解していれば、自分が興味のあるトピックだけを返すようにターゲットを絞り込んだ検索クエリを作成できます。 構文には、特殊文字、予約語、フィルターがあります。 このトピックでは、ヒント、手順、構文の詳細をご覧いただけます。効果的なクエリを作成できるようになります。
   
 ### <a name="general-guidelines"></a>一般的なガイドライン  
- 次の表は、ヘルプで検索クエリを作成するための基本的なルールとガイドラインをいくつか紹介したものです。  
+次の表は、ヘルプで検索クエリを作成するための基本的なルールとガイドラインをいくつか紹介したものです。  
   
 |構文|説明|  
 |------------|-----------------|  
@@ -59,11 +28,11 @@ ms.lasthandoff: 05/13/2017
  "word1 word2" のような複数の文字を含む検索文字列を指定した場合、その文字列は "word1 AND word2" を入力した場合と同じになり、検索文字列のすべての単語を含むトピックのみを返します。  
   
 > [!IMPORTANT]
->  1.  句を検索することはできません。 検索文字列に複数の単語を指定した場合、返されるトピックには、指定したすべての単語が含まれますが、必ずしも指定した句とは厳密に同じにはなりません。  
-> 2.  検索句の単語間の関係を指定するには、論理演算子を使用します。 AND、OR、NOT、NEAR のような論理演算子を追加し、検索をさらに絞り込むことができます。 たとえば、"declaring NEAR union" と検索すると、"declaring" という単語と "union" という単語がそれほど離れていないトピックが検索されます。 詳細については、「[検索式の論理演算子](../ide/logical-operators-in-search-expressions.md)」を参照してください。  
+> - 句を検索することはできません。 検索文字列に複数の単語を指定した場合、返されるトピックには、指定したすべての単語が含まれますが、必ずしも指定した句とは厳密に同じにはなりません。  
+> - 検索句の単語間の関係を指定するには、論理演算子を使用します。 AND、OR、NOT、NEAR のような論理演算子を追加し、検索をさらに絞り込むことができます。 たとえば、"declaring NEAR union" と検索すると、"declaring" という単語と "union" という単語がそれほど離れていないトピックが検索されます。 詳細については、「[検索式の論理演算子](../ide/logical-operators-in-search-expressions.md)」を参照してください。  
   
 ### <a name="filters"></a>フィルター  
- 高度な検索演算子を利用し、検索結果をさらに制限できます。 ヘルプには、フルテキスト検索の結果を絞り込むためのカテゴリが 3 つあります。タイトル、コード、キーワードです。 詳細については、「[検索式の高度な検索演算子](../ide/advanced-search-operators-in-search-expressions.md)」を参照してください。  
+ 高度な検索演算子を利用し、検索結果をさらに制限できます。 ヘルプには、フルテキスト検索の結果を絞り込むためのカテゴリが 3 つあります。タイトル、コード、キーワードです。
   
 ### <a name="ranking-of-search-results"></a>検索結果のランク  
  検索アルゴリズムは特定の条件を適用し、結果一覧で検索結果を上または下のランクにします。 一般的には、次のようなランク付けが行われます。  
@@ -77,6 +46,6 @@ ms.lasthandoff: 05/13/2017
 ### <a name="words-ignored-in-searches-stop-words"></a>検索で無視される言葉 (ストップ ワード)  
  よく使われる言葉や数字 (ストップ ワードと呼ばれることもあります) は、フルテキスト検索で自動的に無視されます。 たとえば、"pass through" という句を検索すると、"pass" という単語を含むトピックが表示され、"through" は無視されます。  
   
-## <a name="see-also"></a>関連項目  
- [情報の検索](../ide/locate-information.md)   
- [検索式の論理演算子](../ide/logical-operators-in-search-expressions.md)
+## <a name="see-also"></a>関連項目
+[情報の検索](../ide/locate-information.md)   
+[検索式の論理演算子](../ide/logical-operators-in-search-expressions.md)

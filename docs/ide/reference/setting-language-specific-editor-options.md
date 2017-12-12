@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,35 +12,20 @@ helpviewer_keywords:
 - configure editor
 - editor settings
 ms.assetid: ba64d517-a60d-409b-9860-5d75065a5bb7
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: ab506c0d3bdf9a03ee2212d6e4767d8443c604e5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: 8d3c25221b2d063064b82981a069a99d7395c59e
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/07/2017
 ---
-# <a name="setting-language-specific-editor-options"></a>言語固有のフォルダー オプションの設定
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] には、特定のプログラミング言語に適用するためのテキスト エディター オプションが数多くあります。  
+# <a name="setting-language-specific-editor-options"></a>言語固有のエディター オプションの設定
+Visual Studio には、特定のプログラミング言語に適用するためのテキスト エディター オプションが数多くあります。 オプションは、**[オプション]** ダイアログ ボックスで構成できます。このダイアログ ボックスには **[ツール]** メニューからアクセスできます。 また、EditorConfig ファイルを作成することで、プロジェクト単位または codebase 単位でいくつかのエディター設定を構成することができます。 「[EditorConfig で移植可能なカスタム エディター設定を作成する](../../ide/create-portable-custom-editor-options.md)」を参照してください。
   
-## <a name="in-this-section"></a>このセクションの内容  
+## <a name="settings-available-in-the-options-dialog-box"></a>[オプション] ダイアログ ボックスで使用可能な設定  
  [[オプション]、[テキスト エディター]、[基本] (Visual Basic)](../../ide/reference/options-text-editor-basic-visual-basic.md)  
  End 構造、コードの再フォーマット、アウトライン、エラー訂正の提案、およびその他の [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] コード用の設定について説明します。  
   
@@ -58,20 +42,12 @@ ms.lasthandoff: 05/24/2017
  C# と J# 用の、アウトライン、エラー認識、および XML ドキュメント コメントの設定について説明します。  
   
  [[オプション]、[テキスト エディター]、[C#]、[IntelliSense]](../../ide/reference/options-text-editor-csharp-intellisense.md)  
- C# コードおよび J# コードでの作業における IntelliSense 入力候補一覧の動作を指定する設定について説明します。  
-  
- [[検証] ([オプション] ダイアログ ボックス - [テキスト エディター] - [CSS])](http://msdn.microsoft.com/Library/5afe0808-16bb-420f-b620-7ca1a4d9f2cc)  
- カスケード スタイル シート (CSS: Cascading Style Sheet) 用のステートメント入力候補およびエラー訂正の設定について説明します。  
-  
- [[検証] ([オプション] ダイアログ ボックス - [テキスト エディター] - [HTML])](http://msdn.microsoft.com/Library/9c24ecfe-263e-4bf1-88de-d01be3992863)  
- 選択したスキーマに基づく HTML 構文チェックの設定について説明します。  
+ C# コードおよび J# コードでの作業における IntelliSense 入力候補一覧の動作を指定する設定について説明します。 
   
  [[オプション]、[テキスト エディター]、[XAML]、[書式設定]](../../ide/reference/options-text-editor-xaml-formatting.md)  
  XAML ドキュメントに含まれる要素および属性の配置設定について説明します。  
   
-## <a name="related-sections"></a>関連項目  
- [エディターのカスタマイズ](../../ide/customizing-the-editor.md)  
- エディターのさまざまな設定可能な特徴について説明しているトピックへのリンクを提供します。  
-  
- [Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)  
- 設定、キー バインド、およびその他の統合開発環境 (IDE: Integrated Development Environment) の機能をカスタマイズする方法を説明しているトピックへのリンクを提供します。
+## <a name="see-also"></a>関連項目  
+[エディターのカスタマイズ](../../ide/customizing-the-editor.md)  
+[EditorConfig で移植可能なカスタム エディター設定を作成する](../../ide/create-portable-custom-editor-options.md)  
+[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md) &mdash; 設定、キー バインド、およびその他の統合開発環境 (IDE: Integrated Development Environment) の機能をカスタマイズする方法を説明しているトピックへのリンクを提供します。

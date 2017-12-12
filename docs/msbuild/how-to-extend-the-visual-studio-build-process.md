@@ -1,44 +1,45 @@
 ---
-title: "方法 : Visual Studio ビルド処理を拡張する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSBuild, DependsOn プロパティ"
-  - "MSBuild, 拡張 (Visual Studio ビルドを)"
-  - "MSBuild, オーバーライド (DependsOn プロパティを)"
-  - "MSBuild, オーバーライド (定義済みターゲットを)"
+title: "方法: Visual Studio ビルド処理を拡張する | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSBuild, overriding predefined targets
+- MSBuild, overriding DependsOn properties
+- MSBuild, extending Visual Studio builds
+- MSBuild, DependsOn properties
 ms.assetid: cb077613-4a59-41b7-96ec-d8516689163c
-caps.latest.revision: 8
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: a87b97946e3b0c45b00bdfe00a4da23c266605c7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : Visual Studio ビルド処理を拡張する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ビルド処理は、プロジェクト ファイルにインポートされる一連の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] .targets ファイルで定義されます。  このインポートされたファイルの 1 つである Microsoft.Common.targets を拡張すると、ビルド処理の複数の箇所でカスタム タスクを実行できます。  ここでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ビルド処理の拡張に使用できる 2 つのメソッドについて説明します。  
+# <a name="how-to-extend-the-visual-studio-build-process"></a>方法 : Visual Studio ビルド処理を拡張する
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ビルド処理は、プロジェクト ファイルにインポートされる一連の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] .targets ファイルによって定義されます。 このインポートされるファイルの 1 つである Microsoft.Common.targets を拡張することで、ビルド処理の複数のポイントでカスタム タスクを実行できます。 このトピックでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ビルド処理を拡張するための 2 つの方法について説明します。  
   
--   Microsoft.Common.targets で定義されている特定の定義済みターゲットのオーバーライド  
+-   Microsoft.Common.targets で事前定義されている特定のターゲットをオーバーライドする。  
   
--   Microsoft.Common.targets で定義されている "DependsOn" プロパティのオーバーライド  
+-   Microsoft.Common.targets で定義されている "DependsOn" プロパティをオーバーライドする。  
   
-## 定義済みターゲットのオーバーライド  
- Microsoft.Common.targets ファイルには、ビルド処理の一部の主要ターゲットの前後に呼び出される、一連の空の定義済みターゲットが含まれています。  たとえば、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は `CoreBuild` メイン ターゲットの前に `BeforeBuild` ターゲットを呼び出し、`CoreBuild` ターゲットの後に `AfterBuild` ターゲットを呼び出します。  既定では、Microsoft.Common.targets 内の空のターゲットは何も実行しませんが、Microsoft.Common.targets をインポートするプロジェクト ファイルで必要なターゲットを定義することで、既定の動作をオーバーライドできます。  これにより、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクを使用してビルド処理を詳細に制御できます。  
+## <a name="overriding-predefined-targets"></a>事前定義されているターゲットをオーバーライドする  
+ Microsoft.Common.targets ファイルには、事前定義されている空のファイルが含まれています。この一連のファイルは、ビルド処理の一部の主要ターゲットの前後で呼び出されます。 たとえば、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は、メインの `CoreBuild` ターゲットの前に `BeforeBuild` ターゲットを、`CoreBuild` ターゲットの後に `AfterBuild` ターゲットを呼び出します。 既定では、Microsoft.Common.targets の空のターゲットは何も行いませんが、その既定の動作をオーバーライドできます。その方法としては、Microsoft.Common.targets をインポートするプロジェクト ファイルでターゲットを定義します。 これを行うことで、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクを利用し、ビルド処理をさらに細かく制御できます。  
   
-#### 定義済みターゲットをオーバーライドするには  
+#### <a name="to-override-a-predefined-target"></a>事前定義されているターゲットをオーバーライドするには  
   
-1.  オーバーライドする Microsoft.Common.targets 内の定義済みターゲットを識別します。  安全にオーバーライドできるターゲットの完全な一覧については、次の表を参照してください。  
+1.  オーバーライドする Microsoft.Common.targets で事前定義済みターゲットを見つけます。 下の表をご覧ください。これは安全にオーバーライドできるターゲットの完全一覧です。  
   
-2.  プロジェクト ファイルの末尾で、`</Project>` タグの直前にターゲットを定義します。  次に例を示します。  
+2.  プロジェクト ファイルの最後で、`</Project>` タグの直前で、ターゲットを定義します。 例:  
   
-    ```  
+    ```xml  
     <Project>  
         ...  
         <Target Name="BeforeBuild">  
@@ -52,30 +53,30 @@ caps.handback.revision: 8
   
 3.  プロジェクト ファイルをビルドします。  
   
- 次の表は、安全にオーバーライドできる Microsoft.Common.targets のすべてのターゲットを示しています。  
+ 次の表は、Microsoft.Common.targets で安全にオーバーライドできるすべてのターゲットをまとめたものです。  
   
-|ターゲット名|Description|  
-|------------|-----------------|  
-|`BeforeCompile`, `AfterCompile`|この 2 つのターゲットのいずれかに挿入されたタスクは、コア コンパイルの前または後に実行されます。  ほとんどのカスタマイズは、この 2 つのターゲットのいずれかで行われます。|  
-|`BeforeBuild`, `AfterBuild`|この 2 つのターゲットのいずれかに挿入されたタスクは、ビルド内の他のすべての処理の前または後に実行されます。 **Note:**  `BeforeBuild` ターゲットと `AfterBuild` ターゲットは、ほとんどのプロジェクト ファイルの末尾のコメントで既に定義されています。  これにより、ビルド前イベントとビルド後イベントをプロジェクト ファイルに簡単に追加できます。|  
-|`BeforeRebuild`, `AfterRebuild`|この 2 つのターゲットのいずれかに挿入されたタスクは、コア リビルド機能が呼び出される前または後に実行されます。  Microsoft.Common.targets でターゲットは、`BeforeRebuild`、`Clean`、`Build`、`AfterRebuild` の順序で実行されます。|  
-|`BeforeClean`, `AfterClean`|この 2 つのターゲットのいずれかに挿入されたタスクは、コア クリーン機能が呼び出される前または後に実行されます。|  
-|`BeforePublish`, `AfterPublish`|この 2 つのターゲットのいずれかに挿入されたタスクは、コア発行機能が呼び出される前または後に実行されます。|  
-|`BeforeResolveReference`, `AfterResolveReferences`|この 2 つのターゲットのいずれかに挿入されたタスクは、アセンブリ参照が解決される前または後に実行されます。|  
-|`BeforeResGen`, `AfterResGen`|この 2 つのターゲットのいずれかに挿入されたタスクは、リソースが生成される前または後に実行されます。|  
+|ターゲット名|説明|  
+|-----------------|-----------------|  
+|`BeforeCompile`, `AfterCompile`|これらのターゲットのいずれかに挿入されているタスクは、コア コンパイル完了の前または後に実行されます。 ほとんどのカスタマイズはこれら 2 つのターゲットのいずれかで行われます。|  
+|`BeforeBuild`, `AfterBuild`|これらのターゲットのいずれかに挿入されているタスクは、ビルド内の他のすべての前または後に実行されます。 **注:**  `BeforeBuild` ターゲットと `AfterBuild` ターゲットは、ほとんどのプロジェクト ファイルの終わりにあるコメントで既に定義されています。 これにより、ビルド前イベントとビルド後イベントをプロジェクト ファイルに簡単に追加できます。|  
+|`BeforeRebuild`, `AfterRebuild`|これらのターゲットのいずれかに挿入されているタスクは、コア再ビルド機能の呼び出しの前または後に実行されます。 Microsoft.Common.targets のターゲット実行順序は `BeforeRebuild`、`Clean`、`Build`、`AfterRebuild` です。|  
+|`BeforeClean`, `AfterClean`|これらのターゲットのいずれかに挿入されているタスクは、コア クリーン機能の呼び出しの前または後に実行されます。|  
+|`BeforePublish`, `AfterPublish`|これらのターゲットのいずれかに挿入されているタスクは、コア公開機能の呼び出しの前または後に実行されます。|  
+|`BeforeResolveReference`, `AfterResolveReferences`|これらのターゲットのいずれかに挿入されているタスクは、アセンブリ参照解決の前または後に実行されます。|  
+|`BeforeResGen`, `AfterResGen`|これらのターゲットのいずれかに挿入されているタスクは、リソース生成の前または後に実行されます。|  
   
-## "DependsOn" プロパティのオーバーライド  
- 定義済みのターゲットをオーバーライドすると、ビルド処理を簡単に拡張できますが、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はターゲットの定義を順番に評価するため、プロジェクトをインポートする別のプロジェクトが、既にオーバーライドしたターゲットをオーバーライドすることは避けられません。  したがって、たとえば、プロジェクト ファイルで定義されている最後の `AfterBuild` ターゲットは、他のすべてのプロジェクトがインポートされた後、ビルド中に使用されるターゲットになります。  
+## <a name="overriding-dependson-properties"></a>"DependsOn" プロパティをオーバーライドする  
+ 事前定義済みターゲットのオーバーライドはビルド処理を拡張する簡単な方法ですが、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はターゲットの定義を順次評価するため、プロジェクトをインポートする別のプロジェクトが既にオーバーライドしているターゲットをオーバーライドすることを阻止できません。 そのため、たとえば、プロジェクト ファイルに定義されている最後の `AfterBuild` ターゲットが、その他すべてのプロジェクトがインポートされた後に、ビルド中に使用されるターゲットになります。  
   
- Microsoft.Common.targets ファイルの `DependsOnTargets` 属性で使用される "DependsOn" プロパティをオーバーライドすることで、意図しないターゲットのオーバーライドを防ぐことができます。  たとえば、`Build` ターゲットには、`"$(BuildDependsOn)"` の `DependsOnTargets` 属性値が含まれています。  次の例を考えてみましょう。  
+ ターゲットの意図しないオーバーライドを防ぐ方法があります。Microsoft.Common.targets ファイル全体で `DependsOnTargets` 属性で利用される "DependsOn" プロパティをオーバーライドします。 たとえば、`Build` ターゲットには、`DependsOnTargets` 属性値 `"$(BuildDependsOn)"` が含まれています。 次の例を考えてみましょう。  
   
-```  
+```xml  
 <Target Name="Build" DependsOnTargets="$(BuildDependsOn)"/>  
 ```  
   
- この XML は、`Build` ターゲットを実行する前に、`BuildDependsOn` プロパティで指定されているすべてのターゲットを実行する必要があることを示しています。  `BuildDependsOn` プロパティは、次のように定義されています。  
+ XML のこの部分は、`Build` ターゲットを実行するには、`BuildDependsOn` プロパティに指定されているすべてのターゲットを先に実行する必要があります。 `BuildDependsOn` プロパティは次のように定義されています。  
   
-```  
+```xml  
 <PropertyGroup>  
     <BuildDependsOn>  
         BeforeBuild;  
@@ -85,9 +86,9 @@ caps.handback.revision: 8
 </PropertyGroup>  
 ```  
   
- プロジェクト ファイルの末尾で `BuildDependsOn` という名前の別のプロパティを宣言することで、このプロパティ値をオーバーライドできます。  新しいプロパティに前の `BuildDependsOn` プロパティを含めることで、ターゲット一覧の先頭と末尾に新しいターゲットを追加できます。  次に例を示します。  
+ プロジェクト ファイルの終わりで `BuildDependsOn` という名前の別のプロパティを宣言することでこのプロパティ値をオーバーライドできます。 新しいプロパティに前の `BuildDependsOn` プロパティを含めることで、ターゲット一覧の最初と最後に新しいターゲットを追加できます。 例:  
   
-```  
+```xml  
 <PropertyGroup>  
     <BuildDependsOn>  
         MyCustomTarget1;  
@@ -104,27 +105,27 @@ caps.handback.revision: 8
 </Target>  
 ```  
   
- プロジェクト ファイルをインポートするプロジェクトは、ユーザーが実行したカスタマイズを上書きしなくても、これらのプロパティをオーバーライドできます。  
+ プロジェクト ファイルをインポートするプロジェクトは、既に行っているカスタマイズを上書きすることなく、これらのプロパティをオーバーライドできます。  
   
-#### "DependsOn" プロパティをオーバーライドするには  
+#### <a name="to-override-a-dependson-property"></a>"DependsOn" プロパティをオーバーライドするには  
   
-1.  オーバーライドする Microsoft.Common.targets 内の定義済みの "DependsOn" プロパティを識別します。  一般的にオーバーライドされる "DependsOn" プロパティの一覧については、次の表を参照してください。  
+1.  オーバーライドする Microsoft.Common.targets で事前定義済み "DependsOn" プロパティを見つけます。 下の表をご覧ください。一般的にオーバーライドされる "DependsOn" プロパティの一覧です。  
   
-2.  プロジェクト ファイルの末尾で、プロパティの別のインスタンスを定義します。  `$(BuildDependsOn)` などの元のプロパティを新しいプロパティに含めます。  
+2.  プロパティ ファイルの終わりにプロパティの別のインスタンスを定義します。 新しいプロパティに元のプロパティ (たとえば、`$(BuildDependsOn)`) を含めます。  
   
 3.  プロパティ定義の前または後にカスタム ターゲットを定義します。  
   
 4.  プロジェクト ファイルをビルドします。  
   
-### 一般的にオーバーライドされる "DependsOn" プロパティ  
+### <a name="commonly-overridden-dependson-properties"></a>一般的にオーバーライドされる "DependsOn" プロパティ  
   
-|プロパティ名|Description|  
-|------------|-----------------|  
+|プロパティ名|説明|  
+|-------------------|-----------------|  
 |`BuildDependsOn`|ビルド処理全体の前または後にカスタム ターゲットを挿入する場合にオーバーライドするプロパティ。|  
-|`CleanDependsOn`|カスタム ビルド処理から出力をクリーンアップする場合にオーバーライドするプロパティ。|  
-|`CompileDependsOn`|コンパイル処理の前または後にカスタム プロセスを挿入する場合にオーバーライドするプロパティ。|  
+|`CleanDependsOn`|カスタム ビルド処理からの出力をクリーンアップする場合にオーバーライドするプロパティ。|  
+|`CompileDependsOn`|コンパイル手順の前または後にカスタム プロセスを挿入する場合にオーバーライドするプロパティ。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio の統合](../msbuild/visual-studio-integration-msbuild.md)   
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
- [.Targets Files](../msbuild/msbuild-dot-targets-files.md)
+ [.Targets Files (.Targets ファイル)](../msbuild/msbuild-dot-targets-files.md)

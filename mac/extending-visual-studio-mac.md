@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio for Mac の拡張"
+title: "Visual Studio for Mac の拡張 | Microsoft Docs"
 Description: "Visual Studio for Mac の機能は、拡張機能パッケージというモジュールを使用して拡張できます。 このガイドの最初の第 1 部では、ドキュメントに日時を挿入する単純な Visual Studio for Mac 拡張機能パッケージを作成します。 このガイドの第 2 部では、拡張機能パッケージ システムの基礎と、Visual Studio for Mac の基礎を形成するコア API の一部を紹介します。"
 author: asb3993
 ms.author: amburns
@@ -7,14 +7,12 @@ ms.date: 04/14/2017
 ms.topic: article
 ms.technology: vs-ide-sdk
 ms.assetid: D5245AB0-8404-426B-B538-F49125E672B2
+ms.openlocfilehash: a1ef2b6416ec26cfc77f66ebf4ac2629c17295fa
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: f6c7e290f0abc2c32456e076420a7695ae868ba6
-ms.openlocfilehash: fd924424ed825ae37dcfa736e529a50b04e472e6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="extending-visual-studio-for-mac"></a>Visual Studio for Mac の拡張
 
 Visual Studio for Mac は、*拡張機能パッケージ*というモジュール セットから構成されます。 拡張機能パッケージを使用して、追加言語や新しいプロジェクト テンプレートのサポートなど、新しい機能を Visual Studio for Mac に導入することができます。

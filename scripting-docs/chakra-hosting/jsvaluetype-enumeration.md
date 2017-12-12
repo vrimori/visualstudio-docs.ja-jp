@@ -1,27 +1,29 @@
 ---
 title: "JsValueType 列挙型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "jsrt/JsValueType"
-helpviewer_keywords: 
-  - "JsValueType 列挙型"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: jsrt/JsValueType
+helpviewer_keywords: JsValueType enumeration
 ms.assetid: 6645e723-e554-41fc-b622-ab54ee044b3d
-caps.latest.revision: 16
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: df4f61cf9118c19a0fc35e7505af422b812d0b43
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# JsValueType 列挙型
+# <a name="jsvaluetype-enumeration"></a>JsValueType 列挙型
 JsValueRef の JavaScript の型。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 enum JsValueType {  
@@ -41,12 +43,12 @@ enum JsValueType {
 };  
 ```  
   
-## メンバー  
+## <a name="members"></a>メンバー  
   
-### 値  
+### <a name="values"></a>値  
   
 |名前|説明|  
-|--------|--------|  
+|----------|-----------------|  
 |`JsUndefined`|値は、`undefined` 値です。|  
 |`JsNull`|値は、`null` 値です。|  
 |`JsNumber`|値は、JavaScript 数値です。|  
@@ -61,8 +63,8 @@ enum JsValueType {
 |`JsTypedArray`|値は、型指定された JavaScript 配列オブジェクト値です。<br /><br /> この列挙値は、エッジ モードでのみサポートされています。|  
 |`JsDataView`|値は、JavaScript `DataView` オブジェクト値です。<br /><br /> この列挙値は、エッジ モードでのみサポートされています。|  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** jsrt.h  
   
-## 参照  
- [リファレンス \(JavaScript ランタイム\)](../chakra-hosting/reference-javascript-runtime.md)
+## <a name="see-also"></a>関連項目  
+ [リファレンス (JavaScript ランタイム)](../chakra-hosting/reference-javascript-runtime.md)

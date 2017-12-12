@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,29 +29,15 @@ helpviewer_keywords:
 - file extensions, Visual Studio
 - file types
 ms.assetid: 0ba5007b-465d-4efa-b1e4-f0ee68527649
-caps.latest.revision: 19
-author: kempb
-ms.author: kempb
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: b8f389deae83848893e59daec16630c911925f19
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 744b35962a196e0372d1bd1fa916f247a9195da6
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="project-and-solution-file-types"></a>プロジェクト ファイルとソリューション ファイルの種類
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] は、多くの種類のファイルをサポートします。 特定のインストールでは、インストールされるコンポーネントによってサポートされるファイルの種類が決まります。 このトピックでは、いくつかの標準的なインストールでサポートされるソリューション ファイルとプロジェクト ファイルの種類について説明します。 その他のファイルの種類の詳細については、それぞれの種類のファイル名拡張子を使用して検索してください。  
@@ -69,10 +54,8 @@ ms.lasthandoff: 04/05/2017
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] では、プロジェクト固有の情報を格納するために、さまざまなファイル形式を使用します。 詳細については、次のヘルプ トピックを参照してください。  
   
  [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]  
- [Visual C++ プロジェクトに対して作成されるファイルの種類](/cpp/ide/file-types-created-for-visual-cpp-projects)  
-  
- [Visual C++ プロジェクトの作成と管理](/cpp/ide/creating-and-managing-visual-cpp-projects)  
-  
+ [Visual C++ プロジェクトに対して作成されるファイルの種類](/cpp/ide/file-types-created-for-visual-cpp-projects)    
+ [Visual C++ プロジェクトの作成および管理](/cpp/ide/creating-and-managing-visual-cpp-projects)    
  [Unicode](/cpp/mfc/unicode-in-mfc)  
   
 ## <a name="see-also"></a>関連項目  

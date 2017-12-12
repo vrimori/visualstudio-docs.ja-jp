@@ -4,45 +4,28 @@ ms.custom:
 ms.date: 06/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a704215d-d252-4087-921b-ac81ebe2a9c9
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: baf12bba10dfba15f10d75fd1f7a4cdc4000e441
-ms.openlocfilehash: a5d885f8604bdb52907adae4f231b41e0881017f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/21/2017
-
+ms.openlocfilehash: b6e71a7cc3200de9570ee0545bbc60e59943a693
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール
-Windows 8 および Windows Server 2012 から強化されたセキュリティ機能によって、Visual Studio パフォーマンス ツールがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 Windows ストア アプリにも新しい収集手法が必要です。 このトピックでは、Windows 8 および Windows Server 2012 プラットフォームからのパフォーマンス ツールの変更点について説明します。
+Windows 8 および Windows Server 2012 から強化されたセキュリティ機能によって、Visual Studio パフォーマンス ツールがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 このトピックでは、Windows 8 および Windows Server 2012 プラットフォームからのパフォーマンス ツールの変更点について説明します。
   
 > [!NOTE]
 >  その他のサポートされている Windows バージョン (Windows 7、Windows Server 2008 R2) でのパフォーマンス ツールに変更点はありません。
   
 ##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
- [Visual Studio IDE から Windows ストア アプリ上のデータを収集する](#BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE)  
+ [Visual Studio IDE から UWP アプリ上のデータを収集する](#BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE)  
   
  [Windows 8 デスクトップまたは Windows Server 2012 で実行中のアプリ上のデータを Visual Studio IDE から収集する](#BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE)  
   
@@ -52,10 +35,10 @@ Windows 8 および Windows Server 2012 から強化されたセキュリティ�
   
  [階層の相互作用 (TIP) データを収集する](#BKMK_Collecting_tier_interaction__TIP__data)  
   
-##  <a name="BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE"></a>Visual Studio IDE から Windows ストア アプリ上のデータを収集する  
- JavaScript および HTML 5 で記述された Windows ストア アプリのプロファイリングを行う場合は、JavaScript コードのインストルメンテーション データを収集します。 Visual C++、Visual C#、または Visual Basic で記述された Windows ストア アプリまたはコンポーネントのプロファイリングを行う場合は、ネイティブ コードおよびマネージ コードのサンプリング データを収集します。 ローカル コンピューターまたはリモート コンピューター上のアプリをプロファイリングすることもできます。  
+##  <a name="BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE"></a> Visual Studio IDE から UWP アプリ上のデータを収集する  
+ JavaScript および HTML 5 で記述された UWP アプリのプロファイリングを行う場合は、JavaScript コードのインストルメンテーション データを収集します。 Visual C++、Visual C#、または Visual Basic で記述された UWP アプリまたはコンポーネントのプロファイリングを行う場合は、ネイティブ コードおよびマネージ コードのサンプリング データを収集します。 ローカル コンピューターまたはリモート コンピューター上のアプリをプロファイリングすることもできます。  
   
- Windows ストア アプリのプロファイリングを行う場合、次のプロファイル機能およびオプションはサポートされていません。  
+ UWP アプリのプロファイリングを行う場合、次のプロファイル機能およびオプションはサポートされていません。  
   
 -   サンプリング メソッドを使用した JavaScript アプリのプロファイリング。  
   
@@ -71,21 +54,21 @@ Windows 8 および Windows Server 2012 から強化されたセキュリティ�
   
 -   パフォーマンス カウンター データや Windows カウンター データの収集、追加のコマンド ライン オプションの指定などのインストルメンテーション オプション。  
   
- Windows ストア アプリのプロファイリングの詳細については、次のトピックをご覧ください。  
+ UWP アプリのプロファイリングの詳細については、次のトピックをご覧ください。  
   
- [ローカル コンピューターでの Windows ストア アプリの実行](../debugger/run-windows-store-apps-on-the-local-machine.md)  
+ [ローカル コンピューターで UWP アプリを実行する](../debugger/run-windows-store-apps-on-the-local-machine.md)  
   
- [リモート コンピューターでの Windows ストア アプリの実行](../debugger/run-windows-store-apps-on-a-remote-machine.md)  
+ [リモート コンピューターで UWP アプリを実行する](../debugger/run-windows-store-apps-on-a-remote-machine.md)  
   
  [プロファイリング ツール](profiling-tools.md)  
   
 -   [JavaScript メモリ](../profiling/javascript-memory.md)
   
--   [ローカル コンピューターでの Windows ストア アプリの Visual C++、Visual C#、および Visual Basic コードのプロファイリング](http://msdn.microsoft.com/en-us/2d0c939e-0bac-48c5-b727-46f6c6113060)  
+-   [ローカル コンピューターでの UWP アプリの Visual C++、Visual C#、および Visual Basic コードのプロファイリング](http://msdn.microsoft.com/en-us/2d0c939e-0bac-48c5-b727-46f6c6113060)  
   
--   [リモート デバイスでの Windows ストア アプリの Visual C++、Visual C#、および Visual Basic コードのプロファイリング](http://msdn.microsoft.com/en-us/b932a2be-11b0-40fd-b996-75c6b6a79d22)  
+-   [リモート デバイスでの UWP アプリの Visual C++、Visual C#、および Visual Basic コードのプロファイリング](http://msdn.microsoft.com/en-us/b932a2be-11b0-40fd-b996-75c6b6a79d22)  
   
--   [Windows ストア アプリの Visual C++、Visual C#、および Visual Basic コードのパフォーマンス データの分析](http://msdn.microsoft.com/en-us/5de4a413-d924-425f-afc4-e1ecfb0fca18)  
+-   [UWP アプリの Visual C++、Visual C#、および Visual Basic コードのパフォーマンス データの分析](http://msdn.microsoft.com/en-us/5de4a413-d924-425f-afc4-e1ecfb0fca18)  
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
@@ -106,7 +89,7 @@ Windows 8 および Windows Server 2012 から強化されたセキュリティ�
   
 |ツール名|説明|  
 |---------------|-----------------|  
-|[VSPerf](../profiling/vsperf.md)|Windows ストア アプリからプロファイル データを収集し、Windows 8 デスクトップ アプリケーションおよび Windows Server 2012 アプリケーションからサンプル プロファイル データを収集します。|  
+|[VSPerf](../profiling/vsperf.md)|UWP アプリからプロファイル データを収集し、Windows 8 デスクトップ アプリケーションおよび Windows Server 2012 アプリケーションからサンプル プロファイル データを収集します。|  
 |[VSPerfCmd](../profiling/vsperfcmd.md)|Windows 8 デスクトップまたは Windows Server 2012 で実行されるアプリから、インストルメンテーション、同時実行、および階層相互作用プロファイル データを収集します。 以前のバージョンの Windows からすべてのタイプのプロファイル データを収集します。|  
   
  これらのツールはどちらも、Visual Studio と共にローカル コンピューターにインストールされます。  
@@ -139,7 +122,7 @@ Windows 8 および Windows Server 2012 から強化されたセキュリティ�
   
 1.  Windows 8 デスクトップまたは Windows Server 2012 で実行されるアプリから相互作用データを収集するには、インストルメンテーション メソッドを使用する必要があります。  
   
-2.  Windows ストア アプリの階層相互作用データを収集することはできません。  
+2.  UWP アプリの階層相互作用データを収集することはできません。  
   
 3.  階層相互作用データは、サポートされている他のバージョンの Windows で、すべてのプロファイル方法に含めることができます。  
   

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -13,39 +12,22 @@ dev_langs:
 - VB
 - FSharp
 - C++
-helpviewer_keywords:
-- memory leaks, JavaScript example
+helpviewer_keywords: memory leaks, JavaScript example
 ms.assetid: f595412f-776b-49a2-8433-ea0062c6904d
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7e848a57962636a8ca346e809f3dadad675a7963
-ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 1f31221f52e9e944dcfc82c98d18e2cf5ec263bf
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="walkthrough-find-a-memory-leak-javascript"></a>チュートリアル: メモリ リークの検出 (JavaScript)
-![Windows と Windows Phone に適用](~/debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
+![Windows と Windows Phone に適用](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
- このチュートリアルでは、JavaScript メモリ アナライザーを使用し、単純なメモリの問題を特定して修復するプロセスについて説明します。 JavaScript メモリ アナライザーは、Visual Studio で、JavaScript を使用して Windows 用に開発された Windows ストア アプリに対して使用できます。 このシナリオでは、作成されるのと同じペースで破棄されるはずの DOM 要素がメモリに保持されてしまうアプリを作成します。  
+ このチュートリアルでは、JavaScript メモリ アナライザーを使用し、単純なメモリの問題を特定して修復するプロセスについて説明します。 JavaScript メモリ アナライザーは、Visual Studio で、JavaScript を使用して Windows 用に開発された UWP アプリに対して使用できます。 このシナリオでは、作成されるのと同じペースで破棄されるはずの DOM 要素がメモリに保持されてしまうアプリを作成します。  
   
  このアプリのメモリ リークの原因は非常に特殊なものですが、以下に示す手順は、一般にメモリがリークしているオブジェクトを分離するのに効果的なワークフローです。  
   
@@ -154,17 +136,17 @@ ms.lasthandoff: 02/22/2017
 1.  **[デバッグ]** ツール バーの、 **[デバッグの開始]** の一覧で、更新されたプロジェクトのデバッグ対象を選択します (Windows Phone エミュレーターまたは **[シミュレーター]**のいずれか)。  
   
     > [!TIP]
-    >  Windows ストア アプリについては、この一覧で **[ローカル コンピューター]** または **[リモート コンピューター]** を選択することもできます。 ただし、エミュレーターやシミュレーターの場合は、Visual Studio の横に配置することで、実行中のアプリと JavaScript メモリ アナライザーを簡単に切り替えることができます。 詳しくは、「[Visual Studio からのアプリの実行](../debugger/run-store-apps-from-visual-studio.md)」および「[リモート コンピューターでの Windows ストア アプリの実行](../debugger/run-windows-store-apps-on-a-remote-machine.md)」を参照してください。  
+    >  UWP アプリの場合、この一覧で **[ローカル コンピューター]** または **[リモート コンピューター]** を選択することもできます。 
   
 2.  **[デバッグ]** メニューの **[パフォーマンス プロファイラー...]**をクリックします。  
   
 3.  **[使用可能なツール]**で **[JavaScript メモリ]**を選択し、 **[開始]**をクリックします。  
   
-     このチュートリアルでは、メモリ アナライザーをスタートアップ プロジェクトにアタッチします。 インストールしたアプリへのメモリ アナライザーのアタッチなど、その他のオプションについては、「[JavaScript メモリ](../profiling/javascript-memory.md)」を参照してください。  
+     このチュートリアルでは、メモリ アナライザーをスタートアップ プロジェクトにアタッチします。 インストールしたアプリへのメモリ アナライザーのアタッチなど、その他のオプションについては、以下を参照してください。 [[JavaScript メモリ]](../profiling/javascript-memory.md)の順にクリックします。  
   
      メモリ アナライザーを起動したとき、VsEtwCollector.exe を実行するアクセス許可を要求するユーザー アカウント制御が表示される場合があります。 **[はい]**をクリックします。  
   
-4.  **[Leak Memory]\(メモリ リーク)** を 4 回続けてクリックします。  
+4.  **[Leak Memory] (メモリ リーク)** を 4 回続けてクリックします。  
   
      ボタンをクリックすると、default.js のイベント処理コードで、メモリ リークを引き起こす処理が実行されます。 これを診断用に使用します。  
   
@@ -175,7 +157,7 @@ ms.lasthandoff: 02/22/2017
   
      JavaScript メモリ アナライザーの情報が Visual Studio の新しいタブに表示されます。  
   
-     この概要ビューのメモリ グラフには、メモリの使用量の変化が表示されます。 このビューには、 **[ヒープ スナップショットの作成]**などのコマンドも用意されています。 特定の時刻におけるメモリの使用量の詳細情報がスナップショットに示されます。 詳細については、「[JavaScript メモリ](../profiling/javascript-memory.md)」を参照してください。  
+     この概要ビューのメモリ グラフには、メモリの使用量の変化が表示されます。 このビューには、 **[ヒープ スナップショットの作成]**などのコマンドも用意されています。 特定の時刻におけるメモリの使用量の詳細情報がスナップショットに示されます。 詳細については、「 [[JavaScript メモリ]](../profiling/javascript-memory.md)の順にクリックします。  
   
 6.  **[ヒープ スナップショットの作成]**をクリックします。  
   
@@ -228,7 +210,7 @@ ms.lasthandoff: 02/22/2017
   
 15. 次に示すように、オブジェクト ツリーの最上位にある HTMLDivElement オブジェクトを開きます。  
   
-     ![ヒープ上のオブジェクト数に関する差分ビュー](~/profiling/media/js_mem_app_typesdiff.png "JS_Mem_App_TypesDiff")  
+     ![ヒープ上のオブジェクト数に関する差分ビュー](../profiling/media/js_mem_app_typesdiff.png "JS_Mem_App_TypesDiff")  
   
      このビューには、次のような、メモリ リークに関する有用な情報が表示されます。  
   
@@ -236,7 +218,7 @@ ms.lasthandoff: 02/22/2017
   
     -   このオブジェクトは、スナップショット #2 から残されたオブジェクトで、メモリ リークの可能性があるものを表しています。  
   
-     ここでこのアプリについて少し説明しておくと、 **[Leak Memory]\(メモリ リーク)** をクリックすると DIV 要素が削除され、要素の追加されます。したがって、このコードは正しく動作していないと思われます (つまり、メモリがリークする)。 次のセクションでは、その修正方法について説明します。  
+     ここでこのアプリについて少し説明しておくと、 **[Leak Memory] (メモリ リーク)** をクリックすると DIV 要素が削除され、要素の追加されます。したがって、このコードは正しく動作していないと思われます (つまり、メモリがリークする)。 次のセクションでは、その修正方法について説明します。  
   
     > [!TIP]
     >  `Global` オブジェクトに対する相対的な位置を特定することによってオブジェクトを識別できる場合があります。 これを行うには、その識別子のショートカット メニューを開き、 **[ルート ビューで表示]**をクリックします。  
@@ -262,7 +244,7 @@ ms.lasthandoff: 02/22/2017
     elem = newDiv;  
     ```  
   
-     このコードは、キャッシュされた要素への参照を更新します。これにより、 **[Leak Memory]\(メモリ リーク)** をクリックすると要素が正しく削除されるようになります。 load 関数の完全なコードは次のようになります。  
+     このコードは、キャッシュされた要素への参照を更新します。これにより、 **[Leak Memory] (メモリ リーク)** をクリックすると要素が正しく削除されるようになります。 load 関数の完全なコードは次のようになります。  
   
     ```javascript  
     function load() {  
@@ -285,7 +267,7 @@ ms.lasthandoff: 02/22/2017
   
 5.  前と同じ手順に従って 3 つのスナップショットを取得します。 手順は次のとおりです。  
   
-    1.  アプリで **[Leak Memory]\(メモリ リーク)** を 4 回続けてクリックします。  
+    1.  アプリで **[Leak Memory] (メモリ リーク)** を 4 回続けてクリックします。  
   
     2.  Visual Studio に切り替え、 **[ヒープ スナップショットの作成]** をクリックしてベースライン スナップショットを取得します。  
   

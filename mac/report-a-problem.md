@@ -1,27 +1,27 @@
 ---
-title: "問題を報告する"
+title: "問題を報告する | Microsoft Docs"
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 1C7AC52E-754E-473F-A5B5-00C3A40DAACD
+ms.openlocfilehash: f391ef0b21ba6d500e88908d806ea3958c771bed
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 41fd1949e7c3ea635b847c3e29648ed6e02a414e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="how-to-report-a-problem-in-visual-studio-for-mac"></a>Visual Studio for Mac に関する問題を報告する方法
 
 Visual Studio for Mac で問題が発生した場合、Microsoft に報告していただければ、診断して修正いたします。 
 
 ## <a name="how-to-report-a-problem"></a>問題を報告する方法
 
-Visual Studio for Mac に関する問題を報告するには、ウェルカム ページにある **[問題の報告]** リンクを使用します。
+Visual Studio for Mac での問題を報告するには、メニュー バーから **[ヘルプ] > [問題を報告する]** を選択します。
 
 ![[問題の報告] リンク](media/report-problem-image1.png)
+
+ウェルカム ページにある **[問題を報告する]** リンクを使用することもできます。
 
 これで、**[問題の報告]** Web ページが表示されます。 このページを使用して、既存のすべての問題を表示し、同様の問題に投票し、他のユーザーが報告した問題の解決策を送信することができます。
 

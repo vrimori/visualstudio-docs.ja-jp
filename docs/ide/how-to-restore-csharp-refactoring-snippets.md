@@ -1,46 +1,20 @@
 ---
 redirect_url: /visualstudio/csharp-ide/refactoring-csharp
-title: "方法 : C# リファクタリング スニペットを復元する | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- unsafe expansion
-- expansions, unsafe
-ms.assetid: 12114273-7f2f-43d0-abcb-2d4711a3a68d
-caps.latest.revision: 20
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a4721d8bbd5dd6ec29f555ee8d4848ef3660243f
-ms.openlocfilehash: 87ecb3149443bc90c2398b67158df35b193bcfe1
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: cb4e45847008d99aa17b5ce3dde83da036a53dbb
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/07/2017
+---
+title: "方法 : C# リファクタリング スニペットを復元する | Microsoft Docs" ms.custom: "" ms.date: "11/04/2016" ms.reviewer: "" ms.suite: "" ms.technology: 
+  - "vs-ide-general" ms.tgt_pltfrm: "" ms.topic: "article" helpviewer_keywords: 
+  - "安全でない展開"
+  - "展開、安全でない" ms.assetid: 12114273-7f2f-43d0-abcb-2d4711a3a68d caps.latest.revision: 20 author: "gewarren" ms.author: "gewarren" manager: ghogen
 ---
 # <a name="how-to-restore-c-refactoring-snippets"></a>方法 : C# リファクタリング スニペットを復元する
 C# リファクタリング操作は、次のディレクトリにあるコード スニペットに依存しています。  
   
- *インストール ディレクトリ*\Microsoft Visual Studio 14.0\VC#\Snippets\\*言語 ID*\Refactoring  
+ *インストール ディレクトリ*\Microsoft Visual Studio 15.0\VC#\Snippets\\*言語 ID*\Refactoring  
   
  この Refactoring ディレクトリまたはこのディレクトリ内のファイルを削除または破損すると、IDE では、C# リファクタリング操作が機能しない場合があります。 次の手順は、C# リファクタリング コード スニペットを復元する場合に役立ちます。  
   
@@ -64,11 +38,11 @@ C# リファクタリング操作は、次のディレクトリにあるコー�
   
 5.  次のディレクトリ パスにある **Refactoring** フォルダーに移動します。  
   
-     *インストール ディレクトリ*\Microsoft Visual Studio 14.0\VC#\Snippets\\*言語 ID*\Refactoring  
+     *インストール ディレクトリ*\Microsoft Visual Studio 15.0\VC#\Snippets\\*言語 ID*\Refactoring  
   
      既定のインストールでは、実際のパスは次のようになります。  
   
-     C:\Program Files\Microsoft Visual Studio 14.0\VC#\Snippets\1033\Refactoring  
+     C:\Program Files\Microsoft Visual Studio 15.0\VC#\Snippets\1033\Refactoring  
   
 6.  **[コード スニペット ディレクトリ]** ダイアログ ボックスの **[開く]** をクリックし、コード スニペット マネージャーの **[OK]** をクリックします。  
   

@@ -1,9 +1,8 @@
 ---
 title: "Live Unit Testing に関する FAQ | Microsoft Docs"
-ms.date: 2017-08-15
+ms.date: 2017-10-03
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -12,47 +11,54 @@ helpviewer_keywords:
 ms.assetid: 61baf3bb-646f-4c5a-b7c0-a6bdff68f21c
 author: rpetrusha
 ms.author: ronpet
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: de3ddc4288f2e14f0657f6bfb0ff3ee49ff7b5c9
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c6a2c3b313aca87a77f7ad5b12a3d99c82c042b2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing についてよく寄せられる質問
 
-## <a name="whats-new-in-live-unit-testing-for-visual-studio-2017-version-153"></a>Visual Studio 2017 version 15.3 の Live Unit Testing では、何が新しくなりましたか? 
+## <a name="live-unit-testing-is-improved-and-enhanced-regularly-how-can-i-find-information-about-the-latest-new-features-and-enhancements"></a>Live Unit Testing は、定期的に改善と機能強化が行われています。 最新の機能と機能強化に関する情報を確認するにはどうすればよいですか?
 
 **回答:**
 
-- .NET Core/.NET Standard 対応になったことと、パフォーマンスが向上したことが主な 2 つの変更点です。 はじめて Live Unit Testing でテストを完全ビルドして実行したときは、大幅に高速化したことに驚くでしょう。 その後、同じソリューションで Live Unit Testing をもう一度開始したときも、大幅なパフォーマンスの向上を実感できるはずです。 Live Unit Testing で生成されたデータを永続化し、最新状態チェックでは可能な限りそのデータを再利用するようにしました。 以上の主な変更点の他に、Live Unit Testing には次のような変更点があります。 
+Live Visual Studio 2017 バージョン 15.3 以降で Live Unit Testing に対して加えられた新機能と機能強化を確認するには、「[What's New in Live Unit Testing](live-unit-testing-whats-new.md)」 (Live Unit Testing の新機能) を参照してください。
 
-  - テスト メソッドと通常のメソッドを区別するために、新しいビーカー アイコンが使われます。 ビーカーが空の場合、特定のテストが Live Unit Testing に含まれていないことを意味します。 
 
-  - Live Unit Testing のカバレッジ アイコンのポップアップ UI ウィンドウからテスト メソッドをクリックすると、UI ウィンドウ内でそのコンテキストからテストをデバッグできます。コード エディターを終了する必要がありません。 これは特に、失敗したテストを確認するときに便利です。  
+## <a name="what-test-frameworks-does-live-unit-testing-support-and-what-are-the-minimum-supported-versions"></a>Live Unit Testing でサポートされているテスト フレームワークは何ですか? また、サポートされている最小バージョンはいくつですか?  
 
-  - [ツール]/[オプション]/[Live Unit Testing]/[全般] に、構成可能なオプションがいくつか追加されました。 Live Unit Testing に使用されるメモリに上限を設定できます。 オープン ソリューションのために、Live Unit Testing の永続的データのファイル パスも指定できます。 
+**回答:**
 
-  - [テスト]/[Live Unit Testing] のメニュー バーに、メニュー項目がいくつか追加されました。 **[Reset Clean]\(クリーンのリセット\)** は、永続的データを削除して再生成します。 **[オプション]** は、[ツール]/[オプション]/[Live Unit Testing]/[全般] に移動します。
-  
-  - 次の属性をソース コードに指定することで、対象のテスト メソッドを Live Unit Testing から除外できるようになりました。
-    - xUnit の場合: `[Trait("Category", "SkipWhenLiveUnitTesting")]`
-    - NUnit の場合: `[Category("SkipWhenLiveUnitTesting")]`
-    - MSTest の場合: `[TestCategory("SkipWhenLiveUnitTesting")]`
+Live Unit Testing は、次の表に示されている 3 つの一般的な単体テスト フレームワークで動作します。 アダプターやフレームワークのサポートされる最小バージョンも表に示されています。 単体テスト フレームワークはすべて NuGet.org から入手できます。
+ 
+<table> 
+<tr>
+   <th>テスト フレームワーク</th>
+   <th>Visual Studio アダプターの最小バージョン</th>
+   <th>フレームワークの最小バージョン</th>
+</tr>
+<tr>
+   <td>xUnit.net</td>
+   <td> xunit.runner.visualstudio バージョン 2.2.0-beta3-build1187</td>
+   <td>xunit 1.9.2</td> 
+</tr>
+<tr>
+   <td>NUnit</td>
+   <td>NUnit3TestAdapter バージョン 3.5.1</td>  
+   <td>NUnit バージョン 3.5.0</td>
+</tr>
+<tr>
+   <td>MSTest</td>
+   <td>MSTest.TestAdapter 1.1.4-preview</td>
+   <td>MSTest.TestFramework 1.0.5-preview</td>
+</tr>
+</table>
+
+`Microsoft.VisualStudio.QualityTools.UnitTestFramework` を参照する以前の MSTest に基づくテスト プロジェクトを使用しており、新しい MSTest NuGet パッケージへの移行を希望されない場合は、Visual Studio 2017 バージョン 15.4 にアップグレードしてください。 
+
+場合によっては、Live Unit Testing を動作させるため、ソリューションのプロジェクトによって参照されている NuGet パッケージの明示的な復元が必要になります。 そのためには、Living Unit Testing を有効にする前に、ソリューションの明示的なビルドを行うか (Visual Studio の最上位メニューから **[ビルド]** の **[ソリューションのリビルド]** を選択)、またはソリューションのパッケージを復元します (ソリューションを右クリックして **[NuGet パッケージの復元]** を選択)。 
+
 
 ## <a name="does-live-unit-testing-work-with-net-core"></a>Live Unit Testing は .NET Core で動作しますか?  
 
@@ -262,4 +268,3 @@ Live Unit Testing は現在のところ、ライトウェイト ソリューシ�
 
 [ライブ単体テスト](live-unit-testing.md)
  
-

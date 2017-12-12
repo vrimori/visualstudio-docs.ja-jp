@@ -1,34 +1,38 @@
 ---
-title: "JsTypedArrayType 列挙体 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "JsTypedArrayType 列挙型 | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 67f3e51c-acbb-4fff-a414-0868a0dd5051
-caps.latest.revision: 2
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 60fc3fbc2c81863894a824868d286c16c8e02ae5
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# JsTypedArrayType 列挙体
+# <a name="jstypedarraytype-enumeration"></a>JsTypedArrayType 列挙体
 型指定された JavaScript 配列の型です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 enum JsTypedArrayType;  
 ```  
   
-## メンバー  
+## <a name="members"></a>メンバー  
   
-### 値  
+### <a name="values"></a>値  
   
 |名前|説明|  
-|--------|--------|  
+|----------|-----------------|  
 |`JsArrayTypeInt8`|int8 配列です。|  
 |`JsArrayTypeUint8`|uint8 配列です。|  
 |`JsArrayTypeUint8Clamped`|uint8 の固定された配列です。|  
@@ -39,8 +43,8 @@ enum JsTypedArrayType;
 |`JsArrayTypeFloat32`|float32 配列です。|  
 |`JsArrayTypeFloat64`|float64 配列です。|  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** jsrt.h  
   
-## 参照  
- [リファレンス \(JavaScript ランタイム\)](../chakra-hosting/reference-javascript-runtime.md)
+## <a name="see-also"></a>関連項目  
+ [リファレンス (JavaScript ランタイム)](../chakra-hosting/reference-javascript-runtime.md)

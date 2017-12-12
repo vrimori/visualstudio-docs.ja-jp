@@ -7,31 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fd39882e-06d1-4b39-80d2-4d07b6e4f8f5
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 6a9e8253c555f8f416b18cb46f211c3733ab788f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: a770fdeae316e6ee79e919df9c9cc1b4551b90b6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="verify-your-xamarin-environment"></a>Xamarin 環境を検証する
 インストーラーが完了したら (「[セットアップとインストール](../cross-platform/setup-and-install.md)」を参照)、数分をかけて、Xamarin 開発を実行するための準備ができているかどうかを確認します。  
@@ -90,7 +74,7 @@ ms.lasthandoff: 05/13/2017
   
     -   次に示すように、Visual Studio のデバッグ ドロップダウンで **エミュレーター 8.1** のターゲットまたは接続されたデバイスを選び、F5 キーを押してデバッガーを開始します。  
   
-         ![デバッグ ターゲットとして Windows Phone エミュレーターを選択しています](~/cross-platform/media/crossplat-xamarin-verify-4.png "CrossPlat Xamarin Verify 4")  
+         ![デバッグ ターゲットとして Windows Phone エミュレーターを選択しています](../cross-platform/media/crossplat-xamarin-verify-4.png "CrossPlat Xamarin Verify 4")  
   
     -   エミュレーターを機能させる際に問題が発生した場合は、「 [Windows Phone 8 エミュレーターのトラブルシューティング](https://msdn.microsoft.com/library/windows/apps/jj681694.aspx)」をご覧ください。  
   
@@ -106,11 +90,11 @@ ms.lasthandoff: 05/13/2017
   
     2.  次に示すように、Visual Studio のビルド ドロップダウン リストで **iPhoneSimulator** のターゲットを選ぶか、テザリングされたデバイスがある場合には、**iPhone** のターゲットを選びます。 シミュレーターが表示されていない場合は、Mac で Xcode を起動し、**[Xcode] > [ユーザー設定]** の順に選び、**[ダウンロード]** をクリックします。 **[コンポーネント]** の下に、ダウンロード可能なシミュレーターのバージョンが表示されます。 デバッグに関する詳しい説明については、Xamarin の「[デバッグ](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator)」ページ (xamarin.com) を参照してください。  
   
-         ![iPhoneSimulator ビルド ターゲットを選択しています](~/cross-platform/media/crossplat-xamarin-verify-5.png "CrossPlat Xamarin Verify 5")  
+         ![iPhoneSimulator ビルド ターゲットを選択しています](../cross-platform/media/crossplat-xamarin-verify-5.png "CrossPlat Xamarin Verify 5")  
   
     3.  次に示すように、Visual Studio のデバッグ ドロップダウン リストで iPhone のターゲットを選び、F5 キーを押してデバッガーを開始します。 これによって、Mac 上のシミュレーターが起動し、Visual Studio でのデバッグ中にアプリを操作できるようになります。 iPhone または iPad の実機を Mac に接続した場合は、ここに表示され、代わりに選択できます。 いずれかのデバイスまたはシミュレーターが一覧に表示されない場合は、上記の手順 1 にあるリンク先のトピックを参照するか、 **[ツール]** >**iOS** >**[Xamarin Mac エージェント]**  
   
-         ![iPhone デバッグ ターゲットを選択しています](~/cross-platform/media/crossplat-xamarin-verify-6.png "CrossPlat Xamarin Verify 6")  
+         ![iPhone デバッグ ターゲットを選択しています](../cross-platform/media/crossplat-xamarin-verify-6.png "CrossPlat Xamarin Verify 6")  
   
     4.  Mac に接続する際に問題が発生した場合は、「 [接続のトラブルシューティング](http://developer.xamarin.com/guides/ios/getting_started/installation/windows/xamarin-mac-agent/xma-troubleshooting/) 」(xamarin.com) をご覧ください。  
   

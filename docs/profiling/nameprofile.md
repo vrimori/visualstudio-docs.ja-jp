@@ -1,103 +1,104 @@
 ---
-title: "NameProfile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "NameProfile"
-  - "NameProfileA"
+title: NameProfile | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- NameProfile
+- NameProfileA
 ms.assetid: 1bb05441-c4ff-4323-9fef-f3924fba4430
-caps.latest.revision: 16
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 474ba0510194590a199c9a418eef2a46888342f8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# NameProfile
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="nameprofile"></a>NameProfile
 `NameProfile` 関数は、指定したプロセスまたはスレッドに文字列を割り当てます。  
   
- NameProfile API は、インストルメンテーション プロファイリングでのみ使用できます。  NameProfile API は、サンプリング プロファイリングではサポートされません。  
+ NameProfile API は、インストルメンテーション プロファイリングでのみ使用できます。 NameProfile API は、サンプリング プロファイリングではサポートされません。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(  
-                                   LPCTSTR pszName,   
-                                   PROFILE_CONTROL_LEVEL Level,  
-                                   unsigned int dwId);  
+                                   LPCTSTR pszName,   
+                                   PROFILE_CONTROL_LEVEL Level,  
+                                   unsigned int dwId);  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pszName`  
   
- プロファイル要素の名前。  次の場合、名前は無効です \(NameProfileA は NAME\_ERROR\_INVALID\_NAME を返します\)。  
+ プロファイル要素の名前。 次の場合、名前は無効です (NameProfileA は NAME_ERROR_INVALID_NAME を返します)。  
   
--   NameProfileA に渡されたポインターが NULL 値の場合  
+-   NameProfileA に渡されたポインターが NULL 値である。  
   
--   pszName の文字列データの先頭が数値の場合  
+-   pszName の文字列データの先頭が数値である。  
   
--   pszName の文字列データに空白が含まれる場合  
+-   pszName の文字列データに空白が含まれる。  
   
--   pszName の文字列データにの次の文字が含まれる T: 、;。\`~\! @\#$%^\*& \(\) \= \[\] {}&#124;\\か。\/\<\>  
+-   pszName の文字列データに、,;.`~!@#$%^&*()=[]{}&#124;\\?/<> 文字のいずれかが含まれる。  
   
  `Level`  
   
- パフォーマンス データ収集を適用できるプロファイル レベルを指定します。  パフォーマンス データ収集を適用できるレベルには 3 つあり、**PROFILE\_CONTROL\_LEVEL** 値を使って指定できます。次のレベルのいずれかを指定できます。  
+ パフォーマンス データ収集を適用できるプロファイル レベルを示します。 次の **PROFILE_CONTROL_LEVEL** 値を使用して、パフォーマンス データ収集を適用できる 3 つのレベルのいずれかを指定できます。  
   
 |列挙子|説明|  
-|---------|--------|  
-|PROFILE\_GLOBALLEVEL|グローバル レベル設定は、プロファイル実行のすべてのプロセスとスレッドに影響します。|  
-|PROFILE\_PROCESSLEVEL|プロセス レベル設定は、指定されたプロセスに含まれるすべてのスレッドに影響します。|  
-|PROFILE\_THREADLEVEL|スレッド プロファイル レベル設定は、指定されたスレッドに影響します。|  
+|----------------|-----------------|  
+|PROFILE_GLOBALLEVEL|グローバル レベル設定は、プロファイル実行のすべてのプロセスとスレッドに影響します。|  
+|PROFILE_PROCESSLEVEL|プロセス レベル設定は、指定されたプロセスの一部であるスレッドすべてに影響します。|  
+|PROFILE_THREADLEVEL|スレッド プロファイル レベル設定は、指定されたスレッドに影響します。|  
   
  `dwId`  
   
- プロファイル レベル ID。  システムにより生成されたプロセス ID またはスレッド ID を使用します。  
+ プロファイル レベル ID。 システムにより生成されたプロセス ID またはスレッド ID を使用します。  
   
-## プロパティ値\/戻り値  
- 関数の成功または失敗は、**PROFILE\_COMMAND\_STATUS** 列挙型を使って表されます。  戻り値は次のいずれかになります。  
+## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
+ 関数の成功または失敗は、**PROFILE_COMMAND_STATUS** 列挙型を使って表されます。 戻り値は次のいずれかになります。  
   
 |列挙子|説明|  
-|---------|--------|  
-|NAME\_ERROR\_ID\_NOEXIST|指定されたプロファイル要素が存在しません。|  
-|NAME\_ERROR\_INVALID\_NAME|名前が無効です。|  
-|NAME\_ERROR\_LEVEL\_NOEXIST|指定されたプロファイル レベルが存在しません。|  
-|NAME\_ERROR\_NO\_SUPPORT|指定された操作がサポートされていません。|  
-|NAME\_ERROR\_OUTOFMEMORY|メモリ不足のため、このイベントを記録できません。|  
-|NAME\_ERROR\_REDEFINITION|このプロファイル要素には既に名前が割り当てられています。  この関数の名前は無視されます。|  
-|NAME\_ERROR\_TEXTTRUNCATED|名前のテキストが null 文字を含めて 32 文字を超えていたため、切り詰められました。|  
-|NAME\_OK|名前は正常に登録されました。|  
+|----------------|-----------------|  
+|NAME_ERROR_ID_NOEXIST|指定されたプロファイル要素が存在しません。|  
+|NAME_ERROR_INVALID_NAME|名前が無効です。|  
+|NAME_ERROR_LEVEL_NOEXIST|指定されたプロファイル レベルが存在しません。|  
+|NAME_ERROR_NO_SUPPORT|指定された操作がサポートされていません。|  
+|NAME_ERROR_OUTOFMEMORY|メモリ不足のため、このイベントを記録できません。|  
+|NAME_ERROR_REDEFINITION|プロファイル要素には既に名前が割り当てられています。 この関数の名前は無視されます。|  
+|NAME_ERROR_TEXTTRUNCATED|名前のテキストが null 文字を含めて 32 文字を超えていたため、切り詰められました。|  
+|NAME_OK|名前は正常に登録されました。|  
   
-## 解説  
- 各プロセスまたは各スレッドには、名前を 1 つのみ割り当てることができます。  プロファイル要素に名前を付けた後で、その要素の NameProfile を呼び出しても、無視されます。  
+## <a name="remarks"></a>コメント  
+ 各プロセスまたはスレッドには、名前を 1 つのみ割り当てることができます。 プロファイル要素に名前を付けた後で、その要素の NameProfile を呼び出しても無視されます。  
   
- 異なるスレッドまたはプロセスに同じ名前が指定されている場合、その名前を持つそのレベルの全要素のデータがレポートに含まれます。  
+ 異なるスレッドまたはプロセスに同じ名前が指定されている場合、その名前を持つそのレベルのすべての要素のデータがレポートに含まれます。  
   
- 現在のプロセスまたはスレッド以外のプロセスまたはスレッドを指定した場合、それが初期化され実行が開始されていることを確認した後で名前を付ける必要があります。  初期化されず、実行が開始されていない場合、NameProfile メソッドは失敗します。  
+ 現在のもの以外のプロセスまたはスレッドを指定した場合、それが初期化され、実行が開始されていることを確認した後で名前を付ける必要があります。 それ以外の場合、NameProfile メソッドは失敗します。  
   
 > [!IMPORTANT]
->  スレッドまたはプロセスが初期化される前でも、CreateProcess\(\) API 関数および CreateThread\(\) API 関数は値を返します。  
+>  CreateProcess() API および CreateThread() API 関数は、スレッドまたはプロセスが初期化される前に値を返す場合があります。  
   
-## 同等の .NET Framework 関数  
+## <a name="net-framework-equivalent"></a>同等の .NET Framework 関数  
  Microsoft.VisualStudio.Profiler.dll  
   
-## 関数の情報  
+## <a name="function-information"></a>関数の情報  
   
 |||  
 |-|-|  
 |**Header**|VSPerf.h をインクルードします。|  
-|**ライブラリ**|VSPerf.lib を使用します。|  
-|**Unicode**|`NameProfileW` \(Unicode\) および `NameProfileA` \(ANSI\) として実装します。|  
+|**Library**|VSPerf.lib を使用します。|  
+|**Unicode**|`NameProfileW` (Unicode) および `NameProfileA` (ANSI) として実装します。|  
   
-## 使用例  
- 次のコードは、NameProfile 関数の呼び出しの例です。  ANSI 版の関数の呼び出しかどうかを判断するために Win32 の文字列マクロおよび ANSI のコンパイラ設定が使用されていることを前提としています。  
+## <a name="example"></a>例  
+ 次のコードは、NameProfile 関数の呼び出しの例です。 この例では、コードで ANSI 対応関数を呼び出すかどうかを判断するために、Win32 文字列マクロおよび ANSI のコンパイラ設定が使用されていることを前提としています。  
   
 ```  
 void ExerciseNameProfile()  
@@ -134,5 +135,5 @@ void ExerciseNameProfile()
 }  
 ```  
   
-## 参照  
- [Visual Studio プロファイラー API リファレンス \(ネイティブ\)](../profiling/visual-studio-profiler-api-reference-native.md)
+## <a name="see-also"></a>関連項目  
+ [Visual Studio プロファイラー API リファレンス (ネイティブ)](../profiling/visual-studio-profiler-api-reference-native.md)

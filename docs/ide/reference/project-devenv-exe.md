@@ -1,86 +1,86 @@
 ---
-title: "/Project (devenv.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "/project DEVENV スイッチ"
-  - "配置プロジェクト, 指定"
-  - "Devenv, /project スイッチ"
-  - "project Devenv スイッチ (/project)"
-  - "プロジェクト [Visual Studio], ビルド"
-  - "プロジェクト [Visual Studio], 消去"
-  - "プロジェクト [Visual Studio], 再度ビルド"
+title: -Project (devenv.exe) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- /project Devenv switch
+- projects [Visual Studio], rebuilding
+- projects [Visual Studio], building
+- deployment projects, specifying
+- project Devenv switch (/project)
+- Devenv, /project switch
+- projects [Visual Studio], cleaning
 ms.assetid: 8b07859c-3439-436d-9b9a-a8ee744eee30
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 06d788e672cbda254ad95b2b36c650e59d3a3314
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# /Project (devenv.exe)
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-指定したソリューション構成にある単一のプロジェクトを、ビルド、クリーン、リビルド、または配置対象として指定します。  
+# <a name="project-devenvexe"></a>/Project (devenv.exe)
+指定したソリューション構成内の単一のプロジェクトを、ビルド、クリーン、リビルド、または配置対象として指定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 devenv SolutionName {/build|/clean|/rebuild|/deploy} SolnConfigName   
 [/project ProjName] [/projectconfig ProjConfigName]   
 ```  
   
-## 引数  
- \/build  
- `/project`  `ProjName` で指定したプロジェクトをビルドします。  
+## <a name="arguments"></a>引数  
+ /build  
+ `/project` `ProjName` で指定されたプロジェクトをビルドします。  
   
- \/clean  
- ビルド時に作成された中間ファイルと出力ディレクトリを消去します。  
+ /clean  
+ ビルド時に作成されたすべての中間ファイルと出力ディレクトリを消去します。  
   
- \/rebuild  
- `/project`  `ProjName` で指定したプロジェクトを消去してからビルドします。  
+ /rebuild  
+ `/project` `ProjName` で指定されたプロジェクトを消去してからビルドします。  
   
- \/deploy  
- ビルドまたはリビルドの後でプロジェクトが配置されるのを指定します。  
+ /deploy  
+ ビルドまたはリビルド後にプロジェクトを展開することを指定します。  
   
  `SolnConfigName`  
- 必ず指定します。  `SolutionName` で指定したソリューションに適用される、ソリューション構成の名前です。  
+ 必須です。 `SolutionName` で指定されたソリューションに適用されるソリューション構成の名前。  
   
  `SolutionName`  
- 必ず指定します。  ソリューション ファイルの完全パスと名前です。  
+ 必須です。 ソリューション ファイルの完全パスと名前。  
   
- \/project `ProjName`  
- 省略可能です。  ソリューション内のプロジェクト ファイルのパスと名前です。  `SolutionName` フォルダーからプロジェクト ファイルまでの相対パス、プロジェクトの表示名、またはプロジェクト ファイルの完全パスと名前を入力できます。  
+ /project `ProjName`  
+ 省略可能です。 ソリューション内のプロジェクト ファイルのパスと名前です。 `SolutionName` フォルダーからプロジェクト ファイルへの相対パス、プロジェクトの表示名、またはプロジェクト ファイルの完全なパスと名前を入力できます。  
   
- \/projectconfig `ProjConfigName`  
- 省略可能です。  `/project` 引数で指定したプロジェクトに適用される、プロジェクトのビルド構成の名前です。  
+ /projectconfig `ProjConfigName`  
+ 省略可能です。 指定した `/project` に適用されるプロジェクトのビルド構成の名前。  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
--   `devenv /build` コマンド、\/`clean` コマンド、`/rebuild` コマンドまたは `/deploy` コマンドに含めて使用する必要があります。  
+-   `devenv /build`、/`clean`、`/rebuild`、または `/deploy` コマンドに含めて使用する必要があります。  
   
--   空白を含む文字列は二重引用符で囲みます。  
+-   空白を含む文字列を二重引用符で囲みます。  
   
--   エラーなどのビルドの情報は、**\[コマンド\]** ウィンドウまたは `/out` スイッチで指定したログ ファイルに表示されます。  
+-   エラーなどのビルドの概要情報は、**[コマンド]** ウィンドウ、または `/out` スイッチで指定された任意のログ ファイルに表示できます。  
   
-## 使用例  
- この例では、`MySolution` の `Debug` ソリューション構成にある `Debug` プロジェクト ビルド構成を使用し、`CSharpConsoleApp` プロジェクトをビルドします。  
+## <a name="example"></a>例  
+ この例では、`Debug` プロジェクトのビルド構成を使用して、`MySolution` の `Debug` ソリューション構成内でプロジェクト `CSharpConsoleApp` をビルドします。  
   
 ```  
 devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /build Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug   
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)   
- [\/ProjectConfig](../../ide/reference/projectconfig-devenv-exe.md)   
- [\/Build](../../ide/reference/build-devenv-exe.md)   
- [\/Clean](../../ide/reference/clean-devenv-exe.md)   
- [\/Rebuild](../../ide/reference/rebuild-devenv-exe.md)   
- [\/Deploy](../../ide/reference/deploy-devenv-exe.md)   
- [\/Out](../../ide/reference/out-devenv-exe.md)
+ [/ProjectConfig (devenv.exe)](../../ide/reference/projectconfig-devenv-exe.md)   
+ [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md)   
+ [/Clean (devenv.exe)](../../ide/reference/clean-devenv-exe.md)   
+ [/Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)   
+ [/Deploy (devenv.exe)](../../ide/reference/deploy-devenv-exe.md)   
+ [/Out (devenv.exe)](../../ide/reference/out-devenv-exe.md)

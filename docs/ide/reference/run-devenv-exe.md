@@ -1,63 +1,63 @@
 ---
-title: "/Run (devenv.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "/r Devenv スイッチ"
-  - "/run Devenv"
-  - "アプリケーション [Visual Studio], 実行"
-  - "Devenv, /run スイッチ"
-  - "r Devenv スイッチ (/r)"
-  - "run Devenv スイッチ"
+title: -Run (devenv.exe) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- /run Devenv
+- run Devenv switch
+- applications [Visual Studio], running
+- /r Devenv switch
+- Devenv, /run switch
+- r Devenv switch (/r)
 ms.assetid: b1f22f9d-39a5-4918-8a2a-4b5c1e872665
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 5be97e75ac7dc29a6dd0244293259bcd17591233
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# /Run (devenv.exe)
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-指定したプロジェクトまたはソリューションをコンパイルし、実行します。  
+# <a name="run-devenvexe"></a>/Run (devenv.exe)
+指定したプロジェクトまたはソリューションをコンパイルして実行します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 devenv {/run|/r} {SolutionName|ProjectName}  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  `SolutionName`  
- 必ず指定します。  ソリューション ファイルの完全パスおよび名前です。  
+ 必須です。 ソリューション ファイルの完全パスと名前。  
   
  `ProjectName`  
- 必ず指定します。  プロジェクト ファイルの完全パスおよび名前です。  
+ 必須です。 プロジェクト ファイルの完全パスと名前。  
   
-## 解説  
- アクティブなソリューション構成に対して指定された設定に従ってプロジェクトまたはソリューションをコンパイルして実行します。  このスイッチは、統合開発環境 \(IDE: Integrated Development Environment\) を起動し、プロジェクトまたはソリューションの実行が完了しても IDE をアクティブな状態のままにします。  
+## <a name="remarks"></a>コメント  
+ アクティブなソリューション構成に対して指定された設定に従って、指定したプロジェクトまたはソリューションをコンパイルして実行します。 このスイッチは、統合開発環境 (IDE) を起動し、プロジェクトまたはソリューションの実行が完了しても IDE をアクティブな状態のままにします。  
   
--   空白を含む文字列は二重引用符で囲みます。  
+-   空白を含む文字列を二重引用符で囲みます。  
   
--   エラーなどの情報は、**\[コマンド\]** ウィンドウまたは `/out` スイッチで指定した任意のログ ファイルに表示されます。  
+-   エラーなどの概要情報は、**[コマンド]** ウィンドウ、または `/out`スイッチで指定した任意のログ ファイルに表示できます。  
   
-## 使用例  
- アクティブな配置構成を使用して `MySolution` を実行するコードは次のとおりです。  
+## <a name="example"></a>例  
+ この例では、アクティブな配置構成を使用して、ソリューション `MySolution` を実行します。  
   
 ```  
 devenv /run "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln"  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)   
- [\/Runexit](../../ide/reference/runexit-devenv-exe.md)   
- [\/Build](../../ide/reference/build-devenv-exe.md)   
- [\/Rebuild](../../ide/reference/rebuild-devenv-exe.md)   
- [\/Out](../../ide/reference/out-devenv-exe.md)
+ [/Runexit (devenv.exe)](../../ide/reference/runexit-devenv-exe.md)   
+ [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md)   
+ [/Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)   
+ [/Out (devenv.exe)](../../ide/reference/out-devenv-exe.md)

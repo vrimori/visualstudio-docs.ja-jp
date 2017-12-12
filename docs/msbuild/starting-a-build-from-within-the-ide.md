@@ -1,36 +1,36 @@
 ---
 title: "IDE 内からのビルドの開始 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ビルド"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: build
 ms.assetid: 936317aa-63b7-4eb0-b9db-b260a0306196
-caps.latest.revision: 5
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: 081bcfd01d8c28959bf0dd4d038e91895e9c3983
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDE 内からのビルドの開始
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-カスタムのプロジェクト システムでは、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> を使用してビルドを開始する必要があります。  このトピックでは、その理由について説明し、プロシージャの概要を示します。  
+# <a name="starting-a-build-from-within-the-ide"></a>IDE 内からのビルドの開始
+カスタムのプロジェクト システムでは、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> を使用してビルドを開始する必要があります。 このトピックでは、その理由について説明し、プロシージャの概要を示します。  
   
-## 並行ビルドとスレッド  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、共通リソースにアクセスするために仲介を必要とする並行ビルドを使用できます。  プロジェクト システムではビルドを非同期的に実行できますが、このようなシステムでは、ビルド マネージャーに提供されるコールバック内からビルド関数を呼び出すことはできません。  
+## <a name="parallel-builds-and-threads"></a>並行ビルドとスレッド  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、共通リソースにアクセスするために仲介を必要とする並行ビルドを使用できます。 プロジェクト システムではビルドを非同期的に実行できますが、このようなシステムでは、ビルド マネージャーに提供されるコールバック内からビルド関数を呼び出すことはできません。  
   
- プロジェクト システムで環境変数を変更する場合は、ビルドの NodeAffinity を OutOfProc に設定する必要があります。  つまり、ホスト オブジェクトは、インプロセス ノードを必要とするので使用できません。  
+ プロジェクト システムで環境変数を変更する場合は、ビルドの NodeAffinity を OutOfProc に設定する必要があります。 つまり、ホスト オブジェクトは、インプロセス ノードを必要とするので使用できません。  
   
-## IVSBuildManagerAccessor の使用  
+## <a name="using-ivsbuildmanageraccessor"></a>IVSBuildManagerAccessor の使用  
  次のコードは、ビルドを開始するためにプロジェクト システムで使用できるメソッドの概要を示しています。  
   
-```  
+```csharp
   
 public bool Build(Project project, bool isDesignTimeBuild)  
 {  

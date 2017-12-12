@@ -1,34 +1,36 @@
 ---
 title: "Visual Studio での Python |Microsoft Docs"
 ms.custom: 
-ms.date: 7/13/2017
+ms.date: 09/26/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: hero-article
 ms.assetid: 33f4f6fb-0ae4-4234-9df2-531f2d3af17f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 652d69ed30c101e7ea8d9b85d9b71e597975d555
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 082ac09fcc1bb466de891d0daa7178e505c35770
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="working-with-python-in-visual-studio"></a>Visual Studio での Python の使用
 
 Python は、信頼性と柔軟性に優れ、簡単に学ぶことができ、すべてのオペレーティング システムで自由に使える一般的なプログラミング言語であり、強力な開発者コミュニティと多くの無料ライブラリによってサポートされています。 Python は、Web アプリケーション、Web サービス、デスクトップ アプリ、スクリプト、科学技術計算などのすべての開発方法をサポートし、多くの大学、科学者、一般の開発者、プロの開発者によって同様に使われています。 この言語について詳しくは、[python.org](https://www.python.org) および「[Python for Beginners](https://www.python.org/about/gettingstarted/)」(初心者向けの Python) をご覧ください。
 
 Windows の Visual Studio では、Python の開発およびデータ サイエンス ワークロードによる Python 言語の[オープンソース](https://github.com/Microsoft/ptvs) サポート (Visual Studio 2017) および無料の Python Tools for Visual Studio 拡張機能 (Visual Studio 2015 以降) が提供されています。 現在、Python は Visual Studio for Mac ではサポートされていませんが、Visual Studio Code によって Mac と Linux でも使うことができます (後の「[質問と回答](#questions-and-answers)」を参照)。
 
-[インストール手順](installation.md)の説明に従って Python ワークロードをセットアップした後、以下のリンクを使って Python 関連の機能と Visual Studio 自体の機能について詳しく学習してください。
+開始するには:
+
+- [インストール手順](installation.md)に従って、Python ワークロードを設定します。
+- 1 つ以上のクイックスタートを使用して、プロジェクトを作成します。 わからない場合は、[テンプレートからプロジェクトを作成する](quickstart-02-project-from-template.md)のクイックスタートから始めます。
+- 完全なエンド ツー エンドのエクスペリエンスの場合は、[Visual Studio での Python の使用](vs-tutorial-01-01.md)のチュートリアルに従います。
+- 次に、以下のリンクを使って Python 関連の機能と Visual Studio 自体の機能について詳しく見てください。
 
 | 特性 | 説明 | Visual Studio の一般的なドキュメント | 
 | --- | --- | --- |
@@ -44,9 +46,10 @@ Windows の Visual Studio では、Python の開発およびデータ サイエ�
 
 Python ワークロードに含まれる [Azure SDK for Python](azure-sdk-for-python.md) を使うと、Windows、Mac OS X、Linux アプリから Azure サービスを簡単に利用できます。
 
-YouTube で公開されている一連の[概要と詳細に関するビデオ](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)もご覧ください。主な機能の概要がわかります。
+概要のビデオについては、Microsoft Virtual Academy で短い「[Python Tools for Visual Studio](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121)」 (Visual Studio の Python ツール) コース (合計で約 22 分) をご覧ください。 
 
-[![Python Tools のビデオ](media/video-general.png)](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
+> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Installing-Visual-Studio-Python-Support-go1id3LWE_1705918567]
+
 
 ## <a name="questions-and-answers"></a>質問と回答
 
@@ -195,4 +198,3 @@ Visual Studio のバージョンおよびエディション別のサポートさ
 - [IIS と Python の間の WFastCGI ブリッジ](https://pypi.python.org/pypi/wfastcgi) (python.org)
 - [Microsoft Virtual Academy の無料 Python コース](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)
 - [Python に関して寄せられることの多い質問 (Microsoft Virtual Academy)](https://aka.ms/mva-top-python-questions)
-

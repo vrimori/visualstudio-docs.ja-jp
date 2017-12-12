@@ -1,40 +1,24 @@
 ---
-title: "テスト用に Windows ストア コントロールの一意のオートメーション プロパティを設定する | Microsoft Docs"
+title: "テスト用に UWP コントロールの一意のオートメーション プロパティを設定する | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9bdd74ff-2534-4fc7-a5c3-a77bf7843037
-caps.latest.revision: 10
+caps.latest.revision: "10"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3038f70405239d69f0924be022040bcc8c7db9a4
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
 ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: e931c898147cb93683ae618f96eed53ae13607ea
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
-# <a name="set-a-unique-automation-property-for-windows-store-controls-for-testing"></a>テスト用に Windows ストア コントロールの一意のオートメーション プロパティを設定する
-XAML ベースの Windows ストア アプリケーション用のコード化された UI テストを実行する場合は、各コントロールを識別する一意のオートメーション プロパティが必要です。  
+# <a name="set-a-unique-automation-property-for-uwp-controls-for-testing"></a>テスト用に UWP コントロールの一意のオートメーション プロパティを設定する
+XAML ベースの UWP アプリケーション用のコード化された UI テストを実行する場合は、各コントロールを識別する一意のオートメーション プロパティが必要です。  
   
  アプリケーションで XAML コントロールの種類に基づいて固有のオートメーション プロパティを割り当てることができます。 ここでは、次のような状況において、この一意のオートメーション プロパティを割り当てる方法について説明します。  
   
@@ -219,5 +203,4 @@ private void CreateCheckBox(string txt, StackPanel panel)
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [コード化された UI テストを使用した Windows UWP および 8.1 のストア アプリのテスト](../test/test-windows-store-8-1-apps-with-coded-ui-tests.md)
-
+ [コード化された UI テストを使用して Windows UWP アプリをテストする](../test/test-windows-store-8-1-apps-with-coded-ui-tests.md)

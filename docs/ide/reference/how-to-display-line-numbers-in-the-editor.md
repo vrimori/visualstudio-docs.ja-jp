@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,31 +13,15 @@ helpviewer_keywords:
 - editors, line numbers
 - code, line number displaying
 ms.assetid: 40b38559-b8de-4041-91f2-68986767c976
-caps.latest.revision: 19
-author: kempb
-ms.author: kempb
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: a5a1409f23121875d16d48dfc56c31e0dbe9efb4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: 50a5a7d4e83a4cc84d8fe99fb5cc9d48527590af
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="how-to-display-line-numbers-in-the-editor"></a>方法 : エディターで行番号を表示する
 コードの行番号を表示または非表示にできます。  
@@ -53,7 +36,9 @@ ms.lasthandoff: 05/24/2017
   
 1.  メニュー バーの **[ツール]**、 **[オプション]**の順にクリックします。 **[テキスト エディター]** ノードを展開し、使用中の言語のノードを選ぶか、**[すべての言語]** を選んですべての言語の行番号をオンにします。 または、**[クイック起動]** ボックスに**行番号**を入力します。  
   
-2.  ![エディターに行番号を表示するためのオプション](../../ide/reference/media/vs_displaylinenumbers.png "VS_DisplayLineNumbers")  
+2.  **[行番号]** チェック ボックスをオンにします。
+
+    ![エディターに行番号を表示するためのオプション](../../ide/reference/media/vs_displaylinenumbers.png "VS_DisplayLineNumbers")
   
 > [!NOTE]
 >  使う言語または設定によっては、**[オプション]** ダイアログ ボックスの **[すべての設定を表示]** チェック ボックスをオンにして、**[すべての言語]** サブノードを表示する必要がある場合があります。  

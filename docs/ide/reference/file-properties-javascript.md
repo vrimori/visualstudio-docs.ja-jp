@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 06/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,30 +25,15 @@ f1_keywords:
 - javascript.project.property.reference.resolvedpath
 - javascript.project.property.reference.version
 ms.assetid: 085913b8-a97b-45f7-85fa-bbb0902f3ee9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d2f4eba36e9069a35cf279ccf1c78f72a51d77a1
-ms.openlocfilehash: 6c2b3c577685fcb09cd9e9c7eeee955b75e76e27
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
-
+ms.openlocfilehash: f732a23631de181524382914e954ad50a7f0385d
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="file-properties-javascript"></a>ファイルのプロパティ、JavaScript
 ファイルのプロパティを使用して、プロジェクト システムがファイルに対して実行するアクションを指定できます。 たとえば、ファイルがリソース ファイルとしてパッケージに追加するかどうかを示すには、ファイル プロパティを設定できます。  
@@ -73,7 +57,7 @@ ms.lasthandoff: 06/23/2017
 
 -   **リソース** - ファイルはパッケージ マニフェストに含まれません。 ファイルの内容のインデックスはパッケージ リソース インデックス (PRI) に保存され、パッケージ マニフェストに含まれます。 通常、リソース ファイルに使用されます。  
 
- **[パッケージ アクション]** の既定値は、ソリューションに追加するファイルの拡張子によって変わります。  
+**[パッケージ アクション]** の既定値は、ソリューションに追加するファイルの拡張子によって変わります。  
 
 ### <a name="file-name-property"></a>[ファイル名] プロパティ  
  読み取り専用の値としてファイル名が表示されます。 ファイルの名前を変更するには、ソリューション エクスプローラーで右クリックし、**[名前の変更]** を選択します。  
@@ -82,7 +66,7 @@ ms.lasthandoff: 06/23/2017
  読み取り専用の値としてファイルの完全パスを表示します。 ファイルのパスを変更するには、ソリューション エクスプローラーでファイルをドラッグ アンド ドロップすることができます。  
 
 ## <a name="reference-file-properties"></a>参照ファイルのプロパティ  
- ここでは、[!INCLUDE[win8_app_js](../../ide/reference/includes/win8_app_js_md.md)] から参照されるファイルに一般的なプロパティについて説明します。 ソリューション エクスプローラーで .winmd ファイル、SDK リファレンス、プロジェクト間参照、またはアセンブリ参照などの参照を選択すると、ファイルの種類によっては [プロパティ] ウィンドウに他のプロパティが表示されることがあります。  
+ このセクションでは、JavaScript を使用してビルドされた UWP アプリから参照されるファイルに共通するプロパティについて説明します。 ソリューション エクスプローラーで .winmd ファイル、SDK リファレンス、プロジェクト間参照、またはアセンブリ参照などの参照を選択すると、ファイルの種類によっては [プロパティ] ウィンドウに他のプロパティが表示されることがあります。  
 
 ### <a name="culture"></a>カルチャ  
  参照に関連付けられている言語が表示されます。  
@@ -113,4 +97,3 @@ ms.lasthandoff: 06/23/2017
 
 ## <a name="see-also"></a>関連項目  
  [プロジェクトおよびソリューションのプロパティの管理](../../ide/managing-project-and-solution-properties.md)
-

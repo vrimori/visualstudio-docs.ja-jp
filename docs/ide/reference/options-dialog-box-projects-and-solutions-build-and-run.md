@@ -1,11 +1,10 @@
 ---
 title: "[オプション] ダイアログ ボックス、[プロジェクトおよびソリューション]、[ビルド/実行] | Microsoft Docs"
 ms.custom: 
-ms.date: 7/14/2017
+ms.date: 07/14/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,18 +15,16 @@ helpviewer_keywords:
 - run actions
 - debugger, run options
 ms.assetid: c884976e-c0df-4c6d-8e3a-856ea2bd547c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
+ms.openlocfilehash: e15880551e2a896bca473d463b253ec15dda7b36
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
 ms.translationtype: HT
-ms.sourcegitcommit: e48ebcafaca37505dbcc92bce682d0c6169004e1
-ms.openlocfilehash: 8e5165b4b17195e5f9172dd25962c9486a7aeeeb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
-
 # <a name="options-dialog-box--projects-and-solutions-build-and-run"></a>[オプション] ダイアログ ボックス、[プロジェクトおよびソリューション]、[ビルド/実行]
 
 このダイアログ ボックスで、同時にビルドできる Visual C++ または Visual C# のプロジェクトの最大数、特定の既定のビルドの動作、およびいくつかのビルドのログ設定を指定することができます。 これらのオプションにアクセスするには、**[ツール]、[オプション]** の順に選択し、**[プロジェクトおよびソリューション]** を展開し、**[ビルド/実行]** を選択します。
@@ -60,6 +57,6 @@ F5 キーを押すか、**[デバッグ]、[開始]** コマンドの順に選�
 ビルド ログ ファイルに書き込まれる情報量を決定します。ビルド ログ ファイルは、\\...\\*ProjectName*\Debug\\*ProjectName*.log にあります。  
 
 ## <a name="see-also"></a>関連項目  
--[コードのコンパイルとビルド](../../ide/compiling-and-building-in-visual-studio.md)
-- [[オプション] ダイアログ ボックス、[プロジェクトおよびソリューション]](projects-and-solutions-options-dialog-box.md)
-- [[Web プロジェクト] ([オプション] ダイアログ ボックス - [プロジェクトおよびソリューション])](options-dialog-box-projects-and-solutions-web-projects.md)
+[コードのコンパイルとビルド](../../ide/compiling-and-building-in-visual-studio.md)  
+[[オプション] ダイアログ ボックス、[プロジェクトおよびソリューション]](projects-and-solutions-options-dialog-box.md)  
+[[オプション] ダイアログ ボックス、[プロジェクトおよびソリューション]、[Web プロジェクト]](options-dialog-box-projects-and-solutions-web-projects.md)

@@ -1,23 +1,27 @@
 ---
 title: "JsIntToNumber 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 1393c4ac-7189-4e9c-8e54-b0e041c22112
-caps.latest.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 6e7ad87dcbe802173be863754dbb5f87c71af149
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# JsIntToNumber 関数
+# <a name="jsinttonumber-function"></a>JsIntToNumber 関数
 `int` の値から数値を作成します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 STDAPI_(JsErrorCode) JsIntToNumber(  
@@ -26,21 +30,21 @@ STDAPI_(JsErrorCode) JsIntToNumber(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `intValue`  
  数値に変換する `int` 値。  
   
  `value`  
  新しい数値。  
   
-## 戻り値  
- 操作が成功した場合はコード `JsNoError`、操作が失敗した場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 操作が成功した場合はコード `JsNoError` 、操作が失敗した場合はエラー コード。  
   
-## 解説  
+## <a name="remarks"></a>コメント  
  アクティブ スクリプトのコンテキストが必要です。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** jsrt.h  
   
-## 参照  
- [リファレンス \(JavaScript ランタイム\)](../chakra-hosting/reference-javascript-runtime.md)
+## <a name="see-also"></a>関連項目  
+ [リファレンス (JavaScript ランタイム)](../chakra-hosting/reference-javascript-runtime.md)

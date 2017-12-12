@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,30 +27,15 @@ helpviewer_keywords:
 - class view
 - object browser
 ms.assetid: e6064f58-5ad9-4f05-8c3f-12e994b6583f
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: cf7325de6a4d5ee4cac1b48a7da33202034fde0c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: f85bcde09d6748aa781ceefd85ccbf138245aca6
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="viewing-the-structure-of-code"></a>コードの構造の表示
 Visual Studio プロジェクトのオブジェクトとメンバー、および .NET Framework コンポーネント、COM コンポーネント、ダイナミック リンク ライブラリ (DLL)、およびタイプ ライブラリ (TLB) のオブジェクトとメンバーを調査できます。  
@@ -164,7 +148,7 @@ Visual Studio プロジェクトのオブジェクトとメンバー、および
   
 -   コンポーネントのカスタム セット  
   
- カスタム コンポーネントには、マネージ コードの実行可能ファイル、ライブラリのアセンブリ、タイプ ライブラリ、および .ocx ファイルを含めることができます。 C++ のカスタム コンポーネントを追加することはできません。 カスタム設定は Visual Studio ユーザー アプリケーション ディレクトリ (%APPDATA%\Roaming\Microsoft\VisualStudio\11.0\ObjBrowEX.dat) に格納されます。  
+ カスタム コンポーネントには、マネージ コードの実行可能ファイル、ライブラリのアセンブリ、タイプ ライブラリ、および .ocx ファイルを含めることができます。 C++ のカスタム コンポーネントを追加することはできません。 カスタム設定は Visual Studio ユーザー アプリケーション ディレクトリ (%APPDATA%\Microsoft\VisualStudio\15.0\ObjBrowEX.dat) に格納されます。  
   
  **オブジェクト ブラウザー**の左ウィンドウには、.NET Framework および COM コンポーネントなどの物理コンテナーが示されます。 コンテナー ノードを展開してそこに含まれている名前空間を表示し、名前空間を展開してそこに含まれている型を表示します。 型を選択すると、メンバー (プロパティ、メソッドなど) が右ペインに一覧表示されます。 右下ペインに、選択した項目に関する詳細情報が表示されます。  
   

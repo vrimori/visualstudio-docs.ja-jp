@@ -1,42 +1,43 @@
 ---
-title: "Console | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "コンソール | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e825ba66-1383-46ad-8712-396bc9c14036
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: ce6e9ca93d9cdca191db7db8f2eb3d144b74e40d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Console
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-VSPerfCmd.exe の **Console** オプションを使用すると、新しいコマンド プロンプト ウィンドウで指定したアプリケーションが起動します。  **Console** オプションと共に使用できるオプションは、VSPerfCmd の **Launch** オプションのみです。  アプリケーションがコマンド ライン アプリケーションでない場合、**Console** を指定しても何も実行されません。  
+# <a name="console"></a>コンソール
+VSPerfCmd.exe で **Console** オプションを指定すると、新しいコマンド プロンプト ウィンドウで指定のアプリケーションが開始します。 **Console** オプションは、VSPerfCmd の **Launch** オプションとの併用でのみ使用できます。 アプリケーションがコマンドライン アプリケーションではない場合、**Console** を指定しても何も起こりません。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 VSPerfCmd.exe /Launch:AppName /Console  
 ```  
   
-#### パラメーター  
- なし。  
+#### <a name="parameters"></a>パラメーター  
+ なし  
   
-## 必須のオプション  
- **Console** オプションは、**Launch** オプションが含まれたコマンド ラインでのみ指定できます。  
+## <a name="required-options"></a>必須オプション  
+ **Console** オプションは、**Launch** オプションも含むコマンド ラインでのみ指定できます。  
   
  **Launch:** `AppName`  
- プロファイラーと、`AppName` で指定したアプリケーションを起動します。  
+ プロファイラーと、`AppName` で指定されたアプリケーションを起動します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [スタンドアロン アプリケーションのプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [プロファイリング \(サービスの\)](../profiling/command-line-profiling-of-services.md)
+ [プロファイリング (サービスの)](../profiling/command-line-profiling-of-services.md)

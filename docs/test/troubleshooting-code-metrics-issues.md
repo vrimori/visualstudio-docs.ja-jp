@@ -1,50 +1,34 @@
 ---
-title: "コード メトリックに関する問題のトラブルシューティング |Microsoft ドキュメント"
+title: "コード メトリックに関する問題のトラブルシューティング | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f2fdb995-4888-4246-85dc-7bacadd45968
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: erickson-doug
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 6dde34ce4808f21a90fa9d2e37daf7ed88d4e7fa
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 26dc2869ceb16e2c16a74ee52249777394fb666a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="troubleshooting-code-metrics-issues"></a>コード メトリックに関する問題のトラブルシューティング
-コード メトリックスを収集するときに、いくつかの次の問題が発生する可能性があります。  
+コード メトリックを収集するときに、次に示す問題が発生する場合があります。  
   
--   [Visual Studio 2010 のコードの複雑な計算での変更](#Changes_in_Visual_Studio_2010_code_complexity_calculations)  
+-   [Visual Studio 2010 のコードの複雑度の計算における変更点](#Changes_in_Visual_Studio_2010_code_complexity_calculations)  
   
-##  <a name="Changes_in_Visual_Studio_2010_code_complexity_calculations"></a>Visual Studio 2010 のコードの複雑な計算での変更  
- 同じ関数のコードの複雑性メトリックが計算された[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]の以前のバージョンで計算されたメトリックによって異なる場合が[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]次の状況で。  
+##  <a name="Changes_in_Visual_Studio_2010_code_complexity_calculations"></a>Visual Studio 2010 のコードの複雑度の計算における変更点  
+ 次のような状況では、同じ関数について [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] で計算したコードの複雑度のメトリックと旧バージョンの [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] で計算したメトリックとが異なる場合があります。  
   
--   関数を 1 つまたは複数の catch ブロック。 以前のバージョンの[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]、catch ブロックが計算に含まれていません。 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]、各ブロックの catch ブロックの複雑さは、関数の複雑さに追加します。  
+-   関数に 1 つ以上の catch ブロックが含まれている。 以前のバージョンの [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] では、catch ブロックが計算に含まれていませんでした。 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] では、各 catch ブロックの複雑度が関数の複雑度に加算されます。  
   
--   関数には、switch (VB の場合はオン) ステートメントが含まれています。 コンパイラの相違[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]以前のバージョンはフォール スルー ケースを含む一部の switch ステートメントの別の MSIL コードを生成することができます。  
+-   関数に switch (VB の場合は Select Case) ステートメントが含まれている。 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] と旧バージョンの間のコンパイラの相違点により、case のフォールスルーを含んでいる一部の switch ステートメントに対して、異なる MSIL コードが生成される場合があります。  
   
 ## <a name="see-also"></a>関連項目  
  [マネージ コードの複雑さと保守性の測定](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)

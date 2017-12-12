@@ -4,40 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.performance.view.threadblocking
-helpviewer_keywords:
-- Concurrency Visualizer, Threads View (Parallel Performance)
+f1_keywords: vs.performance.view.threadblocking
+helpviewer_keywords: Concurrency Visualizer, Threads View (Parallel Performance)
 ms.assetid: 2e441103-a266-407b-88c3-fb58716257a3
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 1777df83f2c2764e173300f897b18a699a38c197
-ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: bdad50eff09e96c5d9c0513be1f571a901278871
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="threads-view-parallel-performance"></a>スレッド ビュー (並行処理のパフォーマンス)
 スレッド ビューは、同時実行ビジュアライザーの最も詳細かつ機能豊富なビューです。 このビューを使用すると、スレッドが実行しているか、それとも同期、I/O、またはその他の何らかの理由のためにブロックしているかを識別できます。  
@@ -86,14 +67,14 @@ ms.lasthandoff: 02/22/2017
   
  スレッド ビューの例を次に示します。  
   
- ![スレッド ビュー](~/profiling/media/threadsviewnarrowing.png "ThreadsViewNarrowing")  
+ ![スレッド ビュー](../profiling/media/threadsviewnarrowing.png "スレッド ビューの絞り込み")  
 スレッド ビュー  
   
  最初にスレッドは、メイン アプリケーション スレッドが先頭になるように、作成された順に並べられます。 ビューの左上隅にある並べ替えオプションを使用すると、別の条件 (たとえば、実行作業の多い順) でスレッドを並べ替えることができます。  
   
  左側の列内で名前を選択してから、ツール バーで **[選択したスレッドを非表示にします]** ボタンを選択することにより、作業を実行していないスレッドを非表示にすることができます。 統計が無関係で、レポートの邪魔になるために完全にブロックされているスレッドは、非表示にするようお勧めします。  
   
- アクティブな凡例の中で、さらに非表示にするスレッドを識別するには、**[プロファイル レポート]** タブで **[スレッド別の概要]** レポートを選択します。 実行ブレークダウン グラフが表示され、現在選択されている時間間隔についてスレッドの状態を確認できます。 ズーム レベルよっては、一部のスレッドは表示されないことがあります。 そのような場合は、右側に省略記号が表示されます。  
+ アクティブな凡例の中で、さらに非表示にするスレッドを識別するには、**[プロファイル レポート]** タブで **[スレッド別の概要]** レポートを選択します。実行ブレークダウン グラフが表示され、現在選択されている時間間隔についてスレッドの状態を確認できます。 ズーム レベルよっては、一部のスレッドは表示されないことがあります。 そのような場合は、右側に省略記号が表示されます。  
   
  時間の間隔とその中のいくつかのスレッドを選択すると、パフォーマンス分析を開始できます。  
   
@@ -111,7 +92,7 @@ ms.lasthandoff: 02/22/2017
 ### <a name="thread-execution-details"></a>スレッド実行の詳細  
  スレッドのタイムライン グラフで、緑のセグメントは、いつスレッドがコードを実行していたかを示します。 実行セグメントに関するさらに詳細な情報を取得できます。  
   
- 実行セグメントでポイントを選択すると、同時実行ビジュアライザーは、関連する呼び出し履歴でその時点を検索し、実行セグメント内の選択したポイントの上に黒いキャレットを表示して、呼び出し履歴そのものを **[現在のスタック]** タブに表示します。 実行セグメント上の複数のポイントを選択できます。  
+ 実行セグメントでポイントを選択すると、同時実行ビジュアライザーは、関連する呼び出し履歴でその時点を検索し、実行セグメント内の選択したポイントの上に黒いキャレットを表示して、呼び出し履歴そのものを **[現在のスタック]** タブに表示します。実行セグメント上の複数のポイントを選択できます。  
   
 > [!NOTE]
 >  同時実行ビジュアライザーは、実行セグメント上の選択を解決できないことがあります。 通常、このエラーは、セグメントの期間が 1 ミリ秒未満である場合に発生します。  

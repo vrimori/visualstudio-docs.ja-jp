@@ -1,41 +1,42 @@
 ---
 title: "DA0010: GetHashCode の負荷が高くなっています | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.rules.DAExpensiveGetHashCode"
-  - "vs.performance.DA0010"
-  - "vs.performance.rules.DA0010"
-  - "vs.performance.10"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.performance.rules.DAExpensiveGetHashCode
+- vs.performance.DA0010
+- vs.performance.rules.DA0010
+- vs.performance.10
 ms.assetid: 3987e21a-5b4f-45e4-8a33-6b3f0a472c08
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 9209d5f02d543cba3dd0dcec8f5492e2f64b9cef
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# DA0010: GetHashCode の負荷が高くなっています
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="da0010-expensive-gethashcode"></a>DA0010: GetHashCode の負荷が高くなっています
 |||  
 |-|-|  
 |規則 ID|DA0010|  
-|分類|.NET Framework の使用|  
+|カテゴリ|.NET Framework の使用|  
 |プロファイル方法|サンプリング<br /><br /> .NET メモリ|  
-|メッセージ|GetHashCode 関数の負荷を抑える必要があります。これらの関数でメモリを割り当てることはできません。  可能な場合は、ハッシュ コード関数の複雑さを軽減してください。|  
+|メッセージ|GetHashCode 関数の負荷を抑える必要があります。メモリを割り当てることはできません。 可能な場合は、ハッシュ コード関数の複雑さを軽減してください。|  
 |メッセージの種類|警告|  
   
-## 原因  
- 型の GetHashCode メソッドの呼び出しが、プロファイル データまたはメソッド割り当てメモリの大きな割合を占めています。  
+## <a name="cause"></a>原因  
+ 型の GetHashCode メソッドの呼び出しがプロファイリング データの大きな割合を占めているか、またはそのメソッドがメモリを割り当てています。  
   
-## 規則の説明  
- ハッシュとは、大きなコレクションから特定の項目をすばやく見つけ出す手法のことです。  ハッシュ テーブルは非常に大きくなる可能性があり、高速のアクセス速度をサポートする必要があるため、ハッシュ テーブルの効率性は重要な要素になります。  この要件は、.NET Framework の GetHashCode メソッドでメモリの割り当てを行うべきではないということを意味しています。  メモリの割り当てを行うと、ガベージ コレクターの読み込みが増加し、割り当て要求の結果ガベージ コレクションが必要になった場合に、メソッドの潜在的な遅延が発生します。  
+## <a name="rule-description"></a>規則の説明  
+ ハッシュは、大きなコレクションの中から特定の項目を簡単に見つけるための手法です。 ハッシュ テーブルは非常に大きくなることがあり、非常に高いアクセス率に対応しなければなりません。そのため、ハッシュ テーブルは極めて効率的にする必要があります。 この要件が意味するところは、.NET Framework の GetHashCode メソッドでメモリを割り当ててはいけないということです。 メモリを割り当てるとガベージ コレクターの負荷が増し、割り当て要求の結果としてガベージ コレクションを実行しなければならなくなると、メソッドに遅延が発生する可能性があります。  
   
-## 違反の修正方法  
- このメソッドの複雑さを軽減してください。
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ メソッドの複雑さを軽減してください。

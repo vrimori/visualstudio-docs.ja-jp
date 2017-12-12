@@ -1,57 +1,57 @@
 ---
 title: "OpenProject コマンド | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "file.openproject"
-helpviewer_keywords: 
-  - "File.OpenProject コマンド"
-  - "op コマンド"
-  - "プロジェクトを開くコマンド"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: file.openproject
+helpviewer_keywords:
+- op command
+- File.OpenProject command
+- Open Project command
 ms.assetid: baa85f86-041b-49f4-9ced-0c397dc180e1
-caps.latest.revision: 11
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: a3b0916874fbd4c16dfe2232a6a5865743d0c388
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# OpenProject コマンド
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="open-project-command"></a>OpenProject コマンド
 既存のプロジェクトを開きます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 File.OpenProject filename  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  `filename`  
- 必ず指定します。  開くプロジェクトの完全パスとファイル名。  
+ 必須です。 開くプロジェクトの完全パスとファイル名。  
   
- 引数 `filename` の構文でパスに空白が含まれる場合は、引用符で囲む必要があります。  
+ `filename` 引数の構文の場合、空白を含むパスで引用符を使用する必要があります。  
   
-## 解説  
- オート コンプリート機能により、入力している正しいパスおよびファイルが検索されます。  
+## <a name="remarks"></a>コメント  
+ オート コンプリートでは、入力された正しいパスとファイル名の検索を試みます。  
   
- このコマンドは、デバッグ時には使用できません。  
+ デバッグ中にこのコマンドを使用することはできません。  
   
-## 使用例  
- Test1 という [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] プロジェクトを開く例を次に示します。  
+## <a name="example"></a>例  
+ この例では、[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] プロジェクトの Test1 を開きます。  
   
 ```  
 >File.OpenProject "C:\My Projects\Test1\Test1.vbproj"  
 ```  
   
-## 参照  
- [Visual Studio コマンド](../../ide/reference/visual-studio-commands.md)   
+## <a name="see-also"></a>関連項目  
+ [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
- [\[検索\] ボックス](../Topic/Find-Command%20Box.md)   
- [Visual Studio コマンドの定義済みのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+ [[検索/コマンド] ボックス](../../ide/find-command-box.md)   
+ [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)

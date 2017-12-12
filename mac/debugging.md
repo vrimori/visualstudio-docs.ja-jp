@@ -1,5 +1,5 @@
 ---
-title: "Xamarin を使ったデバッグ"
+title: "Xamarin を使用したデバッグ | Microsoft Docs"
 description: "デバッグは、プログラミングの中でも一般的で必要な部分です。 Visual Studio for Mac は成熟した IDE であり、デバッグが簡単になる機能一式が含まれています。 この記事では、安全なデバッグからデータの視覚化まで、Visual Studio for Mac のデバッグ機能を最大限に活用する方法について説明します。"
 author: asb3993
 ms.author: amburns
@@ -7,15 +7,12 @@ ms.date: 04/14/2017
 ms.topic: article
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
+ms.openlocfilehash: 6d85c318b60e065be86d242bf3199b3716c59ada
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: d416c0967daa3354e09660e3b618e0cc6f3b49f7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
-
 # <a name="debugging-with-xamarin"></a>Xamarin を使ったデバッグ
 
 
@@ -47,7 +44,7 @@ IDE でブレークポイントを設定するには、エディターで、中�
 ![ブレークポイントの一覧](media/debugging-image0a.png)
 
 
-## <a name="start-debugging"></a>デバッグの開始
+## <a name="start-debugging"></a>[デバッグ開始]
 
 デバッグを開始するには、IDE でターゲット デバイスまたは同様のデバイス/エミュレーターを選択します。
 
@@ -103,4 +100,3 @@ Xamarin 製品には、Mono のクラス ライブラリのソース コード�
 この機能を有効にするには、**[Visual Studio for Mac] > [ユーザー設定] > [デバッガー]** に移動し、**[プロジェクト コードのみをデバッグする。フレームワーク コードにはステップ インしない。]** オプションを次の図のように**オフ**にします。
 
  ![[フレームワーク コードにはステップ インしない] オプション](media/debugging-image8.png)
-

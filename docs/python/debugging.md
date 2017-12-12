@@ -1,35 +1,31 @@
 ---
 title: "Visual Studio での Python のデバッグ | Microsoft Docs"
 ms.custom: 
-ms.date: 7/13/2017
-ms.prod: visual-studio-dev15
+ms.date: 07/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2192dc77-b5da-4332-b753-fa20f03f81e0
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 7a6aac76bc3830dd6c003c9834b242c6d79f7821
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 92fd0f30dfbb09f0eca8d2c9bc98d7904d81353c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="debugging-your-python-code"></a>Python コードのデバッグ
 
 Visual Studio は、実行中のプロセスへのアタッチ、ウォッチ ウィンドウやイミディエイト ウィンドウでの式の評価、ローカル変数の調査、ブレークポイントの設定、ステートメントのステップ イン/ステップ アウト/ステップ オーバー、次のステートメントの設定など、Python 向けの総合的なデバッグ機能を提供します。 
 
-デバッグの概要については、動画「[Getting Started with PTVS, Part 4: Debugging (PTVS の概要パート 4: デバッグ)](https://youtu.be/bO7wpzgy74A?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)」(youtube.com、3 分 30 秒) をご覧ください。
+デバッグの概要については、「[Debugging Python (Python のデバッグ)](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=Ep5dp5LWE_3805918567)」 (Microsoft Virtual Academy、3 分 32 秒) をご覧ください。
 
-> [!VIDEO https://www.youtube.com/embed/bO7wpzgy74A]
+> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Debugging-Python-Ep5dp5LWE_3805918567]
 
 このトピックの内容
 
@@ -44,13 +40,15 @@ Visual Studio は、実行中のプロセスへのアタッチ、ウォッチ �
 - [Python/C++ 混合モード デバッグ](debugging-mixed-mode.md)
 - [混合モード デバッグのシンボル](debugging-symbols-for-mixed-mode.md)
 
-<a name="debugging-without-a-project"</a>
+<a name="debugging-without-a-project"></a>
+
 > [!Tip]
-> Visual Studio の Python は、プロジェクトを使用しないデバッグをサポートしています。 スタンドアロンの Python ファイルを開き、エディター内で右クリックして、**[デバッグの開始]** を選択すると、Visual Studio がグローバルな既定の環境 (「[Python Environments (Python 環境)](python-environments.md)」を参照) を使用して、引数なしでスクリプトを起動します。 ただし、それ以降は、フル機能のデバッグ サポートが提供されます。
+> Visual Studio の Python は、プロジェクトを使用しないデバッグをサポートしています。 スタンドアロンの Python ファイルを開き、エディター内で右クリックして、**[デバッグの開始]** を選択すると、Visual Studio がグローバルな既定の環境 (「[Python Environments](python-environments.md)」 (Python 環境) を参照) を使用して、引数なしでスクリプトを起動します。 ただし、それ以降は、フル機能のデバッグ サポートが提供されます。
 >
 > 環境と引数を制御するには、コードのプロジェクトを作成します。プロジェクトは、[[既存の Python コードから]](python-projects.md#creating-a-project-from-existing-files) プロジェクト テンプレートを使用して簡単に作成できます。
 
-<a name="debugging-with-a-project"</a>
+<a name="debugging-with-a-project"></a>
+
 ## <a name="basic-debugging"></a>デバッグの基本
 
 デバッグの基本的なワークフローには、ブレークポイントの設定、コードのステップ実行、値の検査、例外の処理が含まれます。これらについては、後続のセクションで説明します。 Visual Studio のデバッガーについて詳しくは、「[Debugging in Visual Studio (Visual Studio でのデバッグ)](../debugger/debugging-in-visual-studio.md)」を参照してください。

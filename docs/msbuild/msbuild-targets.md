@@ -1,39 +1,39 @@
 ---
 title: "MSBuild ターゲット | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSBuild, ターゲット"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: MSBuild, targets
 ms.assetid: 8060b4d2-e4a9-48cf-a437-852649ceb417
-caps.latest.revision: 26
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: 29c9397ea886024c894b977f05ec83f8d7c70f60
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# MSBuild ターゲット
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-ターゲットはタスクを特定の順序でグループ化し、ビルド処理を小さな単位に分割できるようにします。  たとえば、1 つのターゲットで出力ディレクトリ内のすべてのファイルを削除してビルドの準備を行い、別のターゲットでプロジェクトの入力をコンパイルして空のディレクトリに配置できます。  タスクの詳細については、「[タスク](../msbuild/msbuild-tasks.md)」を参照してください。  
+# <a name="msbuild-targets"></a>MSBuild ターゲット
+ターゲットはタスクを特定の順序でグループ化し、ビルド プロセスを小さな単位に分割することを可能にします。 たとえば、あるターゲットは、ビルドの準備として、出力ディレクトリに含まれるすべてのファイルを削除し、別のターゲットは、プロジェクトに対する入力をコンパイルし、空のディレクトリに配置します。 タスクについて詳しくは、「[MSBuild タスク](../msbuild/msbuild-tasks.md)」をご覧ください。  
   
-## プロジェクト ファイルでのターゲットの宣言  
- ターゲットは、プロジェクト ファイル内で、[Target](../msbuild/target-element-msbuild.md) 要素を使用して宣言します。  たとえば、次の XML では、Compile 項目の種類をパラメーターに指定して、Csc タスクを呼び出す、Construct という名前のターゲットを作成しています。  
+## <a name="declaring-targets-in-the-project-file"></a>プロジェクト ファイルでターゲットを宣言する  
+ ターゲットは、プロジェクト ファイル内で、[Target](../msbuild/target-element-msbuild.md) 要素を使用して宣言します。 たとえば、次の XML は Construct という名前のターゲットを作成し、Compile というアイテムの種類で Csc タスクを呼び出します。  
   
-```  
+```xml  
 <Target Name="Construct">  
     <Csc Sources="@(Compile)" />  
 </Target>  
 ```  
   
- MSBuild プロパティと同様、ターゲットは再定義できます。  次に例を示します。  
+ MSBuild プロパティと同様に、ターゲットは再定義できます。 次に例を示します。  
   
-```  
+```xml  
 <Target Name="AfterBuild" >  
     <Message Text="First occurrence" />  
 </Target>  
@@ -42,12 +42,12 @@ caps.handback.revision: 26
 </Target>  
 ```  
   
- AfterBuild が実行されると、"Second occurrence" とだけ表示されます。  
+ AfterBuild を実行すると、"Second occurrence" (2 番目の出現) のみが表示されます。  
   
-## ターゲットのビルド順序  
- あるターゲットへの入力が別のターゲットの出力に依存する場合、ターゲットの順序を指定する必要があります。  ターゲットの実行順序を指定するには、いくつかの方法があります。  
+## <a name="target-build-order"></a>ターゲットのビルド順序  
+ あるターゲットへの入力が別のターゲットの出力に依存する場合、ターゲットの順序を指定する必要があります。 ターゲットの実行順序はいくつかの方法で指定できます。  
   
--   開始ターゲット  
+-   初期ターゲット  
   
 -   既定のターゲット  
   
@@ -55,16 +55,16 @@ caps.handback.revision: 26
   
 -   ターゲットの依存関係  
   
--   `BeforeTargets` および `AfterTargets` \(MSBuild 4.0\)  
+-   `BeforeTargets` と `AfterTargets` (MSBuild 4.0)  
   
- ビルド内の後続のターゲットがそのターゲットに依存している場合でも、ターゲットが 1 回のビルド中に 2 回実行されることはありません。  ターゲットは一度実行されると、それ以上ビルドに影響しません。  
+ 1 つのビルドでターゲットが 2 回実行されることはありません。そのビルド内の後続のターゲットが先行するターゲットに依存している場合でも同じです。 ターゲットは一度実行されると、それ以上ビルドに影響しません。  
   
- ターゲットのビルド順序の詳細については、「[ターゲットのビルド順序](../msbuild/target-build-order.md)」を参照してください。  
+ ターゲットのビルド順序に関する詳細については、「[ターゲットのビルド順序](../msbuild/target-build-order.md)」を参照してください。  
   
-## ターゲットのバッチ  
- ターゲット要素には、%\(Metadata\) という形式でメタデータを指定する `Outputs` 属性を指定できます。  その場合、一意のメタデータ値ごとにターゲットが 1 回実行されます。そのメタデータ値を持つ項目は、グループ化または "バッチ処理" されます。  次に例を示します。  
+## <a name="target-batching"></a>ターゲットのバッチ  
+ あるターゲット要素に、%(メタデータ) 形式でメタデータを指定する `Outputs` 属性が含まれている場合があります。 その場合、MSBuild は一意のメタデータ値ごとにターゲットを 1 回実行し、そのメタデータ値を含むアイテムをグループ化または "バッチ処理" します。 次に例を示します。  
   
-```  
+```xml  
 <ItemGroup>  
     <Reference Include="System.Core">  
       <RequiredTargetFramework>3.5</RequiredTargetFramework>  
@@ -83,21 +83,20 @@ caps.handback.revision: 26
 </Target>  
 ```  
   
- RequiredTargetFramework メタデータによって Reference 項目がバッチ処理されます。  ターゲットの出力は次のようになります。  
+ RequiredTargetFramework メタデータによって参照項目をバッチ処理します。 このターゲットの出力は次のようになります。  
   
 ```  
 Reference: 3.5;3.5  
 Reference: 4.0  
-  
 ```  
   
- 実際のビルドでは、ターゲットのバッチはめったに使用されません。  タスクのバッチの方が一般的です。  詳細については、「[バッチ](../msbuild/msbuild-batching.md)」を参照してください。  
+ ターゲット バッチ処理が実際のビルドで利用されることはほとんどありません。 タスクのバッチが一般的です。 詳細については、「[MSBuild バッチ](../msbuild/msbuild-batching.md)」をご覧ください。  
   
-## インクリメンタル ビルド  
- インクリメンタル ビルドは、対応する入力ファイルに対して最新の状態の出力ファイルを含むターゲットが実行されないように最適化されたビルドです。  ターゲット要素には、ターゲットが入力として受け取る項目と、ターゲットが出力として生成する項目を示す、`Inputs` 属性と `Outputs` 属性の両方を指定できます。  
+## <a name="incremental-builds"></a>インクリメンタル ビルド  
+ インクリメンタル ビルドは、対応する入力ファイルに対して最新の状態の出力ファイルを含むターゲットが実行されないように最適化されたビルドです。 ターゲット要素には、`Inputs` 属性と `Outputs` 属性の両方を含めることができます。ターゲットが入力として受け取る項目と出力として生成する項目をそれぞれ示します。  
   
- すべての出力項目が最新の状態である場合、ターゲットはスキップされるので、ビルド速度が大幅に向上します。  これをターゲットのインクリメンタル ビルドと呼びます。  一部のファイルだけが最新の状態である場合、最新の項目を除いてターゲットが実行されます。  これをターゲットの部分インクリメンタル ビルドと呼びます。  詳細については、「[インクリメンタル ビルド](../msbuild/incremental-builds.md)」を参照してください。  
+ すべての出力項目が最新の状態になっている場合、MSBuild はターゲットをスキップします。これがビルドのスピードを大幅に上げます。 これはターゲットのインクリメンタル ビルドと呼ばれています。 一部のファイルだけが最新の状態になっている場合、MSBuild は最新の項目なしでターゲットを実行します。 これはターゲットの部分的インクリメンタル ビルドと呼ばれています。 詳しくは、「[インクリメンタル ビルド](../msbuild/incremental-builds.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
- [方法 : 複数のプロジェクト ファイルで同じターゲットを使用する](../Topic/How%20to:%20Use%20the%20Same%20Target%20in%20Multiple%20Project%20Files.md)
+ [方法: 複数のプロジェクト ファイルで同じターゲットを使用する](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)

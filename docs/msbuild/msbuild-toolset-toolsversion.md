@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,39 +13,24 @@ helpviewer_keywords:
 - MSBuild, targeting a specific .NET framework
 - multitargeting [MSBuild]
 ms.assetid: 40040ee7-4620-4043-a6d8-ccba921421d1
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
-ms.openlocfilehash: 6a45db14ee055c4fbdf738cf36df503a4a1fffd0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/31/2017
-
+ms.openlocfilehash: 85d570564ba3e82808f0876ead938f535368ec29
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="msbuild-toolset-toolsversion"></a>MSBuild ツールセット (ToolsVersion)
 MSBuild は、タスク、ターゲット、およびツールのツールセットを使用して、アプリケーションをビルドします。 通常、MSBuild ツールセットには、microsoft.common.tasks ファイル、microsoft.common.targets ファイル、および csc.exe や vbc.exe などのコンパイラが含まれています。 ほとんどのツールセットは、複数のバージョンの .NET Framework や複数のシステム プラットフォームを対象としてアプリケーションをコンパイルするために使用できます。 ただし、MSBuild 2.0 ツールセットは .NET Framework 2.0 のみを対象として使用できます。  
   
 ## <a name="toolsversion-attribute"></a>ToolsVersion 属性  
- プロジェクト ファイルにある [Project](../msbuild/project-element-msbuild.md) 要素の `ToolsVersion` 属性でツールセットを指定します。 次の例では、MSBuild 12.0 ツールセットを使用してプロジェクトをビルドすることを指定します。  
+ プロジェクト ファイルにある [Project](../msbuild/project-element-msbuild.md) 要素の `ToolsVersion` 属性でツールセットを指定します。 次の例では、MSBuild 15.0 ツールセットを使用してプロジェクトをビルドすることを指定します。  
   
 ```xml  
-<Project ToolsVersion="12.0" ... </Project>  
+<Project ToolsVersion="15.0" ... </Project>  
 ```  
   
 ## <a name="how-the-toolsversion-attribute-works"></a>ToolsVersion 属性の動作  
@@ -134,4 +118,3 @@ MSBuild は、タスク、ターゲット、およびツールのツールセッ
 ## <a name="see-also"></a>関連項目  
  [標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)   
  [マルチ ターゲット](../msbuild/msbuild-multitargeting-overview.md)
-

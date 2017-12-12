@@ -1,40 +1,41 @@
 ---
 title: "コード スニペットの関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "コード スニペット [Visual Studio], 関数"
-  - "IntelliSense コード スニペット, 関数"
-  - "スニペット [Visual Studio], 関数"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- code snippets [Visual Studio], functions
+- snippets [Visual Studio], functions
+- IntelliSense code snippets, functions
 ms.assetid: c0a2bf21-8fa5-4457-9281-f599beb53e7d
-caps.latest.revision: 11
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 0628e118ecf0d22591ff1f88208e2cc5396a6bc4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# コード スニペットの関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] コード スニペットで使用できる関数は 3 つあります。  関数は、コード スニペットの[Function](http://msdn.microsoft.com/ja-jp/572c5549-5821-4e15-8ecd-0fa86c1c65df)で指定されています。  コード スニペットの作成については、「[コード スニペット](../ide/code-snippets.md)」を参照してください。  
+# <a name="code-snippet-functions"></a>コード スニペットの関数
+[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] コード スニペットで使用できる関数は 3 つあります。 関数は、コード スニペットの [Function](http://msdn.microsoft.com/en-us/572c5549-5821-4e15-8ecd-0fa86c1c65df) 要素で指定されています。 コード スニペットの作成については、「[コード スニペット](../ide/code-snippets.md)」を参照してください。  
   
-## 関数  
- 次の表は、コード スニペットの `Function` 要素で使用できる関数を示します。  
+## <a name="functions"></a>関数  
+ 次の表で、コード スニペットの `Function` 要素で使用できる関数について説明します。  
   
-|Function|Description|言語|  
-|--------------|-----------------|--------|  
-|`GenerateSwitchCases(` `EnumerationLiteral` `)`|`EnumerationLiteral` パラメーターで指定された列挙体のメンバー用に、switch ステートメントおよび一連の case ステートメントを生成します。  `EnumerationLiteral` パラメーターは、列挙体リテラルまたは列挙型のどちらかへの参照にする必要があります。|[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]|  
-|`ClassName()`|挿入されたスニペットが格納されているクラスの名前を返します。|[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]|  
+|関数|説明|言語|  
+|--------------|-----------------|--------------|  
+|`GenerateSwitchCases(` `EnumerationLiteral` `)`|`EnumerationLiteral` パラメーターで指定された列挙体のメンバー用に、switch ステートメントおよび一連の case ステートメントを生成します。 `EnumerationLiteral` パラメーターは、列挙体リテラルまたは列挙型のいずれかへの参照にする必要があります。|[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]|  
+|`ClassName()`|挿入されたスニペットを含むクラスの名前を返します。|[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]|  
 |`SimpleTypeName(` `TypeName` `)`|*TypeName* パラメーターを、スニペットが呼び出されたコンテキストで最も単純な形式に縮小します。|[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]|  
   
-## 使用例  
- `GenerateSwitchCases` 関数を使用する方法を次の例に示します。  このスニペットが挿入され、列挙体が `$switch_on$` リテラルに入力されると、`$cases$` リテラルによって列挙体の値ごとに `case` ステートメントが生成されます。  
+## <a name="example"></a>例  
+ 次の例は、`GenerateSwitchCases` 関数の使用法を示しています。 このスニペットが挿入され、列挙体が `$switch_on$` リテラルに入力されると、`$cases$` リテラルによって列挙体の値ごとに `case` ステートメントが生成されます。  
   
 ```  
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
@@ -74,8 +75,8 @@ caps.handback.revision: 11
 </CodeSnippets>  
 ```  
   
-## 使用例  
- `ClassName` 関数を使用する方法を次の例に示します。  このスニペットが挿入されると、`$classname$` リテラルは、コード ファイルでその位置にある外側のクラスの名前で置換されます。  
+## <a name="example"></a>例  
+ 次の例は、`ClassName` 関数の使用法を示しています。 このスニペットが挿入されると、`$classname$` リテラルは、コード ファイルでその位置にある外側のクラスの名前で置換されます。  
   
 ```  
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
@@ -120,8 +121,8 @@ caps.handback.revision: 11
 </CodeSnippets>  
 ```  
   
-## 使用例  
- `SimpleTypeName` 関数を使用する方法の例を次に示します。  このスニペットがコード ファイルに挿入されると、`$SystemConsole$` リテラルは、このスニペットが呼び出されたコンテキストで最も単純な形式の <xref:System.Console> 型で置換されます。  
+## <a name="example"></a>例  
+ この例では、`SimpleTypeName` 関数の使用方法を示します。 このスニペットがコード ファイルに挿入されると、`$SystemConsole$` リテラルは、このスニペットが呼び出されたコンテキストで最も単純な形式の <xref:System.Console> 型で置換されます。  
   
 ```  
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
@@ -152,6 +153,6 @@ caps.handback.revision: 11
 </CodeSnippets>  
 ```  
   
-## 参照  
- [Function Element \(Intellisense Code Snippets\)](http://msdn.microsoft.com/ja-jp/572c5549-5821-4e15-8ecd-0fa86c1c65df)   
+## <a name="see-also"></a>関連項目  
+ [Function 要素 (IntelliSense コード スニペット)](http://msdn.microsoft.com/en-us/572c5549-5821-4e15-8ecd-0fa86c1c65df)   
  [コード スニペット スキーマ リファレンス](../ide/code-snippets-schema-reference.md)

@@ -1,61 +1,44 @@
 ---
-title: "ローカル コンテンツのインストールと管理 | Microsoft Docs"
+title: "ローカルの Visual Studio ドキュメントのインストール | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-help-viewer
+ms.technology: vs-help-viewer
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- hv_manage
+f1_keywords: hv_manage
 helpviewer_keywords:
-- changing content installation source [Help Viewer 2.0]
-- updating local content [Help Viewer 2.0]
-- Help Viewer 2.0, content installation source
-- Help Viewer 2.0, updating local content
-- Help Viewer 2.0, changing content installation source
-- installing local content [Help Viewer 2.0]
-- content installation source [Help Viewer 2.0]
-- downloading content [Help Viewer 2.0]
-- removing local content [Help Viewer 2.0]
-- Help Viewer 2.0, removing local content
-- Help Viewer 2.0, installing local content
-- Help Viewer 2.0, downloading content
+- changing content installation source [Help Viewer]
+- updating local content [Help Viewer]
+- Help Viewer, content installation source
+- Help Viewer, updating local content
+- Help Viewer, changing content installation source
+- installing local content [Help Viewer]
+- content installation source [Help Viewer]
+- downloading content [Help Viewer]
+- removing local content [Help Viewer]
+- Help Viewer, removing local content
+- Help Viewer, installing local content
+- Help Viewer, downloading content
 ms.assetid: efd9df4c-2e69-4c50-992c-9678a8d8cf19
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: b016ce5c67f1aa7242d7af3f3fb1142b61145f63
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 3bd498004568bab80565782e11b46691a7d0ef1f
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="install-and-manage-local-content"></a>ローカル コンテンツのインストールと管理
 Microsoft ヘルプ ビューアーを使用すると、ソフトウェア開発のニーズに合わせてコンピューターにインストールされているヘルプ コンテンツを追加、削除、更新、移動できます。  
   
- ローカル コンピューターのコンテンツを管理するには、管理権限を持つアカウントでログオンする必要があります。 また、システム管理者が組織のローカル コンテンツ管理の意志決定を行うため、エンタープライズ環境で作業している場合、ローカル コンテンツを管理できない場合があります。 詳細については、「[ヘルプ ビューアーの管理者ガイド](../ide/help-viewer-administrator-guide.md)」を参照してください。  
+ローカル コンピューターのコンテンツを管理するには、管理者アクセス許可を持つアカウントでログオンする必要があります。 また、システム管理者が組織のローカル コンテンツ管理の意志決定を行うため、エンタープライズ環境で作業している場合、ローカル コンテンツを管理できない場合があります。 詳細については、「[ヘルプ ビューアーの管理者ガイド](../ide/help-viewer-administrator-guide.md)」を参照してください。  
   
 ## <a name="changing-the-content-installation-source"></a>コンテンツ インストール元の変更  
- 既定では、ヘルプ ビューアーはソースとして Microsoft のオンライン サービスを使用してコンテンツをインストールします。 システム管理者が別の場所にコンテンツを既にインストールしているエンタープライズ環境で作業している場合を除き、一般にコンテンツ ソースを変更しないでください。  
+既定では、ヘルプ ビューアーはソースとして Microsoft のオンライン サービスを使用してコンテンツをインストールします。 システム管理者が別の場所にコンテンツを既にインストールしているエンタープライズ環境で作業している場合を除き、一般にコンテンツ ソースを変更しないでください。  
   
 #### <a name="to-change-the-content-installation-source"></a>コンテンツのインストール元を変更するには  
   
@@ -73,12 +56,13 @@ Microsoft ヘルプ ビューアーを使用すると、ソフトウェア開発
     -   一覧で、最後に使用されたエントリを選択します。  
   
 ## <a name="download-and-install-content-locally"></a>ローカルへのコンテンツのダウンロードおよびインストール  
- ローカル コンピューターにコンテンツをダウンロードしてインストールすると、インターネット接続なしでトピックを表示できます。  
+ローカル コンピューターにコンテンツをダウンロードしてインストールすると、インターネット接続なしでトピックを表示できます。  
   
 > [!IMPORTANT]
->  コンテンツをインストールするには、管理権限を持つアカウントでログオンする必要があります。  
+> コンテンツをインストールするには、管理権限を持つアカウントでログオンする必要があります。  
   
- Visual Studio IDE が英語以外の言語に設定されている場合、英語のコンテンツまたはローカライズされたコンテンツ、あるいはその両方をインストールできます。 ただし、英語バージョンのみをインストールしていて、**[ビューアーのオプション]** ダイアログ ボックスの **[すべてのナビゲーション タブおよび F1 要求に英語版コンテンツを含める]** チェック ボックスがオフになっている場合、コンテンツは表示されません。  
+> [!NOTE]
+> Visual Studio IDE が英語以外の言語に設定されている場合、英語のコンテンツまたはローカライズされたコンテンツ、あるいはその両方をインストールできます。 ただし、英語バージョンのみをインストールしていて、**[ビューアーのオプション]** ダイアログ ボックスの **[すべてのナビゲーション タブおよび F1 要求に英語版コンテンツを含める]** チェック ボックスがオフになっている場合、コンテンツは表示されません。  
   
 #### <a name="to-download-and-install-content"></a>コンテンツをダウンロードおよびインストールするには  
   
@@ -93,12 +77,13 @@ Microsoft ヘルプ ビューアーを使用すると、ソフトウェア開発
      指定したブックは、コンピューターに既にあるブックの更新と共にインストールされます。 インストール時間は変化しますが、ステータス バーで進行状況を確認できます。  
   
 ## <a name="removing-local-content"></a>ローカル コンテンツの削除  
- コンピューターから不要なコンテンツを削除することにより、ディスク領域を節約できます。  
+コンピューターから不要なコンテンツを削除することにより、ディスク領域を節約できます。  
   
 > [!IMPORTANT]
->  コンテンツを削除するには、管理者権限が必要です。  
+> コンテンツを削除するには、管理者権限が必要です。  
   
- Visual Studio IDE が英語以外の言語に設定されており、ローカライズされたコンテンツを削除し、**[ビューアー オプション]** ダイアログ ボックスの **[すべてのナビゲーション タブおよび F1 要求に英語版コンテンツを含める]** チェック ボックスをオフにした場合、コンテンツは表示されません。  
+> [!NOTE]
+> Visual Studio IDE が英語以外の言語に設定されており、ローカライズされたコンテンツを削除し、**[ビューアー オプション]** ダイアログ ボックスの **[すべてのナビゲーション タブおよび F1 要求に英語版コンテンツを含める]** チェック ボックスをオフにした場合、コンテンツは表示されません。  
   
 #### <a name="to-remove-content"></a>コンテンツを削除するには  
   
@@ -141,4 +126,4 @@ Microsoft ヘルプ ビューアーを使用すると、ソフトウェア開発
 3.  コンテンツが移動したら、**[閉じる]** をクリックします。  
   
 ## <a name="see-also"></a>関連項目  
- [Microsoft Help Viewer](../ide/microsoft-help-viewer.md)
+[Microsoft Help Viewer](../ide/microsoft-help-viewer.md)

@@ -1,11 +1,10 @@
 ---
-title: "Visual Studio の Python オプション | Microsoft Docs"
+title: "Visual Studio での Python のオプション | Microsoft Docs"
 ms.custom: 
-ms.date: 7/13/2017
+ms.date: 07/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,19 +13,18 @@ f1_keywords:
 - VS.ToolsOptionsPages.Python_Tools
 - VS.ToolsOptionsPages.Python_Tools.General
 - VS.ToolsOptionsPages.Python_Tools.Debugging
+- VS.ToolsOptionsPages.Python_Tools.Diagnostics
 - VS.ToolsOptionsPages.Python_Tools.Interactive_Windows
 - VS.ToolsOptionsPages.Text_Editor.Python.Advanced
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 24293c3362249f2afcbcbb4b0266a478eaa1c9ab
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: a71d076e85e1e7ae070014e83186c0011ca9e58f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
-
 # <a name="options-for-python-in-visual-studio"></a>Visual Studio での Python のオプション
 
 Python のオプションを表示するには、**[ツール] > [オプション]** のメニュー コマンドを使用します。**[すべての設定を表示]** が選択されていることを確認してから、**[Python ツール]** に移動します。
@@ -39,6 +37,7 @@ Python のオプションを表示するには、**[ツール] > [オプショ�
 
 - [全般オプション](#general-options)
 - [デバッグ オプション](#debugging-options)
+- [診断オプション](#diagnostics-options)
 - [対話型ウィンドウ オプション](#interactive-windows-options)
 - [高度な Python エディター オプション](#advanced-python-editor-options)
 
@@ -70,6 +69,17 @@ Python のオプションを表示するには、**[ツール] > [オプショ�
 | Python 標準ライブラリのデバッグを有効にする | オフ | これにより、デバッグ中に標準ライブラリのソース コードに介入できるようになりますが、デバッガーが開始するまでの時間が長くなります。|
 
 ![Python オプションのダイアログ、[デバッグ] タブ](media/options-debugging.png)
+
+
+## <a name="diagnostics-options"></a>診断オプション
+
+| オプション | 既定値 | 説明 |
+| --- | --- | --- |
+| 分析ログを含める | オン | 診断をファイルに保存するとき、またはボタンを使用して診断をクリップボードにコピーするときに、インストールされている Python 環境の分析に関連する詳細なログが含まれます。 このオプションを使用すると、生成されるファイルのサイズが非常に大きくなる可能性がありますが、IntelliSense の問題を診断するために必要になる場合がよくあります。 |
+| 診断をファイルに保存 (ボタン) | 適用なし | ファイル名の入力を要求し、テキスト ファイルにログを保存します。 |
+| 診断をクリップボードにコピー (ボタン) | 適用なし | ログ全体をクリップボードに配置します。ログのサイズによっては、この操作に時間がかかる場合があります。 |
+
+![Python オプションのダイアログ、[診断] タブ](media/options-diagnostics.png)
 
 ## <a name="interactive-windows-options"></a>対話型ウィンドウ オプション
 

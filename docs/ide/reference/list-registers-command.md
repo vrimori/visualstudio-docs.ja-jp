@@ -1,32 +1,32 @@
 ---
 title: "List Registers コマンド | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "debug.listregisters"
-helpviewer_keywords: 
-  - "Debug.ListRegisters コマンド"
-  - "レジスタの一覧表示コマンド"
-  - "ListRegisters コマンド"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: debug.listregisters
+helpviewer_keywords:
+- list registers command
+- Debug.ListRegisters command
+- ListRegisters command
 ms.assetid: 19a9d789-f6c9-46b3-b1f6-4934fc33e055
-caps.latest.revision: 7
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 83f4830b79c4492337abb6052b1b2803b34b5a9b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# List Registers コマンド
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="list-registers-command"></a>List Registers コマンド
 選択したレジスタの値を表示するほか、表示されるレジスタの一覧を変更できます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]  
@@ -34,36 +34,36 @@ Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]
 [/Unwatch [{register|registerGroup}...]]  
 ```  
   
-## スイッチ  
- \/Display \[{`register`&#124;`registerGroup`}...\]  
- 指定した `register` または `registerGroup` の値が表示されます。  `register` も `registerGroup` も指定していない場合は、レジスタの既定の一覧が表示されます。  スイッチを指定していない場合の動作も同様です。  次に例を示します。  
+## <a name="switches"></a>スイッチ  
+ /Display [{`register`&#124;`registerGroup`}...]  
+ 指定した `register` または `registerGroup` の値を表示します。 `register` も `registerGroup` も指定されていない場合は、レジスタの既定の一覧が表示されます。 スイッチが指定されていない場合、動作は同じです。 例:  
   
  `Debug.ListRegisters /Display eax`  
   
- 上記のコードは、次のコードと同じです。  
+ 上記の式は、次の式と同じです。  
   
  `Debug.ListRegisters eax`  
   
- \/List  
+ /List  
  すべてのレジスタ グループが一覧に表示されます。  
   
- \/Watch \[{`register`&#124;`registerGroup`}...\]  
- 1 つ以上の `register` 値または `registerGroup` 値が一覧に追加されます。  
+ /Watch [{`register`&#124;`registerGroup`}...]  
+ 1 つ以上の `register` または `registerGroup` の値が一覧に追加されます。  
   
- \/Unwatch \[{`register`&#124;`registerGroup`}...\]  
- 1 つ以上の `register` 値または `registerGroup` 値が一覧から削除されます。  
+ /Unwatch [{`register`&#124;`registerGroup`}...]  
+ 1 つ以上の `register` または `registerGroup` の値が一覧から削除されます。  
   
-## 解説  
+## <a name="remarks"></a>コメント  
  エイリアス `r` を `Debug.ListRegisters` の代わりに使用できます。  
   
-## 使用例  
+## <a name="example"></a>例  
  この例では、`Debug.ListRegisters` のエイリアス `r` を使用して、レジスタ グループ `Flags` の値を表示します。  
   
 ```  
 r /Display Flags  
 ```  
   
-## 参照  
- [Visual Studio コマンド](../../ide/reference/visual-studio-commands.md)   
- [デバッグの基礎 : \[レジスタ\] ウィンドウ](../Topic/Debugging%20Basics:%20Registers%20Window.md)   
- [方法: \[レジスタ\] ウィンドウを使用する](../Topic/How%20to:%20Use%20the%20Registers%20Window.md)
+## <a name="see-also"></a>関連項目  
+ [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
+ [デバッグの基礎 : [レジスタ] ウィンドウ](../../debugger/debugging-basics-registers-window.md)   
+ [方法: [レジスタ] ウィンドウを使用する](../../debugger/how-to-use-the-registers-window.md)

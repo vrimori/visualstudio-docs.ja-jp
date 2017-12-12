@@ -1,20 +1,18 @@
 ---
-title: "IDE のカスタマイズ"
+title: "IDE のカスタマイズ | Microsoft Docs"
 description: "Visual Studio for Mac はさまざまな方法でカスタマイズできます。効率性とデザイン性の両方のニーズを満たす環境でアプリを開発できます。 このトピックでは、Visual Studio for Mac を自分のニーズに合わせてカスタマイズするためのさまざまな方法を紹介します。"
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: F7C2A28C-0759-4E0D-A28E-B72D5AB73DB6
+ms.openlocfilehash: f0192b63c76fe4c3fe51c0f5aa6700e072fb80d4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 514f758718105db366363cd1c9e69163a9872dc7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
-#<a name="customizing-the-ide"></a>IDE のカスタマイズ
+# <a name="customizing-the-ide"></a>IDE のカスタマイズ
 
 Visual Studio for Mac はさまざまな方法でカスタマイズできます。効率性とデザイン性の両方のニーズを満たす環境でアプリを開発できます。 このトピックでは、Visual Studio for Mac を自分のニーズに合わせてカスタマイズするためのさまざまな方法を紹介します。
 
@@ -131,4 +129,3 @@ Visual Studio for Mac では、テキスト エディターを並べて開いた
  ![2 列サイド バイ サイドと追加タブ](media/customizing-the-ide-sbs2.png)
 
 1 つのエディターを開いている状態に戻すには、**[表示]、[エディター列]、[1 列]** の順に選択します。
-

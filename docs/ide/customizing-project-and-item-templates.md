@@ -1,44 +1,45 @@
 ---
 title: "プロジェクトと項目テンプレートのカスタマイズ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "カスタマイズ (Visual Studio のテンプレート を)"
-  - "Visual Studio のテンプレート, カスタマイズ"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- customizing Visual Studio templates
+- Visual Studio templates, customizing
 ms.assetid: d7344a0a-d93f-4b69-bbc4-0c2d67ef272b
-caps.latest.revision: 10
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 3170c28527aa4ecfe335a946624ad95489b75280
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# プロジェクトと項目テンプレートのカスタマイズ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-プロジェクトと項目テンプレートを作成した後でも、さらに必要に応じてそれらをカスタマイズできます。  
+# <a name="customizing-project-and-item-templates"></a>プロジェクトと項目テンプレートのカスタマイズ
+プロジェクトと項目テンプレートを作成した後も、ニーズに合わせてさらにカスタマイズできます。  
   
  たとえば、次のタスクを実行できます。  
   
--   カスタム テンプレートとして既存のテンプレートを変更して、エクスポートします。  
+-   既存のテンプレートを変更し、カスタム テンプレートとしてエクスポートします。  
   
-     詳細については、「[方法 : 既存のテンプレートを更新する](../ide/how-to-update-existing-templates.md)」を参照してください。  
+     詳しくは、「[方法: 既存のテンプレートを更新する](../ide/how-to-update-existing-templates.md)」をご覧ください。  
   
--   既存の値を置き換えるためにテンプレートにカスタム パラメーターを渡します。  
+-   カスタム パラメーターをテンプレートに渡して、既存の値を置き換えます。  
   
-     詳細については、「[方法 : テンプレート内のパラメーターを置き換える](../ide/how-to-substitute-parameters-in-a-template.md)」を参照してください。  
+     詳しくは、「[方法 : テンプレート内のパラメーターを置き換える](../ide/how-to-substitute-parameters-in-a-template.md)」をご覧ください。  
   
 -   テンプレートからプロジェクトを作成するウィザードをカスタマイズします。  
   
-     詳細については、「[方法 : プロジェクト テンプレートを組み合わせたウィザードを使用する](../extensibility/how-to-use-wizards-with-project-templates.md)」を参照してください。  
+     詳しくは、「[方法 : プロジェクト テンプレートを組み合わせたウィザードを使用する](../extensibility/how-to-use-wizards-with-project-templates.md)」をご覧ください。  
   
-## 関連項目  
- [カスタム プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)  
+## <a name="related-sections"></a>関連項目  
+ [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)  
   
  [方法 : テンプレートの問題を解決する](../ide/how-to-troubleshoot-templates.md)  
   

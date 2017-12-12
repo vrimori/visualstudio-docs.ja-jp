@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 02/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,30 +13,15 @@ helpviewer_keywords:
 - application manifests [Visual Studio]
 - assemblies [Visual Studio], signing
 ms.assetid: 6c1ef36b-25f7-4ad0-b29a-51801b7a5420
-caps.latest.revision: 15
-author: kempb
-ms.author: kempb
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 62e9060c812666f671f1c2d3378fad510d6524f6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: a3c0f4d3bde8bb03d3766383eba01665e58458be
-ms.openlocfilehash: 6a28915840af1b22dffe704ac931a57f25ca6879
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="managing-assembly-and-manifest-signing"></a>アセンブリおよびマニフェストへの署名の管理
 厳密な名前の署名により、ソフトウェア コンポーネントはグローバル一意識別子 (GUID) を付与されます。 厳密な名前を使用すると、別のユーザーによるアセンブリのなりすましが不可能になることが保証され、コンポーネントの依存関係と構成ステートメントが、適切なコンポーネントとコンポーネントのバージョンに確実に対応付けられます。  
@@ -62,7 +46,7 @@ ms.lasthandoff: 08/01/2017
   
 -   共有コンポーネント アセンブリ (.dll)  
   
- 次の種類のアセットに署名する必要があります。  
+次の種類のアセットに署名する必要があります。  
   
 1.  アセンブリ - アセンブリをグローバル アセンブリ キャッシュ (GAC: Global Assembly Cache) に配置する場合。  
   
@@ -70,7 +54,7 @@ ms.lasthandoff: 08/01/2017
   
 3.  COM 相互運用のために使用されるプライマリ相互運用機能アセンブリ。 TLBIMP ユーティリティは、COM タイプ ライブラリからプライマリ相互運用機能アセンブリを作成するときに、厳密な名前付けを強制的に適用します。  
   
- 一般に、実行可能ファイルに署名する必要はありません。 厳密な名前付きコンポーネントは、アプリケーションと共に配置される、厳密な名前を持たないコンポーネントを参照することはできません。 Visual Studio は、アプリケーションの実行可能ファイルに署名しませんが、厳密な名前を持たない実行可能ファイルを指すアプリケーション マニフェストに署名します。 署名を行うと、依存関係を管理しにくくなります。そのため、一般的に、アプリケーションにとってプライベートなコンポーネントに署名することは避けてください。  
+一般に、実行可能ファイルに署名する必要はありません。 厳密な名前付きコンポーネントは、アプリケーションと共に配置される、厳密な名前を持たないコンポーネントを参照することはできません。 Visual Studio は、アプリケーションの実行可能ファイルに署名しませんが、厳密な名前を持たない実行可能ファイルを指すアプリケーション マニフェストに署名します。 署名を行うと、依存関係を管理しにくくなります。そのため、一般的に、アプリケーションにとってプライベートなコンポーネントに署名することは避けてください。  
   
 ## <a name="how-to-sign-an-assembly-in-visual-studio"></a>Visual Studio 内でアセンブリに署名する方法  
  **[署名]** タブを使用してアプリケーションまたはコンポーネントに署名するには、プロジェクトのプロパティ ウィンドウに移動 (**ソリューション エクスプローラー**でプロジェクト ノードを右クリックして **[プロパティ]** をクリックするか、**[クイック起動]** ウィンドウに**プロジェクトのプロパティ**を入力するか、**ソリューション エクスプローラー** ウィンドウ内で Alt キーを押しながら Enter キーを押す) します。 **[署名]** タブを選択し、**[アセンブリの署名]** チェック ボックスをオンにします。  

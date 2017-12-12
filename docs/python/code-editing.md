@@ -1,28 +1,24 @@
 ---
 title: "Visual Studio での Python コードの編集 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/10/2017
-ms.prod: visual-studio-dev15
+ms.date: 07/10/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 03effe56-d6f6-461d-9005-e43c15bf537c
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 134442008dccbeac12dd328ed3b01c2b3a1a2e8c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: d16b8fcae5b7d1a14c8f6068dfd7103115cba291
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="editing-python-code"></a>Python コードの編集
 
 開発者は、コード エディターで多くの時間を費やすので、[Visual Studio での Python のサポート](installation.md)は、生産性を向上させる機能を提供します。 機能には、IntelliSense 構文の強調表示、オートコンプリート、署名ヘルプ、メソッドのオーバーライド、検索、ナビゲーションが含まれます。 
@@ -35,11 +31,11 @@ ms.lasthandoff: 07/18/2017
 
 Visual Studio でのコードの編集に関する全般的な説明については、「[コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)」をご覧ください。 また、コードの特定のセクションに注意を集中するのに役立つ [Visual Studio のアウトライン機能](../ide/outlining.md)についての記事もご覧ください。 Python のサポートには、Visual Studio オブジェクト ブラウザーの使用が含まれています (**[表示] > [その他のウィンドウ] > [オブジェクト ブラウザー]** を選択するか、Ctrl + W、J キーを押します)。各モジュールで定義されているクラスとそれらのクラスで定義されている関数を調べることができます。 
 
-また、エディターは Visual Studio の対話型のウィンドウと統合され、この 2 つ間で容易にコードを交換できます。 詳細については、[Visual Studio での Python の概要 - 対話型 REPL ウィンドウを使用する])(getting-started.md#using-the-interactive-repl-window) および「[対話型ウィンドウの使用 - 対話型コマンドにコードを送信する](interactive-repl.md#send-code-to-interactive-command)」を参照してください。
+また、エディターは Visual Studio の対話型のウィンドウと統合され、この 2 つ間で容易にコードを交換できます。 詳細については、「[チュートリアル ステップ 3: 対話型 REPL ウィンドウを使用する](vs-tutorial-01-03.md)」と[対話型ウィンドウの使用 - 対話型コマンドにコードを送信する](interactive-repl.md#send-code-to-interactive-command)に関する項目を参照してください。
 
-Python コードの編集の概要については、「[Getting Started with Python in Visual Studio, Part 3: Editing](https://youtu.be/uZGZNEyyeKs?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)」(Visual Studio での Python の概要、パート 3: 編集) (youtube.com、3 分 48 秒) をご覧ください。
+Python コードの編集の概要については、「[Editing Python Code](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=r2iQH5LWE_4605918567)」 (Python コードの編集) (Microsoft Virtual Academy、2 分 30 秒) をご覧ください。
 
-> [!VIDEO https://www.youtube.com/embed/uZGZNEyyeKs]
+> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Editing-Python-Code-r2iQH5LWE_4605918567]
 
 ## <a name="intellisense"></a>IntelliSense
 
@@ -123,8 +119,7 @@ IntelliSense により、[入力候補](#completions)、[シグネチャ ヘル�
 
 ![コード スニペット マネージャー](media/code-editing-code-snippets-manager.png)
 
-独自のスニペットの作成方法については、「[チュートリアル: コード スニペットを作成する](../ide/walkthrough-creating-a-code-snippet.md)」をご覧ください。
-[コード スニペットを作成](https://msdn.microsoft.com/library/ms165394.aspx)してインポートすることにより、コード スニペットをカスタマイズできます。 
+独自のスニペットの作成方法については、「[チュートリアル: コード スニペットを作成する](../ide/walkthrough-creating-a-code-snippet.md)」をご覧ください。 
 
 便利なコード スニペットを作成したので共有したいとお考えの場合は、ぜひ gist に投稿して[マイクロソフトまでお知らせください](https://github.com/Microsoft/PTVS/issues)。 Visual Studio の将来のリリースに含めさせていただく可能性があります。
 

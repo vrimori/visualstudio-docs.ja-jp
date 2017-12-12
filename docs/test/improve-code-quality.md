@@ -1,40 +1,24 @@
 ---
-title: "コードの品質向上"
+title: "コードの品質向上 | Microsoft Docs"
 ms.custom: na
 ms.date: 02/17/2017
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: na
 ms.topic: article
 helpviewer_keywords:
 - Visual Studio ALM
 - team-based development
 ms.assetid: 73baa961-c21f-43fe-bb92-3f59ae9b5945
-caps.latest.revision: 39
+caps.latest.revision: "39"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
-ms.openlocfilehash: db500747061b436db2a0897e5b43a1cae4a3acae
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/03/2017
-
+ms.openlocfilehash: 93847beaef971f9370d59a8c5c8ac9f3a59a0967
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="improve-code-quality"></a>コードの品質向上
 コードの品質とは何でしょう。 優れたコードの作成には、正確性、保守性、さらに簡潔さのすべてが関係しています。 コードの品質をどのように定義したとしても、Visual Studio のテスト ツールを使用することで、あなたとあなたのチームは高水準の優れたコードを開発して維持することができます。  
@@ -71,4 +55,3 @@ ms.lasthandoff: 06/03/2017
   
  [Visual Studio Online または Team Foundation Server を使用した作業の追跡](https://www.visualstudio.com/docs/work/overview)  
  [!INCLUDE[vstsTfsLong](../test/includes/vststfslong_md.md)] を使用すると、プロジェクトの計画を作成し、これらのプロセスでアジャイル プロセス、フォーマル プロセス、またはそのバリエーションを使用しているかどうかを追跡できます。 プロジェクト計画の作成、その計画に対する進行状況の追跡、および必要な調整を行うことにより、リスクを軽減し、意図しない問題の発生を防ぎ、プロジェクトの費用を管理できます。
-

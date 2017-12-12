@@ -1,175 +1,175 @@
 ---
 title: "[コンパイル] ページ、プロジェクト デザイナー (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ProjectPropertiesCompile"
-helpviewer_keywords: 
-  - "コンパイル、Visual Basic プロパティ"
-  - "コンパイル、オプション [Visual Basic]"
-  - "コンパイラ、Visual Basic オプション"
-  - "コンパイル、命令 [Visual Basic]"
-  - "コンパイラ オプション、Visual Basic"
-  - "プロジェクト デザイナー、[コンパイル] ページ"
-  - "[コンパイル] ページ (プロジェクト デザイナーの)"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vb.ProjectPropertiesCompile
+helpviewer_keywords:
+- compilation, Visual Basic projects
+- compilation, options [Visual Basic]
+- compilers, Visual Basic options
+- compilation, instructions [Visual Basic]
+- compiler options, Visual Basic
+- Project Designer, Compile page
+- Compile page in Project Designer
 ms.assetid: b2a80230-906e-4e85-b3e0-fcd9c40426e1
-caps.latest.revision: 60
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 60
+caps.latest.revision: "60"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 23289047783eefb6c4ebe3c29b9e372cd5aae695
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
-# [コンパイル] ページ、プロジェクト デザイナー (Visual Basic)
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-コンパイル命令を指定するには、プロジェクト デザイナーの **\[コンパイル\]** ページを使用します。  このページでは、詳細なコンパイラ オプションや、ビルド前のイベントまたはビルド後のイベントを指定することもできます。  
+# <a name="compile-page-project-designer-visual-basic"></a>[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)
+プロジェクト デザイナーの **[コンパイル]** ページを使用して、コンパイル命令を指定します。 このページでは、高度なコンパイラ オプションとビルド前またはビルド後のイベントを指定することもできます。  
   
- **\[コンパイル\]** のページにアクセスするには、**\[ソリューション エクスプローラー\]** のプロジェクト ノード \(ない **\[ソリューション\]** ノード\) を選択します。  その後、**プロジェクト**、メニュー バーの **\[プロパティ\]** を選択します。  プロジェクト デザイナーが表示されたら、**\[コンパイル\]** タブをクリックします。  
+**[コンパイル]** ページにアクセスするには、**ソリューション エクスプローラー**でプロジェクト ノード (**[ソリューション]** ノードではありません) を選択します。 その後、メニュー バーで **[プロジェクト]**、**[プロパティ]** の順に選択します。 プロジェクト デザイナーが表示されたら、**[コンパイル]** タブをクリックします。  
   
- [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]  
   
-## 構成およびプラットフォーム  
- 次の設定を使用すると、表示または変更する構成とプラットフォームを選択できます。  
+## <a name="configuration-and-platform"></a>構成およびプラットフォーム  
+ 次の設定を使用すると、表示または変更する構成およびプラットフォームを選択できます。  
   
 > [!NOTE]
->  簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。  そのため、**\[構成\]** および **\[プラットフォーム\]** の一覧は表示されません。  詳細については、「[Debug and Release Project Configurations](http://msdn.microsoft.com/ja-jp/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+>  簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。 したがって、**構成**リストと**プラットフォーム** リストは表示されません。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
   
  **構成**  
- 表示または変更する構成設定を指定します。  設定は、**\[Debug\]** \(既定\)、**\[Release\]**、または **\[すべての構成\]** です。  詳細については、「[Debug and Release Project Configurations](http://msdn.microsoft.com/ja-jp/0440b300-0614-4511-901a-105b771b236e)」および「[方法 : 構成を作成および編集する](../../ide/how-to-create-and-edit-configurations.md)」を参照してください。  
+ 表示または変更する構成設定を指定します。 設定は、**[デバッグ]** (既定)、**[リリース]**、または **[すべての構成]** のいずれかになります。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」と「[方法 : 構成を作成および編集する](../../ide/how-to-create-and-edit-configurations.md)」を参照してください。  
   
  **プラットフォーム**  
- 表示または変更するプラットフォーム設定を指定します。  **\[Any CPU\]** \(既定\)、**\[x64\]**、または **\[x86\]** を指定できます。  詳細については、「[Debug and Release Project Configurations](http://msdn.microsoft.com/ja-jp/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+ 表示または変更するプラットフォーム設定を指定します。 **[任意の CPU]** (既定)、**[x64]**、または **[x86]** を指定できます。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
   
-## コンパイラ構成オプション  
- 次の設定では、コンパイラ構成オプションを設定できます。  
+## <a name="compiler-configuration-options"></a>コンパイラの構成オプション  
+ 次の設定を使用すると、コンパイラの構成オプションを設定できます。  
   
- **\[ビルド出力パス\]**  
- このプロジェクト構成の出力ファイルの場所を指定します。  このボックスにビルド出力のパスを入力するか、**\[参照\]** をクリックしてパスを選択します。  このパスは、相対パスであることに注意してください。絶対パスを入力しても、相対パスとして保存されます。  既定のパスは bin\\Debug\\ or bin\\Release\\ です。  詳細については、「[Debug and Release Project Configurations](http://msdn.microsoft.com/ja-jp/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+ **ビルド出力パス**  
+ このプロジェクト構成の出力ファイルの場所を指定します。 このボックスにビルド出力のパスを入力するか、**[参照]** ボタンをクリックしてパスを選択します。 このパスは、相対パスであることに注意してください。絶対パスを入力しても、相対パスとして保存されます。 既定のパスは bin\Debug\ または bin\Release\\ です。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
   
- 簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。  **\[デバッグ\]** メニューの **\[ビルド\]** コマンド \(F5\) を使用すると、指定した **\[出力パス\]** に関係なく、デバッグ用の場所にビルドが配置されます。  ただし、**\[ビルド\]** メニューの **\[ビルド\]** コマンドでは、指定した場所にビルドが配置されます。  詳細については、「[Debug and Release Project Configurations](http://msdn.microsoft.com/ja-jp/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+ 簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。 **[デバッグ]** メニューの **[ビルド]** コマンド (F5) を使用すると、指定した **[出力パス]** に関係なく、デバッグ用の場所にビルドが配置されます。 ただし、**[ビルド]** メニューの **[ビルド]** コマンドでは、指定した場所にビルドが配置されます。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
   
- **\[Option Explicit\]**  
- 変数の暗黙宣言を許可するかどうかを指定します。  **\[On\]** をクリックすると、変数の明示的な宣言が必要になります。  宣言されていない変数を使用している場合、コンパイラによってエラーが報告されます。  変数の暗黙の宣言を許可する場合は、**\[Off\]** をクリックします。  
+ **Option Explicit**  
+ 変数の暗黙的な宣言を許可するかどうかを指定します。 変数の明示的な宣言を要求する場合は **[オン]** を選択します。 これにより、変数が使用される前に宣言されていないと、コンパイラがエラーを報告します。 変数の暗黙的な宣言を許可するには、**[オフ]** を選択します。  
   
- この設定は、[\/optionexplicit](/dotnet/visual-basic/reference/command-line-compiler/optionexplicit) コンパイラ オプションに対応します。  
+ この設定は、[/optionexplicit](/dotnet/visual-basic/reference/command-line-compiler/optionexplicit) コンパイラ オプションに相当します。  
   
- ソース コード ファイルに [Option Explicit Statement](/dotnet/visual-basic/language-reference/statements/option-explicit-statement) が含まれている場合、ステートメント内の `On` または `Off` の値は、**\[コンパイル\]** ページの **\[Option Explicit\]** 設定をオーバーライドします。  
+ ソース コード ファイルに [Option Explicit ステートメント](/dotnet/visual-basic/language-reference/statements/option-explicit-statement)が含まれている場合、ステートメント内の `On` または `Off` の値が、**[コンパイル]** ページの **[Option Explicit]** 設定よりも優先されます。  
   
- 新しいプロジェクトを作成するとき、**\[コンパイル\]** ページの **\[Option Explicit\]** 設定は、**\[オプション\]** ダイアログ ボックスの **\[Option Explicit\]** 設定の値に設定されます。  このダイアログ ボックスの設定値を表示または変更するには、**\[ツール\]** メニューの **\[オプション\]** をクリックします。  **\[オプション\]** ダイアログ ボックスで、**\[プロジェクトおよびソリューション\]** を展開し、**\[Visual Basic の既定値\]** をクリックします。  **\[Visual Basic の既定値\]** の **\[Option Explicit\]** の既定の初期設定は **\[On\]** です。  
+ 新しいプロジェクトを作成するときに、**[コンパイル]** ページの **[Option Explicit]** 設定が **[オプション]** ダイアログ ボックスの **[Option Explicit]** 設定の値に設定されます。 このダイアログ ボックスの設定を表示または変更するには、**[ツール]** メニューで **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、**[VISUAL BASIC の既定値]** をクリックします。 **[VISUAL BASIC の既定値]** での **[Option Explicit]** の初期の既定値は **[オン]** です。  
   
- 一般的に、**\[Option Explicit\]** を `Off` に設定することは適切な方法ではありません。  1 つ以上の場所で変数名のスペルを間違えると、プログラムの実行時に予期しない結果が生じる可能性があります。  
+ **[Option Explicit]** を `Off` に設定することは、通常はお勧めできません。 変数名のスペルを 1 か所以上間違えると、プログラムの実行時に予期しない結果を招く可能性があります。  
   
- **\[Option Strict\]**  
- 厳密な型指定規則を適用するかどうかを指定します。  **\[Option Strict\]** が **\[On\]** の場合に、コンパイル時エラーの原因となる条件を次に示します。  
+ **Option Strict**  
+厳密な型セマンティクスを適用するかどうかを指定します。 **[Option Strict]** が **[オン]** になっていると、次の条件によりコンパイル時エラーが発生します。  
   
--   暗黙の縮小変換  
+-   暗黙的な縮小変換  
   
 -   遅延バインディング  
   
--   `Object` 型になる暗黙的な型指定  
+-   結果が `Object` 型となる暗黙の型指定  
   
- 暗黙的なデータ型変換が縮小変換である場合、暗黙の縮小変換エラーが発生します。  詳細については、「[Option Strict Statement](/dotnet/visual-basic/language-reference/statements/option-strict-statement)」、「[Implicit and Explicit Conversions](/dotnet/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions)」、および「[Widening and Narrowing Conversions](/dotnet/visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions)」を参照してください。  
+縮小変換する暗黙的なデータ型変換がある場合は、暗黙的な縮小変換エラーが発生します。 詳細については、「[Option Strict ステートメント](/dotnet/visual-basic/language-reference/statements/option-strict-statement)」、「[暗黙の型変換と明示的な型変換](/dotnet/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions)」、および「[拡大変換と縮小変換](/dotnet/visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions)」を参照してください。  
   
- `Object` 型として宣言された変数のプロパティまたはメソッドに代入されるオブジェクトは、遅延バインディングされます。  詳細については、「[Option Strict Statement](/dotnet/visual-basic/language-reference/statements/option-strict-statement)」および「[Early and Late Binding](/dotnet/visual-basic/programming-guide/language-features/early-late-binding/early-and-late-binding)」を参照してください。  
+`Object` 型として宣言された変数のプロパティまたはメソッドにオブジェクトを代入する場合は、そのオブジェクトは遅延バインディングされます。 詳細については、「[Option Strict ステートメント](/dotnet/visual-basic/language-reference/statements/option-strict-statement)」および「[事前バインディングと遅延バインディング](/dotnet/visual-basic/programming-guide/language-features/early-late-binding/early-and-late-binding)」を参照してください。  
   
- 宣言された変数の適切な型を推論できず、`Object` の型が推論された場合、暗黙のオブジェクト型エラーが発生します。  このエラーは主に、`As` 句を使用せずに `Dim` ステートメントを使用して変数を宣言し、`Option Infer` が Off である場合に発生します。  詳細については、「[Option Strict Statement](/dotnet/visual-basic/language-reference/statements/option-strict-statement)」、「[Option Infer Statement](/dotnet/visual-basic/language-reference/statements/option-infer-statement)」、および「[Visual Basic Language Specification](/dotnet/visual-basic/reference/language-specification)」を参照してください。  
+適切な型が宣言された変数を推論できない場合は暗黙的なオブジェクトの型エラーが発生するため、`Object` の型が推論されます。 これは主に、`As` 句を使用せず、`Option Infer` をオフにして、`Dim` ステートメントを使用して変数を宣言した場合に発生します。 詳細については、「[Option Strict ステートメント](/dotnet/visual-basic/language-reference/statements/option-strict-statement)」、「[Option Infer ステートメント](/dotnet/visual-basic/language-reference/statements/option-infer-statement)」、および「[Visual Basic Language Specification](/dotnet/visual-basic/reference/language-specification)」 (Visual Basic 言語仕様) を参照してください。  
   
- **\[Option Strict\]** 設定は、[\/optionstrict](/dotnet/visual-basic/reference/command-line-compiler/optionstrict) コンパイラ オプションに対応します。  
+**[Option Strict]** 設定は、[/optionstrict](/dotnet/visual-basic/reference/command-line-compiler/optionstrict) コンパイラ オプションに相当します。  
   
- ソース コード ファイルに [Option Strict Statement](/dotnet/visual-basic/language-reference/statements/option-strict-statement) が含まれている場合、ステートメント内の `On` または `Off` の値は、**\[コンパイル\]** ページの **\[Option Strict\]** 設定をオーバーライドします。  
+ソース コード ファイルに [Option Strict ステートメント](/dotnet/visual-basic/language-reference/statements/option-strict-statement)が含まれている場合、ステートメント内の `On` または `Off` の値が、**[コンパイル]** ページの **[Option Strict]** 設定よりも優先されます。  
   
- プロジェクトを作成するとき、**\[コンパイル\]** ページの **\[Option Strict\]** 設定は、**\[オプション\]** ダイアログ ボックスの **\[Option Strict\]** 設定の値に設定されます。  このダイアログ ボックスの設定値を表示または変更するには、**\[ツール\]** メニューの **\[オプション\]** をクリックします。  **\[オプション\]** ダイアログ ボックスで、**\[プロジェクトおよびソリューション\]** を展開し、**\[Visual Basic の既定値\]** をクリックします。  **\[Visual Basic の既定値\]** の **\[Option Strict\]** の既定の初期設定は **\[Off\]** です。  
+プロジェクトを作成するときに、**[コンパイル]** ページの **[Option Strict]** 設定が **[オプション]** ダイアログ ボックスの **[Option Strict]** 設定の値に設定されます。 このダイアログ ボックスの設定を表示または変更するには、**[ツール]** メニューで **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、**[VISUAL BASIC の既定値]** をクリックします。 **[VISUAL BASIC の既定値]** での **[Option Strict]** の初期の既定値は **[オフ]** です。  
   
- **Option Strict の個々の警告。 \[コンパイル\]** ページの **\[警告の構成\]** セクションには、`Option Strict` が On のときにコンパイル時エラーの原因となる 3 つの条件に対応する設定があります。  その 3 つの設定を次に示します。  
+**Option Strict の個々の警告。** **[コンパイル]** ページの **[警告の構成]** セクションには、`Option Strict` がオンになっているときにコンパイル時エラーが発生する 3 つの条件に相当する設定があります。 これらの設定を次に示します。  
   
--   **暗黙の型変換**  
+-   **暗黙的な変換**  
   
--   **遅延バインディング \(呼び出しは実行時に失敗することがある\)**  
+-   **遅延バインディング、呼び出しが実行時に失敗する可能性があります**  
   
--   **暗黙の型 \(想定されるオブジェクト\)**  
+-   **暗黙的な型、オブジェクトと見なされます**  
   
- **\[Option Strict\]** を **\[On\]** に設定すると、この 3 つの警告の構成の設定はすべて、**\[エラー\]** に設定されます。  **\[Option Strict\]** を **\[Off\]** に設定すると、これらの設定はすべて、**\[なし\]** に設定されます。  
+**[Option Strict]** を **[オン]** に設定すると、これら 3 つの警告の構成設定のすべてが **[エラー]** に設定されます。 **[Option Strict]** を **[オフ]** に設定すると、3 つの設定すべてが **[なし]** に設定されます。  
   
- 警告の構成の設定を、それぞれ個別に **\[なし\]**、**\[警告\]**、または **\[エラー\]** に変更できます。  この 3 つの警告の構成の設定をすべて **\[エラー\]** に設定すると、`Option strict` ボックスに `On` が表示されます。  すべて **\[なし\]** に設定すると、このボックスには `Off` が表示されます。  これらの設定を他の組み合わせにした場合は、**\[\(カスタム\)\]** が表示されます。  
+各警告の構成設定を個別に **[なし]**、**[警告]**、または **[エラー]** に変更することができます。 3 つの警告の構成設定がすべて **[エラー]** に設定されている場合、`Option strict` ボックスに `On` が表示されます。 3 つすべてが **[なし]** に設定されている場合、このボックスには `Off` が表示されます。 これらの設定のその他の組み合わせに対しては、**(カスタム)** が表示されます。  
   
- **\[Option Compare\]**  
- 使用する文字列比較の種類を指定します。  大文字小文字を区別するバイナリの文字列比較を使用するようにコンパイラに指示する場合は、**\[バイナリ\]** をクリックします。  ロケール固有の大文字小文字を区別しないテキスト文字列比較を使用する場合は、**\[テキスト\]** をクリックします。  
+**Option Compare**  
+使用する文字列比較の種類を指定します。 バイナリの大文字と小文字を区別する文字列比較を使用するようにコンパイラに指示するには、**[バイナリ]** を選択します。 ロケール固有の大文字と小文字を区別しないテキスト文字列比較を使用するには、**[テキスト]** を選択します。  
   
- この設定は、[\/optioncompare](/dotnet/visual-basic/reference/command-line-compiler/optioncompare) コンパイラ オプションに対応します。  
+この設定は、[/optioncompare](/dotnet/visual-basic/reference/command-line-compiler/optioncompare) コンパイラ オプションに相当します。  
   
- ソース コード ファイルに [Option Compare Statement](/dotnet/visual-basic/language-reference/statements/option-compare-statement) が含まれている場合、ステートメント内の `Binary` または `Text` の値は、**\[コンパイル\]** ページの **\[Option Compare\]** 設定をオーバーライドします。  
+ソース コード ファイルに [Option Compare ステートメント](/dotnet/visual-basic/language-reference/statements/option-compare-statement)が含まれている場合、ステートメント内の `Binary` または `Text` の値が、**[コンパイル]** ページの **[Option Compare]** 設定よりも優先されます。  
   
- プロジェクトを作成するとき、**\[コンパイル\]** ページの **\[Option Compare\]** 設定は、**\[オプション\]** ダイアログ ボックスの **\[Option Compare\]** 設定の値に設定されます。  このダイアログ ボックスの設定値を表示または変更するには、**\[ツール\]** メニューの **\[オプション\]** をクリックします。  **\[オプション\]** ダイアログ ボックスで、**\[プロジェクトおよびソリューション\]** を展開し、**\[Visual Basic の既定値\]** をクリックします。  **\[Visual Basic の既定値\]** の **\[Option Compare\]** の既定の初期設定は **\[バイナリ\]** です。  
+プロジェクトを作成するときに、**[コンパイル]** ページの **[Option Compare]** 設定が **[オプション]** ダイアログ ボックスの **[Option Compare]** 設定の値に設定されます。 このダイアログ ボックスの設定を表示または変更するには、**[ツール]** メニューで **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、**[VISUAL BASIC の既定値]** をクリックします。 **[VISUAL BASIC の既定値]** での **[Option Compare]** の初期の既定値は **[バイナリ]** です。  
   
- **\[Option Infer\]**  
- 変数の宣言でローカル型の推論を許可するかどうかを指定します。  ローカル型推論を許可するには、**\[On\]** を選択します。  ローカル型の推定を禁止するには、**\[Off\]** を選択します。  
+**Option Infer**  
+変数宣言でローカル型推論を許可するかどうかを指定します。 ローカル型推論の使用を許可するには、**[オン]** を選択します。 ローカル型推論をブロックするには、**[オフ]** を選択します。  
   
- この設定は、[\/optioninfer](/dotnet/visual-basic/reference/command-line-compiler/optioninfer) コンパイラ オプションに対応します。  
+この設定は、[/optioninfer](/dotnet/visual-basic/reference/command-line-compiler/optioninfer) コンパイラ オプションに相当します。  
   
- ソース コード ファイルに [Option Infer Statement](/dotnet/visual-basic/language-reference/statements/option-infer-statement) が含まれている場合、ステートメント内の `On` または `Off` の値は、**\[コンパイル\]** ページの **\[Option Infer\]** 設定をオーバーライドします。  
+ソース コード ファイルに [Option Infer ステートメント](/dotnet/visual-basic/language-reference/statements/option-infer-statement)が含まれている場合、ステートメント内の `On` または `Off` の値が、**[コンパイル]** ページの **[Option Infer]** 設定よりも優先されます。  
   
- プロジェクトを作成するとき、**\[コンパイル\]** ページの **\[Option Infer\]** 設定は、**\[オプション\]** ダイアログ ボックスの **\[Option Infer\]** 設定の値に設定されます。  このダイアログ ボックスの設定値を表示または変更するには、**\[ツール\]** メニューの **\[オプション\]** をクリックします。  **\[オプション\]** ダイアログ ボックスで、**\[プロジェクトおよびソリューション\]** を展開し、**\[Visual Basic の既定値\]** をクリックします。  **\[Visual Basic の既定値\]** の **\[Option Infer\]** の既定の初期設定は **\[On\]** です。  
+プロジェクトを作成するときに、**[コンパイル]** ページの **[Option Infer]** 設定が **[オプション]** ダイアログ ボックスの **[Option Infer]** 設定の値に設定されます。 このダイアログ ボックスの設定を表示または変更するには、**[ツール]** メニューで **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、**[VISUAL BASIC の既定値]** をクリックします。 **[VISUAL BASIC の既定値]** での **[Option Infer]** の初期の既定値は **[オン]** です。  
   
- **対象の CPU**  
- 出力ファイルがターゲットとするプロセッサを指定します。  どのプロセッサでもかまわないことを指定する場合は、各 32 ビット Intel 互換プロセッサの場合はを **\[x86\]**、任意の 64 ビット Intel 互換プロセッサの **\[x64\]**、ARM のプロセッサの **\[ARM\]**、または **\[Any CPU\]** を指定します。  **\[Any CPU\]** はハードウェアの種類の最大数で実行されるアプリケーションを使用することにより、新しいプロジェクトの既定値です。  
+**対象の CPU**  
+出力ファイルがターゲットとするプロセッサを指定します。 32 ビット Intel 互換プロセッサの場合は **[x86]** を、64 ビット Intel 互換プロセッサの場合は **[x64]** を、ARM プロセッサの場合は **[ARM]** をそれぞれ指定します。または、どのプロセッサでもかまわないことを指定する場合は、**[任意の CPU]** を選択します。 **[任意の CPU]** は、ほとんどのハードウェアの種類でアプリケーションの実行を許可しているため、これが新しいプロジェクトの既定値となります。  
   
- 詳細については、「[\/platform](/dotnet/visual-basic/reference/command-line-compiler/platform)」を参照してください。  
+詳細については、「[/platform (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/platform)」を参照してください。  
   
- **\[32 ビットの優先\]**  
- **\[Prefer32\-bit\]** のチェック ボックスがオンの場合、アプリケーションは Windows の 32 ビット バージョンと 64 ビット バージョンの 32 ビット アプリケーションとして実行されます。  それ以外の場合、アプリケーションは Windows の 32 ビット バージョンで 32 ビット アプリケーションと 64 ビット バージョンの Windows で 64 ビット アプリケーションとして実行されます。  
+**32 ビットを優先**  
+**[32 ビットの優先]** チェック ボックスがオンの場合、アプリケーションは、Windows の 32 ビット バージョンおよび 64 ビット バージョンで 32 ビット アプリケーションとして実行されます。 それ以外の場合は、アプリケーションは、Windows の 32 ビット バージョンでは 32 ビット アプリケーションとして、Windows の 64 ビット バージョンでは 64 ビット アプリケーションとして実行されます。  
   
- 64 ビット アプリケーションはポインターのサイズを重複するため、実行し、排他的に 32 ビットのライブラリに互換性の問題が発生する可能性があります。  これは、実行速度は、メモリの 4 つ以上の GB が必要な場合にのみ、64 ビットの方法でアプリケーションを実行すると便利です。  
+64 ビット アプリケーションを実行すると、ポインターのサイズが 2 倍になり、32 ビット専用のライブラリで互換性の問題が発生する可能性があります。 アプリケーションを 64 ビットで実行するのが合理的なのは、アプリケーションの実行速度が非常に速いか、4 GB を超えるメモリが必要な場合だけです。  
   
- このチェック ボックスは、次の条件がすべて満たされた場合だけです:  
+このチェック ボックスは、次の条件がすべて満たされた場合にのみ利用できます。  
   
--   **\[Compile Page\]** で、**\[対象の CPU \(T\]** の一覧が **\[Any CPU\]** に設定されます。  
+-   **[コンパイル]** ページで、**[ターゲット CPU]** リストが **[任意の CPU]** に設定されている。  
   
--   **\[アプリケーション ページ\]** で、**\[アプリケーションの種類\]** のリストでは、プロジェクトのアプリケーションであることを指定します。  
+-   **[アプリケーション]** ページの **[アプリケーションの種類]** リストで、プロジェクトがアプリケーションであることが指定されている。  
   
--   **\[アプリケーション ページ\]** で、**\[ターゲット フレームワーク\]** の一覧は、.NET Framework 4.5 を指定します。  
+-   **[アプリケーション]** ページの **[ターゲット フレームワーク]** ボックスの一覧で、.NET Framework 4.5 が指定されている。  
   
- **\[警告の構成\]**  
- このテーブルには、ビルド条件の一覧と、各条件に対応する通知レベル \(**\[なし\]**、**\[警告\]**、または **\[エラー\]**\) が表示されます。  
+**警告の構成**  
+この表には、ビルドの条件とそれぞれに対応する通知レベル (**[なし]**、**[警告]**、または **[エラー]**) が一覧表示されます。  
   
- 既定では、コンパイラの警告すべてが、コンパイル時にタスク一覧に追加されます。  コンパイラが警告やエラーを発行しないようにするには、**\[すべての警告を表示しない\]** を選択します。  コンパイラが警告を解決が必要なエラーとして扱うようにするには、**\[すべての警告をエラーとして扱う\]** を選択します。  
+既定では、コンパイル時のすべてのコンパイラ警告が、[タスク一覧] に追加されます。 **[すべての警告を表示しない]** を選択し、警告またはエラーを発行しないようにコンパイラに指示します。 コンパイラが警告を修正する必要があるエラーとして扱うにする場合は、**[すべての警告をエラーとして扱う]** を選択します。  
   
- **\[すべての警告を表示しない\]**  
- このドキュメントで既に説明した **\[警告の構成\]** テーブルでの指定に従って、コンパイラに通知の発行を許可するかどうかを指定します。  既定では、このチェック ボックスはオフになっています。  コンパイラに警告やエラーを発行しないよう指示する場合は、このチェック ボックスをオンにします。  
+**すべての警告を表示しない**  
+このドキュメントで既に説明した、**条件と通知**テーブルで指定されているとおりにコンパイラに通知の発行を許可するかどうかを指定します。 既定では、このチェック ボックスはオフになっています。 警告またはエラーを発行しないようにコンパイラに指示するには、このチェック ボックスを選択します。  
   
- この設定は、[\/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) コンパイラ オプションに対応します。  
+この設定は、[/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) コンパイラ オプションに相当します。  
   
- **\[すべての警告をエラーとして扱う\]**  
- 警告の処理方法を指定します。  このチェック ボックスは、既定でオフになります。この場合、すべての警告通知が **\[警告\]** に設定されたままになります。  すべての警告通知を **\[エラー\]** に変更する場合は、このチェック ボックスをオンにします。  
+**すべての警告をエラーとして扱う**  
+警告の処理方法を指定します。 既定では、このチェック ボックスはオフになっているため、すべての警告通知が**[警告]** に設定されたままになっています。 すべての警告通知を **[エラー]** に変更するには、このチェック ボックスをオンにします。  
   
- このオプションは、**\[すべての警告を表示しない\]** がオフの場合にのみ使用できます。  
+このオプションは、**[すべての警告を表示しない]** がオフになっている場合にのみ使用できます。  
   
- **\[XML ドキュメント ファイルを生成する\]**  
- ドキュメント情報を生成するかどうかを指定します。  既定では、このチェック ボックスはオンになり、ドキュメント情報を生成して XML ファイルに含めるようにコンパイラに指示します。  ドキュメントを作成しないようにコンパイラに指示するには、このチェック ボックスをオフにします。  
+**XML ドキュメント ファイルを生成する**  
+ドキュメント情報を生成するかどうかを指定します。 既定では、このチェック ボックスはオンになっており、ドキュメント情報を生成してそれを XML ファイルに含めるようにコンパイラに指示します。 ドキュメントを作成しないようにコンパイラに指示するには、このチェック ボックスをオフにします。  
   
- この設定は、[\/doc](/dotnet/visual-basic/reference/command-line-compiler/doc) コンパイラ オプションに対応します。  
+この設定は、[/doc](/dotnet/visual-basic/reference/command-line-compiler/doc) コンパイラ オプションに相当します。  
   
- **\[COM の相互運用機能に登録\]**  
- マネージ アプリケーションで COM オブジェクト \(COM 呼び出し可能ラッパー\) を公開し、COM オブジェクトがアプリケーションとやり取りできるようにするかどうかを指定します。  
+**COM の相互運用機能に登録**  
+マネージ アプリケーションで、COM オブジェクトがアプリケーションとやり取りできるようにする COM オブジェクト (COM 呼び出し可能ラッパー) を公開するかどうかを指定します。  
   
- 既定では、このチェック ボックスはオフになります。この場合、アプリケーションは COM 相互運用機能を無効にします。  COM 相互運用機能を有効にする場合は、このチェック ボックスをオンにします。  
+既定では、このチェック ボックスはオフになっており、アプリケーションで COM 相互運用を許可しないことを指定します。 COM 相互運用を許可するには、このチェック ボックスを選択します。  
   
- このオプションは、Windows アプリケーション プロジェクトやコンソール アプリケーション プロジェクトでは指定できません。  
+このオプションは、Windows アプリケーション、またはコンソール アプリケーション プロジェクトでは使用できません。  
   
- **\[ビルド イベント\]**  
- **\[ビルド イベント\]** ダイアログ ボックスにアクセスするには、このボタンをクリックします。  このダイアログ ボックスは、プロジェクトに対するビルド前の構成命令およびビルド後の構成命令を指定するために使用します。  このダイアログ ボックスは、Visual Basic プロジェクトでのみ使用できます。  詳細については、「[\[ビルド イベント\] ダイアログ ボックス \(Visual Basic\)](../Topic/Build%20Events%20Dialog%20Box%20\(Visual%20Basic\).md)」を参照してください。  
+**ビルド イベント**  
+このボタンをクリックして **[ビルド イベント]** ダイアログ ボックスにアクセスします。 このダイアログ ボックスを使用して、プロジェクトのビルド前およびビルド後の構成手順を指定します。 このダイアログ ボックスは、Visual Basic プロジェクトにのみ適用されます。 詳細については、「[[ビルド イベント] ダイアログ ボックス (Visual Basic)](../../ide/reference/build-events-dialog-box-visual-basic.md)」を参照してください。  
   
- **\[詳細コンパイル オプション\]**  
- **\[コンパイラの詳細設定\]** ダイアログ ボックスにアクセスするには、このボタンをクリックします。  **\[コンパイラの詳細設定\]** ダイアログ ボックスは、プロジェクトの詳細ビルド構成プロパティを指定するために使用します。  このダイアログ ボックスは、Visual Basic プロジェクトでのみ使用できます。  詳細については、「[\[ビルドの詳細設定\] ダイアログ ボックス \(Visual Basic\)](../Topic/Advanced%20Compiler%20Settings%20Dialog%20Box%20\(Visual%20Basic\).md)」を参照してください。  
+**詳細コンパイル オプション**  
+このボタンをクリックして、**[コンパイラの詳細設定]** ダイアログ ボックスにアクセスします。 **[コンパイラの詳細設定]** ダイアログ ボックスを使用して、プロジェクトの詳細なビルド構成プロパティを指定します。 このダイアログ ボックスは、Visual Basic プロジェクトにのみ適用されます。 詳細については、「[[ビルドの詳細設定] ダイアログ ボックス (Visual Basic)](../../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)」を参照してください。  
   
-## 参照  
- [Debug and Release Project Configurations](http://msdn.microsoft.com/ja-jp/0440b300-0614-4511-901a-105b771b236e)   
- [Managing Compilation Properties](http://msdn.microsoft.com/ja-jp/94308881-f10f-4caf-a729-f1028e596a2c)   
- [方法 : ビルド イベントを指定する \(Visual Basic\)](../Topic/How%20to:%20Specify%20Build%20Events%20\(Visual%20Basic\).md)   
- [Visual Basic Command\-Line Compiler](/dotnet/visual-basic/reference/command-line-compiler/index)   
+## <a name="see-also"></a>関連項目  
+ [デバッグ プロジェクト構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)   
+ [コンパイル プロパティの管理](http://msdn.microsoft.com/en-us/94308881-f10f-4caf-a729-f1028e596a2c)   
+ [方法 : ビルド イベントを指定する (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)   
+ [Visual Basic のコマンド ライン コンパイラ](/dotnet/visual-basic/reference/command-line-compiler/index)   
  [方法 : 構成を作成および編集する](../../ide/how-to-create-and-edit-configurations.md)

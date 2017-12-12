@@ -1,47 +1,48 @@
 ---
-title: "GenerateTrustInfo Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MSBuild, GenerateTrustInfo task"
-  - "GenerateTrustInfo task [MSBuild]"
+title: "GenerateTrustInfo タスク | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MSBuild, GenerateTrustInfo task
+- GenerateTrustInfo task [MSBuild]
 ms.assetid: 3ca60816-4bb0-4fef-ae43-ca0bfb63def3
-caps.latest.revision: 4
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: 9360cce21ab859e962734e240977c67627b8739f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# GenerateTrustInfo Task
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-ベース マニフェスト、`TargetZone` パラメーター、および `ExcludedPermissions` パラメーターからアプリケーション信頼を生成します。  
+# <a name="generatetrustinfo-task"></a>GenerateTrustInfo タスク
+基本マニフェスト、`TargetZone` パラメーター、および `ExcludedPermissions` パラメーターからアプリケーションの信頼を生成します。  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `GenerateTrustInfo` タスクのパラメーターの説明を次の表に示します。  
   
-|パラメーター|Description|  
-|------------|-----------------|  
+|パラメーター|説明|  
+|---------------|-----------------|  
 |`ApplicationDependencies`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 依存アセンブリを指定します。|  
-|`BaseManifest`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> アプリケーション信頼の生成元のベース マニフェストを指定します。|  
-|`ExcludedPermissions`|省略可能な `String` 型のパラメーターです。<br /><br /> ゾーンの既定のアクセス許可セットから除外される、セミコロン \(;\) で区切られた 1 つ以上のアクセス許可 ID 値を指定します。|  
+|`BaseManifest`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> アプリケーションの信頼を生成する基本マニフェストを指定します。|  
+|`ExcludedPermissions`|省略可能な `String` 型のパラメーターです。<br /><br /> ゾーンの既定のアクセス許可セットから除外する、セミコロンで区切られた 1 つまたは複数のアクセス許可 ID 値を指定します。|  
 |`TargetZone`|省略可能な `String` 型のパラメーターです。<br /><br /> コンピューター ポリシーから取得される、ゾーンの既定のアクセス許可セットを指定します。|  
-|`TrustInfoFile`|必須の <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> アプリケーションのセキュリティ信頼情報を含むファイルを指定します。|  
+|`TrustInfoFile`|必須の <xref:Microsoft.Build.Framework.ITaskItem> 型の出力パラメーターです。<br /><br /> アプリケーション セキュリティ信頼情報が含まれるファイルを指定します。|  
   
-## 解説  
- 表に示されているパラメーターを使用できるだけでなく、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。  これらの追加のパラメーターの一覧とその説明については、「[TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
+## <a name="remarks"></a>コメント  
+ 表に示されているパラメーターを使用できるだけでなく、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は <xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
- [Task Reference](../msbuild/msbuild-task-reference.md)
+ [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)

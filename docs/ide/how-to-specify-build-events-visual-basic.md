@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,29 +14,15 @@ helpviewer_keywords:
 - build events [Visual Studio]
 - builds [Visual Studio], events
 ms.assetid: 40dc83bf-a7c5-4a14-816a-fa0980b6e4c3
-caps.latest.revision: 26
-author: kempb
-ms.author: kempb
+caps.latest.revision: "26"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 595995a0369ff74c4223e7a585c913bc90aca411
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 78dc3c36a7513a04afd8f8e136996c3f896291e2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-specify-build-events-visual-basic"></a>方法 : ビルド イベントを指定する (Visual Basic)
 Visual Basic のビルド イベントを使用して、コンパイル処理の一部として、スクリプト、マクロ、またはその他のアクションを実行することができます。 コンパイル前のイベントはコンパイル前に発生し、ビルド後のイベントはコンパイル後に発生します。  
@@ -131,7 +116,7 @@ Visual Basic のビルド イベントを使用して、コンパイル処理の
     End Sub  
     ```  
   
-     このコマンドは&2; つの引数を受け取ります。 最初の引数はアプリケーション マニフェストへのパス (つまり、ビルド処理でマニフェストが作成されるフォルダー。通常は Projectname.publish) です。 2 番目の引数は新しいオペレーティング システムのバージョンです。  
+     このコマンドは 2 つの引数を受け取ります。 最初の引数はアプリケーション マニフェストへのパス (つまり、ビルド処理でマニフェストが作成されるフォルダー。通常は Projectname.publish) です。 2 番目の引数は新しいオペレーティング システムのバージョンです。  
   
 5.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
   
@@ -143,7 +128,7 @@ Visual Basic のビルド イベントを使用して、コンパイル処理の
   
 1.  発行するプロジェクト用の Windows アプリケーションを作成します。 **[ファイル]** メニューの **[新規作成]** をクリックし、**[プロジェクト]** をクリックします。  
   
-2.  **[新しいプロジェクト]** ダイアログ ボックスの **[Visual Basic]** ノードで、**[Windows]**、**[Windows アプリケーション]** テンプレートの順に選択します。 プロジェクトに `VBWinApp` という名前を付けます。  
+2.  **[新しいプロジェクト]** ダイアログ ボックスの **[Visual Basic]** ノードで、**[Windows クラシック デスクトップ]**、**[Windows フォーム アプリケーション]** テンプレートの順に選択します。 プロジェクトに `VBWinApp` という名前を付けます。  
   
 3.  **ソリューション エクスプローラー**でプロジェクトを選択し、**[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
   

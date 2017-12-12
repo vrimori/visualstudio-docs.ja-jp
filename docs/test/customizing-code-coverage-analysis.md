@@ -4,34 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f6337c35-acae-4c5f-b5d9-ac5ff687ef18
-caps.latest.revision: 16
+caps.latest.revision: "16"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 90b2481b0ec4f9387fe3a2c0b733a103e8c03845
-ms.openlocfilehash: 01dc224a571144744028e98153df1c525c461156
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: 64115171c64faf0f62b6530c37fa53c6631ac1d6
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="customizing-code-coverage-analysis"></a>コード カバレッジ分析のカスタマイズ
 既定では、Visual Studio Code カバレッジ ツールは、単体テスト中に読み込まれるすべてのソリューション アセンブリ (.exe/.dll) を分析します。 多くの場合は、この設定が効果的なので、既定のままにしておくことをお勧めします。 詳細については、「[コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)」を参照してください。  
@@ -214,9 +198,9 @@ ms.lasthandoff: 05/23/2017
   
 1.  .runsettings ファイルがチェックインされていることを確認します。  
   
-2.  チーム エクスプローラーで、[**ビルド**] を開き、ビルド定義を追加または編集します。  
+2.  チーム エクスプローラーで、**[ビルド]** を開き、ビルド定義を追加または編集します。  
   
-3.  [**プロセス**] ページで [**自動テスト**]、[**テスト ソース**]、[**実行設定**] の順に展開します。 **.runsettings** ファイルを選択します。  
+3.  **[プロセス]** ページで **[自動テスト]**、**[テスト ソース]**、**[実行設定]** の順に展開します。 **.runsettings** ファイルを選択します。  
   
     -   *しかし、 **[テスト ソース]** の代わりに **[テスト アセンブリ]** が表示されます。**[実行設定]** フィールドを設定しようとすると、.testsettings ファイルしか選択できません。*  
   
@@ -344,4 +328,3 @@ Included items must then not match any entries in the exclude list to remain inc
 ## <a name="see-also"></a>関連項目  
  [コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)   
  [コードの単体テスト](../test/unit-test-your-code.md)
-

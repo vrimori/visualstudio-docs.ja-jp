@@ -4,37 +4,20 @@ ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c122b08e-e3bf-43e6-bd6c-e776e178fd9a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 robots: noindex,nofollow
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
-ms.openlocfilehash: 4d7596a891fd0cf6eef6c99ac44e21a0392847ae
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/30/2017
-
+ms.openlocfilehash: 59669f0430760bb98dd0cb63e05f433cb3a1fe54
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="analyze-cpu-usage-in-a-universal-windows-app-uwp"></a>ユニバーサル Windows アプリ (UWP) での CPU 使用率を分析します
 ![Windows と Windows Phone に適用](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
@@ -57,24 +40,24 @@ ms.lasthandoff: 06/30/2017
   
 3.  MainPage.xaml.cs を[このコード](#BKMK_MainPage_xaml_cs)で置き換えます。  
   
-4.  アプリを構築してお試しください。 アプリは、CPU 使用率データの分析の一般的なケースを表示するには十分です。  
+4.  アプリを構築してお試しください。アプリは、CPU 使用率データの分析の一般的なケースを表示するには十分です。  
   
 ##  <a name="BKMK_Collect_CPU_usage_data"></a> CPU 使用率のデータの収集  
  ![シミュレーターでアプリのリリース ビルドを実行する](../profiling/media/cpu_use_wt_setsimulatorandretail.png "CPU_USE_WT_SetSimulatorAndRetail")  
   
-1.  Visual Studio で、配置ターゲットを [**シミュレーター**] に設定し、ソリューション構成を [**リリース**] に設定します。  
+1.  Visual Studio で、配置ターゲットを **[シミュレーター]** に設定し、ソリューション構成を **[リリース]** に設定します。  
   
     -   シミュレーターでアプリを実行すると、アプリと Visual Studio IDE との間で簡単に切り替えることができます。  
   
-    -   このアプリを [**リリース**] モードで実行すると、アプリの実際のパフォーマンスをよりよく把握できます。  
+    -   このアプリを **[リリース]** モードで実行すると、アプリの実際のパフォーマンスをよりよく把握できます。  
   
 2.  **[デバッグ]** メニューの **[パフォーマンス プロファイラー...]**をクリックします。  
   
-3.  パフォーマンスと診断ハブで、[**CPU 使用率**] をクリックしてから、[**開始**] をクリックします。  
+3.  パフォーマンスと診断ハブで、**[CPU 使用率]** をクリックしてから、**[開始]** をクリックします。  
   
      ![CpuUsage 診断セッションの開始](../profiling/media/cpu_use_wt_perfdiaghub.png "CPU_USE_WT_PerfDiagHub")  
   
-4.  アプリが起動したら、[ **最大数を取得**] をクリックします。 出力の表示後に約 1 秒待ってから、[ **非同期の最大数の取得**] を選択します。 ボタンのクリック間隔を空けると、診断レポートにおいてボタン クリックのルーチンを分離しやすくなります。  
+4.  アプリが起動したら、**[最大数を取得]** をクリックします。 出力の表示後に約 1 秒待ってから、**[非同期の最大数の取得]** を選択します。 ボタンのクリック間隔を空けると、診断レポートにおいてボタン クリックのルーチンを分離しやすくなります。  
   
 5.  2 番目の出力行が表示された後、パフォーマンスと診断ハブで **[コレクションの停止]** をクリックします。  
   
@@ -92,11 +75,11 @@ ms.lasthandoff: 06/30/2017
  CPU 使用状況グラフは、デバイスにあるすべてのプロセッサー コアのすべての CPU 時間に対するアプリの CPU アクティビティの割合を示します。 このレポートのデータはデュアル コアのコンピューターで収集されました。 2 つの急激な増加は、2 つのボタン クリックの CPU アクティビティを表します。 `GetMaxNumberButton_Click` はシングル コアで同期的に実行されるため、メソッドのグラフの高さが 50% を超えていないのは理にかなっています。 また、`GetMaxNumberAsycButton_Click` は非同期的に両方のコアで実行されるため、グラフの急激な増加が両方のコアでほぼすべての CPU リソースを活用しているように見えるのも適切と言えます。  
   
 ####  <a name="BKMK_Select_timeline_segments_to_view_details"></a> 詳細を確認するためにタイムライン セグメントを選択する  
- [**診断セッション**] タイムラインの選択バーを使用して、GetMaxNumberButton_Click のデータに注目します。  
+ **[診断セッション]** タイムラインの選択バーを使用して、GetMaxNumberButton_Click のデータに注目します。  
   
  ![選択された GetMaxNumberButton_Click](../profiling/media/cpu_use_wt_getmaxnumberreport.png "CPU_USE_WT_GetMaxNumberReport")  
   
- [**診断セッション**] タイムラインでは、選択したセグメントで使用した時間 (このレポートでは 2 秒余り) が表示され、選択で実行されたメソッドを対象にコール ツリーをフィルターします。  
+ **[診断セッション]** タイムラインでは、選択したセグメントで使用した時間 (このレポートでは 2 秒余り) が表示され、選択で実行されたメソッドを対象にコール ツリーをフィルターします。  
   
  次に `GetMaxNumberAsyncButton_Click` セグメントを選択します。  
   
@@ -115,7 +98,7 @@ ms.lasthandoff: 06/30/2017
 |![手順 1](../profiling/media/procguid_1.png "ProcGuid_1")|CPU 使用率コール ツリーのトップ レベルのノードは擬似ノードです。|  
 |![手順 2](../profiling/media/procguid_2.png "ProcGuid_2")|ほとんどのアプリでは、 **[外部コードの表示]** オプションをオフにすると、セカンド レベルのノードは **[外部コード]** ノードとなります。このノードに含まれるシステムおよびフレームワーク コードは、アプリの開始と停止、UI の描画、スレッド スケジュールの制御、およびアプリへの他の低レベル サービスの提供を行います。|  
 |![手順 3](../profiling/media/procguid_3.png "ProcGuid_3")|セカンド レベル ノードの子はユーザー コード メソッドおよび非同期ルーチンで、セカンド レベル システムとフレームワーク コードによって呼び出される、または作成されます。|  
-|![手順 4](../profiling/media/procguid_4.png "ProcGuid_4")|メソッドの子ノードには、親メソッドの呼び出しのみのデータが含まれます。 [ **外部コードの表示** ] がオフのとき、アプリ メソッドには **[外部コード]** ノードが含まれる場合もあります。|  
+|![手順 4](../profiling/media/procguid_4.png "ProcGuid_4")|メソッドの子ノードには、親メソッドの呼び出しのみのデータが含まれます。 **[外部コードの表示]** がオフのとき、アプリ メソッドには **[外部コード]** ノードが含まれる場合もあります。|  
   
 ####  <a name="BKMK_External_Code"></a> 外部コード  
  外部コードは、作成したコードによって実行されるシステムおよびフレームワーク コンポーネント内の関数で構成されます。 外部コードには、アプリの開始と停止、UI の描画、スレッドの制御、およびアプリへの他の低レベル サービスの提供を行う関数が含まれます。 外部コードを確認することはほとんどないため、CPU 使用率コール ツリーはユーザー メソッドの外部関数を 1 つの **[外部コード]** ノードにまとめます。  
@@ -136,7 +119,7 @@ ms.lasthandoff: 06/30/2017
   
 |||  
 |-|-|  
-|**合計 CPU (%)**|![合計 % のデータ演算式](../profiling/media/cpu_use_wt_totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> 選択した時間範囲におけるアプリの CPU アクティビティのうち、関数の呼び出し、および関数が呼び出した関数が使用した割合です。 これは、特定の時間範囲におけるアプリの合計アクティビティと、利用可能な合計 CPU 能力とを比較する [ **CPU 使用率** ] タイムライン グラフとは異なります。|  
+|**合計 CPU (%)**|![合計 % のデータ演算式](../profiling/media/cpu_use_wt_totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> 選択した時間範囲におけるアプリの CPU アクティビティのうち、関数の呼び出し、および関数が呼び出した関数が使用した割合です。 これは、特定の時間範囲におけるアプリの合計アクティビティと、利用可能な合計 CPU 能力とを比較する **[CPU 使用率]** タイムライン グラフとは異なります。|  
 |**セルフ CPU (%)**|![自己 % 演算式](../profiling/media/cpu_use_wt_selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> 選択した時間範囲におけるアプリの CPU アクティビティのうち、関数の呼び出しが使用した割合です。ただし、関数から呼び出された関数のアクティビティは除きます。|  
 |**合計 CPU (ミリ秒)**|選択した時間範囲内で、関数への呼び出しおよび関数が呼び出した関数によって使用されたミリ秒です。|  
 |**セルフ CPU (ミリ秒)**|選択した時間範囲内で、関数への呼び出しおよび関数が呼び出した関数によって使用されたミリ秒です。|  
@@ -329,4 +312,5 @@ namespace CpuUseDemo
   
 ```
 ## <a name="see-also"></a>関連項目
- [Visual Studio のプロファイル](../profiling/index.md) [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)
+ [Visual Studio のプロファイル](../profiling/index.md)  
+ [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)

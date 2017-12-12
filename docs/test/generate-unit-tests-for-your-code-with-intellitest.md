@@ -4,40 +4,22 @@ ms.custom:
 ms.date: 2015-10-05
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.UnitTest.CreateIntelliTest
+f1_keywords: vs.UnitTest.CreateIntelliTest
 ms.assetid: cd9ff940-e948-4d28-a72c-b291ef5c1e90
-caps.latest.revision: 33
+caps.latest.revision: "33"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c1c9f7dc62fab9de6bc32c80138c3fadbb036200
-ms.openlocfilehash: 79f4da148658c950957636fd050b5e83947f04b7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
+ms.openlocfilehash: 533e1938e83a7d4dccc3be4d8847967ee7c91f6f
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="generate-unit-tests-for-your-code-with-intellitest"></a>IntelliTest でのコードの単体テストの生成
-IntelliTest はテスト データおよび単体テストのスイートを生成するために .NET コードを確認します。 コードにある各ステートメントについて、そのステートメントを実行するテスト入力が生成されます。 コード内の各条件付き分岐について、ケース分析が実行されます。 たとえば、ステートメント、アサーション、および例外をスローするすべての操作が分析されます。 この分析は、各メソッドのパラメーター化された単体テストのためにテスト データを生成し、高いコード カバレッジを持つ単体テストを作成するために使用されます。  
+IntelliTest はテスト データおよび単体テストのスイートを生成するために .NET コードを確認します。 コードにある各ステートメントについて、そのステートメントを実行するテスト入力が生成されます。 コード内の各条件付き分岐について、ケース分析が実行されます。 たとえば、`if` ステートメント、アサーション、および例外をスローするすべての操作が分析されます。 この分析は、各メソッドのパラメーター化された単体テストのためにテスト データを生成し、高いコード カバレッジを持つ単体テストを作成するために使用されます。  
   
  IntelliTest を実行すると、どのテストが失敗しているかを簡単に把握し、必要なコードを追加して修正できます。 回帰スイートを提供するために、生成されたどのテストをテスト プロジェクトに保存するかを選択できます。 コードを変更する際に、IntelliTest を再実行して、生成されたテストとコードの変更を同期させます。  
 
@@ -60,7 +42,7 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
   
 2.  コード内のメソッドを右クリックして **[IntelliTest の実行]** を選択し、メソッドにあるすべてのコード パスに対する単体テストを生成します。  
   
-     ![メソッドを右クリックして単体テストを生成](~/test/media/runpex.png "RunPEX")  
+     ![メソッドを右クリックして単体テストを生成](../test/media/runpex.png "RunPEX")  
   
      IntelliTest は、異なる入力でコードを何度も実行します。 それぞれの実行は、表の入力テスト データおよび結果出力または例外で示されます。  
   
@@ -92,7 +74,7 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
   
      警告を表示してその後の行動を決めます。  
   
-     ![警告を表示](~/test/media/pexviewwarning.png "PEXViewWarning")  
+     ![警告を表示](../test/media/pexviewwarning.png "PEXViewWarning")  
   
 2.  コードを調査して何をテストするか理解した後、警告を修正して、インターフェイスをテストするためにどのクラスを使用するかを選択できます。  
   
@@ -154,7 +136,7 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
   
  テスト生成時の既定の形式を受け入れるか、プロジェクトまたはテストの名前付け方法を変更します。 新しいテスト プロジェクトを作成するか、既存のプロジェクトにテストを保存することができます。  
   
- ![MSTest の既定値を使用して IntelliTest を作成する](~/test/media/pexcreateintellitestmstest.png "PEXCreateIntelliTestMSTest")  
+ ![MSTest の既定値を使用して IntelliTest を作成する](../test/media/pexcreateintellitestmstest.png "PEXCreateIntelliTestMSTest")  
 
 <a name="extend-framework"></a>  
 ### <a name="q-can-i-use-other-unit-test-frameworks-with-intellitest"></a>Q: IntelliTest で他の単体テスト フレームワークを使用することはできますか。  
@@ -176,4 +158,3 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
 ### <a name="q-can-i-learn-more-about-how-the-tests-are-generated"></a>Q: テストの生成方法に関してさらに調べることができますか。  
 
 **A:** はい。概要については、この [ブログ投稿](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/05/intellitest-one-test-to-rule-them-all.aspx)を読んでください。
-

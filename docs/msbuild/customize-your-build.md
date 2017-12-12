@@ -4,38 +4,22 @@ ms.custom:
 ms.date: 06/14/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - MSBuild, transforms
 - transforms [MSBuild]
 ms.assetid: d0bceb3b-14fb-455c-805a-63acefa4b3ed
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3fb5627d2cc92c36e9dcf34f4b94796b6620321f
-ms.openlocfilehash: 86f7fef0365a47e8ea88bc3fc46cb0016efd4628
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/15/2017
-
+ms.openlocfilehash: 9392776d44602ee81358e31708d331e09d0d7a70
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="customize-your-build"></a>ビルドのカスタマイズ
 バージョン 15 より前のバージョンの MSBuild では、ソリューション内のプロジェクトに新しいカスタム プロパティを提供する場合、ソリューション内のすべてのプロジェクト ファイルにそのプロパティへの参照を手動で追加する必要がありました。 または、.props ファイルでプロパティを定義してから、ソリューションのすべてのプロジェクトでその .props ファイルを明示的にインポートする必要がありました。
@@ -76,7 +60,39 @@ Directory.Build.props は Microsoft.Common.props で最初にインポートさ�
 
 Directory.Build.targets は、NuGet パッケージから .targets ファイルがインポートされた後に Microsoft.Common.targets からインポートされます。 そのため、これを使用して、ほとんどのビルド ロジックで定義されているプロパティとターゲットをオーバーライドできますが、最後のインポートの後にプロジェクト ファイル内でカスタマイズが必要になる場合があります。
 
+## <a name="use-case-multi-level-merging"></a>ユース ケース: マルチレベルの結合
+
+この標準のソリューション構造が用意されているとします。
+
+````
+\
+  MySolution.sln
+  Directory.Build.props     (1)
+  \src
+    Directory.Build.props   (2-src)
+    \Project1
+    \Project2
+  \test
+    Directory.Build.props   (2-test)
+    \Project1Tests
+    \Project2Tests
+````
+
+すべてのプロジェクト `(1)` の共通プロパティ、`src` プロジェクト `(2-src)` の共通プロパティ、`test` プロジェクト `(2-test)` の共通プロパティを用意すると便利な場合があります。
+
+msbuild で "内" ファイル (`2-src` と `2-test`) と "外" ファイル (`1`) を正しく結合するには、msbuild で `Directory.Build.props` ファイルが見つかると後続のスキャンが停止することを考慮する必要があります。 スキャンを続行し、外ファイルに結合するには、これを両方の内ファイルに置きます。
+
+`<Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />`
+
+msbuild の一般的手法をまとめると次のようになります。
+
+- 特定のプロジェクトに対して、msbuild がソリューション構造の上方で最初の `Directory.Build.props` が見つけると、既定でそれを結合し、後続のスキャンを停止する
+- 複数のレベルを見つけ、結合する場合、"内" ファイルから "外" ファイルを [`<Import...>`](http://docs.microsoft.com/en-us/visualstudio/msbuild/property-functions#msbuild-getpathoffileabove) する (上のコード参照)
+- "外" ファイル自体でその上にある何かもインポートされない場合、そこでスキャンが停止する
+- スキャン/結合プロセスを制御するには、`$(DirectoryBuildPropsPath)` と `$(ImportDirectoryBuildProps)` を使用する
+
+もっと簡単にまとめると、何もインポートしない最初の `Directory.Build.props` が msbuild の停止箇所になります。
+
 ## <a name="see-also"></a>関連項目  
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
-

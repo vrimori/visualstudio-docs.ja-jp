@@ -4,38 +4,20 @@ ms.custom: H1HackMay2017
 ms.date: 05/18/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- debugger
+helpviewer_keywords: debugger
 ms.assetid: d2ee0301-ea78-43d8-851a-71b7b2043d73
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9e2422774a9bf588b77aeaff81f8529906b68549
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
 ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: b4f4e312fb7717edfe950cf6977279a1bd67a458
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="profiling-feature-tour"></a>プロファイリング機能ツアー
 
@@ -114,7 +96,7 @@ CPU 使用量やメモリ使用量などのプロファイリング ツールは
 
 ## <a name="analyze-resource-consumption-xaml"></a>リソース消費量を分析する (XAML)
 
-Windows デスクトップ WPF アプリや Windows ストア アプリなど、XAML アプリでは、アプリケーションのタイムライン ツールを利用してリソース消費を分析できます。 たとえば、アプリケーションが UI フレームの準備 (レイアウトとレンダリング) やネットワークとディスクの要求の処理を実行することで、およびアプリケーションの起動、ページの読み込み、ウィンドウのサイズ変更などのシナリオにおいて使用した時間を分析することができます。 ツールを使用するには、パフォーマンス プロファイラーで **[アプリケーションのタイムライン]** を選択し、**[開始]** を選択します。 アプリで、リソース消費問題が疑われるシナリオを進め、**[コレクションの停止]** を選択してレポートを生成します。
+Windows デスクトップ WPF アプリや UWP アプリなど、XAML アプリでは、アプリケーション タイムライン ツールを利用してリソース消費を分析できます。 たとえば、アプリケーションが UI フレームの準備 (レイアウトとレンダリング) やネットワークとディスクの要求の処理を実行することで、およびアプリケーションの起動、ページの読み込み、ウィンドウのサイズ変更などのシナリオにおいて使用した時間を分析することができます。 ツールを使用するには、パフォーマンス プロファイラーで **[アプリケーションのタイムライン]** を選択し、**[開始]** を選択します。 アプリで、リソース消費問題が疑われるシナリオを進め、**[コレクションの停止]** を選択してレポートを生成します。
 
 **ビジュアル スループット** でグラフのフレームレートが低い場合は、アプリの実行時に観察されるビジュアルの問題に関連している可能性があります。 同様に、**UI スレッド使用状況**グラフの数値が高いと、UI の応答性問題に関連している可能性があります。 レポートでは、パフォーマンス問題が疑われる期間を選択し、タイムライン詳細ビュー (下のウィンドウ) で UI スレッド アクティビティを詳しく調査できます。
 

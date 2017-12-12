@@ -1,27 +1,24 @@
 ---
 title: "R Tools for Visual Studio のインストール | Microsoft Docs"
 ms.custom: 
-ms.date: 6/29/2017
+ms.date: 10/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.tgt_pltfrm: 
 ms.devlang: r
 ms.topic: article
 ms.assetid: 3ff60292-1b88-4ee9-b2b2-edd957f1a519
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 7a509743ce09f2bbfb69b62060abedb48e9777b6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: 8e35c82a5f8583a609e9fccbacb0b27d9c3eac8f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="how-to-install-r-tools-for-visual-studio"></a>R Tools for Visual Studio のインストール方法
 
 このトピックの内容
@@ -32,7 +29,7 @@ ms.lasthandoff: 07/12/2017
 - [オフライン インストール](#offline-installation-of-visual-studio-and-rtvs)
 
 > [!Note]
-> R Tools をインストールすると、「[オプション](options.md#data-scientist-layout)」トピックで説明したように、最適化されたデータ科学レイアウト用に Visual Studio を構成できます。
+> R Tools をインストールすると、「[オプション](options.md)」トピックで説明したように、最適化されたデータ科学レイアウト用に Visual Studio を構成できます。
 
 ## <a name="supported-versions-of-visual-studio"></a>サポートされている Visual Studio のバージョン
 
@@ -45,7 +42,7 @@ Visual Studio Test Professional や SQL Server Management Studio などの製品
 
 1. Visual Studio インストーラーを実行します。 (Visual Studio がまだインストールされていない場合は、「[ダウンロード](https://www.visualstudio.com/downloads/)」を参照してください)。Windows 7 の場合、Visual Studio バージョン *15.2 ビルド 26430.12* 以降を表示するには、インストーラーを更新する必要があります。
 
-2. [**データ サイエンスと分析のアプリケーション**] ワークロードを選択します。
+2. **[データ サイエンスと分析のアプリケーション]** ワークロードを選択します。
 
     ![VS2017 の [データ サイエンスと分析のアプリケーション] ワークロード](media/installation-data-science-workload.png)
 
@@ -69,9 +66,12 @@ Microsoft R Open と CRAN R はどちらも複数の side-by-side バージョ�
 
 ### <a name="install-the-r-tools"></a>R Tools のインストール
 
-[https://aka.ms/rtvs-current](https://aka.ms/rtvs-current) から最新の RTVS をダウンロードします。 RTVS は Visual Studio の適切なバージョンを確認し、R インタープリターがまだインストールされていない場合は、インストールの支援も行います。
+[https://aka.ms/rtvs-current](https://aka.ms/rtvs-current) から最新の RTVS for Visual Studio 2015 をダウンロードします。 RTVS は Visual Studio の適切なバージョンを確認し、R インタープリターがまだインストールされていない場合は、インストールの支援も行います。
 
-RTVS は次の場所にインストールされます。`%ProgramFiles(x86)%\Microsoft Visual Studio 14\Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio`
+> [!Note]
+> スタンドアロンの RTVS インストーラーは Visual Studio 2015 でのみ機能します。Visual Studio 2017 の場合は、既に説明した、「[データ サイエンスと分析のアプリケーション ワークロード](#installing-rtvs-in-visual-studio-2017)」の手順で R のサポートをインストールします。
+
+RTVS for Visual Studio 2015 は、`%ProgramFiles(x86)%\Microsoft Visual Studio 14\Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio` にインストールされます。
 
 ## <a name="offline-installation-of-visual-studio-and-rtvs"></a>Visual Studio と RTVS のオフライン インストール
 
@@ -82,7 +82,7 @@ RTVS は次の場所にインストールされます。`%ProgramFiles(x86)%\Mic
     - [Visual Studio 2017](../install/create-an-offline-installation-of-visual-studio.md)
     - [Visual Studio 2015](https://msdn.microsoft.com/library/mt706497.aspx)
 
-1. オフラインの RTVS インストーラーは、[https://aka.ms/rtvs-current-zip](https://aka.ms/rtvs-current-zip) と [https://aka.ms/rtvs-remote-zip](https://aka.ms/rtvs-remote-zip) からダウンロードします。 
+1. Visual Studio 2015 では、オフラインの RTVS インストーラーは、[https://aka.ms/rtvs-current-zip](https://aka.ms/rtvs-current-zip) と [https://aka.ms/rtvs-remote-zip](https://aka.ms/rtvs-remote-zip) からダウンロードします。 
 
 1. オフライン インストーラーから Visual Studio と RTVS をインストールします。
 
@@ -92,4 +92,3 @@ RTVS は次の場所にインストールされます。`%ProgramFiles(x86)%\Mic
 - [R Tools のサンプル プロジェクト](getting-started-samples.md)
 - [ヘルプ情報の入手](getting-started-help.md)
 - [オプションの設定](options.md)
-

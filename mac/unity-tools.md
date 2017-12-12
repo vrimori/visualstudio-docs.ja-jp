@@ -1,23 +1,21 @@
 ---
-title: Visual Studio for Mac Tools for Unity
+title: Visual Studio for Mac Tools for Unity | Microsoft Docs
 author: dantogno
 ms.author: v-davian
 ms.date: 07/17/2017
 ms.topic: article
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
+ms.openlocfilehash: eae1aa9526d515e7d02d8e1727da9634e0501662
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: a9bd932341ab76feb9d91e96ac816ba6e1488064
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="visual-studio-for-mac-tools-for-unity"></a>Visual Studio for Mac Tools for Unity
 
 ![図案化された Unity and Visual Studio for Mac の画像](media/vsmac-tools-unity-image1.png)
 
-Visual Studio for Mac Tools for Unity は無料の Visual Studio 拡張機能であり、Visual Studio for Mac を Unity プラットフォームでクロスプラットフォームのゲームとアプリを開発するための強力なツールにします。
+Visual Studio for Mac Tools for Unity は、無料の Visual Studio 拡張機能であり、Visual Studio for Mac を Unity プラットフォームでクロスプラットフォームのゲームとアプリを開発するための強力なツールにします。
 
 ## <a name="overview"></a>概要 
 
@@ -65,4 +63,3 @@ Unity プロジェクトの参照と[フォルダー、スクリプト、シェ�
 
 * [IDE のカスタマイズ](/visualstudio/mac/customizing-the-ide) – [ビジュアル テーマを変更する](/visualstudio/mac/customizing-the-ide#dark-theme)方法または使い慣れた[キー バインド](/visualstudio/mac/customizing-the-ide#key-bindings)方式に切り替える方法について説明します。
 * [ソース エディター](/visualstudio/mac/source-editor) – 一般的な[キーボード ショートカット](/visualstudio/mac/keyboard-shortcuts)など、Visual Studio for Mac でよりよいコードの作成を速く簡単にする不法を説明します。
-

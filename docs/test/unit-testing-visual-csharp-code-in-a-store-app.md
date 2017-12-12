@@ -1,47 +1,31 @@
 ---
-title: "ストア アプリの Visual C# コードの単体テスト | Microsoft Docs"
+title: "UWP アプリの Visual C# コードの単体テスト | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 23cb0d82-0451-464e-98ea-fa66e7010ead
-caps.latest.revision: 19
+caps.latest.revision: "19"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 39b3ce6765d1f4ec342d9a6e5b156eaee01f0faf
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
 ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 768dd5253edac137c50ced5bf524bcc1fdd7f6da
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
-# <a name="unit-testing-visual-c-code-in-a-store-app"></a>ストア アプリの Visual C# コードの単体テスト
-このトピックでは、Windows ストア アプリの Visual C# クラスの単体テストを作成する方法の 1 つについて説明します。 Rooter クラスは、指定した数値の平方根の概数を計算する関数を実装することによって、微積分の限界理論の不明瞭なメモリを示します。 Maths アプリケーションではこの関数を使用して、数学で実行できる楽しいことをユーザーに示すことができます。  
+# <a name="unit-testing-visual-c-code-in-a-uwp-app"></a>UWP アプリの Visual C# コードの単体テスト
+このトピックでは、UWP アプリの Visual C# クラスの単体テストを作成する方法の 1 つについて説明します。 Rooter クラスは、指定した数値の平方根の概数を計算する関数を実装することによって、微積分の限界理論の不明瞭なメモリを示します。 Maths アプリケーションではこの関数を使用して、数学で実行できる楽しいことをユーザーに示すことができます。  
   
  このトピックでは、開発の第一歩として単体テストを使用する方法を示します。 この方法ではまず、テスト対象のシステムの特定の動作を検証するテスト メソッドを作成し、テストに合格するコードを記述します。 後述する手順の順序を変更することにより、この方法を逆にして、テストするコードを最初に記述し、単体テストを作成することができます。  
   
  このトピックでは、テストする単体テストと DLL に 1 つの Visual Studio ソリューションと個別のプロジェクトも作成します。 また、DLL プロジェクトに単体テストを直接含めることも、単体テストと DLL ごとに個別のソリューションを作成することもできます。  
   
 > [!NOTE]
->  Visual Studio Community、Enterprise、 および Professional には、単体テストの追加機能が備わっています。  
+>  Visual Studio Community、Enterprise、および Professional には、単体テストの追加機能が備わっています。  
 >   
 >  -   Microsoft テスト エクスプローラーのアドオン アダプターを作成したサードパーティおよびオープン ソースの単体テスト フレームワークを使用します。 また、テストのコード カバレッジ情報を分析して表示することもできます。  
 > -   ビルドの後に毎回テストを実行します。  
@@ -68,13 +52,13 @@ ms.lasthandoff: 09/26/2017
   
 1.  **[ファイル]** メニューの **[新規作成]** をポイントし、**[新しいプロジェクト]** をクリックします。  
   
-2.  **[新しいプロジェクト]** ダイアログ ボックスで **[インストール済み]**、**[Visual C#]** の順に展開し、**[Windows ストア]** をクリックします。 プロジェクト テンプレートの一覧の **[新しいアプリケーション]** をクリックします。  
+2.  **[新しいプロジェクト]** ダイアログ ボックスで **[インストール済み]**、**[Visual C#]** の順に展開し、**[Windows ユニバーサル]** を選択します。 プロジェクト テンプレートの一覧の **[新しいアプリケーション]** をクリックします。  
   
 3.  プロジェクトに「`Maths`」という名前を付け、**[ソリューションのディレクトリを作成]** チェックボックスがオンになっていることを確認します。  
   
 4.  ソリューション エクスプローラーでソリューション名をクリックし、ショートカット メニューの **[追加]** をクリックし、**[新しい項目]** をクリックします。  
   
-5.  **[新しいプロジェクト]** ダイアログ ボックスで **[インストール済み]**、**[Visual C#]** の順に展開し、**[Windows ストア]** をクリックします。 プロジェクト テンプレートの一覧の **[単体テスト ライブラリ (Windows ストア アプリ)]** をクリックします。  
+5.  **[新しいプロジェクト]** ダイアログ ボックスで **[インストール済み]**、**[Visual C#]** の順に展開し、**[Windows ユニバーサル]** を選択します。 プロジェクト テンプレートの一覧の **[単体テスト ライブラリ (ユニバーサル Windows)]** を選択します。  
   
      ![単体テスト プロジェクトの作成](../test/media/ute_cs_windows_createunittestproject.png "UTE_Cs_windows_CreateUnitTestProject")  
   
@@ -381,4 +365,3 @@ ms.lasthandoff: 09/26/2017
   
 > [!NOTE]
 >  テスト クラスにヘルパー メソッドを追加する場合に、メソッドに `[TestMethod]` 属性を追加しないでください。 テスト エクスプローラーでは、実行するメソッドが登録されません。
-

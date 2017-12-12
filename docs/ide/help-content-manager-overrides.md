@@ -1,52 +1,67 @@
 ---
 title: "ヘルプ コンテンツ マネージャーのオーバーライド | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/01/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-help-viewer
+ms.technology: vs-help-viewer
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 95fe6396-276b-4ee5-b03d-faacec42765f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: c4889d40e9ca53cccf7de384e609eb959d8981f5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 143bc6af5aa42eb480d5eff736633c2df6e68979
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="help-content-manager-overrides"></a>ヘルプ コンテンツ マネージャーのオーバーライド
-レジストリを変更することで、Visual Studio IDE のヘルプ ビューアーとヘルプ関連の機能の既定の動作を変更できます。  
+Visual Studio IDE のヘルプ ビューアーとヘルプ関連の機能の既定の動作を変更できます。 一部のオプションは、さまざまなレジストリ キー値を設定する [.pkgdef](https://blogs.msdn.microsoft.com/visualstudio/2009/12/18/whats-a-pkgdef-and-why/) ファイルを作成することで指定されます。 他のオプションはレジストリで直接設定されます。
+
+## <a name="how-to-control-help-viewer-behavior-by-using-a-pkgdef-file"></a>.pkgdef ファイルを使用してヘルプ ビューアーの動作を制御する方法
+
+1. 最初の行に `[$RootKey$\Help]` として .pkgdef ファイルを作成します。
+
+2. 次の表で説明するレジストリ キー値のいずれかまたはすべてを別の行に追加します。例: `“UseOnlineHelp”=dword:00000001`
+
+3. ファイルを %ProgramFiles(x86)%\Microsoft Visual Studio\2017\\<エディション\>\Common7\IDE\CommonExtensions にコピーします。
+
+4. 開発者コマンド プロンプトで `devenv /updateconfiguration` を実行します。
+
+### <a name="registry-key-values"></a>レジストリ キー値
+|レジストリ キー値|型|データ|説明|  
+|------------------|----|----|-----------|  
+|NewContentAndUpdateService|string|\<サービス エンドポイントの http URL\>|一意のサービス エンドポイントを定義する|
+|UseOnlineHelp|dword|ローカルのヘルプを指定するには `0`、オンライン ヘルプを指定するには `1`|オンライン ヘルプまたはオフライン ヘルプの既定を定義する|
+|OnlineBaseUrl|string|\<サービス エンドポイントの http URL\>|一意の F1 エンドポイントを定義する|
+|OnlineHelpPreferenceDisabled|dword|オンライン ヘルプの設定オプションを有効にするには `0`、無効にするには `1`|オンライン ヘルプの設定オプションを無効にする|
+|DisableManageContent|dword|ヘルプ ビューアーの **[コンテンツの管理]** タブを有効にするには`0`、無効にするには `1`|[コンテンツの管理] タブを無効にする|
+|DisableFirstRunHelpSelection|dword|Visual Studio を初めて起動する際に構成されるヘルプ機能を有効にするには `0`、無効にするには `1`|Visual Studio を初めて起動する際にコンテンツのインストールを無効にする|
+
+### <a name="example-pkgdef-file-contents"></a>.pkgdef ファイルの内容の例
+```
+[$RootKey$\Help]
+“NewContentAndUpdateService”=”https://some.service.endpoint”
+“UseOnlineHelp”=dword:00000001
+“OnlineBaseUrl”=”https://some.service.endpoint”
+“OnlineHelpPreferenceDisabled”=dword:00000000
+“DisableManageContent”=dword:00000000
+“DisableFirstRunHelpSelection”=dword:00000001
+```
+
+## <a name="using-registry-editor-to-change-help-viewer-behavior"></a>レジストリ エディターを使用してヘルプ ビューアーの動作を変更する
+レジストリ エディターでレジストリ キー値を設定することで、次の 2 つの動作を制御できます。  
   
-|タスク|レジストリ キー|値と定義|  
-|----------|------------------|--------------------------|  
-|一意のサービス エンドポイントを定義する|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSWinExpress\14.0\Help|NewContentAndUpdateService: *HTTPValueForTheServiceEndpoint*。|  
-|オンラインまたはオフラインの既定を定義する|HKEY_LOCAL_MACHINE\Software\Microsoft\VSWinExpress\14.0\help|UseOnlineHelp: ローカル ヘルプを指定するには `0`、オンライン ヘルプを指定するには `1` を入力します。|  
-|一意の F1 エンドポイントを定義する|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSWinExpress\14.0\Help|OnlineBaseUrl: *HTTPValueForTheServiceEndpoint*|  
-|Override BITS ジョブの優先順位をオーバーライドする|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (64-bit コンピューターの場合)\Microsoft\Help\v2.2|BITSPriority: **foreground**、**high**、**normal**、**low** のいずれかの値を使います。|  
-|オンライン (および IDE オンライン オプション) を無効にする|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (64 ビット コンピューターの場合)\Microsoft\VisualStudio\14.0\Help|OnlineHelpPreferenceDisabled: オンライン ヘルプ コンテンツへのアクセスを無効にするには 1 を設定します。|  
-|コンテンツの管理を無効にする|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (64 ビット コンピューターの場合)\Microsoft\VisualStudio\14.0\Help|ContentManagementDisabled: ヘルプ ビューアーの **[コンテンツの管理]** タブを無効にするには 1 を設定します。|  
-|ネットワーク共有上のローカル コンテンツ ストアを指定する|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.2\Catalogs\VisualStudio11|LocationPath="*ContentStoreNetworkShare*"|  
-|Visual Studio 機能の最初の起動時にコンテンツのインストールを無効にする。|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (64 ビット コンピューターの場合)\Microsoft\VisualStudio\14.0\Help|DisableFirstRunHelpSelection: Visual Studio の最初の開始時に構成されるヘルプ機能を無効にするには 1 を設定します。|  
+|タスク|レジストリ キー|値|データ|  
+|----------|-----|------|----|
+|Override BITS ジョブの優先順位をオーバーライドする|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (64-bit コンピューターの場合)\Microsoft\Help\v2.3|BITSPriority|**foreground**、**high**、**normal**、または **low**|
+|ネットワーク共有上のローカル コンテンツ ストアを指定する|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.3\Catalogs\VisualStudio15|LocationPath|"*ContentStoreNetworkShare*"|
   
-## <a name="see-also"></a>関連項目  
- [ヘルプ ビューアーの管理者ガイド](../ide/help-viewer-administrator-guide.md)
+## <a name="see-also"></a>関連項目
+[ヘルプ ビューアーの管理者ガイド](../ide/help-viewer-administrator-guide.md)  
+[ヘルプ コンテンツ マネージャーのコマンド ライン引数](../ide/command-line-arguments-for-the-help-content-manager.md)  
+[Microsoft Help Viewer](../ide/microsoft-help-viewer.md)  
+[.pkgdef ファイルを使用した分離シェルの変更](../extensibility/shell/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file.md)

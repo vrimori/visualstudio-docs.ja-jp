@@ -1,19 +1,17 @@
 ---
-title: "リファクタリング"
+title: "Visual Studio for Mac でのコードのリファクタリング | Microsoft Docs"
 description: "Visual Studio for Mac でのコードの再編成は、ソース解析を使用して簡単に行うことができます。"
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: C7782BF3-016F-4B41-8A81-85FC540A1A8F
+ms.openlocfilehash: ba92cd9a0e9ca28d132116f65fd41758bce1a1f0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 4133b35d7bafd37a44150c6af0d730562a639874
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="refactoring"></a>リファクタリング
 
 コードのリファクタリングは、既存のコードの再配置、再構築、および明確化を行うための方法です。コードの動作全体が変わることはありません。
@@ -109,5 +107,4 @@ Visual Studio for Mac と、Roslyn (Microsoft のオープンソースの .NET �
 上部の円をクリックすると、各候補を反復処理でき、最初に重大度が最も高い問題が示されます。 個々の結果または行にカーソルを合わせると、コンテキスト アクションで修正できる問題が表示されます。
 
  ![ソース解析項目](media/refactoring-image5.png)
-
 

@@ -4,39 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.codedUItest.testeditor
-helpviewer_keywords:
-- coded UI test, Coded UI Test Editor
+f1_keywords: vs.codedUItest.testeditor
+helpviewer_keywords: coded UI test, Coded UI Test Editor
 ms.assetid: 76435c4b-593e-43a3-a9fe-709a7f9f5e0f
-caps.latest.revision: 40
+caps.latest.revision: "40"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 55fd09e8c704152b1c88050adc567f28f37a7047
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 637bf6a6e52943e2eae247bbe5a40e10c2d3742d
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="editing-coded-ui-tests-using-the-coded-ui-test-editor"></a>コード化された UI テスト エディターを使用したコード化された UI テストの編集
 コード化された UI テスト エディターを使用すると、コード化された UI テストを簡単に変更できます。 コード化された UI テスト エディターを使用して、テスト メソッドや UI 操作のプロパティを検索、表示、および編集できます。 また、対応するコントロールを表示および編集するための UI コントロール マップを使用できます。  
@@ -154,7 +135,7 @@ UI 操作のプロパティの編集
 ##  <a name="CodedUITestEditor_MoveMethods"></a> カスタマイズを容易にするためにテスト メソッドを UIMap ファイルへ移動する  
  コード化された UI テストのテスト メソッドにカスタム コードが必要であることが判明した場合は、そのテスト メソッドを UIMap.cs ファイルまたは UIMap.vb ファイルに移動する必要があります。 それ以外の場合、コード化された UI テストが再コンパイルされるたびにコードが上書きされます。 メソッドを移動しない場合は、テストが再コンパイルするたびにカスタム コードが上書きされます。  
   
- **[UI 操作]** ウィンドウで、テスト コードの再コンパイル時に上書きされないカスタム コード機能を容易にするために、UIMap.cs ファイルまたは UIMap.vb ファイルに移動するテスト メソッドを選択します。 次に、コード化された UI テスト エディターのツール バーにある **[コードの移動]** をクリックするか、テスト メソッドのショートカット メニューを開いて **[コードの移動]**をクリックします。 テスト メソッドが UIMap.uitest ファイルから削除され、[UI Actions]\(UI 操作) ペインに表示されなくなります。 移動したテスト ファイルを編集するには、ソリューション エクスプローラーから UIMap.cs ファイルまたは UIMap.vb ファイルを開きます。  
+ **[UI 操作]** ウィンドウで、テスト コードの再コンパイル時に上書きされないカスタム コード機能を容易にするために、UIMap.cs ファイルまたは UIMap.vb ファイルに移動するテスト メソッドを選択します。 次に、コード化された UI テスト エディターのツール バーにある **[コードの移動]** をクリックするか、テスト メソッドのショートカット メニューを開いて **[コードの移動]**をクリックします。 テスト メソッドが UIMap.uitest ファイルから削除され、[UI Actions] (UI 操作) ペインに表示されなくなります。 移動したテスト ファイルを編集するには、ソリューション エクスプローラーから UIMap.cs ファイルまたは UIMap.vb ファイルを開きます。  
   
  メソッドの移動が完了したら、 **ツール バーの** [保存] [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] をクリックし、UIMap.Designer ファイルに変更を保存します。  
   
@@ -238,4 +219,3 @@ UI 操作のプロパティの編集
  [データ ドリブンのコード化された UI テストの作成](../test/creating-a-data-driven-coded-ui-test.md)   
  [既存の操作の記録からのコード化された UI テストの生成](/devops-test-docs/test/generating-a-coded-ui-test-from-an-existing-action-recording)   
  [チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
-

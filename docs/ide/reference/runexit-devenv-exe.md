@@ -1,60 +1,60 @@
 ---
-title: "/Runexit (devenv.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "/runexit Devenv スイッチ"
-  - "Devenv, /runexit スイッチ"
-  - "runexit Devenv スイッチ"
+title: -Runexit (devenv.exe) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- runexit Devenv switch
+- Devenv, /runexit switch
+- /runexit Devenv switch
 ms.assetid: bfc94875-5fc0-4110-b961-d59c0b403790
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: fdb1cf075c97290883879537089dcee456351c8d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# /Runexit (devenv.exe)
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-指定したプロジェクトまたはソリューションをコンパイルおよび実行してから、統合開発環境 \(IDE: Integrated Development Environment\) を閉じます。  
+# <a name="runexit-devenvexe"></a>/Runexit (devenv.exe)
+指定したプロジェクトまたはソリューションをコンパイルおよび実行してから、統合開発環境 (IDE) を閉じます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 devenv /runexit {SolutionName|ProjectName}  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  `SolutionName`  
- 必ず指定します。  ソリューション ファイルの完全パスおよび名前です。  
+ 必須です。 ソリューション ファイルの完全パスと名前。  
   
  `ProjectName`  
- 必ず指定します。  プロジェクト ファイルの完全パスおよび名前です。  
+ 必須です。 プロジェクト ファイルの完全パスと名前。  
   
-## 解説  
- アクティブなソリューション構成に対して指定された設定に従ってプロジェクトまたはソリューションをコンパイルして実行します。  このスイッチは、IDE を最小化した状態でプロジェクトまたはソリューションを実行し、実行が完了したら IDE を終了します。  
+## <a name="remarks"></a>コメント  
+ アクティブなソリューション構成に対して指定された設定に従って、指定したプロジェクトまたはソリューションをコンパイルして実行します。 このスイッチはプロジェクトまたはソリューションの実行中に IDE を最小化し、プロジェクトまたはソリューションの実行の完了後に IDE を閉じます。  
   
--   空白を含む文字列は二重引用符で囲みます。  
+-   空白を含む文字列を二重引用符で囲みます。  
   
--   エラーなどの情報は、**\[コマンド\]** ウィンドウまたは `/out` スイッチで指定した任意のログ ファイルに表示されます。  
+-   エラーなどの概要情報は、**[コマンド]** ウィンドウ、または `/out`スイッチで指定した任意のログ ファイルに表示できます。  
   
-## 使用例  
- 次のコードでは、アクティブな配置構成を使用し、IDE を最小化した状態で `MySolution` ソリューションを実行してから IDE を終了します。  
+## <a name="example"></a>例  
+ この例では、アクティブな配置構成を使用し、IDE を最小化した状態でソリューション `MySolution` を実行してから IDE を閉じます。  
   
 ```  
 devenv /runexit "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln"  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)   
- [\/Run](../../ide/reference/run-devenv-exe.md)   
- [\/Build](../../ide/reference/build-devenv-exe.md)   
- [\/Rebuild](../../ide/reference/rebuild-devenv-exe.md)   
- [\/Out](../../ide/reference/out-devenv-exe.md)
+ [/Run (devenv.exe)](../../ide/reference/run-devenv-exe.md)   
+ [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md)   
+ [/Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)   
+ [/Out (devenv.exe)](../../ide/reference/out-devenv-exe.md)

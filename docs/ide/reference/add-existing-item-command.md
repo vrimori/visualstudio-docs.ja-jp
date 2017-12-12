@@ -1,62 +1,62 @@
 ---
-title: "AddExistingSolutionItem コマンド | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "project.addexistingitem"
-helpviewer_keywords: 
-  - "既存項目の追加コマンド"
-  - "File.AddExistingItem コマンド"
+title: "既存項目の追加コマンド | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: project.addexistingitem
+helpviewer_keywords:
+- File.AddExistingItem command
+- Add Existing Item command
 ms.assetid: 41f56131-d4c7-4f81-83b7-bdac713ea870
-caps.latest.revision: 13
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: af35812ba5d01c174d8b9d53bcd9572a45b8e793
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# AddExistingSolutionItem コマンド
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="add-existing-item-command"></a>AddExistingSolutionItem コマンド
 既存のファイルを現在のソリューションに追加して、そのファイルを開きます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 File.AddExistingItem filename [/e:editorname]  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  `filename`  
- 必ず指定します。  現在のソリューションに追加するアイテムの完全パスとファイル名を拡張子を付けて指定します。  ファイルのパスまたはファイル名にスペースが含まれている場合は、パス全体を引用符で囲みます。  
+ 必須です。 現在のソリューションに追加する項目の完全なパスとファイル名 (拡張子付き)。 ファイル パスまたはファイル名にスペースが含まれている場合は、パス全体を引用符で囲みます。  
   
-## スイッチ  
- \/e: `editorname`  
- 省略可能です。  ファイルを開くために使用するエディターの名前を指定します。  引数を指定してあり、エディター名を指定していない場合は、**\[ファイルを開くアプリケーションの選択\]** ダイアログ ボックスが表示されます。  
+## <a name="switches"></a>スイッチ  
+ /e: `editorname`  
+ 省略可能です。 ファイルを開くために使用するエディターの名前です。 引数は指定されていても、エディター名がない場合、**[プログラムから開く]** ダイアログ ボックスが表示されます。  
   
- 引数 \/e:`editorname` の構文では、エディター名を **\[ファイルを開くアプリケーションの選択\] ダイアログ ボックス**に表示されたとおりに引用符で囲んで使用します。  たとえば、ソース コード エディターでスタイル シートを開くには、引数 \/e:`editorname` に次のように入力します。  
+ /e:`editorname` 引数の構文では、**[プログラムから開く] ダイアログ ボックス**に表示されるエディター名 (引用符で囲まれている) が使用されます。 たとえば、ソース コード エディターでスタイル シートを開く場合、/e:`editorname` 引数に対して次のように入力します。  
   
 ```  
 /e:"Source Code (text) Editor"  
 ```  
   
-## 解説  
- オート コンプリートでは、入力した文字列と一致する正しいパスおよびファイル名が検索されます。  
+## <a name="remarks"></a>コメント  
+ オート コンプリートでは、入力された正しいパスとファイル名の検索を試みます。  
   
-## 使用例  
- ファイル Form1.frm を現在のソリューションに追加するコードは次のとおりです。  
+## <a name="example"></a>例  
+ この例では、Form1.frm というファイルを現在のソリューションに追加します。  
   
 ```  
 >File.AddExistingItem "C:\public\solution files\Form1.frm"  
 ```  
   
-## 参照  
- [Visual Studio コマンド](../../ide/reference/visual-studio-commands.md)   
+## <a name="see-also"></a>関連項目  
+ [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
- [\[検索\] ボックス](../Topic/Find-Command%20Box.md)   
- [Visual Studio コマンドの定義済みのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+ [[検索/コマンド] ボックス](../../ide/find-command-box.md)   
+ [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)

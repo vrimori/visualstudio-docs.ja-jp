@@ -1,19 +1,17 @@
 ---
-title: "アクティベーション"
+title: "アクティベーション | Microsoft Docs"
 description: 
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 898DFEB8-5757-4CCE-8AD2-8BC7706F5855
+ms.openlocfilehash: 75f8bb2e7b11cc40115e7266f309cb892e9e0323
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: a2b13ca0c95337a2a86af6c430a1f0c072069347
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="activation"></a>アクティベーション
 
 Visual Studio for Mac には、3 つの異なるサブスクリプション レベルがあります。すべて、次のいずれかからご利用いただけます。
@@ -33,6 +31,10 @@ Visual Studio for Mac には、3 つの異なるサブスクリプション レ�
 1. サブスクリプションを更新します。 [https://www.visualstudio.com/vs/pricing/](https://www.visualstudio.com/vs/pricing/) からサブスクリプションを更新できます。
 
 2. サブスクリプションが有効な別のアカウントをお持ちであれば、それを Visual Studio for Mac に追加できます。詳細は、「[複数のユーザー アカウントを追加する](~/signing-in.md)」というトピックにあります。 Visual Studio for Mac は、追加されているすべてのアカウントから最良のライセンスを検出します。 
+
+## <a name="product-key-usage"></a>プロダクト キーの使用法
+
+現時点では、プロダクト キーを使用して Visual Studio for Mac の Professional または Enterprise の権利を有効にする方法はありません。 Visual Studio Enterprise for Mac または Visual Studio Professional for Mac を使用するには、関連する[サブスクリプション](https://www.visualstudio.com/subscriptions/)があり、IDE に[サインイン](~/signing-in.md)している必要があります。
 
 ## <a name="offline-activation"></a>オフラインのライセンス認証
 

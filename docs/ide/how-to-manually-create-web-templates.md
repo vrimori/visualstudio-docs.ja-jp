@@ -1,52 +1,53 @@
 ---
 title: "方法 : Web テンプレートを手動で作成する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プロジェクト テンプレート [Visual Studio], Web"
-  - "テンプレート [Visual Studio], Web"
-  - "Visual Studio のテンプレート, Web"
-  - "Web テンプレート [Visual Studio]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Visual Studio templates, Web
+- templates [Visual Studio], Web
+- Web templates [Visual Studio]
+- project templates [Visual Studio], Web
 ms.assetid: 731c4027-a152-48c5-bfc4-93490bf1949f
-caps.latest.revision: 17
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 5d5f34e421160e8cca56897e6530ff47da7b1a84
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : Web テンプレートを手動で作成する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Web テンプレートの作成方法は、他の種類のテンプレートの作成方法とは異なります。  Web プロジェクト テンプレートは **\[新しい Web サイトの追加\]** ダイアログ ボックスに表示され、Web プロジェクト項目はプログラミング言語別に分類されるため、.vstemplate ファイルではテンプレートを Web テンプレートとして指定し、プログラミング言語を指定する必要があります。  
+# <a name="how-to-manually-create-web-templates"></a>方法 : Web テンプレートを手動で作成する
+Web テンプレートの作成方法は、他の種類のテンプレートを作成する場合と異なります。 Web プロジェクト テンプレートは **[新しい Web サイトの追加]** ダイアログ ボックスに表示され、Web プロジェクトの項目はプログラミング言語によって分類されるので、.vstemplate ファイルではテンプレートを Web テンプレートとして指定し、プログラミング言語を示す必要があります。  
   
 > [!NOTE]
->  Web テンプレートには、`Project` 要素の `File` 属性を使用して指定される空の .webproj ファイルが含まれる必要があります。  Web プロジェクトにはプロジェクト ファイルは必要ありませんが、このファイルは Web テンプレートが正しく機能するために必要となります。  
+>  Web テンプレートには、`Project` 要素の `File` 属性を使って指定される空の .webproj ファイルが含まれる必要があります。 Web プロジェクトではプロジェクト ファイルは必要ありませんが、Web テンプレートが正しく機能するためにはこのファイルが必要です。  
   
-### Web テンプレートを手動で作成するには  
+### <a name="to-manually-create-a-web-template"></a>Web テンプレートを手動で作成するには  
   
 1.  Web プロジェクトを作成します。  
   
-2.  プロジェクトのファイルを変更または削除するか、プロジェクトに新しいファイルを追加します。  
+2.  プロジェクト内のファイルを変更または削除するか、新しいファイルをプロジェクトに追加します。  
   
-3.  XML ファイルを作成し、そのファイルをプロジェクトと同じディレクトリに .vstemplate ファイル名拡張子を使用して保存します。  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のプロジェクトには追加しないでください。  
+3.  XML ファイルを作成し、.vstemplate ファイル名拡張子を使って、プロジェクトと同じディレクトリに保存します。 このファイルを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のプロジェクトに追加しないでください。  
   
-4.  .vstemplate XML ファイルを作成して、プロジェクト テンプレート メタデータを指定します。  詳細については、次のセクションの例を参照してください。  
+4.  プロジェクト テンプレート メタデータを提供するための .vstemplate XML ファイルを作成します。 詳しくは、次のセクションの例をご覧ください。  
   
-5.  .vstemplate ファイルで `ProjectType` 要素を検索し、テキスト値を `Web` に設定します。  
+5.  .vstemplate ファイルで `ProjectType` 要素を探し、テキスト値を `Web` に設定します。  
   
-6.  `ProjectType` 要素の後に `ProjectSubType` 要素を追加し、テキスト値をテンプレートのプログラミング言語に設定します。  プログラミング言語には、次のいずれかの値を指定できます。  
+6.  `ProjectType` 要素の後に `ProjectSubType` 要素を追加し、テキスト値をテンプレートのプログラミング言語に設定します。 プログラミング言語は次のいずれかの値です。  
   
     -   CSharp  
   
     -   VisualBasic  
   
-     次に例を示します。  
+     例:  
   
     ```  
     <TemplateData>  
@@ -57,12 +58,12 @@ Web テンプレートの作成方法は、他の種類のテンプレートの�
     </TemplateData>  
     ```  
   
-7.  テンプレート内のファイル \(.vstemplate ファイルを含む\) を選択して右クリックし、**\[送信\]** を選択し、**\[圧縮 \(zip 形式\) フォルダー\]** をクリックします。  ファイルは .zip ファイルに圧縮されます。  
+7.  テンプレート内のファイル (.vstemplate ファイルを含む) を選んで右クリックし、**[送信]** をクリックして、**[圧縮 (zip 形式) フォルダー]** をクリックします。 ファイルは .zip ファイルに圧縮されます。  
   
-8.  .zip テンプレート ファイルを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクト テンプレートのディレクトリに配置します。  既定では、このディレクトリは \\My Documents\\Visual Studio *バージョン*\\My Exported Templates \\ です。  
+8.  .zip テンプレート ファイルを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクト テンプレートのディレクトリに配置します。 既定では、このディレクトリは \My Documents\Visual Studio <*バージョン*>\My Exported Templates\\ です。  
   
-## 使用例  
- Web プロジェクト テンプレート用の基本的な .vstemplate ファイルの例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、Web プロジェクト テンプレートの基本的な .vstemplate ファイルを示します。  
   
 ```  
 <VSTemplate Version="2.0.0" Type="Project"  
@@ -85,6 +86,6 @@ Web テンプレートの作成方法は、他の種類のテンプレートの�
 </VSTemplate>  
 ```  
   
-## 参照  
- [カスタム プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
+## <a name="see-also"></a>関連項目  
+ [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)

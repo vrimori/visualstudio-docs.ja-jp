@@ -4,8 +4,7 @@ description: "Visual Studio のインストールの自動化に役立つ JSON �
 ms.date: 08/14/2017
 ms.reviewer: tims
 ms.suite: 
-ms.technology:
-- vs-ide-install
+ms.technology: vs-ide-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,14 @@ helpviewer_keywords:
 - installation
 - command-line
 author: timsneath
-ms.author: tims
+ms.author: tglee
 manager: ghogen
+ms.openlocfilehash: f8103f1d160370853e461288010e434095c776c2
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
 ms.translationtype: HT
-ms.sourcegitcommit: f23906933add1f4706d8786b2950fb3b5d2e6781
-ms.openlocfilehash: 5c8aaf24a1952847c593d5eb70f7c94208310174
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
-
 # <a name="how-to-define-settings-in-a-response-file"></a>応答ファイルの設定を定義する方法
 Visual Studio を展開する管理者は、次の例のように `--in` パラメーターを使用して応答ファイルを指定できます。
 
@@ -37,7 +34,7 @@ vs_enterprise.exe --in customInstall.json
 
 # <a name="setting-a-default-configuration-for-visual-studio"></a>Visual Studio の既定構成を設定する
 
-`--layout` でネットワーク レイアウト キャッシュを作成した場合、最初の `response.json` ファイルがレイアウトで作成されます。 部分的レイアウトを作成する場合、この応答ファイルにはレイアウトに含まれていたワークロードと言語が含まれます。  このレイアウトからセットアップを実行すると、自動的にこの response.json ファイルが使用され、レイアウトに含まれていたワークロードとコンポーネントが選択されます。  ユーザーは Visual Studio をインストールする前にセットアップ UI の任意のワークロードを引き続き選択または選択解除できます。 
+`--layout` でネットワーク レイアウト キャッシュを作成した場合、最初の `response.json` ファイルがレイアウトで作成されます。 部分的レイアウトを作成する場合、この応答ファイルにはレイアウトに含まれていたワークロードと言語が含まれます。  このレイアウトからセットアップを実行すると、自動的にこの response.json ファイルが使用され、レイアウトに含まれていたワークロードとコンポーネントが選択されます。  ユーザーは Visual Studio をインストールする前にセットアップ UI の任意のワークロードを引き続き選択または選択解除できます。
 
 レイアウトを作成する管理者はレイアウトの `response.json` ファイルを変更することで、ユーザーがレイアウトから Visual Studio をインストールするときに表示される既定の設定を制御できます。  たとえば、管理者が特定のワークロードとコンポーネントを既定でインストールする場合、それらを追加するように `response.json` ファイルを構成できます。
 
@@ -59,7 +56,7 @@ Visual Studio セットアップをレイアウト フォルダーから実行�
   "productId": "Microsoft.VisualStudio.Product.Enterprise"
 }
 ```
-レイアウトを作成または更新すると、response.template.json ファイルも作成されます。  このファイルには、使用できるワークロード、コンポーネント、言語 ID がすべて含まれています。  このファイルは、カスタム インストールに含められるものすべてのテンプレートとして提供されます。  管理者は、このファイルを元にカスタム応答ファイルを作成できます。  インストール対象でないものの ID を削除して、自分の応答ファイルに保存するだけです。  response.template.json をカスタマイズしないでください。レイアウトが更新されるたびに変更内容が失われます。 
+レイアウトを作成または更新すると、response.template.json ファイルも作成されます。  このファイルには、使用できるワークロード、コンポーネント、言語 ID がすべて含まれています。  このファイルは、カスタム インストールに含められるものすべてのテンプレートとして提供されます。  管理者は、このファイルを元にカスタム応答ファイルを作成できます。  インストール対象でないものの ID を削除して、自分の応答ファイルに保存するだけです。  response.template.json をカスタマイズしないでください。レイアウトが更新されるたびに変更内容が失われます。
 
 ## <a name="example-layout-response-file-content"></a>レイアウト応答ファイルの内容の例
 次の例では、Visual Studio Enterprise、6 つの共通ワークロード、コンポーネントがインストールされます。UI 言語として英語とフランス語の両方がインストールされます。 これをテンプレートとして利用できます。ワークロードとコンポーネントを自分がインストールするものに変更してください。
@@ -94,6 +91,9 @@ Visual Studio セットアップをレイアウト フォルダーから実行�
     ]
 }
 ```
+
+## <a name="get-support"></a>サポートを受ける
+ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング](troubleshooting-installation-issues.md)」ページにあるトラブルシューティングのヒントをご覧ください。 また、Visual Studio IDE の [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから製品の問題を Microsoft に報告していただくことや、[UserVoice](https://visualstudio.uservoice.com/forums/121579) でご提案を共有していただくこともできます。 [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。 [Gitter コミュニティの Visual Studio に関する意見交換](https://gitter.im/Microsoft/VisualStudio) ([GitHub](https://github.com/) アカウントが必要) から、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。
+
 ## <a name="see-also"></a>関連項目
 * [Visual Studio 2017 のワークロード ID とコンポーネント ID](workload-and-component-ids.md)
-

@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 05/15/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-install
+ms.technology: vs-ide-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,27 +16,11 @@ ms.assetid: 4af353f5-6cfd-4ebe-bcfb-f42306e451a0
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d9de84bed187c62962a76424aabdc5f355dff4dc
-ms.openlocfilehash: 220b41f44cdc91ea84bf08b8eec8181dc01c25c7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/15/2017
-
+ms.openlocfilehash: 5d0f3e97f403bb7af144fad9e97afc932cdc6e83
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="visual-studio-2017-administrator-guide"></a>Visual Studio 2017 管理者ガイド
 
@@ -72,13 +55,16 @@ Visual Studio 2017 をクライアント ワークステーションに配置す
 > [!TIP]
 > 管理者のガイドのドキュメントに加えて、Visual Studio 2017 セットアップの情報が、「[Heath Stewart のブログ](https://blogs.msdn.microsoft.com/heaths/tag/vs2017/)」に多く掲載されています。
 
+## <a name="get-support"></a>サポートを受ける
+ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング](troubleshooting-installation-issues.md)」ページにあるトラブルシューティングのヒントをご覧ください。 また、Visual Studio IDE の [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから製品の問題を Microsoft に報告していただくことや、[UserVoice](https://visualstudio.uservoice.com/forums/121579) でご提案を共有していただくこともできます。 [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。 [Gitter コミュニティの Visual Studio に関する意見交換](https://gitter.im/Microsoft/VisualStudio) ([GitHub](https://github.com/) アカウントが必要) から、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。
+
 ## <a name="see-also"></a>関連項目
 * [Visual Studio 2017 のインストール](install-visual-studio.md)
 * [コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする](use-command-line-parameters-to-install-visual-studio.md)
   * [コマンド ライン パラメーターの例](command-line-parameter-examples.md)
   * [ワークロードとコンポーネント ID のリファレンス](workload-and-component-ids.md)
 * [Visual Studio のネットワーク ベース インストールを作成する](create-a-network-installation-of-visual-studio.md)
-  * [オフライン環境での Visual Studio のインストールに関する特別な考慮事項](install-visual-studio-in-offline-environment.md)
+  * [Visual Studio オフライン インストールに必要な証明書をインストールする](install-certificates-for-visual-studio-offline.md)
 * [応答ファイルで Visual Studio を自動化する](automated-installation-with-response-file.md)
 * [Visual Studio の展開時にプロダクト キーを自動的に適用する](automatically-apply-product-keys-when-deploying-visual-studio.md)
 * [Visual Studio のエンタープライズ展開に既定値を設定する](set-defaults-for-enterprise-deployments.md)
@@ -86,5 +72,3 @@ Visual Studio 2017 をクライアント ワークステーションに配置す
 * [Visual Studio のネットワーク ベース インストールを更新する](update-a-network-installation-of-visual-studio.md)
 * [Visual Studio 配置の更新プログラムを制御する](controlling-updates-to-visual-studio-deployments.md)
 * [Visual Studio インスタンスの検出および管理用のツール](tools-for-managing-visual-studio-instances.md)
-* [Visual Studio 2017 で問題を報告する](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
-

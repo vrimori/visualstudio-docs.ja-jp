@@ -1,34 +1,35 @@
 ---
-title: "Events (VSPerfCmd) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Events (VSPerfCmd) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb139327-4783-4f2a-874c-efad377a7be4
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 84f1d515722203f15b1b667df6fb7fdf72fe4fb4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Events (VSPerfCmd)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-VSPerfCmd.exe の **Events** オプションは、Windows イベント トレーシング \(ETW: Event Tracing for Windows\) ログの記録を制御します。  ETW データは、プロファイラー データ ファイルとは別の .etl ファイルに保存されます。  このデータは、[VSPerfReport](../profiling/vsperfreport.md) \/summary:etw コマンドを使用してレポートに表示できます。  
+# <a name="events-vsperfcmd"></a>Events (VSPerfCmd)
+VSPerfCmd.exe **Events** オプションは、Windows イベント トレーシング (ETW) のログ記録を制御します。 ETW データは、プロファイラー データ ファイルとは別の .etl ファイルに保存されます。 このデータは、[VSPerfReport](../profiling/vsperfreport.md) /summary:etw コマンドを利用し、レポートで表示できます。  
   
- **Events** オプションは、VSPerfCmd の **Shutdown** コマンドを呼び出す前であれば、いつでも呼び出すことができます。  
+ **Events** オプションは、VSPerfCmd **Shutdown** コマンドが呼び出され、プロファイリングを停止する前にいつでも呼び出すことができます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  **On**&#124;**Off**  
  イベント データの収集を開始または停止します。  
   
@@ -36,30 +37,30 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
  プロバイダー コントロールの GUID。  
   
  `ProviderName`  
- WMI \(Windows Management Instrumentation\) を使用して登録されたプロバイダーの名前。  
+ Windows Management Instrumentation (WMI) に登録されているプロバイダーの名前。  
   
  `Flags`  
- イベント プロバイダーによって定義された、16 進数の "0x" プレフィックス付きのフラグ値。  
+ イベント プロバイダーによって定義され、先頭に "0x" が付く 16 進数のフラグ値。  
   
  `Level`  
- 収集されるデータの量を指定します。  `Level` は、イベント プロバイダーによって定義されます。  
+ 収集されるデータの量を指定します。 `Level` はイベント プロバイダーによって定義されます。  
   
- **Events** オプションは、次のカーネルのキーワードをプロバイダー名として認識します。  
+ **Events** オプションは、プロバイダー名として次のカーネル キーワードを理解します。  
   
  **Process**  
  プロセス イベント  
   
- **Thread**  
+ **スレッド**  
  スレッド イベント  
   
- **Image**  
- イメージの読み込み\/アンロード イベント  
+ **イメージ**  
+ イメージのロードとアンロード イベント  
   
  **Disk**  
- ディスク I\/O イベント  
+ ディスク I/O イベント  
   
- **File**  
- ファイル I\/O イベント  
+ **ファイル**  
+ ファイル I/O イベント  
   
  **Hardfault**  
  ハード ページ フォールト  
@@ -73,22 +74,22 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
  **Registry**  
  レジストリ アクセス イベント  
   
- カーネル プロバイダーは、有効化のみが可能です。  モニターがシャットダウンするまでは、無効にしたりそのフラグを変更したりすることはできません。  
+ カーネル プロバイダーのみを有効にできます。 モニターがシャットダウンするまで、無効にできません。そのフラグを変更することもできません。  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  CLR ETW イベントを有効にした場合は、追加のスタートアップ データも TraceView レポートに収集されます。  レポートにスタートアップ イベントが出力されないようにするには、次のコマンドを使用します。  
+>  CLR ETW イベントが有効になっていると、追加のスタートアップ データがトレース ビュー レポートでも集められます。 スタートアップ イベントがレポートに表示されないようにするには、次のコマンドを使用します。  
   
 ```  
 C:\<path>VSPerfCmd -events on, \".NET Common Language Runtime\", 0x7fffffff, 5  
 ```  
   
 > [!IMPORTANT]
->  MOF \(Managed Object Format\) ファイルにスタートアップ イベントがリストされていないという理由でスタートアップ イベントを除外しなかった場合、これらのイベントはレポート内で GUID として表示されます。  詳細については、Microsoft Web サイトのページを参照します: [サンプル Managed Object Format \(MOF\) のファイル](http://go.microsoft.com/fwlink/?linkid=37118).  
+>  スタートアップ イベントを除外しない場合、スタートアップ イベントは管理オブジェクト フォーマット (MOF) ファイルに一覧表示されないため、レポートに GUID として表示されます。 詳細については、Microsoft Web サイトの「[Sample Managed Object Format (MOF) File](http://go.microsoft.com/fwlink/?linkid=37118)」 (管理オブジェクト フォーマット (MOF) ファイルのサンプル) を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [スタンドアロン アプリケーションのプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [プロファイリング \(サービスの\)](../profiling/command-line-profiling-of-services.md)
+ [プロファイリング (サービスの)](../profiling/command-line-profiling-of-services.md)

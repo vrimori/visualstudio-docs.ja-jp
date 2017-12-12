@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -13,33 +12,17 @@ dev_langs:
 - CSharp
 - C++
 - jsharp
-helpviewer_keywords:
-- MSBuild, reference
+helpviewer_keywords: MSBuild, reference
 ms.assetid: 093395e1-70da-4f74-b34d-046c5e2b32e8
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f6c59188abc8cbb9909c12438bc58fa9301d8af9
-ms.openlocfilehash: 25d55f075a3586356cc291e2811520a9bbafadf0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/19/2017
-
+ms.openlocfilehash: 40b1fdb27bd2a256a1cff4b5a2066a3223939771
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="msbuild-reference"></a>MSBuild リファレンス
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のビルド システムです。 次のリンクは、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] リファレンス情報を示すトピックへのリンクです。  
@@ -88,8 +71,7 @@ ms.lasthandoff: 05/19/2017
  正しく解釈するために "エスケープ" する必要のある文字を一覧表示します。 エスケープ シーケンスは、それに続く部分を別の方法で解釈することを示す一連の文字です。  
   
 ## <a name="related-sections"></a>関連項目  
- [MSBuild の概要  ](../msbuild/msbuild.md)
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] を紹介し、プロジェクトのビルドにおける使用方法を説明するトピックへのリンクを示します。  
+ [MSBuild の概要  ](../msbuild/msbuild.md) [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] を紹介し、プロジェクトのビルドにおける使用方法を説明するトピックへのリンクを示します。  
   
  <xref:Microsoft.Build.Conversion>  
  Conversion 名前空間のリファレンスです  

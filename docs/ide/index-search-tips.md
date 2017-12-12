@@ -1,64 +1,50 @@
 ---
-title: "インデックス検索のヒント | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "hv_index"
-helpviewer_keywords: 
-  - "ヘルプ ビューアー 2.0, インデックス検索のヒント"
-  - "インデックス検索のヒント [ヘルプ ビューアー 2.0]"
-ms.assetid: f9ffa8e9-3ece-419d-a465-f9c2c21fd4ba
-caps.latest.revision: 6
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 6
+redirect_url: /visualstudio/ide/how-to-find-topics-in-the-index
+ms.openlocfilehash: cd82fd88987f74af1c2949ff8c352da3a0ea1c00
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/07/2017
 ---
-# インデックス検索のヒント
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-キーワードを入力することによって、インデックスの情報を検索できます。  このトピックでは、インデックスを使用してヘルプを検索する便利な方法について説明します。  
+title: "インデックス検索のヒント | Microsoft Docs" ms.custom: "" ms.date: "11/04/2016" ms.reviewer: "" ms.suite: "" ms.technology: 
+  - "vs-help-viewer" ms.tgt_pltfrm: "" ms.topic: "article" f1_keywords: 
+  - "hv_index" helpviewer_keywords: 
+  - "インデックス検索のヒント [ヘルプ ビューアー]"
+  - "ヘルプ ビューアー、インデックス検索のヒント" ms.assetid: f9ffa8e9-3ece-419d-a465-f9c2c21fd4ba caps.latest.revision: 6 author: "gewarren" ms.author: "gewarren" manager: ghogen
+---
+# <a name="index-search-tips"></a>インデックス検索のヒント
+キーワードを入力して、インデックス内の情報を検索できます。 このトピックでは、インデックスを使用してヘルプを検索する有効な方法を提案します。  
   
-## インデックス検索のヒント  
- インデックスを使用することは単純なプロセスですが、適切なキーワードの入力方法を理解すると、インデックス検索の生産性が高まります。  
+## <a name="index-search-tips"></a>インデックス検索のヒント  
+インデックスの使用は簡単です。キーワードの最適な入力方法を理解しておけば、インデックス検索の生産性をさらに向上させることができます。  
   
-### 一般的なガイドライン  
+### <a name="general-guidelines"></a>一般的なガイドライン  
   
--   インデックス エントリをスクロールします。  一部のトピックは異なる方法でインデックスされ、最も役立つトピックが予想より上または下にある可能性もあります。  
+-   インデックス エントリ間をスクロールします。 すべてのトピックに同じようにインデックスが付けられているわけではなく、お客様に最も役立つ可能性のあるものが、リスト内で予想よりも上または下にある場合があります。  
   
--   インデックスでは冠詞が無視されるため、「an」や「the」などの冠詞は省略します。  
+-   「an」や「the」などの冠詞は、インデックスでは無視されるため、省略します。  
   
--   目的のエントリが見つからない場合は、入力する単語を反転させます。  
+-   目的のエントリが見つからない場合は、入力した単語を逆にします。  
   
-     たとえば、「debugging inline assembly code」と入力しても関連するエントリが表示されない場合は、「assembly code, debugging inline」と入力してみます。  
+     たとえば、「debugging inline assembly code」と入力しても関連するエントリが表示されない場合は、「assembly code, debugging inline」と入力してみてください。  
   
--   結果数を減らすには、**\[インデックス\]** タブと共にフィルターを使用します。  
+-   **[インデックス]** タブでフィルターを使用して、結果の数を減らします。  
   
-### 構文ヒント  
- 入力した単語または語句のエントリが見つからない場合は、次のことを試してください。  
+### <a name="syntax-tips"></a>構文のヒント  
+入力した語句のエントリが見つからない場合は、次の操作を試してください。  
   
--   単語の最初の数文字、またはルートを入力します。  部分文字列を入力すると、インデックスされたトピックを単数形または複数形のキーワードで取得できます。  
+-   その単語の最初の数文字、または語幹を入力します。 文字列の一部を入力すると、単数形または複数形のキーワードでインデックスが付けられているトピックを取得できます。  
   
-     たとえば、「propert」と入力すると、properties と property の検索が開始されます。  
+     たとえば、上方の「properties」と「property」の検索を開始するには、「propert」と入力します。  
   
--   完了するタスクの動詞の動名詞形 \(\-ing\) を入力します。  特定のインデックス エントリの検索をより絞り込むには、検索対象を正確に記述する単語を追加します。  
+-   完了するタスクの動詞の動名詞 (-ing) の形式を入力します。 より特定のインデックス エントリを見つけるには、目的の項目について正確に説明する単語を追加します。  
   
-     たとえば、結果のエントリ数を増やすには「running」と入力し、結果のエントリ数を減らすには「running programs」と入力します。  
+     たとえば、取得するエントリをより多くするには「running」と入力し、より少なくするには「running programs」と入力します。  
   
--   スタンドアロンの形容詞を入力します。  結果を絞り込むには、検索対象を正確に記述する単語を追加します。  
+-   独立した形容詞を入力します。 結果を絞り込むには、目的の項目について正確に説明する単語を追加します。  
   
-     たとえば、広い範囲のエントリを取得するには「COM\+」と入力し、エントリ数を減らすには「COM\+ components」と入力します。  
+     たとえば、取得するエントリの幅を広げるには「COM+」と入力し、より少なくするには「COM+ components」と入力します。  
   
--   検索する単語または動詞のシノニムを入力します。  
+-   探している単語または動詞の同意語を入力します。  
   
-     たとえば、動名詞「building」と入力した場合は、代わりに「creating」と入力します。  
-  
-## 参照  
- [フルテキスト検索のヒント](../ide/full-text-search-tips.md)   
- [情報の検索](../ide/locate-information.md)
+     たとえば、「building」という用語を入力した場合は、代わりに「creating」と入力してみてください。  

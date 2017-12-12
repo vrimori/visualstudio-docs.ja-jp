@@ -1,28 +1,24 @@
 ---
 title: "Visual Studio での Python 環境 |Microsoft Docs"
 ms.custom: 
-ms.date: 7/25/2017
-ms.prod: visual-studio-dev15
+ms.date: 07/25/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8876f8c1-4770-44dc-97d8-bf0035ae8196
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 34e6898ce5c45033c8ac984d014d462a34552776
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e48ebcafaca37505dbcc92bce682d0c6169004e1
-ms.openlocfilehash: fa8a7616fe88f024ab299e5d115b66f8656e7cb3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="python-environments"></a>Python 環境
 
 Visual Studio の Python は、複数の Python 環境の管理を容易にし、異なるプロジェクトで環境を簡単に切り替えられるようにします。 
@@ -46,9 +42,9 @@ Visual Studio では、環境には環境のライブラリ用の IntelliSense �
 - [必要なパッケージの管理](#managing-required-packages)
 - [検索パス](#search-paths)
 
-概要のビデオについては、「[Deep Dive: Python Interpreters](https://youtu.be/KY1GEOo3qy0)」(Deep Dive: Python インタープリター) (youtube.com、13 分 27 秒) をご覧ください。
+概要のビデオについては、「[Managing Python Environments](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=qrDmN4LWE_8305918567)」 ( Python 環境の管理) (Microsoft Virtual Academy、2 分 35 秒) をご覧ください。
 
-> [!VIDEO https://www.youtube.com/embed/KY1GEOo3qy0]
+> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Managing-Python-Environments-qrDmN4LWE_8305918567]
 
 ## <a name="selecting-and-installing-python-interpreters"></a>Python インタープリターの選択とインストール
 
@@ -56,7 +52,7 @@ Visual Studio 2017 を除き、Python のサポートに Python インタープ�
 
 | インタープリター | 説明 | 
 | --- | --- | 
-| [CPython](https://www.python.org/) | "ネイティブ" で最もよく使われるインタープリターであり、32 ビット バージョンと 64 ビット バージョンがあります (32 ビットを推奨)。 最新の言語機能、Python パッケージの最大限の互換性、完全なデバッグ サポート、および [IPython](http://ipython.org/) との相互運用性が含まれています。 「[Should I use Python 2 or Python 3?](http://wiki.python.org/moin/Python2orPython3)」(Python 2 と Python 3 のどちらを使うか) もご覧ください。 |
+| [CPython](https://www.python.org/) | "ネイティブ" で最もよく使われるインタープリターであり、32 ビット バージョンと 64 ビット バージョンがあります (32 ビットを推奨)。 最新の言語機能、Python パッケージの最大限の互換性、完全なデバッグ サポート、および [IPython](http://ipython.org/) との相互運用性が含まれています。 「[Should I use Python 2 or Python 3?](http://wiki.python.org/moin/Python2orPython3)」(Python 2 と Python 3 のどちらを使うか) もご覧ください。 Visual Studio 2015 以前では、Python 3.6 をサポートしていないため、"Python バージョン 3.6 はサポートされていません" エラーが発生する場合があることに注意してください。 代わりに 3.5 以前の Python を使用します。 |
 | [IronPython](https://github.com/IronLanguages/main) | Python の .NET の実装であり (32 ビット バージョンと 64 ビット バージョン)、C#/F#/Visual Basic の相互運用機能、.NET API へのアクセス、標準 Python デバッグ (ただし、C++ 混合モードのデバッグはありません)、IronPython/C# の混合デバッグが提供されます。 ただし、IronPython は仮想環境をサポートしていません。 | 
 | [Anaconda](https://www.continuum.io) | Python を利用するオープン データ サイエンス プラットフォームであり、最新バージョンの CPython と、インストールが困難なパッケージのほとんどを含みます。 他のインタープリターに決定できない場合にお勧めします。 |
 | [PyPy](http://www.pypy.org/) | Python の高パフォーマンスなトレースの JIT 実装であり、実行時間の長いプログラム、およびパフォーマンスに問題があるが他の解決策が見つからない場合に、適しています。 Visual Studio で動作しますが、高度なデバッグ機能のサポートには制限があります。 |
@@ -99,7 +95,7 @@ Visual Studio では通常、(「[PEP 514 - Python registration in the Windows r
 1. **[Prefix path (プレフィックスのパス)]** フィールドでは、インタープリターのパスを入力するか参照します。
 1. **[Auto Detect (自動検出)]** を選んで Visual Studio に残りのフィールドを設定させるか、または手動で設定します。
 1. **[Apply (適用)]** を選んで環境を保存します。
-1. 環境を削除する場合は、**[Configure (構成)]** タブの **[Remove (削除)]** コマンドを選びます。 自動検出された環境ではこのオプションは提供されません。 詳細については、次のセクションを参照してください。
+1. 環境を削除する場合は、**[Configure (構成)]** タブの **[Remove (削除)]** コマンドを選びます。自動検出された環境ではこのオプションは提供されません。 詳細については、次のセクションを参照してください。
 
 ### <a name="moving-an-existing-interpreter"></a>既存のインタープリターの移動
 
@@ -197,7 +193,7 @@ Visual Studio は、すべての新規プロジェクトの実行、デバッグ
 
 プロジェクトに対して別の環境をアクティブ化するには、その環境を右クリックして、**[Activate Environment (環境のアクティブ化)]** を選びます。
 
-**[Python Environments (Python 環境)]** を右クリックして **[Add/Remove Python Environments... (Python 環境の追加/削除...)]** を選ぶことで、任意のグローバル環境をプロジェクト環境として追加できます。 表示される一覧で、プロジェクトで使用可能な環境を選択または選択解除できます。
+**[Python Environments (Python 環境)]** を右クリックして **[Add/Remove Python Environments... (Python 環境の追加/削除...)]** を選ぶことで、任意のグローバル環境をプロジェクト環境として追加できます。表示される一覧で、プロジェクトで使用可能な環境を選択または選択解除できます。
 
 ![[Add/Remove Python Environments (Python 環境の追加/削除)] ダイアログ](media/environments-add-remove.png)
 
@@ -234,7 +230,7 @@ Visual Studio は、すべての新規プロジェクトの実行、デバッグ
 
     ![既存の仮想環境の追加](media/environments-add-virtual-2.png)
 
-ソリューション エクスプローラーで **[Python Environments (Python 環境)]** を右クリックし、**[Add Existing Virtual Environment... (既存の仮想環境の追加...)]** を選ぶことで、既存の仮想環境を追加することもできます。 Visual Studio は、環境の `lib` ディレクトリにある `orig-prefix.txt` ファイルを使って、基本インタープリターを自動的に検出します。
+ソリューション エクスプローラーで **[Python Environments (Python 環境)]** を右クリックし、**[Add Existing Virtual Environment... (既存の仮想環境の追加...)]** を選ぶことで、既存の仮想環境を追加することもできます。Visual Studio は、環境の `lib` ディレクトリにある `orig-prefix.txt` ファイルを使って、基本インタープリターを自動的に検出します。
 
 プロジェクトに追加された仮想環境は **[Python Environments (Python 環境)]** ウィンドウに表示され、他の環境と同じように、アクティブ化してパッケージを管理できます。 仮想環境を右クリックして **[削除]** を選ぶと、環境への参照が削除されるか、または環境とディスク上のすべてのファイルが削除されます (ただし、基本インタープリターは削除されません)。
 
@@ -301,10 +297,9 @@ Cleaning up...
 
 検索パスを追加するには、ソリューション エクスプローラーで **[Search Paths (検索パス)]** 項目を右クリックし、**[Add Folder to Search Path... (検索パスへのフォルダーの追加...)]** を選んで、含めるフォルダーを選びます。 このパスは、プロジェクトに関連付けられているすべての環境に使われます。
 
-**[Add Zip Archive to Search Path... (検索パスへの Zip アーカイブの追加...)]** を選ぶことで、拡張子が `.zip` または `.egg` のファイルを検索パスとして追加することもできます。 フォルダーと同様に、これらのファイルの内容もスキャンされて、IntelliSense に利用されます。
+**[Add Zip Archive to Search Path... (検索パスへの Zip アーカイブの追加...)]** を選ぶことで、拡張子が `.zip` または `.egg` のファイルを検索パスとして追加することもできます。フォルダーと同様に、これらのファイルの内容もスキャンされて、IntelliSense に利用されます。
 
 > [!Note]
 > Python 3.3 を使っている場合でも Python 2.7 モジュールへの検索パスを追加することができ、その結果としてエラーが発生する可能性があります。
 
 常に同じ検索パスを使い、内容があまり変化しない場合は、サイトパッケージ フォルダーにインストールする方が効率的な場合があります。 そのサイトパッケージ フォルダーは分析されて IntelliSense データベースに格納され、常に意図された環境に関連付けられるので、プロジェクトごとに検索パスを追加する必要はありません。
-

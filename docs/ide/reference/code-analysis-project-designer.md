@@ -1,65 +1,68 @@
 ---
 title: "コード分析 (プロジェクト デザイナー) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs29106"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs29106
+helpviewer_keywords:
+- Code Analysis page in Project Designer
+- Project Designer, Code Analysis page
 ms.assetid: 71743d26-4da5-4f7d-a403-7ab96cf2ef2e
-caps.latest.revision: 9
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 3f993e47ea748d8caf90aee0a2ee99cbf78dbede
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# コード分析 (プロジェクト デザイナー)
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-コードで実行する際に選択できるコード分析ツールがあります。  このツールにより、Microsoft .NET Framework 設計ガイドラインに記載されているプログラミング ルールとデザイン ルールの違反など、アセンブリに関する情報が報告されます。  
+# <a name="code-analysis-project-designer"></a>コード分析 (プロジェクト デザイナー)
+コードに対して実行できるコード分析ツールが含まれます。 ツールは、Microsoft .NET Framework デザイン ガイドラインに規定されたプログラミングやデザインに関する規則違反など、アセンブリに関する情報を報告します。  
   
-## UIElement の一覧  
- \[コード分析の有効化\]  
+## <a name="uielement-list"></a>UIElement の一覧  
+ [コード分析を有効にする]  
  プロジェクトのコード分析を有効または無効にします。  
   
- Design Rules  
- Design Rulesを有効または無効にします。  また、このエントリを拡張して、個々のルールを有効または無効にできます。  
+ [デザイン規則]  
+ デザイン規則を有効または無効にします。 このエントリを展開して、個別の規則を有効または無効にすることもできます。  
   
- Globalization Rules  
- Globalization Rulesを有効または無効にします。  また、このエントリを拡張して、個々のルールを有効または無効にできます。  
+ [グローバリゼーション規則]  
+ グローバリゼーション規則を有効または無効にします。 このエントリを展開して、個別の規則を有効または無効にすることもできます。  
   
- Interoperability Rules  
- Interoperability Rulesを有効または無効にします。  また、このエントリを拡張して、個々のルールを有効または無効にできます。  
+ [相互運用性の規則]  
+ 相互運用性の規則を有効または無効にします。 このエントリを展開して、個別の規則を有効または無効にすることもできます。  
   
- Maintainability Rules  
- Maintainability Rulesを有効または無効にします。  また、このエントリを拡張して、個々のルールを有効または無効にできます。  
+ [保守容易性の規則]  
+ 保守容易性の規則を有効または無効にします。 このエントリを展開して、個別の規則を有効または無効にすることもできます。  
   
- Mobility Rules  
- Mobility Rulesを有効または無効にします。  また、このエントリを拡張して、個々のルールを有効または無効にできます。  
+ [モビリティ規則]  
+ モビリティ規則を有効または無効にします。 このエントリを展開して、個別の規則を有効または無効にすることもできます。  
   
- Naming Rules  
- Naming Rulesを有効または無効にします。  また、このエントリを拡張して、個々のルールを有効または無効にできます。  
+ [名前指定の規則]  
+ 名前指定の規則を有効または無効にします。 このエントリを展開して、個別の規則を有効または無効にすることもできます。  
   
- Performance Rules  
- Performance Rulesを有効または無効にします。  また、このエントリを拡張して、個々のルールを有効または無効にできます。  
+ [パフォーマンス規則]  
+ パフォーマンス規則を有効または無効にします。 このエントリを展開して、個別の規則を有効または無効にすることもできます。  
   
- \[Portability Rules\]  
- Portability Rulesを有効または無効にします。  また、このエントリを拡張して、個々のルールを有効または無効にできます。  
+ [移植性の規則]  
+ 移植性の規則を有効または無効にします。 このエントリを展開して、個別の規則を有効または無効にすることもできます。  
   
- Reliability Rules  
- Reliability Rulesを有効または無効にします。  また、このエントリを拡張して、個々のルールを有効または無効にできます。  
+ [信頼性の規則]  
+ 信頼性の規則を有効または無効にします。 このエントリを展開して、個別の規則を有効または無効にすることもできます。  
   
- Security Rules  
- Security Rulesを有効または無効にします。  また、このエントリを拡張して、個々のルールを有効または無効にできます。  
+ [セキュリティ規則]  
+ セキュリティ規則を有効または無効にします。 このエントリを展開して、個別の規則を有効または無効にすることもできます。  
   
- Usage Rules  
- Usage Rulesを有効または無効にします。  また、このエントリを拡張して、個々のルールを有効または無効にできます。  
+ [使い方の規則]  
+ 使い方の規則を有効または無効にします。 このエントリを展開して、個別の規則を有効または無効にすることもできます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [マネージ コードの警告に対応するコードの解析](../../code-quality/code-analysis-for-managed-code-warnings.md)   
  [マネージ コードに対するコード分析の概要](../../code-quality/code-analysis-for-managed-code-overview.md)   
  [チュートリアル: マネージ コードの分析によるコード障害の検出](../../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)

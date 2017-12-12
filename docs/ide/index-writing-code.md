@@ -3,16 +3,14 @@ layout: LandingPage
 author: gewarren
 ms.author: gewarren
 ms.topic: landing-page
-title: "Visual Studio ドキュメントを使用したコードの記述と管理"
+title: "Visual Studio ドキュメントを使用したコードの記述と管理 | Microsoft Docs"
 description: "Visual Studio でコード エディターなどの他のツールを使用して、コードを記述、移動、管理、および強化する方法について説明します。"
-ms.technology:
-- vs-ide-general
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 91fde66abf2f325ef0a6a0a2fd30e36981f44033
-ms.openlocfilehash: 041e8ca9989b88d4d237e1ae64a051483bc09fb2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 03/08/2017
-
+ms.technology: vs-ide-general
+ms.openlocfilehash: bc08b4822f411587db76f648e2b3ba508d513fb3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="write-and-manage-code-using-visual-studio-documentation"></a>Visual Studio ドキュメントを使用したコードの記述と管理
 
@@ -182,4 +180,3 @@ Visual Studio でコード エディターなどの他のツールを使用し�
         </div>
     </li>
 </ul>
-

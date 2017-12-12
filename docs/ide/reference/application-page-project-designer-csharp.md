@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,38 +14,22 @@ helpviewer_keywords:
 - Project Designer, Application page
 - Application page in Project Designer
 ms.assetid: f13701a8-4e2e-4474-9d60-bb43decbe0c1
-caps.latest.revision: 56
-author: kempb
-ms.author: kempb
+caps.latest.revision: "56"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
-ms.openlocfilehash: 3f0056a62dc11c5584e38e9912ccd94f5b9e9b0e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/26/2017
-
+ms.openlocfilehash: 5f32dceca8a6b14e6b1777e5c525327f46adca47
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="application-page-project-designer-c"></a>[アプリケーション] ページ (プロジェクト デザイナー) (C#)
 **プロジェクト デザイナー**の **[アプリケーション]** ページを使用して、プロジェクトのアプリケーション設定とプロパティを指定します。  
   
- **[アプリケーション]** ページにアクセスするには、**ソリューション エクスプローラー**のプロジェクト ノード (**[ソリューション]** ノードではありません) を選択します。 その後、メニュー バーで **[プロジェクト]**、**[プロパティ]** の順に選択します。 プロジェクト デザイナーが表示されたら、**[アプリケーション]** タブをクリックします。  
+**[アプリケーション]** ページにアクセスするには、**ソリューション エクスプローラー**のプロジェクト ノード (**[ソリューション]** ノードではありません) を選択します。 その後、メニュー バーで **[プロジェクト]**、**[プロパティ]** の順に選択します。 プロジェクト デザイナーが表示されたら、**[アプリケーション]** タブをクリックします。  
   
- [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]  
   
 ## <a name="general-application-settings"></a>アプリケーションの全般設定  
  次のオプションでは、アプリケーションの全般設定を構成できます。  
@@ -72,7 +55,7 @@ ms.lasthandoff: 05/26/2017
  詳細については、「[方法: .NET Framework のバージョンをターゲットにする](../../ide/how-to-target-a-version-of-the-dotnet-framework.md)」と「[Visual Studio のマルチ ターゲットの概要](../../ide/visual-studio-multi-targeting-overview.md)」を参照してください。  
   
  **アプリケーションの種類**  
- ビルドするアプリケーションの種類を指定します。 [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] アプリの場合は、**[Windows ストア アプリ]**、**[クラス ライブラリ]**、または **[WinMD ファイル]** を指定できます。 他のほとんどのアプリケーションの種類では、**[Windows アプリケーション]**、**[コンソール アプリケーション]**、**[クラス ライブラリ]**、**[Windows サービス]**、または **[Web コントロール ライブラリ]** を指定できます。  
+ ビルドするアプリケーションの種類を指定します。 Windows 8.x アプリの場合は、**[Windows ストア アプリ]**、**[クラス ライブラリ]**、または **[WinMD ファイル]** を指定できます。 他のほとんどのアプリケーションの種類では、**[Windows アプリケーション]**、**[コンソール アプリケーション]**、**[クラス ライブラリ]**、**[Windows サービス]**、または **[Web コントロール ライブラリ]** を指定できます。  
   
  Web アプリケーション プロジェクトでは、**[クラス ライブラリ]** を指定する必要があります。  
   
@@ -111,11 +94,11 @@ ms.lasthandoff: 05/26/2017
   
 -   **Properties\app.manifest**。 このオプションは、ClickOnce または Registration-Free COM で配置されるアプリケーションで必要になります。 ClickOnce 配置を使用してアプリケーションを発行する場合、このオプションに自動的に**マニフェスト**が設定されます。  
   
- **リソース ファイル**  
- プロジェクトのリソース ファイルをプロビジョニングする場合は、このオプション ボタンを選択します。 このオプションを選択すると、**[アイコン]** と **[マニフェスト]** オプションが無効になります。  
+**リソース ファイル**  
+プロジェクトのリソース ファイルをプロビジョニングする場合は、このオプション ボタンを選択します。 このオプションを選択すると、**[アイコン]** と **[マニフェスト]** オプションが無効になります。  
   
- パス名を入力するか、参照ボタン (**...**) を使用して、Win32 リソース ファイルをプロジェクトに追加します。  
+パス名を入力するか、参照ボタン (**...**) を使用して、Win32 リソース ファイルをプロジェクトに追加します。  
   
 ## <a name="see-also"></a>関連項目  
 [アプリケーション プロパティの管理](../../ide/application-properties.md)  
- [Office ソリューションのコードの記述](/office-dev/office-dev/writing-code-in-office-solutions)
+[Office ソリューションのコードの記述](/office-dev/office-dev/writing-code-in-office-solutions)

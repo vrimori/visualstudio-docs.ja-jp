@@ -1,22 +1,25 @@
 ---
 title: "MSBuild タスク | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "タスク"
-  - "MSBuild タスク"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tasks
+- MSBuild, tasks
 ms.assetid: 5d3cc4a7-e5db-4f73-b707-8b6882fddcf8
-caps.latest.revision: 18
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: fc2afbe7b0226cb5983aa3022ff4b24ac31fe7aa
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="msbuild-tasks"></a>MSBuild タスク
 ビルド プラットフォームでは、ビルドの処理中に、いくつかのアクションを実行する権限が必要です。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は*タスク*を使用して、これらのアクションを実行します。 タスクとは、分割不可能なビルド操作を実行するために [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] で使用される実行可能コードの単位です。  
@@ -24,11 +27,11 @@ caps.handback.revision: 18
 ## <a name="task-logic"></a>タスクのロジック  
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] XML プロジェクト ファイル形式はそれ自体でビルド操作を完全に実行することができないため、プロジェクト ファイルの外部でタスクのロジックを実装する必要があります。  
   
- タスクの実行ロジックは、<xref:Microsoft.Build.Framework> 名前空間で定義されている、<xref:Microsoft.Build.Framework.ITask> インターフェイスを実装する .NET クラスとして実装されます。  
+ タスクの実行ロジックは、<xref:Microsoft.Build.Framework> 名前空間で定義されている <xref:Microsoft.Build.Framework.ITask> インターフェイスを実装する .NET クラスとして実装されます。  
   
  タスク クラスは、プロジェクト ファイル内のタスクで使用可能な入力パラメーターと出力パラメーターも定義します。 タスク クラスによって公開されている、パブリックに設定可能な非静的かつ非抽象のプロパティはどれも、プロジェクト ファイル内でアクセスできます。そのためには、同じ名前を持つ、対応する属性を [Task](../msbuild/task-element-msbuild.md) 要素に指定します。  
   
- <xref:Microsoft.Build.Framework.ITask> インターフェイスを実装するマネージ クラスを記述すれば、独自のタスクを作成できます。 詳細については、「[タスクの作成](../msbuild/task-writing.md)」を参照してください。  
+ <xref:Microsoft.Build.Framework.ITask> インターフェイスを実装するマネージ クラスを記述することにより、独自のタスクを作成できます。 詳細については、「[タスクの作成](../msbuild/task-writing.md)」を参照してください。  
   
 ## <a name="executing-a-task-from-a-project-file"></a>プロジェクト ファイルからのタスクの実行  
  プロジェクト ファイルでタスクを実行する前に、まずタスクを実装するアセンブリ内の型を、[UsingTask](../msbuild/usingtask-element-msbuild.md) 要素でタスク名にマップする必要があります。 これにより、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は、プロジェクト ファイルでタスクを見つけたら、どこでその実行ロジックを探すかが把握できます。  
@@ -69,8 +72,3 @@ caps.handback.revision: 18
  [MSBuild](../msbuild/msbuild.md)   
  [タスクの作成](../msbuild/task-writing.md)   
  [インライン タスク](../msbuild/msbuild-inline-tasks.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

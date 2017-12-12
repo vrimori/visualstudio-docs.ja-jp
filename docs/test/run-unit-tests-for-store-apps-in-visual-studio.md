@@ -1,39 +1,23 @@
 ---
-title: "Visual Studio でのストア アプリの単体テストの実行 | Microsoft Docs"
+title: "Visual Studio での UWP アプリの単体テストの実行 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5a6f5b32-bfce-4a63-81e9-02d54c592539
-caps.latest.revision: 12
+caps.latest.revision: "12"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4ecdcce4d45b15e6574ca70044249e4d32776fdd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: cdb13478a7e403be916d7773dab6315429508e9c
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
-# <a name="run-unit-tests-for-store-apps-in-visual-studio"></a>Visual Studio での ストア アプリの単体テストの実行
+# <a name="run-unit-tests-for-uwp-apps-in-visual-studio"></a>Visual Studio での UWP アプリの単体テストの実行
 このトピックでは、Microsoft Visual Studio でテスト エクスプローラーを使用して単体テストを実行する方法について説明します。  
   
 > [!NOTE]
@@ -66,12 +50,12 @@ ms.lasthandoff: 02/22/2017
  [単体テストのデバッグ](#BKMK_Debugging_unit_tests)  
   
 ##  <a name="BKMK_Unit_test_frameworks_and_test_projects"></a> 単体テスト フレームワークとテスト プロジェクト  
- Visual Studio Express for Windows Store Apps には、マネージ コードとネイティブ C++ コード用の Microsoft 単体テスト フレームワークが含まれています。 テスト エクスプローラーは、ソリューション内の複数のテスト プロジェクト、および運用コード プロジェクトに含まれるテスト クラスからテストを実行できます。 テスト プロジェクトには、Visual C++ または Visual C# と Visual Basic の単体テスト フレームワークを自由に組み合わせることができます。 テスト対象のコードを .NET Framework 用に記述する場合、対象コードの言語にかかわらず、テスト プロジェクトをどの .NET Framework 言語でも記述できます。 ネイティブ C/C++ コード プロジェクトは、C++ の単体テスト フレームワークを使用してテストする必要があります。  
+ Visual Studio Express for UWP アプリには、マネージ コードとネイティブ C++ コード用の Microsoft 単体テスト フレームワークが含まれています。 テスト エクスプローラーは、ソリューション内の複数のテスト プロジェクト、および運用コード プロジェクトに含まれるテスト クラスからテストを実行できます。 テスト プロジェクトには、Visual C++ または Visual C# と Visual Basic の単体テスト フレームワークを自由に組み合わせることができます。 テスト対象のコードを .NET Framework 用に記述する場合、対象コードの言語にかかわらず、テスト プロジェクトをどの .NET Framework 言語でも記述できます。 ネイティブ C/C++ コード プロジェクトは、C++ の単体テスト フレームワークを使用してテストする必要があります。  
   
 ##  <a name="BKMK_Running_tests_in_Test_Explorer"></a> テスト エクスプローラーでテストを実行する  
  テスト プロジェクトをビルドすると、テストはテスト エクスプローラーに表示されます。 テスト エクスプローラーが表示されない場合は、Visual Studio メニューの **[テスト]** をクリックし、 **[Windows]**、 **[テスト エクスプローラー]**の順に選択します。  
   
- ![単体テスト エクスプローラー](~/ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
+ ![単体テスト エクスプローラー](../ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
   
  テストを実行して、記述し、再実行すると、テスト エクスプローラーに **[失敗したテスト]**、 **[成功したテスト]**、 **[スキップされたテスト]** 、および **[テストを実行しない]**の既定のグループの結果が表示されます。 テスト エクスプローラーでテストをグループ化する方法を変更できます。  
   
@@ -120,7 +104,7 @@ ms.lasthandoff: 02/22/2017
   
 |||  
 |-|-|  
-|![テスト エクスプローラー グループ ボタン](~/test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|これらのテストの実行に要する時間によってテストをグループ化するには、**[グループ化]** ボックスの一覧を開き、**[期間]** を選択します。 元のグループに切り替えるには、**[テスト成果]** を選択します。|  
+|![テスト エクスプローラー グループ ボタン](../test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|これらのテストの実行に要する時間によってテストをグループ化するには、**[グループ化]** ボックスの一覧を開き、**[期間]** を選択します。 元のグループに切り替えるには、**[テスト成果]** を選択します。|  
   
 ###  <a name="BKMK_Searching_and_filtering_the_test_list"></a> テスト一覧の検索およびフィルター処理  
  多数のテストがある場合、テスト エクスプローラーの検索ボックスに入力し、指定した文字列によって一覧をフィルター処理できます。 検索文字列を入力する前に、フィルターの一覧から選択して、フィルターを特定の種類の文字列に制限できます。  
@@ -138,4 +122,3 @@ ms.lasthandoff: 02/22/2017
 2.  テスト エクスプローラーでテスト メソッドを選択し、ショートカット メニューの **[選択したテストのデバッグ]** を選択します。  
   
  デバッガーの詳細については、「[Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)」を参照してください。
-

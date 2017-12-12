@@ -1,42 +1,25 @@
 ---
-title: "Visual Studio 静的コード分析によるストア アプリの C++ コード品質の分析 | Microsoft Docs"
+title: "Visual Studio 静的コード分析による UWP アプリの C++ のコード品質の分析 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.codeanalysis.propertypages.native.express
+f1_keywords: vs.codeanalysis.propertypages.native.express
 ms.assetid: c5355e43-a37c-4686-a969-18e3dfc59a9c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pt-br
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: c1e31415cf2f51c06650610fde945037ebe0191f
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: c4c49f910615e1e181fe66feab3dce5bb3c90002
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
-# <a name="analyze-c-code-quality-of-store-apps-using-visual-studio-static-code-analysis"></a>Visual Studio 静的コード分析によるストア アプリの C++ コード品質の分析
-![Windows と Windows Phone に適用](~/debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
+# <a name="analyze-c-code-quality-of-uwp-apps-using-visual-studio-static-code-analysis"></a>Visual Studio 静的コード分析による UWP アプリの C++ のコード品質の分析
+![Windows と Windows Phone に適用](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
  Visual Studio express edition のコード分析ツールは、コードを調べてプログラミング上の一般的な問題や違反がないことを確認します。 コード分析の警告はコンパイラのエラーや警告とは異なります。コード分析は、有効であってもコードの作成者やコードを利用する他のユーザーにとって問題になる可能性がある特定のコード パターンを検索するからです。 また、コード分析では、テストでは検出できないコードの欠陥を見つけることができます。 開発プロセス中に定期的にコード分析ツールを実行することで、高品質なアプリを完成させることができます。  
   
@@ -59,13 +42,13 @@ ms.lasthandoff: 04/04/2017
 ##  <a name="BKMK_Run"></a> コード分析の実行  
  Visual Studio ソリューションでコード分析を実行するには:  
   
--   [**ビルド**] メニューの [**ソリューションでコード分析を実行**] をクリックします。  
+-   **[ビルド]** メニューの **[ソリューションでコード分析を実行]** をクリックします。  
   
  プロジェクトをビルドするたびに自動的にコード分析を実行するには:  
   
-1.  ソリューション エクスプローラーでプロジェクト名を選択し、[**プロパティ**] をクリックします。  
+1.  ソリューション エクスプローラーでプロジェクト名を選択し、**[プロパティ]** をクリックします。  
   
-2.  プロジェクトのプロパティ ページで [**コード分析**]、[**ビルド時に C/C++ のコード分析を有効化**] の順に選択します。  
+2.  プロジェクトのプロパティ ページで **[コード分析]**、**[ビルド時に C/C++ のコード分析を有効化]** の順に選択します。  
   
  ソリューションがコンパイルされ、コード分析が実行されます。 結果は、[コード分析] ウィンドウに表示されます。  
   
@@ -78,12 +61,12 @@ ms.lasthandoff: 04/04/2017
   
  警告を展開すると、警告の原因となったコード行が Visual Studio のコード エディターで強調表示されます。  
   
- ![強調表示されたソース コード](~/test/media/ca_cpp_sourceline.png "CA_CPP_SourceLine")  
+ ![強調表示されたソース コード](../test/media/ca_cpp_sourceline.png "CA_CPP_SourceLine")  
   
  問題を理解した後は、コード内で解決できます。 その後、コード分析に戻り、[コード分析] ウィンドウに警告が表示されなくなったことと、修正によって新たな警告が発生していないことを確認します。  
   
 > [!TIP]
->  コード分析は、[コード分析] ウィンドウから再実行できます。 [**分析**] ボタンをクリックし、分析の範囲を選択します。 ソリューション全体または選択したプロジェクトの分析を再実行できます。  
+>  コード分析は、[コード分析] ウィンドウから再実行できます。 **[分析]** ボタンをクリックし、分析の範囲を選択します。 ソリューション全体または選択したプロジェクトの分析を再実行できます。  
   
 ##  <a name="BKMK_Suppress"></a> コード分析警告の抑制  
  コード分析警告の修正を行わないことを決定する場合があります。 コードを実装したときの警告の発生確率と、警告を解決するためのコード変更の量を比較して、解決しないことを選択できます。 または、警告で使用された分析が特定のコンテキストでは不適切であると判断できます。 個々の警告を抑制して、[コード分析] ウィンドウに表示されないように設定できます。  
@@ -92,9 +75,9 @@ ms.lasthandoff: 04/04/2017
   
 1.  詳細情報が表示されない場合は、警告のタイトルを展開します。  
   
-2.  警告の下部にある [**アクション**] リンクをクリックします。  
+2.  警告の下部にある **[アクション]** リンクをクリックします。  
   
-3.  [**メッセージの非表示**]、[**ソース内**] の順に選択します。  
+3.  **[メッセージの非表示]**、**[ソース内]** の順に選択します。  
   
  メッセージを非表示にすると、コードの該当行に対して警告を抑制する`#pragma(warning:`*警告 ID*`)` が挿入されます。  
   
@@ -244,4 +227,3 @@ ms.lasthandoff: 04/04/2017
 |[C28305](../code-quality/c28305.md)|トークンの解析中にエラーが発生しました。|  
 |[C28350](../code-quality/c28350.md)|注釈には、条件付きで適用できない状況の説明が表示されます。|  
 |[C28351](../code-quality/c28351.md)|注釈には、動的な値 (変数) が使用できない条件が記述されています。|
-

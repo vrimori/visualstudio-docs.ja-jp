@@ -1,292 +1,295 @@
 ---
 title: "アクティブ スクリプトのデバッグの概要 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "アクティブ スクリプトのデバッグの概要"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Active Script Debugging overview
 ms.assetid: ce4ec768-d017-4dfa-a7e3-cced3a29e679
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 1d9aebdc3f8fa4df0f4386609e632e1a8611c87f
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# アクティブ スクリプトのデバッグの概要
-アクティブ スクリプトのデバッグ インターフェイスは言語に依存しない、ホスト ニュートラル デバッグを使用すると、さまざまな開発環境をサポートします。  
+# <a name="active-script-debugging-overview"></a>アクティブ スクリプトのデバッグの概要
+アクティブ スクリプト デバッグ インターフェイスを使うと、言語やホストに依存しない (ニュートラルな) デバッグを行うことができ、さまざまな開発環境がサポートされます。  
   
- ![スクリプト ホスト プロセス](../winscript/media/scp56activdbgarchgif.png "Scp56ActivDbgArchgif")  
+ ![スクリプト ホスト プロセス](../winscript/media/scp56activdbgarchgif.gif "Scp56ActivDbgArchgif")  
 図 1  
   
- 言語に依存しないデバッグ環境がこれらの言語のいずれかの特定の知識がなくても、プログラミング言語のプログラミング言語または組み合わせをサポートできます。  デバッグ環境では、言語な手順やブレークポイントをサポートします。  \(この概要では [!INCLUDE[javascript](../javascript/includes/javascript-md.md)]および VBScript などのスクリプト言語サポートに主に関するものです。\)  
+ 言語に依存しないデバッグ環境は、任意のプログラミング言語またはプログラミング言語の組み合わせをサポートでき、どの言語についても固有の知識を持つ必要はありません。 また、デバッグ環境は異なる言語間のステップ実行およびブレークポイントもサポートします  (この概要では、VBScript や [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] などのスクリプト言語のサポートに主に注目します)。  
   
- ニュートラル ホスト デバッガーは、Internet Explorer やカスタム ホストのようなすべてのアクティブ スクリプトのホストによって自動的に使用できます。  デバッガーがドキュメント ツリーの構造からデバッグの内容と構文の色指定にユーザーに表示内容とホスト コントロールはついて説明します。  これはデバッグ ソース・コードがホストのドキュメントのコンテキストで示すようになります。  たとえば、Internet Explorer は、HTML ページでスクリプトを示すことができます。  
+ ホストに依存しないデバッガーは、Internet Explorer やカスタム ホストなどの任意のアクティブ スクリプト ホストで自動的に使うことができます。 ホストは、ドキュメント ツリーの構造からデバッグ ドキュメントの内容や構文の色分けまで、ユーザーに対するデバッガーの表示を制御します。 これにより、ホスト ドキュメントのコンテキストでデバッグ対象のソース コードを表示できます。 たとえば、Internet Explorer は HTML ページでスクリプトを表示できます。  
   
- 次の部分では、アクティブなデバッグの主要部分と関連インターフェイスは説明します。  ただし、に進む前に、いくつかは、アクティブなデバッグの概念を定義する必要があります:調整します。  
+ 以下では、アクティブ デバッグの各主要コンポーネントとそれに関連するインターフェイスについて説明します。 ただし、先に進む前に、アクティブ デバッグのいくつかの重要な概念を定義しておく必要があります。  
   
  ホスト アプリケーション  
- スクリプト エンジンをホストする、一連のスクリプト オブジェクト提供するアプリケーション \(または "オブジェクト モデル\)。  
+ スクリプト エンジンをホストし、スクリプト可能なオブジェクトのセット ("オブジェクト モデル") を提供するアプリケーションです。  
   
  言語エンジン  
- 分析を提供するコンポーネント、実行、および特定の言語の抽象化をデバッグします。  
+ 特定の言語の解析、実行、デバッグの抽象化を提供するコンポーネントです。  
   
- デバッガーの IDE  
- ホスト アプリケーションと言語のエンジンとの通信によってデバッグの UI を提供するアプリケーション。  
+ デバッガー IDE  
+ ホスト アプリケーションおよび言語エンジンと通信することによってデバッグ UI を提供するアプリケーションです。  
   
- コンピューター マネージャーのデバッグ  
- デバッグ可能なアプリケーション プロセスのレジストリを保持するコンポーネント。  
+ マシン デバッグ マネージャー  
+ デバッグできるアプリケーション プロセスのレジストリを維持するコンポーネントです。  
   
  プロセス デバッグ マネージャー  
- 特定のアプリケーションのデバッグ可能なドキュメント ツリーを保持するコンポーネントは、実行中のスレッドなどを追跡します。  
+ 特定のアプリケーションのデバッグできるドキュメントのツリーの保持、実行中のスレッドの追跡などを行うコンポーネントです。  
   
- ドキュメントのコンテキスト  
- ドキュメントのコンテキストはホスト ドキュメントのソース・コードの特定の範囲を表す抽象化です。  
+ ドキュメント コンテキスト  
+ ホスト ドキュメントのソース コードで特定の範囲を表す抽象化です。  
   
- コンテキストをコード。  
- コード コンテキストを表す言語エンジン \( "仮想の命令ポインター"。\) で実行中のコードの特定の位置を  
+ コード コンテキスト  
+ 言語エンジンの実行中コードで特定の場所を表します ("仮想命令ポインター")。  
   
- 式のコンテキスト  
- 式が言語エンジンによって評価される可能性がある特定のコンテキスト \(たとえば、スタック フレーム\)。  
+ 式コンテキスト  
+ 言語エンジンが式を評価できる特定のコンテキスト (たとえば、スタック フレーム) です。  
   
- オブジェクトの参照  
- "" ウォッチ ウィンドウの UI を実行するために適したオブジェクト名の構造化、言語に依存しない表示、型、値とサブオブジェクト。  
+ オブジェクト参照  
+ "ウォッチ ウィンドウ" UI の実装に適した、オブジェクトの名前、型、値、サブオブジェクトの構造化された言語に依存しない表現です。  
   
- 主アクティブなデバッグ コンポーネントと、それらのインターフェイスの詳細に続く関連インターフェイス対応の概要を次に示します。  
+ 以下は、アクティブ デバッグの各主要コンポーネントとそれらに対応する関連インターフェイスの概要です。インターフェイスの詳細はその後で説明します。  
   
-## 言語のエンジン  
- 言語エンジンが提供されます:  
+## <a name="language-engine"></a>言語エンジン  
+ 言語エンジンは以下の機能を提供します。  
   
--   言語分析および実行する  
+-   言語の解析と実行。  
   
--   サポート \(ブレークポイントなど\) をデバッグします。  
+-   デバッグのサポート (ブレークポイントなど)。  
   
 -   式の評価。  
   
--   構文の色。  
+-   構文の色分け表示。  
   
--   オブジェクトの参照。  
+-   オブジェクト参照。  
   
--   スタックの列挙体、および分析する。  
+-   スタックの列挙と解析。  
   
- デバッグ、式の評価、およびオブジェクトの参照を提供するためにサポートするスクリプト エンジンが必要があるインターフェイスは次のとおりです。  これらのインターフェイスは、デバッガーの UI には文書のコンテキストにエンジンのコード コンテキスト間でマップし、式の評価、スタックの列挙体を参照し、オブジェクトのホスト アプリケーションによって使用されます。  
+ 以下は、デバッグ、式の評価、およびオブジェクト参照を提供するためにスクリプト エンジンがサポートする必要のあるインターフェイスです。 これらのインターフェイスを使って、ホスト アプリケーションはそのドキュメント コンテキストとエンジンのコード コンテキストの間をマップし、デバッガー UI は式の評価、スタックの列挙、オブジェクト参照を行います。  
   
  [IActiveScriptDebug インターフェイス](../winscript/reference/iactivescriptdebug-interface.md)  
- 構文の色とコード コンテキストの列挙体を提供します。  
+ 構文の色分けと、コード コンテキストの列挙を提供します。  
   
  [IActiveScriptErrorDebug インターフェイス](../winscript/reference/iactivescripterrordebug-interface.md)  
- エラーのドキュメントは、スタック フレームのコンテキスト。  
+ エラーに対するドキュメント コンテキストとスタック フレームを返します。  
   
  [IActiveScriptSiteDebug インターフェイス](../winscript/reference/iactivescriptsitedebug-interface.md)  
- ホストは、スクリプト エンジンからデバッガーへのリンクを提供します。  
+ ホストが提供するスクリプト エンジンからデバッガーへのリンクです。  
   
  [IDebugCodeContext インターフェイス](../winscript/reference/idebugcodecontext-interface.md)  
- スレッドの仮想 "命令ポインター" です。  
+ スレッド内の仮想 "命令ポインター" を提供します。  
   
  [IEnumDebugCodeContexts インターフェイス](../winscript/reference/ienumdebugcodecontexts-interface.md)  
- ドキュメントのコンテキストに対応するコード コンテキストを列挙します。  
+ ドキュメント コンテキストに対応するコード コンテキストを列挙します。  
   
  [IDebugStackFrame インターフェイス](../winscript/reference/idebugstackframe-interface.md)  
- スレッドのスタックの論理スタック フレームを表します。  
+ スレッド スタック上の論理スタック フレームを表します。  
   
  [IDebugExpressionContext インターフェイス](../winscript/reference/idebugexpressioncontext-interface.md)  
- 式を評価することができるコンテキストを提供します。  
+ 式を評価できるコンテキストを提供します。  
   
  [IDebugStackFrameSniffer インターフェイス](../winscript/reference/idebugstackframesniffer-interface.md)  
- 論理スタック フレームを列挙する方法を示します。  
+ 論理スタック フレームを列挙する手段を提供します。  
   
  [IDebugExpression インターフェイス](../winscript/reference/idebugexpression-interface.md)  
  非同期に評価される式を表します。  
   
  [IDebugSyncOperation インターフェイス](../winscript/reference/idebugsyncoperation-interface.md)  
- スクリプト エンジンがブロックされたスレッドをドットで入れ子中に発生する必要のある操作を抽出できます。  
+ 特定のブロックされたスレッドに入れ子になっているときに実行する必要のある操作を、スクリプト エンジンが抽象化できるようにします。  
   
  [IDebugAsyncOperation インターフェイス](../winscript/reference/idebugasyncoperation-interface.md)  
- 同期デバッグの非同期操作へのアクセスを提供します。  
+ 同期デバッグ操作への非同期アクセスを提供します。  
   
  [IDebugAsyncOperationCallBack インターフェイス](../winscript/reference/idebugasyncoperationcallback-interface.md)  
- `IDebugAsyncOperation` のインターフェイスの評価の進行状況に関する状態のイベントを提供します。  
+ `IDebugAsyncOperation` インターフェイスの評価の進行状況に関連する状態イベントを提供します。  
   
  [IEnumDebugExpressionContexts インターフェイス](../winscript/reference/ienumdebugexpressioncontexts-interface.md)  
- `IDebugExpressionContexts` のオブジェクトのコレクションを列挙します。  
+ `IDebugExpressionContexts` オブジェクトのコレクションを列挙します。  
   
  [IProvideExpressionContexts インターフェイス](../winscript/reference/iprovideexpressioncontexts-interface.md)  
- 特定のコンポーネントによって認識される式のコンテキストを列挙する方法を示します。  
+ 特定のコンポーネントによって認識されている式コンテキストを列挙する手段を提供します。  
   
  [IDebugFormatter インターフェイス](../winscript/reference/idebugformatter-interface.md)  
- 言語が IDE または変数の値の間の変換や VARTYPE 型と文字列カスタマイズできます。  
+ VARIANT 値または VARTYPE 型と文字列の間の変換を、言語または IDE がカスタマイズできるようにします。  
   
  [IDebugStackFrameSnifferEx インターフェイス](../winscript/reference/idebugstackframesnifferex-interface.md)  
  PDM の論理スタック フレームを列挙します。  
   
-## ホスト  
- :ホスト  
+## <a name="hosts"></a>ホスト  
+ ホストには次の機能があります。  
   
 -   言語エンジンをホストします。  
   
--   オブジェクト モデル \(スクリプトがあります\) オブジェクトのセットを提供します。  
+-   オブジェクト モデル (スクリプト化できるオブジェクトのセット) を提供します。  
   
--   デバッグできるとコンテンツ ドキュメント ツリーを定義します。  
+-   デバッグ可能なドキュメントのツリーとドキュメントの内容を定義します。  
   
--   仮想アプリケーションにスクリプトを整理します。  
+-   スクリプトを仮想アプリケーションに編成します。  
   
- 2 種類のホストがあります:  
+ 2 種類のホストがあります。  
   
--   物の言えないホストは、基本的な Active スクリプトのインターフェイスをサポートします。  これは、文書の構造や編成を制御できません; これは、言語エンジンに提供されるスクリプトによって完全に決定されます。  
+-   ダム ホストは、基本的なアクティブ スクリプト インターフェイスだけをサポートします。 ドキュメントの構造や編成を制御することはできません。これは、言語エンジンに提供されるスクリプトによって完全に決定されます。  
   
--   ホストは、スマート ドキュメント ツリー、ドキュメントの内容と構文の色指定を定義するために、より多くのインターフェイスをサポートします。  次の部分で説明する一連のホストがスマート ホストになるようにそれをより簡単にするヘルパー インターフェイスを持ちます。  
+-   スマート ホストは、ドキュメント ツリー、ドキュメントの内容、構文の色分けを定義できる多くのインターフェイスのセットをサポートします。 次のサブセクションで説明するような一連のヘルパー インターフェイスがあり、ホストをより簡単にスマート ホストにできます。  
   
-### スマート ホストのヘルパー インターフェイス  
- `IDebugDocumentHelper` のメソッドは完全なホストのインターフェイスの完全な複雑さ \(および累乗\) を処理しないでスマート ホストを向上させるためにホストが使用できる単純一連のインターフェイスを提供します。  
+### <a name="smart-host-helper-interfaces"></a>スマート ホスト ヘルパー インターフェイス  
+ `IDebugDocumentHelper` のメソッドが提供する大幅に簡略化された一連のインターフェイスを使うことで、ホストは、完全なホスト インターフェイスの複雑さ (と能力) をすべて処理しなくても、スマート ホストのメリットを利用できます。  
   
- ホストは、これらのインターフェイスを使用する必要はありません。  ただし、これらのインターフェイスを使用して一部のより複雑なインターフェイスを実装するか、またはを使用することを回避できます。  
+ もちろん、ホストはこれらのインターフェイスを使わなくてもかまいません。 ただし、これらのインターフェイスを使うと、多くのさらに複雑なインターフェイスを実装したり使ったりする必要がなくなります。  
   
  [IDebugDocumentHelper インターフェイス](../winscript/reference/idebugdocumenthelper-interface.md)  
- PDM によって実装されたスマート ホストに必要な追加のインターフェイスを実装します。  
+ PDM によって実装され、スマート ホストに必要な多くのインターフェイスの実装を提供します。  
   
  [IDebugDocumentHost インターフェイス](../winscript/reference/idebugdocumenthost-interface.md)  
- デバッガーに対して、ホスト固有の機能を、構文配色など、公開する \(省略可能\) ホストによって実装されます。  
+ ホストによって実装され (省略可能)、構文の色分けなどのホスト固有の機能をデバッガーに公開します。  
   
- 詳細については、「[スマート ホスト ヘルパー インターフェイスの実装](../winscript/implementing-smart-host-helper-interfaces.md)」を参照してください。  
+ 詳しくは、「[スマート ホスト ヘルパー インターフェイスの実装](../winscript/implementing-smart-host-helper-interfaces.md)」をご覧ください。  
   
-### 完全なスマートのホスト インターフェイス  
- ヘルパー インターフェイスを使用するスマート使用するホストが実装するか、あるインターフェイスの完全なセットを次に示します。  
+### <a name="full-smart-host-interfaces"></a>完全なスマート ホスト インターフェイス  
+ 次に示すのは、スマート ホストがヘルパー インターフェイスを使わない場合に実装または使用する必要があるインターフェイスの完全なセットです。  
   
- ホストによって実装されたインターフェイス:  
+ ホストによって実装されるインターフェイス:  
   
  [IDebugDocumentInfo インターフェイス](../winscript/reference/idebugdocumentinfo-interface.md)  
- いる可能性がある、またははインスタンス化されないドキュメントについて説明します。  
+ ドキュメントの情報を提供します。インスタンス化することも、しないこともできます。  
   
  [IDebugDocumentProvider インターフェイス](../winscript/reference/idebugdocumentprovider-interface.md)  
- ドキュメントをオンデマンドでインスタンス化する手段です。  
+ 必要に応じてドキュメントをインスタンス化するための手段を提供します。  
   
  [IDebugDocument インターフェイス](../winscript/reference/idebugdocument-interface.md)  
- すべてのデバッグ ドキュメントの基本インターフェイス。  
+ すべてのデバッグ ドキュメントの基底インターフェイスです。  
   
  [IDebugDocumentText インターフェイス](../winscript/reference/idebugdocumenttext-interface.md)  
- デバッグのドキュメントのテキストのみのバージョンへのアクセスを提供します。  
+ デバッグ ドキュメントのテキストのみのバージョンへのアクセスを提供します。  
   
  [IDebugDocumentTextAuthor インターフェイス](../winscript/reference/idebugdocumenttextauthor-interface.md)  
- デバッグのドキュメントのテキストのみのバージョンの編集を許可します。  
+ デバッグ ドキュメントのテキストのみのバージョンを編集できるようにします。  
   
  [IDebugDocumentContext インターフェイス](../winscript/reference/idebugdocumentcontext-interface.md)  
- デバッグ ドキュメントの部分の抽象的に表示されます。  
+ デバッグ中のドキュメントの一部分の抽象表現を提供します。  
   
  ホストに代わって PDM によって実装されるインターフェイス:  
   
  [IDebugApplicationNode インターフェイス](../winscript/reference/idebugapplicationnode-interface.md)  
- プロジェクト ツリー内のコンテキストを提供することで `IDebugDocumentProvider` のインターフェイスの機能を拡張します。  
+ プロジェクト ツリー内のコンテキストを提供することにより、`IDebugDocumentProvider` インターフェイスの機能を拡張します。  
   
-## デバッガーの IDE  
- IDE では、言語に依存しないデバッグの UI です。  これは提供されます:  
+## <a name="debugger-ide"></a>デバッガー IDE  
+ IDE は、言語に依存しないデバッグ UI です。 次の機能を提供します。  
   
--   ドキュメント ビューアー\/エディター。  
+-   ドキュメント ビューアー/エディター。  
   
--   ブレークポイント管理。  
+-   ブレークポイントの管理。  
   
--   式の評価、ウォッチ ウィンドウ。  
+-   式の評価とウォッチ ウィンドウ。  
   
 -   スタック フレームの参照。  
   
--   オブジェクトとクラスの参照。  
+-   オブジェクト/クラスの参照。  
   
--   仮想アプリケーション構造の参照。  
+-   仮想アプリケーションの構造の参照。  
   
- デバッガーが実装するインターフェイス:  
+ デバッガーによって実装されるインターフェイス:  
   
  [IApplicationDebugger インターフェイス](../winscript/reference/iapplicationdebugger-interface.md)  
- デバッガーの IDE セッションを公開する主要なインターフェイス。  
+ デバッガー IDE セッションによって公開される主インターフェイスです。  
   
  [IApplicationDebuggerUI インターフェイス](../winscript/reference/iapplicationdebuggerui-interface.md)  
- 外部コンポーネントにデバッガーのユーザー インターフェイス \(UI\) をより細かく制御できます。  
+ 外部コンポーネントが制御できるデバッガーのユーザー インターフェイス (UI) の範囲を拡大します。  
   
  [IDebugExpressionCallBack インターフェイス](../winscript/reference/idebugexpressioncallback-interface.md)  
- `IDebugExpression` の評価の進行状況の状態に対するイベントを提供します。  
+ `IDebugExpression` による評価の進行状況についての状態イベントを提供します。  
   
  [IDebugDocumentTextEvents インターフェイス](../winscript/reference/idebugdocumenttextevents-interface.md)  
- 関連付けられたテキスト ドキュメントへの変更を示すイベントを提供します。  
+ 関連付けられているテキスト ドキュメントへの変更を示すイベントを提供します。  
   
  [IDebugApplicationNodeEvents インターフェイス](../winscript/reference/idebugapplicationnodeevents-interface.md)  
- `IDebugApplicationNode` のインターフェイスにイベント インターフェイスを提供します。  
+ `IDebugApplicationNode` インターフェイスに対するイベント インターフェイスを提供します。  
   
-### コンピューター マネージャーのデバッグ  
- コンピューターのデバッグ マネージャーは、アクティブな仮想アプリケーションのリストを保持し、列挙することにより、仮想アプリケーションとデバッガーの間に接続ポイントを提供します。  
+### <a name="machine-debug-manager"></a>マシン デバッグ マネージャー  
+ マシン デバッグ マネージャーは、アクティブな仮想アプリケーションのリストを維持して列挙することにより、仮想アプリケーションとデバッガーの間のフックアップ ポイントを提供します。  
   
  [IDebugSessionProvider インターフェイス](../winscript/reference/idebugsessionprovider-interface.md)  
- 実行中のアプリケーションのデバッグ セッションを設定します。  
+ 実行中のアプリケーションのデバッグ セッションを確立します。  
   
  [IMachineDebugManager インターフェイス](../winscript/reference/imachinedebugmanager-interface.md)  
- コンピューターのデバッグ マネージャーへの主要なインターフェイス。  
+ マシン デバッグ マネージャーの主インターフェイスです。  
   
  [IMachineDebugManagerCookie インターフェイス](../winscript/reference/imachinedebugmanagercookie-interface.md)  
- `IMachineDebugManager` のインターフェイスが、このインターフェイスに似たデバッグのクッキーをサポートします。  
+ `IMachineDebugManager` インターフェイスと似ていますが、このインターフェイスはデバッグ Cookie をサポートします。  
   
  [IMachineDebugManagerEvents インターフェイス](../winscript/reference/imachinedebugmanagerevents-interface.md)  
- コンピューターで保持される実行中のアプリケーションのリストの変更通知のは、マネージャーをデバッグします。  
+ マシン デバッグ マネージャーによって管理されている実行中アプリケーションのリストの変更を通知します。  
   
  [IEnumRemoteDebugApplications インターフェイス](../winscript/reference/ienumremotedebugapplications-interface.md)  
- を実行しているコンピューターにアプリケーションを列挙します。  
+ マシンで実行中のアプリケーションを列挙します。  
   
-### プロセス デバッグ マネージャー  
- : PDM は次の処理を行います。  
+### <a name="process-debug-manager"></a>プロセス デバッグ マネージャー  
+ PDM は以下の処理を行います。  
   
--   複数言語のデバッグ エンジンを同期します。  
+-   複数の言語エンジンのデバッグを同期します。  
   
--   デバッグ可能なドキュメント ツリーを保持します。  
+-   デバッグできるドキュメントのツリーを保持します。  
   
 -   スタック フレームをマージします。  
   
--   言語エンジンで座標のブレークポイントと手順。  
+-   言語エンジン間でブレークポイントとステップ実行を調整します。  
   
--   トラックのスレッド。  
+-   スレッドを追跡します。  
   
--   非同期処理のデバッガーのスレッドが保持されます。  
+-   非同期処理のためにデバッガー スレッドを保持します。  
   
--   コンピューターのデバッグ マネージャーおよびデバッガーの IDE と通信します。  
+-   マシン デバッグ マネージャーおよびデバッガー IDE と通信します。  
   
- 以下は、プロセス デバッグ マネージャーが提供するインターフェイスです。  
+ プロセス デバッグ マネージャーによって提供されるインターフェイスを次に示します。  
   
  [IProcessDebugManager インターフェイス](../winscript/reference/iprocessdebugmanager-interface.md)  
- プロセス デバッグ マネージャーへの主要なインターフェイス。  このインターフェイスは、プロセスから仮想アプリケーションを作成するか、追加、または削除できます。  
+ プロセス デバッグ マネージャーの主インターフェイスです。 このインターフェイスは、プロセスの仮想アプリケーションを作成、追加、または削除することができます。  
   
  [IRemoteDebugApplication インターフェイス](../winscript/reference/iremotedebugapplication-interface.md)  
  実行中のアプリケーションを表します。  
   
  [IDebugApplication インターフェイス](../winscript/reference/idebugapplication-interface.md)  
- 言語のエンジンとホストによって使用されるのはリモート デバッグのメソッドを公開します。  
+ 言語エンジンとホストが使用するためのリモート処理が不可能なデバッグ メソッドを公開します。  
   
  [IRemoteDebugApplicationThread インターフェイス](../winscript/reference/iremotedebugapplicationthread-interface.md)  
- 特定のアプリケーション内の実行中のスレッドを表します。  
+ 特定のアプリケーション内の実行のスレッドを表します。  
   
  [IDebugApplicationThread インターフェイス](../winscript/reference/idebugapplicationthread-interface.md)  
- 言語のエンジンとホストがスレッドの同期を提供し、スレッド固有のデバッグ状態情報を管理します。  
+ 言語エンジンとホストが、スレッド同期を提供し、スレッド固有のデバッグ状態情報を維持できるようにします。  
   
  [IEnumRemoteDebugApplicationThreads インターフェイス](../winscript/reference/ienumremotedebugapplicationthreads-interface.md)  
- アプリケーションの実行中のスレッドを列挙します。  
+ アプリケーションで実行中のスレッドを列挙します。  
   
  [IDebugThreadCall インターフェイス](../winscript/reference/idebugthreadcall-interface.md)  
- ディスパッチでマーシャリングされた呼び出し。  
+ マーシャリングされた呼び出しをディスパッチします。  
   
  [IDebugApplicationNode インターフェイス](../winscript/reference/idebugapplicationnode-interface.md)  
- 階層のドキュメントの位置を維持します。  
+ 階層内でのドキュメントの位置を保持します。  
   
  [IEnumDebugApplicationNodes インターフェイス](../winscript/reference/ienumdebugapplicationnodes-interface.md)  
  アプリケーションに関連付けられているノードの子ノードを列挙します。  
   
  [IEnumDebugStackFrames インターフェイス](../winscript/reference/ienumdebugstackframes-interface.md)  
- エンジンからマージされたスレッドに対応するスタック フレームを列挙します。  
+ エンジンからマージされた、スレッドに対応するスタック フレームを列挙します。  
   
  [IDebugCookie インターフェイス](../winscript/reference/idebugcookie-interface.md)  
- デバッグのクッキーがスクリプト デバッガーで設定できます。  
+ スクリプト デバッガーでデバッグ Cookie を設定できるようにします。  
   
  [IDebugHelper インターフェイス](../winscript/reference/idebughelper-interface.md)  
- スクリプト エンジンのオブジェクト ブラウザーと単純なコネクション ポイントのファクトリとして機能します。  
+ オブジェクト ブラウザーに対するファクトリおよびスクリプト エンジンに対する単純な接続ポイントとして機能します。  
   
  [ISimpleConnectionPoint インターフェイス](../winscript/reference/isimpleconnectionpoint-interface.md)  
- スクリプト エンジンの特定のコネクション ポイントで発生したイベントについて説明し、列挙する単純な方法を提供します。  
+ 特定の接続ポイントで発生したイベントを記述および列挙する簡単な方法をスクリプト エンジンに提供します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [アクティブ スクリプト デバッガー インターフェイス](../winscript/reference/active-script-debugger-interfaces.md)

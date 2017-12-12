@@ -1,124 +1,118 @@
 ---
-title: "ヘルプ ビューアー の管理者ガイド | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ヘルプ ビューアーの管理者ガイド | Microsoft Docs"
+ms.custom: 
+ms.date: 11/01/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-help-viewer
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4340c69f-b96b-4932-bb82-38b16a5ab149
-caps.latest.revision: 13
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 3c4c034b6aec75499d2e38af35f22cd852fa2e15
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/07/2017
 ---
-# ヘルプ ビューアー の管理者ガイド
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+# <a name="help-viewer-administrator-guide"></a>ヘルプ ビューアーの管理者ガイド
+ヘルプ ビューアーを使用すると、インターネット アクセスの有無に関係なく、ネットワーク環境のローカル ヘルプのインストールを管理できます。 ローカル ヘルプ コンテンツは、コンピューターごとに構成されます。 既定では、ユーザーがローカル ヘルプのインストールを更新するには、そのユーザーに管理者権限が必要です。  
+  
+ご利用のネットワーク環境でクライアントがインターネットにアクセスできる場合、ヘルプ コンテンツ マネージャーの実行可能ファイルを利用し、インターネットからローカル ヘルプ コンテンツを配置できます。 HlpCtntMgr.exe のコマンド ライン構文の詳細については、「[ヘルプ コンテンツ マネージャーのコマンド ライン引数](../ide/command-line-arguments-for-the-help-content-manager.md)」を参照してください。
 
-ヘルプ ビューアーを使用すると、インターネット アクセスの有無に関係なく、ネットワーク環境のローカル ヘルプのインストールを管理できます。  ローカル ヘルプ コンテンツは、コンピューターごとに構成されます。  既定では、ユーザーがローカル ヘルプのインストールを更新するには、そのユーザーに管理者権限が必要です。  
+コンテンツの作成、イントラネット サービスのエンドポイントの作成、類似した種類のアクティビティの詳細については、[ヘルプ ビューアー SDK](../extensibility/internals/microsoft-help-viewer-sdk.md) を参照してください。  
   
- クライアントがインターネットにアクセスできるネットワーク環境では、ヘルプ ビューアーによって、コマンド ライン スクリプトを使用してインターネットからローカル ヘルプ コンテンツを配置できるようになります。  
+ご利用のネットワーク環境にインターネット アクセスがない場合、ヘルプ ビューアーでは、イントラネットかネットワーク共有からローカル ヘルプ コンテンツを展開できます。 次のような機能で[レジストリ キーをオーバーライド](../ide/help-content-manager-overrides.md)し、Visual Studio IDE のヘルプ オプションを無効にすることもできます。
+
+- オンラインとオフラインのヘルプ
+
+- IDE の初回起動時のコンテンツ インストール
+
+- イントラネット コンテンツ サービスの指定
+
+- コンテンツの管理 
   
- クライアントがインターネットにアクセスできないネットワーク環境では、ヘルプ ビューアーを使用して、イントラネットまたはネットワーク共有からローカル ヘルプ コンテンツを配置できます。  また、レジストリ キーのオーバーライドを使用して、オンライン\/オフライン ヘルプの切り替えや IDE の最初の起動時のコンテンツのインストールなど、Visual Studio IDE のヘルプ オプションを無効にし、イントラネット コンテンツ サービスを指定し、コンテンツを管理することもできます。  
+## <a name="deploying-local-help-content-from-the-internet"></a>インターネットからローカル ヘルプ コンテンツを配置する  
+ヘルプ コンテンツ マネージャー (HlpCtntMgr.exe) を利用し、インターネットからクライアント コンピューターにローカル ヘルプ コンテンツを配置できます。 このコマンドの構文は次のとおりです。  
   
- 基本構文は次のとおりです。  
+```
+\\%ProgramFiles(x86)%\Microsoft Help Viewer\v2.3\HlpCtntmgr.exe /operation \<*name*> /catalogname \<*catalog name*> /locale \<*locale*>
+```
   
- \<*path to*\>\\HlpCtntmgr.exe \/operation \<*argument*\> \/catalogname \<*name*\> \/locale \<*locale*\> \/sourceuri \<*.msha path or URL*\>  
+HlpCtntMgr.exe のコマンド ライン構文の詳細については、「[ヘルプ コンテンツ マネージャーのコマンド ライン引数](../ide/command-line-arguments-for-the-help-content-manager.md)」を参照してください。  
   
- HlpCtntMgr.exe のコマンド ライン構文の詳細については、「[ヘルプ コンテンツ マネージャーのコマンド ライン引数](../ide/command-line-arguments-for-the-help-content-manager.md)」を参照してください。  
+要件:  
   
- コンテンツの作成、イントラネット サービスのエンドポイントの作成、および類似した種類のアクティビティの詳細については、ヘルプ ビューアー SDK を参照してください。  
-  
-## インターネットからのローカル ヘルプ コンテンツの配置  
- MSDN のコンテンツ パッケージ サービスを使用して、ローカル ヘルプ コンテンツをインターネットからクライアント コンピューターに配置できます。  このコマンドの構文は次のとおりです。  
-  
- \\\<*path to*\>\\v2.2\\HlpCtntmgr.exe \/operation \<*name*\> \/catalogname \<*catalog name*\> \/locale \<*locale*\>  
-  
- HlpCtntMgr.exe のコマンド ライン構文の詳細については、「[ヘルプ コンテンツ マネージャーのコマンド ライン引数](../ide/command-line-arguments-for-the-help-content-manager.md)」を参照してください。  
-  
- 要件:  
-  
--   クライアント コンピューターは、インターネットにアクセスできる必要があります。  
+-   クライアント コンピューターがインターネットにアクセスできる必要があります。  
   
 -   インストール後にユーザーがローカル ヘルプ コンテンツを更新、追加、または削除するには、そのユーザーに管理者権限が必要です。  
   
  注意事項:  
   
--   ヘルプの既定のソースはオンラインのままです。  
+-   ヘルプの既定のソースはオンラインのままです。
   
-    > [!TIP]
-    >  レジストリ キー HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\VisualStudio\\14.0\\help\\UseOnlineHelp を変更することで、ヘルプの既定のソースを変更できます。  詳細については、「[ヘルプ コンテンツ マネージャーのオーバーライド](../ide/help-content-manager-overrides.md)」を参照してください。  
+### <a name="example"></a>例  
+次の例では、クライアント コンピューターに Visual Studio の英語のコンテンツをインストールします。  
   
--   Visual Studio の最初の起動時には、基本ヘルプ コンテンツをインストールするよう求めるメッセージが表示されます。  レジストリ キー HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\VisualStudio\\14.0\\Help\\DisableFirstRunHelpSelection を変更することで、このメッセージを無効にできます。  
+##### <a name="to-install-english-content-from-the-internet"></a>インターネットから英語のコンテンツをインストールするには  
   
-### 例  
- 次の例では、クライアント コンピューターに Visual Studio の英語のコンテンツをインストールします。  
-  
-##### インターネットから英語のコンテンツをインストールするには  
-  
-1.  **\[スタート\]** ボタンをクリックし、**\[ファイル名を指定して実行\]** をクリックします。  
+1.  **[スタート]** を選択し、**[ファイル名を指定して実行]** を選択します。  
   
 2.  次のように入力します。  
   
-     C:\\Program Files \(x86\)\\Microsoft Help Viewer\\v2.2\\hlpctntmgr.exe \/operation install \/catalogname VisualStudio14 \/locale en\-us  
+     C:\Program Files (x86)\Microsoft Help Viewer\v2.3\hlpctntmgr.exe /operation install /catalogname VisualStudio15 /locale en-us  
   
-3.  ENTER キーを押します。  
+3.  **Enter** キーを押します。  
   
-## クライアント コンピューターに事前にインストールされたローカル ヘルプ コンテンツの配置  
- オンラインから 1 台のコンピューターに一連のコンテンツをインストールし、そのインストールされたコンテンツを他のコンピューターにコピーすることができます。  
+## <a name="deploying-pre-installed-local-help-content-on-client-computers"></a>事前にインストールされたローカル ヘルプ コンテンツをクライアント コンピューターに配置する
+オンラインから 1 台のコンピューターに一連のコンテンツをインストールし、そのインストールされたコンテンツを他のコンピューターにコピーすることができます。  
   
- 要件:  
+要件:  
   
 -   最初にコンテンツをインストールするコンピューターでは、インターネットにアクセスできる必要があります。  
   
 -   インストール後にユーザーがローカル ヘルプ コンテンツを更新、追加、または削除するには、そのユーザーに管理者権限が必要です。  
   
     > [!TIP]
-    >  ユーザーに管理者権限がない場合は、ヘルプ ビューアーで \[コンテンツの管理\] タブを無効にすることをお勧めします。  詳細については、「[ヘルプ コンテンツ マネージャーのオーバーライド](../ide/help-content-manager-overrides.md)」を参照してください。  
+    >  ユーザーに管理者権限がない場合は、ヘルプ ビューアーで [コンテンツの管理] タブを無効にすることをお勧めします。 詳細については、「[ヘルプ コンテンツ マネージャーのオーバーライド](../ide/help-content-manager-overrides.md)」を参照してください。  
   
- 注意事項:  
+注意事項:
   
--   ユーザーに管理者権限がない場合は、ヘルプ ビューアーで \[コンテンツの管理\] タブを無効にすることをお勧めします。  詳細については、「[ヘルプ コンテンツ マネージャーのオーバーライド](../ide/help-content-manager-overrides.md)」を参照してください。  
+-   ヘルプの既定のソースはオンラインのままです。
   
--   ヘルプの既定のソースはオンラインのままです。  
+### <a name="create-the-content-set"></a>コンテンツ セットを作成する  
+基本コンテンツ セットを作成する前に、ターゲット コンピューターで Visual Studio のすべてのローカル コンテンツをアンインストールする必要があります。  
   
--   Visual Studio の最初の起動時には、基本ヘルプ コンテンツをインストールするよう求めるメッセージが表示されます。  詳細については、「[ヘルプ コンテンツ マネージャーのオーバーライド](../ide/help-content-manager-overrides.md)」を参照してください。  
+#### <a name="to-uninstall-local-help"></a>ローカル ヘルプをアンインストールするには  
   
-### コンテンツ セットを作成する  
- 基本コンテンツ セットを作成する前に、ターゲット コンピューターで Visual Studio のすべてのローカル コンテンツをアンインストールする必要があります。  
+1.  ヘルプ ビューアーで、**[コンテンツの管理]** タブを選択します。  
   
-##### ローカル ヘルプをアンインストールするには  
+2.  Visual Studio ドキュメント セットに移動します。  
   
-1.  ヘルプ ビューアーで、**\[コンテンツの管理\]** タブをクリックします。  
+3.  各サブ項目の横の **[削除]** を選択します。  
   
-2.  **\[利用可能なドキュメント\]** で、Visual Studio のドキュメント セットに移動します。  
+4.  **[更新]** を選択し、アンインストールします。
   
-3.  各サブ項目の横の **\[削除\]** をクリックします。  
-  
-4.  **\[開始\]** をクリックしてアンインストールします。  
-  
-5.  *n*:\\ProgramData\\Microsoft\\HelpLibrary2\\Catalogs\\VisualStudio12 に移動し、フォルダーに catalogType.xml ファイルだけが含まれていることを確認します。  
+5.  %ProgramData%\Microsoft\HelpLibrary2\Catalogs\VisualStudio15 に移動し、フォルダーに catalogType.xml ファイルだけが含まれていることを確認します。  
   
  前にインストールされた Visual Studio のローカル ヘルプ コンテンツをすべて削除したら、基本コンテンツ セットをダウンロードする準備が整いました。  
   
-##### コンテンツをダウンロードするには  
+#### <a name="to-download-the-content"></a>コンテンツをダウンロードするには  
   
-1.  ヘルプ ビューアーで、**\[コンテンツの管理\]** タブをクリックします。  
+1.  ヘルプ ビューアーで、**[コンテンツの管理]** タブを選択します。  
   
-2.  **\[利用可能なドキュメント\]** で、ダウンロードするドキュメント セットに移動し、**\[追加\]** をクリックします。  
+2.  **[推奨されるドキュメント]** または **[利用可能なドキュメント]** で、ダウンロードするドキュメント セットに移動し、**[追加]** を選択します。  
   
-3.  **\[開始\]** をクリックします。  
+3.  **[更新]** を選択します。  
   
  次に、クライアント コンピューターに配置できるように、コンテンツをパッケージ化する必要があります。  
   
-##### コンテンツをパッケージ化するには  
+#### <a name="to-package-the-content"></a>コンテンツをパッケージ化するには  
   
-1.  後の配置でコンテンツをコピーするフォルダーを作成します。  
-  
-     たとえば、c:\\VS12Help フォルダーを作成します。  
+1.  後の配置でコンテンツをコピーするフォルダーを作成します。 たとえば、C:\VSHelp とします。  
   
 2.  管理者のアクセス許可で cmd.exe を開きます。  
   
@@ -126,80 +120,30 @@ caps.handback.revision: 13
   
 4.  次のように入力します。  
   
-     Xcopy %SYSTEMDRIVE%\\ProgramData\\Microsoft\\HelpLibrary2 \<*foldername*\>\\ \/y \/e \/k \/o  
+     Xcopy %ProgramData%\Microsoft\HelpLibrary2 \<*foldername*>\ /y /e /k /o  
   
-     例: `Xcopy %SYSTEMDRIVE%\ProgramData\Microsoft\HelpLibrary2 c:\VS12Help\ /y /e /k /o`  
+     例: `Xcopy %ProgramData%\Microsoft\HelpLibrary2 c:\VSHelp\ /y /e /k /o`  
   
-### コンテンツの配置  
+### <a name="deploying-the-content"></a>コンテンツの配置  
   
-##### コンテンツを配置するには  
+#### <a name="to-deploy-the-content"></a>コンテンツを配置するには  
   
-1.  ネットワーク共有を作成し、その場所に theee ヘルプ コンテンツをコピーします。  
+1.  ネットワーク共有を作成し、その場所にヘルプ コンテンツをコピーします。  
   
-     たとえば、c:\\VS12Help to \\\\myserver\\VS12Help にコンテンツをコピーします。  
+     たとえば、C:\VSHelp のコンテンツを \\\myserver\VSHelp にコピーします。  
   
-2.  ヘルプ コンテンツの配置スクリプトを含める .bat ファイルを作成します。  クライアントがプッシュの一部として、削除されるファイルのいずれかに読み取りロックを設定している可能性があるため、更新をプッシュする前にクライアントをシャットダウンする必要があります。  
-  
-     次に例を示します。  
+2.  ヘルプ コンテンツの配置スクリプトを含める .bat ファイルを作成します。 クライアントがプッシュの一部として、削除されるファイルのいずれかに読み取りロックを設定している可能性があるため、更新をプッシュする前にクライアントをシャットダウンする必要があります。 例:  
   
     ```  
     REM - copy pre-ripped content to ProgramData  
     Xcopy %~dp0HelpLibrary2 %SYSTEMDRIVE%\ProgramData\Microsoft\HelpLibrary2\ /y /e /k /o  
-    if ERRORLEVEL 1 ECHO *** ERROR COPYING Help Library files to Programdata (%ERRORLEVEL%)  
-  
-    REM - get processor type and create/run registry update file  
-    IF "%PROCESSOR_ARCHITECTURE%"=="AMD64" GOTO AMD64  
-  
-    @echo Architecture type is x86  
-  
-    ECHO Windows Registry Editor Version 5.00 > x86.reg  
-  
-    ECHO [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.2\Catalogs] >> x86.reg  
-    ECHO "ContentStore"="%SYSTEMDRIVE%\\ProgramData\\Microsoft\\HelpLibrary2\\Catalogs\\" >> x86.reg  
-  
-    ECHO [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.2\Catalogs\VisualStudio12] >> x86.reg  
-    ECHO "LocationPath"="%SYSTEMDRIVE%\\ProgramData\\Microsoft\\HelpLibrary2\\Catalogs\\VisualStudio12\\"  >> x86.reg  
-    ECHO "FirstTimeRun"="False"  >> x86.reg  
-  
-    ECHO [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.2\Catalogs\VisualStudio12\en-US]  >> x86.reg  
-    ECHO "ContentStore"="%SYSTEMDRIVE%\\ProgramData\\Microsoft\\HelpLibrary2\\Catalogs\\VisualStudio12\\"  >> x86.reg  
-    ECHO "catalogName"="Visual Studio version Help Documentation"  >> x86.reg  
-  
-    ECHO [HKEY_LOCAL_MACHINE\Software\Microsoft\VSWinExpress\14.0\help]  >> x86.reg  
-    ECHO "UseOnlineHelp"=dword:00000000  >> x86.reg  
-  
-    regedit.exe /s x86.reg  
-    if ERRORLEVEL 1 ECHO *** ERROR inserting the x86 reg (%ERRORLEVEL%)  
-  
-    GOTO CONTINUE  
-  
-    :AMD64  
-    @echo Architecture type is AMD64  
-  
-    ECHO Windows Registry Editor Version 5.00 > x64.reg  
-  
-    ECHO [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.2\Catalogs] >> x64.reg  
-    ECHO "ContentStore"="%SYSTEMDRIVE%\\ProgramData\\Microsoft\\HelpLibrary2\\Catalogs\\" >> x64.reg  
-  
-    ECHO [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.2\Catalogs\VisualStudio14] >> x64.reg  
-    ECHO "LocationPath"="%SYSTEMDRIVE%\\ProgramData\\Microsoft\\HelpLibrary2\\Catalogs\\VisualStudio14\\"  >> x64.reg  
-    ECHO "FirstTimeRun"="False"  >> x64.reg  
-  
-    ECHO [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.2\Catalogs\VisualStudio14\en-US]  >> x64.reg  
-    ECHO "ContentStore"="%SYSTEMDRIVE%\\ProgramData\\Microsoft\\HelpLibrary2\\Catalogs\\VisualStudio12\\en-US\\"  >> x64.reg  
-    ECHO "catalogName"="Visual Studio version Help Documentation"  >> x64.reg  
-  
-    ECHO [HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\VSWinExpress\14.0\help]  >> x64.reg  
-    ECHO "UseOnlineHelp"=dword:00000000  >> x64.reg  
-  
-    regedit.exe /s x64.reg  
-    if ERRORLEVEL 1 ECHO *** ERROR inserting the x64 reg (%ERRORLEVEL%)  
-  
-    :CONTINUE  
+    if ERRORLEVEL 1 ECHO *** ERROR COPYING Help Library files to ProgramData (%ERRORLEVEL%)
     ```  
   
-3.  ヘルプ コンテンツをインストールするローカル コンピューターで、bat ファイルを実行します。  
+3.  ヘルプ コンテンツをインストールするローカル コンピューターで .bat ファイルを実行します。  
   
-## 参照  
- [ヘルプ コンテンツ マネージャーのコマンド ライン引数](../ide/command-line-arguments-for-the-help-content-manager.md)   
- [ヘルプ コンテンツ マネージャーのオーバーライド](../ide/help-content-manager-overrides.md)
+## <a name="see-also"></a>関連項目
+[ヘルプ コンテンツ マネージャーのコマンド ライン引数](../ide/command-line-arguments-for-the-help-content-manager.md)  
+[ヘルプ コンテンツ マネージャーのオーバーライド](../ide/help-content-manager-overrides.md)  
+[Microsoft Help Viewer](../ide/microsoft-help-viewer.md)  
+[ヘルプ ビューアー SDK](../extensibility/internals/microsoft-help-viewer-sdk.md)

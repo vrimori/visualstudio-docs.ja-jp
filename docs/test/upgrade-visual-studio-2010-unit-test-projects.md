@@ -4,35 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f1502b51-d6db-4894-9fbf-4a5723e4bb1a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: d6550f2aa1aab249eda569ff84ddf4dcf488aa18
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 2e3e99bfad1ebf33f23c3b38189568935d0cedee
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="upgrade-visual-studio-2010-unit-test-projects"></a>Visual Studio 2010 単体テスト プロジェクトをアップグレードする
 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] には [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1 テスト プロジェクトとの、テスト プロジェクト互換性があります。 たとえば、[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1 を使用して作成したテスト プロジェクトを、アップグレードせずに [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] で開くことができます。 したがって、チームは同じテスト プロジェクトの作業に [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1 と [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] の両方を使用できます。 詳しくは、「[Visual Studio 2010 からアップグレードをテストできます](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52)」を参照してください。  
@@ -43,14 +26,14 @@ ms.lasthandoff: 05/13/2017
 >  既存の [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1 テスト プロジェクトの単体テストは、[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1 と [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] の間でシームレスに機能します。 単体テストを含む Visual Studio 2010 テスト プロジェクトを [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] で開いた場合、またはその逆の場合、テスト プロジェクト ファイルは変更されません。  
   
 > [!CAUTION]
->  Visual Studio 2010 は 11.0 ツールセットを対象とした C++/CLI プロジェクト、つまり Visual Studio 2012 で作成されたプロジェクトを開くことはできません。 この制限は、C++/CLI 単体テスト プロジェクトのみならず、すべての C++/CLI プロジェクトに適用されます。  
+>  Visual Studio 2010 は 11.0 ツールセットを対象とした C++/CLI プロジェクト、つまり Visual Studio 2012 以降で作成されたプロジェクトを開くことはできません。 この制限は、C++/CLI 単体テスト プロジェクトのみならず、すべての C++/CLI プロジェクトに適用されます。  
   
 > [!NOTE]
 >  コマンド ラインから vstest.console.exe を使用して新しい単体テストを実行できます。 vstest.console.exe 使用の詳細については、「[VSTest.Console.exe のコマンド ライン オプション](/devops-test-docs/test/vstest-console-exe-command-line-options)」を参照するか、ヘルプ スイッチ **vstest.console.exe /?** を使用してコマンドを実行してください。 MStest.exe を使用して既存の単体テストの実行を継続できます。 詳細については、「[MSTest を使用したコマンド ラインからの自動テストの実行](/devops-test-docs/test/run-automated-tests-from-the-command-line-using-mstest)」および「[MSTest.exe のコマンド ライン オプション](/devops-test-docs/test/mstest-exe-command-line-options)」を参照してください。  
   
  もう 1 つの重要な変更は、新しいテスト エクスプローラーです。 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] では、Visual Studio の以前のバージョンで使い慣れていたかもしれない、テスト ビュー ウィンドウのような、いくつかのテスト用ウィンドウが使用されなくなっています。 テスト エクスプローラーは、ソフトウェア開発作業に単体テストを導入した開発者や開発チームをよりよくサポートするように設計されています。 詳細については、「[テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)」を参照してください。  
   
-## <a name="compatibility-issues-between-visual-studio-2010-sp1-and-visual-studio-2012"></a>Visual Studio 2010 SP1 と Visual Studio 2012 の互換性の問題  
+## <a name="compatibility-issues-between-visual-studio-2010-sp1-and-visual-studio-2012-or-later"></a>Visual Studio 2010 SP1 と Visual Studio 2012 以降の互換性の問題  
  Visual Studio 2010 SP1 と [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] の間で単体テストを移行する場合に、知っておくべきいくつかの問題があります。  
   
 |単体テスト機能|懸案事項|ソリューション|  
@@ -65,4 +48,3 @@ ms.lasthandoff: 05/13/2017
  [コードの単体テスト](../test/unit-test-your-code.md)   
  [旧バージョンの Visual Studio からのテストのアップグレード](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52)   
  [Visual Studio 2010 からのコード化された UI テストのアップグレード](../test/upgrading-coded-ui-tests-from-visual-studio-2010.md)
-

@@ -1,46 +1,47 @@
 ---
 title: "ローカリゼーションのニュートラル リソース言語 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "カルチャ, 検索 (リソースを)"
-  - "グローバリゼーション [Visual Studio], リソース"
-  - "ローカリゼーション [Visual Studio], リソース"
-  - "ニュートラル リソース"
-  - "NeutralResourcesLanguageAttribute クラス"
-  - "リソース [Visual Studio], フォールバック システム"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- localization [Visual Studio], resources
+- NeutralResourcesLanguageAttribute class
+- globalization [Visual Studio], resources
+- resources [Visual Studio], fallback system
+- culture, locating resources
+- neutral resources
 ms.assetid: ef064995-3b84-4698-a708-9689b7723533
-caps.latest.revision: 8
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 89e6e1f0814165781f92049537b4ae8748246b48
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ローカリゼーションのニュートラル リソース言語
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-<xref:System.Resources.NeutralResourcesLanguageAttribute> クラスは、メイン アセンブリに含まれるリソースのカルチャを指定します。  この属性はパフォーマンス向上のために使用します。これにより、<xref:System.Resources.ResourceManager> オブジェクトがメイン アセンブリに含まれたリソースを検索しなくなります。  
+# <a name="neutral-resources-languages-for-localization"></a>ローカリゼーションのニュートラル リソース言語
+<xref:System.Resources.NeutralResourcesLanguageAttribute> クラスでは、メイン アセンブリに含まれるリソースのカルチャが指定されています。 この属性はパフォーマンス向上のために使われ、<xref:System.Resources.ResourceManager> オブジェクトがメイン アセンブリに含まれるリソースを検索しなくて済むようにします。  
   
- ニュートラル リソース言語を設定する方法を次のコードに示します。  このコードは、ビルド スクリプトに配置することも、AssemblyInfo.vb ファイルまたは AssemblyInfo.cs ファイルに配置することもできます。  
+ 次のコードでは、ニュートラル リソース言語を設定する方法を示します。 このコードは、ビルド スクリプト、AssemblyInfo.vb または AssemblyInfo.cs に挿入できます。  
   
-```vb#  
+```vb  
 ' Set neutral resources language for assembly.  
 <Assembly: NeutralResourcesLanguageAttribute("en")>  
   
 ```  
   
-```c#  
+```csharp  
 // Set neutral resources language for assembly.  
 [assembly: NeutralResourcesLanguageAttribute("en")]  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.Resources.ResourceManager>   
  [.NET Framework ベースの国際対応アプリケーションの概要](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md)   
  [ローカリゼーション用リソースの階層編成](../ide/hierarchical-organization-of-resources-for-localization.md)   

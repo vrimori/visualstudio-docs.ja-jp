@@ -4,36 +4,19 @@ ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df7d854b-0a28-45a9-8a64-c015a4327701
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
-ms.openlocfilehash: 254f2d9121566ef14c5470c3d940e4f781a0f5e2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/30/2017
-
+ms.openlocfilehash: 32d6ac2581f71196d1f1d826d8f1024906b7cab9
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>リソース消費量と UI スレッド アクティビティを分析する (XAML)
 **アプリケーション タイムライン** プロファイラーを使用すると、XAML アプリケーションにおけるアプリケーションの相互作用に関連するパフォーマンスの問題を検出および修復できます。 このツールは、アプリケーションのリソースの消費量の詳細ビューを提供することで、XAML アプリケーションのパフォーマンスの向上に役立ちます。 アプリケーションが UI フレームの準備 (レイアウトとレンダリング) やネットワークとディスクの要求の処理を実行することで、およびアプリケーションの起動、ページの読み込み、ウィンドウのサイズ変更などのシナリオにおいて使用した時間を分析することができます。  
@@ -46,7 +29,7 @@ ms.lasthandoff: 06/30/2017
   
 1.  ユニバーサル Windows アプリ (Windows 10 で)  
   
-2.  Windows ストア 8.1  
+2.  Windows 8.1  
   
 3.  Windows Phone 8.1 (一般的な XAML プラットフォーム)  
   
@@ -67,7 +50,7 @@ ms.lasthandoff: 06/30/2017
   
 1.  XAML アプリを開きます。  
   
-2.  **[デバッグ]、[パフォーマンス プロファイラー]** の順にクリックします。 [.diagsession] ウィンドウにプロファイリング ツールの一覧が表示されます。  
+2.  **[デバッグ]、[パフォーマンス プロファイラー]** の順にクリックします。[.diagsession] ウィンドウにプロファイリング ツールの一覧が表示されます。  
   
 3.  **[アプリケーション タイムライン]** を選択してから、ウィンドウの下部にある **[開始]** をクリックします。  
   
@@ -87,7 +70,7 @@ ms.lasthandoff: 06/30/2017
   
 1.  **[UI スレッド使用状況]** と **[ビジュアル スループット (FPS)]** のグラフの情報を確認し、タイムラインのナビゲーション バーを使用して、分析する時間の範囲を選択します。  
   
-2.  [ **UI スレッド使用状況** ] または [ **ビジュアル スループット (FPS)** ] のグラフの情報を使用して、[ **タイムラインの詳細** ] ビューで詳細を確認し、応答性に問題があるように見受けられる場合は、考えられる原因を究明します。  
+2.  **[UI スレッド使用状況]** または **[ビジュアル スループット (FPS)]** のグラフの情報を使用して、**[タイムラインの詳細]** ビューで詳細を確認し、応答性に問題があるように見受けられる場合は、考えられる原因を究明します。  
   
 ###  <a name="BKMK_Report_scenarios_categories_and_events"></a> シナリオ、カテゴリ、およびイベントのレポート  
  **[アプリケーション タイムライン]** ツールは、XAML のパフォーマンスに関連するシナリオ、カテゴリ、およびイベントのタイミング データを表示します。  
@@ -102,7 +85,7 @@ ms.lasthandoff: 06/30/2017
 ###  <a name="BKMK_UI_thread_utilization_graph"></a> UI スレッド使用状況グラフ  
  ![CPU 使用状況グラフ](../profiling/media/timeline_cpuutilization.png "TIMELINE_CpuUtilization")  
   
- [ **UI スレッド使用状況 (%)** ] グラフは、コレクション期間中にあるカテゴリで費やされた相対的な時間を横棒グラフで示したものです。  
+ **[UI スレッド使用状況 (%)]** グラフは、コレクション期間中にあるカテゴリで費やされた相対的な時間を横棒グラフで示したものです。  
   
 ###  <a name="BKMK_Visual_throughput_FPS_graph"></a> ビジュアル スループット (FPS) グラフ  
  ![ビジュアル スループット グラフ](../profiling/media/timeline_visualthroughput.png "TIMELINE_VisualThroughput")  
@@ -116,7 +99,7 @@ ms.lasthandoff: 06/30/2017
   
 |||  
 |-|-|  
-|**解析**|XAML ファイルの解析とオブジェクトの作成に費やされた時間。<br /><br /> [ **タイムラインの詳細** ] の [ **解析** ] ノードを展開すると、ルート イベントの結果として解析されたすべての XAML ファイルの依存関係チェーンが表示されます。 これにより、パフォーマンスが重要なシナリオにおいて不必要なファイル解析やオブジェクト作成を特定し、それらを取り除いて最適化できます。|  
+|**解析**|XAML ファイルの解析とオブジェクトの作成に費やされた時間。<br /><br /> **[タイムラインの詳細]** の **[解析]** ノードを展開すると、ルート イベントの結果として解析されたすべての XAML ファイルの依存関係チェーンが表示されます。 これにより、パフォーマンスが重要なシナリオにおいて不必要なファイル解析やオブジェクト作成を特定し、それらを取り除いて最適化できます。|  
 |**レイアウト**|大規模なアプリケーションでは、多数の要素が画面に同時に表示される可能性があります。 これにより、UI のフレーム レートが低下し、これに対応してアプリケーションの応答性も低下します。 レイアウト イベントでは、各要素 (つまり、Arrange、Measure、ApplyTemplate、ArrangeOverride、および ArrangeOverride に費やした時間) をレイアウトするコストを正確に判断するだけでなく、レイアウト パスの一部を成すビジュアル ツリーを作成します。 この視覚表現を使用すると、簡略化が必要な論理ツリーを判断したり、レイアウト パスを最適化するために他の遅延メカニズムを評価したりすることができます。|  
 |**レンダリング**|XAML 要素を画面に描画するために費やされた時間。|  
 |**入出力**|ローカル ディスクから、または [Microsoft Windows Internet (WinINet)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa385331.aspx)API を使用してアクセスするネットワーク リソースから、データを取得するために費やされた時間。|  
@@ -127,16 +110,18 @@ ms.lasthandoff: 06/30/2017
 >  UI スレッドで実行されるアプリ メソッドを表示するためにプロファイリングを開始する場合は、 **[CPU 使用率]** ツールと共に **[アプリケーション タイムライン]** ツールを選択します。 実行時間の長いアプリ コードをバック グラウンド スレッドに移動すると、UI の応答性が向上します。  
   
 ####  <a name="BKMK_Customizing_Timeline_details_"></a> タイムラインの詳細のカスタマイズ  
- [ **タイムラインの詳細** ] ツールバーを使用して、[ **タイムラインの詳細** ] ビュー エントリの並べ替え、フィルター操作、注釈の指定を行います。  
+ **[タイムラインの詳細]** ツールバーを使用して、**[タイムラインの詳細]** ビュー エントリの並べ替え、フィルター操作、注釈の指定を行います。  
   
 |||  
 |-|-|  
 |**並べ替え**|開始時刻またはイベントの長さによって並べ替えます。|  
-|![フレームごとのグループ イベント](../profiling/media/timeline_groupbyframes.png "TIMELINE_GroupByFrames")|フレームごとにイベントをグループ化する最上位の [ **フレーム** ] カテゴリを追加または削除します。|  
+|![フレームごとのグループ イベント](../profiling/media/timeline_groupbyframes.png "TIMELINE_GroupByFrames")|フレームごとにイベントをグループ化する最上位の **[フレーム]** カテゴリを追加または削除します。|  
 |![タイムラインの詳細リストのフィルター](../profiling/media/timeline_filter.png "TIMELINE_Filter")|選択したカテゴリまたはイベントの長さに基づいて、一覧をフィルター処理します。|  
 |![タイムラインの詳細情報のカスタマイズ](../profiling/media/timeline_viewsettings.png "TIMELINE_ViewSettings")|イベントに注釈を指定できます。|  
   
 ## <a name="see-also"></a>関連項目  
  [WPF Team Blog: New UI Performance Analysis Tool for WPF Applications (WPF チーム ブログ: WPF アプリケーション用の新しい UI パフォーマンス分析ツール)](http://blogs.msdn.com/b/wpf/archive/2015/01/16/new-ui-performance-analysis-tool-for-wpf-applications.aspx)  
- [C++、C#、または Visual Basic を使った Windows ストア アプリのパフォーマンスのベスト プラクティス](http://msdn.microsoft.com/en-us/567bcefa-5da5-4e42-a4b8-1358c71adfa2)   
- [WPF アプリケーション パフォーマンスの最適化](/dotnet/framework/wpf/advanced/optimizing-wpf-application-performance) [Visual Studio のプロファイル](../profiling/index.md) [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)
+ [C++、C#、または Visual Basic を使った UWP アプリのパフォーマンスのベスト プラクティス](http://msdn.microsoft.com/en-us/567bcefa-5da5-4e42-a4b8-1358c71adfa2)   
+ [WPF アプリケーションのパフォーマンスの最適化](/dotnet/framework/wpf/advanced/optimizing-wpf-application-performance)  
+ [Visual Studio のプロファイル](../profiling/index.md)  
+ [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)

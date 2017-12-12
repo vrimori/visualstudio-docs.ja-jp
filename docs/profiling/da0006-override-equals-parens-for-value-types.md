@@ -1,44 +1,44 @@
 ---
 title: "DA0006: 値の型で Equals() をオーバーライドしてください | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.rules.DAOverrideEquals"
-  - "vs.performance.6"
-  - "vs.performance.DA0006"
-  - "vs.performance.rules.DA0006"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.performance.rules.DAOverrideEquals
+- vs.performance.6
+- vs.performance.DA0006
+- vs.performance.rules.DA0006
 ms.assetid: 4d85bdd6-b571-47e0-afd6-ba3764e4eed5
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 5b69ee1a5501304ee49f706038d419d1c81db1de
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# DA0006: 値の型で Equals() をオーバーライドしてください
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="da0006-override-equals-for-value-types"></a>DA0006: 値の型で Equals() をオーバーライドしてください
 |||  
 |-|-|  
 |規則 ID|DA0006|  
-|分類|.NET Framework の使用|  
+|カテゴリ|.NET Framework の使用|  
 |プロファイル方法|サンプリング|  
 |メッセージ|値の型で Equals と等値演算子をオーバーライドしてください。|  
 |メッセージの種類|警告|  
   
-## 原因  
- Equals メソッドまたはパブリックの値型の等値演算子の呼び出しがプロファイル データの大きな割合を占めています。  より効率的な方法を実装することを検討してください。  
+## <a name="cause"></a>原因  
+ パブリック値型の Equals メソッドまたは等値演算子の呼び出しが、プロファイリング データの大きな割合を占めています。 さらに効率的な方法を実装することを検討してください。  
   
-## 規則の説明  
- 値型の場合、Equals を継承した実装が <xref:System.Reflection> ライブラリを使用して、型のすべてのフィールドの内容を比較します。  Reflection は計算コストが高いため、場合によってはすべてのフィールドで等値性を比較する必要はありません。  ユーザーがインスタンスの比較または並べ替えを行うことや、ハッシュ テーブル キーとしてインスタンスを使用することが予想される場合には、値型に Equals を実装する必要があります。  また、プログラム言語で演算子のオーバーロードをサポートしている場合、等値演算子と非等値演算子を実装する必要もあります。  
+## <a name="rule-description"></a>規則の説明  
+ 値型の場合、Equals を継承した実装が <xref:System.Reflection> ライブラリを使用して、この種類のすべてのフィールドの内容を比較します。 Reflection は計算コストが高いため、場合によってはすべてのフィールドで等値性を比較する必要はありません。 ユーザーがインスタンスの比較または並べ替えを行うことや、ハッシュ テーブル キーとしてインスタンスを使用することが予想される場合には、値型に Equals を実装する必要があります。 お使いのプログラミング言語が演算子のオーバーロードに対応している場合、等値演算子と非等値演算子も実装してください。  
   
- この方法の詳細については Equals と等値演算子のオーバーライドする参照します [実装する際のガイドライン Equals と等値演算子 \(\=\=\) を](http://go.microsoft.com/fwlink/?LinkId=177818)。  
+ Equals と等値演算子をオーバーライドする方法については、[Equals および等値演算子 (==) 実装のガイドライン](http://go.microsoft.com/fwlink/?LinkId=177818)を参照してください。  
   
-## 警告の調査方法  
- Equals と等値演算子の実装例については、コード分析規則「[CA1815: equals および operator equals を値型でオーバーライドします](../Topic/CA1815:%20Override%20equals%20and%20operator%20equals%20on%20value%20types.md)」を参照してください。
+## <a name="how-to-investigate-a-warning"></a>警告の調査方法  
+ Equals と等値演算子の実装例については、コード分析ルールの「[CA1815: equals および operator equals を値型でオーバーライドします](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md)」を参照してください。

@@ -1,43 +1,46 @@
 ---
 title: "オブジェクトと配列 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "配列 [JavaScript]"
-  - "配列 [JavaScript]、オブジェクト"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- arrays [JavaScript]
+- arrays [JavaScript], objects
 ms.assetid: f5106284-1240-4f47-8c3b-5a45e227e5e1
-caps.latest.revision: 15
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 6776701ba108ae0ecefc2331c2b12272e0c1be19
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# オブジェクトと配列 (JavaScript)
-[!INCLUDE[javascript](../javascript/includes/javascript-md.md)] のオブジェクトは、プロパティとメソッドのコレクションです。  メソッドは、オブジェクトのメンバーとなっている関数です。  プロパティは、オブジェクトのメンバーである値または値のセット \(配列やオブジェクト\) です。  [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] では、次の 4 種類のオブジェクトがサポートされます。  
+# <a name="objects-and-arrays-javascript"></a>オブジェクトと配列 (JavaScript)
+[!INCLUDE[javascript](../javascript/includes/javascript-md.md)] のオブジェクトは、プロパティとメソッドのコレクションです。 メソッドは、オブジェクトのメンバーとなっている関数です。 プロパティは、オブジェクトのメンバーである値または値のセット (配列やオブジェクト) です。 [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] では、次の 4 種類のオブジェクトがサポートされます。  
   
--   組み込みオブジェクト \(`Array`、`String` など\)。  
+-   組み込みオブジェクト (`Array`、`String` など)。  
   
 -   ユーザーが作成したオブジェクト。  
   
--   ホスト オブジェクト \(`window`、`document` など\)。  
+-   ホスト オブジェクト (`window`、`document` など)。  
   
 -   ActiveX オブジェクト。  
   
-## Expando プロパティおよびメソッド  
- [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] のすべてのオブジェクトは、実行時に追加および削除できる expando プロパティおよびメソッドをサポートします。  これらのプロパティおよびメソッドには、任意の名前を指定でき、数字で識別できます。  プロパティまたはメソッドの名前が単純な識別子の場合、オブジェクト名およびそれに続くピリオドの後に記述できます。たとえば、次のコードの `myObj.name`, `myObj.age` および `myObj.getAge` などです。  
+## <a name="expando-properties-and-methods"></a>Expando プロパティおよびメソッド  
+ [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] のすべてのオブジェクトは、実行時に追加および削除できる expando プロパティおよびメソッドをサポートします。 これらのプロパティおよびメソッドには、任意の名前を指定でき、数字で識別できます。 プロパティまたはメソッドの名前が単純な識別子の場合、オブジェクト名およびそれに続くピリオドの後に記述できます。たとえば、次のコードの `myObj.name`, `myObj.age` および `myObj.getAge` などです。  
   
-```javascript  
+```JavaScript  
 var myObj = new Object();  
 myObj.name = "Fred";  
 myObj.age = 42;  
@@ -60,9 +63,9 @@ document.write(myObj.getAge());
   
 ```  
   
- プロパティまたはメソッドの名前が単純な識別子ではない場合、またはスクリプトを記述する時点でわからない場合、任意の式を角かっこで囲んでプロパティにインデックスを付けることができます。  [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] のすべての expando プロパティの名前は、オブジェクトに追加される前に文字列に変換されます。  
+ プロパティまたはメソッドの名前が単純な識別子ではない場合、またはスクリプトを記述する時点でわからない場合、任意の式を角かっこで囲んでプロパティにインデックスを付けることができます。 [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] のすべての expando プロパティの名前は、オブジェクトに追加される前に文字列に変換されます。  
   
-```javascript  
+```JavaScript  
 var myObj = new Object();  
   
 // Add two expando properties that cannot be written in the  
@@ -76,14 +79,14 @@ myObj["not a valid identifier"] = "This is the property value";
 myObj[100] = "100";  
 ```  
   
- 定義からのオブジェクトの作成については、「[オブジェクトの作成](../javascript/creating-objects-javascript.md)」を参照してください。  
+ 定義からのオブジェクトの作成については、「[オブジェクトの作成](../javascript/creating-objects-javascript.md)」をご覧ください。  
   
-## オブジェクトとしての配列  
- [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] では、配列は単なる特別な種類のオブジェクトであるため、オブジェクトと配列はほとんど同じように扱われます。  オブジェクトと配列は、どちらもプロパティおよびメソッドを持つことができます。  
+## <a name="arrays-as-objects"></a>オブジェクトとしての配列  
+ [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] では、配列は単なる特別な種類のオブジェクトであるため、オブジェクトと配列はほとんど同じように扱われます。 オブジェクトと配列は、どちらもプロパティおよびメソッドを持つことができます。  
   
- 配列には `length` プロパティがありますが、オブジェクトにはありません。  インデックスが長さを超える \(たとえば、`myArray[100] = "hello"`\) 配列の要素に値を割り当てると、`length` プロパティは、新しい長さに自動的に増加します。  同様に `length` プロパティを小さくすると、インデックスが配列の長さの外部にあるすべての要素が削除されます。  
+ 配列には `length` プロパティがありますが、オブジェクトにはありません。 インデックスが長さを超える (たとえば、`myArray[100] = "hello"`) 配列の要素に値を割り当てると、`length` プロパティは、新しい長さに自動的に増加します。 同様に `length` プロパティを小さくすると、インデックスが配列の長さの外部にあるすべての要素が削除されます。  
   
-```javascript  
+```JavaScript  
 // An array with three elements  
 var myArray = new Array(3);  
   
@@ -108,9 +111,9 @@ document.write("new length is : " + myArray.length);
   
 ```  
   
- 配列は反復処理を行うメソッドを提供し、メンバーを操作します。  配列に格納されたオブジェクトのプロパティを取得する方法を次の例に示します。  
+ 配列は反復処理を行うメソッドを提供し、メンバーを操作します。 配列に格納されたオブジェクトのプロパティを取得する方法を次の例に示します。  
   
-```javascript  
+```JavaScript  
 var myArray = new Array(3);  
   
 // Add some data  
@@ -128,10 +131,10 @@ myArray.forEach(function (item) {
 // 2003  
 ```  
   
-## 多次元配列  
- [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] は多次元配列を直接サポートしませんが、別の配列の要素に配列を格納すると、多次元配列の動作を実現できます。\(他の配列を含むあらゆる種類のデータを配列の要素内に格納できます。\)たとえば、次のコードは、5 までの乗算テーブルを作成します。  
+## <a name="multi-dimensional-arrays"></a>多次元配列  
+ [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] は多次元配列を直接サポートしませんが、別の配列の要素に配列を格納すると、多次元配列の動作を実現できます。 (他の配列を含むあらゆる種類のデータを配列の要素内に格納できます。)たとえば、次のコードは、5 までの乗算テーブルを作成します。  
   
-```javascript  
+```JavaScript  
 // The size of the table.  
 var iMaxNum = 5;  
 // Loop counters.  

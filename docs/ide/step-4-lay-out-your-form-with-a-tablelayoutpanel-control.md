@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 61acde79-e115-4bad-bb06-1fbe37717a3e
-caps.latest.revision: 17
-author: kempb
-ms.author: kempb
+caps.latest.revision: "17"
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 6f4db48b7e1f90654643efbfcfd41acbdcceaec8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 1740beb4c671b2e66e249827c2db678f6b6f7da3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="step-4-lay-out-your-form-with-a-tablelayoutpanel-control"></a>手順 4: TableLayoutPanel コントロールを使用したフォームのレイアウトの設定
 この手順では、フォームに `TableLayoutPanel` コントロールを追加します。 TableLayoutPanel は、後で追加するフォームのコントロールを適切にアラインするために役立ちます。  
@@ -41,7 +25,7 @@ ms.lasthandoff: 05/13/2017
   
 ### <a name="to-lay-out-your-form-with-a-tablelayoutpanel-control"></a>TableLayoutPanel コントロールを使用してフォームのレイアウトを設定するには  
   
-1.  Visual Studio IDE の左側で、**[ツールボックス]** タブを探します。 **[ツールボックス]** のタブをクリックすると、ツールボックスが表示されます。 (メニュー バーで **[表示]**、**[ツールボックス]** の順にクリックします。)  
+1.  Visual Studio IDE の左側で、**[ツールボックス]** タブを探します。**[ツールボックス]** のタブをクリックすると、ツールボックスが表示されます。 (メニュー バーで **[表示]**、**[ツールボックス]** の順にクリックします。)  
   
 2.  次の図に示すように、**[コンテナー]** グループの横にある小さな三角形をクリックして、このグループを開きます。  
   

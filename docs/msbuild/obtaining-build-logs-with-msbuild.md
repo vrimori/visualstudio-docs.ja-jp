@@ -1,81 +1,82 @@
 ---
 title: "MSBuild でのビルド ログの取得 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSBuild、ログ記録"
-  - "ログ記録 [MSBuild]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSBuild, logging
+- logging [MSBuild]
 ms.assetid: 6ba9a754-9cc0-4fed-9fc8-4dcd3926a031
-caps.latest.revision: 27
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: cd7e50a44e5d53653f233372b643c31fe58aedc9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# MSBuild でのビルド ログの取得
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-を使用して、MSBuild に切り替えて、ビルド データの量を確認するかどうか、および一つ以上のファイルにビルドのデータを保存する方法を指定できます。  また、ビルド データを収集するためのカスタム ロガーを指定できます。  このトピックは対応できない MSBuild コマンド ライン スイッチについては、[Command\-Line Reference](../msbuild/msbuild-command-line-reference.md)"を参照してください。  
+# <a name="obtaining-build-logs-with-msbuild"></a>MSBuild でのビルド ログの取得
+MSBuild でスイッチを使用することで、確認するビルド データの量とビルド データを 1 つ以上のファイルに保存するかどうかを指定できます。 カスタム ロガーを指定して、ビルド データを収集することもできます。 このトピックで説明されていない MSBuild コマンド ライン スイッチの詳細については、「[Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)」を参照してください。  
   
 > [!NOTE]
->  Visual Studio IDE を使用してプロジェクトをビルドすると、ビルド ログを確認して、それらのビルドを修正できます。  詳細については、「[方法: ビルド ログ ファイルを表示、保存、および構成する](../ide/how-to-view-save-and-configure-build-log-files.md)」を参照してください。  
+>  Visual Studio IDE を使用してプロジェクトをビルドする場合は、ビルド ログを確認することで、それらのビルドをトラブルシューティングできます。 詳細については、「[方法: ビルド ログ ファイルを表示、保存、および構成する](../ide/how-to-view-save-and-configure-build-log-files.md)」をご覧ください。  
   
-## 詳細レベルの配置  
- MSBuild を使用して詳細レベルを指定せずにプロジェクトをビルドすると、次の情報がログ出力に表示されます:  
+## <a name="setting-the-level-of-detail"></a>詳細レベルを設定する  
+ 詳細レベルを指定せずに MSBuild を使用して、プロジェクトをビルドすると、出力ログに次の情報が表示されます。  
   
--   エラー、非常に重要に分類される警告、およびメッセージ。  
+-   重要度 - 高として分類されたエラー、警告、メッセージ。  
   
--   ある状態イベント。  
+-   一部の状態イベント。  
   
 -   ビルドの概要。  
   
- **\/verbosity** \(**\/v**\) スイッチを使用して、データの量が出力ログに表示されるかを制御できます。  トラブルシューティングのために、`detailed`\(`d`\) または `diagnostic` \(`diag`\) レベルのほとんどの情報を提供する詳細度を使用します。  
+ **/verbosity** (**/v**) スイッチを使用して、出力ログに表示するデータ量を制御できます。 トラブルシューティングを行う場合は、`detailed` (`d`) または `diagnostic` (`diag`) のいずれかの詳細レベルを使用します。後者は情報が最も多くなります。  
   
- ビルド処理は、`detailed` に **\/verbosity** 設定されていると `diagnostic`に低速に設定 **\/verbosity** 新しい場合があります。  
+ **/verbosity** を `detailed` に設定すると、ビルド処理は遅くなることがあります。また、**/verbosity** を `diagnostic` に設定するとさらに遅くなる可能性があります。  
   
 ```  
 msbuild MyProject.proj /t:go /v:diag  
 ```  
   
-## ファイルへのビルド ログの保存  
- ファイルにビルドのデータを保存するには **\/fileLogger** \(**fl**\) スイッチを使用できます。  次の例では `msbuild.log`という名前のファイルにビルドのデータを保存します。  
+## <a name="saving-the-build-log-to-a-file"></a>ビルド ログをファイルに保存する  
+ **/fileLogger** (**fl**) スイッチを使用して、ビルド データをファイルに保存することができます。 次の例では、ビルド データを `msbuild.log` という名前のファイルに保存します。  
   
 ```  
 msbuild MyProject.proj /t:go /fileLogger  
 ```  
   
- 次の例では、ログ ファイルは `MyProjectOutput.log`という名前で、ログ出力の詳細度は `diagnostic`に設定されます。  **\/filelogparameters** \(`flp`\) スイッチを使用して、二つの設定を指定します。  
+ 次の例では、ログ ファイルに `MyProjectOutput.log` という名前を付けて、ログ出力の詳細度を `diagnostic` に設定しています。 **/filelogparameters** (`flp`) スイッチを使用して、これら 2 つの設定を指定します。  
   
 ```  
 msbuild MyProject.proj /t:go /fl /flp:logfile=MyProjectOutput.log;verbosity=diagnostic  
 ```  
   
- 詳細については、「[Command\-Line Reference](../msbuild/msbuild-command-line-reference.md)」を参照してください。  
+ 詳細については、「[Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)」を参照してください。  
   
-## 複数ファイルに出力するログを保存します  
- 次の例では `JustErrors.log`に `msbuild1.log`に、ログ、エラー、および `JustWarnings.log`に、警告を保存します。  例では、3 本の各ファイルのファイル番号を使用します。  ファイル番号は **\/fl** と **\/flp** スイッチの直後に指定されます \(たとえば、`/fl1` と `/flp1`\)。  
+## <a name="saving-the-log-output-to-multiple-files"></a>ログ出力を複数のファイルに保存する  
+ 次の例では、ログ全体を `msbuild1.log` に、エラーのみを `JustErrors.log` に、警告のみを `JustWarnings.log` に保存します。 例では、3 つのファイルのそれぞれを表すファイル番号を使用します。 ファイル番号は、**/fl** スイッチと **/flp** スイッチの直後に指定されています (`/fl1` と `/flp1` など)。  
   
- ファイル 2 および 3 の **\/filelogparameters** \(`flp`\) スイッチは、を各ファイルを参照するのか、各ファイルに含まれるの内容を指定します。  ファイル名は 1 に指定されないため、`msbuild1.log` の既定の名前が使用されます。  
+ ファイル 2 とファイル 3 の **/filelogparameters** (`flp`) スイッチは、各ファイルの名前と各ファイルに含まれる内容を指定します。 ファイル 1 には名前が指定されていないため、既定の名前である `msbuild1.log` が使用されます。  
   
 ```  
 msbuild MyProject.proj /t:go /fl1 /fl2 /fl3 /flp2:logfile=JustErrors.log;errorsonly /flp3:logfile=JustWarnings.log;warningsonly  
   
 ```  
   
- 詳細については、「[Command\-Line Reference](../msbuild/msbuild-command-line-reference.md)」を参照してください。  
+ 詳細については、「[Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)」を参照してください。  
   
-## カスタム ロガーを使用する  
- <xref:Microsoft.Build.Framework.ILogger> インターフェイスを実装するマネージ型を記述することにより、独自のロガーを作成できます。  たとえば、電子メールのビルド エラーを送信する、データベースに記録したり、XML ファイルに記録するには、カスタム ロガーを使用する場合があります。  詳細については、「[ビルド ロガー](../msbuild/build-loggers.md)」を参照してください。  
+## <a name="using-a-custom-logger"></a>カスタム ロガーを使用する  
+ <xref:Microsoft.Build.Framework.ILogger> インターフェイスを実装するマネージ型を記述することにより、独自のロガーを作成できます。 たとえば、カスタム ロガーを使用して、ビルド エラーをメールで送信する、データベースにログを記録する、または XML ファイルにログを記録することができます。 詳細については、「[ビルド ロガー](../msbuild/build-loggers.md)」を参照してください。  
   
- MSBuild コマンド ラインでは、**\/logger** スイッチを使用してカスタム ロガーを指定します。  また、既定のコンソール ロガーを無効にするには **\/noconsolelogger** スイッチを使用できます。  
+ MSBuild コマンドラインでは、**/logger** スイッチを使用してカスタム ロガーを指定します。 また、**/noconsolelogger** スイッチを使用して、既定のコンソール ロガーを無効にすることもできます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.Build.Framework.LoggerVerbosity>   
  [ビルド ロガー](../msbuild/build-loggers.md)   
  [マルチプロセッサ環境でのログ](../msbuild/logging-in-a-multi-processor-environment.md)   

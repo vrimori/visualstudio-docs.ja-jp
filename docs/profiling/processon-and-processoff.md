@@ -1,59 +1,60 @@
 ---
 title: "ProcessOn と ProcessOff | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d3dc6a7e-bc0f-48a6-a4ec-f386348bb296
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 6e187498656f1fd781d26e6b04426621bd2f3c3c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ProcessOn と ProcessOff
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-VSPerfCmd.exe の **ProcessOff** サブコマンドと **ProcessOn** サブコマンドは、コマンド ライン プロファイル セッションの指定されたプロセスのプロファイリングを一時停止および再開するために使用されます。  **ProcessOff** がプロセスのプロファイリングを一時停止し、**ProcessOn** がプロセスのプロファイリングを再開します。  
+# <a name="processon-and-processoff"></a>ProcessOn と ProcessOff
+VSPerfCmd.exe の **ProcessOff** サブコマンドと **ProcessOn** サブコマンドでは、コマンド ライン プロファイル セッションの指定されたプロセスのプロファイリングを一時停止および再開します。 **ProcessOff** がプロセスのプロファイリングを停止し、**ProcessOn** がプロセスのプロファイリングを開始します。  
   
  多くの場合、**ProcessOn** または **ProcessOff** を VSPerfCmd.exe コマンド ラインの唯一のオプションとして指定しますが、これらを **GlobalOn**、**GlobalOff**、**ThreadOn**、および **ThreadOff** の各サブコマンドと組み合わせて使用することもできます。  
   
- **ProcessOn** サブコマンドと **ProcessOff** サブコマンドは、コマンド ライン プロファイル セッションのすべてのプロセスについてのデータ収集を制御する **GlobalOn** サブコマンドおよび **GlobalOff** サブコマンド、並びに指定されたスレッドについてのデータ収集を制御する **ThreadOn** サブコマンドおよび **ThreadOff** サブコマンドと対話します。  
+ **ProcessOn** サブコマンドと **ProcessOff** サブコマンドは、コマンド ライン プロファイル セッションのすべてのプロセスについてのデータ収集を制御する **GlobalOn** サブコマンドと **GlobalOff** サブコマンド、および指定されたスレッドについてのデータ収集を制御する **ThreadOn** サブコマンドと **ThreadOff** サブコマンドと対話します。  
   
- **ProcessOff** サブコマンドおよび **ProcessOn** サブコマンドは、プロファイラーの API 関数によって操作されるプロセスの開始\/停止数にも影響します。  
+ **ProcessOff** サブコマンドと **ProcessOn** サブコマンドは、プロファイラー API 関数によって操作されるプロセスの開始/停止数にも影響します。  
   
--   **ProcessOff** は、プロセスの開始\/停止数を直ちに 0 に設定して、プロファイリングを一時停止します。  
+-   **ProcessOff** は、プロセスの開始/停止数を直ちに 0 に設定して、プロファイリングを一時停止します。  
   
--   **ProcessOn** は、プロセスの開始\/停止数を直ちに 1 に設定して、プロファイリングを再開します。  
+-   **ProcessOn** は、プロセスの開始/停止数を直ちに 1 に設定して、プロファイリングを再開します。  
   
- 詳細については、「[プロファイリング ツールの API](../profiling/profiling-tools-apis.md)」を参照してください。  
+ 詳細については、[「プロファイリング ツールの API」](../profiling/profiling-tools-apis.md) を参照してください。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 VSPerfCmd.exe /{ProcessOff|ProcessOn}:PID [Options]  
   
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `PID`  
- 開始または停止するプロセスの整数の ID。  プロセス ID は、Windows タスク マネージャーの \[プロセス\] タブに表示されます。  
+ 開始または停止するプロセスの整数の ID。 プロセス ID は、Windows タスク マネージャーの [プロセス] タブにリストされます。  
   
-## 必須のサブコマンド  
- なし。  
+## <a name="required-subcommands"></a>必須のサブコマンド  
+ なし  
   
-## 有効なサブコマンド  
- **ProcessOn** と **ProcessOff** は、次のサブコマンドを含むコマンド ラインで指定できます。  
+## <a name="valid-subcommands"></a>有効なサブコマンド  
+ **ProcessOn** と **ProcessOff** は、次のサブコマンドも含むコマンド ラインで指定できます。  
   
  **Start:** `Method`  
  コマンド ライン プロファイル セッションを初期化し、指定されたプロファイル方法を設定します。  
   
  **Launch:** `AppName`  
- 指定されたアプリケーションを起動し、サンプリング メソッドを使用してプロファイリングを開始します。  
+ 指定したアプリケーションを起動し、サンプリング メソッドでプロファイリングを開始します。  
   
  **Attach:** `PID`  
  指定されたプロセスのプロファイリングを開始します。  
@@ -62,9 +63,9 @@ VSPerfCmd.exe /{ProcessOff|ProcessOn}:PID [Options]
  コマンド ライン プロファイル セッションのすべてのプロセスのプロファイリングを停止または開始します。  
   
  {**ThreadOff**&#124;**ThreadOn**}**:**`TID`  
- 指定されたスレッドのプロファイリングを停止または開始します \(インストルメンテーション メソッドのみ\)。  
+ 指定されたスレッドのプロファイリングを停止または開始します (インストルメンテーション メソッドのみ)。  
   
-## 使用例  
+## <a name="example"></a>例  
  この例では、**ProcessOff** サブコマンドを使用してアプリケーション起動のプロファイル データを収集します。  
   
 ```  
@@ -79,8 +80,8 @@ VSPerfCmd /Shutdown
   
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [スタンドアロン アプリケーションのプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [プロファイリング \(サービスの\)](../profiling/command-line-profiling-of-services.md)
+ [プロファイリング (サービスの)](../profiling/command-line-profiling-of-services.md)

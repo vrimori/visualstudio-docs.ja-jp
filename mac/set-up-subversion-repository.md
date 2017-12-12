@@ -1,19 +1,17 @@
 ---
-title: "Visual Studio for Mac での Subversion リポジトリのセットアップ"
+title: "Visual Studio for Mac での Subversion リポジトリのセットアップ | Microsoft Docs"
 description: "Visual Studio for Mac で Git および Subversion を使用します。"
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 0D58FB37-530E-495B-BED6-FD499477A9B6
+ms.openlocfilehash: 0757ad29b8614a86f059f525f6ffe3100595d09b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: ea2dffed0b9091dae61792783eb83c103ca9375c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="setting-up-a-subversion-repository"></a>Subversion リポジトリのセットアップ
 
 Subversion は分散型のバージョン管理システムです。 これは、ユーザーが任意のファイルの任意のバージョンをチェックアウトできるすべてのファイルと変更履歴を含む、1 つのサーバーがあることを意味します。 ファイルがリモート Subversion レポジトリからチェックアウトされると、ユーザーはその時点のリポジトリのスナップショットを取得します。
@@ -45,5 +43,4 @@ Subversion の使用を開始する前に、Xcode コマンド ライン ツー�
     ![](media/version-control-subversion5.png)
 
 8.  これで、使用可能なすべてのバージョン管理コマンドがバージョン管理メニューに表示されます。
-
 

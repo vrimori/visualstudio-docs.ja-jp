@@ -1,61 +1,62 @@
 ---
 title: "方法: ビルド ログ ファイルを表示、保存、および構成する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 75d38b76-26d6-4f43-bbe7-cbacd7cc81e7
-caps.latest.revision: 7
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 617b495cab96d8fdb0ddd7c69d6e6c1dd93d7ccc
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: ビルド ログ ファイルを表示、保存、および構成する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Visual Studio IDE でプロジェクトをビルドしたら、**\[出力\]** のウィンドウでそのビルドに関する情報を表示できます。  この情報を使用して、たとえば、ビルド エラーをトラブルシューティングできます。  C\+\+ のプロジェクトでは、自動的に作成され、保存 .txt ファイルの同じ情報を表示できます。  マネージ コード プロジェクトでは、独自 .txt ファイルに **\[出力\]** のウィンドウの情報をコピーしてから保存できます。  どのような各ビルドに関する情報を表示する方法を指定するには、IDE を使用できます。  
+# <a name="how-to-view-save-and-configure-build-log-files"></a>方法: ビルド ログ ファイルを表示、保存、および構成する
+Visual Studio IDE でプロジェクトをビルドしたら、**[出力]** ウィンドウでそのビルドに関する情報を表示できます。 この情報を使用して、たとえば、ビルド エラーをトラブルシューティングできます。 C++ のプロジェクトでは、自動的に作成および保存された .txt ファイルで同じ情報を確認することもできます。 マネージ コード プロジェクトでは、自分で **[出力]** ウィンドウの情報をコピーし、テキスト ファイルに貼り付けて、保存することができます。 また、IDE を使用すれば、各ビルドについて、表示する情報の種類を指定することもできます。  
   
- MSBuild を使用して種類のプロジェクトをビルドすると、ビルドに関する情報を保存するには、.txt ファイルを作成できます。  詳細については、「[ビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)」を参照してください。  
+ MSBuild を使用して任意の種類のプロジェクトをビルドする場合は、ビルドに関する情報を保存する .txt ファイルを作成することができます。 詳細については、「[MSBuild でのビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)」を参照してください。  
   
-### C \+\+.のビルド ログ ファイルを表示するには、  
+### <a name="to-view-the-build-log-file-for-a-c-project"></a>C++ プロジェクトのビルド ログ ファイルを表示するには  
   
-1.  **\[Windows エクスプローラー\]** か **\[エクスプローラー\]** では、次のファイルを開きます: \\…  Studio の *\[バージョン\]*の\\Projects\\の*\[プロジェクト名\]*の\\の*\[プロジェクト名\]*の\\Visual \\Debug\\*\[プロジェクト名\]*.txt  
+1.  **Windows エクスプローラー**または**エクスプローラー**で、次のファイルを開きます: \\...\Visual Studio *Version*\Projects\\*ProjectName*\\*ProjectName*\Debug\\*ProjectName*.txt  
   
-### マネージ コード プロジェクトのビルド ログ ファイルを作成するには  
+### <a name="to-create-a-build-log-file-for-a-managed-code-project"></a>マネージ コード プロジェクトのビルド ログ ファイルを作成するには  
   
-1.  メニュー バーで、**\[ビルド\]**、**\[ソリューションのビルド\]** を選択します。  
+1.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]**の順にクリックします。  
   
-2.  **\[出力\]** のペインで、ビルドからの情報を強調表示し、クリップボードにコピーします。  
+2.  **[出力]** ウィンドウで、ビルドからの情報を強調表示し、クリップボードにコピーします。  
   
-3.  テキスト エディター \(メモ帳など\)、貼り付け情報ファイルを開き、次に保存します。  
+3.  メモ帳などのテキスト エディターを開き、ファイルに情報を貼り付けて、それを保存します。  
   
-### ビルド ログに含まれる情報の量を変更するには  
+### <a name="to-change-the-amount-of-information-included-in-the-build-log"></a>ビルド ログに含める情報の量を変更するには  
   
-1.  メニュー バーで、**\[ツール\]**、**\[オプション\]** を選択します。  
+1.  メニュー バーの **[ツール]**、 **[オプション]**の順にクリックします。  
   
-2.  **\[プロジェクトおよびソリューション\]** のページで、**\[ビルド\/実行\]** のページを選択します。  
+2.  **[プロジェクトおよびソリューション]** ページで、**[ビルド/実行]** ページを選択します。  
   
-3.  **\[MSBuild プロジェクト ビルドの出力の詳細\]** の一覧で、次の値から 1 を選択し、**\[OK\]** のボタンをクリックします。  
+3.  **[MSBuild プロジェクト ビルドの出力の詳細]** の一覧で、次の値のいずれかを選択し、**[OK]** ボタンを選択します。  
   
-    |詳細出力のレベル|説明|  
-    |--------------|--------|  
-    |簡易|ビルドの概要のみを表示します。|  
-    |最小|ビルドの概要と、エラー、非常に重要に分類されるエラーと警告メッセージが表示されます。|  
-    |Normal|ビルドの概要を表示します; エラー、非常に重要に分類される警告、およびメッセージ; とビルドの主要な手順。  この詳細レベルに頻繁に使用します。|  
-    |Detailed|ビルドの概要を表示します; エラー、非常に重要に分類される警告、およびメッセージ; ビルド ステップすべて; 現在、通常な重要度で並べ替えてメッセージ。|  
-    |診断|ビルドで使用できるすべてのデータが表示されます。  カスタム ビルド スクリプトおよび他のビルドの問題に関する問題をデバッグするには、この詳細レベルを使用できます。|  
+    |詳細レベル|説明|  
+    |---------------------|-----------------|  
+    |静的|ビルドの概要のみを表示します。|  
+    |Minimal|ビルドの概要と、重要度 - 高として分類されたエラー、警告、メッセージを表示します。|  
+    |標準|ビルドの概要と、重要度 - 高として分類されたエラー、警告、およびメッセージと、ビルドの主なステップとを表示します。 この詳細レベルを最も頻繁に使用します。|  
+    |詳細|ビルドの概要と、重要度 - 高として分類されたエラー、警告、およびメッセージと、ビルドのすべてのステップと、標準的な重要度として分類されたメッセージとを表示します。|  
+    |診断|ビルドで使用できるすべてのデータを表示します。 このレベルの詳細は、カスタム ビルド スクリプトの問題およびその他のビルドの問題をデバッグする場合に役に立ちます。|  
   
-     詳細については、「[\[オプション\] ダイアログ ボックス、\[プロジェクトおよびソリューション\]、\[ビルド\/実行\]](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)」および「<xref:Microsoft.Build.Framework.LoggerVerbosity>」を参照してください。  
+     詳細については、「[[オプション] ダイアログ ボックス、[プロジェクトおよびソリューション]、[ビルド/実行]](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)」および「<xref:Microsoft.Build.Framework.LoggerVerbosity>」を参照してください。  
   
     > [!IMPORTANT]
-    >  **\[出力\]** のウィンドウ \(すべてのプロジェクト\) と *\[プロジェクト名\]*.txt ファイル \(C\+\+ プロジェクトだけ\) 実装された変更のプロジェクトをビルドし直す必要があります。  
+    >  **[出力]** ウィンドウ (すべてのプロジェクト) と *ProjectName*.txt ファイル (C++ プロジェクトのみ) に変更を反映するには、プロジェクトをリビルドする必要があります。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)   
  [Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)   
- [Visual Studio でのアプリケーションのビルド](../ide/compiling-and-building-in-visual-studio.md)
+ [コードのコンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)

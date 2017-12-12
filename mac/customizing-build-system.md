@@ -1,19 +1,17 @@
 ---
-title: "ビルド システムのカスタマイズ"
+title: "ビルド システムのカスタマイズ | Microsoft Docs"
 description: 
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 6958B102-8527-4B40-BC65-3505DB63F9D3
+ms.openlocfilehash: 2d17a952c58e5ef7e593ee7aeb1980e09a376800
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: c261dbc285da6f488e6a328c997e2a9563c1c73a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="customizing-the-build-system"></a>ビルド システムのカスタマイズ
 
 MSbuild は Microsoft が開発したビルド エンジンです。主に .NET アプリケーションのビルドを可能にします。 Mono フレームワークはまた、Microsoft のビルド エンジンを独自に実装しています。それが **xbuild** です。 ただし、xbuild は廃止となり、すべてのオペレーティング システムで MSBuild が使用されています。
@@ -105,8 +103,7 @@ MSBuild には、*項目*と*プロパティ*という 2 つの基本データ�
 
 次のリソースで MSBuild についてさらに詳しく学習できます。
 
-* [MSDN - 概要](https://msdn.microsoft.com/en-us/library/dd393574.aspx)
-* [MSDN - 概念](https://msdn.microsoft.com/en-us/library/dd637714.aspx)
-
+* [MSDN - 概要](https://msdn.microsoft.com/library/dd393574.aspx)
+* [MSDN - 概念](https://msdn.microsoft.com/library/dd637714.aspx)
 
 

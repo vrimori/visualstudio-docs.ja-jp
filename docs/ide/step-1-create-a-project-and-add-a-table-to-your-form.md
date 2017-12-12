@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1cac4ba4-f3cd-43bd-ad5d-50fc599234e8
-caps.latest.revision: 19
-author: kempb
-ms.author: kempb
+caps.latest.revision: "19"
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: a112e67966ddf76e6bde53153828c72dbf5b478b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 3f5d33b4a8362340c0716242cba7c9aefaf1eab3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>手順 1: プロジェクトの作成とフォームへのテーブルの追加
 絵合わせゲームの作成における最初の手順は、プロジェクトの作成とフォームへのテーブルの追加です。 テーブルはアイコンを 4 x 4 のグリッドに整列させるために便利です。 いくつかのプロパティの設定も行ってゲーム ボードの見栄えが良くなるようにします。  
@@ -100,7 +84,7 @@ ms.lasthandoff: 05/13/2017
     > [!NOTE]
     >  多く貼り付けすぎた場合は、IDE によって TableLayoutPanel に新しい行が追加され、新しいラベル コントロールを追加する場所が作成されます。 これは、元に戻すことができます。 新しいセルを削除するには、Ctrl + Z キーを押すか、メニュー バーで **[編集]**、**[元に戻す]** の順にクリックします。  
   
-     これで、フォームがレイアウトされました。 結果は次の図のようになります。  
+     これで、フォームがレイアウトされました。結果は次の図のようになります。  
   
      ![絵合わせゲームの初期フォーム](../ide/media/express_tut4step1.png "Express_Tut4Step1")  
 絵合わせゲームの初期フォーム  

@@ -1,12 +1,11 @@
 ---
-title: Remove Visual Studio 2017 | Microsoft Docs
-description: Learn how to remove Visual Studio, step-by-step.
+title: "Visual Studio 2017 の削除 | Microsoft Docs"
+description: "Visual Studio を削除する方法について、ステップ バイ ステップで説明します。"
 ms.custom: 
 ms.date: 09/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-install
+ms.technology: vs-ide-install
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,41 +21,40 @@ ms.assetid: 9c81a777-9c95-4934-b517-c60c6dc78799
 author: heaths
 ms.author: heaths
 manager: erickn
+ms.openlocfilehash: 7a93922bd33b3e5aa42d4bb271369d2d9b0a0c3d
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
 ms.translationtype: HT
-ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
-ms.openlocfilehash: 37e7e36c04115dc1ccf4d0b8d78f047459108c80
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
+# <a name="remove-visual-studio"></a>Visual Studio の削除
 
-# <a name="remove-visual-studio"></a>Remove Visual Studio
+致命的なエラーが発生して Visual Studio の修復またはアンインストールができない場合は、`InstallCleanup.exe` ツールを実行してインストール ファイルと製品情報を削除することができます。 このツールの実行は修復またはアンインストールに失敗した場合の最終手段として行ってください。その他の Visual Studio のインストールやその他の製品の機能がアンインストールされ、後で修復が必要になる場合があります。
 
-If you encounter a catastrophic error and cannot repair or uninstall Visual Studio, you can run the `InstallCleanup.exe` tool to remove installation files and product information. This is to be done as a last resort if repair or uninstall fail, and may uninstall features from other Visual Studio installations or other products which will need to be repaired.
+以下の手順では、以下の動作のコマンドライン スイッチでツールを実行することができます。
 
-In the instructions below, you can run the tool with different command line switches with the following behavior.
-
-| Switch | Behavior |
+| スイッチ | 動作 |
 | ------ | -------- |
-| `-i`   | This is the default if no other switch is passed and will remove only the main installation directory and product information. This behavior is preferable if you intend to reinstall the same version after you run the `InstallCleanup.exe` tool. |
-| `-f`   | This will remove the main installation directory, product information, and most other features installed outside the installation directory that may be shared with other Visual Studio installations or other products. This behavior is preferable if you intend to remove Visual Studio without reinstalling later. |
+| `-i`   | その他のスイッチが渡されていない場合、このスイッチが既定で、メインのインストール ディレクトリと製品情報のみが削除されます。 `InstallCleanup.exe` ツールを実行した後に同じバージョンを再インストールする予定がある場合は、この動作が適しています。 |
+| `-f`   | このスイッチを指定すると、メインのインストール ディレクトリ、製品情報、そして他の Visual Studio のインストールまたは他の製品と共有できるインストール ディレクトリ外にインストールされているその他の多くの機能が削除されます。 この動作は、後で再インストールせずに Visual Studio を削除する場合に適しています。 |
 
-1. Close the Visual Studio Installer.
-2. Open an administrator command prompt. To do this, follow these steps:
-   * On the **Start** menu, click **Run** (Start + R).
-   * Type **cmd**.
-   * Right-click **Command Prompt**, and then click **Run as administrator**.
-3. Type the full path of the `InstallCleanup.exe` utility and pass whichever command line switch you desire. By default, the path of the utility is as follows:
+1. Visual Studio インストーラーを閉じます。
+2. 管理者のコマンド プロンプトを開きます。 管理者のコマンド プロンプトを開くには、以下の手順に従います。
+   * **[スタート]** メニューで、 **[ファイル名を指定して実行]** (Start + R) をクリックします。
+   * 「**cmd**」と入力します。
+   * **[Command Prompt]** を右クリックし、**[管理者として実行]** をクリックします。
+3. `InstallCleanup.exe` ユーティリティの完全なパスを入力して、必要なコマンドライン スイッチを渡します。 既定では、ユーティリティのパスは次のようになります。
    ```
    C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\layout\InstallCleanup.exe
    ```
 
-If you do not find `InstallCleanup.exe` under the Visual Studio Installer directory - always located at `%ProgramFiles(x86)%\Microsoft Visual Studio` - please follow the instructions to [install Visual Studio](install-visual-studio.md) and when the workload selection screen is displayed, close the window and follow the steps above again.
+通常は `%ProgramFiles(x86)%\Microsoft Visual Studio` にある `InstallCleanup.exe` が Visual Studio インストーラー ディレクトリの下に見つからない場合は、[Visual Studio のインストール](install-visual-studio.md)の手順に従い、ワークロード選択画面が表示されたら、ウィンドウを閉じて前の手順をもう一度実行します。
 
-## <a name="see-also"></a>See also
-* [Install Visual Studio 2017](install-visual-studio.md)
-* [Update Visual Studio 2017](update-visual-studio.md)
-* [Modify Visual Studio 2017](modify-visual-studio.md)
-* [Uninstall Visual Studio 2017](uninstall-visual-studio.md)
-* [How to Report a Problem with Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
+## <a name="get-support"></a>サポートを受ける
+ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング](troubleshooting-installation-issues.md)」ページにあるトラブルシューティングのヒントをご覧ください。 また、Visual Studio IDE の [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから製品の問題を Microsoft に報告していただくことや、[UserVoice](https://visualstudio.uservoice.com/forums/121579) でご提案を共有していただくこともできます。 [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。 [Gitter コミュニティの Visual Studio に関する意見交換](https://gitter.im/Microsoft/VisualStudio) ([GitHub](https://github.com/) アカウントが必要) から、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。
 
+## <a name="see-also"></a>関連項目
+* [Visual Studio 2017 のインストール](install-visual-studio.md)
+* [Visual Studio 2017 の更新](update-visual-studio.md)
+* [Visual Studio 2017 の変更](modify-visual-studio.md)
+* [Visual Studio 2017 のアンインストール](uninstall-visual-studio.md)

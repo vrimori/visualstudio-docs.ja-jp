@@ -13,11 +13,11 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 2f971942d9ca913f030ab703253492acb9155424
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 39f21b73389285ab3114950bee8d84ad2837e206
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="welcome-to-r-tools-for-visual-studio"></a>R Tools for Visual Studio へようこそ
 
@@ -37,6 +37,6 @@ R Tools for Visual Studio (RTVS) をインストールいただきありがと�
 
 RTVS は、CRAN R と、SQL Server 2016 で配布される R のバージョンを含む Microsoft R の配布をサポートしています。 さまざまな Microsoft R の配布の詳細については、次のリンクを参照してください。
 
-* [Microsoft R Open](https://mran.microsoft.com/download/)
-* [Microsoft R Client](https://msdn.microsoft.com/microsoft-r/r-client-get-started)
-* [Microsoft R Server](https://www.microsoft.com/server-cloud/products/r-server/)
+- [Microsoft R Open](https://mran.microsoft.com/download/)
+- [Microsoft R Client](/machine-learning-server/r-client/what-is-microsoft-r-client)
+- [Microsoft Machine Learning Server (旧称 R Server)](/machine-learning-server/)

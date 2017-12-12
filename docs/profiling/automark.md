@@ -1,51 +1,52 @@
 ---
-title: "AutoMark | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: AutoMark | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c4de965e-0364-4f78-9936-1f509e85df74
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: cc5ad59520f8533527f5c17f6be4b04ad860f2d2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# AutoMark
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-**AutoMark** オプションは、Windows ソフトウェア パフォーマンス カウンターのイベントを収集する間隔をミリ秒単位で指定します。  Windows パフォーマンス カウンターは **WinCounter** オプションで指定します。  
+# <a name="automark"></a>AutoMark
+**AutoMark** オプションは、Windows ソフトウェア パフォーマンス カウンター イベントを収集する間隔をミリ秒単位で指定します。 Windows パフォーマンス カウンターは **WinCounter** オプションで指定されます。  
   
- コマンド ラインに指定できる **AutoMark** オプションは 1 つのみです。  **AutoMark** によって指定された **WinCounter** のサンプリング間隔は、メイン サンプリング間隔には依存しません。  
+ **AutoMark** オプションはコマンド ラインで 1 つだけ指定できます。 **AutoMark** によって指定される **WinCounter** サンプリング間隔はメインのサンプリング間隔には依存しません。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 VSPerfCmd.exe /Start:Method /WinCounter:Path /AutoMark:Milliseconds  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `Milliseconds`  
- Windows パフォーマンス カウンターのイベントを収集する間隔をミリ秒単位で指定します。  
+ Windows パフォーマンス カウンター イベントを収集する間隔をミリ秒単位で指定します。  
   
-## 必須のオプション  
+## <a name="required-options"></a>必須オプション  
  **WinCounter:** `Path`  
- 収集する Windows パフォーマンス カウンターを指定します。  インストルメンテーション メソッドを使用している場合は、複数の Windows カウンターを指定できます。  サンプリング メソッドを使用している場合は、1 つのソフトウェア カウンターのみを指定できます。  **WinCounter** オプションは、**Start** オプションが含まれたコマンド ラインで指定する必要があります。  
+ 収集する Windows パフォーマンス カウンターを指定します。 インストルメンテーション メソッドを使用するとき、複数の Windows カウンターを指定できます。 サンプリング メソッドを使用するとき、ソフトウェア カウンターを 1 つだけ指定できます。 **WinCounter** オプションは、**Start** オプションが含まれるコマンド ラインに指定する必要があります。  
   
-## 使用例  
- この例では、2 つの Windows パフォーマンス カウンターのサンプリング間隔として 1000 ミリ秒が設定されます。  
+## <a name="example"></a>例  
+ この例では、2 つの Windows パフォーマンス カウンターに対して 1000 ミリ秒単位のサンプリング間隔が設定されます。  
   
 ```  
 VSPerfCmd.exe /Start:Trace /Output:TestApp.exe.vsp /WinCounter:"\Process(*)\% Processor Time" /WinCounter:"\ASP.NET\Pages/sec" /AutoMark:1000  
 VSPerfCmd.exe /Launch:TestApp.exe  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [スタンドアロン アプリケーションのプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [プロファイリング \(サービスの\)](../profiling/command-line-profiling-of-services.md)
+ [プロファイリング (サービスの)](../profiling/command-line-profiling-of-services.md)

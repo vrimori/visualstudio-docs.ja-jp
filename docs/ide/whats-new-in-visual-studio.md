@@ -1,13 +1,15 @@
 ---
 title: "Visual Studio 2017 の新機能 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/22/2017
+ms.date: 11/06/2017
 ms.reviewer: 
 ms.suite: 
+ms.technology:
+- vs-ide-general
+- vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.StartPage.WhatsNew
+f1_keywords: VS.StartPage.WhatsNew
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,26 +17,24 @@ ms.assetid: 7307e180-ba28-4774-8a43-cbb980085a71
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.technology:
-- vs-acquisition
+ms.openlocfilehash: 1e616fb0c223a30152b9cd18e6ea53e989690f9b
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
 ms.translationtype: HT
-ms.sourcegitcommit: 3cd705d703b3d745c502290422e29b3c6da39ee5
-ms.openlocfilehash: 5bf00b7e5ed79f8679b837d0dcabf03550d2b849
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
-#### <a name="updated-for-the-153-release"></a>15.3 リリースの更新
-すべての開発、すべてのアプリ、すべてのプラットフォームにおいて、他に類を見ない生産性を実現します。 Visual Studio 2017 を利用し、Android、iOS、Windows、Linux、Web、クラウド向けのアプリを開発します。 短期間でプログラミングできて、デバッグや診断も簡単に行えます。テストを頻繁に行うことで、自信をもってリリースできます。 独自の拡張機能を開発することで Visual Studio を拡張し、カスタマイズすることもできます。 今回のリリースでは、バージョン管理を使用した、迅速で、効率的な共同作業が可能になりました。
+#### <a name="updated-for-the-154-release"></a>15.4 リリースの更新
+以前のバージョンの Visual Studio からのアップグレードを検討していますか。 Visual Studio 2017 にはすべての開発、すべてのアプリ、すべてのプラットフォームにおいて、他に類を見ない生産性があります。 Visual Studio 2017 を利用し、Android、iOS、Windows、Linux、Web、クラウド向けのアプリを開発します。 短期間でプログラミングできて、デバッグや診断も簡単に行えます。テストを頻繁に行うことで、自信をもってリリースできます。 独自の拡張機能を開発することで Visual Studio を拡張し、カスタマイズすることもできます。 今回のリリースでは、バージョン管理を使用した、迅速で、効率的な共同作業が可能になりました。
 
-変更を行った基本的な概要は、次のとおりです。
+以前のバージョンである Visual Studio 2015 以降に行われた主な変更点の要約を示します。
 
 * **基本の再定義**。 新しいセットアップ エクスペリエンスにより、必要なものを必要なタイミングでより短い時間でインストールできるようになりました。 大規模なソリューションやプロジェクトを読み込む場合でも、コードのフォルダーや単一のコード ファイルを操作する場合でも、Visual Studio の起動がより高速になりました。 さらに Visual Studio は、特に DevOps を大事にするチームにとって、全体像を把握するのに役立ちます。
 * **パフォーマンスと生産性**。 Microsoft は、新しく、現代的なモバイル、クラウド、デスクトップの開発機能を導入することを中心に取り組んできました。 全体的な取得機能、パフォーマンス、全般的な開発者生産性も改善されています。 Visual Studio の起動が以前と比較してより高速になり、より応答性が向上し、メモリーの消費量が少なくなりました。
 * **Azure によるクラウド アプリの開発**。 Microsoft Azure を使用するクラウド ファーストのアプリを簡単に作成できる Azure ツールのビルトイン スイート。 Visual Studio を使用すれば、Azure でアプリとサービスを構成、ビルド、デバッグ、パッケージ化、デプロイするのが容易になります。
 * **モバイル アプリの開発**。 Visual Studio 2017 では Xamarin が導入されています。これにより、1 つのコア コードベースとスキル セットを使用することでマルチプラットフォームのモバイル要件が統合され、短期間で成果を出すことができます。 既存のチーム、テクノロジへの投資、C# コードをモバイル対応にして、コンシューマー グレードのエクスペリエンスを予定より早くかつ予算以内で提供します。 モバイル ライフサイクルのすべてのステップを加速させ、ワールドクラスのコンシューマー エクスペリエンスまたは従業員の生産性向上を支援するアプリのポートフォリオを提供します。
-* **クロスプラットフォーム開発** 対象となるプラットフォームにソフトウェアをシームレスに届けます。 Redgate Data Tools により DevOps プロセスを SQL Server に拡張し、Visual Studio からのデータベース配置を安全に自動化します。 Visual Studio Tools for Unity を利用し、マルチプラットフォーム ゲームを開発し、公開します。 あるいは、.NET Core を利用し、変更しなくても Windows、Linux、macOS オペレーティング システムをまたいで実行できるアプリやライブラリを作成します。 (15.3 の新機能: .NET Core 2.0 SDK の side-by-side サポート)
+* **クロスプラットフォーム開発**。 対象となるプラットフォームにソフトウェアをシームレスに届けます。 Redgate Data Tools により DevOps プロセスを SQL Server に拡張し、Visual Studio からのデータベース配置を安全に自動化します。 あるいは、.NET Core を利用し、変更しなくても Windows、Linux、macOS オペレーティング システムをまたいで実行できるアプリやライブラリを作成します。 (**15.3 の新機能**: .NET Core 2.0 SDK の side-by-side サポート)
+* **ゲーム開発**。 Visual Studio tools Unity (VSTU) を利用すると、Visual Studio を使用して C# でゲームとエディター スクリプトを記述した後、強力なデバッガーを使用してエラーを検出して修正できます。 VSTU の最新リリースでは、Unity の ShaderLab シェーダー言語の構文の色分け、デバッガーの視覚化機能の向上、および、MonoBehavior ウィザードによるコード生成の機能強化などが行われました。 また、VSTU により、Unity のプロジェクト ファイル、コンソール メッセージ、およびゲームを開始する機能が Visual Studio に統合されるため、コードの記述中に Unity エディターとの間で切り替える手間を少なくできます。
 
 > [!NOTE]
 > Visual Studio 2017 の新機能の一覧については、「[リリース ノート](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)」をご覧ください。
@@ -58,9 +58,14 @@ Visual Studio 2017 の最も重要な改善点と新機能について、その�
 
 ステップ バイ ステップの手順を含む、新しいインストール エクスペリエンスについて詳しくは、マイクロソフトの [Visual Studio のインストール](../install/install-visual-studio.md)に関するページをご覧ください。
 
+### <a name="a-focus-on-accessibility"></a>アクセシビリティに重点を置く
+**15.3 では**、Visual Studio と多くのユーザーが使用している支援技術との互換性を改善する、1,700 を超える変更を行いました。 スクリーン リーダーやハイ コントラスト テーマなどの支援技術との互換性を従来よりも改善するシナリオが、数多くあります。 デバッガー、エディター、シェルのすべてに重要な変更点があります。
+
+詳細については、ブログ投稿の「[Accessibility improvements in Visual Studio 2017 version 15.3 (Visual Studio 2017 バージョン 15.3 でのアクセシビリティの機能強化)](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/accessibility-improvements-in-visual-studio-2017-version-15-3/)」をご覧ください。
+
 ## <a name="performance-and-productivity"></a>パフォーマンスと生産性
 ### <a name="sign-in-across-multiple-accounts"></a>複数のアカウント間のサインイン  
-チーム エクスプローラー、Azure Tools、Windows ストアでの発行で使用するユーザー アカウントを共有できるように、Visual Studio で新しい ID サービスを導入しました。
+チーム エクスプローラー、Azure Tools、Microsoft ストアでの発行で使用するユーザー アカウントを共有できるように、Visual Studio で新しい ID サービスを導入しました。
 
 また、より長い時間サインインしたままにできます。 Visual Studio に 12 時間ごとにサインインを求められることはなくなりました。 詳細については、「[Fewer Visual Studio Sign-in Prompts](https://blogs.msdn.microsoft.com/visualstudio/2016/08/15/fewer-visual-studio-sign-in-prompts/)」 (Visual Studio のサインインの確認メッセージを減らす) のブログの投稿を参照してください。
 
@@ -110,7 +115,7 @@ Visual Studio Enterprise 2017 では、ライブ単体テストを実行する�
 
 ![ライブ単体テスト](../ide/media/lut-codewindow.png "Visual Studio の Enterprise エディションの新しいライブ単体テスト機能の例")
 
-詳しくは、ブログの投稿「[Live Unit Testing in Visual Studio 2017 Enterprise](https://blogs.msdn.microsoft.com/visualstudio/2017/03/09/live-unit-testing-in-visual-studio-2017-enterprise/)」(Visual Studio 2017 Enterprise でのライブ単体テスト) をご覧ください。
+詳細については、「[Introducing Live Unit Testing](../test/live-unit-testing-intro.md)」(Live Unit Testing の概要) を参照してください。 Visual Studio Enterprise 2017 の各リリースで追加された新機能の一覧は、「[What's new in Live Unit Testing](../test/live-unit-testing-whats-new.md)」(Live Unit Testing の新機能) を参照してください。
 
 #### <a name="set-up-a-cicd-pipeline-to-run-automated-tests-efficiently"></a>自動化されたテストを効率的に実行する CI/CD パイプラインを設定する
 自動化されたテストは、DevOps パイプラインの重要な部分です。 短い周期で、一貫性と信頼性のある方法でソリューションをテストし、公開できます。 CI/CD (Continuous Integration and Continuous Delivery/継続的インテグレーションと継続的配信) フローにより、このプロセスがさらに効率的になります。
@@ -119,14 +124,9 @@ Visual Studio Enterprise 2017 では、ライブ単体テストを実行する�
 
 [Continuous Delivery Tools for Visual Studio (Visual Studio 用の継続的配信ツール)](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) DevLabs 拡張の新機能の詳細については、「[Committing with Confidence: Commit Time Code Quality (自信を持ってコミットする: タイム コードの品質をコミットする)](https://blogs.msdn.microsoft.com/visualstudio/2017/08/21/committing-with-confidence-commit-time-code-quality-information-updated/)」をご覧ください。
 
-### <a name="a-focus-on-accessibility"></a>アクセシビリティに重点を置く
-15.3 では、Visual Studio と多くのユーザーが使用している支援技術との互換性を改善する、1,700 を超える変更を行いました。 スクリーン リーダーやハイ コントラスト テーマなどの支援技術との互換性を従来よりも改善するシナリオが、数多くあります。 デバッガー、エディター、シェルのすべてに重要な変更点があります。
-
-詳細については、ブログ投稿の「[Accessibility improvements in Visual Studio 2017 version 15.3 (Visual Studio 2017 バージョン 15.3 でのアクセシビリティの機能強化)](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/accessibility-improvements-in-visual-studio-2017-version-15-3/)」をご覧ください。
-
 ### <a name="visual-studio-ide-enhancements"></a>Visual Studio IDE の拡張機能
 #### <a name="use-new-refactorings"></a>新しいリファクタリングの使用
-15.3 では、次のような便利な新しいリファクタリングが追加されました。
+**15.3 では**、次のような新しいリファクタリングが追加されました。
 *   マージ競合を解決する
 *   パラメーターを追加する (CallSite から)
 *   オーバーライドを生成する
@@ -137,33 +137,31 @@ Visual Studio Enterprise 2017 では、ライブ単体テストを実行する�
 *   if を switch に変換する
 *   未使用の変数を削除する
 
-詳細については、「[Visual Studio でのリファクタリング、コード生成、クイック アクション](refactoring-code-generation-quick-actions.md)」ページをご覧ください。
-
+詳細については、「[Visual Studio でのリファクタリング、コード生成、クイック アクション](refactoring-code-generation-quick-actions.md)」ページをご覧ください。  
 
 #### <a name="interact-with-git"></a>Git との連携
 Visual Studio でプロジェクトを操作する際に、コードを迅速にセットアップしてコミットし、Git サービスにコードを公開できます。 また、IDE の右下隅のボタンからメニュー クリックを使用して、Git リポジトリを管理することもできます。
 
 ![Visual Studio 2017 と Git ダイアログのやり取り](../ide/media/vsIDE-GitInteraction.png "Visual Studio IDE の Git ツール")
 
-#### <a name="view-and-navigate-code-with-structure-visualizer"></a>構造ビジュアライザーを使用したコードの表示と移動
-構造ビジュアライザーは、構造のガイド線 (別名 インデント ガイド) をコードに描きます。 これを使用することで、スクロールすることなく現在作業しているコード ブロックを視覚化して検出できます。 行にカーソルを置くとツールチップが表示され、そのブロックの開始地点とその親を確認できます。 TextMate 文法を介してサポートされるすべての言語のほか、C#、Visual Basic、XAML で使用できます。
-
-![Visual Studio 2017 の構造ビジュアライザー](../ide/media/vsIDE-StructureVisualizer.png "Visual Studio の構造体ビジュアライザー")
-
 #### <a name="experience-improved-navigation-controls"></a>操作性が改善されたナビゲーション コントロール
 より確実に混乱なく A から B に移動できるようにナビゲーション エクスペリエンスを更新しました。
 
-* **ジャンプ** (Ctrl + F12) &ndash; 任意の基本データ型やメンバーから各種実装に移動します。
+* **15.4 の新機能**: **定義へ移動 (Ctrl キーを押しながらクリックまたは F12)** &ndash; マウスを使っているユーザーは、**Ctrl** キーを押しながらメンバーをクリックすることで、メンバーの定義に簡単に移動することができます。 **Ctrl** キーを押しながらコード記号の上にマウスを置くと、下線が引かれ、リンクに変わります。 詳細については、「[Go To Definition and Peek Definition](../ide/go-to-and-peek-definition.md)」([定義へ移動] および [定義をここに表示]) を参照してください。  
 
-* **すべてにジャンプ** (Ctrl + T または Ctrl + ,) &ndash; 任意のファイル/型/メンバー/シンボル宣言に直接移動します。 結果の一覧をフィルターしたり、クエリ構文 (例: ファイルは “f searchTerm”、型は “t searchTerm” など) を使用したりできます。
+* **実装に移動 (Ctrl + F12)** &ndash;任意の基本データ型やメンバーから各種実装に移動します。
+
+* **すべてにジャンプ (Ctrl + T または Ctrl + ,)** &ndash; 任意のファイル/型/メンバー/シンボル宣言に直接移動します。 結果の一覧をフィルターしたり、クエリ構文 (例: ファイルは “f searchTerm”、型は “t searchTerm” など) を使用したりできます。
 
  ![[すべてにジャンプ] の機能強化](../ide/media/vs2017ide-navigation-go-to.png "強化された [すべてにジャンプ] 機能")
 
-* **すべての参照の検索 (Shift+F12)** &ndash; 構文の色づけにより、[すべての参照の検索] の結果をプロジェクト、定義、パスの組み合わせでグループ化できます。 また、結果を "ロック" して元の結果を失うことなく別の参照を検索できます。
+* **すべての参照の検索 (Shift + F12)** &ndash; 構文の色付けにより、[すべての参照の検索] の結果をプロジェクト、定義、パスの組み合わせでグループ化できます。 また、結果を "ロック" して元の結果を失うことなく別の参照を検索できます。
 
  ![新しい [すべての参照の検索] ツール](../ide/media/vs2017ide-find-all-references.png "新しい [すべての参照の検索] ツールの例")
 
-* **インデント ガイド** &ndash; 灰色の縦の点線がコード内のランドマークとしての役割を果たし、ビューのフレーム内のコンテキストを提供します。 おすすめの Productivity Power Tools で認識できます。
+* **Structure Visualizer\(構造ビジュアライザ\)** &ndash; 灰色の縦の点線 (インデント ガイド) がコード内のランドマークとしての役割を果たし、ビューのフレーム内のコンテキストを提供します。 おすすめの Productivity Power Tools で認識できます。 これを使用することで、スクロールすることなく現在作業しているコード ブロックを視覚化して検出できます。 行にカーソルを置くとツールチップが表示され、そのブロックの開始地点とその親を確認できます。 TextMate 文法を介してサポートされるすべての言語のほか、C#、Visual Basic、XAML で使用できます。  
+
+![Visual Studio 2017 の構造ビジュアライザー](../ide/media/vsIDE-StructureVisualizer.png "Visual Studio の構造体ビジュアライザー")
 
 新しい生産性向上機能について詳しくは、[Visual Studio 2017 での生産性向上](https://blogs.msdn.microsoft.com/visualstudio/2016/11/28/productivity-in-visual-studio-2017-rc/)に関する Mark Wilson-Thomas のブログ投稿をご覧ください。
 
@@ -206,7 +204,7 @@ Visual Studio には、C++ Core ガイドラインの配信、C++11 および C+
 
 ## <a name="cross-platform-development"></a>プラットフォーム間の開発
 ### <a name="redgate-data-tools"></a>Redgate Data Tools
-DevOps 機能を SQL Server データベース開発に拡張するために、Visual Studio 2017 の次のエディションで Redgate Data Tools が利用できるようになりました。
+DevOps 機能を SQL Server データベース開発に拡張するために、Visual Studio で Redgate Data Tools が利用できるようになりました。
 
 Visual Studio 2017 Enterprise に付属:
 - [Redgate ReadyRoll Core](http://www.red-gate.com/products/sql-development/readyroll/entrypage/microsoft-and-readyroll?utm_source=microsoft&utm_medium=link&utm_campaign=readyroll&utm_term=docs-newinvs) は、移行スクリプトの開発、ソース管理によるデータベースの変更管理、アプリケーション変更と並行した SQL Server データベース変更の配置の安全な自動化に役立ちます。
@@ -217,32 +215,33 @@ Visual Studio 2017 のすべてのエディションに付属:
 
 詳しくは、ブログの投稿「[Visual Studio 2017 Redgate Data Tools](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/redgate-data-tools-in-visual-studio-2017/)」をご覧ください。
 
+### <a name="net-core"></a>.NET Core
+.NET Core は、モジュール形式のクロスプラットフォームかつオープン ソースを実装した汎用の .NET Standard です、.NET Framework と同じ API がたくさん含まれています。
+
+.NET Core プラットフォームは複数コンポーネントで構成され、マネージ コンパイラ、ランタイム、基本クラス ライブラリ、および ASP.NET Core などの多数のアプリケーション モデルが含まれます。 .NET Core は、Windows、Linux、macOS の 3 つの主要オペレーティング システムをサポートしています。 .NET Core は、デバイス、クラウド、埋め込み/IoT のシナリオで使用できます。
+
+Docker 対応にもなりました。  
+
+**15.3 の新機能**: Visual Studio 2017 バージョン 15.3 は .NET Core 2.0 開発に対応しています。 .NET Core 2.0 を使用するには、.NET Core 2.0 SDK を別にダウンロードし、インストールする必要があります。  
+
+詳細については、「[.NET Core ガイド](https://docs.microsoft.com/dotnet/core/index)」ページを参照してください。
+
+## <a name="games-development"></a>ゲーム開発
 ### <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity
 "Unity のゲーム開発" ワークロードの一部として、2D ゲーム、3D ゲーム、対話型コンテンツを開発するためのクロスプラットフォーム開発に役立つツールを追加しました。 Visual Studio 2017 と Unity 5.6 を利用することで、1 回作成するだけですべてのモバイル プラットフォーム、WebGL、Mac、PC、Linux デスクトップ、Web、コンソールなど、21 のプラットフォームに発行できます。
 
 詳しくは、「[Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md)」 (Unity の Visual Studio ツール) をご覧ください。
 
-### <a name="net-core"></a>.NET Core
-.NET Core は、モジュール形式のクロスプラットフォームかつオープン ソースを実装した汎用の .NET Standard です。.NET Framework と同じ API がたくさん含まれています。
-
-.NET Core プラットフォームは複数コンポーネントで構成され、マネージ コンパイラ、ランタイム、基本クラス ライブラリ、および ASP.NET Core などの多数のアプリケーション モデルが含まれます。 .NET Core は、Windows、Linux、macOS の 3 つの主要オペレーティング システムをサポートしています。 .NET Core は、デバイス、クラウド、埋め込み/IoT のシナリオで使用できます。
-
-Docker 対応にもなりました。
-
-**15.3 の新機能**: Visual Studio 2017 バージョン 15.3 は .NET Core 2.0 開発に対応しています。 (15.3 では、.NET Core 2.0 を使用するには、.NET Core 2.0 SDK を別にダウンロードし、インストールする必要があります。)
-
-詳細については、「[.NET Core ガイド](https://docs.microsoft.com/dotnet/core/index)」ページを参照してください。
-
 ## <a name="talk-to-us"></a>ご意見  
- Visual Studio チームにフィードバックを送ることにどんな意味があるのでしょうか? お客様からのフィードバックは、すべて真摯に受け止めており、チームの業務の支えにもなっています。
+ Visual Studio チームにフィードバックを送ることにどんな意味があるのでしょうか? お客様からのフィードバックは、すべて真剣に考慮することにしています。 フィードバックによって今後の動向が左右されることになります。  
 
-Visual Studio を向上させることができるご提案がある場合、または問題を報告する場合、詳しくは「[ご意見](../ide/talk-to-us.md)」ページを参照してください。
+Visual Studio を向上させることができるご提案がある場合、または問題を報告する場合は、「[ご意見](../ide/talk-to-us.md)」ページを参照してください。  
 
 ### <a name="report-a-problem"></a>問題を報告する  
- メッセージは、発生した問題の影響をすべて表せていない場合があります。 ハング、クラッシュ、またはその他のパフォーマンスの問題が発生した場合、**[問題の報告]** ツールを使用すると、再現コードやサポート ファイル (スクリーン ショット、トレース ファイル、ヒープ ダンプ ファイルなど) を簡単に Microsoft と共有することができます。 このツールの使用方法については、[問題を報告する方法](how-to-report-a-problem-with-visual-studio-2017.md)に関するページを参照してください。
+ メッセージは、発生した問題の影響をすべて表せていない場合があります。 ハング、クラッシュ、またはその他のパフォーマンスの問題が発生した場合、**[問題の報告]** ツールを使用すると、再現手順やサポート ファイル (スクリーン ショット、トレース ファイル、ヒープ ダンプ ファイルなど) を簡単に Microsoft と共有することができます。 このツールの使用方法については、[問題を報告する方法](how-to-report-a-problem-with-visual-studio-2017.md)に関するページを参照してください。  
 
 ### <a name="track-your-issue-in-connect"></a>問題点を Connect で追跡する  
- Visual Studio に関するフィードバックの状況を追跡するには、 [Connect](http://connect.microsoft.com/) でバグ報告をしてください。 報告したら、Connect に戻って、その状態を追跡することができます。
+ Visual Studio に関するフィードバックの状況を追跡するには、 [Connect](http://connect.microsoft.com/) でバグ報告をしてください。 報告したら、Connect に戻って、その状態を追跡することができます。  
 
 ## <a name="see-also"></a>関連項目
 * [Visual Studio 2017 リリース ノート](https://www.visualstudio.com/news/vs2015-vs)
@@ -250,4 +249,3 @@ Visual Studio を向上させることができるご提案がある場合、ま
 * [C# の新機能](https://docs.microsoft.com/dotnet/csharp/csharp-7)  
 * [Team Foundation Server の新機能](https://www.visualstudio.com/docs/whats-new)
 * [Visual Studio for Mac の新機能](https://www.visualstudio.com/vs/visual-studio-mac/)
-

@@ -1,27 +1,29 @@
 ---
 title: "JsSetProperty 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "jsrt/JsSetProperty"
-helpviewer_keywords: 
-  - "JsSetProperty 関数"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: jsrt/JsSetProperty
+helpviewer_keywords: JsSetProperty function
 ms.assetid: 2c36bebf-ec86-425c-8131-2dd75fd30f40
-caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0930b0b3e59e2ea35f85295e2adc2cc5fdda33e1
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# JsSetProperty 関数
+# <a name="jssetproperty-function"></a>JsSetProperty 関数
 オブジェクトのプロパティを格納します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 STDAPI_(JsErrorCode) JsSetProperty(  
@@ -32,7 +34,7 @@ STDAPI_(JsErrorCode) JsSetProperty(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `object`  
  プロパティを格納するオブジェクト。  
   
@@ -45,14 +47,14 @@ STDAPI_(JsErrorCode) JsSetProperty(
  `useStrictRules`  
  設定するプロパティは、厳格モードの規則に従う必要があります。  
   
-## 戻り値  
- 操作が成功した場合はコード `JsNoError`、操作が失敗した場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 操作が成功した場合はコード `JsNoError` 、操作が失敗した場合はエラー コード。  
   
-## 解説  
+## <a name="remarks"></a>コメント  
  アクティブ スクリプトのコンテキストが必要です。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** jsrt.h  
   
-## 参照  
- [リファレンス \(JavaScript ランタイム\)](../chakra-hosting/reference-javascript-runtime.md)
+## <a name="see-also"></a>関連項目  
+ [リファレンス (JavaScript ランタイム)](../chakra-hosting/reference-javascript-runtime.md)

@@ -1,58 +1,58 @@
 ---
-title: "/Clean (devenv.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "/clean Devenv スイッチ"
-  - "ビルド [Team System], 消去 (ファイルを)"
-  - "clean Devenv スイッチ"
-  - "Devenv, /clean スイッチ"
+title: -Clean (devenv.exe) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- builds [Team System], cleaning files
+- clean Devenv switch
+- /clean Devenv switch
+- Devenv, /clean switch
 ms.assetid: 79929dfd-22c9-4cec-a0d0-a16f15b8f7e4
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: bd4b344860190d0dcfc01adf6ccf553d34c5b038
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# /Clean (devenv.exe)
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-中間ファイルと出力ディレクトリをすべて消去します。  
+# <a name="clean-devenvexe"></a>/Clean (devenv.exe)
+すべての中間ファイルと出力ディレクトリを消去します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 devenv FileName /Clean [ /project projectnameorfile [/projectconfig name ] ]  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  `FileName`  
- 必ず指定します。  ソリューション ファイルまたはプロジェクト ファイルの完全なパスと名前です。  
+ 必須です。 ソリューション ファイルまたはプロジェクト ファイルの完全パスと名前。  
   
- \/project  `ProjName`  
- 省略可能です。  ソリューション内のプロジェクト ファイルのパスと名前です。  `SolutionName` フォルダーからプロジェクト ファイルまでの相対パス、プロジェクトの表示名、またはプロジェクト ファイルの完全パスと名前を入力できます。  
+ /project `ProjName`  
+ 省略可能です。 ソリューション内のプロジェクト ファイルのパスと名前です。 `SolutionName` フォルダーからプロジェクト ファイルへの相対パス、プロジェクトの表示名、またはプロジェクト ファイルの完全なパスと名前を入力できます。  
   
- \/projectconfig `ProjConfigName`  
- 省略可能です。  `/project` 引数で指定されたプロジェクトを消去するときに使用される、プロジェクトのビルド構成の名前です。  
+ /projectconfig `ProjConfigName`  
+ 省略可能です。 指定した `/project` のクリーン時に使用されるプロジェクトのビルド構成の名前。  
   
-## 解説  
- このスイッチは、統合開発環境 \(IDE: Integrated Development Environment\) の **\[ソリューションのクリーン\]** メニュー コマンドと同じ機能を果たします。  
+## <a name="remarks"></a>コメント  
+ このスイッチは、統合開発環境 (IDE) 内の **[ソリューションのクリーン]** メニュー コマンドと同じ機能を実行します。  
   
- 空白を含む文字列は二重引用符で囲みます。  
+ 空白を含む文字列を二重引用符で囲みます。  
   
- エラーなどの削除とビルドの情報は、**\[コマンド\]** ウィンドウまたは `/out` スイッチで指定したログ ファイルに表示されます。  
+ エラーを含むクリーンとビルドの概要情報は、**[コマンド]** ウィンドウ、または `/out` スイッチで指定された任意のログ ファイルに表示できます。  
   
-## 使用例  
- 最初の例では、ソリューション ファイルで指定されている既定の構成を使用して、`MySolution` ソリューションを消去します。  
+## <a name="example"></a>例  
+ 最初の例では、ソリューション ファイルで指定された既定の構成を使用して、`MySolution` ソリューションを消去します。  
   
- 2 番目の例では、`MySolution` の `Debug` ソリューション構成にある `Debug` プロジェクト ビルド構成を使用して、`CSharpConsoleApp` プロジェクトを消去します。  
+ 2 番目の例では、`Debug` プロジェクトのビルド構成を使用して、`MySolution` の `Debug` ソリューション構成内でプロジェクト `CSharpConsoleApp` を消去します。  
   
 ```  
 Devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /Clean  
@@ -60,8 +60,8 @@ Devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\M
 devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /Clean /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig "Debug"   
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)   
- [\/Build](../../ide/reference/build-devenv-exe.md)   
- [\/Rebuild](../../ide/reference/rebuild-devenv-exe.md)   
- [\/Out](../../ide/reference/out-devenv-exe.md)
+ [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md)   
+ [/Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)   
+ [/Out (devenv.exe)](../../ide/reference/out-devenv-exe.md)

@@ -4,8 +4,7 @@ ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -14,37 +13,21 @@ dev_langs:
 - FSharp
 - C++
 helpviewer_keywords:
-- performance, JavaScript [Windows Store apps]
-- performance tools, JavaScript [Windows Store apps]
+- performance, JavaScript [UWP apps]
+- performance tools, JavaScript [UWP apps]
 - UI Responsiveness Profiler [JavaScript]
 - profiler, UI responsiveness [JavaScript]
-- profiler, JavaScript [Windows Store apps]
+- profiler, JavaScript [UWP apps]
 ms.assetid: da13070a-ba40-47dd-a846-ad72eed70d0b
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 90fed413835f118e59bc32f0b94cb62a40baaca1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: bee8bdc56586f1c79ff10d8d2b70e30801f54254
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>ユニバーサル Windows アプリの HTML UI の応答性を分析する
 このトピックでは、アプリのパフォーマンス問題を UI 応答性プロファイラーを使って切り分ける方法を説明します。UI 応答性プロファイラーは、ユニバーサル Windows アプリで利用できるパフォーマンス ツールです。  
@@ -58,7 +41,7 @@ ms.lasthandoff: 05/13/2017
 -   ビジュアルの更新頻度が予想よりも少ない。 この症状は、UI スレッドの負荷が高すぎて滑らかなフレーム レートを維持できなくなった場合に発生します。 たとえば、UI スレッドがビジーであるためにコマ落ちが発生することがあります。 ネットワーク要求、イメージ デコード、描画など、一部の非 UI スレッド作業でも、ビジュアル更新の頻度が制限されることがあります。 すべての描画が UI スレッドで処理されるわけではありません。  
   
 ##  <a name="RunningProfiler"></a> HTML UI の応答性ツールの実行  
- HTML UI 応答性ツールは、動作中の Windows ユニバーサルまたは Windows ストア アプリが、Visual Studio で開かれているか、Windows 8 以降を実行しているコンピューターにインストールされている場合に使用できます。  
+ HTML UI 応答性ツールは、動作中の UWP アプリまたは Windows 8.1 アプリが、Visual Studio で開かれているか、Windows 8 以降を実行しているコンピューターにインストールされている場合に使用できます。  
   
 1.  アプリを Visual Studio から実行している場合は、 **[標準]** ツール バーの **[デバッグの開始]** の一覧から、配置ターゲットを選択します (Windows Phone エミュレーターの 1 つ、 **ローカル コンピューター**、 **シミュレーター**、 **リモート コンピューター**など)。  
   
@@ -72,7 +55,7 @@ ms.lasthandoff: 05/13/2017
   
     -   **[スタートアップ プロジェクト]**。 現在のスタートアップ プロジェクトを分析するには、このオプションを選択します。 アプリをリモート コンピューターまたはデバイスで実行している場合は、既定値であるこの設定を使用する必要があります。  
   
-    -   **[実行中のアプリ]**。 実行中のアプリの一覧から Windows ストア アプリを選択するには、このオプションを選択します。 アプリをリモート コンピューターまたはデバイスで実行している場合は、このオプションを使用できません。  
+    -   **[実行中のアプリ]**。 実行中のアプリの一覧から UWP アプリを選択するには、このオプションをクリックします。 アプリをリモート コンピューターまたはデバイスで実行している場合は、このオプションを使用できません。  
   
          このオプションを使用すると、ソース コードにアクセスできないときに、コンピューター上で実行されているアプリのパフォーマンスを分析できます。  
   
@@ -80,7 +63,8 @@ ms.lasthandoff: 05/13/2017
   
          このオプションを使用すると、ソース コードにアクセスできないときに、コンピューターにインストールされているアプリのパフォーマンスを分析できます。 このオプションは、自分が開発に携わっていないアプリのパフォーマンスを分析する場合にも便利です。  
   
-3.  **[使用可能なツール]**で **[HTML UI の応答性]**を選択し、 **[開始]**をクリックします。  
+3.  
+                **[使用可能なツール]**で **[HTML UI の応答性]**を選択し、 **[開始]**をクリックします。  
   
 4.  UI 応答性プロファイラーの開始時に、Visual Studio ETW Collector.exe を実行するためのアクセス許可を要求するユーザー アカウント制御ウィンドウが表示される場合があります。 **[はい]**をクリックします。  
   
@@ -375,7 +359,7 @@ if (performance.mark && performance.measure) {
   
 -   UI 応答性プロファイラーについては、この Build 2013 カンファレンスの [ビデオ](http://channel9.msdn.com/Events/Build/2013/3-316) をご覧ください。  
   
--   JavaScript を使用して Windows 用にビルドされた Windows ストア アプリのパフォーマンスのヒントを参照します。 詳細については、「 [JavaScript を使った Windows ストア アプリのパフォーマンスのベスト プラクティス](http://msdn.microsoft.com/library/windows/apps/hh465194.aspx)」を参照してください。  
+-   JavaScript を使用して Windows 用にビルドされた UWP アプリのパフォーマンスのヒントを参照します。 詳細については、「[JavaScript を使った UWP アプリのパフォーマンスのベスト プラクティス](http://msdn.microsoft.com/library/windows/apps/hh465194.aspx)」を参照してください。  
   
 -   シングル スレッドのコード実行モデルとパフォーマンスについては、「 [コードの実行](http://msdn.microsoft.com/library/windows/apps/hh781217.aspx)」を参照してください。  
   

@@ -1,28 +1,28 @@
 ---
-title: "SuspendProfile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SuspendProfile"
+title: SuspendProfile | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: SuspendProfile
 ms.assetid: 7c8de6e6-bb88-4353-92c3-ce7290310d61
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f6b91542039544e085b6599923e9cc8dcb08d6c5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# SuspendProfile
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-`SuspendProfile` メソッドは、指定されたプロファイル レベルの保留\/再開カウンターをインクリメントします。  
+# <a name="suspendprofile"></a>SuspendProfile
+`SuspendProfile` メソッドは、指定されたプロファイル レベルの保留/再開カウンターをインクリメントします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 PROFILE_COMMAND_STATUS PROFILERAPI SuspendProfile(  
@@ -30,49 +30,49 @@ PROFILE_COMMAND_STATUS PROFILERAPI SuspendProfile(
                        unsigned int dwId);  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `Level`  
   
- パフォーマンス データ収集を適用できるプロファイル レベルを指定します。  パフォーマンス データ収集を適用できるレベルには 3 つあり、**PROFILE\_CONTROL\_LEVEL** 列挙子を使って指定できます。次のレベルのいずれかを指定できます。  
+ パフォーマンス データ収集を適用できるプロファイル レベルを示します。 次の **PROFILE_CONTROL_LEVEL** 列挙子を使用して、パフォーマンス データ収集を適用できる 3 つのレベルのいずれかを示すことができます。  
   
 |列挙子|説明|  
-|---------|--------|  
-|PROFILE\_GLOBALLEVEL|グローバル レベル設定は、プロファイル実行のすべてのプロセスとスレッドに影響します。|  
-|PROFILE\_PROCESSLEVEL|プロセス レベル設定は、指定されたプロセスに含まれるすべてのスレッドに影響します。|  
-|PROFILE\_THREADLEVEL|スレッド プロファイル レベル設定は、指定されたスレッドに影響します。|  
+|----------------|-----------------|  
+|PROFILE_GLOBALLEVEL|グローバル レベル設定は、プロファイル実行のすべてのプロセスとスレッドに影響します。|  
+|PROFILE_PROCESSLEVEL|プロセス レベル設定は、指定されたプロセスの一部であるスレッドすべてに影響します。|  
+|PROFILE_THREADLEVEL|スレッド プロファイル レベル設定は、指定されたスレッドに影響します。|  
   
  `dwId`  
   
  システムによって生成される、プロセスまたはスレッドの ID。  
   
-## プロパティ値\/戻り値  
- 関数の成功または失敗は、**PROFILE\_COMMAND\_STATUS** 列挙型を使って表されます。  戻り値は次のいずれかになります。  
+## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
+ 関数の成功または失敗は、**PROFILE_COMMAND_STATUS** 列挙型を使って表されます。 戻り値は次のいずれかになります。  
   
 |列挙子|説明|  
-|---------|--------|  
-|PROFILE\_ERROR\_ID\_NOEXIST|プロファイル要素 ID が存在しません。|  
-|PROFILE\_ERROR\_LEVEL\_NOEXIST|指定されたプロファイル レベルが存在しません。|  
-|PROFILE\_ERROR\_MODE\_NEVER|関数が呼び出されたときに、プロファイル モードが NEVER に設定されました。|  
-|PROFILE\_ERROR\_NOT\_YET\_IMPLEMENTED|プロファイル関数呼び出し、プロファイル レベル、または呼び出しとレベルの組み合わせがまだ実装されていません。|  
-|PROFILE\_OK|呼び出しに成功しました。|  
+|----------------|-----------------|  
+|PROFILE_ERROR_ID_NOEXIST|プロファイル要素 ID が存在しません。|  
+|PROFILE_ERROR_LEVEL_NOEXIST|指定されたプロファイル レベルが存在しません。|  
+|PROFILE_ERROR_MODE_NEVER|関数が呼び出されたときに、プロファイル モードが NEVER に設定されました。|  
+|PROFILE_ERROR_NOT_YET_IMPLEMENTED|プロファイル関数呼び出し、プロファイル レベル、または呼び出しとレベルの組み合わせがまだ実装されていません。|  
+|PROFILE_OK|呼び出しに成功しました。|  
   
-## 解説  
- 保留\/再開カウンターの初期値は 0 です。  SuspendProfile を呼び出すたびに、保留\/再開数に 1 が加算されます。ResumeProfile を呼び出すたびに、1 が減算されます。  
+## <a name="remarks"></a>コメント  
+ 保留/再開カウンターの初期値は 0 です。 SuspendProfile を呼び出すたびに、保留/再開数に 1 が加算され、ResumeProfile を呼び出すたびに、1 が減算されます。  
   
- 保留\/再開数が 0 よりも大きい場合、そのレベルの保留\/再開状態はオフになります。  保留\/再開数が 0 以下の場合、保留\/再開状態はオンになります。  
+ 保留/再開数が 0 よりも大きい場合、そのレベルの保留/再開状態はオフになります。 数が 0 以下の場合、保留/再開状態はオンになります。  
   
- 開始\/停止状態と保留\/再開状態の両方がオンの場合、そのレベルのプロファイル状態はオンです。  プロファイルの対象となるスレッドでは、グローバル レベル状態、プロセス レベル状態、スレッド レベル状態がすべてオンである必要があります。  
+ 開始/停止状態と保留/再開状態の両方がオンの場合、そのレベルのプロファイル状態はオンです。 プロファイルの対象となるスレッドでは、グローバル、プロセス、およびスレッド レベル状態がすべてオンである必要があります。  
   
-## 同等の .NET Framework 関数  
+## <a name="net-framework-equivalent"></a>同等の .NET Framework 関数  
  Microsoft.VisualStudio.Profiler.dll  
   
-## 関数の情報  
+## <a name="function-information"></a>関数の情報  
  ヘッダー : VSPerf.h で宣言  
   
  インポート ライブラリ : VSPerf.lib  
   
-## 使用例  
- 次に SuspendProfile メソッドの例を示します。  この例では、[PROFILE\_CURRENTID](../profiling/profile-currentid.md) で識別されるプロセスまたはスレッドに対し、StartProfile が既に呼び出されていることを前提としています。  
+## <a name="example"></a>例  
+ SuspendProfile メソッドの例を以下に示します。 この例では、[PROFILE_CURRENTID](../profiling/profile-currentid.md) で識別されるプロセスまたはスレッドに対して、StartProfile が既に呼び出されていることを前提としています。  
   
 ```  
 void ExerciseSuspendProfile()  
@@ -106,5 +106,5 @@ void ExerciseSuspendProfile()
 }  
 ```  
   
-## 参照  
- [Visual Studio プロファイラー API リファレンス \(ネイティブ\)](../profiling/visual-studio-profiler-api-reference-native.md)
+## <a name="see-also"></a>関連項目  
+ [Visual Studio プロファイラー API リファレンス (ネイティブ)](../profiling/visual-studio-profiler-api-reference-native.md)

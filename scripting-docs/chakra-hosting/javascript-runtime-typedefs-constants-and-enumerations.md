@@ -1,23 +1,27 @@
 ---
-title: "JavaScript ランタイムの Typedef、定数、および列挙型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "JavaScript ランタイムの Typedefs、定数、列挙型 | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 1aa107ed-e144-4947-b5bb-90284a537174
-caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: ad2f5a086062d6a4473a1befc83790d76056d19c
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# JavaScript ランタイムの Typedef、定数、および列挙型
-JavaScript ランタイムの \(JsRT\) の typedef、定数、および列挙型は、Windows で動作するデスクトップとサーバー側アプリケーションへのスクリプト機能の追加をサポートします。  
+# <a name="javascript-runtime-typedefs-constants-and-enumerations"></a>JavaScript ランタイムの Typedef、定数、および列挙型
+JavaScript ランタイムの (JsRT) の typedef、定数、および列挙型は、Windows で動作するデスクトップとサーバー側アプリケーションへのスクリプト機能の追加をサポートします。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  次のグローバル typedef は JsRT ホスト処理をサポートします。  
   
 -   [JsBackgroundWorkItemCallback Typedef](../chakra-hosting/jsbackgroundworkitemcallback-typedef.md)  
@@ -60,13 +64,13 @@ JavaScript ランタイムの \(JsRT\) の typedef、定数、および列挙型
   
  次の定数は JsRT ホスト処理をサポートします。  
   
--   [JS\_INVALID\_PROPERTYID 定数](../chakra-hosting/js-invalid-propertyid-constant.md)  
+-   [JS_INVALID_PROPERTYID 定数](../chakra-hosting/js-invalid-propertyid-constant.md)  
   
--   [JS\_INVALID\_REFERENCE 定数](../chakra-hosting/js-invalid-reference-constant.md)  
+-   [JS_INVALID_REFERENCE 定数](../chakra-hosting/js-invalid-reference-constant.md)  
   
--   [JS\_INVALID\_RUNTIME\_HANDLE 定数](../chakra-hosting/js-invalid-runtime-handle-constant.md)  
+-   [JS_INVALID_RUNTIME_HANDLE 定数](../chakra-hosting/js-invalid-runtime-handle-constant.md)  
   
--   [JS\_SOURCE\_CONTEXT\_NONE 定数](../chakra-hosting/js-source-context-none-constant.md)  
+-   [JS_SOURCE_CONTEXT_NONE 定数](../chakra-hosting/js-source-context-none-constant.md)  
   
  次の列挙型は JsRT ホスト処理をサポートします。  
   
@@ -80,10 +84,10 @@ JavaScript ランタイムの \(JsRT\) の typedef、定数、および列挙型
   
 -   [JsRuntimeVersion 列挙型](../chakra-hosting/jsruntimeversion-enumeration.md)  
   
--   [JsTypedArrayType 列挙体](../chakra-hosting/jstypedarraytype-enumeration.md)  
+-   [JsTypedArrayType 列挙型](../chakra-hosting/jstypedarraytype-enumeration.md)  
   
 -   [JsValueType 列挙型](../chakra-hosting/jsvaluetype-enumeration.md)  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [JavaScript ランタイムのホスト](../chakra-hosting/hosting-the-javascript-runtime.md)   
  [JavaScript ランタイムのホスト処理](../chakra-hosting/javascript-runtime-hosting.md)

@@ -4,46 +4,29 @@ ms.custom:
 ms.date: 06/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.toolbox.html
+f1_keywords: vs.toolbox.html
 helpviewer_keywords:
 - Toolbox, HTML tab
 - HTML Designer, setting options
 - HTML tab in Toolbox
 ms.assetid: 9bfdd3b8-f5ac-4a5f-bdbf-c2b4e97641d8
-caps.latest.revision: 13
-author: kempb
-ms.author: kempb
+caps.latest.revision: "13"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d2f4eba36e9069a35cf279ccf1c78f72a51d77a1
-ms.openlocfilehash: bc243e4d5ec1141244314109aa76fef86287d1c1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
-
+ms.openlocfilehash: def8de31a28a6a49f611c863ebb88d566ff93aa6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="toolbox-html-tab"></a>ツールボックス、[HTML] タブ
-ツールボックスの [**HTML**] タブは、Web ページと Web フォームで使用するコンポーネントを提供します。 このタブを表示するには、まず、HTML デザイナーで編集するためのドキュメントを開きます。 [**表示**] メニューで [**ツールボックス**] をクリックし、ツールボックスの [**HTML**] タブをクリックします。  
+ツールボックスの **[HTML]** タブは、Web ページと Web フォームで使用するコンポーネントを提供します。 このタブを表示するには、まず、HTML デザイナーで編集するためのドキュメントを開きます。 **[表示]** メニューで **[ツールボックス]** をクリックし、ツールボックスの **[HTML]** タブをクリックします。  
 
- [**HTML**] タブでツールのインスタンスを作成するには、ドキュメントに追加するツールをダブルクリックするか、またはツールを選択して編集サーフェイスの目的の位置にドラッグします。  
+ **[HTML]** タブでツールのインスタンスを作成するには、ドキュメントに追加するツールをダブルクリックするか、またはツールを選択して編集サーフェイスの目的の位置にドラッグします。  
 
 ## <a name="tasks"></a>タスク  
 
@@ -119,7 +102,7 @@ ms.lasthandoff: 06/23/2017
 >  すべてのユーザー入力を検証することをお勧めします。 詳細については、「[Validating User Input in ASP.NET Web Pages (Razor) Sites](https://docs.microsoft.com/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)」(ASP.NET Web ページ (Razor) サイトにおけるユーザー入力の検証) を参照してください。  
 
  **入力 (パスワード)**  
- ![Visual Studio パスワード ファイル](../../ide/reference/media/vxpassword.gif "vxPassword")  
+ ![Visual Studio パスワード フィールド](../../ide/reference/media/vxpassword.gif "vxPassword")  
 
  `type="password"` の `input` 要素を挿入します。 既定では、`id="Password1"` は最初のパスワード フィールドに挿入され、`id="Password2"` は 2 番目のパスワード フィールドという具合に挿入されます。  
 
@@ -215,7 +198,7 @@ ms.lasthandoff: 06/23/2017
  サイズ プロパティの値を増やすことで、複数行の `select` 要素を作成できます。  
 
  **水平線**  
- ![HTML ページ水平ルーラー項目](../../ide/reference/media/vxhorizontal.gif "vxHorizontal")  
+ ![HTML ページの水平線項目](../../ide/reference/media/vxhorizontal.gif "vxHorizontal")  
 
  `hr` 要素を挿入します。 線の太さを太くするには、`size` 属性を編集します。  
 
@@ -239,4 +222,3 @@ ms.lasthandoff: 06/23/2017
 ## <a name="see-also"></a>関連項目  
  [ツールボックス](../../ide/reference/toolbox.md)   
  [ツールボックスの使用](../../ide/using-the-toolbox.md)   
-

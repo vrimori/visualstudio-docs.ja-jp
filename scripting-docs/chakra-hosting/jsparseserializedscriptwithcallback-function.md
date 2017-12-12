@@ -1,22 +1,26 @@
 ---
 title: "JsParseSerializedScriptWithCallback 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 01/18/2017
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0a93ecfb-4b82-4a85-b24c-6816db2332ea
-caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 15f531783c7a1018340be8033261a58418d0f515
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# JsParseSerializedScriptWithCallback 関数
-シリアル化されたスクリプトを解析し、スクリプトを表す関数を返します。 必要な場合のみ、スクリプト ソースの遅延読み込みを行う機能を提供します。  
+# <a name="jsparseserializedscriptwithcallback-function"></a>JsParseSerializedScriptWithCallback 関数
+シリアル化されたスクリプトを解析し、スクリプトを表す関数を返します。     必要な場合のみ、スクリプト ソースの遅延読み込みを行う機能を提供します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 STDAPI_(JsErrorCode) JsParseSerializedScriptWithCallback(  
@@ -30,7 +34,7 @@ STDAPI_(JsErrorCode) JsParseSerializedScriptWithCallback(
   
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `scriptLoadCallback`  
  スクリプトのソース コードを読み込む必要がある場合に呼び出されるコールバック。  
   
@@ -41,7 +45,7 @@ STDAPI_(JsErrorCode) JsParseSerializedScriptWithCallback(
  シリアル化されたスクリプト。  
   
  `sourceContext`  
- デバッグ可能なスクリプト コンテキストで使用できるスクリプトを識別するクッキー。 このコンテキストは、scriptLoadCallback と scriptUnloadCallback に渡されます。  
+ デバッグ可能なスクリプト コンテキストで使用できるスクリプトを識別するクッキー。     このコンテキストは、scriptLoadCallback と scriptUnloadCallback に渡されます。  
   
  `sourceUrl`  
  スクリプトの元の場所。  
@@ -49,10 +53,10 @@ STDAPI_(JsErrorCode) JsParseSerializedScriptWithCallback(
  `result`  
  スクリプト コードを表す関数。  
   
-## 戻り値  
- 操作が成功した場合はコード `JsNoError`、操作が失敗した場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 操作が成功した場合はコード `JsNoError` 、操作が失敗した場合はエラー コード。  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
 >  この API は、ストア アプリにはまだ使用できません。  
@@ -61,8 +65,8 @@ STDAPI_(JsErrorCode) JsParseSerializedScriptWithCallback(
   
  ランタイムは、バッファーから作成されたすべての関数のすべてのインスタンスがガベージ コレクションされるまでバッファーを保持します。  その後、解放しても安全であることを呼び出し元に通知するために、scriptUnloadCallback を呼び出します。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** jsrt.h  
   
-## 参照  
- [リファレンス \(JavaScript ランタイム\)](../chakra-hosting/reference-javascript-runtime.md)
+## <a name="see-also"></a>関連項目  
+ [リファレンス (JavaScript ランタイム)](../chakra-hosting/reference-javascript-runtime.md)

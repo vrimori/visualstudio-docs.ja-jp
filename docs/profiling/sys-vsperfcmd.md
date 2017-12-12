@@ -1,75 +1,76 @@
 ---
-title: "Sys (VSPerfCmd) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Sys (VSPerfCmd) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 294a6f9e-b49f-4c83-b322-5ac5411b66fb
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 4c733e9ce91ede2e8944616c5db1a727349854b1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Sys (VSPerfCmd)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-VSPerfCmd.exe の **Sys** オプションは、システム コール イベント \(プロファイリングされたアプリケーションからオペレーティング システムへの関数呼び出し\) でサンプリングされるプロファイリング イベントを設定し、必要に応じて、サンプリング間隔のシステム コール数を既定値の 10 から変更します。  
+# <a name="sys-vsperfcmd"></a>Sys (VSPerfCmd)
+VSPerfCmd.exe の **Sys** オプションは、システム呼び出しイベント (プロファイリングされたアプリケーションからオペレーティング システムへの関数呼び出し) にサンプリングされるプロファイリング イベントを設定し、必要に応じて、サンプリング間隔のシステム呼び出し数を既定値の 10 から変更します。  
   
  **Sys** は、**Launch** オプションまたは **Attach** オプションも含むコマンド ラインでのみ使用できます。  
   
- 既定では、プロファイラーのサンプリング イベントはプロセッサのクロック サイクルに設定され、サンプリング間隔は 10,000,000 に設定されます。  **Timer**、**PF**、**Sys**、**Counter** の各オプションを使用すると、サンプリング イベントおよびサンプリング間隔を設定できます。  **GC** オプションは、各割り当ての .NET メモリ データおよびガベージ コレクション イベントを収集します。  コマンド ラインでは、これらのオプションのうち 1 つのみを指定できます。  
+ 既定では、プロファイラーのサンプリング イベントは、プロセッサのクロック サイクルに設定され、サンプリング間隔は 10,000,000 に設定されます。 **Timer**、**PF**、**Sys**、**Counter** の各オプションを使用すると、サンプリング イベントおよびサンプリング間隔を設定できます。 **GC** オプションは、割り当ておよびガベージ コレクション イベントが発生するたびに、.NET メモリ データを収集します。 コマンド ラインには、上記のオプションのいずれか 1 つだけを指定できます。  
   
  サンプリング イベントおよびサンプリング間隔は、**Launch** オプションまたは **Attach** オプションを含む最初のコマンド ラインでのみ設定できます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 VSPerfCmd.exe {/Launch:AppName|Attach:PID} /Sys[:Events] [Options]  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `Events`  
- サンプリング間隔におけるシステム コール イベント数を指定する整数値。  `Events` を指定しない場合、間隔は 10 に設定されます。  
+ サンプリング間隔におけるシステム呼び出しイベント数を指定する整数値。 ‎`Events` が指定されていない場合、間隔は 10 に設定されます。  
   
-## 必須のオプション  
- **Sys** では、次のオプションのいずれかを指定する必要があります。  
+## <a name="required-options"></a>必須オプション  
+ **Sys** には、次のオプションのいずれかが必要です。  
   
  **Launch:** `AppName`  
- プロファイラーと、`AppName` で指定したアプリケーションを起動します。  
+ プロファイラーと、`AppName` で指定されたアプリケーションを起動します。  
   
  **Attach:** `PID`  
  プロファイラーを `PID` で指定されたプロセスにアタッチします。  
   
-## 無効なオプション  
- 以下のオプションは、コマンド ラインで **Sys** と同時には指定できません。  
+## <a name="invalid-options"></a>無効なオプション  
+ 以下のオプションは、**Sys** と同じコマンド ラインには指定できません。  
   
- **PF**\[**:**`Events`\]  
- サンプリング イベントをページ フォールトに設定し、オプションでサンプリング間隔を `Events` に設定します。  既定の PF 間隔は 10 です。  
+ **PF**[**:**`Events`]  
+ サンプリング イベントをページ フォールトに設定します。オプションで、サンプリング間隔を `Events` に設定します。 既定の PF 間隔は 10 です。  
   
- **Timer**\[**:**`Cycles`\]  
- サンプリング イベントをプロセッサのクロック サイクルに設定し、オプションでサンプリング間隔を `Cycles` に設定します。  既定の Timer 間隔は 10,000,000 です。  
+ **Timer**[**:**`Cycles`]  
+ サンプリング イベントをプロセッサのクロック サイクルに設定し、必要に応じてサンプリング間隔を `Cycles` に設定します。 既定の Timer 間隔は 10,000,000 です。  
   
- **Counter:** `Name`\[`,Reload`\[`,FriendlyName`\]\]  
- サンプリング イベントを `Name` で指定した CPU パフォーマンス カウンターに設定し、サンプリング間隔を `Reload` に設定します。  
+ **Counter:** `Name`[`,Reload`[`,FriendlyName`]]  
+ サンプリング イベントを、`Name` で指定された CPU パフォーマンス カウンターに設定し、サプリング間隔を `Reload` に設定します。  
   
- **GC**\[**:**{**Allocation**&#124;**Lifetime**}\]  
- .NET メモリ データを収集します。  既定 \(**Allocation**\) では、データはメモリの割り当てイベントごとに収集されます。  **Lifetime** パラメーターが指定された場合、ガベージ コレクション イベントごとのデータも収集されます。  
+ **GC**[**:**{**Allocation**&#124;**Lifetime**}]  
+ .NET メモリ データを収集します。 既定 (**Allocation**) では、データはメモリの割り当てイベントごとに収集されます。 **Lifetime** パラメーターが指定されている場合、ガベージ コレクション イベントごとのデータも収集されます。  
   
-## 使用例  
- この例では、プロファイラーのサンプリング イベントをシステム コールに設定し、サンプリング間隔をサンプルごとに 20 のコールに設定する方法を示します。  
+## <a name="example"></a>例  
+ この例では、プロファイラーのサンプリング イベントをシステム呼び出しに設定し、サンプリング間隔をサンプルごとに 20 の呼び出しに設定する方法を示します。  
   
 ```  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Launch:TestApp.exe /Sys:20  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [スタンドアロン アプリケーションのプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [プロファイリング \(サービスの\)](../profiling/command-line-profiling-of-services.md)
+ [プロファイリング (サービスの)](../profiling/command-line-profiling-of-services.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,30 +15,15 @@ helpviewer_keywords:
 - world-ready applications
 - international applications [Visual Studio]
 ms.assetid: 4d9815ae-3e80-4b4d-933d-f8309aee18d5
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
-ms.openlocfilehash: 409becfa400b7275da07fd8ac0035660f8b941eb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/30/2017
-
+ms.openlocfilehash: f6e32c592894b5d44a2d257d183c11da01c90456
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="globalizing-and-localizing-applications"></a>アプリケーションのグローバライズとローカライズ
 アプリケーションを各国のユーザー向けに配布する場合は、デザイン段階や開発段階で留意する必要のある事項がいくつかあります。 アプリケーションを国際対応にする計画がない場合でも、事前に多少の配慮をしておくと、アプリケーションの将来のバージョンで計画が変更になったときに役立ちます。 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] に組み込まれたサービスを利用すると、Visual Studio でマネージ開発を使用して、異なるロケールに適応できる単一のアプリケーションを簡単に開発できます。  
@@ -57,11 +41,11 @@ ms.lasthandoff: 05/30/2017
  複数のカルチャをサポートするアプリケーションの作成について説明するページへのリンクを提供します。  
   
 ## <a name="related-sections"></a>関連項目  
- [アプリのグローバル化 (JavaScript と HTML を使った Windows ストア アプリ)](http://go.microsoft.com/fwlink/?LinkId=258266)  
- JavaScript と HTML を使用して開発された [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリのグローバル化およびローカライズに役立つ「方法」トピックとガイドラインが含まれています。  
+ [アプリのグローバル化 (HTML)](http://go.microsoft.com/fwlink/?LinkId=258266)  
+ HTML を使用してビルドされた Windows 8.1 アプリのグローバル化およびローカライズに役立つ方法トピックとガイドラインが含まれています。  
   
- [アプリのグローバル化 (C#/VB/C++ と XAML を使った Windows ストア アプリ)](http://go.microsoft.com/fwlink/?LinkId=258267)  
- XAML と Visual C#/Visual Basic/Visual C++ を使用して開発された [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリのグローバル化およびローカライズに役立つ「方法」トピックとガイドラインが含まれています。  
+ [アプリのグローバル化 (XAML)](http://go.microsoft.com/fwlink/?LinkId=258267)  
+ XAML を使用してビルドされた Windows 8.1 アプリのグローバル化およびローカライズに役立つ方法トピックとガイドラインが含まれています。  
   
  [推奨される国際対応アプリケーション開発手順](http://msdn.microsoft.com/Library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c)  
  国際対応アプリケーションのプログラミングについての背景情報を提供します。  

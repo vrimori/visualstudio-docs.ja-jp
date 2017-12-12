@@ -2,8 +2,7 @@
 title: "Dotfuscator Community Edition (CE) をアップグレードする | Microsoft Docs"
 ms.date: 2017-02-08
 ms.devlang: dotnet
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.topic: article
 keywords: "Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, protection, community edition, 難読化, .NET, 無料, Visual Studio 2017, アップグレード, コマンド ライン"
 helpviewer_keywords:
@@ -24,28 +23,12 @@ description: "Visual Studio 2017 に含まれる無料の Dotfuscator Community 
 ms.assetid: c7c60904-27f9-4f1f-b79b-ddf65041b810
 author: Joe-Sewell-PreEmptive
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8ce85525f6af336682f6f8547c2f6c13dde73c8c
-ms.openlocfilehash: 60ca38639f6523cdbace4efa4aa48b48d5e9a886
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
-
+ms.openlocfilehash: 261fc98312914f5a80d2302a90e360dfde2ca17f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="upgrade-dotfuscator-community-edition-ce"></a>Dotfuscator Community Edition (CE) をアップグレードする
 
 Dotfuscator Community Edition (Dotfuscator CE) には、Microsoft Visual Studio.を使用しているすべての開発者がすぐに利用できる多くのアプリケーション保護機能と強化機能がありますが、
@@ -54,6 +37,7 @@ Dotfuscator のバージョンをアップグレードすると、さらに多�
 ## <a name="registering-dotfuscator-ce"></a>Dotfuscator CE の登録
 
 Dotfuscator CE の登録ユーザーは、[コマンド ライン サポート][cli]などの追加機能にアクセスできます。コマンド ラインを使用すると、Dotfuscator CE を自動ビルド プロセスに簡単に統合できます。
+また、登録することで、[難読化されたスタック トレースをデコードする][decode-obfuscated]ために使用される組み込みツールである Lucidator へのアクセスが許可されます。
 
 登録は無料で、簡単な手順ですぐに実行できます。
 Dotfuscator CE を登録する方法については、[「Dotfuscator CE User Guide」(Dotfuscator CE ユーザー ガイド) の「Registering Dotfuscator CE」(Dotfuscator CE の登録) セクション][register-ce]を参照してください。
@@ -73,7 +57,6 @@ Dotfuscator Community Edition には基本的なレベルの保護機能であ�
   * [使用されていないコードをアプリケーションから自動的に削除][pruning]して、付属される機密性の高いコードの量を減らす機能。
 * *アプリケーション整合性の保護*
   * その他の[アプリケーション保護動作][check-actions]。
-  * 改ざん対策とデバッグ対策のコードを `.dll` アセンブリに挿入する機能。
   * アプリケーションの有効期限前の警告期間を指定する機能。
   * 有効期限の警告期間中、または有効期限後にアプリケーション コードを通知する機能。
   * 製品利用統計情報の暗号化。
@@ -116,4 +99,4 @@ Dotfuscator Professional の高度なアプリケーション保護機能の詳�
 [register-ce]: https://www.preemptive.com/dotfuscator/ce/docs/help/gui_getstarted.html#register
 
 [full]: https://www.preemptive.com/dotfuscator/ce/docs/help/intro_upgrades.html
-
+[decode-obfuscated]: https://www.preemptive.com/dotfuscator/ce/docs/help/gui_decode_stack_trace.html

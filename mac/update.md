@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio for Mac を更新する"
+title: "Visual Studio for Mac の更新 | Microsoft Docs"
 description: "Visual Studio for Mac の更新およびプレビュー リリースへのアクセスについて説明します。"
 author: asb3993
 ms.author: amburns
@@ -7,14 +7,12 @@ ms.date: 04/14/2017
 ms.topic: article
 ms.technology: vs-ide-install
 ms.assetid: DB8DC9FE-FF21-4061-8A96-3F9FC08A4F8F
+ms.openlocfilehash: 6980e86fa80ec415dfd4f7f830ec1c08cd0da3d6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 04c8d50f87f1cec9ea51322368f58810feb24b7b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="updating-visual-studio-for-mac"></a>Visual Studio for Mac を更新する
 
 Visual Studio for Mac では、IDE およびサポートされているフレームワークに対する更新プログラムが定期的に配布されます。 これらの更新プログラムは、新機能、機能向上、およびバグ修正の形式になっています。
@@ -54,4 +52,3 @@ Visual Studio for Mac では、3 つのチャネルでこれらの最新バー�
 ![更新プログラムのインストールを開始するボタン](media/update-image4.png)
 
 インストールの必要なコンポーネントによっては、追加のライセンスを受け入れるか、コンピューターの管理者のユーザー名とパスワードを入力することが必要になる場合があります。
-

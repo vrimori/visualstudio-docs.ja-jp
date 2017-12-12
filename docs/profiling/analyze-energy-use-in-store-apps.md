@@ -1,11 +1,10 @@
 ---
-title: "ストア アプリでのエネルギー使用の分析 | Microsoft Docs"
+title: "UWP アプリでのエネルギー使用の分析 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -14,34 +13,18 @@ dev_langs:
 - FSharp
 - C++
 ms.assetid: 96d06843-b97e-45a8-8126-07478a40bfc4
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
-ms.openlocfilehash: 3a78a0d9afc766d316957b27d70269518f2d9d33
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/30/2017
-
+ms.openlocfilehash: bcdebabac1197317b5e282be8bd648168f201673
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
-# <a name="analyze-energy-use-in-store-apps"></a>ストア アプリでのエネルギー使用の分析
-Visual Studio の **エネルギー消費** プロファイラーは、常時または一時的に内蔵バッテリで動作する低電力のタブレット デバイス上で、Windows ストア アプリによる電力とエネルギーの消費量を分析するのに役立ちます。 バッテリ電源デバイスでは、エネルギー消費量が多すぎるアプリはユーザーに嫌われ、最終的にアンインストールされる場合もあります。 エネルギー使用を最適化することで、ユーザーがそのアプリを選択する可能性が高まり、使用頻度も向上します。  
+# <a name="analyze-energy-use-in-uwp-apps"></a>UWP アプリでのエネルギー使用の分析
+Visual Studio の **エネルギー消費** プロファイラーは、常時または一時的に内蔵バッテリで動作する低電力のタブレット デバイス上で、UWP アプリによる電力とエネルギーの消費量を分析するのに役立ちます。 バッテリ電源デバイスでは、エネルギー消費量が多すぎるアプリはユーザーに嫌われ、最終的にアンインストールされる場合もあります。 エネルギー使用を最適化することで、ユーザーがそのアプリを選択する可能性が高まり、使用頻度も向上します。  
   
 ##  <a name="BKMK_What_the_Energy_Consumption_tool_is__how_it_works__and_what_it_measures"></a> エネルギー消費量プロファイラーの概要、しくみ、および測定対象  
  エネルギー消費プロファイラーは、プロファイル セッション中のデバイスのディスプレイ、CPU、およびネットワーク接続のアクティビティをキャプチャします。 次に、そのアクティビティに使用される電力と、プロファイル セッションのエネルギーの総量の見積もりを生成します。  
@@ -95,16 +78,16 @@ if (performance && performance.mark) {
  *markDescription* は、ユーザー マークのツールヒントに表示されるメッセージを含む文字列です。  
   
 ##  <a name="BKMK_Configure_your_environment_for_profiling"></a> プロファイリング用の環境の構成  
- 正確な見積もりを取得するために、バッテリが電源になっている低電力デバイス上でのアプリのエネルギー使用をプロファイリングします。 Visual Studio は、これらのほとんどのデバイス上で動作しないため、Visual Studio Remote Tools を使用して、Visual Studio コンピューターをデバイスに接続する必要があります。 リモート デバイスに接続するには、Visual Studio プロジェクトとリモート デバイスの両方を構成する必要があります。 詳しくは、「[リモート コンピューターでの Windows ストア アプリの実行](../debugger/run-windows-store-apps-on-a-remote-machine.md)」をご覧ください。  
+ 正確な見積もりを取得するために、バッテリが電源になっている低電力デバイス上でのアプリのエネルギー使用をプロファイリングします。 Visual Studio は、これらのほとんどのデバイス上で動作しないため、Visual Studio Remote Tools を使用して、Visual Studio コンピューターをデバイスに接続する必要があります。 リモート デバイスに接続するには、Visual Studio プロジェクトとリモート デバイスの両方を構成する必要があります。 詳細については、「[Run UWP apps on a remote machine](../debugger/run-windows-store-apps-on-a-remote-machine.md)」(リモート コンピューターで UWP アプリを実行する) をご覧ください。  
   
 > [!TIP]
->  -   Windows ストア シミュレーターまたは Visual Studio コンピューターでエネルギー プロファイリングを実行することはお勧めできません。 実際のデバイスでプロファイリングを実行する方が、はるかに現実的なデータを取得できます。  
+>  -   UWP シミュレーターまたは Visual Studio コンピューターでエネルギー プロファイリングを実行することはお勧めできません。 実際のデバイスでプロファイリングを実行する方が、はるかに現実的なデータを取得できます。  
 > -   プロファイリングは、ターゲット デバイスがバッテリ駆動されている間に行います。  
 > -   同じリソース (ネットワーク、CPU、またはディスプレイ) を使用する可能性がある他のアプリを閉じます。  
   
 ##  <a name="BKMK_Collect_energy_profile_data_for_your_app"></a> アプリのエネルギー プロファイル データの収集  
   
-1.  [ **デバッグ** ] メニューの [ **デバッグなしで診断を開始**] をクリックします。  
+1.  **[デバッグ]** メニューの **[デバッグなしで診断を開始]** をクリックします。  
   
      ![[診断ハブ] でエネルギー消費を選択](../profiling/media/energyprof_diagnosticshub.png "ENERGYPROF_DiagnosticsHub")  
   
@@ -167,9 +150,10 @@ if (performance && performance.mark) {
   
 -   Windows デベロッパー センターの **C#/VB/C++ と XAML** および [JavaScript と HTML](http://msdn.microsoft.com/en-us/0ee0b706-8432-4d49-9801-306ed90764e1) の「 [接続状態とコストの管理](http://msdn.microsoft.com/en-us/372afa6a-1c7c-4657-967d-03a77cd8e933) 」セクションでは、ネットワーク接続情報を提供する Windows API について説明しています。この情報を使って、アプリはネットワーク トラフィックのコストを最小限にすることができます。  
   
-     Windows ストア アプリ用の Visual Studio シミュレーターでは、ネットワーク情報 API のデータ接続プロパティをシミュレートすることができます。 「 [Run Windows Store apps in the simulator](../debugger/run-windows-store-apps-in-the-simulator.md)」を参照してください。  
+     UWP アプリ用の Visual Studio シミュレーターでは、ネットワーク情報 API のデータ接続プロパティをシミュレートすることができます。 「[シミュレーターで UWP アプリを実行する](../debugger/run-windows-store-apps-in-the-simulator.md)」をご覧ください  
   
 -   **JavaScript 関数タイミング** および **CPU 使用率** ツールは、非効率的な関数のために生じる CPU 負荷の削減に役立ちます。 「[CPU 使用率の分析](../profiling/analyze-cpu-usage-in-a-windows-universal-app.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
- [Visual Studio のプロファイル](../profiling/index.md) [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)
+ [Visual Studio のプロファイル](../profiling/index.md)  
+ [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)

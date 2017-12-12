@@ -1,29 +1,30 @@
 ---
 title: "Visual Basic でのフィルター処理されたコンプリート リスト | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "コンプリート リスト"
-  - "IntelliSense [Visual Basic], フィルター処理されたコンプリート リスト"
-  - "IntelliSense, フィルター処理"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- completion list
+- IntelliSense, filtering
+- IntelliSense [Visual Basic], filtered completion lists
 ms.assetid: c9e3b223-8ac2-4a2a-b8c2-91786d2a73e2
-caps.latest.revision: 8
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 6c7a21365929f7adb9308886c6675d7a8e867c82
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Visual Basic でのフィルター処理されたコンプリート リスト
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Visual Basic の IntelliSense コンプリート リストには、リストの下部近くに 2 つのタブ コントロールがあります。  **\[よく使われる候補\]** タブは、既定で選択されていて、作成しているステートメントを完成させるために頻繁に使用される項目が表示されます。  **\[すべての候補\]** タブは、**\[よく使われる候補\]** タブに表示される項目も含め、自動コンプリートに利用できるすべての項目が表示されます。  
+# <a name="filtered-completion-lists-in-visual-basic"></a>Visual Basic でのフィルター処理されたコンプリート リスト
+Visual basic の IntelliSense コンプリート リストには、リストの下部近くに 2 つのタブ コントロールがあります。 既定で選択されている **[よく使われる候補]** タブには、作成しているステートメントを完成するために最もよく使われる項目が表示されます。 **[すべて]** タブには、**[よく使われる候補]** タブに表示されている項目も含めて、オート コンプリートで使用可能なすべての項目が表示されます。  
   
-## 参照  
- [IntelliSense の使用方法](../ide/using-intellisense.md)   
+## <a name="see-also"></a>関連項目  
+ [IntelliSense の使用](../ide/using-intellisense.md)   
  [Visual Basic 固有の IntelliSense](../ide/visual-basic-specific-intellisense.md)

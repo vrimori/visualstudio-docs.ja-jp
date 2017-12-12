@@ -1,40 +1,23 @@
 ---
 title: "MSBuild インライン タスク | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 09/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MSBuild, tasks
+helpviewer_keywords: MSBuild, tasks
 ms.assetid: e72e6506-4a11-4edf-ae8d-cfb5a3b9d8a0
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 6153ab5924f66d13e2c0664ed652f8eee6f91e4c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: ef4376d8d7600b1072e2afa5df2cf474a8b3ab32
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="msbuild-inline-tasks"></a>MSBuild インライン タスク
 MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インターフェイスを実装するクラスをコンパイルして作成します。 詳細については、[タスク](../msbuild/msbuild-tasks.md)に関する記事を参照してください。  
@@ -45,12 +28,12 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
  インライン タスクは [UsingTask](../msbuild/usingtask-element-msbuild.md) 要素に格納されます。 インライン タスクとそれを格納する `UsingTask` 要素は通常、.targets ファイルに含められ、必要に応じて他のプロジェクト ファイルにインポートされます。 基本的なインライン タスクの例を次に示します。 このタスクでは何も実行されないことに注意してください。  
   
 ```xml  
-<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
   <!-- This simple inline task does nothing. -->  
   <UsingTask  
     TaskName="DoNothing"  
     TaskFactory="CodeTaskFactory"  
-    AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v12.0.dll" >  
+    AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll" >  
     <ParameterGroup />  
     <Task>  
       <Reference Include="" />  
@@ -94,7 +77,7 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
   
 -   `Type` の値が `Class` の場合、`Code` 要素には <xref:Microsoft.Build.Framework.ITask> インターフェイスから派生したクラスのコードが含まれます。  
   
--   `Type` の値が `Method` の場合、コードは <xref:Microsoft.Build.Framework.ITask> インターフェイスの `Execute` メソッドのオーバーライドを定義します。  
+-   `Type` の値が `Method` の場合、コードは `Execute` インターフェイスの <xref:Microsoft.Build.Framework.ITask> メソッドのオーバーライドを定義します。  
   
 -   `Type` の値が `Fragment` の場合、コードは `Execute` メソッドの内容を定義します。ただし、シグネチャや `return` ステートメントは含まれません。  
   
@@ -109,12 +92,12 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
  具体的なインライン タスクの例を次に示します。 HelloWorld タスクは、既定のエラー ログ デバイスに "Hello, world!" と表示します。通常、既定のデバイスは、システム コンソールまたは Visual Studio の**出力**ウィンドウです。 この例の `Reference` 要素は、例を示す目的でのみ含めてあります。  
   
 ```xml  
-<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
   <!-- This simple inline task displays "Hello, world!" -->  
   <UsingTask  
     TaskName="HelloWorld"  
     TaskFactory="CodeTaskFactory"  
-    AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" >  
+    AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll" >  
     <ParameterGroup />  
     <Task>  
       <Reference Include="System.Xml.dll"/>  
@@ -134,7 +117,7 @@ Log.LogError("Hello, world!");
  HelloWorld タスクを HelloWorld.targets という名前のファイルに保存すると、次のようにしてプロジェクトから呼び出すことができます。  
   
 ```xml  
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
   <Import Project="HelloWorld.targets" />  
   <Target Name="Hello">  
     <HelloWorld />  
@@ -183,9 +166,9 @@ Log.LogError("Hello, world!");
  指定されたファイル内のすべてのトークンを指定された値に置き換えるインライン タスクの例を次に示します。  
   
 ```xml  
-<Project xmlns='http://schemas.microsoft.com/developer/msbuild/2003' ToolsVersion="12.0">  
+<Project xmlns='http://schemas.microsoft.com/developer/msbuild/2003' ToolsVersion="15.0">  
   
-  <UsingTask TaskName="TokenReplace" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v12.0.dll">  
+  <UsingTask TaskName="TokenReplace" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">  
     <ParameterGroup>  
       <Path ParameterType="System.String" Required="true" />  
       <Token ParameterType="System.String" Required="true" />  

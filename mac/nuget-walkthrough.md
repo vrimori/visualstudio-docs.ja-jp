@@ -1,19 +1,17 @@
 ---
-title: "チュートリアル - プロジェクトに NuGet パッケージを含める"
+title: "チュートリアル - プロジェクトに NuGet パッケージを含める | Microsoft Docs"
 description: "このドキュメントでは、Xamarin プロジェクトに NuGet パッケージを含める方法について説明します。 パッケージの検索およびダウンロードの手順を説明し、IDE 統合機能の概要を示します。"
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
+ms.openlocfilehash: cb927b14e3637edd7e16c78fbed01fa4e9522652
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 0fa91c18592dee4f20832d7a0dad8aea069da93e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="including-a-nuget-package-in-your-project"></a>プロジェクトに NuGet パッケージを含める
 
 NuGet は、.NET 開発用の最も一般的なパッケージ マネージャーであり、Visual Studio for Mac および Windows の Visual Studio に組み込まれています。 パッケージを検索し、Xamarin.iOS プロジェクトおよび Xamarin.Android プロジェクトにいずれかの IDE を使用して追加することができます。
@@ -42,7 +40,7 @@ Visual Studio for Mac でプロジェクトを開いた状態で、**Solution Pa
 
 ![ソース リスト ドロップダウン](media/nuget-walkthrough-Source.png)
 
-ウィンドウが開くと、既定のパッケージ ソースである nuget.org のパッケージ リストが読み込まれます。 最初の結果は次のようになります。
+ウィンドウが開くと、既定のパッケージ ソースである nuget.org のパッケージ リストが読み込まれます。最初の結果は次のようになります。
 
 ![Nuget パッケージのリスト](media/nuget-walkthrough-AddPackages1.png)
 
@@ -97,7 +95,7 @@ NuGet パッケージが追加され、プロジェクト参照が更新され�
 
 ## <a name="adding-package-sources"></a>パッケージ ソースの追加
 
-インストール可能なパッケージが最初に nuget.org から取得されます。 ただし、Visual Studio for Mac に他のパッケージの場所を追加することができます。 これは、開発中の独自の NuGet パッケージをテストする場合や、会社または組織内でプライベートの NuGet サーバーを使用する場合に便利です。
+インストール可能なパッケージが最初に nuget.org から取得されます。ただし、Visual Studio for Mac に他のパッケージの場所を追加することができます。 これは、開発中の独自の NuGet パッケージをテストする場合や、会社または組織内でプライベートの NuGet サーバーを使用する場合に便利です。
 
 Visual Studio for Mac で、**[Visual Studio]、[基本設定...]、[NuGet]、[ソース]** の順に移動し、パッケージ ソースのリストを表示して編集します。 ソースはリモート サーバー (URL で指定) またはローカル ディレクトリである場合があります。 
 
@@ -118,5 +116,4 @@ NuGet のドキュメントでは、[ソース管理にパッケージをコミ�
 ![パッケージを自動的に復元する](media/nuget-walkthrough-AutoRestore.png)
 
 `packages` ディレクトリを追跡対象から除外する方法の詳細については、特定のソース管理のドキュメントを参照してください。
-
 

@@ -1,40 +1,24 @@
 ---
-title: "ストア アプリ用の Visual C++ DLL の単体テスト | Microsoft Docs"
+title: "UWP アプリ用の Visual C++ DLL の単体テスト | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 24afc90a-8774-4699-ab01-6602a7e6feb2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 571ea6daab6ea9cbfb30976514e163b5dcbe398d
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: a900c779401277e4b8694e75f69203fee82d73f0
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
-# <a name="unit-testing-a-visual-c-dll-for-store-apps"></a>ストア アプリ用の Visual C++ DLL の単体テスト
-このトピックでは、Windows ストア アプリの C++ DLL の単体テストを作成する方法の 1 つについて説明します。RooterLib DLL は、指定した数値の平方根の概算を計算する関数を実装することによって、微積分の限界理論の不明瞭なメモリを示します。 この DLL を、ユーザーが数学で実行できる楽しい作業を提示する Windows ストア アプリに組み込むことができます。  
+# <a name="unit-testing-a-visual-c-dll-for-uwp-apps"></a>UWP アプリ用の Visual C++ DLL の単体テスト
+このトピックでは、UWP アプリの C++ DLL の単体テストを作成する方法の 1 つについて説明します。RooterLib DLL は、指定した数値の平方根の概算を計算する関数を実装することによって、微積分の限界理論の不明瞭なメモリを示します。 この DLL を、ユーザーが数学で実行できる楽しい作業を提示する UWP アプリに組み込むことができます。  
   
  このトピックでは、開発の第一歩として単体テストを使用する方法を示します。 この方法ではまず、テスト対象のシステムの特定の動作を検証するテスト メソッドを作成し、テストに合格するコードを記述します。 後述する手順の順序を変更することにより、この方法を逆にして、テストするコードを最初に記述し、単体テストを作成することができます。  
   
@@ -61,13 +45,13 @@ ms.lasthandoff: 04/04/2017
   
 1.  **[ファイル]** メニューの **[新規作成]** をポイントし、**[新しいプロジェクト]** をクリックします。  
   
-2.  [新しいプロジェクト] ダイアログで **[インストール済み]**、**[Visual C++]** の順に展開し、**[Windows ストア]** を選択します。 プロジェクト テンプレートの一覧の **[単体テスト ライブラリ (Windows ストア アプリ)]** をクリックします。  
+2.  [新しいプロジェクト] ダイアログで **[インストール済み]**、**[Visual C++]** の順に展開し、**[Windows ユニバーサル]** を選択します。 プロジェクト テンプレートの一覧の **[単体テスト ライブラリ (ユニバーサル Windows)]** を選択します。  
   
      ![C&#43;&#43; 単体テスト ライブラリの作成](../test/media/ute_cpp_windows_unittestlib_create.png "UTE_Cpp_windows_UnitTestLib_Create")  
   
 3.  プロジェクトに `RooterLibTests` という名前を付けます。場所を指定します。ソリューションに `RooterLib` という名前を付けます。**[ソリューションのディレクトリを作成]** チェックボックスがオンになっていることを確認します。  
   
-     ![ソリューションとプロジェクトの名前と場所を指定](~/test/media/ute_cpp_windows_unittestlib_createspecs.png "UTE_Cpp_windows_UnitTestLib_CreateSpecs")  
+     ![ソリューションとプロジェクトの名前と場所を指定](../test/media/ute_cpp_windows_unittestlib_createspecs.png "UTE_Cpp_windows_UnitTestLib_CreateSpecs")  
   
 4.  新しいプロジェクトで、**unittest1.cpp** を開きます。  
   
@@ -100,7 +84,7 @@ ms.lasthandoff: 04/04/2017
   
      テスト プロジェクトがビルドされ、実行されます。 テスト エクスプローラーのウィンドウが表示され、テストが **[成功したテスト]** に表示されます。 ウィンドウの下部の [概要] ウィンドウに、選択したテストに関する詳細情報が表示されます。  
   
-     ![テスト エクスプ ローラー](~/test/media/ute_cpp_testexplorer_testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")  
+     ![テスト エクスプ ローラー](../test/media/ute_cpp_testexplorer_testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")  
   
 ##  <a name="BKMK_Add_the_DLL_project_to_the_solution"></a> DLL プロジェクトをソリューションに追加する  
   
@@ -108,7 +92,7 @@ ms.lasthandoff: 04/04/2017
   
      ![RooterLib プロジェクトの作成](../test/media/ute_cpp_windows_rooterlib_create.png "UTE_Cpp_windows_RooterLib_Create")  
   
-2.  **[新しいプロジェクトの追加]** ダイアログ ボックスの **[DLL (Windows ストア アプリ)]** を選択します。  
+2.  **[新しいプロジェクトの追加]** ダイアログ ボックスの **[DLL (UWP アプリ)]** を選択します。  
   
 3.  **RooterLib.h** ファイルに次のコードを追加します。  
   
@@ -211,7 +195,7 @@ ms.lasthandoff: 04/04/2017
   
 5.  テスト エクスプローラーで **[すべて実行]**をクリックします。  
   
-     ![基本テスト成功](~/test/media/ute_cpp_testexplorer_basictest.png "UTE_Cpp_TestExplorer_BasicTest")  
+     ![基本テスト成功](../test/media/ute_cpp_testexplorer_basictest.png "UTE_Cpp_TestExplorer_BasicTest")  
   
  テストとコード プロジェクトをセット アップして、コード プロジェクトで関数を実行するテストを実行できることを確認しました。 ここで、実際のテストおよびコードの記述を開始できます。  
   
@@ -364,4 +348,3 @@ ms.lasthandoff: 04/04/2017
     >  安定した一連の適切な単体テストを実行することで、コードを変更したときにバグが生じていないことを確信できます。  
     >   
     >  常に他の変更とは別にリファクタリングしてください。
-

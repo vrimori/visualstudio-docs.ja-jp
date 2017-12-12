@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07f4ec00-cda4-42f4-98bb-37edc7167de7
-caps.latest.revision: 24
-author: kempb
-ms.author: kempb
+caps.latest.revision: "24"
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 7e062ca977a85416d2e0bf0b7c2cef46b8f93cce
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: aab9138f4dc47395764607c3783df76b8708212b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>手順 8: [Show a Picture] ボタンのイベント ハンドラーのコードの記述
 この手順では、**[Show a picture]** ボタンの機能を次のように設定します。  
@@ -43,7 +27,7 @@ ms.lasthandoff: 05/13/2017
   
  IDE には、コードの記述に役立つ IntelliSense と呼ばれる強力なツールが備わっています。 コードを入力する際に単語の一部を入力すると、入力に合わせてボックスが開き、入力候補が提示されます。 このツールは、ユーザーの次の操作を予測し、ユーザーが一覧から選択した最後の項目に自動的にジャンプします。 ユーザーは、上方向キーまたは下方向キーを使用して一覧内を移動したり、文字の入力を続けて選択肢を絞り込んだりすることができます。 目的の選択肢が見つかったら、Tab キーを押して選択します。 入力候補が不要な場合は無視してもかまいません。  
   
- ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 4](http://go.microsoft.com/fwlink/?LinkId=205215)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 4](http://go.microsoft.com/fwlink/?LinkId=205203)」を参照してください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
+ ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 4](http://go.microsoft.com/fwlink/?LinkId=205215)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 4](http://go.microsoft.com/fwlink/?LinkId=205203)」を参照してください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
   
 ### <a name="to-write-code-for-the-show-a-picture-button-event-handler"></a>[Show a picture] ボタンのイベント ハンドラーのコードを記述するには  
   
@@ -51,12 +35,12 @@ ms.lasthandoff: 05/13/2017
   
 2.  2 つの中かっこ { } の間の空の行に「`i`」と入力します  (Visual Basic の場合は、Private Sub… と End Sub の間の空の行に入力します)。次の図に示すように、**IntelliSense** ウィンドウが開きます。  
   
-     ![Visual C# コードの IntelliSense](../ide/media/express_ifintellisense.png "Express_IfIntellisense")  
+     ![Visual C&#35; コードの IntelliSense](../ide/media/express_ifintellisense.png "Express_IfIntellisense")  
 Visual C# コードの IntelliSense  
   
 3.  **IntelliSense** ウィンドウで、**if** という単語が強調表示されます  (強調表示されない場合は、小文字で「`f`」と入力すると強調表示されます)。**IntelliSense** ウィンドウの横にある小さな *[ツールヒント]* ボックスに "**if ステートメントに対するコード スニペット**" と表示されます。 (Visual Basic の場合も、メッセージは若干異なりますが、ツールヒントにスニペットであることが示されます)。そのスニペットを使用するには、Tab キーを押して "**if**" をコードに挿入します。 次にもう一度 Tab キーを押して **if** スニペットを使用します。 (別の場所をクリックして **[IntelliSense]** ウィンドウが非表示になった場合は、BackSpace キーで **i** を削除してから再度入力すると、もう一度 **[IntelliSense]** ウィンドウが開きます)。  
   
-     ![Visual C# のコード](~/ide/media/express_highlighttrue.png "Express_HighlightTrue")  
+     ![Visual C&#35; のコード](../ide/media/express_highlighttrue.png "Express_HighlightTrue")  
 Visual C# のコード  
   
 4.  次に、IntelliSense を使用して、**[ファイルを開く]** ダイアログ ボックスを開くためのコードを入力します。 ユーザーが **[OK]** をクリックすると、ユーザーが選択したファイルが PictureBox に読み込まれます。 コードを入力する手順を次に示します。手順は多くなっていますが、少ないキーストロークで完了できます。  
@@ -72,13 +56,13 @@ Visual C# のコード
         > [!NOTE]
         >  **IntelliSense** ウィンドウには、プロパティとメソッドの両方が表示されます。 表示される内容を判断するには、**[IntelliSense]** ウィンドウの各項目の左側のアイコンを参照してください。 各メソッドの横にはブロックの画像が表示され、各プロパティの横にはレンチ (スパナ) の画像が表示されます。 また、各イベントの横には稲妻のアイコンが表示されます。 これらの画像は次のとおりです。  
   
-         ![[メソッド] アイコン](~/ide/media/express_iconmethod.png "Express_IconMethod")  
+         ![[メソッド] アイコン](../ide/media/express_iconmethod.png "Express_IconMethod")  
 [メソッド] アイコン  
   
-         ![プロパティ アイコン](~/ide/media/express_iconproperty.png "Express_IconProperty")  
+         ![[プロパティ] アイコン](../ide/media/express_iconproperty.png "Express_IconProperty")  
 プロパティ アイコン  
   
-         ![[イベント] アイコン](~/ide/media/express_iconevent.png "Express_IconEvent")  
+         ![[イベント] アイコン](../ide/media/express_iconevent.png "Express_IconEvent")  
 [イベント] アイコン  
   
     4.  「`ShowDialog`」の入力を開始します (IntelliSense では大文字と小文字の区別は重要ではありません)。 **[ファイルを開く]** ダイアログ ボックスを表示するメソッドは `ShowDialog()` です。 ウィンドウで "**ShowDialog**" が強調表示されたら、Tab キーを押します。 また、"ShowDialog" を強調表示し、F1 キーを押して、それに関するヘルプを表示することもできます。  
@@ -112,7 +96,8 @@ Visual C# のコード
   
     9. 次に、コードをもう 1 行追加します。 コードを入力する (またはコピーして貼り付ける) こともできますが、IntelliSense を使用して追加することもできます。 IntelliSense の使用に慣れてくると、よりすばやく独自のコードを記述できるようになります。 最終的な `showButton_Click()` メソッドは、次のようになります。 (コードの Visual Basic バージョンを表示するために **[VB]** タブをクリックします)。  
   
-         [!code-cs[VbExpressTutorial1Step8#1](../ide/codesnippet/CSharp/step-8-write-code-for-the-show-a-picture-button-event-handler_1.cs)]   [!code-vb[VbExpressTutorial1Step8#1](../ide/codesnippet/VisualBasic/step-8-write-code-for-the-show-a-picture-button-event-handler_1.vb)]  
+         [!code-csharp[VbExpressTutorial1Step8#1](../ide/codesnippet/CSharp/step-8-write-code-for-the-show-a-picture-button-event-handler_1.cs)]
+         [!code-vb[VbExpressTutorial1Step8#1](../ide/codesnippet/VisualBasic/step-8-write-code-for-the-show-a-picture-button-event-handler_1.vb)]  
   
 ### <a name="to-continue-or-review"></a>続行または確認するには  
   

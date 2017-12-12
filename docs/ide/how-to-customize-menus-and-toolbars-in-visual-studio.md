@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,48 +27,23 @@ helpviewer_keywords:
 - toolbars [Visual Studio], customizing
 - toolbars [Visual Studio], customizing in the IDE
 ms.assetid: b570ae2f-5302-45dc-9cc9-8d4d1ad50603
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 0ca0020fa9025e57df874f8fa8b5eb41e63a8c29
-ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 124448e5c989597361f678b290fe345968f0cf08
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="how-to-customize-menus-and-toolbars-in-visual-studio"></a>方法: Visual Studio でメニューおよびツール バーをカスタマイズする
 Visual Studio は、メニュー バーでツール バーやメニューを追加および削除するだけでなく、任意のツール バーまたはメニューでコマンドを追加および削除することによってもカスタマイズできます。  
   
 > [!WARNING]
->  ツール バーまたはメニューをカスタマイズした後、該当するチェック ボックスが **[カスタマイズ]** ダイアログ ボックスでオンになっていることを確認してください。 オンになっていない場合、Visual Studio を閉じて再度開くと、変更は保持されません。  
+>  ツール バーまたはメニューをカスタマイズした後、該当するチェック ボックスが **[カスタマイズ]** ダイアログ ボックスでオンになっていることを確認してください。 オンになっていない場合、Visual Studio を閉じて再度開くと、変更は保持されません。
   
- **このトピックの内容**  
-  
--   [メニュー バーでのメニューの追加、削除、または移動](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#bkmk_addmenu)  
-  
--   [ツール バーの追加、削除、または移動](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#bkmk_addtoolbar)  
-  
--   [メニューまたはツール バーのカスタマイズ](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#bkmk_customize)  
-  
--   [メニューまたはツール バーのリセット](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#bkmk_reset)  
-  
-##  <a name="bkmk_addmenu"></a>メニュー バーでのメニューの追加、削除、または移動  
+## <a name="adding-removing-or-moving-a-menu-on-the-menu-bar"></a>メニュー バーでのメニューの追加、削除、または移動  
   
 1.  メニュー バーから **[ツール]**、**[カスタマイズ]** の順に選びます。  
   
@@ -79,13 +53,13 @@ Visual Studio は、メニュー バーでツール バーやメニューを追�
   
     -   メニューを追加するには、**[新しいメニューの追加]** を選び、**[選択内容の編集]** ボタンを選んで、追加するメニューに名前を付けます。  
   
-         ![メニューの追加方法を表示するダイアログ ボックスをカスタマイズ](../ide/media/addmenu.png "AddMenu")  
+        ![メニューの追加方法を表示するダイアログ ボックスをカスタマイズ](../ide/media/addmenu.png "AddMenu")  
   
     -   メニューを削除するには、**[コントロール]** の一覧で削除するメニューを選び、**[削除]** を選びます。  
   
     -   メニュー バー内でメニューを移動するには、**[コントロール]** の一覧でメニューを選び、**[上へ移動]** または **[下へ移動]** ボタンを選びます。  
   
-##  <a name="bkmk_addtoolbar"></a>ツール バーの追加、削除、または移動  
+## <a name="adding-removing-or-moving-a-toolbar"></a>ツール バーの追加、削除、または移動  
   
 1.  メニュー バーから **[ツール]**、**[カスタマイズ]** の順に選びます。  
   
@@ -95,7 +69,7 @@ Visual Studio は、メニュー バーでツール バーやメニューを追�
   
     -   ツール バーを追加するには、**[新規]** を選び、追加するツール バーの名前を指定して、**[OK]** ボタンを選びます。  
   
-         ![ツールバーの追加方法を表示するダイアログ ボックスをカスタマイズ](../ide/media/addtoolbar.png "AddToolbar")  
+        ![ツールバーの追加方法を表示するダイアログ ボックスをカスタマイズ](../ide/media/addtoolbar.png "AddToolbar")  
   
     -   カスタム ツール バーを削除するには、**[ツール バー]** の一覧で削除するツール バーを選び、**[削除]** ボタンを選びます。  
   
@@ -104,16 +78,16 @@ Visual Studio は、メニュー バーでツール バーやメニューを追�
   
     -   ツール バーを別のドッキング位置に移動するには、**[ツール バー]** の一覧で該当するツール バーを選び、**[選択内容の編集]** ボタンを選んで、表示された一覧から位置を選びます。  
   
-         また、ツール バーの左端をドラッグして、メイン ドッキング領域内の任意の場所に移動することもできます。  
+        また、ツール バーの左端をドラッグして、メイン ドッキング領域内の任意の場所に移動することもできます。  
   
         > [!NOTE]
         >  ツール バーの操作性とアクセシビリティを向上させる方法について詳しくは、「[方法: IDE アクセシビリティ オプションを設定する](../ide/reference/how-to-set-ide-accessibility-options.md)」をご覧ください。  
   
-##  <a name="bkmk_customize"></a> メニューまたはツール バーのカスタマイズ  
+## <a name="customizing_menu">メニューまたはツール バーのカスタマイズ</a>
   
 1.  メニュー バーから **[ツール]**、**[カスタマイズ]** の順に選びます。  
   
-     **[カスタマイズ]** ダイアログ ボックスが開きます。  
+    **[カスタマイズ]** ダイアログ ボックスが開きます。  
   
 2.  **[コマンド]** タブで、カスタマイズする要素の種類に対応するオプション ボタンを選びます。  
   
@@ -121,21 +95,21 @@ Visual Studio は、メニュー バーでツール バーやメニューを追�
   
     -   コマンドを追加するには、**[コマンドの追加]** を選びます。  
   
-         **[コマンドの追加]** ダイアログ ボックスの **[カテゴリ]** の一覧で項目を選んだ後、**[コマンド]** の一覧で項目を選んで、**[OK]** ボタンを選びます。  
+        **[コマンドの追加]** ダイアログ ボックスの **[カテゴリ]** の一覧で項目を選んだ後、**[コマンド]** の一覧で項目を選んで、**[OK]** ボタンを選びます。  
   
-         ![Visual Studio の [コマンドの追加] ダイアログ ボックス](../ide/media/addcommand.png "AddCommand")  
+        ![Visual Studio の [コマンドの追加] ダイアログ ボックス](../ide/media/addcommand.png "AddCommand")  
   
     -   コマンドを削除するには、**[コントロール]** の一覧で削除するコマンドを選び、**[削除]** ボタンを選びます。  
   
     -   コマンドの順序を変更するには、**[コントロール]** の一覧でコマンドを選び、**[上へ移動]** または **[下へ移動]** ボタンを選びます。  
   
-    -   コマンドをグループに区切るには、**[コントロール]** の一覧でコマンドを選び、**[選択内容の編集]** ボタンを選んだ後、表示されたメニューで **[グループの始まり]** を選びます。  
+    -   水平線の下でコマンドをグループ化するには、**[コントロール]** 一覧で最初のコマンドを選び、**[選択内容の編集]** ボタンを選んだ後、表示されたメニューで **[グループの始まり]** を選びます。  
   
-##  <a name="bkmk_reset"></a> メニューまたはツール バーのリセット  
+## <a name="resetting-a-menu-or-a-toolbar"></a>メニューまたはツール バーのリセット  
   
 1.  メニュー バーから **[ツール]**、**[カスタマイズ]** の順に選びます。  
   
-     **[カスタマイズ]** ダイアログ ボックスが開きます。  
+    **[カスタマイズ]** ダイアログ ボックスが開きます。  
   
 2.  **[コマンド]** タブで、リセットする要素の種類に対応するオプション ボタンを選びます。  
   
@@ -143,4 +117,8 @@ Visual Studio は、メニュー バーでツール バーやメニューを追�
   
 4.  **[選択内容の編集]** ボタンを選び、表示されたメニューで **[リセット]** を選びます。  
   
-     また、**[すべてリセット]** ボタンを選んで、すべてのメニューおよびツール バーをリセットできます。
+    また、**[すべてリセット]** ボタンを選んで、すべてのメニューおよびツール バーをリセットできます。
+
+## <a name="see-also"></a>関連項目
+[IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)  
+[エディターのカスタマイズ](../ide/customizing-the-editor.md)

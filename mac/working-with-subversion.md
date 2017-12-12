@@ -1,19 +1,17 @@
 ---
-title: "Subversion の使用"
+title: "Subversion の使用 | Microsoft Docs"
 description: "Visual Studio for Mac の Subversion を使用します。"
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 2400ED9C-6236-4C0A-A3AB-9D7CBE1F0CF4
+ms.openlocfilehash: 026e3625b4ee2d6582ce5539e5cab68c945f09c0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 70cf7a411141c5a59e275cb455ddcf91863c4f8b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="working-with-subversion"></a>Subversion の使用
 
 この記事で前に説明したように、Subversion は、集中管理されるデータの単一のマスター コピーをチェックアウトできるようにする集中管理されたバージョン コントロール システムです。 Git とは対照的に、Subversion リポジトリのチェックアウトではリポジトリ全体は複製されず、その時点のスナップショットのみを取得します。
@@ -58,4 +56,3 @@ Visual Studio for Mac の**チェックアウト**機能の使用方法につい
 ![ファイルをコミットする](media/version-control-svnCommit.png)
 
 これにより、変更がリポジトリに送信され、すべての変更の新しいリビジョンが作成されます。
-

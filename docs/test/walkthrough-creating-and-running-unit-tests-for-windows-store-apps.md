@@ -1,49 +1,32 @@
 ---
-title: "チュートリアル: Windows ストア アプリに対する単体テストの作成と実行 | Microsoft Docs"
+title: "チュートリアル: UWP アプリに対する単体テストの作成と実行 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - unit tests, creating
 - unit tests
-- unit tests, Windows Store apps
+- unit tests, UWP apps
 - unit tests, running
 ms.assetid: dd3e8a6a-b366-433e-a409-b9a9b89da89a
-caps.latest.revision: 21
+caps.latest.revision: "21"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 11ae1d653bc34ccb9c8fd8834d134b7212bc4f9a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 32cab11dd909fc8b60134ebff0d5f37c0b14dcd6
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
-# <a name="walkthrough-creating-and-running-unit-tests-for-windows-store-apps"></a>チュートリアル: Windows ストア アプリに対する単体テストの作成と実行
+# <a name="walkthrough-creating-and-running-unit-tests-for-uwp-apps"></a>チュートリアル: UWP アプリに対する単体テストの作成と実行
 Visual Studio には、 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] マネージ アプリの単体テストのサポートと、Visual C#、Visual Basic、および Visual C++ 用の単体テスト ライブラリ テンプレートが含まれています。  
   
 > [!TIP]
->  [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリの開発の詳細については、「 [Windows ストア アプリ開発の開始](http://go.microsoft.com/fwlink/?LinkID=241410)」を参照してください。  
+>  [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリの開発の詳細については、[UWP アプリの概要](http://go.microsoft.com/fwlink/?LinkID=241410)に関するページを参照してください。  
   
  Visual Studio は、次の単体テスト機能を備えています。  
   
@@ -62,13 +45,13 @@ Visual Studio には、 [!INCLUDE[win8_appname_long](../debugger/includes/win8_a
   
 ##  <a name="CreateAndRunUnitTestWin8Tailored_Create"></a> 単体テスト プロジェクトの作成  
   
-#### <a name="to-create-a-unit-test-project-for-a-windows-store-app"></a>Windows ストア アプリの単体テスト プロジェクトを作成するには  
+#### <a name="to-create-a-unit-test-project-for-a-uwp-app"></a>UWP アプリの単体テスト プロジェクトを作成するには  
   
 1.  **[ファイル]** メニューの **[新しいプロジェクト]**をクリックします。  
   
      [新しいプロジェクト] ダイアログ ボックスが表示されます。  
   
-2.  テンプレートで、単体テストを作成するプログラミング言語を選択した後、関連する [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 単体テスト ライブラリを選択します。 たとえば、 **[Visual C#]** 、 **[Windows ストア]**、 **[単体テスト ライブラリ (Windows ストア アプリ)]**の順に選択します。  
+2.  テンプレートで、単体テストを作成するプログラミング言語を選択した後、関連する [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 単体テスト ライブラリを選択します。 たとえば、 **[Visual C#]**、**[Windows ユニバーサル]**、**[単体テスト ライブラリ (ユニバーサル Windows)]** の順に選択します。  
   
     > [!NOTE]
     >  Visual Studio には、Visual C#、Visual Basic、および Visual C++ 用の単体テスト ライブラリ テンプレートがあります。  
@@ -90,7 +73,7 @@ Visual Studio には、 [!INCLUDE[win8_appname_long](../debugger/includes/win8_a
 ##  <a name="CreateAndRunUnitTestWin8Tailored_Manifest"></a> 単体テスト プロジェクトのマニフェストの編集  
  アプリケーションを実行するために必要な機能を提供するように単体テスト プロジェクトのマニフェストを編集する必要があります。  
   
-#### <a name="to-edit-the-unit-test-projects-windows-store-application-manifest-file"></a>単体テスト プロジェクトの Windows ストア アプリ マニフェスト ファイルを編集するには  
+#### <a name="to-edit-the-unit-test-projects-uwp-application-manifest-file"></a>単体テスト プロジェクトの UWP アプリ マニフェスト ファイルを編集するには  
   
 1.  ソリューション エクスプローラーで、新しい [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 単体テスト プロジェクト内の Package.appxmanifest ファイルを右クリックし、 **[開く]**を選択します。  
   
@@ -109,7 +92,7 @@ Visual Studio には、 [!INCLUDE[win8_appname_long](../debugger/includes/win8_a
   
 ##  <a name="CreateAndRunUnitTestWin8Tailored_Code"></a> 単体テストのコーディング  
   
-#### <a name="to-code-the-unit-test-for-a-windows-store-app"></a>Windows ストア アプリの単体テストをコーディングするには  
+#### <a name="to-code-the-unit-test-for-a-uwp-app"></a>UWP アプリの単体テストをコーディングするには  
   
 1.  コード エディターで、単体テストを編集し、テストに必要なアサートとロジックを追加します。  
   
@@ -147,7 +130,7 @@ Visual Studio には、 [!INCLUDE[win8_appname_long](../debugger/includes/win8_a
     >   
     >  また、 **[選択されたテストをデバッグ]**、 **[テストを開く]**をクリックし、 **[プロパティ]** オプションを使用できます。  
     >   
-    >  ![単体テスト エクスプローラー &#45; 単体テストのコンテキスト メニュー](~/test/media/unit_test_win8_unittestexplorer_contextmenu.png "Unit_Test_Win8_UnitTestExplorer_ContextMenu")  
+    >  ![単体テスト エクスプローラー &#45; 単体テストのコンテキスト メニュー](../test/media/unit_test_win8_unittestexplorer_contextmenu.png "Unit_Test_Win8_UnitTestExplorer_ContextMenu")  
   
      単体テストが実行されます。 完了すると、テスト エクスプローラーは、テストの状態、経過時間、およびソースへのリンクを表示します。  
   
@@ -156,7 +139,7 @@ Visual Studio には、 [!INCLUDE[win8_appname_long](../debugger/includes/win8_a
 ## <a name="external-resources"></a>外部リソース  
   
 ### <a name="videos"></a>ビデオ  
- [Channel 9: XAML を使用した Windows ストア アプリのビルドの単体テスト](http://go.microsoft.com/fwlink/?LinkId=226285)  
+ [Channel 9: XAML を使用した UWP アプリのビルドの単体テスト](http://go.microsoft.com/fwlink/?LinkId=226285)  
   
 ### <a name="forums"></a>フォーラム  
  [Visual Studio の単体テスト](http://go.microsoft.com/fwlink/?LinkId=224477)  
@@ -165,6 +148,5 @@ Visual Studio には、 [!INCLUDE[win8_appname_long](../debugger/includes/win8_a
  [MSDN ライブラリ - 既存コードの単体テストの作成と実行 (Visual Studio 2010)](http://go.microsoft.com/fwlink/?LinkID=223683)  
   
 ## <a name="see-also"></a>関連項目  
- [Visual Studio でのストア アプリのテスト](../test/testing-store-apps-with-visual-studio.md)   
- [Team Foundation ビルドを使用した Windows ストア アプリのビルドとテスト](http://msdn.microsoft.com/Library/d0ca17bb-deae-4f3d-a18d-1a99bebceaa9)
-
+ [Visual Studio での UWP アプリのテスト](../test/testing-store-apps-with-visual-studio.md)   
+ [Team Foundation ビルドを使用した UWP アプリのビルドとテスト](http://msdn.microsoft.com/Library/d0ca17bb-deae-4f3d-a18d-1a99bebceaa9)

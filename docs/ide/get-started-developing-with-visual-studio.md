@@ -4,47 +4,29 @@ ms.custom:
 ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-acquisition
+ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Visual Studio, getting started
+helpviewer_keywords: Visual Studio, getting started
 ms.assetid: 041ef726-f117-4a91-9c18-fef043bf2529
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4b2952b9233c7c4571ad4509cc7c4beda7ee2338
-ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 5ac7781ecb53727572a9d8594f4a65c5e9c6628c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="get-started-developing-with-visual-studio"></a>Get Started Developing with Visual Studio
+# <a name="get-started-developing-with-visual-studio"></a>Visual Studio を使用した開発の開始
 Visual Studio へようこそ。 製品を [ダウンロード](http://www.visualstudio.com/community) すると、コーディングを開始するのにこれらのページが役立ちます。  
 
 -   **[Web アプリを作成する](https://www.visualstudio.com/features/modern-web-tooling-vs):** 最新の Web アプリケーションを作成して配置するツール。  
 
      [チュートリアルの実施](https://docs.asp.net/en/latest/tutorials/your-first-aspnet-application.html) &#124;                               [ドキュメントの参照](https://docs.asp.net/) &#124;                                   [ビデオを見る](http://www.asp.net/vnext)  
 
--   **[HTML/JavaScript (Apache Cordova) でクロスプラット フォームのモバイル アプリを作成する](http://taco.visualstudio.com/en-us/docs/get-started-first-mobile-app/)** :               Apache Cordova は HTML/CSS/JavaScript に基づいたオープンソースのクロスプラットフォーム環境です。  JavaScript コードは、特定のプラットフォームを対象とし、デバイスのすべてのハードウェア機能へのアクセスを可能にするラッパーで実行されます。 Apple Store、Android ストア、Windows ストア用のアプリを開発します。  
+-   **[HTML/JavaScript (Apache Cordova) でクロスプラット フォームのモバイル アプリを作成する](http://taco.visualstudio.com/en-us/docs/get-started-first-mobile-app/)** :               Apache Cordova は HTML/CSS/JavaScript に基づいたオープンソースのクロスプラットフォーム環境です。 JavaScript コードは、特定のプラットフォームを対象とし、デバイスのすべてのハードウェア機能へのアクセスを可能にするラッパーで実行されます。 Apple Store、Android ストア、Windows ストア用のアプリを開発します。  
 
      [サンプルの読み込み](https://github.com/Microsoft/cordova-samples/tree/master/todo-angularjs) &#124;   [チュートリアルの実施](http://taco.visualstudio.com/en-us/docs/get-started-first-mobile-app/) &#124;                               [ドキュメントの参照](http://taco.visualstudio.com/en-us/docs/get-started-vs-tools-apache-cordova/) &#124;                                [ビデオを見る](https://channel9.msdn.com/Blogs/Seth-Juarez/Getting-Started-with-Apache-Cordova-in-Visual-Studio)  
 
@@ -85,4 +67,3 @@ Visual Studio へようこそ。 製品を [ダウンロード](http://www.visua
 |[Visual C# と Visual Basic の概要](../ide/getting-started-with-visual-csharp-and-visual-basic.md)|[JavaScript コードの記述](https://msdn.microsoft.com/library/cte3c772.aspx)|  
 |[クロス プラットフォーム モバイル開発のための Visual C++](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md)|[F# を使用した関数型プログラミングの概要](http://msdn.microsoft.com/library/vstudio/dd233147.aspx)|  
 |[C++ の概要](../ide/getting-started-with-cpp-in-visual-studio.md)|[Visual Studio のデバッグの概要](../ide/getting-started-with-debugging-in-visual-studio.md)|
-

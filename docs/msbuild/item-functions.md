@@ -1,35 +1,35 @@
 ---
 title: "項目用の関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "msbuild, 項目用の関数"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: msbuild, Item functions
 ms.assetid: 5e6df3cc-2db8-4cbd-8fdd-3ffd03ac0876
-caps.latest.revision: 28
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: 8503de5c90544e06fa7119482f67726655a4ffed
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 項目用の関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-MSBuild 4.0 以降では、タスクおよびターゲットのコードで項目関数を呼び出して、プロジェクト内の項目に関する情報を取得できます。  これらの関数により、Distinct\(\) 項目の取得が簡素化され、項目をループ処理するよりも処理が速くなります。  
+# <a name="item-functions"></a>項目用の関数
+MSBuild 4.0 以降、タスクとターゲットのコードは項目用の関数を呼び出し、プロジェクトの項目に関する情報を取得できます。 これらの関数により、Distinct() 項目の取得が簡素化され、項目をループ処理するよりも処理が速くなります。  
   
-## Stringの項目関数  
- .NET Frameworkの項目の値を操作するには、文字列のメソッドとプロパティを使用できます。  <xref:System.String> のメソッドの場合、メソッドの名前を指定します。  <xref:System.String> のプロパティに、「get\_」の後にプロパティ名を指定します。  
+## <a name="string-item-functions"></a>文字列項目関数  
+ .NET Framework の String メソッドと String プロパティを利用し、あらゆる項目値を操作できます。 <xref:System.String> メソッドの場合、メソッド名を指定します。 <xref:System.String> プロパティの場合、"get_" の後にプロパティ名を指定します。  
   
- 各文字列に対して文字列、文字列のメソッドまたはプロパティの実装がある項目の場合は。  
+ 項目に複数の文字列が含まれる場合、String メソッドまたはプロパティは各文字列で実行されます。  
   
- 次の例は、これらの文字列の項目関数を使用する方法を示します。  
+ 次は、これらの文字列項目関数の使用方法を示す例です。  
   
-```  
+```xml  
 <ItemGroup>  
     <theItem Include="andromeda;tadpole;cartwheel" />  
 </ItemGroup>  
@@ -50,25 +50,25 @@ MSBuild 4.0 以降では、タスクおよびターゲットのコードで項�
   -->  
 ```  
   
-## 組み込み項目関数  
- 次の表に、項目に対して使用できる組み込み関数を示します。  
+## <a name="intrinsic-item-functions"></a>組み込み項目関数  
+ 下の表は、項目に利用できる組み込み関数をまとめたものです。  
   
-|Function|例|説明|  
-|--------------|-------|--------|  
-|`Count`|`@(MyItem->Count())`|項目数を返します。|  
-|`DirectoryName`|`@(MyItem->DirectoryName())`|各項目の `Path.DirectoryName` の値を返します。|  
-|`Distinct`|`@(MyItem->Distinct())`|`Include` の値を持つ項目を返します。  メタデータは無視されます。  比較では、大文字と小文字を区別しません。|  
-|`DistinctWithCase`|`@(MyItem->DistinctWithCase())`|`itemspec` の値を持つ項目を返します。  メタデータは無視されます。  比較では、大文字と小文字を区別します。|  
-|`Reverse`|`@(MyItem->Reverse())`|逆の項目を返します。|  
-|`AnyHaveMetadataValue`|`@(MyItem->AnyHaveMetadataValue("MetadataName", "MetadataValue"))`|`boolean` をどの項目が、指定されたメタデータの名前と値が存在するかどうかを示すを返します。  比較では、大文字と小文字を区別しません。|  
-|`ClearMetadata`|`@(MyItem->ClearMetadata())`|オフのメタデータ項目を返します。  `itemspec` のみが保持されます。|  
-|`HasMetadata`|`@(MyItem->HasMetadataValue("MetadataName")`|特定のメタデータの名前の項目を返します。  比較では、大文字と小文字を区別しません。|  
-|`Metadata`|`@(MyItem->Metadata("MetadataName"))`|メタデータの名前を持つメタデータ値を返します。|  
-|`WithMetadataValue`|`@(MyItem->WithMetadataValue("MetadataName", "MetadataValue")`|指定されたメタデータの名前と値を持つ項目を返します。  比較では、大文字と小文字を区別しません。|  
+|関数|例|説明|  
+|--------------|-------------|-----------------|  
+|`Count`|`@(MyItem->Count())`|項目の数を返します。|  
+|`DirectoryName`|`@(MyItem->DirectoryName())`|項目ごとに `Path.DirectoryName` の等価を返します。|  
+|`Distinct`|`@(MyItem->Distinct())`|別個の `Include` 値を含む項目を返します。 メタデータは無視されます。 比較では、大文字と小文字が区別されません。|  
+|`DistinctWithCase`|`@(MyItem->DistinctWithCase())`|別個の `itemspec` 値を含む項目を返します。 メタデータは無視されます。 比較では、大文字と小文字を区別します。|  
+|`Reverse`|`@(MyItem->Reverse())`|項目を逆の順序で返します。|  
+|`AnyHaveMetadataValue`|`@(MyItem->AnyHaveMetadataValue("MetadataName", "MetadataValue"))`|特定のメタデータの名前と値が項目に含まれているかどうかを示す `boolean` を返します。 比較では、大文字と小文字が区別されません。|  
+|`ClearMetadata`|`@(MyItem->ClearMetadata())`|メタデータを消して項目を返します。 `itemspec` のみが保持されます。|  
+|`HasMetadata`|`@(MyItem->HasMetadataValue("MetadataName"))`|特定のメタデータ名を含む項目を返します。 比較では、大文字と小文字が区別されません。|  
+|`Metadata`|`@(MyItem->Metadata("MetadataName"))`|メタデータ名が含まれるメタデータの値を返します。|  
+|`WithMetadataValue`|`@(MyItem->WithMetadataValue("MetadataName", "MetadataValue"))`|特定のメタデータの名前と値を含む項目を返します。 比較では、大文字と小文字が区別されません。|  
   
- 次の例は、基本的な項目関数を使用する方法を示します。  
+ 次は、組み込み項目関数の使用方法を示す例です。  
   
-```  
+```xml  
 <ItemGroup>  
     <TheItem Include="first">  
         <Plant>geranium</Plant>  
@@ -101,5 +101,5 @@ MSBuild 4.0 以降では、タスクおよびターゲットのコードで項�
   -->  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [項目](../msbuild/msbuild-items.md)

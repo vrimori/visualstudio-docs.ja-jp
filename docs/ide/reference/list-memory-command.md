@@ -1,91 +1,91 @@
 ---
 title: "ListMemory コマンド | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "debug.listmemory"
-helpviewer_keywords: 
-  - "Debug.ListMemory コマンド"
-  - "メモリの一覧表示コマンド"
-  - "ListMemory コマンド"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: debug.listmemory
+helpviewer_keywords:
+- Debug.ListMemory command
+- ListMemory command
+- list memory command
 ms.assetid: a84de361-a6a6-4f6d-96aa-a0d4a424371e
-caps.latest.revision: 11
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: ae04c23a986107125edc9be149d6317a05c5b58a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ListMemory コマンド
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="list-memory-command"></a>ListMemory コマンド
 指定範囲のメモリの内容を表示します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]  
 [/Hex|Signed|Unsigned] [expression]  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  `expression`  
- 省略可能です。  メモリの表示を開始するメモリ アドレス。  
+ 省略可能です。 メモリの表示を開始するメモリ アドレス。  
   
-## スイッチ  
- \/ANSI&#124;Unicode  
- 省略可能です。  メモリの内容を、メモリ バイトに対応する ANSI 文字または Unicode 文字にして表示します。  
+## <a name="switches"></a>スイッチ  
+ /ANSI&#124;Unicode  
+ 省略可能です。 メモリを、メモリ バイトに対応する ANSI 文字または Unicode 文字として表示します。  
   
- \/Count:`number`  
- 省略可能です。  表示するメモリを `expression` からのバイト数で指定します。  
+ /Count:`number`  
+ 省略可能です。 表示するメモリを `expression` からのバイト数で指定します。  
   
- \/Format:`formattype`  
- 省略可能です。  **\[メモリ\]** ウィンドウにメモリ情報を表示するときの形式を指定します。\[1 バイト\]、\[2 バイト\]、\[4 バイト\]、\[8 バイト\]、\[浮動小数点型\] \(32 ビット\)、または \[倍精度浮動小数点型\] \(64 ビット\) のいずれかです。  \[1 バイト\] を使用する場合、`/Unicode` は使用できません。  
+ /Format:`formattype`  
+ 省略可能です。 **[メモリ]** ウィンドウにメモリ情報を表示する場合の形式の種類は、OneByte、TwoBytes、FourBytes、EightBytes、Float (32 ビット)、または Double (64 ビット) を指定できます。 OneByte を使用する場合、`/Unicode` は使用できません。  
   
- \/Hex&#124;Signed&#124;Unsigned  
- 省略可能です。  数字の表示形式を、符号付き、符号なし、または 16 進のいずれかに指定します。  
+ /Hex&#124;Signed&#124;Unsigned  
+ 省略可能です。 数字の表示形式を、符号付き、符号なし、または 16 進数のいずれかに指定します。  
   
-## 解説  
- すべてのスイッチを付けて **Debug.ListMemory** コマンドを完全に記述する代わりに、指定の値を設定するための特定のスイッチがあらかじめ定義されたエイリアスを使用してコマンドを起動することもできます。  次に例を示します。  
+## <a name="remarks"></a>コメント  
+ すべてのスイッチを指定して完全な **Debug.ListMemory** コマンドを記述する代わりに、特定のスイッチが指定された値に事前に設定された定義済みのエイリアスを使用してコマンドを起動することもできます。 以下に例を示します。  
   
 ```  
 >Debug.ListMemory /Format:float /Count:30 /Unicode  
 ```  
   
- 上のコードの代わりに、次のように入力できます。  
+ 上のコードを入力する代わりに、次のように記述できます。  
   
 ```  
 >df /Count:30 /Unicode  
 ```  
   
- **Debug.ListMemory** コマンドで使用できるエイリアスの一覧を次に示します。  
+ **Debug.ListMemory** コマンドで使用できるエイリアスの一覧を以下に示します。  
   
 |Alias|コマンドおよびスイッチ|  
-|-----------|-----------------|  
+|-----------|--------------------------|  
 |**d**|Debug.ListMemory|  
-|**da**|Debug.ListMemory \/Ansi|  
-|**db**|Debug.ListMemory \/Format:OneByte|  
-|**dc**|Debug.ListMemory \/Format:FourBytes \/Ansi|  
-|**dd**|Debug.ListMemory \/Format:FourBytes|  
-|**df**|Debug.ListMemory \/Format:Float|  
-|**dq**|Debug.ListMemory \/Format:EightBytes|  
-|**du**|Debug.ListMemory \/Unicode|  
+|**da**|Debug.ListMemory /Ansi|  
+|**db**|Debug.ListMemory /Format:OneByte|  
+|**dc**|Debug.ListMemory /Format:FourBytes /Ansi|  
+|**dd**|Debug.ListMemory /Format:FourBytes|  
+|**df**|Debug.ListMemory /Format:Float|  
+|**dq**|Debug.ListMemory /Format:EightBytes|  
+|**du**|Debug.ListMemory /Unicode|  
   
-## 使用例  
+## <a name="example"></a>例  
   
 ```  
 >Debug.ListMemory /Format:float /Count:30 /Unicode  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ListCallStack コマンド](../../ide/reference/list-call-stack-command.md)   
- [ListThreads コマンド](../../ide/reference/list-threads-command.md)   
- [Visual Studio コマンド](../../ide/reference/visual-studio-commands.md)   
+ [スレッドの一覧表示コマンド](../../ide/reference/list-threads-command.md)   
+ [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
- [\[検索\] ボックス](../Topic/Find-Command%20Box.md)   
- [Visual Studio コマンドの定義済みのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+ [[検索/コマンド] ボックス](../../ide/find-command-box.md)   
+ [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)

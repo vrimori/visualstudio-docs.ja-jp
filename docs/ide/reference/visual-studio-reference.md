@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4ddcffd-d5b7-4ce8-8775-14e649c34518
-caps.latest.revision: 35
-author: kempb
-ms.author: kempb
+caps.latest.revision: "35"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: e32d7a177a1a6ff0e26fba7f418f368a64bb1337
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 3fb02550aef01a16dbdb1c5e5cff4219ccd15100
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="visual-studio-reference"></a>Visual Studio リファレンス
 このセクションには、ユーザー インターフェイスのリファレンス、言語間の比較、およびその他のリファレンス ドキュメントが含まれています。  
@@ -50,20 +34,13 @@ ms.lasthandoff: 04/05/2017
  [Visual Studio の XML ツール](../../xml-tools/xml-tools-in-visual-studio.md)  
  Visual Studio の XML ツールの概要に関するドキュメントと詳細情報についてのリンクがあります。  
   
- [Visual Studio for Applications リファレンス](../../ide/reference/visual-studio-for-applications-reference.md)  
- .NET Framework スクリプト エンジンをアプリケーションに統合するために使用できるインターフェイスに関するリファレンス ドキュメントがあります。  
-  
- [MSBuild](../../msbuild/msbuild.md)
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]に統合された Microsoft ビルド プラットフォームの使用方法に関するドキュメントがあります。  
-  
- [IDE に関するエラーのトラブルシューティング情報](../../ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md)  
- IDE のエラー メッセージを解決するために役立つリソースへのリンクがあります。  
-  
- [ご意見](../../ide/talk-to-us.md)  
- Visual Studio のカスタマー サポートにアクセスする方法についての情報があります。  
+ [MSBuild](../../msbuild/msbuild.md) [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] に統合された Microsoft ビルド プラットフォームの使用方法に関するドキュメントがあります。  
   
  [障碍があるユーザーのための機能](../../ide/reference/accessibility-for-people-with-disabilities.md)  
  ユーザー補助のオプションを変更する方法についての情報があります。  
+  
+ [IDE に関するエラーのトラブルシューティング情報](../../ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md)  
+ IDE のエラー メッセージを解決するために役立つリソースへのリンクがあります。  
   
 ## <a name="related-sections"></a>関連項目  
  [Visual Basic リファレンス](/dotnet/visual-basic/reference/index)  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,29 +12,14 @@ helpviewer_keywords:
 - unit tests, verifying code with
 - testing code, automated tests
 ms.assetid: c191de3e-3f3b-471e-b828-29ec24e80e2c
-caps.latest.revision: 62
+caps.latest.revision: "62"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
-ms.openlocfilehash: 2e777b966cd332871533434728a6a565c51a5336
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/26/2017
-
+ms.openlocfilehash: e6e0b55e86130f316c09583d4a52e1ad3dc22608
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="unit-test-your-code"></a>コードの単体テスト
 単体テストを実行することにより、開発者およびテスト担当者は、[!INCLUDE[csharp_current_short](../misc/includes/csharp_current_short_md.md)]、[!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)]、および [!INCLUDE[cpp_current_short](../misc/includes/cpp_current_short_md.md)] のプロジェクトでクラスのメソッドに論理エラーがないかどうかをすばやく確認できます。  
@@ -89,7 +73,7 @@ ms.lasthandoff: 05/26/2017
 ## <a name="external-resources"></a>外部リソース  
   
 ### <a name="videos"></a>ビデオ  
- [Channel 9: XAML を使用した Windows ストア アプリのビルドの単体テスト](http://go.microsoft.com/fwlink/?LinkId=226285)  
+ [Channel 9: XAML を使用した UWP アプリのビルドの単体テスト](http://go.microsoft.com/fwlink/?LinkId=226285)  
   
 ### <a name="forums"></a>フォーラム  
  [Visual Studio の単体テスト](http://go.microsoft.com/fwlink/?LinkId=224477)  
@@ -103,4 +87,3 @@ ms.lasthandoff: 05/26/2017
 ## <a name="see-also"></a>関連項目  
  [コード品質の向上](/visualstudio/test/improve-code-quality)   
  [アプリケーションのテスト](/devops-test-docs/test/test-apps-early-and-often)
-

@@ -1,131 +1,87 @@
 ---
-title: "移動 | Microsoft Docs"
+title: "移動コマンドを使用したコードの検索 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 09/26/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 509b2107-23d1-4fb3-987f-ab99ef45b72e
+helpviewer_keywords:
+- code editor, go to
+- code editor, go to line
+- go to line
+- go to
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3b812629bf0f655f39c35a56eb1b3ca9113303a6
-ms.openlocfilehash: 8bf6d49b21d128d15f5312fb230d4a8e7a8195af
-ms.contentlocale: ja-jp
-ms.lasthandoff: 03/01/2017
-
+ms.openlocfilehash: 15b222eaa3e03a44f99f64e86f9c88d125e41f98
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
+# <a name="find-code-using-go-to-commands"></a>移動コマンドを使用したコードの検索  
+Visual Studio の **[移動]** コマンドは、特定の項目をすばやく検索できるように、コードのフォーカス検索を行います。 統一されたシンプルなインターフェイスで、特定の行、型、シンボル、ファイル、メンバーに移動できます。 この機能は Visual Studio 2017 以降に備わっています。  
 
-# <a name="go-to"></a>[移動]
-キーボードとマウスを使って、Visual Studio IDE 内のコード間を簡単に移動する方法が多数あります。
+### <a name="how-to-use-it"></a>使用方法  
 
-<!-- VERSIONLESS -->
-## <a name="go-to-all"></a>すべてにジャンプ
-この機能は Visual Studio 2017 以降に備わっています。  コード内を移動して、探している特定の部分を検索できます。  特定の行、型、シンボル、ファイル、その他をシンプルな統一されたインターフェイスで検索できます。
+入力        | 関数 
+------------ | ---
+**キーボード** | **Ctrl + t** キーを押すか、または **Ctrl + ,** キーを押します。     
+**マウス**    | **[編集]**、**[ジャンプ]**、**[すべてにジャンプ]** の順に選択します。  
 
-### <a name="how-to-use"></a>使い方
-* **キーボード**
-  * **Ctrl + ,** キーまたは **Ctrl + T** キーを押します。  選ばれているプロファイルによってキーボード ショートカットが異なる場合があることに注意してください。
-* **マウス**
-  * **[編集] > [ジャンプ] > [すべてにジャンプ]** を選びます。
-
-既定では IDE の右上に小さなウィンドウが表示されます。
+既定ではコード エディターの右上に小さなウィンドウが表示されます。  
 
 ![すべてにジャンプ](media/gotoall.png)
 
-ここからは、複数の移動方法があります。
-* プレフィックスを付けずにテキストを入力し、テキスト ボックスの下で選んだ[フィルター アイコン](#filtered-searches)を使って検索します。
-* [プレフィックス](#filtered-searches)の後にテキストを入力して検索します。
-* 疑問符 (?) を入力して詳しいヘルプ情報を表示します。
+テキスト ボックスに入力すると、テキスト ボックスの下のドロップダウン リストに結果が表示されます。 要素に移動するには、一覧の要素を選択します。    
+
+![[移動] ウィンドウ](../ide/media/vside_navigatetowindow.png "[移動] ウィンドウ")  
+
+疑問符 (?) を入力して詳しいヘルプ情報を表示することもできます。  
+
   ![[すべてにジャンプ] のヘルプ](media/gotoall_help.png)
 
-### <a name="filtered-searches"></a>フィルター処理された検索
-検索を特定の種類に絞り込むには、入力するときにプレフィックスを使うか、[検索] ウィンドウの下に表示される以下のアイコンを使います。
+### <a name="filtered-searches"></a>フィルター処理された検索  
+既定では、指定した項目がソリューションのすべての項目から検索されます。 ただし、検索語句の前に特定の文字を付けることで、コード検索の対象を特定の種類の要素に限定できます。 [移動] ダイアログ ボックスのツール バーでボタンを選択して、簡単に検索フィルターを変更することもできます。 タイプ フィルターを変更するボタンが左側にあり、検索の範囲を変更するボタンが右側にあります。  
+
+![メンバーに移動する](../ide/media/vside_navigation_toolbar.png)
+
+#### <a name="filter-to-a-specific-type-of-code-element"></a>フィルター処理して特定の種類のコード要素に絞り込む  
+特定の種類のコード要素に検索を絞り込むには、[検索] ボックスでプレフィックスを指定するか、次の 5 つのフィルター アイコンのいずれかを選択します。  
 
 プレフィックス | アイコン | ショートカット | 説明
 :----: | ---- | -------- | ---
-#      | ![シンボル アイコン](media/gotoall_symbolicon.png) | Ctrl + 1、Ctrl + S | 一致するシンボルを検索します
-f      | ![ファイル アイコン](media/gotoall_fileicon.png)     | Ctrl + 1、Ctrl + F | 一致するファイル名を検索します
-m      | ![メンバー アイコン](media/gotoall_membericon.png) | Ctrl + 1、Ctrl + M | 一致するメンバーを検索します
-t      | ![型アイコン](media/gotoall_typeicon.png)     | Ctrl + 1、Ctrl + T | 一致する型を検索します
-:      | ![行アイコン](media/gotoall_lineicon.png)     | Ctrl+G         | 入力した行番号にジャンプします
+\#      | ![シンボル アイコン](media/gotoall_symbolicon.png) | Ctrl + 1、Ctrl + S | 指定したシンボルに移動します。
+f      | ![ファイル アイコン](media/gotoall_fileicon.png)     | Ctrl + 1、Ctrl + F | 指定したファイルに移動します。
+m      | ![メンバー アイコン](media/gotoall_membericon.png) | Ctrl + 1、Ctrl + M | 指定したメンバーに移動します。
+t      | ![型アイコン](media/gotoall_typeicon.png)     | Ctrl + 1、Ctrl + T | 指定した型に移動します。
+:      | ![行アイコン](media/gotoall_lineicon.png)     | Ctrl + G         | 指定した行番号に移動します。
 
-### <a name="search-locations"></a>検索場所
-特定の場所に検索を絞り込むには、2 つのドキュメント アイコンを使います。
+#### <a name="filter-to-a-specific-location"></a>フィルター処理して特定の場所に絞り込む    
+特定の場所に検索を絞り込むには、次の 2 つのドキュメント アイコンのいずれかを選択します。  
 
 アイコン | 説明
 ---- | ---
 ![現在のドキュメント](media/gotoall_currentdocument.png) | 現在のドキュメントだけを検索します
-![外部ドキュメント](media/gotoall_external.png) | プロジェクト/ソリューションに含まれるドキュメントだけでなく外部のドキュメントも検索します
+![外部ドキュメント](media/gotoall_external.png) | プロジェクト/ソリューションに含まれるドキュメントだけでなく外部のドキュメントも検索します  
 
-### <a name="settings"></a>設定
-右下にある歯車アイコン ![歯車アイコン](media/gotoall_gear.png) をクリックして、この機能の動作を変更することができます。
+### <a name="camel-casing"></a>camel 規約に従った大文字小文字の使い分け  
+コード内で [camel 規約に従った大文字小文字の使い分け](https://en.wikipedia.org/wiki/Camel_case)を使用している場合は、コード要素名の大文字のみを入力することにより、コードの検索が速くなります。 たとえばコードで `CredentialViewModel` という型を使用している場合は、[移動] ダイアログ ボックスで型フィルター ("t") を選択し、名前に含まれる大文字 (`CVM`) だけを入力します。 この機能は、コード中に長い名前がある場合に便利です。  
+
+![[移動] ウィンドウ - 大文字を使用した検索](../ide/media/vside_capitalsearch.png)
+
+### <a name="settings"></a>設定  
+歯車アイコンを選択すると、 ![歯車アイコン](media/gotoall_gear.png) この機能の動作を変更することができます。  
 
 設定 | 説明
 ------- | ---
 プレビュー タブを使用する | 選んだ項目を IDE の [プレビュー] タブにすぐに表示します
-詳細の表示    | プロジェクト、ファイル、行、およびドキュメントのコメントから取得した概要情報をウィンドウに表示します
-ウィンドウを中央に   | このウィンドウを右上ではなく IDE の中央に移動します
-<!-- END VERSIONLESS -->
+詳細の表示    | プロジェクト、ファイル、行、およびドキュメントのコメントから取得した概要情報をウィンドウに表示します。
+ウィンドウを中央に   | このウィンドウをコード エディターの右上ではなく、中央に移動します。   
 
-## <a name="go-to-definition"></a>[定義へ移動]
-型のソースに移動し、結果を新しいタブで開きます。
-
-入力        | 関数 
------------- | ---
-**キーボード** | 型名内のどこかにテキスト カーソルを置き、**F12** キーを押します
-**マウス**    | 型名を右クリックし、**[定義へ移動]** を選びます
-
-## <a name="peek-definition"></a>定義をここに表示
-新しいタブではなくポップアップ ウィンドウで型の定義をプレビューします。
-
-入力        | 関数 
------------- | ---
-**キーボード** | 型名内のどこかにテキスト カーソルを置き、**Alt + F12** キーを押します
-**マウス**    | 型名を右クリックし、**[定義をここに表示]** を選びます
-
-ポップアップ ウィンドウから別の定義を表示する場合は、ポップアップの上に表示される円と矢印を使ってナビゲートできる階層リンク パスを開始します。  詳細については、「[方法: [定義をここに表示] を使用してコードを表示および編集する (Alt + F12)](how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)」を参照してください。
-
-## <a name="go-to-implementation"></a>実装に移動
-基底クラスまたは型からその実装に移動します。  複数の実装がある場合は、**[シンボルの検索結果]** ウィンドウに一覧表示されます。
-
-入力        | 関数 
------------- | ---
-**キーボード** | 型名内のどこかにテキスト カーソルを置き、**Ctrl + F12** キーを押します
-**マウス**    | 型名を右クリックし、**[実装に移動]** を選びます
-
-## <a name="find-all-references"></a>[すべての参照の検索]
-メソッド/プロパティ/変数が使われているすべての場所を検索します。  これを使って、実行されないコードを調べ、大規模なリファクタリングの副作用を確認することができます。  結果の間をジャンプするには、**F8** キーを押します。
-
-入力        | 関数 
------------- | ---
-**キーボード** | 型名内のどこかにテキスト カーソルを置き、**Ctrl + K、R** キーを押します
-**マウス**    | 型名を右クリックし、**[すべての参照の検索]** を選びます
-
-## <a name="navigating-results"></a>結果内の移動
-Visual Studio のナビゲーション機能を使うと、スタックを前後に移動できます。
-
-入力        | 関数 
------------- | ---
-**Ctrl + -**          | スタックを後方に移動します
-**Ctrl + Shift + -**    | スタックを前方に移動します
-
-**[表示] > [後ろに移動する]** および **[表示] > [前に移動する]** メニュー項目を使うこともできます。
+## <a name="see-also"></a>関連項目  
+[コード間の移動](../ide/navigating-code.md)  
+[[定義へ移動] と [定義をここに表示]](../ide/go-to-and-peek-definition.md)  

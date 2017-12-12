@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ccc5e543-7dcf-465c-97dd-e133e869800c
-caps.latest.revision: 28
-author: kempb
-ms.author: kempb
+caps.latest.revision: "28"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: cc0ac8b3418c725579b25712e14c373028fca339
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: f4778bde9903ce3e264f0209c147eedc227b7d8d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Visual Studio の生産性に関するヒント
 これらのヒントに従うことによって、Visual Studio でのコードの作成、移動、デバッグをさらに高速かつ効率的にできます。 一般的なキーボード ショートカットの詳細については、「[ヒントとテクニック](../ide/tips-and-tricks-for-visual-studio.md)」を参照してください。 詳細な一覧については、「[キーボード ショートカットの識別とカスタマイズ](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)」および「[既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)」を参照してください。  
@@ -91,23 +75,11 @@ ms.lasthandoff: 05/24/2017
   
      スニペットを挿入するには、メニュー バーで **[編集]**、**[IntelliSense]**、**[スニペットの挿入]** の順に選択するか、ファイルのショートカット メニューを開き、**[スニペットの挿入]** を選択します。 詳細については、「[Code Snippets](../ide/code-snippets.md)」を参照してください。  
   
--   **コード エラーをインラインで修正する**。 スマート タグは、コード行の下に青いボックスまたは赤いボックスとして表示されます。 ボックスの 1 つをポイントするか、コード行にカーソルを置き、Ctrl キーを押しながらピリオド (.) キーを押すと、スマート タグのオプションを 表示できます。  
-  
-     青いボックスでは、コードのエラーを修正するための推奨方法が表示されます。  
-  
-     図 1: エラーのスマート タグ  
-  
-     ![エラー スマート タグの例](../ide/media/productivity_bluesmarttags.png "Productivity_BlueSmartTags")  
-  
-     赤いボックスでは、コードをリファクターするための推奨方法が表示されます。  
-  
-     図 2: リファクタリングのスマート タグ  
-  
-     ![リファクター スマート タグの例](../ide/media/productivity_redsmarttags.png "Productivity_RedSmartTags")  
-  
+-   **コード エラーをインラインで修正する**。 クイック アクションを使うと、コードのリファクタリング、生成、その他の変更を、1 つの操作で簡単に行うことができます。 これらのアクションは、電球アイコン ![小さい電球アイコン](media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall") を使用するか、または適切なコード行にカーソルを置いて **Alt + Enter** キーまたは **Ctrl + .** キーを押すと 適用できます。 詳細については、「[クイック アクション](quick-actions.md)」を参照してください。  
+
 -   **コード要素の定義を表示および編集する**。 メンバー、変数、ローカルなどのコード要素が定義されているモジュールをすばやく表示および編集できます。  
   
-     ポップアップ ウィンドウで定義を開くには、要素を強調表示して Alt + F12 キーを押すか、要素のショートカット メニューを開いて **[定義をここに表示]** をクリックします。 定義を別のコード ウィンドウで開くには、コード要素のショートカット メニューを開き、**[定義へ移動]** をクリックします。  
+     ポップアップ ウィンドウで定義を開くには、要素を強調表示して **Alt + F12** キーを押すか、要素のショートカット メニューを開いて **[定義をここに表示]** を選択します。 定義を別のコード ウィンドウで開くには、コード要素のショートカット メニューを開き、**[定義へ移動]** をクリックします。  
   
 ##  <a name="BKMK_Navigating"></a> コード内での移動  
  さまざまな方法を使用して、コード内の特定の場所をすばやく探して移動できます。  

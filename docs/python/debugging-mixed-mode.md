@@ -1,35 +1,31 @@
 ---
 title: "Visual Studio での Python の混合モードのデバッグ | Microsoft Docs"
 ms.custom: 
-ms.date: 7/12/2017
-ms.prod: visual-studio-dev15
+ms.date: 07/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4ca86a87-e254-4ab7-b3ba-a0ab99c1da93
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 2f7253e91535e5c9f3214b712da135db46ed7cf9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: a185a7888b693d37aa5df8f3a051679d6b7e9ec5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="debugging-python-and-c-together"></a>Python と C++ の同時デバッグ
 
 ほとんどの標準的 Python デバッガーは、Python コードのみのデバッグをサポートします。 ただし、実際には、高パフォーマンスやプラットフォーム API の直接呼び出しが必要なところで Python と、C または C++ が併用されています (例については、「[Python 向け C++ 拡張機能の作成](cpp-and-python.md)」をご覧ください)。 Python プロジェクトが読み込まれるとき、Visual Studio には、Python とネイティブ C/C++ のデバッグを統合して同時に実行する混合モードのデバッグ機能があります。このモードでは、結合された呼び出し履歴、Python とネイティブ コード間でのステップ実行機能、両方の種類のコード内のブレークポイント、Python のオブジェクト表現をネイティブ フレームに表示する機能 (逆も可能) が提供されます。
 
 ![混合モードのデバッグ](media/mixed-mode-debugging.png) 
 
-Visual Studio でのネイティブ C モジュールのビルド、テスト、およびデバッグの概要については「[Deep Dive: Creating Native Modules (詳細情報: ネイティブ モジュールの作成)](https://youtu.be/D9RlT06a1EI)」(youtube.com、9 分 9 秒) をご覧ください。
+Visual Studio でのネイティブ C モジュールのビルド、テスト、およびデバッグの概要については「[Deep Dive: Creating Native Modules (詳細情報: ネイティブ モジュールの作成)](https://youtu.be/D9RlT06a1EI)」(youtube.com、9 分 9 秒) をご覧ください。 ビデオは、Visual Studio 2015 と 2017 の両方に適用されます。
 
 > [!VIDEO https://www.youtube.com/embed/D9RlT06a1EI]
 
@@ -60,7 +56,7 @@ Visual Studio でのネイティブ C モジュールのビルド、テスト、
 > [!Note]
 > ここで説明する混合モードのデバッグは、Python プロジェクトが Visual Studio に読み込まれている場合にのみ有効です。 プロジェクトは Visual Studio のデバッグ モードを特定し、それによって混合モードのオプションを使用できるようにします。 ただし、C++ プロジェクトが読み込まれている場合は ([python.org で説明されているように別のアプリケーションに Python を埋め込んでいる](https://docs.python.org/3/extending/embedding.html)とき)、Visual Studio は混合モード デバッグをサポートしていないネイティブ C++ デバッガーを使います。
 >
-> この場合は、デバッグなしで C++ プロジェクトを開始し (**[デバッグ] > [デバッグなしで開始]** または Ctrl + F5 キー)、その後で **[デバッグ] > [プロセスにアタッチ...]** を使います。 表示されるダイアログで適切なプロセスを選んだ後、**[選択...]** ボタンを使って **[コードの種類の選択]** ダイアログを開き、次に示すように Python を選びます。 **[OK]** を選んでダイアログを閉じた後、**[アタッチ]** を選んでデバッガーを起動します。 デバッガーをアタッチする前にデバッグ対象の Python が呼び出されないように、適切な一時停止または遅延を C++ アプリに組み込むことが必要になる場合があることに注意してください。
+> この場合は、デバッグなしで C++ プロジェクトを開始し (**[デバッグ] > [デバッグなしで開始]** または Ctrl + F5 キー)、その後で **[デバッグ] > [プロセスにアタッチ...]** を使います。表示されるダイアログで適切なプロセスを選んだ後、**[選択...]** ボタンを使って **[コードの種類の選択]** ダイアログを開き、次に示すように Python を選びます。 **[OK]** を選んでダイアログを閉じた後、**[アタッチ]** を選んでデバッガーを起動します。 デバッガーをアタッチする前にデバッグ対象の Python が呼び出されないように、適切な一時停止または遅延を C++ アプリに組み込むことが必要になる場合があることに注意してください。
 >
 > ![デバッガーをアタッチするときにデバッグの種類として Python を選ぶ](media/mixed-mode-debugging-attach-type.png)
 
@@ -84,7 +80,7 @@ Visual Studio でのネイティブ C モジュールのビルド、テスト、
 
 ### <a name="stepping-between-python-and-native-code"></a>Python とネイティブ コード間のステップ実行
 
-[ステップ イン]\(F11) コマンドまたは [ステップ アウト]\(Shift + F11 キー) コマンドを使用したとき、混合モードのデバッガーは、コードの種類の変更を正しく処理します。 たとえば、C で実装されている型のメソッドをPython で呼び出しているときに、そのメソッドへの呼び出しにステップ インすると、実行は、メソッドを実装しているネイティブ関数の先頭で停止します。 同様に、ネイティブ コードが Python API 関数を呼び出しているときは、呼び出されている Python コードで停止します。 たとえば、Python で定義された関数値の `PyObject_CallObject` にステップ インすると、Python 関数の先頭で停止します。 Python からネイティブへのステップ インは、Python から [ctypes](http://docs.python.org/3/library/ctypes.html) 経由で呼び出されるネイティブ関数でもサポートされています。
+[ステップ イン] (F11) コマンドまたは [ステップ アウト] (Shift + F11 キー) コマンドを使用したとき、混合モードのデバッガーは、コードの種類の変更を正しく処理します。 たとえば、C で実装されている型のメソッドをPython で呼び出しているときに、そのメソッドへの呼び出しにステップ インすると、実行は、メソッドを実装しているネイティブ関数の先頭で停止します。 同様に、ネイティブ コードが Python API 関数を呼び出しているときは、呼び出されている Python コードで停止します。 たとえば、Python で定義された関数値の `PyObject_CallObject` にステップ インすると、Python 関数の先頭で停止します。 Python からネイティブへのステップ インは、Python から [ctypes](http://docs.python.org/3/library/ctypes.html) 経由で呼び出されるネイティブ関数でもサポートされています。
 
 ### <a name="pyobject-values-view-in-native-code"></a>ネイティブ コード内の PyObject 値の表示
 

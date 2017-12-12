@@ -1,34 +1,31 @@
 ---
 title: "Visual Studio での Python のクロスプラットフォーム リモート デバッグ | Microsoft Docs"
 ms.custom: 
-ms.date: 7/12/2017
+ms.date: 07/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa667357-763f-4ce6-8e47-48f9337658a8
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 7d5526bbcde438896f63c0f9b4f75d919d3ca457
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 1e017806ca7bf3d23410ba3a2f999dca0b78f240
-ms.openlocfilehash: 2711238ccc6d90b34df748c6b59e4130c74de69b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="remotely-debugging-python-code-on-linux"></a>Linux 上の Python コードのリモート デバッグ
 
 Visual Studio は、Windows コンピューター上でローカルまたはリモートで Python アプリケーションを起動およびデバッグすることができます (「[Remote Debugging](../debugger/remote-debugging.md)」(リモート デバッグ) をご覧ください)。 また、別のオペレーティング システム、デバイス、または CPython 以外の Python 実装を [ptvsd ライブラリ](https://pypi.python.org/pypi/ptvsd)を使用してリモートでデバッグすることもできます。
 
 ptvsd を使用する場合、デバッグ対象の Python コードは Visual Studio がアタッチできるデバッグ サーバーをホストします。 このホストには、コードに小さな変更を加えてサーバーをインポートして有効にする必要があります。また、TCP 接続を許可するようにリモート コンピューター上でネットワークまたはファイアウォールを構成する必要が生じる場合があります。
 
-リモート デバッグの概要については、「[Deep Dive: Cross-Platform Remote Debugging](https://youtu.be/y1Qq7BrV6Cc)」(詳細情報: クロスプラットフォームのリモート デバッグ) (youtube.com、6 分 22 秒) をご覧ください。
+リモート デバッグの概要については、Visual Studio 2015 と 2017 の両方に該当する「[Deep Dive: Cross-Platform Remote Debugging](https://youtu.be/y1Qq7BrV6Cc)」(詳細情報: クロスプラットフォームのリモート デバッグ) (youtube.com、6 分 22 秒) をご覧ください。
 
 > [!VIDEO https://www.youtube.com/embed/y1Qq7BrV6Cc]
 
@@ -185,4 +182,3 @@ ptvsd のリモート デバッグ サーバーへの接続は、既定で、シ
 
 > [!Warning]
 > 現在、これらの警告を無視すると、Visual Studio 2017 はハングします。 すべての問題を修正してから、接続を試行してください。
-
