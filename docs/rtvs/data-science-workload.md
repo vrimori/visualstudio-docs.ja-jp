@@ -1,7 +1,7 @@
 ---
 title: "データ サイエンスと分析のアプリケーション ワークロード | Microsoft Docs"
 ms.custom: 
-ms.date: 9/5/2017
+ms.date: 09/05/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -10,16 +10,15 @@ ms.technology:
 - devlang-fsharp
 ms.tgt_pltfrm: 
 ms.topic: landing-page
-ms.assetid: 018069f3-6d1a-4143-a851-d86d2ff5fbfc
 caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 976bd73c7740e474e4fa7ea3e4cf89f880c7900c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 5e7738d03fa0c9b8b460fe1b2fb4bc17076fa3b5
+ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="data-science-and-analytical-applications-workload"></a>データ サイエンスと分析のアプリケーション ワークロード
 
@@ -42,17 +41,16 @@ R と Python は、データ サイエンスで使用される主要な 2 つの
 
 - F# 言語サポート
 - Python:
-    - Python 言語サポート
-    - Python Web サポート
-    - [Anaconda3 64 ビット](https://www.continuum.io) (さまざまなデータ サイエンス ライブラリおよび Python インタープリターを含む Python ディストリビューションです。)
-    - cookiecutter テンプレートのサポート
+  - Python 言語サポート
+  - Python Web サポート
+  - [Anaconda3 64 ビット](https://www.continuum.io) (さまざまなデータ サイエンス ライブラリおよび Python インタープリターを含む Python ディストリビューションです。)
+  - cookiecutter テンプレートのサポート
 - R:
-    - R 言語サポート    
-    - [Microsoft R Client](https://msdn.microsoft.com/microsoft-r/r-client-get-started) (単一ノードまたはクラスターで高速に計算を実行するための ScaleR ライブラリを含む、Microsoft 社の完全互換のコミュニティでサポートされている R インタープリターです。 [CRAN](https://cran.r-project.org/) の任意の R も使用できます。)
-    - R 開発ツールのランタイム サポート
+  - R 言語サポート
+  - [Microsoft R Client](/machine-learning-server/r-client/what-is-microsoft-r-client) (単一ノードまたはクラスターで高速に計算を実行するための ScaleR ライブラリを含む、Microsoft 社の完全互換のコミュニティでサポートされている R インタープリターです。 [CRAN](https://cran.r-project.org/) の任意の R も使用できます。)
+  - R 開発ツールのランタイム サポート
 
-> [!Note]
-> F# はその他の多数のワークロードにも含まれており、Python には独自のワークロードがありますが、R は現在、データ サイエンスと分析のアプリケーション ワークロードのみに含まれています。ワークロードとは別に、3 つの R コンポーネントは、インストーラーの **[個別のコンポーネント]** タブから選択することも可能です。 **[開発作業]、[R 言語サポート]**、**[開発作業]、[Microsoft R Client]**、および **[コンパイラ、ビルド ツール、およびランタイム]、[R 開発ツールのランタイム サポート]** のオプションを選択します。
+F# はその他の多数のワークロードにも含まれており、Python には独自のワークロードがありますが、R は現在、データ サイエンスと分析のアプリケーション ワークロードのみに含まれています。ワークロードとは別に、3 つの R コンポーネントは、インストーラーの **[個別のコンポーネント]** タブから選択することも可能です。 **[開発作業]、[R 言語サポート]**、**[開発作業]、[Microsoft R Client]**、および **[コンパイラ、ビルド ツール、およびランタイム]、[R 開発ツールのランタイム サポート]** のオプションを選択します。
 
 ## <a name="sql-server-integration"></a>SQL Server の統合
 
@@ -73,7 +71,6 @@ SQL Server では、SQL Server 内で直接高度な分析を行うことが可�
 SQL Server に統合することのメリットを最大限に得るには、**[SQL Server Data Tools]** オプションを使用して**データ ストレージと処理**ワークロードをインストールする必要もあります。 このオプションにより、SQL IntelliSense、構文の強調表示および展開が可能になります。
 
 ![データの保存と処理ワークロード](media/data-storage-workload.png) &nbsp;&nbsp; &nbsp;&nbsp; ![データの保存と処理ワークロード オプション](media/data-storage-workload-options.png)
-
 
 詳細情報
 

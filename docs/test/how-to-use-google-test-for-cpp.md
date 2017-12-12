@@ -11,16 +11,16 @@ ms.assetid: a4868fae-fd6d-4b98-a85f-f23b0dd2fca5
 caps.latest.revision: "14"
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 917b0f0bc65ba4b0306a8bec12d7fd98ee540e34
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.openlocfilehash: 4a67fa6e2a9f317643fe63138a4212676606a64d
+ms.sourcegitcommit: cc288456329aefca1fdaa7ce74751ce195985c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="how-to-use-google-test-for-c-in-visual-studio"></a>Visual Studio で C++ 用の Google Test を使用する方法
 **Visual Studio 2017 バージョン 15.5** 以降では、Google Test が **C++ ワークロードでのデスクトップ開発**の既定のコンポーネントとして Visual Studio IDE に統合されています。 お使いのコンピューターにインストールされていることを確認するには、Visual Studio インストーラーを起動し、ワークロード コンポーネントの一覧で Google Test を探します。
 
-![Google Test をインストールする](media/cpp-gtest-install.png "C++ 用 Google Test をインストールする")
+![Google Test をインストールする](media/cpp-google-component.png "C++ 用 Google Test をインストールする")
 
 ## <a name="add-a-google-test-project-to-the-solution"></a>Google Test プロジェクトをソリューションに追加する
 1. **ソリューション エクスプローラー**で、ソリューション ノードを右クリックして、**[追加] > [新しいプロジェクト]** の順に選びます。 
