@@ -14,11 +14,11 @@ ms.assetid: 9750A3F3-89C7-4A8F-BA75-B0B06BD772C2
 author: timsneath
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: e6dcf1187db5c1e3dd911bc9f91867c383e5a8b2
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.openlocfilehash: ed86e3cd404c40026fad20ef08d4daecd98d74f2
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="install-certificates-required-for-visual-studio-offline-installation"></a>Visual Studio オフライン インストールに必要な証明書をインストールする
 
@@ -42,7 +42,7 @@ Visual Studio セットアップ エンジンでは、信頼されているコ�
 
 オフライン環境でクライアント ワークステーションへの Visual Studio の配置をスクリプトにしている場合は、以下の手順に従う必要があります。
 
-1. [証明書マネージャー ツール](https://msdn.microsoft.com/library/e78byta0.aspx) (certmgr.exe) をインストール共有 (たとえば \\server\share\vs2017) にコピーします。 certmgr.exe は Windows 自体には含まれませんが、[Windows SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) の一部として利用できます。
+1. [証明書マネージャー ツール](/dotnet/framework/tools/certmgr-exe-certificate-manager-tool) (certmgr.exe) をインストール共有 (たとえば \\server\share\vs2017) にコピーします。 certmgr.exe は Windows 自体には含まれませんが、[Windows SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) の一部として利用できます。
 
 2. 次のコマンドでバッチ ファイルを作成します。
 

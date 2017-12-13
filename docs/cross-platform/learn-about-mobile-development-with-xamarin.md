@@ -11,11 +11,11 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: d203bf88f5af6e69b97404ef8da4548f646750b3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: fe983de5dab35a031d6c99b37f2da77a200212f9
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="learn-about-mobile-development-with-xamarin"></a>Xamarin を使用したモバイル開発について学習します
 このトピックでは、Xamarin を使用したクロス プラットフォーム モバイル アプリ開発を理解するのに役立つ概要の資料を提供します。 Visual Studio および Xamarinをまだインストールしていない場合は、まず [Setup and install](../cross-platform/setup-and-install.md) プロセスを開始して、ここに戻り、インストーラーの実行中にこれらのリソースを処理します。  
@@ -94,7 +94,7 @@ ms.lasthandoff: 10/31/2017
   
 2.  **Apple の iOS シミュレーター。** 詳しくは、「 [iOS シミュレーター入門](https://developer.apple.com/library/prerelease/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/GettingStartedwithiOSSimulator/GettingStartedwithiOSSimulator.html#//apple_ref/doc/uid/TP40012848-CH5-SW1) 」(apple.com) をお読みください。  
   
-3.  **Microsoft の Windows Phone エミュレーター。** 詳しくは、「 [Windows Phone 8 用 Windows Phone エミュレーター](https://msdn.microsoft.com/library/dn632391.aspx)」をお読みください。  
+3.  **Microsoft の Windows Phone エミュレーター。** 詳しくは、「 [Windows Phone 8 用 Windows Phone エミュレーター](../debugger/run-windows-phone-apps-in-the-emulator.md)」をお読みください。  
   
 ##  <a name="components"></a> Deeper Dive: Xamarin Components  
  *10 分*  

@@ -11,11 +11,11 @@ caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: dba101890bd2f27c85e8e6053944d8781fa03ed4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 4f525157e9e34838be4379f8df0845b294880f11
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="setup-and-install"></a>セットアップとインストール
 Xamarin を使用して一般的な C#/.NET コード ベースからネイティブの iOS、Android、および Windows のアプリを作成するには、次の条件を満たす必要があります。  
@@ -50,7 +50,7 @@ Xamarin を使用して一般的な C#/.NET コード ベースからネイテ�
 ##  <a name="windows"></a> Windows のセットアップ (Visual Studio と Xamarin)  
   
 > [!TIP]
->  次の手順は、Visual Studio 2017 に適用されます。 Visual Studio 2015 については、[MSDN](https://msdn.microsoft.com/en-us/library/mt613162.aspx) をご覧ください。 Xamarin を Visual Studio 2013 (Update 2 が必要) で使うには、[Xamarin の直接インストール](https://developer.xamarin.com/guides/cross-platform/getting_started/requirements/#install) (xamarin.com) の指示に従ってください。  
+>  次の手順は、Visual Studio 2017 に適用されます。 Visual Studio 2015 については、[MSDN](setup-and-install.md) をご覧ください。 Xamarin を Visual Studio 2013 (Update 2 が必要) で使うには、[Xamarin の直接インストール](https://developer.xamarin.com/guides/cross-platform/getting_started/requirements/#install) (xamarin.com) の指示に従ってください。  
   
 1.  [任意のエディションの Visual Studio 2017 のインストーラーをダウンロードして起動します](https://www.visualstudio.com/downloads/) (Community、Professional、Enterprise)。 Visual Studio 2017 Community は、無料のエディションです。Professional および Enterprise の各エディションは評価版として 30 日間使用できます (その後はライセンスを購入する必要があります)。  
   

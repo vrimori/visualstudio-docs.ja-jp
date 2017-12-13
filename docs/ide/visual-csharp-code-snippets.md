@@ -10,7 +10,6 @@ ms.topic: article
 helpviewer_keywords:
 - snippets [C#], default snippets
 - snippets [C#], Code Snippet Inserter
-- Code Snippet Inserter [J#]
 - Code Snippet Inserter [C#]
 - Visual C#, default snippets
 ms.assetid: dbea3dd6-e650-4190-b874-c9f097d7de6e
@@ -18,11 +17,11 @@ caps.latest.revision: "33"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 72e0e00fb5495946adcd7f47de8cdc2d6e0d32dc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: c54a6f5b39136a56753facce4c4f1e5a656fbb36
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="visual-c-code-snippets"></a>Visual C# のコード スニペット
 コード スニペットは、あらかじめ用意されているコードのスニペットで、コードにすぐに挿入できます。 たとえば、`for` コード スニペットは空の `for` ループを作成します。 一部のコード スニペットは surround-with コード スニペットであり、コード行を選んでから、選んだコード行を組み込むコード スニペットを選ぶことができます。 たとえば、コード行を選んでから `for` コード スニペットをアクティブにすると、選んだコード行がループ ブロックの中に含まれる `for` ループが作成されます。 コード スニペットを使うと、速く、容易に、信頼性の高いプログラム コードを作成できます。  

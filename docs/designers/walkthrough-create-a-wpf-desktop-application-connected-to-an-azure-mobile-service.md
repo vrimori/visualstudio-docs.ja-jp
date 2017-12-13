@@ -16,11 +16,11 @@ manager: ghogen
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 8bf11425439387a13db2bb77f0ce798bef076461
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 28f06905820d890f2f13c3c7e77fd57fb75fe4b6
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service"></a>チュートリアル: Azure モバイル サービスに接続された WPF デスクトップ アプリケーションの作成
 Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル サービスを利用してデータの格納および提供を行う、最新式のデスクトップ アプリケーションをすばやく作成することができます。  
@@ -556,7 +556,7 @@ Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル �
      これにより、 **UpdateCheckedTodoItem** メソッドが呼び出され、リストとデータベースの両方から項目が削除されます。  
   
 ## <a name="next-steps"></a>次の手順  
- Azure バックエンドを利用した、かなりシンプルな例の WPF デスクトップ アプリケーションの作成が完了しました。 もちろん、実際のアプリケーションははるかに複雑になる可能性がありますが、同じ基本的な概念が当てはまります。 「 [.NET Framework での WPF](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)」を参照してください。  
+ Azure バックエンドを利用した、かなりシンプルな例の WPF デスクトップ アプリケーションの作成が完了しました。 もちろん、実際のアプリケーションははるかに複雑になる可能性がありますが、同じ基本的な概念が当てはまります。 「 [.NET Framework での WPF](https://msdn.microsoft.com/en-us/library/ms754130)」を参照してください。  
   
  ユーザー インターフェイスは、色、図形、グラフィックス、さらにアニメーションなどを追加することによって、視覚的により訴えかけるものにできます。 「[Visual Studio での XAML デザイナーを使用した UI の作成](creating-a-ui-by-using-xaml-designer-in-visual-studio.md)」および「[Blend for Visual Studio を使用して UI を作成する](creating-a-ui-by-using-blend-for-visual-studio.md)」をご覧ください。 ツールの比較については、「[Visual Studio および Blend for Visual Studio での XAML の設計](../designers/designing-xaml-in-visual-studio.md)」をご覧ください。  
 

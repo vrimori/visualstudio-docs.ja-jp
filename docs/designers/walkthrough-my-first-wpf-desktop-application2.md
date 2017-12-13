@@ -15,11 +15,11 @@ manager: ghogen
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 75a333c7e5948e13db0c0c91b41128914e23222b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: fb4da07f2ee8d4c30717209ee07221285a8275ee
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>チュートリアル: 初めての WPF デスクトップ アプリケーション
 このチュートリアルを、Windows Presentation Foundation (WPF) 開発入門としてご利用ください。 ここでは、ほとんどの WPF デスクトップ アプリケーションに共通する要素 (XAML マークアップ、分離コード、アプリケーション定義、コントロール、レイアウト、データ バインディング、スタイル) を含む基本的なアプリケーションを作成します。  
@@ -851,40 +851,40 @@ ms.lasthandoff: 10/31/2017
 ##  <a name="Best_Practices"></a> ベスト プラクティス  
  このサンプルは、WPF の基礎を説明するものであり、アプリケーション開発のベスト プラクティスには従っていません。 WPF と .NET Framework のアプリケーション開発のベスト プラクティスの包括的な情報については、必要に応じて次のトピックを参照してください。  
   
--   ユーザー補助 - [ユーザー補助のベスト プラクティス](https://msdn.microsoft.com/en-us/library/aa350483\(v=vs.100\).aspx)  
+-   ユーザー補助 - [ユーザー補助のベスト プラクティス](/dotnet/framework/ui-automation/accessibility-best-practices)  
   
--   セキュリティ - [Windows Presentation Foundation のセキュリティ](https://msdn.microsoft.com/en-us/library/aa970906\(v=vs.100\).aspx)  
+-   セキュリティ - [Windows Presentation Foundation のセキュリティ](/dotnet/framework/wpf/security-wpf)  
   
--   ローカリゼーション - [WPF のグローバリゼーションおよびローカリゼーションの概要](https://msdn.microsoft.com/en-us/library/ms788718\(v=vs.100\).aspx)  
+-   ローカリゼーション - [WPF のグローバリゼーションおよびローカリゼーションの概要](/dotnet/framework/wpf/advanced/wpf-globalization-and-localization-overview)  
   
--   パフォーマンス - [WPF アプリケーションのパフォーマンスの最適化](https://msdn.microsoft.com/en-us/library/aa970683\(v=vs.100\).aspx)  
+-   パフォーマンス - [WPF アプリケーションのパフォーマンスの最適化](/dotnet/framework/wpf/advanced/optimizing-wpf-application-performance)  
   
 ##  <a name="Whats_Next"></a> 次の内容  
  これで、WPF を使用してデスクトップ アプリケーションを作成するためのいくつかの手法を習得できました。 データ バインドされた WPF アプリケーションの構成要素についての基本を理解することもできました。 このトピックは決して網羅的なものではありませんが、このトピックの手法を基に、自分で学習を進められるようになったはずです。  
   
  WPF のアーキテクチャおよびプログラミング モデルの詳細については、次のトピックを参照してください。  
   
--   [WPF アーキテクチャ](https://msdn.microsoft.com/en-us/library/ms750441\(v=vs.100\).aspx)  
+-   [WPF アーキテクチャ](/dotnet/framework/wpf/advanced/wpf-architecture)  
   
--   [XAML の概要](https://msdn.microsoft.com/en-us/library/ms752059\(v=vs.100\).aspx)  
+-   [XAML の概要](/dotnet/framework/wpf/advanced/xaml-overview-wpf)  
   
--   [依存関係プロパティの概要](https://msdn.microsoft.com/en-us/library/ms752914\(v=vs.100\).aspx)  
+-   [依存関係プロパティの概要](/dotnet/framework/wpf/advanced/dependency-properties-overview)  
   
--   [レイアウト システム](https://msdn.microsoft.com/en-us/library/ms745058\(v=vs.100\).aspx)  
+-   [レイアウト システム](/dotnet/framework/wpf/advanced/layout)  
   
--   [スタイルおよびテンプレート](https://msdn.microsoft.com/en-us/library/bb613570\(v=vs.100\).aspx)  
+-   [スタイルおよびテンプレート](/dotnet/framework/wpf/controls/styles-and-templates)  
   
  アプリケーションの作成の詳細については、次のトピックを参照してください。  
   
--   [アプリケーション開発の概要](https://msdn.microsoft.com/en-us/library/bb613549\(v=vs.100\).aspx)  
+-   [アプリケーション開発の概要](/dotnet/framework/wpf/app-development/index)  
   
--   [コントロールの概要](https://msdn.microsoft.com/en-us/library/bb613551\(v=vs.100\).aspx)  
+-   [コントロールの概要](/dotnet/framework/wpf/controls/index)  
   
--   [データ バインディングの概要](https://msdn.microsoft.com/en-us/library/ms752347\(v=vs.100\).aspx)  
+-   [データ バインディングの概要](/dotnet/framework/wpf/data/data-binding-overview)  
   
--   [WPF のグラフィックス、アニメーション、およびメディアの概要](https://msdn.microsoft.com/en-us/library/ms742562\(v=vs.100\).aspx)  
+-   [WPF のグラフィックス、アニメーション、およびメディアの概要](https://msdn.microsoft.com/en-us/library/ms742562)  
   
--   [WPF のドキュメント](https://msdn.microsoft.com/en-us/library/ms748388\(v=vs.100\).aspx)  
+-   [WPF のドキュメント](/dotnet/framework/wpf/advanced/documents-in-wpf)  
   
 ## <a name="see-also"></a>関連項目  
 [Windows Presentation Foundation での最新のデスクトップ アプリケーションの作成](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)

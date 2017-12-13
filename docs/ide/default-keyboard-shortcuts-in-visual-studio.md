@@ -13,25 +13,23 @@ helpviewer_keywords:
 - Help [Visual Studio], shortcut keys
 - keyboard shortcuts [Visual Studio], keyboard binding schemes
 - keyboard shortcuts
-ms.assetid: c2c64648-00f8-4e48-a8a0-96c67cfd968c
-caps.latest.revision: "55"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2926543ca041ac2b2cc25bc178b99bbafd2407db
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 335589c6487d99726b86921fa988dce64dd384b8
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio の既定のキーボード ショートカット
 キーボードのアクセシビリティの詳細については、[「アクセシビリティのヒントとテクニック」](../ide/reference/accessibility-tips-and-tricks.md) および [「方法: キーボード主体で操作する」](../ide/reference/how-to-use-the-keyboard-exclusively.md) を参照してください。
 
 Visual Studio のさまざまなコマンドやウィンドウには、該当するショートカット キーを押すことでアクセスできます。 このトピックでは、Visual Studio のインストール時に選択できる [全般的な開発設定] プロファイルの既定のショートカット キーを一覧します。 選択したプロファイルにかかわらず、**[オプション]** ダイアログ ボックスを開き、**[環境]** ノードを展開して、**[キーボード]** を選択することで、コマンドのショートカット キーを確認できます。 また、別のショートカット キーを任意のコマンドに割り当てることで、ショートカット キーをカスタマイズすることもできます。
 
- 一般的なショートカット キーの一覧、およびその他の生産性向上に関する情報については、[「Visual Studio で頻繁に使用するコマンドに対応する既定のキーボード ショートカット」](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)、[「ヒントとテクニック」](../ide/tips-and-tricks-for-visual-studio.md)、[「生産性に関するヒント」](../ide/productivity-tips-for-visual-studio.md) を参照してください。
+一般的なショートカット キーの一覧、およびその他の生産性向上に関する情報については、[「Visual Studio で頻繁に使用するコマンドに対応する既定のキーボード ショートカット」](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)、[「ヒントとテクニック」](../ide/tips-and-tricks-for-visual-studio.md)、[「生産性に関するヒント」](../ide/productivity-tips-for-visual-studio.md) を参照してください。
 
- 次の表の各セクションでは、ショートカット キーを使用して Visual Studio の任意の場所から [全体] コンテキストでアクセスできるコマンドを示しています。  
+次の表の各セクションでは、ショートカット キーを使用して Visual Studio の任意の場所から [全体] コンテキストでアクセスできるコマンドを示しています。
 
 |||||  
 |-|-|-|-|  
@@ -43,12 +41,12 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 |[デバッガー コンテキスト メニュー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debugger)|[その他のコンテキスト メニュー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_otherContext)|[Team Foundation コンテキスト メニュー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_TFcontext)|[Azure](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_windowsazure)|  
 |[診断ハブ](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_diagnostics)||||  
 
- 次の表の各セクションでは、ショートカット キーを使用して特定のコンテキストでアクセスできるコマンドを示しています。  
+次の表の各セクションでは、ショートカット キーを使用して特定のコンテキストでアクセスできるコマンドを示しています。
 
 |||||  
 |-|-|-|-|  
 |[ADO.NET Entity Data Model デザイナー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_ADONET)|[レイヤー図](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_layerDiagram)|[設定デザイナー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_SettingsDesigner)|[VC イメージ エディター](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_vcimageeditor)|  
-|[クラス ダイアグラム](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_classDiagram)|[マネージ リソース エディター](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_managedResources)|[ソリューション エクスプローラー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_SolutionExplorer)|[VC ストリング エディター](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_vcstringeditor)|  
+|[クラス ダイアグラム](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_classDiagram)|[マネージ リソース エディター](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_managedResources)|[ソリューション エクスプローラー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_SolutionExplorer)|[VC ストリング エディター](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_vcstringeditor)|
 |[コード化された UI テスト エディター](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_codedUItest)|[マージ エディター ウィンドウ](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_MergeEditor)|[チーム エクスプローラー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_TeamExplorer)|[デザイナーの表示](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_viewDesigner)|  
 |[データセット エディター](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_dataset)|[Microsoft SQL Server Data Tools、スキーマの比較](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_SchemaCompare)|[Team Foundation ビルド詳細エディター](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_TFBuild)|[Visual Studio](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_visualstudio)|  
 |[相違ビューアー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_diff)|[Microsoft SQL Server Data Tools、テーブル デザイナー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_TableDesigner)|[テスト エクスプローラー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_TestExplorer)|[Windows フォーム デザイナー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_wfdesigner)|  
@@ -56,26 +54,26 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 |[F# Interactive](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_FSharp)|[Microsoft SQL Server Data Tools、T-SQL PDW エディター](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_linkfix)|[UML アクティビティ図](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_UMLactivityDiagram)|[作業項目クエリ ビュー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_WIqueryview)|  
 |[グラフ ドキュメント エディター](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_graphDoc)|[Page Inspector](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_PageInspector)|[UML クラス図](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_UMLclassDiagram)|[作業項目結果ビュー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_WIresultsview)|  
 |[グラフィックス診断](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_graphicsDebugger)|[クエリ デザイナー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_QueryDesigner)|[UML コンポーネント図](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_UMLcomponentDiagram)|[ワークフロー デザイナー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_workflowdesigner)|  
-|[HTML エディター](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_HTMLeditor)|[クエリ結果](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_QueryResults)|[UML ユース ケース図](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_UMLusecaseDiagram)|[XAML UI デザイナー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_xamluidesigner)|  
+|[HTML エディター](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_HTMLeditor)|[クエリ結果](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_QueryResults)|[UML ユース ケース図](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_UMLusecaseDiagram)|[XAML UI デザイナー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_xamluidesigner)|
 |[HTML エディター デザイン ビュー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_HTMLeditorDesign)|[レポート デザイナー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_ReportDesigner)|[VC アクセラレータ エディター](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_vcaccelerator)|[XML (テキスト) エディター](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_xmlTextEditor)|  
 |[HTML エディター ソース ビュー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_HTMLeditorSource)|[シーケンス図](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_SequenceDiagram)|[VC ダイアログ エディター](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_vcdialogeditor)|[XML スキーマ デザイナー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_xmlSchemaDesigner)|  
 
-##  <a name="bkmk_global"></a> グローバル  
+##  <a name="bkmk_global"></a> グローバル
 
-###  <a name="bkmk_analyze"></a> 解析  
+###  <a name="bkmk_analyze"></a> 解析
 
 |コマンド|ショートカット キー|  
 |--------------|------------------------|  
 |Analyze.NavigateBackward|Shift + Alt + 3|  
 |Analyze.NavigateForward|Shift + Alt + 4|  
 
-###  <a name="bkmk_architecture"></a> アーキテクチャ  
+###  <a name="bkmk_architecture"></a> アーキテクチャ
 
 |コマンド|ショートカット キー|  
 |--------------|------------------------|  
 |Architecture.NewDiagram|Ctrl + \\、Ctrl + N|  
 
-###  <a name="bkmk_build"></a> ビルド  
+###  <a name="bkmk_build"></a> ビルド
 
 |コマンド|ショートカット キー|  
 |--------------|------------------------|  
@@ -84,13 +82,13 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 |Build.Compile|Ctrl + F7|  
 |Build.RunCodeAnalysisonSolution|Alt + F11|  
 
-###  <a name="bkmk_classview"></a> クラス ビュー コンテキスト メニュー  
+###  <a name="bkmk_classview"></a> クラス ビュー コンテキスト メニュー
 
 |コマンド|ショートカット キー|  
 |--------------|------------------------|  
 |ClassViewContextMenus.ClassViewMultiselectProjectreferencesItems.Properties|Alt+Enter|  
 
-###  <a name="bkmk_debug"></a> デバッグ  
+###  <a name="bkmk_debug"></a> デバッグ
 
 |コマンド|ショートカット キー|  
 |--------------|------------------------|  
@@ -158,7 +156,7 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 |Debug.Watch3|Ctrl + Alt + W、3|  
 |Debug.Watch4|Ctrl + Alt + W、4|  
 
-###  <a name="bkmk_debugger"></a> デバッガー コンテキスト メニュー  
+###  <a name="bkmk_debugger"></a> デバッガー コンテキスト メニュー
 
 |コマンド|ショートカット キー|  
 |--------------|------------------------|  
@@ -166,13 +164,13 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 |DebuggerContextMenus.BreakpointsWindow.GoToDisassembly|Alt + F9、A|  
 |DebuggerContextMenus.BreakpointsWindow.GoToSourceCode|Alt + F9、S|  
 
-###  <a name="bkmk_diagnostics"></a> 診断ハブ  
+###  <a name="bkmk_diagnostics"></a> 診断ハブ
 
 |コマンド|ショートカット キー|  
 |-------------|-----------------------|  
 |DiagnosticsHub.StopCollection|Ctrl + Alt + F2|  
 
-###  <a name="bkmk_edit"></a> 編集  
+###  <a name="bkmk_edit"></a> 編集
 
 |コマンド||  
 |--------------|-|  
@@ -231,7 +229,7 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 |Edit.SurroundWith|Ctrl + K、Ctrl + S|  
 |Edit.Undo|Ctrl + Z<br /><br /> または<br /><br /> Alt + Backspace|  
 
-###  <a name="bkmk_editorContext"></a> エディター コンテキスト メニュー  
+###  <a name="bkmk_editorContext"></a> エディター コンテキスト メニュー
 
 |コマンド|ショートカット キー|  
 |--------------|------------------------|  
@@ -242,7 +240,7 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 |EditorContextMenus.CodeWindow.ToggleHeaderCodeFile|Ctrl + K、Ctrl + O|  
 |EditorContextMenus.CodeWindow.ViewCallHierarchy|Ctrl + K、Ctrl + T<br /><br /> または<br /><br /> Ctrl + K、T|  
 
-###  <a name="bkmk_file"></a> ファイル  
+###  <a name="bkmk_file"></a> ファイル
 
 |コマンド|ショートカット キー|  
 |--------------|------------------------|  
@@ -258,7 +256,7 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 |File.SaveSelectedItems|Ctrl + S|  
 |File.ViewinBrowser|Ctrl + Shift + W|  
 
-###  <a name="bkmk_help"></a> ヘルプ  
+###  <a name="bkmk_help"></a> ヘルプ
 
 |コマンド|ショートカット キー|  
 |--------------|------------------------|  
@@ -267,19 +265,19 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 |Help.ViewHelp|Ctrl + F1|  
 |Help.WindowHelp|Shift + F1|  
 
-###  <a name="bkmk_loadtest"></a> ロード テスト  
+###  <a name="bkmk_loadtest"></a> ロード テスト
 
 |コマンド|ショートカット キー|  
 |-------------|-----------------------|  
 |LoadTest.JumpToCounterPane|Ctrl + R、Q|  
 
-###  <a name="bkmk_otherContext"></a> その他のコンテキスト メニュー  
+###  <a name="bkmk_otherContext"></a> その他のコンテキスト メニュー
 
 |コマンド|ショートカット キー|  
 |-------------|-----------------------|  
 |OtherContextMenus.MicrosoftDataEntityDesignContext.AddNewDiagram|挿入|  
 
-###  <a name="bkmk_project"></a> プロジェクト  
+###  <a name="bkmk_project"></a> プロジェクト
 
 |コマンド|ショートカット キー|  
 |--------------|------------------------|  
@@ -291,14 +289,14 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 |Project.Publishselectedfiles|Alt + ;、Alt + P|  
 |Project.Replaceselectedfilesfromserver|Alt + ;、Alt + R|  
 
-###  <a name="bkmk_projectContext"></a> プロジェクトとソリューション コンテキスト メニュー  
+###  <a name="bkmk_projectContext"></a> プロジェクトとソリューション コンテキスト メニュー
 
 |コマンド|ショートカット キー|  
 |--------------|------------------------|  
 |ProjectandSolutionContextMenus.Item.MoveDown|Alt + ↓|  
 |ProjectandSolutionContextMenus.Item.MoveUp|Alt + ↑|  
 
-###  <a name="bkmk_refactor"></a> リファクター  
+###  <a name="bkmk_refactor"></a> リファクター
 
 |コマンド|ショートカット キー|  
 |--------------|------------------------|  
@@ -309,7 +307,7 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 |Refactor.Rename|Ctrl + R、Ctrl + R|  
 |Refactor.ReorderParameters|Ctrl + R、Ctrl + O|  
 
-###  <a name="bkmk_solutionexplorerGLOBAL"></a> ソリューション エクスプローラー  
+###  <a name="bkmk_solutionexplorerGLOBAL"></a> ソリューション エクスプローラー
 
 |コマンド|ショートカット キー|  
 |--------------|------------------------|  
@@ -317,7 +315,7 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 |SolutionExplorer.PendingChangesFilter|Ctrl + [、P<br /><br /> または<br /><br /> Ctrl + [、Ctrl + P|  
 |SolutionExplorer.SyncWithActiveDocument|Ctrl + [、S<br /><br /> または<br /><br /> Ctrl + [、Ctrl + S|  
 
-###  <a name="bkmk_team"></a> チーム  
+###  <a name="bkmk_team"></a> チーム
 
 |コマンド|ショートカット キー|  
 |--------------|------------------------|  
@@ -326,7 +324,7 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 |Team.Git.GoToGitCommits|Ctrl + 0、Ctrl + O<br /><br /> または<br /><br /> Ctrl + 0、O|  
 |Team.TeamExplorerSearch|Ctrl + '|  
 
-###  <a name="bkmk_TFcontext"></a> Team Foundation コンテキスト メニュー  
+###  <a name="bkmk_TFcontext"></a> Team Foundation コンテキスト メニュー
 
 |コマンド|ショートカット キー|  
 |--------------|------------------------|  
@@ -341,14 +339,14 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 |TeamFoundationContextMenus.Commands.GoToWebAccess|Ctrl + 0、Ctrl + A<br /><br /> または<br /><br /> Ctrl + 0、A|  
 |TeamFoundationContextMenus.Commands.GoToWorkItems|Ctrl + 0、Ctrl + W<br /><br /> または<br /><br /> Ctrl + 0、W|  
 
-###  <a name="bkmk_test"></a> テスト  
+###  <a name="bkmk_test"></a> テスト
 
 |コマンド|ショートカット キー|  
 |--------------|------------------------|  
 |Test.UseCodedUITestBuilder|Ctrl + \\、Ctrl + C|  
 |Test.UseExistingActionRecording|Ctrl + \\、Ctrl + A|  
 
-###  <a name="bkmk_testexplorerGLOBAL"></a> テスト エクスプローラー  
+###  <a name="bkmk_testexplorerGLOBAL"></a> テスト エクスプローラー
 
 |コマンド|ショートカット キー|  
 |--------------|------------------------|  
@@ -1166,6 +1164,7 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 |XsdDesigner.ShowGraphView|Ctrl + 数字 3|  
 |XsdDesigner.ShowStartView|Ctrl + 数字 1|  
 
-## <a name="see-also"></a>関連項目  
- [アイコン用イメージ エディター](/cpp/windows/image-editor-for-icons)   
- [IntelliSense の使用](../ide/using-intellisense.md)
+## <a name="see-also"></a>関連項目
+ 
+[アイコン用イメージ エディター](/cpp/windows/image-editor-for-icons)  
+[IntelliSense の使用](../ide/using-intellisense.md)

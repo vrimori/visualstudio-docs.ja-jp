@@ -12,11 +12,11 @@ caps.latest.revision: "5"
 author: conceptdev
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: c4ed4d6a90a91ac927feb3be76a06d8080267057
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.openlocfilehash: 735c95d9eda5cba15b9d75a5abf10d26dd14b0cb
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="using-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity を使用する
 このセクションでは、Visual Studio Tools for Unity の統合と生産性の機能の使用法、および Unity 開発における Visual Studio デバッガーの使用法について取り上げます。  
@@ -97,9 +97,9 @@ ms.lasthandoff: 11/29/2017
 |Unity プロジェクト エクスプローラーを開く|**Alt + Shift + E**|**View.UnityProjectExplorer**|  
 |Unity のドキュメントにアクセスする|**Ctrl + Alt + M、Ctrl + H**|**Help.UnityAPIReference**|  
 |Unity のデバッガー (プレーヤーまたはエディター) にアタッチする|***既定値なし***|**Debug.AttachUnityDebugger**|  
-
- 既定値では不便な場合は、ショートカット キーの組み合わせを変更できます。 変更方法については、「[Visual Studio でのキーボード ショートカットの識別とカスタマイズ](https://msdn.microsoft.com/en-us/library/5zwses53.aspx)」を参照してください。  
-
+  
+ 既定値では不便な場合は、ショートカット キーの組み合わせを変更できます。 変更方法については、「[Visual Studio でのキーボード ショートカットの識別とカスタマイズ](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)」を参照してください。  
+  
 ## <a name="unity-debugging"></a>Unity のデバッグ  
  Visual Studio Tools for Unity では、Visual Studio の強力なデバッガーを使用して、Unity プロジェクトのエディター スクリプトとゲーム スクリプトの両方をデバッグできます。  
 

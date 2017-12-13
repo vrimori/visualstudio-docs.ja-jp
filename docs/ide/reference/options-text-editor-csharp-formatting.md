@@ -22,18 +22,17 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Visual_JSharp.Formatting
 helpviewer_keywords:
 - formatting [C#]
-- formatting [J#]
 - Text Editor Options dialog box, formatting
 ms.assetid: 5a7bb668-1d0c-4ffe-9508-24592813162e
 caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 24ebcd48e60e748a671241b5f562e67f6a3dc2a7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 18cf7c7ee9c7f40231482b7c0466929bd0290fb1
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="options-text-editor-c-formatting"></a>[オプション]、[テキスト エディター]、[C#]、[書式設定]
 **[書式設定]** プロパティ ページのダイアログ ボックスでコード エディターでのコード書式オプションを設定します。 このダイアログ ボックスを表示するには、**[ツール]** メニューの **[オプション]** をクリックし、**[テキスト エディター]**、**[C#]** を順に展開し、**[書式設定]** をクリックします。  

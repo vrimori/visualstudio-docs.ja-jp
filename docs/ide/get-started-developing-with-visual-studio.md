@@ -13,11 +13,11 @@ caps.latest.revision: "65"
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 5ac7781ecb53727572a9d8594f4a65c5e9c6628c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 9d35ce547e216f632f56cf8bf445b115290486cc
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="get-started-developing-with-visual-studio"></a>Visual Studio を使用した開発の開始
 Visual Studio へようこそ。 製品を [ダウンロード](http://www.visualstudio.com/community) すると、コーディングを開始するのにこれらのページが役立ちます。  
@@ -32,11 +32,11 @@ Visual Studio へようこそ。 製品を [ダウンロード](http://www.visua
 
 -   **[C# または Visual Basic (Xamarin) でクロスプラットフォームのモバイル アプリを作成する](../cross-platform/visual-studio-and-xamarin.md)** : Visual Studio と Xamarin 用ツールを使用して、Android、iOS、およびユニバーサル Windows プラットフォーム上で共有コード ベースから実行されるモバイル アプリの作成を開始します。  
 
-     サンプルの読み込み: [Tasky Portable](http://developer.xamarin.com/samples/mobile/TaskyPortable/) (ネイティブ UI) または [Xamarin Forms の Todo サンプル](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) (Xamarin.Forms 共有 UI) &#124;   [チュートリアルの実施](https://msdn.microsoft.com/library/dn879698.aspx) &#124;                             [ドキュメントの参照](https://msdn.microsoft.com/en-us/library/mt299001.aspx) &#124;                                  [ビデオを見る](https://channel9.msdn.com/Series/Cross-Platform-Development-with-Xamarin--Visual-Studio/01)  
+     サンプルの読み込み: [Tasky Portable](http://developer.xamarin.com/samples/mobile/TaskyPortable/) (ネイティブ UI) または [Xamarin Forms の Todo サンプル](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) (Xamarin.Forms 共有 UI) &#124;   [チュートリアルの実施](../cross-platform/build-apps-with-native-ui-using-xamarin-in-visual-studio.md) &#124;                             [ドキュメントの参照](../cross-platform/visual-studio-and-xamarin.md) &#124;                                  [ビデオを見る](https://channel9.msdn.com/Series/Cross-Platform-Development-with-Xamarin--Visual-Studio/01)  
 
 -   **[C++ でネイティブのクロスプラットフォームのアプリとライブラリを作成する](https://www.visualstudio.com/explore/cplusplus-mdd-vs.aspx)** ここに移動して、Android、iOS、ユニバーサル Windows プラットフォーム上で実行される C++ アプリとライブラリの作成を開始します。  
 
-     [サンプルの読み込み](https://code.msdn.microsoft.com/MoreTeaPots-Android-a9bd8549) &#124;   [チュートリアルの実施](https://msdn.microsoft.com/en-us/library/dn707595.aspx) &#124;                             [ドキュメントの参照](https://msdn.microsoft.com/en-us/library/dn707591.aspx) &#124;                                  [ビデオを見る](https://channel9.msdn.com/Series/ConnectOn-Demand/239)  
+     [サンプルの読み込み](https://code.msdn.microsoft.com/MoreTeaPots-Android-a9bd8549) &#124;   [チュートリアルの実施](../cross-platform/create-an-android-native-activity-app.md) &#124;                             [ドキュメントの参照](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md) &#124;                                  [ビデオを見る](https://channel9.msdn.com/Series/ConnectOn-Demand/239)  
 
 -   **[DirectX でゲームを作成する](https://msdn.microsoft.com/en-us/library/windows/desktop/ee663274.aspx)** : DirectX を使用してユニバーサル Windows プラットフォームのゲームの作成を開始します。  
 
@@ -44,7 +44,7 @@ Visual Studio へようこそ。 製品を [ダウンロード](http://www.visua
 
 -   **[Unity でゲームを作成する](../cross-platform/visual-studio-tools-for-unity.md)** : Unity フレームワークを使用してクロスプラットフォームのゲームの作成を開始します。  
 
-     [サンプルの読み込み](http://unity3d.com/learn/resources/downloads) &#124;                     [チュートリアルの実施](http://unity3d.com/learn/tutorials/projects/roll-ball-tutorial) &#124;                               [ドキュメントの参照](https://msdn.microsoft.com/en-us/library/dn940019.aspx) &#124;     [ビデオを見る](https://www.youtube.com/playlist?list=PLReL099Y5nRfseAg0k1SJOlpqdcsDs8Em)  
+     [サンプルの読み込み](http://unity3d.com/learn/resources/downloads) &#124;                     [チュートリアルの実施](http://unity3d.com/learn/tutorials/projects/roll-ball-tutorial) &#124;                               [ドキュメントの参照](../cross-platform/visual-studio-tools-for-unity.md) &#124;     [ビデオを見る](https://www.youtube.com/playlist?list=PLReL099Y5nRfseAg0k1SJOlpqdcsDs8Em)  
 
 -   **[ユニバーサル Windows プラットフォームのアプリを作成する](https://dev.windows.com/en-us/windows-apps)** : ユニバーサル Windows プラットフォーム (XBox、PC、タブレット、Windows Phone、Surface Hub、モノのインターネット) で実行されるアプリの作成を開始します。  
 
@@ -52,7 +52,7 @@ Visual Studio へようこそ。 製品を [ダウンロード](http://www.visua
 
 -   **[デスクトップ アプリケーションを作成する](https://dev.windows.com/en-us/desktop)** 。 ここに移動して、Windows PC 上で実行される従来型のデスクトップ アプリケーションの作成を開始します。  
 
-     [サンプルの読み込み](https://github.com/microsoft/windows-classic-samples) &#124;                     [チュートリアルの実施](https://msdn.microsoft.com/en-us/library/dd492171.aspx) &#124;                               [ドキュメントの参照](https://dev.windows.com/en-us/desktop)  
+     [サンプルの読み込み](https://github.com/microsoft/windows-classic-samples) &#124;                     [チュートリアルの実施](getting-started-with-visual-csharp-and-visual-basic.md) &#124;                               [ドキュメントの参照](https://dev.windows.com/en-us/desktop)  
 
 -   **[Office アプリケーションを作成する](https://msdn.microsoft.com/en-us/library/fp161347.aspx)** : Office 365 サービスを使用して、Word、Excel、Outlook、および PowerPoint の拡張とカスタマイズを行う Office アプリケーションの作成を開始します。  
 
