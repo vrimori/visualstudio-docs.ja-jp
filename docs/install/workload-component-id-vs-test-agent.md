@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 10/09/2017
+ms.date: 12/01/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.service: 
 ms.technology: vs-acquisition
 ms.assetid: 55aea29b-1066-4e5a-aa99-fc87d4efb6d5
-ms.openlocfilehash: 656274c965cb2c360aa8b197b8afa5c66d86ea9c
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.openlocfilehash: ef6a121f848d39534b9a96bd215e1d3dba04a923
+ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="visual-studio-test-agent-2017-component-directory"></a>Visual Studio Test Agent 2017 のコンポーネント ディレクトリ
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/22/2017
 
 コンポーネント ID | 名前 | バージョン | 依存関係の種類
 --- | --- | --- | ---
-Microsoft.VisualStudio.ComponentGroup.TestTools.TestAgent | Test Agent のコア機能 | 15.0.26606.0 | 必須
+Microsoft.VisualStudio.ComponentGroup.TestTools.TestAgent | Test Agent のコア機能 | 15.0.27019.1 | 必須
 
 ## <a name="unaffiliated-components"></a>関連付けられていないコンポーネント
 
@@ -59,7 +59,7 @@ Microsoft.VisualStudio.ComponentGroup.TestTools.TestAgent | Test Agent のコア
 * Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
 * [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。
-* [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます  (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
+* [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。  (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
 
 ## <a name="see-also"></a>関連項目
 

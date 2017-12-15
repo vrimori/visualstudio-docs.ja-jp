@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 10/09/2017
+ms.date: 12/01/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.service: 
 ms.technology: vs-acquisition
 ms.assetid: a3c0cc76-e3ce-435c-a1af-a6318b5a4dbe
-ms.openlocfilehash: e3f2a67b37d4e6ef6ad7b5e1a946847f63d12903
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.openlocfilehash: 124a40e4e8f4b713e17aa05f95efccc5fcec3589
+ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="visual-studio-desktop-express-2017-workload-and-component-ids"></a>Visual Studio Desktop Express 2017 のワークロード ID とコンポーネント ID
 
@@ -44,10 +44,10 @@ VSIX マニフェストで依存関係を設定するときは、コンポーネ
 
 コンポーネント ID | 名前 | バージョン | 依存関係の種類
 --- | --- | --- | ---
-Microsoft.Component.ClickOnce | ClickOnce Publishing | 15.0.26919.1 | 必須
-Microsoft.Component.HelpViewer | ヘルプ ビューアー | 15.0.26711.1 | 必須
-Microsoft.Component.MSBuild | MSBuild | 15.0.26208.0 | 必須
-Microsoft.Component.VC.Runtime.OSSupport | UWP 用の Visual C++ ランタイム | 15.0.26621.2 | 必須
+Microsoft.Component.ClickOnce | ClickOnce Publishing | 15.0.27019.1 | 必須
+Microsoft.Component.HelpViewer | ヘルプ ビューアー | 15.0.27005.2 | 必須
+Microsoft.Component.MSBuild | MSBuild | 15.0.27019.1 | 必須
+Microsoft.Component.VC.Runtime.OSSupport | UWP 用の Visual C++ ランタイム | 15.0.27019.1 | 必須
 Microsoft.Net.Component.4.5.1.TargetingPack | .NET Framework 4.5.1 Targeting Pack | 15.0.26621.2 | 必須
 Microsoft.Net.Component.4.5.2.TargetingPack | .NET Framework 4.5.2 Targeting Pack | 15.0.26621.2 | 必須
 Microsoft.Net.Component.4.5.TargetingPack | .NET Framework 4.5 Targeting Pack | 15.0.26621.2 | 必須
@@ -55,14 +55,14 @@ Microsoft.Net.Component.4.6.1.SDK | .NET Framework 4.6.1 SDK | 15.0.26621.2 | �
 Microsoft.Net.Component.4.6.1.TargetingPack | .NET Framework 4.6.1 Targeting Pack | 15.0.26621.2 | 必須
 Microsoft.Net.Component.4.6.TargetingPack | .NET Framework 4.6 Targeting Pack | 15.0.26621.2 | 必須
 Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 Targeting Pack | 15.0.26621.2 | 必須
-Microsoft.Net.ComponentGroup.DevelopmentPrerequisites | .NET Framework 4.6.1 開発ツール | 15.0.26606.0 | 必須
+Microsoft.Net.ComponentGroup.DevelopmentPrerequisites | .NET Framework 4.6.1 開発ツール | 15.0.27005.2 | 必須
 Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 開発ツール | 15.0.26606.0 | 必須
-Microsoft.VisualStudio.Component.Common.Azure.Tools | 接続および発行ツール | 1.10.50614.2 | 必須
+Microsoft.VisualStudio.Component.Common.Azure.Tools | 接続および発行ツール | 1.10.50912.1 | 必須
 Microsoft.VisualStudio.Component.CoreEditor | Visual Studio のコア エディター | 15.0.26606.0 | 必須
 Microsoft.VisualStudio.Component.EntityFramework | Entity Framework 6 Tools | 15.0.26208.0 | 必須
-Microsoft.VisualStudio.Component.NuGet | NuGet パッケージ マネージャー | 15.0.26621.2 | 必須
-Microsoft.VisualStudio.Component.Roslyn.Compiler | C# および Visual Basic Roslyn コンパイラ | 15.0.26208.0 | 必須
-Microsoft.VisualStudio.Component.Roslyn.LanguageServices | C# および Visual Basic | 15.0.26711.1 | 必須
+Microsoft.VisualStudio.Component.NuGet | NuGet パッケージ マネージャー | 15.0.27128.1 | 必須
+Microsoft.VisualStudio.Component.Roslyn.Compiler | C# および Visual Basic Roslyn コンパイラ | 15.0.27019.1 | 必須
+Microsoft.VisualStudio.Component.Roslyn.LanguageServices | C# および Visual Basic | 15.0.27019.1 | 必須
 Microsoft.VisualStudio.Component.SQL.ADAL | SQL ADAL ランタイム | 15.0.26606.0 | 必須
 Microsoft.VisualStudio.Component.SQL.CLR | SQL Server の CLR データ型 | 15.0.26208.0 | 必須
 Microsoft.VisualStudio.Component.SQL.CMDUtils | SQL Server コマンド ライン ユーティリティ | 15.0.26208.0 | 必須
@@ -72,15 +72,15 @@ Microsoft.VisualStudio.Component.SQL.NCLI | SQL Server Native Client | 15.0.2620
 Microsoft.VisualStudio.Component.SQL.SSDT | SQL Server Data Tools | 15.0.26906.1 | 必須
 Microsoft.VisualStudio.Component.Static.Analysis.Tools | スタティック分析ツール | 15.0.26208.0 | 必須
 Microsoft.VisualStudio.Component.TextTemplating | テキスト テンプレート変換 | 15.0.26208.0 | 必須
-Microsoft.VisualStudio.Component.VC.CLI.Support | C++/CLI サポート | 15.0.26823.1 | 必須
-Microsoft.VisualStudio.Component.VC.Tools.ARM | ARM 用 Visual C++ コンパイラとライブラリ | 15.0.26906.1 | 必須
-Microsoft.VisualStudio.Component.VC.Tools.ARM64 | ARM64 用 Visual C++ コンパイラとライブラリ | 15.0.26906.1 | 必須
+Microsoft.VisualStudio.Component.VC.CLI.Support | C++/CLI サポート | 15.0.27019.1 | 必須
+Microsoft.VisualStudio.Component.VC.Tools.ARM | ARM 用 Visual C++ コンパイラとライブラリ | 15.0.27019.1 | 必須
+Microsoft.VisualStudio.Component.VC.Tools.ARM64 | ARM64 用 Visual C++ コンパイラとライブラリ | 15.0.27019.1 | 必須
 Microsoft.VisualStudio.Component.VisualStudioData | データソースとサービス参照 | 15.0.26208.0 | 必須
 Microsoft.VisualStudio.Component.Windows10SDK.14393 | Windows 10 SDK (10.0.14393.0) | 15.0.26208.0 | 必須
-Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop | デスクトップ用 Windows 10 SDK (10.0.16299.0) C++ [x86 および x64] | 15.0.27004.2002 | 必須
-Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop.arm | デスクトップ用 Windows 10 SDK (10.0.16299.0) C++ [ARM および ARM64] | 15.0.27004.2002 | 必須
-Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP | UWP 用 Windows 10 SDK (10.0.16299.0): C#、VB、JS | 15.0.27004.2002 | 必須
-Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | UWP 用 Windows 10 SDK (10.0.16299.0): C++ | 15.0.27004.2002 | 必須
+Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop | デスクトップ用 Windows 10 SDK (10.0.16299.0) C++ [x86 および x64] | 15.0.27128.1 | 必須
+Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop.arm | デスクトップ用 Windows 10 SDK (10.0.16299.0) C++ [ARM および ARM64] | 15.0.27128.1 | 必須
+Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP | UWP 用 Windows 10 SDK (10.0.16299.0): C#、VB、JS | 15.0.27128.1 | 必須
+Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | UWP 用 Windows 10 SDK (10.0.16299.0): C++ | 15.0.27128.1 | 必須
 
 ## <a name="unaffiliated-components"></a>関連付けられていないコンポーネント
 
@@ -97,7 +97,7 @@ Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | UWP 用 Windows
 * Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
 * [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。
-* [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます  (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
+* [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。  (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
 
 ## <a name="see-also"></a>関連項目
 
