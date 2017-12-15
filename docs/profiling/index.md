@@ -3,11 +3,11 @@ layout: LandingPage
 title: "Visual Studio でのアプリのプロファイル | Microsoft Docs"
 description: "Visual Studio 2017 を使用して、目的の言語で、アプリケーション、サービス、ツールのパフォーマンスをプロファイリングする方法について説明します。"
 ms.technology: vs-ide-debug
-ms.openlocfilehash: 78313c0e8f4591fef161a246b1231cdb43b54b2d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: e671683cf0ea257bf6170a3c2e41b8d0db503450
+ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="profiling-in-visual-studio"></a>Visual Studio のプロファイル
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 10/31/2017
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/en-us/media/common/i_road-map.svg" alt="">
+                            <img src="/media/common/i_road-map.svg" alt="">
                         </div>
                     </div>
                     <div class="cardText">
@@ -39,7 +39,7 @@ ms.lasthandoff: 10/31/2017
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/en-us/media/common/i_code-performance.svg" alt="">
+                            <img src="/media/common/i_code-performance.svg" alt="">
                         </div>
                     </div>
                     <div class="cardText">
@@ -57,7 +57,7 @@ ms.lasthandoff: 10/31/2017
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/en-us/media/common/i_video.svg" alt="">
+                            <img src="/media/common/i_video.svg" alt="">
                         </div>
                     </div>
                     <div class="cardText">
@@ -75,7 +75,7 @@ ms.lasthandoff: 10/31/2017
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/en-us/media/common/i_code-performance.svg" alt="">
+                            <img src="/media/common/i_code-performance.svg" alt="">
                         </div>
                     </div>
                     <div class="cardText">
@@ -93,7 +93,7 @@ ms.lasthandoff: 10/31/2017
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/en-us/media/common/i_get-started.svg" alt="">
+                            <img src="/media/common/i_get-started.svg" alt="">
                         </div>
                     </div>
                     <div class="cardText">
@@ -111,7 +111,7 @@ ms.lasthandoff: 10/31/2017
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/en-us/media/common/i_get-started.svg" alt="">
+                            <img src="/media/common/i_get-started.svg" alt="">
                         </div>
                     </div>
                     <div class="cardText">
@@ -129,7 +129,7 @@ ms.lasthandoff: 10/31/2017
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/en-us/media/common/i_get-started.svg" alt="">
+                            <img src="/media/common/i_get-started.svg" alt="">
                         </div>
                     </div>
                     <div class="cardText">
@@ -140,15 +140,14 @@ ms.lasthandoff: 10/31/2017
         </div>
         </a>
     </li>
-    
-        <li>
+    <li>
         <a href="https://docs.microsoft.com/en-us/visualstudio/profiling/analyze-energy-use-in-store-apps">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/en-us/media/common/i_get-started.svg" alt="">
+                            <img src="/media/common/i_get-started.svg" alt="">
                         </div>
                     </div>
                     <div class="cardText">
@@ -166,7 +165,7 @@ ms.lasthandoff: 10/31/2017
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/en-us/media/common/i_whats-new.svg" alt="">
+                            <img src="/media/common/i_whats-new.svg" alt="">
                         </div>
                     </div>
                     <div class="cardText">

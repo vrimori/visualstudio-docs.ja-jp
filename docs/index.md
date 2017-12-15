@@ -3,11 +3,11 @@ layout: HubPage
 hide_bc: True
 title: "Visual Studio のドキュメント | Microsoft Docs"
 description: "Visual Studio 2017 を使って、アプリケーション、サービス、ツールを、任意の言語で、特定のプラットフォームやデバイス向けに開発する方法について説明します。"
-ms.openlocfilehash: f33fce2ca2020827e2013199e596c0e6be2e9793
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: a113a0782694c0cae5c69f52aadcec3a4b98c79f
+ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/14/2017
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -558,7 +558,7 @@ ms.lasthandoff: 10/31/2017
                                 </a>
                             </li>
                             <li>
-                                <a href="/vsts/#pivot=services&panel=code">
+                                <a href="https://go.microsoft.com/fwlink/?linkid=865130">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
