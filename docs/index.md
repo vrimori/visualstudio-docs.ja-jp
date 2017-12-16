@@ -3,11 +3,11 @@ layout: HubPage
 hide_bc: True
 title: "Visual Studio のドキュメント | Microsoft Docs"
 description: "Visual Studio 2017 を使って、アプリケーション、サービス、ツールを、任意の言語で、特定のプラットフォームやデバイス向けに開発する方法について説明します。"
-ms.openlocfilehash: a113a0782694c0cae5c69f52aadcec3a4b98c79f
-ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
+ms.openlocfilehash: 3875594d51eeb54322eed2fbe423f045c6aa1d4a
+ms.sourcegitcommit: 64c7682ec3a2cbea684e716803398d4278b591d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/15/2017
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -74,390 +74,7 @@ ms.lasthandoff: 12/14/2017
         <h1>Visual Studio ドキュメント</h1>
         <ul class="pivots">
             <li>
-                <a href="#workloads">ワークロード</a>
-                <ul id="workloads">
-                    <li>
-                        <a href="#windows">Windows</a>
-                        <ul id="windows" class="cardsC">
-                            <li>
-                                <div class="container intro">
-                                    <p>Windows が動作するすべてのデバイスに対応するアプリやゲームを、Visual Studio を使って開発します。</p>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833082">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-hoverimage="./images/vs_windows-1.svg" src="./images/vs_windows-1.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>ユニバーサル Windows プラットフォーム開発</h3>
-                                                    <p>Windows ユニバーサル プラットフォームと C#、VB、C++ を使って、Windows 10 用のアプリケーションを開発します。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833083">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_windows-2.svg" src="./images/vs_windows-2.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>.NET デスクトップ開発</h3>
-                                                    <p>.NET Framework を使って、WPF、Windows フォーム、コンソール アプリケーションを構築します。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833084">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_windows-3.svg" src="./images/vs_windows-3.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>C++ での Windows 開発</h3>
-                                                    <p>MFC、ATL、Microsoft C++ ツールセットの機能を使って、従来の Windows ベースのアプリケーションを構築します。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#web">Web &amp; クラウド</a>
-                        <ul id="web" class="cardsC">
-                            <li>
-                                <div class="container intro">
-                                    <p>Visual Studio と強力なオープン ツールを使って、最新の Web アプリを開発します。
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833085">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_web-1.svg" src="./images/vs_web-1.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Web 開発</h3>
-                                                    <p>ASP.NET と、HTML、JavaScript、CSS のような標準ベースのテクノロジを使って Web アプリを構築します。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833086">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_web-2.svg" src="./images/vs_web-2.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Azure 開発および管理</h3>
-                                                    <p>拡張性の高いアプリとサービスを Microsoft クラウド上で簡単にビルド、テスト、展開、管理します。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833068">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_web-3.svg" src="./images/vs_web-3.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Python</h3>
-                                                    <p>Django や Flask を含め、使い慣れたフレームワークを使って Python アプリを対話式に開発します。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=834351">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="/media/logos/logo_nodejs.svg" src="/media/logos/logo_nodejs.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Node.js</h3>
-                                                    <p>Node.js、非同期、イベント ドリブンの JavaScript ランタイムを使って拡張性の高いネットワーク アプリケーションを構築します。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833095">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_web-5.svg" src="./images/vs_web-5.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>データ ストレージとデータ処理</h3>
-                                                    <p>SQL Server、Azure Data Lake、または Hadoop を使用するデータ ソリューションを開発およびテストするためのツールとフレームワークです。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=834748">
-                                  <div class="cardSize">
-                                    <div class="cardPadding">
-                                      <div class="card">
-                                        <div class="cardImageOuter">
-                                          <div class="cardImage bgdAccent1 cardScaleImage">
-                                            <img data-scaleimage="./images/vs_web-6.svg" src="./images/vs_web-6.svg" alt="" />
-                                        </div>
-                                        </div>
-                                          <div class="cardText">
-                                            <h3>データ サイエンスと分析のアプリケーション</h3>
-                                            <p>データ サイエンス アプリケーションを作成するための言語とツール (Python、R、F# が含まれます)。</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833075">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_web-7.svg" src="./images/vs_web-7.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Office/SharePoint 開発</h3>
-                                                    <p>Office および SharePoint のアドインやソリューションを、C#、Visual Basic、JavaScript を使って作成します。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#mobile">モバイル &amp; ゲーム</a>
-                        <ul id="mobile" class="cardsC">
-                            <li>
-                                <div class="container intro">
-                                    <p>Android、iOS、Windows を対象にしたネイティブまたはハイブリッドのモバイル アプリを作成します。</p>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833088">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_gaming-1.svg" src="./images/vs_gaming-1.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>.NET によるモバイル開発</h3>
-                                                    <p>iOS、Android、Windows 向けのクロスプラットフォーム アプリケーションを、Xamarin を使って構築します。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833091">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_gaming-2.svg" src="./images/vs_gaming-2.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Unity でのゲーム開発</h3>
-                                                    <p>強力なクロスプラットフォーム開発環境である Unity を使って、2D および 3D ゲームを作成します。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833089">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_gaming-3.svg" src="./images/vs_gaming-3.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>JavaScript でのモバイル開発</h3>
-                                                    <p>iOS、Android、Windows 向けのクロスプラットフォーム アプリケーションを、Apache Cordova フレームワークを使って構築します。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833090">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_gaming-4.svg" src="./images/vs_gaming-4.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>C++ でのモバイル開発</h3>
-                                                    <p>iOS、Android、Windows 向けのクロスプラットフォーム アプリケーションを、C++ を使って構築します。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=834749">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_gaming-5.svg" src="./images/vs_gaming-5.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>C++ によるゲーム開発</h3>
-                                                    <p>C++ を最大限に活用して、DirectX、Unreal、Cocos2D を利用するプロフェッショナルなゲームを構築します。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#other">その他のツールセット</a>
-                        <ul id="other" class="cardsC">
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=834750">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_tools-1.svg" src="./images/vs_tools-1.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Visual Studio 拡張機能の開発</h3>
-                                                    <p>コマンド、コード アナライザー、ツール ウィンドウなど、Visual Studio を拡張するアドオンを作成します。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833099">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_tools-2.svg" src="./images/vs_tools-2.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>C++ による Linux 開発</h3>
-                                                    <p>Linux 環境で実行するアプリケーションを作成およびデバッグします。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=856606">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_tools-3.svg" src="./images/vs_web-1.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>.NET Core クロスプラットフォームの開発</h3>
-                                                    <p>.NET Core、ASP.NET Core、HTML、JavaScript、コンテナー開発ツールを使用したクロスプラットフォーム アプリケーションを構築します。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#features">機能</a>
+                <a href="#features">タスク</a>
                 <ul id="features">
                     <li>
                         <a href="#features1"> </a>
@@ -814,6 +431,389 @@ ms.lasthandoff: 12/14/2017
                                         </div>
                                     </div>
                                 </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#workloads">ワークロード</a>
+                <ul id="workloads">
+                    <li>
+                        <a href="#web">Web &amp; クラウド</a>
+                        <ul id="web" class="cardsC">
+                            <li>
+                                <div class="container intro">
+                                    <p>Visual Studio と強力なオープン ツールを使って、最新の Web アプリを開発します。
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=833085">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-scaleimage="./images/vs_web-1.svg" src="./images/vs_web-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Web 開発</h3>
+                                                    <p>ASP.NET と、HTML、JavaScript、CSS のような標準ベースのテクノロジを使って Web アプリを構築します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=833086">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-scaleimage="./images/vs_web-2.svg" src="./images/vs_web-2.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Azure 開発および管理</h3>
+                                                    <p>拡張性の高いアプリとサービスを Microsoft クラウド上で簡単にビルド、テスト、展開、管理します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=833068">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-scaleimage="./images/vs_web-3.svg" src="./images/vs_web-3.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Python</h3>
+                                                    <p>Django や Flask を含め、使い慣れたフレームワークを使って Python アプリを対話式に開発します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=834351">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-scaleimage="/media/logos/logo_nodejs.svg" src="/media/logos/logo_nodejs.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Node.js</h3>
+                                                    <p>Node.js、非同期、イベント ドリブンの JavaScript ランタイムを使って拡張性の高いネットワーク アプリケーションを構築します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=833095">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-scaleimage="./images/vs_web-5.svg" src="./images/vs_web-5.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>データ ストレージとデータ処理</h3>
+                                                    <p>SQL Server、Azure Data Lake、または Hadoop を使用するデータ ソリューションを開発およびテストするためのツールとフレームワークです。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=834748">
+                                  <div class="cardSize">
+                                    <div class="cardPadding">
+                                      <div class="card">
+                                        <div class="cardImageOuter">
+                                          <div class="cardImage bgdAccent1 cardScaleImage">
+                                            <img data-scaleimage="./images/vs_web-6.svg" src="./images/vs_web-6.svg" alt="" />
+                                        </div>
+                                        </div>
+                                          <div class="cardText">
+                                            <h3>データ サイエンスと分析のアプリケーション</h3>
+                                            <p>データ サイエンス アプリケーションを作成するための言語とツール (Python、R、F# が含まれます)。</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=833075">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-scaleimage="./images/vs_web-7.svg" src="./images/vs_web-7.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Office/SharePoint 開発</h3>
+                                                    <p>Office および SharePoint のアドインやソリューションを、C#、Visual Basic、JavaScript を使って作成します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#windows">Windows</a>
+                        <ul id="windows" class="cardsC">
+                            <li>
+                                <div class="container intro">
+                                    <p>Windows が動作するすべてのデバイスに対応するアプリやゲームを、Visual Studio を使って開発します。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=833082">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-hoverimage="./images/vs_windows-1.svg" src="./images/vs_windows-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>ユニバーサル Windows プラットフォーム開発</h3>
+                                                    <p>Windows ユニバーサル プラットフォームと C#、VB、C++ を使って、Windows 10 用のアプリケーションを開発します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=833083">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-scaleimage="./images/vs_windows-2.svg" src="./images/vs_windows-2.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>.NET デスクトップ開発</h3>
+                                                    <p>.NET Framework を使って、WPF、Windows フォーム、コンソール アプリケーションを構築します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=833084">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-scaleimage="./images/vs_windows-3.svg" src="./images/vs_windows-3.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>C++ での Windows 開発</h3>
+                                                    <p>MFC、ATL、Microsoft C++ ツールセットの機能を使って、従来の Windows ベースのアプリケーションを構築します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#mobile">モバイル &amp; ゲーム</a>
+                        <ul id="mobile" class="cardsC">
+                            <li>
+                                <div class="container intro">
+                                    <p>Android、iOS、Windows を対象にしたネイティブまたはハイブリッドのモバイル アプリを作成します。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=833088">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-scaleimage="./images/vs_gaming-1.svg" src="./images/vs_gaming-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>.NET によるモバイル開発</h3>
+                                                    <p>iOS、Android、Windows 向けのクロスプラットフォーム アプリケーションを、Xamarin を使って構築します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=833091">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-scaleimage="./images/vs_gaming-2.svg" src="./images/vs_gaming-2.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Unity でのゲーム開発</h3>
+                                                    <p>強力なクロスプラットフォーム開発環境である Unity を使って、2D および 3D ゲームを作成します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=833089">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-scaleimage="./images/vs_gaming-3.svg" src="./images/vs_gaming-3.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>JavaScript でのモバイル開発</h3>
+                                                    <p>iOS、Android、Windows 向けのクロスプラットフォーム アプリケーションを、Apache Cordova フレームワークを使って構築します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=833090">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-scaleimage="./images/vs_gaming-4.svg" src="./images/vs_gaming-4.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>C++ でのモバイル開発</h3>
+                                                    <p>iOS、Android、Windows 向けのクロスプラットフォーム アプリケーションを、C++ を使って構築します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=834749">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-scaleimage="./images/vs_gaming-5.svg" src="./images/vs_gaming-5.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>C++ によるゲーム開発</h3>
+                                                    <p>C++ を最大限に活用して、DirectX、Unreal、Cocos2D を利用するプロフェッショナルなゲームを構築します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#other">その他のツールセット</a>
+                        <ul id="other" class="cardsC">
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=834750">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-scaleimage="./images/vs_tools-1.svg" src="./images/vs_tools-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Visual Studio 拡張機能の開発</h3>
+                                                    <p>コマンド、コード アナライザー、ツール ウィンドウなど、Visual Studio を拡張するアドオンを作成します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=833099">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-scaleimage="./images/vs_tools-2.svg" src="./images/vs_tools-2.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>C++ による Linux 開発</h3>
+                                                    <p>Linux 環境で実行するアプリケーションを作成およびデバッグします。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=856606">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-scaleimage="./images/vs_tools-3.svg" src="./images/vs_web-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>.NET Core クロスプラットフォームの開発</h3>
+                                                    <p>.NET Core、ASP.NET Core、HTML、JavaScript、コンテナー開発ツールを使用したクロスプラットフォーム アプリケーションを構築します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
                     </li>
