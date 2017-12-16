@@ -10,17 +10,17 @@ ms.assetid: dedf0173-197e-4258-ae5a-807eb3abc952
 caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
-ms.openlocfilehash: 8adc348553ba613898117f10ccd21a6e5cd02ab8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: b89f021b181e653dff97368cc5c1f2d993f04323
+ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>方法: AsyncPackage を使用して、バック グラウンドで Vspackage を読み込む
 読み込みと初期化 VS パッケージは、ディスク I/O になります。 UI スレッドでこのような I/O が発生した場合、応答性の問題になることができます。 これに対処するには、Visual Studio 2015 が導入された、<xref:Microsoft.VisualStudio.Shell.AsyncPackage>をバック グラウンド スレッドでパッケージの読み込みを有効にするクラス。  
   
 ## <a name="creating-an-asyncpackage"></a>作成するため、asyncpackage から  
- VSIX プロジェクトを作成することができます (**ファイル/新しい/プロジェクト/Visual c#/機能拡張/VSIX プロジェクト**) VSPackage をプロジェクトに追加して (プロジェクトを右クリックし、**追加/新規項目/c# 項目/拡張機能/visualStudio パッケージ**)。 サービスを作成し、それらのサービスをパッケージに追加できます。  
+ VSIX プロジェクトを作成することができます (**ファイル > 新規 > プロジェクト > Visual c# > 機能拡張 > VSIX プロジェクト**) VSPackage をプロジェクトに追加して (プロジェクトを右クリックし、**追加/新規項目/c# 項目/Extensibility/Visual Studio パッケージ**)。 サービスを作成し、それらのサービスをパッケージに追加できます。  
   
 1.  パッケージを派生させる<xref:Microsoft.VisualStudio.Shell.AsyncPackage>です。  
   

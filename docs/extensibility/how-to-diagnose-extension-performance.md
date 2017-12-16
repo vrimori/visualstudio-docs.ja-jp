@@ -12,11 +12,11 @@ caps.latest.revision: "1"
 author: BertanAygun
 ms.author: bertaygu
 manager: ghogen
-ms.openlocfilehash: 7ff2aeecfbabb055f0fa9740623bc2bd949b11c7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: c2d8b27937be4580da8ff33c5b3c1d57654b4c89
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="measuring-extension-impact-in-startup"></a>スタートアップの拡張機能への影響を測定
 
@@ -48,9 +48,9 @@ ms.lasthandoff: 10/31/2017
 
 これらの機能の詳細については、次のドキュメントでご覧ください。
 
-[ルール ベースの UI コンテキスト](how-to-use-rule-based-ui-context-for-visual-studio-extensions.md): 構築されています。 UI コンテキスト高度な規則ベース エンジンを使用すると、プロジェクトの種類、フレーバー、および機能に基づいてカスタムのコンテキストを作成します。 これらのカスタム コンテキストはスタートアップ; の代わりに特定の機能を持つプロジェクトが存在するなどの具体的なシナリオ中に、パッケージの読み込みに使用できます。許可または[コマンドの可視性は、カスタムのコンテキストに関係を](https://msdn.microsoft.com/en-us/library/bb166512.aspx)コマンドの状態のクエリのハンドラーを登録するには、プロジェクトの機能またはパッケージを読み込む必要があるので使用可能なその他の条項に基づいて。
+[ルール ベースの UI コンテキスト](how-to-use-rule-based-ui-context-for-visual-studio-extensions.md): 構築されています。 UI コンテキスト高度な規則ベース エンジンを使用すると、プロジェクトの種類、フレーバー、および機能に基づいてカスタムのコンテキストを作成します。 これらのカスタム コンテキストはスタートアップ; の代わりに特定の機能を持つプロジェクトが存在するなどの具体的なシナリオ中に、パッケージの読み込みに使用できます。許可または[コマンドの可視性は、カスタムのコンテキストに関係を](visibilityconstraints-element.md)コマンドの状態のクエリのハンドラーを登録するには、プロジェクトの機能またはパッケージを読み込む必要があるので使用可能なその他の条項に基づいて。
 
-[非同期のパッケージのサポート](how-to-use-asyncpackage-to-load-vspackages-in-the-background.md): Visual Studio 2015 で新しい AsyncPackage の基本クラスでは、読み込まれるバック グラウンドで非同期的にパッケージの読み込みが自動負荷属性または非同期サービス クエリによって要求された場合、Visual Studio パッケージを使用できます。. このバック グラウンドで読み込まないは、拡張機能は、バック グラウンドで初期化され、スタートアップとソリューションの読み込みと同様に、重要なシナリオが影響を受けることはありません、応答性を維持するための IDE を使用できます。
+[非同期のパッケージのサポート](how-to-use-asyncpackage-to-load-vspackages-in-the-background.md): Visual Studio 2015 で新しい AsyncPackage の基本クラスでは、読み込まれるバック グラウンドで非同期的にパッケージの読み込みが自動負荷属性または非同期サービス クエリによって要求された場合、Visual Studio パッケージを使用できます. このバック グラウンドで読み込まないは、拡張機能は、バック グラウンドで初期化され、スタートアップとソリューションの読み込みと同様に、重要なシナリオが影響を受けることはありません、応答性を維持するための IDE を使用できます。
 
 [非同期サービス](how-to-provide-an-asynchronous-visual-studio-service.md): 非同期パッケージのサポートはもサポートが追加サービスを非同期で照会すると、非同期のサービスを登録できることです。 さらに重要な非同期クエリの処理の大部分がバック グラウンド スレッドで発生するように、非同期クエリをサポートするためにコア Visual Studio のサービスへの変換に取り組んでいます。 SComponentModel (Visual Studio MEF ホスト) は、今すぐ完全に非同期読み込みをサポートする拡張機能を許可する非同期クエリをサポートする主要なサービスの 1 つです。
 

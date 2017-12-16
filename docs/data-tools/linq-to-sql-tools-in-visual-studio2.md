@@ -12,11 +12,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: cba3d5568ee2fa2b4af0eb9c10995c813fe09c01
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: c493a7ea448277275072ab71cf013333ccb9b4ea
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="linq-to-sql-tools-in-visual-studio"></a>LINQ to Visual Studio での SQL ツール
 LINQ to SQL では、マイクロソフトによってリリースされた最初のオブジェクト リレーショナル マッピング テクノロジをでした。 基本的なシナリオに適していますし、引き続き Visual Studio でサポートされますが、アクティブな開発ではありません。 LINQ to SQL は既に使用して、従来のアプリケーションを保持する場合または SQL Server を使用して複数のテーブルのマッピングを必要としない単純なアプリケーションを使用します。 一般に、新しいアプリケーションは、オブジェクト リレーショナル マッパー レイヤーが必要な場合、Entity Framework を使用する必要があります。  
@@ -62,7 +62,7 @@ Visual Studio では、オブジェクト リレーショナル デザイナー 
  [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] クラスは、他のオブジェクトと同様に、継承を使用して他のクラスから派生できます。 データベースでは、継承関係が複数の方法で作成されます。 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]では、多くのリレーショナル システムに実装されている単一テーブル継承の概念がサポートされています。 詳細については、次を参照してください。[する方法: O/r デザイナーを使用して継承を構成する](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md)です。  
   
 ## <a name="linq-to-sql-queries"></a>LINQ to SQL クエリ  
- によって作成されたエンティティ クラス、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]で使用できるように設計された[クエリ (LINQ: Language-Integrated)](http://msdn.microsoft.com/Library/a73c4aec-5d15-4e98-b962-1274021ea93d)です。 詳細については、次を参照してください。[する方法: 情報の照会](/dotnet/framework/data/adonet/sql/linq/how-to-query-for-information)です。  
+ によって作成されたエンティティ クラス、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]で使用できるように設計された[クエリ (LINQ: Language-Integrated)](/dotnet/csharp/linq/)です。 詳細については、次を参照してください。[する方法: 情報の照会](/dotnet/framework/data/adonet/sql/linq/how-to-query-for-information)です。  
   
 ## <a name="separating-the-generated-datacontext-and-entity-class-code-into-different-namespaces"></a>生成された DataContext とエンティティ クラス コードの異なる名前空間への分離  
  [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]提供、**コンテキスト Namespace**と**Entity Namespace**プロパティを<xref:System.Data.Linq.DataContext>です。 これらのプロパティは、<xref:System.Data.Linq.DataContext> およびエンティティ クラスのコードが生成される名前空間を決定します。 既定では、これらのプロパティは空であり、<xref:System.Data.Linq.DataContext> およびエンティティ クラスはアプリケーションの名前空間に生成されます。 アプリケーションの名前空間以外の名前空間にコードを生成するに値を入力してください、**コンテキスト Namespace**や**Entity Namespace**プロパティです。

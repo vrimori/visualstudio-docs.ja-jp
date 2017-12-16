@@ -12,11 +12,11 @@ caps.latest.revision: "4"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1c3e5c90818485ef8fc071f22709dde14933769a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: e5b0ddc7a8f521101e09f41b5036b4233a8bcdc6
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>"混合最小規則" 規則セット
 Microsoft の混合最小規則は、潜在的なセキュリティ ホールやアプリケーションのクラッシュなど、共通言語ランタイムをサポートする C++ プロジェクトの最も重大な問題に注目します。 共通言語ランタイムをサポートする C++ プロジェクトにカスタムの規則セットを作成する場合は、必ずこの規則セットを含める必要があります。  
@@ -59,7 +59,6 @@ Microsoft の混合最小規則は、潜在的なセキュリティ ホールや
 |[C6504](../code-quality/c6504.md)|非ポインターでの Null|  
 |[C6505](../code-quality/c6505.md)|Void での MustCheck|  
 |[C6506](../code-quality/c6506.md)|非ポインターまたは配列でのバッファー サイズ|  
-|[C6507](http://msdn.microsoft.com/en-us/18f88cd1-d035-4403-a6a4-12dd0affcf21)|逆参照ゼロでの Null 不一致|  
 |[C6508](../code-quality/c6508.md)|定数での書き込みアクセス|  
 |[C6509](../code-quality/c6509.md)|前提条件で使用される Return|  
 |[C6510](../code-quality/c6510.md)|非ポインターでの Null 終了|  
@@ -70,12 +69,8 @@ Microsoft の混合最小規則は、潜在的なセキュリティ ホールや
 |[C6516](../code-quality/c6516.md)|属性にプロパティがない|  
 |[C6517](../code-quality/c6517.md)|読み取り可能でないバッファーでの有効なサイズ|  
 |[C6518](../code-quality/c6518.md)|書き込み可能でないバッファーでの書き込み可能サイズ|  
-|[C6519](http://msdn.microsoft.com/en-us/2b6326b0-0539-4d26-8fb1-720114933232)|無効な注釈です: 'NeedsRelease' プロパティは Yes または No でなければなりません|  
-|[C6521](http://msdn.microsoft.com/en-us/e98d0ae3-6f13-47b2-9a15-15d4055af9ef)|無効なサイズの文字列の逆参照|  
 |[C6522](../code-quality/c6522.md)|無効なサイズの文字列型|  
-|[C6523](http://msdn.microsoft.com/en-us/11397a31-b224-46b0-afb7-d49ca576a3bb)|無効なサイズの文字列パラメーター|  
 |[C6525](../code-quality/c6525.md)|無効なサイズの到達不能な場所の文字列|  
-|[C6526](http://msdn.microsoft.com/en-us/59c590c7-0098-4166-a1ac-87f324596002)|無効なサイズの文字列バッファー型|  
 |[C6527](../code-quality/c6527.md)|無効な注釈です: 'NeedsRelease' プロパティは、void 型の値では使用できません|  
 |[C6530](../code-quality/c6530.md)|認識されない書式指定文字列スタイル|  
 |[C6540](../code-quality/c6540.md)|この関数で属性注釈を使用すると、既存の __declspec 注釈がすべて無効となります|  
@@ -135,8 +130,7 @@ Microsoft の混合最小規則は、潜在的なセキュリティ ホールや
 |[C28253](../code-quality/c28253.md)|関数に対する一貫性のない注釈: パラメーターは、このインスタンスについて他の注釈を含みます。|  
 |[C28254](../code-quality/c28254.md)|dynamic_cast<>() は、注釈ではサポートされません|  
 |[C28262](../code-quality/c28262.md)|注釈での構文エラーが関数の注釈で見つかりました|  
-|[C28263](../code-quality/c28263.md)|条件付き注釈での構文エラーが、組み込みの注釈で見つかりました|  
-|[C28264](http://msdn.microsoft.com/en-us/bf6ea983-a06e-4752-a042-747a7dbf338c)|結果リストの値は定数である必要があります。|  
+|[C28263](../code-quality/c28263.md)|条件付き注釈での構文エラーが、組み込みの注釈で見つかりました| 
 |[C28267](../code-quality/c28267.md)|注釈での構文エラーが、関数の注釈で見つかりました。|  
 |[C28272](../code-quality/c28272.md)|検査中の関数とパラメーターに対する注釈に関数宣言との一貫性がありません|  
 |[C28273](../code-quality/c28273.md)|関数について、手がかりには関数宣言との一貫性がありません。|  

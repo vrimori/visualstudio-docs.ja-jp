@@ -12,11 +12,11 @@ caps.latest.revision: "3"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 76437dff5aa59e4864216318e64a07245c15c68d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: bdd1238eee39b902adf581092a90f7d84c1b0a98
+ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="upgrading-custom-project-and-item-templates-for-visual-studio-2017"></a>カスタム プロジェクトと Visual Studio 2017 項目テンプレートをアップグレードします。
 Visual Studio は、Visual Studio 2017 以降、.vsix または .msi がインストールされているプロジェクトと項目テンプレートを検出する方法を変更します。 カスタム プロジェクトや項目テンプレートを使用する拡張機能を所有している場合は、拡張機能を更新する必要があります。 このトピックでは、必要なことについて説明します。  
@@ -26,7 +26,7 @@ Visual Studio は、Visual Studio 2017 以降、.vsix または .msi がイン�
  VSIX 拡張機能の一部として、プロジェクトまたは項目テンプレートを作成する場合は、「[を作成するカスタム プロジェクトと項目テンプレート](../extensibility/creating-custom-project-and-item-templates.md)です。  
   
 ## <a name="template-scanning"></a>テンプレートのスキャン  
- 以前は、 **devenv/setup**または**devenv/installvstemplates**プロジェクトと項目テンプレートを検索するローカル ディスクをスキャンします。 Preview 4 以降、スキャンは実行のみユーザー レベルの場所 (**%USERPROFILE%\Documents\\< Visual Studio のバージョン\>\My エクスポート テンプレート\\**) に使用されます。テンプレートによって生成された、**ファイル]/[エクスポート テンプレート**コマンド。  
+ 以前は、 **devenv/setup**または**devenv/installvstemplates**プロジェクトと項目テンプレートを検索するローカル ディスクをスキャンします。 Preview 4 以降、スキャンは実行のみユーザー レベルの場所 (**%USERPROFILE%\Documents\\< Visual Studio のバージョン\>\My エクスポート テンプレート\\**) に使用されます。テンプレートによって生成された、**ファイル > エクスポート テンプレート**コマンド。  
   
  (非ユーザー)、他の場所の場所と、テンプレートの他の特性を指定する manifest(.vstman) ファイルを含める必要があります。 テンプレートの使用、.vstemplate ファイルと共に .vstman ファイルが生成されます。 .Vsix を使用して、拡張機能をインストールする場合は、Visual Studio 2017 内の拡張機能を再コンパイルしてこれを実行できます。 .Msi を使用する場合は、変更を手動で行う必要があります。 これらの変更のために実行する必要がありますの一覧は、次を参照してください。**でインストールする拡張機能をアップグレードします。MSI**このトピックで後述します。  
   
@@ -119,7 +119,7 @@ Visual Studio 2015 と Visual Studio 2017 のバージョンのテンプレー�
   
 ```  
   
- によって提供される情報、 [TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)要素は変わりません。 **\<VSTemplateContainer >**要素は、関連付けられているテンプレートの .vstemplate ファイルを指します。  
+ によって提供される情報、 [TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)要素は変わりません。  **\<VSTemplateContainer >**要素は、関連付けられているテンプレートの .vstemplate ファイルを指します。  
   
  Visual Studio 2015 で作成された既定の項目の .vstemplate ファイルを次に示します。  
   
@@ -172,7 +172,7 @@ Visual Studio 2015 と Visual Studio 2017 のバージョンのテンプレー�
   
 ```  
   
- によって提供される情報、  **\<TemplateData >**要素は変わりません。 **\<VSTemplateContainer >**要素が関連付けられているテンプレートの .vstemplate ファイルを指す  
+ によって提供される情報、  **\<TemplateData >**要素は変わりません。  **\<VSTemplateContainer >**要素が関連付けられているテンプレートの .vstemplate ファイルを指す  
   
  .Vstman ファイルのさまざまな要素の詳細については、次を参照してください。 [Visual Studio テンプレート マニフェスト スキーマ リファレンス](../extensibility/visual-studio-template-manifest-schema-reference.md)です。  
   

@@ -18,11 +18,11 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 254fd15f97afe69f927bb8a1aae1954105776641
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 4267267e54fcca7faf6269edc066794d38d304be
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="ca2126-type-link-demands-require-inheritance-demands"></a>CA2126: 型のリンク要求には継承要求が必要です
 |||  
@@ -62,6 +62,4 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="see-also"></a>関連項目  
  [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)   
- [継承確認要求](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9)   
  [リンク確認要求](/dotnet/framework/misc/link-demands)   
- [確認要求](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48)

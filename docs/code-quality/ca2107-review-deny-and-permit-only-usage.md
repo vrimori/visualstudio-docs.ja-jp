@@ -18,11 +18,11 @@ caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fb802e0d97d265c01540ca10ffe8d0dcf9b273cf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: edd0bd14a75dfd58ca043bfaa663e2cfb2660e75
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="ca2107-review-deny-and-permit-only-usage"></a>CA2107: Deny と PermitOnly の用法を再確認します
 |||  
@@ -36,7 +36,7 @@ ms.lasthandoff: 10/31/2017
  メソッドには、PermitOnly] または [拒否するセキュリティ アクションを示すセキュリティ チェックが含まれています。  
   
 ## <a name="rule-description"></a>規則の説明  
- [PermitOnly メソッドを使用して](http://msdn.microsoft.com/en-us/8c7bdb7f-882f-45b7-908c-6cbaa1767649)と<xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName>セキュリティ アクションは、高度な知識を持つユーザーだけが使用する必要がありますの[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]セキュリティ。 コードにこのセキュリティ アクションを使用する場合、セキュリティを再確認する必要があります。  
+ <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName>セキュリティ アクションは、高度な知識を持つユーザーだけが使用する必要がありますの[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]セキュリティ。 コードにこのセキュリティ アクションを使用する場合、セキュリティを再確認する必要があります。  
   
  拒否するセキュリティの要求に応答が発生するスタック ウォークの既定の動作を変更します。 コール スタックに呼び出し元の実際のアクセス許可に関係なく、拒否のメソッドの中に付与する必要がない権限を指定できます。 場合は、スタック ウォークが Deny で保護されているメソッドを検出し、要求されたアクセス許可が拒否されたアクセス許可に含まれている場合、スタック ウォークが失敗します。 PermitOnly は、スタック ウォークの既定の動作も変更されます。 これにより、コードの呼び出し元のアクセス許可に関係なく、許可できる権限のみを指定できます。 場合は、スタック ウォークが PermitOnly で保護されているメソッドを検出し、PermitOnly で指定されているアクセス許可で要求されたアクセス許可が含まれていない場合に、スタック ウォークが失敗します。  
   
@@ -82,5 +82,4 @@ ms.lasthandoff: 10/31/2017
  <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName>   
  <xref:System.Security.IStackWalk.PermitOnly%2A?displayProperty=fullName>   
  [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)   
- [セキュリティ チェックをオーバーライドします。](http://msdn.microsoft.com/en-us/4acdeff5-fc05-41bf-8505-7387cdbfca28)   
- [PermitOnly メソッドを使用してください。](http://msdn.microsoft.com/en-us/8c7bdb7f-882f-45b7-908c-6cbaa1767649)
+

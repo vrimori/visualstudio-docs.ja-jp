@@ -12,11 +12,11 @@ caps.latest.revision: "5"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5bf7da81e41a00bd0d673e3522f944dc17a549c9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: a304d5b405431bca78b3978e25b00d3cf7cc96c2
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="ca3076-insecure-xslt-script-execution"></a>CA3076: 安全ではない XSLT スクリプトの実行
 |||  
@@ -27,10 +27,10 @@ ms.lasthandoff: 10/31/2017
 |互換性に影響する変更点|中断なし|  
   
 ## <a name="cause"></a>原因  
- .NET アプリケーションで [XSLT (Extensible Stylesheet Language Transformation)](https://support.microsoft.com/en-us/kb/313997) を安全ではない方法で実行すると、攻撃者に機密情報を漏えいする可能性のある、 [信頼されていない URI 参照がプロセッサにより解決される](http://msdn.microsoft.com/en-us/ba3e4d4f-1ee7-4226-a51a-78a1f1b5bd8a) おそれがあります。そのことは、サービス拒否攻撃やクロスサイト攻撃につながります。  
+ 実行する場合[XSLT Extensible Stylesheet Language Transformation ()](https://support.microsoft.com/en-us/kb/313997) .NET アプリケーションでセキュリティ上の危険なプロセッサが参照を解決する信頼されていない URI につながる攻撃者に機密情報を漏えいする可能性サービスやクロスサイト攻撃の拒否します。  
   
 ## <a name="rule-description"></a>規則の説明  
- [XSLT](http://msdn.microsoft.com/en-us/6377ce5f-3c45-42a6-b7a9-ec8da588b60c) は、XML データを変換するための W3C (World Wide Web Consortium) 規格です。 通常 XSLT は、XML データを他の形式 (HTML、固定長のテキスト、コンマ区切りのテキスト、または別の XML 形式など) に変換するために、スタイル シートを書き込むのに使用します。 既定では禁止になっていますが、プロジェクトに応じて有効にもできます。  
+ **XSLT** XML データを変換するための World Wide Web Consortium (W3C) 標準です。 通常 XSLT は、XML データを他の形式 (HTML、固定長のテキスト、コンマ区切りのテキスト、または別の XML 形式など) に変換するために、スタイル シートを書き込むのに使用します。 既定では禁止になっていますが、プロジェクトに応じて有効にもできます。  
   
  攻撃にさらされないようにするため、悪意あるスクリプトの処理を許してしまうような、<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> と <xref:System.Xml.Xsl.XsltSettings> のインスタンスの安全ではない組み合わせを XslCompiledTransform. <xref:System.Xml.XmlResolver>が受け取った場合には常に、このルールがトリガーされます。  
   

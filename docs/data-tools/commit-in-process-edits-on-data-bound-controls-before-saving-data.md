@@ -22,11 +22,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 191206e9cc16271e64abbeaba87d86ac0108924b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: d2b0ea1999c9742c04d1bb118d9a036ff2bed5ea
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="commit-in-process-edits-on-data-bound-controls-before-saving-data"></a>データを保存する前にデータ バインド コントロールでの中の編集をコミットします。
 データ バインド コントロール内の値を編集するには、ユーザーが更新された値に、コントロールがバインドされている、基になるデータ ソースにコミットする現在のレコードに移動する必要があります。 項目をドラッグすると、[データ ソース ウィンドウ](add-new-data-sources.md)、フォームに最初の項目を削除するにのコードを生成、**保存**ボタン クリックしてイベントの<xref:System.Windows.Forms.BindingNavigator>です。 このコードを呼び出す、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>のメソッド、<xref:System.Windows.Forms.BindingSource>です。 呼び出し、そのため、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>メソッドは、最初にのみ生成<xref:System.Windows.Forms.BindingSource>ですが、フォームに追加します。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  デザイナーに追加、`BindingSource.EndEdit`最初の項目に対してのみコードをフォームにドロップします。 呼び出すコード行を追加する必要があるため、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>ごとメソッド<xref:System.Windows.Forms.BindingSource>フォームにします。 呼び出すコード行を手動で追加することができます、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>ごとメソッド<xref:System.Windows.Forms.BindingSource>です。 また、追加することができます、`EndEditOnAllBindingSources`をフォームにメソッドおよび保存を実行する前に呼び出しです。  
   
- 次のコードでは、[クエリ (LINQ: Language-Integrated)](http://msdn.microsoft.com/Library/a73c4aec-5d15-4e98-b962-1274021ea93d)すべてを反復処理するクエリ<xref:System.Windows.Forms.BindingSource>コンポーネントと呼び出し、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>ごとメソッド<xref:System.Windows.Forms.BindingSource>フォーム上。  
+ 次のコードでは、[クエリ (LINQ: Language-Integrated)](/dotnet/csharp/linq/)すべてを反復処理するクエリ<xref:System.Windows.Forms.BindingSource>コンポーネントと呼び出し、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>ごとメソッド<xref:System.Windows.Forms.BindingSource>フォーム上。  
   
 ## <a name="to-call-endedit-for-all-bindingsource-components-on-a-form"></a>For を呼び出す EndEdit フォーム上のすべての BindingSource コンポーネント  
   

@@ -50,11 +50,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 6a7e5741b11263ef3c3730ddaa69e566cd7c2e24
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 0a589cf48f53636bcd3892c7c4c991e0fb516bf3
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="dataset-tools-in-visual-studio"></a>Visual Studio でのデータセットのツール
 > [!NOTE]
@@ -83,7 +83,7 @@ ms.lasthandoff: 10/31/2017
   
     -   [データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)  
   
--   クエリを実行し、データセット内のデータを検索します。 詳細については、次を参照してください。[クエリのデータセット](../data-tools/query-datasets.md)です。 [!INCLUDE[linq_dataset](../data-tools/includes/linq_dataset_md.md)]により、[クエリ (LINQ: Language-Integrated)](http://msdn.microsoft.com/Library/a73c4aec-5d15-4e98-b962-1274021ea93d)でデータを<xref:System.Data.DataSet>オブジェクト。 詳細については、「[LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset)」を参照してください。  
+-   クエリを実行し、データセット内のデータを検索します。 詳細については、次を参照してください。[クエリのデータセット](../data-tools/query-datasets.md)です。 [!INCLUDE[linq_dataset](../data-tools/includes/linq_dataset_md.md)]により、[クエリ (LINQ: Language-Integrated)](/dotnet/csharp/linq/)でデータを<xref:System.Data.DataSet>オブジェクト。 詳細については、「[LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset)」を参照してください。  
   
 -   使用して、**データ ソース**ウィンドウのユーザー インターフェイス コントロールをデータセットまたはその個々 の列にバインドしてユーザーが編集できるのどの列を指定します。 詳細については、次を参照してください。 [Visual Studio でのデータにコントロールをバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)です。  
   

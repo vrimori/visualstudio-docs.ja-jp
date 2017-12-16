@@ -24,11 +24,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 2c309bd30fb364c36b9e98640a02eb3cf2611aef
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: f5d50dff4b71402184e0c1127242c1ddb0b1827f
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="save-data-back-to-the-database"></a>データをデータベースに保存します。
 データセットは、データのメモリ内のコピーです。 そのデータを変更する場合は、これらの変更をデータベースに保存することをお勧めします。 これには 3 つの方法のいずれかの操作を行います。  
@@ -50,7 +50,7 @@ Tableadapter に慣れている場合は、次のトピックのいずれかに�
 |[階層更新](../data-tools/hierarchical-update.md)|2 つ以上の関連するテーブルを含むデータセットから更新プログラムを実行する方法|  
 |[同時実行例外を処理する](../data-tools/handle-a-concurrency-exception.md)|2 つのユーザーを同時に、データベース内の同じデータを変更するときに例外を処理する方法|  
 |[方法: トランザクションを使用してデータを保存](../data-tools/save-data-by-using-a-transaction.md)|System.Transactions 名前空間と TransactionScope オブジェクトを使用して、トランザクションでデータを保存する方法|  
-|[チュートリアル: トランザクション内のデータを保存します。](../data-tools/save-data-in-a-transaction.md)|トランザクション内のデータベースへのデータの保存を示すために Windows フォーム アプリケーションを作成するチュートリアル|  
+|[チュートリアル: トランザクションにデータを保存する](../data-tools/save-data-in-a-transaction.md)|トランザクション内のデータベースへのデータの保存を示すために Windows フォーム アプリケーションを作成するチュートリアル|  
 |[データベースへのデータの保存 (複数テーブル)](../data-tools/save-data-to-a-database-multiple-tables.md)|レコードを編集し、データベースに複数のテーブルで変更を保存する方法|  
 |[オブジェクトからデータベースにデータを保存する](../data-tools/save-data-from-an-object-to-a-database.md)|TableAdapter DbDirect メソッドを使用して、データセットをデータベースに含まれないオブジェクトからデータを渡す方法|  
 |[TableAdapter DBDirect メソッドを使用してデータを保存する](../data-tools/save-data-with-the-tableadapter-dbdirect-methods.md)|TableAdapter を使用して、データベースに直接 SQL クエリを送信する方法|  
@@ -217,7 +217,7 @@ Tableadapter に慣れている場合は、次のトピックのいずれかに�
 -   データのバック エンドで、データをデータベースなどのデータ ソースに送信し、データの受け入れまたは拒否を行うことができるようにする。 データの検証やエラー情報を提供する洗練された機能を備えたデータベースを使用している場合、実用的なアプローチになります。データのソースが何であるかにかかわらずデータを検証できるからです。 ただし、このアプローチでは、アプリケーション固有の検証の要件が対応いない可能性があります。 また、アプリケーションが、バック エンドによって発生する検証エラーの解決を容易にする方法に応じて、データ ソースにラウンド トリップが多数データ ソースでデータを検証の結果ことができます。  
   
     > [!IMPORTANT]
-    >  データ コマンドを使用する場合、<xref:System.Data.SqlClient.SqlCommand.CommandType%2A>プロパティに設定されている<xref:System.Data.CommandType.Text>、慎重に、データベースに渡す前に、クライアントから送信される情報を確認します。 悪意のあるユーザーが、承認なしでデータベースにアクセスしたり、データベースを破壊したりする目的で、変更した SQL ステートメントや追加の SQL ステートメントの送信 (挿入) を試みる場合があります。 データベースへのユーザー入力を転送する前に、常に情報が有効なことを確認します。 常にパラメーター化クエリまたはストアド プロシージャ可能な場合に使用することをお勧めします。 詳細については、「[スクリプトによる攻略の概要](http://msdn.microsoft.com/Library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)」を参照してください。  
+    >  データ コマンドを使用する場合、<xref:System.Data.SqlClient.SqlCommand.CommandType%2A>プロパティに設定されている<xref:System.Data.CommandType.Text>、慎重に、データベースに渡す前に、クライアントから送信される情報を確認します。 悪意のあるユーザーが、承認なしでデータベースにアクセスしたり、データベースを破壊したりする目的で、変更した SQL ステートメントや追加の SQL ステートメントの送信 (挿入) を試みる場合があります。 データベースへのユーザー入力を転送する前に、常に情報が有効なことを確認します。 常にパラメーター化クエリまたはストアド プロシージャ可能な場合に使用することをお勧めします。  
   
 ## <a name="transmitting-updates-to-the-data-source"></a>データ ソースへの送信の更新  
 データセットを変更した後で、変更内容をデータ ソースに転送できます。 一般に、これは TableAdapter (またはデータ アダプター) の `Update` メソッドを呼び出すことによって行います。 メソッドをループし、データ テーブル内の各レコードは、必要な更新プログラムの種類を決定 (update、insert、または delete) 存在する場合、適切なコマンドを実行します。  
@@ -258,7 +258,7 @@ Tableadapter に慣れている場合は、次のトピックのいずれかに�
   
  各パラメーターの <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A?displayProperty=fullName> プロパティは、データ テーブル内の列を指しています。 たとえば、`SourceColumn` パラメーターおよび `au_id` パラメーターの `Original_au_id` プロパティには、データ テーブルの author id を含む列が設定されます。ときに、アダプターの`Update`メソッドを実行する、作成者 id 列から読み取るレコードが更新されると、ステートメントに値を設定します。  
   
- UPDATE ステートメントでは、(レコードに書き込まれるもの) 両方の新しい値をできるだけでなく、古い値が (レコードは、データベース内にあることができます) を指定する必要があります。 したがって、それぞれの値に、SET 句のパラメーターと WHERE 句の 2 つのパラメーターがあります。 両方のパラメーターが、更新されるレコードからデータを読み取りますが、異なるバージョンのパラメーターの列の値の[SqlParameter.SourceVersion プロパティ](https://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqlparameter.sourceversion.aspx)です。 SET 句のパラメーターは現在のバージョンを取得し、WHERE 句のパラメーターは元のバージョンを取得します。  
+ UPDATE ステートメントでは、(レコードに書き込まれるもの) 両方の新しい値をできるだけでなく、古い値が (レコードは、データベース内にあることができます) を指定する必要があります。 したがって、それぞれの値に、SET 句のパラメーターと WHERE 句の 2 つのパラメーターがあります。 両方のパラメーターが、更新されるレコードからデータを読み取りますが、異なるバージョンのパラメーターの列の値の<xref:System.Data.SqlClient.SqlParameter.SourceVersion>プロパティです。 SET 句のパラメーターは現在のバージョンを取得し、WHERE 句のパラメーターは元のバージョンを取得します。  
   
 > [!NOTE]
 >  `Parameters` コレクションの値はコードで設定することもできます。通常はデータ アダプターの <xref:System.Data.DataTable.RowChanging> イベントのイベント ハンドラーで設定します。  

@@ -16,11 +16,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 17bdaffa8fdbb6ddff9d7fe5590db021997aa01f
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.openlocfilehash: 2b3a551f19e3410b5f56ebe994676666cdc3d4e1
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="compatible-database-systems-for-visual-studio"></a>Visual Studio の互換性のあるデータベースのシステム
 
@@ -30,7 +30,7 @@ Visual Studio でのデータに接続しているアプリケーションを開
 
 Azure ストレージ Api を使用している場合、実稼働環境に展開する準備ができたら、料金を回避するために、ローカル コンピューターで開発中の Azure ストレージ エミュレーターをインストールします。 詳細については、次を参照してください。[開発とテストのため、Azure ストレージ エミュレーターを使用して](https://azure.microsoft.com/en-us/documentation/articles/storage-use-emulator/)です。
 
-次の一覧には、Visual Studio プロジェクトで使用できる最も一般的なデータベース システムの一部が含まれます。 一覧が完全ではありません。 Visual Studio のツールとの緊密な統合を有効にする ADO.NET データ プロバイダーを提供するサード パーティ ベンダーの一覧は、次を参照してください。 [ADO.NET データ プロバイダー](https://msdn.microsoft.com/en-us/library/dd363565.aspx)です。
+次の一覧には、Visual Studio プロジェクトで使用できる最も一般的なデータベース システムの一部が含まれます。 一覧が完全ではありません。 Visual Studio のツールとの緊密な統合を有効にする ADO.NET データ プロバイダーを提供するサード パーティ ベンダーの一覧は、次を参照してください。 [ADO.NET データ プロバイダー](/dotnet/framework/data/adonet/data-providers)です。
 
 ## <a name="microsoft-sql-server"></a>Microsoft SQL Server
 

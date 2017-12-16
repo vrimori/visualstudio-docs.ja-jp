@@ -12,14 +12,14 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 6b48b16d33c62c2d0ca96eb1d55ce22682458029
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: bc63c636d58bcde7aefeb7d35939008387bb6808
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="visual-studio-data-tools-for-net"></a>.NET 用の visual Studio data tools
-Visual Studio と .NET Framework は、一緒に広範な API とツールのデータベースへの接続、メモリ内のデータのモデリングおよびユーザー インターフェイスでデータを表示するためのサポートを提供します。 データ アクセス機能を提供する .NET Framework のクラスと呼ばれる[ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)です。 Visual Studio でのツールをデータと共に、ADO.NET 当初の目的、主にするリレーショナル データベースおよび XML をサポートします。 今日では、多くの NoSQL データベース仕入先、またはサード パーティは、ADO.NET プロバイダーを提供します。  
+Visual Studio と .NET Framework は、一緒に広範な API とツールのデータベースへの接続、メモリ内のデータのモデリングおよびユーザー インターフェイスでデータを表示するためのサポートを提供します。 データ アクセス機能を提供する .NET Framework のクラスと呼ばれる[ADO.NET](/dotnet/framework/data/adonet/index)です。 Visual Studio でのツールをデータと共に、ADO.NET 当初の目的、主にするリレーショナル データベースおよび XML をサポートします。 今日では、多くの NoSQL データベース仕入先、またはサード パーティは、ADO.NET プロバイダーを提供します。  
   
 [.NET core](https://www.dotnetfoundation.org/netcore)データセットと関連する型を除く、ADO.NET をサポートしています。 .NET Core を対象となるオブジェクト リレーショナル マッピング (ORM) レイヤーを必要としていて使用[Entity Framework Core](https://docs.microsoft.com/ef/core/)です。  
   
@@ -39,7 +39,7 @@ Visual Studio と .NET Framework は、一緒に広範な API とツールのデ
   
 5.  処理など、ビジネス ルール、検索、およびデータの検証、または基になるデータベースを公開するカスタムの機能を活用するためのカスタム コードを追加します。  
   
-手順 3. を省略して、モデルを使用するのではなく、データベースに直接コマンドを発行する .NET アプリケーションをプログラムできます。 この場合、ここにある関連するドキュメントが表示されます: [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)です。 使用することもできます、データ ソース構成ウィザードとデザイナーを独自のオブジェクトのメモリし、それらのオブジェクトを UI コントロールをデータ バインドを設定するときにデータ バインド コードを生成することを注意してください。
+手順 3. を省略して、モデルを使用するのではなく、データベースに直接コマンドを発行する .NET アプリケーションをプログラムできます。 この場合、ここにある関連するドキュメントが表示されます: [ADO.NET](/dotnet/framework/data/adonet/index)です。 使用することもできます、データ ソース構成ウィザードとデザイナーを独自のオブジェクトのメモリし、それらのオブジェクトを UI コントロールをデータ バインドを設定するときにデータ バインド コードを生成することを注意してください。
   
 ## <a name="see-also"></a>関連項目
 [Visual Studio でのデータへのアクセス](../data-tools/accessing-data-in-visual-studio.md)

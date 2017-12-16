@@ -12,11 +12,11 @@ caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ff1f5d9c7c28c63e2f1f1c0783f1032888e3c645
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: b6d287e7e85ef908f9504f8e1f66e0c221042553
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>色とスタイルが Visual Studio の
 ## <a name="using-color-in-visual-studio"></a>Visual Studio での色を使用します。  
@@ -320,7 +320,7 @@ UI に色のセットを制限するこれを適用するときに*"normal"の�
 ### <a name="building-a-vspackage-for-your-customizable-colors"></a>カスタマイズ可能な色の VSPackage をビルド  
 VSPackage では、カスタム カテゴリを色とフォントを制御でき、フォントおよび色 プロパティ ページにアイテムを表示することができます。 Vspackage を実装する必要がありますこのメカニズムを使用する場合、 [IVsFontAndColorDefaultsProvider](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.aspx)インターフェイスとその関連するインターフェイスです。  
   
-原則として、既存のすべての表示項目とそれを格納するカテゴリを変更するこのメカニズムを使用できます。 ただし、その必要があります指定しないで、テキスト エディター カテゴリ、またはそのアイテムの表示を変更します。 [テキスト エディター] の詳細については、次を参照してください。[フォントと色の概要](https://msdn.microsoft.com/en-us/library/bb165065.aspx)です。  
+原則として、既存のすべての表示項目とそれを格納するカテゴリを変更するこのメカニズムを使用できます。 ただし、その必要があります指定しないで、テキスト エディター カテゴリ、またはそのアイテムの表示を変更します。 [テキスト エディター] の詳細については、次を参照してください。[フォントと色の概要](../font-and-color-overview.md)です。  
   
 カスタムのカテゴリを実装またはアイテムの表示、VSPackage が必要です。  
   
@@ -397,7 +397,7 @@ VSPackage を表示するテキストの色づけを正しくサポートする�
   
  **OR**  
   
--   **IDE の変更をポーリング**です。 これは、操作にはシステムに実装された[IVsFontAndColorStorage](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx)インターフェイスです。 永続化ストアのサポートについては、主には、 [GetItem](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem.aspx)メソッドは、表示項目のフォントと色の情報を取得できます。 フォントおよび色の設定の詳細については、MSDN の記事を参照してください。[にアクセスする格納されているフォントと色の設定](https://msdn.microsoft.com/en-us/library/bb166382.aspx)です。  
+-   **IDE の変更をポーリング**です。 これは、操作にはシステムに実装された[IVsFontAndColorStorage](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx)インターフェイスです。 永続化ストアのサポートについては、主には、 [GetItem](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem.aspx)メソッドは、表示項目のフォントと色の情報を取得できます。 フォントおよび色の設定の詳細については、MSDN の記事を参照してください。[にアクセスする格納されているフォントと色の設定](../accessing-stored-font-and-color-settings.md)です。  
   
 > **注:**ポーリング結果が正しいことを確認するを使用して、 [IVsFontAndColorCacheManager](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager.aspx)インターフェイスの取得方法を呼び出す前に、キャッシュのフラッシュと更新プログラムが必要なかどうかを決定する、 [IVsFontAndColorStorage](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx)インターフェイスです。
   

@@ -12,34 +12,32 @@ helpviewer_keywords:
 - data [Visual Studio], Dataset Designer
 - Dataset Designer, walkthroughs
 - datasets [Visual Basic], creating
-ms.assetid: 12360f54-db6c-45d2-a91f-fee43214b555
-caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-robots: noindex,nofollow
 ms.technology: vs-data-tools
-ms.openlocfilehash: f327d2010105c12c4b137317ed2406cae6cad9a3
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: f826f7d33a8d35719afacb053995629433b27642
+ms.sourcegitcommit: e951faab601f5c05ad6606d8fd0cd2059fc4cc25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="walkthrough-creating-a-dataset-with-the-dataset-designer"></a>チュートリアル : データセット デザイナーでのデータセットの作成
+
 このチュートリアルで使用するデータセットを作成は、**データセット デザイナー**です。 新しいプロジェクトを作成し、新しい追加の手順に従ってかかる**データセット**に項目。 ウィザードを使用しないで、データベース内のテーブルに基づいてテーブルを作成する方法について説明します。  
-  
- このチュートリアルでは、以下のタスクを行います。  
-  
+
+このチュートリアルでは、以下のタスクを行います。  
+
 -   新たに作成する**Windows フォーム アプリケーション**プロジェクト。  
-  
+
 -   空の追加**データセット**プロジェクト項目です。  
-  
+
 -   使用してデータセットを作成して、アプリケーションでデータ ソースの構成の作成と、**データセット デザイナー**です。  
-  
+ 
 -   Northwind データベースへの接続を作成する**サーバー エクスプ ローラー**です。  
-  
+
 -   データベース内のテーブルに基づいて、データセットに TableAdapter を持つテーブルを作成します。  
-  
+
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
 ## <a name="prerequisites"></a>必須コンポーネント  

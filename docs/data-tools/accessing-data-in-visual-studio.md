@@ -17,11 +17,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 8102301ee098ef662f27c8a6dc586a683a85d177
-ms.sourcegitcommit: 1aa9282b1f0bc2795df3264cbd1e331cc44c23f3
+ms.openlocfilehash: da7176d3fd64591064bfd33a0780ba7939621182
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="accessing-data-in-visual-studio"></a>Visual Studio でのデータにアクセスします。
 
@@ -67,7 +67,7 @@ JavaScript、Python、PHP、Ruby、または C++ では、アプリケーショ�
 
 ## <a name="net-languages"></a>.NET 言語
 
-.NET Core を含む、すべての .NET データ アクセスは、ADO.NET、任意の種類のデータ ソース、リレーショナルおよび非リレーショナルの両方にアクセスするためのインターフェイスを定義する一連のクラスに基づいています。 Visual Studio がいくつかのツールとデザイナーを使用すると、データベースに接続するように ADO.NET を使用するデータを操作およびユーザーにデータを表示します。 このセクションのドキュメントでは、これらのツールを使用する方法について説明します。 また、ADO.NET コマンド オブジェクトに対して直接プログラミングすることができます。 ADO.NET Api を直接呼び出すの詳細については、次を参照してください。 [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx\(v=vs.110\).aspx) 、MSDN ライブラリです。
+.NET Core を含む、すべての .NET データ アクセスは、ADO.NET、任意の種類のデータ ソース、リレーショナルおよび非リレーショナルの両方にアクセスするためのインターフェイスを定義する一連のクラスに基づいています。 Visual Studio がいくつかのツールとデザイナーを使用すると、データベースに接続するように ADO.NET を使用するデータを操作およびユーザーにデータを表示します。 このセクションのドキュメントでは、これらのツールを使用する方法について説明します。 また、ADO.NET コマンド オブジェクトに対して直接プログラミングすることができます。 ADO.NET Api を直接呼び出すの詳細については、次を参照してください。 [ADO.NET](/dotnet/framework/data/adonet/index)です。
 
 データ アクセスのドキュメントが ASP.NET に関連する具体的には、次を参照してください。[データを扱う](http://www.asp.net/web-forms/overview/presenting-and-managing-data)ASP.NET サイトです。 ASP.NET MVC で Entity Framework の使用に関するチュートリアルは、次を参照してください。 [Entity Framework 6 の Code First MVC 5 を使用すると作業の開始](http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)です。
 
@@ -98,7 +98,7 @@ ADO.NET で使用できるようにするデータベースの場合がありま
 
 ## <a name="native-c"></a>ネイティブ C++
 
-SQL Server に接続する C++ アプリケーションを使用する必要があります、 [SQL Server 用 Microsoft® ODBC Driver 13.1](https://www.microsoft.com/download/details.aspx?id=53339)ほとんどの場合。 OLE DB が必要とするためのサーバーをリンクしている場合を使用、 [SQL Server Native Client](https://msdn.microsoft.com/sqlserver/aa937733.aspx)です。 使用して他のデータベースにアクセスできます[ODBC](https://msdn.microsoft.com/library/ms710252\(v=vs.85\).aspx)または OLE DB ドライバー直接です。 ODBC は、現在の標準的なデータベース インターフェイスが、ほとんどのデータベース システムが ODBC インターフェイス経由でアクセスできないカスタムの機能を提供します。 OLE DB は、レガシ COM データ アクセス テクノロジではまだサポートされていますが、新しいアプリケーションをお勧めしません。 詳細については、次を参照してください。 [Visual c でのデータ アクセス](https://docs.microsoft.com/cpp/data/)です。
+SQL Server に接続する C++ アプリケーションを使用する必要があります、 [SQL Server 用 Microsoft® ODBC Driver 13.1](https://www.microsoft.com/download/details.aspx?id=53339)ほとんどの場合。 OLE DB が必要とするためのサーバーをリンクしている場合を使用、 [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client)です。 使用して他のデータベースにアクセスできます[ODBC](https://msdn.microsoft.com/library/ms710252\(v=vs.85\).aspx)または OLE DB ドライバー直接です。 ODBC は、現在の標準的なデータベース インターフェイスが、ほとんどのデータベース システムが ODBC インターフェイス経由でアクセスできないカスタムの機能を提供します。 OLE DB は、レガシ COM データ アクセス テクノロジではまだサポートされていますが、新しいアプリケーションをお勧めしません。 詳細については、次を参照してください。 [Visual c でのデータ アクセス](/cpp/data/data-access-in-cpp)です。
 
 REST サービスを使用する C++ プログラムで使用できます、 [C++ REST SDK](https://github.com/Microsoft/cpprestsdk)です。
 
@@ -106,11 +106,11 @@ Microsoft Azure Storage を使用する C++ プログラムで使用できます
 
 データ モデリング&mdash;Visual Studio は C++ を ORM レイヤーを提供しません。 [ODB](http://www.codesynthesis.com/products/odb/) C++ の一般的なオープン ソース ORM がします。
 
-C++ アプリからデータベースへの接続に関する詳細についてを参照してください。 [C++ 用の Visual Studio data tools](../data-tools/visual-studio-data-tools-for-cpp.md)です。 レガシの Visual C のデータ アクセス テクノロジの詳細については、次を参照してください。[データ アクセス](http://msdn.microsoft.com/Library/a9455752-39c4-4457-b14e-197772d3df0b)です。
+C++ アプリからデータベースへの接続に関する詳細についてを参照してください。 [C++ 用の Visual Studio data tools](../data-tools/visual-studio-data-tools-for-cpp.md)です。 レガシの Visual C のデータ アクセス テクノロジの詳細については、次を参照してください。[データ アクセス](/cpp/data/data-access-in-cpp)です。
 
 ## <a name="javascript"></a>JavaScript
 
-[Visual Studio での JavaScript の](https://msdn.microsoft.com/library/hh334522.aspx)クロスプラット フォーム アプリ、UWP アプリ、クラウド サービス、web サイト、および web アプリケーションを構築するためのファースト クラスの言語です。 お気に入りの JavaScript ライブラリとデータベースの製品をインストールするのに、Bower、Grunt、Gulp、npm、および Visual Studio 内から NuGet を使用できます。 Azure のストレージおよびサービスに接続から Sdk をダウンロードして、 [Azure web サイト](https://azure.microsoft.com/)です。 Edge.js は、サーバー側 JavaScript (Node.js) を ADO.NET データ ソースに接続しているライブラリです。
+[Visual Studio での JavaScript の](/scripting/javascript/javascript-language-reference)クロスプラット フォーム アプリ、UWP アプリ、クラウド サービス、web サイト、および web アプリケーションを構築するためのファースト クラスの言語です。 お気に入りの JavaScript ライブラリとデータベースの製品をインストールするのに、Bower、Grunt、Gulp、npm、および Visual Studio 内から NuGet を使用できます。 Azure のストレージおよびサービスに接続から Sdk をダウンロードして、 [Azure web サイト](https://azure.microsoft.com/)です。 Edge.js は、サーバー側 JavaScript (Node.js) を ADO.NET データ ソースに接続しているライブラリです。
 
 ## <a name="python"></a>Python
 
@@ -127,7 +127,7 @@ Azure ストレージ、および Azure blob、テーブル、キュー、およ
 [Azure SQL データベース](https://azure.microsoft.com/documentation/services/sql-database/)  
 Azure SQL データベース、サービスとしてのリレーショナル データベースに接続する方法について説明します。
 
-[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686\(v=vs.103\).aspx)  
+[SQL Server Data Tools](/sql/ssdt/download-sql-server-data-tools-ssdt)  
 デザイン、探索、テスト、およびデータベースやデータに接続しているアプリケーションの展開を簡略化するツールについて説明します。
 
 [ADO.NET](/dotnet/framework/data/adonet/index)  
@@ -142,7 +142,7 @@ ADO.NET のアーキテクチャについて説明します。また、ADO.NET �
 [Office ソリューションにおけるデータ](/office-dev/office-dev/data-in-office-solutions)  
 Office ソリューションで、データが機能するしくみについて説明したトピックへのリンクを示します。 スキーマ指向プログラミング、データ キャッシュ、およびサーバー側データ アクセスに関する説明が含まれます。
 
-[統合言語クエリ (LINQ)](http://msdn.microsoft.com/Library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+[統合言語クエリ (LINQ)](/dotnet/csharp/linq/)  
 C# および Visual Basic に組み込まれたクエリ機能と、リレーショナル データベース、XML ドキュメント、データセット、およびインメモリ コレクションを照会するための共通のモデルについて説明します。
 
 [Visual Studio の XML ツール](../xml-tools/xml-tools-in-visual-studio.md)  

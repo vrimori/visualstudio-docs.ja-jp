@@ -12,11 +12,11 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e99505c0d3c4ee59f6e07a5b38d5d95533ab879f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: b3081537b1704fd461a458798d646bf7eeb65f0a
+ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="creating-custom-project-and-item-templates"></a>カスタム プロジェクトと項目テンプレートを作成します。
 Visual Studio SDK には、カスタム プロジェクト テンプレートとカスタム項目テンプレートを作成するプロジェクト テンプレートが含まれています。 これらのテンプレートは、いくつか共通パラメーターの代用を含めるし、zip ファイルとしてビルドします。 これらは自動的に配置していないは実験用インスタンスで使用できません。 郵便番号をコピーする必要がありますファイルの場所にします。  
@@ -79,7 +79,7 @@ Visual Studio SDK には、カスタム プロジェクト テンプレートと
   
 4.  ソリューションをビルドし、F5 キーを押します。 実験用インスタンスが表示されます。  
   
-5.  プロジェクト テンプレート プロジェクトの場合に表示されているプロジェクト テンプレートが表示されます、**新しいプロジェクト**ダイアログ (**ファイル/新しいプロジェクト/**)、Visual c# または Visual Basic ノード。 項目テンプレート プロジェクトでは、項目テンプレートが 新しい項目の追加 ダイアログ ボックスの一覧に表示されます (で、**ソリューション エクスプ ローラー**プロジェクト ノードを選択して、をクリックして**追加/新しい項目の**)。  
+5.  プロジェクト テンプレート プロジェクトの場合に表示されているプロジェクト テンプレートが表示されます、**新しいプロジェクト**ダイアログ (**ファイル > 新規 > プロジェクト**) では、Visual c# または Visual Basic のノードです。 項目テンプレート プロジェクトでは、項目テンプレートが 新しい項目の追加 ダイアログ ボックスの一覧に表示されます (で、**ソリューション エクスプ ローラー**プロジェクト ノードを選択して、をクリックして**追加/新しい項目の**)。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート参照](../ide/visual-studio-template-reference.md)

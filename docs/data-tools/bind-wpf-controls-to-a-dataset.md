@@ -19,11 +19,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: d7609215f7145ae05d978ba10d556782c886ee3b
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: 96d5407672ff94749731f9d00088b27e8c4da036
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>データセットへの WPF コントロールをバインドします。
 このチュートリアルでは、データ バインド コントロールが含まれた WPF アプリケーションを作成します。 コントロールは、データセットでカプセル化された製品レコードにバインドされます。 また、製品を参照するためのボタンの追加と、製品レコードへの変更の保存も行います。  
@@ -51,8 +51,6 @@ ms.lasthandoff: 11/09/2017
   
 -   データセットおよび TableAdapter。 詳細については、次を参照してください。 [Visual Studio でのデータセット ツール](../data-tools/dataset-tools-in-visual-studio.md)と[TableAdapter](../data-tools/create-and-configure-tableadapters.md)です。  
   
--   WPF デザイナーの操作。 詳細については、次を参照してください。 [WPF と Silverlight デザイナーの概要](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62)です。  
-  
 -   WPF データ バインディング。 詳しくは、「 [データ バインディングの概要](/dotnet/framework/wpf/data/data-binding-overview)」をご覧ください。  
   
 ## <a name="create-the-project"></a>プロジェクトの作成  
@@ -64,11 +62,11 @@ ms.lasthandoff: 11/09/2017
   
 2.  **[ファイル]** メニューの **[新規作成]**をポイントし、 **[プロジェクト]**をクリックします。  
   
-3.  展開**Visual Basic**または**Visual c#**、し、[ **Windows**です。  
+3.  展開**Visual Basic**または**Visual c#**、し、 **Windows**です。  
   
 4.  選択、 **WPF アプリケーション**プロジェクト テンプレート。  
   
-5.  **名前**ボックスに、入力`AdventureWorksProductsEditor`] をクリック**OK**です。  
+5.  **名前**ボックスに、入力`AdventureWorksProductsEditor` をクリック**OK**です。  
   
      Visual Studio によって作成、`AdventureWorksProductsEditor`プロジェクト。  
   
@@ -89,7 +87,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  **データベース モデルの選択**] ページで、[**データセット**、順にクリック**次**です。  
   
-5.  **データ接続の選択**] ページで、次のオプションのいずれかを選択します。  
+5.  **データ接続の選択** ページで、次のオプションのいずれかを選択します。  
   
     -   AdventureWorksLT サンプル データベースへのデータ接続がドロップダウン リストで使用可能な場合は、選択し、をクリックして**次**です。  
   
@@ -97,7 +95,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  **アプリケーション構成ファイルへの接続文字列を保存**] ページで、[、**接続を保存、**チェック ボックスをクリックして**[次へ]**です。  
   
-7.  **データベース オブジェクトの選択**] ページで、展開**テーブル**、クリックして、 **Product (SalesLT)**テーブル。  
+7.  **データベース オブジェクトの選択** ページで、展開**テーブル**、クリックして、 **Product (SalesLT)**テーブル。  
   
 8.  **[完了]**をクリックします。  
   
@@ -118,7 +116,7 @@ ms.lasthandoff: 11/09/2017
   
      **TableAdapter 構成**ウィザードが開きます。  
   
-3.  **SQL ステートメントを入力**] ページで、追加した後は、次の WHERE 句、`SELECT`テキスト ボックス内のステートメント。  
+3.  **SQL ステートメントを入力** ページで、追加した後は、次の WHERE 句、`SELECT`テキスト ボックス内のステートメント。  
   
     ```  
     WHERE ThumbnailPhotoFileName <> 'no_image_available_small.gif'  
@@ -173,22 +171,22 @@ ms.lasthandoff: 11/09/2017
 4.  次に、ドロップダウン メニューをクリックして、 **ThumbNailPhoto**ノード**イメージ**です。  
   
     > [!NOTE]
-    >  既定では、[項目を**データ ソース**画像を表す期間設定、既定のコントロールである**None**です。 これは、画像がデータベース内でバイト配列として格納されているためです。バイト配列には、単純なバイト配列から大規模なアプリケーションの実行可能ファイルまで、あらゆるデータを格納できます。  
+    >  既定では、項目を**データ ソース**画像を表す期間設定、既定のコントロールである**None**です。 これは、画像がデータベース内でバイト配列として格納されているためです。バイト配列には、単純なバイト配列から大規模なアプリケーションの実行可能ファイルまで、あらゆるデータを格納できます。  
   
 5.  **データ ソース**ウィンドウで、ドラッグ、**製品**ノード下のボタンが含まれる行のグリッド行にします。  
   
      Visual Studio でのデータにバインドされるコントロールのセットを定義する XAML を生成、**製品**テーブル。 また、データを読み込むコードも生成されます。 生成される XAML およびコードの詳細については、次を参照してください。 [Visual Studio でのデータにコントロールをバインドする WPF](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)です。  
   
-6.  デザイナーをクリックして、テキスト ボックス] の横に、**プロダクト ID**ラベル。  
+6.  デザイナーをクリックして、テキスト ボックス の横に、**プロダクト ID**ラベル。  
   
 7.  **プロパティ**ウィンドウで、横にあるチェック ボックスを選択、 **IsReadOnly**プロパティです。  
   
 ## <a name="navigating-product-records"></a>製品レコード間の移動  
- 使用して製品レコード間をスクロールできるようにするコードを追加、 ** \< **と** > **ボタン。  
+ 使用して製品レコード間をスクロールできるようにするコードを追加、  **\<** と **>** ボタン。  
   
 #### <a name="to-enable-users-to-navigate-product-records"></a>ユーザーが製品レコード間を移動できるようにするには  
   
-1.  デザイナーをダブルクリックして、 ** < **ウィンドウ サーフェイスのボタンをクリックします。  
+1.  デザイナーをダブルクリックして、  **<** ウィンドウ サーフェイスのボタンをクリックします。  
   
      Visual Studio は、分離コード ファイルを開くし、新たに作成`backButton_Click`のイベント ハンドラー、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
   
@@ -202,7 +200,7 @@ ms.lasthandoff: 11/09/2017
      [!code-csharp[Data_WPFDATASET#2](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_2.cs)]
      [!code-vb[Data_WPFDATASET#2](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_2.vb)]  
   
-4.  ダブルクリックして、デザイナーに戻り、 ** > **ボタンをクリックします。  
+4.  ダブルクリックして、デザイナーに戻り、  **>** ボタンをクリックします。  
   
 5.  `nextButton_Click` イベント ハンドラーに次のコードを追加します。  
   
@@ -237,7 +235,7 @@ ms.lasthandoff: 11/09/2017
   
     -   テキスト ボックスに、写真付きの製品の先頭のレコードのデータが表示されること。 この製品は、製品 ID は 713 でと、名前を持つ**Long-sleeve Logo Jersey, S**です。  
   
-    -   クリックすることができます、 ** > **または** < **他の製品レコード間を移動するボタンです。  
+    -   クリックすることができます、  **>** または **<** 他の製品レコード間を移動するボタンです。  
   
 2.  製品レコードの 1 つは、変更、**サイズ**値に設定して、をクリックして**変更を保存**です。  
   
@@ -257,5 +255,4 @@ ms.lasthandoff: 11/09/2017
 ## <a name="see-also"></a>関連項目
 [Visual Studio でのデータに WPF コントロールをバインドします。](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)   
 [Visual Studio のデータセット ツール](../data-tools/dataset-tools-in-visual-studio.md)   
-[WPF および Silverlight デザイナーの概要](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62)   
 [データ バインディングの概要](/dotnet/framework/wpf/data/data-binding-overview)

@@ -18,11 +18,11 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5619de2512e18cbe9d7dbfb3d992886ae23a25bf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 977f721ed45343e247f8639accc0fa5dc83263c6
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117: APTCA 型は APTCA 基本型のみを拡張することができます
 |||  
@@ -36,7 +36,7 @@ ms.lasthandoff: 10/31/2017
  パブリックまたはプロテクト型を持つアセンブリ、<xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName>属性は、属性を持たないアセンブリで宣言された型から継承します。  
   
 ## <a name="rule-description"></a>規則の説明  
- 既定では、厳密な名前付きアセンブリでパブリックまたはプロテクトの型は暗黙的にによって保護、[継承確認要求](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9)完全な信頼。 マークされたアセンブリの厳密な名前、 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) 属性には、この保護はありません。 属性には、継承確認要求が無効にします。 これにより、完全な信頼がない型による継承可能なアセンブリで宣言された型の公開されています。  
+ 既定では、厳密な名前付きアセンブリでパブリックまたはプロテクトの型は暗黙的にによって保護、<xref:System.Security.Permissions.SecurityAction.InheritanceDemand>完全な信頼。 マークされたアセンブリの厳密な名前、 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) 属性には、この保護はありません。 属性には、継承確認要求が無効にします。 これにより、完全な信頼がない型による継承可能なアセンブリで宣言された型の公開されています。  
   
  APTCA 属性が完全に信頼されたアセンブリでは、上に存在し、アセンブリの型が部分的に信頼された呼び出し元が許可されていない型から継承、セキュリティ上の弱点が可能性があります。 2 つの型する場合`T1`と`T2`、次の条件を満たしている、悪意のある呼び出し元は、型を使用できる`T1`を保護する暗黙的な完全信頼の継承確認要求を省略する`T2`:  
   
@@ -85,6 +85,4 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="see-also"></a>関連項目  
  [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)   
- [.NET framework アセンブリ呼び出し可能な部分的に信頼されたコードで](http://msdn.microsoft.com/en-us/a417fcd4-d3ca-4884-a308-3a1a080eac8d)   
- [部分信頼コードからのライブラリの使用](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)   
- [継承確認要求](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9)
+ [部分信頼コードからライブラリを使用します。](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)   

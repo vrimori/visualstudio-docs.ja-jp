@@ -18,11 +18,11 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 92c6a91cffc3ce388a3dfb9000b9f432672018f4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 5c1b61e8895258a4f27d3803bf7fb5e4e2a0fba3
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="ca2116-aptca-methods-should-only-call-aptca-methods"></a>CA2116: APTCA メソッドは APTCA メソッドのみを呼び出すことができます
 |||  
@@ -49,7 +49,7 @@ ms.lasthandoff: 10/31/2017
  部分的に信頼された呼び出し元`X`メソッドを呼び出すことができます`M1`、`M1`を呼び出す`M2`です。 `M2` APTCA 属性、その直接の呼び出し元がありません (`M1`) は完全な信頼のリンク要求を満たす必要があります`M1`完全な信頼があり、したがってこのチェックに適合します。 セキュリティ上のリスクがあるため`X`を保護する、リンク確認要求を満たすには参加しません`M2`呼び出し元が信頼されていないからです。 そのため、APTCA 属性を持つメソッド属性を持たないメソッドを呼び出していません。  
   
 ## <a name="how-to-fix-violations"></a>違反の修正方法  
- APCTA 属性が必要な場合は、完全信頼のアセンブリを呼び出すメソッドを保護する要求を使用します。 ユーザーが要求は、メソッドによって公開される機能に依存の正確なアクセス許可。 可能であれば場合、は、基になる機能が部分的に信頼された呼び出し元に公開されないようにする完全な信頼の要求を持つメソッドを保護します。 これが可能でない場合は、公開されている機能を効果的に保護するアクセス許可のセットを選択します。 要求の詳細については、次を参照してください。[要求](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48)です。  
+ APCTA 属性が必要な場合は、完全信頼のアセンブリを呼び出すメソッドを保護する要求を使用します。 ユーザーが要求は、メソッドによって公開される機能に依存の正確なアクセス許可。 可能であれば場合、は、基になる機能が部分的に信頼された呼び出し元に公開されないようにする完全な信頼の要求を持つメソッドを保護します。 これが可能でない場合は、公開されている機能を効果的に保護するアクセス許可のセットを選択します。  
   
 ## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
  この規則による警告を安全に抑制するには、メソッドによって公開される機能は直接または間接的にできないことに機密情報、操作、または破壊的な方法で使用できるリソースにアクセスする呼び出し元を確認する必要があります。  
@@ -78,8 +78,6 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="see-also"></a>関連項目  
  [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)   
- [.NET framework アセンブリ呼び出し可能な部分的に信頼されたコードで](http://msdn.microsoft.com/en-us/a417fcd4-d3ca-4884-a308-3a1a080eac8d)   
  [部分信頼コードからのライブラリの使用](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)   
- [確認要求](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48)   
  [リンク確認要求](/dotnet/framework/misc/link-demands)   
  [データとモデリング](/dotnet/framework/data/index)

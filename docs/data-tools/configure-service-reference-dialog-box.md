@@ -17,11 +17,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 26e74c43e79012adc6b241390cd463a35c9f58c1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 0826d241cc1f3741a35e635bc27dff1d69ad86af
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="configure-service-reference-dialog-box"></a>[サービス参照の構成] ダイアログ ボックス
 **サービス参照の構成**ダイアログ ボックスでは、動作を構成できます。 [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] services です。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 10/31/2017
  WCF サービス メソッドの呼び出しが同期 (既定) または非同期のどちらであるかを指定します。  
   
  **タスク ベースの操作を生成します。**  
- 非同期コードを作成する場合、このオプションにより、.Net 4 で導入されたタスク並列ライブラリ (TPL) を利用できます。 参照してください[タスク並列ライブラリ (TPL)](http://msdn.microsoft.com/library/dd460717.aspx)です。  
+ 非同期コードを作成する場合、このオプションにより、.Net 4 で導入されたタスク並列ライブラリ (TPL) を利用できます。 参照してください[タスク並列ライブラリ (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)です。  
   
  **常にメッセージ コントラクトを生成します。**  
  WCF クライアント向けにメッセージ コントラクト型が生成されるかどうかを指定します。 メッセージ コントラクトの詳細については、次を参照してください。[メッセージ コントラクトを使用して](/dotnet/framework/wcf/feature-details/using-message-contracts)です。  
@@ -97,4 +97,4 @@ ms.lasthandoff: 10/31/2017
 ## <a name="see-also"></a>関連項目  
 
  [方法: Web サービスへの参照を追加](how-to-add-update-or-remove-a-wcf-data-service-reference.md)   
- [Windows Communication Foundation サービスと WCF データ サービス](../data-tools/configure-service-reference-dialog-box.md)
+ [Windows Communication Foundation サービスと WCF Data Services](../data-tools/configure-service-reference-dialog-box.md)

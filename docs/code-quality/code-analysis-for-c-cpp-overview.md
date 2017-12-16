@@ -25,11 +25,11 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 55b1f4061d408187525c255e4ab12c3fe93eb60e
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.openlocfilehash: f1634250d97e83b21cccd3ada90933fc0806d35f
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="code-analysis-for-cc-overview"></a>C/C++ のコード分析の概要
 C/C++ コード分析ツールは、C/C++ ソース コードの障害に関する情報を開発者に提供します。 このツールによってレポートされる一般的なコーディング エラーとしては、バッファー オーバーラン、初期化されていないメモリ、null ポインターの逆参照、メモリ リーク、リソース リークなどがあります。  
@@ -38,7 +38,7 @@ C/C++ コード分析ツールは、C/C++ ソース コードの障害に関す�
  開発者分析ツールを使用する自然するために、完全に統合されて内で、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE です。 ビルド プロセス中にエラー一覧 に、ソース コードの生成された警告が表示されます。 警告の原因となったソース コードに移動することができ、原因と問題の考えられる解決策に関する追加情報を表示することができます。  
   
 ## <a name="pragma-support"></a>#pragma サポート  
- 開発者が使用できる、`#pragma`警告をエラーとして扱う; を有効にするかを無効にする警告、個別のコード行に警告を抑制するディレクティブ。 詳細については、次を参照してください。[する方法: 有効にすると特定の警告を c/c++ のコード分析を無効にする](http://msdn.microsoft.com/en-us/910b8518-71f1-4b2e-b012-70647795642a)です。  
+ 開発者が使用できる、`#pragma`警告をエラーとして扱う; を有効にするかを無効にする警告、個別のコード行に警告を抑制するディレクティブ。 詳細については、次を参照してください。[する方法: c/c++ プロジェクトのコード分析プロパティを設定](how-to-set-code-analysis-properties-for-c-cpp-projects.md)です。  
   
 ## <a name="annotation-support"></a>注釈のサポート  
  注釈には、コード分析の精度が向上します。 注釈は、関数パラメーターの前と後の状態に関する追加情報を提供し、型を返します。 詳細については、次を参照してください[する方法: _analysis_assume を使用して、追加のコード情報の指定。](../code-quality/how-to-specify-additional-code-information-by-using-analysis-assume.md)  

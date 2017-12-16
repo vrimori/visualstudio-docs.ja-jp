@@ -18,11 +18,11 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d9784ae650a411ef4fe5086ae8bf756147fd2365
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: ac633134b5b8037eb9e45131128b0ee0cf2887ab
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="ca2114-method-security-should-be-a-superset-of-type"></a>CA2114: メソッドのセキュリティは型のスーパーセットにします
 |||  
@@ -33,7 +33,7 @@ ms.lasthandoff: 10/31/2017
 |互換性に影響する変更点|あり|  
   
 ## <a name="cause"></a>原因  
- 型は、宣言セキュリティおよびそのメソッドのいずれかが、同じセキュリティ操作の宣言セキュリティおよびセキュリティ アクションは[リンク確認要求](/dotnet/framework/misc/link-demands)または[継承確認要求](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9)、およびアクセス許可チェックの種類によっては、メソッドによってチェックする権限のサブセットではありません。  
+ 型は、宣言セキュリティおよびそのメソッドのいずれかが、同じセキュリティ操作の宣言セキュリティおよびセキュリティ アクションは[リンク確認要求](/dotnet/framework/misc/link-demands)の型によってチェックする権限は、アクセス許可のサブセットではありませんメソッドによってチェックされます。  
   
 ## <a name="rule-description"></a>規則の説明  
  メソッドには、同じアクションに対してメソッド レベルと型レベルの宣言セキュリティの両方を持つべきはありません。 2 つのチェックは結合はされません。メソッド レベルの要求のみが適用されます。 型のアクセス許可を要求する場合など、 `X`、アクセス許可を要求のメソッドのいずれかと`Y`、コードにアクセス許可がない`X`メソッドを実行します。  
@@ -63,6 +63,5 @@ ms.lasthandoff: 10/31/2017
 **[読み取りアクセス許可がありません (メソッドで必要)]個人情報にアクセスできませんでした。 要求が失敗しました。**   
 ## <a name="see-also"></a>関連項目  
  [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)   
- [継承確認要求](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9)   
  [リンク確認要求](/dotnet/framework/misc/link-demands)   
  [データとモデリング](/dotnet/framework/data/index)

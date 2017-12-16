@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio のリファクタリング機能 (c#) |Microsoft ドキュメント"
+title: "C# Visual Studio の機能をリファクタリング |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/27/2017
 ms.reviewer: 
@@ -16,15 +16,17 @@ helpviewer_keywords: refactoring [C#]
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a03a5a8d7b8456f6c03646304dce0a85703bf1cc
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.openlocfilehash: a26fed472f0f1765f7a6ae447127ffce75061c1f
+ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/14/2017
 ---
-# <a name="refactoring-features-for-c"></a>C# のリファクタリング機能 #
+# <a name="refactoring-features-in-c"></a>C# でのリファクタリング機能 #
 
-リファクタリングとは、書き込まれた後に、コードを向上させるプロセスです。 リファクタリングの動作を変更することがなく、コードの内部構造を変更します。 次のリファクタリング機能は、c#、Visual Studio で使用。
+リファクタリングとは、その動作を変更することがなくコードの内部構造を変更するプロセスです。 リファクタリングは、読み取り可能、保守、および信頼性の高いコードを容易によく使用します。
+
+次のリファクタリング機能は、c#、Visual Studio で使用。
 
 * [メソッド シグネチャの変更](refactoring/change-method-signature.md)
 * [Get メソッドのプロパティへの変換とプロパティの Get メソッドへの変換](refactoring/convert-get-method-to-property.md)
@@ -38,6 +40,8 @@ ms.lasthandoff: 11/29/2017
 * [名前の変更](refactoring/rename.md)
 * [同期の種類とファイル名](refactoring/sync-type-and-file.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Visual C# 開発環境の使用](using-the-visual-studio-development-environment-for-csharp.md)  
+[コード生成や Visual Studio でのクイック アクション、リファクタリング、](../ide/refactoring-code-generation-quick-actions.md)  
+[Visual Basic でのリファクタリング](../vb-ide/refactoring-vb.md)  
+[Visual C# 開発環境の使用](using-the-visual-studio-development-environment-for-csharp.md)

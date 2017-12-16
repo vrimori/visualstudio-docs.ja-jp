@@ -16,11 +16,11 @@ caps.latest.revision: "54"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0bd87c01367ea7f120413ad4aae2ae61b0332f6b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 886185c61f407906ff059b84b5f1f8b18e3ace98
+ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="walkthrough-creating-a-basic-isolated-shell-application"></a>チュートリアル: 基本的な分離シェル アプリケーションの作成
 このチュートリアルでは、分離シェルのソリューションの作成、バージョン情報 ツール ウィンドウをカスタマイズおよび分離シェルをインストールするセットアップ プログラムを作成する方法を示します。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  ソリューションをビルドし、デバッグを開始します。  
   
-4.  **ビュー/その他のウィンドウ**をクリックして**Web ブラウザー**です。 **Web ブラウザー**ウィンドウには、米国 Microsoft Corporation のホーム ページが表示されます。  
+4.  **ビュー > その他のウィンドウ**をクリックして**Web ブラウザー**です。 **Web ブラウザー**ウィンドウには、米国 Microsoft Corporation のホーム ページが表示されます。  
   
 ## <a name="removing-the-print-command"></a>印刷コマンドを削除します。  
  分離シェル UI プロジェクトで .vsct ファイル形式の宣言のセットから成る`<Define name=No_`*要素*`>`ここで、*要素*は標準の Visual Studio メニューとコマンドのいずれか。  
@@ -100,7 +100,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  これには、印刷コマンドを削除します。  
   
-5.  分離シェル アプリケーションのデバッグを開始します。 いることを確認、**ファイル]/[印刷**コマンドが消えます。  
+5.  分離シェル アプリケーションのデバッグを開始します。 いることを確認、**ファイル > 印刷**コマンドが消えます。  
   
 ## <a name="removing-features-from-the-isolated-shell"></a>分離シェルから機能の削除  
  一部のカスタム分離シェル アプリケーションでこれらの機能を設定したくない場合、.pkgundef ファイルを編集することによって Visual Studio に読み込まれているパッケージを削除することができます。 $RootKey$ \Packages レジストリ キーのサブキーのいずれかでは、パッケージを指定します。  
@@ -146,7 +146,7 @@ ms.lasthandoff: 10/31/2017
     [assembly: AssemblyDescription("The description of Fabrikam Music editor.")]  
     ```  
   
-4.  デバッグを開始して、分離シェル アプリケーションで開いて、**ヘルプ/約**ボックス。 変更された文字列が表示されます。 ヘルプ/バージョン情報ボックスのタイトルと同じ、 `AssemblyTitle` AssemblyInfo.cs 内の値。  
+4.  デバッグを開始して、分離シェル アプリケーションで開いて、**ヘルプ > に関する**ボックス。 変更された文字列が表示されます。 ヘルプ/バージョン情報ボックスのタイトルと同じ、 `AssemblyTitle` AssemblyInfo.cs 内の値。  
   
 5.  プロパティ、**ヘルプ/に関する**ボックス自体が MyVSShellStub.AboutBoxPackage\AboutBox.xaml ファイルに見つかりました。 ヘルプ/バージョン情報ボックスの幅を変更するには、`AboutDialogStyle`をブロックし、設定、`Width`を 200 プロパティ。  
   

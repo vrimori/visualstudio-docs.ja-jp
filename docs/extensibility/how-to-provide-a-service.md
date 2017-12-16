@@ -13,11 +13,11 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d0adc9f69f1b0e873d2e1f38c9317070dc0d6a08
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 3c37f4dc215027752da9c16fbdfba44b4e10c41c
+ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="how-to-provide-a-service"></a>方法: サービスを提供
 VSPackage では、その他の Vspackage を使用するサービスを提供できます。 サービスを提供するには、VSPackage は Visual Studio で、サービスの登録し、サービスの追加する必要があります。  
@@ -31,9 +31,9 @@ VSPackage では、その他の Vspackage を使用するサービスを提供�
   
 #### <a name="implementing-a-service"></a>サービスを実装します。  
   
-1.  VSIX プロジェクトを作成 (**ファイル/新しい/プロジェクト/Visual c#/Extensiblity/VSIX プロジェクト**)。  
+1.  VSIX プロジェクトを作成 (**ファイル > 新規 > プロジェクト > Visual c# > Extensiblity > VSIX プロジェクト**)。  
   
-2.  VSPackage をプロジェクトに追加します。 プロジェクト ノードを選択、**ソリューション エクスプ ローラー** ] をクリック**追加/[新しい項目/Visual c# アイテム/機能拡張/Visual Studio パッケージ**です。  
+2.  VSPackage をプロジェクトに追加します。 プロジェクト ノードを選択、**ソリューション エクスプ ローラー**  をクリック**追加 > 新しい項目の追加 > Visual c# アイテム > Extensibility > Visual Studio パッケージ**です。  
   
 3.  サービスを実装するのには、次の 3 種類の作成が必要です。  
   
@@ -109,7 +109,7 @@ VSPackage では、その他の Vspackage を使用するサービスを提供�
   
 2.  作成して、サービスが返さか作成できない場合は null にする必要がある、コールバック メソッドを実装します。  
   
-    ```  
+    ```csharp  
     private object CreateService(IServiceContainer container, Type serviceType)  
     {  
         if (typeof(SMyService) == serviceType)  
