@@ -10,11 +10,11 @@ ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7adb1ec7badaefceb8430d0fcacd8e54e7404ea7
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.openlocfilehash: a08bcc91159182043b68391bc869243909d6df8b
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="quickstart-personalize-the-visual-studio-ide-and-editor"></a>クイックスタート: Visual Studio IDE とエディターのカスタマイズ
 
@@ -79,11 +79,13 @@ Visual Studio 2017 の既定の配色テーマは **[青]** です。 このテ�
 
 1. **[環境]** で **[フォントおよび色]** カテゴリを選択します。
 
-   **[設定を表示:]** の下のテキストが、これから設定を行う **[テキスト エディター]** であることに注意してください。 このドロップダウン リストを展開すると、フォントおよびテキストの色のカスタマイズが可能な場所の一覧を確認できます。
+   **[設定の表示]** の下のテキストは **[テキスト エディター]** になっています&mdash;これは、これから設定を行うテキスト エディターです。 このドロップダウン リストを展開すると、フォントおよびテキストの色のカスタマイズが可能な場所の一覧を確認できます。
 
 1. 行番号のテキストの色を変更するため、**[表示項目]** リストで **[行番号]** を選択します。 **[前景色]** ボックスで **[オリーブ]** を選択します。
 
    ![[オプション] ダイアログ ボックスの [フォントおよび色] カテゴリ](media/quickstart-personalize-line-number-color.png)
+
+   一部の言語には、それぞれに特有のフォントと色の設定があります。 たとえば、C++ の開発者が関数に使用する色を変更したい場合、**[表示項目]** リストで **[C++ 関数]** を探します。
 
 1. ダイアログ ボックスを閉じる前に、XML 属性の色も変更しましょう。 **[表示項目:]** リストで **[XML 属性]** までスクロールし、選択します。 **[前景色]** ボックスで、**[ライム]** を選択します。 **[OK]** を選択して選択内容を保存し、ダイアログ ボックスを閉じます。
 
@@ -96,6 +98,8 @@ Visual Studio の色をカスタマイズするいくつかの方法について
 ## <a name="see-also"></a>関連項目
 
 [クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)  
+[クイックスタート: エディター内のコーディング](../ide/quickstart-editor.md)  
+[クイック スタート: プロジェクトとソリューション](../ide/quickstart-projects-solutions.md)  
 [Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)  
 [エディターのカスタマイズ](../ide/customizing-the-editor.md)  
 [Visual Studio IDE の概要](../ide/visual-studio-ide.md)

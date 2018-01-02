@@ -12,11 +12,11 @@ caps.latest.revision: "5"
 author: conceptdev
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: ede4bd9594e3bb19f081d8a7343f5a0c08003cad
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.openlocfilehash: 338f80724598a3c89dcde3806511427b81bffca4
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>トラブルシューティングと既知の問題 (Visual Studio Tools for Unity)
 このセクションには、Visual Studio Tools for Unity における一般的な問題の解決法、既知の問題についての説明、およびエラー報告によって Visual Studio Tools for Unity を改善する方法について記されています。  
@@ -63,6 +63,7 @@ Visual Studio が特定のブレークポイントのソースの場所を見つ
 -   ウイルス対策ソフトウェアを一時的に無効にするか、VS と Unity 両方に対する除外規則を作成してみてください。
 -   ファイアウォールを一時的に無効にするか、VS と Unity の間の TCP/UDP ネットワークを許可する規則を作成してみてください。
 -   Team Viewer などのプログラムがプロセスの検出を妨げることがわかっています。余分なソフトウェアを一時的に停止して、何か変わるかを確認してみてください。
+-   VSTU は "Unity.exe" プロセスを監視するだけなので、メインの Unity 実行可能ファイルの名前を変更しないでください。
 
 ### <a name="unable-to-debug-android-players"></a>Android プレーヤーをデバッグできない
 プレーヤーの検出にはマルチキャストが使われていますが (Unity で使われる既定のメカニズム)、その後で通常の TCP 接続を使ってデバッガーをアタッチします。 検出フェーズが Android デバイスの主な問題です。

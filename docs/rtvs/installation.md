@@ -8,16 +8,15 @@ ms.technology: devlang-r
 ms.tgt_pltfrm: 
 ms.devlang: r
 ms.topic: article
-ms.assetid: 3ff60292-1b88-4ee9-b2b2-edd957f1a519
 caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 7a509743ce09f2bbfb69b62060abedb48e9777b6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 2abb64170fdaa7ce91308f1be2c683325bc1abdd
+ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="how-to-install-r-tools-for-visual-studio"></a>R Tools for Visual Studio のインストール方法
 
@@ -33,20 +32,21 @@ ms.lasthandoff: 10/31/2017
 
 ## <a name="supported-versions-of-visual-studio"></a>サポートされている Visual Studio のバージョン
 
-R Tools for Visual Studio (RTVS) は、[Visual Studio 2017](https://www.visualstudio.com/downloads/) および [Visual Studio 2015 Update 3 (以降)](http://go.microsoft.com/fwlink/?LinkId=691129) 両方の Community、Professional、および Enterprise の各エディションでサポートされています (直接ダウンロード)。 
+Windows では R Tools for Visual Studio (RTVS) は、[Visual Studio 2017](https://www.visualstudio.com/downloads/) および [Visual Studio 2015 Update 3 (以降)](http://go.microsoft.com/fwlink/?LinkId=691129) (直接ダウンロード) の両方の Community (無料)、Professional、Enterprise の各エディションでサポートされています。
+
+現在、Visual Studio for Mac では RTVS はサポートされていません。
 
 Visual Studio Test Professional や SQL Server Management Studio などの製品に含まれている Visual Studio Shell しかない場合、RTVS はインストールされません。 Visual Studio Shell には RTVS に必要なコンポーネントがありません。
-
 
 ## <a name="installing-rtvs-in-visual-studio-2017"></a>Visual Studio 2017 での RTVS のインストール
 
 1. Visual Studio インストーラーを実行します。 (Visual Studio がまだインストールされていない場合は、「[ダウンロード](https://www.visualstudio.com/downloads/)」を参照してください)。Windows 7 の場合、Visual Studio バージョン *15.2 ビルド 26430.12* 以降を表示するには、インストーラーを更新する必要があります。
 
-2. **[データ サイエンスと分析のアプリケーション]** ワークロードを選択します。
+1. **[データ サイエンスと分析のアプリケーション]** ワークロードを選択します。
 
     ![VS2017 の [データ サイエンスと分析のアプリケーション] ワークロード](media/installation-data-science-workload.png)
 
-3. 同じワークロード名で、右側にその他のオプションを設定します。 既定では、このワークロードには F# と Python のサポートが含まれていることに注意してください。 R の場合、少なくとも **[R 言語サポート]**、**[R 開発ツールのランタイム サポート]**、および **[Microsoft R クライアント]** を選択する必要があります。
+1. 同じワークロード名で、右側にその他のオプションを設定します。 既定では、このワークロードには F# と Python のサポートが含まれていることに注意してください。 R の場合、少なくとも **[R 言語サポート]**、**[R 開発ツールのランタイム サポート]**、および **[Microsoft R クライアント]** を選択する必要があります。
 
 RTVS は次の場所にインストールされます。 `%ProgramFiles(x86)%\Microsoft Visual Studio\<version>\<edition>Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio` ここで、`<version>` は、通常 `2017` で、`<edition>` は `Community`、`Professional`、または `Enterprise` です。
 
@@ -58,9 +58,9 @@ Visual Studio 2015 では、R インタープリターと R Tools を個別に�
 
 RTVS には、次の 1 つ以上のソースから R 3.2.1 以降のバージョンの 64 ビット版のインストールが必要です。
 
-* [Microsoft R Open](https://mran.microsoft.com/download/)
-* [Microsoft R Client](https://msdn.microsoft.com/microsoft-r/r-client-get-started)
-* [CRAN R](https://cran.r-project.org/bin/windows/base/)
+- [Microsoft R Open](https://mran.microsoft.com/download/)
+- [Microsoft R Client](/machine-learning-server/r-client/what-is-microsoft-r-client)
+- [CRAN R](https://cran.r-project.org/bin/windows/base/)
 
 Microsoft R Open と CRAN R はどちらも複数の side-by-side バージョンを許可しています。 ただし、Microsoft R Client は、1 つのバージョンのみをサポートし、インストールされている最新バージョンを常に使用します。
 
@@ -92,3 +92,4 @@ RTVS for Visual Studio 2015 は、`%ProgramFiles(x86)%\Microsoft Visual Studio 1
 - [R Tools のサンプル プロジェクト](getting-started-samples.md)
 - [ヘルプ情報の入手](getting-started-help.md)
 - [オプションの設定](options.md)
+- [Microsoft Machine Learning Server (旧称 R Server)](/machine-learning-server/)

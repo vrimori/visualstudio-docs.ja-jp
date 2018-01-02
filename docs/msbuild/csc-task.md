@@ -21,11 +21,11 @@ caps.latest.revision: "26"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 0e36e4c9e01d7ee8f12a59f2fd72ee4ef6b83e9a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: d91a1a5fca1530f42e9781a09b2e9364daf8e15f
+ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="csc-task"></a>Csc タスク
 CSC.exe をラップし、実行可能ファイル (.exe ファイル)、ダイナミック リンク ライブラリ (.dll ファイル)、またはコード モジュール (.netmodule ファイル) を生成します。 CSC.exe の詳細については、「[C# コンパイラ オプション](/dotnet/csharp/language-reference/compiler-options/index)」を参照してください。  
@@ -63,6 +63,7 @@ CSC.exe をラップし、実行可能ファイル (.exe ファイル)、ダイ�
 |`NoWin32Manifest`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、既定の Win32 マニフェストを含めないでください。|  
 |`Optimize`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、最適化が有効になります。 `false` の場合、最適化が無効になります。 詳しくは、「[/optimize (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/optimize-compiler-option)」をご覧ください。|  
 |`OutputAssembly`|省略可能な `String` 型の出力パラメーターです。<br /><br /> 出力ファイルの名前を指定します。 詳しくは、「[/out (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/out-compiler-option)」をご覧ください。|  
+|`OutputRefAssembly`|省略可能な `String` 型のパラメーターです。<br /><br /> 出力参照アセンブリ ファイルの名前を指定します。 詳細については、「[/refout (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/refout-compiler-option)」を参照してください。|  
 |`PdbFile`|省略可能な `String` 型のパラメーターです。<br /><br /> デバッグ情報ファイルの名前を指定します。 既定の名前は、出力ファイルの名前に .pdb 拡張子が付いたものになります。|  
 |`Platform`|省略可能な `String` 型のパラメーターです。<br /><br /> 出力ファイルのターゲットとするプロセッサ プラットフォームを指定します。 このパラメーターの値には、`x86`、`x64`、または `anycpu` を指定できます。 既定値は `anycpu` です。 詳しくは、「[/platform (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option)」をご覧ください。|  
 |`References`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 指定したアイテムから現在のプロジェクトにパブリック型の情報をインポートするようにタスクに指示します。 詳しくは、「[/reference (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/reference-compiler-option)」をご覧ください。<br /><br /> メタデータ `Aliases` を元の "参照" アイテムに追加することで、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ファイルに [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 参照エイリアスを指定できます。 たとえば、次の "LS1" コマンド ラインにエイリアス を設定する場合:<br /><br /> `csc /r:LS1=MyCodeLibrary.dll /r:LS2=MyCodeLibrary2.dll *.cs`<br /><br /> 次を使用します。<br /><br /> `<Reference Include="MyCodeLibrary"> <Aliases>LS1</Aliases> </Reference>`|  

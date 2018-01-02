@@ -1,156 +1,157 @@
 ---
 title: "Visual Studio 内の C++ の概要 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: mvc
+ms.date: 12/04/2017
 ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 99c73344-86ba-4b08-9e15-f6111cc04185
-caps.latest.revision: "18"
-author: TerryGLee
+author: corob-msft
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 48f2bb4e61ca6a4f9a9464a6b67a3218b418c8ab
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: c86e7bcfe43eeaa6554efeed6654f34e140d9ea7
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/07/2017
 ---
-# <a name="getting-started-with-c-in-visual-studio"></a>Visual Studio 内の C++ の概要
-このチュートリアルを完了すると、Visual Studio を使用してアプリケーションを開発する際に使用できるさまざまなツールおよびダイアログ ボックスの使用方法を習得できます。 簡単な "Hello, World" スタイルのアプリケーションを作成しながら、統合開発環境 (IDE) での作業方法について学習します。  
-  
- このトピックは、次のセクションで構成されています。  
-  
- [Visual Studio へのサインイン](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_Configure)  
-  
- [簡単なアプリケーションの作成](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_CreateApp)  
-  
- [アプリケーションへのコードの追加](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_AddCode)  
-  
- [アプリケーションのデバッグとテスト](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_DebugTest)  
-  
- [アプリのリリース バージョンのビルド](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_BuildRelease)  
-  
-##  <a name="BKMK_Configure"></a> Visual Studio へのサインイン  
- Visual Studio を初めて起動する際には、Live や Outlook などの Microsoft アカウントを使ってサインインする機会があります。 サインインすると、設定をすべてのデバイス間で同期できます。 詳細については、「 [Signing in to Visual Studio](../ide/signing-in-to-visual-studio.md)」を参照してください。  
-  
- 図 1: Visual Studio IDE  
-  
- ![Visual C++ 設定が適用された IDE](../ide/media/c--ide_defaultenvironmentlayout.png "C++IDE_DefaultEnvironmentLayout")  
-  
- Visual Studio を開くと、IDE の 3 つの基本的なパーツを確認できます。ツール ウィンドウ、メニューとツール バー、およびメイン ウィンドウ領域です。 ツール ウィンドウは、アプリ ウィンドウの左側および右側にドッキングされており、上部には **[クイック起動]**、メニュー バー、および標準ツール バーがあります。 アプリケーション ウィンドウの中央には、 **[スタート ページ]**が表示されます。 ソリューションまたはプロジェクトを開くと、この領域にはエディターとデザイナーが表示されます。 アプリケーションを開発する場合は、ほとんどの時間をこの中央の領域での作業に費やします。  
-  
-##  <a name="BKMK_CreateApp"></a> 簡単なアプリケーションの作成  
- Visual Studio でアプリを作成するには、最初にプロジェクトおよびソリューションを作成します。 この例では、Windows コンソール アプリケーションを作成します。  
-  
-#### <a name="to-create-a-console-app"></a>コンソール アプリを作成するには  
-  
-1.  メニュー バーで **[ファイル]**、 **[新規]**、 **[プロジェクト]**の順にクリックします。  
-  
-     ![メニュー バーで、[ファイル]、[新規作成]、[プロジェクト] の順に選択します。](../ide/media/exploreide-filenewproject.png "ExploreIDE-FileNewProject")  
-  
-2.  **[Visual C++]** カテゴリで、**[Win32 コンソール アプリケーション]** テンプレートを選択し、プロジェクトに `GreetingsConsoleApp` という名前を付けます。  
-  
-     ![Win32 コンソール アプリケーション テンプレート](../ide/media/c--ide_newprojectdlg.png "C++IDE_NewProjectDlg")  
-     ダイアログ ボックスの選択肢は、インストールした内容によって異なる場合があります。 Visual C++ プロジェクト テンプレートが表示されない場合、インストーラーに戻り、C++ ワークロードをインストールする必要があります。
-  
-3.  Win32 アプリケーション ウィザードが表示されたら、 **[完了]** を選択します。  
-  
-     ![Win32 コンソール アプリケーション ウィザード](../ide/media/c--ide_win32consoleappwizard.png "C++IDE_Win32ConsoleAppWizard")  
-  
- Win32 コンソール アプリの基本的なファイルを含む GreetingsConsoleApp プロジェクトとソリューションが作成され、 **ソリューション エクスプローラー**に自動的に読み込まれます。 GreetingsConsoleApp.cpp ファイルがコード エディターで開きます。 次の項目が **ソリューション エクスプローラー**に表示されます。  
-  
- 図 4: プロジェクト項目  
-  
- ![ソリューション エクスプローラーでのソリューションのファイル](../ide/media/c--ide_solutioncontents.png "C++IDE_SolutionContents")  
-  
-##  <a name="BKMK_AddCode"></a> アプリケーションへのコードの追加  
- 次に、コンソール ウィンドウに "Hello" と表示するコードを追加します。  
-  
-#### <a name="to-display-hello-in-the-console-window"></a>コンソール ウィンドウに "Hello" と表示するには  
-  
-1.  GreetingsConsoleApp.cpp ファイルの `return 0;` という行の前に空白行を挿入し、次のコードを入力します。  
-  
-    ```  
-    cout << "Hello\n";  
-    ```  
-  
-     `cout`の下に赤い波線が表示されます。 その波線をポイントすると、エラー メッセージが表示されます。  
-  
-     ![cout のエラー テキスト](../ide/media/c--ide_couterror.png "C++IDE_CoutError")  
-  
-     エラー メッセージは、 **[エラー一覧]** ウィンドウにも表示されます。 そのウィンドウを表示するには、メニュー バーで **[表示]**、**[エラー一覧]** の順に選択します。  
-  
-     [cout](/cpp/standard-library/iostream) は \<iostream> ヘッダー ファイルに含まれます。  
-  
-2.  iostream ヘッダーを組み込むには、 `#include "stdafx.h"`の次に、以下のコードを入力します。  
-  
-    ```  
-    #include <iostream>  
-    using namespace std;  
-    ```  
-  
-     コードを入力したときにボックスが表示され、入力した文字に対応する候補が提示されたはずです。 このボックスは、C++ の IntelliSense の一部で、コーディングの一連のヒントを提供します。それには、クラスやインターフェイスのメンバーの一覧と、パラメーター情報が含まれます。 定義済みのコード ブロックであるコード スニペットを使用することもできます。 詳細については、 [Using IntelliSense](../ide/using-intellisense.md) および [Code Snippets](../ide/code-snippets.md)を参照してください。  
-  
-     エラーを修正すると、 `cout` の下の赤い波線が消えます。  
-  
-3.  変更内容をファイルに保存します。  
-  
-     ![cout のエラーを修復するコード](../ide/media/c--ide_coutfix.png "C++IDE_CoutFix")  
-  
-##  <a name="BKMK_DebugTest"></a> アプリケーションのデバッグとテスト  
- GreetingsConsoleApp をデバッグして、コンソール ウィンドウに "Hello" という語が表示されるかどうかを確認できます。  
-  
-#### <a name="to-debug-the-application"></a>アプリケーションをデバッグするには  
-  
--   デバッガーを起動します。  
-  
-     ![[デバッグ] メニューの [デバッグの開始] コマンド](../ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
-  
-     デバッガーが起動し、コードが実行されます。 コンソール ウィンドウ (コマンド プロンプトのように見える別のウィンドウ) が数秒間表示されますが、デバッガーが実行を停止するとすぐに閉じます。 テキストを表示するには、ブレークポイントを設定してプログラムの実行を停止する必要があります。  
-  
-#### <a name="to-add-a-breakpoint"></a>ブレークポイントを追加するには  
-  
-1.  メニュー バーからブレークポイントを `return 0;`の行に追加します。 左側の余白内でクリックするだけでも、ブレークポイントを設定できます。  
-  
-     ![[デバッグ] メニューの [ブレークポイントの設定/解除] コマンド](../ide/media/exploreide-togglebreakpoint.png "ExploreIDE-ToggleBreakpoint")  
-  
-     コード行の横の、エディター ウィンドウの左端の余白部分に、赤い円が表示されます。  
-  
-2.  F5 キーを押してデバッグを開始します。  
-  
-     デバッガーが起動し、コンソール ウィンドウが表示されて **Hello**という語が示されます。  
-  
-     ![Windows のコマンド プロンプト ウィンドウに表示された文字列 "Hello"](../ide/media/c--ide_hellocommandwindow.png "C++IDE_HelloCommandWindow")  
-  
-3.  SHIFT + F5 キーを押してデバッグを停止します。  
-  
- 詳細については、[コンソール プロジェクト](../debugger/debugging-preparation-console-projects.md)に関する記事を参照してください。  
-  
-##  <a name="BKMK_BuildRelease"></a> アプリのリリース バージョンのビルド  
- すべてが機能することを確認したら、アプリケーションのリリース ビルドを準備できます。  
-  
-#### <a name="to-clean-the-solution-files-and-build-a-release-version"></a>ソリューション ファイルをクリーンアップし、リリース バージョンをビルドするには  
-  
-1.  メニュー バーで、前のビルドで作成された中間ファイルと出力ファイルを削除します。  
-  
-     ![[ビルド] メニューの [ソリューションのクリーン] コマンド](../ide/media/exploreide-cleansolution.png "ExploreIDE-CleanSolution")  
-  
-2.  GreetingsConsoleApp のビルド構成を **[デバッグ]** から **[リリース]**に変更します。  
-  
-     ![アプリケーションのリリース バージョンのビルド](../ide/media/c--ide_changingbuildtorelease.png "C++IDE_ChangingBuildtoRelease")  
-  
-3.  ソリューションをビルドします。  
-  
-     ![[ビルド] メニューの [ソリューションのビルド] コマンド](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")  
-  
- このチュートリアルは完了しました。 その他の例については、「[Visual Studio Samples](../ide/visual-studio-samples.md)」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [C++ デスクトップ開発のための Visual Studio IDE の使用](/cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development)   
- [チュートリアル : Visual C# または Visual Basic による簡単なアプリケーションの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)   
- [Visual Studio の生産性に関するヒント](../ide/productivity-tips-for-visual-studio.md)   
- [Visual Studio Samples](../ide/visual-studio-samples.md)   
- [Get Started Developing with Visual Studio](../ide/get-started-developing-with-visual-studio.md)
+# <a name="get-started-with-c-in-visual-studio"></a>Visual Studio 内の C++ の概要
+
+このクイックスタートを完了すると、Visual Studio を使用して C++ のアプリケーションを開発する際に使用できるさまざまなツールおよびダイアログ ボックスの使用方法を習得できます。 "Hello, World" スタイルのコンソール アプリケーションを作成しながら、統合開発環境 (IDE) での作業方法について学習します。
+
+## <a name="prerequisites"></a>必須コンポーネント
+
+このクイックスタートを完了するために C++ について理解しておく必要はありませんが、いくつかの一般的なプログラミングの概念とデバッグの概念については理解しておく必要があります。 Visual Studio のドキュメントでは、C++ でのプログラミング方法を説明しません。 C++ の学習リソースとしては、ISO C++ Web サイトの「[Get Started](https://isocpp.org/get-started)」 (概要) をお勧めします。
+
+作業を進めるには、Visual Studio 2017 バージョン 15.3 以降のコピーと、**C++ によるデスクトップ開発**ワークロードがインストールされている必要があります。 インストールのためのファースト ガイドについては、「[Install C++ support in Visual Studio](/cpp/build/vscpp-step-0-installation)」 (Visual Studio での C++ のインストール サポート) を参照してください。
+
+## <a name="create-a-console-app"></a>コンソール アプリを作成する
+
+Visual Studio がまだ実行されていない場合は、起動します。
+
+![Visual C++ の設定が適用された IDE](../ide/media/get-started-cpp-ide-layout.png "Visual C++ の設定が適用された IDE")
+
+Visual Studio を開くと、IDE の 3 つの基本的なパーツを確認できます。ツール ウィンドウ、メニューとツール バー、およびメイン ウィンドウ領域です。 ツール ウィンドウは、アプリ ウィンドウの左側と右側にドッキングされます。 上部には、**クイック起動**ボックス、メニュー バー、および標準ツールバーがあります。 ウィンドウの中央には、**[スタート ページ]**が表示されます。 ソリューションまたはプロジェクトを開くと、この領域にはエディターとデザイナーが表示されます。 アプリを開発する場合は、ほとんどの時間をこの中央の領域での作業に費やします。
+
+Visual Studio では、"*プロジェクト*" を使用してアプリのコードを整理し、"*ソリューション*" を使用してプロジェクトを整理します。 プロジェクトには、アプリをビルドする場合に使用するすべてのオプション、構成、および規則が含まれています。 また、プロジェクトでは、プロジェクトのすべてのファイルと、外部のファイルとの間のリレーションシップも管理します。 アプリを作成するには、まず、新しいプロジェクトとソリューションを作成します。
+
+### <a name="to-create-a-console-app-project"></a>コンソール アプリ プロジェクトを作成するには
+
+1. メニューバーで **[ファイル]、[新規作成]、[プロジェクト]** の順に選択して、**[新しいプロジェクト]** ダイアログ ボックスを開きます。
+
+   ![メニュー バーで [ファイル]、[新規作成]、[プロジェクト] の順に選択](../ide/media/get-started-cpp-file-new-project-menu.png "メニュー バーで [ファイル]、[新規作成]、[プロジェクト] の順に選択")
+
+1. **[新しいプロジェクト]** ダイアログで、**[インストール]、[Visual C++]** の順に選択する操作をまだ行っていない場合は、実行します。 中央のウィンドウで **[Windows コンソール アプリケーション]** テンプレートを選択します。 **[名前]** 編集ボックスに、「*HelloApp*」と入力します。
+
+   ![[新しいプロジェクト] ダイアログを使用してアプリ プロジェクトを作成する](../ide/media/get-started-cpp-new-project-dialog.png "[新しいプロジェクト] ダイアログを使用してアプリ プロジェクトを作成する")
+
+   ダイアログ ボックスに含まれる選択肢は、インストールされている Visual Studio ワークロードおよびコンポーネントによって異なる場合があります。 Visual C++ プロジェクト テンプレートが見つからない場合は、Visual Studio インストーラーをもう一度実行し、**C++ によるデスクトップ開発**ワークロードをインストールする必要があります。 この作業は、**[新しいプロジェクト]** ダイアログから直接行うことができます。 インストーラーを起動するには、ダイアログで **[Visual Studio インストーラーを開く]** リンクを選択します。
+
+1. **[OK]** ボタンを選択して、アプリのプロジェクトとソリューションを作成します。
+
+   Windows コンソール アプリの基本的なファイルを含む HelloApp プロジェクトとソリューションが作成され、**ソリューション エクスプローラー**に自動的に読み込まれます。 コード エディターで HelloApp.cpp ファイルが開かれます。 次の項目が**ソリューション エクスプローラー**に表示されます。
+
+   ![ソリューション エクスプローラーに表示されたソリューションのファイル](../ide/media/get-started-cpp-solution-explorer.png "ソリューション エクスプローラーに表示されたソリューションのファイル")
+
+## <a name="add-code-to-the-app"></a>アプリケーションにコードを追加する
+
+次に、コンソール ウィンドウに "Hello" という語を表示するコードを追加します。
+
+### <a name="to-edit-code-in-the-editor"></a>エディターでコードを編集するには
+
+1. HelloApp.cpp ファイルの `return 0;` という行の前に空白行を挿入し、次のコードを入力します。
+
+   ```cpp
+   cout << "Hello\n";
+   ```
+
+   `cout`の下に赤い波線が表示されます。 これにポインターを合わせると、エラー メッセージが表示されます。
+
+   ![cout のエラー テキスト](../ide/media/get-started-cpp-intellisense-error.png "cout のエラー テキスト")
+
+   エラー メッセージは、 **[エラー一覧]** ウィンドウにも表示されます。 このウィンドウを表示するには、メニュー バーで **[表示]、[エラー一覧]** の順に選択します。
+
+   ![[エラー一覧] ウィンドウのエラー](../ide/media/get-started-cpp-error-list.png "[エラー一覧] ウィンドウのエラー")
+
+   コードには [std::cout](/cpp/standard-library/iostream) の宣言が欠落しています。これは \<iostream> ヘッダー ファイルにあります。
+
+1. iostream ヘッダーを組み込むには、このコードを `#include "stdafx.h"` の後に入力します。
+
+   ```cpp
+   #include <iostream>
+   using namespace std;
+   ```
+
+   コードを入力したとき、ボックスが表示されたのに気づいたはずです。 このボックスには、入力した文字のオートコンプリート候補が含まれています。 これは、C++ の IntelliSense の一部で、コーディングの一連のヒントを提供します。それには、クラスやインターフェイスのメンバーやパラメーター情報が含まれます。 定義済みのコード ブロックであるコード スニペットを使用することもできます。 詳細については、 [Using IntelliSense](../ide/using-intellisense.md) および [Code Snippets](../ide/code-snippets.md)を参照してください。
+
+   ![エディターでのコードの修正](../ide/media/get-started-cpp-cout-fix.png "エディターでのコードの修正")
+
+   エラーを修正すると、 `cout` の下の赤い波線が消えます。
+
+1. ファイルに変更内容を保存するには、**Ctrl + S** キーを押します。
+
+## <a name="build-the-app"></a>アプリをビルドする
+
+コードをビルドするのは簡単です。 メニュー バーで、**[ビルド]、[ソリューションのビルド]** の順にクリックします。 Visual Studio は HelloApp ソリューションをビルドし、**[出力]** ウィンドウに進行状況をレポートします。
+
+   ![HelloApp ソリューションのビルド](../ide/media/get-started-cpp-build-solution.gif "HelloApp ソリューションのビルド")
+
+## <a name="debug-and-test-the-app"></a>アプリのデバッグとテスト
+
+HelloApp をデバッグして、コンソール ウィンドウに "Hello" という語が表示されるかどうかを確認できます。
+
+### <a name="to-debug-the-app"></a>アプリをデバッグするには
+
+1. デバッガーを起動するには、メニュー バーで **[デバッグ]、[デバッグ開始]** の順に選択します。
+
+   ![[デバッグ] メニューの [デバッグの開始] コマンド](../ide/media/get-started-cpp-start-debugging-menu.png "[デバッグ] メニューの [デバッグの開始] コマンド")
+
+   デバッガーが起動し、コードが実行されます。 コンソール ウィンドウ (コマンド プロンプトのように見える別のウィンドウ) が数秒間表示されますが、デバッガーが実行を停止するとすぐに閉じます。 テキストを表示するには、ブレークポイントを設定してプログラムの実行を停止する必要があります。
+
+### <a name="to-add-a-breakpoint"></a>ブレークポイントを追加するには
+
+1. エディターで、`return 0;` の行にカーソルを置きます。 メニュー バーで、**[デバッグ]、[ブレークポイントの設定/解除]** の順に選択します。 左側の余白内をクリックしてブレークポイントを設定することもできます。
+
+     ![[デバッグ] メニューの [ブレークポイントの設定/解除] コマンド](../ide/media/get-started-cpp-toggle-breakpoint-menu.png "[デバッグ] メニューの [ブレークポイントの設定/解除] コマンド")
+
+     コード行の横の、エディター ウィンドウの左端の余白部分に、赤い円が表示されます。
+
+     ![ウィンドウの余白部分に表示されたブレークポイント](../ide/media/get-started-cpp-breakpoint-set.png "ウィンドウの余白部分に表示されたブレークポイント")
+
+1. デバッグを開始するには、**F5** キーを押します。
+
+   デバッガーが起動し、コンソール ウィンドウが表示されて **Hello**という語が示されます。
+
+   ![コンソール ウィンドウの Hello テキスト](../ide/media/get-started-cpp-helloapp-window.png "コンソール ウィンドウの Hello テキスト")
+
+1. デバッグを停止するには、**Shift + F5** キーを押します。
+
+コンソール プロジェクトのデバッグの詳細については、[コンソール プロジェクト](../debugger/debugging-preparation-console-projects.md)に関するページを参照してください。
+
+## <a name="build-a-release-version-of-the-app"></a>アプリのリリース バージョンのビルド
+
+すべてが機能することを確認したら、アプリケーションのリリース ビルドを準備できます。 リリース ビルドでは、デバッグ情報を省略し、コンパイラの最適化オプションを使用してコードをより簡潔かつ迅速に作成します。
+
+### <a name="to-clean-the-solution-files-and-build-a-release-version"></a>ソリューション ファイルをクリーンアップし、リリース バージョンをビルドするには
+
+1. メニュー バーで、**[ビルド]、[ソリューションのクリーン]** の順に選択して、前のビルドで作成された中間ファイルと出力ファイルを削除します。
+
+   ![[ビルド] メニューの [ソリューションのクリーン] コマンド](../ide/media/get-started-cpp-clean-solution-menu.png "ExploreIDE-CleanSolution")
+
+1. HelloApp のソリューション構成を **[デバッグ]** から **[リリース]** に変更するには、ツールバーの [ソリューション構成] コントロールでドロップダウンを選択し、**[リリース]** を選択します。
+
+   ![アプリケーションのリリース バージョンのビルド](../ide/media/get-started-cpp-set-release-configuration.png "C++IDE_ChangingBuildtoRelease")
+
+1. ソリューションをビルドします。 メニュー バーで、**[ビルド]、[ソリューションのビルド]** の順にクリックします。
+
+このビルドが完了すると、コマンド プロンプト ウィンドウでコピーおよび実行できるアプリの作成は完了です。 大したことではありませんが、これはより複雑な処理へ通じる入口となります。
+
+このクイック スタートは完了しました。 その他の例については、「[Visual Studio Samples](../ide/visual-studio-samples.md)」を参照してください。
+
+## <a name="see-also"></a>関連項目
+
+[C++ デスクトップ開発のための Visual Studio IDE の使用](/cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development)  
+[チュートリアル : Visual C# または Visual Basic による簡単なアプリケーションの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)  
+[Visual Studio の生産性に関するヒント](../ide/productivity-tips-for-visual-studio.md)  
+[Visual Studio のサンプル](../ide/visual-studio-samples.md)  
+[Visual Studio を使用した開発の開始](../ide/get-started-developing-with-visual-studio.md)

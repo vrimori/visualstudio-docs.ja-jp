@@ -17,11 +17,11 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 227aea28265de5f522c177c4ba224904b78383b1
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.openlocfilehash: dd21ba3c54ed274f181c036ed0121d8d3c5a180e
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="r-tools-for-visual-studio-options"></a>R Tools for Visual Studio オプション
 

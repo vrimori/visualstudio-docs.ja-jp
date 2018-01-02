@@ -8,11 +8,11 @@ ms.technology: vs-ide-general
 ms.date: 11/08/2017
 ms.topic: article
 helpviewer_keywords: editor
-ms.openlocfilehash: 6fe98cea71bb49ea3e705a22cb696184966ea0ed
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: 6650faa7ed519c6237b459ac4278b6e90d7a5bc6
+ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="visual-studio-2017-for-net-developers"></a>.NET 開発者向けの Visual Studio 2017
 
@@ -69,6 +69,8 @@ Visual Studio には、.NET Framework、.NET Standard、および .NET Core を�
 
 Git または TFVC を使用して Visual Studio でコードを格納して更新します。 エディター内でチーム エクスプローラーを使用してローカルの変更を整理し、ステータス バーで保留中のコミットと変更を追跡します。 [Continuous Delivery Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) 拡張機能を使用して Visual Studio 内の継続的インテグレーションと配信を設定し、アジャイル開発者のワークフローを採用します。
 
+![Visual Studio のソース管理](../ide/media/VSIDE_Productivity_SourceControl.png "VSIDE_Productivity_SourceControl")
+
 ## <a name="extensibility"></a>機能拡張
 [ドキュメント: Visual Studio の拡張](../extensibility/index.md)
 
@@ -79,8 +81,10 @@ Visual Studio には必要に応じたインストールや作成が可能な拡
 ## <a name="popular-extensions--shortcuts"></a>よく使用されている拡張機能とショートカット
 別の IDE またはコーディング環境から切り替えた場合は、以下のいずれかの拡張機能をインストールすると役立つ場合があります。
 - [Emacs エミュレーション](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.Emacsemulation)
-- [Visual Studio のホット キー (IntelliJ)](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.HotKeys2017-KeyboardShortcuts)
+- [Visual Studio のホット キー (ReSharper/IntelliJ)](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.HotKeys2017-KeyboardShortcuts)
 - [VSVim](https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim)
+
+よく使用される Visual Studio のショートカットを以下に示します。 一部の拡張機能では既定の Visual Studio キー バインドが解除されるため、以下のコマンドを使用するためにキー バインドを復元する必要があることに注意してください。 キー バインドを Visual Studio の既定値に復元するには、**[ツール]、[設定のインポートとエクスポート]、[すべての設定をリセット]** の順に移動します。
 
 | ショートカット (すべてのプロファイル) | コマンド | 説明 |
 |-|-|-| 
@@ -93,6 +97,6 @@ Visual Studio には必要に応じたインストールや作成が可能な拡
 | **F5** | デバッグの開始 | アプリケーションのデバッグを開始します |
 | **Ctrl + F5** | デバッグなしで開始 | デバッグなしでアプリケーションをローカルで実行します |
 | **Ctrl + K、D** (既定のプロファイル) または **Ctrl + E、D** (C# Profile) | ドキュメントのフォーマット | 改行文字、間隔、およびインデント設定に基づき、ファイルの書式設定の違反をクリーンアップします |
-| **Ctrl + \,E** (既定のプロファイル) または **Ctrl + W、E** (C# Profile) | エラー一覧の表示 | ドキュメント、プロジェクト、またはソリューション内のすべてのエラーを表示します |
+| **Ctrl + \\、E** (既定のプロファイル) または **Ctrl + W、E** (C# Profile) | エラー一覧の表示 | ドキュメント、プロジェクト、またはソリューション内のすべてのエラーを表示します |
 
 

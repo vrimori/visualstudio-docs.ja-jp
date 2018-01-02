@@ -18,16 +18,17 @@ caps.latest.revision: "31"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9b76decbfcb314733d0b195baeda24474e9574d2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 362daf0d3044841260ae7e9b8f0eb42bad8e610b
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="concurrency-visualizer"></a>同時実行ビジュアライザー
 > [!NOTE]
 >  同時実行ビジュアライザーは、Visual Studio に対する任意の拡張機能です。 同時実行ビジュアライザーと同時実行ビジュアライザー コレクション ツールは、以下のリンクからダウンロードします。  
 >   
+>  -   [Visual Studio 2017 用同時実行ビジュアライザー](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ConcurrencyVisualizer2017#overview)拡張機能をダウンロードします。  
 >  -   [Visual Studio 2015 用同時実行ビジュアライザー](https://visualstudiogallery.msdn.microsoft.com/a6c24ce9-beec-4545-9261-293061436ee9)拡張機能をダウンロードします。  
 > -   [Concurrency Visualizer Collection Tools for Visual Studio 2015](http://www.microsoft.com/en-in/download/details.aspx?id=49103)をダウンロードします。  
 >   
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
  同時実行ビジュアライザーを使用すると、マルチスレッド アプリがどのように動作するかを確認することができます。 同時実行ビジュアライザーのビューには、プログラム内のスレッドとシステム間の時間的な関係をまとめて示す、グラフィカルな表形式のテキスト データが表示されます。 同時実行ビジュアライザーを使用すると、パフォーマンスのボトルネック、十分に活用されていない CPU、スレッドの競合、コア間のスレッドの移行、同期の遅延、DirectX のアクティビティ、重複 I/O の領域などの情報を検索できます。 これらのビューでは、グラフィカルな出力を呼び出し履歴とソース コードにリンクすることで、アクション可能なデータを使用できるようになります。  
 
 > [!NOTE]
->  Visual Studio 2017 では、まだ同時実行ビジュアライザーを利用できません。 同時実行ビジュアライザーでは、Web プロジェクトはサポートされません。  
+>  同時実行ビジュアライザーでは、Web プロジェクトはサポートされません。  
   
  同時実行ビジュアライザーは、 [Windows イベント トレーシング](http://go.microsoft.com/fwlink/?LinkId=234579) の機能に依存しています。  
   

@@ -5,21 +5,21 @@ Ms.author: jaunger
 Manager: evelynp
 Ms.date: 10/3/2017
 Ms.topic: Get-Started-Article
-Description: "管理者ポータルにアクセスする方法について説明します。"
+Description: Learn how to access the Administrator Portal
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 89661c12a820d2a7aa3bed562a5efec141dcf01a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 3028ea616f6336918e49d49856f62707876772c9
+ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/01/2017
 ---
-# <a name="accessing-the-visual-studio-subsubscriptions-administrator-portal"></a>Visual Studio サブスクリプション管理者ポータルにアクセスする
+# <a name="accessing-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio サブスクリプション管理者ポータルへのアクセス
 ## <a name="for-mpsa"></a>MPSA の場合
 Visual Studio サブスクリプション管理ポータルにアクセスするには、Microsoft Business Center Portal (BCP) で管理者として設定されている必要があります。 
 
-管理者として設定する方法に関する情報が必要な場合は、[ユーザーの管理のクイック スタート ガイド](https://mvlc.blob.core.windows.net/en-us/MVLC_QS_Manage_Users.pdf)を参照してください。 管理者として既に設定されている場合は、[Visual Studio サブスクリプション管理ポータル](https://manage.visualstudio.com)に直接進むことができます。
+管理者として設定する方法に関する情報が必要な場合は、[ユーザーの管理のクイック スタート ガイド](https://mvlc.blob.core.windows.net/en-us/MVLC_QS_Manage_Users.pdf)を参照してください。 管理者として既に設定されている場合は、Visual Studio サブスクリプション[管理ポータル](https://manage.visualstudio.com)に直接進むことができます。
 
 ## <a name="for-volume-licensing-vl"></a>ボリューム ライセンス (VL) の場合
 2017 年 3 月 1 日の時点で、ポータル オンボードと移行プロセスの作業をまだ行っているお客様は、サブスクリプションを[ボリューム ライセンス サービス センター (VLSC)](https://www.microsoft.com/Licensing/servicecenter/default.aspx) で管理する必要があります。 
@@ -30,9 +30,9 @@ VLSC でのサブスクリプションの管理の詳細については、次の
 
 組織のボリューム ライセンス契約の主要連絡先または通知連絡先から管理者として設定してもらうには、彼らにいくつかの手順を実行してもらう必要があります。 
 
-管理者を設定する方法に関する情報が必要な場合は、[このビデオ](https://channel9.msdn.com/Series/Visual-Studio-Subscriptions-Administration/Onboarding-your-organization-to-the-new-Visual-Studio-Subscription-Administration-Portal-and-setting)をご覧ください。また、[Visual Studio サブスクリプション管理ポータルのオンボードと管理者の管理](https://go.microsoft.com/fwlink/?linkid=839391)でこれらの記事を参照してください。 
+管理者を設定する方法に関する情報が必要な場合は、[このビデオ](https://channel9.msdn.com/Series/Visual-Studio-Subscriptions-Administration/Onboarding-your-organization-to-the-new-Visual-Studio-Subscription-Administration-Portal-and-setting)をご覧ください。また、Visual Studio サブスクリプション管理ポータルの[オンボードと管理者の管理](https://go.microsoft.com/fwlink/?linkid=839391)でこれらの記事を参照してください。 
 
-管理者として既に設定されている場合は、[Visual Studio サブスクリプション管理ポータル](https://manage.visualstudio.com)に直接進むことができます。
+管理者として既に設定されている場合は、Visual Studio サブスクリプション[管理ポータル](https://manage.visualstudio.com)に直接進むことができます。
 
 ## <a name="for-cloud-subscriptions"></a>クラウド サブスクリプションの場合
 Visual Studio クラウド サブスクリプションを購入すると、これらのサブスクリプションの管理者として自動的に設定されます。  これらを既に購入している場合は、[https://manage.visualstudio.com](https://manage.visualstudio.com) でこれらを管理できます。

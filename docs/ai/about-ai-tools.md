@@ -10,11 +10,11 @@ ms.topic: article
 ms.technology: visual studio
 ms.devlang: multiple
 ms.service: multiple
-ms.openlocfilehash: 6dd677f04396e3473f1de054393de66a57681192
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.openlocfilehash: 90fcbd7e07ee4f18682d5cf914794982007088d0
+ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="visual-studio-tools-for-ai"></a>Visual Studio Tools for AI
 
@@ -31,6 +31,8 @@ Visual Studio の生産性機能を使って今日の AI 革新を高速化し�
 Visual Studio Tools for AI は Azure Machine Learning と統合されており、CNTK、TensorFlow、MMLSpark などを使ってサンプル実験のギャラリーを簡単に参照できます。 
 
 ![エクスプローラーの例](media\about\gallery.png)
+
+[サンプル ギャラリーからのプロジェクトの作成の詳細](create-project-gallery.md)
 
 ## <a name="scale-out-deep-learning-model-training-andor-inferencing-to-the-cloud"></a>ディープ ラーニングのモデル トレーニングと推論をクラウドにスケールアウトする
 この拡張機能を使ってローカル コンピューター上でモデルを簡単にトレーニングすることも、Azure Machine Learning との統合を使ってクラウドにジョブを送信することもできます。 Spark クラスターや Azure GPU 仮想マシンなどの別のコンピューター ターゲットにジョブを送信できます。  

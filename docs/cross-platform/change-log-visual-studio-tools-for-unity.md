@@ -12,14 +12,47 @@ caps.latest.revision: "12"
 author: conceptdev
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 3f5569a6f6d5bb51db61292e3ba12b16dbc201b9
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.openlocfilehash: f33a7f43fdd52103fcd041d1f6502b88677eef1e
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>変更ログ (Visual Studio Tools for Unity)
 Visual Studio Tools for Unity の変更ログです。  
+
+## <a name="3502"></a>3.5.0.2
+ リリース: 2017 年 12 月 4 日
+
+### <a name="new-features"></a>新機能  
+
+-   **統合:**  
+
+    -   Unity プロジェクトが、Unity からのスクリプトの追加または削除時に自動的に Visual Studio に再読み込みされるようになりました。
+
+-   **デバッガー:**  
+
+    -   Unity エディターをデバッグするために Xamarin および Visual Studio for Mac で共有された Mono デバッガーを使用するオプションが追加されました。
+
+    -   ポータブル デバッグ シンボル ファイルのサポートが追加されました。
+
+### <a name="bug-fixes"></a>バグ修正  
+
+-   **統合:**  
+
+    -   セットアップの依存関係の問題を修正しました。
+
+    -   Unity API のヘルプ メニューが表示されないという問題を修正しました。
+    
+-   **プロジェクトの生成:**  
+
+    -   IL2CPP/.NET 4.6 のバックエンドの UWP ゲームで動作している場合の player プロジェクトの生成を修正しました。
+    
+    -   アセンブリのファイル名に余分な .dll 拡張子が誤って追加される問題を修正しました。
+    
+    -   グローバルではなく、特定のプロジェクト API 互換性レベルの使用を修正しました。
+    
+    -   既定値が 'true' になったので、AllowAttachedDebuggingOfEditor Unity フラグを強要しません。
 
 ## <a name="3402"></a>3.4.0.2
  リリース: 2017 年 9 月 19 日
@@ -59,7 +92,7 @@ Visual Studio Tools for Unity の変更ログです。
 
 -   **プロジェクトの生成:**  
 
-    -   Unity 5.5 と以前のバージョンの Visual Studio ソリューションの生成を修正します。
+    -   Unity 5.5 と以前のバージョンの Visual Studio ソリューションの生成を修正しました。
 
 ## <a name="3300"></a>3.3.0.0
  リリース: 2017 年 8 月 14 日

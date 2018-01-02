@@ -12,11 +12,11 @@ caps.latest.revision: "12"
 author: conceptdev
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 48f29ec016b426319241c1a72701ed529ec7dddd
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.openlocfilehash: a9364a6eb9e46503a257cdc066e3d9ecd1a6c9d0
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="application-lifecycle-management-alm-with-unity-apps"></a>Unity アプリを使用したアプリケーション ライフサイクル管理 (ALM)
 最新のプラットフォーム向けのアプリ開発には、コードを記述するだけでなく、それ以外の多くのアクティビティが関係します。 これらのアクティビティは、アプリの完全なライフサイクルの中で DevOps (開発 + 運用) 期間になされるものあり、たとえば、作業のアジャイルな計画と追跡、コードの設計と実装、ソース コード リポジトリの管理、ビルドの実行、継続的に実行されるインテグレーションと展開の管理、テスト (単体テストと UI テストを含む)、開発環境と運用環境の両方におけるさまざまな形式の診断の実行、製品利用統計情報と分析によるアプリのパフォーマンスとユーザー動作のリアルタイムな監視などがあります。  
@@ -73,12 +73,12 @@ ms.lasthandoff: 11/29/2017
 3.  テクスチャやオーディオ ファイルなど、Unity プロジェクトでのバイナリの資産が、大量のストレージを消費することがあります。 Git などのさまざまなソース管理システムは、変更がファイルのごく一部のみに影響する場合でも、すべての変更個所のファイルの一意のコピーを格納します。 これにより、Git リポジトリがいっぱいになる可能性があります。 これに対処するために、Unity 開発者は多くの場合、リポジトリに最終資産のみを追加し、OneDrive、DropBox、git の添付など、資産の作業履歴を保持するために様々な手段を使用しています。 通常このような資産は、ソース コードの変更に伴うバージョン管理を必要としないため、このアプローチが有効です。 また、開発者は、プロジェクト エディターの資産のシリアル化モードを、シーンファイルをバイナリ形式ではなくテキストで保存するためにテキストを強制するよう設定し、これによりソース管理でのマージが可能になります。 詳細については、「[Editor Settings](http://docs.unity3d.com/Manual/class-EditorManager.html)」 (エディターの設定) (Unity ドキュメント) を参照してください。  
 
 ## <a name="build"></a>ビルド  
- 参照リンク: **[ビルド](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)**  
+ 参照リンク: **[ビルドとリリース](/vsts/build-release/index)**  
 
 |特性|Unity でサポートされているかどうか|その他のコメント|  
 |-------------|--------------------------|-------------------------|  
 |オンプレミス TFS サーバー|可能|Unity プロジェクトは、Visual Studio が構築したシステムではなく、Unity の環境内で構築されています (Visual Studio Tools for Unity 内で構築すると、スクリプトはコンパイルしますが、実行可能ファイルを生成しません)。 [コマンド ラインから Unity プロジェクトをビルド](http://docs.unity3d.com/Manual/CommandLineArguments.html) (Unity ドキュメント) できるため、Unity 自体がそのコンピューターにインストールされている場合は、TFS サーバーで MSBuild プロセスを構成して、適切な Unity コンポーネントを実行できます。<br /><br /> また、Unity は、[Unity クラウド構築](https://build.cloud.unity3d.com/landing/)も提供し、Git または SVN リポジトリを監視して、定期的なビルドを実行します。 現時点では、Team Foundation バージョン管理または Visual Studio Team Services では動作しません。|  
-|Visual Studio Team Services にリンクされたオンプレミスのビルド サーバー|可能|上記と同じ状態の場合、Visual Studio Team Services でトリガーされたビルドを指して、オンプレミスの TFS のコンピューターを使用することがさらに可能になります。  手順については、[ビルド サーバー](http://msdn.microsoft.com/Library/2d258a0a-f178-4e93-9da1-eba61151af3c)を参照してください。|  
+|Visual Studio Team Services にリンクされたオンプレミスのビルド サーバー|可能|上記と同じ状態の場合、Visual Studio Team Services でトリガーされたビルドを指して、オンプレミスの TFS のコンピューターを使用することがさらに可能になります。  手順については、「[Build and release agents](/vsts/build-release/concepts/agents/agents)」 (ビルド エージェントとリリース エージェント) を参照してください。|  
 |Visual Studio Team Services のホスト コントローラー サービス|いいえ|Unity ビルドは現在サポートされていません。|  
 |事前スクリプトと事後スクリプトによるビルド定義|はい|Unity のコマンドラインを使用してビルドを実行するカスタムのビルド定義は、ビルド前およびビルド後のスクリプトに対して構成することもできます。|  
 |継続的な統合 (ゲート チェックインを含む)|はい|Git としての TFVC へのゲート チェックインのみ、チェックイン モデルではなく、プル要求モデルで機能します。|  

@@ -15,11 +15,11 @@ manager: ghogen
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1f703c1eefe535906f287c9e7b50e0b7ad99677f
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.openlocfilehash: 5dacd44d72e5be7a898ba90c074dedf4b2f2bb4b
+ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="introduction-to-wpf"></a>WPF の概要
 Windows Presentation Foundation (WPF) を使用して、視覚的に美しいユーザー エクスペリエンスを持つ Windows 用のデスクトップ クライアント アプリケーションを作成できます。  
@@ -33,7 +33,7 @@ Windows Presentation Foundation (WPF) を使用して、視覚的に美しいユ
 ##  <a name="Programming_with_WPF"></a> WPF によるプログラミング  
  WPF は、ほとんどの部分が <xref:System.Windows> 名前空間に格納されている .NET Framework 型のサブセットとして存在します。 ASP.NET や Windows フォームのようなマネージ テクノロジを使用して .NET Framework で以前にアプリケーションを構築したことがあるユーザーは、基本的な WPF のプログラミングの経験には慣れているはずです。クラスのインスタンス化、プロパティの設定、メソッドの呼び出し、イベントの処理など、すべての操作は C# または Visual Basic などの使い慣れた .NET プログラミング言語を使用して行うことができます。  
   
- WPF には、プロパティとイベントを拡張する追加のプログラミング構成要素である、 [依存関係プロパティ](https://msdn.microsoft.com/en-us/library/ms752914\(v=vs.100\).aspx) と [ルーティング イベント](https://msdn.microsoft.com/en-us/library/ms742806\(v=vs.100\).aspx)が含まれています。  
+ WPF には、プロパティとイベントを拡張する追加のプログラミング構成要素である、 [依存関係プロパティ](/dotnet/framework/wpf/advanced/dependency-properties-overview) と [ルーティング イベント](/dotnet/framework/wpf/advanced/routed-events-overview)が含まれています。  
   
 ##  <a name="Markup_And_Codebehind"></a> マークアップおよび分離コード  
  WPF では *マークアップ* と *分離コード*の両方を使用したアプリケーションを開発できます。これは ASP.NET 開発者にとってなじみ深いエクスペリエンスに違いありません。 一般に、アプリケーションの外観を実装するには XAML マークアップを使用し、一方、その動作を実装するには、マネージ プログラミング言語 (分離コード) を使用します。 外観と動作の実装を別々に行うことには、次の利点があります。  
@@ -42,7 +42,7 @@ Windows Presentation Foundation (WPF) を使用して、視覚的に美しいユ
   
 -   デザイナーがアプリケーションの外観を実装しているとき同時に、開発者はアプリケーションの動作を実装できるため、開発がより効率的に進みます。  
   
--   WPF アプリケーションの[グローバリゼーションとローカリゼーション](https://msdn.microsoft.com/en-us/library/ms788718\(v=vs.100\).aspx) が簡略化します。  
+-   WPF アプリケーションの[グローバリゼーションとローカリゼーション](/dotnet/framework/wpf/advanced/wpf-globalization-and-localization-overview) が簡略化します。  
   
  WPF のマークアップおよび分離コードの簡単な概要を次に示します。  
   
@@ -69,7 +69,7 @@ Windows Presentation Foundation (WPF) を使用して、視覚的に美しいユ
   
  ![ボタンを含むウィンドウ](../designers/media/wpfintrofigure10.png "WPFIntroFigure10")  
   
- XAML は XML ベースなので、XAML を使用して作成する UI は [要素ツリー](https://msdn.microsoft.com/en-us/library/ms753391\(v=vs.100\).aspx)と呼ばれるネストされた要素の階層で組み立てられます。 要素ツリーは UI を作成し、管理するための論理的かつ直感的な方法を提供します。  
+ XAML は XML ベースなので、XAML を使用して作成する UI は [要素ツリー](/dotnet/framework/wpf/advanced/trees-in-wpf)と呼ばれるネストされた要素の階層で組み立てられます。 要素ツリーは UI を作成し、管理するための論理的かつ直感的な方法を提供します。  
   
 ### <a name="code-behind"></a>分離コード  
  アプリケーションの主な動作は、ユーザー インタラクションに対して応答する機能を実装することです。これにはイベントの処理 (メニュー、ツールバー、またはボタンをクリックする、など) および応答のビジネス ロジックやデータ アクセス ロジックの呼び出しなどが含まれます。 WPF では、この動作が一般に、マークアップと関連付けられたコードで実装されます。 このタイプのコードは分離コードと呼ばれています。 次の例は、前記の例の更新されたマークアップと分離コードです。  
@@ -181,9 +181,9 @@ End Namespace
 -   **ユーザー情報**: <xref:System.Windows.Controls.AccessText>、 <xref:System.Windows.Controls.Label>、 <xref:System.Windows.Controls.Primitives.Popup>、 <xref:System.Windows.Controls.ProgressBar>、 <xref:System.Windows.Controls.Primitives.StatusBar>、 <xref:System.Windows.Controls.TextBlock>、 <xref:System.Windows.Controls.ToolTip>。  
   
 ##  <a name="Input_And_Commanding"></a> 入力とコマンド実行  
- コントロールはほとんどの場合、ユーザー入力の検出と応答に使用されます。 [WPF 入力システム](https://msdn.microsoft.com/en-us/library/ms754010\(v=vs.100\).aspx) では直接イベントとルーティング イベントの両方を使用して、テキスト入力、フォーカス管理、マウス位置指定をサポートしています。  
+ コントロールはほとんどの場合、ユーザー入力の検出と応答に使用されます。 [WPF 入力システム](/dotnet/framework/wpf/advanced/input-overview) では直接イベントとルーティング イベントの両方を使用して、テキスト入力、フォーカス管理、マウス位置指定をサポートしています。  
   
- アプリケーションにはたいてい、複雑な入力要件があります。 WPF には、ユーザー入力動作と、それらの動作に応答するコードを分離する [コマンド システム](https://msdn.microsoft.com/en-us/library/ms752308\(v=vs.100\).aspx) があります。  
+ アプリケーションにはたいてい、複雑な入力要件があります。 WPF には、ユーザー入力動作と、それらの動作に応答するコードを分離する [コマンド システム](/dotnet/framework/wpf/advanced/commanding-overview) があります。  
   
 ##  <a name="Layout"></a> レイアウト  
  ユーザー インターフェイスを作成すると、場所とサイズによりコントロール類を配置して、レイアウトを決めます。 すべてのレイアウトの重要な要件は、ウィンドウ サイズと表示設定の変更に適応させることです。 こうした状況でレイアウトを適応させるために開発者にコードを作成させるのではなく、WPF では最上級の拡張可能なレイアウト システムを提供します。  
@@ -211,7 +211,7 @@ End Namespace
  <xref:System.Windows.Controls.DockPanel> により、子 <xref:System.Windows.Controls.TextBox> コントロールはどのように配置するかを伝えることができます。 このために、<xref:System.Windows.Controls.DockPanel> は `Dock` 添付プロパティを実装しています。このプロパティが子コントロールに公開されて、それぞれのコントロールがドック スタイルを指定できるようになります。  
   
 > [!NOTE]
->  子コントロールが使うために、親コントロールにより実装されるプロパティは、 [添付プロパティ](https://msdn.microsoft.com/en-us/library/ms749011\(v=vs.100\).aspx)と呼ばれる WPF 構成要素です。  
+>  子コントロールが使うために、親コントロールにより実装されるプロパティは、 [添付プロパティ](/dotnet/framework/wpf/advanced/attached-properties-overview)と呼ばれる WPF 構成要素です。  
   
  次の図に、前の例の XAML マークアップの結果を示します。  
   
@@ -254,7 +254,7 @@ End Namespace
   
  WPF データ バインディング エンジンは、検証、並べ替え、フィルター処理、グループ化などのその他のサポートを提供します。 さらにデータ バインディングでは、標準の WPF コントロールによって表示されたユーザー インターフェイスが適切ではない場合に、バインドされたデータを操作するためのカスタム ユーザー インターフェイスをデータ テンプレートで作成することをサポートしています。  
   
- 詳しくは、「 [データ バインディングの概要](https://msdn.microsoft.com/en-us/library/ms752347\(v=vs.100\).aspx)」をご覧ください。  
+ 詳しくは、「 [データ バインディングの概要](/dotnet/framework/wpf/data/data-binding-overview)」をご覧ください。  
   
 ##  <a name="Graphics"></a> グラフィックス  
  WPF では次の利点を備えた、広範囲にわたるスケーラブルで柔軟なグラフィックス機能セットが導入されています。  
@@ -283,7 +283,7 @@ End Namespace
   
  !["you clicked the ellipse&#33;" というテキストを含むウィンドウ](../designers/media/wpfintrofigure12.png "WPFIntroFigure12")  
   
- 詳しくは、「 [WPF での図形と基本描画の概要](https://msdn.microsoft.com/en-us/library/ms747393\(v=vs.100\).aspx)」をご覧ください。  
+ 詳しくは、「 [WPF での図形と基本描画の概要](/dotnet/framework/wpf/data/data-binding-overview)」をご覧ください。  
   
 ### <a name="2-d-geometries"></a>2-D ジオメトリ  
  WPF で提供される 2-D 図形では、基本的な図形の標準セットが網羅されています。 ただし、カスタマイズされたユーザー インターフェイスを容易に設計するには、カスタム図形を作成しなければならない場合があります。 このため、WPF ではジオメトリが用意されています。 次の図では、直接描画、ブラシとして使用、または他の図形やコントロールをクリップするために使用できるカスタム図形を作成するジオメトリの使用法を示します。  
@@ -294,28 +294,28 @@ End Namespace
   
  ![パスのさまざまな使用方法](../designers/media/wpfintrofigure5.PNG "WPFIntroFigure5")  
   
- 詳しくは、「 [ジオメトリの概要](https://msdn.microsoft.com/en-us/library/ms751808\(v=vs.100\).aspx)」をご覧ください。  
+ 詳しくは、「[ジオメトリの概要](/dotnet/framework/wpf/graphics-multimedia/geometry-overview)」をご覧ください。  
   
 ### <a name="2-d-effects"></a>2-D 効果  
  WPF の 2-D 機能のサブセットには、グラデーション、ビットマップ、描画、ビデオによる塗りつぶし、回転、拡大縮小、傾斜などの視覚効果が含まれています。 これらはすべてブラシによって実現します。次の図に、例をいくつか示します。  
   
  ![さまざまなブラシの図](../designers/media/wpfintrofigure6.PNG "WPFIntroFigure6")  
   
- 詳しくは、「 [WPF のブラシの概要](https://msdn.microsoft.com/en-us/library/aa970904\(v=vs.100\).aspx)」をご覧ください。  
+ 詳しくは、「 [WPF のブラシの概要](/dotnet/framework/wpf/graphics-multimedia/wpf-brushes-overview)」をご覧ください。  
   
 ### <a name="3-d-rendering"></a>3-D レンダリング  
  WPF には 2-D グラフィックスと統合し、より魅力的で興味深いユーザー インターフェイスを作成できる 3-D レンダリング機能も含まれています。 たとえば、次の図では 3-D 図形上にレンダリングされる 2-D イメージを示しています。  
   
  ![Visual3D サンプルのスクリーンショット](../designers/media/wpfintrofigure13.png "WPFIntroFigure13")  
   
- 詳しくは、「 [3-D グラフィックスの概要](https://msdn.microsoft.com/en-us/library/ms747437\(v=vs.100\).aspx)」をご覧ください。  
+ 詳しくは、「 [3-D グラフィックスの概要](/dotnet/framework/wpf/graphics-multimedia/3-d-graphics-overview)」をご覧ください。  
   
 ##  <a name="Animation"></a> アニメーション  
  WPF のアニメーション サポートを使用すると、コントロールを拡大、振動、スピン、フェードさせることができ、魅力的なページ遷移などを作成できです。 カスタム クラスも含めて、ほとんどの WPF クラスをアニメーション表示できます。 次の図に、実行中の単純なアニメーションを示します。  
   
  ![アニメーション キューブのイメージ](../designers/media/wpfintrofigure7.png "WPFIntroFigure7")  
   
- 詳しくは、「 [アニメーションの概要](https://msdn.microsoft.com/en-us/library/ms752312\(v=vs.100\).aspx)」をご覧ください。  
+ 詳しくは、「 [アニメーションの概要](/dotnet/framework/wpf/graphics-multimedia/animation-overview)」をご覧ください。  
   
 ##  <a name="Media"></a> メディア  
  リッチ コンテンツを伝達するための 1 つの方法は、オーディオビジュアル メディアを使用することです。 WPF では、イメージ、ビデオ、オーディオに対して特別なサポートを提供しています。  
@@ -325,7 +325,7 @@ End Namespace
   
  ![サムネイル イメージとフルサイズ イメージ](../designers/media/wpfintrofigure8.PNG "WPFIntroFigure8")  
   
- 詳しくは、「 [イメージングの概要](https://msdn.microsoft.com/en-us/library/ms748873\(v=vs.100\).aspx)」をご覧ください。  
+ 詳しくは、「 [イメージングの概要](/dotnet/framework/wpf/graphics-multimedia/imaging-overview)」をご覧ください。  
   
 ### <a name="video-and-audio"></a>ビデオとオーディオ  
  <xref:System.Windows.Controls.MediaElement> コントロールは、オーディオとビデオの両方を再生でき、カスタム メディア プレーヤーの土台となれる柔軟性を備えています。 次の XAML マークアップは、メディア プレーヤーを実装します。  
@@ -336,7 +336,7 @@ End Namespace
   
  ![オーディオおよびビデオを含む MediaElement コントロール](../designers/media/wpfintrofigure1.png "WPFIntroFigure1")  
   
- 詳しくは、「 [WPF のグラフィックス、アニメーション、およびメディアの概要](https://msdn.microsoft.com/en-us/library/ms742562\(v=vs.100\).aspx)」をご覧ください。  
+ 詳細については、「[グラフィックスとマルチメディア](/dotnet/framework/wpf/graphics-multimedia)」を参照してください。  
   
 ##  <a name="Text_and_Typography"></a> テキストとタイポグラフィ  
  高品質のテキスト レンダリングを容易に行うために、WPF では次の機能が提供されています。  
@@ -355,7 +355,7 @@ End Namespace
   
  ![さまざまなテキスト装飾を含むテキスト](../designers/media/wpfintrofigure23.png "WPFIntroFigure23")  
   
- 詳しくは、「 [Windows Presentation Foundation のタイポグラフィ](https://msdn.microsoft.com/en-us/library/ms742190\(v=vs.100\).aspx)」をご覧ください。  
+ 詳しくは、「 [Windows Presentation Foundation のタイポグラフィ](/dotnet/framework/wpf/advanced/typography-in-wpf)」をご覧ください。  
   
 ##  <a name="WPF_Customization"></a> WPF アプリケーションのカスタマイズ  
  ここまで、アプリケーションを開発するための中核となる WPF 構成要素を説明してきました。 主にコントロールから成るアプリケーション コンテンツをホストして提供するには、アプリケーション モデルを使用します。 ユーザー インターフェイスでのコントロールの配置を簡素化して、ウィンドウ サイズや表示設定に変更が発生した場合にも配置を維持するには、WPF レイアウト システムを使用します。 ほとんどのアプリケーションでは、ユーザーがデータと対話できるようになっているため、データ バインディングを使用すればユーザー インターフェイスとデータの統合作業を削減できます。 アプリケーションの外観を向上させるには、WPF が提供する幅広いグラフィックス、アニメーション、メディアのサポートを使用します。  
@@ -408,10 +408,10 @@ End Namespace
   
  ![複数の種類の内容を含むボタン](../designers/media/wpfintrofigure22.png "WPFIntroFigure22")  
   
- さまざまなコントロールでサポートされているコンテンツの種類について詳しくは、「 [WPF コンテンツ モデル](https://msdn.microsoft.com/en-us/library/bb613548\(v=vs.100\).aspx)」をご覧ください。  
+ さまざまなコントロールでサポートされているコンテンツの種類について詳しくは、「 [WPF コンテンツ モデル](/dotnet/framework/wpf/controls/wpf-content-model)」をご覧ください。  
   
 ### <a name="triggers"></a>トリガー  
- XAML マークアップの主な目的はアプリケーションの外観を実装することですが、XAML を使用してアプリケーションの動作の一部の機能を実装することもできます。 その一例として、ユーザーの操作に基づいて、アプリケーションの外観を変更するトリガーの使用があります。 詳しくは、「 [スタイルとテンプレート](https://msdn.microsoft.com/en-us/library/ms745683\(v=vs.100\).aspx)」をご覧ください。  
+ XAML マークアップの主な目的はアプリケーションの外観を実装することですが、XAML を使用してアプリケーションの動作の一部の機能を実装することもできます。 その一例として、ユーザーの操作に基づいて、アプリケーションの外観を変更するトリガーの使用があります。 詳しくは、「 [スタイルとテンプレート](/dotnet/framework/wpf/controls/styling-and-templating)」をご覧ください。  
   
 ### <a name="control-templates"></a>コントロール テンプレート  
  WPF コントロールの既定のユーザー インターフェイスは、通常、他のコントロールと図形で構成されます。 たとえば、 <xref:System.Windows.Controls.Button> は <xref:Microsoft.Windows.Themes.ButtonChrome> コントロールと <xref:System.Windows.Controls.ContentPresenter> コントロールの両方で構成されます。 <xref:Microsoft.Windows.Themes.ButtonChrome> は標準的なボタンの外観を提供するのに対し、 <xref:System.Windows.Controls.ContentPresenter> は <xref:System.Windows.Controls.ContentControl.Content%2A> プロパティで指定したボタンのコンテンツを表示します。  
@@ -491,7 +491,7 @@ End Namespace
   
  <xref:System.Windows.Controls.ListBox> の動作と全体的な外観は保持されていることにご注意ください。リスト ボックスにより表示されるコンテンツの外観のみが変更されています。  
   
- 詳しくは「 [データ テンプレートの概要](https://msdn.microsoft.com/en-us/library/ms742521\(v=vs.100\).aspx)」をご覧ください。  
+ 詳しくは「 [データ テンプレートの概要](/dotnet/framework/wpf/data/data-templating-overview)」をご覧ください。  
   
 ### <a name="styles"></a>スタイル  
  スタイルを使うと、開発者とデザイナーは製品の特定の外観を標準化できます。 WPF には強力なスタイル モデルが用意されており、この基盤となるのが <xref:System.Windows.Style> 要素です。 次の例では、ウィンドウ上の各 <xref:System.Windows.Controls.Button> の背景色を `Orange`に設定するスタイルを作成しています。  
@@ -525,7 +525,7 @@ End Namespace
   
  ![2 つのオレンジ色のボタン](../designers/media/wpfintrofigure20.png "WPFIntroFigure20")  
   
- 詳しくは、「 [スタイルとテンプレート](https://msdn.microsoft.com/en-us/library/ms745683\(v=vs.100\).aspx)」をご覧ください。  
+ 詳しくは、「 [スタイルとテンプレート](/dotnet/framework/wpf/controls/styling-and-templating)」をご覧ください。  
   
 ### <a name="resources"></a>リソース  
  アプリケーションのコントロール類は、同じ外観を持つ必要があります。こうした外観はフォントや背景色からコントロール テンプレート、データ テンプレート、スタイルまで、多岐にわたります。 ユーザー インターフェイスのリソースに対する WPF のサポートを使用すれば、こうした各種リソースを 1 つの場所でカプセル化して、再利用することができます。  
@@ -596,7 +596,7 @@ End Namespace
   
  リソースおよびリソース ディクショナリは、テーマとスキンに対する WPF サポートの基礎です。  
   
- 詳しくは、「 [リソースの概要](https://msdn.microsoft.com/en-us/library/ms750613\(v=vs.100\).aspx)」をご覧ください。  
+ 詳しくは、「 [リソースの概要](/dotnet/framework/wpf/advanced/xaml-resources)」をご覧ください。  
   
 ### <a name="custom-controls"></a>カスタム コントロール  
  WPF にはカスタマイズに対する多くのサポートが用意されていますが、状況によっては既存の WPF コントロールではアプリケーションやそのユーザーのニーズを満たせない場合があります。 次のような状況が考えられます。  
@@ -628,18 +628,18 @@ End Namespace
   
  ![カスタム UserControl](../designers/media/wpfintrofigure3.png "WPFIntroFigure3")  
   
- カスタム コントロールについて詳しくは、「 [コントロールの作成の概要](https://msdn.microsoft.com/en-us/library/ms745025\(v=vs.100\).aspx)」をご覧ください。  
+ カスタム コントロールについて詳しくは、「 [コントロールの作成の概要](/dotnet/framework/wpf/controls/control-authoring-overview)」をご覧ください。  
   
 ##  <a name="WPF_Best_Practices"></a> WPF のベスト プラクティス  
  WPF はすべての開発プラットフォームと同様、目的の結果を得るために、さまざまな方法で使用できます。 必要なユーザー エクスペリエンスを WPF アプリケーションが確実に提供し、オーディエンス一般の需要に応える 1 つの方法として、アクセシビリティ、グローバリゼーションとローカリゼーション、パフォーマンスに関するお勧めのベスト プラクティスがあります。 詳しくは、次のトピックをご覧ください。  
   
--   [ユーザー補助のベスト プラクティス](https://msdn.microsoft.com/en-us/library/aa350483\(v=vs.100\).aspx)ユーザー補助のベスト プラクティス  
+-   [ユーザー補助のベスト プラクティス](/dotnet/framework/ui-automation/accessibility-best-practices)ユーザー補助のベスト プラクティス  
   
--   [WPF のグローバリゼーションおよびローカリゼーションの概要](https://msdn.microsoft.com/en-us/library/ms788718\(v=vs.100\).aspx)  
+-   [WPF のグローバリゼーションおよびローカリゼーションの概要](/dotnet/framework/wpf/advanced/wpf-globalization-and-localization-overview)  
   
--   [WPF アプリケーションのパフォーマンスの最適化](https://msdn.microsoft.com/en-us/library/aa970683\(v=vs.100\).aspx)  
+-   [WPF アプリケーションのパフォーマンスの最適化](/dotnet/framework/wpf/advanced/optimizing-wpf-application-performance)  
   
--   [Windows Presentation Foundation のセキュリティ](https://msdn.microsoft.com/en-us/library/aa970906\(v=vs.100\).aspx)  
+-   [Windows Presentation Foundation のセキュリティ](/dotnet/framework/wpf/security-wpf)  
   
 ##  <a name="Summary"></a> まとめ  
  WPF とは、視覚的に美しいさまざまなクライアント アプリケーションを構築するための包括的なプレゼンテーション テクノロジです。 この概要では、WPF の主な機能を紹介しました。  
@@ -651,4 +651,4 @@ End Namespace
 ## <a name="see-also"></a>関連項目  
  [WPF の概要](../designers/getting-started-with-wpf.md)   
  [Windows Presentation Foundation での最新のデスクトップ アプリケーションの作成](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)   
- [Windows Presentation Foundation](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)
+ [Windows Presentation Foundation](/dotnet/framework/wpf/index)

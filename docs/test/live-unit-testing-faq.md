@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 61baf3bb-646f-4c5a-b7c0-a6bdff68f21c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de3ddc4288f2e14f0657f6bfb0ff3ee49ff7b5c9
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 4a585310f19a03524d73deeb863b080d1d335c6c
+ms.sourcegitcommit: 15907b980eadeaa646f010cb197cfd188579d0f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing についてよく寄せられる質問
 
@@ -226,7 +226,9 @@ Live Unit Testing は、ソース ファイルが変更されたことを検出�
 
 **回答:**
 
-Live Unit Testing は現在のところ、ライトウェイト ソリューション ロード機能とうまく連動しません。 テスト プロジェクトを少なくとも 1 つ読み込まないと作動しません。 プロジェクトを読み込むまで正常に作動しない理由は、現在のところ、Live Unit Testing は 1 つ以上のテスト プロジェクトを利用しなければ、読み込まれるテスト アダプター (MSTest、xUnit、NUnit) を参照できないことにあります。
+Live Unit Testing は現在のところ、ライトウェイト ソリューション ロード機能とうまく連動しません。 テスト プロジェクトを少なくとも 1 つ読み込まないと作動しません。 プロジェクトを読み込むまで正常に作動しない理由は、Live Unit Testing は 1 つ以上のテスト プロジェクトを利用しなければ、読み込まれるテスト アダプター (MSTest、xUnit、NUnit) を参照できないことにあります。
+
+注: Visual Studio 2017 バージョン 15.5 以降では、ライトウェイト ソリューション ロードを使用できなくなりました。 Visual Studio バージョン 15.5 以降の場合、マネージ コードを含む大規模なソリューションで、ライトウェイト ソリューション ロードなしでも以前よりはるかに速く読み込むことができます。
  
 ## <a name="why-does-live-unit-testing-does-not-capture-coverage-from-a-new-process-created-by-a-test"></a>Live Unit Testing がテストによって作成された新しいプロセスからカバレッジをキャプチャしないのはなぜですか?
  

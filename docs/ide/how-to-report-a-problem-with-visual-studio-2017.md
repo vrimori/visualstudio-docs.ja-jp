@@ -11,11 +11,11 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 ms.technology: vs-acquisition
-ms.openlocfilehash: aec5948ed985b6ff2abde47a48198cf1a67c4337
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.openlocfilehash: 283fec9bcaa4f678f30f3a0eb0dda667146b03b9
+ms.sourcegitcommit: 2c7f48ad6073a81fa927568793633f26cc1f0b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-2017"></a>Visual Studio 2017 で問題を報告する方法
 Visual Studio に問題が発生した場合は、Microsoft にお知らせください。 診断および修正を行うには、問題を以下のようにして報告してください。  
@@ -65,6 +65,12 @@ Visual Studio に問題が発生した場合は、Microsoft にお知らせく�
 ## <a name="submit-the-report"></a>レポートを送信します  
 ###  <a name="submit_the_report"></a>  
  **[送信]** ボタンをクリックして、イメージ、トレースやダンプ ファイルと共にレポートを送信します。 **[送信]** ボタンが灰色表示の場合、レポートのタイトルと説明が記載されていることを確認します。  
+
+## <a name="alternate-reporting"></a>代替レポート
+###  <a name="alternate_reporting"></a>  
+ Visual Studio のインストールを完了できない場合、または Visual Studio 内のフィードバック ツールにアクセスできない場合は、Visual Studio インストーラーからフィードバック ツールを入手することもできます。 Visual Studio インストーラーの右上隅にあるフィードバック アイコンをクリックしてから、この記事で概説されている手順に従います。
+
+ ![Visual Studio インストーラーの [フィードバックの送信] ボタンからフィードバック ツールを開くことができます](../install/media/report-a-problem.png)
 
 ## <a name="see-also"></a>関連項目  
  [ご意見](../ide/talk-to-us.md)

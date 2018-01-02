@@ -1,7 +1,7 @@
 ---
-title: "UWP アプリ用の Visual C++ DLL の単体テスト | Microsoft Docs"
+title: "UWP アプリ用の Visual C++ DLL をテストする方法 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/04/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-general
@@ -9,43 +9,42 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 24afc90a-8774-4699-ab01-6602a7e6feb2
 caps.latest.revision: "13"
-ms.author: douge
-manager: douge
-ms.openlocfilehash: a900c779401277e4b8694e75f69203fee82d73f0
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4fc133d96f8306b46e4d820b6f7256db8c471122
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/15/2017
 ---
-# <a name="unit-testing-a-visual-c-dll-for-uwp-apps"></a>UWP アプリ用の Visual C++ DLL の単体テスト
-このトピックでは、UWP アプリの C++ DLL の単体テストを作成する方法の 1 つについて説明します。RooterLib DLL は、指定した数値の平方根の概算を計算する関数を実装することによって、微積分の限界理論の不明瞭なメモリを示します。 この DLL を、ユーザーが数学で実行できる楽しい作業を提示する UWP アプリに組み込むことができます。  
+# <a name="how-to-test-a-visual-c-dll-for-uwp-apps"></a>UWP アプリ用の Visual C++ DLL をテストする方法 
+このトピックでは、C++ 用の Microsoft テスト フレームワークを使用して、ユニバーサル Windows プラットフォーム (UWP) アプリ用の C++ DLL の単体テストを作成する 1 つの方法について説明します。 RooterLib DLL は、指定した数値の平方根の概数を計算する関数を実装することによって、微積分の限界理論の不明瞭なメモリを示します。 この DLL を、ユーザーが数学で実行できる楽しい作業を提示する UWP アプリに組み込むことができます。  
   
  このトピックでは、開発の第一歩として単体テストを使用する方法を示します。 この方法ではまず、テスト対象のシステムの特定の動作を検証するテスト メソッドを作成し、テストに合格するコードを記述します。 後述する手順の順序を変更することにより、この方法を逆にして、テストするコードを最初に記述し、単体テストを作成することができます。  
   
  このトピックでは、テストする単体テストと DLL に 1 つの Visual Studio ソリューションと個別のプロジェクトも作成します。 また、DLL プロジェクトに単体テストを直接含めることも、単体テストと DLL ごとに個別のソリューションを作成することもできます。 使用できる構造体のヒントについては、「[テスト エクスプローラーを使用した既存の C++ アプリケーションの単体テスト](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)」をご覧ください。  
   
-##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
- このトピックでは、次のタスクを実行します。  
+##  <a name="In_this_topic"></a> このトピックの内容  
+
+ [ソリューションと単体テスト プロジェクトを作成する](#Create_the_solution_and_the_unit_test_project)  
   
- [ソリューションと単体テスト プロジェクトを作成する](#BKMK_Create_the_solution_and_the_unit_test_project)  
+ [テストがテスト エクスプ ローラーで実行されることを確認する](#Verify_that_the_tests_run_in_Test_Explorer)  
   
- [テストがテスト エクスプ ローラーで実行されることを確認する](#BKMK_Verify_that_the_tests_run_in_Test_Explorer)  
+ [DLL プロジェクトをソリューションに追加する](#Add_the_DLL_project_to_the_solution)  
   
- [DLL プロジェクトをソリューションに追加する](#BKMK_Add_the_DLL_project_to_the_solution)  
+ [DLL 関数をテスト コードに表示させる](#make_the_dll_functions_visible_to_the_test_code)  
   
- [DLL プロジェクトにテスト プロジェクトを結合する](#BKMK_Couple_the_test_project_to_the_dll_project)  
+ [テストを繰り返し増やして成功させる](#Iteratively_augment_the_tests_and_make_them_pass)  
   
- [テストを繰り返し増やして成功させる](#BKMK_Iteratively_augment_the_tests_and_make_them_pass)  
+ [失敗したテストをデバッグする](#Debug_a_failing_test)  
   
- [失敗したテストをデバッグする](#BKMK_Debug_a_failing_test)  
+ [テストを変更せずにコードをリファクタリングする](#Refactor_the_code_without_changing_tests)  
   
- [テストを変更せずにコードをリファクタリングする](#BKMK_Refactor_the_code_without_changing_tests)  
-  
-##  <a name="BKMK_Create_the_solution_and_the_unit_test_project"></a> ソリューションと単体テスト プロジェクトを作成する  
+##  <a name="Create_the_solution_and_the_unit_test_project"></a> ソリューションと単体テスト プロジェクトを作成する  
   
 1.  **[ファイル]** メニューの **[新規作成]** をポイントし、**[新しいプロジェクト]** をクリックします。  
   
-2.  [新しいプロジェクト] ダイアログで **[インストール済み]**、**[Visual C++]** の順に展開し、**[Windows ユニバーサル]** を選択します。 プロジェクト テンプレートの一覧の **[単体テスト ライブラリ (ユニバーサル Windows)]** を選択します。  
+2.  [新しいプロジェクト] ダイアログで **[インストール済み]**、**[Visual C++]** の順に展開し、**[UWP]** を選択します。 次に、プロジェクト テンプレートの一覧から **[単体テスト ライブラリ (UWP アプリ)]** を選択します。  
   
      ![C&#43;&#43; 単体テスト ライブラリの作成](../test/media/ute_cpp_windows_unittestlib_create.png "UTE_Cpp_windows_UnitTestLib_Create")  
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 11/02/2017
   
          テストが実行されると、各テスト クラスのインスタンスが作成されます。 テスト メソッドが呼び出される順序は決まっていません。 各モジュール、クラス、またはメソッドの前後に呼び出される特殊なメソッドを定義することができます。 詳細については、MSDN ライブラリの「[Microsoft.VisualStudio.TestTools.CppUnitTestFramework の使用](../test/using-microsoft-visualstudio-testtools-cppunittestframework.md)」をご覧ください。  
   
-##  <a name="BKMK_Verify_that_the_tests_run_in_Test_Explorer"></a> テストがテスト エクスプローラーで実行されることを確認する  
+##  <a name="Verify_that_the_tests_run_in_Test_Explorer"></a> テストがテスト エクスプローラーで実行されることを確認する  
   
 1.  幾らかのテスト コードを挿入します。  
   
@@ -86,7 +85,7 @@ ms.lasthandoff: 11/02/2017
   
      ![テスト エクスプ ローラー](../test/media/ute_cpp_testexplorer_testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")  
   
-##  <a name="BKMK_Add_the_DLL_project_to_the_solution"></a> DLL プロジェクトをソリューションに追加する  
+##  <a name="Add_the_DLL_project_to_the_solution"></a> DLL プロジェクトをソリューションに追加する  
   
 1.  ソリューション エクスプローラーでソリューション名を選択します。 ショートカット メニューの **[追加]** をポイントし、**[新しいプロジェクトの追加]** を選択します。  
   
@@ -146,7 +145,7 @@ ms.lasthandoff: 11/02/2017
   
     ```  
   
-##  <a name="BKMK_Couple_the_test_project_to_the_dll_project"></a> DLL プロジェクトにテスト プロジェクトを結合する  
+##  <a name="make_the_dll_functions_visible_to_the_test_code"></a> DLL 関数をテスト コードに表示させる  
   
 1.  RooterLibTests プロジェクトに RooterLib を追加します。  
   
@@ -199,7 +198,7 @@ ms.lasthandoff: 11/02/2017
   
  テストとコード プロジェクトをセット アップして、コード プロジェクトで関数を実行するテストを実行できることを確認しました。 ここで、実際のテストおよびコードの記述を開始できます。  
   
-##  <a name="BKMK_Iteratively_augment_the_tests_and_make_them_pass"></a> テストを繰り返し増やして成功させる  
+##  <a name="Iteratively_augment_the_tests_and_make_them_pass"></a> テストを繰り返し増やして成功させる  
   
 1.  新しいテストを追加します。  
   
@@ -260,7 +259,7 @@ ms.lasthandoff: 11/02/2017
 > [!TIP]
 >  一度に 1 つのテストを追加してコードを開発します。 各反復処理の後にすべてのテストが合格することを確認します。  
   
-##  <a name="BKMK_Debug_a_failing_test"></a> 失敗したテストをデバッグする  
+##  <a name="Debug_a_failing_test"></a> 失敗したテストをデバッグする  
   
 1.  **unittest1.cpp** に別のテストを追加します。  
   
@@ -330,7 +329,7 @@ ms.lasthandoff: 11/02/2017
   
  ![すべてのテストの成功](../test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")  
   
-##  <a name="BKMK_Refactor_the_code_without_changing_tests"></a> テストを変更せずにコードをリファクタリングする  
+##  <a name="Refactor_the_code_without_changing_tests"></a> テストを変更せずにコードをリファクタリングする  
   
 1.  `SquareRoot` 関数の計算全体を簡略化します。  
   

@@ -24,6 +24,7 @@
 ### [WPF の概要](getting-started-with-wpf.md)
 #### [WPF の概要](introduction-to-wpf.md)
 #### [チュートリアル: 初めての WPF デスクトップ アプリケーション](walkthrough-my-first-wpf-desktop-application2.md)
+#### [C# または Visual Basic を使用した WPF アプリの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)
 #### [WPF コミュニティ リソース](wpf-community-resources.md)
 #### [LINQ to XML による WPF のデータ バインディング](wpf-data-binding-with-linq-to-xml.md)
 ##### [LINQ to XML による WPF のデータ バインディングの概要](wpf-data-binding-with-linq-to-xml-overview.md)

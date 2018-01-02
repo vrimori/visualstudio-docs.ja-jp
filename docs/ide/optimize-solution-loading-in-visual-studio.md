@@ -1,32 +1,22 @@
 ---
-title: "Visual Studio のソリューション読み込みの最適化 | Microsoft Docs"
-ms.custom: 
-ms.date: 08/31/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- startup time [Visual Studio]
-- optimizing startup time [Visual Studio]
-- speed up start time [Visual Studio]
-ms.assetid: 84989983-84bc-4f81-97a8-2131e3a25138
-caps.latest.revision: "4"
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-f1_keywords: vs.performancecenter
-ms.technology: vs-ide-general
-ms.openlocfilehash: 2102fc026b566c89108f0d74dcf604020653e358
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+redirect_url: /visualstudio/ide/optimize-visual-studio-startup-time/
+ms.openlocfilehash: 6ba351d5b395caaddd12021b09f8792cd19b2905
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/15/2017
+---
+title: "Visual Studio のソリューション読み込みの最適化 | Microsoft Docs" ms.custom: "" ms.date: 08/31/2017 ms.reviewer: "" ms.suite: "" ms.tgt_pltfrm: "" ms.topic: "article" helpviewer_keywords: 
+  - "起動時間 [Visual Studio]"
+  - "起動時間の最適化 [Visual Studio]"
+  - "起動時間の短縮 [Visual Studio]" ms.assetid: 84989983-84bc-4f81-97a8-2131e3a25138 caps.latest.revision: 4 author: "gewarren" ms.author: "gewarren" manager: ghogen f1_keywords: 
+  - "vs.performancecenter" ms.technology: 
+  - "vs-ide-general"
 ---
 # <a name="optimize-solution-loading-in-visual-studio"></a>Visual Studio のソリューション読み込みの最適化
 多くのソリューションには多数のプロジェクトが含まれており、ソリューションの読み込みにかかる時間に影響があります。 ただしチーム環境の場合、開発者はプロジェクトの一部について作業し、個別のプロジェクトすべてを読み込む必要がないことが一般的です。
 
-Visual Studio 2017 は**ライトウェイト ソリューション ロード**をサポートしています。 Visual Studio 2017 でライトウェイト ソリューション ロード (LSL) モードが有効な場合、大規模なソリューション内のすべてのプロジェクトが読み込まれるのではなく、少数のプロジェクトが読み込まれます。 一般的に使用される IDE 機能のほとんどは LSL モードで動作し、ソリューション全体に対してビルド、検索、デバッグする機能も用意されています (LSL モードでサポートされていない主な機能は編集と続行です)。
+Visual Studio 2017 は**ライトウェイト ソリューション ロード**をサポートしています。 Visual Studio 2017 でライトウェイト ソリューション ロード (LSL) モードが有効な場合、大規模なソリューション内のすべてのプロジェクトが読み込まれるのではなく、少数のプロジェクトが読み込まれます。 一般的に使用される IDE 機能のほとんどは LSL モードで動作し、ソリューション全体に対してビルド、検索、デバッグする機能も用意されています (LSL モードでサポートされていない主な機能は編集と続行です)。  
 
 > [!NOTE]
 > このコンテンツは Visual Studio 2017 Update 3 に適用されます。
@@ -54,16 +44,13 @@ Visual Studio 2017 は**ライトウェイト ソリューション ロード**�
 
 ## <a name="how-does-lightweight-solution-load-work-behind-the-scenes"></a>ライトウェイト ソリューション ロードのしくみ
 
-ソリューションを読み込むと、Visual Studio に記録されているユーザーが前回開いたプロジェクトを基にして、そのプロジェクトのみが読み込まれます。 その他すべてのプロジェクトはソリューション エクスプローラーに表示されますが、読み込まれません。 プロジェクトを展開するか、プロジェクトを右クリックすると、そのプロジェクトが自動的に読み込まれます。 通常、プロジェクトの自動読み込みにかかる時間は 1 秒未満ですが、プロジェクトによっては長くかかることがあります。
-ただし、Visual Studio では、ソリューション全体を操作する検索、デバッグ、ビルド、ソース管理などの IDE 機能を使用できます。 たとえば、ライトウェイト モードで少数のプロジェクトのみを読み込んでいる場合でも、ソリューション全体を検索できます。 
+ソリューションを読み込むと、Visual Studio に記録されているユーザーが前回開いたプロジェクトを基にして、そのプロジェクトのみが読み込まれます。 その他すべてのプロジェクトはソリューション エクスプローラーに表示されますが、読み込まれません。 プロジェクトを展開するか、プロジェクトを右クリックすると、そのプロジェクトが自動的に読み込まれます。 通常、プロジェクトの自動読み込みにかかる時間は 1 秒未満ですが、プロジェクトによっては長くかかることがあります。 ただし、Visual Studio では、ソリューション全体を操作する検索、デバッグ、ビルド、ソース管理などの IDE 機能を使用できます。 たとえば、ライトウェイト モードで少数のプロジェクトのみを読み込んでいる場合でも、ソリューション全体を検索できます。 
 
 展開するプロジェクト数が増えると、展開されているプロジェクトの一覧が Visual Studio に記録されます。 ソリューションを開き直すと、前回展開していたプロジェクトが自動的に読み込まれます。
 
 ## <a name="visual-studio-prompts-developers-likely-to-see-significant-performance-gains"></a>大幅にパフォーマンスが向上する可能性を開発者に表示する Visual Studio の機能
 
 Visual Studio のテレメトリを基にして、プロジェクト数が 30 個を超える大規模なソリューションで LSL モードを活用することができます。 そのため、大規模なソリューションで LSL モードを試すことをお勧めしています。 初めて LSL を試す開発者の多くは、日常的に利用するようになっています。 
-
-Microsoft は Visual Studio の使用状況テレメトリを常に確認し、開発者が最大限に活用できるように LSL モードを提供するためのヒューリスティックを改善しています。 
 
 ## <a name="visual-studio-makes-recommendations-to-turn-on-lightweight-solution-load-based-on-heuristics"></a>Visual Studio は、ヒューリスティックに基づいてライトウェイト ソリューション ロードを有効にすることをお勧めしています。
 
@@ -131,4 +118,4 @@ LSL モードで動作せず、追加のプロジェクトやソリューショ�
 ソリューション読み込み時間のパフォーマンスを最適化する開発者向けの機能が追加されました。 これは新機能なので、積極的にお客様のフィードバックを確認し、既知の問題に対処しています。 皆様からのフィードバックをお待ちしております。 Visual Studio ソリューション読み込み最適化チーム (lslsupport@microsoft.com) まで電子メールをお送りください。
 
 ## <a name="see-also"></a>関連項目
-[Visual Studio のパフォーマンスのヒントとテクニック](../ide/visual-studio-performance-tips-and-tricks.md)
+[Visual Studio のパフォーマンスのヒントとテクニック](../ide/visual-studio-performance-tips-and-tricks.md)  

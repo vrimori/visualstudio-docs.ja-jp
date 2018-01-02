@@ -13,11 +13,11 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9e2422774a9bf588b77aeaff81f8529906b68549
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.openlocfilehash: 4899f59362f623f6ecf92927e8a15ed4762fa367
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="profiling-feature-tour"></a>プロファイリング機能ツアー
 
@@ -152,7 +152,7 @@ CPU 使用量ツールやメモリ使用量ツールに現在入っていない�
 |パフォーマンス ツール|Windows デスクトップ|Windows ユニバーサル/ストア|ASP.NET/ASP.NET Core|  
 |----------------------|---------------------|------------------------------|-------------|  
 |[メモリ使用量](../profiling/memory-usage.md)|可|可|可|  
-|[CPU 使用率](../profiling/cpu-usage.md)|可|可|可|  
+|[CPU 使用率](../profiling/cpu-usage.md)|可|可|可 (.NET Core/ASP.NET Core の場合は no)|  
 |[GPU 使用率](../debugger/gpu-usage.md)|可|可|no|  
 |[アプリケーションのタイムライン](../profiling/application-timeline.md)|可|可|no|  
 |[パフォーマンスのヒント](../profiling/perftips.md)|可|XAML の場合は可、HTML の場合は不可|可|  

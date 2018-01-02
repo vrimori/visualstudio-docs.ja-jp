@@ -10,7 +10,7 @@
 # 使い方ガイド
 ## [R プロジェクト](projects.md)
 ### [パッケージ マネージャー](package-manager.md)
-### [SQL Server Integration](sql-server.md)
+### [SQL Server の統合](sql-server.md)
 ## [コードの編集](code-editing.md)
 ### [IntelliSense](code-intellisense.md)
 ### [Lint](code-linting.md)

@@ -1,34 +1,33 @@
 ---
 title: "R Tools for Visual Studio でのリモート ワークスペース | Microsoft Docs"
 ms.custom: 
-ms.date: 06/30/2017
+ms.date: 12/04/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 5778c9cf-564d-47b0-8d64-e5dc09162479
 caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: aaea147589f274a5b3e1de4071f980b05e8f6745
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: d36f49a9b2865c89bd1551ded0d23cf541ff7840
+ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="setting-up-remote-workspaces"></a>リモート ワークスペースの設定
 
-このトピックでは、SSL と適切な R サービスでリモート サーバーを構成する方法について説明します。 これにより、R Tools for Visual Studio (RTVS) はそのサーバー上のリモート ワークスペースに接続できます。 
+このトピックでは、SSL と適切な R サービスでリモート サーバーを構成する方法について説明します。 これにより、R Tools for Visual Studio (RTVS) はそのサーバー上のリモート ワークスペースに接続できます。
 
 - [リモート コンピューターの要件](#remote-computer-requirements)
 - [SSL 証明書のインストール](#install-an-ssl-certificate)
 - [Windows での SSL 証明書のインストール](#install-an-ssl-certificate-on-windows)
 - [Ubuntu での SSL 証明書のインストール](#install-an-ssl-certificate-on-ubuntu)
 - [Windows での R Services のインストール](#install-r-services-on-windows)
-- [Ubuntu での R Services のインストール](#install-r-services-on-ubuntu)
+- [Linux での R Services のインストール](#install-r-services-on-Linux)
 - [R Services の構成](#configure-r-services)
 - [トラブルシューティング](#troubleshooting)
 
@@ -50,9 +49,10 @@ RTVS を使用するには、リモート サーバーとのすべての通信�
 詳細な背景については、[Wikipedia の公開鍵証明書のページ](https://en.wikipedia.org/wiki/Public_key_certificate)を参照してください。
 
 ## <a name="install-an-ssl-certificate-on-windows"></a>Windows での SSL 証明書のインストール
+
 SSL 証明書は、Windows に手動でインストールする必要があります。 以下の手順に従って、SSL 証明書をインストールします。
 
-### <a name="obtaining-a-self-signed-certificate"></a>自己署名証明書の取得
+### <a name="obtaining-a-self-signed-certificate-windows"></a>自己署名証明書の取得 (Windows)
 
 信頼された証明書がある場合は、このセクションはスキップしてください。 信頼できる証明機関の証明書と比較すると、自己署名証明書は自分の身分証明書を作成するようなものです。 当然ながら、信頼できる証明機関の場合よりも作業は非常に単純ですが、強力な認証がありません。つまり、攻撃者が自分の証明書で未署名の証明書を上書きして、クライアントとサーバー間のすべてのトラフィックをキャプチャすることができます。 したがって、"*そのため、自己署名証明書は、信頼できるネットワーク上で、テスト シナリオの場合に限定して使用し、運用環境には使用しないことが推奨されます*"。
 
@@ -83,7 +83,6 @@ SSL 証明書は、Windows に手動でインストールする必要があり�
 
 ![証明書のインポート コマンド](media/workspaces-remote-certificate-import.png)
 
-
 ### <a name="granting-permissions-to-read-the-ssl-certificates-private-key"></a>SSL 証明書の秘密キーを読み取るアクセス許可の付与
 
 証明書をインポートしたら、以下の手順で説明するように秘密キーを読み取るアクセス許可を `NETWORK SERVICE` アカウントに付与します。 `NETWORK_SERVICE` は、R Services ブローカーの実行に使用されるアカウントです。R Services ブローカーは、サーバー コンピューターに対する受信 SSL 接続を終了するサービスです。
@@ -98,23 +97,25 @@ SSL 証明書は、Windows に手動でインストールする必要があり�
 1. **[OK]** を 2 回選択してダイアログを閉じて変更を確定します。
 
 ## <a name="install-an-ssl-certificate-on-ubuntu"></a>Ubuntu での SSL 証明書のインストール
+
 `rtvs-daemon` パッケージは、インストールの一部として自己署名証明書を既定でインストールします。
 
-### <a name="obtaining-a-self-signed-certificate"></a>自己署名証明書の取得
+### <a name="obtaining-a-self-signed-certificate-ubuntu"></a>自己署名証明書の取得 (Ubuntu)
 
 自己署名証明書を使用する利点とリスクは、Windows の説明を参照してください。 `rtvs-daemon` パッケージはインストール時に自己署名証明書を生成および構成します。 これは、自動生成された自己署名証明書を置換する場合にのみ行う必要があります。
 
 自己署名証明書を発行するには、次の手順を実行します。
 1. SSH または Linux コンピューターにログインします。
-2. `ssl-cert` パッケージをインストールします。
+
+1. `ssl-cert` パッケージをインストールします。
     ```sh
     sudo apt-get install ssl-cert
     ```
-3. `make-ssl-cert` を実行して既定の自己署名 SSL 証明書を生成します。
+1. `make-ssl-cert` を実行して既定の自己署名 SSL 証明書を生成します。
     ```sh
     sudo make-ssl-cert generate-default-snakeoil --force-overwrite
     ```
-4. 生成されたキーと PEM ファイルを PFX に変換します。 生成された PFX はホーム フォルダーにあります。
+1. 生成されたキーと PEM ファイルを PFX に変換します。 生成された PFX はホーム フォルダーにあります。
     ```sh
     openssl pkcs12 -export -out ~/ssl-cert-snakeoil.pfx -inkey /etc/ssl/private/ssl-cert-snakeoil.key -in /etc/ssl/certs/ssl-cert-snakeoil.pem -password pass:SnakeOil
     ```
@@ -137,7 +138,7 @@ SSL 証明書ファイルのパス (PFX へのパス) を `/etc/rtvs/rtvsd.confi
     ```
 
 ファイルを保存し、デーモン `sudo systemctl restart rtvsd` を再起動します。
-    
+
 ## <a name="install-r-services-on-windows"></a>Windows での R Services のインストール
 
 R コードを実行するには、次のようにリモート コンピューターに R インタープリターがインストールされている必要があります。
@@ -161,9 +162,9 @@ R コードを実行するには、次のようにリモート コンピュー�
 - **R Host Broker Service** は、Visual Studio と、コンピューター上で R コードが実行されるプロセス間のすべての HTTPS トラフィックを処理します。
 - **R User Profile Service** は、Windows ユーザー プロファイルの作成を処理する特権を持つコンポーネントです。 このサービスは、新しいユーザーが R サーバー コンピューターに初めてログオンしたときに呼び出されます。
 
-これらのサービスは、サービス管理コンソール (`compmgmt.msc`) で確認できます。  
+これらのサービスは、サービス管理コンソール (`compmgmt.msc`) で確認できます。
 
-## <a name="install-r-services-on-ubuntu"></a>Ubuntu での R Services のインストール
+## <a name="install-r-services-on-linux"></a>Linux での R Services のインストール
 
 R コードを実行するには、次のようにリモート コンピューターに R インタープリターがインストールされている必要があります。
 
@@ -174,29 +175,18 @@ R コードを実行するには、次のようにリモート コンピュー�
 
     いずれも機能は同じですが、Microsoft R Open の場合、さらにハードウェア アクセラレータによる [Intel Math Kernel Library](https://software.intel.com/intel-mkl) の線形代数ライブラリの提供を利用できます。
 
-1. インストール スクリプト [RTVS デーモン パッケージ](https://aka.ms/r-remote-services-linux-binary-current)をダウンロードして展開し、実行します。 これにより必要なパッケージ、依存関係、および RTVS デーモンがインストールされます。
-
-    - ダウンロード: `wget -O rtvs-daemon.tar.gz https://aka.ms/rtvs-daemon-current`
-    - 展開: `tar -xvzf rtvs-daemon.tar.gz`
-    - インストーラーの実行: `sudo ./rtvs-install`  Dotnet パッケージのインストールでは、新しい信頼された署名キーを追加する必要があります。 サイレント インストールまたは自動化には、このコマンド `sudo ./rtvs-install -s` を使用します。
-    
-
-1. デーモンの有効化と起動:
-
-    - 有効化: `sudo systemctl enable rtvsd`
-    - デーモンの起動: `sudo systemctl start rtvsd`
-
-1. デーモンが実行されているかどうかを確認し、このコマンド `ps -A -f | grep rtvsd` を実行します。 `rtvssvc` ユーザーとして実行中のプロセスが表示されます。 この Linux コンピューターへの URL を使用して、R Tools for Visual Studio からこれに接続できるようになります。
-
-`rtvs-daemon` を構成するには、`man rtvsd` を参照してください。
+1. Ubuntu の物理コンピューター、Azure Ubuntu VM、Windows Subsystem for Linux (WSL)、Docker コンテナー (Azure Container Repository で実行されているものを含む) に関する、「[Remote R Service for Linux](workspaces-remote-r-service-for-linux.md)」 (Linux 用のリモート R サービス) の手順に従います。
 
 ## <a name="configure-r-services"></a>R Services の構成
 
 リモート コンピューター上で R Services が実行されている場合、ユーザー アカウントを作成し、ファイアウォール規則を設定し、Azure ネットワークを構成し、SSL 証明書を構成する必要があります。
 
 1. ユーザー アカウント: リモート コンピューターにアクセスする各ユーザーのアカウントを作成します。 標準の (特権のない) ローカル ユーザー アカウントを作成するか、R サーバー コンピューターをドメインに参加させて、適切なセキュリティ グループを `Users` セキュリティ グループに追加することができます。
+
 1. ファイアウォール規則: `R Host Broker` の既定では、TCP ポート 5444 をリッスンしています。 そのため、受信トラフィックと送信トラフィックの両方に有効な Windows ファイアウォール規則があるようにします (送信は、パッケージのインストールなどのシナリオに必要です)。  組み込みの Windows ファイアウォールの場合、R Services インストーラーではこれらの規則が自動的に設定されます。 ただし、サードパーティのファイアウォールを使用している場合、`R Host Broker` 用のポート 5444 を手動で開きます。
+
 1. Azure の構成: リモート コンピューターが Azure 上の仮想マシンの場合、Windows ファイアウォールとは独立している Azure ネットワーク内の受信トラフィック用にもポート 5444 を開きます。 詳細については、Azure ドキュメントの「[ネットワーク セキュリティ グループによるネットワーク トラフィックのフィルタリング](https://docs.microsoft.com/azure/virtual-network/virtual-networks-nsg)」を参照してください。
+
 1. 読み込む SSL 証明書を R Host Broker に指示します。イントラネット サーバーに証明書をインストールしている場合、サーバーの完全修飾ドメイン名は NETBIOS 名と同じ可能性があります。 この例では、読み込まれている既定の証明書なので、実行が必要なことはありません。
 
     ただし、インターネットに接続するサーバー (Azure VM など) に証明書をインストールしている場合、サーバーの完全修飾ドメイン名 (FQDN) を使用します。これは、インターネットに接続するサーバーの FQDN が NETBIOS 名と同じではなくなるためです。
@@ -224,18 +214,19 @@ R コードを実行するには、次のようにリモート コンピュー�
 
 考えられる理由は 3 つあります。
 
--   [.NET Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49981) 以降がコンピューターにインストールされていません。
--   ポート 5444 上の受信接続と送信接続の両方について、`Microsoft.R.Host.Broker` と `Microsoft.R.Host` のファイアウォール規則が有効ではありません。
--   `CN=<remote-machine-name>` の SSL 証明書がインストールされていませんでした。
+- [.NET Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49981) 以降がコンピューターにインストールされていません。
+- ポート 5444 上の受信接続と送信接続の両方について、`Microsoft.R.Host.Broker` と `Microsoft.R.Host` のファイアウォール規則が有効ではありません。
+- `CN=<remote-machine-name>` の SSL 証明書がインストールされていませんでした。
 
-上記の変更を行った後にコンピューターを再起動します。 次に、タスク マネージャー ([サービス] タブ) または `services.msc` で `RHostBrokerService` と `RUserPofileService` が実行されていることを確認します。
+上記の変更を行った後にコンピューターを再起動します。 次に、タスク マネージャー ([サービス] タブ) または `services.msc` で `RHostBrokerService` と `RUserProfileService` が実行されていることを確認します。
 
 **Q.R サーバーに接続しているときに、[R インタラクティブ] ウィンドウに "401 アクセスは拒否されました" と表示されるのはなぜですか?**
 
 考えられる理由は 2 つあります。
 
 - 高い可能性で、`NETWORK SERVICE` アカウントが SSL 証明書の秘密キーへのアクセス権を持っていません。 前述の手順に従って、`NETWORK SERVICE` に秘密キーへのアクセス権を付与してください。
-- `seclogon` サービスが実行されていることを確認します。 `services.msc` を使用して、`seclogon` が自動起動するように構成します。                                                         
+- `seclogon` サービスが実行されていることを確認します。 `services.msc` を使用して、`seclogon` が自動起動するように構成します。
+
 **Q.R サーバーに接続しているときに、[R インタラクティブ] ウィンドウに "404 見つかりません" と表示されるのはなぜですか?**
 
 おそらく、このエラーは Visual C++ 再頒布可能ライブラリが存在しないことが原因です。 [R インタラクティブ] ウィンドウで、ライブラリ (DLL) の不足に関するメッセージがあるかどうかを確認します。 次に、VS 2015 再頒布可能ファイルがインストールされ、R もインストールされていることを確認します。

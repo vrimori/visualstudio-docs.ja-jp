@@ -1,10 +1,10 @@
 ---
 title: "インストールの問題のトラブルシューティング | Microsoft Docs"
 description: "ときには、問題が発生してしまうことがあります。 Visual Studio のインストールまたはアップグレードが失敗した場合、このページが役に立ちます。"
-ms.date: 11/08/2017
+ms.date: 11/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-install
+ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 ms.assetid: 556EDD3F-E365-43EE-B3DD-03AA4353F75B
 author: timsneath
-ms.author: tims
+ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: f0f71dab64a99965facac9ccaa0fff9b53a6e3f6
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.openlocfilehash: 4c864a05b267889720ba64a6427861aa2c42e3b2
+ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="troubleshooting-visual-studio-2017-installation-and-upgrade-issues"></a>Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング
 
@@ -37,7 +37,8 @@ Visual Studio インストーラーには、Microsoft が修正に取り組ん�
 ### <a name="step-3---delete-the-visual-studio-installer-directory-to-fix-upgrade-problems"></a>手順 3 - Visual Studio インストーラーのディレクトリを削除してアップグレードの問題を修正する
 Visual Studio インストーラーのブートストラップは、Visual Studio インストーラーの残りをインストールする最小限の軽量な実行可能ファイルです。 Visual Studio インストーラー ファイルを削除して、ブートストラップを再実行すると、いくつかの更新エラーを解決できる場合があります。
 
-**注:** 次のアクションを実行すると、Visual Studio インストーラー ファイルが再インストールされ、インストール メタデータがリセットされます。
+>[!NOTE]
+次のアクションを実行すると、Visual Studio インストーラー ファイルが再インストールされ、インストール メタデータがリセットされます。
 
 1. Visual Studio インストーラーを閉じます。
 2. Visual Studio インストーラーのディレクトリを削除します。 通常、ディレクトリは `C:\Program Files (x86)\Microsoft Visual Studio\Installer` です。
@@ -57,7 +58,7 @@ Visual Studio インストーラーのブートストラップは、Visual Studi
 最後の手段として、[Visual Studio を削除](remove-visual-studio.md)し、すべてのインストール ファイルと製品情報を削除できます。
 
 1. 「[Visual Studio の削除](remove-visual-studio.md)」の説明に従ってください。
-2. 「[手順 3 - Visual Studio インストーラーのディレクトリを削除してアップグレードの問題を修正する](#step-3--delete-the-visual-studio-installer-directory-to-fix-upgrade-problems)」で説明したブートストラップを再実行します。
+2. 「[手順 3 - Visual Studio インストーラーのディレクトリを削除してアップグレードの問題を修正する](#step-3---delete-the-visual-studio-installer-directory-to-fix-upgrade-problems)」で説明したブートストラップを再実行します。
 3. Visual Studio のインストールまたは更新を再度試します。
 
 ### <a name="step-6---contact-us-optional"></a>手順 6 - 問い合わせる (省略可能)
@@ -88,10 +89,10 @@ Microsoft サポートに連絡する場合、[Microsoft Visual Studio と .NET 
 
 ## <a name="more-support-options"></a>その他のサポート オプション
 
-Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
+他のどの手順でも正常にインストールできない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://www.visualstudio.com/vs/support/#talktous)をご覧ください。
 
 他のいくつかのオプションを次に示します。
-
+* Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
 * [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。
 * [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます  (これには [GitHub](https://github.com/) アカウントが必要です)。

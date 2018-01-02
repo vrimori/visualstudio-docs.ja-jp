@@ -1,6 +1,6 @@
 # [概要](python-in-visual-studio.md)
 # [インストール](installation.md)
-# クイック スタート
+# クイックスタート
 ## [既存のコードからプロジェクトを作成する](quickstart-01-project-from-existing.md)
 ## [テンプレートからプロジェクトを作成する](quickstart-02-project-from-template.md)
 ## [リポジトリからプロジェクトを作成する](quickstart-03-project-from-repository.md)
@@ -14,7 +14,7 @@
 ## [5 - パッケージのインストールと Python 環境の管理](vs-tutorial-01-05.md)
 ## [6 - Git の使用](vs-tutorial-01-06.md)
 # 概念
-## [Python の環境](python-environments.md)
+## [Python 環境](python-environments.md)
 ## [Python プロジェクト](python-projects.md)
 ### [Web プロジェクト テンプレート](template-web.md)
 ### [Django Web プロジェクト テンプレート](template-django.md)
@@ -28,7 +28,7 @@
 ## [対話型 Python (REPL)](interactive-repl.md)
 ### [IPython REPL の使用](interactive-repl-ipython.md)
 ## [デバッグ](debugging.md)
-### [クロス プラットフォーム リモート デバッグ](debugging-cross-platform-remote.md)
+### [クロスプラットフォーム リモート デバッグ](debugging-cross-platform-remote.md)
 ## Azure App Service の使用
 ### [Azure App Service での Python の管理](managing-python-on-azure-app-service.md)
 ### [Azure App Service への発行](publishing-to-azure.md)
@@ -36,7 +36,7 @@
 ### [Azure リモート デバッグのトラブルシューティング](debugging-azure-remote-troubleshooting.md)
 ## C++ の操作
 ### [Python 向け C++ 拡張機能の作成](cpp-and-python.md)
-### [Python/C++ 混合モード デバッグ](debugging-mixed-mode.md)
+### [Python と C++ の混合モード デバッグ](debugging-mixed-mode.md)
 ### [混合モード デバッグのシンボル](debugging-symbols-for-mixed-mode.md)
 ## [プロファイル](profiling.md)
 ## [単体テスト](unit-testing.md)

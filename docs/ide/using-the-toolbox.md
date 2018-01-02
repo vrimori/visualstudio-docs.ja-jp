@@ -25,29 +25,29 @@ helpviewer_keywords:
 - Visual Studio, toolbox
 - toolbox, tabs
 - toolbox
-ms.assetid: 82e7cb43-4d0b-4e17-b7b0-43f96c22c3c2
-caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f0945c5618e457005c0fba7e229b8e530efe6c74
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 9290f2dbaae27bef7934d8fd619b4ee5355f4ec3
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="using-the-toolbox"></a>ツールボックスの使用
-ツールボックスを使用すると、コントロールなどの項目をプロジェクトに追加できます。 使用しているデザイナー画面にさまざまなコントロールをドラッグ アンド ドロップし、コントロールのサイズや位置を変更できます。  
-  
- ツールボックスは、XAML ファイルのデザイナー ビューなど、デザイナー ビューと組み合わせて表示されます。 ツールボックスには、現在のデザイナーで使用できるコントロールのみが表示されます。  
-  
- プロジェクトが対象とする .NET Framework バージョンも、ツールボックスに表示されるコントロール セットに影響します。 既定では、[!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)] プロジェクトは .NET Framework 4.5.1 を対象とします。 プロジェクトが別のバージョンの .NET Framework を対象とするように設定するには、**ソリューション エクスプローラー**でプロジェクト ノードを選択し、**[プロパティ]、[アプリケーション]、[対象のフレームワーク]** の順にクリックします。  
-  
-## <a name="managing-the-toolbox-and-its-controls"></a>ツールボックスと含まれるコントロールの管理  
- 既定では、ツールボックスは、Visual Studio IDE の左側に沿って折りたたまれており、カーソルをそこに移動すると開きます。 カーソルを移動したときに開いたままになるように、ツールボックスを固定することもできます (ツールボックス ツール バーの **[ピン]** アイコンをクリックします)。 また、ツールボックス ウィンドウをドッキング解除して、画面上の任意の場所にドラッグすることもできます。 ツールボックス ツール バーを右クリックし、いずれかのオプションを選択することで、ツールボックスのドッキング、ドッキング解除、および非表示を設定できます。  
-  
- コンテキスト メニューの次のコマンドを使用すると、ツールボックス タブの項目を再配置することも、カスタム タブやカスタム項目を追加することもできます。  
-  
+
+ツールボックスを使用すると、コントロールなどの項目をプロジェクトに追加できます。 使用しているデザイナー画面にさまざまなコントロールをドラッグ アンド ドロップし、コントロールのサイズや位置を変更できます。
+
+ツールボックスは、XAML ファイルのデザイナー ビューなど、デザイナー ビューと組み合わせて表示されます。 ツールボックスには、現在のデザイナーで使用できるコントロールのみが表示されます。
+
+プロジェクトが対象とする .NET Framework バージョンも、ツールボックスに表示されるコントロール セットに影響します。 プロジェクトが別のバージョンの .NET Framework を対象とするように設定するには、**ソリューション エクスプローラー**でプロジェクト ノードを選択し、**[プロパティ]、[アプリケーション]、[対象のフレームワーク]** の順にクリックします。
+
+## <a name="managing-the-toolbox-and-its-controls"></a>ツールボックスと含まれるコントロールの管理
+
+既定では、ツールボックスは、Visual Studio IDE の左側に沿って折りたたまれており、カーソルをそこに移動すると開きます。 カーソルを移動したときに開いたままになるように、ツールボックスを固定することもできます (ツールボックス ツール バーの **[ピン]** アイコンをクリックします)。 また、ツールボックス ウィンドウをドッキング解除して、画面上の任意の場所にドラッグすることもできます。 ツールボックス ツール バーを右クリックし、いずれかのオプションを選択することで、ツールボックスのドッキング、ドッキング解除、および非表示を設定できます。
+
+コンテキスト メニューの次のコマンドを使用すると、ツールボックス タブの項目を再配置することも、カスタム タブやカスタム項目を追加することもできます。
+
 -   **[項目名の変更]** - 選択された項目の名前を変更します。  
   
 -   **[すべて表示]** - 使用可能なコントロールをすべて (現在のデザイナーに適用されるコントロール以外も) 表示します。  
@@ -65,6 +65,11 @@ ms.lasthandoff: 10/31/2017
 -   **[上へ移動]** - 選択した項目を上へ移動します。  
   
 -   **[下へ移動]** - 選択した項目を下へ移動します。  
-  
-## <a name="creating-and-distributing-custom-toolbox-controls"></a>カスタム ツールボックス コントロールの作成と配布  
- カスタム ツールボックス コントロールを Visual Basic または Visual C# で作成して、[Windows Presentation Foundation](../extensibility/creating-a-wpf-toolbox-control.md) または [Windows フォーム](../extensibility/creating-a-windows-forms-toolbox-control.md)に基づくプロジェクト テンプレートで開始できます。 これで、[ツールボックス コントロール インストーラー](http://download.microsoft.com/download/8/3/6/836657BD-9CCB-4ED4-B9D2-FB769473B284/TCI_whitepaper.docx)を使用してコントロールをチームメイトに配信したり、Web 上に公開したりできるようになります。
+
+## <a name="creating-and-distributing-custom-toolbox-controls"></a>カスタム ツールボックス コントロールの作成と配布
+
+カスタム ツールボックス コントロールを Visual Basic または Visual C# で作成して、[Windows Presentation Foundation](../extensibility/creating-a-wpf-toolbox-control.md) または [Windows フォーム](../extensibility/creating-a-windows-forms-toolbox-control.md)に基づくプロジェクト テンプレートで開始できます。 これで、[ツールボックス コントロール インストーラー](http://download.microsoft.com/download/8/3/6/836657BD-9CCB-4ED4-B9D2-FB769473B284/TCI_whitepaper.docx)を使用してコントロールをチームメイトに配信したり、Web 上に公開したりできるようになります。
+
+## <a name="see-also"></a>関連項目
+
+[コード エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)

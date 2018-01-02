@@ -15,11 +15,11 @@ ms.assetid: c191de3e-3f3b-471e-b828-29ec24e80e2c
 caps.latest.revision: "62"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: e6e0b55e86130f316c09583d4a52e1ad3dc22608
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.openlocfilehash: 7d4b3634f651cd8fc0ebc9c2e5254914a62e3771
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="unit-test-your-code"></a>コードの単体テスト
 単体テストを実行することにより、開発者およびテスト担当者は、[!INCLUDE[csharp_current_short](../misc/includes/csharp_current_short_md.md)]、[!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)]、および [!INCLUDE[cpp_current_short](../misc/includes/cpp_current_short_md.md)] のプロジェクトでクラスのメソッドに論理エラーがないかどうかをすばやく確認できます。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/02/2017
   
 2.  **マネージ コード用の Microsoft 単体テスト フレームワーク。** マネージ コード用の Microsoft 単体テスト フレームワークは、Visual Studio と共にインストールされ、.NET コードをテストするためのフレームワークを提供します。  
   
-3.  **C++ 用の Microsoft 単体テスト フレームワーク。** C++ 用の Microsoft 単体テスト フレームワークは、Visual Studio と共にインストールされ、ネイティブ コードをテストするためのフレームワークを提供します。  
+3.  **C++ 用の Microsoft 単体テスト フレームワーク。** C++ 用の Microsoft 単体テスト フレームワークは、Visual Studio と共にインストールされ、ネイティブ コードをテストするためのフレームワークを提供します。  Google Test、Boost.Test、CTest の各フレームワークも Visual Studio に含まれており、サードパーティ製のアダプターを追加のテスト フレームワークで使用できます。 詳細については、「[C/C++ 用の単体テストの記述](writing-unit-tests-for-c-cpp.md)」を参照してください。 
   
 4.  **コード カバレッジ ツール。** テスト エクスプローラーで、単体テストが 1 つのコマンドから実行する製品コードの量を確認できます。  
   

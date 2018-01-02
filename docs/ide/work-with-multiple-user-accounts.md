@@ -12,66 +12,73 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 42a66b69bb2c1736ddf3cb4c07e8ef8be86ed4d4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: c4ab874a59ad67e42e29270ac5f3da45816177a4
+ms.sourcegitcommit: cc288456329aefca1fdaa7ce74751ce195985c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="work-with-multiple-user-accounts"></a>複数のユーザー アカウントを使って作業する
+
 複数の Microsoft アカウントや職場または学校のアカウントを所有している場合、そのすべてを Visual Studio に追加すると、個別にサインインしなくても、すべてのアカウントのリソースにアクセスできます。 現在、Azure、Application Insights、Team Foundation Server、Office 365 サービスが、簡素化されたサインイン エクスペリエンスをサポートしています。 今後、他のサービスが使用可能になる可能性があります。
 
- 1 台のコンピューターで複数のアカウントを追加した後、別のコンピューターで Visual Studio にサインインすると、そのアカウント セットがユーザーと共に移動します。 アカウント名は移動しますが資格情報は移動しないことに注意することが重要です。 したがって、新しいコンピューターでそのリソースを初めて使用しようとすると、他のアカウントの資格情報の入力を求められます。  
+1 台のコンピューターで複数のアカウントを追加した後、別のコンピューターで Visual Studio にサインインすると、そのアカウント セットがユーザーと共に移動します。 アカウント名は移動しますが資格情報は移動しないことに注意することが重要です。 したがって、新しいコンピューターでそのリソースを初めて使用しようとすると、他のアカウントの資格情報の入力を求められます。
 
- このチュートリアルは複数のアカウントを Visual Studio に追加する方法について説明しており、それらのアカウントからアクセス可能なリソースを表示する方法については、 **[接続済みサービスの追加]** ダイアログ、 **サーバー エクスプローラー**、および **チーム エクスプローラー**などに反映されています。  
+このチュートリアルは複数のアカウントを Visual Studio に追加する方法について説明しており、それらのアカウントからアクセス可能なリソースを表示する方法については、 **[接続済みサービスの追加]** ダイアログ、 **サーバー エクスプローラー**、および **チーム エクスプローラー**などに反映されています。
 
-## <a name="sign-in-to-visual-studio"></a>Visual Studio にサインイン  
+## <a name="sign-in-to-visual-studio"></a>Visual Studio にサインイン
 
-- Microsoft アカウントまたは組織アカウントで、Visual Studio にサインインします。 ウィンドウの右上隅に、次のようにユーザー名が表示されます。  
+- Microsoft アカウントまたは組織アカウントで、Visual Studio にサインインします。 ウィンドウの右上隅に、次のようにユーザー名が表示されます。
 
-     ![現在ログインしているユーザー](../ide/media/vs2015_username.png "VS2015_UserName")  
+     ![現在ログインしているユーザー](../ide/media/vs2015_username.png "VS2015_UserName")
 
-### <a name="access-your-azure-account-in-server-explorer"></a>サーバー エクスプローラーで Azure アカウントにアクセス  
- **Ctrl + Alt + S** を押して **サーバー エクスプローラー**を開きます。 Azure アイコンを選択して展開すると、Visual Studio にログインするときに使用した ID に関連付けられた Azure アカウントで利用可能なリソースが表示されます。 次のような内容が表示されます (自分のリソースを表示する場合を除く)。
+### <a name="access-your-azure-account-in-server-explorer"></a>サーバー エクスプローラーで Azure アカウントにアクセス
 
- ![サーバー エクスプローラーでの Azure Tools ノードの展開表示](../ide/media/vs2015_serverexplorer.png "VS2015_ServerExplorer")  
+**Ctrl + Alt + S** を押して **サーバー エクスプローラー**を開きます。 Azure アイコンを選択して展開すると、Visual Studio にログインするときに使用した ID に関連付けられた Azure アカウントで利用可能なリソースが表示されます。 次のような内容が表示されます (自分のリソースを表示する場合を除く)。
 
- 特定のデバイスで初めて Visual Studio を使用するときは、IDE へのサインインに使用した ID で登録されているサブスクリプションだけがダイアログに表示されます。 **サーバー エクスプローラー** で Azure ノードを右クリックして **[サブスクリプションの管理とフィルター]** を選択し、アカウントの選択コントロールからアカウントを追加することにより、他のアカウントのリソースに直接アクセスできます。 その後は、必要に応じて、下矢印をクリックしてアカウントの一覧から選択することにより、別のアカウントを選択できます。 アカウントを選択した後は、そのアカウントからサーバー エクスプローラーに表示するサブスクリプションを選択できます。  
+![サーバー エクスプローラーでの Azure Tools ノードの展開表示](../ide/media/vs2015_serverexplorer.png "VS2015_ServerExplorer")
 
- ![[Azure サブスクリプションの管理] ダイアログ](../ide/media/vs2015_manage_subs.png "vs2015_manage_subs")  
+特定のデバイスで初めて Visual Studio を使用するときは、IDE へのサインインに使用した ID で登録されているサブスクリプションだけがダイアログに表示されます。 **サーバー エクスプローラー** で Azure ノードを右クリックして **[サブスクリプションの管理とフィルター]** を選択し、アカウントの選択コントロールからアカウントを追加することにより、他のアカウントのリソースに直接アクセスできます。 その後は、必要に応じて、下矢印をクリックしてアカウントの一覧から選択することにより、別のアカウントを選択できます。 アカウントを選択した後は、そのアカウントからサーバー エクスプローラーに表示するサブスクリプションを選択できます。
 
- 次にサーバー エクスプローラーを開いたときは、そのサブスクリプションのリソースが表示されます。  
+![[Azure サブスクリプションの管理] ダイアログ](../ide/media/vs2015_manage_subs.png "vs2015_manage_subs")
 
-### <a name="access-your-azure-account-via-add-connected-service-dialog"></a>[接続済みサービスの追加] ダイアログを通して Azure アカウントにアクセスします。  
+次にサーバー エクスプローラーを開いたときは、そのサブスクリプションのリソースが表示されます。
 
-1.  C# で UWP アプリ プロジェクトを作成します。  
+### <a name="access-your-azure-account-via-add-connected-service-dialog"></a>[接続済みサービスの追加] ダイアログを通して Azure アカウントにアクセスします。
 
-2.  ソリューション エクスプローラーでプロジェクト ノードを選択し、**[追加] > [接続済みサービス]** を選択します。 **[接続済みサービスの追加]** ウィザードが表示され、Visual Studio ログイン ID に関連付けられた Azure アカウントのサービスの一覧が表示されます。 なお、Azure には個別にサインインする必要はありません。 ただし、特定のコンピューターから他のアカウントのリソースへのアクセスを初めて試みるときは、そのアカウントにサインインする必要があります。  
+1. C# で UWP アプリ プロジェクトを作成します。
+
+1. ソリューション エクスプローラーでプロジェクト ノードを選択し、**[追加] > [接続済みサービス]** を選択します。 **[接続済みサービスの追加]** ウィザードが表示され、Visual Studio ログイン ID に関連付けられた Azure アカウントのサービスの一覧が表示されます。 なお、Azure には個別にサインインする必要はありません。 ただし、特定のコンピューターから他のアカウントのリソースへのアクセスを初めて試みるときは、そのアカウントにサインインする必要があります。
 
     > [!WARNING]
-    >  特定のコンピューターの Visual Studio で UWP アプリを初めて作成する場合は、コンピューターの **[設定 &#124; 更新とセキュリティ &#124; 開発者向け]** にアクセスして、デバイスを開発モード用に有効にするようにメッセージが表示されます。 詳細については、「[デバイスを開発用に有効にする](https://msdn.microsoft.com/en-us/library/windows/apps/dn706236.aspx)」を参照してください。  
+    > 特定のコンピューターの Visual Studio で UWP アプリを初めて作成する場合は、コンピューターの **[設定 &#124; 更新とセキュリティ &#124; 開発者向け]** にアクセスして、デバイスを開発モード用に有効にするようにメッセージが表示されます。 詳細については、「[デバイスを開発用に有効にする](https://msdn.microsoft.com/en-us/library/windows/apps/dn706236.aspx)」を参照してください。
 
-###  <a name="access_azure"></a>Web プロジェクトで Azure Active Directory にアクセス  
- Azure AD では、ASP.NET MVC の Web アプリケーションでのエンド ユーザー シングル サインオンや、Web API サービスでの AD 認証をサポートしています。 ドメイン認証は個々のユーザー アカウント認証とは異なります。Active Directory ドメインにアクセスできるユーザーは、既存の Azure AD アカウントを使用して、Web アプリケーションに接続できます。 Office 365 アプリでは、ドメイン認証も使用できます。 これを実際に見るには、Web アプリケーションを作成します (**[ファイル]、[新しいプロジェクト]、[C#]、[クラウド]、[ASP.NET Web アプリケーション]**)。 新しい ASP.NET プロジェクトのダイアログで、**[認証の変更]** を選択します。 認証ウィザードが表示され、アプリケーションで使用する認証の種類を選択できます。  
+### <a name="access_azure"></a>Web プロジェクトで Azure Active Directory にアクセス
 
- ![ASP.NET の認証の変更ダイアログ](../ide/media/vs2015_change_authentication.png "VS2015_change_authentication")  
+Azure AD では、ASP.NET MVC の Web アプリケーションでのエンド ユーザー シングル サインオンや、Web API サービスでの AD 認証をサポートしています。 ドメイン認証は個々のユーザー アカウント認証とは異なります。Active Directory ドメインにアクセスできるユーザーは、既存の Azure AD アカウントを使用して、Web アプリケーションに接続できます。 Office 365 アプリでは、ドメイン認証も使用できます。 これを実際に見るには、Web アプリケーションを作成します (**[ファイル]、[新しいプロジェクト]、[C#]、[クラウド]、[ASP.NET Web アプリケーション]**)。 新しい ASP.NET プロジェクトのダイアログで、**[認証の変更]** を選択します。 認証ウィザードが表示され、アプリケーションで使用する認証の種類を選択できます。
 
- ASP.NET での異なる種類の認証について詳しくは、「[Creating ASP.NET Web Projects in Visual Studio 2013](http://www.asp.net/visual-studio/overview/2013/creating-web-projects-in-visual-studio#orgauth)」 (Visual Studio 2013 での ASP.NET Web プロジェクトの作成) をご覧ください (認証に関する情報は Visual Studio の現在のバージョンにも引き続き該当します)。  
+![ASP.NET の認証の変更ダイアログ](../ide/media/vs2015_change_authentication.png "VS2015_change_authentication")
 
-### <a name="access-your-visual-studio-team-services-account"></a>Visual Studio Team Services のアカウントへのアクセス  
- メイン メニューから、**[チーム] > [Team Foundation Server への接続]** を選択して、**チーム エクスプローラー** ウィンドウを開きます。 **[チーム プロジェクトの選択]**をクリックすると、 **[Team Foundation Server の選択]**にあるリスト ボックスに Visual Studio Team Services アカウントの URL が表示されます。 URL を選択すると、資格情報を再入力しなくてもログインできます。  
+ASP.NET での異なる種類の認証について詳しくは、「[Creating ASP.NET Web Projects in Visual Studio 2013](http://www.asp.net/visual-studio/overview/2013/creating-web-projects-in-visual-studio#orgauth)」 (Visual Studio 2013 での ASP.NET Web プロジェクトの作成) をご覧ください (認証に関する情報は Visual Studio の現在のバージョンにも引き続き該当します)。
 
-## <a name="add-a-second-user-account-to-visual-studio"></a>Visual Studio に 2 つ目にユーザー アカウントを追加  
- Visual Studio の上隅にあるユーザー名の横の矢印をクリックします。 その後、 **[アカウントの設定]** メニュー項目を選択します。 **[アカウント マネージャー]** ダイアログが表示され、サインインしたアカウントが表示されます。 ダイアログの下隅にある **[アカウントの追加]** リンクを選択して、新しい Microsoft アカウントまたは新しい仕事や学校のアカウントを追加します。  
+### <a name="access-your-visual-studio-team-services-account"></a>Visual Studio Team Services のアカウントへのアクセス
 
- ![Visual Studio のアカウント ピッカー](../ide/media/vs2015_acct_picker.png "VS2015_acct_picker")  
+メイン メニューから、**[チーム] > [Team Foundation Server への接続]** を選択して、**チーム エクスプローラー** ウィンドウを開きます。 **[チーム プロジェクトの選択]**をクリックすると、 **[Team Foundation Server の選択]**にあるリスト ボックスに Visual Studio Team Services アカウントの URL が表示されます。 URL を選択すると、資格情報を再入力しなくてもログインできます。
 
- プロンプトに応じて新しいアカウントの資格情報を入力します。 次の図は、ユーザーが自分の Contoso.com の仕事用アカウントを追加した後のアカウント マネージャーを示しています。  
+## <a name="add-a-second-user-account-to-visual-studio"></a>Visual Studio に 2 つ目にユーザー アカウントを追加
 
- ![アカウント マネージャー](../ide/media/vs2015_accountmanager.gif "VS2015_AccountManager")  
+Visual Studio の上隅にあるユーザー名の横の矢印をクリックします。 その後、 **[アカウントの設定]** メニュー項目を選択します。 **[アカウント マネージャー]** ダイアログが表示され、サインインしたアカウントが表示されます。 ダイアログの下隅にある **[アカウントの追加]** リンクを選択して、新しい Microsoft アカウントまたは新しい仕事や学校のアカウントを追加します。
 
-## <a name="revisit-the-add-connected-services-wizard-and-server-explorer"></a>[接続済みサービスの追加] ウィザードおよびサーバー エクスプローラーを再表示します。  
- **サーバー エクスプローラー** に再び移動し、Azure ノードを右クリックして、**[サブスクリプションの管理とフィルター]** を選択します。 現在のアカウントの横にあるドロップダウン矢印をクリックして新しいアカウントを選択し、サーバー エクスプローラーに表示するサブスクリプションを選択します。 指定したサブスクリプションに関連付けられているすべてのサービスが表示されます。現在 2 番目のアカウントで Visual Studio IDE にサインインしてはいませんが、そのアカウントのサービスとリソースにサインインします。 同じことが **[プロジェクト] > [接続済みサービスの追加]** および **[チーム] > [Team Foundation Server への接続]** にも当てはまります。  
+![Visual Studio のアカウント ピッカー](../ide/media/vs2015_acct_picker.png "VS2015_acct_picker")
 
- ## <a name="see-also"></a>関連項目  
-[接続されている環境](../ide/connected-environment.md)  
+プロンプトに応じて新しいアカウントの資格情報を入力します。 次の図は、ユーザーが自分の Contoso.com の仕事用アカウントを追加した後のアカウント マネージャーを示しています。
+
+![アカウント マネージャー](../ide/media/vs2015_accountmanager.gif "VS2015_AccountManager")
+
+## <a name="revisit-the-add-connected-services-wizard-and-server-explorer"></a>[接続済みサービスの追加] ウィザードおよびサーバー エクスプローラーを再表示します。
+
+**サーバー エクスプローラー** に再び移動し、Azure ノードを右クリックして、**[サブスクリプションの管理とフィルター]** を選択します。 現在のアカウントの横にあるドロップダウン矢印をクリックして新しいアカウントを選択し、サーバー エクスプローラーに表示するサブスクリプションを選択します。 指定したサブスクリプションに関連付けられているすべてのサービスが表示されます。現在 2 番目のアカウントで Visual Studio IDE にサインインしてはいませんが、そのアカウントのサービスとリソースにサインインします。 同じことが **[プロジェクト] > [接続済みサービスの追加]** および **[チーム] > [Team Foundation Server への接続]** にも当てはまります。
+
+## <a name="see-also"></a>関連項目
+
+[Visual Studio で使用されるインターネット リソース](../ide/connected-environment.md)

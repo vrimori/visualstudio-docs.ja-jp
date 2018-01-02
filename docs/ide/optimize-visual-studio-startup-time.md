@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio のパフォーマンスの最適化 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/19/2017
+ms.date: 11/15/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -17,11 +17,11 @@ ms.author: gewarren
 manager: ghogen
 f1_keywords: vs.performancecenter
 ms.technology: vs-ide-general
-ms.openlocfilehash: d1058ca5762db28f0afc678a9d31cc6f0f3be6bc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 78a2a4dc41b4c6b3154951f6f48b95b3894fc92e
+ms.sourcegitcommit: 15907b980eadeaa646f010cb197cfd188579d0f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="optimize-visual-studio-performance"></a>Visual Studio のパフォーマンスの最適化
 Visual Studio は、可能な限り迅速かつ効率的に起動するように設計されています。 ただし、特定の Visual Studio の拡張機能とツール ウィンドウは、その読み込み時に起動時間に悪影響を与える可能性があります。 **[Visual Studio のパフォーマンスの管理]** ダイアログ ボックスでは、起動に時間がかかる拡張機能とツール ウィンドウの動作を制御することができます。 パフォーマンスの向上に関するより一般的なヒントについては、「[Visual Studio のパフォーマンスのヒントとテクニック](../ide/visual-studio-performance-tips-and-tricks.md)」を参照してください。  
@@ -66,17 +66,8 @@ Visual Studio で起動の遅延が検出されると、ポップアップ メ�
 
     ![Visual Studio のパフォーマンスの管理 - ツール ウィンドウの表示](../ide/media/vside_perfdialog_toolwindows.png)
 
-## <a name="speed_up_solution_load"></a>Visual Studio 2017 で大規模なソリューションを高速で読み込む
-
-Visual Studio 2017 には、ライトウェイト ソリューション ロードという新しい機能が導入されています。これにより、IDE で大規模なソリューションを読み込む場合に必要な時間とメモリの量を減らすことができます。 多くの C#、VB、または C++ プロジェクトを含む大規模なソリューションがある場合に、ライトウェイト ソリューション ロードを有効にすると、パフォーマンスが大幅に向上する可能性があります。 この機能を使用するメリットの詳細については、[ソリューションの読み込みの最適化](../ide/optimize-solution-loading-in-visual-studio.md)に関する記事をご覧ください。
-
-### <a name="enable-or-disable-lightweight-solution-load"></a>ライトウェイト ソリューション ロードを有効または無効にする
-
-ソリューション エクスプローラーでソリューション名を右クリックし、**[ライトウェイト ソリューション ロードを有効にする]** を選択します。 オプションを選択した後、ライトウェイト ソリューション ロードをアクティブ化するには、ソリューションを閉じてもう一度開く必要があります。
-
-![ソリューション エクスプローラー](../ide/media/VSIDE_LSL_Solution_Setting.png)
-
-ライトウェイト ソリューション ロードのグローバル設定を構成する方法については、[ソリューションの読み込みの最適化](../ide/optimize-solution-loading-in-visual-studio.md#global_solution_load_settings)に関する記事をご覧ください。
+> [!NOTE]
+> バージョン 15.5 より前のバージョンの Visual Studio には、**ライトウェイト ソリューション ロード**という機能がありました。 Visual Studio 2017 バージョン 15.5 以降では、この機能を使用できなくなりました。 Visual Studio バージョン 15.5 以降の場合、マネージ コードを含む大規模なソリューションで、ライトウェイト ソリューション ロードなしでも以前よりはるかに速く読み込むことができます。  
 
 ## <a name="see-also"></a>関連項目
 [Visual Studio のパフォーマンスのヒントとテクニック](../ide/visual-studio-performance-tips-and-tricks.md)

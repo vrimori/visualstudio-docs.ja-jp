@@ -4,101 +4,90 @@
   items:
     - name: Visual Studio
       tocHref: /visualstudio/
-      topicHref: /visualstudio
+      topicHref: /visualstudio/index
       items:
-        - name: ドキュメント
-          tocHref: /visualstudio/
-          topicHref: /visualstudio/welcome-to-visual-studio
+        - name: コード品質
+          tocHref: /visualstudio/code-quality/
+          topicHref: /visualstudio/code-quality/analyzing-application-quality-by-using-code-analysis-tools
+        - name: クロス プラットフォーム
+          tocHref: /visualstudio/cross-platform/
+          topicHref: /visualstudio/cross-platform/index
+        - name: 'C# IDE'
+          tocHref: /visualstudio/csharp-ide/
+          topicHref: /visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp
+        - name: データ ツール
+          tocHref: /visualstudio/data-tools/
+          topicHref: /visualstudio/data-tools/index
+        - name: デバッグ
+          tocHref: /visualstudio/debugger/
+          topicHref: /visualstudio/debugger/index
           items:
-            - name: クロス プラットフォーム
-              tocHref: /visualstudio/cross-platform/
-              topicHref: /visualstudio/cross-platform/cross-platform-mobile-development-in-visual-studio
-            - name: データ ツール
-              tocHref: /visualstudio/data-tools/
-              topicHref: /visualstudio/data-tools/accessing-data-in-visual-studio
-            - name: 機能拡張
-              tocHref: /visualstudio/extensibility/
-              topicHref: /visualstudio/extensibility/
+            - name: Debug Interface Access SDK
+              tocHref: /visualstudio/debugger/debug-interface-access/
+              topicHref: /visualstudio/debugger/debug-interface-access/debug-interface-access-sdk
+            - name: グラフィックス
+              tocHref: /visualstudio/debugger/graphics/
+              topicHref: /visualstudio/debugger/graphics/overview-of-visual-studio-graphics-diagnostics
+        - name: 配置
+          tocHref: /visualstudio/deployment/
+          topicHref: /visualstudio/deployment/deploying-applications-services-and-components
+        - name: デザイナー
+          tocHref: /visualstudio/designers/
+          topicHref: /visualstudio/designers/designing-user-interfaces
+        - name: 機能拡張
+          tocHref: /visualstudio/extensibility/
+          topicHref: /visualstudio/extensibility/index
+          items:
+            - name: Visual Studio SDK の内部
+              tocHref: /visualstudio/extensibility/internals/
+              topicHref: /visualstudio/extensibility/internals/inside-the-visual-studio-sdk
+            - name: デバッガーの機能拡張
+              tocHref: /visualstudio/extensibility/debugger/
+              topicHref: /visualstudio/extensibility/debugger/visual-studio-debugger-extensibility
               items:
-                - name: Visual Studio SDK の内部
-                  tocHref: /visualstudio/extensibility/internals/
-                  topicHref: /visualstudio/extensibility/internals/inside-the-visual-studio-sdk
-                - name: デバッガーの機能拡張
-                  tocHref: /visualstudio/extensibility/debugger/
-                  topicHref: /visualstudio/extensibility/debugger/visual-studio-debugger-extensibility
-                - name: ユーザー エクスペリエンス ガイドライン
-                  tocHref: /visualstudio/extensibility/ux-guidelines/
-                  topicHref: /visualstudio/extensibility/visual-studio-user-experience-guidelines
-            - name: IDE
-              tocHref: /visualstudio/ide/
-              topicHref: /visualstudio/ide/index
-              items:
-                - name: 配置
-                  tocHref: /visualstudio/deployment/
-                  topicHref: /visualstudio/deployment/deploying-applications-services-and-components
-                - name: デザイナー
-                  tocHref: /visualstudio/designers/
-                  topicHref: /visualstudio/designers/designing-user-interfaces
-                - name: 'C# IDE'
-                  tocHref: /visualstudio/csharp-ide/
-                  topicHref: /visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp
-                - name: Visual Basic IDE
-                  tocHref: /visualstudio/vb-ide/
-                  topicHref: /visualstudio/vb-ide/refactoring-vb
-                - name: コード品質
-                  tocHref: /visualstudio/code-quality/
-                  topicHref: /visualstudio/code-quality/analyzing-application-quality-by-using-code-analysis-tools
-                - name: アーキテクチャのモデリング
-                  tocHref: /visualstudio/modeling/
-                  topicHref: /visualstudio/modeling/analyze-and-model-your-architecture
-                - name: デバッグ
-                  tocHref: /visualstudio/debugger/
-                  topicHref: /visualstudio/debugger/index
-                  items:
-                    - name: DIA SDK
-                      tocHref: /visualstudio/debugger/debug-interface-access/
-                      topicHref: /visualstudio/debugger/debug-interface-access/debug-interface-access-sdk
-                - name: プロファイル
-                  tocHref: /visualstudio/profiling/
-                  topicHref: /visualstudio/profiling/index
-                - name: テスト中
-                  tocHref: /visualstudio/test/
-                  topicHref: /visualstudio/test/improve-code-quality
-                - name: ワークフロー デザイナー
-                  tocHref: /visualstudio/workflow-designer/
-                  topicHref: /visualstudio/workflow-designer/developing-applications-with-the-workflow-designer
                 - name: 参照
-                  tocHref: /visualstudio/ide/reference/
-                  topicHref: /visualstudio/ide/reference/visual-studio-reference
-                  items:
-                    - name: XML ツール
-                      tocHref: /visualstudio/xml-tools/
-                      topicHref: /visualstudio/xml-tools/xml-tools-in-visual-studio
-                    - name: MSBuild
-                      tocHref: /visualstudio/msbuild/
-                      topicHref: /visualstudio/msbuild/msbuild
-            - name: インストール
-              tocHref: /visualstudio/install/
-              topicHref: /visualstudio/install/install-visual-studio
-            - name: JavaScript
-              tocHref: /visualstudio/javascript/
-              topicHref: /visualstudio/javascript/javascript-in-visual-studio
-            - name: ポート、移行、アップグレード
-              tocHref: /visualstudio/porting/
-              topicHref: /visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects
-            - name: Python
-              tocHref: /visualstudio/python/
-              topicHref: /visualstudio/python/getting-started-with-python
-            - name: R
-              tocHref: /visualstudio/rtvs/
-              topicHref: /visualstudio/rtvs/index
-            - name: Office と SharePoint
+                  tocHref: /visualstudio/extensibility/debugger/reference/
+                  topicHref: /visualstudio/extensibility/debugger/reference/reference-visual-studio-debugging-apis
+            - name: ユーザー エクスペリエンス ガイドライン
+              tocHref: /visualstudio/extensibility/ux-guidelines/
+              topicHref: /visualstudio/extensibility/visual-studio-user-experience-guidelines
+        - name: IDE クラス デザイナー
+          tocHref: /visualstudio/ide/class-designer
+          topicHref: /visualstudio/ide/class-designer/designing-and-viewing-classes-and-types
+        - name: アーキテクチャのモデリング
+          tocHref: /visualstudio/modeling/
+          topicHref: /visualstudio/modeling/analyze-and-model-your-architecture
+        - name: MSBuild
+          tocHref: /visualstudio/msbuild/
+          topicHref: /visualstudio/msbuild/msbuild
+        - name: プロファイル
+          tocHref: /visualstudio/profiling/
+          topicHref: /visualstudio/profiling/index
+        - name: Python
+          tocHref: /visualstudio/python/
+          topicHref: /visualstudio/python/getting-started-with-python
+        - name: R
+          tocHref: /visualstudio/rtvs/
+          topicHref: /visualstudio/rtvs/index
+        - name: Office と SharePoint
+          tocHref: /visualstudio/vsto/
+          topicHref: /visualstudio/vsto/office-and-sharepoint-development-in-visual-studio
+          items:
+            - name: SharePoint
+              tocHref: /visualstudio/sharepoint/
+              topicHref: /visualstudio/sharepoint/create-sharepoint-solutions
+            - name: VSTO
               tocHref: /visualstudio/vsto/
-              topicHref: /visualstudio/vsto/office-and-sharepoint-development-in-visual-studio
-              items:
-                - name: SharePoint
-                  tocHref: /visualstudio/sharepoint/
-                  topicHref: /visualstudio/sharepoint/create-sharepoint-solutions
-                - name: VSTO
-                  tocHref: /visualstudio/vsto/
-                  topicHref: /visualstudio/vsto/create-vsto-add-ins-for-office-by-using-visual-studio
+              topicHref: /visualstudio/vsto/create-vsto-add-ins-for-office-by-using-visual-studio
+        - name: テスト中
+          tocHref: /visualstudio/test/
+          topicHref: /visualstudio/test/improve-code-quality
+        - name: Visual Basic IDE
+          tocHref: /visualstudio/vb-ide/
+          topicHref: /visualstudio/vb-ide/refactoring-vb
+        - name: ワークフロー デザイナー
+          tocHref: /visualstudio/workflow-designer/
+          topicHref: /visualstudio/workflow-designer/developing-applications-with-the-workflow-designer
+        - name: XML ツール
+          tocHref: /visualstudio/xml-tools/
+          topicHref: /visualstudio/xml-tools/xml-tools-in-visual-studio

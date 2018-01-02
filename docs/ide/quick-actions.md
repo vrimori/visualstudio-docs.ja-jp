@@ -1,7 +1,7 @@
 ---
 title: "クイック アクション | Microsoft Docs"
 ms.custom: 
-ms.date: 05/08/2017
+ms.date: 11/30/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-general
@@ -13,11 +13,11 @@ manager: ghogen
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 22a6c84608f8955e3a751af4ee2b9fb113645590
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: e9196f3e4bc76e53d50bc480b8e0860186fe778e
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="quick-actions"></a>クイック アクション
 
@@ -42,6 +42,7 @@ ms.lasthandoff: 12/01/2017
 ## <a name="common-quick-actions"></a>共通のクイック アクション
 
 ここでは、C# と Visual Basic 両方のコードに共通に適用されるクイック アクションを示します。
+
 - [エラーを修正するアクション](#fix)
 - [不要なコードを削除するアクション](#remove)
 - [不足しているコードを追加するアクション](#add)
@@ -49,12 +50,13 @@ ms.lasthandoff: 12/01/2017
 
 ### <a id="fix"></a> エラーを修正するアクション
 
-#### <a name="correct-misspelled-type"></a>スペルが正しくない型を修正する
+#### <a name="correct-misspelled-symbol-or-keyword"></a>記号やキーワードのスペルミスの修正
+
 |  エラー ID | 該当言語 |  サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | CS0103、BC30002 | C# および Visual Basic | Visual Studio 2015 更新プログラム 2 |
 
-Visual Studio で型のスペルを誤って入力した場合、このクイック アクションは自動的にそれを修正します。  電球メニューでは **['*スペルが正しくない型*' を '*スペルが正しい型*' に変更]** と表示されます。  例:
+Visual Studio で型やキーワードのスペルを誤って入力した場合、このクイック アクションは自動的にそれを修正します。 電球メニューでは **["Change '*misspelled word*' to '*correct word*]\('スペルが正しくない単語' を 'スペルが正しい単語' に変更\)** と表示されます。  例:
 
 ```csharp
 // Before
@@ -83,6 +85,7 @@ End Function
 ```
 
 #### <a name="resolve-git-merge-conflict"></a>git のマージ競合を解決する
+
 |  エラー ID | 該当言語 |  サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | CS8300、BC37284  | C# および Visual Basic | Visual Studio 2017 バージョン 15.3 |
@@ -90,7 +93,7 @@ End Function
 このクイック アクションを使用すると、"変更を取り入れる" ことで競合するコードおよびマーカーが削除され、git マージ競合を解決することができます。  
 
 ```csharp
-// Before     
+// Before
 private void MyMethod()
 {
 <<<<<<< HEAD
@@ -108,7 +111,7 @@ private void MyMethod()
 
 // Take changes from 'HEAD'
 
-// After 
+// After
 private void MyMethod()
 {
     if (true)
@@ -119,11 +122,12 @@ private void MyMethod()
 ```
 
 #### <a name="make-method-synchronous"></a>メソッドを同期させる
+
 |  エラー ID | 該当言語 |  サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | CS1998、BC42356 | C# および Visual Basic | Visual Studio 2015 更新プログラム 2 |
 
-`async`/`Async` キーワードをメソッドで使う場合は、そのメソッド内のどこかで `await`/`Await` キーワードも使われることが予想されます。  ただし、そうではない場合は、クイック アクションが表示され、`async`/`Async` キーワードを削除して戻り値の型を変更することにより、同期メソッドにすることができます。  [クイック アクション] メニューの **[メソッドを同期させます]** オプションを選びます。
+`async` または `Async` のキーワードをメソッドで使う場合は、そのメソッド内のどこかで `await` または `Await` のキーワードも使われることが予想されます。  ただし、そうではない場合は、クイック アクションが表示され、`async` または `Async` のキーワードを削除して戻り値の型を変更することにより、同期メソッドにすることができます。 [クイック アクション] メニューの **[メソッドを同期させます]** オプションを選びます。
 
 ```csharp
 // Before
@@ -156,11 +160,12 @@ End Function
 ```
 
 #### <a name="make-method-asynchronous"></a>メソッドを非同期にする
+
 |  エラー ID | 該当言語 |  サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | CS4032、BC37057 | C# および Visual Basic | Visual Studio 2017 |
 
-メソッド内で `await`/`Await` キーワードを使うときは、メソッド自体に `async`/`Async` キーワードが指定されていることが想定されます。  ただし、そうではない場合は、クイック アクションが表示され、非同期メソッドにすることができます。  [クイック アクション] メニューの **[Make method/Function asynchronous (メソッド/関数を非同期にします)]** オプションを使います。
+メソッド内で `await` または `Await` のキーワードを使うときは、メソッド自体に `async` または `Async` のキーワードが指定されていることが想定されます。  ただし、そうではない場合は、クイック アクションが表示され、非同期メソッドにすることができます。 [クイック アクション] メニューの **[Make method/Function asynchronous (メソッド/関数を非同期にします)]** オプションを使います。
 
 ```csharp
 // Before
@@ -203,6 +208,7 @@ End Function
 **[不要な using の削除] / [不要なインポートの削除]** クイック アクションは、現在のファイルで使われていない `using` および `Import` ステートメントを削除します。  この項目を選ぶと、使われていない名前空間のインポートがすぐに削除されます。
 
 #### <a name="remove-unnecessary-cast"></a>不要なキャストを削除する
+
 |  診断 ID | 該当言語 |  サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | IDE0004 | C# および Visual Basic | Visual Studio 2015 RTW |
@@ -218,6 +224,7 @@ int number = (int)3;
 // after
 int number = 3;
 ```
+
 ```vb
 ' Before
 Dim number as Integer = CType(3, Integer)
@@ -229,6 +236,7 @@ Dim number as Integer = 3
 ```
 
 #### <a name="remove-unused-variables"></a>未使用の変数を削除する
+
 |  診断 ID | 該当言語 |  サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | CS0219、BC42024 | C# および Visual Basic | Visual Studio 2017 バージョン 15.3 |
@@ -255,13 +263,14 @@ public MyMethod()
 ```
 
 #### <a name="remove-type-from-default-value-expression"></a>**既定**の値式から型を削除する
+
 |  診断 ID | 該当言語 |  サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | IDE0034 | C# 7.1+ | Visual Studio 2017 バージョン 15.3 |
 
 このクイック アクションは、コンパイラが式の型を推論できる場合に、既定の値式から値の型を削除し、[`default`リテラル](/dotnet/csharp/programming-guide/statements-expressions-operators/default-value-expressions#default-literal-and-type-inference)を使用します。
 
-```csharp 
+```csharp
 // Before
 void DoWork(CancellationToken cancellationToken = default(CancellationToken)) { ... }
 
@@ -275,14 +284,15 @@ void DoWork(CancellationToken cancellationToken = default) { ... }
 ### <a id="add"></a> 不足しているコードを追加するアクション
 
 #### <a name="add-usingsimports-for-types-in-reference-assemblies-nuget-packages-or-other-types-in-your-solution"></a>参照アセンブリの型、NuGet パッケージの型、またはソリューション内の他の型に using/Import を追加する
+
 |  診断 ID | 該当言語 |  サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | CS0103、BC30451 | C# および Visual Basic| Visual Studio 2015 更新プログラム 2 |
 
-ソリューション内の他のプロジェクトにある型を使うとクイック アクションが自動的に表示されますが、それ以外の場合は **[ツール] > [オプション] > [C#]** または **[Basic] > [詳細設定]** タブで有効にする必要があります。  
+ソリューション内の他のプロジェクトにある型を使うとクイック アクションが自動的に表示されますが、それ以外の場合は **[ツール] > [オプション] > [C#]** または **[Basic] > [詳細設定]** タブで有効にする必要があります。
 
-* 参照アセンブリの型に using/import を提案する
-* NuGet パッケージの型に using/import を提案する
+- 参照アセンブリの型に using/import を提案する
+- NuGet パッケージの型に using/import を提案する
 
 有効にした場合、現在はインポートされていなくても参照アセンブリまたは NuGet パッケージには存在する名前空間の型を使うと、using/import ステートメントが作成されます。
 
@@ -311,11 +321,14 @@ Debug.WriteLine("Hello")
 ```
 
 #### <a name="add-missing-casesdefault-caseboth"></a>足りないケース、既定のケース、または両方を追加する
+
 |  診断 ID | 該当言語 |  サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | IDE0010 | C# および Visual Basic| Visual Studio 2017 バージョン 15.3 |
 
-`switch` ステートメント (C#) または `Select Case` ステートメント (Visual Basic) を作成するときは、コード アクションを使って、足りないケース項目、既定のケースのステートメント、または両方を自動的に追加できます。  空のステートメントは次のようになります。
+`switch` ステートメント (C#) または `Select Case` ステートメント (Visual Basic) を作成するときは、コード アクションを使って、足りないケース項目、既定のケースのステートメント、または両方を自動的に追加できます。
+
+次の列挙型を検討し、`switch` ステートメントまたは `Select Case` ステートメントを空にします。
 
 ```csharp
 enum MyEnum
@@ -349,7 +362,7 @@ Select Case myEnum
 End Select
 ```
 
-**[両方を追加する]** クイック アクションを使って足りないケースと既定のケースの両方を追加すると、次のようなコードが作成されます。
+**[Add Both]\(両方追加\)** のクイック アクションを使用すると、足りない case が入力されるとともに default の条件が追加されます。
 
 ```csharp
 switch(myEnum)
@@ -364,6 +377,7 @@ switch(myEnum)
         break;
 }
 ```
+
 ```vb
 Select Case myEnum
     Case MyEnum.Item1
@@ -376,6 +390,7 @@ End Select
 ```
 
 #### <a name="add-null-checks-for-parameters"></a>パラメーターの null チェックを追加する
+
 | 該当言語 |  サポートされているバージョン |
 | -------------------- | ----------------  |
 | C# および Visual Basic| Visual Studio 2017 バージョン 15.3 |
@@ -409,6 +424,7 @@ class MyClass
 ```
 
 #### <a name="add-argument-name"></a>引数の名前を追加する
+
 | 該当言語 |  サポートされているバージョン |
 | -------------------- | ----------------  |
 | C# および Visual Basic| Visual Studio 2017 バージョン 15.3 |
@@ -424,6 +440,7 @@ var date = new DateTime(year: 1997, month: 7, day: 8);
 ```
 
 #### <a name="add-braces"></a>中かっこを追加する
+
 |  診断 ID | 該当言語 |  サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | IDE0011 | C# | Visual Studio 2017 RTW |
@@ -438,13 +455,14 @@ if (true)
 // Add braces
 
 // After
-if (true) 
+if (true)
 {
     return "hello,world";
 }
 ```
 
 #### <a name="add-and-order-modifiers"></a>修飾子を追加および順序付けする
+
 |  診断 ID | 該当言語 |  サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | IDE0036 | C# および Visual Basic| Visual Studio 2017 バージョン 15.5 |
@@ -467,6 +485,7 @@ internal enum Color
     Red, White, Blue
 }
 ```
+
 ```csharp
 // Before
 static private int thisFieldIsPublic;
@@ -475,12 +494,12 @@ static private int thisFieldIsPublic;
 
 // After
 private static int thisFieldIsPublic;
-
 ```
 
 ### <a id="transform"></a> コード変換
 
 #### <a name="convert-if-construct-to-switch"></a>**if** コンストラクトを **switch** に変換する
+
 | 該当言語 |  サポートされているバージョン |
 | -------------------- | ----------------  |
 | C# および Visual Basic| Visual Studio 2017 バージョン 15.3 |
@@ -535,6 +554,7 @@ End Select
 ```
 
 #### <a name="convert-to-interpolated-string"></a>挿入文字列に変換する
+
 | 該当言語 |  サポートされているバージョン |
 | -------------------- | ----------------  |
 | C# 6.0+ および Visual Basic 14+ | Visual Studio 2017 RTW |
@@ -552,6 +572,7 @@ string s = string.Format("My string with {0} in the middle", num);
 int num = 3;
 string s = $"My string with {num} in the middle";
 ```
+
 ```vb
 ' Before
 Dim num as Integer = 3
@@ -565,6 +586,7 @@ Dim s As String = $"My string with {num} in the middle"
 ```
 
 #### <a name="use-object-initializers"></a>オブジェクト初期化子を使用する
+
 | 診断 ID | 該当言語 | サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | IDE0017 | C# および Visual Basic | Visual Studio 2017 RTW |
@@ -581,6 +603,7 @@ c.Age = 21;
 // After
 var c = new Customer() { Age = 21 };
 ```
+
 ```vb
 ' Before
 Dim c = New Customer()
@@ -593,6 +616,7 @@ Dim c = New Customer() With {.Age = 21}
 ```
 
 #### <a name="use-collection-initializers"></a>コレクション初期化子を使用する
+
 | 診断 ID | 該当言語 | サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | IDE0028 | C# および Visual Basic | Visual Studio 2017 RTW |
@@ -611,6 +635,7 @@ list.Add(3);
 // After
 var list = new List<int> { 1, 2, 3 };
 ```
+
 ```vb
 ' Before
 Dim list = New List(Of Integer)
@@ -623,9 +648,10 @@ list.Add(3)
 ' After
 Dim list = New List(Of Integer) From {1, 2, 3}
 
-```  
+```
 
 #### <a name="convert-auto-property-to-full-property"></a>自動プロパティを完全なプロパティに変換する
+
 |  該当言語 |  サポートされているバージョン |
 |  -------------------- | ----------------  |
 | C# および Visual Basic | Visual Studio 2017 バージョン 15.5 |
@@ -642,9 +668,10 @@ private int MyProperty { get; set; }
 private int MyProperty
 {
     get { return _myProperty; }
-    set { _myProperty = value; } 
+    set { _myProperty = value; }
 }
 ```
+
 ```vb
 ' Before
 Public Property Name As String
@@ -662,10 +689,10 @@ Public Property Name As String
         _Name = Value
     End Set
 End Property
-
 ```
 
 #### <a name="convert-block-body-to-expression-bodied-member"></a>ブロック本体を式のようなメンバーに変換する
+
 |  診断 ID | 該当言語 |  サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | IDE0021-27 | C# 6.0+ | Visual Studio 2017 RTW |
@@ -718,13 +745,14 @@ class MyClass4
 ```
 
 #### <a name="convert-anonymous-function-to-local-function"></a>匿名関数をローカル関数に変換する
+
 |  診断 ID | 該当言語 |  サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | IDE0039 | C# 7.0+ | Visual Studio 2017 バージョン 15.5 |
 
 このクイック アクションは、匿名関数をローカル関数に変換します。
 
-```csharp 
+```csharp
 // Before
 Func<int, int> fibonacci = null;
 fibonacci = (int n) =>
@@ -739,10 +767,10 @@ int fibonacci(int n)
 {
     return n <= 1 ? 1 : fibonacci(n-1) + fibonacci(n-2);
 }
-
 ```
 
 #### <a name="convert-referenceequals-to-is-null"></a>`ReferenceEquals` を `is null` に変換する
+
 |  診断 ID | 該当言語 |  サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | IDE0041 | C# 7.0+ | Visual Studio 2017 バージョン 15.5 |
@@ -768,6 +796,7 @@ if (value is null)
 ```
 
 #### <a name="introduce-pattern-matching"></a>パターン マッチングを導入する
+
 | 診断 ID | 該当言語 | サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | IDE0020 | C# 7.0+ | Visual Studio 2017 RTW |
@@ -777,25 +806,26 @@ if (value is null)
 
 ```csharp
 // Before
-if (o is int) 
+if (o is int)
 {
-    var i = (int)o; 
-    ... 
+    var i = (int)o;
+    ...
 }
 
 // Use pattern matching
 
 // After
-if (o is int i) 
+if (o is int i)
 {
     ...
 }
 
 ```
+
 ```csharp
 // Before
 var s = o as string;
-if (s != null) 
+if (s != null)
 {
     ...
 }
@@ -803,13 +833,14 @@ if (s != null)
 // Use pattern matching
 
 // After
-if (o is string s) 
+if (o is string s)
 {
     ...
 }
 ```
 
 #### <a name="change-base-for-numeric-literals"></a>数値リテラルの基本を変更する
+
 | 該当言語 | サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | C# 7.0+ および Visual Basic 14+ | Visual Studio 2017 バージョン 15.3 |
@@ -825,6 +856,7 @@ int countdown = 2097152;
 // After
 int countdown = 0x200000;
 ```
+
 ```vb
 ' Before
 Dim countdown As Integer = 2097152
@@ -836,11 +868,12 @@ Dim countdown As Integer = &H200000
 ```
 
 #### <a name="insert-digit-separators-into-literals"></a>リテラルに桁区切り記号を挿入する
+
 | 該当言語 | サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | C# 7.0+ および Visual Basic 14+ | Visual Studio 2017 バージョン 15.3 |
 
-このクイック アクションでは、区切り文字をリテラル値に追加することができます。  
+このクイック アクションでは、区切り文字をリテラル値に追加することができます。
 
 ```csharp
 // Before
@@ -851,6 +884,7 @@ int countdown = 1000000;
 // After
 int countdown = 1_000_000;
 ```
+
 ```vb
 ' Before
 Dim countdown As Integer = 1000000
@@ -862,6 +896,7 @@ Dim countdown As Integer = 1_000_000
 ```
 
 #### <a name="use-explicit-tuple-names"></a>明示的なタプル名を使用する
+
 | 診断 ID | 該当言語 | サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | IDE0033 | C# 7.0+ および Visual Basic 15+ | Visual Studio 2017 RTW |
@@ -879,6 +914,7 @@ var name = customer.Item1;
 (string name, int age) customer = GetCustomer();
 var name = customer.name;
 ```
+
 ```vb
 ' Before
 Dim customer As (name As String, age As Integer) = GetCustomer()
@@ -892,6 +928,7 @@ Dim name = customer.name
 ```
 
 #### <a name="use-inferred-names"></a>推論による名前を使用する
+
 | 診断 ID | 該当言語 | サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | IDE0037 | C# | Visual Studio 2017 v. 15.5 |
@@ -899,7 +936,7 @@ Dim name = customer.name
 
 これらクイック アクションでは、匿名型の推論によるメンバー名を使用、または C# 7.1 の推論によるタプル要素名を使用できるタイミングを指摘します。
 
-```csharp 
+```csharp
 // Before
 var anon = new { age = age, name = name };
 
@@ -908,6 +945,7 @@ var anon = new { age = age, name = name };
 // After
 var anon = new { age, name };
 ```
+
 ```csharp
 // Before
 var tuple = (age: age, name: name);
@@ -916,17 +954,17 @@ var tuple = (age: age, name: name);
 
 // After
 var tuple = (age, name);
-
 ```
 
 #### <a name="deconstruct-tuple-declaration"></a>タプル宣言を分解する
+
 | 診断 ID | 該当言語 | サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | IDE0042 | C# 7.0+ | Visual Studio 2017 v. 15.5 |
 
 このクイック アクションでは、タプル変数宣言を分解することができます。 
 
-```csharp 
+```csharp
 // Before
 var person = GetPersonTuple();
 Console.WriteLine($"{person.name} {person.age}");
@@ -945,5 +983,6 @@ Console.WriteLine($"{x} {y}");
 ```
 
 ## <a name="see-also"></a>関連項目
-* [コード スタイルとクイック アクション](code-styles-and-quick-actions.md)  
-* [コードの作成とリファクタリング (C++)](/cpp/ide/writing-and-refactoring-code-cpp)
+
+[コード スタイルとクイック アクション](code-styles-and-quick-actions.md)  
+[コードの作成とリファクタリング (C++)](/cpp/ide/writing-and-refactoring-code-cpp)

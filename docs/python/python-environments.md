@@ -8,22 +8,21 @@ ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 8876f8c1-4770-44dc-97d8-bf0035ae8196
 caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 34e6898ce5c45033c8ac984d014d462a34552776
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 6476de086aad812e40d3c5b638c2076d50adfb27
+ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="python-environments"></a>Python 環境
 
-Visual Studio の Python は、複数の Python 環境の管理を容易にし、異なるプロジェクトで環境を簡単に切り替えられるようにします。 
+Visual Studio の Python は、複数の Python 環境の管理を容易にし、異なるプロジェクトで環境を簡単に切り替えられるようにします。
 
-注: Visual Studio の Python を初めて使う場合は、以下のトピックでこのトピックの基礎になっている情報を参照してください。
+**注**: Visual Studio で Python を初めて使用する場合は、以下のトピックでこのトピックの基礎になっている情報を参照してください。
 
 - [Visual Studio での Python の使用](python-in-visual-studio.md)
 - [Visual Studio での Python サポートのインストール](installation.md)
@@ -50,8 +49,8 @@ Visual Studio では、環境には環境のライブラリ用の IntelliSense �
 
 Visual Studio 2017 を除き、Python のサポートに Python インタープリターは付属しないので、コードを実行するには次のいずれかをインストールする必要があります。 一般に、Visual Studio は新しくインストールされたインタープリターを自動的に検出し、それぞれの環境をセットアップします。 インストール済みの環境が検出されない場合は、「[既存インタープリター用の環境の作成](#creating-an-environment-for-an-existing-interpreter)」を参照してください。
 
-| インタープリター | 説明 | 
-| --- | --- | 
+| インタープリター | 説明 |
+| --- | --- |
 | [CPython](https://www.python.org/) | "ネイティブ" で最もよく使われるインタープリターであり、32 ビット バージョンと 64 ビット バージョンがあります (32 ビットを推奨)。 最新の言語機能、Python パッケージの最大限の互換性、完全なデバッグ サポート、および [IPython](http://ipython.org/) との相互運用性が含まれています。 「[Should I use Python 2 or Python 3?](http://wiki.python.org/moin/Python2orPython3)」(Python 2 と Python 3 のどちらを使うか) もご覧ください。 Visual Studio 2015 以前では、Python 3.6 をサポートしていないため、"Python バージョン 3.6 はサポートされていません" エラーが発生する場合があることに注意してください。 代わりに 3.5 以前の Python を使用します。 |
 | [IronPython](https://github.com/IronLanguages/main) | Python の .NET の実装であり (32 ビット バージョンと 64 ビット バージョン)、C#/F#/Visual Basic の相互運用機能、.NET API へのアクセス、標準 Python デバッグ (ただし、C++ 混合モードのデバッグはありません)、IronPython/C# の混合デバッグが提供されます。 ただし、IronPython は仮想環境をサポートしていません。 | 
 | [Anaconda](https://www.continuum.io) | Python を利用するオープン データ サイエンス プラットフォームであり、最新バージョンの CPython と、インストールが困難なパッケージのほとんどを含みます。 他のインタープリターに決定できない場合にお勧めします。 |
@@ -68,7 +67,7 @@ Python 環境用に新しい検出形式を提供したい開発者は、「[PTV
 1. ソリューション エクスプローラーでプロジェクトの **[Python Environments (Python 環境)]** を右クリックし、**[View All Python Environments (すべての Python 環境の表示)]** を選びます。
 
     ![ソリューション エクスプローラーの [View All Python Environments (すべての Python 環境の表示)] コマンド](media/environments-view-all.png)
-    
+
 いずれの場合も、[Python Environments (Python 環境)] ウィンドウはソリューション エクスプローラーの兄弟タブとして表示されます。
 
 ![[Python Environments (Python 環境)] ウィンドウ](media/environments-default-view.png)
@@ -87,7 +86,7 @@ Python 環境用に新しい検出形式を提供したい開発者は、「[PTV
 
 Visual Studio では通常、(「[PEP 514 - Python registration in the Windows registry](https://www.python.org/dev/peps/pep-0514/)」 (PEP 514 - Windows レジストリでの Python の登録) に従って) レジストリをチェックして、インストールされている Python インタープリターを見つけます。 ただし、インタープリターが標準以外の方法でインストールされている場合は、Visual Studio で見つけられないことがあります。 そのような場合は、次のようにして Visual Studio にインタープリターを直接指定できます。
 
-1. [Python Environments (Python 環境)] ウィンドウで **[+ Custom... (+ カスタム...)]** を選びます。新しい環境が作成されて、[**[Configure (構成)]** タブ](#configure-tab)が開きます (後で説明します)。
+1. [[Python Environments]\(Python 環境\) ウィンドウ](#managing-python-environments-in-visual-studio)で **[+ Custom...]\(+ カスタム...\)** を選択します。これで、新しい環境が作成されて、[**[Configure]\(構成\)** タブ](#configure-tab)が開きます (後で説明します)。
 
     ![新しいカスタム環境の既定のビュー](media/environments-custom-1.png)
 
@@ -130,7 +129,6 @@ Visual Studio では通常、(「[PEP 514 - Python registration in the Windows r
 
 1. **[ツール] > [オプション] > [Python ツール] > [対話型ウィンドウ]** タブ (「[対話型ウィンドウ オプション](options.md#interactive-windows-options)」を参照) の**[スクリプト]** コントロールでは、すべての環境で読み込まれて実行されるスタートアップ スクリプトの追加フォルダーを指定します。 ただし、この機能は現時点では機能しません。
 
-
 ### <a name="configure-tab"></a>[Configure (構成)] タブ
 
 次の表で説明するような詳細が表示されます。 このタブが存在しない場合は、Visual Studio がすべての詳細情報を自動的に管理していることを意味します。
@@ -166,7 +164,6 @@ Visual Studio では通常、(「[PEP 514 - Python registration in the Windows r
 
 同じオプション タブでは、**[常に管理者として pip を実行する]** を選んで、すべての環境でダイアログを非表示にすることもできます。 「[Options - General tab](options.md#general-options)」([全般] タブのオプション) をご覧ください。
 
-
 ### <a name="intellisense-tab"></a>[IntelliSense] タブ
 
 IntelliSense 入力候補データベースの現在の状態を示します。
@@ -179,7 +176,7 @@ IntelliSense 入力候補データベースの現在の状態を示します。
 
 ## <a name="global-environments"></a>グローバル環境
 
-グローバル (またはシステム全体) 環境は、コンピューターのすべてのプロジェクトで利用できます。 通常 Visual Studio はグローバル環境を自動的に検出し、[Python Environments (Python 環境)] ウィンドウで見ることができます。 表示されない場合は、前の「[Visual Studio での Python 環境の管理](#managing-python-environments-in-visual-studio)」で説明したように手動で環境を追加できます。
+グローバル (またはシステム全体) 環境は、コンピューターのすべてのプロジェクトで利用できます。 通常、Visual Studio はグローバル環境を自動的に検出し、[[Python 環境] ウィンドウ](#managing-python-environments-in-visual-studio)で表示できます。 表示されない場合は、その同じウィンドウで環境を手動で追加することができます。
 
 Visual Studio は、すべての新規プロジェクトの実行、デバッグ、構文チェック、インポート表示、メンバー入力候補、および環境を必要とするその他のタスクに、既定の環境を使います。 次に説明するように、既定の環境を変更すると、[プロジェクト固有環境](#project-specific-environments)が追加されていないすべてのプロジェクトに影響します。
 
@@ -208,7 +205,6 @@ Visual Studio は、すべての新規プロジェクトの実行、デバッグ
 
 > [!Tip]
 > pip がパッケージのインストールに失敗する一般的な状況は、パッケージの `*.pyd` ファイルにネイティブ コンポーネントのソース コードが含まれる場合です。 必要なバージョンの Visual Studio がインストールされていない場合、pip はこれらのコンポーネントをコンパイルできません。 このような状況では、"`error: Unable to find vcvarsall.bat`" というエラー メッセージが表示されます。 多くの場合、`easy_install` ではコンパイル済みのバイナリをダウンロードでき、Python の古いバージョンに適したコンパイラは [http://aka.ms/VCPython27](http://aka.ms/VCPython27) からダウンロードできます。 詳しくは、Python Tools チーム ブログの「[How to deal with the pain of "unable to find vcvarsallbat"](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/11/unable-to-find-vcvarsall-bat/)」("vcvarsallbat が見つからない" という問題への対処方法) をご覧ください。
-
 
 ## <a name="virtual-environments"></a>仮想環境
 
@@ -242,11 +238,11 @@ Visual Studio は、すべての新規プロジェクトの実行、デバッグ
 
 技術的には、任意のファイル名を使って要件を追跡できますが (パッケージをインストールするときに `-r <full path to file>` を使って)、Visual Studio では `requirements.txt` に固有のサポートが用意されています。
 
-- `requirements.txt` を含むプロジェクトを読み込み、そのファイルに列記されているすべてのパッケージをインストールする場合は、プロジェクトを右クリックして、**[Install from requirements.txt (requirements.txt からインストールする)]** を選びます。
+- `requirements.txt` を含むプロジェクトを読み込み、そのファイルにリストされているすべてのパッケージをインストールする場合は、**ソリューション エクスプローラー**で **[Python 環境]** ノードを展開し、環境ノードを右クリックして **[requirements.txt からインストール]** を選択します。
 
     ![requirements.txt からインストールする](media/environments-requirements-txt-install.png)
 
-- 必要なすべてのパッケージをプロジェクトにインストールするときに、ソリューション エクスプローラーでプロジェクトを右クリックして **[Generate requirements.txt (requirements.txt を生成する)]** を選ぶことで、必要なファイルを作成できます。 ファイルが既に存在する場合、更新方法の指定を求められます。
+- 既に必要なすべてのパッケージをプロジェクトにインストールしている場合は、ソリューション エクスプローラーで環境を右クリックして、**[requirements.txt を生成]** を選択することで、必要なファイルを作成できます。 ファイルが既に存在する場合、更新方法の指定を求められます。
 
     ![requirements.txt の更新オプション](media/environments-requirements-txt-replace.png)
 

@@ -5,15 +5,15 @@ Ms.author: jaunger
 Manager: evelynp
 Ms.date: 10/3/2017
 Ms.topic: Get-Started-Article
-Description: "Visual Studio の標準サブスクリプションとクラウド サブスクリプションの機能と利点を比較します。"
+Description: Compare features and benefits of Visual Studio standard and cloud subscriptions
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: c231095c7d96c44f35752aa0a1c233599c43b420
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 0f820a0ae85bf4661f2c8a3ce244469b95c9a136
+ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="compare-visual-studio-subscription-options"></a>Visual Studio サブスクリプション オプションの比較
 
@@ -24,16 +24,16 @@ Visual Studio サブスクリプションは、Windows、iOS、Android、Linux �
 
 **Visual Studio Enterprise:** 携帯電話、デスクトップ、またはクラウドでも、Visual Studio は PC および Mac での優れたソフトウェアのビルドを容易にします。 サブスクリプションには、ほぼすべての Microsoft ソフトウェアに加え、Azure クレジット、Pluralsight コース、テクニカル サポートなどが含まれます。
 
-**Visual Studio Professional:** あらゆるプラットフォーム向けのあらゆるアプリをビルドするためのプロフェッショナル向け開発者ツールとサービス。 独自に作業する場合でも小規模なチームで作業する場合でも、共同作業がより容易かつ生産的になります。
+**Visual Studio Professional:**  あらゆるプラットフォーム向けのあらゆるアプリをビルドするためのプロフェッショナル向け開発者ツールとサービスを取得します。 独自に作業する場合でも小規模なチームで作業する場合でも、共同作業がより容易かつ生産的になります。
 
-**Visual Studio Test Professional:** 包括的なテスト ツールと標準サブスクリプションの特典 (Microsoft のコアなソフトウェア、Azure の毎月のクレジット、テクニカル トレーニング、プロフェッショナル サポートなど) により、開発プロセス全体の品質とコラボレーションを高めます。
+**Visual Studio Test Professional:**  包括的なテスト ツールと標準サブスクリプションの特典 (Microsoft のコアなソフトウェア、Azure の毎月のクレジット、テクニカル トレーニング、プロフェッショナル サポートなど) により、開発プロセス全体の品質とコラボレーションを高めます。
 
 **MSDN Platforms:** 各種プラットフォームとデバイスで IT および運用スタッフと .NET 以外の開発者が優れたアプリケーションをテスト、展開、管理するための最も包括的なリソース セット。
 
 **Visual Studio Dev Essentials:** アプリを開発してお好きなプラットフォームにデプロイするのに必要なものがすべて揃います。 最新のツール、強力なクラウド、トレーニング、サポートなど、これまでにない総合的な開発者向けプログラムが無料で提供されます。  
 
 ## <a name="subscription-types"></a>サブスクリプションの種類
-**標準サブスクリプション**: 複数年の Microsoft Volume Licensing 契約に基づいてリセラーを通して、および Microsoft ストア オンラインから直接入手できます。  Visual Studio の永続的ライセンスを特徴としています。 
+**標準サブスクリプション**: 複数年の Microsoft Volume Licensing 契約に基づいてリセラーを通して、および Microsoft ストア オンラインから直接入手できます。  標準サブスクリプションは、Visual Studio の永続的ライセンスを特徴としています。 
 
 **クラウド サブスクリプション**: クラウド サブスクリプションでは、長期の契約を必要とせずに、Visual Studio、Visual Studio Team Services、およびその他のサブスクライバー特典にアクセスできます。  月または年単位でサブスクライブします。 請求は Microsoft Azure サブスクリプションを通じて処理されます。 
 
@@ -45,7 +45,7 @@ Visual Studio サブスクリプションは、Windows、iOS、Android、Linux �
 - [マイクロソフト認定トレーナー](https://www.microsoft.com/en-us/learning/mct-certification.aspx): 技術的な専門知識とトレーニング スキルをさらに高めるために役立つリソースへの排他アクセスを提供するために独自に調整されます。
 
 ## <a name="visual-studio-licensing"></a>Visual Studio のライセンス
-Visual Studio サブスクリプション (以前の名称は "MSDN サブスクリプション") は、ユーザーごとにライセンスが付与されます。 1 人のユーザーは、任意の数のデバイス上で自分のプログラムの設計、開発、テスト、デモを行うためにソフトウェアを使用できます。 また、Visual Studio サブスクリプションのライセンスを付与されたユーザーは、自分のプログラムに関係する問題を診断するために、ソフトウェアを評価したり、顧客の環境をシミュレートしたりすることもできます。
+Visual Studio サブスクリプションはユーザーごとにライセンスが付与されます。 1 人のユーザーは、任意の数のデバイス上で自分のプログラムの設計、開発、テスト、デモを行うためにソフトウェアを使用できます。 また、Visual Studio サブスクリプションのライセンスを付与されたユーザーは、自分のプログラムに関係する問題を診断するために、ソフトウェアを評価したり、顧客の環境をシミュレートしたりすることもできます。
 
 さらに、Visual Studio サブスクライバーには Microsoft Azure Virtual Machines 上でサブスクライバー ソフトウェア (Windows および Windows Server を除きます) を実行するためのライセンスが付与されるため、アプリケーションをより柔軟に開発およびテストできます。 Windows Server や Windows のライセンス費用は、Windows 仮想マシンの使用料金に含まれています。
 
@@ -58,7 +58,7 @@ Visual Studio サブスクリプションのライセンスでは、開発中の
 ## <a name="additional-information"></a>追加情報
 [Visual Studio ライセンスのホワイト ペーパーをダウンロードする](https://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=2b1504e6-0bf1-46da-be0e-85cc792c6b9d)
 
-[サブスクリプション オプションと価格を比較する](https://www.visualstudio.com/pricing)
+[サブスクリプション オプションと価格を比較する](https://www.visualstudio.com/vs/pricing)
 
 [Visual Studio IDE 機能を比較する](https://www.visualstudio.com/vs/compare/)
 

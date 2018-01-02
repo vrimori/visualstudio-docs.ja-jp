@@ -11,49 +11,51 @@ ms.assetid:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3bc7db7b6a1d3e1d39b5fb3b128c28da37a9538b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 94348821e44b5ed07e3df5e4859796342919a833
+ms.sourcegitcommit: cc288456329aefca1fdaa7ce74751ce195985c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="whitelisting-urls-in-a-private-network"></a>プライベート ネットワーク内の URL のホワイトリスト登録    
-ファイアウォールなどのセキュリティ アプライアンスを使用するプライベート ネットワークで Visual Studio を使用する場合、Visual Studio を一部のネットワーク リソースに接続できない可能性があります。 これらのリソースには、サインインとライセンス取得のための Visual Studio Team Services (VSTS)、NuGet、および Azure サービスが含まれます。 Visual Studio でこれらのリソースのいずれかに接続できない場合は、次のエラー メッセージが表示されます。  
+# <a name="whitelisting-urls-in-a-private-network"></a>プライベート ネットワーク内の URL のホワイトリスト登録
 
-  **基になる接続が閉じられました: 送信時に、予期しないエラーが発生しました**  
+ファイアウォールなどのセキュリティ アプライアンスを使用するプライベート ネットワークで Visual Studio を使用する場合、Visual Studio を一部のネットワーク リソースに接続できない可能性があります。 これらのリソースには、サインインとライセンス取得のための Visual Studio Team Services (VSTS)、NuGet、および Azure サービスが含まれます。 Visual Studio でこれらのリソースのいずれかに接続できない場合は、次のエラー メッセージが表示されます。
+
+  **基になる接続が閉じられました: 送信時に、予期しないエラーが発生しました**
 
 Visual Studio ではトランスポート層セキュリティ (TLS) 1.2 プロトコルを使用して、ネットワーク リソースに接続します。 Visual Studio で TLS 1.2 を使用している場合、一部のプライベート ネットワーク上のセキュリティ アプライアンスによって特定のサーバー接続がブロックされます。 エラーを修正するには、次の URL の接続を有効にします。
 
-- https://management.core.windows.net  
+- https://management.core.windows.net
 
-- https://app.vssps.visualstudio.com  
+- https://app.vssps.visualstudio.com
 
-- https://login.microsoftonline.com  
+- https://login.microsoftonline.com
 
-- https://login.live.com  
+- https://login.live.com
 
-- https://go.microsoft.com  
+- https://go.microsoft.com
 
-- https://graph.windows.net  
+- https://graph.windows.net
 
-- https://app.vsspsext.visualstudio.com  
+- https://app.vsspsext.visualstudio.com
 
-- *.azurewebsites.net (Azure 接続の場合)  
+- *.azurewebsites.net (Azure 接続の場合)
 
-- *.nuget.org (NuGet 接続の場合)  
+- *.nuget.org (NuGet 接続の場合)
 
-- *.visualstudio.com  
+- *.visualstudio.com
 
-- cdn.vsassets.io (コンテンツ配信ネットワーク (CDN)、コンテンツをホスト)  
+- cdn.vsassets.io (コンテンツ配信ネットワーク (CDN)、コンテンツをホスト)
 
-- *.gallerycdn.vsassets.io (VSTS 拡張機能をホスト)  
+- *.gallerycdn.vsassets.io (VSTS 拡張機能をホスト)
 
 - static2.sharepointonline.com (フォントなど、Visual Studio が使用する Office ファブリック UI キットのリソースをホスト)
 
 > [!NOTE]
->  プライベートで所有されている NuGet のサーバー URL は、上記のリストには含まれない場合があります。 %APPData%\Nuget\NuGet.Config を開いて、使用している NuGet のサーバーを確認できます。  
+> プライベートで所有されている NuGet のサーバー URL は、上記のリストには含まれない場合があります。 %APPData%\Nuget\NuGet.Config を開いて、使用している NuGet のサーバーを確認できます。
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
+
 [プロキシ認証を要求するエラー](../ide/reference/proxy-authorization-required.md)  
-[接続されている環境](../ide/connected-environment.md)  
-[ファイアウォールまたはプロキシ サーバーの内側に Visual Studio をインストールする](../install/install-visual-studio-behind-a-firewall-or-proxy-server.md)  
+[Visual Studio で使用されるインターネット リソース](../ide/connected-environment.md)  
+[ファイアウォールまたはプロキシ サーバーの内側に Visual Studio をインストールする](../install/install-visual-studio-behind-a-firewall-or-proxy-server.md)

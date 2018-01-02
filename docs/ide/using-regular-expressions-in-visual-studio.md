@@ -16,34 +16,32 @@ f1_keywords:
 helpviewer_keywords:
 - regular expressions [Visual Studio]
 - regular expressions
-- Visual Studio, regular expressions
-ms.assetid: 718a617d-0e05-47e1-a218-9746971527f4
-caps.latest.revision: "53"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c01023649879c34838cbca3172aec6b5a053f4bd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 577c6a7b76bcecb3c3f5fc7889d75b5fd3ff1ce0
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="using-regular-expressions-in-visual-studio"></a>Visual Studio での正規表現の使用
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、テキストの検索と置換をするときに、.NET Framework の正規表現を使用します。 .NET の正規表現の詳細については、「[.NET Framework の正規表現](/dotnet/standard/base-types/regular-expressions)」を参照してください。  
-  
- Visual Studio 2012 より前、Visual Studio は [検索と置換] ウィンドウでカスタムの正規表現構文を使用していました。 より一般的に使用されているカスタム正規表現のシンボルの一部を .NET のバージョンに変換する方法については、「[Visual Studio での正規表現の使用](https://msdn.microsoft.com/en-us/library/2k3te2cs\(v=vs.110\).aspx)」を参照してください。  
-  
+
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、テキストの検索と置換をするときに、.NET Framework の正規表現を使用します。 .NET の正規表現の詳細については、「[.NET Framework の正規表現](/dotnet/standard/base-types/regular-expressions)」を参照してください。
+
 > [!TIP]
->  Windows オペレーティング システムでは、ほとんどの行は、"\r\n" (キャリッジ リターンと、それに続く新しい行) で終わります。 これらの文字は表示されませんが、エディターの中に存在し、.NET の正規表現のサービスに渡されます。  
+> Windows オペレーティング システムでは、ほとんどの行は、"\r\n" (キャリッジ リターンと、それに続く新しい行) で終わります。 これらの文字は表示されませんが、エディターの中に存在し、.NET の正規表現のサービスに渡されます。
+
+## <a name="replacement-patterns"></a>置換パターン
+
+置換パターンでよく使用される正規表現の詳細については、「[置換](/dotnet/standard/base-types/substitutions-in-regular-expressions)」を参照してください。 番号付きのキャプチャ グループを使用する場合の構文は、番号付きグループを指定する `$1` と、該当のグループを指定する `(x)` です。 たとえば、グループ化正規表現 `(\d)([a-z])` を使用すると、"**1a 3c 2b 4d**" という文字列の中で、4 つの一致が見つかります。 置換文字列 `z$1` を使用すると、この文字列は "**z1 z2 z3 z4**" に変換されます。
   
-> [!TIP]
->  置換パターンでよく使用される正規表現の詳細については、「[置換](/dotnet/standard/base-types/substitutions-in-regular-expressions)」を参照してください。 番号付きのキャプチャ グループを使用する場合の構文は、番号付きグループを指定する `$1` と、該当のグループを指定する `(x)` です。 たとえば、グループ化正規表現 `(\d)([a-z])` を使用すると、"**1a 3c 2b 4d**" という文字列の中で、4 つの一致が見つかります。 置換文字列 `z$1` を使用すると、この文字列は "**z1 z2 z3 z4**" に変換されます。  
-  
-## <a name="regular-expressions-in-visual-studio"></a>Visual Studio での正規表現  
- 次にいくつかの例を示します。  
-  
-|目的|式|例|  
-|-------------|----------------|-------------|  
+## <a name="regular-expression-examples"></a>正規表現の例
+
+次にいくつかの例を示します。
+
+|目的|式|例|
+|-------------|----------------|-------------|
 |(改行を除く) 任意の 1 文字に一致します。|」を参照してください。|`a.o` は、"around" の "aro" および "about" の "abo" には一致しますが、"across" の "acro" には一致しません。|  
 |直前の正規表現の 0 回以上の繰り返しに一致します (一致する文字列の長さを最大限にします)。|*|`a*r` は、"rack" の中の "r"、"ark" の中の "ar"、"aardvark" の中の "aar" に一致します。|  
 |0 回以上の任意の文字に一致します (ワイルドカード *)|.*|c.*e は、"racket" の中の "cke"、"comment" の中の "comme"、"code" の中の "code" に一致します。|  
@@ -72,6 +70,7 @@ ms.lasthandoff: 10/31/2017
 |引用符の内側にある文字列と一致します|((\\".+?\\")&#124;('.+?'))|単一引用符または二重引用符の内部にある任意の文字列に一致します。|  
 |16 進数に一致します|\b0[xX]([0-9a-fA-F]\)\b|"0xc67f" 一致しますが、"0xc67fc67f" には一致しません。|  
 |整数と小数に一致します|\b[0-9]*\\.\*[0-9]+\b|"1.333" に一致します。|  
-  
-## <a name="see-also"></a>関連項目  
- [テキストの検索と置換](../ide/finding-and-replacing-text.md)
+
+## <a name="see-also"></a>関連項目
+
+[テキストの検索と置換](../ide/finding-and-replacing-text.md)

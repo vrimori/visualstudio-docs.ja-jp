@@ -9,11 +9,11 @@ Description: Learn how to activate the LinkedIn Learning benefit included as par
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 2a2f63be6036f37429b88324fd316a24be541937
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.openlocfilehash: 62f08913a7fbefe0bd40f3dd752d96194916b0e5
+ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="activating-the-linkedin-learning-benefit-in-your-visual-studio-subscription"></a>Visual Studio サブスクリプションで LinkedIn Learning 特典をアクティブ化する
 
@@ -36,63 +36,64 @@ Premium サブスクリプションと LinkedIn Learning 特典をアクティ�
 
 2. [教育] カテゴリで [LinkedIn Learning] タイルを見つけて、**[コードの取得]** リンクをクリックします。
 
-![LinkedIn Learning 特典のタイル](_img\vs-linkedin\vs-linkedin-3-month-tile.png)
+    ![LinkedIn Learning 特典のタイル](_img\vs-linkedin\vs-linkedin-3-month-tile.png)
 
-3. LinkedIn アカウントを既に持っていて、自動的にサインインされた場合は、LinkedIn Learning 特典のアクティブ化ページが表示されます。  LinkedIn アカウントを持っているが、自動的にサインインされなかった場合は、ユーザー名とパスワードを入力し、**[サインイン]** をクリックします。  [手順 15](#activate-your-offer) までスキップして、プランをアクティブ化にします。
+
+3. LinkedIn アカウントを既に持っていて、自動的にサインインされた場合は、LinkedIn Learning 特典のアクティブ化ページが表示されます。  LinkedIn アカウントを持っているが、自動的にサインインされなかった場合は、ユーザー名とパスワードを入力し、**[サインイン]** をクリックします。  [この手順](#activate-your-offer)までスキップして、プランをアクティブにしてください。
 
 
 4. LinkedIn アカウントをまだ持っていない場合は、**[今すぐ参加]** をクリックします。  
 
-![LinkedIn Learning: 今すぐ参加](_img\vs-linkedin\vs-linkedin-join-now.png)
+    ![LinkedIn Learning: 今すぐ参加](_img\vs-linkedin\vs-linkedin-join-now.png)
 
 5. 個人情報を入力し、ユーザー名とパスワードを選択し、**[今すぐ参加]** をクリックします。 
 
-![LinkedIn Learning: アカウントの作成](_img\vs-linkedin\vs-linkedin-create-account.png)
+    ![LinkedIn Learning: アカウントの作成](_img\vs-linkedin\vs-linkedin-create-account.png)
 
 6. 国と郵便番号を指定し、**[次へ]** をクリックします。  
 
-![LinkedIn Learning: 場所の設定](_img\vs-linkedin\vs-linkedin-set-location.png)
+    ![LinkedIn Learning: 場所の設定](_img\vs-linkedin\vs-linkedin-set-location.png)
 
 7. 次に、プロファイルとして自分自身に関する情報を入力します。  学生であるかどうかを示し、直近の役職名、会社、および業界を入力します。 
 
-![LinkedIn Learning: ロール](_img\vs-linkedin\vs-linkedin-role.png)
+    ![LinkedIn Learning: ロール](_img\vs-linkedin\vs-linkedin-role.png)
 
 8. この手順では、関心のある領域を識別する機会があります。  アカウントの作成プロセスを短縮するには、**[Not sure yet.I’m open!]\(わかりません。まだ決めていません。\)** をクリックします   (関心のある領域は後で識別できます)。
 
-![LinkedIn Learning: 関心のある領域](_img\vs-linkedin\vs-linkedin-interests.png)
+    ![LinkedIn Learning: 関心のある領域](_img\vs-linkedin\vs-linkedin-interests.png)
 
-9.  電子メール アドレスを指定すると、確認コードを含むメッセージが届きます。  このメッセージの送信元は "Linkedin Messages" です。  このメッセージが受信トレイで見つからない場合は、迷惑メール フォルダーを確認してください。  メッセージに含まれるコードを入力し、**[確認]** をクリックします   (確認コードは数分後に有効期限が切れになります。使用する前に期限切れとなった場合は、[再送信] ボタンをクリックして新しいコードを取得してください)。
+9.  電子メール アドレスを指定した場合は、確認コードを含むメッセージが届いています。  このメッセージの送信元は "Linkedin Messages" です。  このメッセージが受信トレイで見つからない場合は、迷惑メール フォルダーを確認してください。  メッセージに含まれるコードを入力し、**[確認]** をクリックします   
 
-![LinkedIn Learning: 確認](_img\vs-linkedin\vs-linkedin-verify.png)
+    ![LinkedIn Learning: 確認](_img\vs-linkedin\vs-linkedin-verify.png)
 
 10. 以前に入力した電子メール アカウントから連絡先をインポートする場合は、ここで行うことができます。  行わない場合は、**[スキップ]** をクリックします  (この手順をスキップする場合は、確認を求めるメッセージが表示されます。  **[はい]** をクリックします)。
 
-![LinkedIn Learning: 連絡先](_img\vs-linkedin\vs-linkedin-contacts.png)
+    ![LinkedIn Learning: 連絡先](_img\vs-linkedin\vs-linkedin-contacts.png)
 
 11. 職務のアラートでは、ユーザーに適していると考えられる領域の職務が通知されます。  ここでは、職務のアラートを設定するか、あるいは、この手順をスキップしてアカウントの作成を続行します。  
 
-![LinkedIn Learning: 職務のアラート](_img\vs-linkedin\vs-linkedin-job-alerts.png)
+    ![LinkedIn Learning: 職務のアラート](_img\vs-linkedin\vs-linkedin-job-alerts.png)
 
 12. これまでに入力した環境設定および個人情報に基づき、ネットワークの構築を開始する上で推奨される接続の選択が表示されます。  接続を追加します。あるいは、この手順をスキップすることもできます。  
 
 13. プロファイルに写真を追加するには、**[写真のアップロード]** をクリックします。  それ以外の場合は、この手順はスキップできます   (写真は後でいつでも追加できます)。
 
-![LinkedIn Learning: 写真のアップロード](_img\vs-linkedin\vs-linkedin-photo.png)
+    ![LinkedIn Learning: 写真のアップロード](_img\vs-linkedin\vs-linkedin-photo.png)
 
-14. 電話に LinkedIn アプリをダウンロードすると、どこからでもネットワークにアクセスできるようになります。  電話にリンクを送信するか、アプリ ストアまたは Google Play から直接ダウンロードします。  また、**[次へ]** をクリックしてこの手順をスキップし、アプリのダウンロードを後で行うこともできます。  
+14. 電話に LinkedIn アプリをダウンロードすると、どこからでもネットワークにアクセスできるようになります。  電話にリンクを送信することも、App Store または Google Play から直接ダウンロードすることもできます。  また、**[次へ]** をクリックしてこの手順をスキップし、アプリのダウンロードを後で行うこともできます。  
 
-![LinkedIn Learning: 写真のアップロード](_img\vs-linkedin\vs-linkedin-app.png)
+    ![LinkedIn Learning: 写真のアップロード](_img\vs-linkedin\vs-linkedin-app.png)
 
 ## <a name="activate-your-offer"></a>プランのアクティブ化
 15. これで、LinkedIn アカウントへのサインイン、または新しいアカウントの作成が完了したので、Premium サブスクリプションをアクティブ化し、LinkedIn Learning の利用を開始する準備ができました。  **[Activate your offer]\(プランのアクティブ化\)** をクリックします。 
 
-![LinkedIn Learning: アクティブ化](_img\vs-linkedin\vs-linkedin-Activate1.png)
+    ![LinkedIn Learning: アクティブ化](_img\vs-linkedin\vs-linkedin-Activate1.png)
 
 
 16. 関心のあるスキルの探索を開始できます。  お勧め候補の一覧から選択するか、その他のスキルを検索します。あるいは **[スキップ]** をクリックしてスキルの選択は行わずに続行します。 
 
-![LinkedIn Learning: スキル](_img\vs-linkedin\vs-linkedin-skills.png)
+    ![LinkedIn Learning: スキル](_img\vs-linkedin\vs-linkedin-skills.png)
 
 17. Premium サブスクリプション プランのアクティブ化が正常に行われたので、これで LinkedIn Learning とその他の Premium のすべての特典の使用を開始できます。
 
-![LinkedIn Learning: ラーニング ホーム](_img\vs-linkedin\vs-linkedin-learning-home.png)
+    ![LinkedIn Learning: ラーニング ホーム](_img\vs-linkedin\vs-linkedin-learning-home.png)
