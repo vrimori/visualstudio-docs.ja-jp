@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8a7bee6cb18fee301dfab5e7c08c58521eac4e84
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 587e76a0108f3636d851b299c30506e0d8d55d9a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-report-view-filter"></a>パフォーマンス レポート ビュー フィルター
 [プロファイラー レポート ビュー フィルター] ウィンドウは [パフォーマンス レポート] ウィンドウの上部に表示されます。 このウィンドウが表示されない場合は、**[フィルターの表示]** ボタンをクリックします。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/31/2017
 |および/または|この句と次の句の両方が成り立つものを結果として返す場合は、**[And]** を選択します。 この句と次の句のいずれかが成り立つものを結果として返す場合は、**[Or]** を選択します。|  
 |フィールド|フィルター句で使用するフィールドを、現在のレポート ファイルで使用できるデータ フィールドの一覧から選択します。|  
 |演算子|フィールドと値の関係を示す演算子を選択します。<br /><br /> =    等しい<br /><br /> <>  等しくない<br /><br /> <    より小<br /><br /> >    より大<br /><br /> <=  以下<br /><br /> >=  以上|  
-|値|検索する値を選択または入力します。 フィールドによっては使用可能な値がリスト表示されます。|  
+|[値]|検索する値を選択または入力します。 フィールドによっては使用可能な値がリスト表示されます。|  
   
  最良の結果が得られると考えられるまでフィルターにフィルター句を追加できます。 **[フィルターの実行]** をクリックして、データ ファイルにフィルターを適用します。  
   
@@ -39,6 +40,6 @@ ms.lasthandoff: 10/31/2017
   
  フィルターを保存するには、[パフォーマンス レポート] ツール バーの **[フィルターのエクスポート]** をクリックし、.vspf ファイルの場所とファイル名を指定します。 以前に保存したフィルターを読み込むには、**[フィルターのインポート]** をクリックし、保存したフィルター ファイルを探します。 スタンドアロンのプロファイリング ツールがインストールされているコンピューター上のデータ ファイルをフィルター処理するために、フィルター ファイルを使用することもできます。 詳細については、「[VSPerfReport](../profiling/vsperfreport.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス ツール データの分析](../profiling/analyzing-performance-tools-data.md)   
  [VSPerfReport](../profiling/vsperfreport.md)

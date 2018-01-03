@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: conceptdev
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: f33a7f43fdd52103fcd041d1f6502b88677eef1e
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: unity
+ms.openlocfilehash: 45a06d17b2a3033af64c9d9a007af4a74dedabba
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>変更ログ (Visual Studio Tools for Unity)
 Visual Studio Tools for Unity の変更ログです。  
@@ -59,7 +60,7 @@ Visual Studio Tools for Unity の変更ログです。
 
 ### <a name="new-features"></a>新機能  
 
--   **Project Generation:**  
+-   **プロジェクトの生成:**  
 
     -   assembly.json コンパイル単位のサポートが追加されました。
 
@@ -81,7 +82,7 @@ Visual Studio Tools for Unity の変更ログです。
 
     -   コンパイラがローカルで生成した項目が修正されました。
 
--   **Project Generation:**  
+-   **プロジェクトの生成:**  
 
     -   4.6 API レベルの Microsoft.CSharp の参照が修正されました。
 

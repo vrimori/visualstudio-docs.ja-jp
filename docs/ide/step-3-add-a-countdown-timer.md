@@ -12,11 +12,12 @@ caps.latest.revision: "23"
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: b2d9a565300dabd4212695d62c01a415d0e11012
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 09d956f897e81d5e785c561a69cc8b716375676d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="step-3-add-a-countdown-timer"></a>手順 3: カウントダウン タイマーの追加
 このチュートリアルの第 3 部では、クイズの受け手が完了するまでの残り秒数を追跡するためのカウントダウン タイマーを追加します。  

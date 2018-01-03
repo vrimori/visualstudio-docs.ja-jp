@@ -12,11 +12,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3eeb080af73966b48cf8be543faa4276ae3b438c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f7d46fe01947e7f2813ae7eea8df81ae0b35f4f9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-geometry-based-gradient-shader"></a>方法: ジオメトリベースのグラデーション シェーダーを作成する
 このドキュメントでは、シェーダー デザイナーと Directed Graph Shader Language を使用してジオメトリベースのグラデーション シェーダーを作成する方法を説明します。 このシェーダーは、ワールド空間におけるオブジェクトの各ポイントの高さによって、定数の RGB 色の値をスケーリングします。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/31/2017
   
 5.  **[ベクターのマスク]** ノードのマスク値を指定します。 **[選択]** モードで **[ベクターのマスク]** ノードを選択し、**[プロパティ]** ウィンドウで **[Green / Y]** プロパティを **[True]** に設定し、**[Red / X]**、**[Blue / Z]**、**[Alpha / W]** プロパティを **[False]** に設定します。 この例では、**[Red / X]**、**[Green / Y]**、**[Blue / Z]** プロパティは **[ワールド位置]** ノードの x、y、z コンポーネントに対応し、**[Alpha / W]** は使用されません。 マスク後 **[Green / Y]** のみ **[True]** に設定されるため、入力のベクターの y コンポーネントだけが残ります。  
   
-6.  グラフに **[ワールド位置]** ノードを追加します。 **ツールボックス**の **[定数]** で **[ワールド位置]** を選択し、デザイン サーフェイスに移動します。  
+6.  グラフに **[ワールド位置]** ノードを追加します。  **ツールボックス**の **[定数]** で **[ワールド位置]** を選択し、デザイン サーフェイスに移動します。  
   
 7.  フラグメントのワールド空間の位置をマスクします。 **[選択]** モードで、**[ワールド位置]** ノードの **[出力]** ターミナルを **[ベクターのマスク]** ノードの **[ベクター]** ターミナルに移動します。 この接続は、フラグメントの位置をマスクして x コンポーネントと z コンポーネントを無視します。  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/31/2017
   
  ![シェーダー グラフとその効果のプレビュー](../designers/media/digit-gradient-effect-graph.png "Digit-Gradient-Effect-Graph")  
   
- 特定の図形を使用すると、一部のシェーダーをより適切にプレビューできる可能性があります。 シェーダー デザイナーでシェーダーをプレビューする方法については、「[シェーダー デザイナー](../designers/shader-designer.md)」の「**シェーダーのプレビュー**」を参照してください。  
+ シェーダーによっては、特定の図形を使用すると、より適切にプレビューできる可能性があります。 シェーダー デザイナーでシェーダーをプレビューする方法については、「[シェーダー デザイナー](../designers/shader-designer.md)」の「**シェーダーのプレビュー**」を参照してください。  
   
  次の図は、このドキュメントで説明したシェーダーを「[方法: 3-D 地形をモデル化する](../designers/how-to-model-3-d-terrain.md)」に示した 3-D シーンに適用したものです。 ここでは、色の輝度とワールド空間のポイントの高さが共に増加しています。  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 10/31/2017
   
  3-D モデルにシェーダーを適用する方法の詳細については、「[方法: シェーダーを 3-D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: シェーダーを 3-D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)   
  [方法: シェーダーをエクスポートする](../designers/how-to-export-a-shader.md)   
  [方法: 3-D 地形をモデル化する](../designers/how-to-model-3-d-terrain.md)   

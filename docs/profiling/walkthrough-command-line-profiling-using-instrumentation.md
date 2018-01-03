@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 54c91b8238b21f214edda0941c0c91fd4bdda8e4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 29a68dc22a348c787d192bebecea91caed7aa0cc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-command-line-profiling-using-instrumentation"></a>チュートリアル: インストルメンテーションを使ったコマンド ライン プロファイリング
 このチュートリアルでは、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のスタンドアロン アプリケーションのプロファイルにより、プロファイル ツールのインストルメンテーション メソッドを使用して、詳細なタイミング データおよび呼び出し数データを収集する方法を説明します。 このチュートリアルでは、次のタスクを行います。  
@@ -115,7 +116,7 @@ ms.lasthandoff: 10/31/2017
     VSPerfCLREnv /off  
     ```  
   
-14. VSPerfReport ツールを使用して、コンマ区切り値 (.csv) レポート ファイルを生成します。 種類:  
+14. VSPerfReport ツールを使用して、コンマ区切り値 (.csv) レポート ファイルを生成します。 型:  
   
     ```  
     VSPerfReport Reports\Report.vsp /output:Reports /summary:all  
@@ -123,7 +124,7 @@ ms.lasthandoff: 10/31/2017
   
      スプレッドシート プログラムで生成されたレポートを分析できます。または、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE を使用して、Report.vsp ファイル内のプロファイル データを分析することもできます。 詳細については、「[パフォーマンス ツール データの分析](../profiling/analyzing-performance-tools-data.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス セッションの概要](../profiling/performance-session-overview.md)   
  [コマンドラインからのプロファイル](../profiling/using-the-profiling-tools-from-the-command-line.md)   
  [VSPerfCmd](../profiling/vsperfcmd.md)   

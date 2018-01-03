@@ -11,11 +11,12 @@ ms.assetid: 51b53778-469c-4cc9-854c-4e4992d6389b
 caps.latest.revision: "30"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: d3ba0b9ce4366efd386d0b5c1b4d9c3f0094511b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 4cf5eac9600be44405142666e1f94408c44b0a13
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>コード化された UI テストを使用した SharePoint 2010 アプリケーションのテスト
 コード化された UI テストを SharePoint アプリケーションに含めると、UI コントロールを含むアプリケーション全体が正しく機能していることを検証できます。 コード化された UI テストでは、ユーザー インターフェイスの値とロジックも検証できます。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/27/2017
 ## <a name="what-else-should-i-know-about-coded-ui-tests"></a>コード化された UI テストについて把握しておくべきこと  
  コード化された UI テストを使用する利点の詳細については、「[UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)」と「[Visual Studio 2012 を使用した継続的配信のためのテスト - 第 5 章: システム テストの自動化](http://go.microsoft.com/fwlink/?LinkID=255196)」を参照してください。  
   
- **注**  
+ **ノート**  
   
 -   ![必須コンポーネント](../test/media/prereq.png "必須コンポーネント") SharePoint アプリケーションのコード化された UI テストは、SharePoint 2010 でのみサポートされます。  
   
@@ -143,7 +144,7 @@ uiGridKeyboardInputEdit.Text=value;
 ### <a name="forum"></a>フォーラム  
  [Visual Studio ALM + Team Foundation Server のブログ](http://go.microsoft.com/fwlink/?LinkID=254496)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   
  [SharePoint 2010 および 2013 アプリケーションの Web パフォーマンス テストおよびロード テスト](/devops-test-docs/test/web-performance-and-load-testing-sharepoint-2010-and-2013-applications)   
  [SharePoint ソリューションの作成](/office-dev/office-dev/create-sharepoint-solutions)   

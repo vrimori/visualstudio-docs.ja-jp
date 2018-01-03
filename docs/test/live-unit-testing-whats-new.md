@@ -9,11 +9,12 @@ helpviewer_keywords:
 - Live Unit Testing What's New
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58e3d44e1644c8582ee423cc4c1572af21efe763
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 0b28bb09a7bae7261b65e268149eaab0cadb2de7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="whats-new-in-live-unit-testing"></a>Live Unit Testing の新機能
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 10/31/2017
 
 Visual Studio 2017 バージョン 15.4 以降の Live Unit Testing には、さまざまな領域で機能改善があります。
 
-- **検索性の改善**。 Visual Studio IDE では、Live Unit Testing 機能があることを知らないユーザーに、Live Unit Testing が有効になっていないときに単体テストを含むソリューションを開いた場合、Visual Studio IDE に金色のバーを表示します。 金色のバーでは、ユーザーは、Live Unit Testing の機能の詳細とそれを有効にする方法を知ることができます。 Live Unit Testing の前提条件が満たされていない場合についても、金色のバーにはその情報が表示されます。 以下に例を示します。
+- **検索性の改善**。 Visual Studio IDE では、Live Unit Testing 機能があることを知らないユーザーに、Live Unit Testing が有効になっていないときに単体テストを含むソリューションを開いた場合、Visual Studio IDE に金色のバーを表示します。 金色のバーでは、ユーザーは、Live Unit Testing の機能の詳細とそれを有効にする方法を知ることができます。 Live Unit Testing の前提条件が満たされていない場合についても、金色のバーにはその情報が表示されます。 次の設定があります。
 
    - テスト アダプターが見つかりません。
    - 古いバージョンのテスト アダプターが存在します。

@@ -20,11 +20,12 @@ caps.latest.revision: "34"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cada43ba0ac05d5ec7355f77578127c3339929be
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a6fb8d57be1101f8faa5826b2459a9a1658009d9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="references-page-project-designer-visual-basic"></a>[参照設定] ページ (プロジェクト デザイナー) (Visual Basic)
 **[プロジェクト デザイナー]** の **[参照]** ページを利用し、プロジェクトの参照、Web 参照、インポートした名前空間を管理します。 プロジェクトには、COM コンポーネント、XML Web サービス、.NET Framework クラス ライブラリまたはアセンブリ、その他のクラス ライブラリの参照を含めることができます。 参照の使用方法については、「[プロジェクト内の参照の管理](../../ide/managing-references-in-a-project.md)」を参照してください。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/31/2017
 
 -   `<xmlns:xsl="http://www.w3.org/1999/XSL/Transform">` など、XML 名前空間。  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクト内の参照の管理](../../ide/managing-references-in-a-project.md)   
  [方法 : インポートした名前空間を追加または削除する (Visual Basic)](../../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md)   
  [Imports ステートメント (XML 名前空間)](/dotnet/visual-basic/language-reference/statements/imports-statement-xml-namespace)

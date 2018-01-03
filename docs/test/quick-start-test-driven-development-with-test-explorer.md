@@ -11,11 +11,12 @@ ms.assetid: 5161b533-2127-4172-b473-d4ffc76ff05b
 caps.latest.revision: "15"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: c52ce6556ae8937dd26c1be16cfaf1a4b05b1c74
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 4344c844c47568c3c23744a890c202493704b6a8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quick-start-test-driven-development-with-test-explorer"></a>クイック スタート: テスト エクスプローラーによるテスト駆動開発
 変更を繰り返して段階的に開発を行ううえで、コードの正しい動作を維持するには、単体テストを作成することをお勧めします。 サード パーティ製を含めていくつかのフレームワークを単体テストの記述に使用できます。 一部のテスト フレームワークは、別々の言語またはプラットフォームでのテストに特化されています。 テスト エクスプローラーは、1 つのインターフェイスで、どのフレームワークでの単体テストにも対応します。 最も一般的に使用されるフレームワーク用にアダプターが用意されており、他のフレームワーク用に独自のアダプターを作成することもできます。  

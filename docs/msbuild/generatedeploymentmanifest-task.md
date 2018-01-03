@@ -21,11 +21,12 @@ caps.latest.revision: "27"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: bb7444c529cc4ba592574ba38566235cb13c4169
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 1dc0d1af8c79fe95ea091ac691519653b59a9648
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generatedeploymentmanifest-task"></a>GenerateDeploymentManifest タスク
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置マニフェストを生成します。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置マニフェストでは、アプリケーションの配置方法について記述します。記述する内容は、配置するための一意の ID の定義、インストールするのかオンライン モードで使用するのかなど配置の特徴の指定、アプリケーションの更新設定および更新プログラムの場所の指定、対応する [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェストの指定などです。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="remarks"></a>コメント  
  上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.GenerateManifestBase> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 Task クラスのパラメーターの一覧については、[「Task Base Class」](../msbuild/task-base-class.md) を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [タスク](../msbuild/msbuild-tasks.md)   
  [GenerateApplicationManifest タスク](../msbuild/generateapplicationmanifest-task.md)   
  [SignFile タスク](../msbuild/signfile-task.md)   

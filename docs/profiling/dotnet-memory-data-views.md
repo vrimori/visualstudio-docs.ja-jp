@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c6bbbc764c7b5275082b6261249d48122ea3c836
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8fa1fb6dbaed5ed43f9a7eb3e69b52e91f43bd7c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-memory-data-views"></a>.NET メモリのデータ ビュー
 ここでは、.NET メモリ プロファイル データが格納されるプロファイラー データ ファイルのビューとレポートに関するリファレンス情報を示します。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/31/2017
  [概要ビュー](../profiling/summary-view-dotnet-memory-data.md)  
  最も多くのメモリを割り当てた関数と型が一覧で示されます。  
   
- [割り当てビュー](../profiling/dotnet-memory-allocations-view.md)  
+ [割り当て ビュー](../profiling/dotnet-memory-allocations-view.md)  
  プロファイリング実行で割り当てられた型、および型の割り当ての結果として生成されたコール ツリー (実行パス) が一覧で表示されます。  
   
  [オブジェクトの有効期間ビュー](../profiling/object-lifetime-view.md)  

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: f1522f4d3b7f97ccea1529c043e6179502fcd14a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 765f74a80e98737b65fb913113b2879ce4609248
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assignculture-task"></a>AssignCulture タスク
 このタスクは、有効な .NET カルチャ ID 文字列をファイル名の一部として含む可能性がある項目の一覧を受け取り、対応するカルチャ ID を含む `Culture` という名前のメタデータを持つ項目を生成します。 たとえば、ファイル名 Form1.fr-fr.resx には、"fr-fr" というカルチャ ID が埋め込まれています。したがって、このタスクでは、`fr-fr` と等しい値の `Culture` メタデータを持つ同じファイル名の項目が生成されます。 また、このタスクでは、ファイル名からカルチャを削除したファイル名の一覧も生成されます。  
@@ -79,6 +80,6 @@ ms.lasthandoff: 10/31/2017
 |`OutAssignedFilesWithNoCulture`|`MyResource2.XX.resx` (追加メタデータなし)|  
 |`OutCultureNeutralAssignedFiles`|`MyResource1.resx (Culture="fr")`<br /><br /> `MyResource2.XX.resx (`追加メタデータなし)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [タスク](../msbuild/msbuild-tasks.md)   
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)

@@ -12,18 +12,19 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5d3d01a13acf68bbf8e58ca0fa1cb41b145d9d3a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e2920642c46aa3f6cdf85f4f80c2334d18095718
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="utility-nodes"></a>ユーティリティ ノード
 シェーダー デザイナーのユーティリティ ノードは、その他のカテゴリにはぴったり当てはまらないような、一般的で役に立つシェーダー計算を表します。 ユーティリティ ノードには、ベクターをまとめて追加したり、条件付きで結果を選択したりするといった単純な操作を実行するものや、一般的な光源モデルに従った光源の効果の計算など、複雑な処理を実行するものがあります。  
   
 ## <a name="utility-node-reference"></a>ユーティリティ ノード リファレンス  
   
-|ノード|詳細|プロパティ|  
+|ノード|説明|プロパティ|  
 |----------|-------------|----------------|  
 |**ベクターの追加**|指定された入力をまとめて追加することによって、ベクターを作成します。<br /><br /> **入力:**<br /><br /> `Vector`: `float`、`float2`、または `float3`<br /> 追加する値。<br /><br /> `Value to Append`: `float`<br /> 追加する値。<br /><br /> **出力:**<br /><br /> `Output`: 入力 `Vector` の種類に応じて、`float2`、`float3`、または`float4`<br /> 新しいベクター。|なし|  
 |**フレネル**|指定された表面法線に基づいたフレネルの減衰を計算します。<br /><br /> フレネルの減衰の値は、現在のピクセルの表面法線がビューのベクターと一致する度合いを表します。 この関数の結果は、ベクターが一直線になる場合に 0 になります。ベクターの差異が大きくなるほど結果が大きくなり、ベクターが直交すると最大になります。 これを使用して、現在のピクセルとカメラの向きの関係に基づいて効果の強度を調整できます。<br /><br /> **入力:**<br /><br /> `Surface Normal`: `float3`<br /> 現在のピクセルの接空間で定義される、現在のピクセルの表面法線。 通常のマップと同様に、外見上の表面法線を摂動する際にこれを使用できます。<br /><br /> **出力:**<br /><br /> `Output`: `float`<br /> 現在のピクセルの反射率。|**指数**<br /> フレネルの減衰の計算に使用される指数。|  

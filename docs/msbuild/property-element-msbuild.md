@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: e931468b27807a99e86249008718faf4e044cbd7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a93b339a062bd2e0c8dc1bf626c4ad109fa2af2a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-element-msbuild"></a>Property 要素 (MSBuild)
 ユーザー定義のプロパティ名と値を格納します。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトで使用されるすべてのプロパティは、`PropertyGroup` 要素の子として指定する必要があります。  
@@ -76,6 +77,6 @@ ms.lasthandoff: 10/31/2017
 </PropertyGroup>  
 ```  
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [MSBuild プロパティ](../msbuild/msbuild-properties.md)  
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)

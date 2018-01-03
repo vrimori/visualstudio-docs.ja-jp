@@ -53,11 +53,12 @@ caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 747e17f876972fb44f686fe90ad4e97fd035279e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 55c4678954a274b99c0bdeadb250ec3c602d3b20
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="options-text-editor-general"></a>[オプション]、[テキスト エディター]、[全般]
 このダイアログ ボックスでは、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] コード/テキスト エディターのグローバル設定を変更できます。 このダイアログ ボックスを表示するには、**[ツール]** メニューの **[オプション]** をクリックし、**[テキスト エディター]** フォルダーを展開し、**[全般]** をクリックします。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 10/31/2017
  [現在の行を強調表示する]  
  選択すると、カーソルが置かれているコード行の周りに灰色のボックスが表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[オプション]、[テキスト エディター]、[すべての言語]](../../ide/reference/options-text-editor-all-languages.md)   
  [[オプション]、[テキスト エディター]、[すべての言語]、[タブ]](../../ide/reference/options-text-editor-all-languages-tabs.md)   
  [[オプション]、[テキスト エディター]、[ファイル拡張子]](../../ide/reference/options-text-editor-file-extension.md)   

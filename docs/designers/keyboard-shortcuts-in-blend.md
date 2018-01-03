@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 24b6a19ed79db2625fc7e1ad339ab2396635767a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: afdf338d300d67964499fc67ce260fc32b8664af
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="keyboard-shortcuts-in-blend"></a>Blend でのキーボード ショートカット
 ## <a name="project-shortcuts"></a>プロジェクトのショートカット  
@@ -94,7 +95,7 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="view-shortcuts"></a>表示のショートカット  
   
-|目的|操作手順|  
+|目的|方法|  
 |----------------|-------------|  
 |**[デザイン]** ビュー、**[コード]** ビュー、**[分割]** ビューを切り替える|F11|  
 |アートボードをズーム インする|Ctrl + 等号 (=)|  
@@ -110,7 +111,7 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="workspace-shortcuts"></a>ワークスペース ショートカット  
   
-|目的|操作手順|  
+|目的|方法|  
 |----------------|-------------|  
 |**[アニメーション]** ワークスペースと **[デザイン]** ワークスペースを切り替える|Ctrl + F11|  
 |**[アセット]** パネルを表示または非表示にする|Ctrl + ピリオド (.)|  

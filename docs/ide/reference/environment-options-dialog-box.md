@@ -15,11 +15,12 @@ caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6d6d7f0bc3d55e59fec506d6387f0f6254300ee8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 567d1c8248ff00a1387ccd1c40a8c8c658b551ea
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="environment-options-dialog-box"></a>[環境] ([オプション] ダイアログ ボックス)
 **[オプション]** ダイアログ ボックスの **[環境]** フォルダーのページを使用すると、統合開発環境 (IDE) の特定の要素の表示方法と動作方法を設定できます。 メニュー バーで **[ツール]**、**[オプション]** を順にクリックし、次に **[環境]** をクリックすると、[環境] の各ページにアクセスできます。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  アクティブな設定および使用している Visual Studio のエディションによっては、ヘルプの記載と異なるダイアログ ボックスやメニュー コマンドがコンピューターに表示される場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-|使用方法の詳細については、以下の資料を参照してください。|参照トピック|  
+|使用方法の詳細については、以下の資料を参照してください。|解決方法については、|  
 |----------------------------------|---------|  
 |ウィンドウ、メニュー、および IDE の他の要素の外観や動作をカスタマイズします。|[[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)|  
 |ファイルの自動保存および復元の設定を変更します。|[[自動バックアップ] ([オプション] ダイアログ ボックス - [環境])](../../ide/reference/autorecover-environment-options-dialog-box.md)|  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/31/2017
 |タスクやタスク一覧のためのオプションの設定方法を調べます。|[[タスク一覧] ([オプション] ダイアログ ボックス - [環境])](../../ide/reference/task-list-environment-options-dialog-box.md)|  
 |既定の [ホーム] ページや [検索] ページの変更、システム ソース エディターの変更、および Internet Explorer のオプションの設定を行います。|[[Web ブラウザー] ([オプション] ダイアログ ボックス - [環境])](../../ide/reference/web-browser-environment-options-dialog-box.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[オプション] ダイアログ ボックス](../../ide/reference/options-dialog-box-visual-studio.md)

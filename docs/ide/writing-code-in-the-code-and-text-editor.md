@@ -62,18 +62,19 @@ caps.latest.revision: "44"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bb8229cffc2a3e30e3ce5a3a42af7e1673d11f3d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 4f26fcfb6b12266dd980fb8c38075e1937fcc022
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="write-code-in-the-code-editor"></a>コード エディターでのコードの作成
 Visual Studio エディターには、コードとテキストの記述と管理を容易にする多数の機能が用意されています。 アウトラインを使用すると、個々のコード ブロックを展開したり折りたたんだりできます。 コードの詳細は、IntelliSense、**オブジェクト ブラウザー**、および呼び出し階層を使用して調べることができます。 コードを探すには、**[移動]**、**[定義へ移動]**、**[すべての参照の検索]** などの機能を使用します。 コード スニペットを使用してコード ブロックを挿入し、 **[使用法から生成]**などの機能を使用してコードを生成することもできます。 初めて Visual Studio エディターを使用する場合は、簡単な概要について「[コードの編集](https://www.visualstudio.com/features/ide-vs)」をご覧ください。  
 
  コードは、いくつかの方法で表示できます。 既定では、**ソリューション エクスプローラー**にファイルごとに整理されたコードが表示されます。 ウィンドウの下部にある **[クラス ビュー]** タブをクリックすれば、クラスごとに整理されたコードを表示することができます。
 
- 1 つまたは複数のファイルでテキストを検索および置換することができます。 詳細については、「[テキストの検索と置換](../ide/finding-and-replacing-text.md)」を参照してください。 テキストの検索と置換をするときに正規表現を使用できます。 詳細については、「[Visual Studio での正規表現の使用](../ide/using-regular-expressions-in-visual-studio.md)」を参照してください。  
+ 1 つまたは複数のファイルでテキストを検索および置換することができます。 詳細については、「 [Finding and Replacing Text](../ide/finding-and-replacing-text.md)」を参照してください。 テキストの検索と置換をするときに正規表現を使用できます。 詳細については、「[Visual Studio での正規表現の使用](../ide/using-regular-expressions-in-visual-studio.md)」を参照してください。  
 
  Visual Studio では、言語によって異なる機能がサポートされています。同じ機能の動作が、言語によって異なる場合もあります。 これらの相違点の多くは機能の説明に示されていますが、詳細については、各 Visual Studio 言語のセクションを参照してください。  
 
@@ -133,5 +134,5 @@ Visual Studio エディターには、コードとテキストの記述と管理
 
 エディターのカスタマイズの詳細については、「[エディターのカスタマイズ](../ide/customizing-the-editor.md)」を参照してください。 言語固有のエディター オプションについては、「[Using the Visual Studio Development Environment for C#](../csharp-ide/using-the-visual-studio-development-environment-for-csharp.md)」(C# の Visual Studio 開発環境を使用する) と「[[オプション]、[テキスト エディター]、[JavaScript]、[書式設定]](../ide/reference/options-text-editor-javascript-formatting.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio IDE](../ide/visual-studio-ide.md)

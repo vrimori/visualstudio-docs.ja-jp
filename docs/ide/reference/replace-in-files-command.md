@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1e9ccf0c77f28d2f57d6861dd39591a7cbbce36c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ccb81bffa6845e4e644294916a508820445da263
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="replace-in-files-command"></a>ReplaceinFiles コマンド
 **[検索と置換]** ウィンドウの **[フォルダーを指定して置換]** タブにあるオプションのサブセットを使用してファイル内のテキストを置換します。  
@@ -36,54 +37,54 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
   
 ## <a name="arguments"></a>引数  
  `findwhat`  
- 必須です。 検索するテキスト。  
+ 必須。 検索するテキスト。  
   
  `replacewith`  
- 必須です。 一致したテキストと置き換えるテキスト。  
+ 必須。 一致したテキストと置き換えるテキスト。  
   
 ## <a name="switches"></a>スイッチ  
  /all または /a  
- 省略可能です。 検索されたすべてのテキストを置換します。  
+ 任意。 検索されたすべてのテキストを置換します。  
   
  /case または /c  
- 省略可能です。 `findwhat` 引数に指定したテキストと大文字/小文字が完全に一致する場合にだけ、一致したと見なされます。  
+ 任意。 `findwhat` 引数に指定したテキストと大文字/小文字が完全に一致する場合にだけ、一致したと見なされます。  
   
  /ext: `extensions`  
- 省略可能です。 検索するファイルのファイル拡張子を指定します。  
+ 任意。 検索するファイルのファイル拡張子を指定します。  
   
  /keep または /k  
- 省略可能です。 すべての変更されたファイルを開いたままにするように指定します。  
+ 任意。 すべての変更されたファイルを開いたままにするように指定します。  
   
  /lookin: `searchpath`  
- 省略可能です。 検索するディレクトリ。 パスにスペースが含まれる場合は、パス全体を引用符で囲みます。  
+ 任意。 検索するディレクトリ。 パスにスペースが含まれる場合は、パス全体を引用符で囲みます。  
   
  /options または /t  
- 省略可能です。 現在の検索オプションの設定の一覧を表示し、検索は行いません。  
+ 任意。 現在の検索オプションの設定の一覧を表示し、検索は行いません。  
   
  /regex または /r  
- 省略可能です。 `findwhat` 引数に含まれる定義済みの特殊文字を、リテラル文字ではなく、テキストのパターンを表す表記として使います。 正規表現文字の一覧については、「[正規表現](../../ide/using-regular-expressions-in-visual-studio.md)」をご覧ください。  
+ 任意。 `findwhat` 引数に含まれる定義済みの特殊文字を、リテラル文字ではなく、テキストのパターンを表す表記として使います。 正規表現文字の一覧については、「[正規表現](../../ide/using-regular-expressions-in-visual-studio.md)」をご覧ください。  
   
  /reset または /e  
- 省略可能です。 検索オプションを既定の設定に戻し、検索は行いません。  
+ 任意。 検索オプションを既定の設定に戻し、検索は行いません。  
   
  /stop  
- 省略可能です。 現在実行中の検索操作がある場合は、それを停止します。 `/stop` を指定すると、他のすべての引数は無視されます。 たとえば、現在の置換操作を中止するには、次のように入力します。  
+ 任意。 現在実行中の検索操作がある場合は、それを停止します。 `/stop` を指定すると、他のすべての引数は無視されます。 たとえば、現在の置換操作を中止するには、次のように入力します。  
   
 ```  
 >Edit.ReplaceinFiles /stop  
 ```  
   
  /sub または /s  
- 省略可能です。 /lookin:`searchpath` 引数で指定したディレクトリ内のサブフォルダーを検索します。  
+ 任意。 /lookin:`searchpath` 引数で指定したディレクトリ内のサブフォルダーを検索します。  
   
  /text2 または /2  
- 省略可能です。 **[検索結果 2]** ウィンドウに置換結果を表示します。  
+ 任意。 **[検索結果 2]** ウィンドウに置換結果を表示します。  
   
  /wild または /l  
- 省略可能です。 `findwhat` 引数に含まれる定義済みの特殊文字を、文字または文字のシーケンスを表す表記として使います。  
+ 任意。 `findwhat` 引数に含まれる定義済みの特殊文字を、文字または文字のシーケンスを表す表記として使います。  
   
  /word または /w  
- 省略可能です。 完全に一致する単語だけを検索します。  
+ 任意。 完全に一致する単語だけを検索します。  
   
 ## <a name="example"></a>例  
  次の例では、"my visual studio projects" フォルダーに含まれるすべての .cls ファイルで `btnCancel` を検索し、それを `btnReset` に置換して、**[検索結果 2]** ウィンドウに置換情報を表示します。  
@@ -92,7 +93,7 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
 >Edit.ReplaceinFiles btnCancel btnReset /lookin:"c:/my visual studio projects" /ext:.cls /text2  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [テキストの検索と置換](../../ide/finding-and-replacing-text.md)   
  [フォルダーを指定して置換](../../ide/replace-in-files.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   

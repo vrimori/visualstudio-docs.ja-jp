@@ -12,11 +12,12 @@ caps.latest.revision: "18"
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: f3cf117116f5da70391f5252e3d1bde4e2416b69
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a3d205dae6dd00ec5d763b9fb36f9c48041438ce
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>手順 5: NumericUpDown コントロールの Enter イベント ハンドラーの追加
 このチュートリアルの第 5 部では、クイズ問題の解答の入力が少し楽になるように Enter イベント ハンドラーを追加します。 このコードは、クイズの受け手が選択して別の値の入力を開始するとすぐに、各 NumericUpDown コントロールの現在の値を選択し、クリアします。  

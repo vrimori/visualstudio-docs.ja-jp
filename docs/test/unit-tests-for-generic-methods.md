@@ -14,11 +14,12 @@ ms.assetid: ffc89814-a7df-44fc-aef5-dd3dfeb28a9b
 caps.latest.revision: "47"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 2a93a2af3f3d89a4970a949b42bea79b3641d53f
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 4e0afbcf6ff12376e3fcdf10925a20a4a7228130
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unit-tests-for-generic-methods"></a>ジェネリック メソッドの単体テスト
 ジェネリック メソッドには、他のメソッドと同様に、単体テストを生成できます。詳細については、「[方法: 単体テストを作成して実行する](http://msdn.microsoft.com/en-us/5e0f43cf-5e51-48e2-9c98-0eb9324bdc48)」を参照してください。 次のセクションでは、ジェネリック メソッドの単体テストの作成に関する情報と例を示します。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 10/27/2017
 ## <a name="type-arguments-and-type-constraints"></a>型引数と型制約  
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で、`MyList<T>` など、ジェネリック クラスの単体テストが生成されると、ジェネリック ヘルパー メソッドとテスト メソッドの 2 つのメソッドが生成されます。 `MyList<T>` に 1 つ以上の型制約がある場合、型引数はすべての型制約を満たす必要があります。 テスト対象のジェネリック コードが許容されたすべての入力に対して予想どおりに動作することを確認するには、テスト メソッドで、テストするすべての制約を指定して、ジェネリック ヘルパー メソッドを呼び出します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  ジェネリックの単体テストの例を次に示します。  
   
 -   [生成されたテスト コードの編集](#EditingGeneratedTestCode)。 この例には、「生成後のテスト コード」と「編集後のテスト コード」という 2 つのセクションがあります。 ここでは、ジェネリック メソッドから生成される未加工のテスト コードを編集して有用なテスト メソッドにする方法を示します。  
@@ -197,6 +198,6 @@ namespace ClassLibrary2
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [単体テストの構造](http://msdn.microsoft.com/en-us/a03d1ee7-9999-4e7c-85df-7d9073976144)   
  [コードの単体テスト](../test/unit-test-your-code.md)

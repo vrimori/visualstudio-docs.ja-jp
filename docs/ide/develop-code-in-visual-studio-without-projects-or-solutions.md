@@ -29,11 +29,12 @@ caps.latest.revision: "44"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e9531a49ced6e8f72154cbdd59fce271ff673f59
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2d1d3c327101e535c037dba30ed19af3dcf7faaa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>プロジェクトまたはソリューションを使用せずに Visual Studio でコードを開発する  
 Visual Studio 2017 で、ほぼすべての種類のディレクトリ ベースのプロジェクトから、ソリューションまたはプロジェクト ファイルを使用せずに Visual Studio にコードを開くことができます。 これは、たとえば、Git でコード プロジェクトを検索し、それを複製して、直接 Visual Studio に開き、ソリューションまたはプロジェクトを作成することなく開発を開始できることを意味します。  

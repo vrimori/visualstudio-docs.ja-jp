@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f2c265fde65ae20012e2846d99b86c71254d5b44
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3a79d924e8f20079040f29a85854555e214e4281
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gpu-usage"></a>GPU 使用率
 Visual Studio のパフォーマンスおよび診断ハブに含まれる GPU 使用率ツールを使用すると、Direct3D アプリのハードウェア利用状況の概要を適切に把握できます。 このツールを使用すると、アプリのパフォーマンスが CPU バインドまたは GPU バインドのどちらであるかを判断し、プラットフォームのハードウェアをより効率的に使用する方法について洞察を得ることができます。 GPU 使用率ツールは、Direct3D 12、Direct3D 11、および Direct3D 10 を使用するアプリをサポートします。その他のグラフィックス API (Direct2D や OpenGL など) はサポートしていません。  
@@ -25,7 +26,7 @@ Visual Studio のパフォーマンスおよび診断ハブに含まれる GPU �
   
  ![GPU 使用率レポート、CPU タイムラインと GPU タイムラインあり](media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  グラフィックス診断の要件以外の、GPU 使用率ツールを使用するための追加要件を次に示します。  
   
 -   必要なタイミング インストルメンテーションをサポートする GPU とドライバー。  
@@ -107,7 +108,7 @@ Visual Studio 2017 以降では、診断セッションの右下にある **[Gpu
   
  GPU 使用率レポートの下部のイベント一覧には、各イベントの詳細が表示されます。  
   
-|列|説明|  
+|Column|説明|  
 |------------|-----------------|  
 |**イベント名**|グラフィックス イベントの名前。 イベントは、通常、CPU スレッドのタイムライン内の 1 つのイベントと、GPU のタイムライン上の 1 つのイベントに対応します。<br /><br /> GPU 使用率ツールでイベントの名前を特定できなかった場合は、イベント名が 'unattributed' になります。 詳細については、この表の下にある注意書きを参照してください。|  
 |**CPU 開始 (ナノ秒)**|Direct3D API を呼び出すことによって CPU 上でイベントが開始された時刻。 時間は、アプリケーションの開始時を基準にしたナノ秒単位で測定されます。|  

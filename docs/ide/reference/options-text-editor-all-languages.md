@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 61b3ab54929cdd7e6a584737f8963302335c4fd1
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 3ef5133f1d92d9f18a62117e40a0788766dfe439
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="options-text-editor-all-languages"></a>[オプション]、[テキスト エディター]、[すべての言語]
 このダイアログ ボックスでは、コード エディターの既定の動作を変更できます。 設定は、HTML デザイナーのソース ビューなど、コード エディターに基づいて他のエディターにも適用されます。 このダイアログ ボックスを開くには、**[ツール]** メニューから **[オプション]** を選択します。 **[テキスト エディター]** フォルダー内で **[すべての言語]** サブフォルダーを展開し、**[全般]** を選択します。  
@@ -95,7 +96,7 @@ ms.lasthandoff: 11/02/2017
  [ナビゲーション バー]  
  選択すると、コード エディターの上部に**ナビゲーション バー**が表示されます。 そのドロップダウンの **[オブジェクト]** 一覧と **[メンバー]** 一覧では、コードの特定のオブジェクトを選択したり、そのメンバーから選択したり、コード エディターで選択したメンバーの宣言に移動したりできます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[オプション]、[テキスト エディター]、[すべての言語]、[タブ]](../../ide/reference/options-text-editor-all-languages-tabs.md)   
  [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)   
  [IntelliSense の使用](../../ide/using-intellisense.md)

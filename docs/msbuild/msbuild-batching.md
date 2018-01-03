@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: e2ad60b0b0f98cee23de911a8ca7cf2e5d43b364
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 68977ca672aae84cd65ca169c4ca13feda6d7887
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msbuild-batching"></a>MSBuild バッチ
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] には、項目メタデータに基づき、項目一覧をさまざまなカテゴリまたはバッチに分割し、各バッチで一度に 1 つのターゲットまたはタスクを実行する機能があります。  
@@ -88,13 +89,13 @@ ms.lasthandoff: 10/31/2017
  ターゲットのバッチ処理のもう 1 つの例については、「[ターゲットのバッチの項目メタデータ](../msbuild/item-metadata-in-target-batching.md)」を参照してください。  
   
 ## <a name="property-functions-using-metadata"></a>メタデータを利用するプロパティ関数  
- バッチ処理は、メタデータを含むプロパティ関数で制御できます。 次に例を示します。  
+ バッチ処理は、メタデータを含むプロパティ関数で制御できます。 たとえば、オブジェクトに適用された  
   
  `$([System.IO.Path]::Combine($(RootPath),%(Compile.Identity)))`  
   
  このプロパティ関数は、<xref:System.IO.Path.Combine%2A> を使用し、ルート フォルダーパスとコンパイル項目パスを結合します。  
   
- プロパティ関数はメタデータ値内に表示されない場合があります。  次に例を示します。  
+ プロパティ関数はメタデータ値内に表示されない場合があります。  たとえば、オブジェクトに適用された  
   
  `%(Compile.FullPath.Substring(0,3))`  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 10/31/2017
   
  プロパティ関数の詳細については、「[プロパティ関数](../msbuild/property-functions.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ItemMetadata 要素 (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)   
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   

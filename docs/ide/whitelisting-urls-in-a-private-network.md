@@ -11,11 +11,12 @@ ms.assetid:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 94348821e44b5ed07e3df5e4859796342919a833
-ms.sourcegitcommit: cc288456329aefca1fdaa7ce74751ce195985c14
+ms.workload: multiple
+ms.openlocfilehash: 4a4093c7ebba74493a64833bfbf83ee6d28ef1ef
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="whitelisting-urls-in-a-private-network"></a>プライベート ネットワーク内の URL のホワイトリスト登録
 
@@ -57,5 +58,4 @@ Visual Studio ではトランスポート層セキュリティ (TLS) 1.2 プロ�
 ## <a name="see-also"></a>関連項目
 
 [プロキシ認証を要求するエラー](../ide/reference/proxy-authorization-required.md)  
-[Visual Studio で使用されるインターネット リソース](../ide/connected-environment.md)  
 [ファイアウォールまたはプロキシ サーバーの内側に Visual Studio をインストールする](../install/install-visual-studio-behind-a-firewall-or-proxy-server.md)

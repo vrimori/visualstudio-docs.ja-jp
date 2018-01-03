@@ -11,16 +11,17 @@ ms.assetid: 20221de4-2a9e-4787-b99a-b5855bb90872
 caps.latest.revision: "16"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 34cfe9041a9e724136c9d7c5a19b1c74f2309b2a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: e293d6ef200fec89150d76d94233bb171374a1d9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Microsoft Fakes におけるコード生成、コンパイル、および名前付け規則
 このトピックでは、Fakes のコード生成とコンパイルのオプションと問題について説明し、Fakes で生成される型、メンバー、およびパラメーターの名前付け規則について説明します。  
   
- **Requirements**  
+ **必要条件**  
   
 -   Visual Studio Enterprise  
   
@@ -269,7 +270,7 @@ attribute of the Assembly element in the .fakes:
 |例: + 演算子|`op_Add`|`AddOp`|  
 |**変換演算子**の場合は、戻り値の型が追加されます。|`T op_Implicit`|`ImplicitOpT`|  
   
- **注**  
+ **ノート**  
   
 -   **インデクサーの get および set アクセス操作子**は、プロパティと同様に扱われます。 インデクサーの既定の名前は `Item` です。  
   
@@ -304,5 +305,5 @@ attribute of the Assembly element in the .fakes:
 ###  <a name="BKMK_Guidance"></a> ガイダンス  
  [Visual Studio 2012 を使用した継続的配信のためのテスト - 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Microsoft Fakes を使用したテストでのコードの分離](../test/isolating-code-under-test-with-microsoft-fakes.md)

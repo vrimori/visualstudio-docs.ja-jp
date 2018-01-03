@@ -19,11 +19,12 @@ caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1846b145833a7474e8662442313d0e39a262e67c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e4f3388d7484021bd4c12e4a7273b312190bd6dd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-locate-and-organize-project-and-item-templates"></a>方法 : プロジェクト テンプレートと項目テンプレートを配置して整理する
 テンプレート ファイルは、テンプレートが **[新しいプロジェクト]** ダイアログ ボックスや **[新しい項目の追加]** ダイアログ ボックスに表示されるように、Visual Studio が認識する場所に配置する必要があります。 テンプレートにはカスタム サブカテゴリを作成できます。作成したサブカテゴリも、ユーザー インターフェイスに表示されます。  
@@ -172,7 +173,7 @@ ms.lasthandoff: 10/31/2017
 
 8.  削除した .zip ファイルが含まれていたディレクトリに、新しい .zip ファイルを配置します。  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [テンプレートのカスタマイズ](../ide/customizing-project-and-item-templates.md)   
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
  [NumberOfParentCategoriesToRollUp (Visual Studio テンプレート)](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md)   

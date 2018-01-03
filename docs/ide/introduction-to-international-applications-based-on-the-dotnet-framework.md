@@ -29,11 +29,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2bfebe7cfcaff34742db902d50b6de424a6794ca
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 9acc8f2e015b6ca2ad26881eeb1f53012d96e56d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introduction-to-international-applications-based-on-the-net-framework"></a>.NET Framework ベースの国際対応アプリケーションの概要
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] での国際対応アプリケーションの作成は 2 つの部分で構成されています。1 つはグローバリゼーションという、異なるカルチャに対応できるアプリケーションを設計するプロセスで、もう 1 つはローカリゼーションという、特定のカルチャに合わせてリソースを翻訳するプロセスです。 各国のユーザーに向けたアプリケーションの設計に関する一般的な情報については、「[推奨される国際対応アプリケーション開発手順](http://msdn.microsoft.com/Library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c)」を参照してください。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/31/2017
   
  ローカライズされたアプリケーションの実行時の外観は 2 つのカルチャ値によって決まります  (*カルチャ*とは、ユーザーの言語、環境、および文化的な慣習に関連する、一連のユーザー設定情報です)。読み込まれるリソースは、UI カルチャ設定によって決まります。 UI カルチャは、Web.config ファイルとページ ディレクティブの `UICulture` として設定され、Visual Basic または Visual C# コードでは <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> として設定されます。 カルチャ設定によって、日付、数値、通貨などの値の形式が決まります。 カルチャは、Web.config ファイルとページ ディレクティブでは `Culture` として設定され、Visual Basic または Visual C# コードでは <xref:System.Globalization.CultureInfo.CurrentCulture%2A> として設定されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:System.Globalization>   
  <xref:System.Resources>   
  [アプリケーションのグローバライズとローカライズ](../ide/globalizing-and-localizing-applications.md)   

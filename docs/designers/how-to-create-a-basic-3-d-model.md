@@ -12,11 +12,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4bba90206a428ae9bb782e7eac408b872721351f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b9a7bfb1d2eb3f54da0953a78d1e9630ed00aab3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-basic-3-d-model"></a>方法: 基本 3-D モデルを作成する
 このドキュメントでは、モデル エディターを使用した基本 3-D モデルの作成方法を示します。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 10/31/2017
   
  次の手順として、この 3-D モデルにシェーダーを適用できます。 詳細については、「[方法: シェーダーを 3-D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: 3-D 地形をモデル化する](../designers/how-to-model-3-d-terrain.md)   
  [モデル エディター](../designers/model-editor.md)   
  [シェーダー デザイナー](../designers/shader-designer.md)

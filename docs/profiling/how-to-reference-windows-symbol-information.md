@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 09e17cc1e28ad520f76d60c3411de4803a2b4b96
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6578a6fe623afe8ceb20f9db32e7fa005f06618c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-reference-windows-symbol-information"></a>方法: Windows シンボル情報を参照する
 Visual Studio プロファイリング ツールは、シンボル (.pdb) ファイルを使用して、プログラム バイナリの関数名などのシンボル名を解決します。 次の手順を使って、ローカル コンピューター上の Windows のバージョンに適切な .pdb ファイルを自動的にダウンロードし、更新することができます。  
@@ -49,6 +50,6 @@ Visual Studio プロファイリング ツールは、シンボル (.pdb) ファ
   
      あるいは省略記号ボタン (**...**) をクリックして、**[フォルダの参照]** ダイアログ ボックスでディレクトリを選択することもできます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)   
  [方法: シンボル情報をシリアル化する](../profiling/how-to-serialize-symbol-information.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 143bc6af5aa42eb480d5eff736633c2df6e68979
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: 35bc6ae23fdbc89f6bdeaa57bd37d5d961d87286
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="help-content-manager-overrides"></a>ヘルプ コンテンツ マネージャーのオーバーライド
 Visual Studio IDE のヘルプ ビューアーとヘルプ関連の機能の既定の動作を変更できます。 一部のオプションは、さまざまなレジストリ キー値を設定する [.pkgdef](https://blogs.msdn.microsoft.com/visualstudio/2009/12/18/whats-a-pkgdef-and-why/) ファイルを作成することで指定されます。 他のオプションはレジストリで直接設定されます。
@@ -55,7 +56,7 @@ Visual Studio IDE のヘルプ ビューアーとヘルプ関連の機能の既�
 ## <a name="using-registry-editor-to-change-help-viewer-behavior"></a>レジストリ エディターを使用してヘルプ ビューアーの動作を変更する
 レジストリ エディターでレジストリ キー値を設定することで、次の 2 つの動作を制御できます。  
   
-|タスク|レジストリ キー|値|データ|  
+|タスク|レジストリ キー|[値]|データ|  
 |----------|-----|------|----|
 |Override BITS ジョブの優先順位をオーバーライドする|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (64-bit コンピューターの場合)\Microsoft\Help\v2.3|BITSPriority|**foreground**、**high**、**normal**、または **low**|
 |ネットワーク共有上のローカル コンテンツ ストアを指定する|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.3\Catalogs\VisualStudio15|LocationPath|"*ContentStoreNetworkShare*"|

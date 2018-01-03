@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ea90dba4090565143c84d510b5e4f9e998cfb5fc
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: 0e6c9df2254108b778eb1478311ddaa386f70d74
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="finding-topics-by-using-the-help-viewer-index"></a>ヘルプ ビューアーのインデックスの使用によるトピックの検索
 インデックスには、インストールされているコンテンツのトピックに関連付けられているキーワードの一覧が含まれます。 各トピックには複数のキーワードが関連付けられている場合があり、各キーワードは複数のトピックに関連付けられている場合があります。 このインデックスの使い方は本の索引と同じです。  

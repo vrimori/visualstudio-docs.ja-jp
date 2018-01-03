@@ -17,11 +17,12 @@ caps.latest.revision: "36"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9bc896429c3d9e9307fd17a7727228770735af64
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9fbcd3e98768ddda7cfb32070fc613e341fee0ae
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-performance-sessions"></a>パフォーマンス セッションの構成
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のプロファイリング ツールを使用して、多くの種類のアプリケーションのさまざまなパフォーマンス データを収集することができます。 このセクションでは、パフォーマンス ウィザードおよびパフォーマンス セッションとターゲット バイナリのプロパティを使用して、対象のデータを収集するようにプロファイリング ツールを構成する方法を示します。 プロファイリングを実行して収集するデータの量を制御するために、プロファイリング ツールの構成プロパティも使用できます。 詳細については、「[データ収集の制御](../profiling/controlling-data-collection.md)」を参照してください。  
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/31/2017
 ## <a name="related-sections"></a>関連項目  
  [データ収集の制御](../profiling/controlling-data-collection.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス エクスプローラー](../profiling/performance-explorer.md)

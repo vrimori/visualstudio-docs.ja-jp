@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 936d0df8c838227c5d6c99b0f04f1069eae8a277
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: 519bb7b70737e4c3e2d6e80f19a056b4cd385980
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio のパフォーマンスのヒントとテクニック
 
@@ -124,5 +125,5 @@ CLR では、ガベージ コレクションのメモリ管理システムが使
 
 CLR ガベージ コレクターについて詳しくは、「[Fundamental of Garbage Collection](https://msdn.microsoft.com/en-us/library/ee787088(v=vs.110).aspx)」(ガベージ コレクションの基礎) をご覧ください。
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio IDE](../ide/index.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 57f6cf279bc20514aa16d7da422a22349d2b792e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 561affd955385f6797774e08d52c6949763a4eae
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="marks-view"></a>マーク ビュー
 [マーク] ビューには、アプリケーションに挿入されたサンプリングおよび ETW イベントが表示されます。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/31/2017
  Windows パフォーマンス カウンター データ  
  Windows パフォーマンス カウンター データが収集される場合は、その値がカウンターの名前の付いた列に表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス レポートの概要](../profiling/performance-report-overview.md)   
  [方法: Windows カウンター データを収集する](../profiling/how-to-collect-windows-counter-data.md)   
  [&#91;NIB&#93; [データ収集コントロール] ウィンドウ](http://msdn.microsoft.com/en-us/98d740d8-459f-4605-bf04-fb17aafaaa8f)

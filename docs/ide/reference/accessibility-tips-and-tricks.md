@@ -12,11 +12,12 @@ ms.assetid: 6b491d88-f79e-4686-8841-857624bdcfda
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: a4ac0c709f2b7f9dfded7c6781dda9831e457fa5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 4cfc07cb77e1db595d1b381b1097dcfcba0abdab
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessibility-tips-and-tricks-for-visual-studio"></a>Visual Studio のアクセシビリティのヒントとテクニック
 > [!TIP]
@@ -89,7 +90,7 @@ Windows のサウンド アプレットを使用して、Visual Studio プログ
 
   ![Windows 10 のサウンド アプレットの [サウンド] タブ](media/sound-applet.png "検索結果の [システムが出す音の変更] をダブルクリックする")
 
-4. **[OK]** をクリックします。
+4. **[OK]**をクリックします。
 
 
 

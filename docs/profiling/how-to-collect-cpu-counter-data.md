@@ -16,18 +16,19 @@ caps.latest.revision: "21"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 856ffdc2bc2e33dec6e7ff531b9ce5582fc9b3db
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 13bba809b77286cd4a6eea4efa41b69c317d23d7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-collect-cpu-counter-data"></a>方法 : CPU カウンター データを収集する
 CPU イベント カウンターはハードウェア固有のパフォーマンス データの収集に使用します。 このトピックでは、インストルメンテーション プロファイリング方式を使用した場合の、イベント カウンター データを収集する方法を示します。  
   
- **Requirements**  
+ **必要条件**  
   
--   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、[!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、[!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
+-   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
  2 種類の CPU カウンター イベントが発生します。  
   
@@ -64,7 +65,7 @@ CPU イベント カウンターはハードウェア固有のパフォーマン
     > [!NOTE]
     >  **[使用可能なパフォーマンス カウンター]** は、**[CPU カウンターの収集]** チェック ボックスがオンになっている場合のみ有効です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)   
  [パフォーマンス セッションのプロパティ](../profiling/performance-session-properties.md)   
  [CPU カウンターと Windows カウンター](../profiling/cpu-and-windows-counters.md)   

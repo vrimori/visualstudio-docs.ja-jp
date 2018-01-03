@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 0d49543bde0195144fb4918e9a9f173f8f9435ea
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 66065fe94b41c06082e878329a03de3851ee844d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="starttrackingcontextwithroot"></a>StartTrackingContextWithRoot
 応答ファイルにルート マーカーを指定し、追跡コンテキストを開始します。  
@@ -44,8 +45,8 @@ HRESULT WINAPI StartTrackingContextWithRoot(LPCTSTR intermediateDirectory, LPCTS
 ## <a name="return-value"></a>戻り値  
  追跡コンテキストが作成された場合、**HRESULT** に **SUCCEEDED** ビットが設定されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** FileTracker.h  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [StartTrackingContext](../msbuild/starttrackingcontext.md)

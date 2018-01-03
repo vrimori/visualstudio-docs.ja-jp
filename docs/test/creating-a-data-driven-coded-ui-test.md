@@ -12,16 +12,17 @@ ms.assetid: 5838f02d-001f-49ce-adce-c9ea1afaec2f
 caps.latest.revision: "56"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: f58f547462c6c6f4d313d8b9814974f660bf59de
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: cb7e1e231cda62f5312be7dd1058667e5b9ae363
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-data-driven-coded-ui-test"></a>データ ドリブンのコード化された UI テストの作成
 さまざまな条件をテストするには、パラメーター値を変えながら複数回テストを実行します。 これを行う場合、データ ドリブンのコード化された UI テストが便利な方法です。 データ ソースにパラメーター値を定義し、データ ソース内の各行はコード化された UI テストのイテレーションとします。 テスト全体の結果は、すべてのイテレーションの結果に基づきます。 たとえば、1 つのテスト イテレーションが失敗した場合、テスト全体の結果は失敗となります。  
   
- **Requirements**  
+ **必要条件**  
   
 -   Visual Studio Enterprise  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 10/27/2017
     |----------|----------|---------|  
     |3|4|7|  
     |5|6|11|  
-    |6|9|14|  
+    |6|8|14|  
   
      データを追加した後、ファイルが次のように表示されます。  
   
@@ -251,7 +252,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
   
  記録されたメソッドを変更する必要がある場合は、メソッドを UIMap.cs ファイルにコピーし、メソッド名を変更する必要があります。 UIMap.cs ファイルを使用すると、UIMapDesigner.cs ファイルのメソッドやプロパティをオーバーライドできます。 Coded UITest.cs ファイルの元のメソッドへの参照を削除し、変更したメソッド名に置き換える必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>   
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>   
  [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   

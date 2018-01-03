@@ -11,11 +11,12 @@ ms.assetid: 4f4b5f10-7314-4725-8c6e-e72f52eff918
 caps.latest.revision: "14"
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 83e44a28b0039c743724f3c70bee95e2ef2d419b
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: cplusplus
+ms.openlocfilehash: dd663d17dc7d0dc66af7cdd27f0da3cf9a253523
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio で C/C++ 用の単体テストを作成する
 他の言語と同じように、C++ についても、**[テスト エクスプローラー]** ウィンドウを使って単体テストを作成して実行できます。 **テスト エクスプローラー**の使い方については、「[テスト エクスプローラーを使用して単体テストを実行する](run-unit-tests-with-test-explorer.md)」をご覧ください。 
@@ -109,6 +110,6 @@ TEST_METHOD は void を返します。 テスト結果を生成するには、`
 
 単体テストに関するベスト プラクティスについては、「[単体テストの基本](unit-test-basics.md)」をご覧ください
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [コードの単体テスト](unit-test-your-code.md)
 

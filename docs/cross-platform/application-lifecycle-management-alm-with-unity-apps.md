@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: conceptdev
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: a9364a6eb9e46503a257cdc066e3d9ecd1a6c9d0
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: unity
+ms.openlocfilehash: c6c22a04348266b4db83984ff194ad1cef2ac668
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-lifecycle-management-alm-with-unity-apps"></a>Unity アプリを使用したアプリケーション ライフサイクル管理 (ALM)
 最新のプラットフォーム向けのアプリ開発には、コードを記述するだけでなく、それ以外の多くのアクティビティが関係します。 これらのアクティビティは、アプリの完全なライフサイクルの中で DevOps (開発 + 運用) 期間になされるものあり、たとえば、作業のアジャイルな計画と追跡、コードの設計と実装、ソース コード リポジトリの管理、ビルドの実行、継続的に実行されるインテグレーションと展開の管理、テスト (単体テストと UI テストを含む)、開発環境と運用環境の両方におけるさまざまな形式の診断の実行、製品利用統計情報と分析によるアプリのパフォーマンスとユーザー動作のリアルタイムな監視などがあります。  
@@ -30,39 +31,39 @@ ms.lasthandoff: 12/12/2017
 
  一般的なコメント: すべての計画機能と追跡機能は、プロジェクトの種類とコーディング言語には依存しません。  
 
-|特性|Unity でサポートされているかどうか|その他のコメント|  
+|機能|Unity でサポートされているかどうか|その他のコメント|  
 |-------------|--------------------------|-------------------------|  
-|バックログとスプリントの管理|はい||  
-|作業の追跡|はい||  
-|チーム ルーム コラボレーション|はい||  
-|かんばんボード|はい||  
-|進行状況のレポートと視覚化|はい||  
+|バックログとスプリントの管理|[はい]||  
+|作業の追跡|[はい]||  
+|チーム ルーム コラボレーション|[はい]||  
+|かんばんボード|[はい]||  
+|進行状況のレポートと視覚化|[はい]||  
 
 ## <a name="modeling"></a>モデリング  
  参照リンク: **[アーキテクチャの分析およびモデリング](../modeling/analyze-and-model-your-architecture.md)**  
 
  一般的なコメント: これらのデザイン機能は、コーディング言語に関係がないか、C# などの .NET 言語と共に使用されますが、オブジェクト階層およびクラスのリレーションシップを含む従来のアプリケーションのパラダイムで動作します。 Unity 内でのゲームの設計には、さまざまなパラダイムが含まれ、たとえばグラフィカル オブジェクト、サウンド、シェーダー、スクリプトなどのリレーションシップがあります。 このため、Visual Studio モデリング ダイアグラム ツールが、Unity プロジェクト全体に特に関連するわけではありません。 C# スクリプト内でのリレーションシップを管理するために使用することもできますが、それは全体の中の一部にすぎません。  
 
-|特性|Unity でサポートされているかどうか|その他のコメント|  
+|機能|Unity でサポートされているかどうか|その他のコメント|  
 |-------------|--------------------------|-------------------------|  
-|シーケンス図|いいえ||  
-|依存関係グラフ|いいえ||  
-|呼び出し階層|いいえ||  
-|クラス デザイナー|いいえ||  
-|アーキテクチャ エクスプローラー|いいえ||  
-|UML 図 (ユース ケース、アクティビティ、クラス、コンポーネント、シーケンス、および DSL)|いいえ||  
-|レイヤー図|いいえ||  
-|レイヤー検証|いいえ||  
+|シーケンス図|×||  
+|依存関係グラフ|×||  
+|呼び出し階層|×||  
+|クラス デザイナー|×||  
+|アーキテクチャ エクスプローラー|×||  
+|UML 図 (ユース ケース、アクティビティ、クラス、コンポーネント、シーケンス、および DSL)|×||  
+|レイヤー図|×||  
+|レイヤー検証|×||  
 
 ## <a name="code"></a>コード  
 
-|特性|Unity でサポートされているかどうか|その他のコメント|  
+|機能|Unity でサポートされているかどうか|その他のコメント|  
 |-------------|--------------------------|-------------------------|  
-|[Team Foundation バージョン管理](http://msdn.microsoft.com/Library/1d629052-c65d-4c5d-81eb-eaa4413fe285) または Visual Studio Team Services を使用|はい|Unity プロジェクトは、単に他のプロジェクトのように、バージョン管理システムに配置することができる複数のファイルですが、この表の下に記載したいくつかの特別な考慮事項があります。|  
-|[Team Services で Git を使用した作業の開始](http://msdn.microsoft.com/Library/32f46ecd-1b03-4ef0-a9c4-8a120da2b03f)|はい|表の下の注を参照してください。|  
-|[コードの品質向上](/visualstudio/test/improve-code-quality)|はい||  
-|[コード変更およびその他の履歴の検索](../ide/find-code-changes-and-other-history-with-codelens.md)|はい||  
-|[コード マップを使用してアプリケーションをデバッグする](../modeling/use-code-maps-to-debug-your-applications.md)|はい||  
+|[Team Foundation バージョン管理](http://msdn.microsoft.com/Library/1d629052-c65d-4c5d-81eb-eaa4413fe285) または Visual Studio Team Services を使用|[はい]|Unity プロジェクトは、単に他のプロジェクトのように、バージョン管理システムに配置することができる複数のファイルですが、この表の下に記載したいくつかの特別な考慮事項があります。|  
+|[Team Services で Git を使用した作業の開始](http://msdn.microsoft.com/Library/32f46ecd-1b03-4ef0-a9c4-8a120da2b03f)|[はい]|表の下の注を参照してください。|  
+|[コード品質の向上](/visualstudio/test/improve-code-quality)|[はい]||  
+|[コード変更およびその他の履歴の検索](../ide/find-code-changes-and-other-history-with-codelens.md)|[はい]||  
+|[コード マップを使用してアプリケーションをデバッグする](../modeling/use-code-maps-to-debug-your-applications.md)|[はい]||  
 
  Unity を使ったバージョン管理に関する注意事項:  
 
@@ -75,49 +76,49 @@ ms.lasthandoff: 12/12/2017
 ## <a name="build"></a>ビルド  
  参照リンク: **[ビルドとリリース](/vsts/build-release/index)**  
 
-|特性|Unity でサポートされているかどうか|その他のコメント|  
+|機能|Unity でサポートされているかどうか|その他のコメント|  
 |-------------|--------------------------|-------------------------|  
 |オンプレミス TFS サーバー|可能|Unity プロジェクトは、Visual Studio が構築したシステムではなく、Unity の環境内で構築されています (Visual Studio Tools for Unity 内で構築すると、スクリプトはコンパイルしますが、実行可能ファイルを生成しません)。 [コマンド ラインから Unity プロジェクトをビルド](http://docs.unity3d.com/Manual/CommandLineArguments.html) (Unity ドキュメント) できるため、Unity 自体がそのコンピューターにインストールされている場合は、TFS サーバーで MSBuild プロセスを構成して、適切な Unity コンポーネントを実行できます。<br /><br /> また、Unity は、[Unity クラウド構築](https://build.cloud.unity3d.com/landing/)も提供し、Git または SVN リポジトリを監視して、定期的なビルドを実行します。 現時点では、Team Foundation バージョン管理または Visual Studio Team Services では動作しません。|  
 |Visual Studio Team Services にリンクされたオンプレミスのビルド サーバー|可能|上記と同じ状態の場合、Visual Studio Team Services でトリガーされたビルドを指して、オンプレミスの TFS のコンピューターを使用することがさらに可能になります。  手順については、「[Build and release agents](/vsts/build-release/concepts/agents/agents)」 (ビルド エージェントとリリース エージェント) を参照してください。|  
-|Visual Studio Team Services のホスト コントローラー サービス|いいえ|Unity ビルドは現在サポートされていません。|  
-|事前スクリプトと事後スクリプトによるビルド定義|はい|Unity のコマンドラインを使用してビルドを実行するカスタムのビルド定義は、ビルド前およびビルド後のスクリプトに対して構成することもできます。|  
-|継続的な統合 (ゲート チェックインを含む)|はい|Git としての TFVC へのゲート チェックインのみ、チェックイン モデルではなく、プル要求モデルで機能します。|  
+|Visual Studio Team Services のホスト コントローラー サービス|×|Unity ビルドは現在サポートされていません。|  
+|事前スクリプトと事後スクリプトによるビルド定義|[はい]|Unity のコマンドラインを使用してビルドを実行するカスタムのビルド定義は、ビルド前およびビルド後のスクリプトに対して構成することもできます。|  
+|継続的な統合 (ゲート チェックインを含む)|[はい]|Git としての TFVC へのゲート チェックインのみ、チェックイン モデルではなく、プル要求モデルで機能します。|  
 
 ## <a name="testing"></a>テスト中  
  参照リンク: **[アプリケーションのテスト](/devops-test-docs/test/test-apps-early-and-often)**  
 
-|特性|Unity でサポートされているかどうか|その他のコメント|  
+|機能|Unity でサポートされているかどうか|その他のコメント|  
 |-------------|--------------------------|-------------------------|  
-|テストの計画、テスト ケースの作成、およびテスト スイートの編成|はい||  
-|手動テスト|はい||  
+|テストの計画、テスト ケースの作成、およびテスト スイートの編成|[はい]||  
+|手動テスト|[はい]||  
 |テスト マネージャー (テストの記録と再生)|Windows デバイスと Android エミュレーターのみ||  
 |コード カバレッジ|N/A|単体テストとしての該当なしは、Unity と Visual Studio で発生します。以下を参照してください。|  
 |[コードの単体テスト](../test/unit-test-your-code.md)|Unity 内。Visual Studio 内ではありません。|Unity は、独自の単体テスト フレームワークを [Unity テスト ツール](https://www.assetstore.unity3d.com/en/#!/content/13802) (Unity Asset Store) の一部として提供しています。 単体テストの結果は、Unity 内でレポートされ、Visual Studio 内では表示されません。|  
-|[UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)|いいえ|コード化された UI テストは、アプリの UI で読み取り可能なコントロールに依存します。Unity アプリケーションは本質的にはグラフィカルであるため、コンテンツはコード化された UI テストのツールで読み取ることはありません。|  
+|[UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)|×|コード化された UI テストは、アプリの UI で読み取り可能なコントロールに依存します。Unity アプリケーションは本質的にはグラフィカルであるため、コンテンツはコード化された UI テストのツールで読み取ることはありません。|  
 
 ## <a name="improve-code-quality"></a>コード品質の向上  
  参照リンク: **[コードの品質の向上](/visualstudio/test/improve-code-quality)**  
 
-|特性|Unity でサポートされているかどうか|その他のコメント|  
+|機能|Unity でサポートされているかどうか|その他のコメント|  
 |-------------|--------------------------|-------------------------|  
-|[マネージ コードの品質の分析](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)|はい|Visual Studio 内の C# スクリプト コードを分析できます。|  
-|[コード クローン検出を使用した重複コードの検出](http://msdn.microsoft.com/Library/a97cd5a6-5ffa-4104-9627-8e59e513654d)|はい|Visual Studio 内の C# スクリプト コードを分析できます。|  
-|[マネージ コードの複雑さと保守性の測定](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|はい|Visual Studio 内の C# スクリプト コードを分析できます。|  
-|[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)|いいえ|[Unity Profiler](http://docs.unity3d.com/Manual/Profiler.html) の使用 (Unity Web サイト)。|  
-|[.Net Framework のメモリ分析の問題](https://msdn.microsoft.com/en-us/library/dn342825.aspx)|いいえ|Visual Studio ツールには、(Unity で使用するような) プロファイリング用の Mono フレームワークへのフックはありません。 [Unity Profiler](http://docs.unity3d.com/Manual/Profiler.html) の使用 (Unity ドキュメント)。|  
+|[マネージ コードの品質の分析](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)|[はい]|Visual Studio 内の C# スクリプト コードを分析できます。|  
+|[コード クローン検出を使用した重複コードの検出](http://msdn.microsoft.com/Library/a97cd5a6-5ffa-4104-9627-8e59e513654d)|[はい]|Visual Studio 内の C# スクリプト コードを分析できます。|  
+|[マネージ コードの複雑さと保守性の測定](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|[はい]|Visual Studio 内の C# スクリプト コードを分析できます。|  
+|[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)|×|[Unity Profiler](http://docs.unity3d.com/Manual/Profiler.html) の使用 (Unity Web サイト)。|  
+|[.Net Framework のメモリ分析の問題](https://msdn.microsoft.com/en-us/library/dn342825.aspx)|×|Visual Studio ツールには、(Unity で使用するような) プロファイリング用の Mono フレームワークへのフックはありません。 [Unity Profiler](http://docs.unity3d.com/Manual/Profiler.html) の使用 (Unity ドキュメント)。|  
 
 ## <a name="release-management"></a>リリース管理  
  参照リンク: **[リリース管理による配置の自動化](https://msdn.microsoft.com/library/vs/alm/release/overview)**  
 
-|特性|Unity でサポートされているかどうか|その他のコメント|  
+|機能|Unity でサポートされているかどうか|その他のコメント|  
 |-------------|--------------------------|-------------------------|  
-|リリース プロセスの管理|はい||  
-|スクリプトによるサイドローディング用のサーバーへの配置|はい||  
+|リリース プロセスの管理|[はい]||  
+|スクリプトによるサイドローディング用のサーバーへの配置|[はい]||  
 |アプリ ストアへのアップロード|Partial|一部のアプリ ストアに対して、このプロセスを自動化することができる拡張機能が使用できます。  たとえば、[Google Play の拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.google-play)については、[Visual Studio Team Services の拡張機能](https://marketplace.visualstudio.com/VSTS)を参照してください。|  
 
 ## <a name="monitor-with-hockeyapp"></a>HockeyApp による監視  
  参照リンク: **[HockeyApp による監視](https://www.hockeyapp.net/features/)**  
 
-|特性|Unity でサポートされているかどうか|その他のコメント|  
+|機能|Unity でサポートされているかどうか|その他のコメント|  
 |-------------|--------------------------|-------------------------|  
-|クラッシュ分析、製品利用統計情報、およびベータ版の配布|はい|HockeyApp は、主にベータ分布を処理し、クラッシュ レポートを取得するために役立ちます。<br /><br /> C# スクリプトからの製品利用統計情報の場合、Unity によって使用される .NET のバージョンで実行されるときは、分析用のフレームワークを使用することができます。 ただし、ゲームのスクリプト内でのみ分析でき、Unity エンジン内で詳細に分析することはできません。 現時点では、Application Insights のプラグインはありませんが、[Unity Analytics](https://www.assetstore.unity3d.com/en/#!/content/28120) や [Google Analytics](https://github.com/googleanalytics/google-analytics-plugin-for-unity) などの他の分析ソリューションのプラグインが使用できます。 Unity プロジェクトの特性を理解する Unity Analytics のようなサービスは、汎用的なフレームワークもより効果的な分析を提供します。|
+|クラッシュ分析、製品利用統計情報、およびベータ版の配布|[はい]|HockeyApp は、主にベータ分布を処理し、クラッシュ レポートを取得するために役立ちます。<br /><br /> C# スクリプトからの製品利用統計情報の場合、Unity によって使用される .NET のバージョンで実行されるときは、分析用のフレームワークを使用することができます。 ただし、ゲームのスクリプト内でのみ分析でき、Unity エンジン内で詳細に分析することはできません。 現時点では、Application Insights のプラグインはありませんが、[Unity Analytics](https://www.assetstore.unity3d.com/en/#!/content/28120) や [Google Analytics](https://github.com/googleanalytics/google-analytics-plugin-for-unity) などの他の分析ソリューションのプラグインが使用できます。 Unity プロジェクトの特性を理解する Unity Analytics のようなサービスは、汎用的なフレームワークもより効果的な分析を提供します。|

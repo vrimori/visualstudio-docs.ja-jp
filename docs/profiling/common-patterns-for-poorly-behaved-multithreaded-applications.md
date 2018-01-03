@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 744e3031c94a3b152728000e7c5425f85fb9e9ce
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8c938f5effc963fa881506f55d0e4b271ae3a914
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>適切に動作しないマルチスレッド アプリケーションの一般的なパターン
 開発時に同時実行ビジュアライザーを使用すると、マルチスレッド アプリケーションの動作を可視化できます。 このツールには、動作が不適切なマルチスレッド アプリケーションの一般的なパターンのギャラリーが含まれています。 ギャラリーには、ツールで判明する一般的で認識可能な視覚パターンと、各パターンが示す動作、その動作から考えられる結果、その最も一般的な解決策の説明が含まれています。  
@@ -64,5 +65,5 @@ ms.lasthandoff: 10/31/2017
   
  ロック コンボイは、早い者勝ちの順序でアプリケーションがロックを取得したときと、ロックの到着率が取得率よりも高いときに発生します。 これら 2 つの条件が組み合わさると、ロックの要求によってバックアップが開始されます。 この問題を解決するには、"不公平な" ロック (最初のスレッドにロック解除状態で検索するアクセス権を与えるロック) を使用する方法があります。 前の図は、このコンボイ動作を示しています。 この問題を解決するには、同期オブジェクトの競合を減らし、不公平なロックを使用してみてください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [スレッド ビュー](../profiling/threads-view-parallel-performance.md)

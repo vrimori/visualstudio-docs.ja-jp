@@ -24,13 +24,14 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bb5030a6f70851e46ab7d8df081cfe94ed35c2c1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6f01347eb3410940f96a4ac966cf4f5e466ed964
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="properties-window"></a>プロパティ ウィンドウ
+# <a name="properties-window"></a>[プロパティ] ウィンドウ
 このウィンドウで、エディターやデザイナーのオブジェクトを選択してデザイン時のプロパティやイベントを表示および変更できます。 また、**[プロパティ]** ウィンドウでは、ファイル、プロジェクト、およびソリューションのプロパティの編集や表示もできます。 **[プロパティ]** ウィンドウは **[表示]** メニューにあります。 また、F4 キーを押すか、**[クイック起動]** ウィンドウに「**プロパティ**」と入力して開くこともできます。  
   
  **[プロパティ]** ウィンドウでは、特定のプロパティの必要性に応じて、さまざまな編集フィールドを表示できます。 編集フィールドには、編集ボックス、ドロップダウン リスト、カスタム エディター ダイアログ ボックスへのリンクなどがあります。 淡色表示されているプロパティは読み取り専用です。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  **[プロパティ]** ウィンドウのこのツール バー コントロールを使用できるのは、フォーム デザイナーまたはコントロール デザイナーが [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] プロジェクトのコンテキストでアクティブなときに限られます。 XAML ファイルの編集時、イベントはプロパティ ウィンドウの別のタブに表示されます。  
   
- [メッセージ]  
+ メッセージ  
  すべての Windows メッセージが表示されます。 選択したクラスに提供されたメッセージについて、指定されたハンドラー関数を追加または削除できます。  
   
 > [!NOTE]
@@ -84,6 +85,6 @@ ms.lasthandoff: 10/31/2017
  検索  
  デザイナーでの XAML ファイルの編集時に、プロパティとイベントを検索するための機能を提供します。 検索ボックスは単語の一部の入力に反応し、入力すると検索結果が更新されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクトのプロパティのリファレンス](../../ide/reference/project-properties-reference.md)   
  [ウィンドウ レイアウトをカスタマイズする](../../ide/customizing-window-layouts-in-visual-studio.md)

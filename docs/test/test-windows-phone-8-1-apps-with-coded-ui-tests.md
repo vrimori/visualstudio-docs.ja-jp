@@ -11,11 +11,12 @@ ms.assetid: 7b866776-f2d5-4823-8d15-919f889db26f
 caps.latest.revision: "28"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 33c6d52536bc5295197c810058e959570c1d0242
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: uwp
+ms.openlocfilehash: 8aa1bac1a98d8121dcba30dace22483e4a80e1d8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="test-windows-uwp-and-81-phone-apps-with-coded-ui-tests"></a>コード化された UI テストを使用した Windows UWP および 8.1 Phone アプリのテスト
 
@@ -373,7 +374,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 ### <a name="q-what-are-the-differences-between-coded-ui-tests-for-xaml-based-uwp-apps-and-windows-phone-apps"></a>Q: XAML ベースの UWP アプリと Windows Phone アプリでは、コード化された UI テストにどのような違いがありますか?  
  **A**: 次のように、いくつかの重要な違いがあります。  
   
-|特性|UWP アプリ|Windows Phone アプリ|  
+|機能|UWP アプリ|Windows Phone アプリ|  
 |-------------|------------------------|------------------------|  
 |テストの実行ターゲット|ローカルまたはリモート コンピューター。 リモート コンピューターを指定できるのは、自動テスト ケースを使用してテストを実行する場合です。 「 [Microsoft Test Manager でのテスト ケースの自動化](/devops-test-docs/test/automate-a-test-case-in-microsoft-test-manager)」を参照してください。|エミュレーターまたはデバイス。 このトピックの「 [Q: テストを実行できるのはエミュレーターだけですか? 物理デバイスを使用することもできますか?](#TestingPhoneAppsCodedUI_EmulatorDevice) 」を参照してください。|  
 |コマンド ラインからの実行|ターゲットを指定するのに設定ファイルは必要ありません。|ターゲットを指定するには runsettings ファイルが必要です。|  
@@ -387,5 +388,5 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 ## <a name="external-resources"></a>外部リソース  
  Microsoft Visual Studio アプリケーション ライフサイクル管理ブログ: [コード化された UI を使用して XAML ベースの Windows Phone アプリをテストする](http://blogs.msdn.com/b/visualstudioalm/archive/2014/04/05/using-coded-ui-to-test-xaml-based-windows-phone-apps.aspx?PageIndex=2#comments)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)

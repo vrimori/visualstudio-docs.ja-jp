@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d80aa5c71651fc6540711dc23ee2f9c8d45415b9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 18d2fa0dd28d22e04b4df5942c3a3585693ede33
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-pause-and-resume-performance-data-collection"></a>方法: パフォーマンス データ収集の一時停止と再開
 プロファイル セッション ページ ウィンドウから、プロファイリング データの収集を対話形式で制御することができます。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 10/31/2017
   
     -   プロファイリング セッションを終了してレポートを生成するには、**[プロファイリングの停止]** を選択します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ コレクションの制御](../profiling/controlling-data-collection.md)   
  [方法: パフォーマンス データの収集の開始と終了](../profiling/how-to-start-and-end-performance-data-collection.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 83f4830b79c4492337abb6052b1b2803b34b5a9b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 016de257d1ce4e6d2aa95284adbe762a5c54eacf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="list-registers-command"></a>List Registers コマンド
 選択したレジスタの値を表示するほか、表示されるレジスタの一覧を変更できます。  
@@ -63,7 +64,7 @@ Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]
 r /Display Flags  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [デバッグの基礎 : [レジスタ] ウィンドウ](../../debugger/debugging-basics-registers-window.md)   
  [方法: [レジスタ] ウィンドウを使用する](../../debugger/how-to-use-the-registers-window.md)

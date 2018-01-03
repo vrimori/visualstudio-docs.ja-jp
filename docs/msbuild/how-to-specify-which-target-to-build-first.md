@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 22c307129e1c0295b041180f475c3d905cc43539
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a1d5b2bbf218d35cf20638d865c6c78379c5f02b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-which-target-to-build-first"></a>方法 : 最初にビルドするターゲットを指定する
 プロジェクト ファイルには、プロジェクトのビルド方法を定義する 1 つ以上の `Target` 要素を含めることができます。 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) エンジンは、見つけた最初のプロジェクトと依存関係をビルドします。ただし、プロジェクト ファイルに `DefaultTargets` 属性または `InitialTargets` 属性が含まれている場合や、コマンド ラインで **/target** スイッチを使ってターゲットが指定されている場合は例外です。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 10/31/2017
   
      `msbuild <file name>.proj /t:Clean;Compile`  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
   [MSBuild](../msbuild/msbuild.md)  
  [ターゲット](../msbuild/msbuild-targets.md)   
  [方法 : ビルドをクリーンする](../msbuild/how-to-clean-a-build.md)

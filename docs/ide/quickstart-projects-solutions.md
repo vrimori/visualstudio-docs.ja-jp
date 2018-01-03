@@ -10,11 +10,12 @@ ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f3b30b796ca389d5adfc4f8ece3c8f774626e994
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: b757178f29439f162df9e8844ae65ed8df642bb5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quickstart-projects-and-solutions"></a>クイック スタート: プロジェクトとソリューション
 
@@ -173,7 +174,7 @@ ms.lasthandoff: 12/12/2017
 
 1. **[コンパイル]** や **[設定]** など、プロジェクトのプロパティ ページの他のいくつかのタブを紹介します。 これらのタブは、プロジェクトの種類に応じて異なります。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 単体テストが動作していることを確認する場合は、メニュー バーから **[テスト]** > **[実行]** > **[すべてのテスト]** を選択します。 **テスト エクスプローラー**と呼ばれるウィンドウが開くので、**TestGetCurrentDate** テストが成功しているか確認する必要があります。
 

@@ -12,23 +12,24 @@ caps.latest.revision: "28"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a639c9401498f168834947d9ec9c3bd238010e13
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: dotnet
+ms.openlocfilehash: e33c804509e132fc9e4da2739f1e6de2f4a47d70
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-application-statistics-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーを .NET サービスにアタッチし、アプリケーションの統計情報を収集する
 ここでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのコマンド ライン ツールを使用して、プロファイラーを .NET Framework サービスにアタッチし、サンプリング メソッドによってパフォーマンスに関する統計情報を収集する方法について説明します。  
   
 > [!NOTE]
->  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 ｢[Performance Tools on Windows 8 and Windows Server 2012 applications](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md) (Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール)」をご覧ください。  
+>  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
 >   
 >  プロファイリング ツールのコマンド ライン ツールは、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] インストール ディレクトリの \Team Tools\Performance Tools サブディレクトリにあります。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。 詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」をご覧ください。  
 >   
 >  プロファイリングの実行に階層の相互作用データを追加するには、コマンド ライン プロファイリング ツールによる特定の手順が必要です。 「[Visual Studio IDE を使用した階層相互作用データの収集](../profiling/adding-tier-interaction-data-from-the-command-line.md)」をご覧ください。  
   
- .NET Framework サービスからパフォーマンス データを収集するには、[VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) ツールを使用して該当する環境変数を初期化する必要があります。 次に、サービスをホストするコンピューターを再起動し、そのコンピューターをプロファイリング用に構成します。 続いて、プロファイラーをサービス プロセスにアタッチします。 プロファイラーをサービスにアタッチするときはデータ収集を一時停止し、完了後に再開できます。  
+ .NET Framework サービスからパフォーマンス データを収集するには、[VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) ツールを使用して該当する環境変数を初期化する必要があります。 次に、サービスをホストするコンピューターを再起動し、そのコンピューターをプロファイリング用に構成します。 続いて、プロファイラーをサービス プロセスにアタッチします。 プロファイラーをサービスにアタッチするときはデータ コレクションを一時停止し、完了後に再開できます。  
   
  プロファイル セッションを終了するには、プロファイラーをサービスからデタッチし、プロファイラーを明示的に終了する必要があります。 ほとんどの場合、セッションの最後にプロファイル環境変数を消去することをお勧めします。  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/11/2017
   
 2.  コマンド プロンプト ウィンドウを開きます。  
   
-3.  プロファイル環境変数を初期化します。 種類:  
+3.  プロファイル環境変数を初期化します。 型:  
   
      **VSPerfClrEnv /globalsampleon** **[/samplelineoff]**  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/11/2017
   
 5.  コマンド プロンプト ウィンドウを開きます。  
   
-6.  プロファイラーを起動します。 種類:  
+6.  プロファイラーを起動します。 型:  
   
      **VSPerfCmd**  [/start](../profiling/start.md) **:sample**  [/output](../profiling/output.md) **:** `OutputFile` [`Options`]  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/11/2017
   
 7.  起動の必要なサービスがあれば起動します。  
   
-8.  プロファイラーをサービスにアタッチします。 種類:  
+8.  プロファイラーをサービスにアタッチします。 型:  
   
      **VSPerfCmd**  [/attach](../profiling/attach.md) **:** {`PID`&#124;`ProcName`} [`Sample Event`] [[/targetclr](../profiling/targetclr.md)**:**`Version`]  
   
@@ -90,9 +91,9 @@ ms.lasthandoff: 11/11/2017
     |[/sys](../profiling/sys-vsperfcmd.md)[`:``Interval`]|サンプリング イベントを、プロセスからオペレーティング システムのカーネルへのシステム コール (syscall) に変更します。 `Interval` を指定した場合は、サンプル間の呼び出し回数が設定されます。 既定値は 10 です。|  
     |[/counter](../profiling/counter.md) **:** `Config`|サンプリング イベントと間隔を、プロセッサのパフォーマンス カウンターと、`Config` で指定した間隔に、それぞれ変更します。|  
   
-    -   **targetclr:** `Version` には、アプリケーションに複数のバージョンのランタイムが読み込まれている場合に、プロファイリングを行う共通言語ランタイム (CLR: Common Language Runtime) のバージョンを指定します。 省略可能です。  
+    -   **targetclr:** `Version` には、アプリケーションに複数のバージョンのランタイムが読み込まれている場合に、プロファイリングを行う共通言語ランタイム (CLR: Common Language Runtime) のバージョンを指定します。 任意。  
   
-## <a name="controlling-data-collection"></a>データ収集の制御  
+## <a name="controlling-data-collection"></a>データ コレクションの制御  
  サービスの実行中は、**VSPerfCmd.exe** オプションを使用して、プロファイラー データ ファイルへのデータ書き込みを開始および停止できます。 データ コレクションを制御することにより、アプリケーションの起動や終了など、プログラム実行の特定の部分についてのデータ コレクションを行うことができます。  
   
 #### <a name="to-start-and-stop-data-collection"></a>データ コレクションを開始および停止するには  
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/11/2017
   
     -   サービスを停止します。  
   
-         または  
+         - または -  
   
     -   **VSPerfCmd /detach** と入力します  
   
@@ -124,12 +125,12 @@ ms.lasthandoff: 11/11/2017
   
      **VSPerfCmd /shutdown**  
   
-3.  (省略可能) プロファイル環境変数を削除します。 種類:  
+3.  (省略可能) プロファイル環境変数を削除します。 型:  
   
      **VSPerfClrEnv /globaloff**  
   
 4.  コンピューターを再起動します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サービスのプロファイリング](../profiling/command-line-profiling-of-services.md)   
  [サンプリング メソッドのデータ ビュー](../profiling/profiler-sampling-method-data-views.md)

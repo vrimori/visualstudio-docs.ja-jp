@@ -14,16 +14,17 @@ ms.assetid: 6e1ae9ec-e9b1-458a-bd96-0eb15e46f1d5
 caps.latest.revision: "22"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 0be707ec592265c75ce6e0c36954010e496ac91c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 2ecea317b60e100b282428d953694238b5c63f21
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="testing-a-large-application-with-multiple-ui-maps"></a>複数の UI マップでの大規模アプリケーションのテスト
 このトピックでは、複数の UI マップを使って大規模なアプリケーションをテストする際に、コード化された UI テストを使用する方法を説明します。  
   
- **Requirements**  
+ **必要条件**  
   
 -   Visual Studio Enterprise  
   
@@ -138,7 +139,7 @@ namespace ContosoProject
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>   
  <xref:Microsoft.VisualStudio.TestTools.UITesting.BrowserWindow.CopyFrom%2A>   
  [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   

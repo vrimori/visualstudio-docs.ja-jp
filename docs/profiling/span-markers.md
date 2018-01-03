@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 74919ddaa31bc7857a7bb9c30264830757f336b0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: fff5fdc6b523038945d94d61e27c083278d6fb25
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="span-markers"></a>スパン マーカー
 スパン マーカーは、アプリケーションの意味のあるフェーズを表します。 たとえば、スパンを使用して、特定の作業項目を処理する時間間隔を表すことができます。 その長さは、対応するアプリケーション フェーズの期間を表します。 この図は、同時実行ビジュアライザーのスパンを示しています。  
@@ -37,6 +38,6 @@ ms.lasthandoff: 10/31/2017
  ![同時実行ビジュアライザーの集約スパン マーカー](../profiling/media/cvmarkerspanaggregate.png "CVMarkerSpanAggregate")  
 スパン集約マーカー  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [同時実行ビジュアライザー マーカー](../profiling/concurrency-visualizer-markers.md)   
  [同時実行ビジュアライザー SDK](../profiling/concurrency-visualizer-sdk.md)

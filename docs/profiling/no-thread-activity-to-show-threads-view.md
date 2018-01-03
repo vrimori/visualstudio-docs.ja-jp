@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 04da9c7db2c42bd071610dcb6e66b4bac7fb2807
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c6f002ec676ab74f9fa135ebba9270a724f3e8c1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="no-thread-activity-to-show-threads-view"></a>表示するスレッド アクティビティがありません (スレッド ビュー)
 この領域には、現在表示されている時間範囲で非表示になっていないスレッドに関するデータが表示されます。  
@@ -33,5 +34,5 @@ ms.lasthandoff: 10/31/2017
   
 -   不要項目の非表示が低いしきい値に設定されていることを確認してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [スレッド ビュー](../profiling/threads-view-parallel-performance.md)

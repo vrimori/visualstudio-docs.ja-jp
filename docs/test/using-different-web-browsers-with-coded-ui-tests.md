@@ -11,16 +11,17 @@ ms.assetid: a859595f-6517-43f2-9d61-c706cb55a388
 caps.latest.revision: "23"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 6c8e2cac9d6f2622bacae0b27cecc8f074ea3a15
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 009ae62acc9685ee0d004976ce86b751cc0d1852
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-different-web-browsers-with-coded-ui-tests"></a>コード化された UI テストでのさまざまな Web ブラウザーの使用
 コード化された UI テストでは、Internet Explorer を使用してテストを記録することによって、Web アプリケーションのテストを自動化できます。 その後、テストをカスタマイズし、Internet Explorer や Web アプリケーションに対応している他の種類のブラウザーを使用して再生できます。  
   
- **Requirements**  
+ **必要条件**  
   
 -   Visual Studio Enterprise  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 10/27/2017
  さまざまな Web ブラウザーを使用するコード化された UI テストをサポートしないバージョンの [!INCLUDE[vs2011_first](../test/includes/vs2011_first_md.md)] を使用している可能性があります。 そのようなコード化された UI テストを使用するには、Visual Studio Enterprise を使用する必要があります。  
   
  *その他に知っておく必要があること*  
- **注**  
+ **ノート**  
   
 -   ![前提条件](../test/media/prereq.png "Prereq") Apple Safari Web ブラウザーはサポートされていません。  
   
@@ -151,7 +152,7 @@ ms.lasthandoff: 10/27/2017
 ### <a name="forum"></a>フォーラム  
  [Visual Studio の UI オートメーションのテスト (コード化された UI を含む)](http://go.microsoft.com/fwlink/?LinkID=224497)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   
  [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)   
  [コード化された UI テスト ログを使用したコード化された UI テストの分析](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)

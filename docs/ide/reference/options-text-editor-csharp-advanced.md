@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bb1c757ed5c266c74ca14e0b990528844bad0fb2
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: dotnet
+ms.openlocfilehash: 1f7bcff6d2e94944985789db2bf0ac80150a478e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="options-text-editor-c-advanced"></a>[オプション]、[テキスト エディター]、[C#]、[詳細]
 このダイアログ ボックスを使用して、Visual C# のエディターの書式設定、コードのリファクタリング、および XML ドキュメントのコメントの設定を変更します。 このダイアログ ボックスを表示するには、**[ツール]** メニューの **[オプション]** をクリックし、**[テキスト エディター]** フォルダー、**[C#]** を順に展開し、**[詳細設定]** をクリックします。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 12/07/2017
  using を並べ替える際に、'System' ディレクティブを先頭に配置する  
  選択すると、`System` using ディレクティブが他の using ディレクティブより前に表示されます。 詳細については、[Visual C# IntelliSense](../../ide/visual-csharp-intellisense.md#automatic-code-generation) の「using の整理」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML ドキュメント コメント](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)   
  [言語固有のエディター オプションの設定](../../ide/reference/setting-language-specific-editor-options.md)   
  [Visual C# の IntelliSense](../../ide/visual-csharp-intellisense.md)

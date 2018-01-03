@@ -18,11 +18,12 @@ caps.latest.revision: "56"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5f32dceca8a6b14e6b1777e5c525327f46adca47
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: dotnet
+ms.openlocfilehash: ec48d6a581eb756ee89d9db1a3dfaa78ac1fb3a9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-page-project-designer-c"></a>[アプリケーション] ページ (プロジェクト デザイナー) (C#)
 **プロジェクト デザイナー**の **[アプリケーション]** ページを使用して、プロジェクトのアプリケーション設定とプロパティを指定します。  
@@ -99,6 +100,6 @@ ms.lasthandoff: 11/02/2017
   
 パス名を入力するか、参照ボタン (**...**) を使用して、Win32 リソース ファイルをプロジェクトに追加します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [アプリケーション プロパティの管理](../../ide/application-properties.md)  
 [Office ソリューションのコードの記述](/office-dev/office-dev/writing-code-in-office-solutions)

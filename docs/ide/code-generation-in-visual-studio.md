@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c4f3001eb630ce2f5a03d8e3f5169d25e413a6c5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e001d58b37dadbc075c39964cea0da58656d6931
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-generation-in-visual-studio"></a>Visual Studio でのコード生成
 Visual Studio では自動的に一部のソース コードが生成されるため、実際の作業に集中できます。  一般的なコード生成機能をいくつか以下に示します。  
@@ -34,7 +35,7 @@ Visual Studio では自動的に一部のソース コードが生成される�
 
 他の言語のドキュメントは間もなくご利用いただけます。
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [Visual Studio IDE](../ide/visual-studio-ide.md)   
 [コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)  
 [変更のプレビュー](preview-changes.md)

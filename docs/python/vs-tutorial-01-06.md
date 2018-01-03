@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 8356a9d4ab470b67a6e495d753fa498237e530f4
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 46048b135dc0023e2a7b918b72ec226af3ed22b5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="step-6-working-with-git"></a>手順 6: Git の使用
 
@@ -47,7 +48,6 @@ Visual Studio には、ローカルの Git リポジトリおよび、GitHub や
 ## <a name="going-deeper"></a>詳しい説明
 
 Git の操作の詳細なチュートリアルについては、「[Share your code with Visual Studio 2017 and VSTS Git](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs-2017)」 (コードを Visual Studio 2017 および VSTS Git で共有する) を参照してください。
-
 
 ## <a name="tutorial-review"></a>チュートリアルのレビュー
 

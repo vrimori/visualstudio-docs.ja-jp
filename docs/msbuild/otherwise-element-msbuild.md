@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: ae4185d56b77d40cf817d7ea3003f64dc6fff556
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 11e917f21071a273f56ddd358fd5a845ce7411dc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="otherwise-element-msbuild"></a>Otherwise 要素 (MSBuild)
 すべての `When` 要素が `false` と評価された場合にのみ実行するコード ブロックを指定します。  
@@ -122,6 +123,6 @@ ms.lasthandoff: 10/31/2017
 </Project>  
 ```  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [条件構造](../msbuild/msbuild-conditional-constructs.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)

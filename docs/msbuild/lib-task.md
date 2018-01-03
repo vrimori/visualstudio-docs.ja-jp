@@ -29,11 +29,12 @@ caps.latest.revision: "7"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 6bdca24340f301fc19f3bc8d1e86c97c3b98c5c5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 20548574a15c1ac7867ff7142033e94328a40ddf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lib-task"></a>LIB タスク
 Microsoft 32-Bit Library Manager ツール (lib.exe) をラップします。 Library Manager は、COFF (Common Object File Format) オブジェクト ファイルのライブラリを作成および管理します。 また、エクスポートした定義を参照するためのエクスポート ファイルやインポート ライブラリも作成できます。 詳細については、「[LIB リファレンス](/cpp/build/reference/lib-reference)」と「[LIB の実行](/cpp/build/reference/running-lib)」を参照してください。  
@@ -56,7 +57,7 @@ Microsoft 32-Bit Library Manager ツール (lib.exe) をラップします。 Li
 |**LinkTimeCodeGeneration**|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合は、リンク時のコード生成を指定します。<br /><br /> このパラメーターは、lib.exe の **/LCTG** オプションに対応しています。|  
 |**MinimumRequiredVersion**|省略可能な **String** 型のパラメーターです。<br /><br /> サブシステムの最低限必要なバージョンを指定します。 0 ～ 65535 の範囲で、コンマ区切りの 10 進数のリストを指定します。|  
 |**ModuleDefinitionFile**|省略可能な **String** 型のパラメーターです。<br /><br /> モジュール定義ファイル (.def) の名前を指定します。<br /><br /> このパラメーターは、lib.exe の `filename` 引数をとる **/DEF** オプションに対応しています。|  
-|**名前**|省略可能な **String** 型のパラメーターです。<br /><br /> インポート ライブラリの作成時に、インポート ライブラリの対象となる DLL の名前を指定します。<br /><br /> このパラメーターは、lib.exe の `filename` 引数をとる **/NAME** オプションに対応しています。|  
+|**Name**|省略可能な **String** 型のパラメーターです。<br /><br /> インポート ライブラリの作成時に、インポート ライブラリの対象となる DLL の名前を指定します。<br /><br /> このパラメーターは、lib.exe の `filename` 引数をとる **/NAME** オプションに対応しています。|  
 |**OutputFile**|省略可能な **String** 型のパラメーターです。<br /><br /> lib.exe によって作成されるプログラムの既定の名前と場所がオーバーライドされます。<br /><br /> このパラメーターは、lib.exe の `filename` 引数をとる **/OUT** オプションに対応しています。|  
 |**RemoveObjects**|省略可能な **String[]** 型のパラメーターです。<br /><br /> 指定したオブジェクトを出力ライブラリから除外します。 lib.exe は、(オブジェクト ファイルおよびライブラリ内のオブジェクトを含めて) すべてのオブジェクトを組み合わせて出力ライブラリを作成してから、このオプションで指定されたオブジェクトを削除します。<br /><br /> このパラメーターは、lib.exe の `membername` 引数をとる **/REMOVE** オプションに対応しています。|  
 |**Sources**|必須の `ITaskItem[]` 型のパラメーターです。<br /><br /> スペースで区切られたソース ファイルのリストを指定します。|  
@@ -70,5 +71,5 @@ Microsoft 32-Bit Library Manager ツール (lib.exe) をラップします。 Li
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)

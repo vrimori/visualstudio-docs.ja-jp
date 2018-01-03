@@ -11,11 +11,12 @@ ms.assetid: 23cb0d82-0451-464e-98ea-fa66e7010ead
 caps.latest.revision: "19"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 39b3ce6765d1f4ec342d9a6e5b156eaee01f0faf
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: uwp
+ms.openlocfilehash: 63018bdae7cec687ccf81d53ef6e35ecdc169c83
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unit-testing-visual-c-code-in-a-uwp-app"></a>UWP アプリの Visual C# コードの単体テスト
 このトピックでは、UWP アプリの Visual C# クラスの単体テストを作成する方法の 1 つについて説明します。 Rooter クラスは、指定した数値の平方根の概数を計算する関数を実装することによって、微積分の限界理論の不明瞭なメモリを示します。 Maths アプリケーションではこの関数を使用して、数学で実行できる楽しいことをユーザーに示すことができます。  

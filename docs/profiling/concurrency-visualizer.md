@@ -18,11 +18,12 @@ caps.latest.revision: "31"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 362daf0d3044841260ae7e9b8f0eb42bad8e610b
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: 8b811b664df5d64a2235d641a6facf6cec889fe4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="concurrency-visualizer"></a>同時実行ビジュアライザー
 > [!NOTE]
@@ -54,6 +55,6 @@ ms.lasthandoff: 11/15/2017
 |[同時実行ビジュアライザー SDK](../profiling/concurrency-visualizer-sdk.md)|ソース コードをインストルメント化して同時実行ビジュアライザーに追加情報を表示する方法について説明します。|  
 |[同時実行ビジュアライザー コマンドライン ユーティリティ (CVCollectionCmd)](../profiling/concurrency-visualizer-command-line-utility-cvcollectioncmd.md)|同時実行ビジュアライザーのコマンド ライン ユーティリティ (CVCollectionCmd.exe) を使用して、Visual Studio がインストールされていないコンピューター上でトレースを収集および処理する方法について説明します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のプロファイル](../profiling/index.md)  
  [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)

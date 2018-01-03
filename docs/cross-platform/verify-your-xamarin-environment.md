@@ -11,11 +11,12 @@ caps.latest.revision: "13"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: a770fdeae316e6ee79e919df9c9cc1b4551b90b6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: xamarin
+ms.openlocfilehash: 203f977ac4bc9a0ba72284b54a6936a77bae0f61
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="verify-your-xamarin-environment"></a>Xamarin 環境を検証する
 インストーラーが完了したら (「[セットアップとインストール](../cross-platform/setup-and-install.md)」を参照)、数分をかけて、Xamarin 開発を実行するための準備ができているかどうかを確認します。  

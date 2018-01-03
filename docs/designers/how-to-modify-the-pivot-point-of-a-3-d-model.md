@@ -12,16 +12,17 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1f0c356df742f279e60d81a060551530be49ac9d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 603b3f57bb2b9a1e9c99a4ca3870c38bc569d620
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-modify-the-pivot-point-of-a-3-d-model"></a>方法: ピボット ポイントの 3-D モデルを変更する
 このドキュメントでは、モデル エディターを使用した 3-D モデルの*ピボット ポイント*の変更方法を示します。 ピボット ポイントは、オブジェクトの回転と拡大縮小の数学的な中心を定義する空間内のポイントです。  
   
- このドキュメントでは、以下のアクティビティについて説明します。  
+ このドキュメントでは、以下のアクティビティについて説明します:  
   
 -   オブジェクトのピボット ポイントの変更  
   
@@ -49,6 +50,6 @@ ms.lasthandoff: 10/31/2017
   
  ![変更されたピボット ポイントを含む家のモデル](../designers/media/digit-modified-model.png "Digit-Modified-Model")  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: 基本 3-D モデルを作成する](../designers/how-to-create-a-basic-3-d-model.md)   
  [モデル エディター](../designers/model-editor.md)

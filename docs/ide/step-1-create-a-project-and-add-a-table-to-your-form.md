@@ -12,11 +12,12 @@ caps.latest.revision: "19"
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 3f5d33b4a8362340c0716242cba7c9aefaf1eab3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: dc8def9bb088275cef9f15e4e643d6811feab462
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>手順 1: プロジェクトの作成とフォームへのテーブルの追加
 絵合わせゲームの作成における最初の手順は、プロジェクトの作成とフォームへのテーブルの追加です。 テーブルはアイコンを 4 x 4 のグリッドに整列させるために便利です。 いくつかのプロパティの設定も行ってゲーム ボードの見栄えが良くなるようにします。  

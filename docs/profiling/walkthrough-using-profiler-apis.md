@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fa7ba54d15697c02b62f13c3fa54a3005f410bd9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a592082cac8cf493a742c9ce6f7de3bb0c706aad
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-profiler-apis"></a>チュートリアル : プロファイラー API の使用
 このチュートリアルでは、C# アプリケーションを使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツール API を使用する方法を説明します。 プロファイラー API を使用すると、インストルメンテーション プロファイル中に収集されるデータの量を制限することができます。  
@@ -161,7 +162,7 @@ DataCollection.CurrentId);
   
      現在のディレクトリに、結果のパフォーマンス データが含まれた .csv ファイルが作成されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Profiler>   
  [Visual Studio プロファイラー API リファレンス (ネイティブ)](../profiling/visual-studio-profiler-api-reference-native.md)   
  [はじめに](../profiling/getting-started-with-performance-tools.md)   

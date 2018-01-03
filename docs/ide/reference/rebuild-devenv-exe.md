@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fcabe7b1ce4130eb52369ff9f16900b1979b8582
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 957e987854aae91b72c5cd6109e279253a5772b1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rebuild-devenvexe"></a>/Rebuild (devenv.exe)
 指定したソリューション構成を消去してからビルドします。  
@@ -35,16 +36,16 @@ devenv SolutionName /rebuild SolnConfigName [/project ProjName] [/projectconfig 
   
 ## <a name="arguments"></a>引数  
  `SolnConfigName`  
- 必須です。 `SolutionName` で指定されたソリューションのリビルドに使用されるソリューション構成の名前。  
+ 必須。 `SolutionName` で指定されたソリューションのリビルドに使用されるソリューション構成の名前。  
   
  `SolutionName`  
- 必須です。 ソリューション ファイルの完全パスと名前。  
+ 必須。 ソリューション ファイルの完全パスと名前。  
   
  /project `ProjName`  
- 省略可能です。 ソリューション内のプロジェクト ファイルのパスと名前です。 `SolutionName` フォルダーからプロジェクト ファイルへの相対パス、プロジェクトの表示名、またはプロジェクト ファイルの完全なパスと名前を入力できます。  
+ 任意。 ソリューション内のプロジェクト ファイルのパスと名前です。 `SolutionName` フォルダーからプロジェクト ファイルへの相対パス、プロジェクトの表示名、またはプロジェクト ファイルの完全なパスと名前を入力できます。  
   
  /projectconfig `ProjConfigName`  
- 省略可能です。 指定した `/project` のリビルド時に使用されるプロジェクトのビルド構成の名前。  
+ 任意。 指定した `/project` のリビルド時に使用されるプロジェクトのビルド構成の名前。  
   
 ## <a name="remarks"></a>コメント  
   
@@ -61,7 +62,7 @@ devenv SolutionName /rebuild SolnConfigName [/project ProjName] [/projectconfig 
 devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /rebuild Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)   
  [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md)   
  [/Clean (devenv.exe)](../../ide/reference/clean-devenv-exe.md)   

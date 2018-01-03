@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: conceptdev
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 1727330a559b5a9aed41ea9063f3394e01bc45ab
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.workload: unity
+ms.openlocfilehash: 47b355d9b07ba2dab78111c36344eec94c935091
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity の使用を開始する
 このセクションでは、Visual Studio Tools for Unity をインストールする方法と、Visual Studio で操作できるように Unity プロジェクトを構成する方法を説明します。  
@@ -115,5 +116,5 @@ ms.lasthandoff: 11/29/2017
 
  Visual Studio で Unity プロジェクトを操作およびデバッグする方法については、「[Visual Studio Tools for Unity を使用する](../cross-platform/using-visual-studio-tools-for-unity.md)」をご覧ください。  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Unity ホームページ](http://unity3d.com)

@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: c01007e3a1fd71af8c5204130a90b448f28c93f1
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: 9ee06a96eeb0d7fd0cec7c0f2e22159741767e01
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-r-projects-in-visual-studio"></a>Visual Studio で R プロジェクトを作成する
 
@@ -40,14 +41,14 @@ R プロジェクト (`.rxproj` ファイル) は、プロジェクトに関連�
 
 `rproject.rproj` ファイルには、Visual Studio では管理されていない一部の R 固有のプロジェクト設定が保持されています。
 
-| プロパティ | 既定 | 説明 |
+| プロパティ | 既定値 | 説明 |
 | --- | --- | --- |
-| バージョン | 1.0 | プロジェクトの作成に使用された R Tools for Visual Studio のバージョン。 |
+| Version | 1 | プロジェクトの作成に使用された R Tools for Visual Studio のバージョン。 |
 | RestoreWorkspace | 既定値 | プロジェクト ディレクトリの `.RData` ファイルから以前のワークスペース変数を自動的に読み込みます。 |
 | SaveWorkspace | 既定値 | プロジェクトを閉じるときに、現在のワークスペース変数をプロジェクト ディレクトリの `.RData` ファイルに保存します。 |
 | AlwaysSaveHistory | 既定値 | プロジェクトを閉じるときに、現在の対話型ウィンドウ履歴をプロジェクト ディレクトリの `.RHistory` ファイルに保存します。 |
-| EnableCodeIndexing | はい | コード検索速度を向上するために、バックグラウンドのインデックス作成タスクを実行するかどうかを決定します。 |
-| UseSpacesForTab | はい | エディターで Tab キーが押されたときに、スペースを挿入するか (Yes)、またはタブ文字を挿入するか (No) を決定します。 |
+| EnableCodeIndexing | [はい] | コード検索速度を向上するために、バックグラウンドのインデックス作成タスクを実行するかどうかを決定します。 |
+| UseSpacesForTab | [はい] | エディターで Tab キーが押されたときに、スペースを挿入するか (Yes)、またはタブ文字を挿入するか (No) を決定します。 |
 | NumSpacesForTab | 2 | UseSpacesForTab が Yes の場合に挿入するスペースの数。 |
 | エンコード | UTF-8 | `.R` ファイルの既定のエンコーディング。 |
 | RnwWeave | Sweave | Rnw ファイルを編集するときに使用するパッケージ。 |
@@ -106,7 +107,6 @@ RTVS には、各ファイルの種類用に複数のテンプレートが含ま
 | R ドキュメント (データセット) | データセットを説明するコメントが指定された多くのフィールドを含む R ドキュメント ファイル。 |
 | SQL クエリ | 空の `.sql` ファイル。 「[SQL Server Integration](sql-server.md)」(SQL Server の統合) を参照してください。 |
 | R を使用したストアド プロシージャ | 子の SQL クエリと子のストアド プロシージャ テンプレート ファイルを含む R ファイル。 「[SQL Server Integration](sql-server.md)」(SQL Server の統合) を参照してください。 |
-
 
 ## <a name="use-multiple-project-types-in-visual-studio"></a>Visual Studio で複数種類のプロジェクトを使用する
 

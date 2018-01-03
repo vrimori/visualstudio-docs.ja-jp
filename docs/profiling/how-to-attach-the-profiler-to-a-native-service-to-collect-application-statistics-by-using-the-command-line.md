@@ -12,17 +12,18 @@ caps.latest.revision: "25"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9a175f5ba879ec84397785f91012f2b2e1653238
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: cplusplus
+ms.openlocfilehash: b84efa68a82f857179f7cffb22d93455dd723078
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-attach-the-profiler-to-a-native-service-to-collect-application-statistics-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーをネイティブ サービスにアタッチし、アプリケーションの統計情報を収集する
 ここでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのコマンド ライン ツールを使用して、プロファイラーをネイティブ サービスにアタッチし、サンプリング メソッドによってパフォーマンスに関する統計情報を収集する方法について説明します。  
   
 > [!NOTE]
->  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 ｢[Performance Tools on Windows 8 and Windows Server 2012 applications](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md) (Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール)」をご覧ください。  
+>  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
   
 > [!NOTE]
 >  プロファイリング ツールのコマンド ライン ツールは、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] インストール ディレクトリの \Team Tools\Performance Tools サブディレクトリにあります。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。 詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」をご覧ください。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/11/2017
   
 2.  コマンド プロンプト ウィンドウを開きます。  
   
-3.  プロファイラーを起動します。 種類:  
+3.  プロファイラーを起動します。 型:  
   
      **VSPerfCmd /start:sample**  [/output](../profiling/output.md) **:** `OutputFile` [`Options`]  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/11/2017
     |[/automark](../profiling/automark.md) **:** `Interval`|**/wincounter** との組み合わせでのみ使用します。 Windows パフォーマンス カウンター コレクション イベントの間隔をミリ秒単位で指定します。 既定値は 500 ミリ秒です。|  
     |[/events](../profiling/events-vsperfcmd.md) **:** `Config`|プロファイリング実行中に収集する ETW (Event Tracing for Windows) イベントを指定します。 ETW イベントは独立した (.etl) ファイルに収集されます。|  
   
-4.  プロファイラーをサービスにアタッチします。 種類:  
+4.  プロファイラーをサービスにアタッチします。 型:  
   
      **VSPerfCmd /attach:** `PID` [`Sample Event`]  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/11/2017
     |[/sys](../profiling/sys-vsperfcmd.md) [**:**`Interval`]|サンプリング イベントを、プロセスからオペレーティング システムのカーネルへのシステム コール (syscall) に変更します。 `Interval` を指定した場合は、サンプル間の呼び出し回数が設定されます。 既定値は 10 です。|  
     |[/counter](../profiling/counter.md) **:** `Config`|サンプリング イベントと間隔を、プロセッサのパフォーマンス カウンターと、`Config` で指定した間隔に、それぞれ変更します。|  
   
-## <a name="controlling-data-collection"></a>データ収集の制御  
+## <a name="controlling-data-collection"></a>データ コレクションの制御  
  対象アプリケーションの実行中に、**VSPerfCmd.exe** のオプションを使用して、プロファイラー データ ファイルへのデータの書き込みを開始および停止できます。 データ コレクションを制御することにより、アプリケーションの起動や終了など、プログラム実行の特定の部分についてのデータ コレクションを行うことができます。  
   
 #### <a name="to-start-and-stop-data-collection"></a>データ コレクションを開始および停止するには  
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/11/2017
   
     -   サービスを停止します。  
   
-         または  
+         - または -  
   
     -   **VSPerfCmd /detach** と入力します  
   
@@ -106,6 +107,6 @@ ms.lasthandoff: 11/11/2017
   
      **VSPerfCmd /shutdown**  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サービスのプロファイリング](../profiling/command-line-profiling-of-services.md)   
  [サンプリング メソッドのデータ ビュー](../profiling/profiler-sampling-method-data-views.md)

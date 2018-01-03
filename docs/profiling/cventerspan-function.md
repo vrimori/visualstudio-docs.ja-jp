@@ -28,11 +28,12 @@ caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c7a24d3809c9e600620b074315a07f2d0eaf3d18
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 1ded4d3227ab3840f393f35832160405ba0195c0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cventerspan-function"></a>CvEnterSpan 関数
 新しいスパンの開始を示します。  
@@ -118,7 +119,7 @@ HRESULT CvEnterSpanExVA(
  有効なマーカー シリーズ コンテキスト。 Nll は指定できません。  
   
  `pMessage`  
- メッセージの書式設定文字列。 Null は指定できません。  
+ メッセージの書式設定文字列。 Nll は指定できません。  
   
  `ppSpan`  
  結果として生成されるスパン オブジェクトを格納する変数のアドレス。 アドレスには NULL を指定できません。変数には値を含めることができます。  
@@ -126,12 +127,12 @@ HRESULT CvEnterSpanExVA(
 ## <a name="return-value"></a>戻り値  
  メッセージが書き込まれると S_OK を返します。 エラーが発生した場合はエラー コードを返します。 SUCCEEDED/FAILED マクロを使用し、エラーの状態を確認します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** cvmarkers.h  
   
  **Unicode:** CvEnterSpanW、CvEnterSpanVW、CvEnterSpanExW、CvEnterSpanExVW  
   
  **ANSI:** CvEnterSpanA、CvEnterSpanVA、CvEnterSpanExA、CvEnterSpanExVW  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [C++ ライブラリ リファレンス](../profiling/cpp-library-reference.md)

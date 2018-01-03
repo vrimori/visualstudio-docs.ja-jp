@@ -26,11 +26,12 @@ caps.latest.revision: "49"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e52bef93735efc1ec5e43230ba46c7aa90cb67bc
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: bda996f825c492e323f84ba5444327a49f50aeb1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>UWP アプリでの JavaScript のメモリ使用量を分析する
 Visual Studio に用意されている JavaScript メモリ アナライザーは、メモリ使用量を把握し、JavaScript を使用して Windows 用に開発された UWP アプリのメモリ リークを検出するのに役立ちます。 サポートされるアプリには、ユニバーサル Windows アプリのアプリが含まれます。
@@ -49,7 +50,7 @@ Visual Studio に用意されている JavaScript メモリ アナライザー�
   
  動作中のアプリのメモリ リークを識別するプロセスを紹介したチュートリアルについては、「[チュートリアル: メモリ リークの検出 (JavaScript)](../profiling/walkthrough-find-a-memory-leak-javascript.md)」をご覧ください。  
   
- このトピックの内容  
+ このトピックの内容:  
   
  [JavaScript メモリ アナライザーの実行](#Run)   
  [メモリの使用量の確認](#Check)   
@@ -380,7 +381,7 @@ if (performance && performance.mark) {
   
 -   メモリに関する問題の原因を特定するのが難しい場合、特にビューに表示される他の多くのオブジェクトへの参照を含む 1 つのオブジェクト (または少数のオブジェクト) を特定するために、さまざまなビュー (種類やドミネーター) を使用して共通点を探します。  
   
--   ユーザーが新しいページに移動した後も誤ってメモリに保持されているオブジェクトを検索します。これは、一般的なメモリの問題の原因です。 次に例を示します。  
+-   ユーザーが新しいページに移動した後も誤ってメモリに保持されているオブジェクトを検索します。これは、一般的なメモリの問題の原因です。 例:  
   
     -   [URL.CreateObjectUrl](http://msdn.microsoft.com/library/windows/apps/hh453196.aspx) 関数の不適切な使用により、この問題が発生する場合があります。  
   
@@ -400,5 +401,5 @@ if (performance && performance.mark) {
   
     -   JavaScript メモリ アナライザーのビュー (種類ビューなど) でテスト オブジェクトを作成してトレースします。 たとえば、非常に大きいオブジェクトを別のオブジェクトにアタッチすることで、特定のオブジェクトまたは要素に対してガベージ コレクションが行われたかどうかを確認できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: メモリ リークの検出 (JavaScript)](../profiling/walkthrough-find-a-memory-leak-javascript.md)

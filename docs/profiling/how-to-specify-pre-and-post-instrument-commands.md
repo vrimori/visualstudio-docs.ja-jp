@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7daf63f27d9c285c126e437f55d25ff674d7360f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ebd5ff13eec62eae238b126efd7001b1f6348551
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-pre--and-post-instrument-commands"></a>方法 : インストルメント前のコマンドおよびインストルメント後のコマンドを指定する
 パフォーマンス セッションのバイナリがインストルメント化される前か後に実行されるコマンドを指定できます。 コマンド ラインから発行できるコマンドはすべて、インストルメント化前のイベントまたはインストルメント化後のイベントとして指定できます。 たとえば、バイナリのインストルメント化後に実行されるバッチ ファイルで、厳密な名前キーを持つアセンブリの再署名を自動化するコマンドを指定できます。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/31/2017
   
  **Requirements**  
   
--   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、[!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、[!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
+-   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
  コマンドが実行される作業ディレクトリは、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] を実行しているオペレーティング システムと、プロファイリング対象アプリケーションの対象プラットフォームによって異なります。  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]
     >  **[コマンド ライン]** ボックスの横にある省略記号ボタン **(...)** をクリックし、適切な .exe、.cmd、または .bat ファイルを参照して選択できます。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
      コマンドを削除することなくその実行を無効にするには、**[インストルメンテーションから除外]** チェック ボックスを選択します。 コンパイラまたはリンカーの設定を変更するには、プロジェクトのプロパティ ページを使用します。  
   
@@ -84,9 +85,9 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]
     >  **[コマンド ライン]** ボックスの横にある省略記号ボタン **(...)** をクリックし、適切な .exe、.cmd、または .bat ファイルを参照して選択できます。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
      コマンドを削除することなくその実行を無効にするには、**[インストルメンテーションから除外]** チェック ボックスを選択します。 コンパイラまたはリンカーの設定を変更するには、プロジェクトのプロパティ ページを使用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)

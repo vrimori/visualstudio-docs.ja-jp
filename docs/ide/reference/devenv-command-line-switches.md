@@ -24,11 +24,12 @@ caps.latest.revision: "33"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a22ac991b88dd62c91a9bf08f5397fe80e4ae37d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f06722f4a6192323d92ce6828b25bc57666de8bc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="devenv-command-line-switches"></a>Devenv コマンド ライン スイッチ
 Devenv を使用すると、コマンド ラインから統合開発環境 (IDE: Integrated Development Environment) のさまざまなオプションを設定したり、プロジェクトをビルド、デバッグ、および配置できます。 これらのスイッチを使用して、スクリプトや .bat ファイル (夜間用のビルド スクリプトなど) から IDE を実行したり、特定の構成で IDE を起動したりします。  
@@ -101,5 +102,5 @@ Devenv を使用すると、コマンド ラインから統合開発環境 (IDE:
 |[/Updateconfiguration (devenv.exe)](../../ide/reference/updateconfiguration-devenv-exe.md)|[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] にシステム上の [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] パッケージをマージさせ、MEF キャッシュに変更がないかを確認することを通知します。|  
 |[/Upgrade (devenv.exe)](../../ide/reference/upgrade-devenv-exe.md)|指定されたソリューション ファイルとそのすべてのプロジェクト ファイル、または指定されたプロジェクト ファイルを、そのファイルに対応する現在の [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の形式にアップグレードします。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)

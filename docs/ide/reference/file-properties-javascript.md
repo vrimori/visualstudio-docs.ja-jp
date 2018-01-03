@@ -29,11 +29,12 @@ caps.latest.revision: "7"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f732a23631de181524382914e954ad50a7f0385d
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: bd95d18cfbf1ce04c1178a0befbc8cbf7613862e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="file-properties-javascript"></a>ファイルのプロパティ、JavaScript
 ファイルのプロパティを使用して、プロジェクト システムがファイルに対して実行するアクションを指定できます。 たとえば、ファイルがリソース ファイルとしてパッケージに追加するかどうかを示すには、ファイル プロパティを設定できます。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/02/2017
 ### <a name="file-version"></a>ファイルのバージョン  
  参照のファイル バージョンが表示されます。  
 
-### <a name="identity"></a>ID  
+### <a name="identity"></a>同一。  
  プロジェクトに使用されている参照の ID が表示されます。これはプロジェクト ファイルに保存されています。  
 
 ### <a name="package"></a>Package  
@@ -92,8 +93,8 @@ ms.lasthandoff: 11/02/2017
 ### <a name="uri"></a>URI  
  ソース ファイルとしてファイルに含めるために、プロジェクトの HTML または JavaScript ファイルに含める必要がある URI が表示されます。  
 
-### <a name="version"></a>バージョン  
+### <a name="version"></a>Version  
  参照のバージョンが表示されます。  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクトおよびソリューションのプロパティの管理](../../ide/managing-project-and-solution-properties.md)

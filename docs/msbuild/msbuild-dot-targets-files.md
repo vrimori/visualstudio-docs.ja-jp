@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 0811a2f32ae9834c1141265a936e67c6a04adbcd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c382d6e967705b95e46c6c797915c49841688c6c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msbuild-targets-files"></a>MSBuild .Targets ファイル
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] には、項目、プロパティ、ターゲット、および一般的なシナリオ用のタスクが含まれているいくつかの .targets ファイルが含まれます。 これらのファイルはほぼすべて [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクト ファイル自動的にインポートされ、これによってメンテナンスが簡素化されて読みやすさが向上します。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="directorybuildtargets"></a>Directory.Build.targets
 Directory.Build.targets は、ディレクトリの下のプロジェクトをカスタマイズできるようにする、ユーザー定義のファイルです。 **ImportDirectoryBuildTargets** プロパティを **false** に設定しない限り、このファイルは Microsoft.Common.targets から自動的にインポートされます。
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Import 要素 (MSBuild)](../msbuild/import-element-msbuild.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)  
  [MSBuild](../msbuild/msbuild.md)

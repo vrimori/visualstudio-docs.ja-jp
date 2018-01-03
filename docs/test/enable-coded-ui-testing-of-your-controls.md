@@ -11,11 +11,12 @@ ms.assetid: 5ef1188f-89dc-413d-801d-0efdaf9b0427
 caps.latest.revision: "22"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 0d9e28ee58dde41703f2149534f542b08d55b9ec
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: d44026c2a4424cbacd16af57d3fb132d23ba8068
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enable-coded-ui-testing-of-your-controls"></a>コントロールのコード化された UI テストの有効化
 コード化された UI テスト フレームワークのサポートを実装している場合は、コントロールをより簡単にテストできます。 サポート レベルを徐々に上げることができます。 記録と再生およびプロパティの検証のサポートから始めることができます。 この最初のサポートに加えて、コード化された UI テスト ビルダーがコントロールのカスタム プロパティを認識し、生成されたコードからそれらのプロパティにアクセスするためのカスタム クラスを提供できるようにすることができます。 また、コード化された UI テスト ビルダーが、記録される操作の目的に近い方法で操作をキャプチャできるようにすることもできます。  
@@ -219,6 +220,6 @@ ms.lasthandoff: 10/27/2017
 ### <a name="guidance"></a>ガイダンス  
  [Visual Studio 2012 を使用した継続的配信のためのテスト - 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:System.Windows.Forms.AccessibleObject>   
  [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "35"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dff0b96bc40f857224df5222b43efac914de4f7c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 4996f6cd60889412958765a02811b1b6728f2efa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-session-overview"></a>パフォーマンス セッションの概要
 この概要では、プロファイリングの基本について説明します。 パフォーマンス作業を初めて行う開発者は、すぐに成果を上げてコードのパフォーマンスを向上させるうえで [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールがいかに役立つかを理解できます。 プロファイリングの経験がある開発者は、プロファイリング ツールに関する特定の機能やプロセスの概要を確認できます。  
@@ -76,6 +77,6 @@ ms.lasthandoff: 10/31/2017
 ## <a name="generate-a-report-of-the-results"></a>結果のレポートの生成  
  パフォーマンス レポートのビューはどれも、行をメールやスプレッドシートに貼り付けることができます。1 つ以上のビューのデータを含むレポートを生成できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [概要](../profiling/overviews-performance-tools.md)   
  [チュートリアル: パフォーマンスの問題を特定する](../profiling/walkthrough-identifying-performance-problems.md)

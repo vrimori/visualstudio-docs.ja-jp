@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1af055de45421ec9958a8663cfaa62c82bd4ae75
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: 81c10d85b9dc88115e7dbc57a03a6da4362fa945
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="caller--callee-view---sampling-data"></a>呼び出し元/呼び出し先ビュー - サンプリング データ
 呼び出し元/呼び出し先ビューには、選択した関数およびその親関数と子関数のプロファイル データが表示されます。 [呼び出し元/呼び出し先] ビューは、3 つのグリッドで構成されます。  
@@ -31,9 +32,9 @@ ms.lasthandoff: 11/11/2017
  **[現在の関数によって呼び出された関数]** は、下部のグリッドに表示されます。このグリッドには、子関数が現在の関数によって呼び出されたときに、選択した関数の呼び出し先 (子) 関数に関するプロファイル情報が表示されます。  
   
 > [!NOTE]
->  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 ｢[Performance Tools on Windows 8 and Windows Server 2012 applications](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md) (Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール)」をご覧ください。  
+>  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
   
-|列|説明|  
+|Column|説明|  
 |------------|-----------------|  
 |**プロセス ID**|プロファイリング実行のプロセス ID (PID) です。|  
 |**プロセス名**|プロセスの名前です。|  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/11/2017
 |**サンプル数 (関数のみ)**|-   現在の関数の場合、この関数が直接実行されていたとき、つまりこの関数が呼び出し履歴の最上位にあったときに収集されたプロファイル実行のサンプル数。 この関数の子関数の実行中に収集されたサンプルは、排他カウントには含まれません。<br />-   呼び出し元関数の場合、この関数が現在の関数を呼び出したときに収集された現在の関数の排他サンプル数。<br />-   呼び出し先関数の場合、現在の関数がこの関数を呼び出したときに収集されたこの関数の排他サンプル数。|  
 |**サンプル % (関数のみ)**|プロファイル実行のすべてのサンプルに対する、この関数の排他サンプルの割合。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [呼び出し元/呼び出し先ビュー - .NET メモリ サンプリング データ](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
  [呼び出し元/呼び出し先ビュー - .NET メモリ インストルメンテーション データ](../profiling/caller-callee-view-net-memory-instrumentation-data.md)   
  [呼び出し元/呼び出し先ビュー - インストルメンテーション データ](../profiling/caller-callee-view-instrumentation-data.md)

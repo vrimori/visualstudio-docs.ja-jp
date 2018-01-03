@@ -22,11 +22,12 @@ caps.latest.revision: "21"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 5aff5914d9b278b206f81abd4f28ce9f4dfa409c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2458203cdaa23509e35c61eb71a9e9cfa6e214ec
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-integration-msbuild"></a>Visual Studio の統合 (MSBuild)
 Visual Studio は、マネージ プロジェクトの読み込みとビルドを行う [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] をホストしています。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はプロジェクトに対応しているため、そのプロジェクトが他のツールで作成されていたり、ビルド処理がカスタマイズされていたりしても、 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 形式のほとんどすべてのプロジェクトを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]で問題なく使用できます。  
@@ -125,7 +126,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
  出力アセンブリを見つけて起動し、デバッガーをアタッチするには、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 、 `OutputPath`、および `AssemblyName`の各プロパティが `OutputType` で正しく定義されている必要があります。 ビルド処理においてコンパイラが .pdb ファイルを生成しない場合、デバッガーはアタッチされません。  
   
 ## <a name="design-time-target-execution"></a>デザイン時におけるターゲットの実行  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、プロジェクトを読み込む際に、特定の名前を持つターゲットを実行しようとします。 このようなターゲットとしては、 `Compile`、 `ResolveAssemblyReferences`、 `ResolveCOMReferences`、 `GetFrameworkPaths`、 `CopyRunEnvironmentFiles`などがあります。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] はこれらのターゲットを実行することにより、IntelliSense が使用できるようにコンパイラを初期化し、デバッガーを初期化し、さらにソリューション エクスプローラーに表示される参照を解決します。 これらのターゲットが存在しない場合、プロジェクトは正常に読み込まれてビルドされますが、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のデザイン時環境は完全には機能しません。  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、プロジェクトを読み込む際に、特定の名前を持つターゲットを実行しようとします。 このようなターゲットとしては、`Compile`、`ResolveAssemblyReferences`、`ResolveCOMReferences`、`GetFrameworkPaths`、`CopyRunEnvironmentFiles` などがあります。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] はこれらのターゲットを実行することにより、IntelliSense が使用できるようにコンパイラを初期化し、デバッガーを初期化し、さらにソリューション エクスプローラーに表示される参照を解決します。 これらのターゲットが存在しない場合、プロジェクトは正常に読み込まれてビルドされますが、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のデザイン時環境は完全には機能しません。  
   
 ##  <a name="BKMK_EditingProjects"></a> Editing Project Files in Visual Studio  
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトを直接編集するには、Visual Studio の XML エディターでプロジェクト ファイルを開きます。  
@@ -153,7 +154,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、プロジェクト ファイルの内容やプロジェクト ファイルによってインポートしたファイルの内容をキャッシュします。 読み込んだプロジェクト ファイルを編集すると、プロジェクトを再読み込みして変更を有効にするように求めるメッセージが [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によって自動的に表示されます。 ただし、読み込んだプロジェクトによってインポートされたファイルを編集した場合は、再読み込みを求めるメッセージが表示されないため、手動でプロジェクトのアンロードと再読み込みを行い、変更内容を有効にする必要があります。  
   
 ## <a name="output-groups"></a>出力グループ  
- Microsoft.Common.targets で定義したいくつかのターゲットの名前は、最後の部分が `OutputGroups` または `OutputGroupDependencies`となります。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] はこれらのターゲットを呼び出して、特定のプロジェクト出力のリストを取得します。 たとえば、 `SatelliteDllsProjectOutputGroup` ターゲットを呼び出すと、ビルドが作成したすべてのサテライト アセンブリのリストが作成されます。 これらの出力グループは、発行、配置、およびプロジェクト間参照などの機能によって使用されます。 これらのターゲットを定義していなくても、プロジェクトは [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]に読み込まれてビルドされますが、一部の機能が正常に動作しない場合があります。  
+ Microsoft.Common.targets で定義したいくつかのターゲットの名前は、最後の部分が `OutputGroups` または `OutputGroupDependencies`となります。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] はこれらのターゲットを呼び出して、特定のプロジェクト出力のリストを取得します。 たとえば、`SatelliteDllsProjectOutputGroup` ターゲットを呼び出すと、ビルドが作成したすべてのサテライト アセンブリのリストが作成されます。 これらの出力グループは、発行、配置、およびプロジェクト間参照などの機能によって使用されます。 これらのターゲットを定義していなくても、プロジェクトは [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]に読み込まれてビルドされますが、一部の機能が正常に動作しない場合があります。  
   
 ## <a name="reference-resolution"></a>参照の解決  
  参照の解決とは、プロジェクト ファイルに格納されている参照項目を使用して、実際のアセンブリを検索する処理をいいます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、 **[プロパティ]** ウィンドウに参照ごとに詳細なプロパティを表示するために、参照の解決を実行する必要があります。 次の一覧では、3 種類の参照とその解決方法について説明します。  
@@ -181,7 +182,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
   
  Visual Studio の通常のビルドでは、高速更新チェックは適用されず、コマンド プロンプトでビルドを開始する場合と同じ方法でプロジェクトがビルドされます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: Visual Studio ビルド処理を拡張する](../msbuild/how-to-extend-the-visual-studio-build-process.md)   
  [IDE 内からのビルドの開始](../msbuild/starting-a-build-from-within-the-ide.md)   
  [.NET Framework の拡張機能の登録](../msbuild/registering-extensions-of-the-dotnet-framework.md)   

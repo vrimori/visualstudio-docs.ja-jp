@@ -12,11 +12,12 @@ caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1bb3ee7a4b646e39e22752d336d5414f64551ce0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7c0992b8db46155a709f58714dfd427882674d2f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-basic-color-shader"></a>方法: 基本カラー シェーダーを作成する
 このドキュメントでは、シェーダー デザイナーと DGSL (Directed Graph Shader Language) を使用して単色シェーダーを作成する方法を示します。 このシェーダーは、最終的な色を定数の RGB カラー値に設定します。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/31/2017
   
  シェーダーによっては、特定の図形を使用すると、より適切にプレビューできる可能性があります。 シェーダー デザイナーでシェーダーをプレビューする方法に関する詳細については、「[シェーダー デザイナー](../designers/shader-designer.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: シェーダーを 3-D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)   
  [方法: シェーダーをエクスポートする](../designers/how-to-export-a-shader.md)   
  [シェーダー デザイナー](../designers/shader-designer.md)   

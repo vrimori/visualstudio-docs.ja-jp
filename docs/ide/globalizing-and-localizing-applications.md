@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f6e32c592894b5d44a2d257d183c11da01c90456
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 27f298ad0317223e40f6e9a8606aa9b6aed735fb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="globalizing-and-localizing-applications"></a>アプリケーションのグローバライズとローカライズ
 アプリケーションを各国のユーザー向けに配布する場合は、デザイン段階や開発段階で留意する必要のある事項がいくつかあります。 アプリケーションを国際対応にする計画がない場合でも、事前に多少の配慮をしておくと、アプリケーションの将来のバージョンで計画が変更になったときに役立ちます。 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] に組み込まれたサービスを利用すると、Visual Studio でマネージ開発を使用して、異なるロケールに適応できる単一のアプリケーションを簡単に開発できます。  

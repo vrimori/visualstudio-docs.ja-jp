@@ -29,11 +29,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 003e4abaf5e6fbabead604c495b2018402cf74ec
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6cf3f299f2b5ec2e38b5fe0315b6d0abc0411b12
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-build-configurations"></a>ビルド構成について
 異なる種類のビルドに使用できるように、ソリューションおよびプロジェクト プロパティの異なる構成を保存することができます。 構成を作成、選択、変更、または削除するには、**構成マネージャー**を使用できます。 構成マネージャーを開くには、メニュー バーで、**[ビルド]**、**[構成マネージャー]** の順にクリックするか、**[クイック起動]** ボックスに「**構成**」と入力します。 また、**[標準]** ツール バーの **[ソリューション構成]** ボックスの一覧を使用して構成を選択することも、**[構成マネージャー]** を開くこともできます。  
@@ -84,7 +85,7 @@ ms.lasthandoff: 10/31/2017
   
 -   プロジェクトで複数のプラットフォームがサポートされる場合、サポートされている各プラットフォームについて、ソリューション構成が見つかればその構成が割り当てられ、見つからなければ追加されます。 各ソリューション構成の名前には、プロジェクト構成名とプラットフォーム名の両方が含まれ、*\<プロジェクト構成名> \<プラットフォーム名>* という形式になります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)   
  [コードのコンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)   
  [ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)   

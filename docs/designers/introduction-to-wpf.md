@@ -15,11 +15,12 @@ manager: ghogen
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 5dacd44d72e5be7a898ba90c074dedf4b2f2bb4b
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: a756b7a0cbc69e02c530ffc95d776aefbc96afa3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introduction-to-wpf"></a>WPF の概要
 Windows Presentation Foundation (WPF) を使用して、視覚的に美しいユーザー エクスペリエンスを持つ Windows 用のデスクトップ クライアント アプリケーションを作成できます。  
@@ -648,7 +649,7 @@ End Namespace
   
  アプリケーションを作成する際に、この概要に立ち戻って主要な機能を思い出し、ここで取り上げられている機能をより詳しく説明したページへの参照を見つけることができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [WPF の概要](../designers/getting-started-with-wpf.md)   
  [Windows Presentation Foundation での最新のデスクトップ アプリケーションの作成](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)   
  [Windows Presentation Foundation](/dotnet/framework/wpf/index)

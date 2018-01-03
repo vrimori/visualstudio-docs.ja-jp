@@ -18,11 +18,12 @@ caps.latest.revision: "27"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1672a505fbd7accfdc7fa644eafa6b3af0744d26
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c3e191509b7b0ed80447399eeb533c4a318ad8c8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-memory-allocations-view"></a>.NET メモリの割り当てビュー
 割り当てビューには、プロファイリング実行中に作成された型が一覧表示されます。 それぞれの型が、型の割り当てが発生する原因となった関数の実行パスを表示するコール ツリーのルート ノードに該当します。  
@@ -40,9 +41,9 @@ ms.lasthandoff: 10/31/2017
   
 -   最もアクティブなパスを表示するには、型または関数を右クリックし、**[ホット パスの展開]** をクリックします。  
   
-|列|説明|  
+|Column|説明|  
 |------------|-----------------|  
-|**名前**|割り当てられた型または関数の名前です。|  
+|**Name**|割り当てられた型または関数の名前です。|  
 |**プロセス ID**|プロファイリング実行のプロセス ID (PID) です。|  
 |**プロセス名**|プロセスの名前です。|  
 |**モジュール名**|型または関数を含むモジュールの名前です。|  

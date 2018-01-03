@@ -13,11 +13,12 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4899f59362f623f6ecf92927e8a15ed4762fa367
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: 25e4397ac3f3b2a8191dc9d9850f643e0be3d539
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-feature-tour"></a>プロファイリング機能ツアー
 
@@ -153,14 +154,14 @@ CPU 使用量ツールやメモリ使用量ツールに現在入っていない�
 |----------------------|---------------------|------------------------------|-------------|  
 |[メモリ使用量](../profiling/memory-usage.md)|可|可|可|  
 |[CPU 使用率](../profiling/cpu-usage.md)|可|可|可 (.NET Core/ASP.NET Core の場合は no)|  
-|[GPU 使用率](../debugger/gpu-usage.md)|可|可|no|  
-|[アプリケーションのタイムライン](../profiling/application-timeline.md)|可|可|no|  
+|[GPU 使用率](../debugger/gpu-usage.md)|可|可|Ｘ|  
+|[アプリケーションのタイムライン](../profiling/application-timeline.md)|可|可|Ｘ|  
 |[パフォーマンスのヒント](../profiling/perftips.md)|可|XAML の場合は可、HTML の場合は不可|可|  
-|[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)|可|no|可 (ASP.NET Core の場合は no)|  
+|[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)|可|Ｘ|可 (ASP.NET Core の場合は no)|  
 |[IntelliTrace](../debugger/intellitrace.md)|.NET Enterprise のみ|.NET Enterprise のみ|.NET Enterprise のみ|
-|[ネットワーク使用率](../profiling/network-usage.md)|no|可|no| 
-|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|no|HTML の場合は可、XAML の場合は不可|no|  
-|[JavaScript メモリ](../profiling/javascript-memory.md)|no|HTML の場合は可、XAML の場合は不可|no|  
+|[ネットワーク使用率](../profiling/network-usage.md)|Ｘ|可|Ｘ| 
+|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|Ｘ|HTML の場合は可、XAML の場合は不可|Ｘ|  
+|[JavaScript メモリ](../profiling/javascript-memory.md)|Ｘ|HTML の場合は可、XAML の場合は不可|Ｘ|  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)

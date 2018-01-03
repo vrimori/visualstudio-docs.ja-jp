@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 582ec23192001b262938a82b9867ae82805e0cab
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8d58d317099f840a81a4a4e2eedd0d55d6032469
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="functions-view---instrumentation-data"></a>関数ビュー - インストルメンテーション データ
 関数レポート ビューでは、関数名別にプロファイル データが一覧表示されます。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/31/2017
 |Column|説明|  
 |------------|-----------------|  
 |**包括経過時間**|この関数に対するすべての呼び出しの包括経過時間の合計。|  
-|**包括経過時間 %**|プロファイル実行の包括経過時間の総計に対する、この関数に費やされた包括経過時間の割合。|  
+|**経過時間 % (子を含む)**|プロファイル実行の包括経過時間の総計に対する、この関数に費やされた包括経過時間の割合。|  
 |**平均包括経過時間**|この関数に対する呼び出しの平均包括経過時間。|  
 |**最大包括経過時間**|この関数に対する呼び出しの最大包括経過時間。|  
 |**最小包括経過時間**|この関数に対する呼び出しの最小包括経過時間。|  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/31/2017
 |Column|説明|  
 |------------|-----------------|  
 |**排他経過時間**|この関数に対するすべての呼び出しの排他経過時間の合計。|  
-|**排他経過時間 %**|プロファイリング実行の排他経過時間の総計に対する、この関数の排他経過時間の総計の割合。|  
+|**経過時間 % (関数のみ)**|プロファイリング実行の排他経過時間の総計に対する、この関数の排他経過時間の総計の割合。|  
 |**平均排他経過時間**|この関数に対する呼び出しの平均排他経過時間。|  
 |**最大排他経過時間**|この関数に対する呼び出しの最大排他経過時間。|  
 |**最小排他経過時間**|この関数に対する呼び出しの最小排他経過時間。|  
@@ -83,7 +84,7 @@ ms.lasthandoff: 10/31/2017
 |**最大アプリケーション排他時間 (関数のみ)**|この関数の呼び出しの最大アプリケーション排他時間。|  
 |**最小アプリケーション排他時間 (関数のみ)**|この関数の呼び出しの最小アプリケーション排他時間。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [関数ビュー](../profiling/functions-view-sampling-data.md)   
  [関数ビュー - サンプリング](../profiling/functions-view-dotnet-memory-sampling-data.md)   

@@ -97,11 +97,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: dacc2d2b34cd0e3bb755fc0ed6972457a307d006
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b5353009e2fbfc26898f4163aaad98dd8651c5b1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>統合開発環境に関するエラーのトラブルシューティング情報
 一部のエラー メッセージには、関連する固有のヘルプ トピックがありません。 エラー メッセージの情報では問題を解決できなかった場合は、サポート技術情報の文書、開発者コミュニティ、製品サポートなど、その他のリソースを利用できます。  

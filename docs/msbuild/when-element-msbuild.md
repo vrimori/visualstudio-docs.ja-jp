@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 58032ea7c1c15de794b5374017e84f07434d8310
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ed1fee60a7cda6d260833ba60d37a7a7a762d58e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="when-element-msbuild"></a>When 要素 (MSBuild)
 `Choose` 要素で選ぶ対象のコード ブロックを指定します。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/31/2017
 
 |属性|説明|  
 |---------------|-----------------|  
-|条件|必須の属性です。<br /><br /> 評価する条件です。 詳細については、[条件](../msbuild/msbuild-conditions.md)をご覧ください。|  
+|条件|必須の属性です。<br /><br /> 評価する条件です。 詳細については、「[条件](../msbuild/msbuild-conditions.md)」を参照してください。|  
 
 ### <a name="child-elements"></a>子要素  
 
@@ -70,7 +71,7 @@ ms.lasthandoff: 10/31/2017
 
 |要素|説明|  
 |-------------|-----------------|  
-|[Choose 要素 [MSBuild]](../msbuild/choose-element-msbuild.md)|子要素を評価して、実行するコードのセクションを 1 つ選びます。|  
+|[Choose 要素 (MSBuild)](../msbuild/choose-element-msbuild.md)|子要素を評価して、実行するコードのセクションを 1 つ選びます。|  
 
 ## <a name="remarks"></a>コメント  
  `Condition` 属性が true と評価された場合、その `When` 要素の子の `ItemGroup` 要素と `PropertyGroup` 要素が実行されて、後続の `When` 要素はすべてスキップされます。  
@@ -125,6 +126,6 @@ ms.lasthandoff: 10/31/2017
 </Project>  
 ```  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [条件構造](../msbuild/msbuild-conditional-constructs.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)

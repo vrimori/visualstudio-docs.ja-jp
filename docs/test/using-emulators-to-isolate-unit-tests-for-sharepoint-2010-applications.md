@@ -11,11 +11,12 @@ ms.assetid: b681164c-c87a-4bd7-be48-ed77e1578471
 caps.latest.revision: "15"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 1a7692176545f341fa753aa8838a089639a7b753
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 68999863abbf539bf1d83456d0630820249adb77
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications"></a>Sharepoint 2010 アプリケーションの単体テストを分離するためのエミュレーターの使用
 Microsoft.SharePoint.Emulators パッケージには、Microsoft SharePoint 2010 アプリケーションの分離単体テストの作成に役立つ一連のライブラリが用意されています。 エミュレーターは、[Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) 分離フレームワークで [shim](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md) を使用して、SharePoint API の最も一般的なオブジェクトおよびメソッドを模倣する、軽量なメモリ内オブジェクトを作成します。 SharePoint メソッドがエミュレートされていない場合、またはエミュレーターの既定の動作を変更する場合は、Fakes shim を作成して必要な結果を提供できます。  
@@ -45,7 +46,7 @@ Microsoft.SharePoint.Emulators パッケージには、Microsoft SharePoint 2010
   
  [エミュレートされた SharePoint の型](#BKMK_Emulated_SharePoint_types)  
   
-##  <a name="BKMK_Requirements"></a> 要件  
+##  <a name="BKMK_Requirements"></a> 必要条件  
   
 -   Microsoft SharePoint 2010 (SharePoint 2010 Server または SharePoint 2010 Foundation)  
   
@@ -587,7 +588,7 @@ namspace MySPAppTests
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コードの単体テスト](../test/unit-test-your-code.md)   
  [コード化された UI テストを使用した SharePoint 2010 アプリケーションのテスト](../test/testing-sharepoint-2010-applications-with-coded-ui-tests.md)   
  [SharePoint 2010 および 2013 アプリケーションの Web パフォーマンス テストおよびロード テスト](/devops-test-docs/test/web-performance-and-load-testing-sharepoint-2010-and-2013-applications)   

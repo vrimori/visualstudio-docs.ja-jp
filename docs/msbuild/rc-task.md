@@ -26,11 +26,12 @@ caps.latest.revision: "10"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 73e4544ab00142929bbd8d8dbdb154355c48c609
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5398f3eb1aa140ed53d6734734528d5c89a104c8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rc-task"></a>RC タスク
 Microsoft Windows リソース コンパイラ ツールである rc.exe をラップします。 **RC** タスクは、カーソル、アイコン、ビットマップ、ダイアログ ボックス、フォントなどのリソースをコンパイルし、リソース ファイル (.res) を作成します。 詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトのリソース コンパイラに関するページをご覧ください。  
@@ -55,5 +56,5 @@ Microsoft Windows リソース コンパイラ ツールである rc.exe をラ�
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)

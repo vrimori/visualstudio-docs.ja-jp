@@ -8,15 +8,18 @@ ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: code coverage
-ms.assetid: 800fc739-acd2-4242-84cb-1d83b4d82cf9
-caps.latest.revision: "36"
+dev_langs:
+- CSharp
+- VB
+- CPP
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 5c6889d705b882d92f701238f0890cb1fc532eed
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 51c8076ef3166e7f0f887a77399a0edfd5cfc072
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-code-coverage-to-determine-how-much-code-is-being-tested"></a>コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認
 単体テストなどのコード化されたテストによって実際にテストされるプロジェクトのコードの割合を調べるには、Visual Studio のコード カバレッジ機能を使用できます。 バグから効果的に保護するには、コードの大部分を "カバー" するようにテストを実行する必要があります。  
@@ -27,7 +30,7 @@ ms.lasthandoff: 10/27/2017
   
  ![色分けされたコード カバレッジの結果](../test/media/codecoverage1.png "CodeCoverage1")  
   
- **Requirements**  
+ **必要条件**  
   
 -   Visual Studio Enterprise  
   
@@ -49,7 +52,7 @@ ms.lasthandoff: 10/27/2017
 >      アンマネージ (ネイティブ) コードを操作している場合は、デバッグ ビルドを使用します。  
 > -   各アセンブリのシンボル (.pdb) ファイルが生成されていることを確認します。  
 >   
->  期待した結果が得られない場合は、「[トラブルシューティング コード カバレッジ](../test/troubleshooting-code-coverage.md) 」を参照してください。 コードを更新した後は、コード カバレッジを忘れずに再度実行します。 コードの変更後やテストの実行後に、カバレッジ結果とコードの色分けは自動的には更新されません。  
+>  期待した結果が得られない場合は、「[トラブルシューティング コード カバレッジ](../test/troubleshooting-code-coverage.md) である必要があります。 コードを更新した後は、コード カバレッジを忘れずに再度実行します。 コードの変更後やテストの実行後に、カバレッジ結果とコードの色分けは自動的には更新されません。  
   
 ## <a name="reporting-in-blocks-or-lines"></a>ブロック単位または行単位で報告する  
  コード カバレッジは、*ブロック*単位でカウントされます。 ブロックは、エントリ ポイントと終了ポイントを 1 つだけ持つ、コードの部分です。  プログラムの制御フローがテストの実行中にブロックを通過すると、そのブロックはカバー済みとしてカウントされます。 ブロックが使用された回数は、結果には影響しません。  
@@ -282,7 +285,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 ### <a name="guidance"></a>ガイダンス  
  [Visual Studio 2012 を使用した継続的配信のためのテスト - 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コード カバレッジ分析のカスタマイズ](../test/customizing-code-coverage-analysis.md)   
  [トラブルシューティング コード カバレッジ](../test/troubleshooting-code-coverage.md)   
  [コードの単体テスト](../test/unit-test-your-code.md)

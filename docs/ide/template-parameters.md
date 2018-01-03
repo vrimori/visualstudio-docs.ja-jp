@@ -17,11 +17,12 @@ caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c9a719e39506e080ce55bad45124e34d79dbbfac
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7218b5bdcc95ed5db7f87c6fb17230895db579cf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="template-parameters"></a>テンプレート パラメーター
 テンプレート内でパラメーターを使用すると、テンプレートがインスタンス化されたときに、テンプレート内の主要な部分 (クラス名や名前空間など) の値を置き換えることができます。 ユーザーが **[新しいプロジェクト]** ダイアログ ボックスまたは **[新しい項目の追加]** ダイアログ ボックスで **[OK]** をクリックすると、これらのパラメーターが、バックグラウンドで実行されているテンプレート ウィザードによって置き換えられます。  
@@ -123,5 +124,5 @@ namespace $safeprojectname$
 </TemplateContent>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [テンプレートのカスタマイズ](../ide/customizing-project-and-item-templates.md)

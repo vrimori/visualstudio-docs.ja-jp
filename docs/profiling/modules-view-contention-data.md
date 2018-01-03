@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fae0bd48af8c9fbaaaf8c38f50a2fe8233f15cb3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5503422ece5847018e8d321dba9cf674dff9e623
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="modules-view---contention-data"></a>モジュール ビュー - 競合データ
 競合データのモジュール ビューは、プロファイル データでサンプリングされた同時実行データを、モジュールごとにグループ化して表示します。 各モジュールが、階層ツリーのルートです。 競合イベントが発生したモジュールの関数が、モジュール ノードの下に一覧表示されます。  
@@ -39,12 +40,12 @@ ms.lasthandoff: 10/31/2017
 |**関数行番号**|ソース ファイルでのこの関数の開始行番号です。|  
 |**モジュール名**|関数、行、または命令ポインターを含むモジュールの名前。|  
 |**モジュール パス**|モジュール、関数、行、または命令ポインターを含むモジュールのパス。|  
-|**名前**|モジュールまたは関数の名前。|  
+|**Name**|モジュールまたは関数の名前。|  
 |**プロセス ID**|プロファイリング実行のプロセス ID (PID) です。|  
 |**プロセス名**|プロセスの名前です。|  
 |**ソース ファイル**|この関数の定義を含むソース ファイルです。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [モジュール ビュー](../profiling/modules-view.md)   
  [モジュール ビュー - インストルメンテーション](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   

@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a4ef9833b61a88fe45d9293cd036a52ce74788d0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 25156aa6087e5ce1b00e1a4230d4fbf42ef75513
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vsinstr-warnings"></a>VSInstr の警告
 次の表に、VSInstr.exe ツールで発行される警告をリストします。 NOWARN オプションに警告番号を指定することで、警告を非表示にできます。  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/31/2017
 |**VSP2013**|このイメージをインストルメント化するには、32 ビット プロセスとして実行する必要があります。 CLR ヘッダー フラグは、これを反映するように更新されました。<br /><br /> プロファイラーは、64 ビット オペレーティング システムが WOW64 エミュレーターで 32 ビット プロセスを開けるように、バイナリを変更します。 ライブラリ (DLL) の場合、既存の 64 ビット プロセスに読み込まれたときに失敗する場合があります。 この警告はユーザーに依存関係を知らせるものです。|  
 |**VSP2014**|結果となるインストルメント化されたイメージは無効であり、実行されない可能性があります。<br /><br /> このメッセージは、インストルメント化された最終的なアセンブリに無効な PE ヘッダーがある場合に発生します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [VSInstr](../profiling/vsinstr.md)

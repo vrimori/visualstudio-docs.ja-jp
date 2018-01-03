@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 16df4a6823bfb23847cd49b97d7b4a29edf0fa4b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: da3598568d0f607e37a3d42fbb080f0a70dfda57
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cores-view-zoom-tool"></a>コア ビューのズーム ツール
 ズーム コントロールは、タイムラインの表示を拡大縮小できるスライダーです。このコントロールを使用して、興味のある領域を集中的に見ることができます。 このコントロールは現在のビューの中心でズームします。そのため、拡大する前にビューを調整してください。  
@@ -29,5 +30,5 @@ ms.lasthandoff: 10/31/2017
   
 -   拡大と縮小: タイムラインの上にマウス ポインターを置き、CTRL を押しながらマウス ホイールを動かします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア ビュー](../profiling/cores-view.md)

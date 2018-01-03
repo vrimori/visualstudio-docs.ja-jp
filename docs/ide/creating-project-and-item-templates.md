@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7d95781c2c5c4370e09c13b382016b015ec1a0d5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 43b45f70e8ac7a6eeadfd3fb216b53540ec9a8b8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-project-and-item-templates"></a>プロジェクトと項目テンプレートの作成
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のプロジェクト テンプレートおよび項目テンプレートには、再使用可能なスタブが用意されています。これらによりユーザーは、提供される基本的なコードや構造をそれぞれの用途に使用できます。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="starter-kits"></a>スタート キット  
  スタート キットは拡張されたテンプレートであり、コミュニティの他のメンバーと共有できます。 スタート キットには、コンパイルされるコード サンプル、ドキュメント、および有用で実際的なアプリケーションをビルドする際の新しいツールやプログラミング技法を習得するうえで役立つ他のリソースが含まれています。 スタート キットの基本的な内容と手順は、テンプレートの場合と同じです。 詳しくは、「[方法: スタート キットを作成する](../ide/how-to-create-starter-kits.md)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法 : プロジェクト テンプレートを作成する](../ide/how-to-create-project-templates.md)   
  [方法: 項目テンプレートを作成する](../ide/how-to-create-item-templates.md)   
  [テンプレート パラメーター](../ide/template-parameters.md)   

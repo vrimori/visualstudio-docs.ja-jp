@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: dab9b5c631edde1883d4e4d2dcfa0dbf530b0441
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: bd49879c6c23981bc88eb4309fb6c7da8e215bd7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-realistic-3-d-billiard-ball"></a>チュートリアル: リアルな 3-D のビリヤード ボールの作成
 このチュートリアルでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でシェーダー デザイナーおよびイメージ エディターを使用して、リアルな 3-D のビリヤード ボールを作成する方法について説明します。 ビリヤード ボールの 3-D の外観は、適切なテクスチャのリソースと複数のシェーダー方法を組み合わせることによって実現します。  
@@ -214,7 +215,7 @@ ms.lasthandoff: 10/31/2017
   
  この最終的なイメージでは、真に迫ったビリヤード ボールを作成するために追加した効果がどのように連携しているかに注目してください。 図形、テクスチャ、および照明は、3-D オブジェクトの基本的な外観を作成し、反射の光源および景色の反射は、ビリヤード ボールをより目を引くものにして、環境の一部であるかのように見せます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: シェーダーをエクスポートする](../designers/how-to-export-a-shader.md)   
  [方法: シェーダーを 3-D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)   
  [シェーダー デザイナー](../designers/shader-designer.md)   

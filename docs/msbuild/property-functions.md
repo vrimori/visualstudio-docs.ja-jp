@@ -13,11 +13,12 @@ caps.latest.revision: "33"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 46df0fc4be6abf639f939b5145765f0ba41b0b8c
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: e77803150d747d05d8f6b0002814010c45244282
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-functions"></a>プロパティ関数
 .NET Framework のバージョン 4 と 4.5 では、プロパティ関数を使用して MSBuild スクリプトを評価できます。 プロパティ関数は、プロパティが表示される場所ならどこでも使用できます。 タスクとは異なり、プロパティ関数はターゲットの外側でも使用でき、ターゲットが実行される前に評価されます。  
@@ -338,6 +339,6 @@ Output:
 -->  
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [MSBuild プロパティ](../msbuild/msbuild-properties.md)   
 [MSBuild の概要](../msbuild/msbuild.md)

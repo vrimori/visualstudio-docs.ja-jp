@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: a87b97946e3b0c45b00bdfe00a4da23c266605c7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: bebac9ca310230fa0b5d63ce56a8caa6b524a145
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-extend-the-visual-studio-build-process"></a>方法 : Visual Studio ビルド処理を拡張する
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ビルド処理は、プロジェクト ファイルにインポートされる一連の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] .targets ファイルによって定義されます。 このインポートされるファイルの 1 つである Microsoft.Common.targets を拡張することで、ビルド処理の複数のポイントでカスタム タスクを実行できます。 このトピックでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ビルド処理を拡張するための 2 つの方法について説明します。  
@@ -125,7 +126,7 @@ ms.lasthandoff: 10/31/2017
 |`CleanDependsOn`|カスタム ビルド処理からの出力をクリーンアップする場合にオーバーライドするプロパティ。|  
 |`CompileDependsOn`|コンパイル手順の前または後にカスタム プロセスを挿入する場合にオーバーライドするプロパティ。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio の統合](../msbuild/visual-studio-integration-msbuild.md)   
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
  [.Targets Files (.Targets ファイル)](../msbuild/msbuild-dot-targets-files.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: aa33b329002991c5629f3d48361c6f4fa3c694e0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: bdc04655ccfc8ca5f6c1e45e4378f15221b99f4c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
 統合開発環境 (IDE) 内の文字列、通貨、およびその他の値に使用する既定の言語を設定します。  
@@ -37,7 +38,7 @@ devenv {/LCID|/l} LocaleID
   
 ## <a name="arguments"></a>引数  
  `LocaleID`  
- 必須です。 指定する言語の LCID (ロケール ID)。  
+ 必須。 指定する言語の LCID (ロケール ID)。  
   
 ## <a name="remarks"></a>コメント  
  IDE を読み込み、環境用の既定の自然言語を設定します。 この変更はセッション間で保持され、IDE の **[オプション]** ダイアログ ボックスにある **[環境]** オプションの **[国際対応の設定]** ウィンドウに反映されます。  
@@ -48,7 +49,7 @@ devenv {/LCID|/l} LocaleID
   
 |言語|LCID|  
 |--------------|----------|  
-|簡体字中国語|2052|  
+|中国語 (簡体字、中国)|2052|  
 |では |1028|  
 |英語|1033|  
 |フランス語|1036|  
@@ -65,7 +66,7 @@ devenv {/LCID|/l} LocaleID
 devenv /LCID 1033  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)   
  [[国際対応の設定] \([オプション] ダイアログ ボックス - [環境])](../../ide/reference/international-settings-environment-options-dialog-box.md)   
  [ウィンドウ レイアウトをカスタマイズする](../../ide/customizing-window-layouts-in-visual-studio.md)

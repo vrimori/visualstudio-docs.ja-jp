@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f83fbf1427951057f2154e032fb58b178c8b39fc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8eb0efae140613c6caa7bd71d72e0ce4cda37db8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="start-command"></a>Start コマンド
 スタートアップ プロジェクトのデバッグを開始します。  
@@ -33,7 +34,7 @@ Debug.Start [address]
   
 ## <a name="arguments"></a>引数  
  `address`  
- 省略可能です。 プログラムの実行を中断するアドレス。ソース コードでのブレークポイントに似ています。 この引数は、デバッグ モードでのみ有効です。  
+ 任意。 プログラムの実行を中断するアドレス。ソース コードでのブレークポイントに似ています。 この引数は、デバッグ モードでのみ有効です。  
   
 ## <a name="remarks"></a>コメント  
  **Start** コマンドを実行すると、指定したアドレスまで RunToCursor 操作が実行されます。  
@@ -45,7 +46,7 @@ Debug.Start [address]
 >Debug.Start  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   

@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7669d8ca915a32496399c526b112e877a8bce57c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: aspnet
+ms.openlocfilehash: 7c4a1e48d5e9bdbf28569656b580608a6c35034a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-aspnet-load-tests"></a>ASP.NET ロード テストのプロファイリング
 ASP.NET Web サイト プロジェクトに対して実行する自動 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] Web テストからプロファイル データを収集できます。 収集できるのは、サンプリング データと階層相互作用データです。 詳細については、次のトピックを参照してください。  
@@ -27,7 +28,7 @@ ASP.NET Web サイト プロジェクトに対して実行する自動 [!INCLUDE
   
  [Microsoft Visual Studio を使用したシステム テストの実行](/devops-test-docs/test/running-automated-tests-using-microsoft-visual-studio)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サンプリング データ値について](../profiling/understanding-sampling-data-values.md)   
  [パフォーマンス規則を使用したデータの分析](../profiling/using-performance-rules-to-analyze-data.md)   
  [サンプリング メソッドのデータ ビュー](../profiling/profiler-sampling-method-data-views.md)   

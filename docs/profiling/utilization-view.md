@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b57361df805fbeb374d01236af1d1a16d0a3365a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ee1168865d5827f4536b39b8b0822f1e1d67635e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="utilization-view"></a>使用状況ビュー
 **使用状況ビュー**には、現在のプロセスによって使用されている CPU、GPU、その他のシステム リソースに関する情報が表示されます。 このビューには、分析対象のプロセス、アイドル プロセス、システム プロセス、一定期間システム上で実行中のその他のプロセスによる平均コア使用状況が表示されます。 任意の時点でどのコアがアクティブなのかは表示されません。 たとえば、特定の期間、2 つのコアがそれぞれキャパシティの 50% で動作している場合、このビューには 1 つの論理コアが使用されているものとして表示されます。 このビューは、プロファイル時間を短い時間セグメントに分割して生成されます。 セグメントごとに、その期間中、論理コアで実行されているプロセス スレッドの平均数がグラフに示されます。  
@@ -49,6 +50,6 @@ ms.lasthandoff: 10/31/2017
 ## <a name="zooming"></a>ズーム  
  CPU 使用状況グラフまたは GPU アクティビティ グラフをズームするには、セクションを選択するか、グラフ上部のズーム スライダー ツールを使用します。 ズーム設定は、他のビューに切り替えてもそのままになります。 また縮小するには、ズーム スライダー ツールを使用します。 Ctrl キーを押しながらスクロールしてズームすることもできます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [同時実行ビジュアライザー](../profiling/concurrency-visualizer.md)   
  [コア ビュー](../profiling/cores-view.md)

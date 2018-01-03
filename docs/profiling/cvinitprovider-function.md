@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f0ddb249c825048b5bb98dd5b648902663ccd85a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 15abebb58382674bc7943d7949dfddbc62524c91
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cvinitprovider-function"></a>CvInitProvider 関数
 マーカー プロバイダーを初期化します。 他の同時実行ビジュアライザー SDK 関数の前に呼び出す必要があります。  
@@ -34,16 +35,16 @@ HRESULT CvInitProvider(
   
 #### <a name="parameters"></a>パラメーター  
  `pGuid`  
- プロバイダ GUID。 Null は指定できません。  
+ プロバイダ GUID。 Nll は指定できません。  
   
  `ppProvider`  
- プロバイダー コンテキストを格納する出力変数のアドレス。 Null は指定できません。  
+ プロバイダー コンテキストを格納する出力変数のアドレス。 Nll は指定できません。  
   
 ## <a name="return-value"></a>戻り値  
  プロバイダーが初期化されると S_OK を、エラーが発生した場合はエラー コードを返します。 SUCCEEDED/FAILED マクロを使用し、エラーの状態を確認します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** cvmarkers.h  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [C++ ライブラリ リファレンス](../profiling/cpp-library-reference.md)

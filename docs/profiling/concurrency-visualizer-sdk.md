@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: efe710a237ff9cde5d66a7e377f7a4b700a00705
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5eecc1d317f2391632cbe87df30a2ba2fd7c692c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="concurrency-visualizer-sdk"></a>同時実行ビジュアライザー SDK
 同時実行ビジュアライザー SDK を使用してソース コードをインストルメント化し、同時実行ビジュアライザーに追加情報を表示することができます。 コードでフェーズとイベントに追加データを関連付けることができます。 このような追加の視覚化機能のことを*マーカー*と呼びます。  入門用のチュートリアルについては、「[Introducing the Concurrency Visualizer SDK](http://go.microsoft.com/fwlink/?LinkId=235405)」 (同時実行ビジュアライザー SDK の概要) を参照してください。  

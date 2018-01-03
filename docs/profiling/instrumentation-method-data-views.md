@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 595297dbafb35ed8b3bb376ce5ddfee484ac2442
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: caf3c6168e81b7384fbf056f5365614950b24ff2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="instrumentation-method-data-views"></a>インストルメンテーション メソッドのデータ ビュー
 ここでは、インストルメンテーション メソッドを使用して生成されたプロファイラー データ ファイルのビューとレポートに関するリファレンス情報を示します。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/31/2017
  [呼び出し元/呼び出し先ビュー - インストルメンテーション データ](../profiling/caller-callee-view-instrumentation-data.md)  
  選択した関数の親関数と子関数のプロファイル データが表示されます。  
   
- [関数ビュー](../profiling/functions-view-instrumentation-data.md)  
+ [関数 ビュー](../profiling/functions-view-instrumentation-data.md)  
  プロファイル データが関数別に一覧表示されます。  
   
 ## <a name="reference"></a>参照  
@@ -57,5 +58,5 @@ ms.lasthandoff: 10/31/2017
  [リソース競合データのビュー](../profiling/resource-contention-data-views.md)  
  スレッド競合メソッドを使用して生成されたプロファイラー データ ファイルのビューとレポートに関するリファレンス情報。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インストルメンテーション データ値について](../profiling/understanding-instrumentation-data-values.md)

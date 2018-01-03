@@ -25,11 +25,12 @@ caps.latest.revision: "18"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 3299640b5db944c2e421a5b95df552ed36f80b77
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ffd317643b7ea1bfbf97bce6d533a76fd7bf1509
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cl-task"></a>CL タスク
 Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパイラは、実行可能ファイル (.exe)、ダイナミック リンク ライブラリ (.dll) ファイル、またはコード モジュール (.netmodule) ファイルを生成します。 詳細については、「[コンパイラ オプション](/cpp/build/reference/compiler-options)」を参照してください。  
@@ -803,5 +804,5 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)

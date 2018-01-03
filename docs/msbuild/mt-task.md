@@ -28,11 +28,12 @@ caps.latest.revision: "6"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 2b0c421ca3d1e56c22cab7ff066d17d59914961c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9a2da1c3012b65f71b63b61d2bc0415dbebd8b9e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mt-task"></a>MT タスク
 Microsoft マニフェスト ツール mt.exe をラップします。 詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「Mt.exe」 (Mt.exe) を参照してください。  
@@ -56,7 +57,7 @@ Microsoft マニフェスト ツール mt.exe をラップします。 詳細に
 |**GenerateCategoryTags**|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合は、カテゴリ タグが生成されます。 このパラメーターが `true` の場合は、**ManifestFromManagedAssemblyMT** タスク パラメーターも指定する必要があります。<br /><br /> 詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「Mt.exe」 (Mt.exe) の **/category** オプションを参照してください。|  
 |**InputResourceManifests**|省略可能な **String** 型のパラメーターです。<br /><br /> 識別子が指定されている RT_MANIFEST 型のリソースからマニュフェストを入力します。 *\<file>[***;***[***#***]<resource_id>]* という形式のリソースを指定します。省略可能な `resource_id` パラメーターは負以外の 16 ビットの数値です。<br /><br /> `resource_id` が指定されていない場合、CREATEPROCESS_MANIFEST_RESOURCE の既定値 (1) が使用されます。<br /><br /> 詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「Mt.exe」 (Mt.exe) の **/inputresource** オプションを参照してください。|  
 |**ManifestFromManagedAssembly**|省略可能な **String** 型のパラメーターです。<br /><br /> 指定されたマネージ アセンブリからマニフェストを生成します。<br /><br /> 詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「Mt.exe」 (Mt.exe) の **/managedassemblyname** オプションを参照してください。|  
-|**ManifestToIgnore**|省略可能な **String** 型のパラメーターです <br /><br /> (使用されていません)。|  
+|**ManifestToIgnore**|省略可能な **String** 型のパラメーターです。<br /><br /> (使用されていません)。|  
 |**OutputManifestFile**|省略可能な **String** 型のパラメーターです。<br /><br /> 出力マニュフェストの名前を指定します。 このパラメーターを省略し、操作対象のマニフェストが 1 つだけの場合、そのマニフェストがそのまま変更されます。<br /><br /> 詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「Mt.exe」 (Mt.exe) の **/out** オプションを参照してください。|  
 |**OutputResourceManifests**|省略可能な **String** 型のパラメーターです。<br /><br /> 識別子が指定されている RT_MANIFEST 型のリソースにマニュフェストを出力します。 リソースは *\<file>[***;***[***#***]<resource_id>]* という形式になります。省略可能な `resource_id` パラメーターは負以外の 16 ビットの数値です。<br /><br /> `resource_id` が指定されていない場合、CREATEPROCESS_MANIFEST_RESOURCE の既定値 (1) が使用されます。<br /><br /> 詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「Mt.exe」 (Mt.exe) の **/outputresource** オプションを参照してください。|  
 |**RegistrarScriptFile**|省略可能な **String** 型のパラメーターです。<br /><br /> registration-free COM マニフェスト サポートに対して使用されるレジスタ スクリプト (.rgs) ファイルの名前を指定します。<br /><br /> 詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「Mt.exe」 (Mt.exe) の **/rgs** オプションを参照してください。|  
@@ -73,5 +74,5 @@ Microsoft マニフェスト ツール mt.exe をラップします。 詳細に
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)

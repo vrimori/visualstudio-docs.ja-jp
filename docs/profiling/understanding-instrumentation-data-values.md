@@ -15,18 +15,19 @@ caps.latest.revision: "29"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b7f0fc8530e45831132f3ec3f357ff0113fa4abe
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e1addb93dfe5c4c39bb29507aa39eba66131f888
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-instrumentation-data-values"></a>インストルメンテーション データ値について
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の*インストルメンテーション* プロファイル メソッドは、プロファイリングされたアプリケーションの関数呼び出し、行、命令についての詳しいタイミング情報を記録します  
   
- **Requirements**  
+ **必要条件**  
   
--   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、[!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、[!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
+-   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
  インストルメンテーション メソッドは、プロファイリングされたバイナリの、その関数から他の関数に対する各呼び出しの前後の対象の関数の開始時と終了時にコードを挿入します。 挿入されたコードは次のものを記録します。  
   
@@ -34,9 +35,9 @@ ms.lasthandoff: 10/31/2017
   
 -   オペレーティング システムがその間に操作を実行したかどうか。 たとえば、オペレーティング システムはディスクに対して読み取りまたは書き込みを行うこともありますし、対象のスレッドと別のプロセスの別のスレッドとの間の切り替えを行うこともあります。  
   
- **Requirements**  
+ **必要条件**  
   
--   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、[!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、[!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
+-   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
  各間隔について、プロファイラー解析は間隔の最後に存在していた呼び出し履歴を再構築します。 呼び出し履歴とは、ある時点でプロセッサ上でアクティブになっている関数のリストです。 1 つの関数 (現在の関数) だけがコードを実行しており、それ以外の関数は、現在の関数の呼び出しに至る一連の関数呼び出し (呼び出し履歴) です。  
   
@@ -98,6 +99,6 @@ ms.lasthandoff: 10/31/2017
   
  100 * 関数アプリケーション排他 / セッション アプリケーション包括  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス ツール データを分析する](../profiling/analyzing-performance-tools-data.md)   
  [方法: 収集方法を選択する](../profiling/how-to-choose-collection-methods.md)

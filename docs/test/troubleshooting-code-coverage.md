@@ -11,11 +11,12 @@ ms.assetid: 26de91b8-45e3-4976-a20e-a3bd1942ddcb
 caps.latest.revision: "11"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: c3e5410769ba10a905c8116677ae5d03d0df656e
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 1612856fa4c098b5b7ff081020a84324bd5f8c4f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-code-coverage"></a>トラブルシューティング コード カバレッジ
 Visual Studio のコード カバレッジ分析ツールは、ネイティブ アセンブリとマネージ アセンブリのデータを収集します (.dll または .exe ファイル)。 しかし、[コード カバレッジの結果] ウィンドウに "空の結果が生成されました: ...." のようなエラーが表示される場合があります。このエラーが発生する原因はいくつかあります。 このトピックは、これらの問題を解決することを目的にしています。  
@@ -39,7 +40,7 @@ Visual Studio のコード カバレッジ分析ツールは、ネイティブ �
  説明  
  コード カバレッジ分析は、テストの実行中に行われます。 分析には、テストの実行時にメモリに読み込まれるアセンブリだけが含まれます。 テストが実行されない場合、コード カバレッジで報告される結果はありません。  
   
- 解決策  
+ 解像度  
  テスト エクスプローラーで、**[すべて実行]** を選択してテストが正常に実行されることを確認します。 **[コード カバレッジの分析]** を使用する前にエラーを修正します。  
   
 ### <a name="youre-looking-at-a-previous-result"></a>前の結果が表示されている  
@@ -92,7 +93,7 @@ Visual Studio のコード カバレッジ分析ツールは、ネイティブ �
  説明  
  パフォーマンス上の理由から、ネイティブ イメージ アセンブリは分析されません。 詳細については、「[Ngen.exe (ネイティブ イメージ ジェネレーター)](/dotnet/framework/tools/ngen-exe-native-image-generator)」を参照してください。  
   
- 解決策  
+ 解像度  
  MSIL バージョンのアセンブリを使用します。 アセンブリを NGen で操作しません。  
   
 ### <a name="custom-runsettings-file-with-bad-syntax"></a>カスタム .runsettings ファイルに無効な構文が含まれている  
@@ -104,7 +105,7 @@ Visual Studio のコード カバレッジ分析ツールは、ネイティブ �
  説明  
  カスタム .runsettings ファイルで単体テストを実行して、コード カバレッジのオプションを構成することができます。 オプションで、ファイルを含めるか、除外するかを指定できます。 詳細については、「[コード カバレッジ分析のカスタマイズ](../test/customizing-code-coverage-analysis.md)」を参照してください。  
   
- 解決策  
+ 解像度  
  エラーには次の 2 種類があります。  
   
 -   **XML エラー**  
@@ -126,7 +127,7 @@ Visual Studio のコード カバレッジ分析ツールは、ネイティブ �
  説明  
  カスタム .runsettings ファイルで単体テストを実行して、コード カバレッジのオプションを構成することができます。 オプションで、ファイルを含めるか、除外するかを指定できます。 詳細については、「[コード カバレッジ分析のカスタマイズ](../test/customizing-code-coverage-analysis.md)」を参照してください。  
   
- 解決策  
+ 解像度  
  .runsettings ファイルからすべての `Include` ノードを削除し、すべての `Exclude` ノードを削除します。 これで問題が解決する場合は、各ノードを段階的に元に戻します。  
   
  DataCollectors ノードがコード カバレッジを指定していることを確認します。 「[コード カバレッジ分析のカスタマイズ](../test/customizing-code-coverage-analysis.md)」の例と比較します。  
@@ -145,5 +146,5 @@ Visual Studio のコード カバレッジ分析ツールは、ネイティブ �
  解像度  
  なし。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)

@@ -16,18 +16,19 @@ caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e6fc3be33c332d643e5feb48f4a3733395c2a608
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3ab16dca3d4d27c157620f59774ec37f57aae020
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-explorer-window"></a>[パフォーマンス エクスプローラー] ウィンドウ
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 統合開発環境 (IDE) の **[パフォーマンス エクスプローラー]** ウィンドウでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のプロファイリング ツールを使用してパフォーマンス セッションを構成および開始することができます。  
   
- **Requirements**  
+ **必要条件**  
   
--   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、[!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、[!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
+-   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
 ## <a name="performance-explorer-toolbar"></a>パフォーマンス エクスプローラーのツール バー  
  **パフォーマンス エクスプローラー**のツール バーでは以下のオプションを使用できます。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/31/2017
   
 -   **レポート** - セッションに対して生成されるプロファイラー データ ファイルの名前を表示します。 **[レポート]** を右クリックし、既存のレポートの追加、または 2 つのプロファイラー データ ファイルの比較を行います。 レポート名を右クリックし、プロファイラー データ ファイルを開くか、削除するか、エクスポートします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [概要](../profiling/overviews-performance-tools.md)   
  [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)   
- [データ収集の制御](../profiling/controlling-data-collection.md)
+ [データ コレクションの制御](../profiling/controlling-data-collection.md)

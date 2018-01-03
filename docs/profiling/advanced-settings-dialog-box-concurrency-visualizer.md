@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 412253e6b182488179e7b3eaa4098ff026d66cfb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 44087bc1626ddde5b2e3339a874d16ec4af16b4d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>[詳細設定] ダイアログ ボックス (同時実行ビジュアライザー)
 同時実行ビジュアライザーの **[詳細設定]** ダイアログ ボックスを使うと、トレースを収集する方法を制御できます。  このダイアログ ボックスには、シンボル、マイ コードのみ、バッファリング、フィルター処理、CLR イベント、マーカー、プロバイダー、およびファイルに関するタブがあります。  
@@ -85,6 +86,6 @@ ms.lasthandoff: 10/31/2017
   
  2 つの ETL ファイルには生のトレース データが保存され、2 つの同時実行ビジュアライザー ファイルには処理されたデータが保存されます。  生の ETL ファイルは通常、トレースが処理された後は使われません。  **[分析後にイベント トレース ログ (ETL) ファイルを削除]** チェック ボックスをオンにすると、ディスクに保存されるトレース データの量が減ります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マイ コードのみ](../profiling/just-my-code-threads-view.md)   
  [同時実行ビジュアライザー マーカー](../profiling/concurrency-visualizer-markers.md)

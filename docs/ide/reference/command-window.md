@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 112264b0bbe5e752a7f56004e767f26b527a6f6a
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: b3b1de69c905757c8d28922cd09eadd5abf7d05e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="command-window"></a>コマンド ウィンドウ
 **[コマンド]** ウィンドウは、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の統合開発環境 (IDE) でコマンドやエイリアスを実行するときに使用します。 メニュー コマンドと、メニューに表示されないコマンドの両方を実行できます。 **[コマンド]** ウィンドウを表示するには、**[表示]** メニューの **[その他のウィンドウ]** を選択し、**[コマンド ウィンドウ]** をクリックします。  
@@ -100,7 +101,7 @@ Edit.ReplaceInFiles /case /pattern:regex var[1-3]+ oldpar
 複数の短い形式のスイッチがグループ化され、値が指定された場合、その値はすべてのスイッチに適用されます。 たとえば、`/pgm:123` は `/p:123 /g:123 /m:123` と同等です。 グループ内のいずれかのスイッチが値を受け付けない場合は、エラーになります。  
   
 ## <a name="escape-characters"></a>エスケープ文字  
- コマンド ラインにカレット (^) 文字があると、その直後の文字は制御文字としてではなくリテラル文字として解釈されます。 したがって、引用符 (")、スペース、先頭のスラッシュ、カレット、その他の任意のリテラル文字をパラメーターまたはスイッチの値に直接埋め込むことができます。ただし、スイッチ名には埋め込むことができません。 次に例を示します。  
+ コマンド ラインにカレット (^) 文字があると、その直後の文字は制御文字としてではなくリテラル文字として解釈されます。 したがって、引用符 (")、スペース、先頭のスラッシュ、カレット、その他の任意のリテラル文字をパラメーターまたはスイッチの値に直接埋め込むことができます。ただし、スイッチ名には埋め込むことができません。 たとえば、オブジェクトに適用された  
   
 ```  
 >Edit.Find ^^t /regex  
@@ -111,6 +112,6 @@ Edit.ReplaceInFiles /case /pattern:regex var[1-3]+ oldpar
 ## <a name="use-quotes-for-path-names-with-spaces"></a>スペースを含むパス名には引用符を使用する  
  たとえば、スペースを含むパスを持つファイルを開く場合は、スペースを含むパスまたはパス セグメントを二重引用符で囲む必要があります (**C:\\"Program Files"** または **"C:\Program Files"**)。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)   
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)

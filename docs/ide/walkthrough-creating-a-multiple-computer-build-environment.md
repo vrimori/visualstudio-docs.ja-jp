@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9666f4f26476544baa6afc5dad17798b4e8360d1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9db6306126c64b0f2d5243ce443659f910be299c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-multiple-computer-build-environment"></a>チュートリアル: 複数のコンピューターを使用するビルド環境の作成
 
@@ -289,8 +290,8 @@ ms.lasthandoff: 10/31/2017
     |vcvarsall.bat 引数|コンパイラ|ビルド コンピューターのアーキテクチャ|ビルド出力のアーキテクチャ|  
     |----------------------------|--------------|---------------------------------|-------------------------------|  
     |x86 (既定)|32 ビット ネイティブ|x86、x64|x86|  
-    |x86_amd64|x64 クロス|x86、x64|x64|  
-    |amd64|x64 ネイティブ|x64|x64|  
+    |x86_amd64|x64 クロス|x86、x64|X64|  
+    |amd64|x64 ネイティブ|X64|X64|  
   
      vcvarsall.bat が正常に実行された (エラー メッセージが表示されない) 場合は、次の手順をスキップして、このドキュメントの「[ビルド コンピューターのグローバル アセンブリ キャッシュ (GAC) に MSBuild アセンブリをインストールする](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#InstallingMSBuildToGAC)」に進むことができます。  
   
@@ -423,6 +424,6 @@ ms.lasthandoff: 10/31/2017
   
          ネイティブ 64 ビットのビルドの場合は、64 ビットの MSBuild が指定されるように調整します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッグ バージョンのアプリケーションを実行するテスト用コンピューターの準備](/cpp/ide/preparing-a-test-machine-to-run-a-debug-executable)   
  [Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)

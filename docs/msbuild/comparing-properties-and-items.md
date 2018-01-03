@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: f1a0f6df56cebe769ec514abea49ade0083c512e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6210f6e96c4e0b1330ee83a3f0f19ae58849dfce
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparing-properties-and-items"></a>プロパティと項目の比較
 MSBuild のプロパティと項目は、いずれもタスクに情報を渡し、条件を評価し、プロジェクト ファイルで参照する値を格納しておくために使用されます。  
@@ -42,7 +43,7 @@ MSBuild のプロパティと項目は、いずれもタスクに情報を渡し
 </PropertyGroup>  
 ```  
   
- 通常、`BuildDependsOn` プロパティは、ターゲットの `DependsOnTargets` 属性の引数として使用され、項目一覧に変換されます。 このプロパティを上書きして、ターゲットを追加したり、ターゲットの実行順を変更したりすることができます。 次に例を示します。  
+ 通常、`BuildDependsOn` プロパティは、ターゲットの `DependsOnTargets` 属性の引数として使用され、項目一覧に変換されます。 このプロパティを上書きして、ターゲットを追加したり、ターゲットの実行順を変更したりすることができます。 たとえば、オブジェクトに適用された  
   
 ```xml  
 <PropertyGroup>  
@@ -180,5 +181,5 @@ KeyFileVersion:
 KeyFileVersion: 1.0.0.3  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [詳細な概念](../msbuild/msbuild-advanced-concepts.md)

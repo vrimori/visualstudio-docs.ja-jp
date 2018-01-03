@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 15928f639465f6d8abbaa3735fee40e59ae5045c
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: 4e2cfe9faba79f955146bf929c4c8c1238d14fb0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controlling-where-r-code-runs-with-workspaces"></a>ワークスペースで R コードが実行する場所を制御する
 
@@ -28,7 +29,7 @@ R Tools for Visual Studio (RTVS) のワークスペースを使用すると、R 
 
 このウィンドウの緑のチェックマークは、RTVS がバインドされているアクティブなワークスペースを示します。 青い矢印を選ぶと、アクティブなワークスペースが設定されます。 各ワークスペースの右側にある設定 (歯車) アイコンを使うと、名前、場所、およびコマンド ライン引数を変更できます。 赤い [X] は、手動で追加したワークスペースを削除します。
 
-このトピックの内容
+このトピックの内容:
 
 - [ワークスペースの保存とリセット](#saving-and-resetting-a-workspace)
 - [ローカル ワークスペース](#local-workspaces)

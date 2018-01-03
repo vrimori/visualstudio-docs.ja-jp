@@ -15,18 +15,19 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d2df71ef2498e3e5cf1f1bfef1dd16867d3e8991
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: eade1af6d21d4068d96f021d43f60c0ca38bb33c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-memory-allocation-and-object-lifetime-data-values"></a>メモリの割り当ておよびオブジェクトの有効期間のデータ値について
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールの  *.NET メモリ割り当て*のプロファイル方法は、イベントが発生したときの割り当てで作成されたオブジェクトやガベージ コレクションで破棄されたオブジェクトのサイズと数に関する情報と、関数の*呼び出し履歴*に関する追加情報を収集します。 *呼び出し履歴*は、プロセッサ上で実行されている関数に関する情報を格納する動的な構造です。  
   
- **Requirements**  
+ **必要条件**  
   
--   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、[!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、[!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
+-   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
  メモリ プロファイラーは、プロファイリングされたアプリケーションで .NET Framework オブジェクトの割り当てが行われるたびに、コンピューター プロセッサに対して割り込みを行います。 オブジェクトの有効期間データも収集する場合は、.NET Framework のガベージ コレクションの実行後に、毎回プロファイラーがコンピューター プロセッサに対して割り込みを行います。 データは、プロファイル対象の関数、およびオブジェクトの種類ごとに集計されます。  
   

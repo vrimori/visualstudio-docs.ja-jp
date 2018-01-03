@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 815f93d50258dac2018a75f7b95d05378bdc77e9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 77754f0243c8223dd55ba253fdde1e0b6a8aee57
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-and-apply-a-resource"></a>リソースを作成して適用する方法
 XAML デザイナーで、要素のスタイルとテンプレートは "リソース" という再利用可能なエンティティに保存されます。 スタイルを使用すると、要素のプロパティを設定し、それらの設定を複数の要素で再利用することにより、一貫した外観を維持できます。 [ControlTemplate](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) は、コントロールの外観を定義し、リソースとしての適用も可能です。 詳細については、「[クイック スタート: コントロールのスタイル](http://go.microsoft.com/fwlink/?LinkID=248239)」および「[クイック スタート: コントロール テンプレート](http://go.microsoft.com/fwlink/?LinkID=247982)」を参照してください。  
@@ -75,5 +76,5 @@ XAML デザイナーで、要素のスタイルとテンプレートは "リソ�
   
 3.  リソースのオプションを変更します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XAML デザイナーを使用した UI の作成](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)

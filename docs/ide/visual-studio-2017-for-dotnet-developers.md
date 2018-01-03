@@ -8,11 +8,12 @@ ms.technology: vs-ide-general
 ms.date: 11/08/2017
 ms.topic: article
 helpviewer_keywords: editor
-ms.openlocfilehash: 6650faa7ed519c6237b459ac4278b6e90d7a5bc6
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: dotnet
+ms.openlocfilehash: ed3eacba3611b010c95f650bd24e412d99fdde5d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-2017-for-net-developers"></a>.NET 開発者向けの Visual Studio 2017
 

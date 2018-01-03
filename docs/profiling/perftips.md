@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 38f344baa9fd1f5b2ab139db496e7860d3f33bb3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cfcb4fdf488233a2be7ea55b57d041641f2ea882
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="perftips"></a>パフォーマンスのヒント
 Visual Studio デバッガーの *PerfTips* 、および統合デバッガー **診断ツール** は、デバッグ中のアプリのパフォーマンス監視と分析に役立ちます。  
@@ -57,6 +58,6 @@ Visual Studio デバッガーの *PerfTips* 、および統合デバッガー **
   
 2.  **[デバッグ中に診断ツールを有効にする]**チェック ボックスをオンまたはオフにします。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
  [Visual Studio のプロファイル](../profiling/index.md)  
  [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)

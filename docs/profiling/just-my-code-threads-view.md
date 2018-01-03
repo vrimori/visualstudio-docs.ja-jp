@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c9cc9eea737f11c8ec28e33414f40a981848e123
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9993e31b29e25b95d475d15bd8c1190d1ffae6c3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="just-my-code-threads-view"></a>[マイ コードのみ]\(スレッド ビュー)
 このオプションを選択すると、呼び出し履歴がフィルター処理され、自分のコードに加え、呼び出された関数が 1 レベルだけ表示されます。  
@@ -27,6 +28,6 @@ ms.lasthandoff: 10/31/2017
   
  このオプションを選択すると、ブロック呼び出しがフィルターで除外されることがあります。 決定に詳細な呼び出し履歴が必要になる場合、このオプションの選択を解除し、呼び出し履歴をすべて公開してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [スレッド ビュー](../profiling/threads-view-parallel-performance.md)   
  [不要項目の非表示の割合](../profiling/noise-reduction-percentage.md)

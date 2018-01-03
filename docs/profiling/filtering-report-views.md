@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c5aaff542f654928a7ed56313232a6e6ead67f9d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b4e82450286d5da47a11217401ebbc17133530b5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filtering-report-views"></a>レポート ビューのフィルター処理
 フィルターをプロファイル データ ファイルに適用すると、パフォーマンス レポート ビューに表示する、またはレポート ファイルにエクスポートするプロファイル データを制限することができます。 レポートはタイム スタンプ値の間のデータに制限でき、データは特定のプロセスおよびスレッドに制限できます。 フィルターをファイルに保存し、保存したフィルターをインポートすることで、別のプロファイル データ ファイルにフィルターを作成できます。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/31/2017
     |**And/Or**|この句と次の句の両方が成り立つものを結果として返す場合は、**[And]** を選択します。 この句と次の句のいずれかが成り立つものを結果として返す場合は、**[Or]** を選択します。|  
     |**フィールド**|フィルター句で使用するレポート フィールドを、表示されるデータ フィールドのリストから選択します。|  
     |**Operator**|フィールドと値の関係を示す演算子として、句に含める演算子を選択します。<br /><br /> =    等しい<br /><br /> <>  等しくない<br /><br /> <    より小<br /><br /> >    より大<br /><br /> <=  以下<br /><br /> >=  以上|  
-    |**値**|検索する値を選択または入力します。 フィールドによっては使用可能な値がリスト表示されます。|  
+    |**[値]**|検索する値を選択または入力します。 フィールドによっては使用可能な値がリスト表示されます。|  
   
 3.  
   
@@ -93,5 +94,5 @@ ms.lasthandoff: 10/31/2017
   
 2.  保存するフィルター (.vspf) ファイルの場所と名前を指定します。  
   
-## <a name="see-also"></a>関連項目  
- [パフォーマンス ツールのレポート ビューのカスタマイズ](../profiling/customizing-performance-tools-report-views.md)
+## <a name="see-also"></a>参照  
+ [パフォーマンス ツール のレポート ビューのカスタマイズ](../profiling/customizing-performance-tools-report-views.md)

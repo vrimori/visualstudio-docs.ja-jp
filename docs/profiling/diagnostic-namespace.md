@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 76d86738f53e0d6dc60289d1e3f395794f8482ae
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3fb9b831562e2d9e4ce7d686f49ac484d58f6804
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnostic-namespace"></a>diagnostic 名前空間
 `diagnostics` 名前空間は、同時実行ビジュアライザー マーカーを出力するための機能を提供します。  
@@ -33,21 +34,21 @@ namespace diagnostic;
   
 ### <a name="classes"></a>クラス  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[marker_series クラス](../profiling/marker-series-class.md)|1 つのプロバイダーによって生成されたイベントのシリアル チャネルを表します。|  
 |[span クラス](../profiling/span-class.md)|アプリケーションのフェーズを定義します。|  
   
 ### <a name="enumerations"></a>列挙  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[marker_importance 列挙型](../profiling/marker-importance-enumeration.md)|同時実行ビジュアライザー マーカーの重要度レベルを表します。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** cvmarkersobj.h  
   
  **名前空間:** Concurrency  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Concurrency 名前空間 (同時実行ビジュアライザー)](../profiling/concurrency-namespace-concurrency-visualizer.md)

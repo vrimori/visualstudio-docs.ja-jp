@@ -18,11 +18,12 @@ caps.latest.revision: "63"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d195aa1f16d7883c2d4152286018cf3e8abc74dc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 1906e55add4dfb4663e3c7da5e84d7538409db17
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>チュートリアル: 使用法から生成機能のテスト ファースト開発
 このトピックでは、テスト ファースト開発をサポートする[使用法から生成](../ide/visual-csharp-intellisense.md#generate-from-usage)機能の使用方法について説明します。  
@@ -159,7 +160,7 @@ ms.lasthandoff: 10/31/2017
   
      ![合格したテストの結果](../ide/media/testspassed.png "TestsPassed")
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [使用法から生成](../ide/visual-csharp-intellisense.md#generate-from-usage)   
  [コードの作成](../ide/writing-code-in-the-code-and-text-editor.md)   
  [IntelliSense の使用](../ide/using-intellisense.md)   

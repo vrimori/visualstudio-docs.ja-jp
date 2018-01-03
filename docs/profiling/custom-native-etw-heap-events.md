@@ -13,11 +13,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 dev_langs: C++
-ms.openlocfilehash: 10d4ab630132d8ce4191978de669436ca7ba5852
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: cplusplus
+ms.openlocfilehash: 360efc2b185e6485b2bb08d5d8d0b09a128099d0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-native-etw-heap-events"></a>カスタム ネイティブ ETW ヒープ イベント
 
@@ -157,6 +158,6 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
 > [!TIP]
 > Visual Studio の**パフォーマンス プロファイリング** ツールセットにも**メモリ使用量**ツールがあります。**[デバッグ]、[パフォーマンス プロファイラー]** の順に選択するか、キーボード ショートカットの **Alt + F2** を押してください。  この機能にはヒープ追跡がありません。ここの説明のようにカスタム ヒープが表示されることはありません。  この機能があるのは **[診断ツール]** ウィンドウだけです。**[デバッグ]、[Windows]、[診断ツールの表示]** の順に選択するか、キーボード ショートカットの **Ctrl+Alt+F2** を押してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [プロファイリング ツール](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)  
 [メモリ使用量](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage)

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 51b579d047987648caab31136b6378e0a6f0475d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: xplat-cplusplus
+ms.openlocfilehash: 699fc53d0679e303e9c661c54634f162d95e2a2c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-c-for-cross-platform-mobile-development"></a>Visual C++ for Cross-Platform Mobile Development
 Visual C++ for Cross-Platform Mobile Development を使用することによって、iOS、Android、および Windows デバイス対応のネイティブ C++ アプリをビルドし、iOS、Android、および Windows 用に作成されたライブラリ内で共通コードを共有できます。 これは、Visual Studio 2015 で使用できるオプションです。このオプションを選択すると、共有ライブラリとネイティブ アプリのクロスプラットフォーム開発に必要な SDK とツールがインストールされます。 インストールされている場合、Windows、Windows Phone、および Xbox に加え、iOS と Android のデバイスおよびプラットフォームで実行されるコードを、Visual C++ を使用して作成できます。  
@@ -103,6 +104,6 @@ Visual C++ for Cross-Platform Mobile Development を使用することによっ�
   
 3.  [Android Native Activity アプリの作成](../cross-platform/create-an-android-native-activity-app.md)  
   
-4.  [Android および iOS での OpenGL ES アプリケーションのビルド](../cross-platform/build-an-opengl-es-application-on-android-and-ios.md)  
+4.  [Build an OpenGL ES Application on Android and iOS](../cross-platform/build-an-opengl-es-application-on-android-and-ios.md)  
   
 5.  [Cross-Platform Mobile Development Examples](../cross-platform/cross-platform-mobile-development-examples.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ba6bb51d32ea249ba573733babcb7c9ed0cf0dde
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9d53460304cee56d39100a82a2e1e975f8129aa6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="options-page-debugging-node-properties"></a>[デバッグ] ノード プロパティ ([オプション] ページ)
 次の表では、**[オプション]** ダイアログ ボックスの **[デバッグ]** カテゴリ (`DTE.Properties("Debugging", <Property Page>)`) に関連付けられているページ (またはプロパティ コレクション) について説明します。  
@@ -24,7 +25,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="general"></a>全般  
  `DTE.Properties("Debugging", "General")`  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |PromptOnBreakpointDelete|Get/Set (Boolean)|デバッガーでプロジェクト内のすべてのブレークポイントを削除する前に確認を求めるかどうかを指定します。|  
 |BreakAllProcesses|Get/Set (Boolean)|単一のプロセスが中断するたびに、デバッガーですべてのプロセスを中断するかどうかを指定します。|  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="edit-and-continue"></a>エディット コンティニュ  
  `DTE.Properties("Debugging", "EditAndContinue")`  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |EnableEditAndContinue|Get/Set (Boolean)|エディット コンティニュを有効にするかどうかを指定します。 このオプションは、エディット コンティニュをサポートするすべての言語に適用されます。|  
 |InvokedByCommands|Get/Set (Boolean)|ユーザーが **[ステップ]** や **[続行]** などのデバッグ コマンドを選択したときに、エディット コンティニュでコード変更を自動的に適用するかどうかを指定します。 このオプションは、ネイティブ コードにのみ適用されます。|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="just-in-time"></a>Just-In-Time  
  `DTE.Properties("Debugging", "JustInTime")`  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |JitManaged|Get/Set (Boolean)|Just-In-Time デバッグをマネージ コード用に有効にするかどうかを指定します。|  
 |JitNative|Get/Set (Boolean)|Just-In-Time デバッグをネイティブ コード用に有効にするかどうかを指定します。|  
@@ -75,12 +76,12 @@ ms.lasthandoff: 10/31/2017
 ## <a name="native"></a>ネイティブ  
  `DTE.Properties("Debugging", "Native")`  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |LoadDllExports|Get/Set (Boolean)|デバッガーで DLL エクスポート テーブルを読み込むかどうかを指定します。|  
 |EnableRPC|Get/Set (Boolean)|デバッガーが COM リモート プロシージャ呼び出しにステップ インできるかどうかを指定します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [オプション設定の制御](http://msdn.microsoft.com/Library/a09ed242-7494-4cde-bbd1-7a8ec617965d)   
  [オプション ページにあるプロパティ項目名の確認](http://msdn.microsoft.com/Library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)   
  [[フォントおよび色] ノード プロパティ ([オプション] ページ)](../../ide/reference/options-page-fonts-and-colors-node-properties.md)   

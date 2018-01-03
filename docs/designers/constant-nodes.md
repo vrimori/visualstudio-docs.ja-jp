@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a47eb4e129ac90e8a397c936922a8cc3aeb80277
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 1edbe90bf9f1002392374a17b8dd85270ec2fef5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constant-nodes"></a>定数ノード
 シェーダー デザイナーにおいて、定数ノードは、ピクセル シェーダー計算でのリテラル値および補間された頂点属性を表します。 頂点属性は補間され、したがってピクセルごとに異なるので、各ピクセル シェーダー インスタンスは異なるバージョンの定数を受け取ります。 これにより、各ピクセルに固有の外観が与えられます。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="constant-node-reference"></a>定数ノード リファレンス  
   
-|ノード|詳細|プロパティ|  
+|ノード|説明|プロパティ|  
 |----------|-------------|----------------|  
 |**カメラ ベクター**|現在のピクセルからワールド空間のカメラに向かうベクター。<br /><br /> これを使って、ワールド空間内の反射を計算できます。<br /><br /> **出力**<br /><br /> `Output`: `float3`<br /> 現在のピクセルからカメラまでのベクター。|なし|  
 |**カラー定数**|定数のカラー値。<br /><br /> **出力**<br /><br /> `Output`: `float4`<br /> カラー値です。|**出力**<br /> カラー値です。|  

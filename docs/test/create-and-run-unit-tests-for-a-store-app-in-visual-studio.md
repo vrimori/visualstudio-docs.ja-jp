@@ -12,11 +12,12 @@ ms.assetid: d3de7b31-0262-4373-ba84-e74eda7651e4
 caps.latest.revision: "26"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 5a6a1a314e837b441e2fc563baabf935659adcf8
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: uwp
+ms.openlocfilehash: f5f61b5c2c0fc5f252ed331e58137f970f6705df
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-and-run-unit-tests-for-a-uwp-app-in-visual-studio"></a>Visual Studio での UWP アプリの単体テストの作成および実行
 Visual Studio 単体テスト ツールは、ソフトウェア開発作業に単体テストを導入した開発者や開発チームをサポートするように設計されています。 単体テストは、Visual C#、Visual Basic、Visual C++ プロジェクトにおいて、クラスのメソッドの論理エラーを発見するための効率的で維持できる方法を開発者とテスト担当者に提供します。  

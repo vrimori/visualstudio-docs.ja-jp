@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ae04c23a986107125edc9be149d6317a05c5b58a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e6780ffc846d3710b78bbfa994ca3e73d14209e0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="list-memory-command"></a>ListMemory コマンド
 指定範囲のメモリの内容を表示します。  
@@ -35,20 +36,20 @@ Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]
   
 ## <a name="arguments"></a>引数  
  `expression`  
- 省略可能です。 メモリの表示を開始するメモリ アドレス。  
+ 任意。 メモリの表示を開始するメモリ アドレス。  
   
 ## <a name="switches"></a>スイッチ  
  /ANSI&#124;Unicode  
- 省略可能です。 メモリを、メモリ バイトに対応する ANSI 文字または Unicode 文字として表示します。  
+ 任意。 メモリを、メモリ バイトに対応する ANSI 文字または Unicode 文字として表示します。  
   
  /Count:`number`  
- 省略可能です。 表示するメモリを `expression` からのバイト数で指定します。  
+ 任意。 表示するメモリを `expression` からのバイト数で指定します。  
   
  /Format:`formattype`  
- 省略可能です。 **[メモリ]** ウィンドウにメモリ情報を表示する場合の形式の種類は、OneByte、TwoBytes、FourBytes、EightBytes、Float (32 ビット)、または Double (64 ビット) を指定できます。 OneByte を使用する場合、`/Unicode` は使用できません。  
+ 任意。 **[メモリ]** ウィンドウにメモリ情報を表示する場合の形式の種類は、OneByte、TwoBytes、FourBytes、EightBytes、Float (32 ビット)、または Double (64 ビット) を指定できます。 OneByte を使用する場合、`/Unicode` は使用できません。  
   
  /Hex&#124;Signed&#124;Unsigned  
- 省略可能です。 数字の表示形式を、符号付き、符号なし、または 16 進数のいずれかに指定します。  
+ 任意。 数字の表示形式を、符号付き、符号なし、または 16 進数のいずれかに指定します。  
   
 ## <a name="remarks"></a>コメント  
  すべてのスイッチを指定して完全な **Debug.ListMemory** コマンドを記述する代わりに、特定のスイッチが指定された値に事前に設定された定義済みのエイリアスを使用してコマンドを起動することもできます。 以下に例を示します。  
@@ -82,7 +83,7 @@ Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]
 >Debug.ListMemory /Format:float /Count:30 /Unicode  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ListCallStack コマンド](../../ide/reference/list-call-stack-command.md)   
  [スレッドの一覧表示コマンド](../../ide/reference/list-threads-command.md)   
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   

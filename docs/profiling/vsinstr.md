@@ -21,11 +21,12 @@ caps.latest.revision: "44"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f97ce4480ebdf04cce6a129d7c1950ac28df2aaf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b0120e93e809d1d0f57b5b7dc993a982b1c78836
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vsinstr"></a>VSInstr
 VSInstr ツールは、バイナリをインストルメント化するために使用します。 VSInstr ツールは、次の構文を使用して起動します。  
@@ -58,7 +59,7 @@ VSInstr [/U] filename [/options]
 |**SuspendOnly:**{**Before**`&#124;`**After**`&#124;`**Top**`&#124;`**Bottom**}`,funcname`|プロファイリング実行中にデータ収集を停止します。 このオプションは、SuspendProfile API を指定の位置に挿入します。<br /><br /> **Before** - 対象の関数に入る直前。<br /><br /> **After** - 対象の関数が終了した直後。<br /><br /> **Top** - 対象の関数に入った直後。<br /><br /> **Bottom** - 対象の関数の各復帰の直前。<br /><br /> `funcname` - 対象の関数の名前。<br /><br /> 対象の関数に StartProfile 関数が含まれている場合は、その前に SuspendProfile 関数が挿入されます。|  
 |**ResumeOnly:**{**Before**`&#124;`**After**`&#124;`**Top**`&#124;`**Bottom**}`,funcname`|プロファイリング実行中にデータ収集を開始または再開します。<br /><br /> 通常、このオプションは、**SuspendOnly** オプションによってプロファイリングが停止された後にプロファイリングを再開するために使用します。 このオプションは、ResumeProfile API を指定の位置に挿入します。<br /><br /> **Before** - 対象の関数に入る直前。<br /><br /> **After** - 対象の関数が終了した直後。<br /><br /> **Top** - 対象の関数に入った直後。<br /><br /> **Bottom** - 対象の関数の各復帰の直前。<br /><br /> `funcname` - 対象の関数の名前。<br /><br /> 対象の関数に StopProfile 関数が含まれている場合は、その後に ResumeProfile 関数が挿入されます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [VSPerfMon](../profiling/vsperfmon.md)   
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [VSPerfReport](../profiling/vsperfreport.md)   

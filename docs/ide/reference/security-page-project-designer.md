@@ -10,23 +10,18 @@ ms.topic: article
 f1_keywords:
 - vb.ProjectPropertiesSecurity
 - vb.XBAPProjectPropertiesSecurity
-dev_langs:
-- VB
-- CSharp
-- C++
 helpviewer_keywords:
 - Project Designer, Security page
 - Security page in Project Designer
-ms.assetid: 641d9cd3-fa07-498a-8568-3c169bb4d3d5
-caps.latest.revision: "34"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4eaa6a746f67c891e9e4979f9c5b06202383e5f3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3d7a0f5651171d8c3b361d9e8b30b004a4e3136c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-page-project-designer"></a>[セキュリティ] ページ (プロジェクト デザイナー)
 **プロジェクト デザイナー**の **[セキュリティ]** ページを使用して、[!INCLUDE[ndptecclick](../../deployment/includes/ndptecclick_md.md)] 配置によって配置されたアプリケーションのコード アクセス セキュリティの設定を構成できます。 詳細については、「[ClickOnce アプリケーションのコード アクセス セキュリティ](../../deployment/code-access-security-for-clickonce-applications.md)」を参照してください。  
@@ -70,7 +65,7 @@ ms.lasthandoff: 10/31/2017
  **詳細設定**  
  [[セキュリティの詳細設定]](../../ide/reference/advanced-security-settings-dialog-box.md) ダイアログ ボックスが開きます。このダイアログ ボックスでは、制限されたアクセス許可でのアプリケーションのデバッグ用の設定を構成できます。 これらの設定はデバッグ中にチェックされます。アクセス許可例外は、ゾーンで定義されているよりも多くのアクセス許可をアプリケーションが必要としている可能性があることを示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:System.Security.Permissions.WebBrowserPermission>   
  <xref:System.Security.Permissions.MediaPermission>   
  [ClickOnce アプリケーションのコード アクセス セキュリティ](../../deployment/code-access-security-for-clickonce-applications.md)   

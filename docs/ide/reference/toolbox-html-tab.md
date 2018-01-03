@@ -17,18 +17,19 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: def8de31a28a6a49f611c863ebb88d566ff93aa6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 88d34f29593af6e15a30c45f44793c60794ebb24
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolbox-html-tab"></a>ツールボックス、[HTML] タブ
 ツールボックスの **[HTML]** タブは、Web ページと Web フォームで使用するコンポーネントを提供します。 このタブを表示するには、まず、HTML デザイナーで編集するためのドキュメントを開きます。 **[表示]** メニューで **[ツールボックス]** をクリックし、ツールボックスの **[HTML]** タブをクリックします。  
 
  **[HTML]** タブでツールのインスタンスを作成するには、ドキュメントに追加するツールをダブルクリックするか、またはツールを選択して編集サーフェイスの目的の位置にドラッグします。  
 
-## <a name="tasks"></a>タスク  
+## <a name="tasks"></a>[タスク]  
 
 -   [ツールボックスの使用](../../ide/using-the-toolbox.md)  
 
@@ -219,6 +220,6 @@ ms.lasthandoff: 10/31/2017
 <div ms_positioning="FlowLayout" style="width: 70px; position: relative; height: 15px">Label</div>  
 ```  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ツールボックス](../../ide/reference/toolbox.md)   
  [ツールボックスの使用](../../ide/using-the-toolbox.md)   

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a846dbd377a3a394fb23d29f907e29471abcc128
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 5c81f9b5ff7d0bad9c0a05bd4b43374ac9451cf1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="call-tree-view---net-memory-sampling-data"></a>コール ツリー ビュー - .NET メモリ サンプリング データ
 [コール ツリー] ビューには、プロファイリングされるアプリケーションで走査された関数の実行パスが表示されます。 ツリーのルートは、アプリケーションまたはコンポーネントへのエントリ ポイントです。 各関数ノードは、それが呼び出したすべての関数と、それらの関数呼び出しに関する .NET メモリ割り当てデータを一覧表示します。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/31/2017
   
  ルート ノードを設定すると、選択したノードのサブツリーを除く他のすべてのエントリはビューから除外されます。 ルート ノードをリセットし、表示していたノードに戻るには、[コール ツリー] ウィンドウ内の任意の場所で右クリックし、**[ルートのリセット]** を選択します。  
   
-|列|説明|  
+|Column|説明|  
 |------------|-----------------|  
 |**プロセス ID**|プロファイリング実行のプロセス ID (PID) です。|  
 |**プロセス名**|プロセスの名前です。|  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/31/2017
 |**割り当てバイト数 (関数のみ)**|コール ツリーの親関数が呼び出した、この関数のインスタンスによって割り当てられたメモリのバイト数。 この数には、子関数によって行われた割り当てが含まれません。|  
 |**割り当てバイト数 % (関数のみ)**|プロファイル実行で割り当てられたすべてのメモリのバイト数に対する、この関数の排他的割り当てであったバイト数の割合。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コール ツリー ビュー - インストルメンテーション](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)   
  [コール ツリー ビュー](../profiling/call-tree-view-sampling-data.md)   
  [コール ツリー ビュー](../profiling/call-tree-view-instrumentation-data.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "30"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4b58e7997d2aaec4661906743a4ef72ce82fcd91
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 1e886e88ad7ab4e943908e003ffe56719bd13211
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="output-window"></a>[出力] ウィンドウ
 **[出力]** ウィンドウには、統合開発環境 (IDE: Integrated Development Environment) のさまざまな機能のステータス メッセージが表示されます。 **[出力]** ウィンドウを開くには、メニュー バーで、**[表示]、[出力]** の順にクリックします (または、Ctrl キーと Alt キーを押しながら O キーを押します)。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="scrolling-behavior"></a>スクロール動作  
  [出力] ウィンドウで自動スクロールを使用していて、マウスや方向キーを使用して移動すると、自動スクロールが停止します。 自動スクロールを再開するには、Ctrl キーを押しながら End キーを押します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [出力ウィンドウの診断メッセージ](../../debugger/diagnostic-messages-in-the-output-window.md)   
  [方法 : 出力ウィンドウを制御する](http://msdn.microsoft.com/Library/91aebd15-8854-4a7a-9f7d-57376fb4e858)   
  [コードのコンパイルとビルド](../../ide/compiling-and-building-in-visual-studio.md)   

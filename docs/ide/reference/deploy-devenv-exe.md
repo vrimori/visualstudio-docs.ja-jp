@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4561c8955f0ce4b1b5b50be8e31b5ff2ef5751d9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2f7697217d59d430e2b4661548b7f922f8fd8c95
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploy-devenvexe"></a>/Deploy (devenv.exe)
 ビルドまたはリビルド後にソリューションを配置します。 マネージ コード プロジェクトにのみ適用されます。  
@@ -34,16 +35,16 @@ devenv SolutionName /deploy SolnConfigName [/project ProjName] [/projectconfig P
   
 ## <a name="arguments"></a>引数  
  `SolnConfigName`  
- 必須です。 `SolutionName` で指定されたソリューションのビルドに使用されるソリューション構成の名前。  
+ 必須。 `SolutionName` で指定されたソリューションのビルドに使用されるソリューション構成の名前。  
   
  `SolutionName`  
- 必須です。 ソリューション ファイルの完全パスと名前。  
+ 必須。 ソリューション ファイルの完全パスと名前。  
   
  /project `ProjName`  
- 省略可能です。 ソリューション内のプロジェクト ファイルのパスと名前です。 `SolutionName` フォルダーからプロジェクト ファイルへの相対パス、プロジェクトの表示名、またはプロジェクト ファイルの完全なパスと名前を入力できます。  
+ 任意。 ソリューション内のプロジェクト ファイルのパスと名前です。 `SolutionName` フォルダーからプロジェクト ファイルへの相対パス、プロジェクトの表示名、またはプロジェクト ファイルの完全なパスと名前を入力できます。  
   
  /projectconfig `ProjConfigName`  
- 省略可能です。 指定した `/project` のビルド時に使用されるプロジェクトのビルド構成の名前。  
+ 任意。 指定した `/project` のビルド時に使用されるプロジェクトのビルド構成の名前。  
   
 ## <a name="remarks"></a>コメント  
  指定するプロジェクトは、配置プロジェクトである必要があります。 指定したプロジェクトが配置プロジェクトでない場合に、ビルド済みのプロジェクトを渡して配置しようとすると、エラーが発生して配置は失敗します。  
@@ -59,7 +60,7 @@ devenv SolutionName /deploy SolnConfigName [/project ProjName] [/projectconfig P
 devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /deploy Release /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Release   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)   
  [/Project (devenv.exe)](../../ide/reference/project-devenv-exe.md)   
  [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md)   

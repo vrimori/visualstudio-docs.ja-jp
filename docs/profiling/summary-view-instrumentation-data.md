@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 296faf330e23d65ae0ab7e9f434ab831ee520ac5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e486f7df85081ce010e6d2f518978f0952412ea1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="summary-view---instrumentation-data"></a>概要ビュー - インストルメンテーション データ
 概要ビューでは、プロファイリング実行で最もパフォーマンス負荷の高い関数についての情報を表示します。 通知リンクとレポート リストの説明など詳細については、「[Summary View](../profiling/summary-view.md) (概要ビュー)」をご覧ください。  
@@ -30,9 +31,9 @@ ms.lasthandoff: 10/31/2017
   
  **[ホット パス]** には、関数ごとに次のデータが含まれています。  
   
-|列|説明|  
+|Column|説明|  
 |------------|-----------------|  
-|**名前**|関数の名前。|  
+|**Name**|関数の名前。|  
 |**包括経過時間 %**|プロファイル データのすべての時間に対する、その関数が関数本体と呼び出した関数でコードの実行に費やした時間の割合。|  
 |**排他経過時間 %**|プロファイル データのすべての時間に対する、その関数が関数本体でコードの実行に費やした時間の割合。 関数が呼び出した関数で費やされた時間は含まれません。|  
   
@@ -43,9 +44,9 @@ ms.lasthandoff: 10/31/2017
   
 |列|説明|  
 |------------|-----------------|  
-|**名前**|関数の名前。|  
+|**Name**|関数の名前。|  
 |**排他時間 %**|プロファイル データのすべての時間に対する、その関数が関数本体でコードの実行に費やした時間の割合。 関数が呼び出した関数で費やされた時間は含まれません。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [概要ビュー](../profiling/summary-view-sampling-data.md)   
  [概要ビュー](../profiling/summary-view-dotnet-memory-data.md)

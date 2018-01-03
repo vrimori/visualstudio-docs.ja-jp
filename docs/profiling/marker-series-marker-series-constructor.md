@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 83922b913e810042bef82eb0b81a0e42f8d3bbb1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e5a9e6029ed579a6e7464eae8a198948c49fed58
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="markerseriesmarkerseries-constructor"></a>marker_series::marker_series コンストラクター
 `marker_series` クラスの新しいインスタンスを初期化します。  
@@ -46,10 +47,10 @@ marker_series(
  `_ProviderGuid`  
  シリーズのプロバイダーの GUID。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** cvmarkersobj.h  
   
  **名前空間:** Concurrency::diagnostic  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [marker_series クラス](../profiling/marker-series-class.md)

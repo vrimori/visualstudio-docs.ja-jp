@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: c48e85d299ed55de9eee286ca0f7a853cc4c669e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 72c6b65991eb90d71856b33398ff2b42f6fcb377
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="itemmetadata-element-msbuild"></a>ItemMetadata 要素 (MSBuild)
 ユーザー定義の項目メタデータのキーを格納します。項目メタデータの値が含まれます。 1 つの項目が、任意の数のメタデータ キー/値ペアを含むことができます。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/31/2017
 
 |要素|説明|  
 |-------------|-----------------|  
-|[アイテム](../msbuild/item-element-msbuild.md)|ビルド プロセスに対する入力を定義するユーザー定義の要素。|  
+|[Item](../msbuild/item-element-msbuild.md)|ビルド プロセスに対する入力を定義するユーザー定義の要素。|  
 
 ## <a name="text-value"></a>テキスト値  
  テキスト値は省略可能です。  
@@ -75,6 +76,6 @@ ms.lasthandoff: 10/31/2017
 </ItemGroup>  
 ```  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)   
  [項目](../msbuild/msbuild-items.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 794b34365dfa025c6ade7f2d7a2f1216c2b4e4ff
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3915606f9bfaaf2a747ecd5ede0195116c346f0b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="manage-channels"></a>チャネルの管理
 同時実行ビジュアライザーの**スレッド ビュー**では、プロセスのチャネルを整理して、特定のパターンを調べることができます。 チャネルを並べ替えしたり、上下に移動したり、非表示/表示を切り替えることができます。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="group-markers-by-thread"></a>スレッド別にマーカーをグループ化  
  トレースにマーカー イベントが含まれている場合は、このコマンドを使用して、それらのマーカー イベントを生成したスレッドの下にマーカーのチャネルをグループ化することができます。  ディスクのチャネルはチャネルの一覧の先頭に移動し、GPU チャネルは、一番下に移動します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ズーム コントロール (スレッド ビュー)](../profiling/zoom-control-threads-view.md)   
  [測定モード オン/オフ](../profiling/measure-mode-on-off.md)   
  [スレッド ビュー](../profiling/threads-view-parallel-performance.md)

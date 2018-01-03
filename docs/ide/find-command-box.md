@@ -12,11 +12,12 @@ helpviewer_keywords: Find/Command box
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8fa54e65ed581d547d7e4a0c6c5d1c1e0908c0ca
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: ede1e6cd1340ea204199df66108c49db310949f6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="findcommand-box"></a>[検索/コマンド] ボックス
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/07/2017
 
 ## <a name="searching-for-text"></a>テキストの検索
 
-既定では、**[検索]** ボックスにテキストを指定して **Enter** キーを押すと、Visual Studio によって、**[フォルダーを指定して検索]** ダイアログ ボックスで指定したオプションが使用され、現在のドキュメント ウィンドウまたはツール ウィンドウで検索されます。 詳細については、「[テキストの検索と置換](../ide/finding-and-replacing-text.md)」を参照してください。
+既定では、**[検索]** ボックスにテキストを指定して **Enter** キーを押すと、Visual Studio によって、**[フォルダーを指定して検索]** ダイアログ ボックスで指定したオプションが使用され、現在のドキュメント ウィンドウまたはツール ウィンドウで検索されます。 詳細については、「 [Finding and Replacing Text](../ide/finding-and-replacing-text.md)」を参照してください。
 
 ## <a name="entering-commands"></a>コマンドの入力
 

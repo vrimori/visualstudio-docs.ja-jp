@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5be97e75ac7dc29a6dd0244293259bcd17591233
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 97e4339546eda741ba961b0015f9f62edf231d24
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="run-devenvexe"></a>/Run (devenv.exe)
 指定したプロジェクトまたはソリューションをコンパイルして実行します。  
@@ -36,10 +37,10 @@ devenv {/run|/r} {SolutionName|ProjectName}
   
 ## <a name="arguments"></a>引数  
  `SolutionName`  
- 必須です。 ソリューション ファイルの完全パスと名前。  
+ 必須。 ソリューション ファイルの完全パスと名前。  
   
  `ProjectName`  
- 必須です。 プロジェクト ファイルの完全パスと名前。  
+ 必須。 プロジェクト ファイルの完全パスと名前。  
   
 ## <a name="remarks"></a>コメント  
  アクティブなソリューション構成に対して指定された設定に従って、指定したプロジェクトまたはソリューションをコンパイルして実行します。 このスイッチは、統合開発環境 (IDE) を起動し、プロジェクトまたはソリューションの実行が完了しても IDE をアクティブな状態のままにします。  
@@ -55,7 +56,7 @@ devenv {/run|/r} {SolutionName|ProjectName}
 devenv /run "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln"  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)   
  [/Runexit (devenv.exe)](../../ide/reference/runexit-devenv-exe.md)   
  [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md)   

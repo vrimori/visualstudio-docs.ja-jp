@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 338b79cfe5dbdb812b385d237523d2a79d8cc965
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 403e685fa6a386ea0de73c74a27261d9ab77786e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-command-line-profiling-using-sampling"></a>チュートリアル: サンプリングを使ったコマンド ライン プロファイリング
 このチュートリアルでは、コマンド ライン ツールを使用したアプリケーションのプロファイリング方法と、パフォーマンス上の問題をサンプリングによって特定する方法について説明します。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="prerequisites"></a>必須コンポーネント  
   
--   [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、[!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、または [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
+-   [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、 [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、または [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
 -   [!INCLUDE[csharp_current_short](../misc/includes/csharp_current_short_md.md)] についての中級レベルの知識  
   
@@ -97,7 +98,7 @@ ms.lasthandoff: 10/31/2017
   
     -   Visual Studio IDE で .vsp ファイルを開きます。  
   
-         — または —  
+         または  
   
     -   コマンド ライン ツール VSPerfReport.exe を使用してコンマ区切り値 (csv) ファイルを生成します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE 以外で使用するレポートを生成するには、次のコマンドを使用します。  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 10/31/2017
         VSPerfReport <dir> PeopleTraxReport.vsp /output:<dir> /summary:all  
         ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス セッションの概要](../profiling/performance-session-overview.md)   
  [コマンドラインからのプロファイル](../profiling/using-the-profiling-tools-from-the-command-line.md)   
  [VSPerfCmd](../profiling/vsperfcmd.md)   

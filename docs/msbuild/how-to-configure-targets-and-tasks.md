@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 69669acc9cc0815dc8df0c88172213ad3e3698f9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 692f39fb3f83ee12e3e1c6ec20ce892727d1f2a7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-targets-and-tasks"></a>方法 : ターゲットとタスクを構成する
 一部の MSBuild タスクは、開発コンピューターの環境に関係なく、それがターゲットとする環境で実行されるように設定できます。 たとえば、64 ビット コンピューターを使用し、32 ビット アーキテクチャをターゲットとするアプリケーションを構築するとき、一部のタスクが 32 ビット プロセスで実行されます。  
@@ -110,5 +111,5 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  タスク パラメーターは、タスク ホストのコンテキストではなく、親ノードのコンテキストで評価されます。ランタイムまたはアーキテクチャに依存する環境変数は (プログラム ファイルの場所など)、親ノードに一致する値として評価されます。  一方、同じ環境変数がタスクによって直接読み取られた場合は、タスク ホストのコンテキストで正しく評価されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ターゲットとタスクの構成](../msbuild/configuring-targets-and-tasks.md)

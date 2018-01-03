@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 46c80a49d0e043d7cdbffbc74698a29e10ab4795
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b3f0d5ecdcf1318490ac0829bb9dd6ded9519872
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="evaluate-statement-command"></a>Evaluate Statement コマンド
 指定したステートメントを評価し、表示します。  
@@ -33,7 +34,7 @@ Debug.EvaluateStatement text
   
 ## <a name="arguments"></a>引数  
  `text`  
- 必須です。 評価するステートメント。  
+ 必須。 評価するステートメント。  
   
 ## <a name="remarks"></a>コメント  
  **EvaluateStatement** コマンドをどのウィンドウに入力するかによって、等号 (=) を比較演算子として解釈するのか、代入演算子として解釈するのかが決まります。  
@@ -60,7 +61,7 @@ Debug.EvaluateStatement text
 >Debug.EvaluateStatement(a+b)  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Print コマンド](../../ide/reference/print-command.md)   
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   

@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c23bc80fff6bf088d10c788b92a52b1c43fc5db9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 53dd29671e20f19c0ef83d5920581c7038f32c9f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>同時実行ビジュアライザー コマンドライン ユーティリティ (CVCollectionCmd)
 同時実行ビジュアライザーのコマンド ライン ユーティリティ (CVCollectionCmd.exe) を使用して、コマンド ラインからトレースを収集することで、Visual Studio 用の同時実行ビジュアライザーでトレースを表示できます。 これらのツールは、Visual Studio がインストールされていないコンピューターで使用できます。  
@@ -74,8 +75,8 @@ ms.lasthandoff: 10/31/2017
 |Markers|マーカー プロバイダーのリストが格納されます。|0 個以上の MarkerProvider 要素を格納できます。|  
 |MarkerProvider|単一のマーカー プロバイダーを指定します。|以下の要素が含まれている必要があります。<br /><br /> -   Level<br />-   GUID<br />-   Name<br /><br /> 以下の要素を含めることができます。<br /><br /> -   Categories<br />-   IsEnabled|  
 |レベル|MarkerProvider の重要度レベルを設定します。|-   Low<br />-   Normal<br />-   High<br />-   Critical<br />-   Everything|  
-|Guid|ETW マーカー プロバイダーのグローバル一意識別子。|GUID。|  
-|名前|マーカー プロバイダーの説明を指定します。|文字列。|  
+|GUID|ETW マーカー プロバイダーのグローバル一意識別子。|GUID。|  
+|name|マーカー プロバイダーの説明を指定します。|文字列。|  
 |カテゴリ|マーカー プロバイダーについて収集するカテゴリを指定します。|コンマ区切りの文字列または数値の範囲。|  
 |IsEnabled|マーカー プロバイダーをコレクションに有効にするかどうかを判別する値を設定します。|-   True<br />-   False|  
 |FilterConfig|コレクションからフィルター処理する ETW イベントの構成オプションのリストを指定します。|以下の要素を含めることができます。<br /><br /> -   CollectClrEvents<br />-   ClrCollectionOptions<br />-   CollectSampleEvents<br />-   CollectGpuEvents<br />-   CollectFileIO|  

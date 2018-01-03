@@ -18,11 +18,12 @@ caps.latest.revision: "34"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2e2e7369d57f7a23cf8467d8a8eb5c99447d35e1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0e55e469112053d7a78416c21a685d423a6bfa31
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="call-tree-view"></a>コール ツリー ビュー
 [コール ツリー] ビューには、プロファイリングされるアプリケーションで走査された関数の実行パスが表示されます。 ツリーのルートは、アプリケーションまたはコンポーネントへのエントリ ポイントです。 各関数ノードは、呼び出したすべての関数と、その関数呼び出しに関するパフォーマンス データを表示します。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/31/2017
   
  [コール ツリー ビュー](../profiling/call-tree-view-contention-data.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス レポートのビュー](../profiling/performance-report-views.md)   
  [インストルメンテーション データ値について](../profiling/understanding-instrumentation-data-values.md)   
  [サンプリング データ値について](../profiling/understanding-sampling-data-values.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 30ad7561ffadb4c8d139c7be8dc537dc8f1f092b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5a35d15fc4d0859ca005cff96aab51f9c5fbd277
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-instrument-a-statically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line"></a>方法: プロファイラーのコマンド ラインを使用して静的にコンパイルされた ASP.NET Web アプリケーションをインストルメントし、メモリ データを収集する
 ここでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのコマンド ライン ツールを使用して、プリコンパイルされた [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web コンポーネントまたは Web サイトをインストルメントし、.NET メモリの割り当て、オブジェクトの有効期間、および詳細なタイミング データを収集する方法について説明します。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
   
      **VSPerfClrEnv /globaltracegc**  
   
-     または  
+     - または -  
   
      **VSPerfClrEnv /globaltracegclife**  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/31/2017
   
 7.  インストルメントされたコンポーネントを含む Web サイトを開きます。  
   
-## <a name="controlling-data-collection"></a>データ収集の制御  
+## <a name="controlling-data-collection"></a>データ コレクションの制御  
  対象アプリケーションの実行中は、**VSPerfCmd.exe** のオプションを使用してファイルへのデータ書き込みを開始および停止することにより、データ収集を制御できます。 データ コレクションを制御することにより、アプリケーションの起動や終了など、プログラム実行の特定の部分についてのデータ コレクションを行うことができます。  
   
 #### <a name="to-start-and-stop-data-collection"></a>データ収集を開始および停止するには  
@@ -98,7 +99,7 @@ ms.lasthandoff: 10/31/2017
   
 1.  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションを終了します。  
   
-2.  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセスを終了します。 種類:  
+2.  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセスを終了します。 型:  
   
      **IISReset /stop**  
   
@@ -106,14 +107,14 @@ ms.lasthandoff: 10/31/2017
   
      **VSPerfCmd /shutdown**  
   
-4.  (省略可能) プロファイル環境変数を削除します。 種類:  
+4.  (省略可能) プロファイル環境変数を削除します。 型:  
   
      **VSPerfCmd /globaloff**  
   
-5.  コンピューターを再起動します。 必要に応じて、IIS を再起動します。 種類:  
+5.  コンピューターを再起動します。 必要に応じて、IIS を再起動します。 型:  
   
      **IISReset /start**  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
  [.NET メモリのデータ ビュー](../profiling/dotnet-memory-data-views.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b1cda2b61c50deb98752063f9606849356386a84
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c0648336f4ba6be42de7253c27703fe544fb58d7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-noise-reduction-in-report-views"></a>方法: レポート ビューでノイズ除去を設定する
 パフォーマンス レポートは、コール ツリー ビューや 割り当て ビューに表示されるデータの数を制限して、ノイズを除去するように構成できます。 ノイズ除去を行うことで、パフォーマンスの問題を発見しやすくなります。 これは、パフォーマンス レポートの分析に役立ちます。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  トリミングを無効にするには、**[トリミングを有効にする]** をオフにします。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
 ### <a name="to-configure-folding-for-a-performance-report"></a>パフォーマンス レポートの折りたたみを構成するには  
   
@@ -76,9 +77,9 @@ ms.lasthandoff: 10/31/2017
   
 3.  折りたたみを無効にするには、**[折りたたみを有効にする]** をオフにします。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス ツールのレポート ビューのカスタマイズ](../profiling/customizing-performance-tools-report-views.md)   
  [方法: インストルメンテーションで短い関数を除外または含める](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)   
  [コール ツリー ビュー](../profiling/call-tree-view.md)   

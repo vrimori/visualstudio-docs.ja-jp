@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a9a88a82896eeb2d8f124fa7abcfa26dc9b5ab2b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 763e123fcae809e174238ab2f204bec537dbf868
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manually-create-performance-sessions"></a>方法: パフォーマンス セッションを手動で作成する
 パフォーマンス セッションは手動でも作成できます。 この場合、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でプロジェクトを開く必要はありません。 詳細については、「[Configuring Performance Sessions](../profiling/configuring-performance-sessions.md)」(パフォーマンス セッションの構成) をご覧ください。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 10/31/2017
   
      新しいバイナリが追加されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス エクスプローラー](../profiling/performance-explorer.md)   
  [はじめに](../profiling/getting-started-with-performance-tools.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a0006505bb1c1825c79a7ba1b04d1323c8ca1608
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 31f9f7650336c3787e68b511cf099c04317bca7c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resource-contention-data-views"></a>リソース競合データのビュー
 このセクションでは、スレッド競合プロファイル データが格納されるプロファイラー データ ファイルのビューとレポートに関するリファレンス情報を示します。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
  [リソースの競合ビュー](../profiling/resource-contentions-view-contention-data.md)  
  ブロックされたリソースごとにリソース競合データをリストします。  
   
- [行ビュー](../profiling/lines-view-contention-data.md)  
+ [行 ビュー](../profiling/lines-view-contention-data.md)  
  リソース コード行ごとにリソース競合データをリストします。  
   
  [命令ポインター (IP) ビュー](../profiling/instruction-pointers-ips-view-contention-data.md)  

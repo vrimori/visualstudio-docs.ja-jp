@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b326e88e18e3a7c5515cc11bfda7e5c35ae4a063
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9bb2cbe0a87e61a50f3f2b071aef9ef9e12663a0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="markerseries-class"></a>marker_series クラス
 1 つのプロバイダーによって生成されたイベントのシリアル チャネルを表します。  
@@ -33,14 +34,14 @@ class marker_series;
   
 ### <a name="public-constructors"></a>パブリック コンストラクター  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[marker_series::marker_series コンストラクター](../profiling/marker-series-marker-series-constructor.md)|`marker_series` クラスの新しいインスタンスを初期化します。|  
 |[marker_series::~marker_series デストラクター](../profiling/marker-series-tilde-marker-series-destructor.md)|marker_series オブジェクトを破棄し、すべての割り当て済みリソースを開放します。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[marker_series::is_enabled メソッド](../profiling/marker-series-is-enabled-method.md)|任意のセッションでプロバイダーが有効にされているかどうかを調べます。|  
 |[marker_series::write_alert メソッド](../profiling/marker-series-write-alert-method.md)|同時実行ビジュアライザーのトレース ファイルにアラートを書き込みます。|  
@@ -50,10 +51,10 @@ class marker_series;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `marker_series`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** cvmarkersobj.h  
   
  **名前空間:** Concurrency::diagnostic  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [diagnostic 名前空間](../profiling/diagnostic-namespace.md)

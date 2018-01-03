@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: c88c90fcc150187bd10e3100cd703522f86bc191
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 8cd00fe33cf463227dd09f93047350a96cee3b92
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-python-in-visual-studio"></a>Visual Studio での Python の使用
 
@@ -31,14 +32,14 @@ Windows の Visual Studio では、Python の開発およびデータ サイエ�
 - 完全なエンド ツー エンドのエクスペリエンスの場合は、[Visual Studio での Python の使用](vs-tutorial-01-01.md)のチュートリアルに従います。
 - 次に、以下のリンクを使って Python 関連の機能と Visual Studio 自体の機能について詳しく見てください。
 
-| 特性 | 説明 | Visual Studio の一般的なドキュメント | 
+| 機能 | 説明 | Visual Studio の一般的なドキュメント | 
 | --- | --- | --- |
 | [Visual Studio のプロジェクト システム](python-projects.md) | Python コードのフォルダー構造を暗黙的に取得し、アプリ コード、テスト コード、Web ページ、JavaScript、ビルド スクリプトなどの識別を明示的に制御できます。 | [Visual Studio のソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md) |
 | [プロジェクト テンプレート](python-projects.md#project-templates) | コンソール、Web、Azure、データ サイエンス、他の種類のプロジェクト用のプロジェクト構造を短時間で作成します。 | [Visual Studio テンプレート](../ide/creating-project-and-item-templates.md#visual-studio-templates) |
-| 複数のインタープリターのサポート | さまざまなバージョンの CPython と IronPython をサポートします。 | 適用なし |
-| IPython のサポート | インライン プロット、.NET、および Windows Presentation Foundation (WPF) のための REPL での IPython/Jupyter のサポートが含まれます。 | 適用なし |
+| 複数のインタープリターのサポート | さまざまなバージョンの CPython と IronPython をサポートします。 | N/A |
+| IPython のサポート | インライン プロット、.NET、および Windows Presentation Foundation (WPF) のための REPL での IPython/Jupyter のサポートが含まれます。 | N/A |
 | [豊富な編集、IntelliSense、コード読解](code-editing.md) | 構文の色分け、すべてのコードとライブラリ間でのオートコンプリート、[コードのフォーマット](code-formatting.md)、シグネチャ ヘルプ、クラス ビュー、定義への移動、すべての参照の検索、コード スニペット、[リファクタリング](code-refactoring.md)、[PyLint](code-pylint.md) などを含みます。 | [コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md) |
-| [対話型ウィンドウ](interactive-repl.md) | コードの一部を簡単に強調表示してそれを対話型ウィンドウに送信する機能を備えた、Python 用のクイック REPL エクスペリエンスを提供します。 | 適用なし |
+| [対話型ウィンドウ](interactive-repl.md) | コードの一部を簡単に強調表示してそれを対話型ウィンドウに送信する機能を備えた、Python 用のクイック REPL エクスペリエンスを提供します。 | N/A |
 | [フル機能のデバッグ](debugging.md) | Visual Studio プロジェクトを使っても使わなくてもデバッグを行うことができ、既存の実行可能ファイルをデバッグする機能、[Python/C++ 混合モードのデバッグ](debugging-mixed-mode.md)、Windows/Linux/Mac への[リモート デバッグ](debugging-cross-platform-remote.md)、[Azure へのリモート デバッグ](debugging-azure-remote.md)、および対話型ウィンドウ内でのデバッグを含みます。 | [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md) |
 | [包括的なレポートを備えたプロファイリング ツール](profiling.md) | アプリケーション内で時間がどのように費やされているかを調べます。異なるプロファイリング実行の間でパフォーマンスを比較する機能を含みます。 | [プロファイリング ツール](../profiling/profiling-tools.md)(Visual Studio のプロファイリング機能の一部は、Python では使用できません) |
 | [単体テスト ツール](unit-testing.md) | Visual Studio テスト エクスプローラーでテストを検出、実行、および管理し、単体テストを簡単にデバッグします。 | [コードの単体テスト](../test/unit-test-your-code.md) |

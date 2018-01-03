@@ -16,11 +16,12 @@ caps.latest.revision: "24"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e93b23c9bd30ec81088b7ec9a81cda837d6bafd4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6cb369d239cd480456cd54382cab0befe5c37b9e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-report-views"></a>パフォーマンス レポート ビュー
 このセクションでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのレポートおよびビューに関するリファレンス情報を提供します。 プロファイリング データ ファイルのビューは、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 統合開発環境 (IDE) で表示されます。 レポートは、[VSPerfReport](../profiling/vsperfreport.md) コマンド ライン ツールによって生成されます。  
@@ -47,5 +48,5 @@ ms.lasthandoff: 10/31/2017
  [階層相互作用のビュー](../profiling/tier-interactions-view.md)  
  階層相互作用データを含むプロファイリング データ ファイルの相互作用のビューとレポートに関するリファレンス情報。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス ツール データの分析](../profiling/analyzing-performance-tools-data.md)

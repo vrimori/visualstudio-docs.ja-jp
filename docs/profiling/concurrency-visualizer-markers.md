@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ff86fd14857206361a4bd9c15088cb3547200b28
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7baa202558b6bb7bc60a0bb27d42ae004933ddea
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="concurrency-visualizer-markers"></a>同時実行ビジュアライザー マーカー
 同時実行ビジュアライザーのマーカーはアプリ内のイベントを表すアイコンです。  通常、アプリはこれらのイベントを生成して、アプリケーションでのフェーズまたは出現回数を指定します。  アプリ、またはアプリで使用するライブラリとランタイムでイベントを生成することができます。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="markers-from-eventsource"></a>EventSource からのマーカー  
  同時実行ビジュアライザーでは、EventSource イベントも表示できます。  詳細については、「[マーカーとしての EventSource イベントの視覚化](../profiling/visualizing-eventsource-events-as-markers.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [フラグ マーカー](../profiling/flag-markers.md)   
  [メッセージ マーカー](../profiling/message-markers.md)   
  [スパン マーカー](../profiling/span-markers.md)   

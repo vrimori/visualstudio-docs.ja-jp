@@ -13,18 +13,19 @@ caps.latest.revision: "8"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 978f1d43e278a6e8a112151221bda0a828b92f7c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 1238748b07d820a045e440e8d130bf9423668854
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="incremental-builds"></a>インクリメンタル ビルド
 インクリメンタル ビルドは、対応する入力ファイルに対して最新の状態の出力ファイルを含むターゲットが実行されないように最適化されたビルドです。 ターゲット要素には、ターゲットが入力として受け取る項目を示す `Inputs` 属性と、ターゲットが出力として生成する項目を示す `Outputs` 属性の両方を指定できます。 MSBuild は、これらの属性の値間に一対一の対応関係があるかどうかを確認します。 一対一の対応関係が存在する場合、MSBuild は、すべての入力項目のタイム スタンプをそれぞれ対応する出力項目のタイム スタンプと比較します。 一対一の対応関係が存在しない出力ファイルは、すべての入力ファイルと比較されます。 項目が最新の状態であると見なされるのは、その出力ファイルが入力ファイルと同じタイム スタンプであるかそれよりも新しい場合です。  
   
  すべての出力項目が最新の状態である場合、MSBuild はターゲットをスキップします。 このターゲットの*インクリメンタル ビルド*により、ビルド速度が大幅に向上します。 一部のファイルだけが最新の状態である場合、MSBuild は最新の項目をスキップしてターゲットを実行するので、すべての項目が最新の状態になります。 これは、*部分インクリメンタル ビルド*と呼ばれます。  
   
- 一対一の対応関係は、通常は項目の変換によって生成されます。 詳細については、「[MSBuild 変換](../msbuild/msbuild-transforms.md)」を参照してください。  
+ 一対一の対応関係は、通常は項目の変換によって生成されます。 詳細については、「[MSBuild 変換](../msbuild/msbuild-transforms.md)」をご覧ください。  
   
  次にターゲットの例を示します。  
   
@@ -80,5 +81,5 @@ ms.lasthandoff: 10/31/2017
   
  これにより、ターゲットが実行された場合にのみ、CompileRan プロパティが作成され、値 `true` が指定されます。 ターゲットがスキップされた場合、CompileRan は作成されません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ターゲット](../msbuild/msbuild-targets.md)

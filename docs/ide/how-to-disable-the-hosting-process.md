@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 94d40fe18ff4cca228fb39ab16bcfaa6ac42a172
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9609f902c11291cd6892cf663ec8a343952ebaab
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-disable-the-hosting-process"></a>方法 : ホスト プロセスを無効にする
 ホスト プロセスが有効になっていると、特定の API の呼び出しに影響する場合があります。 影響がある場合は、正しい結果が返るようにホスト プロセスを無効にする必要があります。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/31/2017
   
 -   部分信頼デバッグが使用できなくなる。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロセスのデバッグとホスト](../debugger/debugging-and-the-hosting-process.md)   
  [ホスト プロセス (vshost.exe)](../ide/hosting-process-vshost-exe.md)   
  [アプリケーション開発時のビルド](http://msdn.microsoft.com/en-us/c9497d62-3b7b-4449-88e8-cf27acc9efe6)

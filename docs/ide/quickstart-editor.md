@@ -11,11 +11,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 dev_langs: CSharp
-ms.openlocfilehash: 3994c7087cb26e31c5745c99a8b7678aa7e24f23
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: 614e8856fa8d4c674e40703448399265f2adc456
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quickstart-coding-in-the-editor"></a>クイックスタート: エディター内のコーディング
 
@@ -148,7 +149,7 @@ Visual Studio エディターでは、型やメソッドなどの定義の検査
 
    `words` の出現箇所とコード コメント内の `words` への参照箇所の両方で名前が変更されました。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Visual Studio エディターにおけるこのクイックスタートは完了しました。 次に、Visual Studio IDE の他のクイックスタートを試してみる、[コード内を移動](../ide/navigating-code.md)する他の方法を参照する、またはこれまで見てきた機能の詳細情報へのリンクを確認することができます。 または他の方法でコーディングをお楽しみください。
 

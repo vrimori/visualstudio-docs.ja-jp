@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 99865ecf81fbc7873fef43c51f543f224e281928
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7a6e681c703847c970d79c1523ab12ce89e68d28
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="summary-view---resource-contention-view"></a>概要ビュー - リソース競合ビュー
 概要ビューでは、リソースへのアクセス待機中に中断されたスレッドまたはプロセスが含まれるアプリケーションのイベントに関する情報を表示します。  
@@ -32,9 +33,9 @@ ms.lasthandoff: 10/31/2017
   
  **[最も競合の多いリソース]** には、各リソースの次のデータが含まれます。  
   
-|列|説明|  
+|Column|説明|  
 |------------|-----------------|  
-|**名前**|リソースの名前。|  
+|**Name**|リソースの名前。|  
 |**競合 %**|プロファイル データのすべての競合イベントに対する、このリソースに関する競合イベントの割合。|  
   
 ## <a name="most-contended-thread"></a>最も競合の多いスレッド  
@@ -42,8 +43,8 @@ ms.lasthandoff: 10/31/2017
   
  **最も競合の多いスレッド** には、各スレッドの次のデータが含まれます。  
   
-|列|説明|  
+|Column|説明|  
 |------------|-----------------|  
 |**ID**|スレッド ID です|  
-|**名前**|スレッドを所有するプロセスの名前。|  
+|**Name**|スレッドを所有するプロセスの名前。|  
 |**競合 %**|プロファイル データのすべての競合イベントに対する、このリソースに関する競合イベントの割合。|

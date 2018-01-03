@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 25e635ef74d19cc1f757b9a78ecbeae58fae92cc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 4de13644837c3fd21b38e0be6f4414700eb92414
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="process-view---contention-data"></a>プロセス ビュー - 競合データ
 プロセス ビューには、プロファイリング実行中に実行されたプロセスとスレッドの競合データが表示されます。  
@@ -37,9 +38,9 @@ ms.lasthandoff: 10/31/2017
 |**ID**|システムによって生成される、プロセスまたはスレッドの ID。|  
 |**有効期間**|プロセスまたはスレッドの開始から、プロセスまたはスレッドの終了、あるいはプロファイリングの終了までの時間 (ミリ秒) またはプロセッサ サイクル数。|  
 |**Type**|行の種類 (プロセスまたはスレッド)。<br /><br /> **VSReport** コマンド ライン レポートでのみ有効です。 詳細については、「[VSPerfReport](../profiling/vsperfreport.md)」を参照してください。|  
-|**名前**|プロセスまたはスレッドの名前。|  
+|**Name**|プロセスまたはスレッドの名前。|  
 |**ID (一意)**|プロファイラーによって生成される、プロセスまたはスレッドに固有の ID。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [プロセス ビュー](../profiling/process-view.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 7cd9965a5a521c4c1984792b0f10c809d3aafe86
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8abc76ef0c9d3e04f0aae676af0bfa20183b3a8d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writealltlogs"></a>WriteAllTLogs
 すべてのスレッドとコンテキストの追跡ログを書き込みます。  
@@ -41,8 +42,8 @@ HRESULT WINAPI WriteAllTLogs(LPCTSTR intermediateDirectory, LPCTSTR tlogRootName
 ## <a name="return-value"></a>戻り値  
  追跡コンテキストが作成された場合、**HRESULT** に **SUCCEEDED** ビットが設定されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** FileTracker.h  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [WriteContextTLogs](../msbuild/writecontexttlogs.md)

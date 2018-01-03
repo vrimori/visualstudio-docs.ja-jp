@@ -27,11 +27,12 @@ caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e99dff1fbe5638c81572f9b370f94c0337f9f7e3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b6f8adfd3ce7d585cffe3c7506c4fdd56cad4a11
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="task-list-environment-options-dialog-box"></a>[タスク一覧] \([オプション] ダイアログ ボックス - [環境])
 この [オプション] ページでは、**タスク一覧**のアラームを生成するコメント トークンを追加、削除、変更できます。 これらの設定を表示するには、**[ツール]** メニューの **[オプション]** を選択し、**[環境]** フォルダーを展開して **[タスク一覧]** を選択します。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/31/2017
  優先度  
  選択されたトークンを使用するタスクの優先順位を設定します。 このトークンで始まるタスク コメントには、指定された優先順位が**タスク一覧**で自動的に割り当てられます。  
   
- 名前  
+ name  
  トークンの文字列を入力します。 入力すると、**[追加]** ボタンをクリックできるようになります。 **[追加]** をクリックすると、この文字列が **[トークン リスト]** に追加され、この名前で始まるコメントが**タスク一覧**に表示されます。  
   
  追加  
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  既定のコメント トークンの名前変更や削除はできませんが、優先順位は変更できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [タスク一覧の使用](../../ide/using-the-task-list.md)   
  [コードへのブックマークの設定](../../ide/setting-bookmarks-in-code.md)   
  [[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)

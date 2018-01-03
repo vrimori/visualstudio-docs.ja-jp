@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: e2edb49095bb71e71414e82855c1b3c39904a62f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 73931a8be39933c727225d582bc4e4e35b805d7d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-build-incrementally"></a>方法 : インクリメンタル ビルドを実行する
 大規模なプロジェクトをビルドする場合、今でも最新の以前にビルドされたコンポーネントが再ビルドされないことが重要です。 すべてのターゲットが毎回ビルドされると、各ビルドが完了するのに長い時間がかかります。 インクリメンタル ビルド (ビルド内の以前にビルドされていないターゲット、または古くなっているターゲットだけが再ビルドされます) を有効にするため、[!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) は入力ファイルのタイムスタンプと出力ファイルのタイムスタンプを比較して、ターゲットをスキップ、ビルド、または部分的に再ビルドするかどうかを判断できます。 ただし、入力と出力の間に一対一のマッピングが必要です。 変換を使用して、ターゲットがこの直接マッピングを識別できるようにすることができます。 変換の詳細については、「[MSBuild 変換](../msbuild/msbuild-transforms.md)」を参照してください。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/31/2017
   
 -   `BuildHelp`: .content ファイルと XML メタデータ ファイルを結合し、最終の .help ファイルをビルドします。  
   
- プロジェクトは、変換を使用して、`GenerateContentFiles` タスクで入力と出力間の一対一のマッピングを作成します。 詳細については、「[MSBuild 変換](../msbuild/msbuild-transforms.md)」を参照してください。 また、`Output` 要素が `GenerateContentFiles` タスクからの出力を `BuildHelp` タスクの入力として自動的に使用するように設定されます。  
+ プロジェクトは、変換を使用して、`GenerateContentFiles` タスクで入力と出力間の一対一のマッピングを作成します。 詳細については、「[MSBuild 変換](../msbuild/msbuild-transforms.md)」をご覧ください。 また、`Output` 要素が `GenerateContentFiles` タスクからの出力を `BuildHelp` タスクの入力として自動的に使用するように設定されます。  
   
  このプロジェクト ファイルには、`Convert` と `Build` の両方のターゲットが含まれます。 `GenerateContentFiles` タスクと `BuildHelp` タスクはそれぞれ `Convert` と `Build` のターゲットに配置され、各ターゲットがそれぞれインクリメンタル方式でビルドできるようにします。 `Output` 要素を使用することで、`GenerateContentFiles` タスクの出力が `ContentFile` 項目リストに配置され、`BuildHelp` タスクの入力として使用できます。 このように `Output` 要素を使用することで、1 つのタスクからの出力が別のタスクの入力として自動的に提供されるため、各タスクで個々の項目または項目リストから手動でリストする必要はありません。  
   
@@ -104,7 +105,7 @@ ms.lasthandoff: 10/31/2017
 </Project>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ターゲット](../msbuild/msbuild-targets.md)   
  [Target 要素 (MSBuild)](../msbuild/target-element-msbuild.md)   
  [変換](../msbuild/msbuild-transforms.md)   

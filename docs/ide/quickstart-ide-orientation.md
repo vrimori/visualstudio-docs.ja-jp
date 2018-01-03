@@ -10,11 +10,12 @@ ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7f10ee7dc03ffe0f80b6ee3d7ff47f5fcd6a1624
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: 49518c7d38ebbec74908123b83b57bf039dda6f8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>クイックスタート: Visual Studio IDE の表示の紹介
 
@@ -88,7 +89,7 @@ Visual Studio の使用中に問題が発生した場合、または製品の改
 
 ![[フィードバックの送信] メニュー](media/quickstart-IDE-send-feedback.png)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 ユーザー インターフェイスに慣れるため、Visual Studio IDE の機能をいくつか確認しました。 下記に従って、さらに試してみてください。
 

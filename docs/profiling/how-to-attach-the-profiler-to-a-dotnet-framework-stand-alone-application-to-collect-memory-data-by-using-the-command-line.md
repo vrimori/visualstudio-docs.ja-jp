@@ -12,11 +12,12 @@ caps.latest.revision: "33"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ca6318b5280e2098858bdcf523a3131cf68b7c84
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: a9a6996c990783a4ad077211d79616ba32531822
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-to-collect-memory-data-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーをスタンドアロンの .NET Framework アプリケーションにアタッチし、メモリ データを収集する
 このトピックでは、[!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] プロファイル ツールのコマンド ライン ツールを使用して、実行中の .NET Framework のスタンドアロン (クライアント) アプリケーションにプロファイラーをアタッチし、メモリ データを収集する方法について説明します。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/31/2017
   
 1.  コマンド プロンプト ウィンドウを開きます。  
   
-2.  プロファイル環境変数を初期化します。 種類:  
+2.  プロファイル環境変数を初期化します。 型:  
   
      **VSPerfClrEnv** {**/samplegc** &#124; **/samplegclife**} **[/samplelineoff]**  
   
@@ -66,15 +67,15 @@ ms.lasthandoff: 10/31/2017
   
 4.  必要な場合、通常の方法で対象のアプリケーションを起動します。  
   
-5.  プロファイラーを対象のアプリケーションにアタッチします。 種類:  
+5.  プロファイラーを対象のアプリケーションにアタッチします。 型:  
   
      **VSPerfCmd**  [/attach](../profiling/attach.md) **:**{`PID`&#124;`ProcName`} [[/targetclr](../profiling/targetclr.md)**:**`Version`]  
   
     -   `PID` には、対象アプリケーションのプロセス ID を指定します。 `ProcessName` には、プロセスの名前を指定します。 `ProcessName` を指定して、同じ名前の複数のプロセスが実行中である場合、結果は予測できません。 Windows タスク マネージャーで、実行中のすべてのプロセスのプロセス ID を参照できます。  
   
-    -   **/targetclr:** `Version` には、アプリケーションに複数のバージョンのランタイムが読み込まれている場合に、プロファイリングを行う共通言語ランタイム (CLR) のバージョンを指定します。 省略可能です。  
+    -   **/targetclr:** `Version` には、アプリケーションに複数のバージョンのランタイムが読み込まれている場合に、プロファイリングを行う共通言語ランタイム (CLR) のバージョンを指定します。 任意。  
   
-## <a name="controlling-data-collection"></a>データ収集の制御  
+## <a name="controlling-data-collection"></a>データ コレクションの制御  
  対象アプリケーションの実行中に、**VSPerfCmd.exe** のオプションを使用してファイルへのデータ書き込みを開始および停止することにより、データ収集を制御できます。 データ コレクションを制御することにより、アプリケーションの起動や終了など、プログラム実行の特定の部分についてのデータ コレクションを行うことができます。  
   
 #### <a name="to-start-and-stop-data-collection"></a>データ収集を開始および停止するには  
@@ -96,7 +97,7 @@ ms.lasthandoff: 10/31/2017
   
     -   **VSPerfCmd /detach** と入力します  
   
-         または  
+         - または -  
   
     -   対象アプリケーションを終了します。  
   
@@ -108,6 +109,6 @@ ms.lasthandoff: 10/31/2017
   
      **VSPerfCmd /off**  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [スタンドアロン アプリケーションのプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [.NET メモリのデータ ビュー](../profiling/dotnet-memory-data-views.md)

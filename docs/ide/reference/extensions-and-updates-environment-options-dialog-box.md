@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fda8c5cb5066684ba0de5341042060d8ab2660cb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: fb3e4307b18c7ed929672cec1dc9f7cc55f72b01
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extensions-and-updates-environment-options-dialog-box"></a>[拡張機能と更新プログラム]\([オプション] ダイアログ ボックス - [環境])
 このページを使用して、Visual Studio での更新プログラムの実行方法に関するオプションと、拡張機能の更新および検出方法に関するオプションを設定します。  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/31/2017
 ### <a name="additional-extension-galleries"></a>その他の拡張機能のギャラリー  
  専用拡張機能のギャラリーのサポートを有効にするエンタープライズ機能です。 詳細については、「[プライベート ギャラリー](../../extensibility/private-galleries.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)

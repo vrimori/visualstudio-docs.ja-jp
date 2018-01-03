@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 83bd33e6da9795a7e4e638fa91612e930a882cb0
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: b82860f4bdbf206441591703137f15decb294269
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール
 Windows 8 および Windows Server 2012 から強化されたセキュリティ機能によって、Visual Studio パフォーマンス ツールがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 このトピックでは、Windows 8 および Windows Server 2012 プラットフォームからのパフォーマンス ツールの変更点について説明します。
@@ -62,7 +63,7 @@ Windows 8 および Windows Server 2012 から強化されたセキュリティ�
   
  [プロファイリング ツール](profiling-tools.md)  
   
--   [JavaScript メモリ](../profiling/javascript-memory.md)
+-   [[JavaScript メモリ]](../profiling/javascript-memory.md)
   
 -   [ローカル コンピューターでの UWP アプリの Visual C++、Visual C#、および Visual Basic コードのプロファイリング](http://msdn.microsoft.com/en-us/2d0c939e-0bac-48c5-b727-46f6c6113060)  
   
@@ -140,7 +141,7 @@ Windows 8 および Windows Server 2012 から強化されたセキュリティ�
   
  階層相互作用データは、 [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)] または [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)] IDE でのみ表示できます。 [VSPerfReport](../profiling/vsperfreport.md) の使用による、ファイル ベースの階層相互作用レポートは利用できません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス エクスプローラー](../profiling/performance-explorer.md)   
  [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)   
  [コマンドラインからのプロファイリング](../profiling/using-the-profiling-tools-from-the-command-line.md)

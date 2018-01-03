@@ -40,11 +40,12 @@ caps.latest.revision: "31"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a2b925e32711e1624a4dfbe74fb5614ee6e0b062
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 72081f6c140c4634918e67098493cb37bb324848
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="finding-and-replacing-text"></a>Finding and Replacing Text
 Visual Studio Code エディターや、**[検索結果]** ウィンドウなど特定のテキストベースの出力ウィンドウでは、**[検索と置換]** コントロールまたは **[フォルダーを指定して検索]/[フォルダーを指定して置換]** を使用して、テキストの検索と置換を行うことができます。 検索と置換は、XAML デザイナー、Windows フォーム デザイナー、ツール ウィンドウなどのデザイナー ウィンドウでも実行することができます。  
@@ -79,5 +80,5 @@ Visual Studio Code エディターや、**[検索結果]** ウィンドウなど
 ### <a name="creating-custom-component-sets"></a>カスタムのコンポーネント セットの作成  
  **[検索対象]** ボックスの横にある **[カスタム コンポーネント セットの編集]** をクリックすると、コンポーネント セットを検索スコープとして定義できます。 インストールされている .NET または COM コンポーネント、ソリューションに含まれている Visual Studio プロジェクト、または任意のアセンブリやタイプ ライブラリ (.dll、.tlb、.olb、.exe、.ocx) を指定できます。 参照を検索するには、**[参照内で検索]** チェック ボックスをオンにします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio での正規表現の使用](../ide/using-regular-expressions-in-visual-studio.md)

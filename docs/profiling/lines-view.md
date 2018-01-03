@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fa6492447650be1b7ab9db1725b7146fa808ecc9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3b645a6cee08f1b27e353f01aaedcbc258d6d98f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lines-view"></a>行ビュー
 行ビューは、サンプリング メソッドを使用して収集したプロファイラー データに対してのみ使用できます。 このビューは、インストルメンテーションを使用して収集したデータに対しては使用できません。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/31/2017
   
 -   ステートメントが終了するソース行の文字。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [行ビュー](../profiling/lines-view-sampling-data.md)   
  [行ビュー - サンプリング](../profiling/lines-view-dotnet-memory-sampling-data.md)   
- [行ビュー](../profiling/lines-view-contention-data.md)
+ [行 ビュー](../profiling/lines-view-contention-data.md)

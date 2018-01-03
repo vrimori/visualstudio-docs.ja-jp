@@ -15,17 +15,18 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 82c34ef71777c42b2fa743817d731a66b2b8bee9
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: 3759133ef7a2be2a7c4c7d04d1b2d444269b7005
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="call-tree-view---sampling-data"></a>コール ツリー ビュー - サンプリング データ
 コール ツリー ビューには、プロファイル対象アプリケーションで走査された関数の実行パスが表示されます。  
   
 > [!NOTE]
->  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 ｢[Performance Tools on Windows 8 and Windows Server 2012 applications](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md) (Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール)」をご覧ください。  
+>  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
   
  ツリーのルートは、アプリケーションまたはコンポーネントへのエントリ ポイントです。 各関数ノードは、呼び出したすべての関数と、その関数呼び出しに関するパフォーマンス データを表示します。  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/11/2017
   
  ルート ノードを設定すると、選択したノードのサブツリーを除く他のすべてのエントリはビューから除外されます。 ルート ノードを元のノードに戻すには、[コール ツリー] ウィンドウ内の任意の場所で右クリックし、**[ルートのリセット]** をクリックします。  
   
-|列|説明|  
+|Column|説明|  
 |------------|-----------------|  
 |**プロセス ID**|プロファイリング実行のプロセス ID (PID) です。|  
 |**プロセス名**|プロセスの名前です。|  
@@ -53,9 +54,9 @@ ms.lasthandoff: 11/11/2017
 |**サンプル数 (関数のみ)**|この関数がコール ツリー内の親関数から呼び出されたときに、この関数で収集されたサンプルの数。 この数値には、この関数によって呼び出された関数で収集されたサンプルは含まれません。|  
 |**サンプル % (関数のみ)**|この関数がコール ツリーの親関数から呼び出されたときの、プロファイル実行のすべてのサンプル数に対する、この関数 (子関数を含まない) のサンプル数の割合。|  
 |**サンプル数 (子を含む)**|この関数がコール ツリー内の親関数から呼び出されたときに、この関数で収集されたサンプルの数。 この数値には、この関数によって呼び出された関数で収集されたサンプルが含まれます。|  
-|**サンプル % (子を含む)**|この関数がコール ツリーの親関数から呼び出されたときの、プロファイル実行のすべてのサンプル数に対する、この関数およびその子関数のサンプル数の割合。|  
+|**包括サンプル %**|この関数がコール ツリーの親関数から呼び出されたときの、プロファイル実行のすべてのサンプル数に対する、この関数およびその子関数のサンプル数の割合。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [コール ツリー ビュー - プロファイラー サンプリング データ](../profiling/call-tree-view-sampling-data.md)   
  [コール ツリー ビュー - サンプリング](../profiling/call-tree-view-dotnet-memory-sampling-data.md)   

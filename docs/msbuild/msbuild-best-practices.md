@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 881075ee32ccac155237035dbe1a2f6d17a82893
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9634fe1a0fa26d5180edc9312b925e6740bac216
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msbuild-best-practices"></a>MSBuild のベスト プラクティス
 MSBuild スクリプトを記述するための次のベスト プラクティスを推奨します。  
@@ -34,5 +35,5 @@ MSBuild スクリプトを記述するための次のベスト プラクティ�
   
 -   項目を選択するときに、ワイルドカードを避けます。 代わりに、ファイルを明示的に指定します。 ファイルを追加または削除する場合に発生する可能性のあるエラーを追跡しやすくなります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [詳細な概念](../msbuild/msbuild-advanced-concepts.md)

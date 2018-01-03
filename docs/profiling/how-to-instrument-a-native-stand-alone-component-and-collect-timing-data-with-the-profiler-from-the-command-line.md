@@ -12,11 +12,12 @@ caps.latest.revision: "25"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0aa46133a2ad57444b563adea0df2e1ff6a4aec0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: cplusplus
+ms.openlocfilehash: 8887b9ef7663f3c1748c4de3571a076a89d63087
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-instrument-a-native-stand-alone-component-and-collect-timing-data-with-the-profiler-from-the-command-line"></a>方法: コマンド ラインからプロファイラーを使用してスタンドアロンのネイティブ コンポーネントをインストルメントし、タイミング データを収集する
 ここでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのコマンド ライン ツールを使用して、C++ .exe や .dll ファイルなどのネイティブ コンポーネントをインストルメントし、詳細なタイミング データを収集する方法について説明します。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  一般的な方法で対象のアプリケーションを起動します。  
   
-## <a name="controlling-data-collection"></a>データ収集の制御  
+## <a name="controlling-data-collection"></a>データ コレクションの制御  
  対象アプリケーションの実行中に、**VSPerfCmd.exe** のオプションを使用してファイルへのデータ書き込みを開始および停止することにより、データ収集を制御できます。 データ コレクションを制御することにより、アプリケーションの起動や終了など、プログラム実行の特定の部分についてのデータ コレクションを行うことができます。  
   
 #### <a name="to-start-and-stop-data-collection"></a>データ収集を開始および停止するには  
@@ -82,6 +83,6 @@ ms.lasthandoff: 10/31/2017
   
      **VSPerfCmd /shutdown**  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [スタンドアロン アプリケーションのプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [インストルメンテーション メソッドのデータ ビュー](../profiling/instrumentation-method-data-views.md)

@@ -16,13 +16,14 @@ caps.latest.revision: "45"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6547c139df10498c7be7c2ad13401001d38c067d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f95197bcd7315f432ce2fff2bd1e5dae1005e7e7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="performance-explorer"></a>パフォーマンス エクスプ ローラー
+# <a name="performance-explorer"></a>パフォーマンス エクスプローラー
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールによって、開発者は、コード内のパフォーマンス関連の問題を計測、評価、および特定することができます。 これらのツールは IDE に完全に統合されており、シームレスでわかりやすいユーザー エクスペリエンスを提供します。  
   
  アプリケーションのプロファイリングは簡単です。 新しいパフォーマンス セッションを作成することによって開始します。 Visual Studio Team System Development Edition では、パフォーマンス セッション ウィザードを使用して新しいパフォーマンス セッションを作成できます。 パフォーマンス セッション終了後、プロファイリング中に収集されたデータが .vsp ファイルに保存されます。 .vsp ファイルは IDE 内で参照できます。 いくつかのレポート ビューを使用して、収集したデータからパフォーマンス上の問題を視覚化し、検出できます。  
@@ -47,5 +48,5 @@ ms.lasthandoff: 10/31/2017
 |**プロファイリングをプログラムで制御する:** プロファイリング ツールのマネージ API とネイティブ API を使用して、ソース コードから直接データ コレクションを制御する方法について説明します。|[プロファイリング ツールの API](../profiling/profiling-tools-apis.md)|  
 |**プロファイリングに関する問題のトラブルシューティング**|[パフォーマンス ツールに関する問題のトラブルシューティング](../profiling/troubleshooting-performance-tools-issues.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロファイリング ツール](../profiling/profiling-tools.md)

@@ -19,11 +19,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 577c6a7b76bcecb3c3f5fc7889d75b5fd3ff1ce0
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: 888f8f39b409559ac4d5c219f024a867f71b2263
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-regular-expressions-in-visual-studio"></a>Visual Studio での正規表現の使用
 
@@ -40,9 +41,9 @@ ms.lasthandoff: 12/07/2017
 
 次にいくつかの例を示します。
 
-|目的|式|例|
+|目的|正規表現|例|
 |-------------|----------------|-------------|
-|(改行を除く) 任意の 1 文字に一致します。|」を参照してください。|`a.o` は、"around" の "aro" および "about" の "abo" には一致しますが、"across" の "acro" には一致しません。|  
+|(改行を除く) 任意の 1 文字に一致します。|である必要があります。|`a.o` は、"around" の "aro" および "about" の "abo" には一致しますが、"across" の "acro" には一致しません。|  
 |直前の正規表現の 0 回以上の繰り返しに一致します (一致する文字列の長さを最大限にします)。|*|`a*r` は、"rack" の中の "r"、"ark" の中の "ar"、"aardvark" の中の "aar" に一致します。|  
 |0 回以上の任意の文字に一致します (ワイルドカード *)|.*|c.*e は、"racket" の中の "cke"、"comment" の中の "comme"、"code" の中の "code" に一致します。|  
 |直前の正規表現の 1 回以上の繰り返しに一致します (一致する文字列の長さを最大限にします)。|+|`e.+e` は、"feeder" の中の "eede" に一致しますが、"ee" には一致しません。|  

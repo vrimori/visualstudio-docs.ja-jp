@@ -11,11 +11,12 @@ ms.assetid: f6337c35-acae-4c5f-b5d9-ac5ff687ef18
 caps.latest.revision: "16"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 64115171c64faf0f62b6530c37fa53c6631ac1d6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 2bbac737c6f5bbb3dbe99b0ceae2eb648bcf4295
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-code-coverage-analysis"></a>コード カバレッジ分析のカスタマイズ
 既定では、Visual Studio Code カバレッジ ツールは、単体テスト中に読み込まれるすべてのソリューション アセンブリ (.exe/.dll) を分析します。 多くの場合は、この設定が効果的なので、既定のままにしておくことをお勧めします。 詳細については、「[コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)」を参照してください。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/27/2017
 >  シンボルの解決には、特に多数のアセンブリでリモートのファイルの場所を使用している場合、時間がかかることがあります。 そのため、リモート .pdb ファイルをバイナリ (.dll または .exe) ファイルと同じローカルの場所にコピーすることを検討してください。  
   
 ### <a name="excluding-and-including"></a>除外と包含  
- 指定したアセンブリをコード カバレッジ分析から除外できます。 次に例を示します。  
+ 指定したアセンブリをコード カバレッジ分析から除外できます。 例:  
   
 ```minterastlib  
 <ModulePaths>  
@@ -115,7 +116,7 @@ ms.lasthandoff: 10/27/2017
   
  すべての一致で、大文字と小文字が区別されます。  
   
- 次に例を示します。  
+ 例:  
   
 ```xml  
 <ModulePaths>  
@@ -153,7 +154,7 @@ ms.lasthandoff: 10/27/2017
   
  **関数名の一致**  
   
- 正規表現が、名前空間、クラス名、メソッド名、およびパラメーター リストを含む関数の完全修飾名と一致する必要があります。 次に例を示します。  
+ 正規表現が、名前空間、クラス名、メソッド名、およびパラメーター リストを含む関数の完全修飾名と一致する必要があります。 たとえば、オブジェクトに適用された  
   
 -   C# または Visual Basic: `Fabrikam.Math.LocalMath.SquareRoot(double)`  
   
@@ -325,6 +326,6 @@ Included items must then not match any entries in the exclude list to remain inc
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)   
  [コードの単体テスト](../test/unit-test-your-code.md)

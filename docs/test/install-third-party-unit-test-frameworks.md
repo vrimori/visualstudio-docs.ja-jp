@@ -11,16 +11,17 @@ ms.assetid: 47893b70-46f8-49dc-84bd-ec820178f683
 caps.latest.revision: "10"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 343935b46b17f876b6bde65d3bd1547069447730
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 65f9a9dd0e07a86ee6a4b883a7318f9add7df3cf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="install-third-party-unit-test-frameworks"></a>サードパーティ製の単体テスト フレームワークをインストールする
 Visual Studio テスト エクスプ ローラーは、エクスプ ローラーのアダプター インターフェイスを開発した単体テスト フレームワークを実行できます。 フレームワークのインストール プログラムは、バイナリをインストールし、サポートする言語の Visual Studio プロジェクト テンプレートを追加します。 テンプレートを使用してプロジェクトを作成する際、フレームワークはテスト エクスプ ローラーに登録されます。 Visual Studio ソリューションには異なるフレームワークを使用する単体テスト プロジェクトと、異なる言語を対象とした単体テスト プロジェクトを含めることができます。 テスト エクスプ ローラーはそれらすべてを実行します。  
   
- **Requirements**  
+ **必要条件**  
   
 -   Visual Studio Enterprise、Visual Studio Professional  
   
@@ -58,5 +59,5 @@ Visual Studio テスト エクスプ ローラーは、エクスプ ローラー
   
 4.  結果の一覧でフレームワークを選択してから、ツールの Visual Studio Marketplace ページに移動します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コードの単体テスト](../test/unit-test-your-code.md)

@@ -14,11 +14,12 @@ ms.assetid: db80aaf2-0652-4d3f-a8c5-2a98fd8502a2
 caps.latest.revision: "30"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: a3ab1b6abf1949dd2c3a6afcca2987ebcf1594b9
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 85abc33ab5dd1253402e020c3b77c1b639e5ae44
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sample-project-for-creating-unit-tests"></a>単体テストを作成するサンプル プロジェクト
 このサンプル コードは、次のチュートリアルで使用するために用意されています。  
@@ -131,7 +132,7 @@ namespace BankAccountNS
 ## <a name="working-with-the-code"></a>コードの操作  
  このコードを操作するには、必要なプロジェクトを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で作成する必要があります。 「[チュートリアル: マネージ コードに対する単体テストの作成と実行](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)」の「チュートリアルを準備する」の手順に従います。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: マネージ コードに対する単体テストの作成と実行](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)   
  [チュートリアル: テストの実行とコード カバレッジの表示](http://msdn.microsoft.com/en-us/d4aab8e2-2140-4975-b4e3-41ef3fa944c8)   
  [チュートリアル : コマンド ライン テスト ユーティリティの使用](http://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867)

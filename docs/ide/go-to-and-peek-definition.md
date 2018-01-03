@@ -15,11 +15,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 467d119e67db254b6e15630c08c411bb15283351
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: db67f01ff2a58ee856e4588df8770fc4edef8ca2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="go-to-definition-and-peek-definition"></a>[定義へ移動] と [定義をここに表示]  
 [定義へ移動] および [定義をここに表示] 機能を使用すると、型またはメンバーの定義を簡単に表示することができます。
@@ -49,6 +50,6 @@ Visual Studio 2017 バージョン 15.4 の場合、マウスを使用すると�
 
 詳細については、「[方法: [定義をここに表示] を使用してコードを表示および編集する (Alt + F12)](how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)」を参照してください。  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [コード間の移動](../ide/navigating-code.md)  
 [方法: [定義をここに表示] を使用してコードを表示および編集する (Alt + F12)](how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)  

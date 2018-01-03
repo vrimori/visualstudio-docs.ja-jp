@@ -11,11 +11,12 @@ ms.assetid: 2e0710a8-8e8a-4f6e-8415-5ab3eb830079
 caps.latest.revision: "14"
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6bfce4aa4153d8f01fa9ef6cd6dc0d4b08eedbc4
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: cplusplus
+ms.openlocfilehash: af55f9f124b2ec609c4f0a590e7c2fab738624d4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-boosttest-for-c-in-visual-studio"></a>Visual Studio で C++ 用の Boost.Test を使用する方法
 **Visual Studio 2017 バージョン 15.5** 以降では、Boost.Test が **C++ ワークロードでのデスクトップ開発**のコンポーネントとして Visual Studio IDE に統合されています。 お使いのコンピューターにインストールするには、Visual Studio インストーラーを起動し、ワークロード コンポーネントの一覧で **Boost.Test Adapter** を見つけます。
@@ -63,7 +64,7 @@ BOOST_AUTO_TEST_CASE(my_boost_test)
 ## <a name="write-and-run-tests"></a>テストを作成して実行する
 Boost テストを作成して実行する準備が整いました。 テスト マクロについては、[Boost Test ライブラリのドキュメント](http://www.boost.org/doc/libs/1_38_0/libs/test/doc/html/index.html)をご覧ください。 **テスト エクスプローラー**を使ってテストを検出、実行、グループ化する方法については、「[テスト エクスプローラーを使用して単体テストを実行する](run-unit-tests-with-test-explorer.md)」をご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [C/C++ 用の単体テストの記述](writing-unit-tests-for-c-cpp.md)
 
 

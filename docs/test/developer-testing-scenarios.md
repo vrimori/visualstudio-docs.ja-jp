@@ -12,11 +12,12 @@ ms.assetid: 9DE41406-8D39-427E-99D9-987E99103B73
 caps.latest.revision: "56"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: feb31e2a5c4abf0013ee4d3ec0a20c7f3cfdff2a
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: f384722161ff46a193c1492698ab9ef7543eaefc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developer-testing-tools-scenarios-and-capabilities"></a>開発者用テスト ツール、シナリオ、および機能
 
@@ -95,7 +96,7 @@ Visual Studio は拡張可能であり、NUnit や xUnit.net などのサード 
 
 ![サード パーティ テストの統合](media/devtest-thirdparty.png)
 
-## <a name="also-see"></a>関連項目
+## <a name="see-also"></a>関連項目
 
 * [単体テストの概要](getting-started-with-unit-testing.md)
 * [Team Foundation Server での単体テストの実行の高速化](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/30/speeding-up-test-execution-in-tfs.aspx)

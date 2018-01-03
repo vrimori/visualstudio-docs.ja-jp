@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: c00b78b3a1d69b0d68abf9d07615bc1875ffc5a4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 34aa890b8aaa4f1b4dd1f61dc79091ed81eb428c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="suspendtracking"></a>SuspendTracking
 現在のコンテキストで追跡を一時停止します。  
@@ -34,8 +35,8 @@ HRESULT WINAPI SuspendTracking(void);
 ## <a name="return-value"></a>戻り値  
  追跡が一時停止された場合、**HRESULT** に **SUCCEEDED** ビットが設定されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** FileTracker.h  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ResumeTracking](../msbuild/resumetracking.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 81856823b511fc89f5f156915f843d4b0202e907
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 026223f89822f2d76aa1185da8691c538b15ee62
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="immediate-window"></a>イミディエイト ウィンドウ
 **[イミディエイト]** ウィンドウは、式のデバックと評価、ステートメントの実行、変数値の出力などのために使用します。 このモードでは、デバッグ時に、開発言語で評価または実行される式を入力できます。 **[イミディエイト]** ウィンドウを表示するには、編集用にプロジェクトを開いて、**[デバッグ]** メニューの **[ウィンドウ]** をポイントし、**[イミディエイト]** をクリックするか、Ctrl キーと Alt キーを押しながら I キーを押します。  
@@ -122,7 +123,7 @@ ms.lasthandoff: 11/02/2017
   
 2.  **[出力]** ウィンドウのテキスト領域で右クリックし、**[例外メッセージ]** をクリックして選択または選択解除します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーでのコード間の移動](../../debugger/navigating-through-code-with-the-debugger.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [Visual Studio でのデバッグ](../../debugger/debugging-in-visual-studio.md)   

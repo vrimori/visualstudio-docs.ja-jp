@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e5e4729ffacfbe1a561af98be202a21dbf958de9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: uwp
+ms.openlocfilehash: cd4d65a4e14f274a167c971383702a789cc2c539
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-elements-in-xaml-designer"></a>XAML デザイナーでの要素の操作
 アプリに、コントロール、レイアウト、図形などの要素を追加するには、XAML、コード、または XAML デザイナーを使用します。 このトピックでは、Visual Studio または Blend for Visual Studio で XAML デザイナーを使用して要素を操作する方法について説明します。  
@@ -121,5 +122,5 @@ ms.lasthandoff: 10/31/2017
   
 -   [ドキュメント アウトライン] ウィンドウまたはアートボードで要素を右クリックし、**[レイアウト]**、**[*PropertyName* のリセット]** の順に選択します。ここで、*PropertyName* は、リセットするプロパティです (あるいは、要素のすべてのレイアウト プロパティをリセットするには、**[レイアウト]**、**[すべてリセット]** の順に選択します)。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XAML デザイナーを使用した UI の作成](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)

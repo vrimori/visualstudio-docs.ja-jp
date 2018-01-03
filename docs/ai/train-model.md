@@ -10,11 +10,12 @@ ms.topic: how-to article
 ms.technology: visual studio
 ms.devlang: multiple
 ms.service: multiple
-ms.openlocfilehash: d8289a482bc83741a6b6bf31499925f5d24d0192
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: azure
+ms.openlocfilehash: af2307638209a54c7ce20df6412a1f95ea51d84d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="train-ai-models-in-azure-batch-ai"></a>Azure Batch AI での AI モデルのトレーニング
 
@@ -31,7 +32,7 @@ Azure Batch AI は、Visual Studio Tools for AI に統合されているため�
     
     ![サンプル ギャラリー](media\train-model\batchai.png)
 
-3. **[ビュー]、[チーム エクスプローラー...]** の順に選択し、**[チーム エクスプローラー]** ウィンドウを開きます。ここでは、GitHub または Visual Studio Team Services に接続したり、リポジトリを複製できます。
+3. **[ビュー]、[チーム エクスプローラー]** の順に選択し、**[チーム エクスプローラー]** ウィンドウを開きます。ここでは、GitHub または Visual Studio Team Services に接続したり、リポジトリを複製したりできます。
 
     ![Visual Studio Team Services、GitHub、およびリポジトリの複製が表示された [チーム エクスプローラー] ウィンドウ](media\train-model\team-explorer.png)
 

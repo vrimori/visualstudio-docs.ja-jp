@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 93efd5d0e0eb391a164f4997b7ddeedab09b4201
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0ec3bfc47829bce2fe5ad836c970cb28f8a1294e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="updateconfiguration-devenvexe"></a>/Updateconfiguration (devenv.exe)
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] にシステム上の [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] パッケージをマージさせ、MEF キャッシュに変更がないかを確認することを通知します。  
@@ -41,6 +42,6 @@ devenv /updateconfiguration
 Devenv.exe /updateconfiguration  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)   
  [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)

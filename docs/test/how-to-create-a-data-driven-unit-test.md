@@ -18,11 +18,12 @@ ms.assetid: a0322bc5-02c8-4f9f-af43-100a60b1bd28
 caps.latest.revision: "33"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: ec1c20ae334e81724af1b8d4e2b25d755a024bdc
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: f0d0250e2810adc8fd79239aa8e0807b04bbf0a3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>方法: データ ドリブン単体テストを作成する
 マネージ コード用の Microsoft の単体テスト フレームワークを使用して、データ ソースからテスト メソッドで使用される値を取得するための単体テスト メソッドを設定できます。 メソッドはデータ ソース内の各行に対して連続して実行されるため、単一のメソッドを使用してさまざまな入力を簡単にテストできます。  
@@ -182,7 +183,7 @@ int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);
   
  テスト対象のメソッドを修正して、テストを再実行すると、結果バーが緑に変わり、テスト メソッドは **[成功したテスト]** グループに移動されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute?displayProperty=fullName>   
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext?displayProperty=fullName>   
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A?displayProperty=fullName>   

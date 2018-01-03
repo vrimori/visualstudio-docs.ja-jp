@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 423b2537b425066ca490eb8ae3c20d17fbc31253
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 80668df65b1250eb579597653cf32ab79d30218c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="text-editor-options-dialog-box"></a>[テキスト エディター]\([オプション] ダイアログ ボックス)
 **[オプション]** ダイアログ ボックスのエディター オプションには、エディターの表示と動作をカスタマイズするための方法が用意されています。  

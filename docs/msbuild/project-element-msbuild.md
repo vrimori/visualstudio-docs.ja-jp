@@ -22,11 +22,12 @@ caps.latest.revision: "31"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 013b8d0f23ad91eb6202f1ca72c36e486b0f53e9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7735cce0a03f31c98cc45b481b8697d306f63f4d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-element-msbuild"></a>Project 要素 (MSBuild)
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="parent-elements"></a>親要素  
  なし。  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法 : 最初にビルドするターゲットを指定する](../msbuild/how-to-specify-which-target-to-build-first.md)   
  [Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)   

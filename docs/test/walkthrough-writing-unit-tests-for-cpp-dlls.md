@@ -10,11 +10,12 @@ ms.topic: article
 ms.assetid: 84575412-1de7-4e53-811d-ae035eb21d13
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 97f5eef312d954445bd208364ccbe48f9325b066
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: cplusplus
+ms.openlocfilehash: 55c6fa99cf22148657f0515d817c6d40525497d1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>方法: C++ DLL 用の単体テストを作成する
 このチュートリアルでは、テスト ファースト メソドロジを使ってネイティブ C++ DLL を開発する方法について説明します。 基本的な手順を以下に示します。  
@@ -325,7 +326,7 @@ ms.lasthandoff: 11/15/2017
   
      また、最低限のコード カバレッジも要求できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [既存の C++ アプリケーションへの単体テストの追加](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)   
  [Microsoft.VisualStudio.TestTools.CppUnitTestFramework の使用](../test/using-microsoft-visualstudio-testtools-cppunittestframework.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)   

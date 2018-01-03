@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 7d996986fbd4bc5df5841b8b74b37b8153495db4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 91544f1ccc30a2f5dca998a0f670c4733cf964ce
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msbuild-advanced-concepts"></a>MSBuild の詳細な概念
 このセクションのドキュメントでは、MSBuild を使用して実行するビルドを向上させる高度なテクニックの使用方法について説明します。  
@@ -33,6 +34,6 @@ ms.lasthandoff: 10/31/2017
 |[マルチ ターゲット](../msbuild/msbuild-multitargeting-overview.md)|.NET Framework のいくつかのバージョンのいずれかで実行するアプリケーションをコンパイルする方法について説明します。|  
 |[ベスト プラクティス](../msbuild/msbuild-best-practices.md)|MSBuild スクリプトを記述するためのベスト プラクティスを紹介します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
  [MSBuild でのログ](../msbuild/logging-in-msbuild.md)

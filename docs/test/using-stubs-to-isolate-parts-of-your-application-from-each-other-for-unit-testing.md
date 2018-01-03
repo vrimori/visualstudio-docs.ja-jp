@@ -11,11 +11,12 @@ ms.assetid: 73519dd9-f3d5-49b6-a634-38881b459ea4
 caps.latest.revision: "17"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: f934ef31d2f348c2784393dbe472a417da0b4cd1
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: dd75aab44b2859aa2200dcfff97b80947f6f6b5c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>スタブを使用して単体テストでアプリケーションの各部分を相互に分離する
 *スタブ型*は、テスト対象のコンポーネントをそれが呼び出した他のコンポーネントから簡単に区別できるようにするために Microsoft Fakes フレームワークによって提供されている 2 つのテクノロジのうちの 1 つです。 スタブは、テスト中に別のコンポーネントの代わりをする短いコードです。 スタブを使用することの利点は、スタブによって一貫した結果が返され、テストを簡単に記述できることです。 また、他のコンポーネントがまだ動作しなくてもテストを実行できます。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/27/2017
   
  スタブは、コードをこのように構成できることに依存しているため、通常は自分が管理しているアプリケーションの 1 つの部分を他の部分から分離するために使用されます。 自分の管理下にない他のアセンブリ (System.dll など) から分離するには、通常は shim を使用します。 「[shim を使用して単体テストでアプリケーションを他のアセンブリから分離する](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)」を参照してください。  
   
- **Requirements**  
+ **必要条件**  
   
 -   Visual Studio Enterprise  
   
@@ -430,7 +431,7 @@ public void TestGetValue()
  コードが他のインスタンス化で `GetValue<T>` を呼び出す場合、スタブは単に動作を呼び出します。  
   
 ###  <a name="BKMK_Partial_stubs"></a> 仮想クラスのスタブ  
- これまでの例では、スタブはインターフェイスから生成されていました。 仮想メンバーまたは抽象メンバーを持つクラスからスタブを生成することもできます。 次に例を示します。  
+ これまでの例では、スタブはインターフェイスから生成されていました。 仮想メンバーまたは抽象メンバーを持つクラスからスタブを生成することもできます。 例:  
   
 ```csharp  
 // Base class in application under test  
@@ -504,5 +505,5 @@ StubBehaviors.Current =
 ### <a name="guidance"></a>ガイダンス  
  [Visual Studio 2012 を使用した継続的配信のためのテスト - 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Microsoft Fakes を使用したテストでのコードの分離](../test/isolating-code-under-test-with-microsoft-fakes.md)

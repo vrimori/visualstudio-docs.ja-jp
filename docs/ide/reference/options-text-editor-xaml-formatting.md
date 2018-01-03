@@ -34,11 +34,12 @@ caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 978a2709fb95a0ade74f5c67d5dc774823ded6a3
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: uwp
+ms.openlocfilehash: a5a3ffde718d951181d788cca5cf57a21cbff4d8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="options-text-editor-xaml-formatting"></a>[オプション]、[テキスト エディター]、[XAML]、[書式設定]
 **[書式設定]** プロパティ ページを使用して、XAML ドキュメントで要素と属性をどのように書式設定するかを指定します。 **[オプション]** ダイアログ ボックスを開くには、**[ツール]** メニューをクリックし、**[オプション]** をクリックします。 **[書式設定]** プロパティ ページにアクセスするには、**[テキスト エディター]**、**[XAML]**、**[書式設定]** ノードを展開します。  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/02/2017
 |**MarkupExtension の終わり中かっこ**|左中かっこ ({) を入力したときに、マークアップ拡張の右中かっこ (}) が自動的に生成されるかどうかを指定します。|  
 |**MarkupExtension のパラメーターを区切るコンマ**|マークアップ拡張に複数のパラメーターを入力したときに、コンマが生成されるかどうかを指定します。|  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [WPF の XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)   
  [方法 : XAML ビュー設定を変更する](http://msdn.microsoft.com/en-us/aee87c79-ca01-4f84-8fb7-a9e47048ee47)   
  [XAML とコードのチュートリアル](http://msdn.microsoft.com/en-us/b3ff41a0-a2a3-4f61-b698-ac88ec8f799c)

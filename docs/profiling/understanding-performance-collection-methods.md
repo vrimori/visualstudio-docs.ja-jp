@@ -14,17 +14,18 @@ caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5ad7ecfb61e1d8ecb7bcb000a659b798eb651461
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: a126ec0329695455013ca8625a8aeb774cf2ad36
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-performance-collection-methods"></a>パフォーマンス収集方法について
 Visual Studio プロファイリング ツールには、パフォーマンス データを収集するための 5 つの方法が用意されています。 ここでは、これらの方法について説明し、特定の方法がデータの収集方法としてどのようなシナリオに適しているのかを示します。  
   
 > [!NOTE]
->  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 ｢[Performance Tools on Windows 8 and Windows Server 2012 applications](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md) (Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール)」をご覧ください。  
+>  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
   
 |メソッド|説明|  
 |------------|-----------------|  
@@ -126,6 +127,6 @@ Visual Studio プロファイリング ツールには、パフォーマンス �
   
  [階層相互作用のビュー](../profiling/tier-interaction-views.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: Web サイトのパフォーマンス データを収集する](../profiling/how-to-collect-performance-data-for-a-web-site.md)   
  [パフォーマンス プロファイリングのビギナーズ ガイド](../profiling/beginners-guide-to-performance-profiling.md)

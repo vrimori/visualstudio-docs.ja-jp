@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fdb1cf075c97290883879537089dcee456351c8d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 039c797fd5ea56a5dd1cff834764b9d905854b56
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runexit-devenvexe"></a>/Runexit (devenv.exe)
 指定したプロジェクトまたはソリューションをコンパイルおよび実行してから、統合開発環境 (IDE) を閉じます。  
@@ -33,10 +34,10 @@ devenv /runexit {SolutionName|ProjectName}
   
 ## <a name="arguments"></a>引数  
  `SolutionName`  
- 必須です。 ソリューション ファイルの完全パスと名前。  
+ 必須。 ソリューション ファイルの完全パスと名前。  
   
  `ProjectName`  
- 必須です。 プロジェクト ファイルの完全パスと名前。  
+ 必須。 プロジェクト ファイルの完全パスと名前。  
   
 ## <a name="remarks"></a>コメント  
  アクティブなソリューション構成に対して指定された設定に従って、指定したプロジェクトまたはソリューションをコンパイルして実行します。 このスイッチはプロジェクトまたはソリューションの実行中に IDE を最小化し、プロジェクトまたはソリューションの実行の完了後に IDE を閉じます。  
@@ -52,7 +53,7 @@ devenv /runexit {SolutionName|ProjectName}
 devenv /runexit "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln"  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)   
  [/Run (devenv.exe)](../../ide/reference/run-devenv-exe.md)   
  [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md)   

@@ -21,11 +21,12 @@ caps.latest.revision: "29"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 5709fc2ea456a8cfa45d8ce01e97c0c79d256c38
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 86c4b896944c3241f01329202696aa72bfd0f160
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="import-element-msbuild"></a>Import 要素 (MSBuild)
 1 つのプロジェクト ファイルの内容を別のプロジェクト ファイルにインポートします。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/31/2017
 |属性|説明|  
 |---------------|-----------------|  
 |`Project`|必須の属性です。<br /><br /> インポートするプロジェクト ファイルのパス。 パスにはワイルドカードを含めることができます。 一致するファイルは、並べ替えられた順にインポートされます。 この機能を使用すると、コード ファイルをディレクトリに追加するだけで、プロジェクトにコードを追加できます。|  
-|`Condition`|省略可能な属性です。<br /><br /> 評価する条件です。 詳細については、[条件](../msbuild/msbuild-conditions.md)をご覧ください。|  
+|`Condition`|省略可能な属性です。<br /><br /> 評価する条件です。 詳細については、「[条件](../msbuild/msbuild-conditions.md)」を参照してください。|  
 
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -113,6 +114,6 @@ ms.lasthandoff: 10/31/2017
 </Project>  
 ```  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)   
  [方法: 複数のプロジェクト ファイルで同じターゲットを使用する](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)

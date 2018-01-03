@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 580d3b5f1dab03e34dac7c452da08e00e453a503
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a8f41fdf3a337fb2dea5ccca7131de34743c9096
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vsperfclrenv"></a>VSPerfCLREnv
 VSPerfCLREnv ツールは、.NET Framework アプリケーションをプロファイルするために必要な環境変数を設定するために使用されます。 このツールでは、次の構文が使用されます。  
@@ -111,5 +112,5 @@ VSPerfCmd /Attach:MyService.exe
   
  プロファイル中に正しい環境が設定されていないと、分析時に警告が報告され、マネージ関数名は正しく解決されません。  
   
-## <a name="see-also"></a>関連項目  
- [コマンド ラインからのプロファイル](../profiling/using-the-profiling-tools-from-the-command-line.md)
+## <a name="see-also"></a>参照  
+ [コマンド ラインからのプロファイリング](../profiling/using-the-profiling-tools-from-the-command-line.md)

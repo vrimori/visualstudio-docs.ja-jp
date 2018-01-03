@@ -11,16 +11,17 @@ ms.assetid: 2000b214-ae92-4334-b549-aa0eb4f45fe1
 caps.latest.revision: "17"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 3e2e14748e27d965762b3245908382b278e6e132
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: e9430c70bdb6120e4d79dfb93c1308ce1b313515
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>コード化された UI テストでの HTML5 コントロールの使用
 コード化された UI テストには、Internet Explorer 9 と Internet Explorer 10 に含まれる HTML5 コントロールの一部のサポートが含まれます。  
   
- **Requirements**  
+ **必要条件**  
   
 -   Visual Studio Enterprise  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/27/2017
   
  ![HTML5 オーディオ コントロール](../test/media/codedui_html5_audio.png "CodedUI_HTML5_Audio")  
   
-|操作|記録中|生成されたコード|  
+|アクション|記録中|生成されたコード|  
 |------------|---------------|--------------------|  
 |**オーディオの再生**<br /><br /> コントロールから直接、またはコントロールのコンテキスト メニューから|\<name> オーディオを 00:00:00 の時点から再生|HtmlAudio.Play(TimeSpan)|  
 |**オーディオの特定の時点にシーク**|\<name> オーディオの 00:01:48 の時点にシーク|HtmlAudio.Seek(TimeSpan)|  
@@ -89,7 +90,7 @@ string Volume
   
  ![HTML5 ビデオ コントロール](../test/media/codedui_html5_video.png "CodedUI_HTML5_Video")  
   
-|操作|記録中|生成されたコード|  
+|アクション|記録中|生成されたコード|  
 |------------|---------------|--------------------|  
 |**ビデオの再生**<br /><br /> コントロールから直接、またはコントロールのコンテキスト メニューから|\<name> ビデオを 00:00:00 の時点から再生|HtmlVideo.Play(TimeSpan)|  
 |**ビデオの特定の時点にシーク**|\<name> ビデオの 00:01:48 の時点にシーク|HtmlVideo.Seek(TimeSpan)|  
@@ -119,7 +120,7 @@ string VideoWidth
   
  ![HTML5 スライダー コントロール](../test/media/codedui_html5_slider.png "CodedUI_HTML5_Slider")  
   
-|操作|記録中|生成されたコード|  
+|アクション|記録中|生成されたコード|  
 |------------|---------------|--------------------|  
 |**スライダーにおける位置の設定**|\<name> スライダー内の \<x> に位置を設定|HtmlSlider.ValueAsNumber=\<x>|  
   
@@ -139,7 +140,7 @@ string ValueAsNumber
   
  ![HTML5 ProgressBar コントロール](../test/media/codedui_html5_progressbar.png "CodedUI_HTML5_ProgressBar")  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [HTML 要素](http://go.microsoft.com/fwlink/?LinkID=232441)   
  [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   
  [コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)   

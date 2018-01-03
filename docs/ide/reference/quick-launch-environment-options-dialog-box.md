@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7cfa9fc89ad2d4776a7aa0b5071db6bd5daddd9a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0f71cca51a27c8ed9d6467d99425d4d3b721d195
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quick-launch-environment-options-dialog-box"></a>[クイック起動] \([オプション] ダイアログ ボックス - [環境])
 **クイック起動**を使用すると、オプション、テンプレート、メニューなどの IDE アセットのアクションをすばやく検索して実行できます。 **クイック起動**を使用してコードおよびシンボルを検索できません。 **クイック起動**の検索ボックスは、メニュー バーの右上隅にあり、Ctrl キーを押しながら Q キーを押すとアクセスできます。 ボックスに検索文字列を入力します。 @ を含む文字列を検索するには、'@@' を使用します。  
@@ -49,6 +50,6 @@ ms.lasthandoff: 10/31/2017
   
  **クイック起動**の使用に関する最新のヒントとテクニックについては、「[The Visual Studio Blog](http://go.microsoft.com/fwlink/?LinkId=236054)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [一般的なユーザー インターフェイス要素 (Visual Studio)](../../ide/reference/general-user-interface-elements-visual-studio.md)   
  [[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)

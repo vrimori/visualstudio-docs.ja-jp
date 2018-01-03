@@ -17,11 +17,12 @@ caps.latest.revision: "53"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d52f6bfe745cf7e8684094cf9244b6eedcba13a9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: da961d153713c996c6f057e7bb0366c747c87205
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-identifying-performance-problems"></a>チュートリアル: パフォーマンスの問題を特定する
 このチュートリアルでは、アプリケーションのプロファイルを行ってパフォーマンス上の問題を特定する方法を示します。  
@@ -158,7 +159,7 @@ ms.lasthandoff: 10/31/2017
   
  アプリケーションを再度実行すると、パフォーマンスが大幅に改善されたことがわかります。 ユーザーが知覚できる程度にパフォーマンスが改善された場合でも、プロファイリング セッションを再び実行することをお勧めします。 ある問題によって他の問題の存在が表面化しない場合があるため、問題を解決したら必ずデータをレビューする必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [概要](../profiling/overviews-performance-tools.md)   
  [はじめに](../profiling/getting-started-with-performance-tools.md)   
  [/Z7、/Zi、/ZI (デバッグ情報の形式)](/cpp/build/reference/z7-zi-zi-debug-information-format)

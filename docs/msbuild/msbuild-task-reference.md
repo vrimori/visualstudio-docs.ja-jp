@@ -18,11 +18,12 @@ caps.latest.revision: "32"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: c0d1474fb03acd838387677786656967e852fdf9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7ae20ab8aead2369ddd3024c84b66003cf958358
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msbuild-task-reference"></a>MSBuild タスク リファレンス
 タスクでは、ビルド プロセスの間に実行するコードを指定します。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に含まれるタスクの一覧を次に示します。 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] をインストールすると、[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] プロジェクトを構築するために次の追加タスクを使用できるようになります。 詳細については、「[Visual C++ に固有の MSBuild タスク](../msbuild/msbuild-tasks-specific-to-visual-cpp.md)」を参照してください。  
@@ -224,7 +225,7 @@ ms.lasthandoff: 10/31/2017
  [XslTransformation タスク](../msbuild/xsltransformation-task.md)  
  XSLT *Extensible Stylesheet Language Transformation* (XSLT) またはコンパイル済み XSLT を使用して XML 入力を変換し、出力デバイスまたはファイルに出力します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
  [タスクの作成](../msbuild/task-writing.md)   
  [タスク](../msbuild/msbuild-tasks.md)

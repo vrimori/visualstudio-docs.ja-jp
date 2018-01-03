@@ -18,11 +18,12 @@ caps.latest.revision: "26"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 78dc3c36a7513a04afd8f8e136996c3f896291e2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 42d412e576ddf9ca53f79b7349d99b87b9ef3238
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-build-events-visual-basic"></a>方法 : ビルド イベントを指定する (Visual Basic)
 Visual Basic のビルド イベントを使用して、コンパイル処理の一部として、スクリプト、マクロ、またはその他のアクションを実行することができます。 コンパイル前のイベントはコンパイル前に発生し、ビルド後のイベントはコンパイル後に発生します。  
@@ -164,7 +165,7 @@ Visual Basic のビルド イベントを使用して、コンパイル処理の
     <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />  
     ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コンパイル プロパティの管理](http://msdn.microsoft.com/en-us/94308881-f10f-4caf-a729-f1028e596a2c)   
  [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)   
  [[発行] ページ (プロジェクト デザイナー)](../ide/reference/publish-page-project-designer.md)   

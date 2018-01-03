@@ -12,11 +12,12 @@ caps.latest.revision: "31"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a500597869b4306ef60dce6caf31bfde813d05e8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: aspnet
+ms.openlocfilehash: 115b8faf48a45181394c4fc954e5d83348bc7224
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーを ASP.NET Web アプリケーションにアタッチし、メモリ データを収集する
 ここでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのコマンド ライン ツールを使用して、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションにプロファイラーをアタッチし、.NET Framework のメモリ割り当ての数とサイズに関するデータを収集する方法について説明します。 .NET Framework メモリ オブジェクトの有効期間に関するデータも収集できます。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
   
 1.  コマンド プロンプト ウィンドウを開きます。  
   
-2.  プロファイル環境変数を初期化します。 種類:  
+2.  プロファイル環境変数を初期化します。 型:  
   
      **VSPerfClrEnv** {**/globalsamplegc** &#124; **/globalsamplegclife**} **[/samplelineoff]**  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  コマンド プロンプト ウィンドウを開きます。 必要に応じて、プロファイラー パスの環境変数を設定します。  
   
-5.  プロファイラーを起動します。 種類:  
+5.  プロファイラーを起動します。 型:  
   
      **VSPerfCmd**  [/start](../profiling/start.md) **:sample**  [/output](../profiling/output.md) **:** `OutputFile` [`Options`]  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 10/31/2017
   
 6.  一般的な方法で [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションを起動します。  
   
-7.  プロファイラーを [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセスにアタッチします。 種類:  
+7.  プロファイラーを [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセスにアタッチします。 型:  
   
      **VSPerfCmd**  [/attach](../profiling/attach.md) **:**{`PID`&#124;`ProcName`} [[/targetclr](../profiling/targetclr.md)**:**`Version`]  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 10/31/2017
   
     -   **/targetclr:** `Version` には、アプリケーションに複数のバージョンのランタイムが読み込まれている場合に、プロファイリングを行う共通言語ランタイム (CLR) のバージョンを指定します。  
   
-## <a name="controlling-data-collection"></a>データ収集の制御  
+## <a name="controlling-data-collection"></a>データ コレクションの制御  
  アプリケーションの実行中に、**VSPerfCmd.exe** オプションを使用して、プロファイラーのデータ ファイルへのデータ書き込みを開始および停止することにより、データ収集を制御できます。 データ コレクションを制御することにより、アプリケーションの起動や終了など、プログラム実行の特定の部分についてのデータ コレクションを行うことができます。  
   
 #### <a name="to-start-and-stop-data-collection"></a>データ コレクションを開始および停止するには  
@@ -109,9 +110,9 @@ ms.lasthandoff: 10/31/2017
   
     -   「**VSPerfCmd** [/detach](../profiling/detach.md)」と入力します  
   
-         または  
+         - または -  
   
-    -   [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセスを終了します。 種類:  
+    -   [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセスを終了します。 型:  
   
      **IISReset /stop**  
   
@@ -119,14 +120,14 @@ ms.lasthandoff: 10/31/2017
   
      **VSPerfCmd /shutdown**  
   
-3.  (省略可能) プロファイル環境変数を削除します。 種類:  
+3.  (省略可能) プロファイル環境変数を削除します。 型:  
   
      **VSPerfCmd /globaloff**  
   
-4.  コンピューターを再起動します。 必要に応じて、インターネット インフォメーション サービス (IIS: Internet Information Services) を再起動します。 種類:  
+4.  コンピューターを再起動します。 必要に応じて、インターネット インフォメーション サービス (IIS: Internet Information Services) を再起動します。 型:  
   
      **IISReset /start**  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
  [.NET メモリのデータ ビュー](../profiling/dotnet-memory-data-views.md)

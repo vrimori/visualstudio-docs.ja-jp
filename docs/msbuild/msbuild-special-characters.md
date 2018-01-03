@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 04b679ed649bc4fe01a2bccb08a8c5e137b6141d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9859cf55b3b9fd4745c5e799a9a54e7c1d2cb9cd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msbuild-special-characters"></a>MSBuild の特殊文字
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、特定の文脈で特別な使い方をするためにいくつかの文字が予約されています。 予約されている文脈でそのような文字を文字通り使用するには、エスケープする必要があります。 たとえば、アスタリスクは、項目定義の `Include` 属性と `Exclude` 属性、ならびに `CreateItem` の呼び出しで特別な意味を持ちます。 このような文脈でアスタリスクをアスタリスクとして表示するには、エスケープする必要があります。 その他の文脈では、アスタリスクを使う場所でそれを入力できます。  
@@ -40,6 +41,6 @@ ms.lasthandoff: 10/31/2017
 |?|%3F|`Include` 属性と `Exclude` 属性のファイル名のワイルドカード文字|  
 |*|%2A|`Include` 属性と `Exclude` 属性のファイル名で使用するワイルドカード文字|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [詳細な概念](../msbuild/msbuild-advanced-concepts.md)   
  [項目](../msbuild/msbuild-items.md)

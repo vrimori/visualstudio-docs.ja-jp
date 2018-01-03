@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6870313900da464bb2e8a9ae7facfea8c87b72d4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: cplusplus
+ms.openlocfilehash: 76485b85ffcf44ef94e116350ca8c7a3dc371bf8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="options-text-editor-cc-advanced"></a>[オプション]、[テキスト エディター]、[C/C++]、[詳細]
 これらのオプションを変更することによって、C または C++ でプログラミングを行うときに、IntelliSense に関連する動作と参照データベースを変更できます。  
@@ -165,5 +166,5 @@ ms.lasthandoff: 10/31/2017
  **優先順位の展開を有効にする**  
  有効にすると、テキスト エディターに '(' を入力すれば選んだテキストがかっこで囲まれます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [言語固有のエディター オプションの設定](../../ide/reference/setting-language-specific-editor-options.md)

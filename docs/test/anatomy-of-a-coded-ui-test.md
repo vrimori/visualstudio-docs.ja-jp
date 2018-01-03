@@ -12,16 +12,17 @@ ms.assetid: 9c5d82fc-3fb7-4bb1-a9ac-ac1fa3a4b500
 caps.latest.revision: "23"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 5eb576be81849215f1413a7b58c6e460479af7f3
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 04472a9dee89a270c78876022b16ef54f200ecd0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="anatomy-of-a-coded-ui-test"></a>コード化された UI テストの構造
 コード化された UI テスト プロジェクトでコード化された UI テストを作成すると、ソリューションに複数のファイルが追加されます。 このトピックでは、コード化された UI テストの例を使用して、これらのファイルを参照します。  
   
- **Requirements**  
+ **必要条件**  
   
 -   Visual Studio Enterprise  
   
@@ -30,10 +31,10 @@ ms.lasthandoff: 10/27/2017
   
 |ファイル|目次|編集可能かどうか|  
 |----------|--------------|---------------|  
-|[UIMap.Designer.cs](#UIMapDesignerFile)|[宣言セクション](#UIMapDesignerFile)<br /><br /> [UIMap クラス](#UIMapClass) (部分クラス、自動生成)<br /><br /> [メソッド](#UIMapMethods)<br /><br /> [プロパティ](#UIMapProperties)|いいえ|  
-|[UIMap.cs](#UIMapCS)|[UIMap クラス](#UIMapCS) (部分クラス)|はい|  
-|[CodedUITest1.cs](#CodedUITestCS)|[CodedUITest1 クラス](#CodedUITestCS)<br /><br /> [メソッド](#CodedUITestMethods)<br /><br /> [プロパティ](#CodedUITestProperties)|はい|  
-|[UIMap.uitest](#UIMapuitest)|テストに使用する UI の XML マップ。|いいえ|  
+|[UIMap.Designer.cs](#UIMapDesignerFile)|[宣言セクション](#UIMapDesignerFile)<br /><br /> [UIMap クラス](#UIMapClass) (部分クラス、自動生成)<br /><br /> [メソッド](#UIMapMethods)<br /><br /> [プロパティ](#UIMapProperties)|×|  
+|[UIMap.cs](#UIMapCS)|[UIMap クラス](#UIMapCS) (部分クラス)|[はい]|  
+|[CodedUITest1.cs](#CodedUITestCS)|[CodedUITest1 クラス](#CodedUITestCS)<br /><br /> [メソッド](#CodedUITestMethods)<br /><br /> [プロパティ](#CodedUITestProperties)|[はい]|  
+|[UIMap.uitest](#UIMapuitest)|テストに使用する UI の XML マップ。|×|  
   
 ###  <a name="UIMapDesignerFile"></a> UIMap.Designer.cs  
  このファイルには、テストの作成時に **[コード化された UI テスト ビルダー]** によって自動的に作成されるコードが含まれます。 このファイルはテストに変更があるたびに再作成されるため、ファイル内のコードに対して追加や変更はできません。  
@@ -266,7 +267,7 @@ public void MyTestCleanup()
   
  `UIMap.uitest` ファイルは直接編集できません。 ただし、コード化された UI ビルダーを使用してテストを変更することはできます。これにより、`UIMap.uitest` ファイルと [UIMap.Designer.cs](#UIMapDesignerFile) ファイルが自動的に変更されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>   
  <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls>   
  <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>   

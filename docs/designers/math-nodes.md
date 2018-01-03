@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 45f65ba7207ceebbe7aec711f9fcedf283573444
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 91d054345394fffd5768d6afefab6b4c970306b8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="math-nodes"></a>数値演算ノード
 シェーダー デザイナーでは、代数演算、論理演算、三角関数演算などの数値演算が演算ノードによって実行されます。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="math-node-reference"></a>数値演算ノードの参照  
   
-|ノード|詳細|プロパティ|  
+|ノード|説明|プロパティ|  
 |----------|-------------|----------------|  
 |**Abs**|指定された入力の要素ごとの絶対値を計算します。<br /><br /> 入力 `X` の要素ごとに、結果のすべての要素が正の値になるように負の値が正の値に変換されます。<br /><br /> **入力:**<br /><br /> `X`: `float`、`float2`、`float3`、または `float4`<br /> 絶対値を決定する値。<br /><br /> `Output:`<br /><br /> `Output`: 入力 `X` と同じ<br /> 要素ごとの絶対値。|なし|  
 |**[追加]**|指定された入力の要素ごとの合計を計算します。<br /><br /> 結果の要素ごとに、入力 `X` と入力 `Y` の対応する要素が合計されます。<br /><br /> **入力:**<br /><br /> `X`: `float`、`float2`、`float3`、または `float4`<br /> 合計する値のいずれか。<br /><br /> `Y`: 入力 `X` と同じ<br /> 合計する値のいずれか。<br /><br /> **出力:**<br /><br /> `Output`: 入力 `X` と同じ<br /> 要素ごとの合計。|なし|  

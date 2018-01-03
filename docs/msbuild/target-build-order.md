@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 7fbe62b55fde85127756b9d73be333068bb9aad3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7768d6ba35c2116c658dcd1b7968080932b99543
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="target-build-order"></a>ターゲットのビルド順序
 あるターゲットへの入力が別のターゲットの出力に依存する場合、ターゲットの順序を指定する必要があります。 以下の属性を使用して、ターゲットを実行する順序を指定できます。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 10/31/2017
  初期ターゲット、既定のターゲット、またはコマンド ラインのターゲットがいずれも指定されていない場合、MSBuild はプロジェクト ファイル内またはインポートされたプロジェクト ファイル内で検出された最初のターゲットを実行します。  
   
 ## <a name="target-dependencies"></a>ターゲットの依存関係  
- ターゲット同士は相互に依存関係を記述できます。 `DependsOnTargets` 属性は、ターゲットが他のターゲットに依存していることを示します。 次に例を示します。  
+ ターゲット同士は相互に依存関係を記述できます。 `DependsOnTargets` 属性は、ターゲットが他のターゲットに依存していることを示します。 たとえば、オブジェクトに適用された  
   
 ```xml  
 <Target Name="Serve" DependsOnTargets="Chop;Cook" />  
@@ -120,5 +121,5 @@ ms.lasthandoff: 10/31/2017
   
 7.  あるターゲットが実行またはスキップされると、その後、そのターゲットを `AfterTargets` 属性に一覧表示しているターゲットが実行されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ターゲット](../msbuild/msbuild-targets.md)

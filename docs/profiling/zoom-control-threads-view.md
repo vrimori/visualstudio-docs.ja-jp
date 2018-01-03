@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3f655af14204f7dcf0812ce5ee32676225d5b3ef
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0e9d240defd8788408a585d5ff33b2561e517027
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="zoom-control-threads-view"></a>ズーム コントロール (スレッド ビュー)
 ズーム コントロールは、タイムラインの表示を拡大縮小するのに役立つスライダーです。このコントロールを使用して、興味のある領域を集中的に見ることができます。 このコントロールではタイムライン ビューの中央が拡大の中心点になるため、拡大する前に、対象となる領域が中央に置かれるように調整してください。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="zooming-in-and-out-by-using-the-mouse-wheel"></a>マウス ホイールを使用した拡大縮小  
  タイムライン上の任意の点をクリックし (マウス フォーカスを確実に置くため)、Ctrl キーを押しながらマウス ホイールを移動します (拡大するには前方へ、縮小するには後方へ)。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チャネルの管理](../profiling/manage-channels.md)   
  [測定モード オン/オフ](../profiling/measure-mode-on-off.md)   
  [スレッド ビュー](../profiling/threads-view-parallel-performance.md)   

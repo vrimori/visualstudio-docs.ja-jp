@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b2d86a6025e2ec9c2ba92870939248cf2dffb5b5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: xplat-cplusplus
+ms.openlocfilehash: d677c74d44f1ddc0b250d6763cef4738cd642832
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="install-visual-c-for-cross-platform-mobile-development"></a>Visual C++ for Cross-Platform Mobile Development のインストール
 [Visual C++ for Cross-Platform Mobile Development](http://go.microsoft.com/fwlink/p/?LinkId=536383) は、Visual Studio 2015 付属のインストール可能なコンポーネントです。 クロス プラットフォームの Visual Studio テンプレートが含まれており、クロス プラットフォーム ツールおよび SDK をインストールしてすぐに開始できるようにします。それらを自分で検索、ダウンロード、構成する必要はありません。 これらのツールを Visual Studio で使用することで、クロス プラットフォーム プロジェクトを簡単に作成、編集、デバッグ、テストできます。 このトピックでは、Visual Studio を使用してクロス プラットフォーム アプリを開発するために必要なツールとサード パーティのソフトウェアをインストールする方法について説明します。 コンポーネントの概要については、「 [Visual C++ クロスプラットフォーム モバイル](http://go.microsoft.com/fwlink/p/?LinkId=536387)」をご覧ください。  
@@ -132,6 +133,6 @@ ms.lasthandoff: 10/31/2017
   
 4.  **[OK]** を選んで、カスタム ツール フォルダーの場所を保存します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [iOS を使用してビルドするためのツールのインストールおよび構成](../cross-platform/install-and-configure-tools-to-build-using-ios.md)   
  [Visual C++ クロスプラットフォーム モバイル](https://www.visualstudio.com/explore/cplusplus-mdd-vs.aspx)

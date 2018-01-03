@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9f3b469466080403122484a7b6259c099765edd7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ad7f0232a4e08c134a7dffcc3d10a2180e235717
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="new-file-command"></a>NewFile コマンド
 新規ファイルを作成して開きます。 ファイルは [その他のファイル] フォルダーの下に表示されます。  
@@ -33,11 +34,11 @@ File.NewFile [filename] [/t:templatename] [/editor:editorname]
   
 ## <a name="arguments"></a>引数  
  `filename`  
- 省略可能です。 ファイルの名前。 名前を指定しない場合は、既定の名前が付けられます。 テンプレート名がない場合は、テキスト ファイルが作成されます。  
+ 任意。 ファイルの名前。 名前を指定しない場合は、既定の名前が付けられます。 テンプレート名がない場合は、テキスト ファイルが作成されます。  
   
 ## <a name="switches"></a>スイッチ  
  /t: `templatename`  
- 省略可能です。 作成するファイルの種類を指定します。  
+ 任意。 作成するファイルの種類を指定します。  
   
  /t:`templatename` 引数の構文は、[新しいファイル] ダイアログ ボックスにある情報を反映します。 カテゴリ名に続けて円記号 (`\`)、およびテンプレート名を入力し、文字列全体を引用符で囲みます。  
   
@@ -50,7 +51,7 @@ File.NewFile [filename] [/t:templatename] [/editor:editorname]
  上の例で、C++ File のテンプレートは **[新しいファイル]** ダイアログ ボックスの [Visual C++] カテゴリにあります。  
   
  /e:`editorname`  
- 省略可能です。 ファイルを開くために使用するエディターの名前です。 引数は指定されていても、エディター名がない場合、**[プログラムから開く]** ダイアログ ボックスが表示されます。  
+ 任意。 ファイルを開くために使用するエディターの名前です。 引数は指定されていても、エディター名がない場合、**[プログラムから開く]** ダイアログ ボックスが表示されます。  
   
  /e:`editorname` 引数の構文では、[ファイルを開くアプリケーションの選択] ダイアログ ボックスで表示されるようにエディター名を入力し、引用符で囲みます。  
   
@@ -67,7 +68,7 @@ File.NewFile [filename] [/t:templatename] [/editor:editorname]
 >File.NewFile test1 /t:"General\HTML Page" /e:"Source Code (text) Editor"  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [イミディエイト ウィンドウ](../../ide/reference/immediate-window.md)   

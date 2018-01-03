@@ -15,11 +15,12 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e31c9c065f7e285e76d85bbcd901d3a9c23cba6a
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: dotnet
+ms.openlocfilehash: 5607f5a2828b7589cbe803732262a52d9e760421
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="collecting-net-memory-allocation-and-lifetime-data"></a>.NET メモリの割り当ておよび有効期間データの収集
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールは、.NET メモリ割り当てとオブジェクト有効期間データの収集をサポートしています。アプリケーションのメモリに関連するパフォーマンスの問題を検出できます。  
@@ -28,12 +29,12 @@ ms.lasthandoff: 11/11/2017
   
 -   オブジェクトの有効期間データには、3 つのガベージ コレクション生成で解放される .NET Framework メモリ オブジェクトのサイズと数が含まれています。  
   
- **Requirements**  
+ **必要条件**  
   
--   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、[!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、[!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
+-   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
 > [!NOTE]
->  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 ｢[Performance Tools on Windows 8 and Windows Server 2012 applications](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md) (Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール)」をご覧ください。  
+>  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
   
  データを収集するには、サンプリングまたはインストルメンテーション プロファイリング メソッドを使用します。  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/11/2017
 |**[CPU カウンター]** ページで、プロファイリング データを追加するプロセッサのパフォーマンス カウンターを 1 つ以上指定します。|-   [方法 : CPU カウンター データを収集する](../profiling/how-to-collect-cpu-counter-data.md)|  
 |**[詳細]** ページで、追加する VSInstr.exe オプションをすべて指定します (特定の関数を含めるオプションや特定の関数を除外するオプションなど)。 VSInstr オプションの詳細については、「[VSInstr](../profiling/vsinstr.md)」を参照してください。|-   [方法 : 追加のインストルメンテーション オプションを指定する](../profiling/how-to-specify-additional-instrumentation-options.md)<br />-   [方法 : インストルメンテーションを特定の関数に制限する](../profiling/how-to-limit-instrumentation-to-specific-functions.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)   
  [方法: 収集方法を選択する](../profiling/how-to-choose-collection-methods.md)   
  [パフォーマンス セッションのプロパティ](../profiling/performance-session-properties.md)

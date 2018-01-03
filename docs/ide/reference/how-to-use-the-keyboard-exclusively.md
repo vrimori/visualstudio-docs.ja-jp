@@ -18,11 +18,12 @@ ms.assetid: d71a4cc1-d352-4164-8538-3f9fa070a331
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 895b2a7f8dd60cdddb2eb785a732032524174d4c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 882a21dbace4197d93a3a3c985a58a0c938e4f2a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-keyboard-exclusively"></a>方法: キーボード主体で操作する
 > [!TIP]
@@ -98,7 +99,7 @@ ms.lasthandoff: 10/31/2017
 
      ツール ウィンドウが、新しいドッキング場所の所定の位置にスナップされます。  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [キーボード ショートカットの識別とカスタマイズ](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)   
  [アクセシビリティのヒントとテクニック](../../ide/reference/accessibility-tips-and-tricks.md)   
  [既定のキーボード ショートカット](../../ide/default-keyboard-shortcuts-in-visual-studio.md)

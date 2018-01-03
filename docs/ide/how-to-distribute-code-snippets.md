@@ -14,11 +14,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 dev_langs: VB
-ms.openlocfilehash: e4c103aec04a9012b82c5fe979f8d5d23cfa1680
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: 39f6006ec6dfe754efc58f2ccdc7b09d803de6b3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-distribute-code-snippets"></a>方法: コード スニペットを配布する
 コード スニペットは、友人に配布することができます。友人は、コード スニペット マネージャーを使用して、そのスニペットを自分のコンピューターにインストールできます。 ただし、配布するスニペットが複数ある場合や、スニペットをより広範に配布する場合は、スニペット ファイルを Visual Studio 拡張機能に含めると、Visual Studio ユーザーはこれをインストールできます。  
@@ -102,5 +103,5 @@ Visual Studio 拡張機能を作成するには、Visual Studio SDK をインス
     Console.WriteLine("Hello, World!")  
     ```  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [コード スニペット](../ide/code-snippets.md)

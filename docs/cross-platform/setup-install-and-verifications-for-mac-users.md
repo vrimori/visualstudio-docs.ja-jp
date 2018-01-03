@@ -11,11 +11,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: b93ea35fd58d5ee678176e3da98e33b65f82740a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: xamarin
+ms.openlocfilehash: b4656e98095b9ab7ff5dd5e95dd729c972190720
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="setup-install-and-verifications-for-mac-users"></a>Mac ユーザー向けのセットアップ、インストール、および 検証
 このトピックは、主に Mac で作業し、Mac で Windows 仮想マシン内部の Visual Studio を必要に応じて使用する開発者を対象としています。 主に Windows コンピューターで作業する開発者であり、かつ iOS をターゲットとするためにセカンダリの Mac を設定する必要がある場合は、メインの「[Setup and install](../cross-platform/setup-and-install.md)」トピックをご覧ください。

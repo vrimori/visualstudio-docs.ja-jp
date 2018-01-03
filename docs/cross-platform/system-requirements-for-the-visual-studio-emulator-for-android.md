@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 469a8298122abdc96c69f13ed96a893b02575fc9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 571cc5ffc3637ecdca54cda74fd6aa20983fdab6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>System requirements for the Visual Studio Emulator for Android
 Visual Studio Emulator for Android は、Hyper-V 上で仮想マシンとして動作します。Hyper-V は Windows 8 以降のバージョンの仮想化テクノロジです。 エミュレーターを実行するには、このトピックで説明する Hyper-V の要件をコンピューターが満たしている必要があります。  
@@ -155,5 +156,5 @@ Visual Studio Emulator for Android は、Hyper-V 上で仮想マシンとして�
 ## <a name="hardware-graphics-forwarding-opengl-es-support-requirements"></a>ハードウェア グラフィックス転送 (OpenGL ES のサポート) の要件  
  OpenGL ES で使用される GPU など、エミュレーターで GPU の呼び出しをエミュレートするには、適切な DirectX ドライバーがインストールされた DirectX 互換の GPU が必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Emulator for Android のトラブルシューティング](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)

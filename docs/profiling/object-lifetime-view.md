@@ -19,11 +19,12 @@ caps.latest.revision: "24"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b60a28d7422125a745cf1b088891b2675da0bc8a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d8fa19da70b55e4a519153898a800bb259983c39
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="object-lifetime-view"></a>オブジェクトの有効期間ビュー
 オブジェクトの有効期間ビューは、[パフォーマンス セッション] プロパティ ページで **[Also collect .NET object lifetime data]\(.NET オブジェクトの有効期間情報も収集\)** チェック ボックスがオンになっている場合に使用できます。  
@@ -73,5 +74,5 @@ ms.lasthandoff: 10/31/2017
 |**収集された大きなオブジェクト ヒープ (インスタンス数)**|ラージ オブジェクト ヒープに配置され、プロファイル実行で収集された、この型のインスタンスの数。|  
 |**収集された大きなオブジェクト ヒープ (バイト数)**|ラージ オブジェクト ヒープに配置され、プロファイル実行で収集された、この型のインスタンスのサイズ (バイト単位)。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [.NET メモリのデータ ビュー](../profiling/dotnet-memory-data-views.md)

@@ -14,11 +14,12 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 ms.technology: vs-acquisition
-ms.openlocfilehash: 7759e67a4ce886388b9a7afea531448edeefac54
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 990c13a0fa42d845668c66419ab5cd989b6d2d61
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="talk-to-us"></a>Talk to Us
 製品およびドキュメントをより良いものにするために、皆様のご意見をお寄せください。 いつも個別に回答できるとは限りませんが、お寄せいただいたフィードバックは、適切な担当者または担当チームに届けられます。  
@@ -52,5 +53,5 @@ Microsoft サポート サービスは、当時最新だった価格、条項、
 ## <a name="i-want-to-help-improve-the-visual-studio-documentation"></a>Visual Studio ドキュメントの品質向上にご協力ください  
   ページの下部にあるフィードバック ボタン (**[このページは役に立ちましたか]**) をお使いください。 このボタンは、すべてのドキュメント ページに表示されます。 目的の回答が見つからない場合は、お探しの情報の内容をお聞かせください。 (あるいは、[docs.microsoft.com](https://docs.microsoft.com/visualstudio/) 上の Visual Studio ページの [コメント] セクションにフィードバックをお寄せいただくこともできます)。
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio に関する問題を報告する方法](how-to-report-a-problem-with-visual-studio-2017.md)

@@ -15,18 +15,19 @@ caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 761f08adead5037056e07031903517e4f5d76744
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 95869fd4c3b52853417c847d32f7507c90471c2d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-sampling-data-values"></a>サンプリング データ値について
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールの*サンプリング* プロファイル方式では、設定された間隔でコンピューター プロセッサに割り込み、関数の呼び出し履歴を収集します。 *呼び出し履歴*は、プロセッサ上で実行されている関数に関する情報を格納する動的な構造です。  
   
- **Requirements**  
+ **必要条件**  
   
--   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、[!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、[!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
+-   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
  プロファイラー分析は、プロセッサがターゲット プロセス内のコードを実行しているかどうかを判別します。 プロセッサがターゲット プロセス内のコードを実行していない場合、サンプルは破棄されます。  
   
@@ -52,6 +53,6 @@ ms.lasthandoff: 10/31/2017
 ## <a name="exclusive-percent"></a>排他 (%)  
  関数またはデータ範囲の排他サンプル数である、プロファイリング実行での排他サンプル合計数の割合。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: 収集方法を選択する](../profiling/how-to-choose-collection-methods.md)   
  [パフォーマンス ツール データの分析](../profiling/analyzing-performance-tools-data.md)

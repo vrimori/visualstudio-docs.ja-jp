@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 7ce11fb27959f5d468e08f6967b53ac079a2a28e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3db59c3cb9234231a5a5fe4f881857433ab09479
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resolving-assemblies-at-design-time"></a>デザイン時のアセンブリの解決
 [参照の追加] ダイアログの [.NET] タブを使用してアセンブリへの参照を追加する場合、その参照は中間参照アセンブリを指します。つまり、すべての型情報と署名情報を含んでいるが、コードを必ずしも含まないアセンブリを指します。 [.NET] タブには、.NET Framework のランタイム アセンブリに対応する参照アセンブリの一覧が表示されます。 さらに、サードパーティによって使用される、登録済みの AssemblyFoldersEx フォルダーのランタイム アセンブリに対応する参照アセンブリの一覧も表示されます。  
@@ -38,5 +39,5 @@ ms.lasthandoff: 10/31/2017
   
  .NET Framework SDK に現在付属しているターゲット パックには、そのバージョンの Framework のすべてのランタイム アセンブリのリストが含まれています。これは再配布 (Redist) リストと呼ばれます。 これにより、ビルド システムが型を間違ったバージョンのアセンブリに解決することはなくなっています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [詳細な概念](../msbuild/msbuild-advanced-concepts.md)

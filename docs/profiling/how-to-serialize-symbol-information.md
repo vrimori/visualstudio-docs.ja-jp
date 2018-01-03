@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7c91fcc01fd14883c927f5e84a7f2444b768c0ea
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 4941d3b5225a1d9c6b22eda3c8f79ef009f2b169
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-serialize-symbol-information"></a>方法: シンボル情報をシリアル化する
 アプリケーションの分析に必要なシンボルをシリアル化できます。 シンボルをシリアル化すると、.vsp ファイルにシンボルが追加されます。 シンボル情報を .vsp ファイルに追加すると、他のユーザーは元のシンボルにアクセスすることなく、パフォーマンス レポートを分析できるようになります。 シンボルがシリアル化されない場合は、元のインストルメント化された .exe ファイルおよび .pdb ファイルで .vsp ファイルを分析する必要があります。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  **[全般設定]** で **[シンボル情報を自動的にシリアル化]** を選択します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)   
  [方法: Windows シンボル情報を参照する](../profiling/how-to-reference-windows-symbol-information.md)   
  [How to: Save Analyzed Report Files (方法: 分析されたレポート ファイルを保存する)](http://msdn.microsoft.com/en-us/0340ddde-caf4-48ac-8af3-d15dcdade556)

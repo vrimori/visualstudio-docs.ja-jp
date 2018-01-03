@@ -13,11 +13,12 @@ ms.assetid: 76435c4b-593e-43a3-a9fe-709a7f9f5e0f
 caps.latest.revision: "40"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 637bf6a6e52943e2eae247bbe5a40e10c2d3742d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 2bce8aa82b1076860f9c9b96e39e7a13955b9444
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="editing-coded-ui-tests-using-the-coded-ui-test-editor"></a>コード化された UI テスト エディターを使用したコード化された UI テストの編集
 コード化された UI テスト エディターを使用すると、コード化された UI テストを簡単に変更できます。 コード化された UI テスト エディターを使用して、テスト メソッドや UI 操作のプロパティを検索、表示、および編集できます。 また、対応するコントロールを表示および編集するための UI コントロール マップを使用できます。  
@@ -126,7 +127,7 @@ UI 操作のプロパティの編集
   
 -   ![ヒント](../test/media/tip.png "ヒント") 新しいメソッドの名前を変更できます。 [UI 操作] ウィンドウでメソッドを選択し、コード化された UI テスト エディターのツール バーにある **[名前の変更]** をクリックします。  
   
-     または  
+     - または -  
   
      新しいテスト メソッドのショートカット メニューを開き、 **[名前の変更]**をクリックします。  
   
@@ -213,7 +214,7 @@ UI 操作のプロパティの編集
 ### <a name="forum"></a>フォーラム  
  [Visual Studio の UI オートメーションのテスト (CodedUI を含む)](http://go.microsoft.com/fwlink/?LinkID=224497)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   
  [コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)   
  [データ ドリブンのコード化された UI テストの作成](../test/creating-a-data-driven-coded-ui-test.md)   

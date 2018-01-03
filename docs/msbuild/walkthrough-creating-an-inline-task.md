@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 1f10be3f7c021c353851039a7e7d07a250aa83a3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c1f05d94cb836c065597c4c646fd6a74aaff97f0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-inline-task"></a>チュートリアル: インライン タスクの作成
 MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インターフェイスを実装するクラスをコンパイルして作成します。 .NET Framework Version 4 以降では、プロジェクト ファイルでタスクをインラインで作成できます。 個別のアセンブリを作成してタスクをホストする必要はありません。 詳細については、「[インライン タスク](../msbuild/msbuild-inline-tasks.md)」を参照してください。  
@@ -253,7 +254,7 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
   
  `</Code>`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インライン タスク](../msbuild/msbuild-inline-tasks.md)   
  [タスク](../msbuild/msbuild-tasks.md)   
  [ターゲット](../msbuild/msbuild-targets.md)

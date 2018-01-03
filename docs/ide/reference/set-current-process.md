@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6bd4ab27a36e37e31ec348b80327b6046c5ecbd3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: eb673db29a4bb106aa4c9c4d9022293367e8ed4f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-current-process"></a>SetCurrentProcess
 指定されたプロセスをデバッガーでアクティブなプロセスとして設定します。  
@@ -32,7 +33,7 @@ Debug.SetCurrentProcess index
   
 ## <a name="arguments"></a>引数  
  `index`  
- 必須です。 プロセスのインデックスです。  
+ 必須。 プロセスのインデックスです。  
   
 ## <a name="remarks"></a>コメント  
  デバッグ中には複数のプロセスにアタッチできますが、デバッガーでアクティブになっているプロセスは常に 1 つだけです。 `SetCurrentProcess` コマンドを使用すると、アクティブなプロセスを設定できます。  
@@ -43,7 +44,7 @@ Debug.SetCurrentProcess index
 >Debug.SetCurrentProcess 1  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)

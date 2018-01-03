@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bdad50eff09e96c5d9c0513be1f571a901278871
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 21b341f8900664c57fa21d33bc138a969a273759
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="threads-view-parallel-performance"></a>スレッド ビュー (並行処理のパフォーマンス)
 スレッド ビューは、同時実行ビジュアライザーの最も詳細かつ機能豊富なビューです。 このビューを使用すると、スレッドが実行しているか、それとも同期、I/O、またはその他の何らかの理由のためにブロックしているかを識別できます。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/31/2017
   
  スレッドの実行時に、同時実行ビジュアライザーはサンプルを収集します。 スレッド ビューでは、実行セグメント中に 1 つまたは複数のスレッドによって実行されるコードを分析できます。 ブロックのレポートや、呼び出し履歴のツリーの実行のプロファイルを示すレポートを確認することもできます。  
   
-## <a name="usage"></a>使用方法  
+## <a name="usage"></a>使用法  
  スレッド ビューは、次のような目的に使用できます。  
   
 -   アプリケーションのユーザー インターフェイス (UI) が特定の実行フェーズ中に応答しない理由を特定します。  
@@ -147,5 +148,5 @@ ms.lasthandoff: 10/31/2017
 #### <a name="disk-operations"></a>ディスク操作  
  このタブでは、現在のプロセスのために、ディスク I/O に関与したプロセスとスレッド、それによって影響を受けたファイル (読み込まれた DLL など)、読み取られたバイト数、その他の情報を示します。 このレポートを使用して、実行中にファイルへのアクセスに費やされる時間を評価できます (特に、I/O バウンドなプロセスと思われる場合に役立ちます)。 詳細については、「[ディスク操作レポート](../profiling/disk-operations-report-threads-view.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [同時実行ビジュアライザー](../profiling/concurrency-visualizer.md)

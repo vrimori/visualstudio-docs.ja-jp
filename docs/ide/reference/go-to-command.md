@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9273cd908a8948b47b818e9c4333cb8bd70fe094
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 53c45ccf528375bc31b4d61fd6af0193aa295e6c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="go-to-command"></a>GoTo コマンド
 指定した行にカーソルを移動します。  
@@ -33,7 +34,7 @@ Edit.GoTo [linenumber]
   
 ## <a name="arguments"></a>引数  
  `linenumber`  
- 省略可能です。 移動先の行番号を表す整数。  
+ 任意。 移動先の行番号を表す整数。  
   
 ## <a name="remarks"></a>コメント  
  行番号は 1 から始まります。 `linenumber` の値が 1 未満の場合は、最初の行が表示されます。 `linenumber` の値が最終行の値より大きい場合は、最後の行が表示されます。  
@@ -48,7 +49,7 @@ Edit.GoTo [linenumber]
 >Edit.GoTo 125  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   

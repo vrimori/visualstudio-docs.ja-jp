@@ -12,11 +12,12 @@ caps.latest.revision: "16"
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 55e0802f58be0a1ad3a060fce257554b36c01a52
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ab50592e345a54853e9cfbd95d0b9bd1bc86d794
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>手順 1: プロジェクトの作成とフォームへのラベルの追加
 このクイズを開発する最初のステップとして、プロジェクトを作成し、ラベル、ボタン、およびその他のコントロールをフォームに追加します。 また、追加する各コントロールのプロパティを設定します。 プロジェクトには、フォーム、コントロール、およびコード (チュートリアルで後ほど説明) が含まれます。 ボタンはクイズを開始し、ラベルはクイズ問題を表示し、その他のコントロールはクイズの解答とクイズを完了するために残っている時間を示します。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="to-create-a-project-and-and-set-properties-for-a-form"></a>プロジェクトを作成し、フォームのプロパティを設定するには  
   
-1.  メニュー バーで **[ファイル]**、 **[新規]**、 **[プロジェクト]**の順にクリックします。  
+1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
   
 2.  **[インストールされたテンプレート]** の一覧で **[C#]** または **[Visual Basic]** を選択します。  
   

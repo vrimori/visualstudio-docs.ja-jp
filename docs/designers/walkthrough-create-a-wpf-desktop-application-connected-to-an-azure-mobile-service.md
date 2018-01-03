@@ -16,11 +16,12 @@ manager: ghogen
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 28f06905820d890f2f13c3c7e77fd57fb75fe4b6
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: azure
+ms.openlocfilehash: f3fd548234dbd7f02be4abfab77a22d3efd9b34a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service"></a>チュートリアル: Azure モバイル サービスに接続された WPF デスクトップ アプリケーションの作成
 Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル サービスを利用してデータの格納および提供を行う、最新式のデスクトップ アプリケーションをすばやく作成することができます。  
@@ -562,6 +563,6 @@ Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル �
 
  Azure Mobile Services を使用して、既存の SQL データベースや他のデータ ソースに接続することができます。 「 [Mobile Services のドキュメント](http://azure.microsoft.com/en-us/services/app-service/mobile/)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: 初めての WPF デスクトップ アプリケーション](../designers/walkthrough-my-first-wpf-desktop-application2.md)   
  [Windows Presentation Foundation での最新のデスクトップ アプリケーションの作成](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)

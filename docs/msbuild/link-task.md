@@ -34,11 +34,12 @@ caps.latest.revision: "12"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 48cf258dbe267a6e2c2b020ee6613b4dac05b2eb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e7eb9e861898c0874388f9acb4f061a8e902fef1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="link-task"></a>Link タスク
 Visual C++ リンカー ツール (link.exe) をラップします。 リンカー ツールは、COFF (Common Object File Format) オブジェクト ファイルとライブラリをリンクし、実行可能ファイル (.exe) やダイナミック リンク ライブラリ (DLL) を生成します。 詳細については、「[リンカー オプション](/cpp/build/reference/linker-options)」を参照してください。  
@@ -88,7 +89,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **AllowIsolation**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合、オペレーティング システムはマニフェストの検索と読み込みを行います。 `false` の場合は、あたかもマニフェストがないかのように DLL を読み込むことを示します。  
   
@@ -96,7 +97,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **AssemblyDebug**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、**DebuggableAttribute** 属性をデバッグ情報追跡と一緒に出力し、JIT 最適化を無効にします。 `false` の場合は、**DebuggableAttribute** 属性を出力しますが、デバッグ情報追跡を無効にし、JIT 最適化を有効にします。  
   
@@ -126,7 +127,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **BuildingInIDE**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      true の場合は、IDE から MSBuild が呼び出されることを示します。 それ以外の場合は、コマンド ラインから MSBuild が呼び出されることを示します。  
   
@@ -184,7 +185,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **CLRUnmanagedCodeCheck**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      マネージ コードからネイティブ DLL への、リンカーによって生成された P/Invoke 呼び出しに対して、**SuppressUnmanagedCodeSecurityAttribute** を適用するかどうかを指定します。  
   
@@ -210,7 +211,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **DataExecutionPrevention**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、実行可能ファイルで Windows データ実行防止機能との互換性がテストされたことを示します。  
   
@@ -226,7 +227,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **DelaySign**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、アセンブリに部分署名します。 既定では、値は `false` です。  
   
@@ -260,7 +261,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **EnableCOMDATFolding**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、同一の COMDAT が折りたたまれ (圧縮され) ます。  
   
@@ -268,7 +269,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **EnableUAC**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、ユーザー アカウント制御 (UAC) 情報をプログラム マニフェストに組み込むことを指定します。  
   
@@ -284,7 +285,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **FixedBaseAddress**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、指定のベース アドレスだけに読み込まれるプログラムまたは DLL を作成します。  
   
@@ -324,7 +325,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **GenerateDebugInformation**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、.exe ファイルまたは DLL のデバッグ情報を生成します。  
   
@@ -332,7 +333,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **GenerateManifest**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、side-by-side マニフェスト ファイルを作成します。  
   
@@ -340,7 +341,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **GenerateMapFile**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、*マップ ファイル*を作成します。 マップ ファイルのファイル名拡張子は、.map です。  
   
@@ -364,7 +365,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **IgnoreAllDefaultLibraries**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、外部参照の解決時に検索するライブラリ リストから 1 つ以上の既定のライブラリを削除するようリンカーを設定します。  
   
@@ -372,7 +373,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **IgnoreEmbeddedIDL**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、ソース コード内の IDL 属性を .idl ファイルに処理しないことを指定します。  
   
@@ -380,7 +381,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **IgnoreImportLibrary**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合、この構成で生成されるインポート ライブラリは、依存プロジェクトにインポートされません。  
   
@@ -396,7 +397,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **ImageHasSafeExceptionHandlers**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合、リンカーは、イメージの安全な例外ハンドラーのテーブルも生成できる場合のみ、イメージを生成します。  
   
@@ -426,7 +427,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **LargeAddressAware**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合、アプリケーションは 2 ギガバイトを超えるアドレスを処理できます。  
   
@@ -434,7 +435,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **LinkDLL**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、メイン出力ファイルとして DLL をビルドします。  
   
@@ -460,7 +461,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **LinkIncremental**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、インクリメンタル リンクを有効にします。  
   
@@ -468,7 +469,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **LinkLibraryDependencies**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、プロジェクト依存関係からのライブラリ出力を自動的にリンクすることを指定します。  
   
@@ -476,7 +477,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **LinkStatus**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、リンクの何パーセントが完了したかを示す進行状況のインジケーターをリンカーが表示することを指定します。  
   
@@ -514,7 +515,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **MapExports**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、エクスポートされた関数をマップ ファイルに含めるようリンカーを設定します。  
   
@@ -574,7 +575,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **NoEntryPoint**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、リソースのみの DLL を指定します。  
   
@@ -588,7 +589,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **OptimizeReferences**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、参照されることのない関数および/またはデータを削除します。  
   
@@ -604,7 +605,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **PerUserRedirection**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合、出力の登録が有効になっていれば、**HKEY_CLASSES_ROOT** へのレジストリ書き込みは強制的に **HKEY_CURRENT_USER** にリダイレクトされます。  
   
@@ -616,7 +617,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **PreventDllBinding**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、リンクされたイメージをバインドしないことを Bind.exe に指示します。  
   
@@ -648,7 +649,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **RandomizedBaseAddress**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、Windows の ASLR (*Address Space Layout Randomization*) 機能を使用してロード時にランダムに再ベースできる実行可能イメージを生成します。  
   
@@ -656,7 +657,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **RegisterOutput**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、このビルドのプライマリ出力を登録します。  
   
@@ -670,7 +671,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **SetChecksum**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、.exe ファイルのヘッダー内にチェックサムを設定します。  
   
@@ -770,7 +771,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **SupportNobindOfDelayLoadedDLL**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、バインドできるインポート アドレス テーブル (IAT) を最終イメージに含めないようリンカーを設定します。  
   
@@ -778,7 +779,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **SupportUnloadOfDelayLoadedDLL**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、DLL の明示的なアンロードをサポートするよう遅延読み込みヘルパー関数を設定します。  
   
@@ -794,7 +795,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **SwapRunFromCD**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、まずスワップ ファイルにリンカー出力をコピーして、そこからイメージを実行するようオペレーティング システムを設定します。  
   
@@ -802,7 +803,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **SwapRunFromNET**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、まずスワップ ファイルにリンカー出力をコピーして、そこからイメージを実行するようオペレーティング システムを設定します。  
   
@@ -844,7 +845,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **TerminalServerAware**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、プログラム イメージのオプション ヘッダー内の IMAGE_OPTIONAL_HEADER DllCharacteristics フィールドにフラグを設定します。 このフラグが設定されると、ターミナル サーバーはアプリケーションに特定の変更を加えなくなります。  
   
@@ -858,7 +859,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **TreatLinkerWarningAsErrors**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合、リンカーが警告を生成したら出力ファイルは生成されません。  
   
@@ -866,7 +867,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **TurnOffAssemblyGeneration**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合は、現在の出力ファイルのイメージを .NET Framework アセンブリなしで作成します。  
   
@@ -906,7 +907,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **UACUIAccess**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合、アプリケーションはユーザー インターフェイスの保護レベルをバイパスし、デスクトップ上のアクセス許可がより高位のウィンドウに入力を配置します。それ以外の場合は `false` です。  
   
@@ -914,7 +915,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
 -   **UseLibraryDependencyInputs**  
   
-     省略可能な**ブール値**のパラメーターです。  
+     省略可能な **Boolean** 型のパラメーターです。  
   
      `true` の場合、プロジェクト依存関係のライブラリ出力にリンクされる時に、ライブラリ ファイル自体ではなく、ライブラリアン ツールへの入力が使用されます。  
   
@@ -926,5 +927,5 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      詳細については、「[/VERSION (バージョン情報)](/cpp/build/reference/version-version-information)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)

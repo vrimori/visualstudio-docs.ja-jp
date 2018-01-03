@@ -15,11 +15,12 @@ caps.latest.revision: "27"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: cd7e50a44e5d53653f233372b643c31fe58aedc9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 129f9c9235035e828e1825898aac89eaf8cd1388
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obtaining-build-logs-with-msbuild"></a>MSBuild でのビルド ログの取得
 MSBuild でスイッチを使用することで、確認するビルド データの量とビルド データを 1 つ以上のファイルに保存するかどうかを指定できます。 カスタム ロガーを指定して、ビルド データを収集することもできます。 このトピックで説明されていない MSBuild コマンド ライン スイッチの詳細については、「[Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)」を参照してください。  
@@ -57,7 +58,7 @@ msbuild MyProject.proj /t:go /fileLogger
 msbuild MyProject.proj /t:go /fl /flp:logfile=MyProjectOutput.log;verbosity=diagnostic  
 ```  
   
- 詳細については、「[Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)」を参照してください。  
+ 詳細については、「[コマンド ライン リファレンス](../msbuild/msbuild-command-line-reference.md)」を参照してください。  
   
 ## <a name="saving-the-log-output-to-multiple-files"></a>ログ出力を複数のファイルに保存する  
  次の例では、ログ全体を `msbuild1.log` に、エラーのみを `JustErrors.log` に、警告のみを `JustWarnings.log` に保存します。 例では、3 つのファイルのそれぞれを表すファイル番号を使用します。 ファイル番号は、**/fl** スイッチと **/flp** スイッチの直後に指定されています (`/fl1` と `/flp1` など)。  
@@ -76,7 +77,7 @@ msbuild MyProject.proj /t:go /fl1 /fl2 /fl3 /flp2:logfile=JustErrors.log;errorso
   
  MSBuild コマンドラインでは、**/logger** スイッチを使用してカスタム ロガーを指定します。 また、**/noconsolelogger** スイッチを使用して、既定のコンソール ロガーを無効にすることもできます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.Build.Framework.LoggerVerbosity>   
  [ビルド ロガー](../msbuild/build-loggers.md)   
  [マルチプロセッサ環境でのログ](../msbuild/logging-in-a-multi-processor-environment.md)   

@@ -16,21 +16,22 @@ caps.latest.revision: "28"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 62889012c5640fb0f29eadb6f70e678f941ff286
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: d22300bc675de5074497589af53b304b9a1caa4d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cpu-and-windows-counters"></a>CPU カウンターと Windows カウンター
 Visual Studio プロファイラーでは、オペレーティング システムによって生成されたパフォーマンス データ (Windows カウンター) とプロセッサ ユニットによって生成されたパフォーマンス データ (CPU カウンター) を収集することができます。  
   
- **Requirements**  
+ **必要条件**  
   
--   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、[!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、[!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
+-   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
 > [!NOTE]
->  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 ｢[Performance Tools on Windows 8 and Windows Server 2012 applications](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md) (Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール)」をご覧ください。  
+>  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
   
 ## <a name="windows-counters"></a>Windows カウンター  
  Windows カウンターは、オペレーティング システムまたはアプリケーション、サービス、ドライバーのパフォーマンスに関する情報を提供する Windows 診断インフラストラクチャの一部です。 Windows カウンターは、現在のコンピューターの構成に依存しており、他のコンピューターでは使用できない場合があります。 Windows パフォーマンス カウンターは、プロファイル マークとしてプロファイル データ ファイルに収集され、ビューおよびレポートのフィルター処理に使用できます。  
@@ -95,7 +96,7 @@ Visual Studio プロファイラーでは、オペレーティング システ�
   
          **注** 前のサンプリング構成に戻るには、**[キャンセル]** をクリックします。  
   
-     または  
+     - または -  
   
     -   **[CPU カウンター]** を選び、**[CPU カウンターの収集]** を選びます。 **[使用可能なカウンター]** に CPU カウンターが一覧表示されます。  
   
@@ -128,7 +129,7 @@ Visual Studio プロファイラーでは、オペレーティング システ�
   
      C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Performance Tools です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [概要](../profiling/overviews-performance-tools.md)   
  [方法 : サンプリング イベントを選択する](../profiling/how-to-choose-sampling-events.md)   
  [方法 : CPU カウンター データを収集する](../profiling/how-to-collect-cpu-counter-data.md)   

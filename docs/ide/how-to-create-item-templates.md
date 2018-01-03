@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2ecd17694e65c6273f8e73a321a72bc209038922
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 96501134565c4339abe9e3abc7fcfe7e29927fa4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-item-templates"></a>方法 : 項目テンプレートを作成する
 このトピックの[最初の手順](../ide/how-to-create-item-templates.md#export_template)では、**テンプレートのエクスポート** ウィザードを使って項目テンプレートを作成する方法を示します。 テンプレートを複数のファイルで構成する場合は、「[方法 : 複数ファイルの項目テンプレートを作成する](../ide/how-to-create-multi-file-item-templates.md)」をご覧ください。  
@@ -162,7 +163,7 @@ ms.lasthandoff: 10/31/2017
 
 8.  .zip ファイルをコピーして、ユーザーの項目テンプレートの場所に貼り付けます。 Visual Studio 2017 での規定のディレクトリは、..\Users\\<ユーザー名\>\Documents\Visual Studio 2017\Templates\ItemTemplates\\ です。 詳細については、「方法 : プロジェクト テンプレートと項目テンプレートを配置して整理する」を参照してください。  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
  [方法 : 複数ファイルの項目テンプレートを作成する](../ide/how-to-create-multi-file-item-templates.md)   
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)

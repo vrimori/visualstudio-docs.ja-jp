@@ -18,20 +18,21 @@ caps.latest.revision: "23"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dcdf2ff51c0ed1aeb667c33a519d540251799c01
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 44f67dd4b1c6717dfaf48ada0f093a845899e16c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-permissions"></a>方法: アクセス許可を設定する
 このトピックでは、コンピューターの管理者が、プロファイリングに必要なセキュリティ アクセス許可を、そのコンピューター上で管理者アクセス許可を持たないユーザーまたはグループに付与する方法について説明します。  
   
  基本的なセキュリティ原則として、必要以上のアクセス許可でアプリケーションを実行しないことが規定されています。 この原則は、ユーザーにも適用されます。 ユーザーが Administrators グループではなく Users グループのメンバーとしてログオンしても必要な操作をすべて行うことができるのであれば、ユーザーに管理者アクセス許可を与えないでください。 最初の手順「ユーザー アクセス許可を持つユーザー アカウントを作成するには」では、Users グループのメンバーのユーザー アカウントを作成する方法を説明します。  
   
- **Requirements**  
+ **必要条件**  
   
--   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、[!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、[!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
+-   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
  Users グループのメンバーの場合は、チームの他のメンバーとの間で共有されるディスク上のフォルダーおよびファイルにアクセスする必要があります。 2 番目の手順「共有プロジェクト ファイルへのアクセスを許可するには」では、そのアクセスを許可する方法を説明します。  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/31/2017
   
 5.  **[\<ユーザー名> のアクセス許可]** ボックスで、**[フル コントロール]** のチェック ボックスを選択します。  
   
-6.  **[OK]** をクリックします。  
+6.  **[OK]**をクリックします。  
   
      これにより、手順 5 で選択されたフォルダーで始まる共有フォルダー ツリーに対するアクセス許可がユーザーに付与されます。  
   
@@ -126,7 +127,7 @@ ms.lasthandoff: 10/31/2017
   
  指定されたユーザーは、ログオン後に、管理者アクセス許可なしにプロファイリング ツールを使用できるようになります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)   
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [プロファイルと Windows Vista のセキュリティ](../profiling/profiling-and-windows-vista-security.md)

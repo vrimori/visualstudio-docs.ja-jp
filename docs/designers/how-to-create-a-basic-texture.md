@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d97e2160ddf5185e966dff44169ced8663d1c637
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: bd957dbf9a0d1f11a1b08bc9e01ce1ed1e988da1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-basic-texture"></a>方法: 基本テクスチャを作成する
 このドキュメントでは、イメージ エディターを使用した基本的なテクスチャの作成方法を示します。  
@@ -90,5 +91,5 @@ ms.lasthandoff: 10/31/2017
   
  次の手順では、このテクスチャの MIP レベルを生成できます。 詳細については、「[方法: MIP レベルを作成および変更する](../designers/how-to-create-and-modify-mip-levels.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [イメージ エディター](../designers/image-editor.md)

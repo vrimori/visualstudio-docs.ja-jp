@@ -16,18 +16,19 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 268a3b335990bc620a2eb798c3b774f34bc3262b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2038f69117c94752d14c9e8ce6f22aea98a67353
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-session-properties"></a>パフォーマンス セッションのプロパティ
 **パフォーマンス セッション**により、アプリケーションのプロファイリング方法を決定する設定を構成できます。 また、プロファイル セッションに関するレポートが生成されて格納されます。  
   
- **Requirements**  
+ **必要条件**  
   
--   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、[!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、[!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
+-   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、 [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
  **パフォーマンス セッション**を作成するには、**パフォーマンス ウィザード**を実行するか、または手動でセッションを作成します。 **パフォーマンス セッション**が作成されると、**パフォーマンス セッション**は**パフォーマンス エクスプローラー**に表示されます。  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/31/2017
   
  [.NET メモリの割り当ておよび有効期間データの収集](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)  
   
- [方法: パフォーマンス データ ファイル名のオプションを設定する](../profiling/how-to-set-performance-data-file-name-options.md)  
+ [方法: プロファイル データ ファイル名のオプションを設定する](../profiling/how-to-set-performance-data-file-name-options.md)  
   
 ## <a name="launch"></a>Launch  
  この設定では、バイナリの一覧から選択したり、バイナリの開始順序を指定したりできます。  
@@ -109,9 +110,9 @@ ms.lasthandoff: 10/31/2017
   
  [方法: .NET Framework ランタイムを指定する](../profiling/how-to-specify-the-dotnet-framework-runtime.md)  
   
- [方法 : 追加のインストルメンテーション オプションを指定する](../profiling/how-to-specify-additional-instrumentation-options.md)  
+ [方法: 追加のインストルメンテーション オプションを指定する](../profiling/how-to-specify-additional-instrumentation-options.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [概要](../profiling/overviews-performance-tools.md)   
  [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)   
- [データ収集の制御](../profiling/controlling-data-collection.md)
+ [データ コレクションの制御](../profiling/controlling-data-collection.md)

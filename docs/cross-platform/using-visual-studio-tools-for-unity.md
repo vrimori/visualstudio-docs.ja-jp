@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: conceptdev
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 735c95d9eda5cba15b9d75a5abf10d26dd14b0cb
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: unity
+ms.openlocfilehash: 06598b54e50db1566cc35c896061b4a2d1fb1a40
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity を使用する
 このセクションでは、Visual Studio Tools for Unity の統合と生産性の機能の使用法、および Unity 開発における Visual Studio デバッガーの使用法について取り上げます。  
@@ -123,7 +124,7 @@ ms.lasthandoff: 12/12/2017
 
  ![接続する Unity のインスタンスを選択します。](../cross-platform/media/vstu_connection_to_unity.png "vstu_connection_to_unity")  
 
- **Project**  
+ **プロジェクト**  
  Unity のこのインスタンスで実行されている Unity プロジェクトの名前。  
 
  **マシン**  

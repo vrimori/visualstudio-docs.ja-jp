@@ -12,11 +12,12 @@ ms.assetid: 91b167a3-280a-498b-8fc2-f67859a2c64e
 caps.latest.revision: "27"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 3881b015821952b4a2aeaa60d22c66bf47dff9c4
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: 76cad59931a6c99bfd21fc0d149b86bf8a3b8a71
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>テスト エクスプローラーを使用して単体テストを実行する
 テスト エクスプローラーを使用して、Visual Studio またはサードパーティの単体テスト プロジェクトから単体テストを実行し、テストをカテゴリにグループ化し、テスト リストをフィルター処理し、テストのプレイリストを作成、保存、および実行します。 テストをデバッグし、テストのパフォーマンスとコード カバレッジを分析することもできます。  
@@ -189,7 +190,7 @@ ms.lasthandoff: 11/15/2017
 FilterName:"Criteria" -FilterName:"SubsetCriteria"  
 ```  
   
- 次に例を示します。  
+ たとえば、オブジェクトに適用された  
   
 ```  
 FullName:"MyClass" - FullName:"PerfTest"  
@@ -262,6 +263,6 @@ FullName:"MyClass" - FullName:"PerfTest"
 ###  <a name="BKMK_Guidance"></a> ガイダンス  
  [Visual Studio 2012 を使用した継続的配信のためのテスト - 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コードの単体テスト](../test/unit-test-your-code.md)   
  [64 ビット プロセスとして単体テストを実行する](../test/run-a-unit-test-as-a-64-bit-process.md)

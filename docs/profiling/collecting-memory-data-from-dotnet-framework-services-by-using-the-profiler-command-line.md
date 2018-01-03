@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7d94a31fbb1c0fca649f53496ff39fe36527c013
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: a20c3cff1ee86e0dc0a9530e9ac75aabe881bacb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="collecting-memory-data-from-net-framework-services-by-using-the-profiler-command-line"></a>プロファイラーのコマンド ラインを使用した .NET Framework サービスからのメモリ データの収集
 このセクションでは、コマンド ラインからサンプリング メソッドを使用して、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] サービスのメモリ割り当てとオブジェクト有効期間データを収集する手順とオプションについて説明します。  

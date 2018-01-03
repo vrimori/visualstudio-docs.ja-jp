@@ -12,11 +12,12 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bf0dd4ab4a60dc7cfdfd351aee59c4942f75ef69
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e44c9e7cc8aee41606366e1d4cb175a1855053f3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>方法: [定義をここに表示] を使用してコードを表示および編集する (Alt + F12)
 **[定義をここに表示]** を使うと、記述中のコードから切り替えずにコードを表示および編集できます。 **[定義をここに表示]** と **[定義へ移動]** では同じ情報が表示されますが、**[定義をここに表示]** ではコードがポップアップ ウィンドウに表示され、**[定義へ移動]** では別のコード ウィンドウに表示されます。 **[定義へ移動]** を実行すると、コンテキスト (アクティブなコード ウィンドウ、現在の行、およびカーソルの位置) が定義コード ウィンドウに切り替わります。 **[定義をここに表示]** を使用すると、元のコード ファイル内での位置を保ちながら、定義を表示および編集したり、定義ファイル内を移動したりできます。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]
     >  Visual Studio の他の場所でも、同じキーボード ショートカットを使って **[定義をここに表示]** ウィンドウでコードを編集できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [コード間の移動](../ide/navigating-code.md)  
 [[定義へ移動] と [定義をここに表示]](../ide/go-to-and-peek-definition.md)  
 [生産性に関するヒント](../ide/productivity-tips-for-visual-studio.md)

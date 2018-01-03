@@ -17,11 +17,12 @@ ms.assetid: 2b018b18-b412-4e0e-b0ee-b580a2f3ba9c
 caps.latest.revision: "83"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 825adc757b9ae984bb39b308bab37a0d98b63ab5
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: dotnet
+ms.openlocfilehash: ebdac762d3dcc4079ed6e8247b394da685b1013a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-and-running-unit-tests-for-managed-code"></a>チュートリアル: マネージ コードに対する単体テストの作成と実行
 このチュートリアルでは、マネージ コード用の Microsoft 単体テスト フレームワークと Visual Studio テスト エクスプローラーを使用して一連の単体テストを作成、実行、およびカスタマイズする手順について説明します。 開発中の C# プロジェクトで作業を開始し、そのコードを実行するテストを作成し、テストを実行し、結果を調べます。 次に、プロジェクト コードを変更し、テストを再実行します。  

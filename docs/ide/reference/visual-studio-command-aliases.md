@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 552e08a653c576a0f2e4bc916beaf4749ff490ee
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 48e849df1cb918682176befa25c688fe7b436460
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-command-aliases"></a>Visual Studio Command Aliases
 エイリアスを使用すると、コマンドの実行に必要な文字列を短縮して **[検索]** ボックスまたは **[コマンド]** ウィンドウに入力できます。 たとえば、**[ファイルを開く]** ダイアログ ボックスを表示するときに、「`>File.OpenFile`」ではなく、定義済みのエイリアス「`>of`」を入力できます。  
@@ -127,7 +128,7 @@ ms.lasthandoff: 10/31/2017
 |[プロセスの一覧]|&#124;|Debug.ListProcesses|  
 |[ListThreads コマンド](../../ide/reference/list-threads-command.md)|~ ~*k ~\*kb|Debug.ListThreads Debug.ListTheads /AllThreads|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [検索コマンド ボックス](../../ide/find-command-box.md)

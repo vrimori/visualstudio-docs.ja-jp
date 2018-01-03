@@ -36,11 +36,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c7d9f7cef6c0dfa35a4a718c0918fbc55409af04
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0c89e8b018fa0979fe4c73f5cd9e0db95efd88d9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="documents-environment-options-dialog-box"></a>[ドキュメント] ([オプション] ダイアログ ボックス - [環境])
 **[オプション]** ダイアログ ボックスのこのページを使用し、統合開発環境 (IDE) の文書表示を制御し、ドキュメントやファイルに対する外部変更を管理します。 このダイアログ ボックスにアクセスするには、**[ツール]** メニューの **[オプション]** をクリックし、**[環境]** ノードの **[ドキュメント]** を選択します。 **[ドキュメント]** が一覧に表示されない場合は、**[オプション]** ダイアログ ボックスの **[すべての設定を表示]** を選択します。  
@@ -85,7 +86,7 @@ ms.lasthandoff: 10/31/2017
  **コードページでデータが保存できない場合、Unicode でドキュメントを保存**  
  このオプションを選択すると、選択したコードページと互換性のない情報を含むファイルが既定で Unicode として保存されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)   
  [その他のファイル](../../ide/reference/miscellaneous-files.md)   
  [テキストの検索と置換](../../ide/finding-and-replacing-text.md)

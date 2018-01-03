@@ -18,11 +18,12 @@ caps.latest.revision: "64"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b5483245e7f2ae341d08618485a4f49e91eb8fa9
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 13d04bde21f46fd8950e79464beccfe2228633aa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Application Page, Project Designer (Visual Basic)
 プロジェクト デザイナーの **[アプリケーション]** ページを使用して、プロジェクトのアプリケーション設定とプロパティを指定します。  
@@ -158,5 +159,5 @@ ms.lasthandoff: 11/02/2017
   
  特定のアプリケーション状態が変化すると (アプリケーション スタートアップやシャットダウンなどで)、<xref:System.Windows.Application> オブジェクトでイベントが発生します。 このクラスで公開されるイベントの完全な一覧については、「<xref:System.Windows.Application>」を参照してください。 これらのイベントは、`Application` 部分クラスのユーザー コード セクションで処理されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [アプリケーション プロパティの管理](../../ide/application-properties.md) [Office ソリューションのコードの記述](/office-dev/office-dev/writing-code-in-office-solutions)

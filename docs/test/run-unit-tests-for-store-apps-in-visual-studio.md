@@ -11,11 +11,12 @@ ms.assetid: 5a6f5b32-bfce-4a63-81e9-02d54c592539
 caps.latest.revision: "12"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: cdb13478a7e403be916d7773dab6315429508e9c
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: uwp
+ms.openlocfilehash: ad5a81a8b80ffb5a25a04d3aa83811e90c2785e9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="run-unit-tests-for-uwp-apps-in-visual-studio"></a>Visual Studio での UWP アプリの単体テストの実行
 このトピックでは、Microsoft Visual Studio でテスト エクスプローラーを使用して単体テストを実行する方法について説明します。  
@@ -121,4 +122,4 @@ ms.lasthandoff: 11/02/2017
   
 2.  テスト エクスプローラーでテスト メソッドを選択し、ショートカット メニューの **[選択したテストのデバッグ]** を選択します。  
   
- デバッガーの詳細については、「[Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)」を参照してください。
+ デバッガーについて詳しくは、「 [Debugging in Visual Studio](../debugger/debugging-in-visual-studio.md)」をご覧ください。

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f174223900b6f8deba2291a80425df1c77589ce1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c730169988d931d3e1e57dd22f2793b1f8a16a72
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="process-view"></a>プロセス ビュー
 プロセス ビューには、プロファイリング実行中に実行されたプロセスとスレッドのプロファイル データが表示されます。  
@@ -38,11 +39,11 @@ ms.lasthandoff: 10/31/2017
 |------------|-----------------|  
 |**ID (一意)**|プロファイラーによって生成される、プロセスまたはスレッドに固有の ID。|  
 |**ID**|システムによって生成される、プロセスまたはスレッドの ID。|  
-|**名前**|プロセスまたはスレッドの名前。|  
+|**Name**|プロセスまたはスレッドの名前。|  
 |**開始時刻**|プロファイリングの開始からプロセスまたはスレッドの開始までの時間 (ミリ秒) またはプロセッサ サイクル数。|  
 |**終了時刻**|プロファイリングの開始からプロセスまたはスレッドの終了までの時間 (ミリ秒) またはプロセッサ サイクル数。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サンプリング メソッドのデータ ビュー](../profiling/profiler-sampling-method-data-views.md)   
  [インストルメンテーション メソッドのデータ ビュー](../profiling/instrumentation-method-data-views.md)   
  [.NET メモリのデータ ビュー](../profiling/dotnet-memory-data-views.md)

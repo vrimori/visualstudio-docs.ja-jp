@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6b18f5169558067b67795e983e93ca07141ae8be
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 44f8e1bde92cec70264beea8e9a62205ec0c2e8c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-data-binding-with-linq-to-xml-overview"></a>LINQ to XML による WPF のデータ バインディングの概要
 このトピックでは、<xref:System.Xml.Linq> 名前空間の動的データ バインド機能について説明します。 これらの機能は、Windows Presentation Foundation (WPF) のユーザー インターフェイス (UI) 要素のデータ ソースとして使用できます。  
@@ -88,7 +89,7 @@ ms.lasthandoff: 10/31/2017
   
  WPF の動的バインドを実装するには、動的プロパティを <xref:System.Windows.Data> 名前空間 (特に <xref:System.Windows.Data.Binding> クラス) の機能と共に使用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [LINQ to XML による WPF のデータ バインディング](../designers/wpf-data-binding-with-linq-to-xml.md)   
  [LINQ to XML の動的プロパティ](../designers/linq-to-xml-dynamic-properties.md)   
  [WPF の XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)   

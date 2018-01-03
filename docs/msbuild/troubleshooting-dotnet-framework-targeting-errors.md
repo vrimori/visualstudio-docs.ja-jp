@@ -21,11 +21,12 @@ caps.latest.revision: "29"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: b35c3b87a1526f0453e1385c92c5ecefc5ec55da
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 222299d3a13b716f6a522513a71fc1cb7cbe1084
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-net-framework-targeting-errors"></a>.NET Framework を対象とするエラーのトラブルシューティング
 このトピックは、参照の問題が原因で発生する可能性のある MSBuild エラーと、そのエラーの解決方法について説明します。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  プロジェクトを閉じて再び開いてから、リビルドし、すべての参照が正しく解決されるようにする必要もあります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: .NET Framework のバージョンをターゲットにする](../ide/how-to-target-a-version-of-the-dotnet-framework.md)   
  [.NET Framework Client Profile](/dotnet/framework/deployment/client-profile)   
  [対象となる特定の .NET Framework バージョンの指定](../ide/targeting-a-specific-dotnet-framework-version.md)   

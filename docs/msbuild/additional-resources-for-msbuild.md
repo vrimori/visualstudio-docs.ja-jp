@@ -19,11 +19,12 @@ author: kempb
 ms.author: kempb
 manager: ghogen
 redirect_url: https://social.msdn.microsoft.com/Forums/vstudio/home?forum=msbuild
-ms.openlocfilehash: e2e80331d4ba1951c3132dfe720c5fbcef7d1e29
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 801e86285786d9f7d5347283a8939df8750f88fe
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="additional-resources-for-msbuild"></a>MSBuild の追加のリソース
 次の Web サイトとフォーラムは、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] を使用する際によく寄せられる質問に対する回答を検索するのに役立ちます。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/31/2017
  [Visual Studio MSBuild フォーラム](http://go.microsoft.com/fwlink/?LinkId=48931)  
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 専用のコミュニティ フォーラム。  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSBuild](../msbuild/msbuild.md)   
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)

@@ -13,14 +13,15 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 08dc1a8828e7b5f8c529300b35fdbdc1ecb65012
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 941c3b2e8fc3516ce0cfef5686344e0fec316e3e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="notifications-environment-options-dialog-box"></a>[通知] ([オプション] ダイアログ ボックス - [環境])
 以前に [通知] ダイアログで無視することを選択した通知を無視しないようにするには、このオプションを使用します。 詳しくは、「[通知](../../ide/visual-studio-notifications.md)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)

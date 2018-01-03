@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 746622d0a3282681599a26c8cba8782806e915e5
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: bc2d31565713e8985074ccf8fab6b9904f52199d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="options-text-editor-basic-visual-basic"></a>[オプション]、[テキスト エディター]、[基本] (Visual Basic)
 **[オプション]** (**[ツール]** メニュー) ダイアログ ボックスの **[テキスト エディター]** フォルダーにある **[Basic]** フォルダーの **[VB 固有]** プロパティ ページでは、次のプロパティを指定します。  
@@ -70,6 +71,6 @@ ms.lasthandoff: 11/02/2017
 **[参照とキーワードの強調表示を有効にする]**  
 テキスト エディターでは、`If..Then`、`While...End While`、`Try...Catch...Finally` などの句のシンボルのすべてのインスタンス、またはすべてのキーワードを強調表示できます。 強調表示された参照間またはキーワード間を移動するには、Ctrl キーと Shift キーを押しながら下方向キーを押すか、Ctrl キーと Shift キーを押しながら上方向キーを押します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)   
 [[オプション]、[テキスト エディター]、[すべての言語]、[タブ]](../../ide/reference/options-text-editor-all-languages-tabs.md)

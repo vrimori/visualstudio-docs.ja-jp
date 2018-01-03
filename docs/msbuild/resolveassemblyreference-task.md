@@ -24,11 +24,12 @@ caps.latest.revision: "29"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 094e3968b527261125753002d9b6a31c7bd5d244
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 10dffd6ea1a07c33df07f27ee8268932f18d8c32
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resolveassemblyreference-task"></a>ResolveAssemblyReference タスク
 指定したアセンブリに依存するすべてのアセンブリを判断します。 これには、2 番目および `n`番目の依存関係も含まれます。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
 |`CopyLocalDependenciesWhenParentReferenceInGac`|省略可能な <xref:System.Boolean> 型のパラメーターです。<br /><br /> true の場合、依存関係をローカルにコピーする必要があるかどうかを確認するために、実行されるチェックのいずれかで、プロジェクト ファイルの親参照に Private メタデータが設定されているかどうかが確認されます。 メタデータが設定されている場合は、Private 値が依存関係として使用されます。<br /><br /> メタデータが設定されていない場合は、依存関係について親の参照と同じチェックが実行されます。 これらのチェックの 1 つでは、その参照が GAC 内にあるかどうかが確認されます。 参照が GAC 内にある場合は、コピー先のコンピューターの GAC 内にあると見なされるため、ローカルにコピーされません。 これは特定の参照だけに当てはまり、依存関係には当てはまりません。<br /><br /> たとえば、GAC 内にあるプロジェクト ファイルの参照はローカルにコピーされませんが、その依存関係は GAC 内にないため、ローカルにコピーされます。<br /><br /> false の場合、プロジェクト ファイルの参照が GAC 内にあるかどうかがチェックされ、必要に応じてローカルにコピーされます。<br /><br /> 依存関係については、GAC 内にあるかどうかがチェックされ、プロジェクト ファイルからの親参照が GAC 内にあるかどうかもチェックされます。<br /><br /> プロジェクト ファイルから親参照が GAC 内にある場合は、依存関係はローカルにコピーされません。<br /><br /> このパラメーターが true または false のどちらであっても、複数の親参照があり、そのいずれかが GAC 内にない場合は、すべての親参照がローカルにコピーされます。|  
 |`CopyLocalFiles`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の読み取り専用の出力パラメーターです。<br /><br /> `ResolvedFiles`、`ResolvedDependencyFiles`、`RelatedFiles`、`SatelliteFiles`、`ScatterFiles` の各パラメーターに指定されたファイルのうち、`CopyLocal` アイテム メタデータの値が `true` であるファイルを返します。|  
 |`FilesWritten`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の出力パラメーターです。<br /><br /> ディスクに書き込まれたアイテムが含まれます。|  
-|`FindDependencies`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true`の場合、依存関係が検索されます。 それ以外の場合、プライマリ参照のみが検索されます。 既定値は `true`にする必要があります。|  
+|`FindDependencies`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true`の場合、依存関係が検索されます。 それ以外の場合、プライマリ参照のみが検索されます。 既定値は `true` です。|  
 |`FindRelatedFiles`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true`の場合、.pdb ファイルや .xml ファイルなどの関連ファイルが検索されます。 既定値は `true` です。|  
 |`FindSatellites`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true`の場合、サテライト アセンブリが検索されます。 既定値は `true.`|  
 |`FindSerializationAssemblies`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true`の場合、シリアル化アセンブリが検索されます。 既定値は `true` です。|  
@@ -106,6 +107,6 @@ ms.lasthandoff: 10/31/2017
 ## <a name="remarks"></a>コメント  
  上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [タスク](../msbuild/msbuild-tasks.md)   
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)

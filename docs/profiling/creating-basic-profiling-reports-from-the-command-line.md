@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 111227b41b3fe48af963f93f07cdee5e5511661f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8915f71d4dcb84a481c0223a64afbddf9b0c722a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-basic-profiling-reports-from-the-command-line"></a>コマンド ラインからの基本的なプロファイリング レポートの作成
 ここでは、.vsp プロファイル データ ファイルまたは .vsps プロファイル データ ファイルからコンマ区切り値 (.csv) レポートを生成する基本的な VSPerfReport コマンドについて説明します。 すべてのレポート オプションの詳細については、「[VSPerfReport](../profiling/vsperfreport.md)」を参照してください。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/31/2017
  **VSPerfReport** `VSPFile` **/CallTrace**  
  各データ コレクション イベントが一覧表示されたレポートが生成されます。 インストルメンテーションでのみ使用します。  
   
-## <a name="summary-report-type-parameters"></a>概要レポートの種類パラメーター  
+## <a name="summary-report-type-parameters"></a>概要レポートの型パラメーター  
  レポートの種類オプションの指定によって生成されるレポートの説明を次の表に示します。 レポートに表示される列は、データの収集に使用されたプロファイル方法によって異なります。  
   
 |概要パラメーター|レポートの説明|レポートの参考情報|  

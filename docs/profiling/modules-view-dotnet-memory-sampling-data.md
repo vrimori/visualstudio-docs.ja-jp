@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f572075106d815a791ca59fa2b35a31918f02bd7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 32eb0b4e34edde03cd455384d7b1c6d36e0365c8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="modules-view---net-memory-sampling-data"></a>モジュール ビュー - .NET メモリ サンプリング データ
 サンプリング メソッドで収集された .NET メモリの割り当てデータの [モジュール] ビューは、メモリ データをプロファイリング実行中に実行されたモジュールごとにグループ化します。 各モジュールが、階層ツリーのルートです。 モジュールの関数が、モジュール ノードの下に一覧表示されます。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 10/31/2017
   
 |Column|説明|  
 |------------|-----------------|  
-|**名前**|モジュールの名前、関数、行番号、命令アドレス。|  
+|**Name**|モジュールの名前、関数、行番号、命令アドレス。|  
 |**プロセス ID**|プロファイリング実行のプロセス ID (PID) です。|  
 |**プロセス名**|プロセスの名前です。|  
 |**モジュール名**|関数を含むモジュールの名前です。|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
 |**割り当てバイト数 (関数のみ)**|-   関数の場合、関数によって割り当てられたバイトの合計数。 この数値には、この関数によって呼び出された関数で割り当てられたバイト数は含まれません。<br />-   モジュールの場合、モジュール内の関数によって割り当てられた排他バイトの合計。<br />-   行または命令の場合、この行または命令によって割り当てられたオブジェクトの合計数。|  
 |**割り当てバイト数 % (関数のみ)**|プロファイリング実行で割り当てられたすべてのバイトに対する、そのモジュール、関数、行、命令の排他バイトであったバイトの割合。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [モジュール ビュー - インストルメンテーション](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
  [モジュール ビュー](../profiling/modules-view-sampling-data.md)   

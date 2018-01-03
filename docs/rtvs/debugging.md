@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: cb5128bf6412fa0f06c211f06f0d7f87353d52e0
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: aca1fc0200e57867418c2a4c5ca7a718afdbc469
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-r-in-visual-studio"></a>Visual Studio での R のデバッグ
 
@@ -57,12 +58,12 @@ add <- function(x, y) {
 
 環境ブラウザーは、いくつかの特別なコマンドをサポートしています。
 
-| コマンド | 説明 | 
+| コマンド | 説明 |
 | --- | --- |
 | n | 次: コード ファイルの次のステートメントを実行します (ステップ オーバーと同じ)。 |
-| s | ステップ イン: コード ファイルの次のステートメントを実行し、次のステートメントが関数呼び出しの場合は関数スコープにステップ インします。 | 
+| s | ステップ イン: コード ファイルの次のステートメントを実行し、次のステートメントが関数呼び出しの場合は関数スコープにステップ インします。 |
 | f | 終了: 現在の関数スコープの残りの部分を実行し、呼び出し元に戻ります (ステップ アウトと同じ)。 |
-| c、cont | 続行: 次のブレークポイントまでプログラムを実行します。 | 
+| c、cont | 続行: 次のブレークポイントまでプログラムを実行します。 |
 | Q | 完了: デバッグ セッションを終了します。 |
 | where | 履歴を表示: 呼び出し履歴を対話型ウィンドウに表示します。 |
 | help | ヘルプを表示: 使用可能なコマンドを対話型ウィンドウに表示します。 |

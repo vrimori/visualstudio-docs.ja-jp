@@ -15,11 +15,12 @@ ms.assetid: c191de3e-3f3b-471e-b828-29ec24e80e2c
 caps.latest.revision: "62"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 7d4b3634f651cd8fc0ebc9c2e5254914a62e3771
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: a60e3236769cbaf35a9b232629834a8b8d52a852
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unit-test-your-code"></a>コードの単体テスト
 単体テストを実行することにより、開発者およびテスト担当者は、[!INCLUDE[csharp_current_short](../misc/includes/csharp_current_short_md.md)]、[!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)]、および [!INCLUDE[cpp_current_short](../misc/includes/cpp_current_short_md.md)] のプロジェクトでクラスのメソッドに論理エラーがないかどうかをすばやく確認できます。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/15/2017
 ## <a name="key-tasks"></a>主なタスク  
  単体テストを理解および作成するには、次のトピックを参照してください。  
   
-|タスク|関連するトピック|  
+|[タスク]|関連するトピック|  
 |-----------|-----------------------|  
 |**クイック スタートおよびチュートリアル:** 次のトピックでは、Visual Studio での単体テストについてコード例から学習できます。|-   [チュートリアル: マネージ コードに対する単体テストの作成と実行](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)<br />-   [クイック スタート: テスト エクスプローラーによるテスト駆動開発](../test/quick-start-test-driven-development-with-test-explorer.md)<br />-   [既存の C++ アプリケーションへの単体テストの追加](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)<br />-   [テスト エクスプローラーを使用したネイティブ コードの単体テスト](http://msdn.microsoft.com/en-us/8a09d6d8-3613-49d8-9ffe-11375ac4736c)|  
 |**テスト エクスプローラーによる単体テスト:** テスト エクスプローラーによって、さらに生産性が高く効率的な単体テストを作成できることを学習します。|-   [単体テストの基本](../test/unit-test-basics.md)<br />-   [単体テスト プロジェクトを作成する](../test/create-a-unit-test-project.md)<br />-   [テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)<br />-   [サードパーティ製の単体テスト フレームワークをインストールする](../test/install-third-party-unit-test-frameworks.md)<br />-   [Visual Studio 2010 からの単体テストのアップグレード](http://msdn.microsoft.com/en-us/9bb75856-f68a-4de2-a084-b08a947a1172)|  
@@ -84,6 +85,6 @@ ms.lasthandoff: 11/15/2017
 ### <a name="reference"></a>参照  
  [単体テストのコンテンツ インデックス](http://go.microsoft.com/fwlink/?LinkID=254719)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コード品質の向上](/visualstudio/test/improve-code-quality)   
  [アプリケーションのテスト](/devops-test-docs/test/test-apps-early-and-often)

@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: f11a3717e6096ac08a8201bc9b6fc81e1a197d0a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d32ef451cbbefaa2ce639d3271b762fa90892945
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-multi-processor-aware-loggers"></a>マルチプロセッサ対応の logger の記述
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では複数のプロセッサを使用できるため、プロジェクトのビルド時間が短縮されますが、同時にビルド イベント ログの複雑性も高まります。 シングルプロセッサ環境では、イベント、メッセージ、警告、およびエラーが順序に従った予測可能な方法で logger に到着します。 それに対し、マルチプロセッサ環境では、イベントが複数のソースから同時に、または誤った順序で送られてくることがあります。 この問題を解決するために、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] にはマルチプロセッサ対応の logger と新しいログ モデルが導入されており、カスタム "転送 logger" を作成できます。  
@@ -114,5 +115,5 @@ msbuild.exe myproj.proj /distributedlogger:XMLCentralLogger,MyLogger,Version=1.0
 |NOSUMMARY|  
 |SHOWCOMMANDLINE|  
   
-## <a name="see-also"></a>関連項目  
- [転送 logger の作成](../msbuild/creating-forwarding-loggers.md)
+## <a name="see-also"></a>参照  
+ [転送ロガーの作成](../msbuild/creating-forwarding-loggers.md)

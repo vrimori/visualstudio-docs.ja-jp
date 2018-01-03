@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2fe5e36b6d6f8cd7672c2300c385a1045bb677f5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3ceadf13f6567b303337b14b6b76be86ddcbac8c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supplying-xml-code-comments"></a>XML コード コメントの追加
 ソース コード ファイル内のコメントを IntelliSense として使用可能にすることができます。 Visual Basic、C#、または C++ コンパイラのコマンドラインに /doc スイッチを追加すると、IntelliSense ドキュメントのベースとして機能する .xml ファイルが生成されます。  
@@ -32,5 +33,5 @@ ms.lasthandoff: 10/31/2017
   
  C++ でコードを文書化する詳細については、「[C++ コメント](/cpp/cpp/comments-cpp)」と「[XML に関するドキュメント](/cpp/ide/xml-documentation-visual-cpp)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IntelliSense の使用](../ide/using-intellisense.md)

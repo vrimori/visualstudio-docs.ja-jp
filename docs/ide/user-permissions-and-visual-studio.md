@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e044e3d89f7cbaae28ff0fd3cefe1c6fe4583c65
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3cf223b0b4d2f8ca710a5d5fdb349c7a423b1b86
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-permissions-and-visual-studio"></a>ユーザー アクセス許可と Visual Studio
 セキュリティ上の理由により、Visual Studio はできる限り通常のユーザーとして実行してください。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/31/2017
 
  通常のユーザーでも Visual Studio IDE のほぼすべてのタスクを実行できますが、次のタスクを実行するには管理者のアクセス許可が必要です。  
 
-|領域|タスク|詳細情報|  
+|区分|タスク|詳細情報|  
 |----------|----------|--------------------------|  
 |インストール|Visual Studio をインストールする。|[Visual Studio のインストール](../install/install-visual-studio.md)|  
 ||ローカル ヘルプ コンテンツをインストール、更新、または削除する。|[ローカル コンテンツのインストールと管理](../ide/install-and-manage-local-content.md)|  
@@ -68,6 +69,6 @@ ms.lasthandoff: 10/31/2017
 
      Visual Studio の起動時には、**[(管理者)]** がタイトル バーの製品名の後に表示されます。  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio プロジェクトの移植、移行、およびアップグレード](../porting/port-migrate-and-upgrade-visual-studio-projects.md)   
  [Visual Studio のインストール](../install/install-visual-studio.md)

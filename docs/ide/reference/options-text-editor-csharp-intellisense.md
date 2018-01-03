@@ -21,11 +21,12 @@ caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ba6e1613410c8143126254c8f7a4bd325c6e6f22
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: dotnet
+ms.openlocfilehash: b0b69b7eafbfbb1b5c2c582fd0c734a183ea0a78
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="options-text-editor-c-intellisense"></a>[オプション]、[テキスト エディター]、[C#]、[IntelliSense]
 Visual C# での IntelliSense の動作設定を変更するには、**[IntelliSense]** プロパティ ページを使用します。 **[IntelliSense]** プロパティ ページにアクセスするには、**[ツール]** メニューの **[オプション]** をクリックして、**[テキスト エディター]** フォルダーで **[C#]** をクリックし、**[IntelliSense]** をクリックします。  
@@ -69,7 +70,7 @@ Visual C# での IntelliSense の動作設定を変更するには、**[IntelliS
  **最近使用されたメンバーをあらかじめ選択する**  
  このオプションを選択すると、統合開発環境 (IDE) での現在のセッション中に、オブジェクト名の自動補完のために、ポップアップ メンバーの一覧ボックスで最近選択したメンバーが IntelliSense によってあらかじめ選択されます。 最近使用したメンバーの履歴は、IDE の各セッションの間に消去されます。 詳細については、「[最近使用されたメンバーに対する IntelliSense](../../ide/visual-csharp-intellisense.md#most-recently-used-members)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)   
  [XML ドキュメント コメント](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)   
  [IntelliSense の使用](../../ide/using-intellisense.md)

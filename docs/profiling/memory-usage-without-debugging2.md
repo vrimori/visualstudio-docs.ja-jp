@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7dea60ba0f6a443b8db94611460442bd08a8cf95
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: e17055848d7913547fcbcd563774e8360eea73e3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="memory-usage-without-the-debugger"></a>デバッガーなしのメモリ使用量
 デバッグなしの**メモリ使用量**ツールを使用して、次のような操作を行えます  
@@ -202,8 +203,8 @@ ms.lasthandoff: 11/11/2017
 |**サイズ (バイト)**|インスタンスの場合は、指定したスナップショットに含まれるオブジェクトのサイズ (インスタンスに含まれているオブジェクトのサイズは除く)。<br /><br /> 型の場合は、指定したスナップショットに含まれるその型のインスタンスの合計サイズ (インスタンスに含まれているオブジェクトのサイズは除く)。|  
 |**包括サイズ (バイト)**|指定したスナップショットに含まれているオブジェクトのサイズ (オブジェクトに含まれているオブジェクトのサイズを含む)。|  
   
-## <a name="see-also"></a>関連項目  
- [JavaScript メモリ](../profiling/javascript-memory.md)  
+## <a name="see-also"></a>参照  
+ [[JavaScript メモリ]](../profiling/javascript-memory.md)  
  [Visual Studio のプロファイル](../profiling/index.md)  
  [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)  
  [C++、C#、または Visual Basic を使った UWP アプリのパフォーマンスのベスト プラクティス](http://msdn.microsoft.com/library/windows/apps/hh750313.aspx)   

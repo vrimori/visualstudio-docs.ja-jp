@@ -18,11 +18,12 @@ caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5eccac7a0b139b830121add61518c23fa055ca23
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: dd1fdd7760fce5e40422cf017a4f5f7e2623263f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cvcreatemarkerseries-function"></a>CvCreateMarkerSeries 関数
 指定されたプロバイダーに対してマーカー系列を作成します。  
@@ -43,23 +44,23 @@ _Check_return_ HRESULT CvCreateMarkerSeriesA(
   
 #### <a name="parameters"></a>パラメーター  
  `pProvider`  
- CvInitProvider により以前に初期化されたプロバイダー オブジェクト。 Null は指定できません。  
+ CvInitProvider により以前に初期化されたプロバイダー オブジェクト。 Nll は指定できません。  
   
  `pSeriesName`  
  マーカー系列名。 NULL は指定できませんが、空の文字列は指定できます。  
   
  `ppMarkerSeries`  
- マーカー系列コンテキストを格納する出力変数のアドレス。 Null は指定できません。  
+ マーカー系列コンテキストを格納する出力変数のアドレス。 Nll は指定できません。  
   
 ## <a name="return-value"></a>戻り値  
  マーカー系列が作成されると S_OK を、エラーが発生した場合はエラー コードを返します。 SUCCEEDED/FAILED マクロを使用し、エラーの状態を確認します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** cvmarkers.h  
   
  **Unicode:** CvCreateMarkerSeriesW  
   
  **ANSI:** CvCreateMarkerSeriesA  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [C++ ライブラリ リファレンス](../profiling/cpp-library-reference.md)

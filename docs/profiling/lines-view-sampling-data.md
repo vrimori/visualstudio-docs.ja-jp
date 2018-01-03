@@ -13,17 +13,18 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 31cd3b1732cb279004eb500b5df6583a04d2e7bb
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: d08d090ad8e130e209af0d2057a065ed0bc474a7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lines-view---sampling-data"></a>行ビュー - サンプリング データ
 サンプリング データの [行] ビューには、プロファイリングを実行してサンプルを収集するときに実行したステートメントのパフォーマンス データが表示されます。  
   
 > [!NOTE]
->  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 ｢[Performance Tools on Windows 8 and Windows Server 2012 applications](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md) (Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール)」をご覧ください。  
+>  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
   
  ソース ファイルでは、1 つのステートメントを複数の行にわたって記述することも、複数のステートメントを 1 つの行に含めることもできます。 ステートメントは、次の項目によって識別されます。  
   
@@ -61,5 +62,5 @@ ms.lasthandoff: 11/11/2017
 |**サンプル数 (関数のみ)**|関数行を実行していたときに収集されたサンプルの合計数です。|  
 |**サンプル % (関数のみ)**|関数行を実行していたときに収集された、プロファイリング実行内のすべてのサンプルの割合です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [行ビュー - サンプリング](../profiling/lines-view-dotnet-memory-sampling-data.md)

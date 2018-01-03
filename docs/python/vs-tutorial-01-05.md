@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 3d0dd65ec5ca42d54c16c0c57b919f849a7a0e20
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 2acd8aebda03d7d9809563a6c1959c8dd69bf96e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="step-5-installing-packages-in-your-python-environment"></a>手順 5: Python 環境へのパッケージのインストール
 
@@ -48,23 +49,22 @@ Python 開発者コミュニティは、ユーザーが独自のプロジェク�
 
 1. **[ファイル] > [新規] > [プロジェクト]** で、"Python アプリケーション" テンプレートを選択して新しいプロジェクトを作成します。 表示されるコード ファイルに、次のコードを貼り付けて余弦波を作成します。これは前のチュートリアルの手順と似ていますが、今回はグラフィカルにプロットするだけです。
 
-    ```python  
+    ```python
     import numpy as np     # installed with matplotlib
     import matplotlib.pyplot as plt
     from math import radians
 
-    def main():  
+    def main():
         x = np.arange(0, radians(1800), radians(12))
         plt.plot(x, np.cos(x), 'b')
         plt.show()
-                    
+
     main()
-    ```  
+    ```
 
 1. プログラムをデバッガーを使用して実行 (F5) するか、デバッガーなしで実行 (Ctrl + F5) して、出力を確認します。
 
   ![matplotlib の出力例](media/environments-add-matplotlib3.png)
-
 
 ## <a name="next-steps"></a>次の手順
 
@@ -72,4 +72,5 @@ Python 開発者コミュニティは、ユーザーが独自のプロジェク�
 > [Git の使用](vs-tutorial-01-06.md)
 
 ### <a name="going-deeper"></a>詳しい説明
+
 - [Python 環境](python-environments.md)

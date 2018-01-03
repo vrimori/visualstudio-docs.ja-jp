@@ -18,11 +18,12 @@ caps.latest.revision: "27"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ea1a3e42e5ce634073e9abaf7d89dda9df51c315
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 396b7e99e0850ce5d66436d8b56d21e69ae65ea6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="functions-view"></a>関数ビュー
 関数ビューには、プロファイリング中に呼び出される関数が一覧表示されます。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/31/2017
   
  関数ビューに表示される列は、データの収集に使用したプロファイル方法 (サンプリングまたはインストルメンテーション)、およびプロファイル実行で .NET メモリ データを収集対象としたかどうかによって異なります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [関数ビュー](../profiling/functions-view-sampling-data.md)   
  [関数ビュー](../profiling/functions-view-instrumentation-data.md)   
  [関数ビュー - インストルメンテーション](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   

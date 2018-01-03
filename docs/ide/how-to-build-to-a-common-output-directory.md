@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0082f69e0c35bb84a15a8dd4798e7a17b6a3dd7c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f45831618e7d685da1f50ae634770ef735a6ff78
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-build-to-a-common-output-directory"></a>方法 : 共通出力ディレクトリへのビルド
 既定では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、ソリューションの各プロジェクトを、そのソリューション内の独自のフォルダーにビルドします。 プロジェクトのビルド出力パスを変更して、すべての出力を強制的に同じフォルダーに配置することができます。  
@@ -35,6 +36,6 @@ ms.lasthandoff: 10/31/2017
   
 4.  ソリューションのすべてのプロジェクトに対して、手順 1 から 3 を繰り返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コードのコンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)   
  [方法 : ビルド出力ディレクトリを変更する](../ide/how-to-change-the-build-output-directory.md)

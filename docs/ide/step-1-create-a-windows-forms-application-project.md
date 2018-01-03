@@ -12,11 +12,12 @@ caps.latest.revision: "22"
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 4878b71317e67c152c45d58168531f1039128f0e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 4714399d1ea7b17f1d79858185157e9c11902d7e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="step-1-create-a-windows-forms-application-project"></a>手順 1: Windows フォーム アプリケーション プロジェクトの作成
 ピクチャ ビューアーを作成する場合、最初の手順は、Windows フォーム アプリケーション プロジェクトを作成することです。  
@@ -25,7 +26,7 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="to-create-a-windows-forms-application-project"></a>Windows フォーム アプリケーション プロジェクトを作成するには  
   
-1.  メニュー バーで **[ファイル]**、 **[新規]**、 **[プロジェクト]**の順にクリックします。 ダイアログ ボックスは次のようになります。  
+1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。 ダイアログ ボックスは次のようになります。  
   
      ![[新しいプロジェクト] ダイアログ ボックス](../ide/media/newprojectdialogcallouts.png "NewProjectDialogCallouts")  
 [新しいプロジェクト] ダイアログ ボックス  

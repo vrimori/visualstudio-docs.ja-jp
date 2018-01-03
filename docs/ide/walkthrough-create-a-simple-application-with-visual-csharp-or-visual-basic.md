@@ -15,36 +15,29 @@ caps.latest.revision: "19"
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 44429ccde6dece8ff0b8a0c41fd4cff328d1160f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 3490d9d4f88bbcc104132e35c3f86d3fe75622b5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-create-a-simple-application-with-visual-c-or-visual-basic"></a>チュートリアル : Visual C# または Visual Basic による簡単なアプリケーションの作成
-このチュートリアルを完了すると、Visual Studio を使用してアプリケーションを開発する際に使用できるさまざまなツール、ダイアログ ボックス、およびデザイナーの使用方法を習得できます。 簡単な "Hello, World" アプリケーションの作成、UI の設計、コードの追加、エラーのデバッグを行いながら、統合開発環境 (IDE) での作業方法について学習します。  
-  
- このトピックは、次のセクションで構成されています。  
-  
- [IDE の構成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md#BKMK_ConfigureIDE)  
-  
- [簡単なアプリケーションの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md#BKMK_CreateApp)  
-  
- [アプリケーションのデバッグとテスト](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md#BKMK_DebugTest)  
+このチュートリアルを完了すると、Visual Studio を使用してアプリケーションを開発する際に使用できるさまざまなツール、ダイアログ ボックス、およびデザイナーの使用方法を習得できます。 簡単な "Hello, World" アプリケーションの作成、UI の設計、コードの追加、エラーのデバッグを行いながら、統合開発環境 (IDE) での作業方法について学習します。
   
 ##  <a name="BKMK_ConfigureIDE"></a> IDE の構成  
 Visual Studio を初めて起動すると、サインインが求められます。 このチュートリアルでは、この手順は任意です。 次に、開発設定と色テーマの選択を求めるダイアログ ボックスが表示される場合があります。 既定値のままにして **[Visual Studio の開始]** を選択します。  
 
 ![設定を選択するダイアログ ボックス](../ide/media/exploreide-settings.png "exploreide-settings")
   
- Visual Studio を起動すると、ツール ウィンドウ、メニューとツール バー、メイン ウィンドウ領域が表示されます。 ツール ウィンドウは、アプリケーション ウィンドウの左側および右側にドッキングされており、上部には **クイック起動**、メニュー バー、および標準ツール バーがあります。 アプリケーション ウィンドウの中央には、 **スタート ページ**が表示されます。 ソリューションかプロジェクトが読み込まれると、 **[スタート ページ]** がある領域にエディターとデザイナーが表示されます。 アプリケーションを開発する場合は、ほとんどの時間をこの中央の領域での作業に費やします。  
+Visual Studio を起動すると、ツール ウィンドウ、メニューとツール バー、メイン ウィンドウ領域が表示されます。 ツール ウィンドウは、アプリケーション ウィンドウの左側および右側にドッキングされており、上部には **クイック起動**、メニュー バー、および標準ツール バーがあります。 アプリケーション ウィンドウの中央には、 **スタート ページ**が表示されます。 ソリューションかプロジェクトが読み込まれると、 **[スタート ページ]** がある領域にエディターとデザイナーが表示されます。 アプリケーションを開発する場合は、ほとんどの時間をこの中央の領域での作業に費やします。  
   
- ![全般設定が適用された IDE](../ide/media/exploreide-idewithgeneralsettings.png "ExploreIDE-IDEwithgeneralsettings")  
+![全般設定が適用された IDE](../ide/media/exploreide-idewithgeneralsettings.png "ExploreIDE-IDEwithgeneralsettings")  
   
 ##  <a name="BKMK_CreateApp"></a> 簡単なアプリケーションの作成  
   
 ### <a name="create-the-project"></a>プロジェクトの作成  
- Visual Studio でアプリケーションを作成するには、最初にプロジェクトおよびソリューションを作成します。 この例では、Windows Presentation Foundation (WPF) プロジェクトを作成します。  
+Visual Studio でアプリケーションを作成するには、最初にプロジェクトおよびソリューションを作成します。 この例では、Windows Presentation Foundation (WPF) プロジェクトを作成します。  
   
 #### <a name="to-create-the-wpf-project"></a>WPF プロジェクトを作成するには  
   
@@ -56,11 +49,11 @@ Visual Studio を初めて起動すると、サインインが求められます
   
      ![C# WPF プロジェクトの作成、HelloWPFApp](../ide/media/exploreide-newprojectcsharp.png "ExploreIDE-NewProjectcsharp")  
   
- Visual Studio は HelloWPFApp というプロジェクトとソリューションを作成し、**ソリューション エクスプローラー**は各種ファイルを表示します。 WPF デザイナーには、MainWindow.xaml のデザイン ビューと XAML ビューが分割ビューで表示されます  分割線をスライドして、それぞれのビューの表示範囲を増減できます。  ビジュアル ビューか XAML ビューの一方のみを表示することも選択できます。 (詳細については、「[Windows フォーム開発者向け WPF デザイナー](http://msdn.microsoft.com/47ad0909-e89b-4996-b4ac-874d929f94ca)」を参照してください。)次の項目が **ソリューション エクスプローラー**に表示されます。  
+Visual Studio は HelloWPFApp というプロジェクトとソリューションを作成し、**ソリューション エクスプローラー**は各種ファイルを表示します。 WPF デザイナーには、MainWindow.xaml のデザイン ビューと XAML ビューが分割ビューで表示されます  分割線をスライドして、それぞれのビューの表示範囲を増減できます。  ビジュアル ビューか XAML ビューの一方のみを表示することも選択できます。 (詳細については、「[Windows フォーム開発者向け WPF デザイナー](http://msdn.microsoft.com/47ad0909-e89b-4996-b4ac-874d929f94ca)」を参照してください。)次の項目が **ソリューション エクスプローラー**に表示されます。  
   
- ![HelloWPFApp ファイルを読み込んだソリューション エクスプローラー](../ide/media/exploreide-hellowpfappfiles.png "ExploreIDE-HelloWPFAppFiles")  
+![HelloWPFApp ファイルを読み込んだソリューション エクスプローラー](../ide/media/exploreide-hellowpfappfiles.png "ExploreIDE-HelloWPFAppFiles")  
   
- プロジェクトは、作成後にカスタマイズできます。 **[プロパティ]** ウィンドウ ( **[表示]** メニュー上) を使って、プロジェクト項目、コントロール、およびアプリケーション内のその他の項目に関するオプションを表示して変更できます。  
+プロジェクトは、作成後にカスタマイズできます。 **[プロパティ]** ウィンドウ ( **[表示]** メニュー上) を使って、プロジェクト項目、コントロール、およびアプリケーション内のその他の項目に関するオプションを表示して変更できます。  
   
 #### <a name="to-change-the-name-of-mainwindowxaml"></a>MainWindow.xaml の名前を変更するには  
 それでは、MainWindow に具体的な名前を付けましょう。  
@@ -73,7 +66,7 @@ Visual Studio を初めて起動すると、サインインが求められます
      **ソリューション エクスプローラー**に表示されているこのファイルの名前が Greetings.xaml になり、入れ子になっているコード ファイルの名前が Greetings.xaml.vb または Greetings.xaml.cs になります。 このコード ファイルは、.xaml ファイル ノードの下に入れ子になっており、相互に密接に関連していることが示されます。  
   
 ### <a name="design-the-user-interface-ui"></a>ユーザー インターフェイス (UI) のデザイン  
- このアプリケーションに 3 種類のコントロール (TextBlock コントロール、2 つの RadioButton コントロール、および Button コントロール) を追加します。  
+このアプリケーションに 3 種類のコントロール (TextBlock コントロール、2 つの RadioButton コントロール、および Button コントロール) を追加します。  
   
 #### <a name="to-add-a-textblock-control"></a>TextBlock コントロールを追加するには  
   
@@ -85,16 +78,16 @@ Visual Studio を初めて起動すると、サインインが求められます
   
 3.  **TextBlock** 項目を選択してデザイン サーフェイス上のウィンドウにドラッグし、TextBlock コントロールをデザイン サーフェイスに追加します。 ウィンドウの上部付近の中央にコントロールを配置します。  
   
- ウィンドウは次の図のようになります。  
+ウィンドウは次の図のようになります。  
   
- ![グリーティング フォームの TextBlock コントロール](../ide/media/exploreide-greetingswithtextblockonly.png "ExploreIDE-GreetingswithTextblockonly")  
+![グリーティング フォームの TextBlock コントロール](../ide/media/exploreide-greetingswithtextblockonly.png "ExploreIDE-GreetingswithTextblockonly")  
   
- XAML マークアップは、次のようになります。  
+XAML マークアップは、次のようになります。  
   
-     ```xaml  
-     <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" RenderTransformOrigin="4.08,2.312" Margin="237,57,221,238"><Run Text="TextBlock"/><InlineUIContainer><TextBlock TextWrapping="Wrap" Text="TextBlock"/>  
-     ```  
-  
+```xaml  
+<TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" RenderTransformOrigin="4.08,2.312" Margin="237,57,221,238"><Run Text="TextBlock"/><InlineUIContainer><TextBlock TextWrapping="Wrap" Text="TextBlock"/>  
+```  
+
 #### <a name="to-customize-the-text-in-the-text-block"></a>テキスト ブロックのテキストをカスタマイズするには  
   
 1.  XAML ビューで、TextBlock のマークアップを探し、Text 属性を  
@@ -158,7 +151,7 @@ IsChecked="True"
      ![コントロール ラベルのあるグリーティング フォーム](../ide/media/exploreide-greetingswithconrollabels.png "ExploreIDE-Greetingswithconrollabels")  
   
 ### <a name="add-code-to-the-display-button"></a>Display ボタンのコードの追加  
- このアプリケーションを実行すると、ユーザーがラジオ ボタンを選択した後で **[Display]** ボタンを選択したときに、メッセージ ボックスが表示されます。 1 つのメッセージ ボックスには "Hello" と表示され、もう 1 つメッセージ ボックスには "Goodbye" と表示されます。 この動作を作成するために、Greetings.xaml.vb または Greetings.xaml.cs の Button_Click イベントにコードを追加します。  
+このアプリケーションを実行すると、ユーザーがラジオ ボタンを選択した後で **[Display]** ボタンを選択したときに、メッセージ ボックスが表示されます。 1 つのメッセージ ボックスには "Hello" と表示され、もう 1 つメッセージ ボックスには "Goodbye" と表示されます。 この動作を作成するために、Greetings.xaml.vb または Greetings.xaml.cs の Button_Click イベントにコードを追加します。  
   
 #### <a name="add-code-to-display-message-boxes"></a>メッセージ ボックスを表示するコードの追加    
 1.  デザイン サーフェイスで、 **[Display]** ボタンをダブルクリックします。  
@@ -201,10 +194,10 @@ IsChecked="True"
 3.  アプリケーションを保存します。  
   
 ##  <a name="BKMK_DebugTest"></a> アプリケーションのデバッグとテスト  
- 次に、アプリケーションをデバッグしてエラーを探し、両方のメッセージ ボックスが正しく表示されることをテストします。 以下の指示にデバッガーをビルドして起動する方法が示されていますが、詳細については、後で「[WPF アプリケーション (WPF) のビルド](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)」および「[Debugging WPF](../debugger/debugging-wpf.md)」(WPF のデバッグ) を参照することもできます。  
+次に、アプリケーションをデバッグしてエラーを探し、両方のメッセージ ボックスが正しく表示されることをテストします。 以下の指示にデバッガーをビルドして起動する方法が示されていますが、詳細については、後で「 [WPF アプリケーション (WPF) のビルド](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf) 」および「 [Debugging WPF](../debugger/debugging-wpf.md) 」を参照することもできます。  
   
 ### <a name="find-and-fix-errors"></a>エラーの検出と修正  
- この手順では、前に MainWindow.xaml ファイルの名前を変更することで引き起こしたエラーを見つけます。  
+この手順では、前に MainWindow.xaml ファイルの名前を変更することで引き起こしたエラーを見つけます。  
   
 #### <a name="to-start-debugging-and-find-the-error"></a>デバッグを開始し、エラーを見つけるには  
   
@@ -218,7 +211,7 @@ IsChecked="True"
   
      ![[デバッグ] メニューの [デバッグの停止] コマンド](../ide/media/exploreide-stopdebugging.png "ExploreIDE-StopDebugging")  
   
- このチュートリアルの最初で MainWindow.xaml の名前を Greetings.xaml に変更しましたが、このコードではアプリケーションのスタートアップ URI として mainwindow.xaml が指定されたままになっているため、プロジェクトを起動できません。  
+このチュートリアルの最初で MainWindow.xaml の名前を Greetings.xaml に変更しましたが、このコードではアプリケーションのスタートアップ URI として mainwindow.xaml が指定されたままになっているため、プロジェクトを起動できません。  
   
 #### <a name="to-specify-greetingsxaml-as-the-startup-uri"></a>スタートアップ URI として Greetings.xaml を指定するには  
   
@@ -284,7 +277,7 @@ IsChecked="True"
   
 このチュートリアルは完了しました。 ビルドした .exe は、ソリューションとプロジェクトのディレクトリ (...\HelloWPFApp\HelloWPFApp\bin\Release\\) の下にあります。 その他の例については、「[Visual Studio Samples](../ide/visual-studio-samples.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [Visual Studio 2017 の新機能 ](../ide/whats-new-in-visual-studio.md)   
- [Visual Studio を使用した開発の開始](../ide/get-started-developing-with-visual-studio.md)   
- [生産性に関するヒント](../ide/productivity-tips-for-visual-studio.md)
+## <a name="see-also"></a>関連項目
+[Visual Studio 2017 の新機能 ](../ide/whats-new-in-visual-studio.md)   
+[Visual Studio を使用した開発の開始](../ide/get-started-developing-with-visual-studio.md)   
+[生産性に関するヒント](../ide/productivity-tips-for-visual-studio.md)

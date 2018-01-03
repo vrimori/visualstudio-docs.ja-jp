@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bcc24fbcf5089d60dade18cbcb08135951cbc6b9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3011b37cd7794745ce1700c412ccf227147728f0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-current-stack-frame-command"></a>SetCurrentStackFrame コマンド
 特定のスタック フレームを設定できます。  
@@ -33,7 +34,7 @@ Debug.SetCurrentStackFrame index
   
 ## <a name="arguments"></a>引数  
  `index`  
- 必須です。 インデックスでスタック フレームを選びます。  
+ 必須。 インデックスでスタック フレームを選びます。  
   
 ## <a name="example"></a>例  
   
@@ -41,7 +42,7 @@ Debug.SetCurrentStackFrame index
 >Debug.SetCurrentStackFrame 1  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   

@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 922c68ee927d05579ab2566e03b8acc0d9a56608
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e4feedb6f32b1d1fb03ef51468eb50ef1a0aa7a3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="item-element-msbuild"></a>Item 要素 (MSBuild)
 ユーザー定義のアイテムおよびそのメタデータが含まれます。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトで使用されるすべてのアイテムが、`ItemGroup` 要素の子として指定されている必要があります。  
@@ -75,7 +76,7 @@ MSBuild 15.1 以降では、現行の属性リストと競合しない名前の�
 |---------------|-----------------|  
 |`Include`|必須の属性です。<br /><br /> アイテムの一覧に含めるファイルまたはワイルドカードです。|  
 |`Exclude`|省略可能な属性です。<br /><br /> アイテムの一覧から除外するファイルまたはワイルドカードです。|  
-|`Condition`|省略可能な属性です。<br /><br /> 評価する条件です。 詳細については、[条件](../msbuild/msbuild-conditions.md)をご覧ください。|  
+|`Condition`|省略可能な属性です。<br /><br /> 評価する条件です。 詳細については、「[条件](../msbuild/msbuild-conditions.md)」を参照してください。|  
 |`Remove`|省略可能な属性です。<br /><br /> アイテムの一覧から削除するファイルまたはワイルドカードです。<br /><br />|  
 |`KeepDuplicates`|省略可能な属性です。<br /><br /> 既存のアイテムの完全な複製である場合に、アイテムをターゲット グループに追加するかどうかを指定します。 ソースとターゲットのアイテムの `Include` 値が同じでメタデータが異なる場合、`KeepDuplicates` が `false` に設定されていてもアイテムは追加されます。 詳細については、「[MSBuild 項目](../msbuild/msbuild-items.md)」をご覧ください。<br /><br /> この属性は、`ItemGroup` 内にある `Target` のアイテムに指定されている場合にのみ有効です。|  
 |`KeepMetadata`|省略可能な属性です。<br /><br /> ターゲット アイテムに追加するソース アイテムのメタデータ。 名前がセミコロン区切りのリストで指定されているメタデータのみ、ソース アイテムからターゲット アイテムに転送されます。 詳細については、「[MSBuild 項目](../msbuild/msbuild-items.md)」をご覧ください。<br /><br /> この属性は、`ItemGroup` 内にある `Target` のアイテムに指定されている場合にのみ有効です。|  
@@ -101,7 +102,7 @@ MSBuild 15.1 以降では、現行の属性リストと競合しない名前の�
 
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] エンジンでは、`*` や `?` などのワイルドカードや、`/**/*.cs` などの再帰的なワイルドカードを評価できます。 詳細については、「[MSBuild 項目](../msbuild/msbuild-items.md)」をご覧ください。  
 
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のコード例は、`CSFile` 型の 2 つのアイテムを宣言する方法を示しています。 2 番目に宣言されているアイテムには、`MyMetadata` が `HelloWorld` に設定されたメタデータが含まれています。  
 
 ```xml  
@@ -123,7 +124,7 @@ MSBuild 15.1 以降では、現行の属性リストと競合しない名前の�
 ```  
 
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [項目](../msbuild/msbuild-items.md)   
  [MSBuild プロパティ](../msbuild/msbuild-properties.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)

@@ -11,11 +11,12 @@ ms.assetid: 075d9b8d-8658-4fca-8711-08304dbac1c5
 caps.latest.revision: "9"
 ms.author: douge
 manager: douge
-ms.openlocfilehash: 28cc3774c48eabc240f2f51b9b40f23faba74377
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 7617b7aafac6c7345a94d0e792bc312c7e212e56
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sample-excel-extension-propertyprovider-class"></a>Excel 拡張子のサンプル: PropertyProvider クラス
 この内部クラスによって <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider> クラスが拡張されます。また、この内部クラスは、ユーザー インターフェイス (UI) テストの記録と再生に使用する [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)] 要素のプロパティ サービスを提供します。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/27/2017
 ## <a name="code-generation-customization-methods"></a>コード生成カスタマイズ メソッド  
  この拡張機能でこれらのメソッドは実装されていません。 そのため、`null` が返されるか、<xref:System.NotImplementedException> がスローされます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>   
  <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard>   
  [コード化された UI テストと操作の記録を拡張して Microsoft Excel をサポート](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)

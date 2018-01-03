@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c322fb6f4419aad732db3aa02940edeab6850f10
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8488bc30503ade516a9f03844bf56837540139d3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="markerserieswritemessage-method"></a>marker_series::write_message メソッド
 同時実行ビジュアライザーのトレース ファイルにメッセージを書き込みます。  
@@ -58,10 +59,10 @@ void write_message(
  `_Category`  
  Category.Importance レベル。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** cvmarkersobj.h  
   
  **名前空間:** Concurrency::diagnostic  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [marker_series クラス](../profiling/marker-series-class.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "24"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 04920978073c85f968c51dc34dae54d90e7b6427
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 4c2bdad67d92956bf3bed98e4bb3643868386fd4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="itemgroup-element-msbuild"></a>ItemGroup 要素 (MSBuild)
 ユーザー定義 [Item](../msbuild/item-element-msbuild.md) 要素のセットが含まれます。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトで使用されるすべての項目は、`ItemGroup` 要素の子として指定する必要があります。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/31/2017
 </Project>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)   
  [項目](../msbuild/msbuild-items.md)   
  [MSBuild プロジェクトの共通項目](../msbuild/common-msbuild-project-items.md)

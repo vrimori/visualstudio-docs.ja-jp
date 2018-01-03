@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 14e043feae7a201ff5b31ee17aa790fe6f338341
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b3fdf8728e5afd839718e31e4eb6b113b8f9cde2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-snippets-schema-reference"></a>コード スニペット スキーマ リファレンス
 IntelliSense コード スニペットとは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でのアプリケーション開発時に、簡単に挿入できるようにあらかじめ作成されたコードです。 同じようなコードを繰り返し入力したり、サンプルを検索したりする時間を短縮するコード スニペットを用意しておくことで、生産性を高めることができます。 IntelliSense コード スニペット XML スキーマを使用すると、独自のコード スニペットを作成し、それらを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] に標準で付属しているコード スニペットに追加できます。  
@@ -122,7 +123,7 @@ Code 要素に使用できる属性には次の 3 つがあります。
 
 - **Language** - _必須_ の属性。コード スニペットの言語を指定します。 値は次のいずれかになります。
 
-   |値|説明|  
+   |[値]|説明|  
    |-----|-----------|  
    |`VB`|Visual Studio のコード スニペットであることを示します。|  
    |`CSharp`|C# のコード スニペットであることを示します。|  
@@ -134,7 +135,7 @@ Code 要素に使用できる属性には次の 3 つがあります。
  
 - **Kind** - _省略可能_ な属性。コード スニペットをコンパイルするために、スニペットに含まれているコードの種類と、そのコード スニペットを挿入すべき場所を指定します。 値は次のいずれかになります。
 
-   |値|説明|  
+   |[値]|説明|  
    |-----|-----------|  
    |`method body`|コード スニペットがメソッドの本体であり、メソッド宣言の内部に挿入する必要があることを示します。|  
    |`method decl`|コード スニペットがメソッドであり、クラスまたはモジュールの内部に挿入する必要があることを示します。|  
@@ -646,6 +647,6 @@ Code 要素に使用できる属性には次の 3 つがあります。
   
  テキスト値が必要です。 このテキストで、参照アセンブリに関する詳細な情報の入手先 URL を指定します。 プロジェクトに参照を追加できない場合、この URL が表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コード スニペット](../ide/code-snippets.md)   
  [チュートリアル: コード スニペットを作成する](../ide/walkthrough-creating-a-code-snippet.md)

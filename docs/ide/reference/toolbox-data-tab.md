@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 01dc6663c9242c1a919b47fb242343332cbc9a63
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d622f1b4a71f52103d1d7a3148291dcd2dcf9129
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolbox-data-tab"></a>ツールボックス、[データ] タブ
 フォームとコンポーネントに追加できるデータ オブジェクトを表示します。 作成しているプロジェクトに関連するデザイナーがあると、**ツールボックス**の **[データ]** タブが表示されます。 **ツールボックス**は、Visual Studio の統合開発環境 (IDE: Integrated Development Environment) に既定で表示されます。**ツールボックス**を表示する必要がある場合は、**[表示]** メニューの **[ツールボックス]** をクリックします。  
@@ -31,14 +32,14 @@ ms.lasthandoff: 10/31/2017
 ## <a name="ui-element-list"></a>UI 要素の一覧  
  コンポーネントに対する .NET Framework の参照ページを直接表示するには、**ツールボックス**の項目で、またはデザイナーのトレイにあるコンポーネントの項目で、**F1** キーを押します。  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |<xref:System.Data.DataSet>|型付きまたは型なしのデータセットのインスタンスをフォームまたはコンポーネントに追加します。 このオブジェクトをデザイナーにドラッグすると、ダイアログ ボックスが表示されて、既存の型指定されたデータセット クラスを選択、または新しいブランクの型指定されていないデータセットの作成を指定できます。 **注:** 新しい型指定されたデータセット スキーマおよびクラスを作成する場合、**ツールボックス**の <xref:System.Data.DataSet> オブジェクトは使用しません。 詳細については、[データセットの作成と構成](../../data-tools/create-and-configure-datasets-in-visual-studio.md)に関するページを参照してください。|  
 |<xref:System.Windows.Forms.DataGridView>|データを表形式で表示するための強力で柔軟な機能が用意されています。|  
 |<xref:System.Windows.Forms.BindingSource>|基になるデータ ソースにコントロールをバインドするプロセスを簡略化します。|  
 |<xref:System.Windows.Forms.BindingNavigator>|データにバインドされている、フォーム上のコントロールを移動および操作するためのユーザー インターフェイス (UI) を表します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio でのデータへのアクセス](../../data-tools/accessing-data-in-visual-studio.md)   
  [.NET 用の Visual Studio データ ツール](../../data-tools/visual-studio-data-tools-for-dotnet.md)   
  [Visual Studio のデータセット ツール](../../data-tools/dataset-tools-in-visual-studio.md)   

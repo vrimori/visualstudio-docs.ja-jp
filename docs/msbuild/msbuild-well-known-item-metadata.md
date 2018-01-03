@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: dd9e082834af6194b84c7975e4a42337d66a429a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b2f48162ed4c37358980c40b5c71c4f955880358
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msbuild-well-known-item-metadata"></a>MSBuild 既知のアイテム メタデータ
 次の表は、作成時にすべてのアイテムに割り当てられたメタデータの説明です。 それぞれの例で、ファイル `C:\MyProject\Source\Program.cs` をプロジェクトに含めるために次のアイテム宣言が使用されました。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
 |%(CreatedTime)|アイテムが作成された時間からのタイムスタンプが含まれます。 例:<br /><br /> `2004-06-25 09:26:45.8237425`|  
 |%(AccessedTime)|アイテムが最後にアクセスされた時間からのタイムスタンプが含まれます。<br /><br /> `2004-08-14 16:52:36.3168743`|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [項目](../msbuild/msbuild-items.md)   
  [バッチ](../msbuild/msbuild-batching.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b045646ffb5771d40cd7531d01ed33181dff9cc9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 09e16202fb1b35a48925297e35840a60b65f0488
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-compare-performance-data-files"></a>方法: パフォーマンス データ ファイルを比較する
 比較 ("Diff") のレポートまたはビューを作成することで、2 つの異なるプロファイラー データ ファイル (.vsp または .vsps) の結果を比較することができます。 この比較では、相違点、パフォーマンスの低下、および、1 つのプロファイリング セッションから他のプロファイリング セッションのあいだに起きた改善点を示します。  
@@ -57,4 +58,4 @@ ms.lasthandoff: 10/31/2017
   
 2.  **[比較のための分析ファイルの選択]** ウィンドウで、**[ベースライン ファイル]** 分析ファイル (.vsp または .vsps) と **[比較ファイル]** (.vsp or .vsps) を探して選択します。  
   
-3.  **[OK]** をクリックします。
+3.  **[OK]**をクリックします。

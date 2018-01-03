@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 8cfba9d4868f72ba327035c2fe865fd8ffe6344f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 4ebb6579cd4ac4ee96547bbc7d70f471f17e4e53
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sgen-task"></a>SGen タスク
 指定されたアセンブリの種類に対応する XML シリアル化アセンブリを作成します。 このタスクは、XML シリアライザー ジェネレーター ツール (Sgen.exe) をラップするタスクです。 詳細については、「[XML シリアライザー ジェネレーター ツール (Sgen.exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe)」を参照してください。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="remarks"></a>コメント  
  上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension 基本クラス](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
  [タスク](../msbuild/msbuild-tasks.md)   
  [MSBuild の概念](../msbuild/msbuild-concepts.md)

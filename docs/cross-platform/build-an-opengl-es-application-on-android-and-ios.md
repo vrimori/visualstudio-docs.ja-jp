@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 80463925da89165a569b1e6317ef8b1b22c77514
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: xplat-cplusplus
+ms.openlocfilehash: 6378826a090b05a681a4808573eefd95899b9f6a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Android および iOS での OpenGL ES アプリケーションのビルド
 Visual C++ for Cross-Platform Mobile Development オプションをインストールすると、一般的なコードを共有する iOS アプリおよび Android アプリ用の Visual Studio ソリューションとプロジェクトを作成できます。 このトピックでは、簡単な iOS アプリと Android Native Activity アプリの両方を作成するソリューション テンプレートについて説明します。 これらのアプリには、OpenGL ES を使用して各プラットフォームで同じアニメーション回転キューブを表示する共通の C++ コードがあります。 OpenGL ES (OpenGL for Embedded Systems または GLES) は、多くのモバイル デバイスでサポートされている 2D および 3D グラフィックス API です。  
@@ -40,7 +41,7 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
 2.  **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]**で **[Visual C++]**、 **[クロス プラットフォーム]**の順に選択し、 **[OpenGLES アプリケーション (Android、iOS)]** テンプレートを選択します。  
   
-3.  アプリケーションに `MyOpenGLESApp` のような名前を付けてから、**[OK]** をクリックします。  
+3.  アプリに `MyOpenGLESApp`などの名前を付け、 **[OK]**」を参照してください。  
   
      ![新しい OpenGLES アプリケーション プロジェクト](../cross-platform/media/cppmdd_opengles_newproj.PNG "CPPMDD_OpenGLES_NewProj")  
   

@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: c56250677e99a11c52ac368037525803394242b3
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: c75e15def5f9abe98be3f062650c84693716c87e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="variable-explorer"></a>変数エクスプローラー
 
@@ -27,22 +28,22 @@ x <- 42
 y <- 43
 n <- c(1,2,3,5,8,13)
 ```
- 
+
 変数エクスプローラー ウィンドウには次のように表示されます。
 
 ![Visual Studio の変数エクスプローラー ウィンドウ](media/variable-explorer-window.png)
 
 より複雑な R データ フレームが定義されているセッションでは、データに移動できます。 たとえば、`cars <- mtcars` の実行後、変数エクスプローラーでさまざまなノードを展開して、データセット内を移動することができます。
- 
+
 ![変数エクスプローラーの展開ビュー](media/variable-explorer-expanded-results.png)
- 
+
 変数を削除するには、右クリックして **[削除]** を選択するか、変数を選択して Del キーを押します。
 
 インクリメンタル検索を使用して、データ フレームで測定項目を検索することもできます。 まず検索対象データ フレームのノードを展開してから、検索ボックスに検索語句を入力します。
 
 ## <a name="details-table-view"></a>詳細 (テーブル) ビュー
 
-多くの場合データは表形式であるため、複合データ型を個別のテーブルとして表示できます。そのためには、虫眼鏡アイコンを選択するか、右クリックして **[詳細の表示]** を選択します。 
+多くの場合データは表形式であるため、複合データ型を個別のテーブルとして表示できます。そのためには、虫眼鏡アイコンを選択するか、右クリックして **[詳細の表示]** を選択します。
 
 ![変数エクスプローラー](media/variable-explorer-table-view.png)
 
@@ -69,7 +70,6 @@ n <- c(1,2,3,5,8,13)
 ![デバッグ中のデータ フレームが表示された変数エクスプローラー](media/variable-explorer-as-locals-window.png)
 
 デバッガーでコードをステップ実行するときには、変数エクスプローラーが自動的に関数スコープに切り替わり、関数のローカル変数などが表示されます。
-
 
 ## <a name="importing-data-into-variable-explorer"></a>変数エクスプローラーへのデータのインポート
 

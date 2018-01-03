@@ -15,11 +15,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 95ffd0009e50f01e40a3182bfbf6c8c6947836c4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 66bd8d44fdd7ddfed502b72dcb60853fb63d3671
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-properties-reference"></a>プロジェクトのプロパティのリファレンス
 プロジェクトのプロパティを構成およびカスタマイズする方法について詳しく学習します。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/31/2017
 |[[セキュリティ] ページ (プロジェクト デザイナー)](../../ide/reference/security-page-project-designer.md)|このページを使用して、[!INCLUDE[ndptecclick](../../deployment/includes/ndptecclick_md.md)] 配置によって配置されたアプリケーションのコード アクセス セキュリティの設定を構成できます。|  
 |[[署名] ページ (プロジェクト デザイナー)](../../ide/reference/signing-page-project-designer.md)|このページを使用して、アプリケーション マニフェストと配置マニフェストに署名し、アセンブリに署名できます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソリューションおよびプロジェクト](../../ide/solutions-and-projects-in-visual-studio.md)

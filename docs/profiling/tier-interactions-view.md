@@ -14,16 +14,17 @@ caps.latest.revision: "15"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9aac5f9ac8886bef61d700209f77b4b1852fe2bf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a42e748e45d7db0606d585d774be254a7358d6b0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tier-interactions-view"></a>階層相互作用のビュー
 階層相互作用プロファイリングにより、[!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] を通じてデータベースと通信する多階層アプリケーションでの関数の実行時間に関する追加情報が提供されます。 データは同期の関数呼び出しについてのみ収集されます。  
   
- **Requirements**  
+ **必要条件**  
   
 -   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/31/2017
   
 |Column|説明|  
 |------------|-----------------|  
-|**名前**|- 最上位の行の場合は、プロファイリングされたプロセスまたは Web ページの名前。<br />- データベース接続の行の場合は、データベースをホストするサーバーの名前。|  
+|**Name**|- 最上位の行の場合は、プロファイリングされたプロセスまたは Web ページの名前。<br />- データベース接続の行の場合は、データベースをホストするサーバーの名前。|  
 |**データベース**|データベースの名前 (データベース接続の行の場合のみ)。|  
 |**カウント**|プロセス、Web ページ、またはデータベース接続によって生成された要求の合計数。|  
 |**経過時間の合計**|プロセス、Web ページ、またはデータベース接続からのいずれか 1 つの要求の実行に費やされた時間の合計。|  

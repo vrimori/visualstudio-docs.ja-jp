@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5beb7a3db1e62937435ed7379c5f02e77c4f0795
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 474b7c0167b02665a5bc2ff5c1297f768facbc32
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-profiler-reports-from-the-command-line"></a>コマンド ラインからのプロファイラー レポートの作成
 **VSPerfReport** コマンド ライン ツールを使用すると、プロファイル データ (.vsp) ファイルから .xml レポートまたはコンマ区切り値 (.csv) レポートを作成できます。 VSPerfReport のレポートの種類は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のインターフェイスのテーブル ベースのビューとほぼ同じです。 レポートをフィルター処理して、コードのみを表示したり、プロファイル データ ファイルのセグメントのみを表示したりできます。 詳細については、「[VSPerfReport](../profiling/vsperfreport.md)」を参照してください。  

@@ -19,11 +19,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8b20e30cc983d6dd809daa264e4fedbb3a879386
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: caac984e7d281740c322d535bebe84032c15a38e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="class-view-and-object-browser-icons"></a>[クラス ビュー] ウィンドウとオブジェクト ブラウザーのアイコン
 
@@ -33,14 +34,14 @@ ms.lasthandoff: 12/07/2017
 |----------|-----------------|----------|-----------------|
 |![名前空間シンボル](../ide/media/vxnamespace_icon.gif "vxNamespace_Icon")|名前空間|![宣言シンボル](../ide/media/vxmethod_icon.gif "vxMethod_Icon")|メソッドまたは関数|
 |![クラス アイコン](../ide/media/vxclass_icon.gif "vxClass_Icon")|クラス|![演算子シンボル](../ide/media/vxoperator_icon.gif "vxOperator_Icon")|演算子|  
-|![ロリポップ インターフェイス シンボル](../ide/media/vxinterface_icon.gif "vxInterface_Icon")|インターフェイス|![プロパティ シンボル](../ide/media/vxproperty_icon.gif "vxProperty_Icon")|プロパティ|
+|![ロリポップ インターフェイス シンボル](../ide/media/vxinterface_icon.gif "vxInterface_Icon")|Interface|![プロパティ シンボル](../ide/media/vxproperty_icon.gif "vxProperty_Icon")|プロパティ|
 |![構造体シンボル](../ide/media/vxstruct_icon.gif "vxStruct_Icon")|構造体|![フィールド アイコン](../ide/media/vxfield_icon.gif "vxField_Icon")|フィールドまたは変数|  
-|![和集合シンボル](../ide/media/vxunion_icon.gif "vxUnion_Icon")|和集合|![イベント シンボル](../ide/media/vxevent_icon.gif "vxEvent_Icon")|イベント|  
+|![和集合シンボル](../ide/media/vxunion_icon.gif "vxUnion_Icon")|和集合|![イベント シンボル](../ide/media/vxevent_icon.gif "vxEvent_Icon")|event|  
 |![列挙型シンボル](../ide/media/vxenum_icon.gif "vxEnum_Icon")|Enum|![定数アイコン](../ide/media/vxconstant_icon.gif "vxConstant_Icon")|定数|  
 |![型定義シンボル](../ide/media/vxtypedef_icon.gif "vxTypeDef_Icon")|TypeDef|![列挙型項目シンボル](../ide/media/vxenumitem_icon.gif "vxEnum_Icon")|列挙型項目|  
-|![Visual Studio モジュール シンボル](../ide/media/vxmodule_icon.gif "vxModule_Icon")|モジュール|![マップ項目シンボル](../ide/media/vxmapitem_icon.gif "vxMapItem_Icon")|マップ項目|  
+|![Visual Studio モジュール シンボル](../ide/media/vxmodule_icon.gif "vxModule_Icon")|Module|![マップ項目シンボル](../ide/media/vxmapitem_icon.gif "vxMapItem_Icon")|マップ項目|  
 |![拡張メソッド シンボル](../ide/media/extensionmethod.gif "ExtensionMethod")|拡張メソッド|![宣言シンボル](../ide/media/vxmethod_icon.gif "vxMethod_Icon")|外部宣言|  
-|![デリゲート シンボル](../ide/media/vxdelegate_icon.gif "vxDelegate_Icon")|Delegate|![クラス ビューおよびオブジェクト ブラウザーのエラー アイコン](../ide/media/erroricon.gif "ErrorIcon")|エラー|  
+|![デリゲート シンボル](../ide/media/vxdelegate_icon.gif "vxDelegate_Icon")|Delegate|![クラス ビューおよびオブジェクト ブラウザーのエラー アイコン](../ide/media/erroricon.gif "ErrorIcon")|Error|  
 |![例外シンボル](../ide/media/vxexception_icon.gif "vxException_Icon")|例外|![テンプレート シンボル](../ide/media/vxtemplate_icon.gif "vxTemplate_Icon")|テンプレート|  
 |![マップ シンボル](../ide/media/vxmap_icon.gif "vxMap_Icon")|マップ|![エラー感嘆符シンボル](../ide/media/vxerror_icon.gif "vxError_Icon")|不明|  
 |![型の転送シンボル](../ide/media/ob_type_forward.gif "ob_type_forward")|型の転送|||  

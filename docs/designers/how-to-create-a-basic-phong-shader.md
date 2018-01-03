@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 29def0d3aef8a097f5b956bd43df7d8b53abebb9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 52040b717204f151e4a370f5f2a25b29781878b8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-basic-phong-shader"></a>方法: 基本フォン シェーダーを作成する
 このドキュメントでは、シェーダー デザイナーと DGSL (Directed Graph Shader Language) を使用してクラシック フォン照明モデルを実装するための照明シェーダーを作成する方法について説明します。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/31/2017
   
  ![シェーダー グラフとその効果のプレビュー](../designers/media/digit-lighting-graph.png "Digit-Lighting-Graph")  
   
- シェーダーによっては、特定の図形でより適切にプレビューできる可能性があります。 シェーダー デザイナーでシェーダーをプレビューする方法の詳細については、「[シェーダー デザイナー](../designers/shader-designer.md)」の「シェーダーのプレビュー」を参照してください。  
+ シェーダーによっては、特定の図形を使用すると、より適切にプレビューできる可能性があります。 シェーダー デザイナーでシェーダーをプレビューする方法の詳細については、「[シェーダー デザイナー](../designers/shader-designer.md)」の「シェーダーのプレビュー」を参照してください。  
   
  次の図は、このドキュメントで述べた、3-D モデルに適用されるシェーダーを示しています。 **MaterialSpecular** プロパティは (1.00、0.50、0.20、0.00) に設定され、その **MaterialSpecularPower** プロパティは 16 に設定されています。  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 10/31/2017
   
  3-D モデルにシェーダーを適用する方法の詳細については、「[方法: シェーダーを 3-D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: シェーダーを 3-D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)   
  [方法: シェーダーをエクスポートする](../designers/how-to-export-a-shader.md)   
  [方法: 基本ランバート シェーダーを作成する](../designers/how-to-create-a-basic-lambert-shader.md)   

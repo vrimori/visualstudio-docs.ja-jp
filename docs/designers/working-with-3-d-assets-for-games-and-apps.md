@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0c57284e21e1b276c6191109701f507c5a12f819
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a4b0cc6e7105f91a4192d2c079854c8953736eaf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-3-d-assets-for-games-and-apps"></a>ゲームとアプリケーション用の 3D アセットの操作
 このドキュメントでは、DirectX ベースのゲームおよびアプリケーション向けの 3-D モデル、テクスチャ、シェーダーの作成または変更に使用できる、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のツールについて説明します。  

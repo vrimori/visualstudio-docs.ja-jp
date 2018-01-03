@@ -12,11 +12,12 @@ caps.latest.revision: "27"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6906f2e0290416d9a287a9541cf5e40e26180ffa
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 1e56c0b64b0ccd508d7a879d8270af8ffed5c807
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-instrument-a-net-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line"></a>方法: プロファイラーのコマンド ラインを使用して .NET サービスをインストルメントし、詳細なタイミング データを収集する
 ここでは、[!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] プロファイリング ツールのコマンド ライン ツールを使用して [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] サービスをインストルメントし、詳細なタイミング データを収集する方法について説明します。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  元のバイナリをインストルメントされたバージョンに置き換えます。 Windows サービス コントロール マネージャーで、サービスの [スタートアップの種類] が [手動] に設定されていることを確認します。  
   
-4.  [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] プロファイル環境変数を初期化します。 種類:  
+4.  [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] プロファイル環境変数を初期化します。 型:  
   
      **VSPerfClrEnv /globaltraceon**  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/31/2017
   
 8.  Windows サービス コントロール マネージャーからサービスを開始します。  
   
-## <a name="controlling-data-collection"></a>データ収集の制御  
+## <a name="controlling-data-collection"></a>データ コレクションの制御  
  サービスの実行中は、**VSPerfCmd.exe** オプションを使用して、プロファイラー データ ファイルへのデータ書き込みを開始および停止できます。 データ コレクションを制御することにより、サービスの開始、終了などの、プログラム実行の特定の部分についてのデータを収集できます。  
   
 #### <a name="to-start-and-stop-data-collection"></a>データ収集を開始および停止するには  
@@ -104,7 +105,7 @@ ms.lasthandoff: 10/31/2017
   
      **VSPerfCmd /shutdown**  
   
-3.  すべてのプロファイリングを完了したら、プロファイル環境変数を消去します。 種類:  
+3.  すべてのプロファイリングを完了したら、プロファイル環境変数を消去します。 型:  
   
      **VSPerfClrEnv /globaloff**  
   
@@ -112,6 +113,6 @@ ms.lasthandoff: 10/31/2017
   
 5.  コンピューターを再起動します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サービスのプロファイリング](../profiling/command-line-profiling-of-services.md)   
  [インストルメンテーション メソッドのデータ ビュー](../profiling/instrumentation-method-data-views.md)

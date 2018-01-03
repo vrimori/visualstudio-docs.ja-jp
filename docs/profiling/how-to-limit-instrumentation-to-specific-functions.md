@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8fae944ae73c3bfdfdf278b9b905ebab06ba3ff1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 69cc476dc43562e5226ebd6564dfb2733f1d57ae
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-limit-instrumentation-to-specific-functions"></a>方法 : インストルメンテーションを特定の関数に制限する
 インストルメンテーションとデータ収集は、1 つ以上の関数に制限することができます。これを行うには、**[パフォーマンス セッション]** のプロパティ ページまたはターゲット バイナリのプロパティ ページの **[詳細]** ページでオプションを設定します。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]
     >  バイナリ内の関数を一覧表示するには、プロファイリング ツールのインストール ディレクトリ (通常は、[!INCLUDE[vsprvsts](../code-quality/includes/vsprvsts_md.md)]インストール ディレクトリの下にある \Team Tools\Performance Tools ディレクトリ) でコマンド プロンプト ウィンドウを開き、**vsinstr /DumpFuncs** と入力します。  
   
-## <a name="see-also"></a>関連項目  
- [データ収集の制御](../profiling/controlling-data-collection.md)   
+## <a name="see-also"></a>参照  
+ [データ コレクションの制御](../profiling/controlling-data-collection.md)   
  [方法: インストルメンテーションを特定の DLL に制限する](../profiling/how-to-limit-instrumentation-to-specific-dlls.md)   
  [方法: 追加インストルメンテーション オプションを指定する](../profiling/how-to-specify-additional-instrumentation-options.md)

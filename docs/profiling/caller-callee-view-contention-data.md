@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4ea2f63d3e1ee4b4c694fdc025484d85fad9d739
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 47e4f57ffac71d6fb4f1c3e8cd8176c80d9f002a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="caller--callee-view----contention-data"></a>呼び出し元/呼び出し先ビュー - 競合データ
 呼び出し元/呼び出し先ビューには、選択した関数およびその親関数と子関数の競合情報が表示されます。 [呼び出し元/呼び出し先] ビューは、3 つのグリッドで構成されます。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
 |**ルート関数名**|現在の関数の名前です。 [VSPerfReport](../profiling/vsperfreport.md) コマンド ライン レポートでのみ有効です。|  
 |**ソース ファイル**|この関数の定義を含むソース ファイルです。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [呼び出し元/呼び出し先ビュー](../profiling/caller-callee-view.md)   
  [呼び出し元/呼び出し先ビュー - サンプリング データ](../profiling/caller-callee-view-sampling-data.md)   

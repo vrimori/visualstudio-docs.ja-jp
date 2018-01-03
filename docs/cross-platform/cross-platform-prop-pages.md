@@ -11,11 +11,12 @@ ms.assetid: 3a7ba14f-a628-4c1b-bb89-73b9195769f1
 author: corob
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a2278f0964a65481df48b1ae4f3db70d362263dd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: xplat-cplusplus
+ms.openlocfilehash: 7165ba8f6615a56f41f058716fe0f3b515c53f04
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="c-cross-platform-property-page-reference"></a>C++ クロス プラットフォーム プロパティ ページ リファレンス
 このセクションには、C++ クロス プラットフォーム プロジェクトのプロジェクト プロパティに関する情報が含まれます。
@@ -27,4 +28,4 @@ ms.lasthandoff: 10/31/2017
 - [Clang のリンカーのプロパティ (Android C++)](clanglink-prop-page.md)
 - [NMake のプロパティ (Android C++)](nmake-android-prop-page.md)
 
-## <a name="see-also"></a>関連項目 
+## <a name="see-also"></a>参照 

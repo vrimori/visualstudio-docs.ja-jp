@@ -12,11 +12,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b2852c673f00234629450803d1c5d860c8646cd7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6c383337c97197daba7b434d4c678bd5d565c10d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-basic-lambert-shader"></a>方法: 基本ランバート シェーダーを作成する
 このドキュメントでは、シェーダー デザイナーと DGSL (Directed Graph Shader Language) を使用してクラシック ランバート照明モデルを実装するためのライティング シェーダーを作成する方法について説明します。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/31/2017
   
  3-D モデルにシェーダーを適用する方法の詳細については、「[方法: シェーダーを 3-D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: シェーダーを 3-D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)   
  [方法: シェーダーをエクスポートする](../designers/how-to-export-a-shader.md)   
  [方法: 基本フォン シェーダーを作成する](../designers/how-to-create-a-basic-phong-shader.md)   

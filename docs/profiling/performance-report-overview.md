@@ -16,11 +16,12 @@ caps.latest.revision: "45"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0244cbae9a331303434db89a42518812efc2677b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 915f7f3cbbee87f72c4643b8c5a2b4497bbd69dd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-report-overview"></a>パフォーマンス レポートの概要
 Visual Studio Team System Development Edition の統合開発環境 (IDE) の **[パフォーマンス レポート]** ウィンドウでパフォーマンス セッションのプロファイリング データを表示できます。 プロファイリング データは .vsp ファイルと .vsps ファイルに保存されます。 レポート ビュー ウィンドウでは、アプリケーションのパフォーマンス上の問題を表示して分析できます。  
@@ -96,6 +97,6 @@ Visual Studio Team System Development Edition の統合開発環境 (IDE) の **
   
 -   **[エクスポート]** - .CVS 形式または .XML 形式のファイルに現在のレポートを保存します。別のビューで保存するためのオプションを指定できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス ツール データの分析](../profiling/analyzing-performance-tools-data.md)   
  [パフォーマンス レポートのビュー](../profiling/performance-report-views.md)

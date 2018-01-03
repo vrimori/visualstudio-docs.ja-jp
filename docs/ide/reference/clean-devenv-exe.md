@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bd4b344860190d0dcfc01adf6ccf553d34c5b038
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5982cfd7b9201008f4ecc5930041200fd4980dca
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clean-devenvexe"></a>/Clean (devenv.exe)
 すべての中間ファイルと出力ディレクトリを消去します。  
@@ -34,13 +35,13 @@ devenv FileName /Clean [ /project projectnameorfile [/projectconfig name ] ]
   
 ## <a name="arguments"></a>引数  
  `FileName`  
- 必須です。 ソリューション ファイルまたはプロジェクト ファイルの完全パスと名前。  
+ 必須。 ソリューション ファイルまたはプロジェクト ファイルの完全パスと名前。  
   
  /project `ProjName`  
- 省略可能です。 ソリューション内のプロジェクト ファイルのパスと名前です。 `SolutionName` フォルダーからプロジェクト ファイルへの相対パス、プロジェクトの表示名、またはプロジェクト ファイルの完全なパスと名前を入力できます。  
+ 任意。 ソリューション内のプロジェクト ファイルのパスと名前です。 `SolutionName` フォルダーからプロジェクト ファイルへの相対パス、プロジェクトの表示名、またはプロジェクト ファイルの完全なパスと名前を入力できます。  
   
  /projectconfig `ProjConfigName`  
- 省略可能です。 指定した `/project` のクリーン時に使用されるプロジェクトのビルド構成の名前。  
+ 任意。 指定した `/project` のクリーン時に使用されるプロジェクトのビルド構成の名前。  
   
 ## <a name="remarks"></a>コメント  
  このスイッチは、統合開発環境 (IDE) 内の **[ソリューションのクリーン]** メニュー コマンドと同じ機能を実行します。  
@@ -60,7 +61,7 @@ Devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\M
 devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /Clean /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig "Debug"   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)   
  [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md)   
  [/Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)   

@@ -10,11 +10,12 @@ ms.topic: article
 ms.assetid: 84575412-1de7-4e53-811d-ae035eb21d13
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f3eff65b7a70c29adf39eda32805e0773255ba61
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: cplusplus
+ms.openlocfilehash: ac5389640c486d5b886454c15dc0e979c0683caf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="write-unit-tests-for-c-dlls-in-visual-studio"></a>Visual Studio で C++ DLL 用の単体テストを作成する
 
@@ -156,11 +157,11 @@ ms.lasthandoff: 11/15/2017
   
 2.  テスト エクスプローラーで、**[すべて実行]** を選択するか、または実行する特定のテストを選択します。 ブレークポイントを有効にした場合のデバッグ モードでのテストの実行など他のオプションについては、テストを右クリックします。
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [クイック スタート: テスト エクスプローラーによるテスト駆動開発](../test/quick-start-test-driven-development-with-test-explorer.md)
 
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [C/C++ 用の単体テストの記述](writing-unit-tests-for-c-cpp.md)   
  [Microsoft.VisualStudio.TestTools.CppUnitTestFramework API リファレンス](../test/microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)   

@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4a54023892d1432639fd1211273195b941e8f081
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 122a5029c5518d7a4778c4d4732f7ebac9b23683
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="showwebbrowser-command"></a>ShowWebBrowser コマンド
 指定した URL を統合開発環境 (IDE: Integrated Development Environment) の内部または外部の Web ブラウザーのウィンドウに表示します。  
@@ -33,14 +34,14 @@ View.ShowWebBrowser URL [/new][/ext]
   
 ## <a name="arguments"></a>引数  
  `URL`  
- 必須です。 Web サイトの URL (Uniform Resource Locator)。  
+ 必須。 Web サイトの URL (Uniform Resource Locator)。  
   
 ## <a name="switches"></a>スイッチ  
  /new  
- 省略可能です。 Web ブラウザーの新しいインスタンスにページが表示されるように指定します。  
+ 任意。 Web ブラウザーの新しいインスタンスにページが表示されるように指定します。  
   
  /ext  
- 省略可能です。 IDE の外部にある既定の Web ブラウザーにページが表示されるように指定します。  
+ 任意。 IDE の外部にある既定の Web ブラウザーにページが表示されるように指定します。  
   
 ## <a name="remarks"></a>コメント  
  **ShowWebBrowser** コマンドのエイリアスは **navigate** または **nav** です。  
@@ -52,7 +53,7 @@ View.ShowWebBrowser URL [/new][/ext]
 >View.ShowWebBrowser http://msdn.microsoft.com /ext  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   

@@ -18,11 +18,12 @@ caps.latest.revision: "37"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f07b924c5af117f39e19dc5add6046a14be22a6b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 552a2c66bd71d83ff1c8cd3453154c065d8bdb3d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="summary-view"></a>概要 ビュー
 概要ビューには、プロファイル実行で最もパフォーマンスに負荷のかかる関数またはオブジェクトに関する情報が表示されます。 このビューには、タイムライン グラフと、プロファイル方法のパフォーマンス メトリックスに基づいて最も負荷のかかる関数またはオブジェクトの 2 つ以上の一覧が表示されます。 このビュー内のデータは、使用されたプロファイル方法 (サンプリング、インストルメンテーション、または同時実行) および .NET メモリ割り当てを収集対象としたかどうかによって異なります。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/31/2017
 |**レポート データのフィルター**|プロファイル レポート フィルター ウィンドウを表示します。このウィンドウでは、レポート ビューに表示されるデータを制限するための条件を指定できます。 詳細については、「[パフォーマンス レポート ビュー フィルター](../profiling/performance-report-view-filter.md)」を参照してください。|  
 |**全画面表示の切り替え**|レポート ビューの全画面表示モードを切り替えます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [概要 ビュー](../profiling/summary-view-sampling-data.md)   
  [概要ビュー](../profiling/summary-view-instrumentation-data.md)   
  [概要ビュー](../profiling/summary-view-dotnet-memory-data.md)

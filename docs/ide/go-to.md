@@ -16,11 +16,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 15b222eaa3e03a44f99f64e86f9c88d125e41f98
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9309a143760aab5b59355b4cea6cd214aaa49812
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="find-code-using-go-to-commands"></a>移動コマンドを使用したコードの検索  
 Visual Studio の **[移動]** コマンドは、特定の項目をすばやく検索できるように、コードのフォーカス検索を行います。 統一されたシンプルなインターフェイスで、特定の行、型、シンボル、ファイル、メンバーに移動できます。 この機能は Visual Studio 2017 以降に備わっています。  
@@ -82,6 +83,6 @@ t      | ![型アイコン](media/gotoall_typeicon.png)     | Ctrl + 1、Ctrl + 
 詳細の表示    | プロジェクト、ファイル、行、およびドキュメントのコメントから取得した概要情報をウィンドウに表示します。
 ウィンドウを中央に   | このウィンドウをコード エディターの右上ではなく、中央に移動します。   
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [コード間の移動](../ide/navigating-code.md)  
 [[定義へ移動] と [定義をここに表示]](../ide/go-to-and-peek-definition.md)  

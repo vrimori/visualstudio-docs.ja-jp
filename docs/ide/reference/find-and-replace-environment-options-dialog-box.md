@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 819ca48da96e2ff48479edfe94ee7378852be5f1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 73829a3283df5d3648212a79b4ad0b0f88d8b02a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="find-and-replace-environment-options-dialog-box"></a>[検索と置換] ([オプション] ダイアログ ボックス - [環境])
 **[オプション]** ダイアログ ボックスのこのページを使用して、メッセージ ボックスと、検索と置換操作の他の側面を制御できます。 **[ツール]** からこのダイアログ ボックスにアクセスするには、**[オプション]** をクリックし、**[環境]** を展開し、**[検索と置換]** をクリックします。 このページが一覧に表示されない場合は、**[オプション]** ダイアログ ボックスの **[すべての設定を表示]** を選択します。  
@@ -54,5 +55,5 @@ ms.lasthandoff: 10/31/2017
  **検索テキストをエディターから自動的に作成する**  
  このオプションをオンにすると、**[編集]** メニューから **[検索と置換]** ウィンドウの任意のビューを選択したときに、現在のエディターの挿入ポイントのいずれかの側にあるテキストが、**[検索する文字列]** フィールドに貼り付けられます。 **[検索する文字列]** として前回の検索で指定した検索パターンを使用するには、このオプションをオフにします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [テキストの検索と置換](../../ide/finding-and-replacing-text.md)

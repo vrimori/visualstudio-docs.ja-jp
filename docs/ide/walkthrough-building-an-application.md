@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a06bd1eb1ced8305425a9e3698e66f0d19438463
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 65c48fe6ff7f675add8b5bd5944e159587de2e3b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-building-an-application"></a>チュートリアル: アプリケーションをビルドする
 このチュートリアルを完了すると、Visual Studio を使用してアプリケーションをビルドする際に構成できるオプションの使用方法を習得できます。 サンプル アプリケーション用に、カスタムのビルド構成の作成、特定の警告メッセージの非表示設定、ビルド出力情報の拡張を行います。  
@@ -235,7 +236,7 @@ ms.lasthandoff: 10/31/2017
   
 これで、このチュートリアルを完了できました。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: プロジェクトの構築 (C++)](/cpp/ide/walkthrough-building-a-project-cpp)   
  [ASP.NET Web アプリケーション プロジェクト プリコンパイルの概要](http://msdn.microsoft.com/en-us/b940abbd-178d-4570-b441-52914fa7b887)   
  [チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)

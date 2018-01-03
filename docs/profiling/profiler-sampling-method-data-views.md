@@ -15,17 +15,18 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0a27e4854371ebdae828335e84f2fab8d0165831
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: e189434481c9fbe7e5f97c6e0cb6d0598b4b7379
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiler-sampling-method-data-views"></a>プロファイラー サンプリング メソッドのデータ ビュー
 ここでは、サンプリング メソッドを使用して生成されたプロファイラー データ ファイルのビューとレポートに関するリファレンス情報を示します。  
   
 > [!NOTE]
->  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 ｢[Performance Tools on Windows 8 and Windows Server 2012 applications](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md) (Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール)」をご覧ください。  
+>  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [概要ビュー](../profiling/summary-view-sampling-data.md)  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/11/2017
  [関数 ビュー](../profiling/functions-view-sampling-data.md)  
  プロファイリングが関数ごとに整理され、サンプルの収集時に実行された関数が一覧表示されます。  
   
- [行ビュー](../profiling/lines-view-sampling-data.md)  
+ [行 ビュー](../profiling/lines-view-sampling-data.md)  
  サンプルの収集時に実行されたソース コード行が一覧表示されます。  
   
  [命令ポインター (IP) ビュー](../profiling/instruction-pointers-ips-view-sampling-data.md)  
@@ -66,5 +67,5 @@ ms.lasthandoff: 11/11/2017
  [.NET メモリのデータ ビュー](../profiling/dotnet-memory-data-views.md)  
  .NET メモリ データを含むプロファイラー データ ファイルのビューとレポートに関するリファレンス情報。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サンプリング データ値について](../profiling/understanding-sampling-data-values.md)

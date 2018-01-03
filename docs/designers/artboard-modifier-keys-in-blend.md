@@ -12,16 +12,17 @@ caps.latest.revision: "6"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f67fd72d6e7a74d0af462ef65e0ddd535474188c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c5faa495aac0538b017e341a31a2546f9a528716
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="artboard-modifier-keys-in-blend"></a>Blend のアートボードの修飾キー
 キーボード ショートカットの中には、対応するメニュー項目がないものがあります。このようなショートカットは、[!INCLUDE[blend_subs](../debugger/includes/blend_subs_md.md)] のユーザー インターフェイスに表示されません。 次の表に、オブジェクトのサイズを変更する場合などに、行う操作を変更するショートカットを示します。  
   
-|目的|操作手順|  
+|目的|方法|  
 |-----------------------|-------------|  
 |別のツールが選択された状態のまま、一時的に **[選択内容]** ツールを選択する (**[ツール]** パネルで **[選択内容]** と別のツールを切り替えるためにクリックする回数が減ります)|Ctrl キーを押す|  
 |**[選択内容]** ツールを選択した状態で、選択したオブジェクトを少しずつ移動する|矢印キーを押す|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
 |開いているドキュメントを切り替える|Ctrl キーと Tab キーを押す|  
 |**[アセット]** パネルを開く|Ctrl キーを押しながらピリオド キーを押す|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [キーボード ショートカット](../designers/keyboard-shortcuts-in-blend.md)   
  [ペン ツールの修飾キー](../designers/pen-tool-modifier-keys-in-blend.md)   
  [[個別選択] ツールの修飾キー](../designers/direct-selection-tool-modifier-keys-in-blend.md)

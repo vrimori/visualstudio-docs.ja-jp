@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d38ef64a370b11c2695ea1e03d2e3ceead7cb63c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 14deeec64d4645135f19587997844bfdd0b18cd5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diff"></a>/Diff
 2 つのファイルを比較します。 相違点は特殊な Visual Studio のウィンドウに表示されます。  
@@ -29,13 +30,13 @@ devenv /Diff SourceFile, TargetFile, [SourceDisplayName],[TargetDisplayName]
   
 ## <a name="arguments"></a>引数  
  `SourceFile`  
- 必須です。 比較する最初のファイルの完全パスと名前。  
+ 必須。 比較する最初のファイルの完全パスと名前。  
   
  `TargetFile`  
- 必須です。 比較する 2 番目のファイルの完全パスと名前。  
+ 必須。 比較する 2 番目のファイルの完全パスと名前。  
   
  `SourceDisplayName`  
- 省略可能です。 最初のファイルの表示名。  
+ 任意。 最初のファイルの表示名。  
   
  `TargetDisplayName`  
- 省略可能です。 2 番目のファイルの表示名。
+ 任意。 2 番目のファイルの表示名。

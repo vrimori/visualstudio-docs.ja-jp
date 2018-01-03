@@ -21,11 +21,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0c4c7613cca7f9dec7c2db7ceffef1cc542cfa61
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7b81517d8d8e0cc6dd1386525f7a2129ed18851c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="navigating-code"></a>コード間の移動  
 Visual Studio には、エディター内でコード間を移動するためのさまざまな方法が用意されています。 このトピックでは、コード間を移動するためのさまざまな方法について概要を説明し、さらに詳細を説明したトピックへのリンクを示します。  
@@ -134,5 +135,5 @@ Visual Basic コード ファイル内でカーソルをメソッド間で移動
 ## <a name="codelens-information"></a>CodeLens 情報
 コード エディターの CodeLens を使用すると、特定のコードに関する情報 (コードの変更内容、変更者、参照、バグ、作業項目、コード レビュー、単体テストの状態など) を確認できます。 Visual Studio Enterprise with Team Foundation Server を使用する場合、CodeLens はヘッドアップ ディスプレイのように機能します。 「[コード変更およびその他の履歴の検索](../ide/find-code-changes-and-other-history-with-codelens.md)」を参照してください。  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md) 
