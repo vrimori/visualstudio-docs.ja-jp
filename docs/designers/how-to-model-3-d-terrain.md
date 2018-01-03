@@ -12,11 +12,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ff68a2c9d7552c474fe8760a471f97a5c0267e8e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cccd65c62d8b5a0f75052c3121e313507ad5d8b8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-model-3-d-terrain"></a>方法: 3-D 地形をモデル化する
 このドキュメントでは、モデル エディターを使用した 3-D 地形モデルの作成方法を示します。  
@@ -70,5 +71,5 @@ ms.lasthandoff: 10/31/2017
   
  この地形モデルを使用して、「[方法: ジオメトリベースのグラデーション シェーダーを作成する](../designers/how-to-create-a-geometry-based-gradient-shader.md)」で説明するグラデーション シェーダーの効果を確認できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [モデル エディター](../designers/model-editor.md)

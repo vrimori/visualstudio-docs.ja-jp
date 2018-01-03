@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cac24838cd848770c45794637620b70cea3e1bd6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c8abd8c38bcff23b43365253af25547f854cb581
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alias-command"></a>Alias コマンド
 完全なコマンド、完全なコマンドと引数、または他のエイリアスに対して新しいエイリアスを作成します。  
@@ -39,17 +40,17 @@ Tools.Alias [/delete] [/reset] [aliasname] [aliasstring]
   
 ## <a name="arguments"></a>引数  
  `aliasname`  
- 省略可能です。 新しいエイリアスの名前。 `aliasname` の値を指定しない場合は、現在のエイリアス一覧とその定義が表示されます。  
+ 任意。 新しいエイリアスの名前。 `aliasname` の値を指定しない場合は、現在のエイリアス一覧とその定義が表示されます。  
   
  `aliasstring`  
- 省略可能です。 完全なコマンド名または既存のエイリアスと、エイリアスとして作成する任意のパラメーター。 `aliasstring` の値を指定しない場合は、指定したエイリアスの名前と文字列が表示されます。  
+ 任意。 完全なコマンド名または既存のエイリアスと、エイリアスとして作成する任意のパラメーター。 `aliasstring` の値を指定しない場合は、指定したエイリアスの名前と文字列が表示されます。  
   
 ## <a name="switches"></a>スイッチ  
  /delete または /del または /d  
- 省略可能です。 指定したエイリアスを削除し、オート コンプリートから除外します。  
+ 任意。 指定したエイリアスを削除し、オート コンプリートから除外します。  
   
  /reset  
- 省略可能です。 定義済みエイリアスの一覧を元の設定に戻します。 つまり、定義済みエイリアスをすべて復元し、ユーザー定義のエイリアスをすべて削除します。  
+ 任意。 定義済みエイリアスの一覧を元の設定に戻します。 つまり、定義済みエイリアスをすべて復元し、ユーザー定義のエイリアスをすべて削除します。  
   
 ## <a name="remarks"></a>コメント  
  エイリアスはコマンドを表すため、コマンド ラインの先頭に指定する必要があります。  
@@ -58,7 +59,7 @@ Tools.Alias [/delete] [/reset] [aliasname] [aliasstring]
   
  `/reset` スイッチを指定すると、エイリアスを復元する前に確認メッセージが表示されます。 `/reset` には省略形はありません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、Edit.MakeUpperCase という完全なコマンドに対し、`upper` という新しいエイリアスを作成します。  
   
 ```  
@@ -77,7 +78,7 @@ Tools.Alias [/delete] [/reset] [aliasname] [aliasstring]
 >Tools.Alias  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   

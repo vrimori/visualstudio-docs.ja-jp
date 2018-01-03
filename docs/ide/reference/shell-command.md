@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fa005388b0b8ec79e2647cc269ff20868ca647e1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7744feca20a14a85c7a035a9b74ed415a43553b3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shell-command"></a>Shell コマンド
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 内から実行可能プログラムを起動します。  
@@ -38,20 +39,20 @@ Tools.Shell [/command] [/output] [/dir:folder] path [args]
   
 ## <a name="arguments"></a>引数  
  `path`  
- 必須です。 実行するファイルまたは開くドキュメントのパスとファイル名。 指定したファイルが、PATH 環境変数のディレクトリのいずれにもない場合は、完全パスが必要です。  
+ 必須。 実行するファイルまたは開くドキュメントのパスとファイル名。 指定したファイルが、PATH 環境変数のディレクトリのいずれにもない場合は、完全パスが必要です。  
   
  `args`  
- 省略可能です。 呼び出されるプログラムに渡す引数。  
+ 任意。 呼び出されるプログラムに渡す引数。  
   
 ## <a name="switches"></a>スイッチ  
  /commandwindow、/command、/c または /cmd  
- 省略可能です。 実行可能ファイルの出力が **[コマンド]** ウィンドウに表示されるように指定します。  
+ 任意。 実行可能ファイルの出力が **[コマンド]** ウィンドウに表示されるように指定します。  
   
  /dir:`folder` または /d: `folder`  
- 省略可能です。 プログラムの実行時に作業ディレクトリが設定されるように指定します。  
+ 任意。 プログラムの実行時に作業ディレクトリが設定されるように指定します。  
   
  /outputwindow、/output、/out、または /o  
- 省略可能です。 実行可能ファイルの出力が **[出力]** ウィンドウに表示されるように指定します。  
+ 任意。 実行可能ファイルの出力が **[出力]** ウィンドウに表示されるように指定します。  
   
 ## <a name="remarks"></a>コメント  
  /dir、/o、/c の各スイッチは、`Tools.Shell` の直後に指定する必要があります。 実行可能ファイルの名前の後に指定した内容は、その実行可能ファイルにコマンド ライン引数として渡されます。  
@@ -81,7 +82,7 @@ Tools.Shell """C:\Program Files\SomeFile.exe"""
 >Tools.Shell /o /c xcopy.exe c:\MyText.txt c:\Text\MyText.txt  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[出力] ウィンドウ](../../ide/reference/output-window.md)   

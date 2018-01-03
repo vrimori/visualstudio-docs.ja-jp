@@ -18,11 +18,12 @@ caps.latest.revision: "32"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d332700fc663375c9fab96d86645b5762e77d851
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 227c23714231c87ba2ecac5fa7f50a632a73b123
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="error-list-window"></a>[エラー一覧] ウィンドウ
 > [!NOTE]
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/02/2017
   
 右側にあるツールバーの一覧は、ビルド (ビルド操作の結果としてのエラー) 、または IntelliSense (ビルドの実行前に検出されたエラー) のどちらからのエラーを表示するか、あるいはその両方からのエラーを表示するかを指定します。  
   
-## <a name="search"></a>[検索]  
+## <a name="search"></a>検索  
  **[エラー一覧]** ツールバーの右側にある **[検索エラー一覧]** テキスト ボックスを使って、エラー一覧内の特定のエラーを検出します。 エラー一覧に表示された列を検索できます。検索結果は常に、適用されるクエリまたはフィルターではなく、並べ替えの優先順位を持つ列に基づいて並べ替えられます。 **[エラー一覧]** にフォーカスがあるときに **Esc** キーを押すと、検索用語とフィルター処理された検索結果がクリアされます。 また、テキスト ボックスの右側にある **[X]** をクリックしてクリアすることもできます。  
   
 ## <a name="save"></a>保存  

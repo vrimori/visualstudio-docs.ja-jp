@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 18c417016071cc25bdccde1c85e97431f20195d9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 24a3f7d50d90769fe64b3657a0327eb8c96b7b42
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-current-thread-command"></a>SetCurrentThread コマンド
 指定したスレッドを現在のスレッドとして設定します。  
@@ -33,7 +34,7 @@ Debug.SetCurrentThread index
   
 ## <a name="arguments"></a>引数  
  `index`  
- 必須です。 スレッドをそのインデックスで選択します。  
+ 必須。 スレッドをそのインデックスで選択します。  
   
 ## <a name="example"></a>例  
   
@@ -41,7 +42,7 @@ Debug.SetCurrentThread index
 >Debug.SetCurrentThread 1  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   

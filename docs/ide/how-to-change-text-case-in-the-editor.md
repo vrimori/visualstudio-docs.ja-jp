@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e9cd903153f0802ce622c91693151a02ac5ba824
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: 556ab33582f7c7051eefbd0eed6c72c2c9b3de18
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-text-case-in-the-editor"></a>方法 : エディター内のテキストの大文字と小文字を変更する
 メニュー コマンドやキーボード ショートカットを使って、選択したテキストを、すべて大文字またはすべて小文字に変換できます。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/07/2017
   
 3.  テキストをすべて大文字に変換するには、**[大文字に変換]** を選択するか、**Ctrl**+**Shift**+**U** キーを押します。  
   
-    — または —  
+    または  
   
     テキストをすべて小文字に変換するには、**[小文字に変換]** を選択するか、**Ctrl**+**U** キーを押します。  
   

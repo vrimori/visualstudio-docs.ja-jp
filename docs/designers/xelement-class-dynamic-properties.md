@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1ba611fe5582b65e314046b80fb15751a0152b85
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5c2583014552cffacaa3e2f9760fd61ead0af605
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xelement-class-dynamic-properties"></a>XElement クラスの動的プロパティ
 ここでは、<xref:System.Xml.Linq.XElement?displayProperty=fullName> クラスの動的プロパティについて説明します。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/31/2017
 |[値](../designers/value-xelement-dynamic-property.md)|要素のコンテンツを取得または設定します。|  
 |[Xml](../designers/xml-xelement-dynamic-property.md)|要素について、書式設定されていない XML 表現を取得します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:System.Xml.Linq.XElement?displayProperty=fullName>   
  [LINQ to XML の動的プロパティ](../designers/linq-to-xml-dynamic-properties.md)   
  [XAttribute クラスの動的プロパティ](../designers/xattribute-class-dynamic-properties.md)

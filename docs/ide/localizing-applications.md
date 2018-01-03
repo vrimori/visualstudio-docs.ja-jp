@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 55e4156552c58f7505ec8a497d7ebb9d6d3f2c94
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c389f8dd13514d940941bcefc228236b3418e317
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="localizing-applications"></a>アプリケーションのローカライズ
 *ローカライズ*は、特定のカルチャまたはロケールに合わせてアプリケーションをカスタマイズする処理です。 ローカライズは主にユーザー インターフェイスの翻訳で構成されます。  

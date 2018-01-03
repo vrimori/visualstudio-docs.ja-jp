@@ -30,11 +30,12 @@ caps.latest.revision: "27"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ccb924164b4d590f8ed440dfa905c1c040a13924
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 23e6712dbf66c898757176aca9e89b98de2f65bc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fonts-and-colors-environment-options-dialog-box"></a>[フォントおよび色]\([オプション] ダイアログ ボックス - [環境])
 **[オプション]** ダイアログ ボックスの **[フォントおよび色]** ページを使用すると、統合開発環境 (IDE) のさまざまなユーザー インターフェイス要素について、カスタムのフォントや配色を設定できます。 このダイアログ ボックスを表示するには、**[ツール] メニューの [オプション]** をクリックし、**[環境] フォルダーの [フォントおよび色]** ページを選択します。 このページが一覧に表示されない場合は、**[オプション]** ダイアログ ボックスの **[すべての設定を表示]** を選択します。  
@@ -232,7 +233,7 @@ ms.lasthandoff: 11/02/2017
  **サンプル**  
  **[設定の表示]** ボックスと **[表示項目]** ボックスでの選択内容に基づいて、フォントのスタイル、サイズ、および配色のサンプルが表示されます。 さまざまな書式指定オプションを試し、このボックスでその結果をプレビューできます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)   
  [[オプション] ダイアログ ボックス](../../ide/reference/options-dialog-box-visual-studio.md)   
  [方法: フォントと色を変更する](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)

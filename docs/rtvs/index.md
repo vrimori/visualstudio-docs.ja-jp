@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 1ff32914b523b2b515a3d4175e4b3f76ad7ecefd
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: c18eadd6cfcdf6fc77b204f78654126ceb1862db
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-r-in-visual-studio"></a>Visual Studio での R の使用
 
@@ -37,13 +38,13 @@ Visual Studio で R を使用するには、次の手順を実行します。
 | 機能 | 説明 | Visual Studio の一般的なドキュメント | 
 | --- | --- | --- |
 | [Visual Studio のプロジェクト システム](projects.md) | 関連ファイルを使いやすい構造で整理および管理し、R コード、R ドキュメント、R Markdown、SQL クエリ、ストアド プロシージャなどのアイテムに関する便利なテンプレートを活用できます。 [パッケージ マネージャー](package-manager.md)や [SQL Server integration](sql-server.md) も使用できます。  | [Visual Studio のソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md) |
-| [ワークスペース](workspaces.md) | RTVS は、ローカル ワークスペースとリモート ワークスペースへバインド可能です。これにより、ローカルで小規模なデータ セットを使用して R コードを開発してから、クラウドベースのより強力なコンピューター上で大規模なデータ セットを使用して簡単にコードを実行することができます。 | 適用なし |
+| [ワークスペース](workspaces.md) | RTVS は、ローカル ワークスペースとリモート ワークスペースへバインド可能です。これにより、ローカルで小規模なデータ セットを使用して R コードを開発してから、クラウドベースのより強力なコンピューター上で大規模なデータ セットを使用して簡単にコードを実行することができます。 | N/A |
 | [R Tools オプション](options.md) | RTVS のさまざまな側面を制御します。 | [[オプション] ダイアログ ボックス](../ide/reference/options-dialog-box-visual-studio.md) |
 | [豊富な編集、IntelliSense、コード スニペット](code-editing.md) | 構文の色分け、すべてのコードとライブラリ間での [IntelliSense](code-intellisense.md)、コードのフォーマット、シグネチャ ヘルプ、定義への移動、すべての参照の検索、[コード スニペット](code-snippets.md)などが含まれます。 | [コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md) |
-| [R Markdown](rmarkdown.md) | R Markdown ドキュメントを使用すると、マークダウン コード ブロック内の統合された R コードを用いてデータの結果を共有できます。 | 適用なし |
-| [対話型ウィンドウ](interactive-repl.md) | R で完全な REPL エクスペリエンスを実現でき、対話型ウィンドウでソース ファイルのコードを簡単に実行可能です。 | 適用なし |
-| [データの視覚化](visualizing-data.md) | プロットは R を使用する上で不可欠な部分であるため、RTVS では独立した複数のプロット ウィンドウを利用できます。各ウィンドウには、履歴とウィンドウ間のプロットの移動機能が備わっています。 プロットはビットマップ ファイルと PDF ファイルに保存でき、またビットマップやメタファイルとしてクリップボードにコピーすることもできます。  | 適用なし |
-| [Variable Explorer](variable-explorer.md) | 並べ替え可能なテーブルを表示する機能と CSV へのエクスポート機能を備えており、グローバル スコープ内やパッケージ固有のスコープ内の変数を調査できます。 | 適用なし |
+| [R Markdown](rmarkdown.md) | R Markdown ドキュメントを使用すると、マークダウン コード ブロック内の統合された R コードを用いてデータの結果を共有できます。 | N/A |
+| [対話型ウィンドウ](interactive-repl.md) | R で完全な REPL エクスペリエンスを実現でき、対話型ウィンドウでソース ファイルのコードを簡単に実行可能です。 | N/A |
+| [データの視覚化](visualizing-data.md) | プロットは R を使用する上で不可欠な部分であるため、RTVS では独立した複数のプロット ウィンドウを利用できます。各ウィンドウには、履歴とウィンドウ間のプロットの移動機能が備わっています。 プロットはビットマップ ファイルと PDF ファイルに保存でき、またビットマップやメタファイルとしてクリップボードにコピーすることもできます。  | N/A |
+| [Variable Explorer](variable-explorer.md) | 並べ替え可能なテーブルを表示する機能と CSV へのエクスポート機能を備えており、グローバル スコープ内やパッケージ固有のスコープ内の変数を調査できます。 | N/A |
 | [フル機能のデバッグ](debugging.md) | 対話型ウィンドウとの統合などがあります。 | [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md) |
 
 「[よく寄せられる質問](faq.md)」もご覧ください。

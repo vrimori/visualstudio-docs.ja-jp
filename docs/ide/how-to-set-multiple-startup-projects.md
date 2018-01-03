@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f6241d739a48e8061bb9962578fd4e4158f78cac
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9b148fe01c3cd36713853531941c09611a6bf57f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-multiple-startup-projects"></a>方法 : 複数のスタートアップ プロジェクトを設定する
 Visual Studio では、デバッガーの起動時に複数のプロジェクトをどのように実行するかを指定できます。  
@@ -32,7 +33,7 @@ Visual Studio では、デバッガーの起動時に複数のプロジェクト
 
 4.  **[マルチ スタートアップ プロジェクト]** オプションを選択し、適切なアクションを設定します。
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コードのコンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)
 
  [ソリューションとプロジェクトの作成](../ide/creating-solutions-and-projects.md)

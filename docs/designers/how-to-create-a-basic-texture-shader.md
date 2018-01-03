@@ -12,11 +12,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4620278c98ea373b8e0cde387f1b5526bf21349b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 52e909e911a552b69930ef6a60257fca29a0794d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-basic-texture-shader"></a>方法: 基本テクスチャ シェーダーを作成する
 このドキュメントでは、シェーダー デザイナーと DGSL (Directed Graph Shader Language) を使用して単一テクスチャ シェーダーを作成する方法を説明します。 このシェーダーは、テクスチャからサンプリングされる RGB とアルファ値に直接最終的な色を設定します。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/31/2017
   
 8.  テクスチャ サンプルを最終的な色に接続します。 **[テクスチャ サンプル]** ノードの **[RGB]** ターミナルを **[最終的な色]** ノードの **[RGB]** ターミナルに移動してから、**[テクスチャ サンプル]** ノードの **[アルファ]** ターミナルを **[最終的な色]** ノードの **[アルファ]** ターミナルに移動します。  
   
- 次の図は、完成したシェーダー グラフと、立体に適用されるシェーダーのプレビューを示します。  
+ 次の図は、完成したシェーダー グラフと、直方体に適用されるシェーダーのプレビューを示します。  
   
 > [!NOTE]
 >  この図では、平面がプレビューの図形として使用され、テクスチャはシェーダーの効果がわかりやすくなるように指定されています。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/31/2017
   
  特定の図形を使用すると、一部のシェーダーをより適切にプレビューできる可能性があります。 シェーダー デザイナーでシェーダーをプレビューする方法の詳細については、「[シェーダー デザイナー](../designers/shader-designer.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: シェーダーを 3-D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)   
  [イメージ エディター](../designers/image-editor.md)   
  [シェーダー デザイナー](../designers/shader-designer.md)   

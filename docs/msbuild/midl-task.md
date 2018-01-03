@@ -30,11 +30,12 @@ caps.latest.revision: "8"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 99c0e5dfa2c2ffdb9aaf79356c83e925290f0db2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3dc6bcbf4814a05d05aa69a42e8d19f581e78863
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="midl-task"></a>MIDL タスク
 Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Definition Language) コンパイラ ツール (midl.exe) をラップします。 詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「MIDL Command-Line Reference (MIDL コマンド ライン リファレンス)」を参照してください。  
@@ -90,7 +91,7 @@ Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Defini
   
      次のいずれかの値を指定します。各値はコマンド ライン オプションに対応しています。  
   
-    |値|コマンド ライン オプション|  
+    |[値]|コマンド ライン オプション|  
     |-----------|--------------------------|  
     |**Signed**|**/char signed**|  
     |**Unsigned**|**/char unsigned**|  
@@ -114,7 +115,7 @@ Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Defini
   
      次のいずれかの値を指定します。各値はコマンド ライン オプションに対応しています。  
   
-    |値|コマンド ライン オプション|  
+    |[値]|コマンド ライン オプション|  
     |-----------|--------------------------|  
     |**None**|**/error none**|  
     |**EnableCustom**|**/error**|  
@@ -170,7 +171,7 @@ Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Defini
   
      次のいずれかの値を指定します。各値はコマンド ライン オプションに対応しています。  
   
-    |値|コマンド ライン オプション|  
+    |[値]|コマンド ライン オプション|  
     |-----------|--------------------------|  
     |**None**|**/client none**|  
     |**Stub**|**/client stub**|  
@@ -185,7 +186,7 @@ Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Defini
   
      次のいずれかの値を指定します。各値はコマンド ライン オプションに対応しています。  
   
-    |値|コマンド ライン オプション|  
+    |[値]|コマンド ライン オプション|  
     |-----------|--------------------------|  
     |**None**|**/server none**|  
     |**Stub**|**/server stub**|  
@@ -302,7 +303,7 @@ Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Defini
   
      次のいずれかの値を指定します。各値はコマンド ライン オプションに対応しています。  
   
-    |値|コマンド ライン オプション|  
+    |[値]|コマンド ライン オプション|  
     |-----------|--------------------------|  
     |**NotSet**|*\<none>*|  
     |**1**|**/Zp1**|  
@@ -336,7 +337,7 @@ Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Defini
   
      次のいずれかの値を指定します。各値はコマンド ライン オプションに対応しています。  
   
-    |値|コマンド ライン オプション|  
+    |[値]|コマンド ライン オプション|  
     |-----------|--------------------------|  
     |**NotSet**|*\<none>*|  
     |**Win32**|**/env win32**|  
@@ -359,7 +360,7 @@ Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Defini
   
      次のいずれかの値を指定します。各値はコマンド ライン オプションに対応しています。  
   
-    |値|コマンド ライン オプション|  
+    |[値]|コマンド ライン オプション|  
     |-----------|--------------------------|  
     |**NewFormat**|**/newtlb**|  
     |**OldFormat**|**/oldtlb**|  
@@ -408,7 +409,7 @@ Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Defini
   
      次のいずれかの値を指定します。各値はコマンド ライン オプションに対応しています。  
   
-    |値|コマンド ライン オプション|  
+    |[値]|コマンド ライン オプション|  
     |-----------|--------------------------|  
     |**0**|**/W0**|  
     |**1**|**/W1**|  
@@ -420,5 +421,5 @@ Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Defini
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)

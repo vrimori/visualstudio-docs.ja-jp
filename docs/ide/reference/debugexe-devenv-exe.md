@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 00677826cceab6a54c0fb2216ac6c6284a65631f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8f50bfd0fa5b0f9303bc6256078a30da6e1c0575
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugexe-devenvexe"></a>/DebugExe (devenv.exe)
 指定したデバッグ対象の実行可能ファイルを開きます。  
@@ -33,7 +34,7 @@ Devenv /debugexe ExecutableFile
   
 ## <a name="arguments"></a>引数  
  `ExecutableFile`  
- 必須です。 .exe ファイルのパスとファイル名。  
+ 必須。 .exe ファイルのパスとファイル名。  
   
  .exe ファイルが見つからない場合、または存在しない場合、警告やエラーは表示されず、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] は通常どおり起動します。  
   
@@ -47,5 +48,5 @@ Devenv /debugexe ExecutableFile
 Devenv.exe /debugexe MyApplication.exe  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)

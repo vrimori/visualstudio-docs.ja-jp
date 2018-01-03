@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5e41dd319e00dccbc180319bf3642c665cf4df58
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 61f9735c61538465088b58f25e6c714a2441e34c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-existing-project-command"></a>AddExistingProject コマンド
 既存のプロジェクトを現在のソリューションに追加します。  
@@ -33,7 +34,7 @@ File.AddExistingProject filename
   
 ## <a name="arguments"></a>引数  
  `filename`  
- 省略可能です。 ソリューションに追加するプロジェクトの完全なパスとプロジェクト名 (拡張子付き)。  
+ 任意。 ソリューションに追加するプロジェクトの完全なパスとプロジェクト名 (拡張子付き)。  
   
  `filename` 引数にスペースが含まれる場合は、引用符で囲む必要があります。  
   
@@ -49,7 +50,7 @@ File.AddExistingProject filename
 >File.AddExistingProject "c:\visual studio projects\TestProject1.vbproj"  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   

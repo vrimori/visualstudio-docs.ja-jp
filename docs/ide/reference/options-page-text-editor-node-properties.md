@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5a917167b8e81445d0ec47a1dd44cf74f5d87d4f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0c4e4021dd1d54013f10f8b4bd4e7da3e81d91d5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="options-page-text-editor-node-properties"></a>[テキスト エディター] ノード プロパティ ([オプション] ページ)
 このドキュメントでは、**[オプション]** ダイアログ ボックスの **[テキスト エディター]** カテゴリ (`DTE.Properties("TextEditor", <Property Page>)`) に関連付けられている一部のページ (またはプロパティ コレクション) について説明します。 各サブセクションの見出しは、`Properties` コレクションにアクセスするための呼び出しです。その下の表では、コレクションのプロパティを示します。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="general"></a>全般  
  `DTE.Properties("TextEditor", "General")`  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |GoToAnchorAfterEscape|Get/Set (Boolean)|`True` の場合は、文字列を選択した状態で Esc キーを押すと、挿入ポイントが選択範囲の開始位置に移動します。 `False` の場合は、挿入ポイントが選択範囲の終了位置に移動します。|  
 |DragNDropTextEditing|Get/Set (Boolean)|選択したテキストをドキュメント内のある場所から別の場所にドラッグして、コピー操作または切り取りと貼り付け操作を実行できるようにするかどうかを指定します。|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/31/2017
   
  `PlainText` エディター オプションは、テキスト ファイル編集時のエディターの設定に影響します。 それぞれのプログラミング言語および [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] パッケージには、固有の **[テキスト エディター]** の設定を指定できます。 たとえば、[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] エディターの設定を表示または変更するには、`DTE.Properties("TextEditor", "CSharp") or DTE.Properties("TextEditor", "CSharp-Specific")` を使用します。 **[SQL スクリプト]`DTE.Properties("TextEditor", "SQL ")` エディターの設定の場合は、** を使用します。  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |AutoListMembers|Get/Set (Boolean)|変数参照の後にピリオドを入力した場合に使用可能なメンバーの一覧が自動的に表示されるようにするかどうかを指定します。|  
 |AutoListParams|Get/Set (Boolean)|関数名の後に "(" を入力した場合に引数リストの説明が自動的に表示されるようにするかどうかを指定します。|  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/31/2017
 |ShowNavigationBar|Get/Set (Boolean)|エディター ウィンドウの最上部にドロップダウン リストとボタンを表示するかどうかを指定します。|  
 |CutCopyBlankLines|Get/Set (Boolean)|選択時に空白行を切り取るか、コピーします。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [オプション設定の制御](http://msdn.microsoft.com/Library/a09ed242-7494-4cde-bbd1-7a8ec617965d)   
  [オプション ページにあるプロパティ項目名の確認](http://msdn.microsoft.com/Library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)   
  [[環境] ノード プロパティ ([オプション] ページ)](../../ide/reference/options-page-environment-node-properties.md)   

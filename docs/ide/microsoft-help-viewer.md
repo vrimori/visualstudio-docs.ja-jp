@@ -22,11 +22,12 @@ caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d770c1b7d05117243643680898348b71cf0a978d
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: 9902ca6ff157713573eb2f8ccc806bb9f2a0dfc0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsoft-help-viewer"></a>Microsoft ヘルプ ビューアー
 Microsoft ヘルプ ビューアーを使用して、Visual Studio、.NET Framework、言語リファレンス、SQL Server、Windows 開発などのさまざまな製品のコンテンツやテクノロジをローカル コンピューターにインストールして表示できます。 ヘルプ ビューアーを使用すると、次のことができます。  
@@ -65,7 +66,7 @@ Microsoft ヘルプ ビューアーを使用して、Visual Studio、.NET Framew
 
 **注:** ヘルプ ビューアー管理者が **[コンテンツの管理]** タブの機能を非アクティブにするか、またはインターネット接続が使用できない場合、このタブの機能は異なる場合があります。
 
-### <a name="toolbar-buttons"></a>ツールバー ボタン
+### <a name="toolbar-buttons"></a>ツール バー ボタン
 [ヘルプ ビューアー] ウィンドウのツール バーには、次のボタンが含まれています。  
 
 -   **[目次のトピックを表示]** ボタンをクリックすると、**[目次]** タブのトピックの位置が表示されます。  

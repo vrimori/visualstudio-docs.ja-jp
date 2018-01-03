@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 4dcb40a02de239c8061ae2559ce6adb581625b8d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 01c2867c60a3aa7b00462503da08bda0a8ac80fb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="maintaining-security"></a>セキュリティの維持
 セキュリティの価値は継続的な警戒にある、とよく言われます。 アプリケーションのデザイン時や開発時にいかに万全のセキュリティ対策を行っても、配置後にセキュリティの欠陥が明らかになる可能性も想定する必要があります。 アプリケーションの監査とイベント ログの分析から、それまでわからなかった欠陥が見つかることもあります。  

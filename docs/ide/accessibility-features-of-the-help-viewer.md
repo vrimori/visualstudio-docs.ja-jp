@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 35d062e3ab0cae690cb6242f132a20c53604cd0c
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: f706ca6fcaba9d1f5423fee3f32eefdaca163b1b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessibility-features-of-the-help-viewer"></a>Visual Studio ヘルプ ビューアーのユーザー補助機能
 Microsoft は、すべてのユーザーが簡単に使用できる製品とサービスの開発に取り組んでいます。 このトピックでは、広範な範囲の能力を持つユーザーが Microsoft ヘルプ ビューアーをさらに使いやすくするためのユーザー補助機能、製品、およびサービスについて説明します。  

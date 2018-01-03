@@ -17,11 +17,12 @@ caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 20ffb34c3c9ac1d2842995c53332eb241337b769
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: uwp
+ms.openlocfilehash: 9b628769c5945817aebd790820f1f16085f6564a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-ui-by-using-xaml-designer-in-visual-studio"></a>Visual Studio での XAML デザイナーを使用した UI の作成
 Visual Studio の XAML デザイナーは、XAML ベースの Windows および Web アプリをデザインする際に役立つビジュアル インターフェイスを提供します。 アプリのユーザー インターフェイスを作成するには、 **[ツールボックス]** からコントロールをドラッグし、 **[プロパティ]** ウィンドウでプロパティを設定します。 また、XAML ビューで直接、XAML を編集することもできます。  
@@ -163,7 +164,7 @@ Visual Studio の XAML デザイナーは、XAML ベースの Windows および 
   
  各プロパティの値の右側には、 *プロパティ マーカー* がボックスのシンボルとして表示されます。 プロパティ マーカーの外観は、プロパティに適用されるデータ バインドやリソースの有無を示します。 たとえば、白色のボックス シンボルは既定値を示します。黒色のボックス シンボルは、通常、ローカル リソースが適用されていることを示します。オレンジ色のボックスは、通常、データ バインドが適用されていることを示します。 プロパティ マーカーをクリックすると、スタイルの定義に移動したり、データ バインディング ビルダーを開いたり、リソース ピッカーを開いたりできます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Working with elements in XAML Designer](../designers/working-with-elements-in-xaml-designer.md)   
  [リソースを作成して適用する方法](../designers/how-to-create-and-apply-a-resource.md)   
  [チュートリアル: XAML デザイナーでデータにバインドする](../designers/walkthrough-binding-to-data-in-xaml-designer.md)

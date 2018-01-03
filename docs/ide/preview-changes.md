@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 f1_keywords: vs.codefix.previewchanges
-ms.openlocfilehash: 52555d0bc112dae41f189fd9f29711da365fd59c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 615dd6b627e06fc02196363612ed2ac43eda38a6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="preview-changes"></a>変更のプレビュー
 
@@ -30,5 +31,5 @@ Visual Studio でさまざまな*クイック アクション* ツールまた�
 
 変更内容を確認したら、**[適用]** ボタンをクリックして該当する変更をコミットするか、**[キャンセル]** をクリックして元のままにしておきます。
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [Visual Studio でのリファクタリング](../ide/refactoring-in-visual-studio.md)

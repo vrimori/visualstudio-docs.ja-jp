@@ -14,11 +14,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7d647e7623820c6621f6605277a695a98454fec5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 4807a84b9e1de5186e72cbe138f0f54e2f33525e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="value-xattribute-dynamic-property"></a>Value (XAttribute 動的プロパティ)
 XML 属性の値を取得または設定します。  
@@ -34,14 +35,14 @@ attrib.Value
   
 ## <a name="exceptions"></a>例外  
   
-|例外の種類|状態|  
+|例外の種類|条件|  
 |--------------------|---------------|  
 |<xref:System.ArgumentNullException>|設定時に `value` が `null` である場合に発生します。|  
   
 ## <a name="remarks"></a>コメント  
  このプロパティは、<xref:System.Xml.Linq.XAttribute.Value%2A> クラスの <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> プロパティに相当します。ただし、この動的プロパティは変更通知もサポートします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName>   
  [XAttribute クラスの動的プロパティ](../designers/xattribute-class-dynamic-properties.md)   
  [属性](../designers/attribute-xelement-dynamic-property.md)

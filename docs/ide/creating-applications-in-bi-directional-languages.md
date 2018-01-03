@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f79bc2ca79cdec10fa480d87f48abc240420c34e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: db7afbc68ab4e02803959dd0ff0b4de92233fece
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-applications-in-bi-directional-languages"></a>Visual Studio による双方向言語用アプリケーションの作成
 Visual Studio では、アラビア語やヘブライ語など、右から左に書く言語で正しくテキストが表示されるアプリケーションを作成できます。 いくつかの機能については、単にプロパティを設定するだけで済みます。 それ以外の場合は、コードで機能を実装する必要があります。  
@@ -86,7 +87,7 @@ Visual Studio では、アラビア語やヘブライ語など、右から左に
   
 -   コードのコメント。 アラビア語およびヘブライ語は、コメントに使用できます。 また、コメント ビルダー ツールでもこれらの言語を使用できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Windows フォーム アプリケーションの双方向サポート](http://msdn.microsoft.com/Library/7b622fa4-f390-4e4d-b624-83a1917cccf2)   
  [ASP.NET Web アプリケーションに対する双方向サポート](http://msdn.microsoft.com/Library/5576f9b1-9b86-41ef-8354-092d366bcd03)   
  [アプリケーションのグローバル化](../ide/globalizing-applications.md)   

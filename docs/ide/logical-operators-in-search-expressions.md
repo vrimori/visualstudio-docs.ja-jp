@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3378a554a9e576bde011a70916c48597218bb512
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: 09141b10ab9ee39568176fa7252a503bdaa747dd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="logical-and-advanced-operators-in-search-expressions"></a>検索式の論理演算子と高度な演算子
 論理演算子と高度な検索演算子を使用して、ヘルプ ビューアーでヘルプ コンテンツの検索を絞り込むことができます。
@@ -27,7 +28,7 @@ ms.lasthandoff: 11/07/2017
 ## <a name="logical-operators"></a>論理演算子
 論理演算子では、複数の検索用語を検索クエリでどのように組み合わせる必要があるかを指定します。 次の表に、論理演算子 AND、OR、NOT、NEAR を示します。
   
-|検索対象|用途|例|結果|  
+|検索対象|使用|例|結果|  
 |-------------------|---------|-------------|------------|  
 |同じアーティクル内の両方の用語|AND|dib AND palette|"dib" と "palette" の両方を含むトピック。|  
 |アーティクル内のいずれかの用語|OR|raster OR vector|"raster" または "vector" を含むトピック。|  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/07/2017
 ## <a name="advanced-operators"></a>高度な演算子
 高度な検索演算子は、アーティクル内で検索語句を探す場所を指定することで、コンテンツの検索を絞り込みます。 次の表は、利用できる 4 つの高度な検索演算子をまとめたものです。
 
-|検索対象|用途|例|結果|  
+|検索対象|使用|例|結果|  
 |-------------------|---------|-------------|------------|  
 |アーティクルのタイトルの用語|title:|title:binaryreader|タイトルに "binaryreader" が含まれるトピック。|  
 |コード サンプルの言葉|code:|code:readdouble|コード サンプルに "readdouble" が含まれるトピック。|  

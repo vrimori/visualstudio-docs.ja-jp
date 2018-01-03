@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 178f219cf25ccddea0121d6c565cb5f9e99d3b33
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 71095bd7ec4b856c5fbee73e13be27dcd9abdaf4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="list-call-stack-command"></a>ListCallStack コマンド
 現在の呼び出し履歴を表示します。  
@@ -37,43 +38,43 @@ Debug.ListCallStack [/Count:number] [/ShowTypes:yes|no]
   
 ## <a name="arguments"></a>引数  
  `index`  
- 省略可能です。 現在のスタック フレームを設定し、出力は表示しません。  
+ 任意。 現在のスタック フレームを設定し、出力は表示しません。  
   
 ## <a name="switches"></a>スイッチ  
  各スイッチは、完全な形式または短い形式を使用して、呼び出すことができます。  
   
  /Count:`number` または /C:`number`  
- 省略可能です。 表示する呼び出し履歴の最大数。 既定値は無制限です。  
+ 任意。 表示する呼び出し履歴の最大数。 既定値は無制限です。  
   
  /ShowTypes:`yes`&#124;`no` または /T:`yes`&#124;`no`  
- 省略可能です。 パラメーターの型を表示するかどうかを指定します。 既定値は `yes` です。  
+ 任意。 パラメーターの型を表示するかどうかを指定します。 既定値は `yes`にする必要があります。  
   
  /ShowNames:`yes`&#124;`no` または /N:`yes`&#124;`no`  
- 省略可能です。 パラメーターの名前を表示するかどうかを指定します。 既定値は `yes` です。  
+ 任意。 パラメーターの名前を表示するかどうかを指定します。 既定値は `yes`にする必要があります。  
   
  /ShowValues:`yes`&#124;`no` または /V:`yes`&#124;`no`  
- 省略可能です。 パラメーターの値を表示するかどうかを指定します。 既定値は `yes` です。  
+ 任意。 パラメーターの値を表示するかどうかを指定します。 既定値は `yes`にする必要があります。  
   
  /ShowModule:`yes`&#124;`no` または /M:`yes`&#124;`no`  
- 省略可能です。 モジュールの名前を表示するかどうかを指定します。 既定値は `yes` です。  
+ 任意。 モジュールの名前を表示するかどうかを指定します。 既定値は `yes`にする必要があります。  
   
  /ShowLineOffset:`yes`&#124;`no` または /#:`yes`&#124;`no`  
- 省略可能です。 行オフセットを表示するかどうかを指定します。 既定値は `no` です。  
+ 任意。 行オフセットを表示するかどうかを指定します。 既定値は `no`にする必要があります。  
   
  /ShowByteOffset:`yes`&#124;`no` または /B:`yes`&#124;`no`  
- 省略可能です。 バイト オフセットを表示するかどうかを指定します。 既定値は `no` です。  
+ 任意。 バイト オフセットを表示するかどうかを指定します。 既定値は `no`にする必要があります。  
   
  /ShowLanguage:`yes`&#124;`no` または /L:`yes`&#124;`no`  
- 省略可能です。 言語を表示するかどうかを指定します。 既定値は `no` です。  
+ 任意。 言語を表示するかどうかを指定します。 既定値は `no`にする必要があります。  
   
  /IncludeCallsAcrossThreads:`yes`&#124;`no` または /I:`yes`&#124;`no`  
- 省略可能です。 他のスレッドとの間の呼び出しを含めるかどうかを指定します。 既定値は `no` です。  
+ 任意。 他のスレッドとの間の呼び出しを含めるかどうかを指定します。 既定値は `no`にする必要があります。  
   
  /ShowExternalCode:`yes`&#124;`no`  
- 省略可能です。 呼び出し履歴で [マイ コードのみ] を表示するかどうかを指定します。 [マイ コードのみ] がオフの場合は、すべての非ユーザー コードが表示されます。 [マイ コードのみ] がオンの場合、非ユーザー コードは呼び出し履歴の出力で `[external]` として表示されます。  
+ 任意。 呼び出し履歴で [マイ コードのみ] を表示するかどうかを指定します。 [マイ コードのみ] がオフの場合は、すべての非ユーザー コードが表示されます。 [マイ コードのみ] がオンの場合、非ユーザー コードは呼び出し履歴の出力で `[external]` として表示されます。  
   
  Thread:`n`  
- 省略可能です。 スレッド `n` の呼び出し履歴を表示します。 スレッドが指定されていない場合、現在のスレッドの呼び出し履歴が表示されます。  
+ 任意。 スレッド `n` の呼び出し履歴を表示します。 スレッドが指定されていない場合、現在のスレッドの呼び出し履歴が表示されます。  
   
 ## <a name="remarks"></a>コメント  
  引数やスイッチに加えられた変更は、以降のコマンドの呼び出しに適用されます。 Debug.ListCallStackby を単独で実行すると、呼び出し履歴全体が表示されます。 たとえば、次のようなインデックスを指定します。  
@@ -98,7 +99,7 @@ kb 2
 >Debug.CallStack /Count:4 /ShowTypes:yes  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [逆アセンブリの一覧表示コマンド](../../ide/reference/list-disassembly-command.md)   
  [スレッドの一覧表示コマンド](../../ide/reference/list-threads-command.md)   
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   

@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 61924f7d9430661114f1fecc36d585e2d223604b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d4337a5755a58c03c827849417412885f42127a0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="import-and-export-settings-command"></a>[設定のインポートとエクスポート] コマンド
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の設定をインポート、エクスポート、またはリセットします。  
@@ -33,13 +34,13 @@ Tools.ImportandExportSettings [/export:filename | /import:filename | /reset]
   
 ## <a name="switches"></a>スイッチ  
  /export:`filename`  
- 省略可能です。 現在の設定を指定したファイルにエクスポートします。  
+ 任意。 現在の設定を指定したファイルにエクスポートします。  
   
  /import:`filename`  
- 省略可能です。 設定を指定したファイルからインポートします。  
+ 任意。 設定を指定したファイルからインポートします。  
   
  /reset  
- 省略可能です。 現在の設定をリセットします。  
+ 任意。 現在の設定をリセットします。  
   
 ## <a name="remarks"></a>コメント  
  スイッチを指定しないでこのコマンドを実行すると、**[設定のインポートとエクスポート]** ウィザードが開きます。 詳しくは、「[方法: コンピューター間または Visual Studio のバージョン間で設定を共有する](http://msdn.microsoft.com/en-us/1131fb10-35c1-42da-9cd8-91aa3235b882)」をご覧ください。  
@@ -51,6 +52,6 @@ Tools.ImportandExportSettings [/export:filename | /import:filename | /reset]
 Tools.ImportandExportSettings /export:"c:\Files\MyFile.vssettings"  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)   
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)

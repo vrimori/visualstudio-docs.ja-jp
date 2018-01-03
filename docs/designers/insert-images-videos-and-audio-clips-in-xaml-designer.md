@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 561913dc4a215869bd33fde39527cfb0b0232b9a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: uwp
+ms.openlocfilehash: 58462b6cb20efd441c99f335b56b06944dbdf206
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="insert-images-videos-and-audio-clips-in-xaml-designer"></a>XAML デザイナーでイメージ、ビデオ、およびオーディオ クリップを挿入する
 イメージ、ビデオ、オーディオ クリップは、アプリに視覚的な効果を加えます。  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/31/2017
 |Adobe Photoshop ファイルのインポート|![インストールされている機能を構成する](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Photoshop ファイルを Blend にインポートする](https://www.youtube.com/watch?v=ekYyhirFKs0)|  
 |オーディオ クリップを挿入する|![インストールされている機能を構成する](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [オーディオ クリップを追加する](https://www.youtube.com/watch?v=7qW9l0tmkAI&index=52&list=PLBDF977B2F1DAB358)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Blend for Visual Studio を使用して UI を作成する](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)

@@ -603,11 +603,12 @@ author: kempb
 ms.author: kempb
 manager: ghogen
 redirect_url: https://social.msdn.microsoft.com/Forums/vstudio/home?forum=msbuild
-ms.openlocfilehash: bf172e3a2f2098d72db5e56d54c598d656650c88
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c795dca53bec8191cdb9e2d61fa49ec03d84fa66
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="additional-msbuild-resources"></a>追加の MSBuild リソース
 問題を解決しようとした場合にドキュメントで必要な情報が見つからないときは、サポート技術情報の文書、開発者コミュニティ、製品サポートなど、他のリソースを参照してください。  
@@ -623,5 +624,5 @@ ms.lasthandoff: 10/31/2017
 ## <a name="product-support"></a>製品のサポート  
  他のリソースを参照しても問題が解決しない場合は、[Microsoft ヘルプとサポート](http://go.microsoft.com/fwlink/?linkid=1782)の Web サイトにアクセスして、Microsoft サポート サービスに問い合わせることができます。 お住まいの地域で利用できる製品サポートについては、「[ご意見](../ide/talk-to-us.md)」をご覧ください。  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [.NET Framework を対象とするエラーのトラブルシューティング](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)

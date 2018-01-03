@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: eaf790d8c02c95047e28ca4d911d7f42a33bbd4f
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: 3f181dccce6239cc8014e8e8ebf54c2e53794a50
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="codeindex-command"></a>CodeIndex コマンド
 **CodeIndex** コマンドを使用して、Team Foundation Server でコード インデックス作成を管理します。 たとえば、インデックスをリセットして CodeLens 情報を修正したり、コード インデックス作成をオフにしてサーバー パフォーマンスの問題を調査したりします。  
@@ -59,7 +60,7 @@ TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /
 |**/collectionName:** `CollectionName`|**CodeIndex** コマンドを実行する対象のチーム プロジェクト コレクションの名前を指定します。 **/CollectionId** を使用しない場合は必ず指定します。|  
 |**/collectionId:** `CollectionId`|**CodeIndex** コマンドを実行する対象のチーム プロジェクト コレクションの ID 番号を指定します。 **/CollectionName** を使用しない場合は必ず指定します。|  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 > [!NOTE]
 >  例として登場する企業、組織、製品、ドメイン名、電子メール アドレス、ロゴ、人物、場所、およびイベントはすべて架空のものです。  実在する会社、組織、製品、ドメイン名、電子メールアドレス、ロゴ、人物、場所、イベントなどとは一切関係ありません。  

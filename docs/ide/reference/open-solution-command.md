@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bae1a28c7d9d0a87eeec3148301234cc0f45c286
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a67e3884fbb5e0c4bbb3a5aefe2cdcc8ac7d683e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="open-solution-command"></a>OpenSolution コマンド
 開いている他のソリューションを閉じ、既存のソリューションを開きます。  
@@ -33,7 +34,7 @@ File.OpenSolution filename
   
 ## <a name="arguments"></a>引数  
  `Filename`  
- 必須です。 開くソリューションの完全パスとファイル名。  
+ 必須。 開くソリューションの完全パスとファイル名。  
   
  `filename` 引数の構文の場合、空白を含むパスで引用符を使用する必要があります。  
   
@@ -47,7 +48,7 @@ File.OpenSolution filename
 >File.OpenSolution "c:\MySolutions\Test1\Test1.sln"  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   

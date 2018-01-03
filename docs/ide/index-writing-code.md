@@ -6,11 +6,12 @@ ms.topic: landing-page
 title: "Visual Studio ドキュメントを使用したコードの記述と管理 | Microsoft Docs"
 description: "Visual Studio でコード エディターなどの他のツールを使用して、コードを記述、移動、管理、および強化する方法について説明します。"
 ms.technology: vs-ide-general
-ms.openlocfilehash: bc08b4822f411587db76f648e2b3ba508d513fb3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5bc15e4bde117a474034ab4342dc43bc8db8e00f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="write-and-manage-code-using-visual-studio-documentation"></a>Visual Studio ドキュメントを使用したコードの記述と管理
 

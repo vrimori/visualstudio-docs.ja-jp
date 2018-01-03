@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3e61fb6667c16fd75cef78fbcaa835b97603dbe5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 094f87ca4a56f71cbecfa9b6b1dc9189244c0c57
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>方法 : Visual Basic 開発者設定が適用されたビルド構成を管理する
 既定では、すべてのビルド構成の詳細オプションは [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 開発者設定が適用されて非表示になっています。 このトピックでは、これらの設定を手動で有効にする方法について説明します。  
@@ -43,10 +44,10 @@ ms.lasthandoff: 10/31/2017
   
 3.  **[ビルド構成の詳細を表示]** をクリックします。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
      **[ビルド]** メニューで **[構成マネージャー]** を使用できるようになり、**[構成]** 一覧と **[プラットフォーム]** 一覧がプロジェクト デザイナーに表示されるようになります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビルド構成について](../ide/understanding-build-configurations.md)   
  [コードのコンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)

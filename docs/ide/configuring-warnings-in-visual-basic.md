@@ -16,11 +16,12 @@ caps.latest.revision: "35"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4df81a0d5f6faee7a272abd13ca6e046681b045d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c076fe18318a9110babdf17d74898f35466d710c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-warnings-in-visual-basic"></a>Visual Basic での警告の構成
 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] のコンパイラには、実行時エラーの原因になる可能性があるコードに関する警告のセットが用意されています。 その情報を使うと、よりきれいで、速く、優れたコードを、バグをほとんど含まずに記述することができます。 たとえば、代入されていないオブジェクト変数のメンバーを呼び出そうとしたり、戻り値を設定しないで関数から戻ろうとしたり、例外をキャッチするロジックでエラーのある `Try` ブロックを実行しようとしたりすると、コンパイラはエラーを生成します。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
   
  警告の一覧にはエラーとして扱う必要のある警告のエラー ID 番号が含まれ、それをコマンド ライン オプションで使って特定の警告のオン/オフを指定できます。 警告の一覧に無効な値が含まれる場合は、エラーが報告されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の表では、コマンド ライン引数の動作の例を示します。  
   
 |引数|説明|  
@@ -119,7 +120,7 @@ ms.lasthandoff: 10/31/2017
   
  ID: 42029、42031  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [エラーの種類](/dotnet/visual-basic/programming-guide/language-features/error-types)   
  [Try...Catch...Finally ステートメント](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement)   
  [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn)   

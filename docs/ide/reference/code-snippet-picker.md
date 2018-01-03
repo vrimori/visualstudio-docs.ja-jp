@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 58f419d52d2d89f998f64e236cfc1f0053c9cfd1
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: e352baf834f026462cb35921f7f79e75b3aecd96
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-snippet-picker"></a>コード スニペット ピッカー
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Code エディターでは、**コード スニペット ピッカー**が提供されています。これを使用すると、数回マウスをクリックするだけで、既成のコードのブロックをアクティブなドキュメントに挿入することができます。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/02/2017
 項目一覧  
 挿入に使用できるコード スニペットの一覧、またはコード スニペットを含むフォルダーの一覧です。 スニペットを挿入またはフォルダーを展開するには、目的の項目を選択して Enter キーを押します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [コード スニペットを使用するためのベスト プラクティス](../../ide/best-practices-for-using-code-snippets.md)   
 [Visual Basic の IntelliSense コード スニペット](/dotnet/visual-basic/developing-apps/using-ide/intellisense-code-snippets)   
 [コードへのブックマークの設定](../../ide/setting-bookmarks-in-code.md)   

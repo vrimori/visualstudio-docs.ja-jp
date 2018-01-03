@@ -12,11 +12,12 @@ caps.latest.revision: "31"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 92bd6ea136c30c02e32045692d311afe93b86296
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: xamarin
+ms.openlocfilehash: c135468e380bd65383f61aa69b906352a3febe47
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する
 「[セットアップとインストール](../cross-platform/setup-and-install.md)」と「[Xamarin 環境を検証する](../cross-platform/verify-your-xamarin-environment.md)」の手順を完了しましたが、このチュートリアルでは、ネイティブ UI レイヤーを備えた基本的な Xamarin アプリ (下図) を作成する方法を示します。 ネイティブ UI を使用すると、共有コードはポータブル クラス ライブラリ (PCL) に存在し、個別のプラットフォーム プロジェクトに UI 定義が含まれます。  
@@ -248,10 +249,10 @@ ms.lasthandoff: 10/31/2017
   
 7.  **[プロパティ]** ウィンドウで、次のプロパティを設定します (注: [プロパティ] ウィンドウのツール バーにある並べ替えボタンを使用して、一覧をアルファベット順に並べ替えるとわかりやすくなります)。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
     |**text**|**Search by Zip Code**|  
-    |**id**|`@+id/ZipCodeSearchLabel`|  
+    |**ID**|`@+id/ZipCodeSearchLabel`|  
     |**layout_marginLeft**|`10dp`|  
     |**textColor**|`@android:color/white`|  
     |**textStyle**|`bold`|  
@@ -280,7 +281,7 @@ ms.lasthandoff: 10/31/2017
   
 9. **[プロパティ]** ウィンドウで、次のプロパティを設定します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
     |**テキスト**|**[郵便番号]**|  
     |**ID**|`@+id/ZipCodeLabel`|  
@@ -302,7 +303,7 @@ ms.lasthandoff: 10/31/2017
   
 10. **[ツールボックス]** から **[Number]** コントロールを **[RelativeLayout]** にドラッグし、**[Zip Code]** ラベルの下に配置します。 その後、次のプロパティを設定します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
     |**ID**|`@+id/zipCodeEntry`|  
     |**layout_marginLeft**|`10dp`|  
@@ -325,7 +326,7 @@ ms.lasthandoff: 10/31/2017
   
 11. **[ツールボックス]** から、**[Button]** を **[RelativeLayout]** コントロールにドラッグして、[zipCodeEntry] コントロールの右に配置します。 次に、以下のプロパティを設定します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
     |**ID**|`@+id/weatherBtn`|  
     |**テキスト**|**Get Weather**|  
@@ -643,7 +644,7 @@ ms.lasthandoff: 10/31/2017
   
  PCL はコンパイルされてから各プラットフォーム固有のアプリ パッケージに組み込まれるため、PCL の共有コードはプラットフォームに中立的です。 条件付きコンパイルを使用してプラットフォーム固有のコードを区別した共有コードを記述する場合は、*共有*プロジェクトを使用することができます。 詳細については、[コード共有オプション](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/sharing_code_options/) (xamarin.com) の説明を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Xamarin の開発者向けサイト](http://developer.xamarin.com/)   
  [Windows デベロッパー センター](https://dev.windows.com/en-us)   
  [Swift および C# のクイック リファレンス ポスター](http://aka.ms/scposter)

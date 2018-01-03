@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 8503de5c90544e06fa7119482f67726655a4ffed
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6152cfe60a7628ce830cbf589a6808f5ca87fae2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="item-functions"></a>項目用の関数
 MSBuild 4.0 以降、タスクとターゲットのコードは項目用の関数を呼び出し、プロジェクトの項目に関する情報を取得できます。 これらの関数により、Distinct() 項目の取得が簡素化され、項目をループ処理するよりも処理が速くなります。  
@@ -62,7 +63,7 @@ MSBuild 4.0 以降、タスクとターゲットのコードは項目用の関�
 |`Reverse`|`@(MyItem->Reverse())`|項目を逆の順序で返します。|  
 |`AnyHaveMetadataValue`|`@(MyItem->AnyHaveMetadataValue("MetadataName", "MetadataValue"))`|特定のメタデータの名前と値が項目に含まれているかどうかを示す `boolean` を返します。 比較では、大文字と小文字が区別されません。|  
 |`ClearMetadata`|`@(MyItem->ClearMetadata())`|メタデータを消して項目を返します。 `itemspec` のみが保持されます。|  
-|`HasMetadata`|`@(MyItem->HasMetadataValue("MetadataName"))`|特定のメタデータ名を含む項目を返します。 比較では、大文字と小文字が区別されません。|  
+|`HasMetadata`|`@(MyItem->HasMetadata("MetadataName"))`|特定のメタデータ名を含む項目を返します。 比較では、大文字と小文字が区別されません。|  
 |`Metadata`|`@(MyItem->Metadata("MetadataName"))`|メタデータ名が含まれるメタデータの値を返します。|  
 |`WithMetadataValue`|`@(MyItem->WithMetadataValue("MetadataName", "MetadataValue"))`|特定のメタデータの名前と値を含む項目を返します。 比較では、大文字と小文字が区別されません。|  
   
@@ -101,5 +102,5 @@ MSBuild 4.0 以降、タスクとターゲットのコードは項目用の関�
   -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [項目](../msbuild/msbuild-items.md)

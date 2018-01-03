@@ -21,11 +21,12 @@ caps.latest.revision: "57"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 07beb4cfbc8acad0184ff93d12121699f3b27b03
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8fa07e9e489dd6334e0075da4cd8c265e71aa1db
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msbuild-command-line-reference"></a>MSBuild コマンド ライン リファレンス
 MSBuild.exe を使用してプロジェクト ファイルやソリューション ファイルをビルドするとき、スイッチをいくつか含めて、プロセスのさまざまな側面を指定できます。  
@@ -55,7 +56,7 @@ MSBuild.exe [Switches] [ProjectFile]
 |/nologo||著作権情報を表示しません。|  
 |<a name="preprocess"></a> /preprocess[:`filepath`]|/pp[:`filepath`]|ビルド中にインポートされるすべてのファイルをインライン展開することで、単一の集約されたプロジェクト ファイルを作成します。ファイルの境界にはマークが挿入されます。 このスイッチを使用して、インポートされるファイル、ファイルのインポート元、およびビルドに関連するファイルを簡単に特定できます。 このスイッチを使用した場合、プロジェクトはビルドされません。<br /><br /> `filepath` を指定した場合、集約されたプロジェクト ファイルがファイルに出力されます。 それ以外の場合は、出力がコンソール ウィンドウに表示されます。<br /><br /> `Import` 要素を使用してプロジェクト ファイルを他のプロジェクト ファイルに挿入する方法については、「[Import 要素 (MSBuild)](../msbuild/import-element-msbuild.md)」と「[方法: 複数のプロジェクト ファイルで同じターゲットを使用する](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)」を参照してください。|  
 |/property:`name`=`value`|/p:`name`=`value`|指定したプロジェクト レベルのプロパティを設定またはオーバーライドします。`name` はプロパティ名、`value` はプロパティ値です。 各プロパティを個別に指定するか、次の例に示すようにセミコロンまたはコンマを使用して複数のプロパティを区切ります。<br /><br /> `/property:WarningLevel=2;OutDir=bin\Debug`|  
-|/target:`targets`|/t: `targets`|プロジェクト内で指定されたターゲットをビルドします。 各ターゲットを個別に指定するか、次の例に示すようにセミコロンまたはコンマを使用して複数のターゲットを区切ります。<br /><br /> `/target:Resources;Compile`<br /><br /> このスイッチを使用してターゲットを指定すると、これらのターゲットが実行され、プロジェクト ファイルの `DefaultTargets` 属性に指定されたターゲットは実行されません。 詳細については、「[ターゲットのビルド順序](../msbuild/target-build-order.md)」と「[方法: 最初にビルドするターゲットを指定する](../msbuild/how-to-specify-which-target-to-build-first.md)」を参照してください。<br /><br /> ターゲットとは、タスクのグループを表します。 詳細については、[ターゲット](../msbuild/msbuild-targets.md)に関する記事を参照してください。|  
+|/target:`targets`|/t: `targets`|プロジェクト内で指定されたターゲットをビルドします。 各ターゲットを個別に指定するか、次の例に示すようにセミコロンまたはコンマを使用して複数のターゲットを区切ります。<br /><br /> `/target:Resources;Compile`<br /><br /> このスイッチを使用してターゲットを指定すると、これらのターゲットが実行され、プロジェクト ファイルの `DefaultTargets` 属性に指定されたターゲットは実行されません。 詳細については、「[ターゲットのビルド順序](../msbuild/target-build-order.md)」と「[方法: 最初にビルドするターゲットを指定する](../msbuild/how-to-specify-which-target-to-build-first.md)」を参照してください。<br /><br /> ターゲットとは、タスクのグループを表します。 詳細については、[ターゲット](../msbuild/msbuild-targets.md) を参照してください。|  
 |/toolsversion:`version`|/tv:`version`|次の例に示すように、プロジェクトのビルドに使用するツールセットのバージョンを指定します: `/toolsversion:3.5`。<br /><br /> このスイッチを使用すると、プロジェクトをビルドし、「[Project 要素 (MSBuild)](../msbuild/project-element-msbuild.md)」で指定したバージョンとは異なるバージョンを指定できます。 詳細については、「[ToolsVersion 設定をオーバーライドする](../msbuild/overriding-toolsversion-settings.md)」を参照してください。<br /><br /> MSBuild 4.5 では、`version` の値として 2.0、3.5、4.0 を指定できます。 4.0 を指定した場合、`VisualStudioVersion` ビルド プロパティでは、使用するサブツールセットを指定します。 詳細については、「[ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」の「サブツールセット」のセクションを参照してください。<br /><br /> ツールセットは、アプリケーションのビルドで使用するタスク、ターゲット、およびツールで構成されます。 ツールには、csc.exe や vbc.exe などのコンパイラが含まれます。 ツールセットの詳細については、「[ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」、「[標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)」、および「[マルチ ターゲットの概要](../msbuild/msbuild-multitargeting-overview.md)」を参照してください。 **注:**  ツールセットのバージョンは、ターゲット フレームワークのバージョン (ビルドするプロジェクトの実行対象となる .NET Framework のバージョン) と同じではありません。 詳細については、「[ターゲット フレームワークおよびターゲット プラットフォーム](../msbuild/msbuild-target-framework-and-target-platform.md)」を参照してください。|  
 |/validate:[`schema`]|/val[`schema`]|プロジェクト ファイルを検証し、成功した場合はプロジェクトをビルドします。<br /><br /> `schema` を指定しない場合、プロジェクトは既定のスキーマに対して検証されます。<br /><br /> `schema` を指定した場合、プロジェクトは指定したスキーマに対して検証されます。<br /><br /> たとえば、次のように設定します。`/validate:MyExtendedBuildSchema.xsd`|  
 |/verbosity:`level`|/v:`level`|ビルド ログに表示する情報量を指定します。 各 logger は、その logger に対して設定された詳細レベルに基づいてイベントを表示します。<br /><br /> 詳細レベルには、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` を指定できます。<br /><br /> たとえば、次のように設定します。`/verbosity:quiet`|  
@@ -64,7 +65,7 @@ MSBuild.exe [Switches] [ProjectFile]
   
 ### <a name="switches-for-loggers"></a>ロガーのスイッチ  
   
-|スイッチ|省略形|説明|  
+|切り替え|省略形|説明|  
 |------------|----------------|-----------------|  
 |/consoleloggerparameters:<br /><br /> `parameters`|/clp:`parameters`|指定したパラメーターをコンソール logger に渡し、コンソール ウィンドウにビルド情報を表示します。 次のパラメーターを指定できます。<br /><br /> -   **PerformanceSummary**。 タスク、ターゲット、およびプロジェクトで経過した時間を表示します。<br />-   **Summary**。 エラーや警告の概要を終了時に表示します。<br />-   **NoSummary**。 エラーや警告の概要を終了時に表示しません。<br />-   **ErrorsOnly**。 エラーのみを表示します。<br />-   **WarningsOnly**。 警告のみを表示します。<br />-   **NoItemAndPropertyList**。 詳細レベルが `diagnostic` に設定されている場合、各プロジェクト ビルドの開始時に項目とプロパティの一覧を表示しません。<br />-   **ShowCommandLine**。 `TaskCommandLineEvent` メッセージを表示します。<br />-   **ShowTimestamp**。 タイムスタンプをメッセージの先頭に表示します。<br />-   **ShowEventId**。 開始したイベント、終了したイベント、およびメッセージのイベント ID を表示します。<br />-   **ForceNoAlign**。 テキストをコンソール バッファーのサイズに合わせません。<br />-   **DisableConsoleColor**。 すべてのログ メッセージに、コンソールの既定の色を使用します。<br />-   **DisableMPLogging**。 マルチプロセッサ以外のモードで実行されている場合にマルチプロセッサ ログ出力方法を無効にします。<br />-   **EnableMPLogging**。 マルチプロセッサ以外のモードで実行されている場合でもマルチプロセッサ ログ出力方法を有効にします。 このログ出力方法はデフォルトで有効です。<br />-   **Verbosity**。 このロガーの **/verbosity** 設定をオーバーライドします。<br /><br /> 次の例に示すように、セミコロンまたはコンマを使用して複数のパラメーターを区切ります。<br /><br /> `/consoleloggerparameters:PerformanceSummary;NoSummary /verbosity:minimal`|  
 |/distributedFileLogger|/dfl|各 MSBuild ノードのビルド出力を、そのノード独自のファイルに記録します。 これらのファイルの初期位置は、現在のディレクトリです。 既定では、ファイルの名前は "MSBuild*NodeId*.log" になります。 **/fileLoggerParameters** スイッチを使用して、ファイルの場所と fileLogger の他のパラメーターを指定できます。<br /><br /> **/fileLoggerParameters** スイッチを使用してログ ファイル名を指定すると、分散ロガーはその名前をテンプレートとして使用し、各ノードのログ ファイルを作成するときに、その名前にノード ID を追加します。|  
@@ -89,6 +90,6 @@ MSBuild.exe MyProject.proj /t:rebuild
 msbuild SlnFolders.sln /t:NotInSolutionfolder:Rebuild;NewFolder\InSolutionFolder:Clean  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
  [Common MSBuild Project Properties (MSBuild プロジェクトの共通プロパティ)](../msbuild/common-msbuild-project-properties.md)

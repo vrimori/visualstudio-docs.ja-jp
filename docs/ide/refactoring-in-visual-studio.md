@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f3ce9677f344b8d97992d78b08ed44341657d51c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c4c5b0e1cb14e32ae4303da76baca7b7ef88590f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="refactoring-in-visual-studio"></a>Visual Studio でのリファクタリング
 リファクタリングとは、コードの動作を変更することなく、簡単にコードを維持、理解、拡張するためのプロセスです。 一般的な*リファクタリング*の一部には、次のものがあります。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="refactoring-in-f"></a>リファクタリング [F#] #
  F# のリファクタリングのサポートは、サード パーティ製の Visual Studio 拡張機能の [Visual f# Power Tool](https://visualstudiogallery.msdn.microsoft.com/136b942e-9f2c-4c0b-8bac-86d774189cff) で提供されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio IDE](../ide/visual-studio-ide.md)   
  [コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)  
  [変更のプレビュー](../ide/preview-changes.md)

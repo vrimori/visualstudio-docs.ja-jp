@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a3b0916874fbd4c16dfe2232a6a5865743d0c388
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6ae2b8f0c9f0a17f29bf42a8a2893f8671df4cd6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="open-project-command"></a>OpenProject コマンド
 既存のプロジェクトを開きます。  
@@ -34,7 +35,7 @@ File.OpenProject filename
   
 ## <a name="arguments"></a>引数  
  `filename`  
- 必須です。 開くプロジェクトの完全パスとファイル名。  
+ 必須。 開くプロジェクトの完全パスとファイル名。  
   
  `filename` 引数の構文の場合、空白を含むパスで引用符を使用する必要があります。  
   
@@ -50,7 +51,7 @@ File.OpenProject filename
 >File.OpenProject "C:\My Projects\Test1\Test1.vbproj"  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   

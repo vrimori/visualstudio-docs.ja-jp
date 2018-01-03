@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6eaf5d77da1dbc6e005764087dad338458e7ce8c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: bba20817c03b7ff542c3af11a440ad8e619f5567
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="print-command"></a>Print コマンド
 式を評価するか、指定したテキストを表示します。  
@@ -34,7 +35,7 @@ Debug.Print text
   
 ## <a name="arguments"></a>引数  
  `text`  
- 必須です。 評価対象の式または表示対象のテキストです。  
+ 必須。 評価対象の式または表示対象のテキストです。  
   
 ## <a name="remarks"></a>コメント  
  このコマンドのエイリアスとして疑問符 (?) を使用できます。 したがって、たとえば次のコマンド  
@@ -57,7 +58,7 @@ Debug.Print text
 >Debug.Print varA  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Evaluate Statement コマンド](../../ide/reference/evaluate-statement-command.md)   
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
