@@ -7,45 +7,29 @@ ms.suite:
 ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 803a1a94fe3eaa1bc63d59e9de2a42711f502262
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: 5e257d8d90d21c4298b92f7bc4b923ed5a720c85
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Visual Studio の生産性に関するヒント
 
-これらのヒントに従うことによって、Visual Studio でのコードの作成、移動、デバッグをさらに高速かつ効率的にできます。 一般的なキーボード ショートカットの詳細については、「[ヒントとテクニック](../ide/tips-and-tricks-for-visual-studio.md)」を参照してください。 詳細な一覧については、「[キーボード ショートカットの識別とカスタマイズ](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)」および「[既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)」を参照してください。
+これらのヒントに従うことによって、Visual Studio でのコードの作成、移動、デバッグをさらに高速かつ効率的にできます。
+
+一般的なキーボード ショートカットの詳細については、「[ヒントとテクニック](../ide/tips-and-tricks-for-visual-studio.md)」を参照してください。 詳細な一覧については、「[キーボード ショートカットの識別とカスタマイズ](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)」および「[既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)」を参照してください。
 
 ## <a name="accessing-visual-studio-tools"></a>Visual Studio Tools にアクセスする
 
-スタート画面またはタスクバーに固定すると、開発者コマンド プロンプトまたは別のツールに簡単にアクセスできます。
+スタート メニューまたはタスク バーに固定すると、開発者コマンド プロンプトまたは別の Visual Studio のツールにすぐにアクセスできます。
 
-1. スタート画面で、「`Visual Studio Tools`」と入力してから **Enter** キーを選択します。
+1. Windows エクスプローラーで、`%ProgramData%\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools` を参照します。
 
-1. **ファイル エクスプローラー**で、目的の項目のショートカット メニューを開きます。
-
-    - ビルド通知
-
-    - デバッグ可能パッケージ マネージャー
-
-    - VS2013 用開発者コマンド プロンプト
-
-    - Microsoft Feedback Client 2013
-
-    - VS2013 ARM Cross Tools コマンド プロンプト
-
-    - VS2013 x64 Cross Tools コマンド プロンプト
-
-    - VS2013 x64 Native Tools コマンド プロンプト
-
-    - VS2013 x86 Native Tools コマンド プロンプト
-
-1. **[スタート画面にピン留め]** または **[タスクバーにピン留め]** を選択します。
+1. **[開発者コマンド プロンプト]** を右クリックするかコンテキスト メニューを開いて、**[スタートにピン留めする]** または **[タスク バーにピン留めする]** を選びます。
 
 ## <a name="writing-code"></a>コードを作成する
 
@@ -91,11 +75,11 @@ ms.lasthandoff: 11/22/2017
 
 - **対処する必要があるエラーのみを表示する**。 **[エラー一覧]** ツール バーの **[フィルター]** を選択すると、**[エラー一覧]** ウィンドウに表示されるエラーの数を減らすことができます。 エディターで開いているファイルのエラーのみ、現在のファイルのエラーのみ、または現在のプロジェクトのエラーのみを表示できます。 また、[エラー一覧] ウィンドウ内で検索して、特定のエラーを見つけることもできます。
 
-- **ダイアログ ボックス、メニュー コマンド、およびオプションを検索する**。 [[クイック起動] ([オプション] ダイアログ ボックス - [環境])](../ide/reference/quick-launch-environment-options-dialog-box.md) に、検索対象の項目のキーワードまたは語句を入力します。 たとえば、「`new project`」と入力すると、次のオプションが表示されます。
+- **ダイアログ ボックス、メニュー コマンド、およびオプションを検索する**。 [[クイック起動]](../ide/reference/quick-launch-environment-options-dialog-box.md) ボックスに、検索対象の項目のキーワードまたは語句を入力します。 たとえば、「`new project`」と入力すると、次のオプションが表示されます。
 
-     !["新しいプロジェクト" のクイック起動結果](../ide/media/productivity_quicklaunch.png "Productivity_QuickLaunch")
+    !["新しいプロジェクト" のクイック起動結果](../ide/media/productivity_quicklaunch.png "Productivity_QuickLaunch")
 
-     **クイック起動**には、**[新しいプロジェクト]** ダイアログ ボックス、**[新しい項目の追加]** ダイアログ ボックス、**[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページなどへのリンクが表示されます。 また、クイック起動の結果には、プロジェクト ファイルおよびツール ウィンドウも含まれます。
+    **クイック起動**には、**[新しいプロジェクト]** ダイアログ ボックス、**[新しい項目の追加]** ダイアログ ボックス、**[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページなどへのリンクが表示されます。 また、クイック起動の結果には、プロジェクト ファイルおよびツール ウィンドウも含まれます。
 
 ## <a name="debugging-code"></a>コードのデバッグ
 
@@ -103,11 +87,11 @@ ms.lasthandoff: 11/22/2017
 
 - **さまざまなブラウザーで同じページ、アプリケーション、またはサイトをテストする**。 コードをデバッグする際に、**[ブラウザーの選択]** ダイアログ ボックスを開かなくても、[Page Inspector (Visual Studio)](http://msdn.microsoft.com/Library/65880969-1ad2-47be-85b9-bb12c81bf209) など、インストールされている Web ブラウザーを簡単に切り替えることができます。 **[標準]** ツール バーの **[デバッグ開始]** ボタンの横にある **[デバッグ ターゲット]** ボックスを使用すると、ページをデバッグまたは表示する際に使用しているブラウザーを即座に確認できます。
 
-     ![Web ブラウザーのデバッグ オプションの選択](../ide/media/webbrowserdropdowntoolbar.png "WebBrowserDropDownToolbar")
+    ![Web ブラウザーのデバッグ オプションの選択](../ide/media/webbrowserdropdowntoolbar.png "WebBrowserDropDownToolbar")
 
 - **一時的なブレークポイントを設定する**。 現在のコード行に一時的なブレークポイントを作成し、同時にデバッガーを起動できます。 そのコード行に到達すると、デバッガーは中断モードになります。 詳細については、「[デバッガーでのコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)」を参照してください。
 
-     この機能を使用するには、**Ctrl** + **F10** キーを選択するか、中断するコード行でショートカット メニューを開き、**[カーソル行の前まで実行]** を選択します。
+    この機能を使用するには、**Ctrl** + **F10** キーを選択するか、中断するコード行でショートカット メニューを開き、**[カーソル行の前まで実行]** を選択します。
 
 - **デバッグ中に実行ポイントを移動する**。 現在の実行ポイントを別のコード セクションに移動し、そのポイントからデバッグを再開できます。 この方法は、そのセクションに到達するために必要な手順をすべて再作成せずに、コード セクションをデバッグする場合に便利です。 詳細については、「[デバッガーでのコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)」を参照してください。
 

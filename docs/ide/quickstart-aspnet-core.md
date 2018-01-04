@@ -11,11 +11,14 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 dev_langs: CSharp
-ms.openlocfilehash: 6879d29b1e8c36ce9456fc44cf738a57603a6d50
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload:
+- aspnet
+- dotnetcore
+ms.openlocfilehash: 66c1b3ca7a877c001bc3aeb69c5331fdc828aad8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>クイック スタート: Visual Studio を使用して初めての ASP.NET Core Web アプリを作成する
 
@@ -74,6 +77,9 @@ ms.lasthandoff: 11/22/2017
 1. Web サイトの上部にある **[バージョン情報]** を選択すると、**About** ページの `OnGet()` メソッドに追加したディレクトリ メッセージが表示されます。
 
 1. Web ブラウザーを閉じます。
+
+> [!NOTE]
+> **"Web サーバー 'IIS Express' に接続できませんでした"** というエラー メッセージが表示された場合は、Visual Studio を閉じて、右クリックするかコンテキスト メニューから **[管理者として実行]** オプションを使用して Visual Studio を開きます。 その後、アプリケーションをもう一度実行します。
 
 このクイック スタートは完了しました。 Visual Studio IDE について少しはご理解いただけたかと思います。 機能についてさらに深く理解したい場合は、目次の**チュートリアル** セクションに示されているチュートリアルを続行してください。
 

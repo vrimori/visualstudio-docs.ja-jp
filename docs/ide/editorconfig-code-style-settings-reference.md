@@ -1,7 +1,7 @@
 ---
 title: "EditorConfig の .NET コーディング規則の設定 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 12/05/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -14,30 +14,34 @@ helpviewer_keywords:
 - EditorConfig coding conventions
 - language conventions [EditorConfig]
 - formatting conventions [EditorConfig]
-ms.assetid: 
-caps.latest.revision: "1"
 author: kuhlenh
 ms.author: kaseyu
 manager: ghogen
 ms.technology: vs-ide-general
-ms.openlocfilehash: 25db1488faef4ddb54af9831bee7ccd3d8479f76
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: kaseyu
+ms.openlocfilehash: 1eae2ecb271fd0af411da9859091f82df7913b6c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig の .NET コーディング規則の設定
 
-[EditorConfig](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options) ファイルを使用すれば、コードベースで一貫性のあるコード スタイルを定義および維持できます。 EditorConfig には、`indent_style` や `indent_size` などのいくつかの主要な書式設定プロパティが含まれています。 Visual Studio では、EditorConfig ファイルを使用して .NET コーディング規則の設定を構成することもできます。 EditorConfig ファイルでは、個々の .NET コーディング規則を有効化または無効化し、重要度レベルで規則を適用する程度を構成することができます。 EditorConfig を使用して、コードベースで整合性を適用する方法の詳細については、「[EditorConfig で移植可能なカスタム エディター設定を作成する](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options)」を参照してください。 例として、[.NET コンパイラ プラットフォームの .editorconfig ファイル](https://github.com/dotnet/roslyn/blob/master/.editorconfig)を参照することもできます。
+Visual Studio 2017 [EditorConfig](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options) ファイルを使用すれば、コードベースで一貫性のあるコード スタイルを定義および維持できます。 EditorConfig には、`indent_style` や `indent_size` などのいくつかの主要な書式設定プロパティが含まれています。 Visual Studio では、EditorConfig ファイルを使用して .NET コーディング規則の設定を構成することもできます。 EditorConfig ファイルでは、個々の .NET コーディング規則を有効化または無効化し、重要度レベルで規則を適用する程度を構成することができます。 EditorConfig を使用して、コードベースで整合性を適用する方法の詳細については、「[EditorConfig で移植可能なカスタム エディター設定を作成する](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options)」を参照してください。 例として、[.NET コンパイラ プラットフォームの .editorconfig ファイル](https://github.com/dotnet/roslyn/blob/master/.editorconfig)を参照することもできます。
 
 サポートされている .NET コーディング規則には次の 3 つのカテゴリがあります。
 
-- [言語規則](#language-conventions)  
-   C# または Visual Basic 言語に関するルール。 たとえば、変数の定義時の `var` または明示的な型の使用や、式形式メンバーの優先に関するルールを指定できます。  
-- [書式規則](#formatting-conventions)  
-   コードを読みやすくするためのレイアウトや構造に関するルール。 たとえば、Allman 中かっこや、制御ブロックでのスペースの優先に関するルールを指定できます。  
-- [名前付け規則](../ide/editorconfig-naming-conventions.md)  
-   コード要素の名前付けに関するルール。 たとえば、`async` メソッドは "Async" で終わる必要があるなどと指定できます。  
+- [言語規則](#language-conventions)
+
+   C# または Visual Basic 言語に関するルール。 たとえば、変数の定義時の `var` または明示的な型の使用や、式形式メンバーの優先に関するルールを指定できます。
+
+- [書式規則](#formatting-conventions)
+
+   コードを読みやすくするためのレイアウトや構造に関するルール。 たとえば、Allman 中かっこや、制御ブロックでのスペースの優先に関するルールを指定できます。
+
+- [名前付け規則](../ide/editorconfig-naming-conventions.md)
+
+   コード要素の名前付けに関するルール。 たとえば、`async` メソッドは "Async" で終わる必要があるなどと指定できます。
 
 ## <a name="language-conventions"></a>言語規則
 
@@ -51,12 +55,12 @@ ms.lasthandoff: 12/01/2017
 
 重要度 | 効果
 :------- | ------
-none または silent | このルールに違反した場合、ユーザーには何も表示されません。 ただし、コード生成機能により、このスタイルでコードが生成されます。  
-修正候補 | このスタイル ルールに違反した場合、修正候補としてユーザーに表示されます。 修正候補は、最初の 2 文字の下に 3 つの淡色の点として表示されます。  
-警告 | このスタイル ルールに違反した場合、コンパイラの警告が表示されます。  
-エラー | このスタイル ルールに違反した場合、コンパイラ エラーが表示されます。  
+none または silent | このルールに違反した場合、ユーザーには何も表示されません。 ただし、コード生成機能により、このスタイルでコードが生成されます。
+修正候補 | このスタイル ルールに違反した場合、修正候補としてユーザーに表示されます。 修正候補は、最初の 2 文字の下に 3 つの淡色の点として表示されます。
+警告 | このスタイル ルールに違反した場合、コンパイラの警告が表示されます。
+エラー | このスタイル ルールに違反した場合、コンパイラ エラーが表示されます。
 
-次のリストに、使用できる言語規則のルールを示します。  
+次のリストに、使用できる言語規則のルールを示します。
 
 - .NET コード スタイルの設定
     - ["This."と "Me." 修飾子](#this_and_me)
@@ -109,22 +113,24 @@ none または silent | このルールに違反した場合、ユーザーに�
 このセクションのスタイル ルールは、C# および Visual Basic の両方に適用されます。 優先するプログラミング言語のコード例を表示するには、ブラウザー ウィンドウの右上隅にあるドロップダウンの **[言語]** メニューでそれを選択します。
 
 #### <a name="this_and_me">"This."と "Me." 修飾子</a>
-このスタイル ルール (ルール ID IDE0003 および IDE0009) は、フィールド、プロパティ、メソッド、またはイベントに適用できます。 **true** の値は、C# では `this.`、Visual Basic では `Me.` をコード記号の前に付けることを意味します。 **false** の値は、`this.` や `Me.` をコード要素の前に_付けない_ ことを意味します。  
 
-次の表には、ルール名、適用可能なプログラミング言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。  
+このスタイル ルール (ルール ID IDE0003 および IDE0009) は、フィールド、プロパティ、メソッド、またはイベントに適用できます。 **true** の値は、C# では `this.`、Visual Basic では `Me.` をコード記号の前に付けることを意味します。 **false** の値は、`this.` や `Me.` をコード要素の前に_付けない_ ことを意味します。
 
-| ルール名 | 適用可能な言語 | Visual Studio の既定値 | サポートされているバージョン |
-| ----------- | -------------------- | ----------------------| ----------------  |
-| dotnet_style_qualification_for_field | C# および Visual Basic | false:なし | Visual Studio 2017 |
-| dotnet_style_qualification_for_property | C# および Visual Basic | false:なし | Visual Studio 2017 |
-| dotnet_style_qualification_for_method | C# および Visual Basic | false:なし | Visual Studio 2017 |
-| dotnet_style_qualification_for_event | C# および Visual Basic | false:なし | Visual Studio 2017 |   
+次の表には、ルール名、適用可能なプログラミング言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-**dotnet\_style\_qualification\_for_field**  
-このルールが **true** に設定されている場合、C# では `this.`、Visual Basic では `Me.` をフィールドの前に付けます。  
-このルールが **false** に設定されている場合、`this.` や `Me.` をフィールドの前に_付けません_。  
+| ルール名 | 適用可能な言語 | Visual Studio の既定値 |
+| ----------- | -------------------- | ----------------------|
+| dotnet_style_qualification_for_field | C# および Visual Basic | false:なし |
+| dotnet_style_qualification_for_property | C# および Visual Basic | false:なし |
+| dotnet_style_qualification_for_method | C# および Visual Basic | false:なし |
+| dotnet_style_qualification_for_event | C# および Visual Basic | false:なし |
 
-コード例:  
+**dotnet\_style\_qualification\_for_field**
+
+- このルールが **true** に設定されている場合、C# では `this.`、Visual Basic では `Me.` をフィールドの前に付けます。
+- このルールが **false** に設定されている場合、`this.` や `Me.` をフィールドの前に_付けません_。
+
+コード例:
 
 ```csharp
 // dotnet_style_qualification_for_field = true
@@ -133,19 +139,21 @@ this.capacity = 0;
 // dotnet_style_qualification_for_field = false
 capacity = 0;
 ```
+
 ```vb
 ' dotnet_style_qualification_for_field = true
 Me.capacity = 0
 
 ' dotnet_style_qualification_for_field = false
 capacity = 0
-```  
+```
 
-**dotnet\_style\_qualification\_for_property**  
-このルールが **true** に設定されている場合、C# では `this.`、Visual Basic では `Me.` をプロパティの前に付けます。  
-このルールが **false** に設定されている場合、`this.` や `Me.` をプロパティの前に_付けません_。  
+**dotnet\_style\_qualification\_for_property**
 
-コード例:  
+- このルールが **true** に設定されている場合、C# では `this.`、Visual Basic では `Me.` をプロパティの前に付けます。
+- このルールが **false** に設定されている場合、`this.` や `Me.` をプロパティの前に_付けません_。
+
+コード例:
 
 ```csharp
 // dotnet_style_qualification_for_property = true
@@ -154,19 +162,21 @@ this.ID = 0;
 // dotnet_style_qualification_for_property = false
 ID = 0;
 ```
+
 ```vb
 ' dotnet_style_qualification_for_property = true
 Me.ID = 0
 
 ' dotnet_style_qualification_for_property = false
 ID = 0
-```  
+```
 
-**dotnet\_style\_qualification\_for_method**  
-このルールが **true** に設定されている場合、C# では `this.`、Visual Basic では `Me.` をメソッドの前に付けます。  
-このルールが **false** に設定されている場合、`this.` や `Me.` をメソッドの前に_付けません_。  
+**dotnet\_style\_qualification\_for_method**
 
-コード例:  
+- このルールが **true** に設定されている場合、C# では `this.`、Visual Basic では `Me.` をメソッドの前に付けます。
+- このルールが **false** に設定されている場合、`this.` や `Me.` をメソッドの前に_付けません_。
+
+コード例:
 
 ```csharp
 // dotnet_style_qualification_for_method = true
@@ -175,19 +185,21 @@ this.Display();
 // dotnet_style_qualification_for_method = false
 Display();
 ```
+
 ```vb
 ' dotnet_style_qualification_for_method = true
 Me.Display()
 
 ' dotnet_style_qualification_for_method = false
 Display()
-```  
+```
 
-**dotnet\_style\_qualification\_for_event**  
-このルールが **true** に設定されている場合、C# では `this.`、Visual Basic では `Me.` をイベントの前に付けます。  
-このルールが **false** に設定されている場合、`this.` や `Me.` をイベントの前に_付けません_。  
+**dotnet\_style\_qualification\_for_event**
 
-コード例:  
+- このルールが **true** に設定されている場合、C# では `this.`、Visual Basic では `Me.` をイベントの前に付けます。
+- このルールが **false** に設定されている場合、`this.` や `Me.` をイベントの前に_付けません_。
+
+コード例:
 
 ```csharp
 // dotnet_style_qualification_for_event = true
@@ -196,15 +208,16 @@ this.Elapsed += Handler;
 // dotnet_style_qualification_for_event = false
 Elapsed += Handler;
 ```
+
 ```vb
 ' dotnet_style_qualification_for_event = true
 AddHandler Me.Elapsed, AddressOf Handler
 
 ' dotnet_style_qualification_for_event = false
 AddHandler Elapsed, AddressOf Handler
-```  
+```
 
-これらのルールは、次のように .editorconfig ファイルに表示されます。  
+これらのルールは、次のように .editorconfig ファイルに表示されます。
 
 ```
 # CSharp and Visual Basic code style settings:
@@ -216,20 +229,22 @@ dotnet_style_qualification_for_event = false:suggestion
 ```
 
 #### <a name="language_keywords">型参照のためのフレームワーク型名の代わりの言語キーワード</a>
-このスタイル ルールは、ローカル変数、メソッド パラメーター、およびクラス メンバーに適用できます。また、型メンバー アクセス式に別個のルールとして適用できます。 **true** の値は、型を表すキーワードを持つ型に対して、型名 (`Int32` など) の代わりに言語キーワード (`int` や `Integer` など) を使用することを意味します。 **false** の値は、言語キーワードの代わりに型名を使用することを意味します。  
 
-次の表には、ルール名、ルール ID、適用可能なプログラミング言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。  
+このスタイル ルールは、ローカル変数、メソッド パラメーター、およびクラス メンバーに適用できます。また、型メンバー アクセス式に別個のルールとして適用できます。 **true** の値は、型を表すキーワードを持つ型に対して、型名 (`Int32` など) の代わりに言語キーワード (`int` や `Integer` など) を使用することを意味します。 **false** の値は、言語キーワードの代わりに型名を使用することを意味します。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | サポートされているバージョン |
-| --------- | ------- | -------------------- | ----------------------| ----------------  |
-| dotnet_style_predefined_type_for_locals_parameters_members | IDE0012 と IDE0014 | C# および Visual Basic | true:なし | Visual Studio 2017 |
-| dotnet_style_predefined_type_for_member_access | IDE0013 と IDE0015 | C# および Visual Basic | true:なし | Visual Studio 2017 |  
+次の表には、ルール名、ルール ID、適用可能なプログラミング言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-**dotnet\_style\_predefined\_type\_for\_locals\_parameters_members**  
-このルールが **true** に設定されている場合は、型を表すキーワードを持つ型に対して、型名の代わりに、ローカル変数、メソッド パラメーター、およびクラス メンバーの言語キーワードを使用します。  
-このルールが **false** に設定されている場合は、言語キーワードの代わりに、ローカル変数、メソッド パラメーター、およびクラス メンバーの型名を使用します。  
+| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
+| --------- | ------- | -------------------- | ----------------------|
+| dotnet_style_predefined_type_for_locals_parameters_members | IDE0012 と IDE0014 | C# および Visual Basic | true:なし |
+| dotnet_style_predefined_type_for_member_access | IDE0013 と IDE0015 | C# および Visual Basic | true:なし |
 
-コード例:  
+**dotnet\_style\_predefined\_type\_for\_locals\_parameters_members**
+
+- このルールが **true** に設定されている場合は、型を表すキーワードを持つ型に対して、型名の代わりに、ローカル変数、メソッド パラメーター、およびクラス メンバーの言語キーワードを使用します。
+- このルールが **false** に設定されている場合は、言語キーワードの代わりに、ローカル変数、メソッド パラメーター、およびクラス メンバーの型名を使用します。
+
+コード例:
 
 ```csharp
 // dotnet_style_predefined_type_for_locals_parameters_members = true
@@ -238,19 +253,21 @@ private int _member;
 // dotnet_style_predefined_type_for_locals_parameters_members = false
 private Int32 _member;
 ```
+
 ```vb
 ' dotnet_style_predefined_type_for_locals_parameters_members = true
 Private _member As Integer
 
 ' dotnet_style_predefined_type_for_locals_parameters_members = false
 Private _member As Int32
-``` 
+```
 
-**dotnet\_style\_predefined\_type\_for\_member_access**   
-このルールが **true** に設定されている場合は、型を表すキーワードを持つ型に対して、型名の代わりに、メンバー アクセス式の言語キーワードを使用します。  
-このルールが **false** に設定されている場合は、言語キーワードの代わりに、メンバー アクセス式の型名を使用します。  
+**dotnet\_style\_predefined\_type\_for\_member_access**
 
-コード例:  
+- このルールが **true** に設定されている場合は、型を表すキーワードを持つ型に対して、型名の代わりに、メンバー アクセス式の言語キーワードを使用します。
+- このルールが **false** に設定されている場合は、言語キーワードの代わりに、メンバー アクセス式の型名を使用します。
+
+コード例:
 
 ```csharp
 // dotnet_style_predefined_type_for_member_access = true
@@ -259,89 +276,93 @@ var local = int.MaxValue;
 // dotnet_style_predefined_type_for_member_access = false
 var local = Int32.MaxValue;
 ```
+
 ```vb
 ' dotnet_style_predefined_type_for_member_access = true
 Dim local = Integer.MaxValue
 
 ' dotnet_style_predefined_type_for_member_access = false
 Dim local = Int32.MaxValue
-```  
+```
 
-これらのルールは、次のように .editorconfig ファイルに表示されます。  
+これらのルールは、次のように .editorconfig ファイルに表示されます。
 
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
 dotnet_style_predefined_type_for_member_access = true:suggestion
-``` 
+```
 
-#### <a name="normalize_modifiers">修飾子の基本設定</a>  
-このセクションのスタイル ルールは、アクセシビリティ修飾子を必要とする、必要な修飾子の並べ替え順序を指定するなど、修飾子の基本設定に関するものです。  
+#### <a name="normalize_modifiers">修飾子の基本設定</a>
 
-次の表には、ルール名、ルール ID、適用可能なプログラミング言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。  
+このセクションのスタイル ルールは、アクセシビリティ修飾子を必要とする、必要な修飾子の並べ替え順序を指定するなど、修飾子の基本設定に関するものです。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | サポートされているバージョン |
+次の表には、ルール名、ルール ID、適用可能なプログラミング言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
+
+| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | --------- | ------- | -------------------- | ----------------------| ----------------  |
-| dotnet_style_require_accessibility_modifiers | IDE0040 | C# および Visual Basic | for_non_interface_members:none | Visual Studio 2017 バージョン 15.5 |
-| csharp_preferred_modifier_order | IDE0036 | C# | public,private,protected,internal,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,volatile,async:none | Visual Studio 2017 バージョン 15.5 |
-| visual_basic_preferred_modifier_order | IDE0036 | Visual Basic | Partial,Default,Private,Protected,Public,Friend,NotOverridable,Overridable,MustOverride,Overloads,Overrides,MustInherit,NotInheritable,Static,Shared,Shadows,ReadOnly,WriteOnly,Dim,Const,WithEvents,Widening,Narrowing,Custom,Async:none | Visual Studio 2017 バージョン 15.5 |
+| dotnet_style_require_accessibility_modifiers | IDE0040 | C# および Visual Basic | for_non_interface_members:none | 15.5 |
+| csharp_preferred_modifier_order | IDE0036 | C# | public, private, protected, internal, static, extern, new, virtual, abstract, sealed, override, readonly, unsafe, volatile, async:none | 15.5 |
+| visual_basic_preferred_modifier_order | IDE0036 | Visual Basic | Partial, Default, Private, Protected, Public, Friend, NotOverridable, Overridable, MustOverride, Overloads, Overrides, MustInherit, NotInheritable, Static, Shared, Shadows, ReadOnly, WriteOnly, Dim, Const,WithEvents, Widening, Narrowing, Custom, Async:none | 15.5 |
 
-**dotnet\_style\_require\_accessibility_modifiers**  
-このルールでは **true** や **false** の値は受け入れません。代わりに、以下の表の値を受け入れます。  
+**dotnet\_style\_require\_accessibility_modifiers**
 
-| 値 | 説明 |
+このルールでは **true** や **false** の値は受け入れません。代わりに、以下の表の値を受け入れます。
+
+| [値] | 説明 |
 | ----- |:----------- |
 | always | アクセシビリティ修飾子を指定します。 |
-| for_non_interface_members | パブリック インターフェイス メンバーの場合を除き、アクセシビリティ修飾子を宣言します。 現時点では、これは **always** とは変わらず、C# で既定のインターフェイス メソッドが追加される場合、将来的には文章校正として機能します。 |
-| never | アクセシビリティ修飾子を指定しません。 | 
+| for\_non\_interface_members | パブリック インターフェイス メンバーの場合を除き、アクセシビリティ修飾子を宣言します。 現時点では、これは **always** とは変わらず、C# で既定のインターフェイス メソッドが追加される場合、将来的には文章校正として機能します。 |
+| never | アクセシビリティ修飾子を指定しません。 |
 
-コード例:  
+コード例:
 
 ```csharp
 // dotnet_style_require_accessibility_modifiers = always
 // dotnet_style_require_accessibility_modifiers = for_non_interface_members
-class MyClass 
+class MyClass
 {
     private const string thisFieldIsConst= "constant";
 }
 
 // dotnet_style_require_accessibility_modifiers = never
-class MyClass 
+class MyClass
 {
     const string thisFieldIsConst= "constant";
 }
 ```
 
-**csharp_preferred_modifier_order**  
-このルールが修飾子のリストに設定されている場合は、指定された順序を優先します。  
-ファイルでこのルールが省略されている場合は、修飾子の順序を優先しません。
+**csharp_preferred_modifier_order**
 
-コード例:  
+- このルールが修飾子のリストに設定されている場合は、指定された順序を優先します。
+- ファイルでこのルールが省略されている場合は、修飾子の順序を優先しません。
+
+コード例:
 
 ```csharp
 // csharp_preferred_modifier_order = public,private,protected,internal,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,volatile,async
-class MyClass 
+class MyClass
 {
     private static readonly int _daysInYear = 365;
 }
 ```
 
-**visual_basic_preferred_modifier_order**  
-このルールが修飾子のリストに設定されている場合は、指定された順序を優先します。  
-ファイルでこのルールが省略されている場合は、修飾子の順序を優先しません。
+**visual_basic_preferred_modifier_order**
 
-コード例:  
+- このルールが修飾子のリストに設定されている場合は、指定された順序を優先します。
+- ファイルでこのルールが省略されている場合は、修飾子の順序を優先しません。
+
+コード例:
 
 ```vb
 ' visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public,Friend,NotOverridable,Overridable,MustOverride,Overloads,Overrides,MustInherit,NotInheritable,Static,Shared,Shadows,ReadOnly,WriteOnly,Dim,Const,WithEvents,Widening,Narrowing,Custom,Async
 Public Class MyClass
     Private Shared ReadOnly daysInYear As Int = 365
 End Class
-
 ```
 
-これらのルールは、次のように .editorconfig ファイルに表示されます。  
+これらのルールは、次のように .editorconfig ファイルに表示されます。
 
 ```
 # CSharp and Visual Basic code style settings:
@@ -355,26 +376,28 @@ csharp_preferred_modifier_order = public,private,protected,internal,static,exter
 # Visual Basic code style settings:
 [*.vb]
 visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public,Friend,NotOverridable,Overridable,MustOverride,Overloads,Overrides,MustInherit,NotInheritable,Static,Shared,Shadows,ReadOnly,WriteOnly,Dim,Const,WithEvents,Widening,Narrowing,Custom,Async:suggestion
-``` 
+```
 
-#### <a name="expression_level">式レベル基本設定</a>  
-このセクションのスタイル ルールは式レベル基本設定に関するものです。これには、オブジェクト初期化子、コレクション初期化子、明示的なタプル名、null 結合式と三項演算子、および null 条件演算子の使用が含まれます。  
+#### <a name="expression_level">式レベル基本設定</a>
 
-次の表には、ルール名、ルール ID、適用可能なプログラミング言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。  
+このセクションのスタイル ルールは式レベル基本設定に関するものです。これには、オブジェクト初期化子、コレクション初期化子、明示的なタプル名、null 結合式と三項演算子、および null 条件演算子の使用が含まれます。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | サポートされているバージョン |
-| --------- | ------- | -------------------- | ----------------------| ----------------  |
-| dotnet_style_object_initializer | IDE0017 | C# および Visual Basic | true:提案 | Visual Studio 2017 |
-| dotnet_style_collection_initializer | IDE0028 | C# および Visual Basic | true:提案 | Visual Studio 2017 |
-| dotnet_style_explicit_tuple_names | IDE0033 | C# 7.0+ および Visual Basic 15+ | true:提案 | Visual Studio 2017 |
-| dotnet_style_coalesce_expression | IDE0029 | C# および Visual Basic | true:提案 | Visual Studio 2017 |
-| dotnet_style_null_propagation | IDE0031 | C# 6.0+ および Visual Basic 14+ | true:提案 | Visual Studio 2017 | 
+次の表には、ルール名、ルール ID、適用可能なプログラミング言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-**dotnet\_style\_object_initializer**  
-このルールが **true** に設定されている場合、可能であれば、オブジェクト初期化子を使用してオブジェクトを初期化します。  
-このルールが **false** に設定されている場合は、オブジェクト初期化子を使用してオブジェクトを初期化*しません*。  
+| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
+| --------- | ------- | -------------------- | ----------------------|
+| dotnet_style_object_initializer | IDE0017 | C# および Visual Basic | true:提案 |
+| dotnet_style_collection_initializer | IDE0028 | C# および Visual Basic | true:提案 |
+| dotnet_style_explicit_tuple_names | IDE0033 | C# 7.0+ および Visual Basic 15+ | true:提案 |
+| dotnet_style_coalesce_expression | IDE0029 | C# および Visual Basic | true:提案 |
+| dotnet_style_null_propagation | IDE0031 | C# 6.0+ および Visual Basic 14+ | true:提案 |
 
-コード例:  
+**dotnet\_style\_object_initializer**
+
+- このルールが **true** に設定されている場合、可能であれば、オブジェクト初期化子を使用してオブジェクトを初期化します。
+- このルールが **false** に設定されている場合は、オブジェクト初期化子を使用してオブジェクトを初期化*しません*。
+
+コード例:
 
 ```csharp
 // dotnet_style_object_initializer = true
@@ -384,6 +407,7 @@ var c = new Customer() { Age = 21 };
 var c = new Customer();
 c.Age = 21;
 ```
+
 ```vb
 ' dotnet_style_object_initializer = true
 Dim c = New Customer() With {.Age = 21}
@@ -393,9 +417,10 @@ Dim c = New Customer()
 c.Age = 21
 ```
 
-**dotnet\_style\_collection_initializer**  
-このルールが **true** に設定されている場合、可能であれば、コレクション初期化子を使用してコレクションを初期化します。  
-このルールが **false** に設定されている場合は、コレクション初期化子を使用してコレクションを初期化*しません*。
+**dotnet\_style\_collection_initializer**
+
+- このルールが **true** に設定されている場合、可能であれば、コレクション初期化子を使用してコレクションを初期化します。
+- このルールが **false** に設定されている場合は、コレクション初期化子を使用してコレクションを初期化*しません*。
 
 コード例:
 
@@ -409,6 +434,7 @@ list.Add(1);
 list.Add(2);
 list.Add(3);
 ```
+
 ```vb
 ' dotnet_style_collection_initializer = true
 Dim list = New List(Of Integer) From {1, 2, 3}
@@ -418,13 +444,14 @@ Dim list = New List(Of Integer)
 list.Add(1)
 list.Add(2)
 list.Add(3)
-```  
+```
 
-**dotnet\_style\_explicit\_tuple_names**  
-このルールが **true** に設定されている場合は、ItemX プロパティではなくタプル名を使用します。  
-このルールが **false** に設定されている場合は、タプル名ではなく ItemX プロパティを使用します。  
+**dotnet\_style\_explicit\_tuple_names**
 
-コード例:  
+- このルールが **true** に設定されている場合は、ItemX プロパティではなくタプル名を使用します。
+- このルールが **false** に設定されている場合は、タプル名ではなく ItemX プロパティを使用します。
+
+コード例:
 
 ```csharp
 // dotnet_style_explicit_tuple_names = true
@@ -435,6 +462,7 @@ var name = customer.name;
 (string name, int age) customer = GetCustomer();
 var name = customer.Item1;
 ```
+
 ```vb
  ' dotnet_style_explicit_tuple_names = true
 Dim customer As (name As String, age As Integer) = GetCustomer()
@@ -445,11 +473,12 @@ Dim customer As (name As String, age As Integer) = GetCustomer()
 Dim name = customer.Item1
 ```
 
-**dotnet\_style\_coalesce_expression**  
-このルールが **true** に設定されている場合は、三項演算子チェックではなく null 結合式を使用します。  
-このルールが **false** に設定されている場合は、null 結合式ではなく三項演算子チェックを使用します。
+**dotnet\_style\_coalesce_expression**
 
-コード例:  
+- このルールが **true** に設定されている場合は、三項演算子チェックではなく null 結合式を使用します。
+- このルールが **false** に設定されている場合は、null 結合式ではなく三項演算子チェックを使用します。
+
+コード例:
 
 ```csharp
 // dotnet_style_coalesce_expression = true
@@ -459,6 +488,7 @@ var v = x ?? y;
 var v = x != null ? x : y; // or
 var v = x == null ? y : x;
 ```
+
 ```vb
 ' dotnet_style_coalesce_expression = true
 Dim v = If(x, y)
@@ -468,11 +498,12 @@ Dim v = If(x Is Nothing, y, x) ' or
 Dim v = If(x IsNot Nothing, x, y)
 ```
 
-**dotnet\_style\_null_propagation**  
-このルールが **true** に設定されている場合、可能であれば、null 条件演算子を使用します。  
-このルールが **false** に設定されている場合、可能であれば、三項 null チェックを使用します。  
+**dotnet\_style\_null_propagation**
 
-コード例:  
+- このルールが **true** に設定されている場合、可能であれば、null 条件演算子を使用します。
+- このルールが **false** に設定されている場合、可能であれば、三項 null チェックを使用します。
+
+コード例:
 
 ```csharp
 // dotnet_style_null_propagation = true
@@ -482,6 +513,7 @@ var v = o?.ToString();
 var v = o == null ? null : o.ToString(); // or
 var v = o != null ? o.String() : null;
 ```
+
 ```vb
 ' dotnet_style_null_propagation = true
 Dim v = o?.ToString()
@@ -489,9 +521,9 @@ Dim v = o?.ToString()
 ' dotnet_style_null_propagation = false
 Dim v = If(o Is Nothing, Nothing, o.ToString()) ' or
 Dim v = If(o IsNot Nothing, o.ToString(), Nothing)
-```  
+```
 
-これらのルールは、次のように .editorconfig ファイルに表示されます。  
+これらのルールは、次のように .editorconfig ファイルに表示されます。
 
 ```
 # CSharp and Visual Basic code style settings:
@@ -508,21 +540,23 @@ dotnet_style_null_propagation = true:suggestion
 このセクションのスタイル ルールは、C# のみに適用されます。
 
 #### <a name="var">暗黙的な型と明示的な型</a>
-このセクションのスタイル ルール (ルール ID IDE0007 および IDE0008) は、変数宣言での [var](/dotnet/csharp/language-reference/keywords/var) キーワードと明示的な型の使用に関するものです。 このルールは、ビルトイン型、型が明らかな場合、および他の場所に個別に適用できます。  
 
-次の表には、ルール名、適用可能なプログラミング言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。  
+このセクションのスタイル ルール (ルール ID IDE0007 および IDE0008) は、変数宣言での [var](/dotnet/csharp/language-reference/keywords/var) キーワードと明示的な型の使用に関するものです。 このルールは、ビルトイン型、型が明らかな場合、および他の場所に個別に適用できます。
 
-| ルール名 | 適用可能な言語 | Visual Studio の既定値 | サポートされているバージョン |
-| ----------- | -------------------- | ----------------------| ----------------  |
-| csharp_style_var_for_built_in_types | C# | true:なし | Visual Studio 2017 |
-| csharp_style_var_when_type_is_apparent | C# | true:なし | Visual Studio 2017 |
-| csharp_style_var_elsewhere | C# | true:なし | Visual Studio 2017 |
+次の表には、ルール名、適用可能なプログラミング言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-**csharp\_style\_var\_for\_built\_in_types**  
-このルールが **true** に設定されている場合は、`int` などのビルトイン システム型で変数を宣言する場合に `var` を使用します。  
-このルールが **false** に設定されている場合は、`int` などのビルトイン システム型で変数を宣言する場合に `var` ではなく明示的な型を使用します。
+| ルール名 | 該当言語 | Visual Studio の既定値 |
+| ----------- | -------------------- | ----------------------|
+| csharp_style_var_for_built_in_types | C# | true:なし |
+| csharp_style_var_when_type_is_apparent | C# | true:なし |
+| csharp_style_var_elsewhere | C# | true:なし |
 
-コード例:  
+**csharp\_style\_var\_for\_built\_in_types**
+
+- このルールが **true** に設定されている場合は、`int` などのビルトイン システム型で変数を宣言する場合に `var` を使用します。
+- このルールが **false** に設定されている場合は、`int` などのビルトイン システム型で変数を宣言する場合に `var` ではなく明示的な型を使用します。
+
+コード例:
 
 ```csharp
 // csharp_style_var_for_built_in_types = true
@@ -532,11 +566,12 @@ var x = 5;
 int x = 5;
 ```
 
-**csharp\_style\_var\_when\_type\_is_apparent**  
-このルールが **true** に設定されている場合、宣言式の右側で型が既に示されているときに `var` を使用します。  
-このルールが **false** に設定されている場合、宣言式の右側で型が既に示されているときに `var` ではなく明示的な型を使用します。  
+**csharp\_style\_var\_when\_type\_is_apparent**
 
-コード例:  
+- このルールが **true** に設定されている場合、宣言式の右側で型が既に示されているときに `var` を使用します。
+- このルールが **false** に設定されている場合、宣言式の右側で型が既に示されているときに `var` ではなく明示的な型を使用します。
+
+コード例:
 
 ```csharp
 // csharp_style_var_when_type_is_apparent = true
@@ -546,11 +581,12 @@ var obj = new Customer();
 Customer obj = new Customer();
 ```
 
-**csharp\_style\_var_elsewhere**  
-このルールが **true** に設定されている場合は、別のコード スタイル ルールでオーバーライドされない限り、すべての場合に明示的な型ではなく `var` を使用します。  
-このルールが **false** に設定されている場合は、別のコード スタイル ルールでオーバーライドされない限り、すべての場合に `var` ではなく明示的な型を使用します。  
+**csharp\_style\_var_elsewhere**
 
-コード例:  
+- このルールが **true** に設定されている場合は、別のコード スタイル ルールでオーバーライドされない限り、すべての場合に明示的な型ではなく `var` を使用します。
+- このルールが **false** に設定されている場合は、別のコード スタイル ルールでオーバーライドされない限り、すべての場合に `var` ではなく明示的な型を使用します。
+
+コード例:
 
 ```csharp
 // csharp_style_var_elsewhere = true
@@ -560,7 +596,7 @@ var f = this.Init();
 bool f = this.Init();
 ```
 
-editorconfig ファイルの例:  
+editorconfig ファイルの例:
 
 ```
 # CSharp code style settings:
@@ -568,166 +604,175 @@ editorconfig ファイルの例:
 csharp_style_var_for_built_in_types = true:suggestion
 csharp_style_var_when_type_is_apparent = true:suggestion
 csharp_style_var_elsewhere = true:suggestion
-``` 
+```
 
 #### <a name="expression_bodied_members">式形式のメンバー</a>
-このセクションのスタイル ルールは、ロジックが単一の式で構成される場合の[式形式のメンバー](/dotnet/csharp/programming-guide/statements-expressions-operators/expression-bodied-members)の使用に関するものです。 このルールは、メソッド、コンストラクター、演算子、プロパティ、インデクサー、およびアクセサーに適用できます。  
 
-次の表には、ルール名、ルール ID、適用可能な言語バージョン、Visual Studio の既定値、および最初のサポート対象バージョンを示します。  
+このセクションのスタイル ルールは、ロジックが単一の式で構成される場合の[式形式のメンバー](/dotnet/csharp/programming-guide/statements-expressions-operators/expression-bodied-members)の使用に関するものです。 このルールは、メソッド、コンストラクター、演算子、プロパティ、インデクサー、およびアクセサーに適用できます。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | サポートされているバージョン |
+次の表には、ルール名、ルール ID、適用可能な言語バージョン、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
+
+| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | --------- | ------- | -------------------- | ----------------------| ----------------  |
-| csharp_style_expression_bodied_methods | IDE0022 | C# 6.0+ | never:none | Visual Studio 2017 バージョン 15.3 |
-| csharp_style_expression_bodied_constructors | IDE0021 | C# 7.0+ | never:none | Visual Studio 2017 バージョン 15.3 |
-| csharp_style_expression_bodied_operators | IDE0023 と IDE0024 | C# 7.0+ | never:none | Visual Studio 2017 バージョン 15.3 |
-| csharp_style_expression_bodied_properties | IDE0025 | C# 7.0+ | when_possible:none | Visual Studio 2017 バージョン 15.3 |
-| csharp_style_expression_bodied_indexers | IDE0026 | C# 7.0+ | when_possible:none | Visual Studio 2017 バージョン 15.3 |
-| csharp_style_expression_bodied_accessors | IDE0027 | C# 7.0+ | when_possible:none | Visual Studio 2017 バージョン 15.3 |  
+| csharp_style_expression_bodied_methods | IDE0022 | C# 6.0+ | false:なし | 15.3 |
+| csharp_style_expression_bodied_constructors | IDE0021 | C# 7.0+ | false:なし | 15.3 |
+| csharp_style_expression_bodied_operators | IDE0023 と IDE0024 | C# 7.0+ | false:なし | 15.3 |
+| csharp_style_expression_bodied_properties | IDE0025 | C# 7.0+ | true:なし | 15.3 |
+| csharp_style_expression_bodied_indexers | IDE0026 | C# 7.0+ | true:なし | 15.3 |
+| csharp_style_expression_bodied_accessors | IDE0027 | C# 7.0+ | true:なし | 15.3 |
 
-**csharp\_style\_expression\_bodied_methods**  
-このルールでは **true** や **false** の値は受け入れません。代わりに、以下の表の値を受け入れます。  
+**csharp\_style\_expression\_bodied_methods**
 
-| 値 | 説明 |
+このルールでは、以下の表の値を受け入れます。
+
+| [値] | 説明 |
 | ----- |:----------- |
-| when_possible | メソッドに式形式メンバーを使用します。 |
+| true | メソッドに式形式メンバーを使用します。 |
 | when_on_single_line | 単一行になる場合は、メソッドに式形式メンバーを使用します。 |
-| never | メソッドにブロック本体を使用します。 | 
+| False | メソッドにブロック本体を使用します。 |
 
-コード例:  
+コード例:
 
 ```csharp
-// csharp_style_expression_bodied_methods = when_possible
+// csharp_style_expression_bodied_methods = true
 public int GetAge() => this.Age;
 
-// csharp_style_expression_bodied_methods = never
+// csharp_style_expression_bodied_methods = false
 public int GetAge() { return this.Age; }
-```  
+```
 
-**csharp\_style\_expression\_bodied_constructors**  
-このルールでは **true** や **false** の値は受け入れません。代わりに、以下の表の値を受け入れます。  
+**csharp\_style\_expression\_bodied_constructors**
 
-| 値 | 説明 |
+このルールでは、以下の表の値を受け入れます。
+
+| [値] | 説明 |
 | ----- |:----------- |
-| when_possible | コンストラクターに式形式メンバーを使用します。 |
+| true | コンストラクターに式形式メンバーを使用します。 |
 | when_on_single_line | 単一行になる場合は、コンストラクターに式形式メンバーを使用します。 |
-| never | コンストラクターにブロック本体を使用します。 |  
+| False | コンストラクターにブロック本体を使用します。 |
 
-コード例:  
+コード例:
 
 ```csharp
-// csharp_style_expression_bodied_constructors = when_possible
+// csharp_style_expression_bodied_constructors = true
 public Customer(int age) => Age = age;
 
-// csharp_style_expression_bodied_constructors = never
+// csharp_style_expression_bodied_constructors = false
 public Customer(int age) { Age = age; }
-```  
+```
 
-**csharp\_style\_expression\_bodied_operators**  
-このルールでは **true** や **false** の値は受け入れません。代わりに、以下の表の値を受け入れます。  
+**csharp\_style\_expression\_bodied_operators**
 
-| 値 | 説明 |
+このルールでは、以下の表の値を受け入れます。
+
+| [値] | 説明 |
 | ----- |:----------- |
-| when_possible | 演算子に式形式メンバーを使用します。 |
+| true | 演算子に式形式メンバーを使用します。 |
 | when_on_single_line | 単一行になる場合は、演算子に式形式メンバーを使用します。 |
-| never | 演算子にブロック本体を使用します。 |  
+| False | 演算子にブロック本体を使用します。 |
 
-コード例:  
+コード例:
 
 ```csharp
-// csharp_style_expression_bodied_operators = when_possible
-public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)
+// csharp_style_expression_bodied_operators = true
+public static ComplexNumber operator + (ComplexNumber c1, ComplexNumber c2)
     => new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary);
 
-// csharp_style_expression_bodied_operators = never
-public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)
+// csharp_style_expression_bodied_operators = false
+public static ComplexNumber operator + (ComplexNumber c1, ComplexNumber c2)
 { return new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary); }
-```  
+```
 
-**csharp\_style\_expression\_bodied_properties**  
-このルールでは **true** や **false** の値は受け入れません。代わりに、以下の表の値を受け入れます。  
+**csharp\_style\_expression\_bodied_properties**
 
-| 値 | 説明 |
+このルールでは、以下の表の値を受け入れます。
+
+| [値] | 説明 |
 | ----- |:----------- |
-| when_possible | プロパティに式形式メンバーを使用します。 |
+| true | プロパティに式形式メンバーを使用します。 |
 | when_on_single_line | 単一行になる場合は、プロパティに式形式メンバーを使用します。 |
-| never | プロパティにブロック本体を使用します。 |  
+| False | プロパティにブロック本体を使用します。 |
 
-コード例:  
+コード例:
 
 ```csharp
-// csharp_style_expression_bodied_properties = when_possible
+// csharp_style_expression_bodied_properties = true
 public int Age => _age;
 
-// csharp_style_expression_bodied_properties = never
+// csharp_style_expression_bodied_properties = false
 public int Age { get { return _age; }}
-```  
+```
 
-**csharp\_style\_expression\_bodied_indexers**  
-このルールでは **true** や **false** の値は受け入れません。代わりに、以下の表の値を受け入れます。  
+**csharp\_style\_expression\_bodied_indexers**
 
-| 値 | 説明 |
+このルールでは、以下の表の値を受け入れます。
+
+| [値] | 説明 |
 | ----- |:----------- |
-| when_possible | インデクサーに式形式メンバーを使用します。 |
+| true | インデクサーに式形式メンバーを使用します。 |
 | when_on_single_line | 単一行になる場合は、インデクサーに式形式メンバーを使用します。 |
-| never | インデクサーにブロック本体を使用します。 | 
+| False | インデクサーにブロック本体を使用します。 |
 
-コード例:  
+コード例:
 
 ```csharp
-// csharp_style_expression_bodied_indexers = when_possible
+// csharp_style_expression_bodied_indexers = true
 public T this[int i] => _value[i];
 
-// csharp_style_expression_bodied_indexers = never
+// csharp_style_expression_bodied_indexers = false
 public T this[int i] { get { return _values[i]; } }
-```  
+```
 
-**csharp\_style\_expression\_bodied_accessors**  
-このルールでは **true** や **false** の値は受け入れません。代わりに、以下の表の値を受け入れます。  
+**csharp\_style\_expression\_bodied_accessors**
 
-| 値 | 説明 |
+このルールでは、以下の表の値を受け入れます。
+
+| [値] | 説明 |
 | ----- |:----------- |
-| when_possible | アクセサーに式形式メンバーを使用します。 |
+| true | アクセサーに式形式メンバーを使用します。 |
 | when_on_single_line | 単一行になる場合は、アクセサーに式形式メンバーを使用します。 |
-| never | アクセサーにブロック本体を使用します。 | 
+| False | アクセサーにブロック本体を使用します。 |
 
-コード例:  
+コード例:
 
 ```csharp
-// csharp_style_expression_bodied_accessors = when_possible
+// csharp_style_expression_bodied_accessors = true
 public int Age { get => _age; set => _age = value; }
 
-// csharp_style_expression_bodied_accessors = never
+// csharp_style_expression_bodied_accessors = false
 public int Age { get { return _age; } set { _age = value; } }
-```  
+```
 
-editorconfig ファイルの例:  
+editorconfig ファイルの例:
 
 ```
 # CSharp code style settings:
 [*.cs]
-csharp_style_expression_bodied_methods = never:none
-csharp_style_expression_bodied_constructors = never:none
-csharp_style_expression_bodied_operators = never:none
-csharp_style_expression_bodied_properties = when_possible:suggestion
-csharp_style_expression_bodied_indexers = when_possible:suggestion
-csharp_style_expression_bodied_accessors = when_possible:suggestion
-```  
+csharp_style_expression_bodied_methods = false:none
+csharp_style_expression_bodied_constructors = false:none
+csharp_style_expression_bodied_operators = false:none
+csharp_style_expression_bodied_properties = true:suggestion
+csharp_style_expression_bodied_indexers = true:suggestion
+csharp_style_expression_bodied_accessors = true:suggestion
+```
 
 #### <a name="pattern_matching">パターン マッチング</a>
-このセクションのスタイル ルールは、C# での[パターン マッチング](/dotnet/csharp/pattern-matching)の使用に関するものです。  
 
-次の表には、ルール名、ルール ID、適用可能な言語バージョン、Visual Studio の既定値、および最初のサポート対象バージョンを示します。  
+このセクションのスタイル ルールは、C# での[パターン マッチング](/dotnet/csharp/pattern-matching)の使用に関するものです。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | サポートされているバージョン |
-| --------- | ------- | -------------------- | ----------------------| ----------------  |
-| csharp_style_pattern_matching_over_is_with_cast_check | IDE0020 | C# 7.0+ | true:提案 | Visual Studio 2017 |
-| csharp_style_pattern_matching_over_as_with_null_check | IDE0019 | C# 7.0+ | true:提案 | Visual Studio 2017 |
+次の表には、ルール名、ルール ID、適用可能な言語バージョン、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-**csharp\_style\_pattern\_matching\_over\_is\_with\_cast_check**  
-このルールが **true** に設定されている場合、`is` 式と型キャストの代わりにパターン マッチングを使用します。  
-このルールが **false** に設定されている場合、パターン マッチングの代わりに `is` 式と型キャストを使用します。  
+| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
+| --------- | ------- | -------------------- | ----------------------|
+| csharp_style_pattern_matching_over_is_with_cast_check | IDE0020 | C# 7.0+ | true:提案 |
+| csharp_style_pattern_matching_over_as_with_null_check | IDE0019 | C# 7.0+ | true:提案 |
 
-コード例:  
+**csharp\_style\_pattern\_matching\_over\_is\_with\_cast_check**
+
+- このルールが **true** に設定されている場合、`is` 式と型キャストの代わりにパターン マッチングを使用します。
+- このルールが **false** に設定されている場合、パターン マッチングの代わりに `is` 式と型キャストを使用します。
+
+コード例:
 
 ```csharp
 // csharp_style_pattern_matching_over_is_with_cast_check = true
@@ -737,11 +782,12 @@ if (o is int i) {...}
 if (o is int) {var i = (int)o; ... }
 ```
 
-**csharp\_style\_pattern\_matching\_over\_as\_with\_null_check**  
-このルールが **true** に設定されている場合、`as` 式と null チェックの代わりにパターン マッチングを使用し、何かが特定の型であるか判断します。  
-このルールが **false** に設定されている場合、パターン マッチングの代わりに `as` 式と null チェックを使用し、何かが特定の型であるか判断します。  
+**csharp\_style\_pattern\_matching\_over\_as\_with\_null_check**
 
-コード例:  
+- このルールが **true** に設定されている場合、`as` 式と null チェックの代わりにパターン マッチングを使用し、何かが特定の型であるか判断します。
+- このルールが **false** に設定されている場合、パターン マッチングの代わりに `as` 式と null チェックを使用し、何かが特定の型であるか判断します。
+
+コード例:
 
 ```csharp
 // csharp_style_pattern_matching_over_as_with_null_check = true
@@ -752,7 +798,7 @@ var s = o as string;
 if (s != null) {...}
 ```
 
-editorconfig ファイルの例:  
+editorconfig ファイルの例:
 
 ```
 # CSharp code style settings:
@@ -762,19 +808,21 @@ csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 ```
 
 #### <a name="inlined_variable_declarations">インライン変数宣言</a>
-このスタイル ルールは、`out` 変数がインラインで宣言されるかどうかに関するものです。 C# 7 以降では、別の変数宣言内ではなく、[メソッド呼び出しの引数リスト内で out 変数を宣言](/dotnet/csharp/language-reference/keywords/out-parameter-modifier#calling-a-method-with-an-out-argument)できます。  
 
-次の表には、ルール名、ルール ID、適用可能な言語バージョン、Visual Studio の既定値、および最初のサポート対象バージョンを示します。  
+このスタイル ルールは、`out` 変数がインラインで宣言されるかどうかに関するものです。 C# 7 以降では、別の変数宣言内ではなく、[メソッド呼び出しの引数リスト内で out 変数を宣言](/dotnet/csharp/language-reference/keywords/out-parameter-modifier#calling-a-method-with-an-out-argument)できます。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | サポートされているバージョン |
-| --------- | -------- | -------------------- | ----------------------| ----------------  |
-| csharp_style_inlined_variable_declaration | IDE0018 | C# 7.0+ | true:提案 | Visual Studio 2017 |
+次の表には、ルール名、ルール ID、適用可能な言語バージョン、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-**csharp\_style\_inlined\_variable_declaration**  
-このルールが **true** に設定されている場合、可能であれば、メソッド呼び出しの引数リスト内で `out` 変数をインラインで宣言します。  
-このルールが **false** に設定されている場合は、メソッド呼び出しの前に `out` 変数を宣言します。  
+| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
+| --------- | -------- | -------------------- | ----------------------|
+| csharp_style_inlined_variable_declaration | IDE0018 | C# 7.0+ | true:提案 |
 
-コード例:  
+**csharp\_style\_inlined\_variable_declaration**
+
+- このルールが **true** に設定されている場合、可能であれば、メソッド呼び出しの引数リスト内で `out` 変数をインラインで宣言します。
+- このルールが **false** に設定されている場合は、メソッド呼び出しの前に `out` 変数を宣言します。
+
+コード例:
 
 ```csharp
 // csharp_style_inlined_variable_declaration = true
@@ -785,7 +833,7 @@ int i;
 if (int.TryParse(value, out i) {...}
 ```
 
-editorconfig ファイルの例:  
+editorconfig ファイルの例:
 
 ```
 # CSharp code style settings:
@@ -794,25 +842,27 @@ csharp_style_inlined_variable_declaration = true:suggestion
 ```
 
 #### <a name="expression_level_csharp">式レベル基本設定</a>
-このセクションのスタイル ルールは、[既定の式](/dotnet/csharp/programming-guide/statements-expressions-operators/default-value-expressions#default-literal-and-type-inference)、分解された変数、匿名関数よりローカル関数を使用するなど、式レベル基本設定に関するものです。  
 
-次の表には、ルール名、ルール ID、適用可能な言語バージョン、Visual Studio の既定値、および最初のサポート対象バージョンを示します。  
+このセクションのスタイル ルールは、[既定の式](/dotnet/csharp/programming-guide/statements-expressions-operators/default-value-expressions#default-literal-and-type-inference)、分解された変数、匿名関数よりローカル関数を使用するなど、式レベル基本設定に関するものです。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | サポートされているバージョン |
+次の表には、ルール名、ルール ID、適用可能な言語バージョン、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
+
+| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | --------- | ------- | -------------------- | ----------------------| ----------------  |
-| csharp_prefer_simple_default_expression | IDE0034 | C# 7.1+ | true:提案 | Visual Studio 2017 バージョン 15.3 |
-| csharp_style_deconstructed_variable_declaration | IDE0042 | C# 7.0+ | true:提案 | Visual Studio 2017 バージョン 15.5 |
-| csharp_style_pattern_local_over_anonymous_function | IDE0039 | C# 7.0+ | true:提案 | Visual Studio 2017 バージョン 15.5 |
+| csharp_prefer_simple_default_expression | IDE0034 | C# 7.1+ | true:提案 | 15.3 |
+| csharp_style_deconstructed_variable_declaration | IDE0042 | C# 7.0+ | true:提案 | 15.5 |
+| csharp_style_pattern_local_over_anonymous_function | IDE0039 | C# 7.0+ | true:提案 | 15.5 |
 
-**csharp\_prefer\_simple\_default_expression**  
-このスタイル ルールは、コンパイラが式の型を推定できる場合の、[既定の値式での `default` リテラル](/dotnet/csharp/programming-guide/statements-expressions-operators/default-value-expressions#default-literal-and-type-inference)の使用に関するものです。  
+**csharp\_prefer\_simple\_default_expression**
 
-このルールが **true** に設定されている場合は、`default(T)` より `default` を優先します。  
-このルールが **false** に設定されている場合は、`default` より `default(T)` を優先します。  
+このスタイル ルールは、コンパイラが式の型を推定できる場合の、[既定の値式での `default` リテラル](/dotnet/csharp/programming-guide/statements-expressions-operators/default-value-expressions#default-literal-and-type-inference)の使用に関するものです。
 
-コード例:  
+- このルールが **true** に設定されている場合は、`default(T)` より `default` を優先します。
+- このルールが **false** に設定されている場合は、`default` より `default(T)` を優先します。
 
-```csharp 
+コード例:
+
+```csharp
 // csharp_prefer_simple_default_expression = true
 void DoWork(CancellationToken cancellationToken = default) { ... }
 
@@ -820,13 +870,14 @@ void DoWork(CancellationToken cancellationToken = default) { ... }
 void DoWork(CancellationToken cancellationToken = default(CancellationToken)) { ... }
 ```
 
-**csharp\_style\_deconstructed\_variable_declaration**  
-このルールが **true** に設定されている場合は、分解された変数宣言を優先します。  
-このルールが **false** に設定されている場合、変数宣言では分解を優先しません。  
+**csharp\_style\_deconstructed\_variable_declaration**
 
-コード例:  
+- このルールが **true** に設定されている場合は、分解された変数宣言を優先します。
+- このルールが **false** に設定されている場合、変数宣言では分解を優先しません。
 
-```csharp 
+コード例:
+
+```csharp
 // csharp_style_deconstructed_variable_declaration = true
 var (name, age) = GetPersonTuple();
 Console.WriteLine($"{name} {age}");
@@ -842,13 +893,14 @@ Console.WriteLine($"{person.name} {person.age}");
 Console.WriteLine($"{point.x} {point.y}");
 ```
 
-**csharp\_style\_pattern\_local\_over\_anonymous_function**  
-このルールが **true** に設定されている場合は、匿名関数よりローカル関数を優先します。  
-このルールが **false** に設定されている場合は、ローカル関数より匿名関数を優先します。  
+**csharp\_style\_pattern\_local\_over\_anonymous_function**
 
-コード例:  
+- このルールが **true** に設定されている場合は、匿名関数よりローカル関数を優先します。
+- このルールが **false** に設定されている場合は、ローカル関数より匿名関数を優先します。
 
-```csharp 
+コード例:
+
+```csharp
 // csharp_style_pattern_local_over_anonymous_function = true
 int fibonacci(int n)
 {
@@ -863,7 +915,7 @@ fibonacci = (int n) =>
 };
 ```
 
-editorconfig ファイルの例:  
+editorconfig ファイルの例:
 
 ```
 # CSharp code style settings:
@@ -871,23 +923,25 @@ editorconfig ファイルの例:
 csharp_prefer_simple_default_expression = true:suggestion
 csharp_style_deconstructed_variable_declaration = true:suggestion
 csharp_style_pattern_local_over_anonymous_function = true:suggestion
-``` 
+```
 
 #### <a name="null_checking">"null" チェック設定</a>
-これらのスタイル ルールは、`throw` 式または `throw` ステートメントの使用や、null チェックを実行するか、[ラムダ式](/dotnet/csharp/lambda-expressions)の呼び出し時に条件付き合体演算子 (`?.`) を使用するかなどの、`null` チェックの構文に関するものです。  
 
-次の表には、ルール名、ルール ID、適用可能な言語バージョン、Visual Studio の既定値、および最初のサポート対象バージョンを示します。  
+これらのスタイル ルールは、`throw` 式または `throw` ステートメントの使用や、null チェックを実行するか、[ラムダ式](/dotnet/csharp/lambda-expressions)の呼び出し時に条件付き合体演算子 (`?.`) を使用するかなどの、`null` チェックの構文に関するものです。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | サポートされているバージョン |
-| --------- | ------- | -------------------- | ----------------------| ----------------  |
-| csharp_style_throw_expression | IDE0016 | C# 7.0+ | true:提案 | Visual Studio 2017 |
-| csharp_style_conditional_delegate_call | IDE0041 | C# 6.0+ | true:提案 | Visual Studio 2017 |
+次の表には、ルール名、ルール ID、適用可能な言語バージョン、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-**csharp\_style\_throw_expression**  
-このルールが **true** に設定されている場合は、`throw` ステートメントの代わりに `throw` 式を使用します。  
-このルールが **false** に設定されている場合は、`throw` 式の代わりに `throw` ステートメントを使用します。  
+| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
+| --------- | ------- | -------------------- | ----------------------|
+| csharp_style_throw_expression | IDE0016 | C# 7.0+ | true:提案 |
+| csharp_style_conditional_delegate_call | IDE0041 | C# 6.0+ | true:提案 |
 
-コード例:  
+**csharp\_style\_throw_expression**
+
+- このルールが **true** に設定されている場合は、`throw` ステートメントの代わりに `throw` 式を使用します。
+- このルールが **false** に設定されている場合は、`throw` 式の代わりに `throw` ステートメントを使用します。
+
+コード例:
 
 ```csharp
 // csharp_style_throw_expression = true
@@ -898,11 +952,12 @@ if (s == null) { throw new ArgumentNullException(nameof(s)); }
 this.s = s;
 ```
 
-**csharp\_style\_conditional\_delegate_call**   
-このルールが **true** に設定されている場合は、null チェックを実行する代わりに、ラムダ式の呼び出し時に条件付き合体演算子 (`?.`) を使用します。  
-このルールが **false** に設定されている場合は、条件付き合体演算子 (`?.`) を使用する代わりに、ラムダ式を呼び出す前に null チェックを実行します。  
+**csharp\_style\_conditional\_delegate_call**
 
-コード例:  
+- このルールが **true** に設定されている場合は、null チェックを実行する代わりに、ラムダ式の呼び出し時に条件付き合体演算子 (`?.`) を使用します。
+- このルールが **false** に設定されている場合は、条件付き合体演算子 (`?.`) を使用する代わりに、ラムダ式を呼び出す前に null チェックを実行します。
+
+コード例:
 
 ```csharp
 // csharp_style_conditional_delegate_call = true
@@ -912,29 +967,31 @@ func?.Invoke(args);
 if (func != null) { func(args); }
 ```
 
-editorconfig ファイルの例:  
+editorconfig ファイルの例:
 
 ```
 # CSharp code style settings:
 [*.cs]
-csharp_style_throw_expression = true:suggestions:
+csharp_style_throw_expression = true:suggestion
 csharp_style_conditional_delegate_call = false:suggestion
 ```
 
 #### <a name="code_block">コード ブロック基本設定</a>
-このスタイル ルールは、コード ブロックを囲む中かっこ `{ }` の使用に関するものです。  
 
-次の表には、ルール名、ルール ID、適用可能な言語バージョン、Visual Studio の既定値、および最初のサポート対象バージョンを示します。  
+このスタイル ルールは、コード ブロックを囲む中かっこ `{ }` の使用に関するものです。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | サポートされているバージョン |
+次の表には、ルール名、ルール ID、適用可能な言語バージョン、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
+
+| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | --------- | ------- | -------------------- | ----------------------| ----------------  |
-| csharp_prefer_braces | IDE0011 | C# | true:なし | Visual Studio 2017 バージョン 15.3 |
+| csharp_prefer_braces | IDE0011 | C# | true:なし | 15.3 |
 
-**csharp\_prefer\_braces**   
-このルールが **true** に設定されている場合は、コードが 1 行であっても中かっこを使用します。  
-このルールが **false** に設定されている場合、中かっこは使用しません (許可されている場合)。  
+**csharp\_prefer\_braces**
 
-コード例:  
+- このルールが **true** に設定されている場合は、コードが 1 行であっても中かっこを使用します。
+- このルールが **false** に設定されている場合、中かっこは使用しません (許可されている場合)。
+
+コード例:
 
 ```csharp
 // csharp_prefer_braces = true
@@ -944,7 +1001,7 @@ if (test) { this.Display(); }
 if (test) this.Display();
 ```
 
-editorconfig ファイルの例:  
+editorconfig ファイルの例:
 
 ```
 # CSharp code style settings:
@@ -993,19 +1050,21 @@ Visual Studio で使用可能な書式規則のルールを以下にリストし
 このセクションの書式ルールは、C# および Visual Basic に適用されます。
 
 #### <a name="usings">using の整理</a>
-この書式ルールは、他の using ディレクティブに対する System.* using ディレクティブの配置に関するものです。  
 
-次の表には、ルール名、適用可能な言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。  
+この書式ルールは、他の using ディレクティブに対する System.* using ディレクティブの配置に関するものです。
 
-| ルール名 | 適用可能な言語 | Visual Studio の既定値 | サポートされているバージョン |
+次の表には、ルール名、適用可能な言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
+
+| ルール名 | 該当言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | ----------- | -------------------- | ----------------------| ----------------  |
-| dotnet_sort_system_directives_first |  C# および Visual Basic | true | Visual Studio 2017 バージョン 15.3  |
+| dotnet_sort_system_directives_first |  C# および Visual Basic | true | 15.3  |
 
-**dotnet\_sort\_system\_directives_first**  
-このルールが **true** に設定されている場合、System.* using ディレクティブをアルファベット順に並べ替え、他の using の前に配置します。  
-このルールが **false** に設定されている場合は、System.* using ディレクティブを他の using ディレクティブの前に配置しません。  
+**dotnet\_sort\_system\_directives_first**
 
-コード例:  
+- このルールが **true** に設定されている場合、System.* using ディレクティブをアルファベット順に並べ替え、他の using の前に配置します。
+- このルールが **false** に設定されている場合は、System.* using ディレクティブを他の using ディレクティブの前に配置しません。
+
+コード例:
 
 ```csharp
 // dotnet_sort_system_directives_first = true
@@ -1019,49 +1078,51 @@ using Octokit;
 using System.Threading.Tasks;
 ```
 
-editorconfig ファイルの例:  
+editorconfig ファイルの例:
 
 ```
 # .NET formatting settings:
 [*.{cs,vb}]
 dotnet_sort_system_directives_first = true
-``` 
+```
 
 ### <a name="c-formatting-settings"></a>C# 書式設定
 
 このセクションの書式ルールは、C# コードにのみ適用されます。
 
-#### <a name="newline">改行オプション</a>  
-これらの書式ルールは、コードの書式を設定する場合の改行の使用に関するものです。  
+#### <a name="newline">改行オプション</a>
 
-次の表には、"改行" のルール名、適用可能な言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。  
+これらの書式ルールは、コードの書式を設定する場合の改行の使用に関するものです。
 
-| ルール名 | 適用可能な言語 | Visual Studio の既定値 | サポートされているバージョン |
+次の表には、"改行" のルール名、適用可能な言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
+
+| ルール名 | 該当言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | ----------- | -------------------- | ----------------------| ----------------  |
-| csharp_new_line_before_open_brace |  C# | すべて | Visual Studio 2017 バージョン 15.3  |
-| csharp_new_line_before_else |  C# | true | Visual Studio 2017 バージョン 15.3  |
-| csharp_new_line_before_catch |  C# | true | Visual Studio 2017 バージョン 15.3  |
-| csharp_new_line_before_finally |  C# | true | Visual Studio 2017 バージョン 15.3  |
-| csharp_new_line_before_members_in_object_initializers |  C# | true | Visual Studio 2017 バージョン 15.3  |
-| csharp_new_line_before_members_in_anonymous_types |  C# | true | Visual Studio 2017 バージョン 15.3  |
-| csharp_new_line_between_query_expression_clauses |  C# | true | Visual Studio 2017 バージョン 15.3  |
+| csharp_new_line_before_open_brace |  C# | すべて | 15.3  |
+| csharp_new_line_before_else |  C# | true | 15.3  |
+| csharp_new_line_before_catch |  C# | true | 15.3  |
+| csharp_new_line_before_finally |  C# | true | 15.3  |
+| csharp_new_line_before_members_in_object_initializers |  C# | true | 15.3  |
+| csharp_new_line_before_members_in_anonymous_types |  C# | true | 15.3  |
+| csharp_new_line_between_query_expression_clauses |  C# | true | 15.3  |
 
-**csharp\_new\_line\_before\_open_brace**  
-このルールは、左中かっこ (`{`) を前のコードと同じ行に配置するか、新しい行に配置するかに関するものです。 このルールの場合、**true** や **false** は指定しません。 代わりに、**all**、**none**、または **methods** や **properties** などの 1 つ以上のコード要素を指定して、このルールを適用する必要があるタイミングを定義します。 使用可能な値の完全なリストを以下の表に示します。  
+**csharp\_new\_line\_before\_open_brace**
 
-| 値 | 説明 
+このルールは、左中かっこ (`{`) を前のコードと同じ行に配置するか、新しい行に配置するかに関するものです。 このルールの場合、**true** や **false** は指定しません。 代わりに、**all**、**none**、または **methods** や **properties** などの 1 つ以上のコード要素を指定して、このルールを適用する必要があるタイミングを定義します。 使用可能な値の完全なリストを以下の表に示します。
+
+| [値] | 説明
 | ------------- |:-------------|
 | accessors、anonymous_methods、anonymous_types、control_blocks、events、indexers、lambdas、local_functions、methods、object_collection、properties、types <br>(種類が複数ある場合は、"," で区切ります)。 | 中かっこは指定されたコード要素の新しい行に配置する必要があります ("Allman" スタイルともいう)。 |
 | すべて | 中かっこはすべての式の新しい行に配置する必要があります ("Allman" スタイル)。 |
 | none | 中かっこはすべての式の同じ行に配置する必要があります ("K&R")。 |
 
-コード例:  
+コード例:
 
 ```csharp
 // csharp_new_line_before_open_brace = all
-void MyMethod() 
+void MyMethod()
 {
-    if (...) 
+    if (...)
     {
         ...
     }
@@ -1075,11 +1136,12 @@ void MyMethod() {
 }
 ```
 
-**csharp\_new\_line\_before_else**  
-このルールが **true** に設定されている場合は、`else` ステートメントを新しい行に配置します。  
-このルールが **false** に設定されている場合は、`else` ステートメントを同じ行に配置します。  
+**csharp\_new\_line\_before_else**
 
-コード例:  
+- このルールが **true** に設定されている場合は、`else` ステートメントを新しい行に配置します。
+- このルールが **false** に設定されている場合は、`else` ステートメントを同じ行に配置します。
+
+コード例:
 
 ```csharp
 // csharp_new_line_before_else = true
@@ -1098,11 +1160,12 @@ if (...) {
 }
 ```
 
-**csharp\_new\_line\_before_catch**    
-このルールが **true** に設定されている場合は、`catch` ステートメントを新しい行に配置します。  
-このルールが **false** に設定されている場合は、`catch` ステートメントを同じ行に配置します。  
+**csharp\_new\_line\_before_catch**
 
-コード例:  
+- このルールが **true** に設定されている場合は、`catch` ステートメントを新しい行に配置します。
+- このルールが **false** に設定されている場合は、`catch` ステートメントを同じ行に配置します。
+
+コード例:
 
 ```csharp
 // csharp_new_line_before_catch = true
@@ -1121,11 +1184,12 @@ try {
 }
 ```
 
-**csharp\_new\_line\_before_finally**      
-このルールが **true** に設定されている場合は、`finally` ステートメントを右中かっこの後の新しい行に配置する必要があります。  
-このルールが **false** に設定されている場合は、`finally` ステートメントを右中かっこと同じ行に配置する必要があります。  
+**csharp\_new\_line\_before_finally**
 
-コード例:  
+- このルールが **true** に設定されている場合は、`finally` ステートメントを右中かっこの後の新しい行に配置する必要があります。
+- このルールが **false** に設定されている場合は、`finally` ステートメントを右中かっこと同じ行に配置する必要があります。
+
+コード例:
 
 ```csharp
 // csharp_new_line_before_finally = true
@@ -1149,11 +1213,12 @@ try {
 }
 ```
 
-**csharp\_new\_line\_before\_members\_in\_object_initializers**       
-このルールが **true** に設定されている場合は、オブジェクト初期化子のメンバーを別の行に配置する必要があります。  
-このルールが **false** に設定されている場合は、オブジェクト初期化子のメンバーを同じ行に配置する必要があります。  
+**csharp\_new\_line\_before\_members\_in\_object_initializers**
 
-コード例:  
+- このルールが **true** に設定されている場合は、オブジェクト初期化子のメンバーを別の行に配置する必要があります。
+- このルールが **false** に設定されている場合は、オブジェクト初期化子のメンバーを同じ行に配置する必要があります。
+
+コード例:
 
 ```csharp
 // csharp_new_line_before_members_in_object_initializers = true
@@ -1170,11 +1235,12 @@ var z = new B()
 }
 ```
 
-**csharp\_new\_line\_before\_members\_in\_anonymous_types**       
-このルールが **true** に設定されている場合は、匿名型のメンバーを別の行に配置する必要があります。  
-このルールが **false** に設定されている場合は、匿名型のメンバーを同じ行に配置する必要があります。  
+**csharp\_new\_line\_before\_members\_in\_anonymous_types**
 
-コード例:  
+- このルールが **true** に設定されている場合は、匿名型のメンバーを別の行に配置する必要があります。
+- このルールが **false** に設定されている場合は、匿名型のメンバーを同じ行に配置する必要があります。
+
+コード例:
 
 ```csharp
 // csharp_new_line_before_members_in_anonymous_types = true
@@ -1191,11 +1257,12 @@ var z = new
 }
 ```
 
-**csharp_new_line_between_query_expression_clauses**       
-このルールが **true** に設定されている場合は、クエリ式の句の要素を別の行に配置する必要があります。  
-このルールが **false** に設定されている場合は、クエリ式の句の要素を同じ行に配置する必要があります。  
+**csharp_new_line_between_query_expression_clauses**
 
-コード例:  
+- このルールが **true** に設定されている場合は、クエリ式の句の要素を別の行に配置する必要があります。
+- このルールが **false** に設定されている場合は、クエリ式の句の要素を同じ行に配置する必要があります。
+
+コード例:
 
 ```csharp
 // csharp_new_line_between_query_expression_clauses = true
@@ -1208,7 +1275,7 @@ var q = from a in e from b in e
         select a * b;
 ```
 
-editorconfig ファイルの例:  
+editorconfig ファイルの例:
 
 ```
 # CSharp formatting settings:
@@ -1220,24 +1287,26 @@ csharp_new_line_before_finally = true
 csharp_new_line_before_members_in_object_initializers = true
 csharp_new_line_before_members_in_anonymous_types = true
 csharp_new_line_between_query_expression_clauses = true
-``` 
+```
 
-#### <a name="indent">インデント オプション</a>  
-これらの書式ルールは、コードの書式を設定する場合のインデントの使用に関するものです。  
+#### <a name="indent">インデント オプション</a>
 
-次の表には、ルール名、適用可能な言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。  
+これらの書式ルールは、コードの書式を設定する場合のインデントの使用に関するものです。
 
-| ルール名 | 適用可能な言語 | Visual Studio の既定値 | サポートされているバージョン |
+次の表には、ルール名、適用可能な言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
+
+| ルール名 | 該当言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | ----------- | -------------------- | ----------------------| ----------------  |
-| csharp_indent_case_contents |  C# | true | Visual Studio 2017 バージョン 15.3  |
-| csharp_indent_switch_labels |  C# | true | Visual Studio 2017 バージョン 15.3  |
-| csharp_indent_labels |  C# | no_change | Visual Studio 2017 バージョン 15.3  |
+| csharp_indent_case_contents |  C# | true | 15.3  |
+| csharp_indent_switch_labels |  C# | true | 15.3  |
+| csharp_indent_labels |  C# | no_change | 15.3  |
 
-**csharp\_indent\_case_contents**  
-このルールが **true** に設定されている場合は、`switch` case の内容をインデントします。  
-このルールが **false** に設定されている場合は、`switch` case の内容をインデントしません。  
+**csharp\_indent\_case_contents**
 
-コード例:  
+- このルールが **true** に設定されている場合は、`switch` case の内容をインデントします。
+- このルールが **false** に設定されている場合は、`switch` case の内容をインデントしません。
+
+コード例:
 
 ```csharp
 // csharp_indent_case_contents = true
@@ -1267,11 +1336,12 @@ switch(c) {
 }
 ```
 
-**csharp\_indent\_switch_labels**  
-このルールが **true** に設定されている場合は、`switch` ラベルをインデントします。  
-このルールが **false** に設定されている場合は、`switch` ラベルをインデントしません。  
+**csharp\_indent\_switch_labels**
 
-コード例:  
+- このルールが **true** に設定されている場合は、`switch` ラベルをインデントします。
+- このルールが **false** に設定されている場合は、`switch` ラベルをインデントしません。
+
+コード例:
 
 ```csharp
 // csharp_indent_switch_labels = true
@@ -1301,22 +1371,23 @@ default:
 }
 ```
 
-**csharp\_indent_labels**  
-このルールでは **true** や **false** の値は受け入れません。代わりに、以下の表の値を受け入れます。  
+**csharp\_indent_labels**
 
-| 値 | 説明 |
+このルールでは **true** や **false** の値は受け入れません。代わりに、以下の表の値を受け入れます。
+
+| [値] | 説明 |
 | ----- |:----------- |
 | flush_left | ラベルは左端の列に配置されます |
 | one_less_than_current | ラベルは、現在のコンテキストのインデントを 1 つ減らした位置に配置されます |
 | no_change | ラベルは、現在のコンテキストと同じインデントで配置されます |
 
-コード例:  
+コード例:
 
 ```csharp
 // csharp_indent_labels= flush_left
 class C
 {
-    private string MyMethod(...) 
+    private string MyMethod(...)
     {
         if (...) {
             goto error;
@@ -1329,7 +1400,7 @@ error:
 // csharp_indent_labels = one_less_than_current
 class C
 {
-    private string MyMethod(...) 
+    private string MyMethod(...)
     {
         if (...) {
             goto error;
@@ -1342,7 +1413,7 @@ class C
 // csharp_indent_labels= no_change
 class C
 {
-    private string MyMethod(...) 
+    private string MyMethod(...)
     {
         if (...) {
             goto error;
@@ -1353,7 +1424,7 @@ class C
 }
 ```
 
-editorconfig ファイルの例:  
+editorconfig ファイルの例:
 
 ```
 # CSharp formatting settings:
@@ -1361,24 +1432,26 @@ editorconfig ファイルの例:
 csharp_indent_case_contents = true
 csharp_indent_switch_labels = true
 csharp_indent_labels = flush_left
-``` 
+```
 
-#### <a name="spacing">スペース オプション</a>  
-これらの書式ルールは、コードの書式を設定する場合の空白文字の使用に関するものです。  
+#### <a name="spacing">スペース オプション</a>
 
-次の表には、ルール名、適用可能な言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。  
+これらの書式ルールは、コードの書式を設定する場合の空白文字の使用に関するものです。
 
-| ルール名 | 適用可能な言語 | Visual Studio の既定値 | サポートされているバージョン |
+次の表には、ルール名、適用可能な言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
+
+| ルール名 | 該当言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | ----------- | -------------------- | ----------------------| ----------------  |
-| csharp_space_after_cast |  C# | False | Visual Studio 2017 バージョン 15.3  |
-| csharp_space_after_keywords_in_control_flow_statements |  C# | true | Visual Studio 2017 バージョン 15.3  |
-| csharp_space_between_method_declaration_parameter_list_parentheses |  C# | False | Visual Studio 2017 バージョン 15.3  |
-| csharp_space_between_method_call_parameter_list_parentheses |  C# | False | Visual Studio 2017 バージョン 15.3  |
-| csharp_space_between_parentheses |  C# | False | Visual Studio 2017 バージョン 15.3  |
+| csharp_space_after_cast |  C# | False | 15.3  |
+| csharp_space_after_keywords_in_control_flow_statements |  C# | true | 15.3  |
+| csharp_space_between_method_declaration_parameter_list_parentheses |  C# | False | 15.3  |
+| csharp_space_between_method_call_parameter_list_parentheses |  C# | False | 15.3  |
+| csharp_space_between_parentheses |  C# | False | 15.3  |
 
-**csharp\_space\_after_cast**  
-このルールが **true** に設定されている場合は、キャストと値の間にスペースが必要です。  
-このルールが **false** に設定されている場合は、キャストと値の間にスペースは必要_ありません_。  
+**csharp\_space\_after_cast**
+
+- このルールが **true** に設定されている場合は、キャストと値の間にスペースが必要です。
+- このルールが **false** に設定されている場合は、キャストと値の間にスペースは必要_ありません_。
 
 コード例:
 
@@ -1390,9 +1463,10 @@ int y = (int) x;
 int y = (int)x;
 ```
 
-**csharp_space_after_keywords_in_control_flow_statements**  
-このルールが **true** に設定されている場合は、`for` ループなど、制御フロー ステートメントのキーワードの後にスペースが必要です。  
-このルールが **false** に設定されている場合は、`for` ループなど、制御フロー ステートメントのキーワードの後にスペースは必要_ありません_。  
+**csharp_space_after_keywords_in_control_flow_statements**
+
+- このルールが **true** に設定されている場合は、`for` ループなど、制御フロー ステートメントのキーワードの後にスペースが必要です。
+- このルールが **false** に設定されている場合は、`for` ループなど、制御フロー ステートメントのキーワードの後にスペースは必要_ありません_。
 
 コード例:
 
@@ -1404,9 +1478,10 @@ for (int i;i<x;i++) { ... }
 for(int i;i<x;i++) { ... }
 ```
 
-**csharp_space_between_method_declaration_parameter_list_parentheses**  
-このルールが **true** に設定されている場合は、メソッド宣言パラメーター リストの始めかっこの後と終わりかっこの前に空白文字を配置します。  
-このルールが **false** に設定されている場合は、メソッド宣言パラメーター リストの始めかっこの後と終わりかっこの前に空白文字を配置しません。  
+**csharp_space_between_method_declaration_parameter_list_parentheses**
+
+- このルールが **true** に設定されている場合は、メソッド宣言パラメーター リストの始めかっこの後と終わりかっこの前に空白文字を配置します。
+- このルールが **false** に設定されている場合は、メソッド宣言パラメーター リストの始めかっこの後と終わりかっこの前に空白文字を配置しません。
 
 コード例:
 
@@ -1418,9 +1493,10 @@ void Bark( int x ) { ... }
 void Bark(int x) { ... }
 ```
 
-**csharp_space_between_method_call_parameter_list_parentheses**  
-このルールが **true** に設定されている場合は、メソッド呼び出しの始めかっこの後と終わりかっこの前に空白文字を配置します。  
-このルールが **false** に設定されている場合は、メソッド呼び出しの始めかっこの後と終わりかっこの前に空白文字を配置しません。  
+**csharp_space_between_method_call_parameter_list_parentheses**
+
+- このルールが **true** に設定されている場合は、メソッド呼び出しの始めかっこの後と終わりかっこの前に空白文字を配置します。
+- このルールが **false** に設定されている場合は、メソッド呼び出しの始めかっこの後と終わりかっこの前に空白文字を配置しません。
 
 コード例:
 
@@ -1432,10 +1508,11 @@ MyMethod( argument );
 MyMethod(argument);
 ```
 
-**csharp_space_between_parentheses**  
-このルールでは **true** や **false** の値は受け入れません。代わりに、以下の表の値を受け入れます。  
+**csharp_space_between_parentheses**
 
-| 値 | 説明 |
+このルールでは **true** や **false** の値は受け入れません。代わりに、以下の表の値を受け入れます。
+
+| [値] | 説明 |
 | ----- |:------------|
 | control_flow_statements | 制御フロー ステートメントのかっこの間にスペースを配置します。 |
 | 式 | 式のかっこの間にスペースを配置します。 |
@@ -1454,7 +1531,7 @@ var z = ( x * y ) - ( ( y - x ) * 3);
 int y = ( int )x;
 ```
 
-editorconfig ファイルの例:  
+editorconfig ファイルの例:
 
 ```
 # CSharp formatting settings:
@@ -1464,38 +1541,41 @@ csharp_space_after_keywords_in_control_flow_statements = true
 csharp_space_between_method_declaration_parameter_list_parentheses = true
 csharp_space_between_method_call_parameter_list_parentheses = true
 csharp_space_between_parentheses = control_flow_statements, type_casts
-``` 
+```
 
 #### <a name="wrapping">折り返しオプション</a>
-これらの書式ルールは、ステートメントとコード ブロックでの 1 行と別の行の使用に関するものです。  
 
-次の表には、ルール名、適用可能な言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。  
+これらの書式ルールは、ステートメントとコード ブロックでの 1 行と別の行の使用に関するものです。
 
-| ルール名 | 適用可能な言語 | Visual Studio の既定値 | サポートされているバージョン |
+次の表には、ルール名、適用可能な言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
+
+| ルール名 | 該当言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | ----------- | -------------------- | ----------------------| ----------------  |
-| csharp_preserve_single_line_statements |  C# | true | Visual Studio 2017 バージョン 15.3  |
-| csharp_preserve_single_line_blocks |  C# | true | Visual Studio 2017 バージョン 15.3  |
+| csharp_preserve_single_line_statements |  C# | true | 15.3  |
+| csharp_preserve_single_line_blocks |  C# | true | 15.3  |
 
-**csharp_preserve_single_line_statements**   
-このルールが **true** に設定されている場合は、1 行に複数のステートメントとメンバー宣言を表示します。  
-このルールが **false** に設定されている場合は、別の行にステートメントとメンバー宣言を表示します。  
+**csharp_preserve_single_line_statements**
 
-コード例:  
+- このルールが **true** に設定されている場合は、1 行に複数のステートメントとメンバー宣言を表示します。
+- このルールが **false** に設定されている場合は、別の行にステートメントとメンバー宣言を表示します。
+
+コード例:
 
 ```csharp
 //csharp_preserve_single_line_statements = true
 int i = 0; string name = "John";
 
 //csharp_preserve_single_line_statements = false
-int i = 0; 
+int i = 0;
 string name = "John";
 ```
 
-**csharp_preserve_single_line_blocks**  
-このルールが **true** に設定されている場合は、1 行にコード ブロックを表示します。  
-このルールが **false** に設定されている場合は、別の行にコード ブロックを表示します。  
+**csharp_preserve_single_line_blocks**
 
-コード例:  
+- このルールが **true** に設定されている場合は、1 行にコード ブロックを表示します。
+- このルールが **false** に設定されている場合は、別の行にコード ブロックを表示します。
+
+コード例:
 
 ```csharp
 //csharp_preserve_single_line_blocks = true
@@ -1508,14 +1588,14 @@ public int MyProperty
 }
 ```
 
-editorconfig ファイルの例:  
+editorconfig ファイルの例:
 
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_preserve_single_line_statements = true
 csharp_preserve_single_line_blocks = true
-``` 
+```
 
 ## <a name="see-also"></a>関連項目
 

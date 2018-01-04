@@ -15,11 +15,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 076b48d5526c0cefffb5f18daed9aaaebb031aad
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: ddc53a84ca6cc09c5682bc874503849eee98eae8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="options-page-environment-node-properties"></a>[環境] ノード プロパティ ([オプション] ページ)
 このドキュメントでは、**[オプション]** ダイアログ ボックスの **[環境]** カテゴリ (`DTE.Properties("Environment", <Property Page>)`) に関連付けられているページ (またはプロパティ コレクション) について説明します。 各サブセクションの見出しは、Properties コレクションにアクセスするための呼び出しです。その下の表では、コレクションのプロパティを示します。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 11/22/2017
 ## <a name="general"></a>全般  
  `DTE.Properties("Environment", "General")`  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |ShowStatusBar|Get/Set (Boolean)|ステータス バーを表示するかどうかを指定します。|  
 |WindowMenuContainsNItems|Get/Set (Short)|Windows メニューの 1 番下にドキュメント ウィンドウを含める方法を指定します。|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/22/2017
 ## <a name="add-inmacros-security"></a>アドイン/マクロ セキュリティ  
  `DTE.Properties("Environment", "AddinMacrosSecurity")`  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |MacrosEnabled|Get/Set (Boolean)|マクロの実行を許可します。|  
 |AddinsEnabled|Get/Set (Boolean)|アドインの読み込みを許可します。|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/22/2017
 ## <a name="documents"></a>ドキュメント  
  `DTE.Properties("Environment", "Documents")`  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |ReuseSavedActiveDocWindow|Get/Set (Boolean)|現在のドキュメントが保存されている場合、新しいファイルを開くときに現在のドキュメント ウィンドウを再利用するかどうかを指定します。 `false` の場合は、ドキュメントを開くたびに、新しいドキュメント ウィンドウが開きます。|  
 |DetectFileChangesOutsideIDE|Get/Set (Boolean)|ファイルがディスク上で変更されていることをオペレーティング システムから通知された場合に、IDE で開かれているファイルを自動的に再読み込みするかどうかを指定します。|  
@@ -63,12 +64,12 @@ ms.lasthandoff: 11/22/2017
 |SaveDocsAsUnicodeWhenDataLoss|Get/Set (Boolean)|コードページでデータが保存できない場合、Unicode でドキュメントを保存します。|  
 |DontShowGlobalUndoChangeLossDialog|Get/Set (Boolean)|全体的に元に戻す操作で他の編集したファイルが変更される場合、警告を表示します。|  
 |AllowEditingReadOnlyFiles|Get/Set (Boolean)|読み取り専用ファイルの編集を有効にしますが、その保存時に警告を表示します。|  
-|DocumentDockPreference|Get/Set (Enum)|<xref:EnvDTE100.vsDocumentDockPreferenceOptions>. 開かれたドキュメントを挿入するタブ内の位置です。|  
+|DocumentDockPreference|Get/Set (Enum)|<xref:EnvDTE100.vsDocumentDockPreferenceOptions>。 開かれたドキュメントを挿入するタブ内の位置です。|  
   
 ## <a name="extension-manager"></a>拡張機能マネージャー  
  `DTE.Properties("Environment", "ExtensionManager")`  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |EnableAdminExtensions|Get/Set (Boolean)|Visual Studio が管理者の資格情報で実行されている場合、ユーザー単位の拡張機能を読み込みます。 この値を変更したら、Visual Studio を再起動する必要があります。|  
 |EnableOnline|Get/Set (Boolean)|Visual Studio Marketplace の拡張機能にアクセスできるようにします。|  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/22/2017
 ## <a name="find-and-replace"></a>検索と置換  
  `DTE.Properties("Environment", "FindAndReplace")`  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |ShowWarningMessages|Get/Set (Boolean)|警告メッセージを表示します。|  
 |InitializeFromEditor|Get/Set (Boolean)|**[検索する文字列]** ボックスのテキストをエディターから自動的に作成します。|  
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/22/2017
 ## <a name="import-and-export-settings"></a>設定のインポートとエクスポート  
  `DTE.Properties("Environment", "Import and Export Settings")`  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |TrackTeamSettings|Get/Set (Boolean)|TeamSettingsFile で指定されたファイルの設定を使用します。|  
 |TeamSettingsFile|Get/Set (String)|チーム設定を含むファイルの名前です。|  
@@ -96,21 +97,21 @@ ms.lasthandoff: 11/22/2017
 ## <a name="international-settings"></a>国際対応の設定  
  `DTE.Properties("Environment", "International")`  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |言語|Get/Set (String)|Visual Studio の現在の言語の LCID 値です。|  
   
 ## <a name="keyboard"></a>キーボード  
  `DTE.Properties("Environment", "Keyboard")`  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |Scheme|Get/Set (String)|組み込みスキームを含む文字列、または読み込まれた .vsk ファイルの完全パスを含む文字列を返します。.vsk ファイルが読み込まれていない場合は "(既定)" を返します。|  
   
 ## <a name="projects-and-solution"></a>プロジェクトおよびソリューション  
  `DTE.Properties("Environment", "ProjectsAndSolution")`  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |OnRunOrPreview|Get/Set (String)|ビルドしたプロジェクトをプレビューまたは実行する前に IDE ですべての内容を保存するかどうかを指定します。|  
 |ProjectsLocation|Get/Set (String)|**[プロジェクトの追加]** ダイアログ ボックスで新しいプロジェクトを保存する既定のディレクトリを指定します。|  
@@ -133,7 +134,7 @@ ms.lasthandoff: 11/22/2017
 ## <a name="startup"></a>スタートアップ  
  `DTE.Properties("Environment", "Startup")`  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |OnStartUp|Get/Set (Enum)|起動時に実行するアクションです。<xref:EnvDTE.vsStartUp> から取得され、0 ～ 5 の値で示されます。<br /><br /> -   0: ホーム ページを開く<br />-   1: 最後に読み込んだソリューション<br />-   2: **[プロジェクトを開く]** ダイアログ ボックスの表示<br />-   3: **[新しいプロジェクト]** ダイアログ ボックスの表示<br />-   4: 空の環境の表示<br />-   5: スタート ページの表示|  
 |StartPageRSSUrl|Get/Set (String)|起動時に使用する RSS フィードの URL です。|  
@@ -143,7 +144,7 @@ ms.lasthandoff: 11/22/2017
 ## <a name="tasklist"></a>TaskList  
  `DTE.Properties("Environment", "TaskList")`  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |ConfirmTaskDeletion|Get/Set (Boolean)|**[タスク一覧]** からタスクを削除する際に確認のダイアログ ボックスを表示するかどうかを指定します。|  
 |WarnOnAddingHiddenItem|Get/Set (Boolean)|表示されないユーザー タスクを追加したときに警告されるようにするかどうかを指定します。|  
@@ -153,14 +154,14 @@ ms.lasthandoff: 11/22/2017
 ## <a name="web-browser"></a>Web ブラウザー  
  `DTE.Properties("Environment", "WebBrowser")`  
   
-|プロパティ項目名|値|説明|  
+|プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
 |HomePage|Get/Set (String)|ホーム ページの URL を表します。|  
 |SearchPage|Get/Set (String)|検索ページの URL を表します。|  
 |ViewSourceIn|Get/Set (Enum)|<xref:EnvDTE.vsBrowserViewSource> (Source、Design、External) です。|  
 |ViewSourceExternalProgram|Get/Set (String)|外部ソース ビューアーのパスです。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [オプション設定の制御](http://msdn.microsoft.com/Library/a09ed242-7494-4cde-bbd1-7a8ec617965d)   
  [オプション ページにあるプロパティ項目名の確認](http://msdn.microsoft.com/Library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)   
  [[フォントおよび色] ノード プロパティ ([オプション] ページ)](../../ide/reference/options-page-fonts-and-colors-node-properties.md)   

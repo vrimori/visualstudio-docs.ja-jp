@@ -15,11 +15,11 @@ ms.assetid: 7307e180-ba28-4774-8a43-cbb980085a71
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: dc865fe81a51ff3ae2ca497b8982292ffda18372
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.openlocfilehash: a08f5a15cd83af05c91eb35ad2ad4a2c4c229458
+ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
 #### <a name="updated-for-the-155-releasehttpswwwvisualstudiocomnewsreleasenotesvs2017-relnotes"></a>[15.5 リリース](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)の更新
@@ -126,7 +126,7 @@ Visual Studio Enterprise 2017 では、ライブ単体テストを実行する�
 *   if を switch に変換する
 *   未使用の変数を削除する
 
-詳細については、「[Visual Studio でのリファクタリング、コード生成、クイック アクション](refactoring-code-generation-quick-actions.md)」ページをご覧ください。  
+詳細については、[クイック アクション](../ide/quick-actions.md#common-quick-actions)に関するページを参照してください。
 
 #### <a name="interact-with-git"></a>Git との連携
 Visual Studio でプロジェクトを操作する際に、コードを迅速にセットアップしてコミットし、Git サービスにコードを公開できます。 また、IDE の右下隅のボタンからメニュー クリックを使用して、Git リポジトリを管理することもできます。
@@ -298,7 +298,7 @@ Visual Studio を向上させることができるご提案がある場合、ま
 ### <a name="track-your-issue-in-connect"></a>問題点を Connect で追跡する  
  Visual Studio に関するフィードバックの状況を追跡するには、 [Connect](http://connect.microsoft.com/) でバグ報告をしてください。 報告したら、Connect に戻って、その状態を追跡することができます。  
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 * [Visual Studio 2017 リリース ノート](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)
 * [Visual C++ の新機能](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
 * [C# の新機能](https://docs.microsoft.com/dotnet/csharp/csharp-7)  
