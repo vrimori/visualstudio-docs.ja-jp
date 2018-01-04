@@ -12,11 +12,12 @@ helpviewer_keywords: external tools [Visual Studio]
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 65cd18ea74ced278d53841cb8204f7cc4d163dc3
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: 3e796b1e5a1773183c04409781cf6e2026bfe96e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="manage-external-tools"></a>外部ツールの管理
 
@@ -44,13 +45,13 @@ Visual Studio から **[ツール]** メニューを使用して外部ツール�
 
    * コマンド: `explorer.exe`
 
-   * [引数]: `/root, "$(ItemDir)"`
+   * 引数: `/root, "$(ItemDir)"`
 
    ![[外部ツール] ダイアログ ボックス](media/external-tools-dialog.png)
 
 外部ツールの定義時に使用できる引数の一覧を次に示します。
 
-|名前|引数|説明|  
+|name|引数|説明|  
 |----------|--------------|-----------------|  
 |項目のパス|$(ItemPath)|現在のファイルの完全なファイル名 (ドライブ + パス + ファイル名)。|  
 |項目のディレクトリ|$(ItemDir)|現在のファイルのディレクトリ (ドライブ + パス)。|  
