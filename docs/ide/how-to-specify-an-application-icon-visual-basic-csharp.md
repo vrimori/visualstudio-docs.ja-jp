@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 17cce04dd94829225823de676e286b7d0158abec
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: ce92aef6f676cbdd35142f058312af90581900c5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-an-application-icon-visual-basic-c"></a>方法 : アプリケーション アイコンを指定する (Visual Basic、C#)
 プロジェクトの `Icon` プロパティは、ファイル エクスプローラーと Windows タスク バーに表示されるコンパイルされたアプリケーションのアイコン ファイル (.ico) を指定します。  
@@ -40,9 +41,9 @@ ms.lasthandoff: 10/31/2017
   
 4.  **(Visual Basic)** **[アイコン]** 一覧で、アイコン (.ico) ファイルを選びます。  
   
-     **(C#)** **[アイコン]** 一覧の近くにある **\<[参照]** ボタンを選び、使うアイコン ファイルの場所を参照します。  
+     **(C#)** **[アイコン]** 一覧の近くにある **[参照]** ボタンを選び、使うアイコン ファイルの場所を参照します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)   
  [[アプリケーション] ページ (プロジェクト デザイナー) (C#)](../ide/reference/application-page-project-designer-csharp.md)   
  [アプリケーション プロパティの管理](../ide/application-properties.md)  

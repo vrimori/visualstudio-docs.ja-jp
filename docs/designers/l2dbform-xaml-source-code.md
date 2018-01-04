@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c3ccc6fcfa8471d767356f1e30d1e5f8b0ed15d0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b815904a7ac2b8a050cd4b907698c43a91d929dc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="l2dbformxaml-source-code"></a>L2DBForm.xaml ソース コード
 このトピックでは、「 [WPF Data Binding Using LINQ to XML Example](../designers/wpf-data-binding-using-linq-to-xml-example.md)」の XAML ソース ファイル L2DBForm.xaml の内容と説明を示します。  
@@ -241,6 +242,6 @@ Text="{Binding Path=Attribute[id].Value}"...Text="{Binding Path=Value}"
 ### <a name="comments"></a>コメント  
  WPF UI 要素に関連付けられているイベント ハンドラーの C# ソース コードについては、「[L2DBForm.xaml.cs ソース コード](../designers/l2dbform-xaml-cs-source-code.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: LinqToXmlDataBinding の例](../designers/walkthrough-linqtoxmldatabinding-example.md)   
  [L2DBForm.xaml.cs ソース コード](../designers/l2dbform-xaml-cs-source-code.md)
