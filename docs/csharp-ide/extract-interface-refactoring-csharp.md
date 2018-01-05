@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4ed81f6f0fbcc2e72fd57d7706b051dcdf7bea75
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: e3e606a86f5989ca928e0b093b564f997f92a559
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extract-interface-refactoring-c"></a>インターフェイスの抽出リファクタリング (C#)
 インターフェイスの抽出は、既存のクラス、構造体、またはインターフェイスから提供されるメンバーを持つ新しいインターフェイスを作成する簡単な方法を提供するリファクタリング操作です。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  をクリックして**すべて選択**です。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
      新しいファイル、IProtoA.cs、および次のコードを参照してください。  
   
@@ -73,5 +74,5 @@ ms.lasthandoff: 10/31/2017
   
  クラスまたは構造体でインターフェイスの抽出を呼び出すと、新しいインターフェイス名を含める基底クラスとインターフェイスの一覧が変更されます。 インターフェイスのインターフェイスの抽出を呼び出すと、基底クラスとインターフェイスのリストは変更されません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リファクタリング (C#)](refactoring-csharp.md)

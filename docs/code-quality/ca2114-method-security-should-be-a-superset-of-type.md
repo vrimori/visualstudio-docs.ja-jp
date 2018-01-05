@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ac633134b5b8037eb9e45131128b0ee0cf2887ab
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: a3ff1a6be01b51f45b0ca5b5417ead2195d023bf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca2114-method-security-should-be-a-superset-of-type"></a>CA2114: メソッドのセキュリティは型のスーパーセットにします
 |||  
@@ -61,7 +62,7 @@ ms.lasthandoff: 12/12/2017
  **[すべてのアクセス許可]個人情報: 6/16/1964 12時 00分: 00 AM**  
 **[書き込みアクセス許可がありません (の型によって要求)]個人情報: 6/16/1964 12時 00分: 00 AM**  
 **[読み取りアクセス許可がありません (メソッドで必要)]個人情報にアクセスできませんでした。 要求が失敗しました。**   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)   
  [リンク確認要求](/dotnet/framework/misc/link-demands)   
  [データとモデリング](/dotnet/framework/data/index)

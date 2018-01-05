@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8a7bba6b70654d6e41442034c23e787325f15783
-ms.sourcegitcommit: 2c7f48ad6073a81fa927568793633f26cc1f0b15
+ms.workload: azure
+ms.openlocfilehash: 5f1102a0d882056ed55e0355d182c5de2b6dc924
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-azure-services-in-visual-studio"></a>Visual Studio での Azure サービスをデバッグします。
 
@@ -30,5 +31,5 @@ Visual Studio を使用して、さまざまなシナリオで Azure サービ�
 
 - Azure Service Fabric の ASP.NET リモート デバッグを参照してください[リモート Service Fabric アプリケーションのデバッグ。](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio でのデバッグ](../debugger/index.md)

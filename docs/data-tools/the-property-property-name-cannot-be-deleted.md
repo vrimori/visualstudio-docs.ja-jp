@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: b3a896e64e048a5104bca84b726c730d4d9d524a
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 5bba0739a35dbc90c0c9141619c54b93f653d482
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-property-ltproperty-namegt-cannot-be-deleted"></a>プロパティ&lt;プロパティ名&gt;は削除できません
 プロパティ\<プロパティ名 > として設定されているために、削除できません、**識別子プロパティ**間の継承に対する\<クラス名 > と\<クラス名 >  
@@ -34,5 +35,5 @@ ms.lasthandoff: 11/09/2017
 3.  プロパティの削除を再試行します。  
   
 ## <a name="see-also"></a>関連項目
-[O/R デザイナー メッセージ](../data-tools/o-r-designer-messages.md)  
+[O/R デザイナーのメッセージ](../data-tools/o-r-designer-messages.md)  
 [Visual Studio での LINQ to SQL ツールします。](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

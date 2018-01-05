@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: dff1251824a07e8448c6f0dbcf421776d90977a2
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 5c86eff5c25dbabb368d7d90ed46be718b8db8e7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-association-between-linq-to-sql-classes-or-designer"></a>方法: LINQ to SQL クラス (O/R デザイナー) 間の関連付けを作成します。
 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] のエンティティ クラス間の関連付けは、データベース内のテーブル間の関連付けに似ています。 使用してエンティティ クラス間の関連付けを作成することができます、 **[関連付けエディター** ] ダイアログ ボックス。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/09/2017
 |**基数**|関連付けが 1 対多と 1 対 1 のどちらであるかを制御します。|  
 |**子プロパティ**|コレクションのプロパティを親に作成するか、子レコードへの参照を関連付けの外部キー側に作成するかを指定します。 たとえば、Customer と Order 間の関連付けの場合、**子プロパティ**に設定されている**True**、Orders という名前のプロパティが親クラスを作成します。|  
 |**親プロパティ**|関連付けられている親クラスを参照する子クラスのプロパティです。 たとえば、Customer と Order の間の関連付けでは、注文に関連付けられている顧客を参照する Customer という名前のプロパティが Order クラスに作成されます。|  
-|**関与のプロパティ**|[関連付けのプロパティが表示され、**省略記号**を再び開くボタン ([...])、 **[関連付けエディター** ] ダイアログ ボックス。|  
+|**関与のプロパティ**|関連付けのプロパティが表示され、**省略記号**を再び開くボタン (...)、 **関連付けエディター**  ダイアログ ボックス。|  
 |**一意**|外部ターゲット列に一意性の制約があるかどうかを示します。|  
   
 ## <a name="to-create-an-association-between-entity-classes"></a>エンティティ クラス間に関連付けを作成するには
@@ -54,4 +55,4 @@ ms.lasthandoff: 11/09/2017
 [チュートリアル: LINQ to SQL クラスを作成します。](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   
 [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)   
 [DataContext メソッド (O/R デザイナー)](../data-tools/datacontext-methods-o-r-designer.md)   
-[方法: 主キーを表す](/dotnet/framework/data/adonet/sql/linq/how-to-represent-primary-keys)
+[方法 : 主キーを表す](/dotnet/framework/data/adonet/sql/linq/how-to-represent-primary-keys)

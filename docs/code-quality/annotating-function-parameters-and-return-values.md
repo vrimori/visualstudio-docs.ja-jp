@@ -129,11 +129,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e256b519600a983886ac6d21317ef1757d7497f1
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: ac25f8bbda4431850f613f2b41b1d9ed4908c118
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>関数パラメーターおよび戻り値の注釈設定
 単純な関数のパラメーターの注釈の典型的な使用方法を説明 — スカラー、および構造体とクラスへのポインター- とほとんどの種類のバッファー。  注釈の一般的な使用パターンについても説明します。 関数に関連付けられている注釈を追加している、次を参照してください[に注釈を付ける関数の動作。](../code-quality/annotating-function-behavior.md)  
@@ -495,7 +496,7 @@ ms.lasthandoff: 11/15/2017
 ## <a name="related-resources"></a>関連資料  
  [コード分析チームのブログ](http://go.microsoft.com/fwlink/?LinkId=251197)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [C/C++ コード障害を減らす SAL 注釈の使用](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [SAL について](../code-quality/understanding-sal.md)   
  [関数の動作に注釈を付ける](../code-quality/annotating-function-behavior.md)   

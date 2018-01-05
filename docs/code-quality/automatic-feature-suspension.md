@@ -16,11 +16,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-ide-code-analysis
-ms.openlocfilehash: a2c836364092aa71f40d4d7aa4566b2d12def00e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0bb8155f2ec1ed6815ac37f1124dfbf57cf838b2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="automatic-feature-suspension"></a>自動機能中断
 場合は、使用可能なシステム メモリを少なくなると、200 MB を以下に、Visual Studio コード エディターで、次のメッセージが表示されます。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/31/2017
   
 -   すべての参照を検索します。  
   
--   [移動]  
+-   移動  
   
 -   Using の追加します。  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  自動機能保留警告は、セッションごとの単位ではなく、ソリューションごとに 1 回だけ発生します。 つまり、Visual Basic から Visual c# (またはその逆) に切り替える別のメモリ不足の状態に実行すると、別の自動機能保留警告を取得可能性のあることができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: を有効にして、完全なソリューション分析を無効にします。](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md)   
  [ガベージ コレクションの基礎](/dotnet/standard/garbage-collection/fundamentals)   
  [大規模なソリューションのパフォーマンスに関する考慮事項](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)

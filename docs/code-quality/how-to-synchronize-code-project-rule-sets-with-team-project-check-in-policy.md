@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: de3a7bfaccec45dc6b7fce1def45a6e6de8e75f2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 899f9026b2e7c86ad1bd9f722dc7e1904cab2b9b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy"></a>方法: コード プロジェクト規則セットをチーム プロジェクトのチェックイン ポリシーと同期させる
 チーム プロジェクトのチェックイン ポリシーをコード プロジェクトについてコード分析設定を同期するには、少なくとも、チェックイン ポリシーの規則セットで指定されているルールが含まれる規則セットを指定します。 リード開発者は、名前と、チェックイン ポリシーの規則セットの場所を通知できます。 プロジェクトのコード分析に正しい一連の規則が使用されるように、次のオプションのいずれかを使用できます。  

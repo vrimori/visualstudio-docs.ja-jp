@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 20b31e4ea20fd3d1a4ec254507962bf4e8946bb4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 927e13266bf308096592fb5714e1247f4b596ca8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1815-override-equals-and-operator-equals-on-value-types"></a>CA1815: equals および operator equals を値型でオーバーライドします
 |||  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
  パブリックの値の型をオーバーライドしません<xref:System.Object.Equals%2A?displayProperty=fullName>、等値演算子 (= =) を実装していませんか。 このルールでは、列挙型はチェックされません。  
   
 ## <a name="rule-description"></a>規則の説明  
- 値型、継承した実装の<xref:System.Object.Equals%2A>Reflection ライブラリを使用し、すべてのフィールドの内容を比較します。 Reflection は計算コストが高いため、場合によってはすべてのフィールドで等値性を比較する必要はありません。 値の型を実装する必要があります比較または並べ替えのインスタンスにユーザーを想定してハッシュ テーブル キーとして使用するか、<xref:System.Object.Equals%2A>です。 使用するプログラミング言語では、演算子のオーバー ロードをサポートする場合は、等値演算子および非等値演算子の実装も用意する必要があります。  
+ 値型、継承した実装の<xref:System.Object.Equals%2A>Reflection ライブラリを使用し、すべてのフィールドの内容を比較します。 Reflection は計算コストが高いため、場合によってはすべてのフィールドで等値性を比較する必要はありません。 値の型を実装する必要があります比較または並べ替えのインスタンスにユーザーを想定してハッシュ テーブル キーとして使用するか、<xref:System.Object.Equals%2A>です。 お使いのプログラミング言語が演算子のオーバーロードに対応している場合、等値演算子と非等値演算子も実装してください。  
   
 ## <a name="how-to-fix-violations"></a>違反の修正方法  
  この規則違反を修正するには、実装を提供<xref:System.Object.Equals%2A>です。 場合は、等値演算子を実装することができます。  
@@ -67,5 +68,5 @@ ms.lasthandoff: 10/31/2017
   
  [CA2226: 演算子は対称型オーバーロードを含まなければなりません](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:System.Object.Equals%2A?displayProperty=fullName>

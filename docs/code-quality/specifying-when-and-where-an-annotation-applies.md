@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5bfff9eb7e2040d5a4b75fa82c2a504f2aaeceda
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: eaca3429ccc1defe51ee849bf46146931390a571
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-when-and-where-an-annotation-applies"></a>注釈を適用するタイミングと場所の指定
 注釈が条件付きの場合、アナライザーをすることを指定するには、その他の注釈があります。  たとえば、関数が同期または非同期のどちらかにできる変数を持つ場合、関数は次のようにします。 同期の場合、常に最終的に成功しますが、非同期の場合、エラーが報告場合は、すぐには成功ことはできません。 関数は同期的に呼び出されると、結果値をチェックするありません値を提供、コード アナライザーがないが返されたためです。  しかし、関数が非同期的に呼び出すし、関数の結果はチェックされません、重大なエラーが発生する可能性です。 この例で使用する可能性があります、状況、`_When_`注釈 — この記事で後述する — チェックを有効にします。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/15/2017
 |`_Group_(anno-list)`|注釈`anno-list`をそれぞれの注釈に適用されるグループの注釈に適用されるすべての修飾子を持つと見なさすべてです。|  
 |`_When_(expr, anno-list)`|`expr`変換できる式は、`bool`です。 ゼロ以外である場合 (`true`) で指定されている注釈`anno-list`適用できると見なされます。<br /><br /> 既定では、各注釈で`anno-list`、`expr`は、入力値を使用して注釈が、前提条件と場合、出力値を使用して、注釈は事後条件として解釈されます。 既定値を上書きするに使用することができます、`_Old_`組み込みの入力値を使用することを示すために事後条件を評価する際にします。 **注:**異なる注釈を使用した結果として有効にする可能性があります`_When_`値が変更可能な場合 — たとえば、 `*pLength`— が関係しているための評価結果`expr`事前条件では、その評価からで異なる場合があります事後条件で発生します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [C/C++ コード障害を減らす SAL 注釈の使用](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [SAL について](../code-quality/understanding-sal.md)   
  [関数パラメーターおよび戻り値の注釈を付ける](../code-quality/annotating-function-parameters-and-return-values.md)   

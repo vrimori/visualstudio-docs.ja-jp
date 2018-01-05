@@ -24,11 +24,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 84a66d16241ff9f1f385bda8c1def6a82e5971a5
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: 60cebdd015263ac5d05045e168d3f1063e0527a1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="annotating-function-behavior"></a>関数の動作に注釈を付ける
 注釈を付けるだけでなく[関数パラメーターと戻り値の](../code-quality/annotating-function-parameters-and-return-values.md)、関数全体のプロパティに注釈を付けることができます。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/15/2017
 |`_Return_type_success_(expr)`|Typedef に適用できます。 すべての機能を入力し、明示的がないことを返すことを示す`_Success_`注釈が付けられていましたまるで`_Success_(expr)`です。 `_Return_type_success_`関数または関数ポインターの typedef では使用できません。|  
 |`_Success_(expr)`|`expr`右辺値を生成する式です。 ときに、`_Success_`関数宣言または定義、それぞれの注釈に注釈がある (`anno`) として記述されている場合と同様の関数と事後条件で動作`_When_(expr, anno)`です。 `_Success_`注釈は関数の場合はそのパラメーターではなくでのみ使用できます、または型を返します。 最大で 1 つできます`_Success_`と関数の場合、上の注釈がいずれかにすることはできません`_When_`、 `_At_`、または`_Group_`です。 詳細については、次を参照してください。[を指定すると、注釈の適用先](../code-quality/specifying-when-and-where-an-annotation-applies.md)です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [C/C++ コード障害を減らす SAL 注釈の使用](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [SAL について](../code-quality/understanding-sal.md)   
  [関数パラメーターおよび戻り値の注釈を付ける](../code-quality/annotating-function-parameters-and-return-values.md)   

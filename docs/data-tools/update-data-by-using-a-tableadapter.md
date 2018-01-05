@@ -22,11 +22,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 7d49f0ddc965327334aea471b1276b4e78987ec2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: 4968eab5e1d355543a8658e72540bc66fa2543b9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="update-data-by-using-a-tableadapter"></a>TableAdapter を使用してデータを更新します。
 データセット内のデータを変更して検証後に送信できます、更新されたデータをデータベースに戻すを呼び出して、`Update`のメソッド、 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)です。 `Update`メソッドを 1 つのデータ テーブルを更新して、に基づいて正しいコマンド (INSERT、UPDATE、または DELETE) を実行、<xref:System.Data.DataRow.RowState%2A>テーブル内の各データ行のです。 データセット関連テーブルがあるときに、Visual Studio は、更新プログラムを実行するために使用 TableAdapterManager クラスを生成します。 TableAdapterManager クラスにより、更新プログラムがデータベースで定義されている外部キー制約に基づく正しい順序で行われること。 データ バインド コントロールを使用する場合、データ バインディング アーキテクチャは、tableAdapterManager と呼ばれる TableAdapterManager クラスのメンバー変数を作成します。 
@@ -52,5 +53,5 @@ ms.lasthandoff: 10/31/2017
      [!code-csharp[VbRaddataSaving#9](../data-tools/codesnippet/CSharp/update-data-by-using-a-tableadapter_1.cs)]
      [!code-vb[VbRaddataSaving#9](../data-tools/codesnippet/VisualBasic/update-data-by-using-a-tableadapter_1.vb)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)

@@ -21,11 +21,12 @@ manager: ghogen
 dev_langs:
 - VB
 - CSharp
-ms.openlocfilehash: 1d59983639284fb8a6134a73ea58e09c6d49b183
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 260ced17d030d083854022ff3d1812184700d20d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1800-do-not-cast-unnecessarily"></a>CA1800: 不必要にキャストしません
 |||  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
  パフォーマンス問題がない場合、この規則による警告を抑制するか、完全には、ルールを無視するも安全です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、c# を使用して、規則に違反するメソッド`is`演算子。 2 番目のメソッドに置き換えることで、規則に適合、 `is` 、テストの結果に対して指定された演算子は、`as`演算子で、2 つのイテレーションごとのキャスト操作の数が減少します。 3 番目のメソッドを使用して、規則に適合も`is`で[パターン マッチ](/dotnet/csharp/language-reference/keywords/is#pattern-matching-with-is)型変換が成功した場合は、目的の型の変数を作成します。
   
  [!code-csharp[FxCop.Performance.UnnecessaryCastsAsIs#1](../code-quality/codesnippet/CSharp/ca1800-do-not-cast-unnecessarily_1.cs)]  
@@ -61,6 +62,6 @@ ms.lasthandoff: 10/31/2017
  [!code-vb[FxCop.Performance.UnnecessaryCasts#1](../code-quality/codesnippet/VisualBasic/ca1800-do-not-cast-unnecessarily_2.vb)]
  [!code-csharp[FxCop.Performance.UnnecessaryCasts#1](../code-quality/codesnippet/CSharp/ca1800-do-not-cast-unnecessarily_2.cs)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [(c# リファレンス) として](/dotnet/csharp/language-reference/keywords/as)   
 [(c# リファレンス)](/dotnet/csharp/language-reference/keywords/is)

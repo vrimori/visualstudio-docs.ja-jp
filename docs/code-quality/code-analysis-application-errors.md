@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f89420d19696c0be26a2fb0a9b9b405574325797
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: e7e1e0f504c9d813b2dbcacca1689475ec42aeb1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-analysis-application-errors"></a>コード分析のアプリケーション エラー
 このセクションでは、マネージ コード分析ツールによって生成されるエラー メッセージの参照です。 に特定のエラー メッセージのヘルプを取得するにはエラー番号を入力、**探します**ボックス インデックスにします。  

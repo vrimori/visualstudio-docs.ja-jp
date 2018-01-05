@@ -19,11 +19,12 @@ caps.latest.revision: "32"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 81c553a9ae45ed44e8c5d96f49f2063e6383e5ea
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 57b499756292a62c64b44f864042ffa740a14016
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca2000-dispose-objects-before-losing-scope"></a>CA2000: スコープが失われる前にオブジェクトを破棄します
 |||  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/31/2017
   
 -   破棄可能オブジェクトのメンバーは、using ステートメントのコンストラクターでは初期化できません。  
   
--   1 つの例外ハンドラーによってのみ保護された入れ子のコンストラクター。 次に例を示します。  
+-   1 つの例外ハンドラーによってのみ保護された入れ子のコンストラクター。 たとえば、オブジェクトに適用された  
   
     ```csharp
     using (StreamReader sr = new StreamReader(new FileStream("C:\myfile.txt", FileMode.Create)))  
@@ -164,6 +165,6 @@ End Function
   
   [!code-vb[FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope#1](../code-quality/codesnippet/VisualBasic/ca2000-dispose-objects-before-losing-scope-vboverflow_1.vb)]
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:System.IDisposable>   
  [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern)

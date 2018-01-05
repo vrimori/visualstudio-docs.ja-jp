@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d5a0fc10230c4c2b7638e1be75770872e0dcf4aa
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c832b29512bfd7339ab60044ece81f1626be9bc7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-in-the-code-analysis-rule-set-editor"></a>コード分析規則セット エディターでの作業
 コード分析規則セット エディターでは、カスタム規則セットに含まれている規則を指定して、アクションを指定できます。 コード分析規則の違反が見つかったときに実行するアクションを指定することもできます。  
@@ -63,8 +64,8 @@ ms.lasthandoff: 10/31/2017
 |-----------|-----------------|  
 |**ID**|ルールの識別子。|  
 |**カテゴリ**|規則セットのメンバーシップ、に加えてコード分析規則もカテゴリにグループ化します。 詳細については、次を参照してください。[マネージ コードの警告のコード分析](../code-quality/code-analysis-for-managed-code-warnings.md)です。|  
-|**名前**|ルールのタイトル。|  
-|**Namespace**|ルールの名前空間です。|  
+|**Name**|ルールのタイトル。|  
+|**名前空間**|ルールの名前空間です。|  
 |**ターゲットの種類**|ルールには、ネイティブし、管理、または、データベース コードかどうかを示します。|  
 |**動作**|コード分析の実行で、規則に違反する場合に行う動作です。<br /><br /> **警告**-警告を生成します。<br /><br /> **エラー** -エラーが生成されます。<br /><br /> **None** -ルールを無効にします。<br /><br /> アクション フィールドを編集することができます。 [なし] に値を設定すると、ルールのチェック ボックスをオフと同じです。|  
 |**規則セットのソース**|規則セットを規則が含まれています。|  

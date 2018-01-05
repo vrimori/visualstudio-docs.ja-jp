@@ -15,11 +15,12 @@ caps.latest.revision: "40"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f35833df8e84a4e4caba8fd46f8daea8dd5119a1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 92babbf3c7a5863d178463b69525bdb722bf28ad
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="in-source-suppression-overview"></a>ソース内抑制の概要
 ソース内抑制を抑制する状況または追加することでマネージ コードでコード分析における規則違反を無視できるは、 **SuppressMessage**属性、違反が発生するコード セグメントをします。 **SuppressMessage**属性には、条件付きコンパイル時に CODE_ANALYSIS コンパイル シンボルが定義されている場合にのみ、マネージ コード アセンブリの IL メタデータに含まれています。  
@@ -64,7 +65,7 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
   
 -   **スコープ**-警告を抑制するターゲット。 ターゲットが指定されていない場合は、属性のターゲットに設定されます。 サポートされているスコープ、次のとおりです。  
   
-    -   モジュール  
+    -   Module  
   
     -   名前空間  
   
@@ -79,11 +80,11 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 ## <a name="suppressmessage-usage"></a>SuppressMessage の使用方法  
  レベルでコード分析の警告は抑制のインスタンス、 **SuppressMessage**属性を適用します。 これの目的は、違反が発生するコードに抑制情報を密に結合します。  
   
- 抑制の一般的な形式には、規則のカテゴリと、ルール名の省略可能な人間が判読できる形式を含むルール識別子が含まれています。 次に例を示します。  
+ 抑制の一般的な形式には、規則のカテゴリと、ルール名の省略可能な人間が判読できる形式を含むルール識別子が含まれています。 たとえば、オブジェクトに適用された  
   
  `[SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]`  
   
- ソース内抑制のメタデータを最小限に抑えるための厳密なパフォーマンス上の理由がある場合は、規則の名前は省略可能です。規則のカテゴリとそのルール ID 一緒に規則を十分に一意の識別子を構成します。 次に例を示します。  
+ ソース内抑制のメタデータを最小限に抑えるための厳密なパフォーマンス上の理由がある場合は、規則の名前は省略可能です。規則のカテゴリとそのルール ID 一緒に規則を十分に一意の識別子を構成します。 たとえば、オブジェクトに適用された  
   
  `[SuppressMessage("Microsoft.Design", "CA1039")]`  
   
@@ -123,5 +124,5 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 ## <a name="global-suppression-file"></a>グローバル抑制ファイル  
  グローバル抑制ファイルでは、グローバル レベルの抑制か、ターゲットが指定されていない抑制の抑制を保持します。 たとえば、アセンブリ レベルの違反に対する抑制は、このファイルに格納されます。 また、ASP.NET 抑制は、プロジェクト レベルの設定は、フォームのコードを利用できないために、このファイルに格納されます。 グローバル抑制が作成され、選択した初めてのプロジェクトに追加、**プロジェクト抑制ファイル内**のオプション、**メッセージの抑制**エラー一覧 ウィンドウでコマンド。 詳細については、次を参照してください。[する方法: メニュー項目を使用して警告を抑制する状況](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:System.Diagnostics.CodeAnalysis>

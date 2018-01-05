@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5ad51388ae1580ada61442798b46048ad71ece64
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: cplusplus
+ms.openlocfilehash: f78a3f48ce6e8d08134694bc03c80f9c2e9b3363
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-rule-sets-to-specify-the-c-rules-to-run"></a>規則セットを使用した実行対象の C++ 規則の指定
 [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)]と[!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)]、作成して、カスタムの変更*ルール セット*コード分析に関連付けられている特定のプロジェクトのニーズにします。 C++、カスタム規則を作成するのには、C と C++ プロジェクトが Visual Studio IDE で開く必要があります。 規則セット エディターで、標準の規則セットを開くと追加し、または特定の規則を削除してコード分析ルールに違反していることを決定するときに発生するアクションを必要に応じて変更します。  

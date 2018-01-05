@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4893dbf799a964024fef59b7b0092b3066e8fdd4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 38ac5492c987515c7c6504c91d2e035f8b8645ff
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca2147-transparent-methods-may-not-use-security-asserts"></a>CA2147: 透過コードは、セキュリティ アサートを使用してはならない
 |||  
@@ -63,5 +64,5 @@ ms.lasthandoff: 10/31/2017
   
  コードからアサートを削除して、その後、ファイル方法以外の I/O のアクセス許可要求フロー、呼び出し元にすることもできます。 これにより、セキュリティ チェックできます。 この場合、セキュリティ監査は通常不要、アクセス許可要求は、呼び出し元や、アプリケーション ドメインにフローするためです。 アクセス許可の要求は、環境、およびソース コードのアクセス許可の付与をホストしているセキュリティ ポリシーによって厳密に制御されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セキュリティの警告](../code-quality/security-warnings.md)

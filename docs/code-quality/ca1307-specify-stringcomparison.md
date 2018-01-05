@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 61d8ca557bfc55e3488a35e82f0242f931c51ed4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7087cfe23f7911ec33891a70cd88cf47ee9e4a7b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1307-specify-stringcomparison"></a>CA1307: StringComparison の指定
 |||  
@@ -46,6 +47,6 @@ ms.lasthandoff: 10/31/2017
 ## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
  ライブラリまたはアプリケーションは、限定されたローカル ユーザーのためのものでは、してためにローカライズされない場合は、この規則による警告を抑制しても安全です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [グローバリゼーションに関する警告](../code-quality/globalization-warnings.md)   
  [CA1309: 順序を示す StringComparison を使用します](../code-quality/ca1309-use-ordinal-stringcomparison.md)

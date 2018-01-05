@@ -36,11 +36,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0fa6ecdef564f7911e6de09ad56b5934e9231f35
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: 34364681aeeed7626b10b6714d785fbf861f42d4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="annotating-locking-behavior"></a>ロック動作に注釈を付ける
 常に、マルチ スレッド プログラムでバグを同時実行を避けるためには、以下の適切なロック作業分野と SAL 注釈を使用します。  
@@ -108,7 +109,7 @@ ms.lasthandoff: 11/15/2017
 |`_Interlocked_operand_`|注釈付きの関数パラメーターは、さまざまな Interlocked 関数のいずれかのターゲットのオペランドです。  これらのオペランドは、特定の追加のプロパティが必要です。|  
 |`_Write_guarded_by_(expr)`|変数の注釈し、するたびに、変数を変更、によって指定されるロック オブジェクトのロック カウントを示す`expr`が少なくとも 1 つです。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [C/C++ コード障害を減らす SAL 注釈の使用](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [SAL について](../code-quality/understanding-sal.md)   
  [関数パラメーターおよび戻り値の注釈を付ける](../code-quality/annotating-function-parameters-and-return-values.md)   

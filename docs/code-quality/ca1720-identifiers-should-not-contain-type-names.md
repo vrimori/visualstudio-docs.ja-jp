@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5418bc8d265c32057911df2d3a15aaddacf1398e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ac50c390ca7a45cf5ef28f2d82d1f75fc5e2c1a0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1720-identifiers-should-not-contain-type-names"></a>CA1720: 識別子には型名を含めないでください
 |||  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="cause"></a>原因  
  外部から参照できるメンバーのパラメーターの名前には、データ型の名前が含まれています。  
   
- または  
+ - または -  
   
  外部から参照できるメンバーの名前には、言語固有のデータ型の名前が含まれています。  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/31/2017
   
 -   UInt  
   
--   整数  
+-   整数型  
   
 -   UInteger  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/31/2017
   
 -   符号付き  
   
--   浮動小数点型  
+-   Float  
   
 -   Float32  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 10/31/2017
   
  さらに、パラメーターの名前もチェックインに対して次の言語に依存しないデータ型名では、大文字と小文字。  
   
--   オブジェクト  
+-   Object  
   
 -   obj  
   
@@ -126,7 +127,7 @@ ms.lasthandoff: 10/31/2017
   
 -   Decimal (10 進数型)  
   
--   Guid  
+-   GUID  
   
 ## <a name="how-to-fix-violations"></a>違反の修正方法  
  **パラメーターに対して発生します。 場合**  

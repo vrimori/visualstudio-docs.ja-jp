@@ -13,11 +13,12 @@ caps.latest.revision: "43"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5a0f290fa42a04ddf60a49282d2f350111076ab0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f396bb289e7e4288dbb80c6e08990960861e970c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-analysis-rule-set-reference"></a>コード分析規則セットの参照
 コード分析を構成するときでマネージ コード プロジェクト[!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、 [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、または[!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]組み込みの一覧が表示されて*ルール セット*です。 標準の規則セットのいずれかを使用することができますか、または、プロジェクト要件に合わせて設定ルールをカスタマイズすることができます。  

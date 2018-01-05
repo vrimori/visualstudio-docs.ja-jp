@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c383f9b5c37c23886d968b13e45e1c5aa1c1c943
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 769ff8468bc2f8ea90201678c85351706b8a4652
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-design-guideline-rules-rule-set-for-managed-code"></a>マネージ コードの "基本デザイン ガイドライン規則" 規則セット
 Microsoft 基本デザイン ガイドライン規則規則を理解し、使用するコードを容易に重点を置くセットを使用できます。 この規則セットを保守が容易なコードのベスト プラクティスを適用する場合や、プロジェクトにライブラリ コードが含まれている場合を含める必要があります。  

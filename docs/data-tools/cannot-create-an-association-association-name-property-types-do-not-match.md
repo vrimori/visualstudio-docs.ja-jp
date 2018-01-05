@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: c950abb08e937ded4511408367f7163f3b2e16de
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: be8bbbec67b70576aa3a059dd400d46c92137ab9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cannot-create-an-association-ltassociation-namegt---property-types-do-not-match"></a>関連付けを作成できません&lt;association 名&gt;-プロパティの型が一致しません
 関連付けを作成できません\<association 名 > のプロパティの型が一致しません。 プロパティに一致する型がありません:\<プロパティ名 >。  
@@ -33,9 +34,9 @@ ms.lasthandoff: 11/09/2017
   
 3.  検査、**関連付けのプロパティ**同じデータ型のプロパティ を選択します。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
 ## <a name="see-also"></a>関連項目
-[O/R デザイナー メッセージ](../data-tools/o-r-designer-messages.md)  
+[O/R デザイナーのメッセージ](../data-tools/o-r-designer-messages.md)  
 [Visual Studio での LINQ to SQL ツールします。](../data-tools/linq-to-sql-tools-in-visual-studio2.md)  
 [方法: LINQ to SQL クラス (O/R デザイナー) 間の関連付けを作成します。](../data-tools/how-to-create-an-association-relationship-between-linq-to-sql-classes-o-r-designer.md) 
