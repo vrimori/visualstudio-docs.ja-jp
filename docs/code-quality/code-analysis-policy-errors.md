@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 052bb1314560089feb714027737f35167c947418
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 268940f39d3d74e7dd701f9c458d7dd08ff6c1f7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-analysis-policy-errors"></a>コード分析ポリシー エラー
 以下のエラーは、チェックインにおいてコード分析ポリシーに適合しない場合に発生します。  
@@ -73,5 +74,5 @@ ms.lasthandoff: 10/31/2017
   
  このエラーは、アンマネージ プロジェクトで発生します。 コード分析ポリシーでは、C/C++ のコード分析の実行を要求していますが、クライアント上の現在のプロジェクトでは有効になっていません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コード分析のアプリケーション エラー](../code-quality/code-analysis-application-errors.md)

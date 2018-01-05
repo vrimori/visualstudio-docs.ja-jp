@@ -18,11 +18,12 @@ caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a4836bdb470bf993bdc6f2b8f581859030016600
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 206d93d748a1d1033df48f9156997bd37b27f482
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-visual-studio-development-environment-for-c"></a>C# の場合、Visual Studio 開発環境を使用します。 #
 Visual Studio 統合開発環境 (IDE) は、共通のユーザー インターフェイスで公開される開発ツールのコレクションです。 ツールの一部は他の [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 言語と共有されますが、C# コンパイラなど、Visual C# に固有のものもあります。 このトピックでは、最も重要な Visual C# ツールへのリンクを示します。  
@@ -31,9 +32,9 @@ Visual Studio 統合開発環境 (IDE) は、共通のユーザー インター�
   
 |タイトル|説明|  
 |-----------|-----------------|  
-|[チュートリアル: 単純なアプリケーションを作成します。](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)|Visual Studio に含まれているアプリケーション開発の多くの機能およびツールについて紹介します。|  
+|[チュートリアル : 簡単なアプリケーションの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)|Visual Studio に含まれているアプリケーション開発の多くの機能およびツールについて紹介します。|  
 |[ソリューションとプロジェクトの作成](../ide/creating-solutions-and-projects.md)|ソース コード ファイル、アイコンなどのリソース ファイル、外部ファイルへの参照、コンパイラの設定などの構成データをすべて含むプロジェクトの作成方法について説明します。|  
-|[コードの作成](../ide/writing-code-in-the-code-and-text-editor.md)|テキスト、コード、およびマークアップの変更と操作、コントロールなどのオブジェクトや名前空間の挿入と構成、外部コンポーネントおよびリソースへの参照の追加などの作業を支援する Visual Studio のツールについて説明します。|  
+|[コードの作成](../ide/writing-code-in-the-code-and-text-editor.md)|テキスト、コード、およびマークアップの変更と操作、コントロールなどのオブジェクトや名前空間の挿入と構成、外部コンポーネントおよびリソースへの参照の追加などの作業を支援する Visual Studio Tools について説明します。|  
 |[Visual C# の IntelliSense](../ide/visual-csharp-intellisense.md)|Visual c# を説明するトピックへのリンクの自動などの特定の機能コードの生成と IntelliSense のための最近使用したメンバー。|  
 |[Visual C# のコード スニペット](../ide/visual-csharp-code-snippets.md)|一般的なコード コンストラクターを自動的にアプリケーションに追加する、Visual C# のコード スニペットの概要について説明します。|  
 |[コードの作成](../ide/writing-code-in-the-code-and-text-editor.md)|コードの行を特定するために、[検索と置換] ウィンドウ、ブックマーク、タスク一覧、およびエラー一覧を使用する手順へのリンクを示します。|  
@@ -47,7 +48,7 @@ Visual Studio 統合開発環境 (IDE) は、共通のユーザー インター�
 |[アプリケーション リソースの管理 (.NET)](../ide/managing-application-resources-dotnet.md)|文字列、イメージ、アイコン、オーディオ、ファイルなど、プロジェクトのリソースを追加または編集する方法を示します。|  
 |[Dotfuscator Community Edition (CE)](../ide/dotfuscator/index.md)|無料の PreEmptive Protection - Dotfuscator Community Edition を設定し、使用を開始して .NET アセンブリをリバース エンジニアリングと不正使用 (不正なデバッグなど) から保護する方法について説明します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [C#](/dotnet/csharp/csharp)   
  [C# の概要](/dotnet/csharp/getting-started/getting-started-with-csharp)   
  [C# リファレンス](/dotnet/csharp/language-reference/index)

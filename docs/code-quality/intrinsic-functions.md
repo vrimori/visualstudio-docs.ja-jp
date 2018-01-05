@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be65ae9177591b015cd8b29b3dbdc262b66a30ab
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: c25c76ba43c983a6029c8d50e183ccf839ef08bd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="intrinsic-functions"></a>組み込み関数
 SAL の式は副作用がない式であれば、C と C++ の式を指定できます: たとえば、+ +、-- と関数の呼び出しがこのコンテキストですべての副作用であります。  ただし、SAL は一部の関数に似たオブジェクトと SAL 式で使用できるいくつかの予約済みの記号を提供します。 呼ばれる、*の組み込み関数*です。  
@@ -37,7 +38,7 @@ SAL の式は副作用がない式であれば、C と C++ の式を指定でき
 |`_Inexpressible_(expr)`|バッファーのサイズが複雑すぎます注釈式を使用している状況を表す — たとえば、によって、入力のデータ セットをスキャンし、カウントし、計算されたメンバーを選択します。|  
 |`_Nullterm_length_(param)`|`param`最大バッファーが null 終端文字を含まない内の要素の数です。 非集計、void でない型のすべてのバッファーにも適用することがあります。|  
 |`_Old_(expr)`|前提条件で評価されるときに`_Old_`入力値を返します`expr`です。  事後条件で評価されるときに、値が返されます`expr`ように前提条件の評価されたとします。|  
-|`_Param_(n)`|`n`番目のパラメーターを 1 から数えて、関数に`n`、および`n`整数定数のリテラルです。 場合は、パラメーターの名前は、この注釈は名前で、パラメーターへのアクセスと同じです。 **注:** `n`可能性があります、省略記号によって定義されたまたは、名前が使用されていない関数プロトタイプで使用できる位置指定パラメーターを参照してください。  |  
+|`_Param_(n)`|`n`番目のパラメーターを 1 から数えて、関数に`n`、および`n`整数定数のリテラルです。 場合は、パラメーターの名前は、この注釈は名前で、パラメーターへのアクセスと同じです。 **注:** `n`可能性があります、省略記号によって定義されたまたは、名前が使用されていない関数プロトタイプで使用できる位置指定パラメーターを参照してください。|  
 |`return`|C と C++ の予約キーワード`return`関数の戻り値を示すために SAL 式で使用できます。  値は、後の状態でのみ使用これより前の状態で使用する構文エラーです。|  
   
 ## <a name="string-specific"></a>文字列固有  
@@ -49,7 +50,7 @@ SAL の式は副作用がない式であれば、C と C++ の式を指定でき
 |`strlen(param)`|`param`最大文字列が null 終端文字を含まない内の要素の数です。 この注釈は予約文字を使用して配列や、C ランタイム関数に似ています[strlen()](/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l)です。|  
 |`wcslen(param)`|`param`最大 (含みません)、文字列内の要素の数は、null 終端文字です。 この注釈には、ワイド文字を使用する配列し、C ランタイム関数に似ていますが予約されていますが[wcslen()](/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l)です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [C/C++ コード障害を減らす SAL 注釈の使用](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [SAL について](../code-quality/understanding-sal.md)   
  [関数パラメーターおよび戻り値の注釈を付ける](../code-quality/annotating-function-parameters-and-return-values.md)   

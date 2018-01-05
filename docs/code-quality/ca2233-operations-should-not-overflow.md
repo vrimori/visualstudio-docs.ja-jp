@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d8b602d83eee4be49f63eef0ee8d2cd3d77f5040
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f5d048476997517a835337b568930367f97c2c92
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca2233-operations-should-not-overflow"></a>CA2233: 操作はオーバーフローできません
 |||  
@@ -109,11 +110,11 @@ End Sub
   
 1.  **ソリューション エクスプ ローラー**をプロジェクトを右クリックして**プロパティ**です。  
   
-2.  選択、**ビルド** タブでをクリックし、**詳細**です。  
+2.  **[ビルド]** タブを選択してから **[詳細設定]** をクリックします。  
   
 3.  選択**算術オーバーフローおよびアンダー フローのチェック** をクリック**OK**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:System.OverflowException?displayProperty=fullName>   
  [C# 演算子](/dotnet/csharp/language-reference/operators/index)   
  [Checked と Unchecked](/dotnet/csharp/language-reference/keywords/checked-and-unchecked)

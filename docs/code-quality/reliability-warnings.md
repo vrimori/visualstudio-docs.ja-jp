@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d3ac06911009a24640031fd3a2306110f289014f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 336548a51b6ee388f81602abca5a1d0421864c18
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliability-warnings"></a>信頼性に関する警告
 信頼性に関する警告は、メモリやスレッドの正しい使用法などのライブラリとアプリケーションの信頼性をサポートします。  
@@ -35,4 +36,4 @@ ms.lasthandoff: 10/31/2017
 |[CA2002: ID が不十分なオブジェクトをロックしないでください](../code-quality/ca2002-do-not-lock-on-objects-with-weak-identity.md)|アプリケーション ドメインの境界を越えてオブジェクトに直接アクセスできる場合、そのオブジェクトの ID は不十分と表現されます。 スレッドで ID が不十分なオブジェクトをロックしようとすると、ブロックされることがあります。たとえば、異なるアプリケーション ドメインの別スレッドで、既に同じオブジェクトがロックされている場合です。|  
 |[CA2003: ファイバーをスレッドとして扱いません](../code-quality/ca2003-do-not-treat-fibers-as-threads.md)|マネージ スレッドは Win32 スレッドとして扱われています。|  
 |[CA2004: GC.KeepAlive への呼び出しを削除します](../code-quality/ca2004-remove-calls-to-gc-keepalive.md)|SafeHandle の使用法に変換する場合は、GC をすべての呼び出しを削除します。KeepAlive (オブジェクト)。 この例では、クラスでは、GC を呼び出すことはできません。KeepAlive、ファイナライザーはありませんが、OS の最終処理の SafeHandle に依存するいると仮定した場合は、それらの処理です。|  
-|[CA2006: SafeHandle を使用して、ネイティブ リソースを要約します](../code-quality/ca2006-use-safehandle-to-encapsulate-native-resources.md)|マネージ コードで IntPtr を使用すると、セキュリティ上の問題および信頼性の問題が発生する可能性があります。 すべての IntPtr の使用状況をチェックして、SafeHandle または類似のテクノロジに置き換える必要があるかどうかを判断してください。|
+|[CA2006: SafeHandle を使用して、ネイティブ リソースを要約します](../code-quality/ca2006-use-safehandle-to-encapsulate-native-resources.md)|マネージ コードで IntPtr を使用すると、セキュリティ上の問題および信頼性の問題が発生する可能性があります。 すべての IntPtr の使用状況をレビューして、SafeHandle または類似のテクノロジに置き換える必要があるかどうかを判断してください。|

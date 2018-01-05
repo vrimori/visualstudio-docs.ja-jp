@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ef0bff2d084abc51f22bccc8aeef42d1545a5ac9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6cdd8c9d2e581df3e7b0ebeba092a212fb7a89f5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaaddressmap"></a>IDiaAddressMap
 DIA SDK が仮想のアドレスと相対仮想アドレス デバッグ オブジェクトを計算する方法の制御を提供します。  
@@ -49,14 +50,14 @@ IDiaAddressMap : IUnknown
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
  このインターフェイスを指定する場合は、DIA セッション オブジェクトで実行できます。 クライアントの呼び出し、 `QueryInterface` DIA セッション オブジェクト インターフェイスで、通常メソッド[IDiaSession](../../debugger/debug-interface-access/idiasession.md)、取得するため、`IDiaAddressMap`インターフェイスです。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [Idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

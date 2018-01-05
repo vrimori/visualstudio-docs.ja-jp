@@ -19,11 +19,12 @@ caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d5e53d813d9b2dcefd2b2d19da2a76b6c0d1f989
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 549914476db028cc5135de3c954ac841ab2da628
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="remove-parameters-refactoring-c"></a>パラメーターの削除リファクタリング (C#)
 `Remove Parameters`メソッド、インデクサー、またはデリゲートからパラメーターを削除する簡単な方法を提供するリファクタリング操作です。 パラメーターの変更; 宣言を削除します。メンバーが呼び出されているすべての場所では、新規の宣言を反映するように、パラメーターが削除されます。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  使用して、**パラメーター**フィールドにカーソルを置き、 `int i`、クリックして**削除**です。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
 6.  **変更のプレビュー: パラメーターの削除**ダイアログ ボックスで、をクリックして**適用**です。  
   
@@ -88,5 +89,5 @@ MyMethod(param2);
   
  リファクタリングの操作によって`param1`は増加しません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リファクタリング (C#)](refactoring-csharp.md)

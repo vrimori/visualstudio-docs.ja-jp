@@ -24,11 +24,12 @@ caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b6d892c4c0c8f580d9a3f219fd61211f8e0e9e22
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2854a74bd8da32db5d954a0e68a33a484b7eb493
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="com-and-activex-debugging"></a>COM および ActiveX のデバッグ
 ここでは、COM アプリケーションと ActiveX コントロールのデバッグに関するヒントを紹介します。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/31/2017
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)  
  デバッグに関連するドキュメントのより広範囲なリンクを提供します。 デバッガーの新機能、設定と準備、ブレークポイント、例外の処理、エディット コンティニュ、マネージ コードのデバッグ、Visual C++ プロジェクトのデバッグ、COM および ActiveX のデバッグ、DLL のデバッグ、SQL のデバッグ、ユーザー インターフェイス リファレンスなどの情報へのリンクを提供します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [COM の概要](/cpp/atl/introduction-to-com)   
  [ActiveX コントロール](/cpp/mfc/activex-controls)   

@@ -18,11 +18,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: c6a46a506ecbe0ca461de927f2ec1297d43c710b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: c35fdaabf3de306af0541fb4781a085a3c409ff8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>方法: WCF データ サービス参照を追加、更新、または削除する
 A*サービス リファレンス*によって、プロジェクトで 1 つまたは複数のアクセスを[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]です。 使用して、**サービス参照の追加**を検索 ダイアログ ボックス[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]ローカル、ローカル エリア ネットワーク、またはインターネット上の現在のソリューションにします。  
@@ -93,5 +94,5 @@ A*サービス リファレンス*によって、プロジェクトで 1 つま�
     > [!NOTE]
     >  サービス参照を参照するすべてのコードは、手動で削除する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio での Windows Communication Foundation サービスと WCF データ サービス](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

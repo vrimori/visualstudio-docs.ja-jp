@@ -14,11 +14,12 @@ caps.latest.revision: "36"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 44d64b7371f1b27afaa7796dc42d4b7864d20819
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 51b282cb86ca83ecf2ace1e4b12c8444928b15e1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-rule-sets-to-group-code-analysis-rules"></a>規則セットを使用したコード分析規則のグループ化
 コード分析を構成するとき[!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、または[!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]、Microsoft の組み込みの一覧から選択できます*ルール セット*です。 規則セットは、対象の問題および特定の条件を識別するコード分析規則の論理的なグループです。 パブリックに公開されている Api のコードをスキャンするように設計された規則セットを適用するを最小推奨規則のみを含む規則セットを適用することができます。 すべてのルールを含んだ規則セットを適用することもできます。  

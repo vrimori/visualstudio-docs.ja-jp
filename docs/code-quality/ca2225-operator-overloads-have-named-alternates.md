@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 07d15e5ec123e645a7607f16b6020487d4c0fc2a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f8c7b71fc964f898aefc5e243c787be71a8a063a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca2225-operator-overloads-have-named-alternates"></a>CA2225: 演算子オーバーロードには名前付けされた代替が存在します
 |||  
@@ -74,10 +75,10 @@ ms.lasthandoff: 10/31/2017
 =|N/A|>>=|プロパティ|  
 |-(バイナリ)|-(バイナリ)|-(バイナリ)|減算|  
 |-=|N/A|-=|減算|  
-|TRUE|IsTrue|N/A|IsTrue (プロパティ)|  
+|true|IsTrue|N/A|IsTrue (プロパティ)|  
 |-(単項)|N/A|-|符号反転します。|  
 |+ (単項)|N/A|+|プラス|  
-|false|IsFalse|False|IsTrue (プロパティ)|  
+|False|IsFalse|False|IsTrue (プロパティ)|  
   
  該当なし = =、選択した言語でオーバー ロードすることはできません。  
   

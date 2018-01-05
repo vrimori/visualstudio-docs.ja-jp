@@ -22,11 +22,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 6b80f370f670f4dff4b65d7c0e7658f855d5e573
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: 65c4ab52ead981d54cf9b0c64c7a3c1c941de5b0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-parameterized-tableadapter-queries"></a>パラメーター化された TableAdapter クエリを作成します。
 パラメーター クエリは、クエリ内の WHERE 句の条件を満たすデータを返します。 たとえば、顧客リストをパラメーター化して、顧客のリストを戻す SQL ステートメントに `WHERE City = @City` を追加することで、特定の都市の顧客のみが表示されるようにできます。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/31/2017
   
 -   新しい TableAdapter を作成し、目的のパラメーターを含む WHERE 句を SQL ステートメントに追加します。 詳細については、次を参照してください。[作成し、Tableadapter を構成](../data-tools/create-and-configure-tableadapters.md)です。  
   
-     または  
+     - または -  
   
 -   既存の TableAdapter にクエリを追加し、目的のパラメーターを含む WHERE 句を SQL ステートメントに追加します。
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  名前を入力、**新しいクエリ名**新しいクエリを作成する場合します。  
   
-     または  
+     - または -  
   
      クエリを選択して、**既存のクエリ名**ボックス。  
   
@@ -102,5 +103,5 @@ WHERE (ShippedDate = @ShippedDate) OR (ShippedDate IS NULL)
   
 3.  Null 値を許容するパラメーターを選択し、設定、 **AllowDbNull**プロパティを`true`です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [TableAdapters を使用してデータセットを入力する](../data-tools/fill-datasets-by-using-tableadapters.md)

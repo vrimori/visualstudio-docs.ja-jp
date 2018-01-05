@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7f416f8000240101d8ac6e29603d1b2f662e1b76
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: d42545329cfce4486e17fac000035c77307f07b9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-work-item-for-a-managed-code-defect"></a>方法: マネージ コードの障害に対する作業項目を作成する
 作業項目トラッキング内からログの作業項目に機能を使用する[!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]です。 この機能を使用するプロジェクトがチーム プロジェクトの一部をする必要があります[!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)]です。  

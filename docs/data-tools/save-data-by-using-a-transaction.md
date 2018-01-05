@@ -20,11 +20,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 23cf5ee9ef7369d8c0f52adde639adad4abe3ae6
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 9f2373e3a851899d139360caf0f6bb8b6ab0efa5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-save-data-by-using-a-transaction"></a>方法: トランザクションを使用してデータを保存
 使用して、トランザクションでデータを保存する、<xref:System.Transactions>名前空間。 使用して、<xref:System.Transactions.TransactionScope>を自動的に管理されているトランザクションに参加するオブジェクト。  
@@ -54,4 +55,4 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="see-also"></a>関連項目
 [データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)  
-[チュートリアル: トランザクション内のデータを保存します。](../data-tools/save-data-in-a-transaction.md)  
+[チュートリアル: トランザクションにデータを保存する](../data-tools/save-data-in-a-transaction.md)  

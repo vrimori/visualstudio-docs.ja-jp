@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 72892328e9e0cd2f85176cfc4a514d64f853d209
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: 72b72ce474a24d77b3b40513c2e69fb5ab4aea59
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-additional-code-information-by-using-analysisassume"></a>方法: __analysis_assume を使用して追加のコード情報を指定する
 C/C++ コード分析処理に役立つは警告を軽減するため、コード分析ツールへのヒントを提供できます。 追加情報を提供するには、次の関数を使用します。  
@@ -56,5 +57,5 @@ void test( )
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [__assume](/cpp/intrinsics/assume)

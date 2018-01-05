@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 956f6ab5180475bf0abb03e4353fe0343f876ae1
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: abd7ba49b3a9bb449f4f323deee588c3942d37a4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-selected-connection-uses-an-unsupported-database-provider"></a>選択した接続では、サポートされていないデータベース プロバイダーが使用されています
 SQL Server からの .NET Framework データ プロバイダーを使用しない項目をドラッグすると、このメッセージが表示される**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**上に、 [LINQ to SQLVisual Studio tools](../data-tools/linq-to-sql-tools-in-visual-studio2.md)です。  
@@ -29,5 +30,5 @@ SQL Server からの .NET Framework データ プロバイダーを使用しな�
   
 ## <a name="see-also"></a>関連項目
 <xref:System.Data.SqlClient>  
-[O/R デザイナー メッセージ](../data-tools/o-r-designer-messages.md)  
+[O/R デザイナーのメッセージ](../data-tools/o-r-designer-messages.md)  
 [Visual Studio での LINQ to SQL ツールします。](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

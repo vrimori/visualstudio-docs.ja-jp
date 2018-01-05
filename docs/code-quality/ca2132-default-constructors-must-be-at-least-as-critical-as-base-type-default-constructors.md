@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7ead60f427a513af263502dbecb3237c776ef776
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 752103825a25c4352ccc21730b8d2b7265f8f41b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca2132-default-constructors-must-be-at-least-as-critical-as-base-type-default-constructors"></a>CA2132: 既定のコンストラクターは、基本型の既定コンストラクターと同程度以上、重要であることが必要
 |||  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/31/2017
  派生クラスの既定のコンス トラクターの透過性属性が基底クラスの透明度ほど重要ではありません。  
   
 ## <a name="rule-description"></a>規則の説明  
- 型およびメンバーを持つ、 <xref:System.Security.SecurityCriticalAttribute> Silverlight アプリケーション コードで使用することはできません。 セキュリティが重要な型やメンバーは、.NET Framework for Silverlight クラス ライブラリの信頼されているコードからのみ使用できます。 派生クラスにおけるパブリックな構築または保護された構築の透過性は、基本クラスと同程度以上である必要があるため、アプリケーション内のクラスを、SecurityCritical としてマークされたクラスから派生させることはできません。  
+ 型およびメンバーを持つ、 <xref:System.Security.SecurityCriticalAttribute> Silverlight アプリケーション コードで使用することはできません。 セキュリティが重要な型やメンバーは、.NET Framework for Silverlight クラス ライブラリの信頼されているコードからのみ使用できます。 派生クラスにおけるパブリックな構築または保護された構築の透過性は、基底クラスと同程度以上である必要があるため、アプリケーション内のクラスを、SecurityCritical としてマークされたクラスから派生させることはできません。  
   
  CoreCLR プラットフォーム コードでは、基本データ型は、public または protected の非透過の既定のコンス トラクターを持つ場合、派生型従う必要があります既定コンス トラクターの継承規則。 派生型は既定のコンス トラクターにも必要し、そのコンス トラクターが、基本型の重要な既定のコンス トラクターとして以上である必要があります。  
   

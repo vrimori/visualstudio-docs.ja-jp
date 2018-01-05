@@ -17,11 +17,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f3c3be4f5a2cebda5b7fd0f705eefc0077b36f29
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: cplusplus
+ms.openlocfilehash: c95d03201fe9c84e01e83e7fd55bef83755337e7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-analyzing-cc-code-for-defects"></a>チュートリアル : C/C++ コード分析による障害の検出
 このチュートリアルでは、コードと C/C++ コードのコード分析ツールを使用して潜在的なコードの不具合のコードと C/C++ コードを分析する方法を示します。  
@@ -194,5 +195,5 @@ ms.lasthandoff: 11/15/2017
   
      警告またはエラーを行わなくても、プロジェクトをビルドします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: マネージ コードの分析によるコード障害の検出](../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)

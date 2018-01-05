@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 64360c57f0d4b09f0dc7e8026208c7ec542709c4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 689fe39cfb8a7719efbba15b412800d9dfa78361
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-analysis-for-managed-code-warnings"></a>マネージ コードの警告に対応するコードの解析
 マネージ コード分析ツールには、マネージ コード ライブラリの規則違反を示す警告機能があります。 警告は、デザイン、ローカリゼーション、パフォーマンス、セキュリティなどの規則の区分に分類されています。 個々の警告によって、マネージ コード分析規則の違反がわかります。 ここでは、マネージ コード分析の各警告について、詳細な説明と例を紹介します。  

@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4267267e54fcca7faf6269edc066794d38d304be
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: 20ce42e001bcb0fe60f563cb4cfbee913315df27
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca2126-type-link-demands-require-inheritance-demands"></a>CA2126: 型のリンク要求には継承要求が必要です
 |||  
@@ -60,6 +61,6 @@ ms.lasthandoff: 12/12/2017
   
  [CA2123: オーバーライドのリンク確認要求は基本と同様にします](../code-quality/ca2123-override-link-demands-should-be-identical-to-base.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)   
  [リンク確認要求](/dotnet/framework/misc/link-demands)   

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5071d122534f73b18ebb1cfb674e8b15a2876504
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: uwp
+ms.openlocfilehash: 40c3a112d77e7e00d95aaa92a77a3b6739c96293
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-a-webview-control-in-a-uwp-app"></a>UWP アプリの WebView コントロールをデバッグします。
 ![Windows と Windows Phone に適用](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/11/2017
   
 4.  `Webview` コントロールが含まれるページに移動します。  
   
-5.  コンソール ウィンドウで、web ページを選択または`iFrame`によって表示される、`WebView`内の制御、**ターゲット**] ボックスの一覧です。  
+5.  コンソール ウィンドウで、web ページを選択または`iFrame`によって表示される、`WebView`内の制御、**ターゲット** ボックスの一覧です。  
   
      ![JavaScript コンソール ウィンドウでの選択の対象](../debugger/media/js_console_target.png "JS_Console_Target")  
   
@@ -86,5 +87,5 @@ ms.lasthandoff: 11/11/2017
   
 6.  表示し、アプリ内の変数を変更するか」の説明に従って、コンソールのコマンドを使用して[クイック スタート: JavaScript のデバッグ](../debugger/quickstart-debug-javascript-using-the-console.md)と[JavaScript コンソール コマンド](../debugger/javascript-console-commands.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [クイック スタート: HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)

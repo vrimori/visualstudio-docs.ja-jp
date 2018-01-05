@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 15fed0e2638ba8870a47a65a359b4f02bc6c7eda
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ad7b4d4a42c15398b1817c06ec0193aef16e865b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enumerations-and-structures"></a>列挙型と構造体
 これらは、列挙体と DIA SDK によって使用される構造です。  
@@ -83,5 +84,5 @@ ms.lasthandoff: 10/31/2017
  [定数 (Debug Interface Access SDK)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)  
  DIA SDK で使用できる定数を指定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [参照](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)

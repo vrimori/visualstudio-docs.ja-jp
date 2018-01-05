@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cab0c6607865f82fab0320d171ba0a7671b01ea1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 4b509a1943419e9e12f13575da2fb7f9991c7ee5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-view-managed-code-defects"></a>方法 : マネージ コードの障害を表示する
 コード分析では、エラー、警告、およびメッセージは、コード分析 ウィンドウで報告されます。 コード分析 ウィンドウは、プロジェクトまたはソリューションでコード分析を実行するときに自動的に表示されます。  

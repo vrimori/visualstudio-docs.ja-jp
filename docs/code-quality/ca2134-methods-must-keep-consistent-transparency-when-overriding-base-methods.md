@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cfeadde26330273540d8d0b4ac00911905e9760e
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: 62438b49d91f680ae360f1d32f7cfe3b0efa2b75
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods"></a>CA2134: メソッドは、基本メソッドをオーバーライドしている場合、透過性の整合性を保つ必要がある
 |||  
@@ -43,10 +44,10 @@ ms.lasthandoff: 12/12/2017
 ## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
  この規則による警告は抑制しないでください。 ランタイムにこの規則の違反が発生<xref:System.TypeLoadException>レベル 2 の透過性を使用するアセンブリ。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ### <a name="code"></a>コード  
  [!code-csharp[FxCop.Security.CA2134.MethodsMustOverrideWithConsistentTransparency#1](../code-quality/codesnippet/CSharp/ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods_1.cs)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [透過的セキュリティ コード、レベル 2](/dotnet/framework/misc/security-transparent-code-level-2)

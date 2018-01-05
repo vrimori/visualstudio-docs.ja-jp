@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e404f0b893453fa319d5c4df97319f8e77720805
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cd84741d006304f7dfefe8ee4a1060ba64ffdb8b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-interface-access-sdk"></a>Debug Interface Access SDK
 Microsoft デバッグ インターフェイス アクセス ソフトウェア開発キット (DIA SDK) は、Microsoft ポスト コンパイラ ツールで生成されたプログラム データベース (.pdb) ファイルに格納されている情報のデバッグへのアクセスを提供します。 ポスト コンパイラ ツールによって生成される .pdb ファイルの形式では、定数のリビジョンが加えられた、ために、形式を公開する実用的ではありません。 DIA API を使用すると、.pdb ファイルに格納されているデバッグ情報の参照を検索しているアプリケーションを開発できます。 このようなアプリケーション、たとえば、スタック トレース バック情報を報告パフォーマンス データと分析します。  

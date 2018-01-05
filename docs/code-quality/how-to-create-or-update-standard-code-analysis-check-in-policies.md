@@ -14,11 +14,12 @@ caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6396b698a5f4d2602c9969d6cab0422832b3e6dc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d11a8c3169b019ac504ed98258d9281037eb1dd2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>方法: 標準のコード分析チェックイン ポリシーを作成または更新する
 コード分析チェックイン ポリシーを使用して、チーム プロジェクト内のすべてのコード プロジェクトでコード分析を実行することを要求することができます。 コード分析を必要とすると、コード ベースにチェックインされているコードの品質が向上することができます。  
@@ -70,5 +71,5 @@ ms.lasthandoff: 10/31/2017
   
     -   セットを作成して、カスタム チェックイン ポリシーのルールを実装する方法の詳細についてを参照してください[を実装するカスタム チェックイン ポリシーにマネージ コードの](../code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code.md)します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コード分析を用いたチェックイン ポリシーの作成と使用](../code-quality/creating-and-using-code-analysis-check-in-policies.md)

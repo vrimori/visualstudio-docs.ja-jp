@@ -26,11 +26,12 @@ caps.latest.revision: "34"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ae3149350bac7aca92ffbc8b308c75357c3edba4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 329e7fae6a2a8682c23417f88e59700b7caffd53
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-custom-views-of-managed-objects"></a>カスタム ビューの管理オブジェクトを作成します。
 Visual Studio でデバッガーの変数ウィンドウにデータ型を表示する方法をカスタマイズできます。  
@@ -51,7 +52,7 @@ Visual Studio でデバッガーの変数ウィンドウにデータ型を表示
   
  また、ネイティブ型の表示は、式エバリュエーター アドインを記述してカスタマイズできます。 詳細については、次を参照してください。 [EEAddIn サンプル: デバッグ式エバリュエーター アドイン](http://msdn.microsoft.com/en-us/d4f6b068-c812-45bc-9ec0-7e0363c4bb9e)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DebuggerTypeProxy 属性の使用](../debugger/using-debuggertypeproxy-attribute.md)   
  [DebuggerDisplay 属性の使用](../debugger/using-the-debuggerdisplay-attribute.md)   
  [ウォッチと [クイック ウォッチ] ウィンドウ](../debugger/watch-and-quickwatch-windows.md)   

@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b2ad22eccb561bf58ee845d58268620aad778a20
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: cplusplus
+ms.openlocfilehash: 629bc4dc36ade84f6a6e55518775f0d11165da7c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-code-analysis-properties-for-cc-projects"></a>方法: C/C++ プロジェクトのコード分析プロパティを設定する
 コード分析ツールの構成ごとに、プロジェクトのコードを分析に使用する規則を構成することができます。 さらに、生成され、サード パーティ製ツールを使用して、プロジェクトに追加されたコードからの警告を抑制するコード分析を指示することができます。  
@@ -52,6 +53,6 @@ ms.lasthandoff: 11/15/2017
 ## <a name="rule-sets"></a>規則セット  
  ルール セットを選択して、コード分析で適用する規則を選択することができます、プロジェクトには、マネージ コードが含まれている場合、**この規則セットを実行** ボックスの一覧です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マネージ コードの品質の分析](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)   
  [C/C++ コードの警告に対応するコードの分析](../code-quality/code-analysis-for-c-cpp-warnings.md)

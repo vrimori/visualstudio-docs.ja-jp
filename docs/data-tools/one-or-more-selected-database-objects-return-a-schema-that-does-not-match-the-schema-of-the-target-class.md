@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 40842e1067a0b764a4b35ac679ee774f04347359
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: e188947f51cb8e277c71a072dfcee72922f37982
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="one-or-more-selected-database-objects-return-a-schema-that-does-not-match-the-schema-of-the-target-class"></a>1 つ以上の選択されたデータベース オブジェクトがターゲット データ クラスのスキーマに一致しないスキーマを返しました
 1 つ以上の選択されたデータベース オブジェクトがターゲット データ クラスのスキーマに一致しないスキーマを返しました。 デザイナーに何も追加されませんでした。  
@@ -30,5 +31,5 @@ ms.lasthandoff: 11/09/2017
 2.  ターゲット クラス (O/R デザイナーでデータベース オブジェクトのドロップ先となるクラス) のスキーマと一致するデータを返すデータベース オブジェクトを選択します。  
   
 ## <a name="see-also"></a>関連項目
-[O/R デザイナー メッセージ](../data-tools/o-r-designer-messages.md)  
+[O/R デザイナーのメッセージ](../data-tools/o-r-designer-messages.md)  
 [Visual Studio での LINQ to SQL ツールします。](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

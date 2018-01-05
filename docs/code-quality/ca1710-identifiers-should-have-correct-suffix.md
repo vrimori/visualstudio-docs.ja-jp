@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4fd4f23ab77e2b810d5064bd45e9f7d530e9844e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d1593800a2cde8ff0aa1bbecd169f5f3ebd601cb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ca1710-identifiers-should-have-correct-suffix"></a>CA1710: 識別子は、正しいサフィックスを含んでいなければなりません
 |||  
@@ -47,18 +48,18 @@ ms.lasthandoff: 10/31/2017
 |<xref:System.Attribute?displayProperty=fullName>|属性|  
 |<xref:System.EventArgs?displayProperty=fullName>|EventArgs|  
 |<xref:System.Exception?displayProperty=fullName>|例外|  
-|<xref:System.Collections.ICollection?displayProperty=fullName>|Collection|  
+|<xref:System.Collections.ICollection?displayProperty=fullName>|コレクション|  
 |<xref:System.Collections.IDictionary?displayProperty=fullName>|Dictionary|  
-|<xref:System.Collections.IEnumerable?displayProperty=fullName>|Collection|  
+|<xref:System.Collections.IEnumerable?displayProperty=fullName>|コレクション|  
 |<xref:System.Collections.Queue?displayProperty=fullName>|コレクションまたはキュー|  
 |<xref:System.Collections.Stack?displayProperty=fullName>|コレクションまたはスタック|  
-|<xref:System.Collections.Generic.ICollection%601?displayProperty=fullName>|Collection|  
+|<xref:System.Collections.Generic.ICollection%601?displayProperty=fullName>|コレクション|  
 |<xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>|Dictionary|  
 |<xref:System.Data.DataSet?displayProperty=fullName>|データセット|  
 |<xref:System.Data.DataTable?displayProperty=fullName>|コレクションまたはデータ テーブル|  
 |<xref:System.IO.Stream?displayProperty=fullName>|ストリーム|  
 |<xref:System.Security.IPermission?displayProperty=fullName>|アクセス許可|  
-|<xref:System.Security.Policy.IMembershipCondition?displayProperty=fullName>|状態|  
+|<xref:System.Security.Policy.IMembershipCondition?displayProperty=fullName>|条件|  
 |イベント ハンドラーのデリゲート。|EventHandler|  
   
  型を実装する<xref:System.Collections.ICollection>はディクショナリ、スタック、またはキューを使用できる型の使用目的に関する有益情報を提供する名などがあります、データ構造の一般的な型とします。  
@@ -92,6 +93,6 @@ foreach(SomeType x in SomeDictionary.Values) { }
 ## <a name="related-rules"></a>関連規則  
  [CA1711: 識別子は、不適切なサフィックスを含むことはできません](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [属性](/dotnet/standard/design-guidelines/attributes)   
  [処理と、イベントを発生させる](/dotnet/standard/events/index)  

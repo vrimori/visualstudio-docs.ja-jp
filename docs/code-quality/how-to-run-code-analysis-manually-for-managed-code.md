@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8bafcfbc47085aff25f88b87f7691862009752d6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 27701a6c0b44051095ebcd01cd6bb35a7e6dc077
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-run-code-analysis-manually-for-managed-code"></a>方法: マネージ コードについて手動でコード分析を実行する
 コード分析ツールに、ソース コードの障害に関する情報を提供します。 コード分析は、コード プロジェクトをビルドするたびに自動的に実行することができ、手動でコード分析を実行することもできます。 します。 コード分析の実行時にオンになっているルールは、プロジェクトのプロパティ ページの [コード分析] ページで指定されます。 詳細については、次を参照してください[する方法: マネージ コード プロジェクトのコード分析を構成する。](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)  

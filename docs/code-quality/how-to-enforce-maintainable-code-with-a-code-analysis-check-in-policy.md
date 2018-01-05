@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 39d9697c7d6a216c08e34eb19287d22a76d67a55
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 19d8761abea6934c59673c332ea09e8a0b4e6997
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>方法: コード分析のチェックイン ポリシーを使用して保守が容易なコードを適用する
 開発者は、複雑さ、そのコードの保守容易性を測定する、コード メトリックスのツールを使用できますが、チェックイン ポリシーの一部としてコード メトリックスを呼び出すことはできません。 ただし、チームは、そのコードのコード メトリックスの標準に準拠を確認し、チェックイン ポリシーを使用して、ルールを適用するコード分析規則を有効にできます。 コード メトリックスの詳細については、次を参照してください。、[コード メトリックス値](../code-quality/code-metrics-values.md)です。  
@@ -56,8 +57,8 @@ ms.lasthandoff: 10/31/2017
   
     -   さらに、規則違反を防ぐため、ビルドする場合は、選択、**警告をエラーとして扱う**規則の説明の横にあるチェック ボックスです。  
   
-3.  **[OK]** をクリックします。 新しいチェックイン ポリシーは、将来のチェックインを今すぐに適用されます。  
+3.  **[OK]**をクリックします。 新しいチェックイン ポリシーは、将来のチェックインを今すぐに適用されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コード メトリックス値](../code-quality/code-metrics-values.md)   
  [コード分析を用いたチェックイン ポリシーの作成と使用](../code-quality/creating-and-using-code-analysis-check-in-policies.md)

@@ -24,11 +24,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 95261dd96b6fdd7350254c74ae895965a3a8eeed
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 56cfc8dfdcb3c61b5f1eb1b0f14f3ad1af5fb89e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataset-visualizer-dialog-box"></a>[DataSet ビジュアライザー] ダイアログ ボックス
 DataSet ビジュアライザーを使用すると、DataSet、DataTable、DataView、または DataViewManager オブジェクトの内容を表示できます。 このビジュアライザーにアクセスするには、デバッガー変数ウィンドウまたは DataTip 内の各オブジェクトに対応する [値] の隣に表示される、虫眼鏡アイコンをクリックします。  
@@ -39,7 +40,7 @@ DataSet ビジュアライザーを使用すると、DataSet、DataTable、DataV
  テーブル  
  このドロップダウン リスト ボックスを使用して、視覚化するデータセット内のテーブルを選択します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [カスタム ビジュアライザーを作成します。](../debugger/create-custom-visualizers-of-data.md)   
  [デバッガー ウィンドウ](../debugger/debugger-windows.md)   
