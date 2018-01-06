@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 75efe0a16368859a61aceddd515e78bf7d57551d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6bc142df6d01a9c1ac49f656ec06250f5aba4fdd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgetvirtualtableshapeid"></a>IDiaSymbol::get_virtualTableShapeId
 シンボルの仮想テーブル シェイプのシンボル id を取得します。  
@@ -44,5 +45,5 @@ HRESULT get_virtualTableShapeId (
 ## <a name="remarks"></a>コメント  
  識別子は、一意としてすべてのシンボルをマークする DIA SDK によって作成された一意の値です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

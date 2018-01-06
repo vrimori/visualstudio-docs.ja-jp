@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7dd4baed877bd5d0262e966edf006dea80596b47
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 75b532005bf4aeb471aa16ecfc6ac8ff508e3c7f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="attaching-to-the-program"></a>プログラムへのアタッチ
 適切なポートに、プログラムを登録した後をデバッグするプログラムにデバッガーをアタッチする必要があります。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]
     >  これは、同じ`IDebugProgram2`に渡されたオブジェクト、`IDebugEngine2::Attach`メソッドです。 渡された以前`IDebugProgram2`オブジェクトは、ポートのみによって認識され、別のオブジェクトは、します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [添付ファイルの起動に基づく](../../extensibility/debugger/launch-based-attachment.md)   
  [イベントの送信](../../extensibility/debugger/sending-events.md)   
  [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)   

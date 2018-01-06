@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a19dee7c2b31df52a379f6ef2044a862baed7972
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 51768055893ccdc1479a724a44a7b6dbeb24877b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="baseclass"></a>BaseClass
 ユーザー定義型 (UDT) シンボルの各基本クラスが持つ子で識別される、`SymTagBaseClass`タグ。 [Idiasymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)プロパティが、基になる UDT の記号を格納および基になる、UDT のすべてのプロパティは使用可能なこの BaseClass シンボルの一部として。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="properties"></a>プロパティ  
  次の表は、この記号の型の他の有効なプロパティを示します。  
   
-|プロパティ|データ型|説明|  
+|プロパティ|データの種類|説明|  
 |--------------|---------------|-----------------|  
 |[IDiaSymbol::get_access](../../debugger/debug-interface-access/idiasymbol-get-access.md)|`DWORD`|この基本クラスに適用されるアクセス修飾子。 1 つ、 [CV_access_e 列挙型](../../debugger/debug-interface-access/cv-access-e.md)値。|  
 |[IDiaSymbol::get_classParent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md)|`IDiaSymbol*`|外側のクラス (存在する場合) の記号。|  
@@ -63,6 +64,6 @@ ms.lasthandoff: 10/31/2017
 |[IDiaSymbol::get_virtualTableShapeId](../../debugger/debug-interface-access/idiasymbol-get-virtualtableshapeid.md)|`DWORD`|仮想テーブル図形シンボルの ID です。|  
 |[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|`TRUE`場合は、基本クラスは、volatile としてマークされます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [シンボル型のクラス階層](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)   
  [UDT](../../debugger/debug-interface-access/udt.md)

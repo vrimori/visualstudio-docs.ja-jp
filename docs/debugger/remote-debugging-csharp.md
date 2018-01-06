@@ -19,11 +19,12 @@ caps.latest.revision: "65"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e5bfa2e09d96f383b39eb392d5172cf38d750cef
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 959622dff7770d314dc5fa2da1e8a81ade34cac4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="remote-debugging-a-c-or-visual-basic-project-in-visual-studio"></a>リモート Visual Studio での c# または Visual Basic プロジェクトのデバッグ
 別のコンピューターに配置されている Visual Studio アプリケーションをデバッグするをインストール、アプリの展開先コンピューターでリモート ツールを実行、Visual Studio からリモート コンピューターに接続するようにプロジェクトを構成して、アプリを実行します。
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/31/2017
   
 リモート ユニバーサル Windows アプリ (UWP) をデバッグする方法については、次を参照してください。[インストール済みのアプリ パッケージをデバッグ](debug-installed-app-package.md)です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 リモート デバッガーは、Windows 7 でサポートされていると新しい (phone ではない) と Windows Server の Windows Server 2008 Service Pack 2 以降のバージョン。 要件の一覧については、次を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)です。
 
@@ -107,7 +108,7 @@ ms.lasthandoff: 10/31/2017
 
 [!INCLUDE [remote-debugger-symbols](../debugger/includes/remote-debugger-symbols.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)   
  [リモート デバッグ用に Windows ファイアウォールを構成します。](../debugger/configure-the-windows-firewall-for-remote-debugging.md)   

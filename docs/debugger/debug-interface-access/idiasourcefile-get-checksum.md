@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c2bcfbc701f6f4799a51d09fac4c4eb184e6f5d7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3cc815608c1871de7269a432e02f95acbb3e0d81
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasourcefilegetchecksum"></a>IDiaSourceFile::get_checksum
 チェックサムのバイトを取得します。  
@@ -53,6 +54,6 @@ HRESULT get_checksum (
   
  一般的なチェックサムは、32 バイトを超えるサイズではありませんが、チェックサムの最大サイズであると想定されません。 設定、`data`パラメーターを`NULL`チェックサムを取得するために必要なバイト数を取得します。 適切なサイズのバッファーを割り当てし、新しいバッファーでもう一度このメソッドを呼び出します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)   
  [IDiaSourceFile::get_checksumType](../../debugger/debug-interface-access/idiasourcefile-get-checksumtype.md)

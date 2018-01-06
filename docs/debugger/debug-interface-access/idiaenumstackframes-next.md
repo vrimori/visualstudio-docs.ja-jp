@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 784744321a76c7142c948bac5c5f83a896d443be
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8bfdf9e71bfb13c9f8cc730a33ecb2813e117e5e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaenumstackframesnext"></a>IDiaEnumStackFrames::Next
 列挙のシーケンスから、指定した数のスタック フレーム要素を取得します。  
@@ -46,6 +47,6 @@ HRESULT Next(
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`です。 返します`S_FALSE`スタック フレームがある場合。 それ以外の場合はエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)   
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

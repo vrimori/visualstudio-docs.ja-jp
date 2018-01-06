@@ -25,11 +25,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 0091e17cf24a9476dde84cf2d8ad1a34f94e2cdd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: b02ef945136297287d18c2b29ea2d3afab1b3683
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hierarchical-update"></a>階層更新
 *階層更新*参照整合性を維持しながらをデータベースに戻す (2 つ以上の関連するテーブルを含むデータセット) から更新されたデータを保存するプロセスを指します。 *参照整合性*はデータベース内の挿入、更新、および関連するレコードの削除の動作を制御する制約によって定義される一貫性規則を参照します。 たとえば、その顧客の注文を作成できないを許可する前に、顧客レコードの作成を強制する参照整合性を勧めします。  データセットのリレーションシップの詳細については、次を参照してください[データセットのリレーションシップ。](../data-tools/relationships-in-datasets.md)  
@@ -93,7 +94,7 @@ ms.lasthandoff: 10/31/2017
 データベースにデータを保存する前に関連子テーブルに対する変更をコミットするだけでなく、新しい子レコードをデータセットに追加する前に、新しく作成された親レコードをコミットすることが必要な場合もあります。 つまり、外部キー制約により、新しい子レコード (Orders) をデータセットに追加する前に、データセットに新しい親レコード (Customer) を追加することが必要な場合もあります。 この操作を行うには、子 `BindingSource.AddingNew` イベントを使用します。  
   
 > [!NOTE]
->  新しい親レコードをコミットする必要があるかどうかは、データ ソースにバインドするために使用されるコントロールの種類によって異なります。 このチュートリアルでは、親テーブルにバインドする個別のコントロールを使用します。 これには、新しい親レコードをコミットするコードを追加が必要です。 親レコードは、複雑なバインド コントロールで代わりに表示されていた場合と同様に、 <xref:System.Windows.Forms.DataGridView>、この追加<xref:System.Windows.Forms.BindingSource.EndEdit%2A>呼び出しの親レコードは必要ありません。 これは、コントロールの基になるデータバインド機能によって、新しいレコードのコミットが行われるためです。  
+>  新しい親レコードをコミットする必要があるかどうかは、データ ソースにバインドするために使用されるコントロールの種類によって異なります。 このチュートリアルでは、親テーブルにバインドする個別のコントロールを使用します。 これには、新しい親レコードをコミットするコードを追加が必要です。 親レコードは、複雑なバインド コントロールで代わりに表示されていた場合と同様に、 <xref:System.Windows.Forms.DataGridView>、この追加<xref:System.Windows.Forms.BindingSource.EndEdit%2A>呼び出しの親レコードは必要ありません。 これは、コントロールの基になるデータ バインディング機能によって、新しいレコードのコミットが行われるためです。  
   
 #### <a name="to-add-code-to-commit-parent-records-in-the-dataset-before-adding-new-child-records"></a>データセットで新しい子レコードを追加する前に親レコードをコミットするコードを追加するには  
   
@@ -120,5 +121,5 @@ ms.lasthandoff: 10/31/2017
 |*tableName* `TableAdapter`プロパティ|表す、`TableAdapter`です。 生成された`TableAdapterManager`ごとにプロパティを含む`TableAdapter`を管理します。 Customers と Orders テーブルを含むデータセットが生成など、`TableAdapterManager`を格納している`CustomersTableAdapter`と`OrdersTableAdapter`プロパティです。|  
 |`UpdateOrder` プロパティ|個々 の insert、update、および delete コマンドの順序を制御します。 この設定の値のいずれかに、`TableAdapterManager.UpdateOrderOption`列挙します。<br /><br /> 既定では、`UpdateOrder`に設定されている**InsertUpdateDelete**です。 つまり、挿入し、更新、および削除しは、データセット内のすべてのテーブルに対して実行されます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)

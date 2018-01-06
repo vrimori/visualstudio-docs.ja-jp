@@ -18,11 +18,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 22ea6a58453de8c28703dbe0252ab6370be55bf3
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 7cc4d8420cd823964aeed790a412e462b14634c0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-n-tier-data-application"></a>チュートリアル : n 層データ アプリケーションの作成
 *N 層*データ アプリケーションは複数の論理レイヤーに分離され、データにアクセスするアプリケーションまたは*階層*です。 アプリケーション コンポーネントをこのように別個の層に分離すると、アプリケーションの保守容易性とスケーラビリティが向上します。 これは、ソリューション全体を再設計しなくても 1 つの層に適用できる、新しい技術を簡単に導入できるようにすることで実現されます。 n 層アーキテクチャには、プレゼンテーション層、中間層、およびデータ層が存在します。 通常、中間層には、データ アクセス層、ビジネス ロジック層、および認証や検証などの共有コンポーネントが含まれます。 データ層には、リレーショナル データベースが含まれます。 通常、n 層アプリケーションでは、機密情報が中間層のデータ アクセス層に格納され、プレゼンテーション層にアクセスするエンド ユーザーから分離されます。 詳細については、次を参照してください。 [N 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)です。  
@@ -123,7 +124,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
   
      Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は選択します。  
   
-     または  
+     - または -  
   
      選択**新しい接続**を開くには、**接続の追加** ダイアログ ボックス。  
   
@@ -219,7 +220,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
   
 3.  両方を選択、 **DataAccessTier**と**DataEntityTier**プロジェクト。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
 ## <a name="adding-functions-to-the-service-to-call-the-getcustomers-and-getorders-methods-in-the-data-access-tier"></a>データ アクセス層の GetCustomers メソッドおよび GetOrders メソッドを呼び出す関数のサービスへの追加  
  これで、データを返すメソッドをデータ アクセス層に含めることができました。次に、データ サービスにメソッドを作成して、データ アクセス層のメソッドを呼び出します。  
@@ -380,7 +381,7 @@ MaxReceivedMessageSize の既定値は、Customers テーブルと Orders テー
   
 -   サービスへの、データを更新してデータベースに戻す追加メソッドの追加。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [N 層アプリケーションでのデータセットを操作します。](../data-tools/work-with-datasets-in-n-tier-applications.md)   
  [階層更新](../data-tools/hierarchical-update.md)   
  [Visual Studio でのデータへのアクセス](../data-tools/accessing-data-in-visual-studio.md)

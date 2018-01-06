@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d2529a183163b0fb5eb36a43c9a4d074cb22b7a1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 20708f60ebe2ae1e055cef6dcce43d3e7316c77f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasessiongetglobalscope"></a>IDiaSession::get_globalScope
 グローバル スコープへの参照を取得します。  
@@ -38,7 +39,7 @@ HRESULT get_globalScope (
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Exe](../../debugger/debug-interface-access/exe.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

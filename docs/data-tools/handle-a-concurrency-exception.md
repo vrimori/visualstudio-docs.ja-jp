@@ -22,11 +22,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 9162274d234c22e8bbe299389d2b41f57a69d714
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: data-storage
+ms.openlocfilehash: 52243e28dbc35fbefb67fa1b52ce9fb6cdbda98d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="handle-a-concurrency-exception"></a>同時実行例外を処理します。
 2 人のユーザーが同じデータベースの同じデータを同時に変更しようとすると、同時実行例外 (<xref:System.Data.DBConcurrencyException>) が発生します。 このチュートリアルをキャッチする方法を示しています。 Windows アプリケーションを作成、 <xref:System.Data.DBConcurrencyException>、エラーが発生した行を見つけて、その処理方法の戦略について説明します。  
@@ -223,5 +224,5 @@ ms.lasthandoff: 11/07/2017
   
 10. 選択すると**いいえ**更新をキャンセルし、現在、データベース内にある値でデータセットを更新します。 選択すると**はい**提案された値をデータベースに書き込みます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)

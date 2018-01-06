@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 044c6ce1dafbd5ce753d9e3a98d41ed1963a77ee
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e128aa0a4cbb30106981b152252ff308e21669b7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interfaces-debug-interface-access-sdk"></a>インターフェイス (Debug Interface Access SDK)
 Vtable 順序のインターフェイスのページの内容のテーブル内の各インターフェイスでメソッドをアルファベット順に一覧表示されます。  
@@ -132,5 +133,5 @@ Vtable 順序のインターフェイスのページの内容のテーブル内�
  [定数 (Debug Interface Access SDK)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)  
  DIA SDK で使用できる定数をについて説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [参照](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)

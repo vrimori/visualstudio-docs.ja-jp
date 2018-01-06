@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b89d240980746a0a6a606bd43ff67f86e454bfdc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8c303bf0da1c3f6e5728681d697d2eedb84357d5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="funcdebugstart"></a>FuncDebugStart
 関数がどのデバッグで定義されたポイントを持つ場合は、最初に、ポイントが、シンボルで識別されることは、`SymTagFuncDebugStart`タグ。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="properties"></a>プロパティ  
  次の表は、この記号の型の有効なプロパティを示します。  
   
-|プロパティ|データ型|説明|  
+|プロパティ|データの種類|説明|  
 |--------------|---------------|-----------------|  
 |[IDiaSymbol::get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)|`DWORD`|オフセットの部分の場所です。詳細については、次を参照してください。、 [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)です。|  
 |[IDiaSymbol::get_addressSection](../../debugger/debug-interface-access/idiasymbol-get-addresssection.md)|`DWORD`|場所のセクションの一部詳細については、次を参照してください。、 [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)です。|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
 |[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|返します`SymTagFuncDebugStart`(のいずれか、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)値)。|  
 |[IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md)|`ULONGLONG`|実行可能ファイル内の関数の位置。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)   
  [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)   
  [シンボルの場所](../../debugger/debug-interface-access/symbol-locations.md)

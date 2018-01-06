@@ -13,11 +13,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 24d6401cae58b0bede44519900f6d72bd77ab2a9
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: c4dd77680fb529575140dc718a4f1c0a58090029
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>WPF と Entity Framework 6 の単純なデータ アプリケーションを作成します。
 このチュートリアルでは、SQL Server LocalDB、Northwind データベース、Entity Framework 6、および Windows Presentation Foundation での Visual Studio で基本的な「フォーム オーバー データ」アプリケーションを作成する方法を示します。 マスター/詳細ビューでは、基本的なデータ バインドを行う方法を示していて、さらに、カスタム「バインドのナビゲーター」の"Move Next"ボタンを含む"Move Previous、"「先頭に移動する、」"末尾に移動、"「更新」および「削除」です。  
@@ -57,17 +58,17 @@ ms.lasthandoff: 11/09/2017
   
 4.  Northwind データベースに基づくモデルを作成するのに Visual Studio を使用できます。  
   
-## <a name="create-the-model"></a>モデルを作成します。  
+## <a name="create-the-model"></a>モデルを作成する  
   
 1.  ソリューション エクスプ ローラーでプロジェクト ノードを右クリックし、選択**追加**、**新しい項目の追加.**.[C#] ノードで、左ペインで選択**データ**し、中央のペインで選択**ADO.NET エンティティ データ モデル**です。  
   
      ![Entity Framework モデル新しいプロジェクト項目](../data-tools/media/raddata-ef-new-project-item.png "raddata EF 新しいプロジェクト項目")  
 
-  2.  モデルを呼び出す`Northwind_model`し、[ok] を選択します。 これにより、 **Entity Data Model ウィザード**です。 選択**データベースから EF Designer** ] をクリックし、**次**です。  
+  2.  モデルを呼び出す`Northwind_model`し、[ok] を選択します。 これにより、 **Entity Data Model ウィザード**です。 選択**データベースから EF Designer**  をクリックし、**次**です。  
   
      ![データベースから EF モデル](../data-tools/media/raddata-ef-model-from-database.png "raddata データベースから EF モデル")  
   
-3.  次の画面とを選択して、LocalDB Northwind 接続] をクリック**次**です。  
+3.  次の画面とを選択して、LocalDB Northwind 接続 をクリック**次**です。  
   
 4.  ウィザードの次のページで、テーブル、ストアド プロシージャおよび Entity Framework モデルに含めるには、他のデータベース オブジェクトを選択します。 ツリー ビューで [dbo] ノードを展開し、顧客、注文と注文の詳細を選択します。 既定値をオンのままにし、をクリックして**完了**です。  
   
@@ -94,13 +95,13 @@ ms.lasthandoff: 11/09/2017
 ## <a name="databind-the-model-to-the-xaml-page"></a>Databind を XAML ページ モデル  
  データ バインド コードを記述することが実行するため、Visual Studio で自動的にはるかに簡単です。  
   
-1.  メイン メニューから選択**プロジェクト > [新しいデータ ソースの追加**を呼び出すこと、**データ ソース構成ウィザード**です。 選択**オブジェクト**おをデータベースではないモデル クラスをバインドするため。  
+1.  メイン メニューから選択**プロジェクト > 新しいデータ ソースの追加**を呼び出すこと、**データ ソース構成ウィザード**です。 選択**オブジェクト**おをデータベースではないモデル クラスをバインドするため。  
   
      ![データ ソース構成ウィザードとオブジェクト ソース](../data-tools/media/raddata-data-source-configuration-wizard-with-object-source.png "raddata オブジェクト ソースとデータ ソース構成ウィザード")  
   
 2.  顧客を選択します。  (注文のソースが自動的に生成されます顧客の注文のナビゲーション プロパティからです。)  
   
-     ![データ ソースとしてのエンティティ クラスの追加](../data-tools/media/raddata-add-entity-classes-as-data-sources.png "raddata [エンティティの追加のデータ ソースとしてクラス")  
+     ![データ ソースとしてのエンティティ クラスの追加](../data-tools/media/raddata-add-entity-classes-as-data-sources.png "raddata エンティティの追加のデータ ソースとしてクラス")  
   
 3.  をクリックして**完了**  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/09/2017
         </Grid.RowDefinitions>
     ```
 
-5.  デザイナーで表示しているように MainWindow.xaml を開くようになりました。 これにより、Visual Studio ウィンドウの余白にツールボックスの横にある、オプションとして表示するデータ ソース] ウィンドウ。 ウィンドウが開き、またはそれ以外の場合キーを押して] タブをクリックして**Shift + Alt + D**かを選択して**ビュー & #124 です。その他の Windows & #124 です。データ ソース**です。 独自の個々 のテキスト ボックスに顧客クラス内の各プロパティを表示しようとしています。 最初に顧客のコンボ ボックスの下向き矢印をクリックし、選択**詳細**です。 中間の行に移動すると、デザイナーが認識できるようにデザイン サーフェイスの中央部にノードをドラッグします。  これを紛失した場合は、XAML で後から手動で行を指定できます。 既定では、グリッド要素では、コントロールが垂直方向に配置されますが、この時点でする位置に配置して、フォーム上と同様にします。  たとえば、賢明かもしれませんアドレス上の上部に [名前] ボックスを配置します。 この記事のサンプル アプリケーションは、フィールドの順序を変更し、それら 2 つの列を並べ替えます。  
+5.  デザイナーで表示しているように MainWindow.xaml を開くようになりました。 これにより、Visual Studio ウィンドウの余白にツールボックスの横にある、オプションとして表示するデータ ソース ウィンドウ。 ウィンドウが開き、またはそれ以外の場合キーを押して タブをクリックして**Shift + Alt + D**かを選択して**ビュー &#124;です。その他の Windows &#124;です。データ ソース**です。 独自の個々 のテキスト ボックスに顧客クラス内の各プロパティを表示しようとしています。 最初に顧客のコンボ ボックスの下向き矢印をクリックし、選択**詳細**です。 中間の行に移動すると、デザイナーが認識できるようにデザイン サーフェイスの中央部にノードをドラッグします。  これを紛失した場合は、XAML で後から手動で行を指定できます。 既定では、グリッド要素では、コントロールが垂直方向に配置されますが、この時点でする位置に配置して、フォーム上と同様にします。  たとえば、賢明かもしれませんアドレス上の上部に [名前] ボックスを配置します。 この記事のサンプル アプリケーションは、フィールドの順序を変更し、それら 2 つの列を並べ替えます。  
   
      ![お客様のデータ ソースのバインドを個別のコントロール](../data-tools/media/raddata-customers-data-source-binding-to-individual-controls.png "raddata 顧客のデータ ソース バインドを個別のコントロール")  
   
@@ -422,7 +423,7 @@ Visual Studio によって生成される既定の配置には適していませ
 [!code-csharp[CommandHandlers#3](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#3)]  
   
 ## <a name="run-the-application"></a>アプリケーションの実行
-キーを押してデバッグを開始する**f5 キーを押して**です。 顧客と注文データのグリッドで、設定の表示し、ナビゲーション ボタンは期待どおりに動作する必要があります。 データを入力した後に、モデルに新しい顧客や注文を追加するには、「コミット」をクリックします。 データを保存せず、新しい顧客または新しい注文フォームからバックアップするには、「キャンセル」をクリックします。 既存の顧客と注文、テキスト ボックス内で直接編集を行うことができ、それらの変更がモデルに自動的に書き込まれます。  
+デバッグを開始するには、**F5** キーを押します。 顧客と注文データのグリッドで、設定の表示し、ナビゲーション ボタンは期待どおりに動作する必要があります。 データを入力した後に、モデルに新しい顧客や注文を追加するには、「コミット」をクリックします。 データを保存せず、新しい顧客または新しい注文フォームからバックアップするには、「キャンセル」をクリックします。 既存の顧客と注文、テキスト ボックス内で直接編集を行うことができ、それらの変更がモデルに自動的に書き込まれます。  
   
 ## <a name="see-also"></a>関連項目
 [.NET 用の Visual Studio データ ツール](../data-tools/visual-studio-data-tools-for-dotnet.md)  

@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b00b4374e7cf6f48ce6ab10276db0bb914d27cb7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ef2581d357fe2b35ad80f4d2085b0f8f2dbb28cb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgetoemsymbolid"></a>IDiaSymbol::get_oemSymbolId
 相手先ブランド供給業者 (OEM) シンボルの ID 値を取得します。  
@@ -46,6 +47,6 @@ HRESULT get_oemSymbolId (
   
  このプロパティのシンボルにのみ適用されます、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)の入力`SymTagCustomType`です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)

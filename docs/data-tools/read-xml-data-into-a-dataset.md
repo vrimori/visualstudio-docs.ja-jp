@@ -24,11 +24,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 31c17df9b8b3e0a0b54d99f95e8a3d5704140cf7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: 093dbb5ee8f088a7f2e4ccd1dd063cfeecc2c5e3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="read-xml-data-into-a-dataset"></a>XML データをデータセットに読み込む
 ADO.NET では、XML データを操作するための簡単な方法を提供します。 このチュートリアルでは、データセットに XML データを読み込む Windows アプリケーションを作成します。 データセットが表示されます、<xref:System.Windows.Forms.DataGridView>コントロール。 最後に、XML ファイルの内容に基づいて XML スキーマは、テキスト ボックスに表示されます。  
@@ -169,9 +170,9 @@ ADO.NET では、XML データを操作するための簡単な方法を提供�
     |-------------|--------------|-------------|  
     |`TextBox1`|**Multiline**|`true`|  
     ||**スクロール バー**|**垂直方向**|  
-    |`Button1`|**名前**|`ReadXmlButton`|  
+    |`Button1`|**Name**|`ReadXmlButton`|  
     ||**[テキスト]**|`Read XML`|  
-    |`Button2`|**名前**|`ShowSchemaButton`|  
+    |`Button2`|**Name**|`ShowSchemaButton`|  
     ||**[テキスト]**|`Show Schema`|  
   
 ## <a name="create-the-dataset-that-receives-the-xml-data"></a>XML データを受信するデータセットを作成します。  
@@ -245,6 +246,6 @@ ADO.NET では、XML データを操作するための簡単な方法を提供�
   
 -   データセットのデータを編集し、データベースに書き込みます。 詳細については、次を参照してください。[データの保存](../data-tools/saving-data.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio でのデータへのアクセス](../data-tools/accessing-data-in-visual-studio.md)       
  [Visual Studio の XML ツール](../xml-tools/xml-tools-in-visual-studio.md)

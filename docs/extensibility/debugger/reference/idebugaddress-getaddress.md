@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3ed14b69dbc116514b191aadf58d209b4d39e458
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3fdaf96f0026a6ef89bf9eb234c97ee7bdff700a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugaddressgetaddress"></a>IDebugAddress::GetAddress
 オブジェクトとそのスコープまたはコンテナー内でその場所を記述する構造体を返します。  
@@ -47,5 +48,5 @@ int GetAddress(
 ## <a name="remarks"></a>コメント  
  [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)このメソッドは、適切な情報を使用して格納する構造体が渡されます。 この情報を解釈する方法は、返される情報およびシンボル ハンドラー自体の種類によって異なります。 参照してください[DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)詳細についてはします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)

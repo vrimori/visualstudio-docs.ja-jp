@@ -16,11 +16,12 @@ caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bc4424b3cf277bcee13123081deecac070344054
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e4dec66fca6061601c4bc02389605d140ee3bb81
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-stored-font-and-color-settings"></a>ストアドのフォントおよび色の設定にアクセスします。
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) がフォントを変更した設定を格納し、レジストリの色します。 使用することができます、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>これらの設定にアクセスするインターフェイスです。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 10/31/2017
   
  すべての設定**表示項目**特定の**カテゴリ**のメソッドを使用して取得できます、`T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults`インターフェイスです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>   
  <xref:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS>   
  [カスタム カテゴリと 表示項目を実装します。](../extensibility/implementing-custom-categories-and-display-items.md)

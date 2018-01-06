@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4a092cc6044f42a53abf97ff36417a23c1f2adca
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6cbd88bbe3e8a752721047ee80d847e72cf115b9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiastackwalkhelper"></a>IDiaStackWalkHelper
 プログラム デバッグ データベース (.pdb) ファイルを使用して、スタック ウォークが容易になります。  
@@ -52,14 +53,14 @@ IDiaStackWalkHelper: IUnknown
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
  クライアント アプリケーションでは、プログラムの実行中にスタックのウォークをサポートするためにこのインターフェイスを実装します。 このインターフェイスのインスタンスに渡される、 [IDiaStackWalker::getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md)または[IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md)メソッドです。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)   
  [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)   

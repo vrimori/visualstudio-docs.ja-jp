@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cdc3b6737d66e599da21766897148252269820e8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 24e30c0a69a945680e91a96588c9c5bc67e4975a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgetarrayindextypeid"></a>IDiaSymbol::get_arrayIndexTypeId
 シンボルの配列インデックス型の識別子を取得します。  
@@ -44,12 +45,12 @@ HRESULT get_arrayIndexTypeId (
 ## <a name="remarks"></a>コメント  
  識別子は、一意としてすべてのシンボルをマークする DIA SDK によって作成された一意の値です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
 |ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK v7.0|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

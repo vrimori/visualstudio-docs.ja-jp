@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 37d8e960d256b8746781668068978aa72f45155c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 4dcb46fc2fb3936e0cee91426b4787945bd14f59
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stackframetypeenum"></a>StackFrameTypeEnum
 スタック フレームの種類を指定します。  
@@ -58,9 +59,9 @@ enum StackFrameTypeEnum {
 ## <a name="remarks"></a>コメント  
  この列挙体の値がへの呼び出しによって返される、 [idiastackframe::get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)メソッドです。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: cvconst.h  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [列挙体と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaStackFrame::get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)

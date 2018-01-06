@@ -21,11 +21,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: f8d1d25c2aaa66658df53dbaea366c196e8e7f6b
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 303caa59af4cbcbafa9ec14fb6ffb3559d6b1bab
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-save-data-in-a-transaction"></a>チュートリアル: トランザクション内のデータを保存します。
 このチュートリアルを使用して、トランザクションでデータを保存する方法を示します、<xref:System.Transactions>名前空間。 このチュートリアルでは、Windows フォーム アプリケーションを作成します。 データ ソース構成ウィザードを使用して、Northwind サンプル データベース内のデータセットを 2 つのテーブルを作成します。 Windows フォームにデータ バインド コントロールと BindingNavigator の保存ボタン TransactionScope は、内部データベースを更新するためのコードを変更してみますを追加します。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/09/2017
   
     -   Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は選択します。  
   
-         または  
+         - または -  
   
     -   選択**新しい接続**を起動する、**接続接続の追加/変更** ダイアログ ボックスし、Northwind データベースへの接続を作成します。  
   

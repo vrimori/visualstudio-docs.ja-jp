@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ea233e8bf26b3bbb9dd7b1e962e3729e172b5a7e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 1f50ae8c40da9c895773330f488e63850013d35b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-debug-interface-access-sdk"></a>データ (Debug Interface Access SDK)
 すべての変数、パラメーター、ローカル変数など、グローバル変数、およびクラス メンバーの場合は、によって識別`SymTagData`シンボル。 定数値 (`LocIsConstant`) この型でも識別されます。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="properties"></a>プロパティ  
  次の表は、この記号の型の有効なプロパティを示します。  
   
-|プロパティ|データ型|説明|  
+|プロパティ|データの種類|説明|  
 |--------------|---------------|-----------------|  
 |[IDiaSymbol::get_access](../../debugger/debug-interface-access/idiasymbol-get-access.md)|`DWORD`|フィールドの値の 1 つ場合、 [CV_access_e 列挙型](../../debugger/debug-interface-access/cv-access-e.md)です。|  
 |[IDiaSymbol::get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)|`DWORD`|オフセットの部分の場所です。詳細については、次を参照してください。、 [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)です。|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/31/2017
 |[IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md)|`ULONGLONG`|実行可能ファイル内のデータの位置。|  
 |[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|`TRUE`場合は、データは、volatile としてマークされます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CV_access_e 列挙型](../../debugger/debug-interface-access/cv-access-e.md)   
  [DataKind 列挙型](../../debugger/debug-interface-access/datakind.md)   
  [シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)   

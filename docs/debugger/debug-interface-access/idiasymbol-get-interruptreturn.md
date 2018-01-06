@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0152db685eedd82915eddb817aecc8208a1f821e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a2180c81c818c2c78815ca23dca7460ea84c60d1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgetinterruptreturn"></a>IDiaSymbol::get_interruptReturn
 関数に割り込み命令からの戻り値が含まれるかどうかを指定するフラグを取得します (たとえば、X86 アセンブリ コード`iret`)。  
@@ -41,12 +42,12 @@ HRESULT get_interruptReturn(
 > [!NOTE]
 >  戻り値の`S_FALSE`プロパティが、シンボルを使用できないことを意味します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
 |ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK バージョン 8.0|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

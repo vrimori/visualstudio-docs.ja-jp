@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7beda305bbe0673b6e1b47f0e11eb641ab8aa0d5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cfcb19170221ea7e37a25cb93c7bf77fc769fd1a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiainjectedsource"></a>IDiaInjectedSource
 アクセスは、DIA データ ソースに格納されているソース コードを挿入します。  
@@ -113,14 +114,14 @@ void PrintInjectedSource(IDiaInjectedSource* pSource)
 }  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [Idiaenuminjectedsources::item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md)   
  [Idiaenuminjectedsources::next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md)   

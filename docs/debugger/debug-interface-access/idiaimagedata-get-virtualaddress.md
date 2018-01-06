@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 71c8dc85487e26a9d9bc576b5b71861c9352627d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7f415bf2c349e2073b129e3699d8902c28aafac0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaimagedatagetvirtualaddress"></a>IDiaImageData::get_virtualAddress
 イメージの仮想メモリの場所を取得します。  
@@ -38,5 +39,5 @@ HRESULT get_virtualAddress (
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)

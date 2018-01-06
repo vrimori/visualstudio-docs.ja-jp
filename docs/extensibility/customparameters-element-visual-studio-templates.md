@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 90515cfa8a3aea03336aaee5503cb41df4704953
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1b5fa3543113641666977816fadec49a02bc912a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customparameters-element-visual-studio-templates"></a>CustomParameters 要素 (Visual Studio テンプレート)
 ウィザードを使用するパラメーターの置換時に、テンプレート ウィザードに渡すカスタム パラメーターをグループ化します。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/31/2017
 </CustomParameters>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CustomParameter 要素 (Visual Studio テンプレート)](../extensibility/customparameter-element-visual-studio-templates.md)   
  [テンプレート パラメーター](../ide/template-parameters.md)   
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)

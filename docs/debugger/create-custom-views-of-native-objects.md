@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2aa3a6f515ca039c86d453f5729800fe8e1637c0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: cplusplus
+ms.openlocfilehash: 340d0d7366749f402cb76f3075778fb2b7ea215b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-custom-views-of-native-objects-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでのネイティブ オブジェクトのカスタム ビューを作成します。
 Visual Studio の Natvis フレームワークでは、Visual Studio デバッガー変数ウィンドウでのネイティブ型の表示方法をカスタマイズすることができます (たとえば、**ウォッチ**ウィンドウで、**ローカル**ウィンドウで、し、 **データヒント**です。
@@ -217,7 +218,7 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
 ```  
   
 ####  <a name="BKMK_Versioning"></a> Version 要素  
- `Version` 要素を使用して、視覚化の適用範囲を特定のモジュールとそれらのバージョンに制限すると、名前の競合を最小限に抑えることができ、型のバージョンごとに異なる視覚化を使用できます。 次に例を示します。  
+ `Version` 要素を使用して、視覚化の適用範囲を特定のモジュールとそれらのバージョンに制限すると、名前の競合を最小限に抑えることができ、型のバージョンごとに異なる視覚化を使用できます。 例:  
   
 ```xml
 <Type Name="DirectUI::Border">  

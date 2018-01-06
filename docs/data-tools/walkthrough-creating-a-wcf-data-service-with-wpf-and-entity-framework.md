@@ -20,11 +20,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: aed66709c89c84c6dc4062ca8a4c2c3f38b368ec
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: data-storage
+ms.openlocfilehash: 5c1d86d634579370565f2def7af233b4edffae53
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>チュートリアル: WPF および Entity Framework と WCF データ サービスを作成します。
 このチュートリアルは、単純なを作成する方法を示します[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]でホストされている、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションとして、Windows フォーム アプリケーションからアクセスします。  
@@ -95,7 +96,7 @@ ms.lasthandoff: 11/07/2017
   
     -   Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は選択します。  
   
-         または  
+         - または -  
   
     -   選択、**新しい接続**新しいデータ接続を構成するボタンをクリックします。 詳細については、次を参照してください。[新しい接続を追加](../data-tools/add-new-connections.md)です。  
   
@@ -288,6 +289,6 @@ ms.lasthandoff: 11/07/2017
   
 6.  テキスト ボックスに入力**ロンドン**、ボタンをクリックしています。 ロンドンの顧客だけが表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Windows Communication Foundation サービスと Visual Studio での WCF Data Services](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)   
  [方法: WCF データ サービス参照を追加、更新、または削除する](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md)

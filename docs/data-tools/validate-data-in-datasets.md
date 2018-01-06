@@ -25,11 +25,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 0f328cbaac03680885bdbda97dff7bc9ac3cf2cf
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: b5cc63d5a83c9f1400dd183982fa68864d35fdbf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="validate-data-in-datasets"></a>データセット内のデータを検証します。
 データの検証は、データ オブジェクトに入力されている値がデータセットのスキーマ内の制約に従っていることを確認するプロセスです。 検証プロセスはまた、これらの値がアプリケーション用に設定されている規則に従っていることを確認します。 更新プログラムを基になるデータベースに送信する前にデータを検証することをお勧めします。 これにより、エラーだけでなく、アプリケーションとデータベース間のラウンド トリップの潜在的な数が減少します。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="data-update-events"></a>データ更新イベント  
   
-|イベント|説明|  
+|event|説明|  
 |-----------|-----------------|  
 |<xref:System.Data.DataTable.ColumnChanging>|列の値が変更されています。 イベントは、行と列を提案された新しい値とするには、渡します。|  
 |<xref:System.Data.DataTable.ColumnChanged>|列の値が変更されました。 イベントは、行と列を提案された値と共に、渡します。|  

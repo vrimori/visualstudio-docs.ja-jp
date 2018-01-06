@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 87ae8076faae34ae55c227f0b9306cc7eacad848
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d4dd41975d65fe44f0fbe1f2ad361ceab71277b7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idialinenumbergetcompiland"></a>IDiaLineNumber::get_compiland
 イメージのテキストのバイト数を引き起こしているコンパイル単位のシンボルへの参照を取得します。  
@@ -38,5 +39,5 @@ HRESULT get_compiland (
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`です。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

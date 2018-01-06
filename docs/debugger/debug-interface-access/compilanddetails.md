@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9bfbb1e05dadb18e9357e38d6ed660c248dccec4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cc892cbdf49ab883c2bd45f4ef13ddda21b23d83
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compilanddetails"></a>CompilandDetails
 シンボルの情報をコンパイル単位に分割されて、`SymTagCompiland`タグ (解像度の低い) と`SymTagCompilandDetails`タグ (高詳細)。 `SymTagCompilandDetails`追加のシンボルの読み込みが必要です。 ただし、豊富なコンパイル単位では使用できないことに関する情報を提供する`SymTagCompiland`シンボル。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="properties"></a>プロパティ  
  次の表は、この記号の型の有効なプロパティを示します。  
   
-|プロパティ|データ型|説明|  
+|プロパティ|データの種類|説明|  
 |--------------|---------------|-----------------|  
 |[IDiaSymbol::get_backEndBuild](../../debugger/debug-interface-access/idiasymbol-get-backendbuild.md)|`DWORD`|コンパイラのバックエンド ビルド番号。|  
 |[IDiaSymbol::get_backEndMajor](../../debugger/debug-interface-access/idiasymbol-get-backendmajor.md)|`DWORD`|コンパイラのバックエンドのメジャー バージョン番号。|  
@@ -54,6 +55,6 @@ ms.lasthandoff: 10/31/2017
 ## <a name="remarks"></a>コメント  
  コンパイラには多くの場合、2 つのパス コンパイラ; と呼ばれるフォーム一部のコンパイラ バージョンでは、各パスは別のプログラムによって処理されます。 これらと呼ばれますフロント エンドとバックエンドのコンパイラでは、それぞれ、したがってバックエンドとフロント エンドのバージョン番号のシンボル プロパティです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コンパイル単位](../../debugger/debug-interface-access/compiland.md)   
  [シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)

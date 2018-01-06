@@ -39,11 +39,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: b73e2cf93cf0f557db072586b7aa67ab730fad4f
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: data-storage
+ms.openlocfilehash: 898cdbd15367aef6ac48d35a44b1ccb4a3deded9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Visual Studio での Windows Communication Foundation サービスと WCF データ サービス
 Visual Studio には、Windows Communication Foundation (WCF) を操作するためのツールが用意されていて、 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]、分散アプリケーションを作成するための Microsoft テクノロジです。 このトピックでは、サービスからの概要、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]パースペクティブです。 完全なドキュメントを参照してください。 [WCF データ サービス 4.5](/dotnet/framework/data/wcf/index)です。  
@@ -251,5 +252,5 @@ Windows Communication Foundation (WCF) サービスのほとんどのメソッ�
   
  <xref:System.Data.Services>  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [.NET 用の Visual Studio データ ツール](../data-tools/visual-studio-data-tools-for-dotnet.md)

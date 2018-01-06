@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8263d0984ad0245760d7a678f4d8848e6519de2e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0ea87461da8523f788d1974f8aa104661a07c570
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgetvirtualaddress"></a>IDiaSymbol::get_virtualAddress
 場所の仮想アドレス (VA) を取得します。 使用する場合、 [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)に設定されている`LocIsStatic`です。  
@@ -41,6 +42,6 @@ HRESULT get_virtualAddress (
 > [!NOTE]
 >  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)

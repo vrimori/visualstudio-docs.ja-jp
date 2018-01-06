@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 11bbc11200340d51d1b680202df78fc7ab76e7d9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5c59cb3c82e60eff992ba07c382a24ec10d4b64c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgetpure"></a>IDiaSymbol::get_pure
 関数が純粋なかどうかを指定するフラグを取得する仮想です。  
@@ -41,5 +42,5 @@ HRESULT get_pure (
 > [!NOTE]
 >  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

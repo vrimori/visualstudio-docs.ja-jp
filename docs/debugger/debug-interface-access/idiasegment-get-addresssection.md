@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b912736465a5a518d3a0c3f2412617f8edca3ac3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 1bf01dc0d71beb93a569e9c36d3fec36408e15f2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasegmentgetaddresssection"></a>IDiaSegment::get_addressSection
 このセグメントにマップされるセクション数を取得します。  
@@ -38,5 +39,5 @@ HRESULT get_addressSection (
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`です。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

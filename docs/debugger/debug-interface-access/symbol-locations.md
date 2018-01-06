@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dd2ab3403fe01ce4ead0d3e388eaadbc34595675
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a4cd226ebc3d2853ddfa35f42c5990db940c4424
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="symbol-locations"></a>シンボルの場所
 ほとんどのシンボル、イメージ ファイル内で定義済みの場所であります。 値で、シンボルの場所が指定されて、 [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)列挙します。 シンボルの場所に応じて他のプロパティをサポートできます。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/31/2017
 |`LocInMetaData`|[IDiaSymbol::get_token](../../debugger/debug-interface-access/idiasymbol-get-token.md)|  
 |`LocIsConstant`|[IDiaSymbol::get_value](../../debugger/debug-interface-access/idiasymbol-get-value.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Idiasymbol::get_addressoffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)   
  [Idiasymbol::get_addresssection](../../debugger/debug-interface-access/idiasymbol-get-addresssection.md)   
  [Idiasymbol::get_bitposition](../../debugger/debug-interface-access/idiasymbol-get-bitposition.md)   

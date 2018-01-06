@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8abfd209e5c2f59a0c55128eb235fda868f4bfd5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: eec04b3ab02f10d6eb9d745c21d2d0872df0ab8b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiastackwalkhelperputregistervalue"></a>IDiaStackWalkHelper::put_registerValue
 レジスタの値を設定します。  
@@ -45,6 +46,6 @@ HRESULT put_registerValue (
 ## <a name="remarks"></a>コメント  
  値のサイズに関係なく、実装はだけ何レジスタは、通常を保持を保存する必要があります。 たとえば、8 ビット レジスタのみ、最下位 8 ビットの指定した値を保持します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   
  [CV_HREG_e 列挙型](../../debugger/debug-interface-access/cv-hreg-e.md)

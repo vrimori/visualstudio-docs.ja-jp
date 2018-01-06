@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2504807bd4717ec7f42ed059e7ef4d962c7441e4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 77dd01333941e897628a40a5a5dc1749917dcb89
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows-in-visual-studio"></a>自動変数 内の変数と Visual Studio の ローカル ウィンドウを調べる
 **[自動変数]**ウィンドウ (デバッグ中に**ctrl キーと alt キーを押しながら V、A**、または**デバッグ > Windows > [自動変数]**) および**ローカル**(デバッグ中にウィンドウ、 **Ctrl キーと alt キーを押しながら V、L**、または**デバッグ > Windows > [ローカル]**) は、デバッグ中に、変数の値を表示するときに、非常に便利です。 **[ローカル]** ウィンドウにはローカル スコープで定義されている変数が表示されます。これは一般に、現在実行されている関数またはメソッドです。 **[自動変数]** ウィンドウには、現在の行 (デバッガーが停止している場所) の付近で使用されている変数が表示されます。 このウィンドウでどの変数が正確に表示は、さまざまな言語では異なります。 以下の「 [What variables appear in the Autos Window?](#bkmk_whatvariables)   
@@ -137,5 +138,5 @@ private static int subtractVars(int i, int j)
   
 ![DebugLocationToolbar](../debugger/media/debuglocationtoolbar.png "DebugLocationToolbar")   
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガー ウィンドウ](../debugger/debugger-windows.md)

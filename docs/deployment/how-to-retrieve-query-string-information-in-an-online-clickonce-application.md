@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 05862ea88623616cc237c55509c74169b9ce2383
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: e0fb359dba89a3eef6f257b0cfe560a3f3ab5738
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-retrieve-query-string-information-in-an-online-clickonce-application"></a>方法 : オンライン ClickOnce アプリケーションでクエリ文字列を取得する
 *クエリ文字列* とは、URL のうちの疑問符 (?) で始まる部分であり、 *name=value*の形式で任意の情報を記述します。 たとえば、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] でホストされている `WindowsApp1` という `servername`アプリケーションがあり、このアプリケーションを起動するときに、 `username` という変数に値を渡すとします。 URL は次のようになります。  
@@ -81,5 +82,5 @@ ms.lasthandoff: 10/27/2017
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  悪意のある文字の入力を使用前に削除する予定である場合にのみ、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションに URL パラメーターを渡すことができるようにしてください。 たとえば、引用符、スラッシュ、またはセミコロンが埋め込まれた文字列を、フィルターしないままデータベースに対する SQL クエリに使用すると、任意のデータ操作が行われる可能性があります。 クエリ文字列のセキュリティの詳細については、「 [Script Exploits Overview](http://msdn.microsoft.com/Library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce アプリケーションのセキュリティ](../deployment/securing-clickonce-applications.md)

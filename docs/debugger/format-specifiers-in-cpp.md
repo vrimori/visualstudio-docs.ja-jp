@@ -30,11 +30,12 @@ caps.latest.revision: "40"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0318f5a3cb1cd19c658030d64c4f6ec8bcbf0a9f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: cplusplus
+ms.openlocfilehash: 11be1eb546902e8e37843383fe499274f819883f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>C++ では、Visual Studio デバッガーでの書式指定子
 書式指定子を使用して、 **ウォッチ** ウィンドウに表示される値の書式設定を変更することができます。  
@@ -67,7 +68,7 @@ int main() {
   
 |指定子|形式|元の [ウォッチ] の値|表示される値|  
 |---------------|------------|--------------------------|---------------------|  
-|d|10 進整数|0x00000066|102|  
+|日|10 進整数|0x00000066|102|  
 |o|符号なし 8 進整数。|0x00000066|000000000146|  
 |x<br /><br /> **h**|16 進整数|102|0xcccccccc|  
 |x<br /><br /> **H**|16 進整数|102|0xcccccccc|  
@@ -82,7 +83,7 @@ int main() {
 |env|環境ブロック (2 つの null 終了文字列)|\<位置 > L"=:: =::\\\\"|L"=:: =::\\\\\\0 = C: = C:\\\\windows\\\\system32\\0ALLUSERSPROFILE =…|
 |**s32**|UTF-32 文字列|\<位置 > U"hello world"|u"hello world"|  
 |**s32b**|UTF-32 文字列 (引用符なし)|\<位置 > U"hello world"|hello world|  
-|**en**|列挙型|Saturday(6)|土曜日|  
+|**en**|enum|Saturday(6)|土曜日|  
 |**hv**|ポインター型。検査されるポインター値が配列のヒープ割り当ての結果であることを意味します (たとえば、 `new int[3]`)。|\<位置 > {\<最初のメンバー >}|\<位置 > {\<最初のメンバー >、 \<2 番目のメンバー >,…}|  
 |**na**|オブジェクトのポインターのメモリ アドレスを非表示にします。|\<場所 >、{メンバーの値... の =}|{メンバーの値... の =}|  
 |**nd**|基底クラスの情報だけを表示し、派生クラスは無視します。|`(Shape*) square` には基底クラスおよび派生クラスの情報が含まれます。|基底クラスの情報だけを表示します。|  
@@ -132,14 +133,14 @@ int main() {
 |シンボル|形式|元の [ウォッチ] の値|表示される値|  
 |------------|------------|--------------------------|---------------------|  
 |**ma**|64 ASCII 文字。|0x0012ffac|0x0012ffac .4...0...".0W&.......1W&.0.:W..1...."..1.JO&.1.2.."..1...0y....1|  
-|**m**|16 バイトの 16 進数。16 文字の ASCII 文字が続きます。|0x0012ffac|0x0012ffac B3 34 CB 00 84 30 94 80 FF 22 8A 30 57 26 00 00 .4...0...".0W&..|  
-|**mb**|16 バイトの 16 進数。16 文字の ASCII 文字が続きます。|0x0012ffac|0x0012ffac B3 34 CB 00 84 30 94 80 FF 22 8A 30 57 26 00 00 .4...0...".0W&..|  
+|**m**|16 バイトの 16 進数。16 文字の ASCII 文字が続きます。|0x0012ffac|0x0012ffac B3 34 CB 00 84 30 94 80 FF 22 8A 30 57 26 00 00 .4...0...".0W&amp;.|  
+|**mb**|16 バイトの 16 進数。16 文字の ASCII 文字が続きます。|0x0012ffac|0x0012ffac B3 34 CB 00 84 30 94 80 FF 22 8A 30 57 26 00 00 .4...0...".0W&amp;.|  
 |**mw**|8 ワード。|0x0012ffac|0x0012ffac 34B3 00CB 3084 8094 22FF 308A 2657 0000|  
 |**md**|4 ダブルワード。|0x0012ffac|0x0012ffac 00CB34B3 80943084 308A22FF 00002657|  
 |**mq**|2 クワドワード。|0x0012ffac|0x0012ffac 7ffdf00000000000 5f441a790012fdd4|  
 |**mu**|2 バイト文字 (Unicode)|0x0012ffac|0x0012ffac 8478 77f4 ffff ffff 0000 0000 0000 0000|  
   
-###  <a name="BKMK_Size_specifier_for_pointers_as_arrays_in_interop_debugging_and_C___edit_and_continue"></a> C++/CLI での相互運用機能デバッグでの配列としてのポインターのサイズ指定子  
+###  <a name="BKMK_Size_specifier_for_pointers_as_arrays_in_interop_debugging_and_C___edit_and_continue"></a>C + を使用して相互運用機能デバッグでの配列としてのポインターのサイズ指定子 + CLI  
  オブジェクトに対するポインターを配列として表示する場合、整数で配列要素数を指定できます。  
   
 |指定子|形式|式|表示される値|  

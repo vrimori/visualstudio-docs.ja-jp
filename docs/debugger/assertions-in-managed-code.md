@@ -26,11 +26,12 @@ caps.latest.revision: "29"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 283903076a5f6e465f3cb87be7d6710af8d914ef
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: e60235e497f770d7e8ce30e27c3a86143f7144e4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assertions-in-managed-code"></a>マネージ コードのアサーション
 アサーション、つまり `Assert` ステートメントは、条件をテストします。この条件は、`Assert` ステートメントへの引数として指定します。 条件が true と評価された場合、アクションは発生しません。 条件が false と評価された場合、アサーションは失敗です。 また、デバッグ ビルドを実行している場合、プログラムは中断モードになります。  
@@ -155,7 +156,7 @@ Debug.Assert ( temp != 0 );
   
 -   `/d:TRACE` (Visual C# および C++ の場合)  
   
- C# または Visual Basic のリリース ビルドで Debug メソッドを使用する必要がある場合は、リリース構成に DEBUG シンボルを定義する必要があります。  
+ C# または Visual Basic のリリース ビルドで Debug メソッドを使用する必要がある場合は、リリース構成にデバッグ シンボルを定義する必要があります。  
   
  C++ は、<xref:System.Diagnostics.Debug> クラスのメソッドをサポートしません。 使用して同じ効果を得ることができます、<xref:System.Diagnostics.Trace>条件付きコンパイルは、のようにクラス`#ifdef DEBUG`しています.`#endif`. これらのシンボルを定義することができます、 **\<プロジェクト > プロパティ ページ** ダイアログ ボックス。 詳細については、次を参照してください。 [Visual Basic デバッグ構成のプロジェクトの設定を変更する](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)または[C または C++ デバッグ構成のプロジェクトの設定を変更する](../debugger/project-settings-for-a-cpp-debug-configuration.md)です。  
   
@@ -213,9 +214,9 @@ Trace.Assert ( stacksize > 0, "Out of stack space", "Failed in inctemp" );
  [このトピックの内容](#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_Setting_assertions_in_configuration_files"></a>構成ファイル内のアサーションの設定  
- アサーションは、コード内だけでなく、プログラム構成ファイル内でも設定できます。 詳細については、「<xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>」または「<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>」を参照してください。  
+ アサーションは、コード内だけでなく、プログラム構成ファイル内でも設定できます。 詳細については、<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName><xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>」または」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>   
  <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>   
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   

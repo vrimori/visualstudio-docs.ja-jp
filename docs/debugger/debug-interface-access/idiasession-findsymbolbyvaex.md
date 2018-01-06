@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 55a23a724bd700721b7d9b50b5e5bb9ff81d3fa4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f0f1c9bb568bda7d5ac8be59d638bea472bc6765
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasessionfindsymbolbyvaex"></a>IDiaSession::findSymbolByVAEx
 が含まれているか、指定した仮想アドレス (VA) とのオフセットに最も近いを指定した記号の型を取得します。  
@@ -58,7 +59,7 @@ LONG disp = 0;
 pSession->findSymbolByVAEx( va, SymTagFunction, &pFunc, &disp );  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [Idiasession::findchildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
  [Idiasession::findsymbolbyva](../../debugger/debug-interface-access/idiasession-findsymbolbyva.md)   

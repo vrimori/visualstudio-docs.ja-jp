@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 74162d2985ea617569d4bcb250660a261528b395
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0cae2dd492fd11ff4a5d707ba95c571711358358
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasessionfindchildren"></a>IDiaSession::findChildren
 指定した親の識別子の名と記号の種類に一致するすべての子を取得します。  
@@ -62,7 +63,7 @@ IDiaEnumSymbols* pEnum;
 pSession->findChildren( pFunc, SymTagData, szVarName, nsCaseSensitive, &pEnum );  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [概要](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)   
  [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   

@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7757716dc3f4c9e327a6145642e169c23e895c0e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 597f6cc9be1f2d33e72566d49bdfb3aa74ed4a8a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="commandplacements-element"></a>CommandPlacements 要素
 CommandPlacements 要素には、CommandPlacement 要素およびその他の CommandPlacements グループがグループ化します。  
@@ -43,7 +44,7 @@ CommandPlacements 要素には、CommandPlacement 要素およびその他の Co
   
 |属性|説明|  
 |---------------|-----------------|  
-|状態|省略可能です。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
+|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -69,6 +70,6 @@ CommandPlacements 要素には、CommandPlacement 要素およびその他の Co
 </CommandPlacements>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CommandPlacement 要素](../extensibility/commandplacement-element.md)   
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

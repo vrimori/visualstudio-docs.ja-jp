@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 2335c0279c8e7a23e1b514a8264651e73fedebfc
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 4a73d6cd0996f3f0e91b5a5381ee1b8ccd58a2a1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-a-support-url-for-individual-prerequisites-in-a-clickonce-deployment"></a>方法 : ClickOnce 配置で個々の必要条件にサポート URL を指定する
 A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]数のクライアント コンピューターで使用する必要がある前提条件の展開をテストできます、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションを実行します。 必要な最小バージョンが含まれます、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]、オペレーティング システム、およびグローバル アセンブリ キャッシュ (GAC) がプレインストールされている必要があるすべてのアセンブリのバージョン。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]、ただし、インストールできませんこれらの前提条件のいずれかの自体です。前提条件が見つからない場合、インストールを中止し、インストールが失敗した理由を説明するダイアログ ボックスが表示されます。  
@@ -68,7 +69,7 @@ A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]数のクラ�
       </dependency>  
     ```  
   
-5.  省略可能です。 .NET Framework 4 を対象とするアプリケーションの配置マニフェスト (.application ファイル) を開いて、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]をテキスト エディターでアプリケーションです。  
+5.  任意。 .NET Framework 4 を対象とするアプリケーションの配置マニフェスト (.application ファイル) を開いて、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]をテキスト エディターでアプリケーションです。  
   
 6.  .NET Framework 4 の前提条件、追加、`supportUrl`属性を`compatibleFrameworks`要素。  
   
@@ -84,7 +85,7 @@ A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]数のクラ�
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  サポート URL は、部分信頼で実行するアプリケーションがマークされている場合、ダイアログ ボックスでは表示されません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Mage.exe (マニフェストの生成および編集ツール)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)   
  [チュートリアル : ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)   
  [\<compatibleFrameworks > 要素](../deployment/compatibleframeworks-element-clickonce-deployment.md)   

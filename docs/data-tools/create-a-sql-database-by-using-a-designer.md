@@ -16,11 +16,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 47fad923b0e31d650d18426bf5f9a7da7bca3e38
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: ffbb2259ff556dcf96021adc47c733fdbcd9125d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>データベースを作成し、Visual Studio でのテーブルの追加
 Visual Studio を使用して作成し、SQL Server Express LocalDB でローカル データベース ファイルを更新することができます。 内の TRANSACT-SQL ステートメントを実行することによって、データベースを作成することも、 **SQL Server オブジェクト エクスプ ローラー** Visual Studio でのツール ウィンドウです。 このトピックでは、.mdf ファイルを作成し、テーブル デザイナーを使用してテーブルおよびキーを追加します。
@@ -77,7 +78,7 @@ SampleDatabase.mdf ファイルの接続文字列を表示するには、デー�
   
 3.  グリッドで、次のエントリのそれぞれに行を追加します。  
   
-    |列名|データ型|Null を許容|  
+    |列名|データの種類|Null を許容|  
     |-----------------|---------------|-----------------|  
     |`CustomerID`|`nchar(5)`|false (オフ)|  
     |`CompanyName`|`nvarchar(50)`|false (オフ)|  
@@ -107,7 +108,7 @@ SampleDatabase.mdf ファイルの接続文字列を表示するには、デー�
 ### <a name="to-create-the-orders-table"></a>Orders テーブルを作成するには  
 1.  別のテーブルを追加し、次の表の各エントリの行を追加します。  
   
-    |列名|データ型|Null を許容|  
+    |列名|データの種類|Null を許容|  
     |-----------------|---------------|-----------------|  
     |`OrderID`|`int`|false (オフ)|  
     |`CustomerID`|`nchar(5)`|false (オフ)|  

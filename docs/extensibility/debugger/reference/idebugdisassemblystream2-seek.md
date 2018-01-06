@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 61ef1e649a80fcda5ec3ce4be6c74b154c17f9a4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2725eb876cf66665c27027dd4d9b250ed7e866e7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugdisassemblystream2seek"></a>IDebugDisassemblyStream2::Seek
 [逆アセンブル] ストリームを指定した位置を基準とした命令数が特定の読み取りのポインターを移動します。  
@@ -62,7 +63,7 @@ int Seek(
 ## <a name="remarks"></a>コメント  
  リストの先頭より前に、の位置をシークであった場合は、読み取り位置が、一覧の最初の命令に設定されます。 参照は、リストの末尾後の位置には、読み取り位置は設定最後の命令一覧にされます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   
  [SEEK_START](../../../extensibility/debugger/reference/seek-start.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)   

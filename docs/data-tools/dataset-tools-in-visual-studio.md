@@ -50,11 +50,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 0a589cf48f53636bcd3892c7c4c991e0fb516bf3
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: data-storage
+ms.openlocfilehash: a8c8660fbc489dd8c4926bb09b8b42006da0897a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataset-tools-in-visual-studio"></a>Visual Studio でのデータセットのツール
 > [!NOTE]
@@ -93,5 +94,5 @@ ms.lasthandoff: 12/12/2017
 ## <a name="datasets-and-xml"></a>データセットおよび XML  
  Xml 形式からデータセットを変換する方法については、次を参照してください。[データセットにデータを読み取り XML](../data-tools/read-xml-data-into-a-dataset.md)と[データセットを XML として保存](../data-tools/save-a-dataset-as-xml.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [.NET 用の Visual Studio データ ツール](../data-tools/visual-studio-data-tools-for-dotnet.md)

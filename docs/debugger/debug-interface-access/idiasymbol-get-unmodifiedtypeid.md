@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0b853da90fd6818880368b3bde6be8836e94f485
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2bfd719fb774897991e4f7851504fdf4278b39cc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgetunmodifiedtypeid"></a>IDiaSymbol::get_unmodifiedTypeId
 元の (変更なし) 型の ID を取得します。  
@@ -36,5 +37,5 @@ HRESULT get_unmodifiedTypeId(
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

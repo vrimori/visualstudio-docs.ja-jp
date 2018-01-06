@@ -20,11 +20,12 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 51eaed204db7b50e75a18dfac104a00546770abc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a37d69339a8a6345bbc63f563379c9f87d6cf483
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-f"></a>F# のデバッグ
 F# のデバッグは、他のマネージ言語のデバッグとほとんど同じですが、次の例外があります。  
@@ -35,5 +36,5 @@ F# のデバッグは、他のマネージ言語のデバッグとほとんど�
   
 -   デバッガーは F# 式を認識しません。 F# のデバッグ中にデバッガー ウィンドウまたはダイアログ ボックスに式を入力するには、式を C# の構文に変換する必要があります。 F# の式を C# に変換するときは、C# では等価を示す比較演算子として == を使用しますが、F# では単一の = を使用することに注意してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)

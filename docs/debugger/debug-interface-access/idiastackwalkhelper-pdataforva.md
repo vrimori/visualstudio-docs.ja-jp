@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4925a4a37395dd53fabb1d8d7ba7f80bc5cc6c93
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 251b54ca712078e5252a4a55c9237545e14a7536
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiastackwalkhelperpdataforva"></a>IDiaStackWalkHelper::pdataForVA
 仮想アドレスに関連付けられている PDATA データ ブロックを返します。  
@@ -55,5 +56,5 @@ HRESULT pdataForVA(
   
  呼び出し元は、データの量が、呼び出し元には、データの量は利用できるように依頼する必要があるないために返されるを認識します。 したがって、エラーを返す場合はこのメソッドを実装するための許容は、`pbData`パラメーターは`NULL`します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 354c574a890ae0385a58594a22b3314a13b9d6b4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: uwp
+ms.openlocfilehash: ca1edcc26c8e015f12db6b1d564c182aa765ed52
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-an-installed-app-package-in-visual-studio-uwp"></a>Visual Studio (UWP) にインストールされているアプリ パッケージをデバッグします。
 
@@ -94,7 +95,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 > UWP アプリは開発できますが Windows 8.1 以降で、コンパイルし Windows 10 を実行する必要があります。 Windows 8.1 PC で UWP アプリを開発している場合をする、同じ LAN 上のホストとターゲットの両方のコンピューターが別の Windows 10 デバイスで実行されている UWP アプリでのリモート デバッグできます。 これを行うには、ダウンロードして Visual Studio の両方のコンピューターでリモート ツールをインストールします。 インストールされているバージョンがインストールされている Visual Studio の既存のバージョンと一致しなければなりません、アーキテクチャ (x86、x64) を選択する必要がありますもの一致する対象のアプリです。
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)  
  [Remote Debugging](../debugger/remote-debugging.md)  

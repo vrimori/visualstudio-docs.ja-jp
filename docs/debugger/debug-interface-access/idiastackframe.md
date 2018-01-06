@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 30b3ca5d68731fccf874b250741a6e67697539fb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2fb7e886940cf26341a6f0f0fd46bb1fc594cc7f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiastackframe"></a>IDiaStackFrame
 スタック フレームのプロパティを公開します。  
@@ -101,14 +102,14 @@ void PrintStackFrame(IDiaStackFrame* pFrame)
 }  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)   
  [Idiaenumstackframes::next](../../debugger/debug-interface-access/idiaenumstackframes-next.md)   

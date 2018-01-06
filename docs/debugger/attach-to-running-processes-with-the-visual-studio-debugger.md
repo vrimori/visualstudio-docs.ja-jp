@@ -31,11 +31,12 @@ caps.latest.revision: "53"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 48462684498136d09354fb87917f553d522188c0
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: 6ca076ef20ad8751619a715721c6423b5211bc3f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>実行中のプロセスへのアタッチ
 ローカルまたはリモート コンピューターで実行中のプロセスに、Visual Studio デバッガーをアタッチできます。 プロセスを実行した後にをクリックして**デバッグ > プロセスにアタッチする**(またはキーを押して**CTRL + ALT + P**) を開くには、**プロセスにアタッチする** ダイアログ ボックス。
@@ -191,7 +192,7 @@ ms.lasthandoff: 12/12/2017
   
      このとき、アタッチは完全に失敗し、詳細なエラー メッセージが表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [複数のプロセスをデバッグします。](../debugger/debug-multiple-processes.md)   
  [ジャスト イン タイム デバッグ](../debugger/just-in-time-debugging-in-visual-studio.md)   
  [Remote Debugging](../debugger/remote-debugging.md)

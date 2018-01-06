@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: be50964aaadad30aa13d6627be2ad1637e6123b3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: eb683afe63880af9d1a666436739140519f7339b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiastackwalkframe"></a>IDiaStackWalkFrame
 呼び出しの間でのスタック コンテキストを維持、 [idiaframedata::execute](../../debugger/debug-interface-access/idiaframedata-execute.md)メソッドです。  
@@ -46,13 +47,13 @@ IDiaStackWalkFrame : IUnknown
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
  クライアント アプリケーションを選択し、このインターフェイスを実装するインターフェイスのインスタンスを渡す、 [idiaframedata::execute](../../debugger/debug-interface-access/idiaframedata-execute.md)メソッドです。 各呼び出し中に、レジスタの状態を維持するためにこのインターフェイスの同じインスタンスを繰り返し使用される、`execute`メソッドです。 `execute`メソッドが戻り値のアドレスを決定するもこのインターフェイスを使用します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaFrameData::execute](../../debugger/debug-interface-access/idiaframedata-execute.md)

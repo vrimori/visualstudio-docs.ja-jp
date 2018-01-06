@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9432c65ec6a481b23655fb2a92915a4a4365ed5e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f7458c2f35bfd29c53b939b6300d2759f0e7897f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configure-the-windows-firewall-for-remote-debugging"></a>Windows ファイアウォールをリモート デバッグ用に構成する
 このトピックでは、次のオペレーティング システムが稼働するコンピューターでリモート デバッグを有効にするようにファイアウォールを構成する方法を説明します。  
@@ -122,5 +123,5 @@ Visual Studio またはリモート デバッガーをインストールする�
 |500、4500|発信|UDP|ドメイン ポリシーで、ネットワーク通信を IPSec 経由で実行する必要がある場合は、必須。|  
 |80|発信|TCP|Web サーバーのデバッグに必要。|
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Remote Debugging](../debugger/remote-debugging.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 5376ef32ce768100af8bc1c9f18267f7ac39895a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: b1c0f8615513639081351bdf77ea9ec63fc8309b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-clickonce-offline-or-online-install-mode"></a>方法: ClickOnce のオフラインまたはオンラインのインストール モードを指定する
 `Install Mode`の[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションでは、オフラインまたはオンライン、アプリケーションが使用できるかどうかを決定します。 選択すると**アプリケーションはオンラインでのみ使用可能な**へのアクセスが必要、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]発行場所 (Web ページまたはファイル共有のいずれか)、アプリケーションを実行するためにします。 選択すると**アプリケーションはオフラインでも利用可能な**、アプリケーションを追加するエントリ、**開始**メニューおよび**プログラム追加と削除** ダイアログ ボックスですユーザーは。接続されていないときに、アプリケーションを実行できません。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/27/2017
   
      アプリケーションにエントリを追加インストールすると、**開始**メニューおよび**プログラム追加と削除**コントロール パネルの します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
- [方法: 発行ウィザードを使用して ClickOnce アプリケーションの発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
+ [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
  [ClickOnce 配置ストラテジの選択](../deployment/choosing-a-clickonce-deployment-strategy.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7e1eb67855ae1e13970ad5eab2eba8dd6308abbb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a262d2f4aa90bc9ae638fb6cfbfe8af605f2446a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugcontainerfieldenumfields"></a>IDebugContainerField::EnumFields
 コンテナーのフィールドの列挙子を作成します。  
@@ -67,7 +68,7 @@ int EnumFields(
 ## <a name="remarks"></a>コメント  
  `dwKindFilter`、 `dwModifiersFilter`、および`pszNameFilter`パラメーターを組み合わせて、たとえば、すべてのパブリック仮想メソッドを"MyMethod"という名前を選択します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)   
  [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md)   

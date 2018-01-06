@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ec66bd21eb119c348391f191f23570e66119122f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: fe77428d1d9cfb5ff12554e87ec9afe15d6c86b8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-edit-and-continue-c"></a>方法 : エディット コンティニュを使用する (C#)
 C# のエディット コンティニュを使用すると、デバッグ中に中断モードでコードに変更を加えることができます。 デバッグ セッションを停止したり再開したりしなくても、変更を適用できます。  
@@ -50,6 +51,6 @@ C# のエディット コンティニュを使用すると、デバッグ中に�
   
      デバッグ セッションを再開すると、この設定が有効になります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [エディット コンティニュ (Visual c#)](../debugger/edit-and-continue-visual-csharp.md)   
  [サポートされているコード変更 (c# および Visual Basic)](../debugger/supported-code-changes-csharp.md)   

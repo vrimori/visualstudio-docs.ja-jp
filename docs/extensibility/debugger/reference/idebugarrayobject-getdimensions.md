@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d516032e458bcc0f85c73c75a9147ff53fc0fff2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0e5297019470fe8f3fe314d542013850eab7f1e9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugarrayobjectgetdimensions"></a>IDebugArrayObject::GetDimensions
 配列の次元を取得します。  
@@ -52,5 +53,5 @@ int GetDimensions(
 ## <a name="remarks"></a>コメント  
  多次元配列の各次元のサイズが異なることができます。 たとえば、3 次元の配列を指定`myarray[3][2][6]`、このメソッドは 3、2、および 6 インチ、`dwDimensions`をこの順序でパラメーター。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

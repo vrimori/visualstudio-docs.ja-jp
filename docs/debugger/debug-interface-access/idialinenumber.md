@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 45996e66500ebf275154553774d5116c6075af0f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ea164deb661dfe093ee81d40658c4f9ef6c57558
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idialinenumber"></a>IDiaLineNumber
 イメージのテキストのバイトのブロックからソース ファイルの行番号へのマッピングのプロセスを説明する情報にアクセスします。  
@@ -135,14 +136,14 @@ void dumpFunctionLines( IDiaSymbol* pSymbol, IDiaSession* pSession )
 }  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
  [Idiaenumlinenumbers::item](../../debugger/debug-interface-access/idiaenumlinenumbers-item.md)   

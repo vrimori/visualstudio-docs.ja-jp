@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 35d956b1d246d0a43ae058bb58635117c093602c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: dac8991fa31aae0ba65b0377e159b20256c4a416
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiastackwalkhelpergetregistervalue"></a>IDiaStackWalkHelper::get_registerValue
 レジスタの値を取得します。  
@@ -45,6 +46,6 @@ HRESULT get_registerValue (
 ## <a name="remarks"></a>コメント  
  サイズに関係なく、`pRetVal`パラメーター、実装がだけ何レジスタは、通常を保持を格納する必要があります。 たとえば、8 ビット レジスタはだけ、最下位 8 ビットの指定した値を保持します。 この 8 ビット値は、このメソッドから返されるときに 64 ビットに拡張されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   
  [CV_HREG_e 列挙型](../../debugger/debug-interface-access/cv-hreg-e.md)

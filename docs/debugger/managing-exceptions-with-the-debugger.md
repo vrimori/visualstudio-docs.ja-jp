@@ -36,11 +36,12 @@ caps.latest.revision: "35"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a0504ba8229e67284d4f54032dbbce3cef42d6e8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c04934aed17c6e1b00664d371ff591ebbc3486a3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>デバッガーでは、Visual Studio での例外を管理します。
 
@@ -193,7 +194,7 @@ public class GenericException<T> : Exception
 
 ![例外条件](../debugger/media/dbg-conditional-exception.png "DbgConditionalException")
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [例外の後の実行の継続](../debugger/continuing-execution-after-an-exception.md)   
  [方法: 例外の後にシステム コードを調べる](../debugger/how-to-examine-system-code-after-an-exception.md)   
  [方法: ネイティブ ランタイム チェックの使用](../debugger/how-to-use-native-run-time-checks.md)   

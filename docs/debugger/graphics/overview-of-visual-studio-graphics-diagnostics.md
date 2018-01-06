@@ -12,11 +12,12 @@ caps.latest.revision: "29"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0f713a1ced59ea1ed0eaf01a3d9630aa96e4c6bf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0fdc6c58f791c06d5f9287400d00bbfce2564e3b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Visual Studio グラフィックス診断の概要
 Visual Studio*グラフィックス診断*を記録し、Direct3D アプリのレンダリングとパフォーマンスの問題を分析するためのツールのセットです。 グラフィックス診断は、Windows PC でローカルに実行されているアプリ、Windows デバイス エミュレーターで実行されているアプリ、あるいはリモート PC またはデバイスで実行されているアプリに対して使用できます。  
@@ -123,6 +124,6 @@ Visual Studio*グラフィックス診断*を記録し、Direct3D アプリの�
   
  フレーム分析が高速移動されていないあらゆる - について最小限の画質を提供中にできるほとんどのパフォーマンスを得ることがします。 時には、大きなディスプレイで優れた効果を発揮する高負荷の処理が、携帯電話のような小さな画面で見るとそれほど効果を発揮しないことがあります。その場合、バッテリを消費しないように低負荷の処理にしたほうが適切であると考えられます。 自動的な変更とベンチマーク グラフィックス分析を提供することは、範囲のデバイス間で、アプリの適切なバランスを見つけるの向上に役立ちます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コマンド ライン キャプチャ ツール](command-line-capture-tool.md)   
  [HLSL デバッガー](hlsl-shader-debugger.md)

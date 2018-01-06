@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 90b4f5e1081d7c02fc3b2018057b5e663acf0737
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3c4b9ce1ec91315889133e77e86ecc1a417b1b4c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-wcf-services"></a>WCF サービスのデバッグ
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -37,6 +38,6 @@ ms.lasthandoff: 10/31/2017
  [方法 : セルフホストされている WCF サービスをデバッグする](../debugger/how-to-debug-a-self-hosted-wcf-service.md)  
  IIS または [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 開発サーバーの外部で実行している WCF サービスをデバッグする方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)

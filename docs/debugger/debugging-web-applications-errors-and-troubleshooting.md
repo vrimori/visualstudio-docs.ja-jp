@@ -30,11 +30,12 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6958776655f48fe22ef97f193ddffafe12da6cbb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b8d915339ae8e81d16b46ca602b45d527ab78aa9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-web-applications-errors-and-troubleshooting"></a>Web アプリケーションのデバッグ : エラーおよびトラブルシューティング
 Web アプリケーションのデバッグを試行した場合に、次のエラーが発生することがあります。  
@@ -57,6 +58,6 @@ Web アプリケーションのデバッグを試行した場合に、次のエ�
   
 -   [エラー: Web サーバーでデバッグを開始できません](../debugger/error-unable-to-start-debugging-on-the-web-server.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [Web アプリケーションとスクリプトのデバッグ](../debugger/debugging-web-applications-and-script.md)

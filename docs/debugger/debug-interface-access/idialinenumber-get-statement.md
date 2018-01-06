@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 05cb3f85fe2f1ea82622a4537b89895a44eebf63
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8659123c09482537aadc3baedb597f5c7030708d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idialinenumbergetstatement"></a>IDiaLineNumber::get_statement
 この行の情報が、プログラムのソースで、式ではなく、ステートメントの先頭に記述されているかを示すフラグを取得します。  
@@ -41,5 +42,5 @@ HRESULT get_statement (
 ## <a name="remarks"></a>コメント  
  ステートメントは、複数行にまたがることができます。 このメソッドは、関連付けられている行番号が複数行のステートメントの開始をマークするかどうかを示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

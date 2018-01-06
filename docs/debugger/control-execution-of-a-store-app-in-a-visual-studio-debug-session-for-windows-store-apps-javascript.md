@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 60b9465677ce033f8b285ce21e2b8332bf88a73a
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: uwp
+ms.openlocfilehash: 1e1e30400a630c7a5b01438e521b651f25ab3137
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-execution-of-a-uwp-app-in-a-visual-studio-debug-session-javascript"></a>Visual Studio デバッグ セッション (JavaScript) で UWP アプリの実行制御
 このクイック スタートでは、Visual Studio デバッガー内を移動する方法と、セッションでのプログラムの状態を表示する方法を示します。  
@@ -304,7 +305,7 @@ ms.lasthandoff: 12/07/2017
   
 7.  **デバッグを停止します。** **デバッグ** メニューの 選択**デバッグの停止** (キーボード: **shift キーを押しながら f5 キーを押して**)。 これによりデバッグ セッションが終了します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッグ セッション (JavaScript) の開始します。](../debugger/start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md)   
  [クイック スタート: デバッガー ナビゲーション (JavaScript)](../debugger/control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript.md)   
  [クイック スタート: HTML および CSS をデバッグします。](../debugger/quickstart-debug-html-and-css.md)   

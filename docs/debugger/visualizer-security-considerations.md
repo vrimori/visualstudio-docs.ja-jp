@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 47ed06179d09996ac1b35cd3d2dd5d6cb99296d7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d5075e55f1db35f7a588094a7c398c9d4c25483c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visualizer-security-considerations"></a>ビジュアライザーのセキュリティに関する考慮事項
 ビジュアライザーを作成すると、セキュリティ上の脅威が発生する可能性があります。 今のところ、この脅威が悪用された例はありませんが、開発者はこの脅威を認識し、以下に説明する適切なセキュリティ対策を講じることによって将来の攻略行為に対抗する必要があります。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/31/2017
   
  このような脆弱性を軽減するために、ビジュアライザーによって公開されるインターフェイスに注意する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジュアライザーのアーキテクチャ](../debugger/visualizer-architecture.md)   
  [方法: ビジュアライザーを作成](../debugger/how-to-write-a-visualizer.md)   
  [カスタム ビジュアライザーを作成します。](../debugger/create-custom-visualizers-of-data.md)   

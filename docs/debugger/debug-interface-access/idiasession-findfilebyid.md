@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1996bed14323adeac794f12ed4307e96e3ba8b54
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 176e6a482212ee0cb6531d558e2b322ce4bec2d4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasessionfindfilebyid"></a>IDiaSession::findFileById
 ソース ファイルをソース ファイル識別子を取得します。  
@@ -45,7 +46,7 @@ HRESULT findFileById (
 ## <a name="remarks"></a>コメント  
  ソース ファイル識別子は、すべてのソース ファイルを一意にする DIA SDK に内部的に使用される一意の値です。 通常、このメソッドは DIA SDK に内部的に使用されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [Idiasession::findfile](../../debugger/debug-interface-access/idiasession-findfile.md)   
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

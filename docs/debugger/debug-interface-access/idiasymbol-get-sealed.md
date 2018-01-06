@@ -14,11 +14,12 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c8bd965b4bb978f318fffeb14c0d808044d7687e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d7d1e5394dc7f07aeb97fb34cc11428fee13e457
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgetsealed"></a>IDiaSymbol::get_sealed
 クラスまたはメソッドが封印されているかどうかを指定するフラグを取得します。  
@@ -44,12 +45,12 @@ HRESULT get_sealed(
 ## <a name="remarks"></a>コメント  
  シール クラスは、基底クラスとして使用できません。 シール メソッドは、上書きをすることはできません。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia100.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

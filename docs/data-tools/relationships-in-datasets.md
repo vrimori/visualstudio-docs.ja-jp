@@ -19,11 +19,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: bfc537118f6c1769ec98893099daa0c61d1b5b1d
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 95bfef50e7ce5016b68df1442e625a88beb22181
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-relationships-between-datasets"></a>データセット間のリレーションシップを作成します。
 関連データを含むデータセット テーブルを使用して<xref:System.Data.DataRelation>をいずれかの別の関連するレコードを返すと、テーブル間の親/子リレーションシップを表すオブジェクト。 使用してデータセットの関連テーブルの追加、**データ ソース構成ウィザード**、または**データセット デザイナー**が作成され、構成、<xref:System.Data.DataRelation>オブジェクト。  
@@ -58,7 +59,7 @@ Foreign key 制約の一部として、3 つの点で適用されている参照
   
 指定することができます、ルール、<xref:System.Data.Rule>列挙型とは、次の表に一覧表示します。  
   
-|外部キー制約の規則|操作|  
+|外部キー制約の規則|アクション|  
 |----------------------------------|------------|  
 |<xref:System.Data.Rule.Cascade>|親レコードに加えられた変更 (更新または削除) が子テーブルの関連レコードも作成されます。|  
 |<xref:System.Data.Rule.SetNull>|子レコードは削除されませんが、子レコード内の外部キーに設定されている<xref:System.DBNull>です。 この設定では、子レコードにしておく「孤立したもの」として、つまりがあるない親レコードとの関係。 **注:**子テーブル内の無効なデータになりますこの規則を使用します。|  
@@ -83,7 +84,7 @@ Visual Studio でデータ デザイン ツールを使用してデータ テー
   
 2.  ドラッグ、**関係**オブジェクトから、**データセット**ツールボックスからリレーションシップの子のデータ テーブルにします。  
   
-     **関係**] ダイアログ ボックスが開き、作成、**子テーブル**ボックスにドラッグしたテーブル、**関係**上にオブジェクトします。  
+     **関係** ダイアログ ボックスが開き、作成、**子テーブル**ボックスにドラッグしたテーブル、**関係**上にオブジェクトします。  
   
 3.  親テーブルからを選択して、**親テーブル**ボックス。 親テーブルには、一対多リレーションシップの「一」側のレコードが含まれています。  
   
@@ -105,7 +106,7 @@ Visual Studio でデータ デザイン ツールを使用してデータ テー
   
 1.  データセットを開き、**データセット デザイナー**です。 詳細については、次を参照してください。[チュートリアル: データセット デザイナーでデータセットを作成する](walkthrough-creating-a-dataset-with-the-dataset-designer.md)です。  
   
-2.  **データ**メニューの [、**リレーションシップ ラベルを表示する**リレーションシップ名を表示するコマンド。 リレーションシップ名を非表示にするには、そのコマンドをオフにします。
+2.  **データ**メニューの 、**リレーションシップ ラベルを表示する**リレーションシップ名を表示するコマンド。 リレーションシップ名を非表示にするには、そのコマンドをオフにします。
 
 ## <a name="see-also"></a>関連項目
 [Visual Studio でデータセットを作成および構成する](../data-tools/create-and-configure-datasets-in-visual-studio.md)

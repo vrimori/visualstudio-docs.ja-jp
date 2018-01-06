@@ -77,11 +77,12 @@ caps.latest.revision: "19"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 947da9ccdbf67a71edfaa122de8861912a9e9596
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cc7b945a8c53d290f573eac4565f2240ec7a2d7b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="crt-debug-heap-details"></a>CRT デバッグ ヒープ
 このトピックでは、CRT デバッグ ヒープについて詳しく解説します。  
@@ -193,7 +194,7 @@ freedbg(pbData, _CLIENT_BLOCK|(MYSUBTYPE<<16));
   
  **_CrtDbgFlag**フラグには、次のビット フィールドが含まれています。  
   
-|ビット フィールド|既定<br /><br /> value|説明|  
+|ビット フィールド|既定値<br /><br /> value|説明|  
 |---------------|-----------------------|-----------------|  
 |**_CRTDBG_ALLOC_MEM_DF**|オン|デバッグ用の割り当てをオンにします。 一緒にチェーンされたときにこのビットがオフ、割り当てがそのブロック型は**_IGNORE_BLOCK**です。|  
 |**_CRTDBG_DELAY_FREE_MEM_DF**|オフ|メモリ不足の状態をシミュレートできるように、実際にはメモリを解放しません。 このビットがオンの解放されたブロックはデバッグ ヒープのリンク リストに保持されますが、としてマークされて**_FREE_BLOCK**特別なバイト値が設定されます。|  
@@ -368,5 +369,5 @@ int addNewRecord(struct RecStruct *prevRecord,
   
  ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)

@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: c493a7ea448277275072ab71cf013333ccb9b4ea
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: data-storage
+ms.openlocfilehash: a160cce25814cd2e110f8896ed6752a18b5dd0da
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-sql-tools-in-visual-studio"></a>LINQ to Visual Studio での SQL ツール
 LINQ to SQL では、マイクロソフトによってリリースされた最初のオブジェクト リレーショナル マッピング テクノロジをでした。 基本的なシナリオに適していますし、引き続き Visual Studio でサポートされますが、アクティブな開発ではありません。 LINQ to SQL は既に使用して、従来のアプリケーションを保持する場合または SQL Server を使用して複数のテーブルのマッピングを必要としない単純なアプリケーションを使用します。 一般に、新しいアプリケーションは、オブジェクト リレーショナル マッパー レイヤーが必要な場合、Entity Framework を使用する必要があります。  

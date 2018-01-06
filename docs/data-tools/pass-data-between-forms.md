@@ -21,11 +21,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: f401224657e64922fc9f6102a33eaf1cf824a556
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: data-storage
+ms.openlocfilehash: 7704b8f4af9f6858e476f4075c6f38cda3052118
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pass-data-between-forms"></a>フォーム間でデータを渡す
 このチュートリアルでは、フォーム間でデータを渡す手順について説明します。 顧客と Northwind の orders テーブルを使用して、1 つの形式により、ユーザー、顧客を選択して、2 番目のフォームには、選択した顧客の注文が表示されます。 このチュートリアルでは、最初のフォームからデータを受信する 2 番目のフォームにメソッドを作成する方法を示します。  
@@ -207,5 +208,5 @@ ms.lasthandoff: 11/07/2017
   
 -   データベースにデータを戻して保存する機能を追加します。 詳細については、次を参照してください。[データをデータベースに保存](../data-tools/save-data-back-to-the-database.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

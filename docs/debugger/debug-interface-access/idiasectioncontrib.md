@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f7effcc96286fc548b42c810789d1cb902bb3c18
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7f8bfec567897a3d5ce6b69e9d4aeae77872de95
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasectioncontrib"></a>IDiaSectionContrib
 セクション貢献度を記述するデータを取得、つまり、連続するメモリ ブロックから提供されたイメージに、コンパイル単位です。  
@@ -127,14 +128,14 @@ void PrintSectionContrib(IDiaSectionContrib* pSecContrib, IDiaSession* pSession)
 }  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)   
  [Idiaenumsectioncontribs::item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md)   

@@ -18,11 +18,12 @@ caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9965f83feed7d12ac48aefdd248aebfc9a524473
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 193d469666d9aaa012187500de063470df77c823
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mixed-mode-debugging-for-ia64-processes-is-unsupported"></a>IA64 プロセスの混合モードのデバッグはサポートされていません。
 Visual Studio では、IA64 プロセスでマネージ コードとネイティブ コードの混合モードのデバッグはサポートされていません。 つまり、デバッグ中にマネージ コードからネイティブ コードにステップ インすることや、ネイティブ コードからマネージ コードにステップ インすることはできません。  
@@ -31,7 +32,7 @@ Visual Studio では、IA64 プロセスでマネージ コードとネイティ
   
 -   マネージ コードとネイティブ コードを個別のデバッガー セッション内でデバッグする。  
   
-     または  
+     - または -  
   
      次の手順に示すように、混合コードを 32 ビット プロセスとしてデバッグする。  
   
@@ -51,5 +52,5 @@ Visual Studio では、IA64 プロセスでマネージ コードとネイティ
   
 2.  プロパティ ページで、をクリックして**プラットフォーム**プラットフォームの一覧から [Win32] を選択し、  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [64 ビット アプリケーションをデバッグする](../debugger/debug-64-bit-applications.md)

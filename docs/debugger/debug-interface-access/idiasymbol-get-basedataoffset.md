@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ea4b9ed6b13ac52193c49a4bf7aeb8d19463f84e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 79e322b60084eaea33877f7c9c9258df995d0528
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgetbasedataoffset"></a>IDiaSymbol::get_baseDataOffset
 基本データ オフセットを取得します。  
@@ -36,5 +37,5 @@ HRESULT get_baseDataOffset(
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

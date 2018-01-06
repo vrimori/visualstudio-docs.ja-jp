@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a24b85ac16f9837a4e28674567341f00a993bf9f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 552a1588b4ea1b4e5bc1cbc4d7ce87233dc74ea8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgetunmodifiedtype"></a>IDiaSymbol::get_unmodifiedType
 このシンボルに元の型を取得します。 使用する場合、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)型に設定します。  
@@ -44,12 +45,12 @@ HRESULT get_unmodifiedType(
 ## <a name="remarks"></a>コメント  
  現在の型では、返された元の型の変更です。 シンボルの元の型は、最初の記号の型を取得し、し、その元の型の型が返されますの問い合わせで決定できます。 一部のシンボルは、元の型の変更後の型を持てませんに注意してください。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia100.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

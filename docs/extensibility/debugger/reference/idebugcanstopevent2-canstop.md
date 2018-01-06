@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d9008410831d3c2c7b6e93d4f35a1d08914a5336
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7c5fe4c0ab03e6f0683fff3d43658fde5bc90bf0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugcanstopevent2canstop"></a>IDebugCanStopEvent2::CanStop
 現在のコードの場所で停止または同様の実行を続行するかどうか (DE) のデバッグ エンジンに通知します。  
@@ -49,7 +50,7 @@ int CanStop (
   
  デを停止する場合は、停止の理由を説明するイベントを送信します。 送信、によって表されるユーザーか、信号が中断される 2 つのイベントには通常、 [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md)インターフェイス、およびによって表されるブレークポイント イベント、 [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)インターフェイスです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)   
  [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md)   
  [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)   

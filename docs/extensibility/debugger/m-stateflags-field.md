@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 624f9ef2f5cf2d44b565e8dd16c46938819a5df0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 90fd3f602e94379f1f2031cb53a5c9508df1d191
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mstateflags-field"></a>m_stateFlags フィールド
 現在の状態に関する情報を格納、<xref:System.Threading.Tasks.Task>オブジェクト。  
@@ -49,5 +50,5 @@ ms.lasthandoff: 10/31/2017
   
 -   [TASK_STATE_RAN_TO_COMPLETION](../../extensibility/debugger/task-state-ran-to-completion-field.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Task クラス](../../extensibility/debugger/task-class-internal-members.md)

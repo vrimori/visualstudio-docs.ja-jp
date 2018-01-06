@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d188cf52d2250e2a58665b1fe27999a956846159
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d308d5e37ac74b18a9ba1317de779068c7b63315
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgetslot"></a>IDiaSymbol::get_slot
 場所のスロット番号を取得します。 使用する場合、 [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)は`LocIsSlot`します。  
@@ -41,6 +42,6 @@ HRESULT get_slot (
 > [!NOTE]
 >  戻り値の`S_FALSE`プロパティが、シンボルを使用できないことを意味します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)

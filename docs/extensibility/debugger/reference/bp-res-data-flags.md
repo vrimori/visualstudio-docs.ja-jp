@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 89bfe7f92e1260c83803136eeed1bf921c8913c8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fbf8e227089a469711b6c13fc99b7c0a8ae672e6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bpresdataflags"></a>BP_RES_DATA_FLAGS
 データ ブレークポイントがエミュレートされるかどうか、または実装されているハードウェアを指定します。  
@@ -45,13 +46,13 @@ public enum enum_BP_RES_DATA_FLAGS {
 ## <a name="remarks"></a>コメント  
  使用、`dwFlags`のメンバー、 [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md)構造体。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md)
