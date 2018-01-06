@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9e4b7d83f40607dbb94371e4ca3244a9bb5b9a5b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 896370d83634580e46f666a8fb9f56f768bf06a0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugengineprogram2"></a>IDebugEngineProgram2
 このインターフェイスは、マルチ スレッドのデバッグのサポートを提供します。  
@@ -47,12 +48,12 @@ IDebugEngineProgram2 : IUnknown
 ## <a name="remarks"></a>コメント  
  Visual Studio はこのインターフェイスへの応答を呼び出して、 [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md)イベントとプログラムの「ウォッチのスレッド ステップ」と「ウォッチの式評価でスレッド」の状態を設定します。 [停止](../../../extensibility/debugger/reference/idebugengineprogram2-stop.md)するたびに呼び出されますが、プログラムが停止する。 このメソッドにより、プログラムをすべてのスレッドを終了する可能性です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

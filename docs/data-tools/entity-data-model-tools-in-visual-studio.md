@@ -12,16 +12,17 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: eb4ca4445af3970828f4212c69c11d9d173d5650
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: f288d794040c533f2d00e95d628f7d04e55e96e4
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Visual Studio での entity Framework ツール
-Entity Framework は、.NET 開発者は、ドメイン固有のオブジェクトを使用してリレーショナル データを操作するオブジェクト リレーショナル マッピング テクノロジです。 これにより、開発者は、通常記述する必要のあるデータ アクセス コードのほとんどの必要があります。 Entity Framework は、新しい .NET アプリケーションのテクノロジをモデリング推奨オブジェクト リレーショナル マッピング (ORM) です。  
+Entity Framework は、.NET 開発者は、ドメイン固有のオブジェクトを使用してリレーショナル データを操作するオブジェクト リレーショナル マッピング テクノロジです。 開発者が通常記述しなければならないデータアクセス コードの多くが不要になります。 Entity Framework は、新しい .NET アプリケーションのテクノロジをモデリング推奨オブジェクト リレーショナル マッピング (ORM) です。  
   
-Entity Framework ツールは、Entity Framework (EF) アプリケーションを構築するために設計されています。 ここでは、Entity Framework に関する完全なドキュメント: [EF コアと EF 6](https://docs.microsoft.com/ef/)です。  
+Entity Framework ツールは、Entity Framework (EF) アプリケーションを構築するために設計されています。 ここでは、Entity Framework に関する完全なドキュメント: [EF コアと EF 6](/ef/)です。  
   
 Entity Framework ツールを作成できます、*概念モデル*既存のデータベースし視覚的に視覚化し、概念モデルを編集します。 また、グラフィカルな概念モデルを作成し、そのモデルをサポートするデータベースを生成することもできます。 いずれの場合も、基になるデータベースの変更時には、モデルを自動的に更新できるだけではなく、アプリケーションのオブジェクトレイヤー コードも自動生成できます。 データベースの生成とオブジェクトレイヤー コードの生成はカスタマイズ可能です。  
   
@@ -49,9 +50,9 @@ Visual Studio での Entity Framework ツールを構成する特定のツール
 |タイトル|説明|  
 |-----------|-----------------|  
 |[ADO.NET Entity Framework](/dotnet/framework/data/adonet/ef/index)|使用する方法について説明します[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]ツールを[!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)]提供するアプリケーションを作成します。|  
-|[エンティティ データ モデル](/dotnet/framework/data/adonet/entity-data-model)|構築されたアプリケーションによって使用されるデータを操作するための情報とリンクを示します[!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)]です。|  
+|[Entity Data Model](/dotnet/framework/data/adonet/entity-data-model)|構築されたアプリケーションによって使用されるデータを操作するための情報とリンクを示します[!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)]です。|  
 |[Entity Framework (EF) ドキュメント)](https://msdn.microsoft.com/library/ee712907(v=vs.113).aspx)|ビデオ、チュートリアル、および Entity Framework を最大限に活用するための高度なドキュメントのインデックスを提供します。|  
 |[ASP.NET 5 アプリケーションを新しいデータベース](https://docs.efproject.net/en/latest/platforms/aspnetcore/new-db.html)|Entity Framework 7 を使用して、新しい ASP.NET 5 アプリケーションを作成する方法について説明します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [.NET 用の Visual Studio データ ツール](../data-tools/visual-studio-data-tools-for-dotnet.md)
