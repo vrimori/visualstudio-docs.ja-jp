@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a432dabb09f3242ff3ba73527b86aac45e609588
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7f2cd765b36024048a4bba5680a0fdc2445a1cc3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-execute-an-xslt-transformation-from-the-xml-editor"></a>方法: XML エディターから XSLT 変換を実行する
 XML エディターでは、XSLT スタイル シートを XML ドキュメントと関連付けて変換を実行し、結果を表示させることができます。 XSLT 変換から得られた結果の出力は、新しいドキュメント ウィンドウに表示されます。  
@@ -33,7 +34,7 @@ XML エディターでは、XSLT スタイル シートを XML ドキュメン�
   
     -   XML ドキュメントに `xml-stylesheet` 処理命令を追加します。 たとえば、ドキュメントのプロローグに `<?xml-stylesheet type='text/xsl' href='filename.xsl'?>` という行を追加します。  
   
-         または  
+         - または -  
   
     -   XSLT スタイル シートを使用して、追加、**プロパティ**ウィンドウです。 ドキュメント内**プロパティ ウィンドウ**、 をクリックして、**参照**ボタンをクリックして、 **Stylesheet**フィールドで、XSLT スタイル シートを選択し、をクリックして**を開く**.  
   
@@ -65,5 +66,5 @@ XML エディターでは、XSLT スタイル シートを XML ドキュメン�
   
      新しいドキュメント ウィンドウに、XSLT 変換からの出力結果が表示され、出力 ウィンドウで使用されるエディターは、のファイル拡張子によって異なります。、**出力**プロパティを文書化します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML エディター](../xml-tools/xml-editor.md)

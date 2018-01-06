@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 736c36df419d601c27998d8d34bde9abe5976a17
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 57835632e03e8b871c29e2fec7d4b382722451e7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-declarative-rule-condition-legacy"></a>方法: 宣言的ルール条件を作成する (レガシ)
 このトピックでは、[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする従来の [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用してルール条件を宣言する方法について説明します。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/27/2017
   
      使用する方法については、 **[条件の**ダイアログ ボックスを参照してください[選択条件] ダイアログ ボックス (レガシ)](../workflow-designer/select-condition-dialog-box-legacy.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [従来のワークフロー アクティビティ](../workflow-designer/legacy-workflow-activities.md)   
  [ConditionedActivityGroup を使用します。](http://go.microsoft.com/fwlink?LinkID=65066)   
  [IfElseBranchActivity アクティビティの使用](http://go.microsoft.com/fwlink?LinkID=65075)   

@@ -11,11 +11,12 @@ caps.latest.revision: "12"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 6a61c8f4ea5e9d9cc6d4ab13437d2ec4d4eef7ca
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: e2dc5245dd50fd2a5211d55107e537fbc8eb6eb8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-activity-library"></a>アクティビティ ライブラリを作成する方法
 カスタム アクティビティは、ワークフローで特定のビジネス プロセスをモデル化するために使用されます。 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] のアクティビティ ライブラリ テンプレートでは、[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]を使用して、こうしたカスタム アクティビティを視覚的に作成できます。  
@@ -48,6 +49,6 @@ ms.lasthandoff: 10/27/2017
     > [!CAUTION]
     >  カスタム アクティビティの本体に含めることができる子アクティビティは 1 つのみです。ただし、その子アクティビティは、<xref:System.Activities.Statements.Sequence> アクティビティや <xref:System.Activities.Statements.Flowchart> アクティビティなどの複合アクティビティにすることができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: アクティビティを作成します。](/dotnet/framework/windows-workflow-foundation/how-to-create-an-activity)   
  [ワークフロー プロジェクトの作成](../workflow-designer/creating-a-workflow-project.md)

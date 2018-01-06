@@ -21,11 +21,12 @@ caps.latest.revision: "42"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 56cd2e51a50f610c8165f86ab17eef18044cc6b5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: f44d1d8c2982e23995a3625205eaa0bddf7adc4e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-a-ribbon-for-outlook"></a>Outlook のリボンのカスタマイズ
   Microsoft Office Outlook でリボンをカスタマイズする場合、アプリケーションのどこにカスタム リボンを表示するかを検討する必要があります。 Outlook によりメイン アプリケーション ユーザー インターフェイス (UI) にリボンが表示されます。また、ユーザーが電子メール メッセージの作成など、特定のタスクを実行すると、ウィンドウが開いてリボンが表示されます。 これらのアプリケーション ウィンドウをインスペクターと呼びます。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/31/2017
  [!code-csharp[Trin_RibbonOutlookBasic#1](../vsto/codesnippet/CSharp/Trin_RibbonOutlookBasic/Ribbon1.cs#1)]
  [!code-vb[Trin_RibbonOutlookBasic#1](../vsto/codesnippet/VisualBasic/Trin_RibbonOutlookBasic/Ribbon1.vb#1)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
  [リボンの概要](../vsto/ribbon-overview.md)   
  [リボン デザイナー](../vsto/ribbon-designer.md)   

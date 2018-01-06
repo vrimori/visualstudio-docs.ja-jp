@@ -16,11 +16,12 @@ caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f15eea2c0f1e7e62990d860007a7efc4966cb8cc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 9cbb87017b910accae5ebc63b648691c50f88476
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-wpf-controls-in-office-solutions"></a>Office ソリューションでの WPF コントロールの使用
   Visual Studio の Office 開発ツールを使用して作成されたソリューションは、Windows フォーム コントロールを使用して直接操作することを前提としていますが、ソリューションで WPF コントロールを使用することもできます。 Windows Presentation Foundation (WPF) は、ユーザー インターフェイスをデザインするときに Windows フォームの代わりとして使用できます。 WPF では、UI、メディア、および文書を取り込むための新しい手法として、Extensible Application Markup Language (XAML) というマークアップ言語を使用します。 詳細については、次を参照してください。 [Visual Studio 2015 での WPF の概要](/dotnet/framework/wpf/getting-started/introduction-to-wpf-in-vs)です。  
@@ -115,7 +116,7 @@ ms.lasthandoff: 10/31/2017
   
 -   [チュートリアル: WPF コンテンツへのスタイルの適用](/dotnet/framework/winforms/advanced/walkthrough-styling-wpf-content)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office UI のカスタマイズ](../vsto/office-ui-customization.md)   
  [Windows フォームでコントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)   
  [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   

@@ -31,11 +31,12 @@ caps.latest.revision: "51"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 33e431dc907de8573a4eca00b9de73bcd0f523f9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 5f673d3a6752fda9256e7a71aff195dfa31fd933
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-content-controls-to-word-documents"></a>方法 : Word 文書にコンテンツ コントロールを追加する
   ドキュメント レベルの Word プロジェクトでは、デザイン時または実行時にプロジェクトの文書にコンテンツ コントロールを追加できます。 Word VSTO アドイン プロジェクトでは、実行時に任意の開いている文書にコンテンツ コントロールを追加できます。  
@@ -73,11 +74,11 @@ ms.lasthandoff: 10/31/2017
   
     -   **[ツールボックス]**のコンテンツ コントロールをダブルクリックします。  
   
-         、または  
+         または  
   
     -   **[ツールボックス]** のコンテンツ コントロールをクリックし、Enter キーを押します。  
   
-         、または  
+         または  
   
     -   **[ツールボックス]** からコンテンツ コントロールを文書にドラッグします。 コンテンツ コントロールが、マウス ポインターの場所ではなく、ドキュメント内の現在の選択の場所で追加されます。  
   
@@ -186,7 +187,7 @@ ms.lasthandoff: 10/31/2017
   
      [!code-csharp[Trin_WordAddInDynamicControls#6](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#6)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
  [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   

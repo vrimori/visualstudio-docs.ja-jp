@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 1a41dd3b640b53689f8eb3ef3c0a02cd3e191df7
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 93315ed4028ba4ded598fd07373df43150b70aa3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rethrow-activity-designer"></a>Rethrow アクティビティ デザイナー
 **Rethrow**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.Rethrow>アクティビティ。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/27/2017
 |-------------------|--------------|-----------|  
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.Rethrow> アクティビティの表示名を指定します (省略可能)。 既定値は Rethrow です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コレクション](../workflow-designer/collection-activity-designers.md)   
  [スローします。](../workflow-designer/throw-activity-designer.md)   
  [TryCatch](../workflow-designer/trycatch-activity-designer.md)

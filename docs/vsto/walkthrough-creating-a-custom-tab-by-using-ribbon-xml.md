@@ -22,11 +22,12 @@ caps.latest.revision: "35"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fbb628ffc8f52de34aa67ad5888b7110d1bc7da2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 8933345017cef96c17ed69a42dc3e095fcf7c7ae
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-custom-tab-by-using-ribbon-xml"></a>チュートリアル : リボン XML によるカスタム タブの作成
   このチュートリアルを使用してカスタム リボン タブを作成する方法を示します、**リボン (XML)**項目。  
@@ -158,7 +159,7 @@ ms.lasthandoff: 10/31/2017
   
 -   Outlook フォーム領域を使用して Microsoft Office Outlook の UI をカスタマイズする。 詳細については、次を参照してください。[チュートリアル: Outlook フォーム領域のデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リボンの概要](../vsto/ribbon-overview.md)   
  [リボン XML](../vsto/ribbon-xml.md)   
  [チュートリアル: リボン デザイナーを使用したカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)  

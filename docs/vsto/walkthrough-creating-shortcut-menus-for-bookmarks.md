@@ -20,11 +20,12 @@ caps.latest.revision: "57"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8dbb248fdaab10aaef6146ae68e36a64b60bb453
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 33f1e0c87130548ea5c2f9ad6ecc69e7ceac3186
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-shortcut-menus-for-bookmarks"></a>チュートリアル : ブックマークのショートカット メニューの作成
   このチュートリアルでは、Word のドキュメント レベルのカスタマイズを使用して <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールのショートカット メニューを作成する方法を示します。 ユーザーがブックマーク内のテキストを右クリックすると、ショートカット メニューにテキストの書式設定オプションが表示されます。  
@@ -196,7 +197,7 @@ ms.lasthandoff: 10/31/2017
   
 -   チェック ボックスを使用してブックマーク内の書式を変更します。 詳細については、次を参照してください。[チュートリアル: を変更するドキュメントの書式設定 チェック ボックス コントロールを使用した](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアルを使用して Word](../vsto/walkthroughs-using-word.md)   
  [Office UI のカスタマイズ](../vsto/office-ui-customization.md)   
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   

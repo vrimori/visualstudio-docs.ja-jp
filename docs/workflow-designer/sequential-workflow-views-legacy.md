@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 74aac4ab6406b4f400d6d5951c00b2a92af91ec0
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 8b54fbb37d33bdb6d4e397c81ad85bffd39b221f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sequential-workflow-views-legacy"></a>シーケンシャル ワークフロー ビュー (レガシ)
 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] は従来の [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] を備えており、これを使用すると、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] または [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] を対象とすることができます。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/27/2017
   
  ようなビューの詳細については、次を参照してください。[アクティビティ ビュー (レガシ)](../workflow-designer/activity-views-legacy.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アクティビティ ビュー (レガシ)](../workflow-designer/activity-views-legacy.md)   
  [従来のワークフロー プロジェクトを作成します。](../workflow-designer/creating-legacy-workflow-projects.md)   
  [ワークフロー作成モード](http://go.microsoft.com/fwlink?LinkID=65014)

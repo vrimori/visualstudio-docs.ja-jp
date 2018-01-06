@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 77f7b4e0131eb5afc4585a68097c8d419145096b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 20dce7d4b3dc306c7bcd4f83a1f4e8fea10c6a94
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactedreceivescope-activity-designer"></a>TransactedReceiveScope アクティビティ デザイナー
 **TransactedReceiveScope**デザイナーを使用して作成し、構成、<xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティ。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.ServiceModel.Activities.TransactedReceiveScope.Request%2A>|True|削除操作を行う、<xref:System.ServiceModel.Activities.Receive>にアクティビティ、**要求**アクティビティ デザイナー画面上のブロックです。|  
 |<xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A>|False|削除操作を行う、<xref:System.Activities.Activity>に、**本文**アクティビティ デザイナー画面上のブロックです。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CorrelationScope](../workflow-designer/correlationscope-activity-designer.md)   
  [InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md)   
  [受信](../workflow-designer/receive-activity-designer.md)   

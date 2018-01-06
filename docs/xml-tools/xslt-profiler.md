@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7f4dc0ee25ec338c93a9fd4bfcecb96126477f9d
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 7523043e6d8f4acdff983de5d95fd9fd55d49504
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xslt-profiler"></a>XSLT プロファイラー
 XSLT プロファイラーは、XSLT ドキュメントの開発とデバッグに役立つパフォーマンス分析プロファイラー ツールです。 XSLT プロファイラーを使用して詳細な XSLT パフォーマンス レポートを作成することにより、XSLT コード内のパフォーマンス関連の問題を計測および評価できるようになります。 XSLT プロファイラーには、XSL および XSLT のスタイル シートの最適化に役立つヒントが含まれており、最高のパフォーマンスが必要になる XSLT ベースのアプリケーションには不可欠です。  

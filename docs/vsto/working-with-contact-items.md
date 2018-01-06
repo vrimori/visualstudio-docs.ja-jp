@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3536c224498603eb4013c06b44dc0082337b4bdf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 378b33e7396678273a8aa14eb96e355117ce1f6d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-contact-items"></a>連絡先アイテムの操作
   <xref:Microsoft.Office.Interop.Outlook.ContactItem> クラスには、連絡先関連のタスクを実行するときに使用するメソッドとプロパティが含まれています。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/31/2017
   
  Outlook タスクと Outlook オブジェクト モデルについて詳しくは、「 [Outlook Object Model Overview](../vsto/outlook-object-model-overview.md)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メール アイテムの操作](../vsto/working-with-mail-items.md)   
  [フォルダーの操作](../vsto/working-with-folders.md)   
  [予定表アイテムの操作](../vsto/working-with-calendar-items.md)   

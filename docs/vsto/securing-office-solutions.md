@@ -19,11 +19,12 @@ caps.latest.revision: "78"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 50960f95b317f389cfe9f99154e51a5103b419d3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 45052deff58e992b427f72188fcb0dc8ade91b95
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-office-solutions"></a>Office ソリューションのセキュリティ保護
   Office ソリューションのセキュリティ モデルでは、いくつかのテクノロジ: [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]、 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]、Microsoft Office、および Internet Explorer の制限付きサイト ゾーンのセキュリティ センターです。 次のセクションでは、さまざまなセキュリティ機能のしくみについて説明します:  
@@ -104,7 +105,7 @@ ms.lasthandoff: 10/31/2017
   
  ![VSTO セキュリティ - セットアップ プログラムを使用してインストールする](../vsto/media/setup-vstoinstaller.png "VSTO セキュリティ - セットアップ プログラムを使用してインストールするには")  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションへの信頼の付与](../vsto/granting-trust-to-office-solutions.md)   
  [ドキュメントへの信頼の付与](../vsto/granting-trust-to-documents.md)   
  [信頼のリストを使用して Office ソリューションを信頼します。](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)   

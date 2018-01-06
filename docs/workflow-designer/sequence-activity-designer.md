@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 51f138d17c2b0f8d8a483ef09c298d1dbbf9345c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 5d0635839b9d875c5c519ec41c6dcfa6dc02fa2c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sequence-activity-designer"></a>Sequence アクティビティ デザイナー
 <xref:System.Activities.Statements.Sequence> アクティビティには、子アクティビティの順序付きコレクションが含まれており、これらのコレクションが順番に実行されます。  
@@ -33,6 +34,6 @@ ms.lasthandoff: 10/27/2017
 |-------------------|--------------|-----------|  
 |<xref:System.Activities.Activity.DisplayName%2A>|False|ヘッダーの <xref:System.Activities.Statements.Sequence> アクティビティ デザイナーの表示名を指定します。 既定値は Sequence です。 この値は、プロパティ グリッドで編集することも、アクティビティ デザイナーのヘッダーで直接編集することもできます。<br /><br /> <xref:System.Activities.Activity.DisplayName%2A> は必須ではありませんが、使用することをお勧めします。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [フローチャート](../workflow-designer/flowchart-activity-designer.md)   
  [制御フロー](../workflow-designer/control-flow-activity-designers.md)

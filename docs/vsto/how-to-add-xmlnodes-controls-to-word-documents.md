@@ -18,11 +18,12 @@ caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 791eabb83ffd020672b7955e0ceb283d5196621f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: ad54a3f554de6212f1bdeaeb6ba23dcbdbfce6c8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-xmlnodes-controls-to-word-documents"></a>方法 : Word 文書に XMLNodes コントロールを追加する
   **重要な**Microsoft Word に関するこのトピックに設定された情報が、利点と個人ユーザーおよびユーザーは、米国およびその区域外部にあるまたはを使用しているユーザーは、組織の使用専用に示された、または開発上で実行されるプログラム、Microsoft が特定の機能の実装を削除する場合、2010 年 1 月前に Microsoft によってライセンス供与された Microsoft Word 製品に関連するカスタムの XML から Microsoft Word。 Microsoft Word に関する情報はこの可能性がありますいない読み取りまたは個人または米国またはその区域、2010 年 1 月 10 日後に Microsoft によってライセンス供与された Microsoft Word 製品上で実行されるプログラムの開発を使用して、ユーザーの組織で使用されます。;これらの製品では、その日付の前にライセンスまたは購入し、米国外の利用に対してライセンス供与の製品と同じ動作がしません。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 10/31/2017
   
      <xref:Microsoft.Office.Tools.Word.XMLNodes>コントロールが作成され、プロジェクトに追加します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XMLNodes コントロール](../vsto/xmlnodes-control.md)   
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
  [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   

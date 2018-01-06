@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: fb1a9a4781d2ba486f2a9404c2c764a530cdf738
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 3e3fd48f33e5499f7a67aed02c7b732ebe6b3b7b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flowdecision-activity-designer"></a>FlowDecision アクティビティ デザイナー
 <xref:System.Activities.Statements.FlowDecision> ノードは条件ノードであり、指定した条件を満たすかどうかに基づいて、2 つの選択肢のどちらかに進む制御フローの分岐を提供します。 フローに 3 つ以上の分岐が必要な場合は、代わりに <xref:System.Activities.Statements.FlowSwitch%601> を使用します。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Statements.FlowDecision.True%2A>|False|<xref:System.Activities.Statements.FlowDecision.Condition%2A> が満たされた場合にフロー制御で使用されるパス。|  
 |<xref:System.Activities.Statements.FlowDecision.False%2A>|False|<xref:System.Activities.Statements.FlowDecision.Condition%2A> が満たされない場合にフロー制御で使用されるパス。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [フローチャート](../workflow-designer/flowchart-activity-designers.md)   
  [フローチャート](../workflow-designer/flowchart-activity-designer.md)   
  [FlowSwitch\<T >](../workflow-designer/flowswitch-t-activity-designer.md)

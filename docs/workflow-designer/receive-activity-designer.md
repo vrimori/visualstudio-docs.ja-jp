@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 68d198675f5b0b91320e9c21d497caf225798cc7
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 7c02cf726cbf575eae9c389186846855ee1206c4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="receive-activity-designer"></a>Receive アクティビティ デザイナー
 **受信**アクティビティ デザイナーを使用して作成し、構成、<xref:System.ServiceModel.Activities.Receive>アクティビティ。 <xref:System.ServiceModel.Activities.Receive> アクティビティは、メッセージ (<xref:System.ServiceModel.Channels.Message>、<xref:System.IO.Stream>、<xref:System.Xml.Linq.XElement> などの組み込みの型、アプリケーション定義のデータ コントラクト、メッセージ コントラクト、またはシリアル化可能な XML クラス) を受信するアクティビティです。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>|False|<xref:System.ServiceModel.Activities.Receive> アクティビティによって実装されるサービス操作に使用するシリアライザーの型を指定します。 既定値は <xref:System.Runtime.Serialization.DataContractSerializer> です。この場合、ある型のインスタンスが、提供されたデータ コントラクトを使用する XML ストリームまたはドキュメントへとシリアル化または逆シリアル化されます。 XML をより厳密に制御する必要がある場合は、<xref:System.Xml.Serialization.XmlSerializer> も使用できます。|  
 |<xref:System.ServiceModel.Activities.Receive.Action%2A>|False|メッセージのアクション ヘッダーを指定します。 これが明示的に設定されていない場合、既定値: https://tempuri.org/{サービス コントラクトの名前空間}/{サービス コントラクト名}/{操作名}。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md)   
  [CorrelationScope](../workflow-designer/correlationscope-activity-designer.md)   
  [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)   

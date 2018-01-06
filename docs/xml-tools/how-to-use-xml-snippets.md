@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d442dbf376d5615b6c10842c16d01183fc70056a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5d8c1d13263972462ef30e55a34c316f5dd0c7ac
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-xml-snippets"></a>方法 : XML スニペットを使用する
 XML エディターのショートカット メニューにある次の 2 つのコマンドを使用すると、XML スニペットを呼び出すことができます。 **スニペットの挿入**コマンドは、カーソル位置に XML スニペットを挿入します。 **ブロックの挿入**コマンドは、選択したテキストの周囲の XML スニペットをラップします。 各 XML スニペットには、スニペット型が指定されています。 スニペット型が、スニペットを使用できるかどうかを判断、**スニペットの挿入**コマンド、**ブロックの挿入**コマンド、またはその両方です。  
@@ -109,7 +110,7 @@ XML エディターのショートカット メニューにある次の 2 つの
   
  コード スニペット フィールドの設定を変更することで編集できるコード スニペット フィールドの既定の色を変更することができます、**フォントおよび色**のペイン、**オプション** ダイアログ ボックス。 詳細については、次を参照してください。[する方法: エディターの変更のフォントと色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML スニペット](../xml-tools/xml-snippets.md)   
  [方法: XML スキーマから XML スニペットを生成](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)   
  [方法 : XML スニペットを作成する](../xml-tools/how-to-create-xml-snippets.md)

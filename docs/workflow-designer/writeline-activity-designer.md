@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 615cfb46222dfbf6e6b3cb1ba6741cde7c7bf708
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 3f531539737389938a7ff0a757235d8c5c2af263
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writeline-activity-designer"></a>WriteLine アクティビティ デザイナー
 **WriteLine**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.WriteLine>アクティビティ。  
@@ -38,8 +39,8 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Statements.WriteLine.Text%2A>|False|書き込むテキスト。 プロパティを設定するには、Visual Basic の式を入力、**テキスト**ボックスに、 **WriteLine**アクティビティ デザイナーまたはプロパティ グリッドでします。|  
 |<xref:System.Activities.Statements.WriteLine.TextWriter%2A>|False|<xref:System.IO.TextWriter> による <xref:System.Activities.Statements.WriteLine> の書き込み先の <xref:System.Activities.Statements.WriteLine.Text%2A>。 既定はコンソールです。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プリミティブ](../workflow-designer/primitives-activity-designers.md)   
  [割り当てる](../workflow-designer/assign-activity-designer.md)   
  [遅延](../workflow-designer/delay-activity-designer.md)   
- [メソッドの呼び出し](../workflow-designer/invokemethod-activity-designer.md)
+ [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "70"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7f10b0ed77dc9d5f97b6fc2fc4f218c86dafee41
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: e1729a7921f72df07439261cb054fe30770b24d9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-changing-worksheet-formatting-using-checkbox-controls"></a>チュートリアル : CheckBox コントロールを使用したワークシート書式の変更
   このチュートリアルでは、Microsoft Office Excel ワークシートの書式を変更する チェック ボックスを使用する基礎を説明します。 Visual Studio での Office 開発ツールを使用して、作成し、プロジェクトにコードが追加されます。 完成したサンプルの結果を参照してくださいで Excel コントロールのサンプルを参照してください。 [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)です。  
@@ -70,23 +71,23 @@ ms.lasthandoff: 10/31/2017
   
 4.  あることを確認**Checkbox1**のオブジェクト名 ボックスの一覧ボックスが表示されて、**プロパティ**ウィンドウで、次のプロパティを変更。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**applyBoldFont**|  
+    |**Name**|**applyBoldFont**|  
     |**[テキスト]**|**太字**|  
   
 5.  2 番目のチェック ボックスを上または近くのセルにドラッグ**B4**し、次のプロパティを変更します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**applyItalicFont**|  
+    |**Name**|**applyItalicFont**|  
     |**[テキスト]**|**斜体**|  
   
 6.  3 番目のチェック ボックスを上または近くのセルにドラッグ**B6**し、次のプロパティを変更します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**applyUnderlineFont**|  
+    |**Name**|**applyUnderlineFont**|  
     |**[テキスト]**|**下線**|  
   
 7.  CTRL キーを押しながら、すべての 3 つのチェック ボックス コントロールを選択します。  
@@ -106,7 +107,7 @@ ms.lasthandoff: 10/31/2017
   
 2.  いることを確認**$B 9 ドル**の編集可能なテキスト ボックス、およびそのセルが表示されます**B9**が選択されています。 そうでない場合は、セルをクリックして**B9**をオンにします。  
   
-3.  **[OK]** をクリックします。  
+3.  **[OK]**をクリックします。  
   
 4.  セル**B9**という名前の範囲になります`NamedRange1`です。  
   
@@ -114,9 +115,9 @@ ms.lasthandoff: 10/31/2017
   
 5.  あることを確認**NamedRange1**のオブジェクト名 ボックスの一覧ボックスが表示されて、**プロパティ**ウィンドウで、次のプロパティを変更。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**ボックス**|  
+    |**Name**|**ボックス**|  
     |**Value2**|**このテキストの書式を変更する チェック ボックスをクリックします。**|  
   
  次に、オプションを選択するとテキストの書式を設定するコードを記述します。  
@@ -159,13 +160,13 @@ ms.lasthandoff: 10/31/2017
 3.  テキストの形式が正しいことを確認します。  
   
 ## <a name="next-steps"></a>次の手順  
- このチュートリアルでは、チェック ボックスを使用して、Excel ワークシート上のテキストを書式設定の基本を使用します。 ここでは、次の作業を行います。  
+ このチュートリアルでは、チェック ボックスを使用して、Excel ワークシート上のテキストを書式設定の基本を使用します。 ここでは、次のタスクを行います。  
   
 -   プロジェクトを配置します。 詳細については、次を参照してください。 [ClickOnce を使用して Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)です。  
   
 -   ボタンを使用してテキスト ボックスへデータを挿入する。 詳細については、次を参照してください。[チュートリアル: ボタンを使用してワークシート内のテキスト ボックスに表示するテキスト](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [使用して Excel のチュートリアル](../vsto/walkthroughs-using-excel.md)   
  [NamedRange コントロール](../vsto/namedrange-control.md)   
  [Office ドキュメントでの Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  

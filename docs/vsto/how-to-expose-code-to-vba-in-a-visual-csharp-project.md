@@ -20,11 +20,12 @@ caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a52060f1a1b2200109c5003321857915d95bd12a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 671618479b1be55fcf08d93b2a398c27348b9878
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-expose-code-to-vba-in-a-visual-c-project"></a>方法 : Visual C# プロジェクトのコードを VBA に公開する
   相互にやり取りするコードの 2 つの種類の場合は、Visual c# プロジェクトを Visual Basic for Applications (VBA) コード内のコードを公開できます。  
@@ -104,7 +105,7 @@ ms.lasthandoff: 10/31/2017
   
 12. プロジェクトをビルドします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md)   

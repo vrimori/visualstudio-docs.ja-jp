@@ -20,11 +20,12 @@ caps.latest.revision: "42"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a07f5b47ac6d9941a24f1d452bb1e290365049ee
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 357da47a68e3ae25fcd30f9516ce0509b9717807
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-outlook-form-regions"></a>Creating Outlook Form Regions
   フォーム領域を使用して、Microsoft Office Outlook フォームをカスタマイズできます。 Visual Studio には、フォーム領域のデザイン、開発、およびデバッグを簡単に行うことができる高度なツールが用意されています。  
@@ -154,7 +155,7 @@ ms.lasthandoff: 10/31/2017
 ###  <a name="HandlingFormRegionEvents"></a>フォーム領域イベントの処理  
  **Outlook フォーム領域**アイテム フォーム領域コード ファイルに次の 3 つのイベント ハンドラーを自動的に追加します。  
   
-|イベント|説明|  
+|event|説明|  
 |-----------|-----------------|  
 |FormRegionInitializing|フォーム領域が初期化される前に発生します。 このイベント ハンドラーの状態をチェックして、Outlook がフォーム領域を表示する必要があるかどうかを判定できます。 詳細については、次を参照してください。[する方法: フォーム領域が表示されないようにする Outlook](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)です。|  
 |FormRegionShowing|フォーム領域のインスタンスが作成されてから、フォーム領域が表示される前までの間に発生します。|  

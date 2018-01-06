@@ -21,11 +21,12 @@ caps.latest.revision: "57"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 40076f607e66ec76aaa42ae297d22b38a6234ab0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 46e83b8450a441eb7bc405c855271e315edb2e3c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-programming-against-events-of-a-namedrange-control"></a>チュートリアル : NamedRange コントロールのイベントのプログラミング
   このチュートリアルは、追加する方法を示します、 <xref:Microsoft.Office.Tools.Excel.NamedRange> Microsoft Office Excel ワークシートと Visual Studio での Office 開発ツールを使用して、そのイベントに対してプログラミングを制御します。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  いることを確認**$A$ 1**の編集可能なテキスト ボックス、およびそのセルが表示されます**A1**が選択されています。 そうでない場合は、セルをクリックして**A1**をオンにします。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
      セル**A1**という名前の範囲になります`namedRange1`です。 ワークシートに示されませんが、`namedRange1`に表示されます、**名前**(左側にあるワークシートのすぐ上にある) ボックス セル**A1**が選択されています。  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 10/31/2017
   
 6.  いることを確認**$B$ 3**の編集可能なテキスト ボックス、およびそのセルが表示されます**B3**が選択されています。 そうでない場合は、セルをクリックして**B3**をオンにします。  
   
-7.  **[OK]** をクリックします。  
+7.  **[OK]**をクリックします。  
   
      セル**B3**という名前の範囲になります`namedRange2`です。  
   
@@ -159,7 +160,7 @@ ms.lasthandoff: 10/31/2017
   
 -   プロジェクトを配置します。 詳細については、次を参照してください。 [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
  [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)   
  [NamedRange コントロール](../vsto/namedrange-control.md)   

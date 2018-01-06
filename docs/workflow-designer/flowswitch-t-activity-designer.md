@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 264ad0b02d2b352de69a84101b967ae6e663c422
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: c3e757d8ffea7e91c2d5e51bc4a04e6225d1064f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flowswitchlttgt-activity-designer"></a>FlowSwitch&lt;T&gt;アクティビティ デザイナー
 <xref:System.Activities.Statements.FlowSwitch%601> アクティビティは、3 つ以上の代替分岐が必要な場合に、一致条件に基づいて制御フローの分岐を提供する条件ノードです。 フローの分岐に必要なパスが 2 つのみである場合は、代わりに <xref:System.Activities.Statements.FlowDecision> アクティビティを使用します。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>|False|<xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> の評価によって得られる可能性のある結果から、<xref:System.Activities.Statements.FlowNode> オブジェクトのセットへの一意のマッピングを指定します。|  
 |<xref:System.Activities.Statements.FlowSwitch%601.Default%2A>|True|<xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> の評価が、<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> オブジェクトに含まれる値のいずれにも一致しない場合のマッピングを指定します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [フローチャート](../workflow-designer/flowchart-activity-designers.md)   
  [フローチャート](../workflow-designer/flowchart-activity-designer.md)   
  [FlowDecision](../workflow-designer/flowdecision-activity-designer.md)

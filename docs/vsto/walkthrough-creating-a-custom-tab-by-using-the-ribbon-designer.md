@@ -22,11 +22,12 @@ caps.latest.revision: "68"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 811e4eff77780bda2b348c26bb220a29d5fd1731
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: f5503bed26a5e2657bb499a7a25098c373e149e1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer"></a>チュートリアル : リボン デザイナーを使用したカスタム タブの作成
   リボン デザイナーでは、カスタム タブを作成し、その後、カスタム タブの中でコントロールを追加して配置することができます。  
@@ -162,7 +163,7 @@ ms.lasthandoff: 10/31/2017
   
 -   標準またはカスタムの Microsoft Office Outlook フォームを拡張する。 詳細については、次を参照してください。[チュートリアル: Outlook フォーム領域のデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
  [リボンの概要](../vsto/ribbon-overview.md)   
  [リボン デザイナー](../vsto/ribbon-designer.md)   

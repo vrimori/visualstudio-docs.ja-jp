@@ -25,11 +25,12 @@ caps.latest.revision: "56"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6f8842bd80832211f02532ca706416416325663b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: d7fbbad8433df7dd36d8f09a13305da3e15430c5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="limitations-of-windows-forms-controls-on-office-documents"></a>Office ドキュメントでの Windows フォーム コントロールの制限事項
   Microsoft Office Word ドキュメントまたは Microsoft Office Excel ワークシートに追加される Windows フォーム コントロールと Windows フォームに追加される Windows フォーム コントロールの間には、いくつか違いがあります。 たとえば、追加、<xref:Microsoft.Office.Tools.Word.Controls.Button>など、ドキュメントのプロパティを制御<xref:Microsoft.Office.Tools.Word.Controls.Button.Dock%2A>、 <xref:Microsoft.Office.Tools.Word.Controls.Button.Anchor%2A>、および<xref:Microsoft.Office.Tools.Word.Controls.Button.TabIndex%2A>期待どおりに動作しません。  
@@ -193,7 +194,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="support-for-legacy-activex-controls"></a>従来の ActiveX コントロールのサポート  
  既存の Word 文書または ActiveX コントロールを含む Excel ブックを使用するドキュメント レベルの Office プロジェクトを作成する場合の ActiveX コントロールの機能は失われます。ただし、Visual Studio 内からドキュメントに新しい ActiveX コントロールを追加するためのサポートされていません。 たとえば、Word 文書からボタンがある場合、**コントロール**Visual Basic for Applications (VBA) マクロを実行しているツールボックス、引き続き、ドキュメントを Office プロジェクトで使用した後、マクロを実行します。 ただし、ActiveX コントロールと VBA マクロを削除し、Windows フォーム コントロールに置き換えるをマネージ コードをお勧めはします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
  [Windows フォームでコントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   

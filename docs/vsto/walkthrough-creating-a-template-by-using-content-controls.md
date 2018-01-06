@@ -19,11 +19,12 @@ caps.latest.revision: "46"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7edb589551f888427be6abcbb8f86c2e86b4349c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 8508f12d0e0bbf6dbabc0c12f8e5feb8d7d11d1b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-template-by-using-content-controls"></a>チュートリアル : コンテンツ コントロールによるテンプレートの作成
   このチュートリアルでは、コンテンツ コントロールを使用して、Microsoft Office Word テンプレートで構造化された再利用可能なコンテンツを作成するための、ドキュメント レベルのカスタマイズを作成する方法について説明します。  
@@ -238,7 +239,7 @@ ms.lasthandoff: 10/31/2017
   
 -   コンテンツ コントロールを、文書に埋め込まれている XML の一部 (「カスタム XML 部分」とも呼ばれます) にバインドします。 詳細については、次を参照してください。[チュートリアル: カスタム XML 部分へのコンテンツ コントロールのバインド](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
  [コンテンツ コントロール](../vsto/content-controls.md)   
  [方法: Word 文書にコンテンツ コントロールを追加](../vsto/how-to-add-content-controls-to-word-documents.md)   

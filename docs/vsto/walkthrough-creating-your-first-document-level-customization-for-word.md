@@ -19,11 +19,12 @@ caps.latest.revision: "45"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6c7992f36f82d7caf56b09b0f6887eed363b6665
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 6d732f16d6794fbe59dd6f67fa904fcee916ce69
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-your-first-document-level-customization-for-word"></a>チュートリアル : 初めての Word 用ドキュメント レベルのカスタマイズの作成
   この入門編のチュートリアルでは、Microsoft Office Word 用のドキュメント レベルのカスタマイズを作成する方法について説明します。 この種のソリューションで作成した機能は、特定の文書が開いている場合にのみ使用可能です。 ドキュメント レベルのカスタマイズでは、文書が開いたときに新しいリボン タブを表示するなどの、アプリケーション全体の変更を行うことはできません。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/31/2017
   
 6.  **名前**ボックスに、入力**FirstDocumentCustomization**です。  
   
-7.  **[OK]** をクリックします。  
+7.  **[OK]**をクリックします。  
   
      **Visual Studio Tools for Office プロジェクト ウィザード** が開きます。  
   
@@ -100,7 +101,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="adding-text-to-the-document-programmatically"></a>プログラムによるドキュメントへのテキストの追加  
  次に、ThisDocument コード ファイルにコードを追加します。 この新しいコードでは、Word のオブジェクト モデルを使用して、ドキュメントに 2 番目のテキスト段落を追加します。 ThisDocument コード ファイルには、既定で次の生成済みコードが含まれています。  
   
--   `ThisDocument` クラスの部分定義。このクラスは、ドキュメントのプログラミング モデルを表し、Word のオブジェクト モデルへのアクセスを提供します。 詳細については、次を参照してください。 [Document ホスト項目](../vsto/document-host-item.md)と[Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)です。 `ThisDocument` クラスの残りの部分は、変更することができない非表示のコード ファイルに定義されています。  
+-   `ThisDocument` クラスの部分定義。このクラスは、ドキュメントのプログラミング モデルを表し、Word のオブジェクト モデルへのアクセスを提供します。 詳細については、次を参照してください。 [Document ホスト項目](../vsto/document-host-item.md)と[Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)です。 `ThisDocument` クラスの残りの部分は、変更するべきではない非表示のコード ファイルに定義されています。  
   
 -   `ThisDocument_Startup` イベント ハンドラーおよび `ThisDocument_Shutdown` イベント ハンドラー。 これらのイベント ハンドラーは、ドキュメントが開いたとき、および閉じたときに呼び出されます。 これらのイベント ハンドラーを使用して、ドキュメントが開いたときにカスタマイズを初期化し、ドキュメントが閉じたときにカスタマイズが使用したリソースをクリーンアップします。 詳細については、「 [Events in Office Projects](../vsto/events-in-office-projects.md)」を参照してください。  
   
@@ -158,7 +159,7 @@ ms.lasthandoff: 10/31/2017
   
 -   Word 用ドキュメント レベル カスタマイズの配置: [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)   
  [Word ソリューション](../vsto/word-solutions.md)   
  [ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)   

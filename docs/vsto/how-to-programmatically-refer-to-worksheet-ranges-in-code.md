@@ -20,11 +20,12 @@ caps.latest.revision: "46"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fa76eff8719242d0fa3e059ad325dbdfb587f2bc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 829cd94dc97d91afc9f3f991d088627ac9e1ccdc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-refer-to-worksheet-ranges-in-code"></a>方法: プログラムによってコード内でワークシートの範囲を参照する
   内容を参照する同様のプロセスを使用する、<xref:Microsoft.Office.Tools.Excel.NamedRange>コントロールまたはネイティブな Excel 範囲オブジェクト。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/31/2017
      [!code-csharp[Trin_VstcoreExcelAutomation#47](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#47)]
      [!code-vb[Trin_VstcoreExcelAutomation#47](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#47)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [範囲の使用](../vsto/working-with-ranges.md)   
  [方法: プログラムによってワークシートでスペル チェック](../vsto/how-to-programmatically-check-spelling-in-worksheets.md)   
  [方法: プログラムによってブック内の範囲にスタイルを適用](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   

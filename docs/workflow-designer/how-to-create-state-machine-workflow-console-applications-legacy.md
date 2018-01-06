@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 7f5513ef40523c994b50d72d900aace591fdea14
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 621d13bbc86693a7c49674ae8372e7a1000cbe10
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-state-machine-workflow-console-applications-legacy"></a>方法: ステート マシン ワークフロー コンソール アプリケーションを作成する (レガシ)
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] が備えている従来の [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]を使用してステート マシンのワークフロー コンソール アプリケーション プロジェクトを作成するには、次の手順を実行します。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。  
@@ -47,8 +48,8 @@ ms.lasthandoff: 10/27/2017
   
      ソリューション ディレクトリをプロジェクトの作成を実行する場合に、選択、**ソリューションのディレクトリを作成**チェック ボックスをオンおよびに名前を入力、**ソリューション名**ボックス。  
   
-8.  **[OK]** をクリックします。  
+8.  **[OK]**をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [従来のワークフロー プロジェクトを作成します。](../workflow-designer/creating-legacy-workflow-projects.md)   
  [方法: ステート マシン ワークフロー ライブラリを作成する (レガシ)](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md)

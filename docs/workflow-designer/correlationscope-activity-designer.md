@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 3e6e745e470c5e5b5a279f460198729bd9429ccc
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 71f2ce7f69351c0e829f43f9e491304db39e6cea
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="correlationscope-activity-designer"></a>CorrelationScope アクティビティ デザイナー
 **CorrelationScope**アクティビティ デザイナーを使用して作成し、構成、<xref:System.ServiceModel.Activities.CorrelationScope>暗黙で管理を使用して、子メッセージング アクティビティのアクティビティ、<xref:System.ServiceModel.Activities.CorrelationHandle>オブジェクト。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.ServiceModel.Activities.CorrelationScope.CorrelatesWith%2A>|False|子メッセージング アクティビティの管理に使用する <xref:System.ServiceModel.Activities.CorrelationHandle> を指定します。 このプロパティを設定しない場合は、<xref:System.ServiceModel.Activities.CorrelationScope> に、暗黙の <xref:System.ServiceModel.Activities.CorrelationHandle> が自動的に作成されます。|  
 |<xref:System.ServiceModel.Activities.CorrelationScope.Body%2A>|False|相関関係のスコープ内のアクティビティを指定します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md)   
  [受信](../workflow-designer/receive-activity-designer.md)   
  [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)   

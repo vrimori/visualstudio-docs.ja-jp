@@ -23,11 +23,12 @@ caps.latest.revision: "64"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 52583bdbf6edf4f2a698bc8662a0faf659841926
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: fcf026af4877ee2aefe17551763752d385b63493
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ribbon-overview"></a>リボンの概要
   リボンは、関連するコマンドを見つけやすいように整理するための手段です。 コマンドは、コントロールとしてリボンに表示されます。 コントロールがまとめ*グループ*アプリケーション ウィンドウの上端に水平方向のストリップに沿ったです。 関連するグループは、タブに整理されます。  

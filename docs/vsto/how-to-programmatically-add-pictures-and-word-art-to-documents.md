@@ -21,11 +21,12 @@ caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a30c865a1bee9f3e8a75d5362688f1a83baba02a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: a157300032f54a6a86258f28ab0187e7992c35b7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-add-pictures-and-word-art-to-documents"></a>方法: プログラムによって文書に画像およびワードアートを追加する
   デザイン時または実行時に、画像および描画オブジェクトをドキュメントに追加できます。 ワードアートでは、Microsoft Office Word ドキュメントに装飾的なテキストを追加することができます。 これらの特別なテキスト効果は、ドキュメントに挿入できる、カスタマイズ可能な描画オブジェクトです。  
@@ -103,7 +104,7 @@ ms.lasthandoff: 10/31/2017
   
 -   という名前の画像**SamplePicture.jpg** C ドライブ上に存在する必要があります  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: プログラムによって既存のドキュメントを開く](../vsto/how-to-programmatically-open-existing-documents.md)   
  [方法: プログラムによって Word 文書にテキストを挿入](../vsto/how-to-programmatically-insert-text-into-word-documents.md)   
  [方法: プログラムによって検索後に選択内容を復元](../vsto/how-to-programmatically-restore-selections-after-searches.md)   

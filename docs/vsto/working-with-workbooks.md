@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a3d83847341e7689b34edb0a4582225886e5eebd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: cfab2572544a89f0f5f353998e68093369d626f1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-workbooks"></a>ブックの操作
   <xref:Microsoft.Office.Tools.Excel.Workbook> クラスと <xref:Microsoft.Office.Interop.Excel.Workbooks> クラスには、ブック関連のタスクを実行するときに使用するメソッドとプロパティが含まれています。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
   
  以下のタスクは、VSTO アドインとドキュメント レベルのカスタマイズとで実行方法が異なる場合があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)   
  [ワークシートの操作](../vsto/working-with-worksheets.md)   
  [範囲の使用](../vsto/working-with-ranges.md)   

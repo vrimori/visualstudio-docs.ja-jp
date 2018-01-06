@@ -20,11 +20,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 053ece03abfbb94d809c3e5a3627bc46ef2195e8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 31fd8ba79218c6844e8fc5af33a81ce1c95a8abf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="granting-trust-to-documents"></a>Granting Trust to Documents
   ドキュメント レベルのプロジェクトでは、証明書を使用したマニフェストへの署名や、信頼プロンプトのクリックなど、アプリケーション レベルのプロジェクトと同じセキュリティ要件が適用されます。 また、ドキュメントまたはブックは、信頼できる場所として指定されたディレクトリに置く必要があります。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="trusted-locations"></a>信頼できる場所  
  アプリケーションで[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)]Office 2010 がセキュリティ センターのユーザーが信頼できる場所などのセキュリティとプライバシーの設定を構成できます。 Office ソリューションでは、ローカル コンピューターが信頼できる場所と見なされます。 ただし、ディレクトリの中には、リスクが高めであるために信頼できないものもあります (システム、各ユーザー、Internet Explorer 用の一時フォルダーなど)。  
   
- セキュリティ センターの詳細については、次を参照してください。[セキュリ ティー ポリシーと Office 2010 での設定](http://go.microsoft.com/fwlink/?LinkId=89202)です。 作成、管理、削除、および信頼できるフォルダーを構成する方法の詳細については、次を参照してください[2007 Office system で信頼できる場所および信頼できる発行元の設定を構成する](http://go.microsoft.com/fwlink/?LinkId=89203)と[作成、削除、または変更します。。信頼できるファイルの場所の](https://support.office.com/en-au/article/Create-remove-or-change-a-trusted-location-for-your-files-f5151879-25ea-4998-80a5-4208b3540a62)します。  
+ セキュリティ センターの詳細については、次を参照してください。[セキュリ ティー ポリシーと Office 2010 での設定](http://go.microsoft.com/fwlink/?LinkId=89202)です。 作成、管理、削除、および信頼できるフォルダーを構成する方法の詳細については、次を参照してください[2007 Office system で信頼できる場所および信頼できる発行元の設定を構成する](http://go.microsoft.com/fwlink/?LinkId=89203)と[作成、削除、または変更します。信頼できるファイルの場所の](https://support.office.com/en-au/article/Create-remove-or-change-a-trusted-location-for-your-files-f5151879-25ea-4998-80a5-4208b3540a62)します。  
   
 ## <a name="security-considerations-for-office-solutions"></a>Office ソリューションに固有のセキュリティに関する考慮事項  
  どのフォルダーを信頼できる場所に追加するかを検討するときには、以下のセキュリティ上の問題に留意する必要があります。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/31/2017
   
 -   ドキュメント レベルのソリューションのドキュメントまたはブックは、アセンブリと同じディレクトリ、または別のディレクトリに保存できます。 たとえば、ドキュメントを SharePoint サーバー上に置き、アセンブリをネットワーク ファイル共有に置くことも可能です。 詳細については、次を参照してください。[する方法: ClickOnce を使用して SharePoint サーバーにドキュメント レベルの Office ソリューションを発行](http://msdn.microsoft.com/en-us/2408e809-fb78-42a1-9152-00afa1522e58)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションへの信頼の付与](../vsto/granting-trust-to-office-solutions.md)   
  [Office ソリューションのセキュリティのトラブルシューティング](../vsto/troubleshooting-office-solution-security.md)   
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)  

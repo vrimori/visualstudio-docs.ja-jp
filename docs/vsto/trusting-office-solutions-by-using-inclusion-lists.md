@@ -20,11 +20,12 @@ caps.latest.revision: "44"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7e50809b5e57a832c9f085172832dd2e1a4db45a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 5eb6c744005c48fa33592da2113f88e4917a259a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trusting-office-solutions-by-using-inclusion-lists"></a>信頼のリストによる Office ソリューションへの信頼の付与
   信頼のリストによって、ユーザーは発行者を識別する証明書で署名されている Office ソリューションに信頼を付与することができます。 信頼のリストはユーザー固有であり、ドキュメント レベルのカスタマイズと VSTO アドインに使用できます。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="structure-of-the-inclusion-list"></a>信頼のリストの構造  
  有効な信頼のリストのエントリには、配置マニフェストへのパスと、ソリューションの署名に使用する公開キーという 2 つの部分があります。 ソリューションが信頼のリストに追加されると、信頼されているとみなされます。 Office ソリューションが実行されると、Office アプリケーションによって信頼リストのパブリックキーが配置マニフェストの署名キーと比較され、現在実行中のソリューションが元の信頼バージョンと同じであることが確認されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションへの信頼の付与](../vsto/granting-trust-to-office-solutions.md)   
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)  
   

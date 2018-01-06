@@ -20,11 +20,12 @@ caps.latest.revision: "54"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0dce1b5ecafbccfdf9816bbc4ef3e8fee3e5c2fc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 8fea089340c0d51fb5b88bf20d5521defc5dcc71
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-extending-server-explorer-to-display-web-parts"></a>チュートリアル: サーバー エクスプローラーを拡張して Web パーツを表示する
   Visual Studio で、使用することができます、 **SharePoint 接続**のノード**サーバー エクスプ ローラー**を SharePoint サイト上のコンポーネントを表示します。 ただし、**サーバー エクスプ ローラー**既定では一部のコンポーネントが表示されません。 このチュートリアルで拡張する**サーバー エクスプ ローラー** SharePoint サイトが接続されている各 Web パーツ ギャラリーで表示するようです。  
@@ -375,7 +376,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  Visual Studio (実験用インスタンスおよび WebPartNode ソリューションが開いている Visual Studio のインスタンス) の両方のインスタンスを閉じます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバー エクスプ ローラーで SharePoint 接続 ノードを拡張します。](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
  [チュートリアル: サーバー エクスプ ローラー拡張機能に SharePoint クライアント オブジェクト モデルを呼び出す](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)   
  [アイコン用イメージ エディター](/cpp/windows/image-editor-for-icons)   

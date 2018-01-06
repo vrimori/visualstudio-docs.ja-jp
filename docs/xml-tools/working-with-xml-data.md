@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fa74884edc5f0dea16d95fc5f177323da1fab6ab
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 3cf5c9d448d7e637344ee3dd5741871f5c177fdb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-xml-data"></a>XML データの使用
 XML とその関連技術は、[!INCLUDE[msCoName](../xml-tools/includes/msconame_md.md)] Visual Studio でのデータ処理において大きな役割を果たしています。 Visual Studio には、XML、XSLT、および XML スキーマの操作を容易にするツールと機能が含まれています。  
@@ -67,5 +68,5 @@ XML とその関連技術は、[!INCLUDE[msCoName](../xml-tools/includes/msconam
  [マネージ コードで XML Web サービス](http://msdn.microsoft.com/en-us/c9a7dc25-3e68-4723-bfb7-de4320830196)  
  XML Web サービスを作成して配置する方法と、XML Web サービスにアクセスする方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio の XML ツール](../xml-tools/xml-tools-in-visual-studio.md)

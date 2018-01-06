@@ -32,11 +32,12 @@ caps.latest.revision: "76"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b8d086aec822d0e2e9ecc80834703cc5481f9eef
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 106b61c18b9124a72c1b149dcab04e30be5f25f2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-controls-on-office-documents-overview"></a>Office ドキュメントでの Windows フォーム コントロールの概要
   Windows フォーム コントロールは、データを入力または操作するときにユーザーが取り扱うオブジェクトです。 Microsoft Office Excel および Microsoft Office Word のドキュメント レベルのプロジェクトでは、デザイン時に Windows フォーム コントロールをプロジェクトのドキュメントまたはブックに追加したり、実行時にこれらのコントロールをプログラミングで追加したりできます。 Word と Excel 用の VSTO アドインでは、実行時に開いているドキュメントやワークシートにこれらのコントロールをプログラミングで追加できます。  
@@ -149,7 +150,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="adding-components-at-design-time"></a>デザイン時のコンポーネントの追加  
  特定のコントロールやコンポーネントは、ドキュメントに表示されずに、コンポーネント トレイに表示されます。 Visual Studio では、各ドキュメント ウィンドウに対して 1 つのコンポーネント トレイが提供されます。 コンポーネント トレイは、コンポーネントがドキュメントに存在する場合にのみ画面に表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   
  [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   

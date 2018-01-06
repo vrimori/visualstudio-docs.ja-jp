@@ -10,11 +10,12 @@ helpviewer_keywords:
 ms.assetid: ffc5ba4d-44d7-4ef7-a3f6-38a8738bf127
 author: paulyuk
 ms.author: paulyuk
-ms.openlocfilehash: bdfe33cac19d488bc7763f3c61c518093d8afffa
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: paulyuk
+ms.openlocfilehash: a8977aad735a115089685ed0032b3d358d8b89c8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="support-statement-for-visual-basic-60-on-windows"></a>Visual Basic 6.0 を Windows のサポートについて
 
@@ -133,16 +134,16 @@ VB6 ランタイムでは、出荷および、OS の有効期間中に Windows S
 
 |Windows オペレーティング システム|サポートされているランタイムの VB6</br>Windows で出荷ファイルでは、サポートされているか。|VB6 Rutime のサポート</br>拡張ファイル</br>アプリケーションを使用して配布がサポートされているか。| VB6 IDE サポートを有無|
 |---|---|---|---|
-|Windows 10、すべての 32 ビット エディション|[はい] *|[はい] *|いいえ|
-|Windows 10、すべての 64 ビット エディション (WOW のみ)|[はい] * </br> のみの WOW で実行されている 32 ビット アプリ|はい* </br> のみの WOW で実行されている 32 ビット アプリ|いいえ|
-|Windows 8.1、すべての 32 ビット エディション|[はい] *|[はい] *|いいえ|
-| Windows 8.1、すべての 64 ビット エディション (WOW のみ)|[はい] * </br> のみの WOW で実行されている 32 ビット アプリ|はい* </br> のみの WOW で実行されている 32 ビット アプリ|いいえ|
-|Windows 7、すべての 32 ビット エディション|[はい] *|[はい] *|いいえ|
-|Windows 7、すべての 64 ビット エディション (WOW のみ)|[はい] * </br> のみの WOW で実行されている 32 ビット アプリ|[はい] * </br> のみの WOW で実行されている 32 ビット アプリ|いいえ|
-|Windows Server 2016、すべての 64 ビット エディション (WOW のみ)|はい* </br> のみの WOW で実行されている 32 ビット アプリ|はい* </br> のみの WOW で実行されている 32 ビット アプリ|いいえ|
-|Windows Server 2012 R2 のすべての 64 ビット エディション (WOW のみ)<br>Windows Server 2012 のすべての 64 ビット エディション (WOW のみ)|はい* </br> のみの WOW で実行されている 32 ビット アプリ|はい* </br> のみの WOW で実行されている 32 ビット アプリ|いいえ|
-|Windows Server 2008 R2 のすべての x64 エディション (WOW のみ)</br>Windows Server 2008 では、すべての x64 エディション (WOW のみ)|[はい] * </br> のみの WOW で実行されている 32 ビット アプリ|[はい] * </br> のみの WOW で実行されている 32 ビット アプリ|いいえ|
-|すべての 32 ビット エディション、Windows Server 2008|[はい] *|[はい] *|いいえ|
+|Windows 10、すべての 32 ビット エディション|[はい] *|[はい] *|×|
+|Windows 10、すべての 64 ビット エディション (WOW のみ)|[はい] * </br> のみの WOW で実行されている 32 ビット アプリ|はい* </br> のみの WOW で実行されている 32 ビット アプリ|×|
+|Windows 8.1、すべての 32 ビット エディション|[はい] *|[はい] *|×|
+| Windows 8.1、すべての 64 ビット エディション (WOW のみ)|[はい] * </br> のみの WOW で実行されている 32 ビット アプリ|はい* </br> のみの WOW で実行されている 32 ビット アプリ|×|
+|Windows 7、すべての 32 ビット エディション|[はい] *|[はい] *|×|
+|Windows 7、すべての 64 ビット エディション (WOW のみ)|[はい] * </br> のみの WOW で実行されている 32 ビット アプリ|[はい] * </br> のみの WOW で実行されている 32 ビット アプリ|×|
+|Windows Server 2016、すべての 64 ビット エディション (WOW のみ)|はい* </br> のみの WOW で実行されている 32 ビット アプリ|はい* </br> のみの WOW で実行されている 32 ビット アプリ|×|
+|Windows Server 2012 R2 のすべての 64 ビット エディション (WOW のみ)<br>Windows Server 2012 のすべての 64 ビット エディション (WOW のみ)|はい* </br> のみの WOW で実行されている 32 ビット アプリ|はい* </br> のみの WOW で実行されている 32 ビット アプリ|×|
+|Windows Server 2008 R2 のすべての x64 エディション (WOW のみ)</br>Windows Server 2008 では、すべての x64 エディション (WOW のみ)|[はい] * </br> のみの WOW で実行されている 32 ビット アプリ|[はい] * </br> のみの WOW で実行されている 32 ビット アプリ|×|
+|すべての 32 ビット エディション、Windows Server 2008|[はい] *|[はい] *|×|
 
 
 > [!NOTE]

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 6ac342921696cb2a88426e2fd1f1ddee79e9341c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 1c0b55f1539526e9386df2d6de050c14fb8f59cf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rule-set-editor-dialog-box-legacy"></a>[ルール セット エディター] ダイアログ ボックス (レガシ)
 このトピックについて説明する方法を使用して、**ルール セット エディター**  ダイアログ ボックスでは、従来の[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]します。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/27/2017
 |**規則を追加します。**|新しいルール定義をルール セットに追加します。|  
 |**削除**|選択したルールをルール セットから削除します。|  
 |**チェーン**|ルール セットで使用するフォワード チェーンの種類を指定します。 使用可能なオプションは次のとおりです。<br /><br /> -   **完全なチェーン**、すべてのフォワード チェーン メカニズムを使用するように指定する: 暗黙、メソッドの帰属、明示的なを使用して、**更新**関数。<br />-   **シーケンシャル**、フォワード チェーンをまったく使用しないことを指定します。<br />-   **明示的な更新プログラムのみ**、に対するフォワード チェーンだけを実行することを指定する**更新**アクション。<br /><br /> フォワード チェーンの詳細については、次を参照してください。 [PolicyActivity アクティビティの使用](http://go.microsoft.com/fwlink?LinkID=65004)です。|  
-|**名前**|ルール セット リストの列見出しです。 ルール リストを名前で並べ替えるには、これをクリックします。|  
+|**Name**|ルール セット リストの列見出しです。 ルール リストを名前で並べ替えるには、これをクリックします。|  
 |**優先順位**|ルール セット リストの列見出しです。 ルール リストを優先度で並べ替えるには、これをクリックします。|  
 |**再評価**|ルール セット リストの列見出しです。 ルール リストを再評価タイプで並べ替えるには、これをクリックします。|  
 |**ルールのプレビュー**|ルール セット リストの列見出しです。 ルールの条件とアクションのプレビューでルール リストを並べ替えるには、これをクリックします。|  
@@ -89,7 +90,7 @@ Update("this/Address/State")
   
  使用しての詳細については**更新**フォワード チェーンで次を参照してください。 [PolicyActivity アクティビティの使用](http://go.microsoft.com/fwlink?LinkID=65004)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)   
  [[ルール セット] ダイアログ ボックス (レガシ)](../workflow-designer/select-rule-set-dialog-box-legacy.md)   
  [PolicyActivity アクティビティの使用](http://go.microsoft.com/fwlink?LinkID=65004)   

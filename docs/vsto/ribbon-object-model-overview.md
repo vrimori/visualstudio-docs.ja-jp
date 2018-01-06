@@ -16,11 +16,12 @@ caps.latest.revision: "75"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 655a1b6f3d57ac15fc7a50a603b2a12791251c9d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 1ca5b96157ee6077d4e904d21ba2a95c4f059e02
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ribbon-object-model-overview"></a>リボン オブジェクト モデルの概要
   [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]を取得し、実行時にリボン コントロールのプロパティを設定に使用できる厳密に型指定のオブジェクト モデルを公開します。 たとえば、メニュー コントロールを動的に設定したり、コントロールの表示/非表示をコンテキストに応じて切り替えたりすることができます。 Office アプリケーションがリボンを読み込む前であれば、タブ、グループ、およびコントロールをリボンに追加することもできます。 詳細については、次を参照してください。[設定のプロパティになる読み取り専用の](#SettingReadOnlyProperties)します。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/31/2017
 ##  <a name="RibbonEvents"></a>リボン イベント  
  **リボン**クラスには、次の 3 つのイベントが含まれています。  
   
-|イベント|説明|  
+|event|説明|  
 |-----------|-----------------|  
 |<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Load>|Office アプリケーションがリボンのカスタマイズを読み込んだときに発生します。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load> イベント ハンドラーがリボン コード ファイルに自動的に追加されます。 このイベント ハンドラーを使用して、リボンが読み込まれるときにカスタム コードを実行します。|  
 |<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage>|リボンが読み込まれたときに、リボンのカスタマイズ内のイメージをキャッシュできます。 これにより、リボンのイメージをこのイベント ハンドラーにキャッシュするコードを作成する場合に、パフォーマンスを多少向上させることができます。 詳細については、「<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>」を参照してください。|  
@@ -148,7 +149,7 @@ ms.lasthandoff: 10/31/2017
 |**ImageName**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|  
 |**Itemsize されています。**|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>|  
 |**MaxLength**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox>|  
-|**名前**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>|  
+|**Name**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>|  
 |**位置**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonTab><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|  
 |**[Ribbontype]**|<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>|  
 |**行数**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|  
@@ -171,7 +172,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="ribbon-control-events"></a>リボン コントロール イベント  
  各コントロール クラスに 1 つ以上のイベントが含まれています。 次の表は、それらのイベントについての説明です。  
   
-|イベント|説明|  
+|event|説明|  
 |-----------|-----------------|  
 |クリック|コントロールがクリックされたときに発生します。|  
 |TextChanged|編集ボックスまたはコンボ ボックス内のテキストが変更されたときに発生します。|  
@@ -187,7 +188,7 @@ ms.lasthandoff: 10/31/2017
 |*送信者*|イベントを発生させたコントロールを表す <xref:System.Object>。|  
 |*e*|<xref:Microsoft.Office.Tools.Ribbon.RibbonControlEventArgs> を格納している <xref:Microsoft.Office.Core.IRibbonControl>。 このコントロールを使用すると、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] によって提供されるリボン オブジェクト モデルには用意されていないプロパティにアクセスできます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
  [リボンの概要](../vsto/ribbon-overview.md)   
  [方法: リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)   

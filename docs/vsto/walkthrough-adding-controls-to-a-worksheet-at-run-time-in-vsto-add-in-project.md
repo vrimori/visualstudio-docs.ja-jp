@@ -20,11 +20,12 @@ caps.latest.revision: "38"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bae6ff23763300a4baa748479c609217123c765c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 37da15cce48bd16e022db42fa8a08a2b9633b5fc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project"></a>チュートリアル : 実行時における VSTO アドイン プロジェクトのワークシートへのコントロールの追加
   Excel VSTO アドインを使用して、任意の開いているワークシートにコントロールを追加できます。 このチュートリアルでは、リボンを使用してユーザーがワークシートに <xref:Microsoft.Office.Tools.Excel.Controls.Button>、<xref:Microsoft.Office.Tools.Excel.NamedRange>、および <xref:Microsoft.Office.Tools.Excel.ListObject> を追加できるようにする方法を説明します。 詳細については、次を参照してください。[を実行時に Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)です。  
@@ -74,23 +75,23 @@ ms.lasthandoff: 10/31/2017
   
 5.  **[プロパティ]** ウィンドウで、次のプロパティを変更します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**Button**|  
+    |**Name**|**Button**|  
     |**Label**|**Button**|  
   
 6.  **group1**に 2 つ目のチェック ボックスを追加し、次のプロパティを変更します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**NamedRange**|  
+    |**Name**|**NamedRange**|  
     |**Label**|**NamedRange**|  
   
 7.  3 番目のチェック ボックスを追加**group1**、次のプロパティを変更します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**ListObject**|  
+    |**Name**|**ListObject**|  
     |**Label**|**ListObject**|  
   
 ## <a name="adding-controls-to-the-worksheet"></a>ワークシートへのコントロールの追加  
@@ -190,7 +191,7 @@ ms.lasthandoff: 10/31/2017
   
 -   コントロールをワークシートに保存する方法については、Excel VSTO アドイン ダイナミック コントロール サンプルでを参照してください。 [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Excel ソリューション](../vsto/excel-solutions.md)   
  [Windows フォームでコントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)   
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   

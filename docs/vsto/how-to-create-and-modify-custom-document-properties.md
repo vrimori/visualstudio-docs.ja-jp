@@ -19,11 +19,12 @@ caps.latest.revision: "47"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 78cf27b7d58e85217c770abee1dc6a4151cc1eb1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 1ab68f9bd5c6a6bc1176fc211b99ad1de777ca38
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-and-modify-custom-document-properties"></a>方法 : カスタム ドキュメント プロパティを作成および変更する
   上記の Microsoft Office アプリケーションは、ドキュメントで保存される組み込みのプロパティを提供します。 さらに、ドキュメントで保存する追加情報がある場合は、カスタム ドキュメント プロパティを作成し、変更することができます。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  未定義の `Value` プロパティにアクセスしようとすると、例外が発生します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
  [ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)   
  [方法: ドキュメント プロパティの読み込みと書き込みを行う](../vsto/how-to-read-from-and-write-to-document-properties.md)  

@@ -20,11 +20,12 @@ caps.latest.revision: "50"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: dff7896b24508891a62ad3a0760880ed6a68a65a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 10d35a0cec1e927fbc264d64ef911503f68f1606
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>チュートリアル : ドキュメント レベルのプロジェクトでの複合データ バインディング
   このチュートリアルでは、ドキュメント レベルのプロジェクトでの複合データ バインディングの基本について説明します。 Microsoft Office Excel ワークシートの複数のセルを Northwind SQL Server データベース内のフィールドにバインドできます。  
@@ -219,7 +220,7 @@ ms.lasthandoff: 10/31/2017
      フィルターが削除され、すべての行が表示されます。  
   
 ## <a name="next-steps"></a>次の手順  
- このチュートリアルでは、リスト オブジェクトへのデータベースのテーブルのバインドの基礎を説明します。 ここでは、次の作業を行います。  
+ このチュートリアルでは、リスト オブジェクトへのデータベースのテーブルのバインドの基礎を説明します。 ここでは、次のタスクを行います。  
   
 -   オフライン使用できるようにする、データをキャッシュします。 詳細については、次を参照してください。[する方法: オフラインで使用またはサーバー上にデータをキャッシュ](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)です。  
   
@@ -227,7 +228,7 @@ ms.lasthandoff: 10/31/2017
   
 -   フィールドとテーブル間のマスター/詳細関係を作成します。 詳細については、次を参照してください。[チュートリアル: データセットを作成するマスターの詳細関係を使用して、キャッシュ](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションでのコントロールへのデータをバインディング](../vsto/binding-data-to-controls-in-office-solutions.md)   
  [Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)   
  [チュートリアル: ドキュメント レベルのプロジェクトでの単純データ バインディング](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)  

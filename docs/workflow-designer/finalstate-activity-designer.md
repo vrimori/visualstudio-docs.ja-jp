@@ -10,11 +10,12 @@ ms.assetid: aa186893-8775-40dd-981f-8593ead831d0
 caps.latest.revision: "5"
 ms.author: sdanie
 manager: erikre
-ms.openlocfilehash: 4bc8e8c9278561cbeee06828e8d828e4072296b8
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: b7268da0f92a75d1e24b215dbfaf44d89210228f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="finalstate-activity-designer"></a>FinalState アクティビティ デザイナー
 <xref:System.Activities.Core.Presentation.FinalState> デザイナーは、ステート マシンのインスタンスを終了する <xref:System.Activities.Statements.State> を作成するために使用されます。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Statements.State.DisplayName%2A>|False|ヘッダーの <xref:System.Activities.Statements.State> アクティビティ デザイナーの表示名を指定します。 既定値は**状態**です。 この値は、プロパティ グリッドで編集することも、アクティビティ デザイナーのヘッダーで直接編集することもできます。 <xref:System.Activities.Statements.State.DisplayName%2A> は、ワークフロー デザイナーの上部に表示される階層リンク バーで使用されます。<br /><br /> <xref:System.Activities.Statements.State.DisplayName%2A> は必須ではありませんが、使用することをお勧めします。|  
 |<xref:System.Activities.Statements.State.Entry%2A>|False|この状態の遷移時に発生するアクションを指定します。 アクティビティをドラッグしてこの値を設定することができます、**ツールボックス**にドロップし、<xref:System.Activities.Statements.State.Entry%2A>状態のセクションでします。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [StateMachine](../workflow-designer/statemachine-activity-designer.md)   
  [状態](../workflow-designer/state-activity-designer.md)   
  [移行](../workflow-designer/transition-activity-designer.md)

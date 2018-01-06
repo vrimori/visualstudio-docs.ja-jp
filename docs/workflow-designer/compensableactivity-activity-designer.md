@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: f7523327fe63bfd00fb5bc5ce4f98aeef61a2567
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 670fc24ee800794bd9b013d5e5aaab6dbb98bcd9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compensableactivity-activity-designer"></a>CompensableActivity アクティビティ デザイナー
 **CompensableActivity**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.CompensableActivity>アクティビティ。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>|False|<xref:System.Activities.Statements.CompensableActivity.Body%2A> アクティビティの補正を行うときに実行されるアクティビティを指定します。 このハンドラーは、<xref:System.Activities.Statements.Compensate> アクティビティを使用して明示的に呼び出すことができます。<br /><br /> アクティビティ デザイナーをドロップ アクティビティを追加するには**ツールボックス**に、 **CompensationHandler**ボックスに、 **CompensableActivity**アクティビティ デザイナーのヒント テキストが"ここにアクティビティをドロップ"です。|  
 |<xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A>|False|<xref:System.Activities.Statements.CompensableActivity.Body%2A> アクティビティを確認するときに実行されるアクティビティを指定します。 このハンドラーは、<xref:System.Activities.Statements.Confirm> アクティビティを使用して明示的に呼び出すことができます。<br /><br /> アクティビティ デザイナーをドロップ アクティビティを追加するには**ツールボックス**に、 **ConfirmationHandler**ボックスに、 **CompensableActivity**アクティビティ デザイナーのヒント テキストが"ここにアクティビティをドロップ"です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [トランザクション](../workflow-designer/transaction-activity-designers.md)   
  [CancellationScope](../workflow-designer/cancellationscope-activity-designer.md)   
  [補正](../workflow-designer/compensate-activity-designer.md)   

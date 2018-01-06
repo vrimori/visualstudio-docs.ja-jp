@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: a575ab2ede1c537ea4a62b27656946f838ef8b47
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: d367dbbe273f39bef9ebb6161211864d6d430b97
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-workflow-windows-legacy"></a>Visual Studio ワークフローのウィンドウ (レガシ)
 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] が備えている従来の[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]を使用すると、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] または [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] を対象とすることができます。 従来のデザイナーは、ワークフローの作成に使用できるビジュアルなデザイナーです。 アクティビティをドラッグすることができます、**ツールボックス**のデザイン画面し構成することがあります。 このデザイン サーフェイスは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] エディター ウィンドウとして、他の [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] エディター ウィンドウが使用するのと同じメイン ウィンドウ領域を占有します。 ワークフローの名前が [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ウィンドウのタイトル バーに表示されます。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/27/2017
 |ソリューション エクスプローラー|ワークフロー プロジェクトを階層ツリー ビューで表示します。ここから、プロジェクト管理に役立つ機能を利用できます。|  
 |デバッグ ウィンドウ|標準の Visual Studio デバッグ ウィンドウ、ように、**スレッド**、**呼び出し履歴**、**ブレークポイント**、 **[ローカル] ツール**、および**ウォッチ ツール**windows です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [従来のワークフローのデバッグ](../workflow-designer/debugging-legacy-workflows.md)

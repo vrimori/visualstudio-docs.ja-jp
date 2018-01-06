@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: fa0276e284f84eb6514fc407c9ce9be9cf24d8c4
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: c87180f1f1c0b2c578977021b6a9511e629d10bd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="content-definition-dialog-box"></a>[コンテンツ定義] ダイアログ ボックス
 **コンテンツ定義**では、ダイアログ ボックスを使用してください[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]を構成するには**コンテンツ**のプロパティ、 <xref:System.ServiceModel.Activities.Send>、 <xref:System.ServiceModel.Activities.Receive>、 <xref:System.ServiceModel.Activities.SendReply>、および<xref:System.ServiceModel.Activities.ReceiveReply>。アクティビティ。 [!INCLUDE[crabout](../test/includes/crabout_md.md)]このボックスを使用するアクティビティ デザイナーを参照してください、[送信](../workflow-designer/send-activity-designer.md)、[受信](../workflow-designer/receive-activity-designer.md)、 [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)、および[SendAndReceiveReply](../workflow-designer/sendandreceivereply-template-designer.md)トピックです。  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/27/2017
   
  コンテンツ内に指定することができます、**メッセージ**については、「、<xref:System.ServiceModel.Activities.ReceiveMessageContent>アクティビティ内または、**パラメーター**については「、<xref:System.ServiceModel.Activities.ReceiveParametersContent>アクティビティ。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ワークフロー デザイナーの UI ヘルプ](../workflow-designer/workflow-designer-ui-help.md)

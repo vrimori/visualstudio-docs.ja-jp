@@ -19,11 +19,12 @@ caps.latest.revision: "55"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5209ec60734213fbafb7b176d91589527b571c32
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3b8d869dab81273262d23b7aa905370f530b24c5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overview-of-the-programming-model-of-sharepoint-tools-extensions"></a>SharePoint ツール拡張機能のプログラミング モデルの概要
   Visual Studio で SharePoint ツールの拡張機能を作成する場合、SharePoint ツールによって公開される 1 つ以上の機能拡張インターフェイスを実装することから始めます。 ほとんどの場合、SharePoint ツールによって提供される他の型も使用して、拡張機能で機能を実装します。 一部のシナリオでは、Visual Studio および SharePoint によって提供される他のオブジェクト モデルに含まれる型も使用します。 これらの各オブジェクト モデルの目的を理解し、互いに使用して SharePoint ツールの拡張機能を作成する方法を知っている必要があります。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/31/2017
   
  SharePoint ツールを拡張するには、Visual Studio によって公開される 1 つ以上の機能拡張インターフェイスを実装します。 <xref:System.ComponentModel.Composition.ExportAttribute>、および必要に応じて SharePoint ツール固有のその他の属性をインターフェイスの実装に適用する必要もあります。 次の表に、SharePoint ツールを拡張するために実装できるインターフェイスを示します。  
   
-|インターフェイス|説明|  
+|Interface|説明|  
 |---------------|-----------------|  
 |<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider>|このインターフェイスは、新しい種類の SharePoint プロジェクト項目を定義する際に実装します。 例については、次を参照してください。[する方法: SharePoint プロジェクト項目の種類を定義する](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)です。|  
 |<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension>|このインターフェイスは、Visual Studio に既にインストールされている SharePoint プロジェクト項目の種類を拡張する場合に実装します。 例については、次を参照してください。[する方法: SharePoint プロジェクト項目の拡張機能を作成する](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)です。|  
@@ -98,7 +99,7 @@ ms.lasthandoff: 10/31/2017
 |サーバー オブジェクト モデル|サーバー オブジェクト モデルを使用すると、[!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] および [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] が公開しているすべての機能をプログラムから使用することができます。 このオブジェクト モデルは、SharePoint サーバー上で動作する SharePoint ソリューションから使用することを前提に設計されています。 このオブジェクト モデルの大部分は、Microsoft.SharePoint.dll アセンブリで定義されています。 サーバー オブジェクト モデルの詳細については、次を参照してください。 [SharePoint Foundation サーバー側オブジェクト モデルを使用して](http://go.microsoft.com/fwlink/?LinkId=177796)です。|  
 |クライアント オブジェクト モデル|クライアント オブジェクト モデルは、リモート クライアントまたはリモート サーバーの SharePoint データとの相互運用に使用できるサーバー オブジェクト モデルのサブセットです。 一般的なタスクに必要なラウンド トリップの回数を最小限に抑えるようにデザインされています。 クライアント オブジェクト モデルの大部分は、Microsoft.SharePoint.Client.dll および Microsoft.SharePoint.Client.Runtime.dll アセンブリで定義されています。 クライアント オブジェクト モデルの詳細については、次を参照してください。[マネージ クライアント オブジェクト モデル](http://go.microsoft.com/fwlink/?LinkId=177797)です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)   
  [SharePoint オブジェクト モデルの呼び出し](../sharepoint/calling-into-the-sharepoint-object-models.md)   
  [SharePoint プロジェクト サービスの使用](../sharepoint/using-the-sharepoint-project-service.md)  

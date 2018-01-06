@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: be208d526fdc9f1d6f434425e3931b0f0a6510f5
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 314ff5252b426610b9a50327fe6754b2a953908c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sendandreceivereply-template-designer"></a>SendAndReceiveReply テンプレート デザイナー
 **SendAndReceiveReply**のペアを作成するテンプレートが使用される事前構成済み<xref:System.ServiceModel.Activities.Send>と<xref:System.ServiceModel.Activities.ReceiveReply>内のアクティビティ、<xref:System.Activities.Statements.Sequence>要求/応答メッセージ交換の一部として関連付けられるアクティビティクライアントでのパターン。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.ServiceModel.Activities.ReceiveReply.CorrelationInitializers%2A>|False|ワークフロー内のこの <xref:System.ServiceModel.Activities.CorrelationInitializer> アクティビティを構成する複数の <xref:System.ServiceModel.Activities.CorrelationHandle> オブジェクトを初期化する <xref:System.ServiceModel.Activities.Receive> オブジェクトのコレクションを指定します。 次に省略記号ボタンをクリックして、<xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>を開くにはプロパティ グリッド内のプロパティ、 **[関連付け初期化子**] ダイアログ ボックス。 [!INCLUDE[crabout](../test/includes/crabout_md.md)]このボックスを使用して参照してください、 [CorrelationInitializers ダイアログ ボックスの追加](../workflow-designer/add-correlationinitializers-dialog-box.md)トピックです。|  
 |<xref:System.ServiceModel.Activities.ReceiveReply.Action%2A>|False|メッセージのアクション ヘッダーを指定します。 これを明示的に設定しない場合は、次の既定値が設定されます。<br /><br /> **https://tempuri.org/{サービス コントラクトの名前空間}/{サービス コントラクト名}/{操作名}。**|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CorrelationScope](../workflow-designer/correlationscope-activity-designer.md)   
  [InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md)   
  [受信](../workflow-designer/receive-activity-designer.md)   

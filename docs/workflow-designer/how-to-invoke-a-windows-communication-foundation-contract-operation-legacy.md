@@ -11,11 +11,12 @@ caps.latest.revision: "8"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 51b20275f63b47d607679e04ff061cf77b0d9f90
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: fdc27d34efef818dae30d1f54f5f3a67e7408d7d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-invoke-a-windows-communication-foundation-contract-operation-legacy"></a>方法: Windows Communication Foundation コントラクト操作を呼び出す (レガシ)
 このトピックでは、[!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] または [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] を対象とする従来の [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)]を使用して [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] コントラクト操作を呼び出す方法について説明します。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/27/2017
   
 4.  構成ファイル内にエンドポイント構成が存在しない場合は、エンドポイント構成を作成します。 クライアントの構成の詳細については、次を参照してください。 [WCF クライアントの概要](/dotnet/framework/wcf/wcf-client-overview)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [選択操作 ダイアログ ボックス (レガシ)](../workflow-designer/choose-operation-dialog-box-legacy.md)   
  [方法: WCF コントラクト操作 (レガシ) を実装します。](../workflow-designer/how-to-implement-a-windows-communication-foundation-contract-operation-legacy.md)   
  [従来のワークフロー アクティビティ](../workflow-designer/legacy-workflow-activities.md)

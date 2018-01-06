@@ -20,11 +20,12 @@ caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 94313e1e7cb8d6f36c5c8bfb505d280f4e235a3b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 18a7b1b02ce7aabd816675ff547eecc857fb64bf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="collaborative-development-of-office-solutions"></a>Office ソリューションの共同開発
   複数の開発者は、その他の Visual Studio プロジェクトで共同作業すると同じ方法で Office プロジェクトで作業できます。 Visual Studio は、別の場所で Office がインストールされている場合でも、各コンピューターに Microsoft Office のインストールを正しく検索します。 ただし、これには注意すべき重要な考慮事項があります。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
   
  ビルド時に自動的に生成される一時的な証明書は、パスワードで保護されていません。 証明書には、開発者のログイン名とその他の個人情報が含まれます。 一時的な証明書によって署名されているカスタマイズを配置する場合は、この情報にアクセスできない他のユーザー必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)   
  [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [Office ソリューションのビルド](../vsto/building-office-solutions.md)  

@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 606924d197dc88b5dd5e400e1df8523e83e58259
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 5ee2965fab52915ec3f9651edd3dc51b2ed1c491
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graph-view"></a>グラフ ビュー
 グラフ ビューには、グローバル スキーマ ノードおよびノード間のリレーションシップがグラフィック表示されます。 グラフ ビューでは、デザイン サーフェイスのスキーマ セットのレイアウトを変更できないことに注意してください。 グラフ ビューには、XML スキーマ デザイナーのツール バーおよび階層リンク バーも含まれています。  
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/02/2017
 |------------|-----------------|  
 |**すべての参照を追加します。**|グループを参照するすべてのノードを追加し、その間にリレーションシップを示す矢印を引きます。|  
   
-## <a name="properties-window"></a>プロパティ ウィンドウ  
+## <a name="properties-window"></a>[プロパティ] ウィンドウ  
  開くには最初に、コンテキスト メニューを使用して、**プロパティ**ウィンドウです。 既定では、**プロパティ**Visual Studio の右下隅にウィンドウが表示されます。 そのノードのプロパティが表示されます、コンテンツ モデル ビューに表示されているノードをクリックすると、**プロパティ**ウィンドウです。  
   
 ## <a name="xsd-toolbar"></a>XSD ツール バー  
@@ -137,5 +138,5 @@ ms.lasthandoff: 11/02/2017
   
  XML エディターでスキーマ セットを変更すると、グラフ ビューにもその変更が同期されます。 詳細については、次を参照してください。 [XML エディターでの統合](../xml-tools/integration-with-xml-editor.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デザイン画面](../xml-tools/xml-schema-designer-workspace.md)

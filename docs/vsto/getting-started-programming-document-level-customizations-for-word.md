@@ -18,11 +18,12 @@ caps.latest.revision: "44"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 424c4867f0b18d7f819bf60a248b801741916efb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 12265c725480324c396d59d848e5269432bb5d6e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-programming-document-level-customizations-for-word"></a>Word 用のドキュメント レベルのカスタマイズのプログラミングについて
   だけを開始する Visual Studio を使用して Microsoft Office Word 用ドキュメント レベルのカスタマイズを作成する場合に、知っておく次に示します。  
@@ -67,13 +68,13 @@ ms.lasthandoff: 10/31/2017
   
  Word プロジェクトの一般的なタスクを解説しているトピックの一覧は、次を参照してください。 [Office プログラミングで一般的なタスク](../vsto/common-tasks-in-office-programming.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)   
  [Word ソリューション](../vsto/word-solutions.md)   
  [チュートリアル: 初めての Word 用ドキュメント レベルのカスタマイズの作成](../vsto/walkthrough-creating-your-first-document-level-customization-for-word.md)   
  [チュートリアルを使用して Word](../vsto/walkthroughs-using-word.md)   
  [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)   
- [Office ソリューションのコードの記述](../vsto/writing-code-in-office-solutions.md)  
+ [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)  
   
   

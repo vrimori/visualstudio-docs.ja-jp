@@ -23,11 +23,12 @@ caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bf53de6bb247ecb0cf3195310e84c0be548eb717
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 894379e107865e4a4d187c963a88fe23b6eec6d1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-protect-parts-of-documents-by-using-content-controls"></a>方法 : コンテンツ コントロールを使用して文書を保護する
   ドキュメントの一部を保護することにより、ユーザーがドキュメントのその部分を変更したり削除したりできないようにします。 コンテンツ コントロールを使用して Microsoft Office Word ドキュメントの一部を保護する方法は、いくつかあります。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/31/2017
   
     -   ユーザーがコントロールを削除することを防止する次のように設定します。 **[lockcontentcontrol]**に**True**です。  
   
-3.  **[OK]** をクリックします。  
+3.  **[OK]**をクリックします。  
   
 #### <a name="to-protect-a-content-control-at-run-time"></a>実行時に、コンテンツ コントロールを保護するには  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 10/31/2017
      [!code-vb[Trin_WordAddInDynamicControls#15](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#15)]
      [!code-csharp[Trin_WordAddInDynamicControls#15](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#15)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
  [コンテンツ コントロール](../vsto/content-controls.md)   
  [方法: Word 文書にコンテンツ コントロールを追加](../vsto/how-to-add-content-controls-to-word-documents.md)   

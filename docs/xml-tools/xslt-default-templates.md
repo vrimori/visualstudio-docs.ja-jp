@@ -12,16 +12,17 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e72f0f4b12921c07a66b590655bb8583eb3f9786
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 4fe1bf4dda6bed505f0892a18825e93f66e13e16
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xslt-default-templates"></a>XSLT の既定のテンプレート
 XSLT 処理中、一致する明示的なテンプレート規則がスタイル シートに存在しない場合は既定のテンプレートが使用されます。 既定のテンプレートはビルトイン テンプレート規則とも呼ばれ、W3C 勧告『XSLT 1.0』のセクション 5.8 で定義されています。 XSLT プロセッサは、一致する明示的なテンプレート規則が存在しない場合でも、既定のテンプレートを使用することでノードを処理できます。 ただし、ビルトイン テンプレート規則は、スタイル シートで明示的に定義されているわけではないため、XSLT 変換で予期しない結果や紛らわしい結果が生じる場合があります。  
   
  XSLT デバッガーで、XSLT の既定のテンプレートのコードを表示できるようになりました。 XSLT 変換をステップ実行したときに、既定のテンプレートが使用された場合、デバッガーのウィンドウにはその既定のテンプレートが表示されます。 これにより、既定のテンプレートのコードをステップ実行したり、特定の命令にブレークポイントを設定したりできます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XSLT のデバッグ](../xml-tools/debugging-xslt.md)

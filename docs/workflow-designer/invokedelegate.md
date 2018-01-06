@@ -13,11 +13,12 @@ ms.assetid: 289a7498-5127-453f-beb5-05f05b80d26f
 caps.latest.revision: "3"
 ms.author: sdanie
 manager: erikre
-ms.openlocfilehash: 180e9ca5ae635608ca3d7f9cf24abab13c8076a6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 56b132403d51a591a8832c1417bec73bde442266
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="invokedelegate"></a>InvokeDelegate
 **InvokeDelegate**デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.InvokeDelegate>アクティビティ。  
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|True|アクティビティの実行時に呼び出す <xref:System.Activities.ActivityDelegate> の名前。 このプロパティは、デザイナー画面で設定することもできます。 これは必須プロパティです。|  
 |<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|呼び出されたデリゲートの引数コレクション。 キーのパラメーター オブジェクトの名前は、<xref:System.Activities.ActivityDelegate>値は、引数の式が評価され、対応するパラメーター オブジェクトに割り当てられているとします。 プロパティ グリッドでの省略記号ボタンをクリックして、 **DelegateArguments**フィールドが表示されます、 **DelegateArguments**ダイアログ ボックスをこのプロパティを設定できます。 クリックして、**引数の作成**引数を追加するフィールドです。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: ワークフロー デザイナーでアクティビティ デリゲートを定義および使用する](../workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer.md)

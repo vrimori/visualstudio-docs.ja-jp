@@ -19,11 +19,12 @@ caps.latest.revision: "39"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fe1626a818a6442e56e8934b142a31b65f83c0a7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 08b66bdb454c12e54756a0cde37dccdb53024a6b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-simple-data-binding-in-vsto-add-in-project"></a>チュートリアル: VSTO アドイン プロジェクトでの単純データ バインディング
   VSTO アドイン プロジェクトでは、ホスト コントロールと Windows フォーム コントロールにデータをバインドできます。 このチュートリアルでは、実行時に Microsoft Office Word 文書にコントロールを追加して、そのコントロールをデータにバインドする方法を示します。  
@@ -148,7 +149,7 @@ ms.lasthandoff: 10/31/2017
   
 2.  **[次へ]** ボタンと **[前へ]** ボタンをクリックして、データベース レコードをスクロールします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)   
  [Office ソリューションでのコントロールへのデータをバインディング](../vsto/binding-data-to-controls-in-office-solutions.md)   
  [方法: データベースからデータをワークシートに読み込む](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)   

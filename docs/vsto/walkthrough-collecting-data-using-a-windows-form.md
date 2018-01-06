@@ -20,11 +20,12 @@ caps.latest.revision: "54"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 32156e4d2c9e8e5f809a4de64478667e7133aeb1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: d52a97e57701159a8ff64a106a92f181b50df66f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-collecting-data-using-a-windows-form"></a>チュートリアル : Windows フォームを使用してデータを収集する方法
   このチュートリアルでは、Microsoft Office Excel のドキュメント レベルのカスタマイズから Windows フォームを開き、ユーザーから情報を収集し、その情報をワークシートのセルに書き込む方法について説明します。  
@@ -140,7 +141,7 @@ ms.lasthandoff: 10/31/2017
   
 -   ドキュメント レベルのカスタマイズまたは VSTO アドインから Microsoft Office アプリケーションのユーザー インターフェイスを変更する。 詳細については、次を参照してください。 [Office UI のカスタマイズ](../vsto/office-ui-customization.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションの開発](../vsto/developing-office-solutions.md)   
  [Office ソリューションのコードの記述](../vsto/writing-code-in-office-solutions.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   

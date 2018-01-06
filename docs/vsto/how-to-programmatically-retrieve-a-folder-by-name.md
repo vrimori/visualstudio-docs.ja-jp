@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 32db5d1ae316b571b71a8015bd6ea5dc7fe7a110
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 542340605407450c1cedaf9077faa90b05cdfa28
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-retrieve-a-folder-by-name"></a>方法: プログラムによって名前を指定してフォルダーを取得する
   この例では、名前付きカスタム フォルダーへの参照を取得して、フォルダーの内容を表示します。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/31/2017
   
 -   TestFolder をという名前のフォルダーです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [フォルダーの操作](../vsto/working-with-folders.md)   
  [方法: プログラムによって特定のフォルダー内を検索](../vsto/how-to-programmatically-search-within-a-specific-folder.md)   
  [方法: プログラムによって特定の連絡先の検索](../vsto/how-to-programmatically-search-for-a-specific-contact.md)   

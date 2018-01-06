@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: abe4a4f418e2204355d55c16194ea31b939383aa
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 6b3e4d7b00691d7ea2c86a81d0d2880b9f7366bd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="send-activity-designer"></a>Send アクティビティ デザイナー
 **送信**アクティビティ デザイナーを使用して作成し、構成、<xref:System.ServiceModel.Activities.Send>アクティビティ。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.ServiceModel.Activities.Send.EndpointAddress%2A>||メッセージの送信先となる <xref:System.ServiceModel.EndpointAddress>。|  
 |<xref:System.ServiceModel.Activities.Send.EndpointConfigurationName%2A>||エンドポイント構成の名前。 このプロパティは、エンドポイントを構成ファイルで構成している場合に設定します。 このプロパティで指定された名前に設定する必要があります、 **\<エンドポイント >**構成ファイル内の要素。 このプロパティが設定されている場合、<xref:System.ServiceModel.Activities.Send.Endpoint%2A>プロパティにする必要があります**null**です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md)   
  [CorrelationScope](../workflow-designer/correlationscope-activity-designer.md)   
  [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)   

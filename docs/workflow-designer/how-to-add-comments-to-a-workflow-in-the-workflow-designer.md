@@ -13,11 +13,12 @@ ms.assetid: 9aa0e8d6-8129-4438-8389-d460611581a7
 caps.latest.revision: "7"
 ms.author: sdanie
 manager: erikre
-ms.openlocfilehash: 22a96549b70ebf1627b8a94a7c8cd5e2d5835194
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: e4d547fed57abf11194b35bcd3ac42f12322374b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>ワークフロー デザイナーでワークフローにコメントを追加する方法
 より大きく複雑なワーク フローを簡単に作成するため、[!INCLUDE[net_v45](../ide/includes/net_v45_md.md)] では開発者がデザイナーで次の種類の項目に注釈を追加できます。  

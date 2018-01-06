@@ -19,11 +19,12 @@ caps.latest.revision: "42"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fa3ecb6be4ba458c7a703e77e56c6ba51490887d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 5454aa06d4256c6c5e9ee1a8aa9573377ce9abdb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-sharepoint-solutions"></a>SharePoint ソリューションのトラブルシューティング
   以下の問題または警告は、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] デバッガーを使用して SharePoint ソリューションをデバッグするときに発生することがあります。 詳細については、次を参照してください。 [SharePoint 2007 ワークフロー ソリューションのデバッグ](http://msdn.microsoft.com/en-us/3a5392f3-66f3-48be-956e-02de23fa6247)です。
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="error-message"></a>エラー メッセージ  
  「無効な文字」エラー メッセージ。  
   
-### <a name="resolution"></a>解決策  
+### <a name="resolution"></a>解像度  
  SharePoint のプロジェクトとプロジェクト アイテムの名前では、次の文字だけを使用してください。  
   
 -   ASCII 英数字  
@@ -74,7 +75,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="error-message"></a>エラー メッセージ  
  パッケージ実行時の「無効な文字」エラー メッセージ。  
   
-### <a name="resolution"></a>解決策  
+### <a name="resolution"></a>解像度  
  フィールド定義の ID には、次の例のように、中かっこで囲まれた GUID を指定する必要があります。  
   
 ```xml  
@@ -103,7 +104,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="error-message"></a>エラー メッセージ  
  なし。  
   
-### <a name="resolution"></a>解決策  
+### <a name="resolution"></a>解像度  
  この問題は発生で値が正しくないため、**パス**webtemp サイト定義構成ファイル (webtemp_SiteDefinitionProject1.xml など) のプロパティです。 **パス**の下にある、webtemp ファイルのプロパティ、**配置場所**、1033 を適切なロケールに変更[!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)]です。 たとえば、使用する日本語のロケール値を変更を 1041 にします。 詳細については、次を参照してください。 [Microsoft によるロケール Id 割り当て](http://go.microsoft.com/fwlink/?LinkID=165561)MSDN Web サイトです。  
   
 ## <a name="error-appears-when-a-workflow-project-is-deployed-on-a-clean-system"></a>ワークフロー プロジェクトをクリーン システムに配置するとエラーが表示される  
@@ -171,7 +172,7 @@ ms.lasthandoff: 10/31/2017
   
 -   名前 IMetadataObject は、'\<*モデル名*>' の値フィールド 'name' が重複しています.  
   
-### <a name="resolution"></a>解決策  
+### <a name="resolution"></a>解像度  
  この問題を解決するには、モデルを手動で削除した後、ソリューションを再び配置します。  モデルを削除するには、次のどちらかのツールを使用します。  
   
 -   SharePoint 2010 サーバーの全体管理。 詳細については、次を参照してください。 [BDC モデル管理](http://go.microsoft.com/fwlink/?LinkID=181472)、Microsoft TechNet Web サイトにします。  
@@ -205,7 +206,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="error-message"></a>エラー メッセージ  
  配置手順"機能のアクティブ化でエラーが発生しました: Id を持つフィールド [*Guid*] 機能で定義されている [*Guid*] 現在のサイト コレクションまたはサブサイト内に見つかりました。  
   
-### <a name="resolution"></a>解決策  
+### <a name="resolution"></a>解像度  
  このエラーは、再利用可能なワークフローのインポート プロジェクトでは、フィールド ID の競合の結果[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]タスク フォームのフィールド Id は変わりません。 元のワークフローが含まれる同じサーバーにインポートしたワークフローを展開する場合は、フィールド ID の競合が発生します。  
   
  この問題を解決するには、検索置換機能を使用して、インポートしたすべてのワークフロー ファイル内のフィールド ID 属性の値を変更する必要があります。  
@@ -216,7 +217,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="error-message"></a>エラー メッセージ  
  ビルド エラー: 配置手順"機能のアクティブ化でエラーが発生しました: ファイル Template\Features\\[*プロジェクトのインポート**機能**名前*] \Files\Lists\\[*古い**リスト名*] \Schema.xml が存在しません。  
   
-### <a name="resolution"></a>解決策  
+### <a name="resolution"></a>解像度  
  リスト インスタンスをインポートすると、CustomSchema という名前の属性がリスト インスタンスの Elements.xml ファイルに追加されます。 Elements.xml には、リスト インスタンス用のカスタム schema.xml のパスが含まれます。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] でリスト インスタンスの名前を変更すると、カスタム schema.xml の配置パスは変更されますが、CustomSchema 属性のパス値は更新されません。 この結果、機能がアクティブ化されるときに、リスト インスタンスは、CustomSchema 属性に指定された古いパスでは schema.xml ファイルを検出できません。  
   
  この問題を解決するには、CustomSchema 属性の schema.xml ファイルの配置場所のパスを更新します。  
@@ -279,7 +280,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="resolution"></a>解像度  
  この問題を解決するには、Visual Studio 内の SharePoint プロジェクトの [サイト URL] プロパティの値が、Web アプリケーションの代替アクセス マッピング用の既定のゾーンに割り当てられた URL と一致することを確認します。 URL でイントラネットなどの他のゾーンを使用すると、エラーは解消されません。 プロジェクトのサイト URL と既定のゾーンの URL は一致している必要があります。 代替アクセス マッピングにアクセスするには、SharePoint 2010 サーバーの全体管理ユーティリティを開きを選択、**アプリケーション管理**リンクし、 **Web アプリケーション**、選択、 **代替アクセス マッピングを構成する**リンクします。 詳細については、次を参照してください。 [Web アプリケーションのゾーンを作成する](http://go.microsoft.com/fwlink/?LinkId=192274)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint のパッケージ化と配置のトラブルシューティング](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)   
  [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)   
  [Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio)  

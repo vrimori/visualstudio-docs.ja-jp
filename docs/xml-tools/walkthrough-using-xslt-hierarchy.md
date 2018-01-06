@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b0cd7d0567f12a7f1d57bdea765cbf9eb555dd8d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: da7cbf43ff21825e57b5bd5a47f59dbee27fe938
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-xslt-hierarchy"></a>チュートリアル: XSLT 階層の使用
 XSLT 階層ツールは、多くの XML 開発タスクを簡素化します。 XSLT スタイル シートには、多くの場合 `includes` 命令および `imports` 命令が使用されています。 コンパイルはプリンシパル スタイル シートから開始されますが、XSLT スタイル シートのコンパイル結果としてエラーが表示された場合、プリンシパル スタイル シート以外のものがエラーの原因である可能性があります。 エラーを修正するか、スタイル シートを編集するには、インクルードまたはインポートされたスタイル シートへのアクセスが必要になる場合があります。 デバッガーでスタイル シートをステップ実行すると、インクルードまたはインポートされたスタイル シートが開かれる場合があり、1 つまたは複数のインクルードされたスタイル シートにブレークポイントを追加することができます。  
@@ -114,5 +115,5 @@ XSLT 階層ツールは、多くの XML 開発タスクを簡素化します。 
   
 6.  デバッガーが `<xsl:include href="xslincludefile.xsl" />` 命令で停止したときに、ステップ イン ボタンを押します。 参照されるスタイル シート内でデバッグを継続することができます。 階層が表示され、デザイナーに正しいパスが示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: XSLT プロファイラー](../xml-tools/walkthrough-xslt-profiler.md)

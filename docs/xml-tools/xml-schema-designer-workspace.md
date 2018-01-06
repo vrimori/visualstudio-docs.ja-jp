@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d4a51f3c0491f35f10d8266b4cb06d3de686e021
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7a3da032000d5d286e8476673b3c53b993b18303
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-schema-designer-workspace"></a>XML スキーマ デザイナーのワークスペース
 XML スキーマ デザイナー (XSD デザイナー) は、XML スキーマを調べるために使用できるグラフィカル ツールです。 加え、 [XML スキーマ エクスプ ローラー](../xml-tools/xml-schema-explorer.md)を参照し、XML スキーマのツリーを移動し、検索を実行することができます、XSD デザイナーには、使用すると、XSD スキーマをさらに詳しく調べる 3 つのビューが用意されています。 スタート ビューは XSD デザイナーの起点で、スタート ビューからは、XSD デザイナーの他のビューに移動したり、スキーマ セットの詳細を表示したりすることができます。 グラフ ビューでは、スキーマ セットの概要とスキーマ ノード間のリレーションシップを表示できます。 コンテンツ モデル ビューには、単純型、複合型、要素、グループ、属性、属性グループなど、ローカル スキーマ ノードとグローバル スキーマ ノードの詳細がグラフィック表示されます。  

@@ -18,11 +18,12 @@ caps.latest.revision: "50"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9aafcb9a131743c09d139f6f210c0d50425f4cba
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 96616338d0fd26e31ac0cc67e66d4dc35d03fdda
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-resize-listobject-controls"></a>方法 : ListObject コントロールのサイズを変更する
   <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールのサイズは Microsoft Office Excel ブックにコントロールを追加するときに設定しますが、後でサイズを変更することもできます。 たとえば、2 列のリストを 3 列のリストに変更できます。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  テーブルに新しいデータ範囲を選択します。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
 ##  <a name="runtimedoclevel"></a> 実行時にドキュメント レベルのプロジェクトの ListObject コントロールのサイズを変更する  
  <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールのサイズは、実行時に <xref:Microsoft.Office.Tools.Excel.ListObject.Resize%2A> メソッドを使用して変更できます。 このメソッドは、 <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールをワークシート上の新しい位置に移動するためには使用できません。 ヘッダーは同じ行のままである必要があり、サイズを変更した <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールは元のリスト オブジェクトに重なる必要があります。 サイズ変更した <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールには、ヘッダー行および少なくとも 1 つのデータ行が含まれている必要があります。  
@@ -89,7 +90,7 @@ ms.lasthandoff: 10/31/2017
      [!code-csharp[Trin_Excel_Dynamic_Controls#13](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#13)]
      [!code-vb[Trin_Excel_Dynamic_Controls#13](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#13)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [実行時の Word 文書と VSTO アドイン内の Excel ブックの拡張](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   

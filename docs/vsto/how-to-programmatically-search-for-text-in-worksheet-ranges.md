@@ -19,11 +19,12 @@ caps.latest.revision: "48"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 031894a3307a40af981ad974898ae819ba68d24a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 7968fe71fffb736a6e86319339f3cc7823480403
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-search-for-text-in-worksheet-ranges"></a>方法: プログラムによってワークシートの範囲内のテキストを検索する
   <xref:Microsoft.Office.Interop.Excel.Range.Find%2A>のメソッド、<xref:Microsoft.Office.Interop.Excel.Range>オブジェクトでは、範囲内でテキストを検索することができます。 このテキストがなど、ワークシートのセルに表示される可能性がエラー文字列のいずれかに指定することできますも`#NULL!`または`#VALUE!`です。 エラー文字列の詳細については、次を参照してください。[セルのエラー値](http://msdn.microsoft.com/library/office/ff839168.aspx)です。  
@@ -80,7 +81,7 @@ ms.lasthandoff: 10/31/2017
  [!code-csharp[Trin_VstcoreExcelAutomation#57](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#57)]
  [!code-vb[Trin_VstcoreExcelAutomation#57](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#57)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [範囲の使用](../vsto/working-with-ranges.md)   
  [方法: プログラムによってブック内の範囲にスタイルを適用](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
  [方法: プログラムによってワークシートの範囲をコード内を参照してください](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)   

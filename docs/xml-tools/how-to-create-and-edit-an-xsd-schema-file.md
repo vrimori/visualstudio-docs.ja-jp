@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 03679a6d6acbee2a69d0ffa576b3606be4b64a21
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 098dc82734ca200ff538f284e002c1cbff424fbe
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-and-edit-an-xsd-schema-file"></a>方法: XSD スキーマ ファイルを作成して編集する
 このトピックでは、新しい XML スキーマ (XSD) ファイルを作成して、XSD ファイルにコンテンツを追加する方法について説明します。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 10/31/2017
   
      XML スキーマ エクスプローラーが、新しいスキーマ セットで更新されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML データの操作](../xml-tools/working-with-xml-data.md)   
  [XML スキーマ デザイナーのタスク](../xml-tools/xml-schema-designer-tasks.md)

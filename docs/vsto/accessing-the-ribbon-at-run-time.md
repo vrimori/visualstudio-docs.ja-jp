@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f69818d2e7c1b6ef2babd651247fe81709b80097
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 347659ce577a532604835f57c4b509553f438dea
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-the-ribbon-at-run-time"></a>実行時のリボンへのアクセス
   リボンを表示、非表示、変更するコードを作成し、ユーザーがカスタム作業ウィンドウ、アクション ウィンドウ、または Outlook フォーム領域のコントロールからそのコードを実行できるようにすることができます。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/31/2017
  [!code-vb[Trin_Outlook_FR_Access#6](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb#6)]
  [!code-csharp[Trin_Outlook_FR_Access#6](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs#6)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リボンの概要](../vsto/ribbon-overview.md)   
  [リボン デザイナー](../vsto/ribbon-designer.md)   
  [リボン XML](../vsto/ribbon-xml.md)   

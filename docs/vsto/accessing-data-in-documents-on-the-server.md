@@ -18,11 +18,12 @@ caps.latest.revision: "32"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8345f7d197f44455ae990c159550587bbc79de24
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: d81c8b10f5ace634cc58bd3135af9b2e69f1c519
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-data-in-documents-on-the-server"></a>サーバー上のドキュメント内のデータへのアクセス
   Microsoft Office Word または Microsoft Office Excel のオブジェクト モデルを使用することがなく、ドキュメント レベルのカスタマイズ内のデータに対してプログラミングできます。 つまり、単語がないサーバー上のドキュメントに含まれているデータにアクセスすることができますか、Excel がインストールされていること。 たとえば、サーバー上のコード (などの[!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] ページ)、ドキュメント内のデータをカスタマイズしてエンドユーザー向けにカスタマイズされた文書を送信します。 エンドユーザーが、ドキュメントを開いたときに、ソリューション アセンブリのデータ バインディング コードはカスタマイズされたデータをドキュメントにバインドします。 これには、ドキュメント内のデータは、ユーザー インターフェイスから分離されるためです。 詳細については、次を参照してください。[ドキュメント レベルのカスタマイズでキャッシュ データ](../vsto/cached-data-in-document-level-customizations.md)です。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="accessing-typed-datasets-in-the-cache"></a>キャッシュ内の型指定されたデータセットにアクセスします。  
  Office ソリューションと、オフィス外部から Windows フォーム アプリケーションなどのアプリケーションの両方に型指定されたデータセット内のデータにアクセスするかどうか、または[!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)]プロジェクト、両方で参照されている別のアセンブリに型指定されたデータセットを定義する必要がありますプロジェクト。 使用して、各プロジェクトに型指定されたデータセットを追加するかどうか、**データ ソース構成ウィザード**または**データセット デザイナー**、.NET Framework は異なる型として 2 つのプロジェクトで型指定されたデータセットを扱う. 型指定されたデータセットの作成の詳細については、次を参照してください。[作成して Visual Studio でのデータセットを構成する](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバー上のドキュメント内のデータにアクセスします。](../vsto/accessing-data-in-documents-on-the-server.md)   
  [ドキュメントレベルのカスタマイズのキャッシュ データ](../vsto/cached-data-in-document-level-customizations.md)  
   

@@ -23,11 +23,12 @@ caps.latest.revision: "91"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 09a356408815ed6fea416d27e59a58a4edc6a6a3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: e84bd10c2a7e3ce4c760e0f9231390d4fd037616
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-an-office-solution-by-using-windows-installer"></a>Windows インストーラーを使用した Office ソリューションの配置
 [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)]を使用して Office ソリューション用の Windows インストーラーを作成する方法について説明します。  
@@ -92,7 +93,7 @@ InstallShield Limited Edition (ISLE) を使用して、Windows インストー�
   
 #### <a name="to-get-installshield-limited-edition"></a>InstallShield Limited Edition の入手方法  
   
-1. メニュー バーで **[ファイル]**、 **[新規]**、 **[プロジェクト]**の順にクリックします。  
+1. メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
   
    **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
@@ -535,7 +536,7 @@ Office プロジェクトの出力を含めるように、 **OfficeAddInSetup** 
    Setup.exe ファイルを検索することができます、ビルドが完了した後、 **OfficeAddInSetup**次の場所にプロジェクト: *OfficeAddInSetupProjectRoot***\OfficeAddInSetup\Express\SingleImage\DiskImages\DISK1\**  
   
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [Office ソリューションを配置するための必須コンポーネント](http://msdn.microsoft.com/en-us/library/9f672809-43a3-40a1-9057-397ce3b5126e)  
 [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)  
 [Registry Entries for VSTO Add-ins](../vsto/registry-entries-for-vsto-add-ins.md)  

@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: a4dcc10419d5c1dbc0552aba62057cba2e82647f
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: f9af95a8aeb509554cb613edb848c2987543f1e2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="throw-activity-designer"></a>Throw アクティビティ デザイナー
 **スロー**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.Throw>アクティビティ。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.Throw> アクティビティの表示名を指定します (省略可能)。 既定値は Throw です。|  
 |<xref:System.Activities.Statements.Throw.Exception%2A>|True|スローされる例外。 この例外は、<xref:System.Exception> から派生していることが必要です。 例外を指定するには、プロパティ グリッドで Visual Basic の式を入力します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コレクション](../workflow-designer/collection-activity-designers.md)   
  [Rethrow](../workflow-designer/rethrow-activity-designer.md)   
  [Throw アクティビティ デザイナー](../workflow-designer/throw-activity-designer.md)   

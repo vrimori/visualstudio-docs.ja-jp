@@ -43,11 +43,12 @@ caps.latest.revision: "65"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5b2950370b35eb8e2f60f15c5de032284c5546f3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 4d50e7c6177152b2cef3709c983334d05b48a812
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="content-controls"></a>コンテンツ コントロール
   コンテンツ コントロールは、次のような機能を備える文書やテンプレートをデザインするときに使用します。  
@@ -107,7 +108,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="rich-text"></a>リッチ テキスト形式  
  リッチ テキスト コントロールには、テキストやその他のアイテム (表、画像、またはその他のコンテンツ コントロール) を含めることができます。 詳細については、<xref:Microsoft.Office.Tools.Word.RichTextContentControl> 型を参照してください。  
   
-### <a name="plain-text"></a>テキスト形式  
+### <a name="plain-text"></a>プレーンテキスト  
  プレーンテキスト コントロールには、テキストが格納されます。 プレーンテキスト コントロールにその他のアイテム (表、画像、またはその他のコンテンツ コントロール) を含めることはできません。 また、プレーンテキスト コントロール内のすべてのテキストには同じ書式が設定されます。 たとえば、プレーンテキスト コントロールに含まれる文の 1 つの単語に斜体を適用すると、そのコントロールに含まれるすべてのテキストに斜体が適用されます。 詳細については、<xref:Microsoft.Office.Tools.Word.PlainTextContentControl> 型を参照してください。  
   
 ### <a name="generic-content-control"></a>汎用コンテンツ コントロール  
@@ -163,7 +164,7 @@ ms.lasthandoff: 10/31/2017
   
  次の表では、各データ型にバインドできるコンテンツ コントロールの一覧、**データソース**ウィンドウです。  
   
-|データ型|既定のコンテンツ コントロール|このデータ型にバインドできるその他のコンテンツ コントロール|  
+|データの種類|既定のコンテンツ コントロール|このデータ型にバインドできるその他のコンテンツ コントロール|  
 |---------------|-----------------------------|----------------------------------------------------------------|  
 |<xref:System.Boolean><br /><br /> <xref:System.Byte><br /><br /> <xref:System.Char><br /><br /> <xref:System.Double><br /><br /> <xref:System.Enum><br /><br /> <xref:System.Guid><br /><br /> <xref:System.Int16><br /><br /> <xref:System.Int32><br /><br /> <xref:System.Int64><br /><br /> <xref:System.SByte><br /><br /> <xref:System.Single><br /><br /> <xref:System.String><br /><br /> <xref:System.TimeSpan><br /><br /> <xref:System.UInt16><br /><br /> <xref:System.UInt32><br /><br /> <xref:System.UInt64>|<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>|<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.DatePickerContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.RichTextContentControl>|  
 |<xref:System.DateTime>|<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>|<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.PlainTextContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.RichTextContentControl>|  
@@ -208,7 +209,7 @@ plainTextContentControl1.XMLMapping.SetMapping("/Product/Price", String.Empty, n
 ### <a name="data-binding-events-for-content-controls"></a>コンテンツ コントロールのデータ バインディング イベント  
  すべてのコンテンツ コントロールは、データ関連のタスク (データ ソースを更新する前にコントロール内のテキストが特定の条件を満たしているかどうかの検証など) を実行するために処理できる一連のイベントを提供します。 データ バインディングに関連するコンテンツ コントロール イベントの一覧を、次の表に示します。  
   
-|タスク|イベント|  
+|タスク|event|  
 |----------|-----------|  
 |カスタム XML 部分にバインドされているコンテンツ コントロール内のテキストが Word で自動的に更新される直前に、コードを実行します。|<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>|  
 |コンテンツ コントロールにバインドされているカスタム XML 部分内のデータが Word で自動的に更新される直前 (コンテンツ コントロール内のテキストが変更された後) に、コードを実行します。|<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>|  
@@ -238,7 +239,7 @@ plainTextContentControl1.XMLMapping.SetMapping("/Product/Price", String.Empty, n
  [!code-vb[Trin_ContentControlReference#800](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/checkbox.vb#800)]
  [!code-csharp[Trin_ContentControlReference#800](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/checkbox.cs#800)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
  [方法: Word 文書にコンテンツ コントロールを追加](../vsto/how-to-add-content-controls-to-word-documents.md)   
  [チュートリアル: コンテンツ コントロールによるテンプレートの作成](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)   

@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 387b5420614fed3f4d5f956f5a91fe2ece70d53a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 83abd9f76f68ec4131840fb0ea58e9aeb93f30d4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="initializecorrelation-activity-designer"></a>InitializeCorrelation アクティビティ デザイナー
 **InitializeCorrelation**アクティビティ デザイナーを使用して作成し、構成、<xref:System.ServiceModel.Activities.InitializeCorrelation>送信または受信する前にメッセージ間の相関関係を確立するために使用されるアクティビティ。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.ServiceModel.Activities.InitializeCorrelation.Correlation%2A>|False|関連付け内のワークフロー アクティビティを関連付けるために使用される <xref:System.ServiceModel.Activities.CorrelationHandle>。|  
 |<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>|False|メッセージをワークフロー インスタンスに関連付ける、関連付けデータのディクショナリ。<br /><br /> 使用して、**関連付けの初期化**を構成するダイアログ ボックス、<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>です。 [!INCLUDE[crabout](../test/includes/crabout_md.md)]使用するこのダイアログ ボックスを参照してください、[型コレクション エディター ダイアログ ボックス](../workflow-designer/type-collection-editor-dialog-box.md)トピックです。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CorrelationScope](../workflow-designer/correlationscope-activity-designer.md)   
  [受信](../workflow-designer/receive-activity-designer.md)   
  [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)   

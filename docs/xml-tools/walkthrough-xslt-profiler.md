@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b2680a8f42dc984897b3fba4913ea69dbc23333f
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: be03e554bbdf55c447437116373cc60b15df391e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-xslt-profiler"></a>チュートリアル: XSLT プロファイラー
 XSLT プロファイラーは、詳細な XSLT パフォーマンス レポートを作成することにより、XSLT コード内のパフォーマンス関連の問題を計測、評価、および特定できるようにします。 XSLT プロファイラーには、XSL および XSLT のスタイル シートの最適化に役立つヒントが含まれています。 最高のパフォーマンスが必要になる XSLT アプリケーションには、このツールが不可欠です。  
@@ -108,5 +109,5 @@ XSLT プロファイラーは、詳細な XSLT パフォーマンス レポー�
   
 4.  [プロセス] ビューが含まれるテーブルが表示されます、**プロセス ID**、**プロセス名**、**開始時間**、および**終了時刻**です。 データを並べ替えるには、列名をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [チュートリアル: XSLT 階層の使用](../xml-tools/walkthrough-using-xslt-hierarchy.md)

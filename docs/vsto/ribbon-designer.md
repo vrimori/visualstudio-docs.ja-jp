@@ -30,11 +30,12 @@ caps.latest.revision: "79"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 941ca002d2f840805253624e7e0004fb560c4167
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 2655cd8f8c75f9c10063a1b85d2390b153782d85
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ribbon-designer"></a>リボン デザイナー
   リボン デザイナーは、ビジュアルなデザイン キャンバスです。 リボン デザイナーを使用すると、Microsoft Office アプリケーションのリボンに、カスタムのタブ、グループ、およびコントロールを追加できます。  
@@ -202,9 +203,9 @@ ms.lasthandoff: 10/31/2017
 |ドロップダウン パネルが開いていて、親コントロールが選択されている場合は、ドロップダウン パネルを閉じます。|左方向 (←) キー|  
 |ドロップダウン パネルを開きます。|右方向 (→) キー|  
 |ドロップダウン パネルが開いている場合は、そのパネルにある最初のコントロールを選択します。|右方向 (→) キー|  
-|ドロップダウン パネルを閉じます。|ESC|  
+|ドロップダウン パネルを閉じます。|Esc|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リボンの概要](../vsto/ribbon-overview.md)   
  [リボン XML](../vsto/ribbon-xml.md)   
  [チュートリアル: リボン デザイナーを使用してカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   

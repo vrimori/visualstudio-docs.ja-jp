@@ -32,11 +32,12 @@ caps.latest.revision: "34"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 68135e13a0e78e0250b087713ab459825018ff84
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 68d0cfbc96b72208eee26f3cc75dd9a19d1b63fc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-document-level-customizations"></a>ドキュメント レベルのカスタマイズのプログラミング
   ドキュメント レベルのカスタマイズを使用して、Microsoft Office Word または Microsoft Office Excel を拡張する場合に、次のタスクを実行できます。  
@@ -121,7 +122,7 @@ Globals.ThisDocument.Save();
   
  ホスト コントロールは Word オブジェクト モデルと Excel オブジェクト モデルの一部のオブジェクトを拡張するクラスです。 たとえば、 <xref:Microsoft.Office.Tools.Excel.ListObject> ホスト コントロールには、Excel の <xref:Microsoft.Office.Interop.Excel.ListObject> のすべての機能が用意されています。 ただし、 <xref:Microsoft.Office.Tools.Excel.ListObject> ホスト コントロールには追加のイベントやデータ バインディング機能もあります。  
   
- 詳細については、次のトピックを参照してください。 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md) および [Windows Forms Controls on Office Documents Overview](../vsto/windows-forms-controls-on-office-documents-overview.md).  
+ 詳細については、 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md) および [Windows Forms Controls on Office Documents Overview](../vsto/windows-forms-controls-on-office-documents-overview.md)を参照してください。  
   
 ## <a name="combining-vba-and-document-level-customizations"></a>VBA とドキュメント レベルのカスタマイズの結合  
  ドキュメント レベルのカスタマイズの一部であるドキュメントに VBA コードを使用できます。 カスタマイズ アセンブリからドキュメント内の VBA コードを呼び出したり、ドキュメント内の VBA コードがカスタマイズ アセンブリのコードを呼び出せるようにプロジェクトを構成したりすることができます。  
@@ -171,10 +172,10 @@ Globals.ThisDocument.Save();
 ## <a name="using-the-getvstoobject-and-hasvstoobject-methods"></a>GetVstoObject メソッドと HasVstoObject メソッドの使用  
  HasVstoObject と GetVstoObject メソッドを呼び出すには、Globals.Factory.GetVstoObject または Globals.Factory.HasVstoObject メソッドを使用し、ネイティブの Word または Excel オブジェクトを渡す (など、<xref:Microsoft.Office.Interop.Word.Document>または<xref:Microsoft.Office.Interop.Excel.Worksheet>) テストを実行します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
  [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md)   
  [ServerDocument クラスを使用してサーバー上のドキュメントを管理します。](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)   
- [Office ソリューションのコードの記述](../vsto/writing-code-in-office-solutions.md)  
+ [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)  
   
   

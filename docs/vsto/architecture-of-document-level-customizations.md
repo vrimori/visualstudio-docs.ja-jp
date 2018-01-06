@@ -24,11 +24,12 @@ caps.latest.revision: "86"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4b3e40a5a11e681f372b9cb76b43060b87ac900b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: cf755c0e90eda2c5478d16305b7540dd86b9ef5b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="architecture-of-document-level-customizations"></a>ドキュメント レベルのカスタマイズのアーキテクチャ
   [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] には、Microsoft Office Word および Microsoft Office Excel のドキュメント レベルのカスタマイズを作成するためのプロジェクトが含まれています。 ここでは、ドキュメント レベルのカスタマイズの次の側面について説明します。  
@@ -145,7 +146,7 @@ ms.lasthandoff: 10/31/2017
   
 9. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]呼び出し、**スタートアップ**カスタマイズ アセンブリ内のイベント ハンドラー。 詳細については、「 [Events in Office Projects](../vsto/events-in-office-projects.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio での Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)   
  [VSTO アドインのアーキテクチャ](../vsto/architecture-of-vsto-add-ins.md)   
  [Visual Studio Tools for Office Runtime Overview](../vsto/visual-studio-tools-for-office-runtime-overview.md)   

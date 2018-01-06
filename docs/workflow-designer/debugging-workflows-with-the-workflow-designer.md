@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 8fb47ec57ccaa6e0bf3ddc8304dff3a1ecaf8258
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: bd39848819087209455d31e481d560a0534ea385
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-workflows-with-the-workflow-designer"></a>ワークフロー デザイナーを使用したワークフローのデバッグ
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]には、ワークフローとカスタム アクティビティをデバッグする機能が用意されています。 そのプロセスと動作は、既定の [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] デバッガーと同様です。 このセクションの各トピックでは、従来のデバッグ手順に加えて、XAML および式のデバッグを行う方法について説明します。  

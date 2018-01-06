@@ -11,11 +11,12 @@ caps.latest.revision: "10"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: a5565a5f53506ee61cc40cdd09ab4719bef0742b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 4c9a3124ddefc892207ccc821b80056baab14166
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-breakpoints-in-workflows"></a>方法 : ワークフロー内のブレークポイントを設定する
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]を使用すると、Visual Basic コードまたは C# コードを使用する場合と同じように、グラフィカル ワークフローにブレークポイントを設定できます。 設定したそれぞれのブレークポイントで、ワークフローの実行が停止します。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/27/2017
   
      または、ショートカット キーも**F9**キーをアクティビティを右クリックし、選択するか、アクティビティを選択すると**ブレークポイント**し**ブレークポイントの挿入**、コンテキスト メニュー。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: ワークフロー デバッガーを呼び出す](../workflow-designer/how-to-invoke-the-workflow-debugger.md)   
  [ワークフロー デザイナーにワークフローのデバッグ](../workflow-designer/debugging-workflows-with-the-workflow-designer.md)   
  [方法: ワークフロー デザイナーを使用して XAML をデバッグする](../workflow-designer/how-to-debug-xaml-with-the-workflow-designer.md)

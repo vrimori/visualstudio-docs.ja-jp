@@ -23,11 +23,12 @@ caps.latest.revision: "70"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bb94603d3041a30e978fff0ac6fff399648fc027
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 70748440dc325266439ee71569e858eb3d815fc1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-data-to-controls-in-office-solutions"></a>Office ソリューションでのコントロールへのデータのバインド
   Microsoft Office Word 文書または Microsoft Office Excel ワークシート上の Windows フォーム コントロールや *ホスト コントロール* を、データ ソースにバインドできます。この場合、コントロールには自動的にデータが表示されます。 アプリケーション レベルのプロジェクトとドキュメント レベルのプロジェクトの両方で、コントロールにデータをバインドできます。  
@@ -103,7 +104,7 @@ ms.lasthandoff: 10/31/2017
   
  詳細については、「 [How to: Update a Data Source with Data from a Host Control](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [操作方法: Excel でデータベースのデータを使用する](http://go.microsoft.com/fwlink/?LinkID=130287)   
  [データ連結と Windows フォーム](/dotnet/framework/winforms/data-binding-and-windows-forms)   
  [方法 : Windows フォームに単純バインド コントロールを作成する](/dotnet/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form)   

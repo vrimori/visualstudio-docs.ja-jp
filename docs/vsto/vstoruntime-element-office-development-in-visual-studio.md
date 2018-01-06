@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0d6ac2393a5cfd27b2909fb5a5d63ff0260941e4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 13f5517e0bde4d5881acaf89640b01509cf19eb8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltvstoruntimegt-element-office-development-in-visual-studio"></a>&lt;vstoRuntime&gt;要素 (Visual Studio での Office 開発)
   `vstoRuntime` 名前空間の `vstav3` 要素は、特定の Office ソリューション用の、Visual Studio Tools for Office ランタイムのサポートされるバージョンを格納します。  
@@ -44,9 +45,9 @@ ms.lasthandoff: 10/31/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|`release`|必須です。 Visual Studio Tools for Office ランタイムのリリース バージョン。|  
-|`version`|必須です。 Visual Studio Tools for Office ランタイムのバージョン番号。|  
-|`supportUrl`|省略可能です。 Visual Studio Tools for Office ランタイムのインストール場所へのリンク。|  
+|`release`|必須。 Visual Studio Tools for Office ランタイムのリリース バージョン。|  
+|`version`|必須。 Visual Studio Tools for Office ランタイムのバージョン番号。|  
+|`supportUrl`|任意。 Visual Studio Tools for Office ランタイムのインストール場所へのリンク。|  
   
  `vstoRuntime` には要素がありません。  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/31/2017
     supportUrl="http://www.microsoft.com" />  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
  [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)  

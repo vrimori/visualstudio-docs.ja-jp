@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ad57b87dcbae858f865a12538c79436e907caa34
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: add7474c2d38c2cbb06b0d1cc3c92efa0a16c321
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-new-item-to-a-workflow-project-legacy"></a>方法: ワークフロー プロジェクトに新しい項目を追加する (レガシ)
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] が備えている従来の [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]は、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] または [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] を対象としており、これを使用してワークフロー プロジェクトを作成すると、[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 項目や他の一般的な [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 項目をプロジェクトに追加できます。  
@@ -48,5 +49,5 @@ ms.lasthandoff: 10/27/2017
   
 3.  をクリックして**追加**ワークフロー プロジェクトに、項目を追加します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [従来のワークフロー プロジェクトの作成](../workflow-designer/creating-legacy-workflow-projects.md)

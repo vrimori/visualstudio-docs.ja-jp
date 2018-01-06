@@ -19,11 +19,12 @@ caps.latest.revision: "43"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4c4eb8446f26267eb0c3d5d9b2f5cdb5cfa02a78
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 87ba8bc1d81dbce4609fcc349337c3f86de50f2d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control"></a>方法 : ListObject コントロールに新規行が追加された場合にデータを検証する
   ユーザーはデータにバインドされている <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールに新しい行を追加できます。 変更をデータ ソースにコミットする前に、ユーザーのデータを検証できます。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  このコード例では、このコードがあるワークシートに、 <xref:Microsoft.Office.Tools.Excel.ListObject> という名前の既存の `list1` があることを前提としています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [実行時の Word 文書と VSTO アドイン内の Excel ブックの拡張](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   

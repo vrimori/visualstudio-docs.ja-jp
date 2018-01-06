@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 36fccee0e228e4391e80388284b59f19e1f3a1b9
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 05962d6806631bdfa9b873038ec85cdf9969d55c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-xml-snippets"></a>方法 : XML スニペットを作成する
 XML エディターを使用して、新しい XML スニペットを作成することができます。 エディターには、新しい XML スニペットを作成する際の定型スニペットである、"Snippet" という名前の XML スニペットが含まれています。  
@@ -112,7 +113,7 @@ XML エディターを使用して、新しい XML スニペットを作成す�
   
  この後は、XML スニペット内の任意の場所で $prefix$ 変数を使用できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML スニペット](../xml-tools/xml-snippets.md)   
  [方法: XML スニペットを使用します。](../xml-tools/how-to-use-xml-snippets.md)   
  [方法 : XML スキーマから XML スニペットを生成する](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)

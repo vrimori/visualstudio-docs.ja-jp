@@ -13,11 +13,12 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4c8696e7ffb4120bae12538a03b77d62c0d091a7
-ms.sourcegitcommit: 64c7682ec3a2cbea684e716803398d4278b591d1
+ms.workload: multiple
+ms.openlocfilehash: 3b97ca67c9e8d8a4cfb7d99a6c518c8e49a8c426
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="deploy-a-web-app-or-net-core-app-to-a-local-folder-using-the-visual-studio-publish-tool"></a>Web アプリまたは .NET Core アプリを Visual Studio 発行ツールを使用してローカル フォルダーに配置します。
 
@@ -63,8 +64,8 @@ ms.lasthandoff: 12/15/2017
 
 発行したファイルは、任意の方法で展開できます。 たとえば、Zip ファイル内にパッケージ化、単純なコピー コマンドを使用して、または任意のインストール パッケージに配置できます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-- [発行ツールを使用して .NET Core アプリケーションの配置します。](https://docs.microsoft.com/en-us/dotnet/core/deploying/deploy-with-vs)
-- [Microsoft ストア (デスクトップ ブリッジ) のデスクトップ アプリをパッケージ化します。](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
-- (.NET)[.NET Framework およびアプリケーションの展開](https://docs.microsoft.com/en-us/dotnet/framework/deployment/)
+- [発行ツールを使用して .NET Core アプリケーションを配置する](/dotnet/core/deploying/deploy-with-vs)
+- [Microsoft ストアのデスクトップ アプリをパッケージ化する (デスクトップ ブリッジ)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
+- (.NET)[.NET Framework およびアプリケーションの展開](/dotnet/framework/deployment/)

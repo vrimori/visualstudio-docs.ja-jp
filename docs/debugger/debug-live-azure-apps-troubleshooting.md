@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 307e32587a7aac6e2595f35488ad057995c04f4b
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: d007bdf5d2029e896167a2fd7b32359c661aa7fa
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>スナップショットは、Visual Studio でデバッグするためのトラブルシューティングと既知の問題
 
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/22/2017
 - スナップショットは、同じ App Service に対して複数の Visual Studio クライアントでデバッグは現在サポートされていません。
 - Roslyn IL 最適化は ASP.NET Core プロジェクトに完全にサポートされていません。 ASP.NET Core プロジェクトでは、いないことができますをいくつかの変数を参照してください。 または、条件付きステートメントでいくつかの変数を使用します。 
 - 特別な変数など*$FUNCTION*または*$CALLER*、条件ステートメントやプロジェクトの ASP.NET Core logpoints で評価されることはできません。
-- スナップショットのデバッグはアプリのサービスでは動作しません[ローカル キャッシュ](https://docs.microsoft.com/en-us/azure/app-service/app-service-local-cache)オンにします。
+- スナップショットのデバッグはアプリのサービスでは動作しません[ローカル キャッシュ](/azure/app-service/app-service-local-cache)オンにします。
 - スナップショットの API アプリのデバッグは現在サポートされていません。
 
 ## <a name="see-also"></a>関連項目

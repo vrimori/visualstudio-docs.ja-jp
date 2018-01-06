@@ -35,11 +35,12 @@ caps.latest.revision: "68"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6066e5adbe4519011f56a4d88ecfcc834eb7788c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: d62ccb1e842621a129a4749ae2727c10c0da970a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="office-project-templates-overview"></a>Office プロジェクト テンプレートの概要
   Visual Studio の Microsoft Office Developer Tools には、次の種類の Office ソリューションの作成に使用できるプロジェクト テンプレートが含まれています。  
@@ -170,7 +171,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="excel-add-ins-xla-files"></a>Excel アドイン (.xla ファイル)  
  Excel VSTO アドイン (.xla ファイル) を作成するための Office プロジェクトは存在しません。 ブックを .xla ファイルとして保存できますが、サポートされていない操作であり、推奨できません。 マネージ コード拡張機能として設定されたブックを保存するかどうか、 **Microsoft Office Excel アドイン (\*.xla)**ファイルを選択できるように、**アドイン**別のブックに適用する ダイアログ ボックス。 VSTO アドインの適用後に対象のブックでコードが実行されることもありますが、このような Office ソリューションの使用方法はサポートされていません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [Office ソリューションの開発](../vsto/developing-office-solutions.md)   
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   

@@ -19,11 +19,12 @@ caps.latest.revision: "38"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6874dd125c692b6d853dc89cc533bf3d623aad51
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 035b74048aca3b91449bc857a36594bc280065c4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project"></a>チュートリアル : VSTO アドイン プロジェクトでサービスのデータをバインドする
   VSTO アドイン プロジェクトでは、データをホスト コントロールにバインドできます。 このチュートリアルでは、実行時に Microsoft Office の Word ドキュメントにコントロールを追加し、それらのコントロールを MSDN コンテンツ サービスから取得されたデータにバインドして、イベントに応答する方法について説明します。  
@@ -118,7 +119,7 @@ ms.lasthandoff: 10/31/2017
   
      MTPS コンテンツ サービスから情報がダウンロードされて、コンテンツ コントロール内部に表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションでのコントロールへのデータのバインド](../vsto/binding-data-to-controls-in-office-solutions.md)  
   
   

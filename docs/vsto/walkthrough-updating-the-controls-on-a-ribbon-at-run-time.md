@@ -22,11 +22,12 @@ caps.latest.revision: "51"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bf9e63423a094d4aa574be1d952702ff077aa627
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 9ca505ff6e61962cd360a3f8413a69abe92e377f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-updating-the-controls-on-a-ribbon-at-run-time"></a>チュートリアル : 実行時のリボン コントロールの更新
   このチュートリアルでは、Office アプリケーションにリボンを読み込んだ後でリボン オブジェクト モデルを使用してリボン上のコントロールを更新する方法について説明します。  
@@ -290,7 +291,7 @@ ms.lasthandoff: 10/31/2017
   
 -   Outlook にカスタム作業ウィンドウを追加する。 詳細については、次を参照してください。[カスタム作業ウィンドウの](../vsto/custom-task-panes.md)します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
  [リボンの概要](../vsto/ribbon-overview.md)   
  [統合言語クエリ (LINQ)](/dotnet/csharp/linq/index)   

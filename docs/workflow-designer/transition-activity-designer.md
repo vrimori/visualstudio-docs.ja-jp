@@ -11,11 +11,12 @@ ms.assetid: f6e8b5cc-7fb8-4699-9703-f3c9fc7cc316
 caps.latest.revision: "7"
 ms.author: sdanie
 manager: erikre
-ms.openlocfilehash: 211dfeb11fe04ab147c330fb70787e17955a3c14
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: ba933b2eebb7193f8ee93852ce2a047f01ca4e0d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transition-activity-designer"></a>Transition アクティビティ デザイナー
 <xref:System.Activities.Statements.Transition> は、2 つの状態間の遷移を表します。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/27/2017
   
  トリガーを共有する遷移とは、同じトリガー イベントを共有する遷移のセットです。 共有されるトリガーにより、共通のトリガー イベントを共有する複数の遷移用に構成された式の評価に基づいて、条件に従って遷移先の状態に移行することができます。 遷移に追加のアクションを追加して共有遷移を作成するには、目的の遷移の始点を表す円をクリックし、目的の状態にドラッグします。 新しい遷移では最初の遷移と同じトリガーが共有されますが、その条件とアクションは一意になります。 共有遷移できますも作成することから、遷移デザイナー内をクリックして**共有トリガー遷移の追加**から目的のターゲットの状態をクリックして、遷移デザイナーの下部にある、 **接続に使用可能な状態**ドロップダウンします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [StateMachine](../workflow-designer/statemachine-activity-designer.md)   
  [FinalState](../workflow-designer/finalstate-activity-designer.md)   
  [状態](../workflow-designer/state-activity-designer.md)

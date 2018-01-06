@@ -21,11 +21,12 @@ caps.latest.revision: "56"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 42914166995c002d7eeb0c1c730edf860e6c1a68
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 6e2904a812f00e58e1ae5b4a56cd1ce742fc9357
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="namedrange-control"></a>NamedRange コントロール
   <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールは、一意の名前を持つ、イベントを公開する範囲です。このコントロールは、データにバインドすることができます。 詳細については、「 [Excel Object Model Overview](../vsto/excel-object-model-overview.md)」を参照してください。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 10/31/2017
   
 -   <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange>  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)   
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
  [Office ソリューションでのコントロールへのデータをバインディング](../vsto/binding-data-to-controls-in-office-solutions.md)   

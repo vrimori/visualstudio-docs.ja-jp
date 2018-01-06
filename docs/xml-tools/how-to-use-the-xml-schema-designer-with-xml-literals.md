@@ -13,11 +13,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 dev_langs: VB
-ms.openlocfilehash: cd78b50c9b2f22459548a906a5c45945da84ebb5
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 5eea45aafebe8c20431de5b2d3bd299789bf7285
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>方法: XML リテラルに XML スキーマ デザイナーを使用する
 このトピックでは、Visual Basic プロジェクトの XML リテラルに関連付けられたスキーマを表示する方法について説明します。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 11/02/2017
   
 1.  Visual Studio を起動します。  
   
-2.  **ファイル**メニューの **新規**、し、**プロジェクト**です。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。 **プロジェクトの種類****他の言語**し、 **Visual Basic**です。 **テンプレート**、コンソール アプリケーションを選択します。 入力`XMLLiterals`で、**名前**フィールドとプロジェクトの場所で、**場所**フィールドです。 **[OK]** をクリックします。  
+2.  **ファイル**メニューの **新規**、し、**プロジェクト**です。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。 **プロジェクトの種類****他の言語**し、 **Visual Basic**です。 **テンプレート**、コンソール アプリケーションを選択します。 入力`XMLLiterals`で、**名前**フィールドとプロジェクトの場所で、**場所**フィールドです。 **[OK]**をクリックします。  
   
      新しいプロジェクトが作成されます。 XMLLiterals プロジェクトには、Module1.vb という 1 つの Visual Basic ソース ファイルが含まれています。  
   

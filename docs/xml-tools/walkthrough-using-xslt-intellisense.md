@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ae58db5ac642bca1e68d3ad074d4a69062a1f294
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 97950a9d5d6f76505e93153dccd14cfce7be15a5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-xslt-intellisense"></a>チュートリアル: XSLT IntelliSense の使用
 このチュートリアルでは、XSLT IntelliSense を使用して一部の属性値のオートコンプリートを行う方法について説明します。  
@@ -162,5 +163,5 @@ ms.lasthandoff: 10/31/2017
   
      `stylesheet-prefix` 要素の `result-prefix` 属性と `xsl:namespace-alias` 属性にどのようにプレフィックスの一覧が表示されるかを確認してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML エディターの IntelliSense 機能](../xml-tools/xml-editor-intellisense-features.md)

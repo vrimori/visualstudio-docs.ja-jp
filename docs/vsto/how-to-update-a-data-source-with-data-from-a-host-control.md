@@ -20,11 +20,12 @@ caps.latest.revision: "53"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1fd4716e81d280e049a8cbd1a5206b52f2714e27
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: eff45d9b2c8dbac0aade12a003008dd9b2c29fb2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-update-a-data-source-with-data-from-a-host-control"></a>方法 : ホスト コントロールからのデータでデータ ソースを更新する
   ホスト コントロールをデータ ソースにバインドし、コントロール内のデータに加えられた変更でデータ ソースを更新することができます。 この処理には主に 2 つの手順があります。  
@@ -116,7 +117,7 @@ ms.lasthandoff: 10/31/2017
      [!code-csharp[Trin_VstcoreDataExcel#21](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#21)]
      [!code-vb[Trin_VstcoreDataExcel#21](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#21)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションでのコントロールへのデータをバインディング](../vsto/binding-data-to-controls-in-office-solutions.md)   
  [データをデータベースに保存します。](../data-tools/save-data-back-to-the-database.md)    
  [TableAdapter を使用してデータを更新します。](../data-tools/update-data-by-using-a-tableadapter.md)    

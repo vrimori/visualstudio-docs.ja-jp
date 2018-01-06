@@ -19,11 +19,12 @@ caps.latest.revision: "54"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 44aefbbce0d910efc6e92f2acb75993598f098ab
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 6632d2f92449a700481f584660711afdd3a99187
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-namedrange-controls-to-worksheets"></a>方法 : ワークシートに NamedRange コントロールを追加する
   ドキュメント レベルのプロジェクトでは、デザイン時および実行時に、 <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを Microsoft Office Excel ワークシートに追加できます。  
@@ -97,7 +98,7 @@ ms.lasthandoff: 10/31/2017
      [!code-csharp[Trin_Excel_Dynamic_Controls#7](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#7)]
      [!code-vb[Trin_Excel_Dynamic_Controls#7](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#7)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [実行時の Word 文書と VSTO アドイン内の Excel ブックの拡張](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
  [NamedRange コントロール](../vsto/namedrange-control.md)   

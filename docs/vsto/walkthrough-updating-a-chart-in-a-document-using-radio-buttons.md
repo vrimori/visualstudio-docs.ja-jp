@@ -18,11 +18,12 @@ caps.latest.revision: "60"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2d6fa02174a8b334b404a0a4ea84ee0e8089c584
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 35f5a865faafc730a13f5d0cd3a432a724434dde
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-updating-a-chart-in-a-document-using-radio-buttons"></a>チュートリアル : オプション ボタンを使用してドキュメントのグラフを更新する方法
   このチュートリアルでは、Microsoft Office Word のドキュメント レベルのカスタマイズでオプション ボタンを使用して、文書上でグラフのスタイルを選択するオプションをユーザーに提供する方法を示します。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/31/2017
   
      **オブジェクト** ダイアログ ボックスが表示されます。  
   
-3.  **オブジェクトの種類**ボックスの一覧、**新規作成** タブで ** Microsoft Graph グラフ** をクリックし、 **ok**です。  
+3.  **オブジェクトの種類**ボックスの一覧、**新規作成** タブで **Microsoft Graph グラフ** をクリックし、 **ok**です。  
   
      カーソル位置にあるドキュメントにグラフが追加され、**データシート**ウィンドウは、既定のデータが表示されます。  
   
@@ -94,30 +95,30 @@ ms.lasthandoff: 10/31/2017
   
 2.  **コモン コントロール**のタブ、**ツールボックス**、最初にドラッグ**ラジオ ボタン**ユーザー コントロールを制御し、次のプロパティを変更します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**付いた円柱グラフ**|  
+    |**Name**|**付いた円柱グラフ**|  
     |**[テキスト]**|**縦棒グラフ**|  
   
 3.  1 秒あたりの追加**ラジオ ボタン**ユーザーを制御して、次のプロパティを変更します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**barChart**|  
+    |**Name**|**barChart**|  
     |**[テキスト]**|**横棒グラフ**|  
   
 4.  3 つ目の追加**ラジオ ボタン**ユーザーを制御して、次のプロパティを変更します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**です折れ線グラフ**|  
+    |**Name**|**です折れ線グラフ**|  
     |**[テキスト]**|**線グラフ**|  
   
 5.  4 つ目の追加**ラジオ ボタン**をユーザーを制御して、次のプロパティを変更します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**areaBlockChart**|  
+    |**Name**|**areaBlockChart**|  
     |**[テキスト]**|**領域ブロックのグラフ**|  
   
 ## <a name="adding-references"></a>参照の追加  
@@ -129,7 +130,7 @@ ms.lasthandoff: 10/31/2017
   
      **[参照の追加]** ダイアログ ボックスが表示されます。  
   
-2.  **.NET**  タブで ** Microsoft.Office.Interop.Graph ** をクリック**OK**です。 アセンブリの 14.0.0.0 バージョンを選択します。  
+2.  **.NET**  タブで **Microsoft.Office.Interop.Graph** をクリック**OK**です。 アセンブリの 14.0.0.0 バージョンを選択します。  
   
 ## <a name="changing-the-chart-style-when-a-radio-button-is-selected"></a>オプション ボタンが選択されたときのグラフ スタイルの変更  
  ボタンを正しく動作させるために、ユーザー コントロールにパブリック イベントを作成し、選択の種類を設定するプロパティを追加して、各オプション ボタンの `CheckedChanged` イベントにプロシージャを作成します。  
@@ -216,7 +217,7 @@ ms.lasthandoff: 10/31/2017
   
 -   コンボ ボックスからスタイルを選択して書式を変更する。 詳細については、次を参照してください。[チュートリアル: を変更するドキュメントの書式設定 チェック ボックス コントロールを使用した](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアルを使用して Word](../vsto/walkthroughs-using-word.md)   
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
  [Office ドキュメントでの Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  

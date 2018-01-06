@@ -20,14 +20,15 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 3eefde445f5c8aca7199d4316472fe92c3160d00
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 99be4338bcee9ffb5c7cb9cf28f6187128345f85
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-legacy-state-machine-workflow-designer"></a>従来のステート マシン ワークフロー デザイナーの使用
-新しいステート マシン ワークフロー プロジェクトを作成する場合[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]をターゲットとするか、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)]または[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]、いずれかを使用することもできます、**ステート マシン ワークフロー コンソール アプリケーション**または、 **ステート マシン ワークフロー ライブラリ**レガシ プロジェクト テンプレート。 これらのいずれかのステート マシン プロジェクト テンプレートを選択した場合、ステート マシン デザイナーが従来のワークフロー デザイナーのユーザー インターフェイスとして表示されます。 従来のステート マシン プロジェクト テンプレートの概要については、次を参照してください[する方法: 作成状態マシン ワークフロー コンソール アプリケーション (レガシ)](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md)と[する方法: ステート マシン ワークフロー ライブラリ (レガシ)作成](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md)。.  
+新しいステート マシン ワークフロー プロジェクトを作成する場合[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]をターゲットとするか、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)]または[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]、いずれかを使用することもできます、**ステート マシン ワークフロー コンソール アプリケーション**または、 **ステート マシン ワークフロー ライブラリ**レガシ プロジェクト テンプレート。 これらのいずれかのステート マシン プロジェクト テンプレートを選択した場合、ステート マシン デザイナーが従来のワークフロー デザイナーのユーザー インターフェイスとして表示されます。 従来のステート マシン プロジェクト テンプレートの概要については、次を参照してください[する方法: 作成状態マシン ワークフロー コンソール アプリケーション (レガシ)](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md)と[する方法: ステート マシン ワークフロー ライブラリ (レガシ)作成](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md).  
   
  ステート マシン ワークフローは、ステート (状態) のセットで構成されます。 1 つのステートが初期状態として設定されます。 各ステートは特定のイベント セットを受信できます。 イベントに基づいて、別のステートへの移行を実行できます。 ステート マシン ワークフローには最終ステートを定義できます。 最終ステートに移行すると、ワークフローは完了します。  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/27/2017
 >   
 >  開くには、 **ドキュメント アウトライン** ウィンドウで、**ビュー**  メニューのをポイント**その他のウィンドウ**、し、 **ドキュメント アウトライン**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: ステート マシン ワークフロー コンソール アプリケーション (レガシ) を作成します。](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md)   
  [方法: ステート マシン ワークフロー ライブラリ (レガシ) を作成します。](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md)   
  [ステート マシン ワークフロー](http://go.microsoft.com/fwlink?LinkID=65016)   

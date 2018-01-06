@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: eb219d1f88635a82efbc41acb031cdb46a6d7713
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 9b3c9d82b625b2666513f0443493aac59d916e41
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltentrypointsgt-element-office-development-in-visual-studio"></a>&lt;entryPoints&gt;要素 (Visual Studio での Office 開発)
   `entryPoints` 名前空間の `vstav3` の要素には、Office ソリューションに関連付けるすべての `entryPoint` 要素を格納します。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/31/2017
  `entryPoints` には、次の要素があります。  
   
 ### <a name="entrypoint"></a>entryPoint  
- 必須です。 役割、`entryPoint`内の要素、`vstav3`で名前空間が定義されている[&#60; entryPoint &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/entrypoint-element-office-development-in-visual-studio.md).  
+ 必須。 役割、`entryPoint`内の要素、`vstav3`で名前空間が定義されている[&#60; entryPoint &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/entrypoint-element-office-development-in-visual-studio.md).  
   
 ## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズの例  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="multi-project-deployment-example"></a>複数プロジェクトの配置の例  
   
 ### <a name="description"></a>説明  
- 次のコード例は、複数プロジェクトの配置のためのアプリケーション マニフェストの `entryPoints` 要素を示しています。 このコード例は、「 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)」に記載されている例の一部を抜粋したものです。  
+ 次のコード例は、複数プロジェクトの配置のためのアプリケーション マニフェストの `entryPoints` 要素を示しています。 このコード例は、「 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)」に記載されている例から一部を抜粋したものです。  
   
 ### <a name="code"></a>コード  
   
@@ -172,7 +173,7 @@ ms.lasthandoff: 10/31/2017
 </vstav3:entryPoints>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
  [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)  

@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d549afb96465590a21e516f649d860f23f4056f3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8a0072df206fcdfc27966632e3801316bcfb7274
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-evaluate-an-xpath-expression"></a>方法 : XPath 式を評価する
 含む XPath 式を評価することができます、 **クイック ウォッチ**  ダイアログ ボックス。 XPath 式は、W3C XPath 1.0 勧告に沿って有効である必要があります。 現在の XSLT コンテキスト-は、`self::node()`内のノード、 **[ローカル]**ウィンドウ: XPath 式の評価コンテキストを提供します。  
@@ -52,5 +53,5 @@ ms.lasthandoff: 10/31/2017
   
      **値**ボックスに表示する XPath 式の評価結果`true`です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XSLT のデバッグ](../xml-tools/debugging-xslt.md)

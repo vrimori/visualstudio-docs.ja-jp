@@ -23,11 +23,12 @@ caps.latest.revision: "27"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f90aeb03dd62d76064124e9870a5a4dbcd250621
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: deb63265b65a382132d3ef957ad67ddd1bccb438
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cached-data-in-document-level-customizations"></a>ドキュメント レベルのカスタマイズのキャッシュ データ
   ドキュメント レベルのカスタマイズの主な目的では、Office ドキュメントのビューからデータを分離します。 データは、数値やテキストなど、ドキュメントに格納されている情報を参照します。 ビューは、ユーザー インターフェイスおよび Microsoft Office Word および Microsoft Office Excel のオブジェクト モデルを指します。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/31/2017
 |どのような種類のデータを格納することができますか。|特定の要件を満たしているカスタマイズ アセンブリ内の任意のパブリック オブジェクト。 詳細については、「 [Caching Data](../vsto/caching-data.md)」を参照してください。|任意の XML データです。|  
 |Microsoft Office アプリケーションを起動せず、データにアクセスすることができますか。|使用して、はい、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>によって提供されるクラス、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]です。|クラスを使用して、はい、<xref:System.IO.Packaging>名前空間、または Open XML 形式の SDK を使用しています。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)   
  [Visual Studio の Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "41"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f2d8e1f8ad116bd6db12eca288e567a652e502a5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 715d58e205442511db9709a5e57b1b689e008628
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-designing-an-outlook-form-region"></a>チュートリアル : Outlook フォーム領域のデザイン
   カスタム フォーム領域は、標準またはカスタムの Microsoft Office Outlook フォームを拡張します。 このチュートリアルでは、連絡先アイテムのインスペクター ウィンドウに新しいページとして表示するカスタム フォーム領域をデザインします。 このフォーム領域では、アドレス情報を Windows Live Local Search の Web サイトに送信することによって、連絡先に設定された個々の住所の地図を表示します。 フォーム領域の詳細については、次を参照してください。 [Outlook フォーム領域を作成する](../vsto/creating-outlook-form-regions.md)です。  
@@ -173,7 +174,7 @@ ms.lasthandoff: 10/31/2017
   
 -   Outlook アイテムのリボンをカスタマイズする方法の詳細については、「 [Customizing a Ribbon for Outlook](../vsto/customizing-a-ribbon-for-outlook.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [実行時にフォーム領域へのアクセス](../vsto/accessing-a-form-region-at-run-time.md)   
  [Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)   
  [Outlook フォーム領域の作成に関するガイドライン](../vsto/guidelines-for-creating-outlook-form-regions.md)   

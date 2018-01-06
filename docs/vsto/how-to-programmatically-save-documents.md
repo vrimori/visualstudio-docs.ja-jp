@@ -18,11 +18,12 @@ caps.latest.revision: "44"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2c6a47bae9923d68acc189c53766d5206244f97c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 251522a745ee7b8dc9894a403f09d1a6d3f32793
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-save-documents"></a>方法: プログラムによって文書を保存する
   Microsoft Office Word 文書を保存するいくつかの方法はあります。 ドキュメントを保存するには、ドキュメントの名前を変更することがなくまたは新しい名前を持つドキュメントを保存することができます。  
@@ -89,7 +90,7 @@ ms.lasthandoff: 10/31/2017
   
 -   C ドライブに新しい名前を持つドキュメントを保存するには、テストをという名前のディレクトリが存在する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: プログラムによって文書を閉じる](../vsto/how-to-programmatically-close-documents.md)   
  [方法: プログラムによって既存のドキュメントを開く](../vsto/how-to-programmatically-open-existing-documents.md)   
  [Document ホスト項目](../vsto/document-host-item.md)   

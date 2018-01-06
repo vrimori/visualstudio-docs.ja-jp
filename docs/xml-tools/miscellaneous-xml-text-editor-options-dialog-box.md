@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 871190deb39504a498061602b11f927832d71f35
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 4773bf87e89bd504b477d9a1a31dfe961a3f29ff
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="miscellaneous-xml-text-editor-options-dialog-box"></a>[その他] ([オプション] ダイアログ ボックス - [テキスト エディター] - [XML])
 このダイアログ ボックスでは、XML エディターのオートコンプリートとスキーマの設定を変更することができます。 アクセスすることができます、**オプション**からダイアログ ボックス、**ツール**メニュー。  
@@ -61,6 +62,6 @@ ms.lasthandoff: 10/31/2017
  **スキーマ**  
  スキーマ キャッシュの場所を指定します。 参照ボタン (**.**) が表示されます、**ディレクトリの参照** ダイアログ ボックスで、現在のスキーマ キャッシュの場所。 別のディレクトリを選択またはダイアログ ボックスで、フォルダーを選択することができます右クリックしを選択し、**開く**ディレクトリに参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML ドキュメントのプロパティと [プロパティ] ウィンドウ](../xml-tools/xml-document-properties-properties-window.md)   
  [XML エディターのコンポーネント](../xml-tools/xml-editor-components.md)

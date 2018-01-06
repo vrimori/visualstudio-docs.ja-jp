@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: b7deb3daed85c0c15d299052642abcb732ff12c2
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 55061da71038b3af38049a431db08fda6638144f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-expression-editor"></a>式エディターを使用する方法
 式エディターは、式を入力および評価する手段として、多くのワークフロー アクティビティで使用される[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] コントロールです。 式エディターには、IntelliSense、色付け、パラメーター情報、エラーを示す波線などの、本格的な IDE 編集機能が用意されています。 入力した式はコンパイラによって検証されます。 式が無効な場合は、エラー アイコンが表示されます。 エディターを開くことも、**式エディター**  ダイアログ ボックス。  
@@ -53,5 +54,5 @@ ms.lasthandoff: 10/27/2017
   
      式を入力または編集する方法として、プロパティ グリッドのプロパティ名の横にある省略記号をクリックするという方法もあります。 これが開き、**式エディター**  ダイアログ ボックス。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:System.Activities.Presentation.View.ExpressionTextBox>

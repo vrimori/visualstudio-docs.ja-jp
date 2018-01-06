@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a100a573f26a774c58083cb82b07c50792908f45
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 946bb38d5cb79506e54206060686eac5dfc7b566
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-save-visio-documents"></a>方法: プログラムによって Visio 図面を保存する
   Microsoft Office Visio 図面を保存するには、次のようないくつかの方法があります。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/31/2017
   
 -   図面に新しい名前を付けて保存するには、[マイ ドキュメント] フォルダー (Windows XP 以前の場合) または [ドキュメント] フォルダー (Windows Vista の場合) 内に `Test` という名前のディレクトリが存在している必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visio ソリューション](../vsto/visio-solutions.md)   
  [Visio オブジェクト モデルの概要](../vsto/visio-object-model-overview.md)   
  [方法: プログラムによって新しい Visio 図面を作成します。](../vsto/how-to-programmatically-create-new-visio-documents.md)   

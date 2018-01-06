@@ -27,11 +27,12 @@ caps.latest.revision: "41"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 513b2216a99f37ba3aff1174965470b20921072f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: dc29b307f6459e3a5841ae1dd1c60ae9ab9ed152
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sharepoint-project-and-project-item-templates"></a>SharePoint プロジェクトとプロジェクト項目テンプレート
   以下のセクションでは、SharePoint プロジェクトとプロジェクト項目の使用可能なテンプレート、およびそれらの使用方法について説明します。 
@@ -111,7 +112,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="list"></a>リスト  
  リストは、再利用可能な基本の SharePoint リスト定義のインスタンスです (予定表、タスク リストなど)。 ソリューションにリストを追加した後、リスト デザイナーで、リストにサイト列を追加したり、リストのカスタム列を作成したりできます。 これにはコンテンツ タイプのサイト列が含まれます。 指定することができます、*ビュー*一覧については、一覧に表示される列が決まります。 詳細については、次を参照してください。[チュートリアル: サイト内の列、コンテンツ タイプ、および SharePoint のリストを作成する](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)と[ビルディング ブロック: リストとドキュメント ライブラリ](http://go.microsoft.com/fwlink/?LinkId=179421)です。  
   
-### <a name="module"></a>モジュール  
+### <a name="module"></a>Module  
  *モジュール*(と混同しないでください[!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]モジュール) イメージやメモなど、SharePoint サーバーに配置するファイルが含まれています。 モジュールのプロジェクト アイテムが含まれています、**モジュール**ノード。 そのノードに 2 つのプロジェクト項目テンプレートが含まれています。1 つはモジュールのマニフェストとして機能する XML 定義ファイルで、もう 1 つはプレースホルダー ファイルの sample.txt ファイルです。 詳細については、次を参照してください。[ソリューション内のインクルード ファイルを使用してモジュール](../sharepoint/using-modules-to-include-files-in-the-solution.md)と[モジュール](http://go.microsoft.com/fwlink/?LinkId=179425)です。  
   
 ### <a name="sequential-workflow-farm-solution-only"></a>シーケンシャル ワークフロー (ファーム ソリューションのみ)  
@@ -146,7 +147,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="web-part"></a>Web パーツ  
  A *web パーツ*特殊な種類の Web パーツ ページをという名前のページ内で実行されるサーバー側コントロールです。 これらは、SharePoint サイトに表示されるページのビルド ブロックです。 Web パーツ項目には、SharePoint サイト用の Web パーツをデザインするためのファイルが用意されています。 詳細については、次を参照してください。[する方法: SharePoint Web パーツを作成](../sharepoint/how-to-create-a-sharepoint-web-part.md)と[ビルディング ブロック: Web パーツ](http://go.microsoft.com/fwlink/?LinkId=179438)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   
  [SharePoint 製品およびテクノロジ](http://go.microsoft.com/fwlink/?LinkId=178818)  
   

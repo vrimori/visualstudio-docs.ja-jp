@@ -30,11 +30,12 @@ caps.latest.revision: "52"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 097a4247ccc7604dd4c39b81e0f733578fc91c89
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 5a655210f3ab8bbcdbae7c06815a05d1ad24b390
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-task-panes"></a>カスタム作業ウィンドウ
   作業ウィンドウは、通常、Microsoft Office アプリケーションのウィンドウの一辺にドッキングされているユーザー インターフェイス ウィンドウです。 カスタム作業ウィンドウは、独自の作業ウィンドウを作成し、ユーザーがソリューションの各機能にアクセスする際に使い慣れたインターフェイスを利用できるようにするものです。 たとえば、インターフェイスにはドキュメントを変更するコードや、データ ソースのデータを表示するコードを実行するコントロールが含まれます。  
@@ -118,7 +119,7 @@ ms.lasthandoff: 10/31/2017
   
  次の表に、ユーザーがカスタム作業ウィンドウに加える変更に応答するために利用できるイベントを示します。  
   
-|タスク|イベント|  
+|タスク|event|  
 |----------|-----------|  
 |ユーザーが作業ウィンドウの場所を変更したときに応答するには|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>|  
 |ユーザーが作業ウィンドウを非表示にしたり、表示させた場合に応答するには|<xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged>|  
@@ -226,7 +227,7 @@ ms.lasthandoff: 10/31/2017
   
 -   <xref:Microsoft.Office.Interop.PowerPoint.EApplication_Event.WindowDeactivate>  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: カスタム作業ウィンドウをアプリケーションに追加します。](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)   
  [チュートリアル: カスタム作業ウィンドウからアプリケーションの自動化](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)   
  [チュートリアル: リボン ボタンとカスタム作業ウィンドウを同期します。](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)   

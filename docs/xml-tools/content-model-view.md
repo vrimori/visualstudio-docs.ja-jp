@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2991b31c387e959b055d30d37dd01cf79652adf7
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 582082504b713988039af609d59150715f75ecfe
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="content-model-view"></a>コンテンツ モデル ビュー
 コンテンツ モデル ビューには、単純型、複合型、要素、モデル グループ、属性、属性グループなど、ローカル スキーマ ノードとグローバル スキーマ ノード、およびそのコンポーネントがグラフィック表示されます。 XML のコメントおよび処理命令は、コンテンツ モデル ビューには表示できません。 コンテンツ モデル ビューには、2 つのパネルが含まれています。**ワークスペース**パネル内のノードの一覧を含む、 [XML スキーマ デザイナーのワークスぺース](../xml-tools/xml-schema-designer-workspace.md)、およびスキーマのコンテンツ モデルの参照先をデザイン サーフェイスノードで選択されている、**ワークスペース**パネルです。 さらにコンテンツ モデル ビューには、XML スキーマ デザイナーのツール バーおよび階層リンク バーがあります。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/02/2017
 |**コードの表示**|選択したノードを含むファイルが XML エディターで開きます。 XML エディターには、XML スキーマ エクスプローラーで選択されている項目も表示されます。|  
 |**[プロパティ] ウィンドウ**|開く、**プロパティ**ウィンドウ (これがまだ開いていない) 場合。 このウィンドウには、ノードに関する情報が表示されます。|  
   
-## <a name="properties-window"></a>プロパティ ウィンドウ  
+## <a name="properties-window"></a>[プロパティ] ウィンドウ  
  開くには最初に、コンテキスト メニューを使用して、**プロパティ**ウィンドウです。 既定では、**プロパティ**Visual Studio の右下隅にウィンドウが表示されます。 そのノードのプロパティが表示されます、コンテンツ モデル ビューに表示されているノードをクリックすると、**プロパティ**ウィンドウです。  
   
 ## <a name="xsd-designer-toolbar"></a>XSD デザイナーのツール バー  
@@ -115,5 +116,5 @@ ms.lasthandoff: 11/02/2017
   
  XML エディターでスキーマ セットを変更すると、コンテンツ モデル ビューにもその変更が同期されます。 詳細については、次を参照してください。 [XML エディターでの統合](../xml-tools/integration-with-xml-editor.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML スキーマ デザイナーのワークスペース](../xml-tools/xml-schema-designer-workspace.md)

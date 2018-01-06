@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 7fa3d16f87f6c81f0f9a4abfb961754ce7882f4c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 7d6317299bef78b4f5ee882bcf8d1353b81b5100
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compensate-activity-designer"></a>Compensate アクティビティ デザイナー
 **補正**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.Compensate>アクティビティ。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.Compensate> アクティビティの表示名を指定します (省略可能)。 既定値は Compensate です。|  
 |<xref:System.Activities.Statements.Compensate.Target%2A>|True|この <xref:System.Activities.InArgument%601> アクティビティの <xref:System.Activities.Statements.CompensationToken> を含む <xref:System.Activities.Statements.Compensate> を指定します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [トランザクション](../workflow-designer/transaction-activity-designers.md)   
  [CompensableActivity](../workflow-designer/compensableactivity-activity-designer.md)   
  [Compensate アクティビティ デザイナー](../workflow-designer/compensate-activity-designer.md)   

@@ -11,11 +11,12 @@ caps.latest.revision: "7"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 2aa2383326682dcedbb0888f5b55d34e3894327c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 481d9e577989b1bd75cea22e0faab6d8a1cc64cf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="messaging-activity-designers"></a>メッセージング アクティビティ デザイナー
 Messaging アクティビティ デザイナーは、[!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] アプリケーション内から [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] メッセージを送受信するメッセージング アクティビティを作成および構成するために使用します。 [!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)] には、5 つのメッセージング アクティビティが導入され、[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]には、ワークフロー内でメッセージングを管理できるようにする 2 つの新しいテンプレート デザイナーが用意されています。 次の表に示す、このセクションに含まれるトピックでは、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]のアクティビティ デザイナーおよびテンプレート デザイナーの使用方法についてのガイドラインを示します。  

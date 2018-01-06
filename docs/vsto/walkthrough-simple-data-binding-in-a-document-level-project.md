@@ -21,11 +21,12 @@ caps.latest.revision: "58"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 847b547aae785d94f8d9025b7b4badf9d8b21075
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 36053a8ef415e35f1244d0e379a49a46ea24f33d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>チュートリアル : ドキュメント レベルのプロジェクトでの単純データ バインディング
   このチュートリアルでは、ドキュメント レベルのプロジェクトでのデータ バインディングの基本について説明します。 SQL Server データベースの 1 つのデータ フィールドは、Microsoft Office Excel で名前付き範囲にバインドされています。 このチュートリアルでは、テーブル内のすべてのレコードをスクロールできるようにするコントロールを追加する方法も示します。  
@@ -187,7 +188,7 @@ ms.lasthandoff: 10/31/2017
 4.  レコードが期待どおりに変わることを確認するその他のスクロール ボタンをクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
- このチュートリアルでは、データベース内のフィールドに名前付き範囲のバインドの基礎を説明します。 ここでは、次の作業を行います。  
+ このチュートリアルでは、データベース内のフィールドに名前付き範囲のバインドの基礎を説明します。 ここでは、次のタスクを行います。  
   
 -   オフライン使用できるようにする、データをキャッシュします。 詳細については、次を参照してください。[する方法: オフラインで使用またはサーバー上にデータをキャッシュ](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)です。  
   
@@ -195,7 +196,7 @@ ms.lasthandoff: 10/31/2017
   
 -   使用して、<xref:System.Windows.Forms.BindingNavigator>レコード間をスクロール コントロール。 詳細については、次を参照してください。[する方法: Windows フォーム BindingNavigator コントロールにデータを移動](/dotnet/framework/winforms/controls/bindingnavigator-control-overview-windows-forms)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションでのコントロールへのデータをバインディング](../vsto/binding-data-to-controls-in-office-solutions.md)   
  [Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)   
  [チュートリアル: ドキュメント レベルのプロジェクトでの複合データ バインディング](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)  

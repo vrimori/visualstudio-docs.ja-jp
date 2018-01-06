@@ -24,11 +24,12 @@ caps.latest.revision: "38"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: aa95c519ab24ba042b6a1adfa71c64499b18d4c9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: b3178c330d34570d1406a1b63368537bc7f66887
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-workflow-with-association-and-initiation-forms"></a>チュートリアル: 関連付けフォームと開始フォームを持つワークフローの作成
   このチュートリアルでは、関連付けフォームと開始フォームの使用が組み込まれている基本的なシーケンシャル ワークフローを作成する方法を示します。 これらは、最初は SharePoint 管理者 (関連付けフォーム) が関連付けられている場合、およびユーザー (開始フォーム) によって、ワークフローの開始時にワークフローに追加するパラメーターを有効にする ASPX フォームです。  
@@ -96,7 +97,7 @@ ms.lasthandoff: 10/31/2017
   
      **SharePoint カスタマイズ ウィザード**が表示されます。  
   
-10. **デバッグのワークフローの名前を指定** ページで、既定の名前 (**ExpenseReport - Workflow1**)。 既定のワークフロー テンプレート型の値を保持 (**リスト ワークフロー)**です。 選択、**次**ボタンをクリックします。  
+10. **デバッグのワークフローの名前を指定** ページで、既定の名前 (**ExpenseReport - Workflow1**)。 既定のワークフロー テンプレート型の値を保持 (**リスト ワークフロー)**です。 **[次へ]** ボタンをクリックします。  
   
 11. **Visual Studio でデバッグ セッションでワークフローを自動的に関連付けたいですか?**  ページで、ボックスがオンの場合、ワークフロー テンプレートを自動的に関連付けますをオフにします。  
   
@@ -451,7 +452,7 @@ ms.lasthandoff: 10/31/2017
   
 -   SharePoint ワークフローの詳細については、次を参照してください。 [Windows SharePoint Services でのワークフロー](http://go.microsoft.com/fwlink/?LinkID=166275)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ワークフロー ソリューションを作成します。](../sharepoint/creating-sharepoint-workflow-solutions.md)   
  [チュートリアル: ワークフローへのアプリケーション ページの追加](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)  
   

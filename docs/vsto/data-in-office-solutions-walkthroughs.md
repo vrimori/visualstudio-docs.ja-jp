@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 91421fbfa5474c54b15109a1d0aec6de61369713
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: d868e69a1c7bbeeb7c25deb78acf90fe36af2e2c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-in-office-solutions-walkthroughs"></a>Office ソリューションのチュートリアルにおけるデータ
   次のチュートリアルでは、ドキュメント レベルのカスタマイズと、Microsoft Office Word および Microsoft Office Excel 用の VSTO アドインで、データを操作する方法について説明します。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/31/2017
  [チュートリアル: サーバー上のブックにキャッシュされたデータの変更](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md)  
  Microsoft Office Excel を起動することなく、Excel ブックにキャッシュされているデータセットを変更する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアルを使用して Word](../vsto/walkthroughs-using-word.md)   
  [使用して Excel のチュートリアル](../vsto/walkthroughs-using-excel.md)   
  [Office UI のカスタマイズのチュートリアル](../vsto/office-ui-customization-walkthroughs.md)   

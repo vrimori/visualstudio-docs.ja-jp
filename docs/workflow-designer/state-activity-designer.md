@@ -11,11 +11,12 @@ ms.assetid: 9455ab37-93a0-4c46-9eb8-b6611ca23167
 caps.latest.revision: "5"
 ms.author: sdanie
 manager: erikre
-ms.openlocfilehash: 22e9e9c6f31923eb097b34eab19e61762fb2956b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 4321ccba1d3081023c8603df04174506df78f288
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="state-activity-designer"></a>State アクティビティ デザイナー
 <xref:System.Activities.Statements.State> はステート マシンの状態を表します。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Statements.State.Exit%2A>|False|この状態からの遷移時に発生するアクションを指定します。 ときに、<xref:System.Activities.Statements.State>アクティビティが展開されているからアクティビティをドラッグしてこの値を設定することができます、**ツールボックス**にドロップし、**終了**状態のセクションでします。|  
 |<xref:System.Activities.Statements.State.Transitions%2A>|False|<xref:System.Activities.Statements.State> から発生する可能性のある遷移を一覧表示します。 リスト内の各項目には、関連付けられた <xref:System.Activities.Statements.Transition> と遷移先の <xref:System.Activities.Statements.State> へのリンクがあります。 リンクをクリックすると、デザイナーを <xref:System.Activities.Statements.Transition> または <xref:System.Activities.Statements.State> の展開されたビューに切り替えます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [StateMachine](../workflow-designer/statemachine-activity-designer.md)   
  [FinalState](../workflow-designer/finalstate-activity-designer.md)   
  [移行](../workflow-designer/transition-activity-designer.md)

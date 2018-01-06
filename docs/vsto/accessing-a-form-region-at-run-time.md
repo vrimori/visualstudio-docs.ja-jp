@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 20a60a82eacdfd06482e9765e82459b57fecb32b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: bb77519c096c7c49f28de3fc98f24757373827c4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-a-form-region-at-run-time"></a>実行時におけるフォーム領域へのアクセス
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/31/2017
   
  Visual Basic でのプロパティを作成する方法の詳細については、次を参照してください。[する方法: プロパティ (Visual Basic) を作成する](/dotnet/visual-basic/programming-guide/language-features/procedures/how-to-create-a-property)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Outlook フォーム領域の作成に関するガイドライン](../vsto/guidelines-for-creating-outlook-form-regions.md)   
  [チュートリアル: Outlook フォーム領域のデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)   
  [方法: フォーム領域を Outlook アドイン プロジェクトに追加します。](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)   

@@ -13,11 +13,12 @@ helpviewer_keywords:
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 111e53ad9beec3a5f5ef013b996a541ea0fa1e72
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.workload: vssdk
+ms.openlocfilehash: 9b38601953fd5b1c80e5eeffd75c2fdc2608fc73
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supporting-editorconfig-for-your-language-service"></a>言語サービスの EditorConfig をサポートします。
 
@@ -27,11 +28,11 @@ ms.lasthandoff: 11/29/2017
 
 グローバルに置き換えることで、EditorConfig ファイルをサポートするために言語サービスを更新するために必要な変更は、次_言語固有_オプションは、_コンテキスト_オプション。
 
-## <a name="indent-style"></a>インデントのスタイル
+## <a name="indent-style"></a>インデント スタイル
 
 言語固有のオプション | コンテキストのオプション
 -------|--------
-Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.fInsertTabs<br/>Microsoft.VisualStudio.Package.LanguagePreferences.InsertTabs|! textBufferOptions.GetOptionValue(DefaultOptions.ConvertTabsToSpacesOptionId)<br/>! textView.Options.GetOptionValue(DefaultOptions.ConvertTabsToSpacesOptionId)
+Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.fInsertTabs<br/>Microsoft.VisualStudio.Package.LanguagePreferences.InsertTabs|!textBufferOptions.GetOptionValue(DefaultOptions.ConvertTabsToSpacesOptionId)<br/>!textView.Options.GetOptionValue(DefaultOptions.ConvertTabsToSpacesOptionId)
 
 ## <a name="indent-size"></a>[インデント サイズ]
 
@@ -45,7 +46,7 @@ Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.uIndentSize<br/>Micro
 -------|--------
 Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.uTabSize<br/>Microsoft.VisualStudio.Package.LanguagePreferences.InsertTabs.TabSize|textBufferOptions.GetOptionValue(DefaultOptions.TabSizeOptionId)<br/>textView.Options.GetOptionValue(DefaultOptions.TabSizeOptionId)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [EditorConfig を使用してポータブル エディターの設定を作成します。](../ide/create-portable-custom-editor-options.md)  
 [エディターと言語サービスの拡張](../extensibility/extending-the-editor-and-language-services.md)

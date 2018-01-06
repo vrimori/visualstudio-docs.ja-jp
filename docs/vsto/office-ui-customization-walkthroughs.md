@@ -20,11 +20,12 @@ caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bed22d8b5fced2f423d6c6f1af764ba3ccf07a21
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 4ae3cc188c08088321ede661cef36cd8102e8fb8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="office-ui-customization-walkthroughs"></a>Office UI のカスタマイズのチュートリアル
   次に示すチュートリアルでは、ドキュメント レベルのカスタマイズと VSTO アドインを使用して、Microsoft Office アプリケーションのユーザー インターフェイス (UI) をカスタマイズする方法について説明します。  
@@ -85,7 +86,7 @@ ms.lasthandoff: 10/31/2017
  [チュートリアル: オプション ボタンを使用してワークシートのグラフを更新する方法](../vsto/walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md)  
  Excel ワークシートに配置したオプション ボタンを使用して、グラフのスタイルを変更する操作の基本について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアルを使用して Word](../vsto/walkthroughs-using-word.md)   
  [使用して Excel のチュートリアル](../vsto/walkthroughs-using-excel.md)   
  [Office ソリューションのチュートリアルにおけるデータ](../vsto/data-in-office-solutions-walkthroughs.md)   

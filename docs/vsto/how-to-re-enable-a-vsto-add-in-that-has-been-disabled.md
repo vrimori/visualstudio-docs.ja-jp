@@ -20,11 +20,12 @@ caps.latest.revision: "27"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d89215c759b4fabc48f697100f2935d0fa33e5ab
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 0b54ad4592e22f828074ef29d734f7f9441921f9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-re-enable-a-vsto-add-in-that-has-been-disabled"></a>方法: 無効にされた VSTO アドインを再度有効にする
   Microsoft Office アプリケーションにより、予期しない動作をする VSTO アドインが無効にされる場合があります。 VSTO アドインをデバッグする際に、アプリケーションが VSTO アドインを読み込まない場合は、アプリケーションにより VSTO アドインがハードに無効化、またはソフトに無効化されている可能性があります。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/31/2017
   
 6.  VSTO アドインを選択し、 **[有効にする]**をクリックします。  
   
-7.  **[閉じる]**をクリックします。  
+7.  **[閉じる]** をクリックします。  
   
 ## <a name="soft-disabled-vsto-add-ins"></a>ソフトに無効化された VSTO アドイン  
  ソフトな無効化は、VSTO アドインによってエラーが発生したが、アプリケーションが予期せずに終了するということがなかったという場合に発生する可能性があります。 たとえば、 <xref:Microsoft.Office.Tools.AddIn.Startup> イベント ハンドラーの実行中に VSTO アドインによってハンドルされない例外がスローされた場合に、アプリケーションによってそのアドインがソフトに無効化されることがあります。  
@@ -74,9 +75,9 @@ ms.lasthandoff: 10/31/2017
   
 6.  **[COM アドイン]** ダイアログ ボックスで、無効になっている VSTO アドインの横のチェック ボックスをオンにします。  
   
-7.  **[OK]** をクリックします。  
+7.  **[OK]**をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションのビルド](../vsto/building-office-solutions.md)   
  [Office プロジェクトのデバッグ](../vsto/debugging-office-projects.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)  

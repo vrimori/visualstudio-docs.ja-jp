@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 738568db51cce97ee0b110220aa195b4ded2adba
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: d8bcdcc42ada14f808c165e9e06b269817f79575
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flowchart-activity-designer"></a>フローチャート アクティビティ デザイナー
 <xref:System.Activities.Statements.Flowchart> アクティビティは、複雑なフロー制御を定義および管理するワークフローを作成するために使用します。 <xref:System.Activities.Statements.Flowchart> は、コードで、または[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]を使用して作成できます。 ここでは、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]を使用する方法を説明します。 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]のワークフロー アクティビティ デザイナーを使用すると、開発者はワークフローを自然な形で作成できます。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Statements.Flowchart.StartNode%2A>|False|<xref:System.Activities.Statements.FlowNode> の開始時に実行される <xref:System.Activities.Statements.Flowchart>。|  
 |<xref:System.Activities.Statements.Flowchart.Nodes%2A>|False|<xref:System.Activities.Statements.FlowNode> 内の <xref:System.Activities.Statements.Flowchart> オブジェクトのコレクションが格納されます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [フローチャート](../workflow-designer/flowchart-activity-designers.md)   
  [FlowDecision](../workflow-designer/flowdecision-activity-designer.md)   
  [FlowSwitch\<T >](../workflow-designer/flowswitch-t-activity-designer.md)

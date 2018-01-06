@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a2839b44af2156ab237bd2b88c0b4c77e41f4b82
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 739dff217b59bd9424594c4049c765ad5145d634
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="context-menus-xml-schema-explorer"></a>コンテキスト メニュー (XML スキーマ エクスプローラー)
 次のコンテキスト メニュー項目は、スキーマ固有の検索やその他の操作を実行するために使用します。  
@@ -113,6 +114,6 @@ ms.lasthandoff: 10/31/2017
 |**すべてのメンバーを表示します。**|名前付きグループのすべてのメンバーを検索して強調表示します。|  
 |**すべての参照を表示します。**|選択したグループへの参照 (`ref="selectedGroup"` が指定されたグループ) をすべて検索して強調表示します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML スキーマ エクスプ ローラー](../xml-tools/xml-schema-explorer.md)   
  [スキーマ セットの検索](../xml-tools/searching-the-schema-set.md)

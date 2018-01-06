@@ -22,11 +22,12 @@ caps.latest.revision: "64"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6a70bd325a5a9e20f9a67e59f81c63ce4b1ddcc4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: be9a2b19a8c9c34390a359fd8e3350d6af654fde
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-binding-data-to-controls-on-a-word-actions-pane"></a>チュートリアル : Word の操作ウィンドウ上のコントロールへのデータ バインディング
   このチュートリアルでは、Word の操作ウィンドウ上のコントロールへのデータ バインディングを示します。 このコントロールは、SQL Server データベースのテーブル間のマスター/詳細の関係を示します。  
@@ -133,10 +134,10 @@ ms.lasthandoff: 10/31/2017
   
 11. 右クリックし、 <xref:System.Windows.Forms.Button>、 をクリックして**プロパティ**ショートカット メニューで、次のプロパティを変更します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**挿入します。**|  
-    |**[テキスト]**|**挿入します。**|  
+    |**Name**|**[挿入]**|  
+    |**[テキスト]**|**[挿入]**|  
   
 12. コントロールに合わせて、ユーザー コントロールのサイズを変更します。  
   
@@ -233,13 +234,13 @@ ms.lasthandoff: 10/31/2017
 5.  さまざまな企業から追加の製品を挿入します。  
   
 ## <a name="next-steps"></a>次の手順  
- このチュートリアルでは、Word の操作ウィンドウ上のコントロールへのデータのバインドの基礎を説明します。 ここでは、次の作業を行います。  
+ このチュートリアルでは、Word の操作ウィンドウ上のコントロールへのデータのバインドの基礎を説明します。 ここでは、次のタスクを行います。  
   
 -   データを Excel でのコントロールをバインドします。 詳細については、次を参照してください。[チュートリアル: Excel の操作ウィンドウ上のコントロールへのデータ バインディング](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)です。  
   
 -   プロジェクトを配置します。 詳細については、次を参照してください。 [ClickOnce を使用して Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   
  [方法: Word 文書や Excel ブックに操作ウィンドウを追加](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   
  [Office ソリューションでのコントロールへのデータのバインド](../vsto/binding-data-to-controls-in-office-solutions.md)  

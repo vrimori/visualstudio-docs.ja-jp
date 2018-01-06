@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: cbb7b09e5c36980ceeedd99f69241996bd25bfa3
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 61d58b172c185a908a6314664ccd4cfe2172dc8c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-applications-with-the-workflow-designer"></a>ワークフロー デザイナーを使用したアプリケーションの開発
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]は、[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 開発環境内でホストされる [!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)] 内の [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] アプリケーションをグラフィカルに作成してデバッグするためのビジュアルなデザイナーおよびデバッガーです。 テンプレートおよびアクティビティ デザイナーを使用して、複合ワークフロー アプリケーション、アクティビティ ライブラリ、または [!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] サービスを作成できます。 [!INCLUDE[crabout](../test/includes/crabout_md.md)]ワークフローを参照してください、 [Windows Workflow Foundation &#91;。NET Framework 4 &#93;](http://msdn.microsoft.com/Library/9a23ea6b-d600-483e-89cd-8889cfec5f66).  

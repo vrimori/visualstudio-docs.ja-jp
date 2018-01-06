@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: aa1579629e68931ca0841117e07e227e879f331c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 05f7d0c9dd2be14840726bcdd3320746a1e1ca02
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="addtocollectionlttgt-activity-designer"></a>AddToCollection&lt;T&gt;アクティビティ デザイナー
 **AddToCollection\<T >**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.AddToCollection%601>アクティビティ。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Statements.AddToCollection%601.Collection%2A>|True|項目の追加先のコレクション。 このコレクションの型は**ICollection < TypeArgument\>**です。 コレクションを指定するには、プロパティ グリッドで Visual Basic の式を入力します。|  
 |*TypeArgument*|True|<xref:System.Collections.Generic.ICollection%601> に格納される項目の T 型。 既定では、この*TypeArgument*に設定されている型**Int32**です。 型を変更するには、値を変更、 *TypeArgument*プロパティ グリッドのコンボ ボックスにします。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コレクション](../workflow-designer/collection-activity-designers.md)   
  [AddToCollection\<T > アクティビティ デザイナー](../workflow-designer/addtocollection-t-activity-designer.md)   
  [ClearCollection\<T >](../workflow-designer/clearcollection-t-activity-designer.md)   

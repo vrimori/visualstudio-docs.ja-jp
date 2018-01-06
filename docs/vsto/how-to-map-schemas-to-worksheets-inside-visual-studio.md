@@ -20,11 +20,12 @@ caps.latest.revision: "36"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c09c99bc5d8bc964ae3afd82fe7a4a9fd5764edd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 2dc089fb2c4ae2714a0b94d7756aaa432406ef74
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-map-schemas-to-worksheets-inside-visual-studio"></a>方法 : Visual Studio 内でワークシートにスキーマを割り当てる
   ワークシートが Visual Studio で開いている間は、ワークシートに XML スキーマをマップできます。 ブックが Visual Studio の外部で開いているときに使用するのと同じ Microsoft Office Excel ツールを使用するとします。 Office プロジェクトは、前に、ワークシートにスキーマをマップするかどうか、または、Excel ソリューションを作成した後に、同じオブジェクトを作成します。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/31/2017
   
 7.  スキーマは、ファイルを参照、選択し、をクリックして**開く**です。  
   
-8.  **[OK]** をクリックします。  
+8.  **[OK]**をクリックします。  
   
      スキーマで表される、 **XML ソース**ウィンドウです。 プロジェクトで、型指定された<xref:System.Data.DataSet>は、スキーマに基づいて生成と<xref:System.Windows.Forms.BindingSource>を作成します。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/31/2017
   
      Office プロジェクトで生成される繰り返しスキーマ要素をドラッグする場合、<xref:Microsoft.Office.Tools.Excel.ListObject>コントロールをデータ ソースに自動的にバインドされていません。 詳細については、次を参照してください。 [XML スキーマとドキュメント レベルのカスタマイズでデータ](../vsto/xml-schemas-and-data-in-document-level-customizations.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: Visual Studio 内で Word 文書にスキーマをマップ](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)   
  [ドキュメント レベルのカスタマイズにおける XML スキーマとデータ](../vsto/xml-schemas-and-data-in-document-level-customizations.md)  
   

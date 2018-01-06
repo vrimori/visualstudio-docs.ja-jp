@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: c2c3083daec31620efa9f9665443d9d35b06804b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: f2df04273936f84c8bf371ecb053a7bb22f82147
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-designer-shell-features"></a>ワークフロー デザイナーのシェルの機能
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]は、デザイナー画面、その上の階層リンク バー、およびその下のシェルという 3 つの主要な UI 領域で構成されています。 階層リンク バーは画面の上部に位置し、現在のルート アクティビティの先祖の一覧を表示するために使用されます。 [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][方法: 階層リンク バー ナビゲーションを使用して](../workflow-designer/how-to-use-breadcrumb-navigation.md)です。 デザイナー画面は画面の中央に位置し、ワークフローを作成するために使用されます。 シェルは画面の下部に位置しており、ここには、現在のビューを管理するためのさまざまなボタンが含まれています。  

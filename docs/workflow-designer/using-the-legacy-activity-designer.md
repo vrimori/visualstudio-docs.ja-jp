@@ -18,11 +18,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 65510d727fdf0640ca8efa646a14d0814951cd4b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: d8288db6ddca4041a409b435ccd730d0b15b013b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-legacy-activity-designer"></a>従来のアクティビティ デザイナーの使用
 このトピックでは、従来の [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]でアクティビティ デザイナーを使用する方法について説明します。 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] または [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] を対象とする場合は、従来のデザイナーを使用します。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/27/2017
   
 |プロパティ|コメント|  
 |--------------|--------------|  
-|**名前**|アクティビティの名前。|  
+|**Name**|アクティビティの名前。|  
 |**基本クラス**|アクティビティの派生元の基本クラス。 既定の基本クラスは[SequenceActivity](http://go.microsoft.com/fwlink?LinkID=65020)です。 **プロパティ**ウィンドウで、をクリックして、**ベース クラス**省略記号**[...]**で別の基本クラスを選択、[を参照して .NET の種類 ダイアログ ボックス (レガシ) を選択](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box-legacy.md)です。|  
 |**説明**|アクティビティに関するユーザー定義の説明。|  
 |**有効**|設定**True**既定では、アクティビティの実行と検証を有効にします。 設定**False**アクティビティの実行と検証を無効にします。 アクティビティの実行と検証については、次を参照してください。[ワークフロー アクティビティの開発](http://go.microsoft.com/fwlink?LinkID=65024)です。|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/27/2017
 ## <a name="adding-child-activities"></a>子アクティビティの追加  
  子アクティビティを、ツールボックスから設計中のアクティビティまでドラッグすることができます。 その後、プロパティ ブラウザを使ってそれぞれの子アクティビティを構成できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ワークフロー活動の開発](http://go.microsoft.com/fwlink?LinkID=65024)   
  [カスタム アクティビティを作成します。](http://go.microsoft.com/fwlink?LinkID=65021)   
  [従来のワークフロー アクティビティ](../workflow-designer/legacy-workflow-activities.md)   

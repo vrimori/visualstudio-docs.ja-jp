@@ -22,11 +22,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 732a270564c40c4ca20952d86abb8618f9a060f3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 0ba481206e24870e0772290beba129d373c30862
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visio-object-model-overview"></a>Visio オブジェクト モデルの概要
   Visio オブジェクト モデルと対話することにより、Microsoft Office Visio 用の Office ソリューションを開発できます。 このオブジェクト モデルは、visio では、プライマリ相互運用機能アセンブリで提供されで定義するクラスとインターフェイスから成ります。  
@@ -50,15 +51,15 @@ ms.lasthandoff: 10/31/2017
   
 -   Page オブジェクト  
   
-### <a name="application-object"></a>Application オブジェクト  
+### <a name="application-object"></a>アプリケーション オブジェクト  
  Microsoft.Office.Interop.Visio.Application オブジェクトは、Visio アプリケーションを表し、他のオブジェクトのすべての親であります。 そのメンバーは、通常、Visio 全体に適用されます。 プロパティと、Microsoft.Office.Interop.Visio.Application および Microsoft.Office.Interop.Visio.ApplicationSettings オブジェクトのメソッドを使用するには、Visio の環境を制御します。  
   
- VSTO アドイン プロジェクトで使用して、Microsoft.Office.Interop.Visio.Application オブジェクトにアクセスすることができます、`Application`のフィールド、`ThisAddIn`クラスです。 詳細については、「 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)」を参照してください。  
+ VSTO アドイン プロジェクトで使用して、Microsoft.Office.Interop.Visio.Application オブジェクトにアクセスすることができます、`Application`のフィールド、`ThisAddIn`クラスです。 詳細については、「 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)。  
   
 ### <a name="document-object"></a>Document オブジェクト  
- Microsoft.Office.Interop.Visio.Document オブジェクトは、Visio プログラミングの中心です。 これは、図面、ステンシル、またはテンプレート ファイルを表します。 Visio 図面を開いたり、新しいドキュメントを作成したりすると、オブジェクトを生成する、新しい Microsoft.Office.Interop.Visio.Document Microsoft.Office.Interop.Visio.Application オブジェクトの Microsoft.Office.Interop.Visio.Documents コレクションに追加されています。.  
+ Microsoft.Office.Interop.Visio.Document オブジェクトは、Visio プログラミングの中心です。 これは、図面、ステンシル、またはテンプレート ファイルを表します。 Visio 図面を開いたり、新しいドキュメントを作成したりすると、オブジェクトを生成する、新しい Microsoft.Office.Interop.Visio.Document Microsoft.Office.Interop.Visio.Application オブジェクトの Microsoft.Office.Interop.Visio.Documents コレクションに追加されています.  
   
- フォーカスがある文書は、作業中のドキュメントと呼ばれます。 Microsoft.Office.Interop.Visio.Application オブジェクトの Microsoft.Office.Interop.Visio.Application.ActiveDocument プロパティによって表されます。  
+ フォーカスがある文書は、作業中の文書と呼ばれます。 Microsoft.Office.Interop.Visio.Application オブジェクトの Microsoft.Office.Interop.Visio.Application.ActiveDocument プロパティによって表されます。  
   
 ### <a name="page-object"></a>Page オブジェクト  
  Microsoft.Office.Interop.Visio.Page オブジェクトでは、前景ページまたは背景ページの描画領域を表します。 Microsoft.Office.Interop.Visio.Page.Background プロパティを使用して、ページが、フォア グラウンドまたはバック グラウンドのページであるかどうかを判別することができます。  
@@ -80,7 +81,7 @@ ms.lasthandoff: 10/31/2017
   
  詳細については、「 [Overview of Classes and Interfaces in the Office Primary Interop Assemblies (Office プライマリ相互運用機能アセンブリのクラスとインターフェイスの概要)](http://go.microsoft.com/fwlink/?LinkId=189592) オブジェクトと [Office Primary Interop Assemblies](../vsto/office-primary-interop-assemblies.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visio ソリューション](../vsto/visio-solutions.md)   
  [Visio 図面の操作](../vsto/working-with-visio-documents.md)   
  [Visio の図形の操作](../vsto/working-with-visio-shapes.md)  

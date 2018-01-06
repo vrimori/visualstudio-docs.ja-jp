@@ -18,11 +18,12 @@ caps.latest.revision: "41"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1755aa5c8e54bd1b84e0f88ea70b4163f3a87af6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 0c2f8d0a8360153b81d54b5d1867af452e6aaf9d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-programming-document-level-customizations-for-excel"></a>Excel のドキュメント レベルのカスタマイズのプログラミングの概要
   だけを開始する Visual Studio を使用して Microsoft Office Excel のドキュメント レベルのカスタマイズを作成する場合に、知っておく次に示します。  
@@ -67,13 +68,13 @@ ms.lasthandoff: 10/31/2017
   
  Excel プロジェクトの一般的なタスクを解説しているトピックの一覧は、次を参照してください。 [Office プログラミングで一般的なタスク](../vsto/common-tasks-in-office-programming.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)   
  [Excel ソリューション](../vsto/excel-solutions.md)   
  [チュートリアル: 初めての Excel 用ドキュメント レベルのカスタマイズの作成](../vsto/walkthrough-creating-your-first-document-level-customization-for-excel.md)   
  [使用して Excel のチュートリアル](../vsto/walkthroughs-using-excel.md)   
  [Excel オブジェクト モデルの概要](../vsto/excel-object-model-overview.md)   
- [Office ソリューションのコードの記述](../vsto/writing-code-in-office-solutions.md)  
+ [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)  
   
   

@@ -20,11 +20,12 @@ caps.latest.revision: "56"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1b95eb6eeb5f8615f8f471ad33139afa49d5633f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 7743a3d1c0548b444343b3dc96b25eabac4ac951
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button"></a>チュートリアル : ボタンを使用してワークシート内テキスト ボックスにテキストを表示する方法
   このチュートリアルでは、ボタンやテキスト ボックスを使用して、Microsoft Office Excel ワークシート、および Visual Studio での Office 開発ツールを使用する Excel プロジェクトを作成する方法についての基本を使用します。 完成したサンプルの結果を参照してくださいで Excel コントロールのサンプルを参照してください。 [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)です。  
@@ -73,9 +74,9 @@ ms.lasthandoff: 10/31/2017
   
 5.  ドラッグ、**ボタン**コントロールを`Sheet1`し、次のプロパティを変更します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**insertText**|  
+    |**Name**|**insertText**|  
     |**[テキスト]**|**テキストを挿入します。**|  
   
  ボタンがクリックされたときに実行するコードを記述します。  
@@ -108,13 +109,13 @@ ms.lasthandoff: 10/31/2017
 3.  いることを確認**Hello World!** テキスト ボックスに表示されます。  
   
 ## <a name="next-steps"></a>次の手順  
- このチュートリアルでは、Excel ワークシートでボタンやテキスト ボックスの基本的な使い方を示します。 ここでは、次の作業を行います。  
+ このチュートリアルでは、Excel ワークシートでボタンやテキスト ボックスの基本的な使い方を示します。 ここでは、次のタスクを行います。  
   
 -   プロジェクトを配置します。 詳細については、次を参照してください。 [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)です。  
   
 -   書式を変更するのにには、チェック ボックスを使用します。 詳細については、次を参照してください。[チュートリアル: 変更ワークシートの書式設定 チェック ボックス コントロールを使用した](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: Windows フォーム コントロールの Office ドキュメントへの追加](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
  [使用して Excel のチュートリアル](../vsto/walkthroughs-using-excel.md)   
  [Office ドキュメントでの Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  

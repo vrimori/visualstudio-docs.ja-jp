@@ -19,11 +19,12 @@ caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 046f5376891c62278b3756078f82b9e5db3b28d2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 93b9fdad9fc0224c34835457f76140a0df5612b9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-your-first-document-level-customization-for-excel"></a>チュートリアル : 初めての Excel 用ドキュメント レベルのカスタマイズの作成
   この入門編のチュートリアルでは、Microsoft Office Excel 用のドキュメント レベルのカスタマイズを作成する方法について説明します。 この種のソリューションで作成した機能は、特定のブックが開いている場合にのみ使用可能です。 ドキュメント レベルのカスタマイズでは、ブックが開いたときに新しいリボン タブを表示するなどの、アプリケーション全体の変更を行うことはできません。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/31/2017
   
 -   カスタマイズされたワークシートが開かれたときに Excel のオブジェクト モデルを使用してテキストを追加するコードを記述する。  
   
--   テストを行うためにプロジェクトをビルドし、実行する。  
+-   プロジェクトをビルドし、実行してテストする。  
   
 -   完成したプロジェクトをクリーンアップして、不要なビルド ファイルやセキュリティ設定を開発用コンピューターから削除する。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/31/2017
   
 6.  **名前**ボックスに、入力**FirstWorkbookCustomization**です。  
   
-7.  **[OK]** をクリックします。  
+7.  **[OK]**をクリックします。  
   
      **Visual Studio Tools for Office プロジェクト ウィザード** が開きます。  
   
@@ -115,9 +116,9 @@ ms.lasthandoff: 10/31/2017
 ## <a name="adding-text-to-a-worksheet-programmatically"></a>プログラムによってテキストをワークシートに追加する  
  次に、Sheet1 コード ファイルにコードを追加します。 この新しいコードでは、Excel のオブジェクト モデルを使用して、ブックに 2 行目のテキストを追加します。 Sheet1 コード ファイルには、次の生成コードが既定で含まれています。  
   
--   `Sheet1` クラスの部分定義。このクラスは、ワークシートのプログラミング モデルを表し、Excel のオブジェクト モデルへのアクセスを提供します。 詳細については、 [Worksheet ホスト項目](../vsto/worksheet-host-item.md)と[Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)です。 `Sheet1` クラスの残りの部分は、変更することができない非表示のコード ファイルに定義されています。  
+-   `Sheet1` クラスの部分定義。このクラスは、ワークシートのプログラミング モデルを表し、Excel のオブジェクト モデルへのアクセスを提供します。 詳細については、 [Worksheet ホスト項目](../vsto/worksheet-host-item.md)と[Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)です。 `Sheet1` クラスの残りの部分は、変更するべきではない非表示のコード ファイルに定義されています。  
   
--   `Sheet1_Startup` および `Sheet1_Shutdown` イベント ハンドラー。 これらのイベント ハンドラーは、Excel がユーザーのカスタマイズを読み込むときとアンロードするときに呼び出されます。 これらのイベント ハンドラーを使用して、読み込まれるときにはカスタマイズを初期化し、アンロードされるときにはカスタマイズが使用したリソースをクリーンアップします。 詳細については、「 [Events in Office Projects](../vsto/events-in-office-projects.md)」を参照してください。  
+-   `Sheet1_Startup` イベント ハンドラーと `Sheet1_Shutdown` イベント ハンドラー。 これらのイベント ハンドラーは、Excel がユーザーのカスタマイズを読み込むときとアンロードするときに呼び出されます。 これらのイベント ハンドラーを使用して、読み込まれるときにはカスタマイズを初期化し、アンロードされるときにはカスタマイズが使用したリソースをクリーンアップします。 詳細については、「 [Events in Office Projects](../vsto/events-in-office-projects.md)」を参照してください。  
   
 #### <a name="to-add-a-second-line-of-text-to-the-worksheet-by-using-code"></a>コードを使用してワークシートに 2 行目のテキストを追加するには  
   
@@ -170,7 +171,7 @@ ms.lasthandoff: 10/31/2017
   
 -   Excel 用ドキュメント レベル カスタマイズの配置: [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)   
  [Excel ソリューション](../vsto/excel-solutions.md)   
  [ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)   

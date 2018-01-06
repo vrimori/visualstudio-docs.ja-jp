@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 1f5d948171b78c9d9e5b42cefcf5b051faf20c78
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 9c9b9ab609825a68edc4e2862d64bdd7cb830202
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactionscope-activity-designer"></a>TransactionScope アクティビティ デザイナー
 **TransactionScope**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.TransactionScope>アクティビティ。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Statements.TransactionScope.Timeout%2A>|False|トランザクションが完了するまでの時間間隔を "00:00:00" (時:分:秒) という形式で指定します。 既定値は 1 分 (00:01:00) です。|  
 |[System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure](https://msdn.microsoft.com/library/system.activities.statements.transactionscope.abortinstanceontransactionfailure.aspx)|True|トランザクションが中止した場合にワークフローを中止する必要があるかどうかを示す値を指定します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [トランザクション](../workflow-designer/transaction-activity-designers.md)   
  [TerminateWorkflow](../workflow-designer/terminateworkflow-activity-designer.md)   
  [CompensableActivity](../workflow-designer/compensableactivity-activity-designer.md)   

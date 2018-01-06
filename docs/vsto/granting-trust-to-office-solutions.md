@@ -20,11 +20,12 @@ caps.latest.revision: "37"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: da7f4695bc817a66761c579b4c5af85b59ee041f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 8d4e1e92eab8def99a67b7da531770bb2dd58fc0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="granting-trust-to-office-solutions"></a>Office ソリューションへの信頼の付与
   Office ソリューションへの信頼の付与は、ソリューション アセンブリ、アプリケーション マニフェスト、配置マニフェスト、およびドキュメントを信頼する場合は、各ターゲット コンピューターのセキュリティ ポリシーを変更することを意味します。 ユーザーまたはエンドユーザーによって、Office ソリューションに信頼を付与できます。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
   
  管理者が無効にすることができます、[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]信頼プロンプトまたはの Authenticode 証明書で署名されているソリューションにのみ、プロンプトが発生することが必要です。 MyComputer、ローカル イントラネット、インターネット、しません、および UntrustedSites ゾーンに対するこれらの設定を変更する方法の詳細については、次を参照してください。[する方法: ClickOnce 信頼プロンプト動作を構成する](/visualstudio/deployment/how-to-configure-the-clickonce-trust-prompt-behavior)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)   
  [ドキュメントへの信頼の付与](../vsto/granting-trust-to-documents.md)   
  [Office ソリューションのセキュリティのトラブルシューティング](../vsto/troubleshooting-office-solution-security.md)   

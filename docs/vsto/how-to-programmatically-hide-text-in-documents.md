@@ -18,11 +18,12 @@ caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b9ec425a3d83ea088e47725866688ada834ffd34
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 78ed00dbb7cbba80c3993932b3554dd64d3cbcf2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-hide-text-in-documents"></a>方法: プログラムによって文書内のテキストを非表示にする
   特定範囲のテキストに対応する <xref:Microsoft.Office.Interop.Word._Font.Hidden%2A> の <xref:Microsoft.Office.Interop.Word.Range.Font%2A> プロパティを設定して、文書内のテキストを非表示にできます。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  このコード例では、 <xref:Microsoft.Office.Tools.Word.Bookmark> という名前の <xref:Microsoft.Office.Interop.Word.Bookmark> コントロール (ドキュメント レベルのカスタマイズの場合) または `bookmark1`コントロール (VSTO アドインの場合) が文書に含まれていることを前提にしています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: プログラムによって文書を印刷します。](../vsto/how-to-programmatically-print-documents.md)   
  [方法: プログラムによってを定義し、ドキュメントで範囲を選択](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)   
  [方法: プログラムによってリセット Word 文書の範囲](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md)   

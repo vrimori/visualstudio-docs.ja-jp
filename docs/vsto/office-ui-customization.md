@@ -21,11 +21,12 @@ caps.latest.revision: "74"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7af3c33ed45a5e0b9678a41900280b1e665766ed
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: c169edc949f195d416194ae3c3ee1111977f649b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="office-ui-customization"></a>Office UI のカスタマイズ
   Microsoft Office アプリケーションのユーザー インターフェイス (UI) は、Visual Studio の  Office Developer Tools を使用してカスタマイズできます。 以下のトピックでは、カスタマイズできる UI 機能について説明します。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/31/2017
 ##  <a name="Comparison"></a>UI の機能の比較  
  次の表では、Microsoft Office プロジェクトでカスタマイズできる主な UI 機能を比較します。  
   
-|特性|サポートされているプロジェクトの種類|サポートされる Microsoft Office アプリケーション|  
+|機能|サポートされているプロジェクトの種類|サポートされる Microsoft Office アプリケーション|  
 |-------------|-----------------------------|---------------------------------------------|  
 |[操作] ウィンドウ|ドキュメント レベルのカスタマイズ|Excel<br /><br /> Word|  
 |カスタム作業ウィンドウ|VSTO アドイン|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Word<br /><br /> Excel|  
@@ -99,7 +100,7 @@ ms.lasthandoff: 10/31/2017
 ##  <a name="Shortcut"></a>ショートカット メニュー  
  ドキュメント ウィンドウやアプリケーション ウィンドウを右クリックすると、ショートカット メニューが表示されます。 ユーザーがドキュメント、ブック、またはホスト コントロールを右クリックするなど、イベントが発生した後に表示されるようにショートカット メニューを設定することができます。 ショートカット メニューには、さまざまなメニュー コマンドやコントロールを追加できます。 ショートカット メニューを作成するには、XML を使用します。 追加する場合、**リボン (XML)**項目、Office プロジェクトにショートカット メニューを作成、リボン XML ファイルに XML を追加することができます。 XML を使用して、ショートカット メニューを作成する方法の詳細については、次を参照してください。[する方法: ショートカット メニューにコマンドを追加](../vsto/how-to-add-commands-to-shortcut-menus.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リボンの概要](../vsto/ribbon-overview.md)   
  [Windows フォームでコントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)   
  [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   

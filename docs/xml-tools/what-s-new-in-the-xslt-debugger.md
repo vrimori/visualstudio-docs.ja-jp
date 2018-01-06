@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: efcfa1082e0eeaf1105fc1a716141eb3fee5a1e3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e0573043b15e49cce414a48626e3c3c6ffc31c06
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-the-xslt-debugger"></a>どのような &#39; XSLT デバッガーの
 Visual Studio 2010 では、次の機能が追加されています。  
@@ -24,5 +25,5 @@ Visual Studio 2010 では、次の機能が追加されています。
 ## <a name="xslt-profiler"></a>XSLT プロファイラー  
  XSLT Profiler は、詳細な XSLT パフォーマンス レポートを作成することにより、開発者が XSLT コード内のパフォーマンス関連の問題を計測、評価、および特定できるようにするツールです。 詳細については、次を参照してください。 [XSLT Profiler](../xml-tools/xslt-profiler.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XSLT のデバッグ](../xml-tools/debugging-xslt.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "60"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 75146e583f2b15557a2f88ba18ed5d8798c7603b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 28d755d6123b2911bccd10e668212e1ea6a54484
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button"></a>チュートリアル : ボタンを使用して文書内のテキスト ボックスにテキストを表示する方法
   このチュートリアルでは、Microsoft Office Word のドキュメント レベルのカスタマイズでボタンやテキスト ボックスを使用する方法を示します。  
@@ -71,9 +72,9 @@ ms.lasthandoff: 10/31/2017
   
 5.  ドラッグ、**ボタン**コントロールを文書と、次のプロパティを変更します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**insertText**|  
+    |**Name**|**insertText**|  
     |**[テキスト]**|**テキストを挿入します。**|  
   
  これで、ボタンがクリックされたときに実行されるコードを記述できるようになりました。  
@@ -106,13 +107,13 @@ ms.lasthandoff: 10/31/2017
 3.  いることを確認**Hello World!** テキスト ボックスに表示されます。  
   
 ## <a name="next-steps"></a>次の手順  
- このチュートリアルでは、Word 文書でボタンとテキスト ボックスを使用する際の基本事項について説明しました。 ここでは、次の作業を行います。  
+ このチュートリアルでは、Word 文書でボタンとテキスト ボックスを使用する際の基本事項について説明しました。 ここでは、次のタスクを行います。  
   
 -   コンボ ボックスを使用して書式設定を変更する。 詳細については、次を参照してください。[チュートリアル: を変更するドキュメントの書式設定 チェック ボックス コントロールを使用した](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)です。  
   
 -   オプション ボタンを使用してグラフのスタイルを選択する。 詳細については、次を参照してください。[チュートリアル: グラフを更新するラジオ ボタンを使用してドキュメントで](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Windows フォームでコントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)   
  [チュートリアルを使用して Word](../vsto/walkthroughs-using-word.md)   
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   

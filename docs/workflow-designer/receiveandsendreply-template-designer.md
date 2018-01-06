@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ef7b027eb82b149f3cffcd54c976e1be608c2190
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 932f4bb7718b77103bc85f4555a9be20f330667b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="receiveandsendreply-template-designer"></a>ReceiveAndSendReply テンプレート デザイナー
 **ReceiveAndSendReply**のペアを作成するテンプレートが使用される事前構成済み<xref:System.ServiceModel.Activities.Receive>と<xref:System.ServiceModel.Activities.SendReply>内のアクティビティ、<xref:System.Activities.Statements.Sequence>要求/応答メッセージ交換の一部として関連付けられるアクティビティサーバーでのパターン。  
@@ -51,9 +52,9 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.ServiceModel.Activities.SendReply.Content%2A>|False|受信するメッセージまたはパラメーターの内容を指定します。 <xref:System.ServiceModel.Activities.ReceiveMessageContent> アクティビティまたは <xref:System.ServiceModel.Activities.ReceiveParametersContent> アクティビティを指定できます。 横にある省略記号ボタンをクリックしてこのプロパティを編集、**コンテンツ**フィールドで、プロパティ グリッドまたはをクリックすると、**定義しています.**ボタンの横にある、**コンテンツ**のラベルを**受信**アクティビティ デザイナー画面。 両方を表示、**コンテンツ定義**ダイアログ。 [!INCLUDE[crabout](../test/includes/crabout_md.md)]このボックスを使用して、表示する方法、[コンテンツ定義 ダイアログ ボックス](../workflow-designer/content-definition-dialog-box.md)トピックです。|  
 |<xref:System.ServiceModel.Activities.SendReply.CorrelationInitializers%2A>|False|ワークフロー内のこの <xref:System.ServiceModel.Activities.CorrelationInitializer> アクティビティを構成する複数の <xref:System.ServiceModel.Activities.CorrelationHandle> オブジェクトを初期化する <xref:System.ServiceModel.Activities.Receive> オブジェクトのコレクションを指定します。 次に省略記号ボタンをクリックして、<xref:System.ServiceModel.Activities.SendReply.CorrelationInitializers%2A>を開くにはプロパティ グリッド内のプロパティ、 **[関連付け初期化子**] ダイアログ ボックス。 [!INCLUDE[crabout](../test/includes/crabout_md.md)]このボックスを使用して参照してください、 [CorrelationInitializers ダイアログ ボックスの追加](../workflow-designer/add-correlationinitializers-dialog-box.md)トピックです。|  
 |<xref:System.ServiceModel.Activities.SendReply.Action%2A>|False|メッセージのアクション ヘッダーを指定します。 これを明示的に設定しない場合は、次の既定値が設定されます。<br /><br /> **https://tempuri.org/{サービス コントラクトの名前空間}/{サービス コントラクト名}/{操作名}**|  
-|<xref:System.ServiceModel.Activities.SendReply.PersistBeforeSend%2A>|False|応答メッセージを送信する前にワークフロー サービス インスタンスを永続化するかどうかを指定します。 既定値は**false**です。|  
+|<xref:System.ServiceModel.Activities.SendReply.PersistBeforeSend%2A>|False|応答メッセージを送信する前にワークフロー サービス インスタンスを永続化するかどうかを指定します。 既定値は **false** です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CorrelationScope](../workflow-designer/correlationscope-activity-designer.md)   
  [InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md)   
  [受信](../workflow-designer/receive-activity-designer.md)   

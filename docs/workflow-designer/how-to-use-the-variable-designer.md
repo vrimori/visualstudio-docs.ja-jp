@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 064080a2446858123dd7b259dd5d2752f4253a80
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: c9bf63222f16e29044a9a07078096b765421fbb3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-variable-designer"></a>変数デザイナーを使用する方法
 変数デザイナーは、データ バインディングや条件ステートメントで使用する変数を作成するために使用します。 デザイナーにアクセスする をクリックして、**変数**デザイン キャンバスの左下隅にあるボタンをクリックします。 デザイナーには以外の各列見出しで並べ替えることができます、表形式で表示されている変数の一覧が含まれています、**既定**列です。 それぞれの変数には、名前、変数の型、スコープ、および既定値 (存在する場合) があります。 名前および既定値は編集可能なテキスト フィールドで、型およびスコープはドロップダウン リストです。 スコープは、変数デザイナーの呼び出し時に選択されたアクティビティです。 選択したスコープ内に変数を作成できない場合は、対応するスコープに変数を作成できる直近の先祖アクティビティが既定のスコープとなります。 [!含める[crabout](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)です。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/27/2017
     > [!NOTE]
     >  削除する変数をクリックして、変数を選択し、キーを押します、**削除**キー。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ワークフロー デザイナーの使用](../workflow-designer/using-the-workflow-designer.md)   
  [変数と引数](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)   
  [方法: 引数デザイナーを使用する](../workflow-designer/how-to-use-the-argument-designer.md)

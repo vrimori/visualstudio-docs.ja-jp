@@ -11,11 +11,12 @@ caps.latest.revision: "4"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 937327ee424d374fa91db223f64e68182e47e5c3
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: a7721d4769038a2593d42a3ff4dee3125e1d4fa9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="error-handling-activity-designers"></a>エラー処理アクティビティ デザイナー
 Error Handling アクティビティ デザイナーは、[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]でエラー処理を管理するために使用します。 このセクションに含まれているトピックでは、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]のアクティビティ デザイナーおよびテンプレート デザイナーの使用方法についてのガイドラインを示します。  

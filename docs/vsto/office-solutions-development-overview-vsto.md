@@ -18,11 +18,12 @@ caps.latest.revision: "69"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1c35be3e79aea37b82e9ae46463582a0874e51a4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3b3d731fd0c38eab376e99e0f143287507042652
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="office-solutions-development-overview-vsto"></a>Office ソリューションの開発の概要 (VSTO)
   ソリューションのフロント エンドとして Microsoft Office を使用すると、Word のワープロ機能、Excel のデータの分析機能、および Outlook の電子メール管理機能などの使い慣れた Microsoft Office のユーザー インターフェイスとツールを活用することができます。 Office アプリケーションのカスタマイズおよびビジネス プロセスに必要な特定の機能の追加を行うために、Visual Studio でソリューションを開発することができます。 たとえば、Word を既存のパーツからコントラクトを組み合わせるコントラクト ジェネレーターにすることができます。既存のパーツは編集可能または編集可能でない場合があります。 Excel では、さまざまなプロジェクト用にカスタマイズされた自動予算のワークシートを作成できます。 ユーザーはオフラインで Office ソリューションを取得することもできます。これは、Web ベースのアーキテクチャを使用する場合に、複雑なソリューションをより実用的なものにします。  
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/31/2017
   
  VSTO Office ソリューションでの PIA の使用に関する詳細については、次のトピックを参照してください。  
   
--   [Office ソリューションのコードの記述](../vsto/writing-code-in-office-solutions.md)  
+-   [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)  
   
 -   [Office プライマリ相互運用機能アセンブリ](../vsto/office-primary-interop-assemblies.md)  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="security"></a>セキュリティ  
  VSTO Office ソリューションのセキュリティは、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] がソリューションのインストールおよび読み込み時に作成する一連のチェックによって強制されます。 これらのチェックには、配置マニフェストの場所が信頼されているかどうか、または配置マニフェストの署名に使用される証明書が信頼されているかどうかの検証が含まれます。 詳細については、「 [Securing Office Solutions](../vsto/securing-office-solutions.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [作業の開始 (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/getting-started-office-development-in-visual-studio.md)   
  [ドキュメント レベルのカスタマイズのアーキテクチャ](../vsto/architecture-of-document-level-customizations.md)   
  [VSTO アドインのアーキテクチャ](../vsto/architecture-of-vsto-add-ins.md)   

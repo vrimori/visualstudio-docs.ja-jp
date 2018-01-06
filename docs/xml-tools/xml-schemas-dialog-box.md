@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c9c248532c5724c5d5bc3a3bad6c1e6b4674fd5e
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 71cff97fc87d22a4edeee3b114e9599f307ab040
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-schemas-dialog-box"></a>[XML スキーマ] ダイアログ ボックス
 **XML スキーマ**どの XML スキーマ定義言語 (XSD) スキーマに関連付ける XML ドキュメントを選択するダイアログ ボックスを使用します。 スキーマ キャッシュにあるスキーマを選択することも、キャッシュ内に置かれていないスキーマを指定することもできます。 選択したスキーマは、スキーマ セットの一部と見なされます。 そのスキーマ セットは、IntelliSense と XML ドキュメントの検証に使用されます。  
@@ -45,7 +46,7 @@ XML スキーマ ファイル名が表示されます。
 **削除**  
 現在選択されているスキーマをスキーマ セットから削除します。 この操作では、メモリ内のスキーマ キャッシュからスキーマが削除されますが、ファイル システムからは削除されません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML エディターのコンポーネント](../xml-tools/xml-editor-components.md)   
  [方法: 使用する XML スキーマの選択](../xml-tools/how-to-select-the-xml-schemas-to-use.md)   
  [スキーマ キャッシュ](../xml-tools/schema-cache.md)

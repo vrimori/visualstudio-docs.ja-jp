@@ -37,11 +37,12 @@ caps.latest.revision: "37"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2147076bd4aa90230d1216af19459efe71209d50
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 5d6a400f5c1ee523e2bb3fd95be215af0e5ba371
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-code-in-office-solutions"></a>Office ソリューションのコードの記述
   Office プロジェクトのコードの記述には、Visual Studio の他のプロジェクトの種類とは異なる点があります。 相違点の多くは、Office オブジェクト モデルがマネージ コードに公開される方法に関連しています。 Office プロジェクトのデザインに関連する相違点もあります。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="understanding-the-generated-classes"></a>生成されるクラスについて  
  Excel および Word のドキュメント レベル プロジェクトの場合、生成されるクラスは、アプリケーションのオブジェクト モデルのトップレベルのオブジェクトに似ています。 たとえば、Word 文書プロジェクトに生成される `ThisDocument` クラスは、Word オブジェクト モデルの <xref:Microsoft.Office.Interop.Word.Document> クラスと同じメンバーを提供します。 ドキュメント レベルのプロジェクトで生成されるクラスについて詳しくは、「 [Programming Document-Level Customizations](../vsto/programming-document-level-customizations.md)」をご覧ください。  
   
- VSTO アドイン プロジェクトには、 `ThisAddIn`というクラスが生成されます。 このクラスは、ホスト アプリケーションのオブジェクト モデル内のクラスには似ていません。 代わりに、このクラスは VSTO アドイン自体を表し、ホスト アプリケーションのオブジェクト モデルへのアクセスと、VSTO アドインで利用可能な他の機能へのアクセスに使用できるメンバーを提供します。詳細については、「 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)」を参照してください。  
+ VSTO アドイン プロジェクトには、 `ThisAddIn`というクラスが生成されます。 このクラスは、ホスト アプリケーションのオブジェクト モデル内のクラスには似ていません。 代わりに、このクラスは VSTO アドイン自体を表し、ホスト アプリケーションのオブジェクト モデルへのアクセスと、VSTO アドインで利用可能な他の機能へのアクセスに使用できるメンバーを提供します。詳細については、「 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)。  
   
  Office プロジェクトで生成されるすべてのクラスには、 `Startup` および `Shutdown` のイベント ハンドラーが含まれます。 コードを書き始めるには、通常はこれらのイベント ハンドラーにコードを追加します。 VSTO アドインを初期化するには、コードを `Startup` イベント ハンドラーに追加します。 VSTO アドインによって使用されるリソースをクリーンアップするには、コードを `Shutdown` イベント ハンドラーに追加します。 詳細については、「 [Events in Office Projects](../vsto/events-in-office-projects.md)」を参照してください。  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="key-differences-between-visual-basic-and-visual-c"></a>Visual Basic と Visual C# の主な相違点  
  次の表は、Office 開発で Visual Basic を使用する場合と Visual C# を使用する場合の主な相違点を示しています。  
   
-|特性|説明|Visual Basic のサポート|Visual C# のサポート|  
+|機能|説明|Visual Basic のサポート|Visual C# のサポート|  
 |-------------|-----------------|--------------------------|------------------------|  
 |省略可能なパラメーター|Microsoft Office のメソッドには、呼び出すときに指定する必要のないパラメーターを持つメソッドが多数あります。 パラメーターの値を渡さない場合は、既定の値が使用されます。|Visual Basic では、省略可能なパラメーターをサポートしています。|Visual C# では、ほとんどの場合に省略可能なパラメーターをサポートしています。 詳細については、次を参照してください。 [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)です。|  
 |パラメーターの参照渡し|大部分の Microsoft Office プライマリ相互運用機能アセンブリにある省略可能なパラメーターは、値によって引き渡すこと (値渡し) ができます。 ただし、一部のプライマリ相互運用機能アセンブリでは、参照型を受け取る省略可能なパラメーターに対して参照渡しを行わなくてはなりません。<br /><br /> 値と参照型のパラメーターの詳細については、次を参照してください[値とリファレンス &#40; 引数を渡す。Visual Basic &#41;](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (Visual Basic) 用と[パラメーター &#40; を渡すC &#35;です。プログラミング ガイド &#41;](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters).|参照渡しでパラメーターを渡すのに、特別な処理は必要ありません。 Visual Basic コンパイラでは、必要に応じて自動的にパラメーターが参照渡しされます。|ほとんどの場合、Visual C# コンパイラでは、必要に応じて自動的にパラメーターが参照渡しされます。 詳細については、次を参照してください。 [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)です。|  
@@ -115,11 +116,11 @@ ms.lasthandoff: 10/31/2017
 ## <a name="key-differences-between-office-development-and-managed-code"></a>Office 開発とマネージ コードの主な相違点  
  次の表は、Office 開発と Visual Basic または Visual C# で作成されたマネージ コードの主な相違点を示しています。  
   
-|特性|説明|Visual Basic および Visual C# のサポート|  
+|機能|説明|Visual Basic および Visual C# のサポート|  
 |-------------|-----------------|-----------------------------------------|  
 |配列のインデックス|Microsoft Office アプリケーションでは、コレクションの配列の下限のインデックスは 1 から始まります。 Visual Basic や Visual C# では、インデックス番号が 0 から始まる配列が使用されます。 詳細については、次を参照してください。[配列 &#40;です。C &#35;です。プログラミング ガイド &#41;](/dotnet/csharp/programming-guide/arrays/index)と[Visual Basic における配列](/dotnet/visual-basic/programming-guide/language-features/arrays/index)です。|Microsoft Office アプリケーションのオブジェクト モデルのコレクションの 1 番目のアイテムにアクセスするには、インデックス 0 ではなく 1 を使用します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)   
  [Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)   
  [Office プロジェクトのイベント](../vsto/events-in-office-projects.md)   

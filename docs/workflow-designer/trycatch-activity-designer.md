@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: a00afe1ac5e0eda29378a439398bc6bd4d90e71b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 9fe179a0e1aee4ff929974899d26df48f669ccd0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trycatch-activity-designer"></a>TryCatch アクティビティ デザイナー
 **TryCatch**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.TryCatch>アクティビティ。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Statements.TryCatch.Catches%2A>|False|コレクション**キャッチ**場合にチェックされる要素、<xref:System.Activities.Statements.TryCatch.Try%2A>アクティビティが例外をスローします。<br /><br /> <xref:System.Activities.Statements.TryCatch.Catches%2A> にアクティビティを少なくとも 1 つ追加するか、または、<xref:System.Activities.Statements.TryCatch.Finally%2A> ブロックにアクティビティを追加する必要があります。|  
 |<xref:System.Activities.Statements.TryCatch.Finally%2A>|False|<xref:System.Activities.Statements.TryCatch.Try%2A> および <xref:System.Activities.Statements.TryCatch.Catches%2A> コレクション内の必要なアクティビティがすべて完了した段階で実行されるアクティビティ。<br /><br /> <xref:System.Activities.Statements.TryCatch.Catches%2A> にアクティビティを少なくとも 1 つ追加するか、または、<xref:System.Activities.Statements.TryCatch.Finally%2A> ブロックにアクティビティを追加する必要があります。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コレクション](../workflow-designer/collection-activity-designers.md)   
  [Rethrow](../workflow-designer/rethrow-activity-designer.md)   
  [Throw](../workflow-designer/throw-activity-designer.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "41"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b392b4de0288478c73fba8cecd88be1f701cd5ae
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 124f4ca6450b5fe19bc707627dfed03e46307cff
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-master-detail-relation-using-a-cached-dataset"></a>チュートリアル: キャッシュされたデータセットを使用してマスターの詳細関係の作成
   このチュートリアルでは、ワークシートで、マスター/詳細関係を作成して、ソリューションをオフラインで使用できるように、データのキャッシュを示します。  
@@ -188,11 +189,11 @@ ms.lasthandoff: 10/31/2017
 8.  データベースに再接続します。 サーバーでは、データベースがある場合に、ネットワークにコンピューターをもう一度接続またはデータベースが開発用コンピューター上にある場合は、SQL Server サービスを開始します。  
   
 ## <a name="next-steps"></a>次の手順  
- このチュートリアルでは、ワークシートにマスター/詳細形式のデータ リレーションシップを作成して、データセットのキャッシュの基礎を説明します。 ここでは、次の作業を行います。  
+ このチュートリアルでは、ワークシートにマスター/詳細形式のデータ リレーションシップを作成して、データセットのキャッシュの基礎を説明します。 ここでは、次のタスクを行います。  
   
 -   ソリューションを展開します。 詳細については、次を参照してください[Office ソリューションの配置。](../vsto/deploying-an-office-solution.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションでのコントロールへのデータをバインディング](../vsto/binding-data-to-controls-in-office-solutions.md)   
  [Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)   
  [データのキャッシュ](../vsto/caching-data.md)   

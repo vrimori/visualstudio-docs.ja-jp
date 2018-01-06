@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 12ee899bdc9e905aea577de4dbf57b94e9f58306
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: fad771da4643c68b3be08f778ca2db3b8e09c703
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="theme-configuration-dialog-box-legacy"></a>[テーマの構成] ダイアログ ボックス (レガシ)
 このトピックについて説明する方法を使用して、**テーマの構成** ダイアログ ボックスでは、従来の[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]します。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。  
@@ -38,6 +39,6 @@ ms.lasthandoff: 10/27/2017
 |**デザイナーを選択し、プロパティを構成します。**|左側のウィンドウには、テーマのカスタマイズが可能なアクティビティがツリーで一覧表示されます。 ツリー表示の中からアクティビティを 1 つ選択すると、そのアクティビティのテーマ プロパティがツリー ウィンドウ右側のプロパティ ウィンドウに表示されます。 プロパティをクリックして値を変更します。|  
 |**プレビュー**|プロパティの変更による影響を事前に確認するプレビュー ウィンドウを表示するには、これをクリックします。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [テーマをワークフロー デザイナーのオプション ダイアログ ボックス (レガシ)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md)   
  [従来の Designer for Windows Workflow Foundation UI ヘルプ](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)

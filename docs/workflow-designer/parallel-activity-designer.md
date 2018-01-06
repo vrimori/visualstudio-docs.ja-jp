@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: b6b6c0498b98f38b786ce846fd6d975287a2c75e
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 8be40a9cae29291951a320422755f0ff5d1f7365
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="parallel-activity-designer"></a>Parallel アクティビティ デザイナー
 <xref:System.Activities.Statements.Parallel> アクティビティは、一連の子アクティビティを同時に実行するアクティビティです。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Statements.Parallel.Branches%2A>|True|実行される子アクティビティのコレクションが格納されます。|  
 |<xref:System.Activities.Statements.Parallel.CompletionCondition%2A>|False|分岐の完了後に評価されます。 評価された場合**True**、スケジュールされた保留分岐はキャンセルされます。 このプロパティが設定されていないかに評価される場合**False**、すべての子アクティビティが完了すると、アクティビティが完了します。 既定値は**null**です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [シーケンス](../workflow-designer/sequence-activity-designer.md)   
  [ParallelForEach\<T >](../workflow-designer/parallelforeach-t-activity-designer.md)   
  [制御フロー](../workflow-designer/control-flow-activity-designers.md)

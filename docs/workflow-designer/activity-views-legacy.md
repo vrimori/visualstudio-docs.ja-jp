@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 50f57684db32f601bd4cbf870456da458aa5ce7c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 0a6658bdf0f1df76e585236497ba4ba19525b199
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-views-legacy"></a>アクティビティ ビュー (レガシ)
 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] が提供するアクティビティの多くには、従来の [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]で使用できるデザイン ビューが複数あります。ワークフローは、これらのアクティビティを使用して作成されます。 アクティビティ デザイナーをドラッグすると、**ツールボックス**およびその後、デザイン サーフェイスにいずれかを使用してさまざまなデザイン ビューを切り替えることができます、アクティビティを選択するたびに、**ワークフロー**メニューかを選択した活動を右クリックします。 さらに、選択したアクティビティの名前の上にポインタを移動すると、ドロップダウン タブのセットが表示され、これを使ってさまざまなビューに切り替えることができます。  
@@ -38,6 +39,6 @@ ms.lasthandoff: 10/27/2017
   
  同様のビューについては、次を参照してください。[シーケンシャル ワークフロー ビュー (レガシ)](../workflow-designer/sequential-workflow-views-legacy.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [従来のワークフロー アクティビティ](../workflow-designer/legacy-workflow-activities.md)   
  [シーケンシャル ワークフロー ビュー (レガシ)](../workflow-designer/sequential-workflow-views-legacy.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 320233edede13e2f33bdcb206b056bf1d0b94b8e
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 2db745d34c86e4b0aa5639872106096421044bce
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choose-operation-dialog-box-legacy"></a>[操作の選択] ダイアログ ボックス (レガシ)
 このトピックについて説明する方法を使用して、**操作の選択** ダイアログ ボックスでは、従来の[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]します。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/27/2017
 > [!NOTE]
 >  **操作の選択** ダイアログ ボックスでは、コントラクトまたはその他によって使用されている操作のみを示しています。<xref:System.Workflow.Activities.SendActivity>ワークフロー内のアクティビティ。 同様に、**操作の選択** ダイアログ ボックスを<xref:System.Workflow.Activities.ReceiveActivity>アクティビティは、コントラクトまたはその他によって使用されている操作のみを示しています。 **ReceiveActivity**ワークフロー内のアクティビティ。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: WCF コントラクト操作 (レガシ) を実装します。](../workflow-designer/how-to-implement-a-windows-communication-foundation-contract-operation-legacy.md)   
  [方法: WCF コントラクト操作 (レガシ) を呼び出す](../workflow-designer/how-to-invoke-a-windows-communication-foundation-contract-operation-legacy.md)   
  [従来の Designer for Windows Workflow Foundation UI ヘルプ](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)

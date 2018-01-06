@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 8d6e530a82c1edfa221203b6c99f06151fe901af
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 3873e444f3d9c68b632d52ab98bee07bf14af679
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-imports-designer"></a>インポート デザイナーを使用する方法
 インポート デザイナーを使用すると、式で使用する型の名前空間を入力できます。 ほぼ同様に、**インポート**または**を使用して**Visual Basic .NET と C# の場合、インポート デザイナーで名前空間を指定するキーワードを有効にするだけで完全修飾ではなく、式の型の名前を入力します。バージョンの型名。  

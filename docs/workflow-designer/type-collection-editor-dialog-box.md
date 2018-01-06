@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: bdc27b59640d92507956030fc34c767e321a81fa
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 8e4b794a623c3a0218e44773da6bdb6c76612816
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="type-collection-editor-dialog-box"></a>[型コレクション エディター] ダイアログ ボックス
 **型コレクション エディター**既知の型を追加する ダイアログ ボックスを使用して、**送信**と**受信**アクティビティ。 ジェネリック型引数に追加するこのダイアログ ボックスを使用しても、 **InvokeMethod**アクティビティ。 使用する場合、**送信**と**受信**既知の型を追加するアクティビティ、**型コレクション エディター**  ダイアログ ボックスには、一意である型の追加が必要です。 かどうか、重複する型が追加されをクリックして変更をコミット**OK**、エラー メッセージが返されます。 使用する場合、 **InvokeMethod**にジェネリック型引数を追加するアクティビティ、**型コレクション エディター**  ダイアログ ボックスでは重複する型を追加します。  

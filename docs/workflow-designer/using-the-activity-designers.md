@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 91ce5811be2aae3744afb7444ab35a9a3da54a20
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 5e82bde3e7d30fd0516deb4f79ff89bb77d19709
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-activity-designers"></a>アクティビティ デザイナーの使用
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]には、システムによって提供されるさまざまなアクティビティが用意されており、これらを、アクティビティおよびワークフローの構築時に使用できます。 このセクションでは、システムによって提供されるアクティビティとその利用可能なデザイナーの分類について説明します。 それぞれの分類に属する個々のアクティビティとそのデザイナーに関するトピックでは、アクティビティの機能とその使用方法を説明しています。  

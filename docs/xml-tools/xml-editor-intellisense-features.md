@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3690f3e8459821e0a927a351ee28f901b318deab
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: f98f11cf9f4aef491951e1968105a30a679e687a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-editor-intellisense-features"></a>XML エディターの IntelliSense 機能
 XML エディターでは、Visual Studio で提供されている他の言語のエディターに相当する、フル機能の IntelliSense を利用できます。 このセクションでは、XML スキーマ定義言語 (XSD) ドキュメントと XSLT ドキュメントで IntelliSense を使用する方法について説明します。  
@@ -104,7 +105,7 @@ XML エディターは、名前空間で修飾された要素や属性を Intell
   
  **自動挿入**のセクションで、 **[その他]**ページは、次の動作を制御します。  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |終了タグ|新しい要素の終了タグを挿入します。|  
 |属性値の引用符|新しい属性の名前を入力するときに属性値の引用符を挿入します。|  
@@ -118,7 +119,7 @@ XML エディターは、名前空間で修飾された要素や属性を Intell
   
 3.  何も変更、**自動挿入**セクションし、をクリックして**OK**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML エディター](../xml-tools/xml-editor.md)   
  [IntelliSense の使用](../ide/using-intellisense.md)   
  [チュートリアル: XSLT IntelliSense の使用](../xml-tools/walkthrough-using-xslt-intellisense.md)

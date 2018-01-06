@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0b2785e69bbfd6dff17f73b9840b88ad48454e0b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: a3c152640963da1414c34770fff68645e33098ce
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-profiling-a-sharepoint-application"></a>チュートリアル: SharePoint アプリケーションのプロファイリング
   このチュートリアルでは、Visual Studio のプロファイル ツールを使用し、SharePoint アプリケーションのパフォーマンスを最適化する方法について説明します。 アプリケーション例は SharePoint フィーチャー イベント レシーバーで、これにはフィーチャー イベント レシーバーのパフォーマンスを低下させるアイドル ループが含まれています。 Visual Studio プロファイラーでは、見つけてとも呼ばれる、プロジェクトの最も負荷の高い (最も遅い) 部分を排除することができます、*ホット パス*です。  
@@ -276,7 +277,7 @@ ms.lasthandoff: 10/31/2017
   
      これで、アイドル ループへの呼び出しが削除されたため、機能のアクティブ化がより高速になりました。 このことは、サンプル プロファイル レポートに反映されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンス エクスプローラー](/visualstudio/profiling/performance-explorer)   
  [パフォーマンス セッションの概要](/visualstudio/profiling/performance-session-overview)   
  [パフォーマンス プロファイリングのビギナーズ ガイド](/visualstudio/profiling/beginners-guide-to-performance-profiling)   

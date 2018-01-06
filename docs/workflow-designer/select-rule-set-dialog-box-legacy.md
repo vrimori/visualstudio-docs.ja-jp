@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: d12df1b43ebde3f565bef46c2be6f760031ad8bb
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: ae62202bc1762cfcf893586291ee735af69d813c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="select-rule-set-dialog-box-legacy"></a>[ルール セットの選択] ダイアログ ボックス (レガシ)
 このトピックについて説明する方法を使用して、**ルール セットの選択** ダイアログ ボックスでは、従来の[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]します。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/27/2017
   
  条件の詳細については、次を参照してください。[ワークフローでの条件の使用](http://go.microsoft.com/fwlink?LinkID=65009)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)   
  [[ルール セット エディター] ダイアログ ボックス (レガシ)](../workflow-designer/rule-set-editor-dialog-box-legacy.md)   
  [PolicyActivity アクティビティの使用](http://go.microsoft.com/fwlink?LinkID=65004)   

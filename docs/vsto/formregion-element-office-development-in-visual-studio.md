@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f0c34dc6e3cc7fd9339e9f2a183bcc11d54008e9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: bc425459cee4b4398ead78939283ab4db6efc134
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltformregiongt-element-office-development-in-visual-studio"></a>&lt;formRegion&gt;要素 (Visual Studio での Office 開発)
   `formRegion` 名前空間の `vstov4` 要素は、VSTO アドインに関連付けられている Microsoft Office Outlook フォーム領域を識別します。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/31/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|`name`|必須です。 フォーム領域の名前を識別します。|  
+|`name`|必須。 フォーム領域の名前を識別します。|  
   
  `formRegion` 要素には、次の子要素があります。  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/31/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|`name`|必須です。 フォーム領域に関連付けられるフォームを識別します。|  
+|`name`|必須。 フォーム領域に関連付けられるフォームを識別します。|  
   
 ## <a name="example"></a>例  
  次のコード例は、 `formRegion` を使用して配置される Outlook VSTO アド インのアプリケーション マニフェスト内の [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 ここでは、1 つのフォーム領域に 3 つのメッセージ クラスが関連付けられています。 このコード例は、「 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)」に記載されている例から一部を抜粋したものです。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/31/2017
 </vstov4:formRegion>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)   
  [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
  [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)   

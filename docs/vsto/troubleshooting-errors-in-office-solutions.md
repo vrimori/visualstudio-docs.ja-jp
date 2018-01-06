@@ -24,11 +24,12 @@ caps.latest.revision: "69"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7dd06ed6fde181760a1c4893b523bd7ef9c8dcc9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: e74b2daab5d9a8f5840b9109edd871e311bc4cb9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-errors-in-office-solutions"></a>Office ソリューションのエラーのトラブルシューティング
   Visual Studio で Office ソリューションを開発する際、次のタスクを実行するときに問題が発生する場合があります。  
@@ -216,7 +217,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
   
  をクリックするかどうか**はい**または**いいえ** ダイアログ ボックスで、Visual Studio は Excel または Word プロセスを終了し、デバッガーを停止します。 このダイアログ ボックスを表示せずにプロジェクトのデバッグを停止するには、Visual Studio のデバッガを停止するのではなく、直接、Excel または Word を終了します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションのトラブルシューティング](../vsto/troubleshooting-office-solutions.md)   
  [Office ソリューションのセキュリティのトラブルシューティング](../vsto/troubleshooting-office-solution-security.md)   
  [Office ソリューション配置のトラブルシューティング](../vsto/troubleshooting-office-solution-deployment.md)  

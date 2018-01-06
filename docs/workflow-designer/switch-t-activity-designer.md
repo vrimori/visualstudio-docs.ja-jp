@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 73d9838b5908b059aa229b5e979d635088d31de0
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 69e69ca7453801d6ccc3b5f323035475413721c1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="switchlttgt-activity-designer"></a>スイッチ&lt;T&gt;アクティビティ デザイナー
 <xref:System.Activities.Statements.Switch%601> アクティビティは、指定した式を評価します。そして、その評価から得られた値と一致する、関連付けられたキーを持つアクティビティを、アクティビティのコレクションから実行します。  
@@ -54,5 +55,5 @@ ms.lasthandoff: 10/27/2017
   
  case を削除するには、case 自体を選択する必要があることに注意してください。 case 内のアクティビティを選択して削除すると、case ではなく、アクティビティのみが削除されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [制御フロー](../workflow-designer/control-flow-activity-designers.md)

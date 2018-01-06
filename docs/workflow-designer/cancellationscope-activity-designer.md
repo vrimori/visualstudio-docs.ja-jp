@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 4b2ad28e6b89273b5fdb55e4cfa35d1df292221a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: c6e9206eff3eaaeb3b5a79bb8457738c21af05c7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cancellationscope-activity-designer"></a>CancellationScope アクティビティ デザイナー
 **CancellationScope**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.CancellationScope>アクティビティ。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Statements.CancellationScope.Body%2A>|True|取り消しロジックの対象となるアクティビティを指定します。 追加する、<xref:System.Activities.Statements.CancellationScope.Body%2A>アクティビティ、アクティビティをドロップ、**ツールボックス**に、**本文**ボックスに、 **CancellationScope** "ドロップというヒント テキストを含むアクティビティ デザイナーここにアクティビティ"です。|  
 |<xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>|True|取り消しの際に実行されるアクティビティを指定します。 追加する、<xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>アクティビティ、アクティビティをドロップ、**ツールボックス**に、 **CancellationHandler**ボックスに、 **CancellationScope**アクティビティ デザイナーのヒントテキスト「ドロップここにアクティビティ」です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [トランザクション](../workflow-designer/transaction-activity-designers.md)   
  [CompensableActivity](../workflow-designer/compensableactivity-activity-designer.md)   
  [補正](../workflow-designer/compensate-activity-designer.md)   

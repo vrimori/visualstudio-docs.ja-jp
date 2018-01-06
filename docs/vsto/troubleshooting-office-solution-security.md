@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2bf7b639504d6bca53af590d200d9d291ddcd66b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3cc5656877f3e6c1ee578a53345e2482c2103223
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-office-solution-security"></a>Office ソリューションのセキュリティのトラブルシューティング
   このトピックには、Office ソリューションのセキュリティ保護を使用する場合に発生する可能性がある一般的な問題を解決するためのヒントが含まれています。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/31/2017
   
  IEESC と Internet Explorer 7 の効果を管理し、以降では、特定の web サイトおよび汎用名前付けの規則 (UNC) パスを信頼し、(ローカル イントラネットまたは信頼済みサイト) の信頼されたセキュリティ ゾーンのいずれかに追加します。ゾーンを管理する方法については、次を参照してください。 [ClickOnce 信頼された発行元の構成](http://go.microsoft.com/fwlink/?LinkId=94774)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)  
   
   

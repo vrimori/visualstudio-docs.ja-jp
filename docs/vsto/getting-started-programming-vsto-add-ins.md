@@ -19,11 +19,12 @@ caps.latest.revision: "60"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 932827db3c12c3376dd74605c55e1bfed3c3e978
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: f399cd0d62cf9cf8e90191e293e56279930977e4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-programming-vsto-add-ins"></a>VSTO アドインのプログラミングについて
   VSTO アドインを使用することにより、Microsoft Office アプリケーションを自動化し、アプリケーションの機能を拡張できるほか、アプリケーションのユーザー インターフェイス (UI) をカスタマイズすることもできます。 Visual Studio を使用して作成することができます、VSTO アドインと Office ソリューションの他の種類との比較に関する情報を参照してください。 [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md).  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
  VSTO アドイン プロジェクトを作成する方法の詳細については、次を参照してください。[する方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)です。 プロジェクト テンプレートの詳細については、次を参照してください。 [Office プロジェクト テンプレートの概要](../vsto/office-project-templates-overview.md)です。  
   
 ## <a name="developing-vsto-add-in-projects"></a>VSTO アドイン プロジェクトの開発  
- VSTO アドイン プロジェクトを作成するときに自動的に作成、ThisAddIn.vb (で[!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]) または thisaddin.cs (C# の場合)。 このファイルが含まれています、`ThisAddIn`クラスで、VSTO アドインの基礎を提供します。 このクラスのメンバーを使用して、VSTO アドインが読み込まれたとき、またはアンロードされたときにコードを実行したり、ホスト アプリケーションのオブジェクト モデルにアクセスしたりすることができます。また、アプリケーションの機能を拡張することも可能です。 詳細については、「 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)」を参照してください。  
+ VSTO アドイン プロジェクトを作成するときに自動的に作成、ThisAddIn.vb (で[!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]) または thisaddin.cs (C# の場合)。 このファイルが含まれています、`ThisAddIn`クラスで、VSTO アドインの基礎を提供します。 このクラスのメンバーを使用して、VSTO アドインが読み込まれたとき、またはアンロードされたときにコードを実行したり、ホスト アプリケーションのオブジェクト モデルにアクセスしたりすることができます。また、アプリケーションの機能を拡張することも可能です。 詳細については、「 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)。  
   
 ## <a name="automating-applications-by-using-the-object-models"></a>オブジェクト モデルによるアプリケーションの自動化  
  Microsoft Office アプリケーションのオブジェクト モデルは、VSTO アドインでプログラミングに使用できる多くの型を公開します。 それらの型を使用してアプリケーションを自動化できます。 たとえば、Outlook でプログラムによって電子メールを作成および送信することもできれば、Word で文書を開き、コンテンツを追加することも可能です。 コードで、ホスト アプリケーションのオブジェクト モデルにアクセスする方法の詳細については、次を参照してください。 [VSTO アドインのプログラミング](../vsto/programming-vsto-add-ins.md)です。  
@@ -89,7 +90,7 @@ ms.lasthandoff: 10/31/2017
   
  Office プロジェクトの一般的なタスクを解説しているトピックの一覧は、次を参照してください。 [Office プログラミングで一般的なタスク](../vsto/common-tasks-in-office-programming.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [作業の開始 (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/getting-started-office-development-in-visual-studio.md)   
  [Office ソリューションのコードの記述](../vsto/writing-code-in-office-solutions.md)   

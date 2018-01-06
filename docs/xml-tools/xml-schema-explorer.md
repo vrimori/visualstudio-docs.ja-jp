@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1fa99ea63f9af2c69519691add827053b3059ac0
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 4bcf4042551c768a7386158d9de7d4e629095b85
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-schema-explorer"></a>XML スキーマ エクスプローラー
 XML スキーマ エクスプローラーは Microsoft Visual Studio および XML エディターに統合されており、これを使用すると、XML スキーマ定義言語 (XSD) スキーマの操作が可能になります。 XML スキーマ ファイルを開くときに、**スキーマ セット**XML スキーマ エクスプ ローラーでノードが表示されます。 XML スキーマ エクスプローラーには、対象ファイルに対してインクルード、インポート、または再定義されたすべてのスキーマだけでなく、`include` ステートメントまたは `import` ステートメントを通じて参照されているファイルも表示されます。  
@@ -90,5 +91,5 @@ XML スキーマ エクスプローラーでは、ツリー ビューでスキ�
   
 -   [XML リテラルと XML スキーマ エクスプローラーの統合](../xml-tools/integration-of-xml-literals-with-xml-schema-explorer.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: XML スキーマ エクスプローラーからワークスペースにノードを追加する](../xml-tools/how-to-add-nodes-to-the-workspace-from-the-xml-schema-explorer.md)

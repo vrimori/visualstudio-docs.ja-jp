@@ -16,11 +16,12 @@ caps.latest.revision: "44"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b12a52101feebcfac08c7672834d9d7c65d41c55
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 96f6e6f27938635628db66f2a6eb58a56cee0d18
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2"></a>チュートリアル: 項目テンプレートに基づくカスタム動作プロジェクト項目の作成 (パート 2)
   SharePoint プロジェクト項目の種類のカスタム定義し、Visual Studio で項目テンプレートに関連付ける、テンプレートのウィザードを提供することがもできます。 ウィザードを使用すると、プロジェクトにプロジェクト項目の新しいインスタンスを追加するのに、テンプレートを使用するときに、ユーザーから情報を収集します。 収集した情報を使用して、プロジェクト項目を初期化できます。  
@@ -345,7 +346,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  Visual Studio (実験用インスタンスと、CustomActionProjectItem ソリューションが開いている Visual Studio のインスタンス) の両方のインスタンスを閉じます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: 項目テンプレート、第 1 部にカスタム動作プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)   
  [カスタム SharePoint プロジェクト項目の種類を定義します。](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [SharePoint プロジェクト項目の項目テンプレートとプロジェクト テンプレートを作成します。](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   

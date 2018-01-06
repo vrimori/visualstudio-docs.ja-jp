@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 0a3b7c7cf56aa465f88ae918056e2d71ad6c41e4
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: e114f95baf771d8138fd155cf79f6e0ddbf14485
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="terminateworkflow-activity-designer"></a>TerminateWorkflow アクティビティ デザイナー
 **TerminateWorkflow**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.TerminateWorkflow>アクティビティ。  
@@ -38,6 +39,6 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Statements.TerminateWorkflow.Exception%2A>|False|ワークフローが停止されたときにスローする例外。 このプロパティは、プロパティ グリッドで設定します。|  
 |<xref:System.Activities.Statements.TerminateWorkflow.Reason%2A>|False|ワークフローが停止された理由。 このプロパティは、プロパティ グリッドで設定します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ランタイム](../workflow-designer/runtime-activity-designers.md)   
  [永続化します。](../workflow-designer/persist-activity-designer.md)

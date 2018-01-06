@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: aa06d4c63dbb18c080c8a6b8ffda01838607ba55
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: ab9ef5504b8785e31446d51f517e8ac41c27d579
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pick-activity-designer"></a>Pick アクティビティ デザイナー
 <xref:System.Activities.Statements.Pick> アクティビティでは、イベント ベースの制御フローを提供します。 このアクティビティは、トリガー起動イベントに応答して、複数の分岐のいずれか 1 つを実行します。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/27/2017
 |-------------------|--------------|-----------|  
 |<xref:System.Activities.Activity.DisplayName%2A>|False|ヘッダーの <xref:System.Activities.Statements.Pick> アクティビティ デザイナーの表示名を指定します。 既定値は Pick です。 この値は、プロパティ グリッドで編集することも、アクティビティ デザイナーのヘッダーで直接編集することもできます。<br /><br /> <xref:System.Activities.Activity.DisplayName%2A> は必須ではありませんが、使用することをお勧めします。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [制御フロー](../workflow-designer/control-flow-activity-designers.md)   
  [Pick アクティビティ](/dotnet/framework/windows-workflow-foundation/pick-activity)   
  [Pick アクティビティの使用](/dotnet/framework/windows-workflow-foundation/samples/using-the-pick-activity)

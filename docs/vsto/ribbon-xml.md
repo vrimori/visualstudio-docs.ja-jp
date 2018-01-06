@@ -27,11 +27,12 @@ caps.latest.revision: "35"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7c0a4dd8bb577ddc52ed6a97b2e412109c214335
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 38cf7e2fd9229ddc0a99f317a0680ea272fa3ad5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ribbon-xml"></a>リボン XML
   リボン (XML) 項目では XML を使用してリボンをカスタマイズできます。 リボン (ビジュアル デザイナー) 項目ではサポートされていない方法で、リボンをカスタマイズする場合は、リボン (XML) 項目を使用します。 各項目で実行できる操作の比較を参照してください。[リボンの概要](../vsto/ribbon-overview.md)です。  
@@ -130,7 +131,7 @@ ms.lasthandoff: 10/31/2017
 |---------------|--------------------|-----------------|  
 |**onLoad**|**customUI**|アプリケーションがリボンを読み込むときに呼び出されるメソッドを識別します。|  
 |**idMso**|**タブ**|リボンに表示する組み込みタブを識別します。|  
-|**id**|**group**|グループを識別します。|  
+|**ID**|**group**|グループを識別します。|  
 |**ラベル**|**group**|グループに表示するテキストを指定します。|  
   
  リボン XML ファイルの既定の要素と属性は、使用できる要素と属性の小さなサブセットです。 使用可能な要素と属性の完全な一覧については、技術記事「 [2007 Office Fluent リボンをカスタマイズする (開発者向け) (パート 2/3)](http://msdn.microsoft.com/en-us/6b904f55-525f-4520-9b81-a017db65657b)」を参照してください。  
@@ -142,11 +143,11 @@ ms.lasthandoff: 10/31/2017
   
 |メソッド|説明|  
 |------------|-----------------|  
-|`GetCustomUI`|リボン XML ファイルの内容を返します。 Microsoft Office アプリケーションはこのメソッドを呼び出して、カスタム リボンのユーザー インターフェイスを定義する XML 文字列を取得します。 このメソッドは、 <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> メソッドを実装します。 **注:** `GetCustomUI`をリボン XML ファイルの内容を返すだけに実装する必要があります、VSTO アドインで初期化するために使用する必要がありますされません。   具体的には、 `GetCustomUI` の実装で、ダイアログ ボックスや他のウィンドウを表示しようとしてはいけません。 カスタム リボンが正しく動作しない可能性があります。 VSTO アドインを初期化するコードを実行する必要がある場合は、そのコードを `ThisAddIn_Startup` イベント ハンドラーに追加します。|  
+|`GetCustomUI`|リボン XML ファイルの内容を返します。 Microsoft Office アプリケーションはこのメソッドを呼び出して、カスタム リボンのユーザー インターフェイスを定義する XML 文字列を取得します。 このメソッドは、 <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> メソッドを実装します。 **注:** `GetCustomUI`をリボン XML ファイルの内容を返すだけに実装する必要があります、VSTO アドインで初期化するために使用する必要がありますされません。 具体的には、 `GetCustomUI` の実装で、ダイアログ ボックスや他のウィンドウを表示しようとしてはいけません。 カスタム リボンが正しく動作しない可能性があります。 VSTO アドインを初期化するコードを実行する必要がある場合は、そのコードを `ThisAddIn_Startup` イベント ハンドラーに追加します。|  
 |`OnLoad`|<xref:Microsoft.Office.Core.IRibbonControl> パラメーターを `ribbon` フィールドに割り当てます。 Microsoft Office アプリケーションは、カスタム リボンが読み込まれるときに、このメソッドを呼び出します。 このフィールドを使用すると、カスタムのリボンを動的に更新することができます。 詳細については、技術記事「 [2007 Office Fluent リボンをカスタマイズする (開発者向け) (パート 1/3)](http://msdn.microsoft.com/en-us/a4fd6d18-d4a8-4e64-bd89-f437208573d3)」を参照してください。|  
 |`GetResourceText`|`GetCustomUI` メソッドによって呼び出され、リボン XML ファイルの内容を取得します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リボンの概要](../vsto/ribbon-overview.md)   
  [チュートリアル: リボン XML によるカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)   
  [Office UI のカスタマイズ](../vsto/office-ui-customization.md)  

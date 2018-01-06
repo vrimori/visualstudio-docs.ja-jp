@@ -26,11 +26,12 @@ caps.latest.revision: "96"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f97cac11c943b75f5bc74e5cb67c9810b9ba7032
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: aca002dc7f9793dc379fb4e1a325342704e4d6c8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-office-projects-in-visual-studio"></a>方法: Visual Studio で Office プロジェクトを作成する
   使用することができます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]VSTO アドインとドキュメント レベルの作成に Microsoft Office アプリケーション用のカスタマイズ。 この種のプロジェクトの詳細については、次を参照してください。 [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md).  
@@ -160,7 +161,7 @@ ms.lasthandoff: 10/31/2017
   
      信頼できる場所にドキュメントを追加する方法の詳細については、Microsoft Office Online web サイトを参照してください。[作成、削除、または変更、ファイルに対して信頼できる場所](https://support.office.com/en-au/article/Create-remove-or-change-a-trusted-location-for-your-files-f5151879-25ea-4998-80a5-4208b3540a62)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office プロジェクト テンプレートの概要](../vsto/office-project-templates-overview.md)   
  [Office ソリューションの共同開発](../vsto/collaborative-development-of-office-solutions.md)   
  [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   

@@ -21,11 +21,12 @@ caps.latest.revision: "70"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cf214f2ffc55cf0846373fcaa226253f276e3d69
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: a0c8d44c32c03f98a0d2621eff3899ded101b7d3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-changing-document-formatting-using-checkbox-controls"></a>チュートリアル : CheckBox コントロールを使用したドキュメント書式の変更
   このチュートリアルでは、Microsoft Office Word のドキュメント レベルのカスタマイズでの Windows フォーム コントロールを使用して、テキストの書式設定を変更する方法を示します。  
@@ -71,27 +72,27 @@ ms.lasthandoff: 10/31/2017
   
 3.  **[プロパティ]** ウィンドウで、次のプロパティを変更します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**applyBoldFont**|  
+    |**Name**|**applyBoldFont**|  
     |**[テキスト]**|**太字**|  
   
 4.  キーを押して**Enter**最初のチェック ボックスの下にカーソルを移動します。  
   
 5.  次のドキュメントに 2 つ目のチェック ボックスを追加、`ApplyBoldFont`チェック ボックスをオンし、次のプロパティを変更します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**applyItalicFont**|  
+    |**Name**|**applyItalicFont**|  
     |**[テキスト]**|**斜体**|  
   
 6.  キーを押して**Enter** 2 番目のチェック ボックスの下にカーソルを移動します。  
   
 7.  3 番目のチェック ボックスを次のドキュメントに追加、`ApplyItalicFont`チェック ボックスをオンし、次のプロパティを変更します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**applyUnderlineFont**|  
+    |**Name**|**applyUnderlineFont**|  
     |**[テキスト]**|**下線**|  
   
 #### <a name="to-add-text-and-a-bookmark-control"></a>テキストおよびブックマーク コントロールを追加するには  
@@ -154,7 +155,7 @@ ms.lasthandoff: 10/31/2017
 3.  テキストの形式が正しいことを確認します。  
   
 ## <a name="next-steps"></a>次の手順  
- このチュートリアルでは、チェック ボックスを使用して、プログラムによって Word 文書で書式設定テキストの変更の基礎を説明します。 ここでは、次の作業を行います。  
+ このチュートリアルでは、チェック ボックスを使用して、プログラムによって Word 文書で書式設定テキストの変更の基礎を説明します。 ここでは、次のタスクを行います。  
   
 -   ボタンを使用して、テキスト ボックスに入力します。 詳細については、次を参照してください。[チュートリアル: ボタンを使用してドキュメント内のテキスト ボックスに表示するテキスト](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)です。  
   
@@ -162,7 +163,7 @@ ms.lasthandoff: 10/31/2017
   
 -  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアルを使用して Word](../vsto/walkthroughs-using-word.md)   
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
  [NamedRange コントロール](../vsto/namedrange-control.md)   

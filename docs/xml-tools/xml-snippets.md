@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4f53c8d55011f52a3ed6ecf6fa4fab77855a9ec3
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 88ccba516a0bce6e3413bf14d38d32baf68d8274
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-snippets"></a>XML スニペット
 XML エディターと呼ばれる、機能を提供する*XML スニペット*、XML ファイルをより速く構築することができます。 XML スニペットは、ファイルに挿入することで再利用できます。 XML スキーマ定義言語 (XSD) スキーマに基づいて XML データを生成することもできます。  
@@ -52,5 +53,5 @@ XML エディターと呼ばれる、機能を提供する*XML スニペット*�
   
  詳細については、次を参照してください。[する方法: XML スニペットの作成](../xml-tools/how-to-create-xml-snippets.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML エディター](../xml-tools/xml-editor.md)

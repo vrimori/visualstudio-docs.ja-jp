@@ -19,11 +19,12 @@ caps.latest.revision: "30"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5e90143904c8d628e4288e24602907a75ae4bc59
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 9d807c38af14249b265c411de31f6cde03855c60
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-local-database-files-in-office-solutions-overview"></a>Office ソリューションにおけるローカル データベース使用の概要
   Office ソリューションでは、SQL Server Express (.mdf) ファイルまたは Microsoft Office Access (.mdb) ファイルなどのデータベース ファイルを含めることができます。 これにより、一元化されたデータベースのメンテナンスができない場合は必要な 1 台のコンピューターのみで使用されているローカル インベントリ ソリューションの例にあるローカル データベースを維持するためにエンドユーザーことができます。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="local-database-files-and-caching-the-dataset"></a>ローカル データベース ファイルとデータセットのキャッシュ  
  Microsoft Office Excel および Microsoft Office Word のドキュメント レベルのソリューションでは、属性を持つデータセットのインスタンスをマークすることによって、ドキュメント内のデータセットをキャッシュできます<xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute>です。 追加すると、データベース ファイルをプロジェクトを使用して、**データ ソース構成ウィザード**、型指定されたデータセットが自動的にプロジェクトに追加します。 適用することはほとんどありません必要がある<xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute>、このデータセットにデータが既にローカル ユーザーのコンピューター上にあるためです。 詳細については、「 [Caching Data](../vsto/caching-data.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションでのコントロールへのデータをバインディング](../vsto/binding-data-to-controls-in-office-solutions.md)   
  [方法: データベースからデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-a-database.md)   
  [方法: ホスト コントロールからのデータでデータ ソースを更新](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)   

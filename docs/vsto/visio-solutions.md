@@ -22,11 +22,12 @@ caps.latest.revision: "40"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b09e0a43f4a9dbb77a983a1f7e87f0b2886b1697
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 77c4b8e13071486bf483fc5b281bf86ae13aa965
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visio-solutions"></a>Visio ソリューション
   Visual Studio には、Microsoft Office Visio の VSTO アドインを作成するために使用できるプロジェクト テンプレートが用意されています。 VSTO アドインを使用して、Visio の自動化、Visio 機能の拡張、または Visio ユーザー インターフェイス (UI) のカスタマイズが可能です。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/31/2017
   
  Visio のオブジェクト モデルを使用して図面および図形を操作する手順やコード例については、「 [Working with Visio Documents](../vsto/working-with-visio-documents.md) 」および「 [Working with Visio Shapes](../vsto/working-with-visio-shapes.md)」を参照してください。  
   
- VSTO アドインから Visio オブジェクト モデルにアクセスするには、プロジェクト内の `Application` クラスの `ThisAddIn` フィールドを使用します。 `Application`フィールドは、Visio の現在のインスタンスを表す Microsoft.Office.Interop.Visio.Application オブジェクトを返します。 詳細については、「 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)」を参照してください。  
+ VSTO アドインから Visio オブジェクト モデルにアクセスするには、プロジェクト内の `Application` クラスの `ThisAddIn` フィールドを使用します。 `Application`フィールドは、Visio の現在のインスタンスを表す Microsoft.Office.Interop.Visio.Application オブジェクトを返します。 詳細については、「 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)。  
   
  Visio オブジェクト モデルを呼び出すときは、Visio のプライマリ相互運用機能アセンブリ (PIA) に用意された型を使用します。 PIA は、VSTO アドインのマネージ コードと Visio の COM オブジェクト モデルとの橋渡し役として機能します。 Visio PIA のすべての型で定義されます。 プライマリ相互運用機能アセンブリの詳細については、次を参照してください。 [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)と[Office プライマリ相互運用機能アセンブリ](../vsto/office-primary-interop-assemblies.md)です。  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/31/2017
   
  Visio の UI をカスタマイズする方法の詳細については、 [Visio.UIObject](https://msdn.microsoft.com/library/office/ff765763.aspx) クラスの VBA リファレンス ドキュメントを参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Getting Started Programming VSTO Add-ins](../vsto/getting-started-programming-vsto-add-ins.md)   
  [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)   
  [VSTO アドインのアーキテクチャ](../vsto/architecture-of-vsto-add-ins.md)   

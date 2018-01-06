@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: f83c2055ce8e8872b32bb7e7ab735a04bffcd553
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: fcaa711d1241056eff486e0984cf9326555b9eb2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-designer-ui-help"></a>ワークフロー デザイナーの UI ヘルプ
 ここでは、[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]の状況依存ヘルプ トピックについて紹介します。 作業するとき[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]、キーを押して、ユーザー インターフェイスからこれらのトピックにアクセスすることができます**F1**ときに、 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]  ダイアログ ボックスが開きます。  

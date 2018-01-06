@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 50077e430d6d9f273dd4cd3e247de3df043804c4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 80d0438e7c7dfb7fd346dc5faae6f364279658ef
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-select-the-xml-schemas-to-use"></a>方法: 使用する XML スキーマを選択する
 XML エディターはスキーマ キャッシュを提供します。このキャッシュは %InstallDir%\Xml\Schemas ディレクトリに配置されています。 スキーマ キャッシュには、IntelliSense と XML ドキュメントの検証に使用される既知の XML スキーマが格納されています。  
@@ -40,11 +41,11 @@ XML エディターはスキーマ キャッシュを提供します。このキ
   
     -   表示されているスキーマを選択、 **XML スキーマ**ダイアログ ボックスで、をクリックして、**使用**列、および選択**このスキーマを使用して**です。  
   
-     または  
+     - または -  
   
     -   表示されている複数のスキーマを選択して、 **XML スキーマ**ダイアログ、右クリックして選択**このスキーマを使用して**です。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
      選択したスキーマの一覧にコピー、**スキーマ**プロパティを文書化します。  
   
@@ -73,7 +74,7 @@ XML エディターはスキーマ キャッシュを提供します。このキ
     > [!NOTE]
     >  使用してスキーマへの参照があるかどうか、`schemaLocation`属性、または一致する`targetNamespace`し**削除**自動的な関連付けによりこの状況では機能しません。 ここではお勧めときにスキーマをマークする**選択されているスキーマを使用しないでください**で、**使用**列です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [スキーマ キャッシュ](../xml-tools/schema-cache.md)   
  [XML スキーマ ダイアログ ボックス](../xml-tools/xml-schemas-dialog-box.md)   
  [XML エディター](../xml-tools/xml-editor.md)

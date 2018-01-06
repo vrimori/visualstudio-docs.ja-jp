@@ -18,11 +18,12 @@ caps.latest.revision: "35"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 63073ca3100f1b4a11d5a39043e5d5eeebe7b628
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: cf5b5ff9f2c3b2db5d7082e4eecd9eee4e235866
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-importing-a-form-region-that-is-designed-in-outlook"></a>チュートリアル : Outlook でデザインしたフォーム領域のインポート
   このチュートリアルでは、Microsoft Office Outlook でフォーム領域をデザインし、そのフォーム領域を **[新しいフォーム領域]** ウィザードを使用して Outlook VSTO アドイン プロジェクトにインポートする方法について説明します。 Outlook でフォーム領域をデザインすると、Outlook データにバインドされたネイティブ Outlook コントロールをフォーム領域に追加できます。 フォーム領域をインポートした後で、各コントロールのイベントを処理できます。  
@@ -90,7 +91,7 @@ ms.lasthandoff: 10/31/2017
   
 15. **[プロパティ]** ウィンドウで、 **[キャプション]** プロパティに「 **依存タスクの一覧に追加するタスクを選択**」と設定し、 **[幅]** プロパティを **200**に設定します。次に、 **[適用]**をクリックします。  
   
-16. **[ツールボックス]** から ComboBox コントロールをフォーム領域にドラッグします。 コンボ ボックスを **[ 依存タスクの一覧に追加するタスクを選択 ]** ラベルの下に配置します。  
+16. **[ツールボックス]** から ComboBox コントロールをフォーム領域にドラッグします。 コンボ ボックスを **[依存タスクの一覧に追加するタスクを選択]** ラベルの下に配置します。  
   
 17. 追加したコンボ ボックスを選択します。  
   
@@ -256,7 +257,7 @@ ms.lasthandoff: 10/31/2017
   
 -   Outlook にカスタム作業ウィンドウを追加する方法の詳細については、次を参照してください。[カスタム作業ウィンドウ](../vsto/custom-task-panes.md)します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [実行時にフォーム領域へのアクセス](../vsto/accessing-a-form-region-at-run-time.md)   
  [Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)   
  [Outlook フォーム領域の作成に関するガイドライン](../vsto/guidelines-for-creating-outlook-form-regions.md)   

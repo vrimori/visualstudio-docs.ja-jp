@@ -19,11 +19,12 @@ caps.latest.revision: "40"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 391964152c48601b11b10ce6d8001d2d303a9a01
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 27cd0f62c7670d56143180d24074e5c6002051f7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xmlmappedrange-control"></a>XmlMappedRange コントロール
   <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>コントロールは、繰り返しのないスキーマ要素は、Microsoft Office Excel のセルに対応しているときにのみ作成される範囲です。 たとえば、ときに、`maxOccurs`スキーマ要素の属性が 1 に等しい。 Visual Studio では、マップされた XML の範囲が作成された後は、Excel オブジェクト モデルを走査する必要なく、直接に対してプログラミングできます。 のみを削除することができます、<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>要素のマッピングが削除されたときに Excel 内で制御します。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/31/2017
   
 -   <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.SelectionChange>  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)   
  [方法: ワークシートに XMLMappedRange コントロールを追加します。](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)   
  [Office ソリューションでのコントロールへのデータをバインディング](../vsto/binding-data-to-controls-in-office-solutions.md)   

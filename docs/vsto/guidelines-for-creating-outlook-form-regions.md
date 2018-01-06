@@ -18,11 +18,12 @@ caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e012b9f173e432cfee88beec7d861faaa7be03b5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 197da04c42b97f274979e46a2ba4691747365362
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-for-creating-outlook-form-regions"></a>Outlook フォーム領域の作成に関するガイドライン
   次に示す情報は、フォーム領域の最適化と、潜在的な問題の回避に役立ちます。  
@@ -90,7 +91,7 @@ ms.lasthandoff: 10/31/2017
   
  **ウィンドウ** アイコンは、置換フォーム領域またはすべて置換フォーム領域を表示する開いているアイテムについて、通知領域、および Alt + Tab キーを押したときのダイアログ ボックスに表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [実行時にフォーム領域へのアクセス](../vsto/accessing-a-form-region-at-run-time.md)   
  [Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)   
  [チュートリアル: Outlook フォーム領域のデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)   

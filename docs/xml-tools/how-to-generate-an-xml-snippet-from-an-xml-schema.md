@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1090d1509152aaa507220d3119977bb8e9252876
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 8c27307155a56aae07b69c02c6cbdf3da72059b1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>方法 : XML スキーマから XML スニペットを生成する
 XML エディターは、XML スキーマ定義言語 (XSD) スキーマから XML スニペットを生成する機能を備えています。 たとえば、XML ファイルを作成しているときは、要素名の横にカーソルを置いて Tab キーを押すと、その要素のスキーマ情報から生成された XML データを要素に格納することができます。  
@@ -67,7 +68,7 @@ XML エディターは、XML スキーマ定義言語 (XSD) スキーマから X
   
 5.  スキーマ ファイルを選択し、クリックして**開く**です。  
   
-6.  **[OK]** をクリックします。  
+6.  **[OK]**をクリックします。  
   
      これで XML スキーマが XML ドキュメントと関連付けられます。  
   
@@ -153,6 +154,6 @@ XML エディターは、XML スキーマ定義言語 (XSD) スキーマから X
 </Contact>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML スニペット](../xml-tools/xml-snippets.md)   
  [方法 : XML スニペットを使用する](../xml-tools/how-to-use-xml-snippets.md)

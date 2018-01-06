@@ -27,11 +27,12 @@ caps.latest.revision: "102"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: db8a4fad73bb710662ce63bd299751c725e0c6ce
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: d29fd74ee92344ac8b2eedbe4a5b8838171d7d96
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-controls-to-office-documents-at-run-time"></a>実行時の Office ドキュメントへのコントロールの追加
   コントロールは、実行時に、Microsoft Office Word 文書と Microsoft Office Excel ブックに追加できます。 それらを実行時に削除することもできます。 実行時にドキュメントに追加したりドキュメントから削除したりするコントロールのことを、 *ダイナミック コントロール*といいます。  
@@ -142,7 +143,7 @@ ms.lasthandoff: 10/31/2017
  [!code-vb[Trin_VstcoreProgrammingControlsExcel#3](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#3)]
  [!code-csharp[Trin_VstcoreProgrammingControlsExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#3)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
  [Office 文書で動的コントロールの永続化](../vsto/persisting-dynamic-controls-in-office-documents.md)   
  [方法: ワークシートに ListObject コントロールを追加します。](../vsto/how-to-add-listobject-controls-to-worksheets.md)   

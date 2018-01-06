@@ -18,11 +18,12 @@ caps.latest.revision: "33"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 65f581cbb0e1096a6be029bbdca3fe918b0918ad
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 6973b2e99c2c2f8be6211c4a4c9cf7277c796440
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthroughs-using-word"></a>Word を使用したチュートリアル
   次のチュートリアルでは、ドキュメント レベルのカスタマイズと VSTO アドインを使用して Microsoft Office Word を自動化し、ユーザー インターフェイス (UI) をカスタマイズする方法について説明します。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/31/2017
  [チュートリアル: リボン XML によるカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)  
  VSTO アドインで XML 記述子ファイルを使用してカスタム リボン タブを作成する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [使用して Excel のチュートリアル](../vsto/walkthroughs-using-excel.md)   
  [Office ソリューションのチュートリアルにおけるデータ](../vsto/data-in-office-solutions-walkthroughs.md)   
  [Office UI のカスタマイズのチュートリアル](../vsto/office-ui-customization-walkthroughs.md)   

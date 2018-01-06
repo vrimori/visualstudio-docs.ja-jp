@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 8d84873c1d4755b4eea723345f52d71064ecb9ab
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 1fe242e3e4fd2a885373d776f79f50071fa83c1f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="invokemethod-activity-designer"></a>InvokeMethod アクティビティ デザイナー
 **InvokeMethod**デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.InvokeMethod>アクティビティ。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/27/2017
   
  この制限は、<xref:System.Activities.Statements.InvokeMethod.TargetType%2A> および <xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A> には適用されません。これらはワークフロー引数ではなく、したがって、<xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A> メソッド内の <xref:System.Activities.Statements.InvokeMethod> アクティビティの<xref:System.Activities.Activity.CacheMetadata%2A> コレクションに登録されないためです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プリミティブ](../workflow-designer/primitives-activity-designers.md)   
  [割り当てる](../workflow-designer/assign-activity-designer.md)   
  [遅延](../workflow-designer/delay-activity-designer.md)   

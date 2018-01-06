@@ -21,11 +21,12 @@ caps.latest.revision: "51"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4d3b5523bdf6d851f7822a7123575b2903b45a2a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3ce2298ee213e310409dd904acb342e390cb1db2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-search-for-and-replace-text--in-documents"></a>方法: プログラムによって文書内のテキストを検索および置換する
   <xref:Microsoft.Office.Interop.Word.Find> オブジェクトは <xref:Microsoft.Office.Interop.Word.Selection> および <xref:Microsoft.Office.Interop.Word.Range> オブジェクトの両方のメンバーであり、どちらを使用しても Microsoft Office Word ドキュメント内のテキストを検索できます。 Replace コマンドは、Find コマンドの拡張機能です。  
@@ -120,7 +121,7 @@ ms.lasthandoff: 10/31/2017
   
     -   <xref:Microsoft.Office.Interop.Word.WdReplace.wdReplaceOne> は検出された最初の項目を置換します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: プログラムによって Word の検索オプションを設定](../vsto/how-to-programmatically-set-search-options-in-word.md)   
  [方法: 文書で見つかった項目をプログラムによってループ](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)   
  [方法: プログラムによってを定義し、ドキュメントで範囲を選択](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)   

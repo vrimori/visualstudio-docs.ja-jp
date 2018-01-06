@@ -13,11 +13,12 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0c1fa8867c4f9ab46b50f0b2a144970d772cbd71
-ms.sourcegitcommit: 64c7682ec3a2cbea684e716803398d4278b591d1
+ms.workload: azure
+ms.openlocfilehash: 7008ac8ea30e704403542b7b9786cffb1c5da158
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="publish-an-aspnet-or-aspnet-core-app-to-azure-app-service-using-visual-studio"></a>Visual Studio を使用して Azure App Service に ASP.NET または ASP.NET Core アプリケーションを公開します。
 
@@ -63,14 +64,13 @@ Azure アカウントがない場合は[サインアップ](https://azure.micros
 
     このダイアログ ボックスで使用しているサブスクリプションを選択を選択したり Azure リソース グループなどを作成します。
 
-1. 
-              **[作成]**をクリックします。
+1. **[作成]**をクリックします。
 
     Visual Studio が、Azure App Service にアプリを展開し、web アプリがお使いのブラウザーで読み込まれます。
 
     概要、**発行** ウィンドウで、新しい Azure App Service のサイトの URL を参照してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-- [Azure への ASP.NET Core アプリケーションを配置します。](https://docs.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)
-- [Git を使用した Azure への ASP.NET Core の継続的なデプロイ](https://docs.microsoft.com/en-us/aspnet/core/publishing/azure-continuous-deployment)
+- [Azure への ASP.NET Core アプリケーションを配置します。](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)
+- [Git を使用した Azure への ASP.NET Core の継続的な配置](/aspnet/core/publishing/azure-continuous-deployment)

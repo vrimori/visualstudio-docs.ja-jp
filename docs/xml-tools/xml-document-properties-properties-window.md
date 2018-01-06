@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 24f3760fb328331684e6894954d79675ff27494e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ceabc30399871c7bbe7fef737e7ecbd87187257d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-document-properties-properties-window"></a>XML ドキュメント プロパティと [プロパティ] ウィンドウ
 **プロパティ**ウィンドウは、XML エディターでアクティブになっているドキュメントに関する基本的な情報を提供します。 使用可能なプロパティは、現在アクティブになっている XML ドキュメントの種類によって異なります。  
@@ -47,6 +48,6 @@ ms.lasthandoff: 10/31/2017
   
  異なるスタイル シートがであることを指定するこのプロパティを使用する XSLT ファイルを編集するには、際に使用される、 **Show XSLT Output**または**XSLT のデバッグ**コマンドを選択します。 たとえば、親のスタイル シートにインクルードされるスタイル シートを編集しているときに、そのように指定することができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML エディター](../xml-tools/xml-editor.md)   
  [XML エディターのコンポーネント](../xml-tools/xml-editor-components.md)

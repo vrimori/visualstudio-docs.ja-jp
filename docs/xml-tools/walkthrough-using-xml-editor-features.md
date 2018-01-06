@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bf90df0e5311cb1487334ba3851c5083030e2191
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: d87870ef00ceb0a3c66b91975b11038c00bd1dc2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-xml-editor-features"></a>チュートリアル: XML エディター機能の使用
 このチュートリアルの手順では、新しい XML ドキュメントを作成する方法を示します。 ここでは、XML の作成に役立つ XML エディターの機能もいくつか使用します。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/02/2017
   
 5.  HireDate.xsd ファイルを選択し、クリックして**開く**です。  
   
-6.  **[OK]** をクリックします。  
+6.  **[OK]**をクリックします。  
   
      これで XML スキーマが XML ドキュメントと関連付けられます。 この XML スキーマは、ドキュメントの検証に使用されます。 有効な要素のメンバーの一覧を作成する際に、IntelliSense でも使用されます。  
   
@@ -129,5 +130,5 @@ ms.lasthandoff: 11/02/2017
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML エディター](../xml-tools/xml-editor.md)

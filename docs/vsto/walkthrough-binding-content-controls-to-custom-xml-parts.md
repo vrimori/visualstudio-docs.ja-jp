@@ -22,11 +22,12 @@ caps.latest.revision: "51"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 252bbce784e412282f6092afdc53905faeb947d0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 69073c8c737d8c4d8ee36bfc44fec9c5ea8075c6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-binding-content-controls-to-custom-xml-parts"></a>チュートリアル : カスタム XML 部分へのコンテンツ コントロールのバインド
   このチュートリアルでは、Word のドキュメント レベルのカスタマイズで、コンテンツ コントロールを同じ文書内の XML データにバインドする方法を説明します。  
@@ -320,7 +321,7 @@ ms.lasthandoff: 10/31/2017
   
 -   コンテンツ コントロールを使用して文書の一部を保護できます。 詳細については、「 [How to: Protect Parts of Documents by Using Content Controls](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
  [コンテンツ コントロール](../vsto/content-controls.md)   
  [方法: Word 文書にコンテンツ コントロールを追加](../vsto/how-to-add-content-controls-to-word-documents.md)   

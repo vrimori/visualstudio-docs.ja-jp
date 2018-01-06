@@ -18,11 +18,12 @@ caps.latest.revision: "46"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d66de04cdcd50ea0702c027153cbb45eaddb7074
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: e0f6a8ae9639359cb23ccc9d30adfd2eb6d84ac8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-populate-word-tables-with-document-properties"></a>方法: プログラムによって Document プロパティを Word の表に読み込む
   次の例ではドキュメントの先頭に Microsoft Office Word の表を作成し、ホスト ドキュメントのプロパティのデータをそこに読み込みます。  
@@ -97,7 +98,7 @@ ms.lasthandoff: 10/31/2017
  [!code-vb[Trin_VstcoreWordAutomationAddIn#89](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#89)]
  [!code-csharp[Trin_VstcoreWordAutomationAddIn#89](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#89)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: プログラムによって Word の表を作成します。](../vsto/how-to-programmatically-create-word-tables.md)   
  [方法: プログラムによって Word の表のセルにテキストと書式を追加](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)   
  [方法: プログラムによって Word の表に行と列を追加](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)   

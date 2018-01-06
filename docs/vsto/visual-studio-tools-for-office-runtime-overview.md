@@ -31,11 +31,12 @@ caps.latest.revision: "92"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 61fe29fca2feb0f19e613af62f4d9407b8d8bbff
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: e091564ce02f55904e69d1abd9e240534a6dd8c7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-tools-for-office-runtime-overview"></a>Visual Studio Tools for Office Runtime の概要
   Visual Studio の Microsoft Office Developer Tools を使用して作成したソリューションを実行するには、エンド ユーザーのコンピューターに Visual Studio 2010 Tools for Office Runtime がインストールされている必要があります。 詳細については、「 [How to: Install the Visual Studio Tools for Office Runtime Redistributable](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)」を参照してください。 Visual Studio 2010 Tools for Office Runtime は、次の 2 つの主要コンポーネントで構成されています。  
@@ -119,7 +120,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="repairing-the-visual-studio-2010-tools-for-office-runtime"></a>Visual Studio 2010 Tools for Office Runtime の修復  
  ランタイムを修復する必要がある場合は、[コントロール パネル] の **[プログラムと機能]** または **[プログラムの追加と削除]** を開き、プログラムの一覧から **[Microsoft Visual Studio 2010 Tools for Office Runtime]** をクリックし、 **[アンインストール]**をクリックします。 実行されるセットアップ プログラムを使用して、ランタイムを修復できます。 **[変更]**をクリックした場合、ランタイムを修復するオプションは表示されません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Tools for Office Runtime Installation Scenarios](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md)   
  [Visual Studio Tools for Office Runtime のアセンブリ](../vsto/assemblies-in-the-visual-studio-tools-for-office-runtime.md)   
  [Visual Studio での Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)   

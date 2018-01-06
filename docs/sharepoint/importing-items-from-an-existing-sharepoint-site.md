@@ -25,11 +25,12 @@ caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c4ad4566f013d322e1e5b7a150fea84a5682d938
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 6dbfc2fd214d11eac8a9615c95d3f3ec6e6f3efa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importing-items-from-an-existing-sharepoint-site"></a>既存の SharePoint サイトからのアイテムのインポート
   SharePoint ソリューション パッケージのインポート プロジェクト テンプレートによって、新しい [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint ソリューションの既存の SharePoint サイトからコンテンツ タイプやフィールドなどの要素を再利用できます。 インポートしたソリューションのほとんどは変更せずに実行できますが、それらをインポートした後にいずれかの項目を変更する場合は特に、考慮すべき特定の制限事項および問題があります。  
@@ -139,7 +140,7 @@ ms.lasthandoff: 10/31/2017
   
  新しいすべてのプロジェクトの SharePointProductVersion 属性は 14.0 に設定されるため、Script Manager コントロールがないと、 [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)] または [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)] のプロジェクトを [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)]にインポートするときに問題が発生する可能性があります。 Web フォームが存在するアップグレードされたプロジェクトを Script Manager なしで配置する場合、フォームは SharePoint に表示されません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: 既存の SharePoint サイトからのアイテムをインポートします。](../sharepoint/walkthrough-import-items-from-an-existing-sharepoint-site.md)   
  [再利用可能なワークフローをインポートするためのガイドライン](../sharepoint/guidelines-for-importing-reusable-workflows.md)   
  [チュートリアル: SharePoint Designer の再利用可能なワークフローの Visual Studio へのインポートします。](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md)   

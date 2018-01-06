@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: b792eee528ced288a4073d103286e7b052aa6448
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 08d33725b47535fb3b88d2f8e653155e83ae5a57
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="removefromcollectionlttgt-activity-designer"></a>RemoveFromCollection&lt;T&gt;アクティビティ デザイナー
 **RemoveFromCollection\<T >**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.RemoveFromCollection%601>アクティビティ。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/27/2017
 |*TypeArgument*|True|<xref:System.Collections.Generic.ICollection%601> に格納される項目の T 型。 既定では、この*TypeArgument*に設定されている型**Int32**です。 型を変更するには、値を変更、 *TypeArgument*プロパティ グリッドのコンボ ボックスにします。|  
 |<xref:System.Activities.Activity%601.Result%2A>|False|指定した項目がコレクションから削除されたかどうかを示す値。 結果にバインドする変数を指定するには、プロパティ グリッドで変数を入力します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コレクション](../workflow-designer/collection-activity-designers.md)   
  [AddToCollection\<T >](../workflow-designer/addtocollection-t-activity-designer.md)   
  [ClearCollection\<T >](../workflow-designer/clearcollection-t-activity-designer.md)   

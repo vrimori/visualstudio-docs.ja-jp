@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 2f7b77dfb83fbadb4b05685e684e95ee0c2d57cc
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 56a20f6e29f0f1bd6e071e6d3b48442c0bf02e77
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="parallelforeachlttgt-activity-designer"></a>ParallelForEach&lt;T&gt;アクティビティ デザイナー
 <xref:System.Activities.Statements.ParallelForEach%601> アクティビティでは、コレクションの要素を列挙し、コレクションの各要素に対して埋め込みステートメントを並列的に (同じスレッドで非同期的に) 実行します。 このフロー制御アクティビティは、その子アクティビティがアイドル状態になると予想される場合に、<xref:System.Activities.Statements.Sequence> アクティビティの代わりに使用します。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/27/2017
   
  既定では、ループ反復子には、item という名前が付けられます。 反復子変数の名前を変更することができます、 **ForEach**ボックス**ParallelForEach\<T >**アクティビティ デザイナー。 ループ反復子は、<xref:System.Activities.Statements.ParallelForEach%601> アクティビティの子の式で使用できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [シーケンス](../workflow-designer/sequence-activity-designer.md)   
  [並列](../workflow-designer/parallel-activity-designer.md)   
  [制御フロー](../workflow-designer/control-flow-activity-designers.md)

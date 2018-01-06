@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: fbdb0d481c0740310f40f6a75d8c84db765f847d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: b93226b7223272c04b7d2e6b36b82cf737cd1b86
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-stepping-options-legacy"></a>デバッグのステップ実行オプション (レガシ)
 このトピックでは、従来の [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]で、同時アクティビティを含む [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] アプリケーションをデバッグする方法について説明します。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。  
@@ -36,6 +37,6 @@ ms.lasthandoff: 10/27/2017
   
  従来のステート マシン ワークフローをデバッグするときには、インスタンス ステップ実行オプションを選択する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [従来のワークフローのデバッグ](../workflow-designer/debugging-legacy-workflows.md)   
  [方法: デバッグのステップ実行オプションを変更する (レガシ)](../workflow-designer/how-to-change-the-debug-stepping-option-legacy.md)

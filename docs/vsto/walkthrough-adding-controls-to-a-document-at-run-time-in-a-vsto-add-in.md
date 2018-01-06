@@ -20,11 +20,12 @@ caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0d220cca9ddd08004540768bbeb7322d28dedaa8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 28ed2ff2d68dc5a23cfceeb5d5f0eab6dea35eb9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-adding-controls-to-a-document-at-run-time-in-a-vsto-add-in"></a>チュートリアル: 実行時における VSTO アドインの文書へのコントロールの追加
   VSTO アドインを使用して、開いている Microsoft Office の Word 文書にコントロールを追加できます。 このチュートリアルでは、リボンを使用してユーザーがドキュメントに <xref:Microsoft.Office.Tools.Word.Controls.Button> または <xref:Microsoft.Office.Tools.Word.RichTextContentControl> を追加できるようにする方法を説明します。  
@@ -82,17 +83,17 @@ ms.lasthandoff: 10/31/2017
   
 8.  **[プロパティ]** ウィンドウで、次のプロパティを変更します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**addButtonCheckBox**|  
+    |**Name**|**addButtonCheckBox**|  
     |**group1**|**追加ボタン**|  
   
 9. **group1**に 2 つ目のチェック ボックスを追加し、次のプロパティを変更します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|**addRichTextCheckBox**|  
-    |**group1**|**リッチ テキスト コントロールの追加**|  
+    |**Name**|**addRichTextCheckBox**|  
+    |**Label**|**リッチ テキスト コントロールの追加**|  
   
 10. リボン デザイナーで **[ボタンの追加]**をダブルクリックします。  
   
@@ -186,7 +187,7 @@ ms.lasthandoff: 10/31/2017
   
 -   Excel 用 VSTO アドインを使用してワークシートにコントロールを追加する方法について説明するチュートリアルでは、次を参照してください。[チュートリアル: 実行時における VSTO ワークシートにコントロールの追加のアドイン プロジェクト](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Word ソリューション](../vsto/word-solutions.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   
  [Office 文書で動的コントロールの永続化](../vsto/persisting-dynamic-controls-in-office-documents.md)   

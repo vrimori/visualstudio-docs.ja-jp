@@ -20,11 +20,12 @@ caps.latest.revision: "55"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a61a56401e97a47da0903dadfff35e16c974bbc5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: cb36af8973ce44de9c6e7bbb06af8040da420dbf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-your-first-vsto-add-in-for-word"></a>チュートリアル : 初めての Word 用 VSTO アドインの作成
   この入門チュートリアルでは、Microsoft Office Word 用の VSTO アドインを作成する方法について説明します。 この種のソリューションに作成した機能は、どのドキュメントが開いているかにかかわらず、アプリケーション自体に対して使用できます。  
@@ -66,14 +67,14 @@ ms.lasthandoff: 10/31/2017
   
 6.  **名前**ボックスに、入力**FirstWordAddIn**です。  
   
-7.  **[OK]** をクリックします。  
+7.  **[OK]**をクリックします。  
   
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]作成、 **FirstWordAddIn**プロジェクト、エディターで、ThisAddIn コード ファイルを開きます。  
   
 ## <a name="writing-code-to-add-text-to-the-saved-document"></a>保存するドキュメントにテキストを追加するコードの記述  
  次に、ThisAddIn コード ファイルにコードを追加します。 この新しいコードでは、Word のオブジェクト モデルを使用して、保存する各ドキュメントに定型のテキストを追加します。 ThisAddIn コード ファイルには、次の生成コードが既定で含まれています。  
   
--   `ThisAddIn` クラスの部分定義。 このクラスは、コードのエントリ ポイントを提供し、Word のオブジェクト モデルへのアクセスを提供します。 詳細については、「 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)」を参照してください。`ThisAddIn` クラスの残りの部分は、変更することができない非表示のコード ファイルに定義されています。  
+-   `ThisAddIn` クラスの部分定義。 このクラスは、コードのエントリ ポイントを提供し、Word のオブジェクト モデルへのアクセスを提供します。 詳細については、「 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)。`ThisAddIn` クラスの残りの部分は、変更することができない非表示のコード ファイルに定義されています。  
   
 -   `ThisAddIn_Startup` および `ThisAddIn_Shutdown` イベント ハンドラー。 これらのイベント ハンドラーは、Word が VSTO アドインを読み込むときとアンロードするときに呼び出されます。 これらのイベント ハンドラーを使用して、VSTO アドインを読み込むときに初期化し、VSTO アドインがアンロードされるときには使用したリソースをクリーンアップします。 詳細については、「 [Events in Office Projects](../vsto/events-in-office-projects.md)」を参照してください。  
   
@@ -137,7 +138,7 @@ ms.lasthandoff: 10/31/2017
   
 -   Word 用 VSTO アドインの配置: [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)   
  [Word ソリューション](../vsto/word-solutions.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   

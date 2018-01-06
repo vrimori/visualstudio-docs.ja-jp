@@ -21,11 +21,12 @@ caps.latest.revision: "35"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: eb745f97b2ab1499206b94cfcd03c2255c7bb3b9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 31a895bfc4892959eedba846f226bccba3435bb6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-retrieving-cached-data-from-a-workbook-on-a-server"></a>チュートリアル : サーバー上のブックからのキャッシュされたデータの取得
   このチュートリアルを使用して Excel を起動しなくても Microsoft Office Excel ブックにキャッシュされているデータセットからデータを取得する方法、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>クラスです。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 10/31/2017
   
 7.  **新しいプロジェクト** ダイアログ ボックスで、いることを確認、**ソリューションのディレクトリを作成** チェック ボックスが選択されていません。  
   
-8.  **[OK]** をクリックします。  
+8.  **[OK]**をクリックします。  
   
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **AdventureWorksDataSet**プロジェクトを**ソリューション エクスプ ローラー**開くと、 **Class1.cs**または**Class1.vb**コード ファイル。  
   
@@ -139,7 +140,7 @@ ms.lasthandoff: 10/31/2017
   
 5.  **名前**ボックスに、入力**AdventureWorksReport**です。 場所は変更しないでください。  
   
-6.  **[OK]** をクリックします。  
+6.  **[OK]**をクリックします。  
   
      **Visual Studio Tools for Office プロジェクト ウィザード** が開きます。  
   
@@ -238,7 +239,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  **名前**ボックスに、入力**DataReader**です。 場所は変更しないでください。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **DataReader**プロジェクトを**ソリューション エクスプ ローラー**開くと、 **Program.cs**または**Module1.vb**コード ファイル。  
   
@@ -251,7 +252,7 @@ ms.lasthandoff: 10/31/2017
   
 2.  **.NET**  タブで、Microsoft.VisualStudio.Tools.Applications.ServerDocument を選択します。  
   
-3.  **[OK]** をクリックします。  
+3.  **[OK]**をクリックします。  
   
 4.  **ソリューション エクスプ ローラー**を右クリックし、 **DataReader**プロジェクトし、クリックして**参照の追加**です。  
   
@@ -307,7 +308,7 @@ ms.lasthandoff: 10/31/2017
   
 -   Excel を起動せずには、キャッシュされたデータセット内のデータを変更します。 詳細については、次を参照してください。[チュートリアル: サーバー上のブック内のキャッシュされたデータの変更](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: サーバー上のブックへのデータの挿入](../vsto/walkthrough-inserting-data-into-a-workbook-on-a-server.md)   
  [チュートリアル: サーバー上のブックにキャッシュされたデータの変更](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md)   
  [Windows フォーム アプリケーションでのデータへの接続](/visualstudio/data-tools/connecting-to-data-in-windows-forms-applications)  

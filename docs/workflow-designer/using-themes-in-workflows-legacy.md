@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 6acbd33d04c939b95d16da4e0c8085681b602378
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: afaa64da38508ffcf55d86c3a6fe16bd0e884f7a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-themes-in-workflows-legacy"></a>ワークフロー内でのテーマの使用 (レガシ)
 このトピックでは、[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] または [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] を対象とする従来の [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)]を使用する際に、[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] のテーマを使用する方法について説明します。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/27/2017
   
  既定値を選択して保存したカスタム テーマを使用して、[テーマをワークフロー デザイナーのオプション ダイアログ ボックス (レガシ)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md)です。 このダイアログ ボックスを開くをクリックして**カスタム テーマの**上、**ワークフロー**メニュー (またはワークフロー デザイン サーフェイスを右クリックし、をクリックして**カスタム テーマの**) し、**ワークフロー デザイナー**オプション。 をクリックしてテーマを選択**OK**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [テーマ構成ダイアログ ボックス (レガシ)](../workflow-designer/theme-configuration-dialog-box-legacy.md)   
  [テーマをワークフロー デザイナーのオプション ダイアログ ボックス (レガシ)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md)   
  [従来のワークフロー デザイナーの使用](../workflow-designer/using-the-legacy-workflow-designer.md)

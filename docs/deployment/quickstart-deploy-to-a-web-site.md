@@ -13,11 +13,12 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1a0b4051ce8ba14302e403cb213804b8193b60af
-ms.sourcegitcommit: 64c7682ec3a2cbea684e716803398d4278b591d1
+ms.workload: multiple
+ms.openlocfilehash: 07944d5690433831889e56375cfa13ba774aaa8b
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="publish-a-web-app-or-a-net-core-app-to-a-web-site-using-the-visual-studio-publish-tool"></a>Visual Studio 発行ツールを使用して web サイトに web アプリまたは .NET Core アプリを発行します。
 
@@ -73,6 +74,6 @@ ms.lasthandoff: 12/15/2017
 
     出力ウィンドウは、展開の進行状況と結果を表示します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-- [IIS に ASP.NET を配置します。](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)
+- [IIS に ASP.NET を配置する](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)

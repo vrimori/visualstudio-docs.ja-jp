@@ -16,11 +16,12 @@ caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4c51065eacda271daeb12c17fdeb5fe4e6b20683
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: ac0fc1ca0efe4134889d8bf5ac1d3ca9ae2551ef
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="globalization-and-localization-of-excel-solutions"></a>Excel ソリューションのグローバリゼーションとローカリゼーション
   ここでは、Windows に英語以外の言語を設定しているコンピューターで実行される Microsoft Office Excel ソリューションにおいて、特に考慮が必要な事項について説明します。 Microsoft Office ソリューションのグローバリゼーションとローカリゼーションは、ほとんどの点で、Visual Studio を使用して他の種類のソリューションを作成する場合と同じです。 一般情報については、「 [Globalizing and Localizing Applications](/visualstudio/ide/globalizing-and-localizing-applications)」を参照してください。  
@@ -98,7 +99,7 @@ Application.ActiveCell.Value2 = "05/12/04"
 ### <a name="applications-that-use-external-data"></a>外部データを使用するアプリケーション  
  レガシ システムからエクスポートされたコンマ区切り値を含むファイル (CSV ファイル) などの外部データを開いたり使用したりするコードは、ファイルが en-US 以外の形式でエクスポートされると影響が出る場合があります。 データベースへのアクセスはすべての値がバイナリ形式なので影響を受けないと考えられますが、データベースで日付が文字列として保存されていたり、バイナリ形式を使用しない操作が実行されたりする場合は、この限りではありません。 また、Excel のデータを使用して SQL クエリを作成する場合、使用する関数によってはデータを en-US 形式にする必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: Office Multilingual User Interface のターゲット](../vsto/how-to-target-the-office-multilingual-user-interface.md)   
  [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  

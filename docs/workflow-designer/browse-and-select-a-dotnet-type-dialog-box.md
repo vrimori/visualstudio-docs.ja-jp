@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ac184805803e92758e1de93400c957d00e8ebda6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: dotnet
+ms.openlocfilehash: b891f2af72de34c2ccd71043f2674c338ddb44f9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>[.NET 型の参照と選択] ダイアログ ボックス
 **プロパティ**ウィンドウ、ダイアログ ボックス、またはを選択すると、変数デザイナーなどのデザイナー**型を参照しています.**データ型の一覧からは、**を参照して .NET 型を選択** ダイアログ ボックス (「型ブラウザー」と省略形で呼ばれます)。 このダイアログ ボックスでは、アセンブリとプロジェクトのツリー表示から型を選択できます。  
@@ -71,5 +72,5 @@ ms.lasthandoff: 10/27/2017
 ## <a name="selecting-a-service-contract-using-the-type-browser-dialog"></a>型ブラウザー ダイアログを使用したサービス コントラクトの選択  
  サービス コントラクト型を選択すると、型ブラウザーは <xref:System.ServiceModel.ServiceContractAttribute> 属性を持つ型だけを表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アクティビティ デザイナーの使用](../workflow-designer/using-the-activity-designers.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: dc005e282e7581aa2af5cba7da3a23040bf9d8b1
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: ba4078a903c1e30b968928e13c8d160c898bbf0d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemactivities-tab-choose-toolbox-items-dialog-box"></a>[ツールボックス アイテムの選択] ダイアログ ボックスの [System.Activities] タブ
 このタブ、**ツールボックス アイテムの選択** ダイアログ ボックスの一覧を表示する[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]アクティビティ、テンプレートおよび項目に使用できます。 この一覧を表示するには選択**ツールボックス アイテムの選択**から、**ツール**メニューを右クリックして、または、**ツールボックス**を選択して**アイテムの選択**を表示する、**ツールボックス アイテムの選択**クリックしてダイアログ ボックスで、その**System.Activities**タブです。既定では、System.Activities、System.ServiceModel.Activities、および System.Activities.Core.Presentation アセンブリ; からワークフロー アクティビティが一覧に含まれますただし、のみ、システム標準アクティビティおよびアクティビティに表示されるその他のアセンブリから追加された、**ツールボックス**が既定でオンです。 最近追加アクティビティが自動的にオンおよびに表示されます、**ツールボックス**をクリックすると**OK**  ダイアログ ボックス。 またでこれらの項目が表示されます、**ツールボックス**アクティビティ、アイテム、テンプレートが存在する名前空間に対応する新しいカテゴリの下。  
