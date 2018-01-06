@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e29734f857453fa51860c13e71699a8d2173d07a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b52c4f28f1f027648674f2be561fc11d7117b6f4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumdebugprograms2"></a>IEnumDebugPrograms2
 このインターフェイスは、現在のデバッグ セッションで実行するプログラムを列挙します。  
@@ -57,14 +58,14 @@ IEnumDebugPrograms2 : IUnknown
   
 -   各プログラムに編集と続行 (ENC) の更新プログラムを適用 (IDebugProcess2::EnumPrograms を呼び出しを呼び出すことで、 [GetENCUpdate](../../../extensibility/debugger/reference/idebugprogram2-getencupdate.md))。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [EnumPrograms](../../../extensibility/debugger/reference/idebugengine2-enumprograms.md)   
  [EnumPrograms](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)

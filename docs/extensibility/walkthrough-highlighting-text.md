@@ -13,11 +13,12 @@ caps.latest.revision: "42"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1f702a834b925f13525db122934a5593d313e0ac
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b54dabbe00b0df920655b595cab32ed21126415b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-highlighting-text"></a>チュートリアル: テキストを強調表示
 エディターにさまざまな視覚効果を追加するには、Managed Extensibility Framework (MEF) コンポーネント パーツを作成します。 このチュートリアルでは、テキスト ファイルの現在の単語のすべての出現箇所を強調表示する方法を示します。 Word では、テキスト ファイルの 1 つ以上の時間が 1 つにキャレットを配置する場合は、すべての出現箇所が強調表示されます。  
@@ -407,5 +408,5 @@ ms.lasthandoff: 10/31/2017
   
 4.  「こんにちは」の出現回数は、のいずれかでカーソルを置きます。 すべての出現箇所は、青で強調表示する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: コンテンツの種類とファイル名拡張子とをリンクさせる](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

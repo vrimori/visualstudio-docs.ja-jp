@@ -16,11 +16,12 @@ caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8d25243c82cbb1facc4029e1a770113a7b1fca57
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: de3fc9b6edb3b916162a1beb34fb716d5c2adaa4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="support-for-user-settings"></a>ユーザー設定のサポート
 VSPackage は、ユーザーが選択したときに永続化状態変数のグループ、1 つまたは複数の設定カテゴリの定義可能性があります、**設定のインポート/エクスポート**コマンドを**ツール**メニュー。 この永続化を有効にする設定を使用して Api で、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]です。  
@@ -53,10 +54,10 @@ VSPackage は、ユーザーが選択したときに永続化状態変数のグ�
   
  AlternateParent CategoryName を =  
   
-|名前|型|データ|説明|  
+|name|型|データ|説明|  
 |----------|----------|----------|-----------------|  
 |(既定)|REG_SZ|カスタム設定ポイントの名前|キーの名前、 `<CSPName`>、カスタム設定ポイントのローカライズされていない名前を指定します。<br /><br /> MPF に基づいて実装では、キーの名前を取得組み合わせることによって、`categoryName`と`objectName`の引数、<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>にコンス トラクター`categoryName_objectName`です。<br /><br /> キーを空にすることや、サテライト DLL にローカライズされた文字列に参照 ID を含めることができます。 この値は、`objectNameResourceID`への引数、<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>コンス トラクターです。|  
 |Package|REG_SZ|GUID|カスタム設定ポイントを実装する VSPackage の GUID です。<br /><br /> 実装が MPF を使用してに基づいて、<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>クラス、コンス トラクターの使用`objectType`VSPackage を含む引数<xref:System.Type>し、この値を取得するためにリフレクションします。|  
 |カテゴリ|REG_SZ|GUID|設定のカテゴリを識別する GUID。<br /><br /> 相互運用機能アセンブリに基づく実装では、この値を任意に選択したにすることができます、GUID を[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]IDE に渡します、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUserSettings.ExportSettings%2A>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsUserSettings.ImportSettings%2A>メソッドです。 これら 2 つのメソッドのすべての実装では、その引数として GUID を確認してください。<br /><br /> MPF に基づいて実装では、この GUID を取得して、<xref:System.Type>実装するクラスの[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]設定メカニズムです。|  
-|ResourcePackage|REG_SZ|GUID|省略可能です。<br /><br /> サテライト DLL を含むへのパスは、実装する VSPackage がそれらを指定しない場合、文字列をローカライズします。<br /><br /> MPF リフレクションを使用して、適切なリソース、VSPackage を取得するため、<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>クラスは、この引数を設定しません。|  
-|AlternateParent|REG_SZ|このカスタム設定ポイントを含むツール オプション ページの下のフォルダーの名前です。|省略可能です。<br /><br /> 設定の実装をサポートしている場合にのみ、この値を設定する必要があります**ツール オプション**で永続化メカニズムを使用しているページ、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]オートメーション モデル状態を保存するメカニズムではなくです。<br /><br /> AlternateParent キーの値は、このような場合、`topic`のセクションで、`topic.sub-topic`特定の識別に使用される文字列**制御**ページ。 たとえば、**制御**ページ`"TextEditor.Basic"`AlternateParent の値になります`"TextEditor"`です。<br /><br /> ときに<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>カスタム設定ポイントが生成されますが、カテゴリ名と同じです。|
+|ResourcePackage|REG_SZ|GUID|任意。<br /><br /> サテライト DLL を含むへのパスは、実装する VSPackage がそれらを指定しない場合、文字列をローカライズします。<br /><br /> MPF リフレクションを使用して、適切なリソース、VSPackage を取得するため、<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>クラスは、この引数を設定しません。|  
+|AlternateParent|REG_SZ|このカスタム設定ポイントを含むツール オプション ページの下のフォルダーの名前です。|任意。<br /><br /> 設定の実装をサポートしている場合にのみ、この値を設定する必要があります**ツール オプション**で永続化メカニズムを使用しているページ、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]オートメーション モデル状態を保存するメカニズムではなくです。<br /><br /> AlternateParent キーの値は、このような場合、`topic`のセクションで、`topic.sub-topic`特定の識別に使用される文字列**制御**ページ。 たとえば、**制御**ページ`"TextEditor.Basic"`AlternateParent の値になります`"TextEditor"`です。<br /><br /> ときに<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>カスタム設定ポイントが生成されますが、カテゴリ名と同じです。|

@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 25320e87bce135d442bfc25499f3c503fa529ff0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7957a8b841c34b85983af1aa152af466c469f8e1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="file-status-code-enumerator"></a>ファイルのステータス コード列挙子
 `SccStatus`列挙子には、ソース管理システムでファイルの状態を指定する名前付きの定数値が含まれています。 この列挙を使用、 [SccQueryInfo](../extensibility/sccqueryinfo-function.md)と`POPLISTFUNC`コールバック関数 (を参照してください[POPLISTFUNC](../extensibility/poplistfunc.md)詳細)。  
@@ -106,7 +107,7 @@ enum SccStatus {
  SCC_STATUS_RESERVED_2  
  内部使用のために予約されています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)   
  [SccQueryInfo](../extensibility/sccqueryinfo-function.md)   
  [POPLISTFUNC](../extensibility/poplistfunc.md)

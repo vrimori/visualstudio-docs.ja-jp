@@ -11,11 +11,12 @@ caps.latest.revision: "14"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: aeaaa6605d316804dc49a82de72fa2c43d25b03c
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: 3819227bbdfdd754166c886c9da0cc8bd727e94e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="structure-your-modeling-solution"></a>モデリング ソリューションの構築
 開発プロジェクトでモデルを効果的に使用するため、チーム メンバーは、プロジェクトのさまざまな部分のモデルを同時に作業する必要があります。 このトピックでは、アプリケーションを、レイヤー図全体の各レイヤーに対応する複数の部分に分割するスキームを提案します。  
@@ -108,5 +109,5 @@ ms.lasthandoff: 11/07/2017
   
  [Visual Studio アーキテクチャ Tooling ガイダンス](../modeling/visual-studio-architecture-tooling-guidance.md)-さらに、チームでのモデルの管理に関するガイダンス  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [開発プロセス内でのモデルの使用](../modeling/use-models-in-your-development-process.md)

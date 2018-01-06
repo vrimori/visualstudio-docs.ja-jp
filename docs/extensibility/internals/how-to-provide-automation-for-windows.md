@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 945eeb8b81ecb26d43da9528db154d133c4f868c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 17cf60573b6feb9fd317116eec4639dbf88f6089
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-provide-automation-for-windows"></a>方法: Windows 用のオートメーションの提供
 ドキュメントとツール ウィンドウのオートメーションを使用できます。 オートメーションは適切では、ウィンドウのオートメーション オブジェクトを使用できるようにして、環境が存在しないときに提供することは、タスク一覧で、既製のオートメーション オブジェクトを提供します。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/31/2017
   
  さらに、エディターが使用して取得、VSPackage に固有のオートメーション オブジェクトを提供できます、<xref:EnvDTE.Document.Object%2A>メソッドを実装することによって、`IVsExtensibleObject`または`IExtensibleObject`インターフェイスです。 [VSSDK のサンプル](http://aka.ms/vs2015sdksamples)RTF ドキュメント固有のオートメーション オブジェクトを提供します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibleObject>

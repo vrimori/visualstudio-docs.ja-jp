@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e2dc00ec727be054ff05b08a968bdb52f8b33ee2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: afc6fa8637a3ff91639617f64739684a72867046
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumcodepaths2skip"></a>IEnumCodePaths2::Skip
 指定した要素数をスキップします。  
@@ -47,5 +48,5 @@ int Skip(
 ## <a name="remarks"></a>コメント  
  場合`celt`数より大きい値を指定して残りの要素の列挙体が最後に設定し、`S_FALSE`が返されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md)

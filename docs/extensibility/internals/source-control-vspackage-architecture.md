@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 80153e271fed6a7fab49e00c8124f1ede7613bfa
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 002dea54b63a78975d56464319614d369a9b2318
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="source-control-vspackage-architecture"></a>ソース コントロールの VSPackage のアーキテクチャ
 ソース管理パッケージは、サービスを使用して、VSPackage、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE を提供します。 代わりに、ソース管理パッケージは、ソース管理サービスとしての機能を提供します。 さらに、ソース管理パッケージは、ソース管理プラグインにソース管理を統合するためのよりも柔軟性の高い代替[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
@@ -49,6 +50,6 @@ ms.lasthandoff: 10/31/2017
   
  ソース管理プラグイン API ベースを作成するよりもより高度なプログラミングの専門知識を必要とソース コントロールを VSPackage に基づくパッケージの書き込みプラグインします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>   
  [はじめに](../../extensibility/internals/getting-started-with-source-control-vspackages.md)

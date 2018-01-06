@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 371dbeff80ce424cbb37aad6be4265aeec437cd0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: aaaf66616722739ad51b07e75470f6edfde5c1b5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugexpression2evaluateasync"></a>IDebugExpression2::EvaluateAsync
 このメソッドは、非同期的に式を評価します。  
@@ -49,7 +50,7 @@ int EvaluateAsync(
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`です。 それ以外の場合はエラー コードを返します。 一般的なエラー コードは次のとおりです。  
   
-|エラー|説明|  
+|Error|説明|  
 |-----------|-----------------|  
 |E_EVALUATE_BUSY_WITH_EVALUATION|もう一方の式が評価されている現在、および同時式の評価はサポートされていません。|  
   
@@ -73,7 +74,7 @@ HRESULT CExpression::EvaluateAsync(EVALFLAGS dwFlags,
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)   
  [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)   
  [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)   

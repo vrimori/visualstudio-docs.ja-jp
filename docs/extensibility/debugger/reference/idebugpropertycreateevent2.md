@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: afe91b8dfa6321d046b7bdeb301e426d1083263f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0557fd39d21415dfddb1a571c4f9e6ee69badf10
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugpropertycreateevent2"></a>IDebugPropertyCreateEvent2
 このインターフェイスは、特定のドキュメントに関連付けられているプロパティの作成時に、セッションのデバッグ マネージャー (SDM) にデバッグ エンジン (DE) によって送信されます。  
@@ -45,14 +46,14 @@ IDebugPropertyCreateEvent2 : IUnknown
 ## <a name="remarks"></a>コメント  
  プロパティに特定のドキュメントまたはそれに関連付けられているスクリプトがある場合、DE できますこのにイベントを送信、SDM を更新するために、**スクリプト ドキュメント**ドキュメントの名前を持つウィンドウです。 SDM が呼び出す[GetExtendedInfo](../../../extensibility/debugger/reference/idebugproperty2-getextendedinfo.md)引数と共に`guidDocument`を取得する、`VARIANT`を含む、 [IUnknown](/cpp/atl/iunknown)ポインター。 SDM が呼び出す[QueryInterface](/cpp/atl/queryinterface)を取得するには、このポインター上、 [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)の更新に使用するインターフェイス、**スクリプト ドキュメント**ウィンドウです。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)   

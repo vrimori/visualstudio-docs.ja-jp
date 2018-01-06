@@ -61,11 +61,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6d57dab19820436dd9c7e3fb07607b5506c180a5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: e0da4387056e68046294a2f82c9db7bbc798de07
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="additional-support-for-errors-in-office-solutions"></a>Office ソリューションのエラーについての追加サポート
   次のリソースを使用すると、Visual Studio で Office ソリューションを作成する際に発生する問題に対する回答を検索できます。  
@@ -92,7 +93,7 @@ ms.lasthandoff: 10/31/2017
  [Office ソリューション開発用のその他のリソース](../vsto/additional-resources-for-developing-office-solutions.md)  
  Office ソリューションと Visual Studio での Office 開発の開発について学習するためには、その他のリソースへのリンクを提供します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションのエラーのトラブルシューティング](../vsto/troubleshooting-errors-in-office-solutions.md)   
  [Office ソリューションのセキュリティのトラブルシューティング](../vsto/troubleshooting-office-solution-security.md)   
  [Office ソリューションの配置のトラブルシューティング](../vsto/troubleshooting-office-solution-deployment.md)   

@@ -20,11 +20,12 @@ caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6927a639bd3bb41b0498b1eb939d07cddcde0a79
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: c1d9008dc88640adee8db3f02b43cad314a47b32
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-and-deployment-walkthroughs"></a>セキュリティおよび配置に関するチュートリアル
   次のトピックでは、実行するには、ソリューションを許可するセキュリティ ポリシーを設定する方法と、Office ソリューションを配置する方法を示しています。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/31/2017
  [Office ソリューションのデザインと作成](../vsto/designing-and-creating-office-solutions.md)  
  ソリューションに Word と Excel のソリューションとアセンブリの役割の作成に関する情報へのリンクを提供します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)  
   
   

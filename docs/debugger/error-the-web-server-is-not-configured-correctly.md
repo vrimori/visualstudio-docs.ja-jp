@@ -6,7 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords: vs.debug.remote.projnotconfigured
 dev_langs:
 - CSharp
@@ -14,16 +14,16 @@ dev_langs:
 - FSharp
 - C++
 helpviewer_keywords: debugger, Web application errors
-ms.assetid: 875ba87f-c372-4126-8fe3-e33931cf26c0
 caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e0538693a815cf9749b3cd9df007486de1af3637
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6f1e206cc9327ef933f52f35960f628170e02c38
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="error-the-web-server-is-not-configured-correctly"></a>エラー : Web サーバーは正しく構成されていません。
 
@@ -45,10 +45,10 @@ ms.lasthandoff: 10/31/2017
 
 4. (IIS)サーバーの正しいバージョンの ASP.NET がインストールされていることを確認します。
 
-    Visual Studio プロジェクトと IIS で ASP.NET のバージョンが一致しないには、この問題が発生します。 Web.config のフレームワークのバージョンを設定する必要があります。IIS で ASP.NET をインストールするには、使用、 [Web Platform Installer (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)です。 またを参照してください[IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)または ASP.NET Core [IIS と Windows 上のホスト](https://docs.asp.net/en/latest/publishing/iis.html)です。
+    Visual Studio プロジェクトと IIS で ASP.NET のバージョンが一致しないには、この問題が発生します。 Web.config のフレームワークのバージョンを設定する必要があります。IIS で ASP.NET をインストールするには、使用、 [Web Platform Installer (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)です。 またを参照してください[IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)または ASP.NET Core [IIS と Windows 上のホスト](https://docs.asp.net/en/latest/publishing/iis.html)です。
   
-4. 場合、 `maxConnection` IIS での制限が低すぎると接続が多すぎますがある、する必要があります[接続制限を増やす](https://docs.microsoft.com/en-us/iis/configuration/system.applicationhost/sites/sitedefaults/limits)です。
+4. 場合、 `maxConnection` IIS での制限が低すぎると接続が多すぎますがある、する必要があります[接続制限を増やす](/iis/configuration/system.applicationhost/sites/sitedefaults/limits)です。
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ASP.NET の IIS のリモート コンピューター上でリモート デバッグ](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)   
  [Web アプリケーションのデバッグ : エラーおよびトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

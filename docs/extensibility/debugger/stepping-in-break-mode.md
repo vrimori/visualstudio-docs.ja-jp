@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 011de9ce3e4e1445354f907dcf56a0f4ecbef6bc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: bb56cef2f60b0268528ea75e4fe2b991a7472192
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stepping-in-break-mode"></a>中断モードでのステップ実行
 次に、デバッガーは中断モードにして、コードをステップ実行する必要があるときに発生するプロセスについて説明します。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/31/2017
   
 2.  ステップが完了したら、送信、 [IDebugStepCompleteEvent2](../../extensibility/debugger/reference/idebugstepcompleteevent2.md)停止イベントとして。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのイベントの呼び出し](../../extensibility/debugger/calling-debugger-events.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 90def1bc4d824c6fdfd597ec8beb4b1f18f9e008
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: c19312b005a1f8dfeefa766ed3a5e6a8ab1c566c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltassemblygt-element-clickonce-deployment"></a>&lt;アセンブリ&gt;要素 (ClickOnce 配置)
 配置マニフェストの最上位要素です。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/27/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|`manifestVersion`|必須です。 この属性に設定する必要があります`1.0`です。|  
+|`manifestVersion`|必須。 この属性に設定する必要があります`1.0`です。|  
   
 ## <a name="example"></a>例  
  次のコード例を示しています、`assembly`を使用してデプロイされたアプリケーションの配置マニフェスト内の要素[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]です。 このコード例に示されている例の一部である、 [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)トピックです。  
@@ -63,6 +64,6 @@ ms.lasthandoff: 10/27/2017
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)   
  [\<アセンブリ > 要素](../deployment/assembly-element-clickonce-application.md)

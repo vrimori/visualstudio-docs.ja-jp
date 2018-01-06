@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0094accca0feb026fca02c78bf6e86fe512ce981
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1f766fe903df4f7a7ea36fb4ec1654b889457f65
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-window-overview"></a>プロパティ ウィンドウの概要
 **プロパティ**で利用可能な期間の 2 種類の主要で選択したオブジェクトのプロパティを表示するウィンドウを使用、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) です。 これら 2 つの種類のウィンドウは次のとおりです。  
@@ -50,6 +51,6 @@ ms.lasthandoff: 10/31/2017
   
  詳細については`IDispatch`、MSDN ライブラリを参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張プロパティ](../../extensibility/internals/extending-properties.md)   
  [プロパティ ウィンドウのフィールドとインターフェイス](../../extensibility/internals/properties-window-fields-and-interfaces.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: c14cc612c544fff9a415d68ef173edcc2f9dbd87
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 347a38a67762ed92dbf5daeb0a74d428b9e7d8f7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="initialize-correlation-dialog-box"></a>[関連付け初期化] ダイアログ ボックス
 **関連付けの初期化**では、ダイアログ ボックスを使用してください。[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]を編集する、<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>のプロパティ、<xref:System.ServiceModel.Activities.InitializeCorrelation>アクティビティ。 [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md)トピックです。  
@@ -32,5 +33,5 @@ ms.lasthandoff: 10/27/2017
   
 -   をクリックして**ビュー**上、 **InitializeCorrelation**アクティビティ デザイナーまたは [、<xref:System.ServiceModel.Activities.InitializeCorrelation>でアクティビティ[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]] の横にある省略記号ボタンをクリックして、<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>内のプロパティプロパティ グリッドです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md)

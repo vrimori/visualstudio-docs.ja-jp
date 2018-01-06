@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 41769e3c356294960cc5f4d58db77c0f190f13c5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8a5c5bca596ebf463841c0e2dcb1c6ba1cce71b2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugreference2setvalueasstring"></a>IDebugReference2::SetValueAsString
 文字列からの参照の値を設定します。 将来使用するために予約されています。  
@@ -54,5 +55,5 @@ int SetValueAsString (
 ## <a name="return-value"></a>戻り値  
  常に `E_NOTIMPL` を返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

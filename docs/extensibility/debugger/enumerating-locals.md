@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a2453d48394f6d7d4c9a5b50a0aa879b28321124
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 90b17b3a7a6d4d5ec1cebe978f75b0f4f4018db0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enumerating-locals"></a>ローカル変数の列挙
 > [!IMPORTANT]
@@ -248,7 +249,7 @@ STDMETHODIMP CFieldProperty::EnumChildren(
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ローカルの実装のサンプル](../../extensibility/debugger/sample-implementation-of-locals.md)   
  [GetMethodProperty を実装します。](../../extensibility/debugger/implementing-getmethodproperty.md)   
  [評価コンテキスト](../../extensibility/debugger/evaluation-context.md)

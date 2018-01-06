@@ -13,17 +13,18 @@ caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 256a609dad857097731e4914a11623fe62ad7664
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 660d33dd2d5c46d8020172c1fcf74bfb64b43360
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-legacy-language-service"></a>チュートリアル: 従来の言語サービスの作成
 マネージ パッケージ フレームワーク (MPF) 言語のクラスを使用して、言語のサービスを実装する[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]は簡単です。 VSPackage、言語サービス、言語サービス自体、および言語パーサーをホストする必要があります。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルを行うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../../extensibility/visual-studio-sdk.md)です。  
+ このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../../extensibility/visual-studio-sdk.md)です。  
   
 ## <a name="locations-for-the-visual-studio-package-project-template"></a>Visual Studio パッケージのプロジェクト テンプレートの場所  
  次の 3 つの異なるテンプレートの場所で、Visual Studio パッケージ プロジェクト テンプレートが見つかりません、**新しいプロジェクト** ダイアログ ボックス。  
@@ -132,5 +133,5 @@ ms.lasthandoff: 10/31/2017
   
      たとえば、「`public override`そのクラスでオーバーライド可能なすべてメソッド一覧を表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レガシ言語サービスを実装します。](../../extensibility/internals/implementing-a-legacy-language-service1.md)

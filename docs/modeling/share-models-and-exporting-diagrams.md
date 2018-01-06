@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: 982a4f54788e38129adaf5b23c15609f3ccad53d
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: 49c6ea6eff4abbd8b0863bc04a07b8c912f35c64
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="share-models-and-exporting-diagrams"></a>モデルおよびエクスポート ダイアグラムの共有
 Visual Studio では、いくつかの方法でモデルと図を同僚と共有できます。  
@@ -54,5 +55,5 @@ Visual Studio では、いくつかの方法でモデルと図を同僚と共有
 |[イメージとしてダイアグラムをエクスポートする](../modeling/export-diagrams-as-images.md)|図の一部を PowerPoint や Word などのアプリケーションにコピーすることも、図 を XPS ファイルに出力することもできます。|  
 |[アーキテクチャの分析およびモデリング](../modeling/analyze-and-model-your-architecture.md)|モデルと図の概要。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [開発プロセス内でのモデルの使用](../modeling/use-models-in-your-development-process.md)

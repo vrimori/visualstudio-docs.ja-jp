@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: aa1bc3624c8d03cfc484aaace906c2660c3a790e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c7a930c0fcdffbc76bba431012d76dd6d13686d0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccdirqueryinfo-function"></a>SccDirQueryInfo 関数
 この関数は、現在の状態の完全修飾ディレクトリの一覧を調べます。  
@@ -50,7 +51,7 @@ LPLONG  lpStatus
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|クエリは成功しました。|  
 |SCC_E_OPNOTSUPPORTED|ソース コード管理システムでは、この操作はサポートしません。|  
@@ -65,6 +66,6 @@ LPLONG  lpStatus
 > [!NOTE]
 >  ソース管理プラグイン状態の値の 1 つ以上を実装しない場合、実装されていないビットが 0 に設定する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [ディレクトリの状態コード](../extensibility/directory-status-code-enumerator.md)

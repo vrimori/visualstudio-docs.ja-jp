@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bd875edda076035d5c243fc4bfe83dceda61ac42
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: bb9e284435cdf8a5905e068b0044cd118a1621c9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugdocumenttextevents2"></a>IDebugDocumentTextEvents2
 このインターフェイスは、Visual Studio には、デバッグ エンジンによって提供されるソース ドキュメントの変更に関する通知を使用します。  
@@ -50,13 +51,13 @@ IDebugDocumentTextEvents2 : IUnknown
 ## <a name="remarks"></a>コメント  
  だけで、各自のドキュメントを提供するデバッグ エンジンを活用、`IDebugDocumentTextEvent2`インターフェイスです。 この例は、スクリプトのデバッグ エンジンになります。 スクリプトを解釈するには、処理を行って新しいソース コードを生成できますが、ディスク ファイルに存在しないと、DE のみが知っていること。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)   
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

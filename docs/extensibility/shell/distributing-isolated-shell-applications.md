@@ -12,18 +12,19 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d7e2a85a7e94ad9a700b197c9c4e0f75e78b4ec2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6e9b7ded8d24e4d252d29338d89bd176648511a9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="distributing-isolated-shell-applications"></a>分離シェル アプリケーションを配布します。
 分離シェル アプリケーションを作成するのには、Visual Studio および Visual Studio SDK をインストールする必要があります。 その他のユーザーや顧客のマシンにアプリケーションを配布するには、分離シェルの特別な再頒布可能パッケージを含める必要があります。  
   
 ## <a name="prerequisites-for-distributing-isolated-shell-applications"></a>分離シェル アプリケーションを配布するための前提条件  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |Visual Studio SDK|開発およびテストの拡張機能にする必要があります SDK[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 SDK を使用して、Visual Studio 分離シェルの独自のインスタンスを作成することができますも。<br /><br /> Visual Studio は、SDK の前提条件です。|  
 |Microsoft Visual Studio 分離シェルの再頒布可能パッケージ|再頒布可能パッケージ、Visual studio ツール環境をビルドするときに、セットアップ プログラムに含めることは分離シェルです。 分離シェル再頒布可能パッケージには、.NET Framework 4.5 が含まれています。|  

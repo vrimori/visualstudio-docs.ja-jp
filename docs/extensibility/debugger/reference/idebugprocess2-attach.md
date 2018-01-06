@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 840f2dee6648a84b0f7c6259049dcc701b5aef82
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 47b14c3de6b5b9980e2ad420596a1243e84c8882
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprocess2attach"></a>IDebugProcess2::Attach
 セッションのデバッグ マネージャー (SDM) をプロセスにアタッチします。  
@@ -59,7 +60,7 @@ int Attach(
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 次の表は、他の値を示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`E_ATTACH_DEBUGGER_ALREADY_ATTACHED`|指定されたプロセスは、デバッガーに既にアタッチされています。|  
 |`E_ATTACH_DEBUGGEE_PROCESS_SECURITY_VIOLATION`|接続処理中にセキュリティ違反が発生しました。|  
@@ -70,6 +71,6 @@ int Attach(
   
  送信されるすべてのデバッグ イベント、プロセスで発生する、指定された[IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)オブジェクト。 これは、 `IDebugEventCallback2` SDM は、このメソッドを呼び出すと、オブジェクトを指定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

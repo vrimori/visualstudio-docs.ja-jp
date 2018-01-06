@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4a68df6ecfbf4c511922ae89f67e9323a245432d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 986cf8cd6051a08948fb633168792d127cddc5b7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sharepoint-development-samples-and-walkthroughs"></a>SharePoint 開発のサンプルとチュートリアル
   このセクションには、サンプル アプリケーション、コードの例と構文、構造、および SharePoint ソリューションをビルドするために使用する方法を説明するチュートリアルが含まれています。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/31/2017
 |[SharePoint 開発のサンプル](../sharepoint/sharepoint-development-samples.md)|Visual Studio での SharePoint 開発ツールを使用する方法を示すサンプル アプリケーションについて説明します。|  
 |[SharePoint 開発のチュートリアル](../sharepoint/sharepoint-development-walkthroughs.md)|Visual Studio での SharePoint 開発ツールの概要を提供するステップ バイ ステップ ガイドの一覧を示します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションの作成](../sharepoint/create-sharepoint-solutions.md)  
   
   

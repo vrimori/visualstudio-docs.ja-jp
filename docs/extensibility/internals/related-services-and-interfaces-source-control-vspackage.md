@@ -15,11 +15,12 @@ caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d652db21fb98cbb0f06c2ac5ceec0f8f239beff6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7d19c7e2560fafbf54257bf4c46303874bfc717b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="related-services-and-interfaces-source-control-vspackage"></a>関連するサービスとインターフェイス (ソース コントロール VSPackage)
 このセクションでは、ソース管理のインターフェイスの VSPackage に関連するすべて一覧表示、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]です。 ソース コントロール VSPackage では、これらのインターフェイスの一部を実装し、他のユーザーを使用してソース管理のタスクを実現します。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/31/2017
   
 -   省略可能: エンティティこのインターフェイスを実装、豊富な機能を提供します。  
   
-|インターフェイス|目的|によって実装されます。|実装しますか。|  
+|Interface|目的|によって実装されます。|実装しますか。|  
 |---------------|-------------|--------------------|----------------|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>|エディターでは、変更するか、またはファイルを保存する前にこのインターフェイスを呼び出します。 ソース管理 VSPackage ファイルをチェック アウトしたり、チェック アウトに失敗した場合、操作を拒否できます。|ソース管理 VSPackage|推奨|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>|このインターフェイスは、登録しソース管理プロジェクトの登録を解除し、基本ソース コントロールのグリフのサポートを提供するなど、プロジェクトの基本的なソース管理の機能を提供します。|ソース管理 VSPackage|必須|  
@@ -64,5 +65,5 @@ ms.lasthandoff: 10/31/2017
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts>|このインターフェイスを使用すると、ソリューションのオプション (.suo) ファイルにソース管理の設定を保存します。 これには、現在のユーザーの参加リストの場所などのユーザーに固有のソース管理の設定が含まれます。|ソース管理 VSPackage|推奨|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3>|このインターフェイスは、ソリューションを閉じるか、またはプロジェクトを開くときに、ソース管理から新しいファイルを取得する前にプロジェクト ファイルのチェックインなどの操作を実行するために使用イベントを監視します。|ソース管理 VSPackage|推奨|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デザイン要素](../../extensibility/internals/source-control-vspackage-design-elements.md)

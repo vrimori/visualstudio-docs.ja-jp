@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5937d37cfed89ee7f10779f764b8d78d370eb362
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b92a622b6b898c917710ac748b9205079d71ea5e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="task-class---internal-members"></a>Task クラスの内部メンバー
 このトピックの内容の内部のメンバーの説明、<xref:System.Threading.Tasks.Task?displayProperty=fullName>役立つクラスがカスタムのデバッガーを実装します。 このクラスの概要については、次を参照してください。、<xref:System.Threading.Tasks.Task>リファレンス トピックを参照します。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="fields"></a>フィールド  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[m_action](../../extensibility/debugger/m-action-field.md)|実行するコードを表すデリゲート、<xref:System.Threading.Tasks.Task>オブジェクト。|  
 |[m_contingentProperties](../../extensibility/debugger/m-contingentproperties-field.md)|その他のプロパティを格納、<xref:System.Threading.Tasks.Task>オブジェクト。|  
@@ -82,6 +83,6 @@ ms.lasthandoff: 10/31/2017
   
 -   `InternalWait`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:System.Threading.Tasks.Task?displayProperty=fullName>   
  [.NET Framework の並列拡張機能の内部](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

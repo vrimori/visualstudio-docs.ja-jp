@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 766f00475971da1ca009737f9360952422177814
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: cd28633fcb4b8186dae154428e489d51041aa8b2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="expression-evaluation-in-break-mode"></a>中断モードでの式の評価
 次に、デバッガーが中断モードであり、式の評価を実施する必要があるときに発生するプロセスについて説明します。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/31/2017
   
     -   使用されている場合`IDebugExpression2::EvaluateAsync`評価の進行中のプロセスが通信するために、指定されたコールバック インターフェイスを使用します。 評価が完了したら、EvaluateAsync 送信、 [IDebugExpressionEvaluationCompleteEvent2](../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)コールバックを介して、インターフェイスです。 このイベント インターフェイスでの最終的な値を取得できます[GetResult](../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2-getresult.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのイベントの呼び出し](../../extensibility/debugger/calling-debugger-events.md)

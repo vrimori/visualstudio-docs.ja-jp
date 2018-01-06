@@ -11,11 +11,12 @@ caps.latest.revision: "26"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 63295738603d2a88adb70b43d41e185c7eabbc69
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: c349c79ebd2348fa4ce0c04fd3020d7909a3c34a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-models-by-using-visual-studio-modelbus"></a>Visual Studio Modelbus によるモデルの統合
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ModelBus は、モデルにモデルの間でおよびその他のツールからのリンクを作成する方法を提供します。 たとえば、ドメイン固有言語 (DSL) モデルおよび UML モデルを関連付けることができます。 DSL の統合セットを作成できます。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/07/2017
   
 3.  ダイアログ ボックスで選択**、ModelBus をこの DSL を公開する**です。 この DSL のモデルを公開すると同時に他の DSL への参照を利用する場合は、両方のオプションを選択できます。  
   
-4.  **[OK]** をクリックします。 新しいプロジェクト "ModelBusAdapter" が DSL ソリューションに追加されます。  
+4.  **[OK]**をクリックします。 新しいプロジェクト "ModelBusAdapter" が DSL ソリューションに追加されます。  
   
 5.  テキスト テンプレートから DSL にアクセスする場合、新しいプロジェクトで AdapterManager.tt を変更する必要があります。 コマンドやイベント ハンドラーなどの他のコードから DSL にアクセスする場合はこの手順を省略します。 詳細については、次を参照してください。[テキスト テンプレートで Visual Studio ModelBus を使用して](../modeling/using-visual-studio-modelbus-in-a-text-template.md)です。  
   
@@ -510,7 +511,7 @@ private const string INVALID_REF_FORMAT =
   
 -   **DslPackage\source.extention.tt**、 `|ModelBusAdapter|` MEF コンポーネントとして追加されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: プログラム コード内のファイルからモデルを開く](../modeling/how-to-open-a-model-from-file-in-program-code.md)   
  [方法: ドラッグ アンド ドロップのハンドラーを追加](../modeling/how-to-add-a-drag-and-drop-handler.md)   
  [テキスト テンプレートでの Visual Studio ModelBus の使用](../modeling/using-visual-studio-modelbus-in-a-text-template.md)

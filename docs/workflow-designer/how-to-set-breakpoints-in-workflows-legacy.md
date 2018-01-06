@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 89189feb32d84db8fb5c5eb7970faf325be1acd6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: d634f9648ed87f448e1b984392c827badc42930c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-breakpoints-in-workflows-legacy"></a>方法: ワークフロー内にブレークポイントを設定する (レガシ)
 このトピックでは、従来の [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]を使用して作成された [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] アプリケーションでブレークポイントを設定する方法について説明します。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] アプリケーションが [!INCLUDE[wf2](../workflow-designer/includes/wf2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。  
@@ -61,8 +62,8 @@ ms.lasthandoff: 10/27/2017
   
 5.  選択**ワークフロー**から、**言語** ボックスの一覧です。  
   
-6.  **[OK]** をクリックします。  
+6.  **[OK]**をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [従来のワークフローのデバッグ](../workflow-designer/debugging-legacy-workflows.md)   
  [Visual Studio Debugger for Windows Workflow Foundation の起動 (レガシ)](../workflow-designer/invoking-the-visual-studio-debugger-for-windows-workflow-foundation-legacy.md)

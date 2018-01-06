@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ebfb54a289fe085f00c40df34256cfb2174f98fc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fb66dfffaf8fa8339ce9060c912dc358fb454a7e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-an-extension-with-an-editor-item-template"></a>エディター項目テンプレートに、拡張機能の作成
 エディターに分類子、修飾、および余白を追加する基本的なエディター拡張機能を作成する Visual Studio SDK に含まれている項目テンプレートを使用することができます。 エディターの項目テンプレートは、Visual c# または Visual Basic の VSIX プロジェクトで使用可能です。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="creating-a-classifier-extension"></a>分類器の拡張機能の作成  
  エディター分類子のアイテム テンプレート エディターの分類器を該当するテキストの色を作成する (このケースでは、すべてのもの) 任意のテキスト ファイルにします。  
   
-1.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#**または**Visual Basic**  をクリックし、 **Extensibility**です。 **テンプレート**ペインで、 **VSIX プロジェクト**です。 **[名前]** ボックスに「`TestClassifier`」と入力します。 **[OK]** をクリックします。  
+1.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#**または**Visual Basic**  をクリックし、 **Extensibility**です。 **テンプレート**ペインで、 **VSIX プロジェクト**です。 **[名前]** ボックスに「`TestClassifier`」と入力します。 **[OK]**をクリックします。  
   
 2.  **ソリューション エクスプ ローラー**プロジェクト ノードを右クリックし、選択、**追加/新しい項目の**します。 移動する、Visual c#**機能拡張**ノード**エディター分類子**です。 既定のファイル名 (EditorClassifier1.cs) のままにします。  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="creating-a-text-relative-adornment-extension"></a>テキストの相対表示要素の拡張機能の作成  
  エディターのテキスト装飾テンプレートで作成、テキスト文字のすべてのインスタンスを装飾するテキストの相対装飾赤の輪郭と青色の背景を持つボックスを使用して ' a' です。 テキストの相対であるため、ボックス オーバーレイ 'a' 文字の場合、移動または再フォーマットされる場合でも常にします。  
   
-1.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#**または**Visual Basic**  をクリックし、 **Extensibility**です。 **テンプレート**ペインで、 **VSIX プロジェクト**です。 **[名前]** ボックスに「`TestAdornment`」と入力します。 **[OK]** をクリックします。  
+1.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#**または**Visual Basic**  をクリックし、 **Extensibility**です。 **テンプレート**ペインで、 **VSIX プロジェクト**です。 **[名前]** ボックスに「`TestAdornment`」と入力します。 **[OK]**をクリックします。  
   
 2.  **ソリューション エクスプ ローラー**プロジェクト ノードを右クリックし、選択、**追加/新しい項目の**します。 移動する、Visual c#**機能拡張**ノード**エディターのテキスト装飾**です。 既定のファイル名 (TextAdornment1.cs/vb) のままにします。  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/31/2017
   
 #### <a name="to-create-a-viewport-adornment-extension-by-using-the-editor-viewport-adornment-template"></a>エディターのビューポートの表示要素のテンプレートを使用してビューポートの表示要素の拡張機能を作成するには  
   
-1.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#**または**Visual Basic**  をクリックし、 **Extensibility**です。 **テンプレート**ペインで、 **VSIX プロジェクト**です。 **[名前]** ボックスに「`ViewportAdornment`」と入力します。 **[OK]** をクリックします。  
+1.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#**または**Visual Basic**  をクリックし、 **Extensibility**です。 **テンプレート**ペインで、 **VSIX プロジェクト**です。 **[名前]** ボックスに「`ViewportAdornment`」と入力します。 **[OK]**をクリックします。  
   
 2.  **ソリューション エクスプ ローラー**プロジェクト ノードを右クリックし、選択、**追加/新しい項目の**します。 移動して、Visual c# に**機能拡張**ノード**エディター ビューポート装飾**です。 既定のファイル名 (ViewportAdornment1.cs/vb) のままにします。  
   
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/31/2017
   
 #### <a name="to-create-a-margin-extension-by-using-the-editor-margin-template"></a>エディターのマージンのテンプレートを使用して余白の拡張機能を作成するには  
   
-1.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#**または**Visual Basic**  をクリックし、 **Extensibility**です。 **テンプレート**ペインで、 **VSIX プロジェクト**です。 **[名前]** ボックスに「`MarginExtension`」と入力します。 **[OK]** をクリックします。  
+1.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#**または**Visual Basic**  をクリックし、 **Extensibility**です。 **テンプレート**ペインで、 **VSIX プロジェクト**です。 **[名前]** ボックスに「`MarginExtension`」と入力します。 **[OK]**をクリックします。  
   
 2.  **ソリューション エクスプ ローラー**プロジェクト ノードを右クリックし、選択、**追加/新しい項目の**します。 移動して、Visual c# に**機能拡張**ノード**エディター ビューポート装飾**です。 既定のファイル名 (EditorMargin1.cs/vb) のままにします。  
   
@@ -98,5 +99,5 @@ ms.lasthandoff: 10/31/2017
   
 4.  このプロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。 テキスト ファイルを開くと、水平スクロール バーの下を"こんにちは EditorMargin1"という語を持つ緑色の余白が表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [言語サービスとエディターの拡張ポイント](../extensibility/language-service-and-editor-extension-points.md)

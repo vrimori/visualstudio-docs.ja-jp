@@ -21,21 +21,18 @@ caps.latest.revision: "27"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8b2c4077c57232f511097d6e1d46c49bf7337aee
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 873e08817eef7d1760a717d98e413d8d4096323b
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="debugger-basics"></a>デバッガーの基本事項
 Visual Studio デバッガーを使用すると、プログラムの実行時の動作を確認し、論理的なエラーの場所を特定できます。 デバッガーは、すべての Visual Studio のプログラミング言語と関連ライブラリと連携します。 デバッガーでは、実行を中断して、コードをステップ実行しアプリケーション内の変数を評価することができます。  
   
-## <a name="in-this-section"></a>このセクションの内容  
  [デバッガーの使用開始](../debugger/getting-started-with-the-debugger.md)  
  アプリケーションをデバッグするデバッガーの機能を使用する方法について説明します。  
-
- [デバッガーのビデオを見る](../debugger/getting-started-with-the-debugger.md#video)  
- デバッガーの機能を使用して、アプリケーションをデバッグする方法を示します。
   
  [デバッガーでのコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)  
  デバッガーでコードをステップ実行する方法について説明します。  
@@ -69,5 +66,5 @@ Visual Studio デバッガーを使用すると、プログラムの実行時の
  [デバッガーのセキュリティ](../debugger/debugger-security.md)  
  デバッガーのセキュリティ対策について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)

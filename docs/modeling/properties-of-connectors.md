@@ -12,11 +12,12 @@ caps.latest.revision: "21"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 503f171b2af5e06fd3c890caf07525ba880d0658
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: e974c768f9bf73b92cb974875654846a267bb893
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-connectors"></a>コネクタのプロパティ
 コネクタは、生成されたデザイナーでのドメインの関係を表します。  
@@ -33,13 +34,13 @@ ms.lasthandoff: 10/27/2017
 |ターゲット エンドのスタイル|(HollowArrow、EmptyArrow、FilledArrow、EmptyDiamond、FilledDiamond、または None) は、このコネクタのターゲット エンドのスタイルです。|なし|  
 |テキストの色|このコネクタに関連付けられているテキスト デコレーターのために使用される色。|黒|  
 |太さ|このコネクタの線の太さは、インチ単位で測定されます。|0.03125|  
-|アクセス修飾子|クラスのアクセスのレベル (`public`または`internal`)。|パブリック|  
+|アクセス修飾子|クラスのアクセスのレベル (`public`または`internal`)。|Public|  
 |カスタム属性|このコネクタから生成されるソース コードのクラスに属性を追加するために使用します。|\<なし >|  
 |二重の生成の派生|場合`True`、基底クラスと部分クラス (カスタマイズをサポートする上書きを使用) の両方が生成されます。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)です。|False|  
 |カスタム コンス トラクターを持つ|場合`True`、ソース コードでカスタム コンス トラクターが提供されます。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)です。|False|  
 |継承修飾子|コネクタから生成されるソース コード クラスの継承の種類を記述します (`none`、`abstract`または`sealed`)。|none|  
 |基本のコネクタ|このコネクタの基本クラス。|(なし)|  
-|名前|このコネクタの名前。|現在の名前|  
+|name|このコネクタの名前。|現在の名前|  
 |名前空間|このコネクタに関連付けられた名前空間。|現在の名前空間|  
 |ツールヒントの種類|(固定、変数、またはなし)、ツールヒントを定義する方法です。 固定されている場合、次の値、`Fixed Tooltip Text`プロパティは、ツールヒントとして使用以外の場合は、変数、ツール ヒントがカスタム コードで定義します。|\<なし >|  
 |メモ|このコネクタに関連付けられている非公式なノートです。|\<なし >|  
@@ -50,5 +51,5 @@ ms.lasthandoff: 10/27/2017
 |固定のツールヒント テキスト|固定のツールヒントに使用されるテキストです。|\<なし >|  
 |ヘルプ キーワード|この要素の F1 ヘルプをインデックス化に使用されるキーワード。|\<なし >|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)

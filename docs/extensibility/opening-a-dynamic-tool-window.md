@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 588badc75a604df65949c99fa16f84ad4e9c9175
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c96250c79ea283117254a96875c3a1f03f4cb30b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="opening-a-dynamic-tool-window"></a>動的なツール ウィンドウを開く
 ツール ウィンドウは通常、対応するキーボード ショートカットやメニューのコマンドから開きます。 ときに、ただし、必要がありますツール ウィンドウを特定の UI コンテキストが適用され、UI コンテキストが適用されなくなったときに終了するたびに開きます。 上記のようなツール ウィンドウと呼びます*動的*または*自動表示*です。  

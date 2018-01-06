@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: eb16ed870697a84152761f2cabdb7d42b1b1fd32
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a6473e867655974f42f41a276b8becfd12fbab7a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sortorder-element-visual-studio-templates"></a>SortOrder 要素 (Visual Studio テンプレート)
 いずれかに表示される、同じカテゴリ内のテンプレートのテンプレートの配置に使用する値を示す、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。  
@@ -84,6 +85,6 @@ ms.lasthandoff: 10/31/2017
   
  この例では、`SortOrder`要素は相対的に高いです。 可能性がありますの他の[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]項目テンプレートには、`SortOrder`よりも小さい値`290`され、前にこのテンプレートに表示されます、**新しい項目の** ダイアログ ボックス。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 12a367b6051f7ed1ca1f51e0c9d7e8ada4be4ba6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 88509ec452525647e4ce36b0c7e5e35574d6243f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-sign-office-solutions"></a>方法: Office ソリューションに署名する
   ソリューションに署名する場合は、証拠として、証明書を使用してソリューションに信頼を付与できます。 複数のソリューションに対して、同じ証明書を使用してによる追加のセキュリティ ポリシー更新のないすべてのソリューションが信頼されます。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
   
 5.  適切な証明書を使用していることを確認する をクリックして**詳細**証明書情報を表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)   
  [Office ソリューションへの信頼の付与](../vsto/granting-trust-to-office-solutions.md)   
  [[署名] ページ (プロジェクト デザイナー)](/visualstudio/ide/reference/signing-page-project-designer)  

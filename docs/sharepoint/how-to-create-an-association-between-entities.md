@@ -27,11 +27,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 92c8643a87a6226e03e8726910a459168e8b4c5d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3bfc9f37fa440b57ad78a3df9640888e4f2a3d73
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-association-between-entities"></a>方法: エンティティ間に関連付けを作成する
   関連付けを作成することで、ビジネス データ接続 (BDC) モデルのエンティティ間のリレーションシップを定義することができます。 Visual Studio では、各アソシエーションに関する情報をモデルのコンシューマーに提供するメソッドを生成します。 これらのメソッドは、SharePoint web パーツ、リスト、またはユーザー インターフェイス (UI) でデータ間の関係を表示するカスタム アプリケーションで使用できます。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/31/2017
   
      ナビゲーターの関連付けの方法の例については、次を参照してください。[アソシエーション間でエンティティを作成する](../sharepoint/creating-an-association-between-entities.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [エンティティ間の関連付けを作成します。](../sharepoint/creating-an-association-between-entities.md)   
  [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   

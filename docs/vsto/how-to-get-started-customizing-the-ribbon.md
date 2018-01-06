@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: eb47be36cbda86c8383760ced20b65691fd16842
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 8ede4048722fd18f62fe4d0bbf19ac75995cb99e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-started-customizing-the-ribbon"></a>方法 : リボンのカスタマイズの概要
   Microsoft Office アプリケーションのリボンをカスタマイズするには追加、**リボン (ビジュアル デザイナー)**または**リボン (XML)**を Office プロジェクトの項目。  
@@ -69,11 +70,11 @@ ms.lasthandoff: 10/31/2017
   
     -   ("Nul"、"aux"、"con"、"com1"、"lpt1"など) などの Windows または DOS の予約語  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
  リボンのアイテムに表示**ソリューション エクスプ ローラー**です。 次の手順については、次を参照してください。[リボンの概要](../vsto/ribbon-overview.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
  [リボン デザイナー](../vsto/ribbon-designer.md)   
  [リボン XML](../vsto/ribbon-xml.md)   

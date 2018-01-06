@@ -12,11 +12,12 @@ caps.latest.revision: "19"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: b7419766b4c195c3bcef2aa45e886004a89fb5ec
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 3d0dbf6c74c309972862db460f2536d8c6b16801
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-namespace-of-a-domain-specific-language"></a>方法: ドメイン固有言語の名前空間を変更する
 ドメイン固有言語の名前空間を変更することができます。 変更を行う必要があります、 **DSL のエクスプ ローラー**、Dsl パッケージ プロジェクトのプロパティおよびアセンブリ情報です。  
@@ -53,5 +54,5 @@ ms.lasthandoff: 10/27/2017
   
 11. **ビルド**] メニューの [選択**ソリューションのリビルド**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)

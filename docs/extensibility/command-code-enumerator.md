@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e8404b06e566f8d2efc40742c00d1a857af68261
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 61f7722daa2e731874950c5debcf57b60d80890e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="command-code-enumerator"></a>コマンドのコードの列挙子
 オプションでこの列挙子が使用される、 [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md)と[SccPopulateList](../extensibility/sccpopulatelist-function.md)にオプションが指定されていることを示します。  
@@ -76,7 +77,7 @@ enum SCCCOMMAND {
  SCC_COMMAND_OPTIONS  
  対応する、 [SccSetOption](../extensibility/sccsetoption-function.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)   
  [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md)   
  [SccPopulateList](../extensibility/sccpopulatelist-function.md)

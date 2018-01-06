@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 73ef7f1b347dc2fdcfe2904ef19a2d52036d927e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0cdfb4631420f6803e6434bd67b93bd713cfd1f7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="saving-a-standard-document"></a>標準的なドキュメントの保存
 環境では、保存、名前を付けて保存、および [すべて保存] コマンドを処理します。 ユーザーが選択すると**保存**、**名前を付けて保存**、または**すべて保存**から、**ファイル**メニューまたはその結果、ソリューションを閉じる、 **Save All**、次の処理が行われます。  
@@ -60,6 +61,6 @@ ms.lasthandoff: 10/31/2017
   
 2.  呼び出す、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsExternalFilesManager2.TransferDocument%2A> (`pszMkDocumentNew`、 `punkWindowFrame`) ドキュメントを新しい階層に転送する方法です。 名前を付けて保存コマンドを実行する階層では、このメソッドを呼び出します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>   
  [プロジェクト項目のオープンと保存](../../extensibility/internals/opening-and-saving-project-items.md)

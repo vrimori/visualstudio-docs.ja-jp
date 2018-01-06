@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b6d287e7e85ef908f9504f8e1f66e0c221042553
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: vssdk
+ms.openlocfilehash: 40e795238e46885707cfd6eff715a27a5f53f85c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>色とスタイルが Visual Studio の
 ## <a name="using-color-in-visual-studio"></a>Visual Studio での色を使用します。  
@@ -289,7 +290,7 @@ UI に色のセットを制限するこれを適用するときに*"normal"の�
 ### <a name="usage-patterns"></a>使用状況パターン
 多くの一般的な UI 要素では、ハイコントラスト色の定義が既にあります。 UI 要素はのようなコンポーネントと一貫性のあるように、独自のシステムの色の名前を選択するときにこれらの使用パターンを参照することができます。  
   
-| システム カラー | 使用方法 |
+| システム カラー | 使用法 |
 | --- | --- |
 | ActiveCaption | アクティブな IDE し rafted ウィンドウ ボタンをホバー時およびキーを押して上のグリフ<br />IDE および rafted ウィンドウのタイトル バーの背景<br />既定のステータス バーの背景 |
 | ActiveCaptionText | アクティブな IDE と rafted のウィンドウのタイトル バーの前景 (テキストとグリフ)<br />の枠線し、バック グラウンドのホバー時およびキーを押してアクティブなウィンドウのボタン |
@@ -337,7 +338,7 @@ VSPackage では、カスタム カテゴリを色とフォントを制御でき
   
 2 つの値を使用してレジストリを設定します。  
 
-| 名前 | 型 | データ | 説明 |
+| name | 型 | データ | 説明 |
 | --- | --- | --- | --- |
 | カテゴリ | REG_SZ | GUID | カテゴリを識別する GUID の作成 |
 | Package | REG_SZ | GUID | カテゴリをサポートする VSPackage サービスの GUID |
@@ -349,7 +350,7 @@ VSPackage では、カスタム カテゴリを色とフォントを制御でき
   
 2 つの値を使用してレジストリを設定します。
 
-| 名前 | 型 | データ | 説明 |
+| name | 型 | データ | 説明 |
 |--- | --- | --- | --- |
 | カテゴリ | REG_SZ | GUID | カテゴリを識別する GUID の作成 |
 | Package | REG_SZ | GUID | カテゴリをサポートする VSPackage サービスの GUID |

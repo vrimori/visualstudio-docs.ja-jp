@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 115509e8ff79aafa703c429b476041d558e3167c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 519f40017fff5dd3241f4563c5a85d0d0d15c01b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server"></a>方法: リモート サーバー上で SharePoint ソリューションを配置、発行、およびアップグレードする
   に加えて、SharePoint ソリューションの配置、ローカル システムに、リモート サイトまたはローカルの SharePoint サイトにセキュリティで保護された SharePoint ソリューションを発行できます。 リモート発行プロセスは、SharePoint サーバーに .wsp ファイルをコピー、ソリューションをインストールし、ソリューションをアクティブ化することができます。 変更を行った後は、リモート SharePoint ソリューションのインストールをアップグレードすることもできます。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/31/2017
   
      ソリューションの古いバージョンが非アクティブ化、ソリューションの新しいバージョンが、以前のソリューションから保持されているデータによってアップグレードおよび SharePoint の新しいソリューションを有効にします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: 配置し、SharePoint ソリューションをローカルの SharePoint サイトに発行](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md)   
  [SharePoint ソリューション パッケージの作成](../sharepoint/creating-sharepoint-solution-packages.md)   
  [方法: SharePoint ソリューション パッケージをカスタマイズします。](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)   

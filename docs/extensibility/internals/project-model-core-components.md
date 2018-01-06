@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c7759a2394f2cda19f875a85a22c4a674fee8964
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d2de7b73238589786c1e8a4ba42389201123c2b1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-model-core-components"></a>プロジェクト モデルのコア コンポーネント
 次の表は、プロジェクトのモデルに展開されます。 テーブルは、インターフェイスと、モデルとインターフェイス、および特定のオブジェクトに関連付けられているサービスで識別されるサービスの簡単な説明を表示します。 さらに、テーブルには、プロジェクトの作成と、特定のプロジェクトの種類の要件に応じて保守に省略可能な他のインターフェイスが詳しく説明します。  
@@ -28,13 +29,13 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="package-object"></a>パッケージ オブジェクト  
   
-|インターフェイス|コメント|  
+|Interface|コメント|  
 |---------------|--------------|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>|IDE に VSPackage を初期化し、IDE、そのサービスを利用できるようにします。|  
   
 ### <a name="project-factory-object"></a>プロジェクト ファクトリ オブジェクト  
   
-|インターフェイス|コメント|  
+|Interface|コメント|  
 |---------------|--------------|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory>|新しいプロジェクトの作成と既存のプロジェクトを開いて管理します。|  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 10/31/2017
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibility3>|オートメーション モデルを実装するために使用します。 モデルでは、プロジェクト、戻りますできるようにするプロパティ オブジェクトは、そのオブジェクトのインスタンスを作成します。|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIHierWinClipboardHelper>|階層内のプロジェクト オブジェクトにクリップボードのイベントを実装するために使用します。 `SVsUIHierWinClipboardHelper`できます正しくハンドルの切り取り、コピー、および貼り付け操作。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>   
  [チェックリスト: 新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)   
  [ビルド内にありません: HierUtil7 プロジェクト クラスを使用して、プロジェクトの種類 (C++) を実装するには](http://msdn.microsoft.com/en-us/a5c16a09-94a2-46ef-87b5-35b815e2f346)   

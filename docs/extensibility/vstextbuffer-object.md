@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d25551d6af9b2250275713541dc9c9df39ca90ec
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 643bd434e058a24cc17936d9ab2f333489b8aa5e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vstextbuffer-object"></a>VSTextBuffer オブジェクト
 テキスト バッファー オブジェクトでは、一般に、ファイルに関連付けられている Unicode テキストのストリームを表します。 A<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>ウィザードの場合は、コア エディターのコンテキストの外部オブジェクトを使用できます。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="remarks"></a>コメント  
  `VSTextBuffer`で見つかることが、`QueryInterface`で呼び出す`IVsTextBuffer`です。 詳細については、次を参照してください。[テキスト バッファー](../extensibility/accessing-the-text-buffer-by-using-the-legacy-api.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>   
  [図形の編集](http://msdn.microsoft.com/en-us/f08872bd-fd9c-4e36-8cf2-a2a2622ef986)

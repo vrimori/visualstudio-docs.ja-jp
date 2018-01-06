@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a093ab6fc4acc1ea1d1a378b06d721b1316f359f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3d643b3e2ca160d9898ec13ad09bdc654c88c2c6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprogram2getengineinfo"></a>IDebugProgram2::GetEngineInfo
 このプログラムを実行するデバッグ エンジン (DE) の GUID と名前を取得します。  
@@ -52,5 +53,5 @@ int GetEngineInfo(
 ## <a name="remarks"></a>コメント  
  各 DE では、識別するための独自の GUID を定義します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

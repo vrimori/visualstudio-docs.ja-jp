@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a4dd37d33230be758bd5a5adf6f5e10d5a978800
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1f238cceb189723e3ec10fbf8db4abbd9675ae21
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-window-fields-and-interfaces"></a>プロパティ ウィンドウのフィールドとインターフェイス
 モデルの選択で表示される情報を決定する、**プロパティ**ウィンドウは IDE でフォーカスのあるウィンドウに基づきます。 すべてのウィンドウ、および選択した期間内のオブジェクトには、その選択コンテキスト オブジェクトのグローバルの選択コンテキストにプッシュされたことができます。 環境は、そのウィンドウにフォーカスがあるときに、ウィンドウ フレームの値を持つグローバルの選択コンテキストを更新します。 フォーカスが変更されたときにも選択コンテキスト。  
@@ -116,5 +117,5 @@ STDAPI DLLGetDocumentation
   
  実装することにより、ローカライズされた名前とプロパティの説明を取得する別の方法は、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.GetLocalizedPropertyInfo%2A>です。 このメソッドの実装に関連する詳細については、次を参照してください。[プロパティ ウィンドウのフィールドとインターフェイス](../../extensibility/internals/properties-window-fields-and-interfaces.md)です。  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロパティの拡張](../../extensibility/internals/extending-properties.md)

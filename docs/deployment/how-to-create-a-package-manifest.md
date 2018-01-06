@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 92182b9b6c6b2b2759b77e7b14d71dfd40379fc7
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 463286eb8360b728b3b7e3ce9396c9f4b7e11305
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-package-manifest"></a>方法: パッケージ マニフェストを作成する
 アプリケーションの前提条件を展開するには、ブートス トラップ パッケージを使用できます。 ブートス トラップ パッケージには、ロケールごとに、パッケージ マニフェストが 1 つの製品マニフェスト ファイルが含まれています。 別のローカライズされたバージョン間で共有機能は、製品マニフェストに変わります必要があります。  
@@ -101,5 +102,5 @@ installing this package.</String>
 </Package>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [製品およびパッケージ スキーマ リファレンス](../deployment/product-and-package-schema-reference.md)

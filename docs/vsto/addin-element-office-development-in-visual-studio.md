@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d083ff3a6c39b0d399b641db7e3a33d4f200e7bc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: b4f455ad27966f5ac3c5dba6c3ac276670f74b26
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddingt-element-office-development-in-visual-studio"></a>&lt;addin&gt;要素 (Visual Studio での Office 開発)
   名前空間 `addin` の `vstav3` 要素には、Visual Studio で開発した Microsoft Office VSTO アドインとドキュメント レベルのカスタマイズに関する情報を格納します。  
@@ -60,16 +61,16 @@ ms.lasthandoff: 10/31/2017
  `addin` 要素には、次の子要素があります。  
   
 ### <a name="entrypoints"></a>entryPoints  
- 必須です。 `entryPoints`要素については、「 [&#60; entryPoints &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/entrypoints-element-office-development-in-visual-studio.md).  
+ 必須。 `entryPoints`要素については、「 [&#60; entryPoints &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/entrypoints-element-office-development-in-visual-studio.md).  
   
 ### <a name="update"></a>更新  
- 必須です。 `update`要素については、「 [&#60;以外の場合は更新 &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/update-element-office-development-in-visual-studio.md).  
+ 必須。 `update`要素については、「 [&#60;以外の場合は更新 &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/update-element-office-development-in-visual-studio.md).  
   
 ### <a name="postactions"></a>postActions  
- 省略可能です。 `postActions`要素については、「 [&#60; postActions &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/postactions-element-office-development-in-visual-studio.md).  
+ 任意。 `postActions`要素については、「 [&#60; postActions &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/postactions-element-office-development-in-visual-studio.md).  
   
 ### <a name="application"></a>アプリケーション  
- 必須です。 `application`要素については、「 [&#60; アプリケーション &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/application-element-office-development-in-visual-studio.md).  
+ 必須。 `application`要素については、「 [&#60; アプリケーション &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/application-element-office-development-in-visual-studio.md).  
   
 ## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズの例  
   
@@ -193,7 +194,7 @@ ms.lasthandoff: 10/31/2017
 </vstav3:addIn>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
  [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)  

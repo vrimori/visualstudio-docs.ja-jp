@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ba9a9a6b406ad5a94cced7820e6b4581db56eb2b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f3fe862f0115ae4890bd07e0b4f0171ecafcb4b7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="common-language-runtime-and-expression-evaluation"></a>共通言語ランタイムおよび式の評価
 > [!IMPORTANT]
@@ -38,5 +39,5 @@ ms.lasthandoff: 10/31/2017
   
  CLR DE 式を評価する独自の EE を呼び出すときに、DE、SP およびバインダー オブジェクトへのインターフェイスで EE を提供します。 したがって、CLR ベースのデバッグ エンジン手段を書き込む必要があるインターフェイスだけを実装する、適切な式エバリュエーター。バインディングと、処理するシンボルの CLR によって行われます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CLR 式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

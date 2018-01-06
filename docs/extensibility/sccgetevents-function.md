@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5eed4b08398b2acd9a136ba0ccf67527a574f16f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e2e9a22d0340774087fab8dd7dc564f415d9d9aa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccgetevents-function"></a>SccGetEvents 関数
 この関数は、キューに置かれた状態のイベントを取得します。  
@@ -50,7 +51,7 @@ SCCRTN SccGetEvents (
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|成功したイベントを取得します。|  
 |SCC_E_OPNOTSUPPORTED|この関数はサポートされていません。|  
@@ -61,6 +62,6 @@ SCCRTN SccGetEvents (
   
  レポートへのステータスの更新がない場合は、ソース管理プラグインは、空の文字列を指すバッファーに格納`lpFileName`です。 それ以外の場合、プラグインを格納、ファイルの完全なパス名のステータス情報が変更され、適切なステータス コードを返します (で詳細に説明値の 1 つ[ファイル ステータス コード](../extensibility/file-status-code-enumerator.md))。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [ファイルの状態コード](../extensibility/file-status-code-enumerator.md)

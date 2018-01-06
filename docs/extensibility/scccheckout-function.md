@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: de22bd4722df1cd78472fd9e180fdb8132401828
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: af8aac642ecd21f8f4709874e4e3e6ff0b3e58b5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="scccheckout-function"></a>SccCheckout 関数
 完全修飾ファイル名のリストを指定するには、この関数はそれらローカル ドライブにします。 コメントは、チェック アウトされているすべてのファイルに適用されます。コメントの引数を指定できます、`null`文字列。  
@@ -62,7 +63,7 @@ SCCRTN SccCheckout (
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|チェック アウトは成功しました。|  
 |SCC_E_FILENOTCONTROLLED|選択したファイルはソース コード管理下ではありません。|  
@@ -74,6 +75,6 @@ SCCRTN SccCheckout (
 |SCC_E_FILEOUTEXCLUSIVE|別のユーザーには、このファイルで排他チェック アウトが行われます。|  
 |SCC_I_OPERATIONCANCELED|操作が完了する前に取り消されました。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [特定のコマンドで使用されるビットフラグ](../extensibility/bitflags-used-by-specific-commands.md)

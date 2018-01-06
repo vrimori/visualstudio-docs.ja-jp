@@ -16,11 +16,12 @@ caps.latest.revision: "27"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 032baaa57dd91cb07eac547da810d16e708f0828
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 34e0e95475457e2a5f206ad4ecb0d7e42e2bb9ea
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ide-defined-commands-menus-and-groups"></a>IDE 定義コマンド、メニューのおよびグループ
 多くのメニューのコマンドおよびコマンド グループは既に定義されていますが使用する、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE です。 これらのコマンドを拡張するときにも、使用できる[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/31/2017
  [Visual Studio コマンドの GUID および ID](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md)  
  Visual Studio IDE で定義されているコマンドの GUID と ID 値を示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio コマンド テーブル (です。Vsct) ファイル](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
  [プロジェクト システムを拡張するための IDE 定義のコマンド](../../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)   
  [VSPackage でユーザー インターフェイス要素を追加する方法](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)

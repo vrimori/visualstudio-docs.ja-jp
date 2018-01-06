@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ac758e7e8ce4d288b347b1207883642c920059bb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5cd56e2b83411710fa110c7abd65d965d828083d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugobject2isuserdata"></a>IDebugObject2::IsUserData
 オブジェクトがユーザー データを表すかどうかを判断します。  
@@ -47,5 +48,5 @@ int IsUserData(
 ## <a name="remarks"></a>コメント  
  ユーザー データは、JustMyCode (そのため、スタック トレースに表示し、ユーザー コードとしてモジュールをマークするユーザー構成可能なオプション) として指定されたモジュールの一部である任意のオブジェクトです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

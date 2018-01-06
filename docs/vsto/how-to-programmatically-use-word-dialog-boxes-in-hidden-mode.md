@@ -19,18 +19,19 @@ caps.latest.revision: "48"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: daf5cfb79c16a26b871e2c4d07ec304c17cb6a33
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3d36bb9342c1db3fcf0fe007b87831b8c921af6d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-use-word-dialog-boxes-in-hidden-mode"></a>方法: プログラムによって Word のダイアログ ボックスを非表示モードで使用する
   ユーザーに表示することがなく、Microsoft Office Word の組み込みダイアログ ボックスを呼び出すことによって、1 つのメソッドの呼び出しで複雑な操作を行うことができます。 使用してこれを行う、<xref:Microsoft.Office.Interop.Word.Dialog.Execute%2A>のメソッド、<xref:Microsoft.Office.Interop.Word.Dialog>オブジェクトを呼び出さず、<xref:Microsoft.Office.Interop.Word.Dialog.Display%2A>メソッドです。  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のコード例を使用する方法を示します、**ページ セットアップ**プロパティを設定する複数のページのセットアップ ユーザー入力なしで非表示モードでのダイアログ ボックス。 例を使用して、<xref:Microsoft.Office.Interop.Word.Dialog>カスタム ページ サイズを構成するオブジェクト。 ページ設定 の上余白、下の余白などの特定の設定はの遅延バインディングのプロパティとして使用できます、<xref:Microsoft.Office.Interop.Word.Dialog>オブジェクト。 これらのプロパティは、実行時に Word によって動的に作成されます。  
   
  次の例は、Visual Basic プロジェクトでこのタスクを実行する方法を示します、 **Option Strict**は off および Visual c# プロジェクトで、対象とする、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]です。 これらのプロジェクトでは、Visual Basic および Visual c# コンパイラで遅延のバインド機能を使用できます。 この例を使用する実行から、`ThisDocument`または`ThisAddIn`プロジェクト内のクラスです。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
   
  [!code-vb[Trin_VstcoreWordAutomation#104](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#104)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: プログラムによって Word の組み込みダイアログ ボックスを使用](../vsto/how-to-programmatically-use-built-in-dialog-boxes-in-word.md)   
  [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)   
  [Office ソリューションの遅延バインディング](../vsto/late-binding-in-office-solutions.md)   

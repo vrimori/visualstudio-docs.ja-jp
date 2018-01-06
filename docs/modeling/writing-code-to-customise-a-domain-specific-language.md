@@ -12,11 +12,12 @@ caps.latest.revision: "29"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 2d456f84078e54694deb11fda0082ac40d278dd2
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: e7b5fc639e93061a4abd0acbfc1425223d673282
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-code-to-customise-a-domain-specific-language"></a>ドメイン固有言語をカスタマイズするコードの記述
 このセクションでは、カスタム コードを使用して、アクセス、変更、またはドメイン固有言語でモデルを作成する方法を示しています。  
@@ -73,5 +74,5 @@ ms.lasthandoff: 10/27/2017
   
 -   **シリアル化**です。 ストアは、標準的なファイルが含まれているオブジェクトをシリアル化する方法を提供します。 シリアル化と逆シリアル化のルールをカスタマイズすることができます。 詳細については、次を参照してください。[ファイル記憶域のカスタマイズと XML シリアル化](../modeling/customizing-file-storage-and-xml-serialization.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語のカスタマイズおよび拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)

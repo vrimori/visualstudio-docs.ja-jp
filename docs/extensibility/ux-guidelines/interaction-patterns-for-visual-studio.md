@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1e084ace914f65a9e97307f0a70d6c5e2211be55
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 31a3bff68a15603c8d40818fa2d826da64421dad
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interaction-patterns-for-visual-studio"></a>Visual Studio の相互作用のパターン
 ## <a name="overview"></a>概要  
@@ -26,7 +27,7 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="visual-studio-client-pattern-types"></a>Visual Studio クライアント パターンの種類  
   
-|パターンの種類|説明|例|  
+|パターンの種類|説明|使用例|  
 |------------------|-----------------|--------------|  
 |**アプリケーション レベルのパターン**|高度なパターンを決定する、またはアプリケーションのコンテキストを表示してそれらに含まれる複合とコントロール パターンを含む、アプリケーションに共通する|ツール ウィンドウ<br />ドキュメント ウィンドウ|  
 |**合成パターン**|アプリケーション パターンでは、全体にわたる場合がありますの一般的なパターンまたは個別の構成で複数のコントロールから成る認識されているパターン|ビューの切り替え<br />リスト ビルダー<br />データを表示します。<br />-通知<br />検証<br />モデルの選択|  

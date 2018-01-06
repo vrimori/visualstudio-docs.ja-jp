@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bdba51967b470023deb5997bc243b900e3155245
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fe9dd81fad59c526233a56f1c5bcd1a178ad46f1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugexpressionevaluatorsetlocale"></a>IDebugExpressionEvaluator::SetLocale
 このメソッドは、印刷可能な結果の作成に使用する言語を設定します。  
@@ -47,5 +48,5 @@ int SetLocale(
 ## <a name="remarks"></a>コメント  
  EE は、実行時に言語を変更できる必要がありますので、式エバリュエーター (EE) が読み込まれるときににより、このメソッドに何度もを呼び出すことがあります。 EE は、このロケールを使用して適切な言語でエラー メッセージ、および文字列を返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

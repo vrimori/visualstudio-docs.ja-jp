@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 7a8fc0474f624785a47a4ba9f970b5a1ca54dd9c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 289c95ebbbd294050b1e5c7cc95656e7ab5eadc0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-a-dsl-definition"></a>DSL 定義のプロパティ
 DslDefinition プロパティ定義*ドメイン固有言語*バージョン番号などのプロパティを定義します。 DslDefinition プロパティに表示されます、**プロパティ**ウィンドウで、ダイアグラムの空いている領域をクリックすると、*ドメイン固有言語デザイナー*です。  
@@ -30,7 +31,7 @@ DslDefinition プロパティ定義*ドメイン固有言語*バージョン番�
 |アクセス修飾子|ドメイン クラスのアクセス修飾子がパブリックまたは内部かを判断します。|public|  
 |カスタム属性|カスタムは、ドメイン クラスの属性を定義します。<br /><br /> **注**属性を追加する [参照] ボタンを使用します。|\<なし >|  
 |会社名|システム レジストリの現在の会社名の名前。|現在の会社名|  
-|名前|このドメイン クラスの名前。|現在の名前|  
+|name|このドメイン クラスの名前。|現在の名前|  
 |名前空間|名前空間は、このドメイン クラスに関連付けます。|現在の名前空間|  
 |パッケージ Guid|Guid、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]この DSL に対して生成されるパッケージ。|\<なし >|  
 |パッケージ Namespace|名前空間を[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]この DSL に対して生成されるパッケージ。|\<なし >|  
@@ -42,7 +43,7 @@ DslDefinition プロパティ定義*ドメイン固有言語*バージョン番�
 |ビルド|このドメイン固有言語定義のインクリメンタル ビルド番号です。|0|  
 |メジャー バージョン|このドメイン固有言語定義の増分のメジャー ビルド番号。|1|  
 |マイナー バージョン|このドメイン固有言語定義の増分のマイナー ビルド番号です。|0|  
-|Revision|増分のリビジョンは、このドメイン固有言語定義の数をビルドします。|0|  
+|リビジョン|増分のリビジョンは、このドメイン固有言語定義の数をビルドします。|0|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)

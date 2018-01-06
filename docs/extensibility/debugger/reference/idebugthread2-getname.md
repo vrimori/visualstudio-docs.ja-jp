@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1c608c01b788c88385814fced4fae99d267e96f4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e75fe48ee3974857de0acd4e3af99c0c3ea16314
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugthread2getname"></a>IDebugThread2::GetName
 スレッドの名前を取得します。  
@@ -47,6 +48,6 @@ int GetName (
 ## <a name="remarks"></a>コメント  
  取得した名前が表示可能な名前で常にあり、この名前は、スレッドをについて説明します。 スレッド名は、実行時のアーキテクチャをサポートしていますが、スレッドをという名前またはデバッグ エンジンから派生した名前である可能性がありますから派生させることがあります。 呼び出しによってスレッドの名前を設定する代わりに、 [SetThreadName](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md)メソッドです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [SetThreadName](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md)

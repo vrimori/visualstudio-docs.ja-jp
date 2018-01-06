@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 585e1c8760152c9c42e1950c45d3e3821bbe93df
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 59e601e828fd3dad1487925c649972efc7b019a9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugcanstopevent2"></a>IDebugCanStopEvent2
 このインターフェイスを使用すると、セッション デバッグ マネージャー (SDM) を現在のコードの場所で停止するかどうか確認します。  
@@ -50,13 +51,13 @@ IDebugCanStopEvent2 : IUknown
 ## <a name="remarks"></a>コメント  
  デは、関数と、DE にユーザーの手順がデバッグ情報が検出されないやデバッグ情報が存在しても、DE がソース コードがその場所に対して表示されるかどうかを把握していない場合、このインターフェイスを送信します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugStepCompleteEvent2](../../../extensibility/debugger/reference/idebugstepcompleteevent2.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

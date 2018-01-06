@@ -6,7 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vs.debug.options.General
 - VS.ToolsOptionsPages.Debugger.General
@@ -24,11 +24,12 @@ caps.latest.revision: "46"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 98e23108f7619f4bba0609b8a29cb26d09bd9f9e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: bf693d7a5339e57edeaed82c25ed552901e1ea51
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="general-debugging-options-dialog-box"></a>[全般] ([オプション] ダイアログ ボックス - [デバッグ])
 **ツール > オプション > デバッグ > 全般** ページでは、次のオプションを設定できます。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/31/2017
     [マイ コードのみ] を有効にしてデバッグを開始したとき、ユーザー コード ("マイ コード") が存在しない場合に警告を行います。 
 
 **.NET Framework を有効にするソースのステッピング**  
-デバッグ時に .NET Framework ソース コードにステップ インできます。 このオプションを有効にすると、[マイ コードのみ] が自動的に無効になります。.NET Framework シンボルは、キャッシュの場所へダウンロードされます。 キャッシュの場所を変更することができます、**オプション**ダイアログ ボックスで、**デバッグ**カテゴリ、**シンボル**ページ。  
+デバッグ時に .NET Framework ソース コードにステップ インできます。 このオプションを有効にすると、[マイ コードのみ] が自動的に無効になります.NET Framework シンボルは、キャッシュの場所へダウンロードされます。 キャッシュの場所を変更することができます、**オプション**ダイアログ ボックスで、**デバッグ**カテゴリ、**シンボル**ページ。  
   
 **プロパティおよび演算子 (マネージのみ) をステップ オーバー**  
 デバッグ時にマネージ コード内のプロパティおよび演算子にステップ インしません。  
@@ -199,6 +200,6 @@ Visual Studio は、デバッグ対象プロセスでコードを実行中のカ
   
 新しいデバッグ エンジンは .NET C++ 式の評価をサポートしていないため、.NET C++ コードをデバッグするときにはこのオプションを使用する必要があります。 ただし、ネイティブ互換モードを有効にすると、現在のデバッガーの実装に依存している多くの機能が無効になります。 たとえば、レガシ エンジンではなどの組み込み型の場合、多くのビジュアライザーがない`std::string`の Visual Studio 2015 のプロジェクトです。   このような場合、デバッグ機能を最適にご利用いただくためには、Visual Studio 2013 プロジェクトをお使いください。
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f56deacf0efe569890ed659ff5f59287483fb1a7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ab9a8ceec8c0f3a1b8d6c3c18fcf9c5c2a5b0b91
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugpendingbreakpoint2setpasscount"></a>IDebugPendingBreakpoint2::SetPassCount
 設定または保留中のブレークポイントに関連付けられたパスの数を変更します。  
@@ -49,6 +50,6 @@ int SetPassCount(
 ## <a name="remarks"></a>コメント  
  保留中のブレークポイントに以前関連付けられていたパスの数が失われます。 保留中のブレークポイントからこのバインドのすべてのブレークポイントがそのパスの数に設定すると呼ばれる、`bpPassCount`パラメーター。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   
  [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)

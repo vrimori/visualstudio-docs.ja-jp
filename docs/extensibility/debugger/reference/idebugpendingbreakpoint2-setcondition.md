@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fc4b55e1de6c643179b3ac9a5b06aecc24e85a59
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 34c47fd8bd4843b74eb78d96723e3aae051616d3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugpendingbreakpoint2setcondition"></a>IDebugPendingBreakpoint2::SetCondition
 設定または保留中のブレークポイントに関連付けられている条件を変更します。  
@@ -49,6 +50,6 @@ int SetCondition(
 ## <a name="remarks"></a>コメント  
  保留中のブレークポイントに以前関連付けられているいずれかの条件は失われます。 保留中のブレークポイントからこのバインドのすべてのブレークポイントがで指定された値にその条件を設定すると呼ばれる、`bpCondition`パラメーター。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   
  [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)

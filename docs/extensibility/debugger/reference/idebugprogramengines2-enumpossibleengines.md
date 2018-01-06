@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d1cf3eead4b268dbbca5ad4333adcc647522b051
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 81765959c0735080141ba8974387d592a461df25
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprogramengines2enumpossibleengines"></a>IDebugProgramEngines2::EnumPossibleEngines
 すべての使用可能なデバッグ エンジン (DE) このプログラムをデバッグできる対応する Guid を返します。  
@@ -57,5 +58,5 @@ int EnumPossibleEngines(
 ## <a name="remarks"></a>コメント  
  エンジンの数を決定するためにこのメソッドが 1 回、`celtBuffer`パラメーター 0 に設定され、`rgguidEngines`パラメーターが null の値に設定します。 返されます。 `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` (0x8007007A C# の場合)、および`pceltEngines`パラメーターが必要とするバッファーのサイズを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProgramEngines2](../../../extensibility/debugger/reference/idebugprogramengines2.md)

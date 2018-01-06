@@ -11,11 +11,12 @@ caps.latest.revision: "3"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f714120c6f5dced4760bb14cad1e53a794030a19
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 87f676ef30da7c667c4ce2b688520a49ed1931c3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-template-manifest-schema-reference"></a>Visual Studio テンプレート マニフェスト スキーマ リファレンス
 このスキーマは、Visual Studio のプロジェクトまたは項目テンプレートに対して生成された Visual Studio テンプレート マニフェスト (.vstman) ファイルの形式をについて説明し、場所と、テンプレートに関するその他の関連情報について説明します。  
@@ -30,9 +31,9 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="attributes"></a>属性  
   
--   **バージョン**: テンプレート マニフェストのバージョンを表す文字列。 必須です。  
+-   **バージョン**: テンプレート マニフェストのバージョンを表す文字列。 必須。  
   
--   **ロケール**: ロケールまたはテンプレート マニフェストのロケールを表す文字列。 ロケール値は、ロケールごとに個別のマニフェストを使用する必要がありますので、すべてのテンプレートに適用されます。 省略可能です。  
+-   **ロケール**: ロケールまたはテンプレート マニフェストのロケールを表す文字列。 ロケール値は、ロケールごとに個別のマニフェストを使用する必要がありますので、すべてのテンプレートに適用されます。 任意。  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -70,11 +71,11 @@ ms.lasthandoff: 10/31/2017
   
 -   **RelativePath**: テンプレートのパス。 すべてのマニフェストの最初の 1 つが優先されますのでは、パスごとに 1 つだけのエントリが割り当てできます。  
   
--   **LocalizedName**: A **NameDescriptionIcon**ローカライズされた名前を指定する要素。 省略可能です。  
+-   **LocalizedName**: A **NameDescriptionIcon**ローカライズされた名前を指定する要素。 任意。  
   
--   **SortOrder** : 並べ替え順序を指定する文字列。 省略可能です。  
+-   **SortOrder** : 並べ替え順序を指定する文字列。 任意。  
   
--   **ParentFolderOverrideName**: オーバーライドされた親フォルダーの名前。 省略可能です。 この要素には、**名前**属性には、名前を指定する文字列値です。  
+-   **ParentFolderOverrideName**: オーバーライドされた親フォルダーの名前。 任意。 この要素には、**名前**属性には、名前を指定する文字列値です。  
   
 ### <a name="parent-element"></a>Parent 要素  
  **VSTemplateManifest**  
@@ -84,9 +85,9 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="attributes"></a>属性  
   
--   **パッケージ**: パッケージを指定する文字列値です。 省略可能です。  
+-   **パッケージ**: パッケージを指定する文字列値です。 任意。  
   
--   **ID**: ID を指定する文字列値 省略可能です。  
+-   **ID**: ID を指定する文字列値 任意。  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -94,7 +95,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="parent-element"></a>Parent 要素  
  **LocalizedName**  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  プロジェクト テンプレート .vstman ファイルの例を次に示します。  
   
 ```xml  

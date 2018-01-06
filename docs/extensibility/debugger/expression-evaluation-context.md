@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1ac80a3fcf3a7f75be3f23dd1350da047ccbb393
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ab4e57f500c2dfbfe673713c784cbc93ff52a73d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="expression-evaluation-context"></a>式の評価コンテキスト
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 、デバッグ、**式の評価コンテキスト**:  
@@ -30,6 +31,6 @@ ms.lasthandoff: 10/31/2017
   
      指定された、`BSTR`と[IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md)デバッグ エンジン (DE) を作成できるインターフェイスを[IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md)式を解析してインターフェイスです。 指定された、`IDebugExpression2`インターフェイス、デが同期または非同期の式の評価から得られた値を取得できます。 変数または引数の型と名前と共に、この値は、表示するための IDE に送信されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [式の評価インターフェイス](../../extensibility/debugger/reference/expression-evaluation-interfaces.md)   
  [デバッガー コンテキスト](../../extensibility/debugger/debugger-contexts.md)

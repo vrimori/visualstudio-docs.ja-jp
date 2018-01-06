@@ -12,11 +12,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7a7d8649e0d8cf83650da58386901e638ec14a2a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 16de0e205d71e2a71b14f523dedbb45354157355
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-saving-user-settings-on-a-start-page"></a>チュートリアル: スタート ページ上のユーザー設定の保存
 スタート ページのユーザー設定を保持できます。 このチュートリアルでは、ユーザーが、ボタンをクリックするし、開始ページが読み込まれるたびに、その設定を取得し、設定をレジストリに保存するコントロールを作成できます。 スタート ページ プロジェクト テンプレートには、カスタマイズ可能なユーザー コントロールが含まれています。 既定のスタート ページの XAML は、そのコントロールを呼び出すためがありません自体スタート ページを変更します。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="prerequisites"></a>必須コンポーネント  
   
 > [!NOTE]
->  このチュートリアルを行うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
+>  このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
 >   
 >  使用して、スタート ページ プロジェクト テンプレートをダウンロードする**拡張機能マネージャー**です。  
   
@@ -175,7 +176,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  **環境**] ノードをクリックして**スタートアップ**、[、**スタート ページのカスタマイズ**一覧で、[ **[インストールされている拡張機能] 保存個人用設定を開始] ページ**.  
   
-     **[OK]** をクリックします。  
+     **[OK]**をクリックします。  
   
 4.  場合は、開いているし、[スタート ページを閉じ、**ビュー** ] メニューのをクリックして**スタート ページ**です。  
   
@@ -202,6 +203,6 @@ ms.lasthandoff: 10/31/2017
 ## <a name="next-steps"></a>次の手順  
  保存および取得および設定する値が異なる別のイベント ハンドラーを使用して、任意の数のカスタム設定を取得するには、このユーザー コントロールを変更することができます、`SettingsStore`プロパティです。 異なるを使用する限り`propertyName`呼び出しごとにパラメーター<xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore.SetString%2A>値は上書きされません互いのレジストリにします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:EnvDTE80.DTE2?displayProperty=fullName>     
  [Visual Studio コマンドのスタート ページへの追加](../extensibility/adding-visual-studio-commands-to-a-start-page.md)

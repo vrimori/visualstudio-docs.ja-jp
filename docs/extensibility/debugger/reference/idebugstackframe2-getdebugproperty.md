@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1340313a66a3c58759f1cd91bc967a3d95ac93ab
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4d4e26c0008cb52fd5bafda45e33dbbe9b395237
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugstackframe2getdebugproperty"></a>IDebugStackFrame2::GetDebugProperty
 スタック フレームのプロパティの説明を取得します。  
@@ -47,6 +48,6 @@ int GetDebugProperty (
 ## <a name="remarks"></a>コメント  
  呼び出す、 [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)適切なフィルターを持つメソッドは、ローカル変数、メソッドのパラメーター、レジスタ、およびスタック フレームに関連付けられている"this"ポインターを取得できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

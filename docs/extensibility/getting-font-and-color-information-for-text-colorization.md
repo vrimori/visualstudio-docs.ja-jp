@@ -15,11 +15,12 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e3b31ad2ec080070dec3c68b304f400d204d47a0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 97b97b6a79ac93dd614cf6557d338d5f0398192e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-font-and-color-information-for-text-colorization"></a>フォントとテキスト彩色の色の情報を取得します。
 レンダリングまたはユーザー インターフェイス (UI) 要素の色分けされたテキストを表示するプロセスは、プロジェクト、テクノロジ、および developer の基本設定の種類によって異なります。 **フォントおよび色**プロパティ ページの設定を保存します。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/31/2017
   
  フォントと色の情報を取得した後、色付けを必要とする要素を識別する表示されるテキストを解析し、適切なフォントと色を使用して、ウィンドウでテキストを表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaultsProvider>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>   
  [フォントとテキストを使用します。](/dotnet/framework/winforms/advanced/using-fonts-and-text)   

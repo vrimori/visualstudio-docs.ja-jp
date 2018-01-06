@@ -21,11 +21,12 @@ caps.latest.revision: "34"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 362667d4f07acb7a6c245247b40911be35479b96
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: c584e4951289cd813a0f1d6bcf14920bd9713436
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="packaging-and-deploying-sharepoint-solutions"></a>SharePoint ソリューションのパッケージ化と配置
   通常、ソリューション パッケージ (.wsp) ファイルを使用して、SharePoint サーバーに SharePoint ソリューションを展開します。 機能に、SharePoint プロジェクト項目を整理して、SharePoint フィーチャーを配置するパッケージを作成するには、Visual Studio を使用することができます。  
@@ -107,7 +108,7 @@ ms.lasthandoff: 10/31/2017
   
  追加したファイルが適用される場合、ソリューション内の特定のプロジェクトへ、空の SharePoint プロジェクトをソリューションに追加でき、追加のファイルを追加できます。 特に、コンテンツ データベースに、SharePoint にファイルを展開するための別の方法としては、プロジェクトにモジュールを追加し、モジュールにファイルを追加するです。 詳細については、次を参照してください。[ソリューション内のインクルード ファイルを使用してモジュール](../sharepoint/using-modules-to-include-files-in-the-solution.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   
  [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
   

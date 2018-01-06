@@ -13,18 +13,19 @@ caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6144c0200c03776ead9e7dc7f46b5e9e707b6e82
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0405e18419baf8bc152331a2bcfc7254ec602d1b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="substitution-strings-used-in-pkgdef-and-pkgundef-files"></a>使用される文字列を置換します。Pkgdef およびです。Pkgundef ファイル
 分離シェル アプリケーションの Visual Studio 用に定義した .pkgundef ファイルと、.pkgdef に以下の代替文字列を使用できます。  
   
 ## <a name="substitution-strings"></a>代替文字列  
   
-|文字列型|説明|  
+|String|説明|  
 |------------|-----------------|  
 |$=*レジストリ エントリ*$|値、*のレジストリ エントリ*エントリです。 レジストリ エントリの文字列は円記号で終わっている場合 (\\)、レジストリ サブキーの既定値が使用されます。 たとえば、$ の文字列置換 = HKEY_CURRENT_USER\Environment\TEMP$ を現在のユーザーの一時フォルダを展開します。|  
 |$AppName $|AppEnv.dll エントリ ポイントに渡されるアプリケーションの修飾名。 修飾名は、アプリケーション名、アンダー スコア、およびプロジェクト .pkgdef ファイルで ThisVersionDTECLSID 設定の値としても記録されますが、アプリケーション オートメーション オブジェクトのクラス id (CLSID) で構成されます。|  

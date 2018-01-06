@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5a252e22cda234f6a45bee084522b2add2bafada
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fcd6b5edd5d0c6724ca7ed1e393e32d657a4a29b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Visual Studio のフォントと書式
 ##  <a name="BKMK_TheEnvironmentFont"></a>環境フォント  
@@ -343,7 +344,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 |頭字語のすべての英字|HTML、XML、URL、IDE、RGB|  
 |同じ重みであれば、単語または名詞または適切な形容詞である場合、2 つ目の複合語でワードします。|前の Microsoft ソフトウェアの相互参照は、読み取り/書き込みアクセス、実行時|  
   
-|小文字|例|  
+|小文字|使用例|  
 |---------------|--------------|  
 |別の品詞または最初の単語を変更する分詞形である場合に、複合語で 2 番目の単語|再開の方法|  
 |この記事のタイトルの最初の単語は、いずれかの場合を除き、|a、an、the|  
@@ -463,6 +464,6 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
   
 -   太字になっている環境フォントのテキストは、既定の行の高さの間隔とスペースに従う必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSDN: フォント (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742483\(v=vs.85\).aspx)   
  [MSDN: ユーザー インターフェイスのテキスト (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742478\(v=vs.85\).aspx)

@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b0a434800fef7029460854107e79f29a71c75285
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 75b593110f68cd559717ae87920e898f39cdeb43
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vsct-xml-schema-conditional-attributes"></a>VSCT XML スキーマの条件付き属性
 条件付き属性は、すべてのリストと項目に適用可能性があります。 論理演算子およびシンボル拡張式は、true または false に評価されます。 True の場合、関連付けられているリストまたは項目が、結果の出力に含まれます。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/31/2017
 |と、呼び出し|ブール型|  
 |または|ブール型|  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ```  
 <Menu Condition="Defined(DEBUG)" ...  
@@ -72,5 +73,5 @@ and !Defined(DEBUG)">
 </Menus>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

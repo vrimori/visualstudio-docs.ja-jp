@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 30453237dcd95607a4f3524f115d16bc1cf4859a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 755516fb9d341193005ad39e419e708b6d28867c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>レガシ言語サービス パーサーとスキャナー
 パーサーは、言語サービスの中核です。 Managed Package Framework (MPF) 言語のクラスでは、表示されているコードに関する情報を選択する言語パーサーが必要です。 パーサーは、構文のトークンにテキストを分離し、型と機能を使用してこれらのトークンを識別します。  
@@ -115,7 +116,7 @@ namespace MyNamespace
   
 12. 完成です。  
   
-### <a name="summary"></a>概要  
+### <a name="summary"></a>まとめ  
  中かっこの一致の操作は、通常、言語要素のペアを単純に制限されます。 3 要素に一致するなどのより複雑な要素 ("`if(...)`「,」`{`「と」`}`"、または"`else`「,」`{`「と」`}`")、入力語の完了操作の一部として強調表示されます。 たとえば、"else"という単語が完了すると、一致する"`if`"ステートメントが強調表示されます。 一連があった場合`if` / `else if`中かっこの一致するものと同じメカニズムを使用して、それらのすべてのステートメントを強調表示されますでした。 <xref:Microsoft.VisualStudio.Package.Source>基本クラスは、次のように、このサポート既に: スキャナーは、トークンのトリガー値を返す必要があります<xref:Microsoft.VisualStudio.Package.TokenTriggers>トリガー値と組み合わせると<xref:Microsoft.VisualStudio.Package.TokenTriggers>のカーソル位置の前に、トークンです。  
   
  詳細については、次を参照してください。[レガシ言語サービスでかっこの照合](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md)です。  
@@ -134,7 +135,7 @@ namespace MyNamespace
   
  <xref:Microsoft.VisualStudio.Package.AuthoringSink>オブジェクトは、パーサーの一部として、<xref:Microsoft.VisualStudio.Package.ParseRequest>オブジェクト、および新しい<xref:Microsoft.VisualStudio.Package.AuthoringSink>オブジェクトがするたびに作成される新しい<xref:Microsoft.VisualStudio.Package.ParseRequest>オブジェクトを作成します。 さらに、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッドが返す必要があります、<xref:Microsoft.VisualStudio.Package.AuthoringScope>オブジェクト、IntelliSense、さまざまな操作を処理するために使用します。 <xref:Microsoft.VisualStudio.Package.AuthoringScope>オブジェクトを保持宣言の一覧と、メソッドの一覧かされるは、によって設定されます、解析の理由。 <xref:Microsoft.VisualStudio.Package.AuthoringScope>クラスを実装する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レガシ言語サービスを実装します。](../../extensibility/internals/implementing-a-legacy-language-service1.md)   
  [レガシ言語サービスの概要](../../extensibility/internals/legacy-language-service-overview.md)   
  [従来の言語サービスでの構文の色分け](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)   

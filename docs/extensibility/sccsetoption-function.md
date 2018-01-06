@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a0bc7ab99c6bc3643ee61b403e4aa0c40c41a63a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 70fe624984adce58191ee7d354185eac0bb527ed
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccsetoption-function"></a>SccSetOption 関数
 この関数は、ソース管理プラグインの動作を制御するオプションを設定します。  
@@ -46,7 +47,7 @@ SCCRTN SccSetOption(
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|オプションが正常に設定します。|  
 |SCC_I_SHARESUBPROJOK|場合に返される`nOption`が`SCC_OPT_SHARESUBPROJ`ソース管理プラグインは、移行先のフォルダーを設定するための IDE とします。|  
@@ -81,7 +82,7 @@ SCCRTN SccSetOption(
 ## <a name="sccoptsharesubproj"></a>SCC_OPT_SHARESUBPROJ  
  場合`nOption`に設定されている`SCC_OPT_SHARESUBPROJ`IDE はソース管理からファイルを追加すると、ソース管理プラグインは、指定したローカル フォルダーを使用できるかどうかをテストします。 値、`dwVal`パラメーターはここでは関係ありません。 プラグインでは、IDE でソースからのファイルの追加、ローカルのコピー先フォルダーを指定する場合は、タイミングを制御、 [SccAddFromScc](../extensibility/sccaddfromscc-function.md)が呼び出されたが、プラグインを返す必要があります、`SCC_I_SHARESUBPROJOK`ときに、`SccSetOption`関数は、と呼ばれる。 IDE を使用し、`lplpFileNames`のパラメーター、`SccAddFromScc`関数を対象フォルダーに渡します。 プラグインは、ソース管理から追加されたファイルの配置先のフォルダーを使用します。 プラグインを返さない場合`SCC_I_SHARESUBPROJOK`ときに、`SCC_OPT_SHARESUBPROJ`オプションの設定と、IDE がプラグインの項目が現在のローカル フォルダーでのみファイルを追加できることを想定しています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)   

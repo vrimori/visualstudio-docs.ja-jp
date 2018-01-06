@@ -12,21 +12,26 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b3081537b1704fd461a458798d646bf7eeb65f0a
-ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
+ms.workload: vssdk
+ms.openlocfilehash: 3677dd4ad6177f4085c907d1fceaaf37978bf769
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="creating-custom-project-and-item-templates"></a>カスタム プロジェクトと項目テンプレートを作成します。
-Visual Studio SDK には、カスタム プロジェクト テンプレートとカスタム項目テンプレートを作成するプロジェクト テンプレートが含まれています。 これらのテンプレートは、いくつか共通パラメーターの代用を含めるし、zip ファイルとしてビルドします。 これらは自動的に配置していないは実験用インスタンスで使用できません。 郵便番号をコピーする必要がありますファイルの場所にします。  
+
+Visual Studio SDK には、カスタム プロジェクト テンプレートとカスタム項目テンプレートを作成するプロジェクト テンプレートが含まれています。 これらのテンプレートは、いくつか共通パラメーターの代用を含めるし、zip ファイルとしてビルドします。 これらは自動的に配置していないは実験用インスタンスで使用できません。 ユーザー テンプレート ディレクトリに生成された zip ファイルをコピーする必要があります。
   
- テンプレートの作成テンプレートを使用してより大きな拡張機能でテンプレートを追加できます。 これにより、ソース ファイルでのバージョン管理を実装し、1 つの VSIX パッケージ プロジェクト テンプレートのグループを作成できます。  
+テンプレートの作成テンプレートを使用してより大きな拡張機能でテンプレートを追加できます。 これにより、ソース ファイルでのバージョン管理を実装し、1 つの VSIX パッケージ プロジェクト テンプレートのグループを作成できます。  
   
- 基本的なテンプレートの作成シナリオで使用する必要があります、**テンプレートのエクスポート**ウィザードで、圧縮されたファイルに出力します。 基本的なテンプレートの作成の詳細については、次を参照してください。[を作成するプロジェクトと項目テンプレート](../ide/creating-project-and-item-templates.md)です。  
-  
- Visual Studio 2017 以降、カスタム プロジェクトと項目テンプレートのスキャンが不要になった実行されます。 代わりに、拡張機能では、これらのテンプレートのインストール場所を記述するテンプレート マニフェスト ファイルを提供する必要があります。 Visual Studio 2017 を使用するには、VSIX 拡張機能を更新します。 MSI を使用して、拡張機能を展開する場合は、テンプレート マニフェスト ファイルを手動で生成する必要があります。 詳細については、次を参照してください。[をアップグレードするカスタムのプロジェクトと項目テンプレート Visual Studio 2017](../extensibility/upgrading-custom-project-and-item-templates-for-visual-studio-2017.md)です。 テンプレート マニフェスト スキーマについては、「 [Visual Studio テンプレート マニフェスト スキーマ リファレンス](../extensibility/visual-studio-template-manifest-schema-reference.md)です。  
-  
+NuGet パッケージをインストールするためのテンプレートを構成することもできます。 詳細については、次を参照してください。 [Visual Studio のテンプレートで NuGet パッケージ](/nuget/visual-studio-extensibility/visual-studio-templates)です。
+
+基本的なテンプレートの作成シナリオで使用する必要があります、**テンプレートのエクスポート**ウィザードで、圧縮されたファイルに出力します。 基本的なテンプレートの作成の詳細については、次を参照してください。[を作成するプロジェクトと項目テンプレート](../ide/creating-project-and-item-templates.md)です。  
+
+> [!NOTE]
+> Visual Studio 2017 以降、カスタム プロジェクトと項目テンプレートのスキャンが不要になった実行されます。 代わりに、拡張機能では、これらのテンプレートのインストール場所を記述するテンプレート マニフェスト ファイルを提供する必要があります。 Visual Studio 2017 を使用するには、VSIX 拡張機能を更新します。 MSI を使用して、拡張機能を展開する場合は、テンプレート マニフェスト ファイルを手動で生成する必要があります。 詳細については、次を参照してください。[をアップグレードするカスタムのプロジェクトと項目テンプレート Visual Studio 2017](../extensibility/upgrading-custom-project-and-item-templates-for-visual-studio-2017.md)です。 テンプレート マニフェスト スキーマについては、「 [Visual Studio テンプレート マニフェスト スキーマ リファレンス](../extensibility/visual-studio-template-manifest-schema-reference.md)です。
+
 ## <a name="creating-a-project-template"></a>プロジェクト テンプレートの作成  
   
 1.  プロジェクト テンプレート プロジェクトを作成します。 プロジェクト テンプレートを見つけることができます、**新しいプロジェクト** ダイアログ ボックスで、Visual Basic または Visual c# **Extensibility**フォルダーです。  
@@ -81,5 +86,7 @@ Visual Studio SDK には、カスタム プロジェクト テンプレートと
   
 5.  プロジェクト テンプレート プロジェクトの場合に表示されているプロジェクト テンプレートが表示されます、**新しいプロジェクト**ダイアログ (**ファイル > 新規 > プロジェクト**) では、Visual c# または Visual Basic のノードです。 項目テンプレート プロジェクトでは、項目テンプレートが 新しい項目の追加 ダイアログ ボックスの一覧に表示されます (で、**ソリューション エクスプ ローラー**プロジェクト ノードを選択して、をクリックして**追加/新しい項目の**)。  
   
-## <a name="see-also"></a>関連項目  
- [Visual Studio テンプレート参照](../ide/visual-studio-template-reference.md)
+## <a name="see-also"></a>参照
+
+[Visual Studio テンプレート参照](../ide/visual-studio-template-reference.md)  
+[Visual Studio のテンプレートで NuGet パッケージ](/nuget/visual-studio-extensibility/visual-studio-templates)

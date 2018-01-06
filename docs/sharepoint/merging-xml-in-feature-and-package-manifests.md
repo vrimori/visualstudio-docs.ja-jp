@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6d418e757a93d77b0034bbdb8287b0e81a5a3860
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 895bb4f7bde787a135699e4197622037413a1869
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="merging-xml-in-feature-and-package-manifests"></a>フィーチャー マニフェストとパッケージ マニフェストの XML のマージ
   フィーチャーとパッケージがによって定義されている[!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]マニフェスト ファイル。 これらのパッケージのマニフェストは、デザイナーとカスタムから生成されたデータの組み合わせ[!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]ユーザーによって、マニフェスト テンプレートに入力します。 パッケージ実行時、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]カスタムをマージ[!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]ステートメントと、デザイナーによって提供された[!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]、パッケージを形成する[!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]マニフェスト ファイル。 ような要素は、後でマージの例外を示すような例外がマージを回避する[!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]検証エラーの後、SharePoint にファイルを展開して、マニフェストを作成するファイルより小さい方が効率的です。  
@@ -54,8 +55,8 @@ ms.lasthandoff: 10/31/2017
 |ElementFile|場所|  
 |ElementManifests/ElementManifest|場所|  
 |プロパティ/プロパティ|キー|  
-|CustomUpgradeAction|名前|  
-|CustomUpgradeActionParameter|名前|  
+|CustomUpgradeAction|name|  
+|CustomUpgradeActionParameter|name|  
   
 > [!NOTE]  
 >  CustomUpgradeAction 要素を変更する唯一の方法がカスタムであるため[!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]エディター、いないをマージした効果が不足します。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="manually-add-deployed-files"></a>配置済みのファイルを手動で追加します。  
  ApplicationResourceFile DwpFiles などのいくつかのマニフェスト要素は、ファイル名を含む場所を指定します。 ただし、マニフェスト テンプレートへのファイル名のエントリを追加できません、基になるファイルに追加されませんパッケージです。 パッケージに含めるし、その展開の種類プロパティを適宜設定をプロジェクトにファイルを追加する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パッケージ化と SharePoint ソリューションの配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)   
  [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
   

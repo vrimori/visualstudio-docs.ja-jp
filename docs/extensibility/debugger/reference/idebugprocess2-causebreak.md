@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d00e9c65798388bce6eb426a1c4326db49f0ec80
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 99047f7703f39a04049162686079ed26ad9b30f8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprocess2causebreak"></a>IDebugProcess2::CauseBreak
 送信して、次へは、このプロセスで実行中のコードでプログラムが要求を中止する[IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md)イベント オブジェクトです。  
@@ -38,5 +39,5 @@ int CauseBreak();
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

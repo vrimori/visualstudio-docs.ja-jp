@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 785fed3d89ab6a351a82a61acbd3f58978a690e5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 934ae1192a76cd7bd090c0cf2db384d28b61d6df
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugcanstopevent2getreason"></a>IDebugCanStopEvent2::GetReason
 デバッグ エンジン (DE) が停止する理由の理由を取得します。  
@@ -49,7 +50,7 @@ int GetReason(
   
  停止の理由には、いずれかを指定できます`CANSTOP_ENTRYPOINT`、エントリ ポイントに達して、DE つまりまたは`CANSTOP_STEPIN`関数にステップ インは、DE 意味します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)   
  [CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md)   
  [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "38"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: df3621d87ae80c0eee105183edbc97a4e7ade62f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f3c207b80686a66d9a06b8c50321b4dce2257ada
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-adding-features-to-a-custom-editor"></a>チュートリアル: カスタム エディターの機能の追加
 カスタム エディターを作成した後は、それにより多くの機能を追加できます。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/31/2017
         > [!NOTE]
         >  呼び出す`QueryService`で<xref:Microsoft.VisualStudio.Shell.Interop.SVsFileChangeEx>へのポインターを取得する`IVsFileChangeEx`です。  
   
-7.  ソース コード コントロールとドキュメント編集イベントを調整します。 この操作を行うには、次の手順を実行します。  
+7.  ソース コード コントロールとドキュメント編集イベントを調整します。 手順は次のとおりです。  
   
     1.  ポインターを取得`IVsQueryEditQuerySave2`を呼び出して`QueryService`で<xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave>です。  
   
@@ -65,13 +66,13 @@ ms.lasthandoff: 10/31/2017
   
          このメソッドは、保存されていない場合、または最後に保存されてから変更されている場合は、ファイルを保存するユーザーに求めます。  
   
-8.  有効にする、**プロパティ**ウィンドウ、エディターで選択したテキストのプロパティを表示します。 この操作を行うには、次の手順を実行します。  
+8.  有効にする、**プロパティ**ウィンドウ、エディターで選択したテキストのプロパティを表示します。 手順は次のとおりです。  
   
     1.  呼び出す<xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A>各時間テキスト選択が変更された、成功の実装で<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>です。  
   
     2.  呼び出す`QueryService`で<xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection>サービスへのポインターを取得する<xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection>です。  
   
-9. ドラッグし、エディターの間で項目をドロップできるようにする、**ツールボックス**、または異なる Microsoft Word などの外部エディター間で、**ツールボックス**です。 この操作を行うには、次の手順を実行します。  
+9. ドラッグし、エディターの間で項目をドロップできるようにする、**ツールボックス**、または異なる Microsoft Word などの外部エディター間で、**ツールボックス**です。 手順は次のとおりです。  
   
     1.  実装`IDropTarget`エディター、エディターがドロップ ターゲットである IDE にアラートを生成します。  
   
@@ -154,6 +155,6 @@ ms.lasthandoff: 10/31/2017
   
     -   `Window.Object`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [オートメーション モデルに貢献しています。](../extensibility/internals/contributing-to-the-automation-model.md)   
  [方法: エディターのコンテキストを指定](../extensibility/how-to-provide-context-for-editors.md)

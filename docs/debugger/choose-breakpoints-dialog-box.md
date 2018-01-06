@@ -6,7 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords: vs.debug.breakpt.choose
 dev_langs:
 - CSharp
@@ -24,11 +24,12 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6696ee19b5d7e0fa7a36f53b1b290d30ce9cc82a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2503109d7c044dbd44b1b400b748ef5ba2dcee41
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="choose-breakpoints-dialog-box"></a>[ブレークポイントの選択] ダイアログ ボックス
 **[ブレークポイントの**あいまいな入力からブレークポイントを設定しようとすると、ダイアログ ボックスが開きます、**新しいブレークポイント**] ダイアログ ボックス。 あいまいな入力の例としては、オーバーロードされた関数の名前があります。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/31/2017
  **None**  
  示されたすべてのブレークポイントをクリア、**ブレークポイント**ボックス。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ブレークポイントの使用](../debugger/using-breakpoints.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fd80a8571a9c6167dab3be355365754a9e1fb7f9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: db259b7bc5f9935b229f4f6522ae14a4496f0e15
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="initialization-sequence-of-project-subtypes"></a>プロジェクトのサブタイプの初期化シーケンス
 環境の基本プロジェクト ファクトリの実装を呼び出すことによって、プロジェクトを構築する<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>です。 環境では、プロジェクト ファイルの拡張子のプロジェクト型 GUID の一覧が空でないことが判断した場合のプロジェクト サブタイプの構築を開始します。 プロジェクト ファイルの拡張子とプロジェクト GUID を指定するかどうか、プロジェクト、[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]または[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]プロジェクトの種類。 .Vbproj ファイルの拡張機能など、{F184B08F-C81C-45F6-A57F-5ABD9991F28F} を識別し、[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]プロジェクト。  
@@ -134,6 +135,6 @@ HRESULT HrCreateInnerProj
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Flavor>   
  [プロジェクト サブタイプ](../../extensibility/internals/project-subtypes.md)

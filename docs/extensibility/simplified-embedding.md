@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d4315a55b74d938576572b0630f5dca553643a24
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 183dc4ad9d7ea1a2f6855be050ad8459a3f801ac
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="simplified-embedding"></a>埋め込み簡素化されます。
 簡略化された埋め込みが有効になって、エディターでそのドキュメント ビュー オブジェクトの親 (つまり、実行の子) になれるとき[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、および<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>そのウィンドウのコマンドを処理するインターフェイスを実装します。 簡略化された埋め込みエディターには、アクティブなコントロールをホストできません。 簡略化された埋め込みエディターを作成するために使用オブジェクトは、次の図に表示されます。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/31/2017
   
  すべてのインターフェイスを簡素化された埋め込みエディターを作成するために実装が含まれている、`CYourEditorDocument`オブジェクト。 ただし、ドキュメント データの複数のビューをサポートするために分割データとビューの個別のオブジェクトに、インターフェイス、次の表に記載されています。  
   
-|インターフェイス|インターフェイスの場所|用途|  
+|Interface|インターフェイスの場所|使用|  
 |---------------|---------------------------|---------|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|表示|親ウィンドウへの接続を提供します。|  
 |<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|表示|コマンドを処理します。|  

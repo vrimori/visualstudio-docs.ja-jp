@@ -17,11 +17,12 @@ caps.latest.revision: "35"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 55ba59a5a29181dfa3cdd70427720293582a648d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3c3201c032d0cae645460e614b6d4138297e4a93
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-vspackages"></a>Vspackage の管理
 ほとんどの場合、Vspackage を管理するプロジェクトと項目テンプレートが登録し、自動的にパッケージを読み込むためについて心配する必要はありません。 ただし、状況によっては、パッケージを管理するために少しを学習する必要があります。  
@@ -47,5 +48,5 @@ ms.lasthandoff: 10/31/2017
 ## <a name="troubleshooting-vspackages"></a>Vspackage のトラブルシューティング  
  ロードまたはエラーが発生する Vspackage をトラブルシューティングするためのテクニックを調べる: [Vspackage のトラブルシューティング](../extensibility/troubleshooting-vspackages.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [VSPackage](../extensibility/internals/vspackages.md)

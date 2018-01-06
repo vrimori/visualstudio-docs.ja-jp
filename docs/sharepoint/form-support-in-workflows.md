@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e2c63af83c6ca8249e87d60f23043c0639c7fd43
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 0da90955a590881a02117213246e580339dbe596
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="form-support-in-workflows"></a>ワークフローでのフォームのサポート
   次の 4 つの種類のフォームをワークフローで使用できます: アソシエーション、開始に使用する、タスク、および変更します。 これらのフォーム型は、ASPX フォームまたはフォームのいずれかに基づいて作成できます。 レベルをサポートする[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]特定のフォームは、次の表で説明されるいくつかの要因によって異なります。 を提供します。 フォームの種類のワークフローの詳細については、次を参照してください。[ワークフロー フォームの概要](http://go.microsoft.com/fwlink/?LinkId=185228)MSDN Web サイトです。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/31/2017
 |タスク|-フォームは、ワークフローの Elements.xml ファイルで参照されています。<br />-ワークフローの Elements.xml ファイルをリファクタリングできません。|-フォームは、インポートしますが、ワークフローの Elements.xml で参照されていません。<br />-ワークフローの Elements.xml ファイルをリファクタリングできません。 **注:**ルールとプロパティを追加およびこのシナリオを実現する変更する必要があります。|  
 |変更|該当なし。 SharePoint Designer の ASPX の変更のフォームを作成できません。|該当なし。 組み込みの SharePoint サーバーのワークフローは、ワークフローをエクスポートする場合、.wsp ファイルに含まれていないを除く SharePoint デザイナーで変更の InfoPath フォームを作成できません。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: アソシエーションと開始フォーム、ワークフローを作成します。](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)   
  [SharePoint ワークフロー ソリューションを作成します。](../sharepoint/creating-sharepoint-workflow-solutions.md)   
  [既存の SharePoint サイトからの項目のインポート](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)  

@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e85ad4c4027a27b33f2f96284df80f852ffe3b85
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e1463fe22d4b08933112ca1ad0cf28f38a4e102c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="command-routing-algorithm"></a>コマンド ルーティング アルゴリズム
 Visual Studio でのコマンドは、さまざまなコンポーネントによって処理されます。 コマンドは、現在の選択に基づいて、最も内側のコンテキストから最も外側の (グローバルとも呼ばれます) のコンテキストにルーティングされます。 詳細については、次を参照してください。[可用性](../../extensibility/internals/command-availability.md)です。  
@@ -45,5 +46,5 @@ Visual Studio でのコマンドは、さまざまなコンポーネントによ
   
 8.  Global: 場合で、前に説明したコンテキストからコマンドが処理されていない、Visual Studio 試みますを実装するコマンドを所有する VSPackage をルーティングする、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>インターフェイスです。 場合は、VSPackage が既に読み込まれていませんが、それが読み込まれていない Visual Studio を呼び出すと、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>メソッドです。 VSPackage にされる場合にのみが読み込まれて、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A>メソッドが呼び出されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コマンド デザイン](../../extensibility/internals/command-design.md)

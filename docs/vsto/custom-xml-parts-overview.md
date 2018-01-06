@@ -28,11 +28,12 @@ caps.latest.revision: "33"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5891cb7aa85012bbf99b1dd2e35b86ba3c263790
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 735660c3af1c0a8792a35981788b70f4a79d55b1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-xml-parts-overview"></a>Custom XML Parts Overview
   一部の Microsoft Office アプリケーションのドキュメントに XML データを埋め込むことができます。 データがという名前のドキュメントに XML データを埋め込む場合、*カスタム XML 部分*です。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="binding-custom-xml-parts-to-word-content-controls"></a>Word のコンテンツ コントロールへのカスタム XML 部分のバインディング  
  Word ソリューションのコンテンツ コントロールをカスタム XML 部分の要素にバインドできます。 カスタム XML 部分にコンテンツ コントロールがバインドされると、カスタム XML 部分のデータがコンテンツ コントロールのユーザー インターフェイス (UI) に表示されます。 ユーザーがコントロール内のテキストを編集すると、対応する XML 要素が自動的に更新されます。 同様に、カスタム XML 部分の要素の値が変更されると、その XML 要素にバインドされているコンテンツ コントロールに新しいデータが表示されます。 詳細については、「 [Content Controls](../vsto/content-controls.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML スキーマとドキュメント レベルのカスタマイズ内のデータ](../vsto/xml-schemas-and-data-in-document-level-customizations.md)   
  [方法: ドキュメント レベルのカスタマイズにカスタム XML 部分を追加します。](../vsto/how-to-add-custom-xml-parts-to-document-level-customizations.md)   
  [方法: VSTO アドインを使用してドキュメントにカスタム XML 部分を追加](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)   

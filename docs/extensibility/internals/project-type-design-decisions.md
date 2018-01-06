@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a3e0216161669e12c245484da3ca6e4de63c6a48
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ce1de0467e7e662fd0def096ef6adb042578f8b7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-type-design-decisions"></a>プロジェクトの種類の設計に関する決定事項
 新しいプロジェクトの種類を作成する前に、プロジェクトの種類に関するいくつかの設計に関する決定を行う必要があります。 使用して、プロジェクトが含まれる項目、プロジェクト ファイルの保存方法、およびどのようなコミットメント モデルの種類を決定する必要があります。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/31/2017
   
  トランザクション モードを使用してデータ オブジェクトが開かれると、変更はメモリに一時的な場所に保存され、ユーザーが手動でファイルを保存するよう選択するまではコミットされません。 その時点ですべての変更を同時に発生する必要があります。 または変更は行われません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チェックリスト: 新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)   
  [NIB: 項目の管理のプロジェクト](http://msdn.microsoft.com/en-us/762e606b-7f44-4b66-97a1-e30a703654a0)   
  [開くと、プロジェクト項目の保存](../../extensibility/internals/opening-and-saving-project-items.md)   

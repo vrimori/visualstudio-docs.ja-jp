@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 006ab3b57a21d5b9a661f06bc984f4dca8757bfd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4db5404ed4cb307064d9d913c240b16051c25977
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-essentials"></a>サービスの基礎
 サービスは、次の 2 つの Vspackage の間のコントラクトです。 1 つの VSPackage では、別の VSPackage を使用するためのインターフェイスの特定のセットを提供します。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]自体は、その他の Vspackage にサービスを提供する Vspackage のコレクションです。  
@@ -93,7 +94,7 @@ ms.lasthandoff: 10/31/2017
     
     このコードは、SVsActivityLog サービスを取得し、アクティビティ ログへの書き込みに使用できる IVsActivityLog インターフェイスにキャストします。 例については、次を参照してください。[する方法: アクティビティ ログを使用して](../../extensibility/how-to-use-the-activity-log.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [使用可能なサービスの一覧](../../extensibility/internals/list-of-available-services.md)   
  [使用して、サービスを提供します。](../../extensibility/using-and-providing-services.md)   
  [キャストと型変換](/dotnet/csharp/programming-guide/types/casting-and-type-conversions)   

@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 10d9e23912da2ee5d0af1b6d2f846fa1de2f94fe
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: 91cef7c8c037421b69cd13e69ab21543aaf89839
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inspect-your-app-with-intellitrace-historical-debugging-in-visual-studio"></a>Visual Studio でデバッグ履歴の IntelliTrace を使用したアプリを検査します。
 使用することができます[デバッグ履歴](../debugger/historical-debugging.md)を後方へ移動し、アプリケーションの実行を介して転送状態を調べる。  
@@ -76,7 +77,7 @@ private static int AddInt(int add)
   
 7.  ここで、`AddInt()` メソッドにステップ インします。 このコードにバグがあることがすぐにわかります。  
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 この手順にすぎませんのデバッグ履歴で行うことができます。
 

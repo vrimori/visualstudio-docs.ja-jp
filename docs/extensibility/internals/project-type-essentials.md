@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 33f31ec1d5adedb2fac6c2a37c050ee65d774894
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 899d2758be1561d9b5fbda3280230333cc0ac8a3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-type-essentials"></a>プロジェクトの種類の基本事項
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]などの言語のいくつかのプロジェクトの種類が含まれる[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]または[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]です。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]独自のプロジェクトの種類を作成することもできます。  
@@ -66,5 +67,5 @@ ms.lasthandoff: 10/31/2017
   
 -   プロジェクトの種類は、デバッグやリリースなどの複数の構成をサポートできます。 ユーザーは、指定したプロパティ ページを使用して、プロジェクトのさまざまな構成を変更できます。 詳細については、次を参照してください。[構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクト タイプの配置](../../extensibility/internals/deploying-project-types.md)

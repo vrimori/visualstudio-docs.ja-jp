@@ -20,11 +20,12 @@ caps.latest.revision: "43"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 0d2483fb8c3f244f2a5fd51f076d7157711cd34f
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 320e244c17f8e21330aa3925030650126a0ba5a6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>方法: ドメイン固有言語を定義する
 ドメイン固有言語 (DSL) を定義するには、テンプレートから [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューションを作成します。 ソリューションの主要な機能は DSL 定義図です。これは DslDefinition.dsl に保存されています。 DSL 定義は、DSL のクラスとシェイプを定義します。 これらの要素を変更および追加した後で、プログラム コードを追加して DSL を詳細にカスタマイズできます。  
@@ -626,7 +627,7 @@ ms.lasthandoff: 10/27/2017
 |アセンブリ名を変更した後に、DSL のツールボックスが表示されない。|更新を行い**DslPackage\GeneratedCode\Package.tt**詳細については、次を参照してください。[する方法: ドメイン固有言語の Namespace を変更する](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md)です。|  
 |アセンブリ名を変更していないのに、DSL のツールボックスが表示されない。<br /><br /> あるいは、拡張機能の読み込みに失敗したことを示すメッセージ ボックスが表示される。|実験用インスタンスをリセットして、ソリューションをリビルドします。<br /><br /> 1.[スタート] メニュー、windows の**すべてのプログラム**、展開[!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)]、し**ツール**、クリックして**Microsoft Visual Studio の実験用インスタンスをリセット**です。<br />2.[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]**ビルド** メニューのをクリックして**ソリューションのリビルド**です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語の概要](../modeling/getting-started-with-domain-specific-languages.md)   
  [Windows フォーム ベースのドメイン固有言語の作成](../modeling/creating-a-windows-forms-based-domain-specific-language.md)   
  [WPF に基づくドメイン固有言語の作成](../modeling/creating-a-wpf-based-domain-specific-language.md)

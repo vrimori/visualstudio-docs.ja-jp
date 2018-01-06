@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 5f98e1bd3052f3977a0071f2835fad1a7ed16726
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: a780cb0089a83df8f91a8c27be6c2b2953e70399
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="select-condition-dialog-box-legacy"></a>[条件の選択] ダイアログ ボックス (レガシ)
 このトピックについて説明する方法を使用して、 **[条件の**] ダイアログ ボックスでは、従来の[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]します。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/27/2017
   
  条件の詳細については、次を参照してください。[ワークフローでの条件の使用](http://go.microsoft.com/fwlink?LinkID=65009)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ルール条件エディター ダイアログ ボックス (レガシ)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md)   
  [方法: 宣言的ルール条件 (レガシ) を作成します。](../workflow-designer/how-to-create-a-declarative-rule-condition-legacy.md)   
  [ワークフローでの条件の使用](http://go.microsoft.com/fwlink?LinkID=65009)   

@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f8e1a7e91156074b4cc4ae8925853d532deec203
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 90f34e954945f6b557f8c5e1f5ac0b0802e1e663
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ipropertyproxyeeside"></a>IPropertyProxyEESide
 このインターフェイスは、関連付けられたオブジェクトのデータを表示するメソッドを提供します。 このインターフェイスは、ビジュアライザーの型のサポートの一部です。  
@@ -50,14 +51,14 @@ IPropertyProxyEESide : IUnknown
 ## <a name="remarks"></a>コメント  
  型のビジュアライザーは、このインターフェイスが含まれるオブジェクトに関連付けられている値にアクセスするのにこのインターフェイスを使用します。 を通じて、データにアクセス、 [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)データの読み取り専用ビューを提供するインターフェイスです。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [型のビジュアライザーとカスタム ビューアー](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md)   
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)   

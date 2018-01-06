@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6c90f7cec454cc6562e2cd20e2da64cfe86e243f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f20e5d251d8d6ef31289fb1b9ee8b9420ff9146a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="single-and-multi-tab-views"></a>単一サブネットおよびマルチ タブのビュー
 エディターには、さまざまな種類のビューを作成できます。 1 つの例は、コード エディター ウィンドウ、フォーム デザイナーは別です。  
@@ -114,7 +115,7 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [複数のドキュメント ビューをサポートします。](../extensibility/supporting-multiple-document-views.md)   
  [方法: 添付ドキュメント データへのビュー](../extensibility/how-to-attach-views-to-document-data.md)   
  [カスタム エディターとデザイナーの作成](../extensibility/creating-custom-editors-and-designers.md)

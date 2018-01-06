@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e216cf5af1ad22acf81f46ca385f7092e8ee8316
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8065a7fcf110288fcbde546ef37b64f43032ff8c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugdocument2getdocumentclassid"></a>IDebugDocument2::GetDocumentClassID
 ドキュメントのクラス識別子を取得します。  
@@ -47,5 +48,5 @@ int GetDocumentClassID(
 ## <a name="remarks"></a>コメント  
  クラス GUID は、ドキュメントを表す個々 のクラスをインスタンス化に使用できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

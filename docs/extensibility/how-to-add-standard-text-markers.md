@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1fb92185dd2efee7f42ce1ba4d97435e0b2e8a68
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: bdcdbabae26a9116b1e00910ecef2f83f4075551
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-standard-text-markers"></a>方法: 標準のテキストのマーカーの追加
 提供される既定のテキスト マーカーの種類を作成するのには、次の手順を使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディターです。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/31/2017
   
      テキスト マーカーの任意のアクション、カスタム コマンドを決定を実行するのにには、この呼び出しでこの情報を使用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レガシ API でテキスト マーカーの使用](../extensibility/using-text-markers-with-the-legacy-api.md)   
  [方法: エラー マーカーを実装します。](../extensibility/how-to-implement-error-markers.md)   
  [方法: カスタム テキスト マーカーを作成します。](../extensibility/how-to-create-custom-text-markers.md)   

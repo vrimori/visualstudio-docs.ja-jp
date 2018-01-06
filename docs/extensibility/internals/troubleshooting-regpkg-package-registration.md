@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c4a4162b91a9345c94b7bd6a7e2f1099da3d631e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5651e7c00abe91ec8e4cae7b720b6534318051f7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-regpkg-package-registration"></a>RegPkg パッケージ登録のトラブルシューティング
 > [!NOTE]
@@ -38,5 +39,5 @@ ms.lasthandoff: 10/31/2017
   
  RegPkg の以前のバージョンでは、Microsoft.VisualStudio.Shell.dll assembly を使用してビルドされているパッケージを登録できます。 ただし、そのアセンブリのそれ以降のバージョンを使用して構築されたパッケージに登録できません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [VSPackage](../../extensibility/internals/vspackages.md)

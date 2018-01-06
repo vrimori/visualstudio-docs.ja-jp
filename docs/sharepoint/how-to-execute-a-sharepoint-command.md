@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f1cfe20d0cac50603265644fb48102ef22537631
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 4888489ef5b60b1222acf09b827c7551818c64b5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-execute-a-sharepoint-command"></a>方法: SharePoint コマンドを実行する
   を SharePoint ツール拡張機能で、サーバー オブジェクト モデルを使用する場合は、カスタムを作成する必要があります*SharePoint コマンド*API を呼び出すためです。 コマンドを定義して、SharePoint ツールの拡張機能を展開した後に、拡張機能は、SharePoint サーバー オブジェクト モデルへの呼び出しをコマンドを実行できます。 コマンドを実行するには、ExecuteCommand メソッドのいずれかの操作を使用して、<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection>オブジェクト。  
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例では、Microsoft.VisualStudio.SharePoint アセンブリへの参照が必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint オブジェクト モデルの呼び出し](../sharepoint/calling-into-the-sharepoint-object-models.md)   
  [方法: SharePoint コマンドを作成します。](../sharepoint/how-to-create-a-sharepoint-command.md)   
  [チュートリアル: サーバー エクスプローラーを拡張して Web パーツを表示する](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  

@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 00cc60b0b6c522c6a6674456adae50aace266030
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 98d6edf4da8b7f0275a7b361f5492f4f49a1f747
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-and-removing-property-pages"></a>追加して、プロパティ ページを削除します。
 プロジェクト デザイナーには、プロジェクトのプロパティ、設定、および内のリソースを管理するための一元的な場所が用意されています[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 単一のウィンドウとして表示されます、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) と、左側のタブを通じてアクセスする、右側のペインの数が含まれています。 プロジェクト デザイナーのペイン (プロパティ ページとも呼ばれます) は、プロジェクトの種類と言語によって異なります。 プロジェクト デザイナーをアクセスするのには、**プロパティ**コマンドを**プロジェクト**メニュー。  
@@ -208,5 +209,5 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  このトピックで提供されるすべてのコード例は例での部分[VSSDK のサンプル](http://aka.ms/vs2015sdksamples)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクト サブタイプ](../extensibility/internals/project-subtypes.md)

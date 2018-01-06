@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c58ce16489c02475a7d76327e9df19a6022109a4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5226ff7a4ed77333d2a6f9287f129c6a6d754cac
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="private-galleries"></a>Private Galleries
 コントロール、テンプレート、および投稿することにで開発したツールを共有することができます、*プライベート ギャラリー*次のように、組織のイントラネット上。  
@@ -92,6 +93,6 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
   
 3.  右側のウィンドウで、拡張機能を選択し、、**更新**ボタンをクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [検索と Visual Studio 拡張機能の使用](../ide/finding-and-using-visual-studio-extensions.md)   
  [Visual Studio 拡張機能の配布](../extensibility/shipping-visual-studio-extensions.md)

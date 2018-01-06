@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ed0ffd44e248cb1f420cb7be308a46c914fffee2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: dd7b6a48b00e8bef62ff801519fc35cdc163902d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="source-control-integration-overview"></a>ソース管理の統合の概要
 このセクションでは、Visual Studio ソース コントロールに統合する 2 つの方法を比較します。ソース管理プラグインと、VSPackage をソース管理ソリューションを提供し、新しいソース管理機能を強調表示します。 Visual Studio をソース管理 Vspackage とソース管理プラグインの手動切り替えに従って自動ソリューションに基づく切り替えを使用します。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 10/31/2017
   
 -   VSPackage は、特定のソース コントロールのモデルに限定されていません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理](../../extensibility/internals/source-control.md)   
  [ソース管理プラグインを作成します。](../../extensibility/internals/creating-a-source-control-plug-in.md)   
  [ソース コントロールの VSPackage の作成](../../extensibility/internals/creating-a-source-control-vspackage.md)   

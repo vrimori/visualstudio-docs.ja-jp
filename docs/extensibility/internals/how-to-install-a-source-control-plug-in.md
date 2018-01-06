@@ -15,11 +15,12 @@ caps.latest.revision: "32"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ab02b65e4a40f15da857038a45d9bcc2b88b1b83
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: dab9270b55f5980d36256db78db89b5e4ac186f0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-install-a-source-control-plug-in"></a>方法: ソース管理プラグインのインストール
 ソース管理プラグインを作成するには、3 つの手順が含まれます。  
@@ -119,5 +120,5 @@ ms.lasthandoff: 10/31/2017
   
  2 つの条件が満たされた場合は、1.2 および 1.3 のバージョンでサポートされる新しい関数が呼び出すことができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [はじめに](../../extensibility/internals/getting-started-with-source-control-plug-ins.md)

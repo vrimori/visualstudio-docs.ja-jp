@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 926f5e9a80a91da57d843c11175865f78775e38c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6378ddc2663e4ecf239c78ede96f0c1bc12d77a3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ports"></a>ポート
 デバッガーのアーキテクチャの観点から、**ポート**:  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/31/2017
   
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]すべて Windows ベースのプロセス、ネイティブおよびマネージを処理する既定のポートを指定します。 Windows ベースではない外部のデバイスでは、接続のカスタム ポートを実装しなければなりません。 このようなカスタム ポートを指定するには、カスタム ポート業者も実装する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバー](../../extensibility/debugger/servers-visual-studio-sdk.md)   
  [プロセス](../../extensibility/debugger/processes.md)   
  [デバッガーの概念](../../extensibility/debugger/debugger-concepts.md)   

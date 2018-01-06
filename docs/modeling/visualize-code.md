@@ -16,11 +16,12 @@ caps.latest.revision: "47"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: 0abc0bff93da0944ce7e413a83dafc47e375a8a2
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 50904fd36dc3a4f009b87b9daa5c603fdee702ce
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visualize-code"></a>コードの視覚化
 Visual Studio の視覚化ツールとモデリング ツールを使って、既存のコードを理解し、アプリケーションを記述することができます。 これにより、自分が実行した変更がコードにどのような影響を与えるかを理解し、その変更に起因する作業とリスクを評価することができます。 例:  
@@ -51,7 +52,7 @@ Visual Studio の視覚化ツールとモデリング ツールを使って、�
 |**ブログ**|[Visual Studio ALM + Team Foundation Server のブログ](http://go.microsoft.com/fwlink/?LinkID=201340)|  
 |**技術記事とジャーナル**|[MSDN アーキテクチャ フォーラム](http://go.microsoft.com/fwlink/?LinkId=201343)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [シナリオ: 視覚化を使用して、モデリング、設計を変更します。](../modeling/scenario-change-your-design-using-visualization-and-modeling.md)   
  [分析するアーキテクチャおよびモデリング](../modeling/analyze-and-model-your-architecture.md)   
  [モデルのアプリのアーキテクチャ](../modeling/model-your-app-s-architecture.md)   

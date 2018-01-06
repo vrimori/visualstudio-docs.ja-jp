@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e890145199fe864d2f7b5010495375bfbc6cc094
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ecbf5e3bed5ba506278f00b2b5b0b76f8f02850a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-customizing-the-text-view"></a>チュートリアル: テキスト ビューをカスタマイズします。
 テキスト ビューをカスタマイズするには、そのエディター形式のマップでは、次のプロパティのいずれかの変更します。  
@@ -93,5 +94,5 @@ ms.lasthandoff: 10/31/2017
   
 5.  表示スペースを入れます。 (上、**編集** メニューのをポイント**詳細設定**  をクリックし、**スペースの表示**)。 テキストの一部のタブを入力します。 タブを表す赤色の矢印が表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [言語サービスとエディターの拡張ポイント](../extensibility/language-service-and-editor-extension-points.md)

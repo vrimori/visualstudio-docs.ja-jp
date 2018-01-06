@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ad486256b194ae0f03ed3fe41c23a71f2f9159c8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 97509031e123babf5febfd51ebff3047e5d21ccf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugengine3loadsymbols"></a>IDebugEngine3::LoadSymbols
 このデバッグ エンジンでは、デバッグされているすべてのモジュールのシンボルを読み込みます (必要に応じて)。  
@@ -42,6 +43,6 @@ int LoadSymbols();
 ## <a name="remarks"></a>コメント  
  これには、このデバッグ エンジンによって参照されるすべてのモジュールのデバッグ シンボルが読み込まれます。 既に読み込まれていない場合にのみ、シンボルが読み込まれます。 呼び出しによって設定パスにシンボルが検索[SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md)   
  [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)

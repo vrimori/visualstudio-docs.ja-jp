@@ -22,11 +22,12 @@ caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9b9e9963b43e6ca2049337fdfdf76b0a1314ae32
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 78a4e910dbd2c6063f4bdf7b0dff3f27f79b218e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supporting-symbol-browsing-tools"></a>シンボル参照のツールのサポート
 **オブジェクト ブラウザー**、**クラス ビュー**、**呼び出しブラウザー**と**シンボルの検索結果**ツールは、シンボル参照 Visual Studio での機能を提供します。 これらのツールは、シンボルの階層ツリー ビューを表示し、ツリー内のシンボルの関係を表示します。 シンボルには、名前空間、オブジェクト、クラス、クラス メンバー、およびさまざまなコンポーネントに含まれるその他の言語要素を表すことがあります。 コンポーネントは、Visual Studio プロジェクトは、外部[!INCLUDE[dnprdnshort](../../code-quality/includes/dnprdnshort_md.md)]コンポーネントおよび (.tlb) のタイプ ライブラリ。 詳細については、「[コードの構造の表示](../../ide/viewing-the-structure-of-code.md)」を参照してください。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  ネイティブ コードのシンボル プロバイダーを実装するには、使用、<xref:Microsoft.VisualStudio.Shell.Interop.IVsLibrary2>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectList2>インターフェイスです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: オブジェクト マネージャーにライブラリを登録](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)   
  [方法: オブジェクト マネージャーにライブラリによって提供されるシンボルのリストを公開](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)   
  [方法: ライブラリでのシンボルの識別](../../extensibility/internals/how-to-identify-symbols-in-a-library.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 45f350fed3c806a9ac8f79178a50ef22aa0a800e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: f24c0493a66651a5d95925fd6777ba3e1cdd1658
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="password-protection-on-office-documents"></a>Office ドキュメントのパスワード保護
   パスワードを知らない人に開けませんできるように、Microsoft Office Word 文書と Microsoft Office Excel ブックでパスワードを設定することができます。 このオプションの名前は**[パスワード]**です。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/31/2017
   
  最初に開く、Word 文書が Visual Studio で**[パスワード]**有効にすると、単語の入力を求め、パスワードです。 正常にパスワードを入力した後**[パスワード]**ドキュメントから削除し、ドキュメントを開いて、パスワードは必要なくなった。 ソリューションでドキュメントをする場合は、前にパスワードを要求するように開くことができる、有効にする必要があります**[パスワード]**最終的なビルドの後に、ソリューションを展開する前にします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドキュメント レベルのソリューションでドキュメントの保護](../vsto/document-protection-in-document-level-solutions.md)   
  [Information Rights Management とマネージ コード拡張機能の概要](../vsto/information-rights-management-and-managed-code-extensions-overview.md)   
  [方法: アクセス許可の制限のドキュメントの背後に実行するようにコードを許可します。](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)   

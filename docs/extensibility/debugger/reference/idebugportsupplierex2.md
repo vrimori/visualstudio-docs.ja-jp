@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1027267fdfdcc211ae4b101114ec9db24dc758ad
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 99bebec161689bff8185264a43887aa8f75bbc9b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugportsupplierex2"></a>IDebugPortSupplierEx2
 コア サーバーとの対話を選択してポート サプライヤーのサポートを提供します。  
@@ -38,14 +39,14 @@ IDebugPortSupplierEx2 : IUnknown
 |------------|-----------------|  
 |[SetServer](../../../extensibility/debugger/reference/idebugportsupplierex2-setserver.md)|ポートのサプライヤーのコア サーバーを設定します。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Portpriv.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)   
  [IDebugPortSupplier3](../../../extensibility/debugger/reference/idebugportsupplier3.md)

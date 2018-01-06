@@ -15,11 +15,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 263e2adf69aa479974a07dbb2acc2d4cd8f2a0dd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1405fbeba34f3e3aa9c645f6eaffe90fe6ac9036
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vspackage-registration"></a>VSPackage の登録
 Vspackage をアドバイスする必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]読み込めますがインストールされ、必要があります。 このプロセスは、レジストリで情報を記述して実行します。 インストーラーの一般的なジョブです。  
@@ -58,6 +59,6 @@ Vspackage をアドバイスする必要があります[!INCLUDE[vsprvs](../../c
   
 -   タイプ ライブラリなどのネットワーク リソースへのアクセス コンポーネントがある場合両方実行元として指定および SelfReg 表に記載されて、自己登録コードを拒否できます。 これにより、管理者用インストール中に失敗するコンポーネントのインストールが発生することができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Windows インストーラー](http://msdn.microsoft.com/library/cc185688\(VS.85\).aspx)   
  [マネージ パッケージの登録](http://msdn.microsoft.com/en-us/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)

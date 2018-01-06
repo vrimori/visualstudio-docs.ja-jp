@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 595e8cec9f90e44c4260ade6c9654483513c310a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ccbbc6652fd4918c88bf8c3728b85e17e5b9213d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="support-for-the-visual-studio-sdk"></a>Visual Studio SDK のサポート
 いくつかのサポート オプションを Visual Studio 統合開発環境 (IDE) を拡張する方法について質問があるお客様に利用できます。  
@@ -67,5 +68,5 @@ GitHub での VS SDK 拡張機能の例についてはオープン ソースを�
   
  個別のサポートの要求に関する情報はあります[個々 のサポート要求](http://go.microsoft.com/fwlink/?LinkID=82385)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ご意見](../ide/talk-to-us.md)

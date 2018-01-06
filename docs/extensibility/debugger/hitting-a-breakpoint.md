@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 73cdce5415dd50059dcd443f67424203430aba87
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: dfdf86124bdaf9160121b7d93263dc1d60425515
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hitting-a-breakpoint"></a>ブレークポイントにヒット
 次に示しますデバッグ エンジン (DE) を実行しているか、ステップ実行中にブレークポイントにヒット時のプロセスを。  
@@ -30,5 +31,5 @@ ms.lasthandoff: 10/31/2017
   
 2.  セッションのデバッグ マネージャー (SDM) を呼び出す[IDebugBreakpointEvent2:::EnumBreakpoints](../../extensibility/debugger/reference/idebugbreakpointevent2-enumbreakpoints.md)ヒットしたブレークポイントを取得します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのイベントの呼び出し](../../extensibility/debugger/calling-debugger-events.md)

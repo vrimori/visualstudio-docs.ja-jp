@@ -16,11 +16,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5d5d251c414c955480d3a7e4289935d913fa470c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5c05bbabc77de22edc71fb05a5962138a78d11a9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-syntax-coloring"></a>構文の色分けを実装します。
 言語サービスは、構文の色表示機能を提供する場合、パーサーは、行のテキスト装飾が可能な項目の配列に変換し、これらの装飾が可能な項目に対応するトークンの種類を返します。 パーサーは、装飾が可能な項目の一覧に属しているトークンの種類を返す必要があります。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]適切なトークンの種類に colorizer オブジェクトによって割り当てられた属性に従ってコード ウィンドウで各装飾が可能な項目を表示します。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="managed-package-framework-colorizer"></a>Managed Package Framework Colorizer  
  Managed package framework (MPF) は、colorizer を実装するために必要なすべてのクラスを提供します。 言語サービス クラスを継承する必要があります、<xref:Microsoft.VisualStudio.Package.LanguageService>クラスし、必要なメソッドを実装します。 実装することで、スキャナーとパーサーを指定する必要があります、<xref:Microsoft.VisualStudio.Package.IScanner>インターフェイス、およびそのインターフェイスからのインスタンスを返す、<xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A>メソッド (のいずれかで実装する必要がある、<xref:Microsoft.VisualStudio.Package.LanguageService>クラス)。 詳細については、次を参照してください。[レガシ言語サービスでの構文が色分け](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: 組み込みの装飾が可能な項目を使用して](../../extensibility/internals/how-to-use-built-in-colorable-items.md)   
  [カスタムの装飾が可能な項目](../../extensibility/internals/custom-colorable-items.md)   
  [レガシ言語サービスの開発](../../extensibility/internals/developing-a-legacy-language-service.md)   

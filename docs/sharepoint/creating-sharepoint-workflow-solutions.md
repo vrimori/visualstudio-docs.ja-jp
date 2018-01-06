@@ -25,11 +25,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 256eaf2b451f91abdcc90c2beeedb7f689e95db6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 97283921205eaf70c77c054b269ee56f0e1adcd7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-sharepoint-workflow-solutions"></a>SharePoint ワークフロー ソリューションの作成
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]ドキュメントとリスト アイテムを SharePoint Web サイトでのライフ サイクルを管理するカスタム ワークフローを作成するのに役立つツールを提供します。 指定された項目には、デザイナー、一連のアクティビティのコントロール、および必要なアセンブリ参照が含まれます。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]含まれています、 **SharePoint カスタマイズ ウィザード**を作成し、ワークフローを構成するために、します。  
@@ -145,7 +146,7 @@ ms.lasthandoff: 10/31/2017
 |[チュートリアル: サイトのカスタム ワークフロー アクティビティの作成](../sharepoint/walkthrough-create-a-custom-site-workflow-activity.md)|2 つの主要タスクを実行する方法を示します。 サイト レベルのワークフローを作成し、カスタム ワークフロー アクティビティを作成します。|  
 |[チュートリアル: SharePoint Designer の再利用可能なワークフローの Visual Studio へのインポート](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md)|SharePoint Designer 2010 で作成した再利用可能な宣言型ワークフローをインポートする方法を示します、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint プロジェクト。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   
  [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)   
  [SharePoint のアプリケーション ページの作成](../sharepoint/creating-application-pages-for-sharepoint.md)  

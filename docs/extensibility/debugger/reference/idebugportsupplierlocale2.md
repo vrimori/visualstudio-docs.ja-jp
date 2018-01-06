@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3a16404dc9e91c6f4383ea58d84a6a1716538c46
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c39ec782ddfdb8eedfa54c0a274ce92b25c9e1df
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugportsupplierlocale2"></a>IDebugPortSupplierLocale2
 ポートのサプライヤーのロケールのサポートを提供します。  
@@ -38,14 +39,14 @@ IDebugPortSupplierLocale2 : IUnknown
 |------------|-----------------|  
 |[Setlocale、_wsetlocale](../../../extensibility/debugger/reference/idebugportsupplierlocale2-setlocale.md)|ポートのサプライヤーのロケールを設定します。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Portpriv.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)   
  [IDebugPortSupplier3](../../../extensibility/debugger/reference/idebugportsupplier3.md)

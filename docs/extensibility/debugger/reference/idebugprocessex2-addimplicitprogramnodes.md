@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 799ac5ee39322579ab60901ffe2abb2f2a683138
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: adc3f54188e57bd5453703c0aa68fe281fd2ca5e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprocessex2addimplicitprogramnodes"></a>IDebugProcessEx2::AddImplicitProgramNodes
 このメソッドは、指定された各デバッグ エンジン (DE) のプログラムのノードを追加します。  
@@ -57,6 +58,6 @@ int AddImplicitProgramNodes(
 ## <a name="remarks"></a>コメント  
  [ノードをプログラム](../../../extensibility/debugger/program-nodes.md)に示されている各 DE 用に追加されます`rgguidSpecificEngines`-起動エンジンを除く (で指定されている`guidLaunchingEngine`)、プログラムを起動するときに、独自のプログラム ノードを追加すると見なされます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)   
  [プログラム ノード](../../../extensibility/debugger/program-nodes.md)

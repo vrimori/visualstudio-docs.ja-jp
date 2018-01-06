@@ -15,11 +15,12 @@ caps.latest.revision: "24"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fbc71942a87685a4011b13d1054c4855a5e18012
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3c1845a82947286800145ff898f8f49f8c3c2477
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="callback-functions-implemented-by-the-ide"></a>IDE によって実装されているコールバック関数
 統合してには、、統合されたエンド ユーザー エクスペリエンスを提供できるだけシームレスな統合開発環境 (IDE) ソース管理プラグイン使用できますは IDE によって実装されるコールバック関数。 プラグインを呼び出せるこれらの関数、IDE に情報を渡すのソース管理操作中に適切なタイミングでIDE では、ネイティブ UI に埋め込まれた要素として、この情報を表示できます。 ユーザーは、プラグイン採用独自の UI 場合よりも、このシナリオでは、断片化のエクスペリエンスを持ちます。  

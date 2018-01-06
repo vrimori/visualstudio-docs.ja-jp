@@ -16,11 +16,12 @@ caps.latest.revision: "41"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: b7c6f6f854e17e9b3b19f277d49674c311edb41b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 46a7eee1d9dd6c290493afcbe960d491f8976564
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>方法: ドメイン固有言語ソリューションを作成する
 ドメイン固有言語 (DSL) を使用して作成する特殊な[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューションです。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/27/2017
   
     4.  をクリックして**ドメイン固有言語デザイナー**です。  
   
-    5.  **名前**ボックスに、ソリューションの名前を入力します。 **[OK]** をクリックします。  
+    5.  **名前**ボックスに、ソリューションの名前を入力します。 **[OK]**をクリックします。  
   
          **ドメイン固有言語デザイナー ウィザード**が表示されます。  
   
@@ -133,6 +134,6 @@ ms.lasthandoff: 10/27/2017
   
  厳密な名前付けの詳細については、次を参照してください。[作成と使用](http://go.microsoft.com/fwlink/?LinkId=186073)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)   
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)

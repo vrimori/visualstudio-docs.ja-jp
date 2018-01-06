@@ -21,11 +21,12 @@ caps.latest.revision: "43"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2952ee6de3321300ad87053f0e5c385357fe0ba2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: e117243afff5cfa73cd7a27ad8ce0230d8fd512a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-cache-a-data-source-in-an-office-document"></a>方法 : Office ドキュメント内のデータ ソースをプログラムでキャッシュする
   呼び出すことによって、データ オブジェクトをドキュメント内のデータ キャッシュをプログラムで追加することができます、`StartCaching`メソッドのホスト項目など、 <xref:Microsoft.Office.Tools.Word.Document>、 <xref:Microsoft.Office.Tools.Excel.Workbook>、または<xref:Microsoft.Office.Tools.Excel.Worksheet>です。 データ キャッシュから呼び出すことによってデータ オブジェクトを削除、`StopCaching`ホスト項目のメソッドです。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]  
     >  呼び出す必要はありません`StopCaching`のイベント ハンドラーから、`Shutdown`文書またはワークシートのイベントです。 時間によって、`Shutdown`イベントは、データ キャッシュを変更するには遅すぎます。 詳細については、`Shutdown`イベントを参照してください[Office プロジェクトのイベント](../vsto/events-in-office-projects.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データのキャッシュ](../vsto/caching-data.md)   
  [方法: オフラインであるか、サーバーで使用するデータをキャッシュ](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)   
  [方法: パスワードで保護されたドキュメント内のデータをキャッシュします。](../vsto/how-to-cache-data-in-a-password-protected-document.md)   

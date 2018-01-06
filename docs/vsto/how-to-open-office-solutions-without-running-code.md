@@ -23,11 +23,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 74cc162e0323656bea9d48c8458eaf77519fdc14
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: c190c4ace56b2be9c63c9f11570354cddc6c8635
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-open-office-solutions-without-running-code"></a>方法 : コードを実行せずに Office ソリューションを開く
   マネージ コード拡張機能で作成された Microsoft Office ソリューションでは、エンドユーザーの Office アプリケーションのセキュリティ設定が高に設定されている場合でも実行されます。 これは、.NET アセンブリのコードのセキュリティが Microsoft Office ではなく、Microsoft .NET Framework によって管理されているためです。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/31/2017
   
      複数のユーザーで、ソリューションを使用する場合、このメソッドは、それらのすべての実行から、ソリューションを防ぎます。 これはする、コードまたは参照先のサーバーで問題が検出され、すべてのユーザーから実行を停止する場合に役立ちます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)   
  [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)   
  [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   

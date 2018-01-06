@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 38b4415a24a7440a2d3725fb1183863e7a337bbb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8d3277a4e24b12d409654548b5670a4d47fa9539
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tool-windows-in-the-registry"></a>レジストリのツール ウィンドウ
 ツール ウィンドウを提供する Vspackage に登録する必要があります[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]のウィンドウ プロバイダーをツールとして。 Visual Studio パッケージ テンプレートを使用して作成されたツール ウィンドウは、これが既定によって行います。 ツール ウィンドウのプロバイダーでは、既定のツール ウィンドウのサイズと場所、ツール ウィンドウ ペインとドッキング スタイルとして機能するウィンドウの GUID などの可視属性を指定するシステムのレジストリ キーがあります。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/31/2017
   
  2 番目の省略可能なキー、ToolWindows\Visibility は、表示するようにツール ウィンドウを必要とするコマンドの Guid を指定します。 この場合、指定したコマンドではありません。 詳細については、次を参照してください。[ツール ウィンドウの表示構成](../extensibility/tool-window-display-configuration.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [VSPackage](../extensibility/internals/vspackages.md)

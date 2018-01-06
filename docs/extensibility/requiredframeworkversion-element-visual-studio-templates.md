@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: dfbcc45198381cb111714dfdd52d8846f019e741
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1583f5a0fab15c65d70819eb1b6e76cac5660ea5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="requiredframeworkversion-element-visual-studio-templates"></a>RequiredFrameworkVersion 要素 (Visual Studio テンプレート)
 テンプレートで必要とされる最小の .NET Framework のバージョンを指定します。スキーマの階層構造です。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="remarks"></a>コメント  
  `RequiredFrameworkVersion` は、省略可能な要素です。 特定の最小バージョンと、.NET Framework の以降のバージョンにのみテンプレートがサポートする場合は、この要素を使用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
  [対象となる特定の .NET Framework バージョンの指定](../ide/targeting-a-specific-dotnet-framework-version.md)

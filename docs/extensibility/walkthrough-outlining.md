@@ -13,11 +13,12 @@ caps.latest.revision: "30"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f503d9e8b0ef125fdb72ea60a9928f308b900993
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 15dd5f0121fca86a38631bf775ec25d4428632e1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-outlining"></a>チュートリアル: アウトライン
 展開または折りたたむテキスト領域の種類を定義することでのアウトライン表示などの機能の言語に基づくを実装することができます。 言語サービスのコンテキストで領域を定義することができます独自ファイル名拡張子とコンテンツの種類を定義し、その型だけに領域の定義を適用できます。 または"text") などの既存のコンテンツ タイプに領域の定義を適用することができます。 このチュートリアルでは、定義のアウトライン領域を表示する方法を示します。  
@@ -133,5 +134,5 @@ ms.lasthandoff: 10/31/2017
   
 4.  両方の中かっこを含む、アウトライン領域を設定する必要があります。 マイナス記号をクリックして、始めかっこの左側にアウトライン領域を折りたたむことができます。 ときに、領域が折りたたまれている、省略記号 (...)、折りたたまれた領域とテキストを含むポップアップの左側に表示する**ホバー テキスト**省略記号ボタン上にポインターを移動すると表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: コンテンツの種類とファイル名拡張子とをリンクさせる](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

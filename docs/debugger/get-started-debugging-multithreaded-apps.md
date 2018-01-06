@@ -20,18 +20,19 @@ caps.latest.revision: "38"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 86ffd65cf0ebe19a9f3c1f42c24fc365536be661
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9b3fd00e849a54fc926054e1f7e0d97b2907cf02
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="get-started-debugging-a-multithreaded-application-in-visual-studio"></a>Visual Studio でのマルチ スレッド アプリケーションのデバッグの開始します。
 Visual Studio には、いくつかのツールとマルチ スレッド アプリケーションをデバッグするためのユーザー インターフェイス要素が用意されています。 このチュートリアルでは、スレッド マーカーを使用する方法、**並列スタック** ウィンドウで、**並列ウォッチ**ウィンドウ、条件付きブレークポイントは、およびフィルターのブレークポイント。 このチュートリアルでは、わずか数分が完了することを理解するマルチ スレッド アプリケーションのデバッグの機能とします。
 
 |         |         |
 |---------|---------|
-| ![ビデオを見る](../install/media/video-icon.png "WatchVideo") | [ビデオを見る](#video)で同様の手順を示しています。 マルチ スレッド デバッグします。 |
+|  ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る")  |    [ビデオを見る](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugging-Multi-threaded-Apps-in-Visual-Studio-2017-MoZPKMD6D_111787171)で同様の手順を示しています。 マルチ スレッド デバッグします。 |
 
 その他のトピックでは、その他のマルチ スレッド デバッグ ツールを使用してその他についてを説明します。
 
@@ -53,7 +54,7 @@ Visual Studio には、いくつかのツールとマルチ スレッド アプ�
   
 4.  **名前**ボックス名前 を入力します。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
      新しいコンソール プロジェクトが表示されます。 プロジェクトが作成されると、ソース ファイルが表示されます。 言語によっては、選択した Program.cs、MyThreadWalkthroughApp.cpp、または Module1.vb、ソース ファイルを呼び出すことがあります。  
   
@@ -373,18 +374,12 @@ Visual Studio には、いくつかのツールとマルチ スレッド アプ�
 
 - 別のスレッドに切り替えるを参照してください[する方法: 別のスレッド間のデバッグに切り替える。](../debugger/how-to-switch-to-another-thread-while-debugging.md) 
 
-## <a name="video"></a>マルチ スレッドのデバッグに関するビデオを見る
-
-<div style="padding-top: 56.25%; position: relative; width: 100%;">
-<iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugging-Multi-threaded-Apps-in-Visual-Studio-2017-MoZPKMD6D_111787171" frameborder="0" allowfullscreen></iframe>
-</div>
-
 #### <a name="to-learn-more-about-the-parallel-stack-and-parallel-watch-windows"></a>並列スタック ウィンドウや 並列ウォッチ ウィンドウの詳細について  
   
 - 参照してください[する方法: 並列スタック ウィンドウの使用](../debugger/using-the-parallel-stacks-window.md) 
 
 - 参照してください[する方法: 並列ウォッチ ウィンドウの使用](../debugger/how-to-use-the-parallel-watch-window.md) 
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マルチ スレッド アプリケーションをデバッグします。](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [方法 : デバッグ中に別のスレッドに切り替える](../debugger/how-to-switch-to-another-thread-while-debugging.md)

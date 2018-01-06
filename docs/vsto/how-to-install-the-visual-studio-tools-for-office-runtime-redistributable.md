@@ -18,11 +18,12 @@ caps.latest.revision: "94"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8d3439a98a445761a8d357d9b4bef631da034943
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: cdd4ab2331bb6e21c126f10258db2e233a533f9d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-install-the-visual-studio-tools-for-office-runtime-redistributable"></a>方法: Visual Studio Tools for Office の再頒布可能なランタイムをインストールする
   Microsoft Office developer tools を使用して作成したソリューションを実行する各コンピューターに Visual Studio 2010 Tools for Office Runtime をインストールする必要があります[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 ランタイムは、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、および Microsoft Office をインストールすると自動的にインストールされます。 詳細については、「 [Visual Studio Tools for Office Runtime Installation Scenarios](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md)」を参照してください。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/31/2017
   
      [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]言語パックが含まれています。 Windows のインストールが英語以外の言語に設定されている場合、Windows と同じ言語でランタイム メッセージを表示できます。 同様に、エンド ユーザーが [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] をインストールし、英語以外の言語に設定されている Windows のインストールでソリューションを実行すると、Windows と同じ言語でランタイム メッセージが表示されます。 場合によっては、追加の言語パックが必要になる場合があります。 たとえば、Windows のコピーが複数の言語設定を使用して、または既にインストールされている後に別の言語に切り替えるを使用する追加の言語パックを必要があります、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]です。 言語パックを検索できる[Microsoft Visual Studio の 2010 Tools for Microsoft Office System (バージョン 4.0 ランタイム) Language Pack](http://go.microsoft.com/fwlink/?LinkId=140386)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [作業の開始 (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/getting-started-office-development-in-visual-studio.md)   
  [Configuring a Computer to Develop Office Solutions](../vsto/configuring-a-computer-to-develop-office-solutions.md)   
  [方法: Office ソリューションを開発コンピューターを構成します。](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)   

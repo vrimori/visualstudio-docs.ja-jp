@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b5b114cb060f4a689f2712dbaf323e6d2ee327c0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4f5f7cff29dd368acbbc3f599ec0cf623343031f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-a-legacy-language-service"></a>従来の言語サービスを移行します。
 プロジェクトを更新して、source.extension.vsixmanifest ファイルをプロジェクトに追加することによって、以降のバージョンの Visual Studio にレガシ言語サービスを移行できます。 言語サービス自体は引き続き以前と同様、関数、Visual Studio エディターで適応させるのでします。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  RegExLangServ.sln ソリューションを開きます。  
   
-5.  **一方向のアップグレード**ウィンドウが表示されます。 **[OK]** をクリックします。  
+5.  **一方向のアップグレード**ウィンドウが表示されます。 **[OK]**をクリックします。  
   
 6.  プロジェクトのプロパティを更新します。 開く、**プロジェクト プロパティ** ウィンドウでプロジェクト ノードを選択して、**ソリューション エクスプ ローラー**、右クリックし、選択**プロパティ**です。  
   
@@ -109,5 +110,5 @@ ms.lasthandoff: 10/31/2017
   
 12. デバッグを開始します。 Visual Studio の 2 番目のインスタンスが開かれます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [従来の言語サービスの機能拡張](../../extensibility/internals/legacy-language-service-extensibility.md)

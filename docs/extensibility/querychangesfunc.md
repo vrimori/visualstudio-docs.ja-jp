@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f2da455cdafc399b64fe42109c7973185ce69c79
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 43add362011b31ce695e9a8d9e77d6ca2dedb0e2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="querychangesfunc"></a>QUERYCHANGESFUNC
 これで使用されるコールバック関数、 [SccQueryChanges](../extensibility/sccquerychanges-function.md)操作がファイル名のコレクションを列挙し、各ファイルの状態を判断します。  
@@ -46,7 +47,7 @@ typedef BOOL (*QUERYCHANGESFUNC)(
 ## <a name="return-value"></a>戻り値  
  IDE では、適切なエラー コードを返します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|処理を続行します。|  
 |SCC_I_OPERATIONCANCELED|処理を停止します。|  
@@ -100,7 +101,7 @@ struct QUERYCHANGESDATA_W
  lpLatestName  
  この項目の現在のファイル名。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDE によって実装されているコールバック関数](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [SccQueryChanges](../extensibility/sccquerychanges-function.md)   
  [エラー コード](../extensibility/error-codes.md)

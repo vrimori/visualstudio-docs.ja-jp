@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fc66e193b13ac6baf9d6089483a1281c2d6a59ef
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4f2209ce2a2f6b1263bb52d550ca303f2525047d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="parent-element"></a>Parent 要素
 ボタンやコンボ ボックスの親のみグループがあります。 メニューまたはグループの親には、その他のメニューまたはグループがあります。 [CommandPlacement 要素](../extensibility/commandplacement-element.md)、この要素は必須です。 その他のすべてのインスタンスでは省略可能です。 この要素を省略すると、親の`Group_Undefined:0`暗黙的に指定されます。  
@@ -37,8 +38,8 @@ ms.lasthandoff: 10/31/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|guid|必須です。 GUID の GUID と ID のコマンド識別子です。|  
-|ID|必須です。 ID の GUID と ID のコマンド識別子です。|  
+|guid|必須。 GUID の GUID と ID のコマンド識別子です。|  
+|ID|必須。 ID の GUID と ID のコマンド識別子です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -52,5 +53,5 @@ ms.lasthandoff: 10/31/2017
 |[Menus 要素](../extensibility/menus-element.md)|VSPackage を実装するすべてのメニューを定義します。|  
 |[Groups 要素](../extensibility/groups-element.md)|VSPackage のコマンドのグループを定義するエントリが含まれています。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

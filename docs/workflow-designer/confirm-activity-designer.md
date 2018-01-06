@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 3d1255b210bdb68868b4bc2ee0e38475da840429
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 51e44d98aaec929f1194420227a6a3871dc4f2ad
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="confirm-activity-designer"></a>Confirm アクティビティ デザイナー
 **確認**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.Confirm>アクティビティ。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.CancellationScope> アクティビティの表示名を指定します (省略可能)。 既定値は Confirm です。|  
 |<xref:System.Activities.Statements.Confirm.Target%2A>|True|この <xref:System.Activities.InArgument%601> アクティビティの <xref:System.Activities.Statements.CompensationToken> を含む <xref:System.Activities.Statements.Confirm> を指定します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [トランザクション](../workflow-designer/transaction-activity-designers.md)   
  [CancellationScope](../workflow-designer/cancellationscope-activity-designer.md)   
  [CompensableActivity](../workflow-designer/compensableactivity-activity-designer.md)   

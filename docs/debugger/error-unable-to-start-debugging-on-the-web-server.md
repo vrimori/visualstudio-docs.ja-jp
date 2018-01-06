@@ -6,7 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vs.debug.error.http
 - vwd.nonadmin.error.
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - errors [debugger], unable to start debugging
 - debugging ASP.NET Web applications, unable to start debugging error
 - remote debugging, errors
-ms.assetid: f62e378a-3a99-4f78-9d97-8bb63a4da181
 caps.latest.revision: "29"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5332933bf1452ca730b5c49716e10f49851fd749
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a7d09deda1aa2b24fba90f9d9d417917c5b284ad
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="error-unable-to-start-debugging-on-the-web-server"></a>エラー ： Web サーバーでデバッグを開始できません
 
@@ -119,7 +119,7 @@ Web サーバーで実行されている ASP.NET アプリケーションをデ�
 
 * アプリケーション プール構成を調べて、修正が必要な場合、再試行してください。
 
-    Visual Studio プロジェクトに一致しない ASP.NET のバージョンについては、アプリケーション プールを構成できます。 アプリケーション プールの ASP.NET バージョンを更新し、それを再起動します。 詳細については、次を参照してください。 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。
+    Visual Studio プロジェクトに一致しない ASP.NET のバージョンについては、アプリケーション プールを構成できます。 アプリケーション プールの ASP.NET バージョンを更新し、それを再起動します。 詳細については、次を参照してください。 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。
 
     また、パスワードの資格情報を変更している場合場合があります、アプリケーション プールまたは Web サイトで更新する必要があります。  アプリケーション プール内での資格情報を更新**詳細設定 > プロセス モデル > Identity**です。 Web サイトでの資格情報を更新**基本設定 > として接続しています.**.アプリケーション プールを再起動します。
     
@@ -129,7 +129,7 @@ Web サーバーで実行されている ASP.NET アプリケーションをデ�
 
 * IIS で ASP.NET の正しいバージョンがインストールされていることを確認します。
 
-    Visual Studio プロジェクトと IIS で ASP.NET のバージョンが一致しないには、この問題が発生します。 Web.config のフレームワークのバージョンを設定する必要があります。IIS で ASP.NET をインストールするには、使用、 [Web Platform Installer (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)です。 またを参照してください[IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)または ASP.NET Core [IIS と Windows 上のホスト](https://docs.asp.net/en/latest/publishing/iis.html)です。
+    Visual Studio プロジェクトと IIS で ASP.NET のバージョンが一致しないには、この問題が発生します。 Web.config のフレームワークのバージョンを設定する必要があります。IIS で ASP.NET をインストールするには、使用、 [Web Platform Installer (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)です。 またを参照してください[IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)または ASP.NET Core [IIS と Windows 上のホスト](https://docs.asp.net/en/latest/publishing/iis.html)です。
   
 * IP アドレスのみを使用している場合は、認証エラーを解決します
 
@@ -155,11 +155,11 @@ IIS 構成が原因でない、次の手順を試してください。
 
      IIS が正しくインストールされていない場合、ブラウザーに `http://localhost` を入力するとエラーが表示されます。
      
-     IIS に展開する方法の詳細については、次を参照してください。 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)および ASP.NET Core [IIS と Windows 上のホスト](https://docs.asp.net/en/latest/publishing/iis.html)です。
+     IIS に展開する方法の詳細については、次を参照してください。 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)および ASP.NET Core [IIS と Windows 上のホスト](https://docs.asp.net/en/latest/publishing/iis.html)です。
 
 * サーバー上の基本的な ASP.NET アプリケーションの作成 (または、基本的な web.config ファイルを使用)。
 
     デバッガーを使用するアプリを入手できない場合は、サーバーで、基本的な ASP.NET アプリケーションをローカルに作成してみてください、基本的なアプリをデバッグしようとします。 (既定の ASP.NET MVC テンプレートを使用する可能性があります)。基本的なアプリをデバッグする場合に役立つ 2 つの構成間で異なるかを確認します。 URL 書き換えルールなどは、web.config ファイルで設定の相違を探します。
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Web アプリケーションのデバッグ : エラーおよびトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

@@ -11,11 +11,12 @@ caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 297d9535a8e9655ed87230d4f947faeb29e08487
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: bbf234d18c48ed501987f160bd2b98ec9f768b6e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="manifest-from-resources"></a>リソースからマニフェスト
 リソースのツールからマニフェストをイメージ リソース (.png または .xaml ファイル) の一覧を取得し、Visual Studio イメージ サービスで使用するそれらのイメージをできるようにする .imagemanifest ファイルを生成するコンソール アプリケーションだけです。 さらに、このツールを使用して、既存 .imagemanifest にイメージを追加することができます。 このツールは、高 DPI、テーマを Visual Studio 拡張機能へのイメージのサポートを追加するために役立ちます。 生成された .imagemanifest ファイルに含まれ、Visual Studio 拡張機能 (.vsix) の一部として展開する必要があります。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/31/2017
   
 ||||  
 |-|-|-|  
-|**スイッチの名前**|**注**|**必須またはオプション**|  
+|**スイッチの名前**|**ノート**|**必須またはオプション**|  
 |/resources|イメージまたはディレクトリのセミコロンで区切った一覧。 この一覧は、マニフェストに含まれる画像の完全な一覧を常に含める必要があります。 部分的な一覧を指定すると、専用の場合、エントリが含まれていない内容が失われます。<br /><br /> 指定されたリソース ファイルがイメージ ストリップの場合は、ツールは各サブイメージをマニフェストに追加する前に別のイメージに分割します。<br /><br /> イメージが .png ファイルである場合は、ことをお勧め、ツール、イメージの属性の右側に入力できるように、次のように名前が書式設定:\<名 >.\<幅 >。\<高さ > .png です。|必須|  
 |/assembly|マネージ アセンブリを拡張子を除いた、)、または (マニフェストのランタイムの場所) への相対リソースをホストするネイティブ アセンブリのランタイム パスの名前。|必須|  
 |/manifest|生成された .imagemanifest ファイルに指定する名前。 別の場所にファイルを作成への絶対パスまたは相対パスを含めることもできます。 既定の名前では、アセンブリ名と一致します。<br /><br /> 既定値:\<現在のディレクトリ >\\< アセンブリ\>.imagemanifest|Optional|  

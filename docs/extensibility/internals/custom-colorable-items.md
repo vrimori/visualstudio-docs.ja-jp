@@ -15,11 +15,12 @@ caps.latest.revision: "24"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b637e59b1e436c42b6b15f0dddaa1ed2ef6ff03c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 78c4823e3644dc755cef518dcbbba5f42c7aebc1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-colorable-items"></a>カスタムの装飾が可能な項目
 言語サービスの一部としてカスタムの装飾が可能な項目を実装することによっての色分け、キーワードやコメントなどの種類の一覧をオーバーライドできます。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/31/2017
   
  実装する方法の例については、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem>と<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem>インターフェイスを参照してください<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem>です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [従来の言語サービスのモデル](../../extensibility/internals/model-of-a-legacy-language-service.md)   
  [カスタム エディターの構文の色分け](../../extensibility/syntax-coloring-in-custom-editors.md)   
  [従来の言語サービスの構文の色分け](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)   

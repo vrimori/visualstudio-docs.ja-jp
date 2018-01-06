@@ -24,11 +24,12 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 881eccae253fc07c13eead45ae9d14658f9adf46
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: f6810d69628c66a011123250b8e0efb8622f0be7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-parameter-to-a-method"></a>方法 : メソッドにパラメーターを追加する
   メソッドに情報を渡すか、メソッドから情報を返す、パラメーターを使用します。 すべてのメソッドには、少なくとも 1 つのパラメーターが必要です。 作成する方法の種類をサポートするためにパラメーターを設計する方法の詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/31/2017
   
 8.  パラメーターの型記述子を変更します。 詳細については、次を参照してください。[する方法: パラメーターの型記述子を定義する](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   
  [方法: エンティティをモデルに追加します。](../sharepoint/how-to-add-an-entity-to-a-model.md)   
  [方法: パラメーターの型記述子を定義します。](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   

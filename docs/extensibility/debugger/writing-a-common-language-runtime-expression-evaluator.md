@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0f7481531c910ddf668ce911ae37215545b77903
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d52a9dbed6cec64426247a0b92bff2b8ec98ec97
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-a-common-language-runtime-expression-evaluator"></a>共通言語ランタイムの式エバリュエーターの書き込み
 > [!IMPORTANT]
@@ -55,5 +56,5 @@ ms.lasthandoff: 10/31/2017
  [型のビジュアライザーおよびカスタム ビューアーの実装](../../extensibility/debugger/implementing-type-visualizers-and-custom-viewers.md)  
  ビジュアライザーの型とカスタム ビューアーをサポートするコンポーネントによって実装される必要があるどのインターフェイスについて説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio デバッガーの拡張性](../../extensibility/debugger/visual-studio-debugger-extensibility.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7c626cfc6da56258241071476aba03690f349092
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2ce41826a3a0d778c5a417496d47f290e97806fb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccgetprojpath-function"></a>SccGetProjPath 関数
 この関数には、ユーザーは、ソース管理プラグインにのみ意味のある文字列であるプロジェクト パスにメッセージが表示されます。 ユーザーがときに呼び出されます。  
@@ -82,7 +83,7 @@ SCCRTN SccGetProjPath (
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|プロジェクトを作成または取得に成功しました。|  
 |SCC_I_OPERATIONCANCELED|操作が取り消されました。|  
@@ -106,6 +107,6 @@ SCCRTN SccGetProjPath (
   
  たとえば、ユーザーがの場合、**新しいプロジェクト**Visual Studio のウィザードで自分のプロジェクトをソース管理に追加する、Visual Studio は、この関数を呼び出してを使用するソース管理システムで新しいプロジェクトを作成できるかどうかは、プラグインを決定Visual Studio プロジェクトが含まれてください。 ユーザーがクリックした場合**キャンセル**ウィザードを完了する前に、プロジェクトは作成されません。 ユーザーがクリックした場合**OK**、Visual Studio によって呼び出さ`SccOpenProject`を渡して、 `SCC_OPT_CREATEIFNEW`、され、その時点で、ソース管理されているプロジェクトを作成します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)

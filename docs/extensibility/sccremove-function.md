@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 28901d9635a4a823507834cde201860fda1e2168
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5f4d7d76e80fa165206a3faa53835b74c2716d94
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccremove-function"></a>SccRemove 関数
 この関数は、ソース管理システムからファイルを削除します。  
@@ -62,7 +63,7 @@ SCCRTN SccRemove(
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|アンインストールが正常に完了しました。|  
 |SCC_E_FILENOTCONTROLLED|選択したファイルはソース管理下ではありません。|  
@@ -76,5 +77,5 @@ SCCRTN SccRemove(
 ## <a name="remarks"></a>コメント  
  この関数は、ソース管理システムからファイルを削除しますが、ユーザーのローカル ハード ドライブから削除されません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

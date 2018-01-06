@@ -31,11 +31,12 @@ caps.latest.revision: "39"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a3df5fca6d41070b09ceb8b8be9b05212b7caa69
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: cf3fde8e5a7e91719da11faca01453b405e30401
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-office-solutions"></a>Office ソリューションのビルド
   一般に、Office プロジェクトのビルドとデバッグは、Visual Studio のその他の種類のプロジェクト (Windows フォームなど) のビルドおよびデバッグとほとんど同じです。 このセクションのトピックでは、いくつかある相違点について説明します。 アプリケーションを構築する方法についての概要については、次を参照してください。[をコンパイルすると、Visual Studio でのビルド](/visualstudio/ide/compiling-and-building-in-visual-studio)です。  

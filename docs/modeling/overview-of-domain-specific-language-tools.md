@@ -12,11 +12,12 @@ caps.latest.revision: "54"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 20d4222f96958a730c563ff9bc84b2b5d0b08538
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 394887f5da92e6325266167a0c79f717e0a3a31c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>ドメイン固有言語ツールの概要
 ホストされるドメイン固有言語ツール (DSL ツール)[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]では、ドメイン固有言語の設計および言語に基づくモデルを作成するためのユーザーが必要なすべてのものを生成します。  
@@ -76,6 +77,6 @@ ms.lasthandoff: 10/27/2017
   
  ビルドおよび DSL ツールのソリューションを実行するときに[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、2 番目のインスタンスの[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ドメイン固有言語が言語のユーザーに表示する方法を示しています。 すべてが正常に動作することを確認する後に割り当てることができます、`.vsix`ファイル DslPackage プロジェクトのビルド フォルダーに表示されます。 このファイルを使用して、インストールとして DSL、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]他のコンピューター上の拡張機能です。  詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [実験用インスタンス](../extensibility/the-experimental-instance.md)   
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9e688d30d2367236cfcf5b2d14b36eb602832fc0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6bf217218dcc1830cc2acf2833aa7e31e85745d9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccinitialize-function"></a>SccInitialize 関数
 この関数は、ソース管理プラグインを初期化し、機能および統合開発環境 (IDE) に制限を提供します。  
@@ -66,7 +67,7 @@ SCCRTN SccInitialize (
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|ソース コントロールの初期化が成功しました。|  
 |SCC_E_INITIALIZEFAILED|システムを初期化できませんでした。|  
@@ -84,7 +85,7 @@ SCCRTN SccInitialize (
   
  `lpSccCaps`パラメーターは、ソース管理プラグインのプラグインの機能を示すビットフラグを格納する場所です。 (機能ビットフラグの一覧については、次を参照してください。[機能フラグ](../extensibility/capability-flags.md))。 インスタンスのかどうか、プラグインは、機能の設定に呼び出し元に用意されているコールバック関数の場合、結果を書き込むプラグイン プラン ビット SCC_CAP_TEXTOUT です。 IDE にバージョン管理の結果に対するウィンドウ作成この通知はします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccUninitialize](../extensibility/sccuninitialize-function.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)   

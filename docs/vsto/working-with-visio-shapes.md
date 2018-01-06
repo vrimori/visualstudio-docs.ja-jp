@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4a06661b25b20548177cc0a43a05d864d895ce6b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 94f736eb4681b0ac28f391668254c9d9a2f97577
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-visio-shapes"></a>Visio の図形の操作
   このセクションのトピックでは、Microsoft Office Visio のオブジェクト モデルを使用して Office プロジェクトで図形を操作する手順とコード例を提供します。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/31/2017
 |ステンシルから Visio 図面に図形を追加します。|[方法: プログラムによって Visio 図面に図形を追加する](../vsto/how-to-programmatically-add-shapes-to-a-visio-document.md)|  
 |Visio のページから図形をコピーし、別のページに貼り付けます。|[方法: Visio 図面の図形をプログラムによってコピーして貼り付ける](../vsto/how-to-programmatically-copy-and-paste-shapes-in-a-visio-document.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visio ソリューション](../vsto/visio-solutions.md)   
  [Visio オブジェクト モデルの概要](../vsto/visio-object-model-overview.md)   
  [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)  

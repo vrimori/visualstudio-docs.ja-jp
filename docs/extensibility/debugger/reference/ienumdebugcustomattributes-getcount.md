@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 492fada19483d8c03c23f540e8fa0fb90e2525ba
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d7630bc00b324ab141482ce8623fc739fb07d1d5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumdebugcustomattributesgetcount"></a>IEnumDebugCustomAttributes::GetCount
 列挙子では、カスタム属性の数を取得します。  
@@ -47,5 +48,5 @@ int GetCount(
 ## <a name="remarks"></a>コメント  
  このメソッドはだけを指定する、一般的な列挙型の COM インターフェイスの一部ではありません`Next`、 `Clone`、 `Skip`、および`Reset`実装する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

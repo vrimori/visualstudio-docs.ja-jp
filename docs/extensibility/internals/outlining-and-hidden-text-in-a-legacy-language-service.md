@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c28fbedddcd5a3d7bb80f1c14cd9a7f2ffe89eb8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0435225f30f5f596aed4631f0130b94cd3b273ac
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="outlining-and-hidden-text-in-a-legacy-language-service"></a>従来の言語サービスでのアウトライン表示と非表示のテキスト
 アウトライン表示できるようになりますの単一行にテキスト行のシーケンスを折りたたみます。 たとえば、C++ ではすべてのメソッドをメソッド シグネチャのみを示す 1 つの行を折りたたむできます。 非表示のテキストは、表示または非表示にできるテキスト行のシーケンスです。  

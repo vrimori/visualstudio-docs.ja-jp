@@ -15,11 +15,12 @@ caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c1c81a34a290b34207f505d6b1ab46fa8b11cd8d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4f0ac6fdedb5d65f40f718c568297dc0196c4537
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vsix-extension-schema-20-reference"></a>VSIX 拡張機能スキーマ 2.0 リファレンス
 VSIX の配置マニフェスト ファイルでは、VSIX パッケージの内容について説明します。 ファイルの形式は、スキーマによって制御されます。 このスキーマのバージョン 2.0 では、カスタムの型と属性の追加をサポートします。  マニフェストのスキーマは拡張できます。 マニフェストのローダーでは、XML 要素とそれに理解していない属性は無視されます。  
@@ -216,5 +217,5 @@ VSIX の配置マニフェスト ファイルでは、VSIX パッケージの内
 </PackageManifest>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio 拡張機能の配布](../extensibility/shipping-visual-studio-extensions.md)

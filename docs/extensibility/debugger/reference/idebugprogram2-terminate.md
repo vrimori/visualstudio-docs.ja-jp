@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 16f9e718eaebbb1ab82ea96c08661622ef7e1cd1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fea9b99fc597a75e93392b14fe40a1be87072602
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprogram2terminate"></a>IDebugProgram2::Terminate
 プログラムを終了します。  
@@ -43,6 +44,6 @@ int Terminate();
   
  このメソッドまたは[Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)メソッドがすべてのデバッグを停止する、ユーザーへの応答では通常、IDE によって呼び出されます。 このメソッドの実装では、プロセス内でプログラムを終了する、ことをお勧めします。 これが可能でない場合、DE 必要があります、プログラムがこのプロセスでこれ以上実行するを防ぎます (および、必要なクリーンアップ操作を行います)。 場合、`IDebugProcess2::Terminate`メソッドは、IDE によって呼び出された、プロセス全体は終了の後に、`IDebugProgram2::Terminate`メソッドが呼び出されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [終了](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)

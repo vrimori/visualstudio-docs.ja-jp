@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e0cde4ca360aa0059abcbe0b64d63b4a94e85d78
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 22929c34d656fb4f163076ca0b5dfb498d44c884
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="source-control-plug-in-architecture"></a>ソース管理プラグイン アーキテクチャ
 ソース コントロールのサポートを追加することができます、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) で実装して、ソース管理プラグインをアタッチします。 IDE は、適切に定義されたソース管理プラグイン API を使用してプラグイン ソース管理に接続します。 IDE では、ツールバーとメニュー コマンドで構成されるユーザー インターフェイス (UI) を提供することにより、ソース管理システムのバージョン コントロール機能を公開します。 ソース管理プラグインでは、ソース管理機能を実装します。  
@@ -39,7 +40,7 @@ VS およびソース管理の間の相互作用をプラグインを示すア�
   
  ソース管理プラグインに変更を加えることはできません、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]シェルし、その結果、ソース管理アダプター パッケージまたはソースのいずれかを制御する、IDE によって提供される UI。 これにより、エンドユーザーの統合された環境に影響する、さまざまなソース管理プラグイン API 関数の実装で提供される柔軟性を最大限に使用する必要があるためです。 ソース管理プラグイン API のドキュメントのリファレンスのセクションには、高度なソース管理プラグイン機能の情報が含まれます。 これらの機能を利用するには、ソース管理プラグインは、初期化中に、その高度な機能を IDE を宣言する必要があり、各機能の特定の高度な関数を実装する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン](../../extensibility/source-control-plug-ins.md)   
  [用語集](../../extensibility/source-control-plug-in-glossary.md)   
  [ソース管理プラグインの作成](../../extensibility/internals/creating-a-source-control-plug-in.md)

@@ -28,11 +28,12 @@ caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 569f177f23ce8c1e32441263b219f51d2305ca86
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3c147fd683db68bed3b66f0eac146b8c98272d77
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-sharepoint-packaging-and-deployment"></a>SharePoint のパッケージ化と配置のトラブルシューティング
   このトピックでは、SharePoint ソリューションをパッケージ化および配置するときに発生する可能性があるさまざまな問題について説明します。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/31/2017
   
  設定を次の表に示します、**配置競合の解決**プロパティです。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |自動|競合を検出して自動的に解決します。|  
 |プロンプト|競合を検出し、解決する前に開発者に報告します。|  
@@ -109,12 +110,12 @@ ms.lasthandoff: 10/31/2017
 ### <a name="error-message"></a>エラー メッセージ  
  警告 1 要素 ' [*コントロール名*]' は既知の要素ではありません。 Web サイトにコンパイル エラーがあるか、web.config ファイルが存在しない可能性があります。  
   
-### <a name="resolution"></a>解決策  
+### <a name="resolution"></a>解像度  
  場合、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]プロジェクト システムは、入れ子になったユーザー コントロールを認識することはありません、Intellisense を提供できないし、警告を出力します。 プロジェクト システムで入れ子になったユーザー コントロールの認識されない、プロジェクトがビルドされず、デザイナーが閉じられていないと、再び開かれます場合や、自動取り消しオプションが有効になっている、それが原因で、ユーザー コントロールをデバッグ後に SharePoint ハイブから取り消します。  
   
  この警告を除去するには、プロジェクトをビルドしてからデザイナーを閉じて再度開くか、プロジェクトに対する自動取り消しオプションを無効にします。 これを行うには、クリア、**デバッグ後に自動取り消し**チェック ボックスをオン、 **SharePoint**プロジェクトのプロパティ ダイアログ ボックスのタブです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

@@ -12,14 +12,15 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c05905e8ffeec3aa699aac9dfa46c4b017b86be5
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: 9ee45132e4acf45bccffd3e05808defd3c7ced6d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="view-snapshots-using-intellitrace-step-back"></a>IntelliTrace 手順バックを利用したスナップショットの表示
-IntelliTrace ステップ ライトバックは、ステップのイベント、アプリケーションのすべてのブレークポイントとデバッガーのスナップショットを取得する自動的にします。 記録されたスナップショットを使用すると、前のブレークポイントまたは手順に戻るし、過去になっていたようにアプリケーションの状態を表示できます。 IntelliTrace 手順戻ることができますの以前のアプリケーション状態を確認しますが、デバッグを再起動するか、必要なアプリケーションの状態を再作成したくないです。
+IntelliTrace ステップ ライトバックは、ステップのイベント、アプリケーションのすべてのブレークポイントとデバッガーのスナップショットを取得する自動的にします。 記録されたスナップショットにより、前のブレークポイントまたはステップに戻り、過去の時点でのアプリケーションの状態を確認できるようになります。 IntelliTrace ステップ バックでは、以前のアプリケーションの状態を確認したいが、デバッグの再開や必要なアプリ状態の再作成は必要でない場合に時間を節約できます。
 
 IntelliTrace ステップ ライトバックは Visual Studio Enterprise 2017 15.5 以降のバージョンから利用できるよう、Windows 10 Anniversary 更新を必要とまたはそれ以降。 この機能は現在サポートされて ASP.NET、WinForms、WPF、コンソールの管理対象アプリ、およびマネージ クラス ライブラリをデバッグします。 ASP.NET Core、.NET Core または UWP アプリケーションのデバッグは現在サポートされていません。 
   
@@ -38,7 +39,7 @@ IntelliTrace は、手順とブレークポイントのイベント、各デバ�
 
 ## <a name="navigate-and-view-snapshots"></a>移動し、スナップショットを表示します。
 
-使用してイベント間を移動することができます、 **(Alt + [) 下位手順**と**つ進む (Alt +])**デバッグ ツールバーのボタンです。 これらのボタンに表示されるイベントの移動、**イベント** タブで、**診断ツール ウィンドウ**します。 ステップ実行前後イベントに自動的には、選択したイベントでデバッグ履歴が有効にします。
+使用してイベント間を移動することができます、 **(Alt + [) 下位手順**と**つ進む (Alt +])**デバッグ ツールバーのボタンです。 これらのボタンに表示されるイベントの移動、**イベント** タブで、**診断ツール ウィンドウ**します。 あるイベントに戻るまたは進むと、選択したイベントの過去のデバッグが自動的に有効になります。
 
 ![戻るボタンと進むボタン](../debugger/media/intellitrace-step-back-icons-description.png "旧バージョンとステップとつ進むボタン")
 
@@ -60,7 +61,7 @@ IntelliTrace は、手順とブレークポイントのイベント、各デバ�
 
 ![IntelliTrace ステップ ライトバックの概要](../debugger/media/intellitrace-step-back-overview.png "の概要の IntelliTrace の手順に戻る")
 
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
  Visual Studio での変数を検査する方法については、次を参照してください[デバッガーの機能のツアー。](../debugger/debugger-feature-tour.md)  
  デバッグ履歴の詳細については、次を参照してください。[デバッグ履歴](../debugger/historical-debugging.md)です。  
 
@@ -79,20 +80,20 @@ IntelliTrace は、手順とブレークポイントのイベント、各デバ�
 ## <a name="known-issues"></a>既知の問題  
 * Windows 10 に収まる作成者更新 (RS3) よりも古い Windows のバージョンの IntelliTrace イベントとスナップショット モードを使用している場合、およびアプリケーションのデバッグ プラットフォーム ターゲットが x86 に設定されている場合は、IntelliTrace はスナップショットを取得できません。
 
-    対応策 :
+    回避策:
     * インストールまたは Windows 10 に収まる作成者 Update (RS3) にアップグレードします。 
     * 代わりにします。 
         1. Visual Studio インストーラーからデスクトップ (x86、x64) コンポーネント用の VC++ 2015.3 v140 ツールセットをインストールします。
         2. 対象アプリケーションをビルドします。
         3. コマンド ライン ツールを使用して editbin 設定、`Largeaddressaware`実行可能ファイルの対象のフラグ。 たとえば、(変更後のパスを更新するには) このコマンドを使用する場合があります:"C:\Program Files (x86) \Microsoft Visual Studio\Preview\Enterprise\VC\Tools\MSVC\14.12.25718\bin\Hostx86\x86\editbin.exe"/Largeaddressaware"C:\Path\To\Application\app.exe"です。
-        4. キーを押してデバッグを開始する**f5 キーを押して**です。 ここで、ブレークポイントとデバッガーのステップでスナップショットを取得します。
+        4. デバッグを開始するには、**F5** キーを押します。 ここで、ブレークポイントとデバッガーのステップでスナップショットを取得します。
 
         > [!Note]
         > `Largeaddressaware`実行可能ファイルが変更を再構築するたびにフラグを設定する必要があります。
 
 * アプリケーションのプロセスのスナップショットが作成されて保存されているメモリ マップト ファイルを使用するアプリケーションの場合にスナップショットを使用して、プロセスは (親プロセスには、そのロックが解放) の後もメモリ マップト ファイルに対する排他ロックを保持します。 他のプロセスは、読み取り、ですが、メモリ マップト ファイルに書き込まれません。
 
-    対応策 :
+    回避策:
     * すべてのスナップショットをオフには、デバッグ セッションを終了します。 
 
 * 持つファイルを保存するときに**デバッグ > IntelliTrace > の保存の IntelliTrace セッション**イベントとスナップショット モードの場合、スナップショットからキャプチャされた追加のデータは、.itrace ファイルにします。 ブレークポイントおよびステップのイベントには、IntelliTrace イベントのみのモードでファイルを保存した場合と同じ情報が表示されます。 

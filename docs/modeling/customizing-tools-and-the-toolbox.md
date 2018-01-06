@@ -16,16 +16,17 @@ caps.latest.revision: "26"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: f7499aba9d7458ca1bf834bb168a25c6a6ae9b5c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 8f9d26b727281c3443549bd38afce5d9da043334
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>ツールおよびツールボックスのカスタマイズ
 ユーザーがモデルに追加可能な要素についてツールボックス項目を定義する必要があります。 ツールには要素ツールと接続ツールの 2 種類があります。 生成されたデザイナーで、ユーザーは要素ツールを選択して図形を図へドラッグすることができ、接続ツールを選択して図形間のリンクを描画できます。 一般にユーザーは、要素ツールを使用するとドメイン クラスのインスタンスをモデルに追加することができ、接続ツールを使用するとドメイン リレーションシップのインスタンスを追加できます。  
   
- このトピックの内容  
+ このトピックの内容:  
   
 -   [ツールボックスを定義する方法](#ToolboxDef)  
   
@@ -246,7 +247,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
   
  'Hard' の制約を適用するカスタム コードを使用するが、ユーザーが一時的に無効な接続を確立できるかどうかを検討してください。 その必要がある場合、制約を変更して、ユーザーが変更内容を保存しようとするまで、接続が検証されないようにすることができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [要素の作成および移動をカスタマイズします。](../modeling/customizing-element-creation-and-movement.md)   
  [コピーの動作をカスタマイズします。](../modeling/customizing-copy-behavior.md)   
  [方法: ドラッグ アンド ドロップのハンドラーを追加](../modeling/how-to-add-a-drag-and-drop-handler.md)   

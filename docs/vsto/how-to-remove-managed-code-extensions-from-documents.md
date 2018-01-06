@@ -18,11 +18,12 @@ caps.latest.revision: "30"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f9da75468ae417bd835b457cdbd5219ef9462df1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 77325f725edcec41d71e5af38572f05e59c86198
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-remove-managed-code-extensions-from-documents"></a>方法: マネージ コード拡張をドキュメントから削除する
   プログラムによって、ドキュメントまたは Microsoft Office Word または Microsoft Office Excel 用ドキュメント レベルのカスタマイズの一部であるブックから、カスタマイズ アセンブリを削除することができます。 ユーザーのドキュメントを開くし、内容を表示することができますしは、ドキュメントに追加する、カスタム ユーザー インターフェイス (UI) は表示されませんが、され、コードは実行できません。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  プロジェクトをビルドし、カスタマイズを削除するコンピューターでアプリケーションを実行します。 コンピューターによっては、for Office Runtime がインストールされている Visual Studio 2010 Tools が必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ServerDocument クラスを使用してサーバー上のドキュメントを管理します。](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)   
  [方法: マネージ コード拡張機能をドキュメントにアタッチする](../vsto/how-to-attach-managed-code-extensions-to-documents.md)  
   

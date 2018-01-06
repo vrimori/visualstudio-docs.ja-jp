@@ -16,11 +16,12 @@ caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bf74110cf42daa51521cc7ea706c1b951b23deb8
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: vssdk
+ms.openlocfilehash: 543f107081a5cc29ac14f1c2ba2e05924b72e353
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shipping-visual-studio-extensions"></a>Visual Studio 拡張機能の配布
 拡張機能開発が終了したら後、は、他のコンピューターにインストールして、友人や同僚と共有または Visual Studio Marketplace に発行できます。 このセクションの内容を発行して、拡張機能を維持するために行うには必要なすべての情報を用いて: 発行、更新して、ローカライズ、.vsix ファイルを操作します。  
@@ -62,4 +63,4 @@ ms.lasthandoff: 11/09/2017
 |[VSIX パッケージの署名](../extensibility/signing-vsix-packages.md)|VSIX パッケージに署名する方法をについて説明します。|  
 |[プライベート ギャラリー](../extensibility/private-galleries.md)|拡張機能のプライベート ギャラリーを作成する方法について説明します。|  
 |[複数バージョンの Visual Studio をサポートする](../extensibility/supporting-multiple-versions-of-visual-studio.md)|複数のバージョンの Visual Studio の拡張機能をサポートする方法を示します。|
-|[Visual Studio の検索](locating-visual-studio.md)|カスタム拡張機能の展開用の Visual Studio インスタンスを検索する方法について説明します。|
+|[Visual Studio の検出](locating-visual-studio.md)|カスタム拡張機能の展開用の Visual Studio インスタンスを検索する方法について説明します。|

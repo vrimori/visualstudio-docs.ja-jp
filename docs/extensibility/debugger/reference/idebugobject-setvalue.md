@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4e4a4311d5e115e20d23096a6ca1e3bce2dcbea6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: adb5987e8537938c5d6f6c6241cd466654bf4793
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugobjectsetvalue"></a>IDebugObject::SetValue
 連続する一連のバイトからオブジェクトの値を設定します。  
@@ -52,6 +53,6 @@ int SetValue(
 ## <a name="remarks"></a>コメント  
  配列内の値がこれにコピーされます[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)オブジェクト、既存の値を置換します。 新しい値のサイズは、既存の値より大きくまたは小さくできます。 これは、`IDebugObject`の参照を null にすることはできません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md)

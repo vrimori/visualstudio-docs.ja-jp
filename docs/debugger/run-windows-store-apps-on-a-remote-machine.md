@@ -17,11 +17,12 @@ caps.latest.revision: "43"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8e1b298f8088adf05992f7ebf8b5afbb743ec995
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: uwp
+ms.openlocfilehash: ebae0886db71b0b06f346d6bd174951b1c5d4752
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="run-uwp-apps-on-a-remote-machine"></a>リモート コンピューターでの UWP アプリを実行します。
 ![Windows にのみ適用されます](../debugger/media/windows_only_content.png "windows_only_content")  
@@ -104,6 +105,6 @@ Windows 8.1 Pc および Windows の事前作成元の更新プログラムの�
   
  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします (キーボードの場合: F5 キーを押します)。 プロジェクトが再コンパイルされた後、リモート デバイスに配置され、開始されます。 デバッガーはブレークポイントで実行を中断するので、その時点でコードをステップ イン、ステップ オーバー、およびステップ アウトできます。 デバッグ セッションを終了し、リモート アプリケーションを閉じるには、 **[デバッグの停止]** をクリックします。 詳細については、次を参照してください。 [Visual Studio でアプリのデバッグ](../debugger/debug-store-apps-in-visual-studio.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio での UWP アプリのテスト](../test/testing-store-apps-with-visual-studio.md)   
  [Visual Studio でアプリをデバッグします。](../debugger/debug-store-apps-in-visual-studio.md)

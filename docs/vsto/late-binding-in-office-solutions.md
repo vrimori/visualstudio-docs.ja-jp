@@ -20,11 +20,12 @@ caps.latest.revision: "49"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 932a7ccc3f52d80e4f75999f401c61b2663095f5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 629e320cc47d65347cdd767b984a151afbf648e3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="late-binding-in-office-solutions"></a>Office ソリューションの遅延バインディング
   Office アプリケーションのオブジェクト モデルの種類によっては、遅延バインディング機能を介して使用可能な機能を提供します。 たとえば、一部のメソッドとプロパティは、異なる種類の Office アプリケーションのコンテキストによってオブジェクトを返すことができ、一部の型は、さまざまな方法または別のコンテキストでのプロパティを公開できます。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
   
  Visual Basic での変換については、次を参照してください。[暗黙的および明示的な変換 &#40;です。Visual Basic &#41;](/dotnet/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions)と[CType 関数 &#40;です。Visual Basic &#41;](/dotnet/visual-basic/language-reference/functions/ctype-function).  
   
-### <a name="examples"></a>例  
+### <a name="examples"></a>使用例  
  次のコード例を Visual Basic プロジェクトでオブジェクトを特定の型にキャストする方法を示しています、 **Option Strict**にします。 このプロジェクトの種類である必要があります明示的にキャストする、<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Cells%2A>プロパティを<xref:Microsoft.Office.Interop.Excel.Range>です。 この例では、という名前のワークシート クラスとドキュメント レベルの Excel プロジェクトが必要があります`Sheet1`です。  
   
  [!code-vb[Trin_VstcoreProgramming#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#9)]  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="accessing-members-that-are-available-only-through-late-binding"></a>遅延バインディングでのみ利用可能なメンバーへのアクセス  
  一部のプロパティと、Office Pia のメソッドは、遅延バインディングを介してのみ使用します。 Visual Basic のプロジェクトの場所**Option Strict**がオフまたは Visual c# プロジェクトをターゲットとする、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]または[!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]、遅延バインディング メンバーにアクセスするこれらの言語で遅延バインディング機能を使用することができます。 Visual basic プロジェクト where **Option Strict**は、リフレクションを使用してこれらのメンバーにアクセスする必要があります。  
   
-### <a name="examples"></a>例  
+### <a name="examples"></a>使用例  
  次のコード例を Visual Basic プロジェクトで遅延バインディング メンバーにアクセスする方法を示しています、 **Option Strict**入っていないか、Visual c# プロジェクトを対象とする、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]です。 この例は、遅延バインディング**名前**のプロパティ、**ファイルを開く**Word のダイアログ ボックス。 この例を使用する実行から、`ThisDocument`または`ThisAddIn`Word プロジェクトのクラスです。  
   
  [!code-vb[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#122)]
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/31/2017
   
  [!code-vb[Trin_VstcoreWordAutomation#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#102)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションのコードの記述](../vsto/writing-code-in-office-solutions.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)   
  [Dynamic 型 &#40; を使用します。C &#35;です。プログラミング ガイド &#41;](/dotnet/csharp/programming-guide/types/using-type-dynamic)   

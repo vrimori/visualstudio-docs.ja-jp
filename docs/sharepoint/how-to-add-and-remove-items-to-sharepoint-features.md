@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c925cc1cf8b1a5c70dfc1e650151d79945828935
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 071c8832e154f151d6ee9d04c45b5bc927366f7d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-and-remove-items-to-sharepoint-features"></a>方法: SharePoint フィーチャーの項目を追加および削除する
   SharePoint ソリューションを作成するときに、Visual Studio は、機能に既定の SharePoint プロジェクト項目を追加します。 展開する前に、追加し、SharePoint の機能を変更する SharePoint プロジェクト項目を削除できます。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/31/2017
   
      SharePoint プロジェクト項目に表示されます、**ソリューション内の項目** ボックスの一覧です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint フィーチャーの作成](../sharepoint/creating-sharepoint-features.md)   
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   

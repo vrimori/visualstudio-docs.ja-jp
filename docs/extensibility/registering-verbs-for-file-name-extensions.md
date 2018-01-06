@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8f430486c613e6281404110d4441d2a3d2100534
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ff1902689524dd980c8223ca83863238254df448
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registering-verbs-for-file-name-extensions"></a>ファイル名拡張子の動詞を登録します。
 アプリケーションとファイル名拡張子の関連付けは通常、ユーザーがファイルをダブルクリックしたときに発生する推奨されるアクションを持っています。 これを優先する動詞をたとえば開いているアクションに対応するアクションをリンクします。  
@@ -113,5 +114,5 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  サイド バイ サイド配置で拡張機能の既定の動詞を変更する場合は、インストールと削除の影響を検討してください。 インストール中に元の既定値は上書きされます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [side-by-side のファイルの関連付けを管理する](../extensibility/managing-side-by-side-file-associations.md)

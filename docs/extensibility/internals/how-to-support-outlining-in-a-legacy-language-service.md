@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e08ca6d5a670bb2c1a0f0073920c753add50322c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fa57b0d09cb8422a9dde1f70306d2f3808b0384e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-support-outlining-in-a-legacy-language-service"></a>方法: レガシ言語サービスのアウトライン表示をサポート
 アウトライン表示は、展開または折りたたみのテキストのさまざまな地域に使用されます。 アウトライン方法が使用されるさまざまな言語で定義が異なることができます。 詳細については、「[アウトライン](../../ide/outlining.md)」を参照してください。  
@@ -48,6 +49,6 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  改行文字を非表示の注意します。 非表示テキスト拡張することは、最初の行の先頭から最後のれ、新しい行の最後の文字を表示、セクションの最後の行の文字です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: レガシ言語サービスでの非表示テキストのサポートを提供](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)   
  [方法: 従来の言語サービスでのアウトラインの拡張サポートの提供](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fabdf30480666ee3bc24bf3d68af4cc0dcc1ccb6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 94f2e781c316f3891fdef0c324d54fa2f9742222
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-register-for-text-buffer-events-with-the-legacy-api"></a>方法: テキスト バッファー イベント、レガシ API の登録
 テキスト バッファーをレガシ API を使用してアクセスする場合は、テキスト バッファー イベント、次の手順で示すように登録する必要があります。  
@@ -36,5 +37,5 @@ ms.lasthandoff: 10/31/2017
   
      環境を停止イベントの待機を呼び出すことによって行うこともできますし、cookie が返されます、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint.Unadvise%2A>メソッドです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レガシ API でのテキスト バッファー イベント](../extensibility/text-buffer-events-in-the-legacy-api.md)

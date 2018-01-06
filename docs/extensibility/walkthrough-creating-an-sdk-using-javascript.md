@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a87ee7d1a48c313a29d00524d471b46ef572f4a3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2a53b10f3d9a69c0181a432dad491bebd177f5be
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-sdk-using-javascript"></a>チュートリアル: JavaScript を使用して SDK を作成します。
 このチュートリアルでは、JavaScript を使用して単純な数学 SDK と Visual Studio Extension (VSIX) を作成する方法を説明します。  このチュートリアルは、これらのパートに分かれています。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/31/2017
  [JavaScript]、クラス ライブラリ プロジェクトの種類はありません。 このチュートリアルでは、VSIX プロジェクトに直接サンプル arithmetic.js ファイルが作成されます。 実際には、最初にビルドおよびテストすること、JavaScript および CSS ファイル、Windows ストア アプリとしてことをお勧め — たとえばを使用して、**空のアプリケーション**テンプレート: VSIX プロジェクトに配置する前にします。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルを行うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
+ このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
   
 ##  <a name="createSimpleMathVSIX"></a>SimpleMathVSIX 拡張機能 SDK プロジェクトを作成するには  
   
@@ -316,5 +317,5 @@ ms.lasthandoff: 10/31/2017
   
 12. UI のアプリで、2 つの数値を入力してください。、、の操作を選択し、、  **=** ボタンをクリックします。 正しい結果が表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソフトウェア開発キットを作成する](../extensibility/creating-a-software-development-kit.md)

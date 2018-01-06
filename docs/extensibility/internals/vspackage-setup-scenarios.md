@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2128d4c2659d7e6e389384c4bf7e133a4fb32e47
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: dea9d25f211ca5042234c0400b2a10086136f49c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vspackage-setup-scenarios"></a>VSPackage のセットアップのシナリオ
 ことが重要、VSPackage インストーラーによって、柔軟性をデザインします。 たとえば、今後は、セキュリティ更新プログラムをリリースする必要があります。 またはサイド バイ サイドの完全なバージョン管理サポートが必要なビジネス戦略を変更する可能性があります。  
@@ -76,6 +77,6 @@ VSPackage の更新プログラムのインストーラーを共有
   
  **注**サイド バイ サイド アセンブリの展開の詳細については、次を参照してください。[の簡略化の展開と .NET Framework での DLL ヘルの解決](http://msdn.microsoft.com/library/ms973843.aspx)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Windows インストーラー](http://msdn.microsoft.com/library/cc185688\(VS.85\).aspx)   
  [複数バージョンの Visual Studio をサポートする](../../extensibility/supporting-multiple-versions-of-visual-studio.md)

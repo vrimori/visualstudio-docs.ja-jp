@@ -19,11 +19,12 @@ caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3a41e7580e7c6c169554bb50c4d0c9af29a992b5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 1733ac8333675975bb5d4b42dce9df3c01e5ac0f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltupdategt-element-office-development-in-visual-studio"></a>&lt;更新&gt;要素 (Visual Studio での Office 開発)
   `update`要素は、更新プログラムのソリューションを確認する間隔を指定します。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/31/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|`enabled`|必須です。 有効値は次のいずれかに設定します。<br /><br /> -   **true**更新プログラムを確認します。<br />-   **false**の更新プログラムをチェックしないようにします。|  
+|`enabled`|必須。 有効値は次のいずれかに設定します。<br /><br /> -   **true**更新プログラムを確認します。<br />-   **false**の更新プログラムをチェックしないようにします。|  
   
  `update`要素には、次の子要素です。  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/31/2017
 |属性|説明|  
 |---------------|-----------------|  
 |`maximumAge`|必須。 値は整数に設定します。|  
-|`unit`|必須です。 設定`unit`値は次のいずれかに。<br /><br /> -   **時間**<br />-   **日数**<br />-   **週**|  
+|`unit`|必須。 設定`unit`値は次のいずれかに。<br /><br /> -   **時間**<br />-   **日数**<br />-   **週**|  
   
 ## <a name="example-of-always-checking-for-updates"></a>常に更新プログラムのチェックの例  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 10/31/2017
 </vstav3:update>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce を使用して Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
  [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
  [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)   

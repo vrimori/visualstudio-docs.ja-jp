@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 36d8f6afebf09d4efd176ba204dcc6f485a56124
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8d967cec28a50948a9577336b886376b9cfe0040
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-property-user-interface"></a>プロジェクト プロパティのユーザー インターフェイス
 プロジェクトのサブタイプは、プロジェクトで項目を使用できる**プロパティ ページ** ダイアログ ボックスは基本のプロジェクトで指定できるように非表示にするように指定すると、読み取り専用のコントロールと全体のページを作成または、にプロジェクトのサブタイプに固有のページを追加**プロパティ ページ** ダイアログ ボックス。  
@@ -58,6 +59,6 @@ ms.lasthandoff: 10/31/2017
   
  プロジェクトのサブタイプによって追加された新しいプロパティ ページには、基本プロジェクト実装からプロジェクト構成の参照オブジェクトが渡されます。 このプロジェクト構成の参照オブジェクトには、オートメーション エクステンダーがサポートしています。 AutomationExtenders の詳細については、次を参照してください。[実装と管理を使用してオートメーション エクステンダー](http://msdn.microsoft.com/Library/0d5c218c-f412-4b28-ab0c-33a611f62356)です。 プロジェクトのサブタイプ呼び出しによって実装されたプロパティ ページ<xref:EnvDTE.Project.Extender%2A>オブジェクトを取得する独自プロジェクト サブタイプ構成参照ベースのプロジェクトの構成の参照オブジェクトを拡張します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:EnvDTE.IFilterProperties>   
  [プロパティ ページ ダイアログ ボックス](http://msdn.microsoft.com/en-us/4a3d34ac-ed03-45e8-ae60-a0e1aad300e4)

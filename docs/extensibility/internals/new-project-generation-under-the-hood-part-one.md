@@ -15,11 +15,12 @@ caps.latest.revision: "29"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: efe08d9e23f1a77fd68df2bdba4389e7b7955b11
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 158340ad82829338bb39709573ce9e025332341a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="new-project-generation-under-the-hood-part-one"></a>新しいプロジェクトの生成: フードのパート 1
 プロジェクトの種類を作成する方法についてたいと思ったしますか。 新しいプロジェクトを作成するときに実際にはどうなりますか不思議にしますか。 フードの時間をかけてし、実際に起こっているを確認してみましょう。  
@@ -91,7 +92,7 @@ devenv /installvstemplates
  、優先順位の番号が小さいツリーで、上の位置。  
   
 ##### <a name="developeractivity"></a>DeveloperActivity  
- このサブキーが存在する場合、ルート ノードの位置は、開発者向けの設定 ダイアログ ボックスによって制御されます。 次に例を示します。  
+ このサブキーが存在する場合、ルート ノードの位置は、開発者向けの設定 ダイアログ ボックスによって制御されます。 たとえば、オブジェクトに適用された  
   
  DeveloperActivity REG_SZ VC #  
   
@@ -215,5 +216,5 @@ devenv /installvstemplates
   
  **MyProjectNode** Visual c# の Windows ノードのすぐ下に子ノードとして表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [新しいプロジェクトの生成: 内部、パート 2](../../extensibility/internals/new-project-generation-under-the-hood-part-two.md)

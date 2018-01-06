@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6dd345fe298af42a69ac076bf92de7df9db82ec2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6c70c1c1d3e525ccc676554d3b40df224423e313
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugthread2setnextstatement"></a>IDebugThread2::SetNextStatement
 現在の命令ポインターを指定されたコードのコンテキストに設定します。  
@@ -49,7 +50,7 @@ int SetNextStatement (
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 次の表は、他の値を示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |E_CANNOT_SET_NEXT_STATEMENT_ON_NONLEAF_FRAME|次のステートメントは、フレームのスタックにスタック フレームにすることはできません。|  
 |E_CANNOT_SETIP_TO_DIFFERENT_FUNCTION|次のステートメントは、スタック内の任意のフレームに関連付けられていません。|  
@@ -58,7 +59,7 @@ int SetNextStatement (
 ## <a name="remarks"></a>コメント  
  命令ポインターを実行する次の命令またはステートメントを示します。 このメソッドは、ソース コードの行を再試行するか、たとえば別の関数内で引き続きする実行を強制するが使用されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

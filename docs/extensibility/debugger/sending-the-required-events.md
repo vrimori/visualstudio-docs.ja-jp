@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 30a5b1150d44c138465db36da2b032b71f075397
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f2fa28a3429c52e3d4eb8b5fc9faefbd86ee04d9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sending-the-required-events"></a>必要なイベントを送信します。
 必要なイベントを送信するためには、この手順を使用します。  
@@ -38,5 +39,5 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  多くの言語は、そのコードの先頭にグローバル初期化子、または (CRT ライブラリまたは _Main) から、外部のプリコンパイル済みの関数を使用します。 デバッグ中のプログラムの言語には、これらの型の最初のエントリ ポイントの前に要素のいずれかが含まれています、し、このコードが実行され、エントリ ポイント イベントが送信される場合、ユーザーのエントリ ポイントなど**メイン**または`WinMain`、達しています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッグするプログラムの有効化](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)

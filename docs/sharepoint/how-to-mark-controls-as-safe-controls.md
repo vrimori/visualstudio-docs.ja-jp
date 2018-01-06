@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e9f12b8944d9174ca885e90b92c8e3a0d0b83215
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: bd659a1df9782c4e16dd2664a27a87e858e54ef2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-mark-controls-as-safe-controls"></a>方法: コントロールを安全なコントロールとしてマークする
   セキュリティを SharePoint と区別するスクリプト インジェクションから保護されている Web コントロールがない Web コントロールです。 コントロールを保護または*安全なコントロール*、信頼されていないユーザーによってアクセスされることができます。 SharePoint プロジェクト項目のまたは安全なコントロール エントリ プロパティでも安全だとコントロールをマークすることができます、**パッケージ デザイナー**パッケージにアセンブリを追加するとします。 詳細については、次のトピックを参照してください。  
@@ -91,7 +92,7 @@ ms.lasthandoff: 10/31/2017
   
 12. 次の表から、プロパティの値を入力します。  
   
-    |プロパティ名|値|  
+    |プロパティ名|[値]|  
     |-------------------|-----------|  
     |名前空間|コントロールは、完全修飾名前空間など**BdcModelProject1.VisualWebPart1**です。|  
     |型の名前|ボタン 1|  
@@ -108,7 +109,7 @@ ms.lasthandoff: 10/31/2017
   
 15. 次の表から、プロパティの値を入力します。  
   
-    |プロパティ名|値|  
+    |プロパティ名|[値]|  
     |-------------------|-----------|  
     |名前空間|コントロールは、完全修飾名前空間など**BdcModelProject1.VisualWebPart1**です。|  
     |型の名前|TextBox1|  
@@ -118,7 +119,7 @@ ms.lasthandoff: 10/31/2017
   
 16. Tab キーを選択し、[、 **OK** ] ダイアログ ボックスを閉じるボタンをクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パッケージとプロジェクト アイテムの展開情報を提供します。](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)   
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   

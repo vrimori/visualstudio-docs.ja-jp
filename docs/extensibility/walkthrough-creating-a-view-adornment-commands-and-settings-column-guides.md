@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3db7dea958fb3d80a109c021ffb20260f0748bba
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c7b59afc8d32cefd8877d18d91556230aef9a284
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-view-adornment-commands-and-settings-column-guides"></a>チュートリアル: 作成ビュー装飾、コマンド、および設定 (列ガイド)
 コマンドのエフェクトの表示と Visual Studio テキストまたはコード エディターを拡張することができます。  このトピックでは、人気のある拡張機能、列ガイドを開始する方法を示します。  列ガイドは、コードを特定の列の幅を管理するために、テキスト エディターのビューに描画される線を視覚的に明るいできます。  具体的には書式設定されたコードは、ドキュメント、ブログの投稿に含めるか、バグのレポートのサンプルについては重要でもあります。  
@@ -1351,7 +1352,7 @@ private int GetApplicableColumn(EventArgs e)
   
  この Visual Studio ギャラリーで列ガイド機能のバージョンを試すことができます[拡張子](https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459?SRC=Home)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [エディター内](../extensibility/inside-the-editor.md)   
  [エディターと言語サービスの拡張](../extensibility/extending-the-editor-and-language-services.md)   
  [言語サービスとエディターの拡張点](../extensibility/language-service-and-editor-extension-points.md)   

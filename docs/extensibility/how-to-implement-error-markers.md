@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d926a498549e868e478d83b7930f5e569f49ce20
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d41c1bf063ea074df217934a00f73291a10e051d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-error-markers"></a>方法: エラー マーカーを実装します。
 エラー マーカー (または赤色の波下線) は、テキスト エディターのカスタマイズを実装するが最も難しいです。 ただし、VSPackage のユーザーに提供する利点を提供するためのコストを上回ることができます。 エラー マーカーは微妙に、言語パーサーが波または波赤色の線で正しくないと判断されるテキストをマークします。 このインジケーターには、視覚的に不適切なコードを表示してプログラマが役立ちます。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  エラーが見つかった場合、タスク プロバイダーは、作業項目インスタンスを作成します。 このインスタンスでは、環境が、テキスト ビューではエラー マーカーとして使用するテキスト マーカーを作成します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レガシ API でテキスト マーカーの使用](../extensibility/using-text-markers-with-the-legacy-api.md)   
  [方法: 標準のテキストのマーカーの追加](../extensibility/how-to-add-standard-text-markers.md)   
  [方法: カスタム テキスト マーカーを作成します。](../extensibility/how-to-create-custom-text-markers.md)   

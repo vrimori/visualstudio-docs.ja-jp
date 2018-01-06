@@ -12,16 +12,19 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: bc63c636d58bcde7aefeb7d35939008387bb6808
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload:
+- data-storage
+- dotnet
+ms.openlocfilehash: 6c1558c591c982673015af4eaf4e50bc9a81f7d4
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="visual-studio-data-tools-for-net"></a>.NET 用の visual Studio data tools
 Visual Studio と .NET Framework は、一緒に広範な API とツールのデータベースへの接続、メモリ内のデータのモデリングおよびユーザー インターフェイスでデータを表示するためのサポートを提供します。 データ アクセス機能を提供する .NET Framework のクラスと呼ばれる[ADO.NET](/dotnet/framework/data/adonet/index)です。 Visual Studio でのツールをデータと共に、ADO.NET 当初の目的、主にするリレーショナル データベースおよび XML をサポートします。 今日では、多くの NoSQL データベース仕入先、またはサード パーティは、ADO.NET プロバイダーを提供します。  
   
-[.NET core](https://www.dotnetfoundation.org/netcore)データセットと関連する型を除く、ADO.NET をサポートしています。 .NET Core を対象となるオブジェクト リレーショナル マッピング (ORM) レイヤーを必要としていて使用[Entity Framework Core](https://docs.microsoft.com/ef/core/)です。  
+[.NET core](https://www.dotnetfoundation.org/netcore)データセットと関連する型を除く、ADO.NET をサポートしています。 .NET Core を対象となるオブジェクト リレーショナル マッピング (ORM) レイヤーを必要としていて使用[Entity Framework Core](/ef/core/)です。  
   
 次の図は、基本的なアーキテクチャの概略を示します。  
   

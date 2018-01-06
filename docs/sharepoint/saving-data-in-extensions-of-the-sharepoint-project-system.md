@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3605558fd1fd9263c5dad7ec7bc295b7f095a185
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 07865f3a52d4cca71cf76a3d95ac041a5c389494
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="saving-data-in-extensions-of-the-sharepoint-project-system"></a>SharePoint プロジェクト システムの拡張機能におけるデータの保存
   SharePoint プロジェクト システムを拡張する場合に、SharePoint プロジェクトが閉じられた後に保持する文字列データを保存できます。 データは、通常、またはプロジェクト自体、特定のプロジェクト アイテムに関連付けられています。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/31/2017
  [!code-vb[SpExt_SPCustomPrjProperty#2](../sharepoint/codesnippet/VisualBasic/customspproperty/customproperty.vb#2)]
  [!code-csharp[SpExt_SPCustomPrjProperty#2](../sharepoint/codesnippet/CSharp/customspproperty/customproperty.cs#2)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint プロジェクト システムの拡張](../sharepoint/extending-the-sharepoint-project-system.md)   
  [SharePoint ツール拡張機能とカスタム データの関連付け](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)   
  [SharePoint プロジェクト システムと他の Visual Studio プロジェクトの間の型変換](../sharepoint/converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md)  

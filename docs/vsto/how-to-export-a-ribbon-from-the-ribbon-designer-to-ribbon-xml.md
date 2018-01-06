@@ -23,11 +23,12 @@ caps.latest.revision: "37"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b73bff8170e351e9e22e95d53ae446895cfdbd2b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: d7cbdf38b3debd7710ed036d008d52b8ef080d37
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>方法 : リボンをリボン デザイナーからリボン XML にエクスポートする
   **リボン (ビジュアル デザイナー)**項目がリボンのカスタマイズのすべての種類をサポートしていません。 高度な方法でリボンをカスタマイズするには、リボンをデザイナーからリボン XML にエクスポートし、XML を直接編集します。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/31/2017
   
      コールバック メソッドの記述と RibbonX プログラミング モデルの使用については、次を参照してください。[リボン XML](../vsto/ribbon-xml.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リボンの概要](../vsto/ribbon-overview.md)   
  [リボン デザイナー](../vsto/ribbon-designer.md)   
  [リボン XML](../vsto/ribbon-xml.md)   

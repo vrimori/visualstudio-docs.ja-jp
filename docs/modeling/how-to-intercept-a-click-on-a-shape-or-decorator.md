@@ -12,11 +12,12 @@ caps.latest.revision: "21"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 3eb235ec6c38b4995460308c0ac8b104b76f8492
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 52ecb40d98a352e629ac234be294c972126b4d68
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>方法: シェイプまたはデコレーターに対するクリック操作を受け取る
 次の手順では、図形、またはアイコン デコレーターのクリックをインターセプトする方法を示します。 クリックをインターセプトできますをダブルクリックしたにドラッグすると、その他のジェスチャ、し応答要素を作成します。  
@@ -396,6 +397,6 @@ namespace Company.CompartmentDrag
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [対応し、変更を反映します。](../modeling/responding-to-and-propagating-changes.md)   
  [デコレーターのプロパティ](../modeling/properties-of-decorators.md)

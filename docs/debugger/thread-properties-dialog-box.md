@@ -6,7 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords:
 - Spy++, thread properties
 - thread properties, Spy++
@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d9250db8b405885b5f8e8c76a68d0663c52d82ec
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0abdebd821051d6821567c8a8ec87329868c6b28
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="thread-properties-dialog-box"></a>[スレッド プロパティ] ダイアログ ボックス
 特定のスレッドの詳細をこのダイアログ ボックスの確認を使用します。 このダイアログ ボックスを表示するには、フォーカスを移動、[スレッド ビュー](../debugger/threads-view.md)ウィンドウ、または開く[メッセージ ビュー](../debugger/messages-view.md)メッセージに展開します。 ツリーで、スレッドの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  

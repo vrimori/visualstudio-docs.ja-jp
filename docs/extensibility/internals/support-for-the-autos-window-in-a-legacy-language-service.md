@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c824845d4cbdb58241c088c1cb30259d3c298f72
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: db6be625c671a508be3c2fd2f1697282af282bdd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>従来の言語サービスで自動変数 ウィンドウのサポート
 **自動変数**  ウィンドウに変数とスコープでは、デバッグ中のプログラムには、(いずれかにより、ブレークポイントまたは例外) が一時停止されてパラメーターなどの式が表示されます。 式には、変数、ローカルまたはグローバル、およびローカル スコープで変更されているパラメーターを含めることができます。 **自動変数**  ウィンドウでは、クラス、構造体、またはその他の種類のインスタンスを含めることもできます。 式エバリュエーターが評価できるものに可能性のある表示できる、 **[自動変数]**ウィンドウです。  

@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c8cd55986d7f4597030830906485ba1d7c1b3389
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 52137da9d14920a2fd5213f1110a74d895e51c7f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccadd-function"></a>SccAdd 関数
 この関数は、ソース管理システムに新しいファイルを追加します。  
@@ -62,7 +63,7 @@ SCCRTN SccAdd(
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|追加操作が正常に完了しました。|  
 |SCC_E_FILEALREADYEXISTS|選択したファイルは、既にソース管理下にあるいます。|  
@@ -83,7 +84,7 @@ SCCRTN SccAdd(
   
  以下で使用されているフラグの一覧を示します、`pfOptions`配列。  
   
-|オプション|値|説明|  
+|オプション|[値]|説明|  
 |------------|-----------|-------------|  
 |SCC_FILETYPE_AUTO|0x00|ソース管理プラグインは、ファイルの種類を検出する必要があります。|  
 |SCC_FILETYPE_TEXT|0x01|ASCII テキスト ファイルを示します。|  
@@ -94,5 +95,5 @@ SCCRTN SccAdd(
 |SCC_FILETYPE_UTF16LE|0x20|UTF16 で Unicode テキストとしてリトル エンディアン形式のファイルを処理します。|  
 |SCC_FILETYPE_UTF16BE|0x40|UTF16 ビッグ エンディアン Unicode テキストとしてファイル形式を扱います。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

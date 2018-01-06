@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ea5169b3d74a77bbb079dab5b310a3b7ebbbeff0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4f05a0b41a46adfee827f9cc1a36ab7bdd44cd0a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="source-control-plug-ins"></a>ソース管理プラグイン
 ソース管理プラグイン SDK リファレンス セクションには、により、ソース管理システムと統合する完全なインターフェイスの仕様が含まれています。[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 ソース管理プラグインを持つインターフェイスを実装する必要がある、さまざまな関数とデータ型のセマンティクスと構文を指定、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) です。  

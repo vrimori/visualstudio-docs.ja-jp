@@ -30,11 +30,12 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: eaf6871f7ad9316ba2dbdaa8fa29b4810b1d6a3d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 4572671971c6cf812c31286fba09bddb65080681
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bdc-model-design-tools-overview"></a>BDC モデルのデザイン ツールの概要
   BDC デザイナーを使用してビジネス データ接続 (BDC) モデルを設計することができます、 **BDC メソッドの詳細**ウィンドウ、および**BDC エクスプ ローラー**です。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 10/31/2017
   
  詳細については、次を参照してください。[する方法: パラメーターの型記述子を定義する](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: BDC モデルを作成](../sharepoint/how-to-create-a-bdc-model.md)   
  [方法: エンティティをモデルに追加します。](../sharepoint/how-to-add-an-entity-to-a-model.md)   
  [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   

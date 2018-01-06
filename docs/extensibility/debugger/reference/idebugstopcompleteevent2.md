@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2e92138f969189a33e1a5aad5a083c8ac57852dc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5d59de29078db46f716fe9d01a3f3fa076139ddf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugstopcompleteevent2"></a>IDebugStopCompleteEvent2
 デバッグ エンジン (DE) は、プログラムが停止したときに、この省略可能なイベントをセッション デバッグ マネージャー (SDM) に送信できます。  
@@ -35,7 +36,7 @@ IDebugStopCompleteEvent2 : IUnknown
   
  プログラムを停止した SDM を非同期に通知するために使用されます。 これはインタープリター デバッグ エンジンでは、場所もコードが実行されていないデバッグ対象のプログラム内、ように[停止](../../../extensibility/debugger/reference/idebugengineprogram2-stop.md)同期的に完了することができません。 デバッグ エンジンがこの非同期通知を使用するか、返す必要があります`S_ASYNC_STOP`から[停止](../../../extensibility/debugger/reference/idebugengineprogram2-stop.md)です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

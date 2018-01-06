@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 41ad173f706b655f4d43a101618127070ae9ac6e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e007080f7c959b3667a95890babc819c6bba17f8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugengine2setlocale"></a>IDebugEngine2::SetLocale
 デバッグ エンジン (DE) のロケールを設定します。  
@@ -47,5 +48,5 @@ int SetLocale(
 ## <a name="remarks"></a>コメント  
  このメソッドは、セッション デバッグ マネージャー、DE によって返される文字列は正しくローカライズできるように、IDE のロケール設定を反映するには、(SDM) によって呼び出されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

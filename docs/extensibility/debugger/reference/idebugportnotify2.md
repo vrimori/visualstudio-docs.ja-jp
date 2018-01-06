@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9aec1465334a4399136d47c29faa8cccbb99c3a2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e913a26d35d7207193d5086b68c785f737f8bfee
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugportnotify2"></a>IDebugPortNotify2
 このインターフェイスは、登録またはで実行されているポートとデバッグ可能なプログラムの登録を解除します。  
@@ -46,13 +47,13 @@ IDebugPortNotify2 : IUnknown
 ## <a name="remarks"></a>コメント  
  デバッグ ポートは、プログラムがロードまたはアンロードされたときを知る手段を持つ、しない限り、カスタム ポートのサプライヤーは、このインターフェイスを実装する必要があります。 特定のポートを使用して、デバッグに読み込まれるすべてのプログラムは、このインターフェイスを使用して追跡されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

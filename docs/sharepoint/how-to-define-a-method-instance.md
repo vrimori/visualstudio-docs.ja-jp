@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9316eaa48b11342891584e448f8bb67bdce6f682
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 61338f61bf9fad301a62e7790ef5dc23b66a094d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-a-method-instance"></a>方法: メソッド インスタンスを定義する
   モデルでは、すべてのメソッドの少なくとも 1 つのメソッドのインスタンスを定義する必要があります。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  **プロパティ**ウィンドウ、メソッドのインスタンスのプロパティを設定します。 各プロパティの詳細については、次を参照してください。 [MethodInstance](http://go.microsoft.com/fwlink/?LinkID=169282)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   
  [方法: エンティティをモデルに追加します。](../sharepoint/how-to-add-an-entity-to-a-model.md)   
  [方法: メソッドにパラメーターを追加](../sharepoint/how-to-add-a-parameter-to-a-method.md)   

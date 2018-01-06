@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3a60ac9de727e8542df7455ee331737403f6bef3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f60cf3fc8b4db7d33523e4583ab3da4f4596b1af
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registering-a-project-type"></a>プロジェクトの種類を登録します。
 新しいプロジェクトの種類を作成するときに、有効にするレジストリ エントリを作成する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を認識し、プロジェクトの種類を使用します。 通常、これらのレジストリ エントリは、レジストリ スクリプト (.rgs) ファイルを使用して作成します。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/31/2017
    @="devenv.exe \"%1\""  
 ```  
   
-|名前|型|データ|説明|  
+|name|型|データ|説明|  
 |----------|----------|----------|-----------------|  
 |`@`|REG_SZ|`FigPrjFile`|プロジェクトの名前と説明を拡張子 .figp を持つファイルを入力します。|  
 |`Content Type`|REG_SZ|`Text/plain`|プロジェクト ファイルのコンテンツ タイプ。|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 10/31/2017
    "FigProjectItemsEvents"="Returns the FigProjectItemsEvents Object"  
 ```  
   
-|名前|型|データ|説明|  
+|name|型|データ|説明|  
 |----------|----------|----------|-----------------|  
 |`@`(既定値)|REG_SZ|`FigPrj Project VSPackage`|ローカライズ可能な名前では、VSPackage (プロジェクトの種類) を登録します。|  
 |`InprocServer32`|REG_SZ|`%MODULE%`|プロジェクトの種類の DLL のパス。 IDE は、この DLL を読み込み、VSPackage CLSID`DllGetClassObject`を取得する<xref:Microsoft.VisualStudio.OLE.Interop.IClassFactory>構築するために、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>オブジェクト。|  
@@ -133,7 +134,7 @@ ms.lasthandoff: 10/31/2017
    "SortPriority"=dword:00000064  
 ```  
   
-|名前|型|データ|説明|  
+|name|型|データ|説明|  
 |----------|----------|----------|-----------------|  
 |`@`|REG_SZ|`FigPrj Project`|この種類のプロジェクトの既定の名前。|  
 |`DisplayName`|REG_SZ|`#%IDS_PROJECT_TYPE%`|パッケージ サテライト DLL から取得する名前のリソース ID が登録されています。|  
@@ -173,7 +174,7 @@ ms.lasthandoff: 10/31/2017
    "NewProjectDialogOnly"=dword:00000000  
 ```  
   
-|名前|型|データ|説明|  
+|name|型|データ|説明|  
 |----------|----------|----------|-----------------|  
 |`@`|REG_SZ|`#%IDS_NEWPROJ_ TEMPLATES_ENTRY%`|新しいプロジェクト テンプレートのリソース ID です。|  
 |`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|既定の登録済みのプロジェクトの種類のプロジェクトのパス。|  
@@ -194,7 +195,7 @@ ms.lasthandoff: 10/31/2017
    "SortPriority"=dword:00000064  
 ```  
   
-|名前|型|データ|説明|  
+|name|型|データ|説明|  
 |----------|----------|----------|-----------------|  
 |`@`|REG_SZ|なし|次のエントリはその他のファイル プロジェクト項目であることを示します。 既定値です。|  
 |`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|新しい項目の追加のテンプレート ファイルのリソース ID 値です。|  
@@ -223,7 +224,7 @@ ms.lasthandoff: 10/31/2017
   
  最後のフィールドは、CTMENU のリソースのバージョン番号を識別します。 バージョン番号を変更することで、メニューをもう一度マージできます。  
   
-|名前|型|データ|説明|  
+|name|型|データ|説明|  
 |----------|----------|----------|-----------------|  
 |CLSID_Package %|REG_SZ|`,1000,1`|メニューの情報を取得するリソース。|  
   
@@ -237,7 +238,7 @@ ms.lasthandoff: 10/31/2017
    "NewProjectDialogOnly"=dword:00000000  
 ```  
   
-|名前|型|データ|説明|  
+|name|型|データ|説明|  
 |----------|----------|----------|-----------------|  
 |`@`|REG_SZ|`#%IDS_NEWPROJ_TEMPLATES_ENTRY%`|図のプロジェクトの新しいプロジェクト テンプレートのリソース ID 値です。|  
 |`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|新しいプロジェクト ディレクトリの既定のパス。 このディレクトリ内の項目が表示されます、**新しいプロジェクト ウィザード** ダイアログ ボックス。|  
@@ -252,7 +253,7 @@ ms.lasthandoff: 10/31/2017
    "UseInterface"=dword:00000001  
 ```  
   
-|名前|型|データ|説明|  
+|name|型|データ|説明|  
 |----------|----------|----------|-----------------|  
 |`Package`|REG_SZ|`%CLSID_Package%`|登録済みの VSPackage のクラス ID。|  
 |`UseInterface`|REG_DWORD|`1`|1 は、UI がこのプロジェクトとの対話に使用されることを示します。 0 は、UI インターフェイスがないことを示します。|  
@@ -267,7 +268,7 @@ ms.lasthandoff: 10/31/2017
   
  かどうか、PROJECT_TYPE を追加することを意味する前に指定した ProductDir ディレクトリにファイルを .vsz 環境検索の .vsz ファイル EF エントリを = です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チェックリスト: 新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)   
  [プロジェクト モデルの要素](../../extensibility/internals/elements-of-a-project-model.md)   
  [プロジェクト ファクトリを使用したプロジェクト インスタンスの作成](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)

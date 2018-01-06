@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 39d3871fcfbd3702e2ad198f2061be41dc51ac18
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5989a2c03c5a6e3f829c0183c797204e3311f5d2
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="function-debug-interface-access-sdk"></a>関数 (Debug Interface Access SDK)
 各関数は、によって識別される、`SymTagFunction`シンボル。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
 |[IDiaSymbol::get_hasSetJump](../../debugger/debug-interface-access/idiasymbol-get-hassetjump.md)|`BOOL`|`TRUE`関数が含まれている場合、 [setjmp](/cpp/c-runtime-library/reference/setjmp) (DIA SDK バージョン 8.0 でのみまたはそれ以降) を呼び出します。|  
 |[IDiaSymbol::get_interruptReturn](../../debugger/debug-interface-access/idiasymbol-get-interruptreturn.md)|`BOOL`|`TRUE`場合は、関数には、割り込み (DIA SDK バージョン 8.0 でのみまたはそれ以降) の戻り値があります。|  
 |[IDiaSymbol::get_intro](../../debugger/debug-interface-access/idiasymbol-get-intro.md)|`BOOL`|`TRUE`場合は、関数は、仮想の概要です。|  
-|[IDiaSymbol::get_InlSpec](../../debugger/debug-interface-access/idiasymbol-get-inlspec.md)|`BOOL`|`TRUE`関数は、のいずれかでマークされている場合、 [inline、_ _inline、 \__forceinline](/cpp/cpp/inline-functions-cpp.md)属性。|  
+|[IDiaSymbol::get_InlSpec](../../debugger/debug-interface-access/idiasymbol-get-inlspec.md)|`BOOL`|`TRUE`関数は、のいずれかでマークされている場合、 [inline、_ _inline、 \__forceinline](/cpp/cpp/inline-functions-cpp)属性。|  
 |[IDiaSymbol::get_isNaked](../../debugger/debug-interface-access/idiasymbol-get-isnaked.md)|`BOOL`|`TRUE`関数が付いている場合、 [naked](/cpp/cpp/naked-cpp)属性 (DIA SDK バージョン 8.0 でのみまたはそれ以降)。|  
 |[IDiaSymbol::get_isStatic](../../debugger/debug-interface-access/idiasymbol-get-isstatic.md)|`BOOL`|`TRUE`終了した場合は静的 (DIA SDK バージョン 8.0 でのみまたはそれ以降です)。|  
 |[IDiaSymbol::get_length](../../debugger/debug-interface-access/idiasymbol-get-length.md)|`ULONGLONG`|関数コード、位置からのバイト数。|  
@@ -74,7 +75,7 @@ ms.lasthandoff: 10/31/2017
 |[IDiaSymbol::get_virtualBaseOffset](../../debugger/debug-interface-access/idiasymbol-get-virtualbaseoffset.md)|`DWORD`|場合、仮想関数テーブル内のオフセット、仮想関数。|  
 |[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|`TRUE`場合は、関数は、volatile としてマークされます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CV_access_e 列挙型](../../debugger/debug-interface-access/cv-access-e.md)   
  [シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)   
  [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)   

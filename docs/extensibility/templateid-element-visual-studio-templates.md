@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5907a6953ae58c3cca042ce7aa975eec9f4563f1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 192fd3725271e5cf4f68d0e502ea9207b7e89ebb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="templateid-element-visual-studio-templates"></a>TemplateID 要素 (Visual Studio テンプレート)
 別の項目テンプレートのグループに分類される項目テンプレートの識別子を指定、 [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)要素。  
@@ -60,6 +61,6 @@ ms.lasthandoff: 10/31/2017
   
  値、`TemplateID`要素は、プロジェクト システム登録と共に使用 (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\11.0\Projects\\) に表示されるテンプレートをフィルター、**新しい項目の追加**ダイアログ ボックス。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

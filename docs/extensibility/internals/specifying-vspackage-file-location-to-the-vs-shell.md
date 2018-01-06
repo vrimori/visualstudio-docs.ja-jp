@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b987d5e88bcbcf02bfd80ddf5c3ed0d67a149b53
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 35bd935683f8ace47536389ebc65f34311e9fcfd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-vspackage-file-location-to-the-vs-shell"></a>VS Shell VSPackage のファイルの場所を指定します。
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]アセンブリを VSPackage を読み込む DLL を検索できる必要があります。 特定できる、さまざまな方法で次の表で説明します。  

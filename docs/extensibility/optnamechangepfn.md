@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 666174c4f0f54679907bd239a81c5c369dc09a3d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2d067d5dd150dd026a2bd29a8933e8d9f72222b0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optnamechangepfn"></a>OPTNAMECHANGEPFN
 これへの呼び出しで指定されたコールバック関数、 [SccSetOption](../extensibility/sccsetoption-function.md) (オプションを使用して`SCC_OPT_NAMECHANGEPFN`) によるソース管理プラグインを IDE に戻る名の変更を通信するために使用されます。  
@@ -51,6 +52,6 @@ typedef void (*OPTNAMECHANGEPFN)(
   
  IDE がこのコールバックをサポートしていない場合それを呼び出さない、 [SccSetOption](../extensibility/sccsetoption-function.md)を指定します。 かどうか、プラグインによってサポートされないこのコールバックが返されます`SCC_E_OPNOTSUPPORTED`から、 `SccSetOption` IDE がコールバックを設定しようとしたときに機能します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDE によって実装されているコールバック関数](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [SccSetOption](../extensibility/sccsetoption-function.md)

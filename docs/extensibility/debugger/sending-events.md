@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bf4c3b0f494a5825820b8f794ccaf5dc727786e3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2bfdefc3202a026516edb3f9221e0626e1a83b4b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sending-events"></a>イベントの送信
 デバッガーとデバッグ エンジン (DE) 間の通信メカニズムは DCOM に基づいてイベント モデルです。 イベントは、COM オブジェクトとして送信され、各イベントには、次を指定するパラメーター。  

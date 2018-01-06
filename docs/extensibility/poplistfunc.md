@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 281b18d1e4e802646635cfe354355762014ad40e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: dc15af65c6541df5ef77a3bdc85ee0e59fa20991
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="poplistfunc"></a>POPLISTFUNC
 このコールバックに用意されて、 [SccPopulateList](../extensibility/sccpopulatelist-function.md) IDE によってファイルまたはディレクトリの一覧を更新する、ソース管理プラグインによって使用されます (に指定されている、`SccPopulateList`関数)。  
@@ -52,7 +53,7 @@ typedef BOOL (*POPLISTFUNC) (
   
 ## <a name="return-value"></a>戻り値  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`TRUE`|プラグインを続行できますこの関数を呼び出します。|  
 |`FALSE`|(メモリ不足) などの IDE 側で問題が発生しました。 操作は、プラグインの場合に中断する必要があります。|  
@@ -63,7 +64,7 @@ typedef BOOL (*POPLISTFUNC) (
 > [!NOTE]
 >  `SCC_CAP_POPULATELIST`機能ビットは Visual Studio に必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDE によって実装されているコールバック関数](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)   
  [SccPopulateList](../extensibility/sccpopulatelist-function.md)   

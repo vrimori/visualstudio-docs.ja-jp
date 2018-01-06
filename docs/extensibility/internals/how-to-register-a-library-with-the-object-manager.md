@@ -18,11 +18,12 @@ caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6782e1cb84f4fbbe63a0e69a5c684d44ec7ccd21
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4ecb20a39657fd9a1e668321654dd2a293807adf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-register-a-library-with-the-object-manager"></a>方法: オブジェクト マネージャーにライブラリを登録
 シンボル参照などのツール、**クラス ビュー**、**オブジェクト ブラウザー**、**呼び出しブラウザー**と**シンボルの検索結果**、表示します。または外部コンポーネントで、プロジェクト内の記号。 シンボルには、名前空間、クラス、インターフェイス、メソッド、およびその他の言語要素が含まれます。 ライブラリには、これらのシンボルを追跡しには公開、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]オブジェクト マネージャーでデータ ツールは、メンバーを追加します。  
@@ -167,7 +168,7 @@ ms.lasthandoff: 10/31/2017
   
     ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レガシ言語サービスの機能拡張](../../extensibility/internals/legacy-language-service-extensibility.md)   
  [シンボル参照のツールのサポート](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
  [方法: ライブラリによって提供されるシンボルのリストをオブジェクト マネージャーに公開する](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)

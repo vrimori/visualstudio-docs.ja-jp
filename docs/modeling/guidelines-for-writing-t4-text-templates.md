@@ -11,11 +11,12 @@ caps.latest.revision: "9"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 6baa3086d1a81ce433a077ab1ed0dff4cb152308
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 1cbc00fde74aa8f3592d4f50b31005e951b14962
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>T4 テキスト テンプレートの記述に関するガイドライン
 これらの一般的なガイドラインは、プログラム コードまたはその他のアプリケーションのリソースを生成している場合に役立つ可能性があります[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 ルール問題を解決できません。  
@@ -153,6 +154,6 @@ Team Members:
   
  ドメイン固有言語 (DSL) として、ダイアグラムの種類を設計することもできます。 コードは、UML および Dsl の両方から生成できます。 詳細については、次を参照してください。[分析およびモデリング アーキテクチャ](../modeling/analyze-and-model-your-architecture.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)   
  [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)

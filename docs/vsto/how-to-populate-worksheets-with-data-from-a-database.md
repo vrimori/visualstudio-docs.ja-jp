@@ -19,11 +19,12 @@ caps.latest.revision: "39"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3b7cfb842a0372d4410a0794ff8ade901af713b1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 6efeccfdaa6b3377869fb20f9c66613960529daf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-populate-worksheets-with-data-from-a-database"></a>方法 : データベースのデータをワークシートに読み込む
   Windows フォーム プロジェクトでのデータにアクセスすることと同様にドキュメント レベルの Office プロジェクトでのデータにアクセスすることができます。 同じツールとコードを使用してソリューションにデータを取り込むことができ、Windows フォーム コントロールを使用してデータを表示できます。 さらに、利用では、ホスト コントロールは、イベントやデータ バインディング機能が強化された Microsoft Office excel のネイティブのオブジェクトと呼ばれるようです。 詳細については、「 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)」を参照してください。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 10/31/2017
   
  型指定されたデータセットと、データベースに更新を送信する方法については、次を参照してください。[する方法: ホスト コントロールからのデータでデータ ソースを更新](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションでのコントロールへのデータをバインディング](../vsto/binding-data-to-controls-in-office-solutions.md)   
  [新しいデータ ソースを追加します。](/visualstudio/data-tools/add-new-data-sources)   
  [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   

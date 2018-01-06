@@ -20,11 +20,12 @@ caps.latest.revision: "60"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1033f33835dfdeefbb4791e356ca50a577b789ab
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 05a0f2a997791564a8358287ff1d632c3ff7bffe
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1"></a>チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 (パート 1)
   SharePoint プロジェクトは、1 つ以上の SharePoint プロジェクト項目のコンテナーです。 独自の SharePoint プロジェクト項目の種類を作成し、それらをプロジェクト テンプレートと関連付けることで、Visual Studio で SharePoint プロジェクト システムを拡張できます。 このチュートリアルでは、サイト内の列を作成するためのプロジェクト項目の種類を定義し、サイト内の列プロジェクト項目が含まれる新しいプロジェクトの作成に使用できるプロジェクト テンプレートを作成します。  
@@ -723,7 +724,7 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]  
     >  **サイト URL** Site Column プロジェクト テンプレートは、プロジェクトの作成時に、この値を収集するため、ウィザードに提供されないために、プロパティは既定では空です。 この値を開発者を要求し、新しいプロジェクトでこのプロパティを構成するウィザードを追加する方法については、次を参照してください。[チュートリアル: プロジェクト テンプレート、第 2 部に基づくサイト列プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)です。  
   
-3.  選択、 **f5 キーを押して**キー。  
+3.  **F5** キーを押します。  
   
      サイト内の列がパッケージ化されで指定されている SharePoint サイトに配置された、**サイト URL**プロジェクトのプロパティです。 Web ブラウザーには、このサイトの既定のページが表示されます。  
   
@@ -758,7 +759,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルを完了すると、プロジェクト テンプレートにウィザードを追加できるようになります。 ユーザーが Site Column プロジェクトを作成するときに、ウィザードが、デバッグに使用するサイトの URL と、新しいソリューションがサンドボックス ソリューションかどうかをユーザーに尋ね、この情報を使用して新しいプロジェクトを構成します。 また、ウィザードは、列に関する情報 (基本型や、サイト内の列ギャラリーで列が表示されるグループなど) を収集し、この情報を新しいプロジェクトの Elements.xml ファイルに追加します。 詳細については、次を参照してください。[チュートリアル: プロジェクト テンプレート、第 2 部に基づくサイト列プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: プロジェクト テンプレート、第 2 部に基づくサイト列プロジェクト項目の作成](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)   
  [カスタム SharePoint プロジェクト項目の種類を定義します。](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [SharePoint プロジェクト項目の項目テンプレートとプロジェクト テンプレートを作成します。](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   

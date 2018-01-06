@@ -24,11 +24,12 @@ caps.latest.revision: "33"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: ce4a203fd0843fd6b15bfbf85019e85032defbd6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 43901987c9f6f37e7082200f675549021fb63f83
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-diagrams-reference"></a>依存関係図: リファレンス
 Visual Studio で、使用することができます、*依存関係ダイアグラム*をシステムの高レベルで論理アーキテクチャを視覚化します。 依存関係ダイアグラム、システム内と呼ばれる論理的、抽象的なグループに物理的な成果物を整理する*レイヤー*です。 これらのレイヤーは成果物が実行する主要タスクまたはシステムの主要コンポーネントについて説明します。 各レイヤーには、より詳細なタスクを示す入れ子になったレイヤーを含めることもできます。  
@@ -93,5 +94,5 @@ Visual Studio で、使用することができます、*依存関係ダイア�
     |**検証をサポートしています**|場合**True**、レイヤー検証プロセスでは、プロジェクトがこの要素の間の依存関係に準拠していることを確認できます。<br /><br /> 場合**False**、次のリンクは、レイヤー検証プロセスに関与しません。<br /><br /> 詳細については、次を参照してください。[依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)です。|  
     |**識別子**|リンクされた成果物への参照|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アプリのモデルを生成する](../modeling/create-models-for-your-app.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ae4d4e371a79178be741e45662f4a8db8680b5ab
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e18b51c20d2eaf324782574bf007ce32fdc6df2e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ieedatastoragegetdata"></a>IEEDataStorage::GetData
 オブジェクトから指定したバイト数を取得します。  
@@ -57,6 +58,6 @@ int GetData(
 ## <a name="remarks"></a>コメント  
  取得プロセス内のバイトをスキップする方法がないために、ローカルの配列にすべてのデータ バイトを取得するは、このメソッドを使用してください。 この場合は、パラメーター`dataSize`値によって返される、 [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md)メソッドです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)   
  [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md)

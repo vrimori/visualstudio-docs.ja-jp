@@ -15,11 +15,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 24a2937b37aa339f85e197f6ff2bb49cbb0ce86f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: de8de116a9853391249a7a37a35bd54d0a6946d2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vsix-project-template"></a>VSIX プロジェクト テンプレート
 VSIX プロジェクトは、1 つまたは複数の Visual Studio 拡張機能をラップする VSIX プロジェクト テンプレートを使用して上でパッケージを発行、 [Visual Studio ギャラリー](http://go.microsoft.com/fwlink/?LinkID=123847) Web サイトです。  
@@ -83,6 +84,6 @@ VSIX プロジェクトは、1 つまたは複数の Visual Studio 拡張機能�
   
      [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]VSIX マニフェスト ファイル、[Content_Types] .xml ファイル、およびそのすべてのプロジェクトに追加した拡張機能の資産を含む .vsix ファイルを構築します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [VSIX 拡張機能スキーマ 2.0 リファレンス](../extensibility/vsix-extension-schema-2-0-reference.md)   
  [Visual Studio 拡張機能の検索と使用](../ide/finding-and-using-visual-studio-extensions.md)

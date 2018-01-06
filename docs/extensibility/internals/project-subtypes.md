@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 84d2700e1dfb5d66fb2df6376db9e0ce5352ad4e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 21d7f013989607f7f5416a57829bc9b2b29b61d2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-subtypes"></a>プロジェクトのサブタイプ
 プロジェクトのサブタイプでは、カスタマイズしたりのプロジェクト システムの動作を flavor[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 カスタマイズには、プロジェクト ファイルを追加または内の項目をフィルター処理で追加のデータを保存、**新しい項目の追加**ダイアログ ボックスで、アセンブリのデバッグし、配置方法を制御して、プロジェクトの拡張**プロパティページ** ダイアログ ボックス。 Vspackage では、COM の集計を使用してプロジェクトのサブタイプを実装します。  

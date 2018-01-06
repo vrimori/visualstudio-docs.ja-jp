@@ -13,11 +13,12 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b7edb1428d3dedbbe6341427e28964559d9750b1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 91b7ff9ea0b5caae46715894016469fadecaa098
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="feature-tour-of-the-visual-studio-debugger"></a>Visual Studio デバッガーの機能のツアー
 
@@ -193,6 +194,26 @@ Shift キーを押しながら F11 キーを押します (または**デバッ�
 
 展開して、**例外設定**このツアーを何も変更する必要はありませんが、この種類の例外を処理する方法の他のオプションを表示するノードです。
 
+## <a name="debug-live-aspnet-apps-in-azure-app-service"></a>Azure App Service でのライブの ASP.NET アプリをデバッグします。
+
+**スナップショット デバッガー**興味のあるコードを実行するときに、実稼働環境でアプリのスナップショットを取得します。 スナップショットを取得するようにデバッガーに指示するには、コードでスナップショットとログポイントを設定します。 デバッガーでは、実稼働アプリケーションのトラフィックに影響を与えることなく、問題を正確に確認できます。 スナップショット デバッガーは、実稼働環境で発生する問題の解決にかかる時間を大幅に短縮するのに役立ちます。
+
+![スナップショットのデバッガーを起動して](../debugger/media/snapshot-launch.png "スナップショット デバッガーの起動")
+
+スナップショットのコレクションは、Azure App Service で実行されている ASP.NET アプリケーションで使用できます。 .NET Framework 4.6.1 での ASP.NET アプリケーションが実行されている必要がありますまたはそれ以降、および ASP.NET Core アプリケーションは、.NET Core 2.0 または最新版を Windows で実行されている必要があります。
+
+詳細については、次を参照してください。[スナップショット デバッガーを使用してライブの ASP.NET アプリのデバッグ](../debugger/debug-live-azure-applications.md)です。
+
+## <a name="view-snapshots-with-intellitrace-step-back-visual-studio-enterprise"></a>IntelliTrace ステップ ライトバック (Visual Studio Enterprise) スナップショットの表示
+
+**IntelliTrace ステップ ライトバック**手順イベント、アプリケーションのすべてのブレークポイントとデバッガーのスナップショットを自動的に取得します。 記録されたスナップショットにより、前のブレークポイントまたはステップに戻り、過去の時点でのアプリケーションの状態を確認できるようになります。 IntelliTrace ステップ バックでは、以前のアプリケーションの状態を確認したいが、デバッグの再開や必要なアプリ状態の再作成は必要でない場合に時間を節約できます。
+
+スナップショット間を移動して表示するには、デバッグ ツールバーの **[前に戻る]** ボタンと **[次へ進む]** ボタンを使用します。 これらのボタンを使用して、**[診断ツール]** ウィンドウの **[イベント]** タブに表示されるイベント間を移動します。
+
+![ステップ後退と転送ボタン](../debugger/media/intellitrace-step-back-icons-description.png  "旧バージョンとステップと転送ボタン")  
+
+詳細については、「[IntelliTrace ステップ バックを使用してスナップショットを表示する](../debugger/how-to-use-intellitrace-step-back.md)」のページ参照してください。
+
 ## <a name="more-features-to-look-at"></a>多くの機能を見る
 
 -   [デバッガーのヒントとテクニック](../debugger/debugger-tips-and-tricks.md)デバッガーでは、生産性を向上させる方法について説明します。
@@ -209,5 +230,5 @@ Shift キーを押しながら F11 キーを押します (または**デバッ�
 
 -   [Debug Interface Access SDK](../debugger/debug-interface-access/debug-interface-access-sdk.md) Microsoft デバッグ インターフェイス アクセス ソフトウェア開発キット (DIA SDK) について説明します。 DIA SDK は、Microsoft ポストコンパイラ ツールで生成されたプログラム データベース (.pdb) ファイルに保存されているデバッグ情報へのアクセスを提供します。  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio でのデバッグ](../debugger/index.md)

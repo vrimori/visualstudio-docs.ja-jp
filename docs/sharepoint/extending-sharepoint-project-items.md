@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8f17e43e2fe98e36939c91b37e72b185cb14d09e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: ffbacd5748ae2a5284ed628dce974b20e25bcab3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-sharepoint-project-items"></a>SharePoint プロジェクト項目の拡張
   Visual Studio で既にインストールされている SharePoint プロジェクト項目の種類に機能を追加する場合は、プロジェクト項目の拡張機能を作成します。 たとえば、組み込みの拡張機能を作成することができます**イベント レシーバー**または**リスト定義**のプロジェクトが Visual Studio で、項目またはカスタム プロジェクト項目の種類の拡張機能を作成することができます。 すべての SharePoint プロジェクト項目の種類の拡張機能を作成することもできます。  
@@ -61,14 +62,14 @@ ms.lasthandoff: 10/31/2017
 |空の要素|Microsoft.VisualStudio.SharePoint.GenericElement|  
 |リストの定義<br /><br /> コンテンツ タイプからリストの定義|Microsoft.VisualStudio.SharePoint.ListDefinition|  
 |リスト インスタンス|Microsoft.VisualStudio.SharePoint.ListInstance|  
-|モジュール|Microsoft.VisualStudio.SharePoint.Module|  
+|Module|Microsoft.VisualStudio.SharePoint.Module|  
 |シーケンシャル ワークフロー<br /><br /> ステート マシン ワークフロー|Microsoft.VisualStudio.SharePoint.Workflow|  
 |サイト定義|Microsoft.VisualStudio.SharePoint.SiteDefinition|  
 |可視 Web パーツ|Microsoft.VisualStudio.SharePoint.VisualWebPart|  
 |Web パーツ|Microsoft.VisualStudio.SharePoint.WebPart|  
 |ワークフロー関連付けフォーム|Microsoft.VisualStudio.SharePoint.WorkflowAssociation|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: SharePoint プロジェクト項目の拡張機能を作成します。](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)   
  [方法: SharePoint プロジェクト項目の拡張機能にショートカット メニュー項目を追加](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-sharepoint-project-item-extension.md)   
  [方法: SharePoint プロジェクト項目の拡張機能にプロパティを追加](../sharepoint/how-to-add-a-property-to-a-sharepoint-project-item-extension.md)   

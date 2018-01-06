@@ -21,11 +21,12 @@ caps.latest.revision: "36"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ceecad94d3f9bb910f47484e5deab0f20876a0d2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: cb0ccb9369c3430cf04e7e7c6b62335721e8005f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="document-protection-in-document-level-solutions"></a>ドキュメント レベルのソリューションにおけるドキュメントの保護
   ドキュメント レベルのプロジェクトでは、Microsoft Office Word および Microsoft Office Excel の保護機能を使用することができます。 これらの機能は、ドキュメントの保護された部分を変更する権限のないユーザーをブロックします。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="setting-the-password"></a>パスワードの設定  
  Visual Studio は自動的に保護を有効しますが、既定ではパスワードが用意されていません。 パスワードを保持する文書を保護する場合は、ソリューションを配置する前に追加する必要があります。 承認されたユーザーがドキュメントの保護を解除するパスワードを追加することができます。パスワードのない保護を簡単に削除することはできません。 パスワードの設定の詳細については、特定の Office アプリケーションのヘルプを参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: プログラムによって文書および文書の一部を保護します。](../vsto/how-to-programmatically-protect-documents-and-parts-of-documents.md)   
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
  [Information Rights Management とマネージ コード拡張機能の概要](../vsto/information-rights-management-and-managed-code-extensions-overview.md)   

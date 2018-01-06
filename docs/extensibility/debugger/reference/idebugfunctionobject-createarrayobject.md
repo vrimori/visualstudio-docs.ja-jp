@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f5a567b906be7e295a8ea1c32f9fdbe19320bd5f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5dfe24252ce2ce51ff86fa680d94964b86d09365
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugfunctionobjectcreatearrayobject"></a>IDebugFunctionObject::CreateArrayObject
 配列オブジェクトを作成します。 この配列では、いずれかのプリミティブ型を含むしたり、オブジェクトのインスタンスの値することができます。  
@@ -72,5 +73,5 @@ int CreateArrayObject(
 ## <a name="remarks"></a>コメント  
  によって表される関数を配列パラメーターを表すオブジェクトを作成するには、このメソッドを呼び出す、 [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)インターフェイスです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

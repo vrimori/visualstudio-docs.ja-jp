@@ -18,11 +18,12 @@ caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 55783b604e929d2e5d4cdc613befa2fbec42aec4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0fdab6cb0b259fe169a9ebd43c92158a5ce20d4b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="test-guide-for-source-control-plug-ins"></a>テスト ソース管理プラグインのガイド
 このセクションでは、ソース管理のプラグインをテストするためのガイダンスを提供[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 広範な概要、最も一般的なテスト領域と同様の問題がある可能性があるより複雑な領域の一部が表示されます。 この概要はテスト_ケースの網羅するものではありません。  
@@ -108,5 +109,5 @@ ms.lasthandoff: 10/31/2017
   
     -   Case 8b: ソリューションに基づく変更  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン](../../extensibility/source-control-plug-ins.md)

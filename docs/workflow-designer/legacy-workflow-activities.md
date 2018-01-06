@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 8a5c35fb036c1d9a94bd42c5ceabe17ae65e7b7c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 756fa86cf892120b0062e2816f146425ac1b4fa3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="legacy-workflow-activities"></a>従来のワークフロー アクティビティ
 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] に含まれる既定のアクティビティ セットは、制御フロー、条件、イベント処理、状態管理、アプリケーションやサービスとの通信などの機能を提供します。 ワークフローを設計するとき、[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]に付属しているシステム標準のアクティビティを使用することも、独自のカスタム アクティビティを作成することもできます。  
@@ -87,7 +88,7 @@ ms.lasthandoff: 10/27/2017
  [方法: WCF コントラクト操作 (レガシ) を呼び出す](../workflow-designer/how-to-invoke-a-windows-communication-foundation-contract-operation-legacy.md)  
  [!INCLUDE[indigo2](../workflow-designer/includes/indigo2_md.md)] コントラクト操作を呼び出す手順を示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Windows Workflow Foundation アクティビティ](http://go.microsoft.com/fwlink?LinkID=65005)   
  [ワークフローの開発](http://go.microsoft.com/fwlink?LinkID=65010)   
  [ワークフロー活動の開発](http://go.microsoft.com/fwlink?LinkID=65023)

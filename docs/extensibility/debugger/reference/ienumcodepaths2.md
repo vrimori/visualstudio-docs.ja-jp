@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a9c27084032e0492b1110b1a085ded4f8e556433
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f3da3fbbc8b7ad7dced8a9767b26859cc1a0de1d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumcodepaths2"></a>IEnumCodePaths2
 このインターフェイスは、コード パスの一覧を表します。  
@@ -49,12 +50,12 @@ IEnumCodePaths2 : IUnknown
 ## <a name="remarks"></a>コメント  
  コード パスでは、プログラムでの分岐ポイントまたは関数の呼び出しを表します。 コード パスの一覧では、使用する、コードの実行に使用されるパスを表します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)

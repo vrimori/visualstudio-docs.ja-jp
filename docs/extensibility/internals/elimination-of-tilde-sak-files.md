@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e487acefcb06c4fa0cd2070bfcf20bd065d500ce
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8d72a42c89cc775b9312d301a052ee102d977728
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="elimination-of-sak-files"></a>削除する ~ SAK ファイル
 ソース管理プラグイン API 1.2 では、~ SAK ファイルが置き換えられて機能フラグと、ソース管理プラグインは、MSSCCPRJ ファイルと共有チェック アウトをサポートするかどうかを検出する新しい関数。  
@@ -53,5 +54,5 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  このレジストリ キーが dword:00000000 に設定されている場合は、存在しない、されているキーと等価である Visual Studio はまだ一時ファイルを作成しようとします。 ただし、レジストリ キーが dword:00000001 に設定されている場合 Visual Studio はしよう一時ファイルを作成します。 代わりに、ソース管理プラグインが、MSSCCPRJ をサポートしていないことを想定します。SCC ファイル共有チェック アウトをサポートしていません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API バージョン 1.2 の新機能](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

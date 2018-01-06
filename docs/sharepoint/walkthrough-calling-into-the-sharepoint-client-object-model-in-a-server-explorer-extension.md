@@ -18,11 +18,12 @@ caps.latest.revision: "100"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 489a11c215fe590b85e9dfaf5cbd815fdc43acb3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 4b7cc5797643309e7929f455bfcf94db85f90b0b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension"></a>チュートリアル: サーバー エクスプローラーの拡張機能から SharePoint クライアント オブジェクト モデルを呼び出す
   このチュートリアルのための拡張機能から SharePoint クライアント オブジェクト モデルを呼び出す方法、 **SharePoint 接続**内のノード**サーバー エクスプ ローラー**です。 SharePoint クライアント オブジェクト モデルを使用する方法の詳細については、次を参照してください。[の SharePoint オブジェクト モデルを呼び出す](../sharepoint/calling-into-the-sharepoint-object-models.md)です。  
@@ -283,7 +284,7 @@ ms.lasthandoff: 10/31/2017
   
 5.  Visual Studio (実験用インスタンスおよび WebPartNode ソリューションが開いている Visual Studio のインスタンス) の両方のインスタンスを閉じます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint オブジェクト モデルの呼び出し](../sharepoint/calling-into-the-sharepoint-object-models.md)   
  [サーバー エクスプ ローラーで SharePoint 接続 ノードを拡張します。](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
  [チュートリアル: サーバー エクスプ ローラー Web パーツ表示するための拡張](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)   

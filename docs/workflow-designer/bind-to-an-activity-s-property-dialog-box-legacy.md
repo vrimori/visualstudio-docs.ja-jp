@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ffb172b551018ae7352edb7dd9fed44824a794ce
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: ed372e54e0e40d06dbd1ecf818f507c1a425ad03
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bind-to-an-activity39s-property-dialog-box-legacy"></a>バインドは、アクティビティ &#39; s プロパティ ダイアログ ボックス (レガシ)
 このトピックについて説明する方法を使用して、**アクティビティのプロパティにバインド** ダイアログ ボックスでは、従来の[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]します。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/27/2017
 |**既存のメンバーへのバインドします。**|ツリー表示ペインで、バインド先となるメンバーを選択します。 ツリー表示の下にあるペインには、そのメンバーがバインド先として有効な型であるかどうかを示すメッセージが表示されます。 をクリックして**OK**選択されている有効なメンバーにバインドします。|  
 |**新しいメンバーへのバインドします。**|バインド先となる新しいメンバー フィールドまたはプロパティを作成します。 入力、**新しいメンバー名**です。 選択して、依存関係プロパティまたはパブリック フィールドを作成するかどうかを選択して**フィールドの作成**または**プロパティの作成**です。 をクリックして**OK**新しいメンバーを作成します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アクティビティのプロパティを使用します。](http://go.microsoft.com/fwlink?LinkID=65013)   
  [依存関係プロパティの使用](http://go.microsoft.com/fwlink?LinkID=65007)   
  [従来の Designer for Windows Workflow Foundation UI ヘルプ](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)

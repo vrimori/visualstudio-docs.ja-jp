@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 150e27c4b8df06784848829bfe713773cf9d48a0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f611284584b091fca390f660b3e840f6cebe048c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="threads"></a>スレッド
 デバッガーのアーキテクチャの観点から、**スレッド**:  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/31/2017
   
 -   によって表される、 [IDebugThread2](../../extensibility/debugger/reference/idebugthread2.md)インターフェイス、通常、デバッグ エンジン (DE) またはプログラムの実行の結果としての仮想マシンによって作成します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プログラム](../../extensibility/debugger/programs.md)   
  [スタック フレーム](../../extensibility/debugger/stack-frames.md)   
  [デバッグ エンジン](../../extensibility/debugger/debug-engine.md)   

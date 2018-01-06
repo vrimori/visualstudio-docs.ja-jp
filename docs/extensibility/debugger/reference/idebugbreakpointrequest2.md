@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e04b0a9207df55ced122ba5c0e5c9d9ef3b68d28
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f458d8efcf1a4b466cc48dfd9dca10fa356a6304
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugbreakpointrequest2"></a>IDebugBreakpointRequest2
 このインターフェイスは、作成し、任意の種類のブレークポイントをバインドするための情報を表します。  
@@ -46,14 +47,14 @@ IDebugBreakpointRequest2 : IUnknown
 ## <a name="remarks"></a>コメント  
  プログラムの後にデバッグ対象が読み込まれてへの呼び出し[バインド](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)プログラムで要求された場所に保留中のブレークポイントをバインドします。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md)   
  [GetBreakpointRequest](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md)   
  [バインド](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)

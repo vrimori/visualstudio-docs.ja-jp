@@ -14,11 +14,12 @@ caps.latest.revision: "25"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: fae53e45b231292df8b7a6ae8bf4f2babc5d9e88
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: f5cb41ab9a68e567d7c6b64243c6cec017835088
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshoot-extensions-for-dependency-diagrams"></a>依存関係図の拡張機能をトラブルシューティングします。
 このトピックでは、レイヤー モデル拡張機能を作成するときに発生する可能性のある問題について説明します。  
@@ -52,5 +53,5 @@ ms.lasthandoff: 10/27/2017
   
 4.  **Source.extension.vsixmanifest** 、レイヤー検証プロジェクトの両方が追加したことを確認します、 **MEF コンポーネント**項目と**カスタム拡張機能の種類**項目**コンテンツ**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [依存関係図の拡張](../modeling/extend-layer-diagrams.md)

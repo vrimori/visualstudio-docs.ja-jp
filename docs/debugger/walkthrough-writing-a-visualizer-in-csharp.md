@@ -7,11 +7,7 @@ ms.suite:
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- CSharp
-- VB
-- FSharp
-- C++
+dev_langs: CSharp
 helpviewer_keywords:
 - visualizers, writing
 - walkthroughs [Visual Studio], visualizers
@@ -20,11 +16,12 @@ caps.latest.revision: "33"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fd63f183d42111cfb8381b5fee86debbca6cd04e
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: dotnet
+ms.openlocfilehash: 6e161b3c914d0a87a720f1217b52a571b85f5ff9
+ms.sourcegitcommit: 03a74d29a1e0584ff4808ce6c9e812b51e774905
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>チュートリアル : C# でビジュアライザーを記述する #
 このチュートリアルでは、C# を使用して簡単なビジュアライザーを作成する方法を説明します。 このチュートリアルで作成するビジュアライザーは、Windows フォーム メッセージ ボックスを使用して文字列の内容を表示します。 この簡単な文字列ビジュアライザーは、それ自体ではそれほど役に立ちませんが、他のデータ型を表示する、より役に立つビジュアライザーを作成するために必要な基本手順として使用できます。  
@@ -48,7 +45,7 @@ ms.lasthandoff: 11/11/2017
   
 4.  **名前**ボックスに、適切な (MyFirstVisualizer など)、クラス ライブラリの名前を入力します。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
  クラス ライブラリを作成したら、Microsoft.VisualStudio.DebuggerVisualizers.DLL への参照を追加し、この DLL で定義されているクラスを使用できるようにします。 ただし、参照を追加する前に、クラス名をわかりやすい名前に変更する必要があります。  
   
@@ -65,11 +62,11 @@ ms.lasthandoff: 11/11/2017
   
 4.  **参照の追加**ダイアログ ボックスの**.NET**  タブで、Microsoft.VisualStudio.DebuggerVisualizers.DLL をクリックします。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
 6.  DebuggerSide.cs の `using` ステートメントに次のステートメントを追加します。  
   
-    ```  
+    ```csharp  
     using Microsoft.VisualStudio.DebuggerVisualizers;  
     ```  
   
@@ -79,13 +76,13 @@ ms.lasthandoff: 11/11/2017
   
 1.  DebuggerSide.cs で、次のコード行に移動します。  
   
-    ```  
+    ```csharp  
     public class DebuggerSide  
     ```  
   
 2.  コードを次のように変更します。  
   
-    ```  
+    ```csharp  
     public class DebuggerSide : DialogDebuggerVisualizer  
     ```  
   
@@ -95,8 +92,8 @@ ms.lasthandoff: 11/11/2017
   
 -   `public class DebuggerSide`、次の追加**メソッド。**  
   
-    ```  
-    override protected void Show(IDialogVisualizerService windowService, IVisualizerObjectProvider objectProvider)  
+    ```csharp  
+    protected override void Show(IDialogVisualizerService windowService, IVisualizerObjectProvider objectProvider)  
     {  
     }  
     ```  
@@ -109,11 +106,11 @@ ms.lasthandoff: 11/11/2017
   
 2.  **参照の追加** ダイアログ ボックスで、 **.NET**  タブで、System.Windows.Forms.DLL をクリックします。  
   
-3.  **[OK]** をクリックします。  
+3.  **[OK]**をクリックします。  
   
 4.  DebuggerSide.cs の `using` ステートメントに次のステートメントを追加します。  
   
-    ```  
+    ```csharp  
     using System.Windows.Forms;  
     ```  
   
@@ -123,7 +120,7 @@ ms.lasthandoff: 11/11/2017
   
 1.  `Show` メソッドに次のコード行を追加します。  
   
-    ```  
+    ```csharp  
     MessageBox.Show(objectProvider.GetObject().ToString());  
     ```  
   
@@ -137,12 +134,12 @@ ms.lasthandoff: 11/11/2017
   
 1.  DebuggerSide.cs の `using` ステートメントと `namespace MyFirstVisualizer` の間に次の属性コードを追加します。  
   
-    ```  
+    ```csharp  
     [assembly:System.Diagnostics.DebuggerVisualizer(  
     typeof(MyFirstVisualizer.DebuggerSide),  
     typeof(VisualizerObjectSource),  
-    Target  = typeof(System.String),  
-    Description  = "My First Visualizer")]  
+    Target = typeof(System.String),  
+    Description = "My First Visualizer")]  
     ```  
   
 2.  **ビルド** メニューの 選択**myfirstvisualizer のビルド**です。 プロジェクトが構築されます。 ビルド エラーを修正してから次の作業に進みます。  
@@ -153,7 +150,7 @@ ms.lasthandoff: 11/11/2017
   
 1.  次のメソッドを `public DebuggerSide` クラスに追加します。  
   
-    ```  
+    ```csharp  
     public static void TestShowVisualizer(object objectToVisualize)  
     {  
        VisualizerDevelopmentHost visualizerHost = new VisualizerDevelopmentHost(objectToVisualize, typeof(DebuggerSide));  
@@ -173,7 +170,7 @@ ms.lasthandoff: 11/11/2017
   
 3.  **名前**ボックスで、コンソール アプリケーションのわかりやすい名前を入力します。`MyTestConsole`です。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
  次に、必要な参照を追加して、MyTestConsole が MyFirstVisualizer を呼び出すことができるようにします。  
   
@@ -183,13 +180,13 @@ ms.lasthandoff: 11/11/2017
   
 2.  **参照の追加**ダイアログ ボックスで、 **.NET**  タブで、Microsoft.VisualStudio.DebuggerVisualizers.DLL をクリックします。  
   
-3.  **[OK]** をクリックします。  
+3.  **[OK]**をクリックします。  
   
 4.  右クリック**MyTestConsole**選択**参照の追加**もう一度です。  
   
 5.  **参照の追加**ダイアログ ボックスで、をクリックして、**プロジェクト**タブし、MyFirstVisualizer をクリックします。  
   
-6.  **[OK]** をクリックします。  
+6.  **[OK]**をクリックします。  
   
  次に、コードを追加してテスト ハーネスを完成させます。  
   
@@ -203,13 +200,13 @@ ms.lasthandoff: 11/11/2017
   
 3.  TestConsole.cs の `using` ステートメントに次のコードを追加します。  
   
-    ```  
+    ```csharp  
     using MyFirstVisualizer;  
     ```  
   
 4.  `Main` メソッドに、次のコードを追加します。  
   
-    ```  
+    ```csharp  
     String myString = "Hello, World";  
     DebuggerSide.TestShowVisualizer(myString);  
     ```  
@@ -243,7 +240,7 @@ ms.lasthandoff: 11/11/2017
   
 4.  **名前**ボックスに、適切な MySecondVisualizer など、クラス ライブラリの名前を入力します。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
  これで、ビジュアライザー項目を追加できます。  
   
@@ -261,7 +258,7 @@ ms.lasthandoff: 11/11/2017
   
  これで作業は完了です。 SecondVisualizer.cs ファイルを参照し、テンプレートによって追加されたコードを確認します。 さらにコードを実行してみてください。 以上で基礎的な項目を習得しました。これで、より複雑で有効な独自のビジュアライザーを作成できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジュアライザーのアーキテクチャ](../debugger/visualizer-architecture.md)   
  [方法: ビジュアライザーをインストール](../debugger/how-to-install-a-visualizer.md)   
  [カスタム ビジュアライザーを作成する](../debugger/create-custom-visualizers-of-data.md)

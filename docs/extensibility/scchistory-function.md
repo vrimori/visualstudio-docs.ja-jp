@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 93c32d9eaa3549529a649472550ec8268cd0f6e5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: cf621b3050382d79fcf44df2ac5d50d9885e03d2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="scchistory-function"></a>SccHistory 関数
 この関数は、指定されたファイルの履歴を表示します。  
@@ -58,7 +59,7 @@ SCCRTN SccHistory(
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|バージョン履歴が正常に取得されました。|  
 |SCC_I_RELOADFILE|ソース管理システムが実際にはディスク上のファイルを変更 (たとえば、取得することによって、古いバージョンの)、履歴をフェッチ中にため、IDE は、このファイルを再読み込みする必要があります。|  
@@ -77,6 +78,6 @@ SCCRTN SccHistory(
 > [!NOTE]
 >  ソース管理プラグインは、配列の場合、ファイルのこの関数をサポートしていない場合、は、最初のファイルのファイル履歴のみを表示できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)

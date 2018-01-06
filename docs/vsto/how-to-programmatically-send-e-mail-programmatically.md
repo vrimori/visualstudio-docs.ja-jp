@@ -20,11 +20,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 98b0eefafa86fdaf8f7a664ac75a2f7c71a43549
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 39a0ebee37c57630649f680d14aa8fef22833225
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-send-e-mail"></a>方法: プログラムによって電子メールを送信  
   この例は、ドメイン名が設定されている連絡先に電子メール メッセージを送信**example.com**が電子メール アドレス。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  ドメイン名を検索するフィルターのコードを削除しないで**example.com**です。ソリューションが、フィルターを削除する場合は、すべての連絡先に電子メール メッセージを送信します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メール アイテムの操作](../vsto/working-with-mail-items.md)   
  [方法: プログラムによって電子メール アイテムを作成します。](../vsto/how-to-programmatically-create-an-e-mail-item.md)   
  [方法: プログラムによって Outlook の連絡先にアクセス](../vsto/how-to-programmatically-access-outlook-contacts.md)   

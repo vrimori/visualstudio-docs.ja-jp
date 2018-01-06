@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: da1b30274254c5c1dd81ad20dd64e8749672f96e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c473b3253809c09f9ba0af90f7a0fed349dedb93
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="maxframeworkversion-element-visual-studio-templates"></a>MaxFrameworkVersion 要素 (Visual Studio テンプレート)
 テンプレートで必要とされる .NET Framework の最大バージョンを指定します。 テンプレートが表示されるかどうかを判定、**テンプレート**のセクションで、**新しいプロジェクトの追加**で選択されている値に基づいて、ダイアログ ボックス、 **ターゲットフレームワークのバージョン**のボックス、**新しいプロジェクトの追加** ダイアログ ボックス。  
@@ -78,6 +79,6 @@ ms.lasthandoff: 10/31/2017
   
  この例では、テンプレートで必要とされる .NET Framework の最大バージョンによって表される`MaxFrameworkVersion`、3.5。 3.0 または 3.5 インチのいずれかを選択する場合にのみ、上記のテンプレートが表示されます、**ターゲット フレームワークのバージョン**ボックスに、**新しいプロジェクトの追加** ダイアログ ボックス。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

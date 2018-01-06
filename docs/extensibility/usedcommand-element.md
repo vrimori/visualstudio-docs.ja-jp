@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2b3974c9103a385badc56fda759ee95ef3a40a93
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 06375b45e21e0b83c62f2509d666b786479ff2b4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="usedcommand-element"></a>UsedCommand 要素
 他の .vsct ファイルで定義されているコマンドにアクセスする VSPackage を有効にします。 たとえば、VSPackage は、標準を使用して**コピー**で定義されているコマンド、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]シェル、ことができます、コマンドを追加するメニューまたはツールバー再実装しなくてもします。  
@@ -37,9 +38,9 @@ ms.lasthandoff: 10/31/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|guid|必須です。 コマンドを識別する GUID ID のペアの GUID です。|  
-|ID|必須です。 コマンドを識別する GUID ID のペアの ID。|  
-|状態|省略可能です。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
+|guid|必須。 コマンドを識別する GUID ID のペアの GUID です。|  
+|ID|必須。 コマンドを識別する GUID ID のペアの ID。|  
+|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -66,6 +67,6 @@ ms.lasthandoff: 10/31/2017
 </UsedCommands>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [UsedCommands 要素](../extensibility/usedcommands-element.md)   
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

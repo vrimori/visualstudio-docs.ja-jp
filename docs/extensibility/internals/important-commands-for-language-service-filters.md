@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4c0fa4b408c43acbf2ec87bcfaca5135c9037af7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ee6c746874e7e00643f1b840185969a6dabadfe5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="important-commands-for-language-service-filters"></a>言語サービスのフィルターの重要なコマンド
 全機能を備えた言語サービスのフィルターを作成する場合は、次のコマンドの処理を検討してください。 コマンド識別子の完全な一覧が定義されている、<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>アンマネージ列挙体のマネージ コードと Stdidcmd.h ヘッダー ファイル[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]コード。 Stdidcmd.h ファイルを検索する*Visual Studio SDK インストール パス*\VisualStudioIntegration\Common\Inc です。  
@@ -41,5 +42,5 @@ ms.lasthandoff: 10/31/2017
 |<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|通常、ユーザーは、ctrl キーを押しながら space キーを入力したときに送信します。 このコマンドは、言語サービスを呼び出すを示します、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A>メソッドを<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>です。|  
 |<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID><br /><br /> <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|通常、メニューから送信**選択範囲のコメント**または**選択範囲のコメントを解除**から**詳細**で、**編集**メニュー。 <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>ユーザーが選択したテキストをコメントにすることを示します<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>ユーザーが選択されているテキストのコメントを解除することを示します。 これらのコマンドは、言語サービスによってのみ実装できます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [従来の言語サービスの開発](../../extensibility/internals/developing-a-legacy-language-service.md)

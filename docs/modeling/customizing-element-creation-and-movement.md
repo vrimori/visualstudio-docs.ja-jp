@@ -13,11 +13,12 @@ caps.latest.revision: "36"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: d678e05046a367a722a586d13a50ef7bf0aabc79
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: e8de9588e263d392252134a470312a9dc4f4b648
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-element-creation-and-movement"></a>要素作成処理および要素移動処理のカスタマイズ
 要素にドラッグすること、ツールボックスから、または貼り付けの操作または移動を許可できます。 指定したリレーションシップを使用して移動された要素をターゲット要素にリンクされていることができます。  
@@ -314,7 +315,7 @@ ms.lasthandoff: 10/27/2017
   
      利用不可のポインターは表示されませんし、新しいを削除することができます**入力ポート**既存のものにします。 新しい選択**入力ポート**の別のポイントにドラッグして、**コンポーネント**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [移動して、プログラム コードでモデルを更新します。](../modeling/navigating-and-updating-a-model-in-program-code.md)   
  [ツールと、ツールボックスのカスタマイズ](../modeling/customizing-tools-and-the-toolbox.md)   
  [回路図サンプル DSL](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)

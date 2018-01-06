@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: fcd30a30bdae896be5aceb9dc685a5fb762ee4af
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 4c1a259be5b9c8f572339279734b60ac2afd93ad
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-diagrams"></a>図のプロパティ
 生成されたデザイナーのダイアグラムがどのように表示されるかを指定するプロパティを設定することができます。 たとえば、ダイアグラムのテキストの既定の色を指定できます。  
@@ -30,13 +31,13 @@ ms.lasthandoff: 10/27/2017
 |--------------|-----------------|-------------|  
 |[塗りつぶしの色]|ダイアグラムの塗りつぶしの色。|白|  
 |テキストの色|ダイアグラムで表示されるテキストの色。|黒|  
-|アクセス修飾子|クラス (パブリックまたは内部) のアクセス修飾子。|パブリック|  
+|アクセス修飾子|クラス (パブリックまたは内部) のアクセス修飾子。|Public|  
 |カスタム属性|生成されたコードのクラスに属性を追加するために使用します。|\<なし >|  
 |二重の生成の派生|場合`True`、基底クラスと部分クラス (カスタマイズをサポートする上書きを使用) の両方が生成されます。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)です。|False|  
 |カスタム コンス トラクターを持つ|場合`True`、ソース コードでカスタム コンス トラクターが提供されます。 詳細については、次を参照してください[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md).。|False|  
 |継承修飾子|ダイアグラムから生成されるソース コード クラスの継承の種類を記述します (`none`、`abstract`または`sealed`)。|なし|  
 |基本のダイアグラム|この図の基本クラス。|(なし)|  
-|名前|このダイアグラムの名前。|現在の名前|  
+|name|このダイアグラムの名前。|現在の名前|  
 |名前空間|このダイアグラムに関連付けられた名前空間。|現在の名前空間|  
 |表されるクラス|このダイアグラムを表すルート ドメイン クラスです。|該当する場合、現在のルート クラス|  
 |メモ|この要素に関連付けられている非公式なノートです。|\<なし >|  
@@ -46,5 +47,5 @@ ms.lasthandoff: 10/27/2017
 |表示名|このダイアグラムの生成されたデザイナーで表示される名前です。|\<なし >|  
 |ヘルプ キーワード|このダイアグラムの F1 ヘルプをインデックス化に使用されるキーワード。|\<なし >|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -22,11 +22,12 @@ caps.latest.revision: "27"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e7ea1c76cda46313458dcac01b415e7541732a26
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 1946d31d1e0f508267300c14551b0a8efff81587
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-item-templates-and-project-templates-for-sharepoint-project-items"></a>SharePoint プロジェクト項目の項目テンプレートとプロジェクト テンプレートの作成
   カスタム SharePoint プロジェクト項目の種類を定義するときにすることができますまたはに関連付けること項目テンプレート プロジェクト テンプレートの他の開発者が Visual Studio でプロジェクト項目を使用できるようにします。 テンプレートのウィザードを作成することもできます。  
@@ -82,9 +83,9 @@ ms.lasthandoff: 10/31/2017
 ## <a name="creating-wizards-for-item-templates-and-project-templates"></a>項目テンプレートとプロジェクト テンプレートの作成ウィザード  
  SharePoint プロジェクト項目の種類を定義して、項目またはプロジェクト テンプレートに関連付ける後は、ウィザードを作成することもできます。 開発者では、項目テンプレートを使用して、プロジェクトに、SharePoint プロジェクト項目を追加するとき、または開発者では、プロジェクト テンプレートを使用して、SharePoint プロジェクト項目を含む新しいプロジェクトを作成するときに表示されます。 開発者からの情報を収集して、新しい SharePoint プロジェクト項目を初期化するために、このウィザードを使用できます。  
   
- 項目テンプレートとプロジェクト テンプレートにウィザードを作成する方法を示すチュートリアルについては、次を参照してください[チュートリアル: 項目テンプレート、第 2 部にカスタム動作プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)と[チュートリアル: サイトを作成します。。プロジェクトのテンプレートでの列プロジェクト項目パート 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)です。  
+ 項目テンプレートとプロジェクト テンプレートにウィザードを作成する方法を示すチュートリアルについては、次を参照してください[チュートリアル: 項目テンプレート、第 2 部にカスタム動作プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)と[チュートリアル: サイトを作成します。プロジェクトのテンプレートでの列プロジェクト項目パート 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カスタム SharePoint プロジェクト項目の種類を定義します。](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [チュートリアル: 項目テンプレート、第 1 部にカスタム動作プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)   
  [チュートリアル: 項目テンプレート、第 2 部にカスタム動作プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)   

@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f295dd93580caee4b6288febf7e83c09736b6080
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e69270c5d90c26cf653ee31b81bcb9f453b814e1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="processes"></a>プロセス
 デバッガーのアーキテクチャの観点から、**プロセス**:  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
   
  デバッグ パッケージがデバッグ エンジン (DE) プロセスにアタッチするを呼び出して[アタッチ](../../extensibility/debugger/reference/idebugprocess2-attach.md)です。 これは、デに処理可能なプロセスで実行されているすべての可能なプログラムにアタッチすることを意味します。 たとえば、DE、共通言語ランタイムは、プロセスにアタッチする場合、マネージ コードを実行しているプログラムにのみアタッチします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プログラム](../../extensibility/debugger/programs.md)   
  [スレッド](../../extensibility/debugger/threads.md)   
  [デバッガーの概念](../../extensibility/debugger/debugger-concepts.md)   

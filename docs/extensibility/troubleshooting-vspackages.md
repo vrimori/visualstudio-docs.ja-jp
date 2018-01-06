@@ -15,11 +15,12 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e409d31b4f1e16f735b9b4ef22d42dedccf55a9d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c4c2fc24775cee3d40857166d3415f90b2adf756
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-vspackages"></a>Vspackage のトラブルシューティング
 一般的な問題を VSPackage に可能性のある問題を解決するためのヒントを次に示します。  
@@ -126,5 +127,5 @@ ms.lasthandoff: 10/31/2017
   
  InprocServer32 エントリの VSPackage の dll の正しいパスがあることを確認してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [VSPackage](../extensibility/internals/vspackages.md)

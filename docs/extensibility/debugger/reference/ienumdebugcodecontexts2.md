@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9d0d54e9a3987ab8b2493d9e999955febd73ac4a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: cd6ead902a65a9f3e5e392b1b9dbeed135f326b4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumdebugcodecontexts2"></a>IEnumDebugCodeContexts2
 このインターフェイスは、デバッグ セッションまたは特定のプログラムまたはドキュメントに関連付けられたコードのコンテキストを列挙します。  
@@ -51,14 +52,14 @@ IEnumDebugCodeContexts2 : IUnknown
 ## <a name="remarks"></a>コメント  
  Visual Studio 呼び出し[EnumCodeContexts](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md)コード コンテキストの一覧を作成するユーザーから選べますときに、次のステートメントを設定またはソース ファイルの逆アセンブルを表示します。 複数のコードのコンテキストには、たとえば、C++ スタイル テンプレートの複数のインスタンスがある場合が発生します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [EnumCodeContexts](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md)   
  [EnumCodeContexts](../../../extensibility/debugger/reference/idebugdocumentcontext2-enumcodecontexts.md)

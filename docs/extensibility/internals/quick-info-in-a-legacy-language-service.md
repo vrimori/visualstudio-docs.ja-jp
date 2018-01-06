@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 692884d31e55921489aad0fbbea32ca1c094c6c3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8e0fa4a65960d0324a4be19db61648be48b08349
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quick-info-in-a-legacy-language-service"></a>従来の言語サービスで、クイック ヒント
 Intellisense によるクイック ヒントでは、ユーザーか、キャレットを配置します id に、選択して、ソースの識別子に関する情報を表示**クイック ヒント**から、 **IntelliSense**メニューまたはマウスを保持識別子の上にカーソル。 これにより、識別子の情報を表示するツールヒント。 この情報は、通常、識別子の型で構成されています。 デバッグ エンジンがアクティブで、この情報は、現在の値を含めることがあります。 デバッグ エンジンは、言語サービスは識別子のみを処理中に、式の値を指定します。  

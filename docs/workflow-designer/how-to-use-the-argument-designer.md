@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 5093e5561140a0ebff57da1f7c21a8954ee58bb3
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: aa1cdd0dd563a5f87d4e32f779985afd63319032
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-argument-designer"></a>引数デザイナーを使用する方法
 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] の以前のバージョンと比べ、引数デザイナーを使用した場合は、アクティビティとの間のデータの受け渡しを簡単に実行できます。 デザイナーにアクセスする をクリックして、**引数**デザイン キャンバスの左下隅にあるボタンをクリックします。 デザイナーには以外の各列見出しで並べ替えることができます、表形式で表示されている引数の一覧が含まれています、**既定値**列です。 各引数には、名前、方向 (入力、出力、入力/出力、またはプロパティ)、型、および既定の式の値 (存在する場合) が含まれます。 名前および既定の式の値は編集可能なテキスト フィールドで、型および方向はドロップダウンです。 [!含める[crabout](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)です。  
@@ -34,6 +35,6 @@ ms.lasthandoff: 10/27/2017
     > [!NOTE]
     >  削除する引数、引数をクリックして選択し、キーを押します、**削除**キー。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ワークフロー デザイナーの使用](../workflow-designer/using-the-workflow-designer.md)   
  [変数と引数](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)

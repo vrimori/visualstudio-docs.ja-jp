@@ -35,11 +35,12 @@ caps.latest.revision: "127"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: 57d04543cf604ced1b94632c2f2c3bc566267f85
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: bc06788e8308a56cb0e38dbca6e9ddb60ce12cd1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="analyze-and-model-your-architecture"></a>アーキテクチャを分析およびモデルする
 アプリが Visual Studio アーキテクチャを使用するツールとモデリング ツールを設計およびアプリのモデルによってアーキテクチャの要件を満たしていることを確認してください。 
@@ -77,6 +78,6 @@ ms.lasthandoff: 11/07/2017
   
 [Visual Studio の視覚化およびモデリング ツールのフォーラム](http://go.microsoft.com/fwlink/?LinkId=184720)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [新機能します。](../modeling/what-s-new-for-design-in-visual-studio.md)   
  [DevOps とアプリケーション ライフ サイクル管理](http://msdn.microsoft.com/Library/74a1f71d-7f23-4c71-8fd7-89ede614fab6)

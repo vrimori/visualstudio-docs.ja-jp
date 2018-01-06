@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fa26c30c89d5af317bd1b63848ac4ca71287d123
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 9947835b4875a77922a0429149d5fcdf7375f087
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugcustomattributegetattributetypefield"></a>IDebugCustomAttribute::GetAttributeTypeField
 カスタム属性クラスの型を取得します。  
@@ -47,6 +48,6 @@ int GetAttributeTypeField(
 ## <a name="remarks"></a>コメント  
  カスタム属性は、常にクラスです。 このメソッドへのアクセスを提供する、 [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)をそのクラスを記述するオブジェクト。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)   
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

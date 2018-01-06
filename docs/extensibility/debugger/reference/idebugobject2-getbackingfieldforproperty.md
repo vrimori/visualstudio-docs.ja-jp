@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2637ddf5d50953367de66cd2ca63d7774dbc3213
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f8833e3d2b686e1c350e1094aaa9bdfe925586a7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugobject2getbackingfieldforproperty"></a>IDebugObject2::GetBackingFieldForProperty
 (存在する場合)、フィールドまたは変数を取得するオブジェクトによって表されるプロパティがバッキング可能性があります。  
@@ -47,5 +48,5 @@ int GetBackingFieldForProperty(
 ## <a name="remarks"></a>コメント  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)マネージ コード クラスのプロパティ、つまり、get メソッドを表すオブジェクトやアクセサーを設定します。 このようなプロパティには、プロパティによって操作の値を変数通常必要があります。 この変数は、バッキング フィールドと呼ばれます。 オブジェクトのバッキング フィールドがない場合は、し確認を null 値を返す: いくつかの呼び出し元は、戻り値に注意を払っていない可能性がありますで null 値が返されたかどうかに表示する代わりになります`ppObject`です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

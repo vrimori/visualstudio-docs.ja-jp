@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 913ccb36c54914387cd6ca8a50a350ada1b14ce7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 42aa28637bc513865f96c0b88d2ca7c4dd726c5c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-sharepoint-command"></a>方法: SharePoint コマンドを作成する
   を SharePoint ツール拡張機能で、サーバー オブジェクト モデルを使用する場合は、カスタムを作成する必要があります*SharePoint コマンド*API を呼び出すためです。 SharePoint コマンドは、サーバー オブジェクト モデルを直接呼び出すことができるアセンブリで定義します。  
@@ -80,7 +81,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="deploying-the-command"></a>コマンドの配置  
  コマンドを展開するには、同じコマンド アセンブリを含める[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]コマンドを使用する拡張機能のアセンブリに拡張機能 (VSIX) にパッケージ化します。 また、コマンド内のアセンブリになる extension.vsixmanifest ファイル エントリを追加する必要があります。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールの拡張機能の配置](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint オブジェクト モデルの呼び出し](../sharepoint/calling-into-the-sharepoint-object-models.md)   
  [方法: SharePoint コマンドを実行](../sharepoint/how-to-execute-a-sharepoint-command.md)   
  [チュートリアル: サーバー エクスプローラーを拡張して Web パーツを表示する](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  

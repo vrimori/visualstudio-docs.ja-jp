@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c7ab5cef6fb45d60be8be8d1db6b160079633ed4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 585ea78e0591ad979d09a3e5b208635c3f75f903
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tool-window-display-configuration"></a>ツール ウィンドウの表示の構成
 VSPackage でツール ウィンドウ、既定の位置、サイズ、ドッキング スタイル、およびその他の可視性の情報を登録するときは、省略可能な値で指定されます。 ツール ウィンドウの登録の詳細については、次を参照してください[レジストリのツール ウィンドウ。](../extensibility/tool-windows-in-the-registry.md)  
@@ -38,9 +39,9 @@ HKEY_LOCAL_MACHINE\
               (Default)       = reg_sz: <Package GUID>Name            = reg_sz: <name of tool window>Float           = reg_sz: <position>Style           = reg_sz: <dock style>Window          = reg_sz: <window GUID>Orientation     = reg_sz: <orientation>DontForceCreate = reg_dword: 0x00000000  
 ```  
   
-|名前|型|データ|説明|  
+|name|型|データ|説明|  
 |----------|----------|----------|-----------------|  
-|名前|REG_SZ|「短い名前をここに挿入」|ツール ウィンドウを説明する短い名前。 レジストリ内の参照でのみ使用されます。|  
+|name|REG_SZ|「短い名前をここに挿入」|ツール ウィンドウを説明する短い名前。 レジストリ内の参照でのみ使用されます。|  
 |Float|REG_SZ|"X1, Y1, X2, Y2"|次の 4 つのコンマ区切りの値。 X1, Y1 はツール ウィンドウの左上隅の座標。 X2, Y2 は右下隅の座標。 すべての値は、画面座標でです。|  
 |スタイル|REG_SZ|"MDI"<br /><br /> 「フローティング」<br /><br /> 「リンク」<br /><br /> 「タブ付き」<br /><br /> "AlwaysFloat"|初期を指定するキーワードは、ツール ウィンドウの状態を表示します。<br /><br /> "MDI"= MDI ウィンドウをドッキングします。<br /><br /> 「フローティング」浮動小数点を = です。<br /><br /> 「リンク」= = (ウィンドウのエントリで指定された) 別のウィンドウでリンクします。<br /><br /> 「タブ付き」= 別のツール ウィンドウと組み合わせて使用します。<br /><br /> "AlwaysFloat"= ドッキングされることはできません。<br /><br /> 詳細については、以下のコメント セクションを参照してください。|  
 |ウィンドウ|REG_SZ|*\<GUID >*|ツール ウィンドウのリンクやタブ付きウィンドウの GUID です。 GUID が独自のウィンドウのいずれかまたはで windows のいずれかに属している可能性があります、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE です。|  
@@ -87,10 +88,10 @@ HKEY_LOCAL_MACHINE\
                 <GUID>    = reg_sz:  
 ```  
   
-|名前|型|データ|説明|  
+|name|型|データ|説明|  
 |----------|----------|----------|-----------------|  
 |(既定)|REG_SZ|なし|空のままにします。|  
-|*\<GUID >*|REG_DWORD または REG_SZ|0 または説明の文字列です。|省略可能です。 エントリの名前は、可視性を必要とするコマンドの GUID にする必要があります。 値には、わかりやすい文字列だけを保持します。 通常、値は、`reg_dword`を 0 に設定します。|  
+|*\<GUID >*|REG_DWORD または REG_SZ|0 または説明の文字列です。|任意。 エントリの名前は、可視性を必要とするコマンドの GUID にする必要があります。 値には、わかりやすい文字列だけを保持します。 通常、値は、`reg_dword`を 0 に設定します。|  
   
 ### <a name="example"></a>例  
   
@@ -109,5 +110,5 @@ HKEY_LOCAL_MACHINE\
                 {adfc4e66-0397-11d1-9f4e-00a0c911004f} = reg_dword: 0x00000000  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [VSPackage](../extensibility/internals/vspackages.md)

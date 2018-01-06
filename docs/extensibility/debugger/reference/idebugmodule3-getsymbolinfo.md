@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 341d31537f3c6c67e601296cf14eb5a6a10df08d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8648e591e545db73b636c6b21fcbcaa1d1afb640
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugmodule3getsymbolinfo"></a>IDebugModule3::GetSymbolInfo
 各パスを検索の結果と、シンボル検索パスの一覧を取得します。  
@@ -87,7 +88,7 @@ void ShowSymbolSearchResults(IDebugModule3 *pIDebugModule3)
  **c:\symbols\user32.pdb しています.ファイルが見つかりません。**  
 **c:\winnt\symbols\user32.pdb しています.バージョンが一致しません。**  
 **\\\symbols\symbols\user32.dll\0a8sd0ad8ad\user32.pdb しています.シンボルが読み込まれます。**   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md)   
  [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md)   
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)

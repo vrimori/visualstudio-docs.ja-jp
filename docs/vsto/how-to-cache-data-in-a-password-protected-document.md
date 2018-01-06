@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: eb1dd096b08525cd03f65ed46def81979bfaf272
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: ecc4913d9d508d95347945b8f4aaa816bc3d510c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-cache-data-in-a-password-protected-document"></a>方法 : パスワードで保護されたドキュメント内のデータをキャッシュする
   ドキュメントまたはパスワードで保護されているブック内のデータ キャッシュにデータを追加する場合、キャッシュされたデータへの変更は自動的に保存されません。 プロジェクト内の 2 つのメソッドをオーバーライドすることで、キャッシュされたデータに変更を保存できます。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="compiling-the-code"></a>コードのコンパイル  
  このコードを追加、`ThisWorkbook`プロジェクト内のクラスです。 このコードは、パスワードがという名前のフィールドに格納される前提としています。`securelyStoredPassword`です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データのキャッシュ](../vsto/caching-data.md)   
  [方法: オフラインであるか、サーバーで使用するデータをキャッシュ](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)   
  [方法: Office ドキュメント内のデータ ソースをプログラムでキャッシュする](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)  

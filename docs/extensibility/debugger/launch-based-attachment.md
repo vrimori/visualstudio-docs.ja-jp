@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2aa9787ad432e402375680c4e27e433236b13249
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d05f0b8d8fd0190391da831351b65d873eac4efc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="launch-based-attachment"></a>添付ファイルの起動に基づく
 プログラムを起動ベースの添付ファイルは自動です。 プログラムをホストしているプロセスを開始するには、SDM によって、起動ベースの添付ファイルは手動の添付ファイルのメソッドと同様のパスに従います。 詳細については、次を参照してください。[プログラムへのアタッチ](../../extensibility/debugger/attaching-to-the-program.md)です。  
@@ -35,6 +36,6 @@ ms.lasthandoff: 10/31/2017
   
 4.  送信、 [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md)に起動されたプロセスに対して新しいスレッドを作成する、SDM を通知するイベント オブジェクトです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [必要なイベントを送信します。](../../extensibility/debugger/sending-the-required-events.md)   
  [デバッグするプログラムの有効化](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)

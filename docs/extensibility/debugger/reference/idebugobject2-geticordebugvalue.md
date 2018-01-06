@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6b1d1c05b6156cb38222eeedb287de4b3fc52b18
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5b28e0cd6d66479479dbdb51825e0804abab06be
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugobject2geticordebugvalue"></a>IDebugObject2::GetICorDebugValue
 マネージ コードを表すオブジェクトをこのオブジェクトに関連付けられている値を取得します。  
@@ -47,5 +48,5 @@ int GetICorDebugValue(
 ## <a name="remarks"></a>コメント  
  `ICorDebugValue`オブジェクトは、値を表す共通言語ランタイム インターフェイスです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

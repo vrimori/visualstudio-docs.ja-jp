@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3db5af044b1e3eb25e68c96a42335082fd3523f1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: a820bc1a29db10fa5f65f1781c30218c62c2ee08
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>方法: 特定のリスト インスタンスに対するイベント レシーバーを作成する
   リスト インスタンスのイベント レシーバーは、リスト定義の任意のインスタンスで発生するイベントに応答します。 イベント レシーバーのテンプレートでは、特定のリスト インスタンスのターゲット設定は有効にしません、対象とする特定のリスト インスタンス内のイベントに応答するリストの定義には、イベント レシーバーを変更することができます。  
@@ -89,7 +90,7 @@ ms.lasthandoff: 10/31/2017
   
      イベント レシーバーでは、カスタム アナウンス リスト インスタンス内のイベントにのみ応答する、受信者が構成されているために、新しいお知らせで発生しません通知**TestAnnouncements**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: イベント レシーバーを作成します。](../sharepoint/how-to-create-an-event-receiver.md)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   

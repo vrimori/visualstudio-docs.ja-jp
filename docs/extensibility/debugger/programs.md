@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e34dbcf9c19b5e8e7a16d2f409159597670cb8cc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 03b4885e653d879e3aaec1d9a68bc9be144cb676
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programs"></a>Programs
 デバッガーのアーキテクチャの観点から、**プログラム**:  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/31/2017
   
 -   によって表される、 [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)インターフェイス、プログラムをアタッチすると、前に、または実装によって、attach プロセスの一部として作成します。 に従って、対応する各プログラムが作成されたポートは、プロセスのプログラムを列挙するときに[IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)への引数として渡されたインターフェイス[AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)です。 またデバッグ エンジンを作成中に`IDebugProgram2`プログラム ノードに従ってプログラム、これらのプログラムを表すためのインターフェイスは作成されません。 `IDebugProgramNode2` DE によって作成されたインターフェイスは、ポートが作成されたもののみ使用されるプロセスで実行中のプログラムを検出中に、実際のデバッグでは、使用できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロセス](../../extensibility/debugger/processes.md)   
  [プログラムのノード](../../extensibility/debugger/program-nodes.md)   
  [モジュール](../../extensibility/debugger/modules.md)   

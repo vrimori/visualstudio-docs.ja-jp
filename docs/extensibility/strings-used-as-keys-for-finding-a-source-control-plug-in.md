@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d2ee5e741466b7976c8b397928cd9fccd12472fe
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1acc753d2a02c3be88687a4e42d71d23e988af48
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="strings-used-as-keys-for-finding-a-source-control-plug-in"></a>ソース管理プラグインを検索するためのキーとして使用される文字列
 次の文字列は、詳細を確認するソース管理プラグインのレジストリにアクセスするためのキーです。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="string-keys-and-values"></a>String キーと値  
   
-|キー|値|  
+|キー|[値]|  
 |---------|-----------|  
 |`STR_SCC_PROVIDER_REG_LOCATION`|Software\SourceCodeControlProvider|  
 |`STR_PROVIDERREGKEY`|ProviderRegKey|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/31/2017
 |`STR_UI_LANGUAGE`|UILanguage|  
 |`STR_SRCSAFE_ROOT_KEY`|Software\Microsoft\SourceSafe|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)   
  [方法: ソース管理プラグインのインストール](../extensibility/internals/how-to-install-a-source-control-plug-in.md)   
  [MSSCCPRJ.SCC File](../extensibility/mssccprj-scc-file.md)

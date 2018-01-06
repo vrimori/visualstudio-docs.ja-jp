@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: eae3a0ffd77fa4b399b2d62d3139e7bd8a405d48
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 850cb58f6763b521da9cdb1779b0960c0607ef88
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-file-storage-and-xml-serialization"></a>ファイル格納処理および XML シリアル化処理のカスタマイズ
 ユーザーが、インスタンスを保存するときに、または*モデル*でドメイン固有言語 (DSL) の[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、XML ファイルを作成または更新します。 ファイルは、ストア内のモデルを再作成を再読み込みすることができます。  
@@ -304,6 +305,6 @@ ms.lasthandoff: 10/27/2017
 |ロール要素名|ソース ロールから派生する XML 要素の名前を指定します。 既定値は、ロールのプロパティ名です。|  
 |完全な形式を使用します。|True の場合、各ターゲット要素またはモニカーは、リレーションシップを表す XML ノードで囲みます。 これは、このリレーションシップは、独自のドメインのプロパティを true に設定する必要があります。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [移動して、プログラム コードでモデルを更新します。](../modeling/navigating-and-updating-a-model-in-program-code.md)   
  [ドメイン固有言語からのコード生成](../modeling/generating-code-from-a-domain-specific-language.md)

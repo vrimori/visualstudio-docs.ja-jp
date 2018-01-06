@@ -16,17 +16,18 @@ caps.latest.revision: "54"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 886185c61f407906ff059b84b5f1f8b18e3ace98
-ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
+ms.workload: vssdk
+ms.openlocfilehash: e798eb66601d253c180a72b730bb3531e21c11c2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-basic-isolated-shell-application"></a>チュートリアル: 基本的な分離シェル アプリケーションの作成
 このチュートリアルでは、分離シェルのソリューションの作成、バージョン情報 ツール ウィンドウをカスタマイズおよび分離シェルをインストールするセットアップ プログラムを作成する方法を示します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルを行うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../visual-studio-sdk.md)です。 分離シェルを展開するには、また Visual Studio Shell (Isolated) 再頒布可能パッケージを使用する必要があります。  
+ このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../visual-studio-sdk.md)です。 分離シェルを展開するには、また Visual Studio Shell (Isolated) 再頒布可能パッケージを使用する必要があります。  
   
 ## <a name="creating-an-isolated-shell-solution"></a>Isolated Shell ソリューションを作成します。  
  このセクションでは、Visual Studio 分離シェルのプロジェクト テンプレートを使用して分離シェル ソリューションを作成する方法を示します。 ソリューションには、次のプロジェクトが含まれています。  
@@ -217,7 +218,7 @@ ms.lasthandoff: 12/14/2017
   
     7.  Splash.bmp  
   
-5.  クリックして、 **Add Project Outputs**ボタンをクリックし、追加**MyVSShellStub/プライマリ出力**です。 **[OK]** をクリックします。  
+5.  クリックして、 **Add Project Outputs**ボタンをクリックし、追加**MyVSShellStub/プライマリ出力**です。 **[OK]**をクリックします。  
   
 6.  左側のウィンドウで **展開先コンピューター**を右クリックし、 **Fabrikam 音楽エディター [INSTALLDIR]**ノードを追加し、**新しいフォルダー**という名前**拡張機能**します。  
   

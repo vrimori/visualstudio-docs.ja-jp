@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 40ec185caf65197d46abc7def26def7929f70d74
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4f06d8e80bcaecefa515ae4ca0b0bd46cab1ca8d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugmemorycontext2add"></a>IDebugMemoryContext2::Add
 現在のコンテキストに指定された値を追加し、新しいコンテキストを返します。  
@@ -56,5 +57,5 @@ int Add(
   
  結果として得られるアドレスがこのコンテキストに関連付けられているメモリ空間の外にある場合でも、このメソッドは新しいコンテキストを生成常にする必要があります。 唯一の例外は、新しいコンテキストのメモリを割り当てることはできませんか`ppMemCxt`は、null 値 (エラー)。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

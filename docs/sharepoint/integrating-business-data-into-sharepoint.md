@@ -26,11 +26,12 @@ caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ece3128c2d6850a1d1dd22d0328a4ee2c46da2b1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 4cacdbb314130fa45b5aa3820abbbffbcbc6c0bf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-business-data-into-sharepoint"></a>SharePoint へのビジネス データの統合
   SharePoint にビジネス データを統合することができます。 ビジネス データがなどのバック エンド サーバー アプリケーションから取得できます[!INCLUDE[TLA#tla_sqlsvr](../sharepoint/includes/tlasharptla-sqlsvr-md.md)]Siebel、および SAP、または Web サービスです。 ユーザーは、表示、追加、更新、または外部リストまたは SharePoint でのビジネス データ Web パーツを使用してビジネス データを削除できます。  ユーザーは、Microsoft Outlook などの Microsoft Office アプリケーションでこのデータをオフラインにもアクセスできます。 詳細については、次を参照してください。[場所できますする外部データの表示](http://go.microsoft.com/fwlink/?LinkId=169295)です。  

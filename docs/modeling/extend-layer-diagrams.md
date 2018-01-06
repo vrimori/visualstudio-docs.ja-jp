@@ -15,11 +15,12 @@ caps.latest.revision: "39"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: 2b661d894a471a3734a54806a89381d06fd3bd2d
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: 477c51d4172f893e4506eff1b2a11b626993b327
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extend-dependency-diagrams"></a>依存関係図を拡張します。
 作成し、依存関係の図を更新し、Visual Studio での依存関係図と照らし合わせてプログラム コードの構造を検証するコードを記述することができます。 図のショートカット (コンテキスト) メニューに表示するコマンドを追加し、ドラッグ アンド ドロップ ジェスチャをカスタマイズし、テキスト テンプレートからレイヤー モデルにアクセスすることができます。 これらの拡張機能を VSIX (Visual Studio Integration Extension) にパッケージ化し、他の Visual Studio ユーザーに配布することができます。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/07/2017
   
  [依存関係図の拡張機能のトラブルシューティング](../modeling/troubleshoot-extensions-for-layer-diagrams.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)   
  [依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)   
  [コードから依存関係のダイアグラムを作成します。](../modeling/create-layer-diagrams-from-your-code.md)   

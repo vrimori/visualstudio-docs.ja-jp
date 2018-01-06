@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 838b7cac850b8e7eb3401065cf13202d3a3a40ce
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6d9d468997d0e0f4cc913db1b9ac316f4e698f99
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wizards"></a>ウィザード
 追加するウィザードを作成したら、通常、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]他のユーザーが使用できるように開発環境 (IDE) を統合します。 追加のウィザードが表示されます、**新しいプロジェクトの追加**または**新しい項目の追加** ダイアログ ボックス。 表示する、**新しいプロジェクトの追加**または**新しい項目の追加** ダイアログ ボックスで開いているソリューションを右クリックして**ソリューション エクスプ ローラー**、 をポイント**追加**とをクリックして**新しいプロジェクト**または**新しい項目の**します。  

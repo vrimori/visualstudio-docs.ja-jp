@@ -24,11 +24,12 @@ caps.latest.revision: "25"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3f8798616d9a39d46150f039ffe4340302439f31
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8b32134abff19965edac150ac5f69db25640ee08
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="debug-multithreaded-applications-in-visual-studio"></a>マルチスレッド アプリケーションのデバッグ
 スレッドは、オペレーティング システムでプロセッサ時間を割り当てる命令のシーケンスです。 オペレーティング システムで実行されているプロセスは、いずれも 1 つ以上のスレッドで構成されます。 複数のスレッドで構成されるプロセスをマルチスレッド プロセスといいます。  
@@ -41,7 +42,7 @@ Visual Studio は、マルチ スレッド アプリのデバッグで使用す�
 
 - スレッド、スレッドのデバッグの主なツールは、**スレッド**ウィンドウで、ソース ウィンドウでスレッド マーカー**並列スタック**ウィンドウ、**並列ウォッチ**ウィンドウ、および**デバッグの場所**ツールバー。 詳細については、**スレッド**ウィンドウと**デバッグの場所**ツールバーを参照してください[チュートリアル: [スレッド] ウィンドウを使用してデバッグ](../debugger/how-to-use-the-threads-window.md)です。 使用する方法について、**並列スタック**と**並列ウォッチ**windows を参照してください[マルチ スレッド アプリケーションのデバッグの開始](../debugger/get-started-debugging-multithreaded-apps.md)です。 どちらのトピックでは、スレッド マーカーを使用する方法を示します。
   
-- 使用するコード、[タスク並列ライブラリ (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)または[同時実行ランタイム](/cpp/parallel/concrt/concurrency-runtime/)、デバッグ用の主要なツールは、**並列スタック**ウィンドウで、 **並列ウォッチ**ウィンドウ、および**タスク**ウィンドウ (、**タスク**ウィンドウには、JavaScript もサポートしています)。 最初に、次を参照してください。[チュートリアル: 並行アプリケーションのデバッグ](../debugger/walkthrough-debugging-a-parallel-application.md)と[チュートリアル: C++ AMP アプリケーションのデバッグ](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)です。 
+- 使用するコード、[タスク並列ライブラリ (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)または[同時実行ランタイム](/cpp/parallel/concrt/concurrency-runtime/)、デバッグ用の主要なツールは、**並列スタック**ウィンドウで、 **並列ウォッチ**ウィンドウ、および**タスク**ウィンドウ (、**タスク**ウィンドウには、JavaScript もサポートしています)。 最初に、次を参照してください。[チュートリアル: 並行アプリケーションのデバッグ](../debugger/walkthrough-debugging-a-parallel-application.md)と[チュートリアル: C++ AMP アプリケーションのデバッグ](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)です。 
 
 - GPU 上でスレッドをデバッグするには、主要なツールは、 **GPU スレッド**ウィンドウです。 参照してください[する方法: GPU スレッド ウィンドウを使用して](../debugger/how-to-use-the-gpu-threads-window.md)です。  
 
@@ -101,6 +102,6 @@ Visual Studio には、強力なブレークポイントとトレースポイン
  [旧形式のコードのためのマルチスレッド サポート (Visual C++)](/cpp/parallel/multithreading/multithreading-support-for-older-code-visual-cpp)  
  MFC を使用する C# プログラマを対象とし、スレッドの概念についてコード例を示しながら説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [スレッドとプロセスをデバッグします。](../debugger/debug-threads-and-processes.md)   
  [Remote Debugging](../debugger/remote-debugging.md)

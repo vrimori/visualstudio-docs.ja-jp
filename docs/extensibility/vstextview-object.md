@@ -16,18 +16,19 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e3b7cdc698a169150560b2a924cd6f3317fa78ed
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f169c3302b3e6fd72e5017193e34836ed3e5340e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vstextview-object"></a>VSTextView オブジェクト
 テキスト ビューは、ユーザーを表示およびテキスト バッファーの Unicode テキストを編集できるウィンドウです。 基本的には、ビューは、ほとんどのユーザーではこれをエディターとして参照します。 ビューは、バッファーからさまざまなテキスト レイヤー (ワード ラップ、アウトライン表示テキスト、およびなど) で区切られた、ため、ビューは、バッファー内のテキストの正確な表現である保証されません。 テキスト ビューの詳細については、次を参照してください[レガシ API を使用してテキスト ビューにアクセスする。](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)  
   
  次の表で示されるインターフェイスを示しています、<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>オブジェクト。  
   
-|インターフェイス|説明|  
+|Interface|説明|  
 |---------------|-----------------|  
 |[IDropSource](http://msdn.microsoft.com/library/windows/desktop/ms690071)|標準の OLE インターフェイスです。|  
 |<xref:Microsoft.VisualStudio.OLE.Interop.IDropTarget>|標準の OLE インターフェイスです。|  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/31/2017
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLayeredTextView>|テキストのレイヤーと通信します。|  
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsThreadSafeTextView>|別のスレッドから、ビューでの操作を実行します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [図形の編集](http://msdn.microsoft.com/en-us/f08872bd-fd9c-4e36-8cf2-a2a2622ef986)   
  [VSTextBuffer オブジェクト](../extensibility/vstextbuffer-object.md)   
  [レガシ API を使用してテキスト ビューにアクセスします。](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)

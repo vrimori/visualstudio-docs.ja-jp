@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ed7ae018725e4ba2da5239609d90276d007827aa
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.workload: aspnet
+ms.openlocfilehash: 0dfcc66145b78e1070c552536fc7a86e87c7e04d
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>IIS: リモート コンピューター上の ASP.NET のリモート デバッグ
 IIS に配置されている ASP.NET アプリケーションをデバッグするには、インストールし、アプリが展開されているコンピューターでリモート ツールを実行して Visual Studio から、実行中のアプリにアタッチし、します。
@@ -60,7 +61,7 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
 
 ## <a name="BKMK_deploy_asp_net"></a>Windows Server に ASP.NET 4.5 をインストールします。
 
-詳細な情報を IIS で ASP.NET をインストールする場合は、「 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。
+詳細な情報を IIS で ASP.NET をインストールする場合は、「 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。
 
 1. Web Platform Installer (WebPI) を使用して ASP.NET 4.5 をインストールする (Windows Server 2012 R2 で、サーバー ノードから次のように選択します**新しい Web Platform コンポーネントの取得**、ASP.NET の検索)。
 
@@ -173,7 +174,7 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
 ほとんどの設定では、ASP.NET とリモート デバッガーのインストールに必要なポートが開かれます。 ただし、ポートが開いていることを確認する必要があります。
 
 > [!NOTE]
-> Azure vm を使用して、ポートを開く必要があります、[ネットワーク セキュリティ グループ](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-hero-role#open-port-80)です。 
+> Azure vm を使用して、ポートを開く必要があります、[ネットワーク セキュリティ グループ](/azure/virtual-machines/virtual-machines-windows-hero-role#open-port-80)です。 
 
 必要なポート:
 

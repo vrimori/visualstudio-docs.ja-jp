@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0cef54d281555f49806ed59ad1627460a7752954
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 9b3f46a0e4fb87e6064fb3e975cd6b7313270c13
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-basic-project-system-part-2"></a>基本的なプロジェクト システムを作成するには、パート 2
 このシリーズの最初のチュートリアル[基本プロジェクト システムでは、第 1 部を作成する](../extensibility/creating-a-basic-project-system-part-1.md)、基本的なプロジェクト システムを作成する方法を示します。 このチュートリアルでは、Visual Studio のテンプレート、プロパティ ページ、およびその他の機能を追加することで、基本的なプロジェクト システムに基づいています。 この 1 つを開始する前に、最初のチュートリアルを完了する必要があります。  
@@ -159,7 +160,7 @@ ms.lasthandoff: 10/31/2017
   
 2.  展開、**プロジェクトおよびソリューション**ノードをクリックして**ビルドおよび実行する**です。  
   
-3.  設定**MSBuild プロジェクトのビルド出力の詳細度**に**標準**です。 **[OK]** をクリックします。  
+3.  設定**MSBuild プロジェクトのビルド出力の詳細度**に**標準**です。 **[OK]**をクリックします。  
   
 4.  SimpleProject プロジェクトをリビルドします。  
   
@@ -267,7 +268,7 @@ ZipProjects:
   
 4.  展開して、 **SimpleProject**ノード。 **コンソール**子ノードが表示されます。 **SimpleProject アプリケーション**テンプレートに引き続き表示されます、**テンプレート**ウィンドウです。  
   
-5.  。 をクリックして**キャンセル**およびデバッグの停止  
+5.  である必要があります。 をクリックして**キャンセル**およびデバッグの停止  
   
  ![](../extensibility/media/simpproj2_rollup.png "SimpProj2_Rollup")  
   
@@ -282,7 +283,7 @@ ZipProjects:
   
 -   $safeprojectname$ がユーザーによって指定された名前、**新しいプロジェクト**ダイアログ ボックスで、安全でない文字とスペースをすべて削除するように変更します。  
   
- テンプレート パラメーターの完全な一覧を参照してください。[テンプレート パラメーター](../ide/template-parameters.md)です。  独自のカスタム テンプレート パラメーターを作成する場合は、「 [NIB: 方法: テンプレートへのカスタムのパラメーターを渡す](http://msdn.microsoft.com/en-us/5bc2ad11-84c7-4683-a276-e5e00d85d8fb)です。  
+ テンプレート パラメーターの完全な一覧については、「[テンプレート パラメーター](../ide/template-parameters.md)」をご覧ください。  独自のカスタム テンプレート パラメーターを作成する場合は、「 [NIB: 方法: テンプレートへのカスタムのパラメーターを渡す](http://msdn.microsoft.com/en-us/5bc2ad11-84c7-4683-a276-e5e00d85d8fb)です。  
   
 #### <a name="to-substitute-project-template-parameters"></a>プロジェクト テンプレートのパラメーターを置換するには  
   

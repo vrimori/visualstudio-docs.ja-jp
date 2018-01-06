@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0645cefb4d102f976663bb4293454e2ae6318ad6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5f6065c91845df020325e279a1fa3858a4f75505
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-a-port"></a>ポートの取得
 ポートは、プロセスを実行しているコンピューターへの接続を表します。 ローカル コンピューターまたはリモート コンピューターにそのマシンがある可能性があります (する可能性のある実行される可能性が非 Windows ベースのオペレーティング システムは、参照してください[ポート](../../extensibility/debugger/ports.md)詳細については)。  
@@ -99,7 +100,7 @@ HRESULT CDebugEngine::ResumeProcess(IDebugProcess2 *pDebugProcess)
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プログラムを登録します。](../../extensibility/debugger/registering-the-program.md)   
  [デバッグするプログラムを有効にします。](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)   
  [ポートの仕入先](../../extensibility/debugger/port-suppliers.md)   

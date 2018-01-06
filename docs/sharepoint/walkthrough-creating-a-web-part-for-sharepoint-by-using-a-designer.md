@@ -21,11 +21,12 @@ caps.latest.revision: "34"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 55da85b9740216cefe55911d79dab2c16b035695
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 602515daedec99bbcfa3efd58469de5d8ba3df7b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer"></a>チュートリアル: デザイナーを使用した SharePoint の Web パーツの作成
   SharePoint サイトの Web パーツを作成すれば、ユーザーはブラウザーを使用して、そのサイトを構成するページのコンテンツ、外観、動作を直接変更できます。 このチュートリアルは、SharePoint を使用して web パーツを視覚的に作成する方法を示します**視覚的 Web パーツ**プロジェクト テンプレートを[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。  
@@ -107,7 +108,7 @@ ms.lasthandoff: 10/31/2017
   
     -   デザイナーをダブルクリックして、**更新**ボタンをクリックします。  
   
-    -   **プロパティ**のウィンドウ、**更新** ボタンを選択して、**イベント**ボタンをクリックします。 ** をクリックして**プロパティ、入力**Button1_Click**、し、Enter キーを押します。  
+    -   **プロパティ**のウィンドウ、**更新** ボタンを選択して、**イベント**ボタンをクリックします。  **をクリックして**プロパティ、入力**Button1_Click**、し、Enter キーを押します。  
   
      ユーザー コントロール コード ファイルがコード エディターで開き、`Button1_Click` イベント ハンドラーが表示されます。 その後、このイベント ハンドラーにコードを追加します。  
   
@@ -198,7 +199,7 @@ ms.lasthandoff: 10/31/2017
   
      指定したすべてのカレンダーのイベントが月間カレンダー ビューに表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint の Web パーツの作成](../sharepoint/creating-web-parts-for-sharepoint.md)   
  [方法: SharePoint Web パーツを作成します。](../sharepoint/how-to-create-a-sharepoint-web-part.md)   
  [方法: デザイナーを使用して、SharePoint Web パーツを作成します。](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)   

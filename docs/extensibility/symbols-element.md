@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4ef5b215e18163b10c8002affc959bd80b586cf0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0a6065162ce5ba7c8f611be7a093bba7a0c55fca
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="symbols-element"></a>シンボル要素
 Guid および他の VSCT 要素によって使用されている Id を定義します。 アンマネージ コードは、この情報、通常で指定されているヘッダー ファイルから[Extern 要素](../extensibility/extern-element.md)です。 マネージ コードが、要素の子要素、シンボルをこの情報を定義します。  
@@ -72,5 +73,5 @@ Guid および他の VSCT 要素によって使用されている Id を定義�
 </Symbols>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

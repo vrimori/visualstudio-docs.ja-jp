@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: de361711234404e8b83e28aa1875b3549039bce0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 447fa8749958a3fa2b65a6ef7eb878b906170e6a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-import-a-master-page-or-theme"></a>方法: マスター ページまたはテーマをインポートする
   付与できるページ、SharePoint サイトで一貫した外観を作成し、マスター ページとテーマを使用します。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]これらの要素のテンプレートが用意されていませんが、SharePoint Designer で作成しにインポートできます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 詳細については、次を参照してください。[ビルディング ブロック: ページやユーザー インターフェイス](http://go.microsoft.com/fwlink/?LinkID=182095)、Microsoft web サイトです。  
@@ -93,7 +94,7 @@ ms.lasthandoff: 10/31/2017
   
      マスター ページまたはテーマのいずれかの一覧が表示され、マスター ページまたはインポートしたテーマのいずれかが含まれています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター ページ](http://go.microsoft.com/fwlink/?LinkId=184955)   
  [既存の SharePoint サイトからアイテムをインポートします。](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)   
  [SharePoint 用ページの作成](../sharepoint/creating-pages-for-sharepoint.md)   

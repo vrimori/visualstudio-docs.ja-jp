@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 87398c82d0a22c79d852292fef3f86abe63a443d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: bb816aee41f86e2cbdc71e93b78f1a9e09249a00
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assign-activity-designer"></a>Assign アクティビティ デザイナー
 **割り当てる**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.Assign>アクティビティ。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.Activities.Statements.Assign.To%2A>|True|<xref:System.Activities.Statements.Assign.Value%2A> を割り当てる変数または引数。 有効な Visual Basic 識別子を指定する必要があります。 プロパティを設定するには、Visual Basic の式を入力、**に**ボックスに、**割り当てる**アクティビティ デザイナーまたはプロパティ グリッドでします。|  
 |<xref:System.Activities.Statements.Assign.Value%2A>|True|変数に割り当てられる値。 設定する、 <xref:System.Activities.Statements.Assign.Value%2A>、Visual Basic の式を入力、**値**ボックスに、**割り当てる**アクティビティ デザイナーまたはプロパティ グリッドでします。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プリミティブ](../workflow-designer/primitives-activity-designers.md)   
  [遅延](../workflow-designer/delay-activity-designer.md)   
  [メソッドの呼び出し](../workflow-designer/invokemethod-activity-designer.md)   

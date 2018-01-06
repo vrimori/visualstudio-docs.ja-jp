@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8c7a63c077207fdc85f3ad8b57119e1c7d1ca30b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8c40538b34c23e88b2c680db170b9d46b7b40f62
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="syntax-coloring-in-custom-editors"></a>カスタム エディターの構文の色分け
 コア エディターなど、visual Studio 環境 SDK エディターは、構文上の特定の項目を識別し、特定のドキュメント ビューの指定した色で表示する言語サービスを使用します。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  言語サービスの colorizer 以外にも、VSPackage が、汎用的な Visual Studio 環境 SDK テキストの色指定メカニズムを使用できます。 このメカニズムの詳細については、次を参照してください。[を使用するフォントおよび色](../extensibility/using-fonts-and-colors.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [従来の言語サービスの構文の色分け](../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)   
  [構文の色分けを実装します。](../extensibility/internals/implementing-syntax-coloring.md)   
  [方法: 組み込みの装飾が可能な項目を使用して](../extensibility/internals/how-to-use-built-in-colorable-items.md)   

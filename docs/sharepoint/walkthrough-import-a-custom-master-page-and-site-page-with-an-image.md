@@ -18,16 +18,17 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b5126e15daa8cbc22f4b64be0bb2bb2f3e0bb6b7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: ef55a90b55314bf7ab2c5aa6259f09b62a350da3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-import-a-custom-master-page-and-site-page-with-an-image"></a>チュートリアル: イメージを備えたカスタム マスター ページおよびサイト ページのインポート
   このチュートリアルは、SharePoint カスタム マスター ページとサイトのページにイメージがインポートする方法を示します、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint プロジェクト。  
   
- このチュートリアルで説明する内容は次のとおりです。  
+ このチュートリアルでは、以下のタスクを完了する方法について説明します。  
   
 -   SharePoint Designer でイメージを使用してカスタム マスター ページ、およびサイト ページを作成します。  
   
@@ -180,7 +181,7 @@ ms.lasthandoff: 10/31/2017
   
  ファイルをインポートする代替方法[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]しを展開内のモジュールにファイルを追加するは、SharePoint[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)][する方法: マスター ページまたはテーマをインポート](../sharepoint/how-to-import-a-master-page-or-theme.md)と[モジュールを使用して、ソリューション内のファイルのインクルード](../sharepoint/using-modules-to-include-files-in-the-solution.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [既存の SharePoint サイトからアイテムをインポートします。](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   
  [Web パーツまたはアプリケーション ページの再利用できるコントロールの作成](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)  

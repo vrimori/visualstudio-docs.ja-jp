@@ -21,11 +21,12 @@ caps.latest.revision: "40"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9a96ec16afda8823ddf9918340498e29efdff2f0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: bf714645f126f8a6f5e8aaca3ee6a2721bfe0a71
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-target-office-applications-through-primary-interop-assemblies"></a>方法 : プライマリ相互運用機能アセンブリを利用して Office アプリケーションを使用する
   新しい Office プロジェクトを作成すると、Visual Studio により、そのプロジェクトのビルドに必要な Microsoft Office プライマリ相互運用機能アセンブリ (PIA: Primary Interop Assembly) への参照が自動的に追加されます。 次の場合は、他の PIA への参照を追加する必要があります。  
@@ -51,11 +52,11 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]  
     >  Office プロジェクトを使用して常に Office Pia への参照を追加、 **.NET**のタブ、**参照の追加**ダイアログではなく、 **COM**タブです。詳細については、「[Office プライマリ相互運用機能アセンブリ](../vsto/office-primary-interop-assemblies.md)」を参照してください。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
      アセンブリ名が表示されます、**参照**のフォルダー**ソリューション エクスプ ローラー**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office プライマリ相互運用機能アセンブリ](../vsto/office-primary-interop-assemblies.md)   
  [Office ソリューションのコードの記述](../vsto/writing-code-in-office-solutions.md)   
  [Office ソリューションの開発](../vsto/developing-office-solutions.md)   

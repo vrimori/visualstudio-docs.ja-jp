@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 37e15fd871ad55bfca2ebf725b8a814b03df6d93
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f250d81ec35a2d9de074f54dded1f7ef0d76ef09
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="modifying-the-isolated-shell-by-using-the-pkgdef-file"></a>使用して分離シェルを変更します。Pkgdef ファイル
 .Pkgdef ファイルは、分離シェル アプリケーションのカスタマイズに使用できる設定をサポートします。 これには、アプリケーションがコンピューターにインストールされているし、アプリケーションを起動すると、Visual Studio shell によって参照されているときに作成される値を指定します。 設定は、該当するレジストリ キーに基づき、ファイルで構成されます。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/31/2017
   
 -   すべてのローカライズ可能なリソース識別子があるフォーム"@*resourceID*"または"#*resourceID*"ここで、 *resourceID*は、アプリケーションの UI パッケージ内のリソース識別子たとえば、`"@102"`です。 アプリケーションの UI パッケージは AppLocalizationPackage 設定で参照されているパッケージです。  
   
- 次に例を示します。  
+ たとえば、オブジェクトに適用された  
   
 ```  
 "HideSolutionConcept"=dword:00000001  
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="settings"></a>設定  
  次の表では、[$RootKey$] の下で定義されている値について説明します。  
   
-|名前|型|値|  
+|name|型|[値]|  
 |----------|----------|-----------|  
 |AddinsAllowed|dword|True の場合は、アドインを読み込むことができます。それ以外の場合は false です。<br /><br /> 既定値は true です。|  
 |AllowsDroppedFilesOnMainWindow|dword|メイン ウィンドウが削除されたファイルを受け入れることができる場合は true。それ以外の場合は false です。 使用して、メイン ウィンドウ上にドロップされたファイルが開かれた、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A>メソッドです。 これを使用してドキュメントを開くと、**開く**コマンドを**ファイル**アプリケーションのメニュー。<br /><br /> 既定値は true です。|  
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/31/2017
 |CommandLineLogo|string|コンソール ウィンドウで、アプリケーションの実行時に、バナー テキスト。 この設定では、コマンド ライン ビルド操作をサポートするアプリケーションのみに影響します。<br /><br /> 既定値は"*companyName**solutionName*バージョン 1.0"ここで、 *companyName* Windows をインストールしたときに提供する会社との名前を指定*。solutionName*アプリケーション ソリューション ファイルの名前を指定します。|  
 |DefaultDebugEngine|string|既定値の GUID は、エンジンをアプリケーションの使用をデバッグします。<br /><br /> 注: 空の GUID (すべてゼロ) では、アプリケーションに既定のデバッグ エンジンが指定されていないことを示します。 これにより、デバッガーを使用するデバッグ エンジンを選択できます。<br /><br /> 既定値は、"{00000000-0000-0000-0000-000000000000}"です。|  
 |DefaultHomePage|string|内部の Web ブラウザーのウィンドウの既定のホーム ページの URL。<br /><br /> 場合、**ホーム ページ**オプションは、アプリケーションでは、使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。[環境では、Web ブラウザーのオプション ダイアログ ボックス](../../ide/reference/web-browser-environment-options-dialog-box.md)です。<br /><br /> 既定値は、Windows のインストール時に提供された会社の URL です。|  
-|DefaultProjectsLocation|string|既定のプロジェクト フォルダーの完全パス。 次に例を示します。<br /><br /> `"DefaultProjectsLocation"="$MyDocuments$\MyVSShellStub\Projects"`<br /><br /> 場合、 **Visual Studio プロジェクトの場所**オプションは、アプリケーションでは、使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。 [NIB: [全般]、[プロジェクトおよびソリューションのオプション] ダイアログ ボックス](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca)です。<br /><br /> 既定値は"$MyDocuments$\\*solutionName*"ここで、 *solutionName*アプリケーション ソリューション ファイルの名前を指定します。|  
+|DefaultProjectsLocation|string|既定のプロジェクト フォルダーの完全パス。 たとえば、オブジェクトに適用された<br /><br /> `"DefaultProjectsLocation"="$MyDocuments$\MyVSShellStub\Projects"`<br /><br /> 場合、 **Visual Studio プロジェクトの場所**オプションは、アプリケーションでは、使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。 [NIB: [全般]、[プロジェクトおよびソリューションのオプション] ダイアログ ボックス](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca)です。<br /><br /> 既定値は"$MyDocuments$\\*solutionName*"ここで、 *solutionName*アプリケーション ソリューション ファイルの名前を指定します。|  
 |DefaultSearchPage|string|内部の Web ブラウザーのウィンドウの既定の検索ページ URL。<br /><br /> 場合、**検索ページ**オプションは、アプリケーションでは、使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。[環境では、Web ブラウザーのオプション ダイアログ ボックス](../../ide/reference/web-browser-environment-options-dialog-box.md)です。<br /><br /> 既定値は、"http://search.live.com"です。|  
 |DefaultUserFilesFolderRoot|string|現在のユーザーに対して、ユーザー フォルダーの名前はのマイ ドキュメント フォルダーです。<br /><br /> 既定値は、アプリケーションのソリューション ファイルの名前です。|  
 |DisableOutputWindow|dword|分離シェルは、無効になっているは、出力ウィンドウを扱う必要があるかどうかを示します。<br /><br /> この値が設定されている場合は true、Visual Studio 出力は表示されず、ソリューション ビルド マネージャーで、**出力**ウィンドウと非表示を切り替えます、**出力ウィンドウを表示ビルド開始時に** チェック ボックス、 **プロジェクトおよびソリューション**カテゴリで、**オプション** ダイアログ ボックス。<br /><br /> 既定値は false です。|  
@@ -76,7 +77,7 @@ ms.lasthandoff: 10/31/2017
 |HideSolutionConcept|dword|スタンドアロンのプロジェクトのすべてのプロジェクトを作成し、既定では、ソリューションとプロジェクトのスタンドアロン ソリューションに関連するコマンドを非表示にする場合は trueそれ以外の場合は false です。<br /><br /> 場合、**常にソリューションを表示する**オプションは、アプリケーションでは、使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。 [NIB: [全般]、[プロジェクトおよびソリューションのオプション] ダイアログ ボックス](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca)です。<br /><br /> 既定値は false です。|  
 |NewProjDlgInstalledTemplatesHdr|string|Visual Studio のインストール済みテンプレート ヘッダーの名前、**テンプレート**一覧に、**新しいプロジェクト** ダイアログ ボックス。 これは、文字列またはアプリケーションの UI パッケージから読み込まれているローカライズ可能なリソース識別子のどちらかです。<br /><br /> 既定値は"*solutionName*にインストールされたテンプレート"ここで、 *solutionName*アプリケーション ソリューション ファイルの名前を指定します。|  
 |NewProjDlgSlnTreeNodeTitle|string|名前、 **Visual Studio ソリューション**内のノード、**プロジェクトの種類**ツリーで、**新しいプロジェクト** ダイアログ ボックス。 これは、文字列またはアプリケーションの UI パッケージから読み込まれているローカライズ可能なリソース識別子のどちらかです。<br /><br /> 既定値は"*solutionName*にインストールされたテンプレート"ここで、 *solutionName*アプリケーション ソリューション ファイルの名前を指定します。|  
-|SolutionFileCreatorIdentifier|string|アプリケーションによって生成されるソリューション ファイルの 2 番目の行として表示されるアプリケーション識別子。 この行は、ファイルを作成したアプリケーションを示します。 規則では、この値には、アプリケーションおよびアプリケーションのバージョン番号の両方に名前が含まれます。 次に例を示します。<br /><br /> `"SolutionFileCreatorIdentifier"="MyVSShellStub Solution File, Format Version 10.00"`<br /><br /> Visual Studio ソリューション ファイルを開くときの既定のプログラムである、VSLauncher.exe プログラムは、ソリューション ファイルを開くときに Visual Studio のバージョンを確認するのにこの 2 つ目の行を使用します。 アプリケーションには、その関連するソリューション ファイルを処理する、独自のランチャーが必要です。 ランチャーでしたも行を使用して 2 番目のソリューション ファイルにソリューションを開くアプリケーションのバージョンを決定します。<br /><br /> 注意: Visual Studio VSLauncher.exe プログラムは、分離シェル アプリケーションによって作成された .sln ファイルを処理しません。<br /><br /> 既定値は"*solutionName*ソリューション ファイルの形式バージョン 10.00" ここで、 *solutionName*アプリケーション ソリューション ファイルの名前を指定します。|  
+|SolutionFileCreatorIdentifier|string|アプリケーションによって生成されるソリューション ファイルの 2 番目の行として表示されるアプリケーション識別子。 この行は、ファイルを作成したアプリケーションを示します。 規則では、この値には、アプリケーションおよびアプリケーションのバージョン番号の両方に名前が含まれます。 たとえば、オブジェクトに適用された<br /><br /> `"SolutionFileCreatorIdentifier"="MyVSShellStub Solution File, Format Version 10.00"`<br /><br /> Visual Studio ソリューション ファイルを開くときの既定のプログラムである、VSLauncher.exe プログラムは、ソリューション ファイルを開くときに Visual Studio のバージョンを確認するのにこの 2 つ目の行を使用します。 アプリケーションには、その関連するソリューション ファイルを処理する、独自のランチャーが必要です。 ランチャーでしたも行を使用して 2 番目のソリューション ファイルにソリューションを開くアプリケーションのバージョンを決定します。<br /><br /> 注意: Visual Studio VSLauncher.exe プログラムは、分離シェル アプリケーションによって作成された .sln ファイルを処理しません。<br /><br /> 既定値は"*solutionName*ソリューション ファイルの形式バージョン 10.00" ここで、 *solutionName*アプリケーション ソリューション ファイルの名前を指定します。|  
 |SolutionFileExt|string|アプリケーションのソリューション ファイル名拡張子。 一意のファイル名拡張子 (not.sln) を選択することをお勧めします。<br /><br /> 既定値は"*solutionName*_sln"ここで、 *solutionName*アプリケーション ソリューション ファイルの名前を指定します。|  
 |SplashScreenBitmap|string|アプリケーションのスプラッシュ画面のビットマップ ファイルの完全パス。<br /><br /> 既定値は、"$RootFolder$\Splash.bmp"です。|  
 |ThisVersionDTECLSID|string|アプリケーションのオートメーション オブジェクトのクラス id (CLSID)。<br /><br /> アプリケーションのオートメーション オブジェクトは、Visual Studio シェル オートメーション モデルと実装でアプリケーションの最上位レベル オブジェクト、<xref:EnvDTE._DTE?displayProperty=fullName>インターフェイスです。<br /><br /> Hkey_classes_root \clsid レジストリ キーの下でアプリケーションのオートメーション オブジェクトが正しく登録されているかどうかは、使用することができます、 [CComPtrBase::CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)直接、アプリケーションのインスタンスを作成する関数。<br /><br /> Visual Studio シェルでは、この CLSID を使用して、ACTIVEOBJECT_WEAK フラグを使用して実行中のオブジェクト テーブル (ROT) でアプリケーションのオートメーション オブジェクトを登録します。 使用できます、 [GetActiveObject](http://msdn.microsoft.com/en-us/a276e30c-6a7f-4cde-9639-21a9f5170b62)アプリケーションの実行中のインスタンスへのポインターを取得します。 さらに、アプリケーション オートメーション オブジェクトの ProgID を定義する場合、Visual Studio シェルはまた、アプリケーションの各インスタンスに登録 ROT 形式の項目のモニカーを使用して*progID*:*processID*ここで、 *progID*は、アプリケーションのオートメーション オブジェクトの ProgID および*processID*アプリケーションのインスタンスのプロセス識別子を指定します。 たとえば、次のように、モニカーを作成する場合。<br /><br /> `CreateItemMoniker(L"!",`  *instanceString*`, &instanceMoniker)`<br /><br /> ここで`instanceString`は、 *progID*:*processID*文字列。 使用して`instanceMoniker`インスタンスの取得に回転 GetObject 関数を使用します。<br /><br /> ThisVersionDTECLSID 設定を省略すると、コンポーネント オブジェクト モデル (COM) ではないアプリケーションに公開されます。 ここでは、呼び出すことによって、アプリケーションのインスタンスを作成できません、 [CComPtrBase::CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)関数し、ROT に登録することはできません。<br /><br /> VSPackage の各バージョンには、異なる CLSID 必要があります。<br /><br /> 既定値は、Visual Studio がアプリケーションのオートメーション オブジェクトに対して生成される GUID です。|  
@@ -95,7 +96,7 @@ ms.lasthandoff: 10/31/2017
   
 -   Common7\IDE\\\PublicAssemblies  
   
- ディレクトリをバインド パスを追加するには、フォームのエントリを追加"*ディレクトリ名*「=」"、どこで*ディレクトリ名*絶対パスです。 次に例を示します。  
+ ディレクトリをバインド パスを追加するには、フォームのエントリを追加"*ディレクトリ名*「=」"、どこで*ディレクトリ名*絶対パスです。 たとえば、オブジェクトに適用された  
   
 ```  
 [$RootKey$\BindingPaths\{00000000-0000-0000-0000-000000000000}]  
@@ -106,14 +107,14 @@ ms.lasthandoff: 10/31/2017
 ## <a name="profile-settings"></a>プロファイルの設定  
  次の表では、[$RootKey$ \Profile] の下の関連する各パッケージに対して定義されている値について説明します。  
   
-|名前|型|値|  
+|name|型|[値]|  
 |----------|----------|-----------|  
 |AutoSaveFile|string|アプリケーションが自動保存ファイルを格納するディレクトリ。<br /><br /> 既定値は、"$RootFolder$\Profiles\CurrentSettings.vssettings"です。|  
   
 ## <a name="package-satellite-dll-settings"></a>パッケージ サテライト DLL の設定  
  次の表で定義されている値 [$RootKey$ \Packages\\{*vsPackageGuid*} \SatelliteDll] サテライト、関連付けられているパッケージごとの DLL の場所*vsPackageGuid* 、関連付けられたパッケージの GUID です。  
   
-|名前|型|値|  
+|name|型|[値]|  
 |----------|----------|-----------|  
 |DllName|string|DLL のファイル名。<br /><br /> 既定値は"*solutionName*ui.dll"ここで、 *solutionName*アプリケーション ソリューション ファイルの名前を指定します。|  
 |パス|string|サテライト DLL を格納するディレクトリ。<br /><br /> 既定値は、「$PackageFolder$」です。|  
@@ -127,6 +128,6 @@ ms.lasthandoff: 10/31/2017
   
  メニュー項目を提供して、アプリケーションの一部として配布される各パッケージのパッケージのメニュー項目を追加します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [分離シェルのカスタマイズ](customizing-the-isolated-shell.md)   
  [.Pkgundef ファイル](modifying-the-isolated-shell-by-using-the-dot-pkgundef-file.md)

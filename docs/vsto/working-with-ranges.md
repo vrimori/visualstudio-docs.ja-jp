@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 64bac205a64eaf321bb0144d9f81edfa065b9029
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3d585c6019455fae5305a848ef62c74cfedf6b6e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-ranges"></a>範囲の使用
   <xref:Microsoft.Office.Tools.Excel.NamedRange> クラスと <xref:Microsoft.Office.Interop.Excel.Range> クラスには、範囲関連のタスクを実行するときに使用するメソッドとプロパティが含まれています。  
@@ -37,14 +38,14 @@ ms.lasthandoff: 10/31/2017
 |領域内のセルにスタイルを適用します。|[方法: プログラムによってブック内の範囲にスタイルを適用する](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)|  
 |ワークシートの範囲内のテキストを検索します。|[方法: プログラムによってワークシートの範囲内のテキストを検索する](../vsto/how-to-programmatically-search-for-text-in-worksheet-ranges.md)|  
 |セルの範囲内にあるテキストに色を適用します。|[方法: プログラムによって Excel の範囲に色を適用する](../vsto/how-to-programmatically-apply-color-to-excel-ranges.md)|  
-|Excel の計算をプログラムで実行します。|[方法: プログラムによって Excel の計算を実行](../vsto/how-to-programmatically-run-excel-calculations-programmatically.md)|  
+|Excel の計算をプログラムで実行します。|[方法: Excel の計算をプログラムで実行する](../vsto/how-to-programmatically-run-excel-calculations-programmatically.md)|  
 |セルに文字列を表示します。|[方法: プログラムによってワークシートのセルに文字列を表示する](../vsto/how-to-programmatically-display-a-string-in-a-worksheet-cell.md)|  
   
  Excel タスクおよび Excel オブジェクト モデルについて詳しくは、「 [Excel Object Model Overview](../vsto/excel-object-model-overview.md)」をご覧ください。  
   
  以下のタスクは、VSTO アドインとドキュメント レベルのカスタマイズとで実行方法が異なる場合があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)   
  [ワークシートの操作](../vsto/working-with-worksheets.md)   
  [ブックの操作](../vsto/working-with-workbooks.md)   

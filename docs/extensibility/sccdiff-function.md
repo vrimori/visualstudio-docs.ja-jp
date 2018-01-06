@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0bfe7da717a59b114052080048e97b1d6fcdd425
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 832d80c3ca49cc03c4a66b6a4cf931dd40686c82
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccdiff-function"></a>SccDiff 関数
 この関数が表示されます (または必要に応じてだけをチェック) (ローカル ディスク) 上の現在のファイルと、最新のチェックインされているバージョンの違い、ソース管理システムです。  
@@ -54,7 +55,7 @@ SCCRTN SccDiff(
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|作業コピーとサーバー バージョンは同じです。|  
 |SCC_I_FILESDIFFERS|作業コピーは、ソース管理下のバージョンによって異なります。|  
@@ -83,5 +84,5 @@ SCCRTN SccDiff(
 |SCC_DIFF_QD_CHECKSUM|サイレント モードでサポートされている場合、チェックサムを使用してファイルを比較します。 サポートされていない場合は、内容の比較にフォールバックします。|  
 |SCC_DIFF_QD_TIME|サイレント モードでサポートされている場合は、そのタイムスタンプを使用してファイルを比較します。 サポートされていない場合は、内容の比較にフォールバックします。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

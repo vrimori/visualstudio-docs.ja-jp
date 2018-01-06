@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 909c4b4e47bdc9de60b9761974843b370c7400e1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: aa8da8828dbbc314ce976572d1f6bd9d5abf5721
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprocesssecuritygetusername"></a>IDebugProcessSecurity::GetUserName
 ポートのサプライヤーからユーザー名を取得します。  
@@ -46,5 +47,5 @@ int GetUserName (
 ## <a name="remarks"></a>コメント  
  `GetUserName`表示されるユーザー名を返します、**ユーザー名**の列、**プロセスにアタッチする** ダイアログ ボックス。 表示する、**プロセスにアタッチする**ダイアログ ボックスで、 をクリックして**プロセスにアタッチする**で、**ツール**でメニュー、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProcessSecurity](../../../extensibility/debugger/reference/idebugprocesssecurity.md)

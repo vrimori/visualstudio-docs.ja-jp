@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f2873c735f8f4417ea7f0ee3e6137a878dd806fc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a117ac9392fe8796ceb9a878ed0139f709d637f1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumdebugports2clone"></a>IEnumDebugPorts2::Clone
 個別のオブジェクトとして現在の列挙型のコピーを返します。  
@@ -47,5 +48,5 @@ int Clone(
 ## <a name="remarks"></a>コメント  
  列挙体のコピーでは、このメソッドが呼び出されたときに元と同じ状態がします。 ただし、コピーのと、元の状態は別に、個別に変更することができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md)

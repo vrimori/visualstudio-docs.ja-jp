@@ -18,11 +18,12 @@ caps.latest.revision: "27"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5c1cb9e31384822dddcdd3668bfb3a54bc2782d6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c064a6632741eba69a553be87fb8f829063b266b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registering-project-and-item-templates"></a>プロジェクトと項目テンプレートの登録
 プロジェクトの種類は、そのプロジェクトとプロジェクト項目テンプレートが配置されているディレクトリを登録する必要があります。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]表示するものを決定する、プロジェクトの種類に関連付けられている登録情報を使用して、**新しいプロジェクトの追加**と**新しい項目の追加** ダイアログ ボックス。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/31/2017
 "ProjectTemplatesDir"="C:\\MyProduct\\MyProjectTemplates"  
 ```  
   
-|名前|種類|説明|  
+|name|種類|説明|  
 |----------|----------|-----------------|  
 |@|REG_SZ|この種類のプロジェクトの既定の名前。|  
 |DisplayName|REG_SZ|パッケージ サテライト DLL から取得する名前のリソース ID が登録されています。|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/31/2017
 "SortPriority"=dword:00000064  
 ```  
   
-|名前|種類|説明|  
+|name|種類|説明|  
 |----------|----------|-----------------|  
 |@|REG_SZ|項目の追加テンプレートのリソース ID です。|  
 |TemplatesDir|REG_SZ|ダイアログ ボックスに表示されるプロジェクト アイテムのパス、**新しい項目の追加**ウィザード。|  
@@ -85,7 +86,7 @@ ms.lasthandoff: 10/31/2017
 "SortPriority"=dword:00000064  
 ```  
   
-|名前|種類|説明|  
+|name|種類|説明|  
 |----------|----------|-----------------|  
 |CommonFindFilesFilter|REG_DWORD|一般的なフィルターのいずれかのフィルターは、**ファイル内の検索** ダイアログ ボックス。 一般的なフィルターは、一般的でマークされていないフィルターの前に、フィルター一覧に表示されます。|  
 |CommonOpenFilesFilter|REG_DWORD|一般的なフィルターのいずれかのフィルターは、**ファイルを開く** ダイアログ ボックス。 一般的なフィルターは、一般的でマークされていないフィルターの前に、フィルター一覧に表示されます。|  
@@ -119,7 +120,7 @@ ms.lasthandoff: 10/31/2017
   
  \WizardFiles  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクトとプロジェクト項目テンプレートを追加します。](../../extensibility/internals/adding-project-and-project-item-templates.md)   
  [ウィザード](../../extensibility/internals/wizards.md)   
  [アプリケーションのローカライズ](../../ide/localizing-applications.md)   

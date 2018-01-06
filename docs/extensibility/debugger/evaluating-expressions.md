@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 870469b77eb2f9fcf562602dd651c84fa71020ae
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 24cc20166bad875dcaebbd5492a7fe8317539d47
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="evaluating-expressions"></a>式を評価します。
 式は、[自動変数]、ウォッチ、[クイック ウォッチ]、またはイミディ エイト ウィンドウから渡される文字列から作成されます。 式を評価するときに、変数または引数とその値の型と名前を含む印刷可能な文字列を生成します。 この文字列は、対応する IDE のウィンドウに表示されます。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/31/2017
   
  式の評価を有効にする、DE を実装する必要があります、 [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md)と[IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md)インターフェイスです。 同期および非同期の評価の実装が必要、 [IDebugProperty2::GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)メソッドです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [スタック フレーム](../../extensibility/debugger/stack-frames.md)   
  [式の評価コンテキスト](../../extensibility/debugger/expression-evaluation-context.md)   
  [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)

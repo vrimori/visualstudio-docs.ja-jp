@@ -6,18 +6,19 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords: Thread Search
 ms.assetid: 52ecb289-9b86-455c-a52b-3dcd3f7255bf
 caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9887fef89ea78665a64eead02f4d7ea11a28d890
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 1f6cf674581b4e4368aab87e7ddd6c64096efe5e
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="thread-search-dialog-box"></a>[スレッド検索] ダイアログ ボックス
 検索で特定のスレッドのノードを選択してこのダイアログ ボックスを使用して[スレッド ビュー](../debugger/threads-view.md)です。 このダイアログ ボックスを表示するには、フォーカスを移動、**スレッド**ビュー ウィンドウ。 選択し、**スレッド**から、**検索**メニュー。  

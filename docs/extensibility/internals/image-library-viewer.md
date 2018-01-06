@@ -11,11 +11,12 @@ caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3da2368d8d30ba54dd6b4ae6a36aba6e75ea2967
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b699233d0b0ddf14079240da3bd831a172641fba
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="image-library-viewer"></a>イメージ ライブラリ ビューアー
 Visual Studio Image Library ビューアー ツールは、読み込むし、ユーザーが Visual Studio と同じ方法で操作できるように、画像マニフェストを検索できます。 ユーザーには、バック グラウンド、サイズ、DPI、ハイ コントラスト、およびその他の設定を変更できます。 ツールは、各イメージ マニフェストの読み込み情報を表示し、イメージ マニフェストで各イメージのソース情報を表示します。 このツールは、に役立ちます。  
@@ -74,9 +75,9 @@ Visual Studio Image Library ビューアー ツールは、読み込むし、ユ
 |-|-|  
 |**サブ要素**|**定義**|  
 |インポート|現在のマニフェストで使用する指定されたマニフェスト ファイルのシンボルをインポートします。|  
-|Guid|シンボルは、GUID を表し、GUID の書式設定と一致する必要があります。|  
+|GUID|シンボルは、GUID を表し、GUID の書式設定と一致する必要があります。|  
 |ID|シンボルは、ID を表し、負でない整数でなければなりません。|  
-|文字列型|シンボルは、任意の文字列値を表します。|  
+|String|シンボルは、任意の文字列値を表します。|  
   
  シンボルは、大文字と小文字、および参照 $(symbol-name) 構文を使用するには。  
   
@@ -115,7 +116,7 @@ Visual Studio Image Library ビューアー ツールは、読み込むし、ユ
 |||  
 |-|-|  
 |**属性**|**定義**|  
-|Guid|[必須]イメージのモニカーの GUID 部分|  
+|GUID|[必須]イメージのモニカーの GUID 部分|  
 |ID|[必須]イメージのモニカーの ID 部分|  
 |AllowColorInversion|[省略可能で、既定値は true]イメージが、暗い背景で使用するとは逆にプログラムでの色を持つかどうかを示します。|  
   
@@ -140,7 +141,7 @@ Visual Studio Image Library ビューアー ツールは、読み込むし、ユ
 ||||  
 |-|-|-|  
 |**要素**|**属性 (すべてが必須)**|**定義**|  
-|\<サイズ >|値|ソースは、指定されたサイズ (デバイスのユニット数) のイメージの適用されます。 画像は四角形になります。|  
+|\<サイズ >|[値]|ソースは、指定されたサイズ (デバイスのユニット数) のイメージの適用されます。 画像は四角形になります。|  
 |\<SizeRange >|MinSize、MaxSize|ソースは、包括的 (デバイス単位で) の MaxSize を MinSize からイメージに使用されます。 画像は四角形になります。|  
 |\<ディメンション >|幅、高さ|ソースは、指定した幅と高さ (デバイス単位) のイメージの適用されます。|  
 |\<DimensionRange >|MinWidth、MinHeight、<br /><br /> MaxWidth、MaxHeight|ソースは、包括的イメージの幅/高さの最小値から最大の幅と高さ (デバイス単位で) に使用されます。|  
@@ -171,7 +172,7 @@ Visual Studio Image Library ビューアー ツールは、読み込むし、ユ
 |||  
 |-|-|  
 |**属性**|**定義**|  
-|Guid|[必須]イメージのモニカーの GUID 部分|  
+|GUID|[必須]イメージのモニカーの GUID 部分|  
 |ID|[必須]イメージのモニカーの ID 部分|  
 |外部|[省略可能で、既定値は false]イメージ モニカーが現在のマニフェストでイメージを参照するかどうかを示します。|  
   

@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 734d05dd013be9a3d6c4a173a5c7abc7a01ef2d8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 004b40acb50fe85604d0a3cfa9f5626891fa66a4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idsymbol-element"></a>IDSymbol 要素
 `IDSymbol`要素には、メニューのグループ、またはコマンドを表す GUID:ID のペアの ID が含まれています。 GUID は、親から取得`GuidSymbol`要素。 `IDSymbol`要素には、`name`に含まれていると、ID のフレンドリ名を提供する属性、`value`属性。  
@@ -37,8 +38,8 @@ ms.lasthandoff: 10/31/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|name|必須です。 ID シンボルの名前です。|  
-|値|必須です。 ID シンボルの数値の ID 値です。|  
+|name|必須。 ID シンボルの名前です。|  
+|value|必須。 ID シンボルの数値の ID 値です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -52,5 +53,5 @@ ms.lasthandoff: 10/31/2017
 ## <a name="remarks"></a>コメント  
  各`IDSymbol`内の要素を指定した`GuidSymbol`要素は、一意でなければなりません`value`です。 ただし、`IDSymbol`別の親を持っていれば、パッケージで同じ値を持つ要素が存在できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

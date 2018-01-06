@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4d7c08cd7fc89e33ef9d505c9e32c23737ef7e84
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 457cfc4997ca02ca76b296e3b56fded244629e52
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugstackframe2"></a>IDebugStackFrame2
 このインターフェイスは、特定のスレッドのコール スタックの 1 つのスタック フレームを表します。  
@@ -54,12 +55,12 @@ IDebugStackFrame2 : IUnknown
 ## <a name="remarks"></a>コメント  
  このインターフェイスは、デバッグ中のプログラムが (いずれかの原因となったユーザー セット ブレークポイントまたは例外によって) ブレークポイントで停止された場合にのみ取得されます。 このインターフェイスから式を評価する式のコンテキストを取得することができます、レジスタの一覧を返すことが、または呼び出し履歴を取得して調べることができます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)

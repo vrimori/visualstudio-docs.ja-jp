@@ -6,7 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Debugger.JIT
 - vs.debug.options.JIT
@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e4648ecb0ce1b62256cdf2fe297c0d8cb4ccb17e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 057c5e0e37d8e84daa4348c91847a12b6a9ae5e9
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="just-in-time-debugging-options-dialog-box"></a>[Just-In-Time] ([オプション] ダイアログ ボックス - [デバッグ])
 アクセスする、**ジャスト イン タイム** ページに移動して、**ツール**メニューをクリックして**オプション**です。 **オプション** ダイアログ ボックスで、展開、**デバッグ**ノード**ジャスト イン タイム**です。 このページでは、マネージ コード、ネイティブ コード、およびスクリプトでの Just-In-Time デバッグを有効にできます。 詳細については、次を参照してください。 [Just-In-Time デバッグ](../debugger/just-in-time-debugging-in-visual-studio.md)です。  
@@ -58,6 +59,6 @@ ms.lasthandoff: 10/31/2017
   
  **アクセスが拒否されました。デバッグしておくことを管理者ジャスト イン タイムを有効にする、または Visual Studio のインストールを修復します。**  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッグ オプション ダイアログ ボックス](../debugger/debugging-options-dialog-box.md)   
  [方法: デバッガー設定を指定する](../debugger/how-to-specify-debugger-settings.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7bb782b79c00576a431c8f4453ddf020606aaf5a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d77c307ec7b732ba727b7210b4f4eaacb44584aa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-persistence"></a>プロジェクトの永続化
 永続化は、プロジェクトの主要な設計の考慮事項です。 ほとんどのプロジェクト ファイルを表すプロジェクト項目を使用します。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]もデータが含まれるファイル ベースのプロジェクトをサポートします。 プロジェクトとプロジェクト ファイルによって所有されている、ファイルの両方を保存する必要があります。 IDE では、プロジェクト自体またはプロジェクト項目を保存するように指示します。  
@@ -45,6 +46,6 @@ ms.lasthandoff: 10/31/2017
   
  メソッド、`IVsPersistHierarchyItem2`インターフェイスを使用して、再読み込みする項目がある場合、項目が再読み込みするかどうかを決定します。 さらに、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IgnoreItemFileChanges%2A>変更された項目が保存されることがなく破棄されるが発生するメソッドを実装することができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チェックリスト: 新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)   
  [プロジェクト ファクトリを使用したプロジェクト インスタンスの作成](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)

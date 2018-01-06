@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4b437dad35850a20696702b84d8ea98ead8a1e9e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a9d09c452fb6d03f7f5072e34813c3757455f96a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="legacy-interfaces-in-the-editor"></a>エディターでの従来のインターフェイス
 Visual Studio エディターは、従来のインターフェイスからアクセスできます。 Visual Studio SDK と呼ばれるアダプタが含まれています。 *shim*、新しいエディターと対話するこれらのインターフェイスを有効にします。 ただし、新しいエディター API を使用して従来のコードを更新することをお勧めします。 コードがパフォーマンスを向上させ、Windows Presentation Foundation (WPF) および Managed Extensibility Framework (MEF) などの新しいテクノロジを使用することができます。  

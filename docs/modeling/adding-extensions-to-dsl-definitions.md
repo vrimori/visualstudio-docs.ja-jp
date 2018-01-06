@@ -11,11 +11,12 @@ caps.latest.revision: "6"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: f335db9f22392c4d0293a51111efff88c25c3145
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 77a631d7f245dfe6d324e2b392349b559447212f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-extensions-to-dsl-definitions"></a>DSL 定義への拡張機能の追加
 DSL 定義の拡張機能では、ドメイン固有言語 (DSL) の拡張機能のパッケージを作成することができます。 Visual Studio Integration Extension (VSIX) に含まれる、DSL の拡張機能は、DSL と同じ方法でユーザーのコンピューターにインストールできます。 追加の機能を動的に有効になっているし、実行時に無効になっています。 Dsl を明示的に拡張機能に合わせて設計する必要はありません、拡張機能後で、またはサード パーティによる拡張の DSL を変更することがなく設計します。  
@@ -36,5 +37,5 @@ DSL 定義の拡張機能では、ドメイン固有言語 (DSL) の拡張機能
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [関連するブログの投稿](https://blogs.msdn.microsoft.com/visualstudioalm/tag/code-index/)

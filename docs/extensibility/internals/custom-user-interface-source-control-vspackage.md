@@ -15,11 +15,12 @@ caps.latest.revision: "28"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6138ffcd0c56b87e9e29a316aa2ae0ad9f982e18
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3d3c223b45d0228781779a73f057ef3518374344
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-user-interface-source-control-vspackage"></a>カスタム ユーザー インターフェイス (ソース コントロール VSPackage)
 VSPackage は、Visual Studio コマンド テーブル (.vsct) ファイルをそのメニュー項目とその既定の状態を宣言します。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) では、VSPackage が読み込まれるまでその既定の状態でメニュー項目を表示します。 その後、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>有効にするにまたはメニュー項目を無効にするメソッドが呼び出されます。  
@@ -58,7 +59,7 @@ VSPackage は、Visual Studio コマンド テーブル (.vsct) ファイルを�
 |ツール ウィンドウ|VSPackage のソース管理には、非アクティブなが行われたときを所有している任意のツール ウィンドウが非表示にします。|  
 |ソース管理 VSPackage に固有のオプション ページ|HKLM\SOFTWARE\Microsoft\VisualStudio\X.Y\ToolsOptionsPages\VisibilityCmdUIContexts のレジストリ キーには、VSPackage のオプション ページを表示する必要とするコンテキストを設定することができます。 このキーの下のレジストリ エントリは、サービスのソース管理サービスの ID (SID) を使用し、1 の DWORD 値を割り当てることによって作成する必要があります。 UI イベントは、VSPackage に登録されているソース管理のコンテキストで発生するたびにアクティブである場合、VSPackage が呼び出されます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>   

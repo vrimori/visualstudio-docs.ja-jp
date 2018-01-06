@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 58e0e5cd58a29a674f556f83e84e1f8063296dcd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: c8edebe902332145351bb85a274b8e17ef4db14c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="error-messages-office-development-in-visual-studio"></a>エラー メッセージ (Visual Studio の Office 開発)
   エラー メッセージの各トピックでは、考えられるエラーの原因と、問題解決のために考えられる解決方法または代替手段を示します。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/31/2017
 |F1|エラーが表示されたら F1 キーを押します。 これにより、オンライン ドキュメント中の該当するエラー メッセージのトピックが表示されます。|  
 |フル テキスト検索|エラー メッセージ テキストの最初の文に含まれている語を使用して、フル テキスト検索を実行します。 **[ヘルプ]** メニューの **[検索]**をクリックします。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office および Visual Studio での SharePoint 開発](../vsto/office-and-sharepoint-development-in-visual-studio.md)  
   
   

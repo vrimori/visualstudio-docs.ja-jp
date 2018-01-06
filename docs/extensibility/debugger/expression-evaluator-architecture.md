@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6805b97da8e8f742b1b6c0bb3298e9324bb1f72e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3ccfca52bb4fe2190837202342915e248dbd6167
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="expression-evaluator-architecture"></a>式エバリュエーターのアーキテクチャ
 > [!IMPORTANT]
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/31/2017
  [主要なエバリュエーター インターフェイス](../../extensibility/debugger/key-expression-evaluator-interfaces.md)  
  評価のコンテキストと共に、EE を記述する場合に必要な重要なインターフェイスについて説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CLR 式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   
  [ローカル変数を表示します。](../../extensibility/debugger/displaying-locals.md)   
  [ローカルの値の変更](../../extensibility/debugger/changing-the-value-of-a-local.md)

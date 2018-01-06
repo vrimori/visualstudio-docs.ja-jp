@@ -15,11 +15,12 @@ caps.latest.revision: "34"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 118f715e71f610d4e9dc2589767f6fb54ab4e814
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b0f02abe4cad58db27700aee3c29ec8d2dd7a7e2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registration-and-selection-source-control-vspackage"></a>登録と選択 (ソース コントロール VSPackage)
 公開するために VSPackage を登録する必要があるソース管理、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 1 つ以上のソース管理 VSPackage が登録されている場合、ユーザーはどの VSPackage を読み込むことが適切なタイミングでを選択できます。 参照してください[Vspackage](../../extensibility/internals/vspackages.md) Vspackage とこれらを登録する方法の詳細についてはします。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 10/31/2017
   
  以前のバージョンのとは異なり[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]IDE の再起動は、Vspackage のソース管理をスイッチする唯一の方法ではなくなりました。 VSPackage の選択は自動です。 パッケージを切り替えるには、Windows のユーザー特権 (管理者またはパワー ユーザーではない) 必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence>   
  [機能](../../extensibility/internals/source-control-vspackage-features.md)   
  [ソース管理プラグインを作成します。](../../extensibility/internals/creating-a-source-control-plug-in.md)   

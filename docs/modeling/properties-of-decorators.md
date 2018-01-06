@@ -12,11 +12,12 @@ caps.latest.revision: "23"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 23288d1afe9b9c0a181a5d978b1956071b683218
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 74e58042c5bcd2aa4883b3e8bb0fc484a59237ac
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-decorators"></a>デコレーターのプロパティ
 デコレーターは、アイコン、テキスト、または図形またはコネクタ図上に表示される可能性が展開/折りたたみの山かっこです。 次の表は、デコレーターの 3 種類のプロパティを表示します。 一部のプロパティには、図形デコレーターでのみ、またはコネクタ デコレーターでのみが表示されます。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/27/2017
 |プロパティ|説明|既定値|  
 |--------------|-----------------|-------------|  
 |DisplayName|生成されたデザイナーで表示されるデコレーターの名前です。|折りたたみデコレーターを展開します。|  
-|名前|デコレータの名前。|ExpandCollapseDecorator|  
+|name|デコレータの名前。|ExpandCollapseDecorator|  
 |メモ|このデコレータに関連付けられている非公式なノートです。|\<なし >|  
 |HorizontalOffset|水平方向のオフセットをインチで、デコレーターの既定の位置に対して相対的です。 (図形上のみです。)|0|  
 |VerticalOffset|垂直方向のオフセットをインチで、デコレーターの既定の位置に対して相対的です。 (図形上のみです。)|0|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/27/2017
 |--------------|-----------------|-------------|  
 |DefaultIcon|表示されるアイコンまたはイメージ ファイルのパス。|\<なし >|  
 |DisplayName|生成された、デザイナーに表示されるデコレーターの名前です。|アイコンの Decorator|  
-|名前|デコレータの名前。|IconDecorator|  
+|name|デコレータの名前。|IconDecorator|  
 |メモ|デコレータに関連付けられている非公式なノートです。|\<なし >|  
 |HorizontalOffset|水平方向のオフセットをインチで、デコレーターの既定の位置に対して相対的です。 (図形上のみです。)|0|  
 |VerticalOffset|垂直方向のオフセットをインチで、デコレーターの既定の位置に対して相対的です。 (図形上のみです。)|0|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/27/2017
 |DisplayName|生成された、デザイナーに表示されるデコレーターの名前です。|group1|  
 |FontSize|デコレータに表示されるテキストのフォント サイズ。|8|  
 |FontStyle|デコレータに表示されるテキストのフォント スタイル。|Regular|  
-|名前|デコレータの名前。|group1|  
+|name|デコレータの名前。|group1|  
 |メモ|デコレータに関連付けられている非公式なノートです。|\<なし >|  
 |HorizontalOffset|水平方向のオフセットをインチで、デコレーターの既定の位置に対して相対的です。 (図形上のみです。)|0|  
 |VerticalOffset|垂直方向のオフセットをインチで、デコレーターの既定の位置に対して相対的です。 (図形上のみです。)|0|  
@@ -66,5 +67,5 @@ ms.lasthandoff: 10/27/2017
 |OffsetFromShape|デコレータ インチで、既定の位置に対しての形状からのオフセット。 (コネクタののみ。)|0|  
 |位置|デコレータの既定の位置。|TargetBottom|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)

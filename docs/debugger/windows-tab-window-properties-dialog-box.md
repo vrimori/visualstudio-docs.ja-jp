@@ -6,18 +6,19 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords: Window Properties dialog box, Windows Tab
 ms.assetid: 9001342a-09a8-4f5e-b6ed-881a3b9d7246
 caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a49ec9b52d2eaf6dc336ed28d5b4e531bb3b25cf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c8336d854f8288429c40ff308e0f0c8004edfe1c
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="windows-tab-window-properties-dialog-box"></a>[ウィンドウ] タブ ([ウィンドウ プロパティ] ダイアログ ボックス)
 使用して、 **Windows** windows 上の情報を表示するタブが選択したウィンドウに関連します。 表示する、[ウィンドウのプロパティ ダイアログ ボックス](../debugger/window-properties-dialog-box.md)にフォーカスを移動する、[ウィンドウ ビュー](../debugger/windows-view.md)ウィンドウです。 ツリーで、ウィンドウの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  

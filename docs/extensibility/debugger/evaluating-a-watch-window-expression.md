@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 03a74bf73f457009a6f17f8e7bdda8e4e7b9e35f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fb109fd91e4c295bf372b14e26bc2a75c3be6b1d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="evaluating-a-watch-window-expression"></a>[ウォッチ] ウィンドウの式を評価します。
 > [!IMPORTANT]
@@ -61,5 +62,5 @@ ms.lasthandoff: 10/31/2017
  [評価コンテキスト](../../extensibility/debugger/evaluation-context.md)  
  デバッグ エンジン (DE) は、式エバリュエーター (EE) を呼び出すときに渡される引数を提供します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CLR 式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

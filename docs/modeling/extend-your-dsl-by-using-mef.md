@@ -11,11 +11,12 @@ caps.latest.revision: "14"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 492455d06c65bdcf3838c4f61d1fd2dbbcbb0c3f
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 1f64368c90f6d77be24271eeaac96cc6b5624f67
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>MEF による DSL の拡張
 Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語 (DSL) を拡張することができます。 か、他の開発者は、DSL 定義とプログラム コードを変更することがなく、DSL の拡張機能を記述することができます。 このような拡張機能には、メニュー コマンド、ドラッグ アンド ドロップ ハンドラー、および検証が含まれます。 ユーザーは、DSL をインストールして、その拡張機能を必要に応じてインストールを可能になります。  
@@ -373,7 +374,7 @@ namespace MefExtension
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio 拡張機能の配布](../extensibility/shipping-visual-studio-extensions.md)   
  [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)   
  [方法: ドラッグ アンド ドロップのハンドラーを追加](../modeling/how-to-add-a-drag-and-drop-handler.md)   

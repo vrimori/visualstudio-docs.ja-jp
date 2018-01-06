@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4aa949d1ff2a8d9954c29314a85363d04d09b1a8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 1b2a6c395ed6dbfb8265ac131dd4318b590bf92e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-open-visio-documents"></a>方法: プログラムによって Visio 図面を開く
   既存の Microsoft Office Visio 図面を開くための 2 つの方法があります。 Open および OpenEx です。 呼び出し元を指定できる引数はドキュメントを開く方法を提供する点を除いて、メソッドは、開いているメソッドと同じです。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/31/2017
   
 -   [マイ ドキュメント] フォルダー (Windows XP 以前の場合) または [ドキュメント] フォルダー (Windows Vista の場合) 内の `myDrawing.vsd` というディレクトリにある `Test` という名前の Visio 図面。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visio ソリューション](../vsto/visio-solutions.md)   
  [Visio オブジェクト モデルの概要](../vsto/visio-object-model-overview.md)   
  [方法: プログラムによって新しい Visio 図面を作成します。](../vsto/how-to-programmatically-create-new-visio-documents.md)   

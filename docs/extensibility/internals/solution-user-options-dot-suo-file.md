@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a71f3e14c6a8c87290de2a6204fa28f99a8cabe8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0bca2eef930b871d5728ff1c85742a28f4b51a7e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="solution-user-options-suo-file"></a>ソリューション ユーザー オプション (です。Suo) ファイル
 ソリューション ユーザー オプション (.suo) ファイルには、ユーザーごとにソリューションのオプションが含まれています。 このファイルは、ソース コード管理いないチェックする必要があります。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 10/31/2017
   
  これら 2 つの方法では、`SaveUserOptions`と`WriteUserOptions`へのポインターを渡して、.suo ファイルに保存する情報の各ストリームに対して再帰的に呼び出される`IVsSolutionPersistence`です。 .Suo ファイルに複数のストリームの書き込みを許可するには、再帰的に、呼び出されます。 その方法でユーザー情報は、ソリューションに保存されてし、に存在する、次回ソリューションを開くことが保証します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts>   
  [ソリューション](../../extensibility/internals/solutions.md)

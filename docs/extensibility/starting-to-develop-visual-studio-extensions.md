@@ -15,11 +15,12 @@ caps.latest.revision: "29"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2d788121e81af48cb972631d0845ad7b4317818b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7bc03568465efa022981ade059b0de68019a5978
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Visual Studio 拡張機能の開発を開始
 初めて作成する前に Visual Studio 拡張機能をいくつかの質問可能性があります。 ここで、最も一般的な原因の一部を示しています。 探している情報が表示されない場合は、フィードバック ボタンを使用して (**このページは役に立ちましたか?**画面の下部にある) にする情報を確認してください。  
@@ -89,4 +90,4 @@ ms.lasthandoff: 10/31/2017
 ## <a name="how-can-i-distribute-my-extension"></a>My の拡張機能を配布する方法は?  
  別のコンピューターで、拡張機能をインストールしたり、.vsix ファイルをダブルクリックしてインストールすると、友人に送信することができます。 VSIX パッケージでについて詳しく調べますできます[Visual Studio 拡張機能の配布](../extensibility/shipping-visual-studio-extensions.md)です。  
   
- 多数の Visual Studio のお客様にできるように、Visual Studio Marketplace で拡張機能を公開することもできます。 パッケージ化するのには、Marketplace 拡張機能の例は、次を参照してください。[チュートリアル: Visual Studio 拡張機能を公開](../extensibility/walkthrough-publishing-a-visual-studio-extension.md)です。 詳細については、Marketplace に発行するために実行する必要がありますを参照してください。[製品と Visual Studio の拡張機能](https://docs.microsoft.com/en-us/vsts/integrate/ide/extensions/overview)します。
+ 多数の Visual Studio のお客様にできるように、Visual Studio Marketplace で拡張機能を公開することもできます。 パッケージ化するのには、Marketplace 拡張機能の例は、次を参照してください。[チュートリアル: Visual Studio 拡張機能を公開](../extensibility/walkthrough-publishing-a-visual-studio-extension.md)です。 詳細については、Marketplace に発行するために実行する必要がありますを参照してください。[製品と Visual Studio の拡張機能](/vsts/integrate/ide/extensions/overview)します。

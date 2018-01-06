@@ -14,11 +14,12 @@ caps.latest.revision: "28"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 70200da27d102f0ec6b8231a680965e8ee420d44
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: e26560740dd8d6f86d80dc5063a5c9b55cac8171
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-generation-in-a-build-process"></a>ビルド処理でのコード生成
 [テキスト変換](../modeling/code-generation-and-t4-text-templates.md)の一部として呼び出すことができます、[ビルド プロセス](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)の[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューションです。 テキスト変換に特化したビルド タスクがあります。 T4 ビルド タスクはデザイン時テキスト テンプレートを実行し、また、実行時 (前処理済み) テキスト テンプレートをコンパイルします。  

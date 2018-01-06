@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 000b853c1f25d8b68ccdda87e6c0496aeeaaca0e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6a24db9c50bd298f068c23af0b6bad5755ec252d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-enumerator"></a>メッセージの列挙子
 次のフラグの使用、`TEXTOUTPROC`関数を呼び出すときに IDE が提供するコールバック関数、 [SccOpenProject](../extensibility/sccopenproject-function.md) (を参照してください[LPTEXTOUTPROC](../extensibility/lptextoutproc.md)詳細については、コールバックで関数の場合)。  
@@ -70,6 +71,6 @@ enum {
  SCC_MSG_STOPCANCEL  
  [キャンセル] ループを停止します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)   
  [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)

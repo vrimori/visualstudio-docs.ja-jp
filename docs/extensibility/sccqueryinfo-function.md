@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e5c2e974fe2cd0f6d95b97bba0ba2ffa22c1095e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7bda59c3bf674354e38fa306abe1fbb673f40e19
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccqueryinfo-function"></a>SccQueryInfo 関数
 この関数は、一連のソース管理下で選択したファイルの状態に関する情報を取得します。  
@@ -50,7 +51,7 @@ SCCRTN SccQueryInfo(
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|クエリが正常に完了しました。|  
 |SCC_E_ACCESSFAILURE|ソース管理システム、ネットワークや競合の問題の原因として可能性へのアクセスに問題が発生しました。 再試行することをお勧めします。|  
@@ -72,6 +73,6 @@ SCCRTN SccQueryInfo(
   
 -   ファイルがチェック アウトされて現在のユーザーが、作業ディレクトリ以外のディレクトリに場合、`SCC_STATUS_OUTBYUSER`設定されているが、`SCC_STATUS_CHECKEDOUT`はありません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [ファイルの状態コード](../extensibility/file-status-code-enumerator.md)

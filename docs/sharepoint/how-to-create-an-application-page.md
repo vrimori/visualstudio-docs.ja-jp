@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 80e85ca5da81b4e8dd715867a8819dbf292f527a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 75c896f101f1eb0a11884b492ba559045a1dd180
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-application-page"></a>方法: アプリケーション ページを作成する
   1 つまたは複数の SharePoint サイトの ASP.NET web ページを作成することができます。 SharePoint では、これらのページはアプリケーション ページと呼ばれます。 サイトのページとは異なり、アプリケーション ページには、ページの背面に実行されるコードが含まれています。 詳細については、次を参照してください。 [for SharePoint アプリケーション ページを作成する](../sharepoint/creating-application-pages-for-sharepoint.md)です。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/31/2017
   
      コード ファイルでは、ASP.NET ページのファイルのノードを展開する場合に表示されます、.cs または .vb ファイルの拡張子は、プロジェクトの言語に応じて。 アプリケーション ページを作成する方法のエンド ツー エンド例は、次を参照してください。[チュートリアル: SharePoint アプリケーション ページを作成する](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [For SharePoint アプリケーション ページの作成](../sharepoint/creating-application-pages-for-sharepoint.md)   
  [チュートリアル: SharePoint アプリケーション ページの作成](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)  
   

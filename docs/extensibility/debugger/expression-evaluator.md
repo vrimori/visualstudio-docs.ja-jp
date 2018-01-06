@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b08da6a123107d793d522770d44315aaa432dede
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 55aaa595c49d0c50cff5f874d1b322c3adbb9729
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="expression-evaluator"></a>式エバリュエーター
 (EE) の式エバリュエーターでは、IDE が中断モードの場合、ユーザーを表示することを解析および実行時に、変数や式を評価するための言語の構文を確認します。  
@@ -43,5 +44,5 @@ ms.lasthandoff: 10/31/2017
 ## <a name="implementation-notes"></a>実装に関するメモ  
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]と共通言語ランタイム (CLR) インターフェイスを使用して、式エバリュエーターと対話するデバッグ エンジンが予想されます。 その結果、式エバリュエーターで動作する、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デバッグ エンジンは、CLR をサポートする必要があります (すべての CLR デバッグ インターフェイスの完全な一覧は含まれて含まれている debugref.doc の[!INCLUDE[winsdklong](../../deployment/includes/winsdklong_md.md)])。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのコンポーネント](../../extensibility/debugger/debugger-components.md)

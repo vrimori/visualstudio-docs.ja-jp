@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9da26de3b5a3a71927e7518ff126a7186c01d7e5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 37dfee49fe18fda276c1cde27bd79bcae1a13f48
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer"></a>方法: パッケージ デザイナーを使用してパッケージのフィーチャーおよび項目を追加および削除する
   SharePoint ソリューションを作成するときに、Visual Studio は、ソリューション内のパッケージに、既定の SharePoint 機能を追加します。 最終的なデプロイは、前に、追加し、SharePoint プロジェクト項目と SharePoint のパッケージを変更する機能を削除します。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/31/2017
   
      SharePoint 項目に表示されます、**ソリューション内の項目** ボックスの一覧です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューション パッケージの作成](../sharepoint/creating-sharepoint-solution-packages.md)   
  [方法: SharePoint ソリューション パッケージをカスタマイズする](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)  
  [方法: パッケージの作成](http://msdn.microsoft.com/en-us/b24be45c-e91d-49bb-afb0-7b265404214b)  

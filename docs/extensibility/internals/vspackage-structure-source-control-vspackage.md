@@ -15,11 +15,12 @@ caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4f8422e4333c1f1ccffc928ce9a43e4afa53cc7a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 168aa0f7b93d20afaa30924dc17f05e0cac465bb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vspackage-structure-source-control-vspackage"></a>VSPackage の構造 (ソース コントロール VSPackage)
 ソース コントロールのパッケージの SDK を提供する VSPackage を作成するためのガイドラインと自分のソース管理機能を統合するソース コントロールの実行者を許可する、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]環境。 VSPackage は、COM コンポーネントによって、要求時に読み込まれた通常、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) は、そのレジストリ エントリで、パッケージによって提供されているサービスに基づいています。 すべての VSPackage を実装する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>です。 VSPackage によって提供されるサービスを通常使用する、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE proffers、独自のいくつかのサービスとします。  
@@ -75,6 +76,6 @@ ms.lasthandoff: 10/31/2017
   
  ソース管理 VSPackage に考慮する必要がありますのあるインターフェイスの一覧については、次を参照してください。[関連サービスとインターフェイス](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デザイン要素](../../extensibility/internals/source-control-vspackage-design-elements.md)   
  [関連するサービスとインターフェイス](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)

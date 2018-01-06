@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a6ca0159d522d7890452a54986093f4062803faf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2929e53dc3459c1699a0bc09cb235971ba02f90f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sdkreference-element-visual-studio-templates"></a>SDKReference 要素 (Visual Studio テンプレート)
 項目テンプレートが SDK 参照を使用することを指定します。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/31/2017
 ...  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [References 要素 (Visual Studio テンプレート)](../extensibility/references-element-visual-studio-templates.md)   
  [Reference 要素 (Visual Studio テンプレート)](../extensibility/reference-element-visual-studio-templates.md)   
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   

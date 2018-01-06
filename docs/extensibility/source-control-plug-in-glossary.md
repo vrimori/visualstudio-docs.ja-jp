@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: dc45c47f47fe18bc857715acc3948561f06e718c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b77cc0ea260ae86460de3c7a7752277a99291778
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="source-control-plug-in-glossary"></a>ソース管理プラグインの用語集
 次の便利な用語と定義は、ソース管理プラグイン SDK のドキュメントに適用されます。  
@@ -64,8 +65,8 @@ ms.lasthandoff: 10/31/2017
  リポジトリ  
  マスター コピーをソース管理システムでは、プロジェクトのすべてのリビジョン履歴を格納します。 各プロジェクトには、1 つだけのリポジトリがあります。  
   
- Revision  
+ リビジョン  
  ファイルの履歴またはファイルのセットにコミットされた変更します。 リビジョンは、いずれかの継続的に変化するプロジェクトでのスナップショットです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)

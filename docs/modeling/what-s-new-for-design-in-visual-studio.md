@@ -16,11 +16,12 @@ caps.latest.revision: "32"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: ce1172baf41cf670b253b2420f5538607addfeb7
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 137ca47d83e0540a7d0b3959d7d806dbf3d5f3a0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-for-design-in-visual-studio"></a>どのような &#39; s の新しい Visual Studio でデザイン
 
@@ -75,10 +76,10 @@ Visual Studio には、使用できるバージョンがいくつかあります
   
 |**機能**|**Enterprise**|**Professional**|**Community**|**Express**|  
 |-----------------|--------------------|----------------------|-------------------|-----------------|  
-|**コード マップ**|はい|注 (1) を参照してください。|-|-|  
-|**依存関係図**|はい|注 (2) を参照してください。|注 (2) を参照してください。|-|  
-|**グラフを向け**(DGML ダイアグラム)|はい|はい|はい|-|  
-|**コード クローン**|はい|-|-|-|  
+|**コード マップ**|[はい]|注 (1) を参照してください。|-|-|  
+|**依存関係図**|[はい]|注 (2) を参照してください。|注 (2) を参照してください。|-|  
+|**グラフを向け**(DGML ダイアグラム)|[はい]|はい|[はい]|-|  
+|**コード クローン**|[はい]|-|-|-|  
   
 注 (1): コード マップの読み取り、コード マップのフィルター処理、新しいジェネリック ノードの追加、選択範囲からの新しい有向グラフの作成のみをサポートします。
 

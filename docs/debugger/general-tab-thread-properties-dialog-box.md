@@ -6,7 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords:
 - threading [Visual Studio], thread properties
 - thread properties
@@ -15,20 +15,21 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a2af344735b88fb7091ec438638c948a7f7f2ca4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d8d53c373c58e31f2a2719df8afa6dd0da9cd3c6
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="general-tab-thread-properties-dialog-box"></a>[全般] タブ ([スレッド プロパティ] ダイアログ ボックス)
 特定のスレッドの詳細を確認するには、このダイアログ ボックスを使用します。 このダイアログ ボックスを表示するには、フォーカスを移動、[スレッド ビュー](../debugger/threads-view.md)ウィンドウ、または開く[メッセージ ビュー](../debugger/messages-view.md)メッセージに展開します。 ツリーで、スレッドの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  
   
  **スレッド プロパティ** ダイアログ ボックスには、1 つのペインが含まれています、**全般**タブです。次の設定を使用できます。  
   
-|エントリ|説明|  
+|入力|説明|  
 |-----------|-----------------|  
-|**モジュール名**|モジュールの名前です。|  
+|**モジュール名**|モジュールの名前。|  
 |**スレッド ID**|このスレッドの一意の ID。 スレッドの ID 番号は再利用することに注意してください。これらは、そのスレッドの有効期間にのみ、スレッドを識別します。|  
 |**プロセス ID**|このプロセスの一意の ID。 プロセス ID 番号は再利用され、そのプロセスの有効期間にのみそのプロセスを識別します。 プログラムを実行すると、プロセス オブジェクトの種類が作成されます。 プロセス内のすべてのスレッドは、同じアドレス領域を共有して、同じデータにアクセスします。 プロセス ID のプロパティを表示するには、この値を選択します。|  
 |**スレッドの状態**|スレッドの現在の状態。 実行されているスレッドがプロセッサ; を使用します。スタンバイ スレッドは、いずれかを使用しようとしています。 1 つがフリーでないため、プロセッサを使用して、準備完了スレッドが待機しています。 移行中のスレッドは、ディスクからのページングには、その実行スタックを待機しているなど、実行するリソースを待機しています。 周辺機器の操作を完了またはリソースの解放を待機しているために、待機中のスレッドによるプロセッサは不要です。|  

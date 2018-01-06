@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 64f4d7f7e4a71c1d304bfa5045175fd613bcb539
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 98c889bc1bc128a941f726348781a633799475de
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-text-markers-with-the-legacy-api"></a>レガシ API でテキスト マーカーの使用
 テキスト マーカーは、浮動表示に影響を与えるバッファー内のテキストの範囲とテキストの領域の動作です。 マーカーには、ブレークポイント、ブックマーク、波線、および読み取り専用領域が含まれます。 テキスト マーカーは、構文の色分け表示と基本的に異なります。 構文の色分けは、テキストの範囲に関連付けられている言語の構文を通信する簡単な方法です。 構文の色分けは、Windows 速度が重要である、画面を再描画するときに一般的に要求されます。 構文の色分けは、テキストの色のみを変更します。 テキスト マーカーは、その他の多くのテキストのプロパティを変更できます。 テキスト マーカーが「フローティング」および特別な動作を適用し、色分け表示します。  

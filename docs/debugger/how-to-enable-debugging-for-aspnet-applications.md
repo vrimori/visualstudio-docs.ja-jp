@@ -21,23 +21,24 @@ caps.latest.revision: "37"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9048f965ad2f04b4eed8fe3a753f6fddc280dbfa
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: aspnet
+ms.openlocfilehash: e3c6dffbd99dbdd91753ce8d06ab139006692089
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="debug-aspnet-applications-in-visual-studio"></a>Visual Studio での ASP.NET アプリケーションをデバッグします。
 
 Visual Studio から ASP.NET アプリケーションをデバッグすることができます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 このトピックの手順に従って操作する必要があります。
 
 - IIS Express で Visual Studio 2012 以降は既定で含まれています
 
-    または
+    - または -
 
 - ローカル IIS の web server (バージョン 8.0 以上) が正しく構成されているし、エラーが発生しない ASP.NET アプリケーションを実行できます。
 
@@ -124,7 +125,7 @@ IIS Express の既定のサーバーではなく、外部のサーバーを使�
 
 2. 外部 (カスタム) サーバーを選択する場合の正しい URL を入力、**プロジェクト URL** (または**ベース URL**) フィールドです。
 
-    外部のサーバーがローカルの IIS の場合は、IIS をインストールされているし、正しく構成されている必要があります。 たとえば、正しいバージョンの ASP.NET は IIS で構成する必要があります。 詳細については、次を参照してください。 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。 展開とデバッグをテストする場合を参照してください。[展開をテストする](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis)です。
+    外部のサーバーがローカルの IIS の場合は、IIS をインストールされているし、正しく構成されている必要があります。 たとえば、正しいバージョンの ASP.NET は IIS で構成する必要があります。 詳細については、次を参照してください。 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。 展開とデバッグをテストする場合を参照してください。[展開をテストする](/aspnet/web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis)です。
 
     外部のサーバーがある場合[リモート](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)、代わりに、プロセスにアタッチして、これらのプロジェクト設定はデバッグは使用されません。
 
@@ -134,7 +135,7 @@ IIS express、web サーバーを構成する必要はありません (このセ
 
 ローカル IIS web サーバーを使用している場合は次の手順に従います。
 
-1. IIS が正しくインストールされていることを確認します。 詳細については、次を参照してください。 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](https://docs.microsoft.com/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。
+1. IIS が正しくインストールされていることを確認します。 詳細については、次を参照してください。 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。
 
     * サーバーに正しいバージョンの ASP.NET をインストールすることを確認します。 Web Platform Installer (WebPI) を使用して ASP.NET 4.5 をインストールする (Windows Server 2012 R2 で、サーバー ノードから次のように選択します。**新しい Web Platform コンポーネントの取得**、ASP.NET の検索)。 ASP.NET Core をインストールするには、次を参照してください。[を IIS に発行](https://docs.asp.net/en/latest/publishing/iis.html#iis-configuration)です。
 
@@ -223,12 +224,12 @@ Web サイトには、複数の仮想ディレクトリとサブディレクト�
 > [!IMPORTANT]
 > パフォーマンスに影響が大幅にデバッグ モードを有効にすると、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]アプリケーションです。 リリース バージョンのアプリケーションを配置したり、パフォーマンスの測定を実施したりする前には、デバッグ モードを無効にしてください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [ASP.NET のデバッグ: システム要件](aspnet-debugging-system-requirements.md)   
 [方法: ユーザー アカウントでワーカー プロセスの実行](how-to-run-the-worker-process-under-a-user-account.md)   
 [方法: ASP.NET プロセスの名前を見つける](how-to-find-the-name-of-the-aspnet-process.md)   
 [配置済みの Web アプリケーションをデバッグします。](debugging-deployed-web-applications.md)   
 [チュートリアル: Web フォームのデバッグ](walkthrough-debugging-a-web-form.md)   
 [方法: ASP.NET の例外のデバッグ](how-to-debug-aspnet-exceptions.md)   
-[Web アプリケーションのデバッグ: エラーとトラブルシューティング](debugging-web-applications-errors-and-troubleshooting.md)
+[Web アプリケーションをデバッグする : エラーおよびトラブルシューティング](debugging-web-applications-errors-and-troubleshooting.md)
   

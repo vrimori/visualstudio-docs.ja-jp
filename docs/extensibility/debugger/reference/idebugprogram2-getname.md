@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bea739c8c2d62893422e46f3d75e2f12224f8d18
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: def082b7485bc8487ff061a07c46b06824050f51
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprogram2getname"></a>IDebugProgram2::GetName
 プログラムの名前を取得します。  
@@ -47,5 +48,5 @@ int GetName(
 ## <a name="remarks"></a>コメント  
  このメソッドによって返される名前は、プログラムを説明する、ユーザー表示可能なわかりやすい名前では常にします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

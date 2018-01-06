@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1cf196a227e5cb92cae48dd1eeceace25ffc0295
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 69ad8f62931b628582c73a3e370a86611795caa6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guids-and-ids-of-visual-studio-menus"></a>Visual Studio のメニューの Guid と Id
 このトピックでは、メニューや Visual Studio のメニュー バー上のグループの GUID と ID の値を列挙します。 これらの値は、Visual Studio SDK の一部としてインストールされている .vsct ファイルで定義されます。 詳細については、次を参照してください。 [IDE-Defined コマンド、メニュー、およびグループ](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)です。  
@@ -89,7 +90,7 @@ ms.lasthandoff: 10/31/2017
 |-----------|--------|  
 |元に戻す/やり直し|IDG_VS_EDIT_UNDOREDO|  
 |切り取り/コピー/貼り付け|IDG_VS_EDIT_CUTCOPY|  
-|[選択]|IDG_VS_EDIT_SELECT|  
+|選択|IDG_VS_EDIT_SELECT|  
 |GoTo|IDG_VS_EDIT_GOTO|  
 |[検索]|IDG_VS_EDIT_FIND|  
 |オブジェクト|IDG_VS_EDIT_OBJECTS|  
@@ -174,7 +175,7 @@ ms.lasthandoff: 10/31/2017
 |グループ化|ID|  
 |-----------|--------|  
 |サンプル|IDG_VS_HELP_SAMPLES|  
-|Support|IDG_VS_HELP_SUPPORT|  
+|サポート|IDG_VS_HELP_SUPPORT|  
 |バージョン情報|IDG_VS_HELP_ABOUT|  
   
 ## <a name="submenus-of-visual-studio-menus"></a>Visual Studio のメニューのサブメニュー  
@@ -215,7 +216,7 @@ ms.lasthandoff: 10/31/2017
 |IDG_VS_PGO_SELECTION|IDM_VS_CSCD_PGO_BUILD|IDG_VS_PGO_BUILD_CASCADE_BUILD|  
 |||IDG_VS_PGO_BUILD_CASCADE_RUN|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio ツールバーの Guid と Id](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)   
  [Visual Studio のコマンドの Guid と Id](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md)   
  [Visual Studio Command Table (.Vsct) ファイル](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

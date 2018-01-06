@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1b5cec31349b2db94536f3d67ca137885f757263
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ac781256ee78becf3b0cfdffbbec6f0c6bc30225
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-project-essentials"></a>Web プロジェクトの基礎
 Web プロジェクトでは、Web アプリケーションを作成します。 Web プロジェクトを使用して、Web アプリケーションに含まれるスマートの Web ページを作成することができます。 スマート Web ページには、要求時に Web ページを表示するサーバー側コードがあります。  
@@ -59,5 +60,5 @@ Web プロジェクトでは、Web アプリケーションを作成します。
   
     -   エラー マーカー (赤い波形) は、常に、コード エディターのプライマリ バッファーに作成する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Web プロジェクト](../../extensibility/internals/web-projects.md)

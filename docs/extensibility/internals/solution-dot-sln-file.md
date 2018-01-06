@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b7be9b3bf7783980cfbbe1abfc44fe1748dd20a2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ad918b72d38e61fb1670adda8ff1f730987c2aa3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="solution-sln-file"></a>ソリューション (です。Sln) ファイル
 ソリューションは、Visual Studio でプロジェクトを整理するための構造体です。 ソリューションでは、(テキスト ベース、共有) .sln および .suo (バイナリ、ユーザー固有のソリューションのオプション) ファイル内のプロジェクトの状態情報を保持します。 .Suo ファイルについては、次を参照してください。[ソリューション ユーザー オプション (です。Suo) ファイル](../../extensibility/internals/solution-user-options-dot-suo-file.md)です。  
@@ -101,7 +102,7 @@ EndGlobal
   
  だけ、.sln ファイル内のエントリが含まれる、`preSolution`と`postSolution`セクションです。 含まれないと同様のセクションでは .suo ファイル ソリューションには、正常に読み込むには、この情報が必要があるためです。 .Suo ファイルには、プライベート ノートについては、共有またはソース コード管理下に配置するのには意図されていないなど、ユーザー固有のオプションが含まれています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps>   
  [ソリューション ユーザー オプション (です。Suo) ファイル](../../extensibility/internals/solution-user-options-dot-suo-file.md)   
  [ソリューション](../../extensibility/internals/solutions.md)

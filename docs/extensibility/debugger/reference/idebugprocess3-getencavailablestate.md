@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 86fc95def355c3483fae02b8e9f909aaadfd44f8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5d0fcac34457c12218ea8728af84e5f0a623edfe
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprocess3getencavailablestate"></a>IDebugProcess3::GetENCAvailableState
 このメソッドは、プロセスの現在のエディット コンティニュの状態を取得します。 カスタム ポートのサプライヤーを常に返します`E_NOTIMPL`です。  
@@ -50,7 +51,7 @@ int GetENCAvailableState(
 ## <a name="remarks"></a>コメント  
  この状態の影響を受けました[DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md)   
  [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md)

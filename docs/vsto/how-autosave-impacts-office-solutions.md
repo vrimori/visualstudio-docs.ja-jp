@@ -15,11 +15,12 @@ ms.assetid: b60bb228-0e72-4f24-88bb-397dfc5d50a7
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 4b4f2b4433395cc03e24273a3eccc04bb31ad30e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 2f2be3b4311792f58cb655f8e878557e276a04e0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-autosave-impacts-office-solutions"></a>Office ソリューションの自動保存の影響
 
@@ -27,5 +28,5 @@ ms.lasthandoff: 10/31/2017
 
 注: Windows デスクトップの Word、Excel、PowerPoint の自動保存 2017年に導入された、office 365 のサブスクライバーで現在使用できます。 Office 2016 または以前にライセンスを購入するユーザーは現在ありません coauthoring 機能へのアクセス。 (Excel Online では、Excel for Android、ios、Excel および Excel モバイル、Windows ストアでもサポート自動保存) します。 
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [Office ソリューションの開発](./developing-office-solutions.md)

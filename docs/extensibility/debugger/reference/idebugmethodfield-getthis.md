@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 91c4e2b693ffcca1a88cde1372197026758eb7d3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: af534ee57a68158e3f909ba69a1771a5073320e1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugmethodfieldgetthis"></a>IDebugMethodField::GetThis
 取得、 `this` (`Me`で[!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]) メソッドを含むオブジェクトのポインター。  
@@ -47,6 +48,6 @@ int GetThis(
 ## <a name="remarks"></a>コメント  
  オブジェクト指向言語では通常、クラスの現在のインスタンス化への暗黙のポインターです。 これと呼ばれます`this`(C#)/C++ として`Me`で[!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

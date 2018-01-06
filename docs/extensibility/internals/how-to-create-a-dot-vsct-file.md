@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f05461aa75a8088f758bd24ec5e73ccd407a8681
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b64d9b35030a18a6258de52ed0f12f9796044ba5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-vsct-file"></a>方法: を作成します。Vsct ファイル  
   
@@ -146,7 +147,7 @@ Visual Studio コマンド テーブルの XML ベースの構成 (.vsct) ファ
   
      最初のパラメーター値は、プロジェクト ファイルで定義されている ResourceName 属性の値に一致する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [作成します。Vsct ファイル](../../extensibility/internals/authoring-dot-vsct-files.md)   
  [Visual Studio コマンド テーブル (です。Vsct) ファイル](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
  [VSCT XML スキーマ リファレンス](../../extensibility/vsct-xml-schema-reference.md)

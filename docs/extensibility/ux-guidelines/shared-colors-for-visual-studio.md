@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ccc530a741aaefd7e1faf1bd5f8974e27d9c7fb5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 45bbff985a45ba4d04945ec95587c4c6c9cc448c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shared-colors-for-visual-studio"></a>Visual Studio 用の共有の色
 共通の Visual Studio シェル要素を使用する UI を設計するまたはインターフェイス要素に同様の機能と一致するか場合、は、パッケージ定義ファイルに既存のトークン名を使用して、選択し、色を割り当てます。 これにより、UI が Visual Studio 環境全体で一貫性を保ち、テーマが追加された場合や更新された場合に自動的に更新されるようになります。  
@@ -1523,7 +1524,7 @@ ms.lasthandoff: 10/31/2017
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
-| 背景 | 該当なし |
+| 背景 | N/A |
 | 前景 (グリフ) | `Environment.DropDownDisabledGlyph` |
 
 #### <a name="command-bar-split-buttons"></a>コマンド バーの分割ボタン
@@ -1916,7 +1917,7 @@ Visual Studio は、タグ付けをサポートしています。タグ付けに
 
 | 要素 | トークン名: Category.color |
 | --- | --- |  
-| 背景 | 該当なし |
+| 背景 | N/A |
 | 前景 (グリフ) | `Tag.TagHoverGlyph` |
 
 **閉じる (&times;) グリフのタグを付ける: 状態をホバー**
@@ -1945,7 +1946,7 @@ Visual Studio は、タグ付けをサポートしています。タグ付けに
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
-| 背景 | 該当なし |
+| 背景 | N/A |
 | 前景 (グリフ) | `Tag.TagSelectedGlyph` |
 
 **閉じるとタグを選択 (&times;) グリフ: 状態をホバー**  
@@ -2118,7 +2119,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
-| 背景 | 該当なし |
+| 背景 | N/A |
 | 前景 (グリフ) | `Environment.ToolWindowButtonActiveGlyph` |
 | 境界線 | N/A |
 
@@ -2128,7 +2129,7 @@ Visual Studio のツール ウィンドウはさまざまなタスクに使用�
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
-| 背景 | 該当なし |
+| 背景 | N/A |
 | 前景 (グリフ) | `Environment.ToolWindowButtonInactiveGlyph` |
 | 境界線 | N/A |
 

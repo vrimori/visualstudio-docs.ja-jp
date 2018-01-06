@@ -23,11 +23,12 @@ caps.latest.revision: "43"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4293d13ffc5b69c23c0b613a3d9747248d6fa790
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3df07b6f60d4b870c830fc419b88decbe2f8fde1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optional-parameters-in-office-solutions"></a>Office ソリューションの省略可能なパラメーター
   Microsoft Office アプリケーションのオブジェクト モデルに含まれるメソッドの多くは、省略可能なパラメーターを受け取ります。 Visual Studio で Visual Basic を使用して Office ソリューションを開発する場合は、省略可能なパラメーターに値を渡す必要はありません。省略したパラメーターに対しては自動的に既定値が使用されます。 ほとんどの場合は、Visual c# プロジェクトで省略可能なパラメーターも省略できます。 ただし、省略することはできませんと省略可能な**ref**のパラメーター、`ThisDocument`ドキュメント レベルの Word プロジェクトのクラスです。  
@@ -72,8 +73,8 @@ ms.lasthandoff: 10/31/2017
   
  値と参照型のパラメーターの詳細については、次を参照してください[値とリファレンス &#40; 引数を渡す。Visual Basic &#41;](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (Visual Basic) 用と[パラメーター &#40; を渡すC &#35;です。プログラミング ガイド &#41;](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters).  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションの開発](../vsto/developing-office-solutions.md)   
- [Office ソリューションのコードの記述](../vsto/writing-code-in-office-solutions.md)  
+ [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)  
   
   

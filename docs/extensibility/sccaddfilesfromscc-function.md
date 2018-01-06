@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1764bfc503e25860326b1910c432edcf95c8f21c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5bd53307323b1db4d5fa9e5407c3a0516f1187f4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccaddfilesfromscc-function"></a>SccAddFilesFromSCC 関数
 この関数は、ソース管理からファイルの一覧を現在開いているプロジェクトに追加します。  
@@ -70,7 +71,7 @@ SCCRTN SccAddFilesFromSCC(
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_E_PROJNOTOPEN|プロジェクトが開かれていません。|  
 |SCC_E_OPNOTPERFORMED|接続では、同じプロジェクトで指定したとおりにありません。`lpAuxProjPath.`|  
@@ -78,5 +79,5 @@ SCCRTN SccAddFilesFromSCC(
 |SCC_E_NONSPECIFICERROR|不明なエラーがあります。|  
 |SCC_I_RELOADFILE|ファイルまたはプロジェクトは、再読み込みする必要があります。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

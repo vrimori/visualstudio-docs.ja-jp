@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: dc427dbca201b472feca89201284ab009abd9d34
-ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
+ms.workload: vssdk
+ms.openlocfilehash: dd51497bb73981ca81623ad495edc9561e85d3da
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-a-service"></a>方法: サービスを取得
 多くの場合、さまざまな機能にアクセスする Visual Studio サービスを取得する必要があります。 一般に、Visual Studio サービスは、使用できる 1 つまたは複数のインターフェイスを提供します。 ほとんどのサービスは、VSPackage から取得できます。  
@@ -84,7 +85,7 @@ if (sp != null)
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: サービスを提供](../extensibility/how-to-provide-a-service.md)   
  [使用して、サービスを提供します。](../extensibility/using-and-providing-services.md)   
  [サービスの基本情報](../extensibility/internals/service-essentials.md)

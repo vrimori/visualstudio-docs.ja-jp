@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 282a1bff821ee032d0d08038858c3a04fc7796ba
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: d3635a92f40f2ed313ca08dcc6357900ac002a60
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpostactionsgt-element-office-development-in-visual-studio"></a>&lt;postActions&gt;要素 (Visual Studio での Office 開発)
   `postActions` 名前空間の `vstav3` の要素には、Office ソリューションのインストール後に実行する配置後アクションを説明する `postAction` 要素がすべて含まれています。  
@@ -44,12 +45,12 @@ ms.lasthandoff: 10/31/2017
 ## <a name="elements-and-attributes"></a>要素と属性  
  `postActions` 要素は省略可能であり、 `vstav3` 名前空間にあります。 アプリケーション マニフェストで定義される `postActions` 要素が 1 つだけあります。  
   
- `postActions` 要素に属性はありません。  
+ `postActions` 要素には属性がありません。  
   
  `postActions` には次の要素があります。  
   
 ### <a name="postaction"></a>postAction  
- 省略可能です。 役割、`postAction`内の要素、`vstav3`で名前空間が定義されている[&#60; postAction &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/postaction-element-office-development-in-visual-studio.md).  
+ 任意。 役割、`postAction`内の要素、`vstav3`で名前空間が定義されている[&#60; postAction &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/postaction-element-office-development-in-visual-studio.md).  
   
 ## <a name="post-deployment-action-example"></a>配置後アクションの例  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 10/31/2017
 </vstav3:postActions>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
  [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)  

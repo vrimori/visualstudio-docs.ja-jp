@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3742887be40f07f4b64003727333d4d21d08831e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f95377f79d02952c63b673d50569fac058a8573c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="scccheckin-function"></a>SccCheckin 関数
 この関数は、ソース管理システムが表示され、変更を保存して、新しいバージョンを作成する以前のチェック アウトしたファイルをチェックインします。 この関数がカウントとにチェックインするファイルの名前の配列と呼ばれます。  
@@ -62,14 +63,14 @@ SCCRTN SccCheckin (
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|ファイルが正常にチェックインします。|  
 |SCC_E_FILENOTCONTROLLED|選択したファイルはソース コード管理下ではありません。|  
 |SCC_E_ACCESSFAILURE|ソース管理システムのネットワークや競合の問題の可能性があるためのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
 |SCC_E_NONSPECIFICERROR|不特定のエラーです。 ファイルがチェックインされません。|  
 |SCC_E_NOTCHECKEDOUT|ユーザーがいないファイルをチェック アウト、チェックインできないようにします。|  
-|SCC_E_CHECKINCONFLICT|チェックインは実行されませんでした。<br /><br /> -別のユーザーが事前チェックし、`bAutoReconcile`が false であった。<br /><br /> または<br /><br /> -(たとえば、ファイルが場合バイナリ)、、自動マージを実行できません。|  
+|SCC_E_CHECKINCONFLICT|チェックインは実行されませんでした。<br /><br /> -別のユーザーが事前チェックし、`bAutoReconcile`が false であった。<br /><br /> - または -<br /><br /> -(たとえば、ファイルが場合バイナリ)、、自動マージを実行できません。|  
 |SCC_E_VERIFYMERGE|ファイルは、自動マージにしましたが、ユーザーの確認保留中のチェックインされていません。|  
 |SCC_E_FIXMERGE|ファイルは、自動マージにしましたが、手動で解決しなければならないマージ競合しているのためにチェックインされていません。|  
 |SCC_E_NOTAUTHORIZED|この操作を実行するユーザーが許可されていません。|  
@@ -82,5 +83,5 @@ SCCRTN SccCheckin (
   
  `fOptions`引数がの値を指定することができます、`SCC_KEEP_CHECKEDOUT`でファイルを確認し、再度チェック アウトするユーザーの意図を示すフラグ。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

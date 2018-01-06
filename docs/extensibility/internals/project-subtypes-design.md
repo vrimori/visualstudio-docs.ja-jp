@@ -13,11 +13,12 @@ caps.latest.revision: "32"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 70d16c90ad8ef4837ad9d131e46ed2027dd6c543
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 126bee146d1f53233db3c14672f80da4c0d60e9e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-subtypes-design"></a>プロジェクトのサブタイプの設計
 プロジェクトのサブタイプは、Microsoft Build Engine (MSBuild) に基づくプロジェクトを拡張する Vspackage を使用できます。 集計の使用、コア管理プロジェクト システムで実装の大部分を再利用できます。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]まだ特定のシナリオの動作をカスタマイズします。  
@@ -80,7 +81,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="supporting-interfaces"></a>インターフェイスのサポート  
  基本のプロジェクトは、その実装のさまざまな側面を拡張するインターフェイスのプロジェクトのサブタイプで追加のサポートへの呼び出しを代行させます。 これには、プロジェクト構成のオブジェクトとさまざまなプロパティ ブラウザーのオブジェクトの拡張が含まれます。 これらのインターフェイスを呼び出すことによって取得されます`QueryInterface`で`punkOuter`(へのポインター、 `IUnknown`) 最も外側のプロジェクト サブタイプ アグリゲーターのです。  
   
-|インターフェイス|プロジェクトのサブタイプ|  
+|Interface|プロジェクトのサブタイプ|  
 |---------------|---------------------|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg>|プロジェクトのサブタイプを使用できます。<br /><br /> -の実装を提供する<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>です。<br />-独自の実装を提供するプロジェクトのサブタイプを許可することで、デバッガーの起動を制御する<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg>です。<br />-無効にするデザイン時の式評価適切に処理することによって、`DBGLAUNCH_DesignTimeExprEval`の実装でケース<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.QueryDebugLaunch%2A>です。|  
 |<xref:EnvDTE80.IInternalExtenderProvider>|プロジェクトのサブタイプを使用できます。<br /><br /> -拡張、<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>のようにプロジェクトを追加または削除するプロジェクトの独立したプロパティを構成します。<br />、プロジェクトのオートメーション オブジェクトを拡張する (<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>) のプロジェクトです。<br /><br /> 上記のプロパティ値から取得されます<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2>列挙します。|  
@@ -89,6 +90,6 @@ ms.lasthandoff: 10/31/2017
 |<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>|プロジェクト ファイル (.vbproj ファイルまたは .csproj) に任意の XML の構造化データを保持するプロジェクトのサブタイプを使用できます。 このデータでは、MSBuild に表示されません。|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>|プロジェクトのサブタイプを使用できます。<br /><br /> -永続化する新しい MSBuild プロパティを追加します。<br />-MSBuild から不要なプロパティを削除します。<br />MSBuild プロパティの現在の値をクエリします。<br />-MSBuild プロパティの現在の値を変更します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID>   
  <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID2>

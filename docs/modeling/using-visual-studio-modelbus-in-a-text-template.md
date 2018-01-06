@@ -11,11 +11,12 @@ caps.latest.revision: "13"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: c496aaa7db6f2260764b413bfdf09f766be87384
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 01a08ef43a344f71fe988693401c7064a902b92b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-visual-studio-modelbus-in-a-text-template"></a>テキスト テンプレートでの Visual Studio ModelBus の使用
 テキスト テンプレートを含むモデルを読み取ることを記述するかどうかは[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ModelBus を参照して、ターゲットのモデルにアクセスする参照を解決することができます。 その場合は、テキスト テンプレートを使用し、参照先のドメイン固有言語 (Dsl) を調整する必要があります。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/27/2017
   
     3.  ダイアログ ボックスで選択**、ModelBus をこの DSL を公開する**です。 この DSL をそのモデルを公開し、その他の Dsl への参照を使用する場合は、両方のオプションを選択できます。  
   
-    4.  **[OK]** をクリックします。 新しいプロジェクト "ModelBusAdapter" が DSL ソリューションに追加されます。  
+    4.  **[OK]**をクリックします。 新しいプロジェクト "ModelBusAdapter" が DSL ソリューションに追加されます。  
   
     5.  をクリックして**すべてのテンプレートを変換**です。  
   
@@ -408,7 +409,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
   
      その要素で MBR を設定する場合は、参照先のモデルが表示されますされ、参照される要素が選択されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Modelbus を使用してモデルを統合します。](../modeling/integrating-models-by-using-visual-studio-modelbus.md)   
  [コード生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)
  

@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 35b36c357c9b98d81627eea0d511b0b4fd49f693
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 88720010c178fb1ca3a4c2425002f5f34e26e777
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-display-grid"></a>プロパティ グリッドの表示
 **プロパティ**ウィンドウには、グリッド内のフィールドが表示されます。 左の列には、プロパティの名前が含まれています。右側の列には、プロパティの値が含まれています。  
@@ -55,5 +56,5 @@ ms.lasthandoff: 10/31/2017
   
 -   省略記号 (...) ボタンをクリックすると、(カラー ピッカーやフォントの一覧) 元となるユーザーが選択できるプロパティの値の一覧が表示されます。 <xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder>これらの値を提供します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロパティの拡張](../../extensibility/internals/extending-properties.md)

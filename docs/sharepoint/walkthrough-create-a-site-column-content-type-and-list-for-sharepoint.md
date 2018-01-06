@@ -26,11 +26,12 @@ caps.latest.revision: "54"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d6007dee14f89f875c66009f048b47579e97028b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 59dafe640428059b4c6772f79a23d5f0ccceaac7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-create-a-site-column-content-type-and-list-for-sharepoint"></a>チュートリアル: SharePoint のサイト列、コンテンツ タイプ、およびリストの作成
   次の手順は、カスタムの SharePoint サイト列を作成する方法をデモンストレーション — または*フィールド*— だけでなく、サイト内の列を使用するコンテンツの種類。 新しいコンテンツの種類を使用するリストを作成する方法も示しています。  
@@ -227,7 +228,7 @@ ms.lasthandoff: 10/31/2017
   
      一覧に新しいレコードが表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint のサイト列、コンテンツの種類、およびリストの作成](../sharepoint/creating-site-columns-content-types-and-lists-for-sharepoint.md)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   
  [方法: カスタム フィールドの種類を作成します。](http://go.microsoft.com/fwlink/?LinkId=192079)   

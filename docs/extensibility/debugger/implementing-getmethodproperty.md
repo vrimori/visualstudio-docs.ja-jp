@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0e3410886c04100015660898bef0e62110e087f7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 09dacf87e672b584fb4c19012567d4caaaf38f7d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-getmethodproperty"></a>GetMethodProperty を実装します。
 > [!IMPORTANT]
@@ -127,5 +128,5 @@ STDMETHODIMP CExpressionEvaluator::GetMethodProperty(
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ローカルの実装のサンプル](../../extensibility/debugger/sample-implementation-of-locals.md)

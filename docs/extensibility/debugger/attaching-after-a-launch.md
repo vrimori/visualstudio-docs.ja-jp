@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0a06a9b4be6cb20339c8c89f8594f290c1f6a46a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 890023b8336f130cf3b8cfcfe640da46af9cf0d1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="attaching-after-a-launch"></a>起動後にアタッチします。
 プログラムが起動された後に、デバッグ セッションとプログラムをデバッグ エンジン (DE) をアタッチする準備ができてです。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/31/2017
   
  プログラムにし、スタートアップ イベントを送信する準備ができて、DE はアタッチされています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プログラムに直接接続](../../extensibility/debugger/attaching-directly-to-a-program.md)   
  [ポートを通知します。](../../extensibility/debugger/notifying-the-port.md)   
  [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)   

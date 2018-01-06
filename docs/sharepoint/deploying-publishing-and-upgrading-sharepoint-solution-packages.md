@@ -23,11 +23,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5ae973b0a1fc30f0592f6cb2702df645708ab43f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: c1c8757de9b63c3fed75ec7e2ef7f61c89e18226
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-publishing-and-upgrading-sharepoint-solution-packages"></a>SharePoint ソリューションのパッケージの配置、発行、アップグレード
   Visual Studio での SharePoint ソリューションを開発した後、いずれかローカル SharePoint サーバーにそのパッケージ (.wsp) ファイルを配置したり、リモートまたはローカルの SharePoint サーバーにパブリッシュできます。 ファイルを展開する場合は、パッケージ ファイル (.wsp) を展開する方法をカスタマイズできます。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/31/2017
   
 |展開の構成|説明|  
 |------------------------------|-----------------|  
-|既定|既定の配置構成。 次の展開手順が実行されます。<br /><br /> 1.配置前コマンドを実行します。<br />2.IIS アプリケーション プールをリサイクルします。<br />3.ソリューションを取り消します。<br />4.ソリューションを追加します。<br />5.機能を有効にします。<br />6.配置後コマンドを実行します。<br /><br /> パッケージがアンインストールされると、次の取り消し手順が実行されます。<br /><br /> 1.IIS アプリケーション プールをリサイクルします。<br />2.ソリューションを取り消します。|  
+|既定値|既定の配置構成。 次の展開手順が実行されます。<br /><br /> 1.配置前コマンドを実行します。<br />2.IIS アプリケーション プールをリサイクルします。<br />3.ソリューションを取り消します。<br />4.ソリューションを追加します。<br />5.機能を有効にします。<br />6.配置後コマンドを実行します。<br /><br /> パッケージがアンインストールされると、次の取り消し手順が実行されます。<br /><br /> 1.IIS アプリケーション プールをリサイクルします。<br />2.ソリューションを取り消します。|  
 |アクティブ化しません。|この配置構成は、既定の構成として、同じ手順を実行が、アクティブ化の手順をスキップします。|  
   
  1 つの手順を完了するか、展開プロセスの手順の順序を変更する、独自の展開構成を作成できます。 詳細については、次を参照してください。[する方法: SharePoint の配置構成を編集](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)です。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="upgrading-published-packages"></a>公開されたパッケージをアップグレードします。  
  パブリッシュした後に、Visual Studio での SharePoint プロジェクトに変更を加えた場合は、変更を含める発行済みのパッケージをアップグレードしてください。 正常にアップグレードするには、一意の名前がパッケージに必要です。 同じ名前のパッケージが見つかった場合 - これは、既存のアプリケーションを更新する場合に発生することが、SharePoint サイトでエラー アラート ファイル名を競合およびパッケージの名前を変更することができます。 再発行されない後は、新しいパッケージは、SharePoint サイトに表示され、アップグレードすることができます。 アップグレードされたパッケージは、古いパッケージからデータを使用してソリューションを更新し、し、SharePoint のソリューションがアクティブにします。 詳細については、次を参照してください。[する方法: 配置、発行、およびリモート サーバー上の SharePoint ソリューションのアップグレード](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

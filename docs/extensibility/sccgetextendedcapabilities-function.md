@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d5134116a9d6a8d7872692e88ecd8adf60e9c02e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 870d793a11cccdaae9657deabb0e3b08c4d8c6f5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccgetextendedcapabilities-function"></a>SccGetExtendedCapabilities 関数
 この関数は、ソース管理プラグインでサポートされているその他の機能を返します。  
@@ -46,7 +47,7 @@ SCCRTN SccGetExtendedCapabilities(
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|Get 機能操作が完了しました。|  
 |SCC_E_UNKNOWNERROR<br /><br /> SCC_E_NONSPECIFICERROR|不明または未指定のエラーが発生しました。|  
@@ -54,7 +55,7 @@ SCCRTN SccGetExtendedCapabilities(
 ## <a name="remarks"></a>コメント  
  このメソッドはオンデマンドです。つまり、機能をテストする必要があります、このメソッドが呼び出されますかどうかを機能がサポートされています。 一度に 1 つだけのフラグが指定されています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [エラー コード](../extensibility/error-codes.md)   
  [機能フラグ](../extensibility/capability-flags.md)

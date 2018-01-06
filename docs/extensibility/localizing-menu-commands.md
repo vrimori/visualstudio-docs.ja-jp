@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 586f087e4c0cbd087bd06d7dc54a524b09ae21c3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 77bd698149ca4e73b462fc3ada9256ba5911177e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="localizing-menu-commands"></a>メニュー コマンドのローカライズ
 メニューのローカライズされたテキストを指定することができ、ツールバーがローカライズされた .vsct ファイルを作成するコマンドしローカライズされた .resx ファイルを VSPackage とするために、プロジェクト ファイルを更新し、変更を反映します。  
@@ -156,7 +157,7 @@ ms.lasthandoff: 10/31/2017
   
      これは、メインのアセンブリ、および各言語のリソース アセンブリを作成します。 展開プロセスをローカライズする方法の詳細については、次を参照してください[VSIX パッケージのローカライズ。](../extensibility/localizing-vsix-packages.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張メニューとコマンド](../extensibility/extending-menus-and-commands.md)   
  [MenuCommand と OleMenuCommands](../extensibility/menucommands-vs-olemenucommands.md)   
  [アプリケーションのグローバライズとローカライズ](../ide/globalizing-and-localizing-applications.md)

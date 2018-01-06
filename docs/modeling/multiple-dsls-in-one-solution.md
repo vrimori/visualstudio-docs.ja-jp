@@ -11,11 +11,12 @@ caps.latest.revision: "3"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: b55d1d5ec8e84c8d16681ffd0ac738291e1bc39d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 911cc5e7959e5a392ff4ff53945ca5277605f7b2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-dsls-in-one-solution"></a>1 つのソリューション内の複数の DSL
 いくつかの DSL を単一ソリューションの一部としてパッケージ化し、同時にインストールすることができます。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/27/2017
   
  この結果の VSIX では両方の DSL がインストールされます。 F5 キーを使用してそれらをテストまたは配置することができます*YourVsixProject***\bin\Debug\\\*.vsix**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Modelbus を使用してモデルを統合します。](../modeling/integrating-models-by-using-visual-studio-modelbus.md)   
  [方法: ドラッグ アンド ドロップのハンドラーを追加](../modeling/how-to-add-a-drag-and-drop-handler.md)   
  [コピー動作のカスタマイズ](../modeling/customizing-copy-behavior.md)

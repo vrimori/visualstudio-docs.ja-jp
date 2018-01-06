@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9b71c977fcc616c6d9cf30b78c9fd7610f11bcd4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ee8ad89e02dfa8aebbb39a9d7ebe523ad01bb7e9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="uninstalling-a-vspackage-with-windows-installer"></a>Windows インストーラーで VSPackage をアンインストールします。
 ほとんどの場合、Windows インストーラーをアンインストールできます VSPackage だけで「元に戻す」は、VSPackage をインストールします。 カスタム アクションは、後ほど[コマンドする必要がある実行後にインストール](../../extensibility/internals/commands-that-must-be-run-after-installation.md)もアンインストール後に実行する必要があります。 Devenv.exe への呼び出しは、インストールとアンインストールの両方の installfinalize が標準的な操作の直前に発生する、CustomAction と InstallExecuteSequence テーブルのエントリはどちらの場合に機能します。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  `Installed`Windows インストーラーが、VSPackage が既にシステムにインストールされたことを検出したときに設定するプロパティです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Windows インストーラー](http://msdn.microsoft.com/en-us/187d8965-c79d-4ecb-8689-10930fa8b3b5)   
  [システム要件の検出](../../extensibility/internals/detecting-system-requirements.md)

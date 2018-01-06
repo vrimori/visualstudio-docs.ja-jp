@@ -18,18 +18,19 @@ caps.latest.revision: "17"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4380299fd37b456dd3be6da7cf37981ad89b1caf
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: uwp
+ms.openlocfilehash: 70e0ab429f6359e8bb50a83307e9e042e0bfa4b0
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-while-debugging-uwp-apps-in-visual-studio"></a>トリガーする方法を中断、再開、および Visual Studio での UWP アプリのデバッグ中にバック グラウンド イベント
 デバッグが行われていないときは、Windows の **プロセス継続時間管理** (PLM) によってアプリの実行状態 (ユーザー アクションに応じたアプリの開始、中断、再開、および終了) とデバイスの状態が管理されます。 デバッグが行われているとき、これらのアクティブ化イベントは Windows によって無効にされます。 このトピックでは、デバッガーでこれらのイベントを発生させる方法について説明します。  
   
  このトピックでは、 **バックグラウンド タスク**をデバッグする方法についても説明します。 バックグラウンド タスクは、アプリが実行されていない場合でもバックグラウンド プロセスで特定の操作を行うことを可能にします。 デバッガーを使用してアプリをデバッグ モードに変更した後、UI の起動なしでバックグラウンド タスクを開始してデバッグできます。  
   
- プロセス継続時間管理とバック グラウンド タスクの詳細については、次を参照してください。[起動、再開、およびマルチタスク](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/index)です。  
+ プロセス継続時間管理とバック グラウンド タスクの詳細については、次を参照してください。[起動、再開、およびマルチタスク](/windows/uwp/launch-resume/index)です。  
   
 ##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
  [プロセス継続時間管理イベントを発生させる](#BKMK_Trigger_Process_Lifecycle_Management_events)  
@@ -123,7 +124,7 @@ ms.lasthandoff: 11/11/2017
   
 4.  **診断** ログを選択します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio での UWP アプリのテスト](../test/testing-store-apps-with-visual-studio.md)   
  [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
  [アプリケーションのライフ サイクル](http://msdn.microsoft.com/en-us/53cdc987-c547-49d1-a5a4-fd3f96b2259d)   

@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4ee8dd14674a1157eefda60e2e7536d7ade90f79
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e77511bdaaa96dc75f5be75c175b63fcd3cc3253
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="member-completion-in-a-legacy-language-service"></a>従来の言語サービスでメンバーの完了
 IntelliSense のメンバーの補完は、クラス、構造体、列挙型、または名前空間などの特定のスコープの可能なメンバーの一覧を表示するツール ヒントです。 たとえば、C# の場合、ユーザーの種類"this"、ピリオドが続く場合クラスまたは現在のスコープで構造体のすべてのメンバーの一覧でが表示されます、ユーザーが選択できるリスト。  

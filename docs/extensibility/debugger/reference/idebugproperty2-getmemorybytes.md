@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c5981a0fb11b4c8af203cf3d7ba33074c7ffd8cc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0dcf714b2882936b6c62016c9b1c7d80eb2ed2b7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugproperty2getmemorybytes"></a>IDebugProperty2::GetMemoryBytes
 プロパティの値を構成するメモリのバイト数を取得します。  
@@ -44,6 +45,6 @@ int GetMemoryBytes (
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`; エラー コードを返しますそれ以外の場合。 返します`S_GETMEMORYBYTES_NO_MEMORY_BYTES`取得するバイトのメモリがない場合。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)

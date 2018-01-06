@@ -12,11 +12,12 @@ caps.latest.revision: "27"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 185e513f1d9733c071ecacb65f67f2530e43cdc3
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 0d0114692af0c470a3f2aab181219394a54571d6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supported-visual-studio-editions-for-visualization-amp-modeling-sdk"></a>視覚エフェクトに対してサポートされている Visual Studio エディション&amp;モデリング SDK
 サポートされている Visual Studio のエディションの一覧は、次のとおり[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]オーサリングとデプロイ環境でします。 これらのエディションの詳細については、Microsoft を参照してください。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=75628)です。  
@@ -46,5 +47,5 @@ ms.lasthandoff: 10/27/2017
 > [!NOTE]
 >  DSL シェル製品を実行することをするためには、設定する必要があります、 **VS エディションのサポートされている**拡張機能マニフェスト内のフィールドです。 詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)

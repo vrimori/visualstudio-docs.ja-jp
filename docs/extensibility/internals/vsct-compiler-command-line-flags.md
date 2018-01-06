@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fd18d04adfbf3acd0ca50c1e75bd2a1694b28721
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d33c0e1bc54ee0c1abab736ba24ce76fbf710fdc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vsct-compiler-command-line-flags"></a>VSCT コンパイラのコマンド ライン フラグ
 Visual Studio コマンド テーブル (VSCT) コンパイラは、.vsct ファイルのコンパイルが成功したことを確認するコマンド ライン スイッチを提供します。  
@@ -57,7 +58,7 @@ Syntax: vsct <infile> [<outfile>] [-S[symbols file]] [-D<preprocessor-define>]*
   
  許容可能なフラグとその意味は次のとおりです。  
   
-|スイッチ|説明|  
+|切り替え|説明|  
 |------------|-----------------|  
 |-D|追加の定義済みのシンボルを指定します。|  
 |-|追加のインクルード ファイルの参照を解決するときに使用されるパスを指定します。|  
@@ -77,7 +78,7 @@ Syntax: vsct <infile> [<outfile>] [-S[symbols file]] [-D<preprocessor-define>]*
   
  VSCT コンパイラは、以前にビルドされたバイナリ ファイルをデコンパイルもできます。 これを行うには、指定のバイナリ ファイル、 \<infile >。   バイナリ ファイルは、VSCT コンパイラによって生成されて、その埋め込まれているそのシンボルとがのシンボリック名を持つ出力が生成されます、\<シンボル > 出力のセクションです。 バイナリは、CTC コンパイラによって生成されたが、出力には、実際の Guid と Id が含まれます。 Ctc.exe の現在のバージョンによって生成される *.ctsym ファイルは、バイナリの入力ファイルと同じフォルダーには、シンボルがそのファイルから読み込まれ、出力に使用されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio コマンド テーブル (です。Vsct) ファイル](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
  [VSCT XML スキーマ リファレンス](../../extensibility/vsct-xml-schema-reference.md)   
  [VSPackage でユーザー インターフェイス要素を追加する方法](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)

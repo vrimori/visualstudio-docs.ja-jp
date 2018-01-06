@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9bbf3ca1c35de6ef8742d5a6dcc5fba4721dc440
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7483ab7fdcc66cef0becbc9e4e42e35c310fdd14
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugdisassemblystream2getdocument"></a>IDebugDisassemblyStream2::GetDocument
 この入力ストリームに関連付けられているソース ドキュメントを取得します。  
@@ -52,6 +53,6 @@ int GetDocument(
 ## <a name="remarks"></a>コメント  
  このメソッドは、実際のファイルに格納されていないテキスト ドキュメントのデバッグ エンジンによって実装されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

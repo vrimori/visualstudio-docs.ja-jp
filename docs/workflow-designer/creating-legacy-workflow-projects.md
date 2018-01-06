@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 02f3d66b7d519546f1da89bb323ec9ab740628f6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 44b938467454d73c460cc9276b46bc165d36bcee
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-legacy-workflow-projects"></a>従来のワークフロー プロジェクトの作成
 ここでは、vs2010 が備えている従来の [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]を使用してワークフロー プロジェクトを作成する方法について説明します。 従来の[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]は、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] または [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] を対象とします。 次の一覧表に含まれるワークフロー プロジェクト テンプレートの使用法についても示します。  
@@ -52,6 +53,6 @@ ms.lasthandoff: 10/27/2017
   
  [方法: ワークフロー プロジェクトに新しい項目を追加する (レガシ)](../workflow-designer/how-to-add-a-new-item-to-a-workflow-project-legacy.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [シーケンシャル ワークフロー ビュー (レガシ)](../workflow-designer/sequential-workflow-views-legacy.md)   
  [Visual Studio ワークフローのウィンドウ (レガシ)](../workflow-designer/visual-studio-workflow-windows-legacy.md)

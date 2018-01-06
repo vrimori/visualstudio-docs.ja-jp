@@ -20,17 +20,18 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8ab25807ffaf62773b6c02f22c548fb5e5c769ff
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: d3717d3bee3665705ce39307b640e02a931cd75f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="verifying-and-debugging-sharepoint-code"></a>SharePoint コードの検証およびデバッグ
   IntelliTrace と単体テストを使用すると、SharePoint ソリューションを簡単にデバッグして、ソリューション内の各メソッドが正常に動作することを確認できます。 これらの機能は、他の種類のプロジェクトと同じ手順で、[!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] の SharePoint プロジェクトに対して使用できます。  
   
-## <a name="intellitrace"></a>IntelliTrace  
- IntelliTrace を使用して、SharePoint ソリューションの現在の状態だけでなく、過去に発生したイベントおよび発生時のコンテキストも調べることができます。 SharePoint ソリューション内の目的のイベントが記録されたさまざまな時点に移動し、各時点の状態と変数値を確認することができます。 この動的ナビゲーションを使用すると、多数のブレークポイントを設定しなくても、すばやく簡単に SharePoint ソリューションをデバッグできます。 また、デバッグ セッションを IntelliTrace ログ (.iTrace) ファイルに保存し、後でこのファイルを Visual Studio Ultimate で開いて、ポスト クラッシュ デバッグを実行できます。 .ITrace ファイルには、エラーの原因をより簡単に理解できるようにするタイミングと場所は、特定の SharePoint エラーが発生した、に関する詳細情報が含まれています。 .iTrace ファイルに含まれる情報は、SharePoint の Unified Logging System (ULS) で作成される完全なエラー ログのサブセットです。 この情報には、ユーザー プロファイルがいつ開かれたか、閉じられたか、SharePoint プロジェクト内のプロパティがいつ読み込まれたか、読み取られたか、変更されたかなど、SharePoint 固有のイベントが含まれています。 IntelliTrace でどのイベントを記録するか、構成することもできます。 詳細については、次を参照してください。[保存された IntelliTrace データを使用する](/visualstudio/debugger/using-saved-intellitrace-data)と[構成 IntelliTrace](http://msdn.microsoft.com/en-us/7657ecab-e07e-4b1b-872d-f05d966be37e)です。  
+## <a name="intellitrace"></a>[IntelliTrace]  
+ IntelliTrace を使用して、SharePoint ソリューションの現在の状態だけでなく、過去に発生したイベントおよび発生時のコンテキストも調べることができます。 SharePoint ソリューション内の目的のイベントが記録されたさまざまな時点に移動し、各時点の状態と変数値をレビューすることができます。 この動的ナビゲーションを使用すると、多数のブレークポイントを設定しなくても、すばやく簡単に SharePoint ソリューションをデバッグできます。 また、デバッグ セッションを IntelliTrace ログ (.iTrace) ファイルに保存し、後でこのファイルを Visual Studio Ultimate で開いて、ポスト クラッシュ デバッグを実行できます。 .ITrace ファイルには、エラーの原因をより簡単に理解できるようにするタイミングと場所は、特定の SharePoint エラーが発生した、に関する詳細情報が含まれています。 .iTrace ファイルに含まれる情報は、SharePoint の Unified Logging System (ULS) で作成される完全なエラー ログのサブセットです。 この情報には、ユーザー プロファイルがいつ開かれたか、閉じられたか、SharePoint プロジェクト内のプロパティがいつ読み込まれたか、読み取られたか、変更されたかなど、SharePoint 固有のイベントが含まれています。 IntelliTrace でどのイベントを記録するか、構成することもできます。 詳細については、次を参照してください。[保存された IntelliTrace データを使用する](/visualstudio/debugger/using-saved-intellitrace-data)と[構成 IntelliTrace](http://msdn.microsoft.com/en-us/7657ecab-e07e-4b1b-872d-f05d966be37e)です。  
   
  SharePoint でエラーが発生した場合、エラー ダイアログ ボックスには、そのエラーの "相関 ID" 識別子が表示されます。 .iTrace ファイルに示されているイベントから相関 ID を取得することもできます。 特定の相関 id が発生したイベントのすべての一覧を表示するには、ID を入力することができます、 **Analysis** IntelliTrace の概要 ページのセクションです。 このセクションでは、発生したイベントの名前のみを表示するか、イベントの名前と共に、関数名、終了/エントリ ポイント、パラメーター、戻り値などの呼び出し情報を表示するかを選択できます。  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/31/2017
 |[チュートリアル: IntelliTrace を使用した SharePoint アプリケーションのデバッグ](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md)|IntelliTrace を使用して SharePoint プロジェクトのコード エラーを検出する方法について説明します。|  
 |[コードの単体テスト](/visualstudio/test/unit-test-your-code)|単体テストを使用してコードの論理エラーを検出する方法について説明します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コード品質の向上](/visualstudio/test/improve-code-quality)  
   
   

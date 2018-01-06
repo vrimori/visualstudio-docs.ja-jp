@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 66fbf5e73639766ad27f7853e8170cd49518202f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1c160fb10ce4ebdd8d483da5f1ccbd7efaa6d685
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprocess2candetach"></a>IDebugProcess2::CanDetach
 セッションのデバッグ マネージャー (SDM) が、プロセスをデタッチできるかどうかを判断します。  
@@ -38,6 +39,6 @@ int CanDetach();
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK.`返します`S_FALSE`場合は、デバッガーがプロセスからデタッチできません。 それ以外の場合はエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CanDetach](../../../extensibility/debugger/reference/idebugprogram2-candetach.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

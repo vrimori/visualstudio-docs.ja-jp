@@ -19,11 +19,12 @@ caps.latest.revision: "26"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1974f32731d8ba45b2210b9d9231a7e69d6905f4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 2ca99a5ad13989f29126b23a93055b174bb49150
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-sharepoint-project-extension"></a>チュートリアル: SharePoint プロジェクトの拡張機能の作成
   このチュートリアルでは、SharePoint プロジェクトの拡張機能を作成する方法について説明します。 プロジェクトの拡張機能を使用して、プロジェクトを追加、削除、または名前を変更する場合など、プロジェクト レベルのイベントに応答することができます。 カスタム プロパティを追加したり、プロパティ値が変更されたときに応答できます。 プロジェクト項目の拡張機能とは異なり、プロジェクトの拡張機能は、特定の SharePoint プロジェクトの種類に関連付けられてすることはできません。 任意の種類の SharePoint プロジェクトを開いたときに、拡張機能を読み込みますプロジェクトの拡張機能を作成するときに[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。  
@@ -204,7 +205,7 @@ ms.lasthandoff: 10/31/2017
   
 7.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] の実験用インスタンスを閉じます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint プロジェクトの拡張](../sharepoint/extending-sharepoint-projects.md)   
  [方法: SharePoint プロジェクトにプロパティを追加](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)   
  [SharePoint プロジェクト システムの種類とその他の Visual Studio プロジェクトの種類間の変換](../sharepoint/converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md)   

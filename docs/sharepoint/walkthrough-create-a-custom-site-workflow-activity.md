@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6d3579c3d537dc13723cbe285b454b24d079fe1f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 1b7a24c793755cdd5102407d1a3a5cbfad103c92
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-create-a-custom-site-workflow-activity"></a>チュートリアル: サイトのカスタム ワークフロー アクティビティの作成
   このチュートリアルは、カスタム アクティビティを使用して、サイト レベルのワークフローを作成する方法を示します[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 (サイト レベルのワークフローは、サイトの一覧だけでなく、サイト全体に適用)。カスタム アクティビティは、バックアップお知らせリストを作成し、そこにお知らせリストの内容をコピーします。  
@@ -128,7 +129,7 @@ ms.lasthandoff: 10/31/2017
   
 5.  クイック起動バーで、選択、**お知らせバックアップ**リンクします。 注意してお知らせに含まれるのすべて、**お知らせ**一覧は、この新しいリストにコピーされています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: イベント レシーバーを作成します。](../sharepoint/how-to-create-an-event-receiver.md)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   

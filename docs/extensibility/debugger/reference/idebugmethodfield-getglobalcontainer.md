@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ffeb7c7c1abe6e5a816c2d7a67ad6820e0921bc8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b2fef7bf82992b6fdaaadbbd2bee6a9e36f68ad0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugmethodfieldgetglobalcontainer"></a>IDebugMethodField::GetGlobalContainer
 メソッドのグローバルのコンテナーを取得します。  
@@ -47,6 +48,6 @@ int GetGlobalContainer(
 ## <a name="remarks"></a>コメント  
  返された[IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)オブジェクトはモジュール全体を表し、人為的なオブジェクトしますつまり、モジュール自体には、実際のクラスはありませんがで表すことができます、`IDebugClassField`さまざまなをすることにより、オブジェクト。列挙され、検出するモジュールの要素です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

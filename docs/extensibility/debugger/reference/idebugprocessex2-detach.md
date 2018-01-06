@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d810008391398741e644da7215de174918db604f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 40176b654f1a108e995a778eb4c7495b062f6114
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprocessex2detach"></a>IDebugProcessEx2::Detach
 このメソッドは、セッションが不要になった、プロセスをデバッグしているプロセスに通知します。  
@@ -47,5 +48,5 @@ int Detach(
 ## <a name="remarks"></a>コメント  
  渡されたインターフェイス`pSession`がクッキーとしてのみ扱われるは、このプロセスにアタッチされた最初のセッションのデバッグ マネージャーを一意に識別する値はありません。 指定されたインターフェイスのメソッドの機能です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProcessEx2](../../../extensibility/debugger/reference/idebugprocessex2.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 73a3100252dd5ddfcebd791588a4041c8d588e8d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 398986499732a36819808b07f05f7d6b46787a94
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="component-management"></a>コンポーネントの管理
 Windows インストーラーのタスクの単位は、Windows インストーラー コンポーネント (WICs またはだけコンポーネントとも呼ばれます) と呼ばれます。 インストールと Windows インストーラーを使用する設定に対する参照カウントの基本単位は、各 WIC を識別する GUID。  
@@ -50,6 +51,6 @@ Windows インストーラーのタスクの単位は、Windows インストー�
   
      作成する場合は、別のバージョン管理された VSPackage をインストールすると、共有キーは上書きされます。 2 番目のバージョンを削除した後、キーが指してするファイルは失われます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [共有とバージョン管理された Vspackage の使い分け](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)   
  [VSPackage のセットアップ シナリオ](../../extensibility/internals/vspackage-setup-scenarios.md)

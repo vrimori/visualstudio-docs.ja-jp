@@ -23,11 +23,12 @@ caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d64c0767cce43d5b157fca82cc3e1e210a2f8c58
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: dc016efd3d0a3525f733929c294946bf9376417b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-and-debugging-a-sharepoint-workflow-solution"></a>チュートリアル : SharePoint ワークフロー ソリューションの作成とデバッグ
   このチュートリアルでは、基本的なシーケンシャル ワークフロー テンプレートを作成する方法を示します。 ワークフローでは、ドキュメントが確認されていないかどうかを決定する共有ドキュメント ライブラリのプロパティを確認します。 ドキュメントをレビューすると、ワークフローが終了します。  
@@ -168,7 +169,7 @@ ms.lasthandoff: 10/31/2017
   
 12. **プロパティ** ウィンドウでは、次の表に示すようにプロパティを設定します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
     |**CorrelationToken**|**workflowToken**|  
     |**呼び出される**|**onWorkflowItemChanged**|  
@@ -293,7 +294,7 @@ ms.lasthandoff: 10/31/2017
   
 -   Windows Workflow Foundation アクティビティに関する詳細については、次を参照してください。 [System.Workflow.Activities Namespace](http://go.microsoft.com/fwlink/?LinkId=178993)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ワークフロー ソリューションを作成します。](../sharepoint/creating-sharepoint-workflow-solutions.md)   
  [SharePoint プロジェクトとプロジェクト項目テンプレート](../sharepoint/sharepoint-project-and-project-item-templates.md)   
  [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  

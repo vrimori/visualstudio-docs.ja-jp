@@ -24,11 +24,12 @@ caps.latest.revision: "53"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 13da2a068348478be8511e1c5624059b0d063bac
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 6a0f2e0b87e791618477ff6e11c9e180793d5495
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="features-available-by-office-application-and-project-type"></a>Office アプリケーションおよびプロジェクト タイプ別の使用可能な機能
   Visual Studio には、次のように、Microsoft Office アプリケーションのさまざまなビジネス シナリオをサポートするプロジェクト テンプレートがいくつか用意されています。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="features-available-in-different-project-types"></a>各プロジェクトで使用できる機能  
  プロジェクトの種類ごとに異なる機能を次の表に示します。  
   
-|特性|機能を提供するプロジェクトの種類|関連項目|  
+|機能|機能を提供するプロジェクトの種類|関連項目|  
 |-------------|--------------------------------------------|---------------------|  
 |[操作] ウィンドウ。|ドキュメントレベルのプロジェクト。|[操作ウィンドウの概要](../vsto/actions-pane-overview.md)|  
 |ClickOnce 配置。|VS およびドキュメントレベルのプロジェクト。|[Office ソリューションの配置](../vsto/deploying-an-office-solution.md)|  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/31/2017
 |リボンのカスタマイズ。|ドキュメントレベルのプロジェクト。<br /><br /> 次のアプリケーション用の VSTO アドイン プロジェクト:<br /><br /> -Excel<br />-InfoPath (InfoPath 2013 と InfoPath 2010 のみ)<br />Outlook を使用して<br />-PowerPoint<br />プロジェクト<br />Visio<br />ワード|[リボンの概要](../vsto/ribbon-overview.md)|  
 |視覚的なドキュメント デザイナー。|ドキュメントレベルのプロジェクト。|[Visual Studio 環境における Office プロジェクト](../vsto/office-projects-in-the-visual-studio-environment.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [作業の開始 (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/getting-started-office-development-in-visual-studio.md)   
  [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)   
  [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   

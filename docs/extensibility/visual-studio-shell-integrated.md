@@ -16,11 +16,12 @@ caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0d92a6c7250e22972a2b352b74b974601ff6065c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b43e4ac1c8e40a9f4f378be42cc642767bee0777
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-shell-integrated"></a>Visual Studio Shell (Integrated)
 Visual Studio の統合シェルには、統合開発環境 (IDE)、デバッガー、およびソース管理の統合が含まれています。 プログラミング言語が含まれていない場合です。 ただし、integrated shell はプログラミング言語を追加するためのフレームワークを提供します。  
@@ -36,7 +37,7 @@ Visual Studio の統合シェルには、統合開発環境 (IDE)、デバッガ
   
 |||  
 |-|-|  
-|機能分野|特性|  
+|機能分野|機能|  
 |言語サポート|-なし|  
 |IDE|<ul><li>設定<br /><br /> <ul><li>設定を作成します。</li><li>インポートとエクスポートの設定</li><li>設定のリセット</li></ul></li><li>**ツールボックス**統合</li><li>**タスク一覧**統合</li><li>ヘルプの統合</li><li>**オプション** ダイアログ ボックス</li><li>フォントおよび色の管理</li><li>**出力**ウィンドウ</li><li>**コマンド**ウィンドウ</li><li>ウィンドウの管理</li><li>コマンド、メニューのおよびショートカット キー</li><li>ドメイン固有言語 (DSL) ランタイム</li></ul>|  
 |プロジェクト システムとプロジェクトの種類|ソリューションおよびソリューション フォルダー<br />ソリューション構成マネージャー<br />項目の管理<br />単一のプロジェクトおよびマルチ プロジェクト ソリューション<br />アプリケーション デザイナー (簡略化されたプロジェクトのプロパティ)<br />-Web 参照を追加します。<br />-サービス参照を追加します。<br />単一のプロジェクト<br />Web サイト プロジェクトの種類<br />Web アプリケーション プロジェクト|  
@@ -80,5 +81,5 @@ Visual Studio の統合シェルには、統合開発環境 (IDE)、デバッガ
   
 -   Integrated shell では、なしの Visual Studio の言語や、関連付けられているプロジェクト テンプレートやプロジェクト項目テンプレートが含まれています。 その他の機能の言語固有の実装が含まれる、Visual Basic コード スニペットの例ではありません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio SDK](../extensibility/visual-studio-sdk.md)

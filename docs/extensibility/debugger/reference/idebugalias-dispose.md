@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d10b1e45f9970b2bf331b590f709ef0d8cd15bcd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: adc458c518baedfd8c5495ea3599ea4bbb21e9f2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugaliasdispose"></a>IDebugAlias::Dispose
 このエイリアスの削除のマークを付けます。  
@@ -42,5 +43,5 @@ int Dispose();
 ## <a name="remarks"></a>コメント  
  このメソッドが呼び出されると、エイリアスは使用できなくします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 504046999814b4766fa9e5e8c006a02049e7007d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 868fe0785c90a174610b9fff837fc6fbfb084e83
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-site-support-attributes"></a>Web サイトのサポートの属性
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Web サイト プロジェクトは、プログラミング言語の Web サポートを提供する拡張できます。 言語には、自らを登録する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]でプロジェクト テンプレートが表示できるように、**新しい Web サイト**ダイアログ ボックスの言語が選択されているとします。  
@@ -57,5 +58,5 @@ ms.lasthandoff: 10/31/2017
   
  IVsIntellisenseProject 実装では、参照を処理し、コードを含む Web ページが要求されましたが、キャッシュされていないときに、言語コンパイラを呼び出します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Web サイト サポート](../../extensibility/internals/web-site-support.md)

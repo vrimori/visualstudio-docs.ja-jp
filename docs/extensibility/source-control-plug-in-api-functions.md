@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1085312849ce33518654e044a795d6aa4b735e07
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: beaab13c76b3d50f97662e66c1f72dc83161e96d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="source-control-plug-in-api-functions"></a>ソース管理プラグイン API 関数
 ソース コントロールのプラグイン API は、次の関数は、ソース管理プラグインに従ってこの API によって実装する必要がありますを提供します。 ビット フラグに関連付けられている各関数とセマンティクスのシグネチャとその他のパラメーターは、このリファレンスで詳しく説明します。  
@@ -82,11 +83,11 @@ ms.lasthandoff: 10/31/2017
 |[SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)|ディレクトリと、プロジェクトまたはソース管理下にあるプロジェクト内のファイルの一覧を調べます。 検出された各ディレクトリとファイル名は、コールバック関数に渡されます。|  
 |[SccQueryChanges](../extensibility/sccquerychanges-function.md)|ファイルの一覧に加えられた名前の変更を調べます。 各ファイル名は、その状態の変更とコールバック関数に渡されます。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: scc.h  
   
  (環境 SDK で提供される共通のフォルダーに含まれて、既定では*[ドライブ]*\Program Files\VSIP 8.0\EnvSDK\common\inc; MSSCCI サンプルを使用して、VSIP フォルダーの中でも提供*[ドライブ]*\ProgramFiles\VSIP 8.0\MSSCCI)。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)   
  [ソース管理プラグインの作成](../extensibility/internals/creating-a-source-control-plug-in.md)

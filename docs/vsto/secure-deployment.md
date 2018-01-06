@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c77d5fb404be8dda323720c1e0c1ab2c1887c88f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: cace0c9826a76a4a8341c6b85e1219dcf287e80a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-deployment"></a>安全な配置
   Office ソリューションを作成すると、開発用コンピューターを実行するプロジェクトでコードを許可する自動的に更新されます。 ただし、ソリューションを配置するときは、ソリューションに、証明書で署名するかを使用して、信頼の決定を基になる証拠を提供する必要があります、[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]信頼プロンプト キー。 詳細については、次を参照してください。 [Office ソリューションへの信頼の付与](../vsto/granting-trust-to-office-solutions.md)です。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/31/2017
   
  Office ソリューションのコードを実行するには、両方の設定、 `Disabled` 0 (ゼロ) にエントリまたはレジストリ エントリを削除します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)   
  [実行するか、Office ソリューションをホストするコンピューターを準備します。](http://msdn.microsoft.com/en-us/be1b173f-7261-4d74-aa4e-94ccd43db8d8)   
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)  

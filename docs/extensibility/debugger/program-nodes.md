@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a6deae60a8e7863e19ec0624ff6452bf41816070
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 90ec92ad46a850c26e700e9feafa60d291f608ba
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="program-nodes"></a>プログラムのノード
 デバッガーのアーキテクチャの観点から、**プログラム ノード**:  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
   
  プログラムにアタッチされて、前に、IDE には、プログラムの軽量の説明のみ必要があります。 この情報は、[プログラム] ノードから取得できます。 プログラムに結び付けられる、IDE をプログラムで実行されているすべてのスレッドのリストなどのより詳細な情報を表示する必要があります。 この情報は、プログラム自体から取得されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プログラム](../../extensibility/debugger/programs.md)   
  [プロセス](../../extensibility/debugger/processes.md)   
  [デバッグ エンジン](../../extensibility/debugger/debug-engine.md)   

@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b88c89d9464b5ac9bc588c4364de97c1f4e281d9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: d2239a73b5a6f35a3571af90f8bd2814150da9d9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-sharepoint-packaging-and-deployment"></a>SharePoint のパッケージ化と配置の拡張
   SharePoint プロジェクトのパッケージ化と配置のプロセスを拡張できます。
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/31/2017
 ##  <a name="customizing-validation-rules"></a>検証規則のカスタマイズ  
  ソリューション パッケージ (.wsp) を配置する前に、フィーチャーまたはパッケージが有効であることを検証するために、カスタムのフィーチャー検証規則およびパッケージ検証規則を作成できます。 たとえば、検証に関する問題の修正に役立つように、情報、警告、またはエラーを開発者に報告できます。 詳細については、次を参照してください。[する方法: カスタム機能の作成と SharePoint ソリューションのパッケージ検証規則](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: 実行時に配置手順のコードが実行されます](../sharepoint/how-to-run-code-when-deployment-steps-are-executed.md)   
  [チュートリアル: SharePoint プロジェクトに対するカスタムの配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)   
  [方法: SharePoint ソリューションのカスタムのフィーチャーとパッケージ検証規則を作成します。](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)   

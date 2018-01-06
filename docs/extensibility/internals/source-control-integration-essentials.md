@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 09e96719bd7d9a2091bf31dc343036f0312c02fc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5d474e00186cf2110dd8e701d980a1a4562beb8c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="source-control-integration-essentials"></a>ソース コントロール Essentials の統合
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ソース管理の統合の 2 つの種類をサポートします: ソース管理プラグインを基本的な機能を提供し、使用して (旧称 MSSCCI API)、ソース管理プラグイン API と VSPackage に基づくソース コントロールの統合ソリューションをビルドします。堅牢な機能を提供します。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/31/2017
   
  詳細については、次を参照してください。[ソース コントロールの VSPackage を作成する](../../extensibility/internals/creating-a-source-control-vspackage.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [概要](../../extensibility/internals/source-control-integration-overview.md)   
  [ソース管理プラグインを作成します。](../../extensibility/internals/creating-a-source-control-plug-in.md)   
  [ソース管理 VSPackage の作成](../../extensibility/internals/creating-a-source-control-vspackage.md)

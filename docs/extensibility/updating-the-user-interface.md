@@ -15,11 +15,12 @@ caps.latest.revision: "41"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 02bf66cba145b1d5fdaea899ca3af4ca2bcefbe1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: bea4f89d2894344069b8aa5b3037bd00b973a40e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="updating-the-user-interface"></a>ユーザー インターフェイスの更新
 コマンドを実装した後は、新しいコマンドの状態で、ユーザー インターフェイスを更新するコードを追加できます。  
@@ -53,6 +54,6 @@ ms.lasthandoff: 10/31/2017
   
          取得することに注意してください、<xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager>インターフェイスを呼び出して、`QueryInterface`メソッドを<xref:Microsoft.VisualStudio.Shell.Interop.IOleComponentUIManager>からインターフェイスを取得して、オブジェクト、または、<xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager>サービス。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Vspackage がユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [実装](../extensibility/internals/command-implementation.md)

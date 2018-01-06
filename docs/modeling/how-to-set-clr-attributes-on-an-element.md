@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 7dcbd0005b80887dae91249a6781a6982414b9e5
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: d18a19debb8208c53d23bc5c187e0044a1303f08
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-clr-attributes-on-an-element"></a>方法: 要素の CLR 属性を設定する
 カスタム属性は、ドメインの要素、図形、コネクタ、およびダイアグラムを追加できる特別な属性です。 継承する任意の属性を追加することができます、`System.Attribute`クラスです。  
@@ -36,11 +37,11 @@ ms.lasthandoff: 10/27/2017
   
 5.  **Name プロパティ**列で、たとえば、適切な名前を入力`MyString`です。  
   
-6.  **[OK]** をクリックします。  
+6.  **[OK]**をクリックします。  
   
      **カスタム属性**プロパティは、次の形式で属性を表示するようになりました。  
   
      `[`*AttributeName* `(` *ParameterName* `=` *型*`)]`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -22,11 +22,12 @@ caps.latest.revision: "59"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0e8102cf760020b5584458ebd77052684a1b4af2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: cffce10e443b2605e29d800cb271c4a96dc70359
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="outlook-object-model-overview"></a>Outlook オブジェクト モデルの概要
   Microsoft Office Outlook 用の VSTO アドインを開発するには、Outlook オブジェクト モデルによって提供されるオブジェクトとのやり取りが可能です。 Outlook オブジェクト モデルは、ユーザー インターフェイスで項目を表すクラスとインターフェイスを提供します。 たとえば、 <xref:Microsoft.Office.Interop.Outlook.Application> オブジェクトは、アプリケーション全体を表し、 <xref:Microsoft.Office.Interop.Outlook.MAPIFolder> オブジェクトは、電子メール メッセージや他のアイテムを含むフォルダーを表します。 <xref:Microsoft.Office.Interop.Outlook.MailItem> オブジェクトは、電子メール メッセージを表します。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/31/2017
   
 -   <xref:Microsoft.Office.Interop.Outlook._Application.Inspectors%2A> プロパティ。これを使用して、電子メール メッセージや会議出席依頼などの単一の項目の内容を表示するウィンドウにアクセスできます。  
   
- インスタンスを取得する、<xref:Microsoft.Office.Interop.Outlook.Application>オブジェクトでのアプリケーションのフィールドを使用して、`ThisAddIn`プロジェクト内のクラスです。 詳細については、「 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)」を参照してください。  
+ インスタンスを取得する、<xref:Microsoft.Office.Interop.Outlook.Application>オブジェクトでのアプリケーションのフィールドを使用して、`ThisAddIn`プロジェクト内のクラスです。 詳細については、「 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)。  
   
 > [!NOTE]  
 >  プロパティと Outlook オブジェクト モデルの保護によってブロックされているメソッドを使用する場合は、セキュリティの警告を回避するためには、アプリケーションのフィールドから Outlook オブジェクトを取得、`ThisAddIn`クラスです。 詳細については、「 [Specific Security Considerations for Office Solutions](../vsto/specific-security-considerations-for-office-solutions.md)」を参照してください。  
@@ -95,7 +96,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="mapifolder-object"></a>MAPIFolder オブジェクト  
  <xref:Microsoft.Office.Interop.Outlook.MAPIFolder> オブジェクトは、電子メール メッセージ、連絡先、タスク、およびその他の項目が含まれているフォルダーを表します。 Outlook には 16 の既定の <xref:Microsoft.Office.Interop.Outlook.MAPIFolder> オブジェクトが用意されています。  
   
- 既定の <xref:Microsoft.Office.Interop.Outlook.MAPIFolder> オブジェクトは <xref:Microsoft.Office.Interop.Outlook.OlDefaultFolders> 列挙値により、定義されます。 次に例を示します。  
+ 既定の <xref:Microsoft.Office.Interop.Outlook.MAPIFolder> オブジェクトは <xref:Microsoft.Office.Interop.Outlook.OlDefaultFolders> 列挙値により、定義されます。 たとえば、オブジェクトに適用された  
   
  対応する Microsoft.Office.Interop.Outlook.OlDefaultFolders.olFolderInbox、**受信トレイ**Outlook のフォルダーです。  
   

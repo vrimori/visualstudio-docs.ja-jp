@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 783c93386ae967138a0fb782a05cb8a21f0ad009
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d2d6326f08276da60a3e901912bfb579428680d9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-user-experience-guidelines"></a>Visual Studio ユーザー エクスペリエンス ガイドライン
 Visual Studio ユーザー エクスペリエンス ガイドライン 』 は、対象とした Visual Studio の新機能を設計します。 次のガイドラインは、新しいユーザー インターフェイス (UI) の設計者は、シームレスな開発環境内で一貫性のあるユーザー エクスペリエンスを作成できるように、ユーザーの一般的なモデルと相互作用のパターンに関する情報を格納します。  

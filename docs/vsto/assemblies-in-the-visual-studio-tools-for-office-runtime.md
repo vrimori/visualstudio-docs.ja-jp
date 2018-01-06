@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 130cf43e7c11eeccae8fdbdd22b46faf6bfe3c49
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: dff032c3f43c662b75f4d0b757f16e70095efc33
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblies-in-the-visual-studio-tools-for-office-runtime"></a>Visual Studio Tools for Office Runtime のアセンブリ
   Office プロジェクトを作成すると、Visual Studio によって、そのプロジェクト タイプとプロジェクトの対象 .NET Framework に使用する [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] アセンブリの参照が自動的に追加されます。 .NET Framework 3.5、 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]、 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]の Office 拡張機能にさまざまなアセンブリがあります。 Office 拡張機能についての詳細は、「 [Visual Studio Tools for Office Runtime Overview](../vsto/visual-studio-tools-for-office-runtime-overview.md)」を参照してください。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/31/2017
 |Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll|次の型を提供します。<br /><br /> -Microsoft.VisualStudio.Tools.Applications.ServerDocument クラスをプログラムでカスタマイズ アセンブリをドキュメントにアタッチして、ドキュメントでキャッシュされたデータにアクセスを行うこともできます。 詳細については、「 [Managing Documents on a Server by Using the ServerDocument Class](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)」を参照してください。<br />、階層を表すいくつかのクラスには、ドキュメント レベルのカスタマイズ内のデータがキャッシュされます。 詳細については、「 [Accessing Data in Documents on the Server](../vsto/accessing-data-in-documents-on-the-server.md)」を参照してください。|  
 |Microsoft.VisualStudio.Tools.Office.Runtime.v10.0.dll|次の型を提供します。<br /><br /> リストのエントリを Office に信頼を与えるユーザー信頼の作成に使用できる-Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry および Microsoft.VisualStudio.Tools.Office.Runtime.Security.UserInclusionList クラス.NET Framework 3.5 を対象とするソリューションです。<br />-Visual Studio Tools for Office runtime インフラストラクチャの一部であり、コードから直接使用するものではありませんその他の型。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Tools for Office Runtime Overview](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
  [Visual Studio Tools for Office ランタイムのインストール シナリオ](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md)  
   

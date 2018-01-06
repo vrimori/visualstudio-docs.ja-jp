@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2f620d895defbeeb3317f4a977db454a14ce3adc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2019a34e55148007cd75df12212bd4b0a897159c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="keybinding-element"></a>KeyBinding 要素
 KeyBinding 要素には、コマンドのキーボード ショートカットを指定します。  
@@ -39,15 +40,15 @@ KeyBinding 要素には、コマンドのキーボード ショートカット�
   
 |属性|説明|  
 |---------------|-----------------|  
-|guid|必須です。|  
-|ID|必須です。|  
-|エディター|必須です。 エディターの GUID では、次のキーボード ショートカットがアクティブになる編集コンテキストを示します。 バインディングのグローバル スコープの値は、"guidVSStd97"です。|  
-|key1|必須です。 有効な値はすべて判読英数字、さらに 2 桁の 16 進値 0x と[VK_constants](https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731.aspx)です。|  
-|mod1|省略可能です。 CTRL、alt キーを押し、およびスペースで区切られたシフトの任意の組み合わせ。|  
-|key2|省略可能です。 有効な値はすべて判読英数字、さらに 2 桁の 16 進値 0x と[VK_constants](https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731.aspx)です。|  
-|mod2|省略可能です。 CTRL、alt キーを押し、およびスペースで区切られたシフトの任意の組み合わせ。|  
-|エミュレーター|省略可能です。|  
-|状態|省略可能です。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
+|guid|必須。|  
+|ID|必須。|  
+|エディター|必須。 エディターの GUID では、次のキーボード ショートカットがアクティブになる編集コンテキストを示します。 バインディングのグローバル スコープの値は、"guidVSStd97"です。|  
+|key1|必須。 有効な値はすべて判読英数字、さらに 2 桁の 16 進値 0x と[VK_constants](https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731.aspx)です。|  
+|mod1|任意。 CTRL、alt キーを押し、およびスペースで区切られたシフトの任意の組み合わせ。|  
+|key2|任意。 有効な値はすべて判読英数字、さらに 2 桁の 16 進値 0x と[VK_constants](https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731.aspx)です。|  
+|mod2|任意。 CTRL、alt キーを押し、およびスペースで区切られたシフトの任意の組み合わせ。|  
+|エミュレーター|任意。|  
+|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -73,6 +74,6 @@ KeyBinding 要素には、コマンドのキーボード ショートカット�
 </KeyBindings>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [KeyBindings 要素](../extensibility/keybindings-element.md)   
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1528bc685577082df997535a680c372620821de0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c3d2bcad21bb919125b487a57b73d3a458a3a1f9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="language-services-and-the-core-editor"></a>言語サービスとコア エディター
 Visual Studio でのエディターは、言語サービスに頻繁に関連付けられます。 特には、言語サービスは、構文の色分け、ステートメント入力候補、IntelliSense、およびテキストの書式設定を提供します。  
@@ -37,7 +38,7 @@ Visual Studio でのエディターは、言語サービスに頻繁に関連付
   
  コア エディター ドキュメント データ オブジェクトし、呼ばれ、バッファーにテキストで表される、<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>オブジェクト。 ドキュメント ビュー オブジェクトし、呼ばれ、テキスト ビューで表される、<xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>オブジェクト。 これら 2 つのオブジェクトは、コア エディターの統一されたビューを提供する言語サービスで共同作業します。 テキスト バッファーと、ドキュメント ウィンドウにテキスト ビューに表示される情報には、コード ウィンドウが呼び出されます。 コード ウィンドウのドキュメントは、コード ウィンドウ マネージャーによって管理されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>   

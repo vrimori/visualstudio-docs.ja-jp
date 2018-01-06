@@ -11,11 +11,12 @@ caps.latest.revision: "9"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 8d7fbdb1851669d704cb8a44f8144291c04ae0ce
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: f840354cad5551a9413ccb74851dfaca3353a5fb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-invoke-the-workflow-debugger"></a>ワークフロー デバッガーを呼び出す方法
 ほとんどの場合、他の Visual Studio プログラミング言語で書かれたプログラムをデバッグするときと同じようにして、ワークフローをデバッグすることができます。 ワークフロー デバッガーは、次の方法で開始できます。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 10/27/2017
   
 -   ワークフロー コンソール アプリケーション プロジェクトを作成している場合が単にキーを押して**f5 キーを押して**に、アプリケーションとワークフローのデバッグを開始します。 アクティビティ ライブラリを単独で構築する場合は、実行可能なホスト アプリケーションをスタートアップ プロジェクトとして用意する必要があります。 スタートアップ プロジェクトを設定する**ソリューション エクスプ ローラー**をホストのプロジェクト名を右クリックし、**スタートアップ プロジェクトとして設定**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: ワークフロー内のブレークポイントを設定](../workflow-designer/how-to-set-breakpoints-in-workflows.md)   
  [ワークフロー デザイナーを使用したワークフローのデバッグ](../workflow-designer/debugging-workflows-with-the-workflow-designer.md)

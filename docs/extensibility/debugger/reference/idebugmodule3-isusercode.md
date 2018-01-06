@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9dcade316ef9bd58cc7be2906df3ca3cfa9fa33b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4f89004e3fd72076a177b3f826ef55b3726f1337
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugmodule3isusercode"></a>IDebugModule3::IsUserCode
 モジュールがユーザー コードを表すかどうかどうかに関する情報を取得します。  
@@ -44,5 +45,5 @@ int IsUserCode(
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)

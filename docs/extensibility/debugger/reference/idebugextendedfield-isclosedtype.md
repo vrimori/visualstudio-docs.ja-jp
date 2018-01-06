@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ad1498f0f169e10bcc58cdc0f5e041096766e87c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 97d7dce947ead73979ec03b7f897071ba8367dcf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugextendedfieldisclosedtype"></a>IDebugExtendedField::IsClosedType
 フィールドがクローズ型を表すかどうかを判断します。  
@@ -39,5 +40,5 @@ int IsClosedType();
 ## <a name="return-value"></a>戻り値  
  フィールドがクローズ型の場合を返します`S_OK`、それ以外を返します`S_FALSE`です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugExtendedField](../../../extensibility/debugger/reference/idebugextendedfield.md)

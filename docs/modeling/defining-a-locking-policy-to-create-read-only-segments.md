@@ -11,11 +11,12 @@ caps.latest.revision: "12"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 0ac8ba75920c4b3b8964d473258c162c256139ca
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 93e4393a7b6731a10a00dc309353dba5870c269f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>ロック ポリシーの定義と読み取り専用セグメントの作成
 不変性 API、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK により、ドメイン固有言語 (DSL) モデルのロックの一部またはすべてのプログラムの読み取りが変更されていないことができるようにします。 この読み取り専用のオプションでしたするなど、使用できるように、ユーザーが仕事仲間に注釈を付け、DSL モデルの確認を求めることができますが、変更、元の変更を禁止することができます。  
@@ -78,7 +79,7 @@ partition.SetLocks(Locks.Delete);
   
  パーティション上のロックを設定、格納またはと、同時に、個々 の要素のロックを無効にすることはできません。  
   
-|値|つまり場合`IsLocked(Value)`が true|  
+|[値]|つまり場合`IsLocked(Value)`が true|  
 |-----------|------------------------------------------|  
 |なし|制限はありません。|  
 |プロパティ|要素のドメインのプロパティを変更することはできません。 これは、リレーションシップ内のドメイン クラスの役割によって生成されるプロパティには適用されません。|  

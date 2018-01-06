@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7191d31d4ec53fb26f4ab20114201836f1b58fc5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 757968aabfc256cda37a103d48c8d12f1fc16fa5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wizard-support-for-nested-projects"></a>ウィザードでサポートされる入れ子になったプロジェクト
 IDE は、親プロジェクトの入れ子になったプロジェクトを実装できる 2 つのウィザードを実行します。**新しいプロジェクト**ウィザードと**項目の追加**ウィザード。  
@@ -31,6 +32,6 @@ IDE は、親プロジェクトの入れ子になったプロジェクトを実�
   
  ウィザードの詳細については、次を参照してください。[ウィザード (です。Vsz) ファイル](../../extensibility/internals/wizard-dot-vsz-file.md)、[コンテキスト パラメーター](../../extensibility/internals/context-parameters.md)と[プロジェクトと項目テンプレートの登録](../../extensibility/internals/registering-project-and-item-templates.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>   
  [入れ子になったプロジェクト](../../extensibility/internals/nesting-projects.md)

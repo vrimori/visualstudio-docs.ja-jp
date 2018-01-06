@@ -19,11 +19,12 @@ caps.latest.revision: "40"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bd24d18df965535ee1315ae7807ac23723dc51d2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 96d69ccb51be632440474bb0aa1b32e6ebe7a68a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-documents-on-a-server-by-using-the-serverdocument-class"></a>ServerDocument クラスによるサーバー上のドキュメントの管理
   ServerDocument クラスを使用することができます、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]を Microsoft Office Word および Microsoft Office Excel がインストールされていない場合でも、ドキュメント レベルのカスタマイズのいくつかの側面を管理します。 実行できる管理タスクは以下のとおりです。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/31/2017
 |プログラムによって実行時にドキュメントからカスタマイズを削除する。<br /><br /> 詳細については、次を参照してください。[する方法: マネージ コードの拡張のドキュメントから削除](../vsto/how-to-remove-managed-code-extensions-from-documents.md)です。|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A> メソッド。|  
 |ドキュメントに関連付けられている配置マニフェストの URL を取得する。|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.DeploymentManifestUrl%2A> プロパティ。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: マネージ コード拡張機能をドキュメントにアタッチします。](../vsto/how-to-attach-managed-code-extensions-to-documents.md)   
  [方法: マネージ コード拡張をドキュメントから削除](../vsto/how-to-remove-managed-code-extensions-from-documents.md)   
  [Visual Studio Tools for Office Runtime Overview](../vsto/visual-studio-tools-for-office-runtime-overview.md)   

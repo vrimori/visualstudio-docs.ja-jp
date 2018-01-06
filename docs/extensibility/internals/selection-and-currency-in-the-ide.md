@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 307344a9027e629f08350b77adf99d22d0c127a4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e46c18f424130a29085aaccad19328c9f86682f6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="selection-and-currency-in-the-ide"></a>選択範囲と、IDE の通貨
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) の保持の選択を使用して、ユーザーの情報がオブジェクトに現在選択されている*コンテキスト*です。 選択コンテキスト、Vspackage が、2 つの方法での追跡の通貨でパーツを受け取ることができます。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/31/2017
   
  最も一般的なプロジェクトの種類 ウィンドウは、ソリューション エクスプ ローラー、IDE を制御します。 プロジェクトの種類 ウィンドウは、グローバルな階層と、グローバルの選択コンテキストの ItemID を追跡し、ウィンドウが現在の階層を決定する、ユーザーの選択に依存しています。 プロジェクトの種類の windows の場合、環境は、グローバル サービスを提供<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>を通じて、どの Vspackage が開いている要素の現在の値を監視できます。 プロパティの参照、環境では、このグローバル サービスによって左右されます。  
   
- フレーム ウィンドウ、その一方を使用して、DocObject フレーム ウィンドウ内でプッシュ SelectionContext 値 (階層/ItemID/SelectionContainer 進める)。 。 フレーム ウィンドウは、サービスを使用して<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>この目的のためです。 DocObject は選択コンテナーの値のみをプッシュできる階層をローカルの値はそのままおよび ItemID 変更せずは MDI 子ドキュメントの一般的なことです。  
+ フレーム ウィンドウ、その一方を使用して、DocObject フレーム ウィンドウ内でプッシュ SelectionContext 値 (階層/ItemID/SelectionContainer 進める)。 である必要があります。 フレーム ウィンドウは、サービスを使用して<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>この目的のためです。 DocObject は選択コンテナーの値のみをプッシュできる階層をローカルの値はそのままおよび ItemID 変更せずは MDI 子ドキュメントの一般的なことです。  
   
 ### <a name="events-and-currency"></a>イベントと通貨  
  通貨の環境の概念に影響する 2 種類のイベントが発生する可能性があります。  
@@ -65,6 +66,6 @@ ms.lasthandoff: 10/31/2017
   
 -   トレース ウィンドウ フレームの選択コンテキスト内で要素を変更するイベントです。 例についてには、DocObject 内の選択範囲を変更するか、プロジェクトの種類 ウィンドウで選択を変更が含まれます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コンテキスト オブジェクトの選択](../../extensibility/internals/selection-context-objects.md)   
  [ユーザーへのフィードバック](../../extensibility/internals/feedback-to-the-user.md)

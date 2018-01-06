@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c5ba85bfaeca2ac3121422fa5b9d569f0a18d937
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7fd08179f02b6a08d29eebe12f914434ff0ec873
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ieevisualizerdataprovidergetobjectforvisualizer"></a>IEEVisualizerDataProvider::GetObjectForVisualizer
 このメソッドは、このビジュアライザーを表すオブジェクトを取得します。  
@@ -47,7 +48,7 @@ int GetObjectForVisualizer(
 ## <a name="remarks"></a>コメント  
  `GetObjectForVisualizer`オブジェクトのキャッシュされたバージョンを返すことができます。 呼び出し元がそのオブジェクトが最新の状態で呼び出されますかどうかを確認する場合は[GetNewObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-getnewobjectforvisualizer.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)   
  [GetNewObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-getnewobjectforvisualizer.md)   
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 15248c2ed4ebca289421576bc6d59776cb0d6298
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1fc34c363fb62a8cf2a6d902a6e897886627e508
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager"></a>方法: オブジェクト マネージャーにライブラリによって提供されるシンボルのリストを公開
 シンボル参照ツール、**クラス ビュー**、**オブジェクト ブラウザー**、**呼び出しブラウザー**と**シンボルの検索結果**を新しいデータの要求を渡す[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]オブジェクト マネージャー。 オブジェクト マネージャは、適切なライブラリを検索して、シンボルのリストを要求します。 ライブラリの応答を要求されたデータを提供することによって、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]オブジェクト マネージャーを介して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2>インターフェイスです。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]オブジェクト マネージャー メソッドを呼び出して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2>データを取得するインターフェイスし、表示したり、シンボル参照のツールのビューの更新に使用します。  
@@ -469,7 +470,7 @@ ms.lasthandoff: 10/31/2017
   
     ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [シンボル参照のツールのサポート](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
  [方法: オブジェクト マネージャーにライブラリを登録](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)   
  [方法: ライブラリ内のシンボルの特定](../../extensibility/internals/how-to-identify-symbols-in-a-library.md)   

@@ -12,11 +12,12 @@ caps.latest.revision: "24"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 7ea11c018f210b804f4ea6542eb7a7817ae1507c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: cebfaa79e2524dcd6ba862ec55467acc9e5cd316
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="responding-to-and-propagating-changes"></a>変更内容への対応および変更内容の反映
 要素では、作成、削除、または更新は、ときに、モデルの他の部分、またはファイル、データベース、またはその他のコンポーネントなどの外部のリソースへの変更を伝達するコードを記述することができます。  
@@ -51,6 +52,6 @@ ms.lasthandoff: 10/27/2017
   
 -   **ルールとイベントにイベント引数を渡す**両方のイベント ルールが渡されると、`EventArgs`方法に関する情報を持つパラメーター、モデルを変更します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: 図形またはデコレーターのクリックをインターセプト](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)   
  [ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)

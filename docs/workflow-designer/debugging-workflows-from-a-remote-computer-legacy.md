@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: f6b1f88fcc796cbee0a48fd39da2ad9c4fe1489a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: b4b9207702e6b4c3b93838eccfe1da15c42b5baa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-workflows-from-a-remote-computer-legacy"></a>リモート コンピューターからのワークフローのデバッグ (レガシ)
 このトピックでは、従来の [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]を使用して作成された、リモートにある従来の [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] アプリケーションをデバッグする方法について説明します。 アプリケーションが [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/27/2017
   
  [!INCLUDE[wf2](../workflow-designer/includes/wf2_md.md)] のリモート デバッグは、他の [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] コンポーネントのリモート デバッグと同じように機能します。 詳細については、次を参照してください。 [!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)] 、MSDN ライブラリでのリモート デバッグします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [従来のワークフローのデバッグ](../workflow-designer/debugging-legacy-workflows.md)

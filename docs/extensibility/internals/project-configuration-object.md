@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2a1b1e7c7b782868ece2c640f75fd506018f3e04
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f9bfae4fb64a4dde27f8156560f0fa850fcd5885
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-configuration-object"></a>プロジェクト構成オブジェクト
 プロジェクトの構成オブジェクトは、UI に構成情報の表示を管理します。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/31/2017
   
  `ISpecifyPropertyPages`および`IDispatch`を取得し、構成に依存する情報をユーザーに表示するプロパティ ページと組み合わせて使用されます。 詳細については、次を参照してください。[プロパティ ページ](../../extensibility/internals/property-pages.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)   
  [構築するためのプロジェクトの構成](../../extensibility/internals/project-configuration-for-building.md)   
  [出力用のプロジェクトの構成](../../extensibility/internals/project-configuration-for-output.md)   

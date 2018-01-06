@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7dd55b39f3a35e8ee8f3f16cc5a64e61cb824177
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: debfb63201652f5a9d3348e3bcd591c5efe66e33
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="additional-resources-for-developing-office-solutions"></a>Office ソリューション開発用のその他のリソース
   Visual Studio の Microsoft Office 開発ツールは、Office アプリケーションを拡張する数多くの方法のうちの 1 つにすぎません。 Office アプリケーションにも、Open XML Formats などの組み込み機能がいくつか用意されています。ただし、それらの機能は Visual Studio の Office 開発ツールには含まれず、このドキュメントでも取り上げていません。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
  [Visual Studio ブログを使用した Office 開発](http://go.microsoft.com/fwlink/?LinkId=149748)  
  Visual Studio の Office 開発者向けツールを作成している Microsoft チームによって管理されているブログです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションのエラーについての追加サポート](../vsto/additional-support-for-errors-in-office-solutions.md)  
   
   

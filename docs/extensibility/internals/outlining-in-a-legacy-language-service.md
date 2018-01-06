@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 010ec576fe8d1cd52c82165793324eede0da9e6c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 76f47edd31892a98ec3235bfc4a00f5f2e647408
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="outlining-in-a-legacy-language-service"></a>従来の言語サービスでのアウトライン
 アウトライン表示できるようになります概要またはアウトラインに複雑なプログラムを折りたたみます。 たとえば、c# ですべてのメソッドを折りたためるメソッド シグネチャのみを示す 1 つの行にします。 さらに、構造体とクラスは、構造体とクラス名のみを表示のために折りたたむことができます。 1 つのメソッドの内部に複雑なロジックを折りたためるなどのステートメントの最初の行だけを表示することによって、全体的なフローを表示する`foreach`、 `if`、および`while`です。  
@@ -120,6 +121,6 @@ namespace MyLanguagePackage
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レガシ言語サービス機能](../../extensibility/internals/legacy-language-service-features1.md)   
  [レガシ言語サービスを登録します。](../../extensibility/internals/registering-a-legacy-language-service1.md)

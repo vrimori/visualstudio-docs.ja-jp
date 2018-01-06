@@ -19,11 +19,12 @@ caps.latest.revision: "27"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c85b5582f930afab77686ecb76ac3fbdaa42e009
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: a0a90ac7f39c35686ba1c945b2bd1bb46421d11d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-create-an-e-mail-item"></a>方法: プログラムによって電子メール アイテムを作成する
   この例では、Microsoft Office Outlook で電子メール メッセージを作成します。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="example"></a>例  
  [!code-csharp[Trin_OL_CreateMailItem#1](../vsto/codesnippet/CSharp/Trin_OL_CreateMailItem/thisaddin.cs#1)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メール アイテムの操作](../vsto/working-with-mail-items.md)   
  [VSTO アドインのプログラミングについて](../vsto/getting-started-programming-vsto-add-ins.md)  
   

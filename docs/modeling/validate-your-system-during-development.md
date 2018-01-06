@@ -13,11 +13,12 @@ caps.latest.revision: "37"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: 56d67aff89c7f0cf58911cebfdaf5bfdb1464796
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: e05574ba51a690621d57b6f32017d1eb359675eb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="validate-your-system-during-development"></a>開発時のシステムの検証
 Visual Studio を使用すると、ソフトウェアがユーザーの要件とシステムのアーキテクチャに合致した状態を維持することができます。  
@@ -41,7 +42,7 @@ Visual Studio を使用すると、ソフトウェアがユーザーの要件と
 |**ブログ**|-   [Visual Studio ALM + Team Foundation Server のブログ](http://go.microsoft.com/fwlink/?LinkID=201340)|  
 |**技術記事とジャーナル**|[MSDN アーキテクチャ センター](http://go.microsoft.com/fwlink/?LinkId=201343)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アプリケーションのテスト](https://www.visualstudio.com/en-gb/docs/test/overview)   
  [ユーザー要件のモデリング](../modeling/model-user-requirements.md)   
  [アーキテクチャの分析およびモデリング](../modeling/analyze-and-model-your-architecture.md)

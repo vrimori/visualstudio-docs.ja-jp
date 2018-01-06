@@ -20,11 +20,12 @@ caps.latest.revision: "38"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4469f2f70bececca258fe4ea1a98d753f8349f87
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 253798cdde2a40a70496dbe2ed89f9d0a9316640
+ms.sourcegitcommit: 03a74d29a1e0584ff4808ce6c9e812b51e774905
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="walkthrough-debug-a-multithreaded-application-in-visual-studio-using-the-threads-window"></a>チュートリアル: [スレッド] ウィンドウを使用して Visual Studio でのマルチ スレッド アプリケーションをデバッグします。
 Visual Studio では、**スレッド**ウィンドウとその他のユーザー インターフェイスのマルチ スレッド アプリケーションのデバッグに役立つ要素です。 このチュートリアルで使用する方法、**スレッド**ウィンドウおよび**デバッグの場所**ツールバー。 その他のツールについては、次を参照してください。[マルチ スレッド アプリケーションのデバッグの開始](../debugger/get-started-debugging-multithreaded-apps.md)です。 このチュートリアルでは、わずか数分が完了することを理解するマルチ スレッド アプリケーションのデバッグの機能とします。   
@@ -43,7 +44,7 @@ Visual Studio では、**スレッド**ウィンドウとその他のユーザ�
   
 4.  **名前**ボックス名前 を入力します。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
      新しいコンソール プロジェクトが表示されます。 プロジェクトが作成されると、ソース ファイルが表示されます。 選択した言語に応じて、ソース ファイル名はそれぞれ Module1.vb、Program.cs、MyThreadWalkthroughApp.cpp などとなります。  
   
@@ -57,7 +58,7 @@ Visual Studio では、**スレッド**ウィンドウとその他のユーザ�
   
     ```VB  
     Thread.Sleep(3000)   
-    Console.WriteLine(  
+    Console.WriteLine()
     ```  
   
     ```CSharp  
@@ -115,7 +116,7 @@ Visual Studio では、**スレッド**ウィンドウとその他のユーザ�
   
 #### <a name="to-flag-threads"></a>スレッドにフラグを設定するには   
 
-1.  **[ビュー ]** メニューのをポイント**ツールバー**です。  
+1.  **[ビュー]** メニューのをポイント**ツールバー**です。  
   
     確認して、**デバッグの場所**ツールバーを選択します。
 
@@ -259,6 +260,6 @@ Visual Studio では、**スレッド**ウィンドウとその他のユーザ�
   
      スレッド マーカーには、特定の場所で停止しているスレッドのみを切り替えることができます。 使用して、**スレッド**ウィンドウと**デバッグの場所**ツールバーで、任意のスレッドに切り替えることができます。   
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マルチ スレッド アプリケーションをデバッグします。](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [方法 : デバッグ中に別のスレッドに切り替える](../debugger/how-to-switch-to-another-thread-while-debugging.md)

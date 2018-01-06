@@ -11,11 +11,12 @@ caps.latest.revision: "7"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: ed225f315c92cf9276eb97fcb78e1730250ecd4c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 20234988ba43597752dea6269f97ee4b26fe19b6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>DSL ライブラリによる DSL 間でのクラスの共有
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK は、別の DSL にインポートすることができます不完全な DSL 定義を作成することができます。 これにより、類似したモデルの共通部分を考慮することができます。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/27/2017
   
  DSL ライブラリは、その他のライブラリをインポートできます。 ライブラリをインポートすると、そのインポートも自動的に DSL のエクスプ ローラーに表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: ドメイン固有言語を定義する](../modeling/how-to-define-a-domain-specific-language.md)
  
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

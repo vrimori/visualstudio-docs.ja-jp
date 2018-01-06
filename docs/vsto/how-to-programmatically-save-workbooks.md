@@ -19,11 +19,12 @@ caps.latest.revision: "50"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5be604d75183209ecdf068409e26007277cb6d98
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: d0aa6421893c9d930f917e98fb8aa85b6ceb28d0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-save-workbooks"></a>方法: プログラムによってブックを保存する
   ブックを保存する方法はいくつかあります。 パスを変更しないでブックを保存できます。 以前にブックが保存されていない場合は、パスを指定してブックを保存する必要があります。 明示的なパスがない場合、Microsoft Office Excel は、ファイルが作成されたときに付けられた名前で現在のフォルダーにファイルを保存します。 メモリ内の開いているブックを変更しないで、ブックのコピーを保存することもできます。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  ブックを保存またはコピーするメソッドのいずれかを対話的にキャンセルすると、コード内で実行時エラーが発生します。 プロシージャを呼び出す場合など、<xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A>メソッドは無効にしなかったが、Excel からメッセージが表示されますと、ユーザーがクリックした**キャンセル**メッセージが表示されたら、Excel に実行時エラーが発生します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ブックの操作](../vsto/working-with-workbooks.md)   
  [Workbook ホスト項目](../vsto/workbook-host-item.md)   
  [方法: プログラムによってブックを閉じる](../vsto/how-to-programmatically-close-workbooks.md)   

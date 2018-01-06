@@ -11,11 +11,12 @@ caps.latest.revision: "7"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: 7dabd752aed4213c03ffd32ed5cc255ea4f2852e
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: a08d7a94dcd512f650564a07a1e6784bffe8c45e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>モデルからアプリを生成し構成する
 モデルからアプリケーションのパーツを生成または構成できます。
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/27/2017
   
      たとえば、UML クラス図は一連のボックスと矢印で構成されていて、この表記法を使用すると、理論的には何でも定義できます。 一連の型を実際に記述する場合を除き、クラス図を使用することはお勧めしません。 たとえば、クラス図を適用して、さまざまな種類の Web ページを記述できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語からコードを生成します。](../modeling/generating-code-from-a-domain-specific-language.md)   
  [方法: プログラム コード内のファイルからモデルを開く](../modeling/how-to-open-a-model-from-file-in-program-code.md)   
  [T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)

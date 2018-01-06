@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fe4921e48c978b1073c985d4c11f11a14f3b351c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d97dd10661beb5acb28b464a8bc0d88ba5946924
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="selection-context-objects"></a>コンテキスト オブジェクトの選択
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) では、グローバルの選択コンテキスト オブジェクトを使用して、IDE で何を表示するかを判断します。 IDE では、各ウィンドウは、グローバルの選択コンテキストにプッシュされた独自の選択コンテキスト オブジェクトができます。 IDE は、そのウィンドウにフォーカスがあるときにウィンドウから値を持つグローバルの選択コンテキストを更新します。 詳細については、次を参照してください。[をユーザーにフィードバック](../../extensibility/internals/feedback-to-the-user.md)です。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  VSPackage は、ツール、またはその他の同様のタスクを再アクティブ化して、階層の更新などのアクティビティを実行することによって受信イベントに対して動作します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackSelectionEx>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection>   
  [Visual Studio での階層](../../extensibility/internals/hierarchies-in-visual-studio.md)   

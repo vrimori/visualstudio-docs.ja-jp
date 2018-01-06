@@ -31,16 +31,17 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5f12b3af8f49270cc914e47a37077265794bf0be
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 84379f4847bb708bf8089ac32e261b459e87e1a1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="providing-packaging-and-deployment-information-in-project-items"></a>プロジェクト項目でのパッケージ化と配置の情報の提供
   すべての SharePoint プロジェクト項目[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]プロジェクトが SharePoint に配置されるときに、追加のデータを指定するのに使用できるプロパティがあります。 選択できるプロパティは次のとおりです。  
   
--   フィーチャーのプロパティ  
+-   機能のプロパティ  
   
 -   フィーチャー レシーバー  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 10/31/2017
 </Assemblies>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パッケージ化と SharePoint ソリューションの配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)   
  [モジュールを使用して、ソリューション内のファイルのインクルード](../sharepoint/using-modules-to-include-files-in-the-solution.md)   
  [SharePoint のパッケージ化と配置の拡張](../sharepoint/extending-sharepoint-packaging-and-deployment.md)  

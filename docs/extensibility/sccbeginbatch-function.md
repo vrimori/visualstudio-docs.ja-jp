@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0e18eedcab133329f10064ef3dd6486beb2e1596
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d6415953a350321cb13f2705fa2bb182c278faa3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccbeginbatch-function"></a>SccBeginBatch 関数
 この関数は、ソース管理操作のバッチ シーケンスを開始します。 [SccEndBatch](../extensibility/sccendbatch-function.md)バッチを終了するのには、呼び出されます。 これらのバッチは、入れ子にできません。  
@@ -35,7 +36,7 @@ SCCRTN SccBeginBatch(void);
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|操作のバッチは正常に開始しました。|  
 |SCC_E_UNKNOWNERROR|不特定のエラーです。|  
@@ -45,6 +46,6 @@ SCCRTN SccBeginBatch(void);
   
  バッチ操作の実行中に、ソース管理プラグインをユーザーに最大で質問については、1 つのダイアログ ボックスを表示し、すべての後続の演算でこのダイアログ ボックスからの応答を適用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccEndBatch](../extensibility/sccendbatch-function.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a4a7c002bd17da5f693955a82ab2e74bf65dc0cd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 98be671e456c75c4be79994c84bf1ed6ae5114de
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-site-definitions-for-sharepoint"></a>SharePoint のサイト定義の作成
   SharePoint サイト定義プロジェクト[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]を作成することができます、*サイト定義*、新しい SharePoint サイトの基礎として使用します。 だけでなく、これらの定義は、SharePoint サイトの既定のコンテンツやも機能の動作と外観を決定します。 定義では、構成済みのリスト、コンテンツの種類、イベント レシーバー、画像、およびその他のアイテムを配置できます。 SharePoint には、たとえば、ブログなどの一部のサイト定義が含まれます。 ブログ サイト定義に基づくサイトを作成するときに、サイトには、リスト、Web パーツ、およびブログ サイトが必要なその他のアイテムが含まれています。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/31/2017
 |[ASP.NET Web Pages のプログラミング](http://go.microsoft.com/fwlink/?LinkId=178728)|内のイベント ハンドラーを作成する方法に関する情報を提供[!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)]ページとクライアント スクリプトを操作する方法です。|  
 |[Windows SharePoint Services でのプログラミング](http://go.microsoft.com/fwlink/?LinkId=178729)|提供されているマネージ オブジェクト モデルを使用する方法について説明[!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)]です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   
   

@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b5545d49776e31b60719a49e4dbdca14d7dfdda3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a54b6f6ab5667993553074f1ca2511a544a0eaea
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugqueryengine2"></a>IDebugQueryEngine2
 このインターフェイスにより、デバッグ マネージャー (SDM) をデバッグ エンジン (DE) を表すインターフェイスを取得するセッションです。  
@@ -45,14 +46,14 @@ IDebugQueryEngine2 : IUnknown
 ## <a name="remarks"></a>コメント  
  通常、このインターフェイスを実装するオブジェクトで実装、 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)インターフェイス関数をステップ実行因果関係の順序付けですつまり、デバッガーがステップ実行関数の場合、外の場合をサポートするために、。次の関数を実行可能性がありますいないスタックで前の関数が別のスレッド内の関数を完全にあります。 「因果関係の作成」の定義では、次を参照してください。、 [Visual Studio デバッガーの用語集](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md)です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   

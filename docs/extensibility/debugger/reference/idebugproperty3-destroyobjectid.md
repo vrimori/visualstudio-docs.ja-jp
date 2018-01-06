@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0ceae63b77f0797e0781318cfa362e735d995eb3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5fdc38d8b337a653b9f8d1481a505dbe8e0cfaa4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugproperty3destroyobjectid"></a>IDebugProperty3::DestroyObjectID
 呼び出し元が、他のすべてのプロパティから一意にこのプロパティを識別する世話不要になったことを示す、このプロパティに関連付けられている一意な ID を破棄します。  
@@ -43,6 +44,6 @@ int DestroyObjectID();
   
  一意の Id がへの呼び出しで作成された、 [CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md)メソッドは、呼び出し元がこのプロパティは、その他のすべてのプロパティの間で一意に識別かどうかを確認しようとします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
  [CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md)

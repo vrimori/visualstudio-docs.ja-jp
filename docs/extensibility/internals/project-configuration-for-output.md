@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b19b3956e03c23d70852d8a2297544a72d91b840
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4f3927ac9aa9e85be026d2b9a2af1c0c4d956c9f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-configuration-for-output"></a>出力用のプロジェクトの構成
 すべての構成には、一連の実行可能ファイルまたはリソース ファイルなどの出力項目を生成するビルド プロセスをサポートできます。 これらの出力項目はユーザーにプライベートであり、出力実行可能ファイル (.exe、.dll、.lib) とソース ファイル (.idl、.h ファイル) などの関連する型をリンクしているグループに配置することができます。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
   
  詳細については、の実装を参照してください。`IVsOutputGroup`でカスタム プロジェクト サンプル[プロジェクトの MPF](http://mpfproj12.codeplex.com)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)   
  [構築するためのプロジェクトの構成](../../extensibility/internals/project-configuration-for-building.md)   
  [プロジェクト構成オブジェクト](../../extensibility/internals/project-configuration-object.md)   

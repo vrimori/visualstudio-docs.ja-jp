@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d27a087c67401e90e8a3f4629c27d1255d0ade75
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7bd9e42ae6be1cbd5afe1cbe2ae1b06da7f9937f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugproperty2setvalueasreference"></a>IDebugProperty2::SetValueAsReference
 指定された参照の値には、このプロパティの値を設定します。  
@@ -59,13 +60,13 @@ int SetValueAsReference(
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`です。 それ以外の場合にエラーを返しますコードは、通常、次のいずれか。  
   
-|エラー|説明|  
+|Error|説明|  
 |-----------|-----------------|  
 |`E_SETVALUEASREFERENCE_NOTSUPPORTED`|参照から値を設定することはできません。|  
 |`E_SETVALUE_VALUE_CANNOT_BE_SET`|このプロパティは、メソッドを参照すると、値を設定できません。|  
 |`E_SETVALUE_VALUE_IS_READONLY`|値は読み取り専用と、設定することはできません。|  
 |`E_NOTIMPL`|メソッドは実装されていません。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

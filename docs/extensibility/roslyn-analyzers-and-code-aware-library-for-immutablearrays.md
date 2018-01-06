@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9b33516bd013f744813b2fdb357f224bcb0d9822
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6870f1733d507f2cf46d196b2bba027b998b5ba4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Roslyn アナライザーと ImmutableArrays 用のコードに対応するライブラリ
 
@@ -311,7 +312,7 @@ private async Task<Document> ChangeToImmutableArrayEmpty(
 
 すべての終了コードを確認できます[ここ](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)です。  DoNotUseImmutableArrayCollectionInitializer と DoNotUseImmutableArrayCtor サブ フォルダーでは、問題と、Visual Studio 電球 UI に表示されるコード修正を実装する c# ファイルを検索するための c# ファイルがあります。  メモ、終了コードが ImmutableArray をフェッチを回避する少し多くの抽象化\<T > オブジェクトを何度も入力します。  使用可能なコンテキスト型のオブジェクトを保存する入れ子にされた登録済みのアクションを使用するたびにサブ操作 (オブジェクトの作成を分析し、コレクションの初期化を分析) を実行します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 * [\\\Build 2015 講演](http://channel9.msdn.com/events/Build/2015/3-725)
 * [GitHub でコードが完了しました](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)

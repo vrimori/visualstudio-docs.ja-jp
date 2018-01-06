@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a7ec9dc451957d886fdc8a1655334ca5831c6bd1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8510e766f7bbace55ee323072cf142a9dd78a759
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugreference2getmemorybytes"></a>IDebugReference2::GetMemoryBytes
 参照の値を物理的に格納するメモリのバイト数を取得します。 将来使用するために予約されています。  
@@ -44,6 +45,6 @@ int GetMemoryBytes (
 ## <a name="return-value"></a>戻り値  
  常に `E_NOTIMPL` を返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)   
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)

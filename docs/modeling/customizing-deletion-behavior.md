@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 159d6a7b3a381eeb5d6f92154e657de67c567a38
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 0eb1878df437e1767d5bfe49ce4794b5b2c243d5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-deletion-behavior"></a>削除動作のカスタマイズ
 通常、要素を削除すると、関連する要素も削除されます。 接続されたすべてのリレーションシップと子要素が削除されます。 この動作の名前は*伝達の削除*です。 削除の伝達をカスタマイズできます。たとえば、追加の関連要素を削除することを準備できます。 プログラム コードを作成して、モデルの状態に応じた削除の伝達を実現できます。 削除に応じて他の変更を発生させることもできます。  
@@ -293,7 +294,7 @@ partial class NestedShapesSampleDocData
   
  詳細については、次を参照してください。[をカスタマイズする要素の作成および移動](../modeling/customizing-element-creation-and-movement.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コピーの動作をカスタマイズします。](../modeling/customizing-copy-behavior.md)   
  [要素の作成および移動をカスタマイズします。](../modeling/customizing-element-creation-and-movement.md)   
  [ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)

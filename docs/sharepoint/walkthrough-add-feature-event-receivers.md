@@ -21,11 +21,12 @@ caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 27d565a51c026a6e143e18f122039d90627f55ff
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 6250673ae2fa262fbe932aea79e36aeb6b0d0915
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-add-feature-event-receivers"></a>チュートリアル: フィーチャーのイベント レシーバーの追加
   フィーチャー イベント レシーバーとは、SharePoint で、次の機能に関連するイベントのいずれかが発生したときに実行する方法です。  
@@ -121,7 +122,7 @@ ms.lasthandoff: 10/31/2017
   
      お知らせが表示されます、**お知らせ**フィーチャーが非アクティブ化された後に一覧表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: イベント レシーバーを作成します。](../sharepoint/how-to-create-an-event-receiver.md)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   

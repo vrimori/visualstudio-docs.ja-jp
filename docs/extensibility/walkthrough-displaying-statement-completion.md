@@ -13,11 +13,12 @@ caps.latest.revision: "36"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7ebdc87e1dccf2bde66ccfeebb6c2b4fba144c70
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d9c3b44bd46c34a864896cbf1002505085be5143
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-displaying-statement-completion"></a>チュートリアル: ステートメント入力候補を表示します。
 入力候補を提供する識別子を定義して、入力候補のセッションをトリガーして、言語に対応したステートメント入力候補を実装できます。 言語サービスのコンテキストでステートメントの完了を定義、独自のファイル名拡張子とコンテンツの種類を定義してその種類の入力候補を表示したり、既存のコンテンツの種類の完了をトリガーすることができます: たとえば、「プレーン テキスト」です。 このチュートリアルでは、「プレーン テキスト」コンテンツ タイプ、テキスト ファイルのコンテンツの種類の入力候補をトリガーする方法を示します。 「テキスト」コンテンツの種類は、すべての他のコンテンツの種類、コードや XML ファイルなどの先祖です。  
@@ -203,5 +204,5 @@ ms.lasthandoff: 10/31/2017
   
 4.  入力と最初に"a"とし、"d"、"addition"と「対応」を含む一覧が表示されます。 加算が選択されていることに注意してください。 別の"d"を入力すると、一覧は、のみ"addition"、現在選択されているを含める必要があります。 Space キーを押し、タブ、または Enter キーを押す"addition"をコミットまたは esc キーまたはその他の任意のキーを入力して一覧を消去できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: コンテンツの種類とファイル名拡張子とをリンクさせる](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

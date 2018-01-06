@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 553141f01211389308978e80d22220634625c940
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8ca045a1fee17891fbe053d1d072a4affa41c787
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprocess2getattachedsessionname"></a>IDebugProcess2::GetAttachedSessionName
 このプロセスのデバッグは、セッションの名前を取得します。 IDE では、特定のコンピューターに特定のプロセスのデバッグは、ユーザーにこの情報を表示できます。  
@@ -40,5 +41,5 @@ HRESULT GetAttachedSessionName(
 ## <a name="return-value"></a>戻り値  
  このメソッドは常に返します`E_NOTIMPL`です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

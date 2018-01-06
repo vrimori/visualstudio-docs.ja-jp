@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 303ce6608ee17b99995d871c5da1536a08fef335
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 9cd3e9d5e10e6946b4cae8ce02a5a39511e4baaf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-displaying-quickinfo-tooltips"></a>チュートリアル: クイック ツールヒントの表示
 QuickInfo はメソッドのシグネチャを表示する IntelliSense 機能である場合、ユーザーの説明が、ポインターをメソッド名の上に移動します。 QuickInfo の説明を提供する識別子を定義して、コンテンツを表示するツールヒントを作成して QuickInfo などの機能の言語に基づくを実装できます。 QuickInfo を定義するには、言語サービスのコンテキストで独自ファイル名拡張子とコンテンツの種類を定義してその種類のクィック ヒントを表示またはクイック ヒントを表示するには、既存のコンテンツの種類 ("text") などの。 このチュートリアルでは、"text"コンテンツ タイプのクィック ヒントを表示する方法を示します。  
@@ -176,5 +177,5 @@ QuickInfo はメソッドのシグネチャを表示する IntelliSense 機能�
   
 4.  ポインターは、「追加」の出現回数は、のいずれかの上に移動します。 署名との説明、`add`メソッドを表示する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: コンテンツの種類とファイル名拡張子とをリンクさせる](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

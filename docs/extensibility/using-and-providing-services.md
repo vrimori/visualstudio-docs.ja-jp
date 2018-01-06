@@ -16,11 +16,12 @@ caps.latest.revision: "41"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e28b66dea8440c969926abd3892739f4e041b064
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fbba5070af77e1509ed3b3840a2045ae0f2c12b2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-and-providing-services"></a>使用して、サービスを提供します。
 サービスは、次の 2 つの Vspackage の間のコントラクトです。 1 つの VSPackage では、別の VSPackage を使用するためのインターフェイスの特定のセットを提供します。 たとえば、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]提供、<xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog>サービス、VSPackage に読み込みます。 このサービスを提供、<xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog>インターフェイスで、アクティビティ ログに書き込むために使用できます。 詳細については、次を参照してください。[する方法: アクティビティ ログを使用して](../extensibility/how-to-use-the-activity-log.md)です。  

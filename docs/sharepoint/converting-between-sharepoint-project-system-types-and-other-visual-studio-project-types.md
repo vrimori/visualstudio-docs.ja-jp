@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 198cb9b2b00b1e09c21ba672999cca557bcd5b48
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 81573598dc4c23f161298aee800b5dfabe7608f7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types"></a>SharePoint プロジェクト システムと他の Visual Studio プロジェクトの間の型変換
   場合によっては、SharePoint プロジェクト システムでオブジェクトがある可能性があり、Visual Studio オートメーション オブジェクト モデルまたは統合オブジェクト モデル内の対応するオブジェクトの機能を使用する場合またはその逆です。 このような場合は、使用することができます、 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert%2A> SharePoint プロジェクト サービスのオブジェクトを別のオブジェクト モデルに変換するメソッド。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
   
 -   登録するコード、`projectService_ProjectAdded`を処理するメソッド、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectAdded>のイベント、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService>オブジェクト。 例については、次を参照してください。[する方法: SharePoint プロジェクトの拡張機能を作成する](../sharepoint/how-to-create-a-sharepoint-project-extension.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint プロジェクト サービスの使用](../sharepoint/using-the-sharepoint-project-service.md)   
  [方法: SharePoint プロジェクト サービスの取得](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md)   
  [SharePoint ツール拡張機能のプログラミング モデルの概要](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)  

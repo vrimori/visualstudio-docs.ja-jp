@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ea2f1808adcb7c8c79d2139e89e31f21a85cb694
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 61d6498cafaf97033864bc31d55c257c9a3a564f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="strings-element"></a>文字列の要素
 文字列要素を含める必要がありますが、少なくとも**ButtonText**子要素です。 その他のすべての子要素は省略できます。 などの無効な XML 文字 '&' と '<' のエンティティとしてコーディングする必要があります ('&amp;'および'&lt;' など)。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|language|省略可能です。 Language ="です。"です。|  
+|language|任意。 Language ="です。"です。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -63,5 +64,5 @@ ms.lasthandoff: 10/31/2017
 |[Menu 要素](../extensibility/menu-element.md)|単一のメニュー項目を定義します。|  
 |[Combo 要素](../extensibility/combo-element.md)|コンボ ボックスに表示されるコマンドを定義します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "32"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b9a14f95fbed47670b3c5b5db19e4e0e6b8ba074
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c5b5943dc8087a22e1bdfb94ae6d0d10335c174a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-debugger-extensibility"></a>Visual Studio デバッガー拡張機能
 Visual Studio には、プログラムでバグを追跡するための強力で使いやすいツールを提供する完全な対話型のソース コードのデバッガーが含まれています。 デバッガーでは、完全にサポート Visual Basic、c#、C と C++、および JavaScript がします。 は、 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]、つまりから使用可能な[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=214453)、デバッガーと同じ機能豊富な機能で他のプログラミング言語をサポートできます。  

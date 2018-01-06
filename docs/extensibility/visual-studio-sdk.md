@@ -17,11 +17,12 @@ caps.latest.revision: "56"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fbf9ab21b494bfc8b26251a8bdb79c16f81dc05d
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: vssdk
+ms.openlocfilehash: bf8c558d01538d477aee3670b3c119d72a83878d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 Visual Studio SDK を使用して、Visual Studio の機能を拡張したり、新機能を Visual Studio に統合するのに役立ちます。 Visual Studio Marketplace だけでなく、他のユーザーに、拡張機能を配布することができます。 Visual Studio を拡張する方法の一部を次に示します。  
@@ -75,7 +76,7 @@ Visual Studio SDK を使用して、Visual Studio の機能を拡張したり、
   
 -   [Visual Studio の拡張](http://blog.slaks.net/2013-10-18/extending-visual-studio-part-1-getting-started/)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メニュー コマンドを使用して、拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)   
  [方法: Visual Studio 2017 を機能拡張プロジェクトの移行](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)   
  [よく寄せられる質問: VSPackage 拡張機能のアドインに変換します。](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)   

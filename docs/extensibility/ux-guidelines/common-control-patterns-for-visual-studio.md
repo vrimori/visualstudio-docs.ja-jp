@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3e06a3e89b69b2b69a97c4deb2d68d98913f6e03
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ded7ed6dd843a7879100704276766bfcb528b6f7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="common-control-patterns-for-visual-studio"></a>Visual Studio の共通のコントロール パターン
 ##  <a name="BKMK_CommonControls"></a>コモン コントロール  
@@ -246,7 +247,7 @@ ms.lasthandoff: 10/31/2017
   
 -   除外強調の種類の状況でセカンダリ コマンドがある多くのコマンド  
   
-#### <a name="examples"></a>例  
+#### <a name="examples"></a>使用例  
 ![コマンドのステータス メッセージに続く情報バーに使用されているリンク](../../extensibility/ux-guidelines/media/070703-01_commandlinkinfobar.png "070703 01_CommandLinkInfobar")<br />ステータス メッセージに続く情報バーに使用されているコマンドのリンク
   
 ![CodeLens ポップアップで使用されているリンク](../../extensibility/ux-guidelines/media/070703-02_linksincodelens.png "070703 02_LinksInCodeLens")<br />CodeLens ポップアップで使用されているリンク

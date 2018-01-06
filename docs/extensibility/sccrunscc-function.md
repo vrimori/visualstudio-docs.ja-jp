@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d9ac82ac0363428ade1b6010a9060e15284db224
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4ad179325c4f34cd206a3c5e6b0840a69dd46037
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccrunscc-function"></a>SccRunScc 関数
 この関数は、ソース管理の管理ツールを起動します。  
@@ -50,7 +51,7 @@ SCCRTN SccRunScc(
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|ソース コントロール管理ツールが正常に呼び出されます。|  
 |SCC_I_OPERATIONCANCELED|操作が取り消されました。|  
@@ -67,7 +68,7 @@ SCCRTN SccRunScc(
   
  ユーザーを選択すると、この関数は通常呼び出されます、**起動\<ソース管理サーバー >**から、**ファイル** -> **ソース管理**メニューです。 これは、**起動**メニュー オプションを常に無効になっているやレジストリ エントリを設定しても非表示にします。 参照してください[する方法: ソース管理プラグインをインストール](../extensibility/internals/how-to-install-a-source-control-plug-in.md)詳細についてはします。 場合にのみ、この関数が呼び出されます[SccInitialize](../extensibility/sccinitialize-function.md)を返します、`SCC_CAP_RUNSCC`機能ビット (を参照してください[機能フラグ](../extensibility/capability-flags.md)の詳細については、これとその他の機能ビット)。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [方法: ソース管理プラグインのインストール](../extensibility/internals/how-to-install-a-source-control-plug-in.md)   
  [機能フラグ](../extensibility/capability-flags.md)   

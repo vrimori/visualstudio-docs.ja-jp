@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0ad62f14ea658e4af6e22d4beef410e6d9cf02df
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a3a124bbcadbf798f22b59111637038a09af7d75
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccenumchangedfiles-function"></a>SccEnumChangedFiles 関数
 ローカル ファイルのリストを指定するには、この関数は、どのファイルとは異なるソース コード管理データベースに対応するバージョンを決定します。  
@@ -54,10 +55,10 @@ SCCRTN SccEnumChangedFiles(
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|操作が正常に完了しました。|  
 |SCC_UNSPECIFIEDERROR|一般エラーです。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

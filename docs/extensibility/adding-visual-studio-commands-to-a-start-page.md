@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 973e0cfbceb6cbf67c5bc11cdde370607334809a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: efb332de822bd86cc95c4786dbca3472fd0984cc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-visual-studio-commands-to-a-start-page"></a>Visual Studio のコマンドをスタート ページに追加します。
 カスタム スタート ページを作成するときに Visual Studio のコマンドを追加できます。 このドキュメントでは、Visual Studio のコマンドを [スタート] ページの XAML オブジェクトにバインドするさまざまな方法について説明します。  
@@ -110,5 +111,5 @@ xmlns:vscom="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.Visua
   
  例については、次を参照してください。[チュートリアル: スタート ページ上のユーザー設定の保存](../extensibility/walkthrough-saving-user-settings-on-a-start-page.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [スタート ページへのユーザー コントロールの追加](../extensibility/adding-user-control-to-the-start-page.md)

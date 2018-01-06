@@ -21,11 +21,12 @@ caps.latest.revision: "34"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3293382ffc0c36fb78bb115d0f38c311278a7151
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3a580d662c09e0f8a73deca2c4e0cea7cea6650c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-web-part-for-sharepoint"></a>チュートリアル: SharePoint の Web パーツを作成する
   Web パーツを使用すると、ブラウザーから SharePoint サイト ページのコンテンツ、外観、および動作を直接変更できます。 このチュートリアルを使用して、Web パーツを作成する方法、 **Web パーツ**Visual Studio 2010 での項目テンプレート。  
@@ -226,7 +227,7 @@ ms.lasthandoff: 10/31/2017
   
      Web パーツにすべての従業員が表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint の Web パーツの作成](../sharepoint/creating-web-parts-for-sharepoint.md)   
  [方法: SharePoint Web パーツを作成します。](../sharepoint/how-to-create-a-sharepoint-web-part.md)   
  [方法: デザイナーを使用して、SharePoint Web パーツを作成します。](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)   

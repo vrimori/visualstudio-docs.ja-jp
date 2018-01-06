@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 481a9c04b56ad330731b1c5a06863eb7b3f0f8e2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c87b22de02324544bbf1ea0919254535f6cc2702
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumdebugmodules2"></a>IEnumDebugModules2
 このインターフェイスは、モジュールの一覧を列挙します。  
@@ -51,14 +52,14 @@ IEnumDebugModules2 : IUnknown
   
  Visual Studio でのデバッグの目的では、プログラムはためモジュール境界を越えることがコード命令の論理シーケンスは 1 つのモジュールの一覧の必要性[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)インターフェイスです。 一覧の最初のモジュールには、通常、関連付けられたプログラムの初期のエントリ ポイントが含まれています。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [EnumModules](../../../extensibility/debugger/reference/idebugprogram2-enummodules.md)

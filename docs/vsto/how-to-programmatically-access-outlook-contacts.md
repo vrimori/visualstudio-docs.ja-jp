@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8ee2c597c1a3b6a7c068c8206a87195779877461
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 44799a88e0c08999452e5425e3e7d175feb8ec56
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-access-outlook-contacts"></a>方法: プログラムによって Outlook の連絡先にアクセスする
   この例では、最後の名前が指定した検索文字列を含むすべての連絡先を検索します。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/31/2017
   
 -   連絡先の姓を含む文字列"**Na"** (たとえば、Tzipi Butnaru) で、**連絡先**フォルダーです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [連絡先アイテムの操作](../vsto/working-with-contact-items.md)   
  [方法: プログラムによって Outlook の連絡先にエントリを追加](../vsto/how-to-programmatically-add-an-entry-to-outlook-contacts.md)   
  [方法: プログラムによって特定の連絡先の検索](../vsto/how-to-programmatically-search-for-a-specific-contact.md)   

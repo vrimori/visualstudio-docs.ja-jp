@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 85b700f0cb1e3a364cae69ff6c628151ea6a7bd3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b63a7e8c9a6b2a4f2539cd6a8426ba9df365ab76
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccbackgroundget-function"></a>SccBackgroundGet 関数
 この関数は、ソース管理から各指定されたファイルのユーザー操作なしで取得します。  
@@ -57,7 +58,7 @@ SCCRTN SccBackgroundGet(
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|操作が正常に完了しました。|  
 |SCC_E_BACKGROUNDGETINPROGRESS|バック グラウンドの取得が既に進行中 (ソース管理プラグインを返すこの同時バッチ操作はサポートされていない場合にのみ)。|  
@@ -68,6 +69,6 @@ SCCRTN SccBackgroundGet(
   
  使用、`dwFlags`と同じ引数が、 [SccGet](../extensibility/sccget-function.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccGet](../extensibility/sccget-function.md)

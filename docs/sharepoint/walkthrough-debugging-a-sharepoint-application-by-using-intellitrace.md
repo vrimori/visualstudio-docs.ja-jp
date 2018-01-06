@@ -21,11 +21,12 @@ caps.latest.revision: "27"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a020b82dccd1491e0381bee8ff104b944d5cf7b0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 34ee1ca7d62a661f915edba1adc22c18f90256b6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-debugging-a-sharepoint-application-by-using-intellitrace"></a>チュートリアル: IntelliTrace を使用した SharePoint アプリケーションのデバッグ
   IntelliTrace を使用すると、SharePoint ソリューション簡単にデバッグできます。 従来のデバッガーでは、現時点のソリューションを示すスナップショットだけを取得できました。 IntelliTrace を使用すると、ソリューション内で過去に発生したイベントと、そのイベントが発生したコンテキストをレビューし、コードに移動できます。  
@@ -334,7 +335,7 @@ ms.lasthandoff: 10/31/2017
   
      コードは、適切に実行されています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint コードの検証およびデバッグ](../sharepoint/verifying-and-debugging-sharepoint-code.md)   
  [IntelliTrace](/visualstudio/debugger/intellitrace)   
  [チュートリアル: 単体テストを使用した SharePoint コードの確認します。](https://msdn.microsoft.com/en-us/library/gg599006(v=vs.100).aspx)  

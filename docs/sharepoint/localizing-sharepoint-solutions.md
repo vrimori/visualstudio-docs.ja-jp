@@ -24,11 +24,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b8186110b04e3ff56b3c6b0cad03890f3233c03d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 2339ee60e66bca7578c2d5d1e89c7bb649b15b03
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="localizing-sharepoint-solutions"></a>SharePoint ソリューションのローカライズ
   アプリケーションを世界中で使用できるように準備するプロセスをローカライズと呼びます。 ローカライズでは、リソースを特定のカルチャに翻訳します。 詳細については、次を参照してください。[グローバライズとローカライズ アプリケーション](/visualstudio/ide/globalizing-and-localizing-applications)です。 このトピックでは、SharePoint ソリューションをローカライズする方法の概要について説明します。  
@@ -38,12 +39,12 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]  
 >  SharePoint ソリューションのリソース ファイルに追加するのは文字列リソースだけです。 リソース エディターでは文字列以外のリソースも追加できますが、文字列以外のリソースは SharePoint に配置されません。  
   
-## <a name="resource-files"></a>リソース ファイル  
+## <a name="resource-files"></a>リソース ファイル (Visual Studio)  
  リソース ファイルには、既定のリソース ファイル、言語に依存しないリソース ファイル、および言語固有のリソース ファイルの 3 種類があります。  
   
 |リソース ファイルの種類|説明|  
 |------------------------|-----------------|  
-|既定|フォールバック リソースとも呼ばれます。既定のリソース ファイルには、既定のカルチャ (英語など) にローカライズされた文字列が含まれます。 これらは、指定された言語のローカライズされたリソース ファイルが見つからない場合に使用されます。 既定のリソースは、独立したファイルを持たず、メイン アプリケーション アセンブリに格納されます。|  
+|既定値|フォールバック リソースとも呼ばれます。既定のリソース ファイルには、既定のカルチャ (英語など) にローカライズされた文字列が含まれます。 これらは、指定された言語のローカライズされたリソース ファイルが見つからない場合に使用されます。 既定のリソースは、独立したファイルを持たず、メイン アプリケーション アセンブリに格納されます。|  
 |言語に依存しないリソース ファイル|特定の言語にはローカライズされているが特定のカルチャにはローカライズされていない文字列を含むリソース ファイル  (たとえば、フランス語の場合は "fr")。|  
 |言語固有のリソース ファイル|特定の言語とカルチャにローカライズされた文字列を含むリソース ファイル  (たとえば、フランス語 (カナダ) の場合は "fr-CA")。|  
   
@@ -133,7 +134,7 @@ HttpContext.GetGlobalResourceObject("<Resource File Name>", "<String ID>")
   
  派生クラスで、リソース ファイルの文字列 ID と ResourceManager オブジェクトを参照してその文字列 ID のローカライズされた値を取得し、 その値をプロパティ エディターの属性に返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: フィーチャーをローカライズ](../sharepoint/how-to-localize-a-feature.md)   
  [方法: ASPX マークアップのローカライズ](../sharepoint/how-to-localize-aspx-markup.md)   
  [方法: コードのローカライズ](../sharepoint/how-to-localize-code.md)   

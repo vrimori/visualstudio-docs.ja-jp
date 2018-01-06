@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f8d2f56c29121a4be06f00198edd235007fc1cd0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 85d9add1e66fdde2fcdbfd5c83bf99b6180a4642
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="validating-breakpoints-in-a-legacy-language-service"></a>従来の言語サービス内のブレークポイントを検証します。
 ブレークポイントは、デバッガーで実行されている間に特定の時点でプログラムの実行を停止することを示します。 ユーザーは、エディターには、ブレークポイントの有効な場所の構成に関する知識があるないために、ソース ファイル内の任意の行にブレークポイントを配置できます。 デバッガーを起動するときは、実行中のプログラム内の適切な場所にバインドのすべてのマークされたブレークポイント (保留中のブレークポイントと呼ばれます) されます。 ブレークポイントが検証されていることを確認が同時は、有効なコードの場所をマークします。 たとえば、ソース コード内の場所にコードがないため、コメントのブレークポイントが、正しくありません。 デバッガーは、無効なブレークポイントを無効にします。  
@@ -101,5 +102,5 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レガシ言語サービス機能](../../extensibility/internals/legacy-language-service-features1.md)

@@ -11,11 +11,12 @@ caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b7ff76cd40f80f6855de72795b08e70fb87ed0f6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8cdf8fd3d32678cc80d215d77e34cd7987d7bd29
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vsix-color-compiler"></a>VSIX カラー コンパイラ
 Visual Studio 拡張機能カラー コンパイラ ツールは、コンソール アプリケーションを既存の Visual Studio のテーマの色を表す .xml ファイルを受け取ると、.pkgdef にファイルの Visual Studio でそれらの色を使用できるようにする変換です。 .Xml ファイルの間の違いを比較する簡単なので、このツールは、ソース管理でカスタムの色を管理するのに役立ちます。 これもにフックできます。 ビルド環境、ビルドの出力が有効な .pkgdef ファイルようにします。  
@@ -55,7 +56,7 @@ Visual Studio 拡張機能カラー コンパイラ ツールは、コンソー�
 |||  
 |-|-|  
 |**属性**|**定義**|  
-|名前|[必須]テーマの名前|  
+|name|[必須]テーマの名前|  
 |GUID|[必須]テーマの GUID (一致しなければならない GUID の書式設定)|  
   
  を Visual Studio のカスタム カラーを作成する場合、それらの色を次のテーマを定義する必要があります。 特定のテーマの色が存在しない場合、Visual Studio は明るい色のテーマからない色をロードしようとします。  
@@ -81,7 +82,7 @@ Visual Studio 拡張機能カラー コンパイラ ツールは、コンソー�
 |||  
 |-|-|  
 |**属性**|**定義**|  
-|名前|[必須]カテゴリの名前|  
+|name|[必須]カテゴリの名前|  
 |GUID|[必須]カテゴリの GUID (一致しなければならない GUID の書式設定)|  
   
  **色**  
@@ -98,7 +99,7 @@ Visual Studio 拡張機能カラー コンパイラ ツールは、コンソー�
 |||  
 |-|-|  
 |**属性**|**定義**|  
-|名前|[必須]色の名前|  
+|name|[必須]色の名前|  
   
  **背景と前景**  
   
@@ -142,7 +143,7 @@ Visual Studio 拡張機能カラー コンパイラ ツールは、コンソー�
   
 ||||  
 |-|-|-|  
-|**スイッチの名前**|**注**|**必須またはオプション**|  
+|**スイッチの名前**|**ノート**|**必須またはオプション**|  
 |名前のない (.xml ファイル)|最初の名前のないパラメーターで、変換を XML ファイルへのパス。|必須|  
 |名前のない (.pkgdef ファイル)|2 番目の名前のないパラメーターで、生成された .pkgdef ファイルの出力パス。<br /><br /> 既定値: \<XML ファイル名 > .pkgdef|Optional|  
 |/noLogo|このフラグを設定、印刷の製品および著作権情報が停止します。|Optional|  

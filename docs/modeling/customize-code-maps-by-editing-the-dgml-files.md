@@ -24,11 +24,12 @@ caps.latest.revision: "93"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: f270966c5c91dab1a492a775faca3da220a98d6c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: e4a536f99c81c19ecd22554896463a84715c7b35
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customize-code-maps-by-editing-the-dgml-files"></a>DGML ファイルを編集してコード マップをカスタマイズする
 コード マップをカスタマイズするには、マップの Directed Graph Markup Language (.dgml) ファイルを編集できます。 たとえば、要素を編集してカスタム スタイルを指定したり、コード要素とリンクにプロパティおよびカテゴリを割り当てたり、コード要素やリンクにドキュメントや URL をリンクしたりすることができます。 DGML 要素の詳細については、次を参照してください。[向け Graph Markup Language (DGML) リファレンス](../modeling/directed-graph-markup-language-dgml-reference.md)です。  
@@ -640,7 +641,7 @@ ms.lasthandoff: 10/27/2017
   
 5.  マップから参照先のコード要素を表示するには、コード要素またはリンクのショートカット メニューを開きます。 選択**参照へジャンプ**とし、コード要素です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソリューション間の依存関係をマップします。](../modeling/map-dependencies-across-your-solutions.md)   
  [コード マップを使用してアプリケーションをデバッグするには](../modeling/use-code-maps-to-debug-your-applications.md)   
  [コード マップ アナライザーを使用して潜在的な問題を検索します。](../modeling/find-potential-problems-using-code-map-analyzers.md)   

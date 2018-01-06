@@ -22,11 +22,12 @@ caps.latest.revision: "43"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7dcbedb2c30758c762af0c301c239dd03fe4b10f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 5c383c95d37894aaa49a4a42d2b9a17b9a193f41
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-protect-workbooks"></a>方法: プログラムによってブックを保護する
   Microsoft Office Excel ブックを保護するには、ユーザーことはできませんを追加またはワークシートを削除してもプログラムによってブックの保護を解除できるようにします。 必要に応じて、パスワードを指定して、構造を (したがって、ユーザーは、シートを移動することはできません) を保護、および、保護されているブックのウィンドウを使用するかを指定するかどうかを示すことができます。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/31/2017
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#7](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#7)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#7](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#7)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ブックの操作](../vsto/working-with-workbooks.md)   
  [方法: プログラムによってワークシートを保護します。](../vsto/how-to-programmatically-protect-worksheets.md)   
  [方法: プログラムによってワークシートを非表示](../vsto/how-to-programmatically-hide-worksheets.md)   

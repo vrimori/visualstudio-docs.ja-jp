@@ -19,11 +19,12 @@ caps.latest.revision: "39"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b78f90df8b6e46774310bd4a8cf218fbcbc7a18b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3c18f4097fb9f718f4ec2fc9c4683e599d38b74a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-the-sharepoint-tools-in-visual-studio"></a>Visual Studio の SharePoint ツールの拡張
   Visual Studio での SharePoint ツールでは、多くのアプリケーション開発シナ リオの要件を満たしています。 ただし、ここでは提供されませんか、他の開発者が必要とする機能の場合を検出できます。 このような場合は、必要な機能を作成する SharePoint ツールを拡張できます。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/31/2017
   
  Visual Studio SDK をインストールするを参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。 Visual Studio 拡張機能の詳細については、次を参照してください。 [Visual Studio 拡張機能の開発を開始して](../extensibility/starting-to-develop-visual-studio-extensions.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ツールの拡張機能を SharePoint のプログラミング モデルの概要](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)   
  [SharePoint プロジェクト システムの拡張](../sharepoint/extending-the-sharepoint-project-system.md)   
  [サーバー エクスプ ローラーで SharePoint 接続 ノードを拡張します。](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   

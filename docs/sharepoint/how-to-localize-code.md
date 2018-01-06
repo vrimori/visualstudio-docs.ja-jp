@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7c283f8e2b73fdb4ba44322ca09f8fb436d729ec
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 4e920074f6f771c2b8e5a78b128bf3b1f096d77e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-localize-code"></a>方法: コードをローカライズする
   ローカライズされていないコードでは、ハードコーディングされた文字列値が使用されています。 コードの文字列をローカライズするには、それらを <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> の呼び出しに置き換えます。このメソッドは、ローカライズされたリソースを参照します。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 10/31/2017
   
      ローカライズされた文字列がアプリケーションに表示されます。 ローカライズされたリソースを表示するには、リソース ファイルのカルチャに対応する Language Pack が SharePoint サーバーにインストールされている必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションのローカライズ](../sharepoint/localizing-sharepoint-solutions.md)   
  [方法: フィーチャーをローカライズ](../sharepoint/how-to-localize-a-feature.md)   
  [方法: ASPX マークアップのローカライズ](../sharepoint/how-to-localize-aspx-markup.md)   

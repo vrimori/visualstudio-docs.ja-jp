@@ -11,11 +11,12 @@ caps.latest.revision: "16"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 4dd9df4832e08d33a8209181e47a38101a5658f9
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 5703410772945a95ed0efea95a665b2a106e0ce7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>ドメイン固有言語の概要
 このトピックを定義すると、Visual Studio for Modeling SDK で作成したドメイン固有言語 (DSL) を使用して基本的な概念について説明します。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/27/2017
   
      ![DSL ダイアログの作成](../modeling/media/create_dsldialog.png "Create_DSLDialog")  
   
-4.  **名前**ボックスに、入力**FamilyTree**です。 **[OK]** をクリックします。  
+4.  **名前**ボックスに、入力**FamilyTree**です。 **[OK]**をクリックします。  
   
      **ドメイン固有言語ウィザード**開き、テンプレート DSL ソリューションの一覧が表示されます。  
   
@@ -405,7 +406,7 @@ ms.lasthandoff: 10/27/2017
   
 2.  実験的な Dsl またはその他の実験用の再構築[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張機能を使用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Understanding モデル、クラスとリレーションシップ](../modeling/understanding-models-classes-and-relationships.md)   
  [方法: ドメイン固有言語を定義する](../modeling/how-to-define-a-domain-specific-language.md)   
 

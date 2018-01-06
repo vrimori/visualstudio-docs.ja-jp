@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bad1a8cbd8bc0369d405bf0a0c26c4285e143e46
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fa274c807aaa1ed212a7b283a35e510615561eb5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="authoring-vsct-files"></a>作成します。Vsct ファイル
 このドキュメントでは、Visual Studio 統合開発環境 (IDE) にメニュー項目、ツールバー、およびその他のユーザー インターフェイス (UI) 要素を追加する .vsct ファイルを作成する方法を示します。 UI 要素を既に .vsct ファイルを持たない Visual Studio パッケージ (VSPackage) を追加する場合は、次の手順を使用します。  
@@ -235,7 +236,7 @@ ms.lasthandoff: 10/31/2017
  MenuController  
  メニュー コント ローラーは、その横にある矢印の付いたボタンです。 矢印をクリックすると、一覧が開きます。 UI にメニュー コント ローラーを追加するには、作成、`Menu`要素とその`type`属性を**MenuController**または**MenuControllerLatched**目的の動作に応じて、します。 メニュー コント ローラーを作成するには、親として設定、`Group`要素。 メニュー コント ローラーは、そのグループのすべての子をそのドロップダウン リストに表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張メニューとコマンド](../../extensibility/extending-menus-and-commands.md)   
  [Visual Studio コマンド テーブル (です。Vsct) ファイル](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
  [VSCT XML スキーマ リファレンス](../../extensibility/vsct-xml-schema-reference.md)

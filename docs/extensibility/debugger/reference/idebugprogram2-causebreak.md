@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2a58abdcf816896c0705a7ecce32ae82c9c8f16d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 48029ed4e925073b0d121a88846aa2f0af0a51cc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprogram2causebreak"></a>IDebugProgram2::CauseBreak
 プログラムが次の実行を停止する要求を実行するには、そのスレッド試行の回数が 1 回目です。  
@@ -43,6 +44,6 @@ int CauseBreak();
   
  メソッドは必ずしもを停止するプログラムを待たずにすぐに返します点で、このメソッドは非同期です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md)

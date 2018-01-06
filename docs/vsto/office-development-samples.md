@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 89e050bb2a946a03e8ccf854134d46af9001dbd9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 89311ac792a5dfd55497ccdadea89289dca11ff5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="office-development-samples"></a>Office 開発のサンプル
   Visual Studio には、Microsoft Office 開発者ツールを使用して Office ソリューションを作成する方法を示すサンプル アプリケーションが含まれています。 これらのサンプルのコードでは、Office ソリューションのビルドに使用される構文、構造体、および手法を示します。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/31/2017
 |UI マネージャーのサンプル|VSTO アドインに機能拡張インターフェイスを実装することで Outlook のリボンのカスタマイズ、カスタム作業ウィンドウ、カスタム フォーム領域を作成する方法を示します。 リボン、作業ウィンドウ、フォーム領域の各インスタンスは、正しく相互に通信できます。|  
 |VBA および VSTO の相互運用性サンプル|ブック内の Visual Basic for Applications (VBA) コードから Excel 用のドキュメント レベルのカスタマイズ内のメソッドを呼び出す方法を示します。<br /><br /> このサンプルは、オンラインでのみ使用できます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSDN Developer Samples: は、サンプル コードから学ぶ](http://go.microsoft.com/fwlink/?LinkID=248199)   
  [Office プログラミングの共通タスク](../vsto/common-tasks-in-office-programming.md)  
   

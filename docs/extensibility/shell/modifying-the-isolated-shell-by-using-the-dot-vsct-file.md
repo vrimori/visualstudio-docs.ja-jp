@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fcdaab4c5c9f0ee5522ae372e4a0cd94fb113eed
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 631aaaf4bf3d36cf5b83c8e67791c453cdfed925
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="modifying-the-isolated-shell-by-using-the-vsct-file"></a>使用して分離シェルを変更します。Vsct ファイル
 Visual Studio 分離シェル プロジェクト用の UI プロジェクトには、どのアプリケーション グループと個々 のコマンドは、アプリケーションで使用可能なを指定できる .vsct ファイルが含まれています。 次に、変更されていない .vsct ファイルからの抜粋を示します。  
@@ -56,5 +57,5 @@ Visual Studio 分離シェル プロジェクト用の UI プロジェクトに�
   
  詳細については、次を参照してください。 [XML コマンド テーブルのデザイン (です。Vsct) ファイル](../internals/designing-xml-command-table-dot-vsct-files.md)と[VSCT XML スキーマ リファレンス](../vsct-xml-schema-reference.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio の分離シェル](visual-studio-isolated-shell.md)

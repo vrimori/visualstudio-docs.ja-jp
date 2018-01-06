@@ -15,11 +15,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 2727f17665d845029fcf32dbcd12dd7603dad519
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: data-storage
+ms.openlocfilehash: e4edcc21986ae0fd033228971697057932e63670
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes"></a>チュートリアル: のカスタマイズ、挿入、更新、およびエンティティ クラスの動作を削除
 [LINQ to Visual Studio での SQL ツール](../data-tools/linq-to-sql-tools-in-visual-studio2.md)の作成と編集、ビジュアル デザイン画面を提供[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]データベース内のオブジェクトに基づくクラス (エンティティ クラス)。 使用して[LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)、SQL データベースにアクセスする LINQ テクノロジを使用することができます。 詳細については、「[LINQ (Language-Integrated Query) (LINQ (統合言語クエリ))](/dotnet/csharp/linq/)」をご覧ください。  
@@ -226,7 +227,7 @@ ms.lasthandoff: 12/12/2017
   
 18. マップ、 **Original_CustomerID**メソッド引数を**CustomerID (オリジナル)**クラスのプロパティです。  
   
-19. **[OK]** をクリックします。  
+19. **[OK]**をクリックします。  
   
 > [!NOTE]
 >  この特定のチュートリアルに限った問題ではありませんが、[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] は、ID 列 (自動インクリメント)、rowguidcol 列 (データベースが生成した GUID)、およびタイムスタンプ列であれば、データベースによって生成された値を、挿入時および更新時に自動的に処理します。 その他の列型のデータベースが生成した値は、予想に反して null 値になります。 データベースが生成した値を返すには、手動で <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> を `true` に設定し、<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> を <xref:System.Data.Linq.Mapping.AutoSync>、<xref:System.Data.Linq.Mapping.AutoSync>、または <xref:System.Data.Linq.Mapping.AutoSync> のいずれかに設定する必要があります。  
@@ -264,7 +265,7 @@ ms.lasthandoff: 12/12/2017
   
 -   更新時の同時実行チェックを実装します。 詳細については、次を参照してください。[オプティミスティック同時実行制御: 概要](/dotnet/framework/data/adonet/sql/linq/optimistic-concurrency-overview)です。  
   
--   LINQ クエリを追加してデータをフィルター処理します。 詳細については、次を参照してください。 [LINQ クエリ (c#) の概要](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)です。  
+-   LINQ クエリを追加してデータをフィルター処理します。 詳細については、次を参照してください。 [LINQ クエリ (c#) の概要](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)です。  
   
 ## <a name="see-also"></a>関連項目
 [LINQ to Visual Studio での SQL ツール](../data-tools/linq-to-sql-tools-in-visual-studio2.md)     

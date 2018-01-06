@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e9d88f78d9f3942eb4744168c874a37db26dd144
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e1df57ec1afbf378ec2b0f5d0e1dc084b5e52782
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugmodule2getinfo"></a>IDebugModule2::GetInfo
 このモジュールに関する情報を取得します。  
@@ -54,7 +55,7 @@ int GetInfo(
 ## <a name="remarks"></a>コメント  
  [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)構造で表示されているモジュールの名前に含まれる、**モジュール**ウィンドウです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)   
  [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)   
  [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)

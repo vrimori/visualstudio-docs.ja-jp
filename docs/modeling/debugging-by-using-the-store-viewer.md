@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 6fde5dfc012b43d71f6d8db2519607724eeeadc9
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: f29e6bc1aa2ca6800b90f509655dbf0da64af3aa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-by-using-the-store-viewer"></a>ストア ビューアーを使用したデバッグ
 ビューアーを使用して、格納の状態を調べることができます、*格納*によって使用される[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]です。 格納ビューアーでは、すべての要素のプロパティと要素間のリンクと共に、特定のストア内にあるドメイン モデル要素が表示されます。  
@@ -51,5 +52,5 @@ Microsoft.VisualStudio.Modeling.Diagnostics.StoreViewer.Show(mystore);
   
  ストアのビューアーが 3 つのペイン: 左側のペイン、右上のペイン、および右下のペインです。 左側のウィンドウは、ツリー ビュー内の型の`DomainDataDirectory`ストアのメンバーです。 パーティションのノードを展開して要素をクリックすると、右上のペインで、要素のプロパティが表示されます。 要素が他の要素にリンクされている場合は、右下のペインに追加の要素が表示されます。 右下のペイン内の要素をダブルクリックすると、左側のウィンドウで、要素が強調表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プログラム コードにおけるモデル内の移動およびモデルの更新](../modeling/navigating-and-updating-a-model-in-program-code.md)

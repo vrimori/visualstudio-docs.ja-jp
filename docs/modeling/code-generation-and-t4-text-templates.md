@@ -19,11 +19,12 @@ caps.latest.revision: "82"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 60840f3d47b43ea84bec66ea7957f613d2379901
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 3ca05f93fd4753c8a00eb1a5dee4c4bc9a2f4efc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-generation-and-t4-text-templates"></a>コード生成と T4 テキスト テンプレート
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]では、 *T4 テキスト テンプレート* は、テキスト ファイルを生成できる、テキスト ブロックと制御ロジックが混在するファイルです。 制御ロジックは、 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] または [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]のプログラム コードのフラグメントとして記述します。 Visual Studio 2015 Update 2 以降では、T4 テンプレート ディレクティブで C# バージョン 6.0 の機能を使用できます。 Web ページ、リソース ファイル、任意の言語のプログラム ソース コードなど、あらゆる種類のテキスト ファイルを生成できます。  
@@ -121,5 +122,5 @@ namespace Fabrikam.FirstJob
  [T4 テキスト変換のカスタマイズ](../modeling/customizing-t4-text-transformation.md)  
  ディレクティブ プロセッサの記述方法および独自のデータ ソース用のカスタム テンプレート ホスト。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語からのコード生成](../modeling/generating-code-from-a-domain-specific-language.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e4598b100572bb47fd537e8edad927d78b4f1550
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 2dcf8040217a13688dc1ff33183f237f0f58bbcf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sandboxed-solution-considerations"></a>Sandboxed Solution Considerations
   *サンド ボックス ソリューション*を独自のカスタム コード ソリューションをアップロードするサイト コレクションのユーザーを有効にする Microsoft SharePoint 2010 で機能します。 一般的なサンド ボックス ソリューションは、ユーザー独自の Web パーツのアップロードです。  
@@ -143,7 +144,7 @@ ms.lasthandoff: 10/31/2017
   
 -   コードを持つワークフロー  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サンド ボックス間の相違点とファーム ソリューション](../sharepoint/differences-between-sandboxed-and-farm-solutions.md)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   

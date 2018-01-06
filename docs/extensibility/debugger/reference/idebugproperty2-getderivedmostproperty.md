@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3ac691b8e1c2d28477eb8c07f760eae8909a9633
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4e9efd498485340b49dbd385a6a94fa6cf7fcedd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugproperty2getderivedmostproperty"></a>IDebugProperty2::GetDerivedMostProperty
 プロパティの最派生プロパティを取得します。  
@@ -47,5 +48,5 @@ int GetDerivedMostProperty (
 ## <a name="remarks"></a>コメント  
  たとえば、このプロパティを実装するオブジェクトの説明`ClassRoot`がのインスタンス化では実際には、`ClassDerived`から派生する`ClassRoot`、このメソッドから返されます、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)オブジェクト記述する、`ClassDerived`オブジェクト。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 205837bc5bfdf9476839ea1e54a53dc57dbf9a72
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: dfeb9f4465d4e3db18bd1332ffd0d19fecbbf861
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operational-modes"></a>操作モード
 これには、IDE が動作する、次のように 3 つのモードがあります。  
@@ -56,5 +57,5 @@ ms.lasthandoff: 10/31/2017
   
  プログラムが正常にコードまたは関数の場合には、次の行にステップか、カーソルにまたは一連のブレークポイントまで実行、中断モードに戻る、DE が自動的に移行します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [実行の制御](../../extensibility/debugger/control-of-execution.md)

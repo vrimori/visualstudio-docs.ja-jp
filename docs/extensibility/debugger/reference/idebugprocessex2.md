@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 45ef0413540729abb67caad992a557c5b4692dfe
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3d23b1b97145b5e0b24ebfe814aeca5168ef6a06
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprocessex2"></a>IDebugProcessEx2
 このインターフェイスにより、セッションのデバッグ マネージャー (SDM) にアタッチするか、プロセスからデタッチするプロセスに通知します。  
@@ -54,13 +55,13 @@ IDebugProcessEx2 : IUnknown
 ## <a name="remarks"></a>コメント  
  このインターフェイスは、SDM とプロセスの間にプライベートです。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Portpriv.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

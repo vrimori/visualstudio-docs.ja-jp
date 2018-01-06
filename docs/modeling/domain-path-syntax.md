@@ -12,11 +12,12 @@ caps.latest.revision: "25"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: d32cef09adef982f22aa46a72ab71cd1e7ec8568
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 3a8694c3c2a0601d3ce616b593e4c652d959f59e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="domain-path-syntax"></a>ドメイン パス構文
 DSL 定義は XPath に似た構文を使用して、モデル内の特定の要素を見つけます。  
@@ -37,5 +38,5 @@ DSL 定義は XPath に似た構文を使用して、モデル内の特定の要
   
  要素からリンクへのホップに対して使用する名前はロールの `Property Name` の値です。 リンクから要素へのホップに対して使用する名前はターゲットのロール名です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [モデル、クラス、およびリレーションシップについて](../modeling/understanding-models-classes-and-relationships.md)

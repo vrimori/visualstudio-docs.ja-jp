@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 734d61b4fade0775c5e017a85fa5364779bc567b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 10afe84716153b67c419f4ddbd1a7b838b68cbf9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccopenproject-function"></a>SccOpenProject 関数
 この関数は、既存のソース管理プロジェクトを開くか、新規に作成します。  
@@ -70,7 +71,7 @@ SCCRTN SccOpenProject (
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|プロジェクトを開くときに成功しました。|  
 |SCC_E_INITIALIZEFAILED|プロジェクトを初期化できませんでした。|  
@@ -106,7 +107,7 @@ SCCRTN SccOpenProject (
 > [!NOTE]
 >  `SCC_CAP_REENTRANT`ビットは、ソース管理プラグイン API のバージョン 1.1 で導入されました。 設定されていないか、バージョン 1.0 では無視され、すべてのバージョン 1.0 ソース管理プラグインは nonreentrant と見なされます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccCloseProject](../extensibility/scccloseproject-function.md)   
  [SccGetProjPath](../extensibility/sccgetprojpath-function.md)   

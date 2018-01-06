@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cf66dce40cda2d72757c3a2fe141ed023b286d78
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 41a9fc5a2b364ecc0c9037980c3ef2804a6808d8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="running-document-table"></a>実行中のドキュメント テーブル
 IDE では、実行中のドキュメント テーブル (RDT) と呼ばれる内部構造内のすべての現在開いているドキュメントの一覧を保持します。 この一覧には、これらドキュメントの現在編集されているかどうかにかかわらず、メモリ内のすべての開いているドキュメントが含まれます。 ドキュメントは、ファイル、プロジェクトまたはメイン プロジェクト ファイル (.vcxproj ファイルなど) を含めて、保存されている任意の項目です。  
@@ -59,6 +60,6 @@ IDE では、実行中のドキュメント テーブル (RDT) と呼ばれる�
   
 -   ドキュメントの完全パスが、プロジェクト システムを確認し、項目を RDT 内を検索して、階層、または項目の ID を使用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RDT_ReadLock の使用方法](../../extensibility/internals/rdt-readlock-usage.md)   
  [ドキュメント テーブルの保存と実行](../../extensibility/internals/persistence-and-the-running-document-table.md)

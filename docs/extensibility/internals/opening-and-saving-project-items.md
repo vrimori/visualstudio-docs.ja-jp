@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a30589591a7cef60ecfb19945366f8fcf539da02
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a270811cc13d4b0e9af027ec2b4b5d2032582a3e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="opening-and-saving-project-items"></a>開くと、プロジェクト項目の保存
 新しいプロジェクトの種類を追加すると、する場合は、開始タグとに、プロジェクト ファイルの保存を管理する必要があります、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) です。 次のトピックでは、オープンとファイルを保存する別の方法について説明します。  

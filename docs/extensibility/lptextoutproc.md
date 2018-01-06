@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 86c8cce3abf16d7236acdd5ec468b06fdb46f997
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 9fb212d7908d32bc9d9d14d7e8f4786089bc5f89
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lptextoutproc"></a>LPTEXTOUTPROC
 ユーザーは、統合開発環境 (IDE) 内からソース管理操作を実行するとき、ソース管理プラグインすることも、操作に関連するエラーまたはステータス メッセージの伝達します。 プラグインを表示できます、独自のメッセージ ボックスこの目的のため。 ただし、複数のシームレスな統合をプラグインできますで文字列を渡す、IDE では、ステータス情報を表示するがネイティブの方法で表示されます。 このメカニズムは、`LPTEXTOUTPROC`関数ポインター。 IDE では、エラーと状態を表示する (詳細については、以下で説明) この関数を実装します。  
@@ -47,7 +48,7 @@ typedef LONG (*LPTEXTOUTPROC) (
  mesg_type  
  メッセージの種類。 次の表は、このパラメーターのサポートされている値を一覧表示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`SCC_MSG_INFO, SCC_MSG_WARNING, SCC_MSG_ERROR`|メッセージは、情報、警告、またはエラーと見なされます。|  
 |`SCC_MSG_STATUS`|メッセージは状態が表示され、ステータス バーに表示されることができます。|  
@@ -61,7 +62,7 @@ typedef LONG (*LPTEXTOUTPROC) (
   
 ## <a name="return-value"></a>戻り値  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_MSG_RTN_OK|文字列が表示されるか、操作が正常に完了しました。|  
 |SCC_MSG_RTN_CANCEL|ユーザーが操作をキャンセルしようとするとします。|  
@@ -139,6 +140,6 @@ LONG SendStatusMessage(
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDE によって実装されているコールバック関数](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)

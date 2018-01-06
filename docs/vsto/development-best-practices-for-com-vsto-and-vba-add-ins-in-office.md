@@ -14,11 +14,12 @@ caps.latest.revision: "33"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 55b3a2cbaf98eeacb78f55bea23d638cd4a1ab6d
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: office
+ms.openlocfilehash: 8985b3bb6e20b24b86174286104158c8830de971
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="development-best-practices-for-com-vsto-and-vba--add-ins-in-office"></a>COM、VSTO、および VBA のアドインの office 開発のベスト プラクティス
   Office 用に COM、VBA、または VSTO アドインを開発する場合はこの記事で説明する開発のベスト プラクティスに従います。   これによりすることができます。
@@ -27,13 +28,13 @@ ms.lasthandoff: 11/11/2017
 -  ユーザーと IT 管理者のアドインの配置の複雑さを軽減します。
 -  アドインでの意図しないインストールまたは実行時エラーは発生しません。
 
->注: を使用して、[デスクトップ ブリッジ](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root)を使用している COM を準備するには、VSTO または VBA 用アドインに Windows ストアはサポートされていません。 COM、VSTO、および VBA アドインは、Windows ストアまたは Office ストアに分散できません。 
+>注: を使用して、[デスクトップ ブリッジ](/windows/uwp/porting/desktop-to-uwp-root)を使用している COM を準備するには、VSTO または VBA 用アドインに Windows ストアはサポートされていません。 COM、VSTO、および VBA アドインは、Windows ストアまたは Office ストアに分散できません。 
   
 ## <a name="do-not-check-for-office-during-installation"></a>インストール時に Office を確認しません。  
  追加で、アドインのインストール プロセス中に Office がインストールされているかどうかを検出することはお勧めしません。 Office がインストールされていない場合、アドインをインストールすることができ、ユーザーは Office のインストール後にアクセスすることにします。 
   
 ## <a name="use-embedded-interop-types-nopia"></a>埋め込まれた相互運用機能型 (NoPIA) を使用します。  
-場合は、ソリューションが .NET 4.0 を使用して、または後で、使用して埋め込まれた相互運用機能型 (NoPIA) の代わりにに応じて、Office プライマリ相互運用機能アセンブリ (PIA) 再頒布可能パッケージ。 型の埋め込みを使用して、ソリューションのインストールのサイズを削減し、将来の互換性を確保します。 Office 2010 では、PIA の再頒布可能パッケージに同梱されている Office の最新バージョンをでした。 詳細については、次を参照してください。[チュートリアル: Microsoft Office アセンブリから型情報を埋め込む](https://msdn.microsoft.com/en-us/library/ee317478.aspx)と[型の等価性と埋め込まれた相互運用機能型](https://docs.microsoft.com/en-us/dotnet/framework/interop/type-equivalence-and-embedded-interop-types)です。 
+場合は、ソリューションが .NET 4.0 を使用して、または後で、使用して埋め込まれた相互運用機能型 (NoPIA) の代わりにに応じて、Office プライマリ相互運用機能アセンブリ (PIA) 再頒布可能パッケージ。 型の埋め込みを使用して、ソリューションのインストールのサイズを削減し、将来の互換性を確保します。 Office 2010 では、PIA の再頒布可能パッケージに同梱されている Office の最新バージョンをでした。 詳細については、次を参照してください。[チュートリアル: Microsoft Office アセンブリから型情報を埋め込む](https://msdn.microsoft.com/en-us/library/ee317478.aspx)と[型の等価性と埋め込まれた相互運用機能型](/windows/uwp/porting/desktop-to-uwp-root)です。
 
 ソリューションは、以前のバージョンの .NET を使用している場合は、.NET 4.0 以降を使用するソリューションを更新することをお勧めします。 .NET 4.0 以降を使用するには、新しいバージョンの Windows で実行時の前提条件が少なくなります。
   
@@ -66,4 +67,4 @@ Office クライアント アプリケーション (Word や Excel など) の�
 >重要: Microsoft は、サポートされているアドイン準備レポート、および ISV の連絡先情報の一覧を保持します。 アドインを一覧表示を参照してください[https://aka.ms/readyforwindows](https://aka.ms/readyforwindows)です。
 
 ## <a name="use-process-monitor-to-help-debug-installation-or-loading-issues"></a>プロセス モニターを使用してインストールまたは読み込みの問題をデバッグします。
-アドインをインストールまたは読み込み中に互換性の問題がある場合、は、ファイルまたはレジストリのアクセスに関する問題に関連する可能性があります。 使用して[プロセス モニター](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon)または同様のデバッグ ツールをログに記録して問題を特定するための作業環境に対して動作を比較します。 
+アドインをインストールまたは読み込み中に互換性の問題がある場合、は、ファイルまたはレジストリのアクセスに関する問題に関連する可能性があります。 使用して[プロセス モニター](/sysinternals/downloads/procmon)または同様のデバッグ ツールをログに記録して問題を特定するための作業環境に対して動作を比較します。

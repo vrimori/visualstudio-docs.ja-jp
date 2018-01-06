@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 20abad6a195d8493be8849588b86035d03fdc654
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 73f5c55b39d855eb084206ef27e2254d50377b86
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccget-function"></a>SccGet 関数
 この関数は、1 つまたは複数のファイルを表示およびコンパイルするためはなく、編集、コピーを取得します。 ほとんどのシステムでは、ファイルが読み取り専用としてタグ付けされます。  
@@ -58,7 +59,7 @@ SCCRTN SccGet(
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|取得操作が成功します。|  
 |SCC_E_FILENOTCONTROLLED|ファイルはソース管理されません。|  
@@ -101,6 +102,6 @@ SCCRTN SccGet(
   
     6.  更新された b.txt: ファイルをチェックインにようになりましたことができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [特定のコマンドで使用されるビットフラグ](../extensibility/bitflags-used-by-specific-commands.md)

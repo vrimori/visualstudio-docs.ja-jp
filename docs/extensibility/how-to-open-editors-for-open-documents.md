@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: dfd145281a467a23cd01d73ff04721d68580254e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c4c6321644cb59f55ad1335249aec5b071aef4ab
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-open-editors-for-open-documents"></a>方法: 開いているドキュメントのエディターを開く
 プロジェクトには、ドキュメント ウィンドウが開き、プロジェクト最初判断しなければなりませんかどうか、ファイルが既に開いているドキュメント ウィンドウには、別のエディター。 登録されている標準エディターのいずれかのプロジェクト固有のエディターで開くかなどがあります、または[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/31/2017
   
 2.  ドキュメントが開いていない場合は、手順を実行し、[する方法: 標準のエディターを開く](../extensibility/how-to-open-standard-editors.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [開くと、プロジェクト項目の保存](../extensibility/internals/opening-and-saving-project-items.md)   
  [方法: プロジェクトに固有のエディターを開く](../extensibility/how-to-open-project-specific-editors.md)   
  [方法: 標準のエディターを開く](../extensibility/how-to-open-standard-editors.md)

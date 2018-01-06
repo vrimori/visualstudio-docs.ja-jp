@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ca277abe07ffe843ed3f4106615796340f5367a4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e007ffe8cf3cc893bc9575a3e7c083090b523467
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designing-xml-command-table-vsct-files"></a>XML コマンド テーブルのデザイン (です。Vsct) ファイル
 XML コマンド テーブル (.vsct) ファイルは、VSPackage のコマンドのアイテムの外観とレイアウトを説明します。 コマンドの項目には、ボタン、コンボ ボックス、メニューのツールバー、およびコマンドのアイテムのグループが含まれます。 このトピックでは、XML コマンド テーブルのファイルへの影響についてコマンド項目、メニューのおよびそれらを作成する方法について説明します。  
@@ -123,5 +124,5 @@ XML コマンド テーブル (.vsct) ファイルは、VSPackage のコマン�
   
  コマンドラインを使用してツールを実行**CreateExpInstance/Reset**です。 このツールから削除する、実験用ハイブでは、通常インストールされているすべての登録済み Vspackage に注意してください[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メニューとコマンドの拡張](../../extensibility/extending-menus-and-commands.md)

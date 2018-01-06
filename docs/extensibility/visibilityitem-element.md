@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: db041f839e9b7e8ad3268175829ecfee9380e736
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 627e5abad07ef0566d23f010ea120df33173fb0e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visibilityitem-element"></a>VisibilityItem 要素
 `VisibilityItem`要素は、コマンドやツールバーの静的な可視性を決定します。 すべてのエントリは、コマンドまたはメニューとも関連付けられているコマンド UI コンテキストを識別します。 Visual Studio は、それらを定義する Vspackage を読み込むことがなくコマンド、メニューのおよびツールバー、およびその可視性を検出します。 IDE を使用して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A>コマンド UI コンテキストがアクティブかどうかを確認するメソッド。  
@@ -46,10 +47,10 @@ ms.lasthandoff: 10/31/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|guid|必須です。 GUID と ID コマンド id の GUID です。|  
-|ID|必須です。 GUID と ID のコマンド識別子の ID。|  
-|コンテキスト|必須です。 コマンドが表示されている UI コンテキスト。|  
-|状態|省略可能です。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
+|guid|必須。 GUID と ID コマンド id の GUID です。|  
+|ID|必須。 GUID と ID のコマンド識別子の ID。|  
+|コンテキスト|必須。 コマンドが表示されている UI コンテキスト。|  
+|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/31/2017
 </VisibilityConstraints>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A>   
  <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus>   
  <xref:Microsoft.VisualStudio.VSConstants>   

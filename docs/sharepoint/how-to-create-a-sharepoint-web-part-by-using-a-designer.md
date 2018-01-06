@@ -21,11 +21,12 @@ caps.latest.revision: "26"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4f329b1402917bc7c129bcdc9f504dfe99bcccbf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 1b993512350e6bd27d0dce8ef359bc33fccde5ff
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-sharepoint-web-part-by-using-a-designer"></a>方法: デザイナーを使用して SharePoint Web パーツを作成する
   追加することで、web パーツを作成することができます、**視覚的 Web パーツ**を SharePoint プロジェクト項目です。 これを行うと、Visual Studio で Visual Web Developer デザイナーが開きます。このデザイナーでは、コントロールとコードを Web パーツに追加できます。 視覚的 Web パーツは Web パーツと同じように機能します。 唯一の違いは、視覚的 Web パーツのデザインは Visual Web Developer デザイナーで行うことです。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/31/2017
   
      **ソリューション エクスプ ローラー**、web パーツが表示されます。 Visual Web Developer デザイナーでは、web パーツをデザインした後に、指定したサイトでテストします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint の Web パーツの作成](../sharepoint/creating-web-parts-for-sharepoint.md)   
  [方法: SharePoint Web パーツを作成します。](../sharepoint/how-to-create-a-sharepoint-web-part.md)   
  [チュートリアル: SharePoint の Web パーツを作成します。](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)   

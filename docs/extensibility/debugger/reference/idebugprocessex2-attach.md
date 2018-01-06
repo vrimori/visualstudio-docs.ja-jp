@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 111895b73ee9685b9608be9812452d04d84cd48c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: da89be65f4b02fa0db254dd85463e422d17fe589
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprocessex2attach"></a>IDebugProcessEx2::Attach
 このメソッドは、セッションが今すぐ、プロセスをデバッグしているプロセスに通知します。  
@@ -47,5 +48,5 @@ int Attach(
 ## <a name="remarks"></a>コメント  
  インターフェイスが渡される`pSession`cookie です。 このプロセスにアタッチするセッションのデバッグ マネージャーを一意に識別する値としてのみ処理されますが、指定されたインターフェイスのメソッドのいずれも機能します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProcessEx2](../../../extensibility/debugger/reference/idebugprocessex2.md)

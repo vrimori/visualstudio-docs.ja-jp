@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c57626827be8487d19cd546bc31bd32b0859cec7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 22ef16c40fb2d70ae7e1b835860b74843abe57d3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-for-sharepoint-solutions"></a>SharePoint ソリューションのセキュリティ
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint アプリケーションのセキュリティを強化するために、次の機能が組み込まれています。  
@@ -87,7 +88,7 @@ ms.lasthandoff: 10/31/2017
   
 -   [セキュリティで保護された ASP.NET アプリケーションの構築: 認証、承認、およびセキュリティで保護された通信](http://go.microsoft.com/fwlink/?LinkId=177494)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   
  [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)  
   

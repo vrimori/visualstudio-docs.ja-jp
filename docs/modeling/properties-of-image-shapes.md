@@ -15,11 +15,12 @@ caps.latest.revision: "25"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 88ae1fb937f5f86aa767a2de8d1978ea160f6d15
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 72e64d9a0e254ce34cea76eca8617dee71573dd9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-image-shapes"></a>イメージ シェイプのプロパティ
 イメージの図形を使用すると、ドメイン クラスが生成されたデザイナーで表示する方法を指定します。 設定して、イメージの図形を定義、`Image`定義済みのイメージ ファイルのクラスのプロパティです。 次の形式がサポートされています。  
@@ -53,13 +54,13 @@ ms.lasthandoff: 10/27/2017
 |破線スタイルのアウトライン|アウトライン ダッシュのスタイル (実線、破線、ドット、DashDot、DashDotDot、またはカスタム) は、この図形です。|[実線]|  
 |外枠の太さ|この図形の外枠の太さ。|0.03125|  
 |テキストの色|この図形に関連付けられているテキスト デコレーターのために使用される色。|黒|  
-|アクセス修飾子|Geometry 図形 (パブリックまたは内部) のアクセス修飾子。|パブリック|  
+|アクセス修飾子|Geometry 図形 (パブリックまたは内部) のアクセス修飾子。|Public|  
 |カスタム属性|この図形から生成されるソース コードのクラスに属性を追加するために使用します。|\<なし >|  
 |二重の生成の派生|場合`True`、基底クラスと部分クラス (カスタマイズをサポートする上書きを使用) の両方が生成されます。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)です。|False|  
 |カスタム コンス トラクターを持つ|場合`True`、ソース コードでカスタム コンス トラクターが提供されます。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)です。|False|  
 |継承修飾子|イメージの形状から生成されるソース コード クラスの継承の種類を記述します (`none`、`abstract`または`sealed`)。|none|  
 |基本イメージの図形|この図形の基本クラス。|(なし)|  
-|名前|この図形の名前。|現在の名前|  
+|name|この図形の名前。|現在の名前|  
 |名前空間|この図形に関連付けられた名前空間。|現在の名前空間|  
 |ツールヒントの種類|ツールヒントが定義されている場所 (固定、変数、またはなし)。 固定されている場合、次の値、`Fixed Tooltip Text`プロパティは、ツールヒントとして使用以外の場合は、変数、ツール ヒントがカスタム コードで定義します。|none|  
 |メモ|この図形に関連付けられている非公式なノートです。|\<なし >|  
@@ -72,5 +73,5 @@ ms.lasthandoff: 10/27/2017
 |ヘルプ キーワード|この要素の F1 ヘルプをインデックス化に使用されるキーワード。|\<なし >|  
 |イメージ|この図形に使用されるイメージ ファイルへのパス。|\<なし >|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)

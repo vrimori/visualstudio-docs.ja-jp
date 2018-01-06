@@ -22,11 +22,12 @@ caps.latest.revision: "32"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 856358b9864da9cb685619ec1ce94d2c5b4bc4f0
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: fdb9d357f1046c453ad6e21829a55983a044ff4b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-clickonce-deployments"></a>ClickOnce 配置のトラブルシューティング
 このトピックでは、診断し、最も一般的な問題を解決する[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開します。  
@@ -51,6 +52,6 @@ ms.lasthandoff: 10/27/2017
  [System.Deployment.Application を使用する ClickOnce アプリケーションのデバッグ](../deployment/debugging-clickonce-applications-that-use-system-deployment-application.md)  
  System.Deployment.Application を使用して ClickOnce アプリケーションをデバッグする方法を説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)   
  [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)

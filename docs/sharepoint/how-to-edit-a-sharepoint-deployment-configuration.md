@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 287618def7897cd2c91a63db9d8272c919190dfa
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 408d7801e883e85e37d721c342dba691702d77cf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-edit-a-sharepoint-deployment-configuration"></a>方法: SharePoint の配置構成を編集する
   展開構成の作成または既存の展開構成を変更することができます。 たとえば、1 つの手順を実行または展開プロセスの手順の順序を変更することができます。 作成または組み込みとプログラムで追加の構成を変更できないために、展開の構成を変更することがあります。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  **アクティブな配置構成**ボックスの一覧を使用する配置構成の名前を選択します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

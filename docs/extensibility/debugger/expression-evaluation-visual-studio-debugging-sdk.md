@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c66a6eac74b3d1494a1e98bcb95112c43c4c1bc8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ed0e494cc0efd48ea3c22d9fd881aafec42a984b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="expression-evaluation-visual-studio-debugging-sdk"></a>式の評価 (Visual Studio SDK のデバッグ)
 IDE は、中断モード中に、プログラムのいくつかの変数を含む単純な式を評価できる必要があります。 これを実現するには、デバッグ エンジン (DE) できる必要がありますを解析し、IDE のウィンドウの 1 つに入力した式を評価します。  
@@ -41,5 +42,5 @@ IDE は、中断モード中に、プログラムのいくつかの変数を含�
   
  同期および非同期の評価の実装が必要、 [IDebugProperty2::GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)メソッドです。 非同期の式の評価の実装が必要[IDebugExpressionEvaluationCompleteEvent2](../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [実行の制御と状態の評価](../../extensibility/debugger/execution-control-and-state-evaluation.md)

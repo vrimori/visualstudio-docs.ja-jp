@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5ddc090e827b0a94a6534a0c4e625299cbc2ef5a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2d17e31f3282727386654b0d1913fd00424c3c0a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugexpression2evaluatesync"></a>IDebugExpression2::EvaluateSync
 このメソッドは、同期的に、式を評価します。  
@@ -59,7 +60,7 @@ int EvaluateSync(
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`です。 それ以外の場合はエラー コードを返します。 一部の一般的なエラー コードは次のとおりです。  
   
-|エラー|説明|  
+|Error|説明|  
 |-----------|-----------------|  
 |E_EVALUATE_BUSY_WITH_EVALUATION|もう一方の式が評価されている現在、および同時式の評価はサポートされていません。|  
 |E_EVALUATE_TIMEOUT|評価がタイムアウトしました。|  
@@ -115,7 +116,7 @@ HRESULT CExpression::EvalExpression(BOOL bSynchronous,
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)   
  [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)   

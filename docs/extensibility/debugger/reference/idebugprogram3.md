@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2da4dcb4911488bd82c358efc3b8075f1941af6f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: cb827c875731134b9d8f9ea2833f3629ca0d3c36
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprogram3"></a>IDebugProgram3
 このインターフェイスを表しますが、プロセスで実行され、拡張するプログラム[Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md)スレッドに関する情報を提供することによりします。  
@@ -41,7 +42,7 @@ IDebugProgram3 : IDebugProgram3
 |------------|-----------------|  
 |[ExecuteOnThread](../../../extensibility/debugger/reference/idebugprogram3-executeonthread.md)|プログラムを実行します。 実行するときに、ユーザーを表示するスレッドでデバッガーの情報を提供し、スレッドが返されます。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
@@ -51,7 +52,7 @@ IDebugProgram3 : IDebugProgram3
 ## <a name="remarks"></a>コメント  
  プログラムは、プロセスで構成される 1 つまたは複数のプログラムの中に、特定のランタイムのアーキテクチャで実行されているスレッド コンテナーです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [GetProgram](../../../extensibility/debugger/reference/idebugthread2-getprogram.md)   

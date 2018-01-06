@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7f863377f326dd7bd62381a34c6236d938b11505
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 93eb993877d464f4303e0b49dc7219425c1a5f6a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="modifying-the-isolated-shell-by-using-the-pkgundef-file"></a>使用して分離シェルを変更します。Pkgundef ファイル
 分離シェル アプリケーションから指定されたレジストリ エントリを除外する .pkgundef ファイルを変更することができます。 通常は、初めてコンピューターでは、アプリケーションを起動するとき、Visual Studio shell はコピー Visual Studio の既存のレジストリ エントリを使用、アプリケーションのルート レジストリ キーにします。 これには、現在インストールされている Vspackage への参照が含まれます。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 10/31/2017
   
  アプリケーションの .pkgundef ファイル。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio の機能のパッケージ Guid](package-guids-of-visual-studio-features.md)   
  [分離シェルのカスタマイズ](customizing-the-isolated-shell.md)

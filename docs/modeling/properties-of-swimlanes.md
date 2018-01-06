@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 1b8eacf8fdd74fc9fe0703dc50beb46a2442e939
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: f43af2ef4a3a13952fb04c594db336afcb97afbd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-swimlanes"></a>スイムレーンのプロパティ
 スイムレーンは、ダイアグラムに追加できます。 スイムレーンはダイアグラムを垂直方向または水平方向の領域に分割します。 スイムレーン内に表示される他の図形を定義することができます。 詳細については、次を参照してください。[ドメイン固有言語の定義方法](../modeling/how-to-define-a-domain-specific-language.md)です。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語の拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)です。  
@@ -32,13 +33,13 @@ ms.lasthandoff: 10/27/2017
 |区切り線のスタイル|区切り線のスタイル (`Solid`、 `Dash`、 `Dot`、 `DashDot`、 `DashDotDot`、または`Custom`)。|`Dash`|  
 |区切り記号の幅|インチ単位の区切り線の太さ。|0.03125|  
 |テキストの色|このレーンに関連付けられているテキスト デコレーターのために使用される色。|黒|  
-|アクセス修飾子|クラスのアクセスのレベル (`public`または`internal`)。|パブリック|  
+|アクセス修飾子|クラスのアクセスのレベル (`public`または`internal`)。|Public|  
 |カスタム属性|このレーンから生成されるコードのクラスに属性を追加するために使用します。|\<なし >|  
 |二重の生成の派生|場合`True`、基底クラスと部分クラス (カスタマイズをサポートする上書きを使用) の両方が生成されます。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)です。|False|  
 |カスタム コンス トラクターを持つ|場合`True`、ソース コードでカスタム コンス トラクターが提供されます。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)です。|False|  
 |継承修飾子|レーンから生成されるソース コードのクラスの継承の種類を表します (`none`、`abstract`または`sealed`)。|none|  
 |基本のレーン|このレーンの基本クラス。|(なし)|  
-|名前|このレーンの名前。|現在の名前|  
+|name|このレーンの名前。|現在の名前|  
 |名前空間|このレーンに関連付けられた名前空間。|現在の名前空間|  
 |ツールヒントの種類|ツールヒントを定義する方法 (`fixed`、 `variable`、または`none`)。 場合`fixed`、次の値、`Fixed Tooltip Text`プロパティを使用します。 場合`variable`、ツールヒントがカスタム コードで定義されます。|\<なし >|  
 |メモ|このレーンに関連付けられている非公式なノートです。|\<なし >|  
@@ -51,5 +52,5 @@ ms.lasthandoff: 10/27/2017
 |固定のツールヒント テキスト|固定のツールヒントに使用されるテキストです。|\<なし >|  
 |ヘルプ キーワード|このレーンの F1 ヘルプをインデックス化に使用されるキーワード。|\<なし >|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)

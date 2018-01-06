@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5bc2f4a50996ccca6a56632166121bf9784629bb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 739dd0d41fb63c4993dad0d66737aaada1cf01c4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="template-directory-description-vsdir-files"></a>テンプレート ディレクトリの説明 (です。Vsdir) ファイル
 テンプレート ディレクトリの説明ファイル (.vsdir) は、統合開発環境 (IDE) フォルダー、ウィザードの .vsz ファイル、およびダイアログ ボックスで、プロジェクトに関連付けられているテンプレート ファイルが表示できるテキスト ファイルです。 内容には、ファイルまたはフォルダーごとに 1 つのレコードが含まれます。 1 つだけ .vsdir ファイルが一般に用意されていますが複数のフォルダー、ウィザード、またはテンプレート ファイルを記述する、参照先の場所にすべての .vsdir ファイルがマージされます。  
@@ -65,6 +66,6 @@ SourceFile.cpp|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#122|110|#123|0|0|0|#124
   
 -   .Vsz ファイル、フォルダー、またはテンプレート ファイルを削除する場合は、.vsdir ファイルからも、対応するレコードを削除する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ウィザード](../../extensibility/internals/wizards.md)   
  [ウィザード (.Vsz) ファイル](../../extensibility/internals/wizard-dot-vsz-file.md)

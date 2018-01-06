@@ -19,14 +19,15 @@ caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b0b1d4f79be83f69989064ed7699df43b6930040
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: c4ec0178a4767e7e0c5c726816dcd7088e14f17b
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="using-the-tasks-window"></a>[タスク] ウィンドウの使用
-**タスク**ウィンドウに似ています、**スレッド**ことに関する情報を表示するウィンドウで、 <xref:System.Threading.Tasks.Task?displayProperty=fullName>、 [task_handle](/cpp/parallel/concrt/reference/task-group-class.md)、または[WinJS.Promise](http://msdn.microsoft.com/library/windows/apps/br211867.aspx)各スレッドではなくオブジェクト。 スレッドと同様、タスクは、同時に実行できる非同期操作を表します。ただし、複数のタスクが同じスレッドで実行される場合もあります。 
+**タスク**ウィンドウに似ています、**スレッド**ことに関する情報を表示するウィンドウで、 <xref:System.Threading.Tasks.Task?displayProperty=fullName>、 [task_handle](/cpp/parallel/concrt/reference/task-group-class)、または[WinJS.Promise](http://msdn.microsoft.com/library/windows/apps/br211867.aspx)各スレッドではなくオブジェクト。 スレッドと同様、タスクは、同時に実行できる非同期操作を表します。ただし、複数のタスクが同じスレッドで実行される場合もあります。 
   
  マネージ コードで使用することができます、**タスク**を操作するときにウィンドウ<xref:System.Threading.Tasks.Task?displayProperty=fullName>オブジェクト、または、 **await**と**async**キーワード (**のAwait**と**Async** VisualBasic で)。 マネージ コードでのタスクの詳細については、次を参照してください。[の並行プログラミング](/dotnet/standard/parallel-programming/index)です。  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 12/07/2017
   
  ![[タスク] ウィンドウのショートカット スレッド メニュー](../debugger/media/parallel_tasks_contextmenu2.png "Parallel_Tasks_ContextMenu2")  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーの基本事項](../debugger/debugger-basics.md)   
  [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)   
  [並列プログラミング](/dotnet/standard/parallel-programming/index)   

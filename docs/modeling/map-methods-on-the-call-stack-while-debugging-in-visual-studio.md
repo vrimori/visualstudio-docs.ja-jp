@@ -32,11 +32,12 @@ caps.latest.revision: "39"
 author: mikejo5000
 ms.author: mikejo
 manager: douge
-ms.openlocfilehash: b768ca1a54608e7632753d4bb7d065e3ae8ece28
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 32a159b717c3a6eebdfed5b5b2047837f72ac6e4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Visual Studio でデバッグを行うときの呼び出し履歴に対するメソッドのマップ
 コード マップをデバッグしながら呼び出し履歴を視覚的にトレースを作成します。 コメントをマップに追加することでバグの発見に重点を置いてコードの動作を追跡できます。  
@@ -188,7 +189,7 @@ ms.lasthandoff: 10/27/2017
   
 -   [マップを使用してバグを発見します。](#FindBugs)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソリューション間の依存関係をマップします。](../modeling/map-dependencies-across-your-solutions.md)   
  [コード マップを使用してアプリケーションをデバッグするには](../modeling/use-code-maps-to-debug-your-applications.md)   
  [コード マップ アナライザーを使用して潜在的な問題を検索します。](../modeling/find-potential-problems-using-code-map-analyzers.md)   

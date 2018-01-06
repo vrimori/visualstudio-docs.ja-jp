@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ab3506a6906c4223888a14132339cbe5499c92d1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7c7e24ed2db4538ab0fd38dbb85930452611f0ee
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="document-data-and-document-view-in-custom-editors"></a>ドキュメント データとカスタム エディターでドキュメント ビュー
 2 つの部分で構成されるカスタム エディター: ドキュメント データ オブジェクトとドキュメント ビュー オブジェクト。 名前からわかるように、ドキュメント データ オブジェクト テキスト データを表示するには、表しドキュメント ビュー オブジェクト (または"view") は、ドキュメント データ オブジェクトを表示するための 1 つまたは複数の windows を表します。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/31/2017
   
  カスタム エディターのビューを作成するための 2 つのオプションがあります。 1 つは、インプレース アクティブ化モデル、ビューが ActiveX コントロールまたはドキュメント データ オブジェクトを使用して、ウィンドウでホストされている場所です。 2 つ目は、ビューがによってホストされている場所の簡易埋め込みモデル[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]と<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>ウィンドウ コマンドを処理するために実装がします。 インプレース アクティブ化モデルの詳細については、次を参照してください。 [、インプレース アクティブ化](../extensibility/in-place-activation.md)です。 簡略化された埋め込みモデルについては、次を参照してください。[簡略化された埋め込み](../extensibility/simplified-embedding.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [複数のドキュメント ビューをサポートします。](../extensibility/supporting-multiple-document-views.md)   
  [埋め込み簡素化されます。](../extensibility/simplified-embedding.md)   
  [方法: 添付ドキュメント データへのビュー](../extensibility/how-to-attach-views-to-document-data.md)   

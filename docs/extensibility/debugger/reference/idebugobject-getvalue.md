@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4a9e79c808c02d5c2d04631e6a2981269c5e3a32
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1c96a9224d77f8693226b4474bfed2893b39e27f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugobjectgetvalue"></a>IDebugObject::GetValue
 連続する一連のバイトとしてオブジェクトの値を取得します。  
@@ -52,5 +53,5 @@ int GetValue(
 ## <a name="remarks"></a>コメント  
  呼び出すことによってフェッチすることがある値のバイトの合計数を取得、 [GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md)メソッドです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

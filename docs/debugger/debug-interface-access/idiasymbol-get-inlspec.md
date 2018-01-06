@@ -14,14 +14,15 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 950384dfce7de39969b054f6c1019fa36c1efa38
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: fb8b96e3a44ae1bb03cde58fc28af4871e80aaf4
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="idiasymbolgetinlspec"></a>IDiaSymbol::get_InlSpec
-この関数は、関数がインラインとしてマークされているかどうかを示すフラグを取得 (のいずれかを使用して、 [inline、_ _inline、 \__forceinline](/cpp/cpp/inline-functions-cpp.md)属性)。  
+この関数は、関数がインラインとしてマークされているかどうかを示すフラグを取得 (のいずれかを使用して、 [inline、_ _inline、 \__forceinline](/cpp/cpp/inline-functions-cpp)属性)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +42,13 @@ HRESULT get_inlSpec(
 > [!NOTE]
 >  戻り値の`S_FALSE`プロパティが、シンボルを使用できないことを意味します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
 |ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK バージョン 8.0|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [inline、__inline、\__forceinline](/cpp/cpp/inline-functions-cpp.md)
+ [inline、__inline、\__forceinline](/cpp/cpp/inline-functions-cpp)

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c4e3d64f77064c04e131853786495c921711f2d0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b17674b8cd5058ec20db4c483b2c3508aa275b29
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-site-support-templates"></a>Web サイト テンプレートをサポート
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Web サイトのプロジェクトと項目テンプレートは、最初から新しい Web サイト プロジェクトと項目を作成する必要性を解消して、開発プロセスを高速化と再利用可能なカスタマイズ可能な Web サイトのプロジェクトと項目のスタブを提供します。 詳細については[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、テンプレートを参照してください[を作成するプロジェクトと項目テンプレート](../../ide/creating-project-and-item-templates.md)です。  
@@ -186,5 +187,5 @@ ms.lasthandoff: 10/31/2017
   
      存在する場合は、新しいマスター ページとその依存ファイルの内容を決定するテンプレート ファイル。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Web サイト サポート](../../extensibility/internals/web-site-support.md)

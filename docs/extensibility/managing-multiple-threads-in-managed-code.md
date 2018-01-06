@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c246c8be1d10893b018d5d0c5727d4af42efdc6b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 84d59a626fbe745532d0e2499d7ba9a4c3105f5e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-managing-multiple-threads-in-managed-code"></a>方法: マネージ コードの複数のスレッドを管理します。
 非同期メソッドを呼び出すか、Visual Studio の UI スレッド以外のスレッドで実行される操作するマネージ VSPackage 拡張機能があれば、以下のガイドラインに従ってください。 おくと、UI スレッド応答性の高い作業を完了する別のスレッドで待機する必要がないためです。 ことができます、コードをより効率的なスタック領域を占有する追加のスレッドがないためより信頼性が高く、デッドロックやハングを回避するため、デバッグを簡単に行うことができます。  

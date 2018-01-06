@@ -11,11 +11,12 @@ caps.latest.revision: "2"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: f3dc3efefa4a89d64a64bd946f1f79e6c5a6d4df
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 3a4e1927cd17a5cc86ed58565b53f04aeb6977a6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>アイコンまたはデコレーターの可視性の制御
 A*デコレータ*がアイコンまたはドメイン固有言語 (DSL) 内の図形に表示されるテキストの行。 デコレーターの表示を作成し、モデルのプロパティの状態によって非表示できます。 たとえば、人物を表す図形を使用して、個人の性別、子供の数に応じて表示されるアイコンが異なることができます。  
@@ -106,7 +107,7 @@ A*デコレータ*がアイコンまたはドメイン固有言語 (DSL) 内の�
   
 8.  再構築し、ソリューションを実行します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [図形とコネクタを定義します。](../modeling/defining-shapes-and-connectors.md)   
  [図の背景画像の設定](../modeling/setting-a-background-image-on-a-diagram.md)   
  [移動して、プログラム コードでモデルを更新します。](../modeling/navigating-and-updating-a-model-in-program-code.md)   

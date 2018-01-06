@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fd4e46148950af925b7b41c4e3b5bd66fce5063c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 288e8f680d12aeffb2979c3f0d89b44b0553b62e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-and-methods-extended-by-project-subtypes"></a>プロパティとプロジェクトのサブタイプによって拡張メソッド
 プロジェクトのサブタイプでは、多数の基本プロジェクトのアグリゲーターとして構成するために、プロジェクトの動作を決定するための電力があります。 このセクションでは、いくつかの拡張またはプロジェクトのサブタイプで変更できる機能をまとめたものです。  
@@ -51,5 +52,5 @@ ms.lasthandoff: 10/31/2017
   
  基本のプロジェクトでは、上記のプロパティの既定の実装を提供します。 呼び出すことで、これらの基本プロジェクト取得`QueryInterface`の<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>最も外側のプロジェクト サブタイプになり、結果のプロパティの実装をオーバーライドするプロジェクトのサブタイプ。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクト サブタイプのデザイン](../../extensibility/internals/project-subtypes-design.md)

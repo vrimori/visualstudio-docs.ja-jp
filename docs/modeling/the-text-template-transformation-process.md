@@ -12,11 +12,12 @@ caps.latest.revision: "30"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: cc7794959f36134b85fe7d05acf07998312f9361
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 69f0285746709bd34914362912332d46731179c9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-text-template-transformation-process"></a>テキスト テンプレート変換プロセス
 テキスト テンプレート変換プロセスでは、テキスト テンプレート ファイルを入力として受け取りし、新しいテキスト ファイルとして出力を生成します。 テキスト テンプレートを使用するには、Visual Basic または c# のコードを生成するなど、HTML レポートを生成することができます。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/27/2017
 |コンポーネント|説明|カスタマイズ可能な (はい/いいえ)|  
 |---------------|-----------------|------------------------------|  
 |エンジン|エンジン コンポーネントは、テキスト テンプレート変換プロセスを制御します。|いいえ。|  
-|Host|ホストは、エンジンと、ユーザーの環境間のインターフェイスです。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]テキスト変換プロセスのホストです。|はい。 カスタム ホストを作成することができます。|  
+|ホスト|ホストは、エンジンと、ユーザーの環境間のインターフェイスです。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]テキスト変換プロセスのホストです。|はい。 カスタム ホストを作成することができます。|  
 |ディレクティブ プロセッサ|ディレクティブ プロセッサは、テキスト テンプレートのディレクティブを処理するクラスです。 ディレクティブを使用すると、テキスト テンプレートへの入力ソースからデータを提供します。|はい。 カスタム ディレクティブ プロセッサを記述することができます。|  
   
 ## <a name="the-engine"></a>エンジンは、  

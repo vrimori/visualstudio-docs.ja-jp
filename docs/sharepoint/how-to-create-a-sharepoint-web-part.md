@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 847124dc9a7e4cd80993df5b50c5d3d3b752f228
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: f5d4f06b13c1c27c9f4b5e245e73929596dcf423
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-sharepoint-web-part"></a>方法: SharePoint Web パーツを作成する
   作成して追加することで web パーツのカスタマイズ、 **Web パーツ**を SharePoint プロジェクト項目および web パーツのまたは、デザイナーを使用して、コード ファイルを編集します。 詳細については、次を参照してください。[する方法: デザイナーを使用して、SharePoint Web パーツを作成](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)です。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/31/2017
   
      例については、次を参照してください。[チュートリアル: SharePoint の Web パーツを作成する](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint の Web パーツの作成](../sharepoint/creating-web-parts-for-sharepoint.md)   
  [方法: デザイナーを使用して、SharePoint Web パーツを作成します。](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)   
  [チュートリアル: SharePoint の Web パーツを作成します。](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)   

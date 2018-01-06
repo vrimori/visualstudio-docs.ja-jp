@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: b4eb0abb91ee8cfb5e3406c6211ef5934b4db0ef
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 253f6292331bd3a67a5f57ab6a0936928dedcf77
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="export-diagrams-as-images"></a>イメージとしてダイアグラムをエクスポートする
 Visual Studio で、利害関係者、ユーザー、または同じバージョンの Visual Studio を使用しないプロジェクト チーム メンバーと共有することができるように、読み取り専用の形式で図をモデリングを保存することができます。  
@@ -44,6 +45,6 @@ Visual Studio で、利害関係者、ユーザー、または同じバージョ
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アプリのモデルを作成します。](../modeling/create-models-for-your-app.md)   
  [モデルおよびエクスポート ダイアグラムの共有](../modeling/share-models-and-exporting-diagrams.md)

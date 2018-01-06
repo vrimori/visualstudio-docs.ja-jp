@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5c06d246f7467e19969075537f321061463d1755
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b09176efca3a8839d5e6a741a1e161ff61cdc7ca
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="checklist-creating-a-legacy-language-service"></a>チェックリスト: 従来の言語サービスを作成します。
 次のチェックリストは、言語サービスを作成するために行う必要がありますの基本的な手順をまとめたもの、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]コア エディターです。 言語サービスに統合する[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デバッグの式エバリュエーターを作成する必要があります。 詳細については、次を参照してください。 [CLR 式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)で、 [Visual Studio デバッガーの機能拡張](../../extensibility/debugger/visual-studio-debugger-extensibility.md)です。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]
     >  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter>と同じオブジェクトのインターフェイスを実装する必要があります、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>インターフェイスです。  
   
--   ステートメント入力候補  
+-   入力候補  
   
      <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet> インターフェイスを実装します。  
   
@@ -126,6 +127,6 @@ ms.lasthandoff: 10/31/2017
   
  すべてのユーザー コンテキストを提供するを実装、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider>インターフェイスです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レガシ言語サービスの開発](../../extensibility/internals/developing-a-legacy-language-service.md)   
  [CLR 式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

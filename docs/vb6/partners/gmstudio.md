@@ -9,15 +9,16 @@ dev_langs: visual-basic
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e1d86e5a4f363a39283d32778144a1c0a7c50f23
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 8478f4f7cd3bc342f19b84a085b1889405ca6676
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="great-migrations-studio-gmstudio"></a>優れた移行 Studio (gmStudio)
 
-gmStudio とは、スケーラブルでカスタム VB6/ASP/COM に .NET アップグレード ソリューションを開発するための環境を再構築、一意なシステムです。 プラットフォームを再構築する包括的なソフトウェア、として gmStudio できます計画、カスタマイズ、向上、ことを確認して、アップグレード プロセスを追跡およびソース コードと、.NET の基準の一意の要件を満たします。  保持し、VB6/ASP/COM アセットの価値を高めるしようとする場合、gmStudio は最も高度でコスト効果の高いソリューションです。 
+gmStudio は、VB6/ASP/COM から .NET へのスケーラブルなカスタマイズされたアップグレード ソリューションを開発するための優れたシステム リエンジニアリング環境です。 gmStudio は、包括的なソフトウェア リエンジニアリング プラットフォームとして、お客様がご自分のアップグレード プロセスを計画、カスタマイズ、改善、検証、追跡するためや、ご自分のソース コードと .NET Standard　の特有の要件を満たすために役立ちます。  保持し、VB6/ASP/COM アセットの価値を高めるしようとする場合、gmStudio は最も高度でコスト効果の高いソリューションです。 
 
 ## <a name="the-tool-assisted-rewrite"></a>ツール支援の書き換え
 

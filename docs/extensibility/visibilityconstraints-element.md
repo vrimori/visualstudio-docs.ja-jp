@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f26268e6168379632868c07a9d9c58f9485c8ada
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 946fc12ab7a77aa72d5d09f7ba9522723f8e18b7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visibilityconstraints-element"></a>VisibilityConstraints 要素
 VisibilityConstraints 要素では、コマンドやツールバーのグループの静的な可視性を判断します。 可視性がによって制御される最初の[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]VSPackage を読み込むことがなく、統合開発環境 (IDE) です。  
@@ -41,7 +42,7 @@ VisibilityConstraints 要素では、コマンドやツールバーのグルー�
   
 |属性|説明|  
 |---------------|-----------------|  
-|状態|省略可能です。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
+|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -65,6 +66,6 @@ VisibilityConstraints 要素では、コマンドやツールバーのグルー�
 </VisibilityConstraints>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [VisibilityItem 要素](../extensibility/visibilityitem-element.md)   
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0e9c3a5f87540f8b255030654fb0917e3045ae19
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7acdb0f16182ebca904229d7620b80f5ec81d1de
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprocesssecurity"></a>IDebugProcessSecurity
 `IDebugProcessSecurity`ユーザーに警告する、プロセスにアタッチされている安全なポート業者によって実装されます。  
@@ -39,14 +40,14 @@ IDebugProcessSecurity : IUnknown
 ## <a name="remarks"></a>コメント  
  警告を表示し、アタッチするプロセスと見なされます。 安全でない場合、キャンセルするユーザーを許可するには、このインターフェイスを実装します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ポート](../../../extensibility/debugger/ports.md)   
  [ポートの仕入先](../../../extensibility/debugger/port-suppliers.md)   
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   

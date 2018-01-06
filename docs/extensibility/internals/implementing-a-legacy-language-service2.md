@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 24e847eb0f1d05717ab6b114921a66b04cd94922
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 20dc3cf7b4db090bf7fcd0086b3e72575d8490cd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-a-legacy-language-service"></a>レガシ言語サービスを実装します。
 Managed package framework (MPF) を使用して、言語サービスを実装するのからクラスを派生する必要があります、<xref:Microsoft.VisualStudio.Package.LanguageService>クラスし、次の抽象メソッドとプロパティを実装します。  
@@ -360,7 +361,7 @@ public enum IconImageIndex
         }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レガシ言語サービスを実装します。](../../extensibility/internals/implementing-a-legacy-language-service1.md)   
  [レガシ言語サービスの概要](../../extensibility/internals/legacy-language-service-overview.md)   
  [レガシ言語サービスを登録します。](../../extensibility/internals/registering-a-legacy-language-service1.md)   

@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 60244a920ec2a90c3c55a7e2c1aa8d412308bd92
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c50e5cb9f9ba1edf09a30b13373a680ff8e5a3f2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bperrortype"></a>BP_ERROR_TYPE
 ブレークポイントのエラーの種類を指定します。  
@@ -97,14 +98,14 @@ public enum enum_BP_ERROR_TYPE {
   
  ブレークポイントのエラーの種類は、型と、重大度で構成されます。 ブレークポイント エラーの種類が型だけではない、つまり (たとえば、 `BPET_TYPE_ERROR`、) または重大度レベル (たとえば、 `BPET_SEV_GENERAL`) を単独で。 `BPET_GENERAL_WARNING``BPET_GENERAL_ERROR`警告およびエラーの一般的なブレークポイントの定義済みの値を指定します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)   
  [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)

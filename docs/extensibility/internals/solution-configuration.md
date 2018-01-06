@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5b9009a4adab2420a796b3011175ef37fac9bfcb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 129f86fae5de5501d72b0cdbe5e261717e60e780
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="solution-configuration"></a>ソリューション構成
 ソリューション構成では、ソリューション レベルのプロパティを格納します。 動作を指示する、**開始**(F5) キーと**ビルド**コマンド。 既定では、これらのコマンドは、ビルドし、デバッグ構成を開始します。 どちらのコマンドは、ソリューション構成のコンテキストで実行します。 これは、ユーザーがどのようなアクティブなソリューションが、設定で構成されているビルドの開始、f5 キーを予測できることを意味します。 環境が構築および実行する際に、プロジェクトではなく、ソリューションを最適化するために設計されています。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/31/2017
   
  新しいソリューション構成が追加されると、ユーザーを選択できますが、ソリューション構成がドロップダウン リスト ボックスから [標準] ツールバーを構築したり、その構成を開始したりします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)   
  [構築するためのプロジェクトの構成](../../extensibility/internals/project-configuration-for-building.md)   
  [プロジェクト構成オブジェクト](../../extensibility/internals/project-configuration-object.md)

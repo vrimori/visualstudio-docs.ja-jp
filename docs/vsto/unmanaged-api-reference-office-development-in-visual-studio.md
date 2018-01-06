@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 34bcfaf84f5e1258410e383e4a049403e77e5950
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3a48af1199b041ef59c3e31e4e9496d78d21aec1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unmanaged-api-reference-office-development-in-visual-studio"></a>アンマネージ API リファレンス (Visual Studio での Office 開発)
   2007 Microsoft Office system 以降では、Office アプリケーションを使用して、 [IManagedAddin インターフェイス](../vsto/imanagedaddin-interface.md)に VSTO アドイン ローダー コンポーネントに含まれている呼び出しへのインターフェイス、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]です。 このコンポーネントは、VSTO マネージ アドインの読み込みに使用されます。このインターフェイスを実装することで、独自の VSTO アドイン ローダー コンポーネントを作成できます。  

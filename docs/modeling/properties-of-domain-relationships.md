@@ -12,11 +12,12 @@ caps.latest.revision: "20"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 011be65e453de8f9d8010b74670b4efdf7905d06
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: ded95e267195f07a003b13ccc2fb2549373e811b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-domain-relationships"></a>ドメイン リレーションシップのプロパティ
 次の表に、プロパティは、ドメイン リレーションシップに関連付けられます。 ドメイン リレーションシップについては、次を参照してください。[についてモデル、クラスとリレーションシップ](../modeling/understanding-models-classes-and-relationships.md)です。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語の拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)です。  
@@ -31,12 +32,12 @@ ms.lasthandoff: 10/27/2017
 |重複を許可します。|場合`True`、ドメイン リレーションシップの重複したリンクは、同じ 2 つの要素の間で作成可能性があります。|`False`|  
 |基本リレーションシップ|ドメインの関係を派生している場合、ドメイン リレーションシップの関係の基本。|\<なし >|  
 |埋め込みは|場合`True`ドメインは、埋め込みの関係。 場合`False`リレーションシップが参照関係です。|\<両方 >|  
-|名前|ドメイン リレーションシップの名前です。|現在の名前|  
+|name|ドメイン リレーションシップの名前です。|現在の名前|  
 |名前空間|ドメインの関係に関連付けられた名前空間。|現在の名前空間|  
 |メモ|ドメインの関係に関連付けられている非公式なノートです。|\<なし >|  
 |説明|コードを文書化するために使用され、生成されたデザイナーの UI で使用される、説明します。|\<なし >|  
 |表示名|ドメインの関係の生成されたデザイナーで表示される名前です。|\<なし >|  
 |ヘルプ キーワード|ドメインの関係の F1 ヘルプをインデックス化に使用される省略可能なキーワードです。|\<なし >|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)

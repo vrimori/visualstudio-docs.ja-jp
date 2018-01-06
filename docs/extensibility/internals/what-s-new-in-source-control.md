@@ -15,11 +15,12 @@ caps.latest.revision: "27"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 946a3c9fb7d3f0ccd6a90383f6ca22d91c0009a4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 9fc1c5956a4d3c20f8b9abec36d554f3ec56c8c9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-source-control"></a>どのような &#39; ソース管理の
 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]ソース コントロール VSPackage の実装によって深く統合ソース管理ソリューションを提供できます。 このセクションでは、ソース管理の Vspackage の機能について説明し、実装の手順の概要を説明します。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/31/2017
   
 6.  ソース管理 VSPackage が実装するようイベントをリッスンする必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3>トラック プロジェクト ドキュメント (TPD) イベントだけでなくインターフェイス (によって実装される、<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>インターフェイス) し、必要なアクションを実行します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3>   

@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 48043375ebdf904a7fafbae5e4193b42d8ba8269
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: beba9f612024a63f8f302411982442df19e0bbd4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contextcompare"></a>CONTEXT_COMPARE
 2 つのメモリ コンテキストを比較するための条件を指定します。  
@@ -87,13 +88,13 @@ public enum enum_CONTEXT_COMPARE {
   
  これらの値は、指定した比較条件を満たすリスト内の最初のメモリ コンテキストの検索に使用されます。 メモリ コンテキストを通じて自体に対して比較するメモリ コンテキストの一覧を指定、`IDebugMemoryContext2::Compare`メソッドです。 比較演算子の一覧の最初のメモリ コンテキスト`true`次が返されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [Compare](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)

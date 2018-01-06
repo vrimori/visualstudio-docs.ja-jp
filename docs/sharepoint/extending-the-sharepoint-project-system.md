@@ -18,11 +18,12 @@ caps.latest.revision: "38"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 99380078b2fc49bcc5e1efb7a36ac7f28028a0d7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: ec4ca6100b3b0587e7e4dba5a56ceca4e5d5534c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-the-sharepoint-project-system"></a>SharePoint プロジェクト システムの拡張
   SharePoint ソリューションを作成するには、Visual Studio でプロジェクト テンプレートと項目テンプレートのセットを使用します。 これらのテンプレートは、多くの開発シナ リオの要件を満たすが必要な機能を提供しない場合を検出する可能性があります。 このような場合は、SharePoint プロジェクト システムを拡張することができます。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/31/2017
   
 -   SharePoint プロジェクト システムで Visual Studio オートメーション オブジェクト モデルまたは統合オブジェクト モデル内の対応するオブジェクトをオブジェクトに変換またはその逆です。 詳細については、次を参照してください。[間で SharePoint プロジェクト システムの種類の変換およびその他の Visual Studio プロジェクトの種類](../sharepoint/converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カスタム SharePoint プロジェクト項目の種類を定義します。](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [SharePoint プロジェクト項目の拡張](../sharepoint/extending-sharepoint-project-items.md)   
  [SharePoint プロジェクトの拡張](../sharepoint/extending-sharepoint-projects.md)   

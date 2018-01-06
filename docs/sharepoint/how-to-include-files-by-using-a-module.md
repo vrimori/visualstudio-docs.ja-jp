@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 848fc50b8886cc736c5a7a856beec238c084d879
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3dca463352d5e698b74ecc6bda2a1579e3290513
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-include-files-by-using-a-module"></a>方法: モジュールを使用してファイルを含める
   *モジュール*(と混同しないでください[!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]モジュール) を使用すると、SharePoint に ASPX マスター ページなどのファイル、テキスト ファイル、またはイメージを配置するコンテナーです。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/31/2017
   
      ファイルをプロジェクトに追加するときに、モジュールの Elements.xml ファイルにエントリが自動的に追加します。 指定されているプロジェクトのルート ディレクトリに対して相対的な SharePoint サーバーにファイルをコピー、プロジェクトを配置するときに、**ファイル**要素の**Url**属性など`Url="Module1/New Folder/SomeFile.doc`です。 別のフォルダーに移動するか、ファイルの配置場所を変更する場合は、**ソリューション エクスプ ローラー**を変更またはその**Url**設定します。  
   
-8.  ドキュメント ライブラリに表示する、ファイルを追加、`Type="GhostableInLibrary"`属性 Elements.xml 内のエントリをします。 次に例を示します。  
+8.  ドキュメント ライブラリに表示する、ファイルを追加、`Type="GhostableInLibrary"`属性 Elements.xml 内のエントリをします。 たとえば、オブジェクトに適用された  
   
     ```  
     <File Path="Module1\Some Folder\SomePage.aspx" Url="Module1/Some Folder/SomePage.aspx" Type="GhostableInLibrary" />  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/31/2017
   
      ファイルは、SharePoint での指定された場所にコピーします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パッケージ化と SharePoint ソリューションの配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   

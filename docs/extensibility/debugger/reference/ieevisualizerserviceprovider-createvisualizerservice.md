@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3c35511ee97406a7e3b70141a96f7783802157c6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b9c34f5b11aed9ed51ca10f662ea161d792e54b6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ieevisualizerserviceprovidercreatevisualizerservice"></a>IEEVisualizerServiceProvider::CreateVisualizerService
 このメソッドは、ビジュアライザー サービスを作成します。  
@@ -67,7 +68,7 @@ int CreateVisualizerService(
 ## <a name="remarks"></a>コメント  
  `binder`、 `pSymProv`、および`pAddress`すべてに渡すパラメーター、`IDebugParsedExpression::EvaluateSync`メソッドです。 `CreateVisualizerService`のみ呼び出される`IDebugParsedExpression::EvaluateSync`ビジュアライザーの型の式エバリュエーターのサポートの一部として。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)   
  [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)   
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   

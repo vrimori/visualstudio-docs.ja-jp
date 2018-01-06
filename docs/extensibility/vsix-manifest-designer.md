@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: eaf35854aede65b605b4578ca9ee71375ad7a479
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0d7af3ab109c922a8182a93db6852a331229ceca
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vsix-manifest-designer"></a>VSIX マニフェスト デザイナー
 VSIX パッケージ マニフェスト ファイル、Visual Studio 拡張機能のインストールの動作の設定を変更します。  
@@ -63,7 +64,7 @@ VSIX パッケージ マニフェスト ファイル、Visual Studio 拡張機�
  **説明**  
  表示される、拡張機能の説明文を用意**拡張機能マネージャー**です。  
   
- **言語**  
+ **Language**  
  マニフェスト内のテキスト データに対応するパッケージの既定の言語を指定します。 `Language`属性では、共通言語ランタイム (CLR) のロケールのコード規則を依存リソース アセンブリは、たとえば、en-us、en、fr-fr がします。 既定では、値がニュートラルです。これは、任意の言語バージョンの Visual Studio でパッケージを実行することを意味します。  
   
  **ライセンス**  
@@ -150,6 +151,6 @@ VSIX パッケージ マニフェスト ファイル、Visual Studio 拡張機�
   
  Id に一致する必要があります、`ID`依存関係パッケージのメタデータの属性です。 ソースには、現在のソリューション、現在インストールされている拡張機能、またはファイル内のプロジェクトを指定できます。 **がどのように依存関係の解決**設定は、入れ子になったパッケージの相対パスまたは依存関係をダウンロードする場所の URL を指定できます。 ID、バージョン、および依存関係パッケージの解像度に対応して、 `Id`、 `Version`、および`Location`関連付けられている属性`Dependency`要素。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [VSIX 拡張機能スキーマ 2.0 リファレンス](../extensibility/vsix-extension-schema-2-0-reference.md)   
  [VSIX パッケージの構造](../extensibility/anatomy-of-a-vsix-package.md)

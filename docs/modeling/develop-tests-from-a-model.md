@@ -12,11 +12,12 @@ caps.latest.revision: "20"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: ea0753130b6fa1da60cf83cf15c0ee5c7f4010c2
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: d576eda94c421b16ac3f752efa26f2ecb1b761b1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="develop-tests-from-a-model"></a>モデルからテストを開発する
 システムとそのコンポーネントのテストを編成する際に、要件モデルとアーキテクチャ モデルを使用できます。 こうすることで、ユーザーやその他の利害関係者にとって重要な要求をテストしやすくなり、要求が変更された場合にすばやくテストを更新することができます。 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] を使用した場合、モデルとテストの間のリンクを維持することもできます。  
@@ -157,7 +158,7 @@ Assert (countAfter == countBefore = 1);
   
 3.  テスト スイーツに追加し、モデル要素内で表された要求を検証するケースをテストします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アプリのモデルを作成します。](../modeling/create-models-for-your-app.md)   
  [ユーザー要件のモデリング](../modeling/model-user-requirements.md)   
  [モデルのアプリのアーキテクチャ](../modeling/model-your-app-s-architecture.md)   

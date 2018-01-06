@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3f69bbed7c335afb6b570de34cbef70470abd373
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c24b8c5520befcc204b59609b116d9d16ee26281
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="new-or-changed-behavior-with-editor-adapters"></a>エディターのアダプターで新しいまたは変更された動作
 以前のバージョンの Visual Studio コア エディターと照らして記述されたコードを更新して、新しい API を使用するのではなくエディター アダプター (または shim) を使用する場合は、注意してください、次の相違点エディター アダプターの動作に関しては、以前のコア エディターです。  
@@ -131,7 +132,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="unimplemented-methods"></a>実装されていないメソッド  
  一部のメソッドがテキスト バッファー アダプター、テキスト ビュー アダプター、およびテキスト レイヤー アダプターで実装されていません。  
   
-|インターフェイス|実装されていません|  
+|Interface|実装されていません|  
 |---------------|---------------------|  
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>|`Reload(false)`実装されていません。|  
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator>|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator.EnumSpans%2A><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator.SetBufferMappingModes%2A><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator.SetSpanMappings%2A>|  

@@ -22,11 +22,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ff6c79d6bed7ec1b5a459f64c0e57c8c35ab4e1e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 21431cd16407d61db6f981aad68d52906c2de1f1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="information-rights-management-and-managed-code-extensions-overview"></a>Information Rights Management とマネージ コード拡張機能の概要
   Microsoft Office Word および Microsoft Office Excel は、Information Rights Management (IRM)、承認されていないユーザーを表示したり、機密情報を変更することを防止するのに役立つ機能を提供します。 詳細については、Information Rights Management のしくみ、特定の Office アプリケーションのヘルプを参照してください。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/31/2017
   
  オブジェクト モデルへのプログラムによるアクセスを許可する既定のアクセス許可の設定を変更すると、問題を解決するには、文書またはブックにフル コントロール アクセス権を持つユーザーが必要があります。 詳細については、次を参照してください。[する方法: コード実行ドキュメントの背後で制限されたアクセス許可を許可](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドキュメント レベルのソリューションでドキュメントの保護](../vsto/document-protection-in-document-level-solutions.md)   
  [Office ドキュメントのパスワード保護](../vsto/password-protection-on-office-documents.md)   
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)   

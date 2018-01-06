@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 79d888e9b50d18b4a9d46a8914381db27f09698d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a76b14f28bdb74345813931fc334f98090abd93c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-of-execution"></a>実行の制御
 デバッグ エンジン (DE) では、最後のスタートアップ イベントとして、次のイベントのいずれかの通常送信します。  
@@ -41,11 +42,11 @@ ms.lasthandoff: 10/31/2017
   
 5.  場合は、ステップ イン、するか、または、関数から IDE を呼び出して、プログラムのデバッグ セッション`Step`ステップ (命令、ステートメント、または行) とステップの種類の単位を引数としてメソッド: は、ステップ イン、超えるするかどうか、または関数外です。 ステップが完了したら、デは stopping イベントが、デバッグ セッションに手順の完了イベントを送信します。  
   
-     または  
+     - または -  
   
      呼び出して、プログラムのデバッグ セッションのように求められますが、ユーザーの現在の命令ポインターから実行を続行する場合、 **Execute**メソッドです。 プログラムは、[次へ] の停止条件を検出するまで実行を再開します。  
   
-     または  
+     - または -  
   
      デバッグ セッションが、プログラムを呼び出す場合は、デバッグ セッションは、特定の停止イベントを無視するのには、**続行**メソッドです。 プログラムが停止する条件が発生したときに、または関数からステップ実行している場合、は、ステップが続行します。  
   
@@ -61,5 +62,5 @@ ms.lasthandoff: 10/31/2017
   
  SDM がに対して行う呼び出し`Step`、 **Execute**、および**続行**は非同期で、SDM にすばやく戻るへの呼び出しが期待していることを意味します。 かどうか、DE、SDM 停止イベントに送信する前に、同じスレッド`Step`、 **Execute**、または**続行**、SDM のハングアップを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)

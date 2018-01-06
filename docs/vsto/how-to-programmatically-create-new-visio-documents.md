@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fa4a4d021ee0610d4fdd80a1966df6a8280c9523
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3f96738d9e553ede2b74ebc118a2769b32926cba
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-create-new-visio-documents"></a>方法: プログラムによって新しい Visio 図面を作成する
   新しい Microsoft Office Visio 図面のドキュメントを作成するときに、開いている Visio 図面の Microsoft.Office.Interop.Visio.Documents コレクションに追加します。 その結果、Microsoft.Office.Interop.Visio.Documents.Add メソッドでは、新しい Visio 描画図面を作成します。 詳細については、 [Microsoft.Office.Interop.Visio.Documents.Add](http://msdn.microsoft.com/library/office/ff766868.aspx) メソッドの VBA リファレンス ドキュメントを参照してください。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 10/31/2017
   
 -   [マイ ドキュメント] フォルダー (Windows XP 以前の場合) または [ドキュメント] フォルダー (Windows Vista の場合) 内の `myTemplate.vst` というディレクトリにある `Test` という名前の Visio 図面。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visio ソリューション](../vsto/visio-solutions.md)   
  [Visio オブジェクト モデルの概要](../vsto/visio-object-model-overview.md)   
  [方法: プログラムによって Visio 図面を開く](../vsto/how-to-programmatically-open-visio-documents.md)   

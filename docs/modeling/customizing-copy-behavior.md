@@ -11,11 +11,12 @@ caps.latest.revision: "16"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 532fd69bea467403047a7151584b7cf918ad602d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: acac1aad651817ba351604b67af7f0440c82dabb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-copy-behavior"></a>コピー動作のカスタマイズ
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK を使用して作成したドメイン固有言語 (DSL) で、ユーザーが要素のコピーと貼り付けを実行する際の動作を変更できます。  
@@ -562,7 +563,7 @@ namespace Company.MyDsl
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [要素の作成および移動をカスタマイズします。](../modeling/customizing-element-creation-and-movement.md)   
  [方法: ドラッグ アンド ドロップのハンドラーを追加](../modeling/how-to-add-a-drag-and-drop-handler.md)   
  [削除動作をカスタマイズします。](../modeling/customizing-deletion-behavior.md)   

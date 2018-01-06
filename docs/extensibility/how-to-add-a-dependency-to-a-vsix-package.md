@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9f6f1e4739922a2d73999b36c0dc66e6069a6d6b
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.workload: vssdk
+ms.openlocfilehash: 27fbf8c079ca1270074d7cae683ef6f8127e2a5a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-dependency-to-a-vsix-package"></a>方法: VSIX パッケージへの依存関係の追加
 
@@ -50,6 +51,6 @@ ms.lasthandoff: 11/29/2017
 VSIXInstaller では、Visual Studio の以前のバージョンを検出し、以降の更新プログラムが必要であるユーザーに通知します。
 
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
  [VSIX 拡張機能スキーマ 1.0 リファレンス](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b) [VSIX パッケージの構造は](../extensibility/anatomy-of-a-vsix-package.md) [Windows インストーラーの配置の拡張機能の準備](../extensibility/preparing-extensions-for-windows-installer-deployment.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9f21648f9b019fbb765290d969b1a6c68fe5ce2f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c6ace15a6e2a88aa214261d3d8ec137ebb6d7ebe
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugactivatedocumentevent2"></a>IDebugActivateDocumentEvent2
 デバッグ エンジン (DE) では、このインターフェイスを使用して、読み込まれるドキュメントを要求します。  
@@ -46,14 +47,14 @@ IDebugActivateDocumentEvent2 : IUnknown
 ## <a name="remarks"></a>コメント  
  このインターフェイスを使用する一般的なシナリオは、解析エラーを使用してドキュメントを表示できるようにスクリプト DE このインターフェイスは、SDM に送信する HTML ページ上のスクリプト コードで解析エラーが発生した場合です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

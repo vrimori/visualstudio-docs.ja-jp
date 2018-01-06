@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7175bd4e2d0b07640dd45b38aa246c649def32ef
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8a331c131eaf48eb7be8bc3709599412aa01b1ca
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-project-instances-by-using-project-factories"></a>プロジェクトのファクトリを使用してプロジェクトのインスタンスを作成します。
 プロジェクトの種類に[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を使用して、*プロジェクト ファクトリ*プロジェクトのオブジェクトのインスタンスを作成します。 プロジェクト ファクトリは、cocreatable の COM オブジェクトの標準のクラス ファクトリに似ています。 ただし、プロジェクトのオブジェクトは、cocreatable: プロジェクト ファクトリを使用してのみ作成します。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
   
  プロジェクトは、ファイルも使用しないでき、代わりに、データベースや Web サーバーなど、ファイル システム以外のストレージ メカニズムにそのプロジェクトの状態を格納できます。 この例では、ファイル名のパラメーターが渡される、`CreateProject`メソッドではありませんが、ファイル システム パスを実際には、一意の文字列-URL: プロジェクト データを識別します。 渡されるテンプレート ファイルをコピーする必要はありません`CreateProject`を実行する適切な構築シーケンスをトリガーします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsOwnedProjectFactory>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterProjectTypes>   

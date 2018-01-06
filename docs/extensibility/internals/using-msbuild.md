@@ -16,11 +16,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a148a7c5fa6d0e72345ab7f96696a11d5ba5185f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3b9d05b85cacfcdf90a883ffd08d4dec316eaafc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-msbuild"></a>MSBuild の使用
 MSBuild では、プロジェクト項目を作成、ビルド タスク、およびビルド構成を完全に記述するプロジェクト ファイルを作成するために適切に定義された、拡張可能な XML 形式を指定します。  
@@ -56,7 +57,7 @@ MSBuild では、プロジェクト項目を作成、ビルド タスク、お�
 #### <a name="single-file-generators-vs-msbuild-tasks"></a>単一ファイル ジェネレーター vs です。MSBuild タスク  
  単一ファイル ジェネレーターは、デザイン時にのみ、アクセスできるが、デザイン時およびビルド時に MSBuild タスクを使用できます。 柔軟性を最大限に高めるそのため、MSBuild タスクを使用して変換し、コードを生成します。 詳細については、次を参照してください。[カスタム ツール](../../extensibility/internals/custom-tools.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSBuild リファレンス](../../msbuild/msbuild-reference.md)   
  [MSBuild](../../msbuild/msbuild.md)   
  [カスタム ツール](../../extensibility/internals/custom-tools.md)

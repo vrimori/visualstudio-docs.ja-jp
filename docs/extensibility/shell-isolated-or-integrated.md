@@ -19,11 +19,12 @@ caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8f06af0b884d404b3fd2e8e36cac235c10d254bd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 787fd7c6980df9809fed9582f4ec8da81de8f862
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shell-isolated-or-integrated"></a>Shell (Isolated または統合)
 統合または分離モードで Visual Studio ベース アプリケーションを作成することができます。 統合モードでは、多くの Visual Studio 機能をアプリケーションだけでなく使用します。 分離のモードでは、独自の拡張と共に配布する Visual Studio の機能のサブセットを選択します。  
@@ -59,5 +60,5 @@ ms.lasthandoff: 10/31/2017
 ## <a name="additional-resources"></a>その他のリソース  
  再頒布可能パッケージの詳細については、次を参照してください。、 [Visual Studio 拡張機能のダウンロード](http://go.microsoft.com/fwlink/?LinkID=119298)Web サイトです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio 拡張機能の配布](../extensibility/shipping-visual-studio-extensions.md)

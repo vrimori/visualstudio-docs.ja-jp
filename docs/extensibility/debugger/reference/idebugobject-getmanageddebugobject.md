@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a01823a2409b15ba101ad4b55d5584e385872574
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c3b0720aa8757564d06a29de2c51e53b6bb12a1f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugobjectgetmanageddebugobject"></a>IDebugObject::GetManagedDebugObject
 デバッグ エンジンのアドレス空間には、管理対象のオブジェクトのコピーを作成します。  
@@ -47,6 +48,6 @@ int GetManagedDebugObject(
 ## <a name="remarks"></a>コメント  
  これは、 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)オブジェクトがなど、マネージ値クラスのインスタンスを表す必要があります、`System.Decimal`インスタンス。 ローカルのコピー、呼び出し元のオーバーヘッドによって[評価](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md)が排除されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

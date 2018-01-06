@@ -18,11 +18,12 @@ caps.latest.revision: "36"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e7768aec2684e95c0201c88713e4a342737ce3cd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 541895b941789dd3dbec16e0caad3547f93de904
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-open-workbooks"></a>方法: プログラムによってブックを開く
   <xref:Microsoft.Office.Interop.Excel.Workbooks> Microsoft Office Excel でコレクションにより、すべての開いているブックを使用して、ブックを開きます。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/31/2017
   
 -   という名前のブック`YourWorkbook.xls`という名前のディレクトリに存在する必要があります`Test`をドライブ c です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ブックの操作](../vsto/working-with-workbooks.md)   
  [方法: プログラムによってブックとしてテキスト ファイルを開く](../vsto/how-to-programmatically-open-text-files-as-workbooks.md)   
  [方法: プログラムによって新しいブックを作成します。](../vsto/how-to-programmatically-create-new-workbooks.md)   

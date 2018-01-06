@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 165362ab03685a3acca457e4095778b9dcb182e8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8237fe3ad25baa912ee3a1eb84da533d788346cb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugcustomattributegetname"></a>IDebugCustomAttribute::GetName
 カスタム属性の名前を取得します。  
@@ -47,5 +48,5 @@ int GetName(
 ## <a name="remarks"></a>コメント  
  このメソッドによって返される名前付き属性の宣言に使用するクラスの名前に対応します。 これは、可能性があります正確に一致しない名に対応するカスタム属性クラス自体の c# では"Attribute"サフィックスとして、宣言で使用されているときに、カスタム属性名から削除するとします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

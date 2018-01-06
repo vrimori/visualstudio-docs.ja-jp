@@ -13,18 +13,19 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8ead1571856fa04e10103fbf2274dc0e22295154
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 9f6e3110ca4988fcc12e547f3bcd82c1026f3aeb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="api-reference-visual-studio-debugging"></a>API リファレンス (Visual Studio のデバッグ)
 参照セクションにには、API、構文と、すべての API 要素の使用方法を示すガイドの概念の概要およびさまざまなコード例が含まれます。 すべての参照は、カテゴリでアルファベット順に一覧表示されます。  
   
  次の表は、一般的な`HRESULT`メソッドによって返される値。  
   
-|名前|説明|値|  
+|name|説明|[値]|  
 |----------|-----------------|-----------|  
 |S_OK|成功。|0x00000000|  
 |E_UNEXPECTED|予期しないエラーです。|0x8000FFFF|  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  無効なまたは`NULL`[out] パラメーターがあります、IDE がクラッシュします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インターフェイス](../../../extensibility/debugger/reference/interfaces-visual-studio-debugging.md)   
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   

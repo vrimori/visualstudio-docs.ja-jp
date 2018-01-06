@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 368f6ecb67bc8b01df975da6e68e95b553a0e31d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 99f073e7f27fc98c1c751ae8153adfeea0018e2c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-context"></a>プロジェクトのコンテキスト
 ユーザーを追加またはプロジェクトとプロジェクト項目では、IDE、プロジェクトのコンテキストの概念を使用して、さまざまな操作を実行する必要がありますを決定します。  
@@ -28,6 +29,6 @@ ms.lasthandoff: 10/31/2017
   
  他のタイミングで項目のプロジェクトのコンテキストが明示的に指定されていません。 たとえば、項目のコンテキストは を選択して、ファイルを開くとき、**既存ファイルを開く**コマンドを**ファイル**メニュー、ファイル、または、ユーザーがクリックしたときに、デバッガーが動作するときに、**ファイル内の検索**コマンドを**検索し、置換** ダイアログ ボックス。 これらの状況では、IDE の呼び出しを処理するために<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument>を最適なプロジェクトを開くには、ドキュメントを検索するプロセスを管理します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクトの優先度](../../extensibility/internals/project-priority.md)   
  [プロジェクト テンプレートとプロジェクト項目テンプレートの追加](../../extensibility/internals/adding-project-and-project-item-templates.md)

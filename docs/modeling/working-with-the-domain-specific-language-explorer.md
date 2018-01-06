@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 6297c5643de30331b8cf6a807df637d5cc043518
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 3c0b3348625fef20c89367bd184a9d1b006b9132
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-the-domain-specific-language-explorer"></a>ドメイン固有言語エクスプローラーの使用
 **DSL のエクスプ ローラー**をツリー ビューでいくつかの種類の情報を表示します。 DSL のエクスプ ローラー内の項目のほとんどについての詳細については、次を参照してください。[ドメイン固有言語の定義方法](../modeling/how-to-define-a-domain-specific-language.md)です。  
@@ -43,5 +44,5 @@ ms.lasthandoff: 10/27/2017
   
 -   **Xml シリアル化の動作**です。 モデルのシリアル化設定。 シリアル化の詳細については、次を参照してください。[ファイル記憶域のカスタマイズと XML シリアル化](../modeling/customizing-file-storage-and-xml-serialization.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -23,11 +23,12 @@ caps.latest.revision: "36"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 858df05759f1c3b4205d4cbcd0bbad2cdfb6e034
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: e159efdfd709a0ef8950347a191bb4053ef715bd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-application-pages-for-sharepoint"></a>SharePoint のアプリケーション ページの作成
   *アプリケーション ページ*が SharePoint Web サイトで使用するよう設計された ASP.NET Web ページです。 アプリケーション ページとは、ASP.NET ページの特化された型です。 アプリケーション ページと標準の ASP.NET ページの主な違いは、アプリケーション ページには、SharePoint のマスター ページとマージされるコンテンツが含まれているです。 マスター ページには、サイト上の他のページと同じ外観と動作を共有するアプリケーション ページができるようにします。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/31/2017
   
  設定して、アプリケーション ページで使用されるマスター ページを明示的に変更できます、`MasterPageFile`アプリケーションの属性`Page`要素。 (例: `MasterPageFile="~/_layouts/applicationv4.master"`)。 実際には、動的なマスター ページは、SharePoint サーバーで有効でない場合は、この属性を設定する必要があります。 SharePoint のマスター ページの詳細については、次を参照してください。[マスター ページ](http://go.microsoft.com/fwlink/?LinkID=169281)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [多層 SharePoint Foundation 開発](http://go.microsoft.com/fwlink/?LinkID=182103)   
  [ASP.NET の概要](/aspnet/overview)   
  [ASP.NET Web ページ](/aspnet/web-pages/index)   

@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1d0d14d407dbff9493af0206369cfd8b9c8d556c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 974b76bafabaa3621ffb71a530b67e9643436c04
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprogram2getencupdate"></a>IDebugProgram2::GetENCUpdate
 このメソッドは、このプログラムの編集と続行 (ENC) の更新プログラムを取得します。 カスタム デバッグ エンジンは常に返します`E_NOTIMPL`です。  
@@ -47,5 +48,5 @@ int GetENCUpdate(
 > [!NOTE]
 >  常にカスタム デバッグ エンジンを返さなければ`E_NOTIMPL`です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

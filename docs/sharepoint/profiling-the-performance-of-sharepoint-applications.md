@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0effe0190d54d05d706127a8e5fada66af1c7ab6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 58e2d02b32a17cf23e95639077c26b6b41dae00f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-the-performance-of-sharepoint-applications"></a>SharePoint アプリケーションのパフォーマンスのプロファイリング
   SharePoint アプリケーションの実行速度が遅いか効率的でない場合、Visual Studio のプロファイル機能を使用して、問題のあるコードやその他の要素を特定できます。 ロード テスト機能を使用すると、多数のユーザーがアプリケーションに同時にアクセスする場合など、ストレス下で SharePoint アプリケーションを実行する方法を決定できます。 Web パフォーマンス テストを実行すると、Web 上でのアプリケーションの実行方法を測定できます。 コード化された UI テストを使用すると、ユーザー インターフェイスを含め、SharePoint アプリケーション全体が適切に機能しているかどうかを確認できます。 これらのテストを一緒に使用すると、アプリケーションを配置する前にパフォーマンスの問題を識別するのに役立ちます。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/31/2017
 |[コードの単体テスト](/visualstudio/test/unit-test-your-code)|単体テストを使用してコードの論理エラーを検出する方法について説明します。|  
 |[コード化された UI テストを使用した SharePoint 2010 アプリケーションのテスト](/visualstudio/test/testing-sharepoint-2010-applications-with-coded-ui-tests)|SharePoint アプリケーションのユーザー インターフェイスをテストする方法について説明します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)   
  [アプリケーションのテスト](/devops-test-docs/test/test-apps-early-and-often)   
  [コード品質の向上](/visualstudio/test/improve-code-quality)  

@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6a91dbb7797d69ec71b776eeef5e34e0ced21ad9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0b814b441846479163aad4e003480cc9cfadde44
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-a-custom-debug-engine"></a>方法: カスタム デバッグ エンジンをデバッグします。
 プロジェクトの種類からのデバッグ エンジン (DE) の起動、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A>メソッドです。 インスタンスの管理下にある、DE を起動するつまり[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]プロジェクトの種類を制御します。 ただし、そのインスタンスの[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デをデバッグすることはできません。 以下は、カスタム、DE をデバッグできるようにする手順を示します。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  **コマンド引数**、型`/rootsuffix exp`(VSIP のインストール時に作成される)、実験用レジストリ ハイブにします。  
   
-4.  **[ OK ]** をクリックして変更内容を確定します。  
+4.  **[OK]** をクリックして変更内容を確定します。  
   
 5.  F5 キーを押して、プロジェクトの種類を開始します。 2 番目のインスタンスが起動[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
   
@@ -76,5 +77,5 @@ ms.lasthandoff: 10/31/2017
   
 9. デを起動するためのプロセスをデバッグする場合は、「デバッグはカスタム デバッグ エンジン」の手順の起動後に、DE にアタッチする手順を実行することができます。 これにより、3 つのインスタンス[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を実行している: プロジェクト型のソース、インスタンスが作成されたプロジェクトの種類、および、DE にアタッチされている 3 つ目の 2 つ目のいずれか。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カスタム デバッグ エンジンの作成](../../extensibility/debugger/creating-a-custom-debug-engine.md)

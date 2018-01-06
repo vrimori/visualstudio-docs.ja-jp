@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a5b52c5634b4b34edf11ddb8a56317cc237063bf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c6b2aaa953e47366e7a99fb5a821f530d37ed66e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugfieldgetextendedinfo"></a>IDebugField::GetExtendedInfo
 このメソッドは、フィールドに関する情報を拡張を取得します。  
@@ -45,7 +46,7 @@ int GetExtendedInfo(
  `guidExtendedInfo`  
  [in]返される情報を選択します。 次の値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`guidConstantValue`|バイト シーケンスとしての値。|  
 |`guidConstantType`|型のシグネチャと型。|  
@@ -62,5 +63,5 @@ int GetExtendedInfo(
 ## <a name="remarks"></a>コメント  
  現時点では、このメソッドは、型または定数の値だけを返します。 呼び出し元で返されるバッファーを解放する必要があります`prgBuffer`呼び出して COM の`CoTaskMemFree`関数 (C++) または<xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A>(C# の場合)。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

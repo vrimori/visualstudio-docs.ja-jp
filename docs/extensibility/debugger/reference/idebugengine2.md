@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f684a29eea526f7725e8a876f53453512f65dadc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 95a1a8c48bd6eab0f21ccc85a125b5d10f42ef4e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugengine2"></a>IDebugEngine2
 このインターフェイスは、デバッグ エンジン (DE) を表します。 設定され、例外をクリアするブレークポイントの作成から、デバッグ セッションでのさまざまな側面を管理に使用されます。  
@@ -54,13 +55,13 @@ IDebugEngine2 : IUnknown
 |[SetMetric](../../../extensibility/debugger/reference/idebugengine2-setmetric.md)|メトリックを設定します。|  
 |[CauseBreak](../../../extensibility/debugger/reference/idebugengine2-causebreak.md)|この DE によってデバッグされているすべてのプログラムが次回の試行を実行するとき、スレッドの 1 つの実行を停止することを要求します。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)   
  [GetEngine](../../../extensibility/debugger/reference/idebugenginecreateevent2-getengine.md)

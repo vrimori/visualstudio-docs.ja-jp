@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2236ecbc6bb30ff3cfba9bebd5d5e5509f54721a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: c18ae3fb8c3366c1c8e552f4b5f24a34004ce9d1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-documents"></a>文書の操作
   このセクションのトピックでは、Microsoft Office Word のオブジェクト モデルを使用して Office プロジェクト内の文書を操作する手順とコード例を示します。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
 |文書にヘッダーまたはフッターを追加します。|[方法: プログラムによって文書にヘッダーおよびフッターを追加する](../vsto/how-to-programmatically-add-headers-and-footers-to-documents.md)|  
 |文書からすべてのコメントを削除します。|[方法: プログラムによって文書からすべてのコメントを削除する](../vsto/how-to-programmatically-remove-all-comments-from-documents.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)   
  [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)  
   

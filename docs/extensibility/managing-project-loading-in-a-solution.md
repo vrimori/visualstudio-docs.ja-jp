@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b28db42e17e95ea7c354f5ba4d7b0c231c2d2fe5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a2be2c75704646bab50f89377d960d44f6fa14f1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-project-loading-in-a-solution"></a>ソリューションで管理するプロジェクトの読み込み
 Visual Studio ソリューションには、多数のプロジェクトを含めることができます。 Visual Studio の既定の動作は、ソリューションを開いた時点で、ソリューション内のすべてのプロジェクトを読み込むししないユーザーにそれらのすべての読み込みが終了するまで、プロジェクトのいずれかのアクセスを許可します。 プロジェクトの読み込みプロセスは、2 分以内に最後は、読み込まれているプロジェクトの数とプロジェクトの合計数を示す進行状況バーが表示されます。 ユーザーは複数のプロジェクトをソリューションで作業中にプロジェクトをアンロードすることができますが、この手順ではいくつかの短所: アンロードされたプロジェクトがソリューションのリビルド コマンドの一部としてビルドされていないと、型の説明については IntelliSense およびメンバーの終了プロジェクトには表示されません。  
@@ -114,4 +115,4 @@ pSLMgrSupport.SetProjectLoadPriority(guidProjectID, (uint)_VSProjectLoadPriority
 -   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectsAreLoaded%2A>: このメソッドを呼び出すことで、プロジェクトを強制的`guidProjectID`を読み込む前に、このメソッドを返します。  
   
 > [!NOTE]
->  。 既定では、要求のプロジェクトのみを読み込んで場合は、バック グラウンド読み込みの優先順位が読み込まれる、<xref:Microsoft.VisualStudio.Shell.Interop.__VSBSLFLAGS>フラグがメソッドに渡された、明示的に読み込むとしてマークされているものを除くすべてのプロジェクトが読み込まれます。
+>  である必要があります。 既定では、要求のプロジェクトのみを読み込んで場合は、バック グラウンド読み込みの優先順位が読み込まれる、<xref:Microsoft.VisualStudio.Shell.Interop.__VSBSLFLAGS>フラグがメソッドに渡された、明示的に読み込むとしてマークされているものを除くすべてのプロジェクトが読み込まれます。

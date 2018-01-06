@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0c0cda80ce9ff762547e6938ec27027fe5e045d2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 85dba252eedaeafbffdc58eadac91386ff6cac98
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="templatedata-element-visual-studio-templates"></a>TemplateData 要素 (Visual Studio テンプレート)
 テンプレートをカテゴリに分類し、 **[新しいプロジェクト]** ダイアログ ボックス、または **[新しい項目の追加]** ダイアログ ボックスでどのように表示させるかを定義します。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/31/2017
   
 |要素|説明|  
 |-------------|-----------------|  
-|[名前](../extensibility/name-element-visual-studio-templates.md)|必須の要素です。<br /><br /> いずれかで表示されるテンプレートの名前を指定、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。|  
+|[Name](../extensibility/name-element-visual-studio-templates.md)|必須の要素です。<br /><br /> いずれかで表示されるテンプレートの名前を指定、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。|  
 |[説明](../extensibility/description-element-visual-studio-templates.md)|必須の要素です。<br /><br /> いずれかで表示されるテンプレートの説明を指定、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。|  
 |[アイコン](../extensibility/icon-element-visual-studio-templates.md)|必須の要素です。<br /><br /> パスと、いずれかで表示されるアイコンとして使用するイメージ ファイルのファイル名を指定します、**新しいプロジェクト**または**新しい項目の追加**テンプレートのダイアログ ボックス。|  
 |[ProjectType](../extensibility/projecttype-element-visual-studio-templates.md)|必須の要素です。<br /><br /> 指定されたグループの下に表示されるように、プロジェクト テンプレートをカテゴリに分類、**新しいプロジェクト** ダイアログ ボックス。|  
@@ -109,6 +110,6 @@ ms.lasthandoff: 10/31/2017
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

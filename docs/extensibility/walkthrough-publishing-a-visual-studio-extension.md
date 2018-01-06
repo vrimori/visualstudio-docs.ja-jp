@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d8eac89a2bdde3b0a20ea3a98775de84a503f86c
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: vssdk
+ms.openlocfilehash: 9b2823c15309e63262052fd3cc95d914bf1614c4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-publishing-a-visual-studio-extension"></a>チュートリアル: Visual Studio 拡張機能の発行
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 11/09/2017
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
- このチュートリアルを行うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。
+ このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。
 
 ## <a name="create-a-visual-studio-extension"></a>Visual Studio 拡張機能を作成します。
 
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/09/2017
 
   ![Marketplace パブリッシャーの変更](media/change-marketplace-publisher.png)
 
-7. **1: 拡張機能をアップロード**、Visual Studio Marketplace に直接 VSIX ファイルをアップロードまたはだけ、独自の web サイトへのリンクを追加することもできます。 この場合、拡張機能、TestPublish.vsix をアップロードします。  ドラッグして、拡張機能の削除を使用しても、 ** をクリックして**ファイルを参照するリンクです。  拡張機能は、プロジェクトの \bin\Release フォルダーで確認できます。  **[続行]**をクリックします。
+7. **1: 拡張機能をアップロード**、Visual Studio Marketplace に直接 VSIX ファイルをアップロードまたはだけ、独自の web サイトへのリンクを追加することもできます。 この場合、拡張機能、TestPublish.vsix をアップロードします。  ドラッグして、拡張機能の削除を使用しても、  **をクリックして**ファイルを参照するリンクです。  拡張機能は、プロジェクトの \bin\Release フォルダーで確認できます。  **[続行]**をクリックします。
 
 8. **2: 拡張機能の詳細を提供**、いくつかのフィールドは、自動設定された source.extension.vsixmanifest ファイル拡張機能からです。  それぞれの詳細については、下はあります。
 
@@ -135,7 +136,7 @@ ms.lasthandoff: 11/09/2017
 
 2. 右上隅にあるをクリックして**発行**拡張機能です。  TestPublish を発行するために使用するパブリッシャーを選択します。  TestPublish の一覧が表示されます。
 
-3. 拡張機能エントリをポイントし、をクリック**しています.**と**を削除しています.**拡張機能を削除することを確認するように求められます。  **[OK]** をクリックします。
+3. 拡張機能エントリをポイントし、をクリック**しています.**と**を削除しています.**拡張機能を削除することを確認するように求められます。  **[OK]**をクリックします。
 
 ### <a name="to-remove-the-extension-from-your-computer"></a>お使いのコンピューターから、拡張機能を削除するには
 

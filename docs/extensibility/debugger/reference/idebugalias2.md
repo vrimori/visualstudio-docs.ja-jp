@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e77f4fed0bee4451b12463787bc2dd491ffc09c9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3b9fd2b187a89d752a0f89762c23e8dcc74974d8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugalias2"></a>IDebugAlias2
 > [!IMPORTANT]
@@ -44,7 +45,7 @@ IDebugAlias2 : IDebugAlias
 ## <a name="remarks"></a>コメント  
  エイリアスは、後に # 文字、&#1001; などで文字列形式の 10 進数です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Ee.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

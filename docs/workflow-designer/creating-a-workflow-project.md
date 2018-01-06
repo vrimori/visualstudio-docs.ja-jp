@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 6cdc8fb745fb78ff2b5d3ce9a478005eee2737c3
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 00f8c4c7acec790d9982c786abe8f51be383770c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-workflow-project"></a>ワークフロー プロジェクトの作成
 ワークフロー、[!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] ワークフロー サービス、カスタム アクティビティ、およびカスタム アクティビティ デザイナーは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクト テンプレートを利用して作成できます。 ここでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で使用できるプロジェクト テンプレートで、ライブラリおよびアプリケーションを作成する方法について説明します。  
@@ -47,5 +48,5 @@ ms.lasthandoff: 10/27/2017
 ## <a name="related-sections"></a>関連項目  
  [ワークフローの設計](/dotnet/framework/windows-workflow-foundation/designing-workflows)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ワークフロー デザイナーの使用](../workflow-designer/using-the-workflow-designer.md)

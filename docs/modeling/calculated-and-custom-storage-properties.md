@@ -12,11 +12,12 @@ caps.latest.revision: "19"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 0be1527c82264ef388eb01d3a06702c1c4bb4f7d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: cf841cf70f092fb38adc42bfa6271c6c3aa121d1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="calculated-and-custom-storage-properties"></a>計算プロパティおよびカスタム格納プロパティ
 ドメイン固有言語 (DSL) ですべてのドメインのプロパティは、ダイアグラムでし、言語エクスプ ローラーで、ユーザーに表示することができ、プログラム コードによってアクセスできます。 ただし、プロパティは、その値が格納されるように異なります。  
@@ -109,7 +110,7 @@ void SetAgeValue(int value)
   
  トランザクションの詳細については、次を参照してください。[を移動すると、プログラム コードでモデルを更新する](../modeling/navigating-and-updating-a-model-in-program-code.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [移動して、プログラム コードでモデルを更新します。](../modeling/navigating-and-updating-a-model-in-program-code.md)   
  [ドメインのプロパティのプロパティ](../modeling/properties-of-domain-properties.md)   
  [方法: ドメイン固有言語を定義する](../modeling/how-to-define-a-domain-specific-language.md)

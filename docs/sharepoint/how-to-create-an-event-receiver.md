@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 938c03a0bea5a4e96885f1816ddb1c1c13d80ce0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 519c6907bb5779a3819419144905ca68e5cce939
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-event-receiver"></a>方法: イベント レシーバーを作成する
   作成することで*イベント レシーバー*、リストなどの SharePoint アイテムまたはリスト項目をユーザーが操作するときに応答することができます。 たとえば、ユーザーが、予定表を変更または連絡先のリストから名前を削除するときは、イベント レシーバーにコードをトリガーできます。 このトピックでは、リスト インスタンスをイベント レシーバーを追加する方法を学びます。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/31/2017
   
      選択した後、**保存**ボタン、**患者名**名 Scott Brown に列が自動的に更新します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   
   

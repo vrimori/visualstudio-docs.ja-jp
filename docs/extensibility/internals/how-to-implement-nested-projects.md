@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 26456122d8b2cb0e89cfcda929cf68306959a31e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 757668070daacb449a6bc7cbd88ae629fe6487a5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-nested-projects"></a>方法: 入れ子になったプロジェクトを実装します。
 作成する場合は、実装する必要があるいくつか追加の手順は、入れ子になったプロジェクトの種類があります。 親プロジェクトは、入れ子になった (子) プロジェクトのソリューションに含まれている同じ役割の一部で必要です。 親プロジェクトは、プロジェクトをソリューションと同様のコンテナーです。 具体的には、入れ子になったプロジェクトの階層を構築する親プロジェクトとソリューションによって発生する必要がありますをいくつかのイベントがあります。 入れ子になったプロジェクトを作成するための次のプロセスでは、これらのイベントが説明されています。  
@@ -89,7 +90,7 @@ ms.lasthandoff: 10/31/2017
   
  [入れ子になったプロジェクトのための [AddItem] ダイアログ ボックスのフィルター処理](../../extensibility/internals/filtering-the-additem-dialog-box-for-nested-projects.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [項目を追加する、新しい項目の追加 ダイアログ ボックス](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)   
  [プロジェクトと項目テンプレートの登録](../../extensibility/internals/registering-project-and-item-templates.md)   
  [チェックリスト: 新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)   

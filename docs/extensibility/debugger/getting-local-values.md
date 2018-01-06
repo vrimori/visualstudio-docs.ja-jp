@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c94da91d5b91696ac02de778035a581a3f28c1d4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 284821c9c1a31105f865333a45944a23792cd33a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-local-values"></a>ローカル値を取得します。
 > [!IMPORTANT]
@@ -441,7 +442,7 @@ HRESULT FieldGetValue( in IDebugField* pfield, out VARIANT* pvarValue )
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ローカルの実装のサンプル](../../extensibility/debugger/sample-implementation-of-locals.md)   
  [ローカル プロパティの取得](../../extensibility/debugger/getting-local-properties.md)   
  [評価コンテキスト](../../extensibility/debugger/evaluation-context.md)

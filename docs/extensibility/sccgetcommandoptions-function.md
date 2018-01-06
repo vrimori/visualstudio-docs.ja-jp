@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6848689be19e67009314b167b60724a95fd6da5b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3bce2922c961bf29f320f047a91057a638fe708a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccgetcommandoptions-function"></a>SccGetCommandOptions 関数
 この関数は、指定されたコマンドの詳細設定オプションのユーザーに求めます。  
@@ -50,7 +51,7 @@ SCCRTN SccGetCommandOptions(
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|成功。|  
 |SCC_I_ADV_SUPPORT|ソース管理プラグインは、コマンドの詳細設定オプションをサポートします。|  
@@ -76,6 +77,6 @@ SCCRTN SccGetCommandOptions(
 > [!NOTE]
 >  コマンドは、 `SCC_COMMAND_OPTIONS` IDE が表示されたときに使用、**オプション**統合の動作を制御 ダイアログ ボックス ユーザーを設定します。 表示できる、ソース管理プラグインは、独自の設定 ダイアログ ボックスを指定する必要がある場合、**詳細**IDE の基本設定 ダイアログ ボックスにボタンをクリックします。 取得し、この情報を保持する責任は、プラグインIDE や使用しないことを変更します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [コマンドのコード](../extensibility/command-code-enumerator.md)

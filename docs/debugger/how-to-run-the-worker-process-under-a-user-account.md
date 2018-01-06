@@ -23,17 +23,18 @@ caps.latest.revision: "32"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8b823675623f20df49edb87582f3e40695aec50e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 650d16b525f1917e28bb4fae88047df14f35f35c
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-run-the-worker-process-under-a-user-account"></a>方法 : ユーザー アカウントでワーカー プロセスを実行する
 ユーザー アカウントを使用して [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセス (aspnet_wp.exe または w3wp.exe) を実行できるようにコンピューターを設定するには、次の手順を実行します。  
 
  > [!IMPORTANT]
- > Windows Server 2008 R2 以降では、ことをお勧めの使用、 [ApplicationPoolIdentity](https://docs.microsoft.com/en-us/iis/manage/configuring-security/application-pool-identities)各アプリケーション プールの id として。
+ > Windows Server 2008 R2 以降では、ことをお勧めの使用、 [ApplicationPoolIdentity](/iis/manage/configuring-security/application-pool-identities)各アプリケーション プールの id として。
   
 ## <a name="procedure"></a>プロシージャ  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/31/2017
     ```  
     iisreset  
     ```  
-    — または —  
+    または  
   
     ```  
     net stop iisadmin /y  
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/31/2017
   
 7.  **Temporary ASP.NET Files のプロパティ**ダイアログ ボックスで、をクリックして、**セキュリティ**タブです。  
   
-8.  **[ 詳細設定]** をクリックします。  
+8.  **[詳細設定]** をクリックします。  
   
 9. **Temporary ASP.Net Files のセキュリティの詳細設定**ダイアログ ボックスで、をクリックして**追加**です。  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 10/31/2017
   
 13. をクリックして**OK**を閉じる、 **Temporary ASP.NET Files のプロパティ** ダイアログ ボックス。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [ASP.NET アプリケーションをデバッグします。](../debugger/how-to-enable-debugging-for-aspnet-applications.md)   
 [ASP.NET のデバッグ : システム要件](../debugger/aspnet-debugging-system-requirements.md)  
   

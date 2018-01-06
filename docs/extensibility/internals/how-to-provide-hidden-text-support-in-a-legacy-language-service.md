@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f7aab5978d2fc5f7bee82b097ed61a9603d7e198
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 664ab99af45e8c449247c5515184293ecb1a469f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-provide-hidden-text-support-in-a-legacy-language-service"></a>方法: レガシ言語サービスでの非表示テキストのサポートを提供
 アウトライン領域以外にも非表示のテキスト領域を作成できます。 非表示テキスト領域は、クライアント管理の対象またはエディター コントロールとテキストの範囲を完全に非表示に使用します。 エディターには、水平の線としての非表示の領域が表示されます。 この例は、HTML エディターのスクリプトのみのビューです。  

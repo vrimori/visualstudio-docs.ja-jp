@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 29022d14311e71b7ee33f5339f8e450c47d1ce5c
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: vssdk
+ms.openlocfilehash: 5efc043ae6e88f3f7b3c989a2c37c0ff9f555dd6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loading-vspackages"></a>Vspackage を読み込む
 Vspackage は、それらの機能が必要な場合にのみ、Visual Studio に読み込まれます。 たとえば、Visual Studio はプロジェクト ファクトリまたは VSPackage を実装するサービスを使用する場合、VSPackage が読み込まれます。 この機能は、パフォーマンスを向上させるために可能な場合に使用される、遅延読み込みと呼ばれます。  
@@ -74,5 +75,5 @@ Vspackage は、それらの機能が必要な場合にのみ、Visual Studio �
   
      強制読み込みは、VSPackage の通信には使用されません。 使用して[を使用してサービスを提供する](../extensibility/using-and-providing-services.md)代わりにします。
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [VSPackage](../extensibility/internals/vspackages.md)

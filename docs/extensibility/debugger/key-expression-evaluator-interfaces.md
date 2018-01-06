@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a03d419122f3cb72b3b9573279b41bc0de2636c5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1e0d655f18ec7ec50dffa52e3ac4ce363fb02fd3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="key-expression-evaluator-interfaces"></a>キー式エバリュエーター インターフェイス
 > [!IMPORTANT]
@@ -59,5 +60,5 @@ ms.lasthandoff: 10/31/2017
   
      このインターフェイスは、値とその型を表す、式の評価の結果です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [評価コンテキスト](../../extensibility/debugger/evaluation-context.md)

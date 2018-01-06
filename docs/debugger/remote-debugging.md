@@ -20,11 +20,12 @@ caps.latest.revision: "65"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0d945c28e7fe703c80776a5f1ff124ab6e0a8bf9
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: ef5fb93914f418915c11b51071419308b3ac9a0c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="remote-debugging"></a>Remote Debugging
 別のコンピューターに配置されている Visual Studio アプリケーションをデバッグすることができます。 このデバッグを行うには、Visual Studio リモート デバッガーを使用します。
@@ -63,7 +64,7 @@ ms.lasthandoff: 12/07/2017
 > [!TIP] 
 > コマンド ライン インストールとコマンド ライン リファレンスでは、ヘルプ ページを参照してください**msvsmon.exe** 」と入力して``msvsmon.exe /?``with Visual Studio がインストールされているコンピューター上のコマンドラインで (に移動または**ヘルプ > 使用状況**リモート デバッガーで)。
   
-## <a name="requirements_msvsmon"></a> 要件
+## <a name="requirements_msvsmon"></a> 必要条件
 
 [!INCLUDE [remote-debugger-requirements](../debugger/includes/remote-debugger-requirements.md)]
   
@@ -117,7 +118,7 @@ ASP.NET および他のサーバー環境でデバッグは、管理者として
 
 [!INCLUDE [remote-debugger-symbols](../debugger/includes/remote-debugger-symbols.md)]
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)   
  [リモート デバッグ用に Windows ファイアウォールを構成します。](../debugger/configure-the-windows-firewall-for-remote-debugging.md)   
  [リモート デバッガーのポートの割り当て](../debugger/remote-debugger-port-assignments.md)   

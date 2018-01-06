@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0aeb24f52b1b6b719e81dcd1a9bd93bd5822f8e6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e3428e51dda2f8cc8410b6ac67f5779f7c2300ed
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-edit-query-save-source-control-vspackage"></a>クエリ (ソース コントロール VSPackage) 保存クエリの編集
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]エディターには、クエリの編集のクエリを保存 (QEQS) イベントをブロードキャストできます。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ソース コントロールのスタブを QEQS イベントを受け取ることができるように、QEQS サービスを実装します。 これらのイベントは、現在アクティブなソース管理 VSPackage にし、委任されます。 VSPackage の実装、アクティブなソース管理、<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>とそのメソッドです。 メソッド、`IVsQueryEditQuerySave2`文書を編集すると、最初に、ドキュメントを保存する直前に直前に、インターフェイスが通常呼び出されます。  
@@ -38,5 +39,5 @@ ms.lasthandoff: 10/31/2017
   
  このメソッドは、トランザクション的に動作する必要があります。つまり、1 つのファイルの保存が取り消されると場合のすべてのファイルの保存が取り消されました。 逆に、保存が許可された場合、すべてのファイルの許可する必要があります。 同様、`IVsQueryEditQuerySave2::QueryEditFiles`メソッドを実装する際に考慮する場合、`IVsQueryEditQuerySave2::QuerySaveFiles`メソッドは特別なファイル、複数のファイルが含まれて、ユーザー、およびメモリ内編集をキャンセルします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>

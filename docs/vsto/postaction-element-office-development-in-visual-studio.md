@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 581ef7bafc075419df8e2dfb1731b334a9564455
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 4d42476d7298025fb18a703f027a2a870faf204a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpostactiongt-element-office-development-in-visual-studio"></a>&lt;postAction&gt;要素 (Visual Studio での Office 開発)
   `postAction` 名前空間の `vstav3` 要素には、配置後アクションに関連付ける `entrypoint` 要素とすべての `postActionData` 要素を格納します。これらの要素は、Office ソリューションのインストール後に実行されます。  
@@ -47,10 +48,10 @@ ms.lasthandoff: 10/31/2017
  `postAction` には、次の要素があります。  
   
 ### <a name="entrypoint"></a>entrypoint  
- 省略可能です。 役割、`entryPoint`内の要素、`vstav3`で名前空間が定義されている[&#60; entryPoints &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/entrypoints-element-office-development-in-visual-studio.md).  
+ 任意。 役割、`entryPoint`内の要素、`vstav3`で名前空間が定義されている[&#60; entryPoints &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/entrypoints-element-office-development-in-visual-studio.md).  
   
 ### <a name="postactiondata"></a>postActionData  
- 省略可能です。 役割、`postActionData`内の要素、`vstav3`で名前空間が定義されている[&#60; postActionData &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/postactiondata-element-office-development-in-visual-studio.md).  
+ 任意。 役割、`postActionData`内の要素、`vstav3`で名前空間が定義されている[&#60; postActionData &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/postactiondata-element-office-development-in-visual-studio.md).  
   
 ## <a name="post-deployment-action-example"></a>配置後アクションの例  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 10/31/2017
 </vstav3:postAction>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
  [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)  

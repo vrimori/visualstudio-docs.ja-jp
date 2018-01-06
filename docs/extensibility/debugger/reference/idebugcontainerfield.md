@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8260266f43be7a6887aea45f5012a1924fd35c77
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: eb08e269cd5fa2d98b91d8a7ac2107e4784ca02e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugcontainerfield"></a>IDebugContainerField
 このインターフェイスは、シンボルまたはその他のシンボルまたは型用のコンテナーである型を表します。  
@@ -45,13 +46,13 @@ IDebugContainerField : IDebugField
 ## <a name="remarks"></a>コメント  
  配列 (コンテナーの変数)、(メソッドと変数のコンテナー) のクラスおよびメソッド (パラメーターおよびローカル変数のコンテナー) は、コンテナーのすべての例を示します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [シンボル プロバイダー インターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

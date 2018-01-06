@@ -19,11 +19,12 @@ caps.latest.revision: "59"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: dbc6f8876236d1a056874500aea4878f9643f91b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 06a2488606b93040cf897ac510455b8a9ef74ce2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manage-control-layout-on-actions-panes"></a>方法 : アクション ペイン上のコントロールのレイアウトを管理する
   既定では、[操作] ウィンドウが文書またはワークシートの右側にドッキングされています。ただし、左、上、または下部にドッキングできます。 複数のユーザー コントロールを使用している場合は、[操作] ウィンドウにユーザー コントロールを正しく積み重ねるコードを記述できます。 詳細については、「 [Actions Pane Overview](../vsto/actions-pane-overview.md)」を参照してください。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/31/2017
   
 -   Word ドキュメント レベルのプロジェクトで複数のユーザー コントロールが含まれる操作ウィンドウまたは入れ子になった [操作] ウィンドウを制御します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   
  [方法: Word 文書や Excel ブックに操作ウィンドウを追加](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   
  [方法: Word 文書や Excel ブックに操作ウィンドウを追加](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   

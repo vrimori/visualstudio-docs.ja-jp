@@ -13,18 +13,19 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 302d36a968561f9823a5d36177e21c9698fc9e2b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 99144288a4da2a27956a9dc065ba5f5fba03fdcb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="restrictions-on-string-lengths"></a>文字列の長さの制限
 ソース管理プラグイン API は、さまざまな関数で使用される文字列の長さを制限します。  
   
 ## <a name="string-length-values"></a>文字列の長さの値  
   
-|定数|値|  
+|定数|[値]|  
 |--------------|-----------|  
 |`SCC_NAME_LEN`|31|  
 |`SCC_AUXLABEL_LEN`|31|  
@@ -34,12 +35,12 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  長さは、終端は含まれません`null`です。 "_LEN"ではなく"_SIZE"サフィックスを持つ他の定数には、終了するための領域は含ま`null`です。  
   
-|定数|値|  
+|定数|[値]|  
 |--------------|-----------|  
 |SCC_NAME_SIZE|32|  
 |SCC_AUXLABEL_SIZE|32|  
 |SCC_USER_SIZE|32|  
 |SCC_PRJPATH_SIZE|301|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)

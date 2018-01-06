@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fc0105b56f0a33a86953c95e3d36f5d7f00bcd37
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f7c69bc08d0f1bb72a37b76fca2d402d73036deb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="determining-which-editor-opens-a-file-in-a-project"></a>どのエディターが開き、プロジェクトのファイルを決定します。
 プロジェクトで、ユーザーがファイルを開くと、最終的に、適切なエディターまたはそのファイルのデザイナーを開いて、ポーリング処理によって、環境が移動します。 環境内で採用されている最初の手順は、標準およびカスタムの両方のエディターに対して同じです。 ファイルを開くときに使用するエディターをポーリングするときに、環境でさまざまな条件を使用し、VSPackage は、このプロセス中に環境と連携する必要があります。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
   
  環境は、現在再チェック .rtf ファイルの新規登録エディター ファクトリの検索に登録されているエディターの内部リスト。 環境の実装を呼び出して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>メソッド、ファイル名、ビューの種類を作成します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>   
  <xref:Microsoft.VisualStudio.OLE.Interop.IPersistStorage>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>   

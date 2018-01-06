@@ -11,11 +11,12 @@ caps.latest.revision: "4"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 458fc4b2f96480c1f41efd8b80050fd0911b3e85
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: a9d475a535d40af9a254a3f82839a8b733c2343d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="t4-assembly-directive"></a>T4 アセンブリ ディレクティブ
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のデザイン時テキスト テンプレートでは、テンプレート コードでアセンブリの型を使用できるように、`assembly` ディレクティブによってアセンブリが読み込まれます。 結果は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトでアセンブリ参照を追加した場合と同様です。  
@@ -91,5 +92,5 @@ ms.lasthandoff: 10/27/2017
 <#@ assembly name="$(myLibFolder)\MyLib.dll" #>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [T4 インクルード ディレクティブ](../modeling/t4-include-directive.md)

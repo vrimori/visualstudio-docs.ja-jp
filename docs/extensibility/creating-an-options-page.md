@@ -13,11 +13,12 @@ caps.latest.revision: "62"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 68a3afc0a83d4dba7b7cd46b2b1eba23695a2848
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d0888a584e31c26c9f64cdcff70cc2f5dc8a1453
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-an-options-page"></a>オプション ページを作成します。
 このチュートリアルでは、プロパティ グリッドを使用して確認し、プロパティを設定する単純なツール/オプション ページを作成します。  
@@ -188,7 +189,7 @@ ms.lasthandoff: 10/31/2017
     }  
     ```  
   
-     `optionsPage`フィールドは、親への参照を保持`OptionPageCustom`インスタンス。 `Initialize`メソッドが表示されます`OptionString`で、 **TextBox**です。 イベント ハンドラーの現在の値を書き込みます、 ** テキスト ボックス**を`OptionString`リーフを集中すると、 ** テキスト ボックス**です。  
+     `optionsPage`フィールドは、親への参照を保持`OptionPageCustom`インスタンス。 `Initialize`メソッドが表示されます`OptionString`で、 **TextBox**です。 イベント ハンドラーの現在の値を書き込みます、  **テキスト ボックス**を`OptionString`リーフを集中すると、  **テキスト ボックス**です。  
   
 9. パッケージのコード ファイル内の上書きを追加、`OptionPageCustom.Window`プロパティを作成、初期化、およびのインスタンスを返す OptionPageCustom クラスを`MyUserControl`です。 クラスは、次のようになります。  
   
@@ -263,5 +264,5 @@ ms.lasthandoff: 10/31/2017
   
      メッセージ ボックスには、現在の値が表示されます。`OptionInteger`です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [オプションとオプション ページ](../extensibility/internals/options-and-options-pages.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0a6999a7a390c207c184f26d36e0ca5d64d5fef5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 38b88dac0760c1935961bab662302dd60bc26e4a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint"></a>チュートリアル: SharePoint の OData を表示する Silverlight Web パーツの作成
   SharePoint 2010 では、OData を使用して、リスト データを公開します。 SharePoint では、OData サービスは、RESTful サービス ListData.svc によって実装されます。 このチュートリアルでは、Silverlight アプリケーションをホストする SharePoint web パーツを作成する方法を示します。 Silverlight アプリケーションでは、ListData.svc を使用して、SharePoint お知らせリスト情報を表示します。 詳細については、次を参照してください。 [SharePoint Foundation REST インターフェイス](http://go.microsoft.com/fwlink/?LinkId=225999)と[Open Data Protocol](http://go.microsoft.com/fwlink/?LinkId=226000)です。  
@@ -232,7 +233,7 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]  
     >  Silverlight のドメイン間でのデータにアクセスするときに、Silverlight は、web アプリケーションを利用するために使用されるセキュリティの脆弱性を防ぐ。 Silverlight でのリモート データにアクセスするときに問題が発生した場合は、次を参照してください。 [、サービス利用可能なドメインの境界を越えてを行う](http://go.microsoft.com/fwlink/?LinkId=223276)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint の Web パーツの作成](../sharepoint/creating-web-parts-for-sharepoint.md)   
  [SharePoint ソリューションのパッケージの配置、発行、アップグレード](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md)  
   

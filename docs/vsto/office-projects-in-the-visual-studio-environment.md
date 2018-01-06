@@ -46,11 +46,12 @@ caps.latest.revision: "58"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3f91a3ad121305e6d7a00df1ab1b337bdea73c1c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 8cf489d5a1c4246adf4f5c4220229acb05ac67d5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="office-projects-in-the-visual-studio-environment"></a>Visual Studio 環境における Office プロジェクト
   Microsoft Office プロジェクトの開発環境は、Visual Studio の他の種類のプロジェクト (Windows フォーム プロジェクトなど) に似ています。 Office プロジェクトを作成したり、開いたりすると、 **ソリューション エクスプローラー**にプロジェクト項目が表示されます。 ドキュメント レベルのプロジェクトの場合は、ドキュメント (つまり、Word 文書または Excel ブック) が Visual Studio で開かれ、ビジュアルなデザイナーとして動作します。  
@@ -116,13 +117,13 @@ ms.lasthandoff: 10/31/2017
   
  コード エディターの詳細については、次を参照してください。[コード エディターとテキスト エディターでコードを記述](/visualstudio/ide/writing-code-in-the-code-and-text-editor)です。 Office プロジェクトのコードを記述する方法の詳細については、「 [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)」を参照してください。  
   
-## <a name="properties-window"></a>プロパティ ウィンドウ  
+## <a name="properties-window"></a>[プロパティ] ウィンドウ  
  **プロパティ** ウィンドウには、 **ソリューション エクスプローラー**で選択されたプロジェクト項目のプロパティ、およびデザイナーで選択された UI 要素 (ドキュメント レベル プロジェクトのコントロールや文書など) のプロパティが表示されます。 アプリケーションとドキュメントに固有のプロパティと、すべてのプロジェクトで共通のプロパティがあります。  
   
 ## <a name="data-sources-window"></a>データ ソース ウィンドウ  
  ドキュメント レベルの Office プロジェクトで **データ ソース** ウィンドウを使用すると、データ ソースをドキュメントにドラッグし、そのデータ ソースにバインドされているコントロールを作成できます。 詳細については、次を参照してください。 [Visual Studio でのデータにコントロールをバインド](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [Office プロジェクト テンプレートの概要](../vsto/office-project-templates-overview.md)   
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   

@@ -20,11 +20,12 @@ caps.latest.revision: "152"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ddab05340b898a1a9a1868c7e537e6b53cc013b4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 70a307fe1eb68cb6e1409d0a43178795f0d9421c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1"></a>チュートリアル: 項目テンプレート、第 1 部にカスタム動作プロジェクト項目を作成します。
   Visual Studio の SharePoint プロジェクト システムは、プロジェクト項目の種類を独自に作成することによって拡張することができます。 このチュートリアルでは、SharePoint サイトでカスタム アクションを作成する SharePoint プロジェクトに追加できるプロジェクト項目を作成します。 カスタム アクションを追加するメニュー項目、**サイトの操作**SharePoint サイトのメニュー。  
@@ -453,7 +454,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルを完了すると、項目テンプレートにウィザードを追加できるようになります。 ユーザーがカスタム動作プロジェクト項目を SharePoint プロジェクトに追加するときに、このウィザードは動作についての情報 (その動作が選択されたときに移動するための場所と URL など) を収集し、Elements.xml ファイルの新しいプロジェクト項目にこの情報を追加します。 詳細については、次を参照してください。[チュートリアル: 項目テンプレート、第 2 部にカスタム動作プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: 項目テンプレート、第 2 部にカスタム動作プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)   
  [カスタム SharePoint プロジェクト項目の種類を定義します。](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [SharePoint プロジェクト項目の項目テンプレートとプロジェクト テンプレートを作成します。](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   

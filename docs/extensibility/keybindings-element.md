@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ff72a2a7acf63dea678aad0cda4cdca196ffc14f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3a56d930094c7a29deb4720836ba6e5a7365cc9d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="keybindings-element"></a>KeyBindings 要素
 KeyBindings 要素には、キー バインド要素およびその他の KeyBindings グループがグループ化します。  
@@ -41,7 +42,7 @@ KeyBindings 要素には、キー バインド要素およびその他の KeyBin
   
 |属性|説明|  
 |---------------|-----------------|  
-|状態|省略可能です。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
+|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -67,6 +68,6 @@ KeyBindings 要素には、キー バインド要素およびその他の KeyBin
 </KeyBindings>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [KeyBinding 要素](../extensibility/keybinding-element.md)   
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

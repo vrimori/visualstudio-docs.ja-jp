@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5118fe29463368bcca90e21830e1418d41c18339
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7e7847cdca2065cadd6adaf0d4b3e6ea10444725
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="text-buffer-events-in-the-legacy-api"></a>レガシ API でのテキスト バッファー イベント
 テキスト バッファー オブジェクトは、さまざまな状況に対応できるようにするいくつかのイベントを出力します。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="text-buffer-interfaces"></a>テキスト バッファー インターフェイス  
  テキスト バッファー オブジェクトによって実装されるインターフェイスを次に示します。  
   
-|インターフェイス|説明|  
+|Interface|説明|  
 |---------------|-----------------|  
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompoundAction>|複合アクション (つまり、元に戻す/やり直しの 1 つの単位にグループ化されているアクション) を作成できます。|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData>|テキスト バッファーによって管理されているドキュメント データの永続化を有効にします。|  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="text-buffer-event-interfaces"></a>テキスト バッファー イベント インターフェイス  
  テキスト バッファーのイベント通知用のインターフェイスを次に示します。  
   
-|インターフェイス|説明|  
+|Interface|説明|  
 |---------------|-----------------|  
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferEvents>|新しい言語サービスはテキスト バッファーを関連付けた場合は、クライアントを通知します。|  
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferDataEvents>|テキスト バッファーを初期化する場合、およびテキスト バッファー内のデータを変更するときは、クライアントを通知します。|  
@@ -51,6 +52,6 @@ ms.lasthandoff: 10/31/2017
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsPreliminaryTextChangeCommitEvents>|イベントをトリガーする最後のコミット ジェスチャのクライアントに通知し、変更されたテキストの範囲を提供します。 `IVsPreliminaryTextChangeCommitEvents`インターフェイスは、元に戻すまたはやり直すコマンドへの応答は発生しません。 イベントは、undo マネージャーのバッファーにのみ発生します。 `IVsPreliminaryTextChangeCommitEvents`変更をコミットする前に他のイベントが、テキストを変更しないことを確認するために再フォーマットの一覧についてなどの他のイベントの前に発生します。 VSPackage は、いずれかを監視する必要があります、`IVsPreliminaryTextChangeCommitEvents`インターフェイスまたは`IVsFinalTextChangeCommitEvents`が、両方は使用できません。|  
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsFinalTextChangeCommitEvents>|イベントをトリガーする最後のコミット ジェスチャのクライアントに通知し、変更されたテキストの範囲を提供します。 `IVsFinalTextChangeCommitEvents`インターフェイスは、元に戻すまたはやり直すコマンドへの応答は発生しません。 イベントは、undo マネージャーのバッファーにのみ発生します。 `IVsFinalTextChangeCommitEvents`向け言語サービスまたは編集を完全に制御があるその他のオブジェクトによってのみです。 VSPackage は、いずれかを監視する必要があります、`IVsPreliminaryTextChangeCommitEvents`インターフェイスまたは`IVsFinalTextChangeCommitEvents`が、両方は使用できません。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レガシ API を使用してテキスト バッファーにアクセスします。](../extensibility/accessing-the-text-buffer-by-using-the-legacy-api.md)   
  [方法: テキスト バッファー イベント、レガシ API の登録](../extensibility/how-to-register-for-text-buffer-events-with-the-legacy-api.md)

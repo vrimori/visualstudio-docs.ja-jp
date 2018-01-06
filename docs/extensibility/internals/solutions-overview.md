@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a6a1afea2357fb0c0ef1bcf8152f8a3785a55786
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 539ceb45cce6c317ed3723c5006e6d2a77029335
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="solutions-overview"></a>ソリューションの概要
 ソリューションは、連携するアプリケーションを作成する 1 つまたは複数のプロジェクトのグループです。 ソリューションに関連するプロジェクトとステータスの詳細については、2 つの別のソリューション ファイルに格納されます。 ソリューション (.sln) ファイルはテキスト ベースしソース コード管理下に配置およびユーザーの間で共有できます。 ソリューション ユーザー オプション (.suo) ファイルはバイナリです。 その結果、.suo ファイルはソース コード管理下に配置することはできませんし、ユーザーに固有の情報が含まれています。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  2 つのプロジェクトの構成で構成されると、ビルドからの 3 つ目の除外は、新しいソリューション構成を作成する場合は、プロパティ ページの UI またはオートメーションを使用する必要があります。 ソリューションのビルド マネージャーの構成とそのプロパティを直接変更することはできませんを使用して、ソリューションのビルド マネージャーを操作することができます、 `SolutionBuild` dte オートメーション モデル内のクラスです。 ソリューションを構成する方法の詳細については、次を参照してください。[ソリューション構成](../../extensibility/internals/solution-configuration.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps>   

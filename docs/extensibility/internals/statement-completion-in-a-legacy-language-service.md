@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c694295c3456accc8d2c1cd3b0a1ec20f59343c3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7208d38966e2caa9f9510c48c34952742d06c1b3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="statement-completion-in-a-legacy-language-service"></a>従来の言語サービスで入力候補
 ステートメント入力候補は、する言語サービスやすく、言語のキーワードまたはコア エディターに入力が開始されている要素を終了するプロセスです。 このトピックでは、ステートメント入力候補のしくみと、言語サービスに実装する方法について説明します。  
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/31/2017
   
  トリガーがエディターで入力されている場合: テキスト バッファーでは具体的には、-、言語サービスを呼び出します、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A>メソッド。 これにより、ユーザーは、ステートメント入力候補の候補からを選択できるように、UI を表示するエディターです。 このメソッドでは、実装する必要があります<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet>と<xref:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags>パラメーターとしてフラグ。 スクロール ボックスの一覧にコンプリート項目の一覧が表示されます。 ユーザーが入力を続ける、最新の文字に最も近い入力を反映するように、リスト ボックス内の選択項目が更新されます。 コア エディターは、ステートメント入力候補の UI を実装が言語サービスを実装する必要があります、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet>ステートメントの候補コンプリート項目のセットを定義するインターフェイスです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [従来の言語サービスのコマンドの受信](../../extensibility/internals/intercepting-legacy-language-service-commands.md)

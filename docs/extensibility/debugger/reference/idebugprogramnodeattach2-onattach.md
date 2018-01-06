@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9c5a70baa682af956e6337c89b2c01b3f9c29ebd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a6b0f74ef5b14fb9e8971c0d539cc2e875658341
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprogramnodeattach2onattach"></a>IDebugProgramNodeAttach2::OnAttach
 関連付けられているプログラムにアタッチするか、attach プロセスには、ゆだねます、[アタッチ](../../../extensibility/debugger/reference/idebugengine2-attach.md)メソッドです。  
@@ -47,6 +48,6 @@ int OnAttach(
 ## <a name="remarks"></a>コメント  
  このメソッドは、attach プロセス中に前に、[アタッチ](../../../extensibility/debugger/reference/idebugengine2-attach.md)メソッドが呼び出されます。 `OnAttach`メソッド自体、attach プロセスを実行できます (このメソッドが戻る場合は、 `S_FALSE`) に、attach プロセスを延期または、`IDebugEngine2::Attach`メソッド (、`OnAttach`メソッドを返します。 `S_OK`)。 いずれの場合、`OnAttach`メソッドを設定できます、`GUID`をデバッグするプログラムの指定された`GUID`です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md)   
  [添付](../../../extensibility/debugger/reference/idebugengine2-attach.md)

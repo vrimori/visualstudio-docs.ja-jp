@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d07f03c1aed1c2e85e65bd10a89bd62138d571c7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 5351165320dd0ff2d8c130c64adeff7be45de6fb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-customize-a-sharepoint-solution-package"></a>方法: SharePoint ソリューション パッケージをカスタマイズする
   パッケージ デザイナーを使用して、作成およびパッケージ (.wsp) をカスタマイズすることができます。 たとえば、SharePoint プロジェクト項目と機能の追加、Web サーバーがソリューションを展開するときのリセットし、配置サーバーの種類を設定するかどうかを指定できます。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 10/31/2017
   
 1.  **パッケージ デザイナー**、選択、**マニフェスト**タブです。  
   
-2.  。  
+2.  である必要があります。  
   
 3.  展開、**編集オプション** ノードを選択、**上書き生成された XML と編集、XML エディターでマニフェスト**リンクをクリックして、 **はい**ボタンをクリックします。  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 10/31/2017
   
      元のテキストで、テンプレートが更新され、XML に変更は失われます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

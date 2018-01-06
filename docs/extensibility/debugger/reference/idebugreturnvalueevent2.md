@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 64fe7f3e673df9f78b81de73561e798b1415f15c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0ad57acd6218158b1dd10b0f18e421bcd397a2d6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugreturnvalueevent2"></a>IDebugReturnValueEvent2
 このインターフェイスは、または、この関数をステップ実行した後、デバッグ エンジン (DE) によって、セッションのデバッグ マネージャー (SDM) に送信されます。  
@@ -45,13 +46,13 @@ IDebugReturnValueEvent2 : IUnknown
 ## <a name="remarks"></a>コメント  
  呼び出すことによって、関数によって返される値を取得する[GetReturnValue](../../../extensibility/debugger/reference/idebugreturnvalueevent2-getreturnvalue.md)です。 返される値に表示されます、 **[自動変数]**ウィンドウです。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)

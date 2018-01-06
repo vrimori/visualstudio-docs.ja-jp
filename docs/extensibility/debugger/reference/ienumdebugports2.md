@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8379dc1c7dfedfcf46b594fe6ea3bfbc64dfb950
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 277189c9b5510df1da4802e42225ffafa4b6995c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumdebugports2"></a>IEnumDebugPorts2
 このインターフェイスは、コンピューターまたはポートの仕入先のポートを列挙します。  
@@ -51,14 +52,14 @@ IEnumDebugPorts2 : IUnknown
   
  通常、デバッグ エンジンにはこのインターフェイスは使いません。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [EnumPorts](../../../extensibility/debugger/reference/idebugcoreserver2-enumports.md)   
  [EnumPorts](../../../extensibility/debugger/reference/idebugportsupplier2-enumports.md)

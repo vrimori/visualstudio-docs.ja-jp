@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5027e765e12ff483a9a27795990f0ddfbb479a5c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f92950bc833c2d2658c3e13cd7e800e877b32de9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccaddfromscc-function"></a>SccAddFromScc 関数
 この関数は、既にソース管理システムにあるファイルを参照することができ、後で、現在のプロジェクトの場合は、これらのファイル部分を作成します。 たとえば、この関数は、ファイルをコピーすることがなく、現在のプロジェクトに共通のヘッダー ファイルを取得できます。 ファイルの戻り値の配列`lplpFileNames`ユーザーが IDE のプロジェクトに追加するファイルの一覧が含まれています。  
@@ -50,7 +51,7 @@ SCCRTN SccAddFromScc (
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|ファイルが正常に配置し、プロジェクトに追加されます。|  
 |SCC_I_OPERATIONCANCELED|効果なしで操作が取り消されました。|  
@@ -68,6 +69,6 @@ SCCRTN SccAddFromScc (
 > [!NOTE]
 >  VSSCI API の最初のバージョンは、追加されたファイルの対象となるプロジェクトを指定する手段を提供しませんでした。 これのセマンティクスに合わせて、`lplpFIleNames`パラメーターが出力パラメーターではなく、入力/出力パラメーターに強化されました。 1 つのファイルを指定すると、専用の場合は、値によって示される`lpnFiles`= 1 の場合は、最初の要素の`lplpFileNames`ターゲット フォルダーが含まれています。 これらの新しいセマンティクスを IDE の呼び出しを使用する、`SccSetOption`で機能、`nOption`パラメーターに設定`SCC_OPT_SHARESUBPROJ`です。 返すかどうかでも、ソース管理プラグインでは、セマンティクスはサポートされません、`SCC_E_OPTNOTSUPPORTED`です。 使用は無効を行って、 **ソース管理から追加**機能します。 場合、プラグインがサポート、 **ソース管理から追加**機能 (`SCC_CAP_ADDFROMSCC`) からには新しいセマンティクスをサポートする必要があります戻り`SCC_I_SHARESUBPROJOK`です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccSetOption](../extensibility/sccsetoption-function.md)

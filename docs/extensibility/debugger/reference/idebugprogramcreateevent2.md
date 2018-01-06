@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2e61b838c922d0b25a7b0bef71c3cf1f15ec8843
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d2bffb1a4a884fe0e6601a6056273e9679a3e6cd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprogramcreateevent2"></a>IDebugProgramCreateEvent2
 このインターフェイスは、プログラムに関連付けられている場合、セッション デバッグ マネージャー (SDM) にデバッグ エンジン (DE) によって送信されます。  
@@ -38,14 +39,14 @@ IDebugProgramCreateEvent2 : IUnknown
 ## <a name="remarks"></a>コメント  
  DE やカスタム ポート供給業者は、新しい公開[IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)インターフェイスを呼び出して[PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)   

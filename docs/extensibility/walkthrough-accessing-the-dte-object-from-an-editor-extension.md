@@ -13,17 +13,18 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 77732f1f5620e0d0a637938668ae232f7bb83edf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: af14fa5f9a76e08a1fba3355e9391ce8229bd652
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-accessing-the-dte-object-from-an-editor-extension"></a>チュートリアル: DTE オブジェクトからエディター拡張機能へのアクセス
 Vspackage を呼び出して、DTE オブジェクトを取得することができます、 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> DTE オブジェクトの型を持つメソッドです。 Managed Extensibility Framework (MEF) 拡張機能ではインポートできる<xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>を呼び出すと、<xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A>の型を持つメソッド<xref:EnvDTE.DTE>です。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルを行うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
+ このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
   
 ## <a name="getting-the-dte-object"></a>DTE オブジェクトを取得します。  
   
@@ -65,5 +66,5 @@ Vspackage を呼び出して、DTE オブジェクトを取得することがで
   
 6.  使用する必要がある場合、<xref:EnvDTE80.DTE2>インターフェイス、DTE オブジェクトをそれをキャストすることができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [言語サービスとエディターの拡張ポイント](../extensibility/language-service-and-editor-extension-points.md)

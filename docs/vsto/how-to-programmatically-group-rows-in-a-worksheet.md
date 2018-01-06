@@ -25,11 +25,12 @@ caps.latest.revision: "46"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c11911d6d9e7b92b7a86b21723c8788afe15a57b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: f17c90fb5f10dfdc0658f9176e0e15cedcc6f1d5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-group-rows-in-a-worksheet"></a>方法: プログラムによってワークシート内の行をグループ化する
   1 つ以上の行をグループ化することができます。 ワークシート内でグループを作成するには、<xref:Microsoft.Office.Tools.Excel.NamedRange>コントロールまたはネイティブな Excel 範囲オブジェクト。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]  
     >  行を解除するを呼び出して、<xref:Microsoft.Office.Interop.Excel.Range.Ungroup%2A>メソッドです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ワークシートの操作](../vsto/working-with-worksheets.md)   
  [NamedRange コントロール](../vsto/namedrange-control.md)   
  [方法: ワークシートに NamedRange コントロールを追加します。](../vsto/how-to-add-namedrange-controls-to-worksheets.md)   

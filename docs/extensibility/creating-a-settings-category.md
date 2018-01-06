@@ -13,11 +13,12 @@ caps.latest.revision: "39"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 016aac6f0e23b626b9023b978efa27e76924c6c4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2bdf3231f2df8b3700c7865fa53e60003b814a5f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-settings-category"></a>設定のカテゴリを作成します。
 このチュートリアルでは、Visual Studio の設定のカテゴリを作成し、使用して値を保存および設定ファイルから値を復元します。 設定のカテゴリは「カスタム設定ポイント」; として表示される関連するプロパティのグループつまりのチェック ボックスと、**インポートおよびエクスポート設定**ウィザード。 (上で見つけられる、**ツール**メニューです)。設定が保存または復元をカテゴリとして、個々 の設定は、ウィザードでは表示されません。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/31/2017
   
 2.  VSPackage.resx ファイルを開き、これらの 3 つの文字列リソースを追加します。  
   
-    |名前|値|  
+    |name|[値]|  
     |----------|-----------|  
     |106|カテゴリ|  
     |107|自分の設定|  
@@ -97,7 +98,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  左側のウィンドウで、ツリー ビューで、展開**マイ カテゴリ** をクリックし、**個人用のグリッド ページ**です。  
   
-4.  値を変更**OptionFloat** 3.1416 へと**OptionInteger** 12 にします。 **[OK]** をクリックします。  
+4.  値を変更**OptionFloat** 3.1416 へと**OptionInteger** 12 にします。 **[OK]**をクリックします。  
   
 5.  **ツール** メニューのをクリックして**インポートおよびエクスポート設定**です。  
   
@@ -138,7 +139,7 @@ ms.lasthandoff: 10/31/2017
   
 11. これを変更することがなく、設定ファイルを閉じます。  
   
-12. **ツール** メニューのをクリックして**オプション**、展開**マイ カテゴリ**、 をクリックして**個人用のグリッド ページ**しの値を変更して**OptionFloat** 1.0 と**OptionInteger**を 1 にします。 **[OK]** をクリックします。  
+12. **ツール** メニューのをクリックして**オプション**、展開**マイ カテゴリ**、 をクリックして**個人用のグリッド ページ**しの値を変更して**OptionFloat** 1.0 と**OptionInteger**を 1 にします。 **[OK]**をクリックします。  
   
 13. **ツール** メニューのをクリックして**インポートおよびエクスポート設定**を選択**選択された環境設定のインポート**、順にクリック**次へ**です。  
   

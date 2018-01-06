@@ -13,17 +13,18 @@ caps.latest.revision: "29"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c590896144ddd6e7dd1586ef08e5049d46795320
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ace475cb94920a5c0470c1d16265349edfa441f4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-core-editor-and-registering-an-editor-file-type"></a>チュートリアル: コア エディターを作成して、エディター ファイルの種類を登録します。
 このチュートリアルを開始する VSPackage を作成する方法を示しています、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディターと .myext ファイル名拡張子を持つファイルが読み込まれています。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルを行うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
+ このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
   
 ## <a name="locations-for-the-visual-studio-package-project-template"></a>Visual Studio パッケージ プロジェクト テンプレートの場所  
  Visual Studio パッケージのプロジェクト テンプレートは、 **[新しいプロジェクト]** ダイアログの次の 3 つの場所にあります。  
@@ -395,6 +396,6 @@ ms.lasthandoff: 10/31/2017
   
  コア エディターの詳細については、次を参照してください。 [、コア エディター内](../extensibility/inside-the-core-editor.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア エディター内](../extensibility/inside-the-core-editor.md)   
  [レガシ API を使用して、コア エディターをインスタンス化します。](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)

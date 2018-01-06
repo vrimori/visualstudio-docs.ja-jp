@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 484d53315f836117b69270a2f43b6b780733b9f7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: cedf021321b66c47690450823a7da92cd19888eb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-pages"></a>プロパティ ページ
 ユーザーは、表示し、プロパティ ページを使用して、プロジェクトの構成に依存して、独立系のプロパティを変更できます。 A**プロパティ ページ**でボタンが有効になっている、**プロパティ**ウィンドウまたは 選択されたオブジェクトのプロパティ ページ ビューを提供するオブジェクトのソリューション エクスプ ローラー ツールバー。 プロパティ ページでは、環境によって作成され、ソリューションおよびプロジェクトに使用できます。 することができます、ただし、構成するプロジェクト項目を構成に依存するプロパティの使用の使用可能です。 プロジェクト内のファイルが別のコンパイラ スイッチの設定を正しくビルドする必要がある場合は、この機能を使用する場合があります。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 10/31/2017
   
      実装、<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.GetCurrentSelection%2A>プロジェクト階層やプロジェクト項目、選択された項目を取得します。 使用する DTE から、`SelectedItems.SelectedItem.Project`と`SelectedItems.SelectedItem.ProjectItem`メソッドです。 コアにそれらの見出しの下のサンプル コードがある[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ドキュメント。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPropertyPage>   
  [構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)   
  [プロジェクト構成オブジェクト](../../extensibility/internals/project-configuration-object.md)   

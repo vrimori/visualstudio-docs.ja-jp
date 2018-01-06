@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 87098c362e5b37690e2ab3116ffca431d58f129d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4859e47f8a7ade34a920e4d8e2fac3be58508de3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-configuration-for-managing-deployment"></a>展開を管理するためのプロジェクトの構成
 展開は、動作は、デバッグおよびインストールの予期される場所に、ビルド プロセスからの出力項目を物理的に移動します。 たとえば、Web アプリケーションをローカル コンピューター上に構築され、サーバー上に配置しする可能性があります。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/31/2017
   
  構成は、ビルドまたは配置の動作に影響する依存関係を指定できます。 ビルドまたは配置の依存関係が必要がありますか、ビルドまたは自体の構成をビルドまたは配置される後または前に配置するプロジェクトです。 プロジェクト間でのビルドの依存関係がで説明されている、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency>インターフェイスし、の依存関係を配置、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency>インターフェイスです。 詳細については、次を参照してください。[構築するためのプロジェクト構成](../../extensibility/internals/project-configuration-for-building.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)   
  [構築するためのプロジェクトの構成](../../extensibility/internals/project-configuration-for-building.md)   
  [出力のためのプロジェクト構成](../../extensibility/internals/project-configuration-for-output.md)

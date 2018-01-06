@@ -15,11 +15,12 @@ caps.latest.revision: "28"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 40c900b2f266be4ea88921b5f7cd0db02991a091
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6f84f92b4d940bc7141f8c53730a128651b27a8f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-sdk-reference"></a>Visual Studio SDK リファレンス
 このセクションには、Visual Studio SDK を使用する開発者の Visual Studio の名前空間、関連する名前空間、および関心のある他の領域に関する情報が含まれています。  

@@ -25,11 +25,12 @@ caps.latest.revision: "33"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 30261fea83870b5bdfce11a25969207aad260ee4
-ms.sourcegitcommit: 64c7682ec3a2cbea684e716803398d4278b591d1
+ms.workload: multiple
+ms.openlocfilehash: e6d4c01043bde59822175b20f36cd576c3a9c3a3
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="deployment-overview-in-visual-studio"></a>Visual Studio での配置の概要
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/15/2017
 
     ![選択を発行](../deployment/media/quickstart-publish.png)
 
-- **Visual C ランタイム**: ローカル配置または静的リンクを使用して、Visual C ランタイムを配置することができます。 詳細については、次を参照してください。[ネイティブ デスクトップ アプリケーションの配置 (Visual c)](/cpp/ide/deploying-native-desktop-applications-visual-cpp.md)です。 
+- **Visual C ランタイム**: ローカル配置または静的リンクを使用して、Visual C ランタイムを配置することができます。 詳細については、次を参照してください。[ネイティブ デスクトップ アプリケーションの配置 (Visual c)](/cpp/ide/deploying-native-desktop-applications-visual-cpp)です。 
 
 ### <a name="publish-to-web-or-deploy-to-network-share"></a>Web に発行またはネットワーク共有に展開
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/15/2017
 
     いくつかの他の方法で ASP.NET アプリケーションとサービスを展開することもできます。 詳細については、次を参照してください。[を展開する ASP.NET web アプリケーションとサービス](http://www.asp.net/aspnet/overview/deployment)です。
 
-- **Visual C ランタイム**: 集中配置を使用して、Visual C ランタイムを配置することができます。 詳細については、次を参照してください。[ネイティブ デスクトップ アプリケーションの配置 (Visual c)](/cpp/ide/deploying-native-desktop-applications-visual-cpp.md)です。 
+- **Visual C ランタイム**: 集中配置を使用して、Visual C ランタイムを配置することができます。 詳細については、次を参照してください。[ネイティブ デスクトップ アプリケーションの配置 (Visual c)](/cpp/ide/deploying-native-desktop-applications-visual-cpp)です。 
 
 - **Windows デスクトップ**web サーバーまたは ClickOnce 配置を使用してネットワーク ファイル共有に、Windows デスクトップ アプリケーションを発行することができます。 その後、ユーザーはシングル クリックでアプリケーションをインストールできます。 詳細については、次を参照してください。 [ClickOnce を使用して、デスクトップ アプリを展開](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)と[ClickOnce を使用してネイティブ アプリを展開](/cpp/ide/clickonce-deployment-for-visual-cpp-applications)です。
 
@@ -72,7 +73,7 @@ ms.lasthandoff: 12/15/2017
     > [!NOTE]
     > Azure アカウントがない場合は[サインアップ](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio)です。
 
-- その他の**Azure サービス**: 固有の仕様を参照してください[Azure サービス](https://docs.microsoft.com/azure/#pivot=products)Visual Studio によってサポートされる可能性があるさまざまな展開オプションをマニュアルでします。
+- その他の**Azure サービス**: 固有の仕様を参照してください[Azure サービス](/azure/#pivot=products)Visual Studio によってサポートされる可能性があるさまざまな展開オプションをマニュアルでします。
 
 ### <a name="publish-to-microsoft-store"></a>Microsoft Store に公開します。
 

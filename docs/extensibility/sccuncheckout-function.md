@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1e210f239c543da84a1e80833f03b684099155ef
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f9b4b2f06b8ee020ca07e780836ec2abbbc96e82
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccuncheckout-function"></a>SccUncheckout 関数
 この関数には、選択したファイルまたはファイルの内容をチェック アウト前の状態に復元できるため、前のチェック アウト操作が元に戻します。 チェック アウト後ファイルに加えられたすべての変更は失われます。  
@@ -58,7 +59,7 @@ SCCRTN SccUncheckout (
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|チェック アウトの取り消しが正常に完了しました。|  
 |SCC_E_FILENOTCONTROLLED|選択したファイルはソース コード管理下ではありません。|  
@@ -72,5 +73,5 @@ SCCRTN SccUncheckout (
 ## <a name="remarks"></a>コメント  
  この操作の後、`SCC_STATUS_CHECKEDOUT`と`SCC_STATUS_MODIFIED`フラグはどちらもクリアされますチェック アウトの取り消しが実行されたファイルです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

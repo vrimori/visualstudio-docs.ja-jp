@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b8b1fa4647cd5b145d19e2264381b186394be814
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1008e1c81c6d99bc9fa0615263cf023a56101435
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="what39s-new-in-the-visual-studio-2015-sdk"></a>どのような &#39; Visual Studio 2015 SDK の
 Visual Studio SDK では、Visual Studio 2015、Visual Studio 2015 更新、および Visual Studio 2017 の新規および更新の機能が次があります。  
@@ -53,7 +54,7 @@ Visual Studio SDK では、Visual Studio 2015、Visual Studio 2015 更新、お�
  C++ の場合は、VSPackage ウィザードは、メニュー コマンド、ツール ウィンドウ、およびカスタム エディターをサポートします。 検索で、**新しいプロジェクト**でダイアログ**Visual C/機能拡張**です。  
   
 ## <a name="vs-sdk-reference-assemblies-via-nuget"></a>NuGet 経由で VS SDK の参照アセンブリ  
- 移植性の向上と機能拡張プロジェクトの共有は、NuGet のバージョンの VS SDK の参照アセンブリを使用できます。  これらで使用できる[nuget.org](http://www.nuget.org)によって発行された[VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility)プロジェクトまたは Visual Studio によるソリューションを簡単に追加して**参照/管理 NuGetパッケージ**ダイアログ。 特定の拡張機能アセンブリへの個々 の参照を追加したり、VS SDK のすべてが一度に VS SDK を使用してアセンブリを参照を追加したり[メタ パッケージ](http://www.nuget.org/packages/VSSDK_Reference_Assemblies)です。 NuGet の詳細については、次を参照してください。、 [NuGet のドキュメント](http://docs.microsoft.com/NuGet)と[パッケージ マネージャー UI](http://docs.microsoft.com/NuGet/Tools/Package-Manager-UI)トピックです。  
+ 移植性の向上と機能拡張プロジェクトの共有は、NuGet のバージョンの VS SDK の参照アセンブリを使用できます。  これらで使用できる[nuget.org](http://www.nuget.org)によって発行された[VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility)プロジェクトまたは Visual Studio によるソリューションを簡単に追加して**参照/管理 NuGetパッケージ**ダイアログ。 特定の拡張機能アセンブリへの個々 の参照を追加したり、VS SDK のすべてが一度に VS SDK を使用してアセンブリを参照を追加したり[メタ パッケージ](http://www.nuget.org/packages/VSSDK_Reference_Assemblies)です。 NuGet の詳細については、次を参照してください。、 [NuGet のドキュメント](/NuGet)と[パッケージ マネージャー UI](/NuGet/Tools/Package-Manager-UI)トピックです。  
   
  NuGet のバージョンの VS SDK の参照アセンブリを使用して、別のユーザーが開くし、プロジェクトをビルドする VS SDK をインストールする必要はありません。  NuGet の参照アセンブリ、VS SDK ビルド ツールは、そのプロジェクトの自分のコンピューターに自動的にインストールされます。  
   

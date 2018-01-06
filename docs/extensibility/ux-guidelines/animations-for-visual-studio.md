@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6a554a52fc5ef42f81d1531dbe63bf320e1cd72e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a45fd22cce46cb9e43a649fb969980f42b395db2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="animations-for-visual-studio"></a>Visual Studio のアニメーション
 ## <a name="animation-fundamentals"></a>アニメーションの基礎  
@@ -145,7 +146,7 @@ Visual Studio の UI では、アニメーションは、コミュニケーシ�
   
 -   画像を反転させる  
   
-##### <a name="time"></a>時間  
+##### <a name="time"></a>時刻  
   
 -   時間、時間経過およびスクリーン キャスト変化の表示  
   
@@ -229,7 +230,7 @@ Visual Studio でのアニメーションは、ユーザーの生産性を低下
 ##### <a name="animation-properties"></a>アニメーションのプロパティ  
 通常、時間遅延は 0 秒です。  
   
-##### <a name="examples"></a>例    
+##### <a name="examples"></a>使用例    
 -   ツール ウィンドウを自動的に隠す  
   
 -   IntelliSense およびパラメーターのヘルプなどの UI エディターのキーボードでアクティブ化されます。  
@@ -254,7 +255,7 @@ Visual Studio でのアニメーションは、ユーザーの生産性を低下
   
 -   スタイルをイージング: サイン (正弦) InOut  
   
-##### <a name="examples"></a>例  
+##### <a name="examples"></a>使用例  
   
 -   ツール ウィンドウを自動的に隠す  
   
@@ -280,7 +281,7 @@ UI 要素の色から 1 つのコンテキストまたは状態別に変更す�
   
 -   スタイルをイージング: サイン (正弦) InOut  
   
-##### <a name="examples"></a>例  
+##### <a name="examples"></a>使用例  
   
 -   ウィンドウの状態遷移を文書化 (アクティブな場合は、最後のアクティブおよび非アクティブ)  
   
@@ -304,7 +305,7 @@ UI 要素が別の 1 つのコンテキストからサイズを変更したと�
   
 -   Duration: 200 ミリ秒、スタンドアロンの組み合わせアニメーション シーケンスの一部として使用する場合、100 ミリ秒  
   
-##### <a name="examples"></a>例  
+##### <a name="examples"></a>使用例  
   
 -   アーキテクチャ エクスプ ローラー パネルが展開および折りたたみ  
   

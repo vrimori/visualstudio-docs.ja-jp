@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 46891daa7a91ddc842c9fe37022075dfce092861
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 645bb6329b818b961475bdbfbcc4234c9b2586c8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sharepoint-development-walkthroughs"></a>SharePoint 開発のチュートリアル
   以下のチュートリアルでは、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を使用して SharePoint ソリューションを開発および配置する方法について説明します。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 10/31/2017
 |[チュートリアル: サーバー エクスプローラーを拡張して Web パーツを表示する](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)|サーバー エクスプローラーで表示される SharePoint サイトに Web パーツを表示するための新しいノードを追加する方法を示します。 このチュートリアルでは、SharePoint サーバー オブジェクト モデルを呼び出すための SharePoint コマンドの作成方法も示します。|  
 |[チュートリアル: サーバー エクスプローラーの拡張機能から SharePoint クライアント オブジェクト モデルを呼び出す](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)|サーバー エクスプローラーで表示される SharePoint サイトに Web パーツを表示するための新しいノードを追加する方法を示します。 このチュートリアルでは、SharePoint クライアント オブジェクト モデルの使用方法も示します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint 開発のサンプルとチュートリアル](../sharepoint/sharepoint-development-samples-and-walkthroughs.md)  
   
   

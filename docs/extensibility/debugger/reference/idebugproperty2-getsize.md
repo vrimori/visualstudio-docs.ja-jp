@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 94b38051d8a605bb92e8ac8cdabb463a7daf7431
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0c027c396172299612f52aef5f2d4c99a6ea5ac1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugproperty2getsize"></a>IDebugProperty2::GetSize
 プロパティの値のバイト単位のサイズを取得します。  
@@ -44,5 +45,5 @@ int GetSize (
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`; エラー コードを返しますそれ以外の場合。 返します`S_GETSIZE_NO_SIZE`プロパティには、サイズがありません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

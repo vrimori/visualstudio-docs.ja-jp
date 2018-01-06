@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2b7d32746fa42dc270497252065c3ac117a59547
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 9bbe546ffb3c6e61b251e8afbfc7fa9018ffa1b0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugcustomviewer"></a>IDebugCustomViewer
 このインターフェイスは、式エバリュエーターにどのような形式が必要なプロパティの値を表示するには、(EE) を使用します。  
@@ -51,7 +52,7 @@ IDebugCustomViewer : IUknown
   
  通常、カスタム ビューアーには、データの読み取り専用ビューので、 [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)に指定されたインターフェイス[値](../../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md)を除く文字列としてのプロパティの値を変更する方法がありません。 任意のブロックのデータの変更をサポートするために、EE は同じオブジェクトを実装するカスタム インターフェイスを実装して、`IDebugProperty3`インターフェイスです。 このカスタム インターフェイスは、任意のデータのブロックを変更するためのメソッドになります。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
@@ -105,7 +106,7 @@ IDebugCustomViewer *GetFirstCustomViewer(IDebugProperty2 *pProperty)
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)   
  [デバッグ用の SDK ヘルパー](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)   

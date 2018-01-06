@@ -18,11 +18,12 @@ caps.latest.revision: "61"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 14ce408395cc992e83cb26aecbc2e4ab428428ad
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3368e3176badf8aa1bf1eebe6453674380de46f1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-install-office-primary-interop-assemblies"></a>方法 : Office のプライマリ相互運用機能アセンブリをインストールする
   Microsoft Office のインストール時に、Office のプライマリ相互運用機能アセンブリ (PIA) をインストールします。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
     > [!WARNING]  
     >  既定では、PIA が、VSTO アドインまたはカスタマイズを使用する前提条件として、Pia をユーザーに配布する必要はありませんので、ビルドするときに、ソリューションに埋め込まれます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office プライマリ相互運用機能アセンブリ](../vsto/office-primary-interop-assemblies.md)   
  [How to: Target Office Applications Through Primary Interop Assemblies](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
  [方法: Office ソリューションを開発コンピューターを構成します。](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)   

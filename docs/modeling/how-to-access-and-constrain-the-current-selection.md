@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 870a8d1c08a8ca0fa72cabf47c8e1087a39e70f9
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 6cfc93f3e0423f57cd0df5e919854cc1a46a1b3f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-and-constrain-the-current-selection"></a>方法: 現在の選択項目を表示および制限する
 ドメイン固有言語のコマンドまたはジェスチャ ハンドラーを記述するときに、ユーザーを右クリックした要素を指定できます。 一部のシェイプまたはフィールドも選択されないようにできます。 たとえば、ユーザーには、アイコン デコレータがクリックすると、それを含む図形が選択されている代わりに配置できます。 この方法の選択内容を制限すると、ハンドラーを記述する必要があるの回数が減ります。 またやすく、ユーザーに、デコレータを回避することがなく、図形内をクリックできます。  
@@ -206,7 +207,7 @@ namespace CompanyName.ProductName.GroupingDsl
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>   
  <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage>   
  <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView>   

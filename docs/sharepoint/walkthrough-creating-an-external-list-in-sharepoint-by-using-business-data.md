@@ -26,11 +26,12 @@ caps.latest.revision: "38"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: babb8456593ba953982390f048960449069ca6fc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 8ecc80a3c26b97b9754f998bd0903471d00cd1d7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data"></a>チュートリアル: ビジネス データを使用した SharePoint での外部リストの作成
   ビジネス データ接続 (BDC) サービスは、バック エンド サーバー アプリケーション、Web サービス、およびデータベースのビジネス データを表示するように SharePoint を利用します。  
@@ -199,11 +200,11 @@ ms.lasthandoff: 10/31/2017
   
 10. 手順 6 には、次のフィールドごとに、型記述子を作成します。  
   
-    |名前|型の名前|  
+    |name|型の名前|  
     |----------|---------------|  
     |FirstName|System.String|  
     |LastName|System.String|  
-    |電話|System.String|  
+    |電話番号|System.String|  
     |emailAddress|System.String|  
     |EmailPromotion|System.Int32|  
     |NameStyle|System.Boolean|  
@@ -263,7 +264,7 @@ ms.lasthandoff: 10/31/2017
   
 #### <a name="to-test-the-project"></a>プロジェクトをテストするには  
   
-1.  選択、 **f5 キーを押して**キー。  
+1.  **F5** キーを押します。  
   
      SharePoint サイトが開きます。  
   
@@ -294,7 +295,7 @@ ms.lasthandoff: 10/31/2017
   
 -   [方法: Deleter メソッドを追加](../sharepoint/how-to-add-a-deleter-method.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [ビジネス データ接続モデルを作成します。](../sharepoint/creating-a-business-data-connectivity-model.md)   
  [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   

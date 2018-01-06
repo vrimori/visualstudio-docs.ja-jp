@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6218d697880da3ebf0d9af5599b5a7ca37ddf2f9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 76801810aafa3bd4048776ca38385ad1cf508d94
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-update-the-status-bar"></a>方法: ステータス バーの更新
 **ステータス バー**ステータス テキスト行またはインジケーターの 1 つ以上含まれている多くのアプリケーション ウィンドウの下部にあるコントロール バーがあります。  
@@ -48,5 +49,5 @@ ms.lasthandoff: 10/31/2017
   
  VSPackage 実装者は、ステータス バーにステータス テキストを更新します。 状態テキスト フィールドが空のテキストに設定されている場合、IDE が「準備完了」には、この文字列をリセット ("") のアイドル時間にします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ステータス バー](/cpp/mfc/status-bars)

@@ -20,11 +20,12 @@ caps.latest.revision: "45"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8792c9ed175d2ced5d9c10cc19b2d222f4d839a8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 086d7b103095f6cbc9d90c962fd0ad31af964f54
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="set-a-watch-on-variables-using-the-watch-and-quickwatch-windows-in-visual-studio"></a>ウォッチおよび Visual Studio の [クイック ウォッチ] ウィンドウを使用して変数のウォッチを設定します。
 デバッグ中に使用すること、**ウォッチ**(**デバッグ > Windows > ウォッチ > ウォッチ (1、2、3、4)**) と**[クイック ウォッチ]** (変数を右クリックして/ **デバッグ > [クイック ウォッチ]**) windows 変数と式を確認します。  この 2 つのウィンドウの違いは、 **ウォッチ** ウィンドウでは複数の変数を表示できますが、 **[クイック ウォッチ]** ウィンドウでは一度に 1 つの変数しか表示できないことです。
@@ -232,7 +233,7 @@ public class Program
 ## <a name="dynamic-view-and-the-watch-window"></a>動的ビューとウォッチ ウィンドウ  
  一部のスクリプト言語 (JavaScript や Python など) を使用して動的または[ダック」と入力](https://en.wikipedia.org/wiki/Duck_typing)、.NET 言語 (バージョン 4.0 以降) ために通常のデバッグ ウィンドウを使用して観察が困難なオブジェクトをサポートして、ランタイム プロパティとメソッドを表示できない場合があります。  
   
- [ウォッチ] ウィンドウが実装する型から作成されたオブジェクトを表示するとき、 [IDynamicMetaObjectProvider インターフェイス](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.idynamicmetaobjectprovider?view=netframework-4.7)、デバッガーは追加、特殊な**動的ビュー**ノードを**[自動変数]**を表示します。 このノードには動的オブジェクトの動的メンバーが表示されますが、そのメンバーの値を編集することはできません。  
+ [ウォッチ] ウィンドウが実装する型から作成されたオブジェクトを表示するとき、 [IDynamicMetaObjectProvider インターフェイス](/dotnet/api/system.dynamic.idynamicmetaobjectprovider?view=netframework-4.7)、デバッガーは追加、特殊な**動的ビュー**ノードを**[自動変数]**を表示します。 このノードには動的オブジェクトの動的メンバーが表示されますが、そのメンバーの値を編集することはできません。  
   
  **動的ビュー** の任意の子を右クリックして **[ウォッチ式の追加]**を選択すると、デバッガーはオブジェクトを動的オブジェクトにキャストする新しいウォッチ変数を挿入します。 つまり、 **オブジェクト名** が**((動的) オブジェクト).名前**になります。  
   
@@ -248,5 +249,5 @@ public class Program
   
  **動的ビュー** は、COM オブジェクトのデバッグ機能も強化します。 デバッガーは **System.__ComObject**にラップされた COM オブジェクトを検出すると、そのオブジェクトの **動的ビュー** ノードを追加します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガー ウィンドウ](../debugger/debugger-windows.md)

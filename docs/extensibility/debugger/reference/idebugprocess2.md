@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d8b349bee09f068a5777ecc212223c36951236ee
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 896448526f41514fb74b385f8605839908708305
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprocess2"></a>IDebugProcess2
 このインターフェイスは、ポートで実行中のプロセスを表します。 ポートの場合、ローカル ポートし`IDebugProcess2`通常、ローカル コンピューター上の物理プロセスを表します。  
@@ -62,14 +63,14 @@ IDebugProcess2 : IUnknown
 ## <a name="remarks"></a>コメント  
  `IDebugProcess2` 1 つ以上含む[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)インターフェイスです。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)   
  [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)   

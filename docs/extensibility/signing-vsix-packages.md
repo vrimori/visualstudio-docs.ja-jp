@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d5a27b4e76e0cd8f986441778ed39c7fbb5a2211
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ec875e6877b1c3ff1edf38b29c5e72b757021085
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="signing-vsix-packages"></a>VSIX パッケージに署名します。
 拡張機能アセンブリは、Visual Studio で実行することができますが、これを行うことをお勧めする前に署名する必要はありません。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/31/2017
   
 1.  プロジェクトに、VSIX を追加します。  
   
-2.  ソリューション エクスプ ローラーでプロジェクト ノードを右クリックを選択すると**追加 &#124;です。NuGet パッケージの管理**です。  NuGet と NuGet パッケージの参照の追加の詳細についてを参照してください。、 [NuGet のドキュメント](http://docs.microsoft.com/NuGet)と[パッケージ マネージャー UI](http://docs.microsoft.com/NuGet/Tools/Package-Manager-UI)トピックです。  
+2.  ソリューション エクスプ ローラーでプロジェクト ノードを右クリックを選択すると**追加 &#124;です。NuGet パッケージの管理**です。  NuGet と NuGet パッケージの参照の追加の詳細についてを参照してください。、 [NuGet のドキュメント](/NuGet)と[パッケージ マネージャー UI](/NuGet/Tools/Package-Manager-UI)トピックです。  
   
 3.  VisualStudioExtensibility から VSIXSignTool を検索し、NuGet パッケージをインストールします。  
   
@@ -49,5 +50,5 @@ ms.lasthandoff: 10/31/2017
   
  VSIXSignTool.exe 記号/f \<certfile >/p\<パスワード > \<VSIXfile >  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio 拡張機能の配布](../extensibility/shipping-visual-studio-extensions.md)

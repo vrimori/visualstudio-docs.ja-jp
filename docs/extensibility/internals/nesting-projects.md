@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4207903fdd0f9a1462460d7f7cb2704e70e08df6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5b91f9dc00b9130f2c239bd3254f78376bc0fdf3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nesting-projects"></a>入れ子のプロジェクト
 VS パッケージを使用するエンタープライズ アプリケーション開発者が類似した種類のプロジェクトでまとめてグループ化できます便利[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を使用して*プロジェクトの入れ子*です。 たとえば、エンタープライズ テンプレート プロジェクトは、カテゴリにプロジェクトをグループ化の入れ子になったプロジェクトを使用します。 ビジネス ファサード プロジェクトや Web UI プロジェクトの場合は、1 つのカテゴリにグループ化。  
@@ -36,7 +37,7 @@ VS パッケージを使用するエンタープライズ アプリケーショ�
  ![プロジェクトのソリューションを入れ子になった](../../extensibility/internals/media/vsnestedprojects.gif "vsNestedProjects")  
 入れ子になったプロジェクトの使用例  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: 入れ子になったプロジェクトを実装します。](../../extensibility/internals/how-to-implement-nested-projects.md)   
  [入れ子になったプロジェクトのアンロードと再読み込みに関する考慮事項](../../extensibility/internals/considerations-for-unloading-and-reloading-nested-projects.md)   
  [ウィザードでサポートされる入れ子になったプロジェクト](../../extensibility/internals/wizard-support-for-nested-projects.md)   

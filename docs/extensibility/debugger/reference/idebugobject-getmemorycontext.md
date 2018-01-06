@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 93f6d82b88be23b160effe1c8162648132f461c5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e2ad135ddb69128a19d49bcc1ebb7acd77a496c4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugobjectgetmemorycontext"></a>IDebugObject::GetMemoryContext
 オブジェクトの値のアドレスを表すメモリ コンテキストを取得します。  
@@ -47,5 +48,5 @@ int GetMemoryContext(
 ## <a name="remarks"></a>コメント  
  これによって表されるように、返されたメモリ コンテキストが、値のアドレスを指定[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)オブジェクト。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

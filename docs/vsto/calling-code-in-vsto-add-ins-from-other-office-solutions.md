@@ -22,11 +22,12 @@ caps.latest.revision: "54"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 38508a664ff94628dfd3fd5ec00eacb32fbb1187
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: c4f8d987b8079230591d4bfdbe51c6d640cbf265
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="calling-code-in-vsto-add-ins-from-other-office-solutions"></a>その他の Office ソリューションから VSTO アドインのコードを呼び出す
   VSTO アドイン内のオブジェクトは、他の Microsoft Office ソリューションを含む、他のソリューションに公開できます。 このことは、VSTO アドインが他のソリューションで使用可能なサービスを含む場合に便利です。 たとえば、Web サービスから受け取る財務データについて計算を実行する、Microsoft Office Excel 向けの VSTO アドインがある場合、他のソリューションは、実行時に Excel VSTO アドインを呼び出すことで、これらの計算を実行できます。  
@@ -146,7 +147,7 @@ utilities.ImportData();
   
  この例で、 <xref:Microsoft.Office.Core.COMAddIn.Object%2A> プロパティの値を `AddInUtilities` インターフェイスではなく `IAddInUtilities` クラスにキャストしようとすると、コードは <xref:System.InvalidCastException>をスローします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
  [チュートリアル: は、VSTO アドインのコードを VBA から呼び出す](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)   
  [Office ソリューションの開発](../vsto/developing-office-solutions.md)   

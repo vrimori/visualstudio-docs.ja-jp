@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 35081931fcb87c73ca6643002a09b43c3ab674b9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f881a7ad6f11b4c916dad8af184d84a434f3e510
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugpointerfieldgetdereferencedfield"></a>IDebugPointerField::GetDereferencedField
 このメソッドは、このポインター オブジェクトが指すオブジェクトの型を返します。  
@@ -47,6 +48,6 @@ int GetDereferencedField(
 ## <a name="remarks"></a>コメント  
  例については、場合、 [IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md)オブジェクトが、整数を指す、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)このメソッドによって返される型は、その整数型を記述します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

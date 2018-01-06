@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a51359a840812bc20714df91a3357801366f3616
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 35b8821a76926da6ea9cab8ca61ef8f62e5ec72d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="usedcommands-element"></a>UsedCommands 要素
 UsedCommands 要素には、UsedCommand 要素およびその他の UsedCommands グループがグループ化します。  
@@ -42,7 +43,7 @@ UsedCommands 要素には、UsedCommand 要素およびその他の UsedCommands
   
 |属性|説明|  
 |---------------|-----------------|  
-|状態|省略可能です。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
+|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -66,6 +67,6 @@ UsedCommands 要素には、UsedCommand 要素およびその他の UsedCommands
 </UsedCommands>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [UsedCommand 要素](../extensibility/usedcommand-element.md)   
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

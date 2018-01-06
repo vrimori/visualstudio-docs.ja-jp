@@ -6,7 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords: vs.debug.selectengines
 dev_langs:
 - CSharp
@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 421c8a206091bf69e20a814a693f1b88bbb0d843
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d90d0bd4b310334e11a6ff394384c7e9003d3c3e
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="select-code-type-dialog-box"></a>[コードの種類の選択] ダイアログ ボックス
 このダイアログ ボックスを開く、**プロセスにアタッチする**クリックしてダイアログ ボックスで、**選択**ボタンをクリックします。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 10/31/2017
  **これらのコードの種類をデバッグするには。**  
  表示される一覧から、デバッグするコードの種類を選択します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [実行中のプロセスをアタッチします。](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)

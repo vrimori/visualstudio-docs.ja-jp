@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0089e5a8bf85ba352788767c821d95f41ca60eec
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6102a5bb6298cd6403285e3d36842424b0be3412
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="support-for-code-snippets-in-a-legacy-language-service"></a>従来の言語サービスでのコード スニペットのサポート
 コード スニペットは、ソース ファイルに挿入するコードの一部です。 自体は、一連のフィールドに XML ベースのテンプレートです。 これらのフィールドは、スニペットが挿入され、スニペットを挿入するコンテキストに応じて異なる値を持つことができますに強調表示されます。 スニペットの挿入後にすぐに、言語サービスは、スニペットを書式設定できます。  
@@ -391,7 +392,7 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レガシ言語サービス機能](../../extensibility/internals/legacy-language-service-features1.md)   
  [レガシ言語サービスを登録します。](../../extensibility/internals/registering-a-legacy-language-service1.md)   
  [コード スニペット](../../ide/code-snippets.md)   

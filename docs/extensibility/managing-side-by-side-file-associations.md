@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: dfb3bcca8c56ebefa665e44384df0751e71f6591
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7d0a6f8ec88a49b785b771aef51dc25b5646ffda
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-side-by-side-file-associations"></a>サイド バイ サイドのファイルの関連付けを管理します。
 VSPackage では、ファイルの関連付けを提供する場合をサイド バイ サイド インストールを処理する方法を決定する必要がありますの特定のバージョン[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ファイルを開くに呼び出す必要があります。 互換性のないファイル形式は複合問題です。  
@@ -51,7 +52,7 @@ VSPackage では、ファイルの関連付けを提供する場合をサイド 
   
     ### <a name="customaction-table-rows-that-determine-the-latest-version-of-visual-studio"></a>Visual Studio の最新バージョンを決定する CustomAction テーブル行  
   
-    |操作|型|ソース|ターゲット|  
+    |アクション|型|ソース|ターゲット|  
     |------------|----------|------------|------------|  
     |CA_SetDevenvLatest_2002|51|DEVENV_EXE_LATEST|[DEVENV_EXE_2002]|  
     |CA_SetDevenvLatest_2003|51|DEVENV_EXE_LATEST|[DEVENV_EXE_2003]|  
@@ -59,7 +60,7 @@ VSPackage では、ファイルの関連付けを提供する場合をサイド 
   
     ### <a name="installexecutesequence-table-rows-that-determine-the-latest-version-of-visual-studio"></a>Visual Studio の最新バージョンを決定する InstallExecuteSequence テーブル行  
   
-    |操作|状態|シーケンス|  
+    |アクション|条件|シーケンス|  
     |------------|---------------|--------------|  
     |CA_SetDevenvLatest_2002|DEVENV_EXE_2002 および NOT (DEVENV_EXE_2003 または DEVENV_EXE_2005)|410|  
     |CA_SetDevenvLatest_2003|DEVENV_EXE_2003 と DEVENV_EXE_2005 されません。|420|  
@@ -84,6 +85,6 @@ VSPackage では、ファイルの関連付けを提供する場合をサイド 
   
 -   ユーザーがファイルの関連付けを選択し、失われたアソシエーションを再利用できる構成オプション ページまたはダイアログ ボックスを提供します。 アンインストール後に実行するユーザーに指示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サイド バイ サイド配置のファイル名拡張子を登録します。](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md)   
  [ファイル名拡張子の動詞を登録する](../extensibility/registering-verbs-for-file-name-extensions.md)

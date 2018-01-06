@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 33e3acc46fab56a1096c6537d5b5ee5569e09063
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 48bdfb52a27dbe9e95a8978869510941f10f375d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugobject2createalias"></a>IDebugObject2::CreateAlias
 一意の ID またはこのオブジェクトの別名を作成または既存のエイリアスを取得します。  
@@ -47,6 +48,6 @@ int CreateAlias(
 ## <a name="remarks"></a>コメント  
  エイリアスは、オブジェクトがメモリ内にある間は、特定のオブジェクトを表すラベルです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)   
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4de946c43f94d76547df996cc8d640d7894e58cb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 58469437dfca59e53403e2d128310a8440e30a19
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugreference2compare"></a>IDebugReference2::Compare
 別の 1 つの参照を比較します。 将来使用するために予約されています。  
@@ -49,6 +50,6 @@ int Compare (
 ## <a name="return-value"></a>戻り値  
  常に `E_NOTIMPL` を返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)   
  [REFERENCE_COMPARE](../../../extensibility/debugger/reference/reference-compare.md)

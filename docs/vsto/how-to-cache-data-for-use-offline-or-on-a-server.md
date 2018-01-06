@@ -22,11 +22,12 @@ caps.latest.revision: "49"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7a8da60aa9d9dc3ab7becb56b3b4c7701494daef
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 07d467d67c78f6779a8be2d21b266f8328e30ff7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>方法 : オフラインで使用するデータまたはサーバー上で使用するデータをキャッシュする
   オフラインをマーキングするドキュメントでキャッシュに保存するデータ項目使用できるようにします。 できるようになります、データのドキュメントがサーバーに格納されている場合、他のコードによって操作されるドキュメントにします。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  **プロパティ**ウィンドウで、設定、**修飾子**プロパティを**パブリック**(既定では、**内部**)。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データのキャッシュ](../vsto/caching-data.md)   
  [方法: Office ドキュメント内のデータ ソースをプログラムでキャッシュ](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)   
  [方法: パスワードで保護されたドキュメント内のデータをキャッシュします。](../vsto/how-to-cache-data-in-a-password-protected-document.md)   

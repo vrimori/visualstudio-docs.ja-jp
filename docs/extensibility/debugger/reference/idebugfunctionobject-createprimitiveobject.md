@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5c612c9bc2b535c61322364690f18699218365c9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c72dd6d804c37496d2615ccd086ee095c75510d6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugfunctionobjectcreateprimitiveobject"></a>IDebugFunctionObject::CreatePrimitiveObject
 単純な整数などのプリミティブ データ オブジェクトを作成します。  
@@ -52,5 +53,5 @@ int CreatePrimitiveObject(
 ## <a name="remarks"></a>コメント  
  パラメーターによって表される関数を指定するプリミティブ オブジェクトを表すオブジェクトを作成するには、このメソッドを呼び出す、 [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)インターフェイスです。 たとえば、式の文字列が"myString(5)"の場合は、5 の整数を表すオブジェクトを作成するこのメソッドが使用されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

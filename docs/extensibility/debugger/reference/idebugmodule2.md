@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: dd8600c592993d24d07add88425e534d5ae99867
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4ffa4044e6490f8de8228541787b7bf8ab80285a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugmodule2"></a>IDebugModule2
 このインターフェイスは、モジュールを表す-プログラムの実行可能ファイル、単位は、— DLL などです。  
@@ -50,14 +51,14 @@ IDebugModule2 : IUnknown
 ## <a name="remarks"></a>コメント  
  モジュールの情報に表示できる、**モジュール**IDE のウィンドウ。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)   
  [GetModule](../../../extensibility/debugger/reference/idebugmoduleloadevent2-getmodule.md)   

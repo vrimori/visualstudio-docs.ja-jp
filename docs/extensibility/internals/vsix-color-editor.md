@@ -11,11 +11,12 @@ caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7987d2b6d22893e82893755ed76fa5253aeb600c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: aa699e0c6d4d23ec6e5cdc347627a98efb623672
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vsix-color-editor"></a>VSIX カラー エディター
 Visual Studio 拡張機能カラー エディターのツールでは、作成でき、Visual Studio のカスタム カラーを編集することができます。 ツールの色は、コードで使用できるようにするテーマのリソース キーを生成できます。 このツールは、色のテーマをサポートする Visual Studio 拡張機能の作成に役立ちます。 このツールは、.pkgdef および .xml ファイルを開くことができます。 Visual Studio のテーマ (.vstheme ファイル) をファイル拡張子を .xml に変更することによって Visual Studio 拡張機能カラー エディターで使用できます。 さらに、.vstheme ファイルは、現在の .xml ファイルにインポートできます。  

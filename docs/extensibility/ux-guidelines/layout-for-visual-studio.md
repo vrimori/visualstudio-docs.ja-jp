@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0ebb82c49820bdd664324984bd7d3bb88a5bb5fd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ef3c590a82fc3a7b89d21684ffe2e4b0f216ca98
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="layout-for-visual-studio"></a>Visual Studio のレイアウト
 Visual Studio のダイアログ ボックスの大半は[ユーティリティ ダイアログのレイアウト](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_UtilityDialogLayout)、ダイアログ ボックスに従ってその標準は、unthemed [Windows デスクトップ ダイアログのレイアウトの基本原則](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742499\(v=vs.85\).aspx)です。 移動に伴い Visual Studio に UI を更新するより高いのダイアログ ボックスのある新しいデザイン エクスペリエンスの製品を定義するように確立します。 これら[テーマが適用されたダイアログのレイアウト](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_ThemedDialogLayout)テーマの外観にする場合します。  
@@ -157,7 +158,7 @@ Visual Studio のダイアログ ボックスの大半は[ユーティリティ 
   
  **図の 08.01 k: テーマが適用されたダイアログの色**  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のアプリケーション パターン](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md)   
  [コントロール (Windows)](https://msdn.microsoft.com/library/windows/desktop/dn742399.aspx)   
  [ダイアログ ボックス (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742499\(v=vs.85\).aspx)

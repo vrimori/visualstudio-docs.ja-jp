@@ -19,11 +19,12 @@ caps.latest.revision: "38"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 97cf47eafc99abefeebce0f69ac2840617fb35e2
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: 9f510759d878792a31913fef8596ae6829cf74f8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>T4 テキスト テンプレートを使用したデザイン時コード生成
 デザイン時 T4 テキスト テンプレートを使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトのプログラム コードや他のファイルを生成できます。 データに応じて生成されるコードが異なるようにするテンプレートを記述する通常、*モデル*です。 モデルは、ファイルまたはアプリケーションの要件に関する重要な情報を含むデータベースです。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/22/2017
   
 5.  ファイルを保存します。  
   
-     表示される、**セキュリティ警告**テンプレートを実行することを確認することを確認するメッセージ ボックスです。 **[OK]** をクリックします。  
+     表示される、**セキュリティ警告**テンプレートを実行することを確認することを確認するメッセージ ボックスです。 **[OK]**をクリックします。  
   
 6.  **ソリューション エクスプ ローラー**、テンプレート ファイル ノードを展開し、拡張子を持つファイルが表示されます、 **.txt**です。 このファイルには、テンプレートから生成されたテキストが格納されています。  
   
@@ -363,7 +364,7 @@ Warning("A warning message");
 ## <a name="guidelines-for-code-generation"></a>コード生成のガイドライン  
  参照してください[T4 テキスト テンプレートの記述に関するガイドライン](../modeling/guidelines-for-writing-t4-text-templates.md)です。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
   
 |次の手順|トピック|  
 |---------------|-----------|  
@@ -373,5 +374,5 @@ Warning("A warning message");
 |ドメイン固有言語の形式でデータを変換する。|[ドメイン固有言語からのコード生成](../modeling/generating-code-from-a-domain-specific-language.md)|  
 |独自のデータ ソースを変換するためのディレクティブ プロセッサを作成する。|[T4 テキスト変換のカスタマイズ](../modeling/customizing-t4-text-transformation.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [T4 テキスト テンプレートの記述に関するガイドライン](../modeling/guidelines-for-writing-t4-text-templates.md)

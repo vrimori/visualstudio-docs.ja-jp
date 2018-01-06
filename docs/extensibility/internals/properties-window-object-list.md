@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: dad79623bbc721c67c19a37436d2bf5e64b93c59
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: feec1e85287b3a1c24ce3c328227ba0455ae044b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-window-object-list"></a>プロパティ ウィンドウ オブジェクトの一覧
 オブジェクトの一覧で、**プロパティ**ウィンドウがドロップダウン リストを 1 つまたは複数の選択したウィンドウ内で使用できる他のオブジェクトへの選択を変更することができます。 呼び出しをトリガー内でのこの一覧から別のオブジェクトを選択すると<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A>に新しいオブジェクトが選択されている環境を通知します。 表示される情報、**プロパティ**ウィンドウは、新しく選択したオブジェクトに関連付けられたプロパティを表示する変更です。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/31/2017
   
  COM オブジェクトを実装しない場合<xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo>、**プロパティ**ウィンドウには、一覧の左側にあるオブジェクト名の代わりにインターフェイス名が表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロパティの拡張](../../extensibility/internals/extending-properties.md)
