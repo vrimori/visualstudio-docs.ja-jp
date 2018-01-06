@@ -6,23 +6,23 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords: vs.debug.error.callback_kerberos_auth_failed
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
-ms.assetid: c18053f9-9074-4bc3-a8bf-13e4acbea921
 caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 37dc0626a1f96d20aa7cf1cb4a3ca2d811d391b4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5c34b15d1611eaad106f3843070620af4470bc04
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="error-kerberos-authentication-failed"></a>エラー : Kerberos 認証に失敗しました。
 リモート デバッグを実行するときに、次のエラー メッセージが表示されることがあります。  
@@ -61,6 +61,6 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
   
 5.  IP アドレス値を比較します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)   
  [Remote Debugging](../debugger/remote-debugging.md)

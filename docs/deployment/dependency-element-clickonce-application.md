@@ -30,11 +30,12 @@ caps.latest.revision: "34"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 7a0604113161fed432219f84ac6c4d8a6a4d7666
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 7c3319661a4c0df298cd844c4d71c6855cad818c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdependencygt-element-clickonce-application"></a>&lt;依存関係&gt;要素 (ClickOnce アプリケーション)
 アプリケーションに必要なプラットフォームやアセンブリ依存関係を識別します。  
@@ -95,54 +96,54 @@ ms.lasthandoff: 10/27/2017
  `dependency`要素、属性を持っていないと、次の子要素が含まれています。  
   
 ### <a name="dependentos"></a>dependentOS  
- 省略可能です。 含まれています、`osVersionInfo`要素。 `dependentOS`と`dependentAssembly`要素が相互に排他的な: のどちらか一方に存在する必要があります、`dependency`要素が、両方は使用できません。  
+ 任意。 含まれています、`osVersionInfo`要素。 `dependentOS`と`dependentAssembly`要素が相互に排他的な: のどちらか一方に存在する必要があります、`dependency`要素が、両方は使用できません。  
   
  `dependentOS`次の属性をサポートしています。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`supportUrl`|省略可能です。 依存するプラットフォームのサポート URL を指定します。 必要なプラットフォームが見つかった場合、この URL はユーザーに表示されます。|  
-|`description`|省略可能です。 記述されているオペレーティング システムを人間が判読できる形式は、説明、`dependentOS`要素。|  
+|`supportUrl`|任意。 依存するプラットフォームのサポート URL を指定します。 必要なプラットフォームが見つかった場合、この URL はユーザーに表示されます。|  
+|`description`|任意。 記述されているオペレーティング システムを人間が判読できる形式は、説明、`dependentOS`要素。|  
   
 ### <a name="osversioninfo"></a>osVersionInfo  
- 必ず指定します。 この要素は `dependentOS` 要素の子であり、`os` 要素を含んでいます。 この要素には属性はありません。  
+ 必須。 この要素は `dependentOS` 要素の子であり、`os` 要素を含んでいます。 この要素には属性はありません。  
   
 ### <a name="os"></a>os  
- 必ず指定します。 この要素は `osVersionInfo` 要素の子です。 この要素には、次の属性があります。  
+ 必須。 この要素は `osVersionInfo` 要素の子です。 この要素には、次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`majorVersion`|必須です。 OS のメジャー バージョン番号を指定します。|  
-|`minorVersion`|必須です。 OS のマイナー バージョン番号を指定します。|  
-|`buildNumber`|必須です。 OS のビルド番号を指定します。|  
-|`servicePackMajor`|必須です。 OS のサービス パックのメジャー番号を指定します。|  
-|`servicePackMinor`|省略可能です。 OS のサービス パックのマイナー番号を指定します。|  
-|`productType`|省略可能です。 Product 型の値を識別します。 有効な値は `server`、`workstation`、`domainController` です。 たとえば、Windows 2000 Professional では、この属性値は`workstation`します。|  
-|`suiteType`|省略可能です。 システム、またはシステムの構成の種類で使用できる製品スイートを識別します。 有効な値は`backoffice`、 `blade`、 `datacenter`、 `enterprise`、 `home`、 `professional`、 `smallbusiness`、 `smallbusinessRestricted`、および`terminal`です。 たとえば、Windows 2000 Professional では、この属性値は`professional`します。|  
+|`majorVersion`|必須。 OS のメジャー バージョン番号を指定します。|  
+|`minorVersion`|必須。 OS のマイナー バージョン番号を指定します。|  
+|`buildNumber`|必須。 OS のビルド番号を指定します。|  
+|`servicePackMajor`|必須。 OS のサービス パックのメジャー番号を指定します。|  
+|`servicePackMinor`|任意。 OS のサービス パックのマイナー番号を指定します。|  
+|`productType`|任意。 Product 型の値を識別します。 有効な値は `server`、`workstation`、`domainController` です。 たとえば、Windows 2000 Professional では、この属性値は`workstation`します。|  
+|`suiteType`|任意。 システム、またはシステムの構成の種類で使用できる製品スイートを識別します。 有効な値は`backoffice`、 `blade`、 `datacenter`、 `enterprise`、 `home`、 `professional`、 `smallbusiness`、 `smallbusinessRestricted`、および`terminal`です。 たとえば、Windows 2000 Professional では、この属性値は`professional`します。|  
   
 ### <a name="dependentassembly"></a>dependentAssembly  
- 省略可能です。 含まれています、`assemblyIdentity`要素。 `dependentOS`と`dependentAssembly`要素が相互に排他的な: のどちらか一方に存在する必要があります、`dependency`要素が、両方は使用できません。  
+ 任意。 含まれています、`assemblyIdentity`要素。 `dependentOS`と`dependentAssembly`要素が相互に排他的な: のどちらか一方に存在する必要があります、`dependency`要素が、両方は使用できません。  
   
  `dependentAssembly`次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`dependencyType`|必須です。 依存関係の種類を指定します。 有効値は `preprequisite` または `install` です。 `install`アセンブリがの一部としてインストールされている、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。 A`prerequisite`アセンブリは、前に、グローバル アセンブリ キャッシュ (GAC) 内に存在する必要があります、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションをインストールできます。|  
-|`allowDelayedBinding`|必須です。 アセンブリが実行時にプログラムによってアンロードできるかどうかを指定します。|  
-|`group`|省略可能です。 場合、`dependencyType`属性に設定されている`install`アセンブリの名前付きグループの要求時にのみインストールを指定します。 詳細については、「[チュートリアル : デザイナーを使用し、ClickOnce 配置 API で必要に応じてアセンブリをダウンロードする](../deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer.md)」を参照してください。<br /><br /> 場合に設定`framework`と`dependencyType`属性に設定されている`prerequisite`、.NET Framework の一部として、アセンブリを指定します。 このアセンブリをインストールする場合、グローバル アセンブリ キャッシュ (GAC) はチェックされません[!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)]以降のバージョン。|  
+|`dependencyType`|必須。 依存関係の種類を指定します。 有効値は `preprequisite` または `install` です。 `install`アセンブリがの一部としてインストールされている、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。 A`prerequisite`アセンブリは、前に、グローバル アセンブリ キャッシュ (GAC) 内に存在する必要があります、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションをインストールできます。|  
+|`allowDelayedBinding`|必須。 アセンブリが実行時にプログラムによってアンロードできるかどうかを指定します。|  
+|`group`|任意。 場合、`dependencyType`属性に設定されている`install`アセンブリの名前付きグループの要求時にのみインストールを指定します。 詳細については、「[チュートリアル : デザイナーを使用し、ClickOnce 配置 API で必要に応じてアセンブリをダウンロードする](../deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer.md)」を参照してください。<br /><br /> 場合に設定`framework`と`dependencyType`属性に設定されている`prerequisite`、.NET Framework の一部として、アセンブリを指定します。 このアセンブリをインストールする場合、グローバル アセンブリ キャッシュ (GAC) はチェックされません[!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)]以降のバージョン。|  
 |`codeBase`|必要なときに、`dependencyType`属性に設定されている`install`です。 依存アセンブリへのパス。 可能性があります絶対パス、またはマニフェストのコードへの相対パスのいずれか基本。 このパスは有効であるアセンブリ マニフェストの順序で、有効な URI である必要があります。|  
 |`size`|必要なときに、`dependencyType`属性に設定されている`install`です。 バイト単位で、依存アセンブリのサイズ。|  
   
 ### <a name="assemblyidentity"></a>assemblyIdentity  
- 必ず指定します。 この要素は `dependentAssembly` 要素の子であり、以下の属性があります。  
+ 必須。 この要素は `dependentAssembly` 要素の子であり、以下の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`name`|必須です。 アプリケーションの名前を識別します。|  
-|`version`|必須です。 次の形式で、アプリケーションのバージョン番号を指定します。`major.minor.build.revision`|  
-|`publicKeyToken`|省略可能です。 最後の 8 バイトを表す 16 文字の 16 進文字列を指定、`SHA-1`アプリケーションまたはアセンブリが署名に使用された公開キーのハッシュ値。 カタログに署名するために使用する公開キーは、2048 ビット以上にする必要があります。|  
-|`processorArchitecture`|省略可能です。 プロセッサを指定します。 有効な値は`x86`32 ビット Windows 用と`I64`64 ビット Windows 用です。|  
-|`language`|省略可能です。 アセンブリの EN-US など、2 部構成の言語コードを識別します。|  
+|`name`|必須。 アプリケーションの名前を識別します。|  
+|`version`|必須。 次の形式で、アプリケーションのバージョン番号を指定します。`major.minor.build.revision`|  
+|`publicKeyToken`|任意。 最後の 8 バイトを表す 16 文字の 16 進文字列を指定、`SHA-1`アプリケーションまたはアセンブリが署名に使用された公開キーのハッシュ値。 カタログに署名するために使用する公開キーは、2048 ビット以上にする必要があります。|  
+|`processorArchitecture`|任意。 プロセッサを指定します。 有効な値は`x86`32 ビット Windows 用と`I64`64 ビット Windows 用です。|  
+|`language`|任意。 アセンブリの EN-US など、2 部構成の言語コードを識別します。|  
   
 ### <a name="hash"></a>hash  
  `hash`要素の省略可能な子では、`assemblyIdentity`要素。 `hash`要素に属性がありません。  
@@ -219,6 +220,6 @@ ms.lasthandoff: 10/27/2017
 </dependency>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)   
  [\<依存関係 > 要素](../deployment/dependency-element-clickonce-deployment.md)

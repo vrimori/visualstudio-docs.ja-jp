@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9da2cd7b8a99d750692a69be406c9c8f82c461d1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 46c030a3c81f4b49fc66a06ee55d797dfe9119dc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-net-framework-source"></a>方法 : .NET Framework ソースをデバッグする
 最新バージョン[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]の新機能を提供[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]デバッグします。 デバッグする[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]、ソース コードのデバッグ シンボルへのアクセスが必要です。 ステップ インを有効にする必要も[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]ソース。  
@@ -37,9 +38,9 @@ ms.lasthandoff: 10/31/2017
   
 3.  **全般**ボックスで、設定**を有効にする .NET Framework**ソースのステッピングします。  
   
-    1.  [マイ コードのみ] が有効だった場合、[マイ コードのみ] が無効になったことを示す警告ダイアログ ボックスが表示されます。 **[OK]** をクリックします。  
+    1.  [マイ コードのみ] が有効だった場合、[マイ コードのみ] が無効になったことを示す警告ダイアログ ボックスが表示されます。 **[OK]**をクリックします。  
   
-    2.  シンボル キャッシュの場所が設定されていない場合は、既定のシンボル キャッシュの場所が設定されたことを示す別の警告ダイアログ ボックスが表示されます。 **[OK]** をクリックします。  
+    2.  シンボル キャッシュの場所が設定されていない場合は、既定のシンボル キャッシュの場所が設定されたことを示す別の警告ダイアログ ボックスが表示されます。 **[OK]**をクリックします。  
   
 4.  下にある、**デバッグ**カテゴリで、をクリックして**シンボル**です。  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/31/2017
   
      シンボルを即時にダウンロードしない場合、次にプログラムのデバッグを開始するときにシンボルは自動的にダウンロードされます。  
   
-7.  をクリックして**OK**を閉じる、**オプション** ダイアログ ボックス。  
+7.  **[OK]** をクリックして、**[オプション]** ダイアログ ボックスを閉じます。  
   
 ### <a name="to-load-framework-symbols-using-the-modules-window"></a>[モジュール] ウィンドウを使用して Framework シンボルを読み込むには  
   
@@ -71,6 +72,6 @@ ms.lasthandoff: 10/31/2017
   
 2.  指す**シンボルの読み込み元** をクリック**Microsoft シンボル サーバー**または**シンボル パス**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)   
  [シンボル (.pdb) を指定して、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

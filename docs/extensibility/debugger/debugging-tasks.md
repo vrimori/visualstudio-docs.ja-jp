@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c8bd22d71753a8bf86adbe2b437407481388c48d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d1a6ffff4d3ac0410ca3de7e2cd595119763e88b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-tasks"></a>タスクのデバッグ
 プログラムをデバッグする場合、起動する必要あるしデバッグ エンジン (DE) に接続する必要があります。 追加しない、DE は、以前に起動されたプログラムに関連付ける必要があります。 アタッチされる、デは特定スタートアップ イベントを生成する必要があります。 応答して、デバッグ パッケージは、IDE で設定されたブレークポイントをバインドしようとします。 プログラムでバインドされたブレークポイントに達すると停止し、ユーザー入力を待機します。  
@@ -57,5 +58,5 @@ ms.lasthandoff: 10/31/2017
  [デバッガー コンテキスト](../../extensibility/debugger/debugger-contexts.md)  
  デの動作方法に同時にコード、ドキュメント、および式の評価のコンテキスト内でについて説明します。 3 つのコンテキスト、場所、位置、またはそれに関連する評価ごとに説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [はじめに](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)

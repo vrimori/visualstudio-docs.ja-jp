@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 4a8ed7ebbd3fc2fc35e9145509ebf335652c4bbd
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: fbeaf6655ffc3e05afd9633add0defde9368a419
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors"></a>方法 : ClickOnce 配置エラー用にカスタム ログ ファイルの場所を設定する
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]すべての展開のログ ファイルのアクティブ化を保持します。 これらのログ記録のインストールと初期化に関連するすべてのエラー、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開します。 既定では、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]各展開のライセンス認証のための 1 つのログ ファイルを作成します。 インターネット一時ファイル フォルダーに、これらのログ ファイルを格納します。 アクティベーション エラーが発生し、ユーザーがクリックしたときに、展開のログ ファイルが、ユーザーに表示される**詳細**結果のエラー ダイアログ ボックス。  
@@ -49,5 +50,5 @@ ms.lasthandoff: 10/27/2017
   
      この場所は、ユーザーが書き込みアクセスしているディレクトリにする必要があります。 たとえば、Windows Vista で、次のフォルダー構造を作成し、設定`LogFilePath`C:\Users に\\< ユーザー名\>\Documents\Logs\ClickOnce\installation.log です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce 配置のトラブルシューティング](../deployment/troubleshooting-clickonce-deployments.md)

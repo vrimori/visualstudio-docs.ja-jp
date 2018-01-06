@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3220e3c6ef1a20b8a434fbfab13b419beb331032
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 15f9eff023fa875499881eb05a0795b0eaa83842
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-events"></a>コントロールのイベント
 プログラムの制御された実行中にイベントを送信する必要があります。 使用して送信されるすべてのイベントは、 [IDebugEvent2](../../extensibility/debugger/reference/idebugevent2.md)インターフェイスし、属性を実装する必要がありますが、 [IDebugEvent2::GetAttributes](../../extensibility/debugger/reference/idebugevent2-getattributes.md)メソッドです。  
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/31/2017
   
  文字列形式の出力を書き込む、エンジンを実装する必要があります、 [IDebugOutputStringEvent2::GetString](../../extensibility/debugger/reference/idebugoutputstringevent2-getstring.md)メソッドです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [実行の制御と状態の評価](../../extensibility/debugger/execution-control-and-state-evaluation.md)

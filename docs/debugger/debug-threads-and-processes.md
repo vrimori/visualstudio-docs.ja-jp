@@ -23,11 +23,12 @@ caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ad52c8f9b2580538b573eb2ef66164040ca66b25
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e6c6c8c239d27952c35486be308e5947aff50952
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tools-to-debug-threads-and-processes-in-visual-studio"></a>Visual Studio のスレッドおよびプロセスをデバッグするためのツール
 *スレッド*と*プロセス*コンピューター科学における関連する概念です。 いずれも特定の順序で実行する必要がある命令のシーケンスを表します。 ただし、別個のスレッドやプロセスの命令は並列実行できます。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/31/2017
 |**タスク**ウィンドウ|-に関する情報の表示<xref:System.Threading.Tasks.Task>タスク ID、タスクの状態を含むオブジェクト (スケジュール済み、実行中、待機中、デッドロック)、スレッドがタスクに割り当てられているとします。<br />の呼び出し履歴内現在の場所。<br />デリゲートの作成時に、タスクに渡されます|-現在のタスクへの切り替え<br />-フラグを設定または解除タスク<br />-凍結または凍結解除するタスク|  
 |**GPU スレッド**ウィンドウ|-フラグ列。 特に注意することをスレッドのマークを付けることができます。<br />-現在のスレッドの列、黄色の矢印が、現在のスレッドを示します。<br />-**スレッド数**列で、同じ場所にあるスレッドの数を表示します。<br />-**行**列で、スレッドの各グループが配置されているコードの行が表示されます。<br />-**アドレス**列で、スレッドの各グループがある命令アドレスが表示されます。<br />-**場所**列で、アドレスのコード内の位置です。<br />-**ステータス**列で、スレッドがアクティブまたはブロックされているかどうかを示します。<br />-**タイル**列で、行のスレッドのタイル インデックスを示します。|-別のスレッドに変更します。<br />-特定のタイルとスレッドを表示します。<br />-表示、または列を非表示<br />-列による並べ替え<br />-グループのスレッド<br />-凍結またはスレッドを凍結解除<br />-フラグまたはスレッドのフラグの解除<br />-フラグが設定されたスレッドのみを表示します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [実行中のプロセスをアタッチします。](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
  [マルチ スレッド アプリケーションをデバッグします。](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [GPU コードのデバッグ](../debugger/debugging-gpu-code.md)

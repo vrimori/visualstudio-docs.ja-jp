@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3484ac7aa26f630245a471a234dd19468e50ebf0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 345dbfd982c2e80fadc0f4c3d9484c662b6090ac
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor"></a>Microsoft Visual Studio リモート デバッグ モニターに接続できません。
 このメッセージは、リモート デバッグ モニターが正しく設定されていないリモート コンピューター上またはリモート コンピューターがネットワークの問題またはファイアウォールが存在するためにアクセスできなくなっているために発生する可能性があります。
@@ -169,5 +170,5 @@ Visual Studio でのプロジェクト プロパティを確認し、サーバ�
 ## <a name="more-help"></a>その他のヘルプ  
  複数のリモート デバッガーのヘルプを表示する、リモート デバッガーのヘルプ ページを開きます (**ヘルプ > 使用状況**リモート デバッガーで)。
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Remote Debugging](../debugger/remote-debugging.md)

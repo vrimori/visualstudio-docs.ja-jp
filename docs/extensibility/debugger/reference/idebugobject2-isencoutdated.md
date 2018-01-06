@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e8776288baf97ea9bf6b8c4b9b9f4a055ab88949
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 757e533f855ab1bc276e484d46d6866b0dd6ca40
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugobject2isencoutdated"></a>IDebugObject2::IsEncOutdated
 このメソッドは、またはこのオブジェクトの親コンテナーのエディット コンティニュの状態が最新かどうかを判断します。 カスタム式エバリュエーターではこのメソッドを常に返すを実装していません`E_NOTIMPL`です。  
@@ -47,5 +48,5 @@ int IsEncOutdated(
 > [!NOTE]
 >  カスタム式エバリュエーターを常に返します`E_NOTIMPL`です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

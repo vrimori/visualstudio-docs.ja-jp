@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 07ce61a0188802455c4e64b698344c3f275215bd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: bea908ee04913c5ec56678f1438229e045bf68c7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-thetext-view-by-using-the-legacy-api"></a>レガシ API を使用してテキスト ビューにアクセスします。
 テキスト ビューは、テキスト バッファーに格納されているテキストのプレゼンテーションです。 テキスト ビューは、次のセクションで示すようにレガシ API を使用してアクセスできます。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 10/31/2017
   
  使用して、テキスト ビューに関するイベント通知が提供される、`T:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEvents`インターフェイスです。 テキスト ビューへの変更通知を受信するクライアント オブジェクトには、このインターフェイスを実装します。 使用してテキスト ビューには、このインターフェイスを公開、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer>ビューからの変更通知を受信するテキスト ビュー上のインターフェイスです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レガシ API を使用してビューの設定を変更します。](../extensibility/changing-view-settings-by-using-the-legacy-api.md)   
  [テキスト マネージャーを使用して、グローバル設定を監視するには](../extensibility/using-the-text-manager-to-monitor-global-settings.md)

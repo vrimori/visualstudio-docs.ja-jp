@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 41a601febff80b002512a3783d8405dc42e5d766
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: a3a2770933f4a9f600b12a2d601deca855de3a94
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>方法: エンド ユーザーがインストールを開始する場所を指定する
 発行するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションでは、ユーザーにアクセスする、アプリケーションをダウンロードしてインストール場所は必ずしもアプリケーションを最初に発行する場所です。 たとえば、組織によっては、開発者が、ステージング サーバーにアプリケーションを公開可能性があり、管理者は、アプリケーションを Web サーバーに移動し、します。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/27/2017
   
 3.  インストールの URL フィールドに入力形式 http://www.microsoft.com/ApplicationName または形式を使用して UNC パスを使用して完全修飾 URL を使用して、インストール場所\\\Server\ApplicationName です。  
   
-## <a name="see-also"></a>関連項目  
- [方法: Visual Studio がファイルをコピーする場所を指定します。](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)   
+## <a name="see-also"></a>参照  
+ [方法: Visual Studio がファイルをコピーする場所を指定する](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)   
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
  [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 22a50c85db54ed58b675253bb071c4aab47fe197
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 49ea73293e8cc491b515644a7e7d3f226a799339
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clickonce-deployment-on-windows-vista"></a>Windows Vista の ClickOnce 配置
 Visual Studio でアプリケーションの構築 Windows Vista でユーザー アカウント制御 (UAC) は、通常、埋め込みマニフェストを生成するには、アプリケーションの実行可能ファイルに XML データをバイナリとしてにエンコードされます。 ClickOnce と登録を必要としない COM アプリケーションは外部マニフェストが必要なために、Visual Studio はこれらの種類の埋め込まれたマニフェストではなく、UAC データを含むプロジェクト ファイルを生成します。 Visual Studio の既定では、ユーザーが (ClickOnce と登録を必要としない COM デプロイメント用)、外部の UAC マニフェスト情報を生成するか、アプリケーションの実行可能ファイル (それ以外の場合は) に埋め込むアプリケーション マニフェストと呼ばれるファイルから情報が使用されます。 Visual Studio には、マニフェスト生成のための次のオプションが用意されています。  
@@ -50,7 +51,7 @@ Visual Studio でアプリケーションの構築 Windows Vista でユーザー
   
  マニフェスト生成のための Visual Basic プロジェクトの構成については、次を参照してください。[アプリケーション ページで、プロジェクト デザイナー) (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)   
  [ユーザーのアクセス許可と Visual Studio](http://msdn.microsoft.com/en-us/d5c55084-1e7b-4b61-b478-137db01c0fc0)   
  [[アプリケーション] ページ (プロジェクト デザイナー) (C#)](../ide/reference/application-page-project-designer-csharp.md)   

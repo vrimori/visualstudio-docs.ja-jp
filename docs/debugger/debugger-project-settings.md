@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 771506897b5c40242c26a06db4e176e6eb785b21
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: e3ae16740868fcbd0fdd98f35afed4290fae5905
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugger-project-settings"></a>デバッガーに関連するプロジェクト設定
 一部のプロジェクト設定がデバッグに影響することもあります。 これらの設定により、デバッガーで参照するディレクトリ、プログラムを起動するためのコマンドとコマンド引数、プログラム用に作成されるデバッグ情報の種類などが決まります。 デバッグ設定は、 **[プロパティ ページ]** ダイアログ ボックスで変更できます。  
@@ -60,5 +61,5 @@ ms.lasthandoff: 11/11/2017
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)  
  デバッグに関連するプロパティ設定と、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッガーを使用してプログラムをデバッグするために必要な準備作業について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)

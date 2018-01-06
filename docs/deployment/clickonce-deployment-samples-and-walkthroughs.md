@@ -21,18 +21,19 @@ caps.latest.revision: "6"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 263e3d9a01912c1b47dd518cfc9cd270937e4b7c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 68c8f730bf684688cb09970a58ab79101022d4d8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clickonce-deployment-samples-and-walkthroughs"></a>ClickOnce 配置のサンプルとチュートリアル
 このセクションには、Windows フォーム、WPF、コンソール アプリケーションの配置に使用されるサンプル アプリケーション、コード例、そして、構文、構造、および技法について説明した、詳細なチュートリアルが含まれています。  
   
  サンプル コードは説明を目的としたものであり、実際に配置されるソリューションで変更を加えずに使用することは避けてください。 特に、セキュリティには十分な注意が必要です。  
   
-## <a name="clickonce-deployment"></a>ClickOnce の配置  
+## <a name="clickonce-deployment"></a>ClickOnce 配置  
   
 |トピック|説明|  
 |-----------|-----------------|  
@@ -40,6 +41,6 @@ ms.lasthandoff: 10/27/2017
 |[ClickOnce 配置 API で必要に応じてアセンブリをダウンロードします。](../deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api.md)|アプリケーション内の特定のアセンブリに "オプション" マークを付ける方法、および <xref:System.Deployment.Application> 名前空間にあるクラスを使用して、それらのアセンブリをダウンロードする方法について説明します。|  
 |[ClickOnce 配置 API デザイナーを使用してアセンブリをダウンロードします。](../deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer.md)|アプリケーションで初めて使用するときにのみアプリケーション アセンブリをダウンロードする方法を説明します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のチュートリアル](http://msdn.microsoft.com/en-us/f5399a1f-2d3d-42fb-b989-134ccda2159f)   
  [Visual Studio のサンプル](../ide/visual-studio-samples.md)

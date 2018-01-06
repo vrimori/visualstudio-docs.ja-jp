@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: fbe35de06ac09c95a045748a5d8ecb379779a20a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 862f51aa7d124c3dbaa6514b666d74c26334e299
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clickonce-and-application-settings"></a>ClickOnce とアプリケーション設定
 Windows フォームのアプリケーション設定を簡単を作成、格納、およびカスタム アプリケーションと、クライアント上のユーザー設定を管理できます。 次のドキュメントでは、ClickOnce アプリケーションにおけるアプリケーション設定ファイルのしくみし、ユーザーは、次のバージョンにアップグレードしたときに、ClickOnce が設定を移行する方法について説明します。  
@@ -29,11 +30,11 @@ Windows フォームのアプリケーション設定を簡単を作成、格納
  以下の情報が既定のアプリケーションの設定プロバイダーにのみ適用されます、<xref:System.Configuration.LocalFileSettingsProvider>クラスです。 カスタム プロバイダーを提供する場合、そのプロバイダーは、そのデータを格納するしくみと、バージョン間で設定をアップグレードする方法に判断されます。 アプリケーション設定プロバイダーの詳細については、次を参照してください。[アプリケーション設定アーキテクチャ](/dotnet/framework/winforms/advanced/application-settings-architecture)です。  
   
 ## <a name="application-settings-files"></a>アプリケーション設定ファイル  
- アプリケーションの設定は、2 つのファイルを消費:*アプリ*..exe.config に変更し、user.config 場所*アプリ*Windows フォーム アプリケーションの名前を指定します。 user.config がアプリケーションには、ユーザー スコープ設定が格納されて、クライアント、最初の時間に作成されます。 *アプリ*。.exe.config でこれに対し、が存在して展開する前に設定の既定値を定義する場合。 Visual Studio はこのファイルは自動的に追加するときにその**発行**コマンド。 このファイルに含まれることを確認する必要があります Mage.exe または MageUI.exe を使用して ClickOnce アプリケーションを作成する場合、アプリケーション マニフェストを作成するときに、アプリケーションの他のファイルです。  
+ アプリケーションの設定は、2 つのファイルを消費:*アプリ*.exe.config に変更し、user.config 場所*アプリ*Windows フォーム アプリケーションの名前を指定します。 user.config がアプリケーションには、ユーザー スコープ設定が格納されて、クライアント、最初の時間に作成されます。 *アプリ*.exe.config でこれに対し、が存在して展開する前に設定の既定値を定義する場合。 Visual Studio はこのファイルは自動的に追加するときにその**発行**コマンド。 このファイルに含まれることを確認する必要があります Mage.exe または MageUI.exe を使用して ClickOnce アプリケーションを作成する場合、アプリケーション マニフェストを作成するときに、アプリケーションの他のファイルです。  
   
- ClickOnce を使用して、アプリケーションの展開されていない Windows フォーム アプリケーションで*アプリ*. ユーザーの user.config ファイルが格納されているアプリケーション ディレクトリに *.exe.config ファイルが格納されている**Documents and Settings**フォルダーです。 ClickOnce アプリケーションに*アプリ*。.exe.config に変更は、ClickOnce アプリケーションのキャッシュ内でアプリケーションのディレクトリに存在しており、user.config がそのアプリケーションの ClickOnce データ ディレクトリ内に存在します。  
+ ClickOnce を使用して、アプリケーションの展開されていない Windows フォーム アプリケーションで*アプリ*. ユーザーの user.config ファイルが格納されているアプリケーション ディレクトリに *.exe.config ファイルが格納されている**Documents and Settings**フォルダーです。 ClickOnce アプリケーションに*アプリ*.exe.config に変更は、ClickOnce アプリケーションのキャッシュ内でアプリケーションのディレクトリに存在しており、user.config がそのアプリケーションの ClickOnce データ ディレクトリ内に存在します。  
   
- アプリケーションの設定により、セーフの読み取りアクセスをアプリケーションの展開方法に関係なく*アプリ*。.exe.config に変更、および user.config にセーフの読み取り/書き込みアクセス。  
+ アプリケーションの設定により、セーフの読み取りアクセスをアプリケーションの展開方法に関係なく*アプリ*.exe.config に変更、および user.config にセーフの読み取り/書き込みアクセス。  
   
  ClickOnce アプリケーションには、アプリケーションの設定で使用される構成ファイルのサイズは、ClickOnce キャッシュのサイズによって制限されます。 詳細については、次を参照してください。 [ClickOnce キャッシュの概要](../deployment/clickonce-cache-overview.md)です。  
   
@@ -54,7 +55,7 @@ Windows フォームのアプリケーション設定を簡単を作成、格納
 ## <a name="clickonce-and-roaming-settings"></a>ClickOnce と設定のローミング  
  ClickOnce では機能しませんローミング設定は、これにより、ネットワーク上のコンピューター間で後に、設定ファイルです。 設定をローミングする場合は、ネットワーク経由での設定を格納するアプリケーションの設定プロバイダーを実装するか、リモート コンピューター上の設定を格納するためには、独自のカスタム設定クラスを開発する必要があります。 設定プロバイダーの詳細については、次を参照してください。[アプリケーション設定アーキテクチャ](/dotnet/framework/winforms/advanced/application-settings-architecture)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)   
  [アプリケーション設定の概要](/dotnet/framework/winforms/advanced/application-settings-overview)   
  [ClickOnce キャッシュの概要](../deployment/clickonce-cache-overview.md)   

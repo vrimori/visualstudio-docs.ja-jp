@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: ef1451626cf980fbd6f096fa5dc92946edebd710
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: a7df31b2d76639ec0eedc353e857fc1c0c8df39b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clickonce-application-manifest"></a>ClickOnce Application Manifest
 A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェストを使用して配置されているアプリケーションを記述する XML ファイルは、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]です。  
@@ -32,13 +33,13 @@ A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケ�
   
 |要素|説明|属性|  
 |-------------|-----------------|----------------|  
-|[\<アセンブリ > 要素](../deployment/assembly-element-clickonce-application.md)|必須です。 最上位の要素です。|`manifestVersion`|  
-|[\<assemblyIdentity > 要素](../deployment/assemblyidentity-element-clickonce-application.md)|必須です。 プライマリ アセンブリを識別、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。|`name`<br /><br /> `version`<br /><br /> `publicKeyToken`<br /><br /> `processorArchitecture`<br /><br /> `language`|  
+|[\<アセンブリ > 要素](../deployment/assembly-element-clickonce-application.md)|必須。 最上位の要素です。|`manifestVersion`|  
+|[\<assemblyIdentity > 要素](../deployment/assemblyidentity-element-clickonce-application.md)|必須。 プライマリ アセンブリを識別、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。|`name`<br /><br /> `version`<br /><br /> `publicKeyToken`<br /><br /> `processorArchitecture`<br /><br /> `language`|  
 |[\<trustInfo > 要素](../deployment/trustinfo-element-clickonce-application.md)|アプリケーションのセキュリティ要件を識別します。|なし|  
-|[\<entryPoint > 要素](../deployment/entrypoint-element-clickonce-application.md)|必須です。 アプリケーション コードのエントリ ポイントを識別します。|`name`|  
-|[\<依存関係 > 要素](../deployment/dependency-element-clickonce-application.md)|必須です。 アプリケーションを実行するために必要な依存関係をそれぞれ識別します。 任意で、プレインストールする必要のあるアセンブリを識別します。|なし|  
-|[\<ファイル > 要素](../deployment/file-element-clickonce-application.md)|省略可能です。 アプリケーションによって使用される各非アセンブリ ファイルを識別します。 ファイルに関連付けられているコンポーネント オブジェクト モデル (COM) 分離データを含めることができます。|`name`<br /><br /> `size`<br /><br /> `group`<br /><br /> `optional`<br /><br /> `writeableType`|  
-|[\<fileAssociation > 要素](../deployment/fileassociation-element-clickonce-application.md)|省略可能です。 アプリケーションに関連付けるファイル拡張子を識別します。|`extension`<br /><br /> `description`<br /><br /> `progid`<br /><br /> `defaultIcon`|  
+|[\<entryPoint > 要素](../deployment/entrypoint-element-clickonce-application.md)|必須。 アプリケーション コードのエントリ ポイントを識別します。|`name`|  
+|[\<依存関係 > 要素](../deployment/dependency-element-clickonce-application.md)|必須。 アプリケーションを実行するために必要な依存関係をそれぞれ識別します。 任意で、プレインストールする必要のあるアセンブリを識別します。|なし|  
+|[\<ファイル > 要素](../deployment/file-element-clickonce-application.md)|任意。 アプリケーションによって使用される各非アセンブリ ファイルを識別します。 ファイルに関連付けられているコンポーネント オブジェクト モデル (COM) 分離データを含めることができます。|`name`<br /><br /> `size`<br /><br /> `group`<br /><br /> `optional`<br /><br /> `writeableType`|  
+|[\<fileAssociation > 要素](../deployment/fileassociation-element-clickonce-application.md)|任意。 アプリケーションに関連付けるファイル拡張子を識別します。|`extension`<br /><br /> `description`<br /><br /> `progid`<br /><br /> `defaultIcon`|  
   
 ## <a name="remarks"></a>コメント  
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト ファイルを使用してデプロイされたアプリケーションを識別する[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]です。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] の詳細については、「[ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)」を参照してください。  
@@ -117,5 +118,5 @@ A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケ�
 </Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)

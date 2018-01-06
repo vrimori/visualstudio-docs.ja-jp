@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 69fbcb828f7fd534e9f086db43f2e63110794b9c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cb12ef13e73e33b213d2b8ca79c2439b517fbda9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introducing-spy"></a>Spy++ の概要
 Spy++ で実行できるタスクは以下のとおりです。  
@@ -53,7 +54,7 @@ Spy++ で実行できるタスクは以下のとおりです。
 > [!NOTE]
 >  Spy++ (64 ビット) のファイル名には "amd" が含まれますが、すべての x64 Windows オペレーティング システムで動作します。  
   
-## <a name="see-also"></a>関連項目 
+## <a name="see-also"></a>参照 
  [方法: spy++ を起動](../debugger/how-to-start-spy-increment.md)   
  [Spy++ の使用](../debugger/using-spy-increment.md)   
  [Spy++ ビュー](../debugger/spy-increment-views.md)   

@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2db510e81231f7802d686b21a977c271a66c5d79
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 70e572b73f8474f77a17989c790f2e7336f9d7a5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-engine"></a>デバッグ エンジン
 デバッグ エンジン (DE) は、実行の制御やブレークポイントなどの式の評価などのデバッグ サービスを提供する、インタープリターまたはオペレーティング システムで動作します。 デはデバッグ中のプログラムの状態を監視します。 これを実現するには、DE は、CPU とは Api からは、ランタイムによって提供されるかどうかは、任意のメソッドはランタイムではサポートされている、使用を使用します。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/31/2017
   
  デは、その特定の実行時の式の構文を理解する DE を有効にする、式エバリュエーターのコンポーネントと連携します。 デは、言語コンパイラによって生成されたシンボリック デバッグ情報にアクセスするシンボル ハンドラー コンポーネントとも連携することができます。 詳細については、次を参照してください。[式エバリュエーター](../../extensibility/debugger/expression-evaluator.md)と[シンボル プロバイダー](../../extensibility/debugger/symbol-provider.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガー コンポーネント](../../extensibility/debugger/debugger-components.md)   
  [式エバリュエーター](../../extensibility/debugger/expression-evaluator.md)   
  [シンボル プロバイダー](../../extensibility/debugger/symbol-provider.md)

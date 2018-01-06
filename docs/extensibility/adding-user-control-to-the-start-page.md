@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 16be8f494b5e8709244568afeb654ae02ca85899
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 448eba0d13a9501c328da79fa31fa66f4376d5df
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-user-control-to-the-start-page"></a>スタート ページにユーザー コントロールを追加します。
 このチュートリアルでは、カスタム スタート ページへの参照を DLL を追加する方法を示します。 例では、ソリューションにユーザー コントロールがユーザー コントロールをビルドし、スタート ページの .xaml ファイルからビルドされたアセンブリを参照を追加します。 新しいタブでは、基本的な Web ブラウザーとして機能する、ユーザー コントロールをホストします。  
@@ -139,7 +140,7 @@ ms.lasthandoff: 10/31/2017
   
 1.  **ソリューション エクスプ ローラー**、スタート ページ プロジェクトを右クリックして**参照** をクリックし、**参照の追加**です。  
   
-2.  **プロジェクト** タブで ** WebUserControl ** をクリックし、 **ok**です。  
+2.  **プロジェクト** タブで **WebUserControl** をクリックし、 **ok**です。  
   
 3.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
   
@@ -187,6 +188,6 @@ ms.lasthandoff: 10/31/2017
   
      カスタム スタート ページが表示されます。 ファイルを変更する場合は、する必要がありますの実験用インスタンスを閉じて、変更、コピー貼り付け、変更されたファイルを開き直します実験用インスタンスの変更を表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コンテナーの WPF コントロール](http://msdn.microsoft.com/en-us/a0177167-d7db-4205-9607-8ae316952566)   
  [チュートリアル: カスタム XAML をスタート ページに追加する](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1fe1c0bb9c3028c70e1be9df9af1de3b0804844e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ceae0f2ea69ce0340565abb85bb002713010407d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-keyboard-shortcuts-to-menu-items"></a>メニュー項目にバインドのキーボード ショートカット
 カスタム メニュー コマンドをキーボード ショートカットをバインドするにのみ、パッケージの .vsct ファイルにエントリを追加します。 このトピックでは、カスタム ボタン、メニュー項目、またはツール バー コマンドにショートカット キーをマップする方法と、既定のエディターのキーボード マッピングを適用またはカスタム エディターを制限する方法について説明します。  
@@ -108,5 +109,5 @@ ms.lasthandoff: 10/31/2017
 <KeyBinding guid="guidVSStd97" id="cmdidBold" editor="guidTestEditorEditorFactory" key1="B" mod1="Control" />  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メニューとコマンドの拡張](../extensibility/extending-menus-and-commands.md)

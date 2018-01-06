@@ -20,11 +20,12 @@ caps.latest.revision: "23"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3ef67cc92119aaa875d1babb43c254e72779d965
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d7405deed95f14314215b869a02bcf8a1afddea2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-with-code-center-premium-source"></a>方法: Code Center Premium ソースをデバッグする
 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] デバッガーでは、Microsoft MSDN Code Center Premium のセキュリティ保護された共有ソースをデバッグできます。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/31/2017
   
      この手順を実行した後、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でのソース コードのデバッグに問題が発生する場合は、以前にキャッシュされて古くなったシンボル ファイルがキャッシュの場所にないかどうかを確認してください。 古いシンボル ファイルは削除してください。  
   
-11. **[OK]** をクリックします。  
+11. **[OK]**をクリックします。  
   
 12. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を再起動して、設定が保持されていることを確認します。  
   
@@ -139,7 +140,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  必要なソースを探します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)   
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [Code Center Premium](http://www.microsoft.com/resources/sharedsource/ccp.mspx)

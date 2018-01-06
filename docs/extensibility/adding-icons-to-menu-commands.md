@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1cdf521228a1878fa94343418bd6a182f9707a2b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 06d90b5174cc9ff2d09d7ccba8b2f39bc1d2a077
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-icons-to-menu-commands"></a>メニュー コマンドにアイコンを追加します。
 コマンドは、メニューとツールバーの両方に表示できます。 ツールバー、アイコンとテキストの両方を使用するコマンドが通常表示されるだけアイコン (領域を節約する) ときにメニューに表示するコマンドの一般的なです。  
@@ -84,6 +85,6 @@ ms.lasthandoff: 10/31/2017
   
 8.  アイコンをテストします。 プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスのコマンドを検索します。 追加したアイコンが表示にする必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張メニューとコマンド](../extensibility/extending-menus-and-commands.md)   
  [VSCT XML スキーマ リファレンス](../extensibility/vsct-xml-schema-reference.md)

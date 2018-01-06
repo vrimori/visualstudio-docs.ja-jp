@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 25bf0a7c570c2c11e09c9e6d98d1f4be05d7adb5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 117d557ad2ee5d7fe3490644162d1995e86c1873
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugdocumenttext2getsize"></a>IDebugDocumentText2::GetSize
 ドキュメントのこの位置でテキストのサイズを取得します。  
@@ -54,5 +55,5 @@ int GetSize(
   
  [C# の場合のみ]両方のパラメーターを指定する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)

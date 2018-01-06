@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dc15612fe7a59516483bb6b077e1b44b44f7fba8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7ad673736334daec79860b9832a056c17781a082
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-writing-a-visualizer-in-visual-basic"></a>チュートリアル : Visual Basic でビジュアライザーを記述する
 このチュートリアルでは、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] を使用して簡単なビジュアライザーを作成する方法を説明します。 このチュートリアルで作成するビジュアライザーは、Windows フォーム メッセージ ボックスを使用して文字列の内容を表示します。 この単純な文字列のビジュアライザーは基本的な例で、プロジェクトに合わせて他のデータ型向けのビジュアライザーを作成するときに参考になります。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  **名前**ボックスで、適切なクラス ライブラリの名前を入力します。 **MyFirstVisualizer**です。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
  クラス ライブラリを作成したら、Microsoft.VisualStudio.DebuggerVisualizers.DLL への参照を追加することによって、この DLL で定義されているクラスを使用できるようにします。 ただし、最初にプロジェクトにわかりやすい名前を付けます。  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  **参照の追加** ダイアログ ボックスで、 **.NET**  タブで、Microsoft.VisualStudio.DebuggerVisualizers.DLL をクリックします。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
 6.  DebuggerSide.vb の `Imports` ステートメントに次のステートメントを追加します。  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 10/31/2017
   
 2.  **参照の追加** ダイアログ ボックスで、 **.NET**  タブで、をクリックして**System.Windows.Forms**です。  
   
-3.  **[OK]** をクリックします。  
+3.  **[OK]**をクリックします。  
   
 4.  DebuggerSide.cs の `Imports` ステートメントに次のステートメントを追加します。  
   
@@ -171,7 +172,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  **名前**ボックスで、コンソール アプリケーションのわかりやすい名前を入力します。 **MyTestConsole**です。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
  次に、必要な参照を追加して、MyTestConsole が MyFirstVisualizer を呼び出すことができるようにします。  
   
@@ -181,13 +182,13 @@ ms.lasthandoff: 10/31/2017
   
 2.  **参照の追加** ダイアログ ボックスで、 **.NET**  タブで、Microsoft.VisualStudio.DebuggerVisualizers をクリックします。  
   
-3.  **[OK]** をクリックします。  
+3.  **[OK]**をクリックします。  
   
 4.  右クリック**MyTestConsole**、クリックして**参照の追加**もう一度です。  
   
 5.  **参照の追加** ダイアログ ボックスをクリックして、**プロジェクト**タブをクリックし、MyFirstVisualizer をクリックします。  
   
-6.  **[OK]** をクリックします。  
+6.  **[OK]**をクリックします。  
   
 ## <a name="finish-your-test-harness-and-test-your-visualizer"></a>テスト ハーネスの終了とビジュアライザーのテスト  
  次に、コードを追加してテスト ハーネスを完成させます。  
@@ -227,7 +228,7 @@ ms.lasthandoff: 10/31/2017
   
  作成したビジュアライザーをテスト ハーネスから呼び出すのではなく、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で使用する場合は、ビジュアライザーをインストールする必要があります。 詳細については、次を参照してください。[する方法: ビジュアライザーをインストール](../debugger/how-to-install-a-visualizer.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジュアライザーのアーキテクチャ](../debugger/visualizer-architecture.md)   
  [方法: ビジュアライザーをインストール](../debugger/how-to-install-a-visualizer.md)   
  [カスタム ビジュアライザーを作成する](../debugger/create-custom-visualizers-of-data.md)

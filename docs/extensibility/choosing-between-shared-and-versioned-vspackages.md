@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9442d6685d27a9270c1e71e3a79e9f810b6f40f0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 20613722410bbe57231177eefafec79184d7741f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-between-shared-and-versioned-vspackages"></a>共有とバージョン管理された Vspackage の使い分け
 異なるバージョンの Visual Studio は、同じコンピューターに共存できます。 Vspackage の組み合わせをサポートできる[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]バージョン。  
@@ -64,6 +65,6 @@ ms.lasthandoff: 10/31/2017
   
  だけでなく、VSPackage のバイナリのバイナリの互換性の計画、するもする必要がありますソリューションを検討およびプロジェクト ファイル形式。 VSPackage では、新しいプロジェクトの種類を作成する場合は、または複数のバージョンの 1 つのバージョンで実行できるかどうかを決定する必要があります[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 詳細については、次を参照してください。[カスタム プロジェクトのアップグレード](../extensibility/internals/upgrading-projects.md#upgrading-custom-projects)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Windows インストーラーで Vspackage をインストールします。](../extensibility/internals/installing-vspackages-with-windows-installer.md)   
  [コンポーネント管理](../extensibility/internals/component-management.md)

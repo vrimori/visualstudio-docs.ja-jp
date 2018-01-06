@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 54ff550719f1b0bbea12f3b64b49fc9792f63ee6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 77fbbd558e424103b8d6ecc69e3724c9011365c1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stale-code-warning-dialog-box"></a>[古いコードの警告] ダイアログ ボックス
 このダイアログ ボックスが表示されますが完了したらネイティブへの変更のコードを**エディット コンティニュ**すぐには適用できませんでした。 結果として、現在のスタック フレーム内の一部のネイティブ コードが最新でない (陳腐化している) 場合があります。 詳細については、次を参照してください。[する方法: 古いコードを操作](http://msdn.microsoft.com/en-us/c7536e95-66a6-44a0-995d-3fe5035250b4)です。  
@@ -35,6 +36,6 @@ ms.lasthandoff: 10/31/2017
  **次回からこのダイアログ ボックスを表示しません。**  
  このチェック ボックスをオンにすると、以後エディット コンティニュは、このダイアログ ボックスを表示せずにコード変更を適用します。 再び有効にできますこの警告に移動して、**オプション**を開く ダイアログ ボックス、**デバッグ**フォルダーをクリックすると、**エディット コンティニュ**を選択して、ページ**古いコードに関する警告**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サポートされているコード変更 (C++)](../debugger/supported-code-changes-cpp.md)   
  [エディット コンティニュ、デバッグ、オプション ダイアログ ボックス](http://msdn.microsoft.com/Library/009d225f-ef65-463f-a146-e4c518f86103)

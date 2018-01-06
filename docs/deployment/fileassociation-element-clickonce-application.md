@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 1b5040f6de578a6436f16c1a1c81d9cef4f789ee
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: bd5d7ed1a37923cefc4a6b7975610b6016fd0ae6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltfileassociationgt-element-clickonce-application"></a>&lt;fileAssociation&gt;要素 (ClickOnce アプリケーション)
 アプリケーションに関連付けるファイル拡張子を識別します。  
@@ -45,10 +46,10 @@ ms.lasthandoff: 10/27/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|`extension`|必須です。 アプリケーションに関連付けるファイル拡張子。|  
-|`description`|必須です。 シェルで使用するため、ファイルの種類の説明です。|  
-|`progid`|必須です。 ファイルの種類を一意に識別する名前です。|  
-|`defaultIcon`|必須です。 この拡張機能を持つファイルを使用するアイコンを指定します。 使用してアイコン ファイルを指定する必要があります、 [\<ファイル > 要素](../deployment/file-element-clickonce-application.md)内で、 [\<アセンブリ > 要素](../deployment/assembly-element-clickonce-application.md)この要素を格納しています。|  
+|`extension`|必須。 アプリケーションに関連付けるファイル拡張子。|  
+|`description`|必須。 シェルで使用するため、ファイルの種類の説明です。|  
+|`progid`|必須。 ファイルの種類を一意に識別する名前です。|  
+|`defaultIcon`|必須。 この拡張機能を持つファイルを使用するアイコンを指定します。 使用してアイコン ファイルを指定する必要があります、 [\<ファイル > 要素](../deployment/file-element-clickonce-application.md)内で、 [\<アセンブリ > 要素](../deployment/assembly-element-clickonce-application.md)この要素を格納しています。|  
   
 ## <a name="remarks"></a>コメント  
  この要素は、XML 名前空間参照を含める必要があります"urn: スキーマ-microsoft-com:clickonce.v1"です。 場合、`<fileAssociation>`要素を使用すると、後に続く必要がありますが、`<application>`では親要素[\<アセンブリ > 要素](../deployment/assembly-element-clickonce-application.md)です。  
@@ -81,5 +82,5 @@ ms.lasthandoff: 10/27/2017
 <fileAssociation xmlns="urn:schemas-microsoft-com:clickonce.v1" extension=".writing" description="Writings (ClickOnce)" progid="Writing.Document" defaultIcon="writing.ico" />  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)

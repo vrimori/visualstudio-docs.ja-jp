@@ -28,11 +28,12 @@ caps.latest.revision: "27"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: df1c2e36f101422655b68fd2a6a012d80b71befa
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 8716da20c989a1a8d1e36d9e071e9802a06219bf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdependencygt-element-clickonce-deployment"></a>&lt;依存関係&gt;要素 (ClickOnce 配置)
 をインストールするアプリケーションのバージョン、およびアプリケーション マニフェストの場所を識別します。  
@@ -78,27 +79,27 @@ ms.lasthandoff: 10/27/2017
  `dependency`要素は通常内に含まれるアセンブリに、メイン アプリケーションの依存関係を表す、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。 Main.exe アプリケーションは、DotNetAssembly.dll という名前のアセンブリを消費する場合、そのアセンブリは依存関係セクションに表示する必要があります。 依存関係、ただし、表すことも他の種類など、共通言語ランタイムの特定のバージョンへの依存関係の依存関係のグローバル アセンブリ キャッシュ (GAC) 内のアセンブリまたは COM オブジェクトです。 配置テクノロジになっているため[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]防ぐことはできませんの依存関係のこれらの型の初期化のダウンロードとインストールは、アプリケーションの実行、指定した依存関係の 1 つ以上が存在しない場合。  
   
 ## <a name="dependentassembly"></a>dependentAssembly  
- 必ず指定します。 この要素が含まれています、`assemblyIdentity`要素。 次の表は、属性、`dependentAssembly`をサポートしています。  
+ 必須。 この要素が含まれています、`assemblyIdentity`要素。 次の表は、属性、`dependentAssembly`をサポートしています。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`preRequisite`|省略可能です。 このアセンブリが GAC に既に存在する必要があるを指定します。 有効値は `true` または `false` です。 場合`true`、指定したアセンブリが GAC に存在しないと、アプリケーションの実行に失敗しました。|  
-|`visible`|省略可能です。 依存関係を含む、最上位のアプリケーション id を識別します。 によって内部的に使用される[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション記憶域とアクティブ化を管理します。|  
-|`dependencyType`|必須です。 この依存関係と、アプリケーション間のリレーションシップ。 次の値を指定できます。<br /><br /> -   `install`. コンポーネントでは、現在のアプリケーションから別のインストールを表します。<br />-   `preRequisite`. コンポーネントは、現在のアプリケーションが必要です。|  
-|`codebase`|省略可能です。 アプリケーション マニフェストの完全パスです。|  
-|`size`|省略可能です。 アプリケーション マニフェストがバイト単位のサイズ。|  
+|`preRequisite`|任意。 このアセンブリが GAC に既に存在する必要があるを指定します。 有効値は `true` または `false` です。 場合`true`、指定したアセンブリが GAC に存在しないと、アプリケーションの実行に失敗しました。|  
+|`visible`|任意。 依存関係を含む、最上位のアプリケーション id を識別します。 によって内部的に使用される[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション記憶域とアクティブ化を管理します。|  
+|`dependencyType`|必須。 この依存関係と、アプリケーション間のリレーションシップ。 次の値を指定できます。<br /><br /> -   `install`. コンポーネントでは、現在のアプリケーションから別のインストールを表します。<br />-   `preRequisite`. コンポーネントは、現在のアプリケーションが必要です。|  
+|`codebase`|任意。 アプリケーション マニフェストの完全パスです。|  
+|`size`|任意。 アプリケーション マニフェストがバイト単位のサイズ。|  
   
 ## <a name="assemblyidentity"></a>assemblyIdentity  
- 必ず指定します。 この要素は `dependentAssembly` 要素の子です。 コンテンツ`assemblyIdentity`で説明されていることと同じである必要があります、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 次の表の属性を示しています、`assemblyIdentity`要素。  
+ 必須。 この要素は `dependentAssembly` 要素の子です。 コンテンツ`assemblyIdentity`で説明されていることと同じである必要があります、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 次の表の属性を示しています、`assemblyIdentity`要素。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Name`|必須です。 アプリケーションの名前を識別します。|  
-|`Version`|必須です。 次の形式で、アプリケーションのバージョン番号を指定します。`major.minor.build.revision`|  
-|`publicKeyToken`|必須です。 アプリケーションまたはアセンブリが署名に使用されたパブリック キーの sha-1 ハッシュの最後の 8 バイトを表す 16 文字の 16 進文字列を指定します。 署名に使用される公開キーは 2048 ビットである必要がありますか値を超えています。|  
-|`processorArchitecture`|必須です。 マイクロプロセッサを指定します。 有効な値は`x86`32 ビット Windows 用と`IA64`64 ビット Windows 用です。|  
-|`Language`|省略可能です。 アセンブリの 2 部構成の言語コードを識別します。 たとえば、EN-US、英語 (米国) を意味します。 既定値は、`neutral` です。 この要素は、`asmv2`名前空間。|  
-|`type`|省略可能です。 Windows サイド バイ サイドとの互換性が旧バージョンとテクノロジをインストールします。 許可されている値だけ`win32`です。|  
+|`Name`|必須。 アプリケーションの名前を識別します。|  
+|`Version`|必須。 次の形式で、アプリケーションのバージョン番号を指定します。`major.minor.build.revision`|  
+|`publicKeyToken`|必須。 アプリケーションまたはアセンブリが署名に使用されたパブリック キーの sha-1 ハッシュの最後の 8 バイトを表す 16 文字の 16 進文字列を指定します。 署名に使用される公開キーは 2048 ビットである必要がありますか値を超えています。|  
+|`processorArchitecture`|必須。 マイクロプロセッサを指定します。 有効な値は`x86`32 ビット Windows 用と`IA64`64 ビット Windows 用です。|  
+|`Language`|任意。 アセンブリの 2 部構成の言語コードを識別します。 たとえば、EN-US、英語 (米国) を意味します。 既定値は、`neutral` です。 この要素は、`asmv2`名前空間。|  
+|`type`|任意。 Windows サイド バイ サイドとの互換性が旧バージョンとテクノロジをインストールします。 許可されている値だけ`win32`です。|  
   
 ## <a name="hash"></a>hash  
  `hash`要素の省略可能な子では、`file`要素。 `hash`要素に属性がありません。  
@@ -182,6 +183,6 @@ ms.lasthandoff: 10/27/2017
 </dependency>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)   
  [\<依存関係 > 要素](../deployment/dependency-element-clickonce-application.md)

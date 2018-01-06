@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c5b35864a7a4e6d5aa0882ac9c0492e0e160ad53
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 77fc748d77eaa46bc50b26e984de55d708db7e17
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="addresskind"></a>ADDRESS_KIND
 アドレスの種類を指定します。  
@@ -85,14 +86,14 @@ public enum enum_ADDRESS_KIND {
 ## <a name="remarks"></a>コメント  
  [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)メソッドを返します、 [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)の可能な構造体、共用体を格納する構造体、 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)構造体。 `dwKind`のフィールド、`DEBUG_ADDRESS_UNION`構造を保持、`ADDRESS_KIND`値し、共用体フィールドを解釈する方法について説明します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)   
  [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)   

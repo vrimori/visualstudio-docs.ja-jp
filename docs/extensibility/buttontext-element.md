@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b17492b0cc8531ac892bf8ead1c309f403d1da48
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c9f2374af403c37f18d1aa91700e51bd038a71c6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="buttontext-element"></a>ButtonText 要素
 このフィールドでは、さまざまなメニューに表示されるテキストを指定できます。 既定では、`ButtonText`要素は、メニュー コント ローラーに表示されます。 `ButtonText`他のテキスト フィールドが空白の場合に要素が既定値にもになります。 `ButtonText`場合でも、他のテキスト フィールドが指定された要素を空白にすることはできません。  
@@ -48,5 +49,5 @@ ms.lasthandoff: 10/31/2017
 ## <a name="text-value"></a>テキスト値  
  テキスト値、`ButtonText`要素は、メニュー項目、コンボ、および表示のテキストがあるその他のユーザー インターフェイス (UI) 要素について表示されるテキストを提供します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

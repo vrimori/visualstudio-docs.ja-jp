@@ -17,11 +17,12 @@ caps.latest.revision: "42"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cf4c5d1e71a4d0e0d8ac74ba02bff29ddc1c7477
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: uwp
+ms.openlocfilehash: d4a64f9463650941fe8d645a1a6b92376277f0b6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="run-uwp-and-windows-81-apps-in-the-simulator"></a>シミュレーターでの UWP と Windows 8.1 アプリの実行
 UWP と Windows 8.1 アプリの Visual Studio シミュレーターは、UWP または Windows 8.1 アプリをシミュレートするデスクトップ アプリケーションです。 実行することができます、物理的な画面サイズと解像度をエミュレートするために、アプリケーションを選択します。 一般的なタッチと回転イベントのシミュレーションや、ネットワーク接続のプロパティをシミュレートすることができますも。
@@ -147,12 +148,12 @@ UWP と Windows 8.1 アプリの Visual Studio シミュレーターは、UWP �
   
  [バックグラウンド タスクでシステム イベントに応答する方法](http://msdn.microsoft.com/en-us/f7c86e86-a7ae-4abb-a923-76b03337a80a)  
   
- [トリガーする方法を中断、再開、およびバック グラウンド イベントを UWP アプリ](http://msdn.microsoft.com/library/windows/apps/hh974425.aspx)  
+ [UWP アプリで中断イベント、再開イベント、およびバックグラウンド イベントをトリガーする方法](http://msdn.microsoft.com/library/windows/apps/hh974425.aspx)  
   
 ##  <a name="BKMK_Navigate_the_simulator_with_the_keyboard"></a> キーボードを使用してシミュレーター内を移動する  
  キーを押してシミュレーター ツールバー内を移動できます**CTRL + ALT + ↑**シミュレーター ウィンドウからシミュレーター ツールバーにフォーカスを移動します。 ツール バーのボタンの間を移動するには、 **上向きの矢印** と **下向きの矢印** を使用します。  
   
  シミュレーターを終了するには、キーを押して**ctrl キーと alt キーを押しながら F4**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio からアプリを実行します。](../debugger/run-store-apps-from-visual-studio.md)

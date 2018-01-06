@@ -26,11 +26,12 @@ caps.latest.revision: "28"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 02db9a01286e65f371ab4d8388102a3db4c5602e
-ms.sourcegitcommit: 1e08318a8a684b21609af7a5e48b56abcc3239e6
+ms.workload: multiple
+ms.openlocfilehash: 1d0ab1ccdf6f5365c04c4a7ee0cac8ce75ab5f17
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-debugging-a-windows-form"></a>チュートリアル : Windows フォームのデバッグ
 Windows フォームは、最も一般的なマネージ アプリケーションの 1 つです。 Windows フォームは、標準 Windows アプリケーションを作成します。 このチュートリアルは、Visual Basic、C#、または C++ を使用して実行できます。  
@@ -60,7 +61,7 @@ Windows フォームは、最も一般的なマネージ アプリケーショ�
   
 4.  **名前**ボックスで、プロジェクトの一意名 (Walkthrough_SimpleDebug など) を付けます。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
      新しいプロジェクトが作成され、Windows フォーム デザイナーに新しいフォームが表示されます。 詳細については、次を参照してください。 [Windows フォーム デザイナー](http://msdn.microsoft.com/en-us/3c3d61f8-f36c-4d41-b9c3-398376fabb15)です。  
   
@@ -188,6 +189,6 @@ Windows フォームは、最も一般的なマネージ アプリケーショ�
   
      ブレークポイントの位置で、Windows フォームの実行が中断します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)   
  [デバッガーのセキュリティ](../debugger/debugger-security.md)

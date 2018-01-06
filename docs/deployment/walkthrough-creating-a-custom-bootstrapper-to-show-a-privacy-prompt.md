@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: f84abe8354f1affc566cc05d119edc4cbc030712
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 97b5ba379eb715c63e5432b22999e2c4f12bf50d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt"></a>チュートリアル: プライバシー プロンプトを表示するためのカスタム ブートストラップの作成
 新しいファイルおよびアセンブリのバージョンを持つアセンブリが使用可能になると自動的に更新する ClickOnce アプリケーションを構成することができます。 をお客様がこれに同意することを確認するために、プライバシー プロンプトを表示できます。 次に、自動的に更新するアプリケーションへのアクセス許可を付与するかどうかを選択できます。 アプリケーションが自動的に更新する許可されていない場合はインストールされません。  
@@ -246,7 +247,7 @@ ms.lasthandoff: 10/27/2017
     > [!NOTE]
     >  必須コンポーネント ダイアログ ボックスで更新プログラムの同意を求めるダイアログを表示する Visual Studio を閉じて再度開くことがあります。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
 ## <a name="creating-and-testing-the-setup-program"></a>作成して、セットアップ プログラムをテストします。  
  前提条件として更新プログラムの同意を求めるアプリケーションを設定した後、アプリケーションのインストーラーとブートス トラップを生成できます。  
@@ -275,7 +276,7 @@ ms.lasthandoff: 10/27/2017
   
 8.  次のエラー メッセージを表示するための詳細 をクリックします。 コンポーネントの更新に同意するもののダイアログ ボックスは、次のエラー メッセージとインストールに失敗しました:"自動更新の契約に同意しない"です。 次のコンポーネントがインストールに失敗しました:-更新プログラムの同意ダイアログ  
   
-9. **[閉じる]**をクリックします。  
+9. **[閉じる]** をクリックします。  
   
 #### <a name="to-create-and-test-the-setup-program-by-clicking-i-agree"></a>作成しをクリックして、セットアップ プログラムをテストするには、ことに同意します。  
   
@@ -301,7 +302,7 @@ ms.lasthandoff: 10/27/2017
   
 8.  アプリケーションのインストール ダイアログ ボックスが表示されたら、クリックして**インストール**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アプリケーション配置の必要条件](../deployment/application-deployment-prerequisites.md)   
  [ブートス トラップ パッケージを作成します。](../deployment/creating-bootstrapper-packages.md)   
  [方法: 製品マニフェストを作成します。](../deployment/how-to-create-a-product-manifest.md)   

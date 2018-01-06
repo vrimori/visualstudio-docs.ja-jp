@@ -6,22 +6,22 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
-ms.assetid: 6233d060-85b8-42be-ae5f-bde7e1d0f241
 caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6e168af69b04fb152e054860b2a6bd2084a349ff
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f51087d4f7882c34826942a898328640107a5ac6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>エラー: 必要はありません、プロセス &#39; を検査する権限 id
 プロセスの ID を検査する権限がありません。 これは、システムの混が原因である可鉢があります。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="to-enable-terminal-services"></a>ターミナル サービスを有効にするには  
   
-1.  をクリックして**開始**を選択し**コントロール パネルの **です。  
+1.  をクリックして**開始**を選択し**コントロール パネルの** です。  
   
 2.  コントロール パネルで、次のように選択します。**クラシック表示に切り替える**、必要に応じて、順にダブルクリック**管理ツール**です。  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 10/31/2017
   
 7.  **ターミナル サービスのプロパティ**ウィンドウに移動して、**全般** タブで設定し、**スタートアップの種類**に**手動**です。  
   
-8.  **[OK]** をクリックします。  
+8.  **[OK]**をクリックします。  
   
 9. コンピューターを再起動します。  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  **リモート デスクトップ****ユーザーをこのコンピューターにリモートで接続できるように**です。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)

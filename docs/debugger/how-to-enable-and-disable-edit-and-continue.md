@@ -28,11 +28,14 @@ caps.latest.revision: "26"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 724851fcd78050d3502cdec4369c7c6a79c9419f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload:
+- dotnet
+- cplusplus
+ms.openlocfilehash: 1c00546b983c9bbb0fd6c01717bd0a09c993e11b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>方法: を有効にし、編集を無効にし、続行 (c#、VB、C++)
 無効にするかでエディット コンティニュを有効にすることができます、**オプション**デザイン時にダイアログ ボックス。 デバッグの最中にこの設定を変更することはできません。  
@@ -62,7 +65,7 @@ ms.lasthandoff: 10/31/2017
     - **古いコード (ネイティブのみ) に関する警告します。**  
         古いコードに関する警告を取得します。 
   
-7.  **[OK]** をクリックします。    
+7.  **[OK]**をクリックします。    
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [エディット コンティニュ](../debugger/edit-and-continue.md)

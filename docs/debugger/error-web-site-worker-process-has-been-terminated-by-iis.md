@@ -6,23 +6,23 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords: vs.debug.error.web_server_process_terminated
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
-ms.assetid: 5707b972-71a6-4cc6-ab99-c7c00ca8628c
 caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 02eca2f832bc88caddd98b14b6615310eef01600
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: fb7a0220cf6650aeeb12ec6549d112a39918de3f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="error-web-site-worker-process-has-been-terminated-by-iis"></a>エラー : Web サイトのワーカー プロセスが IIS によって停止されました
 デバッガーが Web サイト上のコードの実行を停止しました。 このため、インターネット インフォメーション サービス (IIS: Internet Information Services) はワーカー プロセスが応答を停止したと見なしました。 したがって、IIS がワーカー プロセスを終了しました。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 10/31/2017
   
 1.  開く、**管理ツール**ウィンドウです。  
   
-    1.  をクリックして**開始**を選択し**コントロール パネルの **です。  
+    1.  をクリックして**開始**を選択し**コントロール パネルの** です。  
   
     2.  **コントロール パネル**、選択**クラシック表示に切り替える**、必要に応じて、順にダブルクリック**管理ツール**です。  
   
@@ -59,5 +59,5 @@ ms.lasthandoff: 10/31/2017
   
 8.  IIS マネージャーを閉じ、**管理ツール**ウィンドウです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)

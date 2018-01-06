@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 32870ebf31c88bbc6bdf024c2c4c93ae1869660a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 72c7c38dece8924f48298c0b7b661f564f9b1afc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="view-threads-and-tasks-using-the-parallel-stacks-window"></a>スレッドと並列スタック ウィンドウを使用してタスクを表示します。
 **並列スタック**ウィンドウは、マルチ スレッド アプリケーションをデバッグする場合に役立ちます。 その**スレッド ビュー**アプリケーション内のすべてのスレッドの呼び出し履歴情報を表示します。 これを使用して、スレッドとそれらのスレッドのスタック フレームの間を移動できます。 マネージ コードで、**タスク ビュー**呼び出し履歴の表示<xref:System.Threading.Tasks.Task?displayProperty=fullName>オブジェクト。 ネイティブ コードで、**タスク ビュー**呼び出し履歴の表示[タスク グループ](/cpp/parallel/concrt/task-parallelism-concurrency-runtime)、[並列アルゴリズム](/cpp/parallel/concrt/parallel-algorithms)、[非同期エージェント](/cpp/parallel/concrt/asynchronous-agents)、および[軽量タスク](/cpp/parallel/concrt/task-scheduler-concurrency-runtime)です。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/31/2017
 |[逆アセンブルを表示]|ユーザーが右クリックしたスタック フレームに対応する逆アセンブル ウィンドウ内の位置に移動します。|  
 |外部コードの表示|外部コードの表示と非表示を切り替えます。|  
 |[16 進数で表示]|10 進数と 16 進数の表示を切り替えます。|  
-|[シンボルの読み込み情報]|対応するダイアログ ボックスを表示します。|  
+|シンボルの読み込み情報|対応するダイアログ ボックスを表示します。|  
 |[シンボルの設定]|対応するダイアログ ボックスを表示します。|  
   
 ## <a name="tasks-view"></a>タスク ビュー  
@@ -115,7 +116,7 @@ ms.lasthandoff: 10/31/2017
   
  新しいスタック フレームに切り替えると、そのメソッドが現在のメソッドになり、新しいメソッドのすべての呼び出し元と呼び出し先がウィンドウに表示されます。 これにより、そのメソッドが呼び出し履歴に含まれているかどうかに応じて、一部のスレッドの表示と非表示が切り替わる場合があります。 スタック ビューに戻るには、ツール バーの [メソッド ビュー] ボタンをもう一度クリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マルチ スレッド アプリケーションのデバッグの開始します。](../debugger/get-started-debugging-multithreaded-apps.md)   
  [チュートリアル: 並行アプリケーションのデバッグ](../debugger/walkthrough-debugging-a-parallel-application.md)   
  [デバッガーの基本事項](../debugger/debugger-basics.md)   

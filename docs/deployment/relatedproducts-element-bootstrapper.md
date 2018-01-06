@@ -24,11 +24,12 @@ caps.latest.revision: "12"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 4fa304f787c954b9ee89878e792e6f543f344f60
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 548c1002eae581dc0e231f8dd2e28ee4a8376e27
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltrelatedproductsgt-element-bootstrapper"></a>&lt;RelatedProducts&gt;要素 (ブートス トラップ)
 `RelatedProducts`要素は、現在の製品に含まれるかに依存する他の製品を定義します。  
@@ -84,5 +85,5 @@ ms.lasthandoff: 10/27/2017
 </RelatedProducts>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [\<Product > 要素](../deployment/product-element-bootstrapper.md)

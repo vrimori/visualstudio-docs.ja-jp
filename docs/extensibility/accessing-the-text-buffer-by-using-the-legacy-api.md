@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: facfc1670bf9d04035beffc47b7124bd5d309a7c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 77002e095690da85e73f1a79d405cb5174b96851
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-the-text-buffer-by-using-the-legacy-api"></a>レガシ API を使用してテキスト バッファーにアクセスします。
 テキストがテキスト ストリームとファイルの永続性の管理を担当します。 バッファーの読み取りまたはその他の形式を書き込み、すべての通常の通信バッファーと Unicode を使用して実行されます。 従来の Api でテキスト バッファーは、バッファー内の文字の位置を識別するのに 1 つのまたは 2 次元座標系を使用できます。  
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/31/2017
  [テキスト マネージャーを使用して、グローバル設定を監視するには](../extensibility/using-the-text-manager-to-monitor-global-settings.md)  
  テキスト マネージャーを使用して、グローバル設定を監視する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア エディター内](../extensibility/inside-the-core-editor.md)

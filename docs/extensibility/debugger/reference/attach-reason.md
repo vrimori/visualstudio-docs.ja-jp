@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ba7149d13c85ec99128488e7207a5320f93d680f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 527e7a445356a46abdd6f2edb0555b7c5c9c7de8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="attachreason"></a>ATTACH_REASON
 デバッグ エンジン (DE)、[プログラム] ノードにアタッチする理由を指定します。  
@@ -55,14 +56,14 @@ public enum enum_ATTACH_REASON {
 ## <a name="remarks"></a>コメント  
  これらの値はパラメーターとして使用、[アタッチ](../../../extensibility/debugger/reference/idebugengine2-attach.md)と[アタッチ](../../../extensibility/debugger/reference/idebugprogramex2-attach.md)メソッドです。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [アタッチ](../../../extensibility/debugger/reference/idebugengine2-attach.md)   
  [添付](../../../extensibility/debugger/reference/idebugprogramex2-attach.md)

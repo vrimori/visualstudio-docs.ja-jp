@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 717a1eb794e3712427d6b905851c32796c3865c5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2eeef7ced30d6f8de3b9d0fc6f783502936a4859
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugdocument2getname"></a>IDebugDocument2::GetName
 いくつかの形式のいずれかで、ドキュメントの名前を取得します。  
@@ -52,6 +53,6 @@ int GetName(
 ## <a name="remarks"></a>コメント  
  タイトル、または、ファイル名またはファイル名の偶数の一部として、このメソッドは、ドキュメントの名前を返すなどのことができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)   
  [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)

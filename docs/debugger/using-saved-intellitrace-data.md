@@ -18,11 +18,12 @@ caps.latest.revision: "106"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0447f7ac0836f0f23334d8759d294437191aa6a9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6c04b27acbd94172083c6efd41d55eaca13fd5e7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-saved-intellitrace-data"></a>保存された IntelliTrace データの使用
 IntelliTrace ログ (.iTrace) ファイルからデバッグを開始するときに、アプリケーションの実行においての特定のポイントに移動します。 このファイルには、アプリの実行中に IntelliTrace によって記録された、パフォーマンス イベント、例外、スレッド、テスト ステップ、モジュール、およびその他のシステム情報が格納されています。  
@@ -225,7 +226,7 @@ IntelliTrace ログ (.iTrace) ファイルからデバッグを開始すると�
 |**列**|**内容**|  
 |----------------|-------------------|  
 |**ID**|スレッド ID 番号|  
-|**名前**|スレッド名。 名前のないスレッドとして表示されます"\<名前なし >"です。|  
+|**Name**|スレッド名。 名前のないスレッドとして表示されます"\<名前なし >"です。|  
 |**開始時刻**|スレッドが作成された時刻|  
 |**終了時刻**|スレッドが完了した時刻|  
   

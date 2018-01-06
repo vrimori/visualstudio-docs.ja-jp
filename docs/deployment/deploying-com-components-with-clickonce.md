@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: d3a8ae32afec789595ecd126eeaee0c5ea05a9e8
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: a63073e86c3584253e67bf4d77f43006104de075
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-com-components-with-clickonce"></a>ClickOnce での COM コンポーネントの配置
 従来の COM コンポーネントの展開には、難しい作業されていましたが。 コンポーネントは、グローバルに登録される必要があるし、したがって重複しているアプリケーション間では、望ましくない副作用が発生することができます。 この状況は通常、.NET Framework アプリケーションに問題があるコンポーネントをアプリケーションに完全に分離されたか、サイド バイ サイド互換であるためです。 Visual Studio では、Windows XP または以上のオペレーティング システムで分離されている COM コンポーネントを展開することができます。  
@@ -174,5 +175,5 @@ ms.lasthandoff: 10/27/2017
   
  Com 登録が、開発者のコンピューターに必要ないくつかのシナリオがある場合でも、アプリケーションの配置には、登録は不要です。 `Isolated`プロパティは、ビルド時にマニフェストを自動生成するために、開発者のマシンに COM コンポーネントを登録が必要です。 ビルド時に自己登録を呼び出す登録キャプチャ機能はありません。 また、タイプ ライブラリで明示的に定義されているすべてのクラスは、マニフェストには反映されません。 ネイティブ参照などの既存のマニフェストを伴う、COM コンポーネントを使用して、コンポーネントでは、開発時に登録する必要はありません。 ただし、登録は、必要なコンポーネントは、ActiveX コントロールを含めるようにする場合、**ツールボックス**と Windows フォーム デザイナー。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)

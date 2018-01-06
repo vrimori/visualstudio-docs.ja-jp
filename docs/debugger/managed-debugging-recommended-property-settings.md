@@ -20,11 +20,12 @@ caps.latest.revision: "29"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f763decca7a80a7a7fc5bb86f94a76cd3eb2679c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: ebbd6bf87270bba70dc80cd7ff652c147d3a4849
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managed-debugging-recommended-property-settings"></a>マネージ デバッグ : プロパティの推奨設定
 一部のプロパティは、すべてのマネージ デバッグ シナリオで同じように設定する必要があります。  
@@ -47,11 +48,11 @@ ms.lasthandoff: 10/31/2017
   
 |**プロパティ名**|**設定**|  
 |-----------------------|-----------------|  
-|**最適化を有効にします。**|指定された理由を false に設定、**コードを最適化する**上の表でオプションです。|  
+|**最適化を有効にする**|指定された理由を false に設定、**コードを最適化する**上の表でオプションです。|  
 |**デバッグ情報を生成します。**|このチェック ボックスをオンにすると、コンパイル時に /DEBUG フラグが設定され、デバッグを円滑に実行するうえで必要な情報が生成されます。|  
 |**定数 DEBUG の定義**|このチェック ボックスをオンにすると、`DEBUG` 定数が定義され、アプリケーションで <xref:System.Diagnostics.Debug> クラスを使用できるようになります。|  
 |**定数 TRACE の定義**|このチェック ボックスをオンにすると、`TRACE` 定数が定義され、アプリケーションで <xref:System.Diagnostics.Trace> クラスを使用できるようになります。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)   
  [C#、F#、および Visual Basic のプロジェクト](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)

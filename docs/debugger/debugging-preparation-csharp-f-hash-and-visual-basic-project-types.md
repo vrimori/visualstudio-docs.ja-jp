@@ -24,11 +24,12 @@ caps.latest.revision: "25"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 281d71670e19ba4df274716201c6c4181158309e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 5ca8bb777369054d7d83e75bcdcf8055aa083660
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-preparation-c-f-and-visual-basic-project-types"></a>デバッグの準備: プロジェクトの種類が C#、F#、および Visual Basic のプロジェクト
 ここでは、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] プロジェクト テンプレートで作成した C#、F#、および [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のプロジェクトをデバッグする方法について説明します。  
@@ -55,5 +56,5 @@ ms.lasthandoff: 10/31/2017
  [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)  
  マネージ コードで記述されたアプリケーションのデバッグに関する一般的な問題と手法について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)

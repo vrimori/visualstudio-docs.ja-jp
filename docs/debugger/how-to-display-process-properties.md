@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b40c74776b61b38b9d56a0658361674241024b13
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e72af04ae243e3280878eaca6587461643df2841
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-process-properties"></a>方法: プロセスのプロパティを表示する
 表示されているプロセスに関する詳細を確認する[プロセス ビュー](../debugger/processes-view.md)を使用して、[プロセス プロパティ ダイアログ ボックス](../debugger/process-properties-dialog-box.md)です。  

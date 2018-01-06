@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 16404b5446b8aedc26d8ecc88e88b6061d896e69
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a6aa48e8a83263ed31a36c97020a0f495a7a50f0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-search-for-a-thread-in-threads-view"></a>方法: スレッド ビューでスレッドを検索する
 検索条件としてスレッド ID、またはモジュールの文字列を使用して、スレッド ビューで特定のスレッドの検索することができます。 検索の最初の方向を指定することもできます。 ダイアログ ボックスで、フィールドは、スレッド ツリーで選択されているスレッドの属性が表示されます。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 10/31/2017
   
 5.  選択**を**または**ダウン**検索の方向。  
   
-6.  **[OK]** をクリックします。  
+6.  **[OK]**をクリックします。  
   
  一致するスレッドが見つかった場合は、スレッド ビュー」ウィンドウでハイライトされます。

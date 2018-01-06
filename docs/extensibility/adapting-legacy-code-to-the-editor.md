@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 03c0cbd20258618297e943524d06ba7b3a496264
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ef1bce81e20772660a6074c15bd5dad494804373
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adapting-legacy-code-to-the-editor"></a>エディターにレガシ コードを改変.
 Visual Studio エディターには、既存のコード コンポーネントからアクセスできる多くの機能があります。 次の手順では、非 MEF コンポーネント、エディターの機能を使用するが、VSPackage ではなどを適合させる方法を示します。 アダプターを使用して、マネージとアンマネージ コードの両方で、エディターのサービスを取得する方法についても説明します。  
@@ -53,16 +54,12 @@ internal IVsEditorAdaptersFactoryService editorFactory;
   
 |メソッド|変換|  
 |------------|----------------|  
-|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsCodeWindowAdapter%2A>|
-          <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow> を作成します。|  
+|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsCodeWindowAdapter%2A>|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow> を作成します。|  
 |<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextBufferAdapter%2A>|作成、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>の指定された<xref:Microsoft.VisualStudio.Utilities.IContentType>です。|  
-|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextBufferAdapter%2A>|
-          <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> を作成します。|  
-|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextBufferCoordinatorAdapter%2A>|
-          <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator> を作成します。|  
+|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextBufferAdapter%2A>|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> を作成します。|  
+|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextBufferCoordinatorAdapter%2A>|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator> を作成します。|  
 |<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextViewAdapter%2A>|作成、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>の<xref:Microsoft.VisualStudio.Text.Editor.ITextViewRoleSet>です。|  
-|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextViewAdapter%2A>|
-          <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> を作成します。|  
+|<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService.CreateVsTextViewAdapter%2A>|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> を作成します。|  
   
 ## <a name="creating-adapters-in-unmanaged-code"></a>アンマネージ コードでアダプターを作成します。  
  ローカルであるすべてのアダプター クラスが登録されている共同作成可能なを使用して、インスタンス化できます、`VsLocalCreateInstance()`関数。  

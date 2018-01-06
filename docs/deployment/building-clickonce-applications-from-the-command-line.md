@@ -20,11 +20,12 @@ caps.latest.revision: "23"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 86dba79e6e8b7e3f3b2837e494cfeddd2692d0cf
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 39a64737c3e34b7e0c4d89824b22f169d60d4fd0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-clickonce-applications-from-the-command-line"></a>ClickOnce アプリケーションのコマンド ラインからのビルド
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]、統合開発環境 (IDE) で作成される場合でも、コマンドラインからのプロジェクトをビルドすることができます。 実際で作成されたプロジェクトを再構築する[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]のみを持つ別のコンピューターで、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]インストールします。 これにより、自動プロセスを使用してビルドを再生成するなど、中央のビルド ラボまたはを使用して高度なスクリプティング プロジェクト自体のビルドの対象外の手法です。  
@@ -163,11 +164,11 @@ msbuild /target:publish /property:BootstrapperEnabled=false
 |[URL]|説明|  
 |----------------|-----------------|  
 |`PublishURL`|Web サイトに、ClickOnce アプリケーションをパブリッシュするかどうかに必要です。|  
-|`InstallURL`|省略可能です。 インストールのサイトが異なる場合は、この URL オプションを設定、`PublishURL`です。 たとえば、設定する、`PublishURL`を FTP パスに設定し、 `InstallURL` Web URL にします。|  
-|`SupportURL`|省略可能です。 サポート サイトと異なる場合は、この URL オプションを設定、`PublishURL`です。 たとえば、設定する、`SupportURL`会社のカスタマー サポート Web サイトにします。|  
-|`UpdateURL`|省略可能です。 更新プログラムの場所が異なる場合は、この URL オプションを設定、`InstallURL`です。 たとえば、設定する、`PublishURL`を FTP パスに設定し、 `UpdateURL` Web URL にします。|  
+|`InstallURL`|任意。 インストールのサイトが異なる場合は、この URL オプションを設定、`PublishURL`です。 たとえば、設定する、`PublishURL`を FTP パスに設定し、 `InstallURL` Web URL にします。|  
+|`SupportURL`|任意。 サポート サイトと異なる場合は、この URL オプションを設定、`PublishURL`です。 たとえば、設定する、`SupportURL`会社のカスタマー サポート Web サイトにします。|  
+|`UpdateURL`|任意。 更新プログラムの場所が異なる場合は、この URL オプションを設定、`InstallURL`です。 たとえば、設定する、`PublishURL`を FTP パスに設定し、 `UpdateURL` Web URL にします。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.Build.Tasks.GenerateBootstrapper>   
  <xref:Microsoft.Build.Tasks.GenerateApplicationManifest>   
  <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest>   

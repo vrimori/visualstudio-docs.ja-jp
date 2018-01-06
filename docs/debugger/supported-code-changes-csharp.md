@@ -20,11 +20,12 @@ caps.latest.revision: "27"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7930ab4b425eeba0896828e5db36ab874166d3bf
-ms.sourcegitcommit: 38097344f3ff74ba7b03bcfa45910015ca6bc2be
+ms.workload: dotnet
+ms.openlocfilehash: 6147390fb8551ea472590525cb36d9dc210b9a84
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supported-code-changes-c-and-visual-basic"></a>サポートされているコード変更 (c# および Visual Basic)
 エディット コンティニュでは、メソッドの本体内で行ったほとんどの種類のコード変更を処理できます。 しかし、メソッドの本体外で行った変更の大部分やメソッドの本体内で行った一部の変更は、デバッグ時に適用できません。 このようなサポートされていない変更を適用するには、デバッグを停止し、新しいバージョンのコードを再起動する必要があります。
@@ -36,9 +37,9 @@ ms.lasthandoff: 12/11/2017
 |言語要素/機能|サポートされている編集操作|制限事項|
 |-|-|-|
 |種類|メソッド、フィールド、コンス トラクター、他を追加します。|[はい](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
-|反復子|追加または変更|いいえ|
+|Iterators|追加または変更|×|
 |async と await 式|追加または変更|[はい](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
-|動的オブジェクト|追加または変更|いいえ|
+|動的オブジェクト|追加または変更|×|
 |ラムダ式|追加または変更|[はい](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
 |LINQ 式|追加または変更|[ラムダ式と同じ](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
 
@@ -78,7 +79,7 @@ ms.lasthandoff: 12/11/2017
 |try – catch – finally ブロック|アクティブなステートメントが含まれているときに変更します。|
 |using ステートメント|追加|
 |非同期のメソッドまたはラムダ|.NET Framework 4 を対象とするプロジェクトで非同期のメソッドまたはラムダを変更し、削減 (を参照してください[詳細](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
-|反復子|.NET Framework 4 を対象とするプロジェクトで、反復子を変更し、削減 (を参照してください[詳細](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
+|Iterators|.NET Framework 4 を対象とするプロジェクトで、反復子を変更し、削減 (を参照してください[詳細](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
   
 ## <a name="unsafe-code"></a>アンセーフ コード  
  アンセーフ コードを変更する場合、セーフ コードを変更するときと同じ制限に加えて、もう 1 つ追加の制限が適用されます。エディット コンティニュでは、`stackalloc` 演算子を含むメソッド内に存在するアンセーフ コードへの変更はサポートしていません。  
@@ -107,6 +108,6 @@ ms.lasthandoff: 12/11/2017
   
 -   ビルド エラーによって新しいバージョンのビルドが失敗した後の旧バージョンのデバッグ
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [エディット コンティニュ (Visual c#)](../debugger/edit-and-continue-visual-csharp.md)   
  [方法 : エディット コンティニュを使用する (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)

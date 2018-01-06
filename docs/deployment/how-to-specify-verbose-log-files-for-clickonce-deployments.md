@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 2fccf1b0c9d7a67ca1eeb6058c1294cea2f2005a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 6cac7764a941e88dd3901a3280e78717955e86b4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-verbose-log-files-for-clickonce-deployments"></a>方法: ClickOnce 配置用の詳細ログ ファイルを指定する
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]すべての展開のアクティビティ ログ ファイルを保持します。 これらのログ記録の詳細、関連するインストールの初期化中、更新、アンインストール、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開します。 詳細を向上させるを[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]これらのログ ファイルへの書き込みは、レジストリ エディタを使用して (**regedit.exe**) 詳細レベルを指定します。  
@@ -43,5 +44,5 @@ ms.lasthandoff: 10/27/2017
   
 4.  設定、`LogVerbosityLevel`値を`1`です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce 配置のトラブルシューティング](../deployment/troubleshooting-clickonce-deployments.md)

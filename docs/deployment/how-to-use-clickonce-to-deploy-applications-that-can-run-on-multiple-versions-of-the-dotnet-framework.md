@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: d634d320df50dafc203ea1b1b4c8366ae3e24a41
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: dotnet
+ms.openlocfilehash: 2c3153b4c6808d2a79a89a10e35830ec81ba15fd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-clickonce-to-deploy-applications-that-can-run-on-multiple-versions-of-the-net-framework"></a>方法: ClickOnce を使用して、複数のバージョンの .NET Framework で実行できるアプリケーションを配置する
 ClickOnce の配置テクノロジを使用して複数のバージョンの .NET Framework を対象とするアプリケーションを展開することができます。 これは、生成して、アプリケーション マニフェストと配置マニフェストを更新する必要があります。  
@@ -105,7 +106,7 @@ ClickOnce の配置テクノロジを使用して複数のバージョンの .NE
   
 -   更新し、アプリケーション マニフェストと配置マニフェストに再署名します。 詳細については、次を参照してください。[する方法: 再署名アプリケーション マニフェストと配置マニフェスト](../deployment/how-to-re-sign-application-and-deployment-manifests.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
  [\<compatibleFrameworks > 要素](../deployment/compatibleframeworks-element-clickonce-deployment.md)   
  [\<依存関係 > 要素](../deployment/dependency-element-clickonce-application.md)   

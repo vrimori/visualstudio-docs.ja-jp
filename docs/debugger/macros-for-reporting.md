@@ -25,11 +25,12 @@ caps.latest.revision: "15"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c977cd5af8714e6dc0fd07b70aba9cf7f40bfe06
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5af21a708a05bfdc0338ca1c5b2bc038e192eb4b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="macros-for-reporting"></a>レポート用マクロの使用
 使用することができます、 **_RPTn**、および**_RPTFn** CRTDBG で定義されているマクロです。H の代わりに`printf`デバッグ用のステートメント。 これらのマクロは、リリースでは自動的に消滅ビルド**_DEBUG**が定義されていないためで囲む必要はありません**#ifdef**s。  
@@ -81,5 +82,5 @@ someVar=%d, otherVar=%d.\n", someVar, otherVar );
   
  カスタム マクロは、目的に応じて出力情報の量を増減したり、出力先を変更したりなどの変更を簡単に実現できるため、デバッグ要件が複雑さを増してくる段階で使用すると便利です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CRT のデバッグ技術](../debugger/crt-debugging-techniques.md)

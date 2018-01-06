@@ -14,11 +14,12 @@ caps.latest.revision: "105"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 29f87ccebc342e6b5b03d40aab789ff80496a96d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 04b627e1f3188a4e7e938f9446251b5be80b87e6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-intellitrace-stand-alone-collector"></a>IntelliTrace スタンドアロン コレクターを使用する
 **IntelliTrace スタンドアロン コレクター** を使用すると、対象コンピューターに Visual Studio をインストールしたり、対象システムの環境を変更したりすることなく、運用サーバーまたは他の環境でアプリの IntelliTrace 診断データを収集できます。 IntelliTrace スタンドアロン コレクターは、Web、SharePoint、WPF、および Windows フォーム アプリで動作します。 データを収集したら、コレクターを削除して、アンインストールします。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/31/2017
 >   
 >  IntelliTrace データ内のパフォーマンス関連イベントを収集するには、エージェントを **モニター** モードで実行します。 **モニター** モードは、 **トレース** モードや **IntelliTrace スタンドアロン コレクター**よりもパフォーマンスに及ぼす影響が少なくなります。 Microsoft Monitoring Agent がインストールされている場合、対象システムの環境が変更されます。 参照してください[Microsoft Monitoring Agent を使用して](../debugger/using-the-microsoft-monitoring-agent.md)です。  
   
- **Requirements**  
+ **必要条件**  
   
 -   .NET Framework 3.5、4、または 4.5  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/31/2017
   
 5.  [Web アプリまたは SharePoint アプリケーションからデータを収集する](#BKMK_Collect_Data_from_IIS_Application_Pools)  
   
-     または  
+     - または -  
   
      [マネージ アプリからのデータの収集](#BKMK_Collect_Data_from_Executables)  
   
@@ -130,7 +131,7 @@ ms.lasthandoff: 10/31/2017
   
     2.  Web アプリまたは SharePoint アプリケーションのアプリケーション プールに、コレクター ディレクトリに対する読み取りおよび実行アクセス許可を与えます。  
   
-         次に例を示します。  
+         例:  
   
         -   **DefaultAppPool** アプリケーション プールの Web アプリの場合:  
   
@@ -160,7 +161,7 @@ ms.lasthandoff: 10/31/2017
   
     2.  PowerShell コマンド ウィンドウで、 **Import-Module** コマンドを使用して **Microsoft.VisualStudio.IntelliTrace.PowerShell.dll**をインポートします。  
   
-         次に例を示します。  
+         例:  
   
          `Import-Module "C:\IntelliTraceCollector\Microsoft.VisualStudio.IntelliTrace.PowerShell.dll"`  
   
@@ -178,7 +179,7 @@ ms.lasthandoff: 10/31/2017
   
 2.  Web アプリまたは SharePoint アプリケーションのアプリケーション プールに、.iTrace ファイル ディレクトリに対する完全なアクセス許可を与えます。 Windows の **icacls** コマンドまたはエクスプローラー (またはファイル エクスプローラー) を使用できます。  
   
-     次に例を示します。  
+     例:  
   
     -   Windows の **icacls** コマンドを使用してアクセス許可を設定するには:  
   
@@ -190,7 +191,7 @@ ms.lasthandoff: 10/31/2017
   
              `icacls "C:\IntelliTraceLogFiles" /grant "IIS APPPOOL\SharePoint - 80":F`  
   
-         または  
+         - または -  
   
     -   エクスプローラー (またはファイル エクスプローラー) を使用してアクセス許可を設定するには:  
   

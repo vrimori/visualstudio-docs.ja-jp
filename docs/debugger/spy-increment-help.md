@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e0d7f7ccb9b752af4789b757fb1a3ed2ae5d29e6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 10e50e8afde8bd4d5669ee899a061b708377f28f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="spy-help"></a>Spy++ ヘルプ
 Spy++ ユーティリティのドキュメントには、一般的なトピックを使用して spy++ と spy++ ビューでの 2 つのグループが含まれています。 これらが各利用可能なメニュー コマンドやダイアログ ボックスで詳細をさらには、spy++ リファレンス続きます。  

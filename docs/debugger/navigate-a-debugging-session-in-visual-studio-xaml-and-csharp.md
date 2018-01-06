@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0c69ff648e2a1ac8c60746f1e7879e80c2063c2a
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: uwp
+ms.openlocfilehash: d5fa005273ada8869da467c9db97e0263f43f555
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="navigate-a-debugging-session-in-visual-studio-xaml-and-c"></a>Visual Studio でのデバッグ セッションのナビゲート (XAML および C#)
 このクイック スタートでは、Visual Studio デバッグ セッション間を移動する方法と、セッションでプログラムの状態を表示および変更する方法を示します。  
@@ -212,7 +213,7 @@ ms.lasthandoff: 12/07/2017
   
  **デバッグを停止します。** **デバッグ** メニューの 選択**デバッグの停止** (キーボード: shift キーを押しながら f5 キー)。 これによりデバッグ セッションが終了します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [(VB、c#、C++ および XAML) は、デバッグ セッションを開始します。](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)   
  [トリガーを中断、再開、およびバック グラウンド イベント UWP アプリの)](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md)   
  [Visual Studio でアプリをデバッグします。](../debugger/debug-store-apps-in-visual-studio.md)

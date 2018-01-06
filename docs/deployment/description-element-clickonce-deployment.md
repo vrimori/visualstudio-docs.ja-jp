@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 41fd9fcee2d0ae954f5ec234bf23cbefd5ccd6da
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: f5045f9203d5413efdd6d192d2667e94d0119220
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdescriptiongt-element-clickonce-deployment"></a>&lt;説明&gt;要素 (ClickOnce 配置)
 シェルに表示を作成するためのアプリケーション情報を識別し、**プログラム追加と削除**コントロール パネル内の項目。  
@@ -44,10 +45,10 @@ ms.lasthandoff: 10/27/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|`publisher`|必須です。 Windows のアイコンの配置に使用する会社名を識別**開始**メニューおよび**プログラム追加と削除**インストールの展開を構成すると、コントロール パネル内の項目。|  
-|`product`|必須です。 完全な製品名を識別します。 Windows にインストールされているアイコンのタイトルとして使用されている**開始**メニュー。|  
-|`suiteName`|省略可能です。 内のサブフォルダーを識別、 `publisher` windows フォルダー**開始**メニュー。|  
-|`supportUrl`|省略可能です。 表示されるサポートの URL を指定します、**プログラム追加と削除**コントロール パネル内の項目。 この URL へのショートカットが、Windows のアプリケーションのサポートの作成も**開始**] メニューの [インストールの展開を構成するとします。|  
+|`publisher`|必須。 Windows のアイコンの配置に使用する会社名を識別**開始**メニューおよび**プログラム追加と削除**インストールの展開を構成すると、コントロール パネル内の項目。|  
+|`product`|必須。 完全な製品名を識別します。 Windows にインストールされているアイコンのタイトルとして使用されている**開始**メニュー。|  
+|`suiteName`|任意。 内のサブフォルダーを識別、 `publisher` windows フォルダー**開始**メニュー。|  
+|`supportUrl`|任意。 表示されるサポートの URL を指定します、**プログラム追加と削除**コントロール パネル内の項目。 この URL へのショートカットが、Windows のアプリケーションのサポートの作成も**開始**] メニューの [インストールの展開を構成するとします。|  
   
 ## <a name="remarks"></a>コメント  
  Description 要素と、すべての展開構成が必要です。  
@@ -62,5 +63,5 @@ ms.lasthandoff: 10/27/2017
   xmlns="urn:schemas-microsoft-com:asm.v1" />  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce 配置マニフェス](../deployment/clickonce-deployment-manifest.md)

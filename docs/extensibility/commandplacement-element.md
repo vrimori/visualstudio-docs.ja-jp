@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 71a53dfcb7ae7cca5b360d2e115c34909ca32f86
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a6a5c8d9220b0cd2c0dddfee283d222f4efb9ab8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="commandplacement-element"></a>CommandPlacement 要素
 CommandPlacement 要素は、1 つ以上のグループまたはメニューに含まれるには、ボタン、グループ、およびメニューを使用します。 CommandPlacement 要素を使用すると、ユーザー インターフェイスの外観を変更するのには、これらの項目を完全に再定義するはありません。  
@@ -41,16 +42,16 @@ CommandPlacement 要素は、1 つ以上のグループまたはメニューに�
   
 |属性|説明|  
 |---------------|-----------------|  
-|guid|必須です。 定義されているコマンド セットの guid、[シンボル要素](../extensibility/symbols-element.md)です。|  
-|ID|必須です。 メニューのグループ、または配置されるで定義されているコマンドの id、`Symbols Element`です。|  
-|priority|必須です。 その親要素内の項目の visual の位置を決定します。|  
-|状態|省略可能です。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
+|guid|必須。 定義されているコマンド セットの guid、[シンボル要素](../extensibility/symbols-element.md)です。|  
+|ID|必須。 メニューのグループ、または配置されるで定義されているコマンドの id、`Symbols Element`です。|  
+|priority|必須。 その親要素内の項目の visual の位置を決定します。|  
+|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|親|必須です。 メニューまたはグループを配置する項目をホストしています。|  
+|親|必須。 メニューまたはグループを配置する項目をホストしています。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -69,6 +70,6 @@ CommandPlacement 要素は、1 つ以上のグループまたはメニューに�
 </CommandPlacements>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CommandPlacements 要素](../extensibility/commandplacements-element.md)   
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

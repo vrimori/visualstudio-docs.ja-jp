@@ -22,11 +22,12 @@ caps.latest.revision: "6"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 11e10800ff51abd6f95447d85204a44f8367f551
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: cplusplus
+ms.openlocfilehash: 392ada2288adcc229834f617c2f6284bb2e7ed0f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clickonce-unmanaged-api-reference"></a>ClickOnce アンマネージ API リファレンス
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]dfshim.dll からアンマネージのパブリック Api です。  
@@ -82,5 +83,5 @@ ms.lasthandoff: 10/27/2017
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、失敗を表す HRESULT を返します。 マネージ例外が発生した場合は、0x80020009 (DISP_E_EXCEPTION) を返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:System.Deployment.Application.DeploymentServiceCom.CleanOnlineAppCache%2A>

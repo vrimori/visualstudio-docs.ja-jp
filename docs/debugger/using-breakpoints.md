@@ -37,11 +37,12 @@ caps.latest.revision: "57"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 844b1378866bdd66b11494f01ff4762909408af7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 20f1b517d271bd50cdb96c595f2e8ab9be7c5e65
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでブレークポイントを使用します。
 コードの変数の状態や呼び出し履歴の確認などのために、デバッガーの実行を停止するときにブレークポイントを設定できます。 ブレークポイントは、開発者が利用できる重要なデバッグ手法の 1 つです。  
@@ -246,5 +247,5 @@ ms.lasthandoff: 10/31/2017
 ### <a name="breakpoints-dont-work-in-a-dll"></a>ブレークポイントが DLL で機能しない  
  デバッガーがモジュールのコードの場所に関するデバッグ情報を読み込んでいない場合は、ソース ファイルにブレークポイントを設定できません。 このようなときは、 **ブレークポイントを設定できない**ことを示すメッセージが表示されます。 ブレークポイントの場所に、警告ブレークポイント グリフが表示されます。 ただし、これらの警告ブレークポイントは、コードが読み込まれたときに実際のブレークポイントになります。 シンボルの読み込みの詳細については、次を参照してください。[指定シンボル (.pdb) とソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーでのコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)

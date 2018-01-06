@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e7d095d5dec0194f75d739899433c04439f08539
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9c1aeeb2da6817375e0327dba385037dccdc58cf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hlsl-shader-debugger"></a>HLSL シェーダーのデバッガー
 Visual Studio Graphics Analyzer で HLSL デバッガーを使用すると、アプリの実際の条件下で、HLSL シェーダー コードの動作方法を理解できます。  
@@ -74,7 +75,7 @@ Visual Studio Graphics Analyzer で HLSL デバッガーを使用すると、ア
   
  HLSL デバッガーを使用して、シェーダーのエラーをデバッグする方法の例については、次を参照してください。[例](graphics-diagnostics-examples.md)またはチュートリアルでは、リンク先の [参照] セクションを参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: 頂点の網かけによるオブジェクトの不足](walkthrough-missing-objects-due-to-vertex-shading.md)   
  [チュートリアル: 網かけによるレンダリング エラーのデバッグ](walkthrough-debugging-rendering-errors-due-to-shading.md)   
  [チュートリアル: 計算シェーダーをデバッグするためのグラフィックス診断の使用](walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader.md)

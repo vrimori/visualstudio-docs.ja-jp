@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 41c797d2c04c630d5aee7ff5ca2c0d5fc084026a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0cab184b0ecf4c4971b116cc9dfde26d8f80b45f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="port-suppliers"></a>ポートの仕入先
 デバッガーのアーキテクチャの観点から、**ポート サプライヤー**:  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/31/2017
   
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]既定のポートの仕入先と、既定のポートを提供します。 カスタム ポートを実装する場合は、カスタム ポート業者も実装する必要がそれらのカスタム ポートを指定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバー](../../extensibility/debugger/servers-visual-studio-sdk.md)   
  [ポート](../../extensibility/debugger/ports.md)   
  [デバッガーの概念](../../extensibility/debugger/debugger-concepts.md)   

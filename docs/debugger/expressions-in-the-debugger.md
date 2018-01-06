@@ -22,11 +22,12 @@ caps.latest.revision: "25"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8eaccc61de02de9974d50d7bb97824cbafa38f7b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: fd1a477a7d02171eecea51b26f796d9c958c09eb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="expressions-in-the-visual-studio-debugger"></a>Visual Studio デバッガーで式
 Visual Studio デバッガーには式エバリュエーターという機能があり、 **[クイック ウォッチ]** ダイアログ ボックス、 **[ウォッチ]** ウィンドウ、または **[イミディエイト]** ウィンドウで式を入力するときに役立ちます。 式エバリュエーターは **[ブレークポイント]** ウィンドウなど、他のデバッガー機能でも使用できます。
@@ -206,7 +207,7 @@ int main()
   
 -   名前空間またはモジュール レベルのキーワード ( `End Sub` や `Module`など)。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [C++ の書式指定子](../debugger/format-specifiers-in-cpp.md)   
  [コンテキスト演算子 (C++)](../debugger/context-operator-cpp.md)   
  [C# の書式指定子](../debugger/format-specifiers-in-csharp.md)   

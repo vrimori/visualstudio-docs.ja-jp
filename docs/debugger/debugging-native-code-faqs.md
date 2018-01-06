@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9f007d1fa6d9a1bbdebdd78a88272c98f0c44cdb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: cplusplus
+ms.openlocfilehash: 943f2a142eb2267ada5c9b8570068c67684bdaed
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-native-code-faqs"></a>ネイティブ コードのデバッグに関する FAQ
 ここでは、よく寄せられる質問とその回答を記載します。  
@@ -50,6 +51,6 @@ ms.lasthandoff: 10/31/2017
   
 -   [MFC で停止した場合を取得する方法戻る MFC を呼び出した関数をしますか。](../debugger/how-to-get-back-to-the-function-that-called-mfc-if-halted.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)

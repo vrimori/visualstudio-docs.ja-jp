@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0f81ab0253c9820f1e6c89ebf455601059d43bda
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b8e9dfcc3f918dba7444b6a3478c8b6a2fb5db21
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="commandname-element"></a>CommandName 要素
 `CommandName`要素がキーボード カテゴリに表示されるテキストを指定、**オプション**] ダイアログ ボックスし、[、**コマンド**一覧に、**カスタマイズ**ダイアログボックスです。  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/31/2017
 |-------------|-----------------|  
 |[ 要素](../extensibility/strings-element.md)|などのテキスト要素をグループ化`ButtonText`と`CommandName`です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

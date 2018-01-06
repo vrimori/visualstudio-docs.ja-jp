@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 40c679811f137e77909395042d91d0458c874d90
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: ffa7449347fe5e898f2984237dfc8908e3bb2003
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-specific-errors-in-clickonce-deployments"></a>ClickOnce 配置の固有のエラーのトラブルシューティング
 このトピックの一覧を展開するときに発生する可能性がある次の一般的なエラー、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションでは、各問題を解決する手順を示します。  
@@ -139,6 +140,6 @@ ms.lasthandoff: 10/27/2017
 |ショートカットは、ネットワーク経由でアクティブにできません。|ショートカットを[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは、ローカルのハード_ディスクにのみ開始できます。 リモート サーバー上のショートカット ファイルを指す URL を開くことによって、開始できません。|  
 |部分信頼でオンラインを実行するには、アプリケーションが大きすぎます。 について、アプリケーション ベンダーやシステム管理者に問い合わせてください。|部分信頼で実行されるアプリケーションは、既定では、250 MB のオンライン アプリケーションのクォータのサイズの半分より大きくすることはできません。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)   
  [ClickOnce 配置のトラブルシューティング](../deployment/troubleshooting-clickonce-deployments.md)

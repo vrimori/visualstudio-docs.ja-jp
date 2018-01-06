@@ -25,11 +25,12 @@ caps.latest.revision: "28"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3a532c2e238528ea32492aae22b001ab0955f8c6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b05192c2d57c280cef970d4b8887ff7eadbb27b9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-debugging-a-parallel-application-in-visual-studio"></a>チュートリアル: Visual Studio での並行アプリケーションのデバッグ
 このチュートリアルで使用する方法、**並列タスク**と**並列スタック**並列アプリケーションをデバッグする windows です。 これらの windows のヘルプを把握し、使用するコードの実行時の動作を確認する、[タスク並列ライブラリ (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)または[同時実行ランタイム](/cpp/parallel/concrt/concurrency-runtime)です。 このチュートリアルには、ブレークポイントが組み込まれたサンプル コードが用意されています。 コードが中断されたら、チュートリアルで使用する方法、**並列タスク**と**並列スタック**を調査する windows です。  
@@ -301,10 +302,10 @@ ms.lasthandoff: 10/31/2017
   
      1 つまたは複数のタスクの基になるスレッドを凍結したり、割り当てられたスレッド以外のすべてのスレッドを凍結したりすることができます。 表される、凍結されたスレッド、**タスク**ウィンドウでもはでは、**スレッド**ウィンドウと同じように青*を一時停止*アイコン。  
   
-## <a name="summary"></a>概要  
+## <a name="summary"></a>まとめ  
  このチュートリアルでは説明、**並列タスク**と**並列スタック**デバッガーのウィンドウ。 マルチスレッド コードを使用する実際のプロジェクトでこれらのウィンドウを使用してみてください。 C++、C#、または Visual Basic で記述された並列コードを調べることができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マルチ スレッド アプリケーションのデバッグ](../debugger/walkthrough-debugging-a-parallel-application.md)   
  [デバッガーの基本事項](../debugger/debugger-basics.md)   
  [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)   

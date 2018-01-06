@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 93b7a670d74fbbb0c9d8e13f1e6463b52a8ca5d2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: cplusplus
+ms.openlocfilehash: 24d3eed91a659dc8f0d114369bdba45dd2973375
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-can-i-debug-a-c-access-violation"></a>C++ アクセス違反をデバッグする方法は?
 ## <a name="problem-description"></a>問題の説明  
@@ -71,5 +72,5 @@ int main() {
   
  ポインターがアクセス違反を引き起こした理由を特定できない場合、コードをトレースして、問題の原因となったポインターが正しく割り当てられているかどうかを確認します。  場合は、パラメーターとして渡される、正しく、渡され、誤ってを作成していないことを確認する、[コピーの浅い](http://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy)です。 値が変更されないことされている意図せずどこかに、プログラムでは、プログラムで別の場所で変更されていないかどうかを確認する対象のポインターに対してデータ ブレークポイントを作成して、確認します。 データ ブレークポイントの詳細については、 [Using Breakpoints](../debugger/using-breakpoints.md)のデータ ブレークポイントのセクションを参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ネイティブ コードのデバッグに関する FAQ](../debugger/debugging-native-code-faqs.md)

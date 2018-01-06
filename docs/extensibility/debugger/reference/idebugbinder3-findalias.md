@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f209829e3b6c76571a53370c11c6d6d7343b088c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b88ae0da5f90da45d33ec56169665e9c8430846c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugbinder3findalias"></a>IDebugBinder3::FindAlias
 このメソッドは、名前を指定、別名を検索します。 これは、プログラムのすべてのエイリアスを検索します。  
@@ -52,6 +53,6 @@ int FindAlias(
 ## <a name="remarks"></a>コメント  
  このメソッドを呼び出す; 前に null に変換先オブジェクトを初期化します。エイリアスが見つかりましたかどうかを決定した後に null 値をテストします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)   
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

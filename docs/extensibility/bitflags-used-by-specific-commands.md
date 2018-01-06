@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e66d0f67e3774b1cbc908bb6b1bd13884a1d3171
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: be102b5eaf39db2fc7495c62c456e35e54ffd0f3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bitflags-used-by-specific-commands"></a>特定のコマンドで使用されるビットフラグ
 1 つの値の 1 つ以上のビットを設定して、さまざまなソース管理プラグイン API の関数の動作を変更できます。 これらの値は、ビットフラグと呼ばれます。 ソース管理プラグイン API によって使用されるさまざまなビットフラグの詳細をここでは、それらを使用する関数によってグループ化します。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
 |----------|-----------|-----------------|  
 |`SCC_FILETYPE_AUTO`|0x00|ソース管理プラグインは、ファイルがテキストかバイナリかどうかを自動的に検出すると想定されます。|  
 |`SCC_FILETYPE_TEXT`|0x01|ファイルの種類は、テキストです。|  
-|`SCC_FILETYPE_BINARY`|0x04|ファイルの種類はバイナリです。 **注:** `SCC_FILETYPE_TEXT`と`SCC_FILETYPE_BINARY`フラグは相互に排他的です。   1 つずつ、またはどちらも設定します。|  
+|`SCC_FILETYPE_BINARY`|0x04|ファイルの種類はバイナリです。 **注:** `SCC_FILETYPE_TEXT`と`SCC_FILETYPE_BINARY`フラグは相互に排他的です。 1 つずつ、またはどちらも設定します。|  
 |`SCC_ADD_STORELATEST`|0x02|最新のバージョンのみ (デルタなし) を格納します。|  
   
 ## <a name="diff-flags"></a>Diff フラグ  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="populatedirlist-flags"></a>PopulateDirList フラグ  
  これらのフラグを使用して、 [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)で、`fOptions`パラメーター。  
   
-|オプションの値|値|説明|  
+|オプションの値|[値]|説明|  
 |------------------|-----------|-----------------|  
 |SCC_PDL_ONELEVEL|0x0000|(これは、既定値) のディレクトリのディレクトリの 1 つだけのレベルを確認します。|  
 |SCC_PDL_RECURSIVE|0x0001|再帰的には、各指定したディレクトリの下のすべてのディレクトリを確認します。|  
@@ -70,7 +71,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="openproject-flags"></a>プロジェクトを開くフラグ  
  これらのフラグを使用して、 [SccOpenProject](../extensibility/sccopenproject-function.md)で、`dwFlags`パラメーター。  
   
-|オプションの値|値|説明|  
+|オプションの値|[値]|説明|  
 |------------------|-----------|-----------------|  
 |SCC_OP_CREATEIFNEW|0x00000001L|ソース管理にプロジェクトが存在しない場合は、それを作成します。 このフラグが設定されていないプロジェクトを作成するには、ユーザーの入力を求める (しない限り、`SCC_OP_SILENTOPEN`フラグを指定)。|  
 |SCC_OP_SILENTOPEN|0x00000002L|プロジェクトを作成するユーザーに確認しません。戻り値`SCC_E_UNKNOWNPROJECT`です。|  
@@ -107,5 +108,5 @@ ms.lasthandoff: 10/31/2017
 |`SCC_OPT_SCO_NO`|0L|(既定値)プラグインの UI からチェック アウトするには、[ok]作業ディレクトリを設定します。|`SCC_OPT_SCCCHECKOUTONLY`|  
 |`SCC_OPT_SCO_YES`|1 L|ないプラグインの UI のチェック アウトは、作業ディレクトリはありません。|`SCC_OPT_SCCCHECKOUTONLY`|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)

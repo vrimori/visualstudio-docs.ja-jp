@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d08d82f867ac2723ff68da615d5dc6977b8038af
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fae5211ac270832f07038faafbd6f5bc463d3944
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-debug-engine-implementation-strategy"></a>デバッグ エンジン実装方法を選択します。
 デバッグ エンジン (DE) の実装方法を決定するのにには、実行時のアーキテクチャを使用します。 デバッグ エンジンは、同じプロセスをデバッグしようとするプログラムを Visual Studio セッション デバッグ マネージャー (SDM)、またはそれらの両方にアウトはプロセスのプロセスで作成可能性があります。 次のガイドラインはこれら 3 つの戦略の中から選択する際に役立ちます。  
@@ -33,5 +34,5 @@ ms.lasthandoff: 10/31/2017
   
 -   デには、シンボル ストアにアクセスするプログラムを呼び出す必要があります、プログラムでインプロセス DE を作成します。 この場合、プログラムは、DE のインスタンスを作成します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio デバッガーの拡張性](../../extensibility/debugger/visual-studio-debugger-extensibility.md)

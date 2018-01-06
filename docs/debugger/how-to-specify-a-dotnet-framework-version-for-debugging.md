@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ace7dcdf236a551725dcc60e211ca98e3753e5cc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 69fa33ac76f39f7f37cc9aa84d61fd3cf7b0fe45
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-a-net-framework-version-for-debugging"></a>方法 : デバッグで .NET Framework のバージョンを指定する
 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] デバッガーでは、Microsoft [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] の現在のバージョンだけでなく、古いバージョンのデバッグもサポートしています。 デバッガーが適切なバージョンを常に特定できます Visual Studio からアプリケーションを起動する場合、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]デバッグしているアプリケーションにします。 使用すると、アプリケーションが既に実行されている**にアタッチ**、デバッガー常にできないことがありますの古いバージョンを識別する、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]です。 この場合、次のようなエラー メッセージが出力されます。  
@@ -57,11 +58,11 @@ ms.lasthandoff: 10/31/2017
   
 7.  **文字列の編集**ボックスに、.NET Framework のバージョン番号を入力、**値**ボックス。 たとえば、「V1.1.4322」などです。  
   
-8.  **[OK]** をクリックします。  
+8.  **[OK]**をクリックします。  
   
 9. 閉じる、**レジストリ エディター**です。  
   
      それでもデバッグの開始時にエラー メッセージが表示される場合は、レジストリに正しいバージョン番号が入力されていることを確認します。 また、Visual Studio でサポートされている [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンを使用していることを確認します。 デバッガーは、現在のバージョンおよび以前のバージョンの .NET Framework と互換性がありますが、将来のバージョンとの上位互換性はない可能性があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)

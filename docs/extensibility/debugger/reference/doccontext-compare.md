@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2074e5abe688ecb8f796099cf23309ec0cfe954d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d2882ebf3a1b21a4921f863496a42ac50ac1b2fa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="doccontextcompare"></a>DOCCONTEXT_COMPARE
 2 つのドキュメントのコンテキストを比較するための条件を指定します。  
@@ -62,13 +63,13 @@ enum enum_DOCCONTEXT_COMPARE {
   
  これらの値は、リストの最初のドキュメントのコンテキストを検索するための比較条件の指定に使用されます。 ドキュメントのコンテキストがを通じて自体に対して比較するドキュメント コンテキストの一覧を指定された、`IDebugDocumentContext2::Compare`メソッドです。 比較演算子の一覧の最初のドキュメントのコンテキスト`true`次が返されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [Compare](../../../extensibility/debugger/reference/idebugdocumentcontext2-compare.md)

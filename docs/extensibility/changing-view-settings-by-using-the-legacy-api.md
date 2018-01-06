@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fe5bd3b149981ca8183e9311185ef5d6ed19e48f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: dc68bf5f8a0e61b80200cd5454b78bcdda78cdfe
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="changing-view-settings-by-using-the-legacy-api"></a>レガシ API を使用してビューの設定を変更します。
 ワード ラップ、マージン、および仮想の領域などのコア エディター機能の設定は、のユーザーによって変更できます、**オプション** ダイアログ ボックス。 ただし、これらの設定を変更することはもプログラムでします。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/31/2017
   
  コア エディターの設定が変更されたすべてを一度に削除する VSEDITPROPID_ViewComposite_AllCodeWindowDefaults の vt の値を指定、`idprop`パラメーター。 この呼び出しで vt 型 VT_BOOL のバリアント、vt.boolVal VARIANT_TRUE です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア エディター内](../extensibility/inside-the-core-editor.md)   
  [レガシ API を使用してテキスト ビューにアクセスします。](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)   
  [[オプション] ダイアログ ボックス](../ide/reference/options-dialog-box-visual-studio.md)

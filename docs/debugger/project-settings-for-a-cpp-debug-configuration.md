@@ -115,11 +115,12 @@ caps.latest.revision: "49"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e32547d66d1bf4de73b209ac0174598da9bbb731
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: cplusplus
+ms.openlocfilehash: cbb7e773c3c2cbb21ae4ac8d93f695601e8a3663
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-settings-for-a-c-debug-configuration"></a>C++ デバッグ構成のプロジェクト設定
 C または C++ デバッグ構成でのプロジェクト設定を変更することができます、**プロパティ ページ** ダイアログ ボックスで説明したよう[する方法: デバッグ設定とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)です。 次の表は、デバッガー関連の設定を検索する場所を示して、**プロパティ ページ** ダイアログ ボックス。  
@@ -187,9 +188,9 @@ C または C++ デバッグ構成でのプロジェクト設定を変更する�
 
 外部プロジェクトにある Dll をデバッグするを参照してください。 [DLL のデバッグ プロジェクト](../debugger/debugging-dll-projects.md#vxtskdebuggingdllprojectsexternal)です。 DLL プロジェクトのデバッグがない呼び出し元のアプリケーションのプロジェクトへのアクセスを参照してくださいする必要がある場合[DLL プロジェクトからデバッグする方法について](../debugger/how-to-debug-from-a-dll-project.md)です。
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)   
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)   
- [作成して、Visual C プロジェクトの管理](/cpp/ide/creating-and-managing-visual-cpp-projects)   
+ [Visual C++ プロジェクトの作成および管理](/cpp/ide/creating-and-managing-visual-cpp-projects)   
  [/ASSEMBLYDEBUG (DebuggableAttribute の追加)](/cpp/build/reference/assemblydebug-add-debuggableattribute)   
  [ビルドのコマンドとプロパティの共通マクロ](/cpp/ide/common-macros-for-build-commands-and-properties)

@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5aed6bc3f7cd8c258eb7f566d6843792f5949b95
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: 6250a6b5cdf502d95aea3aaec033acaad826de42
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quickstart-debug-javascript-using-the-console"></a>クイックスタート: コンソールを使用した JavaScript のデバッグ
 ![Windows と Windows Phone に適用](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/11/2017
   
 -   画面のクリアなどの他のタスクを実行します。 コマンドの詳細については、「 [JavaScript Console commands](../debugger/javascript-console-commands.md) 」を参照してください。  
   
- このトピックの内容  
+ このトピックの内容:  
   
 -   [JavaScript コンソール ウィンドウを使用したデバッグ](#InteractiveConsole)  
   
@@ -274,7 +275,7 @@ ms.lasthandoff: 11/11/2017
   
 -   [!INCLUDE[win8](../debugger/includes/win8_md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
  [JavaScript コンソール コマンド](../debugger/javascript-console-commands.md)   
  [アプリを更新する (JavaScript)](../debugger/refresh-an-app-javascript.md)   

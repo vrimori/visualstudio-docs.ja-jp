@@ -21,11 +21,12 @@ caps.latest.revision: "38"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2eb975b5d4c1f3450ca18b1ea0da3cd3b7fb6375
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 178bd1768474eaaaf760e2ef4feecfe0e1519bee
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="view-data-values-in-datatips-in-the-code-editor"></a>コード エディターでデータヒントのデータ値の表示
 DataTips は、デバッグ中にプログラムの変数に関する情報を確認するときに便利です。 データヒントは、中断モードのときにのみ機能します。また、実行の現在のスコープ内にある変数に対してだけ使用できます。
@@ -104,7 +105,7 @@ DataTips は、デバッグ中にプログラムの変数に関する情報を�
   
 -   虫眼鏡アイコンをクリックして![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "ビジュアライザー アイコン")をデータ型の既定のビジュアライザーを選択します。  
   
-     または  
+     - または -  
   
      ビジュアライザーの横にあるポップアップ矢印をクリックし、データ型の適切なビジュアライザーを一覧から選択します。  
   
@@ -138,7 +139,7 @@ DataTips は、デバッグ中にプログラムの変数に関する情報を�
   
 2.  開き、をクリックする XML ファイルを検索 ダイアログ ボックスを使用して**OK**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーでのデータの表示](../debugger/viewing-data-in-the-debugger.md)   
  [ウォッチと [クイック ウォッチ] ウィンドウ](../debugger/watch-and-quickwatch-windows.md)   
  [カスタム ビジュアライザーを作成する](../debugger/create-custom-visualizers-of-data.md)   

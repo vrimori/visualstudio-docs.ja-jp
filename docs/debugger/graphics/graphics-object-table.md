@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d7449cef9dca41aee61a3f15162252298db04e71
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: eb03ab88ca3d1d50b559cef87bfdf045a0a81319
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-object-table"></a>グラフィックス オブジェクト テーブル
 Visual Studio のグラフィックス分析に含まれるグラフィックス オブジェクト テーブルは、ゲームまたはアプリのフレームをサポートする Direct3D オブジェクトについて理解するために役立ちます。  
@@ -42,7 +43,7 @@ Visual Studio のグラフィックス分析に含まれるグラフィックス
 |Column|説明|  
 |------------|-----------------|  
 |**識別子**|オブジェクト ID。|  
-|**名前**|Direct3D 関数 `SetPrivateData` を使用してオブジェクトに設定されたアプリケーション固有の情報。通常は、オブジェクトに関する追加の識別情報が表示されます。|  
+|**Name**|Direct3D 関数 `SetPrivateData` を使用してオブジェクトに設定されたアプリケーション固有の情報。通常は、オブジェクトに関する追加の識別情報が表示されます。|  
 |**Type**|オブジェクトの型。|  
 |**アクティブ**|キャプチャされたフレームの間に D3D10Device または D3D11DeviceContext に設定されたオブジェクトの場合は "*" が表示されます。<br /><br /> これは灰色のテキストで表示されるオブジェクトに対応しますが、オブジェクト テーブルを並べ替えるのに役立つ列エントリが用意されています。|  
 |**Size**|オブジェクトのサイズ (バイト単位)。|  
@@ -112,6 +113,6 @@ Visual Studio のグラフィックス分析に含まれるグラフィックス
 |**uint64**|64 ビットの符号なし整数値。 同じ**u8byte**です。|  
 |**bool**|ブール型 (`true` または `false`) の値。 それぞれのブール値は 32 ビット値によって表されます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [グラフィックス診断 (DirectX グラフィックスのデバッグ)](visual-studio-graphics-diagnostics.md)   
  [チュートリアル: デバイス状態によるオブジェクトの不足](walkthrough-missing-objects-due-to-device-state.md)

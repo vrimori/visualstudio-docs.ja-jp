@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 90e55a7a16731d6e4e501282d7b96293d0bc9acd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0499fbf29e9bb16d0f5ff99c42f031d06e4fb4de
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-page-up-or-down-in-memory"></a>方法 : [メモリ] ウィンドウの上下スクロール
 メモリの内容を表示すると、**メモリ**ウィンドウまたは**逆アセンブル**ウィンドウで、メモリ領域内を上下に移動する垂直スクロール バーを使用することができます。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/31/2017
   
 -   垂直スクロール バーの上端または下端にある矢印をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[メモリ] ウィンドウ](../debugger/memory-windows.md)   
  [方法: [逆アセンブル] ウィンドウを使用して](../debugger/how-to-use-the-disassembly-window.md)   
  [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)

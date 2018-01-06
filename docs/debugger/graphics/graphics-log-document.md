@@ -16,11 +16,12 @@ caps.latest.revision: "31"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8429e7175ca6ab9a537952fb4a605f2281da69c8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 30abe64fa54e7b63e1552ab2e4c5ce95ac11befc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-log-document"></a>グラフィックス ログ ドキュメント
 グラフィックス ログのドキュメントは、アプリがグラフィックス診断のセッションで実行されているときに発生したグラフィックス イベントのレコードです。 記録した後で、Visual Studio Graphics Analyzer でログを確認して、レンダリングとパフォーマンスの問題を診断することができます。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/31/2017
 |**メモリを表示します。**|グラフィックス アダプターにインストールされているメモリの量。|  
 |**ドライバー名**|グラフィックス アダプターのドライバーの名前。|  
 |**ドライバーのバージョン**|グラフィックス アダプターのドライバーのバージョン。|  
-|**名前**|グラフィックス アダプターの名前。|  
+|**Name**|グラフィックス アダプターの名前。|  
   
  **エクスペリメント ファイル**  
  キャプチャ セッションに関連付けられたエクスペリメント ファイルに関する情報を一覧表示します。  
@@ -114,6 +115,6 @@ ms.lasthandoff: 10/31/2017
 |**セッションの開始時間**|キャプチャ セッションを開始した日付と時刻。|  
 |**Size**|グラフィックス ログのドキュメントのサイズ。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: 頂点の網かけによるオブジェクトの不足](walkthrough-missing-objects-due-to-vertex-shading.md)   
  [チュートリアル: 網かけによるレンダリング エラーのデバッグ](walkthrough-debugging-rendering-errors-due-to-shading.md)

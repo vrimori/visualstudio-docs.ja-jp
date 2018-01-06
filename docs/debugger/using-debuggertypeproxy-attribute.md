@@ -21,11 +21,12 @@ caps.latest.revision: "24"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7796f11581f072e0437f341590bb064eeec81f7c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 36e80508ce0febc7678585faf6518bf6b838a289
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-debuggertypeproxy-attribute"></a>DebuggerTypeProxy 属性の使用
 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> では、ある型のプロキシ (代理) を指定し、その型をデバッガー ウィンドウで表示する方法を変更します。 プロキシを持つ変数を表示したときに、プロキシが元の型の**表示**です。 デバッガーの変数ウィンドウには、プロキシ型のパブリック メンバーのみが表示されます。 プライベート メンバーは表示されません。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/31/2017
   
  `"Namespace.TypeName'2"`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DebuggerDisplay 属性の使用](../debugger/using-the-debuggerdisplay-attribute.md)   
  [カスタム ビュー .managed オブジェクトを作成します。](../debugger/create-custom-views-of-dot-managed-objects.md)   
  [デバッガー表示属性によるデバッグ機能の拡張](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)

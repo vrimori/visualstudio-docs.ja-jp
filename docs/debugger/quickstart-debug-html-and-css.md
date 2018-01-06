@@ -23,11 +23,12 @@ caps.latest.revision: "101"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f1650326711d8d788a7e232df97044c8e896e3b4
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: uwp
+ms.openlocfilehash: bf9049907d1648b1950f8d66e0fd183c82699e92
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-html-and-css-in-uwp-and-windows-81-apps"></a>HTML および CSS UWP と Windows 8.1 アプリをデバッグします。
 ![Windows と Windows Phone に適用](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
@@ -277,7 +278,7 @@ ms.lasthandoff: 11/11/2017
   
  [と Visual Studio をダウンロードするには、](http://go.microsoft.com/fwlink/?LinkID=232448) ここ [!INCLUDE[win8](../debugger/includes/win8_md.md)] にアクセスしてください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
  [DOM Explorer を使用して CSS スタイルをデバッグします。](../debugger/debug-css-styles-using-dom-explorer.md)   
  [DOM Explorer を使用して、レイアウトをデバッグします。](../debugger/debug-layout-using-dom-explorer.md)   

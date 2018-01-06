@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 19718425df6f0c8a656db0e3d7ebf0f06937f780
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 301c0311b8398ae14b36fedca5653d607b3274c0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-type-visualizers-and-custom-viewers"></a>ビジュアライザーの型およびカスタム ビューアーを実装します。
 > [!IMPORTANT]
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/31/2017
   
 -   [IDebugBinder3](../../extensibility/debugger/reference/idebugbinder3.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CLR 式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   
  [視覚化とデータを表示します。](../../extensibility/debugger/visualizing-and-viewing-data.md)   
  [IDebugCustomViewer](../../extensibility/debugger/reference/idebugcustomviewer.md)

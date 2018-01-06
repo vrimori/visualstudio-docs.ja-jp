@@ -17,11 +17,12 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fb8b78df604aef31739b2a2e9d9f25b42e470b66
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: aba2778e3859e0cb0de984ea47e056a417927e97
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dump-file-summary-extensibility-api"></a>ダンプ ファイルの概要機能拡張 API
 拡張できる機能拡張 Api を使用して、このセクションで、します。Exe プロジェクト システムと**ダンプの概要**独自のカスタム デバッグ エンジンで使用するためのページです。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/31/2017
   
  <xref:Microsoft.VisualStudio.Debugger.VsDebugPresentationExtension>  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ダンプ ファイルの使用](../debugger/using-dump-files.md)

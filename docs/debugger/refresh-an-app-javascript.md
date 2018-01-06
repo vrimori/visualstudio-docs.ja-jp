@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c5f5592893452c3fdf7f535758f09d7877030c03
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: uwp
+ms.openlocfilehash: 636f88313d53625e5bb778ffe7bebc8f891ed4bd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="refresh-a-uwp-or-windows-81-app"></a>UWP または Windows 8.1 アプリを更新します。
 ![Windows と Windows Phone に適用](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
@@ -82,5 +83,5 @@ ms.lasthandoff: 11/11/2017
   
 8.  アプリに切り替えます。 デバッガーを再起動せずにアプリが再度読み込まれ、新しいページ タイトルが表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [クイック スタート: HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)

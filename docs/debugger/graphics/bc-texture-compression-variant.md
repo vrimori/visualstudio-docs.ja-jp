@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b1984941f0718b962b516ef99e37642770a4aabc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 13b97c4d9e90adf8b621100d6d2a68d11570e71d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bc-texture-compression-variant"></a>BC テクスチャ圧縮バリアント
 B8G8R8X8、B8G8R8A8、または R8G8B8A8 のバリエーションであるピクセル形式を持つテクスチャで、ブロック圧縮を有効にします。  
@@ -63,5 +64,5 @@ B8G8R8X8、B8G8R8A8、または R8G8B8A8 のバリエーションであるピク
 ## <a name="example"></a>例  
  このバリアントは、`CreateTexture2D` への呼び出しを行う前に、実行時にテクスチャをブロック圧縮します。 実行コードについては、このアプローチは推奨されません。圧縮されていないテクスチャはより多くのディスク容量を使用し、ブロックベースの圧縮では大量のコンピューティング リソースをエンコードする必要があり、追加のステップによってアプリケーションのロード時間が非常に長くなることがあるためです。 代わりに、イメージ エディタ、またはビルド パイプラインの一部であるイメージ プロセッサを使用して、テクスチャをオフラインで圧縮することを推奨しています。 これらのアプローチではディスク容量の要件が減り、アプリケーションのランタイム オーバーヘッドが排除され、処理時間に余裕があるため、最適なイメージ品質を保持することができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ハーフ/クォーター テクスチャ ディメンション バリアント](half-quarter-texture-dimensions-variant.md)

@@ -31,11 +31,12 @@ caps.latest.revision: "31"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 84dbee96880d651ab17efd1b19dbb2589f87f9f6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cbef364c316f51be8996e79f63a493b51e619f1e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger"></a>シンボル (.pdb) ファイル、ソース ファイル、およびバイナリ ファイルの検索
 プログラム データベース (.pdb) ファイルは、シンボル ファイルとも呼ばれます。 は、クラス、メソッド、およびその他のコードは、プロジェクトのコンパイル済み実行可能ファイルで使用される識別子にソース コードで作成した識別子をマップします。 また .pdb ファイルは、ソース コード内のステートメントを実行可能ファイル内の実行命令に対応付けます。 デバッガーでは、この情報を使って、2 つの重要な情報を決定します。
@@ -252,7 +253,7 @@ DLL のエクスポート テーブル内で使用できるシンボルを調べ
   
      **[部分信頼アセンブリのソース サーバーを許可する (マネージのみ)]** と **[信頼されていないソース サーバー コマンドを常に確認なしで実行する]** のいずれを選択した場合も、前述のセキュリティ リスクが高くなる可能性があることに注意してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [シンボル ファイルおよび Visual Studio のシンボルの設定を理解します。](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/05/understanding-symbol-files-and-visual-studios-symbol-settings/)
 
 [Visual Studio 2012 および 2013 における .NET のリモート シンボル ローディングの変更](http://blogs.msdn.com/b/visualstudioalm/archive/2013/10/16/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013.aspx)

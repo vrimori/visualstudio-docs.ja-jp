@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 87c230ed85ed666abbad96bbdbda614ae0a01a1f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 82d8c547885021d83e272bcd3ab1a5d560c73a39
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="about-the-registers-window-in-visual-studio"></a>Visual Studio で [レジスタ] ウィンドウについて
 **登録**ウィンドウのアドレス レベルのデバッグが有効になっている場合にのみ使用できますが、**オプション**ダイアログ ボックスで、**デバッグ**ノード。  
@@ -55,6 +56,6 @@ EAX = 003110D8
 ## <a name="register-groups"></a>レジスタ グループ  
  、見やすくするために、**登録**ウィンドウはレジスタをグループに編成します。 右クリックした場合、**登録**ウィンドウ、に応じて表示と非表示を切り替えることができます、グループの一覧を含むショートカット メニューが表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: [レジスタ] ウィンドウの使用](../debugger/how-to-use-the-registers-window.md)   
  [デバッガーの基本事項](../debugger/debugger-basics.md)

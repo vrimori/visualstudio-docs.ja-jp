@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4d71ee66c9d13dab5918e90c6434c3397d52191a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 93431c8863e2b30fb98d00bec5112257e54496f1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="halfquarter-texture-dimensions-variant"></a>ハーフ/クォーター テクスチャ ディメンション バリアント
 レンダー ターゲットではないテクスチャで、テクスチャのディメンションを小さくします。  
@@ -46,6 +47,6 @@ ms.lasthandoff: 10/31/2017
 ## <a name="example"></a>例  
  このバリアントは、`CreateTexture2D` への呼び出しを行う前に、実行時にテクスチャをリサイズします。 実行コードについては、このアプローチは推奨されません。フルサイズのテクスチャはより多くのディスク容量を使用し、追加のステップによってアプリケーションのロード時間が長くなることがあるためです (特に、圧縮されたテクスチャでは、エンコード用に大量のコンピューティング リソースが必要です)。 代わりに、イメージ エディタ、またはビルド パイプラインの一部であるイメージ プロセッサを使用して、テクスチャをオフラインでリサイズすることを推奨しています。 これらのアプローチではディスク容量の要件が減り、アプリケーションのランタイム オーバーヘッドが排除され、処理時間に余裕があるため、テクスチャを縮小または圧縮しつつ最高のイメージ品質を保持することができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ミップマップ生成バリアント](mip-map-generation-variant.md)   
  [BC テクスチャ圧縮バリアント](bc-texture-compression-variant.md)

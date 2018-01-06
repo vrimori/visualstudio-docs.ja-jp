@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1dac35a0e01890488e6290759b563d25f7067067
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 82d0b25b2306cc957015ec4c205a22cd44660357
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgetundecoratednameex"></a>IDiaSymbol::get_undecoratedNameEx
 C++ の非装飾の名前の取得の一部またはすべての装飾 (リンケージ) 名です。  
@@ -74,5 +75,5 @@ HRESULT get_undecoratedNameEx(
 |UNDNAME_NO_IDENT_CHAR_CHECK|0x10000|有効な識別子の文字のチェックを抑制します。|  
 |UNDNAME_NO_PTR64|0x20000|出力に ptr64 は含まれません。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "38"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 786d7c8841f680d5af5c539e30723289df4db0f5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 720aeb5670127d64e7b3fc9b016a032c0526c083
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-a-menu-controller-to-a-toolbar"></a>ツールバーにメニュー コント ローラーを追加します。
 このチュートリアルの[ツール ウィンドウにツールバーを追加する](../extensibility/adding-a-toolbar-to-a-tool-window.md)チュートリアルし、ツール ウィンドウのツールバーにメニュー コント ローラーを追加する方法を示しています。 次に示す手順もに適用できますで作成される、ツールバー、[ツールバーを追加する](../extensibility/adding-a-toolbar.md)チュートリアルです。  
@@ -227,6 +228,6 @@ ms.lasthandoff: 10/31/2017
   
      ダイアログ ボックスが、メッセージが表示されます**メニュー コント ローラーのアイテム 3 を選択した**です。 メニュー コント ローラー ボタンのテキストにメッセージが対応していることを確認します。 メニュー コント ローラー ボタンを表示するようになりました**MC 項目 3**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ツール ウィンドウにツールバーを追加します。](../extensibility/adding-a-toolbar-to-a-tool-window.md)   
  [ツール バーの追加](../extensibility/adding-a-toolbar.md)

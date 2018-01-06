@@ -26,11 +26,12 @@ caps.latest.revision: "32"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a5c6f422e980a585b9cbac3c0b59ad8d981aba93
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 96a4dc22f4f5c96d3dd9d40a565c2656ffe6e283
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="use-the-memory-windows-in-the-visual-studio-debugger"></a>Visual Studio デバッガーの [メモリ] ウィンドウを使用します。
 **メモリ**ウィンドウには、アプリケーションによって使用されるメモリ領域に表示します。 **ウォッチ**ウィンドウで、 **クイック ウォッチ**ダイアログ ボックスで、 **自動変数**ウィンドウ、および**ローカル** ウィンドウに表示される変数の内容メモリ内の特定の位置に格納されます。 **メモリ**ウィンドウには大きな画像が表示されます。 これは、ほかのウィンドウではうまく表示されない大きなデータ (バッファーや長い文字列など) をチェックする場合に便利です。 ただし、**メモリ**ウィンドウはデータを表示するのに限定されません。 [メモリ] ウィンドウには、データ、コード、または未使用メモリの不要なランダム ビットを問わず、メモリ空間内のすべての要素が表示されます。  
@@ -102,7 +103,7 @@ ms.lasthandoff: 10/31/2017
   
 1.  右クリックし、**メモリ**ウィンドウです。  
   
-2.  ショートカット メニューをクリックして** ツールバーの表示**です。  
+2.  ショートカット メニューをクリックして **ツールバーの表示**です。  
   
      直前の状態に応じて、ツール バーが表示されるか非表示になります。  
   
@@ -117,5 +118,5 @@ ms.lasthandoff: 10/31/2017
   
      ここで、使用すると実行コマンドなど**ステップ**、表示されているメモリ アドレスは、ポインターが変わると自動的に変更します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)

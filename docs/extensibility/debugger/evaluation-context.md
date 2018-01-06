@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5a44d7ce7cffa2afc40971b0ea6f88a6f62617f3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 9a490ef7c4ea42fe85c291ee913d7ad5e1cda1bb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="evaluation-context"></a>評価コンテキスト
 > [!IMPORTANT]
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/31/2017
   
  `IDebugParsedExpression::EvaluateSync`返します、 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)結果の値とその型を表すインターフェイス。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [キー式エバリュエーター インターフェイス](../../extensibility/debugger/key-expression-evaluator-interfaces.md)   
  [ローカル変数を表示します。](../../extensibility/debugger/displaying-locals.md)   
  [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)   

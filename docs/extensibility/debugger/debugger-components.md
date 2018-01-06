@@ -16,11 +16,12 @@ caps.latest.revision: "30"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ec2b7a18dac9616db1743a50539c2860caca2e26
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1137c8c5c6041b41e8cbdc0e13d43b6188bd1b1b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugger-components"></a>デバッガー コンポーネント
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デバッガーが VSPackage として実装され、全体のデバッグ セッションを管理します。 デバッグ セッションには、次の要素が構成されています。  
@@ -76,5 +77,5 @@ ms.lasthandoff: 10/31/2017
  [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)  
  プログラムを起動して、式を評価するなど、さまざまなデバッグ タスクへのリンクが含まれています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [はじめに](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)

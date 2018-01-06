@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: baa19209af40067c4b362b88ec0c0812b80e64ad
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5f0cbd7cb594314e98422789f6ec70fd63198fc4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="warning-script-debugging-disabled"></a>警告 : スクリプト デバッグが無効
 Internet Explorer では、スクリプトのデバッグは現在無効になっています。  
@@ -39,11 +40,11 @@ Internet Explorer では、スクリプトのデバッグは現在無効にな�
   
 4.  クリア**スクリプト (Internet Explorer) のデバッグを無効にする**です。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
 6.  Internet Explorer を終了して再起動します。  
   
      新しい設定が反映されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法 : スクリプトにアタッチする](../debugger/how-to-attach-to-script.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "17"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6232f86e9e9f5d59e9e109d08b75120cc90902c2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 95ad4f9c028b9b40bf5104539a608453c9d6f9dd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-find-which-dll-your-program-crashed-in"></a>方法 : プログラムのクラッシュが発生している DLL を確認する
 > [!NOTE]
@@ -51,6 +52,6 @@ ms.lasthandoff: 10/31/2017
   
 6.  見て、**名前**と**パス**DLL の名前とパスを表示する列。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DLL プロジェクトのデバッグ](../debugger/debugging-dll-projects.md)   
  [方法 : [モジュール] ウィンドウを使用する](../debugger/how-to-use-the-modules-window.md)

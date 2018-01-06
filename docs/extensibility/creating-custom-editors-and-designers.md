@@ -15,11 +15,12 @@ caps.latest.revision: "31"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 149870d9c9a0a281cb0bba167496cc4c37d6f83a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d8d354333545a6ec2b637e160818d506fa049c29
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-custom-editors-and-designers"></a>カスタム エディターおよびデザイナーを作成します。
 Visual Studio 統合開発環境 (IDE) では、さまざまな種類のエディターをホストできます。  
@@ -101,5 +102,5 @@ Visual Studio 統合開発環境 (IDE) では、さまざまな種類のエデ�
  [Visual Studio の他の部分の拡張](../extensibility/extending-other-parts-of-visual-studio.md)  
  残りの部分に一致する UI 要素を作成する方法について説明[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>

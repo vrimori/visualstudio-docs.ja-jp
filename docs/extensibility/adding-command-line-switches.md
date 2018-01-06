@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6e292a08e6d8ac9c6f59f84514fbb625779f82c4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d686e7b68e790c419679bf495bf08ad4cd4807e2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-command-line-switches"></a>コマンド ライン スイッチを追加します。
 Devenv.exe を実行すると、VSPackage に適用されるコマンド ライン スイッチを追加することができます。 使用して<xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute>スイッチとそのプロパティの名前を宣言します。 この例では、VSPackage という名前のサブクラスの MySwitch スイッチを追加**AddCommandSwitchPackage**引数なしで、自動的に読み込まれる VSPackage を使用しています。  
@@ -41,7 +42,7 @@ Devenv.exe を実行すると、VSPackage に適用されるコマンド ライ�
  HelpString  
  ヘルプ文字列またはリソースの ID 文字列の表示に**devenv/?**です。  
   
- 名前  
+ name  
  スイッチです。  
   
  PackageGuid  
@@ -77,7 +78,7 @@ cmdline.GetOption("MySwitch", out isPresent, out optionValue);
   
  ユーザーの責任で、パッケージが読み込まれるたびに、コマンド ライン スイッチをチェックすることをお勧めします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>   
  [Devenv コマンド ライン スイッチ](../ide/reference/devenv-command-line-switches.md)   

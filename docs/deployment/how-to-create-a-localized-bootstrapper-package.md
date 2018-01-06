@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: f19ec03dda8666eea39b50af40a44ab2c68694ce
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 9a3339b4bd6724fec782857a74a6b51463fe8028
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-localized-bootstrapper-package"></a>方法: ローカライズされたブートストラップ パッケージを作成する
 ブートストラップ パッケージを作成したら、さらに 2 つのファイルをロケールごとに作成して、ローカライズ版のブートストラップ パッケージを作成できます。2 つのファイルとは、ソフトウェア ライセンス条項ファイル (eula.rtf など) とパッケージ マニフェスト (package.xml) です。  
@@ -93,7 +94,7 @@ ms.lasthandoff: 10/27/2017
   
 6.  package.xml ファイルを保存します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ブートス トラップ パッケージを作成します。](../deployment/creating-bootstrapper-packages.md)   
  [アプリケーション配置の必要条件](../deployment/application-deployment-prerequisites.md)   
  [方法: パッケージ マニフェストを作成する](../deployment/how-to-create-a-package-manifest.md)

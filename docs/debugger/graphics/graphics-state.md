@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c1f308de55d9170b2247114ea96f611dd8e1af9f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0de0874a605325f3f61547a202701eeeeb4d5a24
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-state"></a>グラフィックスの状態
 Visual Studio のグラフィックス診断の [状態] ウィンドウでは、描画呼び出しなど、現在のイベントの時点でアクティブになっているグラフィックスの状態を理解することができます。  
@@ -52,8 +53,8 @@ Visual Studio のグラフィックス診断の [状態] ウィンドウでは�
   
 |Column|説明|  
 |------------|-----------------|  
-|名前|状態の項目の名前。 この項目が状態のバンドルを表している場合は、項目を展開して表示できます。<br /><br /> **API 入力状態ビュー**と**論理状態ビュー**状態、状態間の階層関係を表示する名前がインデントされます。<br /><br /> **固定状態ビュー**状態にある場合、フラット リストで完全修飾名が表示されます。|  
-|値|状態の項目の値。|  
+|name|状態の項目の名前。 この項目が状態のバンドルを表している場合は、項目を展開して表示できます。<br /><br /> **API 入力状態ビュー**と**論理状態ビュー**状態、状態間の階層関係を表示する名前がインデントされます。<br /><br /> **固定状態ビュー**状態にある場合、フラット リストで完全修飾名が表示されます。|  
+|[値]|状態の項目の値。|  
 |型|状態の項目の種類。|  
   
 ### <a name="changed-state"></a>変更された状態  

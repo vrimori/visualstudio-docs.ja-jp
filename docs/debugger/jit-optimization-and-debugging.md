@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: acf75c0fbf6f5c3cfcf645d288c4e5e2eb2450d6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2c3dcd57568bdfaac3ba0f7aff33cefca8a0ee32
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="jit-optimization-and-debugging"></a>JIT の最適化とデバッグ
 マネージ アプリケーションをデバッグするときに[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]既定・ イン タイム (JIT) コードの最適化を抑制します。 JIT 最適化の省略とは、最適化されていないコードをデバッグすることを示します。 最適化されていないため、コードの実行速度はやや遅くなりますが、デバッグで操作できる内容はより詳細になります。 最適化されたコードをデバッグするのは困難であるため、最適化されたコードで発生するバグが、非最適化バージョンでは再現しないときにのみお勧めします。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/31/2017
   
  注意して、**モジュールの読み込みに抑制する状況の JIT 最適化を**オプションがモジュールが読み込まれるときに、コードの最適化を抑制します。 実行中のプロセスにアタッチする場合、既に読み込まれ、JIT でコンパイルされ、最適化されているコードが含まれることがあります。 **モジュールの読み込みに抑制する状況の JIT 最適化を**オプションも何も起こりませんようなコードが、アタッチした後に読み込まれるモジュールに影響します。 さらに、**モジュールの読み込みに抑制する状況の JIT 最適化を**オプションでは NGEN で作成された WinForms.dll などのモジュールには影響しません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)   
  [デバッガーでのコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)   
  [実行中のプロセスをアタッチします。](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   

@@ -24,11 +24,12 @@ caps.latest.revision: "135"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1f009abffb1c956a0f7c57315181234fbea2fc1c
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: bb0018e97cdbacc5e16e9591a0d480d509e1a9f5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="intellitrace"></a>[IntelliTrace]
 IntelliTrace を使用して実行履歴を記録およびトレースすると、アプリのデバッグにかかる時間を短縮できます。 IntelliTrace には以下の機能があるので、バグを簡単に見つけることができます。  
@@ -139,9 +140,9 @@ IntelliTrace を使用して実行履歴を記録およびトレースすると�
   
      参照トピック  
   
-    -   [IntelliTrace スタンドアロン コレクターを使用します。](../debugger/using-the-intellitrace-stand-alone-collector.md)  
+    -   [IntelliTrace スタンドアロン コレクターを使用する](../debugger/using-the-intellitrace-stand-alone-collector.md)  
   
-    -   [保存された IntelliTrace データを使用します。](../debugger/using-saved-intellitrace-data.md)  
+    -   [保存された IntelliTrace データを使用する](../debugger/using-saved-intellitrace-data.md)  
   
     -   [チュートリアル: IntelliTrace を使用した SharePoint アプリケーションのデバッグ](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md)  
  
@@ -184,7 +185,7 @@ IntelliTrace を使用して実行履歴を記録およびトレースすると�
   
  [配置後の問題の診断](../debugger/diagnose-problems-after-deployment.md)  
   
- [保存された IntelliTrace データを使用します。](../debugger/using-saved-intellitrace-data.md)  
+ [保存された IntelliTrace データを使用する](../debugger/using-saved-intellitrace-data.md)  
   
 ### <a name="blogs"></a>ブログ  
  [Visual Studio ALM および Team Foundation Server](http://go.microsoft.com/fwlink/?LinkID=201340)  

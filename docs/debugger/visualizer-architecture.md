@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ec03049997f848269e91d6abf762a7bb8834e5d5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d2cf2e4b68ba8902d5b93935ea188243fb36d68f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visualizer-architecture"></a>ビジュアライザーのアーキテクチャ
 デバッガー ビジュアライザーのアーキテクチャには、次の 2 つの部分があります。  
@@ -88,7 +89,7 @@ ms.lasthandoff: 10/31/2017
 |---------------------|-------------------|  
 |<xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferData%2A><br /><br /> または<br /><br /> <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferObject%2A>|<xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.TransferData%2A>|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: ビジュアライザーを作成](../debugger/how-to-write-a-visualizer.md)   
  [チュートリアル: ビジュアライザーを記述する (C#)](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)   
  [チュートリアル: Visual Basic でビジュアライザーを記述します。](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)   

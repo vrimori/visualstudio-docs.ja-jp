@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d3a5fc067ac65cea13181632c562a635599f0d7e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: fc458bddfe354f43afd15176d0283cad4875234d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="run-windows-phone-81-apps-in-the-emulator"></a>エミュレーターにおける Windows Phone 8.1 アプリの実行
 Windows Phone エミュレーターにより仮想化された環境が提供されます。物理デバイスがなくても、そこでコンピューター上の Windows Phone アプリのデバッグとテストが行えます。 一般的なタッチと回転イベントのシミュレーションや、エミュレートしたい物理的な画面サイズと解像度の選択が可能です。 位置、ネットワーク、通知、センサー、加速度計、およびオプションの SD カードなど、一般的に使用される多数の機能をテストすることもできます。  
@@ -37,7 +38,7 @@ Visual Studio と連携して、エミュレーターは、Windows Phone アプ�
   
  Windows Phone アプリを Windows Phone エミュレーターで初めて実行する場合には、次のイベントが発生します。  
   
-1.  エミュレーターが起動します。  
+1.  エミュレーターが開始します。  
   
 2.  エミュレーターは、Windows Phone オペレーティング システムを読み込みます。  
   
@@ -110,7 +111,7 @@ Visual Studio と連携して、エミュレーターは、Windows Phone アプ�
 ##  <a name="BKMK_toolbar"></a>エミュレーター ツールバーで、Windows Phone エミュレーターを構成します。  
  次の表で、エミュレーター ツールバーで使用できる構成ボタンを示します。  
   
-|ツールバー ボタン|構成オプション|  
+|ツール バー ボタン|構成オプション|  
 |---------------------|---------------------------|  
 |![Windows Phone エミュレーター ツールバーでオプションを入力](../debugger/media/wp_emulator_.png "WP_Emulator_")|**1 つのポイントまたはマルチポイント入力を構成します。**<br /><br /> マルチ ポイント入力を有効にしている場合には、画面にタッチせずに右クリックで 2 つのタッチ ポイントを移動することができます。 それから、左クリックで両方のタッチ ポイントを同時に移動することができます。|  
 |![Windows Phone エミュレーター ツールバーで印刷の向き](../debugger/media/wp_emulator_rotation.png "WP_Emulator_rotation")|**エミュレーターの方向を構成します。**<br /><br /> Windows Phone エミュレーターの向きを、縦、横 - 左、横 - 右のどれか 1 つに変更することができます。 方向を変更する際にエミュレーターのサイズは変わりません。<br /><br /> 印刷の向きを変更する をクリックして、**左に回転**ボタンまたは**右に回転**ボタンをクリックします。|  
@@ -148,7 +149,7 @@ Visual Studio と連携して、エミュレーターは、Windows Phone アプ�
   
  次の表は、Windows Phone 上のボタンやその他のコントロールをエミュレートするために使用できるハードウェア キーボードのキーの一覧です。  
   
-|コンピューターのハードウェア キー|Windows Phone のハードウェア ボタン|ノート|  
+|コンピューターのハードウェア キー|Windows Phone のハードウェア ボタン|メモ|  
 |---------------------------|-----------------------------------|-----------|  
 |F1|BACK|長押しは期待どおりに機能する。|  
 |F2|START|長押しは期待どおりに機能する。|  

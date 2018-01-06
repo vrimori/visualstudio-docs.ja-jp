@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 5474a2101a96576d7043c10cc3fd35fad3756653
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: d22180b0e48a875eaef3ab9e3b8ceac35b1fa6ef
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-local-and-remote-data-in-clickonce-applications"></a>ClickOnce アプリケーションにおけるローカル データおよびリモート データへのアクセス
 ほとんどのアプリケーションはデータを使用または作成します。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] には、データをローカルとリモートの両方で読み書きするための各種のオプションがあります。  
@@ -106,9 +107,9 @@ ms.lasthandoff: 10/27/2017
  HTTP 経由で動作する XML Web サービスには、 <xref:System.Net.WebClient> および <xref:System.Net.HttpWebRequest> クラスと同じセキュリティ制限が課されます。  
   
 ### <a name="accessing-a-database-directly"></a>データベースへの直接アクセス  
- <xref:System.Data> 名前空間にあるクラスを使用すると、SQL Server などネットワーク上のデータベース サーバーとの直接接続を確立できますが、セキュリティの問題を考慮する必要があります。 HTTP 要求とは異なり、部分的な信頼の場合、データベース接続要求は既定で常に禁止されています。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを CD-ROM からインストールした場合にだけ、既定でデータベース接続のアクセス許可を得ることができます。 これにより、アプリケーションには完全信頼が与えられます。 特定の SQL Server データベースへのアクセスを有効にするには、アプリケーションからデータベースに対して <xref:System.Data.SqlClient.SqlClientPermission> を要求する必要があります。SQL Server 以外のデータベースへのアクセスを有効にするには、 <xref:System.Data.OleDb.OleDbPermission>を要求する必要があります。  
+ <xref:System.Data> 名前空間にあるクラスを使用すると、SQL Server などネットワーク上のデータベース サーバーとの直接接続を確立できますが、セキュリティの問題を考慮する必要があります。 HTTP 要求とは異なり、部分的な信頼の場合、データベース接続要求は既定で常に禁止されています。[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを CD-ROM からインストールした場合にだけ、既定でデータベース接続のアクセス許可を得ることができます。 これにより、アプリケーションには完全信頼が与えられます。 特定の SQL Server データベースへのアクセスを有効にするには、アプリケーションからデータベースに対して <xref:System.Data.SqlClient.SqlClientPermission> を要求する必要があります。SQL Server 以外のデータベースへのアクセスを有効にするには、 <xref:System.Data.OleDb.OleDbPermission>を要求する必要があります。  
   
- ほとんどの場合、データベースに直接アクセスする必要はありません。代わりに、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] で記述された Web サーバー アプリケーションまたは XML Web サービスを経由してデータベースにアクセスします。 Web サーバーから [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを配置した場合は、この方法でデータベースにアクセスするのが、多くの場合に最良の方法です。 部分的に信頼されたサーバーに、アプリケーションのアクセス許可を昇格せずにアクセスできます。  
+ ほとんどの場合、データベースに直接アクセスする必要はありません。代わりに、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] で記述された Web サーバー アプリケーションまたは XML Web サービスを経由してデータベースにアクセスします。 Web サーバーから [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを配置した場合は、この方法でデータベースにアクセスするのが、多くの場合に最良の方法です。 部分的に信頼されたサーバーに、アプリケーションのアクセス許可を昇格せずにアクセスできます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [How to: Include a Data File in a ClickOnce Application](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)

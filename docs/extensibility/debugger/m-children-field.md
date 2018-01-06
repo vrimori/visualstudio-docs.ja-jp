@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9e6c7db4e05873ca0272da4eb551418d466ddc03
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 59848b177b4bfaccba2d5f2e5771a08ec0bc060a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mchildren-field"></a>m_children フィールド
 このタスクに登録されている子タスクの一覧。  
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/31/2017
   
  タスクが完了した場合、他のスレッドには何も追加または、これからすべてを削除するしないでくださいがない限りこのフィールドにアクセスすることができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ContingentProperties クラス](../../extensibility/debugger/contingentproperties-class-internal-members.md)

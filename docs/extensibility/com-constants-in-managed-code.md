@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1cd6e70cc58f27dd0beb08d615abcdb52884f3f4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ca950fb5be94dc75ca038db4c109f5a46c6b2c0c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="com-constants-in-managed-code"></a>マネージ コードで COM 定数
 Managed Package Framework (MPF) 使用可能な標準の COM 定数にマネージ コード。 これらの定数は、参照用に以下に示します。  
@@ -128,5 +129,5 @@ Managed Package Framework (MPF) 使用可能な標準の COM 定数にマネー�
   
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_UNKNOWNNAME>  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [エラー処理と戻り値](../extensibility/error-handling-and-return-values.md)

@@ -27,11 +27,12 @@ caps.latest.revision: "21"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 603ff665e2c01abe62954e4e65e49a095d358b29
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 53f9c0114573c6f08a2d9219e4dd2028ffe9ac7c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-versioning-and-manifest-issues-in-clickonce-deployments"></a>ClickOnce 配置でのセキュリティ、バージョン管理、およびマニフェストの問題
 さまざまな問題がある[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]セキュリティ、アプリケーションのバージョン管理、およびマニフェスト構文とセマンティクスの原因となる、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開を成功させるされません。  
@@ -90,7 +91,7 @@ ms.lasthandoff: 10/27/2017
 > [!NOTE]
 >  マニフェストを更新するたびにする必要がありますも再度署名します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce 配置のトラブルシューティング](../deployment/troubleshooting-clickonce-deployments.md)   
  [ClickOnce アプリケーションのセキュリティ](../deployment/securing-clickonce-applications.md)   
  [ClickOnce 配置ストラテジの選択](../deployment/choosing-a-clickonce-deployment-strategy.md)

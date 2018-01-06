@@ -12,11 +12,15 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4e42513e431fd81a85d54a3e9784ebaa6cd26eb2
-ms.sourcegitcommit: 38097344f3ff74ba7b03bcfa45910015ca6bc2be
+ms.workload:
+- aspnet
+- dotnetcore
+- azure
+ms.openlocfilehash: 8d0163d9834a56735daf67050dbf3b8e74011dc9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="remote-debug-aspnet-core-on-iis-and-azure-in-visual-studio-2017"></a>IIS および Visual Studio 2017 で Azure でのリモート デバッグ ASP.NET Core
 IIS を使用して Windows Server コンピューターに ASP.NET Web アプリケーションを配置して、リモート デバッグ用に設定できます。 このガイドでは、設定、Visual Studio 2017 ASP.NET Core アプリケーションを構成して、Azure を使用して IIS に展開、および Visual Studio からリモート デバッガーをアタッチする方法について説明します。
@@ -41,7 +45,7 @@ Azure VM での Azure に Visual Studio からアプリを配置する必要が�
 > [!NOTE]
 > Azure Service Fabric の ASP.NET Core をデバッグするを参照してください。[リモート Service Fabric アプリケーションのデバッグ](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 プロキシを介して接続されている 2 台のコンピューター間でのデバッグはサポートされていません。 国の間での待機時間の長いまたはダイヤルアップ、インターネットなどの低帯域幅接続またはインターネット経由でのデバッグはお勧めしませんが失敗することも非常に遅くします。 要件の一覧については、次を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)です。
 

@@ -15,11 +15,12 @@ caps.latest.revision: "52"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5f160fb123a52fef7215d4f365ffa28a6cae451e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 205c6928010d4cf3a35c6947e516c0bbc8674f29
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-a-tool-window"></a>ツール ウィンドウを追加します。
 このチュートリアルでは、ツール ウィンドウを作成し、次のように Visual Studio に統合する方法を学習します。  
@@ -279,5 +280,5 @@ public System.Windows.Controls.MediaElement MediaPlayer
   
      チャイム音を聞く必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)

@@ -31,11 +31,12 @@ caps.latest.revision: "40"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fdbc4c62b599ac19ff5bf6b6b0eedf862cc1b77d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e10b81ff07b77e2fd6202d2f5fb27392fe8134c2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-visual-studio-debugger"></a>呼び出し履歴を表示して、呼び出し履歴 ウィンドウで、Visual Studio デバッガーを使用します。
 
@@ -136,9 +137,9 @@ Visual Studio Enterprise (のみ) を使用している場合は、デバッグ�
   
 4.  デバッグしているコンピューター上のシンボルの場所へのディレクトリ パス名を入力します。 ローカルおよびリモート デバッグは、これは、ローカル コンピューター上のパスです。
   
-5.  をクリックして**OK**を閉じる、**オプション** ダイアログ ボックス。  
+5.  **[OK]** をクリックして、**[オプション]** ダイアログ ボックスを閉じます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[呼び出し履歴] ウィンドウの混合コードと不足情報](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)  
  [デバッガーでのデータの表示](../debugger/viewing-data-in-the-debugger.md)   
  [シンボル (.pdb) を指定して、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   

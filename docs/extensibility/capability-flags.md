@@ -13,16 +13,17 @@ caps.latest.revision: "24"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5104bff319f4a6517ddccde1da1407156797928e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ec5cedcec1d79cbc3a71410a1048f5014c8aa9e3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="capability-flags"></a>機能フラグ
 SCC_CAP_*xxx*フラグは、ソース管理プラグインの機能を示すために使用します。 SCC_EXCAP_*xxx*フラグは、拡張機能を示すし、解決するには整数値を増分フラグ。  
   
-|機能コード|値|説明|  
+|機能コード|[値]|説明|  
 |---------------------|-----------|-----------------|  
 |`SCC_CAP_REMOVE`|0x00000001L|では、 [SccRemove](../extensibility/sccremove-function.md)とコマンド。|  
 |`SCC_CAP_RENAME`|0x00000002L|では、 [SccRename](../extensibility/sccrename-function.md)とコマンド。|  
@@ -52,7 +53,7 @@ SCC_CAP_*xxx*フラグは、ソース管理プラグインの機能を示すた�
   
 ## <a name="capability-bits-added-in-version-12"></a>バージョン 1.2 で追加された機能ビット  
   
-|機能コード|値|説明|  
+|機能コード|[値]|説明|  
 |---------------------|-----------|-----------------|  
 |`SCC_CAP_CREATESUBPROJECT`|0x00010000L|では、 [SccCreateSubProject](../extensibility/scccreatesubproject-function.md)です。|  
 |`SCC_CAP_GETPARENTPROJECT`|0x00020000L|では、 [SccGetParentProjectPath](../extensibility/sccgetparentprojectpath-function.md)です。|  
@@ -65,7 +66,7 @@ SCC_CAP_*xxx*フラグは、ソース管理プラグインの機能を示すた�
 ## <a name="capability-bits-added-in-version-13"></a>バージョン 1.3 で追加された機能ビット  
  これらのフラグが渡されるを一度に 1 つずつ、 [SccGetExtendedCapabilities](../extensibility/sccgetextendedcapabilities-function.md)機能がサポートされているかどうかを判断する関数。  
   
-|拡張機能コード|値|説明|  
+|拡張機能コード|[値]|説明|  
 |------------------------------|-----------|-----------------|  
 |`SCC_EXCAP_CHECKOUT_LOCALVER`|1|では、`SCC_CHECKOUT_LOCALVER`チェック アウトのためのオプションです。|  
 |`SCC_EXCAP_BACKGROUND_GET`|2|では、 [SccBackgroundGet](../extensibility/sccbackgroundget-function.md)です。|  
@@ -79,5 +80,5 @@ SCC_CAP_*xxx*フラグは、ソース管理プラグインの機能を示すた�
 |`SCC_EXCAP_DELETE_CHECKEDOUT`|10|チェック アウトしたファイルを削除できます。|  
 |`SCC_EXCAP_RENAME_CHECKEDOUT`|11|チェック アウトしたファイルの名前を変更できます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)

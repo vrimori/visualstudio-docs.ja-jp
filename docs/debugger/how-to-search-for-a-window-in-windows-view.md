@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 81b970979759c7ef6a6b236a1f2dff34815a72d9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: dfec3f78e9f95a55d453c45c5a264125152cbf1b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-search-for-a-window-in-windows-view"></a>方法: ウィンドウ ビューでウィンドウを検索する
 Windows の表示で特定のウィンドウの検索条件として、ハンドル、キャプション、クラス、またはキャプションとクラスの組み合わせを使用して検索できます。 検索の最初の方向を指定することもできます。 ダイアログ ボックスで、フィールドは、ウィンドウのツリーで、選択したウィンドウの属性が表示されます。  
@@ -47,6 +48,6 @@ Windows の表示で特定のウィンドウの検索条件として、ハンド
   
 4.  選択**を**または**ダウン**検索の方向。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
      強調表示されて、一致するウィンドウが見つかった場合、[ウィンドウ ビュー](../debugger/windows-view.md)ウィンドウです。

@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cc520e9d28e8cc02262833d2de4cba088b879dab
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 601fc4eb47e89a4035f14722793169a76d73f520
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-event-list"></a>グラフィックス イベント一覧
 Visual Studio Graphics Analyzer でグラフィックス イベント一覧を使用して、ゲームまたはアプリのフレームのレンダリング中に記録された Direct3D イベントを調査できます。  
@@ -108,12 +109,12 @@ Visual Studio Graphics Analyzer でグラフィックス イベント一覧を�
 
 このウィンドウでは、イベント一覧で選択した項目の履歴を表示することができます。  上部にあるドロップダウン リストは、履歴を表示するには、他の項目の選択に使用できます。  ウィンドウの上半分を含む、**セットアップのフレーム イベント**です。  これらは、イベントに分類を*作成*カテゴリを入力し、通常を初期化し、リソースを作成する呼び出しがします。  含む、ウィンドウの下部にある、**のフレーム イベント**セクションです。  これらは通常の読み取りであり、リソースの使用状況の中に発生するイベントが書き込まれます。  
 
-列|説明
+Column|説明
 ---|---
 **Type** | 通常、エントリの型を示します*作成*、*読み取り*と*書き込み*です。  
 **表示** | その時点でのリソースのサムネイルを示しています。  その時点で、リソースの詳細ビューを開き、サムネイルをダブルクリックします。  
 **Event**| これが発生したメソッドの呼び出しを示しています。 イベントを生成します。  [ウォッチ] アイコンを選択すると、個々 のアイテムに対する追加の履歴を表示できます![[ウォッチ] アイコン](media/gfx_watch.png)適切な行にします。  また、任意の項目などの青のテキストで描画される`m_commandList`上記のスクリーン ショットでは、詳細については選択できます。
 <!-- /VERSIONLESS -->
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: デバイス状態によるオブジェクトの不足](walkthrough-missing-objects-due-to-device-state.md)

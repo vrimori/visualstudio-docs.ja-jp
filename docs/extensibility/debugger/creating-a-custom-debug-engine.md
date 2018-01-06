@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fb5971bf86c6b97d38daaf86f3a093da196020da
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0edee6528919cfe28c542be850b9a104188ce403
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-custom-debug-engine"></a>カスタム デバッグ エンジンを作成します。
 デバッグ エンジン (DE) は、特定のランタイム アーキテクチャのデバッグを許可するコンポーネントです。 実行時環境ごとに 1 つだけ DE 実装は通常です。  
@@ -64,5 +65,5 @@ ms.lasthandoff: 10/31/2017
  [方法: カスタム デバッグ エンジンのデバッグ](../../extensibility/debugger/how-to-debug-a-custom-debug-engine.md)  
  カスタム DE をデバッグする方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio デバッガーの拡張性](../../extensibility/debugger/visual-studio-debugger-extensibility.md)

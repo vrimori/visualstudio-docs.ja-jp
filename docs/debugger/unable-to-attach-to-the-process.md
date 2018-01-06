@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2ec2c181edc69ac2e693de96fcf72fe9116f758b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 691d0352b327dd2665b3a6daf22b3542929d3ca3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unable-to-attach-to-the-process"></a>[プロセスにアタッチできません] ダイアログ ボックス
 プロセスにアタッチできません。 このマシンに接続中にサーバー上のデバッガー コンポーネントのアクセスが拒否されました。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="to-solve-scenario-2"></a>シナリオ 2 を解決するには  
   
-1.  **開始** メニューの 選択**コントロール パネルの **です。  
+1.  **開始** メニューの 選択**コントロール パネルの** です。  
   
 2.  コントロール パネルで、ダブルクリック**管理ツール**です。  
   
@@ -62,5 +63,5 @@ ms.lasthandoff: 10/31/2017
   
 7.  すべてのウィンドウを閉じます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)

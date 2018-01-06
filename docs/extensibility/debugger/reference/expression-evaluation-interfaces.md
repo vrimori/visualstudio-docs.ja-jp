@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c6a9d1d63b4fb15a920f175013af8a05cb38beb8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a5ce9f82e88c6275000c17d40e2b1e1494683715
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="expression-evaluation-interfaces"></a>式の評価インターフェイス
 > [!IMPORTANT]
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
   
 -   Visual Studio (VS)  
   
-|インターフェイス|によって実装されます。|説明|  
+|Interface|によって実装されます。|説明|  
 |---------------|--------------------|-----------------|  
 |[IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)|EE|変数の数値のエイリアスを表します。|  
 |[IDebugAlias2](../../../extensibility/debugger/reference/idebugalias2.md)|EE|変数に対して数値のエイリアスを表し、式エバリュエーターの別名をアプリケーション ドメインを取得するには、(EE) できるようにします。|  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/31/2017
 |[IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)|VS|作成する機能を提供する[IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)オブジェクト。|  
 |[IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md)|EE|コレクションを表します[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)オブジェクト。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [API リファレンス](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)   
  [CLR 式エバリュエーターの書き込み](../../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   
  [型のビジュアライザーとカスタム ビューアー](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 9a59b97b3260beaf39ae20b62a44903add13e622
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 527ab7ae43790f7e824ead33fb601f0f8dee2bf0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpublisheridentitygt-element-clickonce-deployment"></a>&lt;publisherIdentity&gt;要素 (ClickOnce 配置)
 この配置マニフェストに署名した発行元についての情報が含まれます。  
@@ -43,8 +44,8 @@ ms.lasthandoff: 10/27/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|`name`|必須です。 このアプリケーションを発行したパーティの id をについて説明します。|  
-|`issuerKeyHash`|必須です。 証明書の発行者の公開キーの sha-1 ハッシュが含まれています。|  
+|`name`|必須。 このアプリケーションを発行したパーティの id をについて説明します。|  
+|`issuerKeyHash`|必須。 証明書の発行者の公開キーの sha-1 ハッシュが含まれています。|  
   
 #### <a name="parameters"></a>パラメーター  
   
@@ -54,6 +55,6 @@ ms.lasthandoff: 10/27/2017
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 ## <a name="subhead"></a>小見出し

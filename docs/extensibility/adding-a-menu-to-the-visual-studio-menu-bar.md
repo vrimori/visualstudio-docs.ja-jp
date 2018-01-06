@@ -15,11 +15,12 @@ caps.latest.revision: "51"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8e4a2485b7e702844a037787234ef3a1ab66495d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7e334a148a205338a872e9581bce1c3c1a70b7df
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-a-menu-to-the-visual-studio-menu-bar"></a>Visual Studio のメニュー バーにメニューを追加します。
 このチュートリアルでは、Visual Studio 統合開発環境 (IDE) のメニュー バーにメニューを追加する方法を示します。 よう IDE のメニュー バーにメニュー項目が含まれています**ファイル**、**編集**、**ビュー**、**ウィンドウ**、および**ヘルプ**.  
@@ -96,5 +97,5 @@ ms.lasthandoff: 10/31/2017
   
      メッセージ ボックスは表示され、"TestCommand パッケージの内部 TopLevelMenu.TestCommand.MenuItemCallback()"メッセージを表示する必要があります。 これは、新しいコマンドが動作することを示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)

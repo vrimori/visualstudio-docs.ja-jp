@@ -15,11 +15,12 @@ caps.latest.revision: "48"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 470e4c728d246570e6f7e38ff3b71772de5b05fd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 4bcdd28247b767321d3d5fed9681082538ba2b12
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Visual studio Just-In-Time デバッガーを使用してデバッグします。
 ジャスト イン タイム デバッグ Visual Studio が自動的に起動 Visual Studio の外部で実行されるアプリケーション例外またはクラッシュが発生した場合。 これにより、Visual Studio が実行されていない場合、アプリケーションをテストし、問題が発生したときに、Visual Studio でデバッグを開始することができます。
@@ -48,7 +49,7 @@ Windows デスクトップ アプリの Just-in-time デバッグは機能しま
   
 4.  **コードの種類の有効にする Just-In-Time デバッグを**ボックス、オンまたはオフに関連するプログラムの種類:**マネージ**、**ネイティブ**、または**スクリプト**.    
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
 Visual Studio がコンピューターからアンインストールされた後でも、Just-In-Time デバッグが有効になっている場合があります。 Visual Studio がインストールされていない時にのみ、Visual Studio からデバッグを無効にすることはできません**オプション** ダイアログ ボックス。 その場合は、Windows レジストリを編集して Just-In-Time デバッグを無効にできます。  
   
@@ -122,7 +123,7 @@ static void Main(string[] args)
 > [!IMPORTANT]
 >  作業するには、この手順の順序で、[リリース構成](../debugger/how-to-set-debug-and-release-configurations.md)、オフにする必要があります[マイ コードのみ](../debugger/just-my-code.md)です。 Visual Studio で、**ツール > オプション**です。 **オプション**ダイアログで、**デバッグ**です。 チェックを外し**マイ コードのみを有効にする**です。  
   
- ソリューションのビルド (Visual Studio で、次のように選択します。**ビルド > ソリューションのリビルド**)。 デバッグまたはリリース構成のいずれかを選択できます (選択**デバッグ**デバッグの完全なエクスペリエンスに)。 ビルド構成の詳細については、次を参照してください。[ビルド構成について](../ide/understanding-build-configurations.md)です。  
+ ソリューションのビルド (Visual Studio で、次のように選択します。**ビルド > ソリューションのリビルド**)。 デバッグまたはリリース構成のいずれかを選択できます (選択**デバッグ**デバッグの完全なエクスペリエンスに)。 ビルド構成の詳細については、「[ビルド構成について](../ide/understanding-build-configurations.md)」を参照してください。  
   
  ビルド プロセスでは、実行可能 ThrowsNullException.exe を作成します。 C# プロジェクトを作成したフォルダーの下で見つかります。 **...\ThrowsNullException\ThrowsNullException\bin\Debug**または**...\ThrowsNullException\ThrowsNullException\bin\Release**です。  
   
@@ -176,7 +177,7 @@ static void Main(string[] args)
   
      この問題を解決するには、セットアップ ディスクを使って Visual Studio を再インストールするか、既存のインストールを修復します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [デバッガーの基本事項](../debugger/debugger-basics.md)   
  [Just-in-time、デバッグ オプション ダイアログ ボックス](../debugger/just-in-time-debugging-options-dialog-box.md)   

@@ -26,11 +26,12 @@ caps.latest.revision: "37"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1cff6db85b29b4db6006d37fd21e2d9b109b099e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7aa89b6e8d36c3eb47168c8672fb7eea1e3507db
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="view-register-values-and-use-the-registers-window-in-the-visual-studio-debugger"></a>登録値を表示して、Visual Studio デバッガーの [レジスタ] ウィンドウを使用します。
 [レジスタ] ウィンドウがアドレス レベルのデバッグが有効になっている場合にのみ使用できますが、**オプション**ダイアログ ボックスで、**デバッグ**ノード、**全般**カテゴリ。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]
     >  スクリプトまたは SQL アプリケーションのレジスタ情報は表示できません。  
   
-## <a name="see-also"></a>関連項目  
- [デバッグの基礎: [レジスタ] ウィンドウ](../debugger/debugging-basics-registers-window.md)   
+## <a name="see-also"></a>参照  
+ [デバッグの基礎 : [レジスタ] ウィンドウ](../debugger/debugging-basics-registers-window.md)   
  [デバッガーでのデータの表示](../debugger/viewing-data-in-the-debugger.md)   
  [デバッグの基礎 : [レジスタ] ウィンドウ](../debugger/debugging-basics-registers-window.md)

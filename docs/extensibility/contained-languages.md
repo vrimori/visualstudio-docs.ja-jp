@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c8adf63eed436b5724fcdb32d86ffc7bfb2c1a40
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: bfdbc3d1c0e7bbc0b3dc712d9434ca1b49c6feca
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contained-languages"></a>格納されている言語
 *言語が含まれている*に含まれるその他の言語の言語です。 たとえば、HTML で[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]ページを含めることがあります[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]または[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]スクリプト。 デュアル言語アーキテクチャは、.aspx ファイル エディターの IntelliSense、色付け、およびその他の編集機能を HTML およびスクリプト言語の両方を提供する必要があります。  

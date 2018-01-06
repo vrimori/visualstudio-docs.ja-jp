@@ -22,11 +22,12 @@ caps.latest.revision: "23"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: aefb619487fba984e8f625dfe414c2f514f28c70
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 6e0134b0a0a6151b6ae6544f1ad8272a6d4cac47
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-prerequisites-for-64-bit-applications"></a>64 ビット アプリケーションの配置のための必要条件
 ClickOnce の配置では、 64 ビット プラットフォームのアプリケーションのインストールをサポートします。 ターゲット プラットフォームは**x86** 32 ビット プラットフォームでは、 **x64** AMD64 と EM64T 命令セットをサポートするコンピューターと**Itanium** 64 ビット Itanium プロセッサ用です。  
@@ -42,9 +43,9 @@ ClickOnce の配置では、 64 ビット プラットフォームのアプリ�
 |Visual C++ 2010 ランタイム ライブラリ (IA64)|Ｘ|○|  
 |Visual C++ 2010 ランタイム ライブラリ (x64)|○|Ｘ|  
 |Microsoft .NET Framework 4 (x86 および x64)|○||  
-|Microsoft .NET Framework 4 Client Profile (x86 および x64)|はい||  
+|Microsoft .NET Framework 4 Client Profile (x86 および x64)|[はい]||  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アプリケーション、サービス、およびコンポーネントを展開します。](../deployment/deploying-applications-services-and-components.md)   
- [方法: ClickOnce アプリケーションと共に必須コンポーネントをインストール](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
+ [方法: ClickOnce アプリケーションと共に必須コンポーネントをインストールする](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
  [64 ビット アプリケーション](http://msdn.microsoft.com/Library/fd4026bc-2c3d-4b27-86dc-ec5e96018181)

@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 1c7a60993666ac485f72099fef9df930aacdaa25
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 3953148355321f4ed17d5d4f539c6f31c1a5872c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-a-link-for-technical-support"></a>方法: テクニカル サポートのリンクを指定する
 発行するときに、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 、アプリケーション、**サポート URL**プロパティは、Web ページやファイル共有のアプリケーションに関する情報を取得するユーザーの行き先を識別します。 このプロパティは省略可能です。アプリケーションのエントリで、URL が表示されます指定した場合、**プログラム追加と削除** ダイアログ ボックス。  
@@ -47,6 +48,6 @@ ms.lasthandoff: 10/27/2017
   
 5.  **サポート URL**フィールドに、Web サイト、Web ページ、または UNC 共有への完全修飾パスを入力します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
  [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

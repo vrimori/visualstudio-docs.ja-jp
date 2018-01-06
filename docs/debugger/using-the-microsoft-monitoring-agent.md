@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7b52121850bd82090e756f700880be02d35e6d86
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3e5963568eac26e7f88acf3ba07466fd1261eed1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-microsoft-monitoring-agent"></a>Microsoft Monitoring Agent の使用
 **Microsoft Monitoring Agent**を使用して、IIS によってホストされる ASP.NET Web アプリおよび SharePoint 2010 や SharePoint 2013 アプリケーションのエラー、パフォーマンスの問題、またはその他の問題をローカルで監視することができます。 エージェントからの診断イベントを IntelliTrace ログ (.iTrace) ファイルに保存できます。 次に、Visual Studio Enterprise (Professional Edition や Community Edition ではない) のログを開いて、すべての Visual Studio 診断ツールで問題をデバッグできます。 Agent を **トレース** モードで実行して、IntelliTrace 診断データとメソッド データを収集することもできます。 Microsoft Monitoring Agent は [Application Insights](http://www.visualstudio.com/get-started/find-performance-problems-vs.aspx) および [System Center Operation Manager](http://technet.microsoft.com/library/hh205987.aspx)と統合できます。 Microsoft Monitoring Agent がインストールされている場合、対象システムの環境が変更されます。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/31/2017
 3.  最新のヘルプ コンテンツを入手するには、[TechNet にアクセスしてください](http://technet.microsoft.com/systemcenter/default) 。  
   
 ####  <a name="FullPermissionsITLog"></a> Q: アプリケーション プールへのアクセス許可の設定はどうすればよいですか。  
- **A:** Windows の **icacls** コマンドまたはエクスプローラーを使用します。 次に例を示します。  
+ **A:** Windows の **icacls** コマンドまたはエクスプローラーを使用します。 例:  
   
 -   Windows の **icacls** コマンドを使用してアクセス許可を設定するには:  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 10/31/2017
   
          `icacls "C:\IntelliTraceLogs" /grant "IIS APPPOOL\SharePoint - 80":RX`  
   
-     または  
+     - または -  
   
 -   エクスプローラー (またはファイル エクスプローラー) を使用してアクセス許可を設定するには:  
   
@@ -135,7 +136,7 @@ ms.lasthandoff: 10/31/2017
   
     |||  
     |-|-|  
-    |*"\<appName >"*|Web サイトへのパスおよび IIS での Web アプリの名前を指定します。 また、IIS パスを含めることもできます。<br /><br /> *"\<IISWebsiteName >\\< IISWebAppName\>"*<br /><br /> または<br /><br /> **"IIS:\sites**  *\\< IISWebsiteName\>\\< IISWebAppName\>"*<br /><br /> IIS マネージャーでこのパスを検索できます。 例:<br /><br /> ![IIS web サイトおよび web アプリケーションへのパス](../debugger/media/ffr_iismanager.png "FFR_IISManager")<br /><br /> また、 [Get-WebSite](http://technet.microsoft.com/library/ee807832.aspx) コマンドおよび [Get WebApplication](http://technet.microsoft.com/library/ee790554.aspx) コマンドを使用できます。|  
+    |*"\<appName >"*|Web サイトへのパスおよび IIS での Web アプリの名前を指定します。 また、IIS パスを含めることもできます。<br /><br /> *"\<IISWebsiteName >\\< IISWebAppName\>"*<br /><br /> - または -<br /><br /> **"IIS:\sites**  *\\< IISWebsiteName\>\\< IISWebAppName\>"*<br /><br /> IIS マネージャーでこのパスを検索できます。 例:<br /><br /> ![IIS web サイトおよび web アプリケーションへのパス](../debugger/media/ffr_iismanager.png "FFR_IISManager")<br /><br /> また、 [Get-WebSite](http://technet.microsoft.com/library/ee807832.aspx) コマンドおよび [Get WebApplication](http://technet.microsoft.com/library/ee790554.aspx) コマンドを使用できます。|  
     |*\<monitoringMode >*|監視モードを指定します。<br /><br /> <ul><li>**Monitor**: 例外イベントとパフォーマンス イベントについての最小限の情報を記録します。 このモードは既定の収集計画を使用します。</li><li>**Trace**: 指定された収集計画を使用して、関数レベルの情報を記録したり、SharePoint 2010 および SharePoint 2013 アプリケーションを監視したりします。 このモードでは、アプリの実行が遅くなる可能性があります。<br /><br /> <ul><li>[Q: アプリケーション プールへのアクセス許可の設定はどうすればよいですか。](#FullPermissionsITLog)</li><li>[Q: アプリのパフォーマンスを低下させずにほとんどのデータを取得するにはどうすればよいですか。](#Minimizing)</li></ul><br />     この例では、SharePoint サイトでホストされる SharePoint アプリのイベントを記録します。<br /><br />     **Start-webapplicationmonitoring"FabrikamSharePointSite\FabrikamSharePointApp""C:\Program files \microsoft Monitoring Agent\Agent\IntelliTraceCollector\collection_plan.ASP.NET.default.xml""C:\IntelliTraceLogs"のトレース**</li><li>**Custom**: 指定したカスタム収集計画を使用してカスタムの情報を記録します。 監視を開始してから収集計画を編集するときは、監視を再起動する必要があります。</li></ul>|  
     |*"\<outputPath >"*|IntelliTrace ログを格納するディレクトリへの完全パスを指定します。 監視を開始する前にこのディレクトリの作成を確認します。|  
     |*\<UInt32 >*|IntelliTrace ログの最大サイズを指定します。 IntelliTrace ログの既定の最大サイズは 250 MB です。<br /><br /> ログがこの制限に達すると、エージェントは最も早いエントリを上書きして、さらに多くのエントリのための場所を確保します。 この制限を変更するには、 **-MaximumFileSizeInMegabytes** オプションを使用するか、収集計画の `MaximumLogFileSize` 属性を編集します。|  
@@ -248,7 +249,7 @@ ms.lasthandoff: 10/31/2017
   
      **PS c:\\> Checkpoint-webapplicationmonitoring"Fabrikam\FabrikamFiber.Web"**  
   
-     または  
+     - または -  
   
      **PS c: > Checkpoint-webapplicationmonitoring"IIS:sitesFabrikamFabrikamFiber.Web"**  
   

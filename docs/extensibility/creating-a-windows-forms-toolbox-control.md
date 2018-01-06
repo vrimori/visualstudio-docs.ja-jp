@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ca8795ba56833282bac600db79ba33da70aa6c3a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4229d9045dfe64fcb320eca7cf004de56e7f8f0d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-windows-forms-toolbox-control"></a>Windows フォームのツールボックス コントロールの作成
 Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フォームのツールボックス コントロールの項目テンプレートが自動的に追加するコントロールを作成することができます、**ツールボックス**拡張機能がインストールされている場合。 このトピックでは、他のユーザーに配布できるカウンターの単純なコントロールを作成するテンプレートを使用する方法を示します。  
@@ -54,10 +55,10 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
   
 5.  **プロパティ**ウィンドウでは、デザイン画面上のコントロールに次の値を設定します。  
   
-    |コントロール|プロパティ|値|  
+    |コントロール|プロパティ|[値]|  
     |-------------|--------------|-----------|  
     |`Label1`|**[テキスト]**|""|  
-    |`Button1`|**名前**|btnReset|  
+    |`Button1`|**Name**|btnReset|  
     |`Button1`|**[テキスト]**|リセット|  
   
 ### <a name="coding-the-user-control"></a>ユーザー コントロールのコーディング  
@@ -211,7 +212,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
 ## <a name="next-steps"></a>次の手順  
  **[ツールボックス]** のコントロールを構築すると、Visual Studio によって、プロジェクトの \bin\debug\ フォルダーに *プロジェクト名*.vsix という名前のファイルが作成されます。 コントロールは、.vsix ファイルをネットワークや Web サイトにアップロードすることで展開できます。 コントロールがインストールされ、Visual Studio に追加されたユーザーが、.vsix ファイルを開く、**ツールボックス**ユーザーのコンピューターにします。 探し、.vsix ファイルをアップロードする代わりに、 [Visual Studio ギャラリー](http://go.microsoft.com/fwlink/?LinkID=123847) Web サイトのユーザーがで参照して検索できるように、**ツール/拡張機能と更新プログラム**ダイアログ。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio の他の部分を拡張します。](../extensibility/extending-other-parts-of-visual-studio.md)   
  [WPF ツールボックス コントロールの作成](../extensibility/creating-a-wpf-toolbox-control.md)   
  [Visual Studio の他の部分を拡張します。](../extensibility/extending-other-parts-of-visual-studio.md)   

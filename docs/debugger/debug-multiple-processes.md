@@ -23,11 +23,12 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b0696a9e45727c5d62f275d0574d5ec54e378038
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7d0aaa97009662000bf1376c1684d9ca41a7133a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-multiple-processes"></a>複数プロセスをデバッグする
 プロセスのデバッグを開始、プロセスの切り替え、中断し実行を続行、ソースのステップ実行、デバッグを停止および終了/プロセスからデタッチする方法を次に示します。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/31/2017
 >   
 >  -   子プロセスが開始された後、そのプロセスにアタッチします。  
 >   
->      または  
+>      - または -  
 > -   デバッガーの新しいインスタンスで子プロセスが自動的に開始されるように Windows を構成します。  
   
 ###  <a name="BKMK_Start_debugging_multiple_processes_in_a_Visual_Studio_solution"></a>Visual Studio ソリューション内の複数のプロセスのデバッグを開始します。  
@@ -167,7 +168,7 @@ ms.lasthandoff: 10/31/2017
 ###  <a name="BKMK_Break__step__and_continue_commands"></a>中断、ステップ、およびコマンドを続行  
   
 > [!NOTE]
->  既定では、中断、続行、ステップ実行のコマンドはデバッグ中のすべてのプロセスに影響を与えます。 この動作を変更するを参照してください[複数のプロセスの実行動作を構成します。。](#BKMK_Configure_the_execution_behavior_of_multiple_processes)  
+>  既定では、中断、続行、ステップ実行のコマンドはデバッグ中のすべてのプロセスに影響を与えます。 この動作を変更するを参照してください[複数のプロセスの実行動作を構成します。](#BKMK_Configure_the_execution_behavior_of_multiple_processes)  
   
 ||||  
 |-|-|-|  
@@ -220,7 +221,7 @@ ms.lasthandoff: 10/31/2017
   
  ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [シンボル (.pdb) を指定して、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
  [実行中のプロセスをアタッチします。](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
  [デバッガーでのコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)   

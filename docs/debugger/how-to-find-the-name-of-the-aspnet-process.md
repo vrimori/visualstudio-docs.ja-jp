@@ -20,11 +20,12 @@ caps.latest.revision: "29"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 03ae4956f0e16a4fb9267266ebc6b6c335c95eac
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: aspnet
+ms.openlocfilehash: e542e58bab483a1f20029bb66a073ae07d45afba
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-find-the-name-of-the-aspnet-process"></a>方法 : ASP.NET プロセスの名前を見つける
 実行中の [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションにアタッチする場合、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] プロセスの名前を把握している必要があります。  
@@ -52,7 +53,7 @@ Visual Studio、Visual Studio 2012 より前のバージョンを使用してビ
     > [!NOTE]
     > Visual Studio 2017 以降、検索ボックスを使用して、プロセス名を検索します。
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [実行中のプロセスにアタッチする](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)  
  [リモートの Web アプリケーションのデバッグの前提](../debugger/prerequistes-for-remote-debugging-web-applications.md)   
  [システム要件](../debugger/aspnet-debugging-system-requirements.md)   

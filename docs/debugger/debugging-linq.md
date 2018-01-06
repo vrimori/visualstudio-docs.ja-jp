@@ -23,11 +23,12 @@ caps.latest.revision: "25"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bfd356931e33e900d35094c4714d0c3f6fc93abe
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b2e159e89fe1854f2d26267793e196aa91b570ff
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-linq"></a>LINQ のデバッグ
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、統合言語クエリ (LINQ) コードのデバッグをサポートしていますが、いくつかの制約事項があります。 ステップ実行、ブレークポイントの設定、デバッガー ウィンドウでの結果の表示など、ほとんどのデバッグ機能を、LINQ ステートメントと組み合わせて使用することができます。 このトピックでは、LINQ のデバッグの主要な制限事項について説明します。  
@@ -110,7 +111,7 @@ End Function
 ##  <a name="BKMK_EditandContinueNotSupportedforLINQ"></a>エディット コンティニュの LINQ のサポートされていません  
  エディット コンティニュは、LINQ クエリの制限事項と変更をサポートします。 詳細については、「 [EnC サポートされている変更](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL のデバッグ](http://msdn.microsoft.com/en-us/f27c17e6-1d90-49f2-9fc0-d02e6a27f109)    
  [デバッガーでの例外を管理します。](../debugger/managing-exceptions-with-the-debugger.md)   
  [LINQ クエリの概要 (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)   

@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 36c3158542dff52a2e1ca350e49be254219183c8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: df8fc9ee13a721f98a942a3bb6d10f6c8d844ddf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-search-for-a-message-in-messages-view"></a>方法: メッセージ ビューでメッセージを検索する
 検索条件として、ハンドル、型、またはメッセージの ID を使用してメッセージ ビューで特定のメッセージを検索できます。 これらのいずれか、または組み合わせ: 有効な検索条件になります。 検索の最初の方向も指定することができます。 ダイアログ ボックスのフィールドは、現在選択されているメッセージの属性を持つプリロードされてです。  
@@ -50,6 +51,6 @@ ms.lasthandoff: 10/31/2017
   
 5.  選択**を**または**ダウン**検索の方向。  
   
-6.  **[OK]** をクリックします。  
+6.  **[OK]**をクリックします。  
   
  一致するメッセージを検出すると、メッセージの表示 ウィンドウで強調表示されます。 参照してください[メッセージ ビュー](../debugger/messages-view.md)です。

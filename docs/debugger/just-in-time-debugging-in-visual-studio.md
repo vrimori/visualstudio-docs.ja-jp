@@ -15,11 +15,12 @@ caps.latest.revision: "48"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 06beda1fdeda9f62d8f89b9458f488961d39fe29
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8c954cd95da7b6dd2ba0c2938852b939ae396525
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-respond-to-the-just-in-time-debugger"></a>方法: - Just-in-time デバッガーへの応答
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/31/2017
 
 1. (Web アプリ)Web アプリを実行しようとする場合は、スクリプトのデバッグを無効にできます。
 
-    Internet Explorer またはエッジでは、[インターネット オプション] ダイアログ ボックスでスクリプトのデバッグを無効にします。 これらの設定にアクセスすることができます、**コントロール パネルの ** > **ネットワークとインターネット** > **インターネット オプション**(正確な手順が異なります、Windows のバージョンおよびお使いのブラウザー)。
+    Internet Explorer またはエッジでは、[インターネット オプション] ダイアログ ボックスでスクリプトのデバッグを無効にします。 これらの設定にアクセスすることができます、**コントロール パネルの**  > **ネットワークとインターネット** > **インターネット オプション**(正確な手順が異なります、Windows のバージョンおよびお使いのブラウザー)。
 
     ![JITInternetOptions](../debugger/media/jitinternetoptions.png "JITInternetOptions")
 
@@ -50,5 +51,5 @@ ms.lasthandoff: 10/31/2017
 
     IIS マネージャーでは、サーバー ノードを右クリックして、選択**機能ビューに切り替える**です。 [ASP.NET] セクションで選択**.NET コンパイル**を選択するかどうかを確認し、 **False** (手順は、IIS の旧バージョンでは異なります) のデバッグ動作として。
   
-## <a name="see-also"></a>関連項目    
+## <a name="see-also"></a>参照    
  [デバッガーの基本事項](../debugger/debugger-basics.md)   

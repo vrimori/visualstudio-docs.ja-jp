@@ -22,32 +22,33 @@ caps.latest.revision: "81"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2a08c56ae60822e6d4183e5789c68cbe383b4dd5
-ms.sourcegitcommit: 2c7f48ad6073a81fa927568793633f26cc1f0b15
+ms.workload: multiple
+ms.openlocfilehash: 8df1dcde73496f6ec8c25eb33cb4b6986a721f33
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="whats-new-for-the-debugger-in-includevsdev15miscincludesvsdev15mdmd"></a>デバッガーの新機能します。[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
 
 デバッガーには、これらの新機能が含まれています。
 
-- 15.5 の新機能、**スナップショット デバッガー**興味のあるコードを実行するときに、実稼働環境でアプリのスナップショットを取得します。 スナップショットを取得するデバッガーを指示するには、コードで snappoints と logpoints を設定します。 デバッガーでは、正確にどのような問題が発生した、実稼働アプリケーションのトラフィックの影響を与えずを確認できます。 スナップショットのデバッガーには、実稼働環境で発生する問題の解決にかかる時間を大幅に削減するのに役立ちます。
+- 15.5 の新機能、**スナップショット デバッガー**興味のあるコードを実行するときに、実稼働環境でアプリのスナップショットを取得します。 スナップショットを取得するようにデバッガーに指示するには、コードでスナップショットとログポイントを設定します。 デバッガーでは、実稼働アプリケーションのトラフィックに影響を与えることなく、問題を正確に確認できます。 スナップショット デバッガーは、実稼働環境で発生する問題の解決にかかる時間を大幅に短縮するのに役立ちます。
 
-    スナップショットのコレクションは、Azure App Service で実行されている次の web アプリを入手できます。
+    スナップショット コレクションは、Azure App Service で実行されている次の Web アプリで利用できます。
 
-    * .NET Framework 4.6.1 で実行されている ASP.NET アプリケーションまたはそれ以降。
-    * ASP.NET Core アプリケーションが .NET Core 2.0 または後で Windows 上で実行します。
+    * .NET Framework 4.6.1 以降で実行されている ASP.NET アプリケーション。
+    * Windows の .NET Core 2.0 以降で実行されている ASP.NET Core アプリケーション。
 
     詳細については、次を参照してください。[スナップショット デバッガーを使用してライブの ASP.NET アプリのデバッグ](../debugger/debug-live-azure-applications.md)です。
 
-- Visual Studio Enterprise でのみ、15.5 で新しい**IntelliTrace ステップ ライトバック**手順イベント、アプリケーションのすべてのブレークポイントとデバッガーのスナップショットを自動的に取得します。 記録されたスナップショットを使用すると、前のブレークポイントまたは手順に戻るし、過去になっていたようにアプリケーションの状態を表示できます。 IntelliTrace 手順戻ることができますの以前のアプリケーション状態を確認しますが、デバッグを再起動するか、必要なアプリケーションの状態を再作成したくないです。
+- Visual Studio Enterprise でのみ、15.5 で新しい**IntelliTrace ステップ ライトバック**手順イベント、アプリケーションのすべてのブレークポイントとデバッガーのスナップショットを自動的に取得します。 記録されたスナップショットにより、前のブレークポイントまたはステップに戻り、過去の時点でのアプリケーションの状態を確認できるようになります。 IntelliTrace ステップ バックでは、以前のアプリケーションの状態を確認したいが、デバッグの再開や必要なアプリ状態の再作成は必要でない場合に時間を節約できます。
 
-    移動しを使用してスナップショットを表示することができます、**手順旧バージョンと**と**つ進む**デバッグ ツールバーのボタンです。 これらのボタンに表示されるイベントの移動、**イベント** タブで、**診断ツール**ウィンドウです。
+    スナップショット間を移動して表示するには、デバッグ ツールバーの **[前に戻る]** ボタンと **[次へ進む]** ボタンを使用します。 これらのボタンを使用して、**[診断ツール]** ウィンドウの **[イベント]** タブに表示されるイベント間を移動します。
 
     ![ステップ後退と転送ボタン](../debugger/media/intellitrace-step-back-icons-description.png  "旧バージョンとステップと転送ボタン")
 
-    詳細については、次を参照してください。、 [IntelliTrace ステップ ライトバックを使用してスナップショットを表示する](../debugger/how-to-use-intellitrace-step-back.md)ページ。
+    詳細については、「[IntelliTrace ステップ バックを使用してスナップショットを表示する](../debugger/how-to-use-intellitrace-step-back.md)」のページ参照してください。
 
 - **例外ヘルパー**置換、例外処理アシスタントと、エラーが発生した非モーダル ダイアログ ボックスに表示されます。 **例外ヘルパー**簡単にアクセスするには、内部例外、(使用可能な場合)、デバッガーによってさらに分析および即時アクセスを提供、**例外設定**例外。 例外ヘルパーはブロックして表示する必要がある場合浮動ビューにドラッグできます。
 
@@ -71,6 +72,6 @@ ms.lasthandoff: 11/17/2017
 
 これらの新機能の詳細については、次を参照してください。、[のリリース ノート[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes#debuggingdiag)です。
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)

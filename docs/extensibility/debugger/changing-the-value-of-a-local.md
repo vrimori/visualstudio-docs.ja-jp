@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 78affeb358200599d925b9b70df3ae945759054c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 03e6acb4ee9756d0bbb14a6e3667375d32cafba9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="changing-the-value-of-a-local"></a>ローカルの値を変更します。
 > [!IMPORTANT]
@@ -49,6 +50,6 @@ ms.lasthandoff: 10/31/2017
  [値の変更の実装のサンプル](../../extensibility/debugger/sample-implementation-of-changing-values.md)  
  値を変更するプロセスをステップ MyCEE サンプルを使用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CLR 式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   
  [ローカルの表示](../../extensibility/debugger/displaying-locals.md)

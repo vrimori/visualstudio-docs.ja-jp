@@ -27,11 +27,12 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 97c7cd3588edbb7b07c5eaed25df07c882805d73
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a234529f13217cabf59a8d3827427e2f5341fb53
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mixed-code-and-missing-information-in-the-call-stack-window"></a>[呼び出し履歴] ウィンドウの混合コードと不足情報
 マネージ コードとネイティブ コードの呼び出し履歴には違いがあるため、コードの種類が混在する場合、呼び出し履歴にすべてを表示できるとは限りません。 以下の不具合に気付くかもしれませんネイティブ コードがマネージ コードを呼び出すと、**呼び出し履歴**ウィンドウ。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/31/2017
   
  上の 2 つの不具合はめったに発生しません。 ネイティブ コードによるマネージ コードの呼び出しでは、ほとんどの場合、正しい呼び出し履歴が表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法 : [呼び出し履歴] ウィンドウを使用する](../debugger/how-to-use-the-call-stack-window.md)

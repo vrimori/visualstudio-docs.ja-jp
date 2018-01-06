@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3bc985bf9fb55b67b5a332f007abe98c6718fbf2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: aa70e2a6019a97c248e6d4b411dacc222be59a1f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-a-port-supplier"></a>ポートのサプライヤーを実装します。
 ポート サプライヤーは、セッションのデバッグ マネージャー (SDM) への要求でポートを指定します。 ポートのサプライヤーは、非 DCOM マシンをデバッグするときに、または新しいデバイスをサポートする必要がある場合に実装する必要があります。 たとえば、携帯電話をデバッグするには、(おそらく IR またはセルの接続) から携帯電話に接続して、プロセスと、電話で実行されているプログラムを列挙するポートを提供するポートのサプライヤーを実装する可能性があります。  
@@ -37,5 +38,5 @@ ms.lasthandoff: 10/31/2017
  [デバッガーの概念](../../extensibility/debugger/debugger-concepts.md)  
  デバッグ アーキテクチャ、主要な概念をについて説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio デバッガーの拡張性](../../extensibility/debugger/visual-studio-debugger-extensibility.md)

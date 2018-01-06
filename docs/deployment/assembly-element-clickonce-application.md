@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: fafc5df1a2aa32fa60c1f41077f7e3fff29ddef7
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: c94d70f2be28a6a420d683335c99ee0466a52114
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltassemblygt-element-clickonce-application"></a>&lt;アセンブリ&gt;要素 (ClickOnce アプリケーション)
 アプリケーション マニフェストの最上位要素です。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/27/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|`manifestVersion`|必須です。 `manifestVersion`に属性を設定する必要があります`1.0`です。|  
+|`manifestVersion`|必須。 `manifestVersion`に属性を設定する必要があります`1.0`です。|  
   
 ## <a name="example"></a>例  
  次のコード例を示しています、`assembly`アプリケーション マニフェストの要素、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。 このコード例に示されている例の一部である[ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)です。  
@@ -70,6 +71,6 @@ ms.lasthandoff: 10/27/2017
   xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)   
  [\<アセンブリ > 要素](../deployment/assembly-element-clickonce-deployment.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "35"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b92b070641e4eed47b0094e1611f78cd799e6952
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: e2e5e716bd63170554537ec77895055de1fd83a5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pseudovariables-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでの擬似変数
 擬似変数は変数ウィンドウで特定の情報を表示に使用される用語または**クイック ウォッチ**  ダイアログ ボックス。 通常の変数を入力するときと同様に、擬似変数を入力できます。 ただし、擬似変数は変数ではなく、プログラム内の変数名に対応しません。  
@@ -70,6 +71,6 @@ $handles
 |`$`*N*`#`|等しいオブジェクト ID を持つオブジェクトを表示*N*です。|  
 |`$dynamic`|表示、特別な**動的ビュー**を実装するオブジェクトのノード、`IDynamicMetaObjectProvider`です。 インターフェイス。 構文は`$dynamic,`*オブジェクト*です。 この機能は、.NET Framework Version 4 を使用するコードにのみ適用されます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ウォッチと [クイック ウォッチ] ウィンドウ](../debugger/watch-and-quickwatch-windows.md)   
  [変数ウィンドウ](../debugger/debugger-windows.md)

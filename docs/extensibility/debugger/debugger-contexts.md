@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 809f0f50ace62253371d4fd14425bb870a3be633
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f36df39cf29ff298a327ec6e6d4bb02ff53485a0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugger-contexts"></a>デバッガー コンテキスト
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デバッグは、デバッグ エンジン (DE) 操作に同時にいくつかの異なるコンテキスト内で次のようにします。  

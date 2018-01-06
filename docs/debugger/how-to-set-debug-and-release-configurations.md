@@ -34,11 +34,12 @@ caps.latest.revision: "45"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4dc53ebb4a61d6d4740effa7b17b4d0a26d46a68
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cc63ca48f7c35c382b668d9b7c794a4905b9dac9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-debug-and-release-configurations-in-visual-studio"></a>方法: デバッグ構成と設定リリース Visual Studio での構成
 Visual Studio プロジェクトでは、ご使用のプログラムに対応するリリースとデバッグ構成を個別に用意しています。 名前が示すように、デバッグ バージョンはデバッグ用、リリース バージョンは最終リリース配布用のビルドです。  
@@ -47,7 +48,7 @@ Visual Studio プロジェクトでは、ご使用のプログラムに対応す
   
 プログラムのリリース構成は、シンボリック デバッグ情報を含まず、完全に最適化されます。 デバッグ情報が .pdb ファイルに生成されることができる場合[コンパイラ オプションによって](#BKMK_symbols_release)のために使用されます。 .Pdb ファイルの作成は、後でリリース バージョンをデバッグする必要がある場合に役立ちます。  
   
-ビルド構成の詳細については、次を参照してください。[ビルド構成について](../ide/understanding-build-configurations.md)です。  
+ビルド構成の詳細については、「[ビルド構成について](../ide/understanding-build-configurations.md)」を参照してください。  
   
 ビルド構成を変更することができます、**ビルド** メニュー、ツールバーで、またはプロジェクトのプロパティ ページにします。 プロジェクト プロパティ ページは、言語固有のページです。 次の手順では、メニューとツールバーからビルド構成を変更する方法を示します。 異なる言語のプロジェクトのビルド構成を変更する方法の詳細については、「参照」セクションを参照してください。  
   
@@ -112,11 +113,11 @@ C# でのデバッグ構成のプロジェクトの設定の詳細について�
 
     シンボル ファイルは取得、実行可能ファイルまたは出力ファイルと同じフォルダーに作成されます。
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visua Studio デバッガーでのシンボル (.pdb) ファイルおよびソース ファイルを指定します。](../debugger/debugger-settings-and-preparation.md)  
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)   
  [C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
- [C# のプロジェクトの設定はデバッグ構成](../debugger/project-settings-for-csharp-debug-configurations.md)   
- [Visual Basic のプロジェクトの設定はデバッグ構成](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
+ [C# デバッグ構成のプロジェクト設定](../debugger/project-settings-for-csharp-debug-configurations.md)   
+ [Visual Basic デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
  [方法 : 構成を作成および編集する](../ide/how-to-create-and-edit-configurations.md)   
  [デバッグ プロジェクト構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)

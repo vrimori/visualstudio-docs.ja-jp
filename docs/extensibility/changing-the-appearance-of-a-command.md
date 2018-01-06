@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7ffb8aed183b50958c8835b2a1e79b808ac20174
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: eec62227ec39c1758c15e83fd1d8306e807d59fd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="changing-the-appearance-of-a-command"></a>コマンドの外観を変更します。
 コマンドの外観を変更することによって、ユーザーにフィードバックを提供できます。 たとえばは使用できないと異なって表示するコマンドをする可能性があります。 コマンドを可能に使用できるか、使用できませんを非表示にまたは、それらを表示するまたは確認したり、メニューでそれをオフにできます。  
@@ -87,7 +88,7 @@ ms.lasthandoff: 10/31/2017
   
 8.  **ツール**メニューが表示されます**新しいテキスト**です。 をクリックして**新しいテキスト**です。 コマンドは今すぐグレー表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コマンド、メニューのおよびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)   
  [Vspackage がユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [拡張メニューとコマンド](../extensibility/extending-menus-and-commands.md)   

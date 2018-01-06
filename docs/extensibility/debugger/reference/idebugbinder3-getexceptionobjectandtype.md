@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b533423da8152dd23df6d32da3361c99ad032b7e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b698295f3bfff9fb2c16e286b85bf5268bf6e852
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugbinder3getexceptionobjectandtype"></a>IDebugBinder3::GetExceptionObjectAndType
 このメソッドは、存在する場合に、オブジェクトに関連付けられている例外を取得します。  
@@ -52,5 +53,5 @@ int GetExceptionObjectAndType(
 > [!NOTE]
 >  例外があるかどうかを確認するには、によって返される値を調べます`ppException`: null 値であるかどうかは、例外がこのオブジェクトに関連付けられていません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 26993da79249d1706dc8609cfcd5b0ceb66e1ec4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: dacce06dc59724b7f8feba8f84d2b781ba56ed9e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>Visual Studio のデバッガー用の生産性に関するヒントと秘訣を理解します。
 
@@ -159,12 +160,12 @@ UWP アプリでは、ネットワーク操作を使用して実行を分析す�
 
 デバッガーがユーザー コードとしてコードを分類する方法については、次を参照してください。[マイ コードのみ](../debugger/just-my-code.md)です。 シンボル ファイルの詳細についてを参照してください。[シンボル (.pdb) とソース ファイルを指定して、Visual Studio デバッガーで](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)です。
 
-## <a name="learn-more"></a>詳細を表示
+## <a name="learn-more"></a>詳細情報
 
 その他のヒントとテクニックとより詳細な情報は、次のブログ投稿を参照してください。
 
 - [Visual Studio でデバッグするために 7 のいずれか小さいほう既知ハッキング](https://blogs.msdn.microsoft.com/visualstudio/2017/06/26/7-lesser-known-hacks-for-debugging-in-visual-studio/)
 - [Visual Studio での 7 の非表示 gems](https://blogs.msdn.microsoft.com/visualstudio/2017/10/05/7-hidden-gems-in-visual-studio-2017/)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [キーボード ショートカット](../ide/tips-and-tricks-for-visual-studio.md)

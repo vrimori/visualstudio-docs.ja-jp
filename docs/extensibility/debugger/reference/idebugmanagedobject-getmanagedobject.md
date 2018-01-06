@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cedcd5801d37256bcb419f4b4e6fb5317f0aedbf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d73d68edcae0de9ca5834d6c622660e83cb72afa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugmanagedobjectgetmanagedobject"></a>IDebugManagedObject::GetManagedObject
 マネージ オブジェクトを表すインターフェイスを返します。  
@@ -47,5 +48,5 @@ int GetManagedObject(
 ## <a name="remarks"></a>コメント  
  このメソッドから返されたインターフェイスを呼び出すためのメソッドを許可するマネージ クラスによって実装されるインターフェイスのクエリを実行できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

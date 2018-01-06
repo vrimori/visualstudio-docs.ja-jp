@@ -12,22 +12,25 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 04f3f90f6b3ee8aac2ddf1907569043c9d4b56ea
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload:
+- aspnet
+- azure
+ms.openlocfilehash: 32d58ec27d54b1b9c731747b01ad1f59d1d222b7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>スナップショットのデバッガーを使用してライブの ASP.NET Azure アプリをデバッグします。
 
-スナップショット デバッガーは、興味のあるコードを実行するときに、実稼働環境でアプリのスナップショットを取得します。 スナップショットを取得するデバッガーを指示するには、コードで snappoints と logpoints を設定します。 デバッガーでは、正確にどのような問題が発生した、実稼働アプリケーションのトラフィックの影響を与えずを確認できます。 スナップショットのデバッガーには、実稼働環境で発生する問題の解決にかかる時間を大幅に削減するのに役立ちます。
+スナップショット デバッガーは、興味のあるコードを実行するときに、実稼働環境でアプリのスナップショットを取得します。 スナップショットを取得するようにデバッガーに指示するには、コードでスナップショットとログポイントを設定します。 デバッガーでは、実稼働アプリケーションのトラフィックに影響を与えることなく、問題を正確に確認できます。 スナップショット デバッガーは、実稼働環境で発生する問題の解決にかかる時間を大幅に短縮するのに役立ちます。
 
 Snappoints と logpoints ブレークポイントに似ています。 ブレークポイントとは異なり snappoints 停止しないでください。 アプリケーション ヒット時です。 通常、スナップショットをキャプチャする、snappoint で 10 ~ 20 ミリ秒がかかります。 
 
-スナップショットのコレクションは、Azure App Service で実行されている次の web アプリを入手できます。
+スナップショット コレクションは、Azure App Service で実行されている次の Web アプリで利用できます。
 
-- .NET Framework 4.6.1 で実行されている ASP.NET アプリケーションまたはそれ以降。
-- ASP.NET Core アプリケーションが .NET Core 2.0 または後で Windows 上で実行します。
+- .NET Framework 4.6.1 以降で実行されている ASP.NET アプリケーション。
+- Windows の .NET Core 2.0 以降で実行されている ASP.NET Core アプリケーション。
 
 さらに、スナップショットのデバッガーは、Visual Studio 2017 Enterprise 15.5 またはそれ以降のバージョンと基本的な以上の App Service プランのできるだけです。 
 
@@ -125,7 +128,7 @@ Snappoint にヒットしたときに、スナップショットを作成、だ�
 
     選択した場合**アプリケーション ログを送信**、logpoint にヒットすると、メッセージの表示を任意の場所からのメッセージを表示できること`System.Diagnostics.Trace`(または`ILogger`.NET Core で) など[App Insights](/azure/application-insights/app-insights-asp-net-trace-logs)です。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 - スナップショットの表示中に変数を検査する方法については、次を参照してください。 [Debbuger 機能のツアー](../debugger/debugger-feature-tour.md)です。
 - ビュー、[スナップショットのデバッグに関する FAQ](../debugger/debug-live-azure-apps-faq.md)です。

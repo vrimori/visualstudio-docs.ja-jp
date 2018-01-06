@@ -26,11 +26,12 @@ caps.latest.revision: "31"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 344ba292f16098c969d287a88a5d441acc950de1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 842b52d063b5de701c74501410e3249da7358776
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-debugging-a-web-form"></a>チュートリアル : Web フォームのデバッグ
 このチュートリアルでは、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーション (Web フォーム) をデバッグする方法について説明します。 開始し、実行を停止および、ブレークポイントの設定で変数を確認する方法を示します、**ウォッチ**ウィンドウです。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/31/2017
   
 5.  **言語**一覧で、クリックして**Visual c#**または**Visual Basic**です。  
   
-6.  **[OK]** をクリックします。  
+6.  **[OK]**をクリックします。  
   
      [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で新しいプロジェクトが作成され、既定の HTML ソース コードが表示されます。 という名前の新しい仮想ディレクトリも作成**web サイト** **Default Web Site** IIS でします。  
   
@@ -168,5 +169,5 @@ ms.lasthandoff: 10/31/2017
   
 6.  終了したらデバッグで、**デバッグ** メニューのをクリックして**デバッグの停止**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ASP.NET アプリケーションをデバッグします。](../debugger/how-to-enable-debugging-for-aspnet-applications.md)

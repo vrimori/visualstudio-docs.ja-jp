@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords: vs.debug.error.unsafe_func_eval_abort
-ms.assetid: 0a9f70ed-21ad-4a10-8535-b9c5885ad8f4
 caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 722abd91cb9f97aab67d0d9a5e77ff9e3a4f080d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ff5dedb9bf0ffe44ec1a7c031d4c1d0eeeea08ec
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>エラー: 関数 &#39; 機能 &#39; を評価します。タイムアウトしたため、安全でない方法で中止するために必要
 
@@ -35,9 +35,9 @@ ms.lasthandoff: 10/31/2017
 エラー メッセージでは、デバッガーが、呼び出すしようとしています。 関数の名前を指定します。 この関数を変更する場合は、プロパティ get アクセス操作子または ToString メソッドの呼び出しからデバッガーができなくなります。 次のいずれかの操作を行います。
  
 * メソッドを他の何らかの種類のプロパティ get アクセス操作子以外のコードに変更するか、ToString メソッドと、問題が解消します。
-    または
+    - または -
 * (の ToString)DebuggerDisplay 属性型を定義、および ToString 以外のものを評価するデバッガーを持つことができます。
-    または
+    - または -
 * プロパティ getter を含まない) (Put、`[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]`プロパティの属性です。 これは、API 互換性の理由から、プロパティを維持する必要があるメソッドがある場合に役立ちますが、メソッドにする必要があります。
  
 ### <a name="solution-2-have-the-target-code-ask-the-debugger-to-abort-the-evaluation"></a>評価を中止するデバッガーを依頼ターゲット コードがある解決方法 2。

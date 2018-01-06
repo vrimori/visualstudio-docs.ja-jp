@@ -24,11 +24,12 @@ caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d588f43271b127c675a6ec2fdf9e55ef388eadf2
-ms.sourcegitcommit: 1e08318a8a684b21609af7a5e48b56abcc3239e6
+ms.workload: dotnet
+ms.openlocfilehash: b21dcdefde586b4a2724c8c0a659462b5f0898f5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-settings-for--c-debug-configurations"></a>C# デバッグ構成のプロジェクト設定
 C# デバッグ構成のプロジェクト設定を変更することができます、**プロパティ ページ**ウィンドウで説明したよう[デバッグ構成とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)です。 次の表は、デバッガー関連の設定を検索する場所を示して、**プロパティ ページ**ウィンドウです。  
@@ -59,5 +60,5 @@ C# デバッグ構成のプロジェクト設定を変更することができ�
 > [!NOTE]
 > 検索するデバッグ オプションの詳細についての**詳細**ボタンをクリックしを参照してください[ビルドの詳細設定 ダイアログ ボックス (c#)](../ide/reference/advanced-build-settings-dialog-box-csharp.md)です。 シンボル (.pdb) ファイルをポータブル形式は、.NET Core の最新のクロスプラット フォーム形式です。 
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "23"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 914974e27e6856174a4260b741f2e864d8509ff8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 15143ad050997cd92b21bd342f5d821c9514271a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-attach-to-script"></a>方法 : スクリプトにアタッチする
 このトピックでは、デバッグを目的として Visual Studio デバッガーを手動でスクリプト ファイルにアタッチする方法について説明します。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/31/2017
   
     2.  **コードの種類の選択**ダイアログ ボックスで、をクリックして**コードの種類をデバッグ**を選択して**スクリプト**です。  
   
-    3.  **[OK]** をクリックします。  
+    3.  **[OK]**をクリックします。  
   
 5.  **[アタッチ]**をクリックします。  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/31/2017
   
  ターミナル サービス (リモート デスクトップ) セッションでのデバッグ時には、[選択可能なプロセス] ボックスに、使用可能なプロセスのすべてが表示されない場合があります。 [!INCLUDE[WinXPSvr](../debugger/includes/winxpsvr_md.md)] 以降のバージョンでは、Visual Studio を制限付きユーザーとして実行している場合、[選択可能なプロセス] ボックスには、セッション 0 で実行しているプロセスは表示されません。セッション 0 は、サービスおよび w3wp.exe を含むその他のサーバー プロセス用に使用されます。 この問題を解決するには、管理者アカウントで Visual Studio を実行するか、ターミナル サービス セッションではなくサーバー コンソールから Visual Studio を実行します。 Vsjitdebugger.exe」と入力して、プロセスにアタッチする 3 番目のオプションは、これらの回避策のどれも使えない場合、Windows のコマンドラインで-p ProcessId です。 プロセス ID は tlist.exe を使用して確認できます。 Tlist.exe を入手するをダウンロードして Windows 用デバッグ ツールで利用可能なインストール[Windows ハードウェア開発中央](http://go.microsoft.com/fwlink/?linkid=1651)します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [クライアント側スクリプトのデバッグ](../debugger/client-side-script-debugging.md)   
  [実行中のプロセスをアタッチします。](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
  [セキュリティ警告: 信頼されていないユーザーが所有するプロセスにアタッチするには危険が伴います。次の情報に関して疑わしい点またはことを確認して場合がこのプロセスにアタッチできません。](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user-can-be-dangerous-if-the-following-information-looks-suspicious-or-you-are-unsure-do-not-attach-to-this-process.md)   

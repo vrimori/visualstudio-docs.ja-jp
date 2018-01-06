@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6a191585a251af878c6abef5599a490d7eafe363
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 966f15e0aac212207e0f6afe96dececc8950aab2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-pixel-history"></a>グラフィックス ピクセル履歴
 Visual Studio Graphics Analyzer の [ピクセル履歴] ウィンドウでは、特定のピクセルが、ゲームまたはアプリのフレームの生成中に発生する Direct3D イベントによってどのように影響を受けるかを理解できます。  
@@ -76,6 +77,6 @@ Visual Studio Graphics Analyzer の [ピクセル履歴] ウィンドウでは�
 ### <a name="links-to-graphics-objects"></a>グラフィックス オブジェクトへのリンク  
  ピクセル履歴のグラフィック イベントについて理解するために、イベントの発生時点におけるデバイスの状態や、そのイベントで参照されている Direct3D オブジェクトに関する情報が必要になる場合があります。 ピクセル履歴内の各イベントに対して、**グラフィックス ピクセル履歴**状態と関連オブジェクトの時点のデバイスへのリンクを提供します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: デバイス状態によるオブジェクトの不足](walkthrough-missing-objects-due-to-device-state.md)   
  [チュートリアル: 網かけによるレンダリング エラーのデバッグ](walkthrough-debugging-rendering-errors-due-to-shading.md)

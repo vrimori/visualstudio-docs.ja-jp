@@ -24,11 +24,12 @@ caps.latest.revision: "49"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 10f99d620060245fd7dac4e2420216a23d068a83
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 2e0035641a8ed374892060dbaabe79d808150cc2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-manually-deploying-a-clickonce-application"></a>チュートリアル : ClickOnce アプリケーションを手動で配置する
 展開する Visual Studio を使用できない場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション、または高度な展開機能を使用する必要があります。 信頼されたアプリケーションの配置などを作成するコマンド ライン ツールの Mage.exe を使用する必要があります、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]マニフェスト。 このチュートリアルを作成する方法について説明、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]コマンド ライン バージョン (Mage.exe) またはマニフェストの生成および編集ツールのグラフィカルなバージョン (MageUI.exe) を使用して展開します。  
@@ -162,7 +163,7 @@ ms.lasthandoff: 10/27/2017
   
 13. 場合は、ファイル システム上のファイルとして格納されている証明書がある場合を使用して、**証明書ファイルを使用してサインイン**し、省略記号ボタンを使用して、ファイル システムから証明書を選択 (**.**) ボタンをクリックします。 次に、証明書のパスワードを入力します。  
   
-     または  
+     - または -  
   
      場合は、証明書をコンピューターからアクセス可能な証明書ストアに保持すると、選択、**保存された証明書を使用してサインイン**オプション、および指定されたリストから証明書を選択します。  
   
@@ -190,7 +191,7 @@ ms.lasthandoff: 10/27/2017
   
 25. 場合は、ファイル システム上のファイルとして格納されている証明書がある場合を使用して、**証明書ファイルを使用してサインイン**し、省略記号ボタンを使用して、ファイル システムから証明書を選択 (**.**) ボタンをクリックします。 次に、証明書のパスワードを入力します。  
   
-     または  
+     - または -  
   
      場合は、証明書をコンピューターからアクセス可能な証明書ストアに保持すると、選択、**保存された証明書を使用してサインイン**オプション、および指定されたリストから証明書を選択します。  
   
@@ -205,7 +206,7 @@ ms.lasthandoff: 10/27/2017
 ## <a name="next-steps"></a>次の手順  
  アプリケーションの新しいバージョンを展開する必要がある場合は、新しいバージョンにちなんだ名前の新しいディレクトリを作成します: 1.0.0.1—and が、新しいディレクトリに新しいアプリケーション ファイルをコピーするなどです。 次に、作成し、新しいアプリケーション マニフェストに署名し、更新、および配置マニフェストに署名するには、前の手順に従う必要があります。 両方の Mage.exe で同じより高いバージョンを指定するように注意する`-New`と`-Update`呼び出し、として[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]最上位の左端の整数値で以降のバージョンの更新のみです。 場合 MageUI.exe を使用することができますを更新する、配置マニフェストを開いてを選択すると、**アプリケーション参照**] タブをクリックすると、 **[マニフェスト**ボタンをクリックしを選択して、更新されました。アプリケーション マニフェスト。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Mage.exe (マニフェストの生成および編集ツール)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)   
  [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)   
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   

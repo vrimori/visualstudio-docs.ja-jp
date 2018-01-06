@@ -13,11 +13,12 @@ caps.latest.revision: "39"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 513404a9abda00844e8ba68e5e207961d6de4868
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 69965b35d919c4170c54cbfa1eed5d5a52dc8287
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-graphics-diagnostics"></a>Visual Studio グラフィックス診断
 Visual Studio*グラフィックス診断*を記録し、Direct3D アプリのレンダリングとパフォーマンスの問題を分析するためのツールのセットです。 グラフィックス診断は、Windows PC でローカルに実行されているアプリ、Windows デバイス エミュレーターで実行されているアプリ、あるいはリモート PC またはデバイスで実行されているアプリに対して使用できます。  
@@ -46,7 +47,7 @@ Visual Studio*グラフィックス診断*を記録し、Direct3D アプリの�
  グラフィックス診断を使用してアプリのプロファイリングを行うには、GPU 使用率ツールを使用します。 GPU 使用率ツールを、CPU 使用率など、他のプロファイリング ツールと連携して使用すると、アプリのパフォーマンスの問題を引き起こしている可能性のある CPU および GPU のアクティビティを、問題と関連付けることができます。  
   
  [グラフィックス ログ ドキュメント](graphics-log-document.md)  
- 記録したグラフィックス ログの調査を開始するには、キャプチャされたフレームを選択する、グラフィックス ログ ドキュメント ウィンドウを使用する、特定のピクセルまたは -詳細に調べることができるように、*イベント*(つまり、DirectX API 呼び出し) に影響します。.  
+ 記録したグラフィックス ログの調査を開始するには、キャプチャされたフレームを選択する、グラフィックス ログ ドキュメント ウィンドウを使用する、特定のピクセルまたは -詳細に調べることができるように、*イベント*(つまり、DirectX API 呼び出し) に影響します.  
   
  [フレーム分析](graphics-frame-analysis.md)  
  フレームを選択したら、グラフィックス フレーム分析を使用してレンダリング パフォーマンスを調べて調整することができます。  

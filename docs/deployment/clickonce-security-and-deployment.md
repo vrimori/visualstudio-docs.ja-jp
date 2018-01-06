@@ -21,11 +21,12 @@ caps.latest.revision: "32"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 7e56d596c37960ddfa548921da897f08fbfbbf5b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 1923c39669d50303f907974816fbb54297c477c0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clickonce-security-and-deployment"></a>ClickOnce のセキュリティと配置
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開テクノロジをインストールして最小限のユーザー操作で実行できる自己更新の Windows ベースのアプリケーションを作成することができます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]発行および Visual Basic および Visual c# でプロジェクトを開発している場合は、ClickOnce テクノロジで配置されたアプリケーションを更新するためには、完全にサポートを提供します。 Visual C アプリケーションの展開方法の詳細については、次を参照してください。 [Visual c アプリケーションの ClickOnce 配置](/cpp/ide/clickonce-deployment-for-visual-cpp-applications)です。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/27/2017
  Authenticode 証明書を使用して、アプリケーションの発行元の信頼性を確認します。 Authenticode を使用するとアプリケーションの展開は、ClickOnce は、有害なプログラムの合法的なプログラム確立されている、信頼できるソースからのものとして、それ自体を防ぐのに役立ちます。 必要に応じて、証明書は、アプリケーションの署名にも使用できるし、配置が、ファイルが改ざんされていないことを証明するためにマニフェストします。 詳細については、次を参照してください。 [ClickOnce と Authenticode](../deployment/clickonce-and-authenticode.md)です。 証明書は、信頼される発行者の一覧を持つクライアント コンピューターの構成にも使用できます。 アプリケーションが信頼された発行元になる場合は、ユーザーが介入せずインストールできます。 詳細については、「 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)」を参照してください。  
   
 ### <a name="code-access-security"></a>コード アクセス セキュリティ  
- コード アクセス セキュリティにより、コードには保護されたリソースへのアクセスを制限します。 ほとんどの場合は、権限を制限するインターネットまたはローカル イントラネット ゾーンを選択できます。 使用して、**セキュリティ** ページで、 **ProjectDesigner**アプリケーションの適切なゾーンを要求します。 エンド ユーザー エクスペリエンスをエミュレートするために制限されたアクセス許可を持つアプリケーションをデバッグすることもできます。 詳細については、次を参照してください。 [ClickOnce アプリケーション用のコード アクセス セキュリティ](../deployment/code-access-security-for-clickonce-applications.md)です。  
+ コード アクセス セキュリティにより、コードには保護されたリソースへのアクセスを制限します。 ほとんどの場合は、権限を制限するインターネットまたはローカル イントラネット ゾーンを選択できます。 使用して、**セキュリティ** ページで、 **ProjectDesigner**アプリケーションの適切なゾーンを要求します。 エンド ユーザー エクスペリエンスをエミュレートするために制限されたアクセス許可を持つアプリケーションをデバッグすることもできます。 詳細については、「[ClickOnce アプリケーションのコード アクセス セキュリティ](../deployment/code-access-security-for-clickonce-applications.md)」を参照してください。  
   
 ### <a name="clickonce-trust-prompt"></a>ClickOnce 信頼プロンプト  
  アプリケーションは、ゾーンでは、以上のアクセス許可を要求している場合、エンドユーザーは、信頼の決定するように求められますことができます。 エンドユーザーは、Windows フォーム アプリケーション、Windows Presentation Foundation アプリケーション、コンソール アプリケーション、XAML ブラウザー アプリケーション、および Office ソリューションなどの ClickOnce アプリケーションが信頼して実行できるかどうかを決定できます。 詳細については、次を参照してください。[する方法: ClickOnce 信頼プロンプト動作を構成する](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md)です。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 10/27/2017
   
  証明書信頼できる、コンピューター レベルまたはエンタープライズ レベルで信頼された証明書で署名された ClickOnce アプリケーションをサイレント モードでインストールできるようにします。 信頼された証明書の詳細については、次を参照してください。[信頼されたアプリケーション展開の概要](../deployment/trusted-application-deployment-overview.md)です。  
   
- ユーザーのアプリケーションを追加することができます**開始**メニューおよび、**プログラム追加と削除**グループにおいて、**コントロール パネルの **です。 その他の展開テクノロジとは異なりに何も追加、 **Program Files**フォルダー、レジストリ、管理者権限がありませんがインストールに必要です  
+ ユーザーのアプリケーションを追加することができます**開始**メニューおよび、**プログラム追加と削除**グループにおいて、**コントロール パネルの** です。 その他の展開テクノロジとは異なりに何も追加、 **Program Files**フォルダー、レジストリ、管理者権限がありませんがインストールに必要です  
   
 > [!NOTE]
 >  アプリケーションに追加されるを防止することも、**開始**メニューおよび**プログラム追加と削除**グループ、実質的に Web アプリケーションと同様に動作させます。 詳細については、「[ClickOnce 配置ストラテジの選択](../deployment/choosing-a-clickonce-deployment-strategy.md)」を参照してください。  
@@ -112,7 +113,7 @@ ms.lasthandoff: 10/27/2017
 |Internet Explorer|2.0、3.0、3.5、4、3.5 SP1|  
 |Firefox|2.0 SP1、3.5 SP1 は、4|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Windows Vista の ClickOnce 配置](../deployment/clickonce-deployment-on-windows-vista.md)   
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
  [ClickOnce アプリケーションのセキュリティ](../deployment/securing-clickonce-applications.md)   

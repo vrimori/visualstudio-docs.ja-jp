@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ba38521b8d3d224d6544d95b947d5f0e29727c0a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: aspnet
+ms.openlocfilehash: 82c81f2998497f047550e35397dc870338ed977e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-aspnet-exceptions"></a>方法 : ASP.NET の例外をデバッグする
 例外のデバッグは、堅牢な開発の重要な部分[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]アプリケーションです。 例外をデバッグする方法に関する一般情報が、[デバッガーでは、例外を管理する](../debugger/managing-exceptions-with-the-debugger.md)です。  
@@ -50,5 +51,5 @@ ms.lasthandoff: 10/31/2017
   
 -   予測でき、処理方法がわかる例外をスローできるコードを、`try ... catch` ブロックで囲みます。 たとえば場合は、アプリケーションの呼び出しを行う XML Web サービスまたは SQL Server に直接、そのコードがでなければなりません**try… catch**数多くの例外が発生する可能性があるためにをブロックします。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [ASP.NET アプリケーションをデバッグします。](../debugger/how-to-enable-debugging-for-aspnet-applications.md)

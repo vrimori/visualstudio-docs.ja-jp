@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f170efc945f92d13eda61830ef682ab4cd8fc755
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 9980232a7927bf1ae2df9d5f6329a57a031d3f56
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="combo-element"></a>複合要素
 コンボ ボックスに表示されるコマンドを定義します。 次のようには、コンボ ボックスの 4 つの種類があります: DropDownCombo、DynamicCombo、IndexCombo、および MRUCombo です。  
@@ -41,21 +42,21 @@ ms.lasthandoff: 10/31/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|guid|必須です。 GUID と ID コマンド id の GUID です。|  
-|ID|必須です。 GUID と ID のコマンド識別子の ID です。|  
-|デフォルト|必須です。 コンボ ボックスのピクセル幅を指定する整数。|  
-|idCommandList|必須です。 コンボ ボックスに表示される項目の一覧を取得するアクティブなコマンドのターゲットに送信される ID です。 ID は、コントロールと同じ GUID スコープになります。|  
-|priority|省略可能です。 優先順位を指定する数値。|  
-|型|省略可能です。 ボタンの種類を指定する列挙値。<br /><br /> 指定されていない場合は、ボタンを使用します。<br /><br /> DropDownCombo<br /> VSPackage は、このコンボ ボックスの内容に情報を入力します。 ユーザーは、このドロップダウン リストのテキスト ボックスに何かを入力できません。<br /><br /> DynamicCombo<br /> VSPackage は、このコンボ ボックスの内容に情報を入力します。 ユーザーは、このコンボを編集しても、内の項目を選択できます。<br /><br /> IndexCombo<br /> 点を除けば DynamicCombo と同じには、そのテキストではなく、項目のインデックスを発生させます。<br /><br /> MRUCombo<br /> VSPackage の代理として、統合開発環境 (IDE) が設定されます。  ユーザーは、このコンボ ボックスで編集できます。 IDE は、コンボ ボックスあたり 16 最後のエントリまで記憶します。<br /><br /> ユーザーは、コンボ ボックスで、何かを選択したり、新しいものを入力、ときに、IDE は、適切な VSPackage に通知します。|  
-|状態|省略可能です。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
+|guid|必須。 GUID と ID コマンド id の GUID です。|  
+|ID|必須。 GUID と ID のコマンド識別子の ID です。|  
+|デフォルト|必須。 コンボ ボックスのピクセル幅を指定する整数。|  
+|idCommandList|必須。 コンボ ボックスに表示される項目の一覧を取得するアクティブなコマンドのターゲットに送信される ID です。 ID は、コントロールと同じ GUID スコープになります。|  
+|priority|任意。 優先順位を指定する数値。|  
+|型|任意。 ボタンの種類を指定する列挙値。<br /><br /> 指定されていない場合は、ボタンを使用します。<br /><br /> DropDownCombo<br /> VSPackage は、このコンボ ボックスの内容に情報を入力します。 ユーザーは、このドロップダウン リストのテキスト ボックスに何かを入力できません。<br /><br /> DynamicCombo<br /> VSPackage は、このコンボ ボックスの内容に情報を入力します。 ユーザーは、このコンボを編集しても、内の項目を選択できます。<br /><br /> IndexCombo<br /> 点を除けば DynamicCombo と同じには、そのテキストではなく、項目のインデックスを発生させます。<br /><br /> MRUCombo<br /> VSPackage の代理として、統合開発環境 (IDE) が設定されます。  ユーザーは、このコンボ ボックスで編集できます。 IDE は、コンボ ボックスあたり 16 最後のエントリまで記憶します。<br /><br /> ユーザーは、コンボ ボックスで、何かを選択したり、新しいものを入力、ときに、IDE は、適切な VSPackage に通知します。|  
+|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|親|省略可能です。 ボタンの親要素です。|  
-|CommandFlag|必須です。 参照してください[コマンド フラグ要素](../extensibility/command-flag-element.md)です。 ボタンの有効な CommandFlag 値は次のとおりです。<br /><br /> -CaseSensitive<br /><br /> -CommandWellOnly<br /><br /> -DefaultDisabled<br /><br /> -DefaultInvisible<br /><br /> -DynamicVisibility<br /><br /> -フィルター キー機能<br /><br /> -IconAndText<br /><br /> -NoAutoComplete<br /><br /> -NoButtonCustomize<br /><br /> -NoCustomize<br /><br /> -NoKeyCustomize<br /><br /> -StretchHorizontally|  
-|文字列|必須です。 参照してください[要素の文字列](../extensibility/strings-element.md)です。 ButtonText の子要素を定義する必要があります。|  
+|親|任意。 ボタンの親要素です。|  
+|CommandFlag|必須。 参照してください[コマンド フラグ要素](../extensibility/command-flag-element.md)です。 ボタンの有効な CommandFlag 値は次のとおりです。<br /><br /> -CaseSensitive<br /><br /> -CommandWellOnly<br /><br /> -DefaultDisabled<br /><br /> -DefaultInvisible<br /><br /> -DynamicVisibility<br /><br /> -フィルター キー機能<br /><br /> -IconAndText<br /><br /> -NoAutoComplete<br /><br /> -NoButtonCustomize<br /><br /> -NoCustomize<br /><br /> -NoKeyCustomize<br /><br /> -StretchHorizontally|  
+|文字列|必須。 参照してください[要素の文字列](../extensibility/strings-element.md)です。 ButtonText の子要素を定義する必要があります。|  
 |注釈|省略可能なコメント。|  
   
 ### <a name="parent-elements"></a>親要素  
@@ -86,5 +87,5 @@ ms.lasthandoff: 10/31/2017
 </Combo>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

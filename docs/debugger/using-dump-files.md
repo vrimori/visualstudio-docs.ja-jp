@@ -24,11 +24,12 @@ caps.latest.revision: "53"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5ea763f5bbe174a0c8e58a72737e25b8a5e9a7b6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: de774e323c1580c2a4d7c925f9c9297c392b2794
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="use-dump-files-with-visual-studio"></a>Visual Studio でダンプ ファイルを使用します。
 ヒープの有無のダンプ ファイルダンプ ファイルを作成します。ダンプ ファイルを開きます。バイナリ、pdb のダンプ ファイルのソース ファイルを検索します。
@@ -111,7 +112,7 @@ ms.lasthandoff: 10/31/2017
   
  Visual Studio でダンプ内のモジュールのデバッグに必要なファイルが見つかりません。 適切なページが表示され (**バイナリが見つかりません**、**シンボルが見つかりません**、または**ソースが見つかりません**)。 これらのページでは、問題の原因に関する詳細な情報が表示され、ファイルの正しい場所を特定するために役立つアクション リンクも表示されます。 参照してください[シンボル (.pdb) を指定して、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ジャスト イン タイム デバッグ](../debugger/just-in-time-debugging-in-visual-studio.md)   
  [シンボル (.pdb) を指定して、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
  [IntelliTrace](../debugger/intellitrace.md)

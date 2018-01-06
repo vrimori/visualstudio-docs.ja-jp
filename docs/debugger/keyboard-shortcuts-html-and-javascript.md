@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ea32fcb78986d527959b8ef602161e5336395bfc
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: 1d40167e8d7510e719fa55c534feb44ac877182a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="keyboard-shortcuts-html-and-javascript"></a>ショートカット キー (HTML および JavaScript)
 ![Windows と Windows Phone に適用](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/11/2017
 ## <a name="general-shortcuts"></a>一般ショートカット  
  これらのショートカットは、HTML および JavaScript を使用して、UWP アプリのすべてのツール間で使用します。  
   
-|操作|ショートカット|  
+|アクション|ショートカット|  
 |------------|--------------|  
 |Windows アプリのリフレッシュ|Ctrl + Shift + R|  
 |Windows アプリの再起動|Ctrl + Shift + F5|  
@@ -59,6 +60,6 @@ ms.lasthandoff: 11/11/2017
 |選択した CSS 値を 1 つ増やす|↑ キー|  
 |選択した CSS 値を 1 つ減らす|↓ キー|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [クイック スタート: HTML および CSS をデバッグします。](../debugger/quickstart-debug-html-and-css.md)   
  [クイック スタート: JavaScript をデバッグします。](../debugger/quickstart-debug-javascript-using-the-console.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "30"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 371c48282b2f775833287046ed9810f0cbc8f69e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f50c41a18f6d018ca717fbfd0cd926da8e6dcf65
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-from-a-dll-project-in-visual-studio"></a>方法: Visual Studio で、DLL プロジェクトからデバッグ
 DLL プロジェクトをデバッグする方法の 1 つは、DLL プロジェクトのプロジェクト プロパティで呼び出し元のアプリケーションを指定して、DLL プロジェクトからデバッグを開始する、します。 このメソッドを使用するには、アプリケーションが DLL を呼び出す必要があります、DLL は、アプリケーションがそれを検索する場所にする必要があります (それ以外の場合、アプリケーションを別のバージョンの DLL を検索して代わりに、読み込む可能性があり、、ブレークポイントをヒットしません)。 他の Dll のデバッグの方法では、次を参照してください。 [DLL プロジェクトのデバッグ](../debugger/debugging-dll-projects.md)です。
@@ -83,8 +84,8 @@ C++ のプロパティ ページは、C# と Visual Basic のプロパティ ペ
 
     DLL 内のブレークポイントがヒットします。 ブレークポイントにヒットすることはない場合は、DLL が出力を確認してください (既定では、 **project\Debug**フォルダー) の場所には、呼び出し元のアプリケーションが参照することです。
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DLL プロジェクトのデバッグ](../debugger/debugging-dll-projects.md)   
- [C# のプロジェクトの設定はデバッグ構成](../debugger/project-settings-for-csharp-debug-configurations.md)   
- [Visual Basic のプロジェクトの設定はデバッグ構成](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
+ [C# デバッグ構成のプロジェクト設定](../debugger/project-settings-for-csharp-debug-configurations.md)   
+ [Visual Basic デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
  [C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)

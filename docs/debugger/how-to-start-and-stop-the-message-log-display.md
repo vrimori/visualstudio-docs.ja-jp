@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b45f7246df2fc757f5e2a4a46e215cd25d45b1b6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6057ca5e8bd6d81a72c4578a0ee8b776da46fdc8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-start-and-stop-the-message-log-display"></a>方法: メッセージ ログの表示を開始および終了する
 ときに、[メッセージ ビュー](../debugger/messages-view.md)ウィンドウがアクティブで、**ログ開始**または**ログの停止**Spy++ での選択項目が表示されます**メッセージ**] メニューの [および対応する**ログ開始**または**ログの停止**ツール バー ボタンがアクティブになります。  

@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cc69edbe0865953d242967490a0852c9da4942b3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2ff9458eed7f9c77a964240f81017d27d95d9622
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="command-flag-element"></a>コマンド フラグ要素
 その親要素を変更します。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="child-elements"></a>子要素  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |AllowParams|ユーザーがのコマンド パラメーターを入力できることを示します、**コマンド**ウィンドウのコマンドは、の正規の名前を入力したとき。<br /><br /> に対して有効です。`Button`|  
 |通常|グループやボタンれていない場合でも、メニューが作成されます。<br /><br /> に対して有効です。`Menu`|  
@@ -78,5 +79,5 @@ ms.lasthandoff: 10/31/2017
 |[Buttons 要素](../extensibility/buttons-element.md)|グループを提供[ボタン要素](../extensibility/button-element.md)要素。|  
 |[Menus 要素](../extensibility/menus-element.md)|VSPackage を実装するすべてのメニューを定義します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

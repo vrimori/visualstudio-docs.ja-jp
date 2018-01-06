@@ -21,11 +21,12 @@ caps.latest.revision: "34"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 42018230262e17bc99905833da1b15e30a7d62aa
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: fc083adc600b7de2538abf1ada468f3d626b7ba6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-managed-code"></a>マネージ コードのデバッグ
 ここでは、マネージ アプリケーションに共通するデバッグの問題と手法について説明します。マネージ アプリケーションは、Visual Basic、C#、C++ など、共通言語ランタイムをターゲットにした言語で記述されたアプリケーションです。 ここでは、高度な手法について説明します。 詳細については、次を参照してください。[デバッガーを使用して](../debugger/debugger-basics.md)です。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
  [混合モードのデバッグ](../debugger/debugging-mixed-mode-applications.md)  
  混合モード アプリケーションのデバッグについて説明します。 これは、ネイティブ コードとマネージ コードを組み合わせたアプリケーションです。  
   
- [エラー: Debugging isn't possible カーネル デバッガーがシステムで有効になっているため](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)  
+ [エラー: システム上でカーネル デバッガーが有効になっているため、デバッグできません](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)  
  マネージ コードをデバッグしようとする場合に発生するエラー メッセージについて説明、 [!INCLUDE[win7](../debugger/includes/win7_md.md)]、 [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)]、 [!INCLUDE[winxp](../code-quality/includes/winxp_md.md)]、 [!INCLUDE[Win2kFamily](../code-quality/includes/win2kfamily_md.md)]、またはデバッグ モードで開始された Windows NT システムです。  
   
  [JIT の最適化とデバッグ](../debugger/jit-optimization-and-debugging.md)  
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/31/2017
  [ホーム ページのデバッグ](../debugger/debugger-feature-tour.md)  
  デバッグに関連するドキュメントのより広範囲なリンクを提供します。 これらのリンクでは、デバッガーの新機能、設定と準備、ブレークポイント、例外処理、エディット コンティニュ、マネージ コードのデバッグ、Visual C++ プロジェクトのデバッグ、COM および ActiveX のデバッグ、DLL のデバッグ、SQL のデバッグ、ユーザー インターフェイス リファレンスなどの情報が示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル : カスタム Windows フォーム コントロールのデザイン時のデバッグ](/dotnet/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time)   
  [デバッガーのセキュリティ](../debugger/debugger-security.md)  
  [Visual Studio でデバッグ](../debugger/index.md)[デバッガーの機能のツアー](../debugger/debugger-feature-tour.md)

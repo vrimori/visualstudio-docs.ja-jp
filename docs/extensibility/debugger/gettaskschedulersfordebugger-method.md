@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 474d809f36d21b254dbb8bf302cd21bc83db88a9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a2c657b7cef89871e17af442e41229c2fda0f4b7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gettaskschedulersfordebugger-method"></a>GetTaskSchedulersForDebugger メソッド
 すべての配列を取得<xref:System.Threading.Tasks.TaskScheduler>現在アクティブなオブジェクトです。  
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/31/2017
 ## <a name="remarks"></a>コメント  
  このメソッドはスレッド セーフであるの他のインスタンスと同時に使用しないで<xref:System.Threading.Tasks.TaskScheduler>です。 デバッガーには、他のすべてのスレッドが中断されている場合にのみ、デバッガーから呼び出すことはできます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [TaskScheduler クラス](../../extensibility/debugger/taskscheduler-class-internal-members.md)

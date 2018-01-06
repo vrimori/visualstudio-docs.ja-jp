@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 68773435bc35a93ab49189306db532c68e2b8dad
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: eee0e88b23a26ae7a89005ff304b565dd3d84c34
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-which-files-are-published-by-clickonce"></a>方法: ClickOnce で発行されるファイルを指定する
 発行するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]プロジェクト内のアプリケーション、コード以外のすべてのファイルは、アプリケーションと共に展開されます。 場合によっては、する可能性がありますいないか、特定のファイルを発行する必要がありますかを条件に基づく特定のファイルをインストールすることがあります。 Visual Studio では、ファイルを除外する、ファイルをデータ ファイルや、前提条件としてマーク、および条件付きでインストールするファイルのグループを作成する機能を提供します。  
@@ -115,6 +116,6 @@ ms.lasthandoff: 10/27/2017
     > [!NOTE]
     >  変更することはできません、**ダウンロード グループ**アプリケーションを実行するために必要なファイルです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
  [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

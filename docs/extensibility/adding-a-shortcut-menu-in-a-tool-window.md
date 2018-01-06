@@ -17,11 +17,12 @@ caps.latest.revision: "37"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 81e944d73ae45de1a786a6df27652949a38eec81
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4f90f5971a101b54aae1cd968d5d5dad67caec74
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-a-shortcut-menu-in-a-tool-window"></a>ツール ウィンドウのショートカット メニューを追加します。
 このチュートリアルでは、ツール ウィンドウのショートカット メニューを配置します。 ショートカット メニューには、ユーザーは、ボタン、テキスト ボックス、またはウィンドウの背景を右クリックしたときに表示されるメニューです。 ショートカット メニューのコマンドは、その他のメニューまたはツールバーでコマンドと同様に動作します。 ショートカット メニューをサポートするために .vsct ファイルで指定し、マウスの右クリックに応答に表示します。  
@@ -279,6 +280,6 @@ ms.lasthandoff: 10/31/2017
   
 4.  ショートカット メニューの の色をクリックします。 ツール ウィンドウの背景色は、選択した色を変更する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コマンド、メニューのおよびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)   
  [サービスの使用と提供](../extensibility/using-and-providing-services.md)

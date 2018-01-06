@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0b262bea021413d1108050d4becfdbb8f8d7ae31
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8b6809f3238c4d239d6d07f0df35d9b4a035d945
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-missing-objects-due-to-misconfigured-pipeline"></a>チュートリアル: ピクセル シェーディングによるオブジェクトの不足
 このチュートリアルでは、ピクセル シェーダーが設定されていないことが原因で表示されないオブジェクトを調査するために、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のグラフィックス診断ツールを使用する方法を示します。  

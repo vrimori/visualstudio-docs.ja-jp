@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: bb8c31d37bd37f4e2db8415ef1815caec0ec185a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 955e29add1990793711dd69fffbd2306ce61407d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcompatibleframeworksgt-element-clickonce-deployment"></a>&lt;compatibleFrameworks&gt;要素 (ClickOnce 配置)
 このアプリケーションをインストールして実行できる .NET Framework のバージョンを指定します。  
@@ -49,16 +50,16 @@ ms.lasthandoff: 10/27/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|`S` `upportUrl`|省略可能です。 推奨される互換性のある .NET Framework のバージョンをダウンロードできる URL を指定します。|  
+|`S` `upportUrl`|任意。 推奨される互換性のある .NET Framework のバージョンをダウンロードできる URL を指定します。|  
   
 ## <a name="framework"></a>フレームワーク  
- 必ず指定します。 次の表に、属性を`framework`要素をサポートしています。  
+ 必須。 次の表に、属性を`framework`要素をサポートしています。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`targetVersion`|必須です。 対象とする .NET Framework のバージョン番号を指定します。|  
-|`profile`|必須です。 対象とする .NET Framework のプロファイルを指定します。|  
-|`supportedRuntime`|必須です。 .NET Framework を対象に関連付けられているランタイムのバージョン番号を指定します。|  
+|`targetVersion`|必須。 対象とする .NET Framework のバージョン番号を指定します。|  
+|`profile`|必須。 対象とする .NET Framework のプロファイルを指定します。|  
+|`supportedRuntime`|必須。 .NET Framework を対象に関連付けられているランタイムのバージョン番号を指定します。|  
   
 ## <a name="remarks"></a>コメント  
   
@@ -74,5 +75,5 @@ ms.lasthandoff: 10/27/2017
 </compatibleFrameworks>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce 配置マニフェス](../deployment/clickonce-deployment-manifest.md)

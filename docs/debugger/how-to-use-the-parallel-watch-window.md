@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 160aa732568f92b7aa768146de13c41867064717
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 570f77cddede91a81dc15200ebcf02b27f1a4f2f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio"></a>Visual Studio での並列スレッド内の変数のウォッチを設定します。
 [並列ウォッチ] ウィンドウには、複数のスレッドで 1 つの式が保持している値を同時に表示できます。 各行は、1 つのアプリケーションで実行中のスレッドを表しますが、スレッドは複数の行に表示される場合があります。 具体的には、各行は関数シグネチャが現在のスタック フレーム上の関数に一致する関数呼び出しを表します。 列内の項目の並べ替え、順序変更、削除、およびグループ化を行うことができます。 スレッドのフラグ設定、フラグ解除、凍結 (中断)、および凍結解除 (再開) を実行できます。 次の列が表示されます、**並列ウォッチ**ウィンドウ。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/31/2017
   
 1.  コード内にブレークポイントを設定します。  
   
-2.  メニュー バーで、次のように選択します。**デバッグ**、**デバッグの開始**です。 アプリケーションがブレークポイントに到達するを待機します。  
+2.  メニュー バーで、**[デバッグ]**、**[デバッグ開始]** の順に選択します。 アプリケーションがブレークポイントに到達するを待機します。  
   
 3.  メニュー バーで、次のように選択します。**デバッグ**、 **Windows**、**並列ウォッチ**、[ウォッチ] ウィンドウを選択します。 最大で 4 つのウィンドウを開くことができます。  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 10/31/2017
   
 -   ブール式を入力、**ブール式でフィルター**ボックス。 デバッガーは、スレッド コンテキストの式を評価します。 値が `true` である行だけが表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マルチ スレッド アプリケーションをデバッグします。](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [方法: GPU スレッド ウィンドウを使用します。](../debugger/how-to-use-the-gpu-threads-window.md)   
  [チュートリアル: C++ AMP アプリケーションのデバッグ](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)

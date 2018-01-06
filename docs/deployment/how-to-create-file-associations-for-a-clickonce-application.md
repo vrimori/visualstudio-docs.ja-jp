@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 491de73e97bf44ea54d5ccdfb604924ff26c9530
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: c6d0a2c0912b98995bb6d933766a46f4ebc527a4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-file-associations-for-a-clickonce-application"></a>方法 : ClickOnce アプリケーションのファイルの関連付けを作成する
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションでく 1 つまたは複数のファイル名拡張子に関連付けられているように、ユーザーの種類のファイルを開くときに、アプリケーションを自動的に開始されます。 ファイル名拡張子のサポートを追加する、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは簡単です。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/27/2017
   
      詳細については、次を参照してください[Mage.exe (マニフェスト生成および編集ツール)。](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [\<fileAssociation > 要素](../deployment/fileassociation-element-clickonce-application.md)   
  [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)   
  [Mage.exe (マニフェストの生成および編集ツール)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)

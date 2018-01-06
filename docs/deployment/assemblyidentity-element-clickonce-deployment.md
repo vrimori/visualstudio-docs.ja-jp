@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 26debb7d29458ab6452a2063e8e5c7e2f43fa7d0
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 51643b8db91c9f8c2961b319d47cdfb7789f6a4d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltassemblyidentitygt-element-clickonce-deployment"></a>&lt;assemblyIdentity&gt;要素 (ClickOnce 配置)
 プライマリ アセンブリを識別、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。  
@@ -45,11 +46,11 @@ ms.lasthandoff: 10/27/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|`name`|必須です。 情報提供を目的の配置の人間が判読できる名前を指定します。<br /><br /> 場合`name`の特殊文字が含まれています、一重引用符または二重引用符など、アプリケーションがアクティブ化に失敗可能性があります。|  
-|`version`|必須です。 次の形式で、アセンブリのバージョン番号を指定します:`major.minor.build.revision`です。<br /><br /> この値は、アプリケーションの更新をトリガーする、更新したマニフェストの増加する必要があります。|  
-|`publicKeyToken`|必須です。 配置マニフェストに署名する公開キーの sha-1 ハッシュ値の最後の 8 バイトを表す 16 文字の 16 進文字列を指定します。 署名に使用する公開キーは 2048 ビットである必要がありますか値を超えています。<br /><br /> アセンブリに署名する推奨であり、省略可能なこの属性が必要です。 アセンブリが署名付きでない場合は、自己署名されたアセンブリから値をコピーするか、「ダミー」値がすべてゼロを使用する必要があります。|  
-|`processorArchitecture`|必須です。 プロセッサを指定します。 有効な値は`msil`すべてのプロセッサに対して`x86`32 ビット Windows の`IA64`64 ビット windows の場合と`Itanium`Intel 64 ビット Itanium プロセッサ用です。|  
-|`type`|必須です。 Windows サイド バイ サイド インストール テクノロジとの互換性を維持します。 許可されている値だけ`win32`です。|  
+|`name`|必須。 情報提供を目的の配置の人間が判読できる名前を指定します。<br /><br /> 場合`name`の特殊文字が含まれています、一重引用符または二重引用符など、アプリケーションがアクティブ化に失敗可能性があります。|  
+|`version`|必須。 次の形式で、アセンブリのバージョン番号を指定します:`major.minor.build.revision`です。<br /><br /> この値は、アプリケーションの更新をトリガーする、更新したマニフェストの増加する必要があります。|  
+|`publicKeyToken`|必須。 配置マニフェストに署名する公開キーの sha-1 ハッシュ値の最後の 8 バイトを表す 16 文字の 16 進文字列を指定します。 署名に使用する公開キーは 2048 ビットである必要がありますか値を超えています。<br /><br /> アセンブリに署名する推奨であり、省略可能なこの属性が必要です。 アセンブリが署名付きでない場合は、自己署名されたアセンブリから値をコピーするか、「ダミー」値がすべてゼロを使用する必要があります。|  
+|`processorArchitecture`|必須。 プロセッサを指定します。 有効な値は`msil`すべてのプロセッサに対して`x86`32 ビット Windows の`IA64`64 ビット windows の場合と`Itanium`Intel 64 ビット Itanium プロセッサ用です。|  
+|`type`|必須。 Windows サイド バイ サイド インストール テクノロジとの互換性を維持します。 許可されている値だけ`win32`です。|  
   
 ## <a name="remarks"></a>コメント  
   
@@ -67,6 +68,6 @@ ms.lasthandoff: 10/27/2017
   xmlns="urn:schemas-microsoft-com:asm.v1" />  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)   
  [\<assemblyIdentity > 要素](../deployment/assemblyidentity-element-clickonce-application.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9099d652012fb8b45b7b79f9c620f4102e7af602
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e406bc0cd5d7e4cb082e1f5e34fa6645538d02ca
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-implementing-a-source-control-plug-in"></a>ソース管理プラグインを実装するためのベスト プラクティス
 次の技術的な詳細を使用して、ソース管理のプラグインを確実に実装できる[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
@@ -60,6 +61,6 @@ ms.lasthandoff: 10/31/2017
   
  最もユーザー構成可能なオプションの設定は、ソース管理プラグインの間で大きく異なるため、この方法で定義されていません。そのため、推奨される機構、**詳細**ボタンをクリックします。 インスタンスで、**取得**ダイアログ ボックスで、IDE を表示情報のみを認識するが、表示することも、 **[詳細設定]**プラグインがこのコマンドのオプション ボタンをクリックします。 ユーザーがクリックしたとき、 **[詳細設定]**  ボタン、IDE の呼び出し、 [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md)ビットフラグまたは日付/時刻などの情報をユーザーに確認するプラグインのソース管理を有効にします。 プラグインに戻る時に渡される構造体でこの情報を返します、`SccGet`コマンド。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)   
  [ソース管理プラグインの作成](../extensibility/internals/creating-a-source-control-plug-in.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: db313077fa7903b2bdb2fbbe6b76aa80c940fecd
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: b731522897512300459a32f8e01c4d54277eaa5b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltassemblyidentitygt-element-clickonce-application"></a>&lt;assemblyIdentity&gt;要素 (ClickOnce アプリケーション)
 展開されているアプリケーションを識別、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開します。  
@@ -45,13 +46,13 @@ ms.lasthandoff: 10/27/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Name`|必須です。 アプリケーションの名前を識別します。<br /><br /> 場合`Name`の特殊文字が含まれています、一重引用符または二重引用符など、アプリケーションがアクティブ化に失敗可能性があります。|  
-|`Version`|必須です。 次の形式で、アプリケーションのバージョン番号を指定します。`major.minor.build.revision`|  
-|`publicKeyToken`|省略可能です。 最後の 8 バイトを表す 16 文字の 16 進文字列を指定、`SHA-1`アプリケーションまたはアセンブリが署名に使用された公開キーのハッシュ値。 カタログに署名するために使用する公開キーは 2048 ビットである必要がありますか値を超えています。<br /><br /> アセンブリに署名する推奨であり、省略可能なこの属性が必要です。 アセンブリが署名付きでない場合は、自己署名されたアセンブリから値をコピーするか、「ダミー」値がすべてゼロを使用する必要があります。|  
-|`processorArchitecture`|必須です。 プロセッサを指定します。 有効な値は`msil`すべてのプロセッサに対して`x86`32 ビット Windows の`IA64`64 ビット windows の場合と`Itanium`Intel 64 ビット Itanium プロセッサ用です。|  
-|`language`|必須です。 2 部構成の言語コードを識別する (たとえば、 `en-US`) アセンブリのです。 この要素は、`asmv2`名前空間。 値を指定しない場合、既定値は`neutral`します。|  
+|`Name`|必須。 アプリケーションの名前を識別します。<br /><br /> 場合`Name`の特殊文字が含まれています、一重引用符または二重引用符など、アプリケーションがアクティブ化に失敗可能性があります。|  
+|`Version`|必須。 次の形式で、アプリケーションのバージョン番号を指定します。`major.minor.build.revision`|  
+|`publicKeyToken`|任意。 最後の 8 バイトを表す 16 文字の 16 進文字列を指定、`SHA-1`アプリケーションまたはアセンブリが署名に使用された公開キーのハッシュ値。 カタログに署名するために使用する公開キーは 2048 ビットである必要がありますか値を超えています。<br /><br /> アセンブリに署名する推奨であり、省略可能なこの属性が必要です。 アセンブリが署名付きでない場合は、自己署名されたアセンブリから値をコピーするか、「ダミー」値がすべてゼロを使用する必要があります。|  
+|`processorArchitecture`|必須。 プロセッサを指定します。 有効な値は`msil`すべてのプロセッサに対して`x86`32 ビット Windows の`IA64`64 ビット windows の場合と`Itanium`Intel 64 ビット Itanium プロセッサ用です。|  
+|`language`|必須。 2 部構成の言語コードを識別する (たとえば、 `en-US`) アセンブリのです。 この要素は、`asmv2`名前空間。 値を指定しない場合、既定値は`neutral`します。|  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ### <a name="description"></a>説明  
  次のコード例を示しています、`assemblyIdentity`内の要素、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 このコード例に示されている例の一部である[ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)です。  
@@ -68,6 +69,6 @@ ms.lasthandoff: 10/27/2017
   type="win32" />  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)   
  [\<assemblyIdentity > 要素](../deployment/assemblyidentity-element-clickonce-deployment.md)

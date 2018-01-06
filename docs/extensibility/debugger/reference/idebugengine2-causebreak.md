@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: eeb8c262d6e1abc88e40f027d921ae2d4ae12cf2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c6fc6558ded5ab68f54170c07e2482ab2357475b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugengine2causebreak"></a>IDebugEngine2::CauseBreak
 要求のすべてのプログラムによってこのデバッグ エンジン、次回の実行を停止するには、(DE) デバッグ中のスレッドの 1 つ実行されます。  
@@ -41,6 +42,6 @@ int CauseBreak();
 ## <a name="remarks"></a>コメント  
  このメソッドは非同期: [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md)イベントは、次に、プログラムはこのメソッドが呼び出された後に実行しようとしたときに送信します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)   
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

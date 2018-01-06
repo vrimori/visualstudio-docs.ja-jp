@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6ed417d9f63a90d539d104fb209b58703d10ccef
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4cc64270cabb3e30ee3c13a1617222349e7b3677
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="parallel-extension-internals-for-the-net-framework"></a>.NET Framework の並列拡張機能の内部
 このセクションでは、内部の型、メソッドをについて説明し、できるようにするクラスのフィールドは、.NET framework の並列拡張機能のカスタムのデバッガーを実装します。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/31/2017
  [AsyncVoidMethodBuilder 構造体](../../extensibility/debugger/asyncvoidmethodbuilder-structure-internal-members.md)  
  内部メンバーを示します、<xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder>構造体。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:System.Threading.Tasks.Task?displayProperty=fullName>   
  <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName>   
  [Visual Studio デバッガー拡張機能](../../extensibility/debugger/visual-studio-debugger-extensibility.md)   

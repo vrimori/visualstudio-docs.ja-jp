@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ed010734ec09af01c4a7abe6f8ceab0a93fdb482
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 695c35e6d849806911aaf9cb293b53e66dbbca0e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugenumfieldgetstringfromvalue"></a>IDebugEnumField::GetStringFromValue
 このメソッドは、その値を指定する列挙定数の名前を取得します。  
@@ -52,5 +53,5 @@ int GetStringFromValue(
 ## <a name="remarks"></a>コメント  
  複数の名前が同じ値に関連付けられている場合は、列挙体の定義名が返されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 469024d48b1c145210aa518f10647d04315a0471
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 5281d53f213d2cb09f470484ddca2fbaa8cb4601
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpackagegt-element-bootstrapper"></a>&lt;パッケージ&gt;要素 (ブートス トラップ)
 `Package`要素は、パッケージ ファイル内で最上位の XML 要素です。  
@@ -147,9 +148,9 @@ ms.lasthandoff: 10/27/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Culture`|必須です。 このパッケージは、使用する言語を特定のカルチャを定義します。 この属性はキーに、`Strings`要素は、インストール中に製品名とエラー メッセージ用のカルチャに固有の文字列を一覧表示します。|  
-|`Name`|必須です。 などのツールで開発者に表示されるパッケージの名前[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 この属性はキーに、`Strings`要素が含まれている、`String`を持つ要素、`Name`と`Culture`プロパティが一致するように設定、`Name`と`Culture`のプロパティ`Package`です。|  
-|`LicenseAgreement`|省略可能です。 ライセンス契約 (EULA) を含む配布パッケージで、ファイルの名前を指定します。  このファイルは、プレーン テキスト (.txt) またはリッチ テキスト形式のいずれかにできます。 式 (.rtf)|  
+|`Culture`|必須。 このパッケージは、使用する言語を特定のカルチャを定義します。 この属性はキーに、`Strings`要素は、インストール中に製品名とエラー メッセージ用のカルチャに固有の文字列を一覧表示します。|  
+|`Name`|必須。 などのツールで開発者に表示されるパッケージの名前[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 この属性はキーに、`Strings`要素が含まれている、`String`を持つ要素、`Name`と`Culture`プロパティが一致するように設定、`Name`と`Culture`のプロパティ`Package`です。|  
+|`LicenseAgreement`|任意。 ライセンス契約 (EULA) を含む配布パッケージで、ファイルの名前を指定します。  このファイルは、プレーン テキスト (.txt) またはリッチ テキスト形式のいずれかにできます。 式 (.rtf)|  
   
 ## <a name="example"></a>例  
  次のコード例は、再配布するための完全なパッケージ ファイルを示しています、[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]です。  
@@ -189,5 +190,5 @@ ms.lasthandoff: 10/27/2017
 </Package>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [製品およびパッケージ スキーマ リファレンス](../deployment/product-and-package-schema-reference.md)

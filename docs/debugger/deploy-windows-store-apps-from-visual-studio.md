@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d411a65e3882ed85bb3c100e8f7705623a7ce91f
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: uwp
+ms.openlocfilehash: 359431356bb06a04857b93e10996a2123c80f129
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>Visual Studio からの UWP アプリを配置します。
 ![Windows にのみ適用されます](../debugger/media/windows_only_content.png "windows_only_content")  
@@ -115,6 +116,6 @@ Windows 10 のリモート デバイスを有効にする必要があります[�
   
 -   JavaScript およびデバッグ プロパティ ページで、 **[アプリケーションの起動]** の値を **[はい]**に設定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インストールされているアプリ パッケージをデバッグ](../debugger/debug-installed-app-package.md)です。   
  [Visual Studio からアプリを実行します。](../debugger/run-store-apps-from-visual-studio.md)

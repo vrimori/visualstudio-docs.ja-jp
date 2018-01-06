@@ -25,11 +25,12 @@ caps.latest.revision: "30"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e925ab0f989a0d817ce7aaa7ca1d15171555f27e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 54fb069f5328dd9bc7cabab16c0688109312dfd1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue"></a>方法 : エディット コンティニュの中断モード時に編集を適用する
 エディット コンティニュを使用すると、中断モードでコードを編集した後、コードを停止したり再起動したりせずにデバッグを継続できます。  
@@ -42,11 +43,11 @@ ms.lasthandoff: 10/31/2017
   
     -   選択し、コードにブレークポイントを設定**デバッグの開始**から、**デバッグ**メニューとアプリケーション、ブレークポイントにヒットするを待っています。  
   
-         または  
+         - または -  
   
     -   デバッグを開始し、**すべて中断**から、**デバッグ**メニュー。  
   
-         または  
+         - または -  
   
     -   例外が発生するときに選択**編集を有効にする**上、**例外処理アシスタント**です。  
   
@@ -61,6 +62,6 @@ ms.lasthandoff: 10/31/2017
   
      適用した編集がプロジェクトに取り込まれた状態でコードが実行されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サポートされているコード変更 (c# および Visual Basic](../debugger/supported-code-changes-csharp.md)   
  [エディット コンティニュ (Visual Basic)](../debugger/edit-and-continue-visual-basic.md)

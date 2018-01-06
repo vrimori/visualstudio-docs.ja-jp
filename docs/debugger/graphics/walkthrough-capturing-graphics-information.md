@@ -12,11 +12,12 @@ caps.latest.revision: "19"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 11213c60eb03626f86b51f896b6edb487c3e3394
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 990385be9d9518826f764a59529a1cff61467506
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-capturing-graphics-information"></a>チュートリアル: グラフィックス情報のキャプチャ
 このチュートリアルでは、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のグラフィックス診断を使用して、Direct3D アプリケーションから手動でグラフィックス情報をキャプチャする方法を示します。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/31/2017
   
 -   グラフィックス診断ツール バーで、 **[キャプチャ]** ボタンをクリックします。 ![グラフィックス キャプチャ ボタン アイコン](media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")  
   
-     または  
+     - または -  
   
      アプリケーションにフォーカスを置いた状態で、 **PrintScreen**キーを押します。  
   
@@ -61,5 +62,5 @@ ms.lasthandoff: 10/31/2017
   
 -   グラフィックス診断ツールを使用してキャプチャされたグラフィックス情報を解析する方法について学習します。 参照してください[概要](overview-of-visual-studio-graphics-diagnostics.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Capturing Graphics Information](capturing-graphics-information.md)

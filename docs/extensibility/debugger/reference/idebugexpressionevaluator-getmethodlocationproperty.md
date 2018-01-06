@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fa5f72d33fff87d9f20f33621d53a92ac1221533
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 612cdb579615acb7ca5b4b6a34c0c485683c4fe1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugexpressionevaluatorgetmethodlocationproperty"></a>IDebugExpressionEvaluator::GetMethodLocationProperty
 このメソッドは、メモリ アドレスに、メソッドの場所とオフセットを変換します。  
@@ -69,7 +70,7 @@ int GetMethodLocationProperty(
   
  名前に関係なく`upstrFullyQualifiedMethodPlusOffset`、部分修飾メソッド名をこのパラメーターに渡すことができます。 その場合は、選択した方法であるを囲む`pAddress`です。 このパラメーターを解釈する方法は、式エバリュエーターとサポートする言語の実装によって異なります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
