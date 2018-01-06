@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 29b284e466ce751e86f488203b4b22c0c18c6573
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8ad08fd9800fdc197d4218fa55c83487e132f25d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaframedataexecute"></a>IDiaFrameData::execute
 スタック アンワインドを実行し、スタック ウォーク フレーム インターフェイスで結果を返します。  
@@ -38,7 +39,7 @@ HRESULT execute (
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 次の表は、このメソッドの戻り値を示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |E_DIA_INPROLOG|プロローグ コードの中にスタック フレームを実行できません。|  
 |E_DIA_SYNTAX|フレームのプログラムで発生したエラーを解析します。|  
@@ -48,6 +49,6 @@ HRESULT execute (
 ## <a name="remarks"></a>コメント  
  このメソッドは、スタックをアンワインドするデバッグ中に呼び出されます。 [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)オブジェクトは、レジスタに更新プログラムを受信しで使用されるメソッドを提供するクライアント アプリケーションによって実装される、`execute`メソッドです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)   
  [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

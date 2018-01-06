@@ -262,11 +262,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 11ad6bea31523474bb5b07aaad4be63de5741830
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 4f08a53f5af8342387ce5b523e29e007de3a0524
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>マネージ コードのコード分析警告 (CheckId 別)
 次の表に、マネージ コードのコード分析警告を警告の CheckId 識別子別に示します。  
@@ -359,7 +360,7 @@ ms.lasthandoff: 10/31/2017
 |CA1410|[CA1410: COM 登録メソッドは一致しなければなりません](../code-quality/ca1410-com-registration-methods-should-be-matched.md)|System.Runtime.InteropServices.ComRegisterFunctionAttribute 属性でマークされたメソッドが型で宣言されていますが、System.Runtime.InteropServices.ComUnregisterFunctionAttribute 属性でマークされたメソッドが宣言されていません。またはその逆の状態になっています。|  
 |CA1411|[CA1411: COM 登録メソッドは参照可能であることはできません](../code-quality/ca1411-com-registration-methods-should-not-be-visible.md)|System.Runtime.InteropServices.ComRegisterFunctionAttribute 属性または System.Runtime.InteropServices.ComUnregisterFunctionAttribute 属性でマークされたメソッドが外部から参照できます。|  
 |CA1412|[CA1412: ComSource インターフェイスを IDispatch として設定します](../code-quality/ca1412-mark-comsource-interfaces-as-idispatch.md)|型が System.Runtime.InteropServices.ComSourceInterfacesAttribute 属性によってマークされていますが、1 つ以上の指定されたインターフェイスが ComInterfaceType.InterfaceIsIDispatch に設定された System.Runtime.InteropServices.InterfaceTypeAttribute 属性によってマークされていません。|  
-|CA1413|[CA1413: Com 参照可能な値型ではパブリックでないフィールドを使用しません](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)|COM から参照できる値型の非パブリック インスタンス フィールドは、COM クライアントで表示できます。 フィールドの内容を調べて、公開するべきではない情報や、設計またはセキュリティに意図しない影響を及ぼす情報が含まれていないかどうかを確認してください。|  
+|CA1413|[CA1413: Com 参照可能な値型ではパブリックでないフィールドを使用しません](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)|COM から参照できる値型の非パブリック インスタンス フィールドは、COM クライアントで表示できます。 フィールドの内容をレビューして、公開するべきではない情報や、設計またはセキュリティに意図しない影響を及ぼす情報が含まれていないかどうかを確認してください。|  
 |CA1414|[Ca 1414: ブール型の P/invoke 引数を marshalas に設定します](../code-quality/ca1414-mark-boolean-p-invoke-arguments-with-marshalas.md)|Boolean データ型は、アンマネージ コードの複数の表現を持っています。|  
 |CA1415|[Ca 1415: P/invoke 正しく宣言します。](../code-quality/ca1415-declare-p-invokes-correctly.md)|この規則では、OVERLAPPED 構造体パラメーターへのポインターを持ち、対応するマネージ型パラメーターが System.Threading.NativeOverlapped 構造体へのポインターではない [!INCLUDE[TLA2#tla_win32](../code-quality/includes/tla2sharptla_win32_md.md)] 関数に対するオペレーティング システム呼び出しメソッド宣言が対象になります。|  
 |CA1500|[CA1500: 変数名はフィールド名と同一にすることはできません](../code-quality/ca1500-variable-names-should-not-match-field-names.md)|インスタンスのメソッドで、宣言する型のインスタンス フィールドと名前が一致するパラメーターまたはローカル変数が宣言されていると、エラーの原因となります。|  
@@ -478,7 +479,7 @@ ms.lasthandoff: 10/31/2017
 |CA2210|[CA2210: アセンブリには有効な厳密な名前が必要です](../code-quality/ca2210-assemblies-should-have-valid-strong-names.md)|厳密な名前によって、改ざんされたアセンブリを、クライアントが無意識のうちに読み込む問題を防ぐことができます。 厳密な名前のないアセンブリが配置される状況は、限定されます。 適切に署名されていないアセンブリを共有または配布すると、アセンブリが改ざんされる場合、共通言語ランタイムでアセンブリを読み込むことができない場合、またはユーザーのコンピューターで検証を無効にする必要がある場合などの問題が考えられます。|  
 |CA2211|[CA2211: 非定数フィールドは表示されません](../code-quality/ca2211-non-constant-fields-should-not-be-visible.md)|定数でも読み取り専用でもない静的フィールドは、スレッド セーフではありません。 このようなフィールドへのアクセスは、慎重に制御してください。また、クラス オブジェクトへのアクセスを同期するには、高度なプログラミング技術が必要です。|  
 |CA2212|[CA2212: サービス コンポーネントを WebMethod に設定しません](../code-quality/ca2212-do-not-mark-serviced-components-with-webmethod.md)|System.EnterpriseServices.ServicedComponent から継承された型のメソッドが、System.Web.Services.WebMethodAttribute でマークされています。 WebMethodAttribute と ServicedComponent メソッドは、コンテキストおよびトランザクション フローの動作および要件が衝突するため、状況によっては正常に動作しません。|  
-|CA2213|[CA2213: 破棄可能なフィールドは破棄されなければなりません](../code-quality/ca2213-disposable-fields-should-be-disposed.md)|System.IDisposable を実装する型が、IDisposable も実装する型を持つフィールドを宣言しています。 このフィールドの Dispose メソッドは、宣言している型の Dispose メソッドから呼び出されていません。|  
+|CA2213|[CA2213: 破棄可能なフィールドは破棄されなければなりません](../code-quality/ca2213-disposable-fields-should-be-disposed.md)|System.IDisposable を実装する型が、IDisposable も実装する型を持つフィールドを宣言しています。 このフィールドの Dispose メソッドは、宣言する型の Dispose メソッドから呼び出されていません。|  
 |CA2214|[CA2214: コンストラクターのオーバーライド可能なメソッドを呼び出しません](../code-quality/ca2214-do-not-call-overridable-methods-in-constructors.md)|コンストラクターから仮想メソッドを呼び出すと、メソッドを呼び出すインスタンスのコンストラクターが実行されないことがあります。|  
 |CA2215|[CA2215: Dispose メソッドから基本クラスの破棄を呼び出します](../code-quality/ca2215-dispose-methods-should-call-base-class-dispose.md)|型が、破棄できる型から継承している場合、使用している Dispose メソッド内から基本型の Dispose メソッドを呼び出す必要があります。|  
 |CA2216|[CA2216: 破棄できる型ではファイナライザーを宣言します](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)|System.IDisposable を実装し、アンマネージ リソースの使用を提案するフィールドが含まれる型が、Object.Finalize で記述されているようにファイナライザーを実装していません。|  

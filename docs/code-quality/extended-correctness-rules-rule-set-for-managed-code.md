@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 68524053107052094d53b21cac93fbbc053881dd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 498b3b3eced8e21cb2079715a0bd6c2375eb8dfe
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extended-correctness-rules-rule-set-for-managed-code"></a>マネージ コードの "拡張正確性規則" 規則セット
 Microsoft 拡張正確性規則の規則セットは、ロジック エラーやフレームワーク使用エラー コード分析によって報告されるを最大化します。 COM 相互運用性とモバイル アプリケーションなどの特定のシナリオに重点が置かれています。 この規則セットは、プロジェクトまたはプロジェクトで他の問題を検索するこれらのシナリオのいずれかが適用される場合を含むを検討する必要があります。  

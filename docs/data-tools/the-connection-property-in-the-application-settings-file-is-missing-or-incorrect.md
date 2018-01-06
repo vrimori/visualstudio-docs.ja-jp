@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: d91ff5c65b1d2e43b3e1ee1d1314c252daeeb276
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 7b18e64c01c8540b3f3188c06eae7286cf5f3647
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-connection-property-in-the-application-settings-file-is-missing-or-incorrect"></a>アプリケーション設定ファイルの接続プロパティが、存在しないか、正しくありません
 アプリケーション設定ファイルの接続プロパティが、存在しないか、正しくありません。 .dbml ファイルの接続文字列が代わりに使用されます。  
@@ -25,8 +26,8 @@ ms.lasthandoff: 11/09/2017
   
 ### <a name="to-respond-to-this-message"></a>対処方法  
   
--   **[OK]** をクリックします。 .dbml ファイルに含まれている接続情報がアプリケーション設定に追加されます。  
+-   **[OK]**をクリックします。 .dbml ファイルに含まれている接続情報がアプリケーション設定に追加されます。  
   
 ## <a name="see-also"></a>関連項目
-[O/R デザイナー メッセージ](../data-tools/o-r-designer-messages.md)  
+[O/R デザイナーのメッセージ](../data-tools/o-r-designer-messages.md)  
 [Visual Studio での LINQ to SQL ツールします。](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

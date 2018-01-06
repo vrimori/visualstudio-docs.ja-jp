@@ -12,11 +12,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d1c6ac08b47bd5ad5e6dd84bbf78496c421a21a6
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: 196bfdbeeda00199861ea2f676553f024fcaf98f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-sal"></a>SAL について
 Microsoft ソース コード注釈言語 (SAL) は、そのパラメーターとそれが、それらについている前提条件と、それが完了したら、保証の関数の使用について説明するに使用できる注釈のセットを提供します。 注釈はヘッダー ファイルで定義されている`<sal.h>`です。 C++ 用の visual Studio コード分析では、SAL 注釈を使用して、関数の分析を変更します。 SAL 2.0 の Windows のドライバーの開発の詳細については、次を参照してください。 [SAL 2.0 注釈の Windows ドライバー](http://go.microsoft.com/fwlink/?LinkId=250979)です。  
@@ -107,7 +108,7 @@ wchar_t * wmemcpy(
 ## <a name="sal-examples"></a>SAL の例  
  このセクションでは、基本の SAL 注釈のコード例を示します。  
   
-### <a name="using-the-visual-studio-code-analysis-tool-to-find-defects"></a>Visual Studio のコード分析ツールを使用して問題を検出する  
+### <a name="using-the-visual-studio-code-analysis-tool-to-find-defects"></a>Visual Studio Code 分析ツールを使用して問題を検出する  
  例では、コードの欠陥を見つけるには、Visual Studio コード分析ツールを SAL 注釈と共に使用します。 実行する方法を次に示します。  
   
 ##### <a name="to-use-visual-studio-code-analysis-tools-and-sal"></a>Visual Studio のコード分析ツールと SAL を使用するには  
@@ -411,7 +412,7 @@ bool GetValue(_Out_ int *pInt, bool flag)
 ## <a name="related-resources"></a>関連資料  
  [コード分析チームのブログ](http://go.microsoft.com/fwlink/p/?LinkId=251197)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [C/C++ コード障害を減らす SAL 注釈の使用](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [関数パラメーターおよび戻り値の注釈を付ける](../code-quality/annotating-function-parameters-and-return-values.md)   
  [関数の動作に注釈を付ける](../code-quality/annotating-function-behavior.md)   

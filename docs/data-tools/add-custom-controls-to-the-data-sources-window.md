@@ -20,11 +20,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: d1efd7051d9119c4d0e6643c1d42e78d9cdde7cf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: ffa55100e9bbec33fdbca19ab2757c4de63f5030
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-custom-controls-to-the-data-sources-window"></a>[データ ソース] ウィンドウにカスタム コントロールを追加する
 項目をドラッグすると、**データソース**データ バインド コントロールを作成するデザイン サーフェイスにウィンドウを作成するコントロールの種類を選択することができます。 ウィンドウ内の各項目から選択できるコントロールを表示するドロップダウン リストがあります。 各アイテムに関連付けられたコントロールのセットは、アイテムのデータ型によって決定されます。 作成するコントロールが一覧に表示されない場合、コントロールをリストに追加するのには、このトピックの手順に従うことができます。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]
     >  を選択するコントロールが表示されないかどうか、**関連付けられているコントロール**ボックス、一覧に、コントロールを追加する必要があります。 詳細については、次を参照してください。[コントロールのデータ型一覧の関連付けられたコントロールを追加する](#addingcontrols)です。  
   
-6.  **[OK]** をクリックします。  
+6.  **[OK]**をクリックします。  
   
 7.  **データソース**ウィンドウで、データの項目が 1 つまたは複数のコントロールをだけ関連付けられている入力し、項目のドロップダウン メニューをクリックします。  
   
@@ -90,5 +91,5 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]
     >  現在のソリューションまたは参照先アセンブリ内に存在する唯一のコントロールは、関連付けられたコントロールの一覧に追加できます。 (コントロール必要がありますも実装データ バインディング属性の 1 つ前の表にします。)データでは使用できませんをカスタム コントロールをバインドする、**データ ソース** ウィンドウからコントロールをドラッグ、**ツールボックス**からバインド先の項目をドラッグ、デザイン画面上に、**データソース**ウィンドウからコントロールにします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)

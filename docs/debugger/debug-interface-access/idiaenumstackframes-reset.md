@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fb92e02eb48f46508a3bcca4286d1f5eb39381dc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 44ef1f1d77545a2bd38a9bb132ff971c6b02a9da
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaenumstackframesreset"></a>IDiaEnumStackFrames::Reset
 列挙のシーケンスを最初にリセットします。  
@@ -32,5 +33,5 @@ HRESULT Reset();
 ## <a name="return-value"></a>戻り値  
  `S_OK` を返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "45"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: eba5a9f55e5d3d08eee48dc083a7e2f848118162
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 42c5f99b3bf5ba95bc279cd5e117745ccc8e02c3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rename-refactoring-c"></a>名前の変更リファクタリング (C#)
 **名前を変更**フィールド、ローカル変数、メソッド、名前空間、プロパティ、および種類などのコードのシンボルの識別子の名前を変更する簡単な方法を提供する Visual Studio 統合開発環境 (IDE) のリファクタリング機能です。 **名前を変更**コメントや文字列で名前を変更して、宣言と識別子の呼び出しを変更するために使用できます。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/31/2017
   
  名前の変更リファクタリングは、次の Visual Studio の機能から入手できます。  
   
-|特性|IDE でのリファクタリングの動作|  
+|機能|IDE でのリファクタリングの動作|  
 |-------------|----------------------------------------|  
 |コード エディター|コード エディターでは、特定の種類のコードのシンボルにカーソルを配置するときに使用可能な名前の変更リファクタリングです。 この位置にカーソルがある場合を呼び出すことができます、**の名前を変更**コマンドのキーボード ショートカット (Ctrl + R、Ctrl + R) を入力するかを選択して、**の名前を変更**クイック アクション、ショートカット メニューからコマンド、または**リファクター**メニュー。|  
 |クラス ビュー|クラス ビューで識別子を選択する場合は、ショートカット メニューから使用可能な名前の変更リファクタリングと**リファクター**メニュー。|  
@@ -84,7 +85,7 @@ ms.lasthandoff: 10/31/2017
   
 5.  選択、**コメント内の検索**チェック ボックスをオンします。  
   
-6.  **[OK]** をクリックします。  
+6.  **[OK]**をクリックします。  
   
 7.  **変更のプレビュー**ダイアログ ボックスで、をクリックして**適用**です。  
   
@@ -118,7 +119,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  キーボード ショートカット**shift キーを押しながら Alt キーを押しながら F10**クイック アクション メニューを表示します。  
   
-     または  
+     - または -  
   
      クイック アクション メニューを表示する電球の横にある黒い三角形をクリックします。  
   
@@ -162,6 +163,6 @@ var orderIDs =
   
  上記のコードでは、名前を変更する`ID`の 1 つのインスタンスの名前を変更のみが`ID`ため`companyIDs`と`orderIDs`は同じプロパティがありません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リファクタリング (C#)](refactoring-csharp.md)   
  [匿名型](/dotnet/csharp/programming-guide/classes-and-structs/anonymous-types)

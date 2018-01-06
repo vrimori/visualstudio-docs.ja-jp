@@ -17,11 +17,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 7f538c51bd5f15f91dfae0d13a9dae8cf4f8afb1
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 8e599e1d309ab254c2b2d5a3a490c0cd912b8823
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="database-projects-and-data-tier-applications-in-visual-studio"></a>データベース プロジェクトと Visual Studio でのデータ層アプリケーション  
 データベース プロジェクトを使用するには、新しいデータベースを作成する新しいデータ層アプリケーション (Dac) と既存のデータベースとデータ層アプリケーションを更新します。 データベース プロジェクトと DAC プロジェクトの両方と同じようマネージ コードまたはネイティブ コードには、これらの方法を適用することで、データベース開発作業をバージョン コントロールおよびプロジェクトの管理手法を適用することを有効にします。 開発チームを作成してデータベースとデータベース サーバーに変更を管理することができます、 *DAC プロジェクト*、*データベース プロジェクト*、または*サーバー プロジェクト*およびそのバージョン管理します。 チームのメンバーがファイルをチェック アウトを作成、ビルド、およびで変更をテストする*分離開発環境*、またはチームと共有する前に、サンド ボックス。 コード品質を確保するためには、チームが完了し、実稼働環境に変更を配置する前に、ステージング環境で、データベースの特定のリリースのすべての変更をテストできます。  

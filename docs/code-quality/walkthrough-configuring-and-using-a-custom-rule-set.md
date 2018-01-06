@@ -15,11 +15,12 @@ caps.latest.revision: "40"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 28f572ff80888f9d207c9ade9042414127abb154
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 054cf016dba69561591ad6bc8b18029272e85d8f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-configuring-and-using-a-custom-rule-set"></a>チュートリアル: カスタム規則セットの構成と使用
 このチュートリアルは、カスタマイズされたを使用するように構成されているコード分析ツールを使用する方法を示します*ルール セット*クラス ライブラリにします。 互換性に影響しない方法で解決できる問題のレガシ コードをスキャンなどの特定のニーズを満たすために別の規則のセットを選択または、ソリューションの指定したプロジェクトの種類に関連するルール セットを選択できます。 どちらの場合、規則セットは、プロジェクトの要件に微調整するもカスタマイズできます。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="prerequisites"></a>必須コンポーネント  
   
--   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、[!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、または [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
+-   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、または [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
 ## <a name="using-rule-sets-with-code-analysis"></a>コード分析による規則を使用して設定します。  
  最初に、単純なクラス ライブラリを作成します。  
@@ -152,6 +153,6 @@ ms.lasthandoff: 10/31/2017
   
 2.  エラー一覧 ウィンドウでことに注意してをクリックすると**警告**、「識別子は正しく入力されなければなりません」ルールの ca 1704 警告違反は、不要になったを参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: マネージ コード プロジェクトのコード分析を構成します。](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)   
  [コード分析規則セットの参照](../code-quality/code-analysis-rule-set-reference.md)

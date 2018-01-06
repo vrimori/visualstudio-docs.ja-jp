@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 623c700c6f9a30b6142faeb7e1b31881d0e0fe11
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f4929f892520924e34ab78dac3a9691c7d43a504
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgetrank"></a>IDiaSymbol::get_rank
 FORTRAN 多次元配列のランク (次元数) を取得します。  
@@ -44,5 +45,5 @@ HRESULT get_rank (
 ## <a name="remarks"></a>コメント  
  ランクとして、配列が宣言されている配列の次元数を指す`myarray[1,2,3]`です。 この例では、3 つおよび 3 つのディメンションのランクがあります。 ランクは、各次元の配列の配列の概念を使用する C++ には適用されません (つまり、 `myarray[1][2][3]`)。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

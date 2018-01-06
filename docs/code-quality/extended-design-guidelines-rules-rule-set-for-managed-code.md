@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cdba59674b53f82707a586aa3f94695666db695e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 78b9d5a2c2f147ade02e3123e2e5c08f130b29de
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extended-design-guidelines-rules-rule-set-for-managed-code"></a>マネージ コードの "拡張デザイン ガイドライン規則" 規則セット
 Microsoft 拡張デザイン ガイドライン規則規則セットは、報告される、使いやすさと保守容易性の問題を最大化する基本デザイン ガイドライン規則を展開します。 特に、命名に関するガイドラインに重点が置かれています。 この規則セットを保守が容易なコードを記述する最高レベルの基準を適用するか、プロジェクトにライブラリ コードが含まれている場合を検討する必要があります。  

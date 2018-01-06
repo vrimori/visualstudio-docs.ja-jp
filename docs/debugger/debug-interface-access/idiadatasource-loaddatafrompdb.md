@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4b9192484e2ac9c957bc53a2e5a5a5965fd7a46a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 01348d666b4e6a3b9333a242bb285eff44f5b7c5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiadatasourceloaddatafrompdb"></a>IDiaDataSource::loadDataFromPdb
 開き、デバッグ データ ソースとしてのプログラム データベース (.pdb) ファイルを用意します。  
@@ -38,7 +39,7 @@ HRESULT loadDataFromPdb (
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 次の表は、このメソッドの戻り値を示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |E_PDB_NOT_FOUND|開くには、ファイルが失敗したか、ファイル、無効な形式であることを確認します。|  
 |E_PDB_FORMAT|旧形式のファイルにアクセスしようとしています。|  
@@ -64,7 +65,7 @@ if (FAILED(hr))
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)   
  [Idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)   
  [Idiadatasource::loadandvalidatedatafrompdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)   

@@ -17,11 +17,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 0826d241cc1f3741a35e635bc27dff1d69ad86af
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: data-storage
+ms.openlocfilehash: ce1419882422ddc12fdb380601e908eed7e5c7ba
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configure-service-reference-dialog-box"></a>[サービス参照の構成] ダイアログ ボックス
 **サービス参照の構成**ダイアログ ボックスでは、動作を構成できます。 [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] services です。  
@@ -94,7 +95,7 @@ ms.lasthandoff: 12/12/2017
 > [!NOTE]
 >  **Web 参照の追加**ボタンは使用可能な場合にのみ、**サービス参照の構成**からダイアログ ボックスが表示されます、**サービス参照の追加 ダイアログ ボックス**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 
  [方法: Web サービスへの参照を追加](how-to-add-update-or-remove-a-wcf-data-service-reference.md)   
  [Windows Communication Foundation サービスと WCF Data Services](../data-tools/configure-service-reference-dialog-box.md)

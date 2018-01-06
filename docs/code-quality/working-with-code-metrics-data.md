@@ -15,11 +15,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 198e4b6d0ba2f3517cf907007cc544ca2e154013
-ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
+ms.workload: multiple
+ms.openlocfilehash: c259a1d303c741d4e36af46250073b0378a65f8b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-code-metrics-data"></a>コード メトリックス データの操作
 
@@ -103,7 +104,7 @@ ms.lasthandoff: 12/14/2017
 
 作成することができます、 [Visual Studio Team Services (VSTS)](/vsts/index)に基づいている作業項目になります、**コード メトリックスの結果**ウィンドウです。 Visual Studio が自動的にタイトルを入力して、作業項目の作成時に、**タイトル**下にあるフィールドとコードのメトリック データ、**履歴**タブです。
 
-VSTS の詳細については、作業項目を参照してください[作業項目](/vsts/work/work-items/index)です。
+VSTS の詳細については、作業項目を参照してください[作業項目 (VSTS)](/vsts/work/work-items/index)です。
 
 ### <a name="to-create-a-work-item-based-on-a-result"></a>結果に基づく作業項目を作成するには
 

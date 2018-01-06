@@ -18,11 +18,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: bc42474ff9cb4762b43463e5e0929f11d58ad7d0
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: afb484c1d3bfdd705c5a28f150e4631048ead49d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="edit-data-in-datasets"></a>データセット内のデータを編集します。
 任意のデータベース内のテーブル内のデータを編集するのと同様に、データ テーブル内のデータを編集します。 挿入、更新、およびテーブル内のレコードを削除すると、プロセスを含めることができます。 データ バインド フォームでは、どのフィールドがユーザーが編集できるを指定できます。 このような場合では、データ バインド インフラストラクチャは、すべての変更の追跡、変更を後で、データベースに送信できるようにを処理します。 プログラムによって、データへの編集を行うし、それらの変更をデータベースに送信する場合、オブジェクトや変更の追跡を自動的に行うメソッドを使用する必要があります。  

@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a2f77f92487f8f44aa2608f6e29eb779c9292ae8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f5b9ba8caf92e7838dfa2bb97cee94aa4a42da77
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idialoadcallback2restrictsystemrootaccess"></a>IDiaLoadCallback2::RestrictSystemRootAccess
 システムのルート ディレクトリに .pdb ファイルの検索が許可されたかどうかを判断します。  
@@ -35,5 +36,5 @@ HRESULT RestrictSystemRootAccess();
 ## <a name="remarks"></a>コメント  
  すべてのコード以外のリターン`S_OK`.pdb ファイルのシステムのルート ディレクトリを検索できなくなります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

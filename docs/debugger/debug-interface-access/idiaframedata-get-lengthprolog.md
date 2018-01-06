@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bcf3e7feada0ba35e9001ed7b3f17167cdb4de7a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9d01464b857b7cfc52f66b7cbd41a70ce4705df6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaframedatagetlengthprolog"></a>IDiaFrameData::get_lengthProlog
 プロローグ コード ブロック内のバイト数を取得します。  
@@ -41,5 +42,5 @@ HRESULT get_lengthProlog (
 ## <a name="remarks"></a>コメント  
  プロローグ コードは、レジスタの保持、CPU の状態を設定し、関数のスタックを設定する手順のシーケンスです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 097e7a2eac78fe85b2a3ab62d5cdf1fd18908d56
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 707100d33e91d1b0920d008140dc2fb6f1e078fe
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-an-application-configuration-file-to-a-c-project"></a>方法: C# プロジェクトにアプリケーション構成ファイルを追加する
 アプリケーション構成ファイル (app.config) を c# プロジェクトに追加すると、共通言語ランタイムの特定し、アセンブリ ファイルを読み込みますをカスタマイズできます。 アプリケーション構成ファイルの詳細については、次を参照してください。[ランタイムがアセンブリを検索する方法](/dotnet/framework/deployment/how-the-runtime-locates-assemblies)です。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/31/2017
   
      App.config というファイルがプロジェクトに追加されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アプリケーションの設定の管理 (.NET)](../ide/managing-application-settings-dotnet.md)   
  [構成ファイル スキーマ](/dotnet/framework/configure-apps/file-schema/index)   
  [アプリの構成](/dotnet/framework/configure-apps/index)   

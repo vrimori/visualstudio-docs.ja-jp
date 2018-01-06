@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9632ada4b3e19013f05006d22770c08e83eac5ba
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e7f146222e76ff0f4de9f30140064e7bdd08a358
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiapropertystoragereadbool"></a>IDiaPropertyStorage::ReadBOOL
 読み取り`BOOL`プロパティ セット内の値。  
@@ -45,5 +46,5 @@ HRESULT ReadBOOL (
 ## <a name="remarks"></a>コメント  
  一貫性のある結果を得るには、次のように解釈します。、`BOOL`値の 0 以外の値が実行されるように`TRUE`0 で、`FALSE`です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

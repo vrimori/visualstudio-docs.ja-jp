@@ -17,11 +17,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 9361380aa53b8f6070f4ff9d956620c5344eec7e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: d6a1ab26dc402d039a5e858896ec25668be8df9e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bind-controls-to-data-in-visual-studio"></a>Visual Studio でのデータにコントロールをバインドします。
 データをコントロールにバインドすることで、アプリケーションのユーザーに対してデータを表示できます。 項目をドラッグして、これらのデータ バインド コントロールを作成することができます、**データソース**ウィンドウからデザイン サーフェイス、または Visual Studio での画面のコントロールにします。  
@@ -33,12 +34,12 @@ ms.lasthandoff: 10/31/2017
   
 |データ ソース|ドラッグ アンド ドロップのサポート**Windows フォーム デザイナー**|ドラッグ アンド ドロップのサポート**WPF デザイナー**|ドラッグ アンド ドロップのサポート**Silverlight デザイナー**|  
 |-----------------|---------------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------------|  
-|データセット|はい|はい|いいえ|  
-|エンティティ データ モデル|[はい]<sup>1</sup>|はい|はい|  
+|データセット|[はい]|はい|×|  
+|エンティティ データ モデル|[はい]<sup>1</sup>|[はい]|[はい]|  
 |LINQ to SQL クラス|いいえ<sup>2</sup>|いいえ<sup>2</sup>|いいえ<sup>2</sup>|  
-|サービス (含む[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]、WCF services、および web サービス)|はい|はい|はい|  
-|オブジェクト|はい|はい|はい|  
-|SharePoint|はい|はい|はい|  
+|サービス (含む[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]、WCF services、および web サービス)|[はい]|はい|[はい]|  
+|Object|[はい]|はい|[はい]|  
+|SharePoint|[はい]|はい|[はい]|  
   
  1. 使用して、モデルの生成、 **Entity Data Model**ウィザード、デザイナーにそれらのオブジェクトをドラッグします。  
   
@@ -65,6 +66,6 @@ ms.lasthandoff: 10/31/2017
 |UI に表示されるデータをフィルター処理します。|[Windows フォーム アプリケーションのデータのフィルター処理および並べ替えを行う](../data-tools/filter-and-sort-data-in-a-windows-forms-application.md)|  
 |コントロールのキャプションをカスタマイズします。|[Visual Studio がデータ バインド コントロールのキャプションを作成する方法をカスタマイズする](../data-tools/customize-how-visual-studio-creates-captions-for-data-bound-controls.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [.NET 用の Visual Studio データ ツール](../data-tools/visual-studio-data-tools-for-dotnet.md)   
  [Windows フォームでのデータ バインディング](/dotnet/framework/winforms/windows-forms-data-binding)

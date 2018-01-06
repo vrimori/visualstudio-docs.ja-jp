@@ -17,11 +17,12 @@ caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e85e745241d8fa880098b73a6306cbca3f19da70
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 18fc4c20b39341f884fb23b51822ce7f6e427007
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extract-method-refactoring-c"></a>メソッドの抽出リファクタリング (C#)
 **メソッドの抽出**既存のメンバーのコードから新しいメソッドを作成する簡単な方法を提供する移動スキーマ リファクタリング操作は、します。  
@@ -84,7 +85,7 @@ ms.lasthandoff: 10/31/2017
   
      新しいメソッドのシグネチャのプレビューが表示されます。**メソッド シグネチャのプレビュー**です。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**をクリックします。  
   
 ## <a name="remarks"></a>コメント  
  使用すると、**メソッドの抽出**コマンドを次のソース メンバーを同じクラスの新しいメソッドを挿入します。  
@@ -122,5 +123,5 @@ class Program
   
  このような状況を回避するには、クラスのフィールドの匿名メソッドで使用されるローカル変数を確認します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リファクタリング (C#)](refactoring-csharp.md)

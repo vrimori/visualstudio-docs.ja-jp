@@ -20,11 +20,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 685f57286a022be6b7acbdaf2b8ffed33457fef1
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 77c56d70c6fc3dd3dac9a563c146d8bab2c6f699
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Visual Studio でのデータに WPF コントロールをバインドします。
 データを [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] コントロールにバインドすることで、アプリケーションのユーザーに対してデータを表示できます。 これらのデータ バインド コントロールを作成するから項目をドラッグすることができます、**データソース** ウィンドウ、[!INCLUDE[wpfdesigner_current_short](../data-tools/includes/wpfdesigner_current_short_md.md)]で[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 このトピックでは、データ バインド [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] アプリケーションの作成に使用できる最も一般的なタスク、ツール、およびクラスについて説明します。  
@@ -51,10 +52,10 @@ ms.lasthandoff: 11/09/2017
   
 |データ ソース|コントロールをデータ ソースにバインドする XAML の生成|データ ソースにデータを読み込むコードの生成|  
 |-----------------|-----------------------------------------------------------|--------------------------------------------------------|  
-|データセット|はい|はい|  
-|[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]|はい|はい|  
-|サービス|はい|いいえ|  
-|オブジェクト|はい|いいえ|  
+|データセット|[はい]|はい|  
+|[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]|はい|[はい]|  
+|サービス|[はい]|×|  
+|Object|[はい]|×|  
   
 ### <a name="datasets"></a>データセット  
  テーブルまたは列をドラッグすると、**データ ソース**をデザイナーにウィンドウ[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]生成[!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)]は次を実行します。  

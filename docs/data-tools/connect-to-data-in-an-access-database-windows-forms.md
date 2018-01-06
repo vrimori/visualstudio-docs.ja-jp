@@ -18,11 +18,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 1f67a87f4a704d3f76ccddba62112983c058a9f3
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 8d55ecd52b3fa817e9a5ee199a69e3d29644346e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connect-to-data-in-an-access-database-windows-forms"></a>Access データベース (Windows フォーム) にデータへの接続します。
 Visual Studio を使用して、Access データベース (.mdf ファイルまたは .accdb ファイル) に接続することができます。 接続の定義後に表示される、データ、**データソース**ウィンドウです。 ここから、テーブルまたはビューをフォームにドラッグできます。   
