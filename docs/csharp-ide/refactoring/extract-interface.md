@@ -14,11 +14,12 @@ ms.author: gewarren
 manager: ghogen
 f1_keywords: vs.csharp.refactoring.extractinterface
 dev_langs: csharp
-ms.openlocfilehash: 854e341a5c02b3bb4b0a596720a4899410550689
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 8123154159e34597c0c76e941cd2db5824c9478e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extract-an-interface-in-c"></a>C# では、インターフェイスを抽出します。 #
 **新機能:**クラス、構造体またはインターフェイスから既存のメンバーを使用するインターフェイスを作成することができます。
@@ -48,12 +49,12 @@ ms.lasthandoff: 10/31/2017
    | **新しいファイル名** | インターフェイスを含む生成されるファイルの名前。 インターフェイスの名前を持つこれは既定では、*ClassName*ここで、 *ClassName*上で選択したクラスの名前を指定します。 |
    | **インターフェイスを形成するパブリック メンバーを選択します。** | インターフェイスに抽出する項目。  必要に応じて多くを選択することがあります。 |
 
-1. **[OK]** をクリックします。
+1. **[OK]**をクリックします。
 
    インターフェイスは、指定した名前のファイルにすぐに作成されます。  さらに、選択したクラスがそのインターフェイスを実装するようになりました。
 
    ![結果として得られるクラス](media/extractinterface_class.png)
    ![結果として得られるインターフェイス](media/extractinterface_interface.png)
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [リファクタリング (C#)](../refactoring-csharp.md)

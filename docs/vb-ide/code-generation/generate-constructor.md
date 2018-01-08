@@ -11,11 +11,12 @@ ms.assetid: f2280cfa-a9ec-4b56-9d94-c8fd384db980
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0380076319a80ba85aa59c388959baece9008e94
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 53b1ab5cb202995cb6a5e9eeef76ee4cf38b4ea9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generate-a-constructor-in-visual-basic"></a>Visual Basic でコンス トラクターを生成します。
 **新機能:**すぐに、クラスの新しいコンス トラクターのコードを生成することができます。 
@@ -47,6 +48,6 @@ ms.lasthandoff: 10/31/2017
 
    ![コンス トラクターの結果を生成します。](media/constructor_result.png)
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [コード生成 (Visual Basic)](../code-generation-vb.md)  
 [変更のプレビュー](../../ide/preview-changes.md)

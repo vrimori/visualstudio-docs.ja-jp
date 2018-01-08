@@ -11,11 +11,12 @@ ms.assetid: 683790b4-b68b-42d7-8dc4-a68eca05aa01
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 626db0d9c62fc606539fc9d72fc14c3651dca7ff
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 2d0354549d01fb31a813630066c96f6378db4b7a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generate-a-method-in-c"></a>メソッドを生成する (C#) #
 **新機能:**クラスにメソッドをすぐに追加することができます。 
@@ -47,6 +48,6 @@ ms.lasthandoff: 10/31/2017
 
    ![メソッドの結果を生成します。](media/method_result.png)
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [コード生成 (C#)](../code-generation-csharp.md)  
 [変更のプレビュー](../../ide/preview-changes.md)

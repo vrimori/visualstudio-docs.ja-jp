@@ -11,11 +11,12 @@ ms.assetid: c11888e0-31b1-44cc-9037-98d3f8b3623b
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2dd0ef0db74a0ee723c7cd09bd8118e646b8ba3f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8e23dfa2b482a16d70ef71614ba35f9b20523aeb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generate-a-field-property-or-local-in-visual-basic"></a>Visual Basic でのフィールド、プロパティ、またはローカルを生成します。
 **新機能:**すぐに以前に宣言されていないフィールド、プロパティ、またはローカルのコードを生成することができます。 
@@ -47,6 +48,6 @@ ms.lasthandoff: 10/31/2017
 
    ![フィールド/プロパティ/ローカルの結果を生成します。](media/field_result.png)
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [コード生成 (Visual Basic)](../code-generation-vb.md)  
 [変更のプレビュー](../../ide/preview-changes.md)

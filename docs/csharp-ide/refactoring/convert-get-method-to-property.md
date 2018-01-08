@@ -13,17 +13,18 @@ ms.author: kaseyu
 manager: ghogen
 f1_keywords: vs.csharp.refactoring.convertmethodtoproperty
 dev_langs: csharp
-ms.openlocfilehash: d034b8835caf0a5e56a9ef32599cf9197f1e3e16
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.workload: dotnet
+ms.openlocfilehash: 71ff3db81be256bdb82413d04b2f939b706c6586
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="convert-get-method-to-property--convert-property-to-get-method"></a>プロパティに Get メソッドに変換/プロパティを Get メソッドに変換します。
 ## <a name="convert-get-method-to-property"></a>プロパティに Get メソッドに変換します。
 **新機能:**プロパティ (および必要に応じて、Set メソッド)、Get メソッドに変換することができ、その逆です。
 
-**を任意**のロジックを含まない Get メソッドがあります。
+****を任意のロジックを含まない Get メソッドがあります。
 
 **どう：**
 
@@ -60,7 +61,7 @@ public int MyValue
 ## <a name="convert-property-to-get-method"></a>プロパティを Get メソッドに変換します。
 **新機能:**プロパティを Get メソッドに変換することができます
 
-**複数**の直後に設定し、値を取得するプロパティがあります。 
+****複数の直後に設定し、値を取得するプロパティがあります。 
 
 **どう：**
 
@@ -74,6 +75,6 @@ public int MyValue
 
 1. コードのプレビューの変更に満足したら場合、キーを押して**Enter**またはメニューから修正プログラムをクリックして、変更がコミットされます。
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [リファクタリング (C#)](../refactoring-csharp.md)  
 [変更のプレビュー](../../ide/preview-changes.md)

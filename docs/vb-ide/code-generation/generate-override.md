@@ -11,11 +11,12 @@ ms.assetid: b3c8cfc4-7c1f-4606-970e-3f7651604bab
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e8a7658ff8e2f573f2da6ff3197b6a11f3b3a0a7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 4a384eb3e75a499eb2a35c747f003846580738e9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generate-an-override-in-visual-basic"></a>Visual Basic では、上書きを生成します。
 **新機能:**基底クラスからすぐに無効にできるメソッドのコードを生成できます。 
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/31/2017
 
    ![結果をオーバーライドします。](media/override_result.png)
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [コード生成 (Visual Basic)](../code-generation-vb.md) 

@@ -11,11 +11,12 @@ ms.assetid: 96cfed7f-f090-4369-8a85-2dcd4c7cf12b
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 68f60b6159cad7f751dfc47a8af116ef33a164c2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 663a5ed393502d24c8b677dd2776a87b9855540e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implement-an-abstract-class-in-visual-basic"></a>Visual Basic では抽象クラスを実装します。
 **新機能:**直ちに抽象クラスの実装に必要なコードを生成することができます。 
@@ -49,6 +50,6 @@ ms.lasthandoff: 10/31/2017
 
    ![クラスの結果を実装します。](media/abstract_result.png)
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [コード生成 (Visual Basic)](../code-generation-vb.md)  
 [変更のプレビュー](../../ide/preview-changes.md)

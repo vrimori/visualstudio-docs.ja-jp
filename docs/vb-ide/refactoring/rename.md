@@ -13,11 +13,12 @@ ms.author: gewarren
 manager: ghogen
 f1_keywords: vs.csharp.refactoring.rename
 dev_langs: VB
-ms.openlocfilehash: 35313f036e1f324d3f8908a4527cd3a2ad64ae52
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: da85803adf3de8afa0912a1f47e2b474952df51d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rename-a-code-symbol-in-visual-basic"></a>Visual Basic のコードのシンボルの名前変更します。
 **新機能:**フィールド、ローカル変数、メソッド、名前空間、プロパティや種類などのコードのシンボルの識別子の名前を変更することができます。
@@ -53,6 +54,6 @@ ms.lasthandoff: 10/31/2017
 >
 > ![名前変更の競合](media/rename_conflict.png)
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [リファクタリング (Visual Basic)](../refactoring-vb.md)  
 [変更のプレビュー](../../ide/preview-changes.md)

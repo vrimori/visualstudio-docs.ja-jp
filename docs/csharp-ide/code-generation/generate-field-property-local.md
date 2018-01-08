@@ -11,11 +11,12 @@ ms.assetid: c11888e0-31b1-44cc-9037-98d3f8b3623b
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7304ad001b5e5c26594c147f4ffc416c9ee539c2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 85d15d28fae994f029e678183d2f08d561c70f1d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generate-a-field-property-or-local-in-c"></a>C# でのフィールド、プロパティ、またはローカルを生成します。 #
 **新機能:**すぐに以前に宣言されていないフィールド、プロパティ、またはローカルのコードを生成することができます。 
@@ -47,6 +48,6 @@ ms.lasthandoff: 10/31/2017
 
    ![フィールド/プロパティ/ローカルの結果を生成します。](media/field_result.png)
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [コード生成 (C#)](../code-generation-csharp.md)  
 [変更のプレビュー](../../ide/preview-changes.md) 

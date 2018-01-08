@@ -14,11 +14,12 @@ ms.author: gewarren
 manager: ghogen
 f1_keywords: vs.csharp.refactoring.extractinterface
 dev_langs: VB
-ms.openlocfilehash: 9616cae1282b992722f75eee091e2c9d271e85f6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 08bbae629dbd0e1098eca67107926d290ffe7fb3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extract-an-interface-in-visual-basic"></a>Visual Basic では、インターフェイスを抽出します。
 **新機能:**クラス、構造体またはインターフェイスから既存のメンバーを使用するインターフェイスを作成することができます。
@@ -48,12 +49,12 @@ ms.lasthandoff: 10/31/2017
    | **新しいファイル名** | インターフェイスを含む生成されるファイルの名前。 インターフェイスの名前を持つこれは既定では、*ClassName*ここで、 *ClassName*上で選択したクラスの名前を指定します。 |
    | **インターフェイスを形成するパブリック メンバーを選択します。** | インターフェイスに抽出する項目。  必要に応じて多くを選択することがあります。 |
 
-1. **[OK]** をクリックします。
+1. **[OK]**をクリックします。
 
    インターフェイスは、指定した名前のファイルにすぐに作成されます。  さらに、選択したクラスがそのインターフェイスを実装するようになりました。
 
    ![結果として得られるクラス](media/extractinterface_class.png)
    ![結果として得られるインターフェイス](media/extractinterface_interface.png)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [リファクタリング (Visual Basic)](../refactoring-vb.md)

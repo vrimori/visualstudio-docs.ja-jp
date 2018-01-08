@@ -13,16 +13,17 @@ author: kuhlenh
 ms.author: kaseyu
 manager: ghogen
 dev_langs: csharp
-ms.openlocfilehash: f784ac9fec1dce1f21ba4b9f1f0e83b4b7deb001
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.workload: dotnet
+ms.openlocfilehash: c274fd758fdae468bee884fcf1686abc16ec1d7e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="move-declaration-near-reference-in-c"></a>C# で参照の近くの宣言に移動します。 #
 **新機能:**近くの変数宣言をそれぞれの使用方法に移動することができます。
 
-**より狭**いスコープに保持できる変数の宣言を持っています。
+****より狭いスコープに保持できる変数の宣言を持っています。
 
 **理由:**であるが、読みやすさの問題または情報の隠蔽を招く可能性は省略できます。 これは、読みやすさを向上させるためにリファクタリングすることです。
 
@@ -58,6 +59,6 @@ if (condition)
 }
 ```
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [リファクタリング (C#)](../refactoring-csharp.md)  
 [変更のプレビュー](../../ide/preview-changes.md)

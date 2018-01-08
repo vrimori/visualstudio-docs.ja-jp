@@ -16,11 +16,12 @@ f1_keywords:
 - vs.csharp.refactoring.remove
 - vs.csharp.refactoring.reorder
 dev_langs: csharp
-ms.openlocfilehash: 9ed72704c37fcfc5d0c48ba17937f5b06097ce0b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 6344a30b5772ffa23c09baa4f38a4478d907cc9e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="change-a-method-signature-in-c"></a>C# の場合、メソッド シグネチャを変更します。 #
 **新機能:**を削除するか、メソッドのパラメーターの順序を変更することができます。
@@ -61,6 +62,6 @@ ms.lasthandoff: 10/31/2017
 
    ![署名の結果を変更します。](media/changesignature_result.png)
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [リファクタリング (C#)](../refactoring-csharp.md)  
 [変更のプレビュー](../../ide/preview-changes.md)

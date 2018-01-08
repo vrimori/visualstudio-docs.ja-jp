@@ -14,11 +14,12 @@ ms.author: gewarren
 manager: ghogen
 f1_keywords: vsl.GenerateFromUsage
 dev_langs: VB
-ms.openlocfilehash: 1524d2899d8c775a20943d2695065bfe36885a25
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a0a900b912c1a15c61dc17164571c1284743581c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generate-a-class-or-type-in-visual-basic"></a>Visual Basic でのクラスまたは型を生成します。
 **新機能:**すぐにクラスまたは型のコードを生成することができます。 
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/31/2017
    --- | ---
    アクセス | セットの種類が*既定*、*内部*または*パブリック*アクセスします。
    種類 | これは、として設定できます。*クラス*または*構造体*です。
-   名前 | これは変更できませんし、既に入力した名前になります。
+   name | これは変更できませんし、既に入力した名前になります。
    プロジェクト | ソリューションに複数のプロジェクトがある場合、クラス/構造体にする場所を選択できます。
    ファイル名 | 新しいファイルを作成することも、種類を既存のファイルを追加することができます。
 
@@ -69,6 +70,6 @@ ms.lasthandoff: 10/31/2017
 
    ![クラスの結果を生成します。](media/class_result.png)
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [コード生成 (Visual Basic)](../code-generation-vb.md)  
 [変更のプレビュー](../../ide/preview-changes.md)

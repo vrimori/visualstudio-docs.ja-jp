@@ -11,11 +11,12 @@ ms.assetid: bebff2ad-25b6-4adc-8762-60d23bdd639a
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e37cda45519062564e45127f8b8f329b75caa9a0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: e0b8df77e82ada8197b89fcdf451e4234a43669f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implement-an-interface-in-c"></a>C# でのインターフェイスを実装します。 #
 **新機能:**直ちにインターフェイスを実装するために必要なコードを生成することができます。 
@@ -54,6 +55,6 @@ ms.lasthandoff: 10/31/2017
    >
    >![明示的に発生するインターフェイスの実装](media/interface_explicitresult.png); 
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [コード生成 (C#)](../code-generation-csharp.md)  
 [変更のプレビュー](../../ide/preview-changes.md)  

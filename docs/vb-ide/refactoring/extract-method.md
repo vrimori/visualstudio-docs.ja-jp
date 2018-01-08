@@ -14,11 +14,12 @@ ms.author: gewarren
 manager: ghogen
 f1_keywords: vs.csharp.refactoring.extractmethod
 dev_langs: VB
-ms.openlocfilehash: 56e83e6410093467349e4a45a01042133cc53555
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6ec25b8c0e2a583364ff3c6418515507cdc04d40
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extract-a-method-in-visual-basic"></a>Visual Basic でのメソッドを抽出します。
 **新機能:**独自のメソッドにコードのフラグメントを変換することができます。
@@ -51,6 +52,6 @@ ms.lasthandoff: 10/31/2017
 
 1. 変更に満足したら、をクリックして、**適用**ボタンまたはキーを押して**Enter**し、変更がコミットされます。
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [リファクタリング (Visual Basic)](../refactoring-vb.md)  
 [変更のプレビュー](../../ide/preview-changes.md)

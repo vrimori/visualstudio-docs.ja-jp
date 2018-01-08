@@ -14,11 +14,12 @@ ms.author: gewarren
 manager: ghogen
 f1_keywords: vs.csharp.refactoring.rename
 dev_langs: CSharp
-ms.openlocfilehash: c89aae8e6e0f43ee2083bba46f2bbeeadd488535
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 3cc15e155683feb7e7bbcc26285d00e5538765f8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rename-a-code-symbol-in-c"></a>C# のコードのシンボルの名前変更します。 #
 **新機能:**フィールド、ローカル変数、メソッド、名前空間、プロパティや種類などのコードのシンボルの識別子の名前を変更することができます。
@@ -54,6 +55,6 @@ ms.lasthandoff: 10/31/2017
 >
 > ![名前変更の競合](media/rename_conflict.png)
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [リファクタリング (C#)](../refactoring-csharp.md)  
 [変更のプレビュー](../../ide/preview-changes.md)
