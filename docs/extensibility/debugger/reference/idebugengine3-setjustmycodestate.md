@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3a411287a369ca5b2beab70a9be7e4dcc2e4947d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 08d396d378f168b9a54e3b640e69dfeb3f6c9ba1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugengine3setjustmycodestate"></a>IDebugEngine3::SetJustMyCodeState
 このメソッドは、JustMyCode 状態情報、デバッグ エンジンを指示します。  
@@ -57,6 +58,6 @@ int SetJustMyCodeState(
 ## <a name="remarks"></a>コメント  
  JustMyCode の概念、ユーザーが属しているコードのみのデバッグと、システム コードなどのすべての中間コードを無視するは、ソース コードがそのシステム コードの使用可能な場合でもです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)   
  [JMC_CODE_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md)
