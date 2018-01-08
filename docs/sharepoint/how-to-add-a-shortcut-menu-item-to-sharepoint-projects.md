@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0e327a716fc77dbc8dd3515c092dcd32c2da5158
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 9427d2307a9d9726c2df1032410168c3b5cf1cc8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-shortcut-menu-item-to-sharepoint-projects"></a>方法: ショートカット メニュー項目を SharePoint プロジェクトに追加する
   ショートカット メニュー項目は、任意の SharePoint プロジェクトに追加できます。 プロジェクト ノードを右クリックしたときに、メニュー項目が表示されます**ソリューション エクスプ ローラー**です。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="deploying-the-extension"></a>拡張機能の配置  
  拡張機能を展開するには、作成、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]アセンブリおよびその他の拡張機能を配布するファイルの拡張機能 (VSIX) にパッケージ化します。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールの拡張機能の配置](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint プロジェクトの拡張](../sharepoint/extending-sharepoint-projects.md)   
  [方法: SharePoint プロジェクトの拡張機能を作成します。](../sharepoint/how-to-create-a-sharepoint-project-extension.md)   
  [方法: SharePoint プロジェクトにプロパティを追加する](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)  

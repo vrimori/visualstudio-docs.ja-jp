@@ -14,11 +14,12 @@ caps.latest.revision: "33"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: f4e27cfcff61be6712df97de0bb36008bda2547e
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 1d29c90dbfebaa71ace3e6d1027f17bb43fcd971
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="validation-in-a-domain-specific-language"></a>ドメイン固有言語における検証
 ドメイン固有言語 (DSL) の作成者は、検証制約を定義して、ユーザーが作成したモデルが意味を持つことを確認できます。 たとえば、DSL でユーザーが人々とその先祖の家系図を描くことができる場合、子の誕生日が親の誕生日よりも後であることを確認する制約を作成できます。  
@@ -343,6 +344,6 @@ validationController.ValidateCustom
 > [!WARNING]
 >  変更が調整またはロールバックされたことをユーザーが認識できるようにします。 たとえば、`System.Windows.Forms.MessageBox.Show("message").` を使用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [移動して、プログラム コードでモデルを更新します。](../modeling/navigating-and-updating-a-model-in-program-code.md)   
  [イベント ハンドラーによって変更内容がモデル外に反映される](../modeling/event-handlers-propagate-changes-outside-the-model.md)

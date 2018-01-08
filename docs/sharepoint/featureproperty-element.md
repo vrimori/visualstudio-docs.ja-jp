@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 97575a32aa3498787a5b81f1ade49c74e290854e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 0f1576c23b409226501637ada8d12d2320dd3c37
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="featureproperty-element"></a>FeatureProperty 要素
   SharePoint に配置されるときに、機能に含まれているカスタム プロパティを表します。 フィーチャーが配置されると、コードでプロパティにアクセスすることができます。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/31/2017
 |属性|説明|  
 |---------------|-----------------|  
 |**Key**|必要な**xs:string**属性。<br /><br /> 保存し、プロパティ値を取得するために使用するキー。 各プロパティ機能内で一意であるキーが必要です。|  
-|**値**|必要な**xs:string**属性。<br /><br /> プロパティ値。|  
+|**[値]**|必要な**xs:string**属性。<br /><br /> プロパティ値。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -58,12 +59,12 @@ ms.lasthandoff: 10/31/2017
   
 |||  
 |-|-|  
-|**Namespace**|http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel|  
+|**名前空間**|http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel|  
 |**スキーマ名**|SharePoint プロジェクト項目のスキーマ|  
 |**検証ファイル**|ProjectItemModelSchema.xsd|  
-|**空にすることができます。**|いいえ|  
+|**空にすることができます。**|×|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint プロジェクト項目のスキーマ リファレンス](../sharepoint/sharepoint-project-item-schema-reference.md)   
  [プロジェクト項目でのパッケージ化と配置の情報の提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)  
   

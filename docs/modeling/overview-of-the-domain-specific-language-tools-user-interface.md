@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: d76ed4d14e7333678fcf927dfa1b2f21d8573be5
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 416c7f399ce8ce23eceee4ccf8891dd657d5836a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>ドメイン固有言語ツールのユーザー インターフェイスの概要
 ドメイン固有言語ツール (DSL ツール) ソリューションに最初に開く[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、ユーザー インターフェイスは、次の図のようにします。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/27/2017
 |シェイプとコネクタ|図形は、モデル要素を DSL ダイアグラムで表示する方法を指定して、コネクタは、リレーションシップの表示に使用できる DSL ダイアグラムに行を指定します。<br /><br /> 図形やコネクタを作成するツールをドラッグして、**ダイアグラム要素**ダイアグラムの側です。|  
 |シェイプ マップ|マップのシェイプは、表示されるドメイン クラスに図形をリンク ドメイン モデル ダイアグラム、またはコネクタ、表示されるドメインの関係を行として表示されます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語ツールの概要](../modeling/overview-of-domain-specific-language-tools.md)   
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)   
  [ドメイン固有言語のカスタマイズおよび拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)

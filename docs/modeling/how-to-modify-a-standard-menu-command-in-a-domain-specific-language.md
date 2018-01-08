@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 6e5d17a1a84eb71252956e921522e6eebfd67925
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: f79852eae4b7dfae7345dbf6033a0e1cc0444250
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>方法: ドメイン固有言語における標準のメニュー コマンドを修正する
 DSL で自動的に定義される標準コマンドのいくつかの動作を変更できます。 たとえば、変更する可能性があります**切り取り**機密情報は除外されるようにします。 そのためには、コマンド セット クラス内でメソッドをオーバーライドします。 これらのクラスは DslPackage プロジェクト内の CommandSet.cs ファイルで定義され、<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> から派生します。  
@@ -149,7 +150,7 @@ protected override void ProcessOnMenuDeleteCommand()
   
  要素間を移動する方法およびオブジェクトとリンクを作成する方法についての詳細については、次を参照してください。[を移動すると、プログラム コードでモデルを更新する](../modeling/navigating-and-updating-a-model-in-program-code.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:System.ComponentModel.Design.MenuCommand>   
  [ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
  [方法: ショートカット メニューにコマンドを追加](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)   

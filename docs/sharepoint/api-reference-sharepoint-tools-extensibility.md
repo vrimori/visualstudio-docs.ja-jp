@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4ecd310065162451c6d7d6857b1f21646a82b8ae
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: ff40bf1abb6d3583d7df8ec8423cf7be743a12c0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="api-reference-sharepoint-tools-extensibility"></a>API リファレンス (SharePoint ツールの拡張性)
   このセクションでは、Visual Studio の SharePoint ツールを拡張するための API リファレンス ドキュメントを示します。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/31/2017
  <xref:Microsoft.VisualStudio.SharePoint.Validation>  
  SharePoint プロジェクトの機能およびパッケージ検証動作をカスタマイズするために使用する型があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リファレンス &#40;です。SharePoint ツールの機能拡張 &#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)   
  [ツールの拡張機能を SharePoint のプログラミング モデルの概要](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)   
  [SharePoint プロジェクト システムの拡張](../sharepoint/extending-the-sharepoint-project-system.md)   

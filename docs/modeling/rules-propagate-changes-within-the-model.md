@@ -14,11 +14,12 @@ caps.latest.revision: "30"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 8ec9540fb68ecb09dc592f9b05a56291c2a8c80d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 7f2b46b615c80e2455823ee63262f17f08d307c3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rules-propagate-changes-within-the-model"></a>規則によって変更内容がモデル内に反映される
 別の視覚化およびモデリング SDK (VMSDK) で 1 つの要素から変更を伝達するストア ルールを作成することができます。 変更された場合、ストア内の要素、ルールは、最も外側のトランザクションがコミットされるときに通常は、実行される予定です。 さまざまな種類の要素を追加または削除するなどのイベントのさまざまな種類のルールがあります。 ルールは、特定の種類の要素、図形、またはダイアグラムをアタッチできます。 多くの組み込み機能がルールによって定義されます。 など、ルールでは、モデルが変更されたときに、ダイアグラムが更新されることを確認します。 独自の規則を追加することで、ドメイン固有言語をカスタマイズできます。  
@@ -212,6 +213,6 @@ namespace Company.TaskRuleExample
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [イベント ハンドラーには、モデルの外部で変更が反映されるまでください。](../modeling/event-handlers-propagate-changes-outside-the-model.md)   
  [BoundsRules によってシェイプの位置とサイズが制限される](../modeling/boundsrules-constrain-shape-location-and-size.md)

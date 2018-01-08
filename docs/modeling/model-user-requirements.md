@@ -14,11 +14,12 @@ caps.latest.revision: "28"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: 064d2819a9a7bd3e72539ff7624299e3619f4e94
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 7c3584a8620c4f2d9c0f82efc94bae4dc4c33233
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="model-user-requirements"></a>ユーザー要件のモデリング
 Visual Studio を使用すると、ユーザーの目標達成を支援する際に、彼らのアクティビティやシステムが果たしている役割に関する図を描画することで、ユーザー ニーズを理解し、検討し、やり取りすることができます。 要求モデルとはこのような一連の図のことで、それぞれの図では、ユーザー ニーズの異なる側面に注目しています。 ビデオ デモについては、「 [ビジネス ドメインのモデリング](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-3-Modeling-the-Business-Domain/)」を参照してください。  
@@ -46,7 +47,7 @@ Visual Studio を使用すると、ユーザーの目標達成を支援する際
 > [!NOTE]
 >  これらのトピックでは、"システム" という用語は、開発中のシステムまたはアプリケーションを意味します。 システムは、数多くのソフトウェアおよびハードウェア コンポーネントが大規模に収集されたものを指す場合があります。また、1 つのアプリケーションの場合もあれば、大規模なシステム内の 1 つのソフトウェア コンポーネントを指すこともあります。 いずれの場合でも、要求モデルは、ユーザー インターフェイスを使用するか、API を使用するかにかかわらず、システムの外側から確認できる動作を記述します。  
   
-## <a name="common-tasks"></a>一般的なタスク  
+## <a name="common-tasks"></a>よく使う機能  
  ユーザー要求について、複数の異なるビューを作成することができます。  各ビューは、特定の種類の情報を提供します。  これらのビューを作成するときは、頻繁にビューを切り替えることをお勧めします。 任意のビューから開始することができます。  
   
 |図またはドキュメント|要求モデルに記載されている内容|セクション|  
@@ -100,6 +101,6 @@ Visual Studio を使用すると、ユーザーの目標達成を支援する際
 |サービス品質要求の記録に関する詳細|[サービス品質要求を定義するためのガイドライン](http://msdn.microsoft.com/en-us/9677a437-c2cb-4ac4-8c2d-4e3350005f06)|  
 |サービス品質要求に準拠しているコードを開発する方法|[アプリのアーキテクチャをモデル化する](../modeling/model-your-app-s-architecture.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [モデルを使用して、開発工程で](../modeling/use-models-in-your-development-process.md)   
  [アプリのアーキテクチャをモデル化する](../modeling/model-your-app-s-architecture.md)   

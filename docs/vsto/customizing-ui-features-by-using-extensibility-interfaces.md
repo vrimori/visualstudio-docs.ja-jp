@@ -25,11 +25,12 @@ caps.latest.revision: "40"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 39d773ac7a4c3fa8541af30143a3d3031377b5b7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 7b0808c62b5538e7b4ae50b7992c9b65750169f6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-ui-features-by-using-extensibility-interfaces"></a>機能拡張インターフェイスによる UI 機能のカスタマイズ
   Visual Studio に含まれる Office 開発ツールは、VSTO アドインにおけるカスタム作業ウィンドウ、リボンのカスタマイズ、および Outlook フォーム領域の作成に使用可能な、多数の実装の詳細を処理するクラスとデザイナーを提供します。 ただし、特別な要件がある場合、各機能の *拡張インターフェイス* を自分で実装することもできます。  
@@ -80,7 +81,7 @@ ms.lasthandoff: 10/31/2017
  [!code-vb[Trin_SimpleExtensibilityInterface#2](../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb#2)]
  [!code-csharp[Trin_SimpleExtensibilityInterface#2](../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs#2)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
  [Office ソリューションの開発](../vsto/developing-office-solutions.md)   

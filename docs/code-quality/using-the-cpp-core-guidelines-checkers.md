@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.technology: vs-ide-code-analysis
-ms.openlocfilehash: a6c32f906ca3edfa8afb27937f859d93c8428168
-ms.sourcegitcommit: cc288456329aefca1fdaa7ce74751ce195985c14
+ms.workload: cplusplus
+ms.openlocfilehash: cadee7d9cae0c59333a034e6f0ea12049bf3853f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>C++ の主要なガイドライン チェッカーを使用します。
 C++ の主要なガイドラインは、ポータブル ガイドライン、ルール、および C++ の専門家とデザイナーで作成された C++ で記述に関するベスト プラクティスのセットです。 現在、visual Studio は、c++ のコード分析ツールの一部としてこれらの規則のサブセットをサポートします。 コア ガイドライン チェッカーが Visual Studio 2017 で既定でインストールされ[Visual Studio 2015 用の NuGet パッケージとして入手できます](#vs2015_corecheck)です。
@@ -35,7 +36,7 @@ C++ の主要なガイドラインは、ポータブル ガイドライン、ル
   
  有効にするにまたは C++ コアの確認規則セットを無効にする、開く、**プロパティ ページ**プロジェクトのダイアログ。 **構成プロパティ**、展開**コード分析**、**拡張**です。 横にドロップダウン リストで制御**を有効にする C++ Core のチェック (リリース済み)**または**を有効にする C++ コアを確認 (します試験段階)**を選択**はい**または**いいえ**です。 選択**OK**または**適用**して変更を保存します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  C++ コア チェックの規則を検索する問題のいくつかの例を次に示します。  
   
 ```cpp  
@@ -63,7 +64,7 @@ int main()
   
 -   C26485 はルール Bounds.3: 配列とポインター減衰しません。  
   
--   C26481 はルール Bounds.1: ポインター演算を使用しません。 代わりに、 `span` を使用してください。  
+-   C26481 はルール Bounds.1: ポインター演算を使用しません。 代わりに、`span` を使用してください。  
   
  コード分析のコアを確認して C++ ruleset はインストールされている、このコードをコンパイルすると、最初の 2 つの警告は、出力が、3 番目の抑制を有効になっている場合。 コード例のビルド出力を次に示します。  
   
@@ -243,10 +244,10 @@ MSBuild に依存しないビルド システムを使用する場合、チェ�
   
      ![Nuget パッケージ マネージャー ウィンドウでは、CppCoreCheck パッケージを示しています](../code-quality/media/cppcorecheck_nuget_window.PNG "CPPCoreCheck_Nuget_Window。")  
   
-3.  Microsoft.CppCoreCheck パッケージを選択し、、**インストール**をプロジェクトにルールを追加するボタンをクリックします。  
+3.  Microsoft.CppCoreCheck パッケージを選択し、**インストール**をプロジェクトにルールを追加するボタンをクリックします。  
   
  NuGet パッケージを追加、追加の MSBuild *.targets*ファイルをプロジェクトでコード分析を有効にしたときに呼び出されるプロジェクト。 これは、 *.targets*ファイル拡張機能の追加として、Visual Studio コード分析ツールに C++ コア チェックの規則を追加します。 パッケージがインストールされている場合は、有効にするにまたは解放され、実験用のルールを無効にするプロパティ ページ ダイアログを使用できます。  
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [Visual Studio の C++ コア チェック参照](code-analysis-for-cpp-corecheck.md)です。
   

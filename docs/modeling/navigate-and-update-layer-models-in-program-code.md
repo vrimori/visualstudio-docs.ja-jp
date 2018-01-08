@@ -14,11 +14,12 @@ caps.latest.revision: "20"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: 50da0b90dd1c8924d8772eabd83265ff3827c2c2
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: a9350a7aa2ed3b4befaa2305042dbc4fc74fcf31
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="navigate-and-update-layer-models-in-program-code"></a>プログラム コードでレイヤー モデル内を移動し、レイヤー モデルを更新する
 このトピックでは、プログラム コードを使ってナビゲートおよび更新できるレイヤー モデルの要素と関係について説明します。 見ると、ユーザーの依存関係図についての詳細については、次を参照してください。[依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)と[依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)です。  
@@ -124,7 +125,7 @@ public void ... (...)
   
  <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> および <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram> も UML モデルを表示するのに使用されます。 
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [依存関係の図にコマンドおよびジェスチャを追加します。](../modeling/add-commands-and-gestures-to-layer-diagrams.md)   
  [依存関係のダイアグラムにカスタム アーキテクチャ検証を追加します。](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)   
  [カスタム プロパティを依存関係のダイアグラムに追加します。](../modeling/add-custom-properties-to-layer-diagrams.md)   

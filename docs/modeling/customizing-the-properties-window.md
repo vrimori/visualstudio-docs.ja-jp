@@ -12,11 +12,12 @@ caps.latest.revision: "20"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 962b4a8eac0d548d2c7a337207644bdc717fe3cf
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 2c11cf4d8fb8d913c1d288b5daeb110b9003f7b6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-the-properties-window"></a>プロパティ ウィンドウのカスタマイズ
 カスタマイズできますプロパティ ウィンドウの動作と外観、ドメイン固有言語 (DSL) で[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 DSL 定義では、各ドメイン クラスにドメインのプロパティを定義します。 既定では、図に、またはモデル エクスプ ローラーで、クラスのインスタンスを選択するすべてのドメイン プロパティは [プロパティ] ウィンドウで表示されます。 これにより確認し、ドメインのプロパティの値を編集する場合でも、ダイアグラムで図形のフィールドをマップしているされません。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/27/2017
   
 -   基本クラスで定義されたものも含め、モデル要素のドメイン クラスで定義されているドメインのプロパティです。 例外は、ドメインのプロパティを設定する**は参照可能な**に`False`です。  
   
--   0..1 の多重度のリレーションシップからリンクされている要素の名前。 これにより、必要に応じて表示を簡単に、要素がリンクされているコネクタのマッピングのリレーションシップを定義していない場合でもです。  
+-   0.1 の多重度のリレーションシップからリンクされている要素の名前。 これにより、必要に応じて表示を簡単に、要素がリンクされているコネクタのマッピングのリレーションシップを定義していない場合でもです。  
   
 -   要素を対象とする埋め込みリレーションシップのドメインのプロパティです。 通常埋め込みリレーションシップは明示的に表示されないためこれにより、そのプロパティを参照してください。  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/27/2017
   
 1.  作成、[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]をこの例と呼ばれるには、少なくとも 2 つのクラスを含むソリューションを**Book**と**作成者**です。 どちらの種類の間のリレーションシップが存在する必要があります**Book**と**作成者**です。  
   
-     ソース ロールの多重度 (のロール、 **Book**側) 0..1 または 1..1、する必要がありますので各**Book**が 1 つ**作成者**です。  
+     ソース ロールの多重度 (のロール、 **Book**側) 0.1 または 1.1、する必要がありますので各**Book**が 1 つ**作成者**です。  
   
 2.  **DSL のエクスプ ローラー**を右クリックし、 **Book**ドメイン クラス、およびクリック**新しい DomainTypeDescriptor の追加**です。  
   
@@ -316,5 +317,5 @@ public class MyTypeConverter : System.ComponentModel.TypeConverter
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プログラム コードにおけるモデル内の移動およびモデルの更新](../modeling/navigating-and-updating-a-model-in-program-code.md)

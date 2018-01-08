@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7a4b2c9bb828fb8c8b55829a4a6a295bb8324361
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 20a56a2f6582a08270292cd86cf62a9344d8565f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions"></a>方法: SharePoint ソリューションのフィーチャーとパッケージのカスタム検証規則を作成する
   Visual Studio によって生成されるソリューション パッケージを確認するカスタム検証規則を作成することができます。 選択すると、すべての機能またはパッケージの完全な検証を行うことができます**検証**パッケージまたは機能のコンテキスト メニューから、 **PackagingExplorer**です。 新しい SharePonit プロジェクト項目または機能を決定するかどうか、パッケージまたは機能が有効な状態でプロジェクトを追加するときに、部分検証を実行します。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="deploying-the-extension"></a>拡張機能の配置  
  拡張機能を展開するには、作成、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]アセンブリおよびその他の拡張機能を配布するファイルの拡張機能 (VSIX) にパッケージ化します。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールの拡張機能の配置](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint のパッケージ化と配置の拡張](../sharepoint/extending-sharepoint-packaging-and-deployment.md)  
   
   

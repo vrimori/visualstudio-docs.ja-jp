@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a7995b6768ae188484c15a3b1d3157df116ca481
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 67b35bb60224ce8c10136314ce2d42635d80c5c2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-items-to-a-sharepoint-project"></a>方法: SharePoint プロジェクトに項目を追加する
   SharePoint ソリューションには、複数の SharePoint プロジェクト項目を含む 1 つまたは複数のプロジェクトが含まれます。 開くまたは SharePoint ソリューションを作成した後は、これらのプロジェクトを新規または既存の項目を追加できます。 たとえば、新しいワークフロー プロジェクトに、default.aspx という名前の既定のフォームがそのフォームを新規または別の形式で置き換えますか別の ASPX フォームを追加します。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  追加を選択し、選択する項目を含むフォルダーを参照、**追加**ボタンをクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint プロジェクトとプロジェクト項目テンプレート](../sharepoint/sharepoint-project-and-project-item-templates.md)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   

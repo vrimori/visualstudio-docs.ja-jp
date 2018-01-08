@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 83800ece50304d578c5662ca6794af83021d9156
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 8b1782d5efa47fffb09d2e54413be1d5e35f89d6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reference-sharepoint-tools-extensibility"></a>リファレンス (SharePoint ツールの機能拡張)
   このセクションには、Visual Studio での SharePoint ツール拡張のリファレンス ドキュメントが含まれています。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/31/2017
  [API リファレンス &#40;です。SharePoint ツールの機能拡張 &#41;](../sharepoint/api-reference-sharepoint-tools-extensibility.md)  
  Visual Studio での SharePoint ツール拡張の API リファレンス ドキュメントが含まれています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio の SharePoint ツールの拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)  
   
   

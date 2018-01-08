@@ -12,11 +12,12 @@ caps.latest.revision: "18"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: f020dbd8aef022acaafe0561fba11343e9272ff6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 7c7881c20412ab5ffc3f1c4486958f4b5ca68a1c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-a-custom-directive-processor"></a>カスタム ディレクティブ プロセッサの配置
 任意のコンピューター上の [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でカスタム ディレクティブ プロセッサを使用するには、そのプロセッサをこのトピックで説明するいずれかの方法で登録する必要があります。  
@@ -184,7 +185,7 @@ ms.lasthandoff: 10/27/2017
   
  カスタム ディレクティブ プロセッサが GAC 内にない場合は、レジストリ サブキーを次の表に従って設定します。  
   
-|名前|型|データ|  
+|name|型|データ|  
 |----------|----------|----------|  
 |(既定)|REG_SZ|(値が設定されていません)|  
 |クラス|REG_SZ|**\<Namespace Name >。\<クラス名 >**|  
@@ -192,11 +193,11 @@ ms.lasthandoff: 10/27/2017
   
  アセンブリが GAC に含まれている場合は、レジストリ サブキーを次の表に従って設定します。  
   
-|名前|型|データ|  
+|name|型|データ|  
 |----------|----------|----------|  
 |(既定)|REG_SZ|(値が設定されていません)|  
 |クラス|REG_SZ|\<**完全修飾クラス名**>|  
 |Assembly|REG_SZ|\<**GAC にアセンブリ名**>|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成](../modeling/creating-custom-t4-text-template-directive-processors.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: b39d142a44a99cc0fde362249d5717ee75c09323
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: bbf11e020380114f12de3c6b71960faf80791ba6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-generating-code-by-using-text-templates"></a>チュートリアル: テキスト テンプレートを使用したコード生成
 コード生成を使用すると、厳密に型指定され、ソース モデルが変わった場合でも簡単に変更できるプログラム コードを作成できます。 コード生成とは対照的に、構成ファイルを使用する完全に汎用的なプログラムを作成する他の手法もあります。構成ファイルを使用すると、柔軟ではありますが、読むのも変更するのも容易ではなく、パフォーマンスもそれほどよくありません。 このチュートリアルでは、コード生成の利点について説明します。  
@@ -156,7 +157,7 @@ namespace MyProject
     <#@ output extension=".cs" #>  
     ```  
   
- をクリックします。  
+ である必要があります。  
   
  ソリューション エクスプローラーで、テンプレート ファイルの下位項目として .cs ファイルが表示されることに注意してください。 これは、テンプレート ファイルの名前の横にある [+] をクリックすることで確認できます。 このファイルは、テンプレート ファイルを保存したり、テンプレート ファイルからフォーカスを移動したりするたびに、テンプレート ファイルから生成されます。 生成されたファイルは、プロジェクトの一部としてコンパイルされます。  
   
@@ -419,6 +420,6 @@ namespace MyProject
 ## <a name="troubleshooting-the-text-template"></a>テキスト テンプレートのトラブルシューティング  
  テンプレートの変換エラーやコンパイル エラーが **[エラー一覧]** に表示された場合、または出力ファイルが正しく生成されなかった場合は、「[TextTransform ユーティリティを使用したファイルの生成](../modeling/generating-files-with-the-texttransform-utility.md)」で説明されている方法を使用してテキスト テンプレートをトラブルシューティングできます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)   
  [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)

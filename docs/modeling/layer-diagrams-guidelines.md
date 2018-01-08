@@ -16,11 +16,12 @@ caps.latest.revision: "55"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: 6f55cbcd7e213d228a8b20f89538dfd88d8c2038
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: 4590652f37c3f1a1bdaf6bd601aee8d01d1a1c98
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-diagrams-guidelines"></a>依存関係図: ガイドライン
 作成することで、高レベルのアプリのアーキテクチャの記述*依存関係図*Visual Studio でします。 依存関係ダイアグラムとコードを検証することによって、コードのこの設計で一貫性が保たことを確認します。 レイヤーの検証をビルド プロセスに含めることもできます。 参照してください[Channel 9 ビデオ: デザインし、依存関係のダイアグラムを使用して、アーキテクチャの検証](http://go.microsoft.com/fwlink/?LinkID=252073)です。  
@@ -159,6 +160,6 @@ ms.lasthandoff: 11/07/2017
 ##  <a name="BuildValidation"></a>ビルド プロセスにレイヤー検証を含める  
  依存関係図に従ってコード内の将来の変更には、ソリューションの標準的なビルド プロセスにレイヤー検証が含まれます。 他のチーム メンバーがソリューションをビルドするたびに、コード内の依存関係と、依存関係図との違いは、ビルド エラーとして報告されます。 ビルド プロセスにレイヤー検証を追加する方法の詳細については、次を参照してください。[依存関係のダイアグラムのコードを検証する](../modeling/validate-code-with-layer-diagrams.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)   
  [コードからの依存関係図の作成](../modeling/create-layer-diagrams-from-your-code.md)

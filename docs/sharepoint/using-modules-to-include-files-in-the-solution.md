@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 484ae234839876922b6c04767d67ed56f85a108d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: f340d0a8c713aedc6ee74aa598c7170495ac8c01
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-modules-to-include-files-in-the-solution"></a>モジュールを使用してソリューションにファイルを追加する
   新しいマスター ページなど、そのファイルの種類に関係なく、SharePoint サーバーにファイルを配置する場合がありますである可能性があります。 これを行うには、使用することができます*モジュール*(と混同しないでください[!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]モジュールのコード)。 モジュールは、SharePoint ソリューションのファイルのコンテナーです。 ソリューションを配置するときに、モジュール内のファイルは、SharePoint サーバーで、指定したフォルダーにコピーされます。  
@@ -55,12 +56,12 @@ ms.lasthandoff: 10/31/2017
 |要素名|説明|  
 |------------------|-----------------|  
 |Elements|すべてのモジュールで定義されている要素が含まれています。|  
-|モジュール|Module 要素が 1 つの属性を持つ*名前*の形式で、モジュールの名前を指定する`<Module Name="Module1">`です。<br /><br /> モジュールの名前を変更する場合 (またはその*フォルダー名*プロパティ)、モジュールの要素の名前を手動で更新する必要があります。<br /><br /> Module 要素で、ファイルのサブディレクトリを指定する場合[!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)](WSS) がそれらの一致するディレクトリ構造を自動的に作成されます。|  
+|Module|Module 要素が 1 つの属性を持つ*名前*の形式で、モジュールの名前を指定する`<Module Name="Module1">`です。<br /><br /> モジュールの名前を変更する場合 (またはその*フォルダー名*プロパティ)、モジュールの要素の名前を手動で更新する必要があります。<br /><br /> Module 要素で、ファイルのサブディレクトリを指定する場合[!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)](WSS) がそれらの一致するディレクトリ構造を自動的に作成されます。|  
 |ファイル|ファイルの要素が 2 つのパラメーターを持つ*パス*と*Url*です。<br /><br /> パス: 名前と、SharePoint ソリューション内のファイルの場所。 形式は、`Path="Module1\Sample.txt"`です。<br /><br /> -Url: SharePoint サーバー上のファイルの展開先の場所です。 形式は、`Url="Module1/Sample.txt"`です。<br /><br /> 型: 省略可能な属性を持つ 2 つの設定: *GhostableInLibrary*と*Ghostable*です。 形式は、`Type="GhostableInLibrary"`です。 指定する*GhostableInLibrary*ファイルはライブラリに追加されたときに、ファイルに付随するリスト アイテムと共に sharepoint ドキュメント ライブラリに追加することを意味します。 指定する*Ghostable*ドキュメント ライブラリの外側を SharePoint に追加するファイルが実行されます。|  
   
  展開する各ファイルが個別の必要があります`<File>`Elements.xml 内の要素のエントリ。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: モジュールを使用して、ファイルを含める](../sharepoint/how-to-include-files-by-using-a-module.md)   
  [方法: ファイルを準備](http://go.microsoft.com/fwlink/?LinkID=144271)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   

@@ -24,11 +24,12 @@ caps.latest.revision: "30"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 354d3f574515fcc9e8417e817363f9bbe7327f06
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 95c98887e50786df4e59010070064eaeb6bafa0f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-creator-method"></a>方法: Creator メソッドを追加する
   Creator メソッドは、エンティティのデータ ソースに新しいデータを追加します。 クリックすると、ビジネス データ接続 (BDC) サービスがこのメソッドを呼び出して、**新しい項目の**モデルに基づいているリストのリボンのボタンです。 詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/31/2017
      [!code-csharp[SP_BDC#4](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#4)]
      [!code-vb[SP_BDC#4](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#4)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
  [方法: Specificfinder メソッドを追加します。](../sharepoint/how-to-add-a-specific-finder-method.md)   

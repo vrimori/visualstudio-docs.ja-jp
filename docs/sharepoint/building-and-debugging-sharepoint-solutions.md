@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7582b0bcef8a97de14fb3b931745d6dcc21fa876
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 47ff77e26ede1c8f9c1bf35b8fc3e69a7951d24c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-and-debugging-sharepoint-solutions"></a>SharePoint ソリューションのビルドとデバッグ
   一般に、ビルドと SharePoint ソリューションのデバッグは、ビルドおよびその他の種類のプロジェクトのデバッグと同じ[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 このセクションのトピックでは、いくつかある相違点について説明します。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="using-the-clean-command"></a>［クリーン］ コマンドの使用  
  SharePoint ソリューションのデバッグは、SharePoint サーバーのインストール時に、**クリーン**コマンドでは、ソリューションはアンインストールされません。 代わりに、SharePoint 構成から機能を非アクティブ化する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   
  [サーバー エクスプ ローラーを使用して SharePoint 接続の参照](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)   
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  

@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bafa2a4310a77f9f5a9f061e378ac05f2896d4ab
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 0ad944d9997b80a89971802d86a2fa3075533a5b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer"></a>方法: パッケージング エクスプローラーを使用してパッケージのフィーチャーおよび項目を追加および削除する
   SharePoint プロジェクト項目およびフィーチャーを配置するためのパッケージを構成するのには、パッケージング エクスプ ローラーを使用することができます。 .Wsp ファイル内では、SharePoint プロジェクト項目と機能を調整できます。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/31/2017
   
 2.  機能またはパッケージのショートカット メニューを開き、選択**検証**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

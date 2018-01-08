@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 9dfcba23b9c8df3bbd62a0ef4dd0c4d98f578514
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 32d2fa502a5eca166ccca9fbc87ceb632d7617ed
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>T4 テキスト テンプレートを使用した実行時テキスト生成
 実行時に、アプリケーションで使用して、テキスト文字列を生成することができます[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]実行時テキスト テンプレートです。 アプリケーションが実行されるコンピューターを持っていなくて[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 実行時テンプレートとも呼ばれる「前処理されたテキスト テンプレート」テンプレートは、コンパイル時に実行時に実行されるコードを生成するためです。  
@@ -424,7 +425,7 @@ End material for DerivedTemplate1.
   
  実行時テンプレートは、コンパイル時にテンプレートおよびその内容を特定のアプリケーションで使用できます。 記述する場合は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]実行時に、「テンプレートからテキストを生成する拡張[VS 拡張機能でテキスト変換を呼び出す](../modeling/invoking-text-transformation-in-a-vs-extension.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コードの生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)   
  [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)   
  [Oleg Sych によって理解 T4: 前処理されたテキスト テンプレート](http://www.olegsych.com/2009/09/t4-preprocessed-text-templates/)

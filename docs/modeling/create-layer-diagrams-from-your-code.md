@@ -16,11 +16,12 @@ caps.latest.revision: "64"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: 2e98b690fb8ba87dabb7fd8aa76a9aa44c613a38
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: c0a13a32347b7150818fc80b82d0c03dc3fc4f69
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-dependency-diagrams-from-your-code"></a>コードから依存関係のダイアグラムを作成します。
 ソフトウェア システムの高レベルで論理アーキテクチャを視覚化するには、作成、*依存関係ダイアグラム*Visual Studio でします。 コードがこの設計と一致することを確認するには、依存関係ダイアグラムとコードを検証します。 Visual c# .NET および Visual Basic .NET プロジェクトの依存関係図を作成することができます。 この機能をサポートする Visual Studio のバージョンを参照してください[アーキテクチャおよびモデリング ツールのバージョンのサポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/27/2017
   
 4.  **モデリング プロジェクトに追加**を参照して、ソリューションに既存のモデリング プロジェクトを選択します。  
   
-     または  
+     - または -  
   
      選択**新しいモデリング プロジェクトを作成**新しいモデリング プロジェクトをソリューションに追加します。  
   
@@ -154,7 +155,7 @@ ms.lasthandoff: 10/27/2017
   
 -   [コード マップ アナライザーを使用して潜在的な問題を検索する](../modeling/find-potential-problems-using-code-map-analyzers.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビデオ: リアルタイムで、アーキテクチャの依存関係を検証します。](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)   
  [依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)   
  [依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)   

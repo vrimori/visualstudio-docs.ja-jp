@@ -20,11 +20,12 @@ caps.latest.revision: "38"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3bd3f81580af908d06fe7389c04a6559d14f1075
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: b1a0f4175dc884283dcf92b7f6268a518cdaf0ca
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="calling-into-the-sharepoint-object-models"></a>SharePoint オブジェクト モデルの呼び出し
   Visual Studio で SharePoint ツールの拡張機能を作成するときに、特定のタスクを実行する SharePoint Api を呼び出す必要があります。 たとえば、SharePoint プロジェクト用のカスタム配置手順を作成する場合はいくつかのソリューションを展開するタスクを実行する SharePoint Api を呼び出す必要があります。  
@@ -53,12 +54,12 @@ ms.lasthandoff: 10/31/2017
   
  作成と SharePoint コマンドの使用に関する詳細については、次を参照してください。[する方法: SharePoint コマンドを作成する](../sharepoint/how-to-create-a-sharepoint-command.md)と[する方法: SharePoint コマンドを実行](../sharepoint/how-to-execute-a-sharepoint-command.md)です。 SharePoint コマンドを展開する方法については、次を参照してください。 [Visual Studio での SharePoint ツールの拡張機能の配置](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)です。  
   
- 作成し、SharePoint のコマンドを使用する方法を示すチュートリアルについては、次を参照してください[チュートリアル: SharePoint プロジェクトのカスタム配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)と[チュートリアル: サーバー エクスプ ローラー表示 Web に拡張します。。パーツ](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)です。  
+ 作成し、SharePoint のコマンドを使用する方法を示すチュートリアルについては、次を参照してください[チュートリアル: SharePoint プロジェクトのカスタム配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)と[チュートリアル: サーバー エクスプ ローラー表示 Web に拡張します。パーツ](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)です。  
   
 ### <a name="understanding-how-sharepoint-commands-are-executed"></a>Understanding のどの SharePoint コマンドを実行します。  
  SharePoint コマンドを定義するアセンブリは vssphost4.exe をという名前の 64 ビット ホスト プロセスに読み込まれます。 SharePoint ツール拡張機能での SharePoint コマンドを呼び出すと、コマンドは、32 ビット Visual Studio プロセス (devenv.exe) ではなく vssphost4.exe によって実行されます。 レジストリ内の値を設定して SharePoint コマンドを実行する方法の一部の側面を制御できます。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールの拡張機能のデバッグ](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: SharePoint コマンドを作成します。](../sharepoint/how-to-create-a-sharepoint-command.md)   
  [方法: SharePoint コマンドを実行](../sharepoint/how-to-execute-a-sharepoint-command.md)   
  [SharePoint ツール拡張機能のプログラミング モデルの概要](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)  

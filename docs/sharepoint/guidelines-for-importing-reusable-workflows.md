@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 32e0180f804a8b35946a4d7a4d02f72dd6deb7d4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 9f0ba8bdd5e599fadc98519d54a3015abf91f013
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-for-importing-reusable-workflows"></a>再利用可能なワークフローをインポートするためのガイドライン
   SharePoint Designer で作成された再利用可能なワークフローをインポートするには、再利用可能な SharePoint 2010 ワークフローのインポート プロジェクト テンプレートを使用[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 このテンプレートをインポート、*宣言**ワークフロー* ([!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]-のみ) に変換します、*コード ワークフロー*、いずれかで強化するため、ワークフローであります。[!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]または[!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)]コード。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)][チュートリアル: SharePoint Designer の再利用可能なワークフローを Visual Studio にインポート](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md)です。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/31/2017
   
  変更せず、グローバルに再利用可能なワークフローをインポートするには、SharePoint 2010 ソリューション パッケージのインポート テンプレートを使用します。 このメソッドを使用する場合、ワークフローはコード ワークフローには変換されないと、宣言型ワークフローのままです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [既存の SharePoint サイトからアイテムをインポートします。](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)   
  [チュートリアル: SharePoint Designer の再利用可能なワークフローの Visual Studio へのインポート](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md)  
   

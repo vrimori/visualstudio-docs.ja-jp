@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b087ae9f767ed762b6d9269f60f2612127bdc705
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 813063a2cd32374171c37e770e033959d7b7d3d1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-custom-property"></a>方法: カスタム プロパティを追加する
   カスタム プロパティをモデルに追加するにを使用して、**プロパティ エディター**です。 接続文字列などの情報と実行時にその他のデータを取得するためのコードでこれらのプロパティにアクセスできます。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/31/2017
   
 6.  **値**、カスタム プロパティのフィールドの値を指定し、、 **ok**ボタンをクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [ビジネス データ接続モデルを作成します。](../sharepoint/creating-a-business-data-connectivity-model.md)   

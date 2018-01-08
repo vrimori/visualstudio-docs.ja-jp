@@ -23,11 +23,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d8cc1bf4871ef91c5b08cb77963a70e422ee3cdc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: ec34a6f93625fdb2cb8a1e5fcc5fb5c95d17653b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-an-entity-to-a-model"></a>方法: モデルにエンティティを追加する
   エンティティを作成するには、Visual Studio からエンティティ コントロールを追加**ツールボックス**ビジネス データ接続 (BDC) をデザイナーにします。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/31/2017
      [!code-csharp[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/CSharp/sp_bdc_entity_data_class/bdcmodel1/contact.cs#1)]
      [!code-vb[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/VisualBasic/sp_bdc_entity_data_class/bdcmodel1/contact.vb#1)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: Creator メソッドを追加](../sharepoint/how-to-add-a-creator-method.md)   
  [方法: Deleter メソッドを追加](../sharepoint/how-to-add-a-deleter-method.md)   
  [方法: Updater メソッドを追加](../sharepoint/how-to-add-an-updater-method.md)   

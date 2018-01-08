@@ -15,11 +15,12 @@ caps.latest.revision: "43"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: c5e60ada4489e12312df92ecceab8bc268a6cfac
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: c37e092f2caa39807760bd04a22587d684a6998d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-a-t4-text-template"></a>T4 テキスト テンプレートの作成
 テキスト テンプレートには、そのテンプレートから生成されるテキストが含まれます。 たとえば、web ページを作成するテンプレートが含まれて"\<html >…」および HTML ページの他のすべての標準的な部分です。 テンプレートに挿入が*コントロール ブロック*、プログラム コードのフラグメントがあります。 コントロール ブロックはさまざまな値を提供すると共に、テキストの一部を条件付きにしたり、繰り返したりできるようにします。  

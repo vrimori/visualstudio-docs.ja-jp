@@ -12,11 +12,12 @@ caps.latest.revision: "33"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 741fc8ac1ed4e0cc449c8010b71bd13a484933a8
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 768082882c5ed180956b9bac28c20283404bb913
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-models-from-text-templates"></a>テキスト テンプレートからモデルへのアクセス
 テキスト テンプレートを使用すると、レポート ファイル、ソース コード ファイル、およびその他のドメイン固有言語モデルに基づいたテキスト ファイルを作成することができます。 テキスト テンプレートの基本については、次を参照してください。[コードの生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)です。 テキスト テンプレートは、DSL をデバッグするときは、実験用のモードで動作し、DSL が配置されているコンピューターではでも機能します。  

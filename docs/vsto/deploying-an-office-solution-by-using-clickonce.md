@@ -18,14 +18,15 @@ caps.latest.revision: "59"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5ae3fceb52e0a99ee87a12a650333b3bc8cf1420
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 0076eea1fa8866ad90bf4125583ed8359916de4a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-an-office-solution-by-using-clickonce"></a>ClickOnce を使用した Office ソリューションの配置
-  ClickOnce を使用する場合は、少しの手順で Office ソリューションを配置できます。 更新プログラムを公開する場合は、ソリューションはそれらを自動的に検出してインストールします。 ただし、ClickOnce を使用する場合は、コンピューターのユーザーごとに、ソリューションを個別にインストールする必要があります。 したがって、複数のユーザーが同じコンピューターでソリューションを実行する場合は、Windows インストーラー (.msi) の使用を検討する必要があります。  
+  ClickOnce を使用する場合は、少しの手順で Office ソリューションを配置できます。 更新プログラムを発行する場合は、ソリューションはそれらを自動的に検出してインストールします。 ただし、ClickOnce を使用する場合は、コンピューターのユーザーごとに、ソリューションを個別にインストールする必要があります。 したがって、複数のユーザーが同じコンピューターでソリューションを実行する場合は、Windows インストーラー (.msi) の使用を検討する必要があります。  
   
 ## <a name="in-this-topic"></a>このトピックの内容  
   
@@ -460,7 +461,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]  
 >  ローカル データは、ソリューションの 1 つ前のバージョンについてのみ保存されます。 2 つのバージョンをロールバックする場合は、ローカル データは保持されません。 ローカル データの詳細については、次を参照してください。[ローカルへのアクセスと ClickOnce アプリケーションでのリモート データ](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)   
  [Office ソリューションの発行](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
  [方法: ClickOnce を使用して Office ソリューションの発行](http://msdn.microsoft.com/en-us/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)   

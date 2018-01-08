@@ -26,11 +26,12 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6a8b61477ae3b588b2aeadf1c9d99618151825f8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3fc67e84ab9519e41c2c8eb8da29025da510bc6c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions"></a>方法: リソース ファイルを使用して、ローカライズした名前、プロパティ、およびアクセス許可を指定する
   リソース ファイルを使用すると、ローカライズされた名前を指定、プロパティを定義でき、ビジネス データ接続 (BDC) モデルで定義されているアクセス許可 tor オブジェクトに適用できます。 この情報を指定するを追加する、**ビジネス データ接続リソース**項目を含むプロジェクトを**ビジネス データ接続モデル**項目。 次のリソース ファイルの XML を編集して名、プロパティ、およびアクセス許可を指定します。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/31/2017
   
      これらの要素を定義する方法については、次を参照してください。[モデル ファイルとリソース ファイル](http://go.microsoft.com/fwlink/?LinkID=169283)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: SharePoint プロジェクトに既存の BDC モデル ファイルを追加](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)   
  [ビジネス データ接続モデルを作成します。](../sharepoint/creating-a-business-data-connectivity-model.md)   
  [方法: BDC モデルを作成](../sharepoint/how-to-create-a-bdc-model.md)   

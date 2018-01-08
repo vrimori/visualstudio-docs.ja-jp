@@ -20,11 +20,12 @@ caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4636e55fa2bc20ba9ff958a897ef7898099cb5c2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 01ef94199ae7ea22f72ca08be4dfb9092b03403f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessibility-in-office-projects"></a>Office プロジェクトのユーザー補助機能
   Microsoft Visual Studio と Microsoft Office を使用すると、標準のユーザー補助の要件を満たすカスタム ソリューションをビルドする多くのユーザー補助機能が含まれます。 Microsoft では、Web 上のユーザー補助のためのガイドラインを発行します。 詳細については、次を参照してください。、[アクセシビリティ Web サイト](http://go.microsoft.com/fwlink/?LinkID=37113)です。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/31/2017
   
      有効に変更するために Visual Studio を再起動する必要があるかを示すメッセージが表示されます。  
   
-4.  **[OK]** をクリックします。  
+4.  **[OK]**をクリックします。  
   
 5.  Visual Studio を再起動し、プロジェクトを再度開きます。  
   
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/31/2017
   
  拡大鏡を使用して、これらの制約を克服することができます。 拡大鏡は、画面の一部を拡大表示する別のウィンドウを作成する Windows の表示ユーティリティです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office ソリューションの開発](../vsto/developing-office-solutions.md)   
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
  [障碍を持つユーザー補助機能](/visualstudio/ide/reference/accessibility-for-people-with-disabilities)   

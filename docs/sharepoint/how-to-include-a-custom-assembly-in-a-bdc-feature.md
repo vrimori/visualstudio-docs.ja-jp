@@ -23,11 +23,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c5916da8b7aa5018824ffe8040e7184fe6d1bf31
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: acf4038a5b3cafa1febcd4a44c3e82222d6f5d86
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-include-a-custom-assembly-in-a-bdc-feature"></a>方法: BDC 機能にカスタム アセンブリを含める
   プロジェクトは、同じソリューション内の他のプロジェクトからアセンブリを参照できます。 使用して、プロジェクトのフィーチャー ファイルにこれらのアセンブリを追加する必要があります、**参照されるアセンブリの LobSystems への割り当て** ダイアログ ボックス。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]  
     >  カスタム アセンブリ内のコードをデバッグするには、ソリューション パッケージをアセンブリを追加する必要があります。 詳細については、次を参照してください。[する方法: 追加およびその他のアセンブリを削除する](../sharepoint/how-to-add-and-remove-additional-assemblies.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: リソース ファイルを使用して、ローカライズされた名前、プロパティ、およびアクセス許可](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)   
  [方法: SharePoint プロジェクトに既存の BDC モデル ファイルを追加](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)   
  [ビジネス データ接続モデルを作成します。](../sharepoint/creating-a-business-data-connectivity-model.md)   

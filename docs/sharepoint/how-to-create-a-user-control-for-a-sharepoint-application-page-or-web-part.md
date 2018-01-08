@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1c6384ce4437290c0baa5ea1438a0751b4ec1fcf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 4dbecbbd5a1913990eb8f5e3fc20d875a627352e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part"></a>方法: SharePoint アプリケーション ページまたは Web パーツのユーザー コントロールを作成する
   SharePoint ソリューション向けの独自の機能を備えたカスタム ユーザー コントロールを作成し、その機能をプロジェクト内で再利用することができます。 ユーザー コントロールは、Web パーツまたはアプリケーション ページに含めることができます。他の ASP.NET コントロールや SharePoint コントロールを追加し、コントロールのプロパティとメソッドを定義することもできます。 ユーザー コントロールの詳細については、次を参照してください。 [Web パーツまたはアプリケーション ページの再利用可能なコントロールを作成する](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)と[ユーザー コントロールと SharePoint のサーバー コントロール](http://blogs.msdn.com/b/kaevans/archive/2011/04/28/user-controls-and-server-controls-in-sharepoint.aspx)です。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/31/2017
   
      このファイルに表示されます**ソリューション エクスプ ローラー**ユーザー コントロール ファイルの下、.cs または .vb 拡張子は、プロジェクトの言語に応じて、します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Web パーツまたはアプリケーション ページの再利用可能なコントロールの作成](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)   
  [For SharePoint アプリケーション ページの作成](../sharepoint/creating-application-pages-for-sharepoint.md)   
  [SharePoint の Web パーツの作成](../sharepoint/creating-web-parts-for-sharepoint.md)  

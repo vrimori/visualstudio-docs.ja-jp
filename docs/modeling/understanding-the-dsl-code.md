@@ -12,11 +12,12 @@ caps.latest.revision: "19"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 0a4cc7b61426479a45e87568b040906426870233
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 294d10eb8a8fab361ddf5b3dadf4d779a95947a0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-the-dsl-code"></a>DSL コードについて
 ドメイン固有言語 (DSL) ソリューションは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 内で DSL のインスタンスの読み取りと更新に使用可能な API を生成します。 この API は、DSL 定義から生成されるコード中に定義されます。 このトピックでは生成される API を説明します。  
@@ -346,7 +347,7 @@ explorerWindow.TreeContainer.ObjectModelBrowser.SelectedNode = treeNode;
   
  このファイルは、DSL が Visual Studio Integration Extension (VSIX) にパッケージ化される方法を制御します。 詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)   
  [Understanding モデル、クラスとリレーションシップ](../modeling/understanding-models-classes-and-relationships.md)   
  [カスタマイズとドメイン固有言語の拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)   

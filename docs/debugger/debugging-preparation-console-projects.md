@@ -21,11 +21,12 @@ caps.latest.revision: "26"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7c4b5021db951acc6ed8ed750542febab9fdfbf4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9e1ade672c3abd81f4f71d1e48a39560e17e1465
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-preparation-console-projects"></a>デバッグの準備 : コンソール プロジェクト
 コンソール プロジェクトのデバッグの準備は Windows プロジェクトのデバッグの準備に似ていますが、次の点を考慮する必要があります。 詳細については、次を参照してください。 [Windows フォーム アプリケーション](../debugger/debugging-preparation-windows-forms-applications.md)、および[デバッグの準備: Windows フォーム アプリケーション (.NET)](http://msdn.microsoft.com/en-us/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)です。 コンソール アプリケーションはどれも類似しているため、このトピックでは次のプロジェクトの種類について説明します。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/31/2017
   
  Visual Studio からコンソール アプリケーションを起動すると、**コンソール**ウィンドウが Visual Studio ウィンドウの背後に見える場合があります。 Visual Studio からコンソール アプリケーションを起動しようとしても、何も起こらない場合は、Visual Studio ウィンドウを移動してみてください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)   
  [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)   
  [Visual C プロジェクトの種類](../debugger/debugging-preparation-visual-cpp-project-types.md)   

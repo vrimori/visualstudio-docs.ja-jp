@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 57e6d01e918256217e94077f6414651e50dd4c74
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 018103ed0ede32b65403821e36128bca6fd083a3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extensiondataitem-element"></a>ExtensionDataItem 要素
   キー/値の形式で、SharePoint プロジェクト項目に関連付けられているカスタム データ項目を表します。 キーと値の両方には、文字列がある場合があります。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/31/2017
 |属性|説明|  
 |---------------|-----------------|  
 |**Key**|必要な**xs:string**属性。<br /><br /> 格納およびデータ項目を取得するために使用するキー。|  
-|**値**|必要な**xs:string**属性。<br /><br /> データ項目の値です。|  
+|**[値]**|必要な**xs:string**属性。<br /><br /> データ項目の値です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -58,12 +59,12 @@ ms.lasthandoff: 10/31/2017
   
 |||  
 |-|-|  
-|**Namespace**|http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel|  
+|**名前空間**|http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel|  
 |**スキーマ名**|SharePoint プロジェクト項目のスキーマ|  
 |**検証ファイル**|ProjectItemModelSchema.xsd|  
-|**空にすることができます。**|いいえ|  
+|**空にすることができます。**|×|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint プロジェクト項目スキーマのリファレンス](../sharepoint/sharepoint-project-item-schema-reference.md)  
   
   

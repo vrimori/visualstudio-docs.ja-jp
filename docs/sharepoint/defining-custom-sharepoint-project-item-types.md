@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 980712e717df294a4d390eb66ed2f1740ba2c3f4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: e627d78e5c040614c29e7503cd7efab728b02bfa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-custom-sharepoint-project-item-types"></a>SharePoint プロジェクト項目の種類の定義
   新しい SharePoint プロジェクト項目の種類を作成するときに、新しい SharePoint プロジェクト項目の種類を定義します。 たとえば、Visual Studio では、フィールドの追加または SharePoint サイトにカスタム アクションの SharePoint プロジェクト項目は含まれません。 SharePoint プロジェクト項目のフィールド、カスタム アクション、またはその他の種類の SharePoint コンポーネントを作成するための独自の型を定義することができます。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/31/2017
   
  プロジェクト項目の種類の特定のインスタンスにアクセスするのいずれかの処理、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents>のイベント、 *projectItemTypeDefinition*の実装でのパラメーター、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A>メソッドです。 たとえば、調べるには、カスタム型のプロジェクト アイテムをプロジェクトに追加するときに、処理、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemAdded>イベント。 詳細については、次を参照してください。[する方法: SharePoint プロジェクト項目の種類を定義する](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: SharePoint プロジェクト項目の種類の定義](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)   
  [方法: カスタム SharePoint プロジェクト項目の種類にプロパティを追加](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md)   
  [方法: カスタム SharePoint プロジェクト項目の種類へのショートカット メニュー項目の追加](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type.md)   

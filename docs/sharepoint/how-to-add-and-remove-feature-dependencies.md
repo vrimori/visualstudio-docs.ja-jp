@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d758c5d4f410881989492f64dd7a7e5b8dc73804
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 41fbe935bb6bde5a57e6277ffcf5e357cc53a391
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-and-remove-feature-dependencies"></a>方法: フィーチャーの依存関係を追加および削除する
   SharePoint の機能は、機能やデータの他の機能によって異なります。 このような場合は、これら他の機能を機能の依存関係としてマークできます。 これにより、SharePoint サーバーにより、機能をアクティブ化する前に、依存する機能がアクティブ化されます。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/31/2017
   
 1.  フィーチャー デザイナーで、展開、**機能のアクティブ化依存関係** ノードを削除して、順に選択する機能の名前を選択、**削除**ボタンをクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint フィーチャーの作成](../sharepoint/creating-sharepoint-features.md)   
  [方法: SharePoint フィーチャーをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md)   
  [方法: SharePoint フィーチャーの項目を追加および削除する](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md)  

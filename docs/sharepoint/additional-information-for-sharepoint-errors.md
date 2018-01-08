@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4323bb31cb1b63e26c4964bb8e1ce71f010a249e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 55151999b3fb0576eb71a1f112bb4c4069accba5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="additional-information-for-sharepoint-errors"></a>SharePoint のエラーに関する追加情報
   トラブルシューティングに役立つことができます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint ツールのエラーや警告のトラブルシューティングのトピックと、Microsoft Developer Network (MSDN) のパブリック フォーラム。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/31/2017
   
  必要な回答が見つからない場合は、マイクロソフト製品サポート サービスに連絡またはサポート技術情報の記事を検索などのオンライン サポート オプションを表示できます。 詳細については、次を参照してください。、 [Microsoft ヘルプとサポート](http://go.microsoft.com/fwlink/?LinkID=155371)ページ。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
   
   

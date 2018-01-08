@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: c9871a767ae8e2a9c77edecda19c986c4ee85f26
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: 4a93b60cfac2bbc727fbc2a7b4054c4e7b8e3dce
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="use-models-in-your-development-process"></a>開発プロセス内でのモデルの使用
 Visual Studio では、システム、アプリケーション、またはコンポーネントについて理解し、変更するためのモデルを使用することができます。 モデルは、システムが動作する世界を視覚化できるようにして、ユーザーのニーズを明確化し、システムのアーキテクチャを定義し、コードを分析し、コードが要件を満たしていることを確認できるようにします。 参照してください[Channel 9 ビデオ: モデリングによるアーキテクチャの改善](http://go.microsoft.com/fwlink/?LinkID=252078)です。  
@@ -131,7 +132,7 @@ Visual Studio では、システム、アプリケーション、またはコン
 |**ブログ**|[Visual Studio ALM + Team Foundation Server のブログ](http://go.microsoft.com/fwlink/?LinkID=201340)|  
 |**技術記事とジャーナル**|[MSDN アーキテクチャ センター](http://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Visual Studio アーキテクチャ ツーリング ガイダンス](../modeling/visual-studio-architecture-tooling-guidance.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アジャイル開発モデルを使用してください。](http://msdn.microsoft.com/en-us/592ac27c-3d3e-454a-9c38-b76658ed137f)   
  [アプリのモデルを作成します。](../modeling/create-models-for-your-app.md)   
  [ユーザー要件のモデリング](../modeling/model-user-requirements.md)   

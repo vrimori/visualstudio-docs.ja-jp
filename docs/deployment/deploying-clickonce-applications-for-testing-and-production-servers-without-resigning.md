@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 91261e0bb70092861f216333bd73a11dc07790ba
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: ec7265f91d5c202d5885b7f1994aa6f037d6d2ab
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-clickonce-applications-for-testing-and-production-servers-without-resigning"></a>再署名を行わない ClickOnce アプリケーションの配置 (テスト サーバーおよび運用サーバー)
 このトピックでは、clickonce マニフェストにバージョン 3.5 を再署名したり、ClickOnce を変更せずに複数のネットワークの場所からの ClickOnce アプリケーションの展開を有効にする、.NET Framework で導入された新機能について説明します。  
@@ -64,6 +65,6 @@ ms.lasthandoff: 10/27/2017
 ## <a name="creating-a-deployment"></a>展開を作成します。  
  別のネットワークの場所から展開可能な展開を作成する手順のガイダンスについては、次を参照してください[チュートリアル: ClickOnce アプリケーションをはありません必要な設定を指定の手動展開とその保持のブランド化情報。](../deployment/walkthrough-manually-deploying-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information.md).  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Mage.exe (マニフェストの生成および編集ツール)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)   
  [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)

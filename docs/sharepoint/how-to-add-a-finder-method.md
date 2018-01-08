@@ -24,11 +24,12 @@ caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f0aa8888456d75554b2270058b844c7f76cb63fb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: b7594c650c1492b16e784ec649de6e66d1e6ec33
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-finder-method"></a>方法: Finder メソッドを追加する
   Web パーツまたはリスト内のエンティティの一覧を表示するビジネス データ接続サービスを有効にする必要がありますを作成する、 *Finder*メソッドです。 Finder メソッドは、エンティティのインスタンスのコレクションを返す特殊な方法です。 詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/31/2017
      [!code-csharp[SP_BDC#2](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#2)]
      [!code-vb[SP_BDC#2](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#2)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   
  [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [方法: Specificfinder メソッドを追加します。](../sharepoint/how-to-add-a-specific-finder-method.md)   

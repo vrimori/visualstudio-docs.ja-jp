@@ -16,11 +16,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 0c83367d383ab72194e5f83609b0f93d8602fdcd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: 865f575aefedb5813a72d7a0bb2024bc85313db0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-new-data-sources"></a>新しいデータ ソースを追加します。
 Visual Studio での .NET data tools のコンテキストで用語*データ ソース*データ ストアに接続し、.NET アプリケーションにデータを公開する .NET オブジェクトを参照します。 Visual Studio のデザイナーにドラッグしてから、データベース オブジェクトをドロップすると、フォームにデータをバインドする定型コードを生成するデータ ソースの出力を使用できる、**データソース**ウィンドウです。 この種類のデータ ソースを指定できます。  
@@ -96,5 +97,5 @@ Visual Studio での .NET data tools のコンテキストで用語*データ �
 ## <a name="data-source-for-a-sharepoint-list"></a>SharePoint リストのデータ ソース  
  実行して、SharePoint リストから、データ ソースを作成することができます、**データ ソース構成ウィザード**を選択して、 **SharePoint**データ ソースの種類。 SharePoint を使用してデータを公開する[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]では、サービスからデータ ソースの作成と同じ SharePoint データ ソースを作成するため、します。 選択すると、 **SharePoint**内の項目、**データ ソース構成ウィザード**開きます、**サービス参照の追加**ダイアログ ボックスで、SharePoint データ サービスに接続します。SharePoint サーバーをポイントします。  これには、SharePoint SDK が必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [.NET 用の Visual Studio データ ツール](../data-tools/visual-studio-data-tools-for-dotnet.md)

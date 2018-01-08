@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 65c67972dddedcd05338d793883b2dcba0789d48
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: d5692195f340ce347df0bc6f8ad2d60225f24e6d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-sharepoint-deployment-commands"></a>方法: SharePoint の配置コマンドを設定する
   配置前や配置後のコマンドを設定して、展開プロセスをカスタマイズできます。 これらのコマンドは、Visual Studio からの SharePoint ソリューションをデバッグするときに、その他の展開操作の前後を実行します。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/31/2017
   
      たとえば、ディレクトリの内容の一覧を表示して、展開が完了した後、次のように入力します。 **dir**です。 MSBuild 変数を使用して、ビルドのディレクトリから、アセンブリをコピーする、入力**コピー $ (targetpath) c:\DeploymentDirectory**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

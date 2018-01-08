@@ -14,11 +14,12 @@ caps.latest.revision: "47"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 07b1e70775638d88e67280f2f914412ef4271a48
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 26903dad4c1218d0d9ba389322351eb629f6f31a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>チュートリアル: 生成済みディレクティブ プロセッサへのホストの接続
 テキスト テンプレートを処理する、独自のホストを記述することができます。 基本的なカスタム ホストはではデモンストレーション[チュートリアル: カスタム テキスト テンプレート ホストの作成](../modeling/walkthrough-creating-a-custom-text-template-host.md)です。 複数の出力ファイルを生成するなどの機能を追加するには、そのホストを拡張できます。  
@@ -359,5 +360,5 @@ ms.lasthandoff: 10/27/2017
     Linked from: ExampleElement1  
     ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: カスタム テキスト テンプレート ホストの作成](../modeling/walkthrough-creating-a-custom-text-template-host.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 53dbaa806ae3b65314d5aeed8df9338905a946cc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 03adaa74feacc82c5f63c1930f7dad63cc931433
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-localize-a-feature"></a>方法: フィーチャーをローカライズする
   フィーチャーのタイトルと説明は、既定では、ハード コーディングされた文字列値を使用します。 フィーチャーのタイトルと説明をローカライズするには、ローカライズされたリソースを参照する式で、文字列を置き換えます。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/31/2017
   
      アプリケーションでは、ローカライズされたフィーチャーのタイトルと説明が表示されます。 ローカライズされたリソースを表示するには、リソース ファイルのカルチャに対応する Language Pack が SharePoint サーバーにインストールされている必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションのローカライズ](../sharepoint/localizing-sharepoint-solutions.md)   
  [方法: リソース ファイルを追加](../sharepoint/how-to-add-a-resource-file.md)   
  [方法: ASPX マークアップのローカライズ](../sharepoint/how-to-localize-aspx-markup.md)   

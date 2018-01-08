@@ -21,11 +21,12 @@ caps.latest.revision: "47"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 782b42c83f9557b6567849e4d03c7ad9e221da49
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 90f97a36b3293ad2e8f3c6ab046b500ab30d4c83
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-expose-code-to-vba-in-a-visual-basic-project"></a>方法 : Visual Basic プロジェクトのコードを VBA に公開する
   内のコードを公開することができます、[!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]プロジェクトの Visual Basic for Applications (VBA) コードする場合は相互にやり取りするコードの 2 つの種類。  
@@ -121,7 +122,7 @@ ms.lasthandoff: 10/31/2017
   
 9. プロジェクトをビルドします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md)   
