@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 850e4b2ef6d455bb141827fa125c4c7c6860b652
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 9727b6fcbe3c552273ca521e8fd14ab5e5181eb7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="intellisense-hosting"></a>IntelliSense をホストしています。
 Visual Studio では IntelliSense をホストします。 ホストにより IntellSense IntelliSense を Visual Studio テキスト エディターによってホストされていないコードを提供します。  
@@ -49,5 +50,5 @@ Visual Studio では IntelliSense をホストします。 ホストにより In
 #### <a name="ivsintellisensecompletor"></a>IVsIntellisenseCompletor  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseCompletor>インターフェイスは、統合開発環境 (IDE) で使用される標準の補完ウィンドウの共同作成可能なバージョンです。 どの<xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost>インターフェイスがこの completor インターフェイスを使用して IntelliSense を簡単に実装できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.TextManager.Interop>

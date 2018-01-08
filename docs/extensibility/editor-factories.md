@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0bfef7e641bc8f7e041242ce28110845855c2a65
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e0fb464d3eb9d7b39b853593c9458fe800296321
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="editor-factories"></a>エディター ファクトリ
 エディター ファクトリは、エディターのオブジェクトを作成し、物理ビューと呼ばれる、ウィンドウ フレームに格納します。 これは、ドキュメント データおよびエディターおよびデザイナーを作成するために必要なドキュメント ビュー オブジェクトを作成します。 Visual Studio コア エディターと任意の標準エディターを作成するには、エディター ファクトリが必要です。 カスタム エディターは、エディター ファクトリのオプションで作成できます。  
@@ -53,6 +54,6 @@ ms.lasthandoff: 10/31/2017
   
 4.  場合にエディター ファクトリを使用して、Visual Studio によって呼び出す<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>ドキュメント データ オブジェクトとドキュメント ビュー オブジェクトの両方を返す、Visual Studio ドキュメント ウィンドウを作成、ドキュメント ビュー オブジェクトを配置し、実行中の文書に入力ドキュメント データ オブジェクトのテーブル (RDT)。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>   
  [ドキュメント テーブルの実行](../extensibility/internals/running-document-table.md)

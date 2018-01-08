@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9d1462f08f6835777e5dd5aa5d1f76d04dfb5c45
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c90fa359d37d59171e59e7853e2c1c38cdd46dd0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumdebugprograms2next"></a>IEnumDebugPrograms2::Next
 列挙体から次の要素のセットを返します。  
@@ -54,6 +55,6 @@ int Next(
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`です。 返します`S_FALSE`要求された要素数より少ないは返されませんでした。 それ以外の場合、エラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

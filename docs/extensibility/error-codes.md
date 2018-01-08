@@ -16,16 +16,17 @@ caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 50d05e529a3202f59df53801728b40fee1c68f40
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 13eff6aca9470e88be788fe3fcb625fecc32c2c2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="error-codes"></a>エラー コード
 ソース管理プラグイン API 関数がエラーを返したときに、次のエラー コードのいずれかに必要です。 すべてのエラーが警告または情報エラー コードは正の値に負の場合は、成功した場合は 0 です。  
   
-|エラー コード|値|説明|  
+|エラー コード|[値]|説明|  
 |----------------|-----------|-----------------|  
 |`SCC_I_SHARESUBPROJOK`|7|2 つの手順でソース管理からファイルを追加するプラグインをサポートします。 詳細については、次を参照してください。 [SccSetOption](../extensibility/sccsetoption-function.md)です。|  
 |`SCC_I_FILEDIFFERS`|6|ローカル ファイルとは異なるソース管理データベース内のファイル (たとえば、 [SccDiff](../extensibility/sccdiff-function.md)この値を返す可能性があります)。|  
@@ -82,5 +83,5 @@ IS_SCC_WARNING(rtn) (((rtn) > 0) ? TRUE : FALSE)
   
  ソース管理プラグインすることは避けて、ファイルの権限に関する前提条件作業フォルダー内でも、プラグインがマークされている場合、ファイル読み取り専用いくつかの操作中にします。 作業フォルダー内のファイルは、移動、削除、および、プラグインの制御外で変更することができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 689fac97264aad3d301095cffed07b825c723474
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c5f230da41efa8dd2fa522a5f86ae1402991b2cc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="elements-of-a-project-model"></a>プロジェクト モデルの要素
 インターフェイスおよび実装内のすべてのプロジェクトの[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]基本的な構造を共有: プロジェクトの種類のプロジェクトのモデル。 VSPackage を開発するには、プロジェクト モデルでは、IDE によって提供されるグローバルの機能と共に動作および設計に関する決定に準拠したオブジェクトを作成します。 プロジェクト項目を保存する方法を制御するなどが制御できない通知ファイルを永続化する必要があります。 ユーザーが開いているプロジェクト アイテムにフォーカスが移ります、選択**を保存**で、**ファイル**メニューで、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]メニュー バーで、プロジェクトの種類のコードする必要があります IDE からコマンドを途中受信、ファイルを保持してとファイルが不要になった変更されたことを IDE に戻るには、通知を送信します。  
@@ -44,7 +45,7 @@ Project モデル
   
  プロジェクトは、コマンドをサポートし、したがってを実装する必要があります、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>コマンドがコマンド コンテキストの Guid をルーティングに参加するインターフェイスです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チェックリスト: 新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)   
  [ビルド内にありません: HierUtil7 プロジェクト クラスを使用して、プロジェクトの種類 (C++) を実装するには](http://msdn.microsoft.com/en-us/a5c16a09-94a2-46ef-87b5-35b815e2f346)   
  [プロジェクト モデルのコア コンポーネント](../../extensibility/internals/project-model-core-components.md)   

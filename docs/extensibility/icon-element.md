@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 20e8309e0052f6aa92a0069f0c2138880a7742de
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2787798afe9554601d44a965ae3f12d5ebeab8bb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icon-element"></a>Icon 要素
 アイコンのタグの guid 属性は、定義済みのビットマップの guid です。  Id 属性は、ビットマップ ストリップのスロットを選択します。 この要素は省略可能です。  この要素を省略した場合の値**guidOfficeIcon:msotcidNoIcon**暗黙的に指定されます。  
@@ -37,8 +38,8 @@ ms.lasthandoff: 10/31/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|guid|必須です。 定義済みのビットマップの guid です。|  
-|ID|必須です。 ビットマップ ストリップのスロットを選択します。|  
+|guid|必須。 定義済みのビットマップの guid です。|  
+|ID|必須。 ビットマップ ストリップのスロットを選択します。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -52,5 +53,5 @@ ms.lasthandoff: 10/31/2017
 |-------------|-----------------|  
 |[Buttons 要素](../extensibility/buttons-element.md)||  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -11,11 +11,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1bcf34f730411589624075bde4ace0b5457e07a7
-ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
+ms.workload: vssdk
+ms.openlocfilehash: c13a899e5c678040d6ffe5b1996fd3ee96e9cc09
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>方法: 非同期の Visual Studio サービスを提供
 UI スレッドをブロックすることがなくサービスを取得する場合は、非同期のサービスを作成し、バック グラウンド スレッドでパッケージを読み込む必要があります。 この目的で使用することができます、<xref:Microsoft.VisualStudio.Shell.AsyncPackage>ではなく、<xref:Microsoft.VisualStudio.Shell.Package>と非同期のパッケージの特別な非同期メソッドでサービスの追加  
@@ -224,5 +225,5 @@ public sealed class TestAsyncPackage : AsyncPackage
   
 8.  ソリューションをビルドし、デバッグを開始します。 Visual Studio の実験用インスタンスが表示されたらに移動、**ツール**メニューおよび [検索対象]、**呼び出す TestAsyncCommand**メニュー項目。 をクリックすると、TextWriterService は指定したファイルに書き込みます。 (必要はありませんを開くには、ソリューションを読み込むパッケージを引き起こしますもコマンドを実行します。)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サービスの使用と提供](../extensibility/using-and-providing-services.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f61ee4c561e32f17afa1b53cbf3bd3bf982feeb4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: cf57b24d81e193294f5ab90f71af07b229ec5839
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-undo-management"></a>方法: 元に戻す管理の実装
 元に戻す管理に使用されるプライマリ インターフェイスは<xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager>は環境によって実装されています。 元に戻す管理をサポートするには、元に戻す単位を実装する (つまり、 <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit>、複数の個別のステップを含むことができます。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  元に戻すマネージャー オブジェクトは、テキスト エディターに広範囲に使用される、テキスト エディターの特定のサポートがないコンポーネントの一般的な勧めします。 複数レベルの取り消しまたはやり直しをサポートする場合は、このオブジェクトを使用してこれを行うことができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsChangeTrackingUndoManager>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLifetimeControlledObject>   
  [方法: 元に戻すスタックをクリアします](../extensibility/how-to-clear-the-undo-stack.md)

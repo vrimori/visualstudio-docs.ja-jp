@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: af86f2b8daeffeb700b619c4ba0d9cbb00700dd8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 612017888c78f0994a83a10e3628fc10b667f8d0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="roadmap-for-extending-the-debugger"></a>デバッガーを拡張するためのロードマップ
 このドキュメントを拡張するためのガイドとリファレンスの情報を提供、[!INCLUDE[vs_current_short](../../code-quality/includes/vs_current_short_md.md)]とデバッガー、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]です。  
@@ -52,5 +53,5 @@ ms.lasthandoff: 10/31/2017
   
      [サンプル](../../extensibility/debugger/visual-studio-debugging-samples.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [はじめに](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)

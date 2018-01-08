@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 06b6dc2fab4158f36126b6509909dd0db6fd7125
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ea9c2ebd295fe463192c50da402240e0b1df1304
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="checklist-creating-new-project-types"></a>チェックリスト: 新しいプロジェクトの種類を作成します。
 新しいプロジェクトの種類を作成するいくつかのタスクを完了する必要があります。 次のチェックリストでは、それらのタスクにガイドを提供します。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/31/2017
   
 8.  Vspackage をインストールするための Microsoft インストーラー (.msi) ファイルを作成します。 詳細については、次を参照してください。 [Windows インストーラーで Vspackage をインストールする](../../extensibility/internals/installing-vspackages-with-windows-installer.md)、 [、プロジェクトの種類を登録する](../../extensibility/internals/registering-a-project-type.md)、および[Vspackage](../../extensibility/internals/vspackages.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio での階層](../../extensibility/internals/hierarchies-in-visual-studio.md)   
  [プロジェクトの種類を作成する場合](../../extensibility/internals/when-to-create-project-types.md)   
  [プロジェクト タイプの作成](../../extensibility/internals/creating-project-types.md)

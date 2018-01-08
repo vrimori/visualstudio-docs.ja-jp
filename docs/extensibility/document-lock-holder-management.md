@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d4bd487bd3f5a6978af9f79eb9e0a00866b5df52
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: df782cd974adcd589824e8a47cd0249842bd8d48
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="document-lock-holder-management"></a>ドキュメントのロック所有者の管理
 実行しているドキュメント テーブル (RDT) は、開いているドキュメントとがあるすべての編集ロックの数を保持します。 編集しているときにプログラムでバック グラウンドでユーザーがドキュメント ウィンドウで開いているドキュメントが表示されることがなく、RDT 内のドキュメントに対する編集ロックを配置できます。 この機能はグラフィカル ユーザー インターフェイスからの複数のファイルを変更するデザイナーでよく使用されます。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 10/31/2017
   
  何度も UI デザイナー コード ファイルをプログラムで変更するは、1 つ以上のファイルに変更を加えます。 このような場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell2.SaveItemsViaDlg%2A>メソッドの 1 つまたは複数のドキュメントの保存を処理する、**を次の項目への変更を保存するか。**  ダイアログ ボックス。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [実行中のドキュメント テーブル](../extensibility/internals/running-document-table.md)   
  [ドキュメント テーブルの保存と実行](../extensibility/internals/persistence-and-the-running-document-table.md)

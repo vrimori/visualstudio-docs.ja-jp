@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2e590d6fff715aae33ee757460f2b0ba3df31e6e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5f7b7440ff2f42eba1d138872071d4e51d2402c1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-language-service-and-editor-extensions"></a>言語サービスとエディター拡張機能の概要
 エディターの拡張機能を使用して、独自のプログラミング言語または任意のコンテンツ タイプをアウトライン表示、かっこの照合、IntelliSense、および電球などの言語サービス機能を追加することができます。 Visual Studio のエディター、色分け、余白、修飾、および他のビジュアル要素のテキストなどの動作と外観をカスタマイズすることもできます。 また、コンテンツの種類を定義でき、コンテンツが表示されるテキスト ビューの動作と外観を指定できます。  
@@ -88,5 +89,5 @@ ms.lasthandoff: 10/31/2017
   
 -   [チュートリアル: エディター拡張機能でショートカット キーを使用する](../extensibility/walkthrough-using-a-shortcut-key-with-an-editor-extension.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [言語サービスとエディターの拡張ポイント](../extensibility/language-service-and-editor-extension-points.md)

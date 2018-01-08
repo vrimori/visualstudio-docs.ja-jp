@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a90a5cfdc521de0716d81b07529822f69289b605
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c1104ebfbd066ad438262fcca0186acfb3854dbd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="createexpinstance-utility"></a>CreateExpInstance ユーティリティ
 ユーティリティを使用して、CreateExpInstance 作成、リセット、または Visual Studio の実験用インスタンスを削除します。 実験用インスタンスを使用して、デバッグし、基になる製品を変更せずに Visual Studio 拡張機能をテストすることができます。  
@@ -62,5 +63,5 @@ CreateExpInstance.exe [/Create | /Reset | /Clean] /VSInstance=VsInstance /RootSu
   
  **CreateExpInstance.exe/Reset/vsinstance=14.0 = 14.0/RootSuffix = Exp**  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [VSPackage](../../extensibility/internals/vspackages.md)

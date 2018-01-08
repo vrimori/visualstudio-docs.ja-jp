@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a5e6f4caf8466100763b6a4ae11f6760a3d4c655
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3b450a55de29e112d158cb783ad366eb4fbcaca7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ide-defined-commands-for-extending-project-systems"></a>プロジェクト システムを拡張するための IDE 定義のコマンド
 プロジェクト システムを拡張する場合は、コマンドを使用してコマンドによって提供されるグループ、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE です。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/31/2017
 |IDG_VS_CTXT_PROJECT_TRANSFER|切り取り、コマンドでは、コピーし、貼り付けの操作です。|  
 |IDG_VS_CTXT_PROJECT_PROPERTIES|アクセスを提供するコマンド、**プロジェクト プロパティ** ダイアログ ボックス。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Vspackage がユーザー インターフェイス要素を追加する方法](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [MenuCommand と OleMenuCommands](../../extensibility/menucommands-vs-olemenucommands.md)   
  [再利用可能なボタンのグループの作成](../../extensibility/creating-reusable-groups-of-buttons.md)

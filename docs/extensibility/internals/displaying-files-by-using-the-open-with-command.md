@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ed8a19ce0cfb6a7936d61ff7a5855498d2010359
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a1631632a2ceb66380d1d0c41e54b5a4244a31a3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="displaying-files-by-using-the-open-with-command"></a>コマンドで開く を使用してファイルを表示します。
 プロジェクトを表示するための IDE を求めることができます、**ファイルを開く** ダイアログ ボックス。 この要求は、標準のエディターの選択を含むファイルを開くかどうかを求めるメッセージを表示します。 次の手順では、このプロセスについて説明します。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  ユーザーがから項目を選択するとすぐに、**ファイルを開く**ダイアログ ボックスで、IDE が呼び出すことによってドキュメントを開く<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>メソッドです。 詳細については、次を参照してください。[する方法: 開いている標準エディター](../../extensibility/how-to-open-standard-editors.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [開くと、プロジェクト項目の保存](../../extensibility/internals/opening-and-saving-project-items.md)   
  [ファイルを開くコマンドを使用してファイルを表示します。](../../extensibility/internals/displaying-files-by-using-the-open-file-command.md)   
  [方法: 標準のエディターを開く](../../extensibility/how-to-open-standard-editors.md)

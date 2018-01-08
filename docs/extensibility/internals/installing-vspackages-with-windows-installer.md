@@ -15,11 +15,12 @@ caps.latest.revision: "30"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5061a52de32f699bbe234f729bb4f852ee966933
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a9f4d45c3fccebed9febc2ea722981f597896ace
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="installing-vspackages-with-windows-installer"></a>Windows インストーラーで Vspackage をインストールします。
 VSPackage を統合する[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]単ユーザーのコンピューターにファイルのコピーが必要です。 VSPackage とその依存ファイルをインストールし、登録およびにそれらを統合する必要があります、VSPackage のインストーラー[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 VSPackage がのアイコンを表示するなどの統合機能の活用、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]スプラッシュ スクリーンとについて ダイアログ ボックス。  

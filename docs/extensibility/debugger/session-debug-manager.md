@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8100c43578c11ae73f26764df74aa17caccc3611
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7d7acd147fd8d2b73b2172900baf7e1f49808e9a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="session-debug-manager"></a>セッションのデバッグ マネージャー
 セッションのデバッグ マネージャー (SDM) は、任意の数の任意の数のマシンの数にかかわらず複数のプロセスでプログラムをデバッグするデバッグ エンジン (DE) を管理します。 マルチプレクサー デバッグ エンジンだけでなく、SDM は IDE に、デバッグ セッションの統一されたビューを提供します。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/31/2017
   
  現在のプログラム、スレッド、またはスタック フレーム、SDM を追跡しません。 プロセス、プログラム、およびスレッド情報が特定のデバッグ イベントと共に SDM に送信します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッグ エンジン](../../extensibility/debugger/debug-engine.md)   
  [デバッガー コンポーネント](../../extensibility/debugger/debugger-components.md)   
  [デバッガー コンテキスト](../../extensibility/debugger/debugger-contexts.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 13f4d254027fe168018fe597f772518bd8ac6b94
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 923d95256a3ab0e63bdcf35c7ae38d70a117fa02
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contributing-to-the-add-new-item-dialog-box"></a>原因となっている、新しい項目 ダイアログ ボックスを追加
 プロジェクトのサブタイプが項目の完全な新しいディレクトリを指定できます、**新しい項目の追加** ダイアログ ボックスを登録して**項目の追加**下のテンプレート、`Projects`レジストリ サブキー。  
@@ -43,6 +44,6 @@ ms.lasthandoff: 10/31/2017
   
  内の項目をフィルター処理することができます、**新しい項目の追加**を実装してダイアログ ボックス、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg>プロジェクト サブタイプ アグリゲーター オブジェクトのインターフェイスです。 たとえば、集計することによって、データベース プロジェクトを実装するプロジェクト サブタイプ、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]プロジェクトで、フィルター処理できます、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]から特定のアイテム、**新しい項目の追加** ダイアログ ボックスで、フィルター処理を実装することによってでは有効にする、追加できますプロジェクトの特定の項目をサポートすることによりデータベース`VSHPROPID_ AddItemTemplatesGuid`で<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>です。 詳細については、フィルター処理とする項目の追加、**新しい項目の追加**ダイアログ ボックスを参照してください[新しい項目の追加 ダイアログ ボックスに項目を追加する](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>   
  [プロジェクトの拡張に通常使用されるオブジェクトの CATID](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "26"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7032f3663be7df1a06fa4dc16d4f4473e4666cfc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 09ea283b17a980ff9be1fae54ecc8b24912b70ad
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-inclusion-list-security"></a>方法: 信頼のリストのセキュリティを構成する
   管理者権限を付与する場合は、構成、[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]信頼プロンプトのコントロールにエンドユーザーが信頼のリストに、信頼の決定を保存することによって、Office ソリューションをインストールするオプションを指定されたかどうか。 信頼のリストについては、次を参照してください。[リストによる Office ソリューションを信頼する](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)です。  
@@ -56,10 +57,10 @@ ms.lasthandoff: 10/31/2017
   
 3.  次のサブキーとして追加**文字列値**がまだ存在しない、関連付けられている値を持つ場合は、します。  
   
-    |文字列値のサブキー|値|  
+    |文字列値のサブキー|[値]|  
     |-------------------------|-----------|  
     |**インターネット**|**AuthenticodeRequired**|  
-    |**UntrustedSites**|**無効になっています。**|  
+    |**UntrustedSites**|**無効**|  
     |**MyComputer**|**有効**|  
     |**ローカル イントラネット**|**有効**|  
     |**しません**|**有効**|  
@@ -115,9 +116,9 @@ ms.lasthandoff: 10/31/2017
   
 3.  次のサブキーとして追加**文字列値**がまだ存在しない、関連付けられている値を持つ場合は、します。  
   
-    |文字列値のサブキー|値|  
+    |文字列値のサブキー|[値]|  
     |-------------------------|-----------|  
-    |**UntrustedSites**|**無効になっています。**|  
+    |**UntrustedSites**|**無効**|  
     |**インターネット**|**AuthenticodeRequired**|  
     |**MyComputer**|**AuthenticodeRequired**|  
     |**ローカル イントラネット**|**AuthenticodeRequired**|  
@@ -172,13 +173,13 @@ ms.lasthandoff: 10/31/2017
   
 3.  次のサブキーとして追加**文字列値**がまだ存在しない、関連付けられている値を持つ場合は、します。  
   
-    |文字列値のサブキー|値|  
+    |文字列値のサブキー|[値]|  
     |-------------------------|-----------|  
-    |**UntrustedSites**|**無効になっています。**|  
-    |**インターネット**|**無効になっています。**|  
-    |**MyComputer**|**無効になっています。**|  
-    |**ローカル イントラネット**|**無効になっています。**|  
-    |**しません**|**無効になっています。**|  
+    |**UntrustedSites**|**無効**|  
+    |**インターネット**|**無効**|  
+    |**MyComputer**|**無効**|  
+    |**ローカル イントラネット**|**無効**|  
+    |**しません**|**無効**|  
   
 #### <a name="to-disable-the-inclusion-list-programmatically"></a>信頼のリストをプログラムで無効にするには  
   
@@ -211,7 +212,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  アプリケーションをビルドして実行します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [信頼のリストを使用して Office ソリューションを信頼します。](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)   
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)  
   

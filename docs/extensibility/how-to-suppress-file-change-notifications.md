@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 88f7d2bf3a3351999175425366cf421c3b5ce0b3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 209006129bcb2cfaaf88233768df1d9597cd09a5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-suppress-file-change-notifications"></a>方法: ファイル変更通知を抑制します。
 メッセージとダイアログ ボックスが表示テキスト バッファーを表す物理的なファイルが変更されると**を次の項目への変更を保存するか。** これは、ファイル変更通知と呼ばれます。 多くの変更に場合のファイルへ、ただし、このダイアログ ボックスを繰り返し表示はすぐに面倒な場合。  

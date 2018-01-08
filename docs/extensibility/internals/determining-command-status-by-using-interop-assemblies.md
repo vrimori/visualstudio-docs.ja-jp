@@ -15,11 +15,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3cde6ae841271622e0d538d679991288c111095e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5b7b695288bec904e1e576f9f566944613c97f31
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="determining-command-status-by-using-interop-assemblies"></a>相互運用機能アセンブリを使用してコマンドのステータスを決定します。
 VSPackage 必要がありますの追跡を処理できるコマンドの状態。 ときに VSPackage 内で処理コマンドを有効または無効になります、環境を特定できません。 コマンドの状態について、環境を通知するために VSPackage の責任は、たとえば、[全般] の状態などのコマンド**切り取り**、**コピー**、および**貼り付け**です。  
@@ -36,6 +37,6 @@ VSPackage 必要がありますの追跡を処理できるコマンドの状態�
 ## <a name="status-notification-failure"></a>状態の通知エラー  
  VSPackage のコマンドの状態変更の環境に通知するエラーは、不整合な状態に UI を配置できます。 メニューまたはコンテキスト メニュー コマンドのいずれかのことができますに配置すること、ツールバーで、ユーザーが注意してください。 そのため、メニューまたはコンテキスト メニューを開いたときにのみ、UI の更新は不十分です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Vspackage がユーザー インターフェイス要素を追加する方法](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [実装](../../extensibility/internals/command-implementation.md)

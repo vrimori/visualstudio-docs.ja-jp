@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ae5c64d0272b998d27a9eb5753c04ae764c3af8f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c5d8af96857fa3e3c02ce8ea29711eaffbb532e9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-the-built-in-fonts-and-color-scheme"></a>方法: 組み込みのフォントと配色へのアクセス
 Visual Studio 統合開発環境 (IDE) では、エディター ウィンドウに関連付けられているフォントおよび色のスキームがします。 このスキームを通じてアクセスできる、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>インターフェイスです。  
@@ -58,7 +59,7 @@ Visual Studio 統合開発環境 (IDE) では、エディター ウィンドウ�
   
 2.  ストック フォントと配色 4 つの値を使用するレジストリを作成します。  
   
-    |名前|型|データ|説明|  
+    |name|型|データ|説明|  
     |----------|----------|----------|-----------------|  
     |カテゴリ|REG_SZ|GUID|ストック フォントおよびカラー スキームを格納するカテゴリを識別する任意の GUID です。|  
     |Package|REG_SZ|GUID|{F5E7E71D-1401-11D1-883B-0000F87579D2}<br /><br /> この GUID は、既定のフォントと色の構成を使用するすべての Vspackage を使用します。|  
@@ -98,7 +99,7 @@ if (spPropCatContainer != NULL){
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [フォントおよび色を使用します。](../extensibility/using-fonts-and-colors.md)   
  [フォントとテキスト彩色の色の情報を取得します。](../extensibility/getting-font-and-color-information-for-text-colorization.md)   
  [ストアドのフォントおよび色の設定にアクセスします。](../extensibility/accessing-stored-font-and-color-settings.md)   

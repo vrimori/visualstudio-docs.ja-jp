@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0201d2f282365a028b6251324b07276c995621ba
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1d0c9e684312468011f63bdfbb72d1cdadba6b08
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-project-and-project-item-templates"></a>プロジェクトとプロジェクト項目テンプレートを追加します。
 独自のプロジェクトの種類を作成する場合は、標準を使用して新しいプロジェクトとプロジェクト アイテムを追加するサポートを指定する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]開発環境 (IDE) ダイアログ ボックスを統合します。 次のトピックでは、プロジェクトとプロジェクト アイテムを追加するためのさまざまな手法について説明します。  

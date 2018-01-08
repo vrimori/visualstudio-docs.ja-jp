@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 84b8e517efa7c5c4aaeba4bf6e19dc23b0615eda
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f2b3ec92ce76a3218c646c51ccb28d99322baf93
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="symbol-provider-interfaces"></a>シンボル プロバイダー インターフェイス
 シンボル処理インターフェイスは、次のとおり、[!INCLUDE[vsipsdk](../../../extensibility/includes/vsipsdk_md.md)]です。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="discussion"></a>説明  
  これらのインターフェイスは、中断モード中に呼び出し履歴内の変数を評価に使用されます。 これらは、共通言語ランタイムのシンボル プロバイダー (SP) に対してのみ実装されます。  
   
-|インターフェイス|によって実装されます。|説明|  
+|Interface|によって実装されます。|説明|  
 |---------------|--------------------|-----------------|  
 |[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)|SP|項目のアドレスを表します。|  
 |[IDebugAddress2](../../../extensibility/debugger/reference/idebugaddress2.md)|SP|プロセス ID にアクセスするため、項目のアドレスを表します。|  
@@ -61,5 +62,5 @@ ms.lasthandoff: 10/31/2017
 |[IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)|SP|コレクションを表します[IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)オブジェクト。|  
 |[IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)|SP|コレクションを表します[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [API リファレンス](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0dbbafda528d88f84f9796037faa6587e8789fcc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4da98967ac8841b0bf91d30aa3a1dae6c2668d30
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumdebugfieldsgetcount"></a>IEnumDebugFields::GetCount
 このメソッドは、列挙体の要素の数を返します。  
@@ -47,5 +48,5 @@ int GetCount(
 ## <a name="remarks"></a>コメント  
  このメソッドは、実装するのには、[次へ、複製、スキップ]、およびリセット必要がありますを指定する、一般的な列挙の COM インターフェイスの一部ではありません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b435c4e44391bbf477ed94fa96ee382613290530
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 35d33f0c440bce6d83c8a4712f0059d7f51a0ff0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="define-element"></a>要素を定義します。
 シンボルの名前と値のペアを定義します。 このシンボルは、条件付き属性を評価できます。 詳細については、次を参照してください。[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。 参照、[要素をシンボル](../extensibility/symbols-element.md)です。  
@@ -37,9 +38,9 @@ ms.lasthandoff: 10/31/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|name|必須です。 シンボルの名前。<br /><br /> 名前 ="Mode"|  
-|値|必須です。 記号の値です。<br /><br /> 値"Standard"を =|  
-|状態|省略可能です。 詳細については、次を参照してください。[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
+|name|必須。 シンボルの名前。<br /><br /> 名前 ="Mode"|  
+|value|必須。 記号の値です。<br /><br /> 値"Standard"を =|  
+|条件|任意。 詳細については、次を参照してください。[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -57,5 +58,5 @@ ms.lasthandoff: 10/31/2017
 <Define name="MODE" value="Standard"/>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

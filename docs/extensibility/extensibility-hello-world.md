@@ -11,11 +11,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 18a0e18589574c689ebbddbaf28448cf5539ad96
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1b7d695f2211f01ce374ee41404d5ab49abde70a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-your-first-extension-hello-world"></a>最初の拡張機能の作成: Hello World
 
@@ -129,7 +130,7 @@ Visual Studio タイトル バーに「実験用インスタンス」という�
 
 この場合、センターでは、ダイアログは、"Hello World!"が表示される画面の新しいカスタムのコマンドからの出力が表示されます。 メッセージが表示されます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Visual Studio 機能拡張の操作の基礎を理解したところで、詳細については、次に示します。
 

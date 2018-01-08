@@ -15,11 +15,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 93db7526e7d6ba3eccf86e8c9769a1d9e9af3519
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 622c0d4a75289e5025051b339b959a6b0b56442d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-turn-off-compatibility-warnings-for-source-control-plug-ins"></a>方法: ソース管理プラグインの互換性に関する警告をオフにします。
 ソース管理を使用する場合、ユーザーはいくつかの互換性に関する警告を表示可能性があります[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 表示される警告は、ソース管理プラグインの機能に依存し、以下で説明として無効にすることができます。  
@@ -44,5 +45,5 @@ ms.lasthandoff: 10/31/2017
   
      再入をサポートすることをお勧め (`SCC_CAP_REENTRANT`機能) です。 この警告が削除するされます。 ただし、このサポートが可能でない場合、これらのレジストリ エントリを設定できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [機能フラグ](../extensibility/capability-flags.md)

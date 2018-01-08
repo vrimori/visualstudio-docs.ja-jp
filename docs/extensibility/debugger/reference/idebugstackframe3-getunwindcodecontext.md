@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 000cb6be2c2aa15f70784513d3ce8bf929eb982e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 9fb324df233faab6c7fa240697d582531d1438c2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugstackframe3getunwindcodecontext"></a>IDebugStackFrame3::GetUnwindCodeContext
 コードのコンテキストの位置を表す場合は、スタックのアンワインド操作が発生したを返します。  
@@ -47,6 +48,6 @@ int GetUnwindCodeContext(
 ## <a name="remarks"></a>コメント  
  場合でも、このメソッドは、スタック アンワインドの後の場所のコードのコンテキストを返す場合があります、これは必ずしもスタック アンワインドは現在のスタック フレームで実際に発生する可能性が。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

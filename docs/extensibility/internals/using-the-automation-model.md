@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a6251a0d79b28b169e75d1dca3401231a7a30f22
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 525ed35f8d015661316bbd7d794cdcb246ba1e96
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-automation-model"></a>オートメーション モデルを使用します。
 オートメーションに VSPackage を接続した後に取得できますプロパティとメソッドを呼び出して、<xref:EnvDTE.DTEClass.GetObject%2A>メソッドを<xref:EnvDTE._DTE>オブジェクトを取得するオブジェクトを表す文字列を渡します。  
@@ -47,7 +48,7 @@ void DoAutomation(void)
   
  この時点では、階層モデル下へ移動する特定の VSPackage の一部である標準プロジェクト オブジェクトを使用できます。  
   
- 次のコード例は、カスタム プロジェクトの種類のプロパティをカスタム オブジェクトを取得する方法を示します。。  
+ 次のコード例は、カスタム プロジェクトの種類のプロパティをカスタム オブジェクトを取得する方法を示します。  
   
 ```vb  
 Dim MyPrj As Project  
@@ -73,5 +74,5 @@ Next
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:EnvDTE.DTEClass.GetObject%2A>

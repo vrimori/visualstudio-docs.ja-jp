@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4c3d414f1fcf6a7f4cd4155eb04e3696fb39740a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c3fac86583126e94bcfaea65a82c7cf923275769
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-source-control-vspackage"></a>ソース コントロールの VSPackage の作成
 このドキュメントには、統合されたソース管理パッケージのアーキテクチャの概要へのリンクが含まれています[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、実装するインターフェイスとを使用するサービスで定義されている API と簡単なソースを示すサンプル。パッケージの実装を制御します。  

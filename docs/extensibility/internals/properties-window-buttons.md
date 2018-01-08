@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c4cd83a8d8e72c18f8a6929e8985f7a8635a940d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 950b9f0a7b0f38689042877a42499e23253e6486
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-window-buttons"></a>プロパティ ウィンドウのボタン
 開発言語、製品の種類に応じて特定のボタンがツールバーに既定で表示される、**プロパティ**ウィンドウです。 すべての場合、 **Categorized**、 **Alphabetized**、**プロパティ**、および**プロパティ ページ**ボタンが表示されます。 Visual c# および Visual Basic で、**イベント**ボタンも表示されます。 特定の Visual C プロジェクトで、 **vc++ メッセージ**と**VC オーバーライド**ボタンが表示されます。 その他のプロジェクトの種類の他のボタンが表示されます。 ボタンの詳細については、**プロパティ**ウィンドウを参照してください[プロパティ ウィンドウ](../../ide/reference/properties-window.md)します。  
@@ -38,5 +39,5 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  ツール バー ボタンを追加することはできません、**プロパティ**ウィンドウでは、アンマネージ コードを使用します。 ツール バー ボタンを追加するから派生するマネージ オブジェクトを作成する必要があります<xref:System.Windows.Forms.Design.PropertyTab>です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロパティの拡張](../../extensibility/internals/extending-properties.md)

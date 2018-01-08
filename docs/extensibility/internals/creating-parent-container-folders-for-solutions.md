@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6ea901fe4e380fd867db1c63e44bc1cb6e144feb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b2aa63a0c55ad196edf6c209475a816c0c3c027c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-parent-container-folders-for-solutions"></a>ソリューションの親コンテナーのフォルダーを作成します。
 API では、ソース管理プラグイン バージョン 1.2、ユーザーは、ソリューション内のすべての Web プロジェクトの 1 つのルート ソース コントロール変換先を指定できます。 この単一のルートには、スーパー Unified ルート (SUR) が呼び出されます。  
@@ -48,12 +49,12 @@ API では、ソース管理プラグイン バージョン 1.2、ユーザー�
   
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] SUR フォルダーの名前が、拡張子のないソリューション名と同じであることをお勧めします。 次の表は、2 つのバージョンの動作をまとめたものです。  
   
-|特性|tSource コントロール プラグイン API のバージョン 1.1|ソース管理プラグイン API のバージョン 1.2|  
+|機能|tSource コントロール プラグイン API のバージョン 1.1|ソース管理プラグイン API のバージョン 1.2|  
 |-------------|----------------------------------------------|---------------------------------------------|  
 |ソリューションを SCC に追加します。|SccInitialize()<br /><br /> SccGetProjPath()<br /><br /> SccGetProjPath()<br /><br /> SccOpenProject()|SccInitialize()<br /><br /> SccGetProjPath()<br /><br /> SccCreateSubProject()<br /><br /> SccCreateSubProject()<br /><br /> SccOpenProject()|  
 |ソース管理対象のソリューションにプロジェクトを追加します。|SccGetProjPath()<br /><br /> OpenProject()|SccGetParentProjectPath()<br /><br /> SccOpenProject()**注:** Visual Studio は、ソリューションが、SUR. の直接の子である前提としています。|  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の表は、2 つの例を示します。 どちらの場合、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]までソース管理下にあるソリューションに、送信先のユーザーの入力を求め、 *user_choice*先として指定します。User_choice を指定すると、ソース コントロールの宛先へのユーザーに確認しないでソリューションと 2 つのプロジェクトが追加されます。  
   
 |ソリューションに含まれる|ディスク上の場所に|データベースの既定の構造|  
@@ -67,5 +68,5 @@ API では、ソース管理プラグイン バージョン 1.2、ユーザー�
   
  [HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl]"DoNotCreateSolutionRootFolderInSourceControl"= dword:00000001  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API バージョン 1.2 の新機能](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

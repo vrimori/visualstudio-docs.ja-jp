@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f2cbcb6e6239552ae32c817601634587a2fe3a41
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 75d714399f851aa479f398064e576790c793fffa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="displaying-files-by-using-the-open-file-command"></a>ファイルを開くコマンドを使用してファイルを表示します。
 次の手順では、IDE を処理する方法について説明する、**ファイルを開く**で使用できるコマンド、**ファイル**でメニュー[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 手順では、プロジェクトがこのコマンドからの呼び出しに応答する方法についても説明します。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/31/2017
   
 5.  プロジェクトには、し、プロジェクト固有のエディターまたは標準のエディターを使用して、ファイルを開くためのオプションがあります。 詳細については、次を参照してください。[する方法: 開いているプロジェクトに固有のエディター](../../extensibility/how-to-open-project-specific-editors.md)と[する方法: 開いている標準エディター](../../extensibility/how-to-open-standard-editors.md)、それぞれします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コマンドで開く を使用してファイルを表示します。](../../extensibility/internals/displaying-files-by-using-the-open-with-command.md)   
  [開くと、プロジェクト項目の保存](../../extensibility/internals/opening-and-saving-project-items.md)   
  [方法: プロジェクトに固有のエディターを開く](../../extensibility/how-to-open-project-specific-editors.md)   

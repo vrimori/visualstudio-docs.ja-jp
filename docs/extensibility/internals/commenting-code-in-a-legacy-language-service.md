@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8952612c9502704f79410461d29ca8ab87fa3ee4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e6dfeb31ab062d5182b56ba450450d41a6dab807
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="commenting-code-in-a-legacy-language-service"></a>従来の言語サービスでコメント コード
 プログラミング言語は、通常の注釈を設定するか、コードをコメントするための手段を提供します。 コメントは、コードに関する追加情報が、コンパイルまたは解釈中に無視されるテキストのセクションです。  
@@ -64,6 +65,6 @@ namespace MyLanguagePackage
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レガシ言語サービス機能](../../extensibility/internals/legacy-language-service-features1.md)   
  [レガシ言語サービスを登録します。](../../extensibility/internals/registering-a-legacy-language-service1.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bd3e3b8da06e6846c8c6adc6ddc3f65873c1e2bb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: dcf36dc8f4ef818a84719bc534a09ecf30baf76f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-open-standard-editors"></a>方法: 標準のエディターを開く
 標準のエディターを開くときに、ファイルのプロジェクトに固有のエディターを指定する代わりに、指定されたファイルの種類の標準エディターの決定、IDE を使用できます。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/31/2017
   
      呼び出してに、そのデータをドキュメント ビューまたはドキュメント ビュー オブジェクトが正常にコンテナーに配置ウィンドウ フレームの場合、オブジェクトを初期化<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.LoadDocData%2A>です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>   
  [開くと、プロジェクト項目の保存](../extensibility/internals/opening-and-saving-project-items.md)   
  [方法: プロジェクトに固有のエディターを開く](../extensibility/how-to-open-project-specific-editors.md)   

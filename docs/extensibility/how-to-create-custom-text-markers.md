@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0ab395fdb8c06e643c76ee0918b8a626abb756cb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d30ad5b61f59e6183067ddcc789b2fc796c7aef9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-custom-text-markers"></a>方法: カスタム テキスト マーカーを作成します。
 カスタム テキストを強調したり、コードの整理にマーカーを作成する場合は、以下の手順を実行する必要があります。  
@@ -89,7 +90,7 @@ ms.lasthandoff: 10/31/2017
   
      サービスが返されることを識別する一意の cookie。 後を呼び出すことによって、カスタム マーカーの種類のサービスを取り消すこの cookie を使用することができます、<xref:Microsoft.VisualStudio.Shell.Interop.IProfferService.RevokeService%2A>のメソッド、<xref:Microsoft.VisualStudio.Shell.Interop.IProfferService>この cookie の値を指定するインターフェイスです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レガシ API でテキスト マーカーの使用](../extensibility/using-text-markers-with-the-legacy-api.md)   
  [方法: 標準のテキストのマーカーの追加](../extensibility/how-to-add-standard-text-markers.md)   
  [方法: エラー マーカーを実装します。](../extensibility/how-to-implement-error-markers.md)   

@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 29cbc142be40d4c4e2e8780304767bd17d1d94fe
-ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
+ms.workload: vssdk
+ms.openlocfilehash: 22261c7485f1779eb3613c7ef5af693feeb51fbd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registering-single-file-generators"></a>単一ファイル ジェネレーターを登録します。
 カスタム ツールで使用できるようにする[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、ように登録する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]をインスタンス化でき、特定のプロジェクトの種類に関連付けます。  
@@ -43,15 +44,15 @@ ms.lasthandoff: 12/14/2017
   
     -   (既定)  
   
-         省略可能です。 カスタム ツールのわかりやすい説明を提供します。 このパラメーターは省略可、ただし推奨です。  
+         任意。 カスタム ツールのわかりやすい説明を提供します。 このパラメーターは省略可、ただし推奨です。  
   
     -   CLSID  
   
-         必須です。 実装する COM コンポーネントのクラス ライブラリの識別子を指定<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>です。  
+         必須。 実装する COM コンポーネントのクラス ライブラリの識別子を指定<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>です。  
   
     -   GeneratesDesignTimeSource  
   
-         必須です。 このカスタム ツールによって生成されたファイルから型をビジュアル デザイナーで使用可能な作成はかどうかを示します。 このパラメーターの値は、ビジュアル デザイナーで使用できない種類の 0 (ゼロ) またはビジュアル デザイナーで使用可能な型の (1) 1 である必要があります。  
+         必須。 このカスタム ツールによって生成されたファイルから型をビジュアル デザイナーで使用可能な作成はかどうかを示します。 このパラメーターの値は、ビジュアル デザイナーで使用できない種類の 0 (ゼロ) またはビジュアル デザイナーで使用可能な型の (1) 1 である必要があります。  
   
     > [!NOTE]
     >  使用するカスタム ツールの対象となる言語ごとに個別にカスタム ツールを登録する必要があります。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 12/14/2017
     "GeneratesDesignTimeSource"=dword:00000001  
     ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>   
  [単一ファイル ジェネレーターの実装](../../extensibility/internals/implementing-single-file-generators.md)   
  [ビジュアル デザイナーで型を公開します。](../../extensibility/internals/exposing-types-to-visual-designers.md)   

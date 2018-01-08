@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ef92896ebdb847dd16e00911dc49b53d9ceb5877
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4d1cb3176585dce135b19f125af55db799fed4b9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="terminating-a-program"></a>プログラムの終了
 1 つのスレッドで 1 つのプログラムの終了の説明を次に示します。  
@@ -32,5 +33,5 @@ ms.lasthandoff: 10/31/2017
   
  IDE は、デザイン モードに入ります。 デバッグ エンジンまたはランタイム環境呼び出し[IDebugPortNotify2::RemoveProgramNode](../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md)ポートからプログラムを削除します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのイベントの呼び出し](../../extensibility/debugger/calling-debugger-events.md)

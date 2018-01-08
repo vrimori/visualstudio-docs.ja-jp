@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f91f6c3668b7cc1ce881dd0b98d1bd5dddebf530
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0edfe84e26a9331b8c40ec24b00387768bdbba82
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-options-overview"></a>オプションの構成の概要
 プロジェクトで[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]構築できますが、デバッグ、実行、および展開された複数の構成をサポートできます。 構成では、コンパイラ スイッチとファイルの場所では通常、プロパティの名前付きセットで説明されているビルドの種類です。 既定では、新しいソリューションには、2 つの構成、デバッグとリリースが含まれます。 既定の設定を使用するか、特定のソリューションやプロジェクトの要件を満たすように変更は、これらの構成を適用できます。 一部のパッケージは、2 つの方法でビルドできます。 ActiveX エディター、またはインプレース コンポーネントとして。 ただし、複数の構成をサポートするためには、プロジェクトは必要はありません。 構成が 1 つが利用可能な場合は、すべてのソリューション構成にその構成が割り当てられます。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/31/2017
   
  構成オブジェクトのインターフェイスと、前の図での構成プロバイダー オブジェクト インターフェイスの詳細については、次を参照してください。[プロジェクト構成オブジェクト](../../extensibility/internals/project-configuration-object.md)です。 さらに、[構築するためのプロジェクト構成](../../extensibility/internals/project-configuration-for-building.md)構成ビルダーとビルドの依存関係オブジェクトのインターフェイスについて詳しく説明し、[プロジェクトのデプロイ構成を管理する](../../extensibility/internals/project-configuration-for-managing-deployment.md)さらに、構成を配置するユーザーと展開の依存関係オブジェクトにアタッチされているインターフェイスについて説明します。 最後に、[出力用のプロジェクト構成](../../extensibility/internals/project-configuration-for-output.md)出力グループと出力オブジェクトのインターフェイスと、表示および構成に依存するプロパティを設定するプロパティ ページの使用について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>   
  [構築するためのプロジェクトの構成](../../extensibility/internals/project-configuration-for-building.md)   
  [ソリューション構成](../../extensibility/internals/solution-configuration.md)

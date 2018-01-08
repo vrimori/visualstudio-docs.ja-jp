@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 63cbb04310dba0bddea4f6730a6ae5095cbe2612
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 03e61b80aaf4c5c8b0e25f5b2a4a42f13d75d305
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="document-windows"></a>ドキュメント ウィンドウ
 Visual Studio で、*ドキュメント ウィンドウ*マルチ ドキュメント インターフェイス (MDI) ウィンドウに関連付けられているフレームを使用した子ウィンドウします。 ドキュメント ウィンドウは、通常、ディスプレイとソース コードまたはテキストの変更の使用が、他の機能の種類をホストすることもできます。 ドキュメント ウィンドウ:  
@@ -43,5 +44,5 @@ Visual Studio で、*ドキュメント ウィンドウ*マルチ ドキュメ�
 ## <a name="the-running-document-table"></a>実行中のドキュメント テーブル  
  IDE では、すべてのドキュメント ウィンドウのステータスを追跡するために実行中のドキュメント テーブル (RDT) を使用します。 RDT は、どのドキュメントを windows にソリューションが閉じている場合など、または、ファイルが編集されているときに、イベントの通知メカニズムです。 詳細については、次を参照してください。[を実行しているドキュメント テーブル](../../extensibility/internals/running-document-table.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドキュメントの読み込みの遅延](../../extensibility/internals/delayed-document-loading.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 764b6ff8b19711cb05f34c9bf652956057318346
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ff198f5c4b574bf3a27ae1ee8fb6ffdd482c7f71
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extern-element"></a>Extern 要素
 Extern 要素では、コンパイル時に、.vsct ファイルとマージする外部ヘッダー (.h) ファイルを参照します。 VSCT コンパイラに与えられたまたはによって参照されるインクルード パスにファイルをマージする必要があります、 [Include 要素](../extensibility/include-element.md)です。 ファイルには、他の .vsct ファイルまたは C++ ヘッダー ファイルがあります。  
@@ -43,9 +44,9 @@ Extern 要素
   
 |属性|説明|  
 |---------------|-----------------|  
-|href|必須です。 ヘッダー ファイルへのパス:<br /><br /> href="stdidcmd.h"|  
-|状態|省略可能です。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
-|language|省略可能です。 すべての既定の言語[\<文字列 >](../extensibility/strings-element.md)コマンド テーブル内の要素。<br /><br /> language ="en-us"|  
+|href|必須。 ヘッダー ファイルへのパス:<br /><br /> href="stdidcmd.h"|  
+|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
+|language|任意。 すべての既定の言語[\<文字列 >](../extensibility/strings-element.md)コマンド テーブル内の要素。<br /><br /> language ="en-us"|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -71,7 +72,7 @@ Extern 要素
 </CommandTable>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio コマンド テーブル (です。Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
  [Vspackage がユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)

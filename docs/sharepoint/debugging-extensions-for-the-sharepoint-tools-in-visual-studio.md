@@ -16,11 +16,12 @@ caps.latest.revision: "26"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 98bb43322d4a222d63bafac22d78e433a3000530
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: cb6ddce35a45c71fb72a4e6d1f138e044afd50e7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Visual Studio での SharePoint ツールの拡張機能のデバッグ
   Visual Studio の実験用インスタンスまたは通常のインスタンスで、SharePoint ツールの拡張機能をデバッグできます。 拡張機能の動作をトラブルシューティングする必要がある場合は、レジストリ値を変更して、追加のエラー情報を表示し、Visual Studio での SharePoint コマンドの実行方法を構成することもできます。  
@@ -116,13 +117,13 @@ ms.lasthandoff: 10/31/2017
   
  SharePoint ツールの拡張機能をトラブルシューティングする場合は、EnableDiagnostics 値を作成して設定できます。 その値を次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |EnableDiagnostics|診断メッセージが表示されるかどうかを指定する REG_DWORD、**出力**ウィンドウです。<br /><br /> 診断メッセージを表示する場合は、この値を 1 に設定します。 メッセージを表示しないようにするには、この値を 0 に設定するか、または削除します。<br /><br /> メッセージ ログを書き込む、**出力**ウィンドウ、SharePoint からツールの拡張機能を SharePoint プロジェクト サービスを使用します。 詳細については、次を参照してください。 [SharePoint プロジェクト サービスを使用して](../sharepoint/using-the-sharepoint-project-service.md)です。|  
   
  拡張機能に SharePoint コマンドが含まれる場合は、コマンドのトラブルシューティングに役立つ追加の値を作成して設定できます。 それらの値を次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |AttachDebuggerToHostProcess|vssphost4.exe の開始直後にデバッガーをアタッチできるダイアログ ボックスを表示するかどうかを指定する REG_DWORD です。 これは、デバッグするコマンドが vssphost.exe の開始直後にそのプロセスによって実行され、コマンドが実行される前に手動でデバッガーをアタッチする時間がない場合に役立ちます。 ダイアログ ボックスを表示するために、vssphost4.exe では、開始時に <xref:System.Diagnostics.Debugger.Break%2A> メソッドを呼び出します。<br /><br /> この動作を有効にするには、この値を 1 に設定します。 この動作を無効にするには、この値を 0 に設定するか、または削除します。<br /><br /> この値を 1 に設定すると、HostProcessStartupTimeout 値を増やすことが必要になる場合があります。これにより、vssphost4.exe が正常に開始されたことを Visual Studio に通知するまでの間に、ユーザーはデバッガーをアタッチできます。|  
 |ChannelOperationTimeout|SharePoint コマンドの実行を待機する時間 (秒単位) を指定する REG_DWORD です。 時間内にコマンドが実行されない場合、<xref:Microsoft.VisualStudio.SharePoint.SharePointConnectionException> がスローされます。<br /><br /> 既定値は 120 秒です。|  
@@ -130,7 +131,7 @@ ms.lasthandoff: 10/31/2017
 |MaxReceivedMessageSize|Visual Studio と vssphost4.exe の間で渡される WCF メッセージの最大許容サイズ (バイト単位) を指定する REG_DWORD です。<br /><br /> 既定値は 1,048,576 バイト (1 MB) です。|  
 |MaxStringContentLength|Visual Studio と vssphost4.exe の間で渡される文字列の最大許容サイズ (バイト単位) を指定する REG_DWORD です。<br /><br /> 既定値は 1,048,576 バイト (1 MB) です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)   
  [Visual Studio での SharePoint ツールの拡張機能の配置](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)  
   

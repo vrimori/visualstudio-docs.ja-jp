@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 519b842f99ff3e4460626b82aafd24a02f9e720d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 545d5fa19182678ec1610fa7b689332e272f9962
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-built-in-colorable-items"></a>方法: 組み込みの装飾が可能な項目を使用して
 組み込みの装飾が可能な項目を使用する前にする必要がありますまずシグナルを送信、統合開発環境 (IDE) 独自カスタム装飾が可能な項目をこの例で提供していない<xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems>オブジェクト。 これを行う言語サービスのレジストリ エントリを設定します。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]
     >  カスタムの装飾が可能な項目を指定する場合は、このレジストリ エントリを設定しないでください。 詳細については、次を参照してください。[カスタムの装飾が可能なアイテム](../../extensibility/internals/custom-colorable-items.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カスタム エディターの構文の色分け](../../extensibility/syntax-coloring-in-custom-editors.md)   
  [従来の言語サービスの構文の色分け](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)   
  [構文の色分けを実装します。](../../extensibility/internals/implementing-syntax-coloring.md)   

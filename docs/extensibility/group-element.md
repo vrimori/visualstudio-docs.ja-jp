@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: acdc524b00baaf0de52ad30ea7abad82dc57651b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ec5ff5f5bafec14099e5b10b9861be5936b75009
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="group-element"></a>Group 要素
 VSPackage のコマンドのグループを定義します。  
@@ -39,16 +40,16 @@ VSPackage のコマンドのグループを定義します。
   
 |属性|説明|  
 |---------------|-----------------|  
-|guid|必須です。 GUID と ID コマンド id の GUID です。|  
-|ID|必須です。 GUID と ID のコマンド識別子の ID です。|  
-|priority|省略可能です。 優先順位を指定する数値。|  
-|状態|省略可能です。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
+|guid|必須。 GUID と ID コマンド id の GUID です。|  
+|ID|必須。 GUID と ID のコマンド識別子の ID です。|  
+|priority|任意。 優先順位を指定する数値。|  
+|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|親|省略可能です。 ボタンの親要素です。|  
+|親|任意。 ボタンの親要素です。|  
 |注釈|省略可能なコメント。|  
   
 ### <a name="parent-elements"></a>親要素  
@@ -65,5 +66,5 @@ VSPackage のコマンドのグループを定義します。
 </Group>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9894666dd435dcaa110ba8af8307d7e942119bee
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b9fed2f4118600c48ad6cb769c8e697b06ae77d1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-single-file-generators"></a>単一ファイル ジェネレーターの実装
 カスタム ツール — 単一ファイル ジェネレーターとも呼ば — 拡張に使用できる、[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]と[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]プロジェクト システムで[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 カスタム ツールは、実装する COM コンポーネント、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>インターフェイスです。 このインターフェイスを使用して、カスタム ツールは、1 つの出力ファイルに 1 つの入力ファイルを変換します。 役立つその他の出力または変換の結果は、ソース コードにあります。 カスタム ツールで生成されたコード ファイルの 2 つの例は、ビジュアル デザイナーや Web サービス記述言語 (WSDL) を使用して生成されたファイルの変更に応答で生成されたコードです。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/31/2017
   
  カスタム ツールを実装する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>インターフェイスです。 必要に応じて、カスタム ツールのサポート、<xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite>入力ファイル以外のソースから情報を取得するインターフェイスです。 いずれの場合は、カスタム ツールを使用することができます、前に登録すると、システム、または、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ローカル レジストリです。 カスタム ツールを登録する方法の詳細については、次を参照してください。[単一ファイル ジェネレーターの登録](../../extensibility/internals/registering-single-file-generators.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジュアル デザイナーへのタイプの公開](../../extensibility/internals/exposing-types-to-visual-designers.md)

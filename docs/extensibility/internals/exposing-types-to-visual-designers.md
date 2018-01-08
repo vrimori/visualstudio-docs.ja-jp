@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4e79ec644426ed5068f79bb914b1202a800982cd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a85648a95a6651ff62f50b2361b07feba9a58b47
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exposing-types-to-visual-designers"></a>ビジュアル デザイナーで型を公開します。
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]クラスと型の定義へのアクセスをビジュアル デザイナーを表示するためにデザイン時に必要です。 クラスは、定義済みの (参照とその依存関係) は、現在のプロジェクトの依存関係の完全なセットが含まれるアセンブリのセットから読み込まれます。 ビジュアルなデザイナーのクラスのアクセスとカスタム ツールによって生成されたファイルで定義されている型に必要もあります。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
   
      一時 PE がコンパイルされると、コンパイラに指定の唯一のソース ファイルは、カスタム ツールの出力を示します。 そのため、一時 PE を使用するカスタム ツールでは、プロジェクト内の他のファイルとは無関係にコンパイルできる出力ファイルを生成する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [BuildManager オブジェクトの概要](http://msdn.microsoft.com/en-us/50080ec2-c1c9-412c-98ef-18d7f895e7fa)   
  [単一ファイル ジェネレーターの実装](../../extensibility/internals/implementing-single-file-generators.md)   
  [単一ファイル ジェネレーターの登録](../../extensibility/internals/registering-single-file-generators.md)

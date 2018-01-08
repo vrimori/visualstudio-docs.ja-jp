@@ -14,11 +14,12 @@ caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1a605a2e8380852310035ea9ba3cf39554a27ff7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 009efee252e350f71c0f1389ecca03f3fae3f926
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumdebugobjectsskip"></a>IEnumDebugObjects::Skip
 このメソッドは、指定した要素数をスキップします。  
@@ -47,5 +48,5 @@ int Skip(
 ## <a name="remarks"></a>コメント  
  場合`celt`数より大きい値を指定して残りの要素の列挙体が最後に設定し、`S_FALSE`が返されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md)

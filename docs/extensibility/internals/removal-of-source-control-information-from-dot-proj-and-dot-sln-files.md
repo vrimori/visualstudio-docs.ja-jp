@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 73ea933a7e9efc08347ea107b089101f1e5d5459
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4131e3d5139911c6a1bb9b44d8d8acaefa6cb632
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="removal-of-source-control-information-from-proj-and-sln-files"></a>ソース管理情報の削除。Proj とします。Sln ファイル
 バージョン 1.2 のソース管理プラグイン API、SCC は、情報は、MSSCCPRJ に格納されます。SCC ファイルです。 MSSCCPRJ 利点です。SCC ファイルは、SCC 情報がないソースに - .proj および .sln ファイル内にあるように、制御します。  
@@ -27,5 +28,5 @@ ms.lasthandoff: 10/31/2017
   
  ソース管理プラグイン API 使用されているバージョン 1.1 では、IDE で ~ されているかどうか、プラグインのサポート、MSSCCPRJ を検出するために SAK ファイル。ソース管理情報を格納する SCC メソッドです。 ソース管理プラグイン API バージョン 1.2 では、MSSCCPRJ のサポートを検出するための新機能を提供します。SCC ファイルを使用せず、~ SAK ファイル。 詳細については、次を参照してください。[の排除 ~ SAK ファイル](../../extensibility/internals/elimination-of-tilde-sak-files.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API バージョン 1.2 の新機能](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

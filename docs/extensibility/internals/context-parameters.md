@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 642b0cecd700d66db30385f149a30cd09113fc7d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 45c05f738086cad87d204e1421513da54a01e211
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="context-parameters"></a>コンテキスト パラメーター
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) では、ウィザードを追加することができます、**新しいプロジェクト**、**新しい項目の追加**、または**Sub プロジェクトの追加** ダイアログ ボックス。 追加のウィザードに用意されて、**ファイル**メニューでプロジェクトを右クリックして、または**ソリューション エクスプ ローラー**です。 IDE では、コンテキスト パラメーターをウィザードの実装に渡します。 コンテキスト パラメーターは、IDE は、ウィザードを呼び出すときに、プロジェクトの状態を定義します。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/31/2017
 |`InstallationDirectory`|ディレクトリ パス、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]インストールします。|  
 |`Silent`|ウィザードをサイレント モードで実行する必要があるかどうかを示すブール値として**完了**クリックしてされた (`TRUE`)。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2>   
  [カスタム パラメーター](../../extensibility/internals/custom-parameters.md)   

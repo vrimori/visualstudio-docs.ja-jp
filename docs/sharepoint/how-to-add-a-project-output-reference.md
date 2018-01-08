@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: faf46489be0b9a56485fc93c2138a7f6702c4778
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 7ced5627420f5ac90da2cae1a2930dbd0b973dbc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-project-output-reference"></a>方法: プロジェクト出力参照を追加する
   以外の SharePoint プロジェクトのアセンブリ (または Silverlight プロジェクトでの .xap ファイル) を SharePoint を展開するには、それらをプロジェクト出力参照として追加します。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
   
 6.  横の矢印を選択**プロジェクト名**、以外の SharePoint プロジェクト項目の名前を選択し、、 **OK**ボタンをクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パッケージとプロジェクト アイテムの展開情報を提供します。](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)   
  [方法: 安全なコントロールとしてマークの制御](../sharepoint/how-to-mark-controls-as-safe-controls.md)   
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  

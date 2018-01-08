@@ -15,11 +15,12 @@ caps.latest.revision: "29"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8ca9031e623ec7009d4f489931871f093f4c05d5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ffc56e4b36814a8bed7a0f93d66cc87c0b6fc466
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="automation-support-for-options-pages"></a>オートメーション [オプション] ページのサポート
 Vspackage は、ユーザー設定を提供できます**オプション** ダイアログ ボックスを**ツール**メニュー ([ツール オプション] ページ) で[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ようにことができます、オートメーション モデルを使用できます。  
@@ -39,5 +40,5 @@ Vspackage は、ユーザー設定を提供できます**オプション** ダ�
   
  カスタム ツール オプション ページを実装するサンプルについては、次を参照してください。 [VSSDK のサンプル](http://aka.ms/vs2015sdksamples)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクト オブジェクトの公開](../../extensibility/internals/exposing-project-objects.md)

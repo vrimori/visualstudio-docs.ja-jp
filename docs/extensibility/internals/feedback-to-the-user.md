@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ffc6ecc620f57f0cc1e4dd8baf02f1bd1b17d53b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3a5e31eb2acb50d9803bedd77e48d0821cbaea61
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="feedback-to-the-user"></a>ユーザーへのフィードバック
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) で視覚的なフィードバックに関する利用可能な機能は、ユーザーの現在の選択とグローバルの選択コンテキストに基づきます。 次の表は、別の選択のコンテキストで使用できる機能を一覧表示します。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/31/2017
   
 -   一般的にこれはアクティブな階層ウィンドウ**ソリューション エクスプ ローラー**、および現在のコンテキストと、状況依存を反映するように、タイトル バー update**プロジェクト**メニュー コマンドは、今すぐアクティブ Web に適用アプリケーションのプロジェクトです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [選択範囲と、IDE の通貨](../../extensibility/internals/selection-and-currency-in-the-ide.md)   
  [コンテキスト オブジェクトの選択](../../extensibility/internals/selection-context-objects.md)   
  [階層と選択](../../extensibility/internals/hierarchies-and-selection.md)

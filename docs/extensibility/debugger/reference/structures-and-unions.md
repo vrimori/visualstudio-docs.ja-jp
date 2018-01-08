@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a2fc3225bda24a9ea0d759c1f684801723ea396f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1cae50d4ff122ebea1fa11291570ac23f556f6f5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="structures-and-unions"></a>構造体と共用体
 構造体と Visual Studio Debugging SDK の共用体は次のとおりです。  
@@ -190,12 +191,12 @@ ms.lasthandoff: 10/31/2017
  [UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md)  
  基準には、アドレスの説明、`this`ポインター (`Me` Visual Basic で)。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h、sh.h、または ee.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [API リファレンス](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cde0a7c34fe81c86d9f500bb1800006e5291ee92
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: cbf4e9f2ccbe895db79115949818345c62245f71
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optional-comparison-of-local-project-folder-to-source-control-store"></a>ソース管理ストアをローカルのプロジェクト フォルダーの省略可能な比較
 ソース制御関数を使用して、ローカルのプロジェクト フォルダーとソース コントロール間の比較が行われますプラグイン API 1.2 [SccDirQueryInfo](../../extensibility/sccdirqueryinfo-function.md)と[SccDirDiff](../../extensibility/sccdirdiff-function.md)です。  
@@ -41,5 +42,5 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  この関数と同じコマンド フラグを使用して[SccDiff](../../extensibility/sccdiff-function.md)です。 ソース管理プラグイン プロバイダーとしてディレクトリを"クイック diff"操作をサポートしないようにしてもかまいません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API バージョン 1.2 の新機能](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

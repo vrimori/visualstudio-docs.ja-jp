@@ -16,11 +16,12 @@ caps.latest.revision: "37"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bb79bfa9938aade8ff138817073fad4897276184
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1eaa8cc41e7b27d509e68d6785c34a9ae214ffd3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamically-adding-menu-items"></a>メニュー項目を動的に追加します。
 指定して実行時にメニュー項目を追加することができます、`DynamicItemStart`コマンドを処理および表示するアイテムには (コード) メニューの数を定義し、Visual Studio コマンド テーブル (.vsct) ファイルでプレース ホルダー ボタンの定義をフラグをコマンドします。 VSPackage が読み込まれるときに、プレース ホルダーは、動的メニュー項目に置き換えられます。  
@@ -359,6 +360,6 @@ public sealed class DynamicMenuItemsPackage : Package
   
 4.  ソリューションを閉じますか、または 1 つしかプロジェクトが含まれるソリューションを開くと、ツールバーのアイコンが表示されなくなります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コマンド、メニューのおよびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)   
  [VSPackage でユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)

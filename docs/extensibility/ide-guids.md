@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e2cd6f661afb876d06c30bdccb6786eac4e99e26
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d9034be93256250c5502d5f8da9c79a4308a47ff
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ide-guids"></a>IDE の Guid
 <xref:Microsoft.VisualStudio.VSConstants>クラスは、次の表に示すように、統合開発環境 (IDE) の一部の Guid を公開します。  
@@ -130,7 +131,7 @@ ms.lasthandoff: 10/31/2017
 |<xref:Microsoft.VisualStudio.VSConstants.CLSID_VsDocOutlinePackage>|21af45b0-ffa5-11d0-b63f-00a0c922e851|  
 |<xref:Microsoft.VisualStudio.VSConstants.SID_SVsToolboxActiveXDataProvider>|35222106-bb44-11d0-8c46-00c04fc2aae2|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マネージ コードで COM 定数](../extensibility/com-constants-in-managed-code.md)   
  [IDE 定数](../extensibility/ide-constants.md)   
  [プロジェクト システムを拡張するための IDE 定義コマンド](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)

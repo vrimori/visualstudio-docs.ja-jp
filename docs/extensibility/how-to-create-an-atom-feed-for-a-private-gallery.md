@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b41cb3012b937ac5448b129657064cca68a5d725
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b54181205c98445fef393993d683085cc3afbcba
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>方法: Atom を作成するプライベート ギャラリーのフィード
 Atom (RSS) フィードをイントラネットの場所に拡張機能が含まれており、フィードへの追加を作成する**拡張機能と更新**をプライベート ギャラリーとして。 詳細については、「[プライベート ギャラリー](../extensibility/private-galleries.md)」を参照してください。  
@@ -76,5 +77,5 @@ Atom (RSS) フィードをイントラネットの場所に拡張機能が含ま
   
  2 つのリンク タグを画像の生成されたフォルダー内のスクリーン ショットを参照することに注意してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プライベート ギャラリー](../extensibility/private-galleries.md)

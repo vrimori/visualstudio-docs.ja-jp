@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 062c623ec1de779733e41a8abcad8ca478155dba
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7f48a1acdad3856e7334ce6a86b48e67c880f9c1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="persistence-and-the-running-document-table"></a>永続化と実行中のドキュメント テーブル
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE、プロジェクトは、完全にサービスを使用しているためには、プロジェクト項目を取得するには、持続性の管理を担当<xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable>です。 ドキュメントは、永続化では、Visual Studio 環境の基本単位です。 プロジェクトでは、開いたり、保存、および実行中のドキュメント テーブル (RDT) すべての開いているドキュメントの状態を追跡するリソースを持つドキュメントの名前の変更を調整します。  
@@ -31,6 +32,6 @@ ms.lasthandoff: 10/31/2017
   
  グローバル環境は、RDT を保持します。 環境は、すべての開いているウィンドウのエントリを維持しにできるように、RDT 内のドキュメントは、ソリューションが閉じられるタイミングなどの特別な通知を受信します。 さらに、RDT できるようになりますで、対応するノードを追跡するために、環境の**ソリューション エクスプ ローラー**です。 RDT は、プロジェクト ファイルとプロジェクト項目ドキュメントの両方を含む、開く、永続化できるオブジェクトごとの 1 つのレコードを保持します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [実行中のドキュメント テーブル](../../extensibility/internals/running-document-table.md)   
  [IDE での選択と通貨](../../extensibility/internals/selection-and-currency-in-the-ide.md)

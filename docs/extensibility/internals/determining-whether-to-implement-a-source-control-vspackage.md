@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 808f2fda26046962eada377f8a204351adef19bf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 88281496c2e8350f910feda7934e2b55a494243b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="determining-whether-to-implement-a-source-control-vspackage"></a>ソース コントロールの VSPackage を実装するかどうかを決定します。
 このセクションでは、適切な統合パスの選択方法の大まかなガイドラインをソリューションと、ソース管理を拡張するため、ソース管理プラグインとソース管理の Vspackage の選択を詳しく説明します。  
@@ -38,5 +39,5 @@ ms.lasthandoff: 10/31/2017
   
 4.  クエリを編集し、クエリの保存のイベントを処理 (を参照してください[クエリ編集のクエリの保存](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md))。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグインの作成](../../extensibility/internals/creating-a-source-control-plug-in.md)

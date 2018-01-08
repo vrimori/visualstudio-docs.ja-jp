@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 385ae98e90d8f3a466c0983405c367347bb8ca10
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f5e35933e59fb4d8ff9f13db4bef8c23891bac2f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="setnotificationforwaitcompletion-method"></a>SetNotificationForWaitCompletion メソッド
 設定または TASK_STATE_WAIT_COMPLETION_NOTIFICATION 状態ビットをクリアします。  
@@ -42,7 +43,7 @@ internal void SetNotificationForWaitCompletion(bool enabled)
 ## <a name="remarks"></a>コメント  
  デバッガーは、非同期メソッドの本体からのステップに役立つこのビットを設定します。 場合`enabled`は`true`、まだ完了されていないタスクにのみ、このメソッドを呼び出す必要があります。 場合`enabled`は`false`、完了したタスクで、このメソッドを呼び出すことができます。 いずれの場合にのみ使用してください promise スタイル タスク。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Task クラス](../../extensibility/debugger/task-class-internal-members.md)

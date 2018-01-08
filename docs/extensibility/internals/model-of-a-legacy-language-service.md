@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: afc15ea50921b1feca34a8b305c5028979a0d1ca
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: dc652f9eb4428e1d4d7297ed8b588c7f81a07b2d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="model-of-a-legacy-language-service"></a>従来の言語サービスのモデル
 言語サービスは、要素と、特定の言語の機能を定義し、その言語に固有の情報に、エディターを提供するために使用します。 たとえば、エディターは、構文の色分けをサポートするために、要素と言語のキーワードを知っている必要があります。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
   
  次の表は、モデル内のオブジェクトの概要を示します。  
   
-|コンポーネント|オブジェクト|関数|  
+|コンポーネント|Object|関数|  
 |---------------|------------|--------------|  
 |テキスト バッファー|<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>|Unicode の読み取り/書き込みテキスト ストリーム。 その他のエンコーディングを使用するテキストのことができます。|  
 |コード ウィンドウ|<xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>|1 つまたは複数のテキスト ビューを含むドキュメント ウィンドウです。 ときに[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]がマルチ ドキュメント インターフェイス (MDI) モードでは、コード ウィンドウの MDI 子。|  
@@ -50,5 +51,5 @@ ms.lasthandoff: 10/31/2017
 |テキスト マネージャー|によって管理される、<xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>から取得する、サービス、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager>ポインター|前に説明したすべてのコンポーネントで共有される共通の情報を保持するためのコンポーネント。|  
 |言語サービス|実装に依存します。実装します。<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>|構文の強調表示、ステートメント入力候補、かっこの照合などの言語に固有の情報と、エディターを提供するオブジェクト。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カスタム エディターでのドキュメント データとドキュメント ビュー](../../extensibility/document-data-and-document-view-in-custom-editors.md)

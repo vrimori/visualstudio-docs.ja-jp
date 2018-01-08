@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3462104e100ab672373f30dcd8228bc064746f2d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 085c3bea9b9edc726fa09dd5d7658aff4a55e568
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-the-installation-directory-for-a-vspackage"></a>VSPackage のインストール ディレクトリの選択
 VSPackage とそのサポート ファイルは、ユーザーのファイル システム上でなければなりません。 場所は、VSPackage がかどうかの管理や、アンマネージ、サイド バイ サイドのバージョン管理スキーム、およびユーザーの選択によって異なります。  
@@ -61,7 +62,7 @@ VSPackage とそのサポート ファイルは、ユーザーのファイル �
   
  VSPackage DLL には、リソースと、SatelliteDll\DllName レジストリのエントリ ポイントが含まれている場合[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]が上記の順序でそれらを読み込もうとします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [共有とバージョン管理された Vspackage の使い分け](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)   
  [Vspackage の管理](../../extensibility/managing-vspackages.md)   
  [マネージ パッケージの登録](http://msdn.microsoft.com/en-us/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)

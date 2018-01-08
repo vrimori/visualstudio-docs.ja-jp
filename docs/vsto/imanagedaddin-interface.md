@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8d892b48f5cd22e1175f6cb046f627efb398e044
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: be74604bfabde34f2046af98ac976abd37068022
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imanagedaddin-interface"></a>IManagedAddin インターフェイス
   実装を読み込むコンポーネントを作成する IManagedAddin インターフェイスは、VSTO アドインを管理します。このインターフェイスは、2007 Microsoft Office system に追加された機能です。  
@@ -46,7 +47,7 @@ interface IManagedAddin : IUnknown
 ## <a name="methods"></a>メソッド  
  IManagedAddin インターフェイスによって定義されているメソッドを次の表に示します。  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[IManagedAddin::Load](../vsto/imanagedaddin-load.md)|Microsoft Office アプリケーションがマネージ VSTO アドインを読み込むときに呼び出されます。|  
 |[IManagedAddin::Unload](../vsto/imanagedaddin-unload.md)|Microsoft Office アプリケーションがマネージ VSTO アドインをアンロードする直前に呼び出されます。|  
@@ -87,7 +88,7 @@ interface IManagedAddin : IUnknown
 > [!CAUTION]  
 >  この CLSID は、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]で VSTOLoader.dll によっても使用されます。 したがって、IManagedAddin を使用して、独自の VSTO アドイン ローダーおよびランタイム コンポーネントを作成することはできませんを配置した場合、コンポーネントに依存している VSTO アドインを実行しているコンピューター、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アンマネージ API リファレンス (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/unmanaged-api-reference-office-development-in-visual-studio.md)  
   
   

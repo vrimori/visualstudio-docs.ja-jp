@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fd1f8bd45cb905b6b5efa5a6bce56f71d8418818
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 46a1fbde513f1ec6f11dfeb2d11b252fb6e4aad1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="staskidcounter-field"></a>s_taskIdCounter フィールド
 [次へ] の使用可能な識別子、<xref:System.Threading.Tasks.Task>オブジェクト。  
@@ -36,5 +37,5 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Task クラス](../../extensibility/debugger/task-class-internal-members.md)

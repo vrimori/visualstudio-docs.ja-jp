@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0e0de435dca5c2bf16d9943f353ddb72080af969
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a3a5ae644d910cdad584c7b285c75987f39c26e1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-configuration-options"></a>構成オプションの管理
 新しいプロジェクトの種類を作成するときに、プロジェクトの構築方法、パッケージ、展開、および実行を決定するプロジェクトとソリューションの構成設定を管理する必要があります。 次のトピックでは、プロジェクトとソリューションの構成について説明します。  

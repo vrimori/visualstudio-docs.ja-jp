@@ -18,11 +18,12 @@ caps.latest.revision: "44"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1ba31b5577090c3aef01ad974ba51a72e6f9980e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 53b30bb62e4c4f4146b1c43b6fe08f9683ba4867
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-chart-controls-to-worksheets"></a>方法 : ワークシートに Chart コントロールを追加する
   <xref:Microsoft.Office.Tools.Excel.Chart> コントロールは、デザイン時および実行時にドキュメント レベルのカスタマイズの Microsoft Office Excel ワークシートに追加できます。 VSTO アドインでも、実行時に <xref:Microsoft.Office.Tools.Excel.Chart> コントロールを追加できます。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/31/2017
   
 -   グラフ化するデータが、ワークシートの A5 ～ D8 の範囲に格納されていること。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [実行時の Word 文書と VSTO アドイン内の Excel ブックの拡張](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
  [グラフ コントロール](../vsto/chart-control.md)   

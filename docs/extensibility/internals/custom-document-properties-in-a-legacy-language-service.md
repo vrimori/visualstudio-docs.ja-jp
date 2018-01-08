@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c82476b9d6fd632ed67acbeeab147743ea16cb40
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d1159ccc35f47b34069461b27239173c1860b18a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-document-properties-in-a-legacy-language-service"></a>従来の言語サービスのカスタム ドキュメント プロパティ
 ドキュメントのプロパティを表示できる、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **プロパティ**ウィンドウです。 一般に、プログラミング言語には、個々 のソース ファイルに関連付けられているプロパティはありません。 ただし、XML では、エンコード、スキーマ、およびスタイル シートに影響するドキュメント プロパティをサポートしています。  
@@ -400,5 +401,5 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レガシ言語サービス機能](../../extensibility/internals/legacy-language-service-features1.md)

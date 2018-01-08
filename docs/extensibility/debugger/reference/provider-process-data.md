@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ce3405a46503af2419006d1d408f405726a03259
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 57b4b23f9bc723ee1ce7a10d12eb9fee0355d8ef
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="providerprocessdata"></a>PROVIDER_PROCESS_DATA
 この構造体は、コンピューターで実行されているプロセスに関する情報を提供します。  
@@ -54,14 +55,14 @@ public struct PROVIDER_PROCESS_DATA {
 ## <a name="remarks"></a>コメント  
  この構造体に渡される、 [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)で塗り分けはメソッドです。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [PROVIDER_FIELDS](../../../extensibility/debugger/reference/provider-fields.md)   
  [PROGRAM_NODE_ARRAY](../../../extensibility/debugger/reference/program-node-array.md)   

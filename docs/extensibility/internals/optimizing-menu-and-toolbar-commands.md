@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 08502ab2e1161d753323642589ed00b00ed94ad2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f95675f420284b9d67a6d36ac30b3e71f085e565
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-menu-and-toolbar-commands"></a>メニューとツールバーのコマンドを最適化します。
 Vspackage とそれに対応するコマンドへの追加[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]過密状態 UI が発生する可能性があります。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]UI コマンド混乱を最小限に抑える方法を提供します。  

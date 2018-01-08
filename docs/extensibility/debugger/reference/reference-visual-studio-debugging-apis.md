@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 492b86581f567aa6bcca7f782e588ca82f1878f3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 30b81a0926ebb984aab852b53c081742ea44f391
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reference-visual-studio-debugging-apis"></a>参照 (Visual Studio のデバッグ Api)
 Visual Studio Debugging SDK の参照は、実行時のアーキテクチャと、デバッガーとそのコンポーネントの機能の基本的なモデルを示しています。 ドキュメントは、記述されているインターフェイスを定義する動作とは別のコンポーネントとインターフェイスについてできるだけ少ない想定です。  
@@ -34,5 +35,5 @@ Visual Studio Debugging SDK の参照は、実行時のアーキテクチャと�
  [用語集](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md)  
  デバッグ関連の用語とその定義の一覧を示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio デバッガーの拡張性](../../../extensibility/debugger/visual-studio-debugger-extensibility.md)

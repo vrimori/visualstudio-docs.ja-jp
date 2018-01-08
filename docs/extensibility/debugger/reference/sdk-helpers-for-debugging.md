@@ -18,11 +18,12 @@ caps.latest.revision: "28"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d9c5d24c8a3a2bb81c87b2cc405a6885b8f23374
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b87756f52cb1506be30014331d63eec5d15beff4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sdk-helpers-for-debugging"></a>デバッグ用の SDK ヘルパー
 これらの関数と宣言は、C++ でのデバッグ エンジン、式の評価者、およびシンボル プロバイダーを実装するためのグローバルなヘルパー関数です。  
@@ -420,12 +421,12 @@ HRESULT EnumMetricSections(
 |*[例外の種類]*|処理できる例外のクラスを識別するサブキーの一般的なタイトルです。 一般的な名前は**C++ 例外**、 **Win32 例外**、 **Common Language Runtime Exceptions**、および**ネイティブ ランタイム チェック**です。 これらの名前は、ユーザーには例外の特定のクラスにも使われます。|  
 |*[例外]*|例外の名前。 たとえば、 **_com_error**または**コントロール ブレーク**です。 これらの名前は、ユーザーに特定の例外を識別するも使われます。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  これらのファイルにある、 [!INCLUDE[vs_dev10_ext](../../../extensibility/debugger/reference/includes/vs_dev10_ext_md.md)] SDK のインストール ディレクトリ (既定では、 *[ドライブ]*\Program Files\Microsoft Visual Studio 2010 SDK\\)。  
   
  ヘッダー: includes\dbgmetric.h  
   
  ライブラリ: libs\ad2de.lib、libs\dbgmetric.lib  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [API リファレンス](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

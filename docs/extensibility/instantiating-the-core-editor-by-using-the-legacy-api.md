@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a82f420203b88bb94531401d061493621f3eba93
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e508bda0b22c798246b0f6abf4dfb03c41a92d6d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="instantiating-the-core-editor-by-using-the-legacy-api"></a>レガシ API を使用して、コア エディターをインスタンス化します。
 エディターはテキストの挿入、削除、コピー、および貼り付けなどの関数を編集します。 テキストの色指定、インデント、および IntelliSense 入力候補などの言語サービスによって提供されると、これらの関数を組み合わせています。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/31/2017
   
  一般情報は、次を参照してください。[チュートリアル: コア エディターを作成して、エディター ファイルの種類を登録する](../extensibility/walkthrough-creating-a-core-editor-and-registering-an-editor-file-type.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア エディター内](../extensibility/inside-the-core-editor.md)   
  [開くと、プロジェクト項目の保存](../extensibility/internals/opening-and-saving-project-items.md)   
  [チュートリアル: コア エディターを作成して、エディター ファイルの種類を登録します。](../extensibility/walkthrough-creating-a-core-editor-and-registering-an-editor-file-type.md)

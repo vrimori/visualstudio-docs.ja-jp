@@ -20,18 +20,19 @@ caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 817c95d511ff1b02558010f3046827684b72d4f4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4a43bc68a87d00dcce90f1a948b64dd786e9b440
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ide-constants"></a>IDE 定数
 <xref:Microsoft.VisualStudio.VSConstants>クラスには、統合開発環境 (IDE) に固有とヘッダー ファイル内でだけを以前に定義された定数が用意されています。  
   
 ## <a name="logical-and-physical-views"></a>論理的および物理的なビュー  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |<xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID_Code>|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>`cmdidOpenWith`ハンドラーは、この値を渡す必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>取得するメソッド、**ファイルを開く**ダイアログ ボックスで、この場合は、選択可能なコード ビューにします。|  
 |<xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID_Debugging>|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>`cmdidOpenWith`ハンドラーは、この値を渡す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>取得するメソッド、**ファイルを開く**ダイアログ ボックスで、ここで設定可能な限り<xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID_Debugging>デバッグと同じビューにマップされるビュー<xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID_Code>です。|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="editor-factory-flags"></a>エディター ファクトリ Flags  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |<xref:Microsoft.VisualStudio.VSConstants.CEF_CLONEFILE>|古いフラグの組み合わせの最初のパラメーターとしてビットごとの<xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A>メソッドです。|  
 |<xref:Microsoft.VisualStudio.VSConstants.CEF_OPENASNEW>|最初のパラメーターとしてビットごとの<xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A>メソッド、これは、かエディター ファクトリに必要な修正を実行する必要があります。|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="visual-studio-errors"></a>Visual Studio のエラー  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |<xref:Microsoft.VisualStudio.VSConstants.VS_E_BUSY>|非同期動作をインターフェイスによって返される定数ときに、オブジェクトで該当ビジーです|  
 |<xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA>|エラーに固有である HRESULT [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 「互換性のないドキュメント データ」です。|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="visual-studio-constants"></a>Visual Studio の定数  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |<xref:Microsoft.VisualStudio.VSConstants.VS_S_PROJECTFORWARDED>|エラーに固有である HRESULT[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を示し、「プロジェクト」転送します。|  
 |<xref:Microsoft.VisualStudio.VSConstants.VS_S_TBXMARKER>|固有である定数[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]「ツールボックス マーカー」|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="ivsselectionevents"></a>IVsSelectionEvents  
  IDE のコンポーネントだけが選択されている について説明します、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSelectionEvents.OnElementValueChanged%2A>を呼び出すと、例を示します。  
   
-|定数|値|  
+|定数|[値]|  
 |--------------|-----------|  
 |<xref:Microsoft.VisualStudio.VSConstants.DocumentFrame>|0x2|  
 |<xref:Microsoft.VisualStudio.VSConstants.PropertyBrowserSID>|0x4|  
@@ -94,7 +95,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="vsselelemid"></a>VSSELELEMID  
  新しい選択状態を示すために使用する定数。  
   
-|定数|値|  
+|定数|[値]|  
 |--------------|-----------|  
 |<xref:Microsoft.VisualStudio.VSConstants.VSSELELEMID>|2|  
 |<xref:Microsoft.VisualStudio.VSConstants.VSSELELEMID>|7|  
@@ -107,7 +108,7 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="component-selector-dialog-constants"></a>コンポーネントの選択 ダイアログの定数  
   
-|定数|値|  
+|定数|[値]|  
 |--------------|-----------|  
 |<xref:Microsoft.VisualStudio.VSConstants.CPDN_SELCHANGED>|WM_USER + 1280|  
 |<xref:Microsoft.VisualStudio.VSConstants.CPDN_SELDBLCLICK>|WM_USER + 1281|  
@@ -118,5 +119,5 @@ ms.lasthandoff: 10/31/2017
 |<xref:Microsoft.VisualStudio.VSConstants.CPPM_QUERYCANSELECT>|WM_USER + 1286|  
 |<xref:Microsoft.VisualStudio.VSConstants.CPPM_SETMULTISELECT>|WM_USER + 1289|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクト システムを拡張するための IDE 定義コマンド](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)

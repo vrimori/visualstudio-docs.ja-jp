@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b4a9e3915c6b26b0cc6844a8dcd5aee2bb66f5e8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fdcf2fbe5349b4f404a8b1d8ad71f754a759230f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumdebugports2reset"></a>IEnumDebugPorts2::Reset
 最初の要素に列挙体をリセットします。  
@@ -41,5 +42,5 @@ int Reset();
 ## <a name="remarks"></a>コメント  
  このメソッドが呼び出された後、次の呼び出し、[次](../../../extensibility/debugger/reference/ienumdebugports2-next.md)メソッドが列挙体の最初の要素を返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 18ff0fef277967dcb446f62120843f476ddb4a3f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 304d99c1ddd5fdfddba0c4df88fc4eeeb9dcb7ac
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-a-legacy-language-service"></a>レガシ言語サービスを実装します。
 構文の強調表示、かっこの照合、および IntelliSense 入力候補など、さまざまな機能をサポートする従来の言語サービスを実装するのにマネージ パッケージ フレームワーク (MPF) 内のクラスを使用できます。  

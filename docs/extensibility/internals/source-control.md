@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 985a174955ac96c37cc4f50e4550f7186d3f80c8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 672ce7f47dc8478343f336ed06757af109a5ecce
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="source-control"></a>ソース管理
 このセクションでの統合の機能としてソース管理を実装するためのオプションの説明[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、ソース管理プラグインまたはソース管理の VSPackage を使用するか。  

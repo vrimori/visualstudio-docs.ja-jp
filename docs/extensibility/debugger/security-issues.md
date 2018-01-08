@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8061c419f81493e56a58df8fefbe4d3362d43e46
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 753f916d148675afd7313afc8673232f22280b7d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-issues"></a>セキュリティ上の問題
 Visual Studio を使用してプログラムをデバッグするには必要なアクセス許可は、開発者がプログラムを実行する必要があるものと同じです。 これは、ほとんどの状況が (インターネット インフォメーション サービスなど、他のサービスに関連するいくつかの状況はより高いレベルのアクセス許可にあります) のリモート デバッグが含まれます。  
@@ -28,7 +29,7 @@ Visual Studio を使用してプログラムをデバッグするには必要な
   
  これは、開発者が特別な権限を自分が起動されたプログラムをデバッグすることを意味します。 であっても、開発者は、その他の人が、同じセキュリティ グループのメンバーである場合は、他のユーザーによって開始されたプロセスをデバッグできます。 リモート デバッグを有効にする必要があるだけで、必要なをコピーするファイルをリモート コンピューターし、msvsmon.exe を起動し、(を参照してください[リモート デバッグ](../../debugger/remote-debugging.md)詳細)。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)   
  [プロセスのデバッグ マネージャー](../../extensibility/debugger/process-debug-manager.md)   
  [Remote Debugging](../../debugger/remote-debugging.md)

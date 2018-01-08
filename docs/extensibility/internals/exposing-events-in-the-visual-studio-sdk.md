@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c7b392ac841a50d835186e79a383e404e7fba190
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 74a9ff54d14b6212d0fc484acd2bd25fad18bb87
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exposing-events-in-the-visual-studio-sdk"></a>Visual Studio SDK 内のイベントを公開します。
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]により、オートメーションを使用してイベントをソースします。 プロジェクトとプロジェクト項目のイベントをソースにすることをお勧めします。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/31/2017
   
  「AutomationProjectItemsEvents オブジェクトを返します AutomationProjectItemEvents「=」」  
   
-|名前|型|範囲|説明|  
+|name|型|範囲|説明|  
 |----------|----------|-----------|-----------------|  
 |既定の (@)|REG_SZ|未使用|使用されません。 ドキュメントについては、データ フィールドを使用できます。|  
 |AutomationProjectsEvents|REG_SZ|イベント オブジェクトの名前です。|キー名のみが関連します。 ドキュメントについては、データ フィールドを使用できます。<br /><br /> この例は、基本的なプロジェクトのサンプルから取得されます。|  
@@ -112,6 +113,6 @@ STDMETHODIMP CVsPackage::GetAutomationObject(
   
  イベント オブジェクトを同じの一元化された場所から取得した、`DTE.Events`オブジェクト。 これにより、すべてのイベント オブジェクトはようにグループ化、エンドユーザーが特定のイベントを検索する全体のオブジェクト モデルを参照する必要はありません。 これはシステム全体のイベントのコードを実装する必要はなく、特定の VSPackage オブジェクトを提供することもできます。 ただし、エンドユーザーのユーザー見つける必要がありますのイベント、`ProjectItem`インターフェイス、明確ではないすぐにそのイベント オブジェクトが取得されるからです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>   
  [VSSDK のサンプル](http://aka.ms/vs2015sdksamples)

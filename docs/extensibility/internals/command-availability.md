@@ -15,11 +15,12 @@ caps.latest.revision: "34"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ecdbdc3074ad6dc80a8bd713c46303ba3cca628c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 53ab248d9e71d3177cabb8ce522343d37bcabb26
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="command-availability"></a>利用可能なコマンド
 Visual Studio のコンテキストでは、コマンドを使用できるを決定します。 コンテキストは、現在のプロジェクト、現在のエディター、読み込まれている Vspackage および統合開発環境 (IDE) の他の側面によって変更できます。  
@@ -53,6 +54,6 @@ Visual Studio のコンテキストでは、コマンドを使用できるを決
     > [!CAUTION]
     >  VSPackage 影響を及ぼさないように既存のコンテキストの Guid に依存するその他の Vspackage のため確認してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コンテキスト オブジェクトの選択](../../extensibility/internals/selection-context-objects.md)   
  [VSPackage でユーザー インターフェイス要素を追加する方法](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)

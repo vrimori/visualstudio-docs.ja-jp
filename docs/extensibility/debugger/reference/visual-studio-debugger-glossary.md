@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9c4b91633c94b899157cef5418be0ac8a4d784f1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 9cc1e668f1d78bc6a1db66b6fd4dfebf77b0f6ff
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-debugger-glossary"></a>Visual Studio デバッガーの用語集
 使用される用語は、次のとおり、 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] SDK のデバッグします。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/31/2017
  デバッグ エンジン (DE)  
  実行時のアーキテクチャのデバッグを許可するコンポーネント。 デバッグ エンジンは、インタープリターまたはオペレーティング システムと連携して動作し、実行の制御やブレークポイントなどの式の評価などのデバッグ サービスを提供します。  
   
- ドキュメントのコンテキスト  
+ ドキュメント コンテキスト  
  デバッグ エンジンに既知のソース ファイルのドキュメント内の位置の抽象化を提供します。 ほとんどの言語では、ドキュメントのコンテキストは、ソース ファイル内の位置です。 従来とは異なる言語では、ソース ファイルがテキストに限りませんドキュメントのコンテキストを他のいくつかの方法で表される可能性があります。 関連項目*ドキュメント配置*です。  
   
  ドキュメントの位置  
@@ -87,5 +88,5 @@ ms.lasthandoff: 10/31/2017
  警告ブレークポイント  
  保留中のブレークポイントで警告を記述するための抽象化です。 警告ブレークポイントは、なぜ保留中のブレークポイントがまだバインドされていないコードの場所に理由を説明します。 あるコードがまだ読み込まの保留中のブレークポイントが示す場所またはその他の何らかの理由が考えられます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio デバッガーの拡張性](../../../extensibility/debugger/visual-studio-debugger-extensibility.md)

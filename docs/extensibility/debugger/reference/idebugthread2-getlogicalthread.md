@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a0f2eaba3176ed5d77a2857a4325a06b16417380
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: aa776afaeaec4056417c211c260ae27123a590ed
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugthread2getlogicalthread"></a>IDebugThread2::GetLogicalThread
 デバッグ エンジンは、このメソッドを実装していません。  
@@ -49,5 +50,5 @@ int GetLogicalThread(
 ## <a name="return-value"></a>戻り値  
  デバッグ エンジン実装を常に戻り`E_NOTIMPL`です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6687ce3ed73a96778b84cec6e77d5c0b3145702d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d9b89c4e45f8268df55386d321816325fb50174c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-provide-context-for-editors"></a>方法: エディターのコンテキストを指定
 エディターのコンテキストはアクティブなエディターにフォーカスがあるか、ツール ウィンドウにフォーカスが移動された直前にフォーカスがあった場合にのみです。 次の手順を実行して、エディターのコンテキストを指定できます。  
@@ -83,7 +84,7 @@ ms.lasthandoff: 10/31/2017
   
  エディターまたはデザイナー内のアクティビティ コンテキストを提供すると、エディターまたはデザイナー自体のヘルプを表示するユーザーを許可する特定の F1 キーワードを指定する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackSelectionEx.OnElementValueChange%2A>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsUserContext.AddAttribute%2A>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsUserContext.AdviseUpdate%2A>   

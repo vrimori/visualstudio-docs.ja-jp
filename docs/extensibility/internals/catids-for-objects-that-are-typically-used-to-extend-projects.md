@@ -16,18 +16,19 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 568f5b98cd652e872e7bcc7d63e85de7f134546d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 98349042fe66748ed4eb72a1604893e3f4e67d80
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="catids-for-objects-that-are-typically-used-to-extend-projects"></a>プロジェクトを拡張する通常使用されるオブジェクトの Catid
 次の表に、拡張に使用される Catid`Project`と`ProjectItem`オートメーション オブジェクトに対する[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]、 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]、および[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]プロジェクト。 これらの Catid は VSLangProj.olb で定義されます。  
   
 ## <a name="listing-of-catids"></a>Catid を一覧表示します。  
   
-|名前|GUID|  
+|name|GUID|  
 |----------|----------|  
 |<xref:VSLangProj.PrjCATID.prjCATIDProject>|{610D4614-D0D5-11D2-8599-006097C68E81}|  
 |<xref:VSLangProj.PrjCATID.prjCATIDProjectItem>|{610D4615-D0D5-11D2-8599-006097C68E81}|  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="visual-basic-catids"></a>Visual Basic の Catid  
  次の表に、拡張に使用される Catid[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]のオブジェクトを参照します。 すべてで定義されている VSLangProj.olb です。  
   
-|名前|GUID|  
+|name|GUID|  
 |----------|----------|  
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDVBProjectBrowseObject>|{E0FDC879-C32A-4751-A3D3-0B3824BD575F}|  
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDVBProjectConfigBrowseObject>|{67F8DD11-14EB-489b-87F0-F01C52AF3870}|  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="visual-c-catids"></a>Visual c# の Catid  
  次の Catid を拡張に使用できる[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]のオブジェクトを参照します。 すべてで定義されている VSLangProj.olb です。  
   
-|名前|GUID|  
+|name|GUID|  
 |----------|----------|  
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDCSharpProjectBrowseObject>|{4EF9F003-DE95-4d60-96B0-212979F2A857}|  
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDCSharpProjectConfigBrowseObject>|{A12CE10A-227F-4963-ADB6-3A43388513CA}|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="c-catids"></a>C++ の Catid  
  次[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]プロジェクトのタイプ ライブラリには、Catid は公開されていないシステム[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].NET 2003年これらのプロジェクト オブジェクトを拡張するたびに、コードに含める必要があるとします。 これらの Catid を以降のリリースのタイプ ライブラリに含まれます[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
   
-|名前|GUID|  
+|name|GUID|  
 |----------|----------|  
 |`CVCProjectNode`|{EE8299CB-19B6-4f20-ABEA-E1FD9A33B683}|  
 |`CVCFolderNode`|{EE8299CA-19B6-4f20-ABEA-E1FD9A33B683}|  
@@ -73,7 +74,7 @@ const LPOLESTR CVCFileNode::s_wszCATID = L"{EE8299C9-19B6-4f20-ABEA-E1FD9A33B683
   
  次[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]プロジェクト システムの Catid もに公開されていないのタイプ ライブラリ[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].NET 2003年これらのプロジェクト オブジェクトを拡張するたびに、コードに含める必要があるとします。 これらの Catid はでのみ使用可能な[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].NET 2003年の今後のリリースでは使用できませんが、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
   
-|名前|GUID|  
+|name|GUID|  
 |----------|----------|  
 |`CVCAssemblyReferenceNode` **:**|{FE8299C9-19B6-4f20-ABEA-E1FD9A33B683}|  
 |`CVCProjectReferenceNode`|{593DCFCE-20A7-48e4-ACA1-49ADE9049887}|  
@@ -96,6 +97,6 @@ const LPOLESTR CVCReferences::s_wszCATID = L"{FE8299CA-19B6-4f20-ABEA-E1FD9A33B6
 |[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]|{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}|  
 |[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]|{F184B08F-C81C-45F6-A57F-5ABD9991F28F}|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクトとプロジェクト項目テンプレートを追加します。](../../extensibility/internals/adding-project-and-project-item-templates.md)   
  [プロジェクトと項目テンプレートの登録](../../extensibility/internals/registering-project-and-item-templates.md)

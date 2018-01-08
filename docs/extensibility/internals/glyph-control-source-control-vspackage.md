@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ac7839d4d7456f28d7e4b5b8ecd4096904dce38e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e41fc2a7d09f50d70caca939e3fdd691b1d05c9e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="glyph-control-source-control-vspackage"></a>グリフ コントロール (ソース コントロール VSPackage)
 ソース管理の Vspackage を使用できる高度な統合の一部は、ソース管理下にある項目の状態を示すために、独自のグリフを表示する機能です。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/31/2017
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccGlyphs.GetCustomGlyphList%2A>メソッドによって使用[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]の状態を示すさまざまなソース管理のイメージの一覧を取得します。 ソース管理 VSPackage は、IDE にそのカスタム グリフのイメージ リストへのハンドルを返します。 IDE では、この時点でイメージ リストのコピーを作成し、それを表示するグリフの選択を後で使用します。 新しいインターフェイスがサポートされていない場合、または`IVsSccGlyphs::GetCustomGlyphList`メソッドは、IDE によって提供されるグリフの既定の一覧からそのグリフを取得し、E_NOTIMPL を返します[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccGlyphs>   
  <xref:Microsoft.VisualStudio.Shell.Interop.VsStateIcon>   
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsSccManager>

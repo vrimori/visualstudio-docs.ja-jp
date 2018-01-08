@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 33f29ebabbb40e747b2b321fcb1b3b5598284a28
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c87fd485a0d682dc21de21dfe32b83cfc29b520a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-the-vsix-project-template"></a>VSIX プロジェクト テンプレートの概要
 拡張機能を作成するか、展開の既存の拡張機能をパッケージ化する VSIX プロジェクト テンプレートを使用することができます。 VSIX プロジェクト テンプレートは、Visual Basic および Visual c# の両方のバージョンが存在しては、Visual Studio SDK の一部としてインストールします。  

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 51ed8cd351a306c3992b4b6c9fcc2231a90085f3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ae692249ea952970b096825c8f6968158eb2f17f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-priority"></a>プロジェクトの優先度
 プロジェクト項目は、通常、ソリューション内の 1 つだけのプロジェクトのメンバーです。 そのため、IDE を容易に判別するプロジェクトを使用して、項目を開きます。 ただし、項目が 1 つ以上のプロジェクトのメンバーである場合は、IDE は、最適なプロジェクトの項目を開くことを確認するに優先順位スキームを使用しています。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/31/2017
   
 -   最高の優先順位を指定するプロジェクトには、ドキュメントを開くコンテキストが割り当てられます。 2 つのプロジェクトは同じ優先順位の値を返す場合、アクティブなプロジェクトをお勧めします。 ソリューション内のプロジェクトが返されない、ドキュメントを開くことができますが、その他のファイル プロジェクトにドキュメントが挿入されます。 詳細については、次を参照してください。 [Miscellaneous Files プロジェクト](../../extensibility/internals/miscellaneous-files-project.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [その他のファイル プロジェクト](../../extensibility/internals/miscellaneous-files-project.md)   
  [方法: 開いているドキュメントのエディターを開く](../../extensibility/how-to-open-editors-for-open-documents.md)   
  [プロジェクト テンプレートとプロジェクト項目テンプレートの追加](../../extensibility/internals/adding-project-and-project-item-templates.md)

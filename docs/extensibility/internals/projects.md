@@ -18,11 +18,12 @@ caps.latest.revision: "43"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c175d85b55734df841f30d131639c3bfeed40361
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ff9f1a9d22511fe6a4c388d6d84ec1992a185ec5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="projects"></a>プロジェクト
 Visual Studio で、プロジェクトはソース コード ファイルおよびに表示されるその他のリソースを整理する開発者が使用できるコンテナー**ソリューション エクスプ ローラー**です。 通常、プロジェクトは、ソース コード ファイルおよびビットマップ ファイルなどのリソースへの参照を格納するファイル (たとえば、c# プロジェクトの .csproj ファイル) です。 プロジェクトの整理、ビルド、デバッグ、およびソース コードを配置することができます、Web サービスとデータベース、およびその他のリソースへの参照します。 Vspackage は、3 つの主な方法で Visual Studio プロジェクト システムを拡張することができます:*プロジェクトの種類*、*プロジェクトのサブタイプ*、および*カスタム ツール*です。  

@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5ebd219beb28fc183d876e0391192390da03f8ba
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fffa21e0351b6516920700d8dde0ba8b43243a9a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-the-isolated-shell"></a>分離シェルの拡張
 Visual Studio 分離シェルを拡張するには、VSPackage、Managed Extensibility Framework (MEF) コンポーネント パーツ、または汎用的な VSIX プロジェクトを分離シェル アプリケーションに追加します。  
@@ -42,7 +43,7 @@ Visual Studio 分離シェルを拡張するには、VSPackage、Managed Extensi
   
 1.  という名前の Visual Studio パッケージ プロジェクトを追加`MenuCommandsPackage`です。  
   
-2.  **VSPackage の基本情報**、ウィザードのページ設定**会社名**に`Fabrikam`と**VSPackage 名前**に`FabrikamMenuCommands`です。 選択、**次**ボタンをクリックします。  
+2.  **VSPackage の基本情報**、ウィザードのページ設定**会社名**に`Fabrikam`と**VSPackage 名前**に`FabrikamMenuCommands`です。 **[次へ]** ボタンをクリックします。  
   
 3.  次のページで次のように選択します。**メニュー コマンド**を選択し**次**です。  
   
@@ -121,5 +122,5 @@ Visual Studio 分離シェルを拡張するには、VSPackage、Managed Extensi
   
 8.  ソリューションをビルドして実行します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: 基本的な分離シェル アプリケーションを作成する](../extensibility/walkthrough-creating-a-basic-isolated-shell-application.md)

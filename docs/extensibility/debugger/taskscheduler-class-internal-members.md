@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 862d537585e3599a7069f1a30d1dc652a49e699c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 049521213437e2d28e1e26b61859685158cebc08
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="taskscheduler-class---internal-members"></a>TaskScheduler クラスの内部メンバー
 このトピックの内容の内部のメンバーの説明、<xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName>役立つクラスがカスタムのデバッガーを実装します。 このクラスの概要については、次を参照してください。、<xref:System.Threading.Tasks.TaskScheduler>リファレンス トピックを参照します。  
@@ -48,6 +49,6 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName>   
  [.NET Framework の並列拡張機能の内部](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

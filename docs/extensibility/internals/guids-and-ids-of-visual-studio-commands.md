@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3ce546f36ed93f0f42bfd548c64f2a25669e162b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 44ae5ff7e9095d6c88d753342da30983b30b7364
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guids-and-ids-of-visual-studio-commands"></a>Visual Studio のコマンドの Guid と Id
 Visual Studio 統合開発環境 (IDE) に含まれるコマンドの GUID と ID の値は、Visual Studio SDK の一部としてインストールされている .vsct ファイルで定義されます。 詳細については、次を参照してください。 [IDE-Defined コマンド、メニュー、およびグループ](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)です。  
@@ -63,7 +64,7 @@ Visual Studio 統合開発環境 (IDE) に含まれるコマンドの GUID と I
   
      動的なテキストを検索する確実な方法はありません。 コンサルティングで目的のコマンドをホストするグループを検索する代わりに、 [Guid と Visual Studio メニューの Id](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)または[Guid と Visual Studio ツールバーの Id](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)、そのグループの ID で検索しています。 かどうか、コマンドの定義はありません、グループとしてその[親要素](../../extensibility/parent-element.md)、SharedCmdPlace.vsct ShellCmdPlace.vsct (またはデバッガー コマンドを VsDbgCmdPlace.vsct) 検索、`<CommandPlacement>`の親を設定する要素のコマンド。 SharedCmdPlace.vsct、ShellCmdPlace.vsct、andVsDbgCmdPlace.vsct はでは、 *Visual Studio SDK インストール パス*\VisualStudioIntegration\Common\Inc\ フォルダーです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MenuCommand と OleMenuCommands](../../extensibility/menucommands-vs-olemenucommands.md)   
  [Visual Studio コマンド テーブル (です。Vsct) ファイル](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
  [VSCT XML スキーマ リファレンス](../../extensibility/vsct-xml-schema-reference.md)

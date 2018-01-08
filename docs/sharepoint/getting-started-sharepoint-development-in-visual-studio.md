@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3c2cbca8406f93184bab7ed80a0450047abea711
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: dc47c6bf1e19f66fa55d29f436ba615742d08a3c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-sharepoint-development-in-visual-studio"></a>はじめに (Visual Studio での SharePoint 開発)
   このセクションでは、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] および [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] を利用した SharePoint ソリューションを、これから [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]で開発しようとする方のために有益な情報を提供します。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/31/2017
 |[SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)|SharePoint ソリューションをパッケージ化する方法と配置する方法について説明します。|  
 |[Visual Studio の SharePoint ツールの拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)|SharePoint のツールを拡張して必要な機能を作成する方法について説明します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   
  [サーバー エクスプ ローラーを使用して SharePoint 接続の参照](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)   
  [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)   

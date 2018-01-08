@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c9c0cd58c069989b9516d707ba4c9a35faf53013
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fce74b91512ee22eda7ce8c3e61de0ac03636d2f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumdebugframeinfo2"></a>IEnumDebugFrameInfo2
 このインターフェイスの列挙[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)構造体。  
@@ -49,14 +50,14 @@ IEnumDebugFrameInfo2 : IUnknown
 ## <a name="remarks"></a>コメント  
  Visual Studio は、ブレークポイント、例外、またはデバッグ中のプログラム上のユーザーによって生成された一時停止を処理する最初の手順として、このインターフェイスを取得します。 一連の[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)構造体は、現在の呼び出し履歴を表すの一覧と、最も古い関数の先頭に現在の関数呼び出しで、リストの末尾に呼び出します。 各`FRAMEINFO`コンテキストの式を評価し、ローカル変数を調べるスタック フレームを表します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)   
  [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9750d946a941e86a6c0a6973661f00f8f44cf9b5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a5d66bf7670d5ba9b6423461bdb5e5482819592f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-of-settings-across-multiple-project-connections"></a>複数プロジェクトの接続設定の適用
 ソース管理プラグインが複数のプロジェクトまたは複数の接続コンテキスト全体にわたって、同じソース管理の操作を実行するバッチ操作を使用してソース管理プラグイン API 1.2 を使用して作成できます。 バッチは、重複除去、プロジェクトごとのユーザー エクスペリエンス ダイアログ ボックスを使用できます。  
@@ -36,5 +37,5 @@ ms.lasthandoff: 10/31/2017
   
  `SCCBeginBatch`関数は、ソース管理操作のグループを開始します。 `SccEndBatch`グループを閉じます。 グループは、入れ子にできません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグイン API バージョン 1.2 の新機能](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cf34a3fe708a6ecab200262224da395b9fa37ecb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fd45ebf8be2732cded5c84f18338f104b76840cf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="considerations-for-unloading-and-reloading-nested-projects"></a>入れ子になったプロジェクトのアンロードと再読み込みに関する考慮事項
 入れ子になったプロジェクトの種類を実装するときに、アンロード、プロジェクトを再読み込みすると、追加の手順を行う必要があります。 正しくソリューション イベントをリスナーに通知を正しく上げる必要があります、`OnBeforeUnloadProject`と`OnAfterLoadProject`イベント。  
@@ -33,6 +34,6 @@ ms.lasthandoff: 10/31/2017
   
  このプロセスでは、親プロジェクト呼び出しを処理するために`QueryInterface`上、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents>オフ インターフェイス、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution>インターフェイスです。 `IVsFireSolutionEvents`発生するための IDE に指示する関数、`OnBeforeUnloadProject`を入れ子になったプロジェクトをアンロードし、発生するイベント、`OnAfterLoadProject`同じプロジェクトの再読み込みするイベントです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3>   
  [入れ子になったプロジェクト](../../extensibility/internals/nesting-projects.md)

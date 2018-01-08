@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b92fe7fece58dd2006507f0285d3c440af437ee4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 44bb1eebecbec036572a9bb8857c87db8e4e4817
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-the-object-model-of-the-base-project"></a>基本のプロジェクトのオブジェクト モデルの拡張
 プロジェクトのサブタイプには、次の場所に基本プロジェクトのオートメーション オブジェクト モデルを拡張可能性があります。  
@@ -33,5 +34,5 @@ ms.lasthandoff: 10/31/2017
   
 -   Configuration.Properties - このコレクションは、(たとえば、デバッグ) 特定の構成のプロジェクトの構成の依存するプロパティを公開します。 詳細については、「<xref:EnvDTE.Configuration>」を参照してください。 プロジェクトのサブタイプでは、オートメーション エクステンダーを使用して、そのプロパティをこのコレクションに追加します。 <xref:EnvDTE80.IInternalExtenderProvider>メイン プロジェクト サブタイプ アグリゲーター上で実装されるインターフェイスは、そのオブジェクトは CATID `VSHPROPID_CfgBrowseObjectCATID` (に対応する、`itemid`値<xref:Microsoft.VisualStudio.VSConstants.VSITEMID_ROOT>)。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject>インターフェイスが別の 1 つの構成の参照オブジェクトを区別するために使用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>

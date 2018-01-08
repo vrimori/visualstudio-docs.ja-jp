@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3c37f4dc215027752da9c16fbdfba44b4e10c41c
-ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
+ms.workload: vssdk
+ms.openlocfilehash: ccc9b014a3d31fef4e3f491da394cdf1e9fb3ecb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-provide-a-service"></a>方法: サービスを提供
 VSPackage では、その他の Vspackage を使用するサービスを提供できます。 サービスを提供するには、VSPackage は Visual Studio で、サービスの登録し、サービスの追加する必要があります。  
@@ -140,7 +141,7 @@ VSPackage では、その他の Vspackage を使用するサービスを提供�
   
      値`helloString`「こんにちは」にする必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [方法: サービスを取得](../extensibility/how-to-get-a-service.md)   
  [使用して、サービスを提供します。](../extensibility/using-and-providing-services.md)   
  [サービスの基本情報](../extensibility/internals/service-essentials.md)

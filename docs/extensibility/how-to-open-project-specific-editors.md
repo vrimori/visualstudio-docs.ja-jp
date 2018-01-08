@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bb60f482edeea1271c0f864fd5b907138e83d103
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 66ac0837649b42dc238eac57829c713b2bf83e3a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-open-project-specific-editors"></a>方法: プロジェクトに固有のエディターを開く
 プロジェクトで開かれる項目のファイルは本質的に、そのプロジェクトの特定のエディターにバインドする場合、プロジェクトは、プロジェクト固有のエディターを使用してファイルを開く必要があります。 ファイルは、エディターを選択するため、IDE のメカニズムに委任することはできません。 たとえば、標準のビットマップ エディターを使用して、代わりには、プロジェクトに一意のファイル内の情報を認識する特定のビットマップ エディターを指定するのにこのプロジェクト固有のエディター オプションを使用できます。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/31/2017
   
 6.  呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A>メソッドを表示し、ビューを開きます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [開くと、プロジェクト項目の保存](../extensibility/internals/opening-and-saving-project-items.md)   
  [方法: 標準のエディターを開く](../extensibility/how-to-open-standard-editors.md)   
  [方法: 開いているドキュメントのエディターを開く](../extensibility/how-to-open-editors-for-open-documents.md)

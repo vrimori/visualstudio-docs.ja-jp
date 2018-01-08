@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f845e18bbd4c06d5652571ec83270a80d31ec852
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e0f01e10050fcbdb5cf27390464ae6b8b3e62d64
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="symbol-provider"></a>プロバイダーのシンボル
 式エバリュエーターの実装は、変数や式を評価するために、言語コンパイラによって生成されたシンボリック デバッグ情報にアクセスする必要があります。 これには、シンボル ハンドラーとも呼ばれます。 シンボル プロバイダー (SP) のインターフェイスを使用します。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/31/2017
   
  稼働する場合は、SP は、カスタム デバッグ エンジンでのみ、必要に応じて、デバッグ エンジンのニーズに応じて、SP を実装できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのコンポーネント](../../extensibility/debugger/debugger-components.md)

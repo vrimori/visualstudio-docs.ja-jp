@@ -11,11 +11,12 @@ caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: dd693d56011173564650c0abbd2d5d73492d335d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 74a2fac33ed9e464dd6a54e5a63f46a6cd29a0d6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="manifest-to-code"></a>コードにマニフェスト
 マニフェスト コード ツールは、コンソール アプリケーションを Visual Studio イメージ サービスの .imagemanifest ファイルを受け取ってラッパー ファイルまたは C++、c#、VB、または Visual Studio 拡張機能の .vsct ファイル内のイメージ マニフェストの値を参照するためのファイルが生成されます。 このツールは、要求元のイメージから Visual Studio イメージ サービスを直接、またはコードがすべての UI と表示を処理しない場合は、Api を介してマニフェストの値を渡すために使用できるラッパー ファイルを生成します。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/31/2017
   
 ||||  
 |-|-|-|  
-|**スイッチの名前**|**注**|**必須またはオプション**|  
+|**スイッチの名前**|**ノート**|**必須またはオプション**|  
 |/manifest|使用して作成またはコード ラッパーを更新するイメージ マニフェストへのパス。|必須|  
 |/language|コード ラッパーを生成する言語。<br /><br /> 有効な値: CPP、C++、CS、CSharp、c#、VB、または VSCT 値小文字は区別されません。<br /><br /> VSCT 言語のオプション、/monikerClass、/classAccess、および/namespace オプションは無視されます。|必須|  
 |/imageIdClass|ImageIdClass と、ツールによって作成された関連付けられているファイルの名前。 C++ 言語のオプションでのみである .h ファイルが生成されます。<br /><br /> 既定値:\<マニフェストのパス > \MyImageIds\< 。Lang Ext >|Optional|  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/31/2017
   
 -   ManifestToCode/manifest:D:\MyManifest.imagemanifest/language:CSharp  
   
--   ManifestToCode/manifest:D:\MyManifest.imagemanifest/language:C++/namespace: [:: Namespace/imageIdClass:MyImageIds/monikerClass:MyMonikers/classAccess:friend  
+-   ManifestToCode/manifest:D:\MyManifest.imagemanifest/language:C++/namespace: :: Namespace/imageIdClass:MyImageIds/monikerClass:MyMonikers/classAccess:friend  
   
 -   ManifestToCode/manifest:D:\MyManifest.imagemanifest/language:VSCT/imageIdClass:MyImageIds  
   

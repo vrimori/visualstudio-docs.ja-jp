@@ -13,11 +13,12 @@ caps.latest.revision: "31"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1876f334ad1b444b464ecc420767dea90baed6b3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 585da54c691bda21a363dfe1308c6ed229a024ca
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inside-the-editor"></a>エディター内
 エディターでは、テキスト ビューと、ユーザー インターフェイスからエディター モデル別のテキストを保持するように設計されている複数のサブシステムの数で構成されます。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
   
 -   [修飾](../extensibility/inside-the-editor.md#adornments)  
   
--   [プロジェクション](../extensibility/inside-the-editor.md#projection)  
+-   [射影](../extensibility/inside-the-editor.md#projection)  
   
 -   [アウトライン](../extensibility/inside-the-editor.md#outlining)  
   
@@ -287,6 +288,6 @@ P: ABCDEvwxyz
   
  ステートメント入力候補は、メソッド名、XML 要素、およびその他のコードまたはマークアップ要素の潜在的な入力候補のポップアップ リストを提供します。 一般に、ユーザー ジェスチャには、入力候補のセッションが呼び出されます。 セッションには、潜在的な入力候補の一覧が表示されます。 および、ユーザーが 1 つを選択または一覧を消すことができます。 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker>を作成して、トリガーする担当、<xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession>です。 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource>計算、<xref:Microsoft.VisualStudio.Language.Intellisense.CompletionSet>セッションの完了の項目の。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [言語サービスとエディターの拡張点](../extensibility/language-service-and-editor-extension-points.md)   
  [エディターのインポート](../extensibility/editor-imports.md)

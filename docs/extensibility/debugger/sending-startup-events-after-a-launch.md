@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0620821ec908deed2c57ddfefb40763a48fd2074
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 65e05d7da2acf5bd3eaf8dab1e3781d3d5b244a0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sending-startup-events-after-a-launch"></a>スタートアップ イベントを起動後に送信します。
 デバッグ エンジン (DE) がプログラムにアタッチされる、デバッグ セッションに戻す、一連のスタートアップ イベントを送信します。  
@@ -45,6 +46,6 @@ ms.lasthandoff: 10/31/2017
   
  コードが読み込まれ、実行、準備ができて場合は、DE 送信、SDM で任意のコードが実行される前に、 [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md)完了イベントをロードします。 最後に、プログラムが既に実行されていない場合、DE 送信、 [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md)エントリ ポイント イベント、プログラムのメイン エントリ ポイントに達して、およびデバッグの準備ができているを通知します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [実行の制御](../../extensibility/debugger/control-of-execution.md)   
  [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)

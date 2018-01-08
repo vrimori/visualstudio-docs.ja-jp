@@ -15,11 +15,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b2217b77116ea561c32e96fcb7b92b520e680025
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c52a71ebb521f84f96bead09502389f6b395e90c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-custom-start-pages"></a>カスタム スタート ページを展開します。
 VSIX 配置を使用するか、ターゲット コンピューター上の適切な場所にファイルをコピーして、カスタム スタート ページを展開することができます。  
@@ -93,8 +94,8 @@ VSIX 配置を使用するか、ターゲット コンピューター上の適�
   
 2.  スタート ページには、アセンブリが必要とする場合は、それらをコピーし、貼り付けることで.\\ *Visual Studio インストール フォルダー*\Common7\IDE\PrivateAssemblies\\です。  
   
-3.  **スタート ページのカスタマイズ**ボックスの一覧、**スタートアップ**オプション ページで、新しいスタート ページを選択します。 詳細については、次を参照してください。[スタート ページのカスタマイズ](../ide/customizing-the-start-page-for-visual-studio.md)です。  
+3.  **スタート ページのカスタマイズ**ボックスの一覧、**スタートアップ**オプション ページで、新しいスタート ページを選択します。 詳細については、[スタート ページのカスタマイズ](../ide/customizing-the-start-page-for-visual-studio.md)に関するページを参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [スタート ページのカスタマイズ](../ide/customizing-the-start-page-for-visual-studio.md)   
  [スタート ページへのユーザー コントロールの追加](../extensibility/adding-user-control-to-the-start-page.md)

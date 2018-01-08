@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c241b80430fd02a649efab7f8a65498e606d2804
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 71ac3cda8e3df935ab743fed7aa94a5152c152a5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-troubleshoot-services"></a>方法: サービスのトラブルシューティング
 これには、サービスを取得しようとしたときに発生する可能性があるいくつかの一般的な問題があります。  
@@ -68,7 +69,7 @@ if (log == null) return;
   
      ツール ウィンドウは、ユーザー コントロールまたはその他のすべてのコントロール コンテナーをホストしている場合、コンテナーが Windows のコンポーネント モデルが配置されている場合し、へのアクセスはありません[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]services です。 呼び出すことができます<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>をコントロール コンテナー内から VSPackage サービス プロバイダーを取得します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [使用可能なサービスの一覧](../extensibility/internals/list-of-available-services.md)   
  [使用して、サービスを提供します。](../extensibility/using-and-providing-services.md)   
  [サービスの基本情報](../extensibility/internals/service-essentials.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5a16698863e92e5bbae4e888502788dd76b04f56
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f7058d097ab3eb6faeb8acf96b98ae6346887361
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-items-to-the-add-new-item-dialog-boxes"></a>項目を追加する、新しい項目の追加 ダイアログ ボックス
 項目を追加するプロセス、**新しい項目の追加**レジストリ キーを持つ ダイアログ ボックスを起動します。 次のレジストリ エントリのように、AddItemTemplates セクション内で使用できるようにする項目のディレクトリの名前とパスの**新しい項目の追加** ダイアログ ボックスが配置されます。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/31/2017
   
  "SortPriority"dword:00000064 を =  
   
-|名前|型|(.Rgs ファイル) からのデータ|説明|  
+|name|型|(.Rgs ファイル) からのデータ|説明|  
 |----------|----------|-----------------------------|-----------------|  
 |@ (既定値)|REG_SZ|#% IDS_ADDITEM_TEMPLATES_ENTRY %|リソース ID**項目の追加**テンプレート。|  
 |Val TemplatesDir|REG_SZ|%TEMPLATE_PATH%\SomeProjectItems|ダイアログ ボックスに表示されるプロジェクト アイテムのパス、**新しい項目の追加**ウィザード。|  
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/31/2017
   
  このフィルターの機能を実装する場合、非表示にするすべての項目のテーブルにマップするはありません。 単に項目を型に分類し、.vsdir ファイルまたはファイルの分類を配置できます。 インターフェイスを実装することによって、特定の分類している項目のいずれかが非表示できます。 これにより、内の項目を行うことができます、**新しい項目の追加**プロジェクト内の状態に基づいて、ダイアログ ボックス動的です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>   
  [プロジェクトと項目テンプレートの登録](../../extensibility/internals/registering-project-and-item-templates.md)   
  [プロジェクトを拡張する通常使用されるオブジェクトの Catid](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)   

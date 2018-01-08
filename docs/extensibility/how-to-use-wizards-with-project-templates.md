@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 81cacbcc3f7573b9386fb2816650d8c96508b613
-ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
+ms.workload: vssdk
+ms.openlocfilehash: 6e76a8880e488177f12cfb949ec46e95fd825986
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-use-wizards-with-project-templates"></a>方法 : プロジェクト テンプレートを組み合わせたウィザードを使用する
 Visual Studio には、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスが用意されています。このインターフェイスを実装すると、ユーザーがテンプレートからプロジェクトを作成する際にカスタム コードを実行できるようになります。  
@@ -68,7 +69,7 @@ Visual Studio には、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> イ�
   
 3.  VSIX プロジェクトを資産として、アセンブリを追加します。 Source.extension.vsixmanifest ファイルを開き、選択、**資産**タブです。**新しいアセットの追加** ウィンドウの**型**選択**microsoft.visualstudio.assembly**の**ソース**選択**A現在のソリューションでプロジェクト**、および**プロジェクト**選択**MyProjectWizard**です。  
   
-4.  次の参照を VSIX プロジェクトを追加します。 (で、**ソリューション エクスプ ローラー**、VSIX の下のプロジェクト ノードを選択**参照**、右クリックし、**参照の追加**)。**参照の追加**ダイアログで、 **Framework**  タブで、検索、 **System.Windows フォーム**アセンブリを選択します。 選択できるよう、**拡張**タブ検索、 **EnvDTE**アセンブリを選択します。 見つけることも、 **Microsoft.VisualStudio.TemplateWizardInterface**アセンブリを選択します。 **[OK]** をクリックします。  
+4.  次の参照を VSIX プロジェクトを追加します。 (で、**ソリューション エクスプ ローラー**、VSIX の下のプロジェクト ノードを選択**参照**、右クリックし、**参照の追加**)。**参照の追加**ダイアログで、 **Framework**  タブで、検索、 **System.Windows フォーム**アセンブリを選択します。 選択できるよう、**拡張**タブ検索、 **EnvDTE**アセンブリを選択します。 見つけることも、 **Microsoft.VisualStudio.TemplateWizardInterface**アセンブリを選択します。 **[OK]**をクリックします。  
   
 5.  VSIX プロジェクトに、ウィザード実装のクラスを追加します。 (ソリューション エクスプ ローラーでは、VSIX プロジェクト ノードを右クリックして**追加**、し**新しい項目の**、し**クラス**)。クラスの名前を付けます**WizardImplementation**です。  
   
@@ -309,7 +310,9 @@ namespace $safeprojectname$
   
      `$custommessage$` は、ウィザードのユーザー入力フォームに入力されたテキストで置き換えられています。  
   
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>   
- [テンプレートのカスタマイズ](../ide/customizing-project-and-item-templates.md)   
- [WizardExtension 要素 (Visual Studio テンプレート)](../extensibility/wizardextension-element-visual-studio-templates.md)
+## <a name="see-also"></a>参照  
+
+<xref:Microsoft.VisualStudio.TemplateWizard.IWizard>   
+[テンプレートのカスタマイズ](../ide/customizing-project-and-item-templates.md)  
+[WizardExtension 要素 (Visual Studio テンプレート)](../extensibility/wizardextension-element-visual-studio-templates.md)  
+[Visual Studio のテンプレートで NuGet パッケージ](/nuget/visual-studio-extensibility/visual-studio-templates)

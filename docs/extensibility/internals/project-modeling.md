@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d654669ad35ce77d840f4852ceb7a6605a8221be
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 31c3d87a44838ead7663ff4c156985ab1b8e98eb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-modeling"></a>プロジェクトのモデリング
 プロジェクトは、標準プロジェクト オブジェクトを実装するために、オートメーションを提供することで、次の手順:<xref:EnvDTE.Projects>と`ProjectItems`コレクション以外の場合は、`Project`と<xref:EnvDTE.ProjectItem>オブジェクトと、実装に固有の残りのオブジェクト。 これらの標準的なオブジェクトは、Dteinternal.h ファイルで定義されます。 BscPrj サンプルでは、標準的なオブジェクトの実装を提供します。 サイド バイ サイドを強調する、独自の標準的なプロジェクト オブジェクトを作成するモデルとしてこれらのクラスを使用するその他のプロジェクトの種類のプロジェクトのオブジェクトとします。  
@@ -56,7 +57,7 @@ Projects
   
  実装しない場合、`Project`オブジェクト、環境はジェネリック型を返しますまだ`Project`プロジェクトの名前のみを含むオブジェクトです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:EnvDTE.Projects>   
  <xref:EnvDTE.ProjectItem>   
  <xref:EnvDTE.ProjectItems>

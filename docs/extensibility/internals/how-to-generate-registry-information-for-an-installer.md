@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c31184a78bae612e4341c3210a1f34f993a0581f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: dc3236397dd8a9d0f10927ba3e8fe23d2c4ba78f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-generate-registry-information-for-an-installer"></a>方法: インストーラーのレジストリ情報を生成
 RegPkg.exe ユーティリティは、マネージ VSPackage の登録マニフェストを生成するために使用できます。 マニフェストは、Windows インストーラーのセットアップ パッケージに組み込むことができます。 RegPkg もに基づいてセットアップのソース ファイルに含めることができるファイルを生成できる、 [Windows Installer XML Toolset](http://go.microsoft.com/fwlink/?LinkId=62238)です。  
@@ -183,6 +184,6 @@ RegPkg.exe ユーティリティは、マネージ VSPackage の登録マニフ�
     </Include>  
     ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Vspackage を登録します。](http://msdn.microsoft.com/en-us/31e6050f-1457-4849-944a-a3c36b76f3dd)   
  [VSPackage](../../extensibility/internals/vspackages.md)

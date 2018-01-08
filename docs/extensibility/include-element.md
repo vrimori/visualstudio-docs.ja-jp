@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 818b56963c4733ef9bcf826b14df5a703c44e429
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: de947d7d6bf6688381f5026d68d4a007dd40e026
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="include-element"></a>要素が含まれます
 Include 要素に存在するファイルの指定で指定された現在のファイルに挿入するためのパスを含めることです。  すべてのシンボルと定義されている型は、コンパイル済みの結果の一部になります。  
@@ -38,8 +39,8 @@ Include 要素に存在するファイルの指定で指定された現在のフ
   
 |属性|説明|  
 |---------------|-----------------|  
-|href|必須です。 ヘッダー ファイルへのパス:<br /><br /> href="stdidcmd.h"|  
-|状態|省略可能です。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
+|href|必須。 ヘッダー ファイルへのパス:<br /><br /> href="stdidcmd.h"|  
+|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -59,5 +60,5 @@ Include 要素に存在するファイルの指定で指定された現在のフ
 <Include href="PackagePlacements.vsct"/>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

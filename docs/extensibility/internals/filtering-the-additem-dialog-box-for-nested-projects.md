@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 392f2f33d792c4e8f31ff0423b68a28a68797818
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e1f5fc7695df028330d0e53faebefc178f499da1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filtering-the-additem-dialog-box-for-nested-projects"></a>入れ子になったプロジェクトに対して、AddItem ダイアログ ボックスのフィルター処理
 表示するとき、 **AddItem**親プロジェクトは、入れ子になったプロジェクト ダイアログ ボックスは、ダイアログ ボックスに表示される項目を制御できます。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/31/2017
   
  `IVsFilterAddProjectItemDlg`インターフェイスは、カテゴリをフィルター処理も実装できます。 詳細については、次を参照してください。[新しい項目の追加 ダイアログ ボックスに追加する項目](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)と[を登録するプロジェクトと項目テンプレート](../../extensibility/internals/registering-project-and-item-templates.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>   
  [項目を追加する、新しい項目の追加 ダイアログ ボックス](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)   
  [プロジェクトと項目テンプレートの登録](../../extensibility/internals/registering-project-and-item-templates.md)   

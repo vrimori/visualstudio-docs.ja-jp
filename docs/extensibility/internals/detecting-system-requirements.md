@@ -15,11 +15,12 @@ caps.latest.revision: "50"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 92c4d51d575ffd6e5723bf80b8adc700b83f6afd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: dc16c51b72ced37072c4ddf6d47bf347cf57c0f8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="detecting-system-requirements"></a>システム要件の検出
 Visual Studio がインストールされていない場合、VSPackage は機能できません。 Microsoft Windows インストーラーを使用して、VSPackage のインストールを管理する場合は、Visual Studio がインストールされているかどうかを検出するためにインストーラーを構成できます。 システムを調べ、その他の要件の例に、特定のバージョンの Windows または特定の容量の RAM を構成することもできます。  
@@ -48,5 +49,5 @@ Visual Studio がインストールされていない場合、VSPackage は機�
 ## <a name="detecting-when-visual-studio-is-running"></a>Visual Studio が実行されている場合を検出します。  
  VSPackage は、VSPackage をインストールすると、Visual Studio が実行している場合、正しく登録できません。 インストーラーは、Visual Studio が実行されているときに検出され、プログラムのインストールを拒否する必要があります。 Windows インストーラーを使用するとしないテーブルのエントリを使用して、このような検出を有効にできます。 代わりに、カスタムの動作を次のように作成する必要があります: を使用して、`EnumProcesses`を devenv.exe プロセスを検出し、起動条件または条件付きで使用されるインストーラー プロパティを設定するか、関数が終了するように求めるダイアログ ボックスを表示Visual Studio です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Windows インストーラーによる VSPackage のインストール](../../extensibility/internals/installing-vspackages-with-windows-installer.md)

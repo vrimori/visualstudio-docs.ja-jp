@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4a651267ed279fa5efaf14efb4f1f866794c5cc3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e4b0bc2e7c60a4b474f54fd32fd522712326c157
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hierarchies-in-visual-studio"></a>Visual Studio での階層
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) としてのプロジェクトが表示されます、*階層*です。 IDE では、階層は、各ノードが関連付けられているプロパティのセットを持つノードのツリーです。 A*階層をプロジェクト*プロジェクトのアイテム、アイテムのリレーションシップ、および項目の関連付けられているプロパティおよびコマンドを保持するコンテナーです。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/31/2017
   
  エディターで、ユーザーが項目を開くと、その項目を制御する階層が選択され、アクティブな階層になります。 選択した階層では、一連の項目に作用するコマンドを決定します。 この方法でユーザーのフォーカスを追跡するには、ユーザーの現在のコンテキストを反映するように階層が有効にします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクトの種類](../../extensibility/internals/project-types.md)   
  [選択範囲と、IDE の通貨](../../extensibility/internals/selection-and-currency-in-the-ide.md)   
  [VSSDK のサンプル](http://aka.ms/vs2015sdksamples)

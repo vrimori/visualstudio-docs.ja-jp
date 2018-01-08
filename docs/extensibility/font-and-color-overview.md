@@ -15,11 +15,12 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 13a2a8b584af507f8937fd6abb46c85f329de0b6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 09597130864ae0c1e79ef7470c58b25dde8a9263
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="font-and-color-overview"></a>フォントと色の概要
 このトピックのテキストのフォントと色の設定、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) です。 カテゴリとアイテムの表示の概念も導入されています。 および、Vspackage とコア エディターのテキスト属性を使用する方法を示します。  
@@ -80,6 +81,6 @@ ms.lasthandoff: 10/31/2017
   
  詳細については、構文の色分けを参照してください[レガシ言語サービスでの構文が色分け](../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [エディターでの従来のインターフェイス](../extensibility/legacy-interfaces-in-the-editor.md)   
  [従来の言語サービスでの構文の色分け表示](../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)

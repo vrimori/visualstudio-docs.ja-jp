@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 81e0a131ef35202581ffb78a75a6b48239a7d81f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 937bf977090699f5d3bf52414f57f6066dd55a17
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="editor-imports"></a>エディターのインポート
 エディターのサービス、ファクトリ、およびコア エディターをさまざまな種類のアクセスと、拡張機能を提供するブローカーの番号をインポートすることができます。 たとえば、インポートすることができます、<xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>を提供するために、<xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator>特定のコンテンツ タイプ用。 (このナビゲーター許可テキスト バッファーでさまざまな検索を実行します。)  
@@ -122,5 +123,5 @@ internal SVsServiceProvider ServiceProvider = null;
 |<xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker>|<xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSession>。|  
 |<xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker>|<xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSession>。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [言語サービスとエディターの拡張ポイント](../extensibility/language-service-and-editor-extension-points.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ba6952bce6d99149f2a8f18b7d2eac12cbd08761
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 57e3ceda07abadbf00e67e740bd276430157eabe
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wizard-interface-idtwizard"></a>ウィザードのインターフェイス (IDTWizard)
 統合開発環境 (IDE) を使用して、<xref:EnvDTE.IDTWizard>ウィザードと通信するインターフェイスです。 ウィザードは、IDE でインストールするために、このインターフェイスを実装する必要があります。  
@@ -66,7 +67,7 @@ STDMETHOD(Execute)(THIS_
     wizardResultBackout = 2  
     ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コンテキスト パラメーター](../../extensibility/internals/context-parameters.md)   
  [カスタム パラメーター](../../extensibility/internals/custom-parameters.md)   
  [ウィザード](../../extensibility/internals/wizards.md)   

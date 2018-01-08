@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8e493cdbccf12019584bb08b82503d6a8c6ebeea
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 14e5b641dc5bc51ac066f32332f3fdb2b01d1810
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visualizing-and-viewing-data"></a>視覚化とデータを表示します。
 ビジュアライザーの型とカスタム ビューアーを開発者に迅速にわかりやすい方法でデータを表示します。 式エバリュエーター (EE) サード パーティ製の種類のビジュアライザーをサポートしたりできるよう、独自のカスタム ビューアーを指定します。  
@@ -49,6 +50,6 @@ ms.lasthandoff: 10/31/2017
 ## <a name="supporting-both-type-visualizers-and-custom-viewers"></a>ビジュアライザーとカスタム ビューアーに入力両方をサポートします。  
  EE は、ビジュアライザーの型とのカスタム ビューアーをサポートできます、 [GetCustomViewerCount](../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md)と[GetCustomViewerList](../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)メソッドです。 EE がによって返される値、数の値を提供するカスタム ビューアーを追加する最初に、 [GetCustomViewerCount](../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md)メソッドです。 EE を次に、追加、`CLSID`によって返される一覧に、独自のカスタム ビューアーの s、 [GetCustomViewerList](../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md)メソッドです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)   
  [型のビジュアライザーとカスタム ビューアー](../../extensibility/debugger/type-visualizer-and-custom-viewer.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: BertanAygun
 ms.author: bertaygu
 manager: ghogen
-ms.openlocfilehash: c2d8b27937be4580da8ff33c5b3c1d57654b4c89
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: bertaygu
+ms.openlocfilehash: 1d1034cce8b2fced5af48a0a4bfa8620b56994e4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="measuring-extension-impact-in-startup"></a>スタートアップの拡張機能への影響を測定
 
@@ -176,6 +177,6 @@ PerfView はより詳細な分析のための独自のヘルプ] メニューの
 
 追加のアセンブリがかなり低速のマシンで スタートアップの速度が低下することができますが、追加のディスク I/O を必要に応じてパッケージの初期化ルーチン内の読み込まれたアセンブリの数を最小限に抑えるには重要です。
 
-## <a name="summary"></a>概要
+## <a name="summary"></a>まとめ
 
 Visual Studio の起動で継続的にフィードバックを取得して、領域のいずれかを指定しました。 前述の目標はすべてのユーザーに対して発生するコンポーネントと、インストールされている拡張機能に関係なく一貫したスタートアップしたいし、思います所有者がその目標を達成するために役立つ拡張機能を使用します。 挙げたガイダンスは、スタートアップ、拡張機能への影響を理解するか、負荷を自動またはユーザーの生産性への影響を最小限に抑えるに非同期的にロードする必要を回避したりするために便利にする必要があります。
