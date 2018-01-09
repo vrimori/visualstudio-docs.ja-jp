@@ -95,6 +95,7 @@
 ## [ソリューションでのプロジェクトの読み込みの管理](managing-project-loading-in-a-solution.md)
 # [カスタム プロジェクト テンプレートと項目テンプレートの作成](creating-custom-project-and-item-templates.md)
 ## [Visual Studio 2017 のカスタム プロジェクトと項目テンプレートの更新](upgrading-custom-project-and-item-templates-for-visual-studio-2017.md)
+## [テンプレートの検出のトラブルシューティング](troubleshooting-template-discovery.md)
 ## [方法: プロジェクト テンプレートでウィザードを使用する](how-to-use-wizards-with-project-templates.md)
 ## [Visual Studio テンプレート スキーマ参照](visual-studio-template-schema-reference.md)
 ### [AppliesTo 要素 (Visual Studio テンプレート)](appliesto-element-visual-studio-templates.md)

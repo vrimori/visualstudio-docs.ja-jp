@@ -20,7 +20,7 @@
 ### [Django Web プロジェクト テンプレート](template-django.md)
 ### [Azure クラウド サービス テンプレート](template-azure-cloud-service.md)
 ## [Azure SDK for Python](azure-sdk-for-python.md)
-# 方法
+# 使い方ガイド
 ## [コードの編集](code-editing.md)
 ### [コードの書式設定](code-formatting.md)
 ### [コードのリファクタリング](code-refactoring.md)

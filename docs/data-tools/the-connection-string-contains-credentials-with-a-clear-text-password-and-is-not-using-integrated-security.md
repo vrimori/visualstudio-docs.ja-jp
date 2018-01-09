@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: e9c03f6c864894d0dee9a0fade3137f1a7c50cda
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 1ecca5a69893c92edbeb996606f94cac71e4a3c1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-connection-string-contains-credentials-with-a-clear-text-password-and-is-not-using-integrated-security"></a>接続文字列にはクリア テキスト パスワード付きの資格情報が含まれていて、統合セキュリティは使用されていません
 重要情報を含む接続文字列を現在の DBML ファイルとアプリケーション構成ファイルに保存しますか?   重要情報を含めずに接続文字列を保存する場合は、[いいえ] をクリックします。  
@@ -39,5 +40,5 @@ ms.lasthandoff: 11/09/2017
      接続文字列がアプリケーション設定として格納されますが、パスワードは含まれません。  
   
 ## <a name="see-also"></a>関連項目
-[O/R デザイナー メッセージ](../data-tools/o-r-designer-messages.md)  
+[O/R デザイナーのメッセージ](../data-tools/o-r-designer-messages.md)  
 [Visual Studio での LINQ to SQL ツールします。](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

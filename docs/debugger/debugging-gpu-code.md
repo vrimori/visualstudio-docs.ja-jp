@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: eac4799bec68b275586512dcf0b55fffa7484a90
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0699df7890528a200648ad10975b3cf272a3534f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-gpu-code"></a>GPU コードのデバッグ
 グラフィックス処理装置 (GPU) で実行されている C++ コードをデバッグできます。 Visual Studio での GPU デバッグのサポートには、競合の検出、プロセスの開始、プロセスへのアタッチ、デバッグ ウィンドウへの統合が含まれます。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/31/2017
 -   [方法: GPU スレッド ウィンドウを使用する](../debugger/how-to-use-the-gpu-threads-window.md)  
   
 ## <a name="data-synchronization-exceptions"></a>データ同期の例外  
- デバッガーは実行中に複数のデータ同期条件を検出できます。 条件を検出すると、デバッガーは中断状態になります。 2 つのオプションがある-**中断**または**続行**です。 使用して、**例外**ダイアログ ボックスで、デバッガーはこれらの条件を検出し、またどの条件で実行を中断するかどうかを構成できます。 詳細については、次を参照してください。[デバッガーでは、例外を管理する](../debugger/managing-exceptions-with-the-debugger.md)です。 使用することも、**オプション** ダイアログ ボックスに書き込まれるデータのデータの値が変更されない場合に、デバッガーが例外を無視するように指定します。 詳細については、次を参照してください。 [[全般]、デバッグ、オプション ダイアログ ボックス](../debugger/general-debugging-options-dialog-box.md)です。  
+ デバッガーは実行中に複数のデータ同期条件を検出できます。 条件を検出すると、デバッガーは中断状態になります。 2 つのオプションがある-**中断**または**続行**です。 使用して、**例外**ダイアログ ボックスで、デバッガーはこれらの条件を検出し、またどの条件で実行を中断するかどうかを構成できます。 詳細については、次を参照してください。[デバッガーでは、例外を管理する](../debugger/managing-exceptions-with-the-debugger.md)です。 使用することも、**オプション** ダイアログ ボックスに書き込まれるデータのデータの値が変更されない場合に、デバッガーが例外を無視するように指定します。 詳細については、次を参照してください。 [[全般]、デバッグ、オプションダイアログ ボックス](../debugger/general-debugging-options-dialog-box.md)です。  
   
 ## <a name="troubleshooting"></a>トラブルシューティング  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="error-timeout-detection-and-recovery-tdr-must-be-disabled-at-the-remote-site"></a>エラー: リモート サイトでタイムアウト検出と復旧 (TDR) を無効にする必要があります。  
  Windows のタイムアウト検出と復旧 (TDR) で設定されている既定の時間間隔より、C++ AMP の計算が長くかかっている可能性があります。 その場合、計算は取り消され、データは失われます。 詳細については、次を参照してください。 [C++ AMP で処理 TDRs](http://go.microsoft.com/fwlink/p/?LinkId=249154)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル: C++ AMP アプリケーションのデバッグ](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)   
  [C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
  [Visual Studio での GPU デバッグを開始します。](http://go.microsoft.com/fwlink/p/?LinkId=255381)

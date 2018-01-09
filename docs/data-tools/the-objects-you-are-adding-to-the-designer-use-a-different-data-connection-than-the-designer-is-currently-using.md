@@ -12,11 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: cb6b3e747db497b80893f271c97bb0f6d8c86894
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: data-storage
+ms.openlocfilehash: 715bb696819af901c04fc0d95747b51186868003
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-objects-you-are-adding-to-the-designer-use-a-different-data-connection-than-the-designer-is-currently-using"></a>デザイナーに追加する対象のオブジェクトは、デザイナーが現在使用しているのとは異なるデータ接続を使用しています
 デザイナーに追加する対象のオブジェクトは、デザイナーが現在使用しているのとは異なるデータ接続を使用しています。 デザイナーが使用している接続に置き換えますか?  
@@ -39,6 +40,6 @@ ms.lasthandoff: 11/09/2017
      操作がキャンセルされます。 DataContext.Connection は、既存の接続に設定されたままになります。  
   
 ## <a name="see-also"></a>関連項目
-[O/R デザイナー メッセージ](../data-tools/o-r-designer-messages.md)  
+[O/R デザイナーのメッセージ](../data-tools/o-r-designer-messages.md)  
 [Visual Studio での LINQ to SQL ツールします。](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
  
