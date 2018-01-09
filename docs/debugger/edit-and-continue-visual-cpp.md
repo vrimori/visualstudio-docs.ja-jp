@@ -21,11 +21,12 @@ caps.latest.revision: "25"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c7099fdc72bc93d86d49727eb782d2fd072ec1e1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: cplusplus
+ms.openlocfilehash: d1b9326aa862bd03bb989a4d6863e94dae7bddef
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="edit-and-continue-visual-c"></a>エディット コンティニュ (Visual C++)
 Visual C++ プロジェクトでエディット コンティニュを使用できます。 参照してください[サポート コードの変更 (C++)](../debugger/supported-code-changes-cpp.md)制限については、エディット コンティニュのです。
@@ -82,5 +83,5 @@ Visual Studio 2015 Update 3 の機能強化の詳細については、次を参�
   
  このような場合、変更が適用されるまで、デバッガーは元のコードを続けて実行します。 古いコードは、一時的なソース ファイル ウィンドウとして、 `enc25.tmp`などのタイトルで別のソース ウィンドウに表示されます。 編集されたソース コードは、元のソース ウィンドウに表示されます。 古いコードを編集しようとすると、警告メッセージが表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サポートされているコード変更 (C++)](../debugger/supported-code-changes-cpp.md)

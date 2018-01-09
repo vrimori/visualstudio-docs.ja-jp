@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e48fd86555a2bd110f2945063b23f03d0ce64e16
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8930726d4f45164842a41fdf87ea3a8f55397278
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-finder-tool"></a>方法: ファインダー ツールを使用する
 は、ファインダー ツールを使用することができます、**ウィンドウ検索**ウィンドウのプロパティまたはメッセージを表示する ダイアログ ボックス。 ファインダー ツールは、無効な子ウィンドウを検索し、場合を強調表示するには、どのウィンドウには、子ウィンドウが重なっているが無効になっているを識別できます。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/31/2017
   
 1.  Spy++ と対象のウィンドウの両方が表示されるように、ウィンドウを整列します。  
   
-2.  **スパイ**] メニューの [選択**ウィンドウ検索**です。  
+2.  **スパイ** メニューの選択**ウィンドウ検索**です。  
   
      [ウィンドウの検索 ダイアログ ボックス](../debugger/find-window-dialog-box.md)が開きます。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/31/2017
   
      選択した場合は**プロパティ**、[ウィンドウのプロパティ ダイアログ ボックス](../debugger/window-properties-dialog-box.md)が開きます。 選択した場合は**メッセージ**、[メッセージ ビュー](../debugger/messages-view.md)ウィンドウが開きます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Spy++ ビュー](../debugger/spy-increment-views.md)   
  [Spy++ の使用](../debugger/using-spy-increment.md)   
  [Spy++ リファレンス](../debugger/spy-increment-reference.md)
