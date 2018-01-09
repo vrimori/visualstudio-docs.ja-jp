@@ -7,6 +7,8 @@
 ## [ASP.NET アプリをデバッグする](quickstart-debug-aspnet.md)
 # チュートリアル
 ## [Visual Studio を使用したデバッグについて理解する](getting-started-with-the-debugger.md)
+## [ライブ Azure アプリをデバッグする](debug-live-azure-applications.md)
+## [IIS または IIS Express での ASP.NET のデバッグ](how-to-enable-debugging-for-aspnet-applications.md)
 ## [C# Project プロジェクトのリモート デバッグ](remote-debugging-csharp.md)
 ## [C++ Project プロジェクトのリモート デバッグ](remote-debugging-cpp.md)
 ## [IIS コンピューター上の ASP.NET Core のリモート デバッグ](remote-debugging-aspnet-on-a-remote-iis-computer.md)
@@ -61,7 +63,6 @@
 ### [Just-In-Time デバッガーを使用してデバッグする](debug-using-the-just-in-time-debugger.md)
 #### [方法: Just-In-Time デバッガーへの応答](just-in-time-debugging-in-visual-studio.md)
 ## デバッグを構成する
-### [ユーザー コードをデバッグする](just-my-code.md)
 ### [デバッガーでの例外の管理](managing-exceptions-with-the-debugger.md)
 #### [例外後の実行の継続](continuing-execution-after-an-exception.md)
 #### [方法 : 例外の後にシステム コードを調べる](how-to-examine-system-code-after-an-exception.md)
@@ -70,6 +71,7 @@
 ##### [方法 : ランタイム エラー レポート関数を記述する](how-to-write-a-run-time-error-reporting-function.md)
 ##### [C ランタイム ライブラリなしのランタイム チェックを使用する](using-run-time-checks-without-the-c-run-time-library.md)
 ### [Visual Studio デバッガーでのシンボル (.pdb) ファイルとソース ファイルの指定](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
+### [ユーザー コードをデバッグする](just-my-code.md)
 ### [デバッガーの設定と準備](debugger-settings-and-preparation.md)
 #### [デバッガーに関連するプロジェクト設定](debugger-project-settings.md)
 ##### [方法: デバッガー設定を指定する](how-to-specify-debugger-settings.md)
