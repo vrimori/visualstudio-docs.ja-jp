@@ -14,11 +14,11 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 - cplusplus
-ms.openlocfilehash: 2e354145fa47e243c3dea1641086626e9bcc2c5c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ebb3acfb9fcd49a682e888058b71adbd4119429a
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="visual-studio-data-tools-for-c"></a>C++ 用の visual Studio data tools
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 12/22/2017
   
 SQL データベースに接続するには、ネイティブ C++ アプリケーションは、ODBC および OLE DB ドライバーおよび Windows に含まれている、ADO プロバイダーを使用できます。 これらは、これらのインターフェイスをサポートする任意のデータベースに接続できます。 ODBC ドライバーは、標準です。 OLE DB は旧バージョンとの互換性のために提供されます。 このようなデータ テクノロジの詳細については、次を参照してください。 [Windows Data Access Components](https://msdn.microsoft.com/en-us/library/windows/desktop/aa968814.aspx)です。  
   
-SQL Server 2005 でのカスタム機能を利用し、後で、使用して、 [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client)です。 ネイティブ クライアントには、SQL Server ODBC ドライバーと 1 つのネイティブ ダイナミック リンク ライブラリ (DLL) で SQL Server の OLE DB プロバイダーも含まれています。 Microsoft SQL Server へのネイティブ コード Api (ODBC、OLE DB と ADO) を使用してアプリケーションをサポートします。  SQL Server Native Client は、SQL Server Data Tools と共にインストールされます。 ここでは、プログラミング ガイド: [SQL Server Native Client プログラミング](/sql/sql-docs/docs/relational-databases/native-client/sql-server-native-client-programming)です。  
+SQL Server 2005 でのカスタム機能を利用し、後で、使用して、 [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client)です。 ネイティブ クライアントには、SQL Server ODBC ドライバーと 1 つのネイティブ ダイナミック リンク ライブラリ (DLL) で SQL Server の OLE DB プロバイダーも含まれています。 Microsoft SQL Server へのネイティブ コード Api (ODBC、OLE DB と ADO) を使用してアプリケーションをサポートします。  SQL Server Native Client は、SQL Server Data Tools と共にインストールされます。 ここでは、プログラミング ガイド: [SQL Server Native Client プログラミング](/sql/relational-databases/native-client/sql-server-native-client-programming)です。  
   
 ## <a name="to-connect-to-localdb-through-odbc-and-sql-native-client-from-a-c-application"></a>C++ アプリケーションから ODBC および SQL Native Client で localDB に接続するには  
   
