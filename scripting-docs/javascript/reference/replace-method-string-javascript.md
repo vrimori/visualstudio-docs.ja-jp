@@ -21,11 +21,11 @@ caps.latest.revision: "28"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e78e17d4b9060a3a52498109a744c13cdf972abb
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 82894a5d7f92c8231a6ba3a1948369fb2c819a6d
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="replace-method-string-javascript"></a>replace メソッド (String) (JavaScript)
 正規表現または検索文字列を使用して、文字列内のテキストを置換します。  
@@ -34,18 +34,18 @@ ms.lasthandoff: 10/27/2017
   
 ```  
   
-stringObj. replace(rgExp, replaceText)  
+stringObj.replace(rgExp, replaceText)  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `stringObj`  
- 必須です。 置換対象となる `String` オブジェクトの名前またはリテラル文字列を指定します。 この文字列がによって変更されない、**置換**メソッドです。 むしろ、このメソッドの戻り値が、置換によって生成される文字列です。  
+ 必須。 置換対象となる `String` オブジェクトの名前またはリテラル文字列を指定します。 この文字列がによって変更されない、**置換**メソッドです。 むしろ、このメソッドの戻り値が、置換によって生成される文字列です。  
   
  `rgExp`  
- 必須です。 インスタンス、**正規表現**正規表現パターンおよび適用できるフラグを含むオブジェクト。 正規表現を表す `String` オブジェクトまたはリテラル文字列である場合もあります。 場合`rgExp`のインスタンスではない、**正規表現**オブジェクト、文字列に変換されますと結果の正確な検索が行われた; は行われません、文字列を正規表現に変換します。  
+ 必須。 インスタンス、**正規表現**正規表現パターンおよび適用できるフラグを含むオブジェクト。 正規表現を表す `String` オブジェクトまたはリテラル文字列である場合もあります。 場合`rgExp`のインスタンスではない、**正規表現**オブジェクト、文字列に変換されますと結果の正確な検索が行われた; は行われません、文字列を正規表現に変換します。  
   
  `replaceText`  
- 必須です。 `String` で、`rgExp` と一致した部分と置き換えるテキストを格納する `stringObj` オブジェクトまたはリテラル文字列を指定します。 [!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 5.5 以降では、`replaceText` 引数で、置換するテキストを返す関数を指定することもできます。  
+ 必須。 `String` で、`rgExp` と一致した部分と置き換えるテキストを格納する `stringObj` オブジェクトまたはリテラル文字列を指定します。 [!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 以降では、`replaceText` 引数で、置換するテキストを返す関数を指定することもできます。  
   
 ## <a name="return-value"></a>戻り値  
  結果、**置換**メソッドのコピーである`stringObj`指定された置換を終えた後です。  
@@ -59,8 +59,8 @@ stringObj. replace(rgExp, replaceText)
 |**$&**|`stringObj` でパターンが完全に一致した部分を指定します。 ([!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 以降)|  
 |`$``|部分を表します`stringObj`で説明されている一致の直前まで **$&**です。 ([!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 以降)|  
 |`$'`|部分を表します`stringObj`で説明されている一致に依存している **$&**です。 ([!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 以降)|  
-|`$`  ***n***|*n*番目のキャプチャのサブマッチ場所 *n* は 1 ~ 9 の 1 つの 10 進数字です。 ([!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 以降)|  
-|`$`  ***nn***|*nn* Th、サブマッチをキャプチャする場所 *nn* はの 01 ~ 99 の 2 桁の 10 進数。 ([!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 以降)|  
+|`$`  ***n***| *n*番目のキャプチャのサブマッチ場所 *n* は 1 ~ 9 の 1 つの 10 進数字です。 ([!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 以降)|  
+|`$`  ***nn***| *nn* Th、サブマッチをキャプチャする場所 *nn* はの 01 ~ 99 の 2 桁の 10 進数。 ([!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 以降)|  
   
  場合`replaceText`は、次をそれぞれ一致する文字列、関数が呼び出された関数の場合、 *m* + 3 個の引数を*m*残されたキャプチャ内のかっこの数は、`rgExp`です。 1 個目の引数は一致したサブ文字列です。 次*m*引数は、検索結果そのものです。 引数*m*内のオフセットが +`stringObj`一致した位置、および引数*m* + 3 は`stringObj`します。 結果は、該当する関数呼び出しの戻り値をそれぞれ一致する文字列と置換した文字列値で返されます。  
   
@@ -89,7 +89,7 @@ var re = /(\S+)(\s+)(\S+)/g;
 var result = s.replace(re, "$3$2$1");  
 document.write(result);  
   
-// Output:  quick The fox brown over jumps lazy the dog.  
+// Output:  quick The fox brown over jumped lazy the dog.  
 ```  
   
  置換テキストを返す関数を使用する方法を次に示します。この例は [!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 以降で動作します。 これは、摂氏変換によって、「F」に続くすべての数値のインスタンスを置き換えます。  
@@ -114,12 +114,12 @@ document.write(f2c("Water freezes at 32F and boils at 212F."));
   
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
  **適用されます**:[文字列オブジェクト](../../javascript/reference/string-object-javascript.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [exec メソッド (Regular Expression)](../../javascript/reference/exec-method-regular-expression-javascript.md)   
  [match メソッド (String)](../../javascript/reference/match-method-string-javascript.md)   
  [RegExp オブジェクト](../../javascript/reference/regexp-object-javascript.md)   

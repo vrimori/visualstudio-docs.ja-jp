@@ -13,11 +13,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 21018eb6e1a3ff282a7ec9fb856c431f894dafca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fa4604ae256fdd4a3f935cc05ff7aec0fda4e842
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="walkthrough-debug-an-xslt-style-sheet"></a>チュートリアル : XSLT スタイル シートのデバッグ
 このチュートリアルの手順では、XSLT デバッガーを使用する方法を示します。 変数の表示、ブレークポイントの設定、コードのステップ実行などの手順が含まれます。 このスタイル シートでは、平均書籍価格を下回るすべての書籍が検索されます。  
@@ -121,7 +121,7 @@ ms.lasthandoff: 12/22/2017
     </books>  
   </xsl:template>  
 </xsl:stylesheet>  
-```  
+```
   
 ### <a name="booksxml"></a>books.xml  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 12/22/2017
     <price>9.99</price>  
   </book>  
 </bookstore>  
-```  
+```
   
 ## <a name="see-also"></a>参照  
  [XSLT のデバッグ](../xml-tools/debugging-xslt.md)

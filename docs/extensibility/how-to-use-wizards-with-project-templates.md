@@ -19,11 +19,11 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: 6e76a8880e488177f12cfb949ec46e95fd825986
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: 8eef98d11f98e3db8216c69dcfacf478c676a837
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="how-to-use-wizards-with-project-templates"></a>方法 : プロジェクト テンプレートを組み合わせたウィザードを使用する
 Visual Studio には、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスが用意されています。このインターフェイスを実装すると、ユーザーがテンプレートからプロジェクトを作成する際にカスタム コードを実行できるようになります。  
@@ -198,6 +198,7 @@ Visual Studio には、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> イ�
             private void button1_Click(object sender, EventArgs e)  
             {  
                 customMessage = textBox1.Text;  
+                this.Close();
             }  
         }  
     ```  
@@ -231,13 +232,13 @@ Visual Studio には、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> イ�
   
 10. Key.snk ファイルから公開キーを抽出します。 コマンド ウィンドウで次のように入力します。  
   
-     **\<sn.exe の場所 > \sn.exe - p key.snk outfile.key です。**  
+     **\<sn.exe の場所 > \sn.exe-p key.snk outfile.key です。**  
   
      ディレクトリ名にスペースがある場合は、引用符で囲まれます sn.exe のパスを囲むように注意してください。  
   
 11. 出力ファイルから公開キー トークンを取得します。  
   
-     **\<sn.exe の場所 > \sn.exe - t outfile.key です。**  
+     **\<sn.exe の場所 > \sn.exe-t outfile.key です。**  
   
      引用符をもう一度、忘れないでください。 次のような出力に行を表示する必要があります。  
   
