@@ -13,11 +13,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 519bb7b70737e4c3e2d6e80f19a056b4cd385980
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b703fd45732e3fd083a5c95b68647f67dce57b3a
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio のパフォーマンスのヒントとテクニック
 
@@ -71,7 +71,7 @@ Visual Studio のパフォーマンスの推奨事項は、まれなケースで
 
     診断ツールを無効にするには、デバッグ セッションを開始し、**[ツール] > [オプション] > [デバッグ中に診断ツールを有効にする]** の順に選んで、オプションを無効にします。
 
-    詳しくは、「[Visual Studio のプロファイリング機能ツアー](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)」をご覧ください。
+    詳しくは、「[Visual Studio のプロファイリング機能ツアー](../profiling/profiling-tools.md)」をご覧ください。
 
 ## <a name="disable-tools-and-extensions"></a>ツールと拡張機能を無効にする
 一部のツールや拡張機能を無効にすると、パフォーマンスが向上することがあります。

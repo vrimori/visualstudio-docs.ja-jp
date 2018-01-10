@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: 5eab9ef6f3030e8a71547babd9dd9cc279813eee
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 33a6c3b57ae47e25eeaeb22c245e77c8a810d9a2
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="using-ipython-in-the-interactive-window"></a>対話型ウィンドウでの IPython の使用
 
@@ -32,7 +32,7 @@ Visual Studio の IPython モードの対話型ウィンドウは、対話型の
 
 1. **[パッケージ]** (または **[pip]**) タブを見て、`IPython` と `matplotlib` が表示されていることを確認します。 表示されていない場合は、それらをここでインストールします。
 
-1. **[概要]** タブを選択し、**[IPython 対話モードを使用する]** を選択します (Visual Studio 2015 で **[Configure interactive options]\(対話オプションの構成\)** を選択して **[オプション]** ダイアログを開き、**[インタラクティブ モード]** を IPython に設定し、**[OK]** を選択します)。    
+1. **[概要]** タブを選択し、**[IPython 対話モードを使用する]** を選択します (Visual Studio 2015 で **[Configure interactive options]\(対話オプションの構成\)** を選択して **[オプション]** ダイアログを開き、**[インタラクティブ モード]** を IPython に設定し、**[OK]** を選択します)。
 
 1. **[対話型ウィンドウを開く]** を選択して、対話型ウィンドウを IPython モードで表示します。 対話型モードを変更した場合、ウィンドウのリセットが必要な可能性があります。たとえば、>>> プロンプトのみが表示されている場合、Enter キーを押して更新することができます。
 
@@ -76,11 +76,11 @@ Visual Studio の IPython モードの対話型ウィンドウは、対話型の
     ![エディターから対話型ウィンドウへのコードの送信](media/ipython-repl-05.png)
 
 1. 対話型ウィンドウ以外にグラフを表示するには、**[デバッグ] の [デバッグなしで開始]** コマンドを使用してコードを実行します。
-    
+
 IPython には、システム シェルのエスケープ、変数の代入、出力のキャプチャなどの便利な機能が多数あります。詳細については、[IPython のドキュメント](http://ipython.org/documentation.html)を参照してください。
 
 ## <a name="related-topics"></a>関連トピック
 
 - Jupyter をインストールせずに簡単に使用するには、無料の [Azure Notebooks ホスト サービス](https://notebooks.azure.com/)を試してください。ノートブックを保存し、他のユーザーと共有することができます。
 
-- また、Jupyter (旧 IPython) は、Azure 上の自分の Windows または Linux 仮想マシンでも実行できます。 詳細については、「[Azure 上で Azure VM を作成し、Jupyter をインストールして、Jupyter Notebook を実行する](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-jupyter-notebook)」を参照してください。
+- また、Jupyter (旧 IPython) は、Azure 上の自分の Windows または Linux 仮想マシンでも実行できます。 詳細については、「[Azure 上で Azure VM を作成し、Jupyter をインストールして、Jupyter Notebook を実行する](/azure/virtual-machines/virtual-machines-linux-jupyter-notebook)」を参照してください。

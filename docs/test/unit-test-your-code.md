@@ -11,16 +11,15 @@ helpviewer_keywords:
 - Visual Studio, unit tests
 - unit tests, verifying code with
 - testing code, automated tests
-ms.assetid: c191de3e-3f3b-471e-b828-29ec24e80e2c
-caps.latest.revision: "62"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: a60e3236769cbaf35a9b232629834a8b8d52a852
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: a70433a811ad8cf45bb44b12c2971c90c8f82ff2
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="unit-test-your-code"></a>コードの単体テスト
 単体テストを実行することにより、開発者およびテスト担当者は、[!INCLUDE[csharp_current_short](../misc/includes/csharp_current_short_md.md)]、[!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)]、および [!INCLUDE[cpp_current_short](../misc/includes/cpp_current_short_md.md)] のプロジェクトでクラスのメソッドに論理エラーがないかどうかをすばやく確認できます。  
@@ -55,15 +54,6 @@ ms.lasthandoff: 12/22/2017
 |**単体テストの種類の拡張:** 単体テスト フレームワークにはない場合がある機能をテストに追加できます。 たとえば、テストを通常のユーザーとして実行するかどうかを指定するテスト プロパティを追加できます。 また、フレームワークを拡張して、行の属性をメソッドに追加し、テスト内でその行のデータを使用することもできます。|単体テスト フレームワークを拡張する方法のサンプル コードについては、次の [Microsoft Web サイト](http://go.microsoft.com/fwlink/?LinkId=185591)を参照してください。|  
 |**テストのオプションを設定する:** たとえば、テスト結果が格納される場所を指定できます。|[.runsettings ファイルを使用して単体テストを構成する](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)|  
   
-## <a name="related-tasks"></a>関連するタスク  
- [Microsoft テスト マネージャーでのテスト結果の確認](http://msdn.microsoft.com/en-us/9fb3e429-78df-4fe2-89ed-0ad1db0738f4)  
-  
- テスト結果とその扱い方 (テスト結果を表示、保存、発行する方法など) について説明します。  
-  
- [Microsoft Visual Studio を使用したシステム テストの実行](/devops-test-docs/test/running-automated-tests-using-microsoft-visual-studio)  
-  
- [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] を使用するのではなく、Visual Studio を使用して自動テストを実行する方法へのリンクを示します。  
-  
 ## <a name="reference"></a>参照  
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting>  
  UnitTesting 名前空間について説明します。この名前空間は、単体テストをサポートする属性、例外、アサートなどのクラスを提供します。  
@@ -85,6 +75,6 @@ ms.lasthandoff: 12/22/2017
 ### <a name="reference"></a>参照  
  [単体テストのコンテンツ インデックス](http://go.microsoft.com/fwlink/?LinkID=254719)  
   
-## <a name="see-also"></a>参照  
- [コード品質の向上](/visualstudio/test/improve-code-quality)   
- [アプリケーションのテスト](/devops-test-docs/test/test-apps-early-and-often)
+## <a name="see-also"></a>関連項目
+
+[コード品質の向上](/visualstudio/test/improve-code-quality)

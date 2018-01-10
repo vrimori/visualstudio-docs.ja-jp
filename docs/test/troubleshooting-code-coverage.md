@@ -7,16 +7,15 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 26de91b8-45e3-4976-a20e-a3bd1942ddcb
-caps.latest.revision: "11"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 1612856fa4c098b5b7ff081020a84324bd5f8c4f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: 10fc7fe674e73ab1c81721048a50db80d1dd6fdd
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshooting-code-coverage"></a>トラブルシューティング コード カバレッジ
 Visual Studio のコード カバレッジ分析ツールは、ネイティブ アセンブリとマネージ アセンブリのデータを収集します (.dll または .exe ファイル)。 しかし、[コード カバレッジの結果] ウィンドウに "空の結果が生成されました: ...." のようなエラーが表示される場合があります。このエラーが発生する原因はいくつかあります。 このトピックは、これらの問題を解決することを目的にしています。  

@@ -15,11 +15,12 @@ ms.assetid: 7307e180-ba28-4774-8a43-cbb980085a71
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: a08f5a15cd83af05c91eb35ad2ad4a2c4c229458
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: 28f0715665fb032ac2cf78dd58be65005b1065d0
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
 #### <a name="updated-for-the-155-releasehttpswwwvisualstudiocomnewsreleasenotesvs2017-relnotes"></a>[15.5 リリース](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)の更新
@@ -223,7 +224,7 @@ Windows 10 Fall Creators Update は、アプリ配置を効率化するだけで
 * **UWP と Win32 の両方に長所** <br/>
 [デスクトップ ブリッジ](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)を使用して Windows 10 プラットフォームを改善しました。これにより、現在のフォーカスが UWP、WPF、Windows Forms、または Xamarin のいずれにあるかに関係なく、すべての .NET 開発者は Windows 10 を改善することができます。 Visual Studio 2017 バージョン 15.5 の新しいアプリ パッケージング プロジェクト タイプを使用することで、UWP プロジェクトの場合と同じように、WPF または Windows Forms プロジェクトの Windows アプリケーション パッケージを作成できます。 アプリをパッケージ化すると、Windows 10 アプリ配置のすべての利点が得られ、Microsoft Store (コンシューマー アプリケーションの場合) または Microsoft Store for Business と Education を通じて配布することができます。 パッケージ化されたアプリは完全な UWP API 画面とデスクトップ上の Win32 API の両方にアクセスできるため、WPF および Windows Forms アプリケーションを UWP API および Windows 10 の機能で段階的に最新化できるようになりました。 さらに、すべての Win32 機能を使用して、デスクトップ上で点灯する UWP アプリケーションに Win32 コンポーネントを含めることができます。 
 
-UWP の詳細については、「[ユニバーサル Windows プラットフォーム (UWP) 向けアプリの開発](https://docs.microsoft.com/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)」を参照してください。
+UWP の詳細については、「[ユニバーサル Windows プラットフォーム (UWP) 向けアプリの開発](../cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md)」を参照してください。
 
 ## <a name="mobile-app-development"></a>モバイル アプリの開発
 ### <a name="xamarin"></a>Xamarin
@@ -270,7 +271,7 @@ Docker 対応にもなりました。
 
 **15.3 の新機能**: Visual Studio 2017 バージョン 15.3 は .NET Core 2.0 開発に対応しています。 .NET Core 2.0 を使用するには、.NET Core 2.0 SDK を別にダウンロードし、インストールする必要があります。  
 
-詳細については、「[.NET Core ガイド](https://docs.microsoft.com/dotnet/core/index)」ページを参照してください。
+詳細については、「[.NET Core ガイド](/dotnet/core/index)」ページを参照してください。
 
 ## <a name="games-development"></a>ゲーム開発
 ### <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity
@@ -301,6 +302,6 @@ Visual Studio を向上させることができるご提案がある場合、ま
 ## <a name="see-also"></a>参照
 * [Visual Studio 2017 リリース ノート](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)
 * [Visual C++ の新機能](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
-* [C# の新機能](https://docs.microsoft.com/dotnet/csharp/csharp-7)  
+* [C# の新機能](/dotnet/csharp/whats-new)  
 * [Team Foundation Server の新機能](https://www.visualstudio.com/docs/whats-new)
 * [Visual Studio for Mac の新機能](https://www.visualstudio.com/vs/visual-studio-mac/)

@@ -13,11 +13,11 @@ author: conceptdev
 ms.author: crdun
 manager: crdun
 ms.workload: unity
-ms.openlocfilehash: c6c22a04348266b4db83984ff194ad1cef2ac668
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4e68024333084b6166305266dd061ef32bc0e14a
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="application-lifecycle-management-alm-with-unity-apps"></a>Unity アプリを使用したアプリケーション ライフサイクル管理 (ALM)
 最新のプラットフォーム向けのアプリ開発には、コードを記述するだけでなく、それ以外の多くのアクティビティが関係します。 これらのアクティビティは、アプリの完全なライフサイクルの中で DevOps (開発 + 運用) 期間になされるものあり、たとえば、作業のアジャイルな計画と追跡、コードの設計と実装、ソース コード リポジトリの管理、ビルドの実行、継続的に実行されるインテグレーションと展開の管理、テスト (単体テストと UI テストを含む)、開発環境と運用環境の両方におけるさまざまな形式の診断の実行、製品利用統計情報と分析によるアプリのパフォーマンスとユーザー動作のリアルタイムな監視などがあります。  
@@ -84,8 +84,7 @@ ms.lasthandoff: 12/22/2017
 |事前スクリプトと事後スクリプトによるビルド定義|[はい]|Unity のコマンドラインを使用してビルドを実行するカスタムのビルド定義は、ビルド前およびビルド後のスクリプトに対して構成することもできます。|  
 |継続的な統合 (ゲート チェックインを含む)|[はい]|Git としての TFVC へのゲート チェックインのみ、チェックイン モデルではなく、プル要求モデルで機能します。|  
 
-## <a name="testing"></a>テスト中  
- 参照リンク: **[アプリケーションのテスト](/devops-test-docs/test/test-apps-early-and-often)**  
+## <a name="testing"></a>テスト中
 
 |機能|Unity でサポートされているかどうか|その他のコメント|  
 |-------------|--------------------------|-------------------------|  
@@ -96,8 +95,9 @@ ms.lasthandoff: 12/22/2017
 |[コードの単体テスト](../test/unit-test-your-code.md)|Unity 内。Visual Studio 内ではありません。|Unity は、独自の単体テスト フレームワークを [Unity テスト ツール](https://www.assetstore.unity3d.com/en/#!/content/13802) (Unity Asset Store) の一部として提供しています。 単体テストの結果は、Unity 内でレポートされ、Visual Studio 内では表示されません。|  
 |[UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)|×|コード化された UI テストは、アプリの UI で読み取り可能なコントロールに依存します。Unity アプリケーションは本質的にはグラフィカルであるため、コンテンツはコード化された UI テストのツールで読み取ることはありません。|  
 
-## <a name="improve-code-quality"></a>コード品質の向上  
- 参照リンク: **[コードの品質の向上](/visualstudio/test/improve-code-quality)**  
+## <a name="improve-code-quality"></a>コード品質の向上
+
+参照リンク: **[コードの品質の向上](/visualstudio/test/improve-code-quality)**  
 
 |機能|Unity でサポートされているかどうか|その他のコメント|  
 |-------------|--------------------------|-------------------------|  

@@ -16,11 +16,11 @@ author: kempb
 ms.author: kempb
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 72bcca85f57a5c68e70dfa942ec607072af86561
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 78773b3a87aff91fae92ec64365ef55620e58d44
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="customize-your-build"></a>ビルドのカスタマイズ
 バージョン 15 より前のバージョンの MSBuild では、ソリューション内のプロジェクトに新しいカスタム プロパティを提供する場合、ソリューション内のすべてのプロジェクト ファイルにそのプロパティへの参照を手動で追加する必要がありました。 または、.props ファイルでプロパティを定義してから、ソリューションのすべてのプロジェクトでその .props ファイルを明示的にインポートする必要がありました。
@@ -88,7 +88,7 @@ msbuild で "内" ファイル (`2-src` と `2-test`) と "外" ファイル (`1
 msbuild の一般的手法をまとめると次のようになります。
 
 - 特定のプロジェクトに対して、msbuild がソリューション構造の上方で最初の `Directory.Build.props` が見つけると、既定でそれを結合し、後続のスキャンを停止する
-- 複数のレベルを見つけ、結合する場合、"内" ファイルから "外" ファイルを [`<Import...>`](http://docs.microsoft.com/visualstudio/msbuild/property-functions#msbuild-getpathoffileabove) する (上のコード参照)
+- 複数のレベルを見つけ、結合する場合、"内" ファイルから "外" ファイルを [`<Import...>`](../msbuild/property-functions.md#msbuild-getpathoffileabove) する (上のコード参照)
 - "外" ファイル自体でその上にある何かもインポートされない場合、そこでスキャンが停止する
 - スキャン/結合プロセスを制御するには、`$(DirectoryBuildPropsPath)` と `$(ImportDirectoryBuildProps)` を使用する
 

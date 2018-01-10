@@ -10,16 +10,15 @@ ms.topic: article
 helpviewer_keywords:
 - unit tests, creating
 - unit tests, running
-ms.assetid: d23a9ee7-58e3-4e8b-a38c-b2207ea73fea
-caps.latest.revision: "25"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 39addca0d673ae5a9423d4195ffc2bfe3358de4e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: 36a33e9be37255e6bcf199e612a44f65ca243a1e
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="run-a-unit-test-as-a-64-bit-process"></a>64 ビット プロセスとして単体テストを実行する
 64 ビット コンピューターの場合、単体テストを実行し、64 ビット プロセスとしてコード カバレッジ情報を取得できます。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
      .runsettings ファイルに `<TargetPlatform>x64</TargetPlatform>` を指定します。 この方法の長所は、さまざまなファイルに設定のグループを指定し、設定を簡単に切り替えられることです。 ソリューション間で設定をコピーすることもできます。 詳細については、「[.runsettings ファイルを使用して単体テストを構成する](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
- [テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)   
- [コードの単体テスト](../test/unit-test-your-code.md)   
- [Visual Studio のテストにおけるテスト設定の指定](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests)
+## <a name="see-also"></a>関連項目
+
+[テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)  
+[コードの単体テスト](../test/unit-test-your-code.md)  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.workload: dotnet
-ms.openlocfilehash: b0d4726bc29ebbb6f90fde5e7817ec2fb596177c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 9034fbbffee2b3883f15be0d724f00cafad8126a
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="get-started-with-live-unit-testing-in-visual-studio"></a>Visual Studio 2017 で Live Unit Testing の使用を開始する
 
@@ -56,7 +56,7 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
 1. **[新しいプロジェクトの追加]** ダイアログで、C# ノードを選択し、**[.NET Standard]** を選択します。 
 
    > [!NOTE]
-   > 使用するライブラリは特定の .NET 実装ではなく .NET Standard を対象としているので、.NET Standard の所定のバージョンをサポートする任意の .NET 実装から呼び出すことができます。 詳細については、「[.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard)」をご覧ください。
+   > 使用するライブラリは特定の .NET 実装ではなく .NET Standard を対象としているので、.NET Standard の所定のバージョンをサポートする任意の .NET 実装から呼び出すことができます。 詳細については、「[.NET Standard](/dotnet/standard/net-standard)」をご覧ください。
 
 1. 次の図に示すように、右側のウィンドウで **[クラス ライブラリ (.NET Standard)]** テンプレートを選択し、**[名前]** テキスト ボックスに「`StringLibrary`」と入力します。
 
@@ -84,7 +84,7 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
 1. **[新しいプロジェクトの追加]** ダイアログで、Visual Basic ノードを選択し、次に **[.NET Standard]** を選択します。 
 
    > [!NOTE]
-   > 使用するライブラリは特定の .NET 実装ではなく .NET Standard を対象としているので、.NET Standard の所定のバージョンをサポートする任意の .NET 実装から呼び出すことができます。 詳細については、「[.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard)」をご覧ください。
+   > 使用するライブラリは特定の .NET 実装ではなく .NET Standard を対象としているので、.NET Standard の所定のバージョンをサポートする任意の .NET 実装から呼び出すことができます。 詳細については、「[.NET Standard](/dotnet/standard/net-standard)」をご覧ください。
 
 1. 次の図に示すように、右側のウィンドウで **[クラス ライブラリ (.NET Standard)]** テンプレートを選択し、**[名前]** テキスト ボックスに「`StringLibrary`」と入力します。
 
@@ -104,7 +104,7 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
      
       - `HasEmbeddedSpaces` は、埋め込み空白文字が文字列に含まれている場合は `true` を返し、それ以外の場合には `false` を返します。
     
-1. **ソリューション エクスプローラー**で、StringLibrary プロジェクトを右クリックし、**[プロパティ]** を選択します。 次の図に示すように、**[アプリケーション]** タブで、**[ルート名前空間]** テキスト ボックス内のテキストを削除します。 ルート名前空間は、ソース コード内の [Namespace ステートメント](https://docs.microsoft.com/dotnet/visual-basic/language-reference/statements/namespace-statement)によって定義されます。
+1. **ソリューション エクスプローラー**で、StringLibrary プロジェクトを右クリックし、**[プロパティ]** を選択します。 次の図に示すように、**[アプリケーション]** タブで、**[ルート名前空間]** テキスト ボックス内のテキストを削除します。 ルート名前空間は、ソース コード内の [Namespace ステートメント](/dotnet/visual-basic/language-reference/statements/namespace-statement)によって定義されます。
 
    ![Visual Basic プロジェクトの [プロジェクト プロパティ] ダイアログ](./media/lut-start/vb-properties.png)
  
@@ -250,7 +250,7 @@ Live Unit Testing は、重大な問題として不完全なコード カバレ�
 
     [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest2.cs#1)]
 
-1. [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.isfalse) メソッドへの呼び出しのすぐ後に、次のコードを追加して、`DirectCallWithNullOrEmpty` メソッドを変更します。
+1. [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.isfalse) メソッドへの呼び出しのすぐ後に、次のコードを追加して、`DirectCallWithNullOrEmpty` メソッドを変更します。
 
     [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest2.cs#2)]
 
@@ -267,7 +267,7 @@ Live Unit Testing は、重大な問題として不完全なコード カバレ�
 
     [!code-vb[StringLibraryTest source code](samples/snippets/visual-basic/lut-start/unittest2.vb#1)]
 
-1. [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.isfalse) メソッドへの呼び出しのすぐ後に、次のコードを追加して、`DirectCallWithNullOrEmpty` メソッドを変更します。
+1. [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.isfalse) メソッドへの呼び出しのすぐ後に、次のコードを追加して、`DirectCallWithNullOrEmpty` メソッドを変更します。
 
     [!code-vb[StringLibraryTest source code](samples/snippets/visual-basic/lut-start/unittest2.vb#2)]
 
@@ -308,7 +308,7 @@ Live Unit Testing は、重大な問題として不完全なコード カバレ�
     
 1. **[選択されたテストのデバッグ]** を選択して、失敗したテストをデバッグします。 
  
-1. Visual Studio はデバッグ モードでテストを実行します。 テストでは、配列内の各文字列が `phrase` という名前の変数に割り当てられ、その変数が `HasEmbeddedSpaces` メソッドに渡されます。 アサーション式が初めて `false` になると、プログラムの実行は一時停止し、デバッガーが呼び出されます。 [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.istrue) メソッドの呼び出しに予期しない値が含まれていると、以下の図に示すような例外ダイアログが表示されます。  
+1. Visual Studio はデバッグ モードでテストを実行します。 テストでは、配列内の各文字列が `phrase` という名前の変数に割り当てられ、その変数が `HasEmbeddedSpaces` メソッドに渡されます。 アサーション式が初めて `false` になると、プログラムの実行は一時停止し、デバッガーが呼び出されます。 [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.istrue) メソッドの呼び出しに予期しない値が含まれていると、以下の図に示すような例外ダイアログが表示されます。  
 
    ![Live Unit Testing の例外ダイアログ](media/lut-start/exception-dialog-cs.png) 
  
@@ -341,7 +341,7 @@ Live Unit Testing は、重大な問題として不完全なコード カバレ�
     
 1. **[選択されたテストのデバッグ]** を選択して、失敗したテストをデバッグします。 
  
-1. Visual Studio はデバッグ モードでテストを実行します。 テストでは、配列内の各文字列が `phrase` という名前の変数に割り当てられ、その変数が `HasEmbeddedSpaces` メソッドに渡されます。 アサーション式が初めて `false` になると、プログラムの実行は一時停止し、デバッガーが呼び出されます。 [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.istrue) メソッドの呼び出しに予期しない値が含まれていると、以下の図に示すような例外ダイアログが表示されます。  
+1. Visual Studio はデバッグ モードでテストを実行します。 テストでは、配列内の各文字列が `phrase` という名前の変数に割り当てられ、その変数が `HasEmbeddedSpaces` メソッドに渡されます。 アサーション式が初めて `false` になると、プログラムの実行は一時停止し、デバッガーが呼び出されます。 [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.istrue) メソッドの呼び出しに予期しない値が含まれていると、以下の図に示すような例外ダイアログが表示されます。  
 
    ![Live Unit Testing の例外ダイアログ](media/lut-start/exception-dialog-vb.png) 
  

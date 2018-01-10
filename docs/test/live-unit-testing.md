@@ -8,15 +8,14 @@ ms.topic: article
 helpviewer_keywords:
 - Visual Studio ALM
 - Live Unit Testing
-ms.assetid: 5b51fb96-94f4-4926-92b9-262156c05b85
 author: rpetrusha
 ms.author: ronpet
 ms.workload: dotnet
-ms.openlocfilehash: 45ab3f266a46cd08d269f0c463fb6cc26f494a91
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 725b9e31e725106dcd9e461a8f5d3749230fd5c9
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="live-unit-testing-with-visual-studio-2017"></a>Visual Studio 2017 での Live Unit Testing
 
@@ -118,7 +117,7 @@ Live Unit Testing のカバレッジの視覚化は、コード エディター�
  
   ![イメージ](./media/lut-failedinfo.png) 
 
-さらに、テストの名前と結果を指定すると、ツールヒントで、デバッガーを使用して一連のテストを実行するだけでなく、一連のテストを再実行することもできます。 ツールヒントで 1 つ以上のテストを選択して、それらのテストのみを実行またはデバッグすることもできます。 これにより、コード ウィンドウから移動することなくテストをデバッグできます。 既に設定したブレークポイントを確認するときだけでなく、デバッグを実行するときにも、デバッガーが [ `Assert` ](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert) メソッドを実行して予期しない結果が返されると、プログラムの実行は一時停止します。 
+さらに、テストの名前と結果を指定すると、ツールヒントで、デバッガーを使用して一連のテストを実行するだけでなく、一連のテストを再実行することもできます。 ツールヒントで 1 つ以上のテストを選択して、それらのテストのみを実行またはデバッグすることもできます。 これにより、コード ウィンドウから移動することなくテストをデバッグできます。 既に設定したブレークポイントを確認するときだけでなく、デバッグを実行するときにも、デバッガーが [ `Assert` ](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert) メソッドを実行して予期しない結果が返されると、プログラムの実行は一時停止します。 
 
 ツールヒントで不合格になったテストをポイントすると、展開されて、次の図に示すような不合格に関する追加情報が表示されます。 不合格になったテストをツールヒントでダブルクリックすると、そのテストに直接移動できます。
 

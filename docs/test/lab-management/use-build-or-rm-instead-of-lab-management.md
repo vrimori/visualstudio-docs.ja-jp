@@ -8,16 +8,15 @@ ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: automated testing, lab management, test lab
-ms.assetid: F34B0D19-B430-4C01-B402-62A861007E71
-caps.latest.revision: "56"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: d103e74c0f6cf40bfd0e6dc26dd5777c6fe11f2f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: 4dae17012ecf66258d65ff3c200a0dbe8e4c9429
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="use-build-and-release-management-instead-of-lab-management-for-automated-testing"></a>テストの自動化に、Lab Management ではなくビルドとリリース管理を使用します。
 
@@ -69,7 +68,7 @@ XAML ビルドは、目的の達成に、ラボ環境、テスト スイート�
 
 | 手順 | ラボ センターを使用する場合 | ビルドまたはリリース管理を使用する場合 |
 |-------|----------------------|-----------------|
-| 環境テンプレートのライブラリを管理します。 | ラボ環境を作成します。 仮想マシンに必要なソフトウェアをインストールします。 Sysprep を実行し、ライブラリに環境をテンプレートとして格納します。 | SCVMM 管理コンソールを直接使用して、バーチャル マシン テンプレートまたはサービス テンプレートのいずれかを作成および管理します。 Azure を使用する場合、[Azure Marketplace](https://azure.microsoft.com/marketplace/) から定義済みの [Azure Resource Manager テンプレート](https://azure.microsoft.com/documentation/templates/)または [Azure クイック スタート テンプレート](https://azure.microsoft.com/documentation/templates/)を 1 つを選択します。 |
+| 環境テンプレートのライブラリを管理します。 | ラボ環境を作成します。 仮想マシンに必要なソフトウェアをインストールします。 Sysprep を実行し、ライブラリに環境をテンプレートとして格納します。 | SCVMM 管理コンソールを直接使用して、仮想マシン テンプレートまたはサービス テンプレートのいずれかを作成および管理します。 Azure を使用する場合、[Azure Marketplace](https://azure.microsoft.com/marketplace/) から定義済みの [Azure Resource Manager テンプレート](https://azure.microsoft.com/documentation/templates/)または [Azure クイック スタート テンプレート](https://azure.microsoft.com/documentation/templates/)を 1 つを選択します。 |
 | ラボ環境を作成します。 | ライブラリで環境テンプレートを選択し、それを配置します。 必要なパラメーターを入力し、仮想マシンの構成をカスタマイズします。 | SCVMM 管理コンソールを使用すると、テンプレートから VM またはサービス インスタンスを直接作成できます。 リソースを作成するには、Azure Portal を直接使用します。 または、環境のリリース定義を作成します。 [SCVMM Integration の拡張機能](https://marketplace.visualstudio.com/items?itemname=ms-vscs-rm.scvmmapp)の Azure のタスクを使用し、新しい仮想マシンを作成します。 この定義の新しいリリースの作成は、ラボ センターで新しい環境を作成することと同じです。 |
 | マシンに接続します。 | 環境ビューアーでラボ環境を開きます。 | 仮想マシンに接続するために、SCVMM 管理コンソールを直接使用します。 または、仮想マシンの IP アドレスまたは DNS 名を使用して、リモート デスクトップ セッションを開きます。 |
 | 環境のチェックポイントを取得するか、クリーンなチェックポイントに環境を復元します。 | 環境ビューアーでラボ環境を開きます。 チェックポイントを取得するまたは前のチェックポイントに復元するオプションを選択します。 | 仮想マシンでこれらの操作を実行するために、直接 SCVMM 管理コンソールを使用します。 または、これらの手順をより大規模な自動化の一環として実行するには、リリース定義の環境の一部として [SCVMM Integration 拡張機能](https://marketplace.visualstudio.com/items?itemname=ms-vscs-rm.scvmmapp)からチェックポイント タスクを含めます。 |

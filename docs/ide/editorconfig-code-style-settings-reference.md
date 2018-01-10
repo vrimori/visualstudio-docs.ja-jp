@@ -19,15 +19,15 @@ ms.author: kaseyu
 manager: ghogen
 ms.technology: vs-ide-general
 ms.workload: kaseyu
-ms.openlocfilehash: 1eae2ecb271fd0af411da9859091f82df7913b6c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1eaef82dd904c867510770a1850d5893434a78e1
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig の .NET コーディング規則の設定
 
-Visual Studio 2017 [EditorConfig](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options) ファイルを使用すれば、コードベースで一貫性のあるコード スタイルを定義および維持できます。 EditorConfig には、`indent_style` や `indent_size` などのいくつかの主要な書式設定プロパティが含まれています。 Visual Studio では、EditorConfig ファイルを使用して .NET コーディング規則の設定を構成することもできます。 EditorConfig ファイルでは、個々の .NET コーディング規則を有効化または無効化し、重要度レベルで規則を適用する程度を構成することができます。 EditorConfig を使用して、コードベースで整合性を適用する方法の詳細については、「[EditorConfig で移植可能なカスタム エディター設定を作成する](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options)」を参照してください。 例として、[.NET コンパイラ プラットフォームの .editorconfig ファイル](https://github.com/dotnet/roslyn/blob/master/.editorconfig)を参照することもできます。
+Visual Studio 2017 [EditorConfig](../ide/create-portable-custom-editor-options.md) ファイルを使用すれば、コードベースで一貫性のあるコード スタイルを定義および維持できます。 EditorConfig には、`indent_style` や `indent_size` などのいくつかの主要な書式設定プロパティが含まれています。 Visual Studio では、EditorConfig ファイルを使用して .NET コーディング規則の設定を構成することもできます。 EditorConfig ファイルでは、個々の .NET コーディング規則を有効化または無効化し、重要度レベルで規則を適用する程度を構成することができます。 EditorConfig を使用して、コードベースで整合性を適用する方法の詳細については、「[EditorConfig で移植可能なカスタム エディター設定を作成する](../ide/create-portable-custom-editor-options.md)」を参照してください。 例として、[.NET コンパイラ プラットフォームの .editorconfig ファイル](https://github.com/dotnet/roslyn/blob/master/.editorconfig)を参照することもできます。
 
 サポートされている .NET コーディング規則には次の 3 つのカテゴリがあります。
 

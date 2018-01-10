@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: 8cd00fe33cf463227dd09f93047350a96cee3b92
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f91fcfa7e0ea7247eb91a3512f7abd64d8684809
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="working-with-python-in-visual-studio"></a>Visual Studio での Python の使用
 
@@ -55,7 +55,7 @@ Python ワークロードに含まれる [Azure SDK for Python](azure-sdk-for-py
 
 **Q.Visual Studio for Mac では Python のサポートを利用できますか?**
 
-A:  現時点では利用できませんが、[UserVoice](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac/suggestions/18670291-python-tools-for-visual-studio-mac) には要望が寄せられています。 [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/) のドキュメントでは、現在サポートされている開発の種類が示されています。 当面の間、Windows、Mac、Linux での Visual Studio Code は、[利用可能な拡張機能によって Python で問題なく動作します](https://code.visualstudio.com/docs/languages/python)。
+A:  現時点では利用できませんが、[UserVoice](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac/suggestions/18670291-python-tools-for-visual-studio-mac) には要望が寄せられています。 [Visual Studio for Mac](/visualstudio/mac/) のドキュメントでは、現在サポートされている開発の種類が示されています。 当面の間、Windows、Mac、Linux での Visual Studio Code は、[利用可能な拡張機能によって Python で問題なく動作します](https://code.visualstudio.com/docs/languages/python)。
 
 **Q.Python で UI を構築するには何を使用できますか?**
 

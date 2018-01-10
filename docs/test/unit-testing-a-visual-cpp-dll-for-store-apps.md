@@ -4,19 +4,18 @@ ms.custom:
 ms.date: 11/04/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 24afc90a-8774-4699-ab01-6602a7e6feb2
-caps.latest.revision: "13"
 ms.author: mblome
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: cad1d4dd670f83c9dcb168127ecbe44f8687f09a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikeblome
+ms.openlocfilehash: 1b032b651603beb5771bfa68b8dc8628540d638e
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="how-to-test-a-visual-c-dll-for-uwp-apps"></a>UWP アプリ用の Visual C++ DLL をテストする方法 
 このトピックでは、C++ 用の Microsoft テスト フレームワークを使用して、ユニバーサル Windows プラットフォーム (UWP) アプリ用の C++ DLL の単体テストを作成する 1 つの方法について説明します。 RooterLib DLL は、指定した数値の平方根の概数を計算する関数を実装することによって、微積分の限界理論の不明瞭なメモリを示します。 この DLL を、ユーザーが数学で実行できる楽しい作業を提示する UWP アプリに組み込むことができます。  

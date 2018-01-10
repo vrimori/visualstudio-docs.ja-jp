@@ -7,16 +7,15 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 4f4b5f10-7314-4725-8c6e-e72f52eff918
-caps.latest.revision: "14"
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: dd663d17dc7d0dc66af7cdd27f0da3cf9a253523
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikeblome
+ms.openlocfilehash: d926e28dc918900715090d32f929b6b7ff5cb482
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio で C/C++ 用の単体テストを作成する
 他の言語と同じように、C++ についても、**[テスト エクスプローラー]** ウィンドウを使って単体テストを作成して実行できます。 **テスト エクスプローラー**の使い方については、「[テスト エクスプローラーを使用して単体テストを実行する](run-unit-tests-with-test-explorer.md)」をご覧ください。 
@@ -38,7 +37,7 @@ Visual Studio には次の C++ テスト フレームワークが含まれてお
 
 2) **Boost.Test** は、**C++ によるデスクトップ開発**ワークロードの既定のコンポーネントとして含まれます。 **テスト エクスプローラー**とは統合されていますが、現時点ではプロジェクト テンプレートがないので、手動で構成する必要があります。 詳細については、「[How to: use Boost.Test in Visual Studio](how-to-use-boost-test-for-cpp.md)」(Visual Studio で C++ 用の Boost.Test を使用する方法) をご覧ください。 
 
-3) **CTest** のサポートは、**C++ によるデスクトップ開発**ワークロードの一部である [CMake Tools for Visual Studio](/cpp/ide/cmake-tools-for-cpp.md) コンポーネントによって組み込まれています。 ただし、CTest と**テスト エクスプローラー**の統合はまだ完全ではありません。 詳細については、「[How to: use CTest in Visual Studio](how-to-use-ctest-for-cpp.md)」(Visual Studio で C++ 用の CTest を使用する方法) をご覧ください。
+3) **CTest** のサポートは、**C++ によるデスクトップ開発**ワークロードの一部である [CMake Tools for Visual Studio](/cpp/ide/cmake-tools-for-cpp) コンポーネントによって組み込まれています。 ただし、CTest と**テスト エクスプローラー**の統合はまだ完全ではありません。 詳細については、「[How to: use CTest in Visual Studio](how-to-use-ctest-for-cpp.md)」(Visual Studio で C++ 用の CTest を使用する方法) をご覧ください。
 
 
 **Visual Studio 2015 以前**

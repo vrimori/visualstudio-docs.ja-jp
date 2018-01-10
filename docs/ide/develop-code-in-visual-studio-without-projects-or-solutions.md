@@ -30,11 +30,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 2d1d3c327101e535c037dba30ed19af3dcf7faaa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 78b59ff3d8d6c54465ce29334c1dbe041b7a71be
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>プロジェクトまたはソリューションを使用せずに Visual Studio でコードを開発する  
 Visual Studio 2017 で、ほぼすべての種類のディレクトリ ベースのプロジェクトから、ソリューションまたはプロジェクト ファイルを使用せずに Visual Studio にコードを開くことができます。 これは、たとえば、Git でコード プロジェクトを検索し、それを複製して、直接 Visual Studio に開き、ソリューションまたはプロジェクトを作成することなく開発を開始できることを意味します。  
@@ -172,7 +172,7 @@ Visual Studio は多くのさまざまな言語を実行する方法を認識し
 
   ![カスタム ビルド タスクのコマンド](./media/VSIDE_Code_Tasks_CustTask1.png)
 
-1. 次のビルド タスクを tasks.vs.json に追加します。 この例では、2 つのタスクを追加します。1 つは nMake コマンドを使用してプロジェクトをビルドする "makefile-build" と呼ばれるもので、もう 1 つは "clean" 引数により nMake コマンドを呼び出す makefile-clean と呼ばれるものです。 (これらのタスクは、既存の "タスク" 配列内に追加されます。) (これは、ビルド タスクのほんの一例です。 これらを実際に機能させるには、システムにインストールされた [nNake](https://docs.microsoft.com/en-us/cpp/build/nmake-reference) を含むワークロードが必要です。)  
+1. 次のビルド タスクを tasks.vs.json に追加します。 この例では、2 つのタスクを追加します。1 つは nMake コマンドを使用してプロジェクトをビルドする "makefile-build" と呼ばれるもので、もう 1 つは "clean" 引数により nMake コマンドを呼び出す makefile-clean と呼ばれるものです。 (これらのタスクは、既存の "タスク" 配列内に追加されます。) (これは、ビルド タスクのほんの一例です。 これらを実際に機能させるには、システムにインストールされた [nNake](/cpp/build/nmake-reference) を含むワークロードが必要です。)
 
   ```xml
   {

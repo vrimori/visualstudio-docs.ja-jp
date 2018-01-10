@@ -7,16 +7,15 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 51b53778-469c-4cc9-854c-4e4992d6389b
-caps.latest.revision: "30"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 4cf5eac9600be44405142666e1f94408c44b0a13
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: fbda836ec423d9a86b51b2334a3015589512d816
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>コード化された UI テストを使用した SharePoint 2010 アプリケーションのテスト
 コード化された UI テストを SharePoint アプリケーションに含めると、UI コントロールを含むアプリケーション全体が正しく機能していることを検証できます。 コード化された UI テストでは、ユーザー インターフェイスの値とロジックも検証できます。  
@@ -144,10 +143,10 @@ uiGridKeyboardInputEdit.Text=value;
 ### <a name="forum"></a>フォーラム  
  [Visual Studio ALM + Team Foundation Server のブログ](http://go.microsoft.com/fwlink/?LinkID=254496)  
   
-## <a name="see-also"></a>参照  
- [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   
- [SharePoint 2010 および 2013 アプリケーションの Web パフォーマンス テストおよびロード テスト](/devops-test-docs/test/web-performance-and-load-testing-sharepoint-2010-and-2013-applications)   
- [SharePoint ソリューションの作成](/office-dev/office-dev/create-sharepoint-solutions)   
- [SharePoint コードの検証およびデバッグ](/office-dev/office-dev/verifying-and-debugging-sharepoint-code)   
- [SharePoint ソリューションのビルドとデバッグ](/office-dev/office-dev/building-and-debugging-sharepoint-solutions)   
- [SharePoint アプリケーションのパフォーマンスのプロファイリング](/office-dev/office-dev/profiling-the-performance-of-sharepoint-applications)
+## <a name="see-also"></a>関連項目
+
+[UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)  
+[SharePoint ソリューションの作成](/office-dev/office-dev/create-sharepoint-solutions)   
+[SharePoint コードの検証およびデバッグ](/office-dev/office-dev/verifying-and-debugging-sharepoint-code)   
+[SharePoint ソリューションのビルドとデバッグ](/office-dev/office-dev/building-and-debugging-sharepoint-solutions)   
+[SharePoint アプリケーションのパフォーマンスのプロファイリング](/office-dev/office-dev/profiling-the-performance-of-sharepoint-applications)

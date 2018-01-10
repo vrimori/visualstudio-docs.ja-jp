@@ -8,16 +8,15 @@ ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: unit testing, create unit test plans
-ms.assetid: 2171CD69-FBB1-4994-9DCC-3BFFDFD26662
-caps.latest.revision: "56"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: bfb37b6ea2c448d0243f72857de0a29fa2d20c87
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: e6789c3a8ddb9b0aa317df0d2362d39946069cbd
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="get-started-with-unit-testing"></a>単体テストの概要
 
@@ -92,21 +91,21 @@ Visual Studio 2017 以降で MSTest、xUnit、または NUnit テスト フレ�
 <a name="intellitest"></a>
 ## <a name="generate-unit-tests-with-intellitest"></a>IntelliTest で単体テストを生成する
 
-IntelliTest を実行すると、どのテストが失敗しているかを簡単に把握し、必要なコードを追加して修正できます。 回帰スイートを提供するために、生成されたどのテストをテスト プロジェクトに保存するかを選択できます。 コードを変更する際に、IntelliTest を再実行して、生成されたテストとコードの変更を同期させます。 その方法については、「[IntelliTest でのコードの単体テストの生成](https://docs.microsoft.com/visualstudio/test/generate-unit-tests-for-your-code-with-intellitest)」を参照してください。
+IntelliTest を実行すると、どのテストが失敗しているかを簡単に把握し、必要なコードを追加して修正できます。 回帰スイートを提供するために、生成されたどのテストをテスト プロジェクトに保存するかを選択できます。 コードを変更する際に、IntelliTest を再実行して、生成されたテストとコードの変更を同期させます。 その方法については、「[IntelliTest でのコードの単体テストの生成](../test/generate-unit-tests-for-your-code-with-intellitest.md)」を参照してください。
 
 ![IntelliTest での単体テストの生成](media/intellitest.png)
 
 <a name="unit-tests"></a>
 ## <a name="run-unit-tests-with-test-explorer"></a>テスト エクスプローラーを使用して単体テストを実行する
 
-テスト エクスプローラーを使用して、Visual Studio またはサードパーティの単体テスト プロジェクトから単体テストを実行し、テストをカテゴリにグループ化し、テスト リストをフィルター処理し、テストのプレイリストを作成、保存、および実行します。 テストをデバッグし、テストのパフォーマンスとコード カバレッジを分析することもできます。 その方法については、「[テスト エクスプローラーを使用して単体テストを実行する](https://docs.microsoft.com/visualstudio/test/run-unit-tests-with-test-explorer)」を参照してください。
+テスト エクスプローラーを使用して、Visual Studio またはサードパーティの単体テスト プロジェクトから単体テストを実行し、テストをカテゴリにグループ化し、テスト リストをフィルター処理し、テストのプレイリストを作成、保存、および実行します。 テストをデバッグし、テストのパフォーマンスとコード カバレッジを分析することもできます。 その方法については、「[テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)」を参照してください。
 
 ![テスト エクスプローラーを使用した単体テストの実行](media/testexplorer.png)
 
 <a name="code-coverage"></a>
 ## <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>コード カバレッジを使用した、テストされるコード割合の確認
 
-単体テストなどのコード化されたテストによって実際にテストされるプロジェクトのコードの割合を調べるには、Visual Studio のコード カバレッジ機能を使用できます。 バグから効果的に保護するには、コードの大部分を "カバー" するようにテストを実行する必要があります。 その方法については、「[コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](https://docs.microsoft.com/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)」を参照してください。
+単体テストなどのコード化されたテストによって実際にテストされるプロジェクトのコードの割合を調べるには、Visual Studio のコード カバレッジ機能を使用できます。 バグから効果的に保護するには、コードの大部分を "カバー" するようにテストを実行する必要があります。 その方法については、「[コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)」を参照してください。
 
 ![コード カバレッジを使用した、テストされるコード割合の確認](media/codecoverage.png)
 

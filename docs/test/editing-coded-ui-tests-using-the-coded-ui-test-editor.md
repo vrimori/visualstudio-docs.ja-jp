@@ -9,16 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords: vs.codedUItest.testeditor
 helpviewer_keywords: coded UI test, Coded UI Test Editor
-ms.assetid: 76435c4b-593e-43a3-a9fe-709a7f9f5e0f
-caps.latest.revision: "40"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 2bce8aa82b1076860f9c9b96e39e7a13955b9444
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: 2302c2bbfbd38ff307335b525aa319afb5f07e25
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="editing-coded-ui-tests-using-the-coded-ui-test-editor"></a>コード化された UI テスト エディターを使用したコード化された UI テストの編集
 コード化された UI テスト エディターを使用すると、コード化された UI テストを簡単に変更できます。 コード化された UI テスト エディターを使用して、テスト メソッドや UI 操作のプロパティを検索、表示、および編集できます。 また、対応するコントロールを表示および編集するための UI コントロール マップを使用できます。  
@@ -214,9 +213,9 @@ UI 操作のプロパティの編集
 ### <a name="forum"></a>フォーラム  
  [Visual Studio の UI オートメーションのテスト (CodedUI を含む)](http://go.microsoft.com/fwlink/?LinkID=224497)  
   
-## <a name="see-also"></a>参照  
- [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   
- [コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)   
- [データ ドリブンのコード化された UI テストの作成](../test/creating-a-data-driven-coded-ui-test.md)   
- [既存の操作の記録からのコード化された UI テストの生成](/devops-test-docs/test/generating-a-coded-ui-test-from-an-existing-action-recording)   
- [チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
+## <a name="see-also"></a>関連項目
+
+[UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)  
+[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)  
+[データ ドリブンのコード化された UI テストの作成](../test/creating-a-data-driven-coded-ui-test.md)  
+[チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)

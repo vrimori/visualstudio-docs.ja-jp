@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: ghogen
 dev_langs: C++
 ms.workload: cplusplus
-ms.openlocfilehash: 360efc2b185e6485b2bb08d5d8d0b09a128099d0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7d55fdb061b9cb2fcd0497b7dde8e5c4255cf5e3
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="custom-native-etw-heap-events"></a>カスタム ネイティブ ETW ヒープ イベント
 
-Visual Studio には、[プロファイリングと診断](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)のためのさまざまなツールがあります。その 1 つがネイティブ メモリ プロファイラーです。  このプロファイラーはヒープ プロバイダーから [ETW イベント](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-)をフックし、メモリの割り当て状況と使用状況を分析します。  既定では、このツールは、標準の Windows ヒープから行われた割り当てのみを分析できます。このネイティブ ヒープ外の割り当ては表示されません。
+Visual Studio には、[プロファイリングと診断](../profiling/profiling-tools.md)のためのさまざまなツールがあります。その 1 つがネイティブ メモリ プロファイラーです。  このプロファイラーはヒープ プロバイダーから [ETW イベント](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-)をフックし、メモリの割り当て状況と使用状況を分析します。  既定では、このツールは、標準の Windows ヒープから行われた割り当てのみを分析できます。このネイティブ ヒープ外の割り当ては表示されません。
 
 カスタム ヒープを使用し、標準ヒープの割り当てオーバーヘッドを回避する方法を使用したい場合があります。  たとえば、[VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) を使用し、アプリまたはゲームの開始時に大量のメモリを割り当て、そのリスト内で独自のブロックを管理できます。  このシナリオでは、メモリ プロファイラー ツールは最初の割り当てのみを認識し、メモリ チャンク内で行われたカスタム管理は認識されません。  ただし、カスタム ネイティブ ヒープの ETW プロバイダーを使用すると、標準ヒープ外で行うあらゆる割り当てをこのツールに認識させることができます。
 
@@ -48,7 +48,7 @@ Foo* pFoo2 = (Foo*)mPool.allocate();
 Foo* pFoo3 = (Foo*)mPool.allocate();
 ```
 
-カスタム ヒープの追跡がない[メモリ使用量](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage)ツールからのスナップショットには、8192 バイトの割り当てが 1 つだけ表示され、プールにより行われたカスタム割り当ては何も表示されません。
+カスタム ヒープの追跡がない[メモリ使用量](../profiling/memory-usage.md)ツールからのスナップショットには、8192 バイトの割り当てが 1 つだけ表示され、プールにより行われたカスタム割り当ては何も表示されません。
 
 ![Windows ヒープ割り当て](media/heap-example-windows-heap.png)
 
@@ -139,7 +139,7 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
    ```
 
 ## <a name="tracking-memory-usage"></a>メモリ使用量を追跡記録する
-呼び出しが所定の場所にあるので、Visual Studio の標準**メモリ使用量**ツールを利用し、カスタム ヒープ使用量を追跡できます。  このツールの使用方法については、[メモリ使用量](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage)に関する文書を参照してください。 スナップショットによるヒープ プロファイリングを有効にしてください。有効にしない場合、カスタム ヒープ使用量が表示されません。 
+呼び出しが所定の場所にあるので、Visual Studio の標準**メモリ使用量**ツールを利用し、カスタム ヒープ使用量を追跡できます。  このツールの使用方法については、[メモリ使用量](../profiling/memory-usage.md)に関する文書を参照してください。 スナップショットによるヒープ プロファイリングを有効にしてください。有効にしない場合、カスタム ヒープ使用量が表示されません。 
 
 ![ヒープ プロファイリングを有効にする](media/heap-enable-heap.png)
 
@@ -153,11 +153,11 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
 
 ![NT ヒープとトラッカー](media/heap-example-windows-heap.png)
 
-標準 Windows ヒープと同様に、このツールを利用してスナップショットを比較し、カスタム ヒープのリークや破損を探すこともできます。詳しくは、[メモリ使用量](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage)に関する文書を参照してください。
+標準 Windows ヒープと同様に、このツールを利用してスナップショットを比較し、カスタム ヒープのリークや破損を探すこともできます。詳しくは、[メモリ使用量](../profiling/memory-usage.md)に関する文書を参照してください。
 
 > [!TIP]
 > Visual Studio の**パフォーマンス プロファイリング** ツールセットにも**メモリ使用量**ツールがあります。**[デバッグ]、[パフォーマンス プロファイラー]** の順に選択するか、キーボード ショートカットの **Alt + F2** を押してください。  この機能にはヒープ追跡がありません。ここの説明のようにカスタム ヒープが表示されることはありません。  この機能があるのは **[診断ツール]** ウィンドウだけです。**[デバッグ]、[Windows]、[診断ツールの表示]** の順に選択するか、キーボード ショートカットの **Ctrl+Alt+F2** を押してください。
 
 ## <a name="see-also"></a>参照
-[プロファイリング ツール](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)  
-[メモリ使用量](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage)
+[プロファイリング ツール](../profiling/profiling-tools.md)  
+[メモリ使用量](../profiling/memory-usage.md)
