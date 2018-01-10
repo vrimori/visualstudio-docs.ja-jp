@@ -12,16 +12,16 @@ author: kuhlenh
 ms.author: kaseyu
 manager: ghogen
 ms.workload: dotnet
-ms.openlocfilehash: 9ffa85d768939522935199edde6d0f19b3f2b7a2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: dd5e1012c37660917d77e2643922d8a90a8e2ffe
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="generate-a-constructor-in-c"></a>C# の場合、コンス トラクターを生成します。 #
 **新機能:**すぐに、クラスの新しいコンス トラクターのコードを生成することができます。 
 
-****正しく、自動的に宣言する、新しいコンス トラクターを導入するか、既存のコンス トラクターを変更します。 
+**正しく、**自動的に宣言する、新しいコンス トラクターを導入するか、既存のコンス トラクターを変更します。 
 
 **理由:**が、この機能は、適切なパラメーターを自動的に生成を使用する前に、コンス トラクターを宣言することです。 さらに、既存のコンス トラクターを変更するには、この機能を使用して自動的に更新しない限り、callsite をすべての更新が必要です。
 
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/22/2017
 
    ![コンス トラクターの結果を生成します。](media/constructor_result.png)
 
-## <a id="selection"></a>既存のコンス トラクターにパラメーターを追加します。
+## <a id="addparameter"></a>既存のコンス トラクターにパラメーターを追加します。
 1. 既存のオブジェクトのインスタンス化するには、パラメーターを追加します。
 
 1. 行にカーソルを置いてがまだ存在しないコンス トラクターを使用していることを示す赤い波線がある場合。
