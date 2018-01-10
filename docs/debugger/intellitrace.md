@@ -25,11 +25,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: bb0018e97cdbacc5e16e9591a0d480d509e1a9f5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7a6a1a17768c1f52bec0f98ed9f9f86754856419
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="intellitrace"></a>[IntelliTrace]
 IntelliTrace を使用して実行履歴を記録およびトレースすると、アプリのデバッグにかかる時間を短縮できます。 IntelliTrace には以下の機能があるので、バグを簡単に見つけることができます。  
@@ -47,7 +47,7 @@ IntelliTrace を使用して実行履歴を記録およびトレースすると�
 |||  
 |-|-|  
 |**IntelliTrace を使用したアプリケーションをデバッグするには。**<br /><br /> -過去のイベント表示します。<br />-呼び出し過去のイベント情報を表示します。<br />IntelliTrace セッションを保存します。<br />IntelliTrace で収集するデータを制御します。|-   [チュートリアル: IntelliTrace の使用](../debugger/walkthrough-using-intellitrace.md)<br />- [IntelliTrace の機能](../debugger/intellitrace-features.md)<br />-   [デバッグ履歴](../debugger/historical-debugging.md)<br />-   [IntelliTrace 手順バックを利用したスナップショットの表示](../debugger/how-to-use-intellitrace-step-back.md)|  
-|**Test Manager でのテスト セッション中に IntelliTrace データを収集します。**|-   [手動テストでの複数の診断データを収集します。](/devops-test-docs/test/collect-more-diagnostic-data-in-manual-tests)|  
+|**Test Manager でのテスト セッション中に IntelliTrace データを収集します。**|-   [手動テストでの複数の診断データを収集します。](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests)|  
 |**展開済みのアプリケーションから IntelliTrace データを収集します。**|-   [IntelliTrace スタンドアロン コレクターを使用します。](../debugger/using-the-intellitrace-stand-alone-collector.md)|  
 |**IntelliTrace ログ ファイル (.iTrace ファイル) からデバッグを開始します。**|-   [保存された IntelliTrace データを使用します。](../debugger/using-saved-intellitrace-data.md)|  
   
@@ -89,7 +89,7 @@ IntelliTrace を使用して実行履歴を記録およびトレースすると�
   
 -   アプリケーションは、テスト コンピューターではクラッシュしますが、開発用コンピューターでは正常に実行されます。  
   
-     Microsoft Test Manager から IntelliTrace データを収集して、.iTrace ファイルにデータを保存し、後日確認できるようにこのファイルを Team Foundation Server の作業項目に添付することができます。 参照してください[手動テストでの複数の診断データの収集](/devops-test-docs/test/collect-more-diagnostic-data-in-manual-tests)と[保存された IntelliTrace データを使用して](../debugger/using-saved-intellitrace-data.md)です。  
+     Microsoft Test Manager から IntelliTrace データを収集して、.iTrace ファイルにデータを保存し、後日確認できるようにこのファイルを Team Foundation Server の作業項目に添付することができます。 参照してください[手動テストでの複数の診断データの収集](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests)と[保存された IntelliTrace データを使用して](../debugger/using-saved-intellitrace-data.md)です。  
   
 -   展開されたアプリケーションでバグまたはクラッシュが発生しています。  
   
@@ -180,8 +180,6 @@ IntelliTrace を使用して実行履歴を記録およびトレースすると�
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [IntelliTrace の機能](../debugger/intellitrace-features.md)  
-  
- [バグの再現が困難である診断トレース データを含める](/devops-test-docs/test_notintoc/including-diagnostic-trace-data-with-bugs-that-are-difficult-to-reproduce)  
   
  [配置後の問題の診断](../debugger/diagnose-problems-after-deployment.md)  
   

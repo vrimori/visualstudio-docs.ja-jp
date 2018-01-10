@@ -13,11 +13,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 05962d6806631bdfa9b873038ec85cdf9969d55c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 376719363bd97970bdfa333d9aab0e57a8484c73
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="how-to-create-xml-snippets"></a>方法 : XML スニペットを作成する
 XML エディターを使用して、新しい XML スニペットを作成することができます。 エディターには、新しい XML スニペットを作成する際の定型スニペットである、"Snippet" という名前の XML スニペットが含まれています。  
@@ -54,7 +54,7 @@ XML エディターを使用して、新しい XML スニペットを作成す�
   <SnippetType>SurroundsWith</SnippetType>  
   <SnippetType>Expansion</SnippetType>  
 </SnippetTypes>  
-```  
+```
   
  `Expansion`型を呼び出すときは、スニペットを表示するかを決定する、**スニペットの挿入**コマンド。 `SurroundsWith`型を呼び出すときは、スニペットを表示するかを決定する、 **Surrounds With**コマンド。  
   
@@ -72,7 +72,7 @@ XML エディターを使用して、新しい XML スニペットを作成す�
   <name>$name$</name>  
   $selected$ $end$</test>]]>  
 </Code>  
-```  
+```
   
  この `Code` 要素には 3 つの変数が含まれています。  
   
@@ -88,7 +88,7 @@ XML エディターを使用して、新しい XML スニペットを作成す�
 <test>  
   <name>name</name>  
 </test>  
-```  
+```
   
  name 要素の値は、編集可能な領域としてマークされます。  
   
@@ -100,7 +100,7 @@ XML エディターを使用して、新しい XML スニペットを作成す�
   <ID>name</ID>  
   <Default>name</Default>  
 </Literal  
-```  
+```
   
  リテラルは関数を参照することもできます。 XML エディターには、という名前の関数が含まれています。 **LookupPrefix**です。 **LookupPrefix**関数は、指定した名前空間 URI をこのスニペットが呼び出されて、存在する場合、その名前空間に定義されている名前空間プレフィックスを返し、コロン (:) が含まれている XML ドキュメント内の場所からその名前。 次の例に示します、`Literal`を使用する要素、 **LookupPrefix**関数。  
   
@@ -109,7 +109,7 @@ XML エディターを使用して、新しい XML スニペットを作成す�
    <ID>prefix</ID>  
    <Function>LookupPrefix("namespaceURI")</Function>  
 </Literal>  
-```  
+```
   
  この後は、XML スニペット内の任意の場所で $prefix$ 変数を使用できます。  
   

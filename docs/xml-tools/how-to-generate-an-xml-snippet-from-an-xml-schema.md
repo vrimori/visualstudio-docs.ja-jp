@@ -13,11 +13,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 8c27307155a56aae07b69c02c6cbdf3da72059b1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e8b30c782cea694fdc400cd84047f7ab1add823b
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>方法 : XML スキーマから XML スニペットを生成する
 XML エディターは、XML スキーマ定義言語 (XSD) スキーマから XML スニペットを生成する機能を備えています。 たとえば、XML ファイルを作成しているときは、要素名の横にカーソルを置いて Tab キーを押すと、その要素のスキーマ情報から生成された XML データを要素に格納することができます。  
@@ -138,7 +138,7 @@ XML エディターは、XML スキーマ定義言語 (XSD) スキーマから X
     </xs:complexType>  
   </xs:element>  
 </xs:schema>  
-```  
+```
   
 ### <a name="output"></a>出力  
  `Contact` 要素に関連付けられているスキーマ情報に基づいて生成された XML データを次に示します。 項目としてマーク`bold`XML スニペットに編集可能なフィールドを指定します。  
@@ -152,7 +152,7 @@ XML エディターは、XML スキーマ定義言語 (XSD) スキーマから X
     <Type>Voice</Type>  
   </Phone>  
 </Contact>  
-```  
+```
   
 ## <a name="see-also"></a>参照  
  [XML スニペット](../xml-tools/xml-snippets.md)   

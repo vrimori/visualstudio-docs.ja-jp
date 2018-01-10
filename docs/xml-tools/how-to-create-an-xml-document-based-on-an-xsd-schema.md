@@ -13,11 +13,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: bc0ad40823db8a4bd1f2d3553324f8459fb995f7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 63ce40fb765d3aab4cb91ebff8a3552f69d92586
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>方法: XSD スキーマに基づいて XML ドキュメントを作成する
 **サンプル XML の生成**機能には、XML スキーマ (XSD) ファイルに基づいてサンプルの XML ファイルが生成されます。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/22/2017
         <zip>1</zip>  
       </BillTo>  
     </PurchaseOrder>  
-    ```  
+    ```
   
 ## <a name="see-also"></a>参照  
  [XML データの使用](../xml-tools/working-with-xml-data.md)
