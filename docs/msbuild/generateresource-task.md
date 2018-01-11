@@ -22,11 +22,11 @@ author: kempb
 ms.author: kempb
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 3004f90f05a41ef0d2557236643af18b9be89d38
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ef2517b05b58ac2a672a5eba04ca6f1dc48a27f3
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="generateresource-task"></a>GenerateResource タスク
 .txt ファイルおよび .resx (XML ベースのリソース形式) ファイルと共通言語ランタイムの .resources バイナリ ファイルとの間の変換を行います。.resources ファイルは、ランタイム バイナリ実行可能ファイルに埋め込んだり、サテライト アセンブリにコンパイルしたりできます。 このタスクは通常、.txt ファイルまたは .resx ファイルを .resource ファイルに変換するために使用します。 `GenerateResource` タスクの機能は [resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) の機能に似ています。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 |`ExecuteAsTool`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、アウトプロセスで適切なターゲット フレームワークの tlbimp.exe および aximp.exe が実行されて、必要なラッパー アセンブリが生成されます。 このパラメーターにより、`ResolveComReferences` のマルチ ターゲットが可能になります。|  
 |`FilesWritten`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の出力パラメーターです。<br /><br /> ディスクに書き込んだすべてのファイルの名前が格納されます。 キャッシュ ファイルがある場合には、キャッシュ ファイルも含まれます。 このパラメーターは、クリーン処理を行う場合に便利です。|  
 |`MinimalRebuildFromTracking`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> 追跡対象のインクリメンタル ビルドを使用するかどうかを指定するスイッチを取得または設定します。 `true` の場合は、インクリメンタル ビルドが有効になっています。それ以外の場合は、リビルドが強制されます。|  
-|`NeverLockTypeAssemblies`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> リソース (.resx) ファイルを評価するために新しい [AppDomain](https://docs.microsoft.com/dotnet/api/system.appdomain) を作成する (true) か、リソース ファイルがユーザーのアセンブリを参照する場合にのみ新しい [AppDomain](https://docs.microsoft.com/dotnet/api/system.appdomain) を作成する (false) かを指定するブール値を取得または設定します。|  
+|`NeverLockTypeAssemblies`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> リソース (.resx) ファイルを評価するために新しい [AppDomain](/dotnet/api/system.appdomain) を作成する (true) か、リソース ファイルがユーザーのアセンブリを参照する場合にのみ新しい [AppDomain](/dotnet/api/system.appdomain) を作成する (false) かを指定するブール値を取得または設定します。|  
 |`OutputResources`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の出力パラメーターです。<br /><br /> .resources ファイルなど、作成されるファイルの名前を指定します。 名前を指定しなかった場合には、対応する入力ファイルの名前が使用され、.resources ファイルは、入力ファイルが格納されたディレクトリに作成されます。|  
 |`PublicClass`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` に設定すると、厳密に型指定されたリソース クラスをパブリック クラスとして作成します。|  
 |`References`|省略可能な `String[]` 型のパラメーターです。<br /><br /> .resx ファイル内にある型を読み込むための参照です。 resx ファイルのデータ要素は、.NET 型である場合があります。 この型は、.resx ファイルを読み取るときに、解決される必要があります。 通常は、標準の型の読み込み規則を使用して正常に解決します。 アセンブリを `References` に指定した場合には、そのアセンブリが優先されます。<br /><br /> 厳密に型指定されたリソースの場合、このパラメーターは不要です。|  
