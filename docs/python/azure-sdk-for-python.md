@@ -1,7 +1,7 @@
 ---
 title: Azure SDK for Python | Microsoft Docs
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 03/07/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: devlang-python
@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - python
 - azure
-ms.openlocfilehash: 43fbcc0c5c1674d127755a61ef3e15523e792a21
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 647b07e3816551e60e176280199ad5298db53200
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="azure-sdk-for-python"></a>Azure SDK for Python
 
@@ -31,7 +31,7 @@ Azure SDK は [Python のパッケージ インデックス](https://pypi.python
 
 次のように、**最新の安定したバージョン** (Python 2.7 および 3.3+ をサポート) をインストールします。
 
-```bash
+```command
 pip install azure
 ```
 
@@ -43,14 +43,14 @@ Azure ドキュメントの「[Python と SDK のインストール](https://azu
 
 「[Python デベロッパー センター](http://azure.microsoft.com/develop/python/)」にも、次のようなさまざまなチュートリアルを含む有用なリソースが数多く用意されています。
 
-  - [Django](https://docs.microsoft.com/azure/app-service-web/web-sites-python-create-deploy-django-app)、[Flask](https://docs.microsoft.com/azure/app-service-web/web-sites-python-create-deploy-flask-app)、[Bottle](https://docs.microsoft.com/azure/app-service-web/web-sites-python-create-deploy-bottle-app) を使用した Web アプリの作成
-  - [Python から Azure BLOB ストレージを使用する方法](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
-  - [Python から Table ストレージを使用する方法](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-table-storage)
-  - [Python から Queue ストレージを使用する方法](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-queue-storage)
-  - [DocumentDB を使用した Python Flask Web アプリケーションの作成](https://docs.microsoft.com/azure/documentdb/documentdb-python-application)
-  - [Service Bus キューの使用方法](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-python-how-to-use-queues)
-  - [Service Bus のトピックとサブスクリプションの使用方法](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-python-how-to-use-topics-subscriptions)
-  - [Python からサービス管理を使用する方法](https://docs.microsoft.com/azure/cloud-services/cloud-services-python-how-to-use-service-management)
+- [Django](/azure/app-service-web/web-sites-python-create-deploy-django-app)、[Flask](/azure/app-service-web/web-sites-python-create-deploy-flask-app)、[Bottle](/azure/app-service-web/web-sites-python-create-deploy-bottle-app) を使用した Web アプリの作成
+- [Python から Azure BLOB ストレージを使用する方法](/azure/storage/storage-python-how-to-use-blob-storage)
+- [Python から Table ストレージを使用する方法](/azure/storage/storage-python-how-to-use-table-storage)
+- [Python から Queue ストレージを使用する方法](/azure/storage/storage-python-how-to-use-queue-storage)
+- [DocumentDB を使用した Python Flask Web アプリケーションの作成](/azure/documentdb/documentdb-python-application)
+- [Service Bus キューの使用方法](/azure/service-bus-messaging/service-bus-python-how-to-use-queues)
+- [Service Bus のトピックとサブスクリプションの使用方法](/azure/service-bus-messaging/service-bus-python-how-to-use-topics-subscriptions)
+- [Python からサービス管理を使用する方法](/azure/cloud-services/cloud-services-python-how-to-use-service-management)
 
 ドキュメントのないパブリック API に関しては、[SDK の GitHub リポジトリ](https://github.com/Azure/azure-sdk-for-python)が有益な情報源になります。
 

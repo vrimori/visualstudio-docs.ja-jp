@@ -25,11 +25,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 57bc02e04f4e30e0284bacbb98ec6bfe1defaa72
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c1e994edfac648652876cc0b58b4b6f5ede1cccf
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="managing-references-in-a-project"></a>プロジェクト内の参照の管理
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 
 ### <a name="project-references"></a>プロジェクト参照
 
-ユニバーサル Windows プラットフォーム (UWP) プロジェクトでは、ソリューション内の他の UWP プロジェクトへの参照、あるいは Windows 8.1 プロジェクトまたはバイナリへの参照を作成できます (ただし、これらのプロジェクトが、Windows 10 で使用されなくなった API を使用していない場合)。 詳細については、「 [Windows Runtime 8 から UWP への移行](https://docs.microsoft.com/en-us/windows/uwp/porting/w8x-to-uwp-root)」を参照してください。
+ユニバーサル Windows プラットフォーム (UWP) プロジェクトでは、ソリューション内の他の UWP プロジェクトへの参照、あるいは Windows 8.1 プロジェクトまたはバイナリへの参照を作成できます (ただし、これらのプロジェクトが、Windows 10 で使用されなくなった API を使用していない場合)。 詳細については、「 [Windows Runtime 8 から UWP への移行](/windows/uwp/porting/w8x-to-uwp-root)」を参照してください。
 
 Windows 8.1 プロジェクトの Windows 10 への再ターゲットを選択した場合は、「[Visual Studio プロジェクトのポート、移行、アップグレード](../porting/port-migrate-and-upgrade-visual-studio-projects.md)」を参照してください。
 

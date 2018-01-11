@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: 690d51ba7ec083e831bf9eba069676e38d6152ac
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1f682cd15f96cf4ea5c12e52d3471580129279f6
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="remotely-debugging-python-code-on-linux"></a>Linux 上の Python コードのリモート デバッグ
 
@@ -36,9 +36,9 @@ ptvsd を使用する場合、デバッグ対象の Python コードは Visual S
 - Mac OSX や Linux などのオペレーティング システムで Python を実行しているリモート コンピューター。
 - そのコンピューターのファイアウォールで開いているポート 5678 (受信)。これはリモート デバッグの既定値です。
 
-[Azure に Linux 仮想マシン](https://docs.microsoft.com/azure/virtual-machines/linux/creation-choices)を簡単に作成し、Windows から[リモート デスクトップを使用してアクセス](https://docs.microsoft.com/azure/virtual-machines/linux/use-remote-desktop)できます。 VM に Ubuntu を使用すると、既定で Python がインストールされるので便利です。Ubuntu を使用しない場合、Python をダウンロードできるその他の場所については、「[Install a Python interpreter of your choice](python-environments.md#selecting-and-installing-python-interpreters)」(好みの Python インタープリターをインストールする) の一覧を参照してください。
+[Azure に Linux 仮想マシン](/azure/virtual-machines/linux/creation-choices)を簡単に作成し、Windows から[リモート デスクトップを使用してアクセス](/azure/virtual-machines/linux/use-remote-desktop)できます。 VM に Ubuntu を使用すると、既定で Python がインストールされるので便利です。Ubuntu を使用しない場合、Python をダウンロードできるその他の場所については、「[Install a Python interpreter of your choice](python-environments.md#selecting-and-installing-python-interpreters)」(好みの Python インタープリターをインストールする) の一覧を参照してください。
 
-Azure VM のファイアウォール ルールの作成方法については、「[Azure Portal を使用した Azure の VM へのポートの開放](https://docs.microsoft.com/azure/virtual-machines/windows/nsg-quickstart-portal)」を参照してください。
+Azure VM のファイアウォール ルールの作成方法については、「[Azure Portal を使用した Azure の VM へのポートの開放](/azure/virtual-machines/windows/nsg-quickstart-portal)」を参照してください。
 
 ## <a name="preparing-the-script-for-debugging"></a>デバッグのためのスクリプトの準備
 
@@ -132,14 +132,13 @@ Azure VM のファイアウォール ルールの作成方法については、�
     | 2013 | 2.2.2 |
     | 2012, 2010 | 2.1 |
 
-
 ## <a name="securing-the-debugger-connection-with-ssl"></a>デバッガー接続の SSL によるセキュリティ保護
 
 ptvsd のリモート デバッグ サーバーへの接続は、既定で、シークレットのみで保護されており、すべてのデータはプレーンテキストで渡されます。 より高いセキュリティの接続には、ptvsd でサポートされている SSL を使用します。設定手順は次のとおりです。
 
 1. リモート コンピューターで、openssl を使用して別の自己署名証明書とキー ファイルを生成します。
-    
-    ```bash
+
+    ```command
     openssl req -new -x509 -days 365 -nodes -out cert.cer -keyout cert.key
     ```
 
@@ -152,8 +151,8 @@ ptvsd のリモート デバッグ サーバーへの接続は、既定で、シ
     ```python
     ptvsd.enable_attach(secret='my_secret', certfile='cert.cer', keyfile='cert.key')
     ```
-    
-    また、ローカル コンピューターのコード ファイルでも同じ変更を加えることもできます。ただし、このコードは実際には実行されないので、厳密には必要ありません。    
+
+    また、ローカル コンピューターのコード ファイルでも同じ変更を加えることもできます。ただし、このコードは実際には実行されないので、厳密には必要ありません。
 
 1. リモート コンピューターで Python プログラムを再起動し、デバッグできる状態にします。
 

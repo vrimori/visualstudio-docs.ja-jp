@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - python
 - azure
-ms.openlocfilehash: a5c3d0c63ad049d641368ceb3f9ef395f243e51c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 043e720d96c021bf510047a8dc7643d057d8982d
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="publishing-to-azure-app-service"></a>Azure App Service への発行
 
@@ -31,10 +31,10 @@ Visual Studio には、Azure App Service に Python Web アプリを直接発行
 
 - [前提条件](#prerequisites)
 - [Azure App Service の作成](#create-an-azure-app-service)
-- [App Service での Python の構成](#configure-python-on-app-service)
-- [App Service への発行 - Visual Studio 2017](#publish-to-app-service-visual-studio-2017)
-- [App Service への発行 - Visual Studio 2015](#publish-to-app-service-visual-studio-2015)
-- [App Service でのリモート デバッグ](#remote-debugging-on-app-service)
+- [App Service での Python の構成](#configure-python-on-azure-app-service)
+- [App Service への発行 - Visual Studio 2017](#publish-to-app-service---visual-studio-2017)
+- [App Service への発行 - Visual Studio 2015](#publish-to-app-service---visual-studio-2015)
+- [App Service でのリモート デバッグ](#remote-debugging-on-azure-app-service)
 
 > [!Note]
 > Visual Studio 2015 と Visual Studio 2017 間の変更の詳細については、ブログ記事「[Publish to Azure in Visual Studio 2017](https://blogs.msdn.microsoft.com/pythonengineering/2016/12/12/publish-to-azure-in-vs-2017/)」 (Visual Studio 2017 での Azure への発行) を参照してください。
@@ -53,10 +53,10 @@ Visual Studio には、Azure App Service に Python Web アプリを直接発行
 
 Azure への発行には、ターゲット App Service が必要です。 この目的のため、Azure サブスクリプションを使用して App Service を作成するか、一時的なサイトを使用することができます。
 
-サブスクリプションがまだない場合は、[無料の完全な Azure アカウント](https://azure.microsoft.com/en-us/free/)から始めます。これには、Azure サービスのクレジットが含まれます。 [Visual Studio Dev Essentials](https://azure.microsoft.com/en-us/pricing/member-offers/vs-dev-essentials/) へのサインアップも検討してください。1 年間、毎月 25 ドルのクレジットが提供されます。
+サブスクリプションがまだない場合は、[無料の完全な Azure アカウント](https://azure.microsoft.com/free/)から始めます。これには、Azure サービスのクレジットが含まれます。 [Visual Studio Dev Essentials](https://azure.microsoft.com/pricing/member-offers/vs-dev-essentials/) へのサインアップも検討してください。1 年間、毎月 25 ドルのクレジットが提供されます。
 
 > [!Tip]
-> アカウントの確認のため Azure からクレジット カードの入力を求められますが、カードに請求されることはありません。 無料クレジットと同じ[使用制限](https://docs.microsoft.com/azure/billing/billing-spending-limit)を設定して、追加料金が発生しないようにすることもできます。 さらに、Azure では Free レベルの App Service プランを提供しており、次のセクションで説明されているような簡単なテスト アプリに最適です。
+> アカウントの確認のため Azure からクレジット カードの入力を求められますが、カードに請求されることはありません。 無料クレジットと同じ[使用制限](/azure/billing/billing-spending-limit)を設定して、追加料金が発生しないようにすることもできます。 さらに、Azure では Free レベルの App Service プランを提供しており、次のセクションで説明されているような簡単なテスト アプリに最適です。
 
 ### <a name="using-a-subscription"></a>サブスクリプションの使用
 
@@ -88,7 +88,7 @@ Azure への発行には、ターゲット App Service が必要です。 この
 
 Visual Studio 2017 から Azure App Service に発行すると、プロジェクト内のファイルのみがサーバーにコピーされます。 したがって、必要なファイルを作成して、サーバー環境を構成する必要があります。
 
-1. Visual Studio の**ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]、[新しい項目]* を選択します。表示されるダイアログ ボックスで、[Azure web.config (Fast CGI)] テンプレートを選択し、[OK] を選択します。 これによりプロジェクト ルートに `web.config` ファイルが作成されます。 
+1. Visual Studio の**ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]、[新しい項目]* を選択します。表示されるダイアログ ボックスで、[Azure web.config (Fast CGI)] テンプレートを選択し、[OK] を選択します。 これによりプロジェクト ルートに `web.config` ファイルが作成されます。
 
 1. `web.config` の `PythonHandler` エントリを変更して、パスがサーバー上の Python インストールと一致するようにします。 たとえば、Python 3.6.1 x64 の場合、エントリは次のように表示されます。
 
@@ -164,7 +164,7 @@ Visual Studio 2017 から Azure App Service に発行すると、プロジェク
 
     c. Kudu コンソールを使用してアプリの `requirements.txt` ファイルに一覧表示されている任意のパッケージをアップグレードする: `web.config` で使用されているのと同じ Python フォルダー (`/home/python361x64` など) に移動し、[Kudu コンソール](managing-python-on-azure-app-service.md#azure-app-service-kudu-console)のセクションの説明に従って、次のコマンドを実行します。
 
-    ```
+    ```command
     python -m pip install --upgrade -r /home/site/wwwroot/requirements.txt
     ```
 
@@ -188,9 +188,9 @@ Visual Studio 2017 から Azure App Service に発行すると、プロジェク
 ## <a name="publishing-to-app-service---visual-studio-2015"></a>App Service への発行 - Visual Studio 2015
 
 > [!Note] 
-> このプロセスの短いビデオについては、「[Visual Studio Python Tutorial: Building a Website](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6)」(Visual Studio Python チュートリアル: Web サイトの構築) (youtube.com、3 分 10 秒) をご覧ください。 
+> このプロセスの短いビデオについては、「[Visual Studio Python Tutorial: Building a Website](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6)」(Visual Studio Python チュートリアル: Web サイトの構築) (youtube.com、3 分 10 秒) をご覧ください。
 
-1. **ソリューション エクスプローラー**で、プロジェクトを右クリックして、**[発行]** を選びます。 
+1. **ソリューション エクスプローラー**で、プロジェクトを右クリックして、**[発行]** を選びます。
 
 1. **[発行]** ダイアログで、**[Microsoft Azure App Service]** を選びます。
 
@@ -226,4 +226,4 @@ Visual Studio 2015 からデバッグ構成を発行すると、プロセスで 
 
 Visual Studio 2017 では、ユーザーが代わりにこれらのコンポーネントをプロジェクトに直接追加します。 **ソリューション エクスプローラー**でプロジェクトを右クリックし、**[追加] > [新しい項目]** を選択して、"Azure リモート デバッグ web.config" テンプレートを選択します。 デバッグ `web.debug.config` ファイルと `ptvsd` ツール フォルダーがプロジェクトに表示されます。
 
-これらのファイルがサーバーにデプロイされたら (Visual Studio 2015 では自動的に、Visual Studio 2017 では次回の発行時に)、「[Azure 上の Python コードのリモート デバッグ](https://docs.microsoft.com/visualstudio/python/debugging-azure-remote)」の指示に従います。
+これらのファイルがサーバーにデプロイされたら (Visual Studio 2015 では自動的に、Visual Studio 2017 では次回の発行時に)、「[Azure 上の Python コードのリモート デバッグ](debugging-azure-remote.md)」の指示に従います。

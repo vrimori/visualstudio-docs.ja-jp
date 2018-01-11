@@ -19,11 +19,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 5ff8e6fe4814d9f049a816997252dac032e631ed
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: bacc4e9ebb0b0125b22089ec53a97248e9e1f4e9
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="profile-application-performance-in-visual-studio"></a>Visual Studio でのアプリケーション パフォーマンスのプロファイリング
 Visual Studio プロファイリング ツールを使用して、アプリケーションでパフォーマンスの問題を分析することができます。 このガイドでは、診断ツールの **[CPU 使用率]** タブを使用し、アプリのパフォーマンス データを取得する方法について説明します。 診断ツールは Visual Studio の .NET 開発 (ASP.NET を含む) とネイティブ/C++ 開発で利用できます。
@@ -34,7 +34,7 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 
 |         |         |
 |---------|---------|
-| ![ビデオを見る](../install/media/video-icon.png "WatchVideo") | CPU 使用率の分析方法とメモリ使用率の分析方法については、診断ツールの使用に関する[こちらのビデオ](#video)をご覧ください。 |
+|  ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る")  |    CPU 使用率の分析方法とメモリ使用率の分析方法については、診断ツールの使用に関する[こちらのビデオ](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Profiling-with-Diagnostics-Tools-in-Visual-Studio-2017-daHnzMD6D_9211787171)をご覧ください。 |
 
 このトピックでは、通常のデバッグ ワークフローで CPU 使用率を分析する方法について説明します。 デバッガーをアタッチせずに、または実行中のアプリをターゲットにすることで、CPU 使用率を分析することもできます。詳細については、「[デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」の「[デバッグなしでプロファイリング データを収集する](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging)」をご覧ください。
   
@@ -149,12 +149,6 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 
 > [!TIP]
 > Windows 関数を呼び出す外部コードをプロファイリングする場合は、最新の .pdb ファイルを入手しておく必要があります。 これらのファイルがない場合、レポート ビューに暗号のようなわかりにくい Windows 関数名が一覧表示されます。 必要なファイルがあることを確認する方法の詳細については、「[Specify Symbol (.pdb) and Source Files in the Debugger](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)」 (デバッガーにシンボル (.pdb) とソース ファイルを指定する) を参照してください。
-
-## <a name="video"></a> 診断ツールの使用方法のビデオを見る
-
-<div style="padding-top: 56.25%; position: relative; width: 100%;">
-<iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Profiling-with-Diagnostics-Tools-in-Visual-Studio-2017-daHnzMD6D_9211787171" frameborder="0" allowfullscreen></iframe>
-</div>
   
 ## <a name="see-also"></a>参照  
  [メモリ使用量](../profiling/memory-usage.md)  

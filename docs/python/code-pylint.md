@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: 032c6489463aaaee59b39423506f18bda82fb414
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: cf97be0c7a7b5bb9d6a9d43ceeb5cd9e9334025d
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="using-pylint-to-check-python-code"></a>PyLint を使用した Python コードのチェック
 
@@ -46,7 +46,7 @@ PyLint ドキュメントの[コマンド ライン オプション](https://pyl
 
 1. コマンド ラインで、プロジェクトのルート (`.pyproj` ファイルが含まれる) に移動し、次のコマンドを実行してコメント付きの構成ファイルを生成します。
 
-   ```bash
+   ```command
    pylint --generate-rcfile > .pylintrc
    ```
 
@@ -57,7 +57,4 @@ PyLint ドキュメントの[コマンド ライン オプション](https://pyl
 1. `.pylintrc` ファイルを保存し、PyLint をもう一度実行して、警告が表示されなくなったことを確認します。
 
 > [!Tip]
-> ネットワーク共有から `.pylintrc` ファイルを使用するには、「`PYLINTRC`」という名前の環境変数を作成します。ネットワーク共有のファイル名の値には、UNC パスまたはマッピングされたドライブ文字を使用します。 例:
-> ```
-> PYLINTRC=\\myshare\python\.pylintrc
-> ```
+> ネットワーク共有から `.pylintrc` ファイルを使用するには、「`PYLINTRC`」という名前の環境変数を作成します。ネットワーク共有のファイル名の値には、UNC パスまたはマッピングされたドライブ文字を使用します。 たとえば、`PYLINTRC=\\myshare\python\.pylintrc` のようにします。

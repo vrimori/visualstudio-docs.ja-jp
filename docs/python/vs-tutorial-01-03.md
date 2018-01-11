@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: 0124133b230da01c6e7194849466c57d86592cbd
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: cdbbebc65eb004c11b4c36b78bd8e0089db3234e
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="step-3-using-the-interactive-repl-window"></a>手順 3: 対話型 REPL ウィンドウを使用する
 
@@ -32,7 +32,7 @@ Visual Studio の Python 用の *対話型ウィンドウ*は、機能豊富な 
     ![Python の対話型ウィンドウとサイズ変更のためのそれのドラッグ](media/vs-getting-started-python-11-interactive1b.png)
 
     > [!Tip]
-    > Visual Studio のすべてのウィンドウのサイズは、境界の区切りをドラッグしてサイズ変更できます。 Visual Studio のフレームから個々にウィンドウをドラッグして、フレーム内で自由に再配置することも可能です。 詳細については、「<a href="https://docs.microsoft.com/visualstudio/ide/customizing-window-layouts-in-visual-studio" target="_blank">ウィンドウ レイアウトをカスタマイズする</a>」を参照してください。
+    > Visual Studio のすべてのウィンドウのサイズは、境界の区切りをドラッグしてサイズ変更できます。 Visual Studio のフレームから個々にウィンドウをドラッグして、フレーム内で自由に再配置することも可能です。 詳細については、「[ウィンドウ レイアウトをカスタマイズする](../ide/customizing-window-layouts-in-visual-studio.md)」を参照してください。
 
 1. ステートメント (`print("Hello, Visual Studio")` など) や式 (`123/456` など) をいくつか入力して、すぐに表示される結果を確認します。
 

@@ -10,11 +10,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 0ffadcf35be9cc12327c6ef9a561cd1149cf281c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5b289868d0cc27da76becf62a2bac51f02fa55c2
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="visual-studio-ide-overview"></a>Visual Studio IDE の概要
 
@@ -86,7 +86,7 @@ Visual Studio はかつてないほど軽量になりました。 モジュラ�
 
 Visual Studio 2017 では、インストール パフォーマンスが強化されただけでなく、IDE の起動時間とソリューションの読み込み時間が短縮されました。
 
-お使いのシステムに Visual Studio をセットアップする方法について詳しくは、「[Visual Studio 2017 のインストール](https://docs.microsoft.com/visualstudio/install/install-visual-studio)」をご覧ください。  
+お使いのシステムに Visual Studio をセットアップする方法について詳しくは、「[Visual Studio 2017 のインストール](../install/install-visual-studio.md)」をご覧ください。
 
 ## <a name="sign-in"></a>サインイン
 
@@ -152,7 +152,7 @@ Visual Studio を初めて起動する際には、Microsoft アカウント、�
 
 1. プログラムの実行を終了するには、ツールバーの [終了] (![[終了] ボタン](../ide/media/VSIDE_StopButton.png)) を選択して終了します。
 
-ここまでを振り返ってみましょう。Visual Studio で新しい C# Windows ユニバーサル プロジェクトを作成し、そのコードを表示して、デザイナーにコントロールを追加しました。その後、XAML コードの一部を変更し、プロジェクトを実行しました。 この例のプロセスは簡略化されていますが、Visual Studio IDE で独自のアプリを開発するときに使用する共通部分の一部を示します。 この例についてさらに詳しくは、「["Hello, world" アプリを作成する (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)」をご覧ください。
+ここまでを振り返ってみましょう。Visual Studio で新しい C# Windows ユニバーサル プロジェクトを作成し、そのコードを表示して、デザイナーにコントロールを追加しました。その後、XAML コードの一部を変更し、プロジェクトを実行しました。 この例のプロセスは簡略化されていますが、Visual Studio IDE で独自のアプリを開発するときに使用する共通部分の一部を示します。 この例についてさらに詳しくは、「["Hello, world" アプリを作成する (XAML)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)」をご覧ください。
 
 ## <a name="debug-test-and-improve-your-code"></a>デバッグとテストによるコードの改善
 
@@ -184,7 +184,7 @@ Visual Studio の全体像を視覚的に確認できるように、次のイメ
 
 Visual Studio には他にも次のような一般的な生産性を高める機能が用意されています。
 
-- [クイック起動](https://docs.microsoft.com/en-us/visualstudio/ide/reference/quick-launch-environment-options-dialog-box)検索ボックスは、Visual Studio で必要な情報を迅速に見つけるに役立ちます。 探している内容を表す名前を入力するだけで、Visual Studio に結果がリストされ、目的の場所に正確に移動できます。 また、クイック起動にはすべてのワークロードまたは個々のコンポーネントに対応する Visual Studio インストーラーを起動するリンクが表示されます。
+- [クイック起動](../ide/reference/quick-launch-environment-options-dialog-box.md)検索ボックスは、Visual Studio で必要な情報を迅速に見つけるに役立ちます。 探している内容を表す名前を入力するだけで、Visual Studio に結果がリストされ、目的の場所に正確に移動できます。 また、クイック起動にはすべてのワークロードまたは個々のコンポーネントに対応する Visual Studio インストーラーを起動するリンクが表示されます。
 
   ![クイック起動検索ボックス](../ide/media/VSIDE_Tour_QuickLaunch.png)
 
@@ -196,7 +196,7 @@ Visual Studio には他にも次のような一般的な生産性を高める機
 
   ![Visual Studio のメンバーの一覧](../ide/media/vs2017_Intellisense.png)
 
-- **波線**は波打った赤の下線で、コード入力時にエラーや潜在的な問題をリアルタイムに警告します。 これにより、コンパイル時や実行時にエラーが検出されるのを待たずに即時に修正できます。 破線の上に移動すると、エラーに関する追加情報が表示されます。 電球がエラーの修正方法に関する提案とともに左余白に表示される場合もあります。 詳細については、「 [Perform quick actions with light bulbs](../ide/perform-quick-actions-with-light-bulbs.md)」を参照してください。
+- **波線**は波打った赤の下線で、コード入力時にエラーや潜在的な問題をリアルタイムに警告します。 これにより、コンパイル時や実行時にエラーが検出されるのを待たずに即時に修正できます。 破線の上に移動すると、エラーに関する追加情報が表示されます。 電球がエラーの修正方法に関する提案とともに左余白に表示される場合もあります。 詳細については、[クイック アクション](../ide/quick-actions.md)に関するページを参照してください。
 
  ![波線](../ide/media/vs2017_squiggle.png)
 
@@ -248,9 +248,9 @@ Visual Studio Team Services のアカウントまたは Team Foundation Server �
 
 ![Cloud Explorer](../ide/media/VSIDE_CloudExplorer.png)
 
-**サーバー エクスプローラー**は、ローカル、リモートで、また Azure、Salesforce.com、Office 365、および Web サイトで SQL Server インスタンスとアセットを参照および管理するのに役立ちます。 サーバー エクスプローラーを開くには、メイン メニューで **[ビュー]**、**[サーバー エクスプローラー]** と選択します。 サーバー エクスプローラーの使用方法について詳しくは、「[Add new connections](https://docs.microsoft.com/visualstudio/data-tools/add-new-connections)」 (新しい接続の追加) をご覧ください。
+**サーバー エクスプローラー**は、ローカル、リモートで、また Azure、Salesforce.com、Office 365、および Web サイトで SQL Server インスタンスとアセットを参照および管理するのに役立ちます。 サーバー エクスプローラーを開くには、メイン メニューで **[ビュー]**、**[サーバー エクスプローラー]** と選択します。 サーバー エクスプローラーの使用方法について詳しくは、「[Add new connections](../data-tools/add-new-connections.md)」 (新しい接続の追加) をご覧ください。
 
-[SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) は、SQL Server、Azure SQL Database、Azure SQL Data Warehouse 用の強力な開発環境です。 データベースを構築、デバッグ、管理、およびリファクターできます。 データベース プロジェクトを操作したり、オンプレミスまたはオフプレミスで接続されたデータベース インスタンスを直接操作したりすることができます。
+[SQL Server Data Tools (SSDT)](/sql/ssdt/download-sql-server-data-tools-ssdt) は、SQL Server、Azure SQL Database、Azure SQL Data Warehouse 用の強力な開発環境です。 データベースを構築、デバッグ、管理、およびリファクターできます。 データベース プロジェクトを操作したり、オンプレミスまたはオフプレミスで接続されたデータベース インスタンスを直接操作したりすることができます。
 
 Visual Studio の **SQL Server オブジェクト エクスプローラー**では、SQL Server Management Studio と同様のデータベース オブジェクトのビューを提供します。 SQL Server オブジェクト エクスプローラーを使用すると、軽いデータベース管理と設計作業を実行できます。これには、SQL Server オブジェクト エクスプローラーのコンテキスト メニューを使用したテーブル データの編集、スキーマの比較、クエリの実行などが含まれます。
 

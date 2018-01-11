@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio での Python の使用、手順 1 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/26/2017
+ms.date: 01/08/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: devlang-python
@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: adb49bb6070fee611a2ba67913943e68ee938d29
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 9c80eb8b09a7bbcfc813c70d548f9762422262ed
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="working-with-python-in-visual-studio"></a>Visual Studio での Python の使用
 
@@ -51,7 +51,7 @@ Visual Studio は、Python 言語の最上のサポートを提供していま�
 
     Python がサポートされている Visual Studio では、Bottle、Flask、および Django フレームワークを使用した Web アプリケーションを含む、多数のプロジェクト テンプレートが含まれていることに注目してください。 ただし、このチュートリアルでは、空のプロジェクトを作成することから始めます。
 
-1. **[Python アプリケーション]** テンプレートを選択し、プロジェクト名を指定して、**[OK]** を選択します。 
+1. **[Python アプリケーション]** テンプレートを選択し、プロジェクト名を指定して、**[OK]** を選択します。
 
 1. しばらくすると、**ソリューション エクスプローラー** ウィンドウ (1) にプロジェクトの構造が表示されます。 既定のコード ファイルが、エディター (2) で開きます。 ソリューション エクスプローラーで選択された項目の追加情報を表示する、[プロパティ] ウィンドウ (3) も表示されます。ディスク上の正確な場所も表示されます。
 

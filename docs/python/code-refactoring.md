@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: 60e6daf25d4ce9c43f07495e9efa89ec215ec16b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e8ab260780c7cd2841d0ffe88f4eb0cc817592c4
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="refactoring-python-code"></a>Python コードのリファクタリング
 
@@ -26,7 +26,7 @@ Visual Studio には、Python ソース コードの変換とクリーンアッ�
 - [[名前の変更]](#rename) は、選択したクラス、メソッド、または変数の名前を変更します
 - [[メソッドの抽出]](#extract-method) は、選択したコードから新しいメソッドを作成します
 - [[インポートの追加]](#add-import) は、不足しているインポートを追加するためのスマート タグを提供します
-- [[Remove unused imports (使用されていないインポートの削除)]](#remove-imports) は、使用されていないインポートを削除します
+- [[Remove unused imports (使用されていないインポートの削除)]](#remove-unused-imports) は、使用されていないインポートを削除します
 
 <a name="rename-variable"</a>
 
@@ -72,6 +72,7 @@ Visual Studio は、モジュール内で実際に定義されていないメン
 さらに、通常は除外される候補が、(たとえば名前がモジュール内の値に割り当てられているなどの理由で) 表示対象となる他の値を含んでいる場合でも、Visual Studio はそのインポートを除外します。 この動作は、その値が別のモジュールで定義されており、追加で割り当てるとエクスポートされないダミーの値になる可能性があるため、その値をエクスポートすべきではないということを前提としています。
 
 <a name="remove-imports"</a>
+
 ## <a name="remove-unused-imports"></a>使用されていないインポートの削除
 
 コードの作成では、モジュールの `import` ステートメントが最終的にまったく使われないことがよくあります。 Visual Studio はコードを分析するので、インポートされた名前が `import` ステートメントの出現箇所より下のスコープ内で使用されているかどうかを調べて、import ステートメントが必要かどうかを自動的に判断できます。
