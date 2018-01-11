@@ -14,11 +14,12 @@ ms.assetid: 556EDD3F-E365-43EE-B3DD-03AA4353F75B
 author: timsneath
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 4c864a05b267889720ba64a6427861aa2c42e3b2
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: 9cd0a1b21cf7a61c9340c36be5db419d71c36e1b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-visual-studio-2017-installation-and-upgrade-issues"></a>Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング
 
@@ -95,7 +96,7 @@ Microsoft サポートに連絡する場合、[Microsoft Visual Studio と .NET 
 * Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
 * [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。
-* [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます  (これには [GitHub](https://github.com/) アカウントが必要です)。
+* [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます   (これには [GitHub](https://github.com/) アカウントが必要です)。
 
 ## <a name="see-also"></a>関連項目
 * [Visual Studio 管理者ガイド](visual-studio-administrator-guide.md)

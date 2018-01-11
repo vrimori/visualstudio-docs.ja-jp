@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 066612a132bf6a092771afd5fc4a876d4b3be425
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: cd1ce1ce47705e5e8b63fb3ef7cc36c401503886
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="installing-python-support-in-visual-studio-on-windows"></a>Windows に Visual Studio の Python サポートをインストールする
 
@@ -72,7 +73,6 @@ Visual Studio 2015 以前では、任意の Python インタープリターを�
 
     ![インストーラーからの Visual Studio の起動、変更、またはアンインストール](media/installation-vs-launch.png)
 
-
 > [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Installing-Visual-Studio-Python-Support-go1id3LWE_1705918567]
 
 ## <a name="visual-studio-2015"></a>Visual Studio 2015
@@ -112,7 +112,7 @@ Visual Studio 2015 以前のインストール パスを次に示します。
   - パス: `%Program Files%\Microsoft Visual Studio <VS_ver>\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\<PTVS_ver>`
   - パスのレジストリの場所: `HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\PythonTools\<VS_ver>\InstallDir`
 
-ここで、
+それぞれの文字について以下に説明します。
 
 - &lt;VS_ver&gt; は、次のようになります。    
     - Visual Studio 2015 では 14.0

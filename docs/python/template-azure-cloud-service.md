@@ -12,17 +12,20 @@ caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: b8ddcb234d43407c256145245b4cbdac308ed9ea
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload:
+- python
+- azure
+ms.openlocfilehash: e5bde434f3a5097f51f461aad5b02ae183e2204c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="azure-cloud-service-projects-for-python"></a>Python 用 Azure クラウド サービス プロジェクト
 
 Visual Studio は、Python を使用して Azure Cloud Services の作成に使用できるテンプレートを提供しています。
 
-[クラウド サービス](http://go.microsoft.com/fwlink/?LinkId=306052)は、任意の数の *worker ロール*と *Web ロール*から構成され、それぞれが概念的に独立したタスクを実行しますが、規模拡張の必要に応じて仮想マシン間で個別にレプリケートできます。 Web ロールでは、フロントエンド Web アプリケーションのホスティングが提供されます。 Python が接続されている場合、WSGI をサポートする任意の Web フレームワークを使用して、このようなアプリケーションを作成できます ([Web プロジェクト テンプレート](template-web.md)でサポート)。 worker ロールは、ユーザーと直接対話しない長時間実行されるプロセスを意図しています。 通常、これらは `pip install`&nbsp;[`azure`](http://pypi.org/project/azure) でインストールできる[データ](http://go.microsoft.com/fwlink/?LinkId=401571) ライブラリと[アプリ サービス](http://go.microsoft.com/fwlink/?LinkId=401572) ライブラリを利用します。
+[クラウド サービス](http://go.microsoft.com/fwlink/?LinkId=306052)は、任意の数の *worker ロール*と *Web ロール*から構成され、それぞれが概念的に独立したタスクを実行しますが、規模拡張の必要に応じてビジュアル マシン間で個別にレプリケートできます。 Web ロールでは、フロントエンド Web アプリケーションのホスティングが提供されます。 Python が接続されている場合、WSGI をサポートする任意の Web フレームワークを使用して、このようなアプリケーションを作成できます ([Web プロジェクト テンプレート](template-web.md)でサポート)。 worker ロールは、ユーザーと直接対話しない長時間実行されるプロセスを意図しています。 通常、これらは `pip install`&nbsp;[`azure`](http://pypi.org/project/azure) でインストールできる[データ](http://go.microsoft.com/fwlink/?LinkId=401571) ライブラリと[アプリ サービス](http://go.microsoft.com/fwlink/?LinkId=401572) ライブラリを利用します。
 
 このトピックでは、Visual Studio 2017 のプロジェクト テンプレートとその他のサポートについて詳しく説明します (以前のバージョンも同様ですが、いくつかの違いがあります)。 Python からの Azure の操作について詳しくは、[Azure Python デベロッパー センター](http://go.microsoft.com/fwlink/?linkid=254360)をご覧ください。
 
@@ -46,7 +49,6 @@ Visual Studio は、Python を使用して Azure Cloud Services の作成に使�
     ![worker ロールのサポート ファイル](media/template-azure-cloud-service-worker-role-support-files.png)
 
     これらの構成スクリプトを新しいプロジェクトに追加するには、プロジェクトを右クリックし、**[追加] > [新しい項目...]** を選び、**[Web ロール サポート ファイル]** または **[worker ロール サポート ファイル]** のいずれかを選びます。
-   
 
 ## <a name="configuring-role-deployment"></a>ロールのデプロイを構成する
 
@@ -72,7 +74,6 @@ Visual Studio は、Python を使用して Azure Cloud Services の作成に使�
 
 エミュレーターでの制限により、Python コードをデバッグすることはできません。 したがって、ロールを個別に実行し、発行する前に統合テストにエミュレーターを使用してロールをデバッグすることをお勧めします。
 
-
 ## <a name="deploying-a-role"></a>ロールをデプロイする
 
 **発行**ウィザードを開くには、ソリューション エクスプローラーでロール プロジェクトを選び、メイン メニューから **[ビルド] > [発行]** を選択するか、プロジェクトを右クリックして **[発行]** を選択します。
@@ -83,10 +84,9 @@ Visual Studio は、Python を使用して Azure Cloud Services の作成に使�
 
 最後に、worker ロールは Python スクリプトの実行を開始する `LaunchWorker.ps1` を実行します。Web ロールは IIS を初期化し、Web 要求の処理を開始します。
 
-
 ## <a name="dependencies"></a>依存関係
 
-クラウド サービスでは、`ConfigureCloudService.ps1` スクリプトは `pip` を使用して Python の従属物のセットをインストールします。 依存関係は、`requirements.txt` という名前のファイルで指定する必要があります (`ConfigureCloudService.ps1` を変更することでカスタマイズできます)。 ファイルは初期化の一部として `pip install -r requirements.txt` で実行されます。
+Cloud Services では、`ConfigureCloudService.ps1` スクリプトは `pip` を使用して Python の従属物のセットをインストールします。 依存関係は、`requirements.txt` という名前のファイルで指定する必要があります (`ConfigureCloudService.ps1` を変更することでカスタマイズできます)。 ファイルは初期化の一部として `pip install -r requirements.txt` で実行されます。
 
 クラウド サービス インスタンスには C コンパイラが含まれていないため、C の拡張子を持つすべてのライブラリはコンパイル済みのバイナリを提供する必要があります。
 
@@ -97,6 +97,7 @@ pip とその従属物に加えて `requirements.txt` 内のパッケージが�
 デプロイ後に Web または worker ロールが正常に動作しない場合は、以下を確認します。
 
 - Python プロジェクトの bin\ フォルダーに (少なくとも) 以下が含まれること。
+
     - `ConfigureCloudService.ps1`
     - `LaunchWorker.ps1` (worker ロールの場合)
     - `ps.cmd`

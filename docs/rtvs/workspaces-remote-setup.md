@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: d36f49a9b2865c89bd1551ded0d23cf541ff7840
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: 74978a3ef43a1e98202d32ed418008071c8794be
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="setting-up-remote-workspaces"></a>リモート ワークスペースの設定
 
@@ -105,8 +106,8 @@ SSL 証明書は、Windows に手動でインストールする必要があり�
 自己署名証明書を使用する利点とリスクは、Windows の説明を参照してください。 `rtvs-daemon` パッケージはインストール時に自己署名証明書を生成および構成します。 これは、自動生成された自己署名証明書を置換する場合にのみ行う必要があります。
 
 自己署名証明書を発行するには、次の手順を実行します。
-1. SSH または Linux コンピューターにログインします。
 
+1. SSH または Linux コンピューターにログインします。
 1. `ssl-cert` パッケージをインストールします。
     ```sh
     sudo apt-get install ssl-cert

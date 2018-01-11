@@ -1,6 +1,6 @@
 ---
 title: "Visual Studio Desktop Express 2017 のワークロード ID とコンポーネント ID | Microsoft Docs"
-description: "ワークロードとコンポーネント ID は、コマンド ラインを使用して Visual Studio をインストールするか、または VSIX マニフェストで依存関係として指定するために使用します"
+description: "ワークロード ID とコンポーネント ID を使用して、コマンドラインを使用して Visual Studio をインストールするか、VSIX マニフェストで依存関係として指定します。"
 keywords: 
 author: TerryGLee
 ms.author: tglee
@@ -14,11 +14,12 @@ helpviewer_keywords:
 ms.service: 
 ms.technology: vs-acquisition
 ms.assetid: a3c0cc76-e3ce-435c-a1af-a6318b5a4dbe
-ms.openlocfilehash: 124a40e4e8f4b713e17aa05f95efccc5fcec3589
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: multiple
+ms.openlocfilehash: a628d2af0ccfaf66c936b391a977a0869139c98b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-desktop-express-2017-workload-and-component-ids"></a>Visual Studio Desktop Express 2017 のワークロード ID とコンポーネント ID
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/04/2017
 
 VSIX マニフェストで依存関係を設定するときは、コンポーネント ID のみを指定する必要があります。 このページの表を使用して、コンポーネントの最小の依存関係を確認してください。 シナリオによって、1 つのワークロードの 1 つのコンポーネントだけを指定する場合もあれば、 1 つのワークロードの複数のコンポーネントを指定したり、複数のワークロードの複数のコンポーネントを指定したりする場合もあります。 詳しくは、「[How to: Migrate Extensibility Projects to Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)」 (機能拡張プロジェクトを Visual Studio 2017 に移行する方法) をご覧ください。
 
-これらの ID の使用方法の詳細については、「[Use Command-Line Parameters to Install Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md)」(コマンドライン パラメーターを使用して Visual Studio 2017 をインストールする) をご覧ください。 他の製品のワークロードとコンポーネント ID の一覧については、「[Visual Studio 2017 Workload and Component IDs](workload-and-component-ids.md)」(Visual Studio 2017 のワークロードとコンポーネント ID) をご覧ください。
+これらの ID の使用方法の詳細については、「[Use Command-Line Parameters to Install Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md)」(コマンドライン パラメーターを使用して Visual Studio 2017 をインストールする) をご覧ください。 その他の製品のワークロードとコンポーネント ID の一覧については、「[Visual Studio 2017 Workload and Component IDs](workload-and-component-ids.md)」(Visual Studio 2017 のワークロード ID とコンポーネント ID) をご覧ください。
 
 ## <a name="express-for-windows-desktop"></a>Express for Windows Desktop
 
@@ -42,7 +43,7 @@ VSIX マニフェストで依存関係を設定するときは、コンポーネ
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.Component.ClickOnce | ClickOnce Publishing | 15.0.27019.1 | 必須
 Microsoft.Component.HelpViewer | ヘルプ ビューアー | 15.0.27005.2 | 必須
@@ -86,9 +87,9 @@ Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | UWP 用 Windows
 
 以下のコンポーネントはどのワークロードにも含まれていませんが、個別のコンポーネントとして選択できます。
 
-コンポーネント ID | 名前 | バージョン
+コンポーネント ID | name | Version
 --- | --- | ---
-適用なし | 該当なし | 適用なし
+N/A | N/A | N/A
 
 ## <a name="get-support"></a>サポートを受ける
 ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://www.visualstudio.com/vs/support/#talktous)をご覧ください。

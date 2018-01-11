@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 18cd58899819e49943e009da898705cfa328ffb5
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 0124133b230da01c6e7194849466c57d86592cbd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="step-3-using-the-interactive-repl-window"></a>手順 3: 対話型 REPL ウィンドウを使用する
 
@@ -47,7 +48,7 @@ Visual Studio の Python 用の *対話型ウィンドウ*は、機能豊富な 
 
     ```python
     # Create a string with spaces proportional to a cosine of x in degrees
-    def make_dot_string(x):  
+    def make_dot_string(x):
         return ' ' * int(20 * cos(radians(x)) + 20) + 'o'
     ```
 
@@ -62,8 +63,8 @@ Visual Studio の Python 用の *対話型ウィンドウ*は、機能豊富な 
 
     ```python
     for i in range(360):
-        s = make_dot_string(i)  
-        print(s) 
+        s = make_dot_string(i)
+        print(s)
     ```
 
     ![[Interactive に送信] を使用した複数行のコードの貼り付け](media/vs-getting-started-python-15-interactive5.png)
@@ -82,14 +83,13 @@ Visual Studio の Python 用の *対話型ウィンドウ*は、機能豊富な 
 
     ```python
     for i in range(0, 1800, 12):
-        s = make_dot_string(i)  
-        print(s) 
+        s = make_dot_string(i)
+        print(s)
     ```
 
     プロンプトと出力などを含め、対話型ウィンドウの内容を正確にコピーする場合、標準の**コピー** コマンドを使用します。
 
 1. ここでは、対話型ウィンドウの迅速な REPL 対話型ウィンドウを使用し、小規模なコードの詳細を処理し、そのコードをプロジェクトのソース ファイルに追加しました。 Ctrl + F5 キー (または **[デバッグ] > [デバッグなしで開始]**) を使用してコードを今再実行した場合、期待した正確な結果を得られます。
-
 
 ## <a name="next-steps"></a>次の手順
 
@@ -98,5 +98,5 @@ Visual Studio の Python 用の *対話型ウィンドウ*は、機能豊富な 
 
 ### <a name="going-deeper"></a>詳しい説明
 
-- [Interactive ウィンドウの使用](interactive-repl.md)
+- [対話型ウィンドウの使用](interactive-repl.md)
 - [IPython REPL の使用](interactive-repl-ipython.md)

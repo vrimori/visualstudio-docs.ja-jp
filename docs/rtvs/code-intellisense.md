@@ -1,5 +1,5 @@
 ---
-title: "R Code Visual Studio 用の IntelliSense | Microsoft Docs"
+title: "Visual Studio の R Code 用の IntelliSense | Microsoft Docs"
 ms.custom: 
 ms.date: 06/29/2017
 ms.reviewer: 
@@ -12,28 +12,29 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 160b39690cf2c1ebf933fb7a17f5d5b17b4d422a
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: a54ebc3abb5f63e2503f48e050e5b9d3e3546abb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="intellisense"></a>IntelliSense
 
 Visual Studio の IntelliSense では、コードを入力するときに、呼び出すことのできる関数、オブジェクトのメンバー、関数の引数、[コード スニペット](code-snippets.md)に関する情報が、見える位置に表示されます。 また、入力に合わせて入力候補が表示され、Tab キーまたは Enter キーを押すと自動的に入力されます (**[詳細設定]** タブの[エディター オプション](code-editing.md#editor-options)を参照)。 IntelliSense は、エディターと[対話型ウィンドウ](interactive-repl.md)の両方で利用可能です。
 
-![関数のシグネチャを示す IntelliSense](media/intellisense-function-signature.png) 
+![関数のシグネチャを示す IntelliSense](media/intellisense-function-signature.png)
 
 関数または他のステートメントを入力するとき、IntelliSense は、既に入力したものによって (大文字/小文字を区別して) フィルター処理されたオート コンプリート メニューを提供します。
 
 ![IntelliSense のオート コンプリート メニュー](media/intellisense-auto-complete-menu.png)
 
-Tab (または、オプションの設定によっては Enter や Space) キーを押すと、ドロップダウンで選択した項目が挿入されます。 選択は方向キーで変更できます。 
+Tab (または、オプションの設定によっては Enter や Space) キーを押すと、ドロップダウンで選択した項目が挿入されます。 選択は方向キーで変更できます。
 
 また、IntelliSense は、R オブジェクトのメンバーの候補も提供します。
- 
+
 ![IntelliSense によるオブジェクト メンバーの候補](media/intellisense-auto-complete-r-objects.png)
- 
+
 Esc キーを押すとメニューは消えます。 Ctrl + Space キーを押すと再び表示できます。
 
 関数呼び出しの開始 `(` を入力すると、終了 `)` が挿入され、前述したようにシグネチャ ヘルプが表示されます。

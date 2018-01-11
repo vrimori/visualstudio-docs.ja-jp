@@ -11,11 +11,12 @@ ms.assetid: d79260be-6234-4fd3-89b5-a9756b4a93c1
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 4c50384f734f4162fa1cf482c563ed35a6622adb
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: 3fbea34afa4e82ea360a0dfefe4f18dc74d11f19
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="automatically-apply-product-keys-when-deploying-visual-studio"></a>Visual Studio の展開時にプロダクト キーを自動的に適用する
 Visual Studio の配置を自動化するために使用されるスクリプトの一部として、プログラム的にプロダクト キーを適用することができます。 プロダクト キーは、Visual Studio のインストール中またはインストール完了後に、プログラム的にデバイスで設定できます。
@@ -48,7 +49,7 @@ Visual Studio の配置を自動化するために使用されるスクリプト
 
 `StorePID.exe` が正常にプロダクト キーを適用した場合は `%ERRORLEVEL%` として 0 を返します。 エラーが発生した場合、エラーの状態に基づいて次のいずれかのコードが返されます。
 
-| エラー                     | コード |
+| Error                     | コード |
 |---------------------------|------|
 | `PID_ACTION_SUCCESS`      | 0    |
 | `PID_ACTION_NOTINSTALLED` | 1    |
@@ -67,6 +68,6 @@ Visual Studio の配置を自動化するために使用されるスクリプト
 * [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。
 * [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。  (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
  * [Visual Studio のインストール](../install/install-visual-studio.md)
  * [Visual Studio のオフライン インストールを作成する](../install/create-an-offline-installation-of-visual-studio.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "31"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f57cfea2655061985f58692c2d6c47c6433230bc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: de2af589a92e401ecf549726dea1a5ae300a20bd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-ui-by-using-blend-for-visual-studio"></a>Blend for Visual Studio を使用して UI を作成する
 Blend for Visual Studio を使用すると、XAML ベースの Windows および Web アプリケーションを設計できます。 Visual Studio と同じ基本的な XAML デザイン環境を提供しているほか、アニメーションやビヘイビアーなどの高度なタスクを視覚的にデザインする機能が追加されています。 (ツールの比較については、「[Visual Studio および Blend for Visual Studio での XAML の設計](../designers/designing-xaml-in-visual-studio.md)」を参照してください)。
@@ -121,7 +122,7 @@ Blend for Visual Studio を初めてご使用になる場合は、このワー�
   
  **短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [[プロパティ] パネル](https://www.youtube.com/watch?v=HCqQfiobdag&list=PLBDF977B2F1DAB358&index=7)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コントロールの挿入およびそのビヘイビアーの変更](../designers/insert-controls-and-modify-their-behavior-in-xaml-designer.md)   
  [オブジェクトのアニメーション化](../designers/animate-objects-in-xaml-designer.md)   
  [図形とパスの描画](../designers/draw-shapes-and-paths.md)   

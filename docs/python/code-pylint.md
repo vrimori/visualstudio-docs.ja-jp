@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: dbb4c3d0a2d9077572a80c43d9d49d9c7e898dce
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 032c6489463aaaee59b39423506f18bda82fb414
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-pylint-to-check-python-code"></a>PyLint を使用した Python コードのチェック
 
@@ -39,7 +40,7 @@ PyLint の警告とエラーが [エラー一覧] ウィンドウに表示され
 
 ## <a name="setting-pylint-command-line-options"></a>PyLint コマンド ライン オプションの設定
 
-PyLint ドキュメントの[コマンド ライン オプション](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options)のセクションでは、`.pylintrc` 構成ファイルを使用して PyLint の動作を制御する方法が説明されています。 このようなファイルは Visual Studio 内の Python プロジェクトのルートに配置するか、設定を適用したい範囲に応じて他の場所に配置します。
+PyLint ドキュメントの[コマンド ライン オプション](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options)のセクションでは、`.pylintrc` 構成ファイルを使用して PyLint の動作を制御する方法が説明されています。 このようなファイルは Visual Studio 内の Python プロジェクトのルートに配置するか、設定を適用したい範囲に応じて他の場所に配置します (詳しくは、[コマンドライン オプション](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options)に関するページをご覧ください)。
 
 たとえば、前の画像に表示されている "docstring が見つかりません" という警告がプロジェクト内の `.pylintrc` ファイルに対して表示されないようにするには、次の手順を実行します。
 
@@ -54,3 +55,9 @@ PyLint ドキュメントの[コマンド ライン オプション](https://pyl
 1. ファイルを編集のために開くと、操作できる各種の設定が表示されます。 警告を無効にするには、`[MESSAGES CONTROL]` セクションを探し、そのセクションの `disable` 設定を見つけます。 特定のメッセージからなる長い文字列が表示されます。ここに目的の警告を追加できます。 この例では、`,missing-docstring` (区切りコンマを含む) を追加します。
 
 1. `.pylintrc` ファイルを保存し、PyLint をもう一度実行して、警告が表示されなくなったことを確認します。
+
+> [!Tip]
+> ネットワーク共有から `.pylintrc` ファイルを使用するには、「`PYLINTRC`」という名前の環境変数を作成します。ネットワーク共有のファイル名の値には、UNC パスまたはマッピングされたドライブ文字を使用します。 例:
+> ```
+> PYLINTRC=\\myshare\python\.pylintrc
+> ```

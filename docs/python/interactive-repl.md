@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 80b53ca4a4ada7374d0d62101b00b8ed1a9ca335
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 2126855c0d8b44965c3ba867940990de0edb1d42
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-the-python-interactive-window"></a>Python 対話型ウィンドウの使用
 
@@ -28,10 +29,10 @@ Visual Studio では、複数の Python REPL モードから選ぶことがで�
 
 | REPL | 説明 | 編集 | デバッグ | イメージ |
 | --- | --- | --- | --- | --- |
-| 標準 | 既定の REPL、Python と直接対話 | 標準的な編集 (複数行など)。 | はい、`$attach` を使用 | いいえ |
-| デバッグ | 既定の REPL、デバッグ対象の Python プロセスと対話 | 標準的な編集 | デバッグのみ | いいえ |
-| IPython | REPL は IPython のバックエンドと対話 | IPython コマンド、Pylab の利便性 | いいえ | はい、REPL でインライン |
-| IPython (Pylab なし) | REPL は IPython のバックエンドと対話 | 標準的な IPython | いいえ | はい、別のウィンドウ | 
+| 標準 | 既定の REPL、Python と直接対話 | 標準的な編集 (複数行など)。 | はい、`$attach` を使用 | × |
+| デバッグ | 既定の REPL、デバッグ対象の Python プロセスと対話 | 標準的な編集 | デバッグのみ | × |
+| IPython | REPL は IPython のバックエンドと対話 | IPython コマンド、Pylab の利便性 | × | はい、REPL でインライン |
+| IPython (Pylab なし) | REPL は IPython のバックエンドと対話 | 標準的な IPython | × | はい、別のウィンドウ | 
 
 このトピックでは、REPL の**標準**モードと**デバッグ** モードのについて説明します。 IPython モードについて詳しくは、「[Using the IPython REPL](interactive-repl-ipython.md)」(IPython REPL の使用) をご覧ください。
 

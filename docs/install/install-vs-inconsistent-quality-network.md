@@ -14,11 +14,12 @@ ms.assetid: 44DB1998-68CD-4560-870A-EE5B993DCF6E
 author: timsneath
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 7618537fcceb0527b29f5c40584fb69d7ddcca63
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: 1d7b9b7084b91ace1f76d4d411f117df41cfd257
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="install-visual-studio-2017-on-low-bandwidth-or-unreliable-network-environments"></a>低帯域幅または信頼性の低いネットワーク環境に Visual Studio 2017 をインストールする
 
@@ -88,7 +89,7 @@ Visual Studio Web インストーラーを試してみてください。ほと�
 
 ## <a name="list-of-language-locales"></a>言語ロケールの一覧
 
-| **言語ロケール** | **言語** |
+| **言語ロケール** | **Language** |
 | ----------------------- | --------------- |
 | cs-CZ | チェコ語 |
 | de-DE | ドイツ語 |

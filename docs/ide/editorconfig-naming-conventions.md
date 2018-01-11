@@ -13,11 +13,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-ide-general
-ms.openlocfilehash: 8751bdb2d2dfb364f19f62e03edd1527fa3deb7d
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: multiple
+ms.openlocfilehash: 5b6d7f0dc43ca11b6fee4b97d5422b863a7b89f4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="naming-conventions-for-editorconfig"></a>EditorConfig での名前付け規則
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/01/2017
 
 `dotnet_naming_symbols.<symbolTitle>.applicable_kinds = <values>`
 
-許容される値を次に一覧します。個々の値をコンマで区切ることで複数の値を指定できます。
+許容される値を次のリストに示します。個々の値をコンマで区切ることで複数の値を指定できます。
 
 - \*(この値を使用すると、すべてのシンボルが指定されます)
 - class
@@ -63,7 +64,7 @@ ms.lasthandoff: 12/01/2017
 
 `dotnet_naming_symbols.<symbolTitle>.applicable_accessibilities = <values>`
 
-許容される値を次に一覧します。個々の値をコンマで区切ることで複数の値を指定できます。
+許容される値を次のリストに示します。個々の値をコンマで区切ることで複数の値を指定できます。
 
 - \*(この値を使用すると、すべてのアクセシビリティ レベルが指定されます)
 - public
@@ -81,16 +82,15 @@ ms.lasthandoff: 12/01/2017
 
 `dotnet_naming_symbols.<symbolTitle>.required_modifiers = <values>`
 
-許容される値を次に一覧します。個々の値をコンマで区切ることで複数の値を指定できます。
+許容される値を次のリストに示します。個々の値をコンマで区切ることで複数の値を指定できます。
 
-- \*(この値を使用すると、すべての修飾子が指定されます)
 - abstract または must_inherit
 - async
 - const
 - readonly
 - static または shared
 
-このプロパティを省略した場合、名前付け規則はすべての修飾子に適用されます。
+`required_modifiers` は省略可能なプロパティです。 このプロパティを省略した場合、名前付け規則はすべての修飾子に適用されます。
 
 ## <a name="style"></a>スタイル
 
@@ -155,7 +155,7 @@ none または silent | このスタイルに準拠していないときは、�
 
 ## <a name="example"></a>例
 
-パブリック プロパティ、メソッド、フィールド、イベント、およびデリゲートを大文字で入力する必要があることを指定した名前付け規則が含まれている .editorconfig ファイルの例を次に示します。 この名前付け規則では、コンマを使用して個々のシンボル値を区切ることにより、規則を適用する複数の種類のシンボルを指定しています。
+次の .editorconfig ファイルには、パブリック プロパティ、メソッド、フィールド、イベント、およびデリゲートを大文字で入力する必要があることを指定した名前付け規則が含まれています。 この名前付け規則では、コンマを使用して個々のシンボル値を区切ることにより、規則を適用する複数の種類のシンボルを指定しています。
 
 ```
 # Public members must be capitalized (public_members_must_be_capitalized)

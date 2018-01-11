@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0133ced82f35a8daefeb3dcaaacd4822f5cad345
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0d01e7c8ef95270cde9c1054cc286b62bbe95c46
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="modify-the-style-of-objects-in-blend"></a>Blend におけるオブジェクト スタイルの変更
 オブジェクトをカスタマイズする最も簡単な方法は、**[プロパティ]** ペインにプロパティを設定することです。  
@@ -45,11 +46,11 @@ ms.lasthandoff: 10/31/2017
   
  イメージ ブラシを作成するには、イメージを使用します。 次の図は、イメージ ブラシ、並べて表示されたイメージ ブラシ、反転させたイメージ ブラシを示しています。  
   
- ![](../designers/media/81f84f56-906d-456b-8288-d77da1e01e31.png "81f84f56-906d-456b-8288-d77da1e01e31")![](../designers/media/d3782ca8-64da-47a4-a095-c6cdd0fa47a2.png "d3782ca8-64da-47a4-a095-c6cdd0fa47a2")![](../designers/media/38ae3691-f3f1-4a1e-82ca-c7fa164bf56e.png "38ae3691-f3f1-4a1e-82ca-c7fa164bf56e")  
+ ![](../designers/media/81f84f56-906d-456b-8288-d77da1e01e31.png "81f84f56-906d-456b-8288-d77da1e01e31") ![](../designers/media/d3782ca8-64da-47a4-a095-c6cdd0fa47a2.png "d3782ca8-64da-47a4-a095-c6cdd0fa47a2") ![](../designers/media/38ae3691-f3f1-4a1e-82ca-c7fa164bf56e.png "38ae3691-f3f1-4a1e-82ca-c7fa164bf56e")  
   
  パスや図形など、ベクター描画を使用して、描画ブラシを作成します。 次の図は、描画ブラシ、並べて表示された描画ブラシ、反転させた描画ブラシを示しています。  
   
- ![](../designers/media/197666ac-ef57-4c5c-9779-669e991a00a5.png "197666ac-ef57-4c5c-9779-669e991a00a5")![](../designers/media/ba09cda3-4cee-40ba-b3d4-edc032158bdc.png "ba09cda3-4cee-40ba-b3d4-edc032158bdc")![](../designers/media/15bf6021-620c-4490-9eae-086153d3f14f.png "15bf6021-620c-4490-9eae-086153d3f14f")  
+ ![](../designers/media/197666ac-ef57-4c5c-9779-669e991a00a5.png "197666ac-ef57-4c5c-9779-669e991a00a5") ![](../designers/media/ba09cda3-4cee-40ba-b3d4-edc032158bdc.png "ba09cda3-4cee-40ba-b3d4-edc032158bdc") ![](../designers/media/15bf6021-620c-4490-9eae-086153d3f14f.png "15bf6021-620c-4490-9eae-086153d3f14f")  
   
  ボタンなどのコントロールから、ビジュアル ブラシを作成します。 次の図は、ビジュアル ブラシと並べて表示されたビジュアル ブラシを示しています。  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  スタイルやテンプレートを全種類のコントロールに対して作成することはできません。 コントロールがスタイルやテンプレートをサポートしていない場合、[階層リンク] ボタンはアートボード上部に表示されません。  
 >   
->  メイン ドキュメントのスコープの編集に戻るには、**[スコープを**  に戻す]![](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png "55844eb3-ed98-4f20-aa66-a6f5b23eeb2b") をクリックします。  
+>  メイン ドキュメントのスコープの編集に戻るには、**[スコープを ![](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png "55844eb3-ed98-4f20-aa66-a6f5b23eeb2b") に戻す]** をクリックします。  
 >   
 >  ![](../designers/media/4a5612e1-7a28-4587-b870-0fe7112ec2ad.png "4a5612e1-7a28-4587-b870-0fe7112ec2ad")  
   
@@ -118,5 +119,5 @@ ms.lasthandoff: 10/31/2017
   
  **短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [リソースの簡単な説明](http://www.popscreen.com/v/6A4k7/Microsoft-Expression-Blend-Brief-Touch-on-Resources)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Blend for Visual Studio を使用して UI を作成する](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)

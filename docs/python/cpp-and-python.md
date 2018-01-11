@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio での C++ と Python の使用 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/28/2017
+ms.date: 1/2/20178
 ms.reviewer: 
 ms.suite: 
 ms.technology: devlang-python
@@ -13,11 +13,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 08f91846340e2acc993e5302badfc846db5f4a9c
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: b7b83243d676c5393669eaa8faa8e8cc34ec2580
+ms.sourcegitcommit: 03a74d29a1e0584ff4808ce6c9e812b51e774905
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="creating-a-c-extension-for-python"></a>Python 用 C++ 拡張機能の作成
 
@@ -107,7 +108,7 @@ Python インタープリターの機能を拡張するため、およびオペ�
 
 1. 以下に示すように、特定のプロパティを設定し、**[OK]** を選択します。
 
-    | タブ | プロパティ | 値 | 
+    | タブ | プロパティ | [値] | 
     | --- | --- | --- |
     | 全般 | [全般] > [ターゲット名] | Python が認識するモジュールの名前と完全に一致するようにこのフィールドを設定します。 |
     | | [全般] > [ターゲットの拡張子] | .pyd |
@@ -124,14 +125,14 @@ Python インタープリターの機能を拡張するため、およびオペ�
     > デバッグ構成であっても、**[C/C++] > [コード生成] > [ランタイム ライブラリ]** オプションを [マルチスレッド デバッグ DLL (/MDd)] に設定しないでください。 非デバッグ Python バイナリのビルドに使われている [マルチスレッド DLL (/MD)] ランタイムを選択してください。 /MDd オプションを設定すると、DLL のデバッグ構成をビルドするときに、*C1189: Py_LIMITED_API は Py_DEBUG、Py_TRACE_REFS、Py_REF_DEBUG と互換性がありません*というエラーが表示されます。 さらに、ビルド エラーを避けるために `Py_LIMITED_API` を削除すると、モジュールをインポートしようとしたときに Python がクラッシュします (後で説明しますが、クラッシュは DLL の`PyModule_Create` の呼び出し内で発生し、出力メッセージは "*Fatal Python error: PyThreadState_Get: no current thread (Python 致命的エラー: PyThreadState_Get: 現在のスレッドがありません)*" です)。
     >
     > /MDd オプションは Python デバッグ バイナリ (python_d.exe など) のビルドに使われますが、拡張 DLL に対して選ぶと、やはり `Py_LIMITED_API` のビルド エラーになることに注意してください。
-   
+
 1. C++ プロジェクトを右クリックし、**[ビルド]** を選んで構成をテストします (デバッグとリリースの両方)。 `.pyd` ファイルは、C++ のプロジェクト フォルダー自体ではなく、**Debug** および **Release** の下の *solution* フォルダーにあります。
 
 1. C++ プロジェクトのメインの `.cpp` ファイルに、次のコードを追加します。
 
     ```cpp
     #include <Windows.h>
-    #include <cmath>    
+    #include <cmath>
 
     const double e = 2.7182818284590452353602874713527;
 
@@ -149,7 +150,6 @@ Python インタープリターの機能を拡張するため、およびオペ�
     ```
 
 1. C++ プロジェクトを再度ビルドし、コードが正しいことを確認します。
-
 
 ## <a name="convert-the-c-project-to-an-extension-for-python"></a>C++ プロジェクトを Python の拡張機能に変換する
 
@@ -171,11 +171,12 @@ C++ DLL を Python の拡張機能にするには、Python の型と対話する
     }
     ```
 
-1. Python に対して C++ の `tanh` 関数を提示する方法を定義する構造体を追加します。
+1. Python に対して C++ の `tanh_impl` 関数を提示する方法を定義する構造体を追加します。
 
     ```cpp
     static PyMethodDef superfastcode_methods[] = {
-        // The first property is the name exposed to python, the second is the C++ function name        
+        // The first property is the name exposed to Python, fast_tanh, the second is the C++
+        // function name that contains the implementation.
         { "fast_tanh", (PyCFunction)tanh_impl, METH_O, nullptr },
 
         // Terminate the array with an object containing nulls.
@@ -183,22 +184,22 @@ C++ DLL を Python の拡張機能にするには、Python の型と対話する
     };
     ```
 
-1. Python コードで認識されるモジュールを定義する構造体を追加します  (module.cpp などの、C++ プロジェクト内部のファイル名は重要ではありません)。
+1. Python コードで参照するモジュールを定義する構造体を追加します。特に、`from...import` ステートメントを利用するタイミングを定義します。 次の例では、"superfastcode" というモジュール名は Python で `from superfastcode import fast_tanh` を使用できることを意味します。`fast_tanh` が `superfastcode_methods` 内で定義されているためです。 (module.cpp などの、C++ プロジェクト内部のファイル名は重要ではありません)。
 
     ```cpp
     static PyModuleDef superfastcode_module = {
         PyModuleDef_HEAD_INIT,
-        "superfastcode",                        // Module name as Python sees it
+        "superfastcode",                        // Module name to use with Python import statements
         "Provides some functions, but faster",  // Module description
         0,
-        superfastcode_methods                   // Structure that defines the methods
+        superfastcode_methods                   // Structure that defines the methods of the module
     };
     ```
 
 1. モジュールを読み込むときに Python が呼び出すメソッドを追加します。`PyInit_<module-name>` という名前にする必要があります。*&lt;module_name&gt;* は、C++ プロジェクトの **[全般] > [ターゲット名]** プロパティと正確に一致します (つまり、プロジェクトによってビルドされる `.pyd` のファイル名と一致します)。
 
     ```cpp
-    PyMODINIT_FUNC PyInit_superfastcode() {    
+    PyMODINIT_FUNC PyInit_superfastcode() {
         return PyModule_Create(&superfastcode_module);
     }
     ```
@@ -229,12 +230,12 @@ Python で DLL を使えるようにするには 2 つの方法があります�
     sfc_module = Extension('superfastcode', sources = ['module.cpp'])
 
     setup(name = 'superfastcode', version = '1.0',
-        description = 'Python Package with superfastcode C++ Extension',
+        description = 'Python Package with superfastcode C++ extension',
         ext_modules = [sfc_module]
         )
     ```
 
-    このスクリプトについては、「[Building C and C++ Extensions](https://docs.python.org/3/extending/building.html)」(C と C++ の拡張機能のビルド) (python.org) をご覧ください。
+    このスクリプトについては、「[Building C and C++ Extensions](https://docs.python.org/3/extending/building.html)」 (C と C++ の拡張機能のビルド) (python.org) をご覧ください。
 
 1. `setup.py` コードをコマンド ラインから使用すると、Visual Studio 2015 C++ ツールセット使って拡張機能をビルドするように Python に指示します。 管理者特権でコマンド プロンプトを開き、C++ プロジェクト (および `setup.py`) を含むフォルダーに移動して、次のコマンドを入力します。
 
@@ -249,7 +250,7 @@ Python で DLL を使えるようにするには 2 つの方法があります�
 1. 次の行を `.py` ファイルに追加して、DLL からエクスポートされた `fast_tanh` メソッドを呼び出してその出力を表示します。 `from s` ステートメントを手入力する場合は、入力候補一覧に `superfastcode` が表示され、「`import`」と入力すると `fast_tanh` メソッドが表示されます。
 
     ```python
-    from superfastcode import fast_tanh    
+    from superfastcode import fast_tanh
     test(lambda d: [fast_tanh(x) for x in d], '[fast_tanh(x) for x in d]')
     ```
 

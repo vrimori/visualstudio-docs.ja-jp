@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 44065522229a1661efc41e79905d9650f7949ac3
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: b9762a3ce0a448fdf2b9e2d2b6127e7565187f70
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="python-projects"></a>Python プロジェクト
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 12/01/2017
 
 Visual Studio には、多数のアプリケーション構造を短時間で設定するためのさまざまな Python プロジェクト テンプレートが用意されており、既存のフォルダー ツリーからプロジェクトを作成するためのテンプレートや、クリーンな空のプロジェクトを作成するためのテンプレートなどがあります。 詳しくは、後の「[プロジェクト テンプレート](#project-templates)」をご覧ください。
 
-このトピックの内容
+このトピックの内容:
 
 - [ファイルの追加、スタートアップ ファイルの割り当て、環境の設定](#adding-files-assigning-a-startup-file-and-setting-environments)
 - [プロジェクト テンプレート](#project-templates)
@@ -71,7 +72,7 @@ Visual Studio には、新規に、または既存のコードから、Python �
 
 | テンプレート | 説明 | 
 | --- | --- |
-| [From Existing Python Code (既存の Python コードから)](#creating-a-project-from-existing-files) | フォルダー構造に存在する既存の Python コードから Visual Studio プロジェクトを作成します。  |
+| [既存の Python コードから](#creating-a-project-from-existing-files) | フォルダー構造に存在する既存の Python コードから Visual Studio プロジェクトを作成します。  |
 | Python Application (Python アプリケーション) | 空のソース ファイルを 1 つ含む新しい Python アプリケーションの基本的なプロジェクト構造です。 既定では、プロジェクトは既定のグローバル環境のコンソール インタープリターで実行します。これは、[異なる環境を割り当てる](python-environments.md#project-specific-environments)ことで変更できます。 |
 | [Azure クラウド サービス](template-azure-cloud-service.md) | Python で記述された Azure クラウド サービス用のプロジェクトです。 |
 | [Web プロジェクト](template-web.md) | Bottle、Django、Flask、Flask/Jade などのさまざまなフレームワークに基づく Web サーバー用のプロジェクトです。 |
@@ -144,6 +145,6 @@ IronPython での参照は、`clr.AddReference('AssemblyName')` への呼び出�
 
 ### <a name="webpi-projects"></a>WebPI プロジェクト
 
-配置用の WebPI 製品エントリへの参照を Microsoft Azure クラウド サービスに追加し、クラウドで WebPI フィードを使って追加コンポーネントをインストールできます。 既定では、表示されるフィードは Python 固有であり、Django、CPython、およびその他の主要なコンポーネントが含まれます。 次に示すように、独自のフィードを選ぶこともできます。 Microsoft Azure に発行すると、セットアップ タスクは参照されているすべての製品をインストールします。
+デプロイ用の WebPI 製品エントリへの参照を Microsoft Azure Cloud Services に追加し、クラウドで WebPI フィードを使って追加コンポーネントをインストールできます。 既定では、表示されるフィードは Python 固有であり、Django、CPython、およびその他の主要なコンポーネントが含まれます。 次に示すように、独自のフィードを選ぶこともできます。 Microsoft Azure に発行すると、セットアップ タスクは参照されているすべての製品をインストールします。
 
 ![WebPI の参照](media/projects-webPI-components.png)

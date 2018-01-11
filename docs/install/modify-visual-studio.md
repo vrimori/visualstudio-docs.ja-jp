@@ -17,11 +17,12 @@ ms.assetid: 3399ea7b-a291-4a9e-80a1-b861a21afa1d
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: f003d5f5a598971d27c55e90ba3bbfbfdc5ae1f1
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: 8278b138e8cf7a8780ad83d591a823fdb85f2b08
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="modify-visual-studio-2017-by-adding-or-removing-workloads-and-components"></a>ワークロードやコンポーネントを追加または削除することで Visual Studio 2017 を変更する
 実行する作業に合わせて Visual Studio をより簡単にカスタマイズできるようになっただけでなく、Visual Studio をより簡単にカスタマイズできるようにもなりました。 これまでのようにコントロール パネルに移動する必要はありません。代わりに新しい Visual Studio インストーラーを起動して、必要な変更を加えます。

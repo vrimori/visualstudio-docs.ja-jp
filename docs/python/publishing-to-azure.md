@@ -12,11 +12,14 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: a4f9ec85a7fa37c871344500cc412e57d8019100
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload:
+- python
+- azure
+ms.openlocfilehash: a5c3d0c63ad049d641368ceb3f9ef395f243e51c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="publishing-to-azure-app-service"></a>Azure App Service への発行
 
@@ -24,7 +27,8 @@ Visual Studio には、Azure App Service に Python Web アプリを直接発行
 
 発行プロセスは、Visual Studio 2017 と Visual Studio 2015 では異なります。 具体的には、Visual Studio 2015 は `web.config` の作成などの一部の操作を自動化しますが、この自動化により、長期的な柔軟性と制御が制限されます。 Visual Studio 2017 では、より多くの手動操作を必要としますが、Python 環境をより厳密に制御することができます。 ここでは、両方のオプションについて説明します。
 
-このトピックの内容
+このトピックの内容:
+
 - [前提条件](#prerequisites)
 - [Azure App Service の作成](#create-an-azure-app-service)
 - [App Service での Python の構成](#configure-python-on-app-service)
@@ -43,8 +47,7 @@ Visual Studio には、Azure App Service に Python Web アプリを直接発行
 
 1. 指示に従って外部パッケージをインストールします。**[仮想環境にインストール]** と仮想環境の優先ベース インタープリターを選択します。 通常、これは App Service にインストールされている Python のバージョンと一致するものを選択します。
 
-1. F5 キーを押すか、**[デバッグ] > [デバッグの開始]** を選択して、プロジェクトをローカルでテストします。 
-
+1. F5 キーを押すか、**[デバッグ] > [デバッグの開始]** を選択して、プロジェクトをローカルでテストします。
 
 ## <a name="create-an-azure-app-service"></a>Azure App Service の作成
 
@@ -75,7 +78,6 @@ Azure への発行には、ターゲット App Service が必要です。 この
 1. 任意のソーシャル ログインを使ってサインインし、しばらくすると、表示される URL でサイトの準備ができます。
 1. **[発行プロファイルのダウンロード]** を選び、`.publishsettings` ファイルを保存します。後でこのファイルを使います。
 
-
 ## <a name="configure-python-on-azure-app-service"></a>Azure App Service での Python の構成
 
 空の Web アプリを持つ App Service を (サブスクリプションまたは無料サイトのいずれかで) 実行したら、「[Azure App Service での Python の管理](managing-python-on-azure-app-service.md)」の説明に従って、選択した Python のバージョンをインストールします。 Visual Studio 2017 から発行するには、そのトピックの説明に従って、サイトの拡張機能と共にインストールされた Python インタープリターへの正確なパスを記録します。
@@ -89,7 +91,7 @@ Visual Studio 2017 から Azure App Service に発行すると、プロジェク
 1. Visual Studio の**ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]、[新しい項目]* を選択します。表示されるダイアログ ボックスで、[Azure web.config (Fast CGI)] テンプレートを選択し、[OK] を選択します。 これによりプロジェクト ルートに `web.config` ファイルが作成されます。 
 
 1. `web.config` の `PythonHandler` エントリを変更して、パスがサーバー上の Python インストールと一致するようにします。 たとえば、Python 3.6.1 x64 の場合、エントリは次のように表示されます。
-    
+
     ```xml
     <system.webServer>
       <handlers>
@@ -103,7 +105,7 @@ Visual Studio 2017 から Azure App Service に発行すると、プロジェク
 1. `web.config` の `WSGI_HANDLER` エントリを、使用しているフレームワークに合わせて適切に設定します。
 
     - **Bottle**: 次のように、`app.wsgi_app` の後にかっこを追加します。 これが必要なのは、そのオブジェクトが変数ではなく関数 (`app.py` を参照) であるためです。
-   
+
         ```xml
         <!-- Bottle apps only -->
         <add key="WSGI_HANDLER" value="app.wsgi_app()"/>
@@ -139,32 +141,32 @@ Visual Studio 2017 から Azure App Service に発行すると、プロジェク
     配列への URL の追加が失敗すると、次のエラーが発生します。"DisallowedHost at / 不正な HTTP_HOST ヘッダー: '\<サイト URL\>'。 '\<サイト URL\>' を ALLOWED_HOSTS に追加する必要があります。"
 
 1. **ソリューション エクスプローラー**で、プロジェクトと同じ名前が付いたフォルダーを展開し、`static` フォルダーを右クリックし、**[追加] > [新しい項目]** を選択し、"Azure 静的ファイルの web.config" テンプレートを選択し、**[OK]** を選択します。 この操作により `static` フォルダー内に別の `web.config` が作成され、そのフォルダーの Python 処理を無効にします。 この構成は、Python アプリケーションを使用せずに、静的ファイルの要求を既定の Web サーバーに送信します。
-  
-1. プロジェクトを保存し、Visual Studio の**ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[発行]** を選択します。 
+
+1. プロジェクトを保存し、Visual Studio の**ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[発行]** を選択します。
 
 1. 表示された **[発行]** タブで、発行先のターゲットを選択します。
 
     a.  Azure サブスクリプション: **[Microsoft Azure App Service]** を選択し、**[既存のものを選択]**、**[発行]** の順に選択します。 表示されたダイアログで、適切なサブスクリプションと App Service を選択できます。 App Service が表示されない場合は、次に説明されているように、一時的な App Service のダウンロードした発行プロファイルを使用します。
-    
+
     ![Azure への発行手順 1、Visual Studio 2017、既存のサブスクリプション](media/tutorials-common-publish-1a-2017.png)
 
     b.  try.azurewebsites.net で一時的な App Service を使用している場合、または発行プロファイルを使用する必要がある場合は、**>** コントロールを選択して **[プロファイルのインポート]** を見つけてそのオプションを選択し、**[発行]** を選択します。 これにより、以前にダウンロードした `.publishsettings` ファイルの場所の入力が求められます。
 
-    ![Azure への発行手順 1、Visual Studio 2017、一時的な App Service](media/tutorials-common-publish-1b-2017.png)    
+    ![Azure への発行手順 1、Visual Studio 2017、一時的な App Service](media/tutorials-common-publish-1b-2017.png)
 
-1.  Visual Studio で、[Web 発行アクティビティ] ウィンドウと [発行] ウィンドウに発行ステータスが表示されます。 発行が完了すると、サイト URL で既定のブラウザーが開きます。 URL は、[発行] ウィンドウにも表示されます。
+1. Visual Studio で、[Web 発行アクティビティ] ウィンドウと [発行] ウィンドウに発行ステータスが表示されます。 発行が完了すると、サイト URL で既定のブラウザーが開きます。 URL は、[発行] ウィンドウにも表示されます。
 
 1. ブラウザーが開いたときに、"内部サーバー エラーが発生したため、ページを表示できません。" というメッセージが表示される場合があります。 このメッセージは、サーバー上の Python 環境が完全に構成されていないことを示しています。その場合、次の手順を実行します。
 
     a.  もう一度「[Azure App Service での Python の管理](managing-python-on-azure-app-service.md)」を参照して、適切な Python サイト拡張機能がインストールされていることを確認します。
-     
-    b.  `web.config` ファイル内の Python インタープリターへのパスを再確認します。 パスは、選択したサイト拡張機能のインストール場所と完全に一致している必要があります。    
- 
+
+    b.  `web.config` ファイル内の Python インタープリターへのパスを再確認します。 パスは、選択したサイト拡張機能のインストール場所と完全に一致している必要があります。
+
     c. Kudu コンソールを使用してアプリの `requirements.txt` ファイルに一覧表示されている任意のパッケージをアップグレードする: `web.config` で使用されているのと同じ Python フォルダー (`/home/python361x64` など) に移動し、[Kudu コンソール](managing-python-on-azure-app-service.md#azure-app-service-kudu-console)のセクションの説明に従って、次のコマンドを実行します。
 
     ```
     python -m pip install --upgrade -r /home/site/wwwroot/requirements.txt
-    ```          
+    ```
 
     このコマンドの実行時にアクセス許可エラーが発生する場合は、コマンドを App Service の既定の Python インストールのいずれかのフォルダー*ではなく*、サイト拡張機能のフォルダーで実行していることを再確認します。 これらの既定の環境を変更することはできないため、パッケージをインストールしようとすると確実に失敗します。
 
@@ -182,7 +184,6 @@ Visual Studio 2017 から Azure App Service に発行すると、プロジェク
 1. サーバー環境を完全に構成したら、ブラウザーでページを更新すると、Web アプリが表示されます。
 
     ![App Service への Bottle、Flask、および Django アプリの発行結果](media/azure-publish-results.png)
-
 
 ## <a name="publishing-to-app-service---visual-studio-2015"></a>App Service への発行 - Visual Studio 2015
 
@@ -214,7 +215,7 @@ Visual Studio 2017 から Azure App Service に発行すると、プロジェク
 - プロジェクトの `static` フォルダー内のファイルの処理をオフにします (このルールは `web.config` にあります)。
 - 仮想環境をサーバーに発行します。
 - `web.debug.config` ファイルと ptvsd デバッグ ツールを追加して、リモート デバッグを有効にします。
- 
+
 前述したとおり、これらの自動ステップは発行プロセスを簡素化しますが、Python 環境の制御がより難しくなります。 たとえば、`web.config` ファイルはサーバーにのみ作成され、プロジェクトには追加されません。 発行プロセスは、サーバーの構成に依存するのではなく、開発用コンピューターから仮想環境全体をコピーするため、時間がかかります。
 
 最終的に自分の `web.config` ファイルを保持して、`requirements.txt` を使用してパッケージをサーバー上で直接保持できます。 具体的には、`requirements.txt` を使用することで、開発環境とサーバー環境が常に一致することが保証されます。

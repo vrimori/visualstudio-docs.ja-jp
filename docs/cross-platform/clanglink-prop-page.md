@@ -33,11 +33,12 @@ f1_keywords:
 - VC.Project.AdditionalOptionsPage
 - VC.Project.VCLinkerTool.AdditionalDependencies
 - VC.Project.VCLinkerTool.LibraryDependencies
-ms.openlocfilehash: 0e7b1d5b417250282092a780afc30aee965e4dfa
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: xplat-cplusplus
+ms.openlocfilehash: f74ad5934d48c941195da30d9228c35483479f69
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clang-linker-properties-android-c"></a>Clang のリンカーのプロパティ (Android C++)
 
@@ -62,5 +63,5 @@ Version | -version オプションは、実行ファイルのヘッダーにバ�
 実行可能スタックの要求 | このオプションは、実行可能スタックを必要としないものとして出力をマークします。
 アーカイブ全体 | アーカイブ全体は、ソースおよびその他の依存関係のすべてのコードを使用します。
 その他のオプション | その他のオプションです。
-[追加の依存ファイル] | リンク コマンド ラインに追加する項目を指定します。
+追加の依存ファイル | リンク コマンド ラインに追加する項目を指定します。
 ライブラリの依存ファイル | このオプションでは、リンカー コマンド ラインに追加する追加ライブラリを指定できます。 追加ライブラリは、"lib" で始まって拡張子 ".a" または ".so" で終わり、リンカー コマンド ラインの最後に追加されます。  (-lFILE)

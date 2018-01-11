@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio のマルチ ターゲットの概要 | Microsoft Docs"
+title: "Visual Studio での NET Framework の対象設定 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,76 +8,82 @@ ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
-- targeting .NET Framework version [Visual Studio]
-- versions [Visual Studio], targeting .NET Framework version
+- targeting .NET Framework [Visual Studio]
 - multi-targeting [Visual Studio]
 - multitargeting [Visual Studio]
-ms.assetid: b1702c33-0672-4ebc-b779-2b324d6ea880
-caps.latest.revision: "36"
+- framework targeting [Visual Studio]
+- .NET framework targeting [Visual Studio]
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ad2917a1cf0a620f2e228828a152d91ec8948734
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: c3d388238b443fcb717502a893a674f99a315f38
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-multi-targeting-overview"></a>Visual Studio のマルチ ターゲットの概要
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のこのバージョンでは、アプリケーションで必要とされる [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンを指定できます。 したがって、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のこのバージョンを使用して、以前のバージョンで開始したプロジェクトの開発を続ける場合は、対象のフレームワークを変更する必要はありません。 異なるバージョンのフレームワークを対象とする複数のプロジェクトを含むソリューションを作成することもできます。 特定のフレームワークを対象にする機能は、指定したバージョンのフレームワークで利用できる機能のみをアプリケーションで使用することを保証するのに役立ちます。  
-  
+
+Visual Studio では、プロジェクトの対象となる .NET Framework のバージョンまたはプロファイルを指定できます。 別のコンピューター上で実行するアプリケーションについては、アプリケーションが対象とする .NET Framework バージョンが、コンピューターにインストールされている .NET Framework バージョンとの互換性を持っている必要があります。
+
+異なるバージョンのフレームワークを対象とする複数のプロジェクトを含むソリューションを作成することもできます。 フレームワークを対象にする機能は、指定したバージョンのフレームワークで利用できる機能のみをアプリケーションで使用することを保証するのに役立ちます。
+
 > [!TIP]
->  異なるプラットフォームに対応する複数のアプリケーションを対象にすることもできます。 詳細については、「[Multitargeting](../msbuild/msbuild-multitargeting-overview.md)」(マルチターゲット) を参照してください。  
-  
-## <a name="framework-targeting-features"></a>フレームワークの対象設定機能  
- フレームワークの対象設定機能には、次の特徴があります。  
-  
--   旧バージョンの [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] を対象とするプロジェクトを開いたときに、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] でそのプロジェクトを自動的にアップグレードするか、前のバージョンを対象とした状態を維持することができます。  
-  
--   プロジェクトを作成するときに、対象とする [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンを指定できます。  
-  
--   既存のプロジェクトの対象となっている [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンを変更できます。  
-  
--   同じソリューション内にある複数のプロジェクトのそれぞれで、異なるバージョンの [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] を対象とすることができます。  
-  
--   プロジェクトの対象となる [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンを変更すると、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] では、参照ファイルおよび構成ファイルに対して必要な変更が加えられます。  
-  
- 旧バージョンの [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] を対象とするプロジェクトで作業する場合は、Visual Studio は開発環境で次のような変更を動的に行います。  
-  
--   **[新しいプロジェクト]**、**[新しい項目の追加]**、**[新しい参照の追加]**、**[サービス参照の追加]** の各ダイアログ ボックスの項目をフィルター処理して、対象のバージョンで使用できない選択肢を除外します。  
-  
--   **ツールボックス**内のカスタム コントロールをフィルター処理し、対象のバージョンで使用できないコントロールを除外したり、複数のコントロールが使用可能である場合に最新のコントロールのみを表示したりします。  
-  
--   IntelliSense をフィルター処理して、対象のバージョンで使用できない言語機能を除外します。  
-  
--   **プロパティ** ウィンドウのプロパティをフィルター処理して、対象のバージョンで使用できないプロパティを除外します。  
-  
--   メニュー オプションをフィルター処理して、対象のバージョンで使用できないオプションを除外します。  
-  
--   ビルドを行う場合は、対象のバージョンに適したコンパイラのバージョンおよびコンパイラ オプションを使用します。  
-  
+> 異なるプラットフォームに対応する複数のアプリケーションを対象にすることもできます。 詳細については、[MSBuild のマルチ ターゲット](../msbuild/msbuild-multitargeting-overview.md)に関する記事をご覧ください。
+
+## <a name="framework-targeting-features"></a>フレームワークの対象設定機能
+
+フレームワークの対象設定機能には、次の特徴があります。
+
+- 旧バージョンの [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] を対象とするプロジェクトを開いたときに、Visual Studio でそのプロジェクトを自動的にアップグレードするか、前のバージョンを対象とした状態を維持することができます。
+
+- プロジェクトを作成するときに、対象とする [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンを指定できます。
+
+- 既存のプロジェクトの対象となっている [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンを変更できます。
+
+- 同じソリューション内にある複数のプロジェクトのそれぞれで、異なるバージョンの [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] を対象とすることができます。
+
+- プロジェクトの対象となる [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンを変更すると、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] では、参照ファイルおよび構成ファイルに対して必要な変更が加えられます。
+
+旧バージョンの [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] を対象とするプロジェクトで作業する場合は、Visual Studio は開発環境で次のような変更を動的に行います。
+
+- **[新しいプロジェクト]**、**[新しい項目の追加]**、**[新しい参照の追加]**、**[サービス参照の追加]** の各ダイアログ ボックスの項目をフィルター処理して、対象のバージョンで使用できない選択肢を除外します。
+
+- **ツールボックス**内のカスタム コントロールをフィルター処理し、対象のバージョンで使用できないコントロールを除外したり、複数のコントロールが使用可能である場合に最新のコントロールのみを表示したりします。
+
+- IntelliSense をフィルター処理して、対象のバージョンで使用できない言語機能を除外します。
+
+- **プロパティ** ウィンドウのプロパティをフィルター処理して、対象のバージョンで使用できないプロパティを除外します。
+
+- メニュー オプションをフィルター処理して、対象のバージョンで使用できないオプションを除外します。
+
+- ビルドを行う場合は、対象のバージョンに適したコンパイラのバージョンおよびコンパイラ オプションを使用します。
+
 > [!NOTE]
->  フレームワークの対象機能は、開発中のアプリケーションが正しく実行されることを保証するわけではありません。 対象のバージョンで実行できるかどうかを確認するために、アプリケーションをテストする必要があります。 .NET Framework 2.0 より前のバージョンのフレームワークを対象にすることはできません。  
-  
-## <a name="selecting-a-target-framework-version"></a>対象フレームワークのバージョンの選択  
- プロジェクトを作成するときに、**[新しいプロジェクト]** ダイアログ ボックスで、対象の [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンを選択します。 この選択内容に基づいて、使用できるプロジェクト テンプレートの一覧が抽出されます。 既存のプロジェクトでは、プロジェクトのプロパティ ダイアログ ボックス内で、対象となる [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンを変更できます。 詳細については、「[How to: Target a Version of the .NET Framework](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」(方法: .NET Framework のバージョンをターゲットにする) を参照してください。  
-  
+> フレームワークの対象機能は、開発中のアプリケーションが正しく実行されることを保証するわけではありません。 対象のバージョンで実行できるかどうかを確認するために、アプリケーションをテストする必要があります。 .NET Framework 2.0 より前のバージョンのフレームワークを対象にすることはできません。
+
+## <a name="selecting-a-target-framework-version"></a>対象フレームワークのバージョンの選択
+
+プロジェクトを作成するときに、**[新しいプロジェクト]** ダイアログ ボックスで、対象の [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンを選択します。 この選択内容に基づいて、使用できるプロジェクト テンプレートの一覧が抽出されます。 既存のプロジェクトでは、プロジェクトのプロパティ ダイアログ ボックス内で、対象となる [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンを変更できます。 詳細については、「[方法: .NET Framework のバージョンをターゲットにする](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」を参照してください。
+
+## <a name="resolving-system-and-user-assembly-references"></a>システム参照およびユーザー アセンブリ参照の解決
+
+.NET Framework の特定のバージョンを対象にするには、最初に適切なアセンブリ参照をインストールする必要があります。 [.NET ダウンロード](https://www.microsoft.com/net/download/windows) ページでさまざまなバージョンの .NET Framework の開発者向けパックをダウンロードすることができます。
+
 > [!NOTE]
->  Visual Studio Express Edition では、**[新しいプロジェクト]** ダイアログ ボックスで対象のフレームワークを設定することはできません。  
-  
-## <a name="resolving-system-and-user-assembly-references"></a>システム参照およびユーザー アセンブリ参照の解決  
- .NET Framework の特定のバージョンを対象にするには、最初に適切なアセンブリ参照をインストールする必要があります。 .NET Framework Version 2.0、3.0、および 3.5 に対応するアセンブリ参照は、.NET Framework 3.5 SP1 に含まれています。これは、[Microsoft ダウンロード センターの Microsoft Visual Studio](http://go.microsoft.com/fwlink/?LinkId=227602) Web サイトからダウンロードできます。 .NET Framework 3.5 Client Profile、.NET Framework 4、.NET Framework 4 Client Profile および Silverlight に対応するアセンブリ参照も、[Visual Studio のダウンロード](http://go.microsoft.com/fwlink/?LinkId=179687) Web サイトから入手できます。  
-  
-> [!NOTE]
->  .NET Framework クライアント プロファイルは、限定されたセットのライブラリと機能を備えた .NET Framework のサブセットです。 クライアント プロファイルの詳細については、「[.NET Framework Client Profile](/dotnet/framework/deployment/client-profile)」を参照してください。  
-  
- **[参照の追加]** ダイアログ ボックスでは、対象の [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンに関係しないシステム アセンブリが無効にされます。その結果、それらのアセンブリをプロジェクトに誤って追加することはありません  (システム アセンブリとは、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] バージョンの一部である .dll ファイルのことです)。対象より新しいバージョンのフレームワークに属する参照は解決されず、そのような参照に依存するコントロールを追加することはできません。 このような参照を有効にするには、プロジェクトの対象である [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] を、その参照を含むバージョンに再設定します。  詳細については、「[方法: .NET Framework のバージョンをターゲットにする](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」を参照してください。  
-  
- アセンブリ参照の詳細については、「[Resolving Assemblies at Design Time](../msbuild/resolving-assemblies-at-design-time.md)」(デザイン時のアセンブリの解決) を参照してください。  
-  
-## <a name="enabling-linq"></a>LINQ の有効化  
- .NET Framework Version 3.5 以降を対象にする場合は、System.Core の参照と System.Linq のプロジェクトレベル インポート (Visual Basic のみ) が自動的に追加されます。 LINQ 機能を使用する場合は、[Option Infer] もオンにする必要があります (Visual Basic のみ)。 対象をそれより前のバージョンの .NET Framework に変更すると、この参照とインポートは自動的に削除されます。 詳細については、「[LINQ の使用](/dotnet/csharp/tutorials/working-with-linq)」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [マルチターゲット](../msbuild/msbuild-multitargeting-overview.md)   
- [プラットフォームの互換性とシステム要件](http://www.microsoft.com/visualstudio/eng/products/compatibility)
+> .NET Framework 4 または 3.5 を対象とする場合、Client Profile の概要と用途については、.NET Framework 4 ドキュメントの「[.NET Framework Client Profile](http://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)」を参照してください。
+
+**[参照の追加]** ダイアログ ボックスでは、対象の [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンに関係しないシステム アセンブリが無効にされます。その結果、それらのアセンブリをプロジェクトに誤って追加することはありません  (システム アセンブリとは、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] バージョンの一部である .dll ファイルのことです)。対象より新しいバージョンのフレームワークに属する参照は解決されず、そのような参照に依存するコントロールを追加することはできません。 このような参照を有効にするには、プロジェクトの対象である [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] を、その参照を含むバージョンに再設定します。  詳細については、「[方法: .NET Framework のバージョンをターゲットにする](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」を参照してください。
+
+アセンブリ参照の詳細については、「[Resolving Assemblies at Design Time](../msbuild/resolving-assemblies-at-design-time.md)」(デザイン時のアセンブリの解決) を参照してください。
+
+## <a name="enabling-linq"></a>LINQ の有効化
+
+.NET Framework Version 3.5 以降を対象にする場合は、System.Core の参照と System.Linq のプロジェクトレベル インポート (Visual Basic のみ) が自動的に追加されます。 LINQ 機能を使用する場合は、[Option Infer] もオンにする必要があります (Visual Basic のみ)。 対象をそれより前のバージョンの .NET Framework に変更すると、この参照とインポートは自動的に削除されます。 詳細については、「[LINQ の使用](/dotnet/csharp/tutorials/working-with-linq)」を参照してください。
+
+## <a name="see-also"></a>関連項目
+
+[マルチ ターゲット (MSBuild)](../msbuild/msbuild-multitargeting-overview.md)  
+[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する (C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)  
+[プラットフォームの互換性とシステム要件](http://www.microsoft.com/visualstudio/eng/products/compatibility)

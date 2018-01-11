@@ -21,11 +21,12 @@ ms.assetid: bee759bd-6ff5-4c2e-913a-ea7d3c906c29
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: b508aadfb44792374c323854ee5333905827f23e
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: e786abe316d60ad0d6cc8a0fd5de356f8d2332c0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="port-migrate-and-upgrade-visual-studio-projects"></a>Visual Studio プロジェクトのポート、移行、アップグレード
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/12/2017
 
 次の一覧は、Visual Studio 2017 より前のバージョンで作成されたプロジェクトに対する Visual Studio 2017 でのサポートをまとめたものです。
 
-表示されるはずのプロジェクトまたはファイルの種類が見つからない場合、[このトピックの Visual Studio 2015 バージョン](port-migrate-and-upgrade-visual-studio-projects.md)を調べ、下のコメントにメモしてください。
+表示されるはずのプロジェクトまたはファイルの種類が見つからない場合、[このトピックの Visual Studio 2015 バージョン](https://msdn.microsoft.com/library/hh266747.aspx)を調べ、[問題を提出](https://github.com/MicrosoftDocs/visualstudio-docs/issues/)してください。問題を提出する際は、プロジェクトの種類に関する詳細をお伝えください。
 
 | プロジェクトの種類 | サポート |
 | --- | --- |

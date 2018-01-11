@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: d6c5cd4395ea0251027edbc94019637b72a630a8
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: adb49bb6070fee611a2ba67913943e68ee938d29
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-python-in-visual-studio"></a>Visual Studio での Python の使用
 
@@ -44,20 +45,20 @@ Visual Studio は、Python 言語の最上のサポートを提供していま�
 
 1. Visual Studio で **[ファイル] > [新規] > [プロジェクト]** (Ctrl + Shift + N) を選択し、**[新しいプロジェクト]** ダイアログを開きます。 ここでは、さまざまな言語のテンプレートを参照して、プロジェクト用に 1 つ選択して、Visual Studio がそのファイルをどこに配置するか指定します。
 
-1. Python テンプレートを参照するには、左側で **[テンプレート] > [他の言語] > [Python]** を選択するか、"Python" を検索します。 言語のツリー内の場所が思い出せない場合、検索はテンプレートを探す優れた方法です。
+1. Python テンプレートを参照するには、左側で **[インストール済み]、[Python]** の順に選択するか、"Python" を検索します。 言語のツリー内の場所が思い出せない場合、検索はテンプレートを探す優れた方法です。
 
     ![Python プロジェクトが表示されている [新しいプロジェクト] ダイアログ](media/vs-getting-started-python-01-new-project.png)
 
-1. Python がサポートされている Visual Studio では、Bottle、Flask、および Django フレームワークを使用した Web アプリケーションを含む、多数のプロジェクト テンプレートが含まれていることに注目してください。 ただし、このチュートリアルでは、空のプロジェクトを作成することから始めます。 
+    Python がサポートされている Visual Studio では、Bottle、Flask、および Django フレームワークを使用した Web アプリケーションを含む、多数のプロジェクト テンプレートが含まれていることに注目してください。 ただし、このチュートリアルでは、空のプロジェクトを作成することから始めます。
 
 1. **[Python アプリケーション]** テンプレートを選択し、プロジェクト名を指定して、**[OK]** を選択します。 
 
 1. しばらくすると、**ソリューション エクスプローラー** ウィンドウ (1) にプロジェクトの構造が表示されます。 既定のコード ファイルが、エディター (2) で開きます。 ソリューション エクスプローラーで選択された項目の追加情報を表示する、[プロパティ] ウィンドウ (3) も表示されます。ディスク上の正確な場所も表示されます。
- 
+
     ![Python プロジェクトが表示されたソリューション エクスプローラー](media/vs-getting-started-python-02-windows.png)
- 
+
 1. プロジェクトのファイルとフォルダーを参照するためのソリューション エクスプローラーに、少し時間を割いて慣れてください。
-    
+
     ![さまざまな機能が表示され展開されているソリューション エクスプローラー](media/vs-getting-started-python-03-solution-explorer.png)
 
     (1) [新しいプロジェクト] ダイアログ ボックスに指定した名前が使用され、太字で強調表示されているのがあなたのプロジェクトです。 ディスク上では、このプロジェクトは、プロジェクト フォルダーの `.pyproj` ファイルに該当します。
@@ -69,7 +70,7 @@ Visual Studio は、Python 言語の最上のサポートを提供していま�
     (4) プロジェクトの下には、**[Python の環境]** ノードもあります。 これを展開すると、使用可能な Python インタープリターが表示されます。 インタープリター ノードを展開し、その環境 (5) にインストールされているライブラリを参照してください。
 
     ソリューション エクスプローラーで、いずれかのノードまたは項目を右クリックすると、適切なコマンドのメニューを表示できます。 たとえば、**[名前の変更]** コマンドを使用すると、プロジェクトとソリューションを含む、任意のノードまたは項目の名前を変更できます。
-    
+
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
@@ -77,7 +78,7 @@ Visual Studio は、Python 言語の最上のサポートを提供していま�
 
 ## <a name="going-deeper"></a>詳しい説明
 
-- [Visual Studio の Python プロジェクト](python-projects.md)
+- [Visual Studio の Python プロジェクト](python-projects.md)。
 - [python.org で Python 言語を学習する](https://www.python.org)
 - [初心者向けの Python](https://www.python.org/about/gettingstarted/) (python.org)
 - [Microsoft Virtual Academy の無料 Python コース](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)

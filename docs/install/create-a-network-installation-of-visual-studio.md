@@ -14,18 +14,19 @@ ms.assetid: 4CABFD20-962E-482C-8A76-E4012052F701
 author: timsneath
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: fa4aec5f164e188ff9832d06a4b3c8dad46ae63d
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: f5e6c5a94ac4c875922d2da09e9171f4929035f8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-a-network-installation-of-visual-studio-2017"></a>Visual Studio 2017 のネットワーク インストールを作成する
 
 一般的に、企業の管理者はクライアント ワークステーションに展開するためのネットワーク インストール ポイントを作成します。 Visual Studio 2017 は、初期インストールのファイルがすべての製品の更新プログラムとともに単一のファイルにキャッシュできるように設計されています。 (このプロセスは_レイアウトの作成_とも呼ばれています。)これは、最新のサービスの更新プログラムに更新されていない場合でも、クライアント ワークステーションが同じネットワークの場所を使用してインストールを管理できるようにするためです。
 
-> [!NOTE]
-> 複数のエディションの Visual Studio を企業内で利用している場合 (たとえば、Visual Studio Professional と Visual Studio Enterprise の両方)、エディションごとに個別のネットワーク インストール共有を作成する必要があります。
+ > [!NOTE]
+ > 複数のエディションの Visual Studio を企業内で利用している場合 (たとえば、Visual Studio Professional と Visual Studio Enterprise の両方)、エディションごとに個別のネットワーク インストール共有を作成する必要があります。
 
 ## <a name="download-the-visual-studio-bootstrapper"></a>Visual Studio ブートストラップをダウンロードする
 
@@ -127,7 +128,7 @@ response.json を変更し、セットアップの実行時に使用される既
 
 `--wait` パラメーターを使用した場合、操作の結果に応じて、`%ERRORLEVEL%` 環境変数は次のいずれかの値に設定されます。
 
-  | **値** | **結果** |
+  | **[値]** | **結果** |
   | --------- | ---------- |
   | 0 | 操作は正常に終了しました |
   | 3010 | 操作は正常に完了しましたが、インストールした製品を使用する前に再起動が必要です |

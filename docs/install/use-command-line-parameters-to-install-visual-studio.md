@@ -15,11 +15,12 @@ ms.assetid: 480f3cb4-d873-434e-a8bf-82cff7401cf2
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: ff653e6fd9fb33cd7141671e9b77f297f8457a8b
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: bfdce6484661354315a4f6b8b4a219f119ec8742
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする
 コマンド プロンプトから Visual Studio 2017 をインストールする場合、さまざまなコマンド ライン パラメーターを使用してインストールを管理またはカスタマイズすることができます。 コマンド ラインから、次の操作を行うことができます。
@@ -100,7 +101,7 @@ ms.lasthandoff: 11/22/2017
 Visual Studio 製品ごとに並べられているワークロード ID とコンポーネント ID の一覧については、「[Visual Studio 2017 のワークロード ID とコンポーネント ID](workload-and-component-ids.md)」のページを参照してください。
 
 ## <a name="list-of-language-locales"></a>言語ロケールの一覧
-| **言語ロケール** | **言語** |
+| **言語ロケール** | **Language** |
 | ----------------------- | --------------- |
 | cs-CZ | チェコ語 |
 | de-DE | ドイツ語 |
@@ -120,7 +121,7 @@ Visual Studio 製品ごとに並べられているワークロード ID とコ�
 ## <a name="error-codes"></a>エラー コード
 操作の結果に応じて、`%ERRORLEVEL%` 環境変数は、次のいずれかの値に設定されます。
 
-| **値** | **結果** |
+| **[値]** | **結果** |
 | --------- | ---------- |
 | 0 | 操作は正常に終了しました |
 | 1602 | 操作が取り消されました |

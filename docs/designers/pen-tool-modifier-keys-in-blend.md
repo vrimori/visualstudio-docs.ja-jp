@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7e2485d80fa9ec0816513ac7e5c374bdd6832dff
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a8f8f21520b0ab26e3f0099097a473ee298c5674
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pen-tool-modifier-keys-in-blend"></a>Blend のペン ツールの修飾キー
 次の表は、**ペン** ツール ![](../designers/media/d514358f-185a-412f-a55d-36633b25dc8a.png "d514358f-185a-412f-a55d-36633b25dc8a") でパスを作成するときに、パスの変更に使用できるショートカットを一覧表示したものです。 また、**ペン** ツールを使用して、既存のパスの点を追加または削除したり、2 つの既存のパスを結合したりすることもできます。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/31/2017
 |2 つのパスを結合する際に滑らかな角を作成します|2 つのパスを選択し、**ペン** ツール、一方のパスの終点の順にクリックしてから、もう一方のパスの終点をドラッグします|![](../designers/media/bd12dfa4-112e-4f37-9765-3479e6b69894.png "bd12dfa4-112e-4f37-9765-3479e6b69894")<br /><br /> ペン結合ポインター|  
 |新しいパスを作成する|前のパスの外側を Ctrl キーを押しながらクリックして、点の追加を終了し、新しいパスを開始する場所をクリックまたはドラッグする|![](../designers/media/69758176-5f53-465b-808c-f13fd1a0b3f2.png "69758176-5f53-465b-808c-f13fd1a0b3f2")<br /><br /> ペン開始ポインター|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [キーボード ショートカットと修飾キー](../designers/keyboard-shortcuts-and-modifier-keys-in-blend.md)   
  [アートボードの修飾キー](../designers/artboard-modifier-keys-in-blend.md)   
  [[個別選択] ツールの修飾キー](../designers/direct-selection-tool-modifier-keys-in-blend.md)   

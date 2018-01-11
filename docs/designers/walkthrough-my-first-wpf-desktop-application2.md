@@ -15,11 +15,12 @@ manager: ghogen
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: fb4da07f2ee8d4c30717209ee07221285a8275ee
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: e3f3002dc40c0bdae3aad6cdbacb4b9b70422157
+ms.sourcegitcommit: 03a74d29a1e0584ff4808ce6c9e812b51e774905
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>チュートリアル: 初めての WPF デスクトップ アプリケーション
 このチュートリアルを、Windows Presentation Foundation (WPF) 開発入門としてご利用ください。 ここでは、ほとんどの WPF デスクトップ アプリケーションに共通する要素 (XAML マークアップ、分離コード、アプリケーション定義、コントロール、レイアウト、データ バインディング、スタイル) を含む基本的なアプリケーションを作成します。  
@@ -266,12 +267,12 @@ ms.lasthandoff: 12/12/2017
   
 #### <a name="to-add-a-background-image"></a>背景イメージを追加するには  
   
-1.  次のイメージを選択し、`watermark.png` として保存します。  
+1.  次のイメージを選択し、 `watermark.png`の順にクリックします。  
   
-     ![チュートリアル ](../designers/media/wpf_watermark.png "WPF_watermark のウォーターマーク イメージ")  
+     ![チュートリアルのウォーターマーク イメージ](../designers/media/wpf_watermark.png "ウォーターマーク")  
   
     > [!NOTE]
-    >  または、独自のイメージを作成し、`watermark.png` として保存します。  
+    >  または、独自のイメージを作成し、 `watermark.png`の順にクリックします。  
   
 2.  **ソリューション エクスプローラー**で **[ExpenseIt]** ノードのショートカット メニューを開き、 **[追加]**、 **[既存の項目]**を選択します。  
   
@@ -886,5 +887,5 @@ ms.lasthandoff: 12/12/2017
   
 -   [WPF のドキュメント](/dotnet/framework/wpf/advanced/documents-in-wpf)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [Windows Presentation Foundation での最新のデスクトップ アプリケーションの作成](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)

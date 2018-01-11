@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1097a5724e1fcab96be99c58532e15fedd59da30
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a48416fc2508240cd03e545c0b798d3d24ab6f6b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="display-data-in-blend"></a>Blend におけるデータの表示
 ページのレイアウトをカスタマイズする際、デザイナーでサンプル データを表示できます。 サンプル データは最初から、または既存のクラスを使用して生成できます。 また、アプリの実行時にアプリに表示される *ライブ データ* にも接続できます。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/31/2017
   
  ![](../designers/media/496d7ebc-fe46-42f6-95a8-57b0e5be5d49.png "496d7ebc-fe46-42f6-95a8-57b0e5be5d49")  
   
- アプリの実行時にページにサンプル データを表示する場合は、 **[データ ソース オプション]** ![](../designers/media/ae1fd260-4f84-420d-b196-45fde357d81d.png "ae1fd260-4f84-420d-b196-45fde357d81d")を選択してから、 **[アプリケーション実行中に有効にする]**を選択します。  
+ アプリの実行時にページにサンプル データを表示する場合は、**[データ ソース オプション]** ![](../designers/media/ae1fd260-4f84-420d-b196-45fde357d81d.png "ae1fd260-4f84-420d-b196-45fde357d81d") を選んでから、**[アプリケーション実行中に有効にする]** を選びます。  
   
  ![](../designers/media/05d5356d-91bb-4e6b-b3f7-29b76852c4b3.png "05d5356d-91bb-4e6b-b3f7-29b76852c4b3")  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
 ##  <a name="Existing"></a> クラスからサンプル データを生成する  
  データの構造を記述するクラスを既に作成した場合は、そこからサンプル データを生成できます。  
   
- クラスからサンプル データを生成するには、XAML ドキュメントを開いてから、**[データ]** パネルで **[サンプル データの作成]** ![](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png "30540d76-7256-43ce-b5d9-4b2edf3d339f") ボタン、**[クラスからのサンプル データの作成]** の順に選択します。  
+ クラスからサンプル データを生成するには、XAML ドキュメントを開いてから、**[データ]** パネルで **[サンプル データの作成]** ![](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png "30540d76-7256-43ce-b5d9-4b2edf3d339f") ボタン、**[クラスからのサンプル データの作成]** の順にクリックします。  
   
  **短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [クラスからサンプル データを作成する](http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=video&cd=1&cad=rja&uact=8&ved=0CB0QtwIwAA&url=http%3A%2F%2Fchannel9.msdn.com%2FShows%2FInside%2BWindows%2BPhone%2FIWP54--Windows-Phone-Data-Binding-and-the-Magic-of-XAML&ei=F1oHVNryM4ysogSJ2oDYDw&usg=AFQjCNEYvw1WA1rdF7bfpj5RwMLUs7RCVg)。  
   
@@ -63,5 +64,5 @@ ms.lasthandoff: 10/31/2017
 ##  <a name="LiveStore"></a> ストアまたは Phone アプリでライブ データを表示する  
  「 [データとファイルの操作 (XAML)](http://msdn.microsoft.com/library/windows/apps/xaml/br229562.aspx)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Blend for Visual Studio を使用して UI を作成する](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)

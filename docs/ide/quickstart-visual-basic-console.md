@@ -1,7 +1,7 @@
 ---
-title: "クイックスタート: Visual Studio で Visual Basic を使用してコンソール アプリを作成する | Microsoft Docs"
+title: "クイックスタート: Visual Studio で Visual Basic を使用して初めてコンソール アプリを作成する | Microsoft Docs"
 ms.custom: 
-ms.date: 12/05/2017
+ms.date: 12/10/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-acquisition
@@ -12,13 +12,14 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 dev_langs: vb
-ms.openlocfilehash: 57441895ccff8bf32b59d6306ca4ae618382d356
-ms.sourcegitcommit: 38097344f3ff74ba7b03bcfa45910015ca6bc2be
+ms.workload: multiple
+ms.openlocfilehash: 46557b646db37b3f04420ca5b91ab71c4f5b088a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="quickstart-create-a-console-app-in-visual-studio-with-visual-basic"></a>クイックスタート: Visual Studio で Visual Basic を使用してコンソール アプリを作成する
+# <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>クイックスタート: Visual Studio で Visual Basic を使用して初めてコンソール アプリを作成する
 ここでは 5 分から 10 分で Visual Studio 統合開発環境 (IDE) の概要を示し、コンソールで実行される簡単な Visual Basic アプリケーションを作成します。
 
 Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ページに移動し、無料試用版をインストールしてください。
@@ -32,11 +33,11 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 3. **[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウで、**[Visual Basic]** を展開し、**[.NET Core]** を選択します。 中央のウィンドウで、**[Console App (.NET Core)]** を選択します。 プロジェクトに *HelloWorld* という名前を付けます。
 
-   ![Visual Studio インストーラーの [.NET Core クロスプラットフォームの開発] ワークロード](../ide/media/new-project-vb-dotnet-helloworld-console-app.png)
+   ![Visual Studio IDE の [新しいプロジェクト] ダイアログ ボックスに示されているコンソール アプリ (.NET Core) プロジェクト テンプレート](../ide/media/new-project-vb-dotnetcore-helloworld-console-app.png)
 
      **[Console App (.NET Core)]** プロジェクト テンプレートが表示されない場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。
 
-   ![[新しいプロジェクト] ダイアログ ボックスで [Visual Studio インストーラーを開く] リンクをクリックする](../ide/media/vb-open-visual-studio-installer.png)
+   ![[新しいプロジェクト] ダイアログ ボックスで [Visual Studio インストーラーを開く] リンクをクリックする](../ide/media/vb-open-visual-studio-installer-hello-world.png)
 
      Visual Studio インストーラーが起動します。 **[.NET Core クロスプラットフォームの開発]** ワークロードを選択し、**[変更]** を選択します。
 
@@ -81,4 +82,5 @@ IDE で **[Hello World]** ボタンをクリックした場合、デバッグ �
 
 ## <a name="see-also"></a>関連項目
 * [クイックスタート: Visual Studio で Visual Basic を使用して "Hello World" Windows フォーム アプリを作成する](quickstart-visual-basic-winforms.md)
-* [Visual Basic IntelliSense について](visual-basic-specific-intellisense.md)
+* [チュートリアル: Visual Studio の Visual Basic の概要](tutorial-visual-basic-console.md)
+* [Visual Basic コード ファイルの IntelliSense](visual-basic-specific-intellisense.md)

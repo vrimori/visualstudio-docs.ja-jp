@@ -12,11 +12,12 @@ caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5219a55c009b313ef3b0059efc588213729ff43e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: cplusplus
+ms.openlocfilehash: 0b393114c1e5fbc4f4b3c746eba422a07c65e662
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-instrument-a-native-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line"></a>方法: プロファイラーのコマンド ラインを使用してネイティブ サービスをインストルメントし、詳細なタイミング データを収集する
 ここでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのコマンド ライン ツールを使用してネイティブ (C/C++) サービスをインストルメントし、詳細なタイミング データを収集する方法について説明します。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  元のバイナリをインストルメントされたバージョンに置き換えます。 Windows サービス コントロール マネージャーで、サービスの [スタートアップの種類] が [手動] に設定されていることを確認します。  
   
-4.  プロファイラーを起動します。 種類:  
+4.  プロファイラーを起動します。 型:  
   
      **VSPerfCmd** [/start](../profiling/start.md) **:trace**  [/output](../profiling/output.md) **:** `OutputFile` [`Options`]  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/31/2017
   
 5.  サービス コントロール マネージャーからサービスを開始します。  
   
-## <a name="controlling-data-collection"></a>データ収集の制御  
+## <a name="controlling-data-collection"></a>データ コレクションの制御  
  サービスの実行中は、**VSPerfCmd.exe** オプションを使用して、プロファイラー データ ファイルへのデータ書き込みを開始および停止できます。 データ コレクションを制御することにより、サービスの開始、終了などの、プログラム実行の特定の部分についてのデータを収集できます。  
   
 #### <a name="to-start-and-stop-data-collection"></a>データ収集を開始および停止するには  
@@ -94,6 +95,6 @@ ms.lasthandoff: 10/31/2017
   
 3.  インストルメントされたモジュールを元のモジュールに置き換えます。 必要に応じて、サービスの [スタートアップの種類] を再構成します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サービスのプロファイリング](../profiling/command-line-profiling-of-services.md)   
  [インストルメンテーション メソッドのデータ ビュー](../profiling/instrumentation-method-data-views.md)

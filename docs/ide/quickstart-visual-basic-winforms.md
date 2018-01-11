@@ -12,11 +12,12 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 dev_langs: vb
-ms.openlocfilehash: 388784b53018c30357f496cfbeb533c0a07a3053
-ms.sourcegitcommit: 38097344f3ff74ba7b03bcfa45910015ca6bc2be
+ms.workload: multiple
+ms.openlocfilehash: ecab13523c5d2ae362a58527f8c15ce1f26dd225
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quickstart-create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>クイックスタート: Visual Studio で Visual Basic を使用して Windows フォーム アプリを作成する
 ここでは 5 分から 10 分で Visual Studio 統合開発環境 (IDE) の概要を示し、Windows ベースのユーザー インターフェイス (UI) を備えた簡単な Visual Basic アプリケーションを作成します。
@@ -95,5 +96,5 @@ Visual Basic プロジェクト テンプレートを選択し、ファイルに
 このクイック スタートは完了しました。 Visual Basic と Visual Studio IDE について少しはご理解いただけたかと思います。 さらに深く理解したい場合は、目次の**チュートリアル** セクションに示されているチュートリアルを続行してください。  
 
 ## <a name="see-also"></a>関連項目   
-* [クイックスタート: Visual Studio で Visual Basic を使用してコンソール アプリを作成する](quickstart-visual-basic-console.md) ](https://docs.microsoft.com/dotnet/core/tutorials/vb-with-visual-studio)
+* [クイックスタート: Visual Studio で Visual Basic を使用してコンソール アプリを作成する](quickstart-visual-basic-console.md)
 * [Visual Basic IntelliSense について](visual-basic-specific-intellisense.md)  

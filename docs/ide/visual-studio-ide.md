@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio IDE の概要 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/03/2017
+ms.date: 11/09/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -9,11 +9,12 @@ ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c20e36f91ecd7f5ef03785d42d33010796d105c0
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: multiple
+ms.openlocfilehash: 0ffadcf35be9cc12327c6ef9a561cd1149cf281c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-ide-overview"></a>Visual Studio IDE の概要
 
@@ -35,19 +36,41 @@ Azure App Services を作成して、モバイル アプリにクラウドの機
 
 ### <a name="create-cloud-apps-for-azure"></a>Azure 用のクラウド アプリの作成
 
-Visual Studio には、Microsoft Azure を使用するクラウド ファーストのアプリケーションを簡単に作成できるツールのスイートが用意されています。 これにより、IDE から直接 Microsoft Azure でアプリケーションとサービスを簡単に構成、ビルド、デバッグ、パッケージ化、およびデプロイできます。 接続済みサービスを使用して、アプリに Azure のサービスを活用します。 Azure Tools for .NET を入手するには、Visual Studio をインストールするときに **Azure 開発**ワークロードを選択します。 詳しくは、「[Visual Studio Tools for Azure](https://www.visualstudio.com/vs/azure-tools/)」をご覧ください。
+Visual Studio には、Microsoft Azure を使用するクラウド ファーストのアプリケーションを簡単に作成できるツールのスイートが用意されています。 これにより、IDE から直接 Microsoft Azure でアプリケーションとサービスを簡単に構成、ビルド、デバッグ、パッケージ化、およびデプロイできます。 Azure Tools for .NET を入手するには、Visual Studio をインストールするときに **Azure 開発**ワークロードを選択します。 詳しくは、「[Visual Studio Tools for Azure](https://www.visualstudio.com/vs/azure-tools/)」をご覧ください。
+
+次のような接続済みサービスを使用して、アプリに Azure のサービスを活用することができます。
+
+- [Azure モバイル サービス](http://azure.microsoft.com/documentation/services/mobile-services/)
+
+- [Azure ストレージ](http://azure.microsoft.com/documentation/services/storage/)
+
+[HockeyApp](https://www.visualstudio.com/hockey-app/) では、ベータ版の配信、ライブ クラッシュ レポートの収集、実際のユーザーからのフィードバックの取得を行うことができます。 さらに、クラウドに格納されているデータに接続するために、Office 365 REST API を独自のアプリに統合できます。 詳細については、[これらの GitHub サンプル](https://github.com/OfficeDev/?utf8=%E2%9C%93&query=o365)を参照してください。
+
+[Application Insights](https://marketplace.visualstudio.com/items?itemName=VisualStudioOnlineApplicationInsights.application-insights) は、アプリと Web サービスで品質の問題を検出して診断するのに役立ちます。 また、Application Insights は、ユーザー エクスペリエンスを最適化できるように、ユーザーが実際にアプリを使用して行う操作を理解するのに役立ちます。
 
 ### <a name="create-apps-for-the-web"></a>Web 用のアプリの作成
 
-現在世界を動かしているのは Web であり、Visual Studio は Web 用のアプリの作成をサポートします。 Web アプリは ASP.NET、Node.js、Python、JavaScript、TypeScript を使用して作成できます。 Visual Studio は、Angular、jQuery、Express などの Web フレームワークを理解します。 ASP.NET Core と .NET Core は、Windows、Mac、Linux の各オペレーティング システムで実行できます。 詳しくは、「[最新の Web ツール](https://www.visualstudio.com/vs/modern-web-tooling/)」をご覧ください。
+現在世界を動かしているのは Web であり、Visual Studio は Web 用のアプリの作成をサポートします。 Web アプリは ASP.NET、Node.js、Python、JavaScript、TypeScript を使用して作成できます。 Visual Studio は、Angular、jQuery、Express などの Web フレームワークを理解します。 ASP.NET Core と .NET Core は、Windows、Mac、Linux の各オペレーティング システムで実行できます。 [ASP.NET Core](http://www.asp.net/core/overview) は、MVC、WebAPI、および SignalR へのメジャー アップデートであり、Windows、Mac、および Linux で実行されます。  ASP.NET Core は、最新のクラウド ベースの Web アプリとサービスをビルドするための効率的で構成可能な .NET スタックを提供するために、まったく新たに設計されました。
 
-### <a name="write-code-in-a-world-class-editing-environment"></a>ワールド クラスの編集環境でのコードの記述
+詳しくは、「[最新の Web ツール](https://www.visualstudio.com/vs/modern-web-tooling/)」をご覧ください。
 
-Visual Studio では、構文の色表示、ステートメント入力候補、IntelliSense (選択したコード要素について説明するポップアップ)、コード アウトライン、デバッグ用のブレークポイントの設定などの機能により、コードを簡単かつ迅速に記述できます。
+### <a name="build-cross-platform-apps-and-games"></a>クロス プラットフォーム アプリとゲームをビルドする
 
-![JavaScript コード例](../ide/media/vside_tour_javascript_example.gif)
+Visual Studio を使用して、Android、iOS、Linux、Windows、その他のデバイス用のアプリとゲームを作成できます。 詳細については、[クロス プラットフォーム モバイル開発](../cross-platform/cross-platform-mobile-development-in-visual-studio.md)に関する記事をご覧ください。 ユニバーサル Windows アプリでは、複数のプラットフォームでコードを活用できます。 詳しくは、[ユニバーサル Windows アプリ](https://dev.windows.com/en-us/windows-apps)に関するページをご覧ください。
 
-詳しくは、「[コード エディターとテキスト エディターでのコードの作成](https://docs.microsoft.com/visualstudio/ide/writing-code-in-the-code-and-text-editor)」をご覧ください。
+アプリ要件に基づいて必要なツールと使用する言語を選択します。
+
+- [Xamarin for Visual Studio](../cross-platform/build-apps-with-native-ui-using-xamarin-in-visual-studio.md): すべてのデバイスを対象とする C# の共通コード ベース
+
+- [Visual Studio Tools for Apache Cordova](../cross-platform/visual-studio-tools-for-apache-cordova.md): HTML、CSS、および JavaScript または Typescript 用の共通コード ベース
+
+- [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md): C# での 2D/3D ゲーム開発
+
+- [クロスプラットフォーム開発用 C++](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md): C++ の共有コード ライブラリとアプリ
+
+- [Visual Studio Emulator for Android](../cross-platform/visual-studio-emulator-for-android.md): Visual Studio Emulator for Android: IDE とは関係なく、Android アプリをデバッグおよびテストします。
+
+DirectX、Unity、Unreal、Cocos などのゲーム開発ツールとともに [Visual Studio を使用してゲームを作成します](https://www.visualstudio.com/vs/game-development/)。
 
 Visual Studio は、他にも数多くのことを実行するのに役立ちます。 すべての一覧については、「[Visual Studio IDE](https://www.visualstudio.com/vs/)」をご覧ください。
 
@@ -153,7 +176,7 @@ Visual Studio の全体像を視覚的に確認できるように、次のイメ
 
 - [[出力]](../ide/reference/output-window.md) ウィンドウには、デバッグ メッセージ、エラー メッセージ、コンパイラの警告、公開状態メッセージなど、Visual Studio の通知が出力されます。 メッセージ ソースごとに独自のタブがあります。
 
-- [チーム エクスプローラー](/vsts/user-guide/work-team-explorer)では、[Git](https://git-scm.com/) や [Team Foundation バージョン管理 (TFVC)]  (/vsts/tfvc/overview) などのバージョン管理テクノロジを使用して、作業項目を追跡し、コードを他のユーザーと共有できます。
+- [チーム エクスプローラー (VSTS)](/vsts/user-guide/work-team-explorer) では、[Git](https://git-scm.com/) や [Team Foundation バージョン管理 (TFVC)](/vsts/tfvc/overview) などのバージョン管理テクノロジを使用して、作業項目を追跡し、コードを他のユーザーと共有できます。
 
 - [クラウド エクスプローラー](/azure/vs-azure-tools-resources-managing-with-cloud-explorer)では、仮想マシン、テーブル、SQL データベースなどの Azure リソースを表示および管理することができます。 特定の操作で Azure Portal が必要な場合、Cloud Explorer でリンクが提供されます。そのリンクから Azure Portal に移動できます。
 
@@ -199,7 +222,7 @@ Visual Studio には他にも次のような一般的な生産性を高める機
 
 ## <a name="manage-your-source-code-and-collaborate-with-others"></a>ソース コードの管理および他のユーザーとの共同作業
 
-GitHub などの任意のプロバイダーがホストしている Git リポジトリにあるソース コードを管理できます。 また、[Visual Studio Team Services (VSTS)](/vsts/index) を使用して、プロジェクト全体でコードをバグおよび作業項目と共に管理することもできます。 Visual Studio でチーム エクスプローラーを使用して Git リポジトリを管理する方法の詳細については、「[Get Started with Git and Team Services](/vsts/git/gitquickstart?tabs=visual-studio)」(Git およびチーム サービスの概要) を参照してください。 Visual Studio には、その他の組み込みのソース管理機能もあります。 それらの機能について詳しくは、ブログ「[New Git Features in Visual Studio 2017](https://blogs.msdn.microsoft.com/visualstudioalm/2017/03/06/new-git-features-in-visual-studio-2017/)」(Visual Studio 2017 の新しい Git 機能) をご覧ください。
+GitHub などの任意のプロバイダーがホストしている Git リポジトリにあるソース コードを管理できます。 また、[Visual Studio Team Services (VSTS)](/vsts/index) を使用して、プロジェクト全体でコードをバグおよび作業項目と共に管理することもできます。 Visual Studio でチーム エクスプローラーを使用して Git リポジトリを管理する方法の詳細については、[Git および Team Services (VSTS) の概要](/vsts/git/gitquickstart?tabs=visual-studio)に関するページを参照してください。 Visual Studio には、その他の組み込みのソース管理機能もあります。 それらの機能について詳しくは、ブログ「[New Git Features in Visual Studio 2017](https://blogs.msdn.microsoft.com/visualstudioalm/2017/03/06/new-git-features-in-visual-studio-2017/)」(Visual Studio 2017 の新しい Git 機能) をご覧ください。
 
 Visual Studio Team Services は、ソフトウェア プロジェクトをホストし、チームでのコラボレーションを有効にするためのクラウド ベースのサービスです。 VSTS は、Git ソース管理システムと Team Foundation ソース管理システムの両方をサポートしています。また、Scrum、CMMI、アジャイル開発方法もサポートしています。 Team Foundation バージョン管理 (TFVC) は、単一の集中サーバー リポジトリを使用して、ファイルを追跡してバージョン管理します。 ローカルの変更は常に集中サーバーにチェックインされます。他の開発者はそこで、最新の変更を取得できます。
 
@@ -211,7 +234,7 @@ Visual Studio Team Services のアカウントまたは Team Foundation Server �
 
 ![Visual Studio Team Explorer](../ide/media/vs2017_teamexplorer.png)
 
-Visual Studio Team Services と Team Foundation Server に関するドキュメントについては、[Visual Studio Team Services](/vsts/index) に関するページを参照してください。
+チームの開発者がバージョン管理にチェックインしたコードをビルドするように、ビルド プロセスを自動化することもできます。 たとえば、1 つまたは複数のプロジェクトを夜間にビルドすることも、コードのチェックインごとにビルドすることもできます。 詳細については、「[Continuous integration on any platform (あらゆるプラットフォームでの継続的インテグレーション)](https://www.visualstudio.com/en-us/docs/build/overview)」をご覧ください。
 
 ## <a name="connect-to-services-databases-and-cloud-based-resources"></a>サービス、データベース、クラウドベースのリソースへの接続
 
@@ -234,8 +257,13 @@ Visual Studio の **SQL Server オブジェクト エクスプローラー**で�
 ![SQL Server オブジェクト エクスプローラー](../ide/media/vs2015_sqlobjectexplorer.png)
 
 ## <a name="extend-visual-studio"></a>Visual Studio を拡張する
+Visual Studio に必要な機能がない場合は、機能を追加できます。 ワークフローとスタイルに基づいて IDE をカスタマイズしたり、Visual Studio にまだ統合されていない外部ツールのサポートを追加したり、既存の機能を変更して生産性の向上を図ることができます。 Visual Studio 機能拡張ツール (VS SDK) の最新バージョンを検索するには、「 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)」を参照してください。
 
-Visual Studio に必要な機能がない場合は、機能を追加できます。 ワークフローとスタイルに基づいて IDE をカスタマイズしたり、Visual Studio にまだ統合されていない外部ツールのサポートを追加したり、既存の機能を変更して生産性の向上を図ることができます。 Visual Studio には、マイクロソフト、マイクロソフトのパートナー、およびコミュニティからのツール、コントロール、およびテンプレートが用意されています。 Visual Studio の拡張について詳しくは、「[Visual Studio IDE を機能拡張する](https://www.visualstudio.com/vs/extend/)」をご覧ください。
+.NET コンパイラ プラットフォーム (Roslyn) を使用して、独自のコード アナライザーとコード ジェネレーターを記述することができます。 必要なものはすべて [Roslyn](https://github.com/dotnet/Roslyn)に揃っています。
+
+Microsoft 開発者や開発コミュニティが作成した Visual Studio の[既存の拡張機能](https://marketplace.visualstudio.com/vs) を検索してください。
+
+Visual Studio の拡張について詳しくは、「[Visual Studio IDE を機能拡張する](https://www.visualstudio.com/vs/extend/)」をご覧ください。
 
 ## <a name="learn-more-and-find-out-whats-new"></a>詳細と新機能
 

@@ -11,11 +11,12 @@ ms.assetid: 140083f1-05bc-4014-949e-fb5802397c7a
 author: heaths
 ms.author: heaths
 manager: ghogen
-ms.openlocfilehash: 73bf7daf0a09ead0277e8c5c273c275cd2006ed9
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: 6edcc59a2d726fbd76fee86b750f21dc468b727e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="known-issues-for-containers"></a>コンテナーの既知の問題
 
@@ -50,3 +51,4 @@ Windows コンテナーに Visual Studio Build Tools 2017 をインストール�
 
 * [コンテナーにビルド ツールをインストールする](build-tools-container.md)
 * [コンテナーの高度な例](advanced-build-tools-container.md)
+* [Visual Studio Build Tools 2017 のワークロード ID とコンポーネント ID](workload-component-id-vs-build-tools.md)

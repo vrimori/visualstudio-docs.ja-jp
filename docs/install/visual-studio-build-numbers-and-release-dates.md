@@ -5,22 +5,39 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 10/18/2017
+ms.date: 12/18/2017
 ms.topic: article
 helpviewer_keywords: 
 ms.technology: vs-acquisition
 ms.service: 
-ms.openlocfilehash: fff709bc75a4d9f9747c0fc47d5961fb2b00ec1c
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: 945b11869145d07c9defa8586876d02eccf098f7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-2017-build-numbers-and-release-dates"></a>Visual Studio 2017 のビルド番号とリリース日
 次の表は、Visual Studio 2017 の現在までのビルド番号およびリリース日のリストです。
 
 | **Version**| **チャネル** | **リリース日** | **ビルド バージョン** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.5.2 | Release | 12/14/2017 | 15.5.27130.2010 |
+| 15.6.0 Preview 1.1 | [プレビュー] | 12/14/2017 | 15.6.27205.2004 |
+| 15.5.1 | Release | 12/7/2017 | 15.5.27130.2003 |
+| 15.6.0 Preview 1.0 | [プレビュー] | 12/7/2017 | 15.6.27205.0 |
+| 15.0.7 | Release | 12/6/2017 | 15.0.26228.18 |
+| 15.5 | Release | 12/4/2017 | 15.5.27130.0 |
+| 15.5.0 Preview 5.0 | [プレビュー] | 11/30/2017 | 15.5.27128.1 |
+| 15.4.5 | Release | 11/27/2017 | 15.4.27004.2010 |
+| 15.5.0 Preview 4.0 | [プレビュー] | 11/14/2017 | 15.5.27110.0 |
+| 15.4.4 | Release | 11/14/2017 | 15.4.27004.2009 |
+| 15.0.6 | Release | 11/14/2017 | 15.0.26228.17 |
+| 15.4.3 | Release | 11/8/2017 | 15.4.27004.2008 |
+| 15.5.0 Preview 3.0 | [プレビュー] | 11/6/2017 | 15.5.27102.0 |
+| 15.4.2 | Release | 10/31/2017 | 15.4.27004.2006 |
+| 15.5.0 Preview 2.0 | [プレビュー] | 10/23/2017 | 15.5.27019.1 |
+| 15.4.1 | Release | 10/19/2017 | 15.4.27004.2005 |
 | 15.5 Preview 1 | [プレビュー] | 10/11/2017 | 15.0.27009.1 |
 | 15.4 | Release | 10/9/2017 | 15.0.27004.20002 |
 | 15.4 Preview 6 | [プレビュー] | 10/9/2017| 15.0.27004.20002 |
@@ -37,7 +54,7 @@ ms.lasthandoff: 11/22/2017
 | 15.3.1 | Release | 8/18/2017 | 15.0.26730.08 |
 | 15.3.1 Preview 1 | [プレビュー] | 8/18/2017 | 15.0.26730.08 |
 | 15.3.1  | Release | 8/18/2017 | 15.0.26730.08 |
-| 15.4 Preview 1 | [プレビュー] | 8/22/2017 | 適用なし |
+| 15.4 Preview 1 | [プレビュー] | 8/24/2017 | 15.4.26823.1 |
 | 15.3 | Release | 8/14/2017 | 15.0.26730.3 |
 | 15.3 Preview 7.1 | [プレビュー] | 8/11/2017 | 15.0.26730.3 |
 | 15.3 Preview 7 | [プレビュー] | 8/1/2017 | 15.0.26730.0 |
@@ -81,7 +98,7 @@ ms.lasthandoff: 11/22/2017
 * [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。
 * [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。  (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 * [Visual Studio 2017 管理者ガイド](visual-studio-administrator-guide.md)
 * [コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする](use-command-line-parameters-to-install-visual-studio.md)
 * [Visual Studio インスタンスの検出および管理用のツール](tools-for-managing-visual-studio-instances.md)

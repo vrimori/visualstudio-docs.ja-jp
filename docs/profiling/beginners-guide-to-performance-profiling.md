@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio でのパフォーマンス プロファイルのビギナーズ ガイド | Microsoft Docs"
+title: "Visual Studio でのアプリケーション パフォーマンスのプロファイリング | Microsoft Docs"
 ms.custom: H1Hack27Feb2017
 ms.date: 02/27/2017
 ms.reviewer: 
@@ -18,13 +18,14 @@ caps.latest.revision: "45"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cdb7339c902c94dc0052b1bd4d0570247069dc01
-ms.sourcegitcommit: 1aa9282b1f0bc2795df3264cbd1e331cc44c23f3
+ms.workload: multiple
+ms.openlocfilehash: 5ff8e6fe4814d9f049a816997252dac032e631ed
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="beginners-guide-to-performance-profiling"></a>パフォーマンス プロファイルのビギナーズ ガイド
+# <a name="profile-application-performance-in-visual-studio"></a>Visual Studio でのアプリケーション パフォーマンスのプロファイリング
 Visual Studio プロファイリング ツールを使用して、アプリケーションでパフォーマンスの問題を分析することができます。 このガイドでは、診断ツールの **[CPU 使用率]** タブを使用し、アプリのパフォーマンス データを取得する方法について説明します。 診断ツールは Visual Studio の .NET 開発 (ASP.NET を含む) とネイティブ/C++ 開発で利用できます。
   
 デバッガーが一時停止すると、**CPU 使用率**ツールは、アプリケーションで実行されている関数に関する情報を収集します。 このツールは、作業を実行していた関数を一覧表示し、サンプリング セッションの特定のセグメントに焦点を当てるために使用できるタイムライン グラフを提供します。
@@ -68,7 +69,7 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 
      ![診断ツールの [CPU プロファイルの有効化]](../profiling/media/DiagToolsEnableCPUProfiling.png "DiagToolsEnableCPUProfiling")
 
-     **[CPU プロファイルの有効化]** を選択すると、Visual Studio は関数とそれにかかる時間の記録を開始します。 アプリケーションがブレークポイントで停止したとき、この収集されたデータのみを表示できます。
+     **[CPU プロファイルの記録]** を選択すると、Visual Studio は関数とそれにかかる時間の記録を開始します。 アプリケーションがブレークポイントで停止したとき、この収集されたデータのみを表示できます。
 
 8.  F5 キーを押すと、アプリケーションが 2 つ目のブレークポイントまで実行されます。
 
@@ -155,7 +156,7 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 <iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Profiling-with-Diagnostics-Tools-in-Visual-Studio-2017-daHnzMD6D_9211787171" frameborder="0" allowfullscreen></iframe>
 </div>
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メモリ使用量](../profiling/memory-usage.md)  
  [CPU 使用率](../profiling/cpu-usage.md)  
  [Visual Studio のプロファイル](../profiling/index.md)  

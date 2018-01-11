@@ -22,18 +22,19 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8b7e6a534d1a9c3b665b72f0af8257c0915e7a29
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: 2c44751b9a4eb60ddc6124311bd75592777d4cb9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-improving-ui-responsiveness-html"></a>チュートリアル: UI の応答性の向上 (HTML)
 このチュートリアルでは、[HTML UI の応答性プロファイラー](../profiling/html-ui-responsiveness.md)を使って、パフォーマンスの問題を特定し修復するプロセスについて説明します。 このプロファイラーは、Visual Studio で、JavaScript を使用した UWP アプリに対して使用できます。 このシナリオでは、DOM 要素の更新の頻度が高すぎるパフォーマンス テスト アプリを作成し、この問題をプロファイラーを使用して特定および修正します。  
   
 ### <a name="creating-and-running-the-performance-test-app"></a>パフォーマンス テスト アプリを作成して実行する  
   
-1.  Visual Studio で、新しい Windows ユニバーサル JavaScript プロジェクトを作成します。 (**[ファイル]、[新規作成]、[プロジェクト] の順に選択します**。 左ペインで **[JavaScript]** を選択し、次に **[Windows]**、**[Windows 10]** と選択してから、**[ユニバーサル]** または **[Windows Phone]** を選択します。  
+1.  Visual Studio で、新しい Windows ユニバーサル JavaScript プロジェクトを作成します。 **[ファイル]、[新規]、[プロジェクト]** の順に選択します。 左ペインで **[JavaScript]** を選択し、次に **[Windows]**、**[Windows 10]** と選択してから、**[ユニバーサル]** または **[Windows Phone]** を選択します。  
   
 2.  > [!IMPORTANT]
     >  このトピックで示す診断の結果は、Windows 8 アプリ用です。  
@@ -242,5 +243,5 @@ ms.lasthandoff: 12/07/2017
   
 2.  HTML UI の応答性プロファイラーを再度実行し、CPU 使用状況グラフを確認します。 過剰なイベントはなくなり、CPU 使用状況はゼロに近い値に下がっています。 問題は修正されました。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [HTML UI の応答性](../profiling/html-ui-responsiveness.md)

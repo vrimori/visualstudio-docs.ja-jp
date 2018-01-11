@@ -12,17 +12,18 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: c36afd0483a49537eac67e5fa219699f2366750e
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: 013c32cb1567b3a4830a5c63059b14ea23df5427
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="editing-r-code-in-visual-studio"></a>Visual Studio で R のコードを編集する
 
 R Tools for Visual Studio (RTVS) により、Visual Studio の編集エクスペリエンスは R 用に変わりますが、拡張機能を使用するすべての機能は維持されます (たとえば、VIM キー バインドを使いたい場合は、無料の [VsVim 拡張機能](https://visualstudiogallery.msdn.microsoft.com/59ca71b3-a4a3-46ca-8fe1-0e90e3f79329)を Visual Studio ギャラリーからインストールできます)。
 
-このトピックの内容
+このトピックの内容:
 
 - [構文の強調表示](#syntax-highlighting)
 - [コードの編集と整理](#editing-and-organizing-code)
@@ -34,7 +35,7 @@ R Tools for Visual Studio (RTVS) により、Visual Studio の編集エクスペ
 
 [IntelliSense](code-intellisense.md)、[lint](code-linting.md)、[コード スニペット](code-snippets.md)、[R Markdown](rmarkdown.md) についてのトピックもご覧ください。
 
-## <a name="syntax-highlighting"></a>構文の強調表示 
+## <a name="syntax-highlighting"></a>構文の強調表示
 
 文字列、コメント、キーワードなど、コードのさまざまな部分に色を付けるだけでなく、RTVS ではコメント内のリンクも強調表示されて有効になります。
 
@@ -67,7 +68,7 @@ Visual Studio のエディターでは、構文エラーに下線も表示され
 独自の領域を作成するには、`---` で終わるコメントで該当するコードを囲みます。 コードの左の小さな +/- コントロールを使うと、領域を開いたり閉じたりすることができます。
 
 ![コメントでの折りたたみ可能な領域の作成](media/editing-collapsible-regions.gif)
- 
+
 既定では、Tab キーを押すとスペースが挿入されます。 「[[オプション]、[テキスト エディター]、[すべての言語]](../ide/reference/options-text-editor-all-languages.md)」で説明されているようにこの動作も変更できます。
 
 ## <a name="code-navigation"></a>コードのナビゲーション

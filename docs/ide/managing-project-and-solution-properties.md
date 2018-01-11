@@ -7,15 +7,15 @@ ms.suite:
 ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "6"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d9242bf08b879e415af658696b2be75a55dc5075
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: 5315dd07ab0c791cc9a349c08431ceb4a9b5c797
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-project-and-solution-properties"></a>プロジェクトおよびソリューションのプロパティの管理
 
@@ -27,12 +27,9 @@ ms.lasthandoff: 11/22/2017
 
 ![ソリューション エクスプローラー ツリーの [プロパティ] ノード](../ide/media/vs2015_props_se.png "VS2015_Props_SE")
 
-> [!TIP]
-> ソリューションには少数のプロパティがあり、プロジェクト項目にも少数のプロパティがあります。これらのプロパティは、**プロジェクト デザイナー**ではなく、[[プロパティ] ウィンドウ](../ide/reference/properties-window.md)からアクセスします。
+## <a name="project-properties"></a>プロジェクト プロパティ
 
-## <a name="project-properties"></a>プロジェクトのプロパティ
-
-プロジェクトのプロパティはグループごとに編成され、各グループには専用のプロパティ ページがあります。各ページは、さまざまな言語およびプロジェクトの種類に応じて異なることがあります。
+プロジェクトのプロパティはグループに分類されており、グループごとに専用のプロパティ ページがあります。 ページは、言語およびプロジェクト タイプによって異なる場合があります。
 
 ### <a name="c-visual-basic-and-f-projects"></a>C# プロジェクト、Visual Basic プロジェクト、F# プロジェクト
 
@@ -41,6 +38,9 @@ C# プロジェクト、Visual Basic プロジェクト、F# プロジェクト�
 ![Visual Studio プロジェクト デザイナー](../ide/media/vs2015_proppage_build.png "VS2015_PropPage_Build")
 
 プロジェクト デザイナーのそれぞれのプロパティ ページについては、「[プロジェクト プロパティ リファレンス](../ide/reference/project-properties-reference.md)」を参照してください。
+
+> [!TIP]
+> ソリューションには少数のプロパティがあり、プロジェクト項目にも少数のプロパティがあります。これらのプロパティは、**プロジェクト デザイナー**ではなく、[[プロパティ] ウィンドウ](../ide/reference/properties-window.md)からアクセスします。
 
 ### <a name="c-and-javascript-projects"></a>C++ プロジェクトおよび JavaScript プロジェクト
 

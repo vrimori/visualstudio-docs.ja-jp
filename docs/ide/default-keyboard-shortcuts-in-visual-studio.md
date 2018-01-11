@@ -16,11 +16,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 335589c6487d99726b86921fa988dce64dd384b8
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: 9f6aaafa0ff72a175b5900b1ff1dfa054fe0381b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio の既定のキーボード ショートカット
 キーボードのアクセシビリティの詳細については、[「アクセシビリティのヒントとテクニック」](../ide/reference/accessibility-tips-and-tricks.md) および [「方法: キーボード主体で操作する」](../ide/reference/how-to-use-the-keyboard-exclusively.md) を参照してください。
@@ -33,7 +34,7 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 
 |||||  
 |-|-|-|-|  
-|[解析](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)|[編集](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_edit)|[プロジェクト](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_project)|[テスト](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_test)|  
+|[解析](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)|[編集](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_edit)|[Project](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_project)|[テスト](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_test)|  
 |[アーキテクチャ](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_architecture)|[エディター コンテキスト メニュー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_editorContext)|[プロジェクトとソリューション コンテキスト メニュー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_projectContext)|[テスト エクスプローラー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL)|  
 |[ビルド](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_build)|[ファイル](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_file)|[リファクター](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_refactor)|[ツール](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_tools)|  
 |[クラス ビュー コンテキスト メニュー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_classview)|[ヘルプ](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_help)|[ソリューション エクスプローラー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_solutionexplorerGLOBAL)|[表示](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_view)|  
@@ -965,7 +966,7 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 |Format.SpaceDown|Alt + ↑<br /><br /> または<br /><br /> Alt + ↓|  
 |Format.TabOrder|Ctrl + D|  
 |Format.TestDialog|Ctrl + T|  
-|Format.ToggleGuides|Ctrl+G|  
+|Format.ToggleGuides|Ctrl + G|  
 
 ##  <a name="bkmk_vcimageeditor"></a> VC イメージ エディター  
 

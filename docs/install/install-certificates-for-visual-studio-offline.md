@@ -14,11 +14,12 @@ ms.assetid: 9750A3F3-89C7-4A8F-BA75-B0B06BD772C2
 author: timsneath
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: ed86e3cd404c40026fad20ef08d4daecd98d74f2
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: 4d462120e7b51551ca7f15cc2d23387824a1f9f1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="install-certificates-required-for-visual-studio-offline-installation"></a>Visual Studio オフライン インストールに必要な証明書をインストールする
 
@@ -80,7 +81,7 @@ Visual Studio セットアップ エンジンでは、信頼されているコ�
     * 中間証明書: **Microsoft コード署名 PCA**
         * すべてのシステムに必要。 Windows Update からすべての更新プログラムが適用されているシステムにはこの証明書がない場合があることに注意してください。
     * ルート証明書: **Microsoft ルート証明機関**
-        * 必須です。 この証明書は、Windows 7 以降を実行するシステムに付属しています。
+        * 必須。 この証明書は、Windows 7 以降を実行するシステムに付属しています。
 
 ## <a name="why-are-the-certificates-from-the-certificates-folder-not-installed-automatically"></a>Certificates フォルダーから証明書が自動的にインストールされません。
 

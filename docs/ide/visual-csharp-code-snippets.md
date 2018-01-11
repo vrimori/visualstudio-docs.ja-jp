@@ -17,11 +17,12 @@ caps.latest.revision: "33"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c54a6f5b39136a56753facce4c4f1e5a656fbb36
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: dotnet
+ms.openlocfilehash: 4ab98d4a4f589959982bdcb584189b30923ddbc9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-c-code-snippets"></a>Visual C# のコード スニペット
 コード スニペットは、あらかじめ用意されているコードのスニペットで、コードにすぐに挿入できます。 たとえば、`for` コード スニペットは空の `for` ループを作成します。 一部のコード スニペットは surround-with コード スニペットであり、コード行を選んでから、選んだコード行を組み込むコード スニペットを選ぶことができます。 たとえば、コード行を選んでから `for` コード スニペットをアクティブにすると、選んだコード行がループ ブロックの中に含まれる `for` ループが作成されます。 コード スニペットを使うと、速く、容易に、信頼性の高いプログラム コードを作成できます。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 12/07/2017
 |使用|[using](/dotnet/csharp/language-reference/keywords/using-directive) ディレクティブを作成します。|名前空間 (グローバル名前空間を含む) の内部。|  
 |while|[while](/dotnet/csharp/language-reference/keywords/while) ループを作成します。|メソッド、インデクサー、プロパティ アクセサー、またはイベント アクセサーの内部。|  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コード スニペットの関数](../ide/code-snippet-functions.md)   
  [コード スニペット](../ide/code-snippets.md)   
  [テンプレート パラメーター](../ide/template-parameters.md)   

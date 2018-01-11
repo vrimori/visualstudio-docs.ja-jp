@@ -12,17 +12,18 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 99859fc5b9e48078b037f6d68ad3d3847658a1d0
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 7f74c03d081084356682630d234d6db81e64b4bf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="editing-python-code"></a>Python コードの編集
 
 開発者は、コード エディターで多くの時間を費やすので、[Visual Studio での Python のサポート](installation.md)は、生産性を向上させる機能を提供します。 機能には、IntelliSense 構文の強調表示、オートコンプリート、署名ヘルプ、メソッドのオーバーライド、検索、ナビゲーションが含まれます。 
 
-このトピックの内容
+このトピックの内容:
 
 - [IntelliSense](#intellisense) (入力候補、シグネチャ ヘルプ、クイック ヒント、コードの色分け表示)
 - [コード スニペット](#code-snippets)
@@ -38,7 +39,7 @@ Python コードの編集の概要については、「[Editing Python Code](htt
 
 ## <a name="intellisense"></a>IntelliSense
 
-IntelliSense により、[入力候補](#completions)、[シグネチャ ヘルプ](#signature-help)、[クイック ヒント](#quick-info)、[コードの色分け表示](#code-coloring)が提供されます。 パフォーマンスを向上するために、IntelliSense はプロジェクト内の各 Python 環境に対して生成される入力候補データベースを使用します。 パッケージを追加、削除、更新した場合はデータベースの更新が必要になる可能性があります。 データベースの状態は、**[IntelliSense]** タブの **[Python Environments (Python 環境)]** ウィンドウ (ソリューション エクスプローラーの兄弟ウィンドウ) に表示されます (「[Python Environments](python-environments.md)」(Python 環境) を参照してください)。 
+IntelliSense により、[入力候補](#completions)、[シグネチャ ヘルプ](#signature-help)、[クイック ヒント](#quick-info)、[コードの色分け表示](#code-coloring)が提供されます。 パフォーマンスを向上するために、IntelliSense はプロジェクト内の各 Python 環境に対して生成される入力候補データベースを使用します。 パッケージを追加、削除、更新した場合はデータベースの更新が必要になる可能性があります。 データベースの状態は、**[IntelliSense]** タブの **[Python Environments (Python 環境)]** ウィンドウ (ソリューション エクスプローラーの兄弟ウィンドウ) に表示されます (「[Python Environments](python-environments.md)」 (Python 環境) を参照してください)。 
 
 ### <a name="completions"></a>入力候補
 
@@ -142,13 +143,13 @@ Visual Studio の Python のサポートとして、ソース コードが提供
 
 ![[定義へ移動]](media/code-editing-go-to-definition.png)
 
-### <a name="navigate-to"></a>[移動]
+### <a name="navigate-to"></a>移動
 
 **[編集] > [移動]** コマンド (Ctrl + コンマ キー) を実行すると、エディター内に検索ボックスが表示されます。ボックスに任意の文字列を入力すると、その文字列を含む関数、クラス、変数を定義しているコード内の箇所が表示されます。 この機能は **[定義へ移動]** の機能と似ていますが、識別子の使用場所を探す必要がありません。
 
 任意の名前をダブルクリックするか、方向キーで選択して Enter キーを押すと、その識別子の定義に移動します。
 
-![[移動]](media/code-editing-navigate-to.png)
+![移動](media/code-editing-navigate-to.png)
 
 ### <a name="find-all-references"></a>[すべての参照の検索]
 

@@ -17,13 +17,18 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: dd21ba3c54ed274f181c036ed0121d8d3c5a180e
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: data-science
+ms.openlocfilehash: a7680ff2613051cb795d2ca9cb509f725e92dd23
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="r-tools-for-visual-studio-options"></a>R Tools for Visual Studio オプション
+
+設定には **[R Tools]、[オプション]** メニューの順に選択してアクセスできます。あるいは、**[ツール]、[オプション]** の順に選択し、**[R Tools]** までスクロールしてください。
+
+  ![R Tools のオプション ダイアログ](media/options-dialog.png)
 
 R に固有のオプションと設定には、次の方法を使用してアクセスします。 以下のセクションがすべて表示されるようにするには、**[オプション]** ダイアログ ボックスの下部にある **[すべての設定を表示]** ボックスを選択する必要があります。
 

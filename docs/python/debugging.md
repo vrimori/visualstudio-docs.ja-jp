@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 8d17c0a3a1d376f7b44e5fb78f362fc49458462e
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 9770a484c6949695641234a96d8b5a6cdb3c645b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-your-python-code"></a>Python コードのデバッグ
 
@@ -26,7 +27,7 @@ Visual Studio は、実行中のプロセスへのアタッチ、ウォッチ �
 
 > [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Debugging-Python-Ep5dp5LWE_3805918567]
 
-このトピックの内容
+このトピックの内容:
 
 - [デバッグの基本](#basic-debugging)
 - [プロジェクトのデバッグ オプション](#project-debugging-options)
@@ -55,7 +56,7 @@ Visual Studio は、実行中のプロセスへのアタッチ、ウォッチ �
 デバッグ セッションを開始するには、**[デバッグ] > [デバッグの開始]** コマンド、ツールバーの **[開始]** ボタン、または F5 キーを使用します。 これらの操作で、プロジェクトのアクティブな環境と、プロジェクトのプロパティで指定されているコマンドライン引数や検索パスを使用して、プロジェクトのスタートアップ ファイル (ソリューション エクスプローラーで太字で表示) が起動します (「[プロジェクトのデバッグ オプション](#project-debugging-options)」を参照してください)。 ただし、何らかの理由でスタートアップ ファイルが設定されていない場合は、Python の出力ウィンドウが一瞬表示されてから消えます。 その場合は、適切なファイルを右クリックして、**[スタートアップ ファイルとして設定]** を選びます。
 
 > [!Note]
-> デバッガーは常に、プロジェクトのアクティブな Python 環境で起動します。 環境を変更するには、「[Python Environments (Python 環境)](python-environments.md)」の説明に従って、別の環境をアクティブにします。
+> デバッガーは常に、プロジェクトのアクティブな Python 環境で起動します。 環境を変更するには、「[Python Environments](python-environments.md)」 (Python 環境) の説明に従って、別の環境をアクティブにします。
 
 ### <a name="breakpoints"></a>ブレークポイント
 
@@ -78,7 +79,7 @@ Visual Studio は、実行中のプロセスへのアタッチ、ウォッチ �
 
 ブレークポイントで停止したら、次に再び停止するまで、コードをさまざまな方法でステップ実行したり、コードのブロックを実行したりできます。 これらのコマンドは、上部の [デバッグ] ツールバー、**[デバッグ]** メニュー、コード エディターの右クリック コンテキスト メニュー、ショートカット キーなど、さまざまな場所から利用できます (すべての場所ですべてのコマンドを利用できるわけではありません)。
 
-| 特性 | キー操作 | 説明 |
+| 機能 | キー操作 | 説明 |
 | --- | --- | --- |
 | [続行] | F5 | 次のブレークポイントに到達するまでコードを実行します。 |
 | [ステップ イン] | F11 | 次のステートメントを実行して停止します。 次のステートメントが関数の呼び出しの場合、呼び出されている関数の最初の行でデバッガーが停止します。 |

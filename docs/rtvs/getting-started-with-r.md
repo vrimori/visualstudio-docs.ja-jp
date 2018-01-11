@@ -1,5 +1,5 @@
 ---
-title: "R Tools for Visual Studio の使用を開始する | Microsoft Docs"
+title: "Visual Studio 内の R の概要 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/29/2017
 ms.reviewer: 
@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: eb08ea4541bd32e9e28987b103272a87c7a223c0
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: d57ff0dcd89a9857f62371f81d65f7929aba18c9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-r-tools-for-visual-studio"></a>R Tools for Visual Studio の使用を開始する
 
@@ -170,7 +171,7 @@ Visual Studio の主な強みの 1 つは、デバッグ UI です。 RTVS は�
 
 さらに詳細を確認するには、「[デバッグ](debugging.md)」と「[変数エクスプローラー](variable-explorer.md)」を参照してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 このチュートリアルでは、Visual Studio で対話型ウィンドウを使用して、コードの編集およびデバッグを行い、R プロジェクトの基本について学習しました。 その他の機能を引き続き確認するには、次のトピック、および目次の内容を参照してください。
 

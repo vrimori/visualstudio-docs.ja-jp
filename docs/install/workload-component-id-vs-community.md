@@ -14,11 +14,12 @@ helpviewer_keywords:
 ms.service: 
 ms.technology: vs-acquisition
 ms.assetid: 58494fc3-12de-4761-bd4a-74b54f72bfb3
-ms.openlocfilehash: 074f7bfbea620710d60070928b9fc2a4ef6506fc
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: multiple
+ms.openlocfilehash: 423ea3b21ff4d7363b3e20e62fb55caff0383a12
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-community-2017-workload-and-component-ids"></a>Visual Studio Community 2017 のワークロード ID とコンポーネント ID
 
@@ -42,7 +43,7 @@ VSIX マニフェストで依存関係を設定するときは、コンポーネ
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.VisualStudio.Component.CoreEditor | Visual Studio のコア エディター | 15.0.26606.0 | 必須
 Microsoft.VisualStudio.Component.StartPageExperiment.Cpp | C++ ユーザー用 Visual Studio スタート ページ | 15.0.27128.1 | Optional
@@ -55,7 +56,7 @@ Microsoft.VisualStudio.Component.StartPageExperiment.Cpp | C++ ユーザー用 V
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.Microsoft.VisualStudio.RazorExtension | Razor 言語サービス | 15.0.26720.2 | 必須
 Component.Microsoft.VisualStudio.Web.AzureFunctions | Microsoft Azure WebJobs ツール | 15.0.27128.1 | 必須
@@ -121,7 +122,7 @@ Microsoft.Net.Component.4.6.2.SDK | .NET Framework 4.6.2 SDK | 15.0.26208.0 | Op
 Microsoft.Net.Component.4.6.2.TargetingPack | .NET Framework 4.6.2 Targeting Pack | 15.0.26208.0 | Optional
 Microsoft.Net.Component.4.7.1.SDK | .NET Framework 4.7.1 SDK | 15.0.27128.1 | Optional
 Microsoft.Net.Component.4.7.1.TargetingPack | .NET Framework 4.7.1 Targeting Pack | 15.0.27019.1 | Optional
-Microsoft.Net.Component.4.7.SDK | .NET Framework 4.7 SDK | 15.0.26419.1 | 省略可能
+Microsoft.Net.Component.4.7.SDK | .NET Framework 4.7 SDK | 15.0.26419.1 | Optional
 Microsoft.Net.Component.4.7.TargetingPack | .NET Framework 4.7 Targeting Pack | 15.0.26621.2 | Optional
 Microsoft.Net.ComponentGroup.4.6.2.DeveloperTools | .NET Framework 4.6.2 開発ツール | 15.0.26621.2 | Optional
 Microsoft.Net.ComponentGroup.4.7.1.DeveloperTools | .NET Framework 4.7.1 開発ツール | 15.0.27019.1 | Optional
@@ -140,7 +141,7 @@ Microsoft.VisualStudio.Component.Wcf.Tooling | Windows Communication Foundation 
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.Microsoft.VisualStudio.RazorExtension | Razor 言語サービス | 15.0.26720.2 | 推奨
 Component.Redgate.SQLSearch.VSExtension | Redgate SQL Search | 2.4.2.1439 | 推奨
@@ -198,7 +199,7 @@ Microsoft.VisualStudio.Component.FSharp.Desktop | F# デスクトップ言語の
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.Anaconda3.x64 | Anaconda3 64 ビット (5.0.0) | 5.0.0 | 推奨
 Microsoft.Component.CookiecutterTools | cookiecutter テンプレートのサポート | 15.0.26621.2 | 推奨
@@ -245,7 +246,7 @@ Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | UWP 用 Windows
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.Component.ClickOnce | ClickOnce Publishing | 15.0.27019.1 | 必須
 Microsoft.Component.MSBuild | MSBuild | 15.0.27019.1 | 必須
@@ -275,7 +276,7 @@ Microsoft.Net.Component.4.6.2.SDK | .NET Framework 4.6.2 SDK | 15.0.26208.0 | Op
 Microsoft.Net.Component.4.6.2.TargetingPack | .NET Framework 4.6.2 Targeting Pack | 15.0.26208.0 | Optional
 Microsoft.Net.Component.4.7.1.SDK | .NET Framework 4.7.1 SDK | 15.0.27128.1 | Optional
 Microsoft.Net.Component.4.7.1.TargetingPack | .NET Framework 4.7.1 Targeting Pack | 15.0.27019.1 | Optional
-Microsoft.Net.Component.4.7.SDK | .NET Framework 4.7 SDK | 15.0.26419.1 | 省略可能
+Microsoft.Net.Component.4.7.SDK | .NET Framework 4.7 SDK | 15.0.26419.1 | Optional
 Microsoft.Net.Component.4.7.TargetingPack | .NET Framework 4.7 Targeting Pack | 15.0.26621.2 | Optional
 Microsoft.Net.ComponentGroup.4.6.2.DeveloperTools | .NET Framework 4.6.2 開発ツール | 15.0.26621.2 | Optional
 Microsoft.Net.ComponentGroup.4.7.1.DeveloperTools | .NET Framework 4.7.1 開発ツール | 15.0.27019.1 | Optional
@@ -300,7 +301,7 @@ Microsoft.VisualStudio.Component.WebDeploy | Web 配置 | 15.0.26208.0 | Optiona
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.Net.Component.3.5.DeveloperTools | .NET Framework 3.5 開発ツール | 15.0.26621.2 | 必須
 Microsoft.VisualStudio.Component.Roslyn.Compiler | C# および Visual Basic Roslyn コンパイラ | 15.0.27019.1 | 必須
@@ -318,7 +319,7 @@ Component.UnityEngine.x86 | Unity 5.6 32 ビット エディター | 15.0.27102.
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.VisualStudio.Component.VC.CoreIde | Visual Studio C++ コア機能 | 15.0.26606.0 | 必須
 Microsoft.VisualStudio.Component.Windows10SDK | Windows ユニバーサル C ランタイム | 15.0.26621.2 | 必須
@@ -340,7 +341,7 @@ Component.MDD.Linux.GCC.arm | Embedded 開発と IoT 開発 | 15.0.27102.0 | Opt
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.Component.MSBuild | MSBuild | 15.0.27019.1 | 必須
 Microsoft.VisualStudio.Component.Roslyn.Compiler | C# および Visual Basic Roslyn コンパイラ | 15.0.27019.1 | 必須
@@ -392,7 +393,7 @@ Microsoft.VisualStudio.ComponentGroup.NativeDesktop.WinXP | C++ に関する Win
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.VisualStudio.Component.VC.Redist.14.Latest | Visual C++ 2017 再頒布可能パッケージ Update | 15.0.27019.1 | 必須
 Microsoft.VisualStudio.Component.Graphics.Tools | DirectX 用グラフィックス デバッガーおよび GPU プロファイラー | 15.0.26823.1 | 推奨
@@ -444,7 +445,7 @@ Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Win81 | Windows 8.1 SDK と 
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.VisualStudio.Component.VC.CoreIde | Visual Studio C++ コア機能 | 15.0.26606.0 | 必須
 Component.Android.NDK.R13B | Android NDK (R13B) | 13.1.6 | 推奨
@@ -472,7 +473,7 @@ Component.MDD.IOS | C++ iOS 開発ツール | 15.0.26621.2 | Optional
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.Net.Component.4.6.1.TargetingPack | .NET Framework 4.6.1 Targeting Pack | 15.0.26621.2 | 必須
 Microsoft.Net.Core.Component.SDK | .NET Core 1.0 - 1.1 開発ツール | 15.0.26606.0 | 必須
@@ -536,7 +537,7 @@ Microsoft.VisualStudio.ComponentGroup.IISDevelopment | 開発時の IIS サポ�
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.Microsoft.VisualStudio.RazorExtension | Razor 言語サービス | 15.0.26720.2 | 必須
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | 必須
@@ -601,7 +602,7 @@ Microsoft.VisualStudio.ComponentGroup.UWP.Xamarin | Xamarin 用ユニバーサ�
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.Net.Core.Component.SDK | .NET Core 1.0 - 1.1 開発ツール | 15.0.26606.0 | 必須
 Microsoft.NetCore.ComponentGroup.DevelopmentTools | .NET Core 2.0 開発ツール | 15.0.27019.1 | 必須
@@ -659,7 +660,7 @@ Microsoft.Net.Component.4.6.2.SDK | .NET Framework 4.6.2 SDK | 15.0.26208.0 | Op
 Microsoft.Net.Component.4.6.2.TargetingPack | .NET Framework 4.6.2 Targeting Pack | 15.0.26208.0 | Optional
 Microsoft.Net.Component.4.7.1.SDK | .NET Framework 4.7.1 SDK | 15.0.27128.1 | Optional
 Microsoft.Net.Component.4.7.1.TargetingPack | .NET Framework 4.7.1 Targeting Pack | 15.0.27019.1 | Optional
-Microsoft.Net.Component.4.7.SDK | .NET Framework 4.7 SDK | 15.0.26419.1 | 省略可能
+Microsoft.Net.Component.4.7.SDK | .NET Framework 4.7 SDK | 15.0.26419.1 | Optional
 Microsoft.Net.Component.4.7.TargetingPack | .NET Framework 4.7 Targeting Pack | 15.0.26621.2 | Optional
 Microsoft.Net.ComponentGroup.4.6.2.DeveloperTools | .NET Framework 4.6.2 開発ツール | 15.0.26621.2 | Optional
 Microsoft.Net.ComponentGroup.4.7.1.DeveloperTools | .NET Framework 4.7.1 開発ツール | 15.0.27019.1 | Optional
@@ -677,7 +678,7 @@ Microsoft.VisualStudio.Web.Mvc4.ComponentGroup | ASP.NET MVC 4 | 15.0.26606.0 | 
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | 必須
 Microsoft.VisualStudio.Component.JavaScript.Diagnostics | JavaScript 診断 | 15.0.26606.0 | 必須
@@ -700,7 +701,7 @@ Microsoft.VisualStudio.Component.VC.Tools.x86.x64 | VC++ 2017 v141 ツールセ�
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.Microsoft.VisualStudio.RazorExtension | Razor 言語サービス | 15.0.26720.2 | 必須
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | 必須
@@ -751,7 +752,7 @@ Microsoft.VisualStudio.Component.TeamOffice | Visual Studio Tools for Office (VS
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.CPython3.x64 | Python 3 64 ビット (3.6.3) | 3.6.3.1 | 推奨
 Microsoft.Component.CookiecutterTools | cookiecutter テンプレートのサポート | 15.0.26621.2 | 推奨
@@ -777,7 +778,7 @@ Component.Microsoft.VisualStudio.RazorExtension | Razor 言語サービス | 15.
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | Optional
 Microsoft.Component.ClickOnce | ClickOnce Publishing | 15.0.27019.1 | Optional
 Microsoft.Component.MSBuild | MSBuild | 15.0.27019.1 | Optional
-Microsoft.Component.NetFX.Native | .NET Native | 15.0.26208.0 | 省略可能
+Microsoft.Component.NetFX.Native | .NET Native | 15.0.26208.0 | Optional
 Microsoft.Component.PythonTools.UWP | Python IoT サポート | 15.0.26606.0 | Optional
 Microsoft.ComponentGroup.PythonTools.NativeDevelopment | Python ネイティブ開発ツール | 15.0.27005.2 | Optional
 Microsoft.Net.Component.4.5.1.TargetingPack | .NET Framework 4.5.1 Targeting Pack | 15.0.26621.2 | Optional
@@ -791,16 +792,16 @@ Microsoft.Net.ComponentGroup.DevelopmentPrerequisites | .NET Framework 4.6.1 開
 Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 開発ツール | 15.0.26606.0 | Optional
 Microsoft.VisualStudio.Component.AppInsights.Tools | Developer Analytics Tools | 15.0.26621.2 | Optional
 Microsoft.VisualStudio.Component.Azure.AuthoringTools | Azure Authoring Tools | 15.0.26621.2 | Optional
-Microsoft.VisualStudio.Component.Azure.ClientLibs | .NET 用 Azure ライブラリ | 15.0.26208.0 | 省略可能
+Microsoft.VisualStudio.Component.Azure.ClientLibs | .NET 用 Azure ライブラリ | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.Azure.Compute.Emulator | Azure コンピューティング エミュレーター | 15.0.26621.2 | Optional
 Microsoft.VisualStudio.Component.Azure.Storage.Emulator | Azure Storage エミュレーター | 15.0.26823.1 | Optional
-Microsoft.VisualStudio.Component.Azure.Waverton | Azure Cloud Services コア ツール | 15.0.26208.0 | 省略可能
+Microsoft.VisualStudio.Component.Azure.Waverton | Azure Cloud Services コア ツール | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.ClassDesigner | クラス デザイナー | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.DiagnosticTools | .NET プロファイル ツール | 15.0.27005.2 | Optional
 Microsoft.VisualStudio.Component.Graphics | イメージ エディターと 3D モデル エディター | 15.0.26621.2 | Optional
 Microsoft.VisualStudio.Component.Graphics.Tools | DirectX 用グラフィックス デバッガーおよび GPU プロファイラー | 15.0.26823.1 | Optional
 Microsoft.VisualStudio.Component.Graphics.Win81 | グラフィックス ツール Windows 8.1 SDK | 15.0.26208.0 | Optional
-Microsoft.VisualStudio.Component.IISExpress | IIS Express  | 15.0.26208.0 | 省略可能
+Microsoft.VisualStudio.Component.IISExpress | IIS Express  | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.JavaScript.Diagnostics | JavaScript 診断 | 15.0.26606.0 | Optional
 Microsoft.VisualStudio.Component.ManagedDesktop.Core | Managed Desktop Workload コア | 15.0.27019.1 | Optional
 Microsoft.VisualStudio.Component.NuGet | NuGet パッケージ マネージャー | 15.0.27128.1 | Optional
@@ -808,10 +809,10 @@ Microsoft.VisualStudio.Component.PortableLibrary | .NET ポータブル ライ�
 Microsoft.VisualStudio.Component.Roslyn.Compiler | C# および Visual Basic Roslyn コンパイラ | 15.0.27019.1 | Optional
 Microsoft.VisualStudio.Component.Roslyn.LanguageServices | C# および Visual Basic | 15.0.27019.1 | Optional
 Microsoft.VisualStudio.Component.SQL.ADAL | SQL ADAL ランタイム | 15.0.26606.0 | Optional
-Microsoft.VisualStudio.Component.SQL.CMDUtils | SQL Server コマンド ライン ユーティリティ | 15.0.26208.0 | 省略可能
+Microsoft.VisualStudio.Component.SQL.CMDUtils | SQL Server コマンド ライン ユーティリティ | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.SQL.DataSources | SQL Server サポートのためのデータ ソース | 15.0.26621.2 | Optional
 Microsoft.VisualStudio.Component.SQL.LocalDB.Runtime | SQL Server Express 2016 LocalDB | 15.0.26919.1 | Optional
-Microsoft.VisualStudio.Component.SQL.NCLI | SQL Server Native Client | 15.0.26208.0 | 省略可能
+Microsoft.VisualStudio.Component.SQL.NCLI | SQL Server Native Client | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.SQL.SSDT | SQL Server Data Tools | 15.0.26906.1 | Optional
 Microsoft.VisualStudio.Component.Static.Analysis.Tools | スタティック分析ツール | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.TextTemplating | テキスト テンプレート変換 | 15.0.26208.0 | Optional
@@ -835,7 +836,7 @@ Microsoft.VisualStudio.ComponentGroup.Web | ASP.NET と Web の開発ツール |
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | 必須
 Microsoft.Component.ClickOnce | ClickOnce Publishing | 15.0.27019.1 | 必須
@@ -885,7 +886,7 @@ Microsoft.VisualStudio.ComponentGroup.UWP.VC | C++ ユニバーサル Windows �
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.Component.ClickOnce | ClickOnce Publishing | 15.0.27019.1 | 必須
 Microsoft.Net.Component.4.6.1.SDK | .NET Framework 4.6.1 SDK | 15.0.26621.2 | 必須
@@ -921,7 +922,7 @@ Microsoft.VisualStudio.Component.VSSDK | Visual Studio SDK | 15.0.26919.1 | Opti
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.CordovaToolset.6.3.1 | Cordova 6.3.1 ツールセット | 15.0.26504.0 | 必須
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | 必須
@@ -952,7 +953,7 @@ Microsoft.VisualStudio.ComponentGroup.UWP.Cordova | Cordova 用ユニバーサ�
 
 以下のコンポーネントはどのワークロードにも含まれていませんが、個別のコンポーネントとして選択できます。
 
-コンポーネント ID | 名前 | バージョン
+コンポーネント ID | name | Version
 --- | --- | ---
 Component.Android.Emulator | Visual Studio Emulator for Android | 15.0.27128.1
 Component.Android.NDK.R11C | Android NDK (R11C) | 11.3.13

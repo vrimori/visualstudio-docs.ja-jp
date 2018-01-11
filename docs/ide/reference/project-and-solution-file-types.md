@@ -16,47 +16,42 @@ f1_keywords:
 - File Properties.CustomTool
 - FileProperties
 helpviewer_keywords:
-- suo files
-- file types, Visual Studio
-- file extensions
-- solutions, solution files
-- solution files
 - .sln files
-- Visual Studio, file types and extensions
-- extensions, file types
-- sln files
 - .suo files
-- file extensions, Visual Studio
-- file types
-ms.assetid: 0ba5007b-465d-4efa-b1e4-f0ee68527649
-caps.latest.revision: "19"
+- file types [Visual Studio]
+- file extensions [Visual Studio]
+- solution files [Visual Studio]
+- sln files
+- suo files
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 744b35962a196e0372d1bd1fa916f247a9195da6
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: d05b7b5f1510777c758998572e78757c47148fa1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-and-solution-file-types"></a>プロジェクト ファイルとソリューション ファイルの種類
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] は、多くの種類のファイルをサポートします。 特定のインストールでは、インストールされるコンポーネントによってサポートされるファイルの種類が決まります。 このトピックでは、いくつかの標準的なインストールでサポートされるソリューション ファイルとプロジェクト ファイルの種類について説明します。 その他のファイルの種類の詳細については、それぞれの種類のファイル名拡張子を使用して検索してください。  
-  
-## <a name="solution-files-sln-and-suo"></a>ソリューション ファイル (.sln および .suo)  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] では、ソリューション固有の設定を格納するために、2 種類のファイル (.sln および .suo) を使用します。 これらのファイルはまとめてソリューション ファイルと呼ばれており、ソリューション エクスプローラーがファイル管理用のグラフィカル インターフェイスを表示するのに必要な情報が格納されています。 これらのファイルよって、開発タスクに戻るたびに環境を気にする必要はなくなり、プロジェクトと最終的な目標に集中できます。  
-  
-|拡張子|名前|説明|  
-|---------------|----------|-----------------|  
-|.sln|[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ソリューション|プロジェクト、プロジェクト項目、およびソリューション項目としてまとめます。|  
-|.suo|ソリューション ユーザー オプション|Visual Studio で行ったブレークポイントなどのユーザー レベルのカスタマイズを追跡します。|  
-  
-## <a name="project-files"></a>プロジェクト ファイル  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] では、プロジェクト固有の情報を格納するために、さまざまなファイル形式を使用します。 詳細については、次のヘルプ トピックを参照してください。  
-  
- [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]  
- [Visual C++ プロジェクトに対して作成されるファイルの種類](/cpp/ide/file-types-created-for-visual-cpp-projects)    
- [Visual C++ プロジェクトの作成および管理](/cpp/ide/creating-and-managing-visual-cpp-projects)    
- [Unicode](/cpp/mfc/unicode-in-mfc)  
-  
-## <a name="see-also"></a>関連項目  
- [ソリューションおよびプロジェクト](../../ide/solutions-and-projects-in-visual-studio.md)
+
+Visual Studio は、さまざまな種類のファイルをサポートしています。 特定のインストールでは、インストールされるコンポーネントによってサポートされるファイルの種類が決まります。 このトピックでは、いくつかの標準的なインストールでサポートされるソリューション ファイルとプロジェクト ファイルの種類について説明します。
+
+## <a name="solution-files-sln-and-suo"></a>ソリューション ファイル (.sln および .suo)
+
+Visual Studio では、ソリューションの設定を格納するために、2 種類のファイル (.sln および .suo) を使用します。 これらのファイルはまとめてソリューション ファイルと呼ばれており、ソリューション エクスプローラーがファイル管理用のグラフィカル インターフェイスを表示するのに必要な情報が格納されています。
+
+|拡張子|name|説明|
+|---------------|----------|-----------------|
+|.sln|Visual Studio ソリューション|プロジェクト、プロジェクト項目、およびソリューション項目としてまとめます。|
+|.suo|ソリューション ユーザー オプション|Visual Studio で行ったブレークポイントなどのユーザー レベルのカスタマイズを追跡します。|
+
+## <a name="project-files"></a>プロジェクト ファイル
+
+プロジェクトにはさまざまな種類のファイルを含めることができます。 たとえば、C# コード ファイルの拡張子は **.cs**、C++ ファイルの拡張子は **.cpp** です。 リソースは **.resx** ファイルに、XAML は **.xaml** ファイルに格納されます。 [App.config](../../ide/managing-application-settings-dotnet.md) ファイルには、アプリケーション コードに含めない方がよいアプリケーション情報 (接続文字列など) が含まれています。
+
+C++ プロジェクトのファイルの種類については、「[Visual C++ プロジェクトに対して作成されるファイルの種類](/cpp/ide/file-types-created-for-visual-cpp-projects)」と「[Unicode in Microsoft Foundation Class Library](/cpp/mfc/unicode-in-mfc)」(Microsoft Foundation Class ライブラリの Unicode) を参照してください。
+
+## <a name="see-also"></a>関連項目
+
+[ソリューションおよびプロジェクト](../../ide/solutions-and-projects-in-visual-studio.md)

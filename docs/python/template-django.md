@@ -12,15 +12,16 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 29d11f04fb1fc7b0942a98b47dd5638c0572c23b
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 6dda33b14a96d7d866413ea26dc267f9aa8b772c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="django-web-project-template"></a>Django Web プロジェクト テンプレート
 
-[Django](https://www.djangoproject.com/) は、高速、安全、スケーラブルな Web 開発用に設計されたハイレベルの Python フレームワークです。 Visual Studio の Python サポートには、Django ベースの Web アプリケーションの構造を設定するためのプロジェクト テンプレートが用意されています。 Visual Studio でテンプレートを使用するには、**[ファイル] > [新規] >[プロジェクト]** を選択し、「Django」を検索して、"Django Web プロジェクト" テンプレートを選びます。 作成されるプロジェクトには、定型コードと既定の SQLite データベースが含まれます。 "空の Django Web プロジェクト" テンプレートも似ていますが、これにはデータベースが含まれません。
+[Django](https://www.djangoproject.com/) は、高速、安全、スケーラブルな Web 開発用に設計されたハイレベルの Python フレームワークです。 Visual Studio の Python サポートには、Django ベースの Web アプリケーションの構造を設定するためのプロジェクト テンプレートが用意されています。 Visual Studio でテンプレートを使用するには、**[ファイル]、[新規]、[プロジェクト]** の順に選択し、「Django」を検索して、**Django Web プロジェクト** テンプレートを選択します。 作成されるプロジェクトには、定型コードと既定の SQLite データベースが含まれます。 **空の Django Web プロジェクト** テンプレートも似ていますが、これにはデータベースが含まれません。
 
 Visual Studio は、Django プロジェクトの完全な IntelliSense を提供します。
 
@@ -38,13 +39,11 @@ Visual Studio は、Django プロジェクトの完全な IntelliSense を提供
 
     ![JavaScript IntelliSense](media/template-django-intellisense-js.png)
 
-
 また、Visual Studio は Django プロジェクトの完全な[デバッグ サポート](debugging.md)も提供します。 
 
 ![ブレークポイント](media/template-django-debugging.png)
 
 Django プロジェクトは `manage.py` ファイルで管理するのが一般的であり、Visual Studio でもそのようになっています。 エントリ ポイントとしてそのファイルの使用を止めると、基本的にプロジェクト ファイルは壊れます。 その場合は、Django プロジェクトにしないで、[既存のファイルからプロジェクトを作成しなおす](python-projects.md#creating-a-project-from-existing-files)必要があります。
-
 
 ## <a name="django-management-console"></a>Django 管理コンソール
 
@@ -52,7 +51,7 @@ Django 管理コンソールには、**[プロジェクト]** メニューのさ
 
 - **[Django シェルを開く...]**: モデルを操作できるアプリケーション コンテキストでシェルを起動します
 
-    ![Console](media/template-django-console-shell.png)
+    ![コンソール](media/template-django-console-shell.png)
 
 - **[Django Sync DB (Django 同期 DB)]**: `manage.py syncdb` を対話型ウィンドウで実行します。
 

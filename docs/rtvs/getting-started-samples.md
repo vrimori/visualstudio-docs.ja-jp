@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 7cd4f3e19b6cae5adabd54593fee560c56454f07
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: f534a4116cd3955146642ba32d5da31c090b9d6a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="r-tools-for-visual-studio-sample-projects"></a>R Tools for Visual Studio のサンプル プロジェクト
 
@@ -40,7 +41,6 @@ ms.lasthandoff: 12/04/2017
 
     !["2-Introduction to ggplot2.R" サンプルの出力例](media/samples-ggplot-output.png)
 
-
 ## <a name="microsoft-r-server-and-machine-learning"></a>Microsoft R Server と Machine Learning
 
 この例のコレクションでは、R を使用して Machine Learning モデルを作成する方法、および [Microsoft R Server (MRS)](http://aka.ms/rtvs-msft-r) を活用する方法を示します。 タイトルおよび示された場所の `MRS` でスクリプトを実行するには、MRS をインストールします。
@@ -53,12 +53,13 @@ ms.lasthandoff: 12/04/2017
 
 - `Bike_Rental_Estimation_with_MRS` では、Microsoft R Server を使用して、履歴データセットに基づくレンタルサイクルの需要予測モデルを作成します。 
 
-- `Data_Exploration` には、次の 3 つのスクリプトが含まれます。  
-    - `Import Data from URL.R` では、URL によって特定されたデータ ファイルを R に読み込む方法を示します。
-    - `Import Data from URL to xdf.R` では、URL によって特定されたデータ ファイルを xdf として Microsoft R Server に読み込む方法を示します  (MRS が必要です)。
-    - `Using ggplot2.R` は、`A First Look at R/2-Introduction to ggplot2.R` サンプルの拡張機能です。このスクリプトでは、対話型の 3D プロットなど、ggplot2 の機能の詳細なツアーを示します。
+- `Data_Exploration` には、次の 3 つのスクリプトが含まれます。
 
-        ![ggplot2.R を使用した出力例](media/samples-3d-interactive.png)
+  - `Import Data from URL.R` では、URL によって特定されたデータ ファイルを R に読み込む方法を示します。
+  - `Import Data from URL to xdf.R` では、URL によって特定されたデータ ファイルを xdf として Microsoft R Server に読み込む方法を示します  (MRS が必要です)。
+  - `Using ggplot2.R` は、`A First Look at R/2-Introduction to ggplot2.R` サンプルの拡張機能です。このスクリプトでは、対話型の 3D プロットなど、ggplot2 の機能の詳細なツアーを示します。
+
+      ![ggplot2.R を使用した出力例](media/samples-3d-interactive.png)
 
 - `Datasets` には、他のサンプルによって使用される `.csv` ファイルが 3 つ含まれています。
 - `Flight_Delays_Prediction_with_R` と `Flight_Delays_Prediction_with_MRS` では、R、Machine Learning、過去の定時運行データおよび気象データを使用して、航空便の遅延を予測する方法を示します。 

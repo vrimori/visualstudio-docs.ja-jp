@@ -21,11 +21,12 @@ ms.assetid: 9c81a777-9c95-4934-b517-c60c6dc78799
 author: heaths
 ms.author: heaths
 manager: erickn
-ms.openlocfilehash: 3c859b0023c9ea282afde837b17b7c93f3f4fbd7
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: a08a24be4f3f9e915a93c9beac7cf5e5c28eb7ca
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="remove-visual-studio"></a>Visual Studio の削除
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/22/2017
 
 以下の手順では、以下の動作のコマンドライン スイッチでツールを実行することができます。
 
-| スイッチ | 動作 |
+| 切り替え | 動作 |
 | ------ | -------- |
 | `-i`   | その他のスイッチが渡されていない場合、このスイッチが既定で、メインのインストール ディレクトリと製品情報のみが削除されます。 `InstallCleanup.exe` ツールを実行した後に同じバージョンを再インストールする予定がある場合は、この動作が適しています。 |
 | `-f`   | このスイッチを指定すると、メインのインストール ディレクトリ、製品情報、そして他の Visual Studio のインストールまたは他の製品と共有できるインストール ディレクトリ外にインストールされているその他の多くの機能が削除されます。 この動作は、後で再インストールせずに Visual Studio を削除する場合に適しています。 |

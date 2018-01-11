@@ -15,11 +15,12 @@ ms.assetid: 0e445255-b796-426d-ad93-a4d8e36da2c5
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 3defb5813311a1c71bf6010fe49dc066f3403a1c
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: 3f2d472d5fc4b6581a9e94e1c2efacc2299eaca0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="uninstall-visual-studio"></a>Visual Studio のアンインストール
 このページでは、開発者向け生産性向上ツールの統合スイートである、Visual Studio のアンインストールについて説明します。  
