@@ -15,16 +15,17 @@ caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1490c350a9c2c5fc91d516e2658c47a8246eb5d7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5ea7b08c95aa2844a65a9a6783774fe32c9e8c50
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="support-for-project-and-configuration-properties"></a>プロジェクトと構成プロパティのサポート
 **プロパティ** ウィンドウで、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) は、プロジェクトと構成のプロパティを表示できます。 ユーザーがアプリケーションのプロパティを設定できるように、プロジェクトの種類のプロパティ ページを使用できます。  
   
- プロジェクト ノードを選択して**ソリューション エクスプ ローラー**クリックし、**プロパティ**上、**プロジェクト**] メニューの [プロジェクトと構成を含むダイアログ ボックスを開くことができますプロパティ。 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]と[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]、プロジェクトの種類のタブ付きページとしてこのダイアログ ボックスが表示されます。 これらの言語から派生し、[全般、環境、オプション ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)です。 詳細については、次を参照してください。[ビルド内にありません: チュートリアル: プロジェクトの公開および構成のプロパティ (c#)](http://msdn.microsoft.com/en-us/d850d63b-25e2-4505-9f3d-eb038d7c1d0e)です。  
+ プロジェクト ノードを選択して**ソリューション エクスプ ローラー**クリックし、**プロパティ**上、**プロジェクト**] メニューの [プロジェクトと構成を含むダイアログ ボックスを開くことができますプロパティ。 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]と[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]、プロジェクトの種類のタブ付きページとしてこのダイアログ ボックスが表示されます。 これらの言語から派生し、[全般、環境、オプションダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)です。 詳細については、次を参照してください。[ビルド内にありません: チュートリアル: プロジェクトの公開および構成のプロパティ (c#)](http://msdn.microsoft.com/en-us/d850d63b-25e2-4505-9f3d-eb038d7c1d0e)です。  
   
  (MPFProj) のプロジェクト用 Managed Package Framework は、作成して、新しいプロジェクト システムを管理するためのヘルパー クラスを提供します。 コードとコンパイル」の手順にソースを検索できる[プロジェクトの Visual Studio 2013 の MPF](http://mpfproj12.codeplex.com/)です。  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 10/31/2017
   
  `MyConfigProp`として構成プロパティ ページで構成プロパティが表示されます**マイ Config プロパティ** カテゴリで、**マイ カテゴリ**です。 オプションを選択する場合、説明、**マイ説明**、[説明] パネルに表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [追加して、プロパティ ページを削除します。](../../extensibility/adding-and-removing-property-pages.md)   
  [プロジェクト](../../extensibility/internals/projects.md)   
  [テンプレート ディレクトリの説明 (.Vsdir) ファイル](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)

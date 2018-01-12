@@ -18,11 +18,12 @@ caps.latest.revision: "35"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cad7fb4fe49df9688a0b9e7b3baa1f1108694136
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
-ms.translationtype: MT
+ms.workload: office
+ms.openlocfilehash: 3885ce387aa27857e59fb3af74990d953c047225
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-show-the-developer-tab-on-the-ribbon"></a>方法 : [開発] タブをリボンに表示する
   アクセスする、**開発者**タブ Office アプリケーションのリボンの既定では表示されないので、そのタブを表示することを構成する必要があります。 たとえば、Word のドキュメント レベルのカスタマイズに <xref:Microsoft.Office.Tools.Word.GroupContentControl> を追加しようとする場合、このタブを表示する必要があります。  
@@ -63,11 +64,11 @@ ms.lasthandoff: 10/31/2017
   
      次の図に示しています、**開発者**Word 2010 でのチェック ボックスと[!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)]です。 このチェック ボックスの位置は、このトピックの上部付近の「対象」セクションに記載されている他のすべてのアプリケーションと同様です。  
   
-     ![Word のオプション ダイアログ ボックスの [開発] チェック ボックス](../vsto/media/vsto-office2010-developercheckbox.png "Word のオプション ダイアログ ボックスで [開発者] チェック ボックス")  
+     ![Word のオプションダイアログ ボックスの [開発] チェック ボックス](../vsto/media/vsto-office2010-developercheckbox.png "Word のオプションダイアログ ボックスで [開発者] チェック ボックス")  
   
 5.  選択、 **OK**を閉じる ボタン、**オプション** ダイアログ ボックス。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Office UI のカスタマイズ](../vsto/office-ui-customization.md)  
   
   

@@ -14,11 +14,12 @@ caps.latest.revision: "74"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: fd49e497844c85482780c925ef94bc2c422cd80a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 0eb95bdd83780aa000ea6e3c696c24e319dcd4fa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-custom-directive-processor"></a>チュートリアル: カスタム ディレクティブ プロセッサの作成
 *ディレクティブ プロセッサ*コードを追加して職場、*生成された変換クラス*です。 呼び出す場合は、*ディレクティブ*から、*テキスト テンプレート*、テキスト テンプレートに記述するコードの残りの部分は、ディレクティブによって提供される機能に依存できます。  
@@ -635,7 +636,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
  ここでは、この場所にカスタム ディレクティブ プロセッサのキーを追加します。  
   
 > [!CAUTION]
->  レジストリを誤って編集すると、システムに重大な障害が発生する場合があります。 レジストリを変更する前に、コンピューター上の重要なデータをすべてバックアップしてください。  
+>  レジストリを誤って編集すると、システムに重大な障害をもたらす可能性があります。 レジストリを変更する前に、コンピューター上の重要なデータをすべてバックアップしてください。  
   
 #### <a name="to-add-a-registry-key-for-the-directive-processor"></a>ディレクティブ プロセッサのレジストリ キーを追加するには  
   
@@ -658,7 +659,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
   
      レジストリ キーの値は次のようになります。  
   
-    |名前|型|データ|  
+    |name|型|データ|  
     |----------|----------|----------|  
     |(既定)|REG_SZ|(値が設定されていません)|  
     |クラス|REG_SZ|CustomDP.CustomDirectiveProcessor|  
@@ -666,7 +667,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
   
      アセンブリを GAC に追加した場合は、値を次のように設定します。  
   
-    |名前|型|データ|  
+    |name|型|データ|  
     |----------|----------|----------|  
     |(既定)|REG_SZ|(値が設定されていません)|  
     |クラス|REG_SZ|CustomDP.CustomDirectiveProcessor|  

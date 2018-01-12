@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 368540b909536523515ea610e509b22600628f81
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f9d04da421b3b59609269b4f91a487d22adc80e3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ux-essentials-for-visual-studio"></a>Visual Studio の UX Essentials
 ## <a name="best-practices"></a>ベスト プラクティス  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="2-use-the-environment-service-for-fonts-and-colors"></a>2.フォントと色の環境のサービスを使用します。  
   
--   UI は、現在を考慮する必要があります[環境フォント](fonts-and-formatting-for-visual-studio.md)カスタマイズのオプション ダイアログ ボックスに、[フォントおよび色] ページでは、公開される場合を除きを設定します。  
+-   UI は、現在を考慮する必要があります[環境フォント](fonts-and-formatting-for-visual-studio.md)カスタマイズのオプションダイアログ ボックスに、[フォントおよび色] ページでは、公開される場合を除きを設定します。  
   
 -   UI 要素を使用する必要があります、 [VSColor サービス](colors-and-styling-for-visual-studio.md)環境のトークンや機能に固有のトークンを使用して共有します。  
   

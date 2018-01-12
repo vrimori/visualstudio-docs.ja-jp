@@ -20,11 +20,12 @@ caps.latest.revision: "61"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: f0b99b4a4bcfbec58c23e529e3ee250ca19554ab
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: e6ffb17164bf49cb585d9fd67dd99c833a805411
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>シナリオ: 視覚化およびモデリングを使用したデザインの変更
 ソフトウェア システムがユーザーのニーズを確実に満たすようにするには、Visual Studio の視覚化およびモデリング ツールを使用します。
@@ -82,10 +83,10 @@ ms.lasthandoff: 10/27/2017
   
 ||**ユーザー要求のモデリング**|**ビジネス プロセスのモデリング**|**システムのアーキテクチャと設計**|**コードの視覚化と精査**|**検証**|  
 |------|------------------------------------|-----------------------------------|--------------------------------------|------------------------------------------|----------------------|  
-|ドメイン固有言語 (DSL) 図|はい|はい|はい|||  
-|依存関係図、レイヤー検証|||はい|はい|はい|  
-|コード マップ|||はい|はい|はい|  
-|クラス デザイナー (コード ベース)||||はい||  
+|ドメイン固有言語 (DSL) 図|[はい]|はい|[はい]|||  
+|依存関係図、レイヤー検証|||[はい]|はい|[はい]|  
+|コード マップ|||[はい]|はい|[はい]|  
+|クラス デザイナー (コード ベース)||||[はい]||  
   
 依存関係図を描画するには、既存のソリューションまたは新しいダッシュ ボードの一部としてモデリング プロジェクトを作成する必要があります。 これらの図はモデリング プロジェクト内に生成する必要があります。
 依存関係図の項目が、モデリング プロジェクト内にあるが、共通モデルには格納されません。 コードから作成されたコード マップおよび .NET クラス図は、モデリング プロジェクトに含まれません。  
@@ -486,7 +487,7 @@ ms.lasthandoff: 10/27/2017
 |------------------|---------------|  
 |**フォーラム**|-   [Visual Studio の視覚化ツールとモデリング ツール](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio の視覚化およびモデリング SDK (DSL ツール)](http://go.microsoft.com/fwlink/?LinkId=184721)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コードを視覚化します。](../modeling/visualize-code.md)   
  [モデルを使用して、開発工程で](../modeling/use-models-in-your-development-process.md)   
  [アジャイル開発モデルを使用してください。](http://msdn.microsoft.com/en-us/592ac27c-3d3e-454a-9c38-b76658ed137f)   

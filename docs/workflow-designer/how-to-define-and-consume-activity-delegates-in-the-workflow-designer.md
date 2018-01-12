@@ -10,18 +10,19 @@ ms.assetid: c68e42ad-3ec0-4c2d-b104-fe36c6d83b5e
 caps.latest.revision: "3"
 ms.author: sdanie
 manager: erikre
-ms.openlocfilehash: 106ef4e7ca41fc181cc305f99e5abfce2abd825e
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 47bca660b28c82b870946fb436b92c13a5aab485
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-and-consume-activity-delegates-in-the-workflow-designer"></a>ワークフロー デザイナーでアクティビティ デリゲートを定義および使用する方法
 [!INCLUDE[net_v45](../ide/includes/net_v45_md.md)] には、すぐに使用できる <xref:System.Activities.Statements.InvokeDelegate> アクティビティの新しいデザイナーが用意されています。 このデザイナーを使用すると、<xref:System.Activities.ActivityDelegate> や <xref:System.Activities.ActivityAction> など、<xref:System.Activities.ActivityFunc%601> から派生するアクティビティにデリゲートを割り当てることができます。  
   
 ### <a name="define-an-activity-delegate"></a>アクティビティ デリゲートの定義  
   
-1.  [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]**ファイル**、**新規**、**プロジェクト**です。 選択、**ワークフロー** 、左側のノードと**ワークフロー コンソール アプリケーション**右側のテンプレートです。 (必要な場合)、プロジェクトの名前を指定し、をクリックして**Ok**です。  
+1.  [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] で、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順に選択します。 選択、**ワークフロー** 、左側のノードと**ワークフロー コンソール アプリケーション**右側のテンプレートです。 (必要な場合)、プロジェクトの名前を指定し、をクリックして**Ok**です。  
   
 2.  プロジェクトを右クリックして**ソリューション エクスプ ローラー**選択**追加**、**新しい項目の追加.**.選択、**ワークフロー** 、左側のノードと**アクティビティ**右側のテンプレートです。 新しいアクティビティの名前を付けます**MyForEach.xaml**  をクリック**Ok**です。 ワークフロー デザイナーでアクティビティが開かれます。  
   

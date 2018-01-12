@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 422dd91a5b8e22bb9859d8ffa10160bdbe77a021
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 1071db6a7a8205ef337737473a18d1a6c31af43c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugger-user-interface-xslt"></a>デバッガー ユーザー インターフェイス (XSLT)
 このトピックでは、デバッガーのウィンドウとダイアログ ボックスについて説明します。 ここでは、XSLT 固有のデバッグ動作を行うユーザー インターフェイスについてのみ説明します。  
@@ -26,10 +27,10 @@ ms.lasthandoff: 11/02/2017
 ## <a name="locals-window"></a>ローカル ウィンドウ  
  [ローカル] ウィンドウには、スタイル シートで定義されているすべての変数に関する情報が表示されます。 [ローカル] ウィンドウには、次の 3 列の情報が含まれています。  
   
- **名前**  
+ **Name**  
  この列には、現在のスコープに存在するすべてのローカル変数の名前が含まれています。 ノード セットには、ドリル ダウンするとサブフォルダーを表示できるツリー コントロールがあります。  
   
- **値**  
+ **[値]**  
  この列には、各変数に格納されている値が表示されます。 属性、処理命令、コメント、テキスト、および CDATA のノードについては、ノードのテキスト値が表示されます。 名前空間ノードについては、名前空間 URI が表示されます。  
   
  **Type**  
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/02/2017
   
  詳細については、[する方法: [逆アセンブル] ウィンドウを使用して](../debugger/how-to-use-the-disassembly-window.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XSLT のデバッグ](../xml-tools/debugging-xslt.md)   
  [デバッガーの基本事項](../debugger/debugger-basics.md)   
- [自動変数 内の変数と Visual Studio の [ローカル] ウィンドウを調べる](../debugger/autos-and-locals-windows.md)
+ [自動変数内の変数と Visual Studio の [ローカル] ウィンドウを調べる](../debugger/autos-and-locals-windows.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7856f8fac7e986f3e5383fa91261de39fe815a28
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 164a450ca346fe2bd7b267d951ce522d27f14160
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="images-and-icons-for-visual-studio"></a>イメージと Visual Studio のアイコン
 ##  <a name="BKMK_ImageUseInVisualStudio"></a>Visual Studio でのイメージの使用  
@@ -100,7 +101,7 @@ ms.lasthandoff: 10/31/2017
 |||  
 |-|-|  
 |**正しい ツリー ビュー アイコン**|**正しくない ツリー ビュー アイコン**|  
-|![正しい [ツリー ビュー] アイコン &#40;1&#41;](../../extensibility/ux-guidelines/media/0404-11_treeviewcorrect1.png "0404 11_TreeViewCorrect1") ![ツリー ビュー アイコン &#40;2"&"#41 です修正](../../extensibility/ux-guidelines/media/0404-12_treeviewcorrect2.png "0404 12_TreeViewCorrect2")|![正しくない [ツリー ビュー] アイコン &#40;1&#41;](../../extensibility/ux-guidelines/media/0404-13_treeviewincorrect1.png "0404 13_TreeViewIncorrect1") ![正しくないツリー ビュー アイコン (&) #40 です 2 &#41;](../../extensibility/ux-guidelines/media/0404-14_treeviewincorrect2.png "0404 14_TreeViewIncorrect2")|  
+|![正しい [ツリー ビュー] アイコン &#40;1&#41;] (../../extensibility/ux-guidelines/media/0404-11_treeviewcorrect1.png "0404 11_TreeViewCorrect1") ![ツリー ビューアイコン &#40;2"&"#41 です修正]。(../../extensibility/ux-guidelines/media/0404-12_treeviewcorrect2.png "0404 12_TreeViewCorrect2")|![正しくない [ツリー ビュー] アイコン &#40;1&#41;] (../../extensibility/ux-guidelines/media/0404-13_treeviewincorrect1.png "0404 13_TreeViewIncorrect1") ![正しくないツリー ビューアイコン (&) #40 です 2 &#41;] 。(../../extensibility/ux-guidelines/media/0404-14_treeviewincorrect2.png "0404 14_TreeViewIncorrect2")|  
   
 ### <a name="style-details"></a>スタイルの詳細  
   
@@ -271,7 +272,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="base-palette"></a>基本パレット  
  すべての標準的なアイコンには、3 つの基本色が含まれています。 アイコンは、グラデーションを含んでいないか、ドロップ シャドウ、3 D ツール アイコンの 1 つまたは 2 つの例外を許可します。  
   
-|使用方法|名前|値 (明るいテーマ)|見本|例|  
+|使用法|name|値 (明るいテーマ)|見本|例|  
 |-----------|----------|---------------------------|------------|-------------|  
 |バック グラウンド/ダークグレー|VS BG|424242 / 66,66,66|![見本 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|![基本パレットの例](../../extensibility/ux-guidelines/media/0405-02_basepaletteexample.png "0405 02_BasePaletteExample")|  
 |フォア グラウンド/低負荷|VS FG|F0EFF1 240,239,241/|![見本f0eff1](../../extensibility/ux-guidelines/media/0405_f0eff1.png "0405_F0EFF1")||  
@@ -284,14 +285,14 @@ ms.lasthandoff: 10/31/2017
 #### <a name="action-modifiers"></a>操作の修飾子  
  次の 4 つの色は、操作の修飾子で必要なアクションの種類を示します。  
   
-|使用方法|名前|値 (すべてのテーマ)|見本|  
+|使用法|name|値 (すべてのテーマ)|見本|  
 |-----------|----------|--------------------------|------------|  
 |正|VS アクション緑|388A34 56,138,52/|![見本 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
 |負|VS アクション赤|A1260D 161,38,13/|![見本 A1260D](../../extensibility/ux-guidelines/media/0405_a1260d.png "0405_A1260D")|  
 |ニュートラル|VS アクション青|00539 C 0,83,156/|![見本 00539c](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
 |/新規作成|VS アクション オレンジ色|C27D1A 194,156,26/|![見本c27d1a](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|  
   
-##### <a name="examples"></a>例  
+##### <a name="examples"></a>使用例  
  緑を「追加」のような正の値の操作の修飾子の使用が「実行」"、"と「検証します」。  
   
 |||||  
@@ -327,14 +328,14 @@ ms.lasthandoff: 10/31/2017
   
 #### <a name="folder"></a>フォルダー  
   
-|使用方法|名前|値 (すべてのテーマ)|見本|例|  
+|使用法|name|値 (すべてのテーマ)|見本|例|  
 |-----------|----------|--------------------------|------------|-------------|  
 |フォルダー|フォルダー|DCB67A 220,182,122/|![見本 DCB67A](../../extensibility/ux-guidelines/media/0405_dcb67a.png "0405_DCB67A")|![フォルダーの色のアイコン](../../extensibility/ux-guidelines/media/0405-23_foldercolor.png "0405 23_FolderColor")|  
   
 #### <a name="visual-studio-languages"></a>Visual Studio の言語  
  一般的な言語または Visual Studio で使用可能なプラットフォームには、関連付けられている色があります。 [基本] アイコンまたは複合アイコンの右上隅に表示される言語修飾子で、これらの色が使用されます。  
   
-|使用方法|名前|値 (すべてのテーマ)|見本|  
+|使用法|name|値 (すべてのテーマ)|見本|  
 |-----------|----------|--------------------------|------------|  
 |ASP では、HTML、WPF|ASP HTML WPF 青|0095D 7 0,149,215/|![見本 0095d7](../../extensibility/ux-guidelines/media/0405_0096d7.png "0405_0096D7")|  
 |C++|CPP 紫|9B4F96 155,79,150/|![見本 9B4F96](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|  
@@ -356,12 +357,12 @@ ms.lasthandoff: 10/31/2017
 #### <a name="intellisense"></a>IntelliSense  
  IntelliSense アイコンは、排他的なカラー パレットを使用します。 これらの色は、IntelliSense のポップアップ リスト内の別の項目の間で簡単に見分けるやすくために使用されます。  
   
-|使用方法|名前|値 (すべてのテーマ)|見本|  
+|使用法|name|値 (すべてのテーマ)|見本|  
 |-----------|----------|--------------------------|------------|  
 |イベント クラス|VS アクション オレンジ色|C27D1A 194,125,26/|![見本c27d1a](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|  
 |拡張メソッド、メソッド、モジュール、デリゲート|VS アクション紫|652 D 90 101,45,144/|![見本 652d90](../../extensibility/ux-guidelines/media/0405_652d90.png "0405_652D90")|  
 |インターフェイスのフィールド、列挙型項目、マクロ、構造体、共用体の値の型、演算子、|VS アクション青|00539 C 0,83,156/|![見本 00539c](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
-|オブジェクト|VS アクション緑|388A34 56,138,52/|![見本 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
+|Object|VS アクション緑|388A34 56,138,52/|![見本 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
 |定数、例外、列挙型項目、マップ、マップ項目、Namespace、テンプレート、種類の定義|バック グラウンド (VS BG)|424242 / 66,66,66|![見本 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|  
   
 ##### <a name="examples-of-intellisense-icons"></a>IntelliSense アイコンの例  
@@ -369,12 +370,12 @@ ms.lasthandoff: 10/31/2017
 ||||||  
 |-|-|-|-|-|  
 |![IntelliSense クラスのアイコン](../../extensibility/ux-guidelines/media/0405-36_intellisenseclass.png "0405 36_IntelliSenseClass")<br />クラス|![IntelliSense プライベート イベント アイコン](../../extensibility/ux-guidelines/media/0405-37_intellisenseprivateevent.png "0405 37_IntelliSensePrivateEvent")<br />プライベート イベント|![IntelliSense デリゲートのアイコン](../../extensibility/ux-guidelines/media/0405-38_intellisensedelegate.png "0405 38_IntelliSenseDelegate")<br />Delegate|![IntelliSense メソッド フレンドのアイコン](../../extensibility/ux-guidelines/media/0405-39_intellisensemethodfriend.png "0405 39_IntelliSenseMethodFriend")<br />メソッドのフレンド|![フィールド アイコン](../../extensibility/ux-guidelines/media/0405-40_field.png "0405 40_Field")<br />フィールド|  
-|![IntelliSense には、列挙型項目のアイコンが保護されている](../../extensibility/ux-guidelines/media/0405-41_intellisenseprotectedenumitem.png "0405 41_IntelliSenseProtectedEnumItem")<br />保護された列挙型項目|![IntelliSense オブジェクト アイコン](../../extensibility/ux-guidelines/media/0405-42_intellisenseobject.png "0405 42_IntelliSenseObject")<br />オブジェクト|![IntelliSense テンプレートのアイコン](../../extensibility/ux-guidelines/media/0405-43_intellisensetemplate.png "0405 43_IntelliSenseTemplate")<br />テンプレート|![IntelliSense の例外のショートカット アイコン](../../extensibility/ux-guidelines/media/0405-44_intellisenseexceptionshortcut.png "0405 44_IntelliSenseExceptionShortcut")<br />例外のショートカット||  
+|![IntelliSense には、列挙型項目のアイコンが保護されている](../../extensibility/ux-guidelines/media/0405-41_intellisenseprotectedenumitem.png "0405 41_IntelliSenseProtectedEnumItem")<br />保護された列挙型項目|![IntelliSense オブジェクト アイコン](../../extensibility/ux-guidelines/media/0405-42_intellisenseobject.png "0405 42_IntelliSenseObject")<br />Object|![IntelliSense テンプレートのアイコン](../../extensibility/ux-guidelines/media/0405-43_intellisensetemplate.png "0405 43_IntelliSenseTemplate")<br />テンプレート|![IntelliSense の例外のショートカット アイコン](../../extensibility/ux-guidelines/media/0405-44_intellisenseexceptionshortcut.png "0405 44_IntelliSenseExceptionShortcut")<br />例外のショートカット||  
   
 ### <a name="notifications"></a>通知  
  Visual Studio での通知は、ステータスを示すために使用されます。 通知パレットは、次の 4 つの色と黒と白の前景の塗りつぶしのオプションを使用して、次の状態レベルでの通知を定義します。  
   
-|使用方法|名前|値 (すべてのテーマ)|見本|  
+|使用法|name|値 (すべてのテーマ)|見本|  
 |-----------|----------|--------------------------|------------|  
 |状態: ニュートラル|通知の青 (VS 青)|1BA1E2 27,161,226/|![見本 1BA1E2](../../extensibility/ux-guidelines/media/0405_1ba1e2.png "0405_1BA1E2")|  
 |状態: 正の値|通知の緑 (VS 緑)|339933 / 51,153,51|![見本 339933](../../extensibility/ux-guidelines/media/0405_339933.png "0405_339933")|  
@@ -387,12 +388,12 @@ ms.lasthandoff: 10/31/2017
   
 |||||  
 |-|-|-|-|  
-|![警告アイコン](../../extensibility/ux-guidelines/media/0405-45_alert.png "0405 45_Alert")<br />警告|![警告アイコン](../../extensibility/ux-guidelines/media/0405-48_warning.png "0405 48_Warning")<br />警告|![[完了] アイコン](../../extensibility/ux-guidelines/media/0405-46_complete.png "0405 46_Complete")<br />完了しました|![停止アイコン](../../extensibility/ux-guidelines/media/0405-47_stop.png "0405 47_Stop")<br />停止|  
+|![警告アイコン](../../extensibility/ux-guidelines/media/0405-45_alert.png "0405 45_Alert")<br />警告|![警告アイコン](../../extensibility/ux-guidelines/media/0405-48_warning.png "0405 48_Warning")<br />警告|![[完了] アイコン](../../extensibility/ux-guidelines/media/0405-46_complete.png "0405 46_Complete")<br />完了|![停止アイコン](../../extensibility/ux-guidelines/media/0405-47_stop.png "0405 47_Stop")<br />停止|  
   
 ### <a name="visual-studio-online"></a>Visual Studio Online  
  一般に、Visual Studio Online の機能で構成ブラウザーでホストします。 色は、さまざまな環境で異なりますが、スタイルは変わりません。  
   
-|グループ化|使用方法|名前|値 (すべてのテーマ)|見本|  
+|グループ化|使用法|name|値 (すべてのテーマ)|見本|  
 |-----------|-----------|----------|--------------------------|------------|  
 |TFS|背景|TFSO BG|656565/ 101, 101, 101|![見本 656565](../../extensibility/ux-guidelines/media/0405_656565.png "0405_656565")|  
 |TFS|アウトライン|OUT TFSO|FFFFFF/255, 255, 255|![見本 FFFFFF](../../extensibility/ux-guidelines/media/0405_ffffff.png "0405_FFFFFF")|  

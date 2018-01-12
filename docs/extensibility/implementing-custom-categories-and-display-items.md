@@ -15,11 +15,12 @@ caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f03dbae8b320161705c50da06d605cfc335074cc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2dedd54aa1db26e38b6f212c616bd38c09018961
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-custom-categories-and-display-items"></a>カスタム カテゴリと 表示項目を実装します。
 VSPackage が提供できるフォントのコントロールおよびそのテキストの色、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) でカスタムのカテゴリとアイテムを表示します。  
@@ -54,7 +55,7 @@ VSPackage が提供できるフォントのコントロールおよびそのテ�
   
 -   2 つの値を使用してレジストリを設定します。  
   
-    |名前|型|データ|説明|  
+    |name|型|データ|説明|  
     |----------|----------|----------|-----------------|  
     |カテゴリ|REG_SZ|GUID|GUID は、カテゴリを識別するために作成します。|  
     |Package|REG_SZ|GUID|カテゴリをサポートする VSPackage サービスの GUID です。|  
@@ -69,7 +70,7 @@ VSPackage が提供できるフォントのコントロールおよびそのテ�
   
 -   2 つの値を使用してレジストリを設定します。  
   
-    |名前|型|データ|説明|  
+    |name|型|データ|説明|  
     |----------|----------|----------|-----------------|  
     |カテゴリ|REG_SZ|GUID|グループを識別する GUID が作成されます。|  
     |Package|REG_SZ|GUID|カテゴリをサポートするサービスの GUID です。|  
@@ -116,7 +117,7 @@ VSPackage が提供できるフォントのコントロールおよびそのテ�
   
      IDE は、次のユーザーの変更の適切なメソッドを呼び出して、**フォントおよび色**ページ。 たとえば、呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents.OnFontChanged%2A>メソッドの場合は、新しいフォントを選択します。  
   
-     または  
+     - または -  
   
 -   IDE の変更をポーリングしています。  
   
@@ -125,7 +126,7 @@ VSPackage が提供できるフォントのコントロールおよびそのテ�
     > [!NOTE]
     >  確実にポーリングによって取得される結果が正しく使用することができます、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorCacheManager>インターフェイスの取得方法を呼び出す前に、キャッシュのフラッシュと更新プログラムが必要なかどうかを決定する、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>インターフェイスです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents>   

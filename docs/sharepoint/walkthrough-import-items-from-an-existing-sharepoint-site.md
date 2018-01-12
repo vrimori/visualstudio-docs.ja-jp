@@ -15,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - SharePoint development in Visual Studio, importing items
 - importing items [SharePoint development in Visual Studio]
-ms.assetid: faac3309-88d7-4fb2-8392-feda07fc00e5
-caps.latest.revision: "21"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 602615426a8aeca118f6faba65e21778136b0ce6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: b9d1bcc72bd22e7c528b2a3d8752d15b7005fea5
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-import-items-from-an-existing-sharepoint-site"></a>チュートリアル: 既存の SharePoint サイトからのアイテムのインポート
   このチュートリアルに既存の SharePoint サイトからアイテムをインポートする方法を示します、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint プロジェクト。  
@@ -146,7 +145,7 @@ ms.lasthandoff: 10/31/2017
   
      最初の SharePoint サイトからインポートしたカスタムのサイト内の列が一覧に表示されることに注意してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [既存の SharePoint サイトからアイテムをインポートします。](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   
  [Web パーツまたはアプリケーション ページの再利用できるコントロールの作成](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)  

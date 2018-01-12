@@ -13,11 +13,12 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 645546f373582bb0a81d7ab23df1a467b27f8e47
-ms.sourcegitcommit: 64c7682ec3a2cbea684e716803398d4278b591d1
-ms.translationtype: HT
+ms.workload: multiple
+ms.openlocfilehash: a09e0c54f1d7f0e49f08ddf65afbeb030a7087f1
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="learn-to-debug-using-visual-studio"></a>Visual Studio を使用してデバッグする方法を学習します。
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 12/15/2017
 
 |         |         |
 |---------|---------|
-| ![ビデオを見る](../install/media/video-icon.png "WatchVideo") | [ビデオを見る](#video)のデバッグに関する同様の手順を表示します。 |
+|  ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る")  |    [ビデオを見る](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171)のデバッグに関する同様の手順を表示します。 |
 
 デモ アプリが必要な場合は、c# を使用しての機能は、C++、Visual Basic、JavaScript、および (場合を除き) Visual Studio でサポートされるその他の言語に適用されます。
 
@@ -78,7 +79,7 @@ ms.lasthandoff: 12/15/2017
 
 ## <a name="restart-your-app-quickly"></a>アプリを迅速に再起動します。
 
-1. をクリックして、**再起動**![アプリの再起動](../debugger/media/dbg-tour-restart.png "RestartApp") (Ctrl + Shift + f5 キーを押して) デバッグ ツールバーのボタンをクリックします。
+1. をクリックして、**再起動**![アプリの再起動](../debugger/media/dbg-tour-restart.png "RestartApp") (Ctrl + Shift + f5 キーを押して) デバッグツールバーのボタンをクリックします。
 
     押すと**再起動**時間、アプリを停止してデバッガーを再起動すると保存されます。 デバッガーは、最初のコードを実行してヒットしたブレークポイントで一時停止します。
 
@@ -278,12 +279,6 @@ ms.lasthandoff: 12/15/2017
 3. F5 キーを押して、アプリを続行します。
 
 デバッガーの機能の詳細については、次を参照してください。[デバッガー ヒントとテクニック](../debugger/debugger-tips-and-tricks.md)です。
-
-## <a name="video"></a>デバッグに関するビデオを見る
-
-<div style="padding-top: 56.25%; position: relative; width: 100%;">
-<iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171" frameborder="0" allowfullscreen></iframe>
-</div>
 
 ## <a name="see-also"></a>関連項目
 

@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1d474374a0c7603bc9b6995783bbed96c81c8907
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: vssdk
+ms.openlocfilehash: 068b71a78149bb1c52e28bc47245d0dc888496bc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 機能拡張の変更
 
@@ -73,7 +74,7 @@ Visual Studio の設定マネージャーを使用して、Visual Studio プロ�
     "culture"="neutral"
     "version"=15.0.0.0
     ```
-    実行時に、Visual Studio pkgdef サブシステムがマージされます ([VSAPPDATA]\devenv.exe.config) Visual Studio プロセスのランタイム構成ファイルにこれらのエントリとして[ `<codeBase>` ](https://msdn.microsoft.com/en-us/library/efs781xb(v=vs.110).aspx)要素。 これは、パスがプローブによる検索しないため、Visual Studio プロセスが、アセンブリを検索することをお勧めします。
+    実行時に、Visual Studio pkgdef サブシステムがマージされます ([VSAPPDATA]\devenv.exe.config) Visual Studio プロセスのランタイム構成ファイルにこれらのエントリとして[`<codeBase>`](https://msdn.microsoft.com/en-us/library/efs781xb(v=vs.110).aspx)要素。 これは、パスがプローブによる検索しないため、Visual Studio プロセスが、アセンブリを検索することをお勧めします。
 
 ### <a name="reacting-to-this-breaking-change"></a>この重要な変更に反応します。
 

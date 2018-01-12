@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b0019a0687370ac328fe78f57f1d26e661eb214a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 555fd622f5655a69ba77f3905a39635e01831c76
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-text-and-help-for-visual-studio"></a>UI テキストと Visual Studio のヘルプ
 ##  <a name="BKMK_UITextAndTerminology"></a>UI テキストと用語  
@@ -124,7 +125,7 @@ ms.lasthandoff: 10/31/2017
      そうです：  
      "な価格オプションの Windows Azure モバイル サービスで利用できるか。"  
   
--   使用しないで* をクリックしています.*リンク テキスト。  
+-   使用しないで *をクリックしています.*リンク テキスト。  
   
 -   リンクの単語のみ"here"ことはありません。 これで、ハイパーリンク付きの単語のみを音声がスクリーン リーダーによって問題が発生します。  
   
@@ -427,7 +428,7 @@ public class HelpForm : Form
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio のフォントと書式](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md)   
  [Visual Studio のレイアウト](../../extensibility/ux-guidelines/layout-for-visual-studio.md)   
  [Visual Studio の通知と進行状況](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md)

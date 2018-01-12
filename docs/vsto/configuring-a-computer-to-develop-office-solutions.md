@@ -16,11 +16,12 @@ caps.latest.revision: "97"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2d3e0b354375d6116a1bcc0cc2b0d69ecc2f16b5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
-ms.translationtype: MT
+ms.workload: office
+ms.openlocfilehash: c07a1ce1434f3ad5f3d8707a4fbaa89695d878f0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-a-computer-to-develop-office-solutions"></a>Office ソリューションを開発できるようにコンピューターを構成する
   Microsoft Office の VSTO アドインおよびカスタマイズを作成するには、Visual Studio、.NET Framework、Microsoft Office のサポートされているバージョンをインストールします。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/31/2017
   
  問題が解決しない場合は、「 [Additional Support for Errors in Office Solutions](../vsto/additional-support-for-errors-in-office-solutions.md)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [作業の開始 (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/getting-started-office-development-in-visual-studio.md)   
  [方法: Office ソリューションを開発コンピューターを構成します。](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)   
  [方法: for Office Runtime の再頒布可能パッケージ、Visual Studio Tools をインストール](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)   

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: db8a6cd6832b2fa427cea539bc03add5d330e06e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7a9d9331e8767c4d815a6f62b7952414ced966d0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="spy-toolbar"></a>Spy++ ツール バー
 Spy++ のメニュー バーで、ツールバーが表示されます。 ツールバーを非表示、**ビュー**  メニューのをクリックして**ツールバー**です。  
@@ -37,13 +38,13 @@ Spy++ のメニュー バーで、ツールバーが表示されます。 ツー
 |![スパイ &#43; #43 です。ログのオプション ボタン](../debugger/media/icon_spy--_logoptions.gif "Icon_Spy:operator++ _LogOptions")|表示、[メッセージ オプション](../debugger/message-options-dialog-box.md) ダイアログ ボックス。 Windows を選択し、メッセージの種類を表示するには、このダイアログ ボックスを使用します。 このコントロールは、使用可能な場合にのみ、**メッセージ**ウィンドウがアクティブなウィンドウ。|  
 |![スパイ &#43; #43 です。[ログ] ボタンをオフに](../debugger/media/spy--_clearlog.gif "スパイ:operator++ _ClearLog")|作業中の内容を消去**メッセージ**ウィンドウです。 このコントロールは、使用可能な場合にのみ、**メッセージ**ウィンドウがアクティブなウィンドウ。|  
 |![スパイ &#43; #43 です。検索ウィンドウ ボタン](../debugger/media/icon_spy--_findwindow.gif "Icon_Spy:operator++ _FindWindow")|開く、[ウィンドウ検索](../debugger/find-window-dialog-box.md) ダイアログ ボックスは、ウィンドウの検索条件を設定し、プロパティまたはメッセージを表示することができます。 詳細については、次を参照してください。[する方法: ファインダー ツールを使用して](../debugger/how-to-use-the-finder-tool.md)です。|  
-|![[スパイ &#43; #43 です。最初のウィンドウ] ボタンを見つける](../debugger/media/icon_spy--_window.gif "Icon_Spy:operator++ _Window")|一致するウィンドウ、プロセス、スレッド、またはメッセージの現在のビューを検索します。|  
-|![[スパイ &#43; #43 です。[次へ] のウィンドウ] ボタンを見つける](../debugger/media/icon_spy--_nextwindow.gif "Icon_Spy:operator++ _NextWindow")|[次へ] の一致するウィンドウ、プロセス、スレッド、またはメッセージの現在のビューを検索します。 このコントロール (および関連するメニュー コマンド) は一意ではない有効な検索結果がある場合にのみ使用できます。 たとえば、ウィンドウ ハンドルをウィンドウのツリーの検索条件として使用する場合が生成されます一意の結果をそのハンドルを持つウィンドウのツリーに 1 つのウィンドウがあるためこのインスタンスで**次を検索**は使用できません。|  
-|![[スパイ &#43; #43 です。前のウィンドウ] ボタンを見つける](../debugger/media/icon_spy--_prevwindow.gif "Icon_Spy:operator++ _PrevWindow")|前の一致するウィンドウ、プロセス、スレッド、またはメッセージの現在のビューを検索します。 このコントロール (および関連するメニュー コマンド) は一意ではない有効な検索結果がある場合にのみ使用できます。 たとえば、ウィンドウ ハンドルをウィンドウのツリーの検索条件として使用する場合が生成されます一意の結果をそのハンドルを持つウィンドウのツリーに 1 つのウィンドウがあるためこのインスタンスで**前を検索**は使用できません。|  
-|![[スパイ &#43; #43 です。プロパティ エクスプ ローラー] ボタン](../debugger/media/icon_spy--_propexp.gif "Icon_Spy:operator++ _PropExp")|ウィンドウ ビューで選択されているウィンドウのプロパティを表示します。|  
+|![スパイ &#43; #43 です。最初のウィンドウ ボタンを見つける](../debugger/media/icon_spy--_window.gif "Icon_Spy:operator++ _Window")|一致するウィンドウ、プロセス、スレッド、またはメッセージの現在のビューを検索します。|  
+|![スパイ &#43; #43 です。[次へ] のウィンドウボタンを見つける](../debugger/media/icon_spy--_nextwindow.gif "Icon_Spy:operator++ _NextWindow")|[次へ] の一致するウィンドウ、プロセス、スレッド、またはメッセージの現在のビューを検索します。 このコントロール (および関連するメニュー コマンド) は一意ではない有効な検索結果がある場合にのみ使用できます。 たとえば、ウィンドウ ハンドルをウィンドウのツリーの検索条件として使用する場合が生成されます一意の結果をそのハンドルを持つウィンドウのツリーに 1 つのウィンドウがあるためこのインスタンスで**次を検索**は使用できません。|  
+|![スパイ &#43; #43 です。前のウィンドウ ボタンを見つける](../debugger/media/icon_spy--_prevwindow.gif "Icon_Spy:operator++ _PrevWindow")|前の一致するウィンドウ、プロセス、スレッド、またはメッセージの現在のビューを検索します。 このコントロール (および関連するメニュー コマンド) は一意ではない有効な検索結果がある場合にのみ使用できます。 たとえば、ウィンドウ ハンドルをウィンドウのツリーの検索条件として使用する場合が生成されます一意の結果をそのハンドルを持つウィンドウのツリーに 1 つのウィンドウがあるためこのインスタンスで**前を検索**は使用できません。|  
+|![スパイ &#43; #43 です。プロパティ エクスプ ローラー ボタン](../debugger/media/icon_spy--_propexp.gif "Icon_Spy:operator++ _PropExp")|ウィンドウ ビューで選択されているウィンドウのプロパティを表示します。|  
 |![スパイ &#43; #43 です。[更新] ボタン](../debugger/media/icon_spy--_refresh.gif "Icon_Spy:operator++ _Refresh")|システム ビューを更新します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Spy++ の使用](../debugger/using-spy-increment.md)   
  [Spy++ ビュー](../debugger/spy-increment-views.md)   
  [Spy++ リファレンス](../debugger/spy-increment-reference.md)

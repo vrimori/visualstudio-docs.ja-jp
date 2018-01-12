@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ea335ef6bcb2a27b4312c613062be0d365711cbc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c1f6f990bb33ddbc1d7591fa3ab9837f472f8418
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccdirdiff-function"></a>SccDirDiff 関数
 この関数は、クライアントのディスク上の現在のローカル ディレクトリとソース管理下にある対応するプロジェクトの違いを表示します。  
@@ -46,7 +47,7 @@ SCCRTN SccDirDiff(
  [in]視覚的な違いを表示する対象のローカル ディレクトリへの完全修飾パス。  
   
  dwFlags  
- [in]コマンドのフラグ (「解説」を参照してください セクション)。  
+ [in]コマンドのフラグ (「解説」を参照してくださいセクション)。  
   
  pvOptions  
  [in]ソース管理プラグインに固有のオプションです。  
@@ -54,7 +55,7 @@ SCCRTN SccDirDiff(
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|ディスク上のディレクトリでは、ソース コード管理で、プロジェクトと同じです。|  
 |SCC_I_FILESDIFFER|ディスク上のディレクトリは、ソース コード管理で、プロジェクトと異なります。|  
@@ -81,5 +82,5 @@ SCCRTN SccDirDiff(
 > [!NOTE]
 >  この関数と同じコマンド フラグを使用して、 [SccDiff](../extensibility/sccdiff-function.md)です。 ただし、ソース管理プラグインはディレクトリの"クイック diff"操作をサポートしないようにできます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f7dc04752b034f666dfcb1d72b500f2c12f54fba
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 91707d75ca71ae7e035322c8a9c25ab6e4befe43
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="new-project-generation-under-the-hood-part-two"></a>新しいプロジェクトの生成: フードの第 2 部します。
 [新しいプロジェクトの生成: 短縮、パート 1](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md)見た方法、**新しいプロジェクト** ダイアログ ボックスが表示されます。 選択したと仮定、 **Visual c# の Windows アプリケーション**、情報を入力した、**名前**と**場所**テキスト ボックス、および [ok] のクリックしました。  
@@ -64,7 +65,7 @@ namespace Simple
 }  
 ```  
   
- テンプレート パラメーターの完全な一覧を参照してください。[テンプレート パラメーター](../../ide/template-parameters.md)です。  
+ テンプレート パラメーターの完全な一覧については、「[テンプレート パラメーター](../../ide/template-parameters.md)」をご覧ください。  
   
 ## <a name="a-look-inside-a-vstemplate-file"></a>内側、します。VSTemplate ファイル  
  基本的な .vstemplate ファイルが次の形式  
@@ -156,6 +157,6 @@ namespace Simple
 </ItemGroup>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [新しいプロジェクトの生成: 内部、パート 1](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md)  
  [MSBuild](../../msbuild/msbuild.md)

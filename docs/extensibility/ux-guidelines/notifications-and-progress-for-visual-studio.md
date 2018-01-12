@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0d16ed0f58929a6559812261c3443b3561375205
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0721d0080ec135a8e969cc420dfbb51e81ac4454
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="notifications-and-progress-for-visual-studio"></a>通知および Visual Studio の進行状況
 ##  <a name="BKMK_NotificationSystems"></a>通知システム  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="choosing-the-right-method"></a>適切なメソッドを選択します。  
  この表を使用すると、メッセージのユーザーに通知する正しい方法を選択する際に役立ちます。  
   
-|メソッド|用途|使用しないでください。|  
+|メソッド|使用|使用しないでください。|  
 |------------|---------|----------------|  
 |[モーダル エラー メッセージ ダイアログ ボックス](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_ModalErrorMessageDialogs)|続行する前にユーザーからの応答が必要な場合に使用します。|ユーザーをブロックし、そのフローが中断する必要がない場合に使用しないでください。 関与レベルが低く、別の方法でメッセージを表示することである場合は、モーダル ダイアログ ボックスを使用しないでください。|  
 |[IDE ステータス バー](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_IDEStatusBar)|プロセスの状態に関するアンビエント テキスト情報がある場合に使用します。|単独で使用しません。 最適な別のフィードバック メカニズムと組み合わせて使用します。|  
@@ -487,7 +488,7 @@ public interface IVsInfoBarUIEvents
   
  ![「必須」のラベルを持つ検証をフィールド](../../extensibility/ux-guidelines/media/0905-02_fieldvalidationrequired.png "0905 02_FieldValidationRequired")  
   
- プログラムでは、コントロールの状態を判断できます*に入力された無効なコンテンツ*か別のコントロールにフォーカスを移動した場合、ユーザーが [OK] のコミット ボタンをクリックしたときか、ユーザーが文書またはフォームを保存するときにします。  
+ プログラムでは、コントロールの状態を判断できます*に入力された無効なコンテンツ*か別のコントロールにフォーカスを移動した場合、ユーザーが [OK] のコミットボタンをクリックしたときか、ユーザーが文書またはフォームを保存するときにします。  
   
  無効なコンテンツの状態が確認された場合、コントロールの内部、または同様の横にアイコンが表示されます。 アイコンまたはコントロールのいずれかのホバー時のエラーを説明するツールヒントが表示されます。 さらに、無効な状態を作成しているコントロールの周囲に 1 ピクセルの境界線を表示します。  
   
