@@ -12,15 +12,16 @@ caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: ba0106ad8a820556ed4c8f7aaed915f532f8c824
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 1215c075c1c38bb742f799948929d2f301750555
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="python-web-project-templates"></a>Python Web プロジェクト テンプレート
 
-Visual Studio の Python は、さまざまなフレームワークを処理するように構成できるプロジェクト テンプレートとデバッグ ランチャーにより、Bottle、Flask、Django などのフレームワークでの Web プロジェクトの開発をサポートします。 Pyramid などの他のフレームワークには、汎用の "Web プロジェクト" テンプレートを使用できます。
+Visual Studio の Python は、さまざまなフレームワークを処理するように構成できるプロジェクト テンプレートとデバッグ ランチャーにより、Bottle、Flask、Django などのフレームワークでの Web プロジェクトの開発をサポートします。 Pyramid などの他のフレームワークには、汎用の **Web プロジェクト** テンプレートを使用できます。
 
 Visual Studio には、フレームワーク自体は含まれません。 プロジェクトを右クリックして **[Python] > [Install/upgrade framework...]\(フレームワークのインストール/アップグレード...\)** を選択して別途フレームワークをインストールする必要があります。
 
@@ -36,7 +37,7 @@ Bottle、Flask、Django の各テンプレートには、いくつかのペー�
 
 Microsoft Azure App Service にデプロイする場合は、Python のバージョンとして[サイト拡張機能](https://aka.ms/PythonOnAppService)を選び、パッケージを手動でインストールします。 また、Azure App Service は、Visual Studio からデプロイされるときに `requirements.txt` ファイルからパッケージを自動的にインストール**しない**ため、[aka.ms/PythonOnAppService](https://aka.ms/PythonOnAppService) の構成の詳細に従ってください。
 
-Microsoft Azure クラウド サービスは `requirements.txt` ファイルをサポート "*します*"。 詳しくは、[Azure クラウド サービス プロジェクト](template-azure-cloud-service.md)に関する記事をご覧ください。
+Microsoft Azure Cloud Services は `requirements.txt` ファイルをサポート*します*。 詳しくは、[Azure クラウド サービス プロジェクト](template-azure-cloud-service.md)に関する記事をご覧ください。
 
 ## <a name="debugging"></a>デバッグ
 
@@ -62,12 +63,12 @@ MSBuild 構文を使用して任意のプロジェクト プロパティまた�
 > [!Note]
 > **[Run Server Command (サーバー コマンドの実行)]** の値は、**[デバッグ] > [サーバーを起動します]** コマンドまたは Ctrl+F5 で使用されます。**[Debug Server Command (サーバー コマンドのデバッグ)]** グループは、**[デバッグ] > [Start Debug Server (デバッグ サーバーの起動)]** コマンドまたは F5 キーをで使用されます。
 
-
 ### <a name="sample-bottle-configuration"></a>サンプルの Bottle 構成
 
-Bottle Web プロジェクト テンプレートには、必要な構成を実行する定型コードが含まれています。 ただし、インポートされた bottle アプリにはこのコードが含まれていない場合があります、その場合、次の設定はインストールされた `bottle` モジュールを使用してアプリを起動します。
+**Bottle Web プロジェクト** テンプレートには、必要な構成を実行する定型コードが含まれています。 ただし、インポートされた bottle アプリにはこのコードが含まれていない場合があります、その場合、次の設定はインストールされた `bottle` モジュールを使用してアプリを起動します。
 
 - **[Run Server Command (サーバー コマンドの実行)]** グループ:
+
     - **[コマンド]**: `bottle` (モジュール)
     - **[引数]**: `--bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
 
@@ -82,6 +83,7 @@ Bottle Web プロジェクト テンプレートには、必要な構成を実�
 Pyramid アプリは、現在、`pcreate` コマンドライン ツールを使用して作成するのが最適です。 アプリが作成されたら、[From Existing Python Code (既存の Python コードから)](python-projects.md#creating-a-project-from-existing-files) テンプレートを使用してインポートできます。 その後、**[汎用 Web プロジェクト]** カスタマイズを選択してオプションを構成します。 これらの設定は、Pyramid が `..\env` にある仮想環境にインストールされていることを想定しています。
 
 - **[デバッグ]** グループ:
+
     - **[サーバー ポート]**: 6543 (または .ini ファイルで構成されているポート)
 
 - **[Run Server Command (サーバー コマンドの実行)]** グループ:
@@ -94,7 +96,6 @@ Pyramid アプリは、現在、`pcreate` コマンドライン ツールを使�
 
 > [!Tip]
 > Pyramid アプリは通常はソース ツリーの最上部より 1 ディレクトリ レベル深いため、プロジェクトの **[作業ディレクトリ]** プロパティを構成することが必要な場合があります。
-
 
 ### <a name="other-configurations"></a>その他の構成
 
@@ -168,6 +169,6 @@ Azure App Service にデプロイされた場合、サイトは Microsoft IIS �
 
 ![発行構成の変更](media/template-web-publish-config.png)
 
-**[Microsoft Azure クラウド サービス プロジェクトに変換]** コマンド (下図) は、クラウド サービス プロジェクトをソリューションに追加します。 このプロジェクトには、使用する仮想マシンとサービスのデプロイ設定と構成が含まれています。 クラウド プロジェクトで **[発行]** コマンドを使用して、クラウド サービスにデプロイします。Python プロジェクトの **[発行]** コマンドでは、引き続き Web サイトにデプロイされます。 詳しくは、[Azure クラウド サービス プロジェクト](template-azure-cloud-service.md)に関する記事をご覧ください。
+**[Microsoft Azure クラウド サービス プロジェクトに変換]** コマンド (下図) は、クラウド サービス プロジェクトをソリューションに追加します。 このプロジェクトには、使用する仮想マシンとサービスのデプロイ設定と構成が含まれています。 クラウド プロジェクトで **[発行]** コマンドを使用して、Cloud Services にデプロイします。Python プロジェクトの **[発行]** コマンドでは、引き続き Web サイトにデプロイされます。 詳しくは、[Azure クラウド サービス プロジェクト](template-azure-cloud-service.md)に関する記事をご覧ください。
 
-![[Microsoft Azure クラウド サービス プロジェクトに変換]コマンド](media/template-web-convert-menu.png)
+![[Microsoft Azure クラウド サービス プロジェクトに変換] コマンド](media/template-web-convert-menu.png)

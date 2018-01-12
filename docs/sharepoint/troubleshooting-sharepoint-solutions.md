@@ -97,7 +97,7 @@ ms.lasthandoff: 01/10/2018
  フィールドのソース XML の形式が間違っている場合、有効な XML ファイルでない場合、またはその他の問題がある場合、"ファイルを解析できません" エラーが発生します。  
   
 ## <a name="new-non-english-site-definitions-do-not-appear-in-site-creation-page-after-deployment"></a>英語以外の新しいサイト定義が配置後にサイトの作成ページに表示されない  
- 英語以外のバージョンを使用してサイト定義を展開して作成した後に[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)](ロケールでのバージョンは、 [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] 1033 以外) では、 **SharePoint のカスタマイズ**タブが表示されず、 **テンプレートの選択**ボックスと、新しいサイト テンプレートに表示されない、**新しい SharePoint サイト**ページ。  
+ 英語以外のバージョンを使用してサイト定義を展開して作成した後に[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] (ロケールでのバージョンは、 [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] 1033 以外) では、 **SharePoint のカスタマイズ**タブが表示されず、 **テンプレートの選択**ボックスと、新しいサイト テンプレートに表示されない、**新しい SharePoint サイト**ページ。  
   
 ### <a name="error-message"></a>エラー メッセージ  
  なし。  
