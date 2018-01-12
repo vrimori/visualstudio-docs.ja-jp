@@ -32,11 +32,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 6ca076ef20ad8751619a715721c6423b5211bc3f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 28126f9c832f55d63bd1b477599cf83ac8a57d59
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>実行中のプロセスへのアタッチ
 ローカルまたはリモート コンピューターで実行中のプロセスに、Visual Studio デバッガーをアタッチできます。 プロセスを実行した後にをクリックして**デバッグ > プロセスにアタッチする**(またはキーを押して**CTRL + ALT + P**) を開くには、**プロセスにアタッチする** ダイアログ ボックス。
@@ -147,10 +147,7 @@ ms.lasthandoff: 12/22/2017
 |サーバー プロセスでその他のサポートされているアプリの種類をデバッグします。|(リモート サーバーの場合)、リモート ツールを使用し、プロセスにアタッチします。|iexplore.exe または他のプロセス|必要に応じて、タスク マネージャーを使用して、プロセスの特定に役立ちます。 参照してください[リモート デバッグ](../debugger/remote-debugging.md)と以降のセクションでは、このトピックの内容|
 |Windows デスクトップ アプリのリモート デバッグ|リモート ツールと f5 キーを押します|N/A| 参照してください[リモート デバッグ](../debugger/remote-debugging.md)|
 |リモート デバッグ ユニバーサル (UWP)、OneCore、HoloLens や IoT アプリ|インストールされているアプリ パッケージをデバッグします。|N/A|参照してください[インストール済みのアプリ パッケージをデバッグ](debug-installed-app-package.md)を使用せずに**プロセスにアタッチします。**|
-|Visual Studio から起動していない、ユニバーサル Windows アプリ (UWP)、OneCore、HoloLens や IoT アプリをデバッグします。|インストールされているアプリ パッケージをデバッグします。|N/A|参照してください[インストール済みのアプリ パッケージをデバッグ](debug-installed-app-package.md)を使用せずに**プロセスにアタッチします。**|
-  
-> [!WARNING]
->  JavaScript で記述された UWP に接続するにまずそのアプリに対してデバッグを有効にする必要があります。 参照してください[デバッガーをアタッチ](../debugger/start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md#BKMK_Attach_the_debugger)Windows デベロッパー センターにします。  
+|Visual Studio から起動していない、ユニバーサル Windows アプリ (UWP)、OneCore、HoloLens や IoT アプリをデバッグします。|インストールされているアプリ パッケージをデバッグします。|N/A|参照してください[インストール済みのアプリ パッケージをデバッグ](debug-installed-app-package.md)を使用せずに**プロセスにアタッチします。**|  
   
 > [!NOTE]
 >  C++ で記述されたコードにデバッガーをアタッチするには、コードが `DebuggableAttribute`を生成する必要があります。 [/ASSEMBLYDEBUG](/cpp/build/reference/assemblydebug-add-debuggableattribute) リンカー オプションを使ってリンクすると、これを自動的にコードに追加できます。

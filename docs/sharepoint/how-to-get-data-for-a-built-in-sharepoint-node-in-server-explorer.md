@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - SharePoint Connections [SharePoint development in Visual Studio], extending a node
 - SharePoint development in Visual Studio, extending SharePoint Connections node in Server Explorer
-ms.assetid: 86d04e0a-c114-427e-9945-da5fa339fda4
-caps.latest.revision: "7"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: fa518bf566671dda2b54489fa37460840365bc70
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: cf70fe2e24f88ba64ab648d18d93907de0ddbfaf
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer"></a>方法: サーバー エクスプローラーの組み込みの SharePoint ノードのデータを取得する
   組み込みの SharePoint ノードごとに**サーバー エクスプ ローラー**ノードが表す基になる SharePoint コンポーネントのデータを取得することができます。 詳細については、次を参照してください。[サーバー エクスプ ローラーで SharePoint 接続 ノードを拡張する](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)です。  

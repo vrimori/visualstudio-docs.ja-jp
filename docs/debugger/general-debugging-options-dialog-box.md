@@ -25,11 +25,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: bf693d7a5339e57edeaed82c25ed552901e1ea51
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.openlocfilehash: c7f6983c2be5604867f729ed006eadb5257c3a43
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="general-debugging-options-dialog-box"></a>[全般] ([オプション] ダイアログ ボックス - [デバッグ])
 **ツール > オプション > デバッグ > 全般** ページでは、次のオプションを設定できます。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/04/2018
     変数ウィンドウでオブジェクトを評価するときに文字列変換呼び出しを暗黙的に実行します。 したがって、結果は型名ではなく、文字列として表示されます。 C# コードのデバッグ時にのみ適用されます。 この設定は、DebuggerDisplay 属性によってオーバーライドされる可能性があります (を参照してください[DebuggerDisplay 属性を使用して](../debugger/using-the-debuggerdisplay-attribute.md))。  
   
 **ソース サーバー サポートを有効にします。**  
-SRCSRV (`srcsrv.dll`) プロトコルを実装するソース サーバーからソース ファイルを取得するように Visual Studio デバッガーに指示します。 このプロトコルを実装する 2 つのソース サーバーは Team Foundation Server と Debugging Tools for Windows です。 SrcSrv のセットアップの詳細については、次を参照してください。、 [SrcSrv](hhttps://msdn.microsoft.com/en-us/library/windows/hardware/ff558791(v=vs.85).aspx)ドキュメント。 さらを参照してください[指定シンボル (.pdb) とソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)です。  
+SRCSRV (`srcsrv.dll`) プロトコルを実装するソース サーバーからソース ファイルを取得するように Visual Studio デバッガーに指示します。 このプロトコルを実装する 2 つのソース サーバーは Team Foundation Server と Debugging Tools for Windows です。 SrcSrv のセットアップの詳細については、次を参照してください。、 [SrcSrv](https://msdn.microsoft.com/library/windows/hardware/ff558791(v=vs.85).aspx)ドキュメント。 さらを参照してください[指定シンボル (.pdb) とソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)です。  
   
 > [!IMPORTANT]
 >  .pdb ファイルを読み取ることでそのファイル内の任意のコードを実行できるため、サーバーが信頼されていることを確認してください。  

@@ -18,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - SharePoint development in Visual Studio, workflows
 - workflows [SharePoint development in Visual Studio]
-ms.assetid: 81756490-ab5a-4fa4-96c6-eed2cfbf8374
-caps.latest.revision: "28"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: dc016efd3d0a3525f733929c294946bf9376417b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 687116b1fc7f3ad935583b41ff9c19d2d5d13613
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-creating-and-debugging-a-sharepoint-workflow-solution"></a>チュートリアル : SharePoint ワークフロー ソリューションの作成とデバッグ
   このチュートリアルでは、基本的なシーケンシャル ワークフロー テンプレートを作成する方法を示します。 ワークフローでは、ドキュメントが確認されていないかどうかを決定する共有ドキュメント ライブラリのプロパティを確認します。 ドキュメントをレビューすると、ワークフローが終了します。  

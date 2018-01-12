@@ -18,11 +18,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: d4a64f9463650941fe8d645a1a6b92376277f0b6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a3fbe1b7c138f24167e587109fbb5f524b6b9019
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="run-uwp-and-windows-81-apps-in-the-simulator"></a>シミュレーターでの UWP と Windows 8.1 アプリの実行
 UWP と Windows 8.1 アプリの Visual Studio シミュレーターは、UWP または Windows 8.1 アプリをシミュレートするデスクトップ アプリケーションです。 実行することができます、物理的な画面サイズと解像度をエミュレートするために、アプリケーションを選択します。 一般的なタッチと回転イベントのシミュレーションや、ネットワーク接続のプロパティをシミュレートすることができますも。

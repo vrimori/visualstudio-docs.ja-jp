@@ -18,17 +18,15 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], multiple Ribbons
 - toolbars [Office development in Visual Studio]
 - custom Ribbon, multiple Ribbons
-ms.assetid: 2bdef092-190d-47e3-9440-e862b95dacaa
-caps.latest.revision: "64"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: fcf026af4877ee2aefe17551763752d385b63493
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b7effa41d667a33d43159df4688403321f24eeea
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="ribbon-overview"></a>リボンの概要
   リボンは、関連するコマンドを見つけやすいように整理するための手段です。 コマンドは、コントロールとしてリボンに表示されます。 コントロールがまとめ*グループ*アプリケーション ウィンドウの上端に水平方向のストリップに沿ったです。 関連するグループは、タブに整理されます。  

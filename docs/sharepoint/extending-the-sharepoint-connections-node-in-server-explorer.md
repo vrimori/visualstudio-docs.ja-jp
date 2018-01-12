@@ -14,17 +14,15 @@ helpviewer_keywords:
 - SharePoint Connections [SharePoint development in Visual Studio], extending a node
 - SharePoint development in Visual Studio, extending SharePoint Connections node in Server Explorer
 - SharePoint Connections [SharePoint development in Visual Studio], creating a new node type
-ms.assetid: 8bfa5950-0ef4-4417-9538-cc8a5a1c35e2
-caps.latest.revision: "27"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: fe9fb4a12d45cf5d713fb76fe3fe04e1346a8355
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 879d34828e4619ac9a538f9db7cf1acef7b830b0
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="extending-the-sharepoint-connections-node-in-server-explorer"></a>サーバー エクスプローラーの [SharePoint 接続] ノードの拡張
   使用して Visual Studio で、開発用コンピューターでローカルの SharePoint サイトに接続できる、 **SharePoint 接続**内のノード、**サーバー エクスプ ローラー**ウィンドウです。 このノードでは、階層ツリー ビューで、ローカルの SharePoint サイトのコンポーネントの多くを表示します。 たとえば、ローカル サイトには、リスト、ドキュメント ライブラリ、およびコンテンツの種類を表示できます。 使用しての詳細については**サーバー エクスプ ローラー**ローカルの SharePoint サイトに接続するを参照してください。[参照 SharePoint 接続を使用してサーバー エクスプ ローラー](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)です。  

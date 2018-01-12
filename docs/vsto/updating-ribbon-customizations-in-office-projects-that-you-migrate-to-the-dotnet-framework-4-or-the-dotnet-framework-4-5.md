@@ -11,17 +11,15 @@ dev_langs:
 - VB
 - CSharp
 helpviewer_keywords: Office projects [Office development in Visual Studio], migrating to .NET Framework 4
-ms.assetid: 3b7c8ad4-a616-4b42-9d62-9658fdefe6a3
-caps.latest.revision: "18"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: d2c7dfef925ff61255e57315a3980fa6a145c235
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4d3c2e834b3a618bf033ef7f37ca8bbac7d0efcf
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="updating-ribbon-customizations-in-office-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトのリボンのカスタマイズの更新
   リボンのカスタマイズを使用して作成されたが、プロジェクトに含まれているかどうか、**リボン (ビジュアル デザイナー)**プロジェクト項目、ターゲット フレームワークに変更する場合、プロジェクト コードに、次の変更を行う必要があります、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]またはあとで。  

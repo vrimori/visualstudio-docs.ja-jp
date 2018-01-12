@@ -15,17 +15,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, reusable workflows
 - importing items [SharePoint development in Visual Studio]
 - reusable workflows [SharePoint development in Visual Studio]
-ms.assetid: 851043dd-ecbe-49ab-b5b7-5ea7b699df12
-caps.latest.revision: "13"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 9f0ba8bdd5e599fadc98519d54a3015abf91f013
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a79f277c5cecead23def256e16b8fd69c64b2d36
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="guidelines-for-importing-reusable-workflows"></a>再利用可能なワークフローをインポートするためのガイドライン
   SharePoint Designer で作成された再利用可能なワークフローをインポートするには、再利用可能な SharePoint 2010 ワークフローのインポート プロジェクト テンプレートを使用[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 このテンプレートをインポート、*宣言**ワークフロー* ([!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]-のみ) に変換します、*コード ワークフロー*、いずれかで強化するため、ワークフローであります。[!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]または[!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)]コード。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)][チュートリアル: SharePoint Designer の再利用可能なワークフローを Visual Studio にインポート](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md)です。  

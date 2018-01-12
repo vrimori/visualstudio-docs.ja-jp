@@ -19,11 +19,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: 70e0ab429f6359e8bb50a83307e9e042e0bfa4b0
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: 4a62f02d98ed06df4a3eea1b3f253f5e91ff7115
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-while-debugging-uwp-apps-in-visual-studio"></a>トリガーする方法を中断、再開、および Visual Studio での UWP アプリのデバッグ中にバック グラウンド イベント
 デバッグが行われていないときは、Windows の **プロセス継続時間管理** (PLM) によってアプリの実行状態 (ユーザー アクションに応じたアプリの開始、中断、再開、および終了) とデバイスの状態が管理されます。 デバッグが行われているとき、これらのアクティブ化イベントは Windows によって無効にされます。 このトピックでは、デバッガーでこれらのイベントを発生させる方法について説明します。  
@@ -109,7 +109,7 @@ ms.lasthandoff: 01/05/2018
      ![中断、再開、終了、およびバック グラウンド タスク](../debugger/media/dbg_suspendresumebackground.png "DBG_SuspendResumeBackground")  
   
 ##  <a name="BKMK_Trigger_Process_Lifetime_Management_events_and_background_tasks_from_an_installed_app"></a> インストール済みのアプリからプロセス継続時間管理イベントとバックグラウンド タスクをトリガーする  
- [インストールされているアプリケーション パッケージのデバッグ] ダイアログ ボックスを使用して、既にインストールされているアプリをデバッガーに読み込みます。 たとえば、Microsoft ストアからインストールされたアプリをデバッグまたはを確認したら、アプリのソース ファイルが、アプリの Visual Studio プロジェクトではなく、アプリをデバッグする可能性があります。 [インストールされているアプリケーション パッケージのデバッグ] ダイアログ ボックスを使用すると、Visual Studio のコンピューターまたはリモート デバイスで、アプリをデバッグ モードで起動できます。また、アプリを起動せずにデバッグ モードで実行するように設定することもできます。 詳細については、 **JavaScript** バージョンまたは、 [Visual C++、Visual C#、Visual Basic](../debugger/start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md#BKMK_Start_an_installed_app_in_the_debugger) バージョンの「 [デバッグ セッションを開始する方法](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md#BKMK_Start_an_installed_app_in_the_debugger) 」の「 **デバッガーでインストール済みのアプリを起動する** 」を参照してください。  
+ [インストールされているアプリケーション パッケージのデバッグ] ダイアログ ボックスを使用して、既にインストールされているアプリをデバッガーに読み込みます。 たとえば、Microsoft ストアからインストールされたアプリをデバッグまたはを確認したら、アプリのソース ファイルが、アプリの Visual Studio プロジェクトではなく、アプリをデバッグする可能性があります。 [インストールされているアプリケーション パッケージのデバッグ] ダイアログ ボックスを使用すると、Visual Studio のコンピューターまたはリモート デバイスで、アプリをデバッグ モードで起動できます。また、アプリを起動せずにデバッグ モードで実行するように設定することもできます。 参照してください、**デバッガーでインストール済みのアプリを起動**のセクション[UWP アプリのデバッグ セッションを開始](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md#BKMK_Start_an_installed_app_in_the_debugger)です。
   
  アプリをデバッガーに読み込んだら、前の各手順を使用できます。  
   

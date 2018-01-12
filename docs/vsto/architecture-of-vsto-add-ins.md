@@ -16,17 +16,15 @@ helpviewer_keywords:
 - vstoee.dll
 - application-level add-ins [Office development in Visual Studio], architecture
 - add-ins [Office development in Visual Studio], architecture
-ms.assetid: 978f102f-15c6-44e4-84e8-80b161408324
-caps.latest.revision: "70"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: a4dbe8611da0814bfaa148b2d9c4caf7f7858d9d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a8abb77978731a9fa5cd43acdcb4928944c605b1
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="architecture-of-vsto-add-ins"></a>VSTO アドインのアーキテクチャ
   Visual Studio の Office Developer Tools を使用して作成される VSTO アドインには、安定性とセキュリティを重視するアーキテクチャ上の特性があり、Microsoft Office と密接に連携させることができます。 このトピックでは、VSTO アドインの次の点について説明します。  

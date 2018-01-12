@@ -11,17 +11,15 @@ f1_keywords: VSTO.NewFormRegionWizard.OFSPropertyError
 dev_langs:
 - VB
 - CSharp
-ms.assetid: ca9e2ec1-df96-45ca-9611-cec47edfe1e4
-caps.latest.revision: "8"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: ca816a635abf929f2bfa1614f4560f434adbfd45
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6ab0b36921911ac8c70501096868f47a40371f79
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="one-or-more-properties-in-the-ofs-file-are-not-valid-for-the-message-class-selected"></a>.ofs ファイルの 1 つ以上のプロパティが、選択されたメッセージ クラスに対して有効ではありません
   このエラーは、Outlook でデザインしたフォーム領域をインポートする場合に、フォーム領域の 1 つ以上のフィールドが、 **新しいフォーム領域** ウィザードの最後のページで選択するメッセージ クラスと互換性がないときに発生します。  

@@ -20,11 +20,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: dotnet
-ms.openlocfilehash: 959622dff7770d314dc5fa2da1e8a81ade34cac4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6546e58139b4c427f6bbc4343faf64bdd655b63e
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="remote-debugging-a-c-or-visual-basic-project-in-visual-studio"></a>リモート Visual Studio での c# または Visual Basic プロジェクトのデバッグ
 別のコンピューターに配置されている Visual Studio アプリケーションをデバッグするをインストール、アプリの展開先コンピューターでリモート ツールを実行、Visual Studio からリモート コンピューターに接続するようにプロジェクトを構成して、アプリを実行します。
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 > プロキシを介して接続されている 2 台のコンピューター間でのデバッグはサポートされていません。 国の間での待機時間の長いまたはダイヤルアップ、インターネットなどの低帯域幅接続またはインターネット経由でのデバッグはお勧めしませんが失敗することも非常に遅くします。
   
-## <a name="download-and-install-the-remote-tools"></a>リモート ツールのダウンロードおよびインストール
+## <a name="download-and-install-the-remote-tools"></a>ダウンロードして、リモート ツールのインストール
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 

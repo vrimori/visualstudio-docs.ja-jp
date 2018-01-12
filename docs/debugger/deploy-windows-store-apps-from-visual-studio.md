@@ -18,11 +18,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: 359431356bb06a04857b93e10996a2123c80f129
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 95f009ca761d4d978fb5e5a9323722e5dfc34cb8
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>Visual Studio からの UWP アプリを配置します。
 ![Windows にのみ適用されます](../debugger/media/windows_only_content.png "windows_only_content")  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/22/2017
 Windows 10 のリモート デバイスを有効にする必要があります[開発者モード](/windows/uwp/get-started/enable-your-device-for-development)です。 作成者の更新プログラムを実行している Windows 10 デバイス上または後で、リモート ツールが自動的にインストールされているアプリを展開するときにします。 詳細については、次を参照してください。[インストール済みのアプリ パッケージをデバッグ](../debugger/debug-installed-app-package.md)です。
 
 > [!NOTE]
-> Windows 8.1 および Windows 10 のより前の作成者の更新プログラムのバージョンでは、リモート デバイスで、Visual Studio リモート ツールをインストールする必要があり、リモート デバッガーを実行する必要があります。 Windows 8.1 に開発者用ライセンスをインストールすることも必要があります。
+> Windows 8.1 および Windows 10 のより前の作成者の更新プログラムのバージョンでは、リモート デバイスで、Remote Tools for Visual Studio をインストールする必要があり、リモート デバッガーを実行する必要があります。 Windows 8.1 に開発者用ライセンスをインストールすることも必要があります。
   
 配置では、リモート デバッガーのネットワーク チャネルを使用して、アプリのファイルをリモート デバイスに送信します。  
   
@@ -101,7 +101,7 @@ Windows 10 のリモート デバイスを有効にする必要があります[�
  次の配置オプションを、スタートアップ プロジェクトのデバッグ プロパティ ページに設定できます。  
   
  **ネットワーク ループバックの許可**  
- セキュリティ上の理由から、標準的な方法でインストールされた [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリは、インストール先のデバイスに対してネットワーク呼び出しを行うことはできません。 既定では、Visual Studio による配置では、配置されたアプリに対するこの規則の適用は免除されます。 この免除によって、1 台のコンピューター上で通信プロシージャをテストできます。 アプリを [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)]に送信する前に、アプリを適用除外せずにテストする必要があります。  
+ セキュリティ上の理由、UWP または[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]にインストールされているデバイスに対してネットワーク呼び出しを行う標準的な方法でインストールされているアプリが許可されていません。 既定では、Visual Studio による配置では、配置されたアプリに対するこの規則の適用は免除されます。 この免除によって、1 台のコンピューター上で通信プロシージャをテストできます。 アプリを [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)]に送信する前に、アプリを適用除外せずにテストする必要があります。  
   
  アプリからネットワーク ループバックの適用除外を削除するには  
   

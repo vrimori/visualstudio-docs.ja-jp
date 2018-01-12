@@ -18,17 +18,15 @@ helpviewer_keywords:
 - missing field [Office development in Visual Studio]
 - optional parameters [Office development in Visual Studio]
 - parameters [Office development in Visual Studio], optional
-ms.assetid: 109eaef6-08bb-4b59-a29e-921f856027cc
-caps.latest.revision: "43"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 3df07b6f60d4b870c830fc419b88decbe2f8fde1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fe40b6bc0af9df294408079c8a27dfac42df97b0
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="optional-parameters-in-office-solutions"></a>Office ソリューションの省略可能なパラメーター
   Microsoft Office アプリケーションのオブジェクト モデルに含まれるメソッドの多くは、省略可能なパラメーターを受け取ります。 Visual Studio で Visual Basic を使用して Office ソリューションを開発する場合は、省略可能なパラメーターに値を渡す必要はありません。省略したパラメーターに対しては自動的に既定値が使用されます。 ほとんどの場合は、Visual c# プロジェクトで省略可能なパラメーターも省略できます。 ただし、省略することはできませんと省略可能な**ref**のパラメーター、`ThisDocument`ドキュメント レベルの Word プロジェクトのクラスです。  

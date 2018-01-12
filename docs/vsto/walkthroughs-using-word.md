@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Word [Office development in Visual Studio], walkthroughs
 - walkthroughs [Office development in Visual Studio], Word
-ms.assetid: cacab406-ad82-48d1-94a4-8b59453ef261
-caps.latest.revision: "33"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 6973b2e99c2c2f8be6211c4a4c9cf7277c796440
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: dc3f207fea1d8572bbd6df00e92a57fd0939222a
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthroughs-using-word"></a>Word を使用したチュートリアル
   次のチュートリアルでは、ドキュメント レベルのカスタマイズと VSTO アドインを使用して Microsoft Office Word を自動化し、ユーザー インターフェイス (UI) をカスタマイズする方法について説明します。  

@@ -16,17 +16,15 @@ helpviewer_keywords:
 - sentences, selecting in documents
 - ranges, selecting in documents
 - ranges, defining in documents
-ms.assetid: 0727c1cb-d44c-4f1c-a699-4365dd13be5d
-caps.latest.revision: "46"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 22a894902a36aa12ff0962270391a2311ce40169
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0c99b40147d08a924b9f66a0f8a45a29204e37bc
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-define-and-select-ranges-in-documents"></a>方法: プログラムによって文書に複数の範囲を定義して選択する
   Microsoft Office Word 文書内に範囲を定義するには、<xref:Microsoft.Office.Interop.Word.Range> オブジェクトを使用します。 使用してなど、さまざまな方法で文書全体を選択することができます、<xref:Microsoft.Office.Interop.Word.Range.Select%2A>のメソッド、<xref:Microsoft.Office.Interop.Word.Range>オブジェクト、またはの Content プロパティを使用して、<xref:Microsoft.Office.Tools.Word.Document>クラス (ドキュメント レベルのカスタマイズ)、または<xref:Microsoft.Office.Interop.Word.Document>クラス (で、VSTO アドインの場合)。  

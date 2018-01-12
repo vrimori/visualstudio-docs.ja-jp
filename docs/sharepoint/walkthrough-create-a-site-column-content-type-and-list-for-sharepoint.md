@@ -21,17 +21,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, list instances
 - SharePoint development in Visual Studio, fields
 - SharePoint development in Visual Studio, content types
-ms.assetid: caebacc2-616c-4373-8e21-edc7979338e7
-caps.latest.revision: "54"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 59dafe640428059b4c6772f79a23d5f0ccceaac7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4db9ed078131e7152f3987c80f4e6181f888e540
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-create-a-site-column-content-type-and-list-for-sharepoint"></a>チュートリアル: SharePoint のサイト列、コンテンツ タイプ、およびリストの作成
   次の手順は、カスタムの SharePoint サイト列を作成する方法をデモンストレーション — または*フィールド*— だけでなく、サイト内の列を使用するコンテンツの種類。 新しいコンテンツの種類を使用するリストを作成する方法も示しています。  

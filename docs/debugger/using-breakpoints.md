@@ -38,11 +38,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 20f1b517d271bd50cdb96c595f2e8ab9be7c5e65
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 30eafe77ef4e115650f0871139e009e07fd6729b
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでブレークポイントを使用します。
 コードの変数の状態や呼び出し履歴の確認などのために、デバッガーの実行を停止するときにブレークポイントを設定できます。 ブレークポイントは、開発者が利用できる重要なデバッグ手法の 1 つです。  
@@ -232,7 +232,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="export-and-import-breakpoints"></a>ブレークポイントをエクスポートおよびインポートする  
  XML ファイルにブレークポイントをエクスポートするには、ブレークポイントを右クリックし、 **[エクスポート]**を選択します。 既定で、ファイルはソリューション ディレクティブに保存されます。 ブレークポイントをインポートするには、 **[ブレークポイント]** ウィンドウを開き (**CTRL + ALT + B**キー)、ツールバーの右向き矢印をクリックします (ツールヒントは **[ファイルからブレークポイントをインポートします]**です)。  
   
-## <a name="troubleshoot-breakpoints"></a>ブレークポイントをトラブルシューティングする  
+## <a name="troubleshoot"></a>ブレークポイントをトラブルシューティングします。 
   
 ### <a name="i-deleted-a-breakpoint-but-i-continue-to-hit-it-when-i-start-debugging-again"></a>ブレークポイントを削除したが、デバッグを再実行するとヒットし続ける  
  デバッグ中にブレークポイントを削除しても、場合によっては次にデバッグを開始したときにブレークポイントがヒットすることがあります。 このブレークポイントのヒットを停止するには、ブレークポイントのすべてのインスタンスが **[ブレークポイント]** ウィンドウから削除されていることを確認します。  

@@ -14,17 +14,15 @@ helpviewer_keywords:
 - projects [SharePoint development in Visual Studio], extending
 - SharePoint development in Visual Studio, extending projects
 - SharePoint projects, extending
-ms.assetid: 5547e2ed-47a3-48f1-9619-42149c03df76
-caps.latest.revision: "26"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 2ca99a5ad13989f29126b23a93055b174bb49150
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a03dd09525d29aaea31ef5c376814bd09747f90e
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-creating-a-sharepoint-project-extension"></a>チュートリアル: SharePoint プロジェクトの拡張機能の作成
   このチュートリアルでは、SharePoint プロジェクトの拡張機能を作成する方法について説明します。 プロジェクトの拡張機能を使用して、プロジェクトを追加、削除、または名前を変更する場合など、プロジェクト レベルのイベントに応答することができます。 カスタム プロパティを追加したり、プロパティ値が変更されたときに応答できます。 プロジェクト項目の拡張機能とは異なり、プロジェクトの拡張機能は、特定の SharePoint プロジェクトの種類に関連付けられてすることはできません。 任意の種類の SharePoint プロジェクトを開いたときに、拡張機能を読み込みますプロジェクトの拡張機能を作成するときに[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。  

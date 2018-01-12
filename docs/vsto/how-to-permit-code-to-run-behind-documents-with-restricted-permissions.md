@@ -17,17 +17,15 @@ helpviewer_keywords:
 - code [Office development in Visual Studio], running behind restricted documents
 - documents [Office development in Visual Studio], restricted permissions
 - Office documents [Office development in Visual Studio, restricted permissions
-ms.assetid: d037eae5-cf83-4be0-85ba-05e9f7d570e1
-caps.latest.revision: "27"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 2f3ff7f7bb76962e22705fc5c0d42fdf7568ff97
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 09336e72cc9e1e1bc0a407314d4fa9fd6bc2a2c9
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>方法 : アクセス許可が制限されたドキュメントでの分離コードの実行を許可する
   Microsoft Office の Information Rights Management (IRM) 機能を使用して、文書またはブックへのアクセス許可を制限することができます。 既定では、制限された Microsoft Office Word 文書または Microsoft Office Excel ブックのコードは実行できません。 既定値を変更するには、オブジェクト モデルにアクセスできる、マネージ コード拡張機能と、ソリューションが動作できるようにします。  

@@ -16,17 +16,15 @@ helpviewer_keywords:
 - displaying custom task panes in e-mail
 - e-mail [Office development in Visual Studio], custom task panes displayed in
 - custom task panes [Office development in Visual Studio], displaying with e-mail messages
-ms.assetid: 04943967-a7ef-4876-9584-84ada427e3f3
-caps.latest.revision: "59"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: c96744b433f4ad481e500420ffeab8caad3772c1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ad77a685f3100533f790ec6ae82cd11201128902
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook"></a>チュートリアル : Outlook で電子メール メッセージと共にカスタム作業ウィンドウを表示する
   このチュートリアルでは、作成した、または開いた電子メール メッセージごとに固有のカスタム作業ウィンドウのインスタンスを表示する方法を示します。 ユーザーは、各電子メール メッセージのリボンにあるボタンを使用して、カスタム作業ウィンドウを表示または非表示にすることができます。  

@@ -8,17 +8,15 @@ ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: SharePoint development in Visual Studio, extending deployment
-ms.assetid: 8e545873-3fed-46cf-a95f-27b5fc0d5f83
-caps.latest.revision: "14"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: c908262a0ff74bb8574fd76f788611165934375b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c3bbd5bc7d69fbc48d2c754151a3ec6b5fcb612c
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-handle-deployment-conflicts"></a>方法: 配置競合を処理する
   SharePoint プロジェクト項目の展開の競合を処理するコードを提供できます。 たとえば、現在のプロジェクト アイテム内のファイルが配置場所に既に存在し、現在のプロジェクト項目を展開する前に配置されたファイルを削除するかどうかが判断する場合もあります。 配置競合の詳細については、次を参照してください。[を拡張する SharePoint のパッケージ化と配置](../sharepoint/extending-sharepoint-packaging-and-deployment.md)です。  

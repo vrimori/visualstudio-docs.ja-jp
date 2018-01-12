@@ -14,17 +14,15 @@ helpviewer_keywords:
 - primary interop assemblies
 - assemblies [Office development in Visual Studio], primary interop assemblies
 - Office primary interop assemblies
-ms.assetid: aa29d12c-185f-4558-a7cd-3d85f924203d
-caps.latest.revision: "44"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: faef08b559a2e792630c03bcd09acf5122b9ddac
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 906100a572170f218a23b1887ab7fddee37251b9
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="office-primary-interop-assemblies"></a>Office プライマリ相互運用機能アセンブリ
   Office プロジェクトから Microsoft Office アプリケーションの機能を使用するには、アプリケーションのプライマリ相互運用機能アセンブリ (PIA: Primary Interop Assembly) を使用することが必要です。 PIA によって、Microsoft Office アプリケーションの COM ベースのオブジェクト モデルと対話するマネージ コードを作成できるようになります。  

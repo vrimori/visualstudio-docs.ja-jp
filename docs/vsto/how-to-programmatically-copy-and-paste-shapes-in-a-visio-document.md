@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - shapes [Office development in Visual Studio], copying and pasting Visio shapes
 - Visio [Office development in Visual Studio], copying and pasting Visio shapes
-ms.assetid: 762d95cf-2d5c-4dea-988b-8f4da88fa1f1
-caps.latest.revision: "15"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 5b1f3a402d4f39b3648bbcf577ff48a130625b50
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b3c5074c4d7979672a79b7d09749035af840e543
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-copy-and-paste-shapes-in-a-visio-document"></a>方法: Visio 図面の図形をプログラムによってコピーして貼り付ける
   プログラムを使用してドキュメントの 1 つのページ上の図形をコピーし、同じドキュメント内の新しいページに貼り付けることができます。 貼り付け先として、既定の場所 (アクティブ ウィンドウの中央)、または元のページと同じ座標位置を選択できます。  

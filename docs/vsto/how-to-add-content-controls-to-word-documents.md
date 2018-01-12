@@ -26,17 +26,15 @@ helpviewer_keywords:
 - ComboBoxContentControl, adding to documents
 - DatePickerContentControl, adding to documents
 - Word [Office development in Visual Studio], restricted permissions
-ms.assetid: 68ddb24e-71c6-46f7-8e11-c9899d7814df
-caps.latest.revision: "51"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 5f673d3a6752fda9256e7a71aff195dfa31fd933
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b1dd59fc777c012f92baaf96302f7cf031ad151c
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-add-content-controls-to-word-documents"></a>方法 : Word 文書にコンテンツ コントロールを追加する
   ドキュメント レベルの Word プロジェクトでは、デザイン時または実行時にプロジェクトの文書にコンテンツ コントロールを追加できます。 Word VSTO アドイン プロジェクトでは、実行時に任意の開いている文書にコンテンツ コントロールを追加できます。  

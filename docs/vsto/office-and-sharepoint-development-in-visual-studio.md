@@ -21,17 +21,15 @@ helpviewer_keywords:
 - programming [Office development in Visual Studio]
 - VSTO, see Office development in Visual Studio
 - Office, development with Visual Studio
-ms.assetid: 2ddec047-263a-4901-a54c-a15fc8472329
-caps.latest.revision: "88"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: db8c6e3363cf1a67dfef5f3dd606dd65ed6f7a94
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b0692b0320a8741351391f82b694089910bae4f8
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="office-and-sharepoint-development-in-visual-studio"></a>Visual Studio での Office および SharePoint 開発
   ユーザーが [Office ストア](https://store.office.com/) または組織のカタログからダウンロードする軽量なアプリやアドインを作成するか、ユーザーがコンピューターにインストールする .NET Framework ベースのソリューションを作成することによって、Microsoft Office および SharePoint を拡張できます。  

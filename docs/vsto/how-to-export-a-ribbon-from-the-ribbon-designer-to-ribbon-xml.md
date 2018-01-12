@@ -18,17 +18,15 @@ helpviewer_keywords:
 - XML [Office development in Visual Studio], Ribbon
 - Ribbon Designer [Office development in Visual Studio]
 - exporting Ribbon
-ms.assetid: 96e0e9ed-4392-4f45-ac33-b6f7c22ea321
-caps.latest.revision: "37"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: d7cbdf38b3debd7710ed036d008d52b8ef080d37
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 44aea70f386127b9a3e58a3fac38d516aac8113b
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>方法 : リボンをリボン デザイナーからリボン XML にエクスポートする
   **リボン (ビジュアル デザイナー)**項目がリボンのカスタマイズのすべての種類をサポートしていません。 高度な方法でリボンをカスタマイズするには、リボンをデザイナーからリボン XML にエクスポートし、XML を直接編集します。  

@@ -14,17 +14,15 @@ dev_langs:
 - VB
 - CSharp
 helpviewer_keywords: SharePoint development in Visual Studio, troubleshooting
-ms.assetid: d3c8a01c-8fac-40d0-bf9e-476901f1490a
-caps.latest.revision: "42"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 5454aa06d4256c6c5e9ee1a8aa9573377ce9abdb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6f03f8fd1fd5609f93d4fae22a7a694e61b1c80c
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="troubleshooting-sharepoint-solutions"></a>SharePoint ソリューションのトラブルシューティング
   以下の問題または警告は、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] デバッガーを使用して SharePoint ソリューションをデバッグするときに発生することがあります。 詳細については、次を参照してください。 [SharePoint 2007 ワークフロー ソリューションのデバッグ](http://msdn.microsoft.com/en-us/3a5392f3-66f3-48be-956e-02de23fa6247)です。
@@ -99,7 +97,7 @@ ms.lasthandoff: 12/22/2017
  フィールドのソース XML の形式が間違っている場合、有効な XML ファイルでない場合、またはその他の問題がある場合、"ファイルを解析できません" エラーが発生します。  
   
 ## <a name="new-non-english-site-definitions-do-not-appear-in-site-creation-page-after-deployment"></a>英語以外の新しいサイト定義が配置後にサイトの作成ページに表示されない  
- 英語以外のバージョンを使用してサイト定義を展開して作成した後に[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] (ロケールでのバージョンは、 [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] 1033 以外) では、 **SharePoint のカスタマイズ**タブが表示されず、 **テンプレートの選択**ボックスと、新しいサイト テンプレートに表示されない、**新しい SharePoint サイト**ページ。  
+ 英語以外のバージョンを使用してサイト定義を展開して作成した後に[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)](ロケールでのバージョンは、 [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] 1033 以外) では、 **SharePoint のカスタマイズ**タブが表示されず、 **テンプレートの選択**ボックスと、新しいサイト テンプレートに表示されない、**新しい SharePoint サイト**ページ。  
   
 ### <a name="error-message"></a>エラー メッセージ  
  なし。  

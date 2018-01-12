@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - SharePoint development in Visual Studio, importing items
 - importing items [SharePoint development in Visual Studio]
-ms.assetid: 8b446cca-2adb-457b-bbfd-891209290e80
-caps.latest.revision: "18"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 447fa8749958a3fa2b65a6ef7eb878b906170e6a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 07c3e9fb88ea562a85e1c7555d2c57cb04d769ff
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-import-a-master-page-or-theme"></a>方法: マスター ページまたはテーマをインポートする
   付与できるページ、SharePoint サイトで一貫した外観を作成し、マスター ページとテーマを使用します。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]これらの要素のテンプレートが用意されていませんが、SharePoint Designer で作成しにインポートできます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 詳細については、次を参照してください。[ビルディング ブロック: ページやユーザー インターフェイス](http://go.microsoft.com/fwlink/?LinkID=182095)、Microsoft web サイトです。  

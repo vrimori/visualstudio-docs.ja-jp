@@ -14,17 +14,15 @@ helpviewer_keywords:
 - Visual Studio, extending tools
 - SharePoint development in Visual Studio, extensibility object models
 - SharePoint development in Visual Studio, extending tools
-ms.assetid: aec8165b-dff9-47be-82a5-3fa38e579297
-caps.latest.revision: "55"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 3b8d869dab81273262d23b7aa905370f530b24c5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8eaa1f5d1cfe8120ec6a01c2fe7f646cf90be44a
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="overview-of-the-programming-model-of-sharepoint-tools-extensions"></a>SharePoint ツール拡張機能のプログラミング モデルの概要
   Visual Studio で SharePoint ツールの拡張機能を作成する場合、SharePoint ツールによって公開される 1 つ以上の機能拡張インターフェイスを実装することから始めます。 ほとんどの場合、SharePoint ツールによって提供される他の型も使用して、拡張機能で機能を実装します。 一部のシナリオでは、Visual Studio および SharePoint によって提供される他のオブジェクト モデルに含まれる型も使用します。 これらの各オブジェクト モデルの目的を理解し、互いに使用して SharePoint ツールの拡張機能を作成する方法を知っている必要があります。  

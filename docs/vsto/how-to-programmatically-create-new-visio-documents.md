@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Visio [Office development in Visual Studio], creating Visio documents
 - documents [Office development in Visual Studio], creating Visio documents
-ms.assetid: a0294d4c-be49-4cd0-b22e-3ec7568f3ec7
-caps.latest.revision: "22"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 3f96738d9e553ede2b74ebc118a2769b32926cba
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 072a279bd342f60f8ebfb307a880c39bdc8b2d51
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-create-new-visio-documents"></a>方法: プログラムによって新しい Visio 図面を作成する
   新しい Microsoft Office Visio 図面のドキュメントを作成するときに、開いている Visio 図面の Microsoft.Office.Interop.Visio.Documents コレクションに追加します。 その結果、Microsoft.Office.Interop.Visio.Documents.Add メソッドでは、新しい Visio 描画図面を作成します。 詳細については、 [Microsoft.Office.Interop.Visio.Documents.Add](http://msdn.microsoft.com/library/office/ff766868.aspx) メソッドの VBA リファレンス ドキュメントを参照してください。  

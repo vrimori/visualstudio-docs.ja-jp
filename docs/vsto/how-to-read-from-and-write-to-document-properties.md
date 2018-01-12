@@ -15,17 +15,15 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], properties
 - document properties [Office development in Visual Studio]
 - Excel [Office development in Visual Studio], document properties
-ms.assetid: e9ef9fa3-36b9-48fb-8148-f5152463c03c
-caps.latest.revision: "54"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: a484fdc9686e4454db801c2b6d503ae786b921f2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1e2ac54009872aa8886b201007b60ec329a40a39
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-read-from-and-write-to-document-properties"></a>方法 : ドキュメント プロパティの読み込みと書き込みを行う
   ドキュメント プロパティをドキュメントと共に保存できます。 Office アプリケーションには、作成者、タイトル、件名など、多数の組み込みプロパティが用意されています。 このトピックでは、Microsoft Office Excel および Microsoft Office Word でドキュメント プロパティを設定する方法について説明します。  

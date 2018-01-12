@@ -16,17 +16,15 @@ helpviewer_keywords:
 - Database field [Office development in Visual Studio]
 - data [Office development in Visual Studio], binding data
 - simple data binding [Office development in Visual Studio]
-ms.assetid: 6b8fd638-af13-4ea1-b1c0-2763e2d8ae23
-caps.latest.revision: "58"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 36053a8ef415e35f1244d0e379a49a46ea24f33d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 95029c946939bf0918e15034625ad31c1e5897b9
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>チュートリアル : ドキュメント レベルのプロジェクトでの単純データ バインディング
   このチュートリアルでは、ドキュメント レベルのプロジェクトでのデータ バインディングの基本について説明します。 SQL Server データベースの 1 つのデータ フィールドは、Microsoft Office Excel で名前付き範囲にバインドされています。 このチュートリアルでは、テーブル内のすべてのレコードをスクロールできるようにするコントロールを追加する方法も示します。  

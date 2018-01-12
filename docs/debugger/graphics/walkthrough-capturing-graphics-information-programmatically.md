@@ -13,11 +13,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 2bf34eda9c9957b8a989244da3f2fce03a5d151e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c84239c2f70a32558f64a299791db917926a8c44
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>チュートリアル: プログラムによるグラフィックス情報のキャプチャ
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のグラフィックス診断を使用すると、Direct3D アプリケーションからプログラムによってグラフィックス情報をキャプチャできます。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 -   グラフィックス情報をキャプチャする  
   
 > [!NOTE]
->  プログラムによるキャプチャの以前の実装では、Remote Tools for [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を利用してキャプチャ機能を提供していましたが、Windows 8.1 は Direct3D 11.2 によりキャプチャを直接サポートしています。 このため、Windows 8.1 でプログラムによるキャプチャを行うために Remote Tools をインストールする必要がなくなりました。  
+>  プログラムによるキャプチャの以前の実装に依存 Remote Tools for Visual Studio の[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]キャプチャ機能を提供するには、Windows 8.1 は、直接 direct 3 d 11.2 によりキャプチャをサポートしています。 その結果、Windows 8.1 でプログラムによるキャプチャの for Visual Studio リモート ツールをインストールする必要が不要になった。  
   
 ### <a name="preparing-your-app-to-use-programmatic-capture"></a>プログラムによるキャプチャを使用するためにアプリケーションを準備する  
  アプリケーションでプログラムによるキャプチャを使用するには、必要なヘッダーをインクルードすることが必要です。 これらのヘッダーは、Windows 8.1 の SDK の一部です。  
@@ -183,10 +183,10 @@ ms.lasthandoff: 12/22/2017
   
      この手順を実行しない場合、ファイル名は default.vsglog になります。 `DONT_SAVE_VSGLOG_TO_TEMP`を定義しないと、ファイルの場所は一時ディレクトリに対して相対的なものになります。それ以外の場合は、作業ディレクトリに対して相対的な場所になるか、または絶対的なファイル名を指定した場合は別の場所になります。  
   
- [!INCLUDE[win8_appname_long](../includes/win8_appname_long_md.md)]アプリでは、一時ディレクトリの場所は各ユーザーおよびアプリケーションに固有であり C:\users などの場所でよく見られる\\*username*\AppData\Local\Packages\\ *パッケージ ファミリ名*\TempState\\です。 デスクトップ アプリの場合、一時ディレクトリの場所は各ユーザー固有および C:\Users などの場所でよく見られる\\*username*\AppData\Local\Temp\\です。  
+ UWP と[!INCLUDE[win8_appname_long](../includes/win8_appname_long_md.md)]アプリでは、一時ディレクトリの場所は各ユーザーおよびアプリケーションに固有であり C:\users などの場所でよく見られる\\*username*\AppData\Local\Packages\\ *パッケージ ファミリ名*\TempState\\です。 デスクトップ アプリの場合、一時ディレクトリの場所は各ユーザー固有および C:\Users などの場所でよく見られる\\*username*\AppData\Local\Temp\\です。  
   
 > [!NOTE]
->  特定の場所に書き込むには、その場所に対する書き込み権限を持っている必要があります。持っていない場合はエラーが発生します。 [!INCLUDE[win8_appname_long](../includes/win8_appname_long_md.md)] のアプリケーションは、アプリケーションがデータを書き込める場所についてはデスクトップ アプリケーションよりも制約が多く、特定の場所に書き込むためには追加の構成が必要な場合があります。  
+>  特定の場所に書き込むには、その場所に対する書き込み権限を持っている必要があります。持っていない場合はエラーが発生します。 その UWP に留意してくださいと[!INCLUDE[win8_appname_long](../includes/win8_appname_long_md.md)]アプリでは、ここでデータを書き込めるされかかることが特定の場所に書き込む追加の構成についてはデスクトップ アプリケーションよりもより制限されています。  
   
 ### <a name="capturing-the-graphics-information"></a>グラフィックス情報をキャプチャする  
  プログラムによるキャプチャのためのアプリケーションの準備が完了して、グラフィックス ログ ファイルの場所と名前を選択的に構成したら、アプリケーションをビルドして実行またはデバッグし、データをキャプチャします。プログラム キャプチャ API を使用する場合は、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] からグラフィックス診断を開始しないでください。 グラフィックス ログは、指定した場所に書き込まれます。 このバージョンのログを保持したい場合は、別の場所に移動します。それ以外の場合は、アプリケーションを再実行したときにログが上書きされます。  

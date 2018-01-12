@@ -17,17 +17,15 @@ helpviewer_keywords:
 - tokens [SharePoint development in Visual Studio]
 - replaceable parameters [SharePoint development in Visual Studio]
 - SharePoint development in Visual Studio, replaceable parameters
-ms.assetid: 3c46bbb1-0a98-495c-9fd1-dc57a6aedc11
-caps.latest.revision: "16"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: ed085a38b77f7c323451e8209902bece3747ddb1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fa002f58ffd749cef9a4cbf9b536a36d7901b105
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="replaceable-parameters"></a>置き換え可能パラメーター
   置き換え可能パラメーターは、または*トークン*、プロジェクト ファイル内の実際の値は、デザイン時に認識されていない SharePoint ソリューションのアイテムの値を提供するのに使用できます。 標準には、関数に似ている[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]テンプレート トークンです。 詳細については、次を参照してください。[テンプレート パラメーター](/visualstudio/ide/template-parameters)です。  

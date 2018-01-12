@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - SharePoint development in Visual Studio, features
 - features [SharePoint development in Visual Studio]
-ms.assetid: 2e211fb3-94f4-4921-ba77-2ba6717a3e41
-caps.latest.revision: "20"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: a6917a8909bed30319d104f45398409b4ba367f6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 9fa42efc654bd3835a4f1ec1a5002136813550a0
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="creating-sharepoint-features"></a>SharePoint フィーチャーの作成
   SharePoint 機能を使用して、展開が容易に関連する SharePoint プロジェクト項目をグループ化することができます。 機能を作成、スコープの設定、およびその他の機能を SharePoint フィーチャー デザイナーを使用して、依存関係としてマークできます。 デザイナーには、各機能を記述する XML ファイルである、マニフェストも生成されます。  

@@ -16,11 +16,11 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: 8d0163d9834a56735daf67050dbf3b8e74011dc9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 52acd997d1f6dd9f019a6495cfbeab4e459d661b
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="remote-debug-aspnet-core-on-iis-and-azure-in-visual-studio-2017"></a>IIS および Visual Studio 2017 で Azure でのリモート デバッグ ASP.NET Core
 IIS を使用して Windows Server コンピューターに ASP.NET Web アプリケーションを配置して、リモート デバッグ用に設定できます。 このガイドでは、設定、Visual Studio 2017 ASP.NET Core アプリケーションを構成して、Azure を使用して IIS に展開、および Visual Studio からリモート デバッガーをアタッチする方法について説明します。
@@ -167,7 +167,7 @@ Web Deploy を使用していない場合は、発行およびファイル シ�
 
 [!INCLUDE [remote-debugger-deploy-app-local](../debugger/includes/remote-debugger-deploy-app-local.md)]
 
-### <a name="BKMK_msvsmon"></a>ダウンロードして、Windows Server でリモート ツールのインストール
+### <a name="BKMK_msvsmon"></a>ダウンロードして、Windows Server のリモート ツールのインストール
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
   

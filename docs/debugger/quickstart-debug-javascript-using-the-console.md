@@ -23,16 +23,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 6250a6b5cdf502d95aea3aaec033acaad826de42
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 93deb8c5a8d4d17597db0fa2f93f097b4839e88b
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="quickstart-debug-javascript-using-the-console"></a>クイックスタート: コンソールを使用した JavaScript のデバッグ
 ![Windows と Windows Phone に適用](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
- JavaScript コンソール ウィンドウは、JavaScript を使用して構築された UWP アプリのデバッグを対話的に使用できます。 これらの機能はサポートされて[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]アプリ、Windows Phone アプリ、および Apache Cordova の Visual Studio Tools を使用して作成されたアプリ。 コンソール コマンドのリファレンスの詳細については、「 [JavaScript Console commands](../debugger/javascript-console-commands.md)」を参照してください。  
+ JavaScript コンソール ウィンドウは、JavaScript を使用して構築された UWP アプリのデバッグを対話的に使用できます。 これらの機能は UWP アプリのサポート[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]アプリ、Windows Phone アプリ、および Apache Cordova の Visual Studio Tools を使用して作成されたアプリ。 コンソール コマンドのリファレンスの詳細については、「 [JavaScript Console commands](../debugger/javascript-console-commands.md)」を参照してください。  
   
  JavaScript コンソール ウィンドウを使うと次の作業ができます。  
   
@@ -269,7 +269,7 @@ ms.lasthandoff: 12/22/2017
 ##  <a name="BrowserSupport"></a> ブラウザーとプラットフォームのサポート  
  JavaScript コンソール ウィンドウは、次のプラットフォームでサポートされています。  
   
--   [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]Windows Phone アプリの JavaScript と HTML を使った  
+-   UWP アプリ[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]、および Windows Phone アプリの JavaScript と HTML を使った  
   
 -   [!INCLUDE[win81](../debugger/includes/win81_md.md)]  
   

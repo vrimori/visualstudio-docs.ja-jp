@@ -14,17 +14,15 @@ helpviewer_keywords:
 - databases [Office development in Visual Studio], scrolling records
 - records [Office development in Visual Studio], scrolling
 - data [Office development in Visual Studio], scrolling database records
-ms.assetid: 9b008be4-06a3-4ffc-9f02-79dd6cfe00ab
-caps.latest.revision: "38"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 035b74048aca3b91449bc857a36594bc280065c4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 386a8c14ebb831a47c6d08d6fd45f9c3d614263d
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project"></a>チュートリアル : VSTO アドイン プロジェクトでサービスのデータをバインドする
   VSTO アドイン プロジェクトでは、データをホスト コントロールにバインドできます。 このチュートリアルでは、実行時に Microsoft Office の Word ドキュメントにコントロールを追加し、それらのコントロールを MSDN コンテンツ サービスから取得されたデータにバインドして、イベントに応答する方法について説明します。  

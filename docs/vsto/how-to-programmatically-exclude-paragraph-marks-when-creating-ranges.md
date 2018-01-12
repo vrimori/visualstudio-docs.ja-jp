@@ -15,17 +15,15 @@ helpviewer_keywords:
 - ranges, excluding paragraph marks in Word
 - documents [Office development in Visual Studio], paragraph marks
 - paragraphs, controlling structure
-ms.assetid: 6d563834-34bd-4462-a556-4339d9277eee
-caps.latest.revision: "50"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 5f726a30a7ae50e35726b67336ec41f50be60b24
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 37af64898686da4f09730f5b46fbbfa0936ddd0e
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-exclude-paragraph-marks-when-creating-ranges"></a>方法: 範囲を作成するときにプログラムによって段落記号を除外する
   段落に基づいて <xref:Microsoft.Office.Interop.Word.Range> オブジェクトを作成する場合、段落記号などの印刷されない文字はすべて範囲に含まれています。 出力先の段落に、元の段落からテキストを挿入したい場合があります。 出力先の段落を複数の段落に分割したくない場合、元の段落から段落記号を最初に削除する必要があります。 また、段落の書式設定情報は段落記号に格納されるので、範囲を既存の段落に挿入するとき、この情報を含めないようにすることもできます。  

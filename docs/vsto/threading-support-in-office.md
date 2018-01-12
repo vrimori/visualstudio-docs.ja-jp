@@ -15,17 +15,15 @@ helpviewer_keywords:
 - threading [Office development in Visual Studio]
 - Office applications [Office development in Visual Studio], threading support
 - object models [Office development in Visual Studio], threading support
-ms.assetid: 810a6648-fece-4b43-9eb6-948d28ed2157
-caps.latest.revision: "33"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: c06e88c90116040fa3e9448368d32953095f889e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 3383e3767c97efad9177f0e361524137ea5d66a8
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="threading-support-in-office"></a>Office でのスレッドのサポート
   このトピックでは、Microsoft Office オブジェクト モデルのスレッド処理のサポートについての情報を提供します。 Office オブジェクト モデルは、スレッド セーフではありませんが、Office ソリューションで複数のスレッドを使用することです。 Office アプリケーションは、コンポーネント オブジェクト モデル (COM) サーバーです。 COM には、クライアントは任意のスレッドの COM サーバーを呼び出すことができます。 COM サーバーのスレッド セーフではない場合は、COM は、1 つだけの論理スレッドがいつでも、サーバーで実行されるように、同時呼び出し数をシリアル化するためのメカニズムを提供します。 このメカニズムは、シングル スレッド アパートメント (STA) モデルと呼ばれます。 呼び出しは、シリアル化されるための呼び出し元がブロックされている期間、サーバーがビジー状態か、バック グラウンド スレッドでその他の呼び出しが処理中にします。  

@@ -25,11 +25,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 7a6a1a17768c1f52bec0f98ed9f9f86754856419
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 789c2317fcb1bc46b5708f1810563b20fe8895ed
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="intellitrace"></a>[IntelliTrace]
 IntelliTrace を使用して実行履歴を記録およびトレースすると、アプリのデバッグにかかる時間を短縮できます。 IntelliTrace には以下の機能があるので、バグを簡単に見つけることができます。  
@@ -56,7 +56,7 @@ IntelliTrace を使用して実行履歴を記録およびトレースすると�
 |||  
 |-|-|  
 |**サポート状況**|、.NET Framework 2.0 または以降のバージョンを使用する Visual Basic および Visual c# のアプリケーションです。<br />     ASP.NET、Microsoft Azure、Windows フォーム、WCF、WPF、Windows Workflow、SharePoint 2010、SharePoint 2013、および 64 ビットのアプリを含むほとんどのアプリケーションをデバッグできます。<br />     IntelliTrace を使用した SharePoint アプリケーションをデバッグするを参照してください。[チュートリアル: IntelliTrace を使用した、SharePoint アプリケーションのデバッグ](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md)です。<br />     IntelliTrace を使用した Microsoft Azure のアプリをデバッグするを参照してください。 [IntelliTrace および Visual Studio で発行されたクラウド サービスのデバッグ](/azure/vs-azure-tools-intellitrace-debug-published-cloud-services)です。|  
-|**制限付きサポート**|.NET core とイベントについてのみサポートされている ASP.NET Core アプリケーション<br />の f# 試用前提アプリ<br />イベントについてのみサポートされている Windows ストア アプリ|  
+|**制限付きサポート**|.NET core とイベントについてのみサポートされている ASP.NET Core アプリケーション<br />の f# 試用前提アプリ<br />UWP アプリのイベントについてのみサポートされています。|  
 |**サポートされていません**|C++、その他の言語、およびスクリプト<br />Windows サービス、Silverlight、Xbox、または[!INCLUDE[winmobile](../debugger/includes/winmobile_md.md)]アプリ|  
   
 > [!NOTE]
