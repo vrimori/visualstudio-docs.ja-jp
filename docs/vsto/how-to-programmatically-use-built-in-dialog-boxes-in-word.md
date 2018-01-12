@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Word [Office development in Visual Studio], dialog boxes
 - dialog boxes, Word
-ms.assetid: 0c7e4338-dead-4444-868b-3b0212368455
-caps.latest.revision: "54"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 25353b95a997380ea682059a43494cc2a977f943
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 961f6ac2aa9852170ecce35aa18ce4c39d7a9983
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-use-built-in-dialog-boxes-in-word"></a>方法: プログラムによって Word の組み込みダイアログ ボックスを使用する
   Microsoft Office Word を使用する場合は、ユーザー入力のダイアログ ボックスを表示する必要がある場合もがあります。 公開されている、Word の組み込みダイアログ ボックスを使用する方法を取る可能性がありますも作成できますが、自分、<xref:Microsoft.Office.Interop.Word.Dialogs>のコレクション、<xref:Microsoft.Office.Interop.Word.Application>オブジェクト。 これにより、200 以上の列挙型として表される組み込みダイアログ ボックスにアクセスすることができます。  

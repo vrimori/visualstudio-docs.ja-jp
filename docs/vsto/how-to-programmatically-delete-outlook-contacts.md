@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - deleting contacts
 - contacts [Office development in Visual Studio], deleting
-ms.assetid: 3aeb107f-b6d9-4645-b3d2-43c20beee833
-caps.latest.revision: "17"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: cfa9bf22d384b564a4051681bded69a2b186c9c6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 191281006e2a8a2af69cb0f367a8dc1c2824749a
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-delete-outlook-contacts"></a>方法: プログラムによって Outlook の連絡先を削除する
   この例では、連絡先を 1 件削除します。 この例では、"Armando Pinto" という名前の連絡先が **[Contacts]** フォルダーに存在することを前提にしています。  

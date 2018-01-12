@@ -14,17 +14,15 @@ helpviewer_keywords:
 - meeting requests [Office development in Visual Studio]
 - appointments [Office development in Visual Studio]
 - calendars [Office development in Visual Studio], meeting requests
-ms.assetid: 889f8fa4-c0d0-42be-9c16-9987b43008ab
-caps.latest.revision: "20"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 09032546b565a0fe638d63f76685ff83e26f532c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7a3c161b837d0007655dd13043b94904f0b4ecd4
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-create-a-meeting-request"></a>方法: プログラムによって会議出席依頼を作成する
   この例では、Microsoft Office Outlook で会議出席依頼を作成し、必須出席者に要求を送信します。  

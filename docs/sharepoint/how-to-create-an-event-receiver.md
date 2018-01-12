@@ -16,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - SharePoint development in Visual Studio, event receivers
 - event receivers [SharePoint development in Visual Studio]
-ms.assetid: 6f90cb48-eb8f-43c2-a3f7-ed4ce81aedf2
-caps.latest.revision: "20"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 519c6907bb5779a3819419144905ca68e5cce939
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1b00d82679388c50d6d111209a9a206bd9587a3a
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-create-an-event-receiver"></a>方法: イベント レシーバーを作成する
   作成することで*イベント レシーバー*、リストなどの SharePoint アイテムまたはリスト項目をユーザーが操作するときに応答することができます。 たとえば、ユーザーが、予定表を変更または連絡先のリストから名前を削除するときは、イベント レシーバーにコードをトリガーできます。 このトピックでは、リスト インスタンスをイベント レシーバーを追加する方法を学びます。  

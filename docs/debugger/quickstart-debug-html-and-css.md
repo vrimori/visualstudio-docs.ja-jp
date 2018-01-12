@@ -24,16 +24,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: bf9049907d1648b1950f8d66e0fd183c82699e92
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 59ec4b4a7b0f8c924c09608b8cda34473820c1f5
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="debug-html-and-css-in-uwp-and-windows-81-apps"></a>HTML および CSS UWP と Windows 8.1 アプリをデバッグします。
 ![Windows と Windows Phone に適用](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
- Visual Studio では、JavaScript アプリに総合的なデバッグ機能が用意されており、Internet Explorer および Visual Studio の開発者には使い慣れた機能が含まれています。 これらの機能はサポートされて[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]、Windows Phone アプリでは、Apache Cordova の Visual Studio Tools を使用して作成されたアプリ。  
+ Visual Studio では、JavaScript アプリに総合的なデバッグ機能が用意されており、Internet Explorer および Visual Studio の開発者には使い慣れた機能が含まれています。 これらの機能は UWP アプリのサポート[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]、Windows Phone アプリでは、Apache Cordova の Visual Studio Tools を使用して作成されたアプリ。  
   
  DOM 検査ツールが提供する対話式のデバッグ モデルを使用すると、レンダリングされる HTML および CSS のコードを表示および変更できます。 これらはすべてデバッガーを停止して再起動することなく実行できます。
   
@@ -268,9 +268,9 @@ ms.lasthandoff: 12/22/2017
  使用して要素を選択する方法を示す例については、 **Select 要素**ボタンをクリックしを参照してください[DOM Explorer を使用して CSS のデバッグ スタイル](../debugger/debug-css-styles-using-dom-explorer.md)です。  
   
 ##  <a name="BrowserSupport"></a> ブラウザーとプラットフォームのサポート  
- JavaScript 用の Visual Studio ツールである DOM Explorer と JavaScript コンソール ウィンドウは、次のプラットフォーム上でサポートされます。  
+ DOM Explorer と JavaScript コンソール ウィンドウは、次のプラットフォームでサポートされます。  
   
--   [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]Windows Phone アプリの JavaScript と HTML を使った  
+-   UWP アプリ[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]と Windows Phone アプリの JavaScript と HTML を使った  
   
 -   [!INCLUDE[win81](../debugger/includes/win81_md.md)]  
   

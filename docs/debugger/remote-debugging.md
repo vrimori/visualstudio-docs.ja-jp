@@ -21,11 +21,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: ef5fb93914f418915c11b51071419308b3ac9a0c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a0eb590549578ac9aea824f52c8192c97dce94f2
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="remote-debugging"></a>Remote Debugging
 別のコンピューターに配置されている Visual Studio アプリケーションをデバッグすることができます。 このデバッグを行うには、Visual Studio リモート デバッガーを使用します。
@@ -35,15 +35,15 @@ ms.lasthandoff: 12/22/2017
 |シナリオ|リンク|
 |-|-|-|
 |ASP.NET|[リモート デバッグの ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)または[リモート ASP.NET のデバッグ](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|
-|C# または Visual Basic|[リモート c# または Visual Basic プロジェクトのデバッグ](remote-debugging-csharp.md)|
-|C++|[C++ Project プロジェクトのリモート デバッグ](remote-debugging-cpp.md)|
-|ユニバーサル Windows アプリ (UWP)|[インストールされているアプリケーション パッケージのデバッグ](debug-installed-app-package.md)|
+|C# または Visual Basic|[リモート c# または Visual Basic プロジェクトのデバッグ](../debugger/remote-debugging-csharp.md)|
+|C++|[C++ Project プロジェクトのリモート デバッグ](../debugger/remote-debugging-cpp.md)|
+|ユニバーサル Windows アプリ (UWP)|[リモート コンピューターでの UWP アプリの実行](../debugger/run-windows-store-apps-on-a-remote-machine.md)と[インストール済みのアプリ パッケージのデバッグ](../debugger/debug-installed-app-package.md)|
 |Azure|[Azure でのリモート デバッグ ASP.NET](remote-debugging-azure.md)|
 |Azure Service Fabric|[リモートの Service Fabric アプリケーションのデバッグ](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)です。|
 
 だけをダウンロードし、リモート デバッガーをインストールして、シナリオで、追加の手順は必要ないはこの記事の手順に従います。
   
-## <a name="download-and-install-the-remote-tools"></a>リモート ツールのダウンロードおよびインストール  
+## <a name="download-and-install-the-remote-tools"></a>ダウンロードして、リモート ツールのインストール  
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 

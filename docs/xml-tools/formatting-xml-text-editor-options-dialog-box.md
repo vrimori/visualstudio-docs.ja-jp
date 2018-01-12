@@ -13,11 +13,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 5c15327837dbcd2fb1fe795a1e9891451df22e4c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 9a4d6de24a75b5a08820878bc74633c02ab4118f
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="formatting-xml-text-editor-options-dialog-box"></a>[書式設定] ([オプション] ダイアログ ボックス - [テキスト エディター] - [XML])
 このダイアログ ボックスでは、XML エディターの書式設定を指定することができます。 アクセスすることができます、**オプション**からダイアログ ボックス、**ツール**メニュー。  
@@ -35,12 +35,12 @@ ms.lasthandoff: 12/22/2017
  **独自の行の属性を揃える**  
  最初の属性のインデントに対応するように、2 番目およびそれ以降の行頭を揃えて配置します。 XML テキストで属性がどのように並べられるかについて例を次に示します。  
   
-```  
+```xml
 <item id = "123-A"  
       name = "hammer"  
       price = "9.95">  
 </item>  
-```  
+```
   
 ## <a name="auto-reformat"></a>自動による書式の再設定  
  **クリップボードから貼り付け時に**  
@@ -55,12 +55,12 @@ ms.lasthandoff: 12/22/2017
   
  要素にテキストとマークアップが混在して含まれている場合、そのコンテンツは混合コンテンツと見なされます。 混合コンテンツを持つ要素の例を次に示します。  
   
-```  
+```xml
 <dir>c:\data\AlphaProject\  
   <file readOnly="false">test1.txt</file>  
   <file readOnly="false">test2.txt</file>  
 </dir>  
-```  
+```
   
 ## <a name="see-also"></a>参照  
  [XML ドキュメントのプロパティと [プロパティ] ウィンドウ](../xml-tools/xml-document-properties-properties-window.md)   

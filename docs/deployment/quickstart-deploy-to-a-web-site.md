@@ -4,7 +4,7 @@ ms.custom:
 ms.date: 11/22/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology: vs-ide-deployment
 ms.tgt_pltfrm: 
 ms.topic: quickstart
 helpviewer_keywords: deployment, website
@@ -14,11 +14,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 07944d5690433831889e56375cfa13ba774aaa8b
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: e324869eb90cd60cba68d9ed7b2e3fdb1ebb588d
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="publish-a-web-app-or-a-net-core-app-to-a-web-site-using-the-visual-studio-publish-tool"></a>Visual Studio 発行ツールを使用して web サイトに web アプリまたは .NET Core アプリを発行します。
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 01/05/2018
 
 ## <a name="create-a-new-project"></a>新しいプロジェクトを作成する 
 
-1. Visual Studio で、次のように選択します。**ファイル > 新しいプロジェクト**です。
+1. Visual Studio で、**[ファイル]、[新しいプロジェクト]** の順に選択します。
 
 1. **Visual c#**または**Visual Basic**、選択**Web**、し、中央のペインで  **ASP.NET Web アプリケーション (.NET Framework)**(C# の場合のみ)、または**ASP.NET Core Web アプリケーション**、クリックして**OK**です。
 
@@ -36,13 +36,13 @@ ms.lasthandoff: 01/05/2018
 
 1. ような名前を入力**MyWebApp**  をクリック**OK**です。
 
-    Visual Studio では、プロジェクトを作成します。
+    Visual Studio によってプロジェクトが作成されます。
 
 1. 選択**ビルド > ソリューションのビルド**プロジェクトをビルドします。
 
 ## <a name="publish-to-a-web-site"></a>Web サイトに発行します。
 
-1. ソリューション エクスプ ローラーでプロジェクトを右クリックして選択**発行**です。
+1. ソリューション エクスプローラーで、プロジェクトを右クリックして、**[発行]** を選択します。
 
     ![選択発行](../deployment/media/quickstart-publish-aspnet.png "選択発行")
 

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-deployment
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: get-started-article
 dev_langs:
 - FSharp
 - VB
@@ -26,11 +26,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: e6d4c01043bde59822175b20f36cd576c3a9c3a3
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: e05bf361515b45f3ebc7683fa0c83ec6116d9419
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="deployment-overview-in-visual-studio"></a>Visual Studio での配置の概要
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/05/2018
 
 - **ASP.NET**、 **ASP.NET Core**、 **Node.js**、 **Python**、および**.NET Core**: を展開する、発行ツールを使用することができます、web サイトの FTP や Web Deploy を使用します。 詳細については、次を参照してください。 [web サイトへのデプロイ](quickstart-deploy-to-a-web-site.md)です。
 
-    ソリューション エクスプ ローラーでプロジェクトを右クリックして選択**発行**です。 ツールでは、発行には、構成手順を実行してオプションを選択します。
+    ソリューション エクスプローラーで、プロジェクトを右クリックして、**[発行]** を選択します。 ツールでは、発行には、構成手順を実行してオプションを選択します。
 
     ![IIS、FTP などを選択します。](../deployment/media/quickstart-publish-iis-ftp.png)
 
@@ -62,7 +62,7 @@ ms.lasthandoff: 01/05/2018
 
 ### <a name="publish-to-azure"></a>Azure に発行する
 
-- **ASP.NET、ASP.NET Core、Python、Node.js、および .NET Core** web アプリケーション: アプリを Azure App Service または Azure の仮想マシンを迅速に配置する、発行ツールを使用することができます。 ソリューション エクスプ ローラーでプロジェクトを右クリックして選択**発行**です。 [発行] ダイアログ ボックスでいずれかを選択**Microsoft Azure App Service**または**Microsoft Azure Virtual Machines**、し構成手順に従います。
+- **ASP.NET、ASP.NET Core、Python、Node.js、および .NET Core** web アプリケーション: アプリを Azure App Service または Azure の仮想マシンを迅速に配置する、発行ツールを使用することができます。 ソリューション エクスプローラーで、プロジェクトを右クリックして、**[発行]** を選択します。 [発行] ダイアログ ボックスでいずれかを選択**Microsoft Azure App Service**または**Microsoft Azure Virtual Machines**、し構成手順に従います。
 
     ![Azure App Service の選択](../deployment/media/quickstart-publish-azure.png "Azure App Service の選択")
 

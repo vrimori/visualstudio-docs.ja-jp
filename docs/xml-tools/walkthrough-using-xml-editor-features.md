@@ -13,11 +13,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: d87870ef00ceb0a3c66b91975b11038c00bd1dc2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f7460071cc45c8e4994ad0a72d5f26dcce40c853
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="walkthrough-using-xml-editor-features"></a>チュートリアル: XML エディター機能の使用
 このチュートリアルの手順では、新しい XML ドキュメントを作成する方法を示します。 ここでは、XML の作成に役立つ XML エディターの機能もいくつか使用します。  
@@ -128,7 +128,7 @@ ms.lasthandoff: 12/22/2017
     </xs:complexType>  
   </xs:element>  
 </xs:schema>  
-```  
+```
   
 ## <a name="see-also"></a>参照  
  [XML エディター](../xml-tools/xml-editor.md)

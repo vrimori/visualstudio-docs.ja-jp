@@ -15,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], designing a model
 - Business Data Connectivity service [SharePoint development in Visual Studio], designing a model
-ms.assetid: 19cad8cf-8a82-4000-84cf-1e5aff54e5af
-caps.latest.revision: "41"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 886522cacff9359b3516b9e09530bfb1c41acfe6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fe3de196219091478a30ff07d6c2f5916d423f15
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="designing-a-business-data-connectivity-model"></a>Business Data Connectivity モデルのデザイン
   モデル ファイルにエンティティとメソッドを追加することで、ビジネス データ接続 (BDC) サービスのモデルを開発できます。 エンティティは、データ フィールドのコレクションを表します。 たとえば、エンティティは、データベース内のテーブルを表すことができます。 メソッドは、追加、削除、またはエンティティによって表されるデータの更新などのタスクを実行します。 詳細については、次を参照してください。 [SharePoint にビジネス データを統合する](../sharepoint/integrating-business-data-into-sharepoint.md)です。  
