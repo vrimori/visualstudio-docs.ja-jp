@@ -11,17 +11,15 @@ helpviewer_keywords:
 - dependency diagrams
 - diagrams - modeling, layer
 - constraints, architectural
-ms.assetid: 58c3ea71-2dbc-4963-bf82-40f1924cf973
-caps.latest.revision: "64"
-author: alexhomer1
-ms.author: ahomer
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: c0a13a32347b7150818fc80b82d0c03dc3fc4f69
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5b05e295830762939e2142b550863219afaa06ce
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="create-dependency-diagrams-from-your-code"></a>コードから依存関係のダイアグラムを作成します。
 ソフトウェア システムの高レベルで論理アーキテクチャを視覚化するには、作成、*依存関係ダイアグラム*Visual Studio でします。 コードがこの設計と一致することを確認するには、依存関係ダイアグラムとコードを検証します。 Visual c# .NET および Visual Basic .NET プロジェクトの依存関係図を作成することができます。 この機能をサポートする Visual Studio のバージョンを参照してください[アーキテクチャおよびモデリング ツールのバージョンのサポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)  

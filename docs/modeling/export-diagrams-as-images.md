@@ -10,17 +10,15 @@ helpviewer_keywords:
 - modeling diagrams, saving
 - diagrams - modeling, saving modeling diagrams
 - UML diagrams, saving
-ms.assetid: 0df68943-4c60-4f00-b1e8-b1cdee13762e
-caps.latest.revision: "15"
-author: alexhomer1
-ms.author: ahomer
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 253f6292331bd3a67a5f57ab6a0936928dedcf77
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: bbb21a2f8d126feb90e3c19eded6496949b992bd
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="export-diagrams-as-images"></a>イメージとしてダイアグラムをエクスポートする
 Visual Studio で、利害関係者、ユーザー、または同じバージョンの Visual Studio を使用しないプロジェクト チーム メンバーと共有することができるように、読み取り専用の形式で図をモデリングを保存することができます。  

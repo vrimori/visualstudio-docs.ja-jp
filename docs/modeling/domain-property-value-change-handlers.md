@@ -7,17 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Domain-Specific Language, overriding event handlers
-ms.assetid: 96d8f392-045e-4bc5-b165-fbaa470a3e16
-caps.latest.revision: "24"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 0487d834f9f33f059523933d87e3e2392111fc46
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e85bcb3545cc35b42723290601aff39b50ba3dc7
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="domain-property-value-change-handlers"></a>ドメイン プロパティ値変更ハンドラー
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ドメイン固有言語で、ドメイン プロパティの値が変わると、ドメイン プロパティ ハンドラーで `OnValueChanging()` メソッドおよび `OnValueChanged()` メソッドが呼び出されます。 変更に応答するために、これらのメソッドをオーバーライドできます。  

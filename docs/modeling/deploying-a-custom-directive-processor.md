@@ -7,20 +7,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: text templates, custom directive processors
-ms.assetid: 80c28722-a630-47b5-923b-024dc3f2c940
-caps.latest.revision: "18"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 7c7881c20412ab5ffc3f1c4486958f4b5ca68a1c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 16001ed6447f3dcfe649d0fe659c98d97b9e310c
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="deploying-a-custom-directive-processor"></a>カスタム ディレクティブ プロセッサの配置
-任意のコンピューター上の [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でカスタム ディレクティブ プロセッサを使用するには、そのプロセッサをこのトピックで説明するいずれかの方法で登録する必要があります。  
+Visual Studio でカスタム ディレクティブ プロセッサを使用して、任意のコンピューターで、するには、このトピックで説明する方法のいずれかで登録する必要があります。  
   
  次の方法があります。  
   
@@ -30,7 +28,7 @@ ms.lasthandoff: 12/22/2017
   
 -   レジストリ キーを設定する。 この方法では、ディレクティブ プロセッサのレジストリ エントリを追加します。  
   
- これらの方法のいずれかを使用する必要があるのは、テキスト テンプレートを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] または [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] で変換する場合だけです。 独自のアプリケーションのカスタム ホストを使用する場合は、そのカスタム ホストを通じて各ディレクティブのディレクティブ プロセッサを探します。  
+ Visual Studio で、テキスト テンプレートを変換する場合にのみ、これらのメソッドのいずれかを使用する必要がありますまたは[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]です。 独自のアプリケーションのカスタム ホストを使用する場合は、そのカスタム ホストを通じて各ディレクティブのディレクティブ プロセッサを探します。  
   
 ## <a name="deploying-a-directive-processor-in-a-vsix"></a>VSIX でのディレクティブ プロセッサの配置  
  カスタム ディレクティブ プロセッサを追加することができます、 [Visual Studio Extension (VSIX)](http://msdn.microsoft.com/en-us/64ff1452-f7d5-42d9-98b8-76f769f76832)です。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-develop-a-custom-directive-processor-in-a-vsix-project"></a>VSIX プロジェクトでカスタム ディレクティブ プロセッサを作成するには  
   
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で VSIX プロジェクトを作成します。  
+1.  Visual Studio で VSIX プロジェクトを作成します。  
   
     -   **新しいプロジェクト** ダイアログ ボックスで、展開**Visual Basic**または**Visual c#**の順に展開**Extensibility**です。 をクリックして**VSIX プロジェクト**です。  
   
@@ -104,19 +102,19 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-install-the-custom-directive-processor"></a>カスタム ディレクティブ プロセッサをインストールするには  
   
-1.  エクスプローラーでビルド ディレクトリ (通常は bin\Debug か bin\Release) を開きます。  
+1.  Windows エクスプローラで、ビルドのディレクトリ (通常は bin \debug か bin \release) を開きます。  
   
 2.  別のコンピューターにディレクティブ プロセッサをインストールする場合は、そのコンピューターに .vsix ファイルをコピーします。  
   
-3.  .vsix ファイルをダブルクリックします。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 拡張機能インストーラーが表示されます。  
+3.  .vsix ファイルをダブルクリックします。 Visual Studio 拡張機能インストーラーが表示されます。  
   
-4.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を再起動します。 これで、カスタム ディレクティブ プロセッサを参照するディレクティブを含むテキスト テンプレートを実行できるようになりました。 各ディレクティブの形式は次のとおりです。  
+4.  Visual Studio を再起動します。 これで、カスタム ディレクティブ プロセッサを参照するディレクティブを含むテキスト テンプレートを実行できるようになりました。 各ディレクティブの形式は次のとおりです。  
   
      `<#@ CustomDirective Processor="CustomDirectiveProcessorName" parameter1="value1" ... #>`  
   
 #### <a name="to-uninstall-or-temporarily-disable-the-custom-directive-processor"></a>カスタム ディレクティブ プロセッサをアンインストールするか、一時的に無効にするには  
   
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] **ツール** メニューをクリックして**拡張機能マネージャー**です。  
+1.  Visual Studio で**ツール** メニューをクリックして**拡張機能マネージャー**です。  
   
 2.  ディレクティブ プロセッサを含む VSIX を選択し、クリックして**アンインストール**または**を無効にする**です。  
   
@@ -169,7 +167,7 @@ ms.lasthandoff: 12/22/2017
   
      **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\\*.0\TextTemplating\DirectiveProcessors**  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のテスト バージョンでディレクティブ プロセッサをインストールする場合は、"11.0" の後ろに "Exp" を挿入します。  
+     Visual Studio の実験用のバージョンでディレクティブ プロセッサをインストールする場合は、「11.0」の後に"Exp"を挿入します。  
   
 3.  ディレクティブ プロセッサ クラスと同じ名前のレジストリ キーを追加します。  
   

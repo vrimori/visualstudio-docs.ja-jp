@@ -8,17 +8,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords: vs.dsltools.dsldesigner.swimlane
 helpviewer_keywords: Domain-Specific Language, swimlane
-ms.assetid: 47edbc2d-09e4-48ac-b4d1-5268a06a27e6
-caps.latest.revision: "24"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: f43af2ef4a3a13952fb04c594db336afcb97afbd
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fdbd94abdaa3a1acb460a3b2a5b276d169c20269
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="properties-of-swimlanes"></a>スイムレーンのプロパティ
 スイムレーンは、ダイアグラムに追加できます。 スイムレーンはダイアグラムを垂直方向または水平方向の領域に分割します。 スイムレーン内に表示される他の図形を定義することができます。 詳細については、次を参照してください。[ドメイン固有言語の定義方法](../modeling/how-to-define-a-domain-specific-language.md)です。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語の拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)です。  

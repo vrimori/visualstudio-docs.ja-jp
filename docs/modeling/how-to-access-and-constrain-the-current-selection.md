@@ -7,17 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Domain-Specific Language, accessing the current selection
-ms.assetid: 2990981e-dfae-416f-b0d0-7197f1242dfa
-caps.latest.revision: "14"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 6cfc93f3e0423f57cd0df5e919854cc1a46a1b3f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 9eaf9d13d6c5bc81153d459dc592b99f9e893733
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="how-to-access-and-constrain-the-current-selection"></a>方法: 現在の選択項目を表示および制限する
 ドメイン固有言語のコマンドまたはジェスチャ ハンドラーを記述するときに、ユーザーを右クリックした要素を指定できます。 一部のシェイプまたはフィールドも選択されないようにできます。 たとえば、ユーザーには、アイコン デコレータがクリックすると、それを含む図形が選択されている代わりに配置できます。 この方法の選択内容を制限すると、ハンドラーを記述する必要があるの回数が減ります。 またやすく、ユーザーに、デコレータを回避することがなく、図形内をクリックできます。  

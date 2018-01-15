@@ -6,17 +6,15 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: fa807f1b-2780-491e-925b-abbfd31b2bfa
-caps.latest.revision: "9"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 9eaa07b0fdf0055ea4ba2849f6438882a22cf85e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8db29f57c05f1bc9c80c3dc658c23a7c7e109edd
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>方法: ドメイン固有言語デザイナーを拡張する
 拡張機能は、デザイナー DSL 定義を編集するために使用することができます。 作成できるメニュー コマンドの追加のハンドラーがドラッグし、ジェスチャ、および特定の種類の値またはリレーションシップを変更するときにトリガーされるルールをダブルクリックを追加する拡張機能の種類です。 拡張機能は、として、Visual Studio Integration Extension (VSIX) をパッケージ化し、他のユーザーに配布することができます。  

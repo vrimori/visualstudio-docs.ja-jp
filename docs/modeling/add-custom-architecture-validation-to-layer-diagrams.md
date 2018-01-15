@@ -7,17 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: dependency diagrams, adding custom validation
-ms.assetid: fed7bc08-295a-46d6-9fd8-fb537f1f75f1
-caps.latest.revision: "42"
-author: alexhomer1
-ms.author: ahomer
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 130d53cb0e32add0251306c261cf456459f2192a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 82d65618dd510c90fa2aea95b43727787e9e727b
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>依存関係のダイアグラムにカスタム アーキテクチャ検証を追加します。
 Visual Studio で、ユーザーは、ソース コードが依存関係ダイアグラムへの依存関係に準拠していることを確認できるようにレイヤー モデルに対するプロジェクト内のソース コードを検証できます。 標準の検証アルゴリズムがありますが、独自の検証拡張機能を定義できます。  
@@ -59,7 +57,7 @@ Visual Studio で、ユーザーは、ソース コードが依存関係ダイ�
     > [!NOTE]
     >  メソッドは特定の状況においてのみ呼び出され、ブレークポイントは自動的には動作しません。 詳細については、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。  
   
-5.  メイン インスタンスに拡張機能をインストールする[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、または別のコンピューターでは、検索、 **.vsix**ファイル**bin\\\***です。 このファイルをインストール先のコンピューターにコピーして、ダブルクリックします。 拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
+5.  または別のコンピューターで、Visual Studio のメイン インスタンスで拡張機能をインストールするには、検索、 **.vsix**ファイル**bin\\\***です。 このファイルをインストール先のコンピューターにコピーして、ダブルクリックします。 拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
   
 ## <a name="adding-a-layer-validator-to-a-separate-vsix"></a>レイヤー検証コントロールを別の VSIX に追加する  
  レイヤー検証コントロール、コマンド、および他の拡張機能を含む 1 つの VSIX を作成する場合は、VSIX を定義するプロジェクトとハンドラー用のプロジェクトを別にすることをお勧めします。 
@@ -116,7 +114,7 @@ Visual Studio で、ユーザーは、ソース コードが依存関係ダイ�
     > [!NOTE]
     >  メソッドは特定の状況においてのみ呼び出され、ブレークポイントは自動的には動作しません。 詳細については、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。  
   
-8.  メイン インスタンスで、VSIX をインストールする[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、別のコンピューターで次のように検索します。 または、 **.vsix**ファイルを、 **bin** 、VSIX プロジェクトのディレクトリ。 このファイルを、VSIX をインストールするコンピューターにコピーします。 Windows エクスプローラーで、VSIX ファイルをダブルクリックします。 これは Windows 8 のエクスプローラーです。  
+8.  または別のコンピューターで、Visual Studio のメイン インスタンスで、VSIX をインストールするには、検索、 **.vsix**ファイルで、 **bin** VSIX プロジェクトのディレクトリ。 このファイルを、VSIX をインストールするコンピューターにコピーします。 Windows エクスプローラーで、VSIX ファイルをダブルクリックします。
   
      拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
   
@@ -150,7 +148,7 @@ Visual Studio で、ユーザーは、ソース コードが依存関係ダイ�
   
  ユーザーが **[アーキテクチャの検証]** を実行すると、レイヤーのランタイム システムがレイヤーとその成果物を分析して、グラフを生成します。 グラフは 4 つの部分で構成されます。  
   
--   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューションのレイヤー モデルは、グラフではノードとリンクとして表されます。  
+-   レイヤー モデルは、Visual Studio ソリューションのノードと、グラフのリンクとして表されます。  
   
 -   ソリューションで定義されているコード、プロジェクト アイテム、および他の成果物は、ノードおよび分析システムによって検出された依存関係を示すリンクとして表されます。  
   
@@ -190,7 +188,7 @@ Visual Studio で、ユーザーは、ソース コードが依存関係ダイ�
  レイヤーからコード内の要素へのリンクのカテゴリは "Represents" です。  
   
 ##  <a name="debugging"></a> 検証のデバッグ  
- レイヤー検証拡張機能をデバッグするには、Ctrl キーを押しながら F5 キーを押します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用のインスタンスが開きます。 このインスタンスで、レイヤー モデルを開くか作成します。 このモデルは、コードと関連付けられている必要があり、少なくとも 1 つの依存関係を含む必要があります。  
+ レイヤー検証拡張機能をデバッグするには、Ctrl キーを押しながら F5 キーを押します。 Visual Studio の実験用インスタンスが開きます。 このインスタンスで、レイヤー モデルを開くか作成します。 このモデルは、コードと関連付けられている必要があり、少なくとも 1 つの依存関係を含む必要があります。  
   
 ### <a name="test-with-a-solution-that-contains-dependencies"></a>依存関係を含むソリューションでのテスト  
  以下の特性が存在していない限り、検証は実行されません。  
@@ -199,7 +197,7 @@ Visual Studio で、ユーザーは、ソース コードが依存関係ダイ�
   
 -   コード要素と関連付けられたレイヤーがモデルに存在する。  
   
- 初めて [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用インスタンスを起動して検証拡張機能をテストするときは、これらの特性を備えたソリューションを開くか作成します。  
+ 初めてして検証拡張機能をテストする Visual Studio の実験用インスタンスを起動することは、開くか、これらの特性を備えたソリューションを作成します。  
   
 ### <a name="run-clean-solution-before-validate-architecture"></a>アーキテクチャを検証する前に [ソリューションのクリーン] を実行する  
  検証コードを更新したときは常に、検証コマンドをテストする前に、実験用ソリューションで **[ビルド]** メニューの **[ソリューションのクリーン]** を使用します。 これは、検証の結果がキャッシュされているために必要です。 テストの依存関係図またはそのコードを更新していない場合、検証メソッドは実行されません。  
@@ -207,9 +205,9 @@ Visual Studio で、ユーザーは、ソース コードが依存関係ダイ�
 ### <a name="launch-the-debugger-explicitly"></a>デバッガーを明示的に起動する  
  検証は別のプロセスで実行されます。 したがって、検証メソッド内のブレークポイントはトリガーされません。 検証が開始したら、デバッガーをプロセスに明示的にアタッチする必要があります。  
   
- デバッガーを検証プロセスにアタッチするには、検証メソッドの先頭に `System.Diagnostics.Debugger.Launch()` の呼び出しを挿入します。 デバッグ ダイアログ ボックスが表示されたら、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]のメイン インスタンスを選択します。  
+ デバッガーを検証プロセスにアタッチするには、検証メソッドの先頭に `System.Diagnostics.Debugger.Launch()` の呼び出しを挿入します。 デバッグ ダイアログ ボックスが表示されたら、Visual Studio のメイン インスタンスを選択します。  
   
- または、 `System.Windows.Forms.MessageBox.Show()`の呼び出しを挿入してもかまいません。 メッセージ ボックスが表示されたら、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のメイン インスタンスに移動し、 **[デバッグ]** メニューの **[プロセスにアタッチ]**をクリックします。 **Graphcmd.exe**という名前のプロセスを選択します。  
+ または、 `System.Windows.Forms.MessageBox.Show()`の呼び出しを挿入してもかまいません。 メッセージ ボックスが表示されたら、および Visual Studio のメイン インスタンスに移動、**デバッグ**ボタンをクリックし**プロセスにアタッチする**です。 **Graphcmd.exe**という名前のプロセスを選択します。  
   
  常に、Ctrl キーを押しながら F5 キーを押して (**[デバッグなしで開始]**) 実験用インスタンスを起動します。  
   

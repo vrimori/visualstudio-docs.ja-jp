@@ -8,17 +8,15 @@ ms.technology: vs-devops-techdebt
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords: UML, using models
-ms.assetid: a33ac8fc-4ba0-4850-b71b-014dc8674e54
-caps.latest.revision: "29"
-author: alexhomer1
-ms.author: ahomer
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 4a93b60cfac2bbc727fbc2a7b4054c4e7b8e3dce
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 08517439e2b99ca9ceba29ad3c7558494cf6bb47
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="use-models-in-your-development-process"></a>開発プロセス内でのモデルの使用
 Visual Studio では、システム、アプリケーション、またはコンポーネントについて理解し、変更するためのモデルを使用することができます。 モデルは、システムが動作する世界を視覚化できるようにして、ユーザーのニーズを明確化し、システムのアーキテクチャを定義し、コードを分析し、コードが要件を満たしていることを確認できるようにします。 参照してください[Channel 9 ビデオ: モデリングによるアーキテクチャの改善](http://go.microsoft.com/fwlink/?LinkID=252078)です。  

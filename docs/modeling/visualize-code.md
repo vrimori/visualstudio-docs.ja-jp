@@ -11,17 +11,15 @@ helpviewer_keywords:
 - code, understanding
 - code, visualizing
 - code, exploring
-ms.assetid: 0dd7d438-393a-4cd3-b417-9bf37379e1b0
-caps.latest.revision: "47"
-author: alexhomer1
-ms.author: ahomer
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 50904fd36dc3a4f009b87b9daa5c603fdee702ce
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d3272195d1099ea851cbabf32c845ce2d46a697c
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="visualize-code"></a>コードの視覚化
 Visual Studio の視覚化ツールとモデリング ツールを使って、既存のコードを理解し、アプリケーションを記述することができます。 これにより、自分が実行した変更がコードにどのような影響を与えるかを理解し、その変更に起因する作業とリスクを評価することができます。 例:  

@@ -7,17 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Domain-Specific Language, Properties window
-ms.assetid: b6658de5-4e85-4628-93b2-5cc12f63d25b
-caps.latest.revision: "20"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 2c11cf4d8fb8d913c1d288b5daeb110b9003f7b6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8193fa12967848308c1e992f5d5f5011890042ea
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="customizing-the-properties-window"></a>プロパティ ウィンドウのカスタマイズ
 カスタマイズできますプロパティ ウィンドウの動作と外観、ドメイン固有言語 (DSL) で[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 DSL 定義では、各ドメイン クラスにドメインのプロパティを定義します。 既定では、図に、またはモデル エクスプ ローラーで、クラスのインスタンスを選択するすべてのドメイン プロパティは [プロパティ] ウィンドウで表示されます。 これにより確認し、ドメインのプロパティの値を編集する場合でも、ダイアグラムで図形のフィールドをマップしているされません。  

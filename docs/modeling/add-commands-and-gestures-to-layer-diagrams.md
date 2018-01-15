@@ -9,17 +9,15 @@ ms.topic: article
 helpviewer_keywords:
 - dependency diagrams, adding custom commands
 - dependency diagrams, adding custom gestures
-ms.assetid: ac9c417b-0b40-4a90-86f5-ee3cbdce030b
-caps.latest.revision: "38"
-author: alexhomer1
-ms.author: ahomer
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: f03b460c3e37bb6299047cb0e35e80895f08cfb3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f580c81d63adb2ca474f8ea9f250f48a61da928a
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="add-commands-and-gestures-to-dependency-diagrams"></a>依存関係の図にコマンドおよびジェスチャを追加します。
 コンテキスト メニューのコマンドを定義し、ジェスチャ ハンドラーを Visual Studio での依存関係図できます。 これらの拡張機能を Visual Studio Integration Extension (VSIX) にパッケージ化し、他の Visual Studio ユーザーに配布できます。  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  拡張機能をテストするには、 **Ctrl キーを押しながら F5** キーを押すか、 **F5**キーを押します。  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用のインスタンスが開始します。 このインスタンスでは、依存関係ダイアグラムを作成します。 独自のコマンドまたはジェスチャ拡張機能が、この図で動作します。  
+     Visual Studio の実験用インスタンスを開始します。 このインスタンスでは、依存関係ダイアグラムを作成します。 独自のコマンドまたはジェスチャ拡張機能が、この図で動作します。  
   
 4.  実験用のインスタンスを閉じて、サンプル コードを変更します。 詳細については、次を参照してください。[移動し、更新プログラムは、プログラム コード内のモデルをレイヤー](../modeling/navigate-and-update-layer-models-in-program-code.md)です。  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
      [ジェスチャ ハンドラーを定義する](#gesture)  
   
-6.  メイン インスタンスに拡張機能をインストールする[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、または別のコンピューターでは、検索、 **.vsix**ファイル**bin\\\***です。 このファイルをインストール先のコンピューターにコピーして、ダブルクリックします。 拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
+6.  または別のコンピューターで、Visual Studio のメイン インスタンスで拡張機能をインストールするには、検索、 **.vsix**ファイル**bin\\\***です。 このファイルをインストール先のコンピューターにコピーして、ダブルクリックします。 拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
   
 ## <a name="adding-a-command-or-gesture-to-a-separate-vsix"></a>別の VSIX にコマンドまたはジェスチャを追加する  
  コマンド、レイヤー検証コントロール、および他の拡張機能を含む 1 つの VSIX を作成する場合は、VSIX を定義するプロジェクトとハンドラー用のプロジェクトを分けることをお勧めします。
@@ -104,9 +102,9 @@ ms.lasthandoff: 12/22/2017
   
      関連項目[移動し、更新プログラムは、プログラム コード内のモデルをレイヤー](../modeling/navigate-and-update-layer-models-in-program-code.md)です。  
   
-2.  機能をテストするには、Ctrl キーを押しながら F5 キーを押すか、または F5 キーを押します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用のインスタンスが開きます。 このインスタンスで作成するか、依存関係図を開きます。  
+2.  機能をテストするには、Ctrl キーを押しながら F5 キーを押すか、または F5 キーを押します。 Visual Studio の実験用インスタンスが開きます。 このインスタンスで作成するか、依存関係図を開きます。  
   
-3.  メイン インスタンスで、VSIX をインストールする[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、別のコンピューターで次のように検索します。 または、 **.vsix**ファイルを、 **bin** 、VSIX プロジェクトのディレクトリ。 このファイルを、VSIX をインストールするコンピューターにコピーします。 Windows エクスプローラー (Windows 8 のエクスプローラー) で VSIX ファイルをダブルクリックします。  
+3.  または別のコンピューターで、Visual Studio のメイン インスタンスで、VSIX をインストールするには、検索、 **.vsix**ファイルで、 **bin** VSIX プロジェクトのディレクトリ。 このファイルを、VSIX をインストールするコンピューターにコピーします。 Windows エクスプローラーで、VSIX ファイルをダブルクリックします。  
   
      拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
   

@@ -6,17 +6,15 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 2697fd5d-b936-4b6b-b87b-be64825dc7a4
-caps.latest.revision: "2"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 3a4e1927cd17a5cc86ed58565b53f04aeb6977a6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b090a2f17ad41bb46675f5e170dcbf733b7f8977
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>アイコンまたはデコレーターの可視性の制御
 A*デコレータ*がアイコンまたはドメイン固有言語 (DSL) 内の図形に表示されるテキストの行。 デコレーターの表示を作成し、モデルのプロパティの状態によって非表示できます。 たとえば、人物を表す図形を使用して、個人の性別、子供の数に応じて表示されるアイコンが異なることができます。  

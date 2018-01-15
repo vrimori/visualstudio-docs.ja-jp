@@ -9,17 +9,15 @@ ms.topic: article
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 - Domain-Specific Language, events
-ms.assetid: 0ac8d1e4-239f-4370-ba1d-3769bb38b8a5
-caps.latest.revision: "18"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: b1ef5efcce853f55ad518f1cdba35d2363f5504e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 717f61f440414370f3e9a2180e1c1cade7436aeb
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>イベント ハンドラーによって変更内容がモデル外に反映される
 Visualization and Modeling SDK がでは、ストア以外の変数、ファイル、その他のストア、またはその他のモデルなど、ストアの外部リソースへの変更を反映するストアのイベント ハンドラーを定義することができます[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張機能です。 ストアのイベント ハンドラーは、トリガーを起動するイベントが発生したトランザクションの終了後に実行されます。 元に戻す/やり直し操作でも実行されます。 そのため、ストアの規則とは異なりストア イベントは、ストア以外の値を更新するため、最も役に立つです。 クラスにリッスンするように、.NET イベントとは異なりストア イベント ハンドラーが登録されている: インスタンスごとに個別のハンドラーを登録する必要はありません。 間の変更を処理するさまざまな方法を選択する方法の詳細については、次を参照してください。[への応答と変更を反映する](../modeling/responding-to-and-propagating-changes.md)です。  
@@ -38,7 +36,7 @@ Visualization and Modeling SDK がでは、ストア以外の変数、ファイ�
   
     -   `ElementDeleted`-トリガーされると、モデル要素の後、リレーションシップ、図形またはコネクタが削除されます。 引き続き、要素のプロパティの値にアクセスできますが、その他の要素へのリレーションシップはありません。  
   
-2.  部分クラス定義を追加*YourDsl***DocData**で別のコード ファイルで、 **DslPackage**プロジェクト。  
+2.  部分クラス定義を追加*YourDsl * * * DocData** で別のコード ファイルで、 **DslPackage**プロジェクト。  
   
 3.  次の例のように、メソッドとして、イベントのコードを記述します。 できます`static`にアクセスする場合を除き、`DocData`です。  
   

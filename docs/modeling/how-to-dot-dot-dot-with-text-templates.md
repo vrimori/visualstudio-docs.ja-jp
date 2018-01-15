@@ -6,17 +6,15 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: d1ac2509-0479-47eb-809c-1f171245d0b6
-caps.latest.revision: "11"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 351b9025ba4631a515f1f6cf627e27e6afb3cc88
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fdbed997737b772b22d88b0542d212214e2b808f
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="how-to--with-text-templates"></a>方法: テキスト テンプレートを使用する
 テキスト テンプレートで[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]任意の種類のテキストを生成する便利な方法を提供します。 テキスト テンプレートを使用すると、実行時に、アプリケーションの一部として、プロジェクト コードの一部を生成するのにデザイン時にテキストを生成します。 このトピックの内容をまとめたもの、最も頻繁に寄せられる「操作方法...」 問題があります。  

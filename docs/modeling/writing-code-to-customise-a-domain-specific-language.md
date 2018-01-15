@@ -7,17 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Domain-Specific Language, programming
-ms.assetid: a4a17f5b-9c97-4575-b2d1-3182c1896b72
-caps.latest.revision: "29"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: e7b5fc639e93061a4abd0acbfc1425223d673282
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 960fb3f3c3eabe4dd110fb6fe0deb2464c7062ec
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="writing-code-to-customise-a-domain-specific-language"></a>ドメイン固有言語をカスタマイズするコードの記述
 このセクションでは、カスタム コードを使用して、アクセス、変更、またはドメイン固有言語でモデルを作成する方法を示しています。  

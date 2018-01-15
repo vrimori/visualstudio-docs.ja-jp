@@ -19,17 +19,15 @@ helpviewer_keywords:
 - dependency diagrams
 - diagrams - modeling, layer
 - constraints, architectural
-ms.assetid: f26c986c-1e79-420e-b29a-a283e6d8a71d
-caps.latest.revision: "33"
-author: alexhomer1
-ms.author: ahomer
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 43901987c9f6f37e7082200f675549021fb63f83
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d11e02e9218d86e0e971c685ab496a2b85b2be21
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="dependency-diagrams-reference"></a>依存関係図: リファレンス
 Visual Studio で、使用することができます、*依存関係ダイアグラム*をシステムの高レベルで論理アーキテクチャを視覚化します。 依存関係ダイアグラム、システム内と呼ばれる論理的、抽象的なグループに物理的な成果物を整理する*レイヤー*です。 これらのレイヤーは成果物が実行する主要タスクまたはシステムの主要コンポーネントについて説明します。 各レイヤーには、より詳細なタスクを示す入れ子になったレイヤーを含めることもできます。  

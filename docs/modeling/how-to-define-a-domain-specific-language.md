@@ -15,17 +15,15 @@ helpviewer_keywords:
 - Domain-Specific Language, external types
 - Domain-Specific Language, relationships
 - Domain-Specific Language, domain properties
-ms.assetid: d1772463-0eb1-40a5-b7c0-9a008bc76760
-caps.latest.revision: "43"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 320e244c17f8e21330aa3925030650126a0ba5a6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: becfedc10f054c006709c3095f924b58c1ba5062
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>方法: ドメイン固有言語を定義する
 ドメイン固有言語 (DSL) を定義するには、テンプレートから [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューションを作成します。 ソリューションの主要な機能は DSL 定義図です。これは DslDefinition.dsl に保存されています。 DSL 定義は、DSL のクラスとシェイプを定義します。 これらの要素を変更および追加した後で、プログラム コードを追加して DSL を詳細にカスタマイズできます。  
@@ -122,7 +120,7 @@ ms.lasthandoff: 12/22/2017
   
 -   ルート クラスが DSL 定義ダイアグラムの左上隅に表示されます**クラスとリレーションシップ**です。 その名前を変更し、DSL とは異なる名前を付けてください。 たとえば、DSL という名前**MusicLibrary**という名前のルート クラスがあります**音楽**です。  
   
--   DSL 定義ダイアグラムの右下にあるダイアグラム クラスが表示されます、**ダイアグラム要素**列です。 この列を表示するために、右へスクロールしなければならない場合があります。 という名前が通常*YourDsl***ダイアグラム**です。  
+-   DSL 定義ダイアグラムの右下にあるダイアグラム クラスが表示されます、**ダイアグラム要素**列です。 この列を表示するために、右へスクロールしなければならない場合があります。 という名前が通常 * YourDsl ***ダイアグラム**です。  
   
 -   使用した場合、**タスク フロー**テンプレートとスイムレーンにダイアグラムを作成、保持するアクターのドメイン クラスと ActorSwimlane 図形の名前を変更します。  
   
@@ -223,11 +221,11 @@ ms.lasthandoff: 12/22/2017
   
 2.  **ビルドおよび DSL を実行します。** 新しいインスタンスを実行するには、f5 キーまたは ctrl キーを押しながら f5 キーを押して[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]実験モードでします。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用インスタンスで、DSL のファイル名拡張子が付いているファイルを開くかまたは作成します。  
   
-3.  **エクスプ ローラーを開きます。** At が付き、通常エクスプ ローラー ウィンドウの言語では、ダイアグラムの面*YourLanguage*エクスプ ローラー。 このウィンドウが表示されない場合は、ソリューション エクスプローラーの下のタブに表示されている可能性があります。 見つからない場合、上、**ビュー**  メニューのをポイント**その他のウィンドウ**をクリックし、 *YourLanguage***エクスプ ローラー**です。  
+3.  **エクスプ ローラーを開きます。** At が付き、通常エクスプ ローラー ウィンドウの言語では、ダイアグラムの面*YourLanguage*エクスプ ローラー。 このウィンドウが表示されない場合は、ソリューション エクスプローラーの下のタブに表示されている可能性があります。 見つからない場合、上、**ビュー**  メニューのをポイント**その他のウィンドウ**をクリックして * YourLanguage ***エクスプ ローラー**です。  
   
      エクスプローラーにはモデルのツリー ビューが表示されます。  
   
-4.  **新しい要素を作成します。** 上部で、ルート ノードを右クリックし、をクリックして**新規追加***YourClass*です。  
+4.  **新しい要素を作成します。** 上部で、ルート ノードを右クリックし、をクリックして **新規追加 * * * YourClass*です。  
   
      クラスの新しいインスタンスが言語エクスプローラーに表示されます。  
   
@@ -623,7 +621,7 @@ ms.lasthandoff: 12/22/2017
 |DSL Explorer (DSL エクスプローラー) でコレクションに追加できない。 たとえば、［ツール］ を右クリックしてもメニューに ［Add Tool］ (ツールの追加) コマンドが表示されない。<br /><br /> DSL のエクスプローラーで要素をリストに追加できない。|追加するノードの上にある項目を右クリックします。 リストに追加する場合、［追加］ コマンドはリスト ノードではなくその所有者に表示されます。|  
 |ドメイン クラスを作成したが、言語エクスプローラーでインスタンスを作成できない。|ルートを除くすべてのドメイン クラスは、埋め込みリレーションシップのターゲットである必要があります。|  
 |DSL のエクスプローラーで、要素がその型の名前でのみ表示される。|DSL 定義でクラスのドメイン プロパティを選択し、プロパティ ウィンドウで、設定**は要素名**true に設定します。|  
-|DSL が常に XML エディタで開かれる。|これは、ファイルの読み取り中に発生したエラーが原因で起こります。 ただし、そのエラーを修正した後でも、エディターを DSL デザイナーに明示的にリセットする必要があります。<br /><br /> プロジェクト項目を右クリックし、をクリックして**ファイルを開く**選択*YourLanguage***デザイナー (既定値)**です。|  
+|DSL が常に XML エディタで開かれる。|これは、ファイルの読み取り中に発生したエラーが原因で起こります。 ただし、そのエラーを修正した後でも、エディターを DSL デザイナーに明示的にリセットする必要があります。<br /><br /> プロジェクト項目を右クリックし、をクリックして**ファイルを開く**選択 * YourLanguage ***デザイナー (既定値)**です。|  
 |アセンブリ名を変更した後に、DSL のツールボックスが表示されない。|更新を行い**DslPackage\GeneratedCode\Package.tt**詳細については、次を参照してください。[する方法: ドメイン固有言語の Namespace を変更する](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md)です。|  
 |アセンブリ名を変更していないのに、DSL のツールボックスが表示されない。<br /><br /> あるいは、拡張機能の読み込みに失敗したことを示すメッセージ ボックスが表示される。|実験用インスタンスをリセットして、ソリューションをリビルドします。<br /><br /> 1.[スタート] メニュー、windows の**すべてのプログラム**、展開[!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)]、し**ツール**、クリックして**Microsoft Visual Studio の実験用インスタンスをリセット**です。<br />2.[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]**ビルド** メニューのをクリックして**ソリューションのリビルド**です。|  
   

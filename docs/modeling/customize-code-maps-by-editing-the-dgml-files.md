@@ -19,17 +19,15 @@ helpviewer_keywords:
 - dependency graphs, customizing
 - graph documents, grouping nodes
 - dependency graphs, assigning categories and properties
-ms.assetid: a2e141f4-4fd8-4611-b236-6b9e7bc54fc1
-caps.latest.revision: "93"
-author: alexhomer1
-ms.author: ahomer
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: e4a536f99c81c19ecd22554896463a84715c7b35
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 3787bea9eccd46104cd48c2bd2cdff27d8aeb872
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="customize-code-maps-by-editing-the-dgml-files"></a>DGML ファイルを編集してコード マップをカスタマイズする
 コード マップをカスタマイズするには、マップの Directed Graph Markup Language (.dgml) ファイルを編集できます。 たとえば、要素を編集してカスタム スタイルを指定したり、コード要素とリンクにプロパティおよびカテゴリを割り当てたり、コード要素やリンクにドキュメントや URL をリンクしたりすることができます。 DGML 要素の詳細については、次を参照してください。[向け Graph Markup Language (DGML) リファレンス](../modeling/directed-graph-markup-language-dgml-reference.md)です。  

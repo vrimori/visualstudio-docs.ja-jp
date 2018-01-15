@@ -9,17 +9,15 @@ ms.topic: article
 helpviewer_keywords:
 - requirements
 - stories
-ms.assetid: 359900f8-6d69-493d-bfdf-2c9069c74a26
-caps.latest.revision: "28"
-author: alexhomer1
-ms.author: ahomer
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 7c3584a8620c4f2d9c0f82efc94bae4dc4c33233
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0ffbfd6da8abb0063ed16d7956bcec97626c9666
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="model-user-requirements"></a>ユーザー要件のモデリング
 Visual Studio を使用すると、ユーザーの目標達成を支援する際に、彼らのアクティビティやシステムが果たしている役割に関する図を描画することで、ユーザー ニーズを理解し、検討し、やり取りすることができます。 要求モデルとはこのような一連の図のことで、それぞれの図では、ユーザー ニーズの異なる側面に注目しています。 ビデオ デモについては、「 [ビジネス ドメインのモデリング](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-3-Modeling-the-Business-Domain/)」を参照してください。  
@@ -61,7 +59,7 @@ Visual Studio を使用すると、ユーザーの目標達成を支援する際
 ##  <a name="BusinessRules"></a> Showing Business Rules  
  ビジネス ルールとは、特定のユース ケースに関連付けられておらず、システム全体で認められる要求です。  
   
- 多くのビジネス ルールは、概念クラス間の関係に関する制約です。 概念クラス図では、これらの *静的な**ビジネス ルール* を、関連するクラスに関連付けられたコメントとして記述できます。 例:  
+ 多くのビジネス ルールは、概念クラス間の関係に関する制約です。 これらを記述することができます*静的 * * ビジネス ルール*概念クラス ダイアグラムで、関連するクラスに関連付けられているコメントとして。 例:  
   
  ![コメント内のルールは、Order クラスにアタッチされます。] (../modeling/media/uml_reqmcd2.png "UML_ReqmCD2")  
   

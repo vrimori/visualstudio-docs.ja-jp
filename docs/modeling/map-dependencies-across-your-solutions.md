@@ -26,33 +26,33 @@ helpviewer_keywords:
 - dependency graphs
 - graph documents, exporting
 - code exploration, visualizing
-ms.assetid: e04850a2-17c5-459b-93ec-6c74143b3292
-caps.latest.revision: "243"
-author: alexhomer1
-ms.author: ahomer
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: fc8d9774c69216136eb2b4c99b379ef1c714997f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 135e0e9d5b6b2d4e0f75804a98c8f40f17d0b736
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="map-dependencies-across-your-solutions"></a>ソリューション間の依存関係をマップする
-コード内の依存関係を理解するには、コード マップを作成して視覚化します。 このことは、ファイルとコード行全体を読むことなく、コードの相関を確認するのに役立ちます。  
-  
- ![ソリューション間の依存関係を表示](../modeling/media/codemapsmainintro.png "CodeMapsMainIntro")  
-  
- **ビデオ**:  
-  
--   [視覚化によるコードの依存関係の理解](http://go.microsoft.com/fwlink/?LinkID=252065)  
-  
--   [変更の影響の視覚化](http://go.microsoft.com/fwlink/?LinkID=252068)  
-  
--   [コード マップで複雑なコードを理解する](http://go.microsoft.com/fwlink/?LinkID=259869)  
-  
-##  <a name="GetStarted"></a> コード マップの概要  
- **コード マップを使用する必要がありますか**:  
+
+コード内の依存関係を理解するには、コード マップを作成して視覚化します。 このことは、ファイルとコード行全体を読むことなく、コードの相関を確認するのに役立ちます。
+
+![ソリューション間の依存関係を表示](../modeling/media/codemapsmainintro.png "CodeMapsMainIntro")
+
+**ビデオ**:
+
+- [視覚化によるコードの依存関係を理解します。](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Understand-your-code-dependencies-through-visualization)
+
+- [変更の影響を視覚化します。](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Visualize-the-impact-of-a-change)
+
+- [コード マップで複雑なコードを理解します。](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Understanding-complex-code-with-Code-Map-ENU)
+
+## <a name="GetStarted"></a> コード マップの概要
+
+**コード マップを使用する必要がありますか**:
   
 -   Visual Studio Enterprise: コード エディター、ソリューション エクスプローラー、クラス ビュー、またはオブジェクト ブラウザーからコード マップを生成できます。  
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 12/22/2017
   
 10. 複雑なソリューション マップで必要な項目に注目するもう 1 つの方法は、既存のマップから、選択した項目を含む新しいマップを生成することです。 **Ctrl** キーを押しながら注目する項目を選択し、ショートカット メニューを開き、 **[選択項目から新しいグラフを作成]**をクリックします。  
   
-     ![選択した項目は新しいコード マップに表示する](../ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")  
+     ![選択した項目は新しいコード マップに表示する](../modeling/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")  
   
 11. 含んでいるコンテキストは、新しいマップに引き継がれます。 ソリューション フォルダーや表示を使用したくない他のすべてのコンテナーを非表示にする、**フィルター**ウィンドウです。  
   

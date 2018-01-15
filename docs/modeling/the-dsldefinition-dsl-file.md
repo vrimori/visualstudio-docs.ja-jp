@@ -7,17 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Domain-Specific Language, definition file
-ms.assetid: f3fc3ed7-2438-4e5a-b3d7-fe7e0e8a134c
-caps.latest.revision: "22"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 3e1f9bc81c0d13acd1fb9ac1a22f33262e4644f8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c58dc30285257a8292e8ce8dcf81b7b31cfee2c5
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="the-dsldefinitiondsl-file"></a>DslDefinition.dsl ファイル
 このトピックは、プロジェクト内の Dsl の DslDefinition.dsl ファイルの構造を記述、[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]を定義するには、ソリューション、*ドメイン固有言語*します。 DslDefinition.dsl ファイルは、クラスとドメイン固有言語、ダイアグラム、図形、コネクタ、シリアル化形式との関係について説明しますと**ツールボックス**ドメイン固有言語のおよび編集ツールです。 ドメイン固有言語ソリューションでは、これらのツールを定義するコードは DslDefinition.dsl ファイルの情報に基づいて生成されます。  

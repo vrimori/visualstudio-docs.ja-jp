@@ -6,17 +6,15 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 024392a2-2c04-404f-a27b-7273553c3b60
-caps.latest.revision: "16"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 5703410772945a95ed0efea95a665b2a106e0ce7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b3e0d6ec6eb1449defcc49102a97e69a7105a838
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>ドメイン固有言語の概要
 このトピックを定義すると、Visual Studio for Modeling SDK で作成したドメイン固有言語 (DSL) を使用して基本的な概念について説明します。  
@@ -143,7 +141,7 @@ ms.lasthandoff: 12/22/2017
  ![](../modeling/media/dsl_min.png "DSL_min")  
   
 ### <a name="the-content-of-a-model"></a>モデルのコンテンツ  
- DSL のインスタンスであるファイルの内容と呼ばれる、*モデル*です。 モデルに含まれる*モデル**要素*と*リンク*要素の間です。 DSL 定義は、どのような種類のモデル要素を指定しへのリンクがモデルに存在できます。 たとえば、最小限の言語のテンプレートから作成された DSL では 1 種類のモデル要素とリンクの 1 つの型。  
+ DSL のインスタンスであるファイルの内容と呼ばれる、*モデル*です。 モデルに含まれる*モデル * * 要素*と*リンク*要素の間です。 DSL 定義は、どのような種類のモデル要素を指定しへのリンクがモデルに存在できます。 たとえば、最小限の言語のテンプレートから作成された DSL では 1 種類のモデル要素とリンクの 1 つの型。  
   
  DSL 定義では、モデルのダイアグラムの表示方法を指定できます。 さまざまな図形とコネクタのスタイルから選択することができます。 一部の図形が他の図形の内側に表示されることを指定することができます。  
   

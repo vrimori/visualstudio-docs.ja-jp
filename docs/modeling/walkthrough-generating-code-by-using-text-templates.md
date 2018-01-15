@@ -9,17 +9,15 @@ ms.topic: article
 helpviewer_keywords:
 - walkthroughs [text templates], generating application code
 - walkthroughs [text templates]
-ms.assetid: 24602ade-baca-425e-a6ce-be09a2c7f7e1
-caps.latest.revision: "11"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: bbf11e020380114f12de3c6b71960faf80791ba6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 860fd5d60d35e5649b172a784a931ce413c7616e
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="walkthrough-generating-code-by-using-text-templates"></a>チュートリアル: テキスト テンプレートを使用したコード生成
 コード生成を使用すると、厳密に型指定され、ソース モデルが変わった場合でも簡単に変更できるプログラム コードを作成できます。 コード生成とは対照的に、構成ファイルを使用する完全に汎用的なプログラムを作成する他の手法もあります。構成ファイルを使用すると、柔軟ではありますが、読むのも変更するのも容易ではなく、パフォーマンスもそれほどよくありません。 このチュートリアルでは、コード生成の利点について説明します。  

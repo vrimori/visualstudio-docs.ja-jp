@@ -11,17 +11,15 @@ helpviewer_keywords:
 - TextTemplatingFilePreprocessor custom tool
 - text templates, TransformText() method
 - text templates, generating files at run time
-ms.assetid: 79b4b3c6-a9a7-4446-b6fd-e2388fc6b05f
-caps.latest.revision: "22"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 32d2fa502a5eca166ccca9fbc87ceb632d7617ed
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2bbc9fb84ae2487d3c90efcecf9d48c43c28df32
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>T4 テキスト テンプレートを使用した実行時テキスト生成
 実行時に、アプリケーションで使用して、テキスト文字列を生成することができます[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]実行時テキスト テンプレートです。 アプリケーションが実行されるコンピューターを持っていなくて[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 実行時テンプレートとも呼ばれる「前処理されたテキスト テンプレート」テンプレートは、コンパイル時に実行時に実行されるコードを生成するためです。  

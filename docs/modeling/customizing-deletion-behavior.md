@@ -8,17 +8,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords: vs.dsltools.dsldesigner.deletebehavior
 helpviewer_keywords: Domain-Specific Language, deletion
-ms.assetid: c6bf088d-52c6-4817-af45-ddae745bb5a9
-caps.latest.revision: "23"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 0eb1878df437e1767d5bfe49ce4794b5b2c243d5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c51c44d47f24994e75ca91b4f4d8d7f2c9a805a6
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="customizing-deletion-behavior"></a>削除動作のカスタマイズ
 通常、要素を削除すると、関連する要素も削除されます。 接続されたすべてのリレーションシップと子要素が削除されます。 この動作の名前は*伝達の削除*です。 削除の伝達をカスタマイズできます。たとえば、追加の関連要素を削除することを準備できます。 プログラム コードを作成して、モデルの状態に応じた削除の伝達を実現できます。 削除に応じて他の変更を発生させることもできます。  
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/22/2017
 >  DSL 定義には、プログラム コードを追加するにで個別のコード ファイルを作成、 **Dsl**プロジェクトし、生成されたコード フォルダー内のクラスを拡張するために部分定義を記述します。 詳細については、次を参照してください。[ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)です。  
   
 ##  <a name="closure"></a>Delete クロージャを定義します。  
- 削除操作は、クラスを使用して*YourModel***DeleteClosure**指定の初期選択を削除する要素を確認します。 これは `ShouldVisitRelationship()` および `ShouldVisitRolePlayer()` を繰り返し呼び出し、リレーションシップのグラフを検索します。 これらのメソッドをオーバーライドできます。 ShouldVisitRolePlayer は、リンクおよびリンクのロールのいずれかの位置にある要素の id で提供されます。 次のいずれかの値を返す必要があります。  
+ 削除操作は、クラスを使用して*YourModel * * * DeleteClosure** 指定の初期選択を削除する要素を確認します。 これは `ShouldVisitRelationship()` および `ShouldVisitRolePlayer()` を繰り返し呼び出し、リレーションシップのグラフを検索します。 これらのメソッドをオーバーライドできます。 ShouldVisitRolePlayer は、リンクおよびリンクのロールのいずれかの位置にある要素の id で提供されます。 次のいずれかの値を返す必要があります。  
   
 -   **VisitorFilterResult.Yes**-、要素を削除する必要がありを試す、ウォーカーを続行する必要があります、要素の他のリンク。  
   

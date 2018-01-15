@@ -17,11 +17,11 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: 605ce6f221df959e553cbfde2f3439da06b474c8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0bc83d29eb076b70be5c9192acdbe39e301a6f16
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="creating-a-wpf-toolbox-control"></a>WPF ツールボックス コントロールの作成
 WPF (Windows Presentation Framework) ツールボックス コントロール テンプレートを使用に自動的に追加されている WPF コントロールを作成する、**ツールボックス**拡張機能がインストールされている場合。 このトピックは、テンプレートを使用して作成する方法を示しています、**ツールボックス**コントロールを他のユーザーに配布することができます。  
@@ -61,7 +61,7 @@ WPF (Windows Presentation Framework) ツールボックス コントロール �
   
 1.  MyToolboxControl.xaml.cs をコード ビューで開きます。  
   
-2.  MyToolboxControl クラスを検索しに変更します。 (これを行う最も簡単な方法は、クラスの名前を変更するを選択し、**の名前を変更**コンテキスト メニューから、手順に従います。 (詳細については、**の名前を変更**コマンドを参照してください[名前の変更リファクタリング (c#)](../csharp-ide/rename-refactoring-csharp.md))。  
+2.  MyToolboxControl クラスを検索しに変更します。 (これを行う最も簡単な方法は、クラスの名前を変更するを選択し、**の名前を変更**コンテキスト メニューから、手順に従います。 (詳細については、**の名前を変更**コマンドを参照してください[名前の変更リファクタリング (c#)](../ide/reference/rename-csharp.md))。
   
 3.  移動して、`ProvideToolboxControl`属性への最初のパラメーターの値を変更して**テスト**です。 これでコントロールを配置するグループの名前、**ツールボックス**です。  
   

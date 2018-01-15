@@ -7,17 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Domain-Specific Language, programming domain models
-ms.assetid: 1427ae91-be8a-4ce7-85df-00038faa2cbb
-caps.latest.revision: "26"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 18381aef265935cf927940f82dd0a47ee8197222
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e210b786fab418a84ae6bee70809a68a2dedfa71
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="navigating-and-updating-a-model-in-program-code"></a>プログラム コードにおけるモデル内の移動およびモデルの更新
 作成およびモデル要素を削除、プロパティの設定、および作成、要素間のリンクを削除するコードを記述することができます。 トランザクション内ですべての変更を加える必要があります。 要素は、ダイアグラムで表示され場合の図は、「修正されます」自動的に、トランザクションの終了時。  

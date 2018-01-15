@@ -19,11 +19,11 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: a4794f1cde57f365ec4ec98251763e8d0e839ae0
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 0be62faf81fc9d7da60a03596c25cc01a9bf0eac
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="how-to-expose-code-to-vba-in-a-visual-c-project"></a>方法 : Visual C# プロジェクトのコードを VBA に公開する
   相互にやり取りするコードの 2 つの種類の場合は、Visual c# プロジェクトを Visual Basic for Applications (VBA) コード内のコードを公開できます。  
@@ -80,7 +80,7 @@ ms.lasthandoff: 01/10/2018
   
      ホスト項目の詳細については、「 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)」を参照してください。  
   
-6.  クラスを VBA に公開するインターフェイスを抽出します。 **インターフェイスの抽出** ダイアログ ボックスで、インターフェイスの宣言に追加するパブリック メンバーを選択します。 詳細については、次を参照してください。[インターフェイスの抽出リファクタリング (&) #40 です。C# 35; &#41;](/visualstudio/csharp-ide/extract-interface-refactoring-csharp).  
+6.  クラスを VBA に公開するインターフェイスを抽出します。 **インターフェイスの抽出** ダイアログ ボックスで、インターフェイスの宣言に追加するパブリック メンバーを選択します。 詳細については、次を参照してください。[インターフェイスの抽出リファクタリング](../ide/reference/extract-interface-csharp.md)です。
   
 7.  追加、**パブリック**キーワードをインターフェイスの宣言にします。  
   
