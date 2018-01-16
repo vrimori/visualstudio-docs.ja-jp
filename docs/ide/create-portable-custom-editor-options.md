@@ -11,12 +11,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-ide-general
-ms.workload: multiple
-ms.openlocfilehash: 0219ff704e22ab1c27d47e312825a66cb3a15166
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 516bd2de626fa7a5ffcbf4234c849e81860b9e08
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>EditorConfig で移植可能なカスタム エディター設定を作成する
 
@@ -32,43 +31,86 @@ EditorConfig ファイルの設定を利用すれば、使用するエディタ�
 
 設定はコードベースのファイルに含まれているため、そのコードベースと共に移動します。 EditorConfig 対応のエディターでコード ファイルを開く限り、テキスト エディター設定が実装されます。 EditorConfig ファイルの詳細については、[EditorConfig.org](http://editorconfig.org/) Web サイトをご覧ください。
 
-## <a name="override-editorconfig-settings"></a>EditorConfig 設定を上書きする
-
-ファイル階層のフォルダーに .editorconfig ファイルを追加すると、その設定がその階層レベルとその下のレベルのあらゆる該当ファイルに適用されます。 特定のプロジェクトまたはコードベースが最上位の EditorConfig ファイルとは異なる規則を使用するように、EditorConfig 設定を上書きする場合は、コードベースのリポジトリまたはプロジェクト ディレクトリのルートに .editorconfig ファイルを追加するだけです。 Visual Studio がそのディレクトリ構造より上にある .editorconfig ファイルを検索しないように、ファイルに ```root=true``` プロパティを必ず配置します。 新しい EditorConfig ファイルの設定は、同じレベルと任意のサブディレクトリ内のファイルに適用されます。
-
-```
-# top-most EditorConfig file
-root = true
-```
-
-![EditorConfig 階層](../ide/media/vside_editorconfig_hierarchy.png)
-
-EditorConfig ファイルは上から下に読み取られ、最も近い EditorConfig ファイルが最後に読み取られます。 一致する EditorConfig セクションからの規則は、より近いファイルの規則が優先されるように、読み取られた順序で適用されます。
-
 ## <a name="supported-settings"></a>サポートされる設定
 
-Visual Studio のエディターは、[EditorConfig プロパティ](http://editorconfig.org/#supported-properties)のコア セットから次をサポートします。
+Visual Studio のエディターは、[EditorConfig プロパティ](http://editorconfig.org/#supported-properties)の次のコア セットをサポートします。
 
 - indent_style
 - indent_size
 - tab_width
 - end\_of_line
 - 文字セット
+- trim\_trailing_whitespace
+- insert\_final_newline
 - ルート
 
 EditorConfig エディター設定は、XML を除き、Visual Studio 対応のすべての言語でサポートされています。 また、EditorConfig では、C# および Visual Basic の[コード スタイル](../ide/editorconfig-code-style-settings-reference.md)と[名前付け](../ide/editorconfig-naming-conventions.md)規則がサポートされます。
-
-## <a name="editing-editorconfig-files"></a>EditorConfig ファイルの編集
-
-Visual Studio では、.editorconfig ファイルを編集するための IntelliSense がいくつか提供されます。 多数の .editorconfig ファイルを編集する場合は、[EditorConfig 言語サービス](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig)拡張機能が便利です。
-
-EditorConfig ファイルを編集したら、コード ファイルを再度読み込んで新しい設定を有効にする必要があります。
 
 ## <a name="adding-and-removing-editorconfig-files"></a>EditorConfig ファイルの追加と削除
 
 EditorConfig ファイルをプロジェクトまたはコードベースに追加しても既存のスタイルが新しいスタイルに変換されることはありません。 たとえば、タブで書式設定されているインデントがファイル内にあり、スペースでインデントする EditorConfig ファイルを追加する場合、インデント文字はスペースに変換されません。 ただし、新しいコード行はすべて、EditorConfig ファイルに従って書式設定されます。
 
 EditorConfig ファイルをプロジェクトまたはコードベースから削除する場合は、開いているコード ファイルをすべて閉じてから再度開き、新しいコード行のグローバル エディター設定に戻す必要があります。
+
+### <a name="to-add-an-editorconfig-file-to-a-project-or-solution"></a>EditorConfig ファイルをプロジェクトまたはソリューションに追加するには
+
+1. Visual Studio でプロジェクトまたはソリューションを開きます。 .editorconfig 設定をソリューションのすべてのプロジェクトに適用するか、1 つのプロジェクトだけに適用するかに応じて、プロジェクト ノードまたはソリューション ノードのいずれかを選択します。 また、.editorconfig ファイルを追加するプロジェクトまたはソリューションで、フォルダーを選択できます。
+
+1. メニュー バーから **[プロジェクト]** > **[新しい項目の追加...]** の順に選択するか、**Ctrl**+**Shift**+**A** キーを押します。
+
+   **[新しい項目の追加]** ダイアログ ボックスが開きます。
+
+1. 左側のカテゴリで **[全般]** を選択してから、**[テキスト ファイル]** テンプレートを選択します。 **[名前]** ボックスに「`.editorconfig`」と入力し、**[追加]** を選択します。
+
+   ソリューション エクスプローラーに .editorconfig ファイルが表示されたら、エディターで開きます。
+
+   ![ソリューション エクスプローラーの .editorconfig ファイル](media/editorconfig-in-solution-explorer.png)
+
+1. たとえば次のように、必要に応じてファイルを編集します。
+
+```EditorConfig
+root = true
+
+[*.{cs,vb}]
+indent_size = 4
+trim_trailing_whitespace = true
+
+[*.cs]
+csharp_new_line_before_open_brace = methods
+```
+
+または、[EditorConfig 言語サービス拡張機能](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig)をインストールできます。 この拡張機能をインストールしたら、ソリューション ノード、プロジェクト ノード、またはソリューション エクスプローラーの任意のフォルダーを右クリックするか、コンテキスト メニューから、**[追加]** > **[.editorconfig ファイル]** の順に選択するだけです。
+
+![拡張機能を使用して .editorconfig ファイルを追加する](media/editorconfig-extension-add.png)
+
+## <a name="override-editorconfig-settings"></a>EditorConfig 設定を上書きする
+
+ファイル階層のフォルダーに .editorconfig ファイルを追加すると、その設定がその階層レベルとその下のレベルのあらゆる該当ファイルに適用されます。 また、特定のプロジェクトやコードベースの EditorConfig 設定を上書きしたり、コードベースの一部の EditorConfig 設定を上書きして、コードベースの他の部分とは異なる規則を使用するようにしたりできます。 これは、別の場所からコードを組み込んで、その規則を変更したくない場合に役立ちます。
+
+一部またはすべての EditorConfig 設定を上書きするには、上書きされた設定を適用するファイルの階層レベルに .editorconfig ファイルを追加します。 新しい EditorConfig ファイルの設定は、同じレベルと任意のサブディレクトリ内のファイルに適用されます。
+
+![EditorConfig 階層](../ide/media/vside_editorconfig_hierarchy.png)
+
+すべての設定ではなく一部のみを上書きする場合には、.editorconfig ファイルで該当する設定を指定します。 下位レベルのファイルで明示的に一覧表示したプロパティのみが上書きされます。 上位レベルの .editorconfig ファイルからのその他の設定は、引き続き適用されます。 _すべての_上位レベルの .editorconfig ファイルからの設定がコードベースのこの部分に適用_されない_ようにするには、次のように ```root=true``` プロパティを下位レベルの .editorconfig ファイルに追加します。
+
+```EditorConfig
+# top-most EditorConfig file
+root = true
+```
+
+EditorConfig ファイルは上から下に読み取られ、最も近い EditorConfig ファイルが最後に読み取られます。 一致する EditorConfig セクションからの規則は、より近いファイルの規則が優先されるように、読み取られた順序で適用されます。
+
+## <a name="editing-editorconfig-files"></a>EditorConfig ファイルの編集
+
+Visual Studio では、.editorconfig ファイルを編集するための IntelliSense がいくつか提供されます。
+
+![.editorconfig ファイルの IntelliSense](media/editorconfig-intellisense-no-extension.png)
+
+EditorConfig ファイルを編集したら、コード ファイルを再度読み込んで新しい設定を有効にする必要があります。
+
+多数の .editorconfig ファイルを編集する場合は、[EditorConfig 言語サービス拡張機能](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig)が便利です。 この拡張機能には、構文の強調表示、強化された IntelliSense、検証、およびコードの書式設定などの機能が含まれます。
+
+![EditorConfig 言語サービス拡張機能の IntelliSense](media/editorconfig-intellisense.png)
 
 ## <a name="example"></a>例
 
@@ -82,7 +124,7 @@ EditorConfig ファイルをプロジェクトまたはコードベースから�
 
 .editorconfig という名前の新しいファイルを、次のコンテンツと共にプロジェクトに追加します。 `[*.cs]` の設定は、この変更がこのプロジェクトの C# コード ファイルにのみ適用されることを意味します。
 
-```
+```EditorConfig
 # Top-most EditorConfig file
 root = true
 
@@ -107,7 +149,7 @@ EditorConfig ファイルがディレクトリ構造内でプロジェクトの�
 
 親ディレクトリで任意の .editorconfig ファイルを見つけるには、コマンド プロンプトを開き、プロジェクトが格納されているディスクのルートから次のコマンドを実行します。
 
-```
+```Shell
 dir .editorconfig /s
 ```
 

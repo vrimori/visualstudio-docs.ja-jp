@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: bd871b1e78878c8ae05cb69e1ac97d50197a18b4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4f190d02850f1effc9e1597d14fecf323de68356
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="python-environments"></a>Python 環境
 
@@ -53,7 +53,7 @@ Visual Studio 2017 を除き、Python のサポートに Python インタープ�
 | インタープリター | 説明 |
 | --- | --- |
 | [CPython](https://www.python.org/) | "ネイティブ" で最もよく使われるインタープリターであり、32 ビット バージョンと 64 ビット バージョンがあります (32 ビットを推奨)。 最新の言語機能、Python パッケージの最大限の互換性、完全なデバッグ サポート、および [IPython](http://ipython.org/) との相互運用性が含まれています。 「[Should I use Python 2 or Python 3?](http://wiki.python.org/moin/Python2orPython3)」(Python 2 と Python 3 のどちらを使うか) もご覧ください。 Visual Studio 2015 以前では、Python 3.6 をサポートしていないため、"Python バージョン 3.6 はサポートされていません" エラーが発生する場合があることに注意してください。 代わりに 3.5 以前の Python を使用します。 |
-| [IronPython](https://github.com/IronLanguages/main) | Python の .NET の実装であり (32 ビット バージョンと 64 ビット バージョン)、C#/F#/Visual Basic の相互運用機能、.NET API へのアクセス、標準 Python デバッグ (ただし、C++ 混合モードのデバッグはありません)、IronPython/C# の混合デバッグが提供されます。 ただし、IronPython は仮想環境をサポートしていません。 | 
+| [IronPython](https://github.com/IronLanguages/ironpython2) | Python の .NET の実装であり (32 ビット バージョンと 64 ビット バージョン)、C#/F#/Visual Basic の相互運用機能、.NET API へのアクセス、標準 Python デバッグ (ただし、C++ 混合モードのデバッグはありません)、IronPython/C# の混合デバッグが提供されます。 ただし、IronPython は仮想環境をサポートしていません。 |
 | [Anaconda](https://www.continuum.io) | Python を利用するオープン データ サイエンス プラットフォームであり、最新バージョンの CPython と、インストールが困難なパッケージのほとんどを含みます。 他のインタープリターに決定できない場合にお勧めします。 |
 | [PyPy](http://www.pypy.org/) | Python の高パフォーマンスなトレースの JIT 実装であり、実行時間の長いプログラム、およびパフォーマンスに問題があるが他の解決策が見つからない場合に、適しています。 Visual Studio で動作しますが、高度なデバッグ機能のサポートには制限があります。 |
 | [Jython](http://www.jython.org/) | Java 仮想マシン (JVM) での Python の実装です。 IronPython に似ており、Jython で実行されるコードは Java のクラスおよびライブラリとやり取りできますが、CPython 用の多くのライブラリは使用できない場合があります。 Visual Studio で動作しますが、高度なデバッグ機能のサポートには制限があります。 |
@@ -73,7 +73,7 @@ Python 環境用に新しい検出形式を提供したい開発者は、「[PTV
 
 ![[Python Environments (Python 環境)] ウィンドウ](media/environments-default-view.png)
 
-上の例は、Python 3.4 (32 ビット CPython) と共に IronPython 2.7 の 32 ビットおよび 64 ビット バージョンがインストールされることを示しています。 この場合、太字で表示される既定の環境は Python 3.4 であり、すべての新しいプロジェクトに使われます。 環境が何も表示されない場合は、Visual Studio 2015 以降に Python Tools for Visual Studio はインストールされていますが、Python インタープリターはインストールされていないことを意味します (前の「[Python インタープリターの選択とインストール](#selecting-and-installing-python-interpreters)」を参照)。 
+上の例は、Python 3.4 (32 ビット CPython) と共に IronPython 2.7 の 32 ビットおよび 64 ビット バージョンがインストールされることを示しています。 この場合、太字で表示される既定の環境は Python 3.4 であり、すべての新しいプロジェクトに使われます。 環境が何も表示されない場合は、Visual Studio 2015 以降に Python Tools for Visual Studio はインストールされていますが、Python インタープリターはインストールされていないことを意味します (前の「[Python インタープリターの選択とインストール](#selecting-and-installing-python-interpreters)」を参照)。
 
 > [!Tip]
 > 上記のように、**[Python 環境]** ウィンドウの幅が狭いときは、環境が上部に一覧表示され、さまざまなタブは下部に表示されます。 ただし、ウィンドウを十分に広げた方が作業しやすくなります。
@@ -161,7 +161,7 @@ Visual Studio では通常、(「[PEP 514 - Python registration in the Windows r
 
 **[今すぐ昇格]** を選ぶと、1 回の操作について pip に管理者特権が付与され、アクセス許可を求めるオペレーティング システムのプロンプトも対象になります。 **[管理者特権なしで続行]** を選ぶと、パッケージのインストールは試みられますが、pip がフォルダーを作成しようとすると、"エラー: 'C:\Program Files\Anaconda3\Lib\site-packages\png.py' を作成できませんでした: アクセス許可が拒否されました" のような出力で失敗します。
 
-**[パッケージのインストール時か削除時に必ず昇格]** を選ぶと、対象の環境ではダイアログが表示されなくなります。 再びダイアログが表示されるようにするには、**[ツール] > [オプション] > [Python ツール] > [全般]** に移動し、**[永続的に表示されないすべてのダイアログをリセットする]** ボタンを選びます。 
+**[パッケージのインストール時か削除時に必ず昇格]** を選ぶと、対象の環境ではダイアログが表示されなくなります。 再びダイアログが表示されるようにするには、**[ツール] > [オプション] > [Python ツール] > [全般]** に移動し、**[永続的に表示されないすべてのダイアログをリセットする]** ボタンを選びます。
 
 同じオプション タブでは、**[常に管理者として pip を実行する]** を選んで、すべての環境でダイアログを非表示にすることもできます。 「[Options - General tab](options.md#general-options)」([全般] タブのオプション) をご覧ください。
 
@@ -247,13 +247,13 @@ Visual Studio は、すべての新規プロジェクトの実行、デバッグ
 
     ![requirements.txt の更新オプション](media/environments-requirements-txt-replace.png)
 
-    - **[Replace entire file (ファイル全体を置き換える)]** は、存在するすべてのアイテム、コメント、オプションを削除します。
-    - **[既存のエントリを更新]** は、パッケージの要件を検出し、現在インストールされているバージョンと一致するようにバージョン指定子を更新します。
-    - **[Update and add entries (エントリを更新および追加する)]** は、検出されたすべての要件を更新し、他のすべてのパッケージをファイルの末尾に追加します。
+  - **[Replace entire file (ファイル全体を置き換える)]** は、存在するすべてのアイテム、コメント、オプションを削除します。
+  - **[既存のエントリを更新]** は、パッケージの要件を検出し、現在インストールされているバージョンと一致するようにバージョン指定子を更新します。
+  - **[Update and add entries (エントリを更新および追加する)]** は、検出されたすべての要件を更新し、他のすべてのパッケージをファイルの末尾に追加します。
 
 `requirements.txt` ファイルはプロジェクトの要件を固定するためのものなので、インストールされるすべてのパッケージが正確なバージョンと共に記述されています。 正確なバージョンを使うと、別のコンピューターに環境を簡単に再現できます。 バージョンの範囲、別のパッケージの依存関係、または pip 以外のインストーラーでインストールされたパッケージであってもも、含まれています。
 
-新しい仮想環境を追加するとき、` requirements.txt` ファイルが存在する場合は、**[仮想環境の追加]** ダイアログにパッケージを自動的にインストールするオプションが表示されるので、別のコンピューターに簡単に環境を再作成できます。
+新しい仮想環境を追加するとき、`requirements.txt` ファイルが存在する場合は、**[仮想環境の追加]** ダイアログにパッケージを自動的にインストールするオプションが表示されるので、別のコンピューターに簡単に環境を再作成できます。
 
 ![requirements.txt で仮想環境を作成する](media/environments-requirements-txt.png)
 

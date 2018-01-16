@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: 2126855c0d8b44965c3ba867940990de0edb1d42
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2e80df306a3ce659225ae195b0b57922ab7d9a85
+ms.sourcegitcommit: fb73b56d45ebc0386cd4de1a706ba9e20c59daf1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="working-with-the-python-interactive-window"></a>Python 対話型ウィンドウの使用
 
@@ -48,7 +48,7 @@ Ctrl + Enter などのエディターとの対話を含む、例を使用した�
 
 ![Python 環境ウィンドウの対話型ウィンドウへのリンク](media/interactive-window-opening.png)
 
-(第 2 の方法) **[表示] > [その他のウィンドウ]** メニューの下の方に、既定の環境の ** [Python Interactive ウィンドウ]** コマンドと、環境ウィンドウに切り替えるためのコマンドがあります。
+(第 2 の方法) **[表示] > [その他のウィンドウ]** メニューの下の方に、既定の環境の **[Python Interactive ウィンドウ]** コマンドと、環境ウィンドウに切り替えるためのコマンドがあります。
 
 ![[表示] > [その他のウィンドウ] の対話型ウィンドウ メニュー項目](media/interactive-window-menu.png)
 

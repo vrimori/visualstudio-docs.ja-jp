@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: cd1ce1ce47705e5e8b63fb3ef7cc36c401503886
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a8136bd3e694ae544b176b8da6bfc2b721eb0c89
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="installing-python-support-in-visual-studio-on-windows"></a>Windows に Visual Studio の Python サポートをインストールする
 
@@ -27,7 +27,7 @@ Visual Studio 用の Python サポートをインストールするには、使�
 - [Visual Studio 2015](#visual-studio-2015)
 - [Visual Studio 2013 以前](#visual-studio-2013-and-earlier)
 
-Visual Studio 2015 以前では、任意の Python インタープリターを別にインストールする必要があります (Python 3.5 およびそれ以前と 3.6 はサポート対象外です)。 詳細については、「[Python 環境](python-environments.md)」を参照してください。 同じページには、Visual Studio 2017 に既存の Python インタープリターを追加する手順もあります。
+Visual Studio 2015 以前では、任意の Python インタープリターを別にインストールする必要があります (Python 3.5 およびそれ以前と 3.6 はサポート対象外のため、"Python バージョン 3.6 はサポートされていません" のようなメッセージが表示されます)。 詳細については、「[Python 環境](python-environments.md)」を参照してください。 同じページには、Visual Studio 2017 に既存の Python インタープリターを追加する手順もあります。
 
 インストール手順を実行した後、Python サポートを簡単にテストするには、Alt + I キーを押して Python の対話型ウィンドウを開き、`2+2` を入力します。 `4` という出力が表示されない場合は、手順を再確認してください。
 
@@ -60,10 +60,10 @@ Visual Studio 2015 以前では、任意の Python インタープリターを�
 
     ![Visual Studio インストーラーの [Python 開発] のオプション](media/installation-python-options.png)
 
-    | オプション | 説明 | 
+    | オプション | 説明 |
     | --- | --- |
     | Python ディストリビューション | 使用する予定の Python 2、Python 3、Anaconda2、および Anaconda3 ディストリビューションの 32 ビットおよび 64 ビットのバリアントを任意の組み合わせで選択します。 それぞれには、ディストリビューションのインタープリター、ランタイム、およびライブラリが含まれます。 Anaconda とは、具体的には、さまざまなパッケージを含むオープンのデータ サイエンス プラットフォームです。 (ディストリビューションを追加または削除する場合には、Visual Studio インストーラーへはいつでも戻ることができます。) |
-    | cookiecutter テンプレートのサポート | テンプレートの検出、テンプレート オプションの入力、プロジェクトとファイルの作成を行うための Cookicutter グラフィカル UI をインストールできます。 「[Cookiecutter 拡張機能の使用](cookiecutter.md)」を参照してください。 |
+    | cookiecutter テンプレートのサポート | テンプレートの検出、テンプレート オプションの入力、プロジェクトとファイルの作成を行うための Cookiecutter グラフィカル UI をインストールできます。 「[Cookiecutter 拡張機能の使用](cookiecutter.md)」をご覧ください。 |
     | Python Web サポート | HTML、CSS、および JavaScript の編集をサポートする Web 開発用ツールを、Bottle、Flask、および Django フレームワークを使用するプロジェクトのテンプレートと共にインストールします。 「[Python Web プロジェクト テンプレート](template-web.md)」を参照してください。 |
     | Python IoT サポート | Python を使用した、Windows IoT Core 開発がサポートされます。 |
     | Python ネイティブ開発ツール | Python のネイティブ拡張機能の開発するために必要な C++ コンパイラおよびその他のコンポーネントがインストールされます。 「[Python 用 C++ 拡張機能の作成](cpp-and-python.md)」を参照してください。 |
@@ -83,7 +83,7 @@ Visual Studio 2015 以前では、任意の Python インタープリターを�
 
 1. **[プログラミング言語] の [Python Tools for Visual Studio]** を選択し、**[次へ]** を選択します。
 
-    ![Visual Studio 2015 インストーラーの PTVS オプション](media/installation-vs2015.png)    
+    ![Visual Studio 2015 インストーラーの PTVS オプション](media/installation-vs2015.png)
 
 1. Visual Studio のセットアップが完了したら、[任意の Python インタープリターをインストールします](python-environments.md#selecting-and-installing-python-interpreters)。 インタープリターをインストール済みの場合は、「[既存インタープリター用の環境の作成](python-environments.md#creating-an-environment-for-an-existing-interpreter)」を参照してください。
 
@@ -114,11 +114,11 @@ Visual Studio 2015 以前のインストール パスを次に示します。
 
 それぞれの文字について以下に説明します。
 
-- &lt;VS_ver&gt; は、次のようになります。    
-    - Visual Studio 2015 では 14.0
-    - Visual Studio 2013 では 12.0
-    - Visual Studio 2012 では 11.0
-    - Visual Studio 2010 では 10.0
+- &lt;VS_ver&gt; は、次のようになります。
+  - Visual Studio 2015 では 14.0
+  - Visual Studio 2013 では 12.0
+  - Visual Studio 2012 では 11.0
+  - Visual Studio 2010 では 10.0
 - &lt;PTVS_ver&gt; はバージョン番号です (2.2、2.1、2.0、1.5、1.1、1.0 など)。
 
 ### <a name="user-specific-installations-15-and-earlier"></a>ユーザー固有のインストール (1.5 以前)

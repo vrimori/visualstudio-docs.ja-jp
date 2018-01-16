@@ -13,11 +13,11 @@ ms.author: tglee
 manager: ghogen
 dev_langs: vb
 ms.workload: multiple
-ms.openlocfilehash: 46557b646db37b3f04420ca5b91ab71c4f5b088a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2573e1a2344b858b721fb234d6b228b421a36550
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>クイックスタート: Visual Studio で Visual Basic を使用して初めてコンソール アプリを作成する
 ここでは 5 分から 10 分で Visual Studio 統合開発環境 (IDE) の概要を示し、コンソールで実行される簡単な Visual Basic アプリケーションを作成します。
@@ -44,7 +44,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
      ![Visual Studio インストーラーの [.NET Core クロスプラットフォームの開発] ワークロード](../ide/media/dot-net-core-xplat-dev-workload.png)
 
 ## <a name="create-the-application"></a>アプリケーションを作成する
-Visual Basic プロジェクト テンプレートを選択し、プロジェクトに名前を付けると、簡単な "Hello World" アプリケーションが自動的に作成されます。 [Console.WriteLine(System.String)](https://docs.microsoft.com/en-us/dotnet/api/system.console.writeline?view=netframework-4.7.1#System_Console_WriteLine_System_String) メソッドを呼び出し、リテラル文字列 "Hello World!" を コンソール ウィンドウに表示します。
+Visual Basic プロジェクト テンプレートを選択し、プロジェクトに名前を付けると、簡単な "Hello World" アプリケーションが自動的に作成されます。 <xref:System.Console.WriteLine%2A> メソッドを呼び出し、リテラル文字列 "Hello World!" を コンソール ウィンドウに表示します。
 
 ![テンプレートから既定の Hello World コードを表示する](../ide/media/vb-console-helloworld-template.png)
 
@@ -57,7 +57,7 @@ IDE で **[Hello World]** ボタンをクリックした場合、デバッグ �
 ### <a name="add-some-code"></a>何らかのコードを追加する
 アプリケーションを一時停止し、ユーザーに入力を求めるのためのコードを追加してみましょう。
 
-1. [Console.WriteLine(System.String)](https://docs.microsoft.com/en-us/dotnet/api/system.console.writeline?view=netframework-4.7.1#System_Console_WriteLine_System_String) メソッドへの呼び出しのすぐ後に、次のコードを追加します。
+1. <xref:System.Console.WriteLine%2A> メソッドへの呼び出しのすぐ後に、次のコードを追加します。
 
    ```vb
    Console.Write("Press any key to continue...")

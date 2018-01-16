@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio での Python のオプション | Microsoft Docs"
 ms.custom: 
-ms.date: 07/13/2017
+ms.date: 01/04/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: devlang-python
@@ -19,11 +19,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: b80164e4b41bf164e9235858f51d8a211dd70caa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6776eee4436e54ca1b0215b307eeb5fa098802c3
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="options-for-python-in-visual-studio"></a>Visual Studio での Python のオプション
 
@@ -40,6 +40,8 @@ Python のオプションを表示するには、**[ツール] > [オプショ�
 - [診断オプション](#diagnostics-options)
 - [対話型ウィンドウ オプション](#interactive-windows-options)
 - [高度な Python エディター オプション](#advanced-python-editor-options)
+
+**試験的**グループには現在開発中の機能のオプションが含まれていますが、これらについてはここで説明しないことに注意してください。 これらは通常、[Microsoft ブログの Python エンジニアリング](https://blogs.msdn.microsoft.com/pythonengineering/)の投稿で取り上げられます。
 
 ## <a name="general-options"></a>全般オプション
 
@@ -69,7 +71,6 @@ Python のオプションを表示するには、**[ツール] > [オプショ�
 | Python 標準ライブラリのデバッグを有効にする | オフ | これにより、デバッグ中に標準ライブラリのソース コードに介入できるようになりますが、デバッガーが開始するまでの時間が長くなります。|
 
 ![Python オプションのダイアログ、[デバッグ] タブ](media/options-debugging.png)
-
 
 ## <a name="diagnostics-options"></a>診断オプション
 

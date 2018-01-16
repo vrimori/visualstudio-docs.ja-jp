@@ -1,7 +1,7 @@
 ---
-title: "方法: Visual Studio でテンプレートの問題を解決する | Microsoft Docs"
+title: "Visual Studio のプロジェクト テンプレートと項目テンプレートの読み込みのトラブルシューティング | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/02/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-general
@@ -11,60 +11,64 @@ helpviewer_keywords: templates [Visual Studio], troubleshooting
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 1d78554f39be1fdf21c5bbcb4d0abf5cf691fce9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ba6d9a73cd45a0e497fb2ecc0f4b4697071e3b37
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-troubleshoot-templates"></a>方法: テンプレートの問題を解決する
 
 テンプレートを開発環境に読み込むことができない場合に、問題を突き止める方法はいくつかあります。
 
-## <a name="validating-the-vstemplate-file"></a>.vstemplate ファイルの検証
+## <a name="validate-the-vstemplate-file"></a>.vstemplate ファイルを検証する
 
-テンプレートの .vstemplate ファイルが [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] テンプレート スキーマに準拠していないと、テンプレートが **[新しいプロジェクト]** ダイアログ ボックスに表示されないことがあります。
+テンプレートの .vstemplate ファイルが Visual Studio テンプレート スキーマに準拠していないと、テンプレートが **[新しいプロジェクト]** ダイアログ ボックスに表示されないことがあります。
 
 ### <a name="to-validate-the-vstemplate-file"></a>.vstemplate ファイルを検証するには
 
-1.  テンプレートを含む .zip ファイルを探します。  
+1. テンプレートを含む .zip ファイルを探します。
 
-2.  .zip ファイルを展開します。  
+1. .zip ファイルを展開します。
 
-3.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の **[ファイル]** メニューの **[開く]** をクリックし、**[ファイル]** をクリックします。
+1. Visual Studio の **[ファイル]** メニューで、**[開く]** > **[ファイル]** の順に選択します。
 
-4.  テンプレートの .vstemplate ファイルを選択し、**[開く]** をクリックします。  
-  
-5.  .vstemplate ファイルの XML が [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] テンプレート スキーマに準拠していることを確認します。 .vstemplate スキーマの詳細については、「[Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)」を参照してください。  
+1. テンプレートの .vstemplate ファイルを選択し、**[開く]** をクリックします。
+
+1. .vstemplate ファイルの XML がテンプレート スキーマに準拠していることを確認します。 .vstemplate スキーマの詳細については、「[テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)」をご覧ください。
 
     > [!NOTE]
     > .vstemplate ファイルを作成する際に IntelliSense サポートを取得するには、`xmlns` 属性を `VSTemplate` 要素に追加し、http://schemas.microsoft.com/developer/vstemplate/2005 の値を割り当てます。
 
-6.  .vstemplate ファイルを保存して、閉じます。  
-  
-7.  テンプレートに含まれるファイルを選択して右クリックし、**[送る]** を選択し、**[圧縮 (zip 形式) フォルダー]** をクリックします。 選択したファイルは .zip ファイルに圧縮されます。  
-  
-8.  新しい .zip ファイルを古い .zip ファイルと同じディレクトリに配置します。  
-  
-9. 抽出したテンプレート ファイルと古いテンプレート .zip ファイルを削除します。
+1. .vstemplate ファイルを保存して、閉じます。
 
-## <a name="monitoring-the-event-log"></a>イベント ログの監視
+1. テンプレートに含まれるファイルを選択して右クリックし、**[送る]** > **[圧縮 (zip 形式) フォルダー]** の順に選択します。 選択したファイルは .zip ファイルに圧縮されます。
 
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、テンプレート .zip ファイルの処理中に発生したエラーを記録します。 **[新しいプロジェクト]** ダイアログ ボックスに表示されるはずのテンプレートが表示されない場合は、**[イベント ビューアー]** を使用して問題のトラブルシューティングを行うことができます。
+1. 新しい .zip ファイルを古い .zip ファイルと同じディレクトリに配置します。
+
+1. 抽出したテンプレート ファイルと古いテンプレート .zip ファイルを削除します。
+
+## <a name="monitor-the-event-log"></a>イベント ログを監視する
+
+Visual Studio は、テンプレート .zip ファイルの処理中に発生したエラーを記録します。 **[新しいプロジェクト]** ダイアログ ボックスに表示されるはずのテンプレートが表示されない場合は、**[イベント ビューアー]** を使用して問題のトラブルシューティングを行うことができます。
 
 ### <a name="to-locate-template-errors-in-event-viewer"></a>イベント ビューアーでテンプレート エラーを見つけるには
 
-1.  Windows で、**[スタート]** をクリックし、**[コントロール パネル]** をクリックします。次に、**[管理ツール]** をダブルクリックし、**[イベント ビューアー]** をダブルクリックします。  
-  
-2.  左ウィンドウで、**[アプリケーション]** をクリックします。  
-  
-3.  **[ソース]** の値が [`Visual Studio - VsTemplate`] のイベントを探します。  
-  
-4.  テンプレート イベントをダブルクリックして、エラーを表示します。
+1. Windows の **[スタート]** メニューで、**[Windows 管理ツール]** > **[イベント ビューアー]** の順に選択します。
+
+1. 左側のウィンドウで、**[Windows ログ]** > **[アプリケーション]** の順に選択します。
+
+1. **[ソース]** の値が [`Visual Studio - VsTemplate`] のイベントを探します。
+
+1. エラーを表示するには、テンプレート イベントをダブルクリックします。
+
+## <a name="enable-diagnostic-logging"></a>診断ログを有効にする
+
+[テンプレートの検出 (機能拡張) のトラブルシューティング](../extensibility/troubleshooting-template-discovery.md)の手順に従って、テンプレートの検出の診断ログを有効にできます。
 
 ## <a name="see-also"></a>関連項目
 
-[テンプレートのカスタマイズ](../ide/customizing-project-and-item-templates.md)   
-[プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
-[Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)
+[テンプレートの検出 (機能拡張) のトラブルシューティング](../extensibility/troubleshooting-template-discovery.md)  
+[テンプレートのカスタマイズ](../ide/customizing-project-and-item-templates.md)  
+[プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)  
+[テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)
