@@ -13,11 +13,11 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: eed8f03eefb15b982f297b78f7503c947df8d712
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 12065875980d114d6ea8b9912009701afb5cf9a0
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="step-6-name-your-button-controls"></a>手順 6: ボタン コントロールの名前の設定
 PictureBox はフォームで 1 つだけ使用しています。 このコントロールには、追加したときに自動的に **pictureBox1**という名前が付けられています。 CheckBox も 1 つだけで、 **checkBox1**という名前が付けられています。 この後コードを記述しますが、そのコードでは CheckBox と PictureBox を参照します。 これらのコントロールについては、どちらも 1 つだけであるため、コードで **pictureBox1** または **checkBox1** となっていても何を指しているのかがわかります。  
@@ -74,7 +74,7 @@ Visual C# コードが表示された [Form1.cs] タブ
   
      コントロールのイベント ハンドラーを追加した後は、Windows フォーム デザイナーでコントロールをダブルクリックするか、またはメニュー バーで **[表示]**、 **[コード]**の順にクリックして、いつでもイベント ハンドラーに戻ることができます。  
   
-     名前は、プログラムを作成するときに重要になります。メソッド (イベント ハンドラーを含む) には任意の名前を付けることができます。 IDE でイベント ハンドラーを追加した場合は、コントロールの名前と処理されるイベントに基づいて名前が作成されます。 たとえば、 **showButton** というボタンの Click イベントのイベント ハンドラー メソッドには `showButton_Click()` という名前が付けられます。 また、メソッドであることを示すために、通常はメソッド名の後に左かっこと右かっこ () が追加されます。 コード変数名を変更する場合は、コードの変数を右クリックし、 **[リファクター]**をクリックし、 **[名前の変更]**をクリックします。 コードのその変数のすべてのインスタンスの名前は変更されます。 詳細については、「[名前の変更リファクタリング (C#)](../csharp-ide/refactoring/rename.md)」または「[名前の変更リファクタリング (Visual Basic)](../vb-ide/refactoring/rename.md)」を参照してください。
+     名前は、プログラムを作成するときに重要になります。メソッド (イベント ハンドラーを含む) には任意の名前を付けることができます。 IDE でイベント ハンドラーを追加した場合は、コントロールの名前と処理されるイベントに基づいて名前が作成されます。 たとえば、 **showButton** というボタンの Click イベントのイベント ハンドラー メソッドには `showButton_Click()` という名前が付けられます。 また、メソッドであることを示すために、通常はメソッド名の後に左かっこと右かっこ () が追加されます。 コード変数名を変更する場合は、コードの変数を右クリックし、 **[リファクター]**をクリックし、 **[名前の変更]**をクリックします。 コードのその変数のすべてのインスタンスの名前は変更されます。 詳細については、「[名前の変更リファクタリング (C#)](../ide/reference/rename-csharp.md)」または「[名前の変更リファクタリング (Visual Basic)](../ide/reference/rename-vb.md)」を参照してください。
   
 ### <a name="to-continue-or-review"></a>続行または確認するには  
   

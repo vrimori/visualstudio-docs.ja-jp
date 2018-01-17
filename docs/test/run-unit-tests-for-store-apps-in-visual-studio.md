@@ -11,11 +11,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload: uwp
 author: gewarren
-ms.openlocfilehash: b1cc13dfd81876f647178ebf3702c778cabb533e
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: c9610360c0ea6d32c4825b1e2768f3eaaa06a6fa
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="run-unit-tests-for-uwp-apps-in-visual-studio"></a>Visual Studio での UWP アプリの単体テストの実行
 このトピックでは、Microsoft Visual Studio でテスト エクスプローラーを使用して単体テストを実行する方法について説明します。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="BKMK_Running_tests_in_Test_Explorer"></a> テスト エクスプローラーでテストを実行する  
  テスト プロジェクトをビルドすると、テストはテスト エクスプローラーに表示されます。 テスト エクスプローラーが表示されない場合は、Visual Studio メニューの **[テスト]** をクリックし、 **[Windows]**、 **[テスト エクスプローラー]**の順に選択します。  
   
- ![単体テスト エクスプローラー](../ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
+ ![単体テスト エクスプローラー](../test/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
   
  テストを実行して、記述し、再実行すると、テスト エクスプローラーに **[失敗したテスト]**、 **[成功したテスト]**、 **[スキップされたテスト]** 、および **[テストを実行しない]**の既定のグループの結果が表示されます。 テスト エクスプローラーでテストをグループ化する方法を変更できます。  
   

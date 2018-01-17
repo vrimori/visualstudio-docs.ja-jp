@@ -12,11 +12,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
 author: gewarren
-ms.openlocfilehash: e25d450eee8b404819df152a759d7238363d1a78
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: bf466db15c30a9763c6d7be363041ee3bfa14f7d
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>テスト エクスプローラーを使用して単体テストを実行する
 テスト エクスプローラーを使用して、Visual Studio またはサードパーティの単体テスト プロジェクトから単体テストを実行し、テストをカテゴリにグループ化し、テスト リストをフィルター処理し、テストのプレイリストを作成、保存、および実行します。 テストをデバッグし、テストのパフォーマンスとコード カバレッジを分析することもできます。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/09/2018
   
  テスト プロジェクトをビルドすると、テストはテスト エクスプローラーに表示されます。 テスト エクスプローラーが表示されない場合は、Visual Studio メニューの **[テスト]** をクリックし、 **[Windows]**、 **[テスト エクスプローラー]**の順に選択します。  
   
- ![単体テスト エクスプローラー](../ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
+ ![単体テスト エクスプローラー](../test/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
   
  テストを実行して、記述し、再実行すると、テスト エクスプローラーに **[失敗したテスト]**、 **[成功したテスト]**、 **[スキップされたテスト]** 、および **[テストを実行しない]**の既定のグループの結果が表示されます。 テスト エクスプローラーでテストをグループ化する方法を変更できます。  
   

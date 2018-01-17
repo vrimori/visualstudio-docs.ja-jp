@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: data-science
-ms.openlocfilehash: 74978a3ef43a1e98202d32ed418008071c8794be
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 45b12e0e6d9c26cd6fa13c1398e983087ee375e1
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="setting-up-remote-workspaces"></a>リモート ワークスペースの設定
 
@@ -125,18 +125,18 @@ SSL 証明書は、Windows に手動でインストールする必要があり�
 
 SSL 証明書ファイルのパス (PFX へのパス) を `/etc/rtvs/rtvsd.config.json` で設定する必要があります。 `X509CertificateFile` と `X509CertificatePassword` をファイル パスとパスワードでそれぞれ更新します。
 
-    ```json
-    {
-      "logging": { "logFolder": "/tmp" },
-      "security": {
-        "allowedGroup": "",
-        "X509CertificateFile": "/etc/rtvs/ssl-cert-snakeoil.pfx",
-        "X509CertificatePassword": "SnakeOil"
-      },
-      "startup": { "name": "rtvsd" },
-      "urls": "https://0.0.0.0:5444"
-    }
-    ```
+```json
+{
+  "logging": { "logFolder": "/tmp" },
+  "security": {
+    "allowedGroup": "",
+    "X509CertificateFile": "/etc/rtvs/ssl-cert-snakeoil.pfx",
+    "X509CertificatePassword": "SnakeOil"
+  },
+  "startup": { "name": "rtvsd" },
+  "urls": "https://0.0.0.0:5444"
+}
+```
 
 ファイルを保存し、デーモン `sudo systemctl restart rtvsd` を再起動します。
 

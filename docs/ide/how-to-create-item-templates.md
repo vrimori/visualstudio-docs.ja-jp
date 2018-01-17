@@ -11,11 +11,11 @@ helpviewer_keywords: item templates [Visual Studio], creating
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5145263ce84cf9e1f6a5ef970701ace660ecb73d
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: 8fd5d7fba092df5accfaad9d26cfc05f196981ba
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="how-to-create-item-templates"></a>方法: 項目テンプレートを作成する
 
@@ -62,8 +62,6 @@ ms.lasthandoff: 01/05/2018
    ```xml
    <TemplateID>Microsoft.CSharp.Class</TemplateID>
    ```
-
-   Windows 8.1 C# プロジェクトの場合は、.vstemplate ファイルで `<TemplateData>` の開始タグと終了タグの中に XML、`<TemplateGroupID>WinRT-Managed</TemplateGroupID>` を追加します。 Windows 8.1 C++ プロジェクトの場合は、値 `WinRT-Native-6.3` を使います。 Windows 10 およびその他の種類のプロジェクトの場合は、「[TemplateGroupID 要素](../extensibility/templategroupid-element-visual-studio-templates.md)」 (拡張機能) を参照してください。 .vstemplate の完全なリファレンスについては、「[Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)」 (拡張機能) を参照してください。
 
 1. Visual Studio で、.vstemplate ファイルを保存して閉じます。
 

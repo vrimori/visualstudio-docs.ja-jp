@@ -21,11 +21,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: c865fd1d01f7bf0137c68010bcb850a7a8450680
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2006f565edbca8a859cd2c155645e47e083b5528
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="managing-application-resources-net"></a>アプリケーション リソースの管理 (.NET)
 
@@ -48,7 +48,6 @@ ms.lasthandoff: 12/22/2017
 .NET プロジェクトでのリソースの管理方法は、他のプロジェクト タイプと異なります。 リソースについて詳しくは、以下をご覧ください。
 
 - ユニバーサル Windows プラットフォーム (UWP) アプリの場合は、「[アプリ リソースとリソース管理システム](/windows/uwp/app-resources/)」をご覧ください
-- Windows 8.x アプリの場合は、「[アプリ リソースの定義 (HTML)](https://msdn.microsoft.com/en-us/library/windows/apps/hh465228.aspx)」をご覧ください
 - C++ プロジェクトの場合は、「[Working with Resource Files](/cpp/windows/working-with-resource-files)」(リソース ファイルの使用) および「[How to: Create a Resource](/cpp/windows/how-to-create-a-resource)」(方法: リソースを作成する) をご覧ください
 
 ## <a name="see-also"></a>関連項目

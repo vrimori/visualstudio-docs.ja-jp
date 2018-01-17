@@ -12,11 +12,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
 author: gewarren
-ms.openlocfilehash: 492aaa5190bb0b24e7077d3523197ff4eff6ba49
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 17029522cae96200b7bc28b0f917cc5d33f6c673
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="unit-test-basics"></a>単体テストの基本
 コードが予想どおりに動作することを確認するには、単体テストを作成して実行します。 単体テストと呼ばれる理由は、プログラムの機能を、個々の *単体*としてテストできる独立したテスト可能な動作に分解するためです。 Visual Studio テスト エクスプローラーには、Visual Studio で単体テストを実行して結果を表示するための柔軟で効率的な方法が用意されています。 Visual Studio と共に、マネージ コードおよびネイティブ コード用の Microsoft 単体テスト フレームワークがインストールされます。 *単体テスト フレームワーク* を使用して、単体テストを作成して実行し、テストの結果を報告します。 変更を加えたときは単体テストを再実行し、コードが正しく機能するかテストします。 Visual Studio Enterprise では、[Live Unit Testing](live-unit-testing-intro.md) でこれを自動化できます。この機能は、コード変更で影響のあったテストを検出し、ユーザーが入力している間にバックグラウンドで実行します。
@@ -219,7 +219,7 @@ public void My_Test ()
 ##  <a name="BKMK_Running_tests_in_Test_Explorer"></a> テスト エクスプローラーでテストを実行する  
  テスト プロジェクトをビルドすると、テストはテスト エクスプローラーに表示されます。 テスト エクスプローラーが表示されない場合は、Visual Studio メニューの **[テスト]** をクリックし、 **[Windows]**、 **[テスト エクスプローラー]**の順に選択します。  
   
- ![単体テスト エクスプローラー](../ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
+ ![単体テスト エクスプローラー](../test/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
   
  テストを実行して、記述し、再実行すると、テスト エクスプローラーの既定のビューに **[失敗したテスト]**、 **[成功したテスト]**、 **[スキップされたテスト]** 、および **[テストを実行しない]**グループの結果が表示されます。 グループの見出しを選択して、そのグループ内のすべてのテストを表示するビューを開くことができます。  
   
@@ -286,7 +286,6 @@ public void My_Test ()
  `AddIntegerHelper` メソッドのデータ ドリブン テストを作成するには、最初に `AccountsTest.accdb` という名前の Access データベースと `AddIntegerHelperData`という名前のテーブルを作成します。 `AddIntegerHelperData` テーブルは、追加の 1 番目と 2 番目のオペランドを指定する列、および予期される結果を指定する列を定義します。 多数の行に適切な値を入力します。  
   
 ```csharp  
-  
 [DataSource(  
     @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Projects\MyBank\TestData\AccountsTest.accdb",   
     "AddIntegerHelperData"  
@@ -300,8 +299,7 @@ public void AddIntegerHelper_DataDrivenValues_AllShouldPass()
     int expected = Convert.ToInt32(TestContext.DataRow["Sum"]);  
     int actual = target.AddIntegerHelper(x, y);  
     Assert.AreEqual(expected, actual);  
-}  
-  
+}
 ```  
   
  属性付きメソッドは、テーブル内の各行に対して 1 回実行されます。 イテレーションが失敗した場合、テスト エクスプローラーがメソッドのテスト失敗を報告します。 メソッドのテスト結果の詳細ペインに、データの行ごとにメソッドの成功/失敗の状態が表示されます。  

@@ -11,11 +11,11 @@ helpviewer_keywords: templates [Visual Studio], troubleshooting
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ba6d9a73cd45a0e497fb2ecc0f4b4697071e3b37
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: d9242d053044fa66e6eb3d506382cf7cfb5d0295
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="how-to-troubleshoot-templates"></a>方法: テンプレートの問題を解決する
 
@@ -47,20 +47,6 @@ ms.lasthandoff: 01/05/2018
 1. 新しい .zip ファイルを古い .zip ファイルと同じディレクトリに配置します。
 
 1. 抽出したテンプレート ファイルと古いテンプレート .zip ファイルを削除します。
-
-## <a name="monitor-the-event-log"></a>イベント ログを監視する
-
-Visual Studio は、テンプレート .zip ファイルの処理中に発生したエラーを記録します。 **[新しいプロジェクト]** ダイアログ ボックスに表示されるはずのテンプレートが表示されない場合は、**[イベント ビューアー]** を使用して問題のトラブルシューティングを行うことができます。
-
-### <a name="to-locate-template-errors-in-event-viewer"></a>イベント ビューアーでテンプレート エラーを見つけるには
-
-1. Windows の **[スタート]** メニューで、**[Windows 管理ツール]** > **[イベント ビューアー]** の順に選択します。
-
-1. 左側のウィンドウで、**[Windows ログ]** > **[アプリケーション]** の順に選択します。
-
-1. **[ソース]** の値が [`Visual Studio - VsTemplate`] のイベントを探します。
-
-1. エラーを表示するには、テンプレート イベントをダブルクリックします。
 
 ## <a name="enable-diagnostic-logging"></a>診断ログを有効にする
 

@@ -18,11 +18,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: data-science
-ms.openlocfilehash: a7680ff2613051cb795d2ca9cb509f725e92dd23
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7bab332a66784dd473a0cf2b841b617aecda9e9f
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="r-tools-for-visual-studio-options"></a>R Tools for Visual Studio オプション
 
@@ -34,8 +34,8 @@ R に固有のオプションと設定には、次の方法を使用してアク
 
 - コードの書式オプション (「[エディター オプション](code-editing.md#editor-options)」を参照): **[ツール]、[オプション]** メニューの順に移動し、**[テキスト エディター]、[R]、[書式設定]** の順に選択します。
 - lint オプション ([lint](code-linting.md) に関するページを参照): **[ツール]、[オプション]** メニューの順に移動し、**[テキスト エディター]、[R]、[Lint]** の順に選択します。
-- 詳細エディター オプション ([こちらのトピックの説明を参照](#text-editor-r-advanced-options)): **[ツール] > [オプション]** メニューの順に移動し、**[テキスト エディター] > [R] > [詳細設定]** の順に選択します。
-- 動作オプション ([こちらのトピックの説明を参照](#r-tools-advanced-options)):**[R Tools]、[オプション]** の順に移動するか、**[ツール]、[オプション]** の順に移動し、**[R Tools]** までスクロールします。
+- 詳細エディター オプション ([こちらのトピックの説明を参照](#text-editor-r--advanced-options)): **[ツール] > [オプション]** メニューの順に移動し、**[テキスト エディター] > [R] > [詳細設定]** の順に選択します。
+- 動作オプション ([こちらのトピックの説明を参照](#r-tools--advanced-options)):**[R Tools]、[オプション]** の順に移動するか、**[ツール]、[オプション]** の順に移動し、**[R Tools]** までスクロールします。
 
 **[R Tools] > [データ サイエンスの設定]** コマンドは、Visual Studio 全体のさまざまな設定にも影響します。 このオプションについては、次のセクションで説明します。
 
