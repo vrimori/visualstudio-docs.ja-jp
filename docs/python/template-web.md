@@ -12,12 +12,14 @@ caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.workload: python
-ms.openlocfilehash: 1215c075c1c38bb742f799948929d2f301750555
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- python
+- data-science
+ms.openlocfilehash: b04bf8fcb72b9ea4578516dcd58fde35a6d4e347
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="python-web-project-templates"></a>Python Web プロジェクト テンプレート
 
@@ -31,7 +33,7 @@ Visual Studio には、フレームワーク自体は含まれません。 プ�
 
 Bottle、Flask、Django の各テンプレートには、いくつかのページと静的ファイルがあるスターター サイトが含まれます。 このコードは、サーバーをローカルに実行およびデバッグするため (一部の設定は環境から取得する必要があります)、また Microsoft Azure にデプロイするため ([WSGI アプリ](http://www.python.org/dev/peps/pep-3333/) オブジェクトを提供する必要があります) に十分です。
 
-フレームワーク固有のテンプレートからプロジェクトを作成する場合、pip を使用して必要なパッケージをインストールするためのダイアログが表示されます。 Web プロジェクトの[仮想環境](python-environments.md#virtual-environments)を使用して、Web サイトのパブリッシュ時に正しい依存関係が含まれるようにすることもお勧めします。
+フレームワーク固有のテンプレートからプロジェクトを作成する場合、pip を使用して必要なパッケージをインストールするためのダイアログが表示されます。 Web プロジェクトの[仮想環境](python-environments.md#global-and-virtual-environments)を使用して、Web サイトのパブリッシュ時に正しい依存関係が含まれるようにすることもお勧めします。
 
 ![プロジェクト テンプレートに必要なパッケージをインストールするダイアログ](media/template-web-requirements-txt-wizard.png)
 
@@ -68,13 +70,12 @@ MSBuild 構文を使用して任意のプロジェクト プロパティまた�
 **Bottle Web プロジェクト** テンプレートには、必要な構成を実行する定型コードが含まれています。 ただし、インポートされた bottle アプリにはこのコードが含まれていない場合があります、その場合、次の設定はインストールされた `bottle` モジュールを使用してアプリを起動します。
 
 - **[Run Server Command (サーバー コマンドの実行)]** グループ:
-
-    - **[コマンド]**: `bottle` (モジュール)
-    - **[引数]**: `--bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
+  - **[コマンド]**: `bottle` (モジュール)
+  - **[引数]**: `--bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
 
 - **[Debug Server Command (サーバー コマンドのデバッグ)]** グループ:
-    - **[コマンド]**: `bottle` (モジュール)
-    - **[引数]** `--debug --bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
+  - **[コマンド]**: `bottle` (モジュール)
+  - **[引数]** `--debug --bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
 
 デバッグに Visual Studio を使用する場合、`--reload` オプションはお勧めしません。
 
@@ -83,12 +84,11 @@ MSBuild 構文を使用して任意のプロジェクト プロパティまた�
 Pyramid アプリは、現在、`pcreate` コマンドライン ツールを使用して作成するのが最適です。 アプリが作成されたら、[From Existing Python Code (既存の Python コードから)](python-projects.md#creating-a-project-from-existing-files) テンプレートを使用してインポートできます。 その後、**[汎用 Web プロジェクト]** カスタマイズを選択してオプションを構成します。 これらの設定は、Pyramid が `..\env` にある仮想環境にインストールされていることを想定しています。
 
 - **[デバッグ]** グループ:
-
-    - **[サーバー ポート]**: 6543 (または .ini ファイルで構成されているポート)
+  - **[サーバー ポート]**: 6543 (または .ini ファイルで構成されているポート)
 
 - **[Run Server Command (サーバー コマンドの実行)]** グループ:
-    - [コマンド]: `..\env\scripts\pserve-script.py` (スクリプト)
-    - [引数]: `Production.ini`
+  - [コマンド]: `..\env\scripts\pserve-script.py` (スクリプト)
+  - 引数: `Production.ini`
 
 - **[Debug Server Command (サーバー コマンドのデバッグ)]** グループ:
     - [コマンド]: `..\env\scripts\pserve-script.py` (スクリプト)
@@ -146,7 +146,7 @@ JSON デプロイ テンプレートを使用している場合は、サイト�
 
 現時点では、パッケージをインストールするお勧めの方法は、サイト拡張機能をインストールして pip を直接実行した後に開発コンソールを使用することです。 Python の完全なパスを使用することが重要で、そうしないと間違ったものが実行されることがあります。一般に、仮想環境を使用する必要はありません。 例:
 
-```
+```command
 c:\Python35\python.exe -m pip install -r D:\home\site\wwwroot\requirements.txt
 
 c:\Python27\python.exe -m pip install -r D:\home\site\wwwroot\requirements.txt
