@@ -7,47 +7,39 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: f7e9e4a2-5d01-4f78-b408-5be3892bd162
-caps.latest.revision: "25"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 36e235af45e1ce313f2f0e22ab9777d5e205dbe1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: 1925152f830d9969c8650fe698be6ebc70e65cf2
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>.runsettings ファイルを使用して単体テストを構成する
-Visual Studio の単体テストは、\*.runsettings ファイルを使用して構成できます。 (拡張子 runsettings を使用していればファイル名は自由です。) たとえば、テストが実行される .NET Framework、テスト結果が配信されるディレクトリ、テストの実行中に収集されるデータを変更できます。  
-  
- 特殊な構成を行う必要がない場合、\*.runsettings ファイルは不要です。 このファイルが最もよく使われるのは、[コード カバレッジ](../test/customizing-code-coverage-analysis.md)をカスタマイズする場合です。  
-  
-> [!NOTE]
->  **.runsettings と .testsettings**  
->   
->  テストを構成するファイルには、次の 2 種類があります。 \*.runsettings は単体テストに使用されます。 \*.testsettings は、[ラボ環境テスト](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests)、Web パフォーマンスおよびロード テストに使用されます。また、一部の種類の診断データ アダプター (Intellitrace など) およびイベント ログ アダプターをカスタマイズする場合にも使用されます。  
->   
->  2010 以前のエディションの Visual Studio では、単体テストをカスタマイズするためにも \*.testsettings ファイルが使用されていました。 これは現在でも可能ですが、\*.runsettings ファイルで同等の構成を使用する場合より、テストの実行速度が遅くなります。  
-  
-## <a name="customizing-tests-with-a-runsettings-file"></a>.runsettings ファイルによるテストのカスタマイズ  
-  
-1.  XML ファイルを Visual Studio ソリューションに追加し、ファイル名を test.runsettings に変更します。 (ファイル名は自由ですが、拡張子には runsettings を使用する必要があります。)  
-  
-2.  ファイルの内容を以下の [サンプル](#example)で置き換えます。  
-  
-     必要に応じてファイルを編集します。  
-  
-3.  **[テスト]** メニューの **[テストの設定]**をクリックし、 **[テスト設定ファイルの選択]**をクリックします。  
-  
- ソリューション内に複数の \*.runsettings ファイルを作成し、**[テストの設定]** メニューを使用して状況に応じてそれらを有効または無効にすることができます。  
-  
- ![実行設定ファイルの有効化](../test/media/runsettings-1.png "RunSettings-1")  
-  
-##  <a name="example"></a> このサンプル .runsettings ファイルをコピーする  
- 一般的な \*.runsettings ファイルを示します。 すべての値には既定値があるため、ファイルの各要素は省略可能です。  
-  
-```xml  
+
+Visual Studio の単体テストは、\*.runsettings ファイルを使用して構成できます。 (拡張子 ".runsettings" を使用していればファイル名は自由です。)たとえば、テストが実行される .NET Framework のバージョン、テスト結果が配信されるディレクトリ、テストの実行中に収集されるデータを変更できます。
+
+特殊な構成を行う必要がない場合、\*.runsettings ファイルは不要です。 \*.runsettings ファイルを最もよく使うのは、[コード カバレッジ](../test/customizing-code-coverage-analysis.md)をカスタマイズする場合です。
+
+## <a name="customizing-tests-with-a-runsettings-file"></a>.runsettings ファイルによるテストのカスタマイズ
+
+1. XML ファイルを Visual Studio ソリューションに追加し、ファイル名を test.runsettings に変更します。 (ファイル名は自由ですが、拡張子には runsettings を使用する必要があります。)
+
+1. この後で示す例の XML でファイルの内容を置き換え、必要に応じてカスタマイズします。
+
+1. **[テスト]** メニューから **[テストの設定]** > **[テスト設定ファイルの選択]** の順に選択します。
+
+ソリューション内に複数の \*.runsettings ファイルを作成し、**[テストの設定]** メニューを使用して状況に応じてそれらを有効または無効にすることができます。
+
+![実行設定ファイルの有効化](../test/media/runsettings-1.png "RunSettings-1")
+
+## <a name="example-runsettings-file"></a>.runsettings ファイルの例
+
+一般的な \*.runsettings ファイルを次に示します。 すべての値には既定値があるため、ファイルの各要素は省略可能です。
+
+```xml
 <?xml version="1.0" encoding="utf-8"?>  
 <RunSettings>  
   <!-- Configurations that affect the Test Framework -->  
@@ -115,15 +107,16 @@ Visual Studio の単体テストは、\*.runsettings ファイルを使用して
 </RunSettings>  
 ```  
   
- .runsettings ファイルは、[コード カバレッジ](../test/customizing-code-coverage-analysis.md)を構成するためにも使用されます。  
+.runsettings ファイルは、[コード カバレッジ](../test/customizing-code-coverage-analysis.md)を構成するためにも使用されます。  
   
- このトピックの残りの部分では、ファイルの内容について説明します。  
-  
-## <a name="edit-your-runsettings-file"></a>.runsettings ファイルを編集する  
- .runsettings ファイルには、次の要素があります。  
-  
-### <a name="test-run-configuration"></a>テストの実行の構成  
-  
+このトピックの残りの部分では、ファイルの内容について説明します。  
+
+## <a name="edit-your-runsettings-file"></a>.runsettings ファイルを編集する
+
+.runsettings ファイルには、次の要素があります。
+
+### <a name="test-run-configuration"></a>テストの実行の構成
+
 |ノード|既定値|値|  
 |----------|-------------|------------|  
 |`ResultsDirectory`||テスト結果が配置されるディレクトリ。|  
@@ -133,23 +126,22 @@ Visual Studio の単体テストは、\*.runsettings ファイルを使用して
 |`TestAdaptersPaths`||TestAdapter が配置されているディレクトリの 1 つまたは複数のパス|  
 |`MaxCpuCount`|1|単体テストを実行するときに、コンピューターで使用可能なコアを使ってテストを並列実行する程度を制御します。  テストの実行エンジンは、使用可能な各コア上の別個のプロセスとして起動し、アセンブリ、DLL、または関連する成果物など、実行するテストが入ったコンテナーを各コアに与えます。  テスト コンテナーはスケジューリングの単位です。  各コンテナーでは、テストはテスト フレームワークに従って実行されます。  コンテナーが多くある場合、あるコンテナー内のテストの実行を終了したプロセスには、次の使用可能なコンテナーが与えられます。<br /><br /> MaxCpuCount には次の値を指定することができます。<br /><br /> n。ここで n は、1 以上、コアの数以下です。最大 n 個のプロセスが起動します<br /><br /> n。ここで n = その他の値です。起動するプロセスの数は、コンピューター上の利用可能なコア数以下になります|  
   
-### <a name="diagnostic-data-adapters-data-collectors"></a>診断データ アダプター (データ コレクター)  
- `DataCollectors` 要素は、診断データ アダプターの設定を指定します。 診断データ アダプターは、テスト対象の環境とアプリケーションに関する追加情報を収集するために使用します。 各アダプターには既定の設定があるため、既定値を使用しない場合にのみ設定を指定する必要があります。  
-  
-#### <a name="code-coverage-adapter"></a>コード カバレッジ アダプター  
- コード カバレッジ データ コレクターは、アプリケーション コードのどの部分がテストで実行されたかを示すログを作成します。 コード カバレッジの設定のカスタマイズの詳細については、「[コード カバレッジ分析のカスタマイズ](../test/customizing-code-coverage-analysis.md)」を参照してください。  
-  
-#### <a name="other-diagnostic-data-adapters"></a>その他の診断データ アダプター  
- コード カバレッジ アダプターは、現在のところ、実行設定ファイルを使用してカスタマイズできる唯一のアダプターです。  
-  
- 他の種類の診断データ アダプターをカスタマイズするには、テスト設定ファイルを使用する必要があります。 詳細については、「[Visual Studio のテストにおけるテスト設定の指定](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests)」を参照してください。  
-  
-#### <a name="testrunparameters"></a>TestRunParameters  
- TestRunParameters は、実行時にテストで使用できる変数と値の定義方法を提供します。  
-  
-### <a name="mstest-run-settings"></a>MSTest の実行設定  
- これらは、 `[TestMethod]` 属性を持つテスト メソッドを実行するテスト アダプターに固有の設定です。  
-  
+### <a name="diagnostic-data-adapters-data-collectors"></a>診断データ アダプター (データ コレクター)
+
+`DataCollectors` 要素は、診断データ アダプターの設定を指定します。 診断データ アダプターは、テスト対象の環境とアプリケーションに関する追加情報を収集するために使用します。 各アダプターには既定の設定があるため、既定値を使用しない場合にのみ設定を指定する必要があります。
+
+#### <a name="code-coverage-adapter"></a>コード カバレッジ アダプター
+
+コード カバレッジ データ コレクターは、アプリケーション コードのどの部分がテストで実行されたかを示すログを作成します。 コード カバレッジの設定のカスタマイズの詳細については、「[コード カバレッジ分析のカスタマイズ](../test/customizing-code-coverage-analysis.md)」を参照してください。
+
+### <a name="testrunparameters"></a>TestRunParameters
+
+TestRunParameters は、実行時にテストで使用できる変数と値の定義方法を提供します。  
+
+### <a name="mstest-run-settings"></a>MSTest の実行設定
+
+これらは、 `[TestMethod]` 属性を持つテスト メソッドを実行するテスト アダプターに固有の設定です。  
+
 |構成|既定値|値|  
 |-------------------|-------------|------------|  
 |ForcedLegacyMode|False|Visual Studio 2012 で、MSTest アダプターは処理速度と拡張性を高めるために最適化されました。 テストが実行される順序などの一部の動作は、Visual Studio の以前のエディションでの動作と完全に同じではない場合もあります。 以前のテスト アダプターを使用するには、この値を `true` に設定します。<br /><br /> たとえば、単体テスト用に指定された app.config ファイルがある場合は、これを使用することがあります。<br /><br /> より新しいアダプターを使用できるように、テストのリファクタリングを検討することをお勧めします。|  
@@ -162,7 +154,7 @@ Visual Studio の単体テストは、\*.runsettings ファイルを使用して
 |MapInconclusiveToFailed|False|テストが結果不確定の状態で返された場合、通常はテスト エクスプローラーで [スキップ] 状態にマップされます。 結果不確定のテストを [失敗] として表示する場合は、この構成を使用します。|  
 |InProcMode|False|テストを MSTest アダプターと同じプロセスで実行する場合は、この値を true に設定します。 この設定で、わずかにパフォーマンスが向上します。 ただし、あるテストが例外で終了した場合、他のテストは続行されません。|  
 |AssemblyResolution|False|単体テストを検索して実行する場合、追加のアセンブリへのパスを指定できます。  たとえば、テスト アセンブリと同じディレクトリに存在しない依存関係アセンブリにこれらのパスを使用します。  パスを指定するには、"ディレクトリ パス" 要素を使用します。  パスには、環境変数を含めることができます。<br /><br /> `<AssemblyResolution>  <Directory Path>"D:\myfolder\bin\" includeSubDirectories="false"/> </AssemblyResolution>`|  
-  
-## <a name="see-also"></a>参照  
- [コード カバレッジ分析のカスタマイズ](../test/customizing-code-coverage-analysis.md)   
- [Visual Studio のテストにおけるテスト設定の指定](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests)
+
+## <a name="see-also"></a>関連項目
+
+[コード カバレッジ分析のカスタマイズ](../test/customizing-code-coverage-analysis.md)  

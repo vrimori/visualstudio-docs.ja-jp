@@ -1,5 +1,5 @@
 ---
-title: "-Setup (devenv.exe) | Microsoft ドキュメント"
+title: "devenv.exe の setup スイッチ | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,38 +11,39 @@ helpviewer_keywords:
 - setup Devenv switch
 - /setup Devenv switch
 - Devenv, /setup switch
-ms.assetid: 87608b7f-a156-400c-80f5-fc823f843e61
-caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 296b33a5582f9a7ba9ed9540b90444376ead91be
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 93f03de74540d130d66ce123b355691e0828b93e
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="setup-devenvexe"></a>/Setup (devenv.exe)
-使用できるすべての VSPackages にある、メニュー、ツール バー、およびコマンド グループを記述したリソース メタデータが [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] により強制的にマージされます。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-devenv /setup  
-```  
-  
-## <a name="remarks"></a>コメント  
- このスイッチは引数を取りません。 `devenv /setup` コマンドは、一般的にインストール処理の最後の手順として提示されます。 `/setup` スイッチを使用しても、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]は起動しません。  
-  
- `devenv` スイッチおよび [devenv](../../ide/reference/setup-devenv-exe.md) スイッチを使用するには、管理者として [devenv](../../ide/reference/installvstemplates-devenv-exe.md) を実行する必要があります。  
-  
-## <a name="example"></a>例  
- この例は、VSPackages が含まれるバージョンの [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のインストールの最後の手順を示しています。  
-  
-```  
-devenv /setup  
-```  
-  
-## <a name="see-also"></a>参照  
- [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
+
+/Setup を指定すると Visual Studio は、使用できるすべての VSPackage から、メニュー、ツール バー、コマンド グループが記述されているリソース メタデータを強制的にマージします。
+
+## <a name="syntax"></a>構文
+
+```
+devenv /setup
+```
+
+## <a name="remarks"></a>コメント
+
+このスイッチは引数を取りません。 `devenv /setup` コマンドは、一般的にインストール処理の最後の手順として提示されます。 `/setup` スイッチを使っても、Visual Studio は起動しません。
+
+`devenv` スイッチおよび [devenv](../../ide/reference/setup-devenv-exe.md) スイッチを使用するには、管理者として [devenv](../../ide/reference/installvstemplates-devenv-exe.md) を実行する必要があります。
+
+## <a name="example"></a>例
+
+この例は、VSPackage が含まれるバージョンの Visual Studio のインストールの最後の手順を示しています。
+
+```
+devenv /setup
+```
+
+## <a name="see-also"></a>関連項目
+
+[Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)

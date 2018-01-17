@@ -12,14 +12,15 @@ dev_langs:
 - CSharp
 - VB
 - CPP
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 51c8076ef3166e7f0f887a77399a0edfd5cfc072
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: 62a860da6c8f672f5ecd03d3ab97bb9e3ddd3365
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-code-coverage-to-determine-how-much-code-is-being-tested"></a>コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認
 単体テストなどのコード化されたテストによって実際にテストされるプロジェクトのコードの割合を調べるには、Visual Studio のコード カバレッジ機能を使用できます。 バグから効果的に保護するには、コードの大部分を "カバー" するようにテストを実行する必要があります。  
@@ -267,15 +268,16 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
  ビルドの実行後、コード カバレッジの結果はテスト実行にアタッチされ、ビルドの概要に表示されます。  
   
 ## <a name="analyzing-code-coverage-in-a-command-line"></a>コマンド ラインでコード カバレッジを分析する  
- コマンド ラインからテストを実行するには、vstest.console.exe を使用します。 コード カバレッジは、このユーティリティのオプションです。 詳細については、「[VSTest.Console.exe のコマンド ライン オプション](/devops-test-docs/test/vstest-console-exe-command-line-options)」を参照してください。  
+
+コマンド ラインからテストを実行するには、vstest.console.exe を使用します。 コード カバレッジは、vstest.console.exe ユーティリティのオプションです。
+
+1.  Visual Studio 開発者コマンド プロンプトを起動します。
   
-1.  Visual Studio 開発者コマンド プロンプトを起動します。  
+    Windows の **[スタート]** メニューから、**[Visual Studio 2017]** > **[開発者コマンド プロンプト for VS 2017]** の順に選択します。  
   
-     Windows の **[スタート]** メニューで **[すべてのプログラム]**、**[Microsoft Visual Studio]**、**[Visual Studio Tools]**、**[開発者コマンド プロンプト]** の順に選択します。  
+2.  次のコマンドを実行します。
   
-2.  実行します。  
-  
-     `vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage`  
+    `vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage`  
   
 ## <a name="troubleshooting"></a>トラブルシューティング  
  コード カバレッジの結果が表示されない場合は、「[トラブルシューティング コード カバレッジ](../test/troubleshooting-code-coverage.md)」を参照してください。  

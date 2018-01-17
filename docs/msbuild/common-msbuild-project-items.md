@@ -19,14 +19,14 @@ author: kempb
 ms.author: kempb
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 931ccda0fd42a01c9afe272ef985380bc3276e6a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 772134090da6db5152ad855c1c5620f9e267b29f
+ms.sourcegitcommit: fb73b56d45ebc0386cd4de1a706ba9e20c59daf1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="common-msbuild-project-items"></a>MSBuild プロジェクトの共通項目
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、項目は 1 つ以上のファイルに対応する名前付きの参照です。 項目には、ファイル名、パス、バージョン番号などのメタデータが含まれます。 項目には、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のすべてのプロジェクトの種類に共通のものがあります。 これらの項目は、microsoft.build.commontypes.xsd ファイルに定義されています。  
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、項目は 1 つ以上のファイルに対応する名前付きの参照です。 項目には、ファイル名、パス、バージョン番号などのメタデータが含まれます。 項目には、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のすべてのプロジェクトの種類に共通のものがあります。 これらの項目は、Microsoft.Build.CommonTypes.xsd ファイルで定義されています。  
   
 ## <a name="common-items"></a>共通の項目  
  次に、プロジェクトの共通項目の一覧を示します。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="reference"></a>参照  
  プロジェクト内のアセンブリ (マネージ) 参照を表します。  
   
-|項目名|説明|  
+|項目メタデータの名前|説明|  
 |---------------|-----------------|  
 |HintPath|省略可能な文字列。 アセンブリの相対パスまたは絶対パスを指定します。|  
 |name|省略可能な文字列。 アセンブリの表示名を指定します (たとえば、"System.Windows.Forms")。|  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="comreference"></a>COMReference  
  プロジェクト内の COM (アンマネージ) コンポーネント参照を表します。  
   
-|項目名|説明|  
+|項目メタデータの名前|説明|  
 |---------------|-----------------|  
 |name|省略可能な文字列。 コンポーネントの表示名を指定します。|  
 |GUID|省略可能な文字列。 コンポーネントの GUID を {12345678-1234-1234-1234-123456789012} の形式で指定します。|  
@@ -59,14 +59,14 @@ ms.lasthandoff: 12/22/2017
 ### <a name="comfilereference"></a>COMFileReference  
  ResolvedComreference ターゲットに送られるタイプ ライブラリの一覧を表します。  
   
-|項目名|説明|  
+|項目メタデータの名前|説明|  
 |---------------|-----------------|  
 |WrapperTool|省略可能な文字列。 コンポーネントで使用されるラッパー ツールの名前を指定します (たとえば、"tlbimp")。|  
   
 ### <a name="nativereference"></a>NativeReference  
  ネイティブ マニフェスト ファイル、またはこのようなファイルへの参照を表します。  
   
-|項目名|説明|  
+|項目メタデータの名前|説明|  
 |---------------|-----------------|  
 |name|必須の文字列。 マニフェスト ファイルの基本名を指定します。|  
 |HintPath|必須の文字列。 マニフェスト ファイルの相対パスを指定します。|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="projectreference"></a>ProjectReference  
  別のプロジェクトへの参照を表します。  
   
-|項目名|説明|  
+|項目メタデータの名前|説明|  
 |---------------|-----------------|  
 |name|省略可能な文字列。 参照の表示名を指定します。|  
 |プロジェクト|省略可能な文字列。 参照の GUID を {12345678-1234-1234-1234-123456789012} の形式で指定します。|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="compile"></a>Compile  
  コンパイラのソース ファイルを表します。  
   
-|項目名|説明|  
+|項目メタデータの名前|説明|  
 |---------------|-----------------|  
 |DependentUpon|省略可能な文字列。 正しくコンパイルする必要があるファイルを指定します。|  
 |AutoGen|省略可能なブール値。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 統合開発環境 (IDE) で使用するプロジェクト用にファイルを生成するかどうかを指定します。|  
@@ -94,7 +94,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="embeddedresource"></a>EmbeddedResource  
  生成されるアセンブリに埋め込まれるリソースを表します。  
   
-|項目名|説明|  
+|項目メタデータの名前|説明|  
 |---------------|-----------------|  
 |DependentUpon|省略可能な文字列。 正しくコンパイルするために、このファイルが依存するファイルを指定します|  
 |ジェネレーター|必須の文字列。 この項目に対して実行される任意のファイル ジェネレーターの名前です。|  
@@ -108,7 +108,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="content"></a>Content  
  プロジェクトにコンパイルはされないものの、プロジェクトと共に埋め込まれるか発行されることのあるファイルを表します。  
   
-|項目名|説明|  
+|項目メタデータの名前|説明|  
 |---------------|-----------------|  
 |DependentUpon|省略可能な文字列。 正しくコンパイルする必要があるファイルを指定します。|  
 |ジェネレーター|必須の文字列。 この項目に対して実行する任意のファイル ジェネレーターの名前です。|  
@@ -123,7 +123,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="none"></a>なし  
  ビルド プロセスでは使用しないことが推奨されるファイルを表します。  
   
-|項目名|説明|  
+|項目メタデータの名前|説明|  
 |---------------|-----------------|  
 |DependentUpon|省略可能な文字列。 正しくコンパイルする必要があるファイルを指定します。|  
 |ジェネレーター|必須の文字列。 この項目に対して実行される任意のファイル ジェネレーターの名前です。|  

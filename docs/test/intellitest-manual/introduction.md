@@ -8,16 +8,15 @@ ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: IntelliTest, Visual Studio IntelliTest developer testing tool
-ms.assetid: A7B98509-7ACA-4E25-BD1B-BBC98742F028
-caps.latest.revision: "56"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: a7dac076dabaf0d44a1eda9c267e5c9b2eafe5a5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: 65f14d96bd495a1b3f8ca138176fbf805fdfeb67
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="overview-of-microsoft-intellitest"></a>Microsoft IntelliTest の概要
 
@@ -56,7 +55,7 @@ IntelliTest はテスト済みのプログラムに関連する入力を検索�
 
 次の例は、**value** という名前のパラメーターで 2 つの制約を作成して、IntelliTest が必要な文字列を生成できるようにします。
 
-```
+```csharp
 using System;
 using Microsoft.Pex.Framework; 
 using Microsoft.VisualStudio.TestTools.UnitTesting; 
@@ -84,10 +83,9 @@ public partial class HelloWorldTest {
 7. "Hello\0World!"
 8. "Hello World!"
 
-[このページ](https://docs.microsoft.com/en-gb/visualstudio/test/generate-unit-tests-for-your-code-with-intellitest#Anchor_0)で、生成されたテストが保存される場所を理解してください。
-生成されたテスト コードには、次のようなテストを含める必要があります。
+生成されたテストが保存される場所については、「[IntelliTest で単体テストを生成する](../../test/generate-unit-tests-for-your-code-with-intellitest.md)」を参照してください。 生成されたテスト コードには、次のようなテストを含める必要があります。
 
-```
+```csharp
 [TestMethod]
 [PexGeneratedBy(typeof(global::HelloWorldTest))]
 [PexRaisedException(typeof(Exception))]
@@ -99,8 +97,7 @@ public void HelloWorldThrowsException167()
 
 とても簡単ですね。
 
-<a name="limitations"></a>
-## <a name="limitations"></a>制限事項
+## <a name="limitations"></a> 制限事項
 
 このセクションでは、IntelliTest の制限事項について説明します。
 
@@ -165,7 +162,7 @@ IntelliTest はインストルメント化された各メソッドで "rethrow" 
 ## <a name="further-reading"></a>関連項目
 
 * MSDN の [初心者向けのブログ記事](https://blogs.msdn.microsoft.com/visualstudioalm/2014/11/19/introducing-smart-unit-tests/)
-* [IntelliTest でのコードの単体テストの生成](https://docs.microsoft.com/en-gb/visualstudio/test/generate-unit-tests-for-your-code-with-intellitest)
+* [IntelliTest でのコードの単体テストの生成](../../test/generate-unit-tests-for-your-code-with-intellitest.md)
 
 ## <a name="got-feedback"></a>フィードバックをお寄せください
 

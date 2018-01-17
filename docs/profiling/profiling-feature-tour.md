@@ -14,11 +14,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 25e4397ac3f3b2a8191dc9d9850f643e0be3d539
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2542ce19d51dd3aa3031c71da3c23f7ec73ac240
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="profiling-feature-tour"></a>プロファイリング機能ツアー
 
@@ -147,7 +147,8 @@ CPU 使用量ツールやメモリ使用量ツールに現在入っていない�
 
 ![パフォーマンス エクスプローラー ツール](../profiling/media/prof-tour-performance-explorer.png "Performance Explorer")
 
-## <a name="which-tool-should-i-use"></a>使用するツール  
+## <a name="tool_support_info"></a>使用するツール  
+
 次の表では、Visual Studio のさまざまなツールとそれらを使用できる各種プロジェクトをまとめています。
   
 |パフォーマンス ツール|Windows デスクトップ|Windows ユニバーサル/ストア|ASP.NET/ASP.NET Core|  
@@ -158,7 +159,7 @@ CPU 使用量ツールやメモリ使用量ツールに現在入っていない�
 |[アプリケーションのタイムライン](../profiling/application-timeline.md)|可|可|Ｘ|  
 |[パフォーマンスのヒント](../profiling/perftips.md)|可|XAML の場合は可、HTML の場合は不可|可|  
 |[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)|可|Ｘ|可 (ASP.NET Core の場合は no)|  
-|[IntelliTrace](../debugger/intellitrace.md)|.NET Enterprise のみ|.NET Enterprise のみ|.NET Enterprise のみ|
+|[IntelliTrace](../debugger/intellitrace.md)|.NET および Visual Studio Enterprise のみ|.NET および Visual Studio Enterprise のみ|.NET および Visual Studio Enterprise のみ|
 |[ネットワーク使用率](../profiling/network-usage.md)|Ｘ|可|Ｘ| 
 |[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|Ｘ|HTML の場合は可、XAML の場合は不可|Ｘ|  
 |[JavaScript メモリ](../profiling/javascript-memory.md)|Ｘ|HTML の場合は可、XAML の場合は不可|Ｘ|  
