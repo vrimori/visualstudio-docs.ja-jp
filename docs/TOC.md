@@ -84,6 +84,13 @@
 #### [特定の .NET Framework バージョンの指定](ide/targeting-a-specific-dotnet-framework-version.md)
 ##### [マルチ ターゲットの概要](ide/visual-studio-multi-targeting-overview.md)
 ##### [.NET Framework のバージョンをターゲットにする](ide/how-to-target-a-version-of-the-dotnet-framework.md)
+#### プロジェクト テンプレートと項目テンプレートを作成する
+##### [プロジェクト テンプレートを作成する](ide/how-to-create-project-templates.md)
+##### [複数プロジェクトのテンプレートを作成する](ide/how-to-create-multi-project-templates.md)
+##### [項目テンプレートを作成する](ide/how-to-create-item-templates.md)
+##### [複数ファイルの項目テンプレートを作成する](ide/how-to-create-multi-file-item-templates.md)
+##### [Web テンプレートを作成する](ide/how-to-manually-create-web-templates.md)
+##### [テンプレートの問題を解決する](ide/how-to-troubleshoot-templates.md)
 #### [Visual Studio IDE の 64 ビット サポート](ide/visual-studio-ide-64-bit-support.md)
 ### [プロジェクトまたはソリューションを使用せずに開発する ("フォルダーを開く")](ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
 ### [エディターでのコードの作成](ide/writing-code-in-the-code-and-text-editor.md)
@@ -95,7 +102,7 @@
 #### [エンコーディングと改行](ide/encodings-and-line-breaks.md)
 ##### [エンコーディングを使用してファイルを保存および開く](ide/how-to-save-and-open-files-with-encoding.md)
 #### [アウトライン](ide/outlining.md)
-#### [コードの自動生成](ide/code-generation-in-visual-studio.md)
+#### [コードを生成し、修正する](ide/code-generation-in-visual-studio.md)
 ##### [コード スニペット](ide/code-snippets.md)
 ###### コード スニペットを使用する
 ####### [Visual C# のコード スニペット](ide/visual-csharp-code-snippets.md)
@@ -305,15 +312,9 @@
 ### [プロジェクトと項目テンプレートのカスタマイズ](ide/customizing-project-and-item-templates.md)
 #### [既存のテンプレートを更新する](ide/how-to-update-existing-templates.md)
 #### [テンプレート内のパラメーターを置き換える](ide/how-to-substitute-parameters-in-a-template.md)
-### 新しいプロジェクトと項目テンプレートの作成
-#### [プロジェクト テンプレートを作成する](ide/how-to-create-project-templates.md)
-#### [複数プロジェクトのテンプレートを作成する](ide/how-to-create-multi-project-templates.md)
-#### [項目テンプレートを作成する](ide/how-to-create-item-templates.md)
-#### [複数ファイルの項目テンプレートを作成する](ide/how-to-create-multi-file-item-templates.md)
-#### [Web テンプレートを作成する](ide/how-to-manually-create-web-templates.md)
+### プロジェクト テンプレートと項目テンプレート
 ### [テンプレート パラメーター](ide/template-parameters.md)
-### [テンプレート スキーマ参照 (拡張性)](extensibility/visual-studio-template-schema-reference.md)
-### [テンプレートの問題を解決する](ide/how-to-troubleshoot-templates.md)
+### [テンプレート スキーマ参照 (拡張性)](extensibility/visual-studio-template-schema-reference.md?toc=/visualstudio/toc.json)
 ## 一般的なユーザー インターフェイス要素
 ### [呼び出し階層](ide/reference/call-hierarchy.md)
 ### [変更のプレビュー](ide/preview-changes.md)
