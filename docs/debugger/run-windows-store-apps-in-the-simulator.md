@@ -1,5 +1,5 @@
 ---
-title: "UWP と Windows 8.1 アプリをシミュレーターで実行 |Microsoft ドキュメント"
+title: "UWP アプリをシミュレーターで実行 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,26 +18,24 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: a3fbe1b7c138f24167e587109fbb5f524b6b9019
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 40cdfaf430483d68744e4ec9535c2546e75d4470
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="run-uwp-and-windows-81-apps-in-the-simulator"></a>シミュレーターでの UWP と Windows 8.1 アプリの実行
-UWP と Windows 8.1 アプリの Visual Studio シミュレーターは、UWP または Windows 8.1 アプリをシミュレートするデスクトップ アプリケーションです。 実行することができます、物理的な画面サイズと解像度をエミュレートするために、アプリケーションを選択します。 一般的なタッチと回転イベントのシミュレーションや、ネットワーク接続のプロパティをシミュレートすることができますも。
+# <a name="run-uwp-apps-in-the-simulator"></a>UWP アプリをシミュレーターで実行します。
+UWP アプリの Visual Studio シミュレーターは、UWP アプリをシミュレートするデスクトップ アプリケーションです。 通常は、ローカル コンピューター、接続されたデバイスまたはリモート コンピューター上でデバッグするは。 ただし、一部のシナリオで別の物理的な画面サイズと解像度をエミュレートするために、Visual Studio シミュレーターを使用することがあります。 一般的なタッチと回転イベントのシミュレーションや、ネットワーク接続のプロパティをシミュレートすることができますも。
   
  シミュレーターを設計、開発、デバッグ、および UWP アプリをテスト環境を提供します。 ただし、Microsoft ストアにアプリを発行する前に、実際のデバイスでアプリをテストする必要があります。  
   
  UWP アプリの Visual Studio シミュレーターは、ローカル コンピューターでは、分離された環境で実行されません。 したがって、シミュレーターで発生したエラー (回復できないシステム エラーなど) がコンピューター全体に影響を与える場合があります。  
   
- Windows Phone について詳しくは、「 [Run Windows Phone apps in the emulator](../debugger/run-windows-phone-apps-in-the-emulator.md) 」を参照してください。  
-  
 > [!IMPORTANT]
->  Visual Studio 2015 シミュレーターには、位置情報ボタンがありません。 これは、Windows 10 シミュレーターに位置情報シミュレーションが含まれていないためです。 この種のシミュレーションを行う必要がある場合は、Windows 8.1 以前のオペレーティング システム上で Visual Studio 2013 シミュレーターを使用できます。  
+>  Visual Studio 2015 シミュレーターには、位置情報ボタンがありません。 これは、Windows 10 シミュレーターに位置情報シミュレーションが含まれていないためです。
   
 ##  <a name="BKMK_Set_the_simulator_as_the_target"></a> シミュレーターをターゲットとして設定する  
- UWP アプリをシミュレーターで実行するには、選択**シミュレーター**ドロップ ダウン リストから次に、**デバッグの開始**デバッガーのボタン**標準**ツールバー。  
+ UWP アプリをシミュレーターで実行するには、選択**シミュレーター**ドロップ ダウン リストから次に、**デバッグの開始**デバッガーのボタン**標準**ツールバー。 このオプションは使用可能なのみ場合、アプリの**ターゲット プラットフォームの最小値。バージョン**が開発用コンピューター上のオペレーティング システム未満です。 
   
  ![シミュレーターで実行されている](../debugger/media/vsrun_f5_simulator.png "VSRUN_F5_Simulator")  
   

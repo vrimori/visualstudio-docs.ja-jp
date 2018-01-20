@@ -1,5 +1,5 @@
 ---
-title: "クイック スタート: コンソールを使用した JavaScript のデバッグ |Microsoft ドキュメント"
+title: "コンソールを使用して JavaScript のデバッグ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,31 +8,25 @@ ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: VS.WebClient.JavaScriptConsole
-dev_langs:
-- CSharp
-- VB
-- FSharp
-- C++
+dev_langs: JavaScript
 helpviewer_keywords:
 - JavaScript Console
 - JavaScript debugging
 - debugging, JavaScript
-ms.assetid: ea7adb71-52b6-4a5a-9346-98ca94b06bd7
 caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 93deb8c5a8d4d17597db0fa2f93f097b4839e88b
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: a3069f0528d346a2168bbb37535089d00e23aa15
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="quickstart-debug-javascript-using-the-console"></a>クイックスタート: コンソールを使用した JavaScript のデバッグ
-![Windows と Windows Phone に適用](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
+# <a name="debug-javascript-using-the-console-in-visual-studio"></a>JavaScript コンソールを使用して、Visual Studio でのデバッグします。
   
- JavaScript コンソール ウィンドウは、JavaScript を使用して構築された UWP アプリのデバッグを対話的に使用できます。 これらの機能は UWP アプリのサポート[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]アプリ、Windows Phone アプリ、および Apache Cordova の Visual Studio Tools を使用して作成されたアプリ。 コンソール コマンドのリファレンスの詳細については、「 [JavaScript Console commands](../debugger/javascript-console-commands.md)」を参照してください。  
+ JavaScript コンソール ウィンドウは、JavaScript を使用して構築された UWP アプリのデバッグを対話的に使用できます。 UWP アプリと Visual Studio Tools Apache Cordova を使って作成されたアプリは、これらの機能がサポートされています。 コンソール コマンドのリファレンスの詳細については、「 [JavaScript Console commands](../debugger/javascript-console-commands.md)」を参照してください。  
   
  JavaScript コンソール ウィンドウを使うと次の作業ができます。  
   
@@ -48,36 +42,26 @@ ms.lasthandoff: 01/10/2018
   
 -   画面のクリアなどの他のタスクを実行します。 コマンドの詳細については、「 [JavaScript Console commands](../debugger/javascript-console-commands.md) 」を参照してください。  
   
- このトピックの内容:  
-  
--   [JavaScript コンソール ウィンドウを使用したデバッグ](#InteractiveConsole)  
-  
--   [対話形式のデバッグと中断モード](#InteractiveDebuggingBreakMode)  
-  
--   [JavaScript コンソール ウィンドウの単一行モードと複数行モード](#SinglelineMultilineMode)  
-  
--   [スクリプトの実行コンテキストの切り替え](#Switching)  
-  
 > [!TIP]
->  閉じた JavaScript コンソール ウィンドウを再び開くには、 **[デバッグ]**>**[ウィンドウ]** > **JavaScript コンソール** の順に選びます。 このウィンドウは、スクリプトのデバッグ セッション中にのみ表示されます。  
+>  JavaScript コンソール ウィンドウを閉じる場合は、選択**デバッグ**> **Windows** > **JavaScript コンソール**を再度開きます。 このウィンドウは、スクリプトのデバッグ セッション中にのみ表示されます。  
   
  JavaScript コンソール ウィンドウを使用すると、デバッガーを停止/再起動することなくアプリと対話することができます。 詳細については、次を参照してください。[アプリを更新する (JavaScript)](../debugger/refresh-an-app-javascript.md)です。 他の JavaScript のデバッグ、DOM Explorer を使用して、ブレークポイントの設定などの機能の詳細については「[クイック スタート: デバッグ HTML および CSS](../debugger/quickstart-debug-html-and-css.md)と[Visual Studio でアプリのデバッグ](../debugger/debug-store-apps-in-visual-studio.md)です。  
   
 ##  <a name="InteractiveConsole"></a> JavaScript コンソール ウィンドウを使用したデバッグ  
  次の手順では、 `FlipView` アプリを作成し、JavaScript のコード エラーを対話的にデバッグする方法を示します。  
   
-> [!CAUTION]
+> [!NOTE]
 >  このサンプル アプリは、UWP アプリです。 ただし、ここで説明するコンソール機能は、Visual Studio Tools for Apache Cordova を使用して作成されたアプリにも適用されます。  
   
 #### <a name="to-debug-javascript-code-in-the-flipview-app"></a>FlipView アプリの JavaScript コードをデバッグするには  
   
 1.  Visual Studio で **[ファイル]** > **[新しいプロジェクト]**」を参照してください。  
   
-2.  選択**JavaScript** > **ストア アプリ**、いずれかを選択**Windows アプリ**または**Windows Phone アプリ**をクリックして**空のアプリ**です。  
+2.  選択**JavaScript** > **Windows ユニバーサル**を選択し**WinJS アプリ**です。  
   
 3.  `FlipViewApp`などのプロジェクトの名前を入力し、 **[OK]** を選んでアプリを作成します。  
   
-4.  default.html の BODY 要素で、既存の HTML コードを次のコードで置き換えます。  
+4.  Index.html の BODY 要素には、このコードで既存の HTML コードを置き換えます。  
   
     ```html  
     <div id="flipTemplate" data-win-control="WinJS.Binding.Template"  
@@ -133,9 +117,9 @@ ms.lasthandoff: 01/10/2018
   
         function updateImages() {  
   
-            pages.push(0, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223195" });  
-            pages.push(1, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223196" });  
-            pages.push(2, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223197" });  
+            pages.push(0, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-76.jpg" });  
+            pages.push(1, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-77.jpg" });  
+            pages.push(2, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-78.jpg" });  
   
         };  
   
@@ -153,7 +137,7 @@ ms.lasthandoff: 01/10/2018
     })();  
     ```  
   
-7.  デバッグ対象がまだ選択されていない場合は、 **[シミュレーター]** をクリックします。または、Windows Phone 用の場合は、 **[デバッグ]** ツール バーの **[デバイス]** ボタンの横にあるドロップダウン リストの **[エミュレーター 8.1 WVGA 4 インチ 512 MB]** をクリックします。  
+7.  デバッグ対象がまだ選択されていない場合は、選択**ローカル マシン**ドロップ ダウン リストから次に、**デバイス**のボタンでは、**デバッグ**ツールバー。  
   
      ![デバッグ ターゲット リスト](../debugger/media/js_select_target.png "JS_Select_Target")  
   
@@ -161,7 +145,7 @@ ms.lasthandoff: 01/10/2018
   
      アプリが実行されますが、イメージがありません。 JavaScript コンソール ウィンドウの APPHOST のエラーは、イメージがないことを示します。  
   
-9. `FlipView`アプリがシミュレーターまたは Phone エミュレーター、型で実行されている`Data.items`コンソール ウィンドウの入力プロンプト (横に、">>"シンボル) し、Enter キーを押します。  
+9. `FlipView`アプリを実行している型`Data.items`コンソール ウィンドウの入力プロンプト (横に、">>"シンボル) し、Enter キーを押します。  
   
      `items` オブジェクトのビジュアライザーがコンソール ウィンドウに表示されます。 これは、 `items` オブジェクトがインスタンス化されて、現在のスクリプト コンテキストで使用できることを示します。 コンソール ウィンドウでは、オブジェクトのノードをクリックしてプロパティの値を表示できます (方向キーを使用します)。 `items._data` オブジェクトをクリックすると、次の図に示すように、イメージ ソースの参照が正しくないことがわかります。 既定のイメージ (logo.png) がまだオブジェクト内に存在し、不明のイメージと予期されるイメージが混在しています。  
   
@@ -174,9 +158,9 @@ ms.lasthandoff: 01/10/2018
 11. デバッグ セッションを停止せずにこの問題を対話形式で修正するには、default.js を開き、 `updateImages` 関数から次のコードを選択します。  
   
     ```javascript  
-    pages.push(0, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223195" });  
-    pages.push(1, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223196" });  
-    pages.push(2, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223197" });  
+    pages.push(0, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-76.jpg" });  
+    pages.push(1, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-77.jpg" });  
+    pages.push(2, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-78.jpg" });  
     ```  
   
      次のコードをコピーし、JavaScript コンソールの入力プロンプトに貼り付けます。  
@@ -187,9 +171,9 @@ ms.lasthandoff: 01/10/2018
 12. `push` を `pages.push` で置き換えて、プロンプトの `Data.items.setAt`関数呼び出しを修正します。 修正後のコードは次のようになります。  
   
     ```javascript  
-    Data.items.setAt(0, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223195" });  
-    Data.items.setAt(1, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223196" });  
-    Data.items.setAt(2, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223197" });  
+    Data.items.setAt(0, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-76.jpg" });  
+    Data.items.setAt(1, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-77.jpg" });  
+    Data.items.setAt(2, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-78.jpg" });  
     ```  
   
     > [!TIP]
@@ -201,7 +185,7 @@ ms.lasthandoff: 01/10/2018
   
 15. プロンプトで `Data.items.length = 3` を入力し、Enter キーを押します。 これにより、データから余分な要素が削除されます。  
   
-16. シミュレーターまたは Phone エミュレーターを再び確認すると、正しいイメージが正しい `FlipView` ページに表示されていることがわかります。  
+16. アプリをもう一度確認し、正しいイメージが正しいことを確認`FlipView`ページ。  
   
 17. DOM Explorer では、更新された DIV 要素を確認でき、サブツリーに移動すると予期される IMG 要素が表示されます。  
   
@@ -218,7 +202,7 @@ ms.lasthandoff: 01/10/2018
   
 1.  前に作成した `FlipView` アプリの default.html ファイルで、 `updateImages()` 関数のショートカット メニューを開き、 **[ブレークポイント]** > **[ブレークポイントの挿入]**」を参照してください。  
   
-2.  **[デバッグ]** ツール バーの **[デバッグの開始]** ボタンの横にあるドロップダウン リストの **[ローカル コンピューター]** または **[エミュレーター 8.1 WVGA 4 インチ 512 MB]** をクリックします。  
+2.  選択**ローカル マシン**横に、ドロップダウン リスト、**デバッグの開始**ボタンをクリックして、**デバッグ**ツールバー。  
   
 3.  **[デバッグ]** > **Start [デバッグ]ging**の順にクリックするか、または F5 キーを押します。  
   
@@ -239,7 +223,7 @@ ms.lasthandoff: 01/10/2018
 6.  関数の 1 行を出力ウィンドウから入力プロンプトにコピーし、インデックス値を 3 に変更します。  
   
     ```javascript  
-    pages.setAt(3, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223197" });  
+    pages.setAt(3, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-76.jpg" });  
     ```  
   
 7.  Enter キーを押してコード行を実行します。  
@@ -264,16 +248,7 @@ ms.lasthandoff: 01/10/2018
   
  ![JavaScript コンソール ウィンドウでの選択の対象](../debugger/media/js_console_target.png "JS_Console_Target")  
   
- `cd` コマンドを使用して実行コンテキストを切り替えることもできますが、別の実行コンテキストの名前を知っている必要があります。また、使用する参照がスコープ内になければなりません。 **[ターゲット]** リストを使用すると、別の実行コンテキストに簡単にアクセスできます。  
-  
-##  <a name="BrowserSupport"></a> ブラウザーとプラットフォームのサポート  
- JavaScript コンソール ウィンドウは、次のプラットフォームでサポートされています。  
-  
--   UWP アプリ[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]、および Windows Phone アプリの JavaScript と HTML を使った  
-  
--   [!INCLUDE[win81](../debugger/includes/win81_md.md)]  
-  
--   [!INCLUDE[win8](../debugger/includes/win8_md.md)]  
+ `cd` コマンドを使用して実行コンテキストを切り替えることもできますが、別の実行コンテキストの名前を知っている必要があります。また、使用する参照がスコープ内になければなりません。 **[ターゲット]** リストを使用すると、別の実行コンテキストに簡単にアクセスできます。   
   
 ## <a name="see-also"></a>参照  
  [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   

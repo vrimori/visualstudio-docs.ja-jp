@@ -27,22 +27,23 @@ f1_keywords:
 - VC.Project.IVCAppHostRemoteDebugPageObject.Authentication
 - VC.Project.IVCAppHostRemoteDebugPageObject.DebuggerType
 - VC.Project.IVCAppHostSimulatorDebugPageObject.BreakpointBehavior
+- vs.debug.installedapppackagelauncher
+- vs.debug.error.wwahost_scriptdebuggingdisabled
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
-ms.assetid: 66ec0e79-8261-4c19-a618-3fd1b3f71bbd
 caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: 367fc334d0268a73e8ad1a33ebdc6e74036ddc86
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 718d24ab0f9fbb310d2482b63bc98dd139658330
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="start-a-debugging-session-for-a-uwp-app-in-visual-studio"></a>Visual Studio での UWP アプリのデバッグ セッションを開始します。
   
@@ -73,10 +74,10 @@ ms.lasthandoff: 01/10/2018
 |||  
 |-|-|  
 |**ローカル コンピューター**|ローカル コンピューターの現在のセッションでアプリをデバッグします。|  
-|**シミュレーター**|UWP for Visual Studio シミュレーターでアプリのデバッグと[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]アプリ。 シミュレーターはデバイスの機能をデバッグできるようにするデスクトップ ウィンドウ — タッチ ジェスチャやデバイスの回転など-ローカル コンピューター上で使用できません。 このオプションは使用可能なのみ場合、アプリの**ターゲット プラットフォームの最小値。バージョン**が開発用コンピューター上のオペレーティング システム未満です。 参照してください[シミュレーターでアプリの実行の UWP](../debugger/run-windows-store-apps-in-the-simulator.md)です。|  
+|**シミュレーター**|UWP アプリの Visual Studio シミュレーターでアプリをデバッグします。 シミュレーターはデバイスの機能をデバッグできるようにするデスクトップ ウィンドウ — タッチ ジェスチャやデバイスの回転など-ローカル コンピューター上で使用できません。 このオプションは使用可能なのみ場合、アプリの**ターゲット プラットフォームの最小値。バージョン**が開発用コンピューター上のオペレーティング システム未満です。 参照してください[シミュレーターでアプリの実行の UWP](../debugger/run-windows-store-apps-in-the-simulator.md)です。|  
 |**リモート コンピューター**|ローカル コンピューターにイントラネットを介して接続されているかイーサネット ケーブルを使用して直接接続されているデバイス上のアプリをデバッグします。 リモートでデバッグをリモート ツールの Visual Studio がリモート デバイスにインストールして実行する必要があります。 参照してください[をリモート コンピューターでの実行の UWP アプリ](../debugger/run-windows-store-apps-on-a-remote-machine.md)です。|  
 |**デバイス**|USB で接続されたデバイス上のアプリをデバッグします。 デバイスは、開発者のロックを解除して、画面がロックを解除する必要があります。|  
-|**モバイル エミュレーター**|エミュレーターの名前で指定された構成でエミュレーターを起動、アプリを展開し、デバッグを開始します。 エミュレーターでは、Windows 8.1 またはそれ以降のバージョンを実行している HYPER-V 対応マシンで使用できるのみです。|  
+|**モバイル エミュレーター**|エミュレーターの名前で指定された構成でエミュレーターを起動、アプリを展開し、デバッグを開始します。 エミュレーターでは、HYPER-V 対応マシンで使用できるのみです。|  
 
 ##  <a name="BKMK_Open_the_debugging_property_page_for_the_project"></a>追加のデバッグ オプションを選択します。  
 
@@ -119,7 +120,7 @@ C# および Visual Basic アプリの場合は、設定することも、同じ
   
 -   Visual C# アプリと Visual Basic アプリの場合は、 **[デバッグ]** プロパティ ページの **[起動しないが、開始時にコードをデバッグ]** をクリックします。  
   
--   C++ と JavaScript アプリを選択**はい**から、**アプリケーションの起動**ボックスの一覧、**デバッグ**プロパティ ページ。  
+-   C++ と JavaScript アプリを選択**いいえ**から、**アプリケーションの起動**ボックスの一覧、**デバッグ**プロパティ ページ。  
   
 ###  <a name="BKMK__Optional__Disable_network_loopbacks"></a> (省略可能) ネットワーク ループバックを無効にする  
   
@@ -169,7 +170,7 @@ C# および Visual Basic アプリの場合は、設定することも、同じ
   
  アプリがデバッグ モードで起動します。 実行は、ブレークポイントに達するか、実行が手動で中断されるか、ハンドルされない例外が発生するか、アプリが終了するまで続行されます。  
   
- である必要があります。 バック グラウンド タスクのデバッグの詳細については、次を参照してください。[トリガー中断、再開、およびバック グラウンド イベント UWP アプリの)](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md)です。  
+ バック グラウンド タスクのデバッグの詳細については、次を参照してください。[トリガー中断、再開、およびバック グラウンド イベント UWP アプリの)](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md)です。  
   
 ###  <a name="BKMK_Start_an_installed_app_in_the_debugger"></a> デバッガーでインストール済みのアプリを起動する  
 F5 キーを使用してデバッグを開始すると、Visual Studio はアプリをビルドして配置し、デバッグ モードで実行されるようにアプリを設定してから起動します。 開始するには、デバイスに既にインストールされているアプリを使用して、**インストール済みアプリ パッケージのデバッグ** ダイアログ ボックス。 この手順は、Microsoft ストアからインストールされたアプリをデバッグする必要がある場合、または、アプリのソース ファイルがあるものの、アプリの Visual Studio プロジェクトがない場合に便利です。 Visual Studio プロジェクトやソリューションを使用しないカスタム ビルド システムがこれに該当します。  
@@ -177,9 +178,6 @@ F5 キーを使用してデバッグを開始すると、Visual Studio はアプ
 アプリはローカル デバイスにインストールすることも、リモート デバイスにインストールすることもできます。  アプリをすぐに起動できます。また、アプリを別のプロセスや方法で起動したときに ([スタート] メニューからの起動や、アクティブ化コントラクトによる起動など)、デバッガーで実行するようにアプリを設定することもできます。アプリを起動せずにバックグラウンド プロセスをデバッグする場合は、デバッグ モードで実行されるようにアプリを設定できます。 詳細については、次を参照してください。[トリガー中断、再開、およびバック グラウンド イベント UWP アプリの)](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md)です。  
   
 デバッガーでインストール済みのアプリを起動するには選択**デバッグ**、し**他のデバッグ ターゲット**、し**インストール済みアプリ パッケージのデバッグ**です。 詳細については、次を参照してください。[インストール済みのアプリ パッケージをデバッグ](../debugger/debug-installed-app-package.md)です。
-
-> [!NOTE]
-> Windows 8.1 を選択する**デバッグ**を選択し**インストール済みアプリ パッケージのデバッグ**です。
 
 ###  <a name="BKMK_Attach_the_debugger_to_a_running_app_"></a>実行中の UWP アプリにデバッガーをアタッチします。  
 

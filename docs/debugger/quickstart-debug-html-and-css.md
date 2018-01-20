@@ -1,5 +1,5 @@
 ---
-title: "HTML および CSS (UWP と Windows 8.1 アプリ) のデバッグ |Microsoft ドキュメント"
+title: "UWP アプリで HTML および CSS のデバッグ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/17/2017
 ms.reviewer: 
@@ -8,32 +8,26 @@ ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: VS.WebClient.DomExplorer
-dev_langs:
-- CSharp
-- VB
-- FSharp
-- C++
+dev_langs: JavaScript
 helpviewer_keywords:
 - debugging, CSS
 - debugging, HTML
 - debugging, JavaScript [UWP apps]
 - DOM Explorer [UWP apps]
-ms.assetid: 6d156cff-36c6-425a-acf8-e1f02d4f7869
 caps.latest.revision: "101"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: 59ec4b4a7b0f8c924c09608b8cda34473820c1f5
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: bb410c6279b2910dfcb1af98ff75293d60a7e3e7
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="debug-html-and-css-in-uwp-and-windows-81-apps"></a>HTML および CSS UWP と Windows 8.1 アプリをデバッグします。
-![Windows と Windows Phone に適用](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
+# <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Visual Studio での UWP アプリで HTML および CSS をデバッグします。
   
- Visual Studio では、JavaScript アプリに総合的なデバッグ機能が用意されており、Internet Explorer および Visual Studio の開発者には使い慣れた機能が含まれています。 これらの機能は UWP アプリのサポート[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]、Windows Phone アプリでは、Apache Cordova の Visual Studio Tools を使用して作成されたアプリ。  
+ Visual Studio では、JavaScript アプリに総合的なデバッグ機能が用意されており、Internet Explorer および Visual Studio の開発者には使い慣れた機能が含まれています。 これらの機能は、UWP アプリのおよび Apache Cordova の Visual Studio Tools を使用して作成されたアプリでサポートされます。  
   
  DOM 検査ツールが提供する対話式のデバッグ モデルを使用すると、レンダリングされる HTML および CSS のコードを表示および変更できます。 これらはすべてデバッガーを停止して再起動することなく実行できます。
   
@@ -67,11 +61,11 @@ ms.lasthandoff: 01/10/2018
   
 1.  Visual Studio で **[ファイル]** > **[新しいプロジェクト]**」を参照してください。  
   
-2.  選択**JavaScript** > **ストア**、いずれかを選択**Windows アプリ**または**Windows Phone アプリ**をクリックして**空のアプリ**です。  
+2.  選択**JavaScript** > **Windows ユニバーサル**を選択し**WinJS アプリ**です。  
   
 3.  `FlipViewApp`などのプロジェクトの名前を入力し、 **[OK]** を選んでアプリを作成します。  
   
-4.  default.html の BODY 要素に、次のコードを追加します。  
+4.  Index.html の BODY 要素には、このコードを追加します。  
   
     ```html  
     <div id="flipTemplate" data-win-control="WinJS.Binding.Template"  
@@ -129,9 +123,9 @@ ms.lasthandoff: 01/10/2018
   
         function updateImages() {  
   
-            pages.setAt(0, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223195" });  
-            pages.setAt(1, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223196" });  
-            pages.setAt(2, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223197" });  
+            pages.setAt(0, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-76.jpg" });  
+            pages.setAt(1, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-77.jpg" });  
+            pages.setAt(2, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-78.jpg" });  
         };  
   
         app.oncheckpoint = function (args) {  
@@ -148,19 +142,17 @@ ms.lasthandoff: 01/10/2018
     })();  
     ```  
   
-     このアプリを Phone エミュレーター (シミュレーターと同様の外観になります) で実行すると、次の図に示すようになります。 ただし、アプリをこの状態にするには、まず、多数のバグを修正する必要があります。  
+     次の図は、このアプリで実行するとを示します。 ただし、アプリをこの状態にするには、まず、多数のバグを修正する必要があります。  
   
      ![期待される結果を表示する FlipView アプリ](../debugger/media/js_dom_appfixed.png "JS_DOM_AppFixed")  
   
-7.  **[デバッグ]** ツール バーの **[デバッグの開始]** ボタンの横にあるドロップダウン リストの **[シミュレーター]** または **[Emulator 8.1 WVGA 4 inch 512MB] (エミュレーター 8.1 WVGA 4 インチ 512 MB)** をクリックします。  
+7.  選択**ローカル マシン**ドロップ ダウン リストから次に、**デバッグの開始**ボタンをクリックして、**デバッグ**ツールバー。  
   
      ![デバッグ ターゲット リスト](../debugger/media/js_select_target.png "JS_Select_Target")  
   
 8.  **[デバッグ]** > **Start [デバッグ]ging**の順にクリックするか、F5 キーを押して、デバッグ モードでアプリを実行します。  
   
-     これによりアプリはシミュレーターまたは Phone エミュレーターで実行されますが、スタイリングにはいくつかバグがあるため、画面にはほとんど何も表示されません。 最初の `FlipView` のイメージが、画面の中央の小さい四角形に表示されます。  
-  
-9. アプリをシミュレーターで実行している場合は、シミュレーターの右側にある **[解像度の変更]** ツール バー コマンドをクリックし、画面の解像度を 1280 x 800 に構成します。 これによって、次の手順で示される値がシミュレーターに表示される値と一致することが確認できます。  
+     アプリが実行されてが、スタイリングはいくつかバグが含まれるため、ほとんどの場合の空の画面が表示されます。 最初の `FlipView` のイメージが、画面の中央の小さい四角形に表示されます。  
   
 10. Visual Studio に切り替え、 **[DOM Explorer]** タブをクリックします。  
   
@@ -188,16 +180,16 @@ ms.lasthandoff: 01/10/2018
   
 14. DOM Explorer のメイン ウィンドウで、 `fView` DIV 要素の高さと幅のインライン スタイルをダブルクリックします。 ここで値を編集することができます。 このシナリオでは、これらを完全に削除する必要があります。  
   
-15. `width: 100px;height: 100px;`を選択し、Del キー、Enter キーの順に押します。 デバッグ セッションを停止していなくても、Enter キーを押すとすぐに、新しい値がシミュレーターまたは Phone エミュレーターに反映されます。  
+15. メイン ウィンドウをダブルクリック`width: 100px;height: 100px;`、キーを押して、**削除**キーを押し**Enter**です。 Enter キーを押した後、新しい値はすぐにも反映されます、アプリのデバッグ セッションを停止していません。  
   
     > [!IMPORTANT]
     >  DOM Explorer ウィンドウで属性を更新できるように、 **[スタイル]**、 **[計算済み]**、 **[レイアウト]** の各タブに表示される値も更新できます。 詳細については、次を参照してください。 [DOM Explorer を使用して CSS のデバッグ スタイル](../debugger/debug-css-styles-using-dom-explorer.md)と[DOM Explorer を使用してデバッグ レイアウト](../debugger/debug-layout-using-dom-explorer.md)です。  
   
-16. シミュレーターまたは Phone エミュレーターを選択するか、または Alt + Tab キーを使って、アプリケーションに切り替えます。  
+16. 選択して、または Alt + tab キーを使用して、アプリに切り替えます。  
   
      これで、 `FlipView` コントロールがシミュレーターまたは Phone エミュレーターの画面を超えるサイズで表示されます。 これは意図した結果ではありません。 Visual Studio に戻って、調査します。  
   
-17. DOM Explorer で、 **[計算済み]** タブを再度クリックし、高さの規則を開きます。 fView 要素は、CSS から予想されるように 100% の値を示したままですが、計算済みの値はシミュレーターの画面の高さと等しく (たとえば、800px または 667.67px)、このアプリで必要な高さではありません。 調査するために、 `fView` DIV 要素の高さと幅を削除することができます。  
+17. DOM Explorer で、 **[計算済み]** タブを再度クリックし、高さの規則を開きます。 FView 要素示したままです、100% の値、CSS から予想されるようが計算された値は、アプリの画面の高さに (たとえば、800 px 667.67 px、またはその他の値)、いないで必要なこのアプリであります。 調査のため、次の手順では、高さと幅を削除、 `fView` DIV 要素。  
   
 18. **[スタイル]** タブで、 `#fView` CSS セレクターの高さと幅のプロパティのチェックボックスをオフにします。  
   
@@ -209,13 +201,11 @@ ms.lasthandoff: 01/10/2018
   
 20. 調査のため、Visual Studio に切り替えをクリックし、**レイアウト** タブ、要素のボックス モデルを確認します。  
   
-     **[レイアウト]** タブに、次の値が表示されます。  
+     **レイアウト** タブで、次が表示されます。  
   
-    -   シミュレーターの場合は、320px (オフセット) および 320px (余白) です。  
+    -   255px (オフセット) および 255px (余白) またはデバイスの解像度によって、類似の値。 
   
-    -   Phone エミュレーターの場合は、100px (オフセット) および 100px (余白) です。  
-  
-     次の図は、Phone エミュレーター (100px オフセットおよび余白) を使用する場合の **[レイアウト]** タブを示しています。  
+     次の図は方法、**レイアウト** タブに表示されます、エミュレーターを使用し、100 px オフセットおよび余白) です。  
   
      ![DOM Explorer の [レイアウト] タブ](../debugger/media/js_dom_explorer_layout.png "JS_DOM_Explorer_Layout")  
   
@@ -265,24 +255,8 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]
 >  Windows Phone エミュレーターは、マウス ポインターを置くことによる要素の強調表示を部分的にサポートします。  
   
- 使用して要素を選択する方法を示す例については、 **Select 要素**ボタンをクリックしを参照してください[DOM Explorer を使用して CSS のデバッグ スタイル](../debugger/debug-css-styles-using-dom-explorer.md)です。  
-  
-##  <a name="BrowserSupport"></a> ブラウザーとプラットフォームのサポート  
- DOM Explorer と JavaScript コンソール ウィンドウは、次のプラットフォームでサポートされます。  
-  
--   UWP アプリ[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]と Windows Phone アプリの JavaScript と HTML を使った  
-  
--   [!INCLUDE[win81](../debugger/includes/win81_md.md)]  
-  
--   [!INCLUDE[win8](../debugger/includes/win8_md.md)]  
-  
- [と Visual Studio をダウンロードするには、](http://go.microsoft.com/fwlink/?LinkID=232448) ここ [!INCLUDE[win8](../debugger/includes/win8_md.md)] にアクセスしてください。  
-  
 ## <a name="see-also"></a>参照  
  [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
- [DOM Explorer を使用して CSS スタイルをデバッグします。](../debugger/debug-css-styles-using-dom-explorer.md)   
- [DOM Explorer を使用して、レイアウトをデバッグします。](../debugger/debug-layout-using-dom-explorer.md)   
- [DOM イベント リスナーの表示](../debugger/view-dom-event-listeners.md)   
  [アプリを更新する (JavaScript)](../debugger/refresh-an-app-javascript.md)   
  [WebView コントロールをデバッグします。](../debugger/debug-a-webview-control.md)   
  [キーボード ショートカット](../debugger/keyboard-shortcuts-html-and-javascript.md)   

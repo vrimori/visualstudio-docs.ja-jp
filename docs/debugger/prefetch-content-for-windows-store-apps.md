@@ -12,22 +12,20 @@ dev_langs:
 - VB
 - FSharp
 - C++
-ms.assetid: b4481fef-3ebf-4f7d-9748-d43821a0ebac
 caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: f98867a5420755ca2eb4e2fb5e75070759a1a91b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6a0555e2a3ea600a1f5b11eaf95a48f4cfd7df3e
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="debug-uwp-apps-using-prefetched-content-in-visual-studio"></a>UWP アプリのプリフェッチされたコンテンツを使用して、Visual Studio でのデバッグします。
-![Windows にのみ適用されます](../debugger/media/windows_only_content.png "windows_only_content")  
   
- UWP アプリの応答性が向上するには、アプリの web ページやイメージなど、一部の web コンテンツを事前に Windows を要求することができます[WinINet](http://msdn.microsoft.com/en-us/0a06f2af-957a-4dff-a8cc-187370181b5c)[WinINet](http://msdn.microsoft.com/library/aa383630.aspx)キャッシュします。 この機能をプリフェッチと呼びます。 起動時に使用されるコンテンツに特に効果的であるが、すぎる、頻繁に使用されるその他のコンテンツをプリフェッチすることができます。 メソッド、 [Windows.Networking.BackgroundTransfer.ContentPrefetcher](http://msdn.microsoft.com/library/windows/apps/windows.networking.backgroundtransfer.contentprefetcher.aspx)クラスを使用して、プリロードするコンテンツの Uri を指定できます。 Windows SDK を参照して[コンテンツのプリフェッチ サンプル](http://code.msdn.microsoft.com/windowsapps/ContentPrefetcher-Sample-432c8309)アプリに ContentPrefetcher 機能を追加する方法の例についてはします。  
+ UWP アプリの応答性が向上するには、アプリの web ページやイメージなど、一部の web コンテンツを事前に Windows を要求することができます[WinINet](http://msdn.microsoft.com/library/0a06f2af-957a-4dff-a8cc-187370181b5c)キャッシュします。 この機能をプリフェッチと呼びます。 起動時に使用されるコンテンツに特に効果的であるが、すぎる、頻繁に使用されるその他のコンテンツをプリフェッチすることができます。 メソッド、 [Windows.Networking.BackgroundTransfer.ContentPrefetcher](/uwp/api/Windows.Networking.BackgroundTransfer.ContentPrefetcher)クラスを使用して、プリロードするコンテンツの Uri を指定できます。 Windows SDK を参照して[コンテンツのプリフェッチ サンプル](http://code.msdn.microsoft.com/windowsapps/ContentPrefetcher-Sample-432c8309)アプリに ContentPrefetcher 機能を追加する方法の例についてはします。  
   
  Windows は、プリフェッチを行う必要がある場合およびダウンロードするリソースを決定するためにヒューリスティックを使用します。 このヒューリスティックでは、システム ネットワークおよび電力条件、ユーザー アプリの使用履歴、および以前のプリフェッチの結果を考慮します。 Visual Studio で、使用することができます、 **Trigger Windows Store App Prefetch**コマンドを Windows が ContentPrefetcher ヒューリスティックを無視し、すべて指定された web コンテンツのプリロードを強制します。 これは、既知の状態 (読み込まれている、または読み込まれていない) でプリフェッチするコンテンツでアプリの動作またはパフォーマンスをテストする場合に役立ちます。  
   

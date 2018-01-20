@@ -21,11 +21,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: dotnet
-ms.openlocfilehash: 6147390fb8551ea472590525cb36d9dc210b9a84
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 628aad6f1ae097ea040a6043db1ef12f0b60a7a4
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="supported-code-changes-c-and-visual-basic"></a>サポートされているコード変更 (c# および Visual Basic)
 エディット コンティニュでは、メソッドの本体内で行ったほとんどの種類のコード変更を処理できます。 しかし、メソッドの本体外で行った変更の大部分やメソッドの本体内で行った一部の変更は、デバッグ時に適用できません。 このようなサポートされていない変更を適用するには、デバッグを停止し、新しいバージョンのコードを再起動する必要があります。
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="unsupported-app-scenarios"></a>サポートされていないアプリ シナリオ
 
-サポートされていないアプリとプラットフォームには、ASP.NET 5、Silverlight 5、Windows Phone および Windows Phone エミュレーター、および Windows 8.1 が含まれます。
+サポートされていないアプリとプラットフォームには、ASP.NET 5、Silverlight 5、および Windows 8.1 が含まれます。
 
 > [!NOTE]
 > サポートされているアプリは、Windows 10、および .NET Framework 4.6 を対象とする x86 および x64 のアプリで UWP を含める (.NET Framework は、デスクトップのバージョンのみ) デスクトップまたはそれ以降のバージョン。

@@ -25,11 +25,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: de774e323c1580c2a4d7c925f9c9297c392b2794
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 179d66b80676cf47bb12e82fcd8e4ac00503a492
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-dump-files-with-visual-studio"></a>Visual Studio でダンプ ファイルを使用します。
 ヒープの有無のダンプ ファイルダンプ ファイルを作成します。ダンプ ファイルを開きます。バイナリ、pdb のダンプ ファイルのソース ファイルを検索します。
@@ -56,11 +56,11 @@ ms.lasthandoff: 12/22/2017
   
 -   Visual Studio では、ARM デバイスからのネイティブ アプリのダンプ ファイルをデバッグできます。 また、ARM デバイスからのマネージ アプリのダンプ ファイルもデバッグできますが、これはネイティブ デバッガーでのみ可能です。  
   
--   デバッグする[カーネル モード](http://msdn.microsoft.com/library/windows/hardware/ff551880.aspx)ダンプ ファイルを Visual Studio 2013 では、ダウンロード、 [Windows 8.1 のバージョンの Windows 用デバッグ ツール](http://msdn.microsoft.com/windows/hardware/gg463009)です。 参照してください[Visual Studio でのカーネル デバッグ](http://msdn.microsoft.com/library/windows/hardware/jj149675.aspx)です。  
+-   デバッグする[カーネル モード](http://msdn.microsoft.com/library/windows/hardware/ff551880.aspx)ダンプ ファイルは、の一部である Windows 用デバッグ ツールをダウンロード、 [Windows Driver Kit (WDK)](/windows/hardware/windows-driver-kit)です。 
   
 -   Visual Studio と呼ばれる以前のダンプ形式で保存されたダンプ ファイルをデバッグできません、[フル ユーザー モード ダンプ](http://msdn.microsoft.com/library/windows/hardware/ff545506.aspx)です。 フル ユーザー モード ダンプがヒープ情報ありのダンプとは異なることに注意してください。  
   
--   使用してデバッグを[SOS.dll (SOS デバッガー拡張)](/dotnet/framework/tools/sos-dll-sos-debugging-extension) Visual Studio で、Windows 用デバッグ ツールは、Windows ドライバー キット (WDK) の一部であるをインストールする必要があります。 参照してください[Windows 8.1 Preview: キット、ビット、およびツールをダウンロード](http://msdn.microsoft.com/library/windows/hardware/bg127147.aspx)です。  
+-   使用してデバッグを[SOS.dll (SOS デバッガー拡張)](/dotnet/framework/tools/sos-dll-sos-debugging-extension) Visual Studio での一部である Windows 用デバッグ ツールをインストールする必要があります、 [Windows Driver Kit (WDK)](/windows/hardware/windows-driver-kit) 
   
 ##  <a name="BKMK_Create_a_dump_file"></a>ダンプ ファイルを作成します。  
  Visual Studio でダンプ ファイルを作成するには:   

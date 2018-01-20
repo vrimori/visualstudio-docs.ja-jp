@@ -13,11 +13,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: d007bdf5d2029e896167a2fd7b32359c661aa7fa
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: 7792e22398afd476703407e8ae2159e0f1afd931
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>スナップショットは、Visual Studio でデバッグするためのトラブルシューティングと既知の問題
 
@@ -71,6 +71,17 @@ ms.lasthandoff: 01/05/2018
 - 特別な変数など*$FUNCTION*または*$CALLER*、条件ステートメントやプロジェクトの ASP.NET Core logpoints で評価されることはできません。
 - スナップショットのデバッグはアプリのサービスでは動作しません[ローカル キャッシュ](/azure/app-service/app-service-local-cache)オンにします。
 - スナップショットの API アプリのデバッグは現在サポートされていません。
+
+## <a name="site-extension-upgrade"></a>サイト拡張機能のアップグレード
+
+スナップショットのデバッグと Application Insights は、サイトのプロセスに読み込まれ、アップグレード中にファイル ロック問題が発生する ICorProfiler によって異なります。 この処理を実稼働サイトのダウン時間がないことを確認することをお勧めします。
+
+- 作成、[デプロイ スロット](/azure/app-service/web-sites-staged-publishing)アプリ サービス内およびスロットには、サイトを展開します。
+- Visual Studio で、クラウド エクスプ ローラーとは、Azure ポータルから、運用スロットをスワップします。
+- スロット サイトを停止します。 すべてのインスタンスからサイト w3wp.exe プロセスを強制終了するまで数秒かかります。
+- Kudu サイトまたは Azure ポータルから、スロットのサイト拡張機能のアップグレード (*アプリ サービスのブレード > 開発ツール > 拡張子 > 更新*)。
+- スロット サイトを開始します。 もう一度ウォーム アップするサイトにアクセスすることをお勧めします。
+- 運用スロットをスワップします。
 
 ## <a name="see-also"></a>関連項目
 

@@ -24,11 +24,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 36cdf6538a1a9f258eef0c251d14884b64ca70c2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 82ec43b02895c2067b04f52f893184a82dd0f36b
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="edit-and-continue-visual-basic"></a>エディット コンティニュ (Visual Basic)
 エディット コンティニュは、中断モードでの実行中にコードを変更できるようにするための、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 用デバッグ機能です。 コードの編集を適用した後で、新しい編集でコードの実行を再開して編集結果を確認できます。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/22/2017
  Windows 10 用の UWP アプリおよび .NET Framework 4.6 を対象とする x86 および x64 のアプリでエディット コンティニュはサポートされて (.NET Framework は、デスクトップのバージョンのみ) デスクトップまたはそれ以降のバージョン。
 
  > [!NOTE]
- > サポートされていないアプリとプラットフォームには、ASP.NET 5、Silverlight 5、Windows Phone および Windows Phone エミュレーター、および Windows 8.1 が含まれます。
+ > サポートされていないアプリとプラットフォームには、ASP.NET 5、Silverlight 5、および Windows 8.1 が含まれます。
   
  エディット コンティニュを使用してデバッグを開始するときはサポートされていない**プロセスにアタッチする**です。 エディット コンティニュはサポートされていません混在または最適化されたコードのマネージ コードとネイティブ コード。 詳細については、次を参照してください。[サポートされているコードの変更 (c# および Visual Basic](../debugger/supported-code-changes-csharp.md)です。
   

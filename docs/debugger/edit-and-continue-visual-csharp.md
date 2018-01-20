@@ -22,11 +22,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: dotnet
-ms.openlocfilehash: e2e2d380bf90ae2cb0140c508f7cb3b9842c7bf8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c9b820dceefbb84dc9c0b9b9efff75afdb38b30f
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="edit-and-continue-visual-c"></a>エディット コンティニュ (Visual C#)
  C# のエディット コンティニュを使用すると、デバッグ中に中断モードでコードに変更を加えることができます。 デバッグ セッションを停止したり再開したりしなくても、変更を適用できます。 実行モードでは、ソース エディターは読み取り専用です。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
  UWP に Windows 10、および .NET Framework 4.6 を対象とする x86 および x64 のアプリでエディット コンティニュはサポートされて (.NET Framework は、デスクトップのバージョンのみ) デスクトップまたはそれ以降のバージョン。
 
  > [!NOTE]
- > サポートされていないアプリとプラットフォームには、ASP.NET 5、Silverlight 5、Windows Phone および Windows Phone エミュレーター、および Windows 8.1 が含まれます。
+ > サポートされていないアプリとプラットフォームには、ASP.NET 5、Silverlight 5、および Windows 8.1 が含まれます。
   
  編集するときに、続行が有効になっているなどのデバッガー実行コマンドを使用するときに、サポートされている変更が自動的に適用されます**続行**、**ステップ**、**次のステートメントの設定**、またはデバッガー ウィンドウで関数の評価を実行します。  
   

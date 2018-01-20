@@ -1,7 +1,7 @@
 ---
 title: "トリガーする方法を中断、再開、およびバック グラウンド イベントを UWP アプリのデバッグ中に |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/16/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-debug
@@ -13,17 +13,16 @@ dev_langs:
 - VB
 - FSharp
 - C++
-ms.assetid: 824ff3ca-fedf-4cf5-b3e2-ac8dc82d40ac
 caps.latest.revision: "17"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: 4a62f02d98ed06df4a3eea1b3f253f5e91ff7115
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 036362ec392e6deba9bed1ef185c602d508d4da4
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-while-debugging-uwp-apps-in-visual-studio"></a>トリガーする方法を中断、再開、および Visual Studio での UWP アプリのデバッグ中にバック グラウンド イベント
 デバッグが行われていないときは、Windows の **プロセス継続時間管理** (PLM) によってアプリの実行状態 (ユーザー アクションに応じたアプリの開始、中断、再開、および終了) とデバイスの状態が管理されます。 デバッグが行われているとき、これらのアクティブ化イベントは Windows によって無効にされます。 このトピックでは、デバッガーでこれらのイベントを発生させる方法について説明します。  
@@ -31,19 +30,6 @@ ms.lasthandoff: 01/10/2018
  このトピックでは、 **バックグラウンド タスク**をデバッグする方法についても説明します。 バックグラウンド タスクは、アプリが実行されていない場合でもバックグラウンド プロセスで特定の操作を行うことを可能にします。 デバッガーを使用してアプリをデバッグ モードに変更した後、UI の起動なしでバックグラウンド タスクを開始してデバッグできます。  
   
  プロセス継続時間管理とバック グラウンド タスクの詳細については、次を参照してください。[起動、再開、およびマルチタスク](/windows/uwp/launch-resume/index)です。  
-  
-##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
- [プロセス継続時間管理イベントを発生させる](#BKMK_Trigger_Process_Lifecycle_Management_events)  
-  
- [バックグラウンド タスクをトリガーする](#BKMK_Trigger_background_tasks)  
-  
--   [標準デバッグ セッションからバックグラウンド タスク イベントをトリガーする](#BKMK_Trigger_a_background_task_event_from_a_standard_debug_session)  
-  
--   [アプリが実行されていないときにバックグラウンド タスクをトリガーする](#BKMK_Trigger_a_background_task_when_the_app_is_not_running)  
-  
- [インストール済みのアプリからプロセス継続時間管理イベントとバックグラウンド タスクをトリガーする](#BKMK_Trigger_Process_Lifetime_Management_events_and_background_tasks_from_an_installed_app)  
-  
- [バックグラウンド タスクのアクティブ化エラーの診断](#BKMK_Diagnosing_background_task_activation_errors)  
   
 ##  <a name="BKMK_Trigger_Process_Lifecycle_Management_events"></a> プロセス継続時間管理イベントを発生させる  
  Windows では、ユーザーが他のアプリに切り替えた場合、または Windows が低電力状態に入った場合にアプリを中断できます。 `Suspending` イベントに応答して、関連するアプリとユーザー データを永続ストレージに保存し、リソースを解放できます。 **中断** 状態から再開されたアプリは **実行** 状態に入り、中断状態に入った時点の状態から実行を続行します。 `Resuming` イベントに応答してアプリの状態を復元するか更新し、リソースを再要求できます。  
@@ -88,7 +74,7 @@ ms.lasthandoff: 01/10/2018
   
 2.  スタートアップ プロジェクトのデバッグ プロパティ ページを開きます。 ソリューション エクスプローラーでプロジェクトを選択します。 **[デバッグ]** メニューの **[プロパティ]**をクリックします。  
   
-     C++ プロジェクトの場合は、 **[構成プロパティ]** を展開し、 **[デバッグ]**をクリックする必要があります。  
+     C++ と JavaScript のプロジェクト展開**構成プロパティ**を選択し**デバッグ**です。  
   
 3.  次のいずれかの操作を行います。  
   
@@ -109,12 +95,12 @@ ms.lasthandoff: 01/10/2018
      ![中断、再開、終了、およびバック グラウンド タスク](../debugger/media/dbg_suspendresumebackground.png "DBG_SuspendResumeBackground")  
   
 ##  <a name="BKMK_Trigger_Process_Lifetime_Management_events_and_background_tasks_from_an_installed_app"></a> インストール済みのアプリからプロセス継続時間管理イベントとバックグラウンド タスクをトリガーする  
- [インストールされているアプリケーション パッケージのデバッグ] ダイアログ ボックスを使用して、既にインストールされているアプリをデバッガーに読み込みます。 たとえば、Microsoft ストアからインストールされたアプリをデバッグまたはを確認したら、アプリのソース ファイルが、アプリの Visual Studio プロジェクトではなく、アプリをデバッグする可能性があります。 [インストールされているアプリケーション パッケージのデバッグ] ダイアログ ボックスを使用すると、Visual Studio のコンピューターまたはリモート デバイスで、アプリをデバッグ モードで起動できます。また、アプリを起動せずにデバッグ モードで実行するように設定することもできます。 参照してください、**デバッガーでインストール済みのアプリを起動**のセクション[UWP アプリのデバッグ セッションを開始](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md#BKMK_Start_an_installed_app_in_the_debugger)です。
+ 使用して、**インストール済みアプリ パッケージのデバッグ**をデバッガーに既にインストールされているアプリを読み込む ダイアログ ボックス。 たとえば、Microsoft ストアからインストールされたアプリをデバッグまたはを確認したら、アプリのソース ファイルが、アプリの Visual Studio プロジェクトではなく、アプリをデバッグする可能性があります。 **インストール済みアプリ パッケージのデバッグ**ダイアログ ボックスでは、Visual Studio のコンピューターまたはリモート デバイス、またはデバッグ モードで実行しますが、起動せずにアプリを設定する、デバッグ モードでアプリを開始します。 詳細については、次を参照してください。[インストール済みのアプリ パッケージをデバッグ](../debugger/debug-installed-app-package.md)です。
   
  アプリをデバッガーに読み込んだら、前の各手順を使用できます。  
   
 ##  <a name="BKMK_Diagnosing_background_task_activation_errors"></a> バックグラウンド タスクのアクティブ化エラーの診断  
- バックグラウンド インフラストラクチャ用の Windows イベント ビューアーの診断ログには、バックグラウンド タスク エラーの診断とトラブルシューティングを行うために使用できる詳細情報が含まれています。 このログを表示するには:  
+ バック グラウンド インフラストラクチャ用の Windows イベント ビューアーの診断ログには、診断やバック グラウンド タスク エラーのトラブルシューティングに使用できる詳細な情報が含まれています。 このログを表示するには:  
   
 1.  イベント ビューアー アプリケーションを開きます。  
   
@@ -127,5 +113,5 @@ ms.lasthandoff: 01/10/2018
 ## <a name="see-also"></a>参照  
  [Visual Studio での UWP アプリのテスト](../test/testing-store-apps-with-visual-studio.md)   
  [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
- [アプリケーションのライフ サイクル](http://msdn.microsoft.com/en-us/53cdc987-c547-49d1-a5a4-fd3f96b2259d)   
- [起動する、再開、およびマルチタスク](http://msdn.microsoft.com/en-us/04307b1b-05af-46a6-b639-3f35e297f71b)
+ [アプリケーションのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)   
+ [起動する、再開、およびマルチタスク](/windows/uwp/launch-resume/index)

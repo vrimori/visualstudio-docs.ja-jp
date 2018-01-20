@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: 32d58ec27d54b1b9c731747b01ad1f59d1d222b7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5317c06dc5ff6515627e562d576785c2ff25a98a
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>スナップショットのデバッガーを使用してライブの ASP.NET Azure アプリをデバッグします。
 
@@ -47,9 +47,12 @@ Snappoints と logpoints ブレークポイントに似ています。 ブレー
 
    ![スナップショットのデバッガーを起動して](../debugger/media/snapshot-launch.png "スナップショット デバッガーの起動")
 
-    選択した最初の時間**スナップショット デバッガーのアタッチ**、Azure App Service にスナップショット デバッガーをインストールするように求められます。 このインストールでは、Azure App Service の再起動が必要です。 
+    選択した最初の時間**スナップショット デバッガーのアタッチ**、Azure App Service でスナップショットのデバッガーのサイト拡張機能をインストールするように求められます。 このインストールでは、Azure App Service の再起動が必要です。 
 
    Visual Studio はデバッグ モードのスナップショットが開始されました。
+
+    > [!NOTE]
+    > Application Insights のサイト拡張機能は、スナップショットのデバッグもサポートします。 「サイト拡張機能の有効期限が切れて」のエラー メッセージが発生した場合を参照してください[ヒントとスナップショットのデバッグに関する既知の問題のトラブルシューティング](../debugger/debug-live-azure-apps-troubleshooting.md)の詳細をアップグレードするためです。
 
    ![デバッグ モードのスナップショット](../debugger/media/snapshot-message.png "デバッグ モードのスナップショット")
 
@@ -130,7 +133,7 @@ Snappoint にヒットしたときに、スナップショットを作成、だ�
 
 ## <a name="next-steps"></a>次の手順
 
-- スナップショットの表示中に変数を検査する方法については、次を参照してください。 [Debbuger 機能のツアー](../debugger/debugger-feature-tour.md)です。
+- スナップショットの表示中に変数を検査する方法については、次を参照してください。[デバッガーの機能のツアー](../debugger/debugger-feature-tour.md)です。
 - ビュー、[スナップショットのデバッグに関する FAQ](../debugger/debug-live-azure-apps-faq.md)です。
 - ビュー[ヒントとスナップショットのデバッグに関する既知の問題のトラブルシューティング](../debugger/debug-live-azure-apps-troubleshooting.md)です。
 - アプリで例外が発生すると、Application Insights のスナップショットを表示する場合は、ことを行うことができます。 詳細については、次を参照してください。[アプリ用 .NET での例外でのスナップショットをデバッグ](/azure/application-insights/app-insights-snapshot-debugger)です。 Application Insights には、Azure App Service に加えて Service Fabric アプリがサポートされています。

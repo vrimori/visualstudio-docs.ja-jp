@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio での UWP アプリの展開 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/16/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-debug
@@ -12,20 +12,18 @@ dev_langs:
 - VB
 - FSharp
 - C++
-ms.assetid: ef3a0f36-bfc9-4ca0-aa61-18261f619bff
 caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: 95f009ca761d4d978fb5e5a9323722e5dfc34cb8
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 28b1897fad45ae0c2bd174c39433645caf011f09
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>Visual Studio からの UWP アプリを配置します。
-![Windows にのみ適用されます](../debugger/media/windows_only_content.png "windows_only_content")  
   
  Visual Studio の配置機能は、ビルドし、ターゲット デバイスに Visual Studio で作成した UWP アプリを登録します。 アプリの厳密な登録方法は、ターゲット デバイスがローカルかリモートかによって違います。  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 01/10/2018
 Windows 10 のリモート デバイスを有効にする必要があります[開発者モード](/windows/uwp/get-started/enable-your-device-for-development)です。 作成者の更新プログラムを実行している Windows 10 デバイス上または後で、リモート ツールが自動的にインストールされているアプリを展開するときにします。 詳細については、次を参照してください。[インストール済みのアプリ パッケージをデバッグ](../debugger/debug-installed-app-package.md)です。
 
 > [!NOTE]
-> Windows 8.1 および Windows 10 のより前の作成者の更新プログラムのバージョンでは、リモート デバイスで、Remote Tools for Visual Studio をインストールする必要があり、リモート デバッガーを実行する必要があります。 Windows 8.1 に開発者用ライセンスをインストールすることも必要があります。
+> 前の作成者の更新プログラムのバージョンの Windows 10、リモート デバイスで、Remote Tools for Visual Studio をインストールする必要があり、リモート デバッガーを実行する必要があります。
   
 配置では、リモート デバッガーのネットワーク チャネルを使用して、アプリのファイルをリモート デバイスに送信します。  
   
@@ -117,5 +115,6 @@ Windows 10 のリモート デバイスを有効にする必要があります[�
 -   JavaScript およびデバッグ プロパティ ページで、 **[アプリケーションの起動]** の値を **[はい]**に設定します。  
   
 ## <a name="see-also"></a>参照  
- [インストールされているアプリ パッケージをデバッグ](../debugger/debug-installed-app-package.md)です。   
+ [リモート展開のオプションの詳細](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)  
+ [インストールされているアプリ パッケージをデバッグします。](../debugger/debug-installed-app-package.md)   
  [Visual Studio からアプリを実行します。](../debugger/run-store-apps-from-visual-studio.md)

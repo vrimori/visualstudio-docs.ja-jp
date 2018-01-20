@@ -23,11 +23,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: e21d29c3a95de4e5174a9966665f3e4e6781f726
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 16f4b69fa25861d893471a161fdb7c1a6bba34e5
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="debug-an-installed-app-package-in-visual-studio-uwp"></a>Visual Studio (UWP) にインストールされているアプリ パッケージをデバッグします。
 
@@ -91,9 +91,6 @@ ms.lasthandoff: 01/10/2018
 
      > [!NOTE]
 > 存在する、XBox または HoloLens デバイスは既に実行されている場合にアタッチされたデバッガーで、アプリを再起動します。
-
-> [!NOTE]
-> UWP アプリは開発できますが Windows 8.1 以降で、コンパイルし Windows 10 を実行する必要があります。 Windows 8.1 PC で UWP アプリを開発している場合をする、同じ LAN 上のホストとターゲットの両方のコンピューターが別の Windows 10 デバイスで実行されている UWP アプリでのリモート デバッグできます。 これを行うには、ダウンロードして Visual Studio の両方のコンピューターでリモート ツールをインストールします。 インストールされているバージョンがインストールされている Visual Studio の既存のバージョンと一致しなければなりません、アーキテクチャ (x86、x64) を選択する必要がありますもの一致する対象のアプリです。
 
 UWP アプリのリモート展開の詳細設定オプションについては、次を参照してください。[の展開と UWP アプリのデバッグ](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps.md#advanced-remote-deployment-options)です。 
   

@@ -1,7 +1,7 @@
 ---
-title: "UWP アプリと Windows 8.1 アプリのデバッグ |Microsoft ドキュメント"
+title: "UWP アプリの Visual Studio のデバッグ |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/18/2017
+ms.date: 01/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-debug
@@ -12,26 +12,26 @@ dev_langs:
 - VB
 - FSharp
 - C++
-ms.assetid: dd1723b7-4a43-47aa-9acf-d44afce78154
 caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 6e6b144e3456f9ce2019c791f71f2d0b631fc883
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.workload: uwp
+ms.openlocfilehash: de37ef22b9b8ebe8dbcfde9abae4d2acaab2cc2d
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="debug-universal-windows-apps-uwp"></a>ユニバーサル Windows アプリ (UWP) のデバッグします。
-Visual Studio デバッガーでは、UWP と Windows 8.1 アプリのデバッグを完全にサポートを提供します。  
+# <a name="debug-universal-windows-apps-uwp-in-visual-studio"></a>Visual Studio でのユニバーサル Windows アプリ (UWP) のデバッグします。
+
+Visual Studio デバッガーでは、UWP アプリのデバッグを完全にサポートを提供します。 
   
-Windows Phone 8 アプリをデバッグするを参照してください。 [Windows Phone 8 用のアプリのデバッグ](https://msdn.microsoft.com/en-us/library/windows/apps/ff402572(v=vs.105).aspx)です。  
+Windows 8.1 アプリをデバッグするを参照してください。[ストア アプリのデバッグ Visual Studio](https://msdn.microsoft.com/en-us/library/hh441472.aspx)です。 Windows Phone 8 アプリをデバッグするを参照してください。 [Windows Phone 8 用のアプリのデバッグ](https://msdn.microsoft.com/library/windows/apps/ff402572(v=vs.105).aspx)です。  
   
 |||  
 |-|-|  
-|[UWP アプリのデバッグ セッションを開始します。](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)|ローカル コンピューターでは、接続されたデバイス、アプリのシミュレーターやエミュレーター、またはリモート デバイス上で UWP アプリを実行します。|  
+|[UWP アプリのデバッグ セッションを開始する](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)|ローカル コンピューターでは、接続されたデバイス、アプリのシミュレーターやエミュレーター、またはリモート デバイス上で UWP アプリを実行します。|  
 |[インストールされているアプリケーション パッケージをデバッグする](../debugger/debug-installed-app-package.md)|展開されたアプリで、ローカルおよびリモートの両方をデバッグします。|
 |[UWP アプリ用コンテンツをプリフェッチします。](../debugger/prefetch-content-for-windows-store-apps.md)|UWP アプリでの ContentPrefetcher クラスの効果を分析します。|  
   

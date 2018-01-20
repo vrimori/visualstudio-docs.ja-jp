@@ -18,11 +18,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: efd4ca5457a1175b19deddfd4194091dbcb2864e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: cb0ed99e341e89aaaa295d2fc4a4cf25f726e2f5
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="debugging-applications"></a>アプリケーションのデバッグ
 次のセクションでは、特定の種類のアプリケーションのデバッグを処理します。 さまざまなアプリケーションの種類とさまざまな言語には、異なる設定と手法が必要であり、デバッグする必要がある問題もさまざまに発生します。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 |||  
 |-|-|  
-|[UWP アプリと Windows 8.1 アプリをデバッグします。](../debugger/debugging-windows-store-and-windows-universal-apps.md)|UWP アプリをデバッグする方法について説明します。|  
+|[UWP アプリをデバッグする](../debugger/debugging-windows-store-and-windows-universal-apps.md)|UWP アプリをデバッグする方法について説明します。|  
 |[マネージ コードをデバッグする](../debugger/debugging-managed-code.md)|マネージ コード (Visual C#、Visual Basic、および F3) をデバッグする方法について説明します。|  
 |[ネイティブ コードをデバッグする](../debugger/debugging-native-code.md)|各種のネイティブの C++ アプリケーションをデバッグする方法について説明します。|  
 |[GPU コードのデバッグ](../debugger/debugging-gpu-code.md)|グラフィカル処理装置 (GPU) で実行されている C++ コードをデバッグする方法について説明します。|  
