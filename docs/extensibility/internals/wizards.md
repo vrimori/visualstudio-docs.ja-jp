@@ -14,11 +14,11 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: 6d9d468997d0e0f4cc913db1b9ac316f4e698f99
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 96d91fa687c914f0c3f98c4ddca64a93a5d70d02
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="wizards"></a>ウィザード
 追加するウィザードを作成したら、通常、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]他のユーザーが使用できるように開発環境 (IDE) を統合します。 追加のウィザードが表示されます、**新しいプロジェクトの追加**または**新しい項目の追加** ダイアログ ボックス。 表示する、**新しいプロジェクトの追加**または**新しい項目の追加** ダイアログ ボックスで開いているソリューションを右クリックして**ソリューション エクスプ ローラー**、 をポイント**追加**とをクリックして**新しいプロジェクト**または**新しい項目の**します。  
@@ -50,9 +50,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="related-sections"></a>関連項目  
  [プロジェクト タイプ](../../extensibility/internals/project-types.md)  
  新しいプロジェクトの種類を設計する方法に関する情報を提供するその他のトピックへのリンクを提供します。  
-  
- [チュートリアル: ウィザードの作成](http://msdn.microsoft.com/Library/adb41fe9-fcca-4e87-bf4f-bf2fa68e8b06)  
- ウィザードを作成する方法を示します。  
   
  [プロジェクトの拡張](../../extensibility/extending-projects.md)  
  使用する方法について説明[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]プロジェクトおよびソリューションのコード ファイルとリソース ファイル、およびソース管理を実装する方法を整理します。

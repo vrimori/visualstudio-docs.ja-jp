@@ -33,11 +33,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 46ea417ccd8b4dbecd0c6584699e9f2e98330d69
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a53c03f1ab2c8680329f17bfa36a49b12062bff5
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="cc-assertions"></a>アサーション
 アサート ステートメントでは、プログラム内で true になる必要のある条件を指定します。 その条件が true でない場合、アサーションは失敗し、プログラムの実行が中断されると、および[アサートに失敗しました ダイアログ ボックス](../debugger/assertion-failed-dialog-box.md)が表示されます。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 -   MFC アサーション (MFC プログラムの場合)  
   
--   [ATLASSERT](http://msdn.microsoft.com/Library/98e3e0fc-77e2-499b-a6f6-b17a21c6fbd3) ATL を使用するプログラム  
+-   [ATLASSERT](/cpp/atl/reference/debugging-and-error-reporting-macros#atlassert) ATL を使用するプログラム  
   
 -   CRT アサーション (C ランタイム ライブラリを使用するプログラムの場合)  
   
@@ -95,7 +95,7 @@ ASSERT(nM++ > 0); // Don't do this!
   
 ```  
   
- `ASSERT` 式はプログラムのリリース バージョンでは評価されないため、`nM` の値は、デバッグ バージョンとリリース バージョンとでは異なります。 MFC では、この問題を避けるためには、使用することができます、[を確認してください](http://msdn.microsoft.com/Library/3e1ab4ee-cbc7-4290-a777-c92f42ce7b96)の代わりにマクロ`ASSERT`です。  `VERIFY`すべてのバージョンで式を評価しますが、リリース バージョンで結果はチェックしません。  
+ `ASSERT` 式はプログラムのリリース バージョンでは評価されないため、`nM` の値は、デバッグ バージョンとリリース バージョンとでは異なります。 MFC では、この問題を避けるためには、使用することができます、[を確認してください](/cpp/mfc/reference/diagnostic-services#verify)の代わりにマクロ`ASSERT`です。  `VERIFY`すべてのバージョンで式を評価しますが、リリース バージョンで結果はチェックしません。  
   
  アサート ステートメントで関数を呼び出す場合は、その関数の評価によって予想外の副作用が生じることがあるため特に注意してください。  
   
@@ -165,7 +165,7 @@ _ASSERTE(_CrtIsMemoryBlock (myData, size, &requestNumber, &filename, &linenumber
   
  MFC の `ASSERT` マクロの引数がゼロまたは false に評価された場合、マクロはプログラムの実行を停止し、ユーザーに警告を表示します。それ以外の場合、プログラムの実行を続けます。  
   
- アサーションが失敗すると、アサーション対象のソース ファイル名と行番号がメッセージ ダイアログ ボックスに表示されます。 ダイアログ ボックスで [再試行] を選択する場合のボックスへの呼び出し[AfxDebugBreak](http://msdn.microsoft.com/Library/c4cd79b9-9327-4db5-a9d6-c4004a92aa30)デバッガーにブレークを実行します。 この時点で、呼び出し履歴を調べるかその他のデバッガー機能を使って、アサーションが失敗した原因を確認できます。 有効にした場合[ジャスト イン タイムのデバッグ](../debugger/just-in-time-debugging-in-visual-studio.md)デバッガーが既に実行されていないと、ダイアログ ボックスは、デバッガーを起動できます。  
+ アサーションが失敗すると、アサーション対象のソース ファイル名と行番号がメッセージ ダイアログ ボックスに表示されます。 ダイアログ ボックスで [再試行] を選択する場合のボックスへの呼び出し[AfxDebugBreak](/cpp/mfc/reference/diagnostic-services#afxdebugbreak)デバッガーにブレークを実行します。 この時点で、呼び出し履歴を調べるかその他のデバッガー機能を使って、アサーションが失敗した原因を確認できます。 有効にした場合[ジャスト イン タイムのデバッグ](../debugger/just-in-time-debugging-in-visual-studio.md)デバッガーが既に実行されていないと、ダイアログ ボックスは、デバッガーを起動できます。  
   
  `ASSERT` を使用して関数の戻り値をチェックする方法を次に示します。  
   
@@ -180,7 +180,7 @@ ASSERT(x >= 0);   //  Assertion fails if x is negative
 ASSERT( pObject1->IsKindOf( RUNTIME_CLASS( CPerson ) ) );  
 ```  
   
- `ASSERT` マクロは、リリース バージョンではコードを生成しません。 リリース バージョンで式を評価する必要がある場合、[を確認してください](http://msdn.microsoft.com/Library/3e1ab4ee-cbc7-4290-a777-c92f42ce7b96)ASSERT の代わりにマクロです。  
+ `ASSERT` マクロは、リリース バージョンではコードを生成しません。 リリース バージョンで式を評価する必要がある場合、[を確認してください](/cpp/mfc/reference/diagnostic-services#verify)ASSERT の代わりにマクロです。  
   
 ###  <a name="BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid"></a>MFC ASSERT_VALID と cobject::assertvalid  
  [Cobject::assertvalid](/cpp/mfc/reference/cobject-class.md#CObject__AssertValid)メソッドは実行時にオブジェクトの内部状態のチェックを提供します。 `AssertValid` からクラスを派生させる場合、必ずしも `CObject` をオーバーライドする必要はありませんが、そうすることによって、クラスの信頼性を高めることができます。 `AssertValid` によって、オブジェクトのすべてのメンバー変数に対し、有効な値を保持しているかどうかを検証するアサーションが実行されます。 たとえば、ポインターのメンバー変数が NULL でないかどうかをチェックできます。  

@@ -26,11 +26,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 84ba9274258fe41b93a980c815bfd808454b9061
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 28a5e13c2c56c7ecdb65efdfc1bd0b3c6eb47bfc
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="code-analysis-for-cc-overview"></a>C/C++ のコード分析の概要
 C/C++ コード分析ツールは、C/C++ ソース コードの障害に関する情報を開発者に提供します。 このツールによってレポートされる一般的なコーディング エラーとしては、バッファー オーバーラン、初期化されていないメモリ、null ポインターの逆参照、メモリ リーク、リソース リークなどがあります。  
@@ -48,7 +48,7 @@ C/C++ コード分析ツールは、C/C++ ソース コードの障害に関す�
  すべてソース コードのチェックインが特定のポリシーを満たしていることを必要とする可能性があります。 具体的には、分析に最も最近使用したローカル ビルドのステップとして実行されたことを確認します。 コード分析チェックイン ポリシーを有効にする方法の詳細については、次を参照してください[の作成とコード分析チェックイン ポリシーの使用。](../code-quality/creating-and-using-code-analysis-check-in-policies.md)  
   
 ## <a name="team-build-integration"></a>チーム ビルドの統合  
- コード分析ツールのステップとして実行するビルド システムの統合機能を使用することができます、[!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]プロセスをビルドします。 詳細については、「[アプリケーションのビルド](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)」をご覧ください。  
+ コード分析ツールのステップとして実行するビルド システムの統合機能を使用することができます、[!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]プロセスをビルドします。 詳細については、次を参照してください。[ビルドとリリースの](/vsts/build-release/index)します。  
   
 ## <a name="command-line-support"></a>コマンド ライン サポート  
  だけでなく、完全統合開発環境では、開発者も行えます分析ツールをコマンドラインから次の例で示すように。  

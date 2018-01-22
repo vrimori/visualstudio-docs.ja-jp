@@ -18,11 +18,11 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: ce1de0467e7e662fd0def096ef6adb042578f8b7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a6649bd45aba299514b40e74b5683368bfd92b41
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="project-type-design-decisions"></a>プロジェクトの種類の設計に関する決定事項
 新しいプロジェクトの種類を作成する前に、プロジェクトの種類に関するいくつかの設計に関する決定を行う必要があります。 使用して、プロジェクトが含まれる項目、プロジェクト ファイルの保存方法、およびどのようなコミットメント モデルの種類を決定する必要があります。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
  プロジェクト内の項目として使用できるは、ファイル、することもできますデータベース データのリポジトリまたは接続内のオブジェクトより抽象的オブジェクト、インターネットを経由します。 項目がファイルの場合は、プロジェクト参照に基づくまたはできますディレクトリ ベースのプロジェクトです。  
   
- プロジェクトでは参照に基づく、項目は、複数のプロジェクトに表示できます。 ただし、項目が表す実際のファイルは 1 つのディレクトリのみにあります。 ディレクトリ ベースのプロジェクトでは、ディレクトリ構造に存在するすべてのプロジェクト項目です。 詳細については、次を参照してください。 [NIB: 項目の管理のプロジェクトで](http://msdn.microsoft.com/en-us/762e606b-7f44-4b66-97a1-e30a703654a0)です。  
+ プロジェクトでは参照に基づく、項目は、複数のプロジェクトに表示できます。 ただし、項目が表す実際のファイルは 1 つのディレクトリのみにあります。 ディレクトリ ベースのプロジェクトでは、ディレクトリ構造に存在するすべてのプロジェクト項目です。  
   
  ローカルの項目は、アプリケーションがインストールされている同じコンピューターに格納されます。 リモートの項目は、ローカル ネットワークでは、別のサーバーや他の場所は、インターネット上に格納できます。  
   
@@ -62,7 +62,6 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>参照  
  [チェックリスト: 新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)   
- [NIB: 項目の管理のプロジェクト](http://msdn.microsoft.com/en-us/762e606b-7f44-4b66-97a1-e30a703654a0)   
  [開くと、プロジェクト項目の保存](../../extensibility/internals/opening-and-saving-project-items.md)   
  [プロジェクトの永続化](../../extensibility/internals/project-persistence.md)   
  [プロジェクト モデルの要素](../../extensibility/internals/elements-of-a-project-model.md)   

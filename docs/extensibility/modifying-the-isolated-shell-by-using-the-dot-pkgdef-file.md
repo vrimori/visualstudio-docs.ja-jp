@@ -1,4 +1,5 @@
 ---
+redirect_url: shell/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file
 title: "使用して分離シェルを変更します。Pkgdef ファイル |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
@@ -13,8 +14,7 @@ caps.latest.revision: "27"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 37c517792055c1d4a2026eef5171325622fec661
+ms.openlocfilehash: addeeaa294a81acce6558feb5257fee1344532f8
 ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/22/2018
   
  .Pkgdef ファイルにコメントを追加することができます。 単一行コメントは、最初の 2 つの文字と 2 つのスラッシュを持ちます。  
   
- 代替文字列の一覧は、次を参照してください。[で置換文字列を使用します。Pkgdef およびです。Pkgundef ファイル](substitution-strings-used-in-dot-pkgdef-and-dot-pkgundef-files.md)です。  
+ 代替文字列の一覧は、次を参照してください。[で置換文字列を使用します。Pkgdef およびです。Pkgundef ファイル](../extensibility/substitution-strings-used-in-dot-pkgdef-and-dot-pkgundef-files.md)です。  
   
  次のセクションでは、分離モードで Visual Studio シェルの動作に影響する特定のレジストリ値について説明します。 このファイルで、アプリケーションの追加のレジストリ値を定義することもできます。  
   
@@ -68,12 +68,12 @@ ms.lasthandoff: 01/22/2018
 |AppName|string|アプリケーションの名前。 名前は、アプリケーション ウィンドウのタイトル バーに表示されます。<br /><br /> 既定値は、アプリケーションのソリューション ファイルの名前です。|  
 |CommandLineLogo|string|コンソール ウィンドウで、アプリケーションの実行時に、バナー テキスト。 この設定では、コマンド ライン ビルド操作をサポートするアプリケーションのみに影響します。<br /><br /> 既定値は"*companyName * * solutionName*バージョン 1.0"ここで、 *companyName* Windows をインストールしたときに、会社の名前を指定し、 *solutionName*。アプリケーション ソリューション ファイルの名前を指定します。|  
 |DefaultDebugEngine|string|既定値の GUID は、エンジンをアプリケーションの使用をデバッグします。<br /><br /> 注: 空の GUID (すべてゼロ) では、アプリケーションに既定のデバッグ エンジンが指定されていないことを示します。 これにより、デバッガーを使用するデバッグ エンジンを選択できます。<br /><br /> 既定値は、"{00000000-0000-0000-0000-000000000000}"です。|  
-|DefaultHomePage|string|内部の Web ブラウザーのウィンドウの既定のホーム ページの URL。<br /><br /> 場合、**ホーム ページ**オプションは、アプリケーションでは、使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。[環境では、Web ブラウザーのオプション ダイアログ ボックス](../../ide/reference/web-browser-environment-options-dialog-box.md)です。<br /><br /> 既定値は、Windows のインストール時に提供された会社の URL です。|  
+|DefaultHomePage|string|内部の Web ブラウザーのウィンドウの既定のホーム ページの URL。<br /><br /> 場合、**ホーム ページ**オプションは、アプリケーションでは、使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。[環境では、Web ブラウザーのオプション ダイアログ ボックス](../ide/reference/web-browser-environment-options-dialog-box.md)です。<br /><br /> 既定値は、Windows のインストール時に提供された会社の URL です。|  
 |DefaultProjectsLocation|string|既定のプロジェクト フォルダーの完全パス。 たとえば、オブジェクトに適用された<br /><br /> `"DefaultProjectsLocation"="$MyDocuments$\MyVSShellStub\Projects"`<br /><br /> 場合、 **Visual Studio プロジェクトの場所**オプションは、アプリケーションでは、使用し、この設定は、オプションの既定の状態も影響します。 <br /><br /> 既定値は"$MyDocuments$\\*solutionName*"ここで、 *solutionName*アプリケーション ソリューション ファイルの名前を指定します。|  
-|DefaultSearchPage|string|内部の Web ブラウザーのウィンドウの既定の検索ページ URL。<br /><br /> 場合、**検索ページ**オプションは、アプリケーションでは、使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。[環境では、Web ブラウザーのオプション ダイアログ ボックス](../../ide/reference/web-browser-environment-options-dialog-box.md)です。<br /><br /> 既定値は、"http://search.live.com"です。|  
+|DefaultSearchPage|string|内部の Web ブラウザーのウィンドウの既定の検索ページ URL。<br /><br /> 場合、**検索ページ**オプションは、アプリケーションでは、使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。[環境では、Web ブラウザーのオプション ダイアログ ボックス](../ide/reference/web-browser-environment-options-dialog-box.md)です。<br /><br /> 既定値は、"http://search.live.com"です。|  
 |DefaultUserFilesFolderRoot|string|現在のユーザーに対して、ユーザー フォルダーの名前はのマイ ドキュメント フォルダーです。<br /><br /> 既定値は、アプリケーションのソリューション ファイルの名前です。|  
 |DisableOutputWindow|dword|分離シェルは、無効になっているは、出力ウィンドウを扱う必要があるかどうかを示します。<br /><br /> この値が設定されている場合は true、Visual Studio 出力は表示されず、ソリューション ビルド マネージャーで、**出力**ウィンドウと非表示を切り替えます、**出力ウィンドウを表示ビルド開始時に** チェック ボックス、 **プロジェクトおよびソリューション**カテゴリで、**オプション** ダイアログ ボックス。<br /><br /> 既定値は false です。|  
-|HideMiscellaneousFilesByDefault|dword|非表示にする場合は true、**その他のファイル**で既定のフォルダー**ソリューション エクスプ ローラー**。 それ以外の場合は false。<br /><br /> 場合、**ソリューション エクスプ ローラーで表示するその他のファイル**オプションは、アプリケーションでは、使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。[オプション ダイアログ ボックスのドキュメントでは、環境、](../../ide/reference/documents-environment-options-dialog-box.md)です。<br /><br /> 既定値は false です。|  
+|HideMiscellaneousFilesByDefault|dword|非表示にする場合は true、**その他のファイル**で既定のフォルダー**ソリューション エクスプ ローラー**。 それ以外の場合は false。<br /><br /> 場合、**ソリューション エクスプ ローラーで表示するその他のファイル**オプションは、アプリケーションでは、使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。[オプション ダイアログ ボックスのドキュメントでは、環境、](../ide/reference/documents-environment-options-dialog-box.md)です。<br /><br /> 既定値は false です。|  
 |HideSolutionConcept|dword|スタンドアロンのプロジェクトのすべてのプロジェクトを作成し、既定では、ソリューションとプロジェクトのスタンドアロン ソリューションに関連するコマンドを非表示にする場合は trueそれ以外の場合は false です。<br /><br /> 場合、**常にソリューションを表示する**オプションは、アプリケーションでは、使用し、この設定は、オプションの既定の状態も影響します。<br /><br /> 既定値は false です。|  
 |NewProjDlgInstalledTemplatesHdr|string|Visual Studio のインストール済みテンプレート ヘッダーの名前、**テンプレート**一覧に、**新しいプロジェクト** ダイアログ ボックス。 これは、文字列またはアプリケーションの UI パッケージから読み込まれているローカライズ可能なリソース識別子のどちらかです。<br /><br /> 既定値は"*solutionName*にインストールされたテンプレート"ここで、 *solutionName*アプリケーション ソリューション ファイルの名前を指定します。|  
 |NewProjDlgSlnTreeNodeTitle|string|名前、 **Visual Studio ソリューション**内のノード、**プロジェクトの種類**ツリーで、**新しいプロジェクト** ダイアログ ボックス。 これは、文字列またはアプリケーションの UI パッケージから読み込まれているローカライズ可能なリソース識別子のどちらかです。<br /><br /> 既定値は"*solutionName*にインストールされたテンプレート"ここで、 *solutionName*アプリケーション ソリューション ファイルの名前を指定します。|  
@@ -122,12 +122,12 @@ ms.lasthandoff: 01/22/2018
 ## <a name="package-menu-item-settings"></a>パッケージのメニュー項目の設定  
  [$RootKey$ \Menus] レジストリ キーでは、アプリケーションの UI リソース ファイルを定義します。  
   
- メニュー項目の値、フォームがある"{*vsUiPackageGuid*}「=」 *resourceId*、 *versionNumber*"ここで、 *vsUiPackageGuid*の GUID ですアプリケーションの UI パッケージ*resourceId* UI 要素を含む CTMENU のリソースのリソース識別子と*versionNumber* CTMENU の仮想バージョン番号は、リソースです。 詳細については、次を参照してください。[相互運用機能アセンブリ コマンド ハンドラーの登録](../internals/registering-interop-assembly-command-handlers.md)です。  
+ メニュー項目の値、フォームがある"{*vsUiPackageGuid*}「=」 *resourceId*、 *versionNumber*"ここで、 *vsUiPackageGuid*の GUID ですアプリケーションの UI パッケージ*resourceId* UI 要素を含む CTMENU のリソースのリソース識別子と*versionNumber* CTMENU の仮想バージョン番号は、リソースです。 詳細については、次を参照してください。[相互運用機能アセンブリ コマンド ハンドラーの登録](../extensibility/internals/registering-interop-assembly-command-handlers.md)です。  
   
  既定では、アプリケーションの UI パッケージの .pkgdef ファイルでメニュー項目が作成されます。  
   
  メニュー項目を提供して、アプリケーションの一部として配布される各パッケージのパッケージのメニュー項目を追加します。  
   
 ## <a name="see-also"></a>参照  
- [分離シェルのカスタマイズ](customizing-the-isolated-shell.md)   
- [.Pkgundef Files](modifying-the-isolated-shell-by-using-the-dot-pkgundef-file.md)
+ [分離シェルのカスタマイズ](../extensibility/customizing-the-isolated-shell.md)   
+ [.Pkgundef Files](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgundef-file.md)

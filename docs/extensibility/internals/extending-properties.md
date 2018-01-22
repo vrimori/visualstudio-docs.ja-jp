@@ -14,16 +14,16 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: 5c47295c1906c6517638bdf8e9c3a55897f38aa1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 26cf161259736dbd2b2e26279842571d62f69352
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="extending-properties"></a>拡張プロパティ
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **プロパティ**ウィンドウはすべてサポートしています、COM と COM + コンポーネントのユニバーサル プロパティ ブラウザー[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]製品です。 **プロパティ**ウィンドウは`ITypeInfo`情報および COM + 統合開発環境 (IDE) でその他のウィンドウで現在選択されているオブジェクトのデザイン時プロパティの一覧にメタデータを入力します。  
   
- **プロパティ**ウィンドウで開くことができます、キーボードの F4 キーを押すかを選択して**プロパティ ウィンドウ**上、**ビュー**を表示および編集 メニューを使用構成に依存しない、デザイン時のプロパティおよび選択したオブジェクトのイベントです。 ソリューションやプロジェクトに関連付けられている構成に依存するプロパティに表示される[プロパティ ページ](../../extensibility/internals/property-pages.md)です。 詳細については、次を参照してください。 [NIB: プロジェクト プロパティ](http://msdn.microsoft.com/en-us/fb126574-24ad-4c96-9b2b-6e1f3879ba50)、[構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)、および[NIB: 項目の管理のプロジェクトで](http://msdn.microsoft.com/en-us/762e606b-7f44-4b66-97a1-e30a703654a0)です。  
+ **プロパティ**ウィンドウで開くことができます、キーボードの F4 キーを押すかを選択して**プロパティ ウィンドウ**上、**ビュー**を表示および編集 メニューを使用構成に依存しない、デザイン時のプロパティおよび選択したオブジェクトのイベントです。 ソリューションやプロジェクトに関連付けられている構成に依存するプロパティに表示される[プロパティ ページ](../../extensibility/internals/property-pages.md)です。 詳細については、[構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)です。  
   
  ![プロパティ ウィンドウの概要](../../extensibility/internals/media/vspropertieswindow.png "vsPropertiesWindow")  
 [プロパティ] ウィンドウ  

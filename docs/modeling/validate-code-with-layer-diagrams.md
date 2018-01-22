@@ -22,11 +22,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 02c983fb7cd797be377f8821c46b2d7dc38450f9
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: c3f457e46c1f9f0d7b3ed2f862a411245caf72e7
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>依存関係のダイアグラムのコードを検証します。
 
@@ -218,7 +218,7 @@ Visual Studio のこのリリースで、リアルタイムで依存関係の検
   
  検証エラーの詳細については、次を参照してください。[把握して解決するレイヤーの検証エラー](#UnderstandingValidationErrors)です。 [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] の詳細については、以下のトピックを参照してください。  
   
--   [アプリケーションのビルド](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)  
+-   [ビルドとリリース](/vsts/build-release/index)  
   
 -   [ビルド プロセスの既定のテンプレートを使用します。](http://msdn.microsoft.com/Library/43930b12-c21b-4599-a980-2995e3d16e31)  
   
