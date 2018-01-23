@@ -16,11 +16,11 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: 91707d75ca71ae7e035322c8a9c25ab6e4befe43
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a35010af9ee0b0d7ad885f607b8fc1e2d54a19ba
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="new-project-generation-under-the-hood-part-two"></a>新しいプロジェクトの生成: フードの第 2 部します。
 [新しいプロジェクトの生成: 短縮、パート 1](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md)見た方法、**新しいプロジェクト** ダイアログ ボックスが表示されます。 選択したと仮定、 **Visual c# の Windows アプリケーション**、情報を入力した、**名前**と**場所**テキスト ボックス、および [ok] のクリックしました。  
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="generating-the-solution-files"></a>ソリューション ファイルを生成します。  
  アプリケーション テンプレートを選択するように指示[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を解凍して、対応する .vstemplate ファイルを開くし、このファイル内の XML コマンドを解釈するためのテンプレートを起動します。 これらのコマンドは、新規または既存のソリューションにプロジェクトとプロジェクト項目を作成します。  
   
- テンプレートは、.vstemplate ファイルが含まれる同じ .zip フォルダーから、項目テンプレートと呼ばれる、ソース ファイルをアンパックします。 テンプレートは、それに応じてカスタマイズして、新しいプロジェクトに、これらのファイルをコピーします。 プロジェクトと項目テンプレートの概要については、次を参照してください。 [NIB: Visual Studio のテンプレート](http://msdn.microsoft.com/en-us/141fccaa-d68f-4155-822b-27f35dd94041)です。  
+ テンプレートは、.vstemplate ファイルが含まれる同じ .zip フォルダーから、項目テンプレートと呼ばれる、ソース ファイルをアンパックします。 テンプレートは、それに応じてカスタマイズして、新しいプロジェクトに、これらのファイルをコピーします。  
   
 ### <a name="template-parameter-replacement"></a>テンプレート パラメーターの置換  
  テンプレートは、新しいプロジェクト項目テンプレートをコピー、するときにファイルをカスタマイズする文字列をテンプレート パラメーターに置き換えます。 テンプレート パラメーターは、特殊なトークンは、前後にドル記号、たとえばです、$date$ です。  

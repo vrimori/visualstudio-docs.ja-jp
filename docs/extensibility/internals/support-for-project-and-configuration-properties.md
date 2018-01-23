@@ -16,11 +16,11 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: 5ea7b08c95aa2844a65a9a6783774fe32c9e8c50
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e31f4feda55469d2740b32b0eac5d9cfba286d0c
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="support-for-project-and-configuration-properties"></a>プロジェクトと構成プロパティのサポート
 **プロパティ** ウィンドウで、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) は、プロジェクトと構成のプロパティを表示できます。 ユーザーがアプリケーションのプロパティを設定できるように、プロジェクトの種類のプロパティ ページを使用できます。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
  (MPFProj) のプロジェクト用 Managed Package Framework は、作成して、新しいプロジェクト システムを管理するためのヘルパー クラスを提供します。 コードとコンパイル」の手順にソースを検索できる[プロジェクトの Visual Studio 2013 の MPF](http://mpfproj12.codeplex.com/)です。  
   
 ## <a name="persistence-of-project-and-configuration-properties"></a>プロジェクトと構成プロパティの永続化  
- プロジェクトと構成のプロパティは、たとえば、プロジェクトの種類に関連付けられているファイル名拡張子、.csproj、.vbproj ファイル、および .myproj を含むプロジェクト ファイルに保存されます。 通常、言語のプロジェクトは、プロジェクト ファイルを生成するのにテンプレート ファイルを使用します。 ただし、プロジェクトの種類のテンプレートを関連付けるために実際にはいくつかの方法があります。 詳細については、次を参照してください。 [NIB: Visual Studio のテンプレート](http://msdn.microsoft.com/en-us/141fccaa-d68f-4155-822b-27f35dd94041)と[テンプレート ディレクトリの説明 (です。Vsdir) ファイル](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)です。  
+ プロジェクトと構成のプロパティは、たとえば、プロジェクトの種類に関連付けられているファイル名拡張子、.csproj、.vbproj ファイル、および .myproj を含むプロジェクト ファイルに保存されます。 通常、言語のプロジェクトは、プロジェクト ファイルを生成するのにテンプレート ファイルを使用します。 ただし、プロジェクトの種類のテンプレートを関連付けるために実際にはいくつかの方法があります。 詳細については、次を参照してください。[テンプレート ディレクトリの説明 (です。Vsdir) ファイル](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)です。  
   
  プロジェクトと構成のプロパティを作成するには、項目テンプレート ファイルを追加します。 これらのプロパティはこのテンプレートを使用するプロジェクトの種類を使用して作成されたプロジェクトに使用できるになります。 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]プロジェクトおよび MPFProj の両方を使用して、[ビルド内にありません: MSBuild の概要](http://msdn.microsoft.com/en-us/b588fd73-a45b-4706-908f-cc131bccfbde)テンプレート ファイルのスキーマです。 これらのファイルは、各構成の PropertyGroup セクションを持っています。 プロジェクトのプロパティは、通常は、null 文字列に設定の構成の引数が存在する最初の PropertyGroup セクションで永続化されます。  
   
