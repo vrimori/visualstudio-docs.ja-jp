@@ -7,29 +7,29 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: CSharp
-ms.assetid: 65929fab-5d78-4e04-af1e-cf4957f230f6
-caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
 ms.workload: data-storage
-ms.openlocfilehash: c4dd77680fb529575140dc718a4f1c0a58090029
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 394dbf9aba422f8fbf16857d6980a53b353e931a
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>WPF と Entity Framework 6 の単純なデータ アプリケーションを作成します。
+
 このチュートリアルでは、SQL Server LocalDB、Northwind データベース、Entity Framework 6、および Windows Presentation Foundation での Visual Studio で基本的な「フォーム オーバー データ」アプリケーションを作成する方法を示します。 マスター/詳細ビューでは、基本的なデータ バインドを行う方法を示していて、さらに、カスタム「バインドのナビゲーター」の"Move Next"ボタンを含む"Move Previous、"「先頭に移動する、」"末尾に移動、"「更新」および「削除」です。  
   
  この記事では、Visual Studio でのデータ ツールの使用について説明し、任意の深さの基になるテクノロジについて説明するのには行われません。 これには、XAML、Entity Framework および SQL の基礎知識があることが前提とします。 また、この例にはモデル-ビュー-ビュー モデル (MVVM) アーキテクチャは、WPF アプリケーションの標準は示しません。 ただし、非常にいくつかの変更、独自の MVVM アプリケーションにこのコードをコピーすることができます。  
   
-## <a name="install-and-connect-to-northwind"></a>インストールし、Northwind に接続  
+## <a name="install-and-connect-to-northwind"></a>インストールし、Northwind に接続
+
 この例では、SQL Server Express LocalDB と、Northwind サンプル データベースを使用します。 処理が必要他の SQL データベースの製品と同様、その製品の ADO.NET データ プロバイダーが Entity Framework をサポートしている場合。  
-  
-1.  SQL Server Express LocalDB をお持ちでない場合は、インストールのいずれかから、 [SQL Server のエディションのダウンロード ページ](https://www.microsoft.com/en-us/server-cloud/Products/sql-server-editions/sql-server-express.aspx)、または、 **Visual Studio インストーラー**です。 一部として、Visual Studio インストーラーで、SQL Server Express LocalDB をインストールすることができます、 **.NET デスクトップ開発**ワークロード、または個々 のコンポーネントとして。  
-  
+
+1.  SQL Server Express LocalDB をお持ちでない場合は、インストールのいずれかから、 [SQL Server Express のダウンロード ページ](https://www.microsoft.com/sql-server/sql-server-editions-express)、または、 **Visual Studio インストーラー**です。 一部として、Visual Studio インストーラーで、SQL Server Express LocalDB をインストールすることができます、 **.NET デスクトップ開発**ワークロード、または個々 のコンポーネントとして。
+
 2.  次の手順に従って、Northwind サンプル データベースをインストールします。  
 
     1. Visual Studio で開く、 **SQL Server オブジェクト エクスプ ローラー**ウィンドウです。 (の一部として SQL Server オブジェクト エクスプ ローラーがインストールされている、**データ ストレージと処理**Visual Studio インストーラーでのワークロードです)。展開して、 **SQL Server**ノード。 LocalDB インスタンスを右クリックし、選択**新しいクエリしています.**.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  [新しい接続を追加](../data-tools/add-new-connections.md)Northwind のです。  
   
-## <a name="configure-the-project"></a>プロジェクトを構成する  
+## <a name="configure-the-project"></a>プロジェクトを構成する
   
 1.  Visual Studio で、次のように選択します**ファイル**、**新規**、**プロジェクト.。**し、新しい c# WPF アプリケーションを作成します。  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  Northwind データベースに基づくモデルを作成するのに Visual Studio を使用できます。  
   
-## <a name="create-the-model"></a>モデルを作成する  
+## <a name="create-the-model"></a>モデルを作成する
   
 1.  ソリューション エクスプ ローラーでプロジェクト ノードを右クリックし、選択**追加**、**新しい項目の追加.**.[C#] ノードで、左ペインで選択**データ**し、中央のペインで選択**ADO.NET エンティティ データ モデル**です。  
   
@@ -92,8 +92,9 @@ ms.lasthandoff: 12/22/2017
   
 今すぐお表示、移動したり、データを変更できるように、このモデルを XAML ページをフックする準備が整いました。  
   
-## <a name="databind-the-model-to-the-xaml-page"></a>Databind を XAML ページ モデル  
- データ バインド コードを記述することが実行するため、Visual Studio で自動的にはるかに簡単です。  
+## <a name="databind-the-model-to-the-xaml-page"></a>Databind を XAML ページ モデル
+
+データ バインド コードを記述することが実行するため、Visual Studio で自動的にはるかに簡単です。  
   
 1.  メイン メニューから選択**プロジェクト > 新しいデータ ソースの追加**を呼び出すこと、**データ ソース構成ウィザード**です。 選択**オブジェクト**おをデータベースではないモデル クラスをバインドするため。  
   
@@ -144,8 +145,9 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[Window_Loaded#2](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#2)]  
 
 8.  **F5**キーを押します。 CollectionViewSource に取得された最初の顧客の詳細を表示する必要があります。 データ グリッドにその注文も表示されます。 書式設定は、ではの修正をあまり良い外観です。 その他のレコードを表示し、基本的な CRUD 操作を実行する方法も作成します。  
-  
-## <a name="adjust-the-page-design-and-add-grids-for-new-customers-and-orders"></a>ページのデザインを調整し、新しい顧客と注文のグリッドの追加  
+
+## <a name="adjust-the-page-design-and-add-grids-for-new-customers-and-orders"></a>ページのデザインを調整し、新しい顧客と注文のグリッドの追加
+
 Visual Studio によって生成される既定の配置には適していませんアプリケーションでは、XAML でいくつかの変更を手動で行うおありますようにします。 新しい顧客や注文を追加するユーザーを有効にするいくつか"forms"を実際にはグリッド) を必要おがあります。 新しい顧客と注文を追加できるようにするには、するために、別の一連のテキスト ボックスにデータ バインドではない必要があります、`CollectionViewSource`です。 ハンドラー メソッドで、Visible プロパティを設定して、ユーザーが特定の時点で表示されるグリッドを管理します。 最後に、各グリッド行に、注文を個々 の注文を削除するユーザーを有効にする [削除] ボタンを追加します。  
   
 まず、MainWindow.xaml の Windows.Resources 要素にこれらのスタイルを追加します。  
@@ -350,11 +352,12 @@ Visual Studio によって生成される既定の配置には適していませ
 ```  
   
 ## <a name="add-buttons-to-navigate-add-update-and-delete"></a>移動、追加、更新、および削除するボタンを追加します。  
- Windows フォーム アプリケーションでは、ボタンを持つ BindingNavigator オブジェクトを取得するデータベース内の行を移動すると、基本的な CRUD 操作を実行します。 WPF では、BindingNavigator が提供されませんが、簡単に作成します。 やってを水平方向の StackPanel 内のボタンを持つと分離コードでメソッドにバインドされているコマンドとボタンを関連付けることができましたがします。  
+
+Windows フォーム アプリケーションでは、ボタンを持つ BindingNavigator オブジェクトを取得するデータベース内の行を移動すると、基本的な CRUD 操作を実行します。 WPF では、BindingNavigator が提供されませんが、簡単に作成します。 やってを水平方向の StackPanel 内のボタンを持つと分離コードでメソッドにバインドされているコマンドとボタンを関連付けることができましたがします。  
   
- コマンドのロジックに 4 つの部分があります: (1)、コマンド、(2)、バインド、(3)、ボタン、および (4)、分離コード内のコマンド ハンドラー。  
+コマンドのロジックに 4 つの部分があります: (1)、コマンド、(2)、バインド、(3)、ボタン、および (4)、分離コード内のコマンド ハンドラー。  
   
-#### <a name="add-commands-bindings-and-buttons-in-xaml"></a>XAML でのコマンド、バインディング、およびボタンを追加します。  
+### <a name="add-commands-bindings-and-buttons-in-xaml"></a>XAML でのコマンド、バインディング、およびボタンを追加します。
   
 1.  まず、MainWindow.xaml ファイル Windows.Resources 要素内のコマンドを追加してみましょう。  
   
@@ -414,7 +417,7 @@ Visual Studio によって生成される既定の配置には適していませ
     </StackPanel>  
     ```  
   
-#### <a name="add-command-handlers-to-the-mainwindow-class"></a>MainWindow クラスにコマンド ハンドラーを追加します。  
+### <a name="add-command-handlers-to-the-mainwindow-class"></a>MainWindow クラスにコマンド ハンドラーを追加します。  
   
 分離コードでは、追加および削除のメソッドを除く最小限です。 ナビゲーションは、メソッド、CollectionViewSource のビューのプロパティを呼び出すことによって実行されます。 DeleteOrderCommandHandler は、注文の連鎖削除を実行する方法を示します。 最初に、関連付けられている Order_Details に削除があります。 UpdateCommandHandler 新しい顧客や注文をコレクションに追加するか、だけで、テキスト ボックスに、ユーザーが加えた変更が既存の顧客や注文を更新します。  
   
@@ -423,8 +426,10 @@ Visual Studio によって生成される既定の配置には適していませ
 [!code-csharp[CommandHandlers#3](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#3)]  
   
 ## <a name="run-the-application"></a>アプリケーションの実行
+
 デバッグを開始するには、**F5** キーを押します。 顧客と注文データのグリッドで、設定の表示し、ナビゲーション ボタンは期待どおりに動作する必要があります。 データを入力した後に、モデルに新しい顧客や注文を追加するには、「コミット」をクリックします。 データを保存せず、新しい顧客または新しい注文フォームからバックアップするには、「キャンセル」をクリックします。 既存の顧客と注文、テキスト ボックス内で直接編集を行うことができ、それらの変更がモデルに自動的に書き込まれます。  
   
 ## <a name="see-also"></a>関連項目
+
 [.NET 用の Visual Studio データ ツール](../data-tools/visual-studio-data-tools-for-dotnet.md)  
-[Entity Framework のドキュメント](https://msdn.microsoft.com/en-us/data/ee712907.aspx)
+[Entity Framework のドキュメント](/ef/)

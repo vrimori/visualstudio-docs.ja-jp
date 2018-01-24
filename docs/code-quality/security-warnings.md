@@ -19,11 +19,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: f54a6dc2f47d10a47635a600d97decf3846e9d3f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f2c72525b6101f14e9aac4365cc6af75b3083545
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="security-warnings"></a>セキュリティの警告
 セキュリティ警告は、より安全なライブラリとアプリケーションをサポートします。 この警告によって、プログラムにセキュリティ上の欠陥が含まれるのを防ぐことができます。 この警告のいずれかを無効にする場合、明確にコードに理由を記載し、開発プロジェクトの指定されたセキュリティ管理者にも報告します。  
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/22/2017
 |[CA2149: 透過的メソッドは、ネイティブ コード内に呼び出しを行ってはならない](../code-quality/ca2149-transparent-methods-must-not-call-into-native-code.md)|この規則は、P/Invoke などを使用してネイティブ コードを直接呼び出すすべての透過的メソッドに対して適用されます。 この規則に違反すると、レベル 2 の透過性モデルで MethodAccessException が発生し、レベル 1 の透過性モデルで UnmanagedCode に対するフル アクセス要求が発生します。|  
 |[CA2151: クリティカル型のフィールドはセキュリティ クリティカルである必要があります](../code-quality/ca2151-fields-with-critical-types-should-be-security-critical.md)|セキュリティ クリティカルな型を使用するには、型を参照するコードがセキュリティ クリティカルであるか、セキュリティ セーフ クリティカルである必要があります。 これは、参照が間接的である場合にも当てはまります。 そのため、透過的セキュリティまたはセキュリティ セーフ クリティカルなフィールドが存在すると、透過的なコードはこのフィールドにアクセスできないので、紛らわしくなります。|  
 |[CA5122 P/invoke 宣言は安全でない重要な](../code-quality/ca5122-p-invoke-declarations-should-not-be-safe-critical.md)|メソッドは、セキュリティに対する配慮が必要な操作を行うときは SecuritySafeCritical としてマークされますが、透過的なコードによって使用される場合も安全です。 透過的なコードは、P/Invoke を通じてネイティブ コードを直接呼び出すことはありません。 そのため、P/Invoke をセキュリティ セーフ クリティカルとしてマークしても、透過的なコードはそれを呼び出すことができず、セキュリティ分析の際に紛らわしくなります。|  
-|[CA2153: 破損状態例外の処理を回避する](../code-quality/ca2153-avoid-handling-corrupted-state-exceptions.md)|[破損状態例外 (CSE)](https://msdn.microsoft.com/en-us/magazine/dd419661.aspx) は、メモリの破損がプロセス内に存在していることを示します。 プロセスをクラッシュさせるのではなくこれらの例外をキャッチすることは、攻撃者が破損したメモリ領域にセキュリティ上の弱点を見出すことができた場合に、セキュリティ上の脆弱性となる可能性があります。|  
+|[CA2153: 破損状態例外の処理を回避する](../code-quality/ca2153-avoid-handling-corrupted-state-exceptions.md)|[破損状態例外 (CSE)](https://msdn.microsoft.com/magazine/dd419661.aspx)そのメモリを示すため、プロセスに破損が存在します。 プロセスをクラッシュさせるのではなくこれらの例外をキャッチすることは、攻撃者が破損したメモリ領域にセキュリティ上の弱点を見出すことができた場合に、セキュリティ上の脆弱性となる可能性があります。|  
 |[CA3075: 安全ではない DTD の処理](../code-quality/ca3075-insecure-dtd-processing.md)|安全ではない DTDProcessing インスタンスを使用する場合、または外部エンティティ ソースを参照する場合、パーサーは信頼されていない入力を受け入れ、攻撃者に機密情報を漏えいしてしまう可能性があります。|  
 |[CA3076: 安全ではない XSLT スクリプトの実行](../code-quality/ca3076-insecure-xslt-script-execution.md)|.NET アプリケーションで XSLT (Extensible Stylesheet Language Transformation) を安全ではない方法で実行すると、攻撃者に機密情報を漏えいする可能性のある、信頼されていない URI 参照がプロセッサにより解決されるおそれがあります。そのことは、サービス拒否攻撃やクロスサイト攻撃につながります。|  
 |[CA3077: API のデザイン、XML ドキュメント、および XML テキスト リーダーでの安全ではない処理](../code-quality/ca3077-insecure-processing-in-api-design-xml-document-and-xml-text-reader.md)|XMLDocument と XMLTextReader から派生する API をデザインする場合、DtdProcessing にご注意ください。  外部エンティティ ソースを参照または解決したり、XML に安全ではない値を設定したりする場合に、安全ではない DTDProcessing インスタンスを使用すると、情報漏えいにつながる可能性があります。|

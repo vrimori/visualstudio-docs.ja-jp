@@ -16,11 +16,11 @@ ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
 ms.workload: data-storage
-ms.openlocfilehash: b1f6e8ed06f9f2355ac3a740319bb75924bf3d6b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1525a858885bb7b824967712186f81e060f63519
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET を使用して単純なデータ アプリケーションを作成します。
 データベース内のデータを操作するアプリケーションを作成するときに、接続文字列の定義、データの挿入、ストアド プロシージャの実行などの基本的なタスクを実行します。 このトピックでは、Visual c# または Visual Basic および ADO.NET 使用した簡単な Windows フォーム「フォーム オーバー データ」アプリケーション内部から、データベースとやり取りする方法を検出できます。  すべての .NET データ テクノロジ — LINQ to SQL、および Entity Framework のデータセットを含む、最終的にこの記事で示したものとよく似ている手順を実行します。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Visual Studio Community エディションです。  
   
--   SQL Server Express LocalDB です。 SQL Server Express LocalDB をお持ちでない場合からをインストール、 [SQL Server のエディションのダウンロード ページ](https://www.microsoft.com/en-us/server-cloud/Products/sql-server-editions/sql-server-express.aspx)です。  
+-   SQL Server Express LocalDB です。 SQL Server Express LocalDB をお持ちでない場合からをインストール、 [SQL Server Express のダウンロード ページ](https://www.microsoft.com/sql-server/sql-server-editions-express)です。
 
 このトピックする Visual Studio IDE の基本的な機能を理解してとことができます、Windows フォーム アプリケーションを作成すると仮定ボタンとその他のコントロールをフォームには、配置、プロジェクトへのフォーム コントロール、およびシンプルなイベントのコードのプロパティの設定を追加します。 完了することをお勧めこれらのタスクに慣れていない場合、 [Visual c# および Visual Basic の概要](../ide/getting-started-with-visual-csharp-and-visual-basic.md)トピックこのチュートリアルを開始する前にします。  
   

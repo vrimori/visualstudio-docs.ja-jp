@@ -18,20 +18,21 @@ ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
 ms.workload: data-storage
-ms.openlocfilehash: ce1419882422ddc12fdb380601e908eed7e5c7ba
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b3b9ae8406845de886009da981eaf7f63e68972b
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="configure-service-reference-dialog-box"></a>[サービス参照の構成] ダイアログ ボックス
-**サービス参照の構成**ダイアログ ボックスでは、動作を構成できます。 [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] services です。  
-  
+
+**サービス参照の構成** ダイアログ ボックスでは、Windows Communication Foundation (WCF) サービスの動作を構成することができます。
+
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、[ツール] メニューの [設定のインポートとエクスポート] をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
-  
- アクセスする、**サービス参照の構成**でサービスを右クリックしてダイアログ ボックスを参照**ソリューション エクスプ ローラー**選択**サービス参照の構成**です。 ダイアログ ボックスをクリックしてアクセスすることもできます、**詳細**ボタンをクリックして、**サービス参照の追加 ダイアログ ボックス**です。  
-  
+> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、[ツール] メニューの [設定のインポートとエクスポート] をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
+
+アクセスする、**サービス参照の構成**でサービスを右クリックしてダイアログ ボックスを参照**ソリューション エクスプ ローラー**選択**サービス参照の構成**です。 ダイアログ ボックスをクリックしてアクセスすることもできます、**詳細**ボタンをクリックして、**サービス参照の追加 ダイアログ ボックス**です。
+
 ## <a name="task-list"></a>タスク一覧  
   
 -   WCF サービスがホストされているアドレスを変更するで新しいアドレスを入力、**アドレス**フィールドです。  
@@ -86,16 +87,15 @@ ms.lasthandoff: 12/22/2017
  **参照先アセンブリの一覧**  
  プロジェクトまたは Web サイトで参照されたアセンブリの一覧を含みます。 ときに**指定された参照されたアセンブリで型を再利用**が選択されている個別のアセンブリを選択またはクリアします。  
   
- **Web 参照を追加します。**  
- 表示、 [Web 参照 ダイアログ ボックスを追加](https://msdn.microsoft.com/en-us/library/8dcbc50t(v=vs.100).aspx)です。  
-  
-> [!NOTE]
->  このオプションは、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョン 2.0 を対象にするプロジェクトでのみ使用する必要があります。  
-  
-> [!NOTE]
->  **Web 参照の追加**ボタンは使用可能な場合にのみ、**サービス参照の構成**からダイアログ ボックスが表示されます、**サービス参照の追加 ダイアログ ボックス**です。  
-  
-## <a name="see-also"></a>参照  
+ **Web 参照の追加**Web 参照の追加 ダイアログ ボックスが表示されます。
 
- [方法: Web サービスへの参照を追加](how-to-add-update-or-remove-a-wcf-data-service-reference.md)   
- [Windows Communication Foundation サービスと WCF Data Services](../data-tools/configure-service-reference-dialog-box.md)
+> [!NOTE]
+> このオプションは、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョン 2.0 を対象にするプロジェクトでのみ使用する必要があります。
+
+> [!NOTE]
+> **Web 参照の追加**ボタンは使用可能な場合にのみ、**サービス参照の構成**からダイアログ ボックスが表示されます、**サービス参照の追加 ダイアログ ボックス**です。
+
+## <a name="see-also"></a>関連項目
+
+[方法: Web サービスへの参照を追加](how-to-add-update-or-remove-a-wcf-data-service-reference.md)  
+[Windows Communication Foundation サービスと WCF Data Services](../data-tools/configure-service-reference-dialog-box.md)

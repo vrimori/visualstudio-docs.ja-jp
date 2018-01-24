@@ -21,11 +21,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 94ce04f63870bb6ce9a40658c670c5b277cc675e
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+ms.openlocfilehash: 21867feae0d313c3ac5f93e51cf85ebe14bbba0b
+ms.sourcegitcommit: 65f85389047c5a1938b6d5243ccba8d4f14362ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="remote-debugging"></a>Remote Debugging
 別のコンピューターに配置されている Visual Studio アプリケーションをデバッグすることができます。 このデバッグを行うには、Visual Studio リモート デバッガーを使用します。
@@ -34,11 +34,13 @@ ms.lasthandoff: 01/19/2018
 
 |シナリオ|リンク|
 |-|-|-|
-|Azure|[Azure App Service (スナップショット デバッガー) 上の ASP.NET のデバッグ](../debugger/debug-live-azure-applications.md)、[リモート Azure 上の ASP.NET のデバッグ](../debugger/remote-debugging-azure.md)、または[Azure Service Fabric アプリケーションのデバッグ](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)|
+|Azure App Service|[デバッガーをスナップショット](../debugger/debug-live-azure-applications.md)または[リモート Azure 上の ASP.NET のデバッグ](../debugger/remote-debugging-azure.md)|
+|Azure 仮想マシン|[Azure での ASP.NET のリモート デバッグ](../debugger/remote-debugging-azure.md)|
+|Azure Service Fabric|[Azure Service Fabric アプリケーションをデバッグします。](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)|
 |ASP.NET|[リモート デバッグの ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)または[リモート デバッグの ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|
-|C# または Visual Basic|[C# または Visual Basic プロジェクトのリモート デバッグ](../debugger/remote-debugging-csharp.md)|
+|C# または Visual Basic|[C# プロジェクトまたは Visual Basic プロジェクトのリモート デバッグ](../debugger/remote-debugging-csharp.md)|
 |C++|[C++ Project プロジェクトのリモート デバッグ](../debugger/remote-debugging-cpp.md)|
-|ユニバーサル Windows アプリ (UWP)|[リモート コンピューターでの UWP アプリの実行](../debugger/run-windows-store-apps-on-a-remote-machine.md)と[インストール済みのアプリ パッケージのデバッグ](../debugger/debug-installed-app-package.md)|
+|ユニバーサル Windows アプリ (UWP)|[リモート コンピューターでの UWP アプリの実行](../debugger/run-windows-store-apps-on-a-remote-machine.md)または[インストール済みのアプリ パッケージのデバッグ](../debugger/debug-installed-app-package.md)|
 
 だけをダウンロードし、リモート デバッガーをインストールして、シナリオで、追加の手順は必要ないはこの記事の手順に従います。
   

@@ -17,11 +17,11 @@ ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
 ms.workload: data-storage
-ms.openlocfilehash: af76fad7d6288aff08de22b076d27cafbb5c3cff
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8fbe818e233c8bbdaf4431c70b8962baf43a2ed2
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="compatible-database-systems-for-visual-studio"></a>Visual Studio の互換性のあるデータベースのシステム
 
@@ -29,13 +29,13 @@ Visual Studio でのデータに接続しているアプリケーションを開
 
 .NET アプリケーションからアクセスできるようにして、Visual Studio データ ツール ウィンドウで表示するデータベース システムは、ADO.NET データ プロバイダーが必要です。 .NET アプリケーションでエンティティ データ モデルを使用する場合は、Entity Framework プロバイダーをサポートすることが具体的にはあります。 多くのプロバイダーは、NuGet パッケージ マネージャーを使用または Visual Studio Marketplace を通じて提供されます。
 
-Azure ストレージ Api を使用している場合、実稼働環境に展開する準備ができたら、料金を回避するために、ローカル コンピューターで開発中の Azure ストレージ エミュレーターをインストールします。 詳細については、次を参照してください。[開発とテストのため、Azure ストレージ エミュレーターを使用して](https://azure.microsoft.com/en-us/documentation/articles/storage-use-emulator/)です。
+Azure ストレージ Api を使用している場合、実稼働環境に展開する準備ができたら、料金を回避するために、ローカル コンピューターで開発中の Azure ストレージ エミュレーターをインストールします。 詳細については、次を参照してください。[開発とテストのため、Azure ストレージ エミュレーターを使用して](/azure/storage/common/storage-use-emulator)です。
 
 次の一覧には、Visual Studio プロジェクトで使用できる最も一般的なデータベース システムの一部が含まれます。 一覧が完全ではありません。 Visual Studio のツールとの緊密な統合を有効にする ADO.NET データ プロバイダーを提供するサード パーティ ベンダーの一覧は、次を参照してください。 [ADO.NET データ プロバイダー](/dotnet/framework/data/adonet/data-providers)です。
 
 ## <a name="microsoft-sql-server"></a>Microsoft SQL Server
 
-SQL Server は、Microsoft の主要データベースを提供します。 SQL Server 2016 では、画期的なパフォーマンス、高度なセキュリティ、および豊富な統合されたレポートと分析を提供します。 さまざまな用途向けに設計された各種エディションで出荷: 1 台のコンピューターで使用する、拡張性の高い、高パフォーマンスのビジネス分析からです。 SQL Server Express は、再配布と埋め込み向け SQL Server のフル機能エディションです。  LocalDB は、SQL Server Express の構成を必要とせず、アプリケーションのプロセスで実行を簡略化されたエディションです。 いずれかまたは両方の製品をダウンロードすることができます[SQL Server Express のダウンロード ページ](https://www.microsoft.com/en-us/server-cloud/Products/sql-server-editions/sql-server-express.aspx)です。 このセクションで SQL の例の多くは、SQL Server LocalDB を使用します。 SQL Server Management Studio (SSMS) とは、Visual Studio SQL Server オブジェクト エクスプ ローラーで提供されるよりも多くの機能を持つスタンドアロンのデータベース管理アプリケーションです。 SSMS は、前のリンクから取得できます。
+SQL Server は、Microsoft の主要データベースを提供します。 SQL Server 2016 では、画期的なパフォーマンス、高度なセキュリティ、および豊富な統合されたレポートと分析を提供します。 さまざまな用途向けに設計された各種エディションで出荷: 1 台のコンピューターで使用する、拡張性の高い、高パフォーマンスのビジネス分析からです。 SQL Server Express は、再配布と埋め込み向け SQL Server のフル機能エディションです。  LocalDB は、SQL Server Express の構成を必要とせず、アプリケーションのプロセスで実行を簡略化されたエディションです。 いずれかまたは両方の製品をダウンロードすることができます、 [SQL Server Express のダウンロード ページ](https://www.microsoft.com/sql-server/sql-server-editions-express)です。 このセクションで SQL の例の多くは、SQL Server LocalDB を使用します。 SQL Server Management Studio (SSMS) とは、Visual Studio SQL Server オブジェクト エクスプ ローラーで提供されるよりも多くの機能を持つスタンドアロンのデータベース管理アプリケーションです。 SSMS は、前のリンクから取得できます。
 
 ## <a name="oracle"></a>Oracle
 

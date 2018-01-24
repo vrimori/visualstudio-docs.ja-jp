@@ -16,34 +16,36 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: ba54912b61e624861bbaec56d9e5bab68d7f5d78
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+ms.openlocfilehash: 22b7724a6eee2c31de1bf64f12a040e042972e96
+ms.sourcegitcommit: 65f85389047c5a1938b6d5243ccba8d4f14362ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
-# <a name="remote-debug-aspnet-core-on-iis-and-azure-in-visual-studio-2017"></a>IIS および Visual Studio 2017 で Azure でのリモート デバッグ ASP.NET Core
-Azure App Service のことをお勧めを使用してデバッグすること、[スナップショット デバッガー](../debugger/debug-live-azure-applications.md)から Visual Studio デバッガーをアタッチするこのトピックの手順に従うこともできます。 を実行している Windows Server IIS と Azure VM の場合は、リモート デバッグ用にも設定できます。 このガイドでは、設定、Visual Studio 2017 ASP.NET Core アプリケーションを構成して、Azure を使用して IIS に展開、および Visual Studio からリモート デバッガーをアタッチする方法について説明します。
+# <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio-2017"></a>Visual Studio 2017 で Azure での IIS で ASP.NET Core のリモート デバッグ
+
+このガイドでは、設定、Visual Studio 2017 ASP.NET Core アプリケーションを構成して、Azure を使用して IIS に展開、および Visual Studio からリモート デバッガーをアタッチする方法について説明します。
+
+Azure でのリモート デバッグするための推奨方法は、シナリオによって異なります。
+
+* Azure App Service の ASP.NET Core をデバッグするを参照してください。[スナップショット デバッガーを使用して Azure のデバッグ apps](../debugger/debug-live-azure-applications.md)です。 これは、推奨される方法です。
+* 従来のデバッグ機能を使用して Azure App Service の ASP.NET Core をデバッグするには、このトピックの手順に従います (を参照してください[Azure App Service でのリモート デバッグ](#remote_debug_azure_app_service))。
+
+    このシナリオで Azure に Visual Studio からアプリを配置する必要がありますが、手動でインストールするか、次の図に示すように、IIS または (これらのコンポーネントは点線で表されます)、リモート デバッガーを構成する必要はありません。
+
+    ![リモート デバッガー コンポーネント](../debugger/media/remote-debugger-azure-app-service.png "Remote_debugger_components")
+
+* Azure VM 上の IIS をデバッグするには、このトピックの手順に従います (を参照してください[Azure VM 上でリモート デバッグ](#remote_debug_azure_vm))。 IIS でのカスタマイズされた構成を使用できますが、セットアップと展開の手順はさらに複雑です。
+
+    Azure VM での Azure に Visual Studio からアプリを配置する必要がありする必要も、IIS の役割と、リモート デバッガーを手動でインストールの次の図に示すようにします。
+
+    ![リモート デバッガー コンポーネント](../debugger/media/remote-debugger-azure-vm.png "Remote_debugger_components")
+
+* Azure Service Fabric の ASP.NET Core をデバッグするを参照してください。[リモート Service Fabric アプリケーションのデバッグ](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)です。
 
 > [!WARNING]
 > このチュートリアルの手順を完了したときに作成する Azure リソースを削除することを確認します。 このように不要な料金を回避できます。
 
-このトピックで説明する方法。
-
-* Azure App Service の ASP.NET Core のリモート デバッグ
-
-* Azure VM 上の ASP.NET Core のリモート デバッグ
-
-Azure App Service を Azure に Visual Studio からアプリを配置する必要がありますが、手動でインストールするか、次の図に示すように、IIS または (これらのコンポーネントは点線で表されます)、リモート デバッガーを構成する必要はありません。
-
-![リモート デバッガー コンポーネント](../debugger/media/remote-debugger-azure-app-service.png "Remote_debugger_components")
-
-Azure VM での Azure に Visual Studio からアプリを配置する必要がありする必要も、IIS の役割と、リモート デバッガーを手動でインストールの次の図に示すようにします。
-
-![リモート デバッガー コンポーネント](../debugger/media/remote-debugger-azure-vm.png "Remote_debugger_components")
-
-> [!NOTE]
-> Azure Service Fabric の ASP.NET Core をデバッグするを参照してください。[リモート Service Fabric アプリケーションのデバッグ](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)です。
 
 ### <a name="requirements"></a>必要条件
 
@@ -61,11 +63,11 @@ Azure VM での Azure に Visual Studio からアプリを配置する必要が�
 
 4. About.cshtml.cs ファイルを開きにブレークポイントを設定、`OnGet`メソッド (既存のテンプレートで HomeController.cs 代わりに開きにブレークポイントを設定、`About()`メソッド)。
 
-## <a name="remote-debug-aspnet-core-on-an-azure-app-service"></a>Azure App Service の ASP.NET Core のリモート デバッグ
+## <a name="remote_debug_azure_app_service"></a>Azure App Service の ASP.NET Core のリモート デバッグ
 
 Visual Studio から簡単に発行し、完全にプロビジョニングされている IIS のインスタンスにアプリのデバッグできます。 ただし、IIS の構成が事前設定し、カスタマイズすることはできません。 詳細な手順についてを参照してください。 [Visual Studio を使用して Azure に ASP.NET Core web アプリを配置](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)です。 (IIS をカスタマイズする機能を実行する場合に、デバッグを実行、 [Azure VM](#BKMK_azure_vm))。 
 
-#### <a name="to-deploy-the-app-and-remote-debug"></a>アプリとのリモート デバッグを展開するには
+#### <a name="to-deploy-the-app-and-remote-debug-using-server-explorer"></a>サーバー エクスプ ローラーを使用してリモート デバッグとアプリを展開するには
 
 1. Visual Studio でプロジェクト ノードを右クリックして選択**発行**です。
 
@@ -73,7 +75,7 @@ Visual Studio から簡単に発行し、完全にプロビジョニングされ
 
     詳細については、次を参照してください。 [Visual Studio を使用して Azure に ASP.NET Core web アプリを配置](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)です。
 
-3. **サーバー エクスプ ローラー**App Service のインスタンスを右クリックし、選択、**デバッガーのアタッチ**です。
+3. 開いている**サーバー エクスプ ローラー** (**ビュー** > **サーバー エクスプ ローラー**) の App Service のインスタンスを右クリックし、選択、 **デバッガーの接続**.
 
 4. ASP.NET アプリケーションの実行では、リンクをクリックして、**に関する**ページ。
 
@@ -81,7 +83,7 @@ Visual Studio から簡単に発行し、完全にプロビジョニングされ
 
     これで完了です。 このトピックの手順の残りの部分は、Azure VM でのリモート デバッグに適用されます。
 
-## <a name="BKMK_azure_vm"></a>Azure VM でリモート デバッグの ASP.NET Core
+## <a name="remote_debug_azure_vm"></a>Azure VM でリモート デバッグの ASP.NET Core
 
 Windows Server 用 Azure VM を作成しをインストールし、IIS およびその他の必要なソフトウェア コンポーネントを構成します。 これは、App Service を Azure に展開するよりも時間がかかるし、このチュートリアルでは、残りの手順に従うことが必要です。
 
