@@ -63,11 +63,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 4f26fcfb6b12266dd980fb8c38075e1937fcc022
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: bde177cb8f9ec8e72a331c785addfa7fead64dc7
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="write-code-in-the-code-editor"></a>コード エディターでのコードの作成
 Visual Studio エディターには、コードとテキストの記述と管理を容易にする多数の機能が用意されています。 アウトラインを使用すると、個々のコード ブロックを展開したり折りたたんだりできます。 コードの詳細は、IntelliSense、**オブジェクト ブラウザー**、および呼び出し階層を使用して調べることができます。 コードを探すには、**[移動]**、**[定義へ移動]**、**[すべての参照の検索]** などの機能を使用します。 コード スニペットを使用してコード ブロックを挿入し、 **[使用法から生成]**などの機能を使用してコードを生成することもできます。 初めて Visual Studio エディターを使用する場合は、簡単な概要について「[コードの編集](https://www.visualstudio.com/features/ide-vs)」をご覧ください。  
@@ -130,9 +130,10 @@ Visual Studio エディターには、コードとテキストの記述と管理
 ## <a name="customize-the-editor"></a>エディターのカスタマイズ  
 **[ツール]** メニューの **[設定のインポートとエクスポート ウィザード]** コマンドを使用すると、Visual Studio の設定を他の開発者と共有することや、設定を標準に準拠させることができます。Visual Studio の既定の設定に戻すこともできます。 **[設定のインポートとエクスポート ウィザード]** で、選択した全般設定または言語やプロジェクトに固有の設定を変更することができます。
 
-新しいホット キーを定義する、または既存のホット キーを再定義するには、**[ツール]**、**[オプション]**、**[環境]**、**[キーボード]** の順に移動します。 ホット キーの詳細については、「[既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)」を参照してください。  
+新しいホット キーを定義する、または既存のホット キーを再定義するには、**[ツール]**、**[オプション]**、**[環境]**、**[キーボード]** の順に移動します。 ホット キーの詳細については、「[既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)」を参照してください。
 
-エディターのカスタマイズの詳細については、「[エディターのカスタマイズ](../ide/customizing-the-editor.md)」を参照してください。 言語固有のエディター オプションについては、「[Using the Visual Studio Development Environment for C#](../csharp-ide/using-the-visual-studio-development-environment-for-csharp.md)」(C# の Visual Studio 開発環境を使用する) と「[[オプション]、[テキスト エディター]、[JavaScript]、[書式設定]](../ide/reference/options-text-editor-javascript-formatting.md)」を参照してください。
+エディターのカスタマイズの詳細については、「[エディターのカスタマイズ](../ide/customizing-the-editor.md)」を参照してください。 JavaScript 固有のエディター オプションについては、「[[オプション]、[テキスト エディター]、[JavaScript]、[書式設定]](../ide/reference/options-text-editor-javascript-formatting.md)」を参照してください。
 
-## <a name="see-also"></a>参照  
- [Visual Studio IDE](../ide/visual-studio-ide.md)
+## <a name="see-also"></a>関連項目
+
+[Visual Studio IDE](../ide/visual-studio-ide.md)

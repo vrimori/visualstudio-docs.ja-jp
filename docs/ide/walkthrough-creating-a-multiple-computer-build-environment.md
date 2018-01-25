@@ -16,11 +16,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 9db6306126c64b0f2d5243ce443659f910be299c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 76b88d48b78ebab2058a2fa13feef327908f2b24
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="walkthrough-creating-a-multiple-computer-build-environment"></a>チュートリアル: 複数のコンピューターを使用するビルド環境の作成
 
@@ -29,7 +29,6 @@ ms.lasthandoff: 12/22/2017
 このドキュメントは、ソフトウェアを外部に再配布する権利または第三者にビルド環境を提供する権利を付与するものではありません。  
   
 > 免責情報<br /><br /> このドキュメントは "現状有姿" で提供されます。 ここに記載されている手順はテスト済みですが、あらゆる構成を網羅してテストすることはできません。 Microsoft では、追加情報があればこのドキュメントを更新するように努めます。 URL および他の参照されているインターネットの Web サイトをはじめ、このドキュメントに記載されている情報および見解は、通知なく変更されることがあります。 Microsoft はここに示されている情報について、明示か黙示かを問わず、一切保証しません。 お客様は、その使用に関するリスクを負うものとします。<br /><br /> このドキュメントは、Microsoft 製品の知的財産権に関する法的な権利をお客様に許諾するものではありません。 内部的な参照目的に限り、このドキュメントを複製して使用することができます。<br /><br /> お客様がこのドキュメントに関する提案、コメント、またはその他のフィードバック (以下 "フィードバック") を Microsoft に提供する義務はありません。 ただし、お客様から自発的に提供されたフィードバックは、Microsoft 製品および関連する仕様書またはその他のドキュメント (以下総称して "Microsoft 提供物") に使用されることがあります。さらに、これらのドキュメントは第三者によって独自製品の開発時に使用されることがあります。 これに基づき、お客様がこのドキュメントまたは Microsoft 提供物のいずれかのバージョンに関するフィードバックを Microsoft に提供する場合、お客様は次の点に同意するものとします。(a) Microsoft は、Microsoft 提供物の中で、お客様のフィードバックを自由に複製、使用許諾、配布、およびその他の方法で商品化できる。(b) 第三者の製品において、お客様のフィードバックを反映した Microsoft 製品の特定部分を使用または Microsoft 製品の特定部分と連携するために必要な特許権のみをお客様が無償で第三者に付与する。(c) 次のような場合、お客様はフィードバックを Microsoft に提供しない。(i) 第三者の特許、著作権、またはその他の知的財産権の主張または権限がそのフィードバックに適用されるとお客様が確信する根拠がある場合、または (ii) そのフィードバックが反映されているかそのフィードバックから派生する Microsoft 提供物またはその他の Microsoft 知的財産を第三者に使用許諾またはその他の方法で共有することを求めるライセンス条件がそのフィードバックに適用される場合。
-
 
 このチュートリアルは、コマンド ラインでの MSBuild の実行および Team Foundation ビルドの使用により、次のオペレーティング システムに対して検証済みです。  
   
@@ -47,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
  次の種類のアプリのビルドには、複数コンピューター環境を使用できません。  
   
--   [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリ。 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリをビルドするには、ビルド コンピューターに Visual Studio をインストールする必要があります。  
+-   UWP アプリ。 UWP アプリをビルドするには、ビルド コンピューターに Visual Studio をインストールする必要があります。  
   
 -   .NET Framework 4 以前を対象とするデスクトップ アプリ。 これらの種類のアプリをビルドするには、ビルド コンピューターに Visual Studio または .NET 参照アセンブリおよびツール (Windows 7.1 SDK に含まれます) をインストールする必要があります。  
   

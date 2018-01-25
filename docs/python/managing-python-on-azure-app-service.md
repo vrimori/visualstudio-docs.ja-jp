@@ -14,18 +14,19 @@ ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
+- data-science
 - azure
-ms.openlocfilehash: 50a2da5a92276b5ace29bdc2b0a35eaae516a3c9
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: 50b306a3332678a4ab648e0e79730b0ef3ac996e
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="managing-python-on-azure-app-service"></a>Azure App Service での Python の管理
 
 [Azure App Service](https://azure.microsoft.com/services/app-service/) は、Web アプリに提供するサービスとしてのプラットフォームです。Web アプリがブラウザーでアクセスされるサイト、自身のクライアントで使用される REST API、またはイベント トリガーされる処理かどうかは関係ありません。 App Service は、Python を使用してアプリの実装を完全にサポートします。
 
-Azure App Service でのカスタマイズ可能な Python のサポートは、App Service *サイトの拡張機能*のセットとして提供されます。拡張機能にはそれぞれ Python ランタイムの特定のバージョンが含まれています。 その後、このトピックの説明に従って、希望のパッケージを直接環境にインストールすることができます。 App Service 自体で環境をカスタマイズすることにより、Web アプリ プロジェクトでパッケージを管理したり、アプリ コードと一緒にアップロードする必要はありません。 
+Azure App Service でのカスタマイズ可能な Python のサポートは、App Service *サイトの拡張機能*のセットとして提供されます。拡張機能にはそれぞれ Python ランタイムの特定のバージョンが含まれています。 その後、このトピックの説明に従って、希望のパッケージを直接環境にインストールすることができます。 App Service 自体で環境をカスタマイズすることにより、Web アプリ プロジェクトでパッケージを管理したり、アプリ コードと一緒にアップロードする必要はありません。
 
 > [!Tip]
 > 既定で App Service には、サーバーのルート フォルダーに Python 2.7 と Python 3.4 がインストールされていますが、これらの環境は、カスタマイズしたり、パッケージをインストールすることはできません。また、その存在に依存することもできません。 代わりに、このトピックの説明どおりに、制御しているサイトの拡張機能に依存する必要があります。
@@ -87,7 +88,7 @@ Azure Resource Manager テンプレートを使用して App Service をデプ�
 
 Python のサイト拡張機能は、Python のバージョンとアーキテクチャ (いくつかの古いバージョンは除きます) に応じた `d:\home` フォルダー下にインストールされます。 たとえば、Python 3.6.1 x64 は、`d:\home\python361x64` にインストールされます。 この場合、Python インタープリターの完全なパスは、`d:\home\python361x64\python.exe` になります。
 
-App Service でパスを具体的に確認するには、[App Service] ページで **[拡張機能]** を選択し、一覧から拡張機能を選択します。 
+App Service でパスを具体的に確認するには、[App Service] ページで **[拡張機能]** を選択し、一覧から拡張機能を選択します。
 
 ![Azure App Service での拡張機能のリスト](media/python-on-azure-extension-list.png)
 
@@ -165,7 +166,7 @@ HttpPlatform モジュールは、スタンドアロンの Python プロセス�
 
 サーバー環境にパッケージを直接インストールするには、次のいずれかの方法を使用します。
 
-| メソッド | 使用法 | 
+| メソッド | 使用法 |
 | --- | --- |
 | [Azure App Service Kudu コンソール](#azure-app-service-kudu-console) | パッケージを対話形式でインストールします。 パッケージは、純粋な Python であるか、ホイールを発行する必要があります。 |
 | [Kudu REST API](#kudu-rest-api) | パッケージのインストールを自動化するために使用できます。  パッケージは、純粋な Python であるか、ホイールを発行する必要があります。 |
@@ -199,7 +200,7 @@ HttpPlatform モジュールは、スタンドアロンの Python プロセス�
     `requirements.txt` は、ローカルおよびサーバーで設定されたのと同じパッケージを簡単に再現できるため、これを使用することをお勧めします。 `requirements.txt` に何らかの変更を行った後に、コンソールにアクセスし、コマンドを再実行することを忘れないでください。
 
 > [!Note]
-> App Service には C コンパイラがないため、ネイティブ拡張モジュールを使用して任意のパッケージのホイールをインストールする必要があります。 多くの普及しているパッケージでは、独自のホイールを提供しています。 提供していないパッケージの場合は、ローカルの開発用コンピューターで `pip wheel <package_name>` を使用してホイールをサイトにアップロードします。 例については、「[必要なパッケージの管理](python-environments.md#managing-required-packages)」を参照してください。
+> App Service には C コンパイラがないため、ネイティブ拡張モジュールを使用して任意のパッケージのホイールをインストールする必要があります。 多くの普及しているパッケージでは、独自のホイールを提供しています。 提供していないパッケージの場合は、ローカルの開発用コンピューターで `pip wheel <package_name>` を使用してホイールをサイトにアップロードします。 例については、[必要なパッケージの管理](python-environments.md#managing-required-packages-requirementstxt)に関するセクションをご覧ください。
 
 ### <a name="kudu-rest-api"></a>Kudu REST API
 

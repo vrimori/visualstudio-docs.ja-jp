@@ -1,5 +1,6 @@
 ---
 title: "クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成する | Microsoft Docs"
+description: "Falcon フレームワークを使用して単純な Web アプリをビルドする、Visual Studio での Python の使用方法についての概要です。"
 ms.custom: 
 ms.date: 01/08/2018
 ms.reviewer: 
@@ -12,12 +13,14 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 dev_langs: python
-ms.workload: python
-ms.openlocfilehash: 226f673dbd305f9dabf759cb11c6537a2f3ba637
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.workload:
+- python
+- data-science
+ms.openlocfilehash: 756419ce7390ba727bc5847d95c86399838d972a
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-python-web-app"></a>クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成する
 
@@ -67,7 +70,7 @@ Python の Web アプリは、ほぼ常に、Web 要求のルーティングや�
 
 Falcon の詳細情報は、[falconframework.org](https://falconframework.org/) をご覧ください。
 
-開発者は通常、グローバル環境にライブラリをインストールするのではなく、特定のプロジェクトのライブラリをインストールする "仮想環境" を作成することに注意してください。 Visual Studio の多くの Python プロジェクト テンプレートには、テンプレートが依存するライブラリの一覧が列記されている `requirements.txt` ファイルが含まれます。 これらのテンプレートの 1 つからプロジェクトを作成すると、ライブラリがインストールされる仮想環境の作成がトリガーされます。 詳しくは、「Python 環境」の「[仮想環境](../python/python-environments.md#virtual-environments)」をご覧ください。
+開発者は通常、グローバル環境にライブラリをインストールするのではなく、特定のプロジェクトのライブラリをインストールする "仮想環境" を作成することに注意してください。 Visual Studio の多くの Python プロジェクト テンプレートには、テンプレートが依存するライブラリの一覧が列記されている `requirements.txt` ファイルが含まれます。 これらのテンプレートの 1 つからプロジェクトを作成すると、ライブラリがインストールされる仮想環境の作成がトリガーされます。 詳しくは、「Python 環境」の「[仮想環境](../python/managing-python-environments-in-visual-studio.md#creating-virtual-environments)」をご覧ください。
 
 ## <a name="add-a-code-file"></a>コード ファイルの追加
 
@@ -141,7 +144,7 @@ Falcon について詳しくは、[Falcon のクイック スタート](https://
 Visual Studio IDE と Python について簡単に学習するこのクイック スタートは以上で完了です。 対話型ウィンドウの使用、デバッグ、データの視覚化、Git の操作など、Visual Studio での Python についての詳細なチュートリアルを続行するには、下のボタンを選んでください。
 
 > [!div class="nextstepaction"]
-> [チュートリアル: Visual Studio での Python の概要](../python/vs-tutorial-01-01.md)。
+> [チュートリアル: Visual Studio での Python の概要](../python/tutorial-working-with-python-in-visual-studio-step-01-create-project.md)。
 
 - [Visual Studio での Python Web アプリ テンプレート](../python/template-web.md)について学習する
 - [Python のデバッグ](../python/debugging.md)について学習する

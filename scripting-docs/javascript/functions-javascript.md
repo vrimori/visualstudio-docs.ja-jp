@@ -18,11 +18,11 @@ caps.latest.revision: "24"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fd5626af6417b5f0010545874bd15c86b30a303a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 7275985d07f9f564dac98ba39e5ec31618dcaac4
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="functions-javascript"></a>関数 (JavaScript)
 [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] 関数はアクションを実行します。また、値を返すこともできます。 場合によって、これらは計算や比較の結果です。 関数は、「グローバル メソッド」とも呼ばれます。  
@@ -232,7 +232,7 @@ console.log(f(3, 3, 3));
   
 <a name="Rest"></a>   
 ## <a name="rest-parameters"></a>rest パラメーター  
- spread 演算子 () によって指定された rest パラメーターを使う、関数呼び出しの連続する引数を配列に変換できます。  
+ spread 演算子 `...` によって指定された rest パラメーターを使うと、関数呼び出しの連続する引数を配列に変換できます。  
   
  rest パラメーターにより、`arguments` オブジェクトは必要なくなります。 rest パラメーターは、いくつかの点で `arguments` オブジェクトと異なります。以下に例を示します。  
   
@@ -260,5 +260,5 @@ console.log(f(3, "hello", true));
   
  spread 演算子のその他の使用方法については、「[spread 演算子](../javascript/reference/spread-operator-decrement-dot-dot-dot-javascript.md)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [JavaScript 言語リファレンス](../javascript/javascript-language-reference.md)

@@ -14,18 +14,19 @@ ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
+- data-science
 - azure
-ms.openlocfilehash: e5bde434f3a5097f51f461aad5b02ae183e2204c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b33c96844abc9bbf4cc7bcd403626980e0bf37a5
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="azure-cloud-service-projects-for-python"></a>Python 用 Azure クラウド サービス プロジェクト
 
 Visual Studio は、Python を使用して Azure Cloud Services の作成に使用できるテンプレートを提供しています。
 
-[クラウド サービス](http://go.microsoft.com/fwlink/?LinkId=306052)は、任意の数の *worker ロール*と *Web ロール*から構成され、それぞれが概念的に独立したタスクを実行しますが、規模拡張の必要に応じてビジュアル マシン間で個別にレプリケートできます。 Web ロールでは、フロントエンド Web アプリケーションのホスティングが提供されます。 Python が接続されている場合、WSGI をサポートする任意の Web フレームワークを使用して、このようなアプリケーションを作成できます ([Web プロジェクト テンプレート](template-web.md)でサポート)。 worker ロールは、ユーザーと直接対話しない長時間実行されるプロセスを意図しています。 通常、これらは `pip install`&nbsp;[`azure`](http://pypi.org/project/azure) でインストールできる[データ](http://go.microsoft.com/fwlink/?LinkId=401571) ライブラリと[アプリ サービス](http://go.microsoft.com/fwlink/?LinkId=401572) ライブラリを利用します。
+[クラウド サービス](http://go.microsoft.com/fwlink/?LinkId=306052)は、任意の数の *worker ロール*と *Web ロール*から構成され、それぞれが概念的に独立したタスクを実行しますが、規模拡張の必要に応じてビジュアル マシン間で個別にレプリケートできます。 Web ロールでは、フロントエンド Web アプリケーションのホスティングが提供されます。 Python が接続されている場合、WSGI をサポートする任意の Web フレームワークを使用して、このようなアプリケーションを作成できます ([Web プロジェクト テンプレート](template-web.md)でサポート)。 worker ロールは、ユーザーと直接対話しない長時間実行されるプロセスを意図しています。 通常、これらは [`pip install azure`](http://pypi.org/project/azure) でインストールできる[データ](http://go.microsoft.com/fwlink/?LinkId=401571) ライブラリと[アプリ サービス](http://go.microsoft.com/fwlink/?LinkId=401572) ライブラリを利用します。
 
 このトピックでは、Visual Studio 2017 のプロジェクト テンプレートとその他のサポートについて詳しく説明します (以前のバージョンも同様ですが、いくつかの違いがあります)。 Python からの Azure の操作について詳しくは、[Azure Python デベロッパー センター](http://go.microsoft.com/fwlink/?linkid=254360)をご覧ください。
 
@@ -80,7 +81,7 @@ Visual Studio は、Python を使用して Azure Cloud Services の作成に使�
 
 発行プロセスには 2 つのフェーズが含まれます。 まず、Visual Studio で、クラウド サービスのすべてのロールを含む 1 つのパッケージを作成します。 このパッケージは Azure にデプロイされるもので、ロールごとに 1 台以上の仮想マシンを初期化し、ソースをデプロイします。
 
-各仮想マシンがアクティブになると、`ConfigureCloudService.ps1` スクリプトを実行し、すべての従属物をインストールします。 既定では、このスクリプトは Python の最新バージョンを [NuGet](https://www.nuget.org/packages?q=Tags%3A%22python%22+Authors%3A%22Python+Software+Foundation%22) からインストールし、`requirements.txt` ファイルで指定されたパッケージをインストールします。 
+各仮想マシンがアクティブになると、`ConfigureCloudService.ps1` スクリプトを実行し、すべての従属物をインストールします。 既定では、このスクリプトは Python の最新バージョンを [NuGet](https://www.nuget.org/packages?q=Tags%3A%22python%22+Authors%3A%22Python+Software+Foundation%22) からインストールし、`requirements.txt` ファイルで指定されたパッケージをインストールします。
 
 最後に、worker ロールは Python スクリプトの実行を開始する `LaunchWorker.ps1` を実行します。Web ロールは IIS を初期化し、Web 要求の処理を開始します。
 
@@ -90,7 +91,7 @@ Cloud Services では、`ConfigureCloudService.ps1` スクリプトは `pip` を
 
 クラウド サービス インスタンスには C コンパイラが含まれていないため、C の拡張子を持つすべてのライブラリはコンパイル済みのバイナリを提供する必要があります。
 
-pip とその従属物に加えて `requirements.txt` 内のパッケージが自動的にダウンロードされ、課金対象の帯域幅の使用としてカウントされる可能性があります。 `requirements.txt` ファイルの管理について詳しくは、「[必要なパッケージの管理](python-environments.md#managing-required-packages)」をご覧ください。
+pip とその従属物に加えて `requirements.txt` 内のパッケージが自動的にダウンロードされ、課金対象の帯域幅の使用としてカウントされる可能性があります。 `requirements.txt` ファイルの管理について詳しくは、「[必要なパッケージの管理](managing-python-environments-in-visual-studio.md#managing-required-packages-requirementstxt)」をご覧ください。
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
@@ -98,12 +99,12 @@ pip とその従属物に加えて `requirements.txt` 内のパッケージが�
 
 - Python プロジェクトの bin\ フォルダーに (少なくとも) 以下が含まれること。
 
-    - `ConfigureCloudService.ps1`
-    - `LaunchWorker.ps1` (worker ロールの場合)
-    - `ps.cmd`
+  - `ConfigureCloudService.ps1`
+  - `LaunchWorker.ps1` (worker ロールの場合)
+  - `ps.cmd`
 
 - Python プロジェクトに、すべての従属物 (またはホイール ファイルのコレクション) を一覧する `requirements.txt` ファイルが含まれること。
 - クラウド サービスでリモート デスクトップを有効にし、ログ ファイルを調査します。
-- `ConfigureCloudService.ps1` と `LaunchWorker.ps1` のログがリモート マシン上の `C:\Resources\Directory\%RoleId%.DiagnosticStore\LogFiles` フォルダーに格納されていること。
+- `ConfigureCloudService.ps1` と `LaunchWorker.ps1` のログがリモート コンピューターの `C:\Resources\Directory\%RoleId%.DiagnosticStore\LogFiles` フォルダーに格納されていること。
 - Web ロールが `web.config` に構成されているパス (`WSGI_LOG` appSetting のパス) に追加のログを書き込めること。 ほとんどの標準的な IIS または FastCGI ロギングも動作すること。
 - 現在、`LaunchWorker.ps1.log` ファイルは Python の worker ロールによって表示される出力またはエラーを表示する唯一の方法です。

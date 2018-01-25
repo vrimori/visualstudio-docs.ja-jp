@@ -12,11 +12,11 @@ ms.author: gewarren
 manager: ghogen
 dev_langs: CSharp
 ms.workload: multiple
-ms.openlocfilehash: 614e8856fa8d4c674e40703448399265f2adc456
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 67927715cc88373040d1820f70faaf70198388c1
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="quickstart-coding-in-the-editor"></a>クイックスタート: エディター内のコーディング
 
@@ -135,7 +135,7 @@ Visual Studio エディターでは、型やメソッドなどの定義の検査
 
 ## <a name="refactoring-a-name"></a>名前のリファクタリング
 
-だれも最初から適切なコードは記述できないものです。変更を必要とする可能性のある要素の 1 つに、変数またはメソッドの名前があります。 Visual Studio の[リファクタリング](../ide/refactoring-code-generation-quick-actions.md#refactoring)機能を使用して、`_words` 変数の名前を `words` に変更してみましょう。
+だれも最初から適切なコードは記述できないものです。変更を必要とする可能性のある要素の 1 つに、変数またはメソッドの名前があります。 Visual Studio の[リファクタリング](../ide/refactoring-in-visual-studio.md)機能を使用して、`_words` 変数の名前を `words` に変更してみましょう。
 
 1. `words` 変数の定義にカーソルを置き、右クリックまたはコンテキスト メニューから **[名前の変更]** を選択するか、**Ctrl**+**R** キー、**Ctrl**+**R** キーを押します。
 
@@ -161,5 +161,5 @@ Visual Studio エディターにおけるこのクイックスタートは完了
 [コード スニペット](../ide/code-snippets.md)  
 [アウトライン](../ide/outlining.md)  
 [[定義へ移動] と [定義をここに表示]](../ide/go-to-and-peek-definition.md)  
-[リファクタリング](../ide/refactoring-code-generation-quick-actions.md#refactoring)  
-[IntelliSense の使用](../ide/using-intellisense.md)  
+[リファクタリング](../ide/refactoring-in-visual-studio.md)  
+[IntelliSense の使用](../ide/using-intellisense.md)
