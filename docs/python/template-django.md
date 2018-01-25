@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 753c3d78ff3da45213ea7cb9625d765e564a88e1
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: b9a6c3240075107edfc5109fa6c62aaf6c23d92b
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="django-web-project-template"></a>Django Web プロジェクト テンプレート
 
@@ -45,7 +45,7 @@ Visual Studio は、Django プロジェクトの完全な IntelliSense を提供
 
 ![ブレークポイント](media/template-django-debugging.png)
 
-Django プロジェクトは `manage.py` ファイルで管理するのが一般的であり、Visual Studio でもそのようになっています。 エントリ ポイントとしてそのファイルの使用を止めると、基本的にプロジェクト ファイルは壊れます。 その場合は、Django プロジェクトにしないで、[既存のファイルからプロジェクトを作成しなおす](python-projects.md#creating-a-project-from-existing-files)必要があります。
+Django プロジェクトは `manage.py` ファイルで管理するのが一般的であり、Visual Studio でもそのようになっています。 エントリ ポイントとしてそのファイルの使用を止めると、基本的にプロジェクト ファイルは壊れます。 その場合は、Django プロジェクトにしないで、[既存のファイルからプロジェクトを作成しなおす](managing-python-projects-in-visual-studio.md#creating-a-project-from-existing-files)必要があります。
 
 ## <a name="django-management-console"></a>Django 管理コンソール
 

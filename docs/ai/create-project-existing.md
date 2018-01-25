@@ -24,8 +24,8 @@
 8. 必要に応じて、Ctrl + F5 キーを押すか、**[デバッグ]、[デバッグなしで開始]** の順に選択して、プログラムを実行します。 
 
 > [!div class="nextstepaction"]
-> [チュートリアル: Visual Studio での Python の使用](https://docs.microsoft.com/visualstudio/python/vs-tutorial-01-00)
+> [チュートリアル: Visual Studio での Python の使用](../python/tutorial-working-with-python-in-visual-studio-step-00-installation.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [既存の Python インタープリター用の環境の作成](https://docs.microsoft.com/visualstudio/python/python-environments#creating-an-environment-for-an-existing-interpreter)

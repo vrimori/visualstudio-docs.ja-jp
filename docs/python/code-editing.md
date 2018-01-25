@@ -15,15 +15,15 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 16f0e7d406e042d16fff4fbe257b62bac97253c3
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: 518f952f4b983acbcd3d2f508126f5298e16d579
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="editing-python-code"></a>Python コードの編集
 
-開発者は、コード エディターで多くの時間を費やすので、[Visual Studio での Python のサポート](installation.md)は、生産性を向上させる機能を提供します。 機能には、IntelliSense 構文の強調表示、オートコンプリート、署名ヘルプ、メソッドのオーバーライド、検索、ナビゲーションが含まれます。 
+開発者は、コード エディターで多くの時間を費やすので、[Visual Studio での Python のサポート](installing-python-support-in-visual-studio.md)は、生産性を向上させる機能を提供します。 機能には、IntelliSense 構文の強調表示、オートコンプリート、署名ヘルプ、メソッドのオーバーライド、検索、ナビゲーションが含まれます。 
 
 このトピックの内容:
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/12/2018
 
 Visual Studio でのコードの編集に関する全般的な説明については、「[コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)」をご覧ください。 また、コードの特定のセクションに注意を集中するのに役立つ [Visual Studio のアウトライン機能](../ide/outlining.md)についての記事もご覧ください。 Python のサポートには、Visual Studio オブジェクト ブラウザーの使用が含まれています (**[表示] > [その他のウィンドウ] > [オブジェクト ブラウザー]** を選択するか、Ctrl + W、J キーを押します)。各モジュールで定義されているクラスとそれらのクラスで定義されている関数を調べることができます。 
 
-また、エディターは Visual Studio の対話型のウィンドウと統合され、この 2 つ間で容易にコードを交換できます。 詳細については、「[チュートリアル ステップ 3: 対話型 REPL ウィンドウを使用する](vs-tutorial-01-03.md)」と[対話型ウィンドウの使用 - 対話型コマンドにコードを送信する](interactive-repl.md#send-code-to-interactive-command)に関する項目を参照してください。
+また、エディターは Visual Studio の対話型のウィンドウと統合され、この 2 つ間で容易にコードを交換できます。 詳細については、「[チュートリアル ステップ 3: 対話型 REPL ウィンドウを使用する](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)」と[対話型ウィンドウの使用 - 対話型コマンドにコードを送信する](interactive-repl.md#send-code-to-interactive-command)に関する項目を参照してください。
 
 Python コードの編集の概要については、「[Editing Python Code](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=r2iQH5LWE_4605918567)」 (Python コードの編集) (Microsoft Virtual Academy、2 分 30 秒) をご覧ください。
 
@@ -41,7 +41,7 @@ Python コードの編集の概要については、「[Editing Python Code](htt
 
 ## <a name="intellisense"></a>IntelliSense
 
-IntelliSense により、[入力候補](#completions)、[シグネチャ ヘルプ](#signature-help)、[クイック ヒント](#quick-info)、[コードの色分け表示](#code-coloring)が提供されます。 パフォーマンスを向上するために、IntelliSense はプロジェクト内の各 Python 環境に対して生成される入力候補データベースを使用します。 パッケージを追加、削除、更新した場合はデータベースの更新が必要になる可能性があります。 データベースの状態は、**[IntelliSense]** タブの **[Python Environments (Python 環境)]** ウィンドウ (ソリューション エクスプローラーの兄弟ウィンドウ) に表示されます (「[Python Environments](python-environments.md)」 (Python 環境) を参照してください)。 
+IntelliSense により、[入力候補](#completions)、[シグネチャ ヘルプ](#signature-help)、[クイック ヒント](#quick-info)、[コードの色分け表示](#code-coloring)が提供されます。 パフォーマンスを向上するために、IntelliSense はプロジェクト内の各 Python 環境に対して生成される入力候補データベースを使用します。 パッケージを追加、削除、更新した場合はデータベースの更新が必要になる可能性があります。 データベースの状態は、**[IntelliSense]** タブの **[Python Environments (Python 環境)]** ウィンドウ (ソリューション エクスプローラーの兄弟ウィンドウ) に表示されます (「[Python Environments](managing-python-environments-in-visual-studio.md)」 (Python 環境) を参照してください)。 
 
 ### <a name="completions"></a>入力候補
 

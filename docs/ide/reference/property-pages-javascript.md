@@ -21,11 +21,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 6665452bd074c083216120732cff8a3f18a74dca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4e4f01a74a3246a326c1695371a303472901c9ea
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="property-pages-javascript"></a>プロパティ ページ、JavaScript
 **[プロパティ ページ]** からプロジェクトの設定にアクセスできます。 **[プロパティ ページ]** に表示されるページを使用して、プロジェクトのプロパティを変更できます。  
@@ -68,11 +68,11 @@ ms.lasthandoff: 12/22/2017
  **[起動するデバッガー]**  
  デバッガーの既定のホストを指定します。  
 
--   Visual Studio ホスト コンピューターでアプリケーションを起動するには、**[ローカル マシン]** を選択します。 詳細については、「[ローカル コンピューターでのアプリの実行](http://go.microsoft.com/fwlink/?LinkId=234912)」を参照してください。  
+-   Visual Studio ホスト コンピューターでアプリケーションを起動するには、**[ローカル マシン]** を選択します。 詳細については、「[ローカル コンピューターでのアプリの実行](../../debugger/run-windows-store-apps-on-the-local-machine.md)」を参照してください。  
 
--   シミュレーターでアプリケーションを起動するには、**[シミュレーター]** を選択します。 詳細については、「[シミュレーターでのアプリの実行](http://go.microsoft.com/fwlink/?LinkId=234913)」を参照してください。  
+-   シミュレーターでアプリケーションを起動するには、**[シミュレーター]** を選択します。 詳細については、「[シミュレーターでのアプリの実行](../../debugger/run-windows-store-apps-in-the-simulator.md)」を参照してください。  
 
--   リモート コンピューターでアプリケーションを起動するには、**[リモート コンピューター]** を選択します。 リモート デバッグの詳細については、「[リモート コンピューターでのアプリの実行](http://go.microsoft.com/fwlink/?LinkId=234914)」を参照してください。  
+-   リモート コンピューターでアプリケーションを起動するには、**[リモート コンピューター]** を選択します。 リモート デバッグの詳細については、「[リモート コンピューターでのアプリの実行](../../debugger/run-windows-store-apps-on-a-remote-machine.md)」を参照してください。  
 
 **[アプリケーションの起動]**  
 F5 キーを押すか、**[デバッグ]**、**[デバッグ開始]** の順にクリックすると、アプリケーションが起動されるかどうかを指定します。 アプリケーションが起動されるようにするには、**[はい]** を選択します。それ以外の場合は、**[いいえ]** を選択します。 **[いいえ]** を選択した場合でも、アプリケーションを別の方法で起動してデバッグできます。  

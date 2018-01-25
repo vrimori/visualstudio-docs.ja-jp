@@ -16,11 +16,11 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 10da44e4766fa3a68a0f4d70a4c1e89f3f9ccf65
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: 32e2f0d889bac5313201fd65bf98ce2a8243a284
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="publishing-to-azure-app-service"></a>Azure App Service への発行
 
@@ -44,7 +44,7 @@ Visual Studio には、Azure App Service に Python Web アプリを直接発行
 
 このチュートリアルでは、Bottle、Flask、または Django のいずれかのフレームワークに基づく Web アプリ プロジェクトが必要になります。 プロジェクトがまだなく、発行プロセスを試してみたい場合は、次の手順に従って簡単なテスト プロジェクトを作成します。
 
-1. Visual Studio で、**[ファイル] > [新規] > [プロジェクト]** の順に選び、"Bottle" を検索して、**[Bottle Web プロジェクト]** を選び、プロジェクトの名前とパスを指定し、**[OK]** をクリックします  (Bottle テンプレートは、Python 開発ワークロードに含まれています。[インストール](installation.md)のページを参照してください)。
+1. Visual Studio で、**[ファイル] > [新規] > [プロジェクト]** の順に選び、"Bottle" を検索して、**[Bottle Web プロジェクト]** を選び、プロジェクトの名前とパスを指定し、**[OK]** をクリックします  (Bottle テンプレートは、Python 開発ワークロードに含まれています。[インストール](installing-python-support-in-visual-studio.md)のページを参照してください)。
 
 1. 指示に従って外部パッケージをインストールします。**[仮想環境にインストール]** と仮想環境の優先ベース インタープリターを選択します。 通常、これは App Service にインストールされている Python のバージョンと一致するものを選択します。
 

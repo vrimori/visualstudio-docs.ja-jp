@@ -38,11 +38,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 30eafe77ef4e115650f0871139e009e07fd6729b
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: e5873276795477778e4c358d59788248230bb4b5
+ms.sourcegitcommit: 062795f922e7b59fe00d3d95a01a9a8a28840017
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでブレークポイントを使用します。
 コードの変数の状態や呼び出し履歴の確認などのために、デバッガーの実行を停止するときにブレークポイントを設定できます。 ブレークポイントは、開発者が利用できる重要なデバッグ手法の 1 つです。  
@@ -160,6 +160,9 @@ ms.lasthandoff: 01/10/2018
  無効な構文でブレークポイント条件を設定すると、警告メッセージが表示されます。 有効な構文でブレークポイント条件を指定しても、セマンティクスが無効な場合は、ブレークポイントに初めて達したときに警告メッセージが表示されます。 どちらの場合でも、無効なブレークポイントに達すると実行が中断されます。 ブレークポイント条件が有効で、評価結果が `false`の場合にのみ、ブレークポイントはスキップされます。  
   
  条件には、デバッガーによって認識される有効な式を指定できます。 有効な式の詳細については、「 [Expressions in the Debugger](../debugger/expressions-in-the-debugger.md)」を参照してください。  
+
+> [!NOTE]
+> 使用することができます**CTRL + Enter**を閉じる、**ブレークポイントの設定**ウィンドウです。
   
 ## <a name="using-object-ids-in-breakpoint-conditions-c-and-f"></a>ブレークポイント条件 (C# および F#) でのオブジェクト ID の使用  
  特定のオブジェクトの動作を確認することが必要になる場合があります。たとえば、オブジェクトがコレクションに複数回挿入された理由を確認することが必要になる場合があります。 C# と F# では、 [参照型](/dotnet/csharp/language-reference/keywords/reference-types) の特定のインスタンスのオブジェクト ID を作成し、それらの ID をブレークポイントの条件で使用できます。 オブジェクト ID は、共通言語ランタイム (CLR) のデバッグ サービスで生成されて、オブジェクトに関連付けられます。  オブジェクト ID を作成するには、次の手順を実行します。  
@@ -232,20 +235,6 @@ ms.lasthandoff: 01/10/2018
 ## <a name="export-and-import-breakpoints"></a>ブレークポイントをエクスポートおよびインポートする  
  XML ファイルにブレークポイントをエクスポートするには、ブレークポイントを右クリックし、 **[エクスポート]**を選択します。 既定で、ファイルはソリューション ディレクティブに保存されます。 ブレークポイントをインポートするには、 **[ブレークポイント]** ウィンドウを開き (**CTRL + ALT + B**キー)、ツールバーの右向き矢印をクリックします (ツールヒントは **[ファイルからブレークポイントをインポートします]**です)。  
   
-## <a name="troubleshoot"></a>ブレークポイントをトラブルシューティングします。 
-  
-### <a name="i-deleted-a-breakpoint-but-i-continue-to-hit-it-when-i-start-debugging-again"></a>ブレークポイントを削除したが、デバッグを再実行するとヒットし続ける  
- デバッグ中にブレークポイントを削除しても、場合によっては次にデバッグを開始したときにブレークポイントがヒットすることがあります。 このブレークポイントのヒットを停止するには、ブレークポイントのすべてのインスタンスが **[ブレークポイント]** ウィンドウから削除されていることを確認します。  
-  
-### <a name="the-debugger-cant-locate-the-correct-version-of-the-source-file-for-a-breakpoint"></a>デバッガーがブレークポイントのソース ファイルの正しいバージョンを特定できない  
- ソース ファイルが変更されて、デバッグ対象のコードと一致しなくなった場合、デバッガーは、ソース ファイルが存在していても、ブレークポイントに対応するソース ファイルを探すことがあります。  
-  
-1.  バージョンが一致しないソース コードを表示する Visual studio をデバッグする場合は選択**デバッグ > オプションと設定**です。 **[デバッグ] / [全般]** ページで、 **[元のバージョンと完全に一致するソース ファイルを必要とする]** オプションをオフにします。  
-  
-2.  ブレークポイントをソース ファイルにバインドすることもできます。 ブレークポイントを選択し、コンテキスト メニューの **[条件]** をクリックします。 **[ブレークポイントの設定]** ウィンドウで **[元のバージョンと異なるソース コードを許可する]** チェック ボックスをオンにします。  
-  
-### <a name="breakpoints-dont-work-in-a-dll"></a>ブレークポイントが DLL で機能しない  
- デバッガーがモジュールのコードの場所に関するデバッグ情報を読み込んでいない場合は、ソース ファイルにブレークポイントを設定できません。 このようなときは、 **ブレークポイントを設定できない**ことを示すメッセージが表示されます。 ブレークポイントの場所に、警告ブレークポイント グリフが表示されます。 ただし、これらの警告ブレークポイントは、コードが読み込まれたときに実際のブレークポイントになります。 シンボルの読み込みの詳細については、次を参照してください。[指定シンボル (.pdb) とソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)です。  
-  
 ## <a name="see-also"></a>参照  
- [デバッガーでのコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)
+[Visual Studio デバッガーでブレークポイントをトラブルシューティングします。](../debugger/troubleshooting-breakpoints.md)  
+[デバッガーでのコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)

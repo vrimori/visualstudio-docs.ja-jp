@@ -1,7 +1,7 @@
 ---
 title: "MSBuild プロジェクトの共通プロパティ | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/18/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-sdk
@@ -23,11 +23,11 @@ author: kempb
 ms.author: kempb
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: b78c2c1276f04a53a4f7a01e70a7d98efdba0514
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c70427c2dd1e2c7ceb071867b876750121445dde
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="common-msbuild-project-properties"></a>MSBuild プロジェクトの共通プロパティ
 次の表は、Visual Studio プロジェクト ファイルで定義される、または MSBuild に用意されているターゲット ファイルに含まれている、使用頻度の高いプロパティを示しています。  
@@ -75,12 +75,11 @@ ms.lasthandoff: 12/22/2017
 |IntermediateOutputPath|中間出力ファイルの完全パスであり、パスが指定されていない場合に `BaseIntermediateOutputPath` を基に生成されます。 たとえば、\obj\debug\\ のようなパスが生成されます。 このプロパティがオーバーライドされた場合、`BaseIntermediateOutputPath` は無効になります。|  
 |KeyContainerName|厳密名キーのコンテナー名です。|  
 |KeyOriginatorFile|厳密名キー ファイルの名前です。|  
-|NoWin32Manifest|コンパイル時に既定の Win32 マニフェストを生成して出力ファイルに含めるかどうかを決定します。 既定値の `false` では、すべてのアプリケーションに対して既定の Win32 マニフェストが生成されます。 このプロパティは、vbc.exe コンパイラの `/nowin32manifest` スイッチに相当します。|  
 |ModuleAssemblyName|コンパイル済みモジュールを組み込むアセンブリの名前です。 このプロパティは、`/moduleassemblyname` コンパイラ スイッチに相当します。|  
 |NoLogo|コンパイラ ロゴをオフにするかどうかを示すブール値です。 このプロパティは、`/nologo` コンパイラ スイッチに相当します。|  
 |NoStdLib|標準ライブラリ (mscorlib.dll) の参照を回避するかどうかを示すブール値です。 既定値は `false` です。|  
 |NoVBRuntimeReference|[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ランタイム (Microsoft.VisualBasic.dll) を参照としてプロジェクトに含めるかどうかを示すブール値です。|  
-|NoWin32Manifest|ユーザー アカウント制御 (UAC) マニフェスト情報をアプリケーションの実行可能ファイルに埋め込むかどうかを示すブール値です。 [!INCLUDE[windowsver](../deployment/includes/windowsver_md.md)] を対象とする Visual Studio プロジェクトにのみ適用されます。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] および登録を必要としない COM を使用して配置されたプロジェクトでは、この要素無視されます。 `False` (既定値) は、ユーザー アカウント制御 (UAC: User Account Control) マニフェスト情報をアプリケーションの実行可能ファイルに埋め込むことを指定します。 `True`を指定すると、UAC マニフェスト情報は埋め込まれません。<br /><br /> このプロパティは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を対象とする [!INCLUDE[windowsver](../deployment/includes/windowsver_md.md)] プロジェクトにのみ適用されます。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] および登録を必要としない COM を使用して配置されたプロジェクトでは、このプロパティは無視されます。<br /><br /> [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でマニフェスト情報をアプリケーションの実行可能ファイルに埋め込まない場合に限り、NoWin32Manifest を追加してください。このプロセスは "*仮想化*" と呼ばれます。 仮想化を使用するには、次のように `<ApplicationManifest>` と共に `<NoWin32Manifest>` を設定します。<br /><br /> -   [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] プロジェクトの場合は、`<ApplicationManifest>` ノードを削除します  ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] プロジェクトでは、`<ApplicationManifest>` ノードが存在すると、`<NoWin32Manifest>` は無視されます)。<br />-   [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] プロジェクトの場合は、`<ApplicationManifest>` を `False` に設定し、`<NoWin32Manifest>` を `True` に設定します  ([!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] プロジェクトでは、`<ApplicationManifest>` は `<NoWin32Manifest>` によりオーバーライドされます)。|  
+|NoWin32Manifest|ユーザー アカウント制御 (UAC) マニフェスト情報をアプリケーションの実行可能ファイルに埋め込むかどうかを示すブール値です。 [!INCLUDE[windowsver](../deployment/includes/windowsver_md.md)] を対象とする Visual Studio プロジェクトにのみ適用されます。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] および登録を必要としない COM を使用して配置されたプロジェクトでは、この要素無視されます。 `False` (既定値) は、ユーザー アカウント制御 (UAC: User Account Control) マニフェスト情報をアプリケーションの実行可能ファイルに埋め込むことを指定します。 `True`を指定すると、UAC マニフェスト情報は埋め込まれません。<br /><br /> このプロパティは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を対象とする [!INCLUDE[windowsver](../deployment/includes/windowsver_md.md)] プロジェクトにのみ適用されます。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] および登録を必要としない COM を使用して配置されたプロジェクトでは、このプロパティは無視されます。<br /><br /> [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でマニフェスト情報をアプリケーションの実行可能ファイルに埋め込まない場合に限り、NoWin32Manifest を追加してください。このプロセスは "*仮想化*" と呼ばれます。 仮想化を使用するには、次のように `<ApplicationManifest>` と共に `<NoWin32Manifest>` を設定します。<br /><br /> -   [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] プロジェクトの場合は、`<ApplicationManifest>` ノードを削除します  ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] プロジェクトでは、`<ApplicationManifest>` ノードが存在すると、`<NoWin32Manifest>` は無視されます)。<br />-   [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] プロジェクトの場合は、`<ApplicationManifest>` を `False` に設定し、`<NoWin32Manifest>` を `True` に設定します  ([!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] プロジェクトでは、`<ApplicationManifest>` は `<NoWin32Manifest>` によりオーバーライドされます)。<br /> このプロパティは、vbc.exe コンパイラの `/nowin32manifest` スイッチに相当します。|  
 |Optimize|`true` に設定された場合にコンパイラの最適化を有効にするブール値です。 このプロパティは、`/optimize` コンパイラ スイッチに相当します。|  
 |OptionCompare|文字列比較の方法を指定します。 有効な値は "binary" または "text" です。 このプロパティは、vbc.exe コンパイラの `/optioncompare` スイッチに相当します。|  
 |OptionExplicit|`true` に設定された場合にソース コードで変数が明示的に宣言されていることを要求するブール値です。 このプロパティは、`/optionexplicit` コンパイラ スイッチに相当します。|  

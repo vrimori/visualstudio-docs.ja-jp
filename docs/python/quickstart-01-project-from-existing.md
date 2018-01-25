@@ -15,15 +15,15 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b400e8a8c9c69b0c18204c55522d287d55d845ab
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: 7695287c2d9db90bc452be926ce574a1fb38b03e
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="quickstart-create-a-python-project-from-existing-code"></a>クイックスタート: 既存のコードから Python プロジェクトを作成する
 
-[Visual Studio 2017 で Python サポートをインストール](installation.md)したら、Visual Studio プロジェクトに既存の Python コードを簡単に取り込むことができます。
+[Visual Studio 2017 で Python サポートをインストール](installing-python-support-in-visual-studio.md)したら、Visual Studio プロジェクトに既存の Python コードを簡単に取り込むことができます。
 
 > [!Important]
 > ここで説明するプロセスでは、元のソース ファイルの移動やコピーは行いません。 コピーで作業する場合は、まず、フォルダーを複製します。
@@ -35,10 +35,10 @@ ms.lasthandoff: 01/12/2018
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [チュートリアル: Visual Studio での Python の使用](vs-tutorial-01-01.md)
+> [チュートリアル: Visual Studio での Python の使用](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [既存の Python インタープリター用の環境の作成](python-environments.md#creating-an-environment-for-an-existing-interpreter)
-- [Windows に Visual Studio 2015 の Python サポートをインストールする](installation.md)
-- [インストールする場所](installation.md#install-locations)
+- [既存の Python インタープリター用の環境の作成](managing-python-environments-in-visual-studio.md#creating-an-environment-for-an-existing-interpreter)
+- [Windows に Visual Studio 2015 の Python サポートをインストールする](installing-python-support-in-visual-studio.md)
+- [インストールする場所](installing-python-support-in-visual-studio.md#install-locations)

@@ -15,15 +15,15 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 66f99665fc9d580a3c0c366fa2922ea6a15e0e7c
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: 74be5c65cbb4b2498f9904c6e021c774400bfbf8
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="quickstart-clone-a-repository-of-python-code-in-visual-studio"></a>クイック スタート: Visual Studio で Python コードのリポジトリを複製する
 
-[Visual Studio 2017 に Python サポートをインストール](installation.md)すると、Python コードのリポジトリを簡単に複製し、それからプロジェクトを作成できます。
+[Visual Studio 2017 に Python サポートをインストール](installing-python-support-in-visual-studio.md)すると、Python コードのリポジトリを簡単に複製し、それからプロジェクトを作成できます。
 
 [!INCLUDE[install-github-extension](includes/install-github-extension.md)]
 
@@ -71,15 +71,15 @@ ms.lasthandoff: 01/12/2018
 14. プログラムを再実行し、最初のチェックに合格し、プログラムが次の koan で停止することを確認します。 エラーの修正を続け、必要に応じてプログラムを再実行します。
 
 > [!Important]
-> このクイック スタートでは、GitHub の *python_koans* リポジトリの複製を直接作成しました。 このようなリポジトリは、直接変更できないように作成者によって保護されているため、そのリポジトリに変更をコミットしようとすると失敗します。 実際には、代わりに開発者が自分の GitHub アカウントにこのようなリポジトリをフォークし、プル要求を作成し、元のリポジトリにそれらの変更を送信します。 これらの手順は、「[Tutorial Step 6 - Working with Git](vs-tutorial-01-06.md)」(チュートリアル手順 6: Git の使用) で説明しています。
+> このクイック スタートでは、GitHub の *python_koans* リポジトリの複製を直接作成しました。 このようなリポジトリは、直接変更できないように作成者によって保護されているため、そのリポジトリに変更をコミットしようとすると失敗します。 実際には、代わりに開発者が自分の GitHub アカウントにこのようなリポジトリをフォークし、プル要求を作成し、元のリポジトリにそれらの変更を送信します。 これらの手順は、「[Tutorial Step 6 - Working with Git](tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md)」(チュートリアル手順 6: Git の使用) で説明しています。
 
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [チュートリアル: Visual Studio での Python の使用](vs-tutorial-01-01.md)
+> [チュートリアル: Visual Studio での Python の使用](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [既存の Python インタープリター用の環境の作成](python-environments.md#creating-an-environment-for-an-existing-interpreter)
-- [Windows に Visual Studio 2015 の Python サポートをインストールする](installation.md)
-- [インストールする場所](installation.md#install-locations)
+- [既存の Python インタープリター用の環境の作成](managing-python-environments-in-visual-studio.md#creating-an-environment-for-an-existing-interpreter)
+- [Windows に Visual Studio 2015 の Python サポートをインストールする](installing-python-support-in-visual-studio.md)
+- [インストールする場所](installing-python-support-in-visual-studio.md#install-locations)

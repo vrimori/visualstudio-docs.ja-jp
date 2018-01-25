@@ -15,19 +15,19 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 87fdca001430acc1ecef7e69b9afc2123dedafd0
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: 4cc18515fd0fa2c24eb38e78f7be315e865f94d0
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>クイック スタート: Visual Studio のテンプレートから Python プロジェクトを作成する
 
-[Visual Studio 2017 に Python のサポートをインストール](installation.md)すると、さまざまなテンプレートを使用して新しい Python プロジェクトを簡単に作成できます。
+[Visual Studio 2017 に Python のサポートをインストール](installing-python-support-in-visual-studio.md)すると、さまざまなテンプレートを使用して新しい Python プロジェクトを簡単に作成できます。
 
 1. Visual Studio を起動します。
 
-1. **[ファイル]、[新規]、[プロジェクト]** (Ctrl + Shift + N) の順に選択します。 **[新しいプロジェクト]** ダイアログで、"Python" を検索し、希望のテンプレートを選択します。 テンプレートを選択すると、テンプレートの簡単な説明が表示されます。 (「[Python プロジェクト](python-projects.md#project-templates)」も参照してください。)
+1. **[ファイル]、[新規]、[プロジェクト]** (Ctrl + Shift + N) の順に選択します。 **[新しいプロジェクト]** ダイアログで、"Python" を検索し、希望のテンプレートを選択します。 テンプレートを選択すると、テンプレートの簡単な説明が表示されます。 (「[Python プロジェクト](managing-python-projects-in-visual-studio.md#project-templates)」も参照してください。)
 
     ![VS2017 Python テンプレートの [新しいプロジェクト] ダイアログ](media/projects-new-project-dialog2.png)
 
@@ -87,10 +87,10 @@ ms.lasthandoff: 01/12/2018
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [チュートリアル: Visual Studio での Python の使用](vs-tutorial-01-01.md)
+> [チュートリアル: Visual Studio での Python の使用](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [既存の Python インタープリター用の環境の作成](python-environments.md#creating-an-environment-for-an-existing-interpreter)
-- [Windows に Visual Studio 2015 の Python サポートをインストールする](installation.md)
-- [インストールする場所](installation.md#install-locations)
+- [既存の Python インタープリター用の環境の作成](managing-python-environments-in-visual-studio.md#creating-an-environment-for-an-existing-interpreter)
+- [Windows に Visual Studio 2015 の Python サポートをインストールする](installing-python-support-in-visual-studio.md)
+- [インストールする場所](installing-python-support-in-visual-studio.md#install-locations)

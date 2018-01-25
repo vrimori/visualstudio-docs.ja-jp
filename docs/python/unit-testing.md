@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 620e847b9da1e8becf2df66d070a290071248d84
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: 509d8b001ff00f754df8cec0cc08194dbfc2ff3d
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="setting-up-unit-testing-for-python-code"></a>Python コードの単体テストの設定
 
@@ -35,7 +35,7 @@ Python は、プログラムの設計時にシナリオを検証するために�
 
 規則により、Visual Studio はテストをその名前が `test` で始まるメソッドとして識別します。 この動作を確認するには、次の操作を行います。
 
-1. Visual Studio に読み込まれた [Python プロジェクト](python-projects.md)を開き、プロジェクトを右クリックして **[追加] > [新しい項目...]** を選択し、**[Python Unit Test (Python 単体テスト)]** に続けて **[追加]** を選択します。
+1. Visual Studio に読み込まれた [Python プロジェクト](managing-python-projects-in-visual-studio.md)を開き、プロジェクトを右クリックして **[追加] > [新しい項目...]** を選択し、**[Python Unit Test (Python 単体テスト)]** に続けて **[追加]** を選択します。
 
 1. この操作で、標準 `unittest` モジュールをインポートし、`unittest.TestCase` からテスト クラスを派生させ、スクリプトを直接実行する場合に `unittest.main()` を起動するコードを含む `test1.py` ファイルが作成されます。
 
@@ -92,7 +92,7 @@ Python は、プログラムの設計時にシナリオを検証するために�
 
 ![テストのデバッグ](media/unit-test-debugging.png)
 
-Visual Studio のバージョンに応じて、**[選択されたテストのコード カバレッジの分析]** コマンドと **[テストのプロファイル]** コマンドを使用することもできます ([機能のマトリックス](python-in-visual-studio.md#features-matrix)のページをご覧ください)。
+Visual Studio のバージョンに応じて、**[選択されたテストのコード カバレッジの分析]** コマンドと **[テストのプロファイル]** コマンドを使用することもできます ([機能のマトリックス](overview-of-python-tools-for-visual-studio.md#features-matrix)のページをご覧ください)。
 
 ### <a name="known-issues"></a>既知の問題
 

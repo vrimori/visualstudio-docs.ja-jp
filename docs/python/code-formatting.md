@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8aa91005774baf1a3154418a5e0b7780d0238b69
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: 96ef5d340a961671b199e521b2d6ee5d05794160
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="formatting-python-code"></a>Python コードの書式設定
 
@@ -30,7 +30,7 @@ Visual Studio を使用すると、事前に構成した書式設定オプショ
 
 オプションは **[ツール] > [オプション] > [テキスト エディター] > [Python] > [書式設定]** とその入れ子になったタブで設定しますが、既定値は [PEP 8 スタイル ガイド](http://www.python.org/dev/peps/pep-0008/)のスーパーセットに従って設定されます。 **[全般]** タブでは、どのような場合に書式設定を適用するかを指定します。このトピックでは、他の 3 つのタブについて説明します。
 
-[Visual Studio の Python のサポート](installation.md)で、**[編集] > [詳細設定]** には、[[コメントを段落幅に合わせる]](#fill-comment-paragraph-command) という便利なコマンドも追加されています。これについても後で説明します。
+[Visual Studio の Python のサポート](installing-python-support-in-visual-studio.md)で、**[編集] > [詳細設定]** には、[[コメントを段落幅に合わせる]](#fill-comment-paragraph-command) という便利なコマンドも追加されています。これについても後で説明します。
 
 ## <a name="spacing"></a>スペース
 

@@ -13,11 +13,11 @@ ms.author: tglee
 manager: ghogen
 dev_langs: vb
 ms.workload: multiple
-ms.openlocfilehash: 1ceda9e53426255331c85996b54378a91324a3fa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b1de10c76d6a974280bfe016490a7567d0807675
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="getting-started-with-visual-basic-in-visual-studio"></a>Visual Studio の Visual Basic の概要
 この Visual Basic (VB) に関するチュートリアルでは、Visual Studio を使用して、いくつかの異なるコンソール アプリを作成して実行しながら、Visual Studio の[統合開発環境 (IDE)](visual-studio-ide.md) の一部の機能を検討します。
@@ -82,11 +82,11 @@ Visual Studio は、開発者向け生産性向上ツールの統合開発スイ
      Console.ReadKey(True)
     ```
 
-    このコードで、既存の [Console.WriteLine](/dotnet/api/system.console.writeline?view=netframework-4.7.1)、[Console.Write](/dotnet/api/system.console.write?view=netframework-4.7.1)、[Console.ReadKey]() ステートメントが置き換えられます。
+    このコードでは、既存の <xref:System.Console.WriteLine%2A>、<xref:System.Console.Write%2A>、および <xref:System.Console.ReadKey%2A> ステートメントを置き換えます。
 
  ![What Is Your Name コードが表示されているコード ウィンドウ](../ide/media/vb-codewindow-what-name.png)
 
-3. コンソール ウィンドウが開いたら、自分の名前を入力します。 コンソール ウィンドウは次のスクリーン ショットのようになります。       
+3. コンソール ウィンドウが開いたら、自分の名前を入力します。 コンソール ウィンドウは次のスクリーン ショットのようになります。
 
    ![What Is Your Name、時刻と日付、Press any key to continue メッセージが表示されているコンソール ウィンドウ](../ide/media/vb-console-what-name.png)
 
