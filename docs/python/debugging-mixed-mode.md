@@ -1,45 +1,51 @@
 ---
 title: "Visual Studio での Python の混合モードのデバッグ | Microsoft Docs"
 ms.custom: 
-ms.date: 07/12/2017
+ms.date: 01/16/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-python
+ms.technology:
+- devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b1a36b387ad9fd8a2212cfaceefbd454edf33dde
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: a8ad93cd9fd7e8f4e9e738fe22a460fe9d80fd32
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="debugging-python-and-c-together"></a>Python と C++ の同時デバッグ
 
-ほとんどの標準的 Python デバッガーは、Python コードのみのデバッグをサポートします。 ただし、実際には、高パフォーマンスやプラットフォーム API の直接呼び出しが必要なシナリオでは、Python と、C または C++ が併用されています。 (たとえば、「[Creating a C++ extension for Python (Python 用 C++ 拡張機能の作成)](cpp-and-python.md)」をご覧ください。)Python プロジェクトが読み込まれると、Visual Studio は、Python とネイティブの C/C++ のデバッグを統合して同時に実行する混合モードのデバッグ機能を提供します。これには、次の機能が含まれます。
+ほとんどの標準的 Python デバッガーは、Python コードのみのデバッグをサポートします。 ただし、実際には、高パフォーマンスやプラットフォーム API の直接呼び出しが必要なシナリオでは、Python と、C または C++ が併用されています。 (チュートリアルについては、「[Creating a C++ extension for Python ](working-with-c-cpp-python-in-visual-studio.md)」(Python 用 C++ 拡張機能の作成) をご覧ください。)
+
+Visual Studio インストーラーの Python 開発ワークロードで **[Python ネイティブ開発ツール]** オプションが選択されていると、Visual Studio で Python とネイティブの C/C++ 向けに統合された同時混合モードのデバッグ機能が提供されます。
+
+混合モード デバッグ機能には、この記事で説明するような次の特色があります。
 
 - 結合された呼び出し履歴
 - Python とネイティブ コード間でのステップ実行
 - 両方の種類のコード内のブレークポイント
 - Python のオブジェクト表現をネイティブ フレームに表示する機能 (逆も可能)
+- Python プロジェクトまたは C++ プロジェクトのコンテキスト内でのデバッグ
 
-![混合モードのデバッグ](media/mixed-mode-debugging.png) 
+![混合モードのデバッグ](media/mixed-mode-debugging.png)
 
-Visual Studio でのネイティブ C モジュールのビルド、テスト、およびデバッグの概要については「[Deep Dive: Creating Native Modules (詳細情報: ネイティブ モジュールの作成)](https://youtu.be/D9RlT06a1EI)」(youtube.com、9 分 9 秒) をご覧ください。 ビデオは、Visual Studio 2015 と 2017 の両方に適用されます。
+Visual Studio でのネイティブ C モジュールのビルド、テスト、およびデバッグのビデオによる紹介は、「[Deep Dive: Creating Native Modules](https://youtu.be/D9RlT06a1EI)」(詳細情報: ネイティブ モジュールの作成) (youtube.com、9 分 9 秒) をご覧ください。 ビデオは、Visual Studio 2015 と 2017 の両方に適用されます。
 
 > [!VIDEO https://www.youtube.com/embed/D9RlT06a1EI]
 
 > [!Note]
 > 混合モードのデバッグは、Python Tools for Visual Studio 1.x では使用できません。
 
-## <a name="enabling-mixed-mode-debugging"></a>混合モードのデバッグの有効化
+## <a name="enable-mixed-mode-debugging-in-a-python-project"></a>Python プロジェクトでの混合モード デバッグの有効化
 
 1. ソリューション エクスプローラーで Python プロジェクトを右クリックして、**[プロパティ]** の **[デバッグ]** タブを選び、**[ネイティブ コードのデバッグを有効にする]** をオンにします。 このオプションで、すべてのデバッグ セッションで、混合モードが有効になります。
 
@@ -48,7 +54,7 @@ Visual Studio でのネイティブ C モジュールのビルド、テスト、
     > [!Tip]
     > ネイティブ コードのデバッグを有効にすると、プログラムが通常の [続行するには、任意のキーを押してください] で一時停止せずに完了した場合に、Python の出力ウィンドウがすぐに消えることがあります。 強制的に一時停止するには、ネイティブ コードのデバッグを有効にするときに、**[デバッグ]** タブの **[実行] > [インタープリターの引数]** フィールドに、`-i` オプションを追加します。 この引数を使用すると、Python インタープリターはコード終了後に対話モードになり、この時点でユーザーが Ctrl + Z キー、Enter キーの順に押して終了するのを待機します。
 
-1. 混合モードのデバッガーを既存のプロセスにアタッチ (**[デバッグ] メニューの [プロセスにアタッチ...] を選択**) したら、**[選択...]** ボタンをクリックして **[コードの種類の選択]** ダイアログを開きます。 **[次のコードの種類をデバッグする]** オプションをオンにし、一覧の **[ネイティブ]** と **[Python]** の両方を選択します。
+1. 混合モードのデバッガーを既存のプロセスにアタッチ (**[デバッグ] メニューの [プロセスにアタッチ] を選択**) したら、**[選択]** ボタンを使って **[コードの種類の選択]** ダイアログを開きます。 **[次のコードの種類をデバッグする]** オプションをオンにし、一覧の **[ネイティブ]** と **[Python]** の両方を選択します。
 
     ![コードの種類 ([ネイティブ] と [Python]) の選択](media/mixed-mode-debugging-code-type.png)
 
@@ -58,20 +64,29 @@ Visual Studio でのネイティブ C モジュールのビルド、テスト、
 
 1. 混合モードのデバッグを初めて開始したときに、**Python シンボルが必要である**ことを示すダイアログが表示される可能性があります (「[混合モード デバッグのシンボル](debugging-symbols-for-mixed-mode.md)」をご覧ください)。 どの Python 環境でも、シンボルは 1 回だけインストールする必要があります。 Visual Studio 2017 のインストーラーで Python のサポートをインストールすると、シンボルが自動的に組み込まれます。
 
-1. Python のソース コード自体を手元に置きたい場合もあります。 標準的な Python の場合は、[https://www.python.org/downloads/source/](https://www.python.org/downloads/source/) にアクセスし、お使いのバージョンに適切なアーカイブをダウンロードして、フォルダーに展開します。 要求されたら、そのフォルダーの特定のファイルを Visual Studio で参照します。
+1. デバッグ中に使用できる標準的な Python 自体のソース コードを作成し、[https://www.python.org/downloads/source/](https://www.python.org/downloads/source/) にアクセスし、お使いのバージョンに適切なアーカイブをダウンロードして、フォルダーに展開します。 要求されたら、そのフォルダーの特定のファイルを Visual Studio で参照します。
 
-### <a name="enable-mixed-mode-debugging-in-a-c-project"></a>C++ プロジェクトでの混合モード デバッグの有効化
+## <a name="enable-mixed-mode-debugging-in-a-cc-project"></a>C/C++ プロジェクトでの混合モード デバッグの有効化
 
-この記事で説明する混合モードのデバッグは、Python プロジェクトが Visual Studio に読み込まれている場合にのみ有効です。 プロジェクトは Visual Studio のデバッグ モードを特定し、それによって混合モードのオプションを使用できるようにします。
+Visual Studio 2017 (バージョン 15.5 以降) は、C/C++ プロジェクトの混合モード デバッグをサポートしています (たとえば、[python.org で説明されているように、別のアプリケーションに Python を埋め込む](https://docs.python.org/3/extending/embedding.html)場合など)。 混合モード デバッグを有効にするには、"Python/ネイティブ デバッガー" が起動するように、次のようにして C/C++ プロジェクトを構成します。
 
-ただし、C++ プロジェクトが読み込まれている場合は ([python.org で説明されているように別のアプリケーションに Python を埋め込んでいる](https://docs.python.org/3/extending/embedding.html)とき)、Visual Studio は混合モード デバッグをサポートしていないネイティブ C++ デバッガーを使います。 ただし、個別にデバッガーをアタッチできます。
+1. ソリューション エクスプローラーで C/C++ プロジェクトを右クリックして、**[プロパティ]** を選択します。
+1. **[デバッグ]** タブの **[起動するデバッガー]** から "Python/ネイティブ デバッグ" を選択して、**[OK]** を選択します。
+
+    ![C/C++ プロジェクトで [Python/ネイティブ デバッグ] を選択する](media/mixed-mode-debugging-select-cpp-debugger.png)
+
+このメソッドを使用する場合、デバッガーがアタッチされない子の `python.exe` プロセスが生成されるため、`py.exe` ランチャー自体はデバッグできないことに注意してください。 引数を使用して `python.exe` を直接起動する場合は、[Python/ネイティブ デバッグ] プロパティの **[コマンド]** オプションを `python.exe` の完全なパスが指定されるように変更し (前の画像を参照)、**[コマンド引数]** に引数を指定します。
+
+### <a name="attaching-the-mixed-mode-debugger"></a>混合モード デバッガーのアタッチ
+
+Visual Studio の以前のすべてのバージョンでは、混合モードの直接のデバッグは Visual Studio で Python プロジェクトを起動するときにしか有効になりませんでした。これは、C/C++ プロジェクトがネイティブ デバッガーのみを使用するためです。 ただし、個別にデバッガーをアタッチすることはできます。
 
 1. デバッグなしで C++ プロジェクトを開始します (**[デバッグ] > [デバッグなしで開始]** または Ctrl + F5 キー)。
 1. **[デバッグ] > [プロセスにアタッチ...]** の順に選択します。表示されるダイアログで適切なプロセスを選んだ後、**[選択...]** ボタンを使って **[コードの種類の選択]** ダイアログを開き、Python を選びます。
 
     ![デバッガーをアタッチするときにデバッグの種類として Python を選ぶ](media/mixed-mode-debugging-attach-type.png)
 
-1. **[OK]** を選んでダイアログを閉じた後、**[アタッチ]** を選んでデバッガーを起動します。 
+1. **[OK]** を選んでダイアログを閉じた後、**[アタッチ]** を選んでデバッガーを起動します。
 1. デバッガーをアタッチするチャンスを得る前にデバッグ対象の Python が呼び出されないように、適切な一時停止または遅延を C++ アプリに組み込むことが必要になる場合があります。
 
 ## <a name="mixed-mode-specific-features"></a>混合モード固有の機能
@@ -124,7 +139,7 @@ Visual Studio でのネイティブ C モジュールのビルド、テスト、
 
 自分で作成した型は、"[Python View (Python ビュー)]" に自動的に表示されることはありません。 Python 3.x での拡張機能の作成では、すべてのオブジェクトに最終的には上記のいずれかの型の `ob_base` フィールドが存在し、それによって "[Python View (Python ビュー)]" に表示されるため、通常、この欠落は問題になりません。
 
-ただし、Python 2.x では、通常は、各オブジェクト型でヘッダーをインライン フィールドのコレクションとして宣言するため、カスタム作成された型と `PyObject` の間には、C/C++ コードの型システム レベルでの関連付けがありません。 このようなカスタム型に対して "[Python View (Python ビュー)]" ノードを有効にするには、[Python ツールのインストール ディレクトリ ](installation.md#install-locations)の `PythonDkm.natvis` を編集して、C 構造体または C++ クラスの XML に別の要素を追加します。
+ただし、Python 2.x では、通常は、各オブジェクト型でヘッダーをインライン フィールドのコレクションとして宣言するため、カスタム作成された型と `PyObject` の間には、C/C++ コードの型システム レベルでの関連付けがありません。 このようなカスタム型に対して "[Python View (Python ビュー)]" ノードを有効にするには、[Python ツールのインストール ディレクトリ ](installing-python-support-in-visual-studio.md#install-locations)の `PythonDkm.natvis` を編集して、C 構造体または C++ クラスの XML に別の要素を追加します。
 
 別の (より優れた) 方法は、[PEP 3123](http://www.python.org/dev/peps/pep-3123/) に従って、`PyObject_HEAD` の代わりに明示的な `PyObject ob_base;` フィールドを使用することです。ただし、旧バージョンとの互換性の点で、この方法は常に可能であるとは限りません。
 
