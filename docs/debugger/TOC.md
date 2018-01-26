@@ -18,6 +18,7 @@
 # 使い方ガイド
 ## [デバッガーでのコード間の移動](navigating-through-code-with-the-debugger.md)
 ## [ブレークポイントの使用](using-breakpoints.md)
+### [ブレークポイントのトラブルシューティング](troubleshooting-breakpoints.md)
 ## [データの検査](debugger-windows.md)
 ### [変数の検査](autos-and-locals-windows.md)
 ### [ウォッチ変数を設定する](watch-and-quickwatch-windows.md)
