@@ -18,11 +18,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 64a7f5ae729ff2badfc03750efa43c70973a7498
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 9c21673f318d97ac5abb2b89bdd8d65ae01cef17
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>T4 テキスト テンプレートを使用したデザイン時コード生成
 デザイン時 T4 テキスト テンプレートを使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトのプログラム コードや他のファイルを生成できます。 データに応じて生成されるコードが異なるようにするテンプレートを記述する通常、*モデル*です。 モデルは、ファイルまたはアプリケーションの要件に関する重要な情報を含むデータベースです。  
@@ -298,12 +298,11 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
   
  ソース モデルが変更された場合は、ソリューションのすべてのテンプレートを再度実行する必要があります。 これに手動では、次のように選択します。**すべてのテンプレートの変換**上、**ビルド**メニュー。  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK がインストールされている場合は、ビルドを実行するたびにすべてのテンプレートが自動的に変換されるように設定できます。 そのためには、プロジェクト ファイル (.csproj または .vbproj) をテキスト エディターで編集し、ファイルの末尾付近の、他の `<import>` ステートメントよりも後に次のコード行を追加します。  
+ Visual Studio Modeling SDK をインストールした場合は、ビルドを実行するたびに自動的に変換されたすべてのテンプレートを持つことができます。 そのためには、プロジェクト ファイル (.csproj または .vbproj) をテキスト エディターで編集し、ファイルの末尾付近の、他の `<import>` ステートメントよりも後に次のコード行を追加します。
 
+> [!NOTE]
+> Visual Studio 2017 で、テキスト テンプレート変換 SDK と Visual Studio のモデリング SDK 自動的にインストールされます Visual Studio の特定の機能をインストールするときにします。 詳細については、次を参照してください。[このブログの投稿](https://blogs.msdn.microsoft.com/visualstudioalm/2016/12/12/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)です。
 
-[!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
-
-  
 ```  
 <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets" />  
 <PropertyGroup>  

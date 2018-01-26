@@ -10,11 +10,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 1b26da119360462c5237977a1b1da8ac5041d84a
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 6848f2c0b6c8d25fe7964fdb5519aa3f075bde57
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>ロック ポリシーの定義と読み取り専用セグメントの作成
 不変性 API、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK により、ドメイン固有言語 (DSL) モデルのロックの一部またはすべてのプログラムの読み取りが変更されていないことができるようにします。 この読み取り専用のオプションでしたするなど、使用できるように、ユーザーが仕事仲間に注釈を付け、DSL モデルの確認を求めることができますが、変更、元の変更を禁止することができます。  
@@ -24,7 +24,7 @@ ms.lasthandoff: 01/13/2018
 > [!NOTE]
 >  ロックのポリシーは、リフレクションを使用して回避できます。 クリア境界にサード パーティの開発者が、強力なセキュリティは提供されません。  
   
- 詳細およびサンプルについては、「、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkId=186128) Web サイトです。  
+ 詳細およびサンプルについては、Visual Studio で使用可能[Visualization and Modeling SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db) Web サイトです。
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
   

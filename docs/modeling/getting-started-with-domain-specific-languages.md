@@ -10,25 +10,24 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: b3e0d6ec6eb1449defcc49102a97e69a7105a838
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 92db1c4d27eec5a9ac18d51644dfb0141c2fef34
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>ドメイン固有言語の概要
-このトピックを定義すると、Visual Studio for Modeling SDK で作成したドメイン固有言語 (DSL) を使用して基本的な概念について説明します。  
+このトピックを定義すると、Visual Studio for Modeling SDK で作成したドメイン固有言語 (DSL) を使用して基本的な概念について説明します。
 
+> [!NOTE]
+> Visual Studio 2017 で、テキスト テンプレート変換 SDK と Visual Studio のモデリング SDK 自動的にインストールされます Visual Studio の特定の機能をインストールするときにします。 詳細については、次を参照してください。[このブログの投稿](https://blogs.msdn.microsoft.com/visualstudioalm/2016/12/12/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)です。
 
-[!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
-
-  
- 作業することをお勧め Dsl に慣れていない場合、 **DSL ツールのラボ**、見つけることができます、このサイト内: [Visualizaton and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128)  
+作業することをお勧め Dsl に慣れていない場合、 **DSL ツールのラボ**、見つけることができます、このサイト内: [Visualizaton and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128)  
   
 ## <a name="what-can-you-do-with-a-domain-specific-language"></a>何を実行できるドメイン固有言語を使用しますか。  
  ドメイン固有言語は、表記法、通常、グラフィック、特定の目的に使用するよう設計されています。 これに対し、UML などの言語は、汎用的なです。 DSL では、モデル要素とそれらの関係と、画面上の表示方法の種類を定義できます。  
   
- DSL を設計するときに、Visual Studio Integration Extension (VSIX) パッケージの一部として配布できます。 ユーザーの操作で DSL を[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]:  
+ DSL を設計するときに、Visual Studio Integration Extension (VSIX) パッケージの一部として配布できます。 ユーザーは、Visual Studio での DSL を使用します。  
   
  ![ファミリ ツリー ダイアグラム、ツールボックス、およびエクスプ ローラー](../modeling/media/familyt_instance.png "FamilyT_Instance")  
   
@@ -36,14 +35,14 @@ ms.lasthandoff: 01/13/2018
   
  Dsl のプリンシパルのアプリケーションの 1 つは、プログラム コード、構成ファイル、およびその他の成果物を生成します。 大規模なプロジェクトおよび製品ライン、製品のいくつかのバリエーションを作成する場所で特に Dsl から生成する、変数の側面の多くを提供できますが大幅に増加信頼性と要件の変更を非常に迅速な応答。  
   
- この概要の残りの部分が作成および使用のドメイン固有言語の基本操作について説明するチュートリアル[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
+ この概要の残りの部分は、Visual Studio で作成およびドメイン固有言語の基本操作について説明するチュートリアルです。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  DSL を定義するには、以下のコンポーネントをインストールしておく必要があります。  
   
 |||  
 |-|-|  
-|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|  
+|Visual Studio|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|  
 |[!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580)|  
 |Visual Studio のモデリング SDK||  
 
@@ -52,7 +51,7 @@ ms.lasthandoff: 01/13/2018
 
   
 ## <a name="creating-a-dsl-solution"></a>DSL ソリューションを作成します。  
- 作成する新しいドメイン固有言語、作成する新しい[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ドメイン固有言語のプロジェクト テンプレートを使用してソリューションです。  
+ 新しいドメイン固有言語を作成するには、ドメイン固有言語のプロジェクト テンプレートを使用して、新しい Visual Studio ソリューションを作成します。  
   
 #### <a name="to-create-a-dsl-solution"></a>DSL ソリューションを作成するには  
   
@@ -89,7 +88,7 @@ ms.lasthandoff: 01/13/2018
   
  ユーザー インターフェイスは次の図のようになります。  
   
- ![dsl デザイナー](../modeling/media/dsl_designer.png "dsl_designer")  
+ ![dsl designer](../modeling/media/dsl_designer.png "dsl_designer")  
   
  このソリューションはドメイン固有言語を定義します。 詳細については、次を参照してください。[ドメイン固有言語ツールのユーザー インターフェイスの概要](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md)です。  
   
@@ -100,7 +99,7 @@ ms.lasthandoff: 01/13/2018
   
 -   **Dsl プロジェクト**このプロジェクトには、ドメイン固有言語を定義するコードが含まれています。  
   
--   **DslPackage プロジェクト**このプロジェクトには、開いたり、編集、DSL のインスタンスをできるようにするコードが含まれています。[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
+-   **DslPackage プロジェクト**このプロジェクトには開いて Visual Studio で編集したり、DSL のインスタンスをできるようにするコードが含まれています。  
   
 ##  <a name="Debugging"></a>DSL を実行しています。  
  作成するとすぐに、DSL ソリューションを実行することができます。 後で、定義を変更できます、DSL 徐々 に、各変更後にもう一度ソリューションを実行します。  
@@ -110,15 +109,15 @@ ms.lasthandoff: 01/13/2018
 1.  をクリックして**すべてのテンプレートの変換**ソリューション エクスプ ローラーのツールバー。 これには、ほとんどの DslDefinition.dsl からソース コードが再生成します。  
   
     > [!NOTE]
-    >  クリックする必要があります DslDefinition.dsl を変更するたびに**すべてのテンプレートの変換**ソリューションを再構築する前にします。 このステップは自動化できます。 詳細については、次を参照してください。[すべてのテンプレートの変換を自動化する方法](http://msdn.microsoft.com/en-us/b63cfe20-fe5e-47cc-9506-59b29bca768a)です。  
+    >  クリックする必要があります DslDefinition.dsl を変更するたびに**すべてのテンプレートの変換**ソリューションを再構築する前にします。 このステップは自動化できます。 詳細については、次を参照してください。[すべてのテンプレートの変換を自動化する方法](http://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a)です。
   
 2.  F5 キーを押すか、**デバッグ** メニューのをクリックして**デバッグの開始**です。  
   
-     DSL がビルドされはの実験用インスタンスにインストールされている[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
+     DSL がビルドされ、Visual Studio の実験用インスタンスをインストールします。
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用のインスタンスが開始します。 実験用インスタンスが、レジストリ、別個のサブツリーからその設定を受け取る場所[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]デバッグのための拡張機能を登録します。 インスタンスが通常[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]は登録されている拡張機能にアクセスできません。  
+     Visual Studio の実験用インスタンスを開始します。 実験用インスタンスは、デバッグのために Visual Studio 拡張機能が登録されているレジストリの別個のサブツリーからその設定を取得します。 Visual Studio の通常のインスタンスには、登録されている拡張機能へのアクセスはありません。  
   
-3.  実験用インスタンスで[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、という名前のモデル ファイルを開く**テスト**から**ソリューション エクスプ ローラー**です。  
+3.  Visual Studio の実験用インスタンスのという名前のモデル ファイルを開く**テスト**から**ソリューション エクスプ ローラー**です。  
   
      \- または  
   
@@ -136,7 +135,7 @@ ms.lasthandoff: 01/13/2018
   
 5.  それらを変更する図形のラベルをクリックします。  
   
- 実験用[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]次の例のようになります。  
+ 実験用の Visual Studio は次の例のようになります。  
   
  ![](../modeling/media/dsl_min.png "DSL_min")  
   
@@ -147,7 +146,7 @@ ms.lasthandoff: 01/13/2018
   
  ツリーにモデルを表示することができます、**エクスプ ローラー**モデルを編集するときに表示します。 ダイアグラムに図形を追加すると、モデル要素も、エクスプ ローラーに表示されます。 Diagram がない場合でも、エクスプ ローラーを使用できます。  
   
- インスタンスのデバッグ、エクスプ ローラーを表示できないかどうか[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]の**ビュー**メニュー をポイント**その他のウィンドウ**、順にクリック *\<Your 言語 >***エクスプ ローラー**です。  
+ Visual Studio でのデバッグのインスタンスで、エクスプ ローラーが表示されない場合、**ビュー**メニュー をポイント**その他のウィンドウ**、順にクリック *\<Your 言語 >***エクスプ ローラー**です。  
   
 ### <a name="the-api-of-your-dsl"></a>DSL の API  
  DSL は、読み取りし、DSL のインスタンスであるモデルを更新することを可能にする API を生成します。 API の 1 つのアプリケーションでは、モデルからテキスト ファイルを生成します。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用して、デザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)です。  
@@ -164,7 +163,7 @@ ms.lasthandoff: 01/13/2018
   
 ##### <a name="to-regenerate-text-files-after-you-change-the-model-file"></a>モデル ファイルを変更した後、テキスト ファイルを再生成するには  
   
-1.  実験用インスタンスで[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、モデル ファイルを保存します。  
+1.  Visual Studio の実験用インスタンスのモデル ファイルを保存します。  
   
 2.  .Tt ファイルごとにファイル名のパラメーターを実験に使用してモデル ファイルを指すことを確認します。 .Tt ファイルを保存します。  
   
@@ -182,7 +181,7 @@ ms.lasthandoff: 01/13/2018
  詳細については、次を参照してください。[ドメイン固有言語から、コードの生成](../modeling/generating-code-from-a-domain-specific-language.md)と[ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)です。  
   
 ## <a name="customizing-the-dsl"></a>DSL のカスタマイズ  
- DSL 定義を変更するには、実験用インスタンスを閉じるし、メインの定義を更新[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]インスタンス。  
+ DSL 定義を変更するには、実験用インスタンスを閉じて、メインの Visual Studio インスタンスで定義を更新します。  
   
 > [!NOTE]
 >  DSL 定義を変更した後は、以前のバージョンを使用して作成したテスト モデル内の情報を失う可能性があります。  たとえば、デバッグのソリューションには、サンプルでは、いくつかの図形とコネクタを含むというファイルが含まれています。 DSL 定義を開発する開始した後は、表示ができなくなり、失われたときになるファイルを保存します。  
@@ -222,9 +221,9 @@ ms.lasthandoff: 01/13/2018
   
     2.  をクリックして**すべてのテンプレートの変換**ソリューション エクスプ ローラーのツールバー  
   
-    3.  F5 キーを押します。 実験用インスタンスまで待つ[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]が表示されます。  
+    3.  F5 キーを押します。 Visual Studio の実験用インスタンスが表示されるまで待機します。  
   
-4.  実験用インスタンスでデバッグ ソリューションで[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]モデルのテスト ファイルを開きます。 ツールボックスから、そこに要素をドラッグします。 ツールのキャプションと DSL のエクスプ ローラーで、型名が変更されたことに注意してください。  
+4.  Visual Studio の実験用インスタンスでデバッグのソリューションでは、モデルのテスト ファイルを開きます。 ツールボックスから、そこに要素をドラッグします。 ツールのキャプションと DSL のエクスプ ローラーで、型名が変更されたことに注意してください。  
   
 5.  モデル ファイルを保存します。  
   
@@ -348,7 +347,7 @@ ms.lasthandoff: 01/13/2018
   
 8.  DSL 定義を保存 をクリックして**すべてのテンプレートの変換**、キーを押します**f5 キーを押して**です。  
   
-9. 実験用インスタンスで[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]モデルのテスト ファイルを開きます。 町および町および担当者の間のリンクを作成するのにには、新しいツールを使用します。 正しい種類要素の間のリンクを作成することのみできますに注意してください。  
+9. Visual Studio の実験用インスタンスのモデルのテスト ファイルを開きます。 町および町および担当者の間のリンクを作成するのにには、新しいツールを使用します。 正しい種類要素の間のリンクを作成することのみできますに注意してください。  
   
 10. 各ユーザーが住んでいる町を一覧表示するコードを作成します。 テキスト テンプレートは、このようなコードを実行する場所の 1 つです。 たとえば、次のコードが含まれるようにデバッグ ソリューション内の既存 Sample.tt ファイルを変更する可能性があります。  
   
@@ -380,33 +379,32 @@ ms.lasthandoff: 01/13/2018
 ## <a name="validation-and-commands"></a>検証とコマンド  
  検証制約を追加することで、さらにこの DSL を開発する可能性があります。 これらの制約では、モデルが正しい状態であるかどうかを確認するメソッドを定義します。 たとえば、でした制約を定義する、ことを確認するにお子様の生年月日はその親の場合よりも後です。 検証機能では、DSL ユーザーは、制約のいずれかに違反するモデルを保存しようとした場合に警告が表示されます。 詳細については、次を参照してください。[ドメイン固有言語で検証](../modeling/validation-in-a-domain-specific-language.md)です。  
   
- ユーザーが呼び出すことのできるメニュー コマンドを定義することもできます。 コマンドは、モデルを変更できます。 操作では、その他のモデルでも[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]外部リソースを使用しています。 詳細については、次を参照してください。[する方法: 標準メニュー コマンドを変更](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)です。  
+ ユーザーが呼び出すことのできるメニュー コマンドを定義することもできます。 コマンドは、モデルを変更できます。 Visual Studio での他のモデルと外部リソースし合うことができますもありません。 詳細については、次を参照してください。[する方法: 標準メニュー コマンドを変更](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)です。  
   
 ## <a name="deploying-the-dsl"></a>DSL を展開します。  
- 配布するドメイン固有言語を使用するには、他のユーザーを許可するのには[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Extension (VSIX) ファイル。 DSL ソリューションをビルドするときに作成されます。  
+ ドメイン固有言語を使用するには、他のユーザーを許可するのには、Visual Studio Extension (VSIX) ファイルを配布します。 DSL ソリューションをビルドするときに作成されます。  
   
- ソリューションの bin フォルダーで探し、.vsix ファイルを見つけます。 インストールするコンピューターにコピーします。 そのコンピューターで VSIX ファイルをダブルクリックします。 すべてのインスタンスで使用できる、DSL[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]そのコンピューターにします。  
+ ソリューションの bin フォルダーで探し、.vsix ファイルを見つけます。 インストールするコンピューターにコピーします。 そのコンピューターで VSIX ファイルをダブルクリックします。 DSL は、そのコンピューター上の Visual Studio のすべてのインスタンスで使用できます。  
   
- 同じ手順を使用するには、DSL の実験用インスタンスを使用する必要はありませんので、自分のコンピューターにインストールする[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
+ 同じ手順を使用すると、DSL を自分のコンピューターにインストールし、Visual Studio の実験用インスタンスを使用するのに必要はありませんできるようにします。  
   
  詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)です。  
   
 ##  <a name="Reset"></a>古い実験的な Dsl を削除します。  
- 実験的な Dsl を作成した不要になった場合は、リセットすることにより、コンピューターから削除できます、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]実験用インスタンス。  
+ 必要がなくなった実験用の Dsl を作成した場合は Visual Studio 実験用インスタンスをリセットすることにより、コンピューターから削除にできます。  
   
- すべての実験用 Dsl およびその他の実験用コンピューターから削除されます[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張機能です。 これらは、デバッグ モードで実行されている拡張機能です。  
+ これは、すべての実験用 Dsl およびその他の実験用の Visual Studio 拡張機能、お使いのコンピューターから削除されます。 これらは、デバッグ モードで実行されている拡張機能です。  
   
- この手順では、Dsl やその他は削除されません[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]VSIX ファイルを実行することによって完全にインストールされている拡張機能です。  
+ この手順では、Dsl または VSIX ファイルを実行することによって完全にインストールされている他の Visual Studio 拡張機能は削除されません。  
   
 #### <a name="to-reset-the-visual-studio-experimental-instance"></a>Visual Studio 実験用インスタンスをリセットするには  
   
 1.  をクリックして**開始**、 をクリックして**すべてのプログラム**、 **Microsoft Visual Studio 2010 SDK**、**ツール**、し**Microsoft のリセットVisual Studio 2010 の実験用インスタンス**です。  
   
-2.  実験的な Dsl またはその他の実験用の再構築[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張機能を使用します。  
+2.  実験的な Dsl または他の実験的なものを使用する Visual Studio 拡張機能を再構築します。  
   
-## <a name="see-also"></a>参照  
- [Understanding モデル、クラスとリレーションシップ](../modeling/understanding-models-classes-and-relationships.md)   
- [方法: ドメイン固有言語を定義する](../modeling/how-to-define-a-domain-specific-language.md)   
+## <a name="see-also"></a>関連項目
 
-[!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
+[Understanding モデル、クラスとリレーションシップ](../modeling/understanding-models-classes-and-relationships.md)   
+[方法: ドメイン固有言語を定義する](../modeling/how-to-define-a-domain-specific-language.md)
 

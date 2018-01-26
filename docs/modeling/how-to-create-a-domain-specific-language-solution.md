@@ -15,11 +15,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 467874db7b9dc0dbdc8e168bd5396fd033b90fc7
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 8a8b349e43f4728fee3ec676a689e6ba03cde758
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>方法: ドメイン固有言語ソリューションを作成する
 ドメイン固有言語 (DSL) を使用して作成する特殊な[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューションです。  
@@ -131,7 +131,8 @@ ms.lasthandoff: 01/13/2018
  別のアセンブリと、DSL を統合する場合は、このオプションを使用します。  
   
  厳密な名前付けの詳細については、次を参照してください。[作成と使用](http://go.microsoft.com/fwlink/?LinkId=186073)です。  
-  
-## <a name="see-also"></a>参照  
- [ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)   
- [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
+
+## <a name="see-also"></a>関連項目
+
+[方法: ドメイン固有言語を定義する](../modeling/how-to-define-a-domain-specific-language.md)  
+[ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -10,11 +10,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 0f72632ccb56da42da3a9534a9a6d26d87dd6791
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: a8208d41631985fb6027e2827a847bb3e5e1d7ec
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-domain-specific-language-solutions"></a>ドメイン固有言語ソリューションの使用
 使用してドメイン固有言語 (DSL) を作成、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューションです。 このセクションでを設定し、ソリューションをカスタマイズする方法について説明します。  
@@ -47,5 +47,5 @@ ms.lasthandoff: 01/13/2018
  [方法: ドメイン固有言語デザイナーを拡張する](../modeling/how-to-extend-the-domain-specific-language-designer.md)  
  メニュー コマンドを含む DSL デザイナーをカスタマイズすることができます。  
   
- [変換を自動化する方法のすべてのテンプレート](http://msdn.microsoft.com/en-us/b63cfe20-fe5e-47cc-9506-59b29bca768a)  
+ [変換を自動化する方法のすべてのテンプレート](http://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a)  
  すべてのテンプレートの変換をクリックするとを避けるためには、することができますが、ビルドの自動の一部です。

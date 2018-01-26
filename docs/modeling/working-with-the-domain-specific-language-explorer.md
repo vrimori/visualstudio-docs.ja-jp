@@ -11,11 +11,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 34d2008b4316d75d37292b5baa456bf9cdc65e15
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: d2d6d4ebfa8ca86179afb8d88b59dca6b42d9e26
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-the-domain-specific-language-explorer"></a>ドメイン固有言語エクスプローラーの使用
 **DSL のエクスプ ローラー**をツリー ビューでいくつかの種類の情報を表示します。 DSL のエクスプ ローラー内の項目のほとんどについての詳細については、次を参照してください。[ドメイン固有言語の定義方法](../modeling/how-to-define-a-domain-specific-language.md)です。  
@@ -43,4 +43,4 @@ ms.lasthandoff: 01/13/2018
 -   **Xml シリアル化の動作**です。 モデルのシリアル化設定。 シリアル化の詳細については、次を参照してください。[ファイル記憶域のカスタマイズと XML シリアル化](../modeling/customizing-file-storage-and-xml-serialization.md)です。  
   
 ## <a name="see-also"></a>参照  
- [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
+ [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

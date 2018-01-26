@@ -12,11 +12,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 84773891342b18a583cf2919a7d09e0aaa9d2b93
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 7c2b54b5bbda108c7f616eb71f7945e071721856
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="properties-of-geometry-shapes"></a>ジオメトリ シェイプのプロパティ
 Geometry 図形を使用すると、ドメイン固有言語でのドメイン クラスのインスタンスを表示する方法を指定します。 詳細については、次を参照してください。[ドメイン固有言語の定義方法](../modeling/how-to-define-a-domain-specific-language.md)です。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語の拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)です。  
@@ -52,4 +52,4 @@ Geometry 図形を使用すると、ドメイン固有言語でのドメイン �
 |ヘルプ キーワード|この図形の F1 ヘルプをインデックス化に使用されるキーワード。|\<なし >|  
   
 ## <a name="see-also"></a>参照  
- [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
+ [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

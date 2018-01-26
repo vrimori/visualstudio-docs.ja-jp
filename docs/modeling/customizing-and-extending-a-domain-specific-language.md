@@ -11,11 +11,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 7c0ecd953a0a4cb744f726fc6a62bee564d15579
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 581d4e907185339aa16bacce19a9bf31ff4d121d
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="customizing-and-extending-a-domain-specific-language"></a>ドメイン固有言語のカスタマイズおよび拡張
 Visual Studio のモデリングと視覚エフェクト SDK (VMSDK) は、いくつかのレベルをモデリング ツールを定義することができますを提供します。  
@@ -70,10 +70,10 @@ Visual Studio のモデリングと視覚エフェクト SDK (VMSDK) は、い�
 |1 つのアプリケーションの一部として動作させることは、いくつかの Dsl を統合します。|参照してください[Visual Studio Modelbus を使用してモデルを統合する](../modeling/integrating-models-by-using-visual-studio-modelbus.md)です。|  
 |DSL をサード パーティによって拡張することを許可して、拡張機能を制御します。|[MEF による DSL の拡張](../modeling/extend-your-dsl-by-using-mef.md)<br /><br /> [DSL ライブラリによる DSL 間でのクラスの共有](../modeling/sharing-classes-between-dsls-by-using-a-dsl-library.md)<br /><br /> [ロック ポリシーの定義と読み取り専用セグメントの作成](../modeling/defining-a-locking-policy-to-create-read-only-segments.md)|
   
-## <a name="see-also"></a>参照  
- [ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)   
- [ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
- [Modeling SDK for Visual Studio - ドメイン固有言語](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)  
+## <a name="see-also"></a>関連項目
+
+[ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)   
+[ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
+[Modeling SDK for Visual Studio - ドメイン固有言語](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)  
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
-

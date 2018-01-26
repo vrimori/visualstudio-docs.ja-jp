@@ -13,11 +13,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: fe3d624fdfd187ebec59f43fbde8c750958d6703
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0d610a7410232104428281d90bf7c67992e2a378
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="debugging-xslt"></a>XSLT のデバッグ
 Visual Studio デバッガーを使用して XSLT をデバッグすることができます。 このデバッガーは、ブレークポイントの設定や、XSLT 実行状態の表示などをサポートします。 XSLT デバッグ機能は、Visual Studio の Team System および Professional Edition で提供されています。  
@@ -57,5 +57,5 @@ Visual Studio デバッガーを使用して XSLT をデバッグすることが
  [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)  
  Visual Studio デバッガーについて紹介します。  
   
- [XSLT の参照](http://msdn.microsoft.com/en-us/678bcd68-cbbb-4be5-9dd2-40f94488a1cf)  
+ [XSLT の参照](http://msdn.microsoft.com/678bcd68-cbbb-4be5-9dd2-40f94488a1cf)  
  XSLT の要素と関数に関するリファレンス ドキュメントを紹介します。

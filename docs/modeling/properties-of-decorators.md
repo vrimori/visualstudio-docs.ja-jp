@@ -11,11 +11,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 7f5bd86a9fe8d67111886e7578187747b1ea3ec8
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: b3f1c171f86c9af82e532abf948ee6199a16d0e1
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="properties-of-decorators"></a>デコレーターのプロパティ
 デコレーターは、アイコン、テキスト、または図形またはコネクタ図上に表示される可能性が展開/折りたたみの山かっこです。 次の表は、デコレーターの 3 種類のプロパティを表示します。 一部のプロパティには、図形デコレーターでのみ、またはコネクタ デコレーターでのみが表示されます。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/13/2018
   
 |プロパティ|説明|既定値|  
 |--------------|-----------------|-------------|  
-|は|表示される既定のテキスト。|group1|  
+|DefaultText|表示される既定のテキスト。|group1|  
 |DisplayName|生成された、デザイナーに表示されるデコレーターの名前です。|group1|  
 |FontSize|デコレータに表示されるテキストのフォント サイズ。|8|  
 |FontStyle|デコレータに表示されるテキストのフォント スタイル。|Regular|  
@@ -66,4 +66,4 @@ ms.lasthandoff: 01/13/2018
 |位置|デコレータの既定の位置。|TargetBottom|  
   
 ## <a name="see-also"></a>参照  
- [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
+ [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

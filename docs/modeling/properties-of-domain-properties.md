@@ -11,11 +11,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: feb94d543845e41027fc003188b013b05b75703a
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: d48e7094b61c07e3d2e3181010c823c457ae959a
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="properties-of-domain-properties"></a>ドメイン プロパティのプロパティ
 A*ドメイン プロパティ*値を保持できるモデル要素の機能です。 たとえば、`Person` ドメイン クラスに `Name` プロパティと `BirthDate` プロパティを指定することができます。 DSL 定義で、ドメイン プロパティは図のドメイン クラス ボックスと DSL エクスプローラーのドメイン クラスの下に一覧表示されます。 詳細については、次を参照してください。[ドメイン固有言語の定義方法](../modeling/how-to-define-a-domain-specific-language.md)です。  
@@ -43,11 +43,11 @@ A*ドメイン プロパティ*値を保持できるモデル要素の機能で�
 |**参照可能**|`True` の場合、ドメイン プロパティは、DSL のモデルが開いているときに、プロパティ ウィンドウに表示されます。<br /><br /> `False` の場合、ドメイン プロパティは UI で非表示になります。<br /><br /> 表示されますが、読み取り専用ドメインのプロパティを作成する場合は、設定**は UI 読み取り専用**です。|`True`|  
 |**要素名は、します。**|`True` の場合、このドメイン プロパティは、DSL エクスプローラーで、モデル要素の名前として表示されます。<br /><br /> 新しいモデル要素はこのプロパティに対して一意の既定値を受け取ります。 これらの値を生成する方法を制御する場合は、設定**要素名プロバイダー**です。|`False`|  
 |**UI は読み取り専用**|`True` の場合、ドメイン プロパティの値は UI を使用して変更できません。 ただし、プログラムにより設定可能で、[プロパティ] ウィンドウに表示されます。<br /><br /> ユーザーからドメインのプロパティを非表示にする場合は、設定**は参照可能な**します。 プログラムでアクセスを制御する場合は、設定**セッターのアクセス修飾子**です。|`False`|  
-|**種類**|ドメイン プロパティの種類 (`Normal`、`Calculated`、または `CustomStorage`)。 詳細については、次を参照してください。[記憶域のカスタム プロパティして計算された](../modeling/calculated-and-custom-storage-properties.md)です。|`Normal`|  
+|**Kind**|ドメイン プロパティの種類 (`Normal`、`Calculated`、または `CustomStorage`)。 詳細については、次を参照してください。[記憶域のカスタム プロパティして計算された](../modeling/calculated-and-custom-storage-properties.md)です。|`Normal`|  
 |**Name**|このドメイン プロパティの名前。 これは、必要があります、有効な識別子では、たとえば**SongTitle**です。|\<なし >|  
 |**ノート**|このドメイン プロパティに関連付けられる非公式な注釈。|\<なし >|  
 |**Set アクセス操作子のアクセス修飾子**|Setter 用のアクセス修飾子。 これはプログラム コードがプロパティを設定できる範囲を制御します。|`public`|  
 |**Type**|プロパティの種類。 利用可能な種類の一覧に追加、DSL のエクスプ ローラーでの DSL のルートを右クリックし、クリックして**外部型の追加**です。|`String`|  
   
 ## <a name="see-also"></a>参照  
- [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
+ [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

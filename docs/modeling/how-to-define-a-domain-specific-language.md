@@ -19,27 +19,23 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: becfedc10f054c006709c3095f924b58c1ba5062
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 972fa76d83c9ecfbe9efb23897a6e0ec5928c35f
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>方法: ドメイン固有言語を定義する
-ドメイン固有言語 (DSL) を定義するには、テンプレートから [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューションを作成します。 ソリューションの主要な機能は DSL 定義図です。これは DslDefinition.dsl に保存されています。 DSL 定義は、DSL のクラスとシェイプを定義します。 これらの要素を変更および追加した後で、プログラム コードを追加して DSL を詳細にカスタマイズできます。  
-  
- 作業することをお勧め Dsl に慣れていない場合、 **DSL ツールのラボ**、見つけることができます、このサイト内: [Visualizaton and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128)  
+ドメイン固有言語 (DSL) を定義するのには、テンプレートから Visual Studio ソリューションを作成します。 ソリューションの主要な機能は DSL 定義図です。これは DslDefinition.dsl に保存されています。 DSL 定義は、DSL のクラスとシェイプを定義します。 これらの要素を変更および追加した後で、プログラム コードを追加して DSL を詳細にカスタマイズできます。
 
+作業することをお勧め Dsl に慣れていない場合、 **DSL ツールのラボ**、見つけることができます、このサイト内: [Visualizaton and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128)
 
-[!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
-
-  
 ##  <a name="templates"></a>テンプレート ソリューションを選択します。  
  DSL を定義するには、以下のコンポーネントをインストールしておく必要があります。  
   
 |||  
 |-|-|  
-|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|  
+|Visual Studio|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|  
 |[!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580)|  
 |Visual Studio Visualization and Modeling SDK||  
 
@@ -47,7 +43,7 @@ ms.lasthandoff: 01/13/2018
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
   
- ドメイン固有言語を新規に作成するには、ドメイン固有言語プロジェクト テンプレートを使用して新しい [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューションを作成します。  
+ 新しいドメイン固有言語を作成するには、ドメイン固有言語のプロジェクト テンプレートを使用して新しい Visual Studio ソリューションを作成します。  
   
 #### <a name="to-create-a-dsl-solution"></a>DSL ソリューションを作成するには  
   
@@ -91,24 +87,24 @@ ms.lasthandoff: 01/13/2018
   
  ユーザー インターフェイスは次の図のようになります。  
   
- ![dsl デザイナー](../modeling/media/dsl_designer.png "dsl_designer")  
+ ![dsl designer](../modeling/media/dsl_designer.png "dsl_designer")  
   
  このソリューションはドメイン固有言語を定義します。 詳細については、次を参照してください。[ドメイン固有言語ツールのユーザー インターフェイスの概要](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md)です。  
   
 ### <a name="test-the-solution"></a>ソリューションのテスト  
  テンプレート ソリューションは、機能する DSL を提供します。この DSL を変更するか、またはそのまま使用できます。  
   
- ソリューションをテストするには、F5 キーを押すか、または Ctrl キーを押しながら F5 キーを押します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の新しいインスタンスが実験モードで開きます。  
+ ソリューションをテストするには、F5 キーを押すか、または Ctrl キーを押しながら F5 キーを押します。 Visual Studio の新しいインスタンスが実験モードで開きます。  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の新しいインスタンスのソリューション エクスプローラーで Sample ファイルを開きます。 このファイルは図として開き、ツールボックスが表示されます。  
+ ソリューション エクスプ ローラーで、Visual Studio の新しいインスタンスでは、サンプル ファイルを開きます。 このファイルは図として開き、ツールボックスが表示されます。  
   
- 作成したソリューションを実行する場合、**最小限言語**、テストを行い、テンプレート[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]次の例のようになります。  
+ 作成したソリューションを実行する場合、**最小限言語**実験用の Visual Studio のテンプレートは次の例のようになります。  
   
  ![](../modeling/media/dsl_min.png "DSL_min")  
   
  ツールを試してみます。 要素を作成して接続します。  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用インスタンスを閉じます。  
+ Visual Studio の実験用インスタンスを終了します。  
   
 > [!NOTE]
 >  DSL を変更した場合は、Sample テスト ファイルにシェイプが表示されなくなります。 ただし、新しい要素を作成できます。  
@@ -217,11 +213,11 @@ ms.lasthandoff: 01/13/2018
   
 ##### <a name="to-test-the-new-domain-classes"></a>新しいドメイン クラスをテストするには  
   
-1.  **すべてのテンプレートの変換をクリックして**DSL デザイナー コードを生成する、ソリューション エクスプ ローラーのツールバーにします。 このステップは自動化できます。 詳細については、次を参照してください。[すべてのテンプレートの変換を自動化する方法](http://msdn.microsoft.com/en-us/b63cfe20-fe5e-47cc-9506-59b29bca768a)です。  
+1.  **すべてのテンプレートの変換をクリックして**DSL デザイナー コードを生成する、ソリューション エクスプ ローラーのツールバーにします。 このステップは自動化できます。 詳細については、次を参照してください。[すべてのテンプレートの変換を自動化する方法](http://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a)です。
   
-2.  **ビルドおよび DSL を実行します。** 新しいインスタンスを実行するには、f5 キーまたは ctrl キーを押しながら f5 キーを押して[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]実験モードでします。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用インスタンスで、DSL のファイル名拡張子が付いているファイルを開くかまたは作成します。  
+2.  **ビルドおよび DSL を実行します。** 実験用のモードで Visual Studio の新しいインスタンスを実行するには、f5 キーまたは ctrl キーを押しながら F5 キーを押します。 Visual Studio の実験用インスタンスの開くか、DSL のファイル名拡張子を持つファイルを作成します。  
   
-3.  **エクスプ ローラーを開きます。** At が付き、通常エクスプ ローラー ウィンドウの言語では、ダイアグラムの面*YourLanguage*エクスプ ローラー。 このウィンドウが表示されない場合は、ソリューション エクスプローラーの下のタブに表示されている可能性があります。 見つからない場合、上、**ビュー**  メニューのをポイント**その他のウィンドウ**をクリックして * YourLanguage ***エクスプ ローラー**です。  
+3.  **エクスプ ローラーを開きます。** At が付き、通常エクスプ ローラー ウィンドウの言語では、ダイアグラムの面*YourLanguage*エクスプ ローラー。 このウィンドウが表示されない場合は、ソリューション エクスプローラーの下のタブに表示されている可能性があります。 見つからない場合、上、**ビュー**  メニューのをポイント**その他のウィンドウ**をクリックし、 *YourLanguage* **エクスプ ローラー**です。  
   
      エクスプローラーにはモデルのツリー ビューが表示されます。  
   
@@ -317,7 +313,7 @@ ms.lasthandoff: 01/13/2018
   
 1.  **すべてのテンプレートの変換をクリックして**DSL デザイナー コードを生成する、ソリューション エクスプ ローラーのツールバーにします。  
   
-2.  **ビルドおよび DSL を実行します。** 新しいインスタンスを実行するには、f5 キーまたは ctrl キーを押しながら f5 キーを押して[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]実験モードでします。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用インスタンスで、DSL のファイル名拡張子が付いているファイルを開くかまたは作成します。  
+2.  **ビルドおよび DSL を実行します。** 実験用のモードで Visual Studio の新しいインスタンスを実行するには、f5 キーまたは ctrl キーを押しながら F5 キーを押します。 Visual Studio の実験用インスタンスの開くか、DSL のファイル名拡張子を持つファイルを作成します。  
   
 3.  **要素のツールがツールボックスに表示されることを確認します。**  
   
@@ -393,7 +389,7 @@ ms.lasthandoff: 01/13/2018
   
 1.  **すべてのテンプレートの変換をクリックして**DSL デザイナー コードを生成する、ソリューション エクスプ ローラーのツールバーにします。  
   
-2.  **ビルドおよび DSL を実行します。** 新しいインスタンスを実行するには、f5 キーまたは ctrl キーを押しながら f5 キーを押して[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]実験モードでします。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用インスタンスで、DSL のファイル名拡張子が付いているファイルを開くかまたは作成します。  
+2.  **ビルドおよび DSL を実行します。** 実験用のモードで Visual Studio の新しいインスタンスを実行するには、f5 キーまたは ctrl キーを押しながら F5 キーを押します。 Visual Studio の実験用インスタンスの開くか、DSL のファイル名拡張子を持つファイルを作成します。  
   
 3.  **接続ツールがツールボックスに表示されていることを確認します。**  
   
@@ -494,7 +490,7 @@ ms.lasthandoff: 01/13/2018
   
 1.  **すべてのテンプレートの変換をクリックして**DSL デザイナー コードを生成する、ソリューション エクスプ ローラーのツールバーにします。  
   
-2.  **ビルドおよび DSL を実行します。** 新しいインスタンスを実行するには、f5 キーまたは ctrl キーを押しながら f5 キーを押して[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]実験モードでします。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用インスタンスで、DSL のファイル名拡張子が付いているファイルを開くかまたは作成します。  
+2.  **ビルドおよび DSL を実行します。** 実験用のモードで Visual Studio の新しいインスタンスを実行するには、f5 キーまたは ctrl キーを押しながら F5 キーを押します。 Visual Studio の実験用インスタンスの開くか、DSL のファイル名拡張子を持つファイルを作成します。  
   
 3.  **ツールがツールボックスに表示されていることを確認します。**  
   
@@ -623,12 +619,10 @@ ms.lasthandoff: 01/13/2018
 |DSL のエクスプローラーで、要素がその型の名前でのみ表示される。|DSL 定義でクラスのドメイン プロパティを選択し、プロパティ ウィンドウで、設定**は要素名**true に設定します。|  
 |DSL が常に XML エディタで開かれる。|これは、ファイルの読み取り中に発生したエラーが原因で起こります。 ただし、そのエラーを修正した後でも、エディターを DSL デザイナーに明示的にリセットする必要があります。<br /><br /> プロジェクト項目を右クリックし、をクリックして**ファイルを開く**選択 * YourLanguage ***デザイナー (既定値)**です。|  
 |アセンブリ名を変更した後に、DSL のツールボックスが表示されない。|更新を行い**DslPackage\GeneratedCode\Package.tt**詳細については、次を参照してください。[する方法: ドメイン固有言語の Namespace を変更する](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md)です。|  
-|アセンブリ名を変更していないのに、DSL のツールボックスが表示されない。<br /><br /> あるいは、拡張機能の読み込みに失敗したことを示すメッセージ ボックスが表示される。|実験用インスタンスをリセットして、ソリューションをリビルドします。<br /><br /> 1.[スタート] メニュー、windows の**すべてのプログラム**、展開[!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)]、し**ツール**、クリックして**Microsoft Visual Studio の実験用インスタンスをリセット**です。<br />2.[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]**ビルド** メニューのをクリックして**ソリューションのリビルド**です。|  
+|アセンブリ名を変更していないのに、DSL のツールボックスが表示されない。<br /><br /> あるいは、拡張機能の読み込みに失敗したことを示すメッセージ ボックスが表示される。|実験用インスタンスをリセットして、ソリューションをリビルドします。<br /><br /> 1.[スタート] メニュー、windows の**すべてのプログラム**、展開[!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)]、し**ツール**、クリックして**Microsoft Visual Studio の実験用インスタンスをリセット**です。<br />2.Visual Studio で**ビルド** メニューのをクリックして**ソリューションのリビルド**です。|  
   
 ## <a name="see-also"></a>参照  
  [ドメイン固有言語の概要](../modeling/getting-started-with-domain-specific-languages.md)   
  [Windows フォーム ベースのドメイン固有言語の作成](../modeling/creating-a-windows-forms-based-domain-specific-language.md)   
  [WPF に基づくドメイン固有言語の作成](../modeling/creating-a-wpf-based-domain-specific-language.md)
-
-[!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 

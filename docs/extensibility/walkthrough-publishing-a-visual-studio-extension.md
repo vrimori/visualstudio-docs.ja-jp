@@ -16,11 +16,11 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: 9b2823c15309e63262052fd3cc95d914bf1614c4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: be1402da1677388712472d4309c40ce767358f7b
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="walkthrough-publishing-a-visual-studio-extension"></a>チュートリアル: Visual Studio 拡張機能の発行
 
@@ -70,9 +70,7 @@ ms.lasthandoff: 12/22/2017
 
   ![Marketplace へのアップロードします。](media/upload-to-marketplace.png)
 
-6. 使用して、拡張機能をアップロードするパブリッシャーを選択します。  発行元を変更するには、左上隅のパブリッシャー名をクリックします。
-
-  ![Marketplace パブリッシャーの変更](media/change-marketplace-publisher.png)
+6. 使用して、拡張機能をアップロードするパブリッシャーを選択します。  発行元を変更するには、左側に表示されている発行元の名前をクリックするとします。  をクリックして**新しい拡張子**選択**Visual Studio**です。
 
 7. **1: 拡張機能をアップロード**、Visual Studio Marketplace に直接 VSIX ファイルをアップロードまたはだけ、独自の web サイトへのリンクを追加することもできます。 この場合、拡張機能、TestPublish.vsix をアップロードします。  ドラッグして、拡張機能の削除を使用しても、  **をクリックして**ファイルを参照するリンクです。  拡張機能は、プロジェクトの \bin\Release フォルダーで確認できます。  **[続行]**をクリックします。
 
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/22/2017
     
     * **VSIX ID** Visual Studio は拡張機能を使用する一意の識別子を指定します。  自動更新する、拡張子が付いている場合に必要です。  これは自動に設定された source.extension.vsixmanifest ファイルからです。
     
-    * **ロゴ**して拡張機能を使用します。  指定した場合は、source.extension.vsixmanifest ファイルの自動設定されたこのになります。
+   * **ロゴ**して拡張機能を使用します。  指定した場合は、source.extension.vsixmanifest ファイルの自動設定されたこのになります。
     
     * **短い説明文**は、拡張機能の内容。  Source.extension.vsixmanifest ファイルの自動設定されたこのになります。
     
@@ -108,12 +106,32 @@ ms.lasthandoff: 12/22/2017
     
     * **拡張機能の Q & A を許可する**によりユーザーは、拡張機能エントリ ページ上の質問のままにします。
 
-9. をクリックして**保存およびアップロード**です。 これは、操作により、パブリッシャーへの管理 ページ。  拡張機能はまだ公開されていません。  拡張機能のエントリを拡張機能ポイントを発行し、をクリックする**しています.**し**パブリック**です。  どの拡張機能のようになります Marketplace でを選択して表示できます**の詳細を表示**です。  買収番号 をクリックして**レポート**です。  をクリックして拡張機能を変更するには、**編集*です。
+9. をクリックして**保存およびアップロード**です。 これは、操作により、パブリッシャーへの管理 ページ。  拡張機能はまだ公開されていません。  拡張機能と選択 を右クリックし、拡張機能を公開する**公開**です。  どの拡張機能のようになります Marketplace でを選択して表示できます**表示拡張機能**します。  買収番号 をクリックして**レポート**です。  をクリックして拡張機能を変更するには、**編集*です。
 
   ![拡張機能エントリ メニュー](media/extension-entry-menu.png)
 
 10. クリックした後**公開**、拡張機能がパブリックようになりました。  拡張機能の Visual Studio Marketplace を検索します。
 
+## <a name="add-additional-users-to-manage-your-publisher-account"></a>発行元のアカウントを管理するユーザーを追加します。
+
+Marketplace は、アクセスし、発行元のアカウントを管理するその他のユーザー権限の許可をサポートします。
+
+1. ユーザーを追加するパブリッシャーのアカウントに移動します。
+
+2. 選択**メンバー**  をクリック**追加**
+
+  ![追加のユーザーを追加します。](media/add-users.png)
+
+3. 追加し、適切なレベルの下にあるアクセスを付与するユーザーの電子メール アドレスを指定できます**ロールを選択して**です。  次のオプションから選択できます。
+
+  * **作成者**: ユーザーの拡張機能を公開ができない表示または管理できる他のユーザーによって公開された拡張機能です。
+  
+  * **リーダー**: ユーザーから、拡張機能の表示しますが、パブリッシュことはできません、または拡張機能を管理します。
+  
+  * **共同作成者**: ユーザーをパブリッシュし、拡張機能を管理ことはできませんパブリッシャーの設定を編集またはアクセスを管理します。
+  
+  * **所有者**: ユーザーが発行し拡張機能を管理、パブリッシャーの設定を編集してのアクセスを管理します。
+  
 ## <a name="install-the-extension-from-the-visual-studio-marketplace"></a>Visual Studio Marketplace から、拡張機能をインストールします。
 
 これで、拡張機能を発行すると、Visual Studio にインストールし、テストします。
@@ -126,7 +144,7 @@ ms.lasthandoff: 12/22/2017
 
 4. インストールを完了するには、Visual Studio のすべてのインスタンスを閉じます。
 
-## <a name="removing-the-extension"></a>拡張機能を削除します。
+## <a name="remove-the-extension"></a>拡張機能を削除します。
 
 お使いのコンピューターと Visual Studio Marketplace から、拡張機能を削除できます。
 
@@ -136,7 +154,7 @@ ms.lasthandoff: 12/22/2017
 
 2. 右上隅にあるをクリックして**発行**拡張機能です。  TestPublish を発行するために使用するパブリッシャーを選択します。  TestPublish の一覧が表示されます。
 
-3. 拡張機能エントリをポイントし、をクリック**しています.**と**を削除しています.**拡張機能を削除することを確認するように求められます。  **[OK]**をクリックします。
+3. 拡張機能エントリを右クリックし、をクリックして**削除**拡張機能を削除することを確認するように求められます。  **[OK]**をクリックします。
 
 ### <a name="to-remove-the-extension-from-your-computer"></a>お使いのコンピューターから、拡張機能を削除するには
 

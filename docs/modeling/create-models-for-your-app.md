@@ -25,19 +25,20 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: f439ebbf7505086c3105fbb5aee9ba05f22de2e4
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 26dbef0fce67b4af461e7bbc15ecb870f630ca0e
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-models-for-your-app"></a>アプリのモデルを生成する
+
 モデリング図を使用すると、コードや、ソフトウェア システムで対応する必要があるユーザー要求について、効果的に理解して明確にし、アイデアを伝え合うことができます。
-  
- どのバージョンの Visual Studio ダイアグラムの各種類のサポートを参照してください[アーキテクチャおよびモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)です。  
-  
- システムまたは既存のコードのアーキテクチャを視覚化するには、次の図を作成します。  
-  
+
+どのバージョンの Visual Studio ダイアグラムの各種類のサポートを参照してください[アーキテクチャおよびモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)です。  
+
+システムまたは既存のコードのアーキテクチャを視覚化するには、次の図を作成します。  
+
 |**図**|**表示される内容**|  
 |-----------------|---------------|  
 |[依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)<br /><br /> [依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)|システムのアーキテクチャの概要|  
@@ -52,11 +53,10 @@ ms.lasthandoff: 01/13/2018
 |[ユーザー要件のモデリング](../modeling/model-user-requirements.md)|モデルを使用して、ユーザーのニーズを明確にして伝えます。|  
 |[アプリのアーキテクチャをモデル化する](../modeling/model-your-app-s-architecture.md)|モデルを使用して、システムの全体的な構造と動作を記述し、確実にユーザーのニーズを満たせるようにします。|  
 |[開発時のシステムの検証](../modeling/validate-your-system-during-development.md)|ソフトウェアがユーザーのニーズ、およびシステムのアーキテクチャ全体と一致していることを確認します。|  
-|[開発プロセス内でのモデルの使用](../modeling/use-models-in-your-development-process.md)<br /><br /> [アジャイル開発モデルを使用してください。](http://msdn.microsoft.com/en-us/592ac27c-3d3e-454a-9c38-b76658ed137f)|モデルを使用すると、システムの開発中に効果的にシステムを理解して変更することができます。|  
+|[開発プロセス内でのモデルの使用](../modeling/use-models-in-your-development-process.md)<br /><br /> [アジャイル開発モデルを使用してください。](http://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)|モデルを使用すると、システムの開発中に効果的にシステムを理解して変更することができます。|  
 |[モデリング ソリューションの構築](../modeling/structure-your-modeling-solution.md)|大規模または中規模のプロジェクトでモデルを整理します。|  
   
-## <a name="external-resources"></a>外部リソース  
-  
-|**カテゴリ**|**Links**|  
-|------------------|---------------|  
-|**フォーラム**|-   [Visual Studio の視覚化ツールとモデリング ツール](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio の視覚化およびモデリング SDK (DSL ツール)](http://go.microsoft.com/fwlink/?LinkId=184721)|
+## <a name="resources"></a>リソース
+
+[Visual Studio の視覚化およびモデリング ツールのフォーラム](http://go.microsoft.com/fwlink/?LinkId=184720)  
+[Visual Studio 機能拡張フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vsx)

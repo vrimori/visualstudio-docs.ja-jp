@@ -11,27 +11,29 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 16001ed6447f3dcfe649d0fe659c98d97b9e310c
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: be69cc9335480d901824ce8a4981728a34db6395
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deploying-a-custom-directive-processor"></a>カスタム ディレクティブ プロセッサの配置
+
 Visual Studio でカスタム ディレクティブ プロセッサを使用して、任意のコンピューターで、するには、このトピックで説明する方法のいずれかで登録する必要があります。  
   
- 次の方法があります。  
+次の方法があります。  
   
--   [Visual Studio 拡張機能 (VSIX)](http://msdn.microsoft.com/en-us/64ff1452-f7d5-42d9-98b8-76f769f76832)です。 これを使用すると、ディレクティブ プロセッサを自分のコンピューターと他のコンピューターの両方でインストールおよびアンインストールできます。 通常は、他の機能も同じ VSIX にパッケージ化します。  
+-   [Visual Studio 拡張機能](../extensibility/shipping-visual-studio-extensions.md)します。 これを使用すると、ディレクティブ プロセッサを自分のコンピューターと他のコンピューターの両方でインストールおよびアンインストールできます。 通常は、他の機能も同じ VSIX にパッケージ化します。  
   
 -   [VSPackage](../extensibility/internals/vspackages.md)です。 ディレクティブ プロセッサ以外の機能も含む VSPackage を定義する場合は、ディレクティブ プロセッサの便利な登録方法を利用できます。  
   
 -   レジストリ キーを設定する。 この方法では、ディレクティブ プロセッサのレジストリ エントリを追加します。  
   
- Visual Studio で、テキスト テンプレートを変換する場合にのみ、これらのメソッドのいずれかを使用する必要がありますまたは[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]です。 独自のアプリケーションのカスタム ホストを使用する場合は、そのカスタム ホストを通じて各ディレクティブのディレクティブ プロセッサを探します。  
+Visual Studio または MSBuild でテキスト テンプレートを変換する場合にのみ、これらのメソッドのいずれかを使用する必要があります。 独自のアプリケーションのカスタム ホストを使用する場合は、そのカスタム ホストを通じて各ディレクティブのディレクティブ プロセッサを探します。  
   
-## <a name="deploying-a-directive-processor-in-a-vsix"></a>VSIX でのディレクティブ プロセッサの配置  
- カスタム ディレクティブ プロセッサを追加することができます、 [Visual Studio Extension (VSIX)](http://msdn.microsoft.com/en-us/64ff1452-f7d5-42d9-98b8-76f769f76832)です。  
+## <a name="deploying-a-directive-processor-in-a-vsix"></a>VSIX でのディレクティブ プロセッサの配置
+
+カスタム ディレクティブ プロセッサを追加することができます、 [Visual Studio Extension (VSIX)](../extensibility/starting-to-develop-visual-studio-extensions.md)です。
   
  .vsix ファイルに次の 2 つのアイテムが格納されていることを確認する必要があります。  
   
@@ -39,10 +41,10 @@ Visual Studio でカスタム ディレクティブ プロセッサを使用し�
   
 -   ディレクティブ プロセッサを登録する .pkgdef ファイル。 このファイルのルート名は、アセンブリと同じにする必要があります。 たとえば、アセンブリ ファイル名が CDP.dll のときは、CDP.pkgdef にします。  
   
- .vsix ファイルのコンテンツを確認または変更するには、そのファイル名拡張子を .zip に変更してから開きます。 コンテンツの編集が終わったら、ファイル名拡張子を .vsix に戻します。  
-  
- .vsix ファイルはいくつかの方法で作成できます。 次の手順では、そのうちの 1 つについて説明します。  
-  
+.vsix ファイルのコンテンツを確認または変更するには、そのファイル名拡張子を .zip に変更してから開きます。 コンテンツの編集が終わったら、ファイル名拡張子を .vsix に戻します。  
+
+.vsix ファイルはいくつかの方法で作成できます。 次の手順では、そのうちの 1 つについて説明します。  
+
 #### <a name="to-develop-a-custom-directive-processor-in-a-vsix-project"></a>VSIX プロジェクトでカスタム ディレクティブ プロセッサを作成するには  
   
 1.  Visual Studio で VSIX プロジェクトを作成します。  
@@ -90,11 +92,11 @@ Visual Studio でカスタム ディレクティブ プロセッサを使用し�
   
 5.  以下の参照をプロジェクトに追加します。  
   
-    -   **Microsoft.VisualStudio.TextTemplating です。\*.0**  
+    -   **Microsoft.VisualStudio.TextTemplating.\*.0**  
   
-    -   **Microsoft.VisualStudio.TextTemplating.Interfaces です。\*.0**  
+    -   **Microsoft.VisualStudio.TextTemplating.Interfaces.\*.0**  
   
-    -   **Microsoft.VisualStudio.TextTemplating.VSHost です。\*.0**  
+    -   **Microsoft.VisualStudio.TextTemplating.VSHost.\*.0**  
   
 6.  カスタム ディレクティブ プロセッサ クラスをプロジェクトに追加します。  
   
@@ -197,5 +199,6 @@ Visual Studio でカスタム ディレクティブ プロセッサを使用し�
 |クラス|REG_SZ|\<**完全修飾クラス名**>|  
 |Assembly|REG_SZ|\<**GAC にアセンブリ名**>|  
   
-## <a name="see-also"></a>参照  
- [カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成](../modeling/creating-custom-t4-text-template-directive-processors.md)
+## <a name="see-also"></a>関連項目
+
+[カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成](../modeling/creating-custom-t4-text-template-directive-processors.md)

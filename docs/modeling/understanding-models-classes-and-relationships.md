@@ -11,11 +11,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: a3ee963ef1ac4c4159f0fe1922bfafa90875fad7
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: b6e23b91f411cd5260d31927ec35957a3f6c00c1
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="understanding-models-classes-and-relationships"></a>モデル、クラス、およびリレーションシップについて
 ドメイン固有言語 (DSL) は、作成した場合、カスタム プログラム コードと共にその DSL 定義ファイルで定義されます。 DSL ソリューション内のプログラム コードのほとんどは、このファイルから生成されます。  
@@ -25,7 +25,7 @@ ms.lasthandoff: 01/13/2018
 ## <a name="the-dsl-definition"></a>DSL 定義  
  開くと`Dsl\DslDefinition.dsl`、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ウィンドウ次の図のようになります。  
   
- ![dsl デザイナー](../modeling/media/dsl_designer.png "dsl_designer")  
+ ![dsl designer](../modeling/media/dsl_designer.png "dsl_designer")  
   
  DSL 定義で最も重要な情報は、DSL 定義ダイアグラムに表示されます。 詳細についても DslDefinition.dsl の一部であるは、ダイアグラムの横にある通常表示 DSL のエクスプ ローラーに表示されます。 最も一般的なタスクについては、図とのより高度なカスタマイズの DSL のエクスプ ローラーを操作するとします。  
   
@@ -150,4 +150,4 @@ ms.lasthandoff: 01/13/2018
  派生リレーションシップには、その基本リレーションシップ専門としています。 ドメインは、リンクはから派生する必要がありますが、または基本リレーションシップによってリンクされたクラスと同じクラスです。 派生リレーションシップのリンク作成すると、モデルでは、派生クラスと基本リレーションシップの両方のインスタンスです。 プログラム コードでは、ベースか、派生クラスによって生成されるプロパティを使用して、リンクの反対側の端に移動することができます。  
   
 ## <a name="see-also"></a>参照  
- [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
+ [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -14,11 +14,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 8250f21bd95816bf0d9424dc4a3fbb45302919d7
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 21e31bd582fda7884f0f246bd6eda39e5e89a375
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>ドメイン固有言語の定義への追跡プロパティの追加
 このチュートリアルでは、ドメイン モデルに追跡プロパティを追加する方法を示します。  
@@ -27,7 +27,7 @@ ms.lasthandoff: 01/13/2018
   
  たとえば、ドメイン固有言語ツール (DSL ツール) のドメイン クラスは、ユーザーの名前を使用して計算される既定値を持つドメイン クラスのプロパティ表示名デザイン時に値を変更したり計算値にリセットできます。  
   
- このチュートリアルでは、追跡、モデルの既定の Namespace プロパティに基づいて既定値を持つプロパティの Namespace を持つドメイン固有言語 (DSL) を作成します。 プロパティの追跡の詳細については、次を参照してください。[追跡プロパティを定義する](http://msdn.microsoft.com/en-us/0538b0e4-6221-4e7d-911a-b92cd622f0be)です。  
+ このチュートリアルでは、追跡、モデルの既定の Namespace プロパティに基づいて既定値を持つプロパティの Namespace を持つドメイン固有言語 (DSL) を作成します。 プロパティの追跡の詳細については、次を参照してください。[追跡プロパティを定義する](http://msdn.microsoft.com/0538b0e4-6221-4e7d-911a-b92cd622f0be)です。  
   
 -   DSL ツールは、プロパティ記述子の追跡をサポートします。 ただし、DSL デザイナーは、追跡プロパティ、言語を追加するのには使用できません。 そのため、定義および追跡プロパティを実装するカスタム コードを追加する必要があります。  
   
@@ -253,7 +253,7 @@ ms.lasthandoff: 01/13/2018
 #### <a name="to-modify-the-type-descriptor-for-the-examplemodel-domain-class"></a>ExampleModel ドメイン クラスの型記述子を変更するには  
   
 1.  TypeDescriptor.cs ファイルに次のコードを追加します。  
-  
+
     ```csharp  
     using System;  
     using System.ComponentModel;  

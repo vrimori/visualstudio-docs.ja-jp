@@ -12,11 +12,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: fdbd94abdaa3a1acb460a3b2a5b276d169c20269
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 84107514e728dbfa79b7dfdaee6c3febaee21274
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="properties-of-swimlanes"></a>スイムレーンのプロパティ
 スイムレーンは、ダイアグラムに追加できます。 スイムレーンはダイアグラムを垂直方向または水平方向の領域に分割します。 スイムレーン内に表示される他の図形を定義することができます。 詳細については、次を参照してください。[ドメイン固有言語の定義方法](../modeling/how-to-define-a-domain-specific-language.md)です。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語の拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)です。  
@@ -51,4 +51,4 @@ ms.lasthandoff: 01/13/2018
 |ヘルプ キーワード|このレーンの F1 ヘルプをインデックス化に使用されるキーワード。|\<なし >|  
   
 ## <a name="see-also"></a>参照  
- [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
+ [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

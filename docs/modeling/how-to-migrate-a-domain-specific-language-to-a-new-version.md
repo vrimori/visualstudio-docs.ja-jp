@@ -10,11 +10,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: e15efdb40b21b187dfc8bec543fc48c91f9efcf6
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 7578426058c5e41bb6507c044be411348c42d050
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>方法: ドメイン固有言語を新バージョンに移行する
 定義し、ドメイン固有言語を使用するプロジェクトを移行する[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]のバージョンから[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]をと共に配布された[!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)]です。  
@@ -23,7 +23,7 @@ ms.lasthandoff: 01/13/2018
   
  移行ツールを明示的に実行する必要があります: がないが自動的に起動では、ソリューションを開くと[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 ツールとドキュメントの詳細なガイダンスは、このパスに見つかりませんことができます。  
   
- **% プログラム Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**  
+ **%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**  
   
 ## <a name="before-you-migrate-your-dsl-projects"></a>DSL プロジェクトを移行する前に  
  移行ツールで変更する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト ファイル (**.csproj**) ファイルとソリューション ファイル (**.sln**)。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/13/2018
   
     -   Windows エクスプ ローラー (またはファイル エクスプ ローラー) では、ツールをダブルクリックしてまたはコマンド プロンプトからツールを起動できます。 このツールは、この場所には。  
   
-         **%ProgramFiles%\Microsoft visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**  
+         **%ProgramFiles%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**  
   
 2.  ソリューションおよびプロジェクトに変換することがあるフォルダーを選択します。  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/13/2018
     2.  クリックして、**すべてのテンプレートの変換**ソリューション エクスプ ローラーのヘッダーにボタンをクリックします。  
   
         > [!NOTE]
-        >  この手順を不要な作成できます。 詳細については、次を参照してください。[すべてのテンプレートの変換を自動化する方法](http://msdn.microsoft.com/en-us/b63cfe20-fe5e-47cc-9506-59b29bca768a)です。  
+        >  この手順を不要な作成できます。 詳細については、次を参照してください。[すべてのテンプレートの変換を自動化する方法](http://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a)です。  
   
 6.  変換後のプロジェクトでカスタム コードを更新します。  
   

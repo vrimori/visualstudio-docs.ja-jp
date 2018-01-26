@@ -14,11 +14,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: e3ab33282c89617a74cc80623040ffc9176b761a
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 953be16c3bf48a865acf131a2fd8fe02085b0637
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="properties-of-image-shapes"></a>イメージ シェイプのプロパティ
 イメージの図形を使用すると、ドメイン クラスが生成されたデザイナーで表示する方法を指定します。 設定して、イメージの図形を定義、`Image`定義済みのイメージ ファイルのクラスのプロパティです。 次の形式がサポートされています。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/13/2018
   
 -   .wmf  
   
--   *.emf  
+-   .emf  
   
 -   .png  
   
@@ -72,4 +72,4 @@ ms.lasthandoff: 01/13/2018
 |イメージ|この図形に使用されるイメージ ファイルへのパス。|\<なし >|  
   
 ## <a name="see-also"></a>参照  
- [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
+ [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

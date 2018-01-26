@@ -11,22 +11,24 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: f851f98fca98af8dfc95160f244c59cc0645a805
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 66b4c44a79446aacc56761b6b565d8c979d007f7
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="text-template-utility-methods"></a>テキスト テンプレートのユーティリティ メソッド
-コードを記述する場合は、常に使用できるいくつかの方法がある、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]テキスト テンプレートです。 これらのメソッドが定義されている<xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>です。  
-  
+
+Visual Studio テキスト テンプレートでコードを記述する場合は、常に使用できるいくつかの方法はあります。 これらのメソッドが定義されている<xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>です。
+
 > [!TIP]
->  また、他のメソッドと正規 (いない前処理された) テキスト テンプレートでのホスト環境で提供されるサービスを使用することができます。 たとえば、ファイルのパスを解決するには、エラーをログに記録してによって提供されるサービスを取得[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]パッケージを読み込むとします。  詳細については、次を参照してください。[テキスト テンプレートから Visual Studio のへのアクセス](http://msdn.microsoft.com/en-us/0556f20c-fef4-41a9-9597-53afab4ab9e4)です。  
+> また、他のメソッドと正規 (いない前処理された) テキスト テンプレートでのホスト環境で提供されるサービスを使用することができます。 たとえば、ファイルのパスを解決するには、エラーをログに記録して Visual Studio やいずれかによって提供されるサービスを取得パッケージをロードします。 詳細については、次を参照してください。[テキスト テンプレートから Visual Studio のへのアクセス](http://msdn.microsoft.com/0556f20c-fef4-41a9-9597-53afab4ab9e4)です。
   
-## <a name="write-methods"></a>書き込みメソッド  
- 使用することができます、`Write()`と`WriteLine()`式コード ブロックを使用する代わりに、標準のコード ブロック内のテキストを追加する方法です。 次の 2 つのコード ブロックは、機能的に等価です。  
+## <a name="write-methods"></a>書き込みメソッド
+
+使用することができます、`Write()`と`WriteLine()`式コード ブロックを使用する代わりに、標準のコード ブロック内のテキストを追加する方法です。 次の 2 つのコード ブロックは、機能的に等価です。  
   
-##### <a name="code-block-with-an-expression-block"></a>式ブロックを含むコード ブロック  
+### <a name="code-block-with-an-expression-block"></a>式ブロックを含むコード ブロック  
   
 ```  
 <#  
@@ -38,7 +40,7 @@ while (i-- > 0)
 #>  
 ```  
   
-##### <a name="code-block-using-writeline"></a>WriteLine() を使用してコード ブロック  
+### <a name="code-block-using-writeline"></a>WriteLine() を使用してコード ブロック  
   
 ```  
 <#   
@@ -66,7 +68,8 @@ while (i-- > 0)
 #>   
 ```  
   
-## <a name="indentation-methods"></a>インデント メソッド  
+## <a name="indentation-methods"></a>インデント メソッド
+
  インデント メソッドを使用するには、テキスト テンプレートの出力を書式設定します。 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>クラスには、`CurrentIndent`テキスト テンプレートでの現在のインデントを示すプロパティを文字列と`indentLengths`フィールドが追加されているへこみの一覧です。 インデント設定を追加することができます、`PushIndent()`メソッドおよび減算で、インデント、`PopIndent()`メソッドです。 すべてのインデントを削除する場合を使用して、`ClearIndent()`メソッドです。 次のコード ブロックは、これらのメソッドの使用を示しています。  
   
 ```  
@@ -94,7 +97,7 @@ Hello
 ```  
   
 ## <a name="error-and-warning-methods"></a>エラーと警告メソッド  
- エラーおよび警告のユーティリティ メソッドを使用してメッセージを追加することができます、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]エラー ボックスの一覧です。 たとえば、次のコードは エラー一覧に、エラー メッセージを追加します。  
+ エラーと警告のユーティリティ メソッドを使用して、メッセージを Visual Studio のエラー一覧に追加することができます。 たとえば、次のコードは エラー一覧に、エラー メッセージを追加します。  
   
 ```  
 <#  
@@ -115,7 +118,7 @@ Hello
   
  `<#@template ... hostspecific="true" #>`  
   
- 型`this.Host`テンプレートを実行しているホストの種類によって異なります。 実行されているテンプレートで[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、キャストできます`this.Host`に`IServiceProvider`IDE などのサービスにアクセスするためにします。 例:  
+ 型`this.Host`テンプレートを実行しているホストの種類によって異なります。 Visual Studio で実行されているテンプレートでキャストできます`this.Host`に`IServiceProvider`IDE などのサービスにアクセスするためにします。 例:  
   
 ```  
 EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)  

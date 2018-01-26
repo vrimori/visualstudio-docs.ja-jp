@@ -14,11 +14,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: ee218f119d8c996c1be72ff911735c271df44e98
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 927b033928d200cbab5271be93679106e7f4fe72
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="writing-a-t4-text-template"></a>T4 テキスト テンプレートの作成
 テキスト テンプレートには、そのテンプレートから生成されるテキストが含まれます。 たとえば、web ページを作成するテンプレートが含まれて"\<html >…」および HTML ページの他のすべての標準的な部分です。 テンプレートに挿入が*コントロール ブロック*、プログラム コードのフラグメントがあります。 コントロール ブロックはさまざまな値を提供すると共に、テキストの一部を条件付きにしたり、繰り返したりできるようにします。  
@@ -258,9 +258,10 @@ Content of MyFile.txt is:
   
 ```  
   
- ホストから提供される他のサービスを取得することもできます。 詳細については、次を参照してください。[にアクセスする Visual Studio またはテンプレートからの他のホスト](http://msdn.microsoft.com/en-us/0556f20c-fef4-41a9-9597-53afab4ab9e4)です。  
-  
-### <a name="design-time-text-templates-run-in-a-separate-appdomain"></a>別の AppDomain で実行されるデザイン時テキスト テンプレート  
+ホストから提供される他のサービスを取得することもできます。 詳細については、次を参照してください。[にアクセスする Visual Studio またはテンプレートからの他のホスト](http://msdn.microsoft.com/0556f20c-fef4-41a9-9597-53afab4ab9e4)です。
+
+### <a name="design-time-text-templates-run-in-a-separate-appdomain"></a>別の AppDomain で実行されるデザイン時テキスト テンプレート
+
  注意すべきを[デザイン時テキスト テンプレート](../modeling/design-time-code-generation-by-using-t4-text-templates.md)メインのアプリケーションから分離した AppDomain で実行されます。 ほとんどの場合、これは重要ではありませんが、一部の複雑な状況で制限が生じることがあります。 たとえば、別のサービスからテンプレート内またはテンプレート外のデータを渡す場合、そのサービスでシリアル化可能な API を提供する必要があります。  
   
  (の場合は true これは、[実行時テキスト テンプレート](../modeling/run-time-text-generation-with-t4-text-templates.md)、コードの残りの部分と共にコンパイルされるコードを提供します。)。  

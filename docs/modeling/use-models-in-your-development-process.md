@@ -12,11 +12,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 08517439e2b99ca9ceba29ad3c7558494cf6bb47
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 42c873fc8c7991d5397d611c0aa6009bfc1720c1
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-models-in-your-development-process"></a>開発プロセス内でのモデルの使用
 Visual Studio では、システム、アプリケーション、またはコンポーネントについて理解し、変更するためのモデルを使用することができます。 モデルは、システムが動作する世界を視覚化できるようにして、ユーザーのニーズを明確化し、システムのアーキテクチャを定義し、コードを分析し、コードが要件を満たしていることを確認できるようにします。 参照してください[Channel 9 ビデオ: モデリングによるアーキテクチャの改善](http://go.microsoft.com/fwlink/?LinkID=252078)です。  
@@ -130,12 +130,13 @@ Visual Studio では、システム、アプリケーション、またはコン
 |**ブログ**|[Visual Studio ALM + Team Foundation Server のブログ](http://go.microsoft.com/fwlink/?LinkID=201340)|  
 |**技術記事とジャーナル**|[MSDN アーキテクチャ センター](http://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Visual Studio アーキテクチャ ツーリング ガイダンス](../modeling/visual-studio-architecture-tooling-guidance.md)|  
   
-## <a name="see-also"></a>参照  
- [アジャイル開発モデルを使用してください。](http://msdn.microsoft.com/en-us/592ac27c-3d3e-454a-9c38-b76658ed137f)   
- [アプリのモデルを作成します。](../modeling/create-models-for-your-app.md)   
- [ユーザー要件のモデリング](../modeling/model-user-requirements.md)   
- [モデルのアプリのアーキテクチャ](../modeling/model-your-app-s-architecture.md)   
- [モデルからのテストを開発します。](../modeling/develop-tests-from-a-model.md)   
- [モデリング ソリューションの構築](../modeling/structure-your-modeling-solution.md)
+## <a name="see-also"></a>関連項目
+
+[アジャイル開発モデルを使用してください。](http://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)   
+[アプリのモデルを作成します。](../modeling/create-models-for-your-app.md)   
+[ユーザー要件のモデリング](../modeling/model-user-requirements.md)   
+[モデルのアプリのアーキテクチャ](../modeling/model-your-app-s-architecture.md)   
+[モデルからのテストを開発します。](../modeling/develop-tests-from-a-model.md)   
+[モデリング ソリューションの構築](../modeling/structure-your-modeling-solution.md)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

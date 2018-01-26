@@ -11,11 +11,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: c58dc30285257a8292e8ce8dcf81b7b31cfee2c5
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 86955d745e645d2d37e9e33f258a2662bcac59fe
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-dsldefinitiondsl-file"></a>DslDefinition.dsl ファイル
 このトピックは、プロジェクト内の Dsl の DslDefinition.dsl ファイルの構造を記述、[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]を定義するには、ソリューション、*ドメイン固有言語*します。 DslDefinition.dsl ファイルは、クラスとドメイン固有言語、ダイアグラム、図形、コネクタ、シリアル化形式との関係について説明しますと**ツールボックス**ドメイン固有言語のおよび編集ツールです。 ドメイン固有言語ソリューションでは、これらのツールを定義するコードは DslDefinition.dsl ファイルの情報に基づいて生成されます。  
@@ -151,15 +151,15 @@ ms.lasthandoff: 01/13/2018
   
  すべてのドメイン クラス (リレーションシップ、シェイプ、コネクタ、図など) には、次の属性と子ノードを含めることができます。  
   
--   **Id。**この属性は、GUID です。 ファイルに値を指定しないと、Domain-Specific Language Designer によって値が作成されます。 (このドキュメントの説明では、スペースを節約するためこの属性は通常省略しています。)  
+-   **Id.**この属性は、GUID です。 ファイルに値を指定しないと、Domain-Specific Language Designer によって値が作成されます。 (このドキュメントの説明では、スペースを節約するためこの属性は通常省略しています。)  
   
 -   **名前と Namespace です。** これらの属性は、生成されたコードで、クラスの名前空間と名前を指定します。 これらの属性の組み合わせは、ドメイン固有言語内で一意である必要があります。  
   
 -   **InheritanceModifier です。** この属性は、"abstract"、"sealed"、または none です。  
   
--   **表示名。** この属性に表示される名前、**プロパティ**ウィンドウです。 DisplayName 属性には、スペースとその他の句読点を使用できます。  
+-   **DisplayName.** この属性に表示される名前、**プロパティ**ウィンドウです。 DisplayName 属性には、スペースとその他の句読点を使用できます。  
   
--   **GeneratesDoubleDerived です。** この属性に設定されている場合は true、2 つのクラスが生成され、1 つは、その他のサブクラスです。 生成されるすべてのメソッドは基底クラスに含まれ、コンストラクターはサブクラスに含まれます。 この属性を設定すると、カスタム コードで生成されるメソッドをすべてオーバーライドできます。  
+-   **GeneratesDoubleDerived.** この属性に設定されている場合は true、2 つのクラスが生成され、1 つは、その他のサブクラスです。 生成されるすべてのメソッドは基底クラスに含まれ、コンストラクターはサブクラスに含まれます。 この属性を設定すると、カスタム コードで生成されるメソッドをすべてオーバーライドできます。  
   
 -   **HasCustomConstructor**です。 この属性が true に設定されている場合、生成されるコードからコンストラクターが省略されるため、独自のコンストラクターを作成できます。  
   
@@ -190,7 +190,7 @@ ms.lasthandoff: 01/13/2018
   
 -   **IsBrowsable**です。 この属性でこのプロパティを表示するかどうかを決定する、**プロパティ**ユーザーには、親クラスのオブジェクトがクリックしたときにウィンドウです。  
   
--   **IsUIReadOnly**です。 この属性は、ユーザーが内のプロパティを変更できるかどうかを判断、**プロパティ**ウィンドウまたはプロパティが示されているデコレータを使用します。  
+-   **IsUIReadOnly**. この属性は、ユーザーが内のプロパティを変更できるかどうかを判断、**プロパティ**ウィンドウまたはプロパティが示されているデコレータを使用します。  
   
 -   **種類**です。 この属性は、Normal、Calculated、CustomStorage のいずれかに設定できます。 この属性を Calculated に設定する場合は、値を決定するカスタム コードを記述する必要があります。また、このプロパティは読み取り専用になります。 この属性を CustomStorage に設定する場合は、値の取得と設定の両方を行うコードを記述する必要があります。  
   
@@ -546,6 +546,6 @@ ComponentHasPorts . Component / ! Component /    ComponentModelHasComponents . C
  コネクタ マップにはデコレータ マップを含めることもできます。  
   
 ## <a name="see-also"></a>参照  
- [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)   
+ [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)   
  [ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)   
  [モデル、クラス、およびリレーションシップについて](../modeling/understanding-models-classes-and-relationships.md)
