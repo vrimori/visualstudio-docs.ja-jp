@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-devops-techdebt
+ms.technology:
+- vs-devops-techdebt
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -18,12 +19,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 14e03f7a7c5d9200cf1ebc40f9098121f4ddbff9
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.workload:
+- multiple
+ms.openlocfilehash: 8ad4a4141d27c9250d53a567ac09b1c5ffa05f49
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>シナリオ: 視覚化およびモデリングを使用したデザインの変更
 ソフトウェア システムがユーザーのニーズを確実に満たすようにするには、Visual Studio の視覚化およびモデリング ツールを使用します。
@@ -485,11 +487,10 @@ ms.lasthandoff: 01/22/2018
 |------------------|---------------|  
 |**フォーラム**|-   [Visual Studio の視覚化ツールとモデリング ツール](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio の視覚化およびモデリング SDK (DSL ツール)](http://go.microsoft.com/fwlink/?LinkId=184721)|  
   
-## <a name="see-also"></a>参照  
- [コードを視覚化します。](../modeling/visualize-code.md)   
- [モデルを使用して、開発工程で](../modeling/use-models-in-your-development-process.md)   
- [アジャイル開発モデルを使用してください。](http://msdn.microsoft.com/en-us/592ac27c-3d3e-454a-9c38-b76658ed137f)   
- [開発時のシステムの検証](../modeling/validate-your-system-during-development.md)   
+## <a name="see-also"></a>関連項目
 
-[!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
+[コードを視覚化します。](../modeling/visualize-code.md)   
+[モデルを使用して、開発工程で](../modeling/use-models-in-your-development-process.md)   
+[アジャイル開発モデルを使用してください。](http://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)   
+[開発時のシステムの検証](../modeling/validate-your-system-during-development.md)
  
