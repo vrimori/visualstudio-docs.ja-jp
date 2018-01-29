@@ -165,7 +165,7 @@
 ###### [名前の変更](ide/reference/rename-vb.md)
 ###### [型とファイル名の同期](ide/reference/sync-type-and-file-vb.md)
 #### [生産性に関するヒント](ide/productivity-tips-for-visual-studio.md)
-##### [ヒントとテクニック](ide/tips-and-tricks-for-visual-studio.md)
+##### [キーボードのヒント](ide/tips-and-tricks-for-visual-studio.md)
 ##### [.NET 開発者向けのヒント](ide/visual-studio-2017-for-dotnet-developers.md)
 ##### [キーボード ショートカットの識別とカスタマイズ](ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)
 ###### [頻繁に使用するコマンドに対応する既定のキーボード ショートカット](ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)

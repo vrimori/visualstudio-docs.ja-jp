@@ -10,15 +10,16 @@ ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-dev_langs: CSharp
+dev_langs:
+- CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 66c1b3ca7a877c001bc3aeb69c5331fdc828aad8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 66017b65e3d1201e02272447cbd3ec1c33c8a5d6
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>クイック スタート: Visual Studio を使用して初めての ASP.NET Core Web アプリを作成する
 
@@ -30,11 +31,11 @@ ms.lasthandoff: 12/22/2017
 
 1. Visual Studio 2017 を開きます。
 
-1. 上部のメニュー バーで、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順に選択します。
+1. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** を選択します。
 
 1. **[新しいプロジェクト]** ダイアログ ボックスで、左ウィンドウの **[Visual C#]** を展開し、**[.NET Core]** を選択します。 中央のウィンドウで、**[ASP.NET Core Web アプリケーション]** を選択してから **[OK]** を選択します。
 
-     **.NET Core** プロジェクト テンプレートが表示されない場合は、**[新しいプロジェクト]** ダイアログ ボックスを取り消し、上部のメニュー バーで **[ツール]**、**[ツールと機能を取得...]** の順に選択します。Visual Studio インストーラーが起動します。 **[ASP.NET と Web 開発]** ワークロードを選択してから **[変更]** を選択します。
+     **.NET Core** プロジェクト テンプレートのカテゴリが表示されない場合は、左側のウィンドウで **[Visual Studio インストーラーを開く]** リンクを選択します。 Visual Studio インストーラーが起動します。 **[ASP.NET と Web 開発]** ワークロードを選択してから **[変更]** を選択します。
 
      ![VS インストーラーの ASP.NET ワークロード](../ide/media/quickstart-aspnet-workload.png)
 
@@ -64,7 +65,7 @@ ms.lasthandoff: 12/22/2017
  }
  ```
 
-1. **Environment** と **String** の下には二重の波下線が表示されます。これらの型は範囲外であるためです。 **[エラー一覧]** ツール バーを開くと、そこに同じエラーが一覧表示されます  (**[エラー一覧]** ツール バーが表示されない場合は、上部のメニュー バーで **[表示]**、**[エラー一覧]** の順に選択します)。
+1. **Environment** と **String** の下には二重の波下線が表示されます。これらの型は範囲外であるためです。 **[エラー一覧]** ツール バーを開くと、そこに同じエラーが一覧表示されます  (**[エラー一覧]** ツール バーが表示されない場合は、上部のメニュー バーで **[表示]** > **[エラー一覧]** の順に選択します)。
 
    ![エラー一覧](../ide/media/quickstart-aspnet-errorlist.png)
 
@@ -72,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="run-the-application"></a>アプリケーションの実行
 
-1. **Ctrl + F5** キーを押してアプリケーションを実行し、Web ブラウザーで開きます。
+1. **Ctrl** + **F5** キーを押してアプリケーションを実行し、Web ブラウザーで開きます。
 
 1. Web サイトの上部にある **[バージョン情報]** を選択すると、**About** ページの `OnGet()` メソッドに追加したディレクトリ メッセージが表示されます。
 
@@ -85,5 +86,6 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="see-also"></a>関連項目
 
+[Visual Studio での C# および ASP.NET の概要](tutorial-csharp-aspnet-core.md)  
 [Visual Studio を使用した C# と Visual Basic の概要](getting-started-with-visual-csharp-and-visual-basic.md)  
 [ASP.NET Core の Razor ページの概要](/aspnet/core/tutorials/razor-pages/razor-pages-start)

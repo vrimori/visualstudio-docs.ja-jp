@@ -1,36 +1,41 @@
 ---
 title: "R Tools for Visual Studio で R コードを lint する | Microsoft Docs"
 ms.custom: 
-ms.date: 12/04/2017
+ms.date: 01/15/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-r
+ms.technology:
+- devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
-f1_keywords: vs.toolsoptionspages.text_editor.r.lint
+f1_keywords:
+- vs.toolsoptionspages.text_editor.r.lint
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.workload: data-science
-ms.openlocfilehash: 76f4ceb040e62e4ebac46e8a791f5dac0d73aff5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-science
+ms.openlocfilehash: b7fcd958c1bed744f40c1a726e6bec4f86d307df
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="linting-r-code-in-visual-studio"></a>Visual Studio で R コードを lint する
 
-lint とは、潜在的なエラーに加えて、書式設定の問題やコード ファイル内での他のノイズ (見かけ上の空白文字など) を明らかにするためにコードを分析するプロセスです。 lint はまた、識別子の名前付けの方法など、特定のコーディング規則を推奨するのに役立ち、チーム内やその他の状況で共同作業を行う場合に便利です。
+lint とは、潜在的なエラー、書式設定の問題、コードのノイズ (たとえば、見かけ上の空白文字) などを明らかにするためにコードを分析するプロセスです。 lint はまた、識別子の名前付けの方法など、特定のコーディング規則を推奨するのに役立ち、チーム内やその他の状況で共同作業を行う場合に便利です。
 
-R Tools for Visual Studio (RTVS) は、R 用に組み込みの lint を備えており、lint の動作はさまざまなオプションを介して制御されます。 これらのオプションにアクセスするには、**[ツール]、[オプション]、[テキスト エディター]、[Lint]** の順に選択します。
+R Tools for Visual Studio (RTVS) は、R 用に組み込みの lint を備えています。この記事で説明しているように、lint の動作はさまざまなオプションを介して制御されます。 これらのオプションにアクセスするには、**[ツール]、[オプション]、[テキスト エディター]、[Lint]** の順に選択します。
 
-既定では、lint は無効になっています。 lint を有効にするには、**[すべて]、[int の有効化]** オプションの順に進み、このオプションを true に設定します。 このトピックの以降のセクションでは、その他のすべての lint オプションについて説明します。
+既定では、lint は無効になっています。 lint を有効にするには、**[すべて]、[int の有効化]** オプションの順に進み、このオプションを true に設定します。
 
 lint が有効になると、エディター内で入力中に lint が適用されます。 問題は緑色の波線で表示されます。 たとえば、次の図では、RTVS によって 6 つの lint の問題が明らかにされています。具体的には、代入で `<-` ではなく `=` が使用されている、関数の引数の前後にスペースが不足している、パスカル ケースおよび大文字の識別子が使用されている、セミコロンが使用されているなどの問題です。 問題にマウス ポインターを合わせると、説明が表示されます。
 
 ![R コードの lint の例](media/linting-01.png)
+
+通常、lint のオプションはプロジェクトまたはファイルのニーズに応じて変更します。 たとえば、オンライン コースのサンプル コードでは、`<-` ではなく、`=` と パスカルケースの識別子を使用することがあります。 そのようなコードでは、既定の lint オプションによってこのケースにフラグが設定されるため、lint の警告が頻繁に表示されます。 そのコードでの作業時には、オプションを無効にするだけで、各インスタンスの修正に時間を費やさずにすみます。
 
 ## <a name="assignment-group"></a>代入グループ
 

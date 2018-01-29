@@ -4,31 +4,29 @@ ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- CSharp
-- VB
-- FSharp
-- C++
+- JavaScript
 helpviewer_keywords:
 - performance, JavaScript [UWP apps]
 - performance tools, JavaScript [UWP apps]
 - UI Responsiveness Profiler [JavaScript]
 - profiler, UI responsiveness [JavaScript]
 - profiler, JavaScript [UWP apps]
-ms.assetid: da13070a-ba40-47dd-a846-ad72eed70d0b
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: uwp
-ms.openlocfilehash: 3c0bc7195fd862d5131a4a70b4e59ecea2afc0bc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- uwp
+ms.openlocfilehash: 71e8c18401b341ef1e1b24c35dc39e80758c31d2
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>ユニバーサル Windows アプリの HTML UI の応答性を分析する
 このトピックでは、アプリのパフォーマンス問題を UI 応答性プロファイラーを使って切り分ける方法を説明します。UI 応答性プロファイラーは、ユニバーサル Windows アプリで利用できるパフォーマンス ツールです。  
@@ -42,9 +40,9 @@ ms.lasthandoff: 12/22/2017
 -   ビジュアルの更新頻度が予想よりも少ない。 この症状は、UI スレッドの負荷が高すぎて滑らかなフレーム レートを維持できなくなった場合に発生します。 たとえば、UI スレッドがビジーであるためにコマ落ちが発生することがあります。 ネットワーク要求、イメージ デコード、描画など、一部の非 UI スレッド作業でも、ビジュアル更新の頻度が制限されることがあります。 すべての描画が UI スレッドで処理されるわけではありません。  
   
 ##  <a name="RunningProfiler"></a> HTML UI の応答性ツールの実行  
- HTML UI 応答性ツールは、動作中の UWP アプリまたは Windows 8.1 アプリが、Visual Studio で開かれているか、Windows 8 以降を実行しているコンピューターにインストールされている場合に使用できます。  
+ HTML UI 応答性ツールは、作業用の UWP アプリが Visual Studio で開かれているときに使用できます。  
   
-1.  アプリを Visual Studio から実行している場合は、 **[標準]** ツール バーの **[デバッグの開始]** の一覧から、配置ターゲットを選択します (Windows Phone エミュレーターの 1 つ、 **ローカル コンピューター**、 **シミュレーター**、 **リモート コンピューター**など)。  
+1.  アプリを Visual Studio から実行している場合は、**[標準]** ツール バーの **[デバッグの開始]** の一覧から、**[ローカル コンピューター]** または **[デバイス]** などの配置ターゲットを選択します。  
   
 2.  **[デバッグ]** メニューの **[パフォーマンス プロファイラー...]**をクリックします。  
   

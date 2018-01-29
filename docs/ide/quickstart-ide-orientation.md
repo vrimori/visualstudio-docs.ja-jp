@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/15/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 49518c7d38ebbec74908123b83b57bf039dda6f8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: a74d123d8cb0055f01619bae25b9a1bda54b35f4
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>クイックスタート: Visual Studio IDE の表示の紹介
 
@@ -101,4 +103,4 @@ Visual Studio の使用中に問題が発生した場合、または製品の改
 
 [クイックスタート: IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)  
 [クイックスタート: エディター内のコーディング](../ide/quickstart-editor.md)  
-[クイック スタート: プロジェクトとソリューション](../ide/quickstart-projects-solutions.md)  
+[クイック スタート: プロジェクトとソリューション](../ide/quickstart-projects-solutions.md)

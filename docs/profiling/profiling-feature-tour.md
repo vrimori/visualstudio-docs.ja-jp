@@ -4,21 +4,24 @@ ms.custom: H1HackMay2017
 ms.date: 05/18/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: debugger
+helpviewer_keywords:
+- debugger
 ms.assetid: d2ee0301-ea78-43d8-851a-71b7b2043d73
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 2542ce19d51dd3aa3031c71da3c23f7ec73ac240
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.workload:
+- multiple
+ms.openlocfilehash: 43955eedc5d7149396b3ad6dc7c380298b631d9e
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="profiling-feature-tour"></a>プロファイリング機能ツアー
 
@@ -32,7 +35,7 @@ Visual Studio にはさまざまなプロファイリング ツールがあり�
 
 ![診断ツールの概要ビュー](../profiling/media/prof-tour-cpu-and-memory-graph.gif "Diagnostic Tools Summary")
 
-**[診断ツール]** ウィンドウはアプリをプロファイリングする方法として人気がありますが、アプリの事後分析を行うこともできます。 各種手法の詳細については、「[Running Profiling Tools With or Without the Debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」 (デバッガーを使用して、または使用せずにプロファイリング ツールを実行する) を参照してください。
+**[診断ツール]** ウィンドウはアプリをプロファイリングする方法として人気がありますが、リリース ビルドではアプリの事後分析を行うこともできます。 各種手法の詳細については、「[Running Profiling Tools With or Without the Debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」 (デバッガーを使用して、または使用せずにプロファイリング ツールを実行する) を参照してください。 プロファイリング ツールがサポートする他のアプリの種類については、「[使用するツール](#tool_support_info)」のセクションをご覧ください。
 
 ## <a name="analyze-cpu-usage"></a>CPU 使用率の分析
 
@@ -119,13 +122,13 @@ Direct3D アプリ (Direct3D コンポーネントは C++ である必要があ�
 
 ## <a name="analyze-performance-javascript"></a>パフォーマンスの分析 (JavaScript)
 
-Windows ユニバーサル HTML アプリの場合、JavaScript メモリ ツールと HTML UI 応答性ツールを利用できます。
+UWP アプリの場合、JavaScript メモリ ツールと HTML UI 応答性ツールを利用できます。
 
 JavaScript メモリ ツールは、その他の種類のアプリで使用できるメモリ使用量ツールに似ています。 このツールを利用してメモリ使用量を理解し、アプリのメモリ リークを発見できます。 このツールの詳細については、「[JavaScript メモリ](../profiling/javascript-memory.md)」を参照してください。
 
 ![JavaScript メモリのプロファイリング ツール](../profiling/media/diagjsmemory.png "DiagJSMemory")
 
-UI の応答性、遅い読み込み時間、Windows ユニバーサル HTML アプリの遅い表示更新を診断するには、HTML UI 応答性ツールを使用します。 使用方法は、他の種類のアプリのアプリケーションのタイムライン ツールに似ています。 詳細については、「[HTML UI の応答性](../profiling/html-ui-responsiveness.md)」を参照してください。
+UI の応答性、長い読み込み時間、UWP アプリの遅い表示更新を診断するには、HTML UI 応答性ツールを使用します。 使用方法は、他の種類のアプリのアプリケーションのタイムライン ツールに似ています。 詳細については、「[HTML UI の応答性](../profiling/html-ui-responsiveness.md)」を参照してください。
 
 ![HTML UI の応答性プロファイリング ツール](../profiling/media/diaghtmlresp.png "DiagHTMLResp")
 
@@ -151,7 +154,7 @@ CPU 使用量ツールやメモリ使用量ツールに現在入っていない�
 
 次の表では、Visual Studio のさまざまなツールとそれらを使用できる各種プロジェクトをまとめています。
   
-|パフォーマンス ツール|Windows デスクトップ|Windows ユニバーサル/ストア|ASP.NET/ASP.NET Core|  
+|パフォーマンス ツール|Windows デスクトップ|UWP|ASP.NET/ASP.NET Core|  
 |----------------------|---------------------|------------------------------|-------------|  
 |[メモリ使用量](../profiling/memory-usage.md)|可|可|可|  
 |[CPU 使用率](../profiling/cpu-usage.md)|可|可|可 (.NET Core/ASP.NET Core の場合は no)|  

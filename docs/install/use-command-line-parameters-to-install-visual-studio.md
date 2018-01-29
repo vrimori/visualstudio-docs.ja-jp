@@ -1,10 +1,11 @@
 ---
 title: "コマンド ライン パラメーターを使用して Visual Studio をインストールする | Microsoft Docs"
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 01/17/2018
 ms.reviewer: tims
 ms.suite: 
-ms.technology: vs-acquisition
+ms.technology:
+- vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,12 +16,13 @@ ms.assetid: 480f3cb4-d873-434e-a8bf-82cff7401cf2
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: bfdce6484661354315a4f6b8b4a219f119ec8742
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 41e66e9fabd84bac7ed7e413d51f08e55ef93a6e
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする
 コマンド プロンプトから Visual Studio 2017 をインストールする場合、さまざまなコマンド ライン パラメーターを使用してインストールを管理またはカスタマイズすることができます。 コマンド ラインから、次の操作を行うことができます。
@@ -40,7 +42,10 @@ ms.lasthandoff: 12/22/2017
 
 > 構文: `vs_enterprise.exe [command] <options>...`
 
-(`vs_enterprise.exe` は、インストールする製品エディションに適宜置き換えてください。 例については、[コマンド ライン パラメーターの例](command-line-parameter-examples.md)のページを参照してください。)
+(`vs_enterprise.exe` は、インストールする製品エディションに適宜置き換えてください。)
+
+>[!TIP]
+> コマンドラインを使用して Visual Studio 2017 をインストールする方法の例については、[コマンド ライン パラメーターの例](command-line-parameter-examples.md)に関するページをご覧ください。
 
 | **コマンド** | **説明** |
 | ----------------------- | --------------- |
@@ -143,7 +148,6 @@ Visual Studio 製品ごとに並べられているワークロード ID とコ�
 
 ## <a name="see-also"></a>関連項目
 
- * [Visual Studio 2017 のインストール](install-visual-studio.md)
- * [Visual Studio 2017 のオフライン インストールを作成する](create-an-offline-installation-of-visual-studio.md)
  * [Visual Studio 2017 のインストールに使用するコマンド ライン パラメーターの例](command-line-parameter-examples.md)
+ * [Visual Studio 2017 のオフライン インストールを作成する](create-an-offline-installation-of-visual-studio.md)
  * [応答ファイルで Visual Studio インストールを自動化する](automated-installation-with-response-file.md)

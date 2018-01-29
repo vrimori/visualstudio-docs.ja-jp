@@ -4,14 +4,12 @@ ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- CSharp
-- VB
-- FSharp
-- C++
+- JavaScript
 helpviewer_keywords:
 - dominators, memory analyzer (JavaScript)
 - memory leaks (JavaScript)
@@ -21,17 +19,17 @@ helpviewer_keywords:
 - JavaScript Memory Analyzer
 - analyzing memory, JavaScript
 - memory analyzer, JavaScript
-ms.assetid: 78f8532b-7b4e-4b50-b8b7-68ca0926dd4e
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: bda996f825c492e323f84ba5444327a49f50aeb1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 00162ab0ad516391b98ee0a17fa9c9f7294c92b3
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>UWP アプリでの JavaScript のメモリ使用量を分析する
 Visual Studio に用意されている JavaScript メモリ アナライザーは、メモリ使用量を把握し、JavaScript を使用して Windows 用に開発された UWP アプリのメモリ リークを検出するのに役立ちます。 サポートされるアプリには、ユニバーサル Windows アプリのアプリが含まれます。
@@ -48,36 +46,14 @@ Visual Studio に用意されている JavaScript メモリ アナライザー�
   
      アプリ コードで直接作成されないオブジェクトは自動的にフィルターで除外されます。また、オブジェクト名に基づいてデータをフィルター処理できます。  
   
- 動作中のアプリのメモリ リークを識別するプロセスを紹介したチュートリアルについては、「[チュートリアル: メモリ リークの検出 (JavaScript)](../profiling/walkthrough-find-a-memory-leak-javascript.md)」をご覧ください。  
-  
- このトピックの内容:  
-  
- [JavaScript メモリ アナライザーの実行](#Run)   
- [メモリの使用量の確認](#Check)   
- [Isolate a memory leak](#Isolate)   
- [実行中のメモリ使用量の概要の表示](#LiveMemory)   
- [View a snapshot summary](#SnapshotSummary)   
- [スナップショットの詳細の表示](#SnapshotDetails)   
- [スナップショットの相違の表示](#SnapshotDiff)   
- [ドミネーターごとのオブジェクトの表示](#FoldObjects)   
- [識別子によるデータのフィルター](#Filter)   
- [オブジェクト ツリーでのオブジェクトの検索](#ShowInRootsView)   
- [共有されたオブジェクト参照の表示](#References)   
- [組み込みオブジェクトの表示](#BuiltInValues)   
- [診断セッション ファイルの保存](#Save)   
- [Associate source code with memory usage data](#JSConsoleCommands)   
- [メモリの問題を識別するためのヒント](#Tips)  
-  
 ##  <a name="Run"></a> JavaScript メモリ アナライザーの実行  
- メモリ アナライザーは、動作中の UWP アプリが Visual Studio で開かれているか、[!INCLUDE[win8](../debugger/includes/win8_md.md)] 以降を実行しているコンピューターにインストールされている場合に使用できます。  
+ メモリ アナライザーは、作業用の UWP アプリが Visual Studio で開かれているときに使用できます。
   
 #### <a name="to-run-the-memory-analyzer"></a>メモリ アナライザーを実行するには  
   
 1.  Visual Studio を開きます。  
   
-2.  アプリを Visual Studio から実行している場合は、**[標準]** ツール バーの **[デバッグの開始]** の一覧から、プロジェクト用にデバッグ ターゲットを選択します (Windows Phone エミュレーター、または UWP アプリの場合は**ローカル コンピューター**、**シミュレーター**、または**リモート コンピューター**)。  
-  
-     これらのオプションの詳細については、以下を参照してください。 [Run apps from Visual Studio](../debugger/run-store-apps-from-visual-studio.md)  
+2.  アプリを Visual Studio から実行している場合は、**[標準]** ツール バーの **[デバッグの開始]** の一覧から、プロジェクト用にデバッグ対象を選択します (**[ローカル コンピューター]** または **[デバイス]**)。  
   
 3.  メニュー バーで、**[デバッグ]**、**[パフォーマンス プロファイラー...]** の順にクリックします。  
   
@@ -400,6 +376,3 @@ if (performance && performance.mark) {
          これらのコマンドを使用すると、手動でヒープ スナップショットを作成しても特定できない問題を特定するのに役立ちます。  
   
     -   JavaScript メモリ アナライザーのビュー (種類ビューなど) でテスト オブジェクトを作成してトレースします。 たとえば、非常に大きいオブジェクトを別のオブジェクトにアタッチすることで、特定のオブジェクトまたは要素に対してガベージ コレクションが行われたかどうかを確認できます。  
-  
-## <a name="see-also"></a>参照  
- [チュートリアル: メモリ リークの検出 (JavaScript)](../profiling/walkthrough-find-a-memory-leak-javascript.md)

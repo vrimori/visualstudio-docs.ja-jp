@@ -4,7 +4,8 @@ ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -12,16 +13,17 @@ dev_langs:
 - VB
 - FSharp
 - C++
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e8f4ae16436143999b0a459ba4b039e796f42111
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.workload:
+- multiple
+ms.openlocfilehash: 1d2f023900735b2e8f3f2235850ab55ec6237efc
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="analyze-memory-usage-without-the-visual-studio-debugger"></a>Visual Studio デバッガーを使わずにメモリ使用量を分析する
 デバッグなしの**メモリ使用量**ツールを使用して、次のような操作を行えます  
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/04/2018
   
 -   スナップショットを比べて、メモリの問題の根本原因を見つけます。  
   
- このトピックでは、メモリ使用量ツールを使って Windows Universal XAML アプリを分析する方法について説明します。 JavaScript と HTML を使用する Windows ユニバーサル アプリでのメモリ使用量を分析する場合、「[メモリ使用量の分析 (JavaScript)](http://msdn.microsoft.com/library/windows/apps/jj819176.aspx)」を参照してください。  
+ このトピックでは、メモリ使用量ツールを使って UWP XAML アプリを分析する方法について説明します。 JavaScript と HTML を使用する UWP アプリでのメモリ使用量を分析する場合、[メモリ使用量の分析 (JavaScript)](../profiling/javascript-memory.md) に関する記事をご覧ください。  
   
 ##  <a name="BKMK_Start_a_Memory_Usage_diagnostic_session"></a> メモリ使用量診断セッションの開始  
   

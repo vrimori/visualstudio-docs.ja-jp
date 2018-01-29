@@ -1,13 +1,15 @@
 ---
 title: "方法: 参照マネージャーを使用して参照を追加または削除する | Microsoft Docs"
 ms.custom: 
-ms.date: 06/21/2017
+ms.date: 01/18/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: VS.ReferenceManager
+f1_keywords:
+- VS.ReferenceManager
 helpviewer_keywords:
 - Visual C# projects, references
 - references [Visual Studio], adding
@@ -23,12 +25,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 24c317a641fc178306013d8b75c3254f3d3f7b1c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 34dd559abcbfa6172c52edd2ed5eae2898f0b358
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>方法: 参照マネージャーを使用して参照を追加または削除する
 
@@ -198,7 +201,7 @@ SDK は、Visual Studio が単一のコンポーネントとして取り扱う�
 
 **[参照]** ボタンを使って、ファイル システム内のコンポーネントを参照できます。
 
-プロジェクトは、異なるバージョンの .NET Framework を対象とするコンポーネントを参照できます。 たとえば、.NET Framework 4 Client Profile を対象とするアプリケーションを作成し、その中で、.NET Framework 2 を対象とするコンポーネントを参照することもできます。 詳細については、「[対象となる特定の .NET Framework のバージョンの指定](../ide/targeting-a-specific-dotnet-framework-version.md)」を参照してください。
+プロジェクトは、異なるバージョンの .NET Framework を対象とするコンポーネントを参照できます。 たとえば、.NET Framework 4.7 を対象とするアプリケーションを作成し、その中で、.NET Framework 4 を対象とするコンポーネントを参照することもできます。 詳細については、「[対象となる特定の .NET Framework のバージョンの指定](../ide/targeting-a-specific-dotnet-framework-version.md)」を参照してください。
 
 同じソリューション内にある別のプロジェクトの出力に対するファイル参照を追加しないでください。この方針を使用すると、コンパイル エラーが発生する可能性があります。 代わりに、**[参照マネージャー]** ダイアログ ボックスの **[ソリューション]** タブを使ってプロジェクト間参照を作成します。 そうすることによってプロジェクトで作成するクラス ライブラリを管理する機能が向上し、チーム開発が簡単になります。 詳しくは、「[壊れた参照のトラブルシューティング](../ide/troubleshooting-broken-references.md)」をご覧ください。
 

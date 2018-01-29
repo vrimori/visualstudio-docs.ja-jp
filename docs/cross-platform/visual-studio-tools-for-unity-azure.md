@@ -1,10 +1,11 @@
 ---
-title: "Visual Studio Tools for Unity と Azure のチュートリアル | Microsoft Docs"
+title: "Visual Studio Tools for Unity と Visual Studio Tools for Azure でのプログラミング | Microsoft Docs"
 ms.custom: 
-ms.date: 10/19/2017
+ms.date: 12/18/2017
 ms.reviewer: crdun
 ms.suite: 
-ms.technology: tgt-pltfrm-cross-plat
+ms.technology:
+- tgt-pltfrm-cross-plat
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7921D4C7-5526-42F5-8E03-82D3E33A893F
@@ -14,46 +15,29 @@ manager: crdun
 ms.workload:
 - azure
 - unity
-ms.openlocfilehash: d5242dd873591abee15f528d09b6f588ea12f5ba
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a66e78063b100740ef271480e76daae2fd99a3fe
+ms.sourcegitcommit: 65f85389047c5a1938b6d5243ccba8d4f14362ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
-# <a name="using-azure-easy-tables-with-unity-walkthrough"></a>チュートリアル: Unity で Azure 簡易テーブルを使用する
+# <a name="programming-with-unity-and-azure"></a>Unity と Azure を使用したプログラミング
 
-![サンプル ゲームのスクリーンショット](media/vstu_azure-test-sample-game-image2.png)
+Azure は、製品利用統計情報やその他のゲーム データをクラウドに保存する、拡張可能なソリューションを提供します。 Unity 2017 がリリースされ、Unity で .NET 4.6 が試験的にサポートされるようになったことで、Azure .NET SDK を使用できるようになり、Azure 統合が一層簡単になりました。
 
-## <a name="introduction"></a>はじめに
-
-Azure は、製品利用統計情報やその他のゲーム データをクラウドに保存する、拡張可能なソリューションを提供します。 Unity 2017 がリリースされ、Unity が .NET 4.6 対応になったことで Azure 統合が一層簡単になりました。Azure Mobile Client SDK を利用できます。
-
-以下の手順では、製品利用統計情報やランキング データをクラウドに保存するために Azure を活用する Unity プロジェクトの設定プロセスについて順を追って説明します。
+## <a name="experimental-azure-sdks"></a>試験段階の Azure SDK
 
 > [!NOTE]
-> このプロジェクトでは、Unity 2017 で "Experimental (試験段階)" .NET 4.6 Mono スクリプティング ランタイムが必要になります。 [Unity からは、これがじきに既定となるという声明が出ています](https://forum.unity3d.com/threads/future-plans-for-the-mono-runtime-upgrade.464327/)。しかしながら今のところ、"Experimental (試験段階)" というラベルが残っており、問題が発生する可能性があります。
+> Azure SDK はサポート対象外ですが、お客様には Unity での .NET 4.6 の試験的サポートをお試しいただけます。
 
-> このチュートリアルでは、Unity PC ビルドから Azure Mobile App バックエンドに接続した例を再現しています。 このドキュメントの執筆時点では、Mac プラットフォームと Android プラットフォームでこのプロジェクトの機能が妨害される問題が判明していました。 問題は解決される予定ですが、日程は決まっていません。 詳細については、Unity の[試験段階スクリプティング フォーラム](https://forum.unity3d.com/forums/experimental-scripting-previews.107/)をご覧ください。
+[サンドボックス](/sandbox/)に関するページにアクセスして、Unity で以下の試験段階の Azure SDK をお試しください。
 
-## <a name="download-the-completed-project"></a>完成したプロジェクトをダウンロードする
+* [Azure Storage SDK for Unity](https://aka.ms/azstoragegamedev)
+* [Azure Event Hubs SDK for Unity](https://aka.ms/azeventhubsgamedev)
+* [Azure Mobile Apps SDK for Unity](https://aka.ms/azmobileappsgamedev)
 
-完成したプロジェクトは GitHub で利用できます。 ただし、このチュートリアルでは、空の新しいプロジェクトから始めるものと想定しています。必要な箇所で、アセットをダウンロードするためのリンクを提供します。
+## <a name="azure-sdk-sample"></a>Azure SDK のサンプル
 
-## <a name="walkthrough-steps"></a>チュートリアルの手順
+Azure Easy Tables SDK と Unity を使用する[簡単なサンプル ゲーム](https://aka.ms/azmobileappsracer)もあります。 このゲームは、Azure Easy Tables データ ストレージを使用して、ハイスコア ランキングを追跡し、ゲーム内テレメトリを保存します。また、このゲームは [GitHub からダウンロード](https://aka.ms/azsamples-unity)できます。
 
-1. [Azure で簡易テーブルを構成する](visual-studio-tools-for-unity-azure-configure.md)
-2. [簡易テーブルを作成する](visual-studio-tools-for-unity-azure-setup.md)
-3. [開発環境を準備する](visual-studio-tools-for-unity-azure-prepare.md)
-4. [データ モデル クラスを作成する](visual-studio-tools-for-unity-azure-data.md)
-5. [Azure MobileServiceClient を実装する](visual-studio-tools-for-unity-azure-mobile-client.md)
-6. [Unity Mono セキュリティ証明書ストアを更新する](visual-studio-tools-for-unity-azure-security.md)
-7. [クライアント接続をテストする](visual-studio-tools-for-unity-azure-connection.md)
-7. [サンプルのゲーム アセットをインポートする](visual-studio-tools-for-unity-azure-game-assets.md)
-8. [サンプルのゲームをテストする](visual-studio-tools-for-unity-azure-game.md)
-9. [RaceScene の説明](visual-studio-tools-for-unity-azure-racescene.md)
-10. [HeatmapScene の説明](visual-studio-tools-for-unity-azure-heatmapscene.md)
-11. [LeaderboardScene の説明](visual-studio-tools-for-unity-azure-leaderboardscene.md)
-
-
-## <a name="next-step"></a>次のステップ
-* [Azure で簡易テーブルを構成する](visual-studio-tools-for-unity-azure-configure.md)
+![サンプル ゲームのスクリーンショット](media/vstu_azure-test-sample-game-image2.png)

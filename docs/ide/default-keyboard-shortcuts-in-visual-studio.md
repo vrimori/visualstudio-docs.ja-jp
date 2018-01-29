@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 06/26/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 9f6aaafa0ff72a175b5900b1ff1dfa054fe0381b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: bfb22343acd98edf2a010a3f5462dde84d85bbcc
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio の既定のキーボード ショートカット
 キーボードのアクセシビリティの詳細については、[「アクセシビリティのヒントとテクニック」](../ide/reference/accessibility-tips-and-tricks.md) および [「方法: キーボード主体で操作する」](../ide/reference/how-to-use-the-keyboard-exclusively.md) を参照してください。
 
 Visual Studio のさまざまなコマンドやウィンドウには、該当するショートカット キーを押すことでアクセスできます。 このトピックでは、Visual Studio のインストール時に選択できる [全般的な開発設定] プロファイルの既定のショートカット キーを一覧します。 選択したプロファイルにかかわらず、**[オプション]** ダイアログ ボックスを開き、**[環境]** ノードを展開して、**[キーボード]** を選択することで、コマンドのショートカット キーを確認できます。 また、別のショートカット キーを任意のコマンドに割り当てることで、ショートカット キーをカスタマイズすることもできます。
 
-一般的なショートカット キーの一覧、およびその他の生産性向上に関する情報については、[「Visual Studio で頻繁に使用するコマンドに対応する既定のキーボード ショートカット」](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)、[「ヒントとテクニック」](../ide/tips-and-tricks-for-visual-studio.md)、[「生産性に関するヒント」](../ide/productivity-tips-for-visual-studio.md) を参照してください。
+一般的なショートカット キーの一覧、およびその他の生産性向上に関する情報については、「[Visual Studio で頻繁に使用するコマンドに対応する既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)」、[キーボードに関するヒント](../ide/tips-and-tricks-for-visual-studio.md)、[生産性に関するヒント](../ide/productivity-tips-for-visual-studio.md)の各記事をご覧ください。
 
 次の表の各セクションでは、ショートカット キーを使用して Visual Studio の任意の場所から [全体] コンテキストでアクセスできるコマンドを示しています。
 

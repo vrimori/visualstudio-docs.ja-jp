@@ -10,12 +10,13 @@ ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b757178f29439f162df9e8844ae65ed8df642bb5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 74ac22508ea00a59dc4b29806253b4a041994c54
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="quickstart-projects-and-solutions"></a>クイック スタート: プロジェクトとソリューション
 
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/22/2017
    **ソリューション エクスプローラー**で、ソリューションの下に "QuickDate" という名前のプロジェクトが表示されます。 現在のところ、このプロジェクトには **App.config** と呼ばれるファイルが 1 つ含まれています。
 
    > [!NOTE]
-   > ダイアログ ボックスの左側のウィンドウに **Visual C#** が表示されない場合は、**.NET デスクトップ開発**ワークロードをインストールする必要があります。 このインストールは、左側のウィンドウの下部にあるリンク **[Visual Studio インストーラーを開く]** をクリックすると、簡単に行えます。 **Visual Studio インストーラー**が開いたら、そこで適切なワークロードを選択し、**[変更]** ボタンをクリックします。
+   > ダイアログ ボックスの左側のウィンドウに **Visual C#** が表示されない場合は、**.NET デスクトップ開発**ワークロードをインストールする必要があります。 このインストールは、ダイアログ ボックスの左下にある **[Visual Studio インストーラーを開く]** リンクをクリックすると、簡単に行えます。 **Visual Studio インストーラー**が起動したら、**[.NET デスクトップ開発]** ワークロードを選択してから **[変更]** をクリックします。
 
    ![Visual Studio インストーラー リンクを開く](media/quickstart-projects-open-installer.png)
 
