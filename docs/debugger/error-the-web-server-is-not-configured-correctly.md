@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 09/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: vs.debug.remote.projnotconfigured
+f1_keywords:
+- vs.debug.remote.projnotconfigured
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
-helpviewer_keywords: debugger, Web application errors
-caps.latest.revision: "22"
+helpviewer_keywords:
+- debugger, Web application errors
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 6f1e206cc9327ef933f52f35960f628170e02c38
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.workload:
+- multiple
+ms.openlocfilehash: bd7ea7deea749831ebf26d3f8a406b1e3ad63fb0
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="error-the-web-server-is-not-configured-correctly"></a>エラー : Web サーバーは正しく構成されていません。
 
@@ -39,7 +43,7 @@ ms.lasthandoff: 01/05/2018
 
     Web アプリケーションが、別のコンピューターにコピー、手動での名前を変更または移動する場合に物理パスを正しいできない可能性があります。 IIS と再試行をリセットします。
 
-3. Visual Studio で、プロパティで、適切なサーバーが選択されていることを確認します。 (開いている**プロパティ > Web > サーバー**または**プロパティ > デバッグ**プロジェクトの種類によって異なります。 Web フォームは、プロジェクトを開く**プロパティ ページ > 開始オプション > サーバー**)。
+3. Visual Studio でローカルでデバッグする場合は、プロパティで、適切なサーバーが選択されていることを確認します。 (開いている**プロパティ > Web > サーバー**または**プロパティ > デバッグ**プロジェクトの種類によって異なります。 Web フォームは、プロジェクトを開く**プロパティ ページ > 開始オプション > サーバー**)。
 
     IIS などの外部 (カスタム) サーバーを使用している場合、URL が正しい場合があります。 それ以外の場合、IIS Express と [再試行] を選択します。
 

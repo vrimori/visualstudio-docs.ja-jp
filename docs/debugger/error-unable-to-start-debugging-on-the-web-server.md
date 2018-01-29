@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 05/23/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,16 +27,17 @@ helpviewer_keywords:
 - errors [debugger], unable to start debugging
 - debugging ASP.NET Web applications, unable to start debugging error
 - remote debugging, errors
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: a7d09deda1aa2b24fba90f9d9d417917c5b284ad
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.workload:
+- multiple
+ms.openlocfilehash: d9c4160726f808a2f456bb52390839c34dc308e2
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="error-unable-to-start-debugging-on-the-web-server"></a>エラー ： Web サーバーでデバッグを開始できません
 
@@ -84,8 +86,10 @@ Web サーバーで実行されている ASP.NET アプリケーションをデ�
 
 ## <a name="server_error"></a>リモート サーバーがエラーを返しました
 
-問題の原因を識別できるように、メッセージで返されるエラー コードを確認します。 ここでは、いくつかの一般的なエラー コードです。
-- (403) 許可されていません。 正しいサーバーの種類と URL に接続していることを確認してください (で**プロパティ > Web > サーバー**または**プロパティ > デバッグ**プロジェクトの種類に応じて、)。 また、サーバーの web.config に含まれていることを確認`debug=true`compilation 要素にします。 これらの設定は既に修正いる場合は、Web アプリケーションのフォルダーが正しいフォルダーの権限を持っていることを確認します。 詳細については、次を参照してください。 [IIS 構成を調べて](#vxtbshttpservererrorsthingstocheck)です。
+チェック、 [IIS ログ ファイル](https://support.microsoft.com/help/943891/the-http-status-code-in-iis-7-0--iis-7-5--and-iis-8-0)エラー サブコードおよび詳細については、この IIS 7 の[ブログの投稿](https://blogs.iis.net/tomkmvp/troubleshoot-a-403)です。
+
+さらに、次のとおり、一般的なエラー コードの一部であり、いくつか提案します。
+- (403) 許可されていません。 このエラーの考えられる原因の多くがあるので、確認、ログ ファイルと、web サイトの IIS セキュリティ設定。 サーバーの web.config を含むかどうかを確認`debug=true`compilation 要素にします。 Web アプリケーションのフォルダーに適切なアクセス許可があると、アプリケーション プール構成が (パスワードが変更されている可能性があります) が正しいことを確認してください。 参照してください[IIS 構成を調べて](#vxtbshttpservererrorsthingstocheck)です。 これらの設定が適切では既にローカルでデバッグしている場合は、正しいサーバーの種類と URL に接続していることを確認も (で**プロパティ > Web > サーバー**または**プロパティ > デバッグ**、によって、プロジェクトの種類)。
 - (503) サーバーは利用できません。 アプリケーション プールを停止して、エラーまたは構成の変更により可能性があります。 アプリケーション プールを再起動します。
 - (404) not Found です。 ASP.NET の正しいバージョンのアプリケーション プールが構成されていることを確認します。
 
@@ -125,7 +129,7 @@ Web サーバーで実行されている ASP.NET アプリケーションをデ�
     
 * Web アプリケーションのフォルダーが適切なアクセス許可を持つことを確認してください。
 
-    IIS_IUSRS、iusr アカウント、またはアプリケーション プールの読み取りに関連付けられている特定のユーザーに付与し、Web アプリケーション フォルダーの権限を実行することを確認してください。 問題を修正し、アプリケーション プールを再起動します。
+    IIS_IUSRS、IUSR を付与するか、特定のユーザーに関連付けられていることを確認してください、[アプリケーション プール](/iis/manage/configuring-security/application-pool-identities)読み取りし、Web アプリケーションのフォルダーの権限を実行します。 問題を修正し、アプリケーション プールを再起動します。
 
 * IIS で ASP.NET の正しいバージョンがインストールされていることを確認します。
 

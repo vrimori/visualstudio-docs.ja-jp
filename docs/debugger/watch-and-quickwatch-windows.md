@@ -4,10 +4,12 @@ ms.custom: H1Hack27Feb2017
 ms.date: 04/04/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.watch
+f1_keywords:
+- vs.debug.watch
 helpviewer_keywords:
 - debugging [Visual Studio], Watch window
 - expressions [debugger], evaluating
@@ -15,22 +17,21 @@ helpviewer_keywords:
 - expression evaluation
 - registers, evaluating
 - debugging [Visual Studio], expression evaluation
-ms.assetid: d5c18377-2a0e-4819-a645-407e24ccc58c
-caps.latest.revision: "45"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 086d7b103095f6cbc9d90c962fd0ad31af964f54
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.workload:
+- multiple
+ms.openlocfilehash: 0f5c518becd09f6b94fb598975caa913d150ac2a
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="set-a-watch-on-variables-using-the-watch-and-quickwatch-windows-in-visual-studio"></a>ウォッチおよび Visual Studio の [クイック ウォッチ] ウィンドウを使用して変数のウォッチを設定します。
-デバッグ中に使用すること、**ウォッチ**(**デバッグ > Windows > ウォッチ > ウォッチ (1、2、3、4)**) と**[クイック ウォッチ]** (変数を右クリックして/ **デバッグ > [クイック ウォッチ]**) windows 変数と式を確認します。  この 2 つのウィンドウの違いは、 **ウォッチ** ウィンドウでは複数の変数を表示できますが、 **[クイック ウォッチ]** ウィンドウでは一度に 1 つの変数しか表示できないことです。
+デバッグ中に使用すること、**ウォッチ**と**[クイック ウォッチ]**変数と式をウォッチする windows です。  この 2 つのウィンドウの違いは、 **ウォッチ** ウィンドウでは複数の変数を表示できますが、 **[クイック ウォッチ]** ウィンドウでは一度に 1 つの変数しか表示できないことです。 
 
-ウィンドウはデバッグ セッション中にのみ使用できます。 
+ウィンドウはデバッグ セッション中にのみ使用できます。 開くには、**ウォッチ**ウィンドウで、選択**デバッグ > Windows > ウォッチ > ウォッチ (1、2、3、4)**)。 開くには、 **[クイック ウォッチ]**ウィンドウで、いずれかの変数を右クリックして、 **[クイック ウォッチ]**かを選択して**デバッグ > [クイック ウォッチ]**です。
   
 ## <a name="observing-a-single-variable-with-quickwatch"></a>[クイック ウォッチ] での 1 つの変数の観察  
  **[クイック ウォッチ]** ウィンドウでは、1 つの変数を観察できます。 たとえば、次のようなコードがあるとします。  
@@ -54,7 +55,7 @@ static void Main(string[] args)
   
 2.  デバッグを開始します。 ブレークポイントで実行が停止します。  
   
-3.  開く、 **[クイック ウォッチ]**ウィンドウ (を右クリックし、順に選択**[クイック ウォッチ]**、または**shift + f9**)。
+3.  開く、 **[クイック ウォッチ]**ウィンドウ (を右クリックして`a`、順に選択**[クイック ウォッチ]**、または選択`a`とキーを押します**shift + f9**)。
 
     内の変数を参照する必要があります、**値**ウィンドウで、値は 1 です。
 
