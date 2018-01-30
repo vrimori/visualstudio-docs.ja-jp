@@ -4,7 +4,8 @@ ms.custom: H1Hack27Feb2017
 ms.date: 04/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - debugger, variable windows
 - debugging [Visual Studio], variable windows
 ms.assetid: bb6291e1-596d-4af0-9f22-5fd713d6b84b
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 77dd01333941e897628a40a5a5dc1749917dcb89
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 763a079ec8da8c2c1e9e7d7864fc4d0cee6197ed
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows-in-visual-studio"></a>自動変数 内の変数と Visual Studio の ローカル ウィンドウを調べる
 **[自動変数]**ウィンドウ (デバッグ中に**ctrl キーと alt キーを押しながら V、A**、または**デバッグ > Windows > [自動変数]**) および**ローカル**(デバッグ中にウィンドウ、 **Ctrl キーと alt キーを押しながら V、L**、または**デバッグ > Windows > [ローカル]**) は、デバッグ中に、変数の値を表示するときに、非常に便利です。 **[ローカル]** ウィンドウにはローカル スコープで定義されている変数が表示されます。これは一般に、現在実行されている関数またはメソッドです。 **[自動変数]** ウィンドウには、現在の行 (デバッガーが停止している場所) の付近で使用されている変数が表示されます。 このウィンドウでどの変数が正確に表示は、さまざまな言語では異なります。 以下の「 [What variables appear in the Autos Window?](#bkmk_whatvariables)   
@@ -33,14 +35,14 @@ ms.lasthandoff: 12/22/2017
 ## <a name="looking-at-objects-in-the-autos-and-locals-windows"></a>[自動変数] と [ローカル] ウィンドウ内のオブジェクトを調べる  
 配列とオブジェクトは、[自動変数] と [ローカル] ウィンドウにツリー コントロールで表示されます。 変数名の左側にある矢印をクリックするとビューが展開され、フィールドとプロパティが表示されます。 以下に、 [[ローカル]](http://msdn.microsoft.com/Library/a8737776-e545-4867-91ed-51c7f031fa19) ウィンドウに表示されている **FileStream** オブジェクトの例を示します。  
   
-![[ローカル] &#45;FileStream](../debugger/media/locals-filestream.png "ローカル FileStream")  
+![Locals&#45;FileStream](../debugger/media/locals-filestream.png "Locals-FileStream")  
   
 ## <a name="bkmk_whatvariables"></a> [自動変数] ウィンドウに表示される変数  
  **[自動変数]** ウィンドウは C#、Visual Basic、C++ のコードで使用できます。 **[自動変数]** ウィンドウでは JavaScript も F# もサポートされません。  
   
  C# および Visual Basic では、現在の行または前の行に使用されている変数があれば、それが **[自動変数]** ウィンドウに表示されます。 たとえば、4 つの変数を宣言し、これらを次のように設定したとします。
 
-```CSharp
+```csharp
     public static void Main()
     {
        int a, b, c, d;
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 
  行 `c = 3`にブレークポイントを設定した場合、デバッガーを実行して、実行が停止すると、 **[自動変数]** ウィンドウは次のようになります。  
 
- ![[自動変数] &#45;CSharp](../debugger/media/autos-csharp.png "CSharp の [自動変数]")  
+ ![Autos&#45;CSharp](../debugger/media/autos-csharp.png "Autos-CSharp")  
 
  `c` の値が 0 であることにご注意ください。これは、 `c = 3` 行目のコードがまだ実行されていないからです。  
 
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
  次の C# コードは、2 つの関数の戻り値を加算します。  
 
-```CSharp
+```csharp
 static void Main(string[] args)  
 {  
     int a, b, c, d;  

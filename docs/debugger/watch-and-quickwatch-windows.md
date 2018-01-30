@@ -22,8 +22,8 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f5c518becd09f6b94fb598975caa913d150ac2a
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 454dacc7d3b785cf290823b38275a8e441950d8a
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/29/2018
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/29/2018
 ## <a name="observing-a-single-variable-with-quickwatch"></a>[クイック ウォッチ] での 1 つの変数の観察  
  **[クイック ウォッチ]** ウィンドウでは、1 つの変数を観察できます。 たとえば、次のようなコードがあるとします。  
   
-```CSharp
+```csharp
 static void Main(string[] args)  
 {  
     int a, b;  
@@ -125,7 +125,7 @@ int main()
 ##  <a name="bkmk_refreshWatch"></a> 古いウォッチ値の更新  
  特定の状況では、更新アイコン (循環矢印) を参照して可能性がありますで式を評価するときに、**ウォッチ**ウィンドウです。  たとえば、プロパティの評価をオフになっている必要がある場合 (**ツール > オプション > デバッグ > プロパティの評価とその他の暗黙的な関数呼び出しを有効にする**)、次のコードを使用して。  
   
-```CSharp  
+```csharp  
 static void Main(string[] args)  
 {  
     List<string> list = new List<string>();  
@@ -177,7 +177,7 @@ var1 = var2
   
  次のコードで 1 つのメソッドを作成、`Person`新機能を確認する必要が、ローカル変数を使用して、`Person`の名前が別のメソッドには。  
   
-```CSharp  
+```csharp  
 class Person  
 {  
     public Person(string name)  

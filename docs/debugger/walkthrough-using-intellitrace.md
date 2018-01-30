@@ -4,20 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1c9c91a-0009-4c4e-9b4f-c9ab3a6022a7
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 10d3e6b3e5b47fc481a573a365b4423e685625f1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: ebc3067ea154c8b9a5f6e180f397c5421f2be470
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="view-events-with-intellitrace-in-visual-studio"></a>Visual Studio での IntelliTrace を使用したイベントの表示
 IntelliTrace を使用して、特定のイベントまたはイベントのカテゴリに関する情報、またはイベントだけでなく、個々の関数呼び出しに関する情報を収集することができます。 この操作を実行する手順を次に示します。  
@@ -33,13 +35,13 @@ IntelliTrace を使用して、特定のイベントまたはイベントのカ�
   
 1.  C# コンソール アプリケーションを作成します。 Program.cs ファイルで、次の `using` ステートメントを追加します。  
   
-    ```CSharp  
+    ```csharp  
     using System.IO;  
     ```  
   
 2.  Main メソッドで <xref:System.IO.FileStream> を作成し、読み取り、閉じ、ファイルを削除します。 ブレークポイントを設定する場所を確保するだけの別の行を追加します。  
   
-    ```CSharp  
+    ```csharp  
     static void Main(string[] args)  
     {  
         FileStream fs = File.Create("WordSearchInputs.txt");  
@@ -66,13 +68,13 @@ IntelliTrace を使用して、特定のイベントまたはイベントのカ�
   
      次のスクリーン ショットは Visual Studio 2015 Update 1 のものです。  
   
-     ![IntelliTrace &#45;更新プログラム 1](../debugger/media/intellitrace-update1.png "IntelliTrace-更新プログラム 1")  
+     ![IntelliTrace&#45;Update1](../debugger/media/intellitrace-update1.png "IntelliTrace-Update1")  
   
 3.  イベント選択して詳細を展開します。  
   
      次のスクリーン ショットは Visual Studio 2015 Update 1 のものです。  
   
-     ![IntelliTraceUpdate1 &#45;SingleEvent](../debugger/media/intellitraceupdate1-singleevent.png "IntelliTraceUpdate1 SingleEvent")  
+     ![IntelliTraceUpdate1&#45;SingleEvent](../debugger/media/intellitraceupdate1-singleevent.png "IntelliTraceUpdate1-SingleEvent")  
   
      ファイルを開くには、パス名のリンクを選択します。 完全なパス名が使用できない場合、 **[ファイルを開く]** ダイアログ ボックスが表示されます。  
   

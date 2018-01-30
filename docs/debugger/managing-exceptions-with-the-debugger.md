@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 04/05/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -32,16 +33,17 @@ helpviewer_keywords:
 - native run-time checks
 - exceptions, debugging
 ms.assetid: 43a77fa8-37d0-4c98-a334-0134dbca4ece
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c04934aed17c6e1b00664d371ff591ebbc3486a3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 978c78ba68460a2f038d85afb92246275acfb9ef
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>デバッガーでは、Visual Studio での例外を管理します。
 
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
 *  次の C# コンソール アプリケーションで、Main メソッドは **try/catch** ブロック内で `try/catch` をスローします。  
   
-    ```CSharp  
+    ```csharp  
     static void Main(string[] args)  
     {  
         try  
@@ -128,7 +130,7 @@ ms.lasthandoff: 12/22/2017
   
      コンソール アプリケーションの Main() メソッドを次に示します。  
   
-    ```CSharp  
+    ```csharp  
     static void Main(string[] args)  
     {  
         Class1 class1 = new Class1();  
@@ -170,7 +172,7 @@ ms.lasthandoff: 12/22/2017
   
  **[例外設定]** ウィンドウでは、C# の汎用的な例外タイプをサポートしていますが、Visual Basic の汎用的な例外タイプはサポートしていません。 `MyNamespace.GenericException<T>`のような例外が発生したときに実行が中断されるようにするには、例外を **[MyNamespace.GenericException`1]**として追加する必要があります。 すなわち、例外を次のように作成した場合:  
   
-```CSharp  
+```csharp  
 public class GenericException<T> : Exception  
 {  
     public GenericException() : base("This is a generic exception.")  

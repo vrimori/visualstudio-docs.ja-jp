@@ -4,7 +4,8 @@ ms.custom: H1HackMay2017
 ms.date: 06/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - multithreaded debugging, tutorial
 - tutorials, multithreaded debugging
 ms.assetid: 62df746b-b0f6-4df4-83cf-b1d9d2e72833
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 9b3fd00e849a54fc926054e1f7e0d97b2907cf02
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.workload:
+- multiple
+ms.openlocfilehash: 0d2766a394c88d2040a8f062c33add4e3f7af019
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="get-started-debugging-a-multithreaded-application-in-visual-studio"></a>Visual Studio でのマルチ スレッド アプリケーションのデバッグの開始します。
 Visual Studio には、いくつかのツールとマルチ スレッド アプリケーションをデバッグするためのユーザー インターフェイス要素が用意されています。 このチュートリアルでは、スレッド マーカーを使用する方法、**並列スタック** ウィンドウで、**並列ウォッチ**ウィンドウ、条件付きブレークポイントは、およびフィルターのブレークポイント。 このチュートリアルでは、わずか数分が完了することを理解するマルチ スレッド アプリケーションのデバッグの機能とします。
@@ -199,7 +201,7 @@ Visual Studio には、いくつかのツールとマルチ スレッド アプ�
   
 -   ソース コード エディターで、次のコードを探します。 
   
-    ```CSharp  
+    ```csharp  
     Thread.Sleep(3000);  
     Console.WriteLine();  
     ```  
@@ -228,7 +230,7 @@ Visual Studio には、いくつかのツールとマルチ スレッド アプ�
   
 4.  ソース コード エディターで、ブレークポイントを含む行を探します。  
   
-    ```CSharp  
+    ```csharp  
     Thread.Sleep(3000);  
     ```  
   

@@ -4,25 +4,28 @@ ms.custom: H1Hack27Feb2017
 ms.date: 02/07/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.execution
+f1_keywords:
+- vs.debug.execution
 helpviewer_keywords:
 - stepping
 - debugging [Visual Studio], execution control
 - execution, controlling in debugger
 ms.assetid: 759072ba-4aaa-447e-8e51-0dd1456fe896
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 2c45f6cfa37ee8593da08d59071d8244b08feac7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: f6b83e1be32eb657555131a934f8c11f9567c5bc
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="navigate-code-with-the-visual-studio-debugger"></a>Visual Studio デバッガーでコード内を移動します。
 デバッガーでコードを移動するには、コマンドおよびショートカットについて理解し、使用することでより高速で簡単に見つけ、アプリケーションの問題を解決します。 デバッガーでコードを移動するときに、アプリの状態を検査またはの詳細については、その実行フローできます。  
@@ -38,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
  デバッグすると、黄色の行に次に実行されるコードが表示されます。  
   
- ![DBG &#95;です。基本 &#95;です。中断 &#95;です。モード](../debugger/media/dbg_basics_break_mode.png "DBG_Basics_Break_Mode")  
+ ![DBG&#95;Basics&#95;Break&#95;Mode](../debugger/media/dbg_basics_break_mode.png "DBG_Basics_Break_Mode")  
   
  デバッグ中と同様に、コマンド間で切り替えることができます**f5 キーを押して**、 **F11**で検索するコードをすばやく表示するようなブレークポイント) には、このトピックで説明するその他の機能を使用するとします。  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
 -   デバッガーは実際、物理的な行ではなくコード ステートメントをステップ実行します。 たとえば、 `if` 句は 1 行で記述できます。  
   
-    ```CSharp  
+    ```csharp  
     int x = 42;  
     string s = "Not answered";  
     if( int x == 42) s = "Answered!";  
@@ -77,7 +80,7 @@ ms.lasthandoff: 12/22/2017
   
 |キーボード コマンド|メニュー コマンド|説明|  
 |----------------------|------------------|-----------------|  
-|**F10 キー**|**[ステップ オーバー]**|現在の行に関数呼び出しが含まれている場合**ステップ オーバー**コードを実行し、呼び出された関数が返された後に、コードの最初の行で実行を中断します。|  
+|**F10**|**[ステップ オーバー]**|現在の行に関数呼び出しが含まれている場合**ステップ オーバー**コードを実行し、呼び出された関数が返された後に、コードの最初の行で実行を中断します。|  
 |**Shift + F11**|**[ステップ アウト]**|**ステップ アウト**コードの実行が続けられ、現在の関数には、(現在の関数を通じたデバッガー スキップ) が返されるときに実行を中断します。|  
   
 > [!TIP]

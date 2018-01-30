@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -25,16 +26,17 @@ helpviewer_keywords:
 - format specifiers, debugger
 - debugger, format specifiers recognized by
 ms.assetid: 345c8589-5f36-4d34-a58c-e56271687dd6
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: c1186da8d276796816d8531963f746f222526b6d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- dotnet
+ms.openlocfilehash: e1191884f0a20463f9d248a6acfca4337212b613
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>C# の場合、Visual Studio デバッガーでの書式指定子
 書式指定子を使用して、 **ウォッチ** ウィンドウに表示される値の書式設定を変更することができます。 また、 **[イミディエイト]** ウィンドウ、 **[コマンド]** ウィンドウ、およびソースのウィンドウでも、書式指定子を使用できます。 これらのウィンドウで式の上にカーソルを合わせると、結果が [データヒント] に表示されます。 [データヒント] には、[データヒント] 表示の書式指定子が反映されます。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="using-format-specifiers"></a>書式指定子の使用  
  次のようなコードがあるとします。  
   
-```CSharp  
+```csharp  
 {  
         int my_var1 = 0x0065;  
         int my_var2 = 0x0066;  
@@ -61,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
 |指定子|形式|元の [ウォッチ] の値|表示|  
 |---------------|------------|--------------------------|--------------|  
-|ac|式を強制的に評価します。 これは、プロパティの暗黙の評価および暗黙の関数呼び出しがオフの場合に便利です。|メッセージ"暗黙的な関数評価がオフ、ユーザーが"|\<値 >|  
+|ac|式を強制的に評価します。 これは、プロパティの暗黙の評価および暗黙の関数呼び出しがオフの場合に便利です。|メッセージ"暗黙的な関数評価がオフ、ユーザーが"|\<value>|  
 |d|10 進整数|0x0065|101|  
 |dynamic|動的ビューを使用して、指定されたオブジェクトを表示します。|動的ビューを含む、オブジェクトのすべてのメンバーを表示します。|動的ビューのみが表示されます。|  
 |h|16 進整数|61541|0x0000F065|  

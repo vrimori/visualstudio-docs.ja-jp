@@ -4,20 +4,22 @@ ms.custom: H1Hack27Feb2017
 ms.date: 02/07/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 0b3138c4-b840-446a-a15c-10ed8e2dd050
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: a969a75a7c0cda89d040b8829fc8313974646c07
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 171b07d453c81883354848f70458bab39daa313e
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="get-started-with-the-visual-studio-debugger"></a>Visual Studio デバッガーを概要します。
 Visual Studio デバッガーは、どの言語でも簡単に使用できます。 ここでは、単純な c# プログラムをデバッグする方法を説明しますが、C++、JavaScript などの他の言語のコードを同じ手順を適用することができます。
@@ -27,7 +29,7 @@ Visual Studio デバッガーは、どの言語でも簡単に使用できます
 ##  <a name="BKMK_Start_debugging_a_VS_project"></a>基本的な c# プロジェクトをデバッグします。  
  簡単な c# コンソール アプリケーションから始めましょう (**ファイル > 新規 > プロジェクト**選択してから、 **Visual c#**し**コンソール アプリケーション**)。 初めて作業する前に Visual Studio で、表示[チュートリアル: 簡単なアプリケーションを作成する](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)です。 **Main**だけメソッドは整数変数を 10 回に 1 が加算し、コンソールに結果を出力します。  
   
-```CSharp  
+```csharp  
 static void Main(string[] args)  
 {  
     int testInt = 0;  
@@ -56,7 +58,7 @@ static void Main(string[] args)
   
  合わせることができます、 **testInt**変数がデータ ヒントで、現在の値を表示します。  
   
- ![DBG &#95;です。基本 #95; データ &#95;です。ヒント](../debugger/media/dbg_basics_data_tips.png "DBG_Basics_Data_Tips")  
+ ![DBG&#95;Basics&#95;Data&#95;Tips](../debugger/media/dbg_basics_data_tips.png "DBG_Basics_Data_Tips")  
   
  コード ウィンドウのすぐ下に表示されるはずの**[自動変数]**、 **[ローカル]**、および**ウォッチ**windows です。 これらのウィンドウは、実行時における変数の現行値を表示します。 両方、 **[自動変数]**と**ローカル**windows 表示**testInt**の値を持つ**10**です。  
   
@@ -71,7 +73,7 @@ static void Main(string[] args)
   
  間の違いを表示する**ステップ イン**と**ステップ オーバー**、別の方法で呼び出されるメソッドを追加する必要があります。 C# アプリケーションにメソッドを追加し、Main メソッドから呼び出します。 コードは次のようになります。  
   
-```CSharp  
+```csharp  
 static void Main(string[] args)  
 {  
     Method1();  

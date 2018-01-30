@@ -4,7 +4,8 @@ ms.custom: H1HackMay2017
 ms.date: 05/18/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - multithreaded debugging, tutorial
 - tutorials, multithreaded debugging
 ms.assetid: adfbe002-3d7b-42a9-b42a-5ac0903dfc25
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 253798cdde2a40a70496dbe2ed89f9d0a9316640
-ms.sourcegitcommit: 03a74d29a1e0584ff4808ce6c9e812b51e774905
+ms.workload:
+- multiple
+ms.openlocfilehash: 367bade1041012670ae47937c21be42e38157dca
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="walkthrough-debug-a-multithreaded-application-in-visual-studio-using-the-threads-window"></a>チュートリアル: [スレッド] ウィンドウを使用して Visual Studio でのマルチ スレッド アプリケーションをデバッグします。
 Visual Studio では、**スレッド**ウィンドウとその他のユーザー インターフェイスのマルチ スレッド アプリケーションのデバッグに役立つ要素です。 このチュートリアルで使用する方法、**スレッド**ウィンドウおよび**デバッグの場所**ツールバー。 その他のツールについては、次を参照してください。[マルチ スレッド アプリケーションのデバッグの開始](../debugger/get-started-debugging-multithreaded-apps.md)です。 このチュートリアルでは、わずか数分が完了することを理解するマルチ スレッド アプリケーションのデバッグの機能とします。   
@@ -61,7 +63,7 @@ Visual Studio では、**スレッド**ウィンドウとその他のユーザ�
     Console.WriteLine()
     ```  
   
-    ```CSharp  
+    ```csharp  
     Thread.Sleep(3000);  
     Console.WriteLine();  
     ```  
@@ -89,7 +91,7 @@ Visual Studio では、**スレッド**ウィンドウとその他のユーザ�
     Thread.Sleep(5000)   
     ```  
   
-    ```CSharp  
+    ```csharp  
     Thread.Sleep(3000);  
     ```  
   
@@ -141,7 +143,7 @@ Visual Studio では、**スレッド**ウィンドウとその他のユーザ�
 
 8. [スレッド] ウィンドウを選択して開きます**デバッグ > Windows > スレッド**です。
 
-    ![スレッド ウィンドウ](../debugger/media/dbg-threads-window.png "ThreadsWindow")  
+    ![Threads Window](../debugger/media/dbg-threads-window.png "ThreadsWindow")  
   
     **スレッド**ウィンドウで、フラグが設定されたスレッドがそれに付随する目立つ色の赤フラグ アイコン。
 
