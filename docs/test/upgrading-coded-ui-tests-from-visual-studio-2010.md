@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: 9e89ff364b0b10ee85be6fdd98d3e328f8c337ee
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 1af9c5634770b08b7903033226f44630bdb0e133
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="upgrading-coded-ui-tests-from-visual-studio-2010"></a>Visual Studio 2010 からのコード化された UI テストのアップグレード
 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1 で作成したコード化された UI テストを含むテスト プロジェクトは、Visual Studio 2012 以降で開いたときに自動的に修復されます。 テスト プロジェクトがソース管理にチェックインされると、プロジェクト ファイルはこの修復のためにチェックアウトされます。 コード化された UI テストを含むこれらのテスト プロジェクトは、一度修復されると、 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1 と [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]の両方で使用できます。  
@@ -25,7 +26,7 @@ ms.lasthandoff: 01/09/2018
 -   Visual Studio Enterprise  
   
 > [!NOTE]
->  Visual Studio には、テスト プロジェクトの種類が複数含まれています。 コード化された UI テストを新しく作成する場合は、コード化された UI テスト プロジェクトの種類で作成されます。 詳しくは、「 [旧バージョンの Visual Studio からのテストのアップグレード](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52)」をご覧ください。  
+> Visual Studio には、テスト プロジェクトの種類が複数含まれています。 コード化された UI テストを新しく作成する場合は、コード化された UI テスト プロジェクトの種類で作成されます。
   
 > [!WARNING]
 >  コード化された UI テストを含む[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] テスト プロジェクトは、 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] または [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] と [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]の side-by-side 実行で開くときにリビルドする必要があります。  
@@ -66,6 +67,5 @@ ms.lasthandoff: 01/09/2018
 ## <a name="see-also"></a>関連項目
 
 [Visual Studio プロジェクトの移植、移行、およびアップグレード](../porting/port-migrate-and-upgrade-visual-studio-projects.md)  
-[旧バージョンの Visual Studio からのテストのアップグレード](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52)  
 [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)  
 [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

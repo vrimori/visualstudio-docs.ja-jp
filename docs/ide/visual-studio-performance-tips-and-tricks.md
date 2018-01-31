@@ -3,21 +3,24 @@ title: "Visual Studio のパフォーマンスのヒントとテクニック | M
 ms.date: 08/31/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: debugger
+helpviewer_keywords:
+- debugger
 ms.assetid: 2fbcb59e-e981-4b40-8b7a-c1140d31ec4b
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b703fd45732e3fd083a5c95b68647f67dce57b3a
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.workload:
+- multiple
+ms.openlocfilehash: f15f9b34a19617986ca64f9b13af1b28d4c9d01a
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio のパフォーマンスのヒントとテクニック
 
@@ -32,7 +35,7 @@ Visual Studio のパフォーマンスの推奨事項は、まれなケースで
 
     システムを Windows の 32 ビット版から 64 ビット版にアップグレードすると、Visual Studio が使用できる仮想メモリの量が 2 GB から 4 GB に増えます。 これにより、Visual Studio は 32 ビット プロセスですが非常に大きいワークロードを処理できるようになります。
 
-    詳しくは、「[Memory limits](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366778(v=vs.85).aspx#memory_limits)」(メモリの制限) および「[Using /LARGEADDRESSAWARE on 64-bit Windows](https://blogs.msdn.microsoft.com/oldnewthing/20050601-24/?p=35483/)」(64 ビット Windows での /LARGEADDRESSAWARE の使用) をご覧ください。
+    詳しくは、「[Memory limits](https://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx#memory_limits)」(メモリの制限) および「[Using /LARGEADDRESSAWARE on 64-bit Windows](https://blogs.msdn.microsoft.com/oldnewthing/20050601-24/?p=35483/)」(64 ビット Windows での /LARGEADDRESSAWARE の使用) をご覧ください。
 
 ## <a name="configure-solution-and-projects"></a>ソリューションとプロジェクトを構成する
 
@@ -47,6 +50,7 @@ Visual Studio のパフォーマンスの推奨事項は、まれなケースで
     1 つのソリューションを、よく使われるプロジェクトを含む複数の小さいソリューション ファイルに分割できます。 このリファクタリングを行うと、ワークフローのメモリ使用量が大幅に減ります。 また、ソリューションが小さいほど読み込みも速くなります。
 
 ## <a name="configure-debugging-options"></a>デバッグ オプションを構成する
+
 一般にデバッグ セッション中は少ないメモリで実行している場合は、1 つまたは複数の構成を変更することでパフォーマンスを最適化できます。
 
 - **マイ コードのみを有効にする**
@@ -74,6 +78,7 @@ Visual Studio のパフォーマンスの推奨事項は、まれなケースで
     詳しくは、「[Visual Studio のプロファイリング機能ツアー](../profiling/profiling-tools.md)」をご覧ください。
 
 ## <a name="disable-tools-and-extensions"></a>ツールと拡張機能を無効にする
+
 一部のツールや拡張機能を無効にすると、パフォーマンスが向上することがあります。
 
 > [!TIP]
@@ -123,7 +128,8 @@ CLR では、ガベージ コレクションのメモリ管理システムが使
 
 ベージ コレクションを強制するとシナリオが確実に動くようになる場合、この動作はバグである可能性があるので、Visual Studio のフィードバック ツールを使ってレポートを提出してください。
 
-CLR ガベージ コレクターについて詳しくは、「[Fundamental of Garbage Collection](https://msdn.microsoft.com/en-us/library/ee787088(v=vs.110).aspx)」(ガベージ コレクションの基礎) をご覧ください。
+CLR ガベージ コレクターについて詳しくは、「[Fundamental of Garbage Collection](/dotnet/standard/garbage-collection/fundamentals)」(ガベージ コレクションの基礎) をご覧ください。
 
-## <a name="see-also"></a>参照  
- [Visual Studio IDE](../ide/index.md)
+## <a name="see-also"></a>関連項目
+
+[Visual Studio IDE](../ide/visual-studio-ide.md)

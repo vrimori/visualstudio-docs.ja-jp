@@ -4,20 +4,23 @@ ms.custom:
 ms.date: 08/22/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: accessibility [Visual Studio]
+helpviewer_keywords:
+- accessibility [Visual Studio]
 ms.assetid: ddc96c4c-0600-46c1-8267-7dce4c44ad24
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e7b7623a60f5a6e06739596b02125806205c07b4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 6881e90a0035ed7c918acab924832013d9b17088
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-set-ide-accessibility-options"></a>方法: IDE アクセシビリティ オプションを設定する
 > [!TIP]
@@ -33,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="editors-dialogs-and-tool-windows"></a>エディター、ダイアログ、およびツール ウィンドウ  
  既定では、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のダイアログ ボックスおよびツール ウィンドウに対し、オペレーティング システムで使用されているフォント サイズと色が使用されます。 IDE、ダイアログ ボックス、ツール バー、ツール ウィンドウのフレームの色の設定は、配色 (明るいまたは暗い) に基づいています。 [[全般] ([オプション] ダイアログ ボックス - [環境])](../../ide/reference/general-environment-options-dialog-box.md) で、現在の配色テーマを変更することができます。  
 
- エディターのコード ビューでは、ポップアップ ウィンドウも表示できます。 これらのウィンドウを表示し、関数またはステートメントを完成させるために利用できる現在のオブジェクトのメンバーおよびパラメーターを示すことができます。 キー入力が困難な場合は、ウィンドウの表示が役に立ちます。 ただし、ウィンドウを表示するとコード エディターのフォーカスが妨げられるので、ユーザーによっては問題になる場合があります。 これらのウィンドウの表示を中止するには、**[オプション]** ダイアログ ボックスを開き、**[テキスト エディター]**、**[すべての言語]**、**[全般]** を順にクリックし、**[自動メンバー表示]** および **[パラメーター ヒント]** をオフにします。 詳しくは、「[方法: 一般エディター オプションを設定する](http://msdn.microsoft.com/en-us/704e4a7b-2162-4bed-8a47-f4f6ffec98c2)」をご覧ください。  
+ エディターのコード ビューでは、ポップアップ ウィンドウも表示できます。 これらのウィンドウを表示し、関数またはステートメントを完成させるために利用できる現在のオブジェクトのメンバーおよびパラメーターを示すことができます。 キー入力が困難な場合は、ウィンドウの表示が役に立ちます。 ただし、ウィンドウを表示するとコード エディターのフォーカスが妨げられるので、ユーザーによっては問題になる場合があります。 これらのウィンドウの表示を中止するには、**[オプション]** ダイアログ ボックスを開き、**[テキスト エディター]**、**[すべての言語]**、**[全般]** を順にクリックし、**[自動メンバー表示]** および **[パラメーター ヒント]** をオフにします。
 
  統合開発環境 (IDE: Integrated Development Environment) のウィンドウを作業に最も適した位置に整列し直すことができます。 各ツール ウィンドウを、ドッキング、フローティング、非表示、自動非表示にできます。  
 
