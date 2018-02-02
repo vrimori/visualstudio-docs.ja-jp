@@ -4,19 +4,21 @@ ms.custom:
 ms.date: 08/04/2017
 ms.reviewer: Jamie.Young
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d20a30c0-0dcc-4e2c-a809-31c8ea28c7df
-caps.latest.revision: "10"
+caps.latest.revision: 
 ms.author: v-brickg
 manager: ghogen
-ms.workload: v-brickg
-ms.openlocfilehash: 69fad7f5bab020aea442670687e5fc781eee2955
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- v-brickg
+ms.openlocfilehash: eb6ff923bd74b4c6350e8252d59c86cabff11428
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="visual-language-dictionary-for-visual-studio"></a>Visual Studio の visual の言語の辞書
 Visual Studio では、そのアイコンとその他のイメージの構成要素の概念を説明するために一般的なビジュアルな言語を使用します。 新しいアイコンをデザインする場合は、このディクショナリを使用するを伝えるために、独自のイメージの概念を識別できます。  
@@ -448,7 +450,7 @@ Visual Studio では、そのアイコンとその他のイメージの構成要
 | **アクションの状態: 一時停止** | ![アクションの状態: 一時停止 アイコン](../../extensibility/ux-guidelines/media/vld_s_actionstatuspaused.png "VLD_S_ActionStatusPaused") | ![サーバーの一時停止 アイコン](../../extensibility/ux-guidelines/media/vld_s_actionstatuspaused_serverpaused.png "VLD_S_ActionStatusPaused_ServerPaused")<br />サーバーを一時停止 |
 | **アクションの状態: 再生を実行しています。** | ![アクションの状態: 再生、実行中のアイコン](../../extensibility/ux-guidelines/media/vld_s_actionstatusplayingrunning.png "VLD_S_ActionStatusPlayingRunning") | ![サーバーが起動されました アイコン](../../extensibility/ux-guidelines/media/vld_s_actionstatusplayingrunning_serverstarted.png "VLD_S_ActionStatusPlayingRunning_ServerStarted")<br />サーバーが起動されました<br />![実行しない アイコン](../../extensibility/ux-guidelines/media/vld_s_actionstatusplayingrunning_neverrun.png "VLD_S_ActionStatusPlayingRunning_NeverRun")<br />実行しません。 |
 | **アクション ステータス: が停止しました** | ![アクションの状態: 停止 アイコン](../../extensibility/ux-guidelines/media/vld_s_actionstatusstopped.png "VLD_S_ActionStatusStopped") | ![サーバー停止アイコン](../../extensibility/ux-guidelines/media/vld_s_actionstatusstopped_serverstopped.png "VLD_S_ActionStatusStopped_ServerStopped")<br />サーバーを停止しました |
-| **アラートを生成します。** | ![警告アイコン](../../extensibility/ux-guidelines/media/vld_s_alert.png "VLD_S_Alert") | ![リンク テーブル タブ上の手掛かりのアイコンがエラー](../../extensibility/ux-guidelines/media/vld_s_alert_linkedtablewitherrortabcue.png "VLD_S_Alert_LinkedTableWithErrorTabCue")<br />エラー タブ上の手掛かりとリンク テーブル<br />![コード分析 ウィンドウ アイコン](../../extensibility/ux-guidelines/media/vld_s_alert_codeanalysiswindow.png "VLD_S_Alert_CodeAnalysisWindow")<br />コード分析 ウィンドウ |
+| **アラートを生成します。** | ![警告アイコン](../../extensibility/ux-guidelines/media/vld_s_alert.png "VLD_S_Alert") | ![リンク テーブル タブ上の手掛かりのアイコンがエラー](../../extensibility/ux-guidelines/media/vld_s_alert_linkedtablewitherrortabcue.png "VLD_S_Alert_LinkedTableWithErrorTabCue")<br />エラー タブ上の手掛かりとリンク テーブル |
 | **ブレークポイント: 詳細設定を無効化** | ![ブレークポイント: 詳細無効アイコン](../../extensibility/ux-guidelines/media/vld_s_breakpointadvanceddisabled.png "VLD_S_BreakpointAdvancedDisabled") ||
 | **ブレークポイント: 詳細有効**  |![ブレークポイント: 有効なアイコンの詳細](../../extensibility/ux-guidelines/media/vld_s_breakpointadvancedenabled.png "VLD_S_BreakpointAdvancedEnabled") ||
 | **ブレークポイント: バインドされています。** | ![[ブレークポイント: バインド] アイコン](../../extensibility/ux-guidelines/media/vld_s_breakpointbound.png "VLD_S_BreakpointBound") ||

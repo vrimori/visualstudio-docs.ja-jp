@@ -6,17 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: a2098fd9-8334-4e95-9b8d-bc3da689d9e3
-caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+dev_langs:
+- CPP
 ms.technology: vs-ide-code-analysis
-ms.openlocfilehash: 0dba021b25a63a057f882aeb5c49a560992c2c2b
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 97ada4fa2abd8975bd728b48fc24b9e3e9e2af41
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>C++ の主要なガイドライン チェッカーを使用します。
 C++ の主要なガイドラインは、ポータブル ガイドライン、ルール、および C++ の専門家とデザイナーで作成された C++ で記述に関するベスト プラクティスのセットです。 現在、visual Studio は、c++ のコード分析ツールの一部としてこれらの規則のサブセットをサポートします。 コア ガイドライン チェッカーが Visual Studio 2017 で既定でインストールされ[Visual Studio 2015 用の NuGet パッケージとして入手できます](#vs2015_corecheck)です。
@@ -107,7 +107,7 @@ Visual Studio 2017 15.3 のバージョンの時点でサポートされてい�
   - **算術規則**算術演算子を検出する規則を[オーバーフロー](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-overflow)、[操作の符号付き-符号なし](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-unsigned)と[ビット操作](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-nonnegative)です。
 
 
- 1 つまたはいくつかのグループの警告を制限することができます。 **ネイティブ最小**と**ネイティブ推奨**ルール セットには、他の PREfast チェックだけでなく C++ コア チェック ルールが含まれます。 確認には、使用可能なルール セット、プロジェクトのプロパティ ダイアログを開き、次のように選択します**コード Analysis\General**、にあるボックスを開き、**規則セット**コンボ ボックス、および選択**複数の規則セットの選択。**. 詳細については、Visual Studio でのルール セットを使用して、次を参照してください。[ルール セットのコード分析規則のグループを使用して](using-rule-sets-to-group-code-analysis-rules.md)です。
+ 1 つまたはいくつかのグループの警告を制限することができます。 **ネイティブ最小**と**ネイティブ推奨**ルール セットには、他の PREfast チェックだけでなく C++ コア チェック ルールが含まれます。 確認には、使用可能なルール セット、プロジェクトのプロパティ ダイアログを開き、次のように選択します**コード Analysis\General**、にあるボックスを開き、**規則セット**コンボ ボックス、および選択**複数の規則セットの選択**。 詳細については、Visual Studio でのルール セットを使用して、次を参照してください。[ルール セットのコード分析規則のグループを使用して](using-rule-sets-to-group-code-analysis-rules.md)です。
 
 ## <a name="macros"></a>[マクロ]
  C++ の主要なガイドライン チェックをコードで警告のカテゴリ全体を抑制するより簡単にするマクロを定義するヘッダー ファイルが付属します。
@@ -191,7 +191,7 @@ Do 重点を置いてコードの分析やまだ Visual Studio IDE を使用す�
 ```
 Microsoft.Cpp.targets ファイルをインポートする前にこれらのプロパティを追加することを確認してください。 特定のルール セットを選択またはカスタム規則セットを作成したりその他の PREfast チェックを含む既定の規則セットを使用できます。
 
-同じアプローチを使用して、指定したファイルでのみ C++ コア チェッカーを実行することができます[前に説明した](#coreckeck_per_file)、ただし、MSBuild ファイルを使用します。 使用して、環境変数を設定することができます、`BuildMacro`項目。
+同じアプローチを使用して、指定したファイルでのみ C++ コア チェッカーを実行することができます[前に説明した](#corecheck_per_file)、ただし、MSBuild ファイルを使用します。 使用して、環境変数を設定することができます、`BuildMacro`項目。
 
 ```xml
 <ItemGroup>

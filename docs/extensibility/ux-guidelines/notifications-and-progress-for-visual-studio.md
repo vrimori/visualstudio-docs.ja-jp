@@ -4,20 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f0ef65e9-0f1f-45f4-9f25-6e2398691168
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 0721d0080ec135a8e969cc420dfbb51e81ac4454
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- vssdk
+ms.openlocfilehash: 00ab0622820777f556eff667e6de5f769196e6b0
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="notifications-and-progress-for-visual-studio"></a>通知および Visual Studio の進行状況
 ##  <a name="BKMK_NotificationSystems"></a>通知システム  
@@ -238,8 +240,6 @@ ms.lasthandoff: 12/22/2017
   
  ![ウィンドウ内の情報バー](../../extensibility/ux-guidelines/media/0903-06_infobarinwindow.png "0903 06_InfoBarInWindow")  
   
- **コード分析 ウィンドウ内の情報バー**  
-  
 ##### <a name="inline"></a>インライン  
  インラインの進行状況を示す値は、いずれかの進行状況ローダー型で表すことができます。 通常の進行状況インジケーターとペアになり、メッセージングしますが、必要ではありません。  
   
@@ -292,7 +292,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="overview"></a>概要  
  情報バーのアテンションのポイントの近くにインジケーターをユーザーに付与し、視覚的な外観との相互作用の一貫性を確保共有情報バー コントロールを使用します。  
   
- ![情報バー](../../extensibility/ux-guidelines/media/0904-01_infobar.png "0904 01_Infobar")  
+ ![Infobar](../../extensibility/ux-guidelines/media/0904-01_infobar.png "0904-01_Infobar")  
   
  **Visual Studio での情報バー**  
   

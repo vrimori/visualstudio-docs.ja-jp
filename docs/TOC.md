@@ -39,6 +39,7 @@
 ### 参照
 #### [Visual Studio のワークロードとコンポーネント ID](install/workload-and-component-ids.md)
 #### [Visual Studio のビルド番号とリリース日](install/visual-studio-build-numbers-and-release-dates.md)
+## [Azure 仮想マシンから Visual Studio を使用する](install/using-visual-studio-vm.md)
 ## [コンテナーにビルド ツールをインストールする](install/build-tools-container.md)
 ### [コンテナーの高度な例](install/advanced-build-tools-container.md)
 ### [コンテナーの既知の問題](install/build-tools-container-issues.md)
