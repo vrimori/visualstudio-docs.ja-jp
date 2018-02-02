@@ -29,12 +29,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 135e0e9d5b6b2d4e0f75804a98c8f40f17d0b736
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.openlocfilehash: 9b921b3b4c1bad9b68f668ec7589b4a0030052d0
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="map-dependencies-across-your-solutions"></a>ソリューション間の依存関係をマップする
 
@@ -63,13 +64,13 @@ ms.lasthandoff: 01/13/2018
   
  **次の言語でコードの依存関係をマップできます**。  
   
--   ソリューションまたはアセンブリの Visual C# .NET または Visual Basic .NET (.dll または .exe)  
+-   Visual c# または Visual Basic ソリューションまたはアセンブリ (.dll または .exe)  
   
 -   Visual C++ プロジェクト、ヘッダー ファイル (.h または `#include`)、またはバイナリのネイティブまたはマネージ C コードまたは C++ コード  
   
 -   Microsoft Dynamics AX の .NET モジュールから作られた X++ プロジェクトおよびアセンブリ  
   
- **注:** C# または Visual Basic .NET 以外のプロジェクトの場合、コード マップを開始したり、既存のコード マップに項目を追加したりするためのオプションは少なくなります。 たとえば、C++ プロジェクトのテキスト エディター内のオブジェクトを右クリックすることも、コード マップにそのオブジェクト追加することもできません。 ただし、ソリューション エクスプローラー、クラス ビュー、およびオブジェクト ブラウザーから、個々のコード要素またはファイルをドラッグ アンド ドロップできます。  
+ **注:**以外は、c# または Visual Basic プロジェクトの場合は、コード マップを開始または既存のコード マップに項目を追加するためのオプションを少なくします。 たとえば、C++ プロジェクトのテキスト エディター内のオブジェクトを右クリックすることも、コード マップにそのオブジェクト追加することもできません。 ただし、ソリューション エクスプローラー、クラス ビュー、およびオブジェクト ブラウザーから、個々のコード要素またはファイルをドラッグ アンド ドロップできます。  
   
 #### <a name="to-see-the-overall-dependencies-across-your-solution"></a>ソリューション内の全体的な依存関係を表示するには  
   
@@ -286,7 +287,7 @@ ms.lasthandoff: 01/13/2018
 ##  <a name="SeeSourceHeader"></a> C および C++ のソース ファイルとヘッダー ファイルの間の依存関係の表示  
  C++ プロジェクトのより完全なマップを作成する場合は、そのプロジェクトに対してブラウザー情報のコンパイラ オプション (**/FR**) を設定します。 設定されていない場合は、メッセージが表示され、このオプションを設定することが求められます。 **[OK]**を選択した場合、このオプションは現在のマップに対してのみ設定されます。 以後のすべてのマップについて、メッセージを非表示にするように選択できます。 このメッセージを非表示にしても、再び表示されるようにできます。 次のレジストリ キーを `0` に設定するか、削除します。  
   
- **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\NativeProvider: AutoEnableSbr**  
+ **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\NativeProvider : AutoEnableSbr**  
   
  Visual C++ のプロジェクトを含むソリューションを開くときは、IntelliSense データベースの更新に時間がかかる場合があります。 この間は、IntelliSense データベースの更新が終了するまで、ヘッダー (.h または `#include`) ファイルのコード マップを生成できない場合があります。 更新の進行状況は、Visual Studio のステータス バーで監視できます。 IntelliSense の特定の設定が無効になっているために表示されるメッセージまたは問題を解決するには、「 [C および C++ コードのマップのトラブルシューティング](#Troubleshooting)」を参照してください。  
   

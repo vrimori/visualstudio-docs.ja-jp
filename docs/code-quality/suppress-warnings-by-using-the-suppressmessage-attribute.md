@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-code-analysis
+ms.technology:
+- vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - SuppressMessage attribute
 - code analysis, SuppressMessage attribute
 ms.assetid: a38c57a2-d29d-43c0-84ff-3308b2484ce6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: ce246c0ff960c78aed1901618fdc26bff97779d2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/31/2018
 ---
 # <a name="suppress-warnings-by-using-the-suppressmessage-attribute"></a>SuppressMessage 属性を使用した警告の抑制
 警告がコードをレビューし、警告を抑制する必要があると判断されたこと、チーム メンバーに nonapplicable であることを示すと便利です。 ソース内抑制 (ISS) では、開発者が、警告を生成した場所の近くに警告を抑制する属性を配置することができます。 ISS 属性を追加するには、ソース ファイルに直接またはのショートカット メニューを使用することができます、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE です。  

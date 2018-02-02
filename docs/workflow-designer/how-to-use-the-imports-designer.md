@@ -6,21 +6,23 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: System.Activities.Presentation.View.ImportDesigner.UI
+f1_keywords:
+- System.Activities.Presentation.View.ImportDesigner.UI
 ms.assetid: 61328ab6-9b66-4e12-8630-22e30ee8c9d1
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.workload: multiple
-ms.openlocfilehash: 3873e444f3d9c68b632d52ab98bee07bf14af679
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: cfa65ee24b99fd81712ec88e45f44bb2ed42c21a
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-use-the-imports-designer"></a>インポート デザイナーを使用する方法
-インポート デザイナーを使用すると、式で使用する型の名前空間を入力できます。 ほぼ同様に、**インポート**または**を使用して**Visual Basic .NET と C# の場合、インポート デザイナーで名前空間を指定するキーワードを有効にするだけで完全修飾ではなく、式の型の名前を入力します。バージョンの型名。  
+インポート デザイナーを使用すると、式で使用する型の名前空間を入力できます。 ほぼ同様に、**インポート**または**を使用して**Visual Basic および C# の場合、インポート デザイナーで名前空間を指定するキーワードを使用すると、単に完全修飾ではなく、式の型の名前を入力してくださいバージョンの型名。  
   
  インポート デザイナーでは、UI での変更とワークフローの保存時に行われる変更の両方に応じて処理を行います。 ワークフローの保存時に、インポート デザイナーに名前空間を自動的に追加できます。 次に例を示します。  
   

@@ -21,12 +21,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c3f457e46c1f9f0d7b3ed2f862a411245caf72e7
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.workload:
+- multiple
+ms.openlocfilehash: 7f00144687d2e9bc728cbdd1ef57342d1b19881d
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>依存関係のダイアグラムのコードを検証します。
 
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/22/2018
   
 -   Team Foundation ビルド サーバーにインストールされた Visual Studio (Team Foundation ビルドを使用してコードを自動的に検証するために必要)  
   
--   依存関係ダイアグラムを含むモデリング プロジェクトのソリューションです。 この依存関係ダイアグラムは、検証する Visual c# .NET または Visual Basic .NET プロジェクトの成果物にリンクする必要があります。 参照してください[コードから依存関係のダイアグラムを作成](../modeling/create-layer-diagrams-from-your-code.md)です。  
+-   依存関係ダイアグラムを含むモデリング プロジェクトのソリューションです。 この依存関係ダイアグラムは、検証する c# または Visual Basic のプロジェクトの成果物にリンクする必要があります。 参照してください[コードから依存関係のダイアグラムを作成](../modeling/create-layer-diagrams-from-your-code.md)です。  
   
  この機能をサポートする Visual Studio のバージョンを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
@@ -120,7 +121,7 @@ Visual Studio のこのリリースで、リアルタイムで依存関係の検
 2.  表示するには各エラーの発生元でエラーをダブルクリック、**エラー一覧**ウィンドウです。  
   
     > [!NOTE]
-    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、エラーのソースの代わりにコード マップが表示されることがあります。 これは、コードで依存関係の図に指定されていないアセンブリに依存しているか、コードの依存関係ダイアグラムで指定された依存関係がない場合に発生します。 コード マップまたはコードをレビューし、依存関係が必要であるかどうかを検証してください。 コード マップの詳細については、次を参照してください。[ソリューション間の依存関係をマップする](../modeling/map-dependencies-across-your-solutions.md)です。  
+    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] エラーのソースではなく、コード マップを表示する場合があります。 これは、コードで依存関係の図に指定されていないアセンブリに依存しているか、コードの依存関係ダイアグラムで指定された依存関係がない場合に発生します。 コード マップまたはコードをレビューし、依存関係が必要であるかどうかを検証してください。 コード マップの詳細については、次を参照してください。[ソリューション間の依存関係をマップする](../modeling/map-dependencies-across-your-solutions.md)です。  
   
 3.  エラーを管理する、次を参照してください。[検証エラーを管理する](#ManageErrors)です。  
   

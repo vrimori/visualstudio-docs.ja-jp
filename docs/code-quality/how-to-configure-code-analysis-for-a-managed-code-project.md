@@ -7,29 +7,30 @@ ms.suite:
 ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.codeanalysis.propertypages.csvb
+f1_keywords:
+- vs.codeanalysis.propertypages.csvb
 helpviewer_keywords:
 - code analysis, selecting rule sets
 - code analysis, rule sets
-ms.assetid: 618f6ff3-db0e-46cb-b08d-dfa35e62c9e7
-caps.latest.revision: "33"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 134645ced3352d820165b23a73308894fed0897a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- dotnet
+ms.openlocfilehash: 575b81e9c213e4025cd38921ad467869686d867c
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-configure-code-analysis-for-a-managed-code-project"></a>方法: マネージ コード プロジェクトのコード分析を構成する
-[!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、[!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]と[!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]、コード分析の一覧から選択できます*ルール セット*マネージ コード プロジェクトに適用します。 既定の規則セットは Microsoft 最小推奨規則です。 ソリューション内の 1 つのプロジェクトまたはすべてのプロジェクトに別の規則セットを適用することもできます。  
+
+Visual Studio では、コード分析の一覧から選択できる*ルール セット*マネージ コード プロジェクトに適用します。 既定の規則セットは Microsoft 最小推奨規則です。 ソリューション内の 1 つのプロジェクトまたはすべてのプロジェクトに別の規則セットを適用することもできます。  
   
 > [!NOTE]
->  ASP.NET Web アプリケーションに対して規則セットを構成する方法については、次を参照してください。[する方法: ASP.NET Web アプリケーションのコード分析を構成する](../code-quality/how-to-configure-code-analysis-for-an-aspnet-web-application.md)です。  
+> ASP.NET Web アプリケーションに対して規則セットを構成する方法については、次を参照してください。[する方法: ASP.NET Web アプリケーションのコード分析を構成する](../code-quality/how-to-configure-code-analysis-for-an-aspnet-web-application.md)です。  
   
-### <a name="to-configure-a-rule-set-for-a-net-framework-project"></a>.NET Framework プロジェクトの規則セットを構成するには  
+## <a name="to-configure-a-rule-set-for-a-net-framework-project"></a>.NET Framework プロジェクトの規則セットを構成するには  
   
 1.  **ソリューション エクスプ ローラー**プロジェクトをクリックします。  
   
@@ -37,12 +38,12 @@ ms.lasthandoff: 12/22/2017
   
 3.  **構成**と**プラットフォーム**リスト、ビルド構成とターゲット プラットフォーム をクリックします。  
   
-4.  選択した構成を使用して、プロジェクトをビルドするたびにコード分析を実行するには選択、**を有効にするビルドに対するコード分析 (定数 CODE_ANALYSIS を定義)**チェック ボックスをオンします。 手動では開くことによってもコード分析を実行することができます、**分析**メニューをクリックして**でコード分析を実行** *ProjectName*です。  
+4.  選択した構成を使用して、プロジェクトをビルドするたびにコード分析を実行するには選択、**ビルドに対するコード分析を有効にする**チェック ボックスをオンします。 手動では開くことによってもコード分析を実行することができます、**分析**メニュー * * でコード分析を実行 * ProjectName * * *。  
   
 5.  既定では、外部ツールによって自動的に生成されたコードからの警告はコード分析では報告されません。 生成されたコードからの警告を表示するには、オフ、**生成されたコードから結果を表示しない**チェック ボックスをオンします。  
   
     > [!NOTE]
-    >  コード分析のエラーおよび警告がフォームやテンプレートで表示される場合、このオプションを使用しても、生成されたコードからこのエラーおよび警告の出力は抑制されません。 フォームまたはテンプレートのソース コードは表示することも保持することもできます。  
+    > コード分析のエラーおよび警告がフォームやテンプレートで表示される場合、このオプションを使用しても、生成されたコードからこのエラーおよび警告の出力は抑制されません。 表示し、上書きされることをしなくても、フォームまたはテンプレートのソース コードを維持します。
   
 6.  **この規則セットを実行**ボックスの一覧で、次のいずれかの操作します。  
   
@@ -54,5 +55,6 @@ ms.lasthandoff: 12/22/2017
   
          詳細については、次を参照してください。[カスタム規則セットの作成](../code-quality/creating-custom-code-analysis-rule-sets.md)です。  
   
-## <a name="see-also"></a>参照  
- [チュートリアル: カスタム規則セットの構成と使用](../code-quality/walkthrough-configuring-and-using-a-custom-rule-set.md)
+## <a name="see-also"></a>関連項目
+
+[チュートリアル: カスタム規則セットの構成と使用](../code-quality/walkthrough-configuring-and-using-a-custom-rule-set.md)

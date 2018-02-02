@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 05/18/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-f1_keywords: vs.progression.debugwithcodemaps
+f1_keywords:
+- vs.progression.debugwithcodemaps
 dev_langs:
 - CSharp
 - VB
@@ -28,16 +30,17 @@ helpviewer_keywords:
 - debugging [Visual Studio], tracing the call stack visually
 - debugging [Visual Studio], visualizing the call stack
 ms.assetid: d6a72e5e-f88d-46fc-94a3-1789d34805ef
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: douge
-ms.workload: multiple
-ms.openlocfilehash: 9d1efeee412d98c62b7dc6aa2c92d2bbab4fab6d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 99f388fea1d6512760f99615256f71002099e9be
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-a-visual-map-of-the-call-stack-while-debugging-in-visual-studio-enterprise"></a>Visual Studio Enterprise でのデバッグ中に、呼び出し履歴の visual のマップを作成します。
 コード マップをデバッグしながら呼び出し履歴を視覚的にトレースを作成します。 コメントをマップに追加することでバグの発見に重点を置いてコードの動作を追跡できます。
@@ -46,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Visual Studio Enterprise](https://www.visualstudio.com/downloads/download-visual-studio-vs)  
   
--   デバッグできるコード (Visual C# .NET、Visual Basic .NET、C++、JavaScript、X++ など) です。  
+-   Visual c#、Visual Basic など、C++、JavaScript、x++ をデバッグするコード  
 
 コード マップを簡単に見てを次に示します。
   
@@ -95,7 +98,7 @@ ms.lasthandoff: 12/22/2017
  ![次の呼び出し履歴でコード マップの更新](../debugger/media/debuggermap_addclearcallstack.png "DebuggerMap_AddClearCallStack")  
   
 ##  <a name="AddRelatedCode"></a>マップに関連するコードを追加します。  
- 作成できたところで、マップの新機能 次へしますか。 Visual c# .NET または Visual Basic .NET で作業している場合は、フィールド、プロパティ、およびコードで何が起こっているかを追跡するために、他の方法などのアイテムを追加します。  
+ 作成できたところで、マップの新機能 次へしますか。 Visual c# または Visual Basic で作業している場合は、フィールド、プロパティ、およびコードで何が起こっているかを追跡するために、他の方法などのアイテムを追加します。  
   
  メソッドのコード定義を表示するには、そのメソッドをダブルクリックするか、そのメソッドのショートカット メニューを使用します。 (キーボード: マップとキーを押す方法を選択して**F12**)  
   

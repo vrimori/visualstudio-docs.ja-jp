@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-code-analysis
+ms.technology:
+- vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,18 +22,20 @@ helpviewer_keywords:
 - '#pragma directives, code analysis'
 - C, code analysis
 ms.assetid: 81f0c9e8-f471-4de5-aac4-99db336a8809
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 28a5e13c2c56c7ecdb65efdfc1bd0b3c6eb47bfc
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2261921e4266f1b58ed31650ac1ff1bb7c028942
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="code-analysis-for-cc-overview"></a>C/C++ のコード分析の概要
+# <a name="code-analysis-for-cc-overview"></a>C と C++ の概要のコード分析
+
 C/C++ コード分析ツールは、C/C++ ソース コードの障害に関する情報を開発者に提供します。 このツールによってレポートされる一般的なコーディング エラーとしては、バッファー オーバーラン、初期化されていないメモリ、null ポインターの逆参照、メモリ リーク、リソース リークなどがあります。  
   
 ## <a name="ide-integrated-development-environment-integration"></a>IDE (統合開発環境) の統合  
@@ -48,9 +51,14 @@ C/C++ コード分析ツールは、C/C++ ソース コードの障害に関す�
  すべてソース コードのチェックインが特定のポリシーを満たしていることを必要とする可能性があります。 具体的には、分析に最も最近使用したローカル ビルドのステップとして実行されたことを確認します。 コード分析チェックイン ポリシーを有効にする方法の詳細については、次を参照してください[の作成とコード分析チェックイン ポリシーの使用。](../code-quality/creating-and-using-code-analysis-check-in-policies.md)  
   
 ## <a name="team-build-integration"></a>チーム ビルドの統合  
- コード分析ツールのステップとして実行するビルド システムの統合機能を使用することができます、[!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]プロセスをビルドします。 詳細については、次を参照してください。[ビルドとリリースの](/vsts/build-release/index)します。  
+ コード分析ツールのステップとして実行するビルド システムの統合機能を使用することができます、[!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]プロセスをビルドします。 詳細については、「[Build and release (ビルドとリリース)](/vsts/build-release/index)」をご覧ください。  
   
 ## <a name="command-line-support"></a>コマンド ライン サポート  
  だけでなく、完全統合開発環境では、開発者も行えます分析ツールをコマンドラインから次の例で示すように。  
   
  `C:\>cl /analyze Sample.cpp`
+
+## <a name="see-also"></a>関連項目
+
+[コード分析ツールを使用したドライバー品質の分析](/windows-hardware/drivers/develop/analyzing-driver-quality-by-using-code-analysis-tools)  
+[ドライバー警告のコード分析](/windows-hardware/drivers/devtest/prefast-for-drivers-warnings)

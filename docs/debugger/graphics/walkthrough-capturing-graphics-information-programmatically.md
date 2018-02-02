@@ -4,20 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: a5adeff9-afaf-4047-b5ce-ef0aefe710eb
-caps.latest.revision: "21"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c84239c2f70a32558f64a299791db917926a8c44
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.workload:
+- multiple
+ms.openlocfilehash: a5a8aeec2421b92057ba414b5cf23b1770b1f761
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>チュートリアル: プログラムによるグラフィックス情報のキャプチャ
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のグラフィックス診断を使用すると、Direct3D アプリケーションからプログラムによってグラフィックス情報をキャプチャできます。  
@@ -30,8 +30,8 @@ ms.lasthandoff: 01/10/2018
   
 -   レンダリングの問題を予測して手動テストでキャプチャすることは難しいものの、実行時にアプリケーションの状態に関する情報を使用してプログラムで予測できるときは、 `CaptureCurrentFrame`を呼び出します。  
   
-##  <a name="CaptureDX11_2"></a> Windows 8.1 のプログラムによるキャプチャ  
- このチュートリアルのパートでは、Windows 8.1 で DirectX 11.2 API を使用するアプリケーションでのプログラムによるキャプチャについて説明します。ここでは、堅牢なキャプチャ方法を使用します。 Windows 8.0 で前のバージョンの DirectX を使用しているアプリでプログラムによるキャプチャを使用する方法については、このチュートリアルで後述する「 [Programmatic capture in Windows 8.0 and earlier](#CaptureDX11_1) 」をご覧ください。  
+##  <a name="CaptureDX11_2"></a>Windows 10 でプログラムによるキャプチャ  
+ このチュートリアルのこの部分では、堅牢なキャプチャ方法を使用して Windows 10 で、DirectX 11.2 API を使用するアプリケーションでプログラムによるキャプチャについて説明します。
   
  このセクションでは、次のタスクを実行する方法を示します。  
   
@@ -42,10 +42,10 @@ ms.lasthandoff: 01/10/2018
 -   グラフィックス情報をキャプチャする  
   
 > [!NOTE]
->  プログラムによるキャプチャの以前の実装に依存 Remote Tools for Visual Studio の[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]キャプチャ機能を提供するには、Windows 8.1 は、直接 direct 3 d 11.2 によりキャプチャをサポートしています。 その結果、Windows 8.1 でプログラムによるキャプチャの for Visual Studio リモート ツールをインストールする必要が不要になった。  
+>  プログラムによるキャプチャの以前の実装に依存 Remote Tools for Visual Studio の[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]キャプチャ機能を提供します。
   
 ### <a name="preparing-your-app-to-use-programmatic-capture"></a>プログラムによるキャプチャを使用するためにアプリケーションを準備する  
- アプリケーションでプログラムによるキャプチャを使用するには、必要なヘッダーをインクルードすることが必要です。 これらのヘッダーは、Windows 8.1 の SDK の一部です。  
+ アプリケーションでプログラムによるキャプチャを使用するには、必要なヘッダーをインクルードすることが必要です。 これらのヘッダーは、Windows 10 SDK の一部です。  
   
 ##### <a name="to-include-programmatic-capture-headers"></a>プログラムによるキャプチャのヘッダーをインクルードするには  
   
@@ -59,28 +59,10 @@ ms.lasthandoff: 01/10/2018
     ```  
   
     > [!IMPORTANT]
-    >  ヘッダー ファイル vsgcapture.h—which サポートは、Windows 8.0 および前にプログラムによるキャプチャを含めないでください: Windows 8.1 アプリでプログラムによるキャプチャを実行します。 このヘッダーは DirectX 11.2 で使用することはできません。 D3d11_2.h ヘッダーが含まれる後にこのファイルが含まれる場合は、コンパイラは警告を発行します。 Vsgcapture.h が d3d11_2.h する前に含まれている場合、アプリは起動しません。  
+    >  ヘッダー ファイル vsgcapture.h—which サポートは、Windows 8.0 および前にプログラムによるキャプチャを含めないでください: Windows 10 アプリでプログラムによるキャプチャを実行します。 このヘッダーは DirectX 11.2 で使用することはできません。 D3d11_2.h ヘッダーが含まれる後にこのファイルが含まれる場合は、コンパイラは警告を発行します。 Vsgcapture.h が d3d11_2.h する前に含まれている場合、アプリは起動しません。  
   
     > [!NOTE]
     >  コンピューターに June 2010 DirectX SDK がインストールされており、プロジェクトのインクルード パスに `%DXSDK_DIR%includex86`が含まれている場合は、それをインクルード パスの最後に移動します。 ライブラリ パスでも同様にします。  
-  
-#### <a name="windows-phone-81"></a>Windows Phone 8.1  
- 定義する必要があります、Windows Phone 8.1 の SDK には、DXProgrammableCapture.h ヘッダーが含まれていない、ため、`IDXGraphicsAnalysis`インターフェイスを自分で使用できるように、`BeginCapture()`と`EndCapture()`メソッドです。 前のセクションで説明されているとおり、他のヘッダーをインクルードします。  
-  
-###### <a name="to-define-the-idxgraphicsanalysis-interface"></a>IDXGraphicsAnalysis インターフェイスを定義するには  
-  
--   ヘッダー ファイルをインクルードしたのと同じファイルで、IDXGraphicsAnalysis インターフェイスを定義します。  
-  
-    ```  
-    interface DECLSPEC_UUID("9f251514-9d4d-4902-9d60-18988ab7d4b5") DECLSPEC_NOVTABLE  
-    IDXGraphicsAnalysis : public IUnknown  
-    {  
-        STDMETHOD_(void, BeginCapture)() PURE;  
-        STDMETHOD_(void, EndCapture)() PURE;  
-    };  
-    ```  
-  
- 使いやすくするために、新しいヘッダー ファイルでこれらのステップを実行し、その後で、アプリケーションで必要な個所にヘッダー ファイルをインクルードすることができます。  
   
 ### <a name="getting-the-idxgraphicsanalysis-interface"></a>IDXGraphicsAnalysis インターフェイスを取得する  
  DirectX 11.2 からグラフィックス情報をキャプチャする前に、DXGI デバッグ インターフェイスを取得する必要があります。  
@@ -129,70 +111,6 @@ ms.lasthandoff: 01/10/2018
     pGraphicsAnalysis->EndCapture();  
     ...  
     ```  
-  
-##  <a name="CaptureDX11_1"></a> Programmatic capture in Windows 8.0 and earlier  
- チュートリアルのこの部分では、DirectX 11.1 API を使用する Windows 8.0 (およびそれ以前) のアプリケーションにおけるプログラムによるキャプチャについて説明します。これは、従来のキャプチャ方法を使用します。 Windows 8.1 で DirectX 11.2 を使用するアプリでプログラムによるキャプチャを使用する方法については、このチュートリアルで前述の「 [Windows 8.1 のプログラムによるキャプチャ](#CaptureDX11_2) 」をご覧ください。  
-  
- ここでは、次のタスクについて説明します。  
-  
--   プログラムによるキャプチャを使用するためにコンピューターを準備する  
-  
--   プログラムによるキャプチャを使用するためにアプリケーションを準備する  
-  
--   グラフィックス ログ ファイルの名前と場所を設定する  
-  
--   `CaptureCurrentFrame` API の使用  
-  
-### <a name="preparing-your-computer-to-use-programmatic-capture"></a>プログラムによるキャプチャを使用するためにコンピューターを準備する  
- プログラム キャプチャ API は、Remote Tools for [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を使用してキャプチャ機能を提供します。 ローカル コンピューターでプログラムによるキャプチャを使用している場合でも、アプリケーションが実行されるコンピューターにリモート ツールをインストールしておく必要があります。 ローカル コンピューターでプログラムによるキャプチャを行う場合は、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を実行させる必要はありません。  
-  
- コンピューターで実行しているアプリケーションでリモート キャプチャ API を使用するには、まず Remote Tools for [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を対象のコンピューターにインストールする必要があります。 リモート ツールのバージョンによって、サポートしているハードウェア プラットフォームも異なります。 リモート ツールのインストール方法については、Microsoft のダウンロード Web サイトの「 [リモート ツールのダウンロード](http://go.microsoft.com/fwlink/p/?LinkId=246691) 」ページをご覧ください。  
-  
- または [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] で、32 ビット アプリケーション向けのリモート キャプチャを実行するのに必要なコンポーネントをインストールします。  
-  
-> [!NOTE]
->  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]も含めて大半の Windows デスクトップ アプリケーションは、 [!INCLUDE[win8](../includes/win8_md.md)] for ARM デバイスでサポートされていないため、ARM デバイスでグラフィックス診断をキャプチャするには、Remote Tools for [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] をプログラム キャプチャ API と一緒に使用する方法しかありません。  
-  
-### <a name="preparing-your-app-to-use-programmatic-capture"></a>プログラムによるキャプチャを使用するためにアプリケーションを準備する  
- グラフィックス診断ツールを使用するには、まず依存するグラフィックス情報をキャプチャする必要があります。 `CaptureCurrentFrame` API を使用して、プログラムによって情報をキャプチャできます。  
-  
-##### <a name="to-prepare-your-app-to-capture-graphics-information-programmatically"></a>グラフィックス情報をプログラムによってキャプチャするためにアプリケーションを準備するには  
-  
-1.  `vsgcapture.h` ヘッダーがアプリケーションのソース コードにインクルードされていることを確認します。 このヘッダーは、プログラム キャプチャ API を呼び出すソース コード ファイルや、複数のソース コード ファイルから API を呼び出すためのコンパイル済みヘッダー ファイルの中で、決まった場所にのみインクルードできます。  
-  
-2.  アプリケーション用のソース コードで、現行のフレームの残りをキャプチャしようとするたびに、 `g_pVsgDbg->CaptureCurrentFrame()`を呼び出します。 この方法では、パラメーターを使用しないため戻り値がありません。  
-  
-### <a name="configuring-the-name-and-location-of-the-graphics-log-file"></a>グラフィックス ログ ファイルの名前と場所を設定する  
- グラフィックス ログは、 `DONT_SAVE_VSGLOG_TO_TEMP` および `VSG_DEFAULT_RUN_FILENAME` マクロで定義されている場所に作成されます。  
-  
-##### <a name="to-configure-the-name-and-location-of-the-graphics-log-file"></a>グラフィックス ログ ファイルの名前と場所を構成するには  
-  
--   グラフィックス ログが一時ディレクトリに書き込まれないようにするために、 `#include <vsgcapture.h>` 行の前に次の行を追加します。  
-  
-    ```  
-    #define DONT_SAVE_VSGLOG_TO_TEMP  
-    ```  
-  
-     この値を定義すると、作業ディレクトリに対して相対的な場所へグラフィックス ログを書き込むことも、( `VSG_DEFAULT_RUN_FILENAME` の定義が絶対パスの場合は) 絶対パスへ書き込むこともできます。  
-  
--   グラフィックス ログを別の場所へ保存するか、または別のファイル名を指定するには、 `#include <vsgcapture.h>` 行の前に次の行を追加します。  
-  
-    ```  
-    #define VSG_DEFAULT_RUN_FILENAME <filename>  
-    ```  
-  
-     この手順を実行しない場合、ファイル名は default.vsglog になります。 `DONT_SAVE_VSGLOG_TO_TEMP`を定義しないと、ファイルの場所は一時ディレクトリに対して相対的なものになります。それ以外の場合は、作業ディレクトリに対して相対的な場所になるか、または絶対的なファイル名を指定した場合は別の場所になります。  
-  
- UWP と[!INCLUDE[win8_appname_long](../includes/win8_appname_long_md.md)]アプリでは、一時ディレクトリの場所は各ユーザーおよびアプリケーションに固有であり C:\users などの場所でよく見られる\\*username*\AppData\Local\Packages\\ *パッケージ ファミリ名*\TempState\\です。 デスクトップ アプリの場合、一時ディレクトリの場所は各ユーザー固有および C:\Users などの場所でよく見られる\\*username*\AppData\Local\Temp\\です。  
-  
-> [!NOTE]
->  特定の場所に書き込むには、その場所に対する書き込み権限を持っている必要があります。持っていない場合はエラーが発生します。 その UWP に留意してくださいと[!INCLUDE[win8_appname_long](../includes/win8_appname_long_md.md)]アプリでは、ここでデータを書き込めるされかかることが特定の場所に書き込む追加の構成についてはデスクトップ アプリケーションよりもより制限されています。  
-  
-### <a name="capturing-the-graphics-information"></a>グラフィックス情報をキャプチャする  
- プログラムによるキャプチャのためのアプリケーションの準備が完了して、グラフィックス ログ ファイルの場所と名前を選択的に構成したら、アプリケーションをビルドして実行またはデバッグし、データをキャプチャします。プログラム キャプチャ API を使用する場合は、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] からグラフィックス診断を開始しないでください。 グラフィックス ログは、指定した場所に書き込まれます。 このバージョンのログを保持したい場合は、別の場所に移動します。それ以外の場合は、アプリケーションを再実行したときにログが上書きされます。  
-  
-> [!TIP]
->  プログラムによるキャプチャを使用している間でも、アプリケーションにフォーカスを置いた状態で **[Print Screen]**を押すだけでグラフィックス情報を手動でキャプチャできます。 この方法を使用すると、プログラム キャプチャ API でキャプチャされていない追加のグラフィックス情報をキャプチャできます。  
   
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルでは、プログラムでグラフィックス情報をキャプチャする方法を示しました。 次の手順では、次のオプションを検討します。  

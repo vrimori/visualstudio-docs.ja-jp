@@ -14,12 +14,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: ec8c0e9010cefd1e5c6b639edf02d785422800ff
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.openlocfilehash: 06eec90026054bf8081c1cd1727d6cbfc3f30bbe
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="dependency-diagrams-guidelines"></a>依存関係図: ガイドライン
 作成することで、高レベルのアプリのアーキテクチャの記述*依存関係図*Visual Studio でします。 依存関係ダイアグラムとコードを検証することによって、コードのこの設計で一貫性が保たことを確認します。 レイヤーの検証をビルド プロセスに含めることもできます。 参照してください[Channel 9 ビデオ: デザインし、依存関係のダイアグラムを使用して、アーキテクチャの検証](http://go.microsoft.com/fwlink/?LinkID=252073)です。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/13/2018
  参照してください[コードから依存関係のダイアグラムを作成](../modeling/create-layer-diagrams-from-your-code.md)です。  
   
 ##  <a name="CreateLayers"></a>機能領域またはコンポーネントを表すレイヤーを定義します。  
- レイヤーの論理グループを表す*成果物*プロジェクト、コード ファイル、名前空間、クラス、メソッドなどです。 Visual C# .NET プロジェクトおよび Visual Basic .NET プロジェクトの成果物からレイヤーを生成したり、Word ファイルや PowerPoint プレゼンテーションなどのドキュメントをリンクして仕様や計画をレイヤーに添付したりすることができます。 各レイヤーは、図では四角形として表示されます。また各レイヤーでは、レイヤーにリンクされている成果物の数が表示されます。 レイヤーには、より具体的なタスクを記述する入れ子になったレイヤーを含めることができます。  
+ レイヤーの論理グループを表す*成果物*プロジェクト、コード ファイル、名前空間、クラス、メソッドなどです。 Visual c# および Visual Basic のプロジェクトの成果物からレイヤーを作成することができますアタッチすることもできます仕様や計画をレイヤーに Word ファイルや PowerPoint プレゼンテーションなどのドキュメントをリンクしています。 各レイヤーは、図では四角形として表示されます。また各レイヤーでは、レイヤーにリンクされている成果物の数が表示されます。 レイヤーには、より具体的なタスクを記述する入れ子になったレイヤーを含めることができます。  
   
  一般的に、レイヤーには、その機能に合わせて "プレゼンテーション" や "サービス" などの名前を付けます。 密に相互依存している成果物は、同じレイヤーに配置します。 別々に更新できる成果物や別のアプリケーションで使用できる成果物は、異なるレイヤーに配置してください。 レイヤー パターンについては、サイトを参照、Patterns & Practices [http://go.microsoft.com/fwlink/?LinkId=145794](http://go.microsoft.com/fwlink/?LinkId=145794)です。  
   

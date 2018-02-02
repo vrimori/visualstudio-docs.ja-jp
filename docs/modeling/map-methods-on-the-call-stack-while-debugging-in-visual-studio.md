@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-f1_keywords: vs.progression.debugwithcodemaps
+f1_keywords:
+- vs.progression.debugwithcodemaps
 dev_langs:
 - FSharp
 - VB
@@ -30,12 +32,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d4d759f0e271e3473c41635dcbc8777423d361d7
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.openlocfilehash: 4b29267f46495378d0bf6ae53e991372509d7543
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Visual Studio でデバッグを行うときの呼び出し履歴に対するメソッドのマップ
 コード マップをデバッグしながら呼び出し履歴を視覚的にトレースを作成します。 コメントをマップに追加することでバグの発見に重点を置いてコードの動作を追跡できます。  
@@ -46,7 +49,7 @@ ms.lasthandoff: 01/13/2018
   
 -   [Visual Studio Enterprise](https://www.visualstudio.com/downloads/download-visual-studio-vs)  
   
--   デバッグできるコード (Visual C# .NET、Visual Basic .NET、C++、JavaScript、X++ など) です。  
+-   Visual c#、Visual Basic など、C++、JavaScript、x++ をデバッグするコード  
   
  参照トピック  
   
@@ -91,7 +94,7 @@ ms.lasthandoff: 01/13/2018
  ![次の呼び出し履歴でコード マップの更新](../debugger/media/debuggermap_addclearcallstack.png "DebuggerMap_AddClearCallStack")  
   
 ##  <a name="AddRelatedCode"></a>マップに関連するコードを追加します。  
- 作成できたところで、マップの新機能 次へしますか。 Visual c# .NET または Visual Basic .NET で作業している場合は、フィールド、プロパティ、およびコードで何が起こっているかを追跡するために、他の方法などのアイテムを追加します。  
+ 作成できたところで、マップの新機能 次へしますか。 C# または Visual Basic で作業している場合は、フィールド、プロパティ、およびコードで何が起こっているかを追跡するために、他の方法などのアイテムを追加します。  
   
  メソッドのコード定義を表示するには、そのメソッドをダブルクリックするか、そのメソッドのショートカット メニューを使用します。 (キーボード: マップとキーを押す方法を選択して**F12**)  
   

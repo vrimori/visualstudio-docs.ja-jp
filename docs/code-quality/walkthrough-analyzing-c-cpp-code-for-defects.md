@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-code-analysis
+ms.technology:
+- vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +14,17 @@ helpviewer_keywords:
 - code, analyzing C/C++
 - code analysis tool, walkthroughs
 ms.assetid: eaee55b8-85fe-47c7-a489-9be0c46ae8af
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c95d03201fe9c84e01e83e7fd55bef83755337e7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f9b0f8e36cddca227062550775c9f6098aeb1c6f
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="walkthrough-analyzing-cc-code-for-defects"></a>チュートリアル : C/C++ コード分析による障害の検出
 このチュートリアルでは、コードと C/C++ コードのコード分析ツールを使用して潜在的なコードの不具合のコードと C/C++ コードを分析する方法を示します。  
@@ -41,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="prerequisites"></a>必須コンポーネント  
   
--   [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)] または [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]。  
+-   [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)] または[!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]です。  
   
 -   コピー、[デモ サンプル](../code-quality/demo-sample.md)です。  
   
@@ -85,9 +87,9 @@ ms.lasthandoff: 12/22/2017
   
 3.  SUCCEEDED マクロを使用してこの警告を解決します。 コードは、次のコードのようになります。  
   
-    ```  
-    if (SUCCEEDED (ReadUserAccount()) )  
-    ```  
+   ```cpp
+   if (SUCCEEDED (ReadUserAccount()) )  
+   ```  
   
 4.  **エラー一覧**、次の警告をダブルクリックします。  
   
@@ -95,17 +97,17 @@ ms.lasthandoff: 12/22/2017
   
 5.  等しいかどうかをテストして、この警告を解決します。 コードは、次のコードのようになります。  
   
-    ```  
-    if ((len == ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != '\\'))  
-    ```  
+   ```cpp
+   if ((len == ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != '\\'))  
+   ```  
   
 ### <a name="to-treat-warning-as-an-error"></a>警告をエラーとして扱うには  
   
 1.  次のコードを追加、Bug.cpp ファイル`#pragma`C6001 警告をエラーとして処理するファイルの先頭にステートメント。  
   
-    ```  
-    #pragma warning (error: 6001)  
-    ```  
+   ```cpp
+   #pragma warning (error: 6001)  
+   ```  
   
 2.  CodeDefects プロジェクトをリビルドします。  
   
@@ -141,17 +143,14 @@ ms.lasthandoff: 12/22/2017
   
 8.  この警告を解決するには、'if' ステートメントを使用して、戻り値をテストします。 コードは、次のコードのようになります。  
   
-     `if (NULL != newNode)`  
-  
-     `{`  
-  
-     `newNode->data = value;`  
-  
-     `newNode->next = 0;`  
-  
-     `node->next = newNode;`  
-  
-     `}`  
+   ```cpp
+   if (NULL != newNode)  
+   {  
+   newNode->data = value;  
+   newNode->next = 0;  
+   node->next = newNode;  
+   }
+   ```
   
 9. 注釈のプロジェクトを再構築します。  
   
@@ -161,15 +160,13 @@ ms.lasthandoff: 12/22/2017
   
 1.  関数の戻り値の仮パラメーターの注釈設定と`AddTail`プレおよびポストトリガーは条件でこの例で示すようにします。  
   
-     `[returnvalue:SA_Post (Null=SA_Maybe)] LinkedList* AddTail`  
-  
-     `(`  
-  
-     `[SA_Pre(Null=SA_Maybe)] LinkedList* node,`  
-  
-     `int value`  
-  
-     `)`  
+   ```cpp
+   [returnvalue:SA_Post (Null=SA_Maybe)] LinkedList* AddTail
+   (
+   [SA_Pre(Null=SA_Maybe)] LinkedList* node,
+   int value
+   )
+   ```
   
 2.  注釈のプロジェクトをリビルドします。  
   
@@ -181,19 +178,21 @@ ms.lasthandoff: 12/22/2017
   
 4.  この警告を解決するには、'if' ステートメントを使用して、戻り値をテストします。 コードは、次のコードのようになります。  
   
-    ```  
-    . . .  
-    LinkedList *newNode = NULL;   
-    if (NULL == node)  
-    {  
-         return NULL;  
+   ```cpp
+   . . .  
+   LinkedList *newNode = NULL;   
+   if (NULL == node)  
+   {  
+        return NULL;  
         . . .  
-    }  
-    ```  
+   }  
+   ```  
   
 5.  注釈のプロジェクトをリビルドします。  
   
      警告またはエラーを行わなくても、プロジェクトをビルドします。  
   
-## <a name="see-also"></a>参照  
- [チュートリアル: マネージ コードの分析によるコード障害の検出](../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)
+## <a name="see-also"></a>関連項目
+
+[チュートリアル: マネージ コードの分析によるコード障害の検出](../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)  
+[C と C++ のコード分析](../code-quality/code-analysis-for-c-cpp-overview.md)

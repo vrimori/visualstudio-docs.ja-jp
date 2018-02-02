@@ -4,20 +4,20 @@ ms.custom:
 ms.date: 05/26/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 59131181-1caa-4b7f-be4b-e84709634edf
-caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 36045b311a73af96df51553f9025a1de84c93b78
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: ca07027874c304f009bdee7fddf9d6465e047202
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="getting-started-with-visual-studio-graphics-diagnostics"></a>Visual Studio グラフィックス診断の使用を開始する
 このセクションでは、まずグラフィックス診断を初めて使用するための準備をしてから、Direct3D アプリケーションのフレームをキャプチャして Graphics Analyzer でそれらを確認します。  
@@ -31,13 +31,6 @@ ms.lasthandoff: 12/22/2017
  Windows のオプション機能*グラフィック ツール*Windows 10 でグラフィックス診断に必要なキャプチャと再生のインフラストラクチャを提供します。  
   
  グラフィックス ツールをインストールする方法の詳細については、次を参照してください。 [Windows 10 のグラフィック ツールをインストール](#InstallGraphicsTools)です。  
-  
-### <a name="windows-81-prerequisites"></a>Windows 8.1 の前提条件  
- Windows 8.1 の Windows Software Development Kit (SDK) は、Windows 8.1 のグラフィックス診断に必要なキャプチャと再生のインフラストラクチャを提供し、Windows 8.1 と Windows 8 用の開発をサポートします。  
-  
- [Windows 8.1 用 Windows ソフトウェア開発キット (SDK) のダウンロードします。](https://msdn.microsoft.com/en-us/windows/desktop/bg162891.aspx)  
-  
- Windows 8.1 を実行する開発用コンピューターから、Windows 10 を実行しているリモート再生コンピューターを使用するには、開発用コンピューターに Windows 10 SDK をインストールして、再生コンピューターにオプションのグラフィック ツール機能をインストールする必要があります。  
   
 ##  <a name="InstallGraphicsTools"></a>Windows 10 のグラフィック ツールをインストールします。  
  Windows 10 でグラフィックス診断のインフラストラクチャと呼ばれる Windows のオプション機能によって提供*グラフィック ツール*です。 この機能は、キャプチャするアプリが以前のバージョンの Windows を対象にしているかどうか、またはどのバージョンの Direct3D を使用しているかに関係なく、Windows 10 でグラフィックス情報をキャプチャおよび再生するために必要です。 グラフィック ツール機能を事前にインストールすることができます。それ以外の場合は、Visual Studio からグラフィックス診断セッションを最初に開始するときに、オンデマンドでインストールされます。  
@@ -66,9 +59,7 @@ ms.lasthandoff: 12/22/2017
  グラフィックス診断を試す独自の Direct3D アプリが既にある場合! それ以外の場合、次のいずれかを使用します。
 
 - **DirectX 11 アプリ (ユニバーサル Windows)**または**DirectX 12 アプリ (ユニバーサル Windows)** Windows 10 用のプロジェクト テンプレート。
-- **DirectX アプリ (Windows 8.1)** Windows 8.1 用のプロジェクト テンプレート。
 - [Direct3d12 UAP サンプル](https://code.msdn.microsoft.com/Direct3D-12-UAP-Sample-ecb1779f)Windows 10 用です。  
-- [DirectX marble maze ゲームのサンプル](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)Windows 8.1 用です。  
   
  先に進む前に、アプリをビルドできるかどうかを確認します。  
   

@@ -5,20 +5,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Visual Studio shell, isolated mode, .pkgdef file
+helpviewer_keywords:
+- Visual Studio shell, isolated mode, .pkgdef file
 ms.assetid: 69e8f78e-bcf1-46cb-8866-7de37d134997
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.openlocfilehash: addeeaa294a81acce6558feb5257fee1344532f8
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 01/31/2018
 ---
 # <a name="modifying-the-isolated-shell-by-using-the-pkgdef-file"></a>使用して分離シェルを変更します。Pkgdef ファイル
 .Pkgdef ファイルは、分離シェル アプリケーションのカスタマイズに使用できる設定をサポートします。 これには、アプリケーションがコンピューターにインストールされているし、アプリケーションを起動すると、Visual Studio shell によって参照されているときに作成される値を指定します。 設定は、該当するレジストリ キーに基づき、ファイルで構成されます。  

@@ -14,30 +14,33 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 5b05e295830762939e2142b550863219afaa06ce
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.openlocfilehash: 2b6c1d9b4fa92146b64d075ff4268bc32c0e65c1
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-dependency-diagrams-from-your-code"></a>コードから依存関係のダイアグラムを作成します。
-ソフトウェア システムの高レベルで論理アーキテクチャを視覚化するには、作成、*依存関係ダイアグラム*Visual Studio でします。 コードがこの設計と一致することを確認するには、依存関係ダイアグラムとコードを検証します。 Visual c# .NET および Visual Basic .NET プロジェクトの依存関係図を作成することができます。 この機能をサポートする Visual Studio のバージョンを参照してください[アーキテクチャおよびモデリング ツールのバージョンのサポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)  
-  
- ![依存関係図を作成する](../modeling/media/layerdiagramvisualizecode.png "LayerDiagramVisualizeCode")  
-  
- 依存関係ダイアグラムでは、Visual Studio のソリューション項目と呼ばれる論理的、抽象的なグループに編成できます。*レイヤー*です。 レイヤーを使用して、これらの成果物が実行する主要タスク、またはシステムの主要コンポーネントを示すことができます。 各レイヤーには、より詳細なタスクを示す別のレイヤーを含めることができます。 意図的または既存を指定することも*の依存関係*層の間です。 矢印で表されるこれらの依存関係は、どのレイヤーが、他のレイヤーが表す機能を使用できるか、または現在使用しているかを示します。 コードのアーキテクチャ コントロールを保持するには、目的の依存関係を図で示し、図と照らし合わせてコードを検証します。  
-  
- [ビデオ: リアルタイムで、アーキテクチャの依存関係を検証します。](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4) 
-  
-##  <a name="CreateDiagram"></a>依存関係図を作成します。  
- 依存関係ダイアグラムを作成する前に、ソリューションにモデリング プロジェクトを確認します。 
-  
+
+ソフトウェア システムの高レベルで論理アーキテクチャを視覚化するには、作成、*依存関係ダイアグラム*Visual Studio でします。 コードがこの設計と一致することを確認するには、依存関係ダイアグラムとコードを検証します。 Visual c# および Visual Basic プロジェクトの依存関係図を作成することができます。 この機能をサポートする Visual Studio のバージョンを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+
+![依存関係図を作成する](../modeling/media/layerdiagramvisualizecode.png "LayerDiagramVisualizeCode")
+
+依存関係ダイアグラムでは、Visual Studio のソリューション項目と呼ばれる論理的、抽象的なグループに編成できます。*レイヤー*です。 レイヤーを使用して、これらの成果物が実行する主要タスク、またはシステムの主要コンポーネントを示すことができます。 各レイヤーには、より詳細なタスクを示す別のレイヤーを含めることができます。 意図的または既存を指定することも*の依存関係*層の間です。 矢印で表されるこれらの依存関係は、どのレイヤーが、他のレイヤーが表す機能を使用できるか、または現在使用しているかを示します。 コードのアーキテクチャ コントロールを保持するには、目的の依存関係を図で示し、図と照らし合わせてコードを検証します。
+
+[ビデオ: リアルタイムで、アーキテクチャの依存関係を検証します。](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4) 
+
+##  <a name="CreateDiagram"></a>依存関係図を作成します。
+
+依存関係ダイアグラムを作成する前に、ソリューションにモデリング プロジェクトを確認します。
+
 > [!IMPORTANT]
->  しない追加、ドラッグ、または別のモデリング プロジェクトまたはソリューション内の別の場所には、モデリング プロジェクトから既存の依存関係ダイアグラムをコピーします。 これで、図を変更しても、元の図からの参照が保持されます。 また、これによってレイヤー検証が正しく機能しないため、要素が欠落したり、図を開こうとすると他のエラーが発生するなど、別の問題が生じる可能性があります。  
->   
->  代わりに、依存関係は、新しい図をモデリング プロジェクトに追加します。 元の図から新しい図へ要素をコピーします。 モデリング プロジェクトと新しい依存関係図の両方を保存します。  
-  
+> しない追加、ドラッグ、または別のモデリング プロジェクトまたはソリューション内の別の場所には、モデリング プロジェクトから既存の依存関係ダイアグラムをコピーします。 これで、図を変更しても、元の図からの参照が保持されます。 また、これによってレイヤー検証が正しく機能しないため、要素が欠落したり、図を開こうとすると他のエラーが発生するなど、別の問題が生じる可能性があります。
+>
+> 代わりに、依存関係は、新しい図をモデリング プロジェクトに追加します。 元の図から新しい図へ要素をコピーします。 モデリング プロジェクトと新しい依存関係図の両方を保存します。
+
 #### <a name="to-add-a-new-dependency-diagram-to-a-modeling-project"></a>依存関係は、新しい図をモデリング プロジェクトに追加するには  
   
 1.  **アーキテクチャ**] メニューの [選択**新しい依存関係ダイアグラム**です。  

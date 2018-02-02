@@ -4,23 +4,23 @@ ms.custom:
 ms.date: 02/09/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: ddd429d9-ac70-4ac4-9e69-299c6ea2df09
-caps.latest.revision: "29"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0fdc6c58f791c06d5f9287400d00bbfce2564e3b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 8fb52530cf5a068081ce3af3325675d2167c57a9
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Visual Studio グラフィックス診断の概要
-Visual Studio*グラフィックス診断*を記録し、Direct3D アプリのレンダリングとパフォーマンスの問題を分析するためのツールのセットです。 グラフィックス診断は、Windows PC でローカルに実行されているアプリ、Windows デバイス エミュレーターで実行されているアプリ、あるいはリモート PC またはデバイスで実行されているアプリに対して使用できます。  
+Visual Studio*グラフィックス診断*を記録し、Direct3D アプリのレンダリングとパフォーマンスの問題を分析するためのツールのセットです。 グラフィックス診断は、Windows PC で、またはリモート PC またはデバイス上にローカルで実行されているアプリで使用できます。  
   
 ## <a name="using-graphics-diagnostics-to-debug-rendering-problems"></a>グラフィックス診断を使用したレンダリング問題のデバッグ  
  グラフィックを多用したアプリのレンダリングに関する問題のデバッグは、デバッガーを起動してコードをステップ実行するような簡単な作業ではありません。 各フレームでは、状態、データ、パラメーター、およびコードの複雑なセットに応じて、何百何千もの一意のピクセルが生成され、そのような診断対象のうち、問題が発生しているのはほんの少数である場合があります。 さらに複雑なことに、各ピクセルを生成するコードは、何百ものピクセルを並列に処理する特別なハードウェアで実行されます。 スレッドが少ないコードに対してさえ活用が困難な従来のデバッグ ツールおよび方法は、大量のデータに対応するときに役に立ちません。  
@@ -33,10 +33,7 @@ Visual Studio*グラフィックス診断*を記録し、Direct3D アプリの�
 ### <a name="windows-10-and-direct3d-12"></a>Windows 10 と Direct3D 12  
  Windows 10 の導入*direct3d12*、これは大幅に異なる direct3d10 と direct3d11 です。 これらの違いは、DirectX を最新のグラフィックス ハードウェアに合わせて調整し、その潜在能力を十分に引き出すために生じたものですが、それによって API にも大幅な変更が必要となり、リソースの有効期間と競合を管理する仕事がこれまで以上にプログラマの責任になりました。 違いは、direct3d12 のグラフィックス診断は、direct 3 d 11.2 のグラフィックス診断に機能パリティを維持します。
   
- Windows 10 では、前のバージョンの Direct3D と、それらに依存するゲームやアプリケーションも引き続きサポートされます。 Visual Studio でのグラフィックス診断は、Windows 10 および Windows 8.1、direct3d10 と direct3d11 をサポートするために続行します。  
-  
-### <a name="windows-81-and-direct3d-112"></a>Windows 8.1 および Direct3D 11.2  
- [!INCLUDE[win81](../includes/win81_md.md)] では、DirectX 11.2 は新機能を導入しており、ランタイムを通じてグラフィックス情報をキャプチャするためのサポートが含まれています。 [!INCLUDE[win81](../includes/win81_md.md)]新しいランタイムに基づくキャプチャを使用する: と呼ばれる*ロバスト キャプチャ*: 排他的すべてのバージョンの DirectX を[!INCLUDE[win81](../includes/win81_md.md)]をサポートしています。 ロバスト キャプチャは、Direct3D 11.2 の新機能もサポートしています。  
+ Windows 10 では、前のバージョンの Direct3D と、それらに依存するゲームやアプリケーションも引き続きサポートされます。 Visual Studio でのグラフィックス診断は、Windows 10 で、direct3d10 と direct3d11 をサポートするために続行します。
   
 ### <a name="limited-direct2d-support"></a>Direct2D の制限されたサポート  
  Direct2D は、Direct3D 上に組み込まれているユーザー モード API であるために、Direct2D を使用するアプリのレンダリングに関する問題をデバッグする際に、グラフィックス診断を使用することができます。 ただし、上位レベルの Direct2D イベントの代わりに、基になる Direct3D イベントのみが記録されるため、Direct2D イベントはグラフィックス イベント一覧に表示されません。 また、Direct2D イベントと結果の Direct3D イベントの間の関連性が必ずしも明らかではないため、Direct2D を使用するアプリのレンダリングに関する問題をデバッグするためにグラフィックス診断を使用することは複雑です。 それでも、グラフィックス診断を使用して Direct2D を使用するアプリケーションで発生する低水準のレンダリングに関する問題の情報は取得できます。  
