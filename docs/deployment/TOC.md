@@ -24,7 +24,7 @@
 ## Node.js
 ### [Web 配置を使用して Azure Web サイトに発行する](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy)
 ## Python
-### [Azure App Service に発行する](/visualstudio/python/publishing-to-azure)
+### [Azure App Service に発行する](/visualstudio/python/publishing-python-web-applications-to-azure-from-visual-studio)
 # 使い方ガイド
 ## [ClickOnce のセキュリティと配置](clickonce-security-and-deployment.md)
 ### [ClickOnce 配置ストラテジの選択](choosing-a-clickonce-deployment-strategy.md)

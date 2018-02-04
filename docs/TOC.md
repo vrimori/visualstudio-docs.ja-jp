@@ -1,5 +1,6 @@
 # [Visual Studio ドキュメント](ide/index.md)
 # [概要](ide/visual-studio-ide.md)
+## [新機能](ide/whats-new-in-visual-studio.md)
 # インストール
 ## [Visual Studio のインストール](install/install-visual-studio.md)
 ## [Visual Studio へのサインイン](ide/signing-in-to-visual-studio.md)
@@ -309,8 +310,7 @@
 #### [グローバルな Windows フォームおよび Web フォームにおけるカルチャ固有のクラス](ide/culture-specific-classes-for-global-windows-forms-and-web-forms.md)
 ### [Visual Studio による双方向言語用アプリケーションの作成](ide/creating-applications-in-bi-directional-languages.md)
 # 参照
-## [新機能](ide/whats-new-in-visual-studio.md)
-### プロジェクト テンプレートと項目テンプレート
+## プロジェクト テンプレートと項目テンプレート
 ### [テンプレート パラメーター](ide/template-parameters.md)
 ### [テンプレート スキーマ参照 (拡張性)](extensibility/visual-studio-template-schema-reference.md?context=visualstudio/default)
 ## 一般的なユーザー インターフェイス要素
