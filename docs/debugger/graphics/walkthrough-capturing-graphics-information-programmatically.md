@@ -13,11 +13,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: a5a8aeec2421b92057ba414b5cf23b1770b1f761
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.openlocfilehash: bbce760956dda7c9399d25dd241df26ec0e59644
+ms.sourcegitcommit: b01406355e3b97547b7cbf8ce3960f101b165cec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>チュートリアル: プログラムによるグラフィックス情報のキャプチャ
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のグラフィックス診断を使用すると、Direct3D アプリケーションからプログラムによってグラフィックス情報をキャプチャできます。  
@@ -96,7 +96,7 @@ ms.lasthandoff: 02/01/2018
   
 ##### <a name="to-capture-graphics-information"></a>グラフィックス情報をキャプチャするには  
   
--   グラフィックス情報のキャプチャを開始するには、 `BeginCapture`を使用します。  
+- グラフィックス情報のキャプチャを開始するには、 `BeginCapture`を使用します。  
   
     ```  
     ...  
@@ -111,6 +111,8 @@ ms.lasthandoff: 02/01/2018
     pGraphicsAnalysis->EndCapture();  
     ...  
     ```  
+
+- 呼び出し後`EndCapture`、グラフィックス オブジェクトを解放します。 
   
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルでは、プログラムでグラフィックス情報をキャプチャする方法を示しました。 次の手順では、次のオプションを検討します。  

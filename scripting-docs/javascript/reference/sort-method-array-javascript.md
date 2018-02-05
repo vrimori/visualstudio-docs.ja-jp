@@ -5,25 +5,26 @@ ms.date: 01/18/2017
 ms.prod: windows-client-threshold
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-javascript
+ms.technology:
+- devlang-javascript
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: sort
+f1_keywords:
+- sort
 dev_langs:
 - JavaScript
 - TypeScript
 - DHTML
-helpviewer_keywords: Sort method
-ms.assetid: 9bd8b54a-c838-4806-85c8-62eebe6bc48c
-caps.latest.revision: "15"
+helpviewer_keywords:
+- Sort method
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2d098b47591ca7bbb4e3e8da5e5c14f8c0e9b255
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 0462e60e623b99af458beb61eb7ef4215fe8ef41
+ms.sourcegitcommit: b01406355e3b97547b7cbf8ce3960f101b165cec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="sort-method-array-javascript"></a>sort メソッド (Array) (JavaScript)
 並べ替え、`Array`です。  
@@ -37,10 +38,10 @@ arrayobj.sort(sortFunction)
   
 ## <a name="parameters"></a>パラメーター  
  `arrayObj`  
- 必須です。 任意の `Array` オブジェクトを指定します。  
+ 必須。 任意の `Array` オブジェクトを指定します。  
   
  `sortFunction`  
- 省略可能です。 要素の順序を決定するための関数の名前。 省略した場合、要素は ASCII 文字の順序の昇順で並べ替えられます。  
+ 任意。 要素の順序を決定するための関数の名前。 省略した場合、要素は ASCII 文字の順序の昇順で並べ替えられます。  
   
 ## <a name="return-value"></a>戻り値  
  並べ替えられた配列。  
@@ -48,13 +49,13 @@ arrayobj.sort(sortFunction)
 ## <a name="remarks"></a>コメント  
  `sort`メソッドの並べ替え、`Array`インプレース オブジェクト; いいえ新しい`Array`実行中にオブジェクトを作成します。  
   
- 内の関数を指定する場合、`sortFunction`引数を返す必要があります、次の値のいずれか。  
+ `sortFunction`2 つの引数を受け取るし、次の値のいずれかを返す必要があります。  
   
--   負の値を使用している場合は、渡される最初の引数が 2 番目の引数未満です。  
+-   (0 より小さい)、負の値が小さいを最初の引数が渡された場合は 2 番目の引数よりもします。  最初の引数は、下限のインデックスに並べ替えられます。
   
--   2 つの引数が等しい場合は 0 を返します。  
+-   ゼロ (0) 場合は 2 つの引数は同等です。  2 つの引数は、配列内の他の要素に対する並べ替えられますが、相互並べ替えは行われません。
   
--   最初の引数が 2 番目の引数より大きい場合は、正値です。  
+-   (0 より大きい) 場合は、最初の引数が 2 番目の引数より大きい正の値。  2 番目の引数は、下限のインデックスに並べ替えられます。
   
 ## <a name="example"></a>例  
  `sort` メソッドを使用する方法の例を次に示します。  
@@ -87,5 +88,5 @@ function CompareForSort(first, second)
 }  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  [!INCLUDE[jsv2](../../javascript/reference/includes/jsv2-md.md)]
