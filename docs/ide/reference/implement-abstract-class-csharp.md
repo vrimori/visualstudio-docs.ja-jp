@@ -4,19 +4,21 @@ ms.custom:
 ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 96cfed7f-f090-4369-8a85-2dcd4c7cf12b
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: f089ffbe33d4a36e84d6d39abb3b3db3c4b2aeb7
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.sourcegitcommit: b01406355e3b97547b7cbf8ce3960f101b165cec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/06/2018
 ---
 # <a name="implement-an-abstract-class-in-c"></a>抽象クラスの実装 (C#) #
 **機能:** 抽象クラスを実装するために必要なコードをすぐに生成できます。 
@@ -37,7 +39,7 @@ ms.lasthandoff: 01/13/2018
    * **マウス**
      * 右クリックして **[クイック アクションとリファクタリング]** メニューを選択し、[プレビュー] ウィンドウ ポップアップから **[抽象クラスの実装]** を選択します。
      * 赤い波線をポイントし、表示された ![電球](media/bulb-cs.png) アイコンをクリックします。
-     * テキスト カーソルが既に赤の波線が表示されている行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
+     * テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
 
    ![クラス実装のプレビュー](media/abstract-preview-cs.png)
 

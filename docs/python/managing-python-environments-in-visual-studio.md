@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 146e3f80de674e6219d1f7c89ea4186b66ee310f
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 0b0195770bde2906ac34f0f4b8a5faf684130899
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="python-environments"></a>Python 環境
 
@@ -123,7 +123,7 @@ Visual Studio でインタープリターが検出されない場合は (標準�
 | --- | --- |
 | Make this environment the default for new projects (この環境を新しいプロジェクトの既定にする) | アクティブな環境を設定します。これにより、IntelliSense データベースが読み込まれる間、Visual Studio がしばらく応答しなくなる場合があります。 多くのパッケージがある環境では、長時間応答しなくなる可能性があります。 |
 | ディストリビューターの Web サイトに移動する | Python のディストリビューションで提供された URL をブラウザーで開きます。 たとえば、Python 3.x では python.org に移動します。 |
-| 対話型ウィンドウを開く | この環境用の[対話型 (REPL) ウィンドウ](interactive-repl.md)を Visual Studio 内で開き、すべての[スタートアップ スクリプト (後述)](#startup-scripts) を適用します。 |
+| 対話型ウィンドウを開く | この環境用の[対話型 (REPL) ウィンドウ](python-interactive-repl-in-visual-studio.md)を Visual Studio 内で開き、すべての[スタートアップ スクリプト (後述)](#startup-scripts) を適用します。 |
 | 対話型のスクリプトを確認する | 「[スタートアップ スクリプト](#startup-scripts)」をご覧ください。 |
 | IPython 対話モードを使用する | 設定すると、IPython では対話型ウィンドウが既定で開きます。 インライン プロットおよびヘルプを表示する `name?` やシェル コマンド用の `!command` などの拡張 IPython 構文が有効になります。 Anaconda ディストリビューションを使うときは、追加パッケージが必要なので、このオプションを使うことをお勧めします。 詳しくは、「[対話型ウィンドウでの IPython の使用](interactive-repl-ipython.md)」をご覧ください。 |
 | PowerShell で開く | PowerShell コマンド ウィンドウでインタープリターを開始します。 |
@@ -137,7 +137,7 @@ Visual Studio でインタープリターが検出されない場合は (標準�
 
 1. 環境をインストールすると、Visual Studio は `Documents\Visual Studio 2017\Python Scripts\<environment>` フォルダーを作成します。&lt;environment&gt; は、環境の名前と同じです。 **[対話型のスクリプトを確認する]** コマンドを使って、環境固有のフォルダーに簡単に移動できます。 その環境の対話型ウィンドウを開始すると、このフォルダーで見つかったすべての `.py` ファイルがアルファベット順に読み込まれて実行されます。
 
-1. **[ツール] > [オプション] > [Python ツール] > [対話型ウィンドウ]** タブ (「[対話型ウィンドウ オプション](options.md#interactive-windows-options)」を参照) の**[スクリプト]** コントロールでは、すべての環境で読み込まれて実行されるスタートアップ スクリプトの追加フォルダーを指定します。 ただし、この機能は現時点では機能しません。
+1. **[ツール] > [オプション] > [Python ツール] > [対話型ウィンドウ]** タブ (「[対話型ウィンドウ オプション](python-support-options-and-settings-in-visual-studio.md#interactive-windows-options)」を参照) の**[スクリプト]** コントロールでは、すべての環境で読み込まれて実行されるスタートアップ スクリプトの追加フォルダーを指定します。 ただし、この機能は現時点では機能しません。
 
 ### <a name="configure-tab"></a>[Configure (構成)] タブ
 
@@ -172,7 +172,7 @@ Visual Studio でインタープリターが検出されない場合は (標準�
 
 **[パッケージのインストール時か削除時に必ず昇格]** を選ぶと、対象の環境ではダイアログが表示されなくなります。 再びダイアログが表示されるようにするには、**[ツール] > [オプション] > [Python ツール] > [全般]** に移動し、**[永続的に表示されないすべてのダイアログをリセットする]** ボタンを選びます。
 
-同じオプション タブでは、**[常に管理者として pip を実行する]** を選んで、すべての環境でダイアログを非表示にすることもできます。 「[Options - General tab](options.md#general-options)」([全般] タブのオプション) をご覧ください。
+同じオプション タブでは、**[常に管理者として pip を実行する]** を選んで、すべての環境でダイアログを非表示にすることもできます。 「[Options - General tab](python-support-options-and-settings-in-visual-studio.md#general-options)」([全般] タブのオプション) をご覧ください。
 
 ### <a name="intellisense-tab"></a>[IntelliSense] タブ
 
@@ -232,7 +232,7 @@ IntelliSense 入力候補データベースの現在の状態を示します。
 
 ## <a name="managing-required-packages-requirementstxt"></a>必要なパッケージの管理 (requirements.txt)
 
-ビルド システムを使用してプロジェクトを他のユーザーと共有する場合、または [Microsoft Azure でのプロジェクトの公開](template-azure-cloud-service.md)を予定している場合は、プロジェクトで必要な外部パッケージを指定する必要があります。 推奨されるアプローチとしては、依存パッケージの必要なバージョンをインストールする pip のためのコマンド リストを含む [requirements.txt ファイル](http://pip.readthedocs.org/en/latest/user_guide.html#requirements-files) (readthedocs.org) を使います。
+ビルド システムを使用してプロジェクトを他のユーザーと共有する場合、または [Microsoft Azure でのプロジェクトの公開](python-azure-cloud-service-project-template.md)を予定している場合は、プロジェクトで必要な外部パッケージを指定する必要があります。 推奨されるアプローチとしては、依存パッケージの必要なバージョンをインストールする pip のためのコマンド リストを含む [requirements.txt ファイル](http://pip.readthedocs.org/en/latest/user_guide.html#requirements-files) (readthedocs.org) を使います。
 
 技術的には、任意のファイル名を使って要件を追跡できますが (パッケージをインストールするときに `-r <full path to file>` を使って)、Visual Studio では `requirements.txt` に固有のサポートが用意されています。
 

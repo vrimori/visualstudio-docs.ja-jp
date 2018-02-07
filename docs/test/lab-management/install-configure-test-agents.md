@@ -7,16 +7,18 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: configure test agents, test lab
+helpviewer_keywords:
+- configure test agents, test lab
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: 495f14643245f17a2e7fcef1e21d2fc1fe978a46
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 5caa566e15f7f3c4c69f8d33a6c7dd0eead38785
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-and-configure-test-agents"></a>テスト エージェントをインストールして構成する
 
@@ -81,7 +83,7 @@ A: すべての新しい自動テストシナリオでは Agents for Visual Stud
 | Agents for Visual Studio 2013 でサポートされるシナリオ | TFS および TS での代替シナリオ |
 | --- | --- |
 | Visual Studio でのビルド-配置-テスト ワークフロー | ユーザーは、TFS でのビルド、配置、およびテスト シナリオで[ビルド定義](https://www.visualstudio.com/team-services/continuous-integration/) (XAML ビルドではない) を使用できます。 |
-| オンプレミス リモート コンピューターを使用するロード テスト (パフォーマンス テスト) | Test Controller/Test Agents 2013 Update 5 を使用して、オンプレミスでロード テストを実行します。 詳細については、[こちら](https://msdn.microsoft.com/en-us/library/ff400223.aspx)を参照してください。 |
+| オンプレミス リモート コンピューターを使用するロード テスト (パフォーマンス テスト) | Test Controller/Test Agents 2013 Update 5 を使用して、オンプレミスでロード テストを実行します。 詳細については、[こちら](https://msdn.microsoft.com/library/ff400223.aspx)を参照してください。 |
 | ラボ環境を使用する Microsoft Test Manager からの自動テストのリモート実行 | 現在、このシナリオに代わるものはありません。 ビルドおよびリリース定義 (XAML ビルドではない) で機能テストの実行タスクを使用して、テストをリモートで実行することをお勧めします。 |
 | 開発者による Visual Studio でのリモート テストの実行 | サポート対象から除外されました。 |
 

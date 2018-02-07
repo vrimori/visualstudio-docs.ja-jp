@@ -2,7 +2,7 @@
 title: "Visual Studio での Python の使用、手順 3、対話型 REPL ウィンドウ | Microsoft Docs"
 description: "Visual Studio で Python を使用するための基礎となるチュートリアルの手順 3 では、Python の対話型 REPL ウィンドウについて説明します。"
 ms.custom: 
-ms.date: 10/16/2017
+ms.date: 01/16/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: cdfcd81108437e611d7ba58f0a612b19931cc654
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: f251e49847655251de46d44a23ee1d4c1c9f0263
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="step-3-using-the-interactive-repl-window"></a>手順 3: 対話型 REPL ウィンドウを使用する
 
@@ -102,5 +102,5 @@ Visual Studio の Python 用の *対話型ウィンドウ*は、機能豊富な 
 
 ### <a name="going-deeper"></a>詳しい説明
 
-- [対話型ウィンドウの使用](interactive-repl.md)
+- [対話型ウィンドウの使用](python-interactive-repl-in-visual-studio.md)
 - [IPython REPL の使用](interactive-repl-ipython.md)

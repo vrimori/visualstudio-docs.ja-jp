@@ -5,22 +5,24 @@ ms.custom:
 ms.date: 01/08/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-acquisition
+ms.technology:
+- vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: quickstart
 ms.devlang: python
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-dev_langs: python
+dev_langs:
+- python
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 756419ce7390ba727bc5847d95c86399838d972a
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: a28c124ae560edca6451ed70d13c28b4138772d1
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-python-web-app"></a>クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成する
 
@@ -146,6 +148,6 @@ Visual Studio IDE と Python について簡単に学習するこのクイック
 > [!div class="nextstepaction"]
 > [チュートリアル: Visual Studio での Python の概要](../python/tutorial-working-with-python-in-visual-studio-step-01-create-project.md)。
 
-- [Visual Studio での Python Web アプリ テンプレート](../python/template-web.md)について学習する
-- [Python のデバッグ](../python/debugging.md)について学習する
+- [Visual Studio での Python Web アプリ テンプレート](../python/python-web-application-project-templates.md)について学習する
+- [Python のデバッグ](../python/debugging-python-in-visual-studio.md)について学習する
 - [Visual Studio の IDE](../ide/visual-studio-ide.md) についてさらに学習する

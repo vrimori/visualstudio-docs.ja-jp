@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8d0ef17900f515ff69f25c30fc797e4e3c9cc7a6
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: ef58c0eb177238075b0f1cd097f8949272538a75
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="creating-a-c-extension-for-python"></a>Python 用 C++ 拡張機能の作成
 
@@ -50,7 +50,7 @@ Python インタープリターの機能を拡張するため、およびオペ�
 
 1. Visual Studio で **[ファイル]、[新規]、[プロジェクト]** の順に選択して、新しい Python プロジェクトを作成します。 "Python" を検索し、**Python アプリケーション** テンプレートを選択し、適切な名前と場所を指定し、**[OK]** を選択します。
 
-1. プロジェクトの `.py` ファイルに、双曲正接の計算をベンチマークする次のコードを貼り付けます (簡単に比較できるよう、数値演算ライブラリを使わずに実装されています)。 自由に手動でコードを入力し、[Python の編集機能](code-editing.md)を体験してください。
+1. プロジェクトの `.py` ファイルに、双曲正接の計算をベンチマークする次のコードを貼り付けます (簡単に比較できるよう、数値演算ライブラリを使わずに実装されています)。 自由に手動でコードを入力し、[Python の編集機能](editing-python-code-in-visual-studio.md)を体験してください。
 
     ```python
     from itertools import islice
@@ -289,7 +289,7 @@ Visual Studio では、Python と C++ コードを一緒にデバッグするこ
 
     ![C++ コードのブレークポイントでの停止](media/cpp-debugging.png)
 
-1. この時点で、C++ コードをステップ実行したり、変数を調べたりできます。 これらの機能の詳細については、「[Python と C++ の同時デバッグ](debugging-mixed-mode.md)」をご覧ください。
+1. この時点で、C++ コードをステップ実行したり、変数を調べたりできます。 これらの機能の詳細については、「[Python と C++ の同時デバッグ](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)」をご覧ください。
 
 ## <a name="alternative-approaches"></a>別の方法
 

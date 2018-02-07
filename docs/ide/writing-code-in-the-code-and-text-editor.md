@@ -5,12 +5,7 @@ ms.date: 09/27/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- JScript
-- VB
-- CSharp
 helpviewer_keywords:
 - code, editing [Visual Studio]
 - code editor [Visual Studio]
@@ -19,11 +14,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: abde071bd67ab3f6a65891d347b9214f6dd5257b
-ms.sourcegitcommit: 94162a6b0440312cd71bc0c512daef9f122550f3
+ms.openlocfilehash: 5847c97f3fddea65b00c35a5a0f4d5665329ae7e
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="write-code-in-the-code-editor"></a>コード エディターでのコードの作成
 
@@ -68,7 +63,6 @@ Visual Studio エディターには、コードとテキストの記述と管理
 |小文字に変換|選択範囲内のすべての文字を小文字に変更します。範囲が選択されていない場合は、カーソル位置の文字をまたは小文字に変更します。|
 |選択した行を上へ移動|選択した行を 1 行上に移動します。 ショートカット: Alt + ↑ キー。|
 |選択した行を下へ移動|選択した行を 1 行下に移動します。 ショートカット: Alt + ↓ キー。|
-|ドキュメントの検証|JScript コード ファイルを検証します。|
 |左右スペースの削除|現在の行の末尾にあるタブまたは空白を削除します。|
 |スペースの表示|空白を中黒、タブを矢印として表示します。 ファイルの末尾は四角形の記号として表示されます。 **[ツール]、[オプション]、[テキスト エディター]、[すべての言語]、[右端の折り返しの記号を表示する]** が選択されている場合は、その記号も表示されます。|
 |[右端で折り返す]|ドキュメント内のすべての行が見えるように、コード ウィンドウ内に収めます。 [右端で折り返す] を無効にするには、テキスト エディターの [すべての言語]\(**[ツール]、[オプション]、[テキスト エディター]、[すべての言語]**) の設定を使用します。|

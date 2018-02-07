@@ -4,19 +4,21 @@ ms.custom:
 ms.date: 11/17/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bebff2ad-25b6-4adc-8762-60d23bdd639a
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: 990f87cd0f1abf9d4f62ecd321ef038d689b75f4
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.sourcegitcommit: b01406355e3b97547b7cbf8ce3960f101b165cec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/06/2018
 ---
 # <a name="implement-an-interface-in-visual-basic"></a>インターフェイスの実装 (Visual Basic)
 **機能:** インターフェイスを実装するために必要なコードをすぐに生成できます。 
@@ -37,7 +39,7 @@ ms.lasthandoff: 01/13/2018
    * **マウス**
      * 右クリックして **[クイック アクションとリファクタリング]** メニューを選択し、[プレビュー] ウィンドウ ポップアップから **[インターフェイスの実装 (明示的)]** を選択します。
      * 赤い波線をポイントし、表示された ![電球](media/bulb-vb.png) アイコンをクリックします。
-     * テキスト カーソルが既に赤い波線を含む行にある場合は、左余白に表示されている ![電球](media/bulb-vb.png) アイコンをクリックします。
+     * テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-vb.png) アイコンをクリックします。
 
    ![クラス実装のプレビュー](media/interface-preview-vb.png)
 

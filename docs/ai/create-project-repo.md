@@ -12,7 +12,7 @@
 
     ![Visual Studio Team Services、GitHub、およびリポジトリの複製が表示された [チーム エクスプローラー] ウィンドウ](media\create-project-repo\team-explorer.png)
 
-4. **[ローカル Git リポジトリ]** の下の [URL] フィールドに、「`https://github.com/Microsoft/samples-for-ai`」 と入力し、複製されたファイル用のフォルダーを入力し、**[複製]** を選択します。
+4. **[Local Git Repositories]\(ローカル Git リポジトリ\)** の下の [URL] フィールドに、`https://github.com/Microsoft/samples-for-ai` と入力し、複製されたファイル用のフォルダーを入力し、**[複製]** を選択します。
 
     > [!Tip]
     > チーム エクスプローラーで指定したフォルダーは、複製されたファイルを受け取る特定のフォルダーです。 `git clone` コマンドとは異なり、チーム エクスプローラーで複製を作成しても、リポジトリの名前のサブフォルダーは自動作成されません。
@@ -23,9 +23,9 @@
 
 6. 表示された **[新しいプロジェクト]** ダイアログで、**[既存の Python コードから]** を選択し、プロジェクトの名前を指定して、**[場所]** をリポジトリと同じフォルダーに設定し、**[OK]** を選択します。 表示されたウィザードで、**[完了]** を選択します。
 
-7. メニューから **[ビュー]、[ソリューション エクスプローラー]** の順に選択します。
+7. メニューから **[表示]、[ソリューション エクスプローラー]** を選択します。
 
-8. ソリューション エクスプローラーで `TensorFlow Examples> MNIST` ノードを展開し、`convolutional.py` を右クリックし、**[スタートアップ プロジェクトに設定]** を選択します。 この手順により、プロジェクトの実行時に使用されるファイルが Visual Studio に指示されます。
+8. ソリューション エクスプローラーで `TensorFlow Examples> MNIST` ノードを展開し、`convolutional.py` を右クリックし、**[スタートアップ ファイルとして設定]** を選択します。 この手順により、プロジェクトの実行時に使用されるファイルが Visual Studio に指示されます。
 
 10. Ctrl + F5 を押すか、**[デバッグ]、[デバッグなしで開始]** の順に選択し、プログラムを実行します。 ` が表示される場合、前の手順の作業ディレクトリの設定を再確認します。
 
@@ -34,7 +34,7 @@
 
     ![Python MNIST プログラムからの最初の出力](media\create-project-repo\tensorflow-mnist-running.png)
 
-> Anaconda を使用しているときに、numpy の欠落に関するエラーが発生した場合は、[python 環境を変更して Anaconda を使用する](https://docs.microsoft.com/visualstudio/python/python-environments)必要があります。 
+> Anaconda を使用しているときに、numpy の欠落に関するエラーが発生した場合は、[python 環境を変更して Anaconda を使用する](../python/managing-python-environments-in-visual-studio.md)必要があります。
 
 11. TensorBoard で進行状況を視覚化することができます。 プロジェクトを右クリックし、**[Run TensorBoard]\(TensorBoard の実行\)** をクリックして、TensorBoard の出力ログのディレクトリを選択します。
 

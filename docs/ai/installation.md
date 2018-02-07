@@ -10,12 +10,13 @@ ms.topic: article
 ms.technology: visual studio
 ms.devlang: multiple
 ms.service: multiple
-ms.workload: multiple
-ms.openlocfilehash: 55524900d59bf3631d724e2cb142e649bf82c839
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: db07adc39f807b4dfc938ddf599bd7f83378f475
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installation"></a>インストール
 
@@ -117,7 +118,7 @@ Python 3.5 が正しくインストールされていることを確認し、端
 ### <a name="python-on-visual-studio"></a>Visual Studio での Python
 
 Python は、拡張機能によって Visual Studio で完全にサポートされます。
-詳細については、[Visual Studio 用の Python ツールのインストール](https://docs.microsoft.com/visualstudio/python/installation)に関するページをご覧ください。
+詳細については、[Visual Studio 用の Python ツールのインストール](../python/installing-python-support-in-visual-studio.md)に関するページをご覧ください。
 
 ### <a name="numpy-and-scipy"></a>NumPy と SciPy
 

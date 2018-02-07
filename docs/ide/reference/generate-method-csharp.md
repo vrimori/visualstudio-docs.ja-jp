@@ -4,19 +4,21 @@ ms.custom:
 ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 683790b4-b68b-42d7-8dc4-a68eca05aa01
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e4caf80bec38305613111f290b80eafb74547598
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.sourcegitcommit: b01406355e3b97547b7cbf8ce3960f101b165cec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/06/2018
 ---
 # <a name="generate-a-method-in-c"></a>メソッドの生成 (C#) #
 **機能:** クラスにメソッドをすぐに追加できます。 
@@ -37,7 +39,7 @@ ms.lasthandoff: 01/13/2018
    * **マウス**
      * 右クリックして **[クイック アクションとリファクタリング]** メニューを選択し、[プレビュー] ウィンドウ ポップアップから **[メソッドの生成]** を選択します。
      * 赤い波線をポイントし、表示された ![電球](media/bulb-cs.png) アイコンをクリックします。
-     * テキスト カーソルが既に赤の波線が表示されている行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
+     * テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
 
    ![メソッド生成のプレビュー](media/method-preview-cs.png)
 

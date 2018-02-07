@@ -4,19 +4,21 @@ ms.custom:
 ms.date: 11/17/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1490d6ac-ed56-4d03-95db-c23f23cba70d
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: abc0ef3ffdbada86a66bac9823894ee83d04047f
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.sourcegitcommit: b01406355e3b97547b7cbf8ce3960f101b165cec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/06/2018
 ---
 # <a name="introduce-a-local-variable-in-visual-basic"></a>ローカル変数の導入 (Visual Basic)
 **機能:** 既存の式を置換するローカル変数をすぐに生成できます。
@@ -36,7 +38,7 @@ ms.lasthandoff: 01/13/2018
      * **Ctrl + .** キーを押して、 **[クイック アクションとリファクタリング]** メニューをトリガーし、[プレビュー] ウィンドウ ポップアップから **['*expression*' のすべての発生に対してローカルを導入します]** を選択します。ここで、*expression* は強調表示したコードです。
    * **マウス**
      * 右クリックして **[クイック アクションとリファクタリング]** メニューを選択し、[プレビュー] ウィンドウ ポップアップから **['*expression*' のすべての発生に対してローカルを導入します]** を選択します。ここで、*expression* は強調表示したコードです。
-     * テキスト カーソルが既に赤の波線が表示されている行にある場合は、左余白に表示されている ![電球](media/bulb-vb.png) アイコンをクリックします。
+     * テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-vb.png) アイコンをクリックします。
 
    ![ローカル導入のプレビュー](media/local-preview-vb.png)
 
