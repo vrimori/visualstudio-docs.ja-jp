@@ -1,1 +1,0 @@
-[Visual Studio Community のダウンロード](http://go.microsoft.com/fwlink/?LinkId=524433) または [Visual Studio エディションの比較](https://www.visualstudio.com/vs-2015-product-editions)
