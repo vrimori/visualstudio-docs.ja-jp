@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
+ms.workload:
+- dotnet
 author: gewarren
-ms.openlocfilehash: a71eb54bad089e7d5bad24416604d93da615bd15
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 13780b561ba14cc06269e443265313e3b2e664c6
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>方法: .NET Framework の旧バージョンを対象とした単体テストを構成する
 Microsoft Visual Studio でテスト プロジェクトを作成すると、最新バージョンの .NET Framework が対象として既定で設定されます。 また、以前のバージョンの Visual Studio からテスト プロジェクトをアップグレードすると、最新バージョンの .NET Framework を対象とするようにアップグレードされます。 プロジェクト プロパティを編集することによって、以前のバージョンの .NET Framework に対してプロジェクトを明示的に再ターゲットできます。  
@@ -62,7 +63,7 @@ Microsoft Visual Studio でテスト プロジェクトを作成すると、最�
   
      Visual Basic テスト プロジェクトのプロパティが表示されます。  
   
-5.  次の図に示すように、**[コンパイル]** タブで **[詳細コンパイル オプション]** を選択します。  
+5.  次の図に示すように、**[コンパイル]** タブで **[詳細コンパイル オプション]** を選択します。
   
      ![詳細コンパイル オプション](../test/media/howtoconfigureunittest35frameworka.png "HowToConfigureUnitTest35FrameworkA")  
   
@@ -84,7 +85,7 @@ Microsoft Visual Studio でテスト プロジェクトを作成すると、最�
   
      Visual C# テスト プロジェクトのプロパティが表示されます。  
   
-5.  次の図に示すように、**[アプリケーション]** タブで、**[ターゲット フレームワーク]** を選択し、ドロップダウン リストから **.NET Framework 3.5** 以降のバージョンを選択して、ターゲット フレームワークを変更します。 クライアント バージョンは指定しません。  
+5.  **[アプリケーション]** タブの **[ターゲット フレームワーク]** を選択します。 次の図に示すように、ドロップダウン リストから **[.NET Framework 3.5]** またはそれ以降のバージョンを選択します。 クライアント バージョンは指定しません。
   
      ![[ターゲット フレームワーク] ドロップダウン リスト](../test/media/howtoconfigureunittest35frameworkcsharp.png "HowToConfigureUnitTest35FrameworkCSharp")  
   
@@ -125,8 +126,8 @@ Microsoft Visual Studio でテスト プロジェクトを作成すると、最�
   
 8.  ソリューション エクスプローラーで、新しい Visual C++ テスト プロジェクトのショートカット メニューから **[プロジェクトの再読み込み]** を選択します。  
   
-## <a name="see-also"></a>参照  
- [既存コードに対する単体テストの作成と実行](http://msdn.microsoft.com/en-us/e8370b93-085b-41c9-8dec-655bd886f173)   
- [SharePoint ソリューションの作成](/office-dev/office-dev/create-sharepoint-solutions)   
- [SharePoint ソリューションのビルドとデバッグ](/office-dev/office-dev/building-and-debugging-sharepoint-solutions)   
- [[ビルドの詳細設定] ダイアログ ボックス (Visual Basic)](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)
+## <a name="see-also"></a>関連項目
+
+[SharePoint ソリューションの作成](/office-dev/office-dev/create-sharepoint-solutions)  
+[SharePoint ソリューションのビルドとデバッグ](/office-dev/office-dev/building-and-debugging-sharepoint-solutions)  
+[[ビルドの詳細設定] ダイアログ ボックス (Visual Basic)](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)

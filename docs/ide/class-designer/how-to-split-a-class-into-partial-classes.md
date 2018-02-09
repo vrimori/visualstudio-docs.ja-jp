@@ -4,30 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Class Designer, partial classes
 - partial classes, Class Designer
 ms.assetid: 6f6b0b30-3996-4569-9200-20482b3adf90
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 4d550b5b6df7b799f00b0043846be387cb6e6322
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 9e9d1b0dca7c8e9d152a84273410e4bd7d768508
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-split-a-class-into-partial-classes-class-designer"></a>方法: 1 つのクラスを複数の部分クラスに分割する (クラス デザイナー)
-複数の宣言間でクラスまたは構造体の宣言を分割できます。Visual Basic の場合、`Partial` キーワードを、Visual C# の場合、`partial` キーワードを使用します。 部分宣言は必要な数だけ使用できます。複数のソース ファイルで使用することも、1 つのソース ファイルで使用することもできます。 ただし、すべての宣言は同じアセンブリおよび同じ名前空間にある必要があります。  
+複数の宣言間でクラスまたは構造体の宣言を分割できます。Visual Basic の場合、`Partial` キーワードを、C# の場合、`partial` キーワードを使用します。 部分宣言は必要な数だけ使用できます。複数のソース ファイルで使用することも、1 つのソース ファイルで使用することもできます。 ただし、すべての宣言は同じアセンブリおよび同じ名前空間にある必要があります。  
   
 部分クラスはいくつかの状況で便利です。 たとえば、大規模なプロジェクトで作業しているとき、クラスを複数のファイルに分割すれば、複数のプログラマーが同時に作業できます。 Visual Studio によって生成されたコードを使用しているとき、ソース ファイルを再作成しなくてもクラスを変更できます。 (Visual Studio によって生成されたコードの例には、Windows フォームと Web サービス ラッパー コードが含まれています。)Visual Studio によって作成されたファイルを変更せずに、自動生成クラスを使用するコードを作成できます。  
   
-部分メソッドには次の 2 種類があります。 Visual C# では、宣言 (declaring) と実装 (implementing) と呼ばれています。Visual Basic では、宣言 (declaration) と実装 (implementation) と呼ばれています。  
+部分メソッドには次の 2 種類があります。 C# では、宣言 (declaring) と実装 (implementing) と呼ばれています。Visual Basic では、宣言 (declaration) と実装 (implementation) と呼ばれています。  
   
 クラス デザイナーは部分クラスとメソッドに対応しています。 クラス ダイアグラムの型シェイプは、部分クラスの単一の宣言場所を参照します。 部分クラスが複数のファイルで定義されている場合、**[プロパティ]** ウィンドウで **[新しいメンバーの場所]** プロパティを設定するときにクラス デザイナーにより使用される宣言場所を指定できます。 つまり、クラスのシェイプをダブルクリックすると、**[新しいメンバーの場所]** プロパティで識別されるクラス宣言を含むソース ファイルにクラス デザイナーが移動します。 クラスのシェイプの部分メソッドをダブルクリックすると、クラス デザイナーは部分メソッド宣言に移動します。 また、**[プロパティ]** ウィンドウの **[ファイル名]** プロパティは宣言場所を参照します。 部分クラスの場合、**[ファイル名]** には、そのクラスの宣言と実装コードを含むファイルがすべて一覧表示されます。 ただし、部分メソッドの場合、**[ファイル名]** には、部分メソッド宣言が含まれるファイルのみが一覧表示されます。  
   
@@ -56,7 +58,7 @@ End Class
 ```  
 
 ## <a name="example"></a>例  
-Visual C# でクラス定義を分割するには、次の例のように、`partial` キーワードを使用します。  
+C# でクラス定義を分割するには、次の例のように、`partial` キーワードを使用します。  
   
 ```csharp  
 // First part of class definition.  

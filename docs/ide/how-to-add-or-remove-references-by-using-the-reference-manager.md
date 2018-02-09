@@ -11,7 +11,7 @@ ms.topic: article
 f1_keywords:
 - VS.ReferenceManager
 helpviewer_keywords:
-- Visual C# projects, references
+- C# projects, references
 - references [Visual Studio], adding
 - assemblies [Visual Studio], references
 - Visual Basic projects, references
@@ -27,11 +27,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 34dd559abcbfa6172c52edd2ed5eae2898f0b358
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: aefd0227717352e449b51950620d0f0900cf2e60
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>方法: 参照マネージャーを使用して参照を追加または削除する
 
@@ -164,7 +164,7 @@ EnvDTE 名前空間 (EnvDTE、EnvDTE80、EnvDTE90、EnvDTE90a、または EnvDTE
 
 Visual Studio 内で、次のような 2 とおりの方法で WinMD ファイルを生成できます。
 
-- **[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリケーションのマネージ プロジェクト**: [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリ プロジェクトは、[プロジェクトのプロパティ &#124; 出力の種類 = WinMD ファイル] に設定することにより、WinMD バイナリを出力できます。 WinMD のファイル名はその中に存在するすべての名前空間に対するスーパーセットの名前空間である必要があります。 たとえば、1 つのプロジェクトが名前空間 A.B と A.B.C で形成されている場合は、出力される WinMD で使用可能な名前は A.winmd と A.B.winmd です。 ユーザーが、[プロジェクトのプロパティ &#124; アセンブリ名] または [プロジェクトのプロパティ &#124; 名前空間] に、プロジェクト内の一連の名前空間から分離されている値を入力した場合や、プロジェクト内に存在する名前空間に対するスーパーセットの名前空間が存在しない場合は、次のようなビルドの警告が生成されます。'A.winmd' は、このアセンブリに有効な winmd ファイル名ではありません。 Windows メタデータ ファイル内のすべての型は、ファイル名で指定される名前空間のサブ名前空間に存在する必要があります。 このようなサブ名前空間に存在しない型は、ランタイムに見つかりません。 このアセンブリでは、ファイル名として使用できる最も小さい共通の名前空間は 'CSWSClassLibrary1' です。 デスクトップの Visual Basic プロジェクトまたは Visual C# プロジェクトでは、[!INCLUDE[win8](../debugger/includes/win8_md.md)] SDK を使用して生成される WinMD のみを使用できます。このような WinMD を、ファースト パーティ WinMD と呼びます。また、これらのプロジェクトでは WinMD を生成できません。
+- **[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリケーションのマネージ プロジェクト**: [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリ プロジェクトは、[プロジェクトのプロパティ &#124; 出力の種類 = WinMD ファイル] に設定することにより、WinMD バイナリを出力できます。 WinMD のファイル名はその中に存在するすべての名前空間に対するスーパーセットの名前空間である必要があります。 たとえば、1 つのプロジェクトが名前空間 A.B と A.B.C で形成されている場合は、出力される WinMD で使用可能な名前は A.winmd と A.B.winmd です。 ユーザーが、[プロジェクトのプロパティ &#124; アセンブリ名] または [プロジェクトのプロパティ &#124; 名前空間] に、プロジェクト内の一連の名前空間から分離されている値を入力した場合や、プロジェクト内に存在する名前空間に対するスーパーセットの名前空間が存在しない場合は、次のようなビルドの警告が生成されます。'A.winmd' は、このアセンブリに有効な winmd ファイル名ではありません。 Windows メタデータ ファイル内のすべての型は、ファイル名で指定される名前空間のサブ名前空間に存在する必要があります。 このようなサブ名前空間に存在しない型は、ランタイムに見つかりません。 このアセンブリでは、ファイル名として使用できる最も小さい共通の名前空間は 'CSWSClassLibrary1' です。 デスクトップの Visual Basic プロジェクトまたは C# プロジェクトでは、[!INCLUDE[win8](../debugger/includes/win8_md.md)] SDK を使用して生成される WinMD のみを使用できます。このような WinMD を、ファースト パーティ WinMD と呼びます。また、これらのプロジェクトでは WinMD を生成できません。
 
 - **[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリケーションのネイティブ プロジェクト**: ネイティブ WinMD ファイルは、メタデータのみで構成されます。 その実装は、別の DLL ファイル内に存在します。 **[新しいプロジェクト]** ダイアログ ボックス内で Windows ランタイム構成プロジェクト テンプレートを選ぶか、空のプロジェクトから作業を開始し、WinMD ファイルを生成するようにプロジェクトのプロパティを変更することによって、ネイティブ バイナリを生成できます。 プロジェクトが、分離された複数の名前空間で形成されている場合は、ユーザーがそれらの名前空間を結合するか、MSMerge ツールを実行することを求めるビルド エラーが表示されます。
 

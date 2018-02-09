@@ -1,30 +1,32 @@
 ---
-title: "Visual C# のコード スニペット | Microsoft Docs"
+title: "C# コード スニペット | Microsoft Docs"
 ms.custom: 
 ms.date: 06/05/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - snippets [C#], default snippets
 - snippets [C#], Code Snippet Inserter
 - Code Snippet Inserter [C#]
-- Visual C#, default snippets
+- C#, default snippets
 ms.assetid: dbea3dd6-e650-4190-b874-c9f097d7de6e
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 4ab98d4a4f589959982bdcb584189b30923ddbc9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- dotnet
+ms.openlocfilehash: 04b75cb77a41d69edfae565660d7dbabe6c10ee9
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="visual-c-code-snippets"></a>Visual C# のコード スニペット
+# <a name="c-code-snippets"></a>C# コード スニペット
 コード スニペットは、あらかじめ用意されているコードのスニペットで、コードにすぐに挿入できます。 たとえば、`for` コード スニペットは空の `for` ループを作成します。 一部のコード スニペットは surround-with コード スニペットであり、コード行を選んでから、選んだコード行を組み込むコード スニペットを選ぶことができます。 たとえば、コード行を選んでから `for` コード スニペットをアクティブにすると、選んだコード行がループ ブロックの中に含まれる `for` ループが作成されます。 コード スニペットを使うと、速く、容易に、信頼性の高いプログラム コードを作成できます。  
 
  カーソル位置にコード スニペットを挿入したり、現在選択されているコード ブロックを囲むように surround-with コード スニペットを挿入したりすることができます。 コード スニペット挿入機能は、**IntelliSense** メニューの **[コード スニペットの挿入]** または **[ブロックの挿入]** コマンドで、または Ctrl キーを押しながら T キー、X キーの順に押すか、Ctrl キーを押しながら K キー、S キーの順に押すことで、起動できます。  

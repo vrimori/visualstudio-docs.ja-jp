@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - solution build configurations, build order
 - builds [Visual Studio], preparing
 ms.assetid: 710891fd-379e-42c2-a84b-44a7af694ca0
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: faf5978119ef9029db99ae953d5c60876abddabf
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 94f2683611dd04555fdd842e96f2c1ee4bb20fb1
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="building-and-cleaning-projects-and-solutions-in-visual-studio"></a>Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン
 このトピックの手順を使用して、ソリューション内のプロジェクトまたはプロジェクト項目のすべてまたは一部をビルド、リビルド、またはクリーンを行うことができます。 ステップ バイ ステップ チュートリアルについては、「[チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)」を参照してください。  
@@ -58,11 +60,11 @@ ms.lasthandoff: 12/22/2017
   
 1.  **ソリューション エクスプローラー**で、プロジェクトを選択するか開きます。  
   
-2.  メニュー バーで、**[ビルド]** を選択してから、[*プロジェクト名*の**ビルド**] または [**プロジェクト名**の*リビルド*] を選択します。  
+2.  メニュー バーで、**[ビルド]** を選択してから、*[プロジェクト名のビルド]* または *[プロジェクト名のリビルド]* を選択します。  
   
-    -   [*プロジェクト名*の**ビルド**] を選択すると、最新のビルド以降に変更されたプロジェクト コンポーネントのみがビルドされます。  
+    -   *[プロジェクト名のビルド]* を選択すると、最新のビルド以降に変更されたプロジェクト コンポーネントのみがビルドされます。  
   
-    -   [*プロジェクト名*の**リビルド**] を選択すると、プロジェクトが "クリーン" されてから、プロジェクト ファイルとすべてのプロジェクト コンポーネントがビルドされます。  
+    -   *[プロジェクト名のリビルド]* を選択すると、プロジェクトが "クリーン" されてから、プロジェクト ファイルとすべてのプロジェクト コンポーネントがビルドされます。  
   
 ### <a name="to-build-only-the-startup-project-and-its-dependencies"></a>スタートアップ プロジェクトとその依存関係のみをビルドするには  
   
@@ -111,11 +113,12 @@ ms.lasthandoff: 12/22/2017
     -   Ctrl + Break キーを選択します。  
   
 ## <a name="see-also"></a>関連項目
-[方法: ビルド ログ ファイルを表示、保存、および構成する](../ide/how-to-view-save-and-configure-build-log-files.md)   
-[ビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)   
-[コードのコンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)   
-[ビルド構成について](../ide/understanding-build-configurations.md)   
-[デバッグ プロジェクト構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)   
-[C/C++ ビルドのリファレンス](/cpp/build/reference/c-cpp-building-reference)   
-[Devenv コマンド ライン スイッチ](../ide/reference/devenv-command-line-switches.md)   
+
+[方法: ビルド ログ ファイルを表示、保存、および構成する](../ide/how-to-view-save-and-configure-build-log-files.md)  
+[ビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)  
+[コードのコンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)  
+[ビルド構成について](../ide/understanding-build-configurations.md)  
+[方法 : デバッグ構成とリリース構成を設定する](../debugger/how-to-set-debug-and-release-configurations.md)  
+[C/C++ ビルドのリファレンス](/cpp/build/reference/c-cpp-building-reference)  
+[Devenv コマンド ライン スイッチ](../ide/reference/devenv-command-line-switches.md)  
 [ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)

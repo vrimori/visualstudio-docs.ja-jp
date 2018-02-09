@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.ClassDesigner.OverrideMembersDialog
+f1_keywords:
+- vs.ClassDesigner.OverrideMembersDialog
 helpviewer_keywords:
 - members, overriding
 - overriding members
@@ -18,23 +20,25 @@ helpviewer_keywords:
 - Class Designer [Visual Studio], refactoring classes
 - refactoring, classes
 ms.assetid: dcf07bb4-fa3b-4224-9dec-566fd924a8ce
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 63a81fef59104d6731a782575fe1c3b23f48e304
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 3bdf6237fdbfb6e15df0d58835c260252cd8efdb
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="refactoring-classes-and-types-class-designer"></a>クラスおよび型のリファクタリング (クラス デザイナー)
-コードをリファクタリングするときに、その外部動作ではなく、内部構造とオブジェクトの設計を変更することによって、コードが理解および保守しやすくなり、効率も向上します。 クラス デザイナーと [クラスの詳細] ウィンドウを使用すると、必要な作業の量を減らし、Visual Studio プロジェクト内の Visual C# .NET、Visual Basic .NET、または C++ コードをリファクタリングするときに、バグが発生する可能性を低下させることができます。  
-  
+
+コードをリファクタリングするときに、その外部動作ではなく、内部構造とオブジェクトの設計を変更することによって、コードが理解および保守しやすくなり、効率も向上します。 クラス デザイナーと [クラスの詳細] ウィンドウを使用すると、必要な作業の量を減らし、Visual Studio プロジェクト内の C#、Visual Basic、または C++ コードをリファクタリングするときに、バグが発生する可能性を低下させることができます。
+
 > [!NOTE]
->  プロジェクトはソース コードの管理下にあり、チェックアウトされていないので、プロジェクトのファイルは読み取り専用である可能性があります。このプロジェクトは、参照されているプロジェクトであるか、そのファイルがディスク上で読み取り専用としてマークされています。 これらの状態のいずれかに当てはまるプロジェクト内で作業する場合、プロジェクトの状態に応じて、さまざまな方法で作業を保存できます。 このことは、コードをリファクターする場合だけでなく、コードを直接編集するなど、別の方法でコードを変更する場合にも当てはまります。 詳しくは、「[読み取り専用の情報の表示](http://msdn.microsoft.com/en-us/33e2d3a9-1668-4d10-ae56-fa09b3156e0a)」をご覧ください。  
-  
+> プロジェクトはソース コードの管理下にあり、チェックアウトされていないので、プロジェクトのファイルは読み取り専用である可能性があります。このプロジェクトは、参照されているプロジェクトであるか、そのファイルがディスク上で読み取り専用としてマークされています。 これらの状態のいずれかに当てはまるプロジェクト内で作業する場合、プロジェクトの状態に応じて、さまざまな方法で作業を保存できます。 このことは、コードをリファクターする場合だけでなく、コードを直接編集するなど、別の方法でコードを変更する場合にも当てはまります。
+
 ## <a name="common-tasks"></a>一般的なタスク  
   
 |タスク|関連する参照先|  

@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: ca381d794569ebae4da2d46225d800dbfe4cf480
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 4573d87bbb7d5f447bf6d2038cec310132a0c9f7
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-different-web-browsers-with-coded-ui-tests"></a>コード化された UI テストでのさまざまな Web ブラウザーの使用
 コード化された UI テストでは、Internet Explorer を使用してテストを記録することによって、Web アプリケーションのテストを自動化できます。 その後、テストをカスタマイズし、Internet Explorer や Web アプリケーションに対応している他の種類のブラウザーを使用して再生できます。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/09/2018
     > [!TIP]
     >  コード化された UI のクロス ブラウザー テスト用 Selenium コンポーネントは、[こちら](http://visualstudiogallery.msdn.microsoft.com/11cfc881-f8c9-4f96-b303-a2780156628d/)からもダウンロードできます。  
   
- コード化された UI テストの作成方法と使用方法の詳細については、「[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)」を参照してください。  
+ コード化された UI テストの作成方法と使用方法の詳細については、「[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md)」を参照してください。  
   
 ### <a name="enable-debugging"></a>デバッグの有効化  
  Web アプリケーションのデバッグを有効にするには、以下の構成オプションを設定する必要があります。  
@@ -101,13 +102,13 @@ ms.lasthandoff: 01/09/2018
  *その他に知っておく必要があること*  
  **ノート**  
   
--   ![前提条件](../test/media/prereq.png "Prereq") Apple Safari Web ブラウザーはサポートされていません。  
+-   ![必須コンポーネント](../test/media/prereq.png "Prereq") Apple Safari Web ブラウザーはサポートされていません。  
   
--   ![前提条件](../test/media/prereq.png "Prereq") Web ブラウザーを起動する操作は、コード化された UI テストの一部である必要があります。  
+-   ![必須コンポーネント](../test/media/prereq.png "Prereq") Web ブラウザーを起動する操作は、コード化された UI テストの一部である必要があります。  
   
      既に Web ブラウザーが開かれていて、そこで手順を実行すると、Internet Explorer を使用していない場合は再生が失敗します。 そのため、コード化された UI テストの一部として Web ブラウザーの起動を含めることをお勧めします。  
   
--   ![前提条件](../test/media/prereq.png "Prereq") 最大化、最小化、復元など、ブラウザー固有の UI 操作の自動化はサポートされていません。  
+-   ![必須コンポーネント](../test/media/prereq.png "Prereq") 最大化、最小化、復元など、ブラウザー固有の UI 操作の自動化はサポートされていません。  
   
  **ヒント**  
   

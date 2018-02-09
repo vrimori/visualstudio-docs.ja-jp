@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,17 @@ helpviewer_keywords:
 - tokens, and the Task List
 - Task List, comment tasks
 ms.assetid: 88327e04-fa3e-48db-995b-ad89e0dc4ed2
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b6f8adfd3ce7d585cffe3c7506c4fdd56cad4a11
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 475c228dc7031dbb7cb98d9f325fcce89f31223b
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="task-list-environment-options-dialog-box"></a>[タスク一覧] \([オプション] ダイアログ ボックス - [環境])
 この [オプション] ページでは、**タスク一覧**のアラームを生成するコメント トークンを追加、削除、変更できます。 これらの設定を表示するには、**[ツール]** メニューの **[オプション]** を選択し、**[環境]** フォルダーを展開して **[タスク一覧]** を選択します。  
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
  **[トークン リスト]** に登録されたトークンで始まるコメントをコード内に挿入すると、ファイルを編集用に開くたびにそのコメントが新しいエントリとして**タスク一覧**に表示されます。 この**タスク一覧**エントリをクリックすることによって、コード内のコメント行に直接ジャンプできます。 詳細については、「[タスク一覧の使用](../../ide/using-the-task-list.md)」を参照してください。  
   
  [トークン リスト]  
- トークンの一覧が表示され、カスタム トークンを追加または削除できます。 Visual C# および Visual C++ ではコメント トークンの大文字と小文字が区別されますが、Visual Basic では区別されません。  
+ トークンの一覧が表示され、カスタム トークンを追加または削除できます。 C# および Visual C++ ではコメント トークンの大文字と小文字が区別されますが、Visual Basic では区別されません。  
   
 > [!NOTE]
 >  **[トークン リスト]** に表示されたとおりにトークンを入力しないと、**タスク一覧**にコメント タスクが表示されません。  

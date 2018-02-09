@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.classdesigner.typedef
 - vs.classdesigner.aliasofline
-helpviewer_keywords: Class Designer [Visual Studio], typedefs
+helpviewer_keywords:
+- Class Designer [Visual Studio], typedefs
 ms.assetid: c1984108-71fc-4d3a-b4d4-3eac2c6b4ebf
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 63bd8657d62a05edb1c9772776ca1216a0eee5ee
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 96d7e8cee6ce024040184aca50b5f5cb6facf388
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="visual-c-typedefs-in-class-designer"></a>クラス デザイナーにおける Visual C++ の typedef
 typedef ステートメントは、名前とその基になる型との間に間接参照のレイヤーを 1 つ以上作成します。 クラス デザイナーでは、キーワード `typedef` などで宣言される C++ の typedef 型をサポートしています。  
@@ -48,10 +51,10 @@ typedef class coord
    unsigned x;  
    unsigned y;  
 };  
-```  
-  
-`typedef` 型の使用の詳細については、「[typedef 指定子](https://msdn.microsoft.com/en-us/library/05w82thz.aspx)」を参照してください。  
-  
+```
+
+`typedef` 型の使用法の詳細については、「[Typedefs](/cpp/aliases-and-typedefs-cpp#typedefs)」を参照してください。
+
 C++ の typedef 図形には、typedef で指定された型の図形があります。 たとえば、ソースで `typedef class` が宣言されている場合、図形の角が丸くなり、**Class** のラベルが付きます。 `typedef struct` の場合、図形の角は四角で、**Struct** のラベルが付きます。  
   
 クラスと構造体にはその内部で宣言された、入れ子にされた typedef を含めることができるため、クラスと構造体の図形では、入れ子にされた typedef 宣言を入れ子にされた図形として表示することができます。  
@@ -201,5 +204,6 @@ Typedef
 -> MyIntVect  
   
 ## <a name="see-also"></a>関連項目
-[Visual C++ コードの使用](working-with-visual-cpp-code.md)   
-[typedef 指定子](https://msdn.microsoft.com/en-us/library/05w82thz.aspx)
+
+[Visual C++ コードの使用](working-with-visual-cpp-code.md)  
+[Typedefs](/cpp/aliases-and-typedefs-cpp#typedefs)

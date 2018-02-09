@@ -10,11 +10,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d4d302c84322388f96b37aa913e4debd3d331a7
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.openlocfilehash: 5bde32fc86610fa451aa01659401362fe4207f5c
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="visual-studio-ide-overview"></a>Visual Studio IDE の概要
 
@@ -30,7 +30,7 @@ Android スマートフォン用のアプリを 作成したり、 C++ を使用
 
 ### <a name="create-mobile-apps"></a>モバイル アプリの作成
 
-Visual C# や Xamarin (Visual C++) を使用して異なるプラットフォームのネイティブ モバイル アプリを作成したり、Apache Cordova で JavaScript を使用してハイブリッド アプリを作成したりできます。 Unity、Unreal、DirectX、Cocos 用のモバイル ゲームを作成できます。 Visual Studio には Android エミュレーターが搭載されているため、Android アプリの実行してデバッグできます。
+C# や Xamarin (Visual C++) を使用して異なるプラットフォームのネイティブ モバイル アプリを作成したり、Apache Cordova で JavaScript を使用してハイブリッド アプリを作成したりできます。 Unity、Unreal、DirectX、Cocos 用のモバイル ゲームを作成できます。 Visual Studio には Android エミュレーターが搭載されているため、Android アプリの実行してデバッグできます。
 
 Azure App Services を作成して、モバイル アプリにクラウドの機能を活用できます。 Azure App Services を活用すると、アプリのデータをクラウドに保存したり、ユーザーを安全に認証したり、アプリやビジネスのニーズに合わせてリソースを調整したりできます。 詳しくは、「[モバイル アプリ開発](https://www.visualstudio.com/vs/mobile-app-development/)」をご覧ください。
 
@@ -56,7 +56,7 @@ Visual Studio には、Microsoft Azure を使用するクラウド ファース�
 
 ### <a name="build-cross-platform-apps-and-games"></a>クロス プラットフォーム アプリとゲームをビルドする
 
-Visual Studio を使用して、Android、iOS、Linux、Windows、その他のデバイス用のアプリとゲームを作成できます。 詳細については、[クロス プラットフォーム モバイル開発](../cross-platform/cross-platform-mobile-development-in-visual-studio.md)に関する記事をご覧ください。 ユニバーサル Windows アプリでは、複数のプラットフォームでコードを活用できます。 詳しくは、[ユニバーサル Windows アプリ](https://dev.windows.com/en-us/windows-apps)に関するページをご覧ください。
+Visual Studio を使用して、Android、iOS、Linux、Windows、その他のデバイス用のアプリとゲームを作成できます。 詳細については、[クロス プラットフォーム モバイル開発](../cross-platform/cross-platform-mobile-development-in-visual-studio.md)に関する記事をご覧ください。 ユニバーサル Windows アプリでは、複数のプラットフォームでコードを活用できます。 詳しくは、[ユニバーサル Windows アプリ](https://dev.windows.com/windows-apps)に関するページをご覧ください。
 
 アプリ要件に基づいて必要なツールと使用する言語を選択します。
 
@@ -109,7 +109,7 @@ Visual Studio を初めて起動する際には、Microsoft アカウント、�
 
   ![UWP の空のアプリ テンプレート](../ide/media/new-uwp-blank-app-template.png)
 
-  これにより、Visual C# と XAML をプログラミング言語として使用する新しい空のユニバーサル Windows アプリ プロジェクトが作成されます。 Visual Studio でプロジェクトが設定されるまで少し待ちます。 情報を確認するよう求められた場合、現時点では既定値を使用してください。
+  これにより、C# と XAML をプログラミング言語として使用する新しい空のユニバーサル Windows アプリ プロジェクトが作成されます。 Visual Studio でプロジェクトが設定されるまで少し待ちます。 情報を確認するよう求められた場合、現時点では既定値を使用してください。
 
 1. **[新しいユニバーサル Windows プラットフォーム プロジェクト]** ダイアログ ボックスで、**[OK]** を選択して既定値をそのまま使用します。
 
@@ -195,7 +195,7 @@ Visual Studio には他にも次のような一般的な生産性を高める機
 
  ![リファクタリング](../ide/media/VSIDE_refactor.png)
 
-- **IntelliSense** 。コードに関する型情報をエディターに直接表示したり、場合によっては、ちょっとしたコードを自動的に作成したりする、よく使われる機能セットの包括的な用語です。 エディター内のインラインに基本ドキュメントがあるようなもので、これによって、別個のヘルプ ウィンドウで型情報を検索する手間が省けます。 IntelliSense 機能は言語によって異なります。 詳細については、「[Visual C# の IntelliSense](../ide/visual-csharp-intellisense.md)」、「[Visual C++ の Intellisense](../ide/visual-cpp-intellisense.md)」、「[JavaScript IntelliSense](../ide/javascript-intellisense.md)」および「[Visual Basic 固有の IntelliSense](../ide/visual-basic-specific-intellisense.md)」を参照してください。 次の図は、職場でのいくつかの IntelliSense 機能を示しています。
+- **IntelliSense** 。コードに関する型情報をエディターに直接表示したり、場合によっては、ちょっとしたコードを自動的に作成したりする、よく使われる機能セットの包括的な用語です。 エディター内のインラインに基本ドキュメントがあるようなもので、これによって、別個のヘルプ ウィンドウで型情報を検索する手間が省けます。 IntelliSense 機能は言語によって異なります。 詳細については、「[C# の IntelliSense](../ide/visual-csharp-intellisense.md)」、「[Visual C++ の Intellisense](../ide/visual-cpp-intellisense.md)」、「[JavaScript IntelliSense](../ide/javascript-intellisense.md)」および「[Visual Basic 固有の IntelliSense](../ide/visual-basic-specific-intellisense.md)」を参照してください。 次の図は、職場でのいくつかの IntelliSense 機能を示しています。
 
   ![Visual Studio のメンバーの一覧](../ide/media/vs2017_Intellisense.png)
 
@@ -237,7 +237,7 @@ Visual Studio Team Services のアカウントまたは Team Foundation Server �
 
 ![Visual Studio Team Explorer](../ide/media/vs2017_teamexplorer.png)
 
-チームの開発者がバージョン管理にチェックインしたコードをビルドするように、ビルド プロセスを自動化することもできます。 たとえば、1 つまたは複数のプロジェクトを夜間にビルドすることも、コードのチェックインごとにビルドすることもできます。 詳細については、「[Continuous integration on any platform (あらゆるプラットフォームでの継続的インテグレーション)](https://www.visualstudio.com/en-us/docs/build/overview)」をご覧ください。
+チームの開発者がバージョン管理にチェックインしたコードをビルドするように、ビルド プロセスを自動化することもできます。 たとえば、1 つまたは複数のプロジェクトを夜間にビルドすることも、コードのチェックインごとにビルドすることもできます。 詳細については、「[Build and Release (VSTS and TFS)](/vsts/build-release/index)」(ビルドとリリース (VSTS と TFS)) を参照してください。
 
 ## <a name="connect-to-services-databases-and-cloud-based-resources"></a>サービス、データベース、クラウドベースのリソースへの接続
 
@@ -280,6 +280,6 @@ Visual Studio を使用したことがない場合は、「[Visual Studio を使
 * [Visual Studio IDE](https://www.visualstudio.com/vs/)
 * [Visual Studio のダウンロード](https://www.visualstudio.com/downloads/)
 * [Visual Studio ブログ](https://blogs.msdn.microsoft.com/visualstudio/)
-* [Visual Studio フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?category=visualstudio%2Cvsarch%2Cvsdbg%2Cvstest%2Cvstfs%2Cvsdata%2Cvsappdev%2Cvisualbasic%2Cvisualcsharp%2Cvisualc)
+* [Visual Studio フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/home?category=visualstudio%2Cvsarch%2Cvsdbg%2Cvstest%2Cvstfs%2Cvsdata%2Cvsappdev%2Cvisualbasic%2Cvisualcsharp%2Cvisualc)
 * [Microsoft Virtual Academy](https://mva.microsoft.com/)
 * [Channel 9](https://channel9.msdn.com/)

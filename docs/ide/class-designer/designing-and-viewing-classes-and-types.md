@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.classdesigner.diagram
+f1_keywords:
+- vs.classdesigner.diagram
 helpviewer_keywords:
 - Class Designer [Visual Studio]
 - Class Designer, about Class Designer
@@ -15,19 +17,20 @@ helpviewer_keywords:
 - classes [Visual Studio], viewing
 - class designer
 ms.assetid: 40ed2c9d-0ce0-4b95-ad78-5dec2065ccea
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 2d589c4f9fabefbc141d96b233c55a1fd9fc10eb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 3c3a3de1126eec1d20603257463fecc6ab59eaa8
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="designing-and-viewing-classes-and-types"></a>クラスと型のデザインおよび表示
-Visual Studio のクラス デザイナーでは、コード内のクラスとその他の型をデザイン、視覚化、およびリファクターできます。 クラス ダイアグラムを使用すると、Visual C# .NET、Visual Basic .NET、または C++ プロジェクト内にあるクラスの作成および編集、プロジェクト構造のより深い理解、またはコードの再編成が可能です。  
+Visual Studio のクラス デザイナーでは、コード内のクラスとその他の型をデザイン、視覚化、およびリファクターできます。 クラス ダイアグラムを使用すると、C#、Visual Basic、または C++ プロジェクト内にあるクラスの作成および編集、プロジェクト構造のより深い理解、またはコードの再編成が可能です。  
   
  ここでは、クラス ダイアグラムで実現できることについて、さらに詳しく説明します。  
   

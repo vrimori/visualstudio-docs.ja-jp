@@ -1,5 +1,5 @@
 ---
-title: "管理者ポータルでサブスクリプションを編集する | Visual Studio Marketplace"
+title: "管理者ポータルでのサブスクリプションの編集 | Microsoft Docs"
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
@@ -9,11 +9,11 @@ Description: Learn how administrators can edit subscription assignments.
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: c561e7a56f2e70cae1addd32902f68a582b49a02
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: 120bf87ddbaf50efa1abe59bac1c2e4616db7737
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="editing-visual-studio-subscription-assignments"></a>Visual Studio サブスクリプションの割り当ての編集
 
@@ -29,13 +29,15 @@ ms.lasthandoff: 12/01/2017
 
    ![サブスクライバーの詳細の編集](_img\edit-license\edit-subscriber.png)
 
-注: サブスクライバーのサブスクリプション レベルを変更する必要がある場合、ポータルからユーザーを削除し、もう一度追加する必要があります。 サブスクリプション レベルは編集できません。
+> [!NOTE]
+> サブスクライバーのサブスクリプション レベルを変更する必要がある場合、ポータルからユーザーを削除し、もう一度追加する必要があります。 サブスクリプション レベルは編集できません。
 
 ## <a name="editing-multiple-subscribers-by-using-bulk-edit"></a>一括編集を使用して複数のサブスクライバーを編集する
 
 一括編集プロセスを使用して、一度に複数のサブスクライバーを編集することができます。 この機能は、会社の電子メール アドレスを変更している組織、または組織がダウンロードへのアクセスを制限することにした場合に主に使用されます。 
 
-**重要:** サブスクリプション レベル (つまり Enterprise や Professional など) とサブスクリプションの GUID を変更することはできません。  変更されたこれらの項目をアップロードする場合、アップロードは失敗します。  
+> [!IMPORTANT]
+> サブスクリプション レベル (つまり Enterprise や Professional など) とサブスクリプションの GUID を変更することはできません。  変更されたこれらの項目をアップロードする場合、アップロードは失敗します。  
 
 1.  複数のサブスクライバーを一度に追加するには、[サブスクライバー] タブに移動します。上部リボンの **[一括編集]** をクリックします。 
 

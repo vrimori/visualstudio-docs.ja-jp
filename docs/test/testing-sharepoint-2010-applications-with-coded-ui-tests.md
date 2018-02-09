@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: fbda836ec423d9a86b51b2334a3015589512d816
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 15970f48791078d498fa7a187546c1c7230d3cf0
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>コード化された UI テストを使用した SharePoint 2010 アプリケーションのテスト
 コード化された UI テストを SharePoint アプリケーションに含めると、UI コントロールを含むアプリケーション全体が正しく機能していることを検証できます。 コード化された UI テストでは、ユーザー インターフェイスの値とロジックも検証できます。  
@@ -29,12 +30,12 @@ ms.lasthandoff: 01/09/2018
   
  **ノート**  
   
--   ![必須コンポーネント](../test/media/prereq.png "必須コンポーネント") SharePoint アプリケーションのコード化された UI テストは、SharePoint 2010 でのみサポートされます。  
+-   ![必須コンポーネント](../test/media/prereq.png "Prereq") SharePoint アプリケーションのコード化された UI テストは、SharePoint 2010 でのみサポートされます。  
   
--   ![必須コンポーネント](../test/media/prereq.png "必須コンポーネント") SharePoint アプリケーションでは、Visio および PowerPoint 2010 コントロールはサポートされていません。  
+-   ![必須コンポーネント](../test/media/prereq.png "Prereq") SharePoint アプリケーションでは、Visio および PowerPoint 2010 コントロールはサポートされていません。  
   
 ## <a name="creating-a-coded-ui-test-for-your-sharepoint-app"></a>SharePoint アプリのコード化された UI テストを作成する  
- SharePoint 2010 アプリケーションでの[コード化された UI テストの作成](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) 方法は、他の種類のアプリケーションでのテストの作成方法と同じです。 記録と再生は、Web 編集インターフェイス上のすべてのコントロールでサポートされています。 カテゴリと Web パーツを選択するためのインターフェイスは、すべてが標準 Web コントロールです。  
+ SharePoint 2010 アプリケーションでの[コード化された UI テストの作成](../test/use-ui-automation-to-test-your-code.md) 方法は、他の種類のアプリケーションでのテストの作成方法と同じです。 記録と再生は、Web 編集インターフェイス上のすべてのコントロールでサポートされています。 カテゴリと Web パーツを選択するためのインターフェイスは、すべてが標準 Web コントロールです。  
   
  ![SharePoint Web パーツ](../test/media/cuit_sharepoint.png "CUIT_SharePoint")  
   

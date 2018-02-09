@@ -1,5 +1,5 @@
 ---
-title: "検索とフィルター | Visual Studio Marketplace"
+title: "検索とフィルター | Microsoft Docs"
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
@@ -9,11 +9,11 @@ Description: Learn how administrators can locate individual subscribers or group
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 65ffebd7cd1472dbf0acfdda2f102da6e8273c92
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: fddd8f950969d77ac879d8570bba21468f657123
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="searching-and-filtering-subscribers-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションでのサブスクライバーの検索とフィルター処理
 Visual Studio サブスクリプション管理ポータルでは、さまざまな条件を基にサブスクライバーの特定のサブセットを検索することができます。 名前、メール アドレス、サブスクリプション レベル、その他の各種情報で、サブスクライバーの一覧をフィルター処理できます。 

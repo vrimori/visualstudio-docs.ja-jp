@@ -7,17 +7,20 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.codedUItest.testeditor
-helpviewer_keywords: coded UI test, Coded UI Test Editor
+f1_keywords:
+- vs.codedUItest.testeditor
+helpviewer_keywords:
+- coded UI test, Coded UI Test Editor
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: 2302c2bbfbd38ff307335b525aa319afb5f07e25
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 0cb316475748033bb020a2f3065f9492a5a201ed
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="editing-coded-ui-tests-using-the-coded-ui-test-editor"></a>コード化された UI テスト エディターを使用したコード化された UI テストの編集
 コード化された UI テスト エディターを使用すると、コード化された UI テストを簡単に変更できます。 コード化された UI テスト エディターを使用して、テスト メソッドや UI 操作のプロパティを検索、表示、および編集できます。 また、対応するコントロールを表示および編集するための UI コントロール マップを使用できます。  
@@ -192,9 +195,9 @@ UI 操作のプロパティの編集
  遅延の挿入が完了したら、 **ツール バーの** [保存] [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] をクリックすることで、UIMap.Designer ファイルに変更を保存します。  
   
  *その他に知っておく必要があること*  
- **注**  
+ **ノート**  
   
--   ![前提条件](../test/media/prereq.png "前提条件") UI 操作の前に特定のコントロールを使用できるようにする必要がある場合は、適切な UITestControl.WaitForControlXXX() メソッドを使用してテスト メソッドにカスタム コードを追加することを検討してください。 [!INCLUDE[crdefault](../test/includes/crdefault_md.md)]「[再生中に特定のイベントを待機するようにコード化された UI テストを設定する](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)」を参照してください。  
+-   ![必須コンポーネント](../test/media/prereq.png "Prereq") UI 操作の前に特定のコントロールを使用できるようにする必要がある場合は、適切な UITestControl.WaitForControlXXX() メソッドを使用してテスト メソッドにカスタム コードを追加することを検討してください。 [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][Making Coded UI Tests Wait For Specific Events During Playback](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)をクリックします。  
   
  **ヒント**  
   
@@ -216,6 +219,6 @@ UI 操作のプロパティの編集
 ## <a name="see-also"></a>関連項目
 
 [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)  
-[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)  
+[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md)  
 [データ ドリブンのコード化された UI テストの作成](../test/creating-a-data-driven-coded-ui-test.md)  
 [チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)

@@ -1,5 +1,5 @@
 ---
-title: "プロダクト キーの使用"
+title: "プロダクト キーの使用 | Microsoft Docs"
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
@@ -9,13 +9,14 @@ Description: Learn how to obtain and manage your product keys in Visual Studio s
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 6d0da452a205042cee2b2c0b41990da50b303b3f
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: 50143579a4bf9033e54385b81ef365228b2b63cf
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションでのプロダクト キーの使用
+
 ## <a name="product-keys-overview"></a>プロダクト キーの概要
 Visual Studio サブスクリプションがあれば、アプリケーションの設計、開発、テスト、デモのための Microsoft 製品を幅広くご利用いただけます。 これらの製品には、インストール時にプロダクト キーが必要になる製品と、ライセンス認証が必要な製品があります。
 
@@ -45,7 +46,7 @@ Microsoft は、Visual Studio サブスクリプション プログラムの健�
 調査の結果、ほとんどのサブスクライバーにとって、サブスクリプションに含まれるプロダクト キーの数が十分であることがわかりました。 追加のキーが必要な場合は、Visual Studio サブスクリプション [カスタマー サービス](https://www.visualstudio.com/subscriptions/support/)から要求を送信できます。追加の要求については、個々の状況に応じて承認の可否が検討されます。
 
 ## <a name="locating-and-claiming-product-keys"></a>プロダクト キーの確認と要求
-プロダクト キーを表示するには、Visual Studio サブスクリプションにサインインする必要があります。 以下に示す [[ダウンロード]](https://my.visualstudio.com/downloads) ページで、特定の製品の青い **[キーを入手]** リンクを選択すると、その製品のプロダクト キーが表示されます。  すべてのキーをまとめて [[プロダクト キー](https://my.visualstudio.com/productkeys)] ページで確認することもできます。 1 つの製品に対して複数のキーが存在する場合は、使用するキーを識別できるよう、該当するダウンロードの [メモ] 列にメモが表示されます。
+プロダクト キーを表示するには、Visual Studio サブスクリプションにサインインする必要があります。 以下に示す [[ダウンロード]](https://my.visualstudio.com/downloads) ページで、特定の製品の青い **[キーを入手]** リンクを選択すると、その製品のプロダクト キーが表示されます。  すべてのキーをまとめて [[プロダクト キー](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)] ページで確認することもできます。 1 つの製品に対して複数のキーが存在する場合は、使用するキーを識別できるよう、該当するダウンロードの [メモ] 列にメモが表示されます。
 
 ![ダウンロード ページからキーを入手する](_img/product-keys/download-get-key.png)
 
@@ -79,7 +80,7 @@ Microsoft は、Visual Studio サブスクリプション プログラムの健�
 
 プロダクト キーを要求するには:
 1.  Visual Studio サブスクリプションにサインインします。  製品をダウンロードするかプロダクト キーを要求するには、サインインする必要があります。 
-2.  [[プロダクト キー]](https://my.visualstudio.com/productkeys) タブをクリックします。
+2.  [[プロダクト キー]](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) タブをクリックします。
 3.  プロダクト キーは、製品名のアルファベット順に一覧表示されます。  目的の製品の名前まで下にスクロールするか、ページの上部にある検索バーを使用して検索することができます。  
 ![プロダクト キーの検索](_img\product-keys\visio-product-key-cropped.png)
 
@@ -91,7 +92,7 @@ Microsoft は、Visual Studio サブスクリプション プログラムの健�
 
 **重要: サブスクリプションの期限が切れた場合、新しいキーを要求したり要求したキーをエクスポートしたりすることはできません。** 
 
-キーをエクスポートする場合は、[プロダクト キー] ページの右端にある **[すべてのキーをエクスポート]** ボタンをクリックするだけです。  KeysExport.xml をという名前の .xml ファイルが作成され、ファイルを開くか保存するオプションが表示されます。  .Xml ファイルを処理できるアプリケーションでファイルを開く必要があります。  たとえば、Excel で読み取り専用のブックとしてファイルを開くことができます。  
+キーをエクスポートするには、[プロダクト キー] ページの右端にある **[すべてのキーをエクスポート]** リンクをクリックします。  KeysExport.xml をという名前の .xml ファイルが作成され、ファイルを開くか保存するオプションが表示されます。  .Xml ファイルを処理できるアプリケーションでファイルを開く必要があります。  たとえば、Excel で読み取り専用のブックとしてファイルを開くことができます。  
 
 ## <a name="internet-demonstrations-via-terminal-services"></a>ターミナル サービスを介したインターネット デモンストレーション
 Visual Studio サブスクリプションがあれば、ターミナル サービス (Windows Server 2003 または Windows Server 2008) やリモート デスクトップ サービス (Windows Server 2008 R2 以降) を介してエンド ユーザーに自分のプログラムのインターネット デモンストレーションへアクセスしてもらうことができます。 この方法で、最大 200 人の匿名ユーザーが同時に会員のデモンストレーションにアクセスすることができます。 デモンストレーションに実稼動データを使用することはできません。 Visual Studio サブスクライバーは、自分のアプリケーションのデモンストレーションをエンド ユーザーに提供することができます。 ターミナル サービス (TS) またはリモート デスクトップ サービス (RDS) を使用したこのインターネット デモンストレーションのシナリオにおいてのみ、Visual Studio サブスクリプションを持たないエンド ユーザーがデモンストレーション アプリケーションを操作できます。これは、そのソフトウェアが Visual Studio サブスクリプションでライセンスを付与されている間に限ります。
@@ -99,8 +100,9 @@ Visual Studio サブスクリプションがあれば、ターミナル サー�
 これは、開発/テスト権限に追加されるもので、Visual Studio サブスクライバーが必要に応じて必要な数の RDS または TS 接続を使用することができます。
 
 ### <a name="enabling-rds-access"></a>RDS アクセスを有効にする 
-Visual Studio サブスクライバーは、[サブスクライバー ポータル](https://my.visualstudio.com)の [[プロダクト キー]](https://my.visualstudio.com/productkeys) タブに提供されるプロダクト キーを入力し、Windows Server に RDS でアクセスできるユーザー数を増やすことができます。 プロダクト キーを取得するには、[プロダクト キー] ページに接続して下方向にスクロールし、実行中の Windows Server のバージョンを表示します。 [Windows Server <バージョン> R2 リモート デスクトップ サービス <ユーザーまたはデバイス> 接続] を検索し、**[キーの要求]** リンクをクリックします。 たとえば、Windows Server 2012 R2 で RDS を使用して、展開にユーザー CAL を使用している場合は、[Windows Server 2012 リモート デスクトップ サービス ユーザー接続 (50)] を選択します。
+Visual Studio サブスクライバーは、[サブスクライバー ポータル](https://my.visualstudio.com?wt.mc_id=o~msft~docs)の [[プロダクト キー]](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) タブに提供されるプロダクト キーを入力し、Windows Server に RDS でアクセスできるユーザー数を増やすことができます。 プロダクト キーを取得するには、[プロダクト キー] ページに接続して下方向にスクロールし、実行中の Windows Server のバージョンを表示します。 [Windows Server <バージョン> R2 リモート デスクトップ サービス <ユーザーまたはデバイス> 接続] を検索し、**[キーの要求]** リンクをクリックします。 たとえば、Windows Server 2012 R2 で RDS を使用して、展開にユーザー CAL を使用している場合は、[Windows Server 2012 リモート デスクトップ サービス ユーザー接続 (50)] を選択します。
 Windows Server 2008 R2 では、種類ごとに 5 つのキーが利用でき、各キーが 20 の接続に対応します。 Windows Server 2012 R2 では、種類ごとに 4 つのキーが利用でき、それぞれ 50 の接続に対応します。 
+
 #### <a name="to-enable-additional-connections-in-windows-server"></a>Windows Server への追加の接続を有効にするには: 
 1.  サーバー マネージャーを開きます。
 2.  左側にあるナビゲーション ウィンドウでサーバーのリストを開きます。
@@ -113,4 +115,4 @@ Windows Server 2008 R2 では、種類ごとに 5 つのキーが利用でき、
 - 最大で 200 の同時ユーザー接続をアプリケーションのデモンストレーションに使用できます。 
 - ユーザー接続を有効にするプロダクト キーは Visual Studio サブスクライバーが取得しなければなりません。
 
-ご自分のサーバーに RD ライセンスを設定するための手順については、「[Windows Server 2012 での RD ライセンス構成](http://blogs.technet.com/b/askperf/archive/2013/09/20/rd-licensing-configuration-on-windows-server-2012.aspx)」を参照してください。 質問がある場合は、Microsoft [リモート デスクトップ サービス フォーラム](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=winserverTS)にアクセスしてください。 
+ご自分のサーバーに RD ライセンスを設定するための手順については、「[Windows Server 2012 での RD ライセンス構成](http://blogs.technet.com/b/askperf/archive/2013/09/20/rd-licensing-configuration-on-windows-server-2012.aspx)」を参照してください。 質問がある場合は、Microsoft [リモート デスクトップ サービス フォーラム](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverTS)にアクセスしてください。 

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -12,16 +13,17 @@ helpviewer_keywords:
 - bi-directional language support, about bi-directional language support
 - Arabic language, creating applications
 ms.assetid: b56f9795-ed8d-4452-9d49-8ca0b0145d86
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: db7afbc68ab4e02803959dd0ff0b4de92233fece
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 1b0d0010d9aa4c56fdffef2eceb458776a863d23
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="creating-applications-in-bi-directional-languages"></a>Visual Studio による双方向言語用アプリケーションの作成
 Visual Studio では、アラビア語やヘブライ語など、右から左に書く言語で正しくテキストが表示されるアプリケーションを作成できます。 いくつかの機能については、単にプロパティを設定するだけで済みます。 それ以外の場合は、コードで機能を実装する必要があります。  
@@ -80,15 +82,16 @@ Visual Studio では、アラビア語やヘブライ語など、右から左に
 -   コードおよびリテラル テキスト。 (テキスト エディターでもある) コード エディターで、アラビア語またはヘブライ語を使用してクラス、関数、変数、プロパティ、リテラル文字列、属性などに名前を付けることができます。 ただし、エディターでは右から左への読み取り順序がサポートされていません。テキストは常に左の余白から開始されます。  
   
     > [!TIP]
-    >  リテラル文字列は、プログラムにハードコーディングするのではなく、リソース ファイルに配置することをお勧めします。 詳しくは、「[チュートリアル: Windows フォームのローカリゼーション](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5)」をご覧ください。  
+    > リテラル文字列は、プログラムにハードコーディングするのではなく、リソース ファイルに配置することをお勧めします。 詳細については、「[Resources in desktop apps (.NET Framework)](/dotnet/framework/resources/index)」 (デスクトップ アプリのリソース (.NET Framework)) を参照してください。
   
     > [!NOTE]
-    >  これらの言語で名前を付けたオブジェクトは、一貫した方法で参照する必要があります。 たとえば、アラビア語の変数に Kashida を使用して名前を付けた場合は、その変数を参照するときに常に Kashida を使用する必要があります。そうしないと、エラーが発生します。  
+    > これらの言語で名前を付けたオブジェクトは、一貫した方法で参照する必要があります。 たとえば、アラビア語の変数に Kashida を使用して名前を付けた場合は、その変数を参照するときに常に Kashida を使用する必要があります。そうしないと、エラーが発生します。  
   
 -   コードのコメント。 アラビア語およびヘブライ語は、コメントに使用できます。 また、コメント ビルダー ツールでもこれらの言語を使用できます。  
   
-## <a name="see-also"></a>参照  
- [Windows フォーム アプリケーションの双方向サポート](http://msdn.microsoft.com/Library/7b622fa4-f390-4e4d-b624-83a1917cccf2)   
- [ASP.NET Web アプリケーションに対する双方向サポート](http://msdn.microsoft.com/Library/5576f9b1-9b86-41ef-8354-092d366bcd03)   
- [アプリケーションのグローバル化](../ide/globalizing-applications.md)   
- [アプリケーションのローカライズ](../ide/localizing-applications.md)
+## <a name="see-also"></a>関連項目
+
+[Windows フォーム アプリケーションの双方向サポート](/dotnet/framework/winforms/advanced/bi-directional-support-for-windows-forms-applications)  
+[ASP.NET Web アプリケーションに対する双方向サポート](http://msdn.microsoft.com/Library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+[アプリケーションのグローバル化](../ide/globalizing-applications.md)  
+[アプリケーションのローカライズ](../ide/localizing-applications.md)

@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, international applications
 - globalization [Visual Studio], localizing applications
-- Visual C#, international applications
+- C#, international applications
 - applications [Visual Studio], localizing
 - localization [.NET Framework], applications
 ms.assetid: 879c20e0-8301-4f44-b520-97283848c965
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c389f8dd13514d940941bcefc228236b3418e317
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 92a7e56d05d0f9d71d51aa80fcc5d545b3baf061
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="localizing-applications"></a>アプリケーションのローカライズ
 *ローカライズ*は、特定のカルチャまたはロケールに合わせてアプリケーションをカスタマイズする処理です。 ローカライズは主にユーザー インターフェイスの翻訳で構成されます。  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="related-sections"></a>関連項目  
  [.NET Framework ベースの国際対応アプリケーションの概要](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md)  
- Visual Basic または Visual C# を使用した国際市場向けのソフトウェア開発についての概念を説明します。  
+ Visual Basic または C# を使用した国際市場向けのソフトウェア開発についての概念を説明します。  
   
  [Windows フォームのグローバル化](/dotnet/framework/winforms/advanced/globalizing-windows-forms)  
  複数のカルチャをサポートする Windows アプリケーションの作成について説明したページへのリンクを提供します。  

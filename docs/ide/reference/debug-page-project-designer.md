@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vb.ProjectPropertiesDebug
+f1_keywords:
+- vb.ProjectPropertiesDebug
 helpviewer_keywords:
 - Project Designer, Debug page
 - Debug page in Project Designer
 ms.assetid: ef11eae9-df96-4e20-aabd-2678ba317140
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: a16f39d9f9ba6c3e0790a53c85d0824178083953
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 305f5160ab91fdfa61e9133ab9f867194e4a117f
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="debug-page-project-designer"></a>[デバッグ] ページ (プロジェクト デザイナー)
 > [!WARNING]
@@ -29,16 +32,16 @@ ms.lasthandoff: 12/22/2017
   
  Visual Basic または C# プロジェクトのデバッグ動作のプロパティを設定するには、**プロジェクト デザイナー**の **[デバッグ]** ページを使用します。  
   
- **[デバッグ]** ページにアクセスするには、**ソリューション エクスプローラー**でプロジェクト ノードを選択します。 **[プロジェクト]** メニューの *[プロジェクト名***プロパティ]** を選択します。 **プロジェクト デザイナー**が表示されたら、**[デバッグ]** タブをクリックします。  
+ **[デバッグ]** ページにアクセスするには、**ソリューション エクスプローラー**でプロジェクト ノードを選択します。 **[プロジェクト]** メニューの [プロジェクト名**プロパティ**] を選択します。 **プロジェクト デザイナー**が表示されたら、**[デバッグ]** タブをクリックします。  
   
 ## <a name="configuration-and-platform"></a>構成およびプラットフォーム  
  次のオプションを使用すると、表示または変更する構成およびプラットフォームを選択できます。  
   
  **構成**  
- 表示または変更する構成設定を指定します。 設定は、**[デバッグ]** (既定)、**[リリース]**、または **[すべての構成]** のいずれかになります。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+ 表示または変更する構成設定を指定します。 設定は、**[デバッグ]** (既定)、**[リリース]**、または **[すべての構成]** のいずれかになります。
   
  **プラットフォーム**  
- 表示または変更するプラットフォーム設定を指定します。 **[Any CPU]** (既定)、**[x64]**、および **[x86]** から選択できます。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+ 表示または変更するプラットフォーム設定を指定します。 **[Any CPU]** (既定)、**[x64]**、および **[x86]** から選択できます。
   
 ## <a name="start-action"></a>開始動作  
  **[開始動作]** は、アプリケーションをデバッグするときに開始するアイテムを示します。プロジェクト、カスタム プログラム、URL のいずれかを指定できます。また、省略することもできます。 既定では、このオプションは **[プロジェクトの開始]** に設定されます。 **[デバッグ]** ページの **[開始動作]** 設定で、`StartAction` プロパティの値が決まります。  
@@ -74,10 +77,10 @@ ms.lasthandoff: 12/22/2017
   
  セキュリティ ゾーンでデバッグするには、このオプションと、[[セキュリティの詳細設定] ダイアログ ボックス](../../ide/reference/advanced-security-settings-dialog-box.md)の **[選択されたアクセス許可セットでこのアプリケーションをデバッグする]** を有効にする必要があります。  
   
-## <a name="see-also"></a>参照  
- [Visual Studio でのデバッグ](../../debugger/debugging-in-visual-studio.md)   
- [C# デバッグ構成のプロジェクト設定](../../debugger/project-settings-for-csharp-debug-configurations.md)   
- [Visual Basic デバッグ構成のプロジェクト設定](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
- [デバッグ プロパティの管理](http://msdn.microsoft.com/en-us/92474d16-e7fe-4fac-9287-6bd6b3a7eb68)   
- [方法 : アクセス許可が制限された ClickOnce アプリケーションをデバッグする](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
- [方法 : 構成を作成および編集する](../../ide/how-to-create-and-edit-configurations.md)
+## <a name="see-also"></a>関連項目
+
+[Visual Studio でのデバッグ](../../debugger/debugging-in-visual-studio.md)  
+[C# デバッグ構成のプロジェクト設定](../../debugger/project-settings-for-csharp-debug-configurations.md)  
+[Visual Basic デバッグ構成のプロジェクト設定](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)  
+[方法 : アクセス許可が制限された ClickOnce アプリケーションをデバッグする](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)  
+[方法 : 構成を作成および編集する](../../ide/how-to-create-and-edit-configurations.md)

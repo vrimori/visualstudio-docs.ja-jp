@@ -10,24 +10,26 @@ ms.topic: article
 helpviewer_keywords:
 - coded UI tests, multiple UI maps
 - coded UI tests, for large applications
+author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-author: gewarren
-ms.openlocfilehash: ca9114dfe601f523878749593a213b36465bd0a7
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.workload:
+- multiple
+ms.openlocfilehash: c2eff9fc8e8aedecb1fd9b99538fa600dbcc5eb1
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="testing-a-large-application-with-multiple-ui-maps"></a>複数の UI マップでの大規模アプリケーションのテスト
+
 このトピックでは、複数の UI マップを使って大規模なアプリケーションをテストする際に、コード化された UI テストを使用する方法を説明します。  
   
  **必要条件**  
   
 -   Visual Studio Enterprise  
   
- 新しいコード化された UI テストを作成すると、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] テスト フレームワークによってテスト用のコードが生成されます。既定では、このコードは <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> クラスに生成されます。 コード化された UI テストを記録する方法の詳細については、「[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)」および「[コード化された UI テストの構造](../test/anatomy-of-a-coded-ui-test.md)」を参照してください。  
+ 新しいコード化された UI テストを作成すると、Visual Studio テスト フレームワークによってテスト用のコードが生成されます。既定では、このコードは <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> クラスに生成されます。 コード化された UI テストを記録する方法の詳細については、「[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md)」および「[コード化された UI テストの構造](../test/anatomy-of-a-coded-ui-test.md)」を参照してください。  
   
  UI マップに対して生成されるコードには、テストで操作する各オブジェクトに対応するクラスが含まれます。 生成されるメソッドごとに、そのメソッドに固有のメソッド パラメーターのコンパニオン クラスが生成されます。 アプリケーションで多数のオブジェクト、ページ、フォーム、およびコントロールが使用されていると、UI マップがかなりの大きさになる場合があります。 また、複数のテスト担当者で作業する場合、単一の大きな UI マップ ファイルでは、アプリケーションを扱いきれなくなります。  
   
@@ -67,24 +69,25 @@ ms.lasthandoff: 01/09/2018
   
 4.  **[追加]** をクリックします。  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ウィンドウが最小化されて、**[コード化された UI テスト ビルダー]** ダイアログ ボックスが表示されます。  
+     Visual Studio ウィンドウが最小化されて、**[コード化された UI テスト ビルダー]** ダイアログ ボックスが表示されます。  
   
 5.  最初のメソッドのアクションを記録して、**[コードの生成]** を選択します。  
   
 6.  最初のコンポーネントまたはページのすべてのアクションおよびアサーションを記録して、メソッド別にグループ化します。この作業が完了したら、**[コード化された UI テスト ビルダー]** ダイアログ ボックスを閉じます。  
   
 7.  UI マップの作成を続けます。 アクションとアサーションを記録し、各コンポーネントのメソッド別にグループ化した後、コードを生成します。  
-  
- 多くの場合、アプリケーションの最上位レベルのウィンドウは、すべてのウィザード、フォーム、ページで共有されます。 各 UI マップに、最上位レベルのウィンドウに対応するクラスがありますが、通常は、いずれのマップも同じ最上位レベルのウィンドウ (アプリケーションの全コンポーネントが実行されるウィンドウ) を参照しているはずです。 コード化された UI テストでは、最上位レベルのウィンドウから下に向かって、階層的にコントロールを検索します。そのため、複雑なアプリケーションでは、実際の最上位レベルのウィンドウが、すべての UI マップで複製される可能性があります。 実際の最上位レベルのウィンドウが複製されていると、そのウィンドウが変更された場合、そのウィンドウが複製されている UI マップごとに変更を繰り返さなければなりません。 したがって、UI マップを切り替えるときにパフォーマンスの問題が発生する可能性があります。  
-  
- この影響を最小限に抑えるには、UI マップの新しい最上位レベルのウィンドウが、メインの最上位レベルのウィンドウと同じになるように、`CopyFrom()` メソッドを使用することができます。  
-  
-## <a name="example"></a>例  
- この例は、さまざまな UI マップで生成されるクラスによって表される各コンポーネントとその子コントロールにアクセスするユーティリティ クラスの一部です。  
-  
- この例の `Contoso` という名前の Web アプリケーションには、ホーム ページ、製品ページ、買い物カゴ ページがあります。 これらのページのそれぞれが、同じ最上位レベルのウィンドウ (ブラウザー ウィンドウ) を共有しています。 ページごとに UI マップがあります。ユーティリティ クラスのコードは以下のようになります。  
-  
-```  
+
+ 多くの場合、アプリケーションの最上位レベルのウィンドウは、すべてのウィザード、フォーム、ページで共有されます。 各 UI マップに、最上位レベルのウィンドウに対応するクラスがありますが、通常は、いずれのマップも同じ最上位レベルのウィンドウ (アプリケーションの全コンポーネントが実行されるウィンドウ) を参照しているはずです。 コード化された UI テストでは、最上位レベルのウィンドウから下に向かって、階層的にコントロールを検索します。そのため、複雑なアプリケーションでは、実際の最上位レベルのウィンドウが、すべての UI マップで複製される可能性があります。 実際の最上位レベルのウィンドウが複製されていると、そのウィンドウが変更された場合、そのウィンドウが複製されている UI マップごとに変更を繰り返さなければなりません。 したがって、UI マップを切り替えるときにパフォーマンスの問題が発生する可能性があります。
+
+ この影響を最小限に抑えるには、UI マップの新しい最上位レベルのウィンドウが、メインの最上位レベルのウィンドウと同じになるように、`CopyFrom()` メソッドを使用することができます。
+
+## <a name="example"></a>例
+
+この例は、さまざまな UI マップで生成されるクラスによって表される各コンポーネントとその子コントロールにアクセスするユーティリティ クラスの一部です。
+
+この例の `Contoso` という名前の Web アプリケーションには、ホーム ページ、製品ページ、買い物カゴ ページがあります。 これらのページのそれぞれが、同じ最上位レベルのウィンドウ (ブラウザー ウィンドウ) を共有しています。 ページごとに UI マップがあります。ユーティリティ クラスのコードは以下のようになります。
+
+```csharp
 using ContosoProject.UIMaps;  
 using ContosoProject.UIMaps.HomePageClasses;  
 using ContosoProject.UIMaps.ProductPageClasses;  
@@ -135,12 +138,13 @@ namespace ContosoProject
     // Continue to create properties for each page, getting the   
     // page object from the corresponding UI Map and copying the   
     // top level window properties from the Home Page.  
-}  
-```  
-  
-## <a name="see-also"></a>参照  
- <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>   
- <xref:Microsoft.VisualStudio.TestTools.UITesting.BrowserWindow.CopyFrom%2A>   
- [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   
- [コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)   
- [コード化された UI テストの構造](../test/anatomy-of-a-coded-ui-test.md)
+}
+```
+
+## <a name="see-also"></a>関連項目
+
+<xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>  
+<xref:Microsoft.VisualStudio.TestTools.UITesting.BrowserWindow.CopyFrom%2A>  
+[UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)  
+[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md)  
+[コード化された UI テストの構造](../test/anatomy-of-a-coded-ui-test.md)

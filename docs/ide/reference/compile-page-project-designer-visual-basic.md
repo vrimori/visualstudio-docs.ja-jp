@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vb.ProjectPropertiesCompile
+f1_keywords:
+- vb.ProjectPropertiesCompile
 helpviewer_keywords:
 - compilation, Visual Basic projects
 - compilation, options [Visual Basic]
@@ -17,16 +19,17 @@ helpviewer_keywords:
 - Project Designer, Compile page
 - Compile page in Project Designer
 ms.assetid: b2a80230-906e-4e85-b3e0-fcd9c40426e1
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 3cd68fa71bf201c7a2ac05fd7881b216cbca0938
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 32a883c1a04dc6ab5189cd5b2e5173406c098f6d
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="compile-page-project-designer-visual-basic"></a>[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)
 プロジェクト デザイナーの **[コンパイル]** ページを使用して、コンパイル命令を指定します。 このページでは、高度なコンパイラ オプションとビルド前またはビルド後のイベントを指定することもできます。  
@@ -39,21 +42,21 @@ ms.lasthandoff: 12/22/2017
  次の設定を使用すると、表示または変更する構成およびプラットフォームを選択できます。  
   
 > [!NOTE]
->  簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。 したがって、**構成**リストと**プラットフォーム** リストは表示されません。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+> 簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。 したがって、**構成**リストと**プラットフォーム** リストは表示されません。
   
  **構成**  
- 表示または変更する構成設定を指定します。 設定は、**[デバッグ]** (既定)、**[リリース]**、または **[すべての構成]** のいずれかになります。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」と「[方法 : 構成を作成および編集する](../../ide/how-to-create-and-edit-configurations.md)」を参照してください。  
+ 表示または変更する構成設定を指定します。 設定は、**[デバッグ]** (既定)、**[リリース]**、または **[すべての構成]** のいずれかになります。 詳細については、「[ビルド構成について](../../ide/understanding-build-configurations.md)」と「[方法 : 構成を作成および編集する](../../ide/how-to-create-and-edit-configurations.md)」を参照してください。
   
  **プラットフォーム**  
- 表示または変更するプラットフォーム設定を指定します。 **[任意の CPU]** (既定)、**[x64]**、または **[x86]** を指定できます。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+ 表示または変更するプラットフォーム設定を指定します。 **[任意の CPU]** (既定)、**[x64]**、または **[x86]** を指定できます。
   
 ## <a name="compiler-configuration-options"></a>コンパイラの構成オプション  
  次の設定を使用すると、コンパイラの構成オプションを設定できます。  
   
  **ビルド出力パス**  
- このプロジェクト構成の出力ファイルの場所を指定します。 このボックスにビルド出力のパスを入力するか、**[参照]** ボタンをクリックしてパスを選択します。 このパスは、相対パスであることに注意してください。絶対パスを入力しても、相対パスとして保存されます。 既定のパスは bin\Debug\ または bin\Release\\ です。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+ このプロジェクト構成の出力ファイルの場所を指定します。 このボックスにビルド出力のパスを入力するか、**[参照]** ボタンをクリックしてパスを選択します。 このパスは、相対パスであることに注意してください。絶対パスを入力しても、相対パスとして保存されます。 既定のパスは bin\Debug\ または bin\Release\\ です。
   
- 簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。 **[デバッグ]** メニューの **[ビルド]** コマンド (F5) を使用すると、指定した **[出力パス]** に関係なく、デバッグ用の場所にビルドが配置されます。 ただし、**[ビルド]** メニューの **[ビルド]** コマンドでは、指定した場所にビルドが配置されます。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+ 簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。 **[デバッグ]** メニューの **[ビルド]** コマンド (F5) を使用すると、指定した **[出力パス]** に関係なく、デバッグ用の場所にビルドが配置されます。 ただし、**[ビルド]** メニューの **[ビルド]** コマンドでは、指定した場所にビルドが配置されます。
   
  **Option Explicit**  
  変数の暗黙的な宣言を許可するかどうかを指定します。 変数の明示的な宣言を要求する場合は **[オン]** を選択します。 これにより、変数が使用される前に宣言されていないと、コンパイラがエラーを報告します。 変数の暗黙的な宣言を許可するには、**[オフ]** を選択します。  
@@ -167,10 +170,9 @@ ms.lasthandoff: 12/22/2017
   
 **詳細コンパイル オプション**  
 このボタンをクリックして、**[コンパイラの詳細設定]** ダイアログ ボックスにアクセスします。 **[コンパイラの詳細設定]** ダイアログ ボックスを使用して、プロジェクトの詳細なビルド構成プロパティを指定します。 このダイアログ ボックスは、Visual Basic プロジェクトにのみ適用されます。 詳細については、「[[ビルドの詳細設定] ダイアログ ボックス (Visual Basic)](../../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)」を参照してください。  
-  
-## <a name="see-also"></a>参照  
- [デバッグ プロジェクト構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)   
- [コンパイル プロパティの管理](http://msdn.microsoft.com/en-us/94308881-f10f-4caf-a729-f1028e596a2c)   
- [方法 : ビルド イベントを指定する (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)   
- [Visual Basic のコマンド ライン コンパイラ](/dotnet/visual-basic/reference/command-line-compiler/index)   
- [方法 : 構成を作成および編集する](../../ide/how-to-create-and-edit-configurations.md)
+
+## <a name="see-also"></a>関連項目
+
+[方法 : ビルド イベントを指定する (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)  
+[Visual Basic のコマンド ライン コンパイラ](/dotnet/visual-basic/reference/command-line-compiler/index)  
+[方法 : 構成を作成および編集する](../../ide/how-to-create-and-edit-configurations.md)

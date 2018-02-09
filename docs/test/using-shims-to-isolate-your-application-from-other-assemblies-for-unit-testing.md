@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: 3a0d2932e4fc14070759906ad27c36f63132559b
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: d9df35f6ace396d1f2859ea7f5a16033c1739b16
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing"></a>shim を使用して単体テストでアプリケーションを他のアセンブリから分離する
 **Shim 型**は、テスト中のコンポーネントを環境から簡単に分離するために Microsoft Fakes Framework が使用する 2 つのテクノロジのうちの 1 つです。 Shim は、特定のメソッドの呼び出しを、テストの一部として作成したコードに迂回させます。 多くのメソッドは、外部の状況に応じて異なる結果を返しますが、shim はテストの制御下にあり、すべての呼び出しで一定の結果を返すことができます。 そのため、テストの記述が非常に簡単になります。  
@@ -414,7 +415,7 @@ public class ShimMyBase : ShimBase<MyBase> {
 ```  
   
 ###  <a name="BKMK_Static_constructors"></a> 静的コンストラクター  
- shim 型は、型の静的コンストラクターに shim を適用するために、静的メソッド `StaticConstructor` を公開します。 静的コンストラクターは 1 回だけ実行されるため、型のいずれかのメンバーがアクセスされる前に shim が構成されることを確認する必要があります。  
+ shim 型は、型の静的コンストラクターに shim を適用するために、静的メソッド `StaticConstructor` を公開します。 静的コンストラクターは 1 回だけ実行されるため、型のいずれかのメンバーがアクセスされる前に shim が構成されるようにする必要があります。  
   
 ###  <a name="BKMK_Finalizers"></a> ファイナライザー  
  ファイナライザーは、Fakes ではサポートされません。  

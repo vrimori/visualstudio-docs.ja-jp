@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,16 +26,17 @@ helpviewer_keywords:
 - resource files, fallback processes
 - user interface, culture setting
 ms.assetid: b0788993-e62d-4f68-8235-5f87b1d48525
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 9acc8f2e015b6ca2ad26881eeb1f53012d96e56d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- dotnet
+ms.openlocfilehash: 20eefe3933767e357d977e2f3a5a0626aa555c39
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="introduction-to-international-applications-based-on-the-net-framework"></a>.NET Framework ベースの国際対応アプリケーションの概要
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] での国際対応アプリケーションの作成は 2 つの部分で構成されています。1 つはグローバリゼーションという、異なるカルチャに対応できるアプリケーションを設計するプロセスで、もう 1 つはローカリゼーションという、特定のカルチャに合わせてリソースを翻訳するプロセスです。 各国のユーザーに向けたアプリケーションの設計に関する一般的な情報については、「[推奨される国際対応アプリケーション開発手順](http://msdn.microsoft.com/Library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c)」を参照してください。  
@@ -47,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
  Windows フォームと Web フォームの両方のプロジェクト システムで、アセンブリ リソース ファイル テンプレートを使用してリソース ファイルをビルドし、リソースにアクセスしてプロジェクトをビルドすることができます。 サテライト アセンブリはメイン アセンブリと共に作成されます。  
   
- ローカライズされたアプリケーションの実行時の外観は 2 つのカルチャ値によって決まります  (*カルチャ*とは、ユーザーの言語、環境、および文化的な慣習に関連する、一連のユーザー設定情報です)。読み込まれるリソースは、UI カルチャ設定によって決まります。 UI カルチャは、Web.config ファイルとページ ディレクティブの `UICulture` として設定され、Visual Basic または Visual C# コードでは <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> として設定されます。 カルチャ設定によって、日付、数値、通貨などの値の形式が決まります。 カルチャは、Web.config ファイルとページ ディレクティブでは `Culture` として設定され、Visual Basic または Visual C# コードでは <xref:System.Globalization.CultureInfo.CurrentCulture%2A> として設定されます。  
+ ローカライズされたアプリケーションの実行時の外観は 2 つのカルチャ値によって決まります  (*カルチャ*とは、ユーザーの言語、環境、および文化的な慣習に関連する、一連のユーザー設定情報です)。読み込まれるリソースは、UI カルチャ設定によって決まります。 UI カルチャは、Web.config ファイルとページ ディレクティブの `UICulture` として設定され、Visual Basic または C# コードでは <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> として設定されます。 カルチャ設定によって、日付、数値、通貨などの値の形式が決まります。 カルチャは、Web.config ファイルとページ ディレクティブでは `Culture` として設定され、Visual Basic または C# コードでは <xref:System.Globalization.CultureInfo.CurrentCulture%2A> として設定されます。  
   
 ## <a name="see-also"></a>参照  
  <xref:System.Globalization>   

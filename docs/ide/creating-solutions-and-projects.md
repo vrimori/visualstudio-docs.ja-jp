@@ -21,11 +21,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: fb9b5119659600b4bfd902e61eda70a85b645efd
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: b92558a7838646ff7cfde88bffd9f709a997137a
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="create-solutions-and-projects"></a>ソリューションとプロジェクトを作成する
 
@@ -82,7 +82,7 @@ ms.lasthandoff: 01/22/2018
 1. ウィザードで、ファイルの場所を参照し、**[名前]** ボックスに新しいプロジェクトの名前を入力します。 完了したら、**[完了]** ボタンを選択します。
 
 > [!NOTE]
-> このオプションは、比較的単純なファイルのコレクションに最適です。 現在のところ、Visual C++、Apache Cordova、Visual Basic、Visual C# がプロジェクトの種類としてサポートされています。
+> このオプションは、比較的単純なファイルのコレクションに最適です。 現在のところ、Visual C++、Apache Cordova、Visual Basic、C# のみがプロジェクトの種類としてサポートされています。
 
 ## <a name="add-files-to-a-solution"></a>ソリューションにファイルを追加する
 

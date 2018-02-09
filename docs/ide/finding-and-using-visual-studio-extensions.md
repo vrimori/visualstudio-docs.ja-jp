@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 06/07/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.ExtensionManager
+f1_keywords:
+- vs.ExtensionManager
 helpviewer_keywords:
 - install extensions
 - install packages
 - managing extensions visual studio
 ms.assetid: 4ca92d93-31b9-47ef-8109-4a429d9e2ca3
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 6ed49a18c7497eefc21a7fe7bfe9d35003863a5e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: beec883c66182b3a840c0052b237c2ba41c5b023
+ms.sourcegitcommit: 062795f922e7b59fe00d3d95a01a9a8a28840017
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="find-and-use-visual-studio-extensions"></a>Visual Studio 拡張機能の検索と使用
 
@@ -31,7 +34,7 @@ Visual Studio 拡張機能は、Visual Studio 内で実行されるコード パ
 **[拡張機能と更新プログラム]** ダイアログ ボックスを使用すると、Visual Studio の拡張機能やサンプルを Web サイトまたは他の場所から入手してインストールし、これらを有効化、無効化、更新、またはアンインストールすることができます。 **[ツール] / [拡張機能と更新プログラム]**を使用するか、 **[クイック起動]** ウィンドウに「 **拡張機能** 」と入力してください。 ダイアログ ボックスには、インストールされているサンプルと拡張機能の更新プログラムも表示されます。 また、Web サイトから拡張機能をダウンロードしたり、他の開発者から入手したりすることもできます。
 
 > [!NOTE]
-> Visual Studio 2015 以降では、Visual Studio Marketplace でホストされている拡張機能が自動的に更新されます。  この設定は、 **[拡張機能と更新プログラム]** ダイアログを使用して変更できます。  詳細については、後述の「 **拡張機能の自動更新** 」を参照してください。
+> Visual Studio 2015 以降では、Visual Studio Marketplace でホストされている拡張機能が自動的に更新されます。 この設定は、 **[拡張機能と更新プログラム]** ダイアログを使用して変更できます。  詳細については、後述の「 **拡張機能の自動更新** 」を参照してください。
 
 ## <a name="finding-visual-studio-extensions"></a>Visual Studio 拡張機能の検索
 
@@ -66,24 +69,26 @@ Visual Studio 拡張機能は、Visual Studio 内で実行されるコード パ
 > [!NOTE]
 > Visual Studio 2015 更新プログラム 2 より、ユーザー単位の拡張機能を自動更新するか、すべてのユーザー拡張機能を更新するか、両方を行うか (初期設定) 指定できます (**[ツール]、[オプション]、[環境]、[拡張機能と更新プログラム]**)。
 
-## <a name="extension-crash-notifications"></a>拡張機能のクラッシュ通知
+## <a name="extension-crashunresponsiveness-notifications"></a>拡張機能のクラッシュ/無応答の通知
 
-Visual Studio 2017 (バージョン 15.3 - プレビュー) では、前回のセッション中に拡張機能がクラッシュした可能性がある場合に通知されます。 Visual Studio がクラッシュすると、例外スタックが保存されます。 Visual Studio を次回起動したときに、リーフからベースの方向にスタックが調査されます Visual Studio で、フレームがインストール済みで有効な拡張機能の一部であるモジュールに属していると判断されると、次のようなメッセージが通知されます。
+**Visual Studio 2017 バージョン 15.3** の新機能では、前回のセッション中に拡張機能がクラッシュした可能性がある場合に通知されます。 Visual Studio がクラッシュすると、例外スタックが保存されます。 Visual Studio を次回起動したときに、リーフからベースの方向にスタックが調査されます Visual Studio で、フレームがインストール済みで有効な拡張機能の一部であるモジュールに属していると判断されると、通知が表示されます。
 
-"A previous session terminated unexpectedly. Disabling extension 'extension_name' might help prevent similar issues." (前のセッションが予期せずに終了しました。拡張機能 '<拡張機能名>' を無効にすると、同様の問題を回避できる可能性があります。)
+**Visual Studio バージョン 15.6 プレビュー 3** の新機能では、拡張機能によって UI が無応答になった可能性がある場合にも通知されます。
 
-この通知は無視することができます。または、次のいずれかの操作を実行することもできます。
+これらの通知が表示された場合、通知を無視するか、次のいずれかの操作を実行することができます。
 
 - **[Disable this extension]\(この拡張機能を無効にする\)** を選択します。 この拡張機能が無効になり、無効にする処理を反映するためにシステムの再起動が必要かどうかが通知されます。 必要に応じて、**[拡張機能と更新プログラム]** ダイアログ ボックスで拡張機能を再び有効にすることができます。
 
-- **[Don’t show again for this extension]\(この拡張機能で今後このメッセージを表示しない\)** を選択します。 IDE でこの拡張機能に関連するクラッシュの通知は表示されなくなりますが、他の拡張機能に関連するクラッシュの通知は表示されます。
+- **[Never show this message again]\(今後このメッセージを表示しない\)** を選択します。 
+  - 通知が前のセッションでのクラッシュに関係している場合、Visual Studio では、この拡張機能に関連するクラッシュが発生したときに、通知が表示されなくなります。 無応答がこの拡張機能に関連する可能性がある場合、または、その他の拡張機能に関連する可能性があるクラッシュまたは無応答の場合、Visual Studio には通知が表示され続けます。 
+  - 通知が無応答に関係している場合、IDE では、この拡張機能が無応答に関連するときに、通知が表示されなくなります。 Visual Studio では、この拡張機能のクラッシュに関連する通知、およびその他の拡張機能のクラッシュおよび無応答に関連する通知は、表示され続けます。 
 
-- **[詳細を表示]** を選択すると、既定のブラウザーにそのヘルプ トピックが表示されます。
+- **[詳細]** を選択してこのページに移動します。
 
-- 通知の最後にある **[X]** ボタンを選択すると、通知は閉じられます。 今後のセッションで同じ拡張機能がクラッシュに関係した場合は、通知が再び表示されます。
+- 通知の最後にある **[X]** ボタンを選択すると、通知は閉じられます。 新しい通知は、クラッシュや UI の無応答に関連している拡張機能の今後のインスタンスに表示されます。
 
 > [!NOTE]
-> クラッシュ通知は、拡張機能のモジュールのいずれかがクラッシュのためにスタックしていることを示しているだけです。 必ずしも、拡張機能自体がクラッシュの原因とは限りません。 拡張機能から Visual Studio の一部であるコードが呼び出され、そのコードがクラッシュの原因である可能性があります。 ただし、クラッシュにつながるシナリオが重要ではない場合でも、通知が有効な場合があります。 この場合、この拡張機能を無効にすると、生産性に影響を与えることなく、今後同じクラッシュが回避されます。
+> UI の無応答やクラッシュの通知は、UI の無応答やクラッシュが発生したときに、拡張機能のモジュールの 1 つのみがスタックに存在したことを意味します。 必ずしも、拡張機能自体が問題の原因とは限りません。 順番に無応答の UI またはクラッシュを発生させる、Visual Studio の一部のコードを拡張機能で呼び出す可能性があります。 ただし、UI の無応答やクラッシュにつながる拡張機能が重要ではない場合でも、通知が有効な場合があります。 この場合、この拡張機能を無効にすると、生産性に影響を与えることなく、今後 UI の無応答やクラッシュが回避されます。 
 
 ## <a name="sample-master-copies-and-working-copies"></a>マスター コピーと作業コピーのサンプル
 

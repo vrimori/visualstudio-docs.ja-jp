@@ -4,32 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: build events, customizing
+helpviewer_keywords:
+- build events, customizing
 ms.assetid: 69e935a5-e208-4bcd-865c-3e5f9b047ca8
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8288ce8d049f949120c5631366dbaac2efc792b5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: ede663f1053f6a3261de542b31b73fc9c8a10bb8
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="specifying-custom-build-events-in-visual-studio"></a>Visual Studio でのカスタム ビルド イベントの指定
 カスタム ビルド イベントを指定することで、ビルドの開始前またはビルドの終了後に自動的にコマンドを実行できます。 たとえば、ビルドの開始前に .bat ファイルを実行したり、ビルドの完了後に新しいファイルをフォルダーにコピーできます。 ビルド イベントは、ビルド プロセスにおいてビルドがこれらのポイントに正常に達する場合にのみ実行します。  
   
  使用するプログラミング言語に関する具体的な情報については、次のトピックを参照してください。  
   
--   Visual Basic-- [方法 : ビルド イベントを指定する (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)。  
+-   Visual Basic-- [方法: ビルド イベントを指定する (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)  
   
--   Visual C# および F# -- [方法: ビルド イベントの指定 (C#)](../ide/how-to-specify-build-events-csharp.md)  
+-   C# および F#-- [方法: ビルド イベントを指定する (C#)](../ide/how-to-specify-build-events-csharp.md)  
   
--   Visual C++ -- [ビルド イベントの指定](/cpp/ide/specifying-build-events)  
+-   Visual C++-- [ビルド イベントの指定](/cpp/ide/specifying-build-events)  
   
 ## <a name="syntax"></a>構文  
  ビルド イベントは、DOS コマンドと同じ構文に従いますが、マクロを使用すると、ビルド イベントをより簡単に作成することができます。 使用可能なマクロの一覧については、「[[ビルド前に実行するコマンド ライン] / [ビルド後に実行するコマンド ライン] ダイアログ ボックス](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)」を参照してください。  

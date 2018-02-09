@@ -4,33 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vb.ProjectPropertiesAdvancedCompile
-helpviewer_keywords: Advanced Compiler Settings dialog box
+f1_keywords:
+- vb.ProjectPropertiesAdvancedCompile
+helpviewer_keywords:
+- Advanced Compiler Settings dialog box
 ms.assetid: 1f81133a-293f-4dba-bc1c-8baafb01d857
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c3dd72236cf23131d510f9d512ea1dcd2a4dd15a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: b2e8661fb7984fd5b04b64211bf209827683ee0a
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="advanced-compiler-settings-dialog-box-visual-basic"></a>[ビルドの詳細設定] ダイアログ ボックス (Visual Basic)
+
 **プロジェクト デザイナー**の **[コンパイラの詳細設定]** ダイアログ ボックスを使用して、プロジェクトの詳細なビルド構成プロパティを指定します。 このダイアログ ボックスは、Visual Basic プロジェクトにのみ適用されます。  
   
-### <a name="to-access-this-dialog-box"></a>このダイアログ ボックスを表示するには  
+### <a name="to-access-this-dialog-box"></a>このダイアログ ボックスを表示するには
   
 1.  **ソリューション エクスプローラー**で、**[ソリューション]** ノードではなくプロジェクト ノードを選びます。  
   
 2.  **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 **プロジェクト デザイナー**が表示されたら、**[コンパイル]** タブをクリックします。  
   
-3.  [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md) で、**[構成]** と **[プラットフォーム]** を選択します。 簡易ビルド構成では、**[構成]** と **[プラットフォーム]** の一覧は表示されません。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+3.  [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md) で、**[構成]** と **[プラットフォーム]** を選択します。 簡易ビルド構成では、**[構成]** と **[プラットフォーム]** の一覧は表示されません。 詳細については、「[方法: デバッグ構成とリリース構成を設定する](../../debugger/how-to-set-debug-and-release-configurations.md)」を参照してください。
   
 4.  **[詳細コンパイル オプション]** をクリックします。  
   
@@ -65,9 +70,11 @@ ms.lasthandoff: 12/22/2017
  **カスタム定数**  
  このテキスト ボックスには、アプリケーションのカスタム定数を入力します。 エントリは、**Name1="Value1",Name2="Value2",Name3="Value3"** の形式を使用して、コンマで区切る必要があります。  
   
-## <a name="other-settings"></a>その他の設定  
+## <a name="other-settings"></a>その他の設定
+
  **シリアル化アセンブリの生成**  
  この設定は、コンパイラが XML シリアル化アセンブリを作成するかどうかを指定します。 コード内で型をシリアル化するために <xref:System.Xml.Serialization.XmlSerializer> クラスを使用している場合は、シリアル化アセンブリによってそのクラスの起動効率を改善できます。 既定では、このオプションは **[自動]** に設定されています。これは、コード内の型を XML にエンコードするために <xref:System.Xml.Serialization.XmlSerializer> を使用している場合にのみシリアル化アセンブリを生成することを指定します。 **[オフ]** は、コードで <xref:System.Xml.Serialization.XmlSerializer> を使用するかどうかに関係なく、シリアル化アセンブリを生成しないことを指定します。 **[オン]** の場合、シリアル化アセンブリが必ず生成されます。 シリアル化アセンブリには、`TypeName`.XmlSerializers.dll のように名前が付けられます。  
-  
-## <a name="see-also"></a>参照  
- [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md)
+
+## <a name="see-also"></a>関連項目
+
+[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md)

@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: 1ca2e83bab05c336f4b4ed37a13271c636b457dc
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 71d7f7e342ecd6d9ca3bff4e04b84352c65c0e17
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>チュートリアル: コード化された UI テストの作成、編集、および保守
 このチュートリアルでは、簡単な Windows Presentation Foundation (WPF) アプリケーションを作成して、コード化された UI テストの作成、編集、および保守を行う方法について説明します。 また、さまざまなタイミングの問題やコントロールのリファクタリングによって機能が損なわれたテストを修正するための解決策を示します。  
@@ -143,7 +144,7 @@ ms.lasthandoff: 01/09/2018
   
      [UIMap - コード化された UI テスト ビルダー] が表示され、Visual Studio ウィンドウは最小化されます。  
   
-     ダイアログ ボックスのオプションの詳細については、「[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)」を参照してください。  
+     ダイアログ ボックスのオプションの詳細については、「[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md)」を参照してください。  
   
 8.  [UIMap - コード化された UI テスト ビルダー] で **[記録の開始]** を選択します。  
   
@@ -368,26 +369,20 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="external-resources"></a>外部リソース  
   
-### <a name="videos"></a>ビデオ  
- ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode1-GettingStarted](http://go.microsoft.com/fwlink/?LinkID=230573)  
+### <a name="videos"></a>ビデオ
+
+![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo") [コード化された UI テストの概要](http://go.microsoft.com/fwlink/?LinkID=230573)  
   
- ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode2-MaintainenceAndDebugging](http://go.microsoft.com/fwlink/?LinkID=230574)  
+![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo") [コード化された UI テストのメンテナンスとデバッグ](http://go.microsoft.com/fwlink/?LinkID=230574)  
   
- ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode3-HandCoding](http://go.microsoft.com/fwlink/?LinkID=230575)  
+![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo") [コード化された UI テストのハード コーディング](http://go.microsoft.com/fwlink/?LinkID=230575)
   
-### <a name="hands-on-lab"></a>ハンズ オン ラボ  
- [MSDN 仮想ラボ: Visual Studio 2010 でのコード化された UI テストの作成の概要](http://go.microsoft.com/fwlink/?LinkID=22508)  
+### <a name="faq"></a>FAQ
+
+[コード化された UI テストの FAQ](https://social.msdn.microsoft.com/Forums/en-US/3a74dd2c-cef8-4923-abbf-7a91f489e6c4/faqs?forum=vsautotest)
   
-### <a name="faq"></a>FAQ  
- [Coded UI Tests FAQ - 1 (コード化された UI テストの FAQ - 1)](http://go.microsoft.com/fwlink/?LinkID=230576)  
-  
- [Coded UI Tests FAQ - 2 (コード化された UI テストの FAQ - 2)](http://go.microsoft.com/fwlink/?LinkID=230578)  
-  
-### <a name="forum"></a>フォーラム  
- [Visual Studio の UI オートメーションのテスト (CodedUI を含む)](http://go.microsoft.com/fwlink/?LinkID=224497)  
-  
-## <a name="see-also"></a>参照  
- [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   
- [WPF デザイナーの使用を開始する](http://msdn.microsoft.com/en-us/18e61d03-b96a-4058-a166-8ec6b3f6116b)   
- [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)   
- [コード化された UI テスト エディターを使用したコード化された UI テストの編集](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)
+## <a name="see-also"></a>関連項目
+
+[UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)  
+[コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)  
+[コード化された UI テスト エディターを使用したコード化された UI テストの編集](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)

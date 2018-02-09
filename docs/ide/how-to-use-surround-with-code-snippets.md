@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Surround-with snippets
 - snippets [C#], using Surround With
 ms.assetid: 23e5288e-7897-417a-9ded-cf60dfc889ee
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b67cf22f38366625d8aa7ff59ad1603a24074882
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: d1cff0a8689635e55caf1e0ad1156fc97aa7bdbd
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-use-surround-with-code-snippets"></a>方法 : surround-with コード スニペットを使用する
 ここでは、surround-with コード スニペットを使用する方法について説明します。 surround-with コード スニペットは 3 つの方法 (キーボード ショートカット、[編集] メニュー、コンテキスト メニュー) で使用できます。  
@@ -60,5 +62,5 @@ ms.lasthandoff: 12/22/2017
      または、コード スニペットの名前を入力し、Tab キーまたは Enter キーを押します。  
   
 ## <a name="see-also"></a>参照  
- [Visual C# のコード スニペット](../ide/visual-csharp-code-snippets.md)   
+ [C# コード スニペット](../ide/visual-csharp-code-snippets.md)   
  [コード スニペット ピッカー](../ide/reference/code-snippet-picker.md)

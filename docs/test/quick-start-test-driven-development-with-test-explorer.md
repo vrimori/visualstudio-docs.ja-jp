@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: 0dce2cfd041b3fe0be3ecd4061e3447190d5e448
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: fb46a6d739e06f980b13cd2b643946b47b6661e3
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="quick-start-test-driven-development-with-test-explorer"></a>クイック スタート: テスト エクスプローラーによるテスト駆動開発
 変更を繰り返して段階的に開発を行ううえで、コードの正しい動作を維持するには、単体テストを作成することをお勧めします。 サード パーティ製を含めていくつかのフレームワークを単体テストの記述に使用できます。 一部のテスト フレームワークは、別々の言語またはプラットフォームでのテストに特化されています。 テスト エクスプローラーは、1 つのインターフェイスで、どのフレームワークでの単体テストにも対応します。 最も一般的に使用されるフレームワーク用にアダプターが用意されており、他のフレームワーク用に独自のアダプターを作成することもできます。  
@@ -147,15 +148,15 @@ ms.lasthandoff: 01/09/2018
   
      ![テストの成功を示す単体テスト エクスプローラー。](../test/media/unittestexplorerwalkthrough3.png "UnitTestExplorerWalkthrough3")  
   
-#### <a name="add-tests-to-extend-the-range-of-inputs"></a>テストを追加して入力の範囲を拡張する  
-  
-1.  あらゆる場合にコードが動作するという信頼性を強化するには、テストを追加して、より広範囲の入力値を試みます。  
-  
+#### <a name="add-tests-to-extend-the-range-of-inputs"></a>テストを追加して入力の範囲を拡張する
+
+1.  あらゆる場合にコードが動作するという信頼性を強化するには、テストを追加して、より広範囲の入力値を試みます。
+
     > [!TIP]
-    >  合格した既存のテストは変更しないでください。 代わりに、新しいテストを追加します。 既存のテストを変更するのは、ユーザー要件が変更されたときのみに限定します。 このポリシーにより、コードを拡張する作業において既存の機能が失われる状況を回避できます。  
-  
-     一定範囲の入力値を試みるために、次のテストをテスト クラスに追加します。  
-  
+    >  合格した既存のテストは変更しないでください。 代わりに、新しいテストを追加します。 既存のテストを変更するのは、ユーザー要件が変更されたときのみに限定します。 このポリシーにより、コードを拡張する作業を行うときに、既存の機能が失われないようにすることができます。
+
+     一定範囲の入力値を試みるために、次のテストをテスト クラスに追加します。
+
     ```csharp  
     [TestMethod]  
     public void RooterValueRange()  

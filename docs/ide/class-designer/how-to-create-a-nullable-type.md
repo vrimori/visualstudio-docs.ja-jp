@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - nullable types, Class Designer
 - Class Designer [Visual Studio], nullable types
 ms.assetid: 84673a89-3f6d-4668-919e-1c0f56182fe5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 17b234a774914e998c228dc780b645864420658d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: fcef9fc80bbc55b07cd9dad68e217c9982a3b1f7
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-create-a-nullable-type-class-designer"></a>方法: Null 許容型を作成する (クラス デザイナー)
 ある種の値の型は、常に値が定義されている (または必要である) とは限りません。 これはデータベースではよくあることであり、一部のフィールドに値が何も割り当てられない場合があります。 たとえば、データベースのフィールドに値がまだ割り当てられていないことを示すために、フィールドに null 値を割り当てることがあります。  
@@ -37,7 +39,7 @@ Null 許容型は、<xref:System.Nullable%601> 構造体のインスタンスで
   
 クラス デザイナーでは、null 許容型はその基になる型と同じように表示されます。  
   
-Visual C# での null 許容型について詳しくは、「[null 許容型](/dotnet/csharp/programming-guide/nullable-types/index)」をご覧ください。 Visual Basic での null 許容型について詳しくは、「[null 許容値型](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types)」をご覧ください。  
+C# での null 許容型について詳しくは、「[null 許容型](/dotnet/csharp/programming-guide/nullable-types/index)」をご覧ください。 Visual Basic での null 許容型について詳しくは、「[null 許容値型](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types)」をご覧ください。  
   
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]  
   

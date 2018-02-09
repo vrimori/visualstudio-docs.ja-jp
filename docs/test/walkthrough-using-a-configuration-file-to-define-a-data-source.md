@@ -11,17 +11,19 @@ helpviewer_keywords:
 - configuration files [Visual Studio ALM], defining data sources
 - unit tests, walkthrough
 - data sources, defining with configuration files
+author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-author: gewarren
-ms.openlocfilehash: 269efd6f66d6430b9fa533c2cfebb6bdf0f78e3d
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.workload:
+- multiple
+ms.openlocfilehash: f36df08f6f750337cdd9c68458aebb92866d0a67
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>チュートリアル : データ ソースを定義するための構成ファイルの使用
+
 このチュートリアルでは、単体テスト用に app.config ファイルで定義されたデータ ソースを使用する方法について説明します。 ここでは、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> クラスで使用できるデータ ソースを定義する app.config ファイルの作成方法を学習します。 このチュートリアルでは、次のタスクについて説明します。  
   
 -   app.Config ファイルを作成する。  
@@ -35,7 +37,7 @@ ms.lasthandoff: 01/09/2018
 -   <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> クラスを使用してデータ ソースにアクセスする。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルを完了するための要件を次に示します。  
+ このチュートリアルを完了するには、次の条件が必要です。  
   
 -   Visual Studio Enterprise  
   
@@ -148,20 +150,20 @@ ms.lasthandoff: 01/09/2018
 |`dataTableName`|`"Sheet1$"`|  
 |`dataAccessMethod`|`"Sequential"`|  
   
- `microsoft.visualstudio.testtools` 要素は次のようになります。  
-  
-```  
+`microsoft.visualstudio.testtools` 要素は次のようになります。
+
+```xml
 <microsoft.visualstudio.testtools>  
     <dataSources>  
         <add name="MyJetDataSource" connectionString="MyJetConn" dataTableName="MyDataTable" dataAccessMethod="Sequential"/>  
         <add name="MyExcelDataSource" connectionString="MyExcelConn" dataTableName="Sheet1$" dataAccessMethod="Sequential"/>  
     </dataSources>  
 </microsoft.visualstudio.testtools>  
-```  
-  
- 最終的な app.config ファイルは次のようになります。  
-  
-```  
+```
+
+最終的な app.config ファイルは次のようになります。
+
+```xml
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
     <configSections>  
@@ -217,13 +219,11 @@ ms.lasthandoff: 01/09/2018
   
 #### <a name="to-create-a-unit-test-using-the-appconfig-data-sources"></a>app.config のデータ ソースを使用して単体テストを作成するには  
   
-1.  単体テストをテスト プロジェクトに追加します。  
-  
-     詳細については、「[既存コードに対する単体テストの作成と実行](http://msdn.microsoft.com/en-us/e8370b93-085b-41c9-8dec-655bd886f173)」を参照してください。  
+1.  単体テストをテスト プロジェクトに追加します。
   
 2.  自動生成された単体テストの内容を次のコードに置き換えます。  
   
-    ```  
+    ```csharp
     using System;  
     using Microsoft.VisualStudio.TestTools.UnitTesting;  
   
@@ -264,12 +264,11 @@ ms.lasthandoff: 01/09/2018
 3.  DataSource 属性を確認します。 app.config ファイルの設定名に注意してください。  
   
 4.  ソリューションをビルドして、MyTestMethod テストと MyTestMethod2 テストを実行します。  
-  
+
 > [!IMPORTANT]
->  データ ソースなどの項目を、配置ディレクトリのテストからアクセスできるように配置します。  
-  
+> データ ソースなどの項目を、配置ディレクトリのテストからアクセスできるように配置します。
+
 ## <a name="see-also"></a>参照
 
 [コードの単体テスト](../test/unit-test-your-code.md)  
-[既存コードに対する単体テストの作成と実行](http://msdn.microsoft.com/en-us/e8370b93-085b-41c9-8dec-655bd886f173)  
 [方法: データドリブン単体テストを作成する](../test/how-to-create-a-data-driven-unit-test.md)

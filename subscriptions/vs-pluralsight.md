@@ -1,52 +1,65 @@
 ---
-title: "Pluralsight の特典をアクティブ化する"
+title: "Visual Studio サブスクリプションの Pluralsight 特典 | Microsoft Docs"
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
-Ms.date: 11/15/2017
+Ms.date: 1/4/2018
 Ms.topic: Get-Started-Article
-Description: Learn how to get started using the Pluralsight training subscription included with your Visual Studio subscription.
+Description: Learn about the Pluralsight training subscription included with your Visual Studio subscription.
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: e61245ec1063ed53d4e235ec5e4567bb33c670e8
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: 118fa74608bc0a36c8ce0a6941915fec535aad84
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="activating-the-pluralsight-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Pluralsight トレーニング特典をアクティブ化する
+# <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Pluralsight トレーニング特典
+## <a name="overview"></a>概要
+エキスパートが作成したコース、ラーニング パス、適応スキルの測定方法などを利用してスキルを向上させましょう。  どの Visual Studio サブスクリプションまたはプログラムのメンバーシップがあるかに応じて、最大 6 か月間無料で無制限に Pluralsight カタログ全体にアクセスする権利が得られる場合があります。 
 
-エキスパートが作成したコース、ラーニング パス、適応スキルの測定方法などを利用してスキルを向上させましょう。
+次の表では、Visual Studio サブスクリプションの種類ごとにどのような Pluralsight サブスクリプションの特典を利用できるかについて詳しく説明します。  一部のサブスクライバーは、全カタログへのアクセス サブスクリプションの有効期限が切れた後、制限されたコースを利用することもできます。 Pluralsight は、全カタログのサブスクリプションの有効期限が切れた場合のそのプロセスをガイドします。 
 
-## <a name="eligibility"></a>特典を受ける条件
-Visual Studio サブスクリプションには、お持ちの Visual Studio サブスクリプションに応じて、3 か月間または 6 か月間のコースの Pluralsight の全カタログへの無制限アクセスが含まれます。  一部のサブスクライバーは、全カタログへのアクセス サブスクリプションの有効期限が切れた後、制限されたコースを利用することもできます。  Pluralsight は、全カタログのサブスクリプションの有効期限が切れた場合のそのプロセスをガイドします。  
+ 所有しているサブスクリプションの種類によっては、以前に Visual Studio サブスクリプションを通じて提供された Pluralsight サブスクリプションを使用していたすべてのサブスクライバーが新しい Pluralsight 特典プランを利用できるわけではありません。 追加の Pluralsight トレーニング特典を引き換える権利がない場合、Pluralsight web サイトで特典をアクティブ化しようとしたときに通知が表示されます。  
 
-| サブスクリプション                                                     | 全カタログへのアクセス  | カタログの使用制限 |
-|------------------------------------------------------------------|----------------------|-------------------------------|
-| Visual Studio Enterprise の標準サブスクリプションと年間クラウド サブスクリプション   | 6 か月間のサブスクリプション |           12 か月           |
-| Visual Studio Professional の標準サブスクリプションおよび年間クラウド サブスクリプション | 3 か月間のサブスクリプション |           12 か月           |
-| Visual Studio Test Professional                                  | 3 か月間のサブスクリプション |           12 か月           |
-| MSDN Platforms                                                   | 3 か月間のサブスクリプション |           12 か月           |
-| Visual Studio Dev Essentials                                     | 3 か月間のサブスクリプション |         使用できません         | 
+### <a name="eligibility"></a>特典を受ける条件
+| サブスクリプション レベル/プログラム                                 | 特長               | 更新可能かどうか                                                         |
+|--------------------------------------------------------------|-----------------------|--------------------------------------------------------------------|
+| Visual Studio Enterprise Standard                            | 6 か月間のサブスクリプション | いいえ。  期限切れ後 12 か月間の制限されたカタログ使用。 |
+| Visual Studio Enterprise - 年間プラン                              | 6 か月間のサブスクリプション | いいえ。  期限切れ後 12 か月間の制限されたカタログ使用。 |
+| Visual Studio Enterprise - 月間プラン                             | 使用できません         |                                                                    |
+| Visual Studio Professional Standard                          | 3 か月間のサブスクリプション | いいえ。  期限切れ後 12 か月間の制限されたカタログ使用。 |
+| Visual Studio Professional - 年間プラン                            | 3 か月間のサブスクリプション | いいえ。  期限切れ後 12 か月間の制限されたカタログ使用。 |
+| Visual Studio Professional - 月間プラン                           | 使用できません         |                                                                    |
+| Visual Studio Test Pro                                       | 3 か月間のサブスクリプション | いいえ。  期限切れ後 12 か月間の制限されたカタログ使用。 |
+| MSDN Platforms                                               | 3 か月間のサブスクリプション | いいえ。  期限切れ後 12 か月間の制限されたカタログ使用。 |
+| Visual Studio Dev Essentials                                 | 3 か月間のサブスクリプション | いいえ。                                                                |
+| Visual Studio Enterprise - NFR<sup>1</sup>                               | 使用できません         |                                                                    |
+| Visual Studio Enterprise - FTE                               | 使用できません         |                                                                    |
+| Visual Studio Enterprise - MPN                               | 使用できません         |                                                                    |
+| Visual Studio Professional - MPN                             | 使用できません         |                                                                    |
+| Visual Studio Enterprise - MVP/RD                            | 使用できません         |                                                                    |
+| Visual Studio Enterprise – Imagine (Standard)                | 使用できません         |                                                                    |
+| Visual Studio Enterprise – Imagine (Premium)                 | 使用できません         |                                                                    |
+| Visual Studio Enterprise – BizSpark                          | 使用できません         |                                                                    |
+| Visual Studio Enterprise – MCT Software & Services           | 使用できません         |                                                                    |
+| Visual Studio Enterprise – MCT Software & Services Developer | 使用できません         |                                                                    |
+<sup>1</sup>  *Not for Resale (NFR)、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP) が含まれます。*  
+
+どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、電子メール アドレスに割り当てられているすべてのサブスクリプションを表示します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
  
-(Visual Studio Enterprise と Visual Studio Professional のすべてのサブスクリプションに Pluralsight 特典が含まれるわけではありません。  NFR、FTE、MPN、MCT、BizSpark、Imagine サブスクリプションには、Pluralsight へのアクセス権は含まれません。)
 
 
- **重要:** Pluralsight 特典タイルの [コードを取得] リンクをクリックすると、次のような内容のメッセージが表示される可能性があります。 
- 
- **"注: 以前に Visual Studio サブスクリプションで別の Pluralsight プランをアクティブにした場合は、このコードで新しい Pluralsight アカウントを作成できない可能性があります。"**
-
- 所有しているサブスクリプションの種類によっては、以前に Visual Studio サブスクリプションを通じて提供された Pluralsight サブスクリプションを使用していたすべてのサブスクライバーが新しい Pluralsight 特典プランを利用できるわけではありません。   
-
- 
-
-
-## <a name="activating-your-subscription"></a>サブスクリプションのアクティブ化
-
-1. サブスクリプションをアクティブ化するには、Pluralsight 特典タイルの **[コードを取得]** リンクをクリックします。
+## <a name="activation-steps"></a>アクティブ化の手順
+1. サブスクリプションをアクティブ化するには、[https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) に接続し、[専門能力開発] セクションにある Pluralsight 特典タイトルの **[コードを取得]** リンクをクリックします。 
 
     ![Pluralsight 特典タイル](_img\vs-pluralsight\vs-pluralsight-3month-tile.png)
+
+> [!IMPORTANT]
+> Pluralsight 特典タイルの [コードを取得] リンクをクリックすると、次のような内容のメッセージが表示される可能性があります。
+>
+> **"注: 以前に Visual Studio サブスクリプションで別の Pluralsight プランをアクティブにした場合は、このコードで新しい Pluralsight アカウントを作成できない可能性があります。"**
 
 2. クーポン コードが正常に取得された通知を受け取ります。  **[アクティブ化]** をクリックします。   
 
@@ -69,9 +82,8 @@ Visual Studio サブスクリプションには、お持ちの Visual Studio サ
 
     ![Pluralsight 特典の確認](_img\vs-pluralsight\vs-pluralsight-confirmation-vse.png)
 
-
-**注:**  ご利用のアカウントに新しいプランを利用する資格がない場合、アカウントに資格がないため、作成中に問題が発生したことが受信メールで説明されます。  また、アカウントに関する質問に回答できる Pluralsight のサポート チームへの連絡先情報も含まれます。 
-
+> [!NOTE]
+> ご利用のアカウントに新しいプランを利用する資格がない場合、アカウントに資格がないため、作成中に問題が発生したことが受信メールで説明されます。  また、アカウントに関する質問に回答できる Pluralsight のサポート チームへの連絡先情報も含まれます。
 
 6.  アカウントが正常に作成されている場合は、受信メールにユーザー名が含まれ、パスワードを作成するよう求められます。  パスワードを入力し、確認のためもう一度入力して **[Log in to Pluralsight]\(Pluralsight にログイン\)** をクリックします。
 
@@ -85,10 +97,16 @@ Visual Studio サブスクリプションには、お持ちの Visual Studio サ
 
     ![Pluralsight 特典のホーム](_img\vs-pluralsight\vs-pluralsight-home.png)
 
+## <a name="faq"></a>FAQ
+### <a name="q-i-have-a-visual-studio-enterprise-subscription-but-i-dont-see-the-pluralsight-tile-on-the-benefits-page-whats-wrong"></a>Q: Visual Studio Enterprise サブスクリプションを持っていますが、特典ページに Pluralsight タイルが表示されません。 理由 
+A: すべての Visual Studio Enterprise サブスクリプションに Pluralsight 特典が含まれるわけではありません。  [サブスクリプションの表](#eligibility)で、サブスクリプションが対象であるかどうかを参照してください。
 
+### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>Q: Pluralsight サブスクリプションがなくなるとどうなりますか。  
+A: 無料の Pluralsight サブスクリプションの終了時には、2 つのオプションがあります。
+1. 使用している Visual Studio サブスクリプションに応じて、その後 12 か月間制限されたコースを利用できる場合があります。  [サブスクリプションの表](#eligibility)で、サブスクリプションが対象であるかどうかを参照してください。
+2. Pluralsight から直接サブスクリプションを購入することを選択できます。  詳細については、[Pluralsight](http://www.pluralsight.com) にお問い合わせください。  
 
-
-
-
-
-
+## <a name="support-resources"></a>サポート リソース
+-  [Pluralsight ヘルプ センター](https://help.pluralsight.com/help)は、Pluralsight コースの取得や Pluralsight Web サイトの使用をサポートします。 
+-  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)にお問い合わせください。
+-  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://www.visualstudio.com/support/)にアクセスしてください。 

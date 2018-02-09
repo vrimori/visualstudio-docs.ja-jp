@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +14,17 @@ helpviewer_keywords:
 - Web applications, accessibility
 - accessibility, Web applications
 ms.assetid: 426bf023-bb34-43c4-9edb-c307191c8170
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 789eafd7bc7137026bb6c144615f1234f7288f29
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 6df23292ef3ae5016d2ddd48f0ced93e3a577a2f
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="resources-for-designing-accessible-applications"></a>ユーザー補助アプリケーションのデザイン リソース
 ユーザー補助 Windows アプリケーションおよび Web サイトを開発するためのヒントと例、およびユーザー補助設計をサポートする技術については、以下のリンク先を参照してください。 ユーザー補助についての一般的な情報は、Web サイト [http://www.microsoft.com/enable/](http://www.microsoft.com/enable/) にあります。  
@@ -33,7 +35,7 @@ ms.lasthandoff: 12/22/2017
   
 -   **Microsoft .NET Speech 技術** Microsoft .NET Speech SDK は、Microsoft [!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)] コントロール、Microsoft Internet Explorer Speech アドイン、サンプル アプリケーション、およびドキュメントを 1 つにしたセットであり、Web 開発者はこの SDK を使って、音声対応の [!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)] アプリケーションを作成、デバッグ、および配置できます。 各ツールはシームレスに Microsoft Visual Studio と統合されるため、開発者は使い慣れた環境で開発を行うことができます。 詳細については、[http://msdn.microsoft.com/library/ms950383.aspx](http://msdn.microsoft.com/library/ms950383.aspx) を参照してください。  
   
--   **SAMI 1.0 の理解** Microsoft SAMI (Synchronized Accessible Media Interchange) テクノロジを利用すると、開発者は PC マルチメディアの音声コンテンツにキャプションを付けることができます。 詳細については、[http://msdn.microsoft.com/en-us/library/ms971327.aspx](http://msdn.microsoft.com/library/ms971327.aspx) を参照してください。  
+-   **SAMI 1.0 の理解** Microsoft SAMI (Synchronized Accessible Media Interchange) テクノロジを利用すると、開発者は PC マルチメディアの音声コンテンツにキャプションを付けることができます。 詳細については、「[SAMI 1.0 の理解](http://msdn.microsoft.com/library/ms971327.aspx)」を参照してください。  
   
 ## <a name="windows-applications"></a>Windows アプリケーション  
   
@@ -45,13 +47,9 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="web-sites"></a>Web サイト  
   
--   [チュートリアル: Image コントロール、Menu コントロール、AutoPostBack を使用する際のユーザー補助のガイドライン](http://msdn.microsoft.com/Library/ff7b5021-48b3-46bf-921f-9fe1e0e32202) このトピックでは、Web 用のユーザー補助設計のヒントに加え、ユーザー補助コントロールをサンプル Web ページに含めるための手順を順番に説明します。  
+-   [チュートリアル: Image コントロール、Menu コントロール、AutoPostBack を使用する際のユーザー補助のガイドライン](http://msdn.microsoft.com/Library/ff7b5021-48b3-46bf-921f-9fe1e0e32202) このトピックでは、Web 用のユーザー補助設計のヒントに加え、ユーザー補助コントロールをサンプル Web ページに含めるための手順を順番に説明します。
   
--   **Web ページのユーザー補助機能の強化** この技術情報では、ユーザー補助機能を持つ HTML 3.2 の要素が一覧にしてあります。また、Web サイトの開発で使用してユーザー補助機能を強化するための要素も示しています。 詳細については、[http://msdn2.microsoft.com/en-us/library/ms971309.aspx](http://msdn2.microsoft.com/library/ms971309.aspx) を参照してください。  
-  
--   **ユーザー補助機能を持つ Web ページを DHTML を使って作成** この技術情報には、ユーザー補助機能を持つ HTML 4.0 要素およびユーザー補助機能を持つ Web 設計のヒントが一覧にしてあります。 詳細については、[http://msdn2.microsoft.com/library/ms528445.aspx](http://msdn2.microsoft.com/library/ms528445.aspx) を参照してください。  
-  
--   **ユーザー補助機能を持たない Web ページの代替テキスト** この技術情報では、XML および XSLT を使用して、テキストのみのバージョンなど、同じ Web ページを複数の形式で表示する方法について説明しています。 詳細については、[http://msdn2.microsoft.com/library/aa468593.aspx](http://msdn2.microsoft.com/library/aa468593.aspx) を参照してください。  
+-   **ユーザー補助機能を持つ Web ページを DHTML を使って作成** この技術情報には、ユーザー補助機能を持つ HTML 4.0 要素およびユーザー補助機能を持つ Web 設計のヒントが一覧にしてあります。 詳細については、[http://msdn2.microsoft.com/library/ms528445.aspx](http://msdn2.microsoft.com/library/ms528445.aspx) を参照してください。
   
 ### <a name="third-party-resources"></a>サードパーティのリソース  
   

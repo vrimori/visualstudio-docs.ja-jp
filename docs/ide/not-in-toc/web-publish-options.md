@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 03/09/2017
 ms.reviewer: riande
 ms.suite: 
-ms.technology: vs-ide-deployment
+ms.technology:
+- vs-ide-deployment
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ASP.NET, web applications, deployment, publishing
+helpviewer_keywords:
+- ASP.NET, web applications, deployment, publishing
 ms.assetid: 3A13F685-531C-457D-A98E-631888011E4B
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: Mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 10cb0ca2d5190ce73f0fd67da5b1f795d5aa8dd1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 428dc6346fa39b3939b478d0d2c887b99024dc81
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # 状況に適した発行オプション
 
@@ -31,26 +34,22 @@ Visual Studio 内から、次のターゲットに Web アプリケーション�
 
 **[発行]** タブでは、既存の発行プロファイルを選んだり、既存の発行プロファイルをインポートしたり、ここで説明するオプションを使って新しい発行プロファイルを作成したりできます。
 
-## Azure App Service
+## Azure App Service Web Apps
 
-[Azure App Service](https://azure.microsoft.com/documentation/articles/app-service-value-prop-what-is/) では、拡張性のあるさまざまな Web アプリケーションとサービスをすばやく作成でき、インフラストラクチャを保守する必要はありません。
+[Azure App Service Web Apps](/azure/app-service/app-service-web-overview) (または Web Apps) では、インフラストラクチャを保守せずに、スケーラブルでバラエティに富んだ Web アプリケーションやサービスをすばやく作成できます。
 
-Web アプリケーションの場合は特に、App Service は [*Web アプリ*](https://azure.microsoft.com/en-us/documentation/articles/app-service-web-overview/)のコンテナーであり、従来の Web ホストとして考えるものとよく一致します。 つまり、Web アプリは、サーバー側コードを実行してインターネットで利用可能にできるようにするために必要な、コンピューティング リソースを提供します。
-
-App Service の[価格レベルまたはプラン](https://azure.microsoft.com/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/)を選ぶことで、Web アプリが備えるコンピューティング能力を決定します。 また、価格レベルを変更することなく、複数の Web アプリ (および他の種類のアプリ) で同じ App Service を共有することもできます。 たとえば、開発、ステージング、運用の Web アプリを同じ App Service でホストすることができます。
+App Service の[価格レベルまたはプラン](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)を選ぶことで、Web アプリが備えるコンピューティング能力を決定します。 また、価格レベルを変更することなく、複数の Web アプリ (および他の種類のアプリ) で同じ App Service を共有することもできます。 たとえば、開発、ステージング、運用の Web アプリを同じ App Service でホストすることができます。
 
 App Service は Azure のクラウドでホストされる仮想マシン上で実行されますが、これらの仮想マシンはユーザーが管理します。 App Service の各 Web アプリには、\*.azurewebsites.net という一意の URL が割り当てられます。Free 以外のすべての価格レベルでは、カスタム ドメイン名をサイトに割り当てることもできます。
 
-### Azure App Service を選ぶ状況
+### Azure App Service Web Apps を選ぶ状況
 
 - インターネット経由でアクセスできる Web アプリケーションをデプロイしたい。
 - 再デプロイする必要なしに、需要に応じて Web アプリケーションを自動的に拡張したい。
 - サーバーのインフラストラクチャを管理したくない (すべてのソフトウェアの更新を含む)。
 - Web アプリケーションをホストするサーバーで、コンピューター レベルのカスタマイズを行う必要がない。
 
-
 > 自社のデータセンターまたは他のオンプレミス コンピューターで Azure App Service を使いたい場合は、[Azure Stack](https://azure.microsoft.com/overview/azure-stack/) を使って行うことができます。
-
 
 ## Azure Virtual Machines
 

@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル : Visual C# または Visual Basic による簡単なアプリケーションの作成 | Microsoft Docs"
+title: "チュートリアル: C# または Visual Basic による簡単なアプリケーションの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/03/2017
 ms.reviewer: 
@@ -11,18 +11,19 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: f84339c7-d617-4f56-bfcd-af2215c347ba
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 3490d9d4f88bbcc104132e35c3f86d3fe75622b5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- dotnet
+ms.openlocfilehash: b33816e074cf63826c931bcda0978ebdb5bb8bbe
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="walkthrough-create-a-simple-application-with-visual-c-or-visual-basic"></a>チュートリアル : Visual C# または Visual Basic による簡単なアプリケーションの作成
+# <a name="walkthrough-create-a-simple-application-with-c-or-visual-basic"></a>チュートリアル: C# または Visual Basic による簡単なアプリケーションの作成
 このチュートリアルを完了すると、Visual Studio を使用してアプリケーションを開発する際に使用できるさまざまなツール、ダイアログ ボックス、およびデザイナーの使用方法を習得できます。 簡単な "Hello, World" アプリケーションの作成、UI の設計、コードの追加、エラーのデバッグを行いながら、統合開発環境 (IDE) での作業方法について学習します。
   
 ##  <a name="BKMK_ConfigureIDE"></a> IDE の構成  

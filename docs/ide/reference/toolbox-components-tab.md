@@ -4,24 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Toolbox, Components tab
-ms.assetid: 332fafab-a763-4244-b388-15d1b5b5cc04
-caps.latest.revision: "14"
+helpviewer_keywords:
+- Toolbox, Components tab
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 1ee4b614d677d260de42315095cdd3d25545419a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: cf0ab13b104422771b117c17ed3ff89b53fa461f
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="toolbox-components-tab"></a>ツールボックス、[コンポーネント] タブ
-[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] および [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] のデザイナーに追加できるコンポーネントを表示します。 <xref:System.Messaging.MessageQueue> コンポーネントや <xref:System.Diagnostics.EventLog> コンポーネントなど、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] に含まれている [!INCLUDE[dnprdnshort](../../code-quality/includes/dnprdnshort_md.md)] コンポーネントに加え、独自のコンポーネントまたはサード パーティ製のコンポーネントをこのタブに追加できます。詳細については、「[How to: Manipulate Toolbox Tabs](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db)」 (方法: [ツールボックス] タブの操作) を参照してください。  
+
+Visual Basic および C# のデザイナーに追加できるコンポーネントを表示します。 <xref:System.Messaging.MessageQueue> コンポーネントや <xref:System.Diagnostics.EventLog> コンポーネントなど、Visual Studio に含まれている .NET Framework コンポーネントに加え、独自のコンポーネントまたはサード パーティ製のコンポーネントをこのタブに追加できます。
   
  このタブを表示するには、**[表示]** メニューで **[ツールボックス]** を選択します。 **ツールボックス**で、**[コンポーネント]** タブをクリックします。  
   

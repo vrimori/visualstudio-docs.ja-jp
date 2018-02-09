@@ -1,36 +1,57 @@
 ---
-title: "今日データ サイエンスのスキルを強化するには、Visual Studio サブスクリプションの DataCamp 特典をアクティブ化します。"
+title: "今日データ サイエンスのスキルを強化するには、選択した Visual Studio サブスクリプションの DataCamp 特典を使用します。 | Microsoft Docs"
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
-Ms.date: 11/15/2017
+Ms.date: 1/12/20108
 Ms.topic: Get-Started-Article
-Description: Learn how to get started using the DataCamp training subscription included with your Visual Studio subscription.
+Description: Learn about the DataCamp training subscription included with selected Visual Studio subscriptions.
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 5519f1984392c8c816b548892763498e154f30e8
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: 9ca8cc7d70b7078366d136618ac523c9133490fb
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="activating-the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの DataCamp トレーニング特典をアクティブ化する
+# <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの DataCamp トレーニング特典
 
+## <a name="overview"></a>概要
 有効な Visual Studio サブスクリプションには、DataCamp へのサブスクリプションが含まれます。  DataCamp を使用すると、必要なすべてのデータ サイエンスのスキルを使い慣れたブラウザーから学習できます。 いつ、どのような内容を学習するかを選択します。 ソフトウェアのインストールも特殊なハードウェアも必要ないので、これまでよりも簡単にデータ サイエンスを学習できます。
 
 DataCamp 特典の有効期間は、Visual Studio サブスクリプションによって異なります。
-| サブスクリプション                                                     | DataCamp 特典              |
-|------------------------------------------------------------------|----------------------|
-| Visual Studio Enterprise の標準サブスクリプションと年間クラウド サブスクリプション   | 3 か月間のサブスクリプション |
-| Visual Studio Professional の標準サブスクリプションおよび年間クラウド サブスクリプション | 3 か月間のサブスクリプション |
-| Visual Studio Dev Essentials                                     | 2 か月間のサブスクリプション |
 
-**注:** Visual Studio サブスクリプションに含まれている DataCamp 特典は、新しい DataCamp サブスクライバーのみで使用できます。 
+## <a name="eligibility"></a>特典を受ける条件
+| サブスクリプション レベル/プログラム                                                  | 特長               | 更新可能かどうか                                                         |
+|-------------------------------------------------------------------------------|-----------------------|--------------------------------------------------------------------|
+| Visual Studio Enterprise Standard                                             | 3 か月              |  いいえ。 新しいサブスクライバーのみが使用できます。                            |
+| Visual Studio Enterprise - 年間プラン                                               | 3 か月              |  いいえ。 新しいサブスクライバーのみが使用できます。                            |
+| Visual Studio Enterprise - 月間プラン                                              | 使用できません         |                                                                    |
+| Visual Studio Professional Standard                                           | 3 か月              |  いいえ。 新しいサブスクライバーのみが使用できます。                            |
+| Visual Studio Professional - 年間プラン                                             | 3 か月              |  いいえ。 新しいサブスクライバーのみが使用できます。                            | 
+| Visual Studio Professional - 月間プラン                                            | 使用できません         |                                                                    |
+| Visual Studio Test Pro                                                        | 3 か月              |  いいえ。 新しいサブスクライバーのみが使用できます。                            |
+| MSDN Platforms                                                                | 3 か月              |  いいえ。 新しいサブスクライバーのみが使用できます。                            |
+| Visual Studio Dev Essentials                                                  | 2 か月              |  いいえ。 新しいサブスクライバーのみが使用できます。                            |
+| Visual Studio Enterprise - NFR<sup>1</sup>                                               | 使用できません         |                                                                    |
+| Visual Studio Enterprise - FTE                                                | 使用できません         |                                                                    |
+| Visual Studio Enterprise - Microsoft Partner Network                          | 使用できません         |                                                                    |
+| Visual Studio Professional - Microsoft Partner Network                        | 使用できません         |                                                                    |
+| Visual Studio Enterprise – Imagine (Standard)                                 | 使用できません         |                                                                    |
+| Visual Studio Enterprise – Imagine (Premium)                                  | 使用できません         |                                                                    |
+| Visual Studio Enterprise – BizSpark                                           | 使用できません         |                                                                    |
+| マイクロソフト認定トレーナー - Software & Services                             | 使用できません         |                                                                    |
+| マイクロソフト認定トレーナー - Software & Services Developer                   | 使用できません         |                                                                    |
 
-## <a name="activating-your-datacamp-subscription-is-fast-and-easy"></a>DataCamp サブスクリプションのアクティブ化は、時間をかけずに簡単にできます。  
+<sup>1</sup>  *Not for Resale (NFR)、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP) が含まれます。*  
 
-1. [https://my.visualstudio.com](https://my.visualstudio.com) にサインインします。
+どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、電子メール アドレスに割り当てられているすべてのサブスクリプションを表示します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
+
+
+## <a name="activation-steps"></a>アクティブ化の手順  
+
+1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 
 2. "専門能力開発" カテゴリで DataCamp 特典タイルを見つけて、**[アクティブ化]** をクリックします。
 
@@ -40,17 +61,17 @@ DataCamp 特典の有効期間は、Visual Studio サブスクリプションに
 
     ![DataCamp: 新しいアカウントの作成](_img\vs-datacamp\vs-datacamp-create-account.png)
 
-**注:**  アカウントの作成を開始すると、"問題が発生しました。ご利用のプロモーション コードが無効であるか、  有効期限が切れています" という内容のエラー メッセージが表示される場合があります。
-これは、作成されたプロモーション コードの有効期限が数分後に切れた場合に発生します。  このメッセージが表示された場合は、[[特典]](https://my.visualstudio.com/benefits) ページに戻り、DataCamp 特典タイルの **[アクティブ化]** リンクをクリックするだけです。  
+> [!NOTE]
+> アカウントの作成を開始すると、"問題が発生しました。ご利用のプロモーション コードが無効であるか、  有効期限が切れています" という内容のエラー メッセージが表示される場合があります。  これは、作成されたプロモーション コードの有効期限が数分後に切れた場合に発生します。  このメッセージが表示された場合は、[[特典]](https://my.visualstudio.com/benefits) ページに戻り、DataCamp 特典タイルの **[アクティブ化]** リンクをクリックするだけです。  
 
 4. アカウントが作成されたら、ラーニング パスを選択できます。  次のオプションがあります。
     - データ サイエンス用の Learning R
     - データ サイエンス用の Learning Python を開始する
     - データ サイエンス スキルセットを開発する
 
-    開始するには、選択したパスをクリックするだけです。 
+開始するには、選択したパスをクリックするだけです。 
 
-![DataCamp: パスの選択](_img\vs-datacamp\vs-datacamp-choose-path.png)
+   ![DataCamp: パスの選択](_img\vs-datacamp\vs-datacamp-choose-path.png)
 
 5. 目的のパスを選択したら、目標を選択して、ラーニング パスを絞り込むことができます。  たとえば、"データ サイエンス スキルセットを開発する" パスを選択すると、次のオプションが表示されます。 オプションを選択するか、**[I am not sure.Show me all career paths]\(わかりません。すべてのキャリア パスを表示してください\)** をクリックしてより広範なパスを作成します。 
 
@@ -65,7 +86,14 @@ DataCamp 特典の有効期間は、Visual Studio サブスクリプションに
 
     ![DataCamp: 開始](_img\vs-datacamp\vs-datacamp-getting-started.png)
 
-任意のポイントで停止し、次のセッションでトレーニングを再開できます。  [http://www.datacamp.com](http://www.datacamp.com) にアクセスし、サインインします。  ダッシュ ボードが表示され、一時停止した箇所からトレーニングを再開できます。 **[Continue Track]\(トラックを続行\)** をクリックします。
+任意のポイントで停止し、次のセッションでトレーニングを再開できます。  [http://www.datacamp.com](http://www.datacamp.com) にアクセスし、サインインします。  ダッシュ ボードが表示され、一時停止した箇所からトレーニングを再開できます。 **[Continue Track]\(トラックを続行\)** をクリックします。![DataCamp: トレーニングの続行](_img\vs-datacamp\vs-datacamp-continue-training.png)
 
-    ![DataCamp Continue Training](_img\vs-datacamp\vs-datacamp-continue-training.png)
+## <a name="faq"></a>FAQ
+*こちらで最新情報を確認してください*
 
+## <a name="support-resources"></a>サポート リソース
+-  DataCamp の使用に関するヘルプが必要ですか。  以下のリソースを確認してください。
+    - フォーラムとチュートリアルを特徴とする [DataCamp コミュニティ](https://www.datacamp.com/community/tutorials)
+    - [FAQ](https://datacamp.groovehq.com/help_center)。  FAQ ページで、電子メール サポート要求を送信できる場合もあります。
+-  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)にお問い合わせください。
+-  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://www.visualstudio.com/support/)にアクセスしてください。 

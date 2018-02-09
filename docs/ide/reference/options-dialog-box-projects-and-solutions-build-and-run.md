@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 07/14/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,23 +16,24 @@ helpviewer_keywords:
 - run actions
 - debugger, run options
 ms.assetid: c884976e-c0df-4c6d-8e3a-856ea2bd547c
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0187b8a70fc012fc6d2564f77ea5a2b2ff7c20d8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 88f3ec2d9e8c682511c87cbcf5a5690ae797d8c7
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="options-dialog-box--projects-and-solutions-build-and-run"></a>[オプション] ダイアログ ボックス、[プロジェクトおよびソリューション]、[ビルド/実行]
 
-このダイアログ ボックスで、同時にビルドできる Visual C++ または Visual C# のプロジェクトの最大数、特定の既定のビルドの動作、およびいくつかのビルドのログ設定を指定することができます。 これらのオプションにアクセスするには、**[ツール]、[オプション]** の順に選択し、**[プロジェクトおよびソリューション]** を展開し、**[ビルド/実行]** を選択します。
+このダイアログ ボックスで、同時にビルドできる Visual C++ または C# のプロジェクトの最大数、特定の既定のビルドの動作、およびいくつかのビルドのログ設定を指定することができます。 これらのオプションにアクセスするには、**[ツール]、[オプション]** の順に選択し、**[プロジェクトおよびソリューション]** を展開し、**[ビルド/実行]** を選択します。
   
 **並行してビルドするプロジェクトの最大数**  
-同時にビルドできる Visual C++ および Visual C# のプロジェクトの最大数を指定します。 ビルド プロセスを最適化するため、並列プロジェクトのビルドの最大数が、コンピューターの CPU 数に自動的に設定されます。 最大値は 32 です。  
+同時にビルドできる Visual C++ および C# のプロジェクトの最大数を指定します。 ビルド プロセスを最適化するため、並列プロジェクトのビルドの最大数が、コンピューターの CPU 数に自動的に設定されます。 最大値は 32 です。  
 
 **実行時に、スタートアップ プロジェクトおよび依存関係のみをビルドする**  
 F5 キーを使用する場合にスタートアップ プロジェクトとその依存関係のみをビルドするには、**[デバッグ]、[開始]**メニュー コマンドの順に選択するか、または **[ビルド]** メニューの適用可能なコマンドを選択します。 何も選択しないと、すべてのプロジェクトと依存関係がビルドされます。 

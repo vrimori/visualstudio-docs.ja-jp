@@ -1,29 +1,58 @@
 ---
-title: "Power BI Pro 特典"
+title: "Visual Studio サブスクリプションの Power BI Pro 特典 | Microsoft Docs"
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
-Ms.date: 10/3/2017
+Ms.date: 1/12/2018
 Ms.topic: Get-Started-Article
-Description: Learn how to activate the Power BI Pro subscription included with your Visual Studio subscription.
+Description: Learn about the Power BI Pro subscription included with selected Visual Studio subscriptions.
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 905ac7f211a419c1214338b600e08b1be8970b89
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: d7470903db579dff7a4bc0fd17a26e6b5494d675
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="activating-the-power-bi-pro-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Power BI Pro 特典をアクティブ化する
+# <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Power BI Pro
 
-Office と SharePoint 用のアドインを開発、テスト、配置します。  単一テナントの SharePoint オンライン開発者サイトも含まれます。 
+## <a name="overview"></a>概要
+データを収集し整理して高度なビジュアルに変換できます。 
 
+## <a name="eligibility"></a>特典を受ける条件
+| サブスクリプション レベル/プログラム                                                  | 特長               | 更新可能かどうか                                                         |
+|-------------------------------------------------------------------------------|-----------------------|--------------------------------------------------------------------|
+| Visual Studio Enterprise Standard                                             | Included              |  [はい]                                                               |
+| Visual Studio Enterprise - 年間プラン                                               | Included              |  [はい]                                                               |
+| Visual Studio Enterprise - 月間プラン                                              | 使用できません         |                                                                    |
+| Visual Studio Professional Standard                                           | 使用できません         |                                                                    |
+| Visual Studio Professional - 年間プラン                                             | 使用できません         |                                                                    | 
+| Visual Studio Professional - 月間プラン                                            | 使用できません         |                                                                    |
+| Visual Studio Test Pro                                                        | 使用できません         |                                                                    |
+| MSDN Platforms                                                                | Included              |  [はい]                                                               |
+| Visual Studio Dev Essentials                                                  | 使用できません         |                                                                    |
+| Visual Studio Enterprise - NFR<sup>1</sup>                                               | Included              |  [はい]                                                               |
+| Visual Studio Enterprise - FTE                                                | 使用できません         |                                                                    |
+| Visual Studio Enterprise - Microsoft Partner Network                          | 使用できません         |                                                                    |
+| Visual Studio Professional - Microsoft Partner Network                        | 使用できません         |                                                                    |
+| Visual Studio Enterprise – Imagine (Standard)                                 | 使用できません         |                                                                    |
+| Visual Studio Enterprise – Imagine (Premium)                                  | 使用できません         |                                                                    |
+| Visual Studio Enterprise – BizSpark                                           | Included              |  [はい]                                                               |
+| マイクロソフト認定トレーナー - Software & Services                             | Included              |  [はい]                                                               |
+| マイクロソフト認定トレーナー - Software & Services Developer                   | Included              |  [はい]                                                               |
+
+<sup>1</sup>  *Not for Resale (NFR)、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP) が含まれます。*  
+
+どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、電子メール アドレスに割り当てられているすべてのサブスクリプションを表示します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
+
+## <a name="activation-steps"></a>アクティブ化の手順
 Power BI Pro を使うには、アカウントを設定するか、既存のアカウントを使ってサインインする必要があります。 
-1.  特典タイルの下部にある **[コードの取得]** リンクをクリックします。   コードが正常に取得された通知を受け取ります。  **[アクティブ化]** をクリックします。 
+1.  [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
+
+2.  特典ページの [ツール] セクションで Power BI Pro のタイルを見つけます。 特典タイルの下部にある **[コードの取得]** リンクをクリックします。   コードが正常に取得された通知を受け取ります。  **[アクティブ化]** をクリックします。 
 
     ![Power BI Pro 特典タイル](_img\vs-pbi\vs-pbi-tile.png)  
-
 
 2. Office 365 Developer サブスクリプションまたは Enterprise mobility + security など特定の他のサブスクリプション特典をアクティブ化した場合は、既にアカウントを持っている場合があります。  既存のアカウントが見つかった場合、既存のアカウントに Power BI Pro サブスクリプションを追加するか、または新しいアカウントにサインアップすることを選択できます。  1 つのユーザー ID でさまざまな特典にアクセスできるように、既存のアカウントに追加することをお勧めします。  
 
@@ -64,3 +93,14 @@ Power BI Pro を使うには、アカウントを設定するか、既存のア�
 
 
 11. これで、Power BI Pro のアカウントがセットアップされ、ユーザーおよびドメイン管理、Office のソフトウェアのインストール、および Office 365 についての学習を行うことができる Office 365 管理センターが表示されます。  それで完了です!  準備ができました。 
+
+## <a name="faq"></a>FAQ
+*こちらで最新情報を確認してください*
+
+## <a name="support-resources"></a>サポート リソース
+-  Power BI Pro のヘルプが必要ですか。  
+    - [オンライン ドキュメント](/power-bi/)を参照してください。
+    - サインアップ時の問題ですか。  「[個人として Power BI にサインアップする](/power-bi/service-self-service-signup-for-power-bi)」を参照してください。
+    - よくある問題を調べ、コミュニティからサポートを受けるか、[サポート ページ](https://powerbi.microsoft.com/support/)でサポート チケットを送信してください。
+-  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)にお問い合わせください。
+-  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://www.visualstudio.com/support/)にアクセスしてください。 

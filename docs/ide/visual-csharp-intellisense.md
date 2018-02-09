@@ -1,5 +1,5 @@
 ---
-title: "Visual C# の IntelliSense | Microsoft Docs"
+title: C# IntelliSense | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,25 +8,26 @@ ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
-- Visual C#, IntelliSense
+- C#, IntelliSense
 - IntelliSense [C#]
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 46f56fc6bad74b3144b3dbd4701248598a01883b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9da494eaf71a02f7b46ce68b1cf9f781fe32e716
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="visual-c-intellisense"></a>Visual C# の IntelliSense
+# <a name="c-intellisense"></a>C# IntelliSense
 
-Visual C# の IntelliSense は、エディターでコーディングする際、および[イミディエイト モード](../ide/reference/immediate-window.md) コマンド ウィンドウでデバッグしている間に使用可能です。
+C# IntelliSense は、エディターでコーディングする際、および[イミディエイト モード](../ide/reference/immediate-window.md) コマンド ウィンドウでデバッグしている間に使用可能です。
 
 ## <a name="completion-lists"></a>入力候補一覧
 
-Visual C# での IntelliSense コンプリート リストには、メンバーの一覧や入力候補などからのトークンが含まれています。 コンプリート リストでは、以下にすばやくアクセスできます。
+C# での IntelliSense コンプリート リストには、メンバーの一覧や入力候補などからのトークンが含まれています。 コンプリート リストでは、以下にすばやくアクセスできます。
 
 - 型または名前空間のメンバー
 
@@ -42,15 +43,15 @@ C# でのコンプリート リストは非常に高機能でもあるため、�
 
 ## <a name="code-snippets-in-completion-lists"></a>コンプリート リストのコード スニペット
 
-Visual C# のコンプリート リストには、コード スニペットが含まれており、事前に定義されたコードの本体をプログラムに簡単に挿入できます。 コード スニペットは、スニペットの[ショートカット テキスト](../ide/code-snippets-schema-reference.md#shortcut)としてコンプリート リストに表示されます。 既定で Visual C# で利用できるコード スニペットの詳細については、「[Visual C# のコード スニペット](../ide/visual-csharp-code-snippets.md)」を参照してください。
+C# のコンプリート リストには、コード スニペットが含まれており、事前に定義されたコードの本体をプログラムに簡単に挿入できます。 コード スニペットは、スニペットの[ショートカット テキスト](../ide/code-snippets-schema-reference.md#shortcut)としてコンプリート リストに表示されます。 既定で C# で利用できるコード スニペットの詳細については、「[C# のコード スニペット](../ide/visual-csharp-code-snippets.md)」を参照してください。
 
 ## <a name="language-keywords-in-completion-lists"></a>コンプリート リストの言語キーワード
 
-Visual C# のコンプリート リストには、言語キーワードも含まれています。 C# の言語キーワードの詳細については、「[C# のキーワード](/dotnet/csharp/language-reference/keywords/index)」を参照してください。
+C# のコンプリート リストには、言語キーワードも含まれています。 C# の言語キーワードの詳細については、「[C# のキーワード](/dotnet/csharp/language-reference/keywords/index)」を参照してください。
 
 ## <a name="extension-methods-in-completion-lists"></a>コンプリート リストでの拡張メソッド
 
-Visual C# のコンプリート リストには、スコープ内にある拡張メソッドが含まれます。
+C# のコンプリート リストには、スコープ内にある拡張メソッドが含まれます。
 
 > [!NOTE]
 > Visual C# のコンプリート リストでは、<xref:System.String> オブジェクトのすべての拡張メソッドが表示されるわけではありません。
@@ -59,9 +60,9 @@ Visual C# のコンプリート リストには、スコープ内にある拡張
 
 ## <a name="filtered-completion-lists"></a>フィルター処理されたコンプリート リスト
 
-IntelliSense では、フィルターを使用して、不要なメンバーをコンプリート リストから削除します。 Visual C# では、次の項目用に表示されるコンプリート リストをフィルター処理します。
+IntelliSense では、フィルターを使用して、不要なメンバーをコンプリート リストから削除します。 C# では、次の項目用に表示されるコンプリート リストをフィルター処理します。
 
-- **インターフェイスと基本クラス**: IntelliSense では、クラス宣言の基本およびインターフェイス リストおよび制約リストの両方で、インターフェイスおよび基本クラスのコンプリート リストから項目を自動的に削除します。 たとえば、列挙型は基本クラスのコンプリート リストには表示されません。これは、列挙型が基本クラスで使用できないためです。 基本クラスのコンプリート リストには、インターフェイスおよび名前空間だけが含まれます。 リストで項目を選択し、コンマを入力すると、コンプリート リストから基本クラスが削除されます。これは、Visual C# では多重継承がサポートされていないためです。 制約句の場合も、同様の動作になります。
+- **インターフェイスと基本クラス**: IntelliSense では、クラス宣言の基本およびインターフェイス リストおよび制約リストの両方で、インターフェイスおよび基本クラスのコンプリート リストから項目を自動的に削除します。 たとえば、列挙型は基本クラスのコンプリート リストには表示されません。これは、列挙型が基本クラスで使用できないためです。 基本クラスのコンプリート リストには、インターフェイスおよび名前空間だけが含まれます。 リストで項目を選択し、コンマを入力すると、IntelliSense によりコンプリート リストから基本クラスが削除されます。これは、C# では多重継承がサポートされていないためです。 制約句の場合も、同様の動作になります。
 
 - **属性**: 属性を型に適用した場合、コンプリート リストはフィルター処理され、<xref:System.Attribute> などそれらの型を含む名前空間からの型だけがリストに残ります。
 

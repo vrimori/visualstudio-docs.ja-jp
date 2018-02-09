@@ -1,38 +1,57 @@
 ---
-title: "LinkedIn Learning 特典"
+title: "Visual Studio サブスクリプションの LinkedIn Learning 特典 | Microsoft Docs"
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
-Ms.date: 11/7/2017
+Ms.date: 1/12/2018
 Ms.topic: Get-Started-Article
-Description: Learn how to activate the LinkedIn Learning benefit included as part of a Premium subscription included in your Visual Studio subscription.
+Description: Learn about the LinkedIn Learning benefit included as part of a LinkedIn Premium subscription included in selected Visual Studio subscriptions.
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 62f08913a7fbefe0bd40f3dd752d96194916b0e5
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: 8ef318cb7cdefefc079b230f0e44fdeb5f0c2d8f
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="activating-the-linkedin-learning-benefit-in-your-visual-studio-subscription"></a>Visual Studio サブスクリプションで LinkedIn Learning 特典をアクティブ化する
+# <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの LinkedIn Learning 特典
 
+## <a name="overview"></a>概要
 LinkedIn を最大限に活用して、キャリアを積むために必要な人材、洞察、およびスキルにアクセスします。  最も需要の高いビジネス、技術、および創造的なスキルを、業界の専門家から学ぶことができます。
 
-Visual Studio サブスクリプションには、LinkedIn Learning が付属した LinkedIn プレミアムへのサブスクリプションが含まれています。  プレミアム サブスクリプションの有効期間は、使用している Visual Studio サブスクリプションの種類によって異なります。
-
-| サブスクリプション                                                     | 特長                      |
-|------------------------------------------------------------------|------------------------------|
-| Visual Studio Enterprise の標準サブスクリプションと年間クラウド サブスクリプション   | 6 か月間のプレミアム サブスクリプション |
-| Visual Studio Professional の標準サブスクリプションおよび年間クラウド サブスクリプション | 3 か月間のプレミアム サブスクリプション |
-| Visual Studio Test Professional                                  | 3 か月間のプレミアム サブスクリプション |
-| MSDN Platforms                                                   | 3 か月間のプレミアム サブスクリプション |
-| Visual Studio Dev Essentials                                     | 3 か月間のプレミアム サブスクリプション | 
-
+選択した Visual Studio サブスクリプションには、LinkedIn Learning が付属した LinkedIn プレミアムへのサブスクリプションが含まれています。  プレミアム サブスクリプションの長さは、使用している Visual Studio サブスクリプションの種類によって決まります。
 LinkedIn Learning 特典を活用するには、LinkedIn アカウントを取得する必要があります。  まだ持っていない場合は、Premium サブスクリプションをアクティブ化する前に、アカウントを作成することができます。  
 
-Premium サブスクリプションと LinkedIn Learning 特典をアクティブ化するには:
-1. [https://my.visualstudio.com](https://my.visualstudio.com/benefits) にサインインします。
+## <a name="eligibility"></a>特典を受ける条件
+| サブスクリプション レベル/プログラム                                                  | 特長               | 更新可能かどうか                                                         |
+|-------------------------------------------------------------------------------|-----------------------|--------------------------------------------------------------------|
+| Visual Studio Enterprise Standard                                             | 6 か月              |  ×                                                                |
+| Visual Studio Enterprise - 年間プラン                                               | 6 か月              |  ×                                                                |
+| Visual Studio Enterprise - 月間プラン                                              | 使用できません         |                                                                    |
+| Visual Studio Professional Standard                                           | 3 か月              |  ×                                                                |
+| Visual Studio Professional - 年間プラン                                             | 3 か月              |  ×                                                                | 
+| Visual Studio Professional - 月間プラン                                            | 使用できません         |                                                                    |
+| Visual Studio Test Pro                                                        | 3 か月              |  ×                                                                |
+| MSDN Platforms                                                                | 3 か月              |  ×                                                                |
+| Visual Studio Dev Essentials                                                  | 3 か月              |  ×                                                                |
+| Visual Studio Enterprise - NFR<sup>1</sup>                                               | 6 か月              |  ×                                                                |
+| Visual Studio Enterprise - FTE                                                | 使用できません         |                                                                    |
+| Visual Studio Enterprise - Microsoft Partner Network                          | 使用できません         |                                                                    |
+| Visual Studio Professional - Microsoft Partner Network                        | 使用できません         |                                                                    |
+| Visual Studio Enterprise – Imagine (Standard)                                 | 使用できません         |                                                                    |
+| Visual Studio Enterprise – Imagine (Premium)                                  | 使用できません         |                                                                    |
+| Visual Studio Enterprise – BizSpark                                           | 使用できません         |                                                                    |
+| マイクロソフト認定トレーナー - Software & Services                             | 使用できません         |                                                                    |
+| マイクロソフト認定トレーナー - Software & Services Developer                   | 使用できません         |                                                                    |
+
+<sup>1</sup>  *Not for Resale (NFR)、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP) が含まれます。*  
+
+どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、電子メール アドレスに割り当てられているすべてのサブスクリプションを表示します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
+
+## <a name="activation-steps"></a>アクティブ化の手順
+LinkedIn Premium サブスクリプションと LinkedIn Learning 特典をアクティブ化するには:
+1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 
 2. [教育] カテゴリで [LinkedIn Learning] タイルを見つけて、**[コードの取得]** リンクをクリックします。
 
@@ -41,7 +60,7 @@ Premium サブスクリプションと LinkedIn Learning 特典をアクティ�
 
 3. LinkedIn アカウントを既に持っていて、自動的にサインインされた場合は、LinkedIn Learning 特典のアクティブ化ページが表示されます。  LinkedIn アカウントを持っているが、自動的にサインインされなかった場合は、ユーザー名とパスワードを入力し、**[サインイン]** をクリックします。  [この手順](#activate-your-offer)までスキップして、プランをアクティブにしてください。
 
-
+### <a name="create-a-linkedin-account"></a>LinkedIn アカウントの作成
 4. LinkedIn アカウントをまだ持っていない場合は、**[今すぐ参加]** をクリックします。  
 
     ![LinkedIn Learning: 今すぐ参加](_img\vs-linkedin\vs-linkedin-join-now.png)
@@ -84,7 +103,7 @@ Premium サブスクリプションと LinkedIn Learning 特典をアクティ�
 
     ![LinkedIn Learning: 写真のアップロード](_img\vs-linkedin\vs-linkedin-app.png)
 
-## <a name="activate-your-offer"></a>プランのアクティブ化
+### <a name="activate-your-offer"></a>プランのアクティブ化
 15. これで、LinkedIn アカウントへのサインイン、または新しいアカウントの作成が完了したので、Premium サブスクリプションをアクティブ化し、LinkedIn Learning の利用を開始する準備ができました。  **[Activate your offer]\(プランのアクティブ化\)** をクリックします。 
 
     ![LinkedIn Learning: アクティブ化](_img\vs-linkedin\vs-linkedin-Activate1.png)
@@ -97,3 +116,13 @@ Premium サブスクリプションと LinkedIn Learning 特典をアクティ�
 17. Premium サブスクリプション プランのアクティブ化が正常に行われたので、これで LinkedIn Learning とその他の Premium のすべての特典の使用を開始できます。
 
     ![LinkedIn Learning: ラーニング ホーム](_img\vs-linkedin\vs-linkedin-learning-home.png)
+
+## <a name="faq"></a>FAQ
+*こちらで最新情報を確認してください*
+
+## <a name="support-resources"></a>サポート リソース
+-  LinkedIn Learning のヘルプが必要ですか。  以下のリソースを確認してください。
+    - [LinkedIn Learning の使用方法](https://www.linkedin.com/help/learning)に関するヘルプ。
+    - アカウントやプロファイルの作成、ネットワークの維持などの [LinkedIn](https://www.linkedin.com/help/linkedin) に関する一般的な質問のヘルプ。
+-  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)にお問い合わせください。
+-  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://www.visualstudio.com/support/)にアクセスしてください。    

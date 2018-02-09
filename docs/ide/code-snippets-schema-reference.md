@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +14,17 @@ helpviewer_keywords:
 - code snippets [Visual Studio], schema reference
 - IntelliSense Code Snippets, XML Schema
 ms.assetid: 58a60621-725f-4763-93b7-62ea5424ef88
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b3fdf8728e5afd839718e31e4eb6b113b8f9cde2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: c267b110b67a69b526bb7efc985bb22bb954b3a1
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="code-snippets-schema-reference"></a>コード スニペット スキーマ リファレンス
 IntelliSense コード スニペットとは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でのアプリケーション開発時に、簡単に挿入できるようにあらかじめ作成されたコードです。 同じようなコードを繰り返し入力したり、サンプルを検索したりする時間を短縮するコード スニペットを用意しておくことで、生産性を高めることができます。 IntelliSense コード スニペット XML スキーマを使用すると、独自のコード スニペットを作成し、それらを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] に標準で付属しているコード スニペットに追加できます。  
@@ -240,7 +242,7 @@ Code 要素に使用できる属性には次の 3 つがあります。
  Visual Studio でリテラルまたはオブジェクトがフォーカスを取得するときに実行される関数を指定します。  
   
 > [!NOTE]
->  `Function` 要素は、Visual C# のコード スニペットでのみサポートされます。  
+>  `Function` 要素は、C# のコード スニペットでのみサポートされます。  
   
 ```xml  
 <Function>  
@@ -563,7 +565,7 @@ Code 要素に使用できる属性には次の 3 つがあります。
   
 -   `Expansion` : カーソル位置にコード スニペットを挿入します。  
   
--   `Refactoring`: Visual C# のリファクタリング中にコード スニペットを使用するよう指定します。 `Refactoring` は、カスタムのコード スニペットには使用できません。  
+-   `Refactoring`: C# のリファクタリング中にコード スニペットを使用するよう指定します。 `Refactoring` は、カスタムのコード スニペットには使用できません。  
   
 ##  <a name="snippettypes"></a> SnippetTypes 要素  
  複数の `SnippetType` 要素をグループ化します。 `SnippetTypes` 要素が存在しない場合、コード スニペットはコード内のどこにでも挿入できます。  

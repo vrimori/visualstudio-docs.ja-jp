@@ -9,11 +9,11 @@ Description: Learn how to get the most out of your Visual Studio subscriptions.
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 58dfc6e6cce60e28c15d6b7de80265f6ec37f8f5
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: 8059d316912e78bcbcaa9d4f54f86b4e2c2b907f
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="managing-subscriptions"></a>サブスクリプションを管理する
 ## <a name="signing-in-to-the-portal"></a>ポータルにサインインする
@@ -31,7 +31,7 @@ Microsoft ストアで Visual Studio サブスクリプションを購入した�
 #### <a name="workschool-accounts"></a>職場/学校アカウント
 サブスクリプションが職場/学校によって提供されている場合は、ウェルカム メールを受け取ります。  
 1.  [サブスクライバー ポータル](https://my.visualstudio.com/)にアクセスします
-2.  新しい Visual Studio サブスクリプションを割り当てたメール アドレスを入力します。 このアドレスは、サブスクライバー宛ての**ウェルカム レター**でも示されています。 ウェルカム レターが送られてこない場合は、迷惑メール フォルダーをご確認ください。
+2.  新しい Visual Studio サブスクリプションを割り当てたメール アドレスを入力します。 このアドレスは、サブスクライバー宛てのウェルカム メールでも示されています。 ウェルカム メールが送られてこない場合は、迷惑メール フォルダーをご確認ください。
 3.  **[続行]** をクリックします。
 4.  会社のサインイン ページにリダイレクトされます。
 5.  パスワードを入力します。

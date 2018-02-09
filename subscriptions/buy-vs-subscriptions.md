@@ -1,5 +1,5 @@
 ---
-title: "サブスクリプションの購入方法 | Visual Studio Marketplace"
+title: "サブスクリプションの購入方法 | Microsoft Docs"
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
@@ -9,25 +9,49 @@ Description: Explore your purchasing options for Visual Studio subscriptions
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: ba92b84695bcd22405db56b739102bb33180b002
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: 73d0f1c5016a9ea908d7d280575e297357ba78ba
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
-#   <a name="how-to-buy-a-subscription"></a>サブスクリプションの購入方法
+# <a name="how-to-buy-a-subscription"></a>サブスクリプションの購入方法
 Visual Studio のサブスクリプションの主な種類は、クラウドと標準の 2 つです。これらについての説明は、[Visual Studio の価格のページ](https://www.visualstudio.com/vs/pricing/)をご覧ください。
 
-# <a name="buy-visual-studio-cloud-subscription-either-monthly-or-annual"></a>Visual Studio を購入する (クラウド サブスクリプション、月額または年額) 
+## <a name="buy-visual-studio-cloud-subscriptions-either-monthly-or-annual"></a>Visual Studio クラウド サブスクリプションを購入する (月額または年額) 
 
-[Visual Studio サブスクリプションの購入方法](https://docs.microsoft.com/vsts/billing/vs-subscriptions/buy-vs-subscriptions)
-[購入した Visual Studio サブスクリプションを割り当てて管理する](https://docs.microsoft.com/vsts/billing/vs-subscriptions/manage-vs-subscriptions)
+[Visual Studio サブスクリプションの購入方法](/vsts/billing/vs-subscriptions/buy-vs-subscriptions)
+[購入した Visual Studio サブスクリプションを割り当てて管理する](/vsts/billing/vs-subscriptions/manage-vs-subscriptions)
 
-# <a name="buy-visual-studio-standard-subscription"></a>Visual Studio を購入する (標準サブスクリプション)
+## <a name="buy-visual-studio-standard-subscriptions"></a>Visual Studio の標準サブスクリプションを購入する
 Visual Studio の標準サブスクリプションを購入するには、ソフトウェア販売店に問い合わせるか、オンラインの [Microsoft Store](https://www.microsoft.com/store) にアクセスする必要があります。
 
-# <a name="for-visual-studio-subscribers"></a>Visual Studio サブスクライバーの場合
-サブスクライバーの特典を確認するには、Visual Studio サブスクライバー ポータル [(https://my.visualstudio.com)](https://my.visualstudio.com) にアクセスするか、**[自分のサブスクリプションを表示する]** をクリックします。
+*   Azure サブスクリプションにサインアップして、Visual Studio Marketplace から購入するには、"個人" の [Microsoft アカウント](https://www.microsoft.com/account)、所属する組織用に購入し、組織が ID を Azure Active Directory (Azure AD) で管理する場合は ["職場または学校のアカウント"](/azure/active-directory/sign-up-organization) が必要になります。
+
+> [!WARNING]
+> Azure サブスクリプションを使用して、Visual Studio クラウド サブスクリプションを購入すると、これらの請求は超過分として表示され、Azure 年額コミットメントには加算されません。 Azure の課金の詳細については、[FAQ](/vsts/billing/faq-azure-billing) に関するページを参照してください。  
+
+### <a name="buy-subscriptions"></a>サブスクリプションの購入
+
+
+1.  [Visual Studio Marketplace > サブスクリプション](https://marketplace.visualstudio.com/subscriptions)にサインインします。
+
+2.  購入するサブスクリプションを選択します。次に例を示します。
+
+    <img alt="Buy a Visual Studio subscription" src="_img/buy-vs-subscriptions/buy-vs-sub-start.png" style="border: 1px solid #CCCCCC" />
+
+3.  請求に使用する Azure サブスクリプションを選択します。
+まだサブスクリプションがない場合は、新しいサブスクリプションのためにサインアップします。
+
+    <img alt="Select Azure subscription for biling" src="_img/buy-vs-subscriptions/buy-vs-sub-Azure-sub.png" style="border: 1px solid #CCCCCC" />
+
+4.  購入するサブスクリプションの数を選択します。
+
+    <img alt="Select number of subscriptions" src="_img/buy-vs-subscriptions/buy-vs-sub-users.png" style="border: 1px solid #CCCCCC" />
+
+    サブスクリプションを自分に割り当てない場合は、**[自分にこのサブスクリプションを割り当てる]** をオフにします。
+
+5.  確認して購入を完了します。 ここでサブスクリプションの特典を確認するには、Visual Studio [サブスクリプション ポータル](https://my.visualstudio.com?wt.mc_id=o~msft~docs)に移動するか、**[自分のサブスクリプションを表示する]** をクリックします。
 
 
 ### <a name="activating-subscriptions-purchased-through-the-microsoft-store"></a>Microsoft ストアから購入した標準サブスクリプションをアクティブ化する
@@ -36,7 +60,7 @@ Microsoft ストアで Visual Studio サブスクリプションを購入した�
 
 サブスクリプションをアクティブ化するには、次の手順を実行します。 
 
-1. **[Click here to sign in]\(サインインするにはここをクリックしてください\)** をクリックします。 [https://my.visualstudio.com/subscriptions/activate](https://my.visualstudio.com/subscriptions/activate) にリダイレクトされます。
+1. **[Click here to sign in]\(サインインするにはここをクリックしてください\)** をクリックします。 [https://my.visualstudio.com/subscriptions/activate](https://my.visualstudio.com/subscriptions/activate?wt.mc_id=o~msft~docs) にリダイレクトされます。
 
 2. Visual Studio サブスクリプションへのアクセスに使用するメール アドレスを入力して、**[続行]** をクリックします。
 
@@ -46,4 +70,4 @@ Microsoft ストアで Visual Studio サブスクリプションを購入した�
 5. サインインに成功すると、**[Activate Your Visual Studio Subscription]\(Visual Studio サブスクリプションをアクティブ化する\)** ウィンドウが表示されます。
 6. 支払い確認ページまたは確認メールで入手できる**プロダクト キー**情報を入力し、**[アクティブ化]** をクリックします。
 
-7. [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions) に自分のサブスクリプションが表示されるはずです。
+7. [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に自分のサブスクリプションが表示されるはずです。

@@ -17,11 +17,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e88e3999bdca7b926042685ca7bd2d561c12d5d
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 3d97e1f37c1e60c3ec5bb122a6b3f26c2fb086f9
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="prerequisites-dialog-box"></a>Prerequisites Dialog Box
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/22/2018
 
 |要素|説明|
 |-------------|-----------------|
-|**.NET Framework 3.5 SP1**|このパッケージは、次のコンポーネントをインストールします。<br /><br /> -  .NET Framework バージョン 2.0、3.0、および 3.5。<br />-   32 ビット (x86) オペレーティング システムおよび 64 ビット (x64) オペレーティング システム上の .NET Framework のすべてのバージョンに対するサポート。<br />-   パッケージと共にインストールされる各 .NET Framework バージョン用の Language Pack。<br />-   .NET Framework 2.0 および 3.0 用の Service Pack。<br /><br /> .NET Framework 3.0 は Windows Vista に含まれており、.NET Framework 3.5 は [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] に含まれています。 .NET Framework 3.5 は、32 ビット オペレーティング システム用にコンパイルされる、ターゲット フレームワークが **.NET Framework 3.5** に設定された、すべての Visual Basic プロジェクトおよび Visual C# プロジェクト、および、64 ビット オペレーティング システム用にコンパイルされる Visual Basic プロジェクトおよび Visual C# プロジェクトに必要です。 IA64 はサポートされません。Visual Basic プロジェクトおよび Visual C# プロジェクトは、既定ではどの CPU アーキテクチャにも対応するようにコンパイルされます。 詳細については、「[Visual Studio のマルチ ターゲットの概要](../../ide/visual-studio-multi-targeting-overview.md)」、「[Redistributing the .NET Framework](http://msdn.microsoft.com/en-us/a18d0456-fd89-493e-97f4-756505bfe287)」 (.NET Framework の再配布)、および「[64 ビット アプリケーションの配置のための必要条件](../../deployment/deploying-prerequisites-for-64-bit-applications.md)」を参照してください。<br /><br /> この項目は既定で選択されます。|
+|**.NET Framework 3.5 SP1**|このパッケージは、次のコンポーネントをインストールします。<br /><br /> -  .NET Framework バージョン 2.0、3.0、および 3.5。<br />-   32 ビット (x86) オペレーティング システムおよび 64 ビット (x64) オペレーティング システム上の .NET Framework のすべてのバージョンに対するサポート。<br />-   パッケージと共にインストールされる各 .NET Framework バージョン用の Language Pack。<br />-   .NET Framework 2.0 および 3.0 用の Service Pack。<br /><br /> .NET Framework 3.0 は Windows Vista に含まれており、.NET Framework 3.5 は [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] に含まれています。 .NET Framework 3.5 は、32 ビット オペレーティング システム用にコンパイルされる、ターゲット フレームワークが **.NET Framework 3.5** に設定された、すべての Visual Basic プロジェクトおよび C# プロジェクト、および、64 ビット オペレーティング システム用にコンパイルされる Visual Basic プロジェクトおよび C# プロジェクトに必要です。 IA64 はサポートされません。Visual Basic プロジェクトおよび C# プロジェクトは、既定ではどの CPU アーキテクチャにも対応するようにコンパイルされます。 詳細については、「[Visual Studio のマルチ ターゲットの概要](../../ide/visual-studio-multi-targeting-overview.md)」、および「[64 ビット アプリケーションの配置のための必要条件](../../deployment/deploying-prerequisites-for-64-bit-applications.md)」を参照してください。<br /><br /> この項目は既定で選択されます。|
 |**Microsoft .NET Framework 4.x**|このパッケージは、.NET Framework 4.x (x86 プラットフォームおよび x64 プラットフォーム用) をインストールします。|
 |**Microsoft System CLR Types for SQL Server 2014 (x64 および x86)**|このパッケージは、Microsoft System CLR Types for SQL Server 2014 (x64 または x86 用) をインストールします。|
 |**SQL Server 2008 R2 Express**|このパッケージは、Microsoft SQL Server 2008 R2 Express をインストールします。Microsoft SQL Server 2008 R2 Express は、Microsoft SQL Server 2008 R2 の無償のエディションであり、小規模な Web アプリケーション、サーバー アプリケーション、またはデスクトップ アプリケーションに最適なデータベースです。 Microsoft SQL Server 2008 Express は、開発環境および運用環境で無償で使用できます。 アプリケーションと共に SQL Server 2008 R2 Express を配布するには、無償の[登録](http://go.microsoft.com/fwlink/?LinkId=130380)が必要です。|
@@ -60,6 +60,5 @@ ms.lasthandoff: 01/22/2018
 
 [[発行] ページ (プロジェクト デザイナー)](../../ide/reference/publish-page-project-designer.md)  
 [アプリケーション配置の必要条件](../../deployment/application-deployment-prerequisites.md)  
-[.NET Framework の再配布](http://msdn.microsoft.com/en-us/a18d0456-fd89-493e-97f4-756505bfe287)  
 [64 ビット アプリケーションの配置のための必要条件](../../deployment/deploying-prerequisites-for-64-bit-applications.md)  
 [Visual Studio のマルチ ターゲットの概要](../../ide/visual-studio-multi-targeting-overview.md)

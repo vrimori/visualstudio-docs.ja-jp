@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 06/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: cs.ProjectPropertiesBuild
+f1_keywords:
+- cs.ProjectPropertiesBuild
 helpviewer_keywords:
 - Build options [C#]
 - Project Designer, Build page
 ms.assetid: 77ff1bfc-d633-4634-ba29-9afdb6d7e362
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: bc470eb36e700f136fec57e208c5bd920ea5e073
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- dotnet
+ms.openlocfilehash: 233bb7516678888a2c7c4e6ec0b1b4f7d21b1393
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="build-page-project-designer-c"></a>[ビルド] ページ (プロジェクト デザイナー) (C#)
 **プロジェクト デザイナー**の **[ビルド]** ページでは、プロジェクトのビルド構成プロパティを指定します。 このページは、[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] プロジェクトにのみ適用されます。  
@@ -34,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 次のオプションを使用すると、表示または変更する構成およびプラットフォームを選択できます。  
 
 > [!NOTE]
->  簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。 したがって、これらのオプションは表示されません。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+> 簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。 したがって、これらのオプションは表示されません。 詳細については、「[方法: デバッグ構成とリリース構成を設定する](/debugger/how-to-set-debug-and-release-configurations.md)」を参照してください。
 
 **構成**  
 表示または変更する構成設定を指定します。 この設定は、**[アクティブ (Debug)]** (既定)、**[Debug]**、**[Release]**、または **[すべての構成]** に指定できます。  
@@ -104,9 +107,9 @@ TRACE をアプリケーションのすべてのソース コード ファイル
 次の設定は、ビルド処理の出力オプションを構成するために使用します。  
 
 **出力パス**  
-このプロジェクト構成の出力ファイルの場所を指定します。 このボックスにビルド出力のパスを入力するか、**[参照]** をクリックし、パスを指定します。 このパスは、相対パスであることに注意してください。絶対パスを入力しても、相対パスとして保存されます。 既定のパスは bin\Debug または bin\Release\\ です。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+このプロジェクト構成の出力ファイルの場所を指定します。 このボックスにビルド出力のパスを入力するか、**[参照]** をクリックし、パスを指定します。 このパスは、相対パスであることに注意してください。絶対パスを入力しても、相対パスとして保存されます。 既定のパスは bin\Debug または bin\Release\\ です。
 
-簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。 **[デバッグ]** メニューの **[ビルド]** コマンド (F5) を使用すると、指定した **[出力パス]** に関係なく、デバッグ用の場所にビルドが配置されます。 ただし、**[ビルド]** メニューの **[ビルド]** コマンドでは、指定した場所にビルドが配置されます。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。 **[デバッグ]** メニューの **[ビルド]** コマンド (F5) を使用すると、指定した **[出力パス]** に関係なく、デバッグ用の場所にビルドが配置されます。 ただし、**[ビルド]** メニューの **[ビルド]** コマンドでは、指定した場所にビルドが配置されます。 詳しくは、「[ビルド構成について](../../ide/understanding-build-configurations.md)」をご覧ください。
 
 **XML ドキュメント ファイル**  
 ドキュメントのコメントを処理するファイルの名前を指定します。 詳しくは、「[/doc (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/doc-compiler-option)」をご覧ください。  

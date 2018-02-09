@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b454893c2d68b23d130d6ff38be493d988dfb1fe
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: a1123d1c557f6e7f01eb98e668b4f13785ee6893
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>CodeLens によるコード変更とその他の履歴の検索
 
@@ -40,9 +42,9 @@ ms.lasthandoff: 12/22/2017
 
 -  Visual Studio Enterprise または Visual Studio Professional
 
--  Visual C# .NET コードまたは Visual Basic .NET コード
+-  C# または Visual Basic コード
 
-**参照** インジケーターを選択します (**Alt + 2**)。 **参照が 1 つもない**場合は、Visual C# コードまたは Visual Basic コードからの参照がないということです。 このインジケーターには、XAML ファイル、ASPX ファイルなどの他の項目からの参照は含まれません。
+**参照** インジケーターを選択します (**Alt + 2**)。 **参照が 1 つもない**場合は、C# コードまたは Visual Basic コードからの参照がないということです。 このインジケーターには、XAML ファイル、ASPX ファイルなどの他の項目からの参照は含まれません。
 
 ![CodeLens - 参照インジケーターを選択する](../ide/media/codelensviewreferenceslist.png "CodeLensViewReferencesList")  
 
@@ -66,9 +68,9 @@ ms.lasthandoff: 12/22/2017
 
 - Team Foundation Server 2013 以降、Visual Studio Team Services、または Git
 
-- [Lync 2010 以降、または Skype for Business](http://technet.microsoft.com/en-us/lync)。これによりコード エディターからチームと通信できます  
+- [Lync 2010 以降、または Skype for Business](https://technet.microsoft.com/office/dn788773)。これによりコード エディターからチームと通信できます
 
-Team Foundation バージョン管理 (TFVC) または Git で格納されている Visual C# .NET または Visual Basic .NET コードでは、CodeLens の詳細をクラス レベルまたはメソッド レベルで取得します (*code-element-level* インジケーター)。 Git リポジトリが TfGit でホストされている場合、TFS 作業項目へのリンクも取得します。  
+Team Foundation バージョン管理 (TFVC) または Git で格納されている C# または Visual Basic コードでは、CodeLens の詳細をクラス レベルまたはメソッド レベルで取得します (*code-element-level* インジケーター)。 Git リポジトリが TfGit でホストされている場合、TFS 作業項目へのリンクも取得します。  
 
 ![コードの要素レベルのインジケーター](../ide/media/codelenselementlevelindicators.png "CodeLensElementLevelIndicators")  
 
@@ -86,7 +88,7 @@ C# コードまたは Visual Basic コードを変更したユーザー、およ
 
 ![CodeLens: TFVC で自分のコードの変更履歴を取得する](../ide/media/codelenscodechanges.png "CodeLensCodeChanges")  
 
-既定の時間は直近 12 か月です。 Team Foundation Server にコードが格納される場合、 [TFSConfig コマンド](http://msdn.microsoft.com/en-us/94424190-3b6b-4f33-a6b6-5807f4225b62) および [/indexHistoryPeriod](../ide/codeindex-command.md) フラグを指定した **CodeIndex コマンド** を実行することにより、この制限を変更できます。  
+既定の時間は直近 12 か月です。 Team Foundation Server にコードが格納される場合、 [TFSConfig コマンド](/vsts/tfs-server/command-line/tfsconfig-cmd) および [/indexHistoryPeriod](../ide/codeindex-command.md) フラグを指定した **CodeIndex コマンド** を実行することにより、この制限を変更できます。
 
 1 年以上前のものを含む、すべての変更の詳細な履歴を表示するには、 **[すべてのファイルの変更を表示する]**を選択します。  
 
@@ -193,7 +195,7 @@ C# コードまたは Visual Basic コードを変更したユーザー、およ
 
 -   Visual Studio Enterprise または Visual Studio Professional  
   
--   Visual C# .NET コードまたは Visual Basic .NET コード  
+-   C# または Visual Basic コード  
   
 -   アプリケーション コードの単体テストを含む [単体テスト プロジェクト](../test/unit-test-your-code.md)  
   
@@ -233,15 +235,15 @@ C# コードまたは Visual Basic コードを変更したユーザー、およ
   
 ###  <a name="NoIndicators"></a> Q: CodeLens はどこにありますか。
 
-**A:** CodeLens は、メソッド、クラス、インデクサー、およびプロパティ レベルの Visual C# .NET および Visual Basic .NET のコードで表示されます。 それ以外の種類のファイルについては、ファイル レベルで CodeLens が表示されます。
+**A:** CodeLens は、メソッド、クラス、インデクサー、およびプロパティ レベルの C# および Visual Basic のコードで表示されます。 それ以外の種類のファイルについては、ファイル レベルで CodeLens が表示されます。
 
 - CodeLens が有効になっていることを確認します。 **[ツール]**、 **[オプション]**、 **[テキスト エディター]**、 **[すべての言語]**、 **[CodeLens]**の順に移動します。  
-  
-- コードが TFS に格納されている場合は、 [TFS Config コマンド](../ide/codeindex-command.md) と共に [CodeIndex コマンド](http://msdn.microsoft.com/en-us/94424190-3b6b-4f33-a6b6-5807f4225b62)を使用することによって、コード インデックス作成が有効になっていることを確認します。  
 
-- TFS 関連のインジケーターは、作業項目がコードにリンクされていて、リンクされた作業項目を開くアクセス許可をユーザーが持っている場合にだけ表示されます。 [チーム メンバーのアクセス許可があることを確認してください。](http://msdn.microsoft.com/en-us/f58805de-ba61-4d09-8f2d-d3ab9662ecfd)  
+- コードが TFS に格納されている場合は、 [TFS Config コマンド](../ide/codeindex-command.md) と共に [CodeIndex コマンド](/vsts/tfs-server/command-line/tfsconfig-cmd)を使用することによって、コード インデックス作成が有効になっていることを確認します。
 
-- アプリケーション コードに単体テストがない場合は、単体テスト インジケーターが表示されません。 テスト状態インジケーターは、テスト プロジェクトに自動的に表示されます。 アプリケーション コードに単体テストがあることがわかっているのに、テスト インジケーターが表示されない場合は、ソリューションのビルドを試みます (**Ctrl + Shift + B**)。  
+- TFS 関連のインジケーターは、作業項目がコードにリンクされていて、リンクされた作業項目を開くアクセス許可をユーザーが持っている場合にだけ表示されます。 [チーム メンバーのアクセス許可があることを確認してください。](/vsts/work/scale/multiple-teams)
+
+- アプリケーション コードに単体テストがない場合は、単体テスト インジケーターが表示されません。 テスト状態インジケーターは、テスト プロジェクトに自動的に表示されます。 アプリケーション コードに単体テストがあることがわかっているのに、テスト インジケーターが表示されない場合は、ソリューションのビルドを試みます (**Ctrl + Shift + B**)。
 
 ### <a name="q-why-dont-i-see-the-work-item-details-for-a-commit"></a>コミットの作業項目詳細が表示されないのはなぜですか。
 
@@ -301,11 +303,11 @@ CodeLens では、異なるバージョン の Lync または Skype はインス
 
 ###  <a name="LocalVersion"></a> Q: "ローカル バージョン" とは何ですか。
 
-**A:** **[ローカル バージョン]** 矢印は、このファイルのローカル バージョンの最新の変更セットを指しています。 サーバーにさらに新しい変更セットが含まれる場合、その変更セットは、使用されている並べ替え順序に応じて **[ローカル バージョン]** 矢印の上または下に表示されます。  
+**A:** **[ローカル バージョン]** 矢印は、このファイルのローカル バージョンの最新の変更セットを指しています。 サーバーにさらに新しい変更セットが含まれる場合、その変更セットは、使用されている並べ替え順序に応じて **[ローカル バージョン]** 矢印の上または下に表示されます。
 
 ### <a name="q-can-i-manage-how-codelens-processes-code-to-show-history-and-linked-items"></a>Q: 履歴やリンク された項目が表示されるように CodeLens によるコードの処理方法を管理することはできますか。
 
-**A:** はい、できます。コードが TFS にある場合は、 [TFS Config コマンド](../ide/codeindex-command.md) と共に [CodeIndex コマンド](http://msdn.microsoft.com/en-us/94424190-3b6b-4f33-a6b6-5807f4225b62)を使用します。
+**A:** はい、できます。コードが TFS にある場合は、 [TFS Config コマンド](../ide/codeindex-command.md) と共に [CodeIndex コマンド](/vsts/tfs-server/command-line/tfsconfig-cmd)を使用します。
 
 ## <a name="see-also"></a>関連項目
 

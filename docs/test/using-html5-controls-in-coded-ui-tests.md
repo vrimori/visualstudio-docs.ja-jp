@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: e3589707f07564bbcd84151b0eedeb1c0029428b
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 093457cf2aea3951db89e6fa677ec03fe55df89a
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>コード化された UI テストでの HTML5 コントロールの使用
 コード化された UI テストには、Internet Explorer 9 と Internet Explorer 10 に含まれる HTML5 コントロールの一部のサポートが含まれます。  
@@ -136,12 +137,12 @@ string ValueAsNumber
   
 ###  <a name="UsingHTML5ControlsCodedUITestsProgressbar"></a> ProgressBar  
  **ProgreesBar コントロール:** ProgressBar は、非対話型コントロールです。 このコントロールの `Value` プロパティと `Max` プロパティでアサーションを追加できます。  
-  
+
  ![HTML5 ProgressBar コントロール](../test/media/codedui_html5_progressbar.png "CodedUI_HTML5_ProgressBar")  
-  
-## <a name="see-also"></a>参照  
- [HTML 要素](http://go.microsoft.com/fwlink/?LinkID=232441)   
- [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   
- [コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)   
- [コード化された UI テストをカスタマイズする](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeCUITModify)   
- [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+
+## <a name="see-also"></a>関連項目
+
+[HTML 要素](http://go.microsoft.com/fwlink/?LinkID=232441)  
+[UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)  
+[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md)  
+[コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

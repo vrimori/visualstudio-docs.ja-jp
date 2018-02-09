@@ -8,13 +8,15 @@ ms.topic: get-started-article
 author: corob-msft
 ms.author: tglee
 manager: ghogen
-dev_langs: CPP
-ms.workload: cplusplus
-ms.openlocfilehash: 9c0a7a8e206704e1b7cd694a91f376f4ec531d6c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+dev_langs:
+- CPP
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2e0e0709b8a1737e3f78268ec324d4481dac285a
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="get-started-with-c-in-visual-studio"></a>Visual Studio 内の C++ の概要
 
@@ -152,7 +154,7 @@ HelloApp をデバッグして、コンソール ウィンドウに "Hello" と�
 ## <a name="see-also"></a>関連項目
 
 [C++ デスクトップ開発のための Visual Studio IDE の使用](/cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development)  
-[チュートリアル : Visual C# または Visual Basic による簡単なアプリケーションの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)  
+[チュートリアル: C# または Visual Basic による簡単なアプリケーションの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)  
 [Visual Studio の生産性に関するヒント](../ide/productivity-tips-for-visual-studio.md)  
 [Visual Studio のサンプル](../ide/visual-studio-samples.md)  
 [Get Started Developing with Visual Studio](../ide/get-started-developing-with-visual-studio.md)

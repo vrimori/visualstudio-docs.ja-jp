@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 01/23/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,17 @@ helpviewer_keywords:
 - debug mode
 - custom layouts
 ms.assetid: 7517ff13-76de-4ecf-9c1b-eb9b7ff4d718
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 596e9e6dfa5f7fb464430636f696e37748ccb8eb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: e26a9fa0daf5c92c81161bdcafd92490f9a05113
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>Visual Studio のウィンドウ レイアウトをカスタマイズする
 Visual Studio では、さまざまな開発ワークフローに最も適したウィンドウのレイアウトを作成するために、ウィンドウの位置、サイズ、および動作をカスタマイズできます。 レイアウトをカスタマイズすると、IDE はそれを記憶します。 たとえば、 **ソリューション エクスプローラー** のドッキング位置を変更した後で Visual Studio を閉じた場合、次回起動時には、別のコンピューターで作業していても、 **ソリューション エクスプローラー** が同じ位置にドッキングされます。 また、カスタム レイアウトに名前を付けて保存した後、1 つのコマンドでレイアウト間を切り替えることもできます。 たとえば、編集用のレイアウトとデバッグ用のレイアウトを作成し、**[ウィンドウ &#124; ウィンドウ レイアウトを適用]** メニュー コマンドを使用してそれらを切り替えることができます。  
@@ -134,7 +136,7 @@ Visual Studio では、さまざまな開発ワークフローに最も適した
 
 ##### <a name="create-a-ui-project-and-customize-the-layout"></a>UI プロジェクトの作成とレイアウトのカスタマイズ  
 
-1.  **[新しいプロジェクト]** ダイアログで、Visual C# WPF デスクトップ アプリケーションを作成し、任意の名前を付けます。 これがユーザー インターフェイスを操作するプロジェクトであることを装うため、デザイナー ウィンドウのスペースを最大にして、その他のツール ウィンドウを邪魔にならない所に移動したいと思います。  
+1.  **[新しいプロジェクト]** ダイアログで、C# WPF デスクトップ アプリケーションを作成し、任意の名前を付けます。 これがユーザー インターフェイスを操作するプロジェクトであることを装うため、デザイナー ウィンドウのスペースを最大にして、その他のツール ウィンドウを邪魔にならない所に移動したいと思います。  
 
 2.  複数のモニターがある場合は、 **ソリューション エクスプローラー** ウィンドウと **プロパティ** ウィンドウを 2 台目のモニターに移動させます。 シングル モニター システムでは、デザイナー以外のウィンドウはすべて閉じてください。  
 

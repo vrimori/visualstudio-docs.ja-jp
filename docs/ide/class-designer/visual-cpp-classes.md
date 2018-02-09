@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.classdesigner.inheritancelinelabel
-helpviewer_keywords: Class Designer [Visual Studio], classes
+f1_keywords:
+- vs.classdesigner.inheritancelinelabel
+helpviewer_keywords:
+- Class Designer [Visual Studio], classes
 ms.assetid: 75e56f8c-11ef-42a3-b7ec-3d2cf25c581b
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1aac0b4dd1600edc29f43195dcf95a6c5fc9b388
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 813e52dec03975c6573ed5eb75c7b5c3ed9bb9fd
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="visual-c-classes-in-class-designer"></a>クラス デザイナーの Visual C++ クラス
-クラス デザイナーは、C++ クラスをサポートし、Visual Basic および Visual C# クラスの図形と同じ方法でネイティブの C++ クラスを視覚化します。ただし、C++ クラスは複数の継承関係を持つことができる点が異なります。 クラスの図形を展開して、表示されるクラスのフィールドとメソッドを増やしたり、図形を折りたたんでスペースを節約したりすることができます。  
+クラス デザイナーは、C++ クラスをサポートし、Visual Basic および C# クラスの図形と同じ方法でネイティブの C++ クラスを視覚化します。ただし、C++ クラスは複数の継承関係を持つことができる点が異なります。 クラスの図形を展開して、表示されるクラスのフィールドとメソッドを増やしたり、図形を折りたたんでスペースを節約したりすることができます。  
   
 > [!NOTE]
 >  クラス デザイナーは、共用体 (共用体の最大データ メンバーに必要な量のメモリしか割り当てられない特殊なタイプのクラス) をサポートしていません。  
@@ -53,7 +57,7 @@ class Penguin : public Bird, public Swimmer {};
 > [!NOTE]
 >  **[派生クラスの表示]** コマンドは、C++ コードについてはサポートされていません。 派生クラスは、[クラス ビュー] を開き、型ノードを展開し、**[派生型]** サブフォルダーを展開してからこれらの型をクラス ダイアグラムにドラッグすると表示できます。  
   
-複数クラスの継承の詳細については、「[Multiple Inheritance](https://msdn.microsoft.com/en-us/library/6td5yws2.aspx)」 (多重継承) と「[Multiple Base Classes](/cpp/cpp/multiple-base-classes)」 (複数の基底クラス) を参照してください。  
+複数クラスの継承の詳細については、「[Multiple Inheritance](https://msdn.microsoft.com/library/6td5yws2.aspx)」 (多重継承) と「[Multiple Base Classes](/cpp/cpp/multiple-base-classes)」 (複数の基底クラス) を参照してください。  
   
 ## <a name="abstract-classes"></a>抽象クラス  
 クラス デザイナーは、抽象クラス ("抽象基底クラス" とも呼ばれます) をサポートしています。 これらは、インスタンス化されることはありませんが、他のクラスを派生させることができるクラスです。 このドキュメントで既に説明した "多重継承" の例を使用すると、次のように、`Bird` クラスを個々のオブジェクトとしてインスタンス化できます。  
@@ -166,11 +170,12 @@ typedef struct
 |------------------|-------------------------|  
 |`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {};`<br /><br /> `class A : C<int> {};`<br /><br /> `class D : C<float> {};`|`A`<br /><br /> クラス<br /><br /> ->C\<int><br /><br /> `C<int>`<br /><br /> クラス<br /><br /> `C<T>`<br /><br /> テンプレート クラス<br /><br /> `D`<br /><br /> クラス<br /><br /> ->C\<float>|  
 |`class B {`<br /><br /> `template <class T>`<br /><br /> `T min (const T &a, const T &b);`<br /><br /> `};`|`B`<br /><br /> min \<T>|  
-  
+
 ## <a name="see-also"></a>関連項目
-[Visual C++ コードの使用](working-with-visual-cpp-code.md)   
-[クラスと構造体](/cpp/cpp/classes-and-structs-cpp)   
-[匿名クラス型](/cpp/cpp/anonymous-class-types)   
-[多重継承](https://msdn.microsoft.com/en-us/library/6td5yws2.aspx)   
-[複数の基底クラス](/cpp/cpp/multiple-base-classes)   
+
+[Visual C++ コードの使用](working-with-visual-cpp-code.md)  
+[クラスと構造体](/cpp/cpp/classes-and-structs-cpp)  
+[匿名クラス型](/cpp/cpp/anonymous-class-types)  
+[多重継承](https://msdn.microsoft.com/library/6td5yws2.aspx)  
+[複数の基本クラス](/cpp/cpp/multiple-base-classes)  
 [テンプレート](/cpp/cpp/templates-cpp)

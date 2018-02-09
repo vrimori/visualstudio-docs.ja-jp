@@ -1,39 +1,64 @@
 ---
-title: "Office 365 Developer の特典"
+title: "Visual Studio サブスクリプションの Office 365 Developer 特典 | Microsoft Docs"
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
-Ms.date: 10/3/2017
+Ms.date: 11/12/2018
 Ms.topic: Get-Started-Article
-Description: Learn how to activate the Power BI Pro subscription included in your Visual Studio subscription.
+Description: Learn about the Office 365 Developer benefit included in your Visual Studio subscription.
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 2c0144daad1060ab4004804159fd1433cff6f820
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: 24d43f71aec3be05809fe79085cd7710f47f99ca
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="visual-studio-subscriptions---the-office-365-developer-subscription-benefit"></a>Visual Studio サブスクリプション: Office 365 Developer サブスクリプション特典
+# <a name="the-office-365-developer-subscription-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Office 365 Developer サブスクリプション特典
 
 ## <a name="overview"></a>概要
 
-Visual Studio Enterprise の標準または Visual Studio Enterprise の年間クラウド サブスクリプションのサブスクライバーは、Office 365 Developer サブスクリプション特典が受けられます。  Office 365 Developer サブスクリプションでは、サブスクライバーは Microsoft Office および Microsoft SharePoint のアドインの開発、テスト、および展開ができます。  この特典は、1 つのテナントと最大 25 ユーザーに適用できます。
+選択した Visual Studio Enterprise サブスクリプションのサブスクライバーは、Office 365 Developer サブスクリプション特典が受けられます。  Office 365 Developer サブスクリプションでは、Microsoft Office および Microsoft SharePoint のアドインの開発、テスト、および展開ができます。  この特典は、1 つのテナントと最大 25 ユーザーに適用できます。
 
-## <a name="activating-the-office-365-developer-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションで Office 365 Developer の特典をアクティブ化する
+## <a name="eligibility"></a>特典を受ける条件
+| サブスクリプション レベル/プログラム                                                  | 特長               | 更新可能かどうか                                                         |
+|-------------------------------------------------------------------------------|-----------------------|--------------------------------------------------------------------|
+| Visual Studio Enterprise Standard                                             | Included              |  [はい]                                                               |
+| Visual Studio Enterprise - 年間プラン                                               | Included              |  [はい]                                                               |
+| Visual Studio Enterprise - 月間プラン                                              | 使用できません         |                                                                    |
+| Visual Studio Professional Standard                                           | 使用できません         |                                                                    |
+| Visual Studio Professional - 年間プラン                                             | 使用できません         |                                                                    | 
+| Visual Studio Professional - 月間プラン                                            | 使用できません         |                                                                    |
+| Visual Studio Test Pro                                                        | 使用できません         |                                                                    |
+| MSDN Platforms                                                                | 使用できません         |                                                                    |
+| Visual Studio Dev Essentials                                                  | 使用できません         |                                                                    |
+| Visual Studio Enterprise - NFR<sup>1</sup>                                               | Included              |  [はい]                                                               |
+| Visual Studio Enterprise - FTE                                                | Included              |  [はい]                                                               |
+| Visual Studio Enterprise - Microsoft Partner Network                          | 使用できません         |                                                                    |
+| Visual Studio Professional - Microsoft Partner Network                        | 使用できません         |                                                                    |
+| Visual Studio Enterprise – Imagine (Standard)                                 | 使用できません         |                                                                    |
+| Visual Studio Enterprise – Imagine (Premium)                                  | 使用できません         |                                                                    |
+| Visual Studio Enterprise – BizSpark                                           | Included              |  [はい]                                                               |
+| マイクロソフト認定トレーナー - Software & Services                             | Included              |  [はい]                                                               |
+| マイクロソフト認定トレーナー - Software & Services Developer                   | Included              |  [はい]                                                               |
 
-1. [https://my.visualstudio.com](https://my.visualstudio.com) にアクセスして、サブスクリプション ポータルにサインインします。
+<sup>1</sup>  *Not for Resale (NFR)、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP) が含まれます。*  
+
+どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、電子メール アドレスに割り当てられているすべてのサブスクリプションを表示します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
+
+## <a name="activation-steps"></a>アクティブ化の手順
+
+1. Visit [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) to sign in to the subscriber portal.
 2. お使いのアカウントに応じて、組織のサインイン ページ、または Microsoft アカウントのサインイン ページのいずれかにリダイレクトされます。   いずれの場合も、ユーザー名とパスワードを入力して、**[次へ]** をクリックします。
 3. サインイン プロセスが完了したら、サブスクリプション特典のページが表示されます。  複数のサブスクリプションがある場合は、右上隅の黒のリボンの下にあるドロップダウン矢印をクリックして、サブスクリプション間で切り替えることができます。  Office 365 Developer サブスクリプション特典タイルは、[ツール] カテゴリにあります。  タイル行の右側にある矢印を使用して、Office タイルが表示されるまでスクロールします。 
-4. 特典タイルの下部にある **[コードの取得]** リンクをクリックします。   コードが取得されたら、**[アクティブ化]** をクリックします。 
+4. [ツール] セクションで Office 365 Developer サブスクリプション タイルを見つけます。  特典タイルの下部にある **[コードの取得]** リンクをクリックします。   コードが取得されたら、**[アクティブ化]** をクリックします。 
 
     ![Office 365 Developer 特典タイル](_img\vs-office-dev\vs-office-dev-tile.png)
 
 5.  次に、アカウントを作成します。  連絡先情報を入力して、**[次へ]** をクリックします。 
 
     ![Office 365 Developer 特典アカウント](_img\vs-office-dev\vs-office-dev-account-cropped.png)
-
 
 
 6.  サブスクリプションを使用する場所に関する要求された情報を入力し、**[次へ]** をクリックします。  この情報は、サブスクリプションの可用性と、適用される税金を決定するのに使用されます。  
@@ -55,24 +80,24 @@ Visual Studio Enterprise の標準または Visual Studio Enterprise の年間�
 
     ![Office 365 Developer 特典の外観](_img\vs-office-dev\vs-office-dev-price.png)
 
-11. "ステップ 3" の最終処理中に、"支払方法" の選択が求められます。  2 つの支払いオプションがあります。  1 番目のオプションは、(下に示すように) **クレジット カード**を追加し、2 番目のオプションは**請求書**です。  どちらの場合も、**[Place Order]\(発注\)** をクリックすることで、$0.00 の注文が送信されます。
+11. "ステップ 3" の最終処理中に、"支払方法" の選択が求められます。  2 つの支払いオプションがあります。  1 番目のオプションは、(下に示すように) **クレジット カード**を追加し、2 番目のオプションは**請求書**です。  どちらの場合も、**[Place Order]\(発注\)** をクリックすることで、$0.00 の注文が送信されます。   
 
-    注: クレジット カード番号の入力を望まないサブスクライバーは、**請求書**での支払方法を選択してください。  **年払い**を選択して、請求書の受け取りを 1 年に 1 回に制限することもできます。
- 
+> [!NOTE]
+> クレジット カード番号の入力を望まないサブスクライバーは、**請求書**での支払方法を選択してください。  **年払い**を選択して、請求書の受け取りを 1 年に 1 回に制限することもできます。
 
-    ![Office 365 Developer 特典の支払い](_img\vs-office-dev\vs-office-dev-credit-blur-cropped.png)
-
-
-12. この時点で、Office 365 Developer サブスクリプション特典が正常に引き換えられました。  注文の確認ページが表示されます。  ページには[サインイン ページ](https://portal.office.com "Office 365 サインイン ページ")へのリンクがあります。  後で使用できるように、このページをブックマークすることをお勧めします。  また、ページに表示されるユーザー ID を記録することもできます   (アカウントを設定すると、指定したアドレスに「ようこそ」メールも送信されます)。**[Start setup]\(セットアップを開始\)** をクリックして続行します。  
+12. この時点で、Office 365 Developer サブスクリプション特典が正常に引き換えらました。  注文の確認ページが表示されます。  ページには[サインイン ページ](https://portal.office.com "Office 365 サインイン ページ")へのリンクがあります。  後で使用できるように、このページをブックマークすることをお勧めします。  また、ページに表示されるユーザー ID を記録することもできます   (アカウントを設定すると、指定したアドレスに「ようこそ」メールも送信されます)。**[Start setup]\(セットアップを開始\)** をクリックして続行します。  
 
     ![Office 365 Developer 特典の注文の確認](_img\vs-office-dev\vs-office-dev-confirm.png)
 
+## <a name="faq"></a>FAQ
 
-## <a name="setting-up-the-office-365-developer-subscription-benefit"></a>Office 365 Developer サブスクリプション特典の設定
+### <a name="q--how-do-i-set-up-my-office-365-developer-subscription-once-its-been-activated"></a>Q: Office 365 Developer サブスクリプションがアクティブ化された後に設定するにはどうすればよいですか。
+A: Office 365 Developer サブスクリプション特典の設定
 
 1. Office 365 Developer サブスクリプション特典を設定するには、"ご注文ありがとうございます" ページから開始するか、後から [https://portal.office.com](https://portal.office.com) にアクセスして Office ポータルにサインインします。  この例では、確認ページの後に **[Start setup]\(セットアップを開始\)** を選択しています。
 
-注: https://portal.office.com にサインインするには、上記の手順 7 で作成した新しい Office 365 Developer サブスクリプションのユーザー ID を使用する必要があります。
+> [!NOTE]
+> https://portal.office.com にサインインするには、上記の手順 7 で作成した新しい Office 365 Developer サブスクリプションのユーザー ID を使用する必要があります。
 
 2. **[Start setup]\(セットアップを開始\)** をクリックすると、"ステップ 1" で、引き換えプロセス中に既に所有している既存のドメインに接続するか、テナントのセットアップを使用して継続することを求められます。  次の例では、"appsbyjane2017.onmicrosoft.com" ドメインを使用して続行することを選択しています。
 
@@ -102,13 +127,13 @@ Visual Studio Enterprise の標準または Visual Studio Enterprise の年間�
 7.  [ユーザー アカウント制御] ダイアログが表示されたら、**[はい]** をクリックしてコンピューターに Office のインストールを許可します。  
 
 
-## <a name="updating-the-number-of-users-from-the-office-365-admin-portal"></a>Office 365 管理ポータルからユーザーの数を更新する
-
-引き換えプロセス中に必要なユーザー数を割り当てず、後からこの数を増やす場合は、次の手順に従います。 
+### <a name="q-how-do-i-update-the-number-of-users-from-the-office-365-admin-portal"></a>Q: Office 365 管理ポータルからユーザーの数を更新するにはどうすればよいですか。
+A: 引き換えプロセス中に必要なユーザー数を割り当てず、後からこの数を増やす場合は、次の手順に従います。 
 
 1. 引き換えプロセスの完了後にユーザーを増やすには、[https://portal.office.com](https://portal.office.com) にアクセスして、テナントの作成手順で作成した "ユーザー ID" を使用してサインインする必要があります。
 
-注: サインイン情報が見つからない場合は、“Microsoft Online Service Team” からの “Order Confirmation:  Thank you for your purchase” (注文確認: ご購入ありがとうございます) という件名の注文確認メールをご覧ください。  または、“Body:(Office 365 Enterprise E3 Developer MSDN)” で受信トレイを検索することもできます。
+> [!NOTE]
+> サインイン情報が見つからない場合は、“Microsoft Online Service Team” からの “Order Confirmation:  Thank you for your purchase” (注文確認: ご購入ありがとうございます) という件名の注文確認メールをご覧ください。  または、“Body:(Office 365 Enterprise E3 Developer MSDN)” で受信トレイを検索することもできます。
 
 2. 正常にサインインしたら、**[管理者]** タイルを選択します。 "管理センター" にリダイレクトされます。
 
@@ -120,6 +145,10 @@ Visual Studio Enterprise の標準または Visual Studio Enterprise の年間�
 
 6. [サブスクリプション] ページに示されているように、[購入] の値が送信した値に一致します。
 
-注: [ユーザー総数] の値が 25 を超えると、エラーが発生します。
+> [!NOTE]
+> [ユーザー総数] の値が 25 を超えると、エラーが発生します。
 
-
+## <a name="support-resources"></a>サポート リソース
+-  Office Developer サブスクリプションのヘルプが必要ですか。 [Office Developer センター](https://developer.microsoft.com/office)で [サポート](https://developer.microsoft.com/office/support) リソースを確認してください。
+-  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)にお問い合わせください。
+-  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://www.visualstudio.com/support/)にアクセスしてください。 

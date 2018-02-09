@@ -12,20 +12,23 @@ helpviewer_keywords:
 - unit tests, and generics
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: a0acdea369d19c19c4edf9ca427801ba8df54e0a
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 61c4afb816d5cd0be3628d9c801f578a5210b4a2
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="unit-tests-for-generic-methods"></a>ジェネリック メソッドの単体テスト
-ジェネリック メソッドには、他のメソッドと同様に、単体テストを生成できます。詳細については、「[方法: 単体テストを作成して実行する](http://msdn.microsoft.com/en-us/5e0f43cf-5e51-48e2-9c98-0eb9324bdc48)」を参照してください。 次のセクションでは、ジェネリック メソッドの単体テストの作成に関する情報と例を示します。  
-  
-## <a name="type-arguments-and-type-constraints"></a>型引数と型制約  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で、`MyList<T>` など、ジェネリック クラスの単体テストが生成されると、ジェネリック ヘルパー メソッドとテスト メソッドの 2 つのメソッドが生成されます。 `MyList<T>` に 1 つ以上の型制約がある場合、型引数はすべての型制約を満たす必要があります。 テスト対象のジェネリック コードが許容されたすべての入力に対して予想どおりに動作することを確認するには、テスト メソッドで、テストするすべての制約を指定して、ジェネリック ヘルパー メソッドを呼び出します。  
-  
+
+ジェネリック メソッドには、他のメソッドと同様に単体テストを生成できます。 次のセクションでは、ジェネリック メソッドの単体テストの作成に関する情報と例を示します。
+
+## <a name="type-arguments-and-type-constraints"></a>型引数と型制約
+
+Visual Studio で、`MyList<T>` など、ジェネリック クラスの単体テストが生成されると、ジェネリック ヘルパー メソッドとテスト メソッドの 2 つのメソッドが生成されます。 `MyList<T>` に 1 つ以上の型制約がある場合、型引数はすべての型制約を満たす必要があります。 テスト対象のジェネリック コードが許容されたすべての入力に対して予想どおりに動作することを確認するには、テスト メソッドで、テストするすべての制約を指定して、ジェネリック ヘルパー メソッドを呼び出します。
+
 ## <a name="examples"></a>使用例  
  ジェネリックの単体テストの例を次に示します。  
   
@@ -197,6 +200,6 @@ namespace ClassLibrary2
 }  
 ```  
   
-## <a name="see-also"></a>参照  
- [単体テストの構造](http://msdn.microsoft.com/en-us/a03d1ee7-9999-4e7c-85df-7d9073976144)   
- [コードの単体テスト](../test/unit-test-your-code.md)
+## <a name="see-also"></a>関連項目
+
+[コードの単体テスト](../test/unit-test-your-code.md)

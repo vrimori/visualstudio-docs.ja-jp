@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 12/08/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +14,17 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: f648f07923117b89278ba0e5f44e351b923f7c26
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- dotnet
+ms.openlocfilehash: da2e236c39cce72670a47212aedabb87afa4d217
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-target-a-version-of-the-net-framework"></a>方法: .NET Framework のバージョンをターゲットにする
 
-このドキュメントでは、プロジェクトを作成するときに特定のバージョンの .NET Framework を対象とする方法と、既存の Visual Basic、Visual C#、または Visual F# プロジェクトの中で対象のバージョンを変更する方法を説明します。
+このドキュメントでは、プロジェクトを作成するときに特定のバージョンの .NET Framework を対象とする方法と、既存の Visual Basic、C#、または Visual F# プロジェクトの中で対象のバージョンを変更する方法を説明します。
 
 > [!IMPORTANT]
 > C++ プロジェクトのターゲット バージョンを変更する方法については、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)」を参照してください。
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="changing-the-target-version"></a>ターゲット バージョンの変更
 
-次の手順で、Visual Basic、Visual C#、または Visual F# プロジェクトの対象とする .NET Framework バージョンを変更できます。
+次の手順で、Visual Basic、C#、または Visual F# プロジェクトの対象とする .NET Framework バージョンを変更できます。
 
 C++ プロジェクトのターゲット バージョンを変更する方法については、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)」を参照してください。
 
