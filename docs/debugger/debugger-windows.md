@@ -15,14 +15,15 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fc526231ef92fd1cacd384cd48089fa97c59320
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.openlocfilehash: 0ff4b731f703d8237b338dbce821fa7e00c39e3d
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="learn-about-debugger-windows-in-visual-studio"></a>Visual Studio のデバッガー ウィンドウについてください。
-プログラムのデバッグ中に、ほとんどのデバッガー ウィンドウを開くことができます。 デバッガー ウィンドウの一覧を表示するには、ブレークポイントを設定し、デバッグを開始します。 ブレークポイントと実行の終了位置をヒットしたときにクリックして**デバッグ > Windows**です。  
+
+プログラムのデバッグ中に、ほとんどのデバッガー ウィンドウを開くことができます。 デバッガー ウィンドウの一覧を表示するには、ブレークポイントを設定し、デバッグを開始します。 ブレークポイントと実行の終了位置をヒットしたときにクリックして**デバッグ > Windows**です。
 
 ||||
 |-|-|-|
@@ -39,10 +40,10 @@ ms.lasthandoff: 02/01/2018
 |並列スタック|Ctrl + Shift + D、S|[[並列スタック] ウィンドウの使用](../debugger/using-the-parallel-stacks-window.md)|
 |並列ウォッチ|Ctrl + Shift + D、(1、2、3、4)|[取得マルチ スレッド アプリケーションのデバッグの開始](../debugger/get-started-debugging-multithreaded-apps.md)|
 |スレッド|Ctrl + Alt + H|[[スレッド] ウィンドウを使用したデバッグします。](../debugger/how-to-use-the-threads-window.md)|
-|モジュール|Ctrl + Alt + U|[方法 : [モジュール] ウィンドウを使用する](../debugger/how-to-use-the-modules-window.md)| 
+|モジュール|Ctrl + Alt + U|[方法 : [モジュール] ウィンドウを使用する](../debugger/how-to-use-the-modules-window.md)|
 |GPU スレッド|-|[方法: GPU スレッド ウィンドウを使用する](../debugger/how-to-use-the-gpu-threads-window.md)|
-|[タスク]|Ctrl + Shift + D、K|[[タスク] ウィンドウの使用](../debugger/using-the-tasks-window.md)| 
-|Python 対話形式デバッグ|Shift + Alt + I|[PTVS の概要: 対話型の Python](../python/python-interactive-repl-in-visual-studio.md)
+|[タスク]|Ctrl + Shift + D、K|[[タスク] ウィンドウの使用](../debugger/using-the-tasks-window.md)|
+|Python 対話形式デバッグ|Shift + Alt + I|[Python 対話型 REPL](../python/interactive-repl.md)|
 |JavaScript コンソール|Ctrl + Alt + V、C|[クイック スタート: JavaScript をデバッグします。](../debugger/quickstart-debug-javascript-using-the-console.md)|
 |DOM Explorer|Ctrl + Alt + V、D|[DOM Explorer を使用したレイアウトのデバッグ](../debugger/debug-layout-using-dom-explorer.md)|
 |ライブ ビジュアル ツリー|-|[デバッグ中にXAML のプロパティを調べる](../debugger/inspect-xaml-properties-while-debugging.md)|
@@ -52,5 +53,6 @@ ms.lasthandoff: 02/01/2018
 |逆アセンブリ|Ctrl + Alt + D|[方法 : [逆アセンブル] ウィンドウを使用する](../debugger/how-to-use-the-disassembly-window.md)|
 |レジスタ|Ctrl + Alt + G|[方法: [レジスタ] ウィンドウを使用する](../debugger/how-to-use-the-registers-window.md)|
 
-## <a name="see-also"></a>参照  
- [デバッガーの基本事項](../debugger/debugger-basics.md)
+## <a name="see-also"></a>参照
+
+[デバッガーの基本事項](../debugger/debugger-basics.md)

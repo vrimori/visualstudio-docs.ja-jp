@@ -7,19 +7,21 @@ ms.suite:
 ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.projectpropertypages.codeanalysis
+f1_keywords:
+- vs.projectpropertypages.codeanalysis
 helpviewer_keywords:
 - code analysis, managed code
 - managed code, code analysis
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 8739c5aafbc8914e3de5f0a51659b40234fa079c
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5d30f84194ef7a48de106698c9ad4569e947923c
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="code-analysis-for-managed-code-overview"></a>マネージ コードの概要のコード分析
 
@@ -39,11 +41,11 @@ ms.lasthandoff: 01/22/2018
 
 マネージ コードのコード分析規則がまとめられて*ルール セット*です。 Microsoft の標準の規則セットのいずれかを使用するか、特定のニーズを満たす独自の規則セットを作成することができます。 詳細については、次を参照してください。[ルール セットのコード分析規則のグループを使用して](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)です。
 
-## <a name="in-source-suppression"></a>ソース内抑制
+## <a name="suppress-warnings"></a>[警告の表示なし]
 
 警告が適用されないことを示すと役に立つことがよくあります。 これによって、開発者や、そのコードを後でレビューする担当者は、その警告が既に調査済みであり、抑制されるのかまたは無視されるのかがわかります。
 
-ソース内の警告の抑制は、カスタム属性を介して実装されます。 警告を抑制するには、次の例のように、属性 `SuppressMessage` をソース コードに追加します。
+警告のソース内抑制は、カスタム属性を介して実装されます。 警告を抑制するには、次の例のように、属性 `SuppressMessage` をソース コードに追加します。
 
 ```csharp
 [System.Diagnosis.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]
@@ -53,7 +55,10 @@ Public class MyClass
 }
 ```
 
-詳細については、次を参照してください。[抑制する状況の警告を使用して、SuppressMessage 属性](../code-quality/suppress-warnings-by-using-the-suppressmessage-attribute.md)です。
+詳細については、次を参照してください。[警告を抑制する](../code-quality/in-source-suppression-overview.md)です。
+
+> [!NOTE]
+> Visual Studio 2017 にプロジェクトを移行する場合に、コード分析の警告の手に負えないものの数が直面突然可能性があります。 警告を修正し、コード分析を一時的にオフにする準備ができていない場合は、プロジェクトのプロパティ ページを開きます (**プロジェクト** > ***プロジェクト*プロパティ...**) に移動し、**コード分析**タブです。選択を解除**ビルドに対するコード分析を有効にする**、プロジェクトをリビルドします。 または、設定をコードに対して実行する別、小規模なルールを選択することができます。 警告を解決する準備ができたらにコード分析を有効にしてください。
 
 ## <a name="run-code-analysis-as-part-of-check-in-policy"></a>チェックイン ポリシーの一部としてのコード分析の実行
 

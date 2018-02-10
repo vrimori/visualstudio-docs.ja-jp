@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Domain-Specific Language
+helpviewer_keywords:
+- Domain-Specific Language
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: f98b65fbb732b6736c91c605f03b7f2de2325487
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 9357c55b204d521eb5cd77af328636485c490ff4
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="about-domain-specific-languages"></a>ドメイン固有言語について
 
@@ -53,7 +55,7 @@ DSL を定義したときに、自分のコンピューターにインストー�
   
 通常、ドメイン固有言語では、いくつかの製品のようなコードを記述する開発チームがある場合は作成されます。 たとえば、荷物取り扱いシステムに特化した会社では、荷物トラック DSL 元となるため、生成されるいくつかのインストールごとにコードを定義できます。 DSL の利点は、することによって認識できる、お客様から生成されたコードが信頼性が高くとする、システムを迅速を更新すること、お客様の要件を変更する場合です。  
   
-[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]独自のグラフィカルなデザイナーと、独自の図の表記法を持つドメイン固有言語を作成し、各プロジェクトの適切なソース コードを生成する言語を使用できます。  
+[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 独自のグラフィカルなデザイナーと、独自の図の表記法を持つドメイン固有言語を作成し、各プロジェクトの適切なソース コードを生成する言語を使用できます。  
   
 ## <a name="domain-specific-development"></a>ドメイン固有の開発
 

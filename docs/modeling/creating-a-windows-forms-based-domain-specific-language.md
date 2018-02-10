@@ -4,17 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 2aaa2426d506f9c498c4428bc0e7f4e8134ac1ab
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 7eb6bc6542350439250ace3dbaa7f2ba920e93ed
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-a-windows-forms-based-domain-specific-language"></a>Windows フォームに基づくドメイン固有言語の作成
 Windows フォームを使用すると、DSL 図を使用する代わりに、ドメイン固有言語 (DSL) モデルの状態を表示します。 このトピックを紹介 DSL への Windows フォームのバインドを使用して、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK。  
@@ -123,13 +124,13 @@ Windows フォーム UI とモデル エクスプ ローラーを示す DSL イ�
   
 2.  選択**オブジェクト**、**次**です。  
   
-     展開**Dsl**、 **Company.FarmApp**を選択して**ファーム**、これは、モデルのルート クラスです。 選択**完了**です。  
+     展開**Dsl**、 **Company.FarmApp**を選択して**ファーム**、これは、モデルのルート クラスです。 **[完了]** を選択します。  
   
      ソリューション エクスプ ローラーで、 **UI**プロジェクトが含まれています**Properties\DataSources\Farm.datasource**  
   
      プロパティと、モデル クラスの関係は、データ ソース ウィンドウに表示されます。  
   
-     ![DslWpf &#45; 3](../modeling/media/dslwpf-3.png "DslWpf 3")  
+     ![DslWpf&#45;3](../modeling/media/dslwpf-3.png "DslWpf-3")  
   
 #### <a name="to-connect-your-model-to-a-form"></a>フォームに、モデルを接続するには  
   

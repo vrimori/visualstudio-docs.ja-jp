@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -12,16 +13,17 @@ helpviewer_keywords:
 - toolbox
 - wpf
 ms.assetid: 9cc34db9-b0d1-4951-a02f-7537fbbb51ad
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 0bc83d29eb076b70be5c9192acdbe39e301a6f16
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- vssdk
+ms.openlocfilehash: c1a8338f0ebd964e5d039ffa8dff000a441523f8
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-a-wpf-toolbox-control"></a>WPF ツールボックス コントロールの作成
 WPF (Windows Presentation Framework) ツールボックス コントロール テンプレートを使用に自動的に追加されている WPF コントロールを作成する、**ツールボックス**拡張機能がインストールされている場合。 このトピックは、テンプレートを使用して作成する方法を示しています、**ツールボックス**コントロールを他のユーザーに配布することができます。  
@@ -61,7 +63,7 @@ WPF (Windows Presentation Framework) ツールボックス コントロール �
   
 1.  MyToolboxControl.xaml.cs をコード ビューで開きます。  
   
-2.  MyToolboxControl クラスを検索しに変更します。 (これを行う最も簡単な方法は、クラスの名前を変更するを選択し、**の名前を変更**コンテキスト メニューから、手順に従います。 (詳細については、**の名前を変更**コマンドを参照してください[名前の変更リファクタリング (c#)](../ide/reference/rename-csharp.md))。
+2.  MyToolboxControl クラスを検索しに変更します。 (これを行う最も簡単な方法は、クラスの名前を変更するを選択し、**の名前を変更**コンテキスト メニューから、手順に従います。 (詳細については、**の名前を変更**コマンドを参照してください[名前の変更リファクタリング (c#)](../ide/reference/rename.md))。
   
 3.  移動して、`ProvideToolboxControl`属性への最初のパラメーターの値を変更して**テスト**です。 これでコントロールを配置するグループの名前、**ツールボックス**です。  
   

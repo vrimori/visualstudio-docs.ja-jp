@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 09/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text templates, TextTransform utility
@@ -12,12 +11,14 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: de8564aa1743ed22ff4a600d9bf655bbb4adaed4
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: b7816e11c431f17336955f2037d288641b6c3ad5
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="generating-files-with-the-texttransform-utility"></a>TextTransform ユーティリティを使用したファイルの生成
 TextTransform.exe は、テキスト テンプレートを変換するのに使用できるコマンド ライン ツールです。 TextTransform.exe を呼び出すときに、引数として、テキスト テンプレート ファイルの名前を指定します。 TextTransform.exe は、テキスト変換エンジンを呼び出し、テキスト テンプレートを処理します。 TextTransform.exe は通常、スクリプトから呼び出されます。 ただし、これは通常必要ありません、テキスト変換を実行するには、Visual Studio で、または、ビルド処理のためです。  
@@ -37,7 +38,7 @@ Professional edition、または
 
 Visual Studio の以前のバージョンで、次の場所にファイルが見つかりました。
 
-**\Program files (x86) \common Shared\TextTemplating\{バージョン}**
+**\Program Files (x86)\Common Files\Microsoft Shared\TextTemplating\{version}**
 
 ここで {のバージョン} は、インストールされている以前のバージョンに依存します。
 
@@ -55,13 +56,13 @@ TextTransform [<options>] <templateName>
   
 |**オプション**|**説明**|  
 |----------------|---------------------|  
-|**-アウト**\<ファイル名 >|変換の出力の書き込み先となるファイル。|  
-|**-r** \<アセンブリ >|アセンブリをコンパイルすると、テキスト テンプレートを実行するために使用します。|  
-|**-u** \<名前空間 >|テンプレートのコンパイルに使用される名前空間です。|  
-|**-I** \<includedirectory >|指定されたテキスト テンプレートに含まれるテキスト テンプレートを格納するディレクトリ。|  
-|**-P** \<referencepath >|またはを使用してテキスト テンプレート内で指定されたアセンブリを検索するディレクトリを**-r**オプション。<br /><br /> たとえば、Visual Studio API を使用するアセンブリは、次のように使用します。<br /><br /> `-P "%VSSHELLFOLDER%\Common7\IDE\PublicAssemblies"`|  
-|**-dp** \<processorName >!\<クラス名 >!\<assemblyName &#124; codeBase >|名前、完全な型名と、テキスト テンプレート内のカスタム ディレクティブの処理に使用できるディレクティブ プロセッサのアセンブリ。|  
-|**-** [processorName] です [。directiveName] です。\<parameterName >!\<parameterValue >|ディレクティブ プロセッサのパラメーターの値を指定します。 パラメーター名と値のみを指定する場合、パラメーターはすべてのディレクティブ プロセッサを使用可能になります。 ディレクティブ プロセッサを指定する場合はこのパラメーターは指定したプロセッサでのみ使用できます。 ディレクティブ名を指定する場合、パラメーターの値は指定されたディレクティブが処理されている場合にのみ使用できます。<br /><br /> ディレクティブ プロセッサまたはテキスト テンプレートからパラメーター値にアクセスする<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost.ResolveParameterValue%2A>です。 テキスト テンプレートで、含める`hostspecific`、template ディレクティブのに対して、メッセージを呼び出すと`this.Host`です。 例:<br /><br /> `<#@template language="c#" hostspecific="true"#> [<#= this.Host.ResolveParameterValue("", "", "parameterName") #>]`。<br /><br /> 常に入力、'!' の省略可能なプロセッサとディレクティブの名前を省略した場合でもをマークします。 例:<br /><br /> `-a !!param!value`|  
+|**-out** \<filename>|変換の出力の書き込み先となるファイル。|  
+|**-r** \<assembly>|アセンブリをコンパイルすると、テキスト テンプレートを実行するために使用します。|  
+|**-u** \<namespace>|テンプレートのコンパイルに使用される名前空間です。|  
+|**-I** \<includedirectory>|指定されたテキスト テンプレートに含まれるテキスト テンプレートを格納するディレクトリ。|  
+|**-P** \<referencepath>|またはを使用してテキスト テンプレート内で指定されたアセンブリを検索するディレクトリを**-r**オプション。<br /><br /> たとえば、Visual Studio API を使用するアセンブリは、次のように使用します。<br /><br /> `-P "%VSSHELLFOLDER%\Common7\IDE\PublicAssemblies"`|  
+|**-dp** \<processorName>!\<className>!\<assemblyName&#124;codeBase>|名前、完全な型名と、テキスト テンプレート内のカスタム ディレクティブの処理に使用できるディレクティブ プロセッサのアセンブリ。|  
+|**-a** [processorName]![directiveName]!\<parameterName>!\<parameterValue>|ディレクティブ プロセッサのパラメーターの値を指定します。 パラメーター名と値のみを指定する場合、パラメーターはすべてのディレクティブ プロセッサを使用可能になります。 ディレクティブ プロセッサを指定する場合はこのパラメーターは指定したプロセッサでのみ使用できます。 ディレクティブ名を指定する場合、パラメーターの値は指定されたディレクティブが処理されている場合にのみ使用できます。<br /><br /> ディレクティブ プロセッサまたはテキスト テンプレートからパラメーター値にアクセスする<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost.ResolveParameterValue%2A>です。 テキスト テンプレートで、含める`hostspecific`、template ディレクティブのに対して、メッセージを呼び出すと`this.Host`です。 例:<br /><br /> `<#@template language="c#" hostspecific="true"#> [<#= this.Host.ResolveParameterValue("", "", "parameterName") #>]`。<br /><br /> 常に入力、'!' の省略可能なプロセッサとディレクティブの名前を省略した場合でもをマークします。 例:<br /><br /> `-a !!param!value`|  
 |**-h**|ヘルプを提供します。|  
   
 ## <a name="related-topics"></a>関連トピック  

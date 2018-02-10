@@ -4,19 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.dsltools.dsldesigner.elementmergedirective
-helpviewer_keywords: Domain-Specific Language, element merge directives
+f1_keywords:
+- vs.dsltools.dsldesigner.elementmergedirective
+helpviewer_keywords:
+- Domain-Specific Language, element merge directives
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0310821ab2968f0709b002166d188a4ebc4c2ff4
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: ac29f7b745c9698f6051bce6a7b54a1476bf8a7c
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customizing-element-creation-and-movement"></a>要素作成処理および要素移動処理のカスタマイズ
 要素にドラッグすること、ツールボックスから、または貼り付けの操作または移動を許可できます。 指定したリレーションシップを使用して移動された要素をターゲット要素にリンクされていることができます。  
@@ -37,7 +40,7 @@ ms.lasthandoff: 01/13/2018
   
  EMD の責任では、どのオブジェクトまたはオブジェクトのグループにマージするモデルの特定の場所を決定します。 具体的には、マージされたグループをモデルにリンクするどのようなリレーションシップをインスタンス化する必要がありますを決定します。 プロパティを設定して、その他のオブジェクトを作成することをカスタマイズすることもできます。  
   
- ![DSL &#45;EMD &#95;です。マージ](../modeling/media/dsl-emd_merge.png "DSL EMD_Merge")  
+ ![DSL&#45;EMD&#95;Merge](../modeling/media/dsl-emd_merge.png "DSL-EMD_Merge")  
 要素のマージ ディレクティブの役割  
   
  埋め込みリレーションシップを定義するとき、EMD が自動的に生成されます。 この既定 EMD は、ユーザーが親に子の新しいインスタンスを追加するときに、リレーションシップのインスタンスを作成します。 カスタム コードを追加することによってたとえば既定入力例: でこれらを変更できます。  
@@ -47,7 +50,7 @@ ms.lasthandoff: 01/13/2018
 ## <a name="defining-an-element-merge-directive"></a>要素のマージ ディレクティブを定義します。  
  ドメイン クラス、ドメインの関係、図形、コネクタ、およびダイアグラムには、要素マージ ディレクティブを追加できます。 追加したり、受信側のドメイン クラスは、DSL のエクスプ ローラーで確認できます。 受信側のクラスは、モデルでは、新規またはコピーした要素をマージするのには、既に要素のドメイン クラス。  
   
- ![DSL &#45;EMD &#95; 詳細](../modeling/media/dsl-emd_details.png "DSL EMD_Details")  
+ ![DSL&#45;EMD&#95;Details](../modeling/media/dsl-emd_details.png "DSL-EMD_Details")  
   
  **インデックス クラス**を受け取るクラスのメンバーにマージできる要素のドメイン クラスです。 インデックス作成クラスのサブクラスのインスタンスもマージされますこの EMD で設定する場合を除き、**サブクラスに適用されます**を False にします。  
   

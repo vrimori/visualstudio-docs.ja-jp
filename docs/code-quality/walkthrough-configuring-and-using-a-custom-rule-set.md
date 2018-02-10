@@ -14,11 +14,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: b9a7046930d12ebb940820eb25c4563b0a3213e3
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: b72a86f10c6e864406929fdccfb59bdd9393752e
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="walkthrough-configuring-and-using-a-custom-rule-set"></a>チュートリアル: カスタム規則セットの構成と使用
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/01/2018
   
 2.  [エラー一覧] ウィンドウ**警告**をクリックし、**説明**列を並べ替えるヘッダーを警告英数字順です。  
   
-     実際のアプリケーションではこの時点では、修正する必要のルール違反の修正または必要に応じてをオフにするまたはしたすべき解決されなかったことを確認する場合は、ルールを抑制します。 詳細については、次を参照してください。[抑制する状況の警告を使用して、SuppressMessage 属性](../code-quality/suppress-warnings-by-using-the-suppressmessage-attribute.md)です。  
+     実際のアプリケーションではこの時点では、修正する必要のルール違反の修正または必要に応じてをオフにするまたはしたすべき解決されなかったことを確認する場合は、ルールを抑制します。 詳細については、次を参照してください。[警告を抑制する](../code-quality/in-source-suppression-overview.md)です。
   
 3.  Ca 1704 警告に注意してください。 このルールでこの規則違反を示すを検討してください"のパラメーターのわかりやすい名前を指定する" コードで、問題を解決する可能性がありますか、次の手順で説明するよう、ルールを無効にすることができます。  
   

@@ -1,5 +1,5 @@
 ---
-title: "SuppressMessage 属性を使用して、Visual Studio でコード分析警告の抑制 |Microsoft ドキュメント"
+title: "Visual Studio でコード分析の警告を抑制する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 01/29/2018
 ms.reviewer: 
@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 4cd3800e082673e9478eb32c6ae5627eef4d7e81
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: 5862b164c72c8f07c78db8948face95edfde357c
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="suppressing-code-analysis-warnings"></a>コード分析警告の抑制
 
@@ -34,6 +34,9 @@ C + + CLI、CA のマクロを使用\_抑制\_メッセージまたは CA\_グ�
 
 > [!NOTE]
 > ソース内抑制メタデータを誤って配布を防ぐために、リリース ビルドのソース内抑制を使用する必要がありますできません。 さらに、ソース内抑制の処理コストのため、アプリケーションのパフォーマンスが低下することができます。
+
+> [!NOTE]
+> Visual Studio 2017 にプロジェクトを移行する場合に、コード分析の警告の手に負えないものの数が直面突然可能性があります。 警告を修正し、コード分析を一時的にオフにする準備ができていない場合は、プロジェクトのプロパティ ページを開きます (**プロジェクト** > ***プロジェクト*プロパティ...**) に移動し、**コード分析**タブです。選択を解除**ビルドに対するコード分析を有効にする**、プロジェクトをリビルドします。 または、設定をコードに対して実行する別、小規模なルールを選択することができます。 警告を解決する準備ができたらにコード分析を有効にしてください。
 
 ## <a name="suppressmessage-attribute"></a>SuppressMessage 属性
 
@@ -95,7 +98,7 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 抑制属性は、メソッドに適用できますが、メソッド本体に埋め込むことはできません。 これを追加する場合に特定のルールのすべての違反を抑制することを意味、<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>属性をメソッドにします。
 
-場合によっては、将来のコードが自動的にコード分析規則から除外されていないように例については、違反の特定のインスタンスを抑制する場合があります。 これは、使用することは特定のコード分析規則、`MessageId`のプロパティ、<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>属性。 一般に、従来の規則の違反 (ローカル変数またはパラメーター) の特定のシンボル敬意を`MessageId`プロパティです。 [CA1500:VariableNamesShouldNotMatchFieldNames](../code-quality/ca1500-variable-names-should-not-match-field-names.md) is an example of such a rule. ただし、実行可能コード (非シンボル) に違反のレガシ規則を使用しない、`MessageId`プロパティです。 さらに、Roslyn アナライザーを使用しない、`MessageId`プロパティです。
+場合によっては、将来のコードが自動的にコード分析規則から除外されていないように例については、違反の特定のインスタンスを抑制する場合があります。 これは、使用することは特定のコード分析規則、`MessageId`のプロパティ、<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>属性。 一般に、従来の規則の違反 (ローカル変数またはパラメーター) の特定のシンボル敬意を`MessageId`プロパティです。 [CA1500:VariableNamesShouldNotMatchFieldNames](../code-quality/ca1500-variable-names-should-not-match-field-names.md) is an example of such a rule. ただし、実行可能コード (非シンボル) に違反のレガシ規則を使用しない、`MessageId`プロパティです。 さらに、.NET コンパイラ プラットフォーム ("Roslyn") アナライザーを使用しない、`MessageId`プロパティです。
 
 規則の特定のシンボルの違反を抑制するのにはシンボルの名前を指定、`MessageId`のプロパティ、<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>属性。 次の例では、コードの 2 つの違反を[CA1500:VariableNamesShouldNotMatchFieldNames](../code-quality/ca1500-variable-names-should-not-match-field-names.md)&mdash;のいずれか、`name`変数と 1 つずつ、`age`変数。 違反のみ、`age`シンボルを非表示にします。
 

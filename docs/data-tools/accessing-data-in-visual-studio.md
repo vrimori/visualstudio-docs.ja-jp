@@ -6,27 +6,29 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: "80025080"
+f1_keywords:
+- "80025080"
 helpviewer_keywords:
 - data [Visual Studio]
 - data access [Visual Studio]
 - data [C#]
 - ADO.NET, data access
-caps.latest.revision: "100"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: c3777249948ba4be917de4ec6c139e7a15bce0a7
-ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
+ms.workload:
+- data-storage
+ms.openlocfilehash: 7ccee10630a4b5de0aebf361c7acf6cccf8cf49c
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-data-in-visual-studio"></a>Visual Studio でのデータにアクセスします。
 
-Visual Studio で、ほぼすべてのデータベース製品または任意の形式で、任意の場所のサービスのデータに接続するアプリケーションを作成することができます、ローカル コンピューターのローカル エリア ネットワーク、またはパブリック、プライベート、またはハイブリッド クラウド。
+Visual Studio で、ほぼすべてのデータベース製品または任意の形式で、任意の場所のサービスのデータに接続するアプリケーションを作成することができます、[ローカル コンピューターのローカル エリア ネットワーク、またはパブリック、プライベート、またはハイブリッド クラウド。
 
 JavaScript、Python、PHP、Ruby、または C++ では、アプリケーションのデータに接続するには、何でもしてライブラリを取得するコードの記述と同じようにします。 .NET アプリケーションの場合は、Visual Studio は、データ ソースの探索を格納し、メモリ内のデータを操作およびユーザー インターフェイスにデータをバインドするオブジェクト モデルを作成し、使用できるツールを提供します。 Microsoft Azure は、Azure ストレージに接続するため、.NET、Java、Node.js、PHP、Python、Ruby、およびモバイル アプリ、および Visual Studio のツールの Sdk を提供します。
 
@@ -36,8 +38,8 @@ JavaScript、Python、PHP、Ruby、または C++ では、アプリケーショ�
 
 ||||
 |-|-|-|
-|SQL データベース|DocumentDB|ストレージ (blob、テーブル、キュー、ファイル)|
-|SQL データ ウェアハウス|SQL Server Stretch Database|StorSimple|
+|SQL Database|DocumentDB|ストレージ (blob、テーブル、キュー、ファイル)|
+|SQL Data Warehouse|SQL Server Stretch Database|StorSimple|
 
 その他
 
@@ -86,11 +88,9 @@ ADO.NET で使用できるようにするデータベースの場合がありま
 
 .NET には、モデリングおよびそのデータ ソースから取得した後、メモリ内のデータを操作するための 3 つの選択肢があります。
 
-[Entity Framework](../data-tools/entity-data-model-tools-in-visual-studio.md)  
-推奨される Microsoft ORM テクノロジです。 リレーショナル データをプログラミングするファースト クラスの .NET オブジェクトとして使用することができます。 新しいアプリケーションの場合、モデルが必要な場合に最初の既定の選択肢をことがします。 これには、基になる ADO.NET プロバイダーからカスタムのサポートが必要です。
+[Entity Framework](../data-tools/entity-data-model-tools-in-visual-studio.md)推奨される Microsoft ORM テクノロジです。 リレーショナル データをプログラミングするファースト クラスの .NET オブジェクトとして使用することができます。 新しいアプリケーションの場合、モデルが必要な場合に最初の既定の選択肢をことがします。 これには、基になる ADO.NET プロバイダーからカスタムのサポートが必要です。
 
-[LINQ to SQL](../data-tools/linq-to-sql-tools-in-visual-studio2.md)  
-以前生成オブジェクト リレーショナル マッパーです。 小さい複雑なシナリオに適してが、アクティブな開発ではなくなった。
+[LINQ to SQL](../data-tools/linq-to-sql-tools-in-visual-studio2.md)以前生成オブジェクト リレーショナル マッパーです。 小さい複雑なシナリオに適してが、アクティブな開発ではなくなった。
 
 [データセット](../data-tools/dataset-tools-in-visual-studio.md)  
 次の 3 つのモデリング テクノロジの最も古いします。 主にすることがなく大量のデータの処理、複雑なクエリや変換を実行する「フォーム オーバー データ」アプリケーションの迅速な開発されています。 DataSet オブジェクトは、論理的に .NET オブジェクトよりはるかに多くの SQL データベース オブジェクトのように DataTable と DataRow のオブジェクトで構成されます。 比較的単純なアプリケーションの SQL データ ソースに基づいた、データセットに、適切な選択可能性があります。
@@ -115,39 +115,31 @@ C++ アプリからデータベースへの接続に関する詳細について�
 
 ## <a name="python"></a>Python
 
-インストール[Python Tools for Visual Studio](http://microsoft.github.io/PTVS/)と共に、お気に入りの Python フレームワーク CPython、IronPython (.NET) またはアプリケーションを作成します。 Python Tools for Visual Studio の web サイトがなどのデータへの接続に関するいくつかのチュートリアル[Django、SQL Database on Azure](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)、 [Django、Azure の MySQL](https://github.com/Microsoft/PTVS/wiki/Django-and-MySQL-on-Azure)と[水筒と MongoDB のAzure](https://github.com/Microsoft/PTVS/wiki/Bottle-and-MongoDB-on-Azure)です。
+インストール[Visual Studio での Python サポート](../python/python-in-visual-studio.md)Python アプリケーションを作成します。 Azure のドキュメントでは、データは、次のように接続するいくつかのチュートリアルがあります。
+- [Django、Azure 上の SQL データベース](/azure/app-service/app-service-web-get-started-python)
+- [Django、Azure の MySQL](/azure/app-service-web/web-sites-python-ptvs-django-mysql)
+- 扱う[blob](/azure/storage/blobs/storage-quickstart-blobs-python)、[ファイル](/azure/storage/files/storage-python-how-to-use-file-storage)、[キュー](/azure/storage/queues/storage-python-how-to-use-queue-storage)、および[テーブル (Cosmo DB)](/azure/cosmos-db/table-storage-how-to-use-python)です。
 
 ## <a name="related-topics"></a>関連トピック
 
-[データ、デバイス、および分析](https://msdn.microsoft.com/data-and-devices)  
-Cortana Analytics Suite、モ ノのインターネットのサポートなど、マイクロソフトのインテリジェントなクラウドの概要を提供します。
+[データ、デバイス、および分析](https://msdn.microsoft.com/data-and-devices)Cortana Analytics Suite、モ ノのインターネットのサポートなど、マイクロソフトのインテリジェントなクラウドの概要について説明します。
 
-[Microsoft Azure ストレージ](https://azure.microCsoft.com/documentation/services/storage/)  
-Azure ストレージ、および Azure blob、テーブル、キュー、およびファイルを使用してアプリケーションを作成する方法について説明します。
+[Microsoft Azure Storage](https://azure.microCsoft.com/documentation/services/storage/) Azure ストレージの説明、および Azure blob、テーブル、キュー、およびファイルを使用してアプリケーションを作成する方法です。
 
-[Azure SQL データベース](https://azure.microsoft.com/documentation/services/sql-database/)  
-Azure SQL データベース、サービスとしてのリレーショナル データベースに接続する方法について説明します。
+[Azure SQL Database](https://azure.microsoft.com/documentation/services/sql-database/) Azure SQL データベース、サービスとしてのリレーショナル データベースに接続する方法について説明します。
 
-[SQL Server Data Tools](/sql/ssdt/download-sql-server-data-tools-ssdt)  
-デザイン、探索、テスト、およびデータベースやデータに接続しているアプリケーションの展開を簡略化するツールについて説明します。
+[SQL Server Data Tools](/sql/ssdt/download-sql-server-data-tools-ssdt)をデザイン、探索、テスト、およびデータベースやデータに接続しているアプリケーションの展開を簡略化するツールについて説明します。
 
-[ADO.NET](/dotnet/framework/data/adonet/index)  
-ADO.NET のアーキテクチャについて説明します。また、ADO.NET のクラスを使用してアプリケーション データを管理し、データ ソースおよび XML と対話する方法についても説明します。
+[ADO.NET](/dotnet/framework/data/adonet/index) ADO.NET アーキテクチャおよび ADO.NET クラスを使用してアプリケーション データを管理し、データ ソースおよび XML と対話する方法について説明します。
 
-[ADO.NET Entity Framework](https://msdn.microsoft.com/data/ef)  
-開発者がリレーショナル データベースに対して直接プログラミングするのではなく、概念モデルに対してプログラミングすることができるデータ アプリケーションを作成する方法について説明します。
+[ADO.NET Entity Framework](https://msdn.microsoft.com/data/ef)開発者がリレーショナル データベースに対して直接の代わりに、概念モデルに対してプログラムを使用できるデータ アプリケーションを作成する方法について説明します。
 
-[WCF Data Services 4.5](/dotnet/framework/data/wcf/index)  
-使用する方法について説明[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]を実装する web またはイントラネット上のデータ サービスを展開する、 [Open Data Protocol (OData)](http://go.microsoft.com/fwlink/?LinkID=182204)です。
+[WCF データ サービス 4.5](/dotnet/framework/data/wcf/index)を使用する方法について説明[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]を実装する web またはイントラネット上のデータ サービスを展開する、 [Open Data Protocol (OData)](http://go.microsoft.com/fwlink/?LinkID=182204)です。
 
-[Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)  
-Office ソリューションで、データが機能するしくみについて説明したトピックへのリンクを示します。 スキーマ指向プログラミング、データ キャッシュ、およびサーバー側データ アクセスに関する説明が含まれます。
+[Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)Office ソリューションでデータを操作する方法を説明するトピックへのリンクが含まれています。 スキーマ指向プログラミング、データ キャッシュ、およびサーバー側データ アクセスに関する説明が含まれます。
 
-[統合言語クエリ (LINQ)](/dotnet/csharp/linq/)  
-C# および Visual Basic に組み込まれたクエリ機能と、リレーショナル データベース、XML ドキュメント、データセット、およびインメモリ コレクションを照会するための共通のモデルについて説明します。
+[クエリ (LINQ: Language-Integrated)](/dotnet/csharp/linq/) c# および Visual Basic、およびリレーショナル データベース、XML ドキュメント、データセット、およびインメモリ コレクションを照会するための共通のモデルに組み込まれたクエリ機能について説明します。
 
-[Visual Studio の XML ツール](../xml-tools/xml-tools-in-visual-studio.md)  
-操作、XML データ、XSLT のデバッグ、.NET Framework XML の機能、および XML Query のアーキテクチャについて説明します。
+[Visual Studio での XML ツール](../xml-tools/xml-tools-in-visual-studio.md)操作、XML データ、XSLT のデバッグ、.NET Framework XML の機能、および XML Query のアーキテクチャについて説明します。
 
-[XML ドキュメントと XML データ](/dotnet/standard/data/xml/index)  
-.NET Framework で XML ドキュメントおよびデータを処理するための、統合された包括的な一連のクラスについて概説します。
+[XML ドキュメントとデータ](/dotnet/standard/data/xml/index)を包括的な統合された一連の XML ドキュメントおよび .NET Framework でのデータを処理するクラスについて概説します。

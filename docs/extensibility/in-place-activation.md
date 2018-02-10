@@ -4,18 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: editors [Visual Studio SDK], custom - in-place view activation
+helpviewer_keywords:
+- editors [Visual Studio SDK], custom - in-place view activation
 ms.assetid: 7d316945-06e0-4d8e-ba3a-0ef96fc75399
-caps.latest.revision: "26"
+caps.latest.revision: 
 manager: douge
-ms.openlocfilehash: 16c091dc6d5602e4d19b8679794ef2794b29d7ed
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: d1fe2c1dfe71923897836f803e3a9712b4dec0f1
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="in-place-activation"></a>インプレース アクティブ化
 エディター ビューが ActiveX などのアクティブ コントロールをホストしている場合は、インプレース アクティブ化モデルを使用して ActiveX コントロールまたはアクティブ ドキュメント データ オブジェクトとしてエディター ビューを実装する必要があります。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/27/2017
   
  インプレース アクティブ化エディターを作成するために実装されているすべてのインターフェイスが、単一の `CYourEditorDocument` オブジェクトに示されていますが、この構成ではドキュメント データを単一のビューにのみ表示できます。 ドキュメント データを複数のビューに表示する方法の詳細については、「 [Supporting Multiple Document Views](../extensibility/supporting-multiple-document-views.md)」を参照してください。  
   
-|インターフェイス|オブジェクトの型|使用|  
+|Interface|オブジェクトの型|使用|  
 |---------------|--------------------|---------|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent>|表示|<xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager> サービスを使用することで、インプレース VSPackage オブジェクトは IDE に完全に統合されたコンポーネントとして動作できるようにします。 このサービスは、オブジェクトのメニューとツール バーとコマンドを IDE に統合し、状態変化の通知を発行します。|  
 |<xref:Microsoft.VisualStudio.OLE.Interop.IOleObject>|表示|埋め込みオブジェクトがコンテナーに基本的な機能を提供し、コンテナーと通信するための主要な手段です。|  

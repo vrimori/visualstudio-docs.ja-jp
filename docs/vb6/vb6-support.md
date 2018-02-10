@@ -1,21 +1,23 @@
 ---
 title: "Visual Basic 6.0 のサポートについて |Microsoft ドキュメント"
 ms.date: 08/28/2017
-ms.technology: devlang-visual-basic
+ms.technology: devlang-vb
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - VB6 support
 - Visual Basic 6.0 support
 ms.assetid: ffc5ba4d-44d7-4ef7-a3f6-38a8738bf127
 author: paulyuk
 ms.author: paulyuk
-ms.workload: paulyuk
-ms.openlocfilehash: a8977aad735a115089685ed0032b3d358d8b89c8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- paulyuk
+ms.openlocfilehash: cb25f85be6c77dfbef6969435d14f2cae61debf2
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="support-statement-for-visual-basic-60-on-windows"></a>Visual Basic 6.0 を Windows のサポートについて
 
@@ -179,24 +181,24 @@ VBScript では、Visual Basic 6.0 とサポート ステートメントに関�
 |---|---|---|---|
 |atl.dll|         msadcor.dll|     msorcl32.dll|   ole2.dll|
 |asycfilt.dll|    msadcs.dll|      msvbvm60.dll|   ole32.dll|
-|comcat.dll|      msadds.dll|      インポート ライブラリ|    oleaut32.dll|
+|comcat.dll|      msadds.dll|      msvcirt.dll|    oleaut32.dll|
 |compobj.dll|     msaddsr.dll|     msvcrt.dll|     oleaut32.dll|
-|dbnmpntw.dll|    msader15.dll|    Msvcrt40.dll|   oledb32.dll|
+|dbnmpntw.dll|    msader15.dll|    msvcrt40.dll|   oledb32.dll|
 |dcomcnfg.exe|    msado15.dll|     mtxdm.dll|      oledb32r.dll|
 |dllhost.exe|     msador15.dll|    mtxoci.dll|     oledlg.dll|
-|Ds16gt.dll|      msadrh15.dll|    Odbc16gt.dll|   olepro32.dll|
-|ds32gt.dll|      mscpxl32.dll|    Odbc32.dll|     olethk32.dll|
-|expsrv.dll|      msdadc.dll|      Odbc32gt.dll|   regsvr32.exe|
-|hh.exe|          msdaenum.dll|    Odbcad32.exe|   rpcns4.dll|
+|ds16gt.dll|      msadrh15.dll|    odbc16gt.dll|   olepro32.dll|
+|ds32gt.dll|      mscpxl32.dll|    odbc32.dll|     olethk32.dll|
+|expsrv.dll|      msdadc.dll|      odbc32gt.dll|   regsvr32.exe|
+|hh.exe|          msdaenum.dll|    odbcad32.exe|   rpcns4.dll|
 |hhctrl.ocx|      msdaer.dll|      odbccp32.cpl|   rpcrt4.dll|
-|imagehlp.dll|    msdaora.dll|     Odbccp32.dll|   scrrun.dll|
+|imagehlp.dll|    msdaora.dll|     odbccp32.dll|   scrrun.dll|
 |iprop.dll|       msdaosp.dll|     odbccr32.dll|   secur32.dll|
 |itircl.dll|      msdaprst.dll|    odbccu32.dll|   simpdata.tlb|
 |itss.dll|        msdaps.dll|      odbcint.dll|    sqloledb.dll|
 |mfc40.dll|       msdasc.dll|      odbcji32.dll|   sqlsrv32.dll|
 |mfc42.dll|       msdasql.dll|     odbcjt32.dll|   stdole2.tlb|
 |mfc42enu.dll|    msdasqlr.dll|    odbctrac.dll|   stdole32.tlb|
-|msadce.dll|      msdatsrc.tlb|    oddbse32.dll|   する storage.dll|
+|msadce.dll|      msdatsrc.tlb|    oddbse32.dll|   storage.dll|
 |msadcer.dll|     msdatt.dll|      odexl32.dll|    vbajet32.dll|
 |msadcf.dll|      msdfmap.dll|     odfox32.dll|    vfpodbc.dll|
 |msadcfr.dll|     msdfmap.ini|     odpdx32.dll|                |

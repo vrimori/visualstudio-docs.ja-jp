@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Domain-Specific Language, providing overridable classes
+helpviewer_keywords:
+- Domain-Specific Language, providing overridable classes
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 568fc8c53ea7a7be79d8f8169c964f1ec7e02c0a
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: f86600b6fd4bb272ece4454e9a94032ed05f3af1
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="overriding-and-extending-the-generated-classes"></a>生成済みクラスのオーバーライドおよび拡張
 DSL 定義は、プラットフォーム強力な一連のドメイン固有言語に基づくツールをビルドすることができます。 多くの拡張機能と製を採用したは、オーバーライドして、DSL 定義から生成されるクラスを拡張して作成できます。 これらのクラスには、DSL 定義ダイアグラムで明示的に定義したドメイン クラスだけでなくもツールボックス、エクスプ ローラー、シリアル化、およびなどを定義するその他のクラスが含まれます。  
