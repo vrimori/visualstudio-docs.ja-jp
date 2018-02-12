@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Domain-Specific Language, Properties window
+helpviewer_keywords:
+- Domain-Specific Language, Properties window
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8193fa12967848308c1e992f5d5f5011890042ea
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 545c8181cdaa3f13d2de04f13101d2678f9fd0ab
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customizing-the-properties-window"></a>プロパティ ウィンドウのカスタマイズ
 カスタマイズできますプロパティ ウィンドウの動作と外観、ドメイン固有言語 (DSL) で[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 DSL 定義では、各ドメイン クラスにドメインのプロパティを定義します。 既定では、図に、またはモデル エクスプ ローラーで、クラスのインスタンスを選択するすべてのドメイン プロパティは [プロパティ] ウィンドウで表示されます。 これにより確認し、ドメインのプロパティの値を編集する場合でも、ダイアグラムで図形のフィールドをマップしているされません。  
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/13/2018
   
 -   基本クラスで定義されたものも含め、モデル要素のドメイン クラスで定義されているドメインのプロパティです。 例外は、ドメインのプロパティを設定する**は参照可能な**に`False`です。  
   
--   0.1 の多重度のリレーションシップからリンクされている要素の名前。 これにより、必要に応じて表示を簡単に、要素がリンクされているコネクタのマッピングのリレーションシップを定義していない場合でもです。  
+-   0..1 の多重度のリレーションシップからリンクされている要素の名前。 これにより、必要に応じて表示を簡単に、要素がリンクされているコネクタのマッピングのリレーションシップを定義していない場合でもです。  
   
 -   要素を対象とする埋め込みリレーションシップのドメインのプロパティです。 通常埋め込みリレーションシップは明示的に表示されないためこれにより、そのプロパティを参照してください。  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/13/2018
   
 1.  作成、[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]をこの例と呼ばれるには、少なくとも 2 つのクラスを含むソリューションを**Book**と**作成者**です。 どちらの種類の間のリレーションシップが存在する必要があります**Book**と**作成者**です。  
   
-     ソース ロールの多重度 (のロール、 **Book**側) 0.1 または 1.1、する必要がありますので各**Book**が 1 つ**作成者**です。  
+     ソース ロールの多重度 (のロール、 **Book**側) 0..1 または 1..1、する必要がありますので各**Book**が 1 つ**作成者**です。  
   
 2.  **DSL のエクスプ ローラー**を右クリックし、 **Book**ドメイン クラス、およびクリック**新しい DomainTypeDescriptor の追加**です。  
   
@@ -163,7 +165,7 @@ ms.lasthandoff: 01/13/2018
   
     1.  Ctrl キーを押しながら f5 キーまたは f5 キーを押します。 ソリューションでは、デバッグ、テスト ファイルを開きます。 ドメイン クラスの要素を作成し、それを選択します。  
   
-    2.  [プロパティ] ウィンドウでは、ドメインのプロパティを選択します。 [値] フィールドは、省略記号を示しています**[...]。**.  
+    2.  [プロパティ] ウィンドウでは、ドメインのプロパティを選択します。 [値] フィールドは、省略記号を示しています**[...]**。  
   
     3.  省略記号ボタンをクリックします。 ファイル ダイアログ ボックスが表示されます。 ファイルを選択し、ダイアログ ボックスを閉じます。 ファイルのパスは、今すぐドメイン プロパティの値です。  
   

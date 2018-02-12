@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.dsltools.dsldesigner.diagram
@@ -20,11 +19,12 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 713d7d3598e56ceb4e5a339facb948d6d222a32d
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 603189cdc4ac65c4b12fae0e736025b622765c81
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-the-dsl-definition-diagram"></a>DSL 定義図の使用
 ダイアグラム、[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]定義は、ドメイン固有言語を定義するための重要なツールです。 ドメイン モデルに要素を追加し、図で関係を定義し、図のレイアウトを読みやすいように変更できます。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 01/25/2018
  それらを表示するドメイン クラス定義を右クリックし、をクリックして、継承やリレーションシップ ツリーを分割できます**分割ツリー**です。 定義要素はプレースホルダー要素になり、継承ツリーやリレーションシップ ツリーと共に、定義ドメイン クラスがパーティションの下部に表示されます。  
   
 ### <a name="show-as-class"></a>[Show As Class] (クラスとして表示)  
- ドメイン リレーションシップが、リレーションシップを派生か、他のドメイン リレーションシップの埋め込みや参照リレーションシップがある場合として表示できるリレーションシップ クラスのリレーションシップを右クリックし、をクリックして**クラスとして表示します。**. リレーションシップが表示されます、**ドメイン プロパティ**コンパートメントし、継承やリレーションシップ ツリーが表示されます。  
+ ドメイン リレーションシップが、リレーションシップを派生か、他のドメイン リレーションシップの埋め込みや参照リレーションシップがある場合として表示できるリレーションシップ クラスのリレーションシップを右クリックし、をクリックして**クラスとして表示します。** リレーションシップが表示されます、**ドメイン プロパティ**コンパートメントし、継承やリレーションシップ ツリーが表示されます。  
   
 ## <a name="see-also"></a>参照  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
