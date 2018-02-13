@@ -25,6 +25,7 @@
 ### [コードの書式設定](formatting-python-code.md)
 ### [コードのリファクタリング](refactoring-python-code.md)
 ### [PyLint の使用](linting-python-code.md)
+## [カスタム メニュー コマンドの定義](defining-custom-python-project-commands.md)
 ## [対話型 Python (REPL)](python-interactive-repl-in-visual-studio.md)
 ### [IPython REPL の使用](interactive-repl-ipython.md)
 ## [デバッグ](debugging-python-in-visual-studio.md)
