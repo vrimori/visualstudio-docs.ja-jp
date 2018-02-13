@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 01/17/2018
+ms.date: 01/31/2018
 ms.topic: article
 helpviewer_keywords: 
 ms.technology:
@@ -13,17 +13,20 @@ ms.technology:
 ms.service: 
 ms.workload:
 - multiple
-ms.openlocfilehash: 4dee8cbd037fc1b4dda7f420e9a2cbff925d9a23
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: b6724896790d6fd3c6356bf63c6119f856640531
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="visual-studio-2017-build-numbers-and-release-dates"></a>Visual Studio 2017 のビルド番号とリリース日
 次の表は、Visual Studio 2017 の現在までのビルド番号およびリリース日のリストです。
 
 | **Version**| **チャネル** | **リリース日** | **ビルド バージョン** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.5.6 | Release | 1/29/2018 | 15.5.27130.2027 |
+| 15.5.5 | Release | 1/25/2018 | 15.5.27130.2026 |
+| 15.6.0 Preview 3.0 | [プレビュー] | 1/25/2018 | 15.6.27323.2 |
 | 15.5.4 | Release | 1/16/2018 | 15.5.27130.2024 |
 | 15.6.0 Preview 2.0 | [プレビュー] | 1/10/2018 | 15.6.27309.0 |
 | 15.5.3 | Release | 1/9/2018 | 15.5.27130.2020 |

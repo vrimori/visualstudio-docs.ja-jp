@@ -1,23 +1,26 @@
 ---
 title: "R Tools for Visual Studio の現在のバージョン | Microsoft Docs"
+description: "R Tools for Visual Studio のバージョンを確認し、更新プログラムをインストールする方法を説明します。"
 ms.custom: 
-ms.date: 12/12/2017
+ms.date: 01/24/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-r
+ms.technology:
+- devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.workload: data-science
-ms.openlocfilehash: 11bad9be7d64d0760b1e7a3d138b8770f0459899
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-science
+ms.openlocfilehash: dbc268eba8822c2df38ca5b4363a47116eaf5152
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="rtvs-current-version"></a>RTVS の現在のバージョン
 
@@ -31,6 +34,6 @@ Visual Studio 2017 で RTVS のバージョンを更新するには、Visual Stu
 
 Visual Studio 2015 の場合、最新のインストーラーは [aka.ms/rtvs-current](https://aka.ms/rtvs-current) から入手 (直接ダウンロード) できます。
 
-Visual Studio と Windows の要件については、「[Installation](installation.md)」(インストール) をご覧ください。
+Visual Studio と Windows の要件については、「[Installation](installing-r-tools-for-visual-studio.md)」(インストール) をご覧ください。
 
 Microsoft R Open および Microsoft R Server の更新については、[Microsoft R 製品](http://aka.ms/rtvs-msft-r)のページを参照してください。

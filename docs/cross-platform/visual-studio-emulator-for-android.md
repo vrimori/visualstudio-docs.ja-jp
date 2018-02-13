@@ -4,20 +4,22 @@ ms.custom:
 ms.date: 07/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: tgt-pltfrm-cross-plat
+ms.technology:
+- tgt-pltfrm-cross-plat
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 80f0104f-a4db-44dd-bd55-37bb67776c62
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: df3e4def97d8563e3901662ede92e79acd5c5d4c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 3029954623ffbd5324a8a1ab9b67def375b1a486
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="visual-studio-emulator-for-android"></a>Visual Studio Emulator for Android
 Visual Studio Emulator for Android は、Android デバイスをエミュレートするデスクトップ アプリケーションです。 物理デバイスを使用しないで Android アプリをデバッグおよびテストできる仮想化環境を提供します。 また、アプリケーションのプロトタイプ用の分離された環境も提供します。  
@@ -27,7 +29,9 @@ Visual Studio Emulator for Android は、Android デバイスをエミュレー�
  Android プラットフォームごとに異なるデバイス プロファイル、画面の解像度、および Visual Studio Emulator for Android でサポートされるその他のハードウェア プロパティで、アプリをテストできます。
 
 > [!NOTE]
-> Visual Studio Tools for Apache Cordova では Google Android エミュレーターを使用することをお勧めします。 詳細については、「[Android での Apache Cordova アプリの実行](/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#a-idgoogle-android-emulatora-run-on-the-google-android-emulator)」を参照してください。
+> Google Android エミュレーターは次の場合に使うことをお勧めします。
+> - Visual Studio Tools for Apache Cordova を使っているとき。 詳細については、「[Android での Apache Cordova アプリの実行](/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#a-idgoogle-android-emulatora-run-on-the-google-android-emulator)」を参照してください。
+> - Visual Studio Emulator for Android 用に Android バージョン 6.0 より前の Android イメージを発行する計画はないので、Android 7.0 以降を含むエミュレーター イメージが必要なとき。
   
 ##  <a name="Installing"></a> インストールとアンインストール  
  インストール  
@@ -79,7 +83,7 @@ Visual Studio Emulator for Android は、Android デバイスをエミュレー�
  対象にするプロファイルのセットをインストールした後は、緑色の **[プレイ]** ボタンをクリックすることで Manager から新しいプロファイルを直接開始できます。 Visual Studio クロス プラットフォーム モバイル プロジェクト タイプのデバッグ対象ドロップダウン メニューにも表示されます。  
   
 ##  <a name="FeaturesTest"></a> エミュレーターでテストできる機能  
- エミュレーターでテストできる機能に関する詳細については、この[ドキュメント](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/12/introducing-visual-studio-s-emulator-for-android.aspx)を参照してください。  
+ エミュレーターでテストできる機能については、こちらの[ブログ投稿](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/12/introducing-visual-studio-s-emulator-for-android.aspx)をご覧ください。  
   
 ##  <a name="FeaturesNonTest"></a> エミュレーターでテストできない機能  
  次の一覧は、エミュレーターでテスト**できない** Android プラットフォームの機能です。 これらの機能は物理デバイスでテストする必要があります。  

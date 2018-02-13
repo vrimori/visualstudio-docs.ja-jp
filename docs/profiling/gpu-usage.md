@@ -4,20 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 957fed3c-4ded-4e05-87c6-ccc33de65349
-caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 3a79d924e8f20079040f29a85854555e214e4281
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 9fdb367336d5e5a539f63fefbe97c04524bbdf6a
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="gpu-usage"></a>GPU 使用率
 Visual Studio のパフォーマンスおよび診断ハブに含まれる GPU 使用率ツールを使用すると、Direct3D アプリのハードウェア利用状況の概要を適切に把握できます。 このツールを使用すると、アプリのパフォーマンスが CPU バインドまたは GPU バインドのどちらであるかを判断し、プラットフォームのハードウェアをより効率的に使用する方法について洞察を得ることができます。 GPU 使用率ツールは、Direct3D 12、Direct3D 11、および Direct3D 10 を使用するアプリをサポートします。その他のグラフィックス API (Direct2D や OpenGL など) はサポートしていません。  
@@ -118,7 +118,7 @@ Visual Studio 2017 以降では、診断セッションの右下にある **[Gpu
 |**スレッド ID**|イベントの発生元のスレッド ID。|  
   
 > [!IMPORTANT]
->  イベントの属性には Windows 8.1 が必要です。 さらに、GPU またはドライバーがインストルメンテーションのために必要な機能をサポートしていない場合は、すべてのイベントが 'unattributed' として表示されます。 この問題が発生した場合は、GPU ドライバーを更新して、もう一度試してください。 詳細については、この後の「[ハードウェアとドライバーのサポート](#hwsupport)」をご覧ください。  
+>  GPU またはドライバーがインストルメンテーションのために必要な機能をサポートしていない場合は、すべてのイベントが 'unattributed' として表示されます。 この問題が発生した場合は、GPU ドライバーを更新して、もう一度試してください。 詳細については、この後の「[ハードウェアとドライバーのサポート](#hwsupport)」をご覧ください。  
   
 ## <a name="gpu-usage-settings"></a>GPU 使用率の設定  
  アプリが起動した時、すぐに情報の収集を開始するのではなく、プロファイリング情報のコレクションを延期するには、GPU 使用率ツールをそのように構成することができます。 プロファイル情報のサイズはかなり大きくなるため、アプリのパフォーマンス低下がしばらく後になってから現れる場合には、この構成機能が便利です。  

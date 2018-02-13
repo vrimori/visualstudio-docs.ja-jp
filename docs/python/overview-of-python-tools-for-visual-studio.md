@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 067684c7b5064e096849afe69d2f0db1bcc75ea6
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 4d2033e8912d6010adc8e83108a8b9ece1aa4b0e
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="working-with-python-in-visual-studio-windows"></a>Visual Studio での Python の使用 (Windows)
 
@@ -32,7 +32,7 @@ Windows の Visual Studio では、Python の開発およびデータ サイエ�
 開始するには:
 
 - [インストール手順](installing-python-support-in-visual-studio.md)に従って、Python ワークロードを設定します。
-- 1 つ以上のクイックスタートを使用して、プロジェクトを作成します。 わからない場合は、[テンプレートからプロジェクトを作成する](quickstart-02-project-from-template.md)のクイックスタートから始めます。
+- 1 つ以上のクイックスタートを使用して、プロジェクトを作成します。 わからない場合は、[テンプレートからプロジェクトを作成する](quickstart-02-python-in-visual-studio-project-from-template.md)のクイックスタートから始めます。
 - 完全なエンド ツー エンドのエクスペリエンスの場合は、[Visual Studio での Python の使用](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)のチュートリアルに従います。
 - 次に、以下の表のリンクを使って Python 関連の機能と Visual Studio 自体の機能について詳しくご覧ください。
 
@@ -42,11 +42,11 @@ Windows の Visual Studio では、Python の開発およびデータ サイエ�
 | [プロジェクト テンプレート](managing-python-projects-in-visual-studio.md#project-templates) | コンソール、Web、Azure、データ サイエンス、他の種類のプロジェクト用のプロジェクト構造を短時間で作成します。 | [Visual Studio テンプレート](../ide/creating-project-and-item-templates.md#visual-studio-templates) |
 | 複数のインタープリターのサポート | さまざまなバージョンの CPython と IronPython をサポートします。 | N/A |
 | IPython のサポート | インライン プロット、.NET、および Windows Presentation Foundation (WPF) のための REPL での IPython/Jupyter のサポートが含まれます。 | N/A |
-| [豊富な編集、IntelliSense、コード読解](code-editing.md) | 構文の色分け、すべてのコードとライブラリ間でのオートコンプリート、[コードのフォーマット](code-formatting.md)、シグネチャ ヘルプ、クラス ビュー、定義への移動、すべての参照の検索、コード スニペット、[リファクタリング](code-refactoring.md)、[PyLint](code-pylint.md) などを含みます。 | [コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md) |
-| [対話型ウィンドウ](interactive-repl.md) | コードの一部を簡単に強調表示してそれを対話型ウィンドウに送信する機能を備えた、Python 用のクイック REPL エクスペリエンスを提供します。 | N/A |
-| [フル機能のデバッグ](debugging.md) | Visual Studio プロジェクトを使っても使わなくてもデバッグを行うことができ、既存の実行可能ファイルをデバッグする機能、[Python/C++ 混合モードのデバッグ](debugging-mixed-mode.md)、Windows/Linux/Mac への[リモート デバッグ](debugging-cross-platform-remote.md)、[Azure へのリモート デバッグ](debugging-azure-remote.md)、および対話型ウィンドウ内でのデバッグを含みます。 | [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md) |
-| [包括的なレポートを備えたプロファイリング ツール](profiling.md) | アプリケーション内で時間がどのように費やされているかを調べます。異なるプロファイリング実行の間でパフォーマンスを比較する機能を含みます。 | [プロファイリング ツール](../profiling/profiling-tools.md)(Visual Studio のプロファイリング機能の一部は、Python では使用できません) |
-| [単体テスト ツール](unit-testing.md) | Visual Studio テスト エクスプローラーでテストを検出、実行、および管理し、単体テストを簡単にデバッグします。 | [コードの単体テスト](../test/unit-test-your-code.md) |
+| [豊富な編集、IntelliSense、コード読解](editing-python-code-in-visual-studio.md) | 構文の色分け、すべてのコードとライブラリ間でのオートコンプリート、[コードのフォーマット](formatting-python-code.md)、シグネチャ ヘルプ、クラス ビュー、定義への移動、すべての参照の検索、コード スニペット、[リファクタリング](refactoring-python-code.md)、[PyLint](linting-python-code.md) などを含みます。 | [コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md) |
+| [対話型ウィンドウ](python-interactive-repl-in-visual-studio.md) | コードの一部を簡単に強調表示してそれを対話型ウィンドウに送信する機能を備えた、Python 用のクイック REPL エクスペリエンスを提供します。 | N/A |
+| [フル機能のデバッグ](debugging-python-in-visual-studio.md) | Visual Studio プロジェクトを使っても使わなくてもデバッグを行うことができ、既存の実行可能ファイルをデバッグする機能、[Python/C++ 混合モードのデバッグ](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)、Windows/Linux/Mac の [Linux でのリモート デバッグ](debugging-python-code-on-remote-linux-machines.md)、[Azure へのリモート デバッグ](debugging-remote-python-code-on-azure.md)、および対話型ウィンドウ内でのデバッグを含みます。 | [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md) |
+| [包括的なレポートを備えたプロファイリング ツール](profiling-python-code-in-visual-studio.md) | アプリケーション内で時間がどのように費やされているかを調べます。異なるプロファイリング実行の間でパフォーマンスを比較する機能を含みます。 | [プロファイリング ツール](../profiling/profiling-tools.md)(Visual Studio のプロファイリング機能の一部は、Python では使用できません) |
+| [単体テスト ツール](unit-testing-python-in-visual-studio.md) | Visual Studio テスト エクスプローラーでテストを検出、実行、および管理し、単体テストを簡単にデバッグします。 | [コードの単体テスト](../test/unit-test-your-code.md) |
 
 Python ワークロードに含まれる [Azure SDK for Python](azure-sdk-for-python.md) を使うと、Windows、Mac OS X、Linux アプリから Azure サービスを簡単に利用できます。
 

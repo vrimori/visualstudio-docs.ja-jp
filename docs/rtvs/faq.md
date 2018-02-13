@@ -1,23 +1,26 @@
 ---
 title: "R Tools for Visual Studio に関する FAQ | Microsoft Docs"
+description: "Visual Studio での R に関してよく寄せられる質問です。"
 ms.custom: 
 ms.date: 12/04/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-r
+ms.technology:
+- devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.workload: data-science
-ms.openlocfilehash: 9fe92fb38d1b03b081cb53fc620f60180daf5b24
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-science
+ms.openlocfilehash: 8abdaa1e156cf2be07f08f6cebcf67031bf91c2f
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="frequently-asked-questions"></a>よく寄せられる質問
 
@@ -67,7 +70,7 @@ A:  [CRAN R](https://cran.r-project.org/)、[Microsoft R Client、Microsoft Mach
 
 **Q.これらのインタープリターはどこでダウンロードできますか?**
 
-A:  [インストール](installation.md)に関する記事をご覧ください。
+A:  [インストール](installing-r-tools-for-visual-studio.md)に関する記事をご覧ください。
 
 **Microsoft R Server とは何ですか?**
 
@@ -89,7 +92,7 @@ A:  Github に、`.gitignore` の推奨ファイルのマスター リポジト�
 
 Q. **Visual Studio のリモート サービスとは?**
 
-A:  Remote R Services for Visual Studio を使用すると、Windows または Linux のコンピューターをセットアップし、RTVS から接続することができます。 「[リモート ワークスペースの設定](workspaces-remote-setup.md)」を参照してください。
+A:  Remote R Services for Visual Studio を使用すると、Windows または Linux のコンピューターをセットアップし、RTVS から接続することができます。 「[リモート ワークスペースの設定](setting-up-remote-r-workspaces.md)」を参照してください。
 
 Q. **RTVS は Microsoft R Server に接続できますか?**
 
@@ -101,7 +104,7 @@ A:  はい。[データ サイエンス VM - Windows 2016](https://azure.microso
 
 Q: **RTVS は R がインストールされているリモート コンピューターに接続できますか?**
 
-リモート コンピューター上で R コードを実行するには、要求をリッスンし、コードを受信し、クライアント コンピューターに結果を返送する何らかのサービスが必要です。 このサービスは、Remote R Services for Visual Studio によって提供されます。 「[リモート ワークスペースの設定](workspaces-remote-setup.md)」を参照してください。
+リモート コンピューター上で R コードを実行するには、要求をリッスンし、コードを受信し、クライアント コンピューターに結果を返送する何らかのサービスが必要です。 このサービスは、Remote R Services for Visual Studio によって提供されます。 「[リモート ワークスペースの設定](setting-up-remote-r-workspaces.md)」を参照してください。
 
 Q. **リモート セッションとは何ですか?**
 

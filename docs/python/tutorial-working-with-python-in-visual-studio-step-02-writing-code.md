@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 4616b8df91ce87b8f886deb9143fa1ff55a976d7
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 879b648fa761795efe38e45e1becf0433abf3755
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="step-2-writing-and-running-code"></a>手順 2: コードを記述して実行する
 
@@ -80,7 +80,7 @@ ms.lasthandoff: 01/22/2018
     ```
 
     > [!Tip]
-    > 入力候補は、入力中の部分文字列、単語の一致部分、単語の先頭の文字、および省略された文字で機能します。 詳細については、「[Editing Code - Completions](code-editing.md#completions)」 (コードの編集 - 入力候補) を参照してください。
+    > 入力候補は、入力中の部分文字列、単語の一致部分、単語の先頭の文字、および省略された文字で機能します。 詳細については、「[Editing Code - Completions](editing-python-code-in-visual-studio.md#completions)」 (コードの編集 - 入力候補) を参照してください。
 
 1. 360 度のコサイン値を出力するため、もう少しコードを追加します。
 
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/22/2018
 
 ## <a name="going-deeper"></a>詳しい説明
 
-- [コードの編集](code-editing.md)
-- [コードの書式設定](code-formatting.md)
-- [コードのリファクタリング](code-refactoring.md)
-- [PyLint の使用](code-pylint.md)
+- [コードの編集](editing-python-code-in-visual-studio.md)
+- [コードの書式設定](formatting-python-code.md)
+- [コードのリファクタリング](refactoring-python-code.md)
+- [PyLint の使用](linting-python-code.md)

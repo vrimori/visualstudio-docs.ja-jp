@@ -1,33 +1,30 @@
 ---
 title: "Visual Studio 内の R の概要 | Microsoft Docs"
+description: "プロジェクトの作成、対話型ウィンドウ、コード編集、デバッグなど、Visual Studio での R の使用に関するチュートリアルです。"
 ms.custom: 
 ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-r
+ms.technology:
+- devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.workload: data-science
-ms.openlocfilehash: d57ff0dcd89a9857f62371f81d65f7929aba18c9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-science
+ms.openlocfilehash: cf8df86322e10054dee5dbcee95839506f690306
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="getting-started-with-r-tools-for-visual-studio"></a>R Tools for Visual Studio の使用を開始する
 
-R Tools for Visual Studio (RTVS) をインストールすると ([インストール](installation.md)に関するページを参照してください)、ツールが提供するエクスペリエンスをすばやく確認できます。 次のセクションでは、簡単なツアーを紹介します。
-
-- [R プロジェクトの作成](#create-an-r-project)
-- [対話型ウィドウと IntelliSense の調査](#explore-the-interactive-window-and-intellisense)
-- [コード編集機能の体験](#experience-code-editing-features)
-- [コードのデバッグ](#debugging-your-code)
-- [次のステップ](#next-steps)
+R Tools for Visual Studio (RTVS) をインストールすると ([インストール](installing-r-tools-for-visual-studio.md)に関するページを参照してください)、ツールが提供するエクスペリエンスをすばやく確認できます。 
 
 ## <a name="create-an-r-project"></a>R プロジェクトの作成
 
@@ -39,7 +36,7 @@ R Tools for Visual Studio (RTVS) をインストールすると ([インスト�
 
 1. プロジェクトを作成すると、次のウィンドウが表示されます。
 
-    - 右側には、Visual Studio ソリューション エクスプローラーがあり、ここには含まれる*ソリューション*内にプロジェクトが表示されます。 (ソリューションには、複数のさまざまな種類のプロジェクトを含めることができます。詳細については、[プロジェクト](projects.md)に関するページを参照してください。)
+    - 右側には、Visual Studio ソリューション エクスプローラーがあり、ここには含まれる*ソリューション*内にプロジェクトが表示されます。 (ソリューションには、複数のさまざまな種類のプロジェクトを含めることができます。詳細については、[プロジェクト](r-projects-in-visual-studio.md)に関するページを参照してください。)
     - 左上には、新しい R ファイル (`script.R`) があり、ここでは、すべての Visual Studio の編集機能を使ってソース コードを編集することができます。
     - 左下には、**[R インタラクティブ]** ウィンドウがあり、ここでは対話型でコードを開発およびテストすることができます。
 
@@ -74,13 +71,13 @@ R Tools for Visual Studio (RTVS) をインストールすると ([インスト�
 
     ![Visual Studio でのプロットの表示](media/getting-started-07-plot-window.png)
 
-対話型ウィンドウでは、履歴の確認、ワークスペースの読み込みと保存、デバッガーへのアタッチを行ったり、コピー/貼り付けを使用せずにソース コード ファイルを操作したりすることができます。 詳細については、「[Working with the R Interactive Window](interactive-repl.md)」 (対話型ウィンドウでの作業) を参照してください。
+対話型ウィンドウでは、履歴の確認、ワークスペースの読み込みと保存、デバッガーへのアタッチを行ったり、コピー/貼り付けを使用せずにソース コード ファイルを操作したりすることができます。 詳細については、「[Working with the R Interactive Window](interactive-repl-for-r-in-visual-studio.md)」 (対話型ウィンドウでの作業) を参照してください。
 
 ## <a name="experience-code-editing-features"></a>コード編集機能の体験
 
 対話型ウィンドウでの簡単な作業例では、コード エディターでも動作する IntelliSense などの基本的な編集機能を紹介しました。 以前と同じコードを入力すると、同じオート コンプリートおよび IntelliSense のメッセージ画面が表示されますが、出力は行われません。
 
-`.R` ファイルにコードを記述すると、すぐにすべてのコードが表示され、簡単に小さな変更を行い、対話型ウィンドウでコードをすばやく実行して結果を表示できます。 また、プロジェクトに必要なだけファイルを含めることもできます。 コードがファイル内にある場合は、デバッガーでステップごとに実行することもできます (このトピックで後述します)。 これらの機能は、計算アルゴリズムを開発して、1 つ以上のデータセットを操作するためにコードを記述する場合、特にすべての中間結果を確認する必要がある場合に、非常に役立ちます。
+`.R` ファイルにコードを記述すると、すぐにすべてのコードが表示され、簡単に小さな変更を行い、対話型ウィンドウでコードをすばやく実行して結果を表示できます。 また、プロジェクトに必要なだけファイルを含めることもできます。 コードがファイル内にある場合は、デバッガーでステップごとに実行することもできます (この記事で後述します)。 これらの機能は、計算アルゴリズムを開発して、1 つ以上のデータセットを操作するためにコードを記述する場合、特にすべての中間結果を確認する必要がある場合に、非常に役立ちます。
 
 例のように、次のステップでは、「[Central Limit Theorem](https://en.wikipedia.org/wiki/Central_limit_theorem)」 (中心極限定理) (Wikipedia) を調査する小さなコードを作成します。 (この例は、Paul Teetor による *R クックブック*から編集されています。)
 
@@ -109,7 +106,7 @@ R Tools for Visual Studio (RTVS) をインストールすると ([インスト�
 
     ```R
     n <- 30
-    samp.means <- rnorm(N, mean = mu, sd = stddev / sqrt(n))    
+    samp.means <- rnorm(N, mean = mu, sd = stddev / sqrt(n))
     lines(density(samp.means))
     ```
 
@@ -139,7 +136,7 @@ R Tools for Visual Studio (RTVS) をインストールすると ([インスト�
 
     ![適切にスケーリングされた Visual Studio の最新のデュアル プロット](media/getting-started-10-plot3.png)
 
-エディターで操作できる内容は他にもあります。 詳細については、「[コードの編集](code-editing.md)」、「[IntelliSense](code-intellisense.md)」、および「[コード スニペット](code-snippets.md)」を参照してください。
+エディターで操作できる内容は他にもあります。 詳細については、「[コードの編集](editing-r-code-in-visual-studio.md)」、「[IntelliSense](r-intellisense.md)」、および「[コード スニペット](code-snippets-for-r.md)」を参照してください。
 
 ## <a name="debugging-your-code"></a>コードのデバッグ
 
@@ -169,14 +166,14 @@ Visual Studio の主な強みの 1 つは、デバッグ UI です。 RTVS は�
 
 1. 引き続き 1 行ずつプログラムをステップ実行したり、**[続行]** (F5) を選択して完了 (次のブレークポイント) まで実行したりすることができます。
 
-さらに詳細を確認するには、「[デバッグ](debugging.md)」と「[変数エクスプローラー](variable-explorer.md)」を参照してください。
+さらに詳細を確認するには、「[デバッグ](debugging-r-in-visual-studio.md)」と「[変数エクスプローラー](variable-explorer.md)」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルでは、Visual Studio で対話型ウィンドウを使用して、コードの編集およびデバッグを行い、R プロジェクトの基本について学習しました。 その他の機能を引き続き確認するには、次のトピック、および目次の内容を参照してください。
+このチュートリアルでは、Visual Studio で対話型ウィンドウを使用して、コードの編集およびデバッグを行い、R プロジェクトの基本について学習しました。 その他の機能を引き続き確認するには、以下の記事、および目次の内容を参照してください。
 
 - [サンプル プロジェクト](getting-started-samples.md)
-- [コードの編集](code-editing.md)
-- [デバッグ](debugging.md)
-- [ワークスペース](workspaces.md)
-- [データの視覚化](visualizing-data.md)
+- [コードの編集](editing-r-code-in-visual-studio.md)
+- [デバッグ](debugging-r-in-visual-studio.md)
+- [ワークスペース](r-workspaces-in-visual-studio.md)
+- [データの視覚化](visualizing-data-with-r-in-visual-studio.md)

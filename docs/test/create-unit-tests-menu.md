@@ -7,20 +7,22 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: unit testing, create unit tests
+helpviewer_keywords:
+- unit testing, create unit tests
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: cf851d9fbd32bfdd07c6e1a67517ddf38784799c
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 763a16c4de3d3d087b813322af2fcd8518506863
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-unit-test-method-stubs-with-the-create-unit-tests-command"></a>[単体テストの作成] コマンドを使用した単体テスト メソッド スタブの作成
 
-Visual Studio の **[単体テストの作成]** コマンドでは、単体テスト メソッド スタブを作成する機能が提供されます。 この機能を使用することで、テスト プロジェクト、テスト クラス、および内部にあるテスト メソッド スタブの構成が容易になります。 
+Visual Studio の **[単体テストの作成]** コマンドでは、単体テスト メソッド スタブを作成する機能が提供されます。 この機能を使用することで、テスト プロジェクト、テスト クラス、および内部にあるテスト メソッド スタブの構成が容易になります。
 
 ## <a name="availability-and-extensions"></a>可用性と拡張機能
 
@@ -63,8 +65,7 @@ Visual Studio では、任意のテスト フレームワークを使用して�
 
 ただし、この機能は、開発者が一部のコードを記述し、それを使用して単体テストの規範をブートストラップする場合でも同様に適用されます。 コーディングのフロー内で、開発者はコードの特定部分の (テスト クラスとテスト プロジェクトが適切な) 単体テスト メソッド スタブをすばやく作成できます。 
 
-## <a name="more-information"></a>詳細情報
+## <a name="see-also"></a>関連項目
 
-ブログ記事の「[Creating unit test method stubs with "Create Unit Tests"](https://blogs.msdn.microsoft.com/visualstudioalm/2015/03/06/creating-unit-test-method-stubs-with-create-unit-tests/)」 ("単体テストの作成" をする単体テスト メソッド スタブの作成) を参照してください。
-
-[こちら](https://blogs.msdn.microsoft.com/visualstudioalm/tag/unit-testing/)で、さらに単体テストに関するブログ記事を参照できます。
+["単体テストの作成" をする単体テスト メソッド スタブの作成](https://blogs.msdn.microsoft.com/visualstudioalm/2015/03/06/creating-unit-test-method-stubs-with-create-unit-tests/)  
+[単体テストのブログ投稿](https://blogs.msdn.microsoft.com/visualstudioalm/tag/unit-testing/)

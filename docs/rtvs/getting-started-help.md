@@ -1,23 +1,26 @@
 ---
 title: "R Tools for Visual Studio のヘルプ ウィンドウ | Microsoft Docs"
+description: "R のヘルプは、? コマンドによって Visual Studio の対話型ウィンドウに直接統合されています 。"
 ms.custom: 
-ms.date: 06/29/2017
+ms.date: 001/24/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-r
+ms.technology:
+- devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.workload: data-science
-ms.openlocfilehash: 232c02bf68125afb1ffa5234e0feee049e9c5f69
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-science
+ms.openlocfilehash: c95cb854a5c6d517b6e02e63bc744cd2bdc3ba1e
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="help-in-r-tools-for-visual-studio"></a>R Tools for Visual Studio のヘルプ
 
@@ -28,7 +31,7 @@ R のヘルプは、Visual Studio の対話型ウィンドウに直接統合さ�
 > [!Tip]
 > ヘルプ ウィンドウは、Visual Studio のその他すべてのウィンドウと同様に、好みに応じて配置およびドッキングすることができます。 「[Visual Studio のウィンドウ レイアウトをカスタマイズする](../ide/customizing-window-layouts-in-visual-studio.md)」を参照してください。
 >
-> また、**[R Tools] > [オプション]** メニューを選択して、**[R ヘルプ ブラウザー]** プロパティに `External` を設定し、ブラウザーでヘルプの結果を開くことができます。 [オプション](options.md)に関するページを参照してください。
+> また、**[R Tools] > [オプション]** メニューを選択して、**[R ヘルプ ブラウザー]** プロパティに `External` を設定し、ブラウザーでヘルプの結果を開くことができます。 [オプション](options-for-r-tools-in-visual-studio.md)に関するページを参照してください。
 
 ヘルプを検索するには、`??` に続けて検索用語を指定します。 検索用語にスペースが含まれる場合は、用語を引用符で囲みます。
 
@@ -52,7 +55,7 @@ R のヘルプは、Visual Studio の対話型ウィンドウに直接統合さ�
     ![コンテキスト メニューを右クリックしてヘルプを呼び出す](media/help-right-click.png)
 
 > [!Tip]
-> ブラウザーで統合ヘルプを開くには、**[R Tools] > [オプション]** を選択して、**[F1 Web ブラウザー]** に `External` を設定します。 [オプション](options.md)に関するページを参照してください。
+> ブラウザーで統合ヘルプを開くには、**[R Tools] > [オプション]** を選択して、**[F1 Web ブラウザー]** に `External` を設定します。 [オプション](options-for-r-tools-in-visual-studio.md)に関するページを参照してください。
 
 ## <a name="integrated-stackoverflow-search"></a>StackOverflow 検索の統合
 
@@ -64,4 +67,4 @@ R ドキュメントでの検索に加えて、開発者はコードを記述す
 
 ![[F1 Web 検索文字列] オプションを変更する](media/options-dialog.png)
 
-ブラウザーで結果を表示するには、「[R Tools for Visual Studio オプション](options.md)」に従って **[F1 Web ブラウザー]** オプションを変更します。
+ブラウザーで結果を表示するには、「[R Tools for Visual Studio オプション](options-for-r-tools-in-visual-studio.md)」に従って **[F1 Web ブラウザー]** オプションを変更します。

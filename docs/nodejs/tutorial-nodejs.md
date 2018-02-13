@@ -4,20 +4,23 @@ ms.custom:
 ms.date: 11/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-acquisition
+ms.technology:
+- vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-dev_langs: JavaScript
-ms.workload: nodejs
-ms.openlocfilehash: 80822e4f323621a97beb453118d7e0836ae9ea92
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+dev_langs:
+- JavaScript
+ms.workload:
+- nodejs
+ms.openlocfilehash: a8e6c800ef036d0f6e8e5affae745e541a276284
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="getting-started-with-nodejs-in-visual-studio"></a>Visual Studio の Node.js の概要
 このチュートリアルでは、Visual Studio を使用して Node.js を開発します。単純な Node.js Web アプリを作成し、いくつかのコードを追加し、IDE の一部の機能を試し、アプリを実行します。 まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。  
@@ -134,6 +137,8 @@ ms.lasthandoff: 12/22/2017
 
 1. ボタンをクリックすると、さまざま画像が表示されます。
 
+    ![ブラウザーで実行しているアプリ](../nodejs/media/tutorial-nodejs-running-in-browser.png)  
+
 1. Node.js 対話型ウィンドウを開きます。**[表示]、[その他のウィンドウ]、[Node.js 対話型ウィンドウ]** の順に選択してください。
 
    ![Node.js 対話型ウィンドウを開く](../nodejs/media/tutorial-nodejs-interactive-window.png)  
@@ -144,7 +149,7 @@ ms.lasthandoff: 12/22/2017
 
 1. Web ブラウザーを閉じます。  
 
-## <a name="publish-to-azure-app-service"></a>Azure App Service に発行する
+## <a name="optional-publish-to-azure-app-service"></a>(省略可能) Azure App Service に発行する
 
 1. ソリューション エクスプローラーで、プロジェクトを右クリックして、**[発行]** を選択します。
 

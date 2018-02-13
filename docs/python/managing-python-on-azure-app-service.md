@@ -1,14 +1,16 @@
 ---
-title: "Azure App Service での Python の管理 | Microsoft Docs"
+title: "Azure App Service での Python インタープリターとライブラリのインストール | Microsoft Docs"
+description: "Azure App Service に Python インタープリターとライブラリをインストールし、そのインタープリターを正しく参照するように Web アプリケーションを構成する方法について説明します。"
 ms.custom: 
 ms.date: 09/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-python
+ms.technology:
+- devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
@@ -16,11 +18,11 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 50b306a3332678a4ab648e0e79730b0ef3ac996e
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: ff8fb49321d12416391edd1463f651ae169b1bee
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="managing-python-on-azure-app-service"></a>Azure App Service での Python の管理
 
@@ -131,7 +133,7 @@ FastCGI は、要求レベルで動作するインターフェイスです。 II
 - `WSGI_HANDLER` はアプリからインポート可能な WSGI アプリをポイントする必要があります。
 - `WSGI_LOG` は省略可能ですが、アプリのデバッグのために推奨します。 
 
-Bottle、Flask、および Django Web アプリ用の `web.config` コンテンツのその他の詳細については、「[Publishing to Azure](publishing-to-azure.md)」 (Azure への公開) を参照してください。
+Bottle、Flask、および Django Web アプリ用の `web.config` コンテンツのその他の詳細については、「[Publishing to Azure](publishing-python-web-applications-to-azure-from-visual-studio.md)」 (Azure への公開) を参照してください。
 
 ### <a name="configuring-the-httpplatform-handler"></a>Httpplatform のハンドラーの構成
 
@@ -200,7 +202,7 @@ HttpPlatform モジュールは、スタンドアロンの Python プロセス�
     `requirements.txt` は、ローカルおよびサーバーで設定されたのと同じパッケージを簡単に再現できるため、これを使用することをお勧めします。 `requirements.txt` に何らかの変更を行った後に、コンソールにアクセスし、コマンドを再実行することを忘れないでください。
 
 > [!Note]
-> App Service には C コンパイラがないため、ネイティブ拡張モジュールを使用して任意のパッケージのホイールをインストールする必要があります。 多くの普及しているパッケージでは、独自のホイールを提供しています。 提供していないパッケージの場合は、ローカルの開発用コンピューターで `pip wheel <package_name>` を使用してホイールをサイトにアップロードします。 例については、[必要なパッケージの管理](python-environments.md#managing-required-packages-requirementstxt)に関するセクションをご覧ください。
+> App Service には C コンパイラがないため、ネイティブ拡張モジュールを使用して任意のパッケージのホイールをインストールする必要があります。 多くの普及しているパッケージでは、独自のホイールを提供しています。 提供していないパッケージの場合は、ローカルの開発用コンピューターで `pip wheel <package_name>` を使用してホイールをサイトにアップロードします。 例については、[必要なパッケージの管理](managing-python-environments-in-visual-studio.md#managing-required-packages-requirementstxt)に関するセクションをご覧ください。
 
 ### <a name="kudu-rest-api"></a>Kudu REST API
 

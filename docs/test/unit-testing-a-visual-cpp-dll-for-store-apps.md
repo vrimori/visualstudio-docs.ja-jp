@@ -9,44 +9,28 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: mblome
 manager: ghogen
-ms.workload: uwp
+ms.workload:
+- uwp
 author: mikeblome
-ms.openlocfilehash: 1b032b651603beb5771bfa68b8dc8628540d638e
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 8a85bf908b1f0908b8c07a7573306536b9bf78d7
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="how-to-test-a-visual-c-dll-for-uwp-apps"></a>UWP アプリ用の Visual C++ DLL をテストする方法 
+# <a name="how-to-test-a-visual-c-dll"></a>Visual C++ DLL をテストする方法
+
 このトピックでは、C++ 用の Microsoft テスト フレームワークを使用して、ユニバーサル Windows プラットフォーム (UWP) アプリ用の C++ DLL の単体テストを作成する 1 つの方法について説明します。 RooterLib DLL は、指定した数値の平方根の概数を計算する関数を実装することによって、微積分の限界理論の不明瞭なメモリを示します。 この DLL を、ユーザーが数学で実行できる楽しい作業を提示する UWP アプリに組み込むことができます。  
   
  このトピックでは、開発の第一歩として単体テストを使用する方法を示します。 この方法ではまず、テスト対象のシステムの特定の動作を検証するテスト メソッドを作成し、テストに合格するコードを記述します。 後述する手順の順序を変更することにより、この方法を逆にして、テストするコードを最初に記述し、単体テストを作成することができます。  
   
- このトピックでは、テストする単体テストと DLL に 1 つの Visual Studio ソリューションと個別のプロジェクトも作成します。 また、DLL プロジェクトに単体テストを直接含めることも、単体テストと DLL ごとに個別のソリューションを作成することもできます。 使用できる構造体のヒントについては、「[テスト エクスプローラーを使用した既存の C++ アプリケーションの単体テスト](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)」をご覧ください。  
-  
-##  <a name="In_this_topic"></a> このトピックの内容  
-
- [ソリューションと単体テスト プロジェクトを作成する](#Create_the_solution_and_the_unit_test_project)  
-  
- [テストがテスト エクスプ ローラーで実行されることを確認する](#Verify_that_the_tests_run_in_Test_Explorer)  
-  
- [DLL プロジェクトをソリューションに追加する](#Add_the_DLL_project_to_the_solution)  
-  
- [DLL 関数をテスト コードに表示させる](#make_the_dll_functions_visible_to_the_test_code)  
-  
- [テストを繰り返し増やして成功させる](#Iteratively_augment_the_tests_and_make_them_pass)  
-  
- [失敗したテストをデバッグする](#Debug_a_failing_test)  
-  
- [テストを変更せずにコードをリファクタリングする](#Refactor_the_code_without_changing_tests)  
+ このトピックでは、テストする単体テストと DLL に 1 つの Visual Studio ソリューションと個別のプロジェクトも作成します。 また、DLL プロジェクトに単体テストを直接含めることも、単体テストと DLL ごとに個別のソリューションを作成することもできます。 使用できる構造体のヒントについては、「[テスト エクスプローラーを使用した既存の C++ アプリケーションの単体テスト](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)」をご覧ください。
   
 ##  <a name="Create_the_solution_and_the_unit_test_project"></a> ソリューションと単体テスト プロジェクトを作成する  
   
-1.  **[ファイル]** メニューの **[新規作成]** をポイントし、**[新しいプロジェクト]** をクリックします。  
+1.  **[ファイル]** メニューで、**[新規]** > **[新しいプロジェクト]** を選びます。
   
-2.  [新しいプロジェクト] ダイアログで **[インストール済み]**、**[Visual C++]** の順に展開し、**[UWP]** を選択します。 次に、プロジェクト テンプレートの一覧から **[単体テスト ライブラリ (UWP アプリ)]** を選択します。  
-  
-     ![C&#43;&#43; 単体テスト ライブラリの作成](../test/media/ute_cpp_windows_unittestlib_create.png "UTE_Cpp_windows_UnitTestLib_Create")  
+2.  [新しいプロジェクト] ダイアログで **[インストール済み]** > **[Visual C++]** の順に展開し、**[Windows ユニバーサル]** を選びます。 プロジェクト テンプレートの一覧の **[単体テスト アプリ (ユニバーサル Windows)]** を選択します。
   
 3.  プロジェクトに `RooterLibTests` という名前を付けます。場所を指定します。ソリューションに `RooterLib` という名前を付けます。**[ソリューションのディレクトリを作成]** チェックボックスがオンになっていることを確認します。  
   

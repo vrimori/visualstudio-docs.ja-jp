@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio での UWP アプリの単体テストの実行 | Microsoft Docs"
+title: "Visual Studio で単体テストを実行する | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,49 +9,23 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: uwp
+ms.workload:
+- uwp
 author: gewarren
-ms.openlocfilehash: c9610360c0ea6d32c4825b1e2768f3eaaa06a6fa
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: c06ad430664f1e6cd5010e4af5d8d28efa1f8d25
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="run-unit-tests-for-uwp-apps-in-visual-studio"></a>Visual Studio での UWP アプリの単体テストの実行
-このトピックでは、Microsoft Visual Studio でテスト エクスプローラーを使用して単体テストを実行する方法について説明します。  
-  
-> [!NOTE]
->  このセクションのトピックでは、Visual Studio Express for Windows 8 の機能について解説します。 Visual Studio Community、Enterprise、および Professional には、単体テストの追加機能が備わっています。  
->   
->  -   Microsoft テスト エクスプローラーのアドオン アダプターを作成したサードパーティまたはオープン ソースの単体テスト フレームワークを使用します。 また、テストのコード カバレッジ情報を分析して表示することもできます。  
-> -   ビルドの後に毎回テストを実行します。 Microsoft Fakes を使用することもできます。これは、システムおよびサードパーティの機能をテスト コードに置き換えることにより、自分のコードにテストの重点を置くことができる、マネージ コードの分離フレームワークです。  
->   
->  詳細については、「[コードの単体テスト](../test/unit-test-your-code.md)」を参照してください。  
-  
-##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
- [単体テスト フレームワークとテスト プロジェクト](#BKMK_Unit_test_frameworks_and_test_projects)  
-  
- [テスト エクスプローラーでテストを実行する](#BKMK_Running_tests_in_Test_Explorer)  
-  
--   [テストの実行](#BKMK_Running_tests)  
-  
- [テスト結果の表示](#BKMK_Viewing_test_results)  
-  
--   [テストの詳細を表示する](#BKMK_Viewing_test_details)  
-  
--   [テスト メソッドのソース コードの表示](#BKMK_Viewing_the_source_code_of_a_test_method)  
-  
- [テスト一覧の整理](#BKMK_Organizing_the_test_list)  
-  
--   [テストのグループ化](#BKMK_Grouping_tests)  
-  
--   [テスト一覧の検索およびフィルター処理](#BKMK_Searching_and_filtering_the_test_list)  
-  
- [単体テストのデバッグ](#BKMK_Debugging_unit_tests)  
-  
-##  <a name="BKMK_Unit_test_frameworks_and_test_projects"></a> 単体テスト フレームワークとテスト プロジェクト  
- Visual Studio Express for UWP アプリには、マネージ コードとネイティブ C++ コード用の Microsoft 単体テスト フレームワークが含まれています。 テスト エクスプローラーは、ソリューション内の複数のテスト プロジェクト、および運用コード プロジェクトに含まれるテスト クラスからテストを実行できます。 テスト プロジェクトには、Visual C++ または Visual C# と Visual Basic の単体テスト フレームワークを自由に組み合わせることができます。 テスト対象のコードを .NET Framework 用に記述する場合、対象コードの言語にかかわらず、テスト プロジェクトをどの .NET Framework 言語でも記述できます。 ネイティブ C/C++ コード プロジェクトは、C++ の単体テスト フレームワークを使用してテストする必要があります。  
-  
+# <a name="run-unit-tests-in-visual-studio"></a>Visual Studio で単体テストを実行する
+
+このトピックでは、Microsoft Visual Studio でテスト エクスプローラーを使用して単体テストを実行する方法について説明します。
+
+##  <a name="BKMK_Unit_test_frameworks_and_test_projects"></a> 単体テスト フレームワークとテスト プロジェクト
+
+Visual Studio には、マネージ コードおよびネイティブ C++ コード用の Microsoft 単体テスト フレームワークが含まれます。 テスト エクスプローラーは、ソリューション内の複数のテスト プロジェクト、および運用コード プロジェクトに含まれるテスト クラスからテストを実行できます。 テスト プロジェクトには、Visual C++ または Visual C# と Visual Basic の単体テスト フレームワークを自由に組み合わせることができます。 テスト対象のコードを .NET Framework 用に記述する場合、対象コードの言語にかかわらず、テスト プロジェクトをどの .NET Framework 言語でも記述できます。 ネイティブ C/C++ コード プロジェクトは、C++ の単体テスト フレームワークを使用してテストする必要があります。
+
 ##  <a name="BKMK_Running_tests_in_Test_Explorer"></a> テスト エクスプローラーでテストを実行する  
  テスト プロジェクトをビルドすると、テストはテスト エクスプローラーに表示されます。 テスト エクスプローラーが表示されない場合は、Visual Studio メニューの **[テスト]** をクリックし、 **[Windows]**、 **[テスト エクスプローラー]**の順に選択します。  
   
@@ -117,7 +91,7 @@ ms.lasthandoff: 01/13/2018
 1.  Visual Studio エディターで、デバッグする 1 つ以上のテスト メソッドにブレークポイントを設定します。  
   
     > [!NOTE]
-    >  テスト メソッドを任意の順序で実行できるため、デバッグするすべてのテスト メソッドにブレークポイントを設定します。  
+    > テスト メソッドを任意の順序で実行できるため、デバッグするすべてのテスト メソッドにブレークポイントを設定します。  
   
 2.  テスト エクスプローラーでテスト メソッドを選択し、ショートカット メニューの **[選択したテストのデバッグ]** を選択します。  
   

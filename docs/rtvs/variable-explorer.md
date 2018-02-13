@@ -1,27 +1,30 @@
 ---
 title: "R Tools for Visual Studio の変数エクスプローラー | Microsoft Docs"
+description: "Visual Studio の変数エクスプローラーでは、現在の R セッションの特定のスコープでの変数がすべて表示されます。"
 ms.custom: 
-ms.date: 06/30/2017
+ms.date: 01/24/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-r
+ms.technology:
+- devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.workload: data-science
-ms.openlocfilehash: c75e15def5f9abe98be3f062650c84693716c87e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-science
+ms.openlocfilehash: 1d766d3ad6a48a46c3f781b8a87e5f388de93e74
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="variable-explorer"></a>変数エクスプローラー
 
-**変数エクスプローラー** ウィンドウは、**[R Tools] > [ウィンドウ] > [変数エクスプローラー]** (または、 **[R Tools] > [データ サイエンスの設定]** を使用した場合は Ctrl + 8 キー) を使用して開きます。このウィンドウには、現在の R セッションでの特定のスコープにあるすべての変数が表示されます。 たとえば、変数エクスプローラーを開いて[対話型ウィンドウ](interactive-repl.md)に以下の行を入力したとします。
+**変数エクスプローラー** ウィンドウは、**[R Tools] > [ウィンドウ] > [変数エクスプローラー]** (または、 **[R Tools] > [データ サイエンスの設定]** を使用した場合は Ctrl + 8 キー) を使用して開きます。このウィンドウには、現在の R セッションでの特定のスコープにあるすべての変数が表示されます。 たとえば、変数エクスプローラーを開いて[対話型ウィンドウ](interactive-repl-for-r-in-visual-studio.md)に以下の行を入力したとします。
 
 ```R
 x <- 42

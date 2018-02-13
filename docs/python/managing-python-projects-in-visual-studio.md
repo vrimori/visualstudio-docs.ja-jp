@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio での Python プロジェクトの管理 | Microsoft Docs"
+title: "Visual Studio での Python アプリケーションのプロジェクトの管理 | Microsoft Docs"
 description: "Visual Studio のプロジェクトの目的についてご説明するほか、Python コードのプロジェクトの作成および管理方法や、Python で使用できるさまざまなプロジェクト テンプレートをご紹介します。"
 ms.custom: 
 ms.date: 01/16/2018
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 90a1c568b5e97afcaa975e1fe77230fa0b65d80d
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: c1909a421cc4f80653438b2dd627aef8559005d6
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="python-projects"></a>Python プロジェクト
 
@@ -73,8 +73,8 @@ Visual Studio には、新規に、または既存のコードから、Python �
 | --- | --- |
 | [既存の Python コードから](#creating-a-project-from-existing-files) | フォルダー構造に存在する既存の Python コードから Visual Studio プロジェクトを作成します。  |
 | Python Application (Python アプリケーション) | 空のソース ファイルを 1 つ含む新しい Python アプリケーションの基本的なプロジェクト構造です。 既定では、プロジェクトは既定のグローバル環境のコンソール インタープリターで実行します。これは、[異なる環境を割り当てる](managing-python-environments-in-visual-studio.md#selecting-an-environment-for-a-project)ことで変更できます。 |
-| [Azure クラウド サービス](template-azure-cloud-service.md) | Python で記述された Azure クラウド サービス用のプロジェクトです。 |
-| [Web プロジェクト](template-web.md) | Bottle、Django、Flask、Flask/Jade などのさまざまなフレームワークに基づく Web サーバー用のプロジェクトです。 |
+| [Azure クラウド サービス](python-azure-cloud-service-project-template.md) | Python で記述された Azure クラウド サービス用のプロジェクトです。 |
+| [Web プロジェクト](python-web-application-project-templates.md) | Bottle、Django、Flask、Flask/Jade などのさまざまなフレームワークに基づく Web サーバー用のプロジェクトです。 |
 | IronPython Application (IronPython アプリケーション) | [Python Application (Python アプリケーション)] テンプレートに似ていますが、IronPython を既定で使って、.NET 相互運用と .NET 言語での混合モード デバッグを可能にします。 |
 | IronPython WPF Application (IronPython WPF アプリケーション) | IronPython と、アプリケーションのユーザー インターフェイス用に Windows Presentation Foundation の XAML ファイルを使うプロジェクト構造です。 Visual Studio は XAML UI デザイナーを提供し、コードビハインドを Python で記述でき、アプリケーションはコンソールを表示しないで実行します。 |
 | IronPython Silverlight Web Page (IronPython Silverlight Web ページ) | Silverlight を使ってブラウザーで実行する IronPython プロジェクトです。 アプリケーションの Python コードは、スクリプトとして Web ページに含まれます。 定型のスクリプト タグは、Silverlight の内部で実行する IronPython を初期化する JavaScript コードを生成し、それによって Python コードは DOM と対話できます。 |
