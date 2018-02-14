@@ -15,11 +15,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bf6aed0c2864792e3cf47f944610fcb2de0f185
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+ms.openlocfilehash: f9c69d20bb0b1658514245870d1173d82b0f8979
+ms.sourcegitcommit: f19704f37319044620e13f90cbea58123586f4a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>UWP アプリのネットワーク使用量を分析する
 Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http API](/uwp/api/windows.web.http) を使用して実行されたネットワーク操作についてのデータを収集します。 そのデータを分析すると、アクセスや認証の問題、不適切なキャッシュの使用、表示やダウンロードの低パフォーマンスなどの問題を解決するのに役立ちます。  
@@ -27,7 +27,7 @@ Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http A
  ネットワーク ツールは、UWP アプリのみをサポートします。 その他のプラットフォームは現時点ではサポートされていません。  
   
 > [!NOTE]
->  ネットワーク ツールの詳細については、[Visual Studio のネットワーク ツールの概要](http://blogs.msdn.com/b/visualstudio/archive/2015/05/04/introducing-visual-studio-s-network-tool.aspx)に関する記事をご覧ください。  
+>  ネットワーク ツールの詳細については、[Visual Studio のネットワーク ツールの概要](http://blogs.msdn.com/b/visualstudio/archive/2015/05/04/introducing-visual-studios-network-tool.aspx)に関する記事をご覧ください。  
   
 ## <a name="collecting-network-tool-data"></a>ネットワーク ツール データの収集  
  **ネットワーク** ツールを実行するには、Visual Studio コンピューター上で開かれた状態の Visual Studio プロジェクトが必要です。  

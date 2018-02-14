@@ -4,23 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - multiple processors
 - MSBuild, multiple processor systems
 ms.assetid: 49fa36c9-8e14-44f5-8a2b-34146cf6807b
-caps.latest.revision: "13"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c2879b753ecdf06779403b01bbeb0681448759fa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: f8bf385b6ee34c532e70557c0f04754ba0c56bb9
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-multiple-processors-to-build-projects"></a>複数のプロセッサを使用したプロジェクトのビルド
 MSBuild では、複数のプロセッサまたはマルチコア プロセッサを搭載したシステムを使用できます。 プロセッサごとに個別のビルド プロセスが作成されます。 たとえば、4 つのプロセッサを搭載したシステムでは、4 つのビルド プロセスが作成されます。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、これらのビルドを同時に処理できるため、全体的なビルド時間が短縮されます。 ただし、並行ビルドでは、ビルド処理が行われる方法がいくつかの点で通常とは異なります。 このトピックでは、それらの相違点について説明します。  

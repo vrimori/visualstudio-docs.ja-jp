@@ -1,3 +1,5 @@
+---
+---
 # <a name="monitor-with-tensorboard"></a>TensorBoard で監視する
 
 TensorBoard では、モデルのトレーニングの進行状況を視覚化することができます。 

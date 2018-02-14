@@ -4,21 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: msbuild, incremental builds
+helpviewer_keywords:
+- msbuild, incremental builds
 ms.assetid: 325e28c7-4838-4e3f-b672-4586adc7500c
-caps.latest.revision: "8"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 1238748b07d820a045e440e8d130bf9423668854
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: ee1e8a136937b1291950a9df71b93a1e5c90f8c2
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="incremental-builds"></a>インクリメンタル ビルド
 インクリメンタル ビルドは、対応する入力ファイルに対して最新の状態の出力ファイルを含むターゲットが実行されないように最適化されたビルドです。 ターゲット要素には、ターゲットが入力として受け取る項目を示す `Inputs` 属性と、ターゲットが出力として生成する項目を示す `Outputs` 属性の両方を指定できます。 MSBuild は、これらの属性の値間に一対一の対応関係があるかどうかを確認します。 一対一の対応関係が存在する場合、MSBuild は、すべての入力項目のタイム スタンプをそれぞれ対応する出力項目のタイム スタンプと比較します。 一対一の対応関係が存在しない出力ファイルは、すべての入力ファイルと比較されます。 項目が最新の状態であると見なされるのは、その出力ファイルが入力ファイルと同じタイム スタンプであるかそれよりも新しい場合です。  

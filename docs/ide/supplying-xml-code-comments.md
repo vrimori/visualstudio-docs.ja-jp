@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.tools.viewing.comments
+f1_keywords:
+- vc.tools.viewing.comments
 helpviewer_keywords:
 - comments
 - XML documentation comments
 - code comments
 ms.assetid: f36b46af-443a-4fa6-a2c3-0c4962bbd4aa
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: 3ceadf13f6567b303337b14b6b76be86ddcbac8c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: b01406355e3b97547b7cbf8ce3960f101b165cec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="supplying-xml-code-comments"></a>XML コード コメントの追加
 ソース コード ファイル内のコメントを IntelliSense として使用可能にすることができます。 Visual Basic、C#、または C++ コンパイラのコマンドラインに /doc スイッチを追加すると、IntelliSense ドキュメントのベースとして機能する .xml ファイルが生成されます。  

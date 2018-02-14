@@ -1,3 +1,5 @@
+---
+---
 # <a name="monitoring-gpu-utilization"></a>GPU 使用率を監視する
 Linux リモート マシンの GPU 使用率を監視するには:
 

@@ -4,23 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - MSBuild, separating items with semicolons
 - MSBuild, formatting item collections
 ms.assetid: 3cae844c-7c6d-4144-82dc-efad10ba458f
-caps.latest.revision: "12"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: bc769164187212997b6bc3dcb170c03f7a29ef3b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 57701bd540aeac097ee1efb4c2f7d881ffb4f00a
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-to-display-an-item-list-separated-with-commas"></a>方法: 項目リストをコンマ区切りで表示する
 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) で項目一覧を使用するとき、項目一覧の内容を読みやすいように表示すると便利な場合があります。 あるいは、項目の一覧を特殊な区切り文字列で区切るタスクが与えられることがあります。 いずれの場合でも、項目一覧には区切り文字列を指定できます。  
