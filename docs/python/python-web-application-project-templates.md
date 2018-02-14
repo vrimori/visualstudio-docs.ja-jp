@@ -7,21 +7,21 @@ ms.reviewer:
 ms.suite: 
 ms.technology:
 - devlang-python
-ms.devlang: python
+dev_langs:
+- python
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b9cc38b30e078ed716d9f0c590796d19ed50c883
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.openlocfilehash: 49b27fcc972cf8b0bb0411f5ee54ea611cdd4d75
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="python-web-application-project-templates"></a>Python Web アプリケーション プロジェクト テンプレート
 
@@ -89,11 +89,11 @@ Pyramid アプリは、現在、`pcreate` コマンドライン ツールを使�
   - **[サーバー ポート]**: 6543 (または .ini ファイルで構成されているポート)
 
 - **[Run Server Command (サーバー コマンドの実行)]** グループ:
-  - [コマンド]: `..\env\scripts\pserve-script.py` (スクリプト)
+  - コマンド: `..\env\scripts\pserve-script.py` (スクリプト)
   - 引数: `Production.ini`
 
 - **[Debug Server Command (サーバー コマンドのデバッグ)]** グループ:
-    - [コマンド]: `..\env\scripts\pserve-script.py` (スクリプト)
+    - コマンド: `..\env\scripts\pserve-script.py` (スクリプト)
     - 引数: `Development.ini`
 
 > [!Tip]
@@ -160,12 +160,12 @@ Azure App Service にデプロイされた場合、サイトは Microsoft IIS �
 
 使用可能な項目を以下に示します。
 
-- [Azure web.config (FastCGI)]: アプリが着信接続を処理する [WSGI](https://wsgi.readthedocs.io/en/latest/) オブジェクトを提供する場合の `web.config` ファイルを追加します。
-- [Azure web.config (HttpPlatformHandler)]: アプリが着信接続をソケットでリッスンする場合の `web.config` ファイルを追加します。
-- [Azure 静的ファイルの web.config]: 上記のいずれかの `web.config` ファイルがある場合は、そのファイルをサブディレクトリに追加して、アプリで処理されないようにします。
-- [Azure Remote debugging web.config (Azure リモート デバッグ web.config)]: WebSocket 経由でのリモート デバッグに必要なファイルを追加します。
-- [Web Role Support Files (Web ロールのサポート ファイル)]: クラウド サービス Web ロールの既定のデプロイ スクリプトが含まれます。
-- [Worker Role Support Files (worker ロールのサポート ファイル)]: クラウド サービス worker ロールの既定のデプロイ スクリプトと起動スクリプトが含まれます。
+- Azure web.config (FastCGI): アプリが着信接続を処理する [WSGI](https://wsgi.readthedocs.io/en/latest/) オブジェクトを提供する場合の `web.config` ファイルを追加します。
+- Azure web.config (HttpPlatformHandler): アプリが着信接続をソケットでリッスンする場合の `web.config` ファイルを追加します。
+- Azure 静的ファイルの web.config: 上記のいずれかの `web.config` ファイルがある場合は、そのファイルをサブディレクトリに追加して、アプリで処理されないようにします。
+- Azure Remote debugging web.config (Azure リモート デバッグ web.config): WebSocket 経由でのリモート デバッグに必要なファイルを追加します。
+- Web Role Support Files (Web ロールのサポート ファイル): クラウド サービス Web ロールの既定のデプロイ スクリプトが含まれます。
+- Worker Role Support Files (worker ロールのサポート ファイル): クラウド サービス worker ロールの既定のデプロイ スクリプトと起動スクリプトが含まれます。
 
 デバッグ `web.config` テンプレートをプロジェクトに追加し、Python リモート デバッグを使用する計画がある場合は、"デバッグ" 構成でサイトを発行する必要があります。 この設定は、現在アクティブなソリューション構成とは別であり、常に既定で "リリース" になります。 これを変更するには、**[設定]** タブを開き、発行ウィザードの **[構成]** コンボ ボックスを使用します (作成と Azure Web Apps へのデプロイについて詳しくは、[Azure ドキュメント](https://azure.microsoft.com/develop/python/)をご覧ください)。
 
