@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - vs-ide-general
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords:
 - Toolbox, Components tab
 author: gewarren
@@ -15,11 +15,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: cf0ab13b104422771b117c17ed3ff89b53fa461f
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: aa91db706d7e1236162ef69e6fd31e791ed44dbb
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="toolbox-components-tab"></a>ツールボックス、[コンポーネント] タブ
 
@@ -40,10 +40,10 @@ Visual Basic および C# のデザイナーに追加できるコンポーネン
  エンド ユーザーにフォーム上のコントロールに関連付けられているエラーがあることを示す、`System.Windows.Forms.ErrorProvider` コンポーネント インスタンスを作成します。  
   
  **EventLog**  
- ログへのイベントの書き込みおよびログ データの読み込みなど、システムおよびカスタム イベント ログとやり取りするために使用できる <xref:System.Diagnostics.EventLog> コンポーネント インスタンスを作成します。 詳細については、「[Introduction to the EventLog Component](http://msdn.microsoft.com/en-us/a2ba4f28-4b1a-435e-99ef-51b28e21f805)」 (EventLog コンポーネントの概要) を参照してください。  
+ ログへのイベントの書き込みおよびログ データの読み込みなど、システムおよびカスタム イベント ログとやり取りするために使用できる <xref:System.Diagnostics.EventLog> コンポーネント インスタンスを作成します。
   
  **FileSystemWatcher**  
- アクセス権がある任意のディレクトリまたはファイルへの変更を監視するために使用できる <xref:System.IO.FileSystemWatcher> コンポーネント インスタンスを作成します。 詳細については、「[How to: Configure FileSystemWatcher Component Instances](http://msdn.microsoft.com/en-us/2e628234-4951-4135-8a86-28b924070d50)」 (方法: FileSystemWatcher コンポーネント インスタンスの構成) を参照してください。  
+ アクセス権がある任意のディレクトリまたはファイルへの変更を監視するために使用できる <xref:System.IO.FileSystemWatcher> コンポーネント インスタンスを作成します。
   
  **HelpProvider**  
  コントロールのポップアップまたはオンライン ヘルプを提供する `System.Windows.Forms.HelpProvider` コンポーネント インスタンスを作成します。  
@@ -52,19 +52,19 @@ Visual Basic および C# のデザイナーに追加できるコンポーネン
  `System.Drawing.Image` オブジェクトのコレクションを管理するメソッドを提供する `System.Windows.Forms.ImageList` コンポーネント インスタンスを作成します。  
   
  **MessageQueue**  
- キューからメッセージを読み取る、メッセージをキューに書き込む、トランザクションの処理、およびキュー管理タスクの実行など、メッセージ キューとやり取りするために使用できる <xref:System.Messaging.MessageQueue> コンポーネント インスタンスを作成します。 詳細については、「[Using Messaging Components](http://msdn.microsoft.com/en-us/922dbac7-26f0-4e39-b666-ccfc184793d7)」 (メッセージング コンポーネントの使用) を参照してください。  
-  
+ キューからメッセージを読み取る、メッセージをキューに書き込む、トランザクションの処理、およびキュー管理タスクの実行など、メッセージ キューとやり取りするために使用できる <xref:System.Messaging.MessageQueue> コンポーネント インスタンスを作成します。
+
  **PerformanceCounter**  
- 新しいカテゴリとインスタンスの作成、カウンターから値を読み取る、カウンター データに対して計算を実行するなど、Windows パフォーマンス カウンターとのやり取りに使用できる <xref:System.Diagnostics.PerformanceCounter> コンポーネント インスタンスを作成します。 詳細については、「[Monitoring Performance Thresholds](http://msdn.microsoft.com/en-us/b8b44a55-31d0-4b45-9517-8c1b1e4fdc91)」(パフォーマンスのしきい値の監視) をご覧ください。  
+ 新しいカテゴリとインスタンスの作成、カウンターから値を読み取る、カウンター データに対して計算を実行するなど、Windows パフォーマンス カウンターとのやり取りに使用できる <xref:System.Diagnostics.PerformanceCounter> コンポーネント インスタンスを作成します。
   
  **Process**  
- システム上のプロセスに関連付けられているデータを停止、開始、および操作できる <xref:System.Diagnostics.Process> コンポーネント インスタンスを作成します。 詳細については、「[Monitoring and Managing Windows Processes](http://msdn.microsoft.com/en-us/a86bd4c1-b92c-49a0-8f32-61d67837b45e)」 (Windows プロセスの監視と管理) を参照してください。  
+ システム上のプロセスに関連付けられているデータを停止、開始、および操作できる <xref:System.Diagnostics.Process> コンポーネント インスタンスを作成します。
   
  **SerialPort**  
  同期 I/O とイベント ドリブン I/O のフレームワーク、ピンの状態とブレーク状態へのアクセス、およびシリアル ドライバーのプロパティへのアクセスを提供する `System.IO.Ports.SerialPort` コンポーネント インスタンスを作成します。  
   
  **ServiceController**  
- サービスの開始と停止やこれらのサービスへのコマンドの送信など、既存のサービスの操作に使用できる <xref:System.ServiceProcess.ServiceController> コンポーネント インスタンスを作成します。 詳細については、「[Monitoring Windows Services](http://msdn.microsoft.com/en-us/4542ee3f-e052-4cb9-8726-58e9420de222)」 (Windows サービスの監視) を参照してください。  
+ サービスの開始と停止やこれらのサービスへのコマンドの送信など、既存のサービスの操作に使用できる <xref:System.ServiceProcess.ServiceController> コンポーネント インスタンスを作成します。
   
  **タイマー**  
  時間ベースの機能を Windows ベースのアプリケーションに追加するために使用できる <xref:System.Windows.Forms.Timer> コンポーネント インスタンスを作成します。 詳細については、「[Timer コンポーネント](/dotnet/framework/winforms/controls/timer-component-windows-forms)」を参照してください。  
@@ -72,8 +72,8 @@ Visual Basic および C# のデザイナーに追加できるコンポーネン
 > [!NOTE]
 >  **ツールボックス**に追加できるシステム ベースの <xref:System.Timers.Timer> もあります。この <xref:System.Timers.Timer> は、サーバー アプリケーション用に最適化され、Windows フォーム <xref:System.Windows.Forms.Timer> は Windows フォームで使用するのに最も適しています。  
   
-## <a name="see-also"></a>参照  
- [コンポーネントによるプログラミング](http://msdn.microsoft.com/Library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)   
- [コンポーネント プログラミングのチュートリアル](http://msdn.microsoft.com/Library/373cacf7-479e-4b05-991c-5cb18824e913)   
- [ツールボックス](../../ide/reference/toolbox.md)   
- [[ツールボックス アイテムの選択] ダイアログ ボックス (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)
+## <a name="see-also"></a>関連項目
+
+[コンポーネントによるプログラミング](http://msdn.microsoft.com/Library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
+[コンポーネント プログラミングのチュートリアル](http://msdn.microsoft.com/Library/373cacf7-479e-4b05-991c-5cb18824e913)  
+[ツールボックス](../../ide/reference/toolbox.md)
