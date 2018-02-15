@@ -21,7 +21,7 @@ ms.lasthandoff: 12/22/2017
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 機能拡張の変更
 
-Visual Studio 2017 では、Visual Studio のユーザーシステムへの影響を軽減させる [高速で軽量な Visual Studio インストール エクスペリエンス](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer) を提供しているのと同時に、インストールされるワークロードと機能をユーザーが幅広く選択することを可能とさせています。 これらの機能強化をサポートするために、私たちは機能拡張モデルに変更を加え、 Visual Studio 拡張機能にいくつかの重大な変更を行いました。 このドキュメントでは、これらの変更に関する技術的な詳細とその対処方法について説明します。 一部の情報は特定の時点の実装の詳細であり、後に変更される可能性があるに注意してください。
+Visual Studio 2017 では、Visual Studio のユーザーシステムへの影響を軽減させる [高速で軽量な Visual Studio インストール エクスペリエンス](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer) を提供するとともに、インストールされるワークロードと機能をユーザーが幅広く選択することを可能にしています。 これらの機能強化をサポートするため、機能拡張モデルに変更を加え、Visual Studio の拡張性にいくつかの重大な変更を行いました。 このドキュメントでは、これらの変更に関する技術的な詳細とその対処方法について説明します。 一部の情報は特定の時点の実装の詳細であり、後に変更される可能性がありますのでご注意ください。
 
 ## <a name="changes-affecting-vsix-format-and-installation"></a>VSIX 形式とインストールに影響する変更
 
