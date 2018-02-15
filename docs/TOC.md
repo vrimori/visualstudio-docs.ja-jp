@@ -23,9 +23,8 @@
 ### ネットワーク上にインストールする
 #### [Visual Studio のネットワーク ベース インストールを作成する](install/create-a-network-installation-of-visual-studio.md)
 #### [Visual Studio のネットワーク ベース インストールを更新する](install/update-a-network-installation-of-visual-studio.md)
-#### [ファイアウォールまたはプロキシ サーバーの内側に Visual Studio をインストールする](install/install-visual-studio-behind-a-firewall-or-proxy-server.md)
-#### [プロキシ認証エラーの修正](ide/reference/proxy-authorization-required.md)
-#### [プライベート ネットワーク内の URL のホワイトリスト登録](ide/whitelisting-urls-in-a-private-network.md)
+#### [ファイアウォールまたはプロキシ サーバーの内側に Visual Studio をインストールして使用する](install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)
+##### [Visual Studio をインストールまたは使用するときのネットワーク エラーのトラブルシューティング](install/troubleshooting-network-related-errors-in-visual-studio.md)
 ### 企業に展開する
 #### [応答ファイルで Visual Studio インストールを自動化する](install/automated-installation-with-response-file.md)
 #### [Visual Studio の展開時にプロダクト キーを自動的に適用する](install/automatically-apply-product-keys-when-deploying-visual-studio.md)
@@ -188,6 +187,7 @@
 ### [Office および SharePoint 開発](vsto/office-and-sharepoint-development-in-visual-studio.md)
 ### [XML ファイルと XSLT ファイルの操作](xml-tools/xml-tools-in-visual-studio.md)
 ### 追加のチュートリアル
+#### [C# または Visual Basic を使用した WPF アプリの作成](ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)
 #### [チュートリアル 1: ピクチャ ビューアーの作成 (C#)](ide/tutorial-1-create-a-picture-viewer.md)
 ##### [手順 1: Windows フォーム アプリケーション プロジェクトの作成](ide/step-1-create-a-windows-forms-application-project.md)
 ##### [手順 2: プログラムの実行](ide/step-2-run-your-program.md)
