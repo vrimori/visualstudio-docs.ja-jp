@@ -15,11 +15,11 @@ ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
-ms.openlocfilehash: 98bbebfb5f82d10179897e94b6a49cbb3d8c6220
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: 5124547737405af8309161df90356f607909c0fa
+ms.sourcegitcommit: 06cdc1651aa7f45e03d260080da5a623d6258661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="adding-a-language-server-protocol-extension"></a>サーバー プロトコルの言語拡張機能を追加します。
 
@@ -52,7 +52,7 @@ LSP と Visual Studio でのサポートの目的は、Visual Studio 製品の�
 メッセージ | Visual Studio でサポートしています。
 --- | ---
 初期化します。 | 可
-初期化済み | 
+初期化済み | 可
 シャットダウン | 可
 exit | 可
 $/cancelRequest | 可
@@ -72,12 +72,12 @@ textDocument/didOpen | 可
 textDocument/didChange | 可
 textDocument/willSave |
 textDocument/willSaveWaitUntil |
-textDocument/didSave |
+textDocument/didSave | 可
 textDocument/didClose | 可
 textDocument/completion | 可
 入力候補および resolve | 可
-textDocument/hover |
-textDocument/signatureHelp |
+textDocument/hover | 可
+textDocument/signatureHelp | 可
 textDocument/references | 可
 textDocument/documentHighlight |
 textDocument/documentSymbol | 可
@@ -210,6 +210,16 @@ namespace MockLanguageExtension
         public async Task OnLoadedAsync()
         {
             await StartAsync?.InvokeAsync(this, EventArgs.Empty);
+        }
+
+        public async Task OnServerInitializeFailedAsync(Exception e)
+        {
+            return Task.CompletedTask;
+        }
+
+        public async Task OnServerInitializedAsync()
+        {
+            return Task.CompletedTask;
         }
     }
 }
@@ -428,6 +438,7 @@ internal class MockCustomLanguageClient : MockLanguageClient, ILanguageClientCus
     public async Task<string> SendServerCustomMessage(string test)
     {
         return await this.customMessageRpc.InvokeAsync<string>("OnCustomRequest", test);
+    }
 }
 ```
 
@@ -440,7 +451,6 @@ internal class MockCustomLanguageClient : MockLanguageClient, ILanguageClientCus
 ```csharp
 public class MockLanguageClient: ILanguageClient, ILanguageClientCustomMessage
 {
-
     public object MiddleLayer => MiddleLayerProvider.Instance;
 
     private class MiddleLayerProvider : ILanguageClientWorkspaceSymbolProvider
@@ -459,6 +469,7 @@ public class MockLanguageClient: ILanguageClient, ILanguageClientCustomMessage
             // Only return symbols that are "files"
             return symbols.Where(sym => string.Equals(new Uri(sym.Location.Uri).Scheme, "file", StringComparison.OrdinalIgnoreCase)).ToArray();
         }
+    }
 }
 ```
 
