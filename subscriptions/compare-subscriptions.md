@@ -9,11 +9,11 @@ Description: Compare features and benefits of Visual Studio standard and cloud s
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 0f820a0ae85bf4661f2c8a3ce244469b95c9a136
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: 72492331ed44c55da243960049f1e56d2a3e52f8
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="compare-visual-studio-subscription-options"></a>Visual Studio サブスクリプション オプションの比較
 
@@ -39,10 +39,10 @@ Visual Studio サブスクリプションは、Windows、iOS、Android、Linux �
 
 **プログラム**: 標準サブスクリプションおよびクラウド サブスクリプションに加え、マイクロソフトはさまざまな特殊プログラムを通じてサブスクリプションを提供しています。
 
-- [Imagine](https://imagine.microsoft.com/en-us/about): プロフェッショナル レベルの開発者用ツールと学生用のソフトウェアは無償です。ゲーム、アプリ、および Web サイトを作成するために必要なすべてのものが含まれます。
+- [Imagine](https://imagine.microsoft.com/about): プロフェッショナル レベルの開発者用ツールと学生用のソフトウェアは無償です。ゲーム、アプリ、および Web サイトを作成するために必要なすべてのものが含まれます。
 - [BizSpark](https://bizspark.microsoft.com/About/Offers): スタートアップ向けの無償の製品とサービス。  BizSpark メンバーは、Azure、Windows、Visual Studio、Office および SQL Server を含む、Microsoft のすべての開発およびテスト ソフトウェアに自由にアクセスできます。 
-- [Microsoft Partner Network (MPN)](https://partner.microsoft.com/en-us): MPN のレベルに応じて、最大で 10 のエンタープライズ サブスクリプションを受け取ることができます。 
-- [マイクロソフト認定トレーナー](https://www.microsoft.com/en-us/learning/mct-certification.aspx): 技術的な専門知識とトレーニング スキルをさらに高めるために役立つリソースへの排他アクセスを提供するために独自に調整されます。
+- [Microsoft Partner Network (MPN)](https://partner.microsoft.com/): MPN のレベルに応じて、最大で 10 のエンタープライズ サブスクリプションを受け取ることができます。 
+- [マイクロソフト認定トレーナー](https://www.microsoft.com/learning/mct-certification.aspx): 技術的な専門知識とトレーニング スキルをさらに高めるために役立つリソースへの排他アクセスを提供するために独自に調整されます。 MCT ソフトウェア & サービス サブスクリプションおよび MCT 開発者ソフトウェア & サービス サブスクリプションのお客様は、[マイクロソフト認定トレーナー Web サイト](https://www.microsoft.com/learning/mct-certification.aspx#item-ID0EFAAAAACA)にアクセスして、サブスクリプションに含まれるトレーニング利用の権利に関する詳細をご確認ください。 
 
 ## <a name="visual-studio-licensing"></a>Visual Studio のライセンス
 Visual Studio サブスクリプションはユーザーごとにライセンスが付与されます。 1 人のユーザーは、任意の数のデバイス上で自分のプログラムの設計、開発、テスト、デモを行うためにソフトウェアを使用できます。 また、Visual Studio サブスクリプションのライセンスを付与されたユーザーは、自分のプログラムに関係する問題を診断するために、ソフトウェアを評価したり、顧客の環境をシミュレートしたりすることもできます。
@@ -62,4 +62,4 @@ Visual Studio サブスクリプションのライセンスでは、開発中の
 
 [Visual Studio IDE 機能を比較する](https://www.visualstudio.com/vs/compare/)
 
-MCT ソフトウェア & サービス サブスクリプションおよび MCT 開発者ソフトウェア & サービス サブスクリプションのお客様は、[マイクロソフト認定トレーナー Web サイト](https://www.microsoft.com/learning/en-us/mct-certification.aspx#item-ID0EFAAAAACA)にアクセスして、サブスクリプションに含まれるトレーニング利用の権利に関する詳細をご確認ください。  
+ 
