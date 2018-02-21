@@ -9,38 +9,30 @@ ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 7740fcea4ac944242f4284382cf26544d9ea95b5
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 33a2d18615885fea10f3fd64077b2f9438097a7d
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="code-generation-features-in-visual-studio"></a>Visual Studio でのコード生成機能
 
-Visual Studio には、エディターでコードを生成する多くの方法があります。 これらのコード生成機能を使用すると、時間を短縮し、キーボード操作や構文エラーを減らし、コード全体の一貫性を向上できます。
+Visual Studio には、コードの生成、修正、リファクタリングに利用できるさまざまな方法があります。
 
-Visual Studio のコード生成機能の一部には、[コード スニペット](../ide/code-snippets.md)と[クイック アクション](../ide/quick-actions.md) ![小さい電球アイコン](media/vs2015_lightbulbsmall.png) があります。
+- [コード スニペット](../ide/code-snippets.md)を使うと、[switch](/dotnet/csharp/language-reference/keywords/switch) ブロックや [enum](/dotnet/csharp/language-reference/keywords/enum) 宣言などのテンプレートを挿入できます。
 
-[クイック アクション](../ide/quick-actions.md)で使用できる共通のコード生成タスクは、次のとおりです。
+- [クイック アクション](../ide/quick-actions.md)を使うと、クラスやプロパティなどのコードを生成したり、ローカル変数を導入したりできます。 また、クイック アクションを使うと、必要のないキャストや使われていない変数の削除、変数にアクセスする前の null チェックの追加など、[コードを向上させる](../ide/common-quick-actions.md)こともできます。
 
-* クラス、メソッド、プロパティなどの生成
+- [コードをリファクタリング](../ide/refactoring-in-visual-studio.md)して、変数の名前の変更、メソッドのパラメーターの順序の変更、型とファイル名の同期、その他さまざまなことを行うことができます。
 
-* 抽象クラスまたはインターフェイスの実装
-
-* 複合式へのローカル変数の導入
-
-さらに、特定の文字を入力することで以下を実行できます。
-
-* コード用の [XML 形式のコメント ブロック]()の生成。ドキュメントを自動生成するために、後で処理できます。
-
-* [メソッド上書き]()シグネチャの生成
-
-コード生成のロジックは言語の構文に密接に結び付けられているため、Visual Studio の各言語サービスには、それぞれ独自のコード生成機能があります。
+> [!NOTE]
+> Visual Studio の各言語サービスは独自のコード生成機能を提供するので、C# でしか使えない機能や、C# と Visual Basic の両方で使える機能があります。
 
 ## <a name="see-also"></a>関連項目
 
-[クイック アクション](../ide/quick-actions.md)  
 [コード スニペット](../ide/code-snippets.md)  
-[コード生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)  
-[リファクタリング](../ide/refactoring-in-visual-studio.md)
+[クイック アクション](../ide/quick-actions.md)  
+[リファクタリング](../ide/refactoring-in-visual-studio.md)  
+[コード生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)

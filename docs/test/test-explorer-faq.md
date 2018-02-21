@@ -18,47 +18,61 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: ghogen
-ms.openlocfilehash: db3cf85576e6c46aca14897f7244cd0f56d8d5c2
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 63c1b25ad597dc3d56dfc398ec9c6c463aec200d
+ms.sourcegitcommit: 238cd48787391aa0ed1eb684f3f04e80f7958705
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio テスト エクスプローラーに関する FAQ
 
 ## <a name="test-discovery"></a>テスト検出
 
-### <a name="1-the-test-explorer-is-not-discovering-my-tests-that-have-theories-custom-adapters-custom-traits-use-ifdefs-or-are-dynamically-defined-how-can-i-discover-these-tests"></a>1.テスト エクスプローラーが、理論、カスタム アダプター、またはカスタムの特徴を持つテストや、#ifdefs を使用したり動的に定義されたテストを検出しません。 これらのテストを検出するにはどうすればよいですか?
+### <a name="1-the-test-explorer-is-not-discovering-my-tests-that-are-dynamically-defined-for-example-theories-custom-adapters-custom-traits-ifdefs-etc-how-can-i-discover-these-tests"></a>1.テスト エクスプローラーが、動的に定義されたテストを検出しません (理論、カスタム アダプター、カスタム特性、#ifdefs など)。これらのテストを検出するにはどうすればよいですか?
 
   プロジェクトをビルドして、**[ツール] > [オプション] > [テスト]** の順に移動して、アセンブリベースの検出がオンになっていることを確認します。
 
-  ソースベースのテストの検出である[リアルタイムのテスト検出](https://go.microsoft.com/fwlink/?linkid=862824)では、理論、カスタム アダプター、カスタムの特徴、`#ifdef` ステートメントを使用するテストや、他の何らかの方法で動的に定義されるテストを検出することはできません。 これらのテストを正確に検出するには、ビルドが必要です。 15.6 プレビューでは、アセンブリベースの検出 (従来の検出プログラム) はビルドの後にのみ実行されます。 つまり、リアルタイムのテスト検出は、ユーザーが編集中にできるだけ多くのテストを検出し、アセンブリベースの検出では、ビルド後に理論 (または動的に定義されたテスト) を表示できるようにします。 リアルタイムのテスト検出は、応答性を高めながら、ビルド後に完全かつ正確な結果を得ることができます。
+  [リアルタイムのテスト検出](https://go.microsoft.com/fwlink/?linkid=862824)は、ソース ベースのテストの検出です。 理論、カスタム アダプター、カスタム特性、`#ifdef` ステートメントなどは実行時に定義されるため、これらを使うテストは検出できません。 これらのテストを正確に検出するには、ビルドが必要です。 15.6 プレビューでは、アセンブリベースの検出 (従来の検出プログラム) はビルドの後にのみ実行されます。 この設定は、リアルタイムのテスト検出は、ユーザーが編集中にできるだけ多くのテストを検出し、アセンブリベースの検出では、ビルド後に動的に定義されたテストを表示できるようにすることを意味します。 リアルタイムのテスト検出は、応答性を高めながら、ビルド後に完全かつ正確な結果を得ることができます。
 
 ### <a name="2-what-does-the--plus-symbol-that-appears-in-the-top-line-of-test-explorer-mean"></a>2.テスト エクスプローラーの最初の行に表示される '+' (プラス) 記号は何を意味しているのですか?
 
-  '+' (プラス) 記号は、アセンブリベースの検出をオンにすると、ビルド後にさらに多くのテストが検出される可能性があることを示しています。 これは、プロジェクト内で動的に定義されているテストが検出されると表示されます。
+  "+" (プラス) 記号は、アセンブリベースの検出がオンになっていると、ビルド後にさらに多くのテストが検出される可能性があることを示しています。 これは、プロジェクト内で動的に定義されているテストが検出されると表示されます。
 
   ![サマリー行のプラス記号](media/testex-plussymbol.png)
 
 ### <a name="3-assembly-based-discovery-is-no-longer-working-for-my-project-how-do-i-turn-it-back-on"></a>3.プロジェクトでアセンブリベースの検出が機能しなくなりました。 元に戻すにはどうしたらよいですか?
 
-  **[ツール] > [オプション] > [テスト]** の順に移動して、**[ビルド後にビルド済みアセンブリからテストをさらに探索する]** のチェック ボックスをオンにします。
+  **[ツール] > [オプション] > [テスト]** の順に移動して、**[ビルド後にビルド済みアセンブリからテストをさらに探索する]** チェック ボックスをオンにします。
 
   ![アセンブリベースのオプション](media/testex-toolsoptions.png)
 
 ### <a name="4-tests-now-appear-in-test-explorer-while-i-type-without-having-to-build-my-project-what-changed"></a>4.プロジェクトをビルドしなくても、入力中にテストがテスト エクスプローラーに表示されるようになりました。 何か変更されたのでしょうか?
 
-  この機能は、[リアルタイムのテスト検出](https://go.microsoft.com/fwlink/?linkid=862824)と呼ばれます。 これは Roslyn アナライザーを使用してテストを検出し、リアルタイムでテスト エクスプローラーに表示します。プロジェクトをビルドする必要はありません。 理論やカスタムの特徴などの動的に定義されたテストに対するテスト検出の動作の詳細については、FAQ #1 を参照してください。
+  この機能は、[リアルタイムのテスト検出](https://go.microsoft.com/fwlink/?linkid=862824)と呼ばれます。 これは Roslyn アナライザーを使用してテストを検出し、リアルタイムでテスト エクスプローラーに表示します。プロジェクトをビルドする必要はありません。 理論やカスタムの特徴などの動的に定義されたテストに対するテスト検出の動作については、FAQ #1 を参照してください。
 
 ### <a name="5-what-languages-and-test-frameworks-can-use-real-time-test-discovery"></a>5.リアルタイムのテスト検出では、どの言語およびテスト フレームワークを使用できますか?
 
   [リアルタイムのテスト検出](https://go.microsoft.com/fwlink/?linkid=862824)は、Roslyn コンパイラを使用してビルドされているため、マネージ言語 (C# および Visual Basic) に対してのみ機能します。 今のところ、リアルタイムのテスト検出は xUnit、NUnit、MSTest のフレームワークに対してのみ機能します。
 
+### <a name="6-how-can-i-turn-on-logs-for-the-test-explorer"></a>6.どうすればテスト エクスプローラーのログを有効にできますか?
+
+  **[ツール] > [オプション] > [テスト]** の順に移動し、そこで [ログ] セクションを見つけます。
+
+### <a name="7-why-are-my-tests-in-uwp-projects-not-discovered-until-i-deploy-my-app"></a>7.アプリを配置するまで UWP プロジェクトのテストが検出されないのはなぜですか?
+
+  アプリが配置されると、UWP テストは異なるランタイムを対象にします。 つまり、UWP プロジェクトで正確にテストを検出するには、プロジェクトをビルドするだけでなく、配置することも必要です。
+
+### <a name="8-how-does-sorting-test-results-work-in-the-hierarchy-view"></a>8.階層ビューでテスト結果を並べ替えるにはどうすればよいですか?
+
+  階層ビューでは、結果順ではなくアルファベット順にテストが並べ替えられます。 通常、他のグループ化設定は、テスト結果を結果順に並べ替えてからアルファベット順に並べ替えます。 比較のために異なるグループ化オプションを次に示します。 [この GitHub の問題で](https://github.com/Microsoft/vstest/issues/1425)設計に関するフィードバックを提供できます。
+
+  ![SortingExamples](media/testex-sortingex.png)
+
 ## <a name="features"></a>フィーチャー
 
 ### <a name="how-can-i-turn-on-feature-flags-to-try-out-new-testing-features"></a>新しいテスト機能を試すために機能フラグをオンにするにはどうしたらよいですか?
 
-機能フラグは、機能を公式に出荷する前に、フィードバックを提供する熱心なユーザー向けに、製品の実験用または未完成部分を出荷するために使用されます。 これは IDE エクスペリエンスの安定性を損なう可能性があります。 仮想マシンなどの安全な開発環境でのみ使用することをお勧めします。 機能フラグの設定は、常に各自の責任で行ってください。 実験用の機能は、[機能フラグの拡張機能](https://marketplace.visualstudio.com/items?itemName=PaulHarrington.FeatureFlagsExtension)を使用するか、開発者コマンド プロンプトを使用してオンにすることができます。
+機能フラグは、機能を公式に出荷する前に、フィードバックを提供する熱心なユーザー向けに、製品の実験用または未完成部分を出荷するために使用されます。 これは IDE エクスペリエンスの安定性を損なう可能性があります。 仮想マシンなどの安全な開発環境でのみ使用してください。 機能フラグの設定は、常に各自の責任で行ってください。 実験用の機能は、[機能フラグの拡張機能](https://marketplace.visualstudio.com/items?itemName=PaulHarrington.FeatureFlagsExtension)を使用するか、開発者コマンド プロンプトを使用してオンにすることができます。
 
 ![機能フラグの拡張機能](media/testex-featureflag.png)
 

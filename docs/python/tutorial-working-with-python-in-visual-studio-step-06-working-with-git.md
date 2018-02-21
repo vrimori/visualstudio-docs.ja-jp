@@ -7,21 +7,21 @@ ms.reviewer:
 ms.suite: 
 ms.technology:
 - devlang-python
-ms.devlang: python
+dev_langs:
+- python
 ms.tgt_pltfrm: 
-ms.topic: get-started-article
-caps.latest.revision: 
+ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6ce191ce01a89b7fc743562eaf430656f6952271
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.openlocfilehash: eb39d8807deb0c08b12b04128365c584d9bd8251
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="step-6-working-with-git"></a>手順 6: Git の使用
 
@@ -35,7 +35,7 @@ Visual Studio には、ローカルの Git リポジトリおよび、GitHub や
 
   ![Visual Studio ウィンドウの Git コントロールの上にカーソルを置くと表示される追加情報](media/working-with-git-01.png)
 
-1. **[チーム エクスプローラー]** ウィンドウも表示され、リポジトリ ヘッダーを選択すると、さまざまな Git オプションが表示されます。 次の **[同期]** ウィンドウには、リモート リポジトリに公開するためのオプションが表示されています。
+1. **[チーム エクスプローラー]** ウィンドウも表示され、リポジトリ ヘッダーを選択すると、さまざまな Git オプションが表示されます。 **[同期]** ウィンドウで次のように **[プッシュ]** 見出しを選ぶと、リモート リポジトリに公開するためのオプションが表示されます。
 
   ![ローカル リポジトリの作成後の Visual Studio のチーム エクスプローラー](media/working-with-git-02.png)
 
@@ -47,7 +47,7 @@ Visual Studio には、ローカルの Git リポジトリおよび、GitHub や
 
   ![分岐を示す Visual Studio のチーム エクスプローラー](media/working-with-git-04.png)
 
-1. ローカル リポジトリを使用する場合、変更をコミットすると、リポジトリでも直接変更されます。 リモート リポジトリに接続している場合、**[同期]** を選択し、ローカル コミットをプッシュします。
+1. ローカル リポジトリを使用する場合、変更をコミットすると、リポジトリでも直接変更されます。 リモート リポジトリに接続している場合、見出しを選び、**[同期]** を選んで **[同期]** セクションに切り替えて、そこに表示されるコマンドを使います。
 
 ## <a name="going-deeper"></a>詳しい説明
 

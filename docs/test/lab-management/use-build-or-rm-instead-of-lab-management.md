@@ -7,16 +7,18 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: automated testing, lab management, test lab
+helpviewer_keywords:
+- automated testing, lab management, test lab
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: 4dae17012ecf66258d65ff3c200a0dbe8e4c9429
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 25f1007458b691b97f0ea852a1bf0e7325d79d8a
+ms.sourcegitcommit: 238cd48787391aa0ed1eb684f3f04e80f7958705
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-build-and-release-management-instead-of-lab-management-for-automated-testing"></a>テストの自動化に、Lab Management ではなくビルドとリリース管理を使用します。
 
@@ -26,7 +28,7 @@ ms.lasthandoff: 01/09/2018
 
 * [SCVMM 環境のセルフ サービスの管理](#managescvmm)
 
-ビルドとリリース管理では、ネットワークが分離された SCVMM 環境をセルフ サービスで作成することをサポートしていません。また、将来これを提供する予定もありません。 ただし、[提案できる代替手段](#isolatedenvir)がいくつかあります。
+* [ネットワーク分離環境の作成](#isolatedenvir)
 
 <a name="bdtautomation"></a>
 ## <a name="build-deploy-test-automation"></a>ビルド、配置、テストの自動化
@@ -74,14 +76,15 @@ XAML ビルドは、目的の達成に、ラボ環境、テスト スイート�
 | 環境のチェックポイントを取得するか、クリーンなチェックポイントに環境を復元します。 | 環境ビューアーでラボ環境を開きます。 チェックポイントを取得するまたは前のチェックポイントに復元するオプションを選択します。 | 仮想マシンでこれらの操作を実行するために、直接 SCVMM 管理コンソールを使用します。 または、これらの手順をより大規模な自動化の一環として実行するには、リリース定義の環境の一部として [SCVMM Integration 拡張機能](https://marketplace.visualstudio.com/items?itemname=ms-vscs-rm.scvmmapp)からチェックポイント タスクを含めます。 |
 
 <a name="isolatedenvir"></a>
-## <a name="self-service-creation-of-network-isolated-environments"></a>ネットワーク分離環境のセルフサービスでの作成
+## <a name="creation-of-network-isolated-environments"></a>ネットワーク分離環境の作成
 
 ネットワークが分離されたラボ環境とは、ネットワークの競合を引き起こすことがなく安全に複製できる SCVMM 仮想マシンのグループです。 これは、MTM で、一連のネットワーク インターフェイス カードを使用してプライベート ネットワークに仮想マシンを構成した、および別の一連のネットワーク インターフェイス カードを使用してパブリック ネットワークに仮想マシンを構成した一連の手順で行われました。
 
-[Microsoft Azure](https://azure.microsoft.com/) や [Microsoft Azure Stack](https://azure.microsoft.com/overview/azure-stack/) などのより充実したパブリックおよびプライベート クラウド管理ツールの進化により、同様な機能が直接クラウド管理ツールでできるようになっています。 ビルドとリリース管理で、これを実現する同じ方法はありません。
+ただし、VSTS と TFS を SCVMM ビルドおよび配置タスクと組み合わせて使うことで、SCVMM 環境の管理、分離仮想ネットワークのプロビジョニング、およびビルド、配置、テスト シナリオの実装を、行うことができます。 たとえば、タスクを使って次のことができます。
 
-ネットワークを分離する必要がある場合、次の代替手段の使用を検討してください。
+* チェックポイントを作成、復元、削除する
+* テンプレートを使って新しい仮想マシンを作成する
+* 仮想マシンを開始および停止する
+* SCVMM のカスタム PowerShell スクリプトを実行する
 
-* 複数のクローンの構成を簡単にすることが、ネットワークを分離する動機の 1 つでした。 各クローンは、元の完全なレプリカであり、コンピューター名と構成設定が同一であるため新しい環境を簡単に設定できます。 ただし、この同じ利点は、アプリケーションの最終的な配置方法が同じでないため (たとえば、実稼働の場合など) 以降のライフサイクルで問題となる場合があります。 **代わりに**実稼働環境を設定するのと同じ方法で新しい環境を設定することを検討し、ネットワークは分離しないでください。
-
-* テストには、[Microsoft Azure](https://azure.microsoft.com/) などのパブリック クラウド インフラストラクチャを使用してください。 プロキシまたは jumpbox のみでパブリック ネットワークに公開されている、プライベート ネットワークで接続される仮想マシンのグループを設定するには、[Azure Marketplace](https://azure.microsoft.com/marketplace/) の [Azure Resource Manager テンプレート](https://azure.microsoft.com/documentation/templates/)または[Azure クイック スタート テンプレート](https://azure.microsoft.com/documentation/templates/)を使用します。
+詳細については、「[Create a virtual network isolated environment for build-deploy-test scenarios](/vsts/build-release/actions/virtual-networks/create-virtual-network)」(ビルド、配置、テスト シナリオのための仮想ネットワーク分離環境を作成する) を参照してください。

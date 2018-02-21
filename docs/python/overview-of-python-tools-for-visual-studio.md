@@ -7,21 +7,21 @@ ms.reviewer:
 ms.suite: 
 ms.technology:
 - devlang-python
-ms.devlang: python
+dev_langs:
+- python
 ms.tgt_pltfrm: 
 ms.topic: hero-article
-caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 4d2033e8912d6010adc8e83108a8b9ece1aa4b0e
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.openlocfilehash: 7c81cd0308dc40049e4d067369e3dcacc1f839a3
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-python-in-visual-studio-windows"></a>Visual Studio での Python の使用 (Windows)
 
@@ -70,7 +70,7 @@ A:  一般的に、Python はインタープリター言語であり、Visual St
 
 ## <a name="features-matrix"></a>機能一覧
 
-[インストール ガイド](installing-python-support-in-visual-studio.md)の説明に従って、以下のエディションの Visual Studio に Python のサポートをインストールできます。
+[インストール ガイド](installing-python-support-in-visual-studio.md)の説明に従って、以下のエディションの Visual Studio に Python の機能をインストールできます。
 
 - [Visual Studio 2017 (全エディション)](https://www.visualstudio.com/vs/)
 - [Visual Studio 2015 (全エディション)] (https://www.visualstudio.com/en-us/downloads/visual-studio-2015-downloads-vs)
@@ -81,7 +81,7 @@ A:  一般的に、Python はインタープリター言語であり、Visual St
 - Visual Studio 2012 (Pro エディション以上)
 - Visual Studio 2010 SP1 (Pro エディション以上、.NET 4.5 が必要)
 
-Visual Studio のバージョンおよびエディション別のサポートされる機能:
+機能が完全にサポートおよび保守されるのは、Visual Studio の最新バージョンのみです。 古いバージョンでも機能を使うことはできますが、積極的には保守されません。
 
 | Python のサポート | 2017 | 2015 | 2013 Comm | 2013 Desktop | 2013 Web | 2013 Pro+ | 2012 Pro+ | 2010 SP1 Pro+ |
 | --- | --- | --- | --- | --- | --- | --- | --- | ---|
@@ -166,6 +166,8 @@ Visual Studio のバージョンおよびエディション別のサポートさ
 | リモート デバッグ (Windows、Mac OS X、Linux) | &#10004; | &#10004; | &#10004; | &#10004; | &#10007; | &#10004; | &#10004; | &#10004; |
 | 対話型ウィンドウのデバッグ | &#10004; | &#10004; | &#10004; | &#10004; | &#10004; | &#10004; | &#10004; | &#10004; |
 <br/>
+
+<a name="matrix-profiling"></a>
 
 | プロファイル | 2017 | 2015 | 2013 Comm | 2013 Desktop | 2013 Web | 2013 Pro+ | 2012 Pro+ | 2010 SP1 Pro+ |
 | --- | --- | --- | --- | --- | --- | --- | --- | ---|
