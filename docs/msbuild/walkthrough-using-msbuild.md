@@ -4,21 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: MSBuild, tutorial
+helpviewer_keywords:
+- MSBuild, tutorial
 ms.assetid: b8a8b866-bb07-4abf-b9ec-0b40d281c310
-caps.latest.revision: "32"
-author: kempb
-ms.author: kempb
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: fa0ec9c483244e15e5cc51cb6bdb743c1f586e7c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 00775856e57392355b1908d4849f1bbbd836c5f2
+ms.sourcegitcommit: f219ef323b8e1c9b61f2bfd4d3fad7e3d5fb3561
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="walkthrough-using-msbuild"></a>チュートリアル: MSBuild の使用
 MSBuild は Microsoft および Visual Studio のビルド プラットフォームです。 このチュートリアルでは、MSBuild のビルド ブロックについて説明し、MSBuild プロジェクトを記述、操作、およびデバッグする方法について説明します。 ここで学習する内容を以下に示します。  
@@ -60,45 +61,33 @@ MSBuild は Microsoft および Visual Studio のビルド プラットフォー
      コード エディターにプロジェクト ファイルが表示されます。  
   
 ## <a name="targets-and-tasks"></a>ターゲットとタスク  
- プロジェクト ファイルは XML 形式のファイルで、ルート ノードは [Project](../msbuild/project-element-msbuild.md) です。  
+プロジェクト ファイルは XML 形式のファイルで、ルート ノードは [Project](../msbuild/project-element-msbuild.md) です。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
-<Project ToolsVersion="12.0" DefaultTargets="Build"  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+<Project ToolsVersion="15.0"  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
 ```  
   
- Project 要素で xmlns 名前空間を指定する必要があります。  
+Project 要素で xmlns 名前空間を指定する必要があります。 `ToolsVersion` が新しいプロジェクトに存在する場合は、"15.0" でなければなりません。
   
- アプリケーションをビルドする作業は、[Target](../msbuild/target-element-msbuild.md) 要素と [Task](../msbuild/task-element-msbuild.md) 要素を使用して行われます。  
+アプリケーションをビルドする作業は、[Target](../msbuild/target-element-msbuild.md) 要素と [Task](../msbuild/task-element-msbuild.md) 要素を使用して行われます。  
   
 -   タスクとは、作業の最小単位であり、ビルドの "原子" のようなものです。 タスクは独立した実行可能コンポーネントで、入力と出力を持つ場合もあります。 現在このプロジェクト ファイルで参照または定義されているタスクはありません。 後ほど、このプロジェクト ファイルにタスクを追加します。 詳細については、「[MSBuild タスク](../msbuild/msbuild-tasks.md)」をご覧ください。  
   
--   ターゲットとは、一連のタスクに名前を付けたものです。 このプロジェクト ファイルには、末尾に BeforeBuild と AfterBuild という 2 つのターゲットがあります。これらは現在、HTML コメントに囲まれています。  
+-   ターゲットとは、一連のタスクに名前を付けたものです。 詳細については、「[MSBuild ターゲット](../msbuild/msbuild-targets.md)」をご覧ください。  
   
-    ```xml  
-    <Target Name="BeforeBuild">  
-    </Target>  
-    <Target Name="AfterBuild">  
-    </Target>  
-    ```  
-  
-     詳細については、「[MSBuild ターゲット](../msbuild/msbuild-targets.md)」をご覧ください。  
-  
- Project ノードには、DefaultTargets という省略可能な属性があります。この属性は、ビルドする既定のターゲットを選択します。ここでは Build が選択されています。  
-  
-```xml  
-<Project ToolsVersion="12.0" DefaultTargets="Build" ...  
-```  
-  
- Build ターゲットは、このプロジェクト ファイルには定義されていません。 [Import](../msbuild/import-element-msbuild.md) 要素を使用して Microsoft.CSharp.targets ファイルからインポートされています。  
+既定のターゲットは、このプロジェクト ファイルでは定義されていません。 代わりに、インポートされるプロジェクトで指定されています。 [Import](../msbuild/import-element-msbuild.md) 要素は、インポートされたプロジェクトを指定します。 たとえば、C# プロジェクトでは、既定のターゲットが Microsoft.CSharp.targets ファイルからインポートされます。 
   
 ```xml  
 <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />  
 ```  
   
- インポートされたファイルは、実質的には、プロジェクト ファイルで参照されている場所に挿入されます。  
+インポートされたファイルは、実質的には、プロジェクト ファイルで参照されている場所に挿入されます。  
+
+> [!NOTE]
+> .NET Core などの一部のプロジェクトの種類では、`ToolsVersion` の代わりに `Sdk` を使う簡素化されたスキーマが使われます。 これらのプロジェクトには、暗黙的なインポートと、異なる既定の属性値があります。
   
- MSBuild ではビルドのターゲットが追跡されるため、個々のターゲットが複数回ビルドされることはありません。  
+MSBuild ではビルドのターゲットが追跡されるため、個々のターゲットが複数回ビルドされることはありません。  
   
 ## <a name="adding-a-target-and-a-task"></a>ターゲットとタスクの追加  
  プロジェクト ファイルにターゲットを追加し、 そのターゲットに、メッセージを出力するタスクを追加します。  
@@ -158,9 +147,6 @@ MSBuild は Microsoft および Visual Studio のビルド プラットフォー
   
  コード エディターとコマンド ウィンドウを交互に使用すると、プロジェクト ファイルを変更してすばやく結果を確認できます。  
   
-> [!NOTE]
->  コマンド ライン スイッチの /t を使用せずに msbuild を実行すると、Project 要素の DefaultTarget 属性で指定されているターゲット (この場合は "Build") がビルドされます。 これによって、Windows フォーム アプリケーションの BuildApp.exe がビルドされます。  
-  
 ## <a name="build-properties"></a>[ビルド プロパティ]  
  ビルド プロパティは、ビルドを制御する名前と値のペアです。 このプロジェクト ファイルの先頭には、既にいくつかのビルド プロパティが定義されています。  
   
@@ -178,10 +164,10 @@ MSBuild は Microsoft および Visual Studio のビルド プラットフォー
  すべてのプロパティは、PropertyGroup 要素の子要素です。 子要素の名前がプロパティの名前になり、子要素のテキスト要素がプロパティの値になります。 たとえば、オブジェクトに適用された  
   
 ```xml  
-<TargetFrameworkVersion>v12.0</TargetFrameworkVersion>  
+<TargetFrameworkVersion>v15.0</TargetFrameworkVersion>  
 ```  
   
- ここでは、TargetFrameworkVersion という名前のプロパティを定義して、文字列値 "v12.0" を割り当てています。  
+ ここでは、TargetFrameworkVersion という名前のプロパティを定義して、文字列値 "v15.0" を割り当てています。  
   
  ビルド プロパティはいつでも再定義できます。 If  
   
@@ -223,7 +209,7 @@ $(PropertyName)
   
     ```  
     Configuration is Debug  
-    MSBuildToolsPath is C:\Program Files\MSBuild\12.0\bin  
+    MSBuildToolsPath is C:\Program Files (x86)\Microsoft Visual Studio\2017\<Visual Studio SKU>\MSBuild\15.0\Bin  
     ```  
   
 > [!NOTE]

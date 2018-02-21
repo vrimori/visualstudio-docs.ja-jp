@@ -1,86 +1,119 @@
 ---
 title: "[オプション]、[テキスト エディター]、[C#]、[詳細] | Microsoft Docs"
-ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
-- VS.ToolsOptionsPages.Text_Editor.Visual_JSharp.Advanced
-- VS.ToolsOptionsPages.Text_Editor.Visual_JSharp.Outlining
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Advanced
 helpviewer_keywords:
 - XML comments
 - XML documentation, generating
 - outlining options [C#]
 - XML documentation, creating
-ms.assetid: 947f9d9a-b0f3-408d-9866-d82895bcee31
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload:
 - dotnet
-ms.openlocfilehash: 193b61ab95daa84c5815c251c7d52103c88977e1
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 5d6cf8b655151e9b07111b6ac6fd64b6ad3c845f
+ms.sourcegitcommit: 238cd48787391aa0ed1eb684f3f04e80f7958705
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="options-text-editor-c-advanced"></a>[オプション]、[テキスト エディター]、[C#]、[詳細]
-このダイアログ ボックスを使用して、C# のエディターの書式設定、コードのリファクタリング、および XML ドキュメントのコメントの設定を変更します。 このダイアログ ボックスを表示するには、**[ツール]** メニューの **[オプション]** をクリックし、**[テキスト エディター]** フォルダー、**[C#]** を順に展開し、**[詳細設定]** をクリックします。  
-  
+
+**[詳細]** オプションを使って、C# のエディターの書式設定、コードのリファクタリング、および XML ドキュメントのコメントの設定を変更します。 このオプション ページにアクセスするには、**[ツール]** > **[オプション]** を選び、さらに **[テキスト エディター]** > **[C#]** > **[詳細]** の順に選びます。
+
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
-  
-## <a name="outlining"></a>アウトライン  
- ファイルが開かれたときにアウトライン モードを実行する  
- 選択すると、コードの折りたたみ可能なブロックを作成するコード ファイルが自動的にアウトラインになります。 初めてファイルが開かれると、#regions ブロックとアクティブでないコード ブロックが折りたたまれます。  
-  
-## <a name="editor-help"></a>エディターのヘルプ  
- エディターでエラーに下線を引く  
- コードのビルド エラーを識別します。 このオプションを選択すると、色付きの波線が表示されます。色にはそれぞれ特定の意味があります。  
-  
--   赤は解析エラーです。  
-  
--   青はビルド エラーです。  
-  
--   緑はビルドの警告です。  
-  
--   紫は無効な[エディット コンティニュ](../../debugger/edit-and-continue.md)の編集内容です。  
-  
-下線付きのコード セグメントの上にマウス ポインターを置いて、ヒントでエラーに関する情報を確認してください。  
-  
-有効なセマンティック エラーを表示する  
-明示的なコンパイルのない特定のコンパイル エラー (たとえば、不明な型を宣言して使用したり、不明なプロパティを参照したりする) を特定します。  
-  
-カーソルの下にあるシンボルへの参照をハイライトする  
-シンボル内にカーソルを置いたり、シンボルをクリックしたりすると、コード ファイル内のそのシンボルのすべてのインスタンスが強調表示されます。  
-  
-## <a name="refactoring"></a>リファクタリング  
- リファクタリングの結果を確認する  
- ビルド エラーを含むコードをリファクタリングする場合、またはリファクタリングによってコード参照が元のバインドとは別のものにバインドされる場合に、**[検証結果]** ダイアログ ボックスが表示されます。  
-  
- メンバーにコンパイラが生成した参照が指定されているときに警告する  
- コンパイラによって生成された参照と同じ名前を持つメンバーをリファクタリングすると、警告ダイアログ ボックスが表示されます。  
-  
-## <a name="xml-documentation-comments"></a>XML ドキュメントのコメント  
- /// が入力されたとき、XML ドキュメントのコメントを生成する  
- 選択すると、/// コメント イントロダクションを入力した後に、\<summary> start タグと end タグが XML ドキュメント コメントに自動的に挿入されます。 XML ドキュメントの詳細については、「[XML ドキュメント コメント](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)」を参照してください。  
-  
-## <a name="implement-interface"></a>インターフェイスの実装  
- 生成されたコードを #region で囲む  
- [インターフェイスの実装] または [インターフェイスを明示的に実装] が使用されると、#region \<*interface name*> メンバーがメソッドの前後に挿入されます。  
-  
-## <a name="organize-usings"></a>using の整理  
- using を並べ替える際に、'System' ディレクティブを先頭に配置する  
- 選択すると、`System` using ディレクティブが他の using ディレクティブより前に表示されます。 詳細については、「[C# IntelliSense](../../ide/visual-csharp-intellisense.md#automatic-code-generation)」の「using の整理」を参照してください。  
-  
-## <a name="see-also"></a>参照  
- [XML ドキュメント コメント](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)   
- [言語固有のエディター オプションの設定](../../ide/reference/setting-language-specific-editor-options.md)   
- [C# IntelliSense](../../ide/visual-csharp-intellisense.md)
+> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
+
+## <a name="analysis"></a>分析
+
+- 完全ソリューション解析を有効にする
+
+   開いているコード ファイルだけでなく、ソリューションのすべてのファイルでコード分析を有効にします。 詳細については、[完全ソリューション解析](../../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md)に関するページを参照してください。
+
+- 外部プロセスでエディター機能解析を実行する (試験段階)
+
+## <a name="using-directives"></a>Using ディレクティブ
+
+- using を並べ替える際に、'System' ディレクティブを先頭に配置する
+
+- ディレクティブ グループを使用して分離します
+
+- 参照アセンブリの型に using を提案する
+
+- NuGet パッケージの型に using を提案する
+
+## <a name="highlighting"></a>強調表示
+
+- カーソルの下にあるシンボルへの参照をハイライトする
+
+   シンボル内にカーソルを置いたり、シンボルをクリックしたりすると、コード ファイル内のそのシンボルのすべてのインスタンスが強調表示されます。
+
+- カーソルの下にあるキーワードの関連キーワードをハイライトする
+
+## <a name="outlining"></a>アウトライン
+
+- ファイルが開かれたときにアウトライン モードを実行する
+
+   選択すると、コードの折りたたみ可能なブロックを作成するコード ファイルが自動的にアウトラインになります。 初めてファイルが開かれると、#regions ブロックとアクティブでないコード ブロックが折りたたまれます。
+
+- プロシージャ行の区切り記号を表示する
+
+- 宣言レベルのコンストラクトのアウトラインを表示する
+
+- コード レベルのコンストラクトのアウトラインを表示する
+
+- コメントとプリプロセッサ領域のアウトラインを表示する
+
+- 定義を折りたたむときに #regions を折りたたむ
+
+## <a name="fading"></a>フェード
+
+- 未使用の using をフェードアウトします
+
+- 到達できないコードをフェードアウトします
+
+## <a name="block-structure-guides"></a>ブロック構造のガイド
+
+- 宣言レベルのコンストラクトのガイドを表示する
+
+- コード レベルのコンストラクトのガイドを表示する
+
+## <a name="editor-help"></a>エディターのヘルプ
+
+- /// が入力されたとき、XML ドキュメントのコメントを生成する
+
+   オンにすると、`///` コメント イントロダクションを入力した後に、XML ドキュメント コメントの XML 要素が挿入されます。 XML ドキュメントの詳細については、「[XXML ドキュメント コメント (C# プログラミング ガイド)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)」を参照してください。
+
+- /\* \*/ コメントを記述する際、新しい行の先頭に \* を挿入する
+
+- 名前変更追跡のプレビューの表示
+
+- Enter で文字列リテラルを分割する
+
+- 'string.Format' 呼び出しの無効なプレースホルダーをレポートします
+
+## <a name="extract-method"></a>メソッドの抽出
+
+- カスタム構造体に ref または out を設定しない
+
+## <a name="implement-interface-or-abstract-class"></a>インターフェイスまたは抽象クラスの実装
+
+- [プロパティ、イベント、メソッドを挿入する際には、次の場所に挿入します]: [同じ種類の他のメンバーと共に] または [at the end]\(末尾\)
+
+- [プロパティの生成時]: [スロー プロパティを優先する] または [自動プロパティを優先する]
+
+## <a name="see-also"></a>関連項目
+
+[方法: ドキュメント生成のための XML コメントを挿入する](../../ide/reference/generate-xml-documentation-comments.md)  
+[XML ドキュメント コメント (C# プログラミング ガイド)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)  
+[XML コメントによるコードの文書化 (C# ガイド)](/dotnet/csharp/codedoc)  
+[言語固有のエディター オプションの設定](../../ide/reference/setting-language-specific-editor-options.md)  
+[C# IntelliSense](../../ide/visual-csharp-intellisense.md)

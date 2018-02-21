@@ -16,11 +16,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: f15f9b34a19617986ca64f9b13af1b28d4c9d01a
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 3a48166490cb48870e9e6341b0cba6dfc9f668fc
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio のパフォーマンスのヒントとテクニック
 
@@ -86,7 +86,7 @@ Visual Studio のパフォーマンスの推奨事項は、まれなケースで
 
 ### <a name="managed-language-services-roslyn"></a>マネージ言語サービス (Roslyn)
 
-Roslyn のパフォーマンスに関する考慮事項については、「[Performance considerations for large solutions](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)」(大きいソリューションでのパフォーマンスの考慮事項) をご覧ください。
+.NET Compiler Platform ("Roslyn") のパフォーマンスに関する考慮事項については、「[Performance considerations for large solutions](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)」(大きいソリューションでのパフォーマンスの考慮事項) をご覧ください。
 
 - **完全なソリューション分析を無効にする**
 

@@ -7,11 +7,11 @@ ms.date: 04/14/2017
 ms.topic: article
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
-ms.openlocfilehash: 193eebd4849e6a133ade1d14cb17d5b345199811
-ms.sourcegitcommit: 24f81b8fb59722cf4a856005227f6a29bb2990cd
+ms.openlocfilehash: 193856ca96395db9a5b3bd494a5b8f1f7331f702
+ms.sourcegitcommit: 238cd48787391aa0ed1eb684f3f04e80f7958705
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Visual Studio for Mac のアンインストール
 
@@ -23,14 +23,14 @@ Xamarin Studio をコンピューターにインストールしてある場合�
 
 ## <a name="uninstall-script"></a>アンインストール スクリプト
 
-アンインストール スクリプトを使うと、Visual Studio とそれに関連するコンポーネントを一度にアンインストールできます。スクリプトは[こちら](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh)にあります。
+[アンインストール スクリプト](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh)を使うと、Visual Studio とそれに関連するコンポーネントを一度にアンインストールできます。
 
 このアンインストール スクリプトには、この記事で説明されているほとんどのコマンドが含まれます。 外部依存関係の可能性のためにスクリプトからは次の 2 つが除外されています。
 
 - **Mono のアンインストール**
 - **Android AVD のアンインストール**
 
-スクリプトを実行するには次のようにします。
+スクリプトを実行するには、次の手順のようにします。
 
 1. スクリプトを右クリックして **[名前を付けて保存]** を選び、 Mac にファイルを保存します。
 2. ターミナルを開き、スクリプトをダウンロードした場所に作業ディレクトリを変更します。
@@ -48,7 +48,7 @@ Xamarin Studio をコンピューターにインストールしてある場合�
 
 ## <a name="uninstall-visual-studio-for-mac"></a>Visual Studio for Mac をアンインストールする
 
-Mac から Visual Studio をアンインストールするときは最初に、**/Applications** ディレクトリで **Visual Studio.app** を探して、それを**ごみ箱**にドラッグします。 または、右クリックして **[ごみ箱に移動]** を選びます (下図参照)。
+Mac から Visual Studio をアンインストールするときは最初に、**/Applications** ディレクトリで **Visual Studio.app** を探して、それを**ごみ箱**にドラッグします。 または、次の図のように、右クリックして **[ごみ箱に移動]** を選びます。
 
 ![Visual Studio アプリケーションをごみ箱に移動する](media/uninstall-image1.png)
 
@@ -60,12 +60,13 @@ Visual Studio for Mac のすべてのトレースを削除するには、ター�
 sudo rm -rf "/Applications/Visual Studio.app"
 rm -rf ~/Library/Caches/VisualStudio
 rm -rf ~/Library/Preferences/VisualStudio
-rm -rf "~/Library/Preferences/Visual Studio"
+rm -rf ~/Library/Preferences/Visual\ Studio
 rm -rf ~/Library/Logs/VisualStudio
 rm -rf ~/Library/VisualStudio
 rm -rf ~/Library/Preferences/Xamarin/
 rm -rf ~/Library/Developer/Xamarin
-rm -rf "~/Library/Application Support/VisualStudio"
+rm -rf ~/Library/Application\ Support/VisualStudio
+rm -rf ~/Library/Application\ Support/VisualStudio/7.0/LocalInstall/Addins/
 ```
 
 ## <a name="uninstall-mono-sdk-mdk"></a>Mono SDK (MDK) をアンインストールする
@@ -127,8 +128,6 @@ rm -rf ~/.android/avd
 
 Xamarin.iOS により、Visual Studio for Mac で C# または F# を使って iOS アプリケーションを開発できます。
 
-以前のバージョンの Xamarin.iOS では、Visual Studio での iOS 開発を可能にするために、Xamarin Build Host も自動的にインストールされました。 両方をコンピューターからアンインストールするには、次の手順のようにします。
-
 ターミナルで次のコマンドを使って、ファイル システムからすべての Xamarin.iOS ファイルを削除します。
 
 ```bash
@@ -142,7 +141,7 @@ sudo pkgutil --forget com.xamarin.xamarin.ios.pkg
 
 ## <a name="uninstall-xamarinmac"></a>Xamarin.Mac をアンインストールする
 
-Visual Studio for Mac が正常にアンインストールされた後は、次の 2 つのコマンドを使って Mac から製品とライセンスを除去することにより、コンピューターから Xamarin.Mac を削除できます。
+次の 2 つのコマンドを使って Mac から製品とライセンスを除去することにより、コンピューターから Xamarin.Mac を削除できます。
 
 ```bash
 sudo rm -rf /Library/Frameworks/Xamarin.Mac.framework
@@ -157,7 +156,7 @@ rm -rf ~/Library/Xamarin.Mac
 sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall
 ```
 
-古いバージョンでは、次のものを手動で削除する必要があります。
+古いバージョンでは、次の成果物を手動で削除する必要があります。
 
 * `"/Applications/Xamarin Workbooks.app"` の Workbooks アプリを削除します
 * `"Applications/Xamarin Inspector.app"` の Inspector アプリを削除します

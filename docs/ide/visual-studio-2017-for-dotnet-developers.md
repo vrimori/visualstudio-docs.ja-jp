@@ -11,11 +11,11 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: db1e944f3ce12369b096c75a7fc12648a2d7e91d
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.openlocfilehash: a834f9781ff51779b2216bd7de9dd3e449c9360a
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-studio-2017-for-net-developers"></a>.NET 開発者向けの Visual Studio 2017
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 01/23/2018
 [ドキュメント: IntelliSense の使用](using-intellisense.md)  
 [ドキュメント: スマート エディターの機能](writing-code-in-the-code-and-text-editor.md)
 
-Visual Studio は Roslyn コンパイラを使用してコードの内容を深く理解します。これにより、構文の色付け、コード補完、誤入力された変数のスペルチェック、インポートされていない型の解決、アウトライン、構造ビジュアライザ、[CodeLens](find-code-changes-and-other-history-with-codelens.md)、呼び出し階層、ホバーが可能なクイック インフォ、パラメーターのヘルプなどのスマート編集機能だけでなく、リファクタリング、クイック アクションの適用、コードの生成のためのツールも提供されます。
+Visual Studio は .NET ("Roslyn") コンパイラを使ってコードの内容を深く理解します。これにより、構文の色付け、コード補完、誤入力された変数のスペルチェック、インポートされていない型の解決、アウトライン、構造ビジュアライザ、[CodeLens](find-code-changes-and-other-history-with-codelens.md)、呼び出し階層、ホバーが可能なクイック インフォ、パラメーターのヘルプなどのスマート編集機能だけでなく、リファクタリング、クイック アクションの適用、コードの生成のためのツールも提供されます。
 
 ![Visual Studio スマート コード エディター](../ide/media/VSIDE_Productivity_SmartCodeEditor.png "VSIDE_Productivity_SmartCodeEditor")
 

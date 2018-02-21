@@ -1,27 +1,27 @@
 ---
 title: "Visual Studio での Python 環境の管理 | Microsoft Docs"
-description: "Visual Studio の [Python 環境] ウィンドウを使用して、グローバル環境と仮想環境を管理する方法や、カスタム環境の設定方法、Python インタープリターのインストール、パッケージのインストール、検索パスの設定、Visual Studio プロジェクトの環境の管理についてご説明します。"
+description: "Visual Studio の [Python 環境] ウィンドウを使って、グローバル環境と仮想環境を管理する方法や、カスタム環境の設定方法、Python インタープリターのインストール、パッケージのインストール、検索パスの設定、Visual Studio プロジェクトの環境の管理について説明します。"
 ms.custom: 
 ms.date: 01/16/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
-ms.devlang: python
+dev_langs:
+- python
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0b0195770bde2906ac34f0f4b8a5faf684130899
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.openlocfilehash: 40f901c65872fe593457883c36f0d60bf7e2fd8a
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="python-environments"></a>Python 環境
 
@@ -70,13 +70,13 @@ Python 環境用に新しい検出形式を提供したい開発者は、「[PTV
 
 [Python 環境] ウィンドウを開くには、**[表示] > [その他のウィンドウ] > [Python 環境]** の順にメニュー コマンドを選択するか、ソリューション エクスプローラーでプロジェクトの **[Python 環境]** ノードを右クリックして **[すべての Python 環境を表示]** を選択します。
 
-    ![View All Environments command in Solution Explorer](media/environments-view-all.png)
+![ソリューション エクスプローラーの [View All Python Environments (すべての Python 環境の表示)] コマンド](media/environments-view-all.png)
 
 いずれの場合も、[Python Environments (Python 環境)] ウィンドウはソリューション エクスプローラーの兄弟タブとして表示されます。
 
 ![[Python Environments (Python 環境)] ウィンドウ](media/environments-default-view.png)
 
-上の例は、Python 3.4 (32 ビット CPython) と共に IronPython 2.7 の 32 ビットおよび 64 ビット バージョンがインストールされることを示しています。 太字で表示される既定の環境は Python 3.4 で、これはすべての新しいプロジェクトで使われます。 環境が何も表示されない場合は、Visual Studio 2015 以降に Python Tools for Visual Studio はインストールされていますが、Python インタープリターはインストールされていないことを意味します (前の「[Python インタープリターの選択とインストール](#selecting-and-installing-python-interpreters)」を参照)。 **[+ カスタム...]** コマンドを使用して、[既存インタープリターの環境を作成](#create-an-environment-for-an-existing-interpreter)できます。
+上の例は、Python 3.4 (32 ビット CPython) と共に IronPython 2.7 の 32 ビットおよび 64 ビット バージョンがインストールされることを示しています。 太字で表示される既定の環境は Python 3.4 で、これはすべての新しいプロジェクトで使われます。 環境が何も表示されない場合は、Visual Studio 2015 以降に Python Tools for Visual Studio はインストールされていますが、Python インタープリターはインストールされていないことを意味します (前の「[Python インタープリターの選択とインストール](#selecting-and-installing-python-interpreters)」を参照)。 **[+ カスタム...]** コマンドを使用して、[既存インタープリターの環境を作成](#creating-an-environment-for-an-existing-interpreter)できます。
 
 表示されている各環境の右側に、その環境の対話型のウィンドウを開くコントロールがあります。 環境の IntelliSense データベースを更新する別のコントロールが表示されることもあります。
 
