@@ -189,7 +189,7 @@
 ## [方法: Visual Studio 拡張機能のルール ベースの UI コンテキストを使用する](how-to-use-rule-based-ui-context-for-visual-studio-extensions.md)
 ## [方法: 拡張機能のパフォーマンスを診断する](how-to-diagnose-extension-performance.md)
 ## [VSPackage のトラブルシューティング](troubleshooting-vspackages.md)
-# [シェル (統合または分離)](shell/)
+# [シェル (統合または分離)](https://vspartner.com/pages/vsshells)
 # [Visual Studio 拡張機能の配布](shipping-visual-studio-extensions.md)
 ## [VSIX プロジェクト テンプレート](vsix-project-template.md)
 ## [VSIX プロジェクトのテンプレートの概要](getting-started-with-the-vsix-project-template.md)

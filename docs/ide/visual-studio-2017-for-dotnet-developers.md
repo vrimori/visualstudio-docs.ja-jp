@@ -11,18 +11,18 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: a834f9781ff51779b2216bd7de9dd3e449c9360a
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 053bd6077fa98142cd74eae58ce3df949291c326
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="visual-studio-2017-for-net-developers"></a>.NET 開発者向けの Visual Studio 2017
 
 ## <a name="smart-code-editor"></a>スマート コード エディター
 
-[ドキュメント: IntelliSense の使用](using-intellisense.md)  
-[ドキュメント: スマート エディターの機能](writing-code-in-the-code-and-text-editor.md)
+- [ドキュメント: IntelliSense の使用](using-intellisense.md)
+- [ドキュメント: スマート エディターの機能](writing-code-in-the-code-and-text-editor.md)
 
 Visual Studio は .NET ("Roslyn") コンパイラを使ってコードの内容を深く理解します。これにより、構文の色付け、コード補完、誤入力された変数のスペルチェック、インポートされていない型の解決、アウトライン、構造ビジュアライザ、[CodeLens](find-code-changes-and-other-history-with-codelens.md)、呼び出し階層、ホバーが可能なクイック インフォ、パラメーターのヘルプなどのスマート編集機能だけでなく、リファクタリング、クイック アクションの適用、コードの生成のためのツールも提供されます。
 
@@ -50,14 +50,14 @@ Visual Studio には、エラーと問題を起こす可能性のあるコード
 
 [ドキュメント: Visual Studio での単体テスト](../test/improve-code-quality.md)
 
-.NET Framework、.NET Standard、.NET Core を対象とするすべてのアプリケーションに対し、MSTest、NUnit、または XUnit テストに基づく単体テストを実行してデバッグします。 *テスト エクスプローラー*でテストを探索して確認するか、*Live Unit Testing* (Enterprise SKU のみ) を使用してコードの変更が単体テストにどのように影響するかをエディター内ですぐに確認します。 
+.NET Framework、.NET Standard、.NET Core を対象とするすべてのアプリケーションに対し、MSTest、NUnit、または XUnit テストに基づく単体テストを実行してデバッグします。 *テスト エクスプローラー*でテストを探索して確認するか、*Live Unit Testing* (Enterprise SKU のみ) を使用してコードの変更が単体テストにどのように影響するかをエディター内ですぐに確認します。
 
 ![Visual Studio の Live Unit Testing](../ide/media/VSIDE_Productivity_LiveUnitTesting.png "VSIDE_Productivity_LiveUnitTesting")
 
 ## <a name="code-consistency-and-style"></a>コードの整合性とスタイル
 
-[ドキュメント: 移植可能なカスタム エディター オプション](create-portable-custom-editor-options.md)  
-[ドキュメント: .NET の EditorConfig コード スタイル設定](editorconfig-code-style-settings-reference.md)
+- [ドキュメント: 移植可能なカスタム エディター オプション](create-portable-custom-editor-options.md)
+- [ドキュメント: .NET の EditorConfig コード スタイル設定](editorconfig-code-style-settings-reference.md)
 
 Visual Studio では、**Ctrl+.** の ショートカットによりコーディング規則の構成が有効になり、コーディング スタイルの違反が検出され、スタイルの問題を修復するためのクイック修正が提供されます。 *EditorConfig* を使用して、リポジトリ間でのチームの書式設定、名前付け、コード スタイルの規則を構成して適用することで、プロジェクトとファイル レベルでの値のオーバーライドが可能になります。
 
@@ -107,8 +107,6 @@ Visual Studio には必要に応じたインストールや作成が可能な拡
 | **Shift+F12** | [すべての参照の検索] | すべてのシンボルまたはリテラルの参照を表示します |
 | **Ctrl + .** (C# Profile では **Alt + Enter** でも可能) | クイック アクションとリファクタリング | そのカーソル位置またはコード選択で、どのコード修正、コード生成アクション、リファクタリング、その他クイック アクションが使用できるかを表示します |
 | **Ctrl** + **E**、**V** | 行の複製 | カーソルのあるコード行を複製します (**Visual Studio 2017 バージョン 15.6 preview 2** 以降で使用可能) |
-| **Ctrl** + **W** | 選択範囲の展開 | 現在の選択範囲を 1 つの構造上の単位で展開します (**Visual Studio 2017 バージョン 15.5** で使用可能) |
-| **Ctrl** + **Shift** + **W** | 選択範囲の縮小 | 現在の選択範囲を 1 つの構造上の単位で縮小 (小さく) します (**Visual Studio 2017 バージョン 15.5** で使用可能) |
 | **Ctrl + Q** | クイック起動 | すべての Visual Studio の設定を検索します |
 | **F5** | デバッグの開始 | アプリケーションのデバッグを開始します |
 | **Ctrl + F5** | デバッグなしで開始 | デバッグなしでアプリケーションをローカルで実行します |
