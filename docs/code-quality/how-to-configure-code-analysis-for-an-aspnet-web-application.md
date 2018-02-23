@@ -15,17 +15,15 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - aspnet
-ms.openlocfilehash: 3d8d9b544b8cb4489ebfdfda8c6a237cb73c118f
-ms.sourcegitcommit: bfa26fd7426af0d065cb2eef3d6827b5d6f7986c
+ms.openlocfilehash: 0f2aaf85128bd34f4e80a7b29763506b17d77911
+ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="how-to-configure-code-analysis-for-an-aspnet-web-application"></a>方法: ASP.NET Web アプリケーション用にコード分析を構成する
 
 Visual Studio では、コード分析の一覧から選択できる*ルール セット*に適用する[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]Web アプリケーションです。 既定の規則セットは Microsoft 最小推奨規則です。 Web サイトに適用する別のルールを選択することができます。
-
-## <a name="to-configure-a-rule-set-for-an-aspnet-page-framework-project"></a>ASP.NET ページ フレームワーク プロジェクトの規則セットを構成するには
 
 1. Web サイトを選択して**ソリューション エクスプ ローラー**です。
 
