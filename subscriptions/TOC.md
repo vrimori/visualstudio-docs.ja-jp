@@ -1,48 +1,75 @@
-# [Visual Studio サブスクリプション](index.md)
-# 概要
-## [サブスクリプション オプションを比較する](compare-subscriptions.md)
-
-# 使い方ガイド
-##  サブスクライバー
-### [サブスクリプションを購入する](buy-vs-subscriptions.md)
-### [ご自分のサブスクリプションを管理する](manage-vs-subscriptions.md)
-### [サブスクライバー ダウンロードの利用](subscriber-downloads.md)
-### [プロダクト キーの使用](product-keys.md)
-### 利点を生かす方法
-#### ツール
-##### [Visual Studio IDE](vs-ide-benefit.md) 
-##### [Visual Studio Team Services](vs-vsts.md)
-##### [Microsoft Azure](vs-azure.md) 
-##### [Parasoft](vs-parasoft.md)
-##### [WhiteSource Bolt](vs-whitesource.md)
-##### [Enterprise Mobility + Security](vs-ems.md)
-##### [Windows 開発者アカウント](vs-windows-dev.md)
-##### [Office 365 Developer](vs-office-dev.md)
-##### [Power BI Pro](vs-pbi.md)
-##### [SmartOffice4TFS + ModernRequirements4TFS](vs-modernreq.md)
-##### [Microsoft Azure の従量課金制](vs-azure-payg.md) 
-#### 教育
-##### [DataCamp](vs-datacamp.md)
-##### [LinkedIn Learning](vs-linkedin-learning.md)
-##### [Opsgility](vs-opsgility.md)
-##### [Pluralsight](vs-pluralsight.md)
-##### [Xamarin University トレーニング](vs-xamarin.md)
-##### [Microsoft E-Learning](vs-elearn.md)
-##### [MSDN マガジンの定期購読](vs-msdn.md)
-#### Support
-##### [テクニカル サポート](vs-tech-support.md)
-
-## 管理者
-### [管理者の概要](admin-responsibilities.md)
-### [管理者ポータルへのアクセス](access-admin-portal.md)
-### [管理者ポータルの使用](using-admin-portal.md)
-### [サブスクリプションを割り当てる](assign-license.md)
-### [サブスクリプションを編集する](edit-license.md)
-### [サブスクリプションを削除する](delete-license.md)
-### [サブスクリプションを検索する](search-license.md)
-### [過剰に要求されたサブスクリプションに対応する](handle-overclaimed-license.md)
-### [有効期限が切れたサブスクリプションに対応する](handle-expired-license.md)
-
+# [Visual Studio サブスクリプション](index.md) 
+## サブスクライバーのエクスペリエンス
+### [サブスクライバー ポータルの使用](using-the-subscriber-portal.md)
+#### [リテール サブスクリプションのアクティブ化](activate-store-subscriptions.md)
+#### [サインイン](signing-in.md)
+##### [エイリアスを使用したサインイン](aliasing.md)
+#### [サブスクリプションの管理](manage-vs-subscriptions.md)
+### [ソフトウェアのダウンロード](subscriber-downloads.md)
+#### [使用可能なソフトウェアのダウンロードの一覧](software-download-list.md)
+### [プロダクト キーの取得と管理](product-keys.md)
+### Visual Studio Dev Essentials
+#### [Visual Studio Dev Essentials に参加する](join-dev-essentials.md)
+#### [Visual Studio Dev Essentials を退会する](leave-vsde.md)
+### [サブスクリプション会員の特典](subscriber-benefits.md)
+## サブスクリプション会員の特典を使用する
+### ツール
+#### [Visual Studio IDE ](vs-ide-benefit.md) 
+#### [Visual Studio Team Services](vs-vsts.md)
+#### [Azure クレジット](vs-azure.md) 
+#### [Visual Studio App Center](vs-visual-studio-app-center.md)
+#### [Parasoft ](vs-parasoft.md)
+#### [WhiteSource Bolt](vs-whitesource.md)
+#### [Enterprise Mobility + Security](vs-ems.md)
+#### [Windows 開発者アカウント](vs-windows-dev.md)
+#### [Office 365 開発者サブスクリプション](vs-office-dev.md)
+#### [Power BI Pro ](vs-pbi.md)
+#### [最新の Requirements4TFS](vs-modernreq.md)
+#### [Azure 重量課金](vs-azure-payg.md)
+### プロフェッショナルな開発
+#### [LinkedIn Learning](vs-linkedin-learning.md)
+#### [DataCamp](vs-datacamp.md)
+#### [Opsgility](vs-opsgility.md)
+#### [Pluralsight](vs-pluralsight.md)
+#### [Xamarin University トレーニング](vs-xamarin.md)
+#### [Microsoft E-Learning](vs-elearn.md)
+#### [MSDN マガジンの定期購読](vs-msdn.md)
+### サポートの特典
+#### [Azure Advisory Chat](vs-azure-advisory-chat.md)
+#### [Azure コミュニティ](vs-azure-community.md)
+#### [テクニカル サポート](vs-tech-support.md)
+#### [優先フォーラム サポート](vs-priority-support.md)
+#### [コンシェルジェ サポート](vs-concierge-chat.md)
+## サブスクリプションを管理する
+### 概要
+#### [サブスクリプションの管理について](subscription-management-info.md)
+#### [管理者の責任](admin-responsibilities.md)
+#### [管理者の管理](managing-admins.md)
+#### [ポータルへのアクセス](access-admin-portal.md)
+#### 組織のオンボード
+##### [PCN を見つける](find-pcn.md)
+##### [複数の PCN の管理](multiple-pcns.md)
+##### [プライマリ連絡先の検索](find-primary-contact.md)
+##### [サブスクリプション ID の検索](find-subscription-id.md)
+### 管理ポータルの使用
+#### [サブスクリプションを割り当てる](assign-license.md)
+#### [割り当ての電子メールを再送信する](resend-assignment-email.md)
+#### [サブスクリプションを編集する](edit-license.md)
+#### [サブスクリプションを削除する](delete-license.md)
+#### [サブスクリプションを検索する](search-license.md)
+#### [超過](handle-overclaimed-license.md)
+#### [有効期限が切れたサブスクリプション](handle-expired-license.md)
+#### [個人用電子メール サインインを持つサブスクライバー](personal-email-sign-ins.md)
+## Visual Studio サブスクリプションを取得する
+### [サブスクリプションを比較する](compare-subscriptions.md)
+### クラウド サブスクリプションの購入
+#### [概要](vscloud-overview.md)
+#### [初回購入](vscloud-first-purchase.md)
+#### [更新](vscloud-renewals.md)
+#### [さらに購入する](vscloud-buy-more.md)
+#### [キャンセル](vscloud-cancel.md)
 ## リソース
-### [使用条件](vs-license-terms.md)
-### [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)
+### [Visual Studio のライセンス条項](vs-license-terms.md)
+### [Visual Studio ライセンス ホワイト ペーパー](https://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=2b1504e6-0bf1-46da-be0e-85cc792c6b9d)
+### [サブスクリプション オプションと価格を比較する](https://www.visualstudio.com/vs/pricing)
+### [Visual Studio IDE 機能を比較する](https://www.visualstudio.com/vs/compare)
