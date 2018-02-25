@@ -15,11 +15,11 @@ ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5124547737405af8309161df90356f607909c0fa
-ms.sourcegitcommit: 06cdc1651aa7f45e03d260080da5a623d6258661
+ms.openlocfilehash: ea93ddee9c47f80322db2403aeecc0fb7dddb209
+ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="adding-a-language-server-protocol-extension"></a>サーバー プロトコルの言語拡張機能を追加します。
 
@@ -136,7 +136,7 @@ LSP では、言語のテキストの色づけを提供する方法の仕様は�
 
 1. 拡張機能内の「文法」をという名前のフォルダーを作成 (または、選択した任意の名前を指定できます)。
 
-2. 「文法」フォルダー内には、カスタムの色づけを提供するか、*.tmlanguage または *.tmtheme ファイルをインクルードします。
+2. 「文法」フォルダー内に *.tmlanguage、*.plist、*.tmtheme、またはカスタムの色づけを提供するよう *.json ファイルを含めます。
 
 3. クリックし、ファイルを右クリックして**プロパティ**です。 ビルドのアクションを変更する**コンテンツ**と**VSIX に含める**プロパティを true にします。
 
