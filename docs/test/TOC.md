@@ -45,7 +45,7 @@
 ### [チュートリアル: C/C++ DLL 用の単体テストの記述](walkthrough-writing-unit-tests-for-cpp-dlls.md)
 ### [C++ API リファレンス用の Microsoft 単体テスト フレームワーク](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)
 ## [UWP アプリ用の単体テストの作成および実行](create-and-run-unit-tests-for-a-store-app-in-visual-studio.md)
-### [UWP アプリ用の Visual C++ DLL の単体テスト](unit-testing-a-visual-cpp-dll-for-store-apps.md)
+### [C++ UWP DLL の単体テスト](unit-testing-a-visual-cpp-dll-for-store-apps.md)
 ### [UWP アプリの Visual C# コードの単体テスト](unit-testing-visual-csharp-code-in-a-store-app.md)
 ### [UWP アプリ用の単体テストの実行](run-unit-tests-for-store-apps-in-visual-studio.md)
 ## [コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
