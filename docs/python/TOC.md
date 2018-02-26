@@ -1,5 +1,6 @@
 # [概要](overview-of-python-tools-for-visual-studio.md)
 # [インストール](installing-python-support-in-visual-studio.md)
+## [Python インタープリターのインストール](installing-python-interpreters.md)
 # クイックスタート
 ## [既存のコードからプロジェクトを作成する](quickstart-01-project-from-existing.md)
 ## [テンプレートからプロジェクトを作成する](quickstart-02-python-in-visual-studio-project-from-template.md)
@@ -14,13 +15,17 @@
 ## [5 - パッケージのインストールと Python 環境の管理](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)
 ## [6 - Git の使用](tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md)
 # 概念
-## [Python 環境](managing-python-environments-in-visual-studio.md)
 ## [Python プロジェクト](managing-python-projects-in-visual-studio.md)
 ### [Web プロジェクト テンプレート](python-web-application-project-templates.md)
 ### [Django Web プロジェクト テンプレート](python-django-web-application-project-template.md)
 ### [Azure クラウド サービス テンプレート](python-azure-cloud-service-project-template.md)
 ## [Azure SDK for Python](azure-sdk-for-python.md)
 # 使い方ガイド
+## [環境の管理](managing-python-environments-in-visual-studio.md)
+### [プロジェクトのインタープリターの選択](selecting-a-python-environment-for-a-project.md)
+### [依存関係の requirements.txt の使用](managing-required-packages-with-requirements-txt.md)
+### [検索パス](search-paths.md)
+### [環境ウィンドウ リファレンス](python-environments-window-tab-reference.md)
 ## [コードの編集](editing-python-code-in-visual-studio.md)
 ### [コードの書式設定](formatting-python-code.md)
 ### [コードのリファクタリング](refactoring-python-code.md)
