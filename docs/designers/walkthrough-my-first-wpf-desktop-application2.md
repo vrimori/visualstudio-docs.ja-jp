@@ -15,11 +15,11 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 71f0837bbc488518204e8b9336339c2d01c21600
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.openlocfilehash: c668d454cb4584cbaaa345c0ca00e286526c6aae
+ms.sourcegitcommit: bfa26fd7426af0d065cb2eef3d6827b5d6f7986c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>チュートリアル: 初めての WPF デスクトップ アプリケーション
 
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/25/2018
 
 1. **[プロパティ]** ウィンドウで、 **Common** カテゴリ ノードを展開し **[Title]** プロパティを選択してから、「 `ExpenseIt` 」と入力して **Enter** キーを押します。
   
-     [XAML] ウィンドウの **[Title]** 要素がこの新しい値と一致していることに注目してください。 XAML のプロパティは、[XAML] ウィンドウまたは **[プロパティ]** ウィンドウのいずれかで変更でき、それらの変更は同期されます。
+     [XAML] ウィンドウの **[Title]** 属性がこの新しい値と一致していることに注目してください。 XAML のプロパティは、[XAML] ウィンドウまたは **[プロパティ]** ウィンドウのいずれかで変更でき、それらの変更は同期されます。
 
 1. [XAML] ウィンドウで **[Height]** 要素の値を `375`に設定し、 **[Width]** プロパティの値を `500`で行うことができます。
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 01/25/2018
 
 1. デザイナーで **[ExpenseItHome.xaml]** タブがアクティブでなければ、このタブを選択します。
 
-1. `<Title>` 要素を選択し、タイトルを "**ExpenseIt – ホーム**" に変更します。
+1. `Title` 属性を選択し、その値を **ExpenseIt - Home** に変更します。
   
      **ExpenseItHome.xaml** ファイルは C# では次のようになります。  
   
@@ -178,7 +178,7 @@ ms.lasthandoff: 01/25/2018
 
 1. デザイナーで **[ExpenseReportPage.xaml]** タブがアクティブでなければ、このタブを選択します。
 
-1. `<Title>` 要素を選択し、タイトルを "**ExpenseIt – 経費の表示**" に変更します。
+1. `Title` 属性を選択し、その値を **ExpenseIt - View Expense** に変更します。
   
      ExpenseReportPage.xaml ファイルは C# では次のようになります。  
   

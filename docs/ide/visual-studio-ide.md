@@ -1,9 +1,10 @@
 ---
-title: "Visual Studio の概要 | Microsoft Docs"
+title: "Visual Studio 2017 の概要 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/09/2017
+ms.date: 02/05/2018
 ms.reviewer: 
 ms.suite: 
+ms.technology: vs-ide-general
 ms.topic: article
 author: gewarren
 f1_keywords:
@@ -13,11 +14,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 242de63001f7df364dacbef3f3b57446ba1e724f
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 8fc4946c79b16b3fb28e0991ff38cfe96e22a9e1
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="visual-studio-ide-overview"></a>Visual Studio IDE の概要
 
@@ -59,41 +60,35 @@ Visual Studio には、Microsoft Azure を使用するクラウド ファース�
 
 ### <a name="build-cross-platform-apps-and-games"></a>クロス プラットフォーム アプリとゲームをビルドする
 
-Visual Studio を使用して、Android、iOS、Linux、Windows、その他のデバイス用のアプリとゲームを作成できます。 詳細については、[クロス プラットフォーム モバイル開発](../cross-platform/cross-platform-mobile-development-in-visual-studio.md)に関する記事をご覧ください。 ユニバーサル Windows アプリでは、複数のプラットフォームでコードを活用できます。 詳しくは、[ユニバーサル Windows アプリ](https://dev.windows.com/windows-apps)に関するページをご覧ください。
+Visual Studio を使用して、macOS、Linux、Windows 用のアプリおよびゲームをビルドし、Android、iOS、およびその他のモバイル デバイス用のアプリおよびゲームもビルドします。
 
-アプリ要件に基づいて必要なツールと使用する言語を選択します。
+- Windows、macOS、および Linux で実行される [.NET Core](/dotnet/core/) アプリをビルドします。
 
-- [Xamarin for Visual Studio](../cross-platform/build-apps-with-native-ui-using-xamarin-in-visual-studio.md): すべてのデバイスを対象とする C# の共通コード ベース
+- [Xamarin](https://developer.xamarin.com/guides/cross-platform/windows/visual-studio/) を使用して、iOS、Android、および Windows 向けにモバイル アプリをビルドします。
 
-- [Visual Studio Tools for Apache Cordova](../cross-platform/visual-studio-tools-for-apache-cordova.md): HTML、CSS、および JavaScript または Typescript 用の共通コード ベース
+- 標準的な Web テクノロジである &mdash;HTML、CSS、および JavaScript&mdash; を使用して iOS、Android、および Windows 用のモバイル アプリをビルドするには、[Apache Cordova](/visualstudio/cross-platform/tools-for-cordova/) を使用します。
 
-- [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md): C# での 2D/3D ゲーム開発
+- [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) を使用して、C# で 2D および 3D ゲームをビルドします。
 
-- [クロスプラットフォーム開発用 C++](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md): C++ の共有コード ライブラリとアプリ
+- [C++ for Cross-Platform Development](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md) を使用することによって、iOS、Android、および Windows デバイス対応のネイティブ C++ アプリをビルドし、iOS、Android、および Windows 用にビルドされたライブラリ内で共通コードを共有します。
 
-- [Visual Studio Emulator for Android](../cross-platform/visual-studio-emulator-for-android.md): Visual Studio Emulator for Android: IDE とは関係なく、Android アプリをデバッグおよびテストします。
+- [Android エミュレーター](../cross-platform/visual-studio-emulator-for-android.md)で、Android アプリを展開、テスト、およびデバッグします。
 
-DirectX、Unity、Unreal、Cocos などのゲーム開発ツールとともに [Visual Studio を使用してゲームを作成します](https://www.visualstudio.com/vs/game-development/)。
-
-Visual Studio は、他にも数多くのことを実行するのに役立ちます。 すべての一覧については、「[Visual Studio IDE](https://www.visualstudio.com/vs/)」をご覧ください。
+Visual Studio は、他にも数多くのことを実行するのに役立ちます。 完全な一覧については、[www.visualstudio.com](https://www.visualstudio.com/vs/) を参照してください。
 
 ## <a name="install-the-visual-studio-ide"></a>Visual Studio IDE のインストール
 
 まず、Visual Studio をダウンロードしてシステムにインストールします。 [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) のページからダウンロードできます。
 
-Visual Studio はかつてないほど軽量になりました。 モジュラー インストーラーでは、*ワークロード* (好みのプログラミング言語やプラットフォームで必要な機能のグループ) を選択してインストールできます。 この方法により、Visual Studio のインストールのフットプリントがかつてないほど小さくなり、インストールと更新に要する時間が短縮されました。
+Visual Studio はかつてないほど軽量になりました。 モジュラー インストーラーでは、*ワークロード* (好みのプログラミング言語やプラットフォームで必要な機能のグループ) を選択してインストールできます。 この方法により、Visual Studio のインストールのフットプリントがかつてないほど小さくなり、インストールと更新に要する時間が短縮されました。 Visual Studio 2017 では、インストール パフォーマンスが強化されただけでなく、IDE の起動時間とソリューションの読み込み時間が短縮されました。
 
-以下のプログラムの作成手順に従う場合は、必ず、**[ユニバーサル Windows プラットフォーム開発]** ワークロードを選択してインストールしてください。
+お使いのシステムに Visual Studio をセットアップする方法について詳しくは、「[Visual Studio 2017 のインストール](../install/install-visual-studio.md)」をご覧ください。 [プログラムの作成](#create-a-program)手順に従う場合は、インストール時に必ず、**[.NET Core クロスプラットフォームの開発]** ワークロードを選択します。
 
-![Visual Studio インストーラー](../ide/media/vside_tour_install_dialog.png)
-
-Visual Studio 2017 では、インストール パフォーマンスが強化されただけでなく、IDE の起動時間とソリューションの読み込み時間が短縮されました。
-
-お使いのシステムに Visual Studio をセットアップする方法について詳しくは、「[Visual Studio 2017 のインストール](../install/install-visual-studio.md)」をご覧ください。
+![Visual Studio インストーラー](../ide/media/overview-net-core-workload.png)
 
 ## <a name="sign-in"></a>サインイン
 
-Visual Studio を初めて起動する際には、Microsoft アカウント、仕事用アカウント、または学校用アカウントを使ってサインインすることもできます。 サインインすると、ウィンドウ レイアウトなどの Visual Studio の設定を複数のデバイス間で同期できます。 また、Azure サブスクリプションや Visual Studio Team Services など、必要になる可能性のあるサービスに自動的に接続されます。
+Visual Studio を初めて起動する際には、Microsoft アカウント、仕事用アカウント、または学校用アカウントを使ってサインインすることもできます。 サインインすると、ウィンドウ レイアウトなどの Visual Studio の設定を複数のデバイス間で同期できます。 また、Azure サブスクリプションや [Visual Studio Team Services](/vsts/) など、必要になる可能性のあるサービスに自動的に接続されます。
 
 ## <a name="create-a-program"></a>プログラムの作成
 
@@ -101,76 +96,73 @@ Visual Studio を初めて起動する際には、Microsoft アカウント、�
 
 1. Visual Studio を開きます。 メニューで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** を選択します。
 
-  ![スクリーンショット](../ide/media/VSIDE_Tour_NewProject1.png)
+  ![メニュー バーで [ファイル]、[新しいプロジェクト] の順に選択します。](../ide/media/VSIDE_Tour_NewProject1.png)
 
-  別の方法として、スタート ページを使用して新しいプロジェクトを作成できます。 詳細については、「[Harness the Power of the Redesigned Start Page (blog)](https://blogs.msdn.microsoft.com/visualstudio/2016/11/29/harness-the-power-of-the-redesigned-start-page/)」(再設計されたスタート ページの機能を最大限に活用する (ブログ)) を参照してください。
+1. **[新しいプロジェクト]** ダイアログ ボックスには複数のプロジェクト テンプレートが表示されます。 **[Visual C#]** で **[.NET Core]** カテゴリを選択し、**[Console App (.NET Core)]\(コンソール アプリ (.NET Core)\)** テンプレートを選択します。 **[名前]** テキスト ボックスに "HelloWorld" と入力します。 **[OK]** ボタンを選択します。
 
-1. **[新しいプロジェクト]** ダイアログ ボックスには複数のプロジェクト テンプレートが表示されます。 **[Visual C#]** の下の **[Windows ユニバーサル]** カテゴリで **[空白のアプリ (ユニバーサル Windows)]** テンプレートを選択し、**[OK]** ボタンを選択します。
+  ![.NET Core アプリ テンプレート](../ide/media/overview-new-project-dialog.png)
 
   > [!NOTE]
-  > **Windows ユニバーサル**のカテゴリが表示されない場合は、**[ユニバーサル Windows プラットフォーム開発]** ワークロードをインストールする必要があります。 これを実行するには、**[新しいプロジェクト]** ダイアログ ボックスの左下側の **[Visual Studio インストーラーを開く]** リンクをクリックします。 **Visual Studio インストーラー**が開いたら、**[ユニバーサル Windows プラットフォーム開発]** ワークロードを選択してから **[変更]** を選択します。
+  > **[.NET Core]** カテゴリが表示されない場合は、**[.NET Core クロスプラットフォームの開発]** ワークロードをインストールする必要があります。 これを実行するには、**[新しいプロジェクト]** ダイアログ ボックスの左下側の **[Visual Studio インストーラーを開く]** リンクをクリックします。 **Visual Studio インストーラー**が開いたら、**[.NET Core クロスプラットフォームの開発]** ワークロードまで下にスクロールして選択してから **[変更]** を選択します。
 
-  ![UWP の空のアプリ テンプレート](../ide/media/new-uwp-blank-app-template.png)
+   Visual Studio は、テンプレートを使用してプロジェクトを作成します。 これは、リテラル文字列 "Hello World!" を表示する <xref:System.Console.WriteLine> メソッドを呼び出す単純な "Hello World" アプリケーションです。 コンソール ウィンドウに表示します。
 
-  これにより、C# と XAML をプログラミング言語として使用する新しい空のユニバーサル Windows アプリ プロジェクトが作成されます。 Visual Studio でプロジェクトが設定されるまで少し待ちます。 情報を確認するよう求められた場合、現時点では既定値を使用してください。
+1. まもなく、次のスクリーンショットのような画面が表示されます。
 
-1. **[新しいユニバーサル Windows プラットフォーム プロジェクト]** ダイアログ ボックスで、**[OK]** を選択して既定値をそのまま使用します。
+  ![Visual Studio IDE](../ide/media/overview-ide-console-app.png)
 
-1. まもなく、次のスクリーンショットのような画面が表示されます。 プロジェクト ファイルは右側のソリューション エクスプローラーと呼ばれるウィンドウに一覧表示されます。
+   アプリケーションの C# コードは領域の大部分を占めるエディター ウィンドウに表示されます。 コードの構文は、キーワードや型など、コードの種類に応じて自動的に色分けされます。 また、コードの縦の小さな点線は互いに一致する括弧を示し、行番号は後でコードの場所を探すのに役立ちます。 小さな四角で囲まれたマイナス記号を選択するとコードが折りたたまれ、折りたたまれている場合は展開できます。 このコードのアウトライン機能を使用すると、必要のないコードを非表示にして画面を整理できます。
 
-  ![スクリーンショット](../ide/media/VSIDE_Tour_NewProject3.png)
+   プロジェクト ファイルは右側の**ソリューション エクスプローラー**と呼ばれるウィンドウに一覧表示されます。
 
-1. ソリューション エクスプローラーで、MainPage.xaml ファイルの横にある小さな黒い三角形を選択して展開すると、下に MainPage.xaml.cs ファイルが表示されます。 このファイルを選択して開きます (C# コードが含まれます)。
-
-  MainPage.xaml.cs の C# コードが画面の左側のコード エディターに表示されます。 コードの構文は、ステートメントやコメントなど、コードの種類に応じて自動的に色分けされます。 また、コードの縦の小さな点線は互いに一致する括弧を示し、行番号は後でコードの場所を探すのに役立ちます。 小さな四角で囲まれたマイナス記号を選択するとコードが折りたたまれ、折りたたまれている場合は展開できます。 このコードのアウトライン機能を使用すると、必要のないコードを非表示にして画面を整理できます。
-
-  ![](../ide/media/VSIDE_Tour_NewProject3a.png)
+  ![赤色のボックスを持つ Visual Studio IDE](../ide/media/overview-ide-console-app-red-boxes.png)
 
   他にもメニューやツール ウィンドウが用意されていますが、今は次に進みましょう。
 
-1. XAML 形式でボタンを追加することで、ユーザーがアプリと対話する手段を提供します。 これを行うには、MainPage.xaml ファイルを開きます。 ビューは分割されています。上のデザイナーは視覚的にコントロールを配置し、下のコード ビューはデザイナーと分離された XAML コードを示します。 後でプログラムを実行すると、デザイナーに表示されている内容がユーザーに表示されるウィンドウである "フォーム" になり、基になる XAML がそのフォームに表示する内容を決定します。
+1. アプリを起動します。 そのためには、メニュー バーの **[デバッグ]** メニューから **[デバッグなしで開始]** を選択します。 あるいは、**Ctrl** + **F5 キー**を押します。
 
-1. 画面の左側で、**[ツールボックス]** タブを選択してツールボックスを開きます。 ツールボックスには、フォームに追加できるビジュアル コントロールが含まれています。 ここでは、ボタン コントロールだけを追加します。
+  ![[デバッグ]、[デバッグなしで開始] メニューを選択](../ide/media/overview-start-without-debugging.png)
 
-1. **[コモン XAML コントロール]** セクションを展開し、ボタン コントロールをフォームの真ん中辺りにドラッグします。 (正確に配置する必要はありません。)
+  Visual Studio でアプリがビルドされ、コンソール ウィンドウが開き、メッセージ "Hello World!" が表示されます。 これで実行中のアプリができました。
 
-  ![スクリーンショット](../ide/media/VSIDE_Tour_Toolbox.png)
+  ![コンソール ウィンドウ](../ide/media/overview-console-window.png)
 
-  完了すると、次のように表示されます。
+1. コンソール ウィンドウを閉じるには、キーボードで任意のキーを押します。
 
-  ![スクリーンショット](../ide/media/VSIDE_Tour_XAMLButton.png)
+1. 何らかの追加コードをアプリに追加しましょう。 `Console.WriteLine("Hello World!");` という行の前に次の C# コードを追加します。
 
-  デザイナーにボタンが追加され、基になるコード (ハイライト表示) が自動的にデザイナーの XAML コードに追加されます。
+   ```csharp
+   Console.WriteLine("\nWhat is your name?");
+   var name = Console.ReadLine();
+   ```
 
-1. XAML コードを少し変更してみましょう。 ボタン コードのテキストの名前を `Button` から `Hello!` に変更します。
+   このコードは、"What is your name?" と コンソール ウィンドウで、ユーザーが何らかの文字列を入力して **Enter** キーを押すまで待機します。
 
-  ![スクリーンショット](../ide/media/VSIDE_Tour_XAMLButton2.png)
+1. ここで、`Console.WriteLine("Hello World!");` という行を次のコードに変更します。
 
-1. アプリを起動します。 これは、ツール バーの **[スタート]** (![[スタート] ボタン](../ide/media/VSIDE_StartButton.png)) を選択するか、**F5** キーを選択するか、メニューで **[デバッグ]** > **[デバッグの開始]** の順に選択して行うことができます。
+   ```csharp
+   Console.WriteLine($"\nHello {name}!");
+   ```
 
-  ![スクリーンショット](../ide/media/VSIDE_Tour_RunButton.png)
+1. **[デバッグ]** > **[デバッグなしで開始]** の順に選択するか、**Ctrl** + **F5** キーを押してアプリを再び実行します。
 
-  アプリでビルド プロセスが開始され、出力ウィンドウに状態のメッセージが表示されます。 まもなく、ボタンが追加されたフォームが表示されます。 これで実行中のアプリができました。
+   Visual Studio によってアプリが再度ビルドされ、コンソール ウィンドウが開き、名前を入力するように求められます。
 
-  ![スクリーンショット](../ide/media/VSIDE_Tour_RunProject.png)
+1. コンソール ウィンドウに名前を入力し、**Enter** キーを押します。
 
-  もちろん、今すぐに行う必要はありませんが、後で必要に応じて機能を追加できます。
+   ![コンソール ウィンドウの入力](media/overview-console-input.png)
 
-1. プログラムの実行を終了するには、ツールバーの [終了] (![[終了] ボタン](../ide/media/VSIDE_StopButton.png)) を選択して終了します。
-
-ここまでを振り返ってみましょう。Visual Studio で新しい C# Windows ユニバーサル プロジェクトを作成し、そのコードを表示して、デザイナーにコントロールを追加しました。その後、XAML コードの一部を変更し、プロジェクトを実行しました。 この例のプロセスは簡略化されていますが、Visual Studio IDE で独自のアプリを開発するときに使用する共通部分の一部を示します。 この例についてさらに詳しくは、「["Hello, world" アプリを作成する (XAML)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)」をご覧ください。
+1. 任意のキーを押して、コンソール ウィンドウを閉じます。
 
 ## <a name="debug-test-and-improve-your-code"></a>デバッグとテストによるコードの改善
 
-いつもすべてが完璧にうまく行くとは限りません。 コードを記述する際には、バグの存在やパフォーマンスを確認するために実際に実行してテストする必要があります。 Visual Studio の最新のデバッグ システムを使うと、ローカル プロジェクト、リモート デバイス、またはエミュレーター (Android デバイス用や Windows Phone デバイス用など) で実行されるコードをデバッグできます。 一度に 1 つのステートメントのコードをステップスルーでき、変数を調べることができます。マルチスレッド アプリケーションをステップスルーでき、指定された条件が true の場合のみヒットするブレークポイントを設定できます。 コードの実行中に変数の値などを監視できます。 すべてコード エディター自体で管理できるため、コードを離れる必要はありません。
+いつもすべてが完璧にうまく行くとは限りません。 コードを記述する際には、バグの存在やパフォーマンスを確認するために実際に実行してテストする必要があります。 Visual Studio の最新のデバッグ システムを使うと、ローカル プロジェクト、リモート デバイス、またはエミュレーター ([Android デバイス用](../cross-platform/visual-studio-emulator-for-android.md)など) で実行されるコードをデバッグできます。 一度に 1 つのステートメントずつ、コードを実行して必要に応じて変数を検査できます。 指定した条件が True の場合にのみヒットするブレークポイントを設定することができます。 コードの実行中に変数の値などを監視できます。 すべてコード エディター自体で管理できるため、コードを離れる必要はありません。 Visual Studio でのデバッグの詳細については、[デバッガーの機能ツアー](../debugger/debugger-feature-tour.md)に関するページをご覧ください。
 
-![デバッグ](../ide/media/VSIDE_Tour_Debugging.png)
-
-テストについては、Visual Studio には単体テスト、IntelliTest、負荷およびパフォーマンス テストなどが用意されています。 Visual Studio のデバッグ プロセスについて詳しくは、[デバッガーの機能ツアー](../debugger/debugger-feature-tour.md)に関するページをご覧ください。 テストの詳細については、「[開発者用テスト ツール、シナリオ、および機能](../test/developer-testing-scenarios.md)」を参照してください。 アプリのパフォーマンスを改善する方法の詳細については、[「プロファイリング機能ツアー」](../profiling/profiling-feature-tour.md) をご覧ください。
+テストについては、Visual Studio には単体テスト、IntelliTest、負荷およびパフォーマンス テストなどが用意されています。 テストの詳細については、「[開発者用テスト ツール、シナリオ、および機能](../test/developer-testing-scenarios.md)」を参照してください。 アプリのパフォーマンスを改善する方法の詳細については、「[プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)」をご覧ください。
 
 ## <a name="deploy-your-finished-application"></a>完成したアプリケーションを配置する
 
-アプリケーションをユーザーやお客様に配置する用意ができたら、Visual Studio で配置するためのツールが提供されます。Microsoft ストアや SharePoint サイトに配置する場合でも、InstallShield または Windows インストーラー テクノロジを利用する場合でも提供されます。 これはすべて、IDE を使用してアクセスできます。 詳しくは、「[アプリケーション、サービス、およびコンポーネントの配置](../deployment/deploying-applications-services-and-components.md)」をご覧ください。
+アプリケーションをユーザーやお客様に配置する用意ができたら、Visual Studio で配置するためのツールが提供されます。Microsoft ストアや SharePoint サイトに配置する場合でも、InstallShield または Windows インストーラー テクノロジを利用する場合でも提供されます。 これはすべて、IDE を使用してアクセスできます。 詳細については、「[アプリケーション、サービス、およびコンポーネントの配置](../deployment/deploying-applications-services-and-components.md)」をご覧ください。
 
 ## <a name="quick-tour-of-the-ide"></a>IDE のクイック ツアー
 
@@ -198,7 +190,7 @@ Visual Studio には他にも次のような一般的な生産性を高める機
 
  ![リファクタリング](../ide/media/VSIDE_refactor.png)
 
-- **IntelliSense** 。コードに関する型情報をエディターに直接表示したり、場合によっては、ちょっとしたコードを自動的に作成したりする、よく使われる機能セットの包括的な用語です。 エディター内のインラインに基本ドキュメントがあるようなもので、これによって、別個のヘルプ ウィンドウで型情報を検索する手間が省けます。 IntelliSense 機能は言語によって異なります。 詳細については、「[C# の IntelliSense](../ide/visual-csharp-intellisense.md)」、「[Visual C++ の Intellisense](../ide/visual-cpp-intellisense.md)」、「[JavaScript IntelliSense](../ide/javascript-intellisense.md)」および「[Visual Basic 固有の IntelliSense](../ide/visual-basic-specific-intellisense.md)」を参照してください。 次の図は、職場でのいくつかの IntelliSense 機能を示しています。
+- **IntelliSense** 。コードに関する型情報をエディターに直接表示したり、場合によっては、ちょっとしたコードを自動的に作成したりする、よく使われる機能セットの包括的な用語です。 エディター内のインラインに基本ドキュメントがあるようなもので、これによって、別個のヘルプ ウィンドウで型情報を検索する手間が省けます。 IntelliSense 機能は言語によって異なります。 詳細については、「[C# の IntelliSense](../ide/visual-csharp-intellisense.md)」、「[Visual C++ の Intellisense](../ide/visual-cpp-intellisense.md)」、「[JavaScript IntelliSense](../ide/javascript-intellisense.md)」、および [Visual Basic IntelliSense](../ide/visual-basic-specific-intellisense.md) に関するページを参照してください。 次の図は、職場でのいくつかの IntelliSense 機能を示しています。
 
   ![Visual Studio のメンバーの一覧](../ide/media/vs2017_Intellisense.png)
 
@@ -221,10 +213,6 @@ Visual Studio には他にも次のような一般的な生産性を高める機
 - **[定義に移動]** コンテキスト メニュー オプション。関数またはオブジェクトが定義されている場所に直接移動します。 エディターを右クリックすることで、その他のナビゲーション コマンドも使用できます。
 
  ![定義へ移動](../ide/media/VSIDE_go_to_definition.png)
-
-- [オブジェクト ブラウザー](http://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) (関連ツール)。システム上の .NET アセンブリまたは Windows ランタイム アセンブリを調べ、アセンブリにどの型が含まれているか、またそれらの型にどのメンバー (プロパティ、メソッド、イベントなど) が含まれているかを確認できます。
-
-  ![System.Timer を示すオブジェクト ブラウザー](../ide/media/objectbrowser.png)
 
 ## <a name="manage-your-source-code-and-collaborate-with-others"></a>ソース コードの管理および他のユーザーとの共同作業
 
@@ -285,4 +273,3 @@ Visual Studio を使用したことがない場合は、「[Visual Studio を使
 * [Visual Studio ブログ](https://blogs.msdn.microsoft.com/visualstudio/)
 * [Visual Studio フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/home?category=visualstudio%2Cvsarch%2Cvsdbg%2Cvstest%2Cvstfs%2Cvsdata%2Cvsappdev%2Cvisualbasic%2Cvisualcsharp%2Cvisualc)
 * [Microsoft Virtual Academy](https://mva.microsoft.com/)
-* [Channel 9](https://channel9.msdn.com/)

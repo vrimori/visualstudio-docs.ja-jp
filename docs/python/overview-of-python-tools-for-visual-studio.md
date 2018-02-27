@@ -2,7 +2,7 @@
 title: "Visual Studio での Python サポートの概要 (Windows) | Microsoft Docs"
 description: "Visual Studio での Python で使用可能な機能 (Python Tools for Visual Studio (PTVS) とも言われます) の概要について説明します。また、Visual Studio の各バージョンについての質問と回答 (FAQ) や機能サポート マトリックスも示します。"
 ms.custom: 
-ms.date: 01/09/2018
+ms.date: 02/15/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7c81cd0308dc40049e4d067369e3dcacc1f839a3
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 8693e876d56a30b31cd873861c37dbef486e7284
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="working-with-python-in-visual-studio-windows"></a>Visual Studio での Python の使用 (Windows)
 
@@ -50,9 +50,10 @@ Windows の Visual Studio では、Python の開発およびデータ サイエ�
 
 Python ワークロードに含まれる [Azure SDK for Python](azure-sdk-for-python.md) を使うと、Windows、Mac OS X、Linux アプリから Azure サービスを簡単に利用できます。
 
-概要のビデオについては、Microsoft Virtual Academy で短い「[Python Tools for Visual Studio](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121)」 (Visual Studio の Python ツール) コース (合計で約 22 分) をご覧ください。 
-
-> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Installing-Visual-Studio-Python-Support-go1id3LWE_1705918567]
+|   |   |
+|---|---|
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | Visual Studio での Python の概要については、[こちらのビデオ シリーズ (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121) をご覧ください (合計 22 分)。 |
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | Microsoft Virtual Academy の次のビデオも参照してください。<ul><li>[Python によるプログラミングの入門](https://mva.microsoft.com/en-US/training-courses/introduction-to-programming-with-python-8360?l=lqhuMxFz_8904984382)</li><li>[Python の初心者向け: 文字列と関数](https://mva.microsoft.com/en-US/training-courses/python-beginner-strings-and-functions-18015)</li><li>[Python の基礎: リストとループ](https://mva.microsoft.com/en-US/training-courses/python-fundamentals-lists-and-loops-18019)</li><li>[よく寄せられる質問](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121)</li></ul> |
 
 ## <a name="questions-and-answers"></a>質問と回答
 
@@ -81,7 +82,8 @@ A:  一般的に、Python はインタープリター言語であり、Visual St
 - Visual Studio 2012 (Pro エディション以上)
 - Visual Studio 2010 SP1 (Pro エディション以上、.NET 4.5 が必要)
 
-機能が完全にサポートおよび保守されるのは、Visual Studio の最新バージョンのみです。 古いバージョンでも機能を使うことはできますが、積極的には保守されません。
+> [!Important]
+> 機能が完全にサポートおよび保守されるのは、Visual Studio の最新バージョンのみです。 古いバージョンでも機能を使うことはできますが、積極的には保守されません。
 
 | Python のサポート | 2017 | 2015 | 2013 Comm | 2013 Desktop | 2013 Web | 2013 Pro+ | 2012 Pro+ | 2010 SP1 Pro+ |
 | --- | --- | --- | --- | --- | --- | --- | --- | ---|

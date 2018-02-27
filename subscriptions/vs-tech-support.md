@@ -9,17 +9,18 @@ Description: Learn how to activate the technical support benefit included with y
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 39d140f83f43d6032119d4a7e84d6f1f091af707
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: 4fb6294d6d70e827bd69544fcc4f07cad72b7c5a
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="activating-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションのテクニカル サポート特典をアクティブ化する
 
-非運用環境で発生した障害対応の問題を解決します。  (注: サポート リクエストを送信するには、その前に特典を有効にする必要があります)。Visual Studio Enterprise の Standard および年間のクラウド サブスクリプションは、4 つのインシデントを受け取り、Visual Studio Professional Standard および年間のクラウド サブスクリプションが 2 つのインシデントを受け取ります。  
+非運用環境で発生した障害対応の問題を解決します。  (サポート リクエストを送信するには、その前に特典を有効にする必要があります。)Visual Studio Enterprise の Standard および年間のクラウド サブスクリプションは、4 つのインシデントを受け取り、Visual Studio Professional Standard および年間のクラウド サブスクリプションが 2 つのインシデントを受け取ります。  
 
-**注:**  特定のレベルのすべてのサブスクリプションで、サポート インシデントを受け取れるわけではありません。  FTE、NFR、MPN、MCT およびその他のプログラムを通じて取得したサブスクリプションは、サポート インシデントを受け取りません。  自分のサブスクリプションにテクニカル サポート インシデントを受け取る資格がない場合、テクニカル サポート タイルは使用可能な特典に表示されません。 
+> [!NOTE]
+> 特定のレベルのすべてのサブスクリプションで、サポート インシデントを受け取れるわけではありません。  FTE、NFR、MPN、MCT およびその他のプログラムを通じて取得したサブスクリプションは、サポート インシデントを受け取りません。  自分のサブスクリプションにテクニカル サポート インシデントを受け取る資格がない場合、テクニカル サポート タイルは使用可能な特典に表示されません。 
 
    ![テクニカル サポート特典タイル](_img\vs-tech-support\vs-tech-support-tile.png)
 
@@ -33,7 +34,8 @@ ms.lasthandoff: 12/01/2017
 
     ![テクニカル サポート特典のサブスクリプション ID を確認する](_img\vs-tech-support\vs-tech-support-subID-cropped.png)
 
-**注:** 英語以外の言語のサポート アカウントを有効にする場合は、お住まいの国を[このリスト](http://support.microsoft.com/activatesupport)から選択してください。   
+> [!NOTE]
+> 英語以外の言語のサポート アカウントを有効にする場合は、お住まいの国を[このリスト](http://support.microsoft.com/activatesupport)から選択してください。   
 
 # <a name="how-to-submit-an-incident"></a>インシデントを送信する方法
 契約 ID およびアクセス ID をセットアップした後に、サポートが必要なときには、お住まいの国のテクニカル サポート番号に電話するか、[オンライン](http://support.microsoft.com/oas/)でサポート インシデントを送信するか、Azure ポータルからインシデントを送信することができます。  電話によるサポートを希望する場合でも、オンラインでインシデントを送信し、Microsoft サポート担当者にコールバックさせることができます。

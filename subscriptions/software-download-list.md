@@ -9,11 +9,11 @@ Description: Find a list of the software downloads included with your Visual Stu
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 2d61917908d46a2174e77b46e3cc7ce7738cbc26
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 072b39475f9020b84df0d72acca87119e12ce3b9
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="how-do-i-know-what-software-is-available-for-download"></a>ダウンロードできるソフトウェアはどうすればわかりますか
 
@@ -27,6 +27,6 @@ ms.lasthandoff: 01/29/2018
 製品をすばやく見つけるには、ページの上部にある [検索] 機能を使用するか、左側にある別の製品の種類をクリックします。
 
 > [!TIP]
-> プロダクト キーを確認するには、ページの上部にある [プロダクト キー] をクリックします。
+> プロダクト キーを確認するには、ページの上部にある **[プロダクト キー]** をクリックします。
 
 また、各サブスクリプションの種類で[利用可能なソフトウェア タイトル](http://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Visual_Studio_by_Subscription_Level.xlsx)の詳細な一覧を含む Excel スプレッドシートをダウンロードすることもできます。  

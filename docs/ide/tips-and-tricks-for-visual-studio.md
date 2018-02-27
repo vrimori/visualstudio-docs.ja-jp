@@ -12,11 +12,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: a73226de18ea2003890c2923641ae65318dbfc1f
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 779867243bc30c26e1fce9260ddf497a9fcf193e
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="keyboard-tips-for-visual-studio"></a>Visual Studio のキーボードに関するヒント
 
@@ -84,8 +84,8 @@ Visual Studio では、このトピックのキーボード ショートカッ�
 |ブロック選択|Alt を押したままマウスをドラッグ、Shift + Alt + 方向キー||
 |行を上下に移動|Alt + Up / Alt + Down||
 |行の複製|Ctrl + E、V|Visual Studio 2017 バージョン 15.6 preview 2|
-|選択範囲の展開|Ctrl+W|Visual Studio 2017 バージョン 15.5|
-|選択範囲の縮小|Ctrl + Shift + W|Visual Studio 2017 バージョン 15.5|
+|選択範囲の展開|**Shift** + **Alt** + **=**|Visual Studio 2017 バージョン 15.5|
+|選択範囲の縮小|**Shift** + **Alt** + **-**|Visual Studio 2017 バージョン 15.5|
 |[定義へ移動]|F12||
 |定義をここに表示|Alt + F12||
 |定義スタックへ移動|Ctrl + Shift + 8 (戻る)、Ctrl +Shift + 7 (進む)||
@@ -125,9 +125,9 @@ Visual Studio では、このトピックのキーボード ショートカッ�
 
 ## <a name="see-also"></a>関連項目
 
-[キーボード ショートカット (VSTS および TFS)](/vsts/collaborate/keyboard-shortcuts)  
-[Visual Studio ブログ](http://blogs.msdn.com/b/visualstudio)  
-[Visual Studio のヒントとテクニックに関するブログ](http://blogs.msdn.com/b/zainnab)  
-[Visual Studio ツールボックス (チャネル 9)](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox)  
-[Visual Studio UserVoice](http://visualstudio.uservoice.com/forums/121579-visual-studio)  
-[Visual Studio Connect のバグ](http://connect.microsoft.com/VisualStudio)
+- [キーボード ショートカット (VSTS および TFS)](/vsts/collaborate/keyboard-shortcuts)
+- [Visual Studio ブログ](http://blogs.msdn.com/b/visualstudio)
+- [Visual Studio のヒントとテクニックに関するブログ](http://blogs.msdn.com/b/zainnab)
+- [Visual Studio ツールボックス (チャネル 9)](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox)
+- [Visual Studio UserVoice](http://visualstudio.uservoice.com/forums/121579-visual-studio)
+- [Visual Studio Connect のバグ](http://connect.microsoft.com/VisualStudio)

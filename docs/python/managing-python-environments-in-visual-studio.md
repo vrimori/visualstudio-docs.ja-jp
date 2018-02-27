@@ -2,13 +2,12 @@
 title: "Visual Studio での Python 環境の管理 | Microsoft Docs"
 description: "Visual Studio の [Python 環境] ウィンドウを使って、グローバル環境と仮想環境を管理する方法や、カスタム環境の設定方法、Python インタープリターのインストール、パッケージのインストール、検索パスの設定、Visual Studio プロジェクトの環境の管理について説明します。"
 ms.custom: 
-ms.date: 01/16/2018
+ms.date: 02/13/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
-dev_langs:
-- python
+ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 author: kraigb
@@ -17,11 +16,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 40f901c65872fe593457883c36f0d60bf7e2fd8a
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 6abf950f7af86bf65b14752bd1cd9df4a6e292e5
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="python-environments"></a>Python 環境
 
@@ -50,7 +49,7 @@ Visual Studio では、特定のプロジェクト用の仮想環境を作成可
 
 ### <a name="selecting-and-installing-python-interpreters"></a>Python インタープリターの選択とインストール
 
-既定では、Visual Studio 2017 に Python 開発ワークロードをインストールすると、Python 3 (64 ビット) もインストールされます。 [インストール](installing-python-support-in-visual-studio.md)に関する記事で説明されているように、必要に応じて、32 ビットおよび 64 ビット バージョンの Python 2、Python 3、Anaconda 2、および Anaconda 3 のインストールも選択できます。 次の表に示すインタープリターのいずれかを手動でインストールすることもできます。
+既定では、Visual Studio 2017 に Python 開発ワークロードをインストールすると、Python 3 (64 ビット) もインストールされます。 [インストール](installing-python-support-in-visual-studio.md)に関する記事で説明されているように、必要に応じて、32 ビットおよび 64 ビット バージョンの Python 2、Python 3、Anaconda 2、および Anaconda 3 のインストールも選択できます。 次の表に示すインタープリターはいずれも手動でインストールすることもできます。インストールされたものは Visual Studio によって検出されます。 (たとえば、Visual Studio をインストールする前に Anaconda 3 がインストールされている場合、Visual Studio インストーラーでそれを再度インストールする必要はありません)
 
 Visual Studio 2015 以前では、いずれかのインタープリターを手動でインストールする必要があります。
 
@@ -70,13 +69,16 @@ Python 環境用に新しい検出形式を提供したい開発者は、「[PTV
 
 [Python 環境] ウィンドウを開くには、**[表示] > [その他のウィンドウ] > [Python 環境]** の順にメニュー コマンドを選択するか、ソリューション エクスプローラーでプロジェクトの **[Python 環境]** ノードを右クリックして **[すべての Python 環境を表示]** を選択します。
 
-![ソリューション エクスプローラーの [View All Python Environments (すべての Python 環境の表示)] コマンド](media/environments-view-all.png)
+    ![View All Environments command in Solution Explorer](media/environments-view-all.png)
 
 いずれの場合も、[Python Environments (Python 環境)] ウィンドウはソリューション エクスプローラーの兄弟タブとして表示されます。
 
 ![[Python Environments (Python 環境)] ウィンドウ](media/environments-default-view.png)
 
-上の例は、Python 3.4 (32 ビット CPython) と共に IronPython 2.7 の 32 ビットおよび 64 ビット バージョンがインストールされることを示しています。 太字で表示される既定の環境は Python 3.4 で、これはすべての新しいプロジェクトで使われます。 環境が何も表示されない場合は、Visual Studio 2015 以降に Python Tools for Visual Studio はインストールされていますが、Python インタープリターはインストールされていないことを意味します (前の「[Python インタープリターの選択とインストール](#selecting-and-installing-python-interpreters)」を参照)。 **[+ カスタム...]** コマンドを使用して、[既存インタープリターの環境を作成](#creating-an-environment-for-an-existing-interpreter)できます。
+上の例は、Python 3.4 (32 ビット CPython) と共に IronPython 2.7 の 32 ビットおよび 64 ビット バージョンがインストールされることを示しています。 太字で表示される既定の環境は Python 3.4 で、これはすべての新しいプロジェクトで使われます。 環境が何も表示されない場合は、Visual Studio 2015 以降に Python Tools for Visual Studio はインストールされていますが、Python インタープリターはインストールされていないことを意味します (前の「[Python インタープリターの選択とインストール](#selecting-and-installing-python-interpreters)」を参照)。 **[+ カスタム...]** コマンドを使用して、[既存インタープリターの環境を作成](#create-an-environment-for-an-existing-interpreter)できます。
+
+> [!Tip]
+> python.org からのインストーラーを使用することによる Python 2.7.11 から Python 2.7.14 へのアップグレードなど、既存のインタープリターに対する更新プログラムを検出します。インストール プロセス中には、古くなった環境が **Python 環境**のリストから消え、その場所に更新プログラムが表示されます。
 
 表示されている各環境の右側に、その環境の対話型のウィンドウを開くコントロールがあります。 環境の IntelliSense データベースを更新する別のコントロールが表示されることもあります。
 
@@ -87,9 +89,9 @@ Python 環境用に新しい検出形式を提供したい開発者は、「[PTV
 > [!Note]
 > Visual Studio はシステム サイト パッケージのオプションを尊重しますが、Visual Studio 内からそれを変更する方法は用意されていません。
 
-Visual Studio での環境管理の概要のビデオについては、「[Managing Python Environments (Python 環境の管理)](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=qrDmN4LWE_8305918567)」 (Microsoft Virtual Academy、2 分 35 秒) をご覧ください。
-
-> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Managing-Python-Environments-qrDmN4LWE_8305918567]
+|   |   |
+|---|---|
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | Visual Studio での Python 環境については、[こちらのビデオ (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=qrDmN4LWE_8305918567) をご覧ください (2 分 35 秒)。|
 
 ### <a name="creating-an-environment-for-an-existing-interpreter"></a>既存インタープリター用の環境の作成
 

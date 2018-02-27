@@ -4,19 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 4ec453e3bec8bbca0e01d0706b43f82fb413d162
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.workload:
+- multiple
+ms.openlocfilehash: 101d16c647887aced273804fc80a890d5102d22c
+ms.sourcegitcommit: bfa26fd7426af0d065cb2eef3d6827b5d6f7986c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="adding-references-using-nuget-versus-an-extension-sdk"></a>拡張 SDK と比較して NuGet を使用した参照の追加
 
@@ -66,7 +68,7 @@ Visual Studio を対象とする NuGet 拡張機能、またはソフトウェ�
 |デバッグをサポートするために、シンボル パッケージを使用できます。|Y|.pdb ファイルを SDK 内にドロップすると、そのファイルが自動的に使用されます。|Y||
 |このメカニズムでは、パッケージ マネージャーの自動更新がサポートされています。|N/A|SDK を変更するには、MSBuild を使用します。|Y||
 |このメカニズムでは、軽量のマニフェスト ファイル形式がサポートされています。|Y|SDKManifest.xml では、多くの属性がサポートされていますが、通常必要とされるのは、小規模なサブセットです。|Y||
-|このメカニズムは、Visual Studio のすべてのエディションで使用できます。|Y|SDK では、Visual Studio Express から [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)] まで、Visual Studio のすべてのエディションがサポートされています。|Y|NuGet では、Express から [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)] まで、Visual Studio のすべてのエディションがサポートされています。|
+|このメカニズムは、Visual Studio のすべてのエディションで使用できます。|Y|SDK ではすべての Visual Studio エディションがサポートされています。|Y|NuGet ではすべての Visual Studio エディションがサポートされています。|
 |このメカニズムは、すべてのプロジェクトの種類で使用できます。|N|SDK では [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 以降の [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] アプリケーションがサポートされています。|N|許可されているプロジェクトの一覧をレビューできます。|
 
 ## <a name="see-also"></a>関連項目

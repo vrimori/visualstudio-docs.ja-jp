@@ -9,11 +9,11 @@ Description: Explore your purchasing options for Visual Studio subscriptions
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 73d0f1c5016a9ea908d7d280575e297357ba78ba
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 9564af525d0c801e311e42bc9ebe93bb16166147
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="how-to-buy-a-subscription"></a>サブスクリプションの購入方法
 Visual Studio のサブスクリプションの主な種類は、クラウドと標準の 2 つです。これらについての説明は、[Visual Studio の価格のページ](https://www.visualstudio.com/vs/pricing/)をご覧ください。
@@ -26,13 +26,14 @@ Visual Studio のサブスクリプションの主な種類は、クラウドと
 ## <a name="buy-visual-studio-standard-subscriptions"></a>Visual Studio の標準サブスクリプションを購入する
 Visual Studio の標準サブスクリプションを購入するには、ソフトウェア販売店に問い合わせるか、オンラインの [Microsoft Store](https://www.microsoft.com/store) にアクセスする必要があります。
 
-*   Azure サブスクリプションにサインアップして、Visual Studio Marketplace から購入するには、"個人" の [Microsoft アカウント](https://www.microsoft.com/account)、所属する組織用に購入し、組織が ID を Azure Active Directory (Azure AD) で管理する場合は ["職場または学校のアカウント"](/azure/active-directory/sign-up-organization) が必要になります。
+
+
+### <a name="buy-visual-studio-cloud-subscriptions"></a>Visual Studio クラウド サブスクリプションの購入
+
+Azure サブスクリプションにサインアップして、Visual Studio Marketplace から購入するには、"個人" の [Microsoft アカウント](https://www.microsoft.com/account)、所属する組織用に購入し、組織が ID を Azure Active Directory (Azure AD) で管理する場合は ["職場または学校のアカウント"](/azure/active-directory/sign-up-organization) が必要になります。
 
 > [!WARNING]
 > Azure サブスクリプションを使用して、Visual Studio クラウド サブスクリプションを購入すると、これらの請求は超過分として表示され、Azure 年額コミットメントには加算されません。 Azure の課金の詳細については、[FAQ](/vsts/billing/faq-azure-billing) に関するページを参照してください。  
-
-### <a name="buy-subscriptions"></a>サブスクリプションの購入
-
 
 1.  [Visual Studio Marketplace > サブスクリプション](https://marketplace.visualstudio.com/subscriptions)にサインインします。
 
