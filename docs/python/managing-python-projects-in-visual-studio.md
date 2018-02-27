@@ -2,7 +2,7 @@
 title: "Visual Studio での Python アプリケーションのプロジェクトの管理 | Microsoft Docs"
 description: "Visual Studio のプロジェクトの目的についてご説明するほか、Python コードのプロジェクトの作成および管理方法や、Python で使用できるさまざまなプロジェクト テンプレートをご紹介します。"
 ms.custom: 
-ms.date: 01/16/2018
+ms.date: 02/15/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b9f1cc2abdc78da1279367432741ca30b5885335
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: aafb2259ec4f16341abf514e9496dbb66f3cb95c
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="python-projects"></a>Python プロジェクト
 
@@ -40,11 +40,10 @@ Visual Studio には、多数のアプリケーション構造を短時間で設
 >
 > 「[既存ファイルからのプロジェクトの作成](#creating-a-project-from-existing-files)」で説明されているように、既存のコードから Visual Studio プロジェクトを作成すると簡単です。
 
-Visual Studio での Python プロジェクトの概要については、「[Getting Python Code](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=iLAv23LWE_3905918567)」 (Python コードを取得する) (Microsoft Virtual Academy、2 分 17 秒) をご覧ください。
-
-> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Getting-Python-Code-iLAv23LWE_3905918567]
-
-また、以前のビデオ「[Deep Dive: Using source control with Python projects](https://youtu.be/Aq8eqApnugM)」(Deep Dive: Python プロジェクトでのソース管理の使用) (youtube.com、8 分 55 秒) もご覧ください。
+|   |   |
+|---|---|
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | Python プロジェクトの概要に関する[ビデオを見る (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Getting-Python-Code-iLAv23LWE_3905918567) (2 分 17 秒)。 |
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | また、「[Deep Dive: Using source control with Python projects](https://youtu.be/Aq8eqApnugM)」(Deep Dive: Python プロジェクトでのソース管理の使用) (youtube.com、8 分 55 秒) もご覧ください。 |
 
 ## <a name="adding-files-assigning-a-startup-file-and-setting-environments"></a>ファイルの追加、スタートアップ ファイルの割り当て、環境の設定
 

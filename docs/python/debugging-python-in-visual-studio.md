@@ -2,7 +2,7 @@
 title: "Visual Studio での Python コードのデバッグ | Microsoft Docs"
 description: "ブレークポイントの設定、ステップ実行、値の検査、例外の確認、対話型ウィンドウでのデバッグなど、特に Python コードについての Visual Studio でのデバッグ機能のチュートリアルです。"
 ms.custom: 
-ms.date: 07/13/2017
+ms.date: 02/15/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8c3b4bf4c08f9ecd13a313c717b4da9c0a5d5a45
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: c158397d327e339955efed35f1ccc525028294e3
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="debugging-your-python-code"></a>Python コードのデバッグ
 
@@ -34,9 +34,9 @@ Visual Studio は、実行中のプロセスへのアタッチ、ウォッチ �
 - [Python/C++ 混合モード デバッグ](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)
 - [混合モード デバッグのシンボル](debugging-symbols-for-mixed-mode-c-cpp-python.md)
 
-デバッグの概要については、「[Debugging Python (Python のデバッグ)](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=Ep5dp5LWE_3805918567)」 (Microsoft Virtual Academy、3 分 32 秒) をご覧ください。
-
-> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Debugging-Python-Ep5dp5LWE_3805918567]
+|   |   |
+|---|---|
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | Python デバッグのデモについては、[こちらのビデオ (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Debugging-Python-Ep5dp5LWE_3805918567) をご覧ください (3 分 32 秒)。|
 
 <a name="debugging-without-a-project"></a>
 

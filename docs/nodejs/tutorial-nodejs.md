@@ -16,11 +16,11 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: a8e6c800ef036d0f6e8e5affae745e541a276284
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: 1d91d46b20f82a1700c2d20639b3a8827c92bcb0
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="getting-started-with-nodejs-in-visual-studio"></a>Visual Studio の Node.js の概要
 このチュートリアルでは、Visual Studio を使用して Node.js を開発します。単純な Node.js Web アプリを作成し、いくつかのコードを追加し、IDE の一部の機能を試し、アプリを実行します。 まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。  
@@ -37,6 +37,10 @@ ms.lasthandoff: 02/01/2018
      **[基本の Azure Node.js Express 4 アプリケーション]** プロジェクト テンプレートが表示されない場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが起動します。 **[Node.js 開発]** ワークロードを選択し、**[変更]** を選択します。 
 
     Visual Studio は新しいソリューションを作成し、プロジェクトを開きます。 **app.js** プロジェクト ファイルがエディター (左のウィンドウ) で開きます。 Visual Studio のソリューションとプロジェクトについて詳しくない場合、「[Quickstart: Use Visual Studio to create your first Node.js app](../ide/quickstart-nodejs.md)」 (クイックスタート: Visual Studio を使用して最初の Node.js アプリを作成する) を参照してください。
+
+4. Node.js ランタイムがまだインストールされていない場合は、[Node.js](https://nodejs.org/en/download/) Web サイトからインストールしてください。
+
+    一般に、Visual Studio はインストール済みの Node.js ランタイムを自動的に検出します。 インストール済みのランタイムが検出されない場合は、インストール済みのランタイムを参照するようにプロジェクトを構成することができます。
 
 ## <a name="add-some-code"></a>何らかのコードを追加する
 
@@ -121,7 +125,7 @@ ms.lasthandoff: 02/01/2018
 
     ![デバッグ ターゲットを選択する](../nodejs/media/tutorial-nodejs-deploy-target.png) 
 
-1. **Ctrl キーを押しながら F5 キーを押して**アプリケーションを実行します。
+1. **F5** キー (**[デバッグ]** > **[デバッグの開始]**) を押してアプリケーションを実行します。
 
     設定したブレークポイントのところでデバッガーが一時停止します。 ここで、アプリの状態を確認できます。
 
@@ -129,7 +133,7 @@ ms.lasthandoff: 02/01/2018
 
     ![変数の検査](../nodejs/media/tutorial-nodejs-inspect-variables.png)
 
-1. **F5** キーを押して続行します。
+1. **F5** キー (**[デバッグ]** > **[続行]**) を押して続行します。
 
     アプリがブラウザーで開きます。
 
@@ -139,7 +143,7 @@ ms.lasthandoff: 02/01/2018
 
     ![ブラウザーで実行しているアプリ](../nodejs/media/tutorial-nodejs-running-in-browser.png)  
 
-1. Node.js 対話型ウィンドウを開きます。**[表示]、[その他のウィンドウ]、[Node.js 対話型ウィンドウ]** の順に選択してください。
+1. Node.js 対話型ウィンドウを開きます。**[表示]** > **[その他のウィンドウ]** > **[Node.js 対話型ウィンドウ]** の順に選択してください。
 
    ![Node.js 対話型ウィンドウを開く](../nodejs/media/tutorial-nodejs-interactive-window.png)  
 

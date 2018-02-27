@@ -14,37 +14,25 @@ ms.author: ghogen
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f047b143a7d0955d8ac3e2708098a903c73da59
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: dfdd5aee71c74febbeca0b7c9683aaa6be915e6e
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio におけるクロス プラットフォーム モバイル開発
+
 Android、iOS、および Windows デバイス用のアプリを Visual Studio を使用して作成することができます。  アプリを設計する過程で Visual Studio のツールを利用すると、Office 365、Azure App Services、Application Insights などの接続済みサービスを簡単に追加できます。
 
- アプリを作成するには、C# と .NET Framework、HTML と JavaScript、または C++ を使用します。 コード、文字列、イメージを共有できるほか、場合によってはユーザー インターフェイスも共有できます。
+アプリを作成するには、C# と .NET Framework、HTML と JavaScript、または C++ を使用します。 コード、文字列、イメージを共有できるほか、場合によってはユーザー インターフェイスも共有できます。
 
- ゲームまたは没入感のあるグラフィカル アプリを作成する場合は、Visual Studio Tools for Unity をインストールすれば、Visual Studio と Unity の強力な生産性機能をすべて活用できます。Unity は、iOS、Android、Windows、およびその他のプラットフォームで実行するアプリ用のクロスプラットフォームのゲーム/グラフィックス エンジンおよび開発環境として人気を博しています。
+ゲームまたは没入感のあるグラフィカル アプリを作成する場合は、Visual Studio Tools for Unity をインストールすれば、Visual Studio と Unity の強力な生産性機能をすべて活用できます。Unity は、iOS、Android、Windows、およびその他のプラットフォームで実行するアプリ用のクロスプラットフォームのゲーム/グラフィックス エンジンおよび開発環境として人気を博しています。
 
- **この記事の内容:**
+## <a name="build-an-app-for-android-ios-and-windows-net-framework"></a>Android、iOS、および Windows 用のアプリをビルドする (.NET Framework)
 
--   [Android、iOS、および Windows 用のアプリをビルドする (.NET Framework)](#NET)
+![デバイス](../cross-platform/media/homedevices.png "HomeDevices")
 
-    -   [1 つのコード ベースから Android、iOS、Windows を対象にする](../cross-platform/cross-platform-mobile-development-in-visual-studio.md#AndroidHTML)
-
-    -   [Windows 10 デバイスを対象にする](../cross-platform/cross-platform-mobile-development-in-visual-studio.md#WindowsHTML)
-
--   [Android、iOS、および Windows 用のアプリをビルドする (HTML/JavaScript)](#HTML)
-
--   [Android および Windows 用のアプリをビルドする (C++)](#CPP)
-
--   [Android、iOS、および Windows 用のクロスプラットフォーム ゲームを Visual Studio Tools for Unity を使用してビルドする](#Unity)
-
-##  <a name="NET"></a> Android、iOS、および Windows 用のアプリをビルドする (.NET Framework)
- ![デバイス](../cross-platform/media/homedevices.png "HomeDevices")
-
- Xamarin を利用すれば、コードや UI を共有し、同じソリューションで Android、iOS、Windows を対象にできます。
+Xamarin を利用すれば、コードや UI を共有し、同じソリューションで Android、iOS、Windows を対象にできます。
 
 |**詳細を表示**|
 |--------------------|

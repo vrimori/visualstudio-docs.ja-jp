@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 995c3d8512c3df9bf2cc40fe962106a95f9d6268
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: e41e4af21a524215550c581b1e29efc2261aaa8f
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="working-with-the-python-interactive-window"></a>Python 対話型ウィンドウの使用
 
@@ -40,9 +40,11 @@ Visual Studio では、複数の Python REPL モードから選ぶことがで�
 
 このトピックでは、REPL の**標準**モードと**デバッグ** モードのについて説明します。 IPython モードについて詳しくは、「[Using the IPython REPL](interactive-repl-ipython.md)」(IPython REPL の使用) をご覧ください。
 
-Ctrl + Enter などのエディターとの対話を含む、例を使用した詳細なチュートリアルについては、「[チュートリアル手順 3: 対話型 REPL ウィンドウを使用する](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)」を参照してください。 ビデオでの概要については、「[Python 対話型ウィンドウ](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=gJYKY5LWE_4605918567)」 (Microsoft Virtual Academy、2 分 22 秒) を参照してください。
+Ctrl + Enter などのエディターとの対話を含む、例を使用した詳細なチュートリアルについては、「[チュートリアル手順 3: 対話型 REPL ウィンドウを使用する](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)」を参照してください。 
 
-> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Python-Interactive-Window-gJYKY5LWE_4605918567]
+|   |   |
+|---|---|
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | 対話型ウィンドウについては、[こちらのビデオ (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Python-Interactive-Window-gJYKY5LWE_4605918567) をご覧ください (2 分 22 秒)。|
 
 ## <a name="opening-an-interactive-window"></a>対話型ウィンドウを開く
 

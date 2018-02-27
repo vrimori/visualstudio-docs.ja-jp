@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/15/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-acquisition
+ms.technology:
+- vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: quickstart
 ms.devlang: javascript
@@ -12,13 +13,15 @@ ms.assetid: b0e4ebed-1a01-41ef-aad1-4d8465ce5322
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-dev_langs: JavaScript
-ms.workload: nodejs
-ms.openlocfilehash: 12c848797b167038b02106ca3392cac50171f699
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+dev_langs:
+- JavaScript
+ms.workload:
+- nodejs
+ms.openlocfilehash: 89ecece1701520bf9e88221b2d3961a631d66ca0
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-nodejs-app"></a>クイック スタート: Visual Studio を使用して初めての Node.js アプリを作成する
 ここでは 5 分から 10 分で Visual Studio 統合開発環境 (IDE) の概要を示し、単純な Node.js Web アプリケーションを作成します。 まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。  
@@ -37,6 +40,10 @@ ms.lasthandoff: 12/22/2017
      ![VS インストーラーの Node.js ワークロード](../ide/media/quickstart-nodejs-workload.png)  
 
     Visual Studio は新しいソリューションを作成し、プロジェクトを開きます。 エディターで **server.js** を開きます。
+
+4. Node.js ランタイムがまだインストールされていない場合は、[Node.js](https://nodejs.org/en/download/) Web サイトからインストールしてください。
+
+    一般に、Visual Studio はインストール済みの Node.js ランタイムを自動的に検出します。 インストール済みのランタイムが検出されない場合は、インストール済みのランタイムを参照するようにプロジェクトを構成することができます。
 
 ## <a name="explore-the-ide"></a>IDE を探索する  
 

@@ -12,11 +12,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 0700f1ba19c9c352aeaafe4dd3a3f9f4a12f864f
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.openlocfilehash: 48419196050111d12fb149612394fd9ef7935494
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Visual Studio の生産性に関するヒント
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 01/23/2018
 
 コードをすばやく記述するには、次の機能を使用します。
 
-- **便利なコマンドを使用する**。 Visual Studio は、一般的な編集タスクを迅速に実行できるさまざまなコマンドを備えています。 たとえば、**Visual Studio 2017 バージョン 15.6 preview 2** 以降では、コマンドを選択するだけで簡単にコード行を複製できます。コード行をコピーし、カーソルの位置を移動させてから貼り付ける必要はありません。 **[編集]** > **[複製]** の順に選択するか、または **Ctrl** + **E** キー、**V** キーの順に押します。 **[編集]** > **[詳細設定]** > **[選択範囲の展開]** または **[選択範囲の縮小]** を選択すると、選択範囲のテキストをすばやく拡張したり縮小したりできます。または、**Ctrl** + **W** キー、**Ctrl** + **Shift** + **W** キーを押しても実行できます (**Visual Studio 2017 バージョン 15.5** 以降で使用できます)。
+- **便利なコマンドを使用する**。 Visual Studio は、一般的な編集タスクを迅速に実行できるさまざまなコマンドを備えています。 たとえば、**Visual Studio 2017 バージョン 15.6 preview 2** 以降では、コマンドを選択するだけで簡単にコード行を複製できます。コード行をコピーし、カーソルの位置を移動させてから貼り付ける必要はありません。 **[編集]** > **[複製]** の順に選択するか、または **Ctrl** + **E** キー、**V** キーの順に押します。 **[編集]** > **[詳細設定]** > **[選択範囲の展開]** または **[編集]** > **[詳細設定]** > **[選択範囲の縮小]** を選択すると、選択範囲のテキストをすばやく拡張したり縮小したりできます。**Shift** + **Alt** + **=** キーまたは **Shift** + **Alt** + **-** キーを押しても実行できます (**Visual Studio 2017 バージョン 15.5** 以降で使用できます)。
 
 - **IntelliSense を使用する**。 エディターにコードを入力すると、メンバーの一覧、パラメーター ヒント、クイック ヒント、シグネチャ ヘルプ、入力候補などの IntelliSense 情報が表示されます。 これらの機能では、テキストのあいまい一致をサポートしています。そのため、たとえば、メンバーの一覧の結果一覧には、入力した文字から始まるエントリだけでなく、その文字の組み合わせが名前に含まれているエントリも含まれます。 詳細については、「[IntelliSense の使用](../ide/using-intellisense.md)」を参照してください。
 
@@ -124,7 +124,7 @@ ms.lasthandoff: 01/23/2018
 
 ## <a name="see-also"></a>関連項目
 
-[頻繁に使用するコマンドに対応する既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)  
-[方法: メニューおよびツール バーをカスタマイズする](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)  
-[チュートリアル : 簡単なアプリケーションの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)  
-[アクセシビリティのヒントとテクニック](../ide/reference/accessibility-tips-and-tricks.md)
+- [頻繁に使用するコマンドに対応する既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)
+- [方法: メニューおよびツール バーをカスタマイズする](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)
+- [チュートリアル : 簡単なアプリケーションの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)
+- [アクセシビリティのヒントとテクニック](../ide/reference/accessibility-tips-and-tricks.md)

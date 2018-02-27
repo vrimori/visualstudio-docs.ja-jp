@@ -17,11 +17,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 428dc6346fa39b3939b478d0d2c887b99024dc81
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 22c9aa56ab63d0c7c3b342e2c50cf81045580b54
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/19/2018
 ---
 # 状況に適した発行オプション
 
@@ -50,6 +50,8 @@ App Service は Azure のクラウドでホストされる仮想マシン上で�
 - Web アプリケーションをホストするサーバーで、コンピューター レベルのカスタマイズを行う必要がない。
 
 > 自社のデータセンターまたは他のオンプレミス コンピューターで Azure App Service を使いたい場合は、[Azure Stack](https://azure.microsoft.com/overview/azure-stack/) を使って行うことができます。
+
+ASP.NET Core アプリの発行方法の詳細については、「[Visual Studio を使用して Azure App Service に ASP.NET Core アプリを発行する](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)」を参照してください。
 
 ## Azure Virtual Machines
 
@@ -83,7 +85,7 @@ App Service は Azure のクラウドでホストされる仮想マシン上で�
 - ローカル テスト デプロイのみが必要である。
 - 別のデプロイ ターゲットに送る前にアプリケーション ファイルを調べて場合によっては個別に変更したい。
 
-
+.NET Core アプリを展開する方法の詳細については、「[Visual Studio で .NET Core アプリを展開する](/dotnet/core/deploying/deploy-with-vs)」を参照してください。
 
 ## カスタム ターゲット
 
@@ -103,3 +105,5 @@ Visual Studio では任意の数のカスタム デプロイ プロファイル�
 - URL でアクセスできる Azure 以外のクラウド サービスを使っている。
 - Visual Studio で使っている資格情報または Azure アカウントに直接結び付けられている資格情報とは異なる資格情報を使ってデプロイしたい。
 - デプロイするたびに、ターゲットからファイルを削除したい。
+
+IIS への発行の詳細については、「[IIS 8.0 Using ASP.NET 3.5 and ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)」 (ASP.NET 3.5 および ASP.NET 4.5 を使用する IIS 8.0) および「[Remote Debug ASP.NET on a Remote IIS Computer](../../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)」(リモート IIS コンピューター上の ASP.NET のリモート デバッグ) を参照してください。

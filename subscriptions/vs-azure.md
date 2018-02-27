@@ -9,11 +9,11 @@ Description: Learn how to activate the Azure benefit included in your Visual Stu
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 7354f96a441faa587e2f669ee39defcf3ced1ff6
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: a0587e063aa73666a0e97460b8d92f4614b3b116
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="using-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションで Microsoft Azure を使用する
 
@@ -68,11 +68,16 @@ Visual Studio サブスクライバーは、追加料金なしで Microsoft Azur
 ![Azure ダッシュボード](_img\vs-azure\vs-azure-dashboard-cropped.png)
 
 ## <a name="faq"></a>FAQ
-*こちらで最新情報を確認してください*
+### <a name="q-how-do-i-submit-a-technical-support-incident-from-within-the-azure-portal"></a>Q: Azure Portal 内からテクニカル サポート インシデントを送信するにはどうすればよいですか?
+A: Azure Portal からサポート インシデントを送信するには、3 段階の手順を実行します。
+1. テクニカル サポートの特典をアクティブ化し、契約 ID アクセス ID を取得します。
+2. サポート契約を Azure サブスクリプションにリンクします。 
+3. サポート インシデントを送信します。
+詳細については、[テクニカル サポート](/visualstudio/subscriptions/vs-tech-support)のドキュメントを参照してください。 
 
 ## <a name="support-resources"></a>サポート リソース
 -  Azure に関するヘルプが必要ですか。  以下のリソースを確認してください。
-    - テクニカル サポート: https://azure.microsoft.com/support/options/ 
-    - [ドキュメント](/azure/)
+    - テクニカル サポート: [https://azure.microsoft.com/support/options/](https://azure.microsoft.com/support/options/)
+    - [Azure ドキュメント](/visualstudio/azure/)
 -  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)にお問い合わせください。
 -  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://www.visualstudio.com/support/)にアクセスしてください。 

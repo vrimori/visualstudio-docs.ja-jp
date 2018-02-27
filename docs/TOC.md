@@ -97,6 +97,7 @@
 ##### [テンプレート内のパラメーターを置き換える](ide/how-to-substitute-parameters-in-a-template.md)
 #### [Visual Studio IDE の 64 ビット サポート](ide/visual-studio-ide-64-bit-support.md)
 ### [プロジェクトまたはソリューションを使用せずに開発する ("フォルダーを開く")](ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
+#### [ビルドのカスタマイズとタスクのデバッグ](ide/customize-build-and-debug-tasks-in-visual-studio.md)
 ### [エディターでのコードの作成](ide/writing-code-in-the-code-and-text-editor.md)
 #### [テキストの検索と置換](ide/finding-and-replacing-text.md)
 ##### [正規表現の使用](ide/using-regular-expressions-in-visual-studio.md)

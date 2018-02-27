@@ -18,17 +18,20 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 150f4b1c7e151e0b5d6f802ae40f4b5cf6943937
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: d33e4d15e9d0de5c3aa35354dd1c8840d0ed9bd2
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="debugging-python-and-c-together"></a>Python と C++ の同時デバッグ
 
 ほとんどの標準的 Python デバッガーは、Python コードのみのデバッグをサポートします。 ただし、実際には、高パフォーマンスやプラットフォーム API の直接呼び出しが必要なシナリオでは、Python と、C または C++ が併用されています。 (チュートリアルについては、「[Creating a C++ extension for Python ](working-with-c-cpp-python-in-visual-studio.md)」(Python 用 C++ 拡張機能の作成) をご覧ください。)
 
 Visual Studio インストーラーの Python 開発ワークロードで **[Python ネイティブ開発ツール]** オプションが選択されていると、Visual Studio で Python とネイティブの C/C++ 向けに統合された同時混合モードのデバッグ機能が提供されます。
+
+> [!Note]
+> Visual Studio 2015 以前では、混合モードのデバッグは、Python Tools for Visual Studio 1.x では使用できません。
 
 混合モード デバッグ機能には、この記事で説明するような次の特色があります。
 
@@ -40,12 +43,9 @@ Visual Studio インストーラーの Python 開発ワークロードで **[Pyt
 
 ![混合モードのデバッグ](media/mixed-mode-debugging.png)
 
-Visual Studio でのネイティブ C モジュールのビルド、テスト、およびデバッグのビデオによる紹介は、「[Deep Dive: Creating Native Modules](https://youtu.be/D9RlT06a1EI)」(詳細情報: ネイティブ モジュールの作成) (youtube.com、9 分 9 秒) をご覧ください。 ビデオは、Visual Studio 2015 と 2017 の両方に適用されます。
-
-> [!VIDEO https://www.youtube.com/embed/D9RlT06a1EI]
-
-> [!Note]
-> 混合モードのデバッグは、Python Tools for Visual Studio 1.x では使用できません。
+|   |   |
+|---|---|
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | Visual Studio でのネイティブ C モジュールのビルド、テスト、およびデバッグの概要については「[Deep Dive: Creating Native Modules (詳細情報: ネイティブ モジュールの作成)](https://youtu.be/D9RlT06a1EI)」 (youtube.com、9 分 9 秒) をご覧ください。 ビデオは、Visual Studio 2015 と 2017 の両方に適用されます。 |
 
 ## <a name="enable-mixed-mode-debugging-in-a-python-project"></a>Python プロジェクトでの混合モード デバッグの有効化
 
