@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 05/23/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,18 +19,20 @@ dev_langs:
 - FSharp
 - C++
 - JScript
-helpviewer_keywords: Options dialog box, debugging
+helpviewer_keywords:
+- Options dialog box, debugging
 ms.assetid: b33aee0b-43c3-4c26-8ed4-bc673f491503
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c7f6983c2be5604867f729ed006eadb5257c3a43
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.workload:
+- multiple
+ms.openlocfilehash: 01c87cfc2beb030b2fd10a4455def65ab139a5f0
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="general-debugging-options-dialog-box"></a>[全般] ([オプション] ダイアログ ボックス - [デバッグ])
 **ツール > オプション > デバッグ > 全般** ページでは、次のオプションを設定できます。  
@@ -115,7 +118,7 @@ SRCSRV (`srcsrv.dll`) プロトコルを実装するソース サーバーから
 すべてのオブジェクトの構造体ビューのカスタマイズをオフにします。 ビューのカスタマイズの詳細については、次を参照してください。 [.managed オブジェクトのカスタム ビューを作成](../debugger/create-custom-views-of-dot-managed-objects.md)です。  
   
 **モジュールを読み込めません (マネージのみ) に JIT 最適化を抑制する状況**  
-デバッガーをアタッチするとき、モジュールの読み込み中 (および JIT のコンパイル中) にマネージ コードの JIT 最適化を無効にします。 最適化を無効にした場合、一部の問題のデバッグは簡単になりますが、パフォーマンスは低下します。 [マイ コードのみ] を使用しているときに JIT 最適化を抑制すると、非ユーザー コードがユーザー コード ("マイ コード") として表示される可能性があります。
+デバッガーをアタッチするとき、モジュールの読み込み中 (および JIT のコンパイル中) にマネージ コードの JIT 最適化を無効にします。 最適化を無効にした場合、一部の問題のデバッグは簡単になりますが、パフォーマンスは低下します。 [マイ コードのみ] を使用しているときに JIT 最適化を抑制すると、非ユーザー コードがユーザー コード ("マイ コード") として表示される可能性があります。 詳細については、次を参照してください。 [JIT の最適化とデバッグ](../debugger/jit-optimization-and-debugging.md)です。
 
 **JavaScript のデバッグ (Chrome および IE) の ASP.NET を有効にする**ASP.NET アプリ用のスクリプト デバッガーを有効にします。 Chrome で最初に使用するときに、インストールされている Chrome 拡張機能を有効にする最初の使用のブラウザーにサインインする必要があります。 従来の動作に戻すには、このオプションを無効にします。    
 

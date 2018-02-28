@@ -4,20 +4,23 @@ ms.custom:
 ms.date: 01/18/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-code-analysis
+ms.technology:
+- vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: code analysis, C++ core check
+helpviewer_keywords:
+- code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d5db13aa350e33a297981066f36c3d1dfd1ecb67
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e0e12941db7f8e6f539c88014fc5fa9c55ca809c
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="c-core-guidelines-checker-reference"></a>C++ の主要なガイドライン チェッカー参照
 このセクションでは、C++ の主要なガイドラインのチェックの警告を一覧表示します。 コード分析の詳細については、次を参照してください。 [/analyze (コード分析)](/cpp/build/reference/analyze-code-analysis)と[クイック スタート: c/c++ コード分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)です。  
@@ -197,7 +200,7 @@ C26498 USE_CONSTEXPR_FOR_FUNCTIONCALL
 
 ## <a name="type-group"></a>種類のグループ
 C26465 NO_CONST_CAST_UNNECESSARY  
-  使用しない`const_cast`キャストに`const`です。 `const_cast`不要です。この変換では、constness または揮発性を削除していますされません。 参照してください[C++ コア ガイドライン Type.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-constcast)です。  
+  使用しない`const_cast`キャストに`const`です。 `const_cast` 不要です。この変換では、constness または揮発性を削除していますされません。 参照してください[C++ コア ガイドライン Type.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-constcast)です。  
   
 C26466 NO_STATIC_DOWNCAST_POLYMORPHIC  
   使用しない`static_cast`キャストします。 ポリモーフィックな型からキャストには、dynamic_cast を使用する必要があります。 参照してください[C++ コア ガイドライン Type.2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-downcast)です。  
@@ -248,6 +251,20 @@ C26483 STATIC_INDEX_OUT_OF_RANGE
 
 [C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md)   
   式 '%expr% ': ポインター減衰にない配列。 参照してください[C++ コア ガイドライン Bounds.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)です。  
-  
+
+## <a name="deprecated-warnings"></a>非推奨の警告
+
+次の警告はコア ガイドライン チェッカーの初期の実験用の規則セット内にあるし、は使用されなくなりましたが無視してかまいません。 警告は、上記の一覧からの警告によって置き換えられます。
+
+- 26412 DEREF_INVALID_POINTER
+- 26413 DEREF_NULLPTR
+- 26420 ASSIGN_NONOWNER_TO_EXPLICIT_OWNER
+- 26421 ASSIGN_VALID_OWNER
+- 26422 VALID_OWNER_LEAVING_SCOPE
+- 26423 ALLOCATION_NOT_ASSIGNED_TO_OWNER
+- 26424 VALID_ALLOCATION_LEAVING_SCOPE
+- 26425 ASSIGNING_TO_STATIC
+- 26499 NO_LIFETIME_TRACKING
+
 ## <a name="see-also"></a>参照  
 [C++ の主要なガイドライン チェッカーを使用します。](using-the-cpp-core-guidelines-checkers.md)
