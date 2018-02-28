@@ -4,20 +4,22 @@ ms.custom:
 ms.date: 11/08/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 46b0a1e3-7e69-47c9-9d8d-a1815d6c3896
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: BertanAygun
 ms.author: bertaygu
 manager: ghogen
-ms.workload: bertaygu
-ms.openlocfilehash: 1d1034cce8b2fced5af48a0a4bfa8620b56994e4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- bertaygu
+ms.openlocfilehash: ac6044406c4fa065d1e5ed3dcaa8dd998f4232fb
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="measuring-extension-impact-in-startup"></a>スタートアップの拡張機能への影響を測定
 
@@ -30,6 +32,9 @@ ms.lasthandoff: 12/22/2017
 ![Visual Studio のパフォーマンスを管理します。](media/manage-performance.png)
 
 このドキュメントでは、開発者に役立つ拡張機能で拡張機能への影響を計算する方法およびどのように分析できますローカルで拡張機能がパフォーマンスに影響する拡張機能として表示される場合にテストを記述する目的としています。
+
+> [!NOTE]
+> このドキュメントは、スタートアップおよびソリューションの読み込み時に拡張機能の影響について説明します。 拡張機能が応答しなくなる UI が発生したときにも Visual Studio のパフォーマンスに影響します。 詳細については、次を参照してください。[する方法: 診断 UI による遅延のための拡張機能](how-to-diagnose-ui-delays-caused-by-extensions.md)します。
 
 ## <a name="how-extensions-can-impact-startup"></a>拡張機能がスタートアップに影響を与える
 

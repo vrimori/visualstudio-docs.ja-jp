@@ -4,20 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db75b3a7-80b2-4a74-91d2-fd6e0f73b45d
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 68ea5a718b1a0d1ccff7155f842bc3808d640c21
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 4290ccb1184f658d04d6903520f709384e58e837
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="command-line-capture-tool"></a>コマンド ライン キャプチャ ツール
 DXCap.exe は、グラフィックス診断のキャプチャと再生に使用されるコマンド ライン ツールです。 すべての機能レベルで、Direct3D 10 から Direct3D 12 をサポートしています。  
@@ -42,12 +44,12 @@ DXCap.exe -info
   
  `-frame` `frames`  
  キャプチャ モードの場合、`frames` には、キャプチャするフレームを指定します。 最初のフレームは 1 です。 コンマおよび範囲を使用して、複数のフレームを指定できます。 たとえば場合、`frames`は`2, 5, 7-9, 15`、フレーム`2`、 `5`、 `7`、 `8`、 `9`、および`15`がキャプチャされます。  
+
+> [!TIP]
+> 使用して`-frame` `manual` Print Screen キーを押してフレームを手動でキャプチャはことを指定します。 フレームはアプリの起動時にキャプチャできます。フレームのキャプチャを停止するには、コマンド ライン インターフェイスに戻り、Enter キーを押します。  
   
  `-period` `periods`  
  キャプチャ モードの場合、`periods` には、フレームをキャプチャする時間の範囲を秒単位で指定します。 コンマおよび範囲を使用して、複数の期間を指定できます。 たとえば場合`periods`は`2.1-5, 7.0-9.3`、フレームがレンダリングされ`2.1`と`5`(秒単位)、および`7`と`9.3`秒がキャプチャされます。  
-  
- `-manual`  
- キャプチャ モード`-manual`Print Screen キーを押してフレームを手動でキャプチャするを指定します。 フレームはアプリの起動時にキャプチャできます。フレームのキャプチャを停止するには、コマンド ライン インターフェイスに戻り、Enter キーを押します。  
   
  `-c` `app` [`args...`]  
  キャプチャ モード。 キャプチャ モードの場合、`app` には、グラフィックス情報の取得元となるアプリの名前を指定します。`args...` には、そのアプリに対する追加のコマンド ライン パラメーターを指定します。  
@@ -164,7 +166,7 @@ DXCap.exe -e map
   
  上記のコマンドを「マップ」に一致する UWP アプリを列挙します出力を次に示します。  
   
- **パッケージ"Microsoft.BingMaps":**  
+ **Package "Microsoft.BingMaps":**  
  **検出: C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe**  
  **FullName: Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe**  
  **UserSID: S-1-5-21-2127521184-1604012920-1887927527-5603533**  
@@ -173,7 +175,7 @@ DXCap.exe -e map
  **バージョン: 2.1.2914.1734**  
  **起動可能なアプリケーションの場合:**  
  **Id: AppexMaps**  
- **Exe: C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe**  
+ **Exe  : C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe**  
  **IsWWA: いいえ**  
  * * (起動) を AppSpec: **DXCap.exe-c Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe,AppexMaps*** 列挙アプリごとの出力の最後の行からグラフィックス情報をキャプチャを使用できるコマンドが表示されます。  
   

@@ -4,15 +4,17 @@ ms.custom:
 ms.date: 06/25/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d6cf53c-011e-4c9e-9935-417edca8c486
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: willbrown
 ms.author: willbrown
 manager: justinclareburt
-ms.workload: willbrown
+ms.workload:
+- willbrown
 ms.openlocfilehash: b51673daa7a8c3526ad7de7f7cfdeac6a91d3b4b
 ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: MT

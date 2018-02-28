@@ -13,11 +13,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: bbce760956dda7c9399d25dd241df26ec0e59644
-ms.sourcegitcommit: b01406355e3b97547b7cbf8ce3960f101b165cec
+ms.openlocfilehash: 3de32ab0b9ded416f57f4699e534b6401c2a483c
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>チュートリアル: プログラムによるグラフィックス情報のキャプチャ
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のグラフィックス診断を使用すると、Direct3D アプリケーションからプログラムによってグラフィックス情報をキャプチャできます。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/05/2018
   
 -   レンダリングの問題を予測して手動テストでキャプチャすることは難しいものの、実行時にアプリケーションの状態に関する情報を使用してプログラムで予測できるときは、 `CaptureCurrentFrame`を呼び出します。  
   
-##  <a name="CaptureDX11_2"></a>Windows 10 でプログラムによるキャプチャ  
+##  <a name="CaptureDX11_2"></a> Windows 10 でプログラムによるキャプチャ  
  このチュートリアルのこの部分では、堅牢なキャプチャ方法を使用して Windows 10 で、DirectX 11.2 API を使用するアプリケーションでプログラムによるキャプチャについて説明します。
   
  このセクションでは、次のタスクを実行する方法を示します。  
@@ -79,7 +79,7 @@ ms.lasthandoff: 02/05/2018
     HRESULT getAnalysis = DXGIGetDebugInterface1(0, __uuidof(pGraphicsAnalysis), reinterpret_cast<void**>(&pGraphicsAnalysis));  
     ```  
   
-     使用する前に正しいインターフェイスを取得できるように、 `HRESULT` から返される `DXGIGetDebugInterface1` を必ずチェックします。  
+     確認してください、`HRESULT`によって返される[DXGIGetDebugInterface1](https://msdn.microsoft.com/library/windows/desktop/dn457937(v=vs.85).aspx)を使用する前に正しいインターフェイスを取得することを確認します。  
   
     ```  
     if (FAILED(getAnalysis))  
