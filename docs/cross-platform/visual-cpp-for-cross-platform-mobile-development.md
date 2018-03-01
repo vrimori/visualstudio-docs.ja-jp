@@ -16,11 +16,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 2ae49bb09d30122297efc66779f808e0c39dd0d7
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 10ac98027a4f7e50f66ec27636507e89f64849ee
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="visual-c-for-cross-platform-mobile-development"></a>Visual C++ for Cross-Platform Mobile Development
 Visual C++ for Cross-Platform Mobile Development を使用することによって、iOS、Android、および Windows デバイス対応のネイティブ C++ アプリをビルドし、iOS、Android、および Windows 用に作成されたライブラリ内で共通コードを共有できます。 これは、Visual Studio 2015 で使用できるオプションです。このオプションを選択すると、共有ライブラリとネイティブ アプリのクロスプラットフォーム開発に必要な SDK とツールがインストールされます。 インストールされている場合、Windows、Windows Phone、および Xbox に加え、iOS と Android のデバイスおよびプラットフォームで実行されるコードを、Visual C++ を使用して作成できます。  
@@ -39,7 +39,7 @@ Visual C++ for Cross-Platform Mobile Development を使用することによっ�
  Visual C++ for Cross-Platform Mobile Development は、Visual Studio 2015 に付属しているインストール可能なオプションです。 前提条件とインストール手順については、「 [Install Visual C++ for Cross-Platform Mobile Development](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)」を参照してください。 iOS 用のコードをビルドするには、Mac コンピューターと Apple iOS Developer アカウントも必要です。 詳細については、「 [Install And Configure Tools to Build using iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md)」を参照してください。  
   
 ## <a name="come-up-to-speed"></a>最新情報を入手する  
- Android または iOS の開発者向けに開始方法を説明している優れた資料が用意されています。 Visual Studio は、表現力豊かな優れた開発環境です。 使用方法を学ぶには、「 [Android 開発者のための概要](https://msdn.microsoft.com/en-us/library/windows/apps/dn275875.aspx) 」または「 [iOS 開発者のための概要](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj657966.aspx)」を参照してください。 これらのトピックでは、Visual Studio の概要と、Windows および Windows Phone 対応のクロスプラットフォーム アプリを開発する際に必要となる概念について紹介しています。 iOS および Android 用のクロスプラットフォーム アプリを初めて作成する場合は、「 [Build an OpenGL ES Application on Android and iOS](../cross-platform/build-an-opengl-es-application-on-android-and-ios.md)」を参照してください。  
+ Android または iOS の開発者向けに開始方法を説明している優れた資料が用意されています。 Visual Studio は、表現力豊かな優れた開発環境です。 使用方法を学ぶには、「 [Android 開発者のための概要](/previous-versions/windows/apps/dn275875\(v=win.10\)) 」または「 [iOS 開発者のための概要](/previous-versions/windows/apps/jj657966\(v=win.10\))」を参照してください。 これらのトピックでは、Visual Studio の概要と、Windows および Windows Phone 対応のクロスプラットフォーム アプリを開発する際に必要となる概念について紹介しています。 iOS および Android 用のクロスプラットフォーム アプリを初めて作成する場合は、「 [Build an OpenGL ES Application on Android and iOS](../cross-platform/build-an-opengl-es-application-on-android-and-ios.md)」を参照してください。  
   
  Visual C++ for Cross-Platform Mobile Development には、アプリの作成を開始する際に役立つ次のテンプレートが含まれています。  
   
