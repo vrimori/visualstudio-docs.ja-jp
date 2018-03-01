@@ -14,16 +14,16 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 520cd9eacf494ac1d8f8e26a7e1ef51581a49956
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: def17f215bd157da8d0e31f400e6b353a4d38f12
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>System requirements for the Visual Studio Emulator for Android
 Visual Studio Emulator for Android は、Hyper-V 上で仮想マシンとして動作します。Hyper-V は Windows 8 以降のバージョンの仮想化テクノロジです。 エミュレーターを実行するには、このトピックで説明する Hyper-V の要件をコンピューターが満たしている必要があります。  
   
- エミュレーターをインストールすると、その前提条件の構成がセットアップ プログラムで自動的に行われます。 前提条件の構成が正しく設定されると、エミュレーターは正常に動作します。 構成の設定が完了しなかった場合は、必要に応じて前提条件を手動で有効にします。 前提条件を手動で構成する必要がある場合、 [こちら](https://msdn.microsoft.com/en-us/library/windows/apps/jj863509\(v=vs.105\).aspx) で説明されている Windows Phone Emulator と同じ手順とツールを利用してください。  
+ エミュレーターをインストールすると、その前提条件の構成がセットアップ プログラムで自動的に行われます。 前提条件の構成が正しく設定されると、エミュレーターは正常に動作します。 構成の設定が完了しなかった場合は、必要に応じて前提条件を手動で有効にします。 前提条件を手動で構成する必要がある場合、 [こちら](/previous-versions/windows/apps/jj863509\(v=vs.105\)) で説明されている Windows Phone Emulator と同じ手順とツールを利用してください。  
   
 > [!IMPORTANT]
 >  エミュレーターのセットアップ プログラムでは、Visual Studio Emulator for Android を実行するための前提条件が確認されます。 前提条件が存在しない場合、警告が表示されますが、セットアップでは必要ありません。  

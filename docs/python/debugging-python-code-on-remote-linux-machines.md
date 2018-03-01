@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 765d42de00c5fa716cd1445301136d8f7a39c2ec
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 9f5f3edfc536dce9d42d09a099c3f53a8a8ab3c7
+ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="remotely-debugging-python-code-on-linux"></a>Linux 上の Python コードのリモート デバッグ
 
@@ -40,7 +40,7 @@ ptvsd を使用する場合、デバッグ対象の Python コードは Visual S
 - Mac OSX や Linux などのオペレーティング システムで Python を実行しているリモート コンピューター。
 - そのコンピューターのファイアウォールで開いているポート 5678 (受信)。これはリモート デバッグの既定値です。
 
-[Azure に Linux 仮想マシン](/azure/virtual-machines/linux/creation-choices)を簡単に作成し、Windows から[リモート デスクトップを使用してアクセス](/azure/virtual-machines/linux/use-remote-desktop)できます。 VM に Ubuntu を使用すると、既定で Python がインストールされるので便利です。Ubuntu を使用しない場合、Python をダウンロードできるその他の場所については、「[Install a Python interpreter of your choice](managing-python-environments-in-visual-studio.md#selecting-and-installing-python-interpreters)」(好みの Python インタープリターをインストールする) の一覧を参照してください。
+[Azure に Linux 仮想マシン](/azure/virtual-machines/linux/creation-choices)を簡単に作成し、Windows から[リモート デスクトップを使用してアクセス](/azure/virtual-machines/linux/use-remote-desktop)できます。 VM に Ubuntu を使用すると、既定で Python がインストールされるので便利です。Ubuntu を使用しない場合、Python をダウンロードできるその他の場所については、「[Install a Python interpreter of your choice](installing-python-interpreters.md)」(好みの Python インタープリターをインストールする) の一覧を参照してください。
 
 Azure VM のファイアウォール ルールの作成方法については、「[Azure Portal を使用した Azure の VM へのポートの開放](/azure/virtual-machines/windows/nsg-quickstart-portal)」を参照してください。
 
