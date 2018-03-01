@@ -99,7 +99,7 @@ DXCap.exe -info
  `-info`  
  コンピューターとキャプチャの DLL に関する情報を表示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  DXCap.exe は 3 つのモードで動作します。  
   
  キャプチャ モード (-c)  
@@ -119,7 +119,7 @@ DXCap.exe -info
  情報関数 (`-info)`  
  コンピューターとキャプチャの DLL の詳細を表示します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ### <a name="capture-graphics-information-from-a-desktop-app"></a>デスクトップ アプリからのグラフィックス情報のキャプチャ  
  使用して`-c`グラフィックス情報をキャプチャするアプリを指定します。  
