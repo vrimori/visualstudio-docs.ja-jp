@@ -43,7 +43,6 @@
 #### [方法: Web サイトのパフォーマンス データを収集する](how-to-collect-performance-data-for-a-web-site.md)
 #### [方法: パフォーマンス セッションを手動で作成する](how-to-manually-create-performance-sessions.md)
 #### [チュートリアル: パフォーマンスの問題を特定する](walkthrough-identifying-performance-problems.md)
-#### [PeopleTrax サンプル (プロファイル ツール)](peopletrax-sample-profiling-tools.md)
 ### [パフォーマンス セッションの構成](configuring-performance-sessions.md)
 #### [方法: Windows シンボル情報を参照する](how-to-reference-windows-symbol-information.md)
 #### [方法 : 収集方法を選択する](how-to-choose-collection-methods.md)
