@@ -1,5 +1,5 @@
 ---
-title: "コード メトリックスの結果を Visual Studio で |Microsoft ドキュメント"
+title: "Visual Studio のコード メトリックスの結果ウィンドウ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 12/12/2017
 ms.reviewer: 
@@ -19,13 +19,13 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: c259a1d303c741d4e36af46250073b0378a65f8b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 772533e74b214d48583e5d2dc1d64278416933df
+ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="working-with-code-metrics-data"></a>コード メトリックス データの操作
+# <a name="using-the-code-metrics-results-window"></a>コード メトリックスの結果 ウィンドウの使用
 
 **コード メトリックスの結果**ウィンドウには、コード メトリックス分析によって生成されるデータが表示されます。 コード メトリックス データ値の詳細については、次を参照してください。[コード メトリックス値](../code-quality/code-metrics-values.md)です。
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 
 - **ビュー** ] メニューの [選択**その他のウィンドウ** > **コード メトリックスの結果**です。
 
-   **コード メトリックスの結果**結果が含まれていない場合でも、ウィンドウが表示されます。
+**コード メトリックスの結果**結果が含まれていない場合でも、ウィンドウが表示されます。
 
 ### <a name="to-view-code-metrics-details"></a>コード メトリックの詳細を表示するには
 
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 
 1. クリックして、**列の追加/削除**ボタンをクリックします。
 
-     \-任意の列見出しを右クリックし、をクリックしてまたは -**列の追加/削除**です。
+     \- 任意の列見出しを右クリックし、をクリックしてまたは -**列の追加/削除**です。
 
 1. **列の追加/削除**ダイアログ ボックスで、チェック ボックスをオフ列を削除し、をクリックする**OK**です。
 
@@ -131,5 +131,5 @@ VSTS の詳細については、作業項目を参照してください[作業�
 
 ## <a name="see-also"></a>関連項目
 
-[コード メトリックス値](../code-quality/code-metrics-values.md)  
-[方法 : コード メトリックス データを生成する](../code-quality/how-to-generate-code-metrics-data.md)
+- [コード メトリックス値](../code-quality/code-metrics-values.md)
+- [方法: コード メトリックス データを生成します。](../code-quality/how-to-generate-code-metrics-data.md)

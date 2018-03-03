@@ -4,62 +4,74 @@ ms.custom:
 ms.date: 12/06/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7c60d929-d993-49dc-9db3-43b30be9912b
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 9ee45132e4acf45bccffd3e05808defd3c7ced6d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 01e6203d7fbef7115ea2e380494735888995e343
+ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="view-snapshots-using-intellitrace-step-back"></a>IntelliTrace 手順バックを利用したスナップショットの表示
+# <a name="view-snapshots-using-intellitrace-step-back-in-visual-studio"></a>Visual Studio で IntelliTrace を使用してスナップショットの表示手順ライトバック
+
 IntelliTrace ステップ ライトバックは、ステップのイベント、アプリケーションのすべてのブレークポイントとデバッガーのスナップショットを取得する自動的にします。 記録されたスナップショットにより、前のブレークポイントまたはステップに戻り、過去の時点でのアプリケーションの状態を確認できるようになります。 IntelliTrace ステップ バックでは、以前のアプリケーションの状態を確認したいが、デバッグの再開や必要なアプリ状態の再作成は必要でない場合に時間を節約できます。
 
 IntelliTrace ステップ ライトバックは Visual Studio Enterprise 2017 15.5 以降のバージョンから利用できるよう、Windows 10 Anniversary 更新を必要とまたはそれ以降。 この機能は現在サポートされて ASP.NET、WinForms、WPF、コンソールの管理対象アプリ、およびマネージ クラス ライブラリをデバッグします。 ASP.NET Core、.NET Core または UWP アプリケーションのデバッグは現在サポートされていません。 
   
 ## <a name="enable-intellitrace-events-and-snapshots-mode"></a>IntelliTrace イベントとスナップショット モードを有効にします。 
-機能を有効にするには**ツール > オプション > IntelliTrace**設定、およびオプションを選択する**IntelliTrace イベントとスナップショット**です。 
 
-![IntelliTrace イベントとスナップショット モードを有効にする](../debugger/media/intellitrace-enable-snapshots.png "IntelliTrace イベントを有効にしてスナップショット モード")
+1. Visual Studio enterprise に移動**ツール > オプション > IntelliTrace**設定、およびオプションを選択する**IntelliTrace イベントとスナップショット**です。 
 
-IntelliTrace は、手順とブレークポイントのイベント、各デバッガーでアプリケーションのプロセスのスナップショットを取得します。 これらのイベントが記録されて、**イベント** タブで、**診断ツール**ウィンドウで、その他の IntelliTrace イベントと共にします。 このウィンドウを開くには、選択**デバッグ/Windows/診断ツールを表示する**です。
+    ![IntelliTrace イベントとスナップショット モードを有効にする](../debugger/media/intellitrace-enable-snapshots.png "IntelliTrace イベントを有効にしてスナップショット モード")
 
-スナップショットが使用可能なイベントの横にあるカメラ アイコンが表示されます。 
+2. Visual Studio でプロジェクトを開きます。
 
-![スナップショット付きの [イベント] タブ](../debugger/media/intellitrace-events-tab-with-snapshots.png "ブレークポイントおよびステップ上のスナップショットでは、[イベント] タブ")
+3. プロジェクトに 1 つまたは複数のブレークポイントを設定し、デバッグを開始 (キーを押します**f5 キーを押して**)、コードをステップ実行してデバッグを開始または (**F10**または**F11**)。
 
-パフォーマンス上の理由から、非常に短時間にステップするときに、スナップショットは取得されません。 ステップの横にある [カメラ] アイコンが表示されない場合は、ステップ実行速度が低下してみてください。
+    IntelliTrace は、手順とブレークポイントのイベント、各デバッガーでアプリケーションのプロセスのスナップショットを取得します。 これらのイベントが記録されて、**イベント** タブで、**診断ツール**ウィンドウで、その他の IntelliTrace イベントと共にします。 このウィンドウを開くには、選択**デバッグ** > **Windows** > **診断ツールを表示する**です。
+
+    スナップショットが使用可能なイベントの横にあるカメラ アイコンが表示されます。 
+
+    ![スナップショット付きの [イベント] タブ](../debugger/media/intellitrace-events-tab-with-snapshots.png "ブレークポイントおよびステップ上のスナップショットでは、[イベント] タブ")
+
+    パフォーマンス上の理由から、非常に短時間にステップするときに、スナップショットは取得されません。 ステップの横にある [カメラ] アイコンが表示されない場合は、ステップ実行速度が低下してみてください。
 
 ## <a name="navigate-and-view-snapshots"></a>移動し、スナップショットを表示します。
 
-使用してイベント間を移動することができます、 **(Alt + [) 下位手順**と**つ進む (Alt +])**デバッグ ツールバーのボタンです。 これらのボタンに表示されるイベントの移動、**イベント** タブで、**診断ツール ウィンドウ**します。 あるイベントに戻るまたは進むと、選択したイベントの過去のデバッグが自動的に有効になります。
+1. 使用してイベント間を移動、 **(Alt + [) 下位手順**と**つ進む (Alt +])**デバッグ ツールバーのボタンです。
 
-![戻るボタンと進むボタン](../debugger/media/intellitrace-step-back-icons-description.png "旧バージョンとステップとつ進むボタン")
+    これらのボタンに表示されるイベントの移動、**イベント** タブで、**診断ツール ウィンドウ**します。 あるイベントに戻るまたは進むと、選択したイベントの過去のデバッグが自動的に有効になります。
 
-背面のステップまたはステップ前進するときに Visual Studio はデバッグ履歴モードになります。 このモードでは、デバッガーのコンテキストは、選択したイベントが記録された時刻に切り替わります。 Visual Studio は、ソース ウィンドウ内のコードの対応する行にも、ポインターを移動します。 
+    ![戻るボタンと進むボタン](../debugger/media/intellitrace-step-back-icons-description.png "旧バージョンとステップとつ進むボタン")
 
-このビューからの値を検査することができます、**呼び出し履歴**、**ローカル**、 **[自動変数]**、および**ウォッチ**windows です。 データヒントを表示し、式の評価を実行する変数もポイントすることができます、**イミディ エイト**ウィンドウです。 その時点で実行されるアプリケーションのプロセスのスナップショットは、データは、「です。
+    背面のステップまたはステップ前進するときに Visual Studio はデバッグ履歴モードになります。 このモードでは、デバッガーのコンテキストは、選択したイベントが記録された時刻に切り替わります。 Visual Studio は、ソース ウィンドウ内のコードの対応する行にも、ポインターを移動します。 
 
-したがって、たとえば、ブレークポイントにヒットし、手順を実行した場合 (**F10**) では、**手順旧バージョンと** で、ブレークポイントに対応するコードの行の履歴のモードで Visual Studio に配置します。 
+    このビューからの値を検査することができます、**呼び出し履歴**、**ローカル**、 **[自動変数]**、および**ウォッチ**windows です。 データヒントを表示し、式の評価を実行する変数もポイントすることができます、**イミディ エイト**ウィンドウです。 その時点で実行されるアプリケーションのプロセスのスナップショットは、データは、「です。
 
-![スナップショットを使用してイベントをアクティブ化中の履歴モード](../debugger/media/intellitrace-historical-mode-with-snapshot.png "スナップショットを使用してイベントをアクティブ化中の履歴モード")
+    したがって、たとえば、ブレークポイントにヒットし、手順を実行した場合 (**F10**) では、**手順旧バージョンと** で、ブレークポイントに対応するコードの行の履歴のモードで Visual Studio に配置します。 
 
-ライブ実行に戻り、次のように選択します。**続行 (F5)**  をクリックして、**ライブ デバッグに戻って**情報バーにリンクします。 
+    ![スナップショットを使用してイベントをアクティブ化中の履歴モード](../debugger/media/intellitrace-historical-mode-with-snapshot.png "スナップショットを使用してイベントをアクティブ化中の履歴モード")
 
-スナップショットを表示することも、**イベント**タブです。スナップショットを使用してイベントを選択し、をクリックして**履歴デバッグの有効化**です。 デバッグ履歴をアクティブ化する [カメラ] アイコンをクリックすることができますも。
+2. ライブ実行に戻り、次のように選択します。**続行 (F5)**  をクリックして、**ライブ デバッグに戻って**情報バーにリンクします。 
 
-![デバッグ履歴をアクティブ化イベントを](../debugger/media/intellitrace-activate-historical-debugging.png "イベント履歴デバッグの有効化")
+3. スナップショットを表示することも、**イベント**タブです。これを行うには、スナップショットを使用してイベントを選択し、をクリックして**履歴デバッグの有効化**です。
 
-異なり、**次のステートメントの設定**コマンド、スナップショットを表示するには、コードが再実行していません。 これにより、アプリケーションの状態の静的ビューの時点で過去に発生した時間内です。
+    デバッグ履歴をアクティブ化する [カメラ] アイコンをクリックすることができますも。
 
-![IntelliTrace ステップ ライトバックの概要](../debugger/media/intellitrace-step-back-overview.png "の概要の IntelliTrace の手順に戻る")
+    ![デバッグ履歴をアクティブ化イベントを](../debugger/media/intellitrace-activate-historical-debugging.png "イベント履歴デバッグの有効化")
+
+    異なり、**次のステートメントの設定**コマンド、スナップショットを表示するには、コードが再実行していません。 これにより、アプリケーションの状態の静的ビューの時点で過去に発生した時間内です。
+
+    ![IntelliTrace ステップ ライトバックの概要](../debugger/media/intellitrace-step-back-overview.png "の概要の IntelliTrace の手順に戻る")
 
 ## <a name="next-steps"></a>次の手順  
  Visual Studio での変数を検査する方法については、次を参照してください[デバッガーの機能のツアー。](../debugger/debugger-feature-tour.md)  
