@@ -14,11 +14,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: dc9a688892ca7ec08a89c4da8e1732b5e2b3e267
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 553ed7d6a6fcc2edef436251d720919fe399653a
+ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="code-metrics-values"></a>コード メトリックス値
 
@@ -26,9 +26,11 @@ ms.lasthandoff: 12/22/2017
 
 開発者は、Visual Studio を使用して複雑さと、マネージ コードの保守容易性を測定するコード メトリックス データを生成することができます。 ソリューション全体または 1 つのプロジェクトのコード メトリックス データを生成できます。
 
+Visual Studio でコード メトリックス データを生成する方法については、次を参照してください。[する方法: コード メトリックス データを生成する](../code-quality/how-to-generate-code-metrics-data.md)です。
+
 ## <a name="software-measurements"></a>ソフトウェアの測定
 
-以下に示すコード メトリックスの結果を[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を計算します。
+次の一覧は、Visual Studio を計算するメトリックスの結果をコードに示します。
 
 - **保守容易性指数**-相対の容易性、コードを表す 0 ~ 100 の範囲のインデックス値を計算します。 大きな値は、保守性の向上を意味します。 コードで問題がスポットを迅速に特定の色に評価を使用できます。 緑色の評価は 20 ~ 100 の間、コードに適切な保守容易性があることを示します。 黄色の評価が 10 ~ 19 と、コードがやや保守が容易なであることを示します。 赤い評価は、0 から 9 までの評価し、保守性の低いことを示します。
 
@@ -51,3 +53,8 @@ ms.lasthandoff: 12/22/2017
 一部のソフトウェア ツールとコンパイラは、コードがプロジェクトに追加して、プロジェクトの開発者は表示されませんか、変更しないでくださいを生成します。 ほとんどの場合、コード メトリックスは、メトリックの値を計算するときに生成されたコードを無視します。 これにより、どのような開発者を表示および変更を反映するためにメトリックの値です。
 
 Windows フォームに対して生成されたコードは無視されません、開発者が表示および変更できるコードであるためです。
+
+## <a name="next-steps"></a>次の手順
+
+- [方法: コード メトリックス データを生成します。](../code-quality/how-to-generate-code-metrics-data.md)
+- [コード メトリックスの結果 ウィンドウを使用します。](../code-quality/working-with-code-metrics-data.md)

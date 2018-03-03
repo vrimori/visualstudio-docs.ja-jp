@@ -15,15 +15,15 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ac4f31d1e93ed648bf2065bbff9dac8800c1d4f
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 80f3d2385fa1023637081b787c8d938ae42f79b4
+ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>方法: コード分析のチェックイン ポリシーを使用して保守が容易なコードを適用する
+# <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>方法: コード分析チェックイン ポリシーの保守が容易なコードを適用します。
 
-開発者は、複雑さ、そのコードの保守容易性を測定する、コード メトリックスのツールを使用できますが、チェックイン ポリシーの一部としてコード メトリックスを呼び出すことはできません。 ただし、コード メトリックスの基準に、コードの準拠を確認するコード分析規則を有効にし、チェックイン ポリシーによって規則を実施できます。 コード メトリックスの詳細については、次を参照してください。、[コード メトリックス値](../code-quality/code-metrics-values.md)です。
+開発者は、複雑さ、そのコードの保守容易性を測定する、コード メトリックスのツールを使用できますが、チェックイン ポリシーの一部としてコード メトリックスを呼び出すことはできません。 ただし、コード メトリックスの基準に、コードの準拠を確認するコード分析規則を有効にし、チェックイン ポリシーによって規則を実施できます。 コード メトリックスの詳細については、次を参照してください。[コード メトリックス値](../code-quality/code-metrics-values.md)です。
 
 継承の深さ、クラス結合度、保守容易性指数、および複雑性ルールをコード分析チェックイン ポリシーを使用して保守が容易なコードを適用するを有効にすることができます。 これらのルールの 4 つすべてをコード分析ポリシー エディターで「保守容易性規則」カテゴリの下ではあります。
 
@@ -64,4 +64,4 @@ Team foundation バージョン管理の管理者は、チェックイン ポリ
 ## <a name="see-also"></a>関連項目
 
 [コード メトリックス値](../code-quality/code-metrics-values.md)
-[を作成して、コード分析チェックイン ポリシーを使用します。](../code-quality/creating-and-using-code-analysis-check-in-policies.md)
+[の作成とコード分析チェックイン ポリシーを使用します。](../code-quality/creating-and-using-code-analysis-check-in-policies.md)
