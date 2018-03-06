@@ -188,6 +188,7 @@
 ## [方法: AsyncPackage を使用してバックグラウンドで VSPackage を読み込む](how-to-use-asyncpackage-to-load-vspackages-in-the-background.md)
 ## [方法: Visual Studio 拡張機能のルール ベースの UI コンテキストを使用する](how-to-use-rule-based-ui-context-for-visual-studio-extensions.md)
 ## [方法: 拡張機能のパフォーマンスを診断する](how-to-diagnose-extension-performance.md)
+## [方法: 拡張機能による診断 UI の遅延](how-to-diagnose-ui-delays-caused-by-extensions.md)
 ## [VSPackage のトラブルシューティング](troubleshooting-vspackages.md)
 # [シェル (統合または分離)](https://vspartner.com/pages/vsshells)
 # [Visual Studio 拡張機能の配布](shipping-visual-studio-extensions.md)

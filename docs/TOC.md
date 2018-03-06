@@ -33,6 +33,8 @@
 #### [Visual Studio 配置の更新プログラムを制御する](install/controlling-updates-to-visual-studio-deployments.md)
 ### インストールを管理する
 #### [Visual Studio インスタンスの検出および管理用のツール](install/tools-for-managing-visual-studio-instances.md)
+### サブスクリプションを管理する
+#### [Visual Studio サブスクリプション管理者の概要](/visualstudio/subscriptions/admin-responsibilities) 
 ### [ヘルプ ビューアーの管理者ガイド](ide/help-viewer-administrator-guide.md)
 #### [ヘルプ コンテンツ マネージャーのコマンド ライン引数](ide/command-line-arguments-for-the-help-content-manager.md)
 #### [ヘルプ コンテンツ マネージャーのオーバーライド](ide/help-content-manager-overrides.md)
@@ -46,7 +48,7 @@
 # クイックスタート
 ## [Visual Studio のオリエンテーション](ide/quickstart-ide-orientation.md)
 ## [プロジェクトおよびソリューション](ide/quickstart-projects-solutions.md)
-## [エディターでのコードの作成](ide/quickstart-editor.md)
+## [エディターを使用する](ide/quickstart-editor.md)
 ## [テーマとテキストの色のカスタマイズ](ide/quickstart-personalize-the-ide.md)
 ## [C++: コンソール アプリの作成](ide/getting-started-with-cpp-in-visual-studio.md)
 ## [Python: Web アプリの作成](ide/quickstart-python.md)
@@ -98,7 +100,7 @@
 #### [Visual Studio IDE の 64 ビット サポート](ide/visual-studio-ide-64-bit-support.md)
 ### [プロジェクトまたはソリューションを使用せずに開発する ("フォルダーを開く")](ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
 #### [ビルドのカスタマイズとタスクのデバッグ](ide/customize-build-and-debug-tasks-in-visual-studio.md)
-### [エディターでのコードの作成](ide/writing-code-in-the-code-and-text-editor.md)
+### [エディターを使用する](ide/writing-code-in-the-code-and-text-editor.md)
 #### [テキストの検索と置換](ide/finding-and-replacing-text.md)
 ##### [正規表現の使用](ide/using-regular-expressions-in-visual-studio.md)
 ##### [検索コマンド ボックス](ide/find-command-box.md)
