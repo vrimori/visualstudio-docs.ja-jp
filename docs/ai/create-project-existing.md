@@ -29,4 +29,4 @@
 
 ## <a name="see-also"></a>参照
 
-- [既存の Python インタープリター用の環境の作成](../python/managing-python-environments-in-visual-studio.md#creating-an-environment-for-an-existing-interpreter)
+- [既存の Python 環境を手動で識別する](../python/managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment)

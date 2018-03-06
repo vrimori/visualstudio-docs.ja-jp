@@ -36,7 +36,7 @@
 
     ![Python MNIST プログラムからの最初の出力](media\create-project-repo\tensorflow-mnist-running.png)
 
-> Anaconda を使用しているときに、numpy の欠落に関するエラーが発生した場合は、[python 環境を変更して Anaconda を使用する](../python/managing-python-environments-in-visual-studio.md)必要があります。
+> Anaconda を使用しているときに、numpy の欠落に関するエラーが発生した場合は、[python 環境を Anaconda を使用するように変更する](../python/selecting-a-python-environment-for-a-project.md)必要があります。
 
 11. TensorBoard で進行状況を視覚化することができます。 プロジェクトを右クリックし、**[Run TensorBoard]\(TensorBoard の実行\)** をクリックして、TensorBoard の出力ログのディレクトリを選択します。
 

@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: aafb2259ec4f16341abf514e9496dbb66f3cb95c
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 005a3a2ae46154dbf532aacefe5316aacbbaeaf7
+ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="python-projects"></a>Python プロジェクト
 
@@ -54,7 +54,7 @@ Python の各プロジェクトには 1 つのスタートアップ ファイル
 > [!Tip]
 > 選択したスタートアップ ファイルをプロジェクトから削除し、新しいスタートアップ ファイルを選択しないでプロジェクトを実行すると、Python 出力ウィンドウは表示されますが、ほとんど瞬時に消えてしまいます。 このような動作が発生する場合は、スタートアップ ファイルを割り当ててあることを確認します。 また、このような場合に出力ウィンドウを開いたままにするには、プロジェクトを右クリックし、**[プロパティ]** の **[デバッグ]** タブを選び、**[インタープリター引数]** フィールドに `-i` を追加します。 この引数により、プログラム完了後にインタープリターは対話モードになり、ユーザーが Ctrl + Z キー、Enter キーの順に押して終了するまで、ウィンドウは開いたままになります。
 
-新しいプロジェクトは常に既定のグローバル Python 環境と関連付けられます。 プロジェクトを別の環境 (仮想環境を含む) と関連付けるには、プロジェクトで **[Python Environments (Python 環境)]** ノードを右クリックし、**[Add/Remove Python Environments (Python 環境の追加/削除)]** を選んで、使う環境を選びます。 アクティブな環境を変更するには、目的の環境を右クリックして **[環境をアクティブ化する]** を選びます (次の図を参照)。 詳細については、「[Python 環境](managing-python-environments-in-visual-studio.md#selecting-an-environment-for-a-project)」をご覧ください。
+新しいプロジェクトは常に既定のグローバル Python 環境と関連付けられます。 プロジェクトを別の環境 (仮想環境を含む) と関連付けるには、プロジェクトで **[Python 環境]** ノードを右クリックし、**[Python 環境の追加/削除]** を選んで、使う環境を選びます。 アクティブな環境を変更するには、目的の環境を右クリックして **[環境をアクティブ化する]** を選びます (次の図を参照)。 詳細については、「[プロジェクト用の環境の選択](selecting-a-python-environment-for-a-project.md)」をご覧ください。
 
 ![Python プロジェクト用の環境のアクティブ化](media/projects-activate-environment.png)
 
@@ -71,7 +71,7 @@ Visual Studio には、新規に、または既存のコードから、Python �
 | テンプレート | 説明 |
 | --- | --- |
 | [既存の Python コードから](#creating-a-project-from-existing-files) | フォルダー構造に存在する既存の Python コードから Visual Studio プロジェクトを作成します。  |
-| Python Application (Python アプリケーション) | 空のソース ファイルを 1 つ含む新しい Python アプリケーションの基本的なプロジェクト構造です。 既定では、プロジェクトは既定のグローバル環境のコンソール インタープリターで実行します。これは、[異なる環境を割り当てる](managing-python-environments-in-visual-studio.md#selecting-an-environment-for-a-project)ことで変更できます。 |
+| Python Application (Python アプリケーション) | 空のソース ファイルを 1 つ含む新しい Python アプリケーションの基本的なプロジェクト構造です。 既定では、プロジェクトは既定のグローバル環境のコンソール インタープリターで実行します。これは、[異なる環境を割り当てる](selecting-a-python-environment-for-a-project.md)ことで変更できます。 |
 | [Azure クラウド サービス](python-azure-cloud-service-project-template.md) | Python で記述された Azure クラウド サービス用のプロジェクトです。 |
 | [Web プロジェクト](python-web-application-project-templates.md) | Bottle、Django、Flask、Flask/Jade などのさまざまなフレームワークに基づく Web サーバー用のプロジェクトです。 |
 | IronPython Application (IronPython アプリケーション) | [Python Application (Python アプリケーション)] テンプレートに似ていますが、IronPython を既定で使って、.NET 相互運用と .NET 言語での混合モード デバッグを可能にします。 |
@@ -136,7 +136,7 @@ Visual Studio のプロジェクトは、プロジェクトと拡張機能への
 
 ディスクで拡張モジュールが更新された場合、Visual Studio はバックグラウンドでモジュールを再分析します。 このアクションによる実行時動作への影響はありませんが、分析が完了するまで一部の入力候補が使えなくなります。
 
-また、モジュールを含むフォルダーへの[検索パス](managing-python-environments-in-visual-studio.md#search-paths)の追加が必要になることもあります。
+また、モジュールを含むフォルダーへの[検索パス](search-paths.md)の追加が必要になることもあります。
 
 ### <a name="net-projects"></a>.NET プロジェクト
 

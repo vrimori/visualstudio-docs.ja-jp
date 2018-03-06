@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0faae917aba237a85c6a01743d89cf66adf06296
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: c946f9d0fea5192f75d2fd0a9865827b6027ef50
+ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="profiling-python-code"></a>Python コードのプロファイリング
 
@@ -38,6 +38,9 @@ CPython ベースのインタープリターを使っている場合、Python �
 |   |   |
 |---|---|
 | ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | Python プロファイリングのデモについては、[こちらのビデオ (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Profiling-Python-s6FoC6LWE_1005918567) をご覧ください (3 分 00 秒)。|
+
+> [!Note]
+> 現時点では、Visual Studio は、このレベルのフル アプリケーション プロファイリングのみをサポートしています。今後の機能に関するフィードバックをお寄せください。 このページの下部にある [**[Give product feedback]\(製品のフィードバックを送る\)** ボタン](#feedback) をお使いください。
 
 ## <a name="profiling-for-ironpython"></a>IronPython のプロファイリング
 

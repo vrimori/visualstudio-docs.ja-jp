@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 00b9d59ad1736d212dcd9fff3c097e81e0ad2a60
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 9b45c694399553dd262a68d821d1757b65ea9600
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-python-web-app"></a>クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成する
 
@@ -71,7 +71,7 @@ Python の Web アプリは、ほぼ常に、Web 要求のルーティングや�
 
 Falcon の詳細情報は、[falconframework.org](https://falconframework.org/) をご覧ください。
 
-開発者は通常、グローバル環境にライブラリをインストールするのではなく、特定のプロジェクトのライブラリをインストールする "仮想環境" を作成することに注意してください。 Visual Studio の多くの Python プロジェクト テンプレートには、テンプレートが依存するライブラリの一覧が列記されている `requirements.txt` ファイルが含まれます。 これらのテンプレートの 1 つからプロジェクトを作成すると、ライブラリがインストールされる仮想環境の作成がトリガーされます。 詳しくは、「Python 環境」の「[仮想環境](../python/managing-python-environments-in-visual-studio.md#creating-virtual-environments)」をご覧ください。
+開発者は通常、グローバル環境にライブラリをインストールするのではなく、特定のプロジェクトのライブラリをインストールする "仮想環境" を作成することに注意してください。 Visual Studio の多くの Python プロジェクト テンプレートには、テンプレートが依存するライブラリの一覧が列記されている `requirements.txt` ファイルが含まれます。 これらのテンプレートの 1 つからプロジェクトを作成すると、ライブラリがインストールされる仮想環境の作成がトリガーされます。 詳細については、[仮想環境の使用](../python/selecting-a-python-environment-for-a-project.md#using-virtual-environments)に関するページをご覧ください。
 
 ## <a name="add-a-code-file"></a>コード ファイルの追加
 

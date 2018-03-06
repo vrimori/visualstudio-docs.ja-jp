@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio 2017 で問題を報告する方法 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/07/2017
+ms.date: 02/19/2018
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -13,67 +13,65 @@ manager: ghogen
 ms.technology: vs-acquisition
 ms.workload:
 - multiple
-ms.openlocfilehash: ec4618e254a84e6ae0c90b96a4e5a1780b234fbd
-ms.sourcegitcommit: b01406355e3b97547b7cbf8ce3960f101b165cec
+ms.openlocfilehash: 10ec0003bd568f497bd926974935467fdb1b4b75
+ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-2017"></a>Visual Studio 2017 で問題を報告する方法
-Visual Studio に問題が発生した場合は、Microsoft にお知らせください。 診断および修正を行うには、問題を以下のようにして報告してください。  
+Visual Studio に問題が発生した場合は、Microsoft にお知らせください。 診断および修正を行うには、問題を以下のようにして報告してください。
 
 ## <a name="sign-in-to-visual-studio"></a>Visual Studio にサインイン
 まだサインインしていない場合は、問題を報告する前に Visual Studio にサインインします。 これで、発生している問題の報告や、問題に対するコメントへの投票ができます。 投稿されたその他の問題に投票したり、コメントしたりもできます。
 
-1.  Visual Studio で、**[ヘルプ]** > **[フィードバックの送信]** > **[問題の報告]** の順に選びます。
-2.  必要な場合は、次のスクリーンショットに示されているように、ツールの右側にある **[サインイン]** を選びます。
-3.  画面に表示される手順に従ってサインインします。
+1. Visual Studio で、**[ヘルプ]** > **[フィードバックの送信]** > **[問題の報告]** の順に選びます。
+2. サインインしていない場合は、次のスクリーンショットに示されているように、ツールの右側にある **[サインイン]** を選びます。
+3. 画面に表示される手順に従ってサインインします。
 
  ![サインインして問題を報告](../ide/media/sign-in-new-ux.png "Sign in to report a problem")  
 
-## <a name="search-and-vote-for-similar-problems"></a>類似問題を検索して投票する  
-###  <a name="search_and_vote"></a>  
+## 類似問題を検索して投票する<a name="search_and_vote"></a>
 
-1.  問題を検索し、他のユーザーが既に報告しているかどうかも確認します。
-2.  報告済みの場合は、"上向きの矢印に投票" してお知らせください。  
+1. 問題を検索し、他のユーザーが既に報告しているかどうかも確認します。
+2. 報告済みの場合は、"上向きの矢印に投票" してお知らせください。
 
   ![類似の問題の検索と投票](../ide/media/search-and-vote.png "類似の問題の検索と投票")
 
-## <a name="report-a-new-problem"></a>新しい問題を報告する
-###  <a name="report_new_problem"></a>
-1.  探している問題が見つからない場合は、画面の下部にある **[新しい問題を報告する]** ボタンをクリックします。
-2.  適切な Visual Studio チームに問題を転送できるように、報告には説明的なタイトルを付けてください。
-3.  可能であれば、問題を再現する手順など、さらに詳しい情報を記載します。
+## 新しい問題を報告する<a name="report_new_problem"></a>
+1. 探している問題が見つからない場合は、画面の下部にある **[新しい問題を報告する]** ボタンをクリックします。
+2. 適切な Visual Studio チームに問題を転送できるように、報告には説明的なタイトルを付けてください。
+3. 可能であれば、問題を再現する手順など、さらに詳しい情報を記載します。
 
   ![新しい問題を報告する](../ide/media/report-new-problem.png "新しい問題を報告する")
 
-## <a name="provide-a-screenshot-and-attachments-optional"></a>スクリーンショットと添付ファイル (省略可能) を提供する
-###  <a name="provide_screenshots"></a>
- 現在の画面を選んで、Microsoft に送信します。 **[追加のファイルの添付]** ボタンをクリックして、その他のスクリーン ショットやファイルをさらに添付できます。  
+## スクリーンショットと添付ファイル (省略可能) を提供する<a name="provide_screenshots"></a>
+ 現在の画面を選んで、Microsoft に送信します。 **[追加のファイルの添付]** ボタンをクリックして、その他のスクリーン ショットやファイルをさらに添付できます。
 
-## <a name="provide-a-trace-and-heap-dump-optional"></a>トレースとヒープ ダンプを提供します (省略可能)  
-###  <a name="provide_a_trace_and_heap_dump"></a>  
+## トレースとヒープ ダンプを提供する (省略可能)<a name="provide_a_trace_and_heap_dump"></a>
 
 トレースとヒープ ダンプのファイルは、問題を診断するうえで役立ちます。 **[問題の報告]** ツールで再現する手順を記録し Microsoft にデータを送信してくだされば、大変助かります。  これを行う方法を次に示します。
 
-1.  **[記録]** タブをクリックします。
-2.  **[記録の開始]** をクリックします。 ツールの実行を許可します。
+1. **[記録]** タブをクリックします。
+2. **[記録の開始]** をクリックします。 ツールの実行を許可します。
 
   ![[記録の開始] をクリックして、トレースとヒープ ダンプのファイルを提供する](../ide/media/record-dialog-box.png "トレースとヒープ ダンプ ファイルを提供する")
 
-3.  **[ステップ記録ツール]** ツールが表示されたら、問題を再現する手順を実行します。
-4.  終了したら、**[記録の停止]** ボタンをクリックします。
-5.  記録された情報が Visual Studio により収集され、パッケージ化されるまでしばらく待ちます。
+3. **[ステップ記録ツール]** ツールが表示されたら、問題を再現する手順を実行します。
+4. 終了したら、**[記録の停止]** ボタンをクリックします。
+5. 記録された情報が Visual Studio により収集され、パッケージ化されるまでしばらく待ちます。
 
-## <a name="submit-the-report"></a>レポートを送信します  
-###  <a name="submit_the_report"></a>  
- **[送信]** ボタンをクリックして、イメージ、トレースやダンプ ファイルと共にレポートを送信します。 **[送信]** ボタンが灰色表示の場合、レポートのタイトルと説明が記載されていることを確認します。  
+## レポートを送信する<a name="submit_the_report"></a>
+ **[送信]** ボタンをクリックして、イメージ、トレースやダンプ ファイルと共にレポートを送信します。 **[送信]** ボタンが灰色表示の場合、レポートのタイトルと説明が記載されていることを確認します。
 
-## <a name="alternate-reporting"></a>代替レポート
-###  <a name="alternate_reporting"></a>  
+## 代替レポート<a name="alternate_reporting"></a>
  Visual Studio のインストールを完了できない場合、または Visual Studio 内のフィードバック ツールにアクセスできない場合は、Visual Studio インストーラーからフィードバック ツールを入手することもできます。 Visual Studio インストーラーの右上隅にあるフィードバック アイコンをクリックしてから、この記事で概説されている手順に従います。
 
  ![Visual Studio インストーラーの [フィードバックの送信] ボタンからフィードバック ツールを開くことができます](../install/media/report-a-problem.png)
 
-## <a name="see-also"></a>参照  
- [ご意見](../ide/talk-to-us.md)
+ >[!Note]
+ >Visual Studio Developer Community に問題を直接報告することもできます。これを行うには、[https://developercommunity.visualstudio.com/](https://developercommunity.visualstudio.com/) にアクセスします。
+
+## <a name="see-also"></a>参照
+* [ご意見](../ide/talk-to-us.md)
+* [Visual Studio Developer Community にアクセスする](https://developercommunity.visualstudio.com/)

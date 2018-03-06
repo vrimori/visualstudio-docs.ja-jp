@@ -14,11 +14,11 @@ ms.author: ghogen
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: dfdd5aee71c74febbeca0b7c9683aaa6be915e6e
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: ace464f11d16f1498022cb1a0673b294a6ec408b
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio におけるクロス プラットフォーム モバイル開発
 
@@ -80,8 +80,8 @@ Xamarin を利用すれば、コードや UI を共有し、同じソリュー�
 
 |**詳細を表示**|
 |--------------------|
-|[ユニバーサル Windows アプリについて学習する](https://msdn.microsoft.com/library/windows/apps/dn894631.aspx) (Windows デベロッパー センター)|
-|[初めてのアプリをビルドする](http://msdn.microsoft.com/library/windows/apps/dn609832.aspx) (Windows デベロッパー センター)|
+|[ユニバーサル Windows プラットフォームの紹介](/windows/uwp/get-started/universal-application-platform-guide)|
+|[最初のアプリの作成](/windows/uwp/get-started/your-first-app)|
 |[ユニバーサル Windows プラットフォーム (UWP) 向けアプリの開発](../cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md)|
 |[アプリを Universal Windows Platform (UWP) へ移行する](https://msdn.microsoft.com/en-us/library/mt148501.aspx)|
 

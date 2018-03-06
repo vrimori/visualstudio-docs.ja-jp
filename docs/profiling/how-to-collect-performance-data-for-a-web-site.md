@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,94 +18,95 @@ helpviewer_keywords:
 - Profiling Tools,profiling ASP.NET
 - web sites, performance profiling
 - ASP.NET, performance profilng
-ms.assetid: a62d27fd-a966-4065-bebe-6874195a71fb
-caps.latest.revision: "33"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: ff9927357b23ced05bbee6db354cbe8e82e62b4d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: db9cefe31201a3b67ba176a56fed58bbe155bcf0
+ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="how-to-collect-performance-data-for-a-web-site"></a>方法: Web サイトのパフォーマンス データを収集する
-**パフォーマンス ウィザード** を使用して、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションのパフォーマンス データを収集できます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]で開かれた Web アプリケーションをプロファイリングすることも、ローカル コンピューターに置かれ、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] IDE で開かれていない [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Web サイトをプロファイリングすることもできます。  
-  
+
+**パフォーマンス ウィザード** を使用して、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションのパフォーマンス データを収集できます。 Visual Studio で開かれた Web アプリケーションをプロファイリングすることも、ローカル コンピューターに置かれ、Visual Studio IDE で開かれていない [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web サイトをプロファイリングすることもできます。
+
 > [!NOTE]
->  **パフォーマンス ウィザード** を使用して、階層の相互作用(TIP) データ、JScript パフォーマンス データ、または両方を追加してプロファイル データを収集することができます。 TIP オプションは、サーバー側のプロセスからデータを収集します。 JScript プロファイリングは、ローカルまたはリモートの Web サイトで実行されているスクリプトからデータを収集します。 ほとんどの場合、1 つのオプションのみを選択する必要があります。  
-  
- 管理者が使用可能にしたユーザー アクセス許可の設定に応じて、個々のユーザーは、ASP.NET プロセスをホストしているコンピューター上でプロファイラー セッションを作成するためのセキュリティ アクセス許可を持っている場合もあれば持っていない場合もあります。 次の例では、考えられるユーザーごとの違いについて説明します。  
-  
--   管理者がドライバーとサービスが起動するように設定しているときには、一部のユーザーが高度なプロファイル機能にアクセスできることがあります。  
-  
--   ドメイン ユーザーがサンプルのプロファイルにのみアクセスできることがあります。  
-  
--   一部のユーザーが他のすべてのユーザーに対してプロファイルへのアクセスを拒否することがあります。  
-  
- 詳細については、「[プロファイルと Windows Vista のセキュリティ](../profiling/profiling-and-windows-vista-security.md)」および「[VSPerfCmd](../profiling/vsperfcmd.md)」の ADMIN オプションを参照してください。  
-  
-### <a name="to-profile-a-web-site-project"></a>Web サイト プロジェクトをプロファイリングする  
-  
-1.  [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] または [!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)] で [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web プロジェクト開きます。  
-  
-2.  **[分析]** メニューで **[パフォーマンス プロファイラー]** を選択し、**[パフォーマンス エクスプローラー]** を選択して、**[開始]** を選択します。  
-  
-3.  ウィザードの最初のページで、プロファイル方法を選択し、 **[次へ]**をクリックします。 プロファイリング方法の詳細については、「[パフォーマンス収集方法について](../profiling/understanding-performance-collection-methods.md)」を参照してください。 同時実行ビジュアライザーのプロファイル方法は、Web アプリケーションでは使用できません。  
-  
-4.  **[プロファイル対象のアプリケーションを選択してください]** ドロップダウン リストで、現在のプロジェクトが選択されていることを確認し、 **[次へ]**をクリックします。  
-  
-5.  ウィザードの 3 番目のページで、階層相互作用プロファイリング (TIP) データ、Web ページで実行されている JavaScript からのデータ、またはその両方の追加を選択できます。  
-  
-    -   階層の相互作用を収集するには、 **[階層の相互作用のプロファイルを有効にする]** チェック ボックスをオンにします。  
-  
-    -   Web ページで実行されている JavaScript からデータを収集するには、 **[JavaScript のプロファイル]** チェック ボックスをオンにします。  
-  
-6.  **[次へ]**をクリックします。  
-  
-7.  ウィザードの 4 番目のページで、 **[完了]**をクリックします。  
-  
-8.  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションのパフォーマンス セッションが作成され、ブラウザーで Web サイトが起動します。 プロファイリングする機能を実行してからブラウザーを閉じます。  
-  
-     プロファイラーで、データ ファイルが生成され、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] メイン ウィンドウにデータの概要ビューが表示されます。  
-  
-### <a name="to-profile-a-web-site-without-opening-a-project-in-visual-studio"></a>Visual Studio でプロジェクトを開かずに Web サイトをプロファイリングする  
-  
-1.  [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] または [!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)] を開きます。  
-  
-2.  **[分析]** メニューで **[パフォーマンス プロファイラー]** を選択し、**[パフォーマンス エクスプローラー]** を選択して、**[開始]** を選択します。  
-  
-3.  ウィザードの最初のページで、プロファイル方法を選択し、 **[次へ]**をクリックします。 詳細については、「[パフォーマンス収集方法について](../profiling/understanding-performance-collection-methods.md)」を参照してください。  
-  
-4.  ウィザードの 2 番目のページで、 **[ASP.NET または JavaScript アプリケーションのプロファイル]** オプションを選択し、 **[次へ]**をクリックします。  
-  
-5.  ウィザードの 3 番目のページの **[Web アプリケーションを実行する URL またはパス]** ボックスで、アプリケーションのホーム ページの URL を入力し、 **[次へ]**をクリックします。  
-  
-    -   サーバー (IIS) ベースのWeb サイトの場合は、 **http://localhost/MySite/default.aspx**のような URL を入力します。 これにより、ローカル コンピューターの MySite のアプリケーション ルートで [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションがプロファイリングされ、そのサイトの default.aspx ページが Internet Explorer で起動されて、セッションが開始されます。  
-  
-    -   ファイル ベースの Web サイトの場合は、file///**c:\WebSites\MySite\default.aspx**のようなパスを入力します。 これにより、c:\webSites\MySite に置かれている [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションがプロファイリングされ、http://localhost:nnnn/MySite/default.aspx ページが Internet Explorer で起動されて、セッションが開始されます。  
-  
-    -   外部サイトで JavaScript データを収集する場合は、http://www.contoso.com のような URL を入力します。  
-  
-     詳細については、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ターゲット バイナリのプロパティ ページを参照してください。  
-  
-6.  ウィザードの 3 番目のページで、階層相互作用プロファイリング (TIP) データ、Web ページで実行されている JavaScript からのデータ、またはその両方の追加を選択できます。  
-  
-    -   階層の相互作用を収集するには、 **[階層の相互作用のプロファイルを有効にする]** チェック ボックスをオンにします。  
-  
-    -   Web ページで実行されている JavaScript からデータを収集するには、 **[JavaScript のプロファイル]** チェック ボックスをオンにします。  
-  
-7.  **[次へ]**をクリックします。  
-  
-8.  ウィザードの 4 番目のページで、 **[完了]**をクリックします。  
-  
-9. ASP.NET アプリケーションのパフォーマンス セッションが作成され、ブラウザーで Web サイトが起動します。 プロファイリングする機能を実行してからブラウザーを閉じます。  
-  
-     プロファイラーで、データ ファイルが生成され、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] メイン ウィンドウにデータの概要ビューが表示されます。  
-  
-## <a name="see-also"></a>参照  
- [概要](../profiling/overviews-performance-tools.md)   
- [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)   
- [インストルメンテーション データ値について](../profiling/understanding-instrumentation-data-values.md)   
- [サンプリング データ値について](../profiling/understanding-sampling-data-values.md)
+> **パフォーマンス ウィザード** を使用して、階層の相互作用(TIP) データ、JScript パフォーマンス データ、または両方を追加してプロファイル データを収集することができます。 TIP オプションは、サーバー側のプロセスからデータを収集します。 JScript プロファイリングは、ローカルまたはリモートの Web サイトで実行されているスクリプトからデータを収集します。 ほとんどの場合、1 つのオプションのみを選択する必要があります。
+
+ 管理者が使用可能にしたユーザー アクセス許可の設定に応じて、個々のユーザーは、ASP.NET プロセスをホストしているコンピューター上でプロファイラー セッションを作成するためのセキュリティ アクセス許可を持っている場合もあれば持っていない場合もあります。 次の例では、考えられるユーザーごとの違いについて説明します。
+
+- 管理者がドライバーとサービスが起動するように設定しているときには、一部のユーザーが高度なプロファイル機能にアクセスできることがあります。
+
+- ドメイン ユーザーがサンプルのプロファイルにのみアクセスできることがあります。
+
+- 一部のユーザーが他のすべてのユーザーに対してプロファイルへのアクセスを拒否することがあります。
+
+ 詳細については、「[プロファイルと Windows Vista のセキュリティ](../profiling/profiling-and-windows-vista-security.md)」および「[VSPerfCmd](../profiling/vsperfcmd.md)」の ADMIN オプションを参照してください。
+
+## <a name="to-profile-a-web-site-project"></a>Web サイト プロジェクトをプロファイリングする
+
+1. Visual Studio で [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web プロジェクトを開きます。
+
+2. **[分析]** メニューで **[パフォーマンス プロファイラー]** を選択し、**[パフォーマンス エクスプローラー]** を選択して、**[開始]** を選択します。
+
+3. ウィザードの最初のページで、プロファイル方法を選択し、 **[次へ]**をクリックします。 プロファイリング方法の詳細については、「[パフォーマンス収集方法について](../profiling/understanding-performance-collection-methods.md)」を参照してください。 同時実行ビジュアライザーのプロファイル方法は、Web アプリケーションでは使用できません。
+
+4. **[プロファイル対象のアプリケーションを選択してください]** ドロップダウン リストで、現在のプロジェクトが選択されていることを確認し、 **[次へ]**をクリックします。
+
+5. ウィザードの 3 番目のページで、階層相互作用プロファイリング (TIP) データ、Web ページで実行されている JavaScript からのデータ、またはその両方の追加を選択できます。
+
+    - 階層の相互作用を収集するには、 **[階層の相互作用のプロファイルを有効にする]** チェック ボックスをオンにします。
+
+    - Web ページで実行されている JavaScript からデータを収集するには、 **[JavaScript のプロファイル]** チェック ボックスをオンにします。
+
+6. **[次へ]**をクリックします。
+
+7. ウィザードの 4 番目のページで、 **[完了]**をクリックします。
+
+8. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションのパフォーマンス セッションが作成され、ブラウザーで Web サイトが起動します。 プロファイリングする機能を実行してからブラウザーを閉じます。
+
+     プロファイラーで、データ ファイルが生成され、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] メイン ウィンドウにデータの概要ビューが表示されます。
+
+## <a name="to-profile-a-web-site-without-opening-a-project-in-visual-studio"></a>Visual Studio でプロジェクトを開かずに Web サイトをプロファイリングする
+
+1. Visual Studio を開きます。
+
+2. **[分析]** メニューで **[パフォーマンス プロファイラー]** を選択し、**[パフォーマンス エクスプローラー]** を選択して、**[開始]** を選択します。
+
+3. ウィザードの最初のページで、プロファイル方法を選択し、 **[次へ]**をクリックします。 詳細については、「[パフォーマンス収集方法について](../profiling/understanding-performance-collection-methods.md)」を参照してください。
+
+4. ウィザードの 2 番目のページで、 **[ASP.NET または JavaScript アプリケーションのプロファイル]** オプションを選択し、 **[次へ]**をクリックします。
+
+5. ウィザードの 3 番目のページの **[Web アプリケーションを実行する URL またはパス]** ボックスで、アプリケーションのホーム ページの URL を入力し、 **[次へ]**をクリックします。
+
+    - サーバー (IIS) ベースのWeb サイトの場合は、 **http://localhost/MySite/default.aspx**のような URL を入力します。 これにより、ローカル コンピューターの MySite のアプリケーション ルートで [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションがプロファイリングされ、そのサイトの default.aspx ページが Internet Explorer で起動されて、セッションが開始されます。
+
+    - ファイル ベースの Web サイトの場合は、file///**c:\WebSites\MySite\default.aspx**のようなパスを入力します。 これにより、c:\webSites\MySite に置かれている [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションがプロファイリングされ、http://localhost:nnnn/MySite/default.aspx ページが Internet Explorer で起動されて、セッションが開始されます。
+
+    - 外部サイトで JavaScript データを収集する場合は、http://www.contoso.com のような URL を入力します。
+
+     詳細については、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ターゲット バイナリのプロパティ ページを参照してください。
+
+6. ウィザードの 3 番目のページで、階層相互作用プロファイリング (TIP) データ、Web ページで実行されている JavaScript からのデータ、またはその両方の追加を選択できます。
+
+    - 階層の相互作用を収集するには、 **[階層の相互作用のプロファイルを有効にする]** チェック ボックスをオンにします。
+
+    - Web ページで実行されている JavaScript からデータを収集するには、 **[JavaScript のプロファイル]** チェック ボックスをオンにします。
+
+7. **[次へ]**をクリックします。
+
+8. ウィザードの 4 番目のページで、 **[完了]**をクリックします。
+
+9. ASP.NET アプリケーションのパフォーマンス セッションが作成され、ブラウザーで Web サイトが起動します。 プロファイリングする機能を実行してからブラウザーを閉じます。
+
+     プロファイラーで、データ ファイルが生成され、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] メイン ウィンドウにデータの概要ビューが表示されます。
+
+## <a name="see-also"></a>関連項目
+
+[概要](../profiling/overviews-performance-tools.md)  
+[パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)  
+[インストルメンテーション データ値について](../profiling/understanding-instrumentation-data-values.md)  
+[サンプリング データ値について](../profiling/understanding-sampling-data-values.md)

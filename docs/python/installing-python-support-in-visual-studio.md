@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 32a8e6413fd719bfa4be6296972d39d609eab411
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 3cc0b6b99dd76a531ed3e99dcac8ae5d438d7e63
+ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="installing-python-support-in-visual-studio-on-windows"></a>Windows に Visual Studio の Python サポートをインストールする
 
@@ -31,7 +31,7 @@ Visual Studio 用の Python サポート (Python Tools for Visual Studio (PTVS) 
 - [Visual Studio 2015](#visual-studio-2015)
 - [Visual Studio 2013 以前](#visual-studio-2013-and-earlier)
 
-Visual Studio 2015 以前では、任意の Python インタープリターを別にインストールする必要があります (Python 3.5 およびそれ以前と 3.6 はサポート対象外のため、"Python バージョン 3.6 はサポートされていません" のようなメッセージが表示されます)。 詳細については、「[Python 環境](managing-python-environments-in-visual-studio.md)」を参照してください。 同じページには、Visual Studio 2017 に既存の Python インタープリターを追加する手順もあります。
+Visual Studio 2015 以前では、任意の [Python インタープリターをインストールする](installing-python-interpreters.md)必要があります (Python 3.5 およびそれ以前と 3.6 はサポート対象外のため、"Python バージョン 3.6 はサポートされていません" のようなメッセージが表示されます)。 同じページには、Visual Studio 2017 に既存の Python インタープリターを追加する手順もあります。
 
 インストール手順を実行した後、Python サポートを簡単にテストするには、Alt + I キーを押して Python の対話型ウィンドウを開き、`2+2` を入力します。 `4` という出力が表示されない場合は、手順を再確認してください。
 
@@ -91,7 +91,7 @@ Visual Studio 2015 以前では、任意の Python インタープリターを�
 
     ![Visual Studio 2015 インストーラーの PTVS オプション](media/installation-vs2015.png)
 
-1. Visual Studio のセットアップが完了したら、[任意の Python インタープリターをインストールします](managing-python-environments-in-visual-studio.md#selecting-and-installing-python-interpreters)。 インタープリターをインストール済みの場合は、「[既存インタープリター用の環境の作成](managing-python-environments-in-visual-studio.md#creating-an-environment-for-an-existing-interpreter)」を参照してください。
+1. Visual Studio のセットアップが完了したら、[任意の Python インタープリターをインストールします](installing-python-interpreters.md)。 インタープリターは既にインストールされているが、Visual Studio によって自動的に検出されない場合は、「[既存の環境を手動で識別する](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment)」を参照してください。
 
 ## <a name="visual-studio-2013-and-earlier"></a>Visual Studio 2013 以前
 
@@ -101,7 +101,7 @@ Visual Studio 2015 以前では、任意の Python インタープリターを�
     - Visual Studio 2012: [PTVS 2.1 for Visual Studio 2012](https://pytools.codeplex.com/downloads/get/920478)
     - Visual Studio 2010: [PTVS 2.1 for Visual Studio 2010](https://pytools.codeplex.com/downloads/get/920479)
 
-1. [任意の Python インタープリターをインストールします](managing-python-environments-in-visual-studio.md#selecting-and-installing-python-interpreters)。 インタープリターをインストール済みの場合は、「[既存インタープリター用の環境の作成](managing-python-environments-in-visual-studio.md#creating-an-environment-for-an-existing-interpreter)」を参照してください。
+1. [任意の Python インタープリターをインストールします](installing-python-interpreters.md)。 インタープリターは既にインストールされているが、Visual Studio によって自動的に検出されない場合は、「[既存の環境を手動で識別する](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment)」を参照してください。
 
 ## <a name="install-locations"></a>インストールする場所
 

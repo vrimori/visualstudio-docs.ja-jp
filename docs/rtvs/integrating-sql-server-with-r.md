@@ -17,11 +17,11 @@ ms.author: kraigb
 manager: ghogen
 ms.workload:
 - data-science
-ms.openlocfilehash: 65f34339e4c101818cea9b99095d765d5d417cf4
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 4733d51d40b0aabffa108a1f99e4e492599b67c2
+ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="working-with-sql-server-and-r"></a>SQL Server と R の使用
 
@@ -32,9 +32,9 @@ Visual Studio の優れた SQL Server のサポートにより、データ サ�
 > - Visual Studio 2017: Visual Studio のインストーラーを実行し、データの保存と処理のワークロードを選択して、SQL Server Data Tools を追加します。
 > - Visual Studio 2015: 「[Download SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)」 (SQL Server Data Tools のダウンロード) にある手順に従ってください。
 
-SQL Server と R の概要については、次のビデオ (3 分 3 秒) をご覧ください。
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/n4AYr0QIwdQ" frameborder="0" allowfullscreen></iframe>
+|   |   |
+|---|---|
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | SQL Server と R の概要に関する[ビデオを見る (youtube.com)](https://www.youtube.com/watch?v=n4AYr0QIwdQ) (3 分 03 秒)。 |
 
 ## <a name="creating-and-running-sql-queries"></a>SQL クエリの作成と実行
 
@@ -65,9 +65,9 @@ Transact-SQL エディターは他のさまざまな機能をサポートして�
 - [SQL ストアド プロシージャの作成とテスト](#write-and-test-a-sql-stored-procedure)
 - [SQL ストアド プロシージャの公開](#publish-a-sql-stored-procedure)
 
-次のビデオ (6 分 9 秒) でも、これらの機能の概要について説明しています。
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dFKIT2OitWQ" frameborder="0" allowfullscreen></iframe>
+|   |   |
+|---|---|
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | R と SQL ストアド プロシージャの概要に関する[ビデオを見る (youtube.com)](https://www.youtube.com/watch?v=dFKIT2OitWQ) (6 分 09 秒)。 |
 
 ### <a name="add-a-database-connection"></a>データベース接続の追加
 

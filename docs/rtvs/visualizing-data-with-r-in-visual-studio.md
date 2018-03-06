@@ -16,11 +16,11 @@ ms.author: kraigb
 manager: ghogen
 ms.workload:
 - data-science
-ms.openlocfilehash: 97e9838e46a4e0158b281f243ffda7d46044ef2d
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 962a7a5685a5d4a1d4ad5466710377d4885ad398
+ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="creating-visual-data-plots-with-r"></a>R でデータを視覚化する
 
@@ -28,9 +28,9 @@ ms.lasthandoff: 02/09/2018
 
 ![ヒーローのイメージをプロットする](media/plotting-hero-image.png)
 
-次の動画 (2 分 02 秒) は RTVS によるプロットを簡単に説明しています。
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZTbKmz5RSgY" frameborder="0" allowfullscreen></iframe>
+|   |   |
+|---|---|
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | R でのプロットに関する[ビデオを見る (youtube.com)](https://www.youtube.com/watch?v=ZTbKmz5RSgY) (2 分 02 秒)。 |
 
 ## <a name="the-plot-window"></a>プロット ウィンドウ
 
