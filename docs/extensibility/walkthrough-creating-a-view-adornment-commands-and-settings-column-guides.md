@@ -4,15 +4,17 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4a2df0a3-42da-4f7b-996f-ee16a35ac922
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
+ms.workload:
+- vssdk
 ms.openlocfilehash: c7b59afc8d32cefd8877d18d91556230aef9a284
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `ColumnGuideCommands` .Vsct ファイルで宣言されているユーザーのコマンドを実装して、コマンドのコマンド ハンドラーをフックするオブジェクト。  
   
- **VSIX**です。  使用して**ファイル &#124;です。新機能。。。**プロジェクトを作成するコマンド。  左側のナビゲーション ウィンドウで c# の機能拡張ノードを選択して、 **VSIX プロジェクト**右側のウィンドウでします。  ColumnGuides の名前を入力し、選択**OK**プロジェクトを作成します。  
+ **VSIX**です。  使用して**ファイル &#124;です。新機能 ...**プロジェクトを作成するコマンド。  左側のナビゲーション ウィンドウで c# の機能拡張ノードを選択して、 **VSIX プロジェクト**右側のウィンドウでします。  ColumnGuides の名前を入力し、選択**OK**プロジェクトを作成します。  
   
  **表示要素の表示**です。  ソリューション エクスプ ローラーでプロジェクト ノードを右のポインター ボタンを押します。  選択、**追加 &#124;です。新しい項目は.**新しいビュー装飾項目を追加するコマンド。  選択**Extensibility &#124;です。エディター**左側のナビゲーション ウィンドウで選択および**エディター ビューポートの表示要素**右側のウィンドウでします。  項目名として ColumnGuideAdornment 名前を入力し、選択**追加**に追加します。  
   
