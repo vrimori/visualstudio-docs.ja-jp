@@ -5,7 +5,8 @@ ms.date: 01/18/2017
 ms.prod: windows-client-threshold
 ms.reviewer: 
 ms.suite: 
-ms.technology: javascript
+ms.technology:
+- javascript
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -13,15 +14,15 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: 3bc55336-912f-4ff8-8d28-1e26e0144840
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f17d1ad03728077dc103cb67df9993c7b71c9fdc
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 302ad9c9a853fb7ed7f24de9669d0cc7a66195aa
+ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="operator-summary-javascript"></a>演算子の一覧 (JavaScript)
 次の表[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]は各カテゴリの演算子。  
@@ -30,11 +31,11 @@ ms.lasthandoff: 10/27/2017
   
 |演算子|シンボル|  
 |--------------|------------|  
-|[追加](../../javascript/reference/addition-operator-decrement-javascript.md)|+|  
+|[加算](../../javascript/reference/addition-operator-decrement-javascript.md)|+|  
 |[デクリメント](../../javascript/reference/increment-and-decrement-operators-javascript.md)|--|  
 |[除算](../../javascript/reference/division-operator-decrement-javascript.md)|/|  
-|[増分値](../../javascript/reference/increment-and-decrement-operators-javascript.md)|++|  
-|[剰余](../../javascript/reference/modulus-operator-decrementjavascript.md)|%|  
+|[インクリメント](../../javascript/reference/increment-and-decrement-operators-javascript.md)|++|  
+|[残りの部分](../../javascript/reference/modulus-operator-decrementjavascript.md)|%|  
 |[乗算](../../javascript/reference/multiplication-operator-decrement-javascript.md)|*|  
 |[減算](../../javascript/reference/subtraction-operator-decrement-javascript.md)|-|  
 |[単項マイナス符号](../../javascript/reference/subtraction-operator-decrement-javascript.md)|-|  
@@ -45,13 +46,13 @@ ms.lasthandoff: 10/27/2017
 |--------------|------------|  
 |[コンマ](../../javascript/reference/comma-operator-decrement-javascript.md)|,|  
 |[条件 (三項)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)|?:|  
-|[等しいかどうか](../../javascript/reference/comparison-operators-javascript.md)|==|  
-|[大きい](../../javascript/reference/comparison-operators-javascript.md)|>|  
-|[大きいまたは等しい](../../javascript/reference/comparison-operators-javascript.md)|>=|  
-|[Id](../../javascript/reference/comparison-operators-javascript.md)|===|  
-|[非等値](../../javascript/reference/comparison-operators-javascript.md)|!=|  
-|[小さい](../../javascript/reference/comparison-operators-javascript.md)|<|  
-|[以下に](../../javascript/reference/comparison-operators-javascript.md)|<=|  
+|[等価](../../javascript/reference/comparison-operators-javascript.md)|==|  
+|[より大きい](../../javascript/reference/comparison-operators-javascript.md)|>|  
+|[以上](../../javascript/reference/comparison-operators-javascript.md)|>=|  
+|[ID](../../javascript/reference/comparison-operators-javascript.md)|===|  
+|[非等価](../../javascript/reference/comparison-operators-javascript.md)|!=|  
+|[より小さい](../../javascript/reference/comparison-operators-javascript.md)|<|  
+|[以下](../../javascript/reference/comparison-operators-javascript.md)|<=|  
 |[論理 AND](../../javascript/reference/logical-and-operator-decrement-javascript.md)|&&|  
 |[論理 NOT](../../javascript/reference/logical-not-operator-decrement-exclpt-javascript.md)|!|  
 |[論理または](../../javascript/reference/logical-or-operator-decrement-javascript.md)|&#124;&#124;|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/27/2017
 |[ビットごとまたは](../../javascript/reference/bitwise-or-operator-decrement-javascript.md)|&#124;|  
 |[ビットごとの右シフト](../../javascript/reference/bitwise-right-shift-operator-decrement-javascript.md)|>>|  
 |[ビットごとの XOR](../../javascript/reference/bitwise-xor-operator-decrement-hat-javascript.md)|^|  
-|[符号なし右シフト](../../javascript/reference/unsigned-right-shift-operator-decrement-javascript.md)|>>>|  
+|[符号なしの右シフト](../../javascript/reference/unsigned-right-shift-operator-decrement-javascript.md)|>>>|  
   
 ## <a name="assignment-operators"></a>代入演算子  
  [代入演算子](../../javascript/reference/assignment-operator-decrement-equal-javascript.md)  
@@ -75,7 +76,7 @@ ms.lasthandoff: 10/27/2017
  [複合代入演算子](../../javascript/reference/compound-assignment-operators-javascript.md)  
   
 ## <a name="miscellaneous-operators"></a>その他の演算子  
- [削除](../../javascript/reference/delete-operator-decrementjavascript.md)  
+ [delete](../../javascript/reference/delete-operator-decrementjavascript.md)  
   
  [instanceof](../../javascript/reference/instanceof-operator-decrementjavascript.md)  
   
@@ -85,5 +86,5 @@ ms.lasthandoff: 10/27/2017
   
  [void](../../javascript/reference/void-operator-decrementjavascript.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]
