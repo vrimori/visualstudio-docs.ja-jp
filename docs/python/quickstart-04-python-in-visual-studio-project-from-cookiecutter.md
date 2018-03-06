@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 67cf109b0964bcb9eca104ec138f968e273111e9
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 4b9b7a51436eeeb67634714216f9a583de679a07
+ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="quickstart-create-a-project-from-a-cookiecutter-template"></a>クイック スタート: Cookiecutter テンプレートからプロジェクトを作成する
 
@@ -55,6 +55,6 @@ ms.lasthandoff: 02/09/2018
 ## <a name="see-also"></a>関連項目
 
 - [Cookiecutter 拡張機能の使用](using-python-cookiecutter-templates.md)
-- [既存の Python インタープリター用の環境の作成](managing-python-environments-in-visual-studio.md#creating-an-environment-for-an-existing-interpreter)
+- [既存の Python インタープリターを手動で識別する](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment)
 - [Windows に Visual Studio 2015 の Python サポートをインストールする](installing-python-support-in-visual-studio.md)
 - [インストールする場所](installing-python-support-in-visual-studio.md#install-locations)

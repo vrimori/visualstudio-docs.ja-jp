@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.performance.view.threadblocking
-helpviewer_keywords: Concurrency Visualizer, Threads View (Parallel Performance)
+f1_keywords:
+- vs.performance.view.threadblocking
+helpviewer_keywords:
+- Concurrency Visualizer, Threads View (Parallel Performance)
 ms.assetid: 2e441103-a266-407b-88c3-fb58716257a3
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 21b341f8900664c57fa21d33bc138a969a273759
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: d2245ae466948122cbf39225043125b4feec8579
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="threads-view-parallel-performance"></a>スレッド ビュー (並行処理のパフォーマンス)
-スレッド ビューは、同時実行ビジュアライザーの最も詳細かつ機能豊富なビューです。 このビューを使用すると、スレッドが実行しているか、それとも同期、I/O、またはその他の何らかの理由のためにブロックしているかを識別できます。  
+**スレッド ビュー**は、同時実行ビジュアライザーで最も詳細かつ豊富な機能を備えたビューです (**[分析]** > **[同時実行ビジュアライザー]** を選択して、同時実行ビジュアライザーを開始します)。 このビューを使用すると、スレッドが実行しているか、それとも同期、I/O、またはその他の何らかの理由のためにブロックしているかを識別できます。  
   
  同時実行ビジュアライザーは、プロファイルの分析中、アプリケーション スレッドごとに、すべてのオペレーティング システムのコンテキスト切り替えイベントを調べます。 コンテキストの切り替えは、次のような理由により発生することがあります。  
   

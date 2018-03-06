@@ -16,11 +16,11 @@ ms.author: kraigb
 manager: ghogen
 ms.workload:
 - data-science
-ms.openlocfilehash: c4ca5a7fea1a84c4f4a38396daebd3e01412d9d7
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 76dc2623edebed6cca48c40c0ad0bc96f783e39d
+ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="how-to-install-r-tools-for-visual-studio"></a>R Tools for Visual Studio のインストール方法
 
@@ -44,7 +44,7 @@ Visual Studio Test Professional や SQL Server Management Studio などの製品
 
 ## <a name="installing-rtvs-in-visual-studio-2017"></a>Visual Studio 2017 での RTVS のインストール
 
-1. Visual Studio インストーラーを実行します。 (Visual Studio がまだインストールされていない場合は、「[ダウンロード](https://www.visualstudio.com/downloads/)」を参照してください)。Windows 7 の場合、Visual Studio バージョン *15.2 ビルド 26430.12* 以降を表示するには、インストーラーを更新する必要があります。
+1. Visual Studio インストーラーを実行します。 (Visual Studio がまだインストールされていない場合は、「[ダウンロード](https://www.visualstudio.com/downloads/)」を参照してください)。Windows 7 の場合、Visual Studio 2017 バージョン *15.2 ビルド 26430.12* 以降を表示するには、インストーラーを更新する必要があります。
 
 1. **[データ サイエンスと分析のアプリケーション]** ワークロードを選択します。
 
@@ -81,12 +81,12 @@ RTVS for Visual Studio 2015 は、`%ProgramFiles(x86)%\Microsoft Visual Studio 1
 
 オフライン インストールは、インターネットに接続されていないコンピューターに適しています。
 
-1. 次の指示に従って、お使いの Visual Studio のバージョンのオフライン インストーラーを作成します。 
+1. 次の指示に従って、お使いの Visual Studio のバージョンのオフライン インストーラーを作成します。
 
     - [Visual Studio 2017](../install/create-an-offline-installation-of-visual-studio.md)
     - [Visual Studio 2015](https://msdn.microsoft.com/library/mt706497.aspx)
 
-1. Visual Studio 2015 では、オフラインの RTVS インストーラーは、[https://aka.ms/rtvs-current-zip](https://aka.ms/rtvs-current-zip) と [https://aka.ms/rtvs-remote-zip](https://aka.ms/rtvs-remote-zip) からダウンロードします。 
+1. Visual Studio 2015 では、オフラインの RTVS インストーラーは、[https://aka.ms/rtvs-current-zip](https://aka.ms/rtvs-current-zip) と [https://aka.ms/rtvs-remote-zip](https://aka.ms/rtvs-remote-zip) からダウンロードします。
 
 1. オフライン インストーラーから Visual Studio と RTVS をインストールします。
 

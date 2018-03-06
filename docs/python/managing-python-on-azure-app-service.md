@@ -18,11 +18,11 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: bc9317615edbf49e35aa0ac3d2ff079beab20df5
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: e5d5cbc856a6af44941d690119f2a15a8acc3d41
+ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="managing-python-on-azure-app-service"></a>Azure App Service での Python の管理
 
@@ -202,7 +202,7 @@ HttpPlatform モジュールは、スタンドアロンの Python プロセス�
     `requirements.txt` は、ローカルおよびサーバーで設定されたのと同じパッケージを簡単に再現できるため、これを使用することをお勧めします。 `requirements.txt` に何らかの変更を行った後に、コンソールにアクセスし、コマンドを再実行することを忘れないでください。
 
 > [!Note]
-> App Service には C コンパイラがないため、ネイティブ拡張モジュールを使用して任意のパッケージのホイールをインストールする必要があります。 多くの普及しているパッケージでは、独自のホイールを提供しています。 提供していないパッケージの場合は、ローカルの開発用コンピューターで `pip wheel <package_name>` を使用してホイールをサイトにアップロードします。 例については、[必要なパッケージの管理](managing-python-environments-in-visual-studio.md#managing-required-packages-requirementstxt)に関するセクションをご覧ください。
+> App Service には C コンパイラがないため、ネイティブ拡張モジュールを使用して任意のパッケージのホイールをインストールする必要があります。 多くの普及しているパッケージでは、独自のホイールを提供しています。 提供していないパッケージの場合は、ローカルの開発用コンピューターで `pip wheel <package_name>` を使用してホイールをサイトにアップロードします。 例については、[requirements.txt での必要なパッケージの管理](managing-required-packages-with-requirements-txt.md)に関する記事を参照してください。
 
 ### <a name="kudu-rest-api"></a>Kudu REST API
 

@@ -14,15 +14,17 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: fd24e4ebcdda7a3b8fbc0b992e1ef952a930029a
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.openlocfilehash: 2bbdabf7d35c2705d028c84ddc6c6dc82f71ff48
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/27/2018
 ---
-# <a name="quickstart-coding-in-the-editor"></a>クイックスタート: エディター内のコーディング
+# <a name="quickstart-use-the-code-editor"></a>クイック スタート: コード エディターを使用する
 
 この 10 分間のエディターの紹介では、ファイルにコードを追加した上で、Visual Studio でコードを記述、コード内を移動、およびコードを理解する簡単な方法をいくつか説明します。
+
+このクイック スタートでは、既にプログラミング言語を使い慣れていることを前提としています。 使い慣れていない場合は、[Python](../ide/quickstart-python.md) または [C#](../ide/tutorial-csharp-aspnet-core.md) による Web アプリの作成や、[Visual Basic](../ide/quickstart-visual-basic-console.md) または [C++](../ide/quickstart-cpp.md) によるコンソール アプリの作成など、プログラミング言語に関するいずれかのクイック スタートを最初に確認することをお勧めします。
 
 ## <a name="create-a-new-code-file"></a>新しいコード ファイルを作成する
 
@@ -70,7 +72,7 @@ Visual Studio で提供されている便利なコード スニペットを使�
         "brown",
         "fox",
         "jumps"
-    }
+    };
 
     string[] morewords = {
         "over",
@@ -157,11 +159,11 @@ Visual Studio エディターにおけるこのクイックスタートは完了
 
 ## <a name="see-also"></a>関連項目
 
-[クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)  
-[クイックスタート: Visual Studio IDE とエディターのカスタマイズ](../ide/quickstart-personalize-the-ide.md)  
-[クイック スタート: プロジェクトとソリューション](../ide/quickstart-projects-solutions.md)  
-[コード スニペット](../ide/code-snippets.md)  
-[アウトライン](../ide/outlining.md)  
-[[定義へ移動] と [定義をここに表示]](../ide/go-to-and-peek-definition.md)  
-[リファクタリング](../ide/refactoring-in-visual-studio.md)  
-[IntelliSense の使用](../ide/using-intellisense.md)
+- [クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)
+- [クイックスタート: Visual Studio IDE とエディターのカスタマイズ](../ide/quickstart-personalize-the-ide.md)
+- [クイック スタート: プロジェクトとソリューション](../ide/quickstart-projects-solutions.md)
+- [コード スニペット](../ide/code-snippets.md)
+- [アウトライン](../ide/outlining.md)
+- [[定義へ移動] と [定義をここに表示]](../ide/go-to-and-peek-definition.md)
+- [リファクタリング](../ide/refactoring-in-visual-studio.md)
+- [IntelliSense の使用](../ide/using-intellisense.md)

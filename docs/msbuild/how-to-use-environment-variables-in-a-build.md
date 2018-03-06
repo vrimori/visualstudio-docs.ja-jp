@@ -18,11 +18,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 246f13b340c0acea519dccd323c1e7b2c28dd344
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 3901e9df584ab9acd6bef86825a587026ae1a9e9
+ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="how-to-use-environment-variables-in-a-build"></a>方法 : ビルドで環境変数を使用する
 プロジェクトをビルドするとき、プロジェクト ファイルまたはプロジェクトを構成するファイルに含まれていない情報を使用してビルド オプションを設定する必要がある場合があります。 通常、この情報は環境変数に格納されます。  
@@ -68,6 +68,6 @@ ms.lasthandoff: 02/09/2018
 ```  
   
 ## <a name="see-also"></a>参照  
-    [MSBuild ](../msbuild/msbuild.md)
-    [MSBuild Properties](../msbuild/msbuild-properties.md)
- [方法: 同じソース ファイルを異なるオプションでビルドする](../msbuild/how-to-build-the-same-source-files-with-different-options.md)
+[MSBuild](../msbuild/msbuild.md)  
+[MSBuild プロパティ](../msbuild/msbuild-properties.md)  
+[方法: 同じソース ファイルを異なるオプションでビルドする](../msbuild/how-to-build-the-same-source-files-with-different-options.md)  
