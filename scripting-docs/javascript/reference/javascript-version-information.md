@@ -20,11 +20,11 @@ caps.latest.revision:
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b0503abb3d62e9fd61149b884a7b58a685fbc62c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 3a2335c3697be9ef3e2d674ac37047ddd3de242d
+ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="javascript-version-information"></a>JavaScript のバージョン情報
 JavaScript のバージョンごとに、サポートされている JavaScript 要素は異なります。 [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリがサポートしている機能は、Internet Explorer とはわずかに異なります。  
@@ -37,7 +37,7 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
  次の表は、特定の言語要素をサポートしている Internet Explorer のドキュメント モード (および、 [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] と [!INCLUDE[winphone_appname](../../javascript/reference/includes/winphone-appname-md.md)]を表すストア アプリ) を示しています。 指定された要素をサポートするドキュメント モードは、 **Y**という文字で示されています。また、指定された要素をサポートしていないドキュメント モードは、 **N**という文字で示されています。  
   
 > [!IMPORTANT]
->  [!INCLUDE[jsv12text](../../javascript/includes/jsv12text-md.md)] (Windows 10 の Edge ブラウザー) には、レガシ ドキュメント モードのサポートが含まれていません。 [!INCLUDE[winphone_appname](../../javascript/reference/includes/winphone-appname-md.md)] アプリは Windows Phone 8.1 以降でサポートされます。 試験段階の機能 (に関する: フラグ) は"Exp"で示されます  
+>  [!INCLUDE[jsv12text](../../javascript/includes/jsv12text-md.md)] (Windows 10 の edge ブラウザー) では、レガシ ドキュメント モードのサポートは含まれません。 [!INCLUDE[winphone_appname](../../javascript/reference/includes/winphone-appname-md.md)] アプリは Windows Phone 8.1 以降でサポートされます。 試験段階の機能 (に関する: フラグ) は"Exp"で示されます  
   
  表には概要情報が含まれています。 より具体的な情報は、言語要素のドキュメントを参照してください。  
   
@@ -262,7 +262,7 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
 |[message プロパティ](../../javascript/reference/message-property-error-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[min 関数](../../javascript/reference/math-min-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[定数 MIN_VALUE](../../javascript/reference/number-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[剰余代入演算子 (%=)](../../javascript/reference/modulus-assignment-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[Remainder 代入演算子 (% =)](../../javascript/reference/modulus-assignment-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[剰余演算子 (%)](../../javascript/reference/modulus-operator-decrementjavascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[moveFirst メソッド](../../javascript/reference/movefirst-method-enumerator-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[moveNext メソッド](../../javascript/reference/movenext-method-enumerator-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
@@ -412,7 +412,7 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
 |[write 関数](../../javascript/reference/debug-write-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[writeln 関数](../../javascript/reference/debug-writeln-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
   
- \*ユーザー定義のオブジェクトは DOM オブジェクトをサポートしています。 `enumerable` 属性と `configurable` 属性は、指定できますが使用されません。  
+ \* ユーザー定義のオブジェクトは DOM オブジェクトをサポートしています。 `enumerable` 属性と `configurable` 属性は、指定できますが使用されません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドキュメントの互換性の定義](http://go.microsoft.com/fwlink/?LinkId=208537)

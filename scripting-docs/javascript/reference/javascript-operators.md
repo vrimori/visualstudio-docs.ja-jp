@@ -20,11 +20,11 @@ caps.latest.revision:
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 27be497a62a21aa8dc222c96539a48f7e5d62425
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 2e99ead2f921f5247757192bcb3330aa4ebca8d7
+ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="javascript-operators"></a>JavaScript の演算子
 次の表に [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 演算子を示します。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 10/27/2017
 |2 つの式について、論理積を実行します。|[論理 AND 演算子 (&&)](../../javascript/reference/logical-and-operator-decrement-javascript.md)|  
 |2 つの式に対して論理否定を実行します。|[論理 NOT 演算子 (!)](../../javascript/reference/logical-not-operator-decrement-exclpt-javascript.md)|  
 |2 つの式に対して論理和を実行します。|[論理 OR 演算子 (&#124; &#124;)](../../javascript/reference/logical-or-operator-decrement-javascript.md)|  
-|変数の値を式で指定された値で除算し、その剰余を変数に代入します。|[剰余代入演算子 (%=)](../../javascript/reference/modulus-assignment-operator-decrement-javascript.md)|  
+|変数の値を式で指定された値で除算し、その剰余を変数に代入します。|[Remainder 代入演算子 (% =)](../../javascript/reference/modulus-assignment-operator-decrement-javascript.md)|  
 |2 つの数値の商を計算して、剰余を返します。|[剰余演算子 (%)](../../javascript/reference/modulus-operator-decrementjavascript.md)|  
 |変数の値を式で指定された値で乗算し、その結果を変数に代入します。|[乗算代入演算子 (*=)](../../javascript/reference/multiplication-assignment-operator-decrement-equal-javascript.md)|  
 |2 つの数値を乗算します。|[乗算演算子 (*)](../../javascript/reference/multiplication-operator-decrement-javascript.md)|  
@@ -83,5 +83,5 @@ ms.lasthandoff: 10/27/2017
 |式に指定されたビット数だけ符号なし右シフトを実行します。|[符号なし右シフト演算子 (>>>)](../../javascript/reference/unsigned-right-shift-operator-decrement-javascript.md)|  
 |式が値を返さないようにします。|[void 演算子](../../javascript/reference/void-operator-decrementjavascript.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [演算子の優先順位](../../javascript/operator-subtractprecedence-javascript.md)
