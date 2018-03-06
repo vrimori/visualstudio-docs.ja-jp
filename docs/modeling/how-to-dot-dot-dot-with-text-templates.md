@@ -24,7 +24,7 @@ ms.lasthandoff: 02/09/2018
   
  テキスト テンプレートに一般的な概要については、読み取り[コードの生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)です。  
   
-## <a name="how-to-"></a>操作方法。。。  
+## <a name="how-to-"></a>操作方法 ...  
   
 ### <a name="generate-part-of-my-application-code"></a>アプリケーション コードの一部を生成します。  
  構成があるか、*モデル*ファイルまたはデータベースにします。 マイ コードの 1 つまたは複数の部分は、そのモデルによって異なります。  
