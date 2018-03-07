@@ -11,11 +11,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - dotnet
-ms.openlocfilehash: ebcdad47ebb8ecae9d943acd8e0db60c20ef8378
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 152b5f1c0bc3129078effb07cbe5aa36a4591f9d
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="implement-an-interface-in-visual-studio"></a>Visual Studio でインターフェイスを実装する
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/09/2018
 1. 次に、以下のいずれかを実行します。
 
    - **キーボード**
-     - **Ctrl + .** キーを押して、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
+     - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
    - **マウス**
      - 右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
      - 赤い波線をポイントし、表示された ![電球](media/bulb-cs.png) アイコンをクリックします。
@@ -77,5 +77,5 @@ ms.lasthandoff: 02/09/2018
 
 ## <a name="see-also"></a>関連項目
 
-[コード生成](../code-generation-in-visual-studio.md)  
-[変更のプレビュー](../../ide/preview-changes.md)
+- [コード生成](../code-generation-in-visual-studio.md)
+- [変更のプレビュー](../../ide/preview-changes.md)
