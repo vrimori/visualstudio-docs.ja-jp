@@ -16,11 +16,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: d0e6ac51448f014e9d37e5e1521c01f3dfc903b0
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 021107e4048a990c7c207d8d868db581ea0bfd4e
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="msbuild-inline-tasks"></a>MSBuild インライン タスク
 MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インターフェイスを実装するクラスをコンパイルして作成します。 詳細については、[タスク](../msbuild/msbuild-tasks.md)に関する記事を参照してください。  
@@ -103,7 +103,7 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
     AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll" >  
     <ParameterGroup />  
     <Task>  
-      <Reference Include="System.Xml.dll"/>  
+      <Reference Include="System.Xml"/>
       <Using Namespace="System"/>  
       <Using Namespace="System.IO"/>  
       <Code Type="Fragment" Language="cs">  

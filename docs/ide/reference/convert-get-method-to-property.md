@@ -16,11 +16,11 @@ dev_langs:
 - csharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3d0a532e2e3e5bb8afa4a3c3dc9720134a1b7e8b
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: ab91e95d699b4a7fcc27ca1f6bcdf43b51af9c26
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="convert-get-method-to-property--convert-property-to-get-method-refactorings"></a>Get メソッドのプロパティへの変換/プロパティの Get メソッドへの変換リファクタリング
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/09/2018
 1. 次に、以下のいずれかを実行します。
 
    - **キーボード**
-     - **Ctrl + .** キーを押して、 **[クイック アクションとリファクタリング]** メニューをトリガーし、[プレビュー] ウィンドウ ポップアップから **[Replace method with property]\(メソッドをプロパティに置換\)** を選択します。
+     - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーし、[プレビュー] ウィンドウ ポップアップから **[Replace method with property]\(メソッドをプロパティに置換\)** を選択します。
    - **マウス**
      - コードを右クリックして **[クイック アクションとリファクタリング]** メニューを選択し、[プレビュー] ウィンドウ ポップアップから **[Replace method with property]\(メソッドをプロパティに置換\)** を選択します。
 
@@ -73,7 +73,7 @@ public int MyValue
 
 **機能:** プロパティを Get メソッドに変換できます。
 
-**条件:** 値の設定や取得をするだけではないプロパティがあるとき。 
+**条件:** 値の設定や取得をするだけではないプロパティがあるとき。
 
 ### <a name="how-to"></a>方法
 
@@ -82,7 +82,7 @@ public int MyValue
 1. 次に、以下のいずれかを実行します。
 
    - **キーボード**
-     - **Ctrl + .** キーを押して、 **[クイック アクションとリファクタリング]** メニューをトリガーし、[プレビュー] ウィンドウ ポップアップから **[Replace property with method]\(プロパティをメソッドに置換\)** を選択します。
+     - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーし、[プレビュー] ウィンドウ ポップアップから **[Replace property with method]\(プロパティをメソッドに置換\)** を選択します。
    - **マウス**
      - コードを右クリックして **[クイック アクションとリファクタリング]** メニューを選択し、[プレビュー] ウィンドウ ポップアップから **[Replace property with methods]\(プロパティをメソッドに置換\)** を選択します。
 
@@ -90,5 +90,5 @@ public int MyValue
 
 ## <a name="see-also"></a>関連項目
 
-[リファクタリング](../refactoring-in-visual-studio.md)  
-[変更のプレビュー](../../ide/preview-changes.md)
+- [リファクタリング](../refactoring-in-visual-studio.md)
+- [変更のプレビュー](../../ide/preview-changes.md)

@@ -12,11 +12,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2276c65dd0ed0478003c1e4f2c99683eb88b0ac8
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: b91c4dc3cc3bc3550f11bc60c95f1c3ed511cf62
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-use-boosttest-for-c-in-visual-studio"></a>Visual Studio で C++ 用の Boost.Test を使用する方法
 
@@ -35,18 +35,18 @@ Boost.Test には [Boost](http://www.boost.org/) が必要です。 Boost がイ
 1. Boost.Test のダイナミック ライブラリまたはスタティック ライブラリをインストールします。
 
     - Boost.Test のダイナミック ライブラリをインストールするには、**vcpkg install boost-test** を実行します。
-    
+
        または
-       
+
     - Boost.Test のスタティック ライブラリをインストールするには、**vcpkg install boost-test:x86-windows-static** を実行します。
 
 1. **vcpkg integrate install** を実行して、ライブラリで Visual Studio を構成し、Boost のヘッダーとバイナリへのパスを組み込みます。
 
 ## <a name="add-the-item-template-visual-studio-2017-version-156-and-later"></a>項目テンプレートを追加する (Visual Studio 2017 バージョン 15.6)
 
-1. テスト用の .cpp ファイルを追加するには、**ソリューション エクスプローラー**でプロジェクト ノードを右クリックし、**[新しい項目の追加]** を選択します。 
- 
-![Boost.Test 項目テンプレート](media/boost_test_item_template.png "Boost.Test 項目テンプレート")
+1. テスト用の .cpp ファイルを追加するには、**ソリューション エクスプローラー**でプロジェクト ノードを右クリックし、**[新しい項目の追加]** を選択します。
+
+   ![Boost.Test 項目テンプレート](media/boost_test_item_template.png "Boost.Test 項目テンプレート")
 
 1. 新しいファイルには、サンプル テスト メソッドが含まれます。 プロジェクトをビルドして、**テスト エクスプ ローラー**がメソッドを検出できるようにします。
 
@@ -54,14 +54,14 @@ Boost.Test には [Boost](http://www.boost.org/) が必要です。 Boost がイ
 
 ## <a name="create-a-test-project-visual-studio-2017-version-155"></a>テスト プロジェクトを作成する (Visual Studio 2017 バージョン 15.5)
 
-Visual Studio 2017 バージョン 15.5 には、Boost.Test に利用できる構成済みのテスト プロジェクトまたは項目テンプレートはありません。 したがって、テストを保持するコンソール アプリケーション プロジェクトを作成して構成する必要があります。 
+Visual Studio 2017 バージョン 15.5 には、Boost.Test に利用できる構成済みのテスト プロジェクトまたは項目テンプレートはありません。 したがって、テストを保持するコンソール アプリケーション プロジェクトを作成して構成する必要があります。
 
 1. **ソリューション エクスプローラー**で、ソリューション ノードを右クリックして、**[追加]** > **[新しいプロジェクト...]** の順に選択します。
 
 1. 左側のウィンドウで **[Visual C++]** > **[Windows デスクトップ]** を選んだ後、**[Windows コンソール アプリケーション]** テンプレートを選択します。
 
 1. プロジェクト名を設定し、**[OK]** を選択します。
-1. .cpp ファイル内の `main` 関数を削除します。 
+1. .cpp ファイル内の `main` 関数を削除します。
 
 1. Boost.Test の単一ヘッダーまたは動的ライブラリ バージョンを使用している場合は、「[インクルード ディレクティブを追加する](#add_include_directives)」に進みます。 スタティック ライブラリ バージョンを使用している場合は、追加の構成を実行する必要があります。
 
@@ -126,7 +126,7 @@ BOOST_AUTO_TEST_CASE(my\_boost_test)
 ```
 
 ## <a name="write-and-run-tests"></a>テストを作成して実行する
-Boost テストを作成して実行する準備が整いました。 テスト マクロについては、[Boost Test ライブラリのドキュメント](http://www.boost.org/doc/libs/1_38_0/libs/test/doc/html/index.html)をご覧ください。 **テスト エクスプローラー**を使ってテストを検出、実行、グループ化する方法については、「[テスト エクスプローラーを使用して単体テストを実行する](run-unit-tests-with-test-explorer.md)」をご覧ください。
+Boost テストを作成して実行する準備が整いました。 テスト マクロについては、[Boost Test ライブラリのドキュメント](http://www.boost.org/doc/libs/release/libs/test/doc/html/index.html)をご覧ください。 **テスト エクスプローラー**を使ってテストを検出、実行、グループ化する方法については、「[テスト エクスプローラーを使用して単体テストを実行する](run-unit-tests-with-test-explorer.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 [C/C++ 用の単体テストの記述](writing-unit-tests-for-c-cpp.md)

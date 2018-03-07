@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,7 +17,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 1a3759070d406e721a12e01950e0e99cea40d1fc
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -33,7 +35,7 @@ ms.lasthandoff: 01/10/2018
  Visual Studio では、XML ノードのコレクションが作成された後は、Word オブジェクト モデルを走査する必要なく、直接コントロールに対してプログラミングできます。 <xref:Microsoft.Office.Tools.Word.XMLNodes>コントロールをドキュメントから要素のマッピングを削除することでのみ削除できます。  
   
 > [!NOTE]  
->  子要素にアクセスする場合、<xref:Microsoft.Office.Tools.Word.XMLNodes>を介して制御、<xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A>プロパティが返されます、<xref:Microsoft.Office.Interop.Word.XMLNode>オブジェクトではなく、<xref:Microsoft.Office.Tools.Word.XMLNode>コントロール。 詳細については、「 [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)」を参照してください。  
+>  子要素にアクセスする場合、<xref:Microsoft.Office.Tools.Word.XMLNodes>を介して制御、<xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A>プロパティが返されます、<xref:Microsoft.Office.Interop.Word.XMLNode>オブジェクトではなく、<xref:Microsoft.Office.Tools.Word.XMLNode>コントロール。 詳細については、「 [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)」を参照してください。  
   
 ## <a name="binding-data-to-the-control"></a>コントロールへのデータのバインド  
  <xref:Microsoft.Office.Tools.Word.XMLNodes>コントロールがデータ バインディングをサポートしていません。 これは、ため、<xref:Microsoft.Office.Tools.Word.XMLNodes>コントロールにバインディングの機能、複雑なデータがないと、単純データ バインディングが表すことができないデータを繰り返しです。  

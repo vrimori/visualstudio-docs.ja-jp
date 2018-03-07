@@ -9,13 +9,14 @@ ms.date: 11/13/2017
 ms.topic: article
 ms.devlang: multiple
 ms.service: multiple
+ms.technology: vs-ai-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 85513f908421f4eee5411b5d394b378e66fa31fd
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 7e182a000dc9c8aaeb721b81036f878430260618
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="installation"></a>インストール
 
@@ -23,11 +24,11 @@ Visual Studio Tools for AI は、64 ビットの Windows オペレーティン�
 
 ## <a name="installing-visual-studio-tools-for-ai"></a>Visual Studio Tools for AI のインストール
 
-この拡張機能は、[Visual Studio](https://docs.microsoft.com/visualstudio/) 2015 および 2017、Community Edition 以上で動作します。 
+この拡張機能は、[Visual Studio](https://docs.microsoft.com/visualstudio/) 2015 および 2017、Community Edition 以上で動作します。
 
-インストールするには、[Visual Studio Marketplace](http://aka.ms/vstoolsforai) または Visual Studio 内からダウンロードします 
+インストールするには、[Visual Studio Marketplace](http://aka.ms/vstoolsforai) または Visual Studio 内からダウンロードします
 
-1. **[ツール]** > **[拡張機能と更新プログラム]** を選択します 
+1. **[ツール]** > **[拡張機能と更新プログラム]** を選択します
 
 ![Windows に CUDA をインストールする](media\installation\extensions.png)
 

@@ -16,11 +16,11 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4ccdab053e06efc11b6f9c42d391d4b4fc1f85f7
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: d66a0e41f0c68d3d5c4378a664ef36aba0d869b7
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="extract-a-method-refactoring"></a>メソッドの抽出リファクタリング
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/09/2018
 
    - **キーボード**
      - **Ctrl + R** キーを押し、次に **Ctrl + M** キーを押します。 選ばれているプロファイルによってキーボード ショートカットが異なる場合があることに注意してください。
-     - **Ctrl + .** キーを押して、 **[クイック アクションとリファクタリング]** メニューをトリガーし、[プレビュー] ウィンドウ ポップアップから **[メソッドの抽出]** を選択します。
+     - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーし、[プレビュー] ウィンドウ ポップアップから **[メソッドの抽出]** を選択します。
    - **マウス**
      - **[編集] > [リファクター] > [メソッドの抽出]** の順に選択します。
      - コードを右クリックし **[リファクター] > [抽出] > [メソッドの抽出]** の順に選択します。
@@ -64,16 +64,16 @@ ms.lasthandoff: 02/09/2018
    > この新しい名前を使用するコメントなどの文字列も更新できます。また、IDE の右上に表示される **[名前の変更]** ボックス内のチェックボックスを使用して、保存前に[変更をプレビュー](../../ide/preview-changes.md)することもできます。
 
    - C#: 
-   
+
     ![メソッド名の変更 - C#](media/extractmethod-rename-cs.png)
 
    - Visual Basic: 
-   
+
     ![メソッド名の変更 - Visual Basic](media/extractmethod-rename-vb.png)
 
 1. 変更を確認した後は、**[適用]** ボタンを選ぶか、**Enter** キーを押すと、変更がコミットされます。
 
 ## <a name="see-also"></a>関連項目
 
-[リファクタリング](../refactoring-in-visual-studio.md)  
-[変更のプレビュー](../../ide/preview-changes.md)
+- [リファクタリング](../refactoring-in-visual-studio.md)
+- [変更のプレビュー](../../ide/preview-changes.md)

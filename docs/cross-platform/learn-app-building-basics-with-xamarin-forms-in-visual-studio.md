@@ -7,24 +7,25 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d22b5186-9e03-4e85-afc9-7cbe28522a6d
-caps.latest.revision: 
+ms.technology: vs-ide-mobile
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - xamarin
-ms.openlocfilehash: 3a066156f66a4e89132010a8c83edc7029dbe19e
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 71470cd03844c7761afbd07c9d454214f5dc36ca
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="learn-app-building-basics-with-xamarinforms-in-visual-studio"></a>Visual Studio での Xamarin Froms を使用したアプリ作成の基本事項
+
 [Setup and install](../cross-platform/setup-and-install.md) と [Verify your Xamarin environment](../cross-platform/verify-your-xamarin-environment.md)の手順を完了すると、このチュートリアルでは、Xamarin.Forms を使用して基本アプリ (下図) を構築する方法を示します。 Xamarin.Forms を使用して、すべての UI コードを .NET Standard クラス ライブラリにいったん記述します。 そうすると、Xamarin は、iOS、Android、およびユニバーサル Windows プラットフォームのネイティブ UI コントロールを自動的にレンダリングします。 (Shared Project ではなく) この方法が推奨されます。 .NET Standard ライブラリには、すべての対象プラットフォームでサポートされる .NET API のみが含まれ、Xamarin.Forms ではプラットフォーム全体で UI コードを共有できるためです。  
   
- ![Android、iOS、Windows でのお天気アプリのサンプル](../cross-platform/media/crossplat-xamarin-formsguide-1.png "CrossPlat Xamarin FormsGuide 1")  
+![Android、iOS、Windows でのお天気アプリのサンプル](../cross-platform/media/crossplat-xamarin-formsguide-1.png "CrossPlat Xamarin FormsGuide 1")  
   
- 作成するには次の作業を行います。  
+作成するには次の作業を行います。  
   
 -   [ソリューションの設定](#solution)  
   
@@ -37,10 +38,11 @@ ms.lasthandoff: 01/22/2018
 -   [プラットフォーム間で UI をネイティブの外観で終了する](#finish)  
   
 > [!TIP]
->  このプロジェクトの完全なソース コードは [GitHub の xamarin-forms-samples リポジトリ](https://github.com/xamarin/xamarin-forms-samples/tree/master/Weather)にあります。  
+> このプロジェクトの完全なソース コードは [GitHub の xamarin-forms-samples リポジトリ](https://github.com/xamarin/xamarin-forms-samples/tree/master/Weather)にあります。  
   
 ##  <a name="solution"></a> ソリューションの設定  
- 次の手順では、共有コードの .NET Standard クラス ライブラリと 2 つの追加された NuGet パッケージを含む Xamarin.Forms ソリューションを作成します。  
+
+次の手順では、共有コードの .NET Standard クラス ライブラリと 2 つの追加された NuGet パッケージを含む Xamarin.Forms ソリューションを作成します。  
   
 1.  Visual Studio で、新しい**クロスプラットフォーム アプリ (Xamarin.Forms)** ソリューションを作成し、名前を **WeatherApp** とします。 左側にある一覧から **[Visual C#]** と **[クロスプラットフォーム]** を選択して、テンプレートを探します。  
   
@@ -98,11 +100,12 @@ ms.lasthandoff: 01/22/2018
 7.  ソリューションをビルドし、ビルド エラーがないことを確認します。  
   
 ##  <a name="dataservice"></a> 共有データ サービス コードの記述  
- **WeatherApp** プロジェクトには、すべてのプラットフォームで共有されている .NET Standard ライブラリ用のコードを記述します。 このライブラリは、iOS、Android、Windows 用のプロジェクトによってビルドされたアプリ パッケージに自動的に含まれます。  
+
+**WeatherApp** プロジェクトには、すべてのプラットフォームで共有されている .NET Standard ライブラリ用のコードを記述します。 このライブラリは、iOS、Android、Windows 用のプロジェクトによってビルドされたアプリ パッケージに自動的に含まれます。  
   
- このサンプルを実行するには、まず [http://openweathermap.org/appid](http://openweathermap.org/appid) で無料の API キーを申し込む必要があります。  
+このサンプルを実行するには、まず [http://openweathermap.org/appid](http://openweathermap.org/appid) で無料の API キーを申し込む必要があります。  
   
- 次の手順では、.NET Standard ライブラリにコードを追加して、気象サービスからのデータにアクセスし、そのデータを格納します。  
+次の手順では、.NET Standard ライブラリにコードを追加して、気象サービスからのデータにアクセスし、そのデータを格納します。  
   
 1.  **WeatherApp** プロジェクトを右クリックし、**[追加]、[クラス...]** の順に選択します。**[新しい項目の追加]** ダイアログで、ファイルに **Weather.cs**という名前を指定します。 このクラスは、気象データ サービスからのデータを保存するときに使用します。  
   
@@ -206,7 +209,8 @@ ms.lasthandoff: 01/22/2018
 7.  **WeatherApp** ライブラリ プロジェクトをビルドし、コードが正しいことを確認します。  
   
 ##  <a name="uicode"></a> 共有 UI コードの記述の開始  
- Xamarin.Forms を使用すると、.NET Standard ライブラリに共有 UI コードを実装できます。 次の手順では、前のセクションで追加した気象データ サービスのコードで返されるデータでテキストを更新するボタンを持つページを、プロジェクトに追加します。  
+
+Xamarin.Forms を使用すると、.NET Standard ライブラリに共有 UI コードを実装できます。 次の手順では、前のセクションで追加した気象データ サービスのコードで返されるデータでテキストを更新するボタンを持つページを、プロジェクトに追加します。  
   
 1.  **WeatherApp** プロジェクトを右クリックし、**[追加] > [新しい項目]** の順に選択して、**WeatherPage.cs** という名前の**コンテンツ ページ**を追加します。**[新しい項目の追加]** ダイアログ ボックスで **[コンテンツ ページ]** を選択します。 **[コンテンツ ページ (C#)]** や **[コンテンツ ビュー]** を選択しないように注意してください。 これに **WeatherPage.cs** という名前を付けます。  
   
@@ -271,7 +275,8 @@ ms.lasthandoff: 01/22/2018
 5.  **WeatherApp** プロジェクトをビルドし、コードが正しいことを確認します。  
   
 ##  <a name="test"></a> Visual Studio Emulator for Android を使用してアプリをテストします。  
- これで、アプリを実行する準備ができました。 アプリが気象サービスからデータを取得していることを確認するには、今回は Android バージョンのみを実行します。 さらに UI 要素を追加した後で、iOS と UWP のバージョンも実行します。   
+
+これで、アプリを実行する準備ができました。 アプリが気象サービスからデータを取得していることを確認するには、今回は Android バージョンのみを実行します。 さらに UI 要素を追加した後で、iOS と UWP のバージョンも実行します。   
   
 1.  **WeatherApp.Android** プロジェクトをスタートアップ プロジェクトに設定するには、そのプロジェクトを右クリックし、**[スタートアップ プロジェクトに設定]** を選択します。  
   
@@ -284,7 +289,8 @@ ms.lasthandoff: 01/22/2018
      ![ボタンのタップ前後のお天気アプリ](../cross-platform/media/crossplat-xamarin-formsguide-8.png "CrossPlat Xamarin FormsGuide 8")  
   
 ##  <a name="finish"></a>UI の外観をすべてのプラットフォームについてネイティブなものにする  
- Xamarin.Forms は各プラットフォームのネイティブ UI コントロールをレンダリングして、アプリが自動的にネイティブな外観を持つようにします。 これをさらに見やすくするには、郵便番号用の入力フィールドで UI を終了し、サービスから返された気象データを表示します。  
+
+Xamarin.Forms は各プラットフォームのネイティブ UI コントロールをレンダリングして、アプリが自動的にネイティブな外観を持つようにします。 これをさらに見やすくするには、郵便番号用の入力フィールドで UI を終了し、サービスから返された気象データを表示します。  
   
 1.  **WeatherPage.xaml** の内容を次のコードで置き換えます。 前述のように **x:Name** 属性を使用して名前が付けられた要素は、コードから参照できます。 Xamarin.Forms では多数の[レイアウト オプション](http://developer.xamarin.com/guides/xamarin-forms/controls/layouts/) (xamarin.com) も提供しています。 ここでは、WeatherPage は [Grid](http://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) (xamarin.com) と [StackLayout](http://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) (xamarin.com) を使用しています。  
   
@@ -398,4 +404,4 @@ ms.lasthandoff: 01/22/2018
   
      ![Android、iOS、Windows Phone でのお天気アプリのサンプル](../cross-platform/media/crossplat-xamarin-formsguide-1.png "CrossPlat Xamarin FormsGuide 1")  
   
- このプロジェクトの完全なソース コードは [GitHub の xamarin-forms-samples リポジトリ](https://github.com/xamarin/xamarin-forms-samples/tree/master/Weather)にあります。
+このプロジェクトの完全なソース コードは [GitHub の xamarin-forms-samples リポジトリ](https://github.com/xamarin/xamarin-forms-samples/tree/master/Weather)にあります。

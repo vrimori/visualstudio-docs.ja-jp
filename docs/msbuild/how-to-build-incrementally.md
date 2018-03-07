@@ -18,11 +18,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 622daf457935514cb1f5a512712be6f70e4e648e
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: eaebea1fea86339badd7882c7436087ae555b7b5
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-build-incrementally"></a>方法 : インクリメンタル ビルドを実行する
 大規模なプロジェクトをビルドする場合、今でも最新の以前にビルドされたコンポーネントが再ビルドされないことが重要です。 すべてのターゲットが毎回ビルドされると、各ビルドが完了するのに長い時間がかかります。 インクリメンタル ビルド (ビルド内の以前にビルドされていないターゲット、または古くなっているターゲットだけが再ビルドされます) を有効にするため、[!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) は入力ファイルのタイムスタンプと出力ファイルのタイムスタンプを比較して、ターゲットをスキップ、ビルド、または部分的に再ビルドするかどうかを判断できます。 ただし、入力と出力の間に一対一のマッピングが必要です。 変換を使用して、ターゲットがこの直接マッピングを識別できるようにすることができます。 変換の詳細については、「[MSBuild 変換](../msbuild/msbuild-transforms.md)」を参照してください。  
@@ -80,7 +80,7 @@ ms.lasthandoff: 02/09/2018
   
     <ItemGroup>  
         <TXTFile Include="*.txt"/>  
-        <XMLFile Include="\metadata\*.xml"/>  
+        <XMLFiles Include="\metadata\*.xml"/>  
     </ItemGroup>  
   
     <Target Name = "Convert"  
@@ -100,7 +100,7 @@ ms.lasthandoff: 02/09/2018
   
         <BuildHelp  
             ContentFiles = "@(ContentFiles)"  
-            MetadataFiles = "@(XMLFile)"  
+            MetadataFiles = "@(XMLFiles)"  
             OutputFileName = "$(MSBuildProjectName).help"/>  
     </Target>  
 </Project>  

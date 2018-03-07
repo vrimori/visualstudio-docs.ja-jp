@@ -1,13 +1,19 @@
 ---
+ms.technology: vs-ai-tools
+ms.openlocfilehash: 73292b9e0c7df23db839a7a13f70dbc2432d564f
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="clone-a-repository-of-python-code-in-visual-studio"></a>Visual Studio で Python コードのリポジトリを複製する
 
 [Visual Studio Tools for AI をインストール](installation.md)すると、Python コードのリポジトリを簡単に複製し、それからプロジェクトを作成できます。
 
 1. GitHub リポジトリに接続するには、Visual Studio インストーラーを実行し、**[変更]** を選択し、**[個別のコンポーネント]** タブを選択します。下方にスクロールして **[コード ツール]** セクションを表示し、**[Visual Studio 向け GitHub 拡張]** を選択し、**[変更]** を選択します。
-    
+
     ![Visual Studio インストーラーでの GitHub 拡張機能の選択](media\create-project-repo\installation-github-extension.png)
-    
+
 2. Visual Studio を起動します。
 
 3. **[ビュー]、[チーム エクスプローラー]** の順に選択し、**[チーム エクスプローラー]** ウィンドウを開きます。ここでは、GitHub または Visual Studio Team Services に接続したり、リポジトリを複製したりできます。

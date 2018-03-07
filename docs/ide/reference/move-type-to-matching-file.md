@@ -14,11 +14,11 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 62187c88fa2d2cf7ecf1b358fa0c03416be449a8
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 87619c7938afdf92da6ca1b03c3090ad7d72834c
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="move-a-type-to-a-matching-file-refactoring"></a>一致するファイルへの型の移動リファクタリング
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/09/2018
 1. 次に、以下のいずれかを実行します。
 
    - **キーボード**
-     - **Ctrl + .** キーを押して、 **[クイック アクションとリファクタリング]** メニューをトリガーし、[プレビュー] ウィンドウ ポップアップ から **[型を *TypeName*.cs に移動]** を選択します。ここで、*TypeName* は選択した型の名前です。
+     - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーし、[プレビュー] ウィンドウ ポップアップ から **[型を *TypeName*.cs に移動]** を選択します。ここで、*TypeName* は選択した型の名前です。
    - **マウス**
      - コードを右クリックして **[クイック アクションとリファクタリング]** メニューを選択し、[プレビュー] ウィンドウ ポップアップ から **[型を *TypeName*.cs に移動]** を選択します。ここで、*TypeName* は選択した型の名前です。
 
