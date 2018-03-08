@@ -1,13 +1,14 @@
 ---
 layout: HubPage
-hide_bc: True
+hide_bc: 
 title: "Visual Studio のドキュメント | Microsoft Docs"
 description: "Visual Studio 2017 を使って、アプリケーション、サービス、ツールを、任意の言語で、特定のプラットフォームやデバイス向けに開発する方法について説明します。"
-ms.openlocfilehash: 3875594d51eeb54322eed2fbe423f045c6aa1d4a
-ms.sourcegitcommit: 64c7682ec3a2cbea684e716803398d4278b591d1
+ms.topic: hub-page
+ms.openlocfilehash: dfd72526fc24ae3b0a33014b8b8ac23e350fb6cf
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 03/08/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -185,7 +186,7 @@ ms.lasthandoff: 12/15/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>バージョン管理</h3>
+                                                    <h3>バージョン コントロール</h3>
                                                     <p>Git や TFVC などのバージョン コントロール テクノロジを使ってコードを共有します。</p>
                                                 </div>
                                             </div>
