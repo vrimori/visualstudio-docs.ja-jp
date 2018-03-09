@@ -15,11 +15,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 01e6203d7fbef7115ea2e380494735888995e343
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 7a8f7343ceea2510c6ba8835c90bcb80b946fe91
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="view-snapshots-using-intellitrace-step-back-in-visual-studio"></a>Visual Studio で IntelliTrace を使用してスナップショットの表示手順ライトバック
 
@@ -107,5 +107,7 @@ IntelliTrace ステップ ライトバックは Visual Studio Enterprise 2017 15
 
     回避策:
     * すべてのスナップショットをオフには、デバッグ セッションを終了します。 
+
+* アプリケーションがプロセスには、多数のアプリケーションでは、Dll の数が多いなどの一意のメモリ領域をデバッグするときにスナップショットが有効になっているとパフォーマンスをステップ実行受ける可能性があります。 Windows の将来のバージョンでは、この問題が修正されます。 この問題が発生する場合に到達でお知らせstepback@microsoft.comです。 
 
 * 持つファイルを保存するときに**デバッグ > IntelliTrace > の保存の IntelliTrace セッション**イベントとスナップショット モードの場合、スナップショットからキャプチャされた追加のデータは、.itrace ファイルにします。 ブレークポイントおよびステップのイベントには、IntelliTrace イベントのみのモードでファイルを保存した場合と同じ情報が表示されます。 
