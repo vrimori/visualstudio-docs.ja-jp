@@ -113,6 +113,6 @@ ms.lasthandoff: 01/29/2018
 *こちらで最新情報を確認してください*
 
 ## <a name="support-resources"></a>サポート リソース
--  ModernRequirements 製品のヘルプが必要ですか。  Https://www.modernrequirements.com/support-2/ を参照してください。
+-  ModernRequirements 製品のヘルプが必要ですか。  https://www.modernrequirements.com/support-2/ を参照してください。
 -  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)にお問い合わせください。
 -  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://www.visualstudio.com/support/)にアクセスしてください。 
