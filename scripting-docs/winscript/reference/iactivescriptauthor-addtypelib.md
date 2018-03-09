@@ -40,7 +40,7 @@ HRESULT AddTypeLib(
   
 #### <a name="parameters"></a>パラメーター  
  `rguidTypeLib`  
- [in](クラス id) の CLSID、タイプ ライブラリを追加します。  
+ [in]\(クラス id) の CLSID、タイプ ライブラリを追加します。  
   
  `dwMajor`  
  [in]メジャー バージョン番号。  
