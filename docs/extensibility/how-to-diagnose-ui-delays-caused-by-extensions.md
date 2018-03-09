@@ -12,11 +12,11 @@ author: PooyaZv
 ms.author: pozandev
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 9dede2f30a9d91e94bda3183deaae337e4c556dc
-ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
+ms.openlocfilehash: dffc67e550cb57f9f089e180ff399f27c817d253
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-diagnose-ui-delays-caused-by-extensions"></a>方法: 診断 UI 拡張機能による遅延のため
 
@@ -44,7 +44,7 @@ UI が応答しない状態になると、Visual Studio は、リーフで始ま
 
 ## <a name="identifying-the-trigger-scenario"></a>トリガーのシナリオを識別します。
 
-UI の遅延を診断するため、まずする必要 idetify どの (アクションのシーケンス) が原因で Visual Studio で、通知を表示します。 これは、ログ記録をオンになっていると通知を後で実行することにあります。
+UI の遅延を診断するためは、まず、どのような (アクションのシーケンス) が原因で、通知を表示する Visual Studio を識別する必要があります。 これは、ログ記録をオンになっていると通知を後で実行することにあります。
 
 ## <a name="restarting-vs-with-activity-logging-on"></a>アクティビティのログ記録で VS を再起動します。
 
@@ -158,3 +158,5 @@ PerfView は [ヘルプ] メニューで、コードでパフォーマンスの�
 * [https://aka.ms/vsthreading](https://aka.ms/vsthreading)
 * [https://aka.ms/vsthreadingcookbook](https://aka.ms/vsthreadingcookbook)
 
+> [!NOTE]
+> 経由で制御する必要は依存関係によりを通常どおりに対応していない場合 (例: 拡張機能は、UI スレッドで同期の VS サービスを呼び出す必要かどうか)、それについて認識しております。 場合は、Visual Studio パートナー プログラムのメンバーでは、弊社までご連絡開発者サポート リクエストを送信しています。 それ以外の場合、ツールを使用して、問題を報告する に、フィードバックを送信し、含める`"Extension UI Delay Notifications"`タイトルにします。 また、分析の詳細な説明を含めてください。
