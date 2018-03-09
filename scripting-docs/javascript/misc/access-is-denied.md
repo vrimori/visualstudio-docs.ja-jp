@@ -30,11 +30,11 @@ ms.lasthandoff: 10/27/2017
   
  たとえば、現在のページが https://employees.mycompany.com の場合、以下の URL からデータにアクセスすることはできません。  
   
--   http://data.contoso.com、HTTPS ではなく HTTP を使用しているためです。  
+-   http://data.contoso.com 、HTTPS ではなく HTTP を使用しているためです。  
   
--   https://somedatasource.com、別のドメインになっているためです。  
+-   https://somedatasource.com 、別のドメインになっているためです。  
   
--   https://employees.mycompany.com:8888、別のポートを使用しているためです。  
+-   https://employees.mycompany.com:8888 、別のポートを使用しているためです。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
