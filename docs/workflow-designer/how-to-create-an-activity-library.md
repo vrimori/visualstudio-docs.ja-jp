@@ -1,54 +1,51 @@
 ---
 title: "方法: アクティビティ ライブラリを作成 |Microsoft ドキュメント"
-ms.custom: 
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1eeebe74-7303-4345-8a83-fe37a26bc84b
-caps.latest.revision: "12"
-author: ErikRe
-ms.author: erikre
-manager: erikre
-ms.workload: multiple
-ms.openlocfilehash: e2dc5245dd50fd2a5211d55107e537fbc8eb6eb8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.workload:
+- multiple
+ms.openlocfilehash: 151e3f84636273de253937ebf5c91cff066b9f85
+ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-create-an-activity-library"></a>アクティビティ ライブラリを作成する方法
-カスタム アクティビティは、ワークフローで特定のビジネス プロセスをモデル化するために使用されます。 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] のアクティビティ ライブラリ テンプレートでは、[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]を使用して、こうしたカスタム アクティビティを視覚的に作成できます。  
-  
-### <a name="to-create-a-workflow-activity-library"></a>ワークフロー アクティビティ ライブラリを作成するには  
-  
-1.  [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] を起動します。  
-  
-2.  **ファイル**] メニューのをポイント**新規**、し、[**プロジェクト.**.  
-  
-     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
-  
-3.  **プロジェクトの種類**ペインで、**ワークフロー**いずれかから、 **Visual c#**プロジェクトまたは**Visual Basic**に応じてグループ化、言語の優先順位。  
-  
-4.  **テンプレート**ペインで、**アクティビティ ライブラリ**です。  
-  
-5.  **名前** ボックスを識別しやすく、プロジェクトのわかりやすい名前を入力します。  
-  
-6.  **場所**ボックスで、プロジェクトを保存ディレクトリ タイプで**参照**まで移動します。  
-  
-7.  **ソリューション**ボックスに、ソリューションのわかりやすい名前を入力し、をクリックして**OK**です。  
-  
+カスタム アクティビティは、ワークフローで特定のビジネス プロセスをモデル化するために使用されます。 アクティビティ ライブラリ テンプレートで[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]視覚的に、Windows ワークフロー デザイナーを使用してこのようなカスタム アクティビティを作成するために用意されています。
+
+### <a name="to-create-a-workflow-activity-library"></a>ワークフロー アクティビティ ライブラリを作成するには
+
+1.  [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] を起動します。
+
+2.  **ファイル**] メニューのをポイント**新規**、し、[**プロジェクト.**.
+
+     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
+
+3.  **プロジェクトの種類**ペインで、**ワークフロー**いずれかから、 **Visual c#**プロジェクトまたは**Visual Basic**に応じてグループ化、言語の優先順位。
+
+4.  **テンプレート**ペインで、**アクティビティ ライブラリ**です。
+
+5.  **名前** ボックスを識別しやすく、プロジェクトのわかりやすい名前を入力します。
+
+6.  **場所**ボックスで、プロジェクトを保存ディレクトリ タイプで**参照**まで移動します。
+
+7.  **ソリューション**ボックスに、ソリューションのわかりやすい名前を入力し、をクリックして**OK**です。
+
     > [!NOTE]
-    >  ワークフロー コンソール アプリケーションを既存のソリューションに追加する場合でそのソリューションを開きます[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]で、ソリューションを右クリックして**ソリューション エクスプ ローラー**を選択して**追加**、し**新しいプロジェクト.**を開くには、**新しいプロジェクト** ダイアログ ボックス。 上記の手順を実行します。  
-  
-8.  プロジェクト テンプレートによって、XAML でアクティビティ定義が作成されます。 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] で、カスタム アクティビティ用のキャンバスが開かれて表示されます。  
-  
-9. アクティビティをドラッグして、**ツールボックス**に、カスタム アクティビティに含めるデザイン画面にします。  
-  
+    > ワークフロー コンソール アプリケーションを既存のソリューションに追加する場合でそのソリューションを開きます[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]で、ソリューションを右クリックして**ソリューション エクスプ ローラー**を選択して**追加**、し**新しいプロジェクト.**を開くには、**新しいプロジェクト** ダイアログ ボックス。 上記の手順を実行します。
+
+8.  プロジェクト テンプレートによって、XAML でアクティビティ定義が作成されます。 Windows ワークフロー デザイナーが開き、カスタム アクティビティ用のキャンバスを表示します。
+
+9. アクティビティをドラッグして、**ツールボックス**に、カスタム アクティビティに含めるデザイン画面にします。
+
     > [!CAUTION]
-    >  カスタム アクティビティの本体に含めることができる子アクティビティは 1 つのみです。ただし、その子アクティビティは、<xref:System.Activities.Statements.Sequence> アクティビティや <xref:System.Activities.Statements.Flowchart> アクティビティなどの複合アクティビティにすることができます。  
-  
-## <a name="see-also"></a>参照  
- [方法: アクティビティを作成します。](/dotnet/framework/windows-workflow-foundation/how-to-create-an-activity)   
- [ワークフロー プロジェクトの作成](../workflow-designer/creating-a-workflow-project.md)
+    > カスタム アクティビティの本体に含めることができる子アクティビティは 1 つのみです。ただし、その子アクティビティは、<xref:System.Activities.Statements.Sequence> アクティビティや <xref:System.Activities.Statements.Flowchart> アクティビティなどの複合アクティビティにすることができます。
+
+## <a name="see-also"></a>関連項目
+
+- [アクティビティを作成する方法](/dotnet/framework/windows-workflow-foundation/how-to-create-an-activity)
+- [ワークフロー プロジェクトの作成](../workflow-designer/creating-a-workflow-project.md)
