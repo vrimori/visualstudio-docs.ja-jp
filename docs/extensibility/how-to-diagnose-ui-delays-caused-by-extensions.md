@@ -12,11 +12,11 @@ author: PooyaZv
 ms.author: pozandev
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: dffc67e550cb57f9f089e180ff399f27c817d253
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 714d047cda7a167045983f5068a425d0d82823ea
+ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-diagnose-ui-delays-caused-by-extensions"></a>方法: 診断 UI 拡張機能による遅延のため
 
@@ -157,6 +157,8 @@ PerfView は [ヘルプ] メニューで、コードでパフォーマンスの�
 
 * [https://aka.ms/vsthreading](https://aka.ms/vsthreading)
 * [https://aka.ms/vsthreadingcookbook](https://aka.ms/vsthreadingcookbook)
+
+拡張機能の新しい Visual Studio の静的アナライザーを使用することもできます (NuGet パッケージ[ここ](https://www.nuget.org/packages/microsoft.visualstudio.sdk.analyzers))、効率的な拡張機能を記述するためのベスト プラクティスに関するガイダンスを提供します。 一覧を参照してください[VS SDK アナライザー](https://github.com/Microsoft/VSSDK-Analyzers/blob/master/doc/index.md)と[スレッドのアナライザー](https://github.com/Microsoft/vs-threading/blob/master/doc/analyzers/index.md)です。
 
 > [!NOTE]
 > 経由で制御する必要は依存関係によりを通常どおりに対応していない場合 (例: 拡張機能は、UI スレッドで同期の VS サービスを呼び出す必要かどうか)、それについて認識しております。 場合は、Visual Studio パートナー プログラムのメンバーでは、弊社までご連絡開発者サポート リクエストを送信しています。 それ以外の場合、ツールを使用して、問題を報告する に、フィードバックを送信し、含める`"Extension UI Delay Notifications"`タイトルにします。 また、分析の詳細な説明を含めてください。
