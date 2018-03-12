@@ -10,11 +10,11 @@ Description: Welcome to Visual Studio Subscriptions
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: a7768be8726fe38ade6857993b67c1c32f8611aa
-ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
+ms.openlocfilehash: a2d1d0bc8f443953477a4178780621d16fd7aa39
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="visual-studio-subscriptions"></a>Visual Studio サブスクリプション
 Visual Studio サブスクリプションは、Windows、iOS、Android、Linux など、お好みのプラットフォームとデバイス上で優れたアプリケーションを作成、展開、管理するための包括的なリソース セットです。  サブスクリプションの特典には、開発ツール、クラウドのサービスとソフトウェア、トレーニングの利用が含まれ、開発およびテストのサポートも含まれます。
@@ -137,14 +137,14 @@ Visual Studio サブスクリプションは、Windows、iOS、Android、Linux �
 ---
 
 <h2>利点</h2>
-<ul class="panelContent cardsW">
+<ul class="cardsD cols cols3">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
                         <h3>開発者用ツール</h3>
-                        <p>Android、iOS、Windows、macOS、Web、クラウドのアプリ開発、他のクロスプラットフォーム ツール向けの全機能の揃った最新バージョンの Visual Studio IDE を PC または Mac で利用できます。</p>
+                        <p>Android、iOS、Windows、macOS、Web、クラウドのアプリ開発、他のクロスプラットフォーム ツール向けの全機能が揃った最新バージョンの Visual Studio IDE を PC または Mac で利用できます。</p>
                         <ul>
                             <li><a href="/visualstudio/subscriptions/vs-ide-benefit">Visual Studio</a></li>
                             <li>Visual Studio for Mac</li>

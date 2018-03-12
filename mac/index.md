@@ -6,11 +6,11 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 3A130EC1-DD8C-4125-9034-B08D7AF7EA65
-ms.openlocfilehash: bc836806e1acf33b35604419ac1d6aad41a2d795
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: d12331bd074f77db83ae4574195b8b6f7e5c452a
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="introducing-visual-studio-for-mac"></a>Visual Studio for Mac の概要
 
@@ -22,9 +22,9 @@ Visual Studio for Mac は、モバイル、デスクトップ、および Web �
 * ASP.NET Core Web アプリケーション
 * クロスプラットフォーム Unity ゲーム
 
-リッチ エディター、デバッグ、iOS、Mac、および Android とのネイティブ プラットフォーム統合、統合ソース制御などを含む、多数の機能があります。
+リッチ エディター、デバッグ、iOS、Mac、および Android とのネイティブ プラットフォーム統合、統合ソース制御などの機能があります。
 
-このトピックでは、Visual Studio for Mac の多様なセクションについて説明し、クロスプラットフォーム アプリケーションを作成する場合に強力なツールになる機能の一部を紹介します。
+この記事では、Visual Studio for Mac の多様なセクションについて説明し、クロスプラットフォーム アプリケーションを作成する場合に強力なツールになる機能の一部を紹介します。
 
 ## <a name="installation"></a>インストール
 
@@ -36,7 +36,7 @@ Visual Studio for Mac は、既定で C# と F# での開発をサポートし�
 
 ### <a name="c"></a>C#
 
-Visual Studio for Mac でクロスプラットフォーム アプリケーションを作成する場合、C# が最もよく使用される言語です。 すべての C# 7 機能の完全なサポートが含まれています。
+Visual Studio for Mac でクロスプラットフォーム アプリケーションを作成する場合、C# が最もよく使用される言語です。 IDE にはすべての C# 7 機能の完全なサポートが含まれています。
 
 ### <a name="f"></a>F#
 
@@ -71,11 +71,11 @@ F# は、.NET 上で実行するように設計されている、厳密に型指
 
 Visual Studio には、独自の統合 Android SDK マネージャーがあります。
 
-Android アプリケーションの場合、Visual Studio for Mac には独自のデザイナーがあり、Android の `.axml` ファイルと連携してユーザー インターフェイスを視覚的に構築できます。 Visual Studio for Mac は次のように Android デザイナーでこれらのファイルを開きます。
+Android アプリケーションの場合、Visual Studio for Mac には独自のデザイナーがあり、Android の `.axml` ファイルと連携してユーザー インターフェイスを視覚的に構築できます。 Visual Studio for Mac は次の画像のように Android デザイナーでこれらのファイルを開きます。
 
 ![](media/intro-image31.png)
 
-Android デザイナーの詳細については、「[Designer Overview](https://developer.xamarin.com/Android/Guides/User_Interface/Designer_Overview)」(デザイナーの概要) ドキュメントを参照してください。
+Android デザイナーの詳細については、[デザイナーの概要](https://developer.xamarin.com/Android/Guides/User_Interface/Designer_Overview)に関するドキュメントを参照してください。
 
 ### <a name="ios"></a>iOS
 
@@ -83,7 +83,7 @@ iOS Designer は Visual Studio for Mac と完全に統合されているので�
 
 ![](media/intro-image30.png)
 
-iOS Designer の使用方法については、[Designer](https://developer.xamarin.com/guides/ios/user_interface/designer) のドキュメントを参照してください。
+iOS Designer の使用方法については、[Designer](https://developer.xamarin.com/guides/ios/user_interface/designer) に関するドキュメントを参照してください。
 
 ### <a name="mac"></a>Mac
 
@@ -114,12 +114,12 @@ Xamarin Inspector は、対話型 C# コンソールとツールをユーザー�
 
 多様なプログラミング プラットフォーム (Android、iOS、Mac、および Windows) を対象にすることができる高機能な C# コンソールを提供するスタンドアロン アプリケーションと、IDE のデバッグ ワークフローへの統合から構成されます。
 
-詳細については、[Xamarin Inspector](https://developer.xamarin.com/guides/cross-platform/inspector/) のガイドを参照してください。
+詳細については、「[Xamarin Inspector](https://developer.xamarin.com/guides/cross-platform/inspector/)」のガイドを参照してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 * **全体像の把握** - Visual Studio for Mac の数多くの主要な機能の概要について、[IDE ツアー](~/ide-tour.md)を参照してください。
-* **セットアップ** - Visual Studio をダウンロードしてインストールする方法については、「[インストール](~/installation.md)」ガイドを参照してください。
+* **セットアップ** - Visual Studio をダウンロードしてインストールする方法については、[インストール](~/installation.md)に関するガイドを参照してください。
 * **Xamarin チュートリアル** - Xamarin を使用してコードを開発する詳細な方法については、Xamarin の [Developer Center](https://developer.xamarin.com) を参照してください。
 * **ビデオ** - Visual Studio for Mac の他の機能や側面の詳細については、[Xamarin University](https://university.xamarin.com) Web サイトのビデオをご覧ください。
 * **ハンズオン ラボ** - Visual Studio for Mac に含まれている多様なワークロードの基本的な使用方法については、[ハンズオン ラボ](https://github.com/Microsoft/vs4mac-labs)を参照してください。

@@ -8,7 +8,7 @@
 
 # [ユーザー アカウント](user-accounts.md)
 ## [サインイン](signing-in.md)
-## [アクティベーション](activation.md)
+## [サブスクリプションの有効化](activation.md)
 
 # [IDE のカスタマイズ](customizing-the-ide.md)
 ## [Visual Studio for Mac の拡張](extending-visual-studio-mac.md)
