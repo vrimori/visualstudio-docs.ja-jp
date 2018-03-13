@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -20,7 +21,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 1a8c8eff138e2c736750040dc896e610975c25ab
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -88,7 +90,7 @@ ms.lasthandoff: 01/10/2018
 5.  リボンで、選択、**開発者**タブです。  
   
     > [!NOTE]  
-    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、「 [How to: Show the Developer Tab on the Ribbon](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)」を参照してください。  
+    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、「 [方法 : [開発] タブをリボンに表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)」を参照してください。  
   
 6.  **コントロール**グループで、選択、**テキスト**ボタン![PlainTextContentControl](../vsto/media/plaintextcontrol.gif "PlainTextContentControl") を追加する<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>最初のセルにします。  
   
@@ -317,7 +319,7 @@ ms.lasthandoff: 01/10/2018
   
 -   文書を閉じた状態でカスタム XML 部分のデータを変更できます。 その文書を次にユーザーが開いたときには、XML 要素にバインドされたコンテンツ コントロールに新しいデータが表示されます。  
   
--   コンテンツ コントロールを使用して文書の一部を保護できます。 詳細については、「 [How to: Protect Parts of Documents by Using Content Controls](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)」を参照してください。  
+-   コンテンツ コントロールを使用して文書の一部を保護できます。 詳細については、「 [方法 : コンテンツ コントロールを使用して文書を保護する](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   

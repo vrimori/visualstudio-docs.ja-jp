@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,7 +19,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: dcf309bbfdd608a4ca93809804c51006ce7c2dd7
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -28,7 +30,7 @@ ms.lasthandoff: 01/10/2018
 # <a name="walkthrough-adding-controls-to-a-document-at-run-time-in-a-vsto-add-in"></a>チュートリアル: 実行時における VSTO アドインの文書へのコントロールの追加
   VSTO アドインを使用して、開いている Microsoft Office の Word 文書にコントロールを追加できます。 このチュートリアルでは、リボンを使用してユーザーがドキュメントに <xref:Microsoft.Office.Tools.Word.Controls.Button> または <xref:Microsoft.Office.Tools.Word.RichTextContentControl> を追加できるようにする方法を説明します。  
   
- **対象:** このトピックの情報は、Word 2010 の VSTO アドインのプロジェクトに適用されます。 詳細については、「 [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md)」を参照してください。  
+ **対象:** このトピックの情報は、Word 2010 の VSTO アドインのプロジェクトに適用されます。 詳細については、「[Office アプリケーションおよびプロジェクトの種類別の使用可能な機能](../vsto/features-available-by-office-application-and-project-type.md)」を参照してください。  
   
  このチュートリアルでは、次の作業について説明します。  
   

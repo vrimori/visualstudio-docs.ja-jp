@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,7 +19,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 9af7c7dd4a4c56cbd872b757704d64afd22c6101
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -191,7 +193,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="next-steps"></a>次の手順  
  ここでは、次のタスクを行います。  
   
--   Excel 内のホスト コントロールのイベントに応答するコードを作成します。 詳細については、「 [Walkthrough: Programming Against Events of a NamedRange Control](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)」を参照してください。  
+-   Excel 内のホスト コントロールのイベントに応答するコードを作成します。 詳細については、「 [チュートリアル : NamedRange コントロールのイベントのプログラミング](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)」を参照してください。  
   
 -   チェック ボックスを使用してブックマーク内の書式を変更します。 詳細については、次を参照してください。[チュートリアル: を変更するドキュメントの書式設定 チェック ボックス コントロールを使用した](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)です。  
   
