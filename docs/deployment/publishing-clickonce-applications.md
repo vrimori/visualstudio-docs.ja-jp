@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-deployment
+ms.technology:
+- vs-ide-deployment
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,11 +21,12 @@ helpviewer_keywords:
 - applications [Visual Studio], ClickOnce deployment
 - deploying applications [ClickOnce], publishing ClickOnce applications
 ms.assetid: eb6dfe79-f54c-4331-8e36-073688e70973
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: 02b5f2477a18f3432bc255b9bd17a2ac11fbc030
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
@@ -65,7 +67,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="application-files-dialog-box"></a>[アプリケーション ファイル] ダイアログ ボックス  
  このダイアログ ボックスでは、発行、動的ダウンロード、および更新のために、プロジェクト内のファイルを分類する方法を指定できます。 このダイアログ ボックスには、既定では除外されないプロジェクト ファイル、またはダウンロード グループのあるプロジェクト ファイルを一覧にしたグリッドが含まれています。  
   
- ファイルを除外するファイルをデータ ファイルや、前提条件としてマークし、Visual Studio UI で条件付きでインストールするファイルのグループを作成するを参照してください[する方法: 指定するファイル ClickOnce で発行される](../deployment/how-to-specify-which-files-are-published-by-clickonce.md)です。 また、Mage.exe を使用してデータ ファイルにマークすることもできます。 詳細については、「 [How to: Include a Data File in a ClickOnce Application](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)」を参照してください。  
+ ファイルを除外するファイルをデータ ファイルや、前提条件としてマークし、Visual Studio UI で条件付きでインストールするファイルのグループを作成するを参照してください[する方法: 指定するファイル ClickOnce で発行される](../deployment/how-to-specify-which-files-are-published-by-clickonce.md)です。 また、Mage.exe を使用してデータ ファイルにマークすることもできます。 詳細については、「 [方法 : ClickOnce アプリケーションにデータ ファイルを含める](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)」を参照してください。  
   
 ### <a name="prerequisites-dialog-box"></a>[必須コンポーネント] ダイアログ ボックス  
  このダイアログ ボックスでは、必須コンポーネントとしてインストールするコンポーネントおよびそのインストール方法を指定します。 詳細については、次を参照してください。[する方法: ClickOnce アプリケーションと共に必須コンポーネントをインストール](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)と[の前提条件 ダイアログ ボックス](../ide/reference/prerequisites-dialog-box.md)です。  

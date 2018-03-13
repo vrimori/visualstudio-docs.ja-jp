@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,7 +31,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: a614173fc33547c3512c031b7e0bd8a5575e7cb2
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -130,7 +132,7 @@ Globals.ThisDocument.Save();
 ## <a name="managing-documents-on-a-server"></a>サーバー上のドキュメントの管理  
  Microsoft Office Word または Microsoft Office Excel がインストールされていないサーバーで、ドキュメント レベルのカスタマイズのさまざまな要素を管理することができます。 たとえば、ドキュメントのデータ キャッシュにあるデータにアクセスし、変更することができます。 また、ドキュメントに関連付けられているカスタマイズ アセンブリも管理できます。 たとえば、プログラムを使用してドキュメントからアセンブリを削除して、ドキュメントがコードを実行しないようにしたり、プログラムを使用してアセンブリをドキュメントにアタッチすることができます。  
   
- 詳細については、「 [Managing Documents on a Server by Using the ServerDocument Class](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)」を参照してください。  
+ 詳細については、「 [ServerDocument クラスによるサーバー上のドキュメントの管理](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)」を参照してください。  
   
 ## <a name="customizing-the-user-interface-of-microsoft-office-applications"></a>Microsoft Office アプリケーションのユーザー インターフェイスをカスタマイズする  
  ドキュメント レベルのカスタマイズを使用して、次の方法で、Excel や Word の UI をカスタマイズできます。  
@@ -165,7 +167,7 @@ Globals.ThisDocument.Save();
   
 -   GetVstoObject メソッドは、ネイティブ Office オブジェクトに対して拡張オブジェクトを取得する場合に使用します。 このメソッドは、指定したネイティブの Office オブジェクトに拡張オブジェクトがあれば、 <xref:Microsoft.Office.Tools.Excel.ListObject>、 <xref:Microsoft.Office.Tools.Excel.Workbook>、 <xref:Microsoft.Office.Tools.Excel.Worksheet>、または <xref:Microsoft.Office.Tools.Word.Document> オブジェクトを返します。 Getvstoobject メソッドを返しますそれ以外の場合、 **null**です。 たとえば、GetVstoObject メソッドが返されます、<xref:Microsoft.Office.Tools.Word.Document>場合、指定した<xref:Microsoft.Office.Interop.Word.Document>Word ドキュメント プロジェクトのドキュメントの基になるオブジェクトです。  
   
- ドキュメント レベルのプロジェクトでは、新しい GetVstoObject メソッドを使うことはできません<xref:Microsoft.Office.Tools.Excel.Workbook>、 <xref:Microsoft.Office.Tools.Excel.Worksheet>、または<xref:Microsoft.Office.Tools.Word.Document>ホスト項目を実行時にします。 このメソッドは、デザイン時にプロジェクトで生成される既存のホスト項目へのアクセスにのみ使用できます。 実行時に新しいホスト項目を作成する場合は、VSTO アドイン プロジェクトを開発する必要があります。 詳細については、次のトピックを参照してください。 [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md) および [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).  
+ ドキュメント レベルのプロジェクトでは、新しい GetVstoObject メソッドを使うことはできません<xref:Microsoft.Office.Tools.Excel.Workbook>、 <xref:Microsoft.Office.Tools.Excel.Worksheet>、または<xref:Microsoft.Office.Tools.Word.Document>ホスト項目を実行時にします。 このメソッドは、デザイン時にプロジェクトで生成される既存のホスト項目へのアクセスにのみ使用できます。 実行時に新しいホスト項目を作成する場合は、VSTO アドイン プロジェクトを開発する必要があります。 詳細については、次のトピックを参照してください。 [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md) および [VSTO アドインにおける実行時の Word 文書と Excel ブックの拡張](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).  
   
 ## <a name="using-the-getvstoobject-and-hasvstoobject-methods"></a>GetVstoObject メソッドと HasVstoObject メソッドの使用  
  HasVstoObject と GetVstoObject メソッドを呼び出すには、Globals.Factory.GetVstoObject または Globals.Factory.HasVstoObject メソッドを使用し、ネイティブの Word または Excel オブジェクトを渡す (など、<xref:Microsoft.Office.Interop.Word.Document>または<xref:Microsoft.Office.Interop.Excel.Worksheet>) テストを実行します。  

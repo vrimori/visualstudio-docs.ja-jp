@@ -37,7 +37,7 @@ ms.lasthandoff: 01/29/2018
 
 外部コンポーネントまたは接続しているサービスを使用するためにコードを記述する前に、あらかじめプロジェクトにそのコンポーネントへの参照を追加しておく必要があります。 参照は、本質的には、Visual Studio がコンポーネントまたはサービスを検索するために必要な情報を含むプロジェクト ファイル内のエントリです。
 
-参照を追加するには、ソリューション エクスプローラーで参照ノードを右クリックして **[参照の追加]**を選択します。 詳細については、「 [How to: Add or Remove References By Using the Reference Manager](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)」を参照してください。
+参照を追加するには、ソリューション エクスプローラーで参照ノードを右クリックして **[参照の追加]**を選択します。 詳細については、「 [方法: 参照マネージャーを使用して参照を追加または削除する](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)」を参照してください。
 
 ![Visual C&#43;&#43; での参照の追加](../ide/media/vs2015_cpp_add_reference.png "vs2015_cpp_add_reference")
 

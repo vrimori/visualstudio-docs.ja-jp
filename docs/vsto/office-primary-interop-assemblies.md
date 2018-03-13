@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,7 +18,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 906100a572170f218a23b1887ab7fddee37251b9
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -73,7 +75,7 @@ ms.lasthandoff: 01/10/2018
 ##  <a name="usingfeatures"></a> Using Features of Multiple Microsoft Office Applications in a Single Project  
  Visual Studio の各 Office プロジェクト テンプレートは、単一の Microsoft Office アプリケーションと連動するようになっています。 複数の Microsoft Office アプリケーションの機能を使用したり、Visual Studio 内にプロジェクトが含まれないアプリケーションやコンポーネントの機能を使用したりするには、必要な PIA への参照を追加しなければなりません。  
   
- ほとんどの場合、Visual Studio によって %ProgramFiles%\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\ ディレクトリにインストールされる PIA への参照を追加することが必要になります。 これらのバージョンのアセンブリは、 **[参照マネージャー]** ダイアログ ボックスの **[フレームワーク]** タブに表示されます。 詳細については、「 [How to: Target Office Applications Through Primary Interop Assemblies](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)」を参照してください。  
+ ほとんどの場合、Visual Studio によって %ProgramFiles%\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\ ディレクトリにインストールされる PIA への参照を追加することが必要になります。 これらのバージョンのアセンブリは、 **[参照マネージャー]** ダイアログ ボックスの **[フレームワーク]** タブに表示されます。 詳細については、「 [方法 : プライマリ相互運用機能アセンブリを利用して Office アプリケーションを使用する](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)」を参照してください。  
   
  グローバル アセンブリ キャッシュに PIA をインストールして登録すると、これらのバージョンのアセンブリは、 **[参照マネージャー]** ダイアログ ボックスの **[COM]** タブに表示されます。 これらのバージョンのアセンブリを使用すると開発上の問題が発生するため、これらのアセンブリに参照を追加することは避ける必要があります。 たとえば、異なるバージョンの PIA がグローバル アセンブリ キャッシュに登録されている場合、 **[参照マネージャー]** ダイアログ ボックスの **[COM]** タブで別のバージョンのアセンブリを指定しても、プロジェクトは最後に登録されたバージョンのアセンブリにバインドします。  
   
@@ -110,7 +112,7 @@ ms.lasthandoff: 01/10/2018
  グローバル アセンブリ キャッシュに (Office と共に、または PIA の再頒布可能パッケージをインストールすることにより) Office PIA をインストールし、登録すると、同時にバインディング リダイレクト アセンブリがグローバル アセンブリ キャッシュだけにインストールされます。 これらのアセンブリにより、実行時にプライマリ相互運用機能アセンブリの正しいバージョンが確実に読み込まれます。 たとえば、 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] アセンブリを参照するソリューションが、同じプライマリ相互運用機能アセンブリの [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] バージョンがあるコンピューターで実行されると、バインド リダイレクト アセンブリによって、そのプライマリ相互運用機能アセンブリの [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] バージョンを読み込むように [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] ランタイムに指示されます。 詳しくは、「[方法: 自動バインディング リダイレクトを有効/無効にする](/dotnet/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [How to: Target Office Applications Through Primary Interop Assemblies](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
+ [方法 : プライマリ相互運用機能アセンブリを利用して Office アプリケーションを使用する](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
  [Excel オブジェクト モデルの概要](../vsto/excel-object-model-overview.md)   
  [InfoPath ソリューション](../vsto/infopath-solutions.md)   
  [Outlook オブジェクト モデルの概要](../vsto/outlook-object-model-overview.md)   
