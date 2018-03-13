@@ -21,13 +21,13 @@ f1_keywords:
 - VC.Project.VCNMakeTool.ForcedIncludes
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 9f39aaaa17f48f832210ca26c1e255ae4b054514
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 955e3f7dfbab3293a01392c52b82aa2b7dce25c2
+ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="nmake-properties-android-c"></a>NMake のプロパティ (Android C++) 
+# <a name="nmake-properties-android-c"></a>NMake のプロパティ (Android C++)
 
 プロパティ | 説明
 --- | ---
@@ -38,4 +38,4 @@ ms.lasthandoff: 02/09/2018
 プリプロセッサの定義 | ソース ファイルで使用されるプリプロセッサの定義を指定します。
 インクルードの検索パス | インクルード ファイルの解決に使用されるインクルードの検索パスを指定します。
 強制インクルード | 必ずインクルードされるファイルを指定します。
-その他のオプション | C++ ファイルの解析時に Intellisense によって使用される追加のコンパイラ スイッチを指定します
+その他のオプション | C++ ファイルの解析時に IntelliSense によって使用される追加のコンパイラ スイッチを指定します

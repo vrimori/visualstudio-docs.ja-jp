@@ -14,11 +14,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f74ecf0bf6df346383fccea7e72604c1ffef662
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.openlocfilehash: 4ac60dbd14b16491f9de841f168cd5bf725c340d
+ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="unit-test-basics"></a>単体テストの基本
 
@@ -42,39 +42,39 @@ ms.lasthandoff: 01/25/2018
 
 ## <a name="the-mybank-solution-example"></a>MyBank ソリューションの例
 
-このトピックでは、例として `MyBank` という架空のアプリケーションの開発を使用します。 このトピックの説明は、実際のコードがなくても理解できます。 テスト メソッドは C# で記述され、マネージ コード用の Microsoft 単体テスト フレームワークを使用して示されますが、その概念は他の言語やフレームワークに容易に移行できます。  
-  
- ![MyBank ソリューション](../test/media/ute_mybanksolution.png "UTE_MyBankSolution")  
-  
- `MyBank` アプリケーションのデザイン時の最初の計画には、個々のアカウントおよびアカウントの銀行との取引を表すアカウント コンポーネントと、個々のアカウントを集計および管理する機能を表すデータベース コンポーネントが含まれます。  
-  
- 次の 2 つのプロジェクトを含む `MyBank` ソリューションを作成します。  
-  
--   `Accounts`  
-  
--   `BankDb`  
-  
- `Accounts` プロジェクトのデザイン時の最初の計画には、アカウントに関する基本情報を保持するクラス、アカウントでの資産の預け入れや引き出しなど、任意の種類のアカウントの共通機能を指定するインターフェイス、および当座預金アカウントを表すインターフェイスから派生したクラスが含まれます。 次のソース ファイルを作成して、Accounts プロジェクトを開始します。  
-  
--   `AccountInfo.cs` は、アカウントの基本情報を定義します。  
-  
--   `IAccount.cs` は、アカウントで資産の預け入れや引き出しを行うメソッドや、アカウントの残高を取得するメソッドを含む、アカウントの標準の `IAccount` インターフェイスを定義します。  
-  
--   `CheckingAccount.cs` には、当座預金アカウントの `CheckingAccount` インターフェイスを実装する `IAccounts` クラスが含まれています。  
-  
-当座預金アカウントからの引き出しの際は、引き出される金額がアカウントの残高より少ないことを確認する必要があります。 そのため、この条件をチェックするメソッドで、 `IAccount.Withdaw` の `CheckingAccount` メソッドをオーバーライドします。 メソッドは次のようになります。  
+このトピックでは、例として `MyBank` という架空のアプリケーションの開発を使用します。 このトピックの説明は、実際のコードがなくても理解できます。 テスト メソッドは C# で記述され、マネージ コード用の Microsoft 単体テスト フレームワークを使用して示されますが、その概念は他の言語やフレームワークに容易に移行できます。
+
+ ![MyBank ソリューション](../test/media/ute_mybanksolution.png "UTE_MyBankSolution")
+
+ `MyBank` アプリケーションのデザイン時の最初の計画には、個々のアカウントおよびアカウントの銀行との取引を表すアカウント コンポーネントと、個々のアカウントを集計および管理する機能を表すデータベース コンポーネントが含まれます。
+
+ 次の 2 つのプロジェクトを含む `MyBank` ソリューションを作成します。
+
+-   `Accounts`
+
+-   `BankDb`
+
+ `Accounts` プロジェクトのデザイン時の最初の計画には、アカウントに関する基本情報を保持するクラス、アカウントでの資産の預け入れや引き出しなど、任意の種類のアカウントの共通機能を指定するインターフェイス、および当座預金アカウントを表すインターフェイスから派生したクラスが含まれます。 次のソース ファイルを作成して、Accounts プロジェクトを開始します。
+
+-   `AccountInfo.cs` は、アカウントの基本情報を定義します。
+
+-   `IAccount.cs` は、アカウントで資産の預け入れや引き出しを行うメソッドや、アカウントの残高を取得するメソッドを含む、アカウントの標準の `IAccount` インターフェイスを定義します。
+
+-   `CheckingAccount.cs` には、当座預金アカウントの `CheckingAccount` インターフェイスを実装する `IAccounts` クラスが含まれています。
+
+当座預金アカウントからの引き出しの際は、引き出される金額がアカウントの残高より少ないことを確認する必要があります。 そのため、この条件をチェックするメソッドで、 `IAccount.Withdaw` の `CheckingAccount` メソッドをオーバーライドします。 メソッドは次のようになります。
 
 ```csharp
-public void Withdraw(double amount)  
-{  
-    if(m_balance >= amount)  
-    {  
-        m_balance -= amount;  
-    }  
-    else  
-    {  
-        throw new ArgumentException(amount, "Withdrawal exceeds balance!")  
-    }  
+public void Withdraw(double amount)
+{
+    if(m_balance >= amount)
+    {
+        m_balance -= amount;
+    }
+    else
+    {
+        throw new ArgumentException(amount, "Withdrawal exceeds balance!")
+    }
 }
 ```
 
@@ -82,253 +82,253 @@ public void Withdraw(double amount)
 
 ## <a name="create-unit-test-projects-and-test-methods"></a>単体テスト プロジェクトとテスト メソッドを作成する
 
-ほとんどの場合、コードから単体テスト プロジェクトと単体テスト スタブを生成する方が手軽です。 また、必要に応じて単体テスト プロジェクトとテストを手動で作成することもできます。  
-  
- **単体テスト プロジェクトと単体テスト スタブを生成する**  
-  
-1.  コード エディター ウィンドウで、右クリックしてコンテキスト メニューから **[単体テストの作成]** を選択します。  
-  
-     ![エディター ウィンドウで、コンテキスト メニューを表示](../test/media/createunittestsrightclick.png "CreateUnitTestsRightClick")  
-  
-2.  [OK] をクリックして、既定値をそのまま使用して単体テストを作成するか、単体テスト プロジェクトと単体テストの作成と名前付けに使用される値を変更します。 単体テスト メソッドに既定で追加されるコードを選択することができます。  
-  
-     ![エディター内を右クリックし、[単体テストの作成] を選択](../test/media/createunittestsdialog.png "CreateUnitTestsDialog")  
-  
-3.  新しい単体テスト プロジェクトでは、クラス内のすべてのメソッドに単体テスト スタブが作成されます。  
-  
-     ![単体テストが作成済み](../test/media/createunittestsstubs.png "CreateUnitTestsStubs")  
-  
-4.  ここで、先に進み、単体テストを有意義なものにするための [コードを単体テスト メソッドに追加する](#BKMK_Writing_your_tests) 方法と、コードを徹底的にテストするために追加する追加の単体テストについて確認します。  
-  
- **単体テスト プロジェクトと単体テストを手動で作成する**  
-  
- 通常、単体テスト プロジェクトは 1 つのコード プロジェクトの構造を反映します。 MyBank の例で、2 つの単体テスト プロジェクト `AccountsTests` および `BankDbTests` を `MyBanks` ソリューションに追加します。 テスト プロジェクトの名前は任意ですが、標準の名前付け規則を採用することをお勧めします。  
-  
- **単体テスト プロジェクトをソリューションに追加するには**  
-  
-1.  **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします (キーボード: Ctrl + Shift + N)。  
-  
-2.  [新しいプロジェクト] ダイアログ ボックスで、 **[インストール済み]** ノードを展開して、テスト プロジェクトで使用する言語を選択し、 **[テスト]**をクリックします。  
-  
-3.  Microsoft 単体テスト フレームワークの 1 つを使用するには、プロジェクト テンプレートの一覧から **[単体テスト プロジェクト]** を選択します。 それ以外の場合は、使用する単体テスト フレームワークのプロジェクト テンプレートを選択します。 この例の `Accounts` プロジェクトをテストするために、プロジェクトの名前を `AccountsTests`に設定します。  
-  
+ほとんどの場合、コードから単体テスト プロジェクトと単体テスト スタブを生成する方が手軽です。 また、必要に応じて単体テスト プロジェクトとテストを手動で作成することもできます。
+
+ **単体テスト プロジェクトと単体テスト スタブを生成する**
+
+1.  コード エディター ウィンドウで、右クリックしてコンテキスト メニューから **[単体テストの作成]** を選択します。
+
+     ![エディター ウィンドウで、コンテキスト メニューを表示](../test/media/createunittestsrightclick.png "CreateUnitTestsRightClick")
+
+2.  [OK] をクリックして、既定値をそのまま使用して単体テストを作成するか、単体テスト プロジェクトと単体テストの作成と名前付けに使用される値を変更します。 単体テスト メソッドに既定で追加されるコードを選択することができます。
+
+     ![エディター内を右クリックし、[単体テストの作成] を選択](../test/media/createunittestsdialog.png "CreateUnitTestsDialog")
+
+3.  新しい単体テスト プロジェクトでは、クラス内のすべてのメソッドに単体テスト スタブが作成されます。
+
+     ![単体テストが作成済み](../test/media/createunittestsstubs.png "CreateUnitTestsStubs")
+
+4.  ここで、先に進み、単体テストを有意義なものにするための [コードを単体テスト メソッドに追加する](#BKMK_Writing_your_tests) 方法と、コードを徹底的にテストするために追加する追加の単体テストについて確認します。
+
+ **単体テスト プロジェクトと単体テストを手動で作成する**
+
+ 通常、単体テスト プロジェクトは 1 つのコード プロジェクトの構造を反映します。 MyBank の例で、2 つの単体テスト プロジェクト `AccountsTests` および `BankDbTests` を `MyBanks` ソリューションに追加します。 テスト プロジェクトの名前は任意ですが、標準の名前付け規則を採用することをお勧めします。
+
+ **単体テスト プロジェクトをソリューションに追加するには**
+
+1.  **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします (キーボード: Ctrl + Shift + N)。
+
+2.  [新しいプロジェクト] ダイアログ ボックスで、 **[インストール済み]** ノードを展開して、テスト プロジェクトで使用する言語を選択し、 **[テスト]**をクリックします。
+
+3.  Microsoft 単体テスト フレームワークの 1 つを使用するには、プロジェクト テンプレートの一覧から **[単体テスト プロジェクト]** を選択します。 それ以外の場合は、使用する単体テスト フレームワークのプロジェクト テンプレートを選択します。 この例の `Accounts` プロジェクトをテストするために、プロジェクトの名前を `AccountsTests`に設定します。
+
     > [!WARNING]
-    >  すべてのサードパーティ製およびオープン ソースの単体テスト フレームワークに、Visual Studio プロジェクトのテンプレートが用意されているわけではありません。 プロジェクトの作成については、フレームワークのドキュメントを参照してください。  
-  
-4.  この例の単体テスト プロジェクトで、テスト対象のコード プロジェクトへの参照を Accounts プロジェクトに追加します。  
-  
-     コード プロジェクトへの参照を作成する方法は次のとおりです。  
-  
-    1.  ソリューション エクスプローラーでプロジェクトを選択します。  
-  
-    2.  **[プロジェクト]** メニューの **[参照の追加]**をクリックします。  
-  
-    3.  [参照マネージャー] ダイアログ ボックスで、 **[ソリューション]** ノードを開き、 **[プロジェクト]**を選択します。 コード プロジェクトの名前を選択し、ダイアログ ボックスを閉じます。  
-  
- 各単体テスト プロジェクトには、コード プロジェクト内のクラス名を反映したクラスが含まれています。 この例では、 `AccountsTests` プロジェクトに次のクラスが含まれています。  
-  
--   `AccountInfoTests` クラスには、 `AccountInfo` プロジェクトの `BankAccount` クラス用の単体テスト メソッドが含まれています。  
-  
--   `CheckingAccountTests` クラスには、 `CheckingAccount` クラス用の単体テスト メソッドが含まれています。  
-  
+    >  すべてのサードパーティ製およびオープン ソースの単体テスト フレームワークに、Visual Studio プロジェクトのテンプレートが用意されているわけではありません。 プロジェクトの作成については、フレームワークのドキュメントを参照してください。
+
+4.  この例の単体テスト プロジェクトで、テスト対象のコード プロジェクトへの参照を Accounts プロジェクトに追加します。
+
+     コード プロジェクトへの参照を作成する方法は次のとおりです。
+
+    1.  ソリューション エクスプローラーでプロジェクトを選択します。
+
+    2.  **[プロジェクト]** メニューの **[参照の追加]**をクリックします。
+
+    3.  [参照マネージャー] ダイアログ ボックスで、 **[ソリューション]** ノードを開き、 **[プロジェクト]**を選択します。 コード プロジェクトの名前を選択し、ダイアログ ボックスを閉じます。
+
+ 各単体テスト プロジェクトには、コード プロジェクト内のクラス名を反映したクラスが含まれています。 この例では、 `AccountsTests` プロジェクトに次のクラスが含まれています。
+
+-   `AccountInfoTests` クラスには、 `AccountInfo` プロジェクトの `BankAccount` クラス用の単体テスト メソッドが含まれています。
+
+-   `CheckingAccountTests` クラスには、 `CheckingAccount` クラス用の単体テスト メソッドが含まれています。
+
 ## <a name="write-your-tests"></a>テストを作成する
 
-使用する単体テスト フレームワークと Visual Studio IntelliSense に従って、コード プロジェクトの単体テスト用コードを記述していきます。 ほとんどのフレームワークでは、テスト エクスプローラーで実行するには、単体テスト メソッドを識別する特定の属性を追加する必要があります。 フレームワークには、テスト メソッドが成功したか失敗したかを示す手段も用意されています。通常は、Assert ステートメントまたはメソッドの属性を使用します。 他の属性は、各テスト メソッドの前でクラスの初期化時に実行される省略可能な設定メソッド、および各テスト メソッドの後でクラスが破棄される前に実行される終了処理メソッドを識別します。  
+使用する単体テスト フレームワークと Visual Studio IntelliSense に従って、コード プロジェクトの単体テスト用コードを記述していきます。 ほとんどのフレームワークでは、テスト エクスプローラーで実行するには、単体テスト メソッドを識別する特定の属性を追加する必要があります。 フレームワークには、テスト メソッドが成功したか失敗したかを示す手段も用意されています。通常は、Assert ステートメントまたはメソッドの属性を使用します。 他の属性は、各テスト メソッドの前でクラスの初期化時に実行される省略可能な設定メソッド、および各テスト メソッドの後でクラスが破棄される前に実行される終了処理メソッドを識別します。
 
-AAA (Arrange、Act、Assert) のパターンが、テスト対象のメソッドの単体テストを記述する一般的な方法です。  
+AAA (Arrange、Act、Assert) のパターンが、テスト対象のメソッドの単体テストを記述する一般的な方法です。
 
-- 単体テスト メソッドの **Arrange** セクションでは、オブジェクトを初期化し、テスト対象のメソッドに渡されるデータの値を設定します。  
+- 単体テスト メソッドの **Arrange** セクションでは、オブジェクトを初期化し、テスト対象のメソッドに渡されるデータの値を設定します。
 
-- **Act** セクションでは、設定されたパラメーターでテスト対象のメソッドを呼び出します。  
+- **Act** セクションでは、設定されたパラメーターでテスト対象のメソッドを呼び出します。
 
-- **Assert** セクションでは、テスト対象のメソッドの操作が予測どおりに動作することを検証します。  
+- **Assert** セクションでは、テスト対象のメソッドの操作が予測どおりに動作することを検証します。
 
-この例の `CheckingAccount.Withdraw` メソッドをテストするために、2 つのテストを記述できます。メソッドの標準動作を検証するテストと、残高を超える引き出しが失敗することを検証するテストです。 `CheckingAccountTests` クラスで、次のメソッドを追加します。  
+この例の `CheckingAccount.Withdraw` メソッドをテストするために、2 つのテストを記述できます。メソッドの標準動作を検証するテストと、残高を超える引き出しが失敗することを検証するテストです。 `CheckingAccountTests` クラスで、次のメソッドを追加します。
 
 ```csharp
-[TestMethod]  
-public void Withdraw_ValidAmount_ChangesBalance()  
-{  
-    // arrange  
-    double currentBalance = 10.0;  
-    double withdrawal = 1.0;  
-    double expected = 9.0;  
-    var account = new CheckingAccount("JohnDoe", currentBalance);  
-    // act  
-    account.Withdraw(withdrawal);  
-    double actual = account.Balance;  
-    // assert  
-    Assert.AreEqual(expected, actual);  
-}  
-  
-[TestMethod]  
-[ExpectedException(typeof(ArgumentException))]  
-public void Withdraw_AmountMoreThanBalance_Throws()  
-{  
-    // arrange  
-    var account = new CheckingAccount("John Doe", 10.0);  
-    // act  
-    account.Withdraw(20.0);  
-    // assert is handled by the ExpectedException  
+[TestMethod]
+public void Withdraw_ValidAmount_ChangesBalance()
+{
+    // arrange
+    double currentBalance = 10.0;
+    double withdrawal = 1.0;
+    double expected = 9.0;
+    var account = new CheckingAccount("JohnDoe", currentBalance);
+    // act
+    account.Withdraw(withdrawal);
+    double actual = account.Balance;
+    // assert
+    Assert.AreEqual(expected, actual);
+}
+
+[TestMethod]
+[ExpectedException(typeof(ArgumentException))]
+public void Withdraw_AmountMoreThanBalance_Throws()
+{
+    // arrange
+    var account = new CheckingAccount("John Doe", 10.0);
+    // act
+    account.Withdraw(20.0);
+    // assert is handled by the ExpectedException
 }
 ```
 
-`Withdraw_ValidAmount_ChangesBalance` は明示的な `Assert` ステートメントを使用してテスト メソッドの成功/失敗を判定し、 `Withdraw_AmountMoreThanBalance_Throws` は `ExpectedException` 属性を使用してテスト メソッドの成功を判定していることに注意してください。 表には出ませんが、単体テスト フレームワークは try/catch ステートメントでテスト メソッドをラップしています。 ほとんどの場合、例外がキャッチされると、テスト メソッドは失敗し、例外は無視されます。 指定された例外がスローされた場合、 `ExpectedException` 属性によってテスト メソッドは成功します。  
+`Withdraw_ValidAmount_ChangesBalance` は明示的な `Assert` ステートメントを使用してテスト メソッドの成功/失敗を判定し、 `Withdraw_AmountMoreThanBalance_Throws` は `ExpectedException` 属性を使用してテスト メソッドの成功を判定していることに注意してください。 表には出ませんが、単体テスト フレームワークは try/catch ステートメントでテスト メソッドをラップしています。 ほとんどの場合、例外がキャッチされると、テスト メソッドは失敗し、例外は無視されます。 指定された例外がスローされた場合、 `ExpectedException` 属性によってテスト メソッドは成功します。
 
-Microsoft 単体テスト フレームワークの詳細については、次のトピックのいずれかを参照してください。  
+Microsoft 単体テスト フレームワークの詳細については、次のトピックのいずれかを参照してください。
 
--   [マネージ コード用の Microsoft 単体テスト フレームワークを使用した .NET Framework 用単体テストの記述](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)  
+-   [マネージ コード用の Microsoft 単体テスト フレームワークを使用した .NET Framework 用単体テストの記述](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)
 
--   [C/C++ 用の単体テストの記述](writing-unit-tests-for-c-cpp.md)  
+-   [C/C++ 用の単体テストの記述](writing-unit-tests-for-c-cpp.md)
 
 ## <a name="set-timeouts-for-unit-tests"></a>単体テストのタイムアウトを設定する
 
-個々のテスト メソッドで、タイムアウトを設定するには  
-
-```csharp  
-[TestMethod]  
-[Timeout(2000)]  // Milliseconds  
-public void My_Test()  
-{ ...  
-}  
-```
-
-許容される最大のタイムアウトを設定するには  
+個々のテスト メソッドで、タイムアウトを設定するには
 
 ```csharp
-[TestMethod]  
-[Timeout(TestTimeout.Infinite)]  // Milliseconds  
-public void My_Test ()  
-{ ...  
+[TestMethod]
+[Timeout(2000)]  // Milliseconds
+public void My_Test()
+{ ...
+}
+```
+
+許容される最大のタイムアウトを設定するには
+
+```csharp
+[TestMethod]
+[Timeout(TestTimeout.Infinite)]  // Milliseconds
+public void My_Test ()
+{ ...
 }
 ```
 
 ## <a name="run-tests-in-test-explorer"></a>テスト エクスプローラーでテストを実行する
 
-テスト プロジェクトをビルドすると、テストはテスト エクスプローラーに表示されます。 テスト エクスプローラーが表示されない場合は、Visual Studio メニューの **[テスト]** をクリックし、 **[Windows]**、 **[テスト エクスプローラー]**の順に選択します。  
-  
- ![単体テスト エクスプローラー](../test/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
-  
- テストを実行して、記述し、再実行すると、テスト エクスプローラーの既定のビューに **[失敗したテスト]**、 **[成功したテスト]**、 **[スキップされたテスト]** 、および **[テストを実行しない]**グループの結果が表示されます。 グループの見出しを選択して、そのグループ内のすべてのテストを表示するビューを開くことができます。  
-  
- グローバル レベルで検索ボックスでテキストを照合して、または定義済みのフィルターの 1 つを選択して、任意のビューでテストにフィルターを適用することもできます。 任意に選択したテストをいつでも実行できます。 テスト実行の結果は、エクスプローラー ウィンドウの上部にある成功/失敗ステータス バーですぐにわかります。 テストを選択すると、そのテスト メソッドの結果の詳細が表示されます。  
-  
+テスト プロジェクトをビルドすると、テストはテスト エクスプローラーに表示されます。 テスト エクスプローラーが表示されない場合は、Visual Studio メニューの **[テスト]** をクリックし、 **[Windows]**、 **[テスト エクスプローラー]**の順に選択します。
+
+ ![単体テスト エクスプローラー](../test/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")
+
+ テストを実行して、記述し、再実行すると、テスト エクスプローラーの既定のビューに **[失敗したテスト]**、 **[成功したテスト]**、 **[スキップされたテスト]** 、および **[テストを実行しない]**グループの結果が表示されます。 グループの見出しを選択して、そのグループ内のすべてのテストを表示するビューを開くことができます。
+
+ グローバル レベルで検索ボックスでテキストを照合して、または定義済みのフィルターの 1 つを選択して、任意のビューでテストにフィルターを適用することもできます。 任意に選択したテストをいつでも実行できます。 テスト実行の結果は、エクスプローラー ウィンドウの上部にある成功/失敗ステータス バーですぐにわかります。 テストを選択すると、そのテスト メソッドの結果の詳細が表示されます。
+
 ### <a name="run-and-view-tests"></a>テストを実行して表示する
 
-テスト エクスプローラーのツール バーは、対象にするテストを検出、編成、実行するのに役立ちます。  
-  
- ![テスト エクスプローラー ツールバーからテストを実行](../test/media/ute_toolbar.png "UTE_ToolBar")  
-  
- **[すべて実行]** を選択してテストをすべて実行することも、 **[実行]** を選択してテストのサブセットを実行することもできます。 一連のテストを実行した後、テスト実行の概要がテスト エクスプローラー ウィンドウの下部に表示されます。 テストを選択すると、そのテストの詳細が下部のペインに表示されます。 コンテキスト メニューから **[テストを開く]** を選択すると (キーボード: F12)、選択したテストのソース コードが表示されます。  
-  
- 個々のテストに実行順序を定める依存関係がない場合、ツール バーにある ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") トグル ボタンで並列テストの実行を有効にします。 これにより、すべてのテスト実行にかかる時間を著しく短縮できます。  
-  
+テスト エクスプローラーのツール バーは、対象にするテストを検出、編成、実行するのに役立ちます。
+
+ ![テスト エクスプローラー ツールバーからテストを実行](../test/media/ute_toolbar.png "UTE_ToolBar")
+
+ **[すべて実行]** を選択してテストをすべて実行することも、 **[実行]** を選択してテストのサブセットを実行することもできます。 一連のテストを実行した後、テスト実行の概要がテスト エクスプローラー ウィンドウの下部に表示されます。 テストを選択すると、そのテストの詳細が下部のペインに表示されます。 コンテキスト メニューから **[テストを開く]** を選択すると (キーボード: F12)、選択したテストのソース コードが表示されます。
+
+ 個々のテストに実行順序を定める依存関係がない場合、ツール バーにある ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") トグル ボタンで並列テストの実行を有効にします。 これにより、すべてのテスト実行にかかる時間を著しく短縮できます。
+
 ### <a name="run-tests-after-every-build"></a>各ビルドの後にテストを実行する
 
 > [!WARNING]
-> 各ビルドの後の単体テスト実行は、Visual Studio Enterprise でのみサポートされます。  
+> 各ビルドの後の単体テスト実行は、Visual Studio Enterprise でのみサポートされます。
 
-|||  
-|-|-|  
-|![ビルド後に実行](../test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|各ローカル ビルドの後で単体テストを実行するには、標準のメニューの **[テスト]** を選択し、テスト エクスプローラーのツール バーの **[ビルド後にテストを実行]** を選択します。|  
-  
+|||
+|-|-|
+|![ビルド後に実行](../test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|各ローカル ビルドの後で単体テストを実行するには、標準のメニューの **[テスト]** を選択し、テスト エクスプローラーのツール バーの **[ビルド後にテストを実行]** を選択します。|
+
 ### <a name="filter-and-group-the-test-list"></a>テスト リストのフィルター処理とグループ化を実行する
 
-多数のテストがある場合は、テスト エクスプローラーの検索ボックスに入力し、指定した文字列によって一覧をフィルター処理できます。 フィルターの一覧から選択することで、フィルター イベントをさらに制限できます。  
-  
- ![検索フィルターのカテゴリ](../test/media/ute_searchfilter.png "UTE_SearchFilter")  
-  
-|||  
-|-|-|  
-|![テスト エクスプローラー グループ ボタン](../test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|カテゴリ別にテストをグループ化するには、 **[グループ化]** をクリックします。|  
-  
- 詳細については、「[テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)」を参照してください。  
-  
+多数のテストがある場合は、テスト エクスプローラーの検索ボックスに入力し、指定した文字列によって一覧をフィルター処理できます。 フィルターの一覧から選択することで、フィルター イベントをさらに制限できます。
+
+ ![検索フィルターのカテゴリ](../test/media/ute_searchfilter.png "UTE_SearchFilter")
+
+|||
+|-|-|
+|![テスト エクスプローラー グループ ボタン](../test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|カテゴリ別にテストをグループ化するには、 **[グループ化]** をクリックします。|
+
+ 詳細については、「[テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)」を参照してください。
+
 ## <a name="qa"></a>Q&A
 
-**Q: 単体テストのデバッグ方法を教えてください。**  
-  
-**A:** テスト エクスプローラーを使用して、テストのデバッグ セッションを開始します。 Visual Studio デバッガーを使用してコードをシームレスにステップ実行すると、テスト対象のプロジェクトと単体テストの間を切り替えることができます。 デバッグを開始するには:  
-  
-1.  Visual Studio エディターで、デバッグする 1 つ以上のテスト メソッドにブレークポイントを設定します。  
-  
+**Q: 単体テストのデバッグ方法を教えてください。**
+
+**A:** テスト エクスプローラーを使用して、テストのデバッグ セッションを開始します。 Visual Studio デバッガーを使用してコードをシームレスにステップ実行すると、テスト対象のプロジェクトと単体テストの間を切り替えることができます。 デバッグを開始するには:
+
+1.  Visual Studio エディターで、デバッグする 1 つ以上のテスト メソッドにブレークポイントを設定します。
+
     > [!NOTE]
-    > テスト メソッドを任意の順序で実行できるため、デバッグするすべてのテスト メソッドにブレークポイントを設定します。  
-  
-2.  テスト エクスプローラーでテスト メソッドを選択し、ショートカット メニューから **[選択したテストのデバッグ]** を選択します。  
-  
-[単体テストのデバッグ](../debugger/debugging-in-visual-studio.md)の詳細を確認してください。  
-  
- **Q: TDD を使用している場合にテストからコードを生成する方法を教えてください。**  
-  
- **A:** IntelliSense を使用して、プロジェクト コードにクラスとメソッドを生成します。 テスト メソッドに、生成するクラスまたはメソッドを呼び出すステートメントを記述し、その呼び出しの下で IntelliSense メニューを開きます。 新しいクラスのコンストラクターへの呼び出しの場合は、メニューから **[新しい型の生成]** を選択し、ウィザードに従ってコード プロジェクトにクラスを挿入します。 メソッドへの呼び出しの場合は、IntelliSense メニューから **[Generate new method (新しいメソッドの生成)]** を選択します。  
-  
- ![[メソッド スタブの生成] の Intellisense メニュー](../test/media/ute_generatemethodstubintellisense.png "UTE_GenerateMethodStubIntellisense")  
-  
- **Q: テストを実行する入力値として複数のデータ セットを使用する単体テストを作成できますか。**  
-  
- **A:** できます。 *データ ドリブン テスト メソッド* を使用すると、1 つの単体テスト メソッドである範囲の値をテストすることができます。 テストする変数の値が格納されているデータ ソースとデータ テーブルを指定する、テスト メソッドの `DataSource` 属性を使用します。  メソッドの本体で、 `TestContext.DataRow[`*ColumnName*`]` インデクサーを使用して変数に行の値を割り当てます。  
-  
+    > テスト メソッドを任意の順序で実行できるため、デバッグするすべてのテスト メソッドにブレークポイントを設定します。
+
+2.  テスト エクスプローラーでテスト メソッドを選択し、ショートカット メニューから **[選択したテストのデバッグ]** を選択します。
+
+[単体テストのデバッグ](../debugger/debugging-in-visual-studio.md)の詳細を確認してください。
+
+ **Q: TDD を使用している場合にテストからコードを生成する方法を教えてください。**
+
+ **A:** IntelliSense を使用して、プロジェクト コードにクラスとメソッドを生成します。 テスト メソッドに、生成するクラスまたはメソッドを呼び出すステートメントを記述し、その呼び出しの下で IntelliSense メニューを開きます。 新しいクラスのコンストラクターへの呼び出しの場合は、メニューから **[新しい型の生成]** を選択し、ウィザードに従ってコード プロジェクトにクラスを挿入します。 メソッドへの呼び出しの場合は、IntelliSense メニューから **[Generate new method (新しいメソッドの生成)]** を選択します。
+
+ ![[メソッド スタブの生成] の IntelliSense メニュー](../test/media/ute_generatemethodstubintellisense.png "UTE_GenerateMethodStubIntellisense")
+
+ **Q: テストを実行する入力値として複数のデータ セットを使用する単体テストを作成できますか。**
+
+ **A:** できます。 *データ ドリブン テスト メソッド* を使用すると、1 つの単体テスト メソッドである範囲の値をテストすることができます。 テストする変数の値が格納されているデータ ソースとデータ テーブルを指定する、テスト メソッドの `DataSource` 属性を使用します。  メソッドの本体で、 `TestContext.DataRow[`*ColumnName*`]` インデクサーを使用して変数に行の値を割り当てます。
+
 > [!NOTE]
-> ここに示すプロシージャは、マネージ コード用の Microsoft 単体テスト フレームワークを使用して記述したテスト メソッドにのみ適用できます。 別のフレームワークを使用している場合は、同等の機能についてフレームワークのドキュメントを参照してください。  
-  
- たとえば、 `CheckingAccount` という名前の `AddIntegerHelper`クラスに不要なメソッドを追加するとします。 `AddIntegerHelper` は 2 つの整数を追加します。  
-  
- `AddIntegerHelper` メソッドのデータ ドリブン テストを作成するには、最初に `AccountsTest.accdb` という名前の Access データベースと `AddIntegerHelperData`という名前のテーブルを作成します。 `AddIntegerHelperData` テーブルは、追加の 1 番目と 2 番目のオペランドを指定する列、および予期される結果を指定する列を定義します。 多数の行に適切な値を入力します。  
-  
+> ここに示すプロシージャは、マネージ コード用の Microsoft 単体テスト フレームワークを使用して記述したテスト メソッドにのみ適用できます。 別のフレームワークを使用している場合は、同等の機能についてフレームワークのドキュメントを参照してください。
+
+ たとえば、 `CheckingAccount` という名前の `AddIntegerHelper`クラスに不要なメソッドを追加するとします。 `AddIntegerHelper` は 2 つの整数を追加します。
+
+ `AddIntegerHelper` メソッドのデータ ドリブン テストを作成するには、最初に `AccountsTest.accdb` という名前の Access データベースと `AddIntegerHelperData`という名前のテーブルを作成します。 `AddIntegerHelperData` テーブルは、追加の 1 番目と 2 番目のオペランドを指定する列、および予期される結果を指定する列を定義します。 多数の行に適切な値を入力します。
+
 ```csharp
-[DataSource(  
-    @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Projects\MyBank\TestData\AccountsTest.accdb",   
-    "AddIntegerHelperData"  
-)]  
-[TestMethod()]  
-public void AddIntegerHelper_DataDrivenValues_AllShouldPass()  
-{  
-    var target = new CheckingAccount();  
-    int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);  
-    int y = Convert.ToInt32(TestContext.DataRow["SecondNumber"]);   
-    int expected = Convert.ToInt32(TestContext.DataRow["Sum"]);  
-    int actual = target.AddIntegerHelper(x, y);  
-    Assert.AreEqual(expected, actual);  
+[DataSource(
+    @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Projects\MyBank\TestData\AccountsTest.accdb",
+    "AddIntegerHelperData"
+)]
+[TestMethod()]
+public void AddIntegerHelper_DataDrivenValues_AllShouldPass()
+{
+    var target = new CheckingAccount();
+    int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);
+    int y = Convert.ToInt32(TestContext.DataRow["SecondNumber"]);
+    int expected = Convert.ToInt32(TestContext.DataRow["Sum"]);
+    int actual = target.AddIntegerHelper(x, y);
+    Assert.AreEqual(expected, actual);
 }
 ```
 
-属性付きメソッドは、テーブル内の各行に対して 1 回実行されます。 イテレーションが失敗した場合、テスト エクスプローラーがメソッドのテスト失敗を報告します。 メソッドのテスト結果の詳細ペインに、データの行ごとにメソッドの成功/失敗の状態が表示されます。  
-  
- [データ ドリブン単体テスト](../test/how-to-create-a-data-driven-unit-test.md)の詳細を確認してください。  
-  
- **Q: 単体テストでテストするコードの量を確認できますか。**  
-  
- **A:** できます。 Visual Studio のコード カバレッジ ツールを使用して、単体テストで実際にテスト中のコードの量を確認できます。 単体テスト フレームワークによって実行できるネイティブ言語とマネージ言語、およびすべての単体テスト フレームワークがサポートされています。  
-  
- 選択したテストまたはソリューションのすべてのテストのコード カバレッジを実行できます。 [コード カバレッジの結果] ウィンドウに、行、関数、クラス、名前空間、およびモジュールで実行された製品コードのブロックのパーセンテージが表示されます。  
-  
- ソリューション内のテスト メソッドのコード カバレッジを実行するには、Visual Studio のメニューで、 **[テスト]** 、 **[コード カバレッジの分析]**の順に選択します。  
-  
- カバレッジの結果は、[コード カバレッジの結果] ウィンドウに表示されます。  
-  
- ![コード カバレッジの結果](../test/media/ute_codecoverageresults.png "UTE_CodeCoverageResults")  
-  
- [コード カバレッジ](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)の詳細を確認してください。  
-  
- **Q: 外部依存関係を含むコード内のメソッドをテストする方法を教えてください。**  
-  
- **A:** できます。 Visual Studio Enterprise を使用している場合は、Microsoft Fakes は、マネージ コード用の単体テスト フレームワークを使用して記述したテスト メソッドで使用できます。  
-  
+属性付きメソッドは、テーブル内の各行に対して 1 回実行されます。 イテレーションが失敗した場合、テスト エクスプローラーがメソッドのテスト失敗を報告します。 メソッドのテスト結果の詳細ペインに、データの行ごとにメソッドの成功/失敗の状態が表示されます。
+
+ [データ ドリブン単体テスト](../test/how-to-create-a-data-driven-unit-test.md)の詳細を確認してください。
+
+ **Q: 単体テストでテストするコードの量を確認できますか。**
+
+ **A:** できます。 Visual Studio のコード カバレッジ ツールを使用して、単体テストで実際にテスト中のコードの量を確認できます。 単体テスト フレームワークによって実行できるネイティブ言語とマネージ言語、およびすべての単体テスト フレームワークがサポートされています。
+
+ 選択したテストまたはソリューションのすべてのテストのコード カバレッジを実行できます。 [コード カバレッジの結果] ウィンドウに、行、関数、クラス、名前空間、およびモジュールで実行された製品コードのブロックのパーセンテージが表示されます。
+
+ ソリューション内のテスト メソッドのコード カバレッジを実行するには、Visual Studio のメニューで、 **[テスト]** 、 **[コード カバレッジの分析]**の順に選択します。
+
+ カバレッジの結果は、[コード カバレッジの結果] ウィンドウに表示されます。
+
+ ![コード カバレッジの結果](../test/media/ute_codecoverageresults.png "UTE_CodeCoverageResults")
+
+ [コード カバレッジ](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)の詳細を確認してください。
+
+ **Q: 外部依存関係を含むコード内のメソッドをテストする方法を教えてください。**
+
+ **A:** できます。 Visual Studio Enterprise を使用している場合は、Microsoft Fakes は、マネージ コード用の単体テスト フレームワークを使用して記述したテスト メソッドで使用できます。
+
  Microsoft Fakes は、次の 2 つの方法で外部依存関係の代替クラスを作成します。
-  
-1.  *スタブ* は、対象の依存関係クラスの親インターフェイスから派生した代替クラスを生成します。 スタブ メソッドは、対象クラスのパブリック仮想メソッドの代わりに使用できます。  
-  
-2.  *Shim* は、ランタイム インストルメンテーションを使用して、対象メソッドへの呼び出しを仮想でないメソッドの代替 shim メソッドに転換します。  
-  
-いずれの方法でも、依存関係メソッドへの呼び出しの生成されたデリゲートを使用して、テスト メソッド内の動作を指定します。  
-  
-詳細については、「 [Microsoft Fakes で単体テスト メソッドを分離する](../test/isolating-code-under-test-with-microsoft-fakes.md)」を参照してください。  
-  
- **Q: 他の単体テスト フレームワークを使用して単体テストを作成することはできますか。**  
-  
- **A:** はい。以下の手順に従って、 [他のフレームワークを検索してインストール](../test/install-third-party-unit-test-frameworks.md)してください。 Visual Studio を再起動した後、単体テストを作成するためのソリューションをもう一度開き、インストールしたフレームワークを選びます。  
-  
- ![インストールされているその他の単体テスト フレームワークを選択する](../test/media/createunittestsdialogextensions.png "CreateUnitTestsDialogExtensions")  
-  
+
+1.  *スタブ* は、対象の依存関係クラスの親インターフェイスから派生した代替クラスを生成します。 スタブ メソッドは、対象クラスのパブリック仮想メソッドの代わりに使用できます。
+
+2.  *Shim* は、ランタイム インストルメンテーションを使用して、対象メソッドへの呼び出しを仮想でないメソッドの代替 shim メソッドに転換します。
+
+いずれの方法でも、依存関係メソッドへの呼び出しの生成されたデリゲートを使用して、テスト メソッド内の動作を指定します。
+
+詳細については、「 [Microsoft Fakes で単体テスト メソッドを分離する](../test/isolating-code-under-test-with-microsoft-fakes.md)」を参照してください。
+
+ **Q: 他の単体テスト フレームワークを使用して単体テストを作成することはできますか。**
+
+ **A:** はい。以下の手順に従って、 [他のフレームワークを検索してインストール](../test/install-third-party-unit-test-frameworks.md)してください。 Visual Studio を再起動した後、単体テストを作成するためのソリューションをもう一度開き、インストールしたフレームワークを選びます。
+
+ ![インストールされているその他の単体テスト フレームワークを選択する](../test/media/createunittestsdialogextensions.png "CreateUnitTestsDialogExtensions")
+
  選んだフレームワークを使用して、単体テスト スタブが作成されます。

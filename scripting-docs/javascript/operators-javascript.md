@@ -20,11 +20,11 @@ caps.latest.revision:
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c9d0a098418399dba19b77a12c057a3fba334e31
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: a3068a609da2468c59066ccd38f6de87cef1ed17
+ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="operators-javascript"></a>演算子 (JavaScript)
 [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] には、算術演算子、論理演算子、ビット処理演算子、代入演算子、およびその他のさまざまな演算子があります。 説明と例については、特定の演算子のトピックをご覧ください。  
@@ -83,12 +83,12 @@ ms.lasthandoff: 10/27/2017
   
 |説明|シンボル|  
 |-----------------|------------|  
-|[delete](../javascript/reference/delete-operator-decrementjavascript.md)|delete|  
+|[delete](../javascript/reference/delete-operator-decrementjavascript.md)|削除|  
 |[typeof](../javascript/reference/typeof-operator-decrementjavascript.md)|typeof|  
 |[void](../javascript/reference/void-operator-decrementjavascript.md)|void|  
 |[instanceof](../javascript/reference/instanceof-operator-decrementjavascript.md)|instanceof|  
 |[new](../javascript/reference/new-operator-decrementjavascript.md)|new|  
-|[in](../javascript/reference/in-operator-decrementjavascript.md)|in|  
+|[in](../javascript/reference/in-operator-decrementjavascript.md)|の|  
   
 ## <a name="equality-and-strict-equality"></a>等価演算子と厳密等価演算子  
  == (等価) と === (厳密等価) の違いは、等価演算子が等価をチェックする前に異なる型の値の型変換を強制的に実行することです。 たとえば、文字列 "1" と数値 1 を比較すると true として比較されます。 一方、厳密等価演算子は、異なる型の型変換を強制的に実行しないので、文字列 "1" と数値 1 は等価になりません。  
