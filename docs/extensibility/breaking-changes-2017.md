@@ -44,7 +44,7 @@ VSIX 形式の変更は次のとおりです。
 
 ## <a name="building-an-extension-for-visual-studio-2017"></a>Visual Studio 2017 用拡張機能の構築
 
-新しい VSIX v3 マニフェスト形式を作成するためのデザイナーツールは、現在 Visual Studio 2017 で使用できます。 デザイナーツールの使用に関して、またはプロジェクトとマニフェストの VSIX v3 拡張機能への手動アップデートを作成することに関する詳細は、付属のドキュメントを参照してください [方法: Visual Studio 2017 を機能拡張プロジェクトを移行](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)。
+新しい VSIX v3 マニフェスト形式を作成するためのデザイナー ツールは、現在 Visual Studio 2017 で使用できます。 デザイナー ツールの使用に関する詳細や、 VSIX v3 拡張機能を開発するためのプロジェクトおよびマニフェストの手動アップデートに関する詳細については、関連ドキュメント「[How to: Migrate Extensibility Projects to Visual Studio 2017](how-to-migrate-extensibility-projects-to-visual-studio-2017.md) 」(方法: 機能拡張プロジェクトを Visual Studio 2017 に移行する) を参照してください。
 
 ## <a name="change-visual-studio-user-data-path"></a>Visual Studio のユーザー データ パスを変更します。
 
