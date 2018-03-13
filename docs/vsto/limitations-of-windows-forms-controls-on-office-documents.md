@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -23,7 +24,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 2c8795b643afff2cc02d507a1764871aa0e0e181
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -96,7 +98,7 @@ ms.lasthandoff: 01/10/2018
 |コントロールのサイズ変更|8 つのサイズ変更ハンドルのいずれかを使用して、ドキュメント上のコントロールのサイズを変更する場合、新しいサイズには反映されません、**プロパティ**ウィンドウ、コントロールが再度選択するまでです。|  
 |コントロールの動作|Excel ワークシート上のコントロールは、ワークシート ウィンドウを分割すると、予期しない動作可能性があります。 たとえばへのアクセス、<xref:Microsoft.Office.Tools.Excel.Controls.TextBox>ワークシートでのみ使用可能ないずれかになります、windows のです。|  
 |コントロールの名前付け|コントロールの名前に予約語を使用することはできません。 追加する場合など、<xref:Microsoft.Office.Tools.Excel.Controls.Button>をワークシートに名前を変更し、**システム**プロジェクトをビルドするときにエラーが発生します。|  
-|コントロールをプログラムで追加します。|実行時にドキュメントにコントロールを追加するのにコントロールのコンス トラクターを使用しないでください。 代わりに、によって提供されるヘルパー メソッドを使用して、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]です。 たとえば、使用して、<xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A>ボタンをワークシートに追加するメソッド。 これらのヘルパー メソッドによってサポートされていないコントロールを追加する場合は、AddControl メソッドを使用することができます。 詳細については、「 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。|  
+|コントロールをプログラムで追加します。|実行時にドキュメントにコントロールを追加するのにコントロールのコンス トラクターを使用しないでください。 代わりに、によって提供されるヘルパー メソッドを使用して、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]です。 たとえば、使用して、<xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A>ボタンをワークシートに追加するメソッド。 これらのヘルパー メソッドによってサポートされていないコントロールを追加する場合は、AddControl メソッドを使用することができます。 詳細については、「 [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。|  
 |コントロールをコピー|Windows フォーム コントロールをコピーし、実行時に、ドキュメントに貼り付け、空のコンテナー ActiveX コントロールがドキュメントに貼り付けられます。 Windows フォーム コントロールが、新しい場所に表示されないと、元のコントロールの分離コードが ActiveX コントロール コンテナーにコピーされません。|  
   
 ## <a name="limitations-in-document-level-projects"></a>ドキュメント レベルのプロジェクトでの制限事項  

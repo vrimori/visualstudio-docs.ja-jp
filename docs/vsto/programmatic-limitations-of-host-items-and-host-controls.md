@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -33,7 +34,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 96c027730553c8dd51774d1ff64c6552b4e5905b
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/10/2018
 # <a name="programmatic-limitations-of-host-items-and-host-controls"></a>ホスト項目およびホスト コントロールのプログラム上の制限事項
   それぞれのホスト項目やホスト コントロールは、それに対応するネイティブな Microsoft Office Word オブジェクトや Microsoft Office Excel オブジェクトと同様に動作するように設計され、さらに追加の機能が備えられています。 ただし、ホスト項目やホスト コントロールと、ネイティブな Office オブジェクトの実行時の動作には、基本的な相違点がいくつかあります。  
   
- ホスト項目とホスト コントロールの概要については、「 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)」を参照してください。  
+ ホスト項目とホスト コントロールの概要については、「 [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)」を参照してください。  
   
  [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]  
   
@@ -52,10 +54,10 @@ ms.lasthandoff: 01/10/2018
   
  ドキュメント レベルのプロジェクトでは、実行時にホスト項目を作成することはできません。 ドキュメント レベルのプロジェクトでは、デザイン時にのみ、ホスト項目を作成できます 詳細については、「 [Document Host Item](../vsto/document-host-item.md)「 [Workbook Host Item](../vsto/workbook-host-item.md)および「 [Worksheet Host Item](../vsto/worksheet-host-item.md)」を参照してください。  
   
- VSTO アドイン プロジェクトでは、実行時に <xref:Microsoft.Office.Tools.Word.Document>、 <xref:Microsoft.Office.Tools.Excel.Workbook>、または <xref:Microsoft.Office.Tools.Excel.Worksheet> のホスト項目を作成できます。 詳細については、「 [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)」を参照してください。  
+ VSTO アドイン プロジェクトでは、実行時に <xref:Microsoft.Office.Tools.Word.Document>、 <xref:Microsoft.Office.Tools.Excel.Workbook>、または <xref:Microsoft.Office.Tools.Excel.Worksheet> のホスト項目を作成できます。 詳細については、「 [VSTO アドインにおける実行時の Word 文書と Excel ブックの拡張](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)」を参照してください。  
   
 ## <a name="programmatically-creating-host-controls"></a>プログラムによるホスト コントロールの作成  
- 実行時に、プログラムによって、 <xref:Microsoft.Office.Tools.Word.Document> ホスト項目または <xref:Microsoft.Office.Tools.Excel.Worksheet> ホスト項目にホスト コントロールを追加できます。 詳細については、「 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
+ 実行時に、プログラムによって、 <xref:Microsoft.Office.Tools.Word.Document> ホスト項目または <xref:Microsoft.Office.Tools.Excel.Worksheet> ホスト項目にホスト コントロールを追加できます。 詳細については、「 [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
   
  ネイティブな <xref:Microsoft.Office.Interop.Word.Document> や <xref:Microsoft.Office.Interop.Excel.Worksheet>に、ホスト コントロールを追加することはできません。  
   
@@ -91,7 +93,7 @@ ms.lasthandoff: 01/10/2018
  Word と Excel オブジェクト モデルには、文書とワークシートのネイティブ コントロールのコレクションを公開するプロパティが含まれています。 これらのプロパティを使用してマネージ コントロールにアクセスすることはできません。 たとえば、 <xref:Microsoft.Office.Tools.Word.Bookmark> の <xref:Microsoft.Office.Interop.Word._Document.Bookmarks%2A> プロパティや <xref:Microsoft.Office.Interop.Word.Document> の <xref:Microsoft.Office.Tools.Word.Document.Bookmarks%2A> プロパティを使用して、文書内の各 <xref:Microsoft.Office.Tools.Word.Document>ホスト コントロールを列挙することはできません。 これらのプロパティには、文書内の <xref:Microsoft.Office.Interop.Word.Bookmark> コントロールのみが含まれています。つまり、文書内の <xref:Microsoft.Office.Tools.Word.Bookmark> ホスト コントロールは含まれていないということです。  
   
 ## <a name="see-also"></a>参照  
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
  [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)   
  [Worksheet ホスト項目](../vsto/worksheet-host-item.md)   

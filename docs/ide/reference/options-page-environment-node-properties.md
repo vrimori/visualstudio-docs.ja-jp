@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - automation [Visual Studio], controlling Tools Options
 - Tools Options settings, Environment node properties
 ms.assetid: 26dca41f-91fc-4ca7-9103-3da402baa1d5
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: ddc53a84ca6cc09c5682bc874503849eee98eae8
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
@@ -106,7 +108,7 @@ ms.lasthandoff: 12/22/2017
   
 |プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
-|Scheme|Get/Set (String)|組み込みスキームを含む文字列、または読み込まれた .vsk ファイルの完全パスを含む文字列を返します。.vsk ファイルが読み込まれていない場合は "(既定)" を返します。|  
+|Scheme|Get/Set (String)|組み込みスキームを含む文字列、または読み込まれた .vsk ファイルの完全パスを含む文字列を返します.vsk ファイルが読み込まれていない場合は "(既定)" を返します。|  
   
 ## <a name="projects-and-solution"></a>プロジェクトおよびソリューション  
  `DTE.Properties("Environment", "ProjectsAndSolution")`  
