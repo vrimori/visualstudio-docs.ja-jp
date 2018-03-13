@@ -46,11 +46,11 @@ VSIX 形式の変更は次のとおりです。
 
 新しいの作成を行うためのツールをデザイナー VSIX v3 マニフェスト形式は、現在 Visual Studio 2017 で使用できます。 付属のドキュメントを参照してください[する方法: Visual Studio 2017 を機能拡張プロジェクトを移行](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)詳細については、デザイナーのツールを使用する、プロジェクトを手動で更新したことでと VSIX v3 の拡張機能を開発するマニフェスト。
 
-## <a name="change-visual-studio-user-data-path"></a>Visual Studio ユーザー データ パス の変更
+## <a name="change-visual-studio-user-data-path"></a>変更: Visual Studio ユーザー データ パス
 
-これまで Visual Studio の各メジャー リリースは 1 つのコンピューターにつき 1 つまでしかインストールすることができませんでした。Visual Studio 2017 ではサイド バイ サイド インストールをサポートするために、複数の Visual Studio ユーザー データ パスをユーザーのコンピューターにもたせることができるようになります。
+これまで Visual Studio の各メジャー リリースは 1 つのコンピューターにつき 1 つまでしかインストールすることができませんでした。Visual Studio 2017 ではサイド バイ サイド インストールをサポートするために、複数の Visual Studio ユーザー データ パスをユーザーのコンピューターに存在させることができます。
 
-Visual Studio プロセスの内部で実行されているコードは Visual Studio の設定マネージャーを使用して更新する必要があります。 Visual Studio プロセスの外部で実行されているコードは [このガイダンスに従って](locating-visual-studio.md) 特定の Visual Studio インストールのユーザーパスを検索することができます。
+Visual Studio プロセスの内部で実行されているコードは Visual Studio の設定マネージャーを使用するように更新する必要があります。 Visual Studio プロセスの外部で実行されているコードは [このガイダンスに従って](locating-visual-studio.md) 特定の Visual Studio インストールのユーザー パスを検索することができます。
 
 ## <a name="change-global-assembly-cache-gac"></a>変更: グローバル アセンブリ キャッシュ (GAC)
 
