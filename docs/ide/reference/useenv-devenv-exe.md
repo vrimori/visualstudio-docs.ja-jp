@@ -19,32 +19,38 @@ helpviewer_keywords:
 - /UseEnv Devenv switch
 - Devenv, /UseEnv
 ms.assetid: 2dd14603-a61b-42d2-ba31-427a0ee8a799
-caps.latest.revision: "6"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 03d1bbe55ed1b355742f9cd2d3dedc1b66812bbc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 4c48e9f22322cd5ebebeff0d987c32d369f98d03
+ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="useenv-devenvexe"></a>/UseEnv (devenv.exe)
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を起動し、**[VC++ ディレクトリ]** ダイアログ ボックスに環境変数を読み込みます。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-Devenv /useenv  
-```  
-  
-## <a name="example"></a>例  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を起動し、**[VC++ ディレクトリ]** ダイアログ ボックスに環境変数を読み込む例を以下に示します。  
-  
-```  
-Devenv.exe /useenv  
-```  
-  
-## <a name="see-also"></a>参照  
- [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
+
+Visual Studio を起動し、**[VC++ ディレクトリ]** ダイアログ ボックスに環境変数を読み込みます。
+
+> [!NOTE]
+> このスイッチは、**C++ によるデスクトップ開発**ワークロードと共にインストールされます。
+
+## <a name="syntax"></a>構文
+
+```shell
+Devenv /useenv
+```
+
+## <a name="example"></a>例
+
+Visual Studio を起動し、**[VC++ ディレクトリ]** ダイアログ ボックスに環境変数を読み込む例を以下に示します。
+
+```shell
+Devenv.exe /useenv
+```
+
+## <a name="see-also"></a>関連項目
+
+* [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)

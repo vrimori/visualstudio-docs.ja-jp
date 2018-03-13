@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio 2017 で問題を報告する方法 | Microsoft Docs"
 ms.custom: 
-ms.date: 02/19/2018
+ms.date: 02/26/2018
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -13,16 +13,18 @@ manager: ghogen
 ms.technology: vs-acquisition
 ms.workload:
 - multiple
-ms.openlocfilehash: 10ec0003bd568f497bd926974935467fdb1b4b75
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: f3e5e01abeb45e7cfdefebb7d6fd3d63320e1e31
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-2017"></a>Visual Studio 2017 で問題を報告する方法
+
 Visual Studio に問題が発生した場合は、Microsoft にお知らせください。 診断および修正を行うには、問題を以下のようにして報告してください。
 
 ## <a name="sign-in-to-visual-studio"></a>Visual Studio にサインイン
+
 まだサインインしていない場合は、問題を報告する前に Visual Studio にサインインします。 これで、発生している問題の報告や、問題に対するコメントへの投票ができます。 投稿されたその他の問題に投票したり、コメントしたりもできます。
 
 1. Visual Studio で、**[ヘルプ]** > **[フィードバックの送信]** > **[問題の報告]** の順に選びます。
@@ -39,39 +41,51 @@ Visual Studio に問題が発生した場合は、Microsoft にお知らせく�
   ![類似の問題の検索と投票](../ide/media/search-and-vote.png "類似の問題の検索と投票")
 
 ## 新しい問題を報告する<a name="report_new_problem"></a>
-1. 探している問題が見つからない場合は、画面の下部にある **[新しい問題を報告する]** ボタンをクリックします。
+
+1. 探している問題が見つからない場合は、画面の下部にある **[新しい問題を報告する]** ボタンを選択します。
 2. 適切な Visual Studio チームに問題を転送できるように、報告には説明的なタイトルを付けてください。
 3. 可能であれば、問題を再現する手順など、さらに詳しい情報を記載します。
 
   ![新しい問題を報告する](../ide/media/report-new-problem.png "新しい問題を報告する")
 
 ## スクリーンショットと添付ファイル (省略可能) を提供する<a name="provide_screenshots"></a>
- 現在の画面を選んで、Microsoft に送信します。 **[追加のファイルの添付]** ボタンをクリックして、その他のスクリーン ショットやファイルをさらに添付できます。
+
+ 現在の画面を選んで、Microsoft に送信します。 **[追加のファイルの添付]** ボタンを選択して、その他のスクリーン ショットやファイルをさらに添付できます。
 
 ## トレースとヒープ ダンプを提供する (省略可能)<a name="provide_a_trace_and_heap_dump"></a>
 
-トレースとヒープ ダンプのファイルは、問題を診断するうえで役立ちます。 **[問題の報告]** ツールで再現する手順を記録し Microsoft にデータを送信してくだされば、大変助かります。  これを行う方法を次に示します。
+トレースとヒープ ダンプのファイルは、問題を診断するうえで役立ちます。 **[問題の報告]** ツールで再現する手順を記録し Microsoft にデータを送信してくだされば、大変助かります。 これを行う方法を次に示します。
 
-1. **[記録]** タブをクリックします。
-2. **[記録の開始]** をクリックします。 ツールの実行を許可します。
+1. **[記録]** タブを選択します。
+2. **[記録の開始]** を選択します。 ツールの実行を許可します。
 
-  ![[記録の開始] をクリックして、トレースとヒープ ダンプのファイルを提供する](../ide/media/record-dialog-box.png "トレースとヒープ ダンプ ファイルを提供する")
+  ![[記録の開始] を選択して、トレースとヒープ ダンプのファイルを提供する](../ide/media/record-dialog-box.png "トレースとヒープ ダンプ ファイルを提供する")
 
 3. **[ステップ記録ツール]** ツールが表示されたら、問題を再現する手順を実行します。
 4. 終了したら、**[記録の停止]** ボタンをクリックします。
 5. 記録された情報が Visual Studio により収集され、パッケージ化されるまでしばらく待ちます。
 
 ## レポートを送信する<a name="submit_the_report"></a>
- **[送信]** ボタンをクリックして、イメージ、トレースやダンプ ファイルと共にレポートを送信します。 **[送信]** ボタンが灰色表示の場合、レポートのタイトルと説明が記載されていることを確認します。
+
+ **[送信]** ボタンを選択して、イメージ、トレースやダンプ ファイルと共にレポートを送信します  (**[送信]** ボタンが灰色表示の場合、レポートのタイトルと説明が記載されていることを確認します)。
 
 ## 代替レポート<a name="alternate_reporting"></a>
- Visual Studio のインストールを完了できない場合、または Visual Studio 内のフィードバック ツールにアクセスできない場合は、Visual Studio インストーラーからフィードバック ツールを入手することもできます。 Visual Studio インストーラーの右上隅にあるフィードバック アイコンをクリックしてから、この記事で概説されている手順に従います。
+
+### <a name="report-a-problem-by-using-the-visual-studio-installer"></a>Visual Studio インストーラーを使用して問題をレポートする
+
+Visual Studio のインストールを完了できない場合、または Visual Studio 内のフィードバック ツールにアクセスできない場合は、Visual Studio インストーラーを使用して問題をレポートすることもできます。 そのためには、Visual Studio インストーラーの右上隅にあるフィードバック アイコンを選択してください。
 
  ![Visual Studio インストーラーの [フィードバックの送信] ボタンからフィードバック ツールを開くことができます](../install/media/report-a-problem.png)
 
- >[!Note]
- >Visual Studio Developer Community に問題を直接報告することもできます。これを行うには、[https://developercommunity.visualstudio.com/](https://developercommunity.visualstudio.com/) にアクセスします。
+### <a name="report-a-problem-directly-to-the-visual-studio-developer-community"></a>Visual Studio 開発者コミュニティに問題を直接報告する
+
+問題を報告する際に Visual Studio を使用したくない場合または使用できない場合は、Visual Studio 開発者コミュニティに問題を直接報告することができます。 詳細については、「[Visual Studio 開発者コミュニティ ポータル](https://developercommunity.visualstudio.com/)」ページを参照してください。
+
+#### <a name="provide-product-feedback-or-a-suggestion"></a>製品に関するフィードバックや提案を提供する
+
+レポートする問題はないが、製品に関するフィードバックや提案を提供したい場合、そのための場所も用意されています。 詳細については、[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-ide) ページを参照してください。
 
 ## <a name="see-also"></a>参照
+
 * [ご意見](../ide/talk-to-us.md)
-* [Visual Studio Developer Community にアクセスする](https://developercommunity.visualstudio.com/)
+* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)

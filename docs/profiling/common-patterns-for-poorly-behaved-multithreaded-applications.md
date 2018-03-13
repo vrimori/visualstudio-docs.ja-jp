@@ -17,11 +17,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: bd8f389efcde93d9a618fbbac272b0f0b2cf5c75
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 9b7b9ad17c4d0c16066b9c10e3cc5b51f152c9dc
+ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>適切に動作しないマルチスレッド アプリケーションの一般的なパターン
 
@@ -65,7 +65,7 @@ ms.lasthandoff: 02/21/2018
 
 ![非効率な I&#47;O](../profiling/media/inefficient_io.png "Inefficient_IO")
 
-I/O の過度な使用や誤使用は、アプリケーションの非効率の一般的な原因です。 前の図を例にして説明します。 [表示されているタイムライン プロファイル] には、表示されているスレッド時間の 42% が I/O に使用されています。 タイムラインには大量の I/O が表示され、プロファイリング対象のアプリケーションが I/O で頻繁にブロックされていることがわかります。 I/O の種類とプログラムがブロックされている場所の詳細を確認するには、問題が発生した領域を拡大して、[表示されているタイムライン プロファイル] を確認し、特定の I/O ブロックをクリックして現在のコール スタックを表示します。
+I/O の過度な使用や誤使用は、アプリケーションの非効率の一般的な原因です。 前の図を例にして説明します。 [表示されているタイムライン プロファイル] には、表示されているスレッド時間の 44% が I/O に使用されています。 タイムラインには大量の I/O が表示され、プロファイリング対象のアプリケーションが I/O で頻繁にブロックされていることがわかります。 I/O の種類とプログラムがブロックされている場所の詳細を確認するには、問題が発生した領域を拡大して、[表示されているタイムライン プロファイル] を確認し、特定の I/O ブロックをクリックして現在のコール スタックを表示します。
 
 ## <a name="lock-convoys"></a>ロック コンボイ
 

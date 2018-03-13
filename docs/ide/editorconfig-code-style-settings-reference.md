@@ -1,10 +1,6 @@
 ---
-title: "EditorConfig の .NET コーディング規則の設定 | Microsoft Docs"
-ms.custom: 
-ms.date: 01/10/2018
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+title: "Visual Studio での EditorConfig の .NET コーディング規則の設定 | Microsoft Docs"
+ms.date: 02/28/2018
 ms.topic: article
 dev_langs:
 - CSharp
@@ -21,11 +17,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76b7ed58713f61882130c48d808012dc35055f55
-ms.sourcegitcommit: 65f85389047c5a1938b6d5243ccba8d4f14362ba
+ms.openlocfilehash: ac6c9e79e659a7f7d152541bc5a2d7deea694086
+ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig の .NET コーディング規則の設定
 
@@ -1622,7 +1618,7 @@ public int Foo { get; set; }
 
 //csharp_preserve_single_line_blocks = false
 public int MyProperty
-{ 
+{
     get; set;
 }
 ```
@@ -1638,7 +1634,7 @@ csharp_preserve_single_line_blocks = true
 
 ## <a name="see-also"></a>関連項目
 
-[クイック アクション](../ide/quick-actions.md)  
-[EditorConfig での .NET の名前付け規則](../ide/editorconfig-naming-conventions.md)  
-[移植可能なカスタム エディター オプションを作成する](../ide/create-portable-custom-editor-options.md)  
-[.NET コンパイラ プラットフォームの .editorconfig ファイル](https://github.com/dotnet/roslyn/blob/master/.editorconfig)  
+- [クイック アクション](../ide/quick-actions.md)
+- [EditorConfig での .NET の名前付け規則](../ide/editorconfig-naming-conventions.md)
+- [移植可能なカスタム エディター オプションを作成する](../ide/create-portable-custom-editor-options.md)
+- [.NET コンパイラ プラットフォームの .editorconfig ファイル](https://github.com/dotnet/roslyn/blob/master/.editorconfig)

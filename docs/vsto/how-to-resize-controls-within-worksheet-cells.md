@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,7 +19,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 01e9dfbe244d373eaa4e66c13e02c781b32b8691
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/10/2018
   
  デザイン時にコントロールを追加する場合は、各コントロールに対して配置オプションを設定する必要があります。  
   
- Windows フォーム コントロールをプログラムで追加して、範囲引数を指定して場合、コントロールに自動的に、範囲内のセルのサイズが変更されるときにサイズ変更します。 詳細については、「 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
+ Windows フォーム コントロールをプログラムで追加して、範囲引数を指定して場合、コントロールに自動的に、範囲内のセルのサイズが変更されるときにサイズ変更します。 詳細については、「 [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
   
 ## <a name="resizing-controls-at-design-time"></a>デザイン時にコントロールのサイズ変更  
   

@@ -21,11 +21,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 077bb266e6ed55bfe59ec4e537b516ccde59e0c3
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 43d566472a71b19ba9588a4564724d1ec8f5d933
+ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-regular-expressions-in-visual-studio"></a>Visual Studio での正規表現の使用
 
@@ -56,7 +56,7 @@ Visual Studio は、テキストの検索と置換をするときに、[.NET Fra
 |一致を否定します。|(?!abc)|`real (?!ity)` は、"realty" や "really" の中の "real" に一致しますが、"reality" の中の "real" には一致しません。 また、"realityreal" の中の 2 番目の "real" に一致します (一方、最初の "real" には一致しません)。|
 |指定された一連の文字の中に含まれていない任意の文字と一致します。|[^abc]|`be[^n-t]` は、"before" の中の "bef"、"behind" の中の "beh"、および "below" の中の "bel" に一致しますが、"beneath" の中の "ben" には一致しません。|
 |記号の前にある表現、または後にある表現のいずれかに一致します。|&#124;|`(sponge&#124;mud) bath` は "sponge bath" および "mud bath" に一致します。|
-|円記号の後の文字をエスケープ処理します。|\\|`\^` は、^ 文字に一致します。|
+|円記号の後の文字をエスケープ処理します。| \\ |`\^` は、^ 文字に一致します。|
 |直前の文字またはグループが登場する回数を指定します。|{x}、ここで x は登場する回数です。|`x(ab){2}x` は "xababx" に一致し、`x(ab){2,3}x` は "xababx" および "xabababx" に一致しますが、"xababababx" には一致しません。|
 |Unicode 文字クラスに含まれるテキストに一致します。ここで、"X" は Unicode 番号です。 Unicode 文字クラスの詳細については、次を参照してください。<br /><br /> [Unicode 規格 5.2 の文字のプロパティ](http://www.unicode.org/versions/Unicode5.2.0/ch04.pdf)。|\p{X}|`\p{Lu}` は "Thomas Doe" の中の "T" および "D" に一致します。|
 |ワード境界に一致します。|`\b` (\b が文字クラスの外部にあるときはワード境界を指定し、文字クラスの内部にあるときはバックスペースを指定します)。|`\bin` は、"inside" の中の "in" と一致しますが、"pinto" には一致しません。|

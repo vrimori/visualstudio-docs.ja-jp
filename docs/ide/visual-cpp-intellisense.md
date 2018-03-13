@@ -1,5 +1,5 @@
 ---
-title: "Visual C++ の Intellisense | Microsoft Docs"
+title: "Visual C++ の IntelliSense | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,13 +13,13 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0a00fb9fa52bcba39f4648fc3ffb9800890ac30
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 3d375ebccd96f6b8e987bd74f229abd70bfa9ab6
+ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="visual-c-intellisense"></a>Visual C# の IntelliSense
+# <a name="visual-c-intellisense"></a>Visual C++ IntelliSense
 
 C++ 用の IntelliSense は、スタンドアロン ファイルおよび C++ プロジェクトの一部を成すファイルで使用することができます。 クロスプラットフォーム プロジェクトでは、いくつかの IntelliSense 機能が、Android や iOS のコンテキスト内にいるときでも共有コード プロジェクト内の .cpp および .c ファイルで使用できます。
 
