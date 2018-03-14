@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -39,7 +40,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 1512b4774efea9639f01135932ad076f6630ea12
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -77,12 +79,12 @@ ms.lasthandoff: 01/10/2018
   
  <xref:Microsoft.Office.Tools.Excel.Workbook> ホスト項目は、ユーザー インターフェイスのあるコントロールのコンテナーとしては動作しません 代わりに、このホスト項目のデザイナーはコンポーネント トレイとして機能し、ユーザーはこのデザイナーを使用して <xref:System.Data.DataSet>などのコンポーネントをデザイン サーフェイスにドラッグできます。 詳細については、「 [Workbook Host Item](../vsto/workbook-host-item.md)」を参照してください。  
   
- ドキュメント レベルのプロジェクトでは、ホスト項目をプログラムで作成することはできません。 その代わり、デザイン時に Visual Studio によってプロジェクトに自動的に生成される `ThisDocument`、 `ThisWorkbook`、または `Sheet`*n* クラスを使用します。 生成されるこれらのクラスは、ホスト項目から派生するもので、コードのエントリ ポイントを提供します。 詳細については、「 [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)」を参照してください。  
+ ドキュメント レベルのプロジェクトでは、ホスト項目をプログラムで作成することはできません。 その代わり、デザイン時に Visual Studio によってプロジェクトに自動的に生成される `ThisDocument`、 `ThisWorkbook`、または `Sheet`*n* クラスを使用します。 生成されるこれらのクラスは、ホスト項目から派生するもので、コードのエントリ ポイントを提供します。 詳細については、「 [Pホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)」を参照してください。  
   
 ### <a name="understanding-host-items-in-vsto-add-in-projects"></a>VSTO アドイン プロジェクトのホスト項目について  
  VSTO アドインを作成する場合、既定では、ホスト項目にはアクセスできません。 ただし、Word および Excel の VSTO アドインでは、実行時に <xref:Microsoft.Office.Tools.Word.Document>、 <xref:Microsoft.Office.Tools.Excel.Workbook>、および <xref:Microsoft.Office.Tools.Excel.Worksheet> ホスト項目を生成できます。  
   
- ホスト項目を生成すると、文書にコントロールを追加するなどのタスクを実行できます。 詳細については、「 [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)」を参照してください。  
+ ホスト項目を生成すると、文書にコントロールを追加するなどのタスクを実行できます。 詳細については、「 [VSTO アドインにおける実行時の Word 文書と Excel ブックの拡張](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)」を参照してください。  
   
 ## <a name="host-controls"></a>ホスト コントロール  
  ホスト コントロールは Word および Excel オブジェクト モデルの Microsoft.Office.Interop.Word.ContentControl などのさまざまなユーザー インターフェイス (UI) オブジェクトを拡張し、<xref:Microsoft.Office.Interop.Excel.Range>オブジェクト。  
@@ -127,7 +129,7 @@ ms.lasthandoff: 01/10/2018
   
 -   **[データ ソース]** ウィンドウから文書やワークシートに、ホスト コントロールをドラッグします。 これによって、既にデータにバインドされているコントロールを追加できます。 詳細については、次を参照してください。 [Office ソリューションでのコントロールへのデータ バインディング](../vsto/binding-data-to-controls-in-office-solutions.md)です。  
   
- ドキュメント レベルのプロジェクトおよび VSTO アドインのプロジェクトでは、実行時にドキュメントに対していくつかのホスト コントロールを追加できます。 詳細については、「 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
+ ドキュメント レベルのプロジェクトおよび VSTO アドインのプロジェクトでは、実行時にドキュメントに対していくつかのホスト コントロールを追加できます。 詳細については、「 [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
   
  ホスト コントロールをドキュメントに追加する方法の詳細については、以下のトピックを参照してください:  
   
@@ -158,7 +160,7 @@ ms.lasthandoff: 01/10/2018
   
  デザイン時に文書にホスト コントロールを追加した場合は、それを実行時にプログラムで削除しないでください。次にコード内でコントロールを使用すると、例外がスローされます。 ホスト コントロールの `Delete` メソッドは、実行時に文書に追加されたホスト コントロールのみを削除します。 デザイン時に作成されたホスト コントロールの `Delete` メソッドを呼び出すと、例外がスローされます。  
   
- たとえば、 <xref:Microsoft.Office.Tools.Excel.NamedRange.Delete%2A> の <xref:Microsoft.Office.Tools.Excel.NamedRange> メソッドは、プログラムによってワークシートに追加された場合のみ (動的に作成されたホスト コントロールと呼ばれます)、 <xref:Microsoft.Office.Tools.Excel.NamedRange> を正しく削除します。 動的に作成されたホスト コントロールは、コントロール名を `Remove` プロパティまたは <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> プロパティの <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> メソッドに渡すことによっても削除できます。 詳細については、「 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
+ たとえば、 <xref:Microsoft.Office.Tools.Excel.NamedRange.Delete%2A> の <xref:Microsoft.Office.Tools.Excel.NamedRange> メソッドは、プログラムによってワークシートに追加された場合のみ (動的に作成されたホスト コントロールと呼ばれます)、 <xref:Microsoft.Office.Tools.Excel.NamedRange> を正しく削除します。 動的に作成されたホスト コントロールは、コントロール名を `Remove` プロパティまたは <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> プロパティの <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> メソッドに渡すことによっても削除できます。 詳細については、「 [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
   
  エンド ユーザーが実行時にドキュメントからホスト コントロールを削除すると、ソリューションは予想外の形で失敗することがあります。 Word および Excel のドキュメント保護機能を使用して、ホスト コントロールが削除されないように保護できます。 詳細については、「 [Office Development Samples and Walkthroughs](../vsto/office-development-samples-and-walkthroughs.md)」を参照してください。  
   
@@ -172,7 +174,7 @@ ms.lasthandoff: 01/10/2018
 >  Excel の <xref:Microsoft.Office.Interop.Excel._Application.EnableEvents%2A> オブジェクトの <xref:Microsoft.Office.Interop.Excel.Application> プロパティを **false**と呼ばれるオブジェクトを拡張します。 このプロパティを **false** に設定すると、ホスト コントロールのイベントを含む、すべてのイベントが Excel で発生しなくなります。  
   
 ## <a name="see-also"></a>参照  
- [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
  [ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)   
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   

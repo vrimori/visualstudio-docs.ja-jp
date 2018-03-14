@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 45aaccf19518572211bf9468a133989e651504bf
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 6389e5673f589f581818d68f5652dd9529da7500
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio"></a>Visual Studio で頻繁に使用するコマンドに対応する既定のキーボード ショートカット
 
@@ -66,7 +68,7 @@ Visual Studio で頻繁に使用するコマンドには、ここで示してい
 |Edit.Delete|Delete [全体、チーム エクスプローラー]<br /><br /> または Shift + Delete [シーケンス図、UML アクティビティ図、レイヤー図]<br /><br /> または Ctrl + Delete [クラス図]|  
 |Edit.Find|Ctrl + F [全体]|  
 |Edit.FindAllReferences|Shift + F12 [全体]|  
-dit.FindinFiles|Ctrl + Shift + F [全体]|  
+|Edit.FindinFiles|Ctrl + Shift + F [全体]|  
 |Edit.FindNext|F3 [全体]|  
 |Edit.FindNextSelected|Ctrl + F3 [全体]|  
 |Edit.FormatDocument|Ctrl + K、Ctrl + D [テキスト エディター]|  
@@ -82,7 +84,7 @@ dit.FindinFiles|Ctrl + Shift + F [全体]|
 |Edit.LineDownExtendColumn|Shift + Alt + ↓ [テキスト エディター]|  
 |Edit.LineOpenAbove|Ctrl + Enter [テキスト エディター]|  
 |Edit.ListMembers|Ctrl + J [テキスト エディター、ワークフロー デザイナー]<br /><br /> または Ctrl + K、Ctrl + L [ワークフロー デザイナー]<br /><br /> または Ctrl + K、L [ワークフロー デザイナー]|  
-dit.NavigateTo|Ctrl + , [全体]|  
+|Edit.NavigateTo|Ctrl + , [全体]|  
 |Edit.OpenFile|Ctrl + Shift + G [全体]|  
 |Edit.OvertypeMode|Insert [テキスト エディター]|  
 |Edit.ParameterInfo|Ctrl + Shift + Space [テキスト エディター、ワークフロー デザイナー]<br /><br /> または Ctrl + K、Ctrl + P [ワークフロー デザイナー]<br /><br /> または Ctrl + K、P [ワークフロー デザイナー]|  
@@ -93,7 +95,7 @@ dit.NavigateTo|Ctrl + , [全体]|
 |Edit.SelectAll|Ctrl + A [全体]|  
 |Edit.SelectCurrentWord|Ctrl + W [テキスト エディター]|  
 |Edit.SelectionCancel|Esc [テキスト エディター、レポート デザイナー、設定デザイナー、Windows フォーム デザイナー、マネージ リソース エディター]|  
-dit.SurroundWith|Ctrl + K、Ctrl + S [全体]|  
+|Edit.SurroundWith|Ctrl + K、Ctrl + S [全体]|  
 |Edit.TabLeft|Shift + Tab [テキスト エディター、レポート デザイナー、Windows フォーム エディター]|  
 |Edit.ToggleAllOutlining|Ctrl + M、Ctrl + L [テキスト エディター]|  
 |Edit.ToggleBookmark|Ctrl + K、Ctrl + K [テキスト エディター]|  
@@ -155,7 +157,7 @@ dit.SurroundWith|Ctrl + K、Ctrl + S [全体]|
 |View.ServerExplorer|Ctrl + Alt + S [全体]|  
 |View.ShowSmartTag|Ctrl + . [Global]<br /><br /> または Shift + Alt + F10 [全体、HTML エディター デザイン ビュー]|  
 |View.SolutionExplorer|Ctrl + Alt + L [全体]|  
-iew.TfsTeamExplorer|Ctrl + \\、Ctrl + M [全体]|  
+|View.TfsTeamExplorer|Ctrl + \\、Ctrl + M [全体]|  
 |View.Toolbox|Ctrl + Alt + X [全体]|  
 |View.ViewCode|Enter [クラス図]<br /><br /> または F7 [設定デザイナー]|  
 |View.ViewDesigner|Shift + F7 [HTML エディター ソース ビュー]|  

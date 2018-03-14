@@ -4,23 +4,27 @@ ms.custom:
 ms.date: 12/14/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c3a14d28-d811-4ff3-bd09-21dce14025ca
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c75b5508cd23a2131bcdd64cf52aacc1486d2713
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.workload:
+- multiple
+ms.openlocfilehash: e858d24a37fec49468981b44d450212ba2fa3654
+ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="get-started-with-debugging-in-visual-studio"></a>Visual Studio のデバッグの概要
 Visual Studio は、プロジェクトのビルドとデバッグ ツールの強力な統合セットを提供します。 このトピックでは、デバッグ UI 機能の最も基本的なセットの使用を開始する方法が説明されます。  
+
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ページに移動し、無料試用版をインストールしてください。
 
 ## <a name="my-code-doesnt-work-help-me-visual-studio"></a>コードが機能しません。 Visual Studio の助けが必要です。  
  エディターを見つけ、コードをいくらか作成しました。 これから、そのコードのデバッグを開始します。 ほとんどの IDE と同じように、Visual Studio には、2 つのデバッグ フェーズがあります。1 つは、コードをビルドして、プロジェクト エラーとコンパイラ エラーをキャッチして解決するフェーズです。もう 1 つは、環境でそのコードを実行し、実行時エラーと動的エラーをキャッチして解決するフェーズです。  
@@ -118,7 +122,7 @@ Visual Studio は、プロジェクトのビルドとデバッグ ツールの�
 ### <a name="inspect-your-code-at-run-time"></a>実行時のコードの検査  
  実行中のコードがブレークポイントに達して一時停止するとき、黄色でマークされたコード行 (現在のステートメント) はまだ実行されていません。 この時点で、現在のステートメントを実行し、変更された値を確認することができます。 いくつかの*ステップ* コマンドを使用して、デバッガーでコードを実行することができます。 マークされているコードがメソッド呼び出しの場合、**F11 キー**を押してステップ インすることができます。 **F10 キー**を押して、コード行を "*ステップ オーバー*" することもできます。 コードをステップ実行するその他のコマンドと詳細については、「[Navigate code with the debugger](../debugger/navigating-through-code-with-the-debugger.md)」(デバッガーによるコードの操作) を参照してください。
 
- ![Visual Studio の実行時の値の検査](../ide/media/vs_ide_gs_debug_hit_breakpoint.PNG "vs_ide_gs_debug_inspect_value") 
+ ![Visual Studio の実行時の値の検査](../ide/media/vs_ide_gs_debug_hit_breakpoint.PNG "vs_ide_gs_debug_inspect_value")
 
  前の図では、**F10 キー**または **F11 キー**を押してデバッガーの 1 つのステートメントを進めることができます (この例ではメソッドの呼び出しがないため、両方のコマンドが同じ結果になります)。
 
@@ -126,7 +130,7 @@ Visual Studio は、プロジェクトのビルドとデバッグ ツールの�
 
  ![Visual Studio の実行時の値の検査](../ide/media/vs_ide_gs_debug_inspect_value.PNG "vs_ide_gs_debug_inspect_value")  
 
- 変数の上に移動し、その変数に現在格納されている値と参照を確認します。 表示される値が、予期していたものと異なる場合、先行するコード行または呼び出しているコード行にバグがある可能性があります。  詳細については、[デバッガーの使用方法の詳細に関するページ](../debugger/getting-started-with-the-debugger.md)を参照してください。 
+ 変数の上に移動し、その変数に現在格納されている値と参照を確認します。 表示される値が、予期していたものと異なる場合、先行するコード行または呼び出しているコード行にバグがある可能性があります。  詳細については、[デバッガーの使用方法の詳細に関するページ](../debugger/getting-started-with-the-debugger.md)を参照してください。
 
  さらに、Visual Studio では [診断ツール] ウィンドウが表示されます。このウィンドウで、時間の経過に伴うアプリの CPU 使用率とメモリ使用量の変化を監視することができます。 後でアプリケーションの開発時に、CPU 使用量やメモリの割り当てが予想外に多くなった場合に、これらのツールを使用して調べることができます。 これを **[ウォッチ]** ウィンドウおよびブレークポイントとともに使用して、予期していなかった多量の使用の原因となっているもの、または解放されていないリソースを特定します。  詳細については、「[プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)」を参照してください。
 

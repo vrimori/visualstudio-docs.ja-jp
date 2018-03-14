@@ -16,11 +16,11 @@ ms.author: kraigb
 manager: ghogen
 ms.workload:
 - data-science
-ms.openlocfilehash: 52867e51e158f2e2c2ccbccba7466c1f7246e128
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: bb520f317eb285bcc278ff9f37bb2dc25c91e950
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="controlling-where-r-code-runs-with-workspaces"></a>ワークスペースで R コードが実行する場所を制御する
 
@@ -31,17 +31,6 @@ R Tools for Visual Studio (RTVS) のワークスペースを使用すると、R 
 ![R Tools for Visual Studio の [ワークスペース] ウィンドウ (VS2017)](media/workspaces-window.png)
 
 このウィンドウの緑のチェックマークは、RTVS がバインドされているアクティブなワークスペースを示します。 青い矢印を選ぶと、アクティブなワークスペースが設定されます。 各ワークスペースの右側にある設定 (歯車) アイコンを使うと、名前、場所、およびコマンド ライン引数を変更できます。 赤い [X] は、手動で追加したワークスペースを削除します。
-
-このトピックの内容:
-
-- [ワークスペースの保存とリセット](#saving-and-resetting-a-workspace)
-- [ローカル ワークスペース](#local-workspaces)
-- [リモート ワークスペース](#remote-workspaces)
-- [リモート ワークスペースのログオン](#remote-workspace-logon)
-- [ワークスペースの切り替え](#switching-between-workspaces)
-- [ローカル コンピューターとリモート コンピューターのディレクトリ](#directories-on-local-and-remote-computers)
-- [リモート ワークスペースへのプロジェクト ファイルのコピー](#copying-project-files-to-remote-workspaces)
-- [リモート ワークスペースからのファイルのコピー](#copying-files-from-a-remote-workspace)
 
 ## <a name="saving-and-resetting-a-workspace"></a>ワークスペースの保存とリセット
 
