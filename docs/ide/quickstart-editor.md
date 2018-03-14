@@ -14,15 +14,17 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 2bbdabf7d35c2705d028c84ddc6c6dc82f71ff48
-ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
+ms.openlocfilehash: 082a89453d76ac70edfbd39681d33b6af2700cc7
+ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-use-the-code-editor"></a>クイック スタート: コード エディターを使用する
 
 この 10 分間のエディターの紹介では、ファイルにコードを追加した上で、Visual Studio でコードを記述、コード内を移動、およびコードを理解する簡単な方法をいくつか説明します。
+
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ページに移動し、無料試用版をインストールしてください。
 
 このクイック スタートでは、既にプログラミング言語を使い慣れていることを前提としています。 使い慣れていない場合は、[Python](../ide/quickstart-python.md) または [C#](../ide/tutorial-csharp-aspnet-core.md) による Web アプリの作成や、[Visual Basic](../ide/quickstart-visual-basic-console.md) または [C++](../ide/quickstart-cpp.md) によるコンソール アプリの作成など、プログラミング言語に関するいずれかのクイック スタートを最初に確認することをお勧めします。
 

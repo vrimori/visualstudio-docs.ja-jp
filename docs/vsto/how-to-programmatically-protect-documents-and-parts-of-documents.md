@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,7 +18,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 8655a03659bd3b69e23fd155620d42df6d52386c
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]  
 >  次の例では、パスワード保護を使用しません。ただし、ドキュメント保護を追加するときに、パスワードの使用を検討することもできます。 詳しくは、「 [Office Development Samples and Walkthroughs](../vsto/office-development-samples-and-walkthroughs.md)」にあるドキュメント保護のサンプルをご覧ください。  
   
- コンテンツ コントロールを使用してドキュメントの一部を保護することもできます。 詳細については、「 [How to: Protect Parts of Documents by Using Content Controls](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)」を参照してください。  
+ コンテンツ コントロールを使用してドキュメントの一部を保護することもできます。 詳細については、「 [方法 : コンテンツ コントロールを使用して文書を保護する](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)」を参照してください。  
   
 ## <a name="protecting-a-document-that-is-part-of-a-document-level-customization"></a>ドキュメント レベルのカスタマイズの一部であるドキュメントの保護  
   

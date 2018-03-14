@@ -12,15 +12,17 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 74ac22508ea00a59dc4b29806253b4a041994c54
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.openlocfilehash: 284c99c9e9c1ed2e84b05070bbf6d9991c025f94
+ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-projects-and-solutions"></a>クイック スタート: プロジェクトとソリューション
 
 この 10 分間のクイック スタートでは、Visual Studio でソリューションとプロジェクトを作成することの意味について説明します。 プロジェクトのプロパティと、プロジェクトに含めることができるファイルのいくつかを紹介します。 また、別のプロジェクトへの参照を作成することもできます。
+
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ページに移動し、無料試用版をインストールしてください。
 
 > [!TIP]
 > このクイック スタートでは、プロジェクトの概念を学習して理解するための演習として、ソリューションとプロジェクトをゼロから構築します。 Visual Studio の一般的な使い方として、新しいプロジェクトを作成するときは、ほとんどの場合、Visual Studio で用意されているさまざまなプロジェクト テンプレートを使用することができます。

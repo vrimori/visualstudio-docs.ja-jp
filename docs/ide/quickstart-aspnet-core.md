@@ -7,23 +7,25 @@ ms.suite:
 ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: quickstart
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 66017b65e3d1201e02272447cbd3ec1c33c8a5d6
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.openlocfilehash: ba3c6655401501edf1f71e04f2aa249a6a001dda
+ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>クイック スタート: Visual Studio を使用して初めての ASP.NET Core Web アプリを作成する
 
-ここでは 5 分から 10 分で Visual Studio 統合開発環境 (IDE) の概要を示し、単純な C# ASP.NET Core Web アプリケーションを作成します。 まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。
+ここでは 5 分から 10 分で Visual Studio 統合開発環境 (IDE) の概要を示し、単純な C# ASP.NET Core Web アプリケーションを作成します。
+
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ページに移動し、無料試用版をインストールしてください。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
@@ -86,6 +88,5 @@ ms.lasthandoff: 01/23/2018
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio での C# および ASP.NET の概要](tutorial-csharp-aspnet-core.md)  
-[Visual Studio を使用した C# と Visual Basic の概要](getting-started-with-visual-csharp-and-visual-basic.md)  
-[ASP.NET Core の Razor ページの概要](/aspnet/core/tutorials/razor-pages/razor-pages-start)
+* [Visual Studio での C# および ASP.NET の概要](tutorial-csharp-aspnet-core.md)
+* [ASP.NET Core の Razor ページの概要](/aspnet/core/tutorials/razor-pages/razor-pages-start)
