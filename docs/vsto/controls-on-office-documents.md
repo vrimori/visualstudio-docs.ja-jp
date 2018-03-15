@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,7 +20,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 3a5ce9a160010d893a88f1ebc31b229597bba909
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/10/2018
  [Office ドキュメントでの Windows フォーム コントロールの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)  
  Excel と Word の文書で Windows フォーム コントロールを使用する方法と Windows フォーム コントロールと Windows フォームの違いについて説明します。  
   
- [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)  
+ [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)  
  Windows フォーム コントロールとホスト コントロールを Word と Excel の文書に追加する方法とそれらのコントロールを文書で保持する際の制限事項について説明します。  
   
 ## <a name="related-sections"></a>関連項目  

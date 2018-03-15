@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-deployment
+ms.technology:
+- vs-ide-deployment
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -20,11 +21,12 @@ helpviewer_keywords:
 - custom prerequisites
 - redistributables list
 ms.assetid: ba1a785b-693d-446b-bcae-b88cadee73d1
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: 5f269369084df3d81d323e75730fad27713831ca
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
  ブートストラップでは、まず、既にインストールされている必須コンポーネントがあるかどうかが検出されます。 必須コンポーネントがインストールされていない場合、ライセンス条項が表示されます。 次に、エンド ユーザーがライセンス条項に同意すると、必須コンポーネントのインストールが開始されます。 すべての必須コンポーネントが検出された場合は、そのままアプリケーション インストーラーが開始されます。  
   
 ## <a name="creating-custom-packages"></a>カスタム パッケージの作成  
- Visual Studio の XML エディターを使用してマニフェストを生成することができます。 詳細については、 [How to: Create a Package Manifest](../deployment/how-to-create-a-package-manifest.md) および [How to: Create a Product Manifest](../deployment/how-to-create-a-product-manifest.md)を参照してください。 ブートストラップ パッケージを作成する例については、「 [Walkthrough: Creating a Custom Bootstrapper to Show a Privacy Prompt](../deployment/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt.md)」をご覧ください。  
+ Visual Studio の XML エディターを使用してマニフェストを生成することができます。 詳細については、 [How to: Create a Package Manifest](../deployment/how-to-create-a-package-manifest.md) および [How to: Create a Product Manifest](../deployment/how-to-create-a-product-manifest.md)を参照してください。 ブートストラップ パッケージを作成する例については、「 [チュートリアル: プライバシー プロンプトを表示するためのカスタム ブートストラップの作成](../deployment/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt.md)」をご覧ください。  
   
  ブートストラップ パッケージを作成するには、Bootstrapper Manifest Generator に EXE 形式または MSI 形式の再頒布可能ファイルを指定する必要があります。 Bootstrapper Manifest Generator によって次のファイルが作成されます。  
   
