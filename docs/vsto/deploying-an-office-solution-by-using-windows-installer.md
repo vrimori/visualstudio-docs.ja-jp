@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -21,7 +22,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 68ec55b1096f9e4244213cf4faeef5b904dd8fed
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -50,7 +52,7 @@ Visual Studio を使用して Windows インストーラーを作成すると、
   
 - [依存コンポーネントを前提条件として構成](#Configure)  
   
-- [Specify where you want to deploy the solution on the user's computer](#Location)  
+- [ユーザーのコンピューター上でのソリューションの配置場所の指定](#Location)  
   
 - [VSTO アドインの構成](#ConfigureRegisitry)  
   
@@ -77,7 +79,7 @@ ClickOnce を使用して Office ソリューションを配置する方法の�
 ユーザーのコンピューターでソリューションを実行する前に、次の方法のいずれかで信頼を付与する必要があります。そうしない場合は、ユーザーはソリューションをインストールするときに、信頼プロンプトに応答する必要が生じます。  
   
   
-- 既知の信頼される発行者を特定する証明書を使用してマニフェストに署名します。 詳細については、「 [Trusting the Solution by Signing the Application and Deployment Manifests](../vsto/granting-trust-to-office-solutions.md#Signing)」を参照してください。  
+- 既知の信頼される発行者を特定する証明書を使用してマニフェストに署名します。 詳細については、["Trusting the Solution by Signing the Application and Deployment Manifests (アプリケーション マニフェストと配置マニフェストへの署名によりソリューションを信頼)"](../vsto/granting-trust-to-office-solutions.md#Signing) を参照してください。  
   
 - ユーザーのコンピューターの Program Files ディレクトリにソリューションをインストールします。  
   
