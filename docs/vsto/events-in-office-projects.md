@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -35,7 +36,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 31d7e8483865ed03830376012e780bac87fdda07
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -138,7 +140,7 @@ ms.lasthandoff: 01/10/2018
   
  `ThisAddIn_Startup` イベント ハンドラー内のコードは、VSTO アドインが <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> メソッドをオーバーライドしない限り、最初に実行されるユーザー コードです。 この場合、 `ThisAddIn_Startup` イベント ハンドラーが、 <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A>の後に呼び出されます。  
   
- コードを追加しないで、`ThisAdd-In_Startup`コードでは、ドキュメントを開く場合、イベント ハンドラー。 代わりに、ユーザーがドキュメントを作成するとき、または開くときに Office アプリケーションが発生させるイベントにそのコードを追加します。 詳細については、「 [Accessing a Document When the Office Application Starts](../vsto/programming-vsto-add-ins.md#AccessingDocuments)」を参照してください。  
+ コードを追加しないで、`ThisAdd-In_Startup`コードでは、ドキュメントを開く場合、イベント ハンドラー。 代わりに、ユーザーがドキュメントを作成するとき、または開くときに Office アプリケーションが発生させるイベントにそのコードを追加します。 詳細については、「 [Office アプリケーションの起動時にドキュメントにアクセスする](../vsto/programming-vsto-add-ins.md#AccessingDocuments)」を参照してください。  
   
  VSTO アドインの起動処理の詳細については、次を参照してください。[アーキテクチャの VSTO アドイン](../vsto/architecture-of-vsto-add-ins.md)です。  
   
