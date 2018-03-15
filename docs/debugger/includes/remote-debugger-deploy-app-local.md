@@ -13,11 +13,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: a55b2a12c9a45c5a3952e3e6f4e1627bec8ba520
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 37963e1ee5b7eeb0d07c36e0abe42c98eb6436fe
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/15/2018
 ---
 1. **ソリューション エクスプ ローラー**プロジェクト ノードを右クリックし、選択、**発行**(Web フォームの**Web アプリの発行**)。
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 10/27/2017
 5. Visual Studio コンピューターからの ASP.NET プロジェクト ディレクトリを ASP.NET アプリ用に構成されたローカル ディレクトリにコピー (この例では**C:\Publish**) Windows Server コンピューターにします。 このチュートリアルでは、想定していますが、手動でコピーする、PowerShell、Xcopy、Robocopy などその他のツールを使用することができます。
 
     > [!CAUTION]
-    >  コードまたは再構築に変更を加える必要がある場合は再パブリッシュする必要がありますしてこの手順を繰り返します。 リモート コンピューターにコピーした実行可能ファイルは、ローカルのソースとシンボルに正確に一致している必要があります。
+    >  コードまたは再構築に変更を加える必要がある場合は再パブリッシュする必要がありますしてこの手順を繰り返します。 リモート コンピューターにコピーした実行可能ファイルは、ローカルのソースとシンボルに正確に一致している必要があります。    受信はこれを行わない場合、`cannot find or open the PDB file`プロセスをデバッグしようとする場合に、Visual Studio で警告します。
 
 6. Windows Server、お使いのブラウザーでアプリを開くことで、アプリが正しく実行できることを確認します。
 

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -12,16 +13,17 @@ helpviewer_keywords:
 - menu items, adding dynamically
 - menus, adding dynamic items
 ms.assetid: d281e9c9-b289-4d64-8d0a-094bac6c333c
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 1eaa8cc41e7b27d509e68d6785c34a9ae214ffd3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- vssdk
+ms.openlocfilehash: 8c7a803933b3b1e6d353b9899cb8997dbaa6897e
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dynamically-adding-menu-items"></a>メニュー項目を動的に追加します。
 指定して実行時にメニュー項目を追加することができます、`DynamicItemStart`コマンドを処理および表示するアイテムには (コード) メニューの数を定義し、Visual Studio コマンド テーブル (.vsct) ファイルでプレース ホルダー ボタンの定義をフラグをコマンドします。 VSPackage が読み込まれるときに、プレース ホルダーは、動的メニュー項目に置き換えられます。  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 -   グループ メニュー コント ローラーを含んでいると、ドロップダウン リストでメニュー項目を含む 2 つをコマンドします。  
   
--   型の要素を 1 つのメニュー`MenuController`  
+-   型の要素を 1 つのメニュー `MenuController`  
   
 -   2 つのボタン、アイコン、ツールバーのツール ヒントを提供するメニュー項目と別のプレース ホルダーとして機能する 1 つです。  
   
@@ -209,7 +211,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="adding-the-command"></a>コマンドを追加します。  
  DynamicMenu コンス トラクターは、動的メニューおよびメニュー項目を含む、メニュー コマンドを設定するためです。  
   
-1.  DynamicMenuPackageGuids.cs、コマンド セットの GUID とコマンド ID を追加します。  
+1.  DynamicMenuPackage.cs、コマンド セットの GUID とコマンド ID を追加します。  
   
     ```csharp  
     public const string guidDynamicMenuPackageCmdSet = "00000000-0000-0000-0000-00000000";  // get the GUID from the .vsct file  
@@ -342,7 +344,7 @@ ms.lasthandoff: 12/22/2017
 [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)]  
 [ProvideMenuResource("Menus.ctmenu", 1)]  
 [ProvideAutoLoad(UIContextGuids.SolutionHasMultipleProjects)]  
-[Guid(DynamicMenuPackageGuids.PackageGuidString)]  
+[Guid(DynamicMenuPackage.PackageGuidString)]  
 public sealed class DynamicMenuItemsPackage : Package  
 {}  
 ```  

@@ -22,11 +22,11 @@ caps.latest.revision:
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c79c69e6c447b14e61fa67ccb8600d5d83bebd2b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: a9ff8c7942c773d138dd599956c41d1e583e6288
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="typeof-operator-javascript"></a>typeof 演算子 (JavaScript)
 式のデータ型を識別する文字列を返します。  
@@ -41,9 +41,11 @@ typeof[(]expression[)] ;
 ## <a name="remarks"></a>コメント  
  *式*引数が任意の式がどの型情報を取得します。  
   
- `typeof` 演算子は、型情報を文字列で返します。 `typeof` 演算子が返す文字列は、"number"、"string"、"boolean"、"object"、"function"、"undefined" の 6 つです。  
+ `typeof` 演算子は、型情報を文字列で返します。 7 つの可能な値がある`typeof`を返します:"number"、「文字列」、"boolean"「オブジェクト」"function"と"undefined"、"unknown"です。  
   
  `typeof` の構文のかっこは省略できます。  
+
+ オブジェクトが、XMLHTTPRequest 内で不明な型として返されます。 いないアナログ JavaScript で使用して、COM オブジェクトは、不明な型として返すも可能性があります。
   
 ## <a name="example"></a>例  
  変数のデータ型を調べる例を次に示します。  
@@ -81,10 +83,10 @@ var result = (typeof obj.propNotDeclared === 'undefined');
 //  var result = (notDeclared === undefined);  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Array.isArray 関数](../../javascript/reference/array-isarray-function-javascript.md)   
  [Object.getPrototypeOf 関数](../../javascript/reference/object-getprototypeof-function-javascript.md)   
  [定数 undefined](../../javascript/reference/undefined-constant-javascript.md)   

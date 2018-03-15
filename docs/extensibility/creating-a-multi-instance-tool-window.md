@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - multi
 - tool windows
 ms.assetid: 4a7872f1-acc9-4f43-8932-5a526b36adea
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 0cb73a5e5f40d21a5b17faae9602e40f7cd39d48
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- vssdk
+ms.openlocfilehash: e13fb299d513f045c4c7c339a9c6602890079e40
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="creating-a-multi-instance-tool-window"></a>マルチ インスタンス ツール ウィンドウを作成します。
 複数のインスタンスを同時に開くできるように、ツール ウィンドウをプログラムできます。 既定では、ツール ウィンドウには 1 つインスタンスのみを開くことができます。  
   
- マルチ インスタンスのツール ウィンドウを使用する場合は、同時に情報のいくつかの関連するソースを表示できます。 たとえば、複数の行を配置する可能性があります<xref:System.Windows.Forms.TextBox>プログラミング セッション中にいくつかのコード スニペットが同時に使用できるように、複数インスタンスのツール ウィンドウで制御します。 たとえばもを置いたり、<xref:System.Windows.Forms.DataGrid>コントロールおよびドロップダウン リスト ボックスに、複数インスタンスのツール ウィンドウいくつかのリアルタイムのデータ ソースを同時に追跡できるようにします。  
+ マルチ インスタンスのツール ウィンドウを使用する場合は、同時に情報のいくつかの関連するソースを表示できます。 たとえば、複数の行を配置する可能性があります<xref:System.Windows.Forms.TextBox>プログラミング セッション中にいくつかのコード スニペットが同時に使用できるように、複数インスタンスのツール ウィンドウで制御します。 また、たとえばを置いたり、<xref:System.Windows.Forms.DataGrid>コントロールおよびドロップダウン リスト ボックスに、複数インスタンスのツール ウィンドウいくつかのリアルタイムのデータ ソースを同時に追跡できるようにします。  
   
 ## <a name="creating-a-basic-single-instance-tool-window"></a>Basic (単一インスタンス) のツール ウィンドウを作成します。  
   
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
         [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About  
         [ProvideMenuResource("Menus.ctmenu", 1)]  
         [ProvideToolWindow(typeof(MultiInstanceToolWindow.MIToolWindow), MultiInstances = true)]  
-        [Guid(MIToolWindowPackageGuids.PackageGuidString)]  
+        [Guid(MIToolWindowPackage.PackageGuidString)]  
         public sealed class MIToolWindowPackage : Package  
     {. . .}  
     ```  
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  ツール ウィンドウのインスタンスを作成するには、<xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A>メソッドと set その`id`使用可能な値をその`create`フラグを`true`です。  
   
-     既定では、値、`id`のパラメーター、<xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A>メソッドは`0`します。 これにより、単一インスタンスのツール ウィンドウです。 複数のインスタンスをホストする、すべてのインスタンスがありますが独自の一意`id`です。  
+     既定では、値、`id`のパラメーター、<xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A>メソッドは`0`します。 この値は、単一インスタンスのツール ウィンドウです。 複数のインスタンスをホストする、すべてのインスタンスがありますが独自の一意`id`です。  
   
 4.  呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A>メソッドを<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>によって返されるオブジェクト、<xref:Microsoft.VisualStudio.Shell.ToolWindowPane.Frame%2A>ツール ウィンドウのインスタンスのプロパティです。  
   

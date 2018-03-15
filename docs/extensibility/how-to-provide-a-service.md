@@ -17,16 +17,16 @@ ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
-ms.openlocfilehash: ccc9b014a3d31fef4e3f491da394cdf1e9fb3ecb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d2a38a2c0830b701796b8417c69a75582c5b2f89
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="how-to-provide-a-service"></a>方法: サービスを提供
 VSPackage では、その他の Vspackage を使用するサービスを提供できます。 サービスを提供するには、VSPackage は Visual Studio で、サービスの登録し、サービスの追加する必要があります。  
   
- <xref:Microsoft.VisualStudio.Shell.Package>クラスを実装する<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>と<xref:System.ComponentModel.Design.IServiceContainer>です。 <xref:System.ComponentModel.Design.IServiceContainer>要求時にサービスを提供するコールバック メソッドが含まれています。  
+ <xref:Microsoft.VisualStudio.Shell.Package>クラスを実装する<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>と<xref:System.ComponentModel.Design.IServiceContainer>です。 <xref:System.ComponentModel.Design.IServiceContainer> 要求時にサービスを提供するコールバック メソッドが含まれています。  
   
  サービスの詳細については、次を参照してください。[サービス Essentials](../extensibility/internals/service-essentials.md)です。  
   
@@ -35,7 +35,7 @@ VSPackage では、その他の Vspackage を使用するサービスを提供�
   
 #### <a name="implementing-a-service"></a>サービスを実装します。  
   
-1.  VSIX プロジェクトを作成 (**ファイル > 新規 > プロジェクト > Visual c# > Extensiblity > VSIX プロジェクト**)。  
+1.  VSIX プロジェクトを作成 (**ファイル > 新規 > プロジェクト > Visual c# > Extensibility > VSIX プロジェクト**)。  
   
 2.  VSPackage をプロジェクトに追加します。 プロジェクト ノードを選択、**ソリューション エクスプ ローラー**  をクリック**追加 > 新しい項目の追加 > Visual c# アイテム > Extensibility > Visual Studio パッケージ**です。  
   
@@ -47,7 +47,7 @@ VSPackage では、その他の Vspackage を使用するサービスを提供�
   
     -   サービスと、サービス インターフェイスの両方を実装するクラス。  
   
-     次の例では、3 種類の非常に基本的な実装を示します。 サービス クラスのコンス トラクターは、サービス プロバイダーを設定する必要があります。  
+     次の例は、3 種類の基本的な実装を示しています。 サービス クラスのコンス トラクターは、サービス プロバイダーを設定する必要があります。  
   
     ```csharp  
     public class MyService : SMyService, IMyService  
@@ -117,7 +117,7 @@ VSPackage では、その他の Vspackage を使用するサービスを提供�
     private object CreateService(IServiceContainer container, Type serviceType)  
     {  
         if (typeof(SMyService) == serviceType)  
-            return new SMyService(this);  
+            return new MyService(this);  
         return null;  
     }  
     ```  
@@ -125,7 +125,7 @@ VSPackage では、その他の Vspackage を使用するサービスを提供�
     > [!NOTE]
     >  Visual Studio は、サービスを提供する要求を拒否することができます。 別の VSPackage は、サービスを既に提供している場合に行われます。  
   
-3.  これで、サービスを取得し、そのメソッドを使用できます。 これを初期化子で説明しますが、サービスを使用する場合、サービス任意の場所を取得することができます。  
+3.  これで、サービスを取得し、そのメソッドを使用できます。 次の例は、初期化子で、サービスの使用を示しますが、サービスを使用する場合、サービス任意の場所を取得することができます。  
   
     ```csharp  
     protected override void Initialize()  
@@ -136,7 +136,7 @@ VSPackage では、その他の Vspackage を使用するサービスを提供�
   
         MyService myService = (MyService) this.GetService(typeof(SMyService));  
         myService.Hello();  
-        string helloString = myService.myString;  
+        string helloString = myService.Goodbye();  
   
         base.Initialize();  
     }  

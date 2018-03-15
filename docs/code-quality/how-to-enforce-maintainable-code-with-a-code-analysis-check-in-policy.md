@@ -15,11 +15,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 80f3d2385fa1023637081b787c8d938ae42f79b4
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 7b1a6d953128317e89672d5d9b175ce7acc1b63f
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>方法: コード分析チェックイン ポリシーの保守が容易なコードを適用します。
 
@@ -31,23 +31,23 @@ Team foundation バージョン管理の管理者は、チェックイン ポリ
 
 ## <a name="to-open-the-code-analysis-policy-editor"></a>コード分析ポリシー エディターを開く
 
-1. で**チーム エクスプ ローラー**、チーム プロジェクトを右クリックし、をクリックして**チーム プロジェクトの設定**、クリックして**ソース管理**です。
+1. **チーム エクスプ ローラー**、チーム プロジェクトを右クリックし、をクリックして**チーム プロジェクトの設定**、クリックして**ソース管理**です。
 
-     The **Source Control** dialog box appears.
+     **ソース管理** ダイアログ ボックスが表示されます。
 
-2. で、**チェックイン ポリシーによって**タブをクリックし、をクリックして**追加**です。
+2. **チェックイン ポリシーによって**タブをクリックし、をクリックして**追加**です。
 
-     The **Add Check-in Policy** dialog box appears.
+     **チェックイン ポリシーを追加する** ダイアログ ボックスが表示されます。
 
-3. で、**チェックイン ポリシーによって**一覧で、、**コード分析**チェック ボックスをクリックして**OK**です。
+3. **チェックイン ポリシーによって**一覧で、、**コード分析**チェック ボックスをクリックして**OK**です。
 
-     The **Code Analysis Policy Editor** dialog box appears.
+     **コード分析ポリシー エディター**  ダイアログ ボックスが表示されます。
 
 ## <a name="to-enable-code-analysis-maintainability-rules"></a>コード分析の保守容易性の規則を有効にするには
 
-1. で、**コード分析ポリシー エディター**ダイアログ ボックスで、**ルール設定**、展開、**保守容易性規則**ノード。
+1. **コード分析ポリシー エディター**ダイアログ ボックスで、**ルール設定**、展開、**保守容易性規則**ノード。
 
-2. では、次のルールのチェック ボックスを選択します。
+2. 次のルールのチェック ボックスを選択します。
 
     -   継承の深さ: **CA1501 AvoidExcessiveInheritance** -しきい値: 複数の 5 レベルの深さで警告
 
@@ -59,9 +59,9 @@ Team foundation バージョン管理の管理者は、チェックイン ポリ
 
     さらに、ビルドの成功を防ぐために規則違反する場合は、選択、**警告をエラーとして扱う**規則の説明の横にあるチェック ボックスです。
 
-3.  **OK**です。 新しいチェックイン ポリシーは、将来のチェックインを今すぐに適用されます。
+3. **[OK]**をクリックします。 新しいチェックイン ポリシーは、将来のチェックインを今すぐに適用されます。
 
 ## <a name="see-also"></a>関連項目
 
-[コード メトリックス値](../code-quality/code-metrics-values.md)
-[の作成とコード分析チェックイン ポリシーを使用します。](../code-quality/creating-and-using-code-analysis-check-in-policies.md)
+- [コード メトリックス値](../code-quality/code-metrics-values.md)
+- [作成して、コード分析チェックイン ポリシーを使用します。](../code-quality/creating-and-using-code-analysis-check-in-policies.md)
