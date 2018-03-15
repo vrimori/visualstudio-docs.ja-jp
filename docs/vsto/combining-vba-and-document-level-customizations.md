@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,7 +28,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 63f316d3ac6fefbef37735cddc8fb7a87a8d4bfb
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -81,7 +83,7 @@ Globals.Sheet1.Application.Run("MyMacro", missing, missing, missing,
   
 -   ドキュメントで VBA コードを記述することによって、ドキュメント レベル カスタマイズ内で開発したサービスに、エンド ユーザーがアクセスできるようにする場合。  
   
- Visual Studio の Office 開発ツールは、VSTO アドインに同様の機能を提供します。VSTO アドインを開発する場合、VSTO アドイン内のコードを他の Microsoft Office ソリューションから呼び出すことができます。 詳細については、「 [Calling Code in VSTO Add-ins from Other Office Solutions](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)」を参照してください。  
+ Visual Studio の Office 開発ツールは、VSTO アドインに同様の機能を提供します。VSTO アドインを開発する場合、VSTO アドイン内のコードを他の Microsoft Office ソリューションから呼び出すことができます。 詳細については、「 [その他の Office ソリューションから VSTO アドインのコードを呼び出す](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)」を参照してください。  
   
 > [!NOTE]  
 >  この機能は、Word テンプレート プロジェクトでは使用できません。 Word 文書、Excel ブック、または Excel テンプレートの各プロジェクトでのみ使用できます。  
