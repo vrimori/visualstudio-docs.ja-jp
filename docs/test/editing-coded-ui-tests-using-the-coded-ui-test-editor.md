@@ -197,7 +197,7 @@ UI 操作のプロパティの編集
  *その他に知っておく必要があること*  
  **ノート**  
   
--   ![必須コンポーネント](../test/media/prereq.png "Prereq") UI 操作の前に特定のコントロールを使用できるようにする必要がある場合は、適切な UITestControl.WaitForControlXXX() メソッドを使用してテスト メソッドにカスタム コードを追加することを検討してください。 [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][Making Coded UI Tests Wait For Specific Events During Playback](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)をクリックします。  
+-   ![必須コンポーネント](../test/media/prereq.png "Prereq") UI 操作の前に特定のコントロールを使用できるようにする必要がある場合は、適切な UITestControl.WaitForControlXXX() メソッドを使用してテスト メソッドにカスタム コードを追加することを検討してください。 [!INCLUDE[crdefault](../test/includes/crdefault_md.md)]「[再生中に特定のイベントを待機するようにコード化された UI テストを設定する](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)」を参照してください。  
   
  **ヒント**  
   
