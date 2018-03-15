@@ -50,7 +50,6 @@
 ### [UWP アプリ用の単体テストの実行](run-unit-tests-for-store-apps-in-visual-studio.md)
 ## [コード カバレッジを使用した、テストされるコード割合の確認](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
 ### [コード カバレッジ分析のカスタマイズ](customizing-code-coverage-analysis.md)
-### [ビルド確認テストのコード カバレッジの分析](analyzing-code-coverage-in-build-verification-tests.md)
 ### [コード カバレッジのトラブルシューティング](troubleshooting-code-coverage.md)
 ## [SharePoint 2010 アプリケーションの単体テストを分離するためのエミュレーターを使用する](using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications.md)
 # [ライブ単体テスト](live-unit-testing-intro.md)
