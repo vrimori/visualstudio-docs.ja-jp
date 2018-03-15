@@ -14,11 +14,11 @@ manager: ghogen
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 8808fca81da991727fa439aae10d0e3541e81389
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 2520d0b7b5aba982f3e9ca228ad6de85f6890d7f
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="code-generation-in-a-build-process"></a>ビルド処理でのコード生成
 [テキスト変換](../modeling/code-generation-and-t4-text-templates.md)の一部として呼び出すことができます、[ビルド プロセス](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)の[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューションです。 テキスト変換に特化したビルド タスクがあります。 T4 ビルド タスクはデザイン時テキスト テンプレートを実行し、また、実行時 (前処理済み) テキスト テンプレートをコンパイルします。  
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/09/2018
   
  つまりすることはできませんアクセス プロジェクト ファイル名のような同じ方法で MSBuild でテキスト テンプレートをビルドするとします。 ただし、[ビルド パラメーターを使用してテキスト テンプレートとディレクティブ プロセッサに環境情報を渡す](#parameters)です。  
   
-##  <a name="buildserver"></a>コンピューターを構成します。  
+##  <a name="buildserver"></a> コンピューターを構成します。  
  開発用コンピューターでビルド タスクを有効にするには、Visual Studio の Modeling SDK をインストールします。
  
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
@@ -131,7 +131,7 @@ ms.lasthandoff: 02/09/2018
   
  読み取り専用ファイルを上書きするには、次のプロパティを挿入します。  
   
- `<OverwriteReadOnlyOuputFiles>true</OverwriteReadOnlyOuputFiles>`  
+ `<OverwriteReadOnlyOutputFiles>true</OverwriteReadOnlyOuputFiles>`  
   
  後処理のステップをカスタマイズしない限り、ファイルが上書きされるとエラー一覧に警告が記録されます。  
   
@@ -208,7 +208,7 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
   
 ```  
   
-##  <a name="parameters"></a>テンプレートにビルド コンテキスト データを渡す  
+##  <a name="parameters"></a> テンプレートにビルド コンテキスト データを渡す  
  プロジェクト ファイルでパラメーター値を設定できます。 たとえば、渡す[ビルド](../msbuild/msbuild-properties.md)プロパティおよび[環境変数](../msbuild/how-to-use-environment-variables-in-a-build.md):  
   
 ```xml  
@@ -242,7 +242,7 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 > [!NOTE]
 >  `ResolveParameterValue` は、MSBuild を使用する場合に限り、`T4ParameterValues` からデータを取得します。 Visual Studio を使用してテンプレートを変換すると、パラメーターは既定値になります。  
   
-##  <a name="msbuild"></a>アセンブリのプロジェクトのプロパティを使用するディレクティブおよび include ディレクティブ  
+##  <a name="msbuild"></a> アセンブリのプロジェクトのプロパティを使用するディレクティブおよび include ディレクティブ  
  Visual Studio のマクロ $ (solutiondir) などは、MSBuild で動作しません。 その代わりに、プロジェクト プロパティを使用できます。  
   
  .csproj ファイルまたは .vbproj ファイルを編集してプロジェクトのプロパティを定義します。 この例では、`myLibFolder` という名前のプロパティを定義します。  

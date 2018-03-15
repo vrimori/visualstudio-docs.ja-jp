@@ -1,5 +1,5 @@
 ---
-title: "_ _proto _ _ プロパティ (Object) (JavaScript) |Microsoft ドキュメント"
+title: "__proto__プロパティ (Object) (JavaScript) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,14 +20,17 @@ caps.latest.revision:
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e38669c400acba6f4ed3c4ee3fb5836c31b1bc00
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: f8659c7a4ece5e30378838f20341ec6712f77ca3
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="proto-property-object-javascript"></a>__proto__プロパティ (Object) (JavaScript)
 指定されたオブジェクトの内部プロトタイプへの参照が含まれます。  
+
+> [!WARNING]
+> `__proto__`プロパティは、従来の機能です。 使用して[Object.getPrototypeOf](../reference/object-getprototypeof-function-javascript.md)代わりにします。
   
 ## <a name="syntax"></a>構文  
   
@@ -37,7 +40,7 @@ object.__proto__
   
 #### <a name="parameters"></a>パラメーター  
  `object`  
- 必須です。 プロトタイプの設定対象となるオブジェクト。  
+ 必須。 プロトタイプの設定対象となるオブジェクト。  
   
 ## <a name="remarks"></a>コメント  
  `__proto__` プロパティを使用して、オブジェクトのプロトタイプを設定できます。  
@@ -108,8 +111,8 @@ if (console && console.log) {
 }  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  [!INCLUDE[jsv11](../../javascript/reference/includes/jsv11-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロトタイプおよびプロトタイプの継承](../../javascript/advanced/prototypes-and-prototype-inheritance.md)

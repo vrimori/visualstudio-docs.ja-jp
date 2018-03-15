@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 553d5e07-3e19-4aba-b490-6c7dd05fd82e
 caps.latest.revision: 
 manager: douge
-ms.openlocfilehash: 0465057549543d8e07742e3b3806ebdcab28eb28
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 144410e0e9b5b8d5d40fee86a1573bd179aea44a
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="menucommands-vs-olemenucommands"></a>MenuCommand とOleMenuCommand
 メニュー コマンドは、 <xref:System.ComponentModel.Design.MenuCommand> または <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> オブジェクトから派生させて、適切なイベント ハンドラーを実装することによって作成できます。 ほとんどのケースでは、VSPackage プロジェクト テンプレートの場合と同様に <xref:System.ComponentModel.Design.MenuCommand>を使用できますが、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>を使用することが必要になることもあります。  
@@ -190,9 +190,9 @@ ms.lasthandoff: 02/09/2018
   
     |MenuCommand プロパティ|OLECMDF フラグ|  
     |--------------------------|------------------|  
-    |<xref:System.ComponentModel.Design.MenuCommand.Checked%2A> = `true`|<xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF>|  
-    |<xref:System.ComponentModel.Design.MenuCommand.Visible%2A> = `false`|<xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF>|  
-    |<xref:System.ComponentModel.Design.MenuCommand.Enabled%2A> = `true`|<xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF>|  
+    |<xref:System.ComponentModel.Design.MenuCommand.Checked%2A> = `true`|OLECMDF_LATCHED|  
+    |<xref:System.ComponentModel.Design.MenuCommand.Visible%2A> = `false`|OLECMDF_INVISIBLE|  
+    |<xref:System.ComponentModel.Design.MenuCommand.Enabled%2A> = `true`|OLECMDF_ENABLED|  
   
      メニュー コマンドのテキストを変更するには、次の例に示すように、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.Text%2A> オブジェクトの <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> プロパティを使用します。  
   
@@ -238,7 +238,7 @@ ms.lasthandoff: 02/09/2018
   
     -   コマンドがショートカット メニューの一部で、既定では非表示になっている場合:  
   
-         `prgCmds[0] cmdf |= OLECMDF_DEFHIDEONCTXMENU`  
+         `prgCmds[0] cmdf |= OLECMDF_DEFHIDEONCTXTMENU`  
   
     -   コマンドが `TEXTCHANGES` フラグを使用している場合は、 `rgwz` パラメーターの `pCmdText` 要素をコマンドの新しいテキストに設定し、 `cwActual` パラメーターの `pCmdText` 要素をコマンド文字列のサイズに設定します。  
   
