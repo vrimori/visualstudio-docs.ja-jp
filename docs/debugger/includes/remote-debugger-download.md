@@ -13,17 +13,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 7e911686d1f8bff191c439f4fc2b92c37d60a31f
-ms.sourcegitcommit: 38097344f3ff74ba7b03bcfa45910015ca6bc2be
+ms.openlocfilehash: b16c0627fbebf13566726a7f4bfb56ecb2e6a64a
+ms.sourcegitcommit: 236c250bb97abdab99d00c6525d106fc0035d7d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 03/17/2018
 ---
 1.  デバイスまたはサーバーをデバッグするコンピューターではなく Visual Studio を実行しているコンピューター)、リモート ツールの正しいバージョンを取得します。
 
     |Version|リンク|メモ|
     |-|-|-|
-    |Visual Studio 2017 バージョン 15.5|[リモート ツール](https://www.visualstudio.com/downloads/#remote-tools-for-visual-studio-2017)|常に、デバイスのオペレーティング システム (x86 または x64) に一致するバージョンをダウンロードします。 強化されたセキュリティ モードが有効な場合 (Windows Server)、指示された場合は新しい信頼できるサイトを追加する必要があります。|
+    |Visual Studio 2017 (最新バージョン)|[リモート ツール](https://www.visualstudio.com/downloads/#remote-tools-for-visual-studio-2017)|常に、デバイスのオペレーティング システム (x86 または x64) に一致するバージョンをダウンロードします。 強化されたセキュリティ モードが有効な場合 (Windows Server)、指示された場合は新しい信頼できるサイトを追加する必要があります。|
     |Visual Studio 2017 年 (古い)|[リモート ツール](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202017)|以前のリリースの Visual Studio 2017 用のリモート ツール My.VisualStudio.com から利用できます。メッセージが表示されたら、結合、無料の Visual Studio Dev Essentials グループ、または、Visual Studio サブスクリプションでサインインします。 id です。 強化されたセキュリティ モードが有効な場合 (Windows Server)、指示された場合は新しい信頼できるサイトを追加する必要があります。|
     |Visual Studio 2015 更新プログラム 3|[リモート ツール](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|メッセージが表示されたら、結合、無料の Visual Studio Dev Essentials グループ、または、Visual Studio サブスクリプションでサインインします。 id です。 強化されたセキュリティ モードが有効な場合 (Windows Server)、指示された場合は新しい信頼できるサイトを追加する必要があります。|
     |Visual Studio 2015 が (古い)|[リモート ツール](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|メッセージが表示されたら、結合、無料の Visual Studio Dev Essentials グループ、または、Visual Studio サブスクリプションでサインインします。 id です。 強化されたセキュリティ モードが有効な場合 (Windows Server)、指示された場合は新しい信頼できるサイトを追加する必要があります。|
