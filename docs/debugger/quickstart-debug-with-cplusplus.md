@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio デバッガーを使用して C++ を使用してデバッグ |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 12/06/2017
+ms.date: 03/18/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,29 +17,29 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddf6aadc6b2debcb7423df589fb11739039c6476
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fce20f8c17b52b109b469bd439905e0edd66c9d3
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="debug-with-c-using-the-visual-studio-debugger"></a>Visual Studio デバッガーを使用して C++ でのデバッグします。
 
-Visual Studio デバッガーでは、アプリのデバッグに役立つ多くの強力な機能を提供します。 このトピックでは、いくつかの基本的な機能を説明する簡単な方法を説明します。
+Visual Studio デバッガーでは、アプリのデバッグに役立つ多くの強力な機能を提供します。 このトピックでは、基本的な機能のいくつかを簡単に紹介します。
 
 ## <a name="create-a-new-project"></a>新しいプロジェクトを作成する 
 
-1. Visual Studio で、次のように選択します。**ファイル > 新しいプロジェクト**です。
+1. Visual Studio で、**[ファイル]、[新しいプロジェクト]** の順に選択します。
 
-2. **Visual C**、選択**Windows デスクトップ**、中央のペインの  **Windows コンソール アプリケーション**です。
+2. **[Visual C++]** の下で **[Windows デスクトップ]** を選択し、真ん中のウィンドウで **[Windows コンソール アプリケーション]** を選択します。
 
     表示されない場合、 **Windows コンソール アプリケーション**プロジェクト テンプレートをクリックして、**開いている Visual Studio インストーラー**の左側のウィンドウ内のリンク、**新しいプロジェクト** ダイアログ ボックス。 Visual Studio インストーラーが起動します。 選択、 **C++ を使用したデスクトップ開発**ワークロード、順に選択**変更**です。
 
 3. ような名前を入力**MyDbgApp**  をクリック**OK**です。
 
-    Visual Studio では、プロジェクトを作成します。
+    Visual Studio によってプロジェクトが作成されます。
 
-4. MyDbgApp.cpp で次のコードに置き換えます
+4. MyDbgApp.cpp で次のコードを
 
     ```c++
     int main()
@@ -48,7 +48,7 @@ Visual Studio デバッガーでは、アプリのデバッグに役立つ多く
     }
     ```
 
-    このコードを (削除しないでください`#include "stdafx.h"`)。
+    このコードで置換します (`#include "stdafx.h"` は削除しないでください)。
 
     ```c++
     #include <list>  
@@ -92,21 +92,21 @@ A*ブレークポイント*は Visual Studio が、実行を中断する位置�
     デバッガーでは、ブレークポイントを設定するが一時停止します。 デバッガーとアプリの実行が一時停止して、ステートメントは黄色の矢印で示されます。 は、行、`doWork`関数呼び出しがまだ実行されていません。
 
     > [!TIP]
-    > ループまたは再帰では、ブレークポイントがある多数のブレークポイントが頻繁にステップを実行する必要がある場合を使用するか、[条件付きブレークポイント](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)を特定の条件が満たされた場合にのみ、コードが中断されるかどうかを確認します。 これは、時間を節約できますもやすくしたり再現が困難な問題をデバッグします。
+    > ループまたは再帰では、ブレークポイントまたは頻繁にステップを実行する多くのブレークポイントがある場合を使用した場合、[条件付きブレークポイント](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)を特定の条件が満たされた場合にのみ、コードが中断されるかどうかを確認します。 条件付きブレークポイントを時間を節約できますもやすくしたり再現が困難な問題をデバッグします。
 
     アドレスの値 (NULL の検索) を確認するブレークポイントも使用する C++ では、メモリ関連の障害をデバッグするとき、およびカウントを参照します。 
 
-## <a name="navigate-code"></a>コード内を移動します。
+## <a name="navigate-code"></a>コード間の移動
 
-続行する、デバッガーに指示するさまざまなコマンドがあります。 Visual Studio 2017 の有用なコード ナビゲーション コマンドを示します。
+続行する、デバッガーに指示するさまざまなコマンドがあります。 有用なコード ナビゲーション コマンドは、Visual Studio 2017 の新機能を説明します。
 
-- ブレークポイントで一時停止、中には、ステートメントを合わせる`c1.push_back(20)`緑まで**をクリックして実行**ボタン![実行 をクリックする](../debugger/media/dbg-tour-run-to-click.png "RunToClick")が表示され、キーを押し、**をクリックして実行**ボタンをクリックします。
+ブレークポイントで一時停止、中には、ステートメントを合わせる`c1.push_back(20)`緑まで**をクリックして実行**ボタン![実行 をクリックする](../debugger/media/dbg-tour-run-to-click.png "RunToClick")が表示され、キーを押し、**をクリックして実行**ボタンをクリックします。
 
-    ![クリックして実行](../debugger/media/dbg-qs-run-to-click.png "実行 をクリックするには")
+![クリックして実行](../debugger/media/dbg-qs-run-to-click.png "実行 をクリックするには")
 
-    アプリの実行を継続を呼び出す`doWork`、され、ボタンをクリックしたコードの行で一時停止します。
+アプリの実行を継続を呼び出す`doWork`、され、ボタンをクリックしたコードの行で一時停止します。
 
-    使用される共通のキーボード コマンド コードのステップ実行を含める**F10**と**F11**です。 複数の詳細な手順については、次を参照してください。、[ビギナーズ ガイド](../debugger/getting-started-with-the-debugger.md)です。
+使用される共通のキーボード コマンド コードのステップ実行を含める**F10**と**F11**です。 複数の詳細な手順については、次を参照してください。、[ビギナーズ ガイド](../debugger/getting-started-with-the-debugger.md)です。
 
 ## <a name="inspect-variables-in-a-datatip"></a>データヒントで変数を検査します。
 
@@ -136,9 +136,7 @@ A*ブレークポイント*は Visual Studio が、実行を中断する位置�
 
 ## <a name="next-steps"></a>次の手順
 
-- デバッガーの詳細については、次を参照してください。[デバッガーを起動し、コード内を移動](../debugger/getting-started-with-the-debugger.md)です。
-- ブレークポイントの詳細についてを参照してください。[ブレークポイントを使用する](../debugger/using-breakpoints.md)です。
+このチュートリアルでは、コードをステップ実行、デバッガーを起動し、変数を検査する方法を学びました。 詳細情報へのリンクと共にデバッガーの機能について詳しく説明を取得することがあります。
 
-## <a name="see-also"></a>参照  
- [Visual Studio でのデバッグ](../debugger/index.md)  
- [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)
+> [!div class="nextstepaction"]
+> [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)
