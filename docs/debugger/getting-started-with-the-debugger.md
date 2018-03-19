@@ -1,7 +1,8 @@
 ---
-title: "Visual Studio を使用してデバッグする方法を学習 |Microsoft ドキュメント"
-ms.custom: H1HackMay2017
-ms.date: 10/11/2017
+title: "Visual Studio をデバッグする方法を学習 |Microsoft ドキュメント"
+ms.description: Learn how to start the Visual Studio debugger, step through code, and inspect data
+ms.custom: mvc
+ms.date: 03/16/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,11 +18,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: a09e0c54f1d7f0e49f08ddf65afbeb030a7087f1
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.openlocfilehash: e0686a4138fc2489c8a63b207e98cf7780477782
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="learn-to-debug-using-visual-studio"></a>Visual Studio を使用してデバッグする方法を学習します。
 
@@ -34,6 +35,15 @@ ms.lasthandoff: 01/04/2018
 |  ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る")  |    [ビデオを見る](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171)のデバッグに関する同様の手順を表示します。 |
 
 デモ アプリが必要な場合は、c# を使用しての機能は、C++、Visual Basic、JavaScript、および (場合を除き) Visual Studio でサポートされるその他の言語に適用されます。
+
+このチュートリアルでは説明します。
+
+> [!div class="checklist"]
+> * デバッガーを起動し、ブレークポイントにヒットします。
+> * デバッガーでコードをステップ実行するためのコマンドを説明します。
+> * データのヒント、およびデバッガー ウィンドウで変数を検査します。
+> * コール スタックを調べる
+> * 例外ヘルパーを使用します。
 
 ## <a name="start-the-debugger"></a>デバッガーを開始します。
 
@@ -82,11 +92,11 @@ ms.lasthandoff: 01/04/2018
 
 ## <a name="restart-your-app-quickly"></a>アプリを迅速に再起動します。
 
-1. をクリックして、**再起動**![アプリの再起動](../debugger/media/dbg-tour-restart.png "RestartApp") (Ctrl + Shift + f5 キーを押して) デバッグツールバーのボタンをクリックします。
+をクリックして、**再起動**![アプリの再起動](../debugger/media/dbg-tour-restart.png "RestartApp") (Ctrl + Shift + f5 キーを押して) デバッグ ツールバーのボタンをクリックします。
 
-    押すと**再起動**時間、アプリを停止してデバッガーを再起動すると保存されます。 デバッガーは、最初のコードを実行してヒットしたブレークポイントで一時停止します。
+押すと**再起動**時間、アプリを停止してデバッガーを再起動すると保存されます。 デバッガーは、最初のコードを実行してヒットしたブレークポイントで一時停止します。
 
-    設定するでのブレークポイントでデバッガーが再び停止する、`MainWindow`コンス トラクターです。
+設定するでのブレークポイントでデバッガーが再び停止する、`MainWindow`コンス トラクターです。
 
 ## <a name="navigate-code-in-the-debugger-using-step-commands"></a>ステップ コマンドを使用して、デバッガーでコード内を移動します。
 
@@ -148,20 +158,20 @@ ms.lasthandoff: 01/04/2018
 
 ## <a name="examine-the-call-stack"></a>コール スタックを調べる
 
-- 一時停止中に、`Update`メソッドをクリックして、**呼び出し履歴**ウィンドウで、既定では左下のウィンドウで開くがします。
+一時停止中に、`Update`メソッドをクリックして、**呼び出し履歴**ウィンドウで、既定では左下のウィンドウで開くがします。
 
-     ![コール スタックを調べる](../debugger/media/dbg-tour-call-stack.png "ExamineCallStack")
+![コール スタックを調べる](../debugger/media/dbg-tour-call-stack.png "ExamineCallStack")
 
-    **呼び出し履歴** ウィンドウに表示するメソッドおよび関数が呼び出された順序。 最初の行が現在の関数を示しています (、`Update`ツアー アプリ内のメソッド)。 2 番目の行を表示する`Update`から呼び出されていた、`Path.set`プロパティというようにします。
+**呼び出し履歴** ウィンドウに表示するメソッドおよび関数が呼び出された順序。 最初の行が現在の関数を示しています (、`Update`ツアー アプリ内のメソッド)。 2 番目の行を表示する`Update`から呼び出されていた、`Path.set`プロパティというようにします。
 
-    >  [!NOTE]
-    > **呼び出し履歴**ウィンドウは Eclipse のようないくつかの Ide でデバッグ パースペクティブに似ています。
+>  [!NOTE]
+> **呼び出し履歴**ウィンドウは Eclipse のようないくつかの Ide でデバッグ パースペクティブに似ています。
 
-    呼び出し履歴を調査して、アプリの実行フローを理解することをお勧めします。
+呼び出し履歴を調査して、アプリの実行フローを理解することをお勧めします。
 
-    画面をそのソース コードを表示するコードの行をダブルクリックしてもに、デバッガーによって検査されている現在のスコープを変更します。 この操作では、デバッガーは変化しません。
+画面をそのソース コードを表示するコードの行をダブルクリックしてもに、デバッガーによって検査されている現在のスコープを変更します。 この操作では、デバッガーは変化しません。
 
-    右クリック メニューを使用することも、**呼び出し履歴**他の操作 ウィンドウ。 たとえば、指定した関数にブレークポイントを挿入を使用して、デバッガーを進める**カーソルまで実行**、進みソース コードを調べます。 詳細については、次を参照してください。[する方法: 呼び出し履歴を調べて](../debugger/how-to-use-the-call-stack-window.md)です。
+右クリック メニューを使用することも、**呼び出し履歴**他の操作 ウィンドウ。 たとえば、指定した関数にブレークポイントを挿入を使用して、デバッガーを進める**カーソルまで実行**、進みソース コードを調べます。 詳細については、次を参照してください。[する方法: 呼び出し履歴を調べて](../debugger/how-to-use-the-call-stack-window.md)です。
 
 ## <a name="step-out"></a>[ステップ アウト]
 
@@ -283,7 +293,9 @@ ms.lasthandoff: 01/04/2018
 
 デバッガーの機能の詳細については、次を参照してください。[デバッガー ヒントとテクニック](../debugger/debugger-tips-and-tricks.md)です。
 
-## <a name="see-also"></a>関連項目
+## <a name="next-steps"></a>次の手順
 
-[Visual Studio でのデバッグ](../debugger/index.md)  
-[デバッガー機能ツアー](../debugger/debugger-feature-tour.md)
+このチュートリアルでは、コードをステップ実行、デバッガーを起動し、変数を検査する方法を学びました。 詳細情報へのリンクと共にデバッガーの機能について詳しく説明を取得することがあります。
+
+> [!div class="nextstepaction"]
+> [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)

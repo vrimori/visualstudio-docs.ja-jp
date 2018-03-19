@@ -1,7 +1,7 @@
 ---
 title: "ASP.NET の Visual Studio のデバッグ |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 12/06/2017
+ms.date: 03/16/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - aspnet
-ms.openlocfilehash: c740265220f844b24ba9b4eeb133de185773a7a0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0c6f3b0d074957ba8fabd93707e9a76f0dcd46e1
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="debug-aspnet-with-the-visual-studio-debugger"></a>Visual Studio デバッガーでの ASP.NET をデバッグします。
 
-Visual Studio デバッガーでは、アプリのデバッグに役立つ多くの強力な機能を提供します。 このトピックでは、いくつかの基本的な機能を説明する簡単な方法を説明します。
+Visual Studio デバッガーでは、アプリのデバッグに役立つ多くの強力な機能を提供します。 このトピックでは、基本的な機能のいくつかを簡単に紹介します。
 
 ## <a name="create-a-new-project"></a>新しいプロジェクトを作成する 
 
-1. Visual Studio で、次のように選択します。**ファイル > 新しいプロジェクト**です。
+1. Visual Studio で、**[ファイル]、[新しいプロジェクト]** の順に選択します。
 
 1. **Visual c#**、選択**Web**、中央のペインの  **ASP.NET Core Web アプリケーション**です。
 
@@ -41,7 +41,7 @@ Visual Studio デバッガーでは、アプリのデバッグに役立つ多く
 
     ![Web アプリケーションを選択します。](../debugger/media/dbg-qs-aspnet-choose-web-app.png)
 
-    Visual Studio では、プロジェクトを作成します。
+    Visual Studio によってプロジェクトが作成されます。
 
 1. ソリューション エクスプ ローラーで、(Pages/About.cshtml) の下の About.cshtml.cs を開き、次のコードを置き換えます
 
@@ -52,7 +52,7 @@ Visual Studio デバッガーでは、アプリのデバッグに役立つ多く
     }
     ```
 
-    このコードでは。
+    を、次のコードで置換します。
 
     ```c#
     public void OnGet()
@@ -94,19 +94,19 @@ A*ブレークポイント*は Visual Studio が、実行を中断する位置�
     ![ブレークポイントに到達する](../debugger/media/dbg-qs-hit-breakpoint-aspnet.png)
 
     > [!TIP]
-    > ループまたは再帰では、ブレークポイントがある多数のブレークポイントが頻繁にステップを実行する必要がある場合を使用するか、[条件付きブレークポイント](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)を特定の条件が満たされた場合にのみ、コードが中断されるかどうかを確認します。 これは、時間を節約できますもやすくしたり再現が困難な問題をデバッグします。
+    > ループまたは再帰では、ブレークポイントまたは頻繁にステップを実行する多くのブレークポイントがある場合を使用した場合、[条件付きブレークポイント](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)を特定の条件が満たされた場合にのみ、コードが中断されるかどうかを確認します。 これは、時間を節約できますもやすくしたり再現が困難な問題をデバッグします。
 
-## <a name="navigate-code"></a>コード内を移動します。
+## <a name="navigate-code"></a>コード間の移動
 
-続行する、デバッガーに指示するさまざまなコマンドがあります。 Visual Studio 2017 の有用なコード ナビゲーション コマンドを示します。
+続行する、デバッガーに指示するさまざまなコマンドがあります。 有用なコード ナビゲーション コマンドは、Visual Studio 2017 の新機能を説明します。
 
-- ブレークポイントで一時停止、中には、ステートメントを合わせる`return c2`緑まで**をクリックして実行**ボタン![実行 をクリックする](../debugger/media/dbg-tour-run-to-click.png)が表示され、キーを押し、**をクリックして実行**ボタンをクリックします。
+ブレークポイントで一時停止、中には、ステートメントを合わせる`return c2`緑まで**をクリックして実行**ボタン![実行 をクリックする](../debugger/media/dbg-tour-run-to-click.png)が表示され、キーを押し、**をクリックして実行**ボタンをクリックします。
 
-    ![クリックして実行します。](../debugger/media/dbg-qs-run-to-click-aspnet.png)
+![クリックして実行します。](../debugger/media/dbg-qs-run-to-click-aspnet.png)
 
-    アプリでは、実行が続けられ、ボタンをクリックしたコードの行で一時停止します。
+アプリでは、実行が続けられ、ボタンをクリックしたコードの行で一時停止します。
 
-    使用される共通のキーボード コマンド コードのステップ実行を含める**F10**と**F11**です。 複数の詳細な手順については、次を参照してください。、[ビギナーズ ガイド](../debugger/getting-started-with-the-debugger.md)です。
+使用される共通のキーボード コマンド コードのステップ実行を含める**F10**と**F11**です。 複数の詳細な手順については、次を参照してください。、[ビギナーズ ガイド](../debugger/getting-started-with-the-debugger.md)です。
 
 ## <a name="inspect-variables-in-a-datatip"></a>データヒントで変数を検査します。
 
@@ -136,9 +136,7 @@ A*ブレークポイント*は Visual Studio が、実行を中断する位置�
 
 ## <a name="next-steps"></a>次の手順
 
-- デバッガーの詳細については、次を参照してください。[デバッガーを起動し、コード内を移動](../debugger/getting-started-with-the-debugger.md)です。
-- ブレークポイントの詳細についてを参照してください。[ブレークポイントを使用する](../debugger/using-breakpoints.md)です。
+このチュートリアルでは、コードをステップ実行、デバッガーを起動し、変数を検査する方法を学びました。 詳細情報へのリンクと共にデバッガーの機能について詳しく説明を取得することがあります。
 
-## <a name="see-also"></a>参照  
- [Visual Studio でのデバッグ](../debugger/index.md)  
- [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)
+> [!div class="nextstepaction"]
+> [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)
