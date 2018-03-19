@@ -1,0 +1,15 @@
+- name: Node.js ドキュメント
+- name: クイックスタート
+  items:
+    - name: 'Node.js: Web アプリの作成...'
+      href: /visualstudio/ide/quickstart-nodejs?toc=/visualstudio/nodejs/toc.json
+- name: チュートリアル
+  items:
+    - name: Express を使用した Node.js アプリの作成
+      href: tutorial-nodejs.md
+    - name: React を使用した Node.js アプリの作成
+      href: tutorial-nodejs-with-react-and-jsx.md
+- name: リソース
+  items:
+    - name: Node.js Tools for Visual Studio (Wiki サイト)...
+      href: 'https://github.com/Microsoft/nodejstools'
