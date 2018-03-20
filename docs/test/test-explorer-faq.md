@@ -18,11 +18,11 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: ghogen
-ms.openlocfilehash: 63c1b25ad597dc3d56dfc398ec9c6c463aec200d
-ms.sourcegitcommit: 238cd48787391aa0ed1eb684f3f04e80f7958705
+ms.openlocfilehash: d06c02e651dd4acdcaebf05448282f26c20e3a75
+ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio テスト エクスプローラーに関する FAQ
 
@@ -64,9 +64,15 @@ ms.lasthandoff: 02/12/2018
 
 ### <a name="8-how-does-sorting-test-results-work-in-the-hierarchy-view"></a>8.階層ビューでテスト結果を並べ替えるにはどうすればよいですか?
 
-  階層ビューでは、結果順ではなくアルファベット順にテストが並べ替えられます。 通常、他のグループ化設定は、テスト結果を結果順に並べ替えてからアルファベット順に並べ替えます。 比較のために異なるグループ化オプションを次に示します。 [この GitHub の問題で](https://github.com/Microsoft/vstest/issues/1425)設計に関するフィードバックを提供できます。
+  階層ビューでは、結果順ではなくアルファベット順にテストが並べ替えられます。 通常、他のグループ化設定は、テスト結果を結果順に並べ替えてからアルファベット順に並べ替えます。 次の比較図で、オプションによるグループの違いを確認してください。 [この GitHub の問題で](https://github.com/Microsoft/vstest/issues/1425)設計に関するフィードバックを提供できます。
 
   ![SortingExamples](media/testex-sortingex.png)
+
+### <a name="9-in-the-hierarchy-view-there-are-passed-failed-skipped-and-not-run-icons-next-to-the-project-namespace-and-class-groupings-what-do-these-icons-mean"></a>9.階層ビューに、プロジェクト、名前空間、およびクラス グループの横に、合格、失敗、省略、および未実行アイコンがあります。 これらのアイコンの意味を教えてください。
+
+  プロジェクト、名前空間、およびクラス グループの横にあるアイコンは、そのグループ内のテストの状態を反映します。 次の表を参照してください。
+
+  ![テスト エクスプローラーの階層のアイコン](media/testex-hierarchyicons.png)
 
 ## <a name="features"></a>フィーチャー
 

@@ -13,14 +13,107 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 40356c5d80ee8572b4e5a6e468b9abf2919524de
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: f80e5eb1d82fab7167e86550739faaaa19000786
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>変更ログ (Visual Studio Tools for Unity)
 Visual Studio Tools for Unity の変更ログです。
+
+## <a name="3604"></a>3.6.0.4
+ リリース: 2018 年 3 月 5 日
+
+### <a name="bug-fixes"></a>バグ修正
+
+-   **プロジェクトの生成:**
+
+    -   Mono バージョンの検出を修正しました。
+
+-   **統合:**
+
+    -   2018.1 とプラグインのアクティブ化のタイミングの問題を修正しました。
+
+## <a name="3603"></a>3.6.0.3
+ リリース: 2018 年 2 月 23 日
+
+### <a name="new-features"></a>新機能
+
+-   **プロジェクトの生成:**
+
+    -   .Net Standard に対するサポートを追加しました。
+
+### <a name="bug-fixes"></a>バグ修正
+
+-   **プロジェクトの生成:**
+
+    -   Unity ターゲット フレームワークの検出を修正しました。
+
+-   **デバッガー:**
+
+    -   ユーザーコードの外部でスローされた例外での中断を修正しました。
+
+## <a name="3602"></a>3.6.0.2
+ リリース: 2018 年 2 月 7 日
+
+### <a name="new-features"></a>新機能
+
+-   **統合:**
+
+    -   2017.3 の UnityMessage API サーフェスを更新しました。
+
+### <a name="bug-fixes"></a>バグ修正
+
+-   **統合:**
+
+    -   プロジェクトの再読み込みは、外部での変更時のみ実行されます (調整による)。
+ 
+## <a name="3601"></a>3.6.0.1
+ リリース: 2018 年 1 月 24 日
+
+### <a name="bug-fixes"></a>バグ修正
+
+-   **統合:**
+
+    -   pdb から mdb への自動デバッグ シンボル変換を修正済み
+    
+    -   配列のサイズを変更するときに、インスペクターに影響する EditorPrefs.GetBool への間接的な呼び出しを修正しました。
+ 
+## <a name="3600"></a>3.6.0.0
+ リリース: 2018 年 1 月 10 日
+
+### <a name="new-features"></a>新機能
+
+-   **プロジェクトの生成:**
+
+    -   2018.1 MonoIsland 参照モデルのサポートを追加しました。
+
+-   **評価:**
+
+    -   $Exception 識別子のサポートを追加しました。
+
+-   **デバッガー:**
+
+    -   新しい Unity ランタイムを使用した DebuggerHidden/DebuggerStepThrough 属性のサポートを追加しました。
+    
+-   **ウィザード:**
+
+    -   ウィザードの '最新' バージョンを導入しました。
+
+### <a name="bug-fixes"></a>バグ修正
+
+-   **プロジェクトの生成:**
+
+    -   プレーヤー プロジェクトに対するプロジェクト guid の計算を修正しました。
+
+-   **デバッガー:**
+
+    -   中断イベントを処理するときの競合を修正しました。
+    
+-   **ウィザード:**
+
+    -   roslyn コンテキストは、メソッドの挿入前に更新されます。
 
 ## <a name="3503"></a>3.5.0.3
  リリース: 2018 年 1 月 9 日

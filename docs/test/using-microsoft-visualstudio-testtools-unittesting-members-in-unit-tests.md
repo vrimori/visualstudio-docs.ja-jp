@@ -1,132 +1,138 @@
 ---
 title: "単体テストでの Microsoft.VisualStudio.TestTools.UnitTesting のメンバーの使用 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/02/2018
 ms.technology: vs-devops-test
-ms.tgt_pltfrm: 
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 3e0be7d788d4471f249b50f8c846343514b1c346
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.openlocfilehash: 7c841210c41e7b2b9870c80cc148006f3e63290d
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="using-microsoftvisualstudiotesttoolsunittesting-members-in-unit-tests"></a>単体テストでの Microsoft.VisualStudio.TestTools.UnitTesting のメンバーの使用
-単体テスト フレームワークは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] での単体テストをサポートしています。 単体テストをコーディングする場合は、<xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework> 名前空間のクラスとメンバーを使用します。 単体テストを最初から記述した場合、またはテスト中のコードから生成された単体テストを改良している場合、これらを使用することができます。  
-  
-## <a name="groups-of-elements"></a>要素のグループ  
- 単体テスト フレームワークの概要をより明確に説明するために、このセクションでは UnitTesting 名前空間の要素を関連する機能のグループごとにまとめています。  
-  
+# <a name="using-the-mstest-framework-in-unit-tests"></a>単体テストでの MSTest フレームワークの使用
+
+[MSTest](<xref:Microsoft.VisualStudio.TestTools.UnitTesting>) フレームワークは、Visual Studio での単体テストをサポートしています。 単体テストをコーディングするときに、<xref:Microsoft.VisualStudio.TestTools.UnitTesting> 名前空間のクラスとメンバーを使用します。 コードから生成された単体テストを調整するときにも、それらを使用できます。
+
+## <a name="framework-members"></a>フレームワークのメンバー
+
+単体テスト フレームワークの概要をより明確に説明するために、このセクションでは、<xref:Microsoft.VisualStudio.TestTools.UnitTesting> 名前空間のメンバーを関連する機能グループごとにまとめています。
+
 > [!NOTE]
->  名前が文字列 Attribute で終わる Attribute 要素は、使用するときに文字列 Attribute を付けても付けなくてもかまいません。 たとえば、次の 2 つのコード例は同じように機能します。  
->   
->  `[TestClass()]`  
->   
->  `[TestClassAttribute()]`  
-  
-### <a name="elements-used-for-data-driven-testing"></a>データ ドリブン テストで使用する要素  
- データ ドリブン単体テストを設定するには、次の要素を使用します。 詳細については、「[方法: データ ドリブン単体テストを作成する](../test/how-to-create-a-data-driven-unit-test.md)」および「[チュートリアル : データ ソースを定義するための構成ファイルの使用](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)」を参照してください。  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DataAccessMethod  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DataSourceAttribute 
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DataSourceElement  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DataSourceElementCollection  
-  
+> 名前が "Attribute" で終わる属性要素は、使用するときに末尾に "Attribute" を付けても付けなくてもかまいません。 たとえば、次の 2 つのコード例は同じように機能します。
+>
+> `[TestClass()]`
+>
+> `[TestClassAttribute()]`
+
+### <a name="members-used-for-data-driven-testing"></a>データ ドリブン テストで使用する要素
+
+データ ドリブン単体テストを設定するには、次の要素を使用します。 詳細については、「[データ ドリブン単体テストを作成する](../test/how-to-create-a-data-driven-unit-test.md)」および「[データ ソースを定義するための構成ファイルの使用](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)」を参照してください。
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataAccessMethod>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection>
+
 ## <a name="attributes-used-to-establish-a-calling-order"></a>呼び出し順序を確立するために使用する属性
 
 次のいずれかの属性で装飾されたコード要素は、指定した時点で呼び出されます。 詳細については、「[単体テストの構造](http://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144)」を参照してください。
 
-### <a name="for-assemblies"></a>アセンブリの場合  
- AssemblyInitialize がアセンブリの読み込みの直後に、AssemblyCleanup がアセンブリのアンロードの直前に呼び出されます。  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AssemblyInitializeAttribute  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AssemblyCleanupAttribute  
-  
-### <a name="for-classes"></a>クラスの場合  
- ClassInitialize がクラスの読み込みの直後に、ClassCleanup がクラスのアンロードの直前に呼び出されます。  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.ClassInitializeAttribute  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.ClassCleanupAttribute  
-  
-### <a name="for-test-methods"></a>テスト メソッドの場合  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestInitializeAttribute  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestCleanupAttribute  
-  
+### <a name="attributes-for-assemblies"></a>アセンブリの属性
+
+AssemblyInitialize がアセンブリの読み込みの直後に、AssemblyCleanup がアセンブリのアンロードの直前に呼び出されます。
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssemblyInitializeAttribute>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssemblyCleanupAttribute>
+
+### <a name="attributes-for-classes"></a>クラスの属性
+
+ClassInitialize がクラスの読み込みの直後に、ClassCleanup がクラスのアンロードの直前に呼び出されます。
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute>
+
+### <a name="attributes-for-test-methods"></a>テスト メソッドの属性
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute>
+
 ## <a name="attributes-used-to-identify-test-classes-and-methods"></a>テスト クラスとテスト メソッドの識別に使用する属性
 
-各テスト クラスには TestClass 属性が必要であり、各テスト メソッドには TestMethod 属性が必要です。 詳細については、「[単体テストの構造](http://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144)」を参照してください。
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute  
-  
-## <a name="assert-classes-and-related-exceptions"></a>Assert クラスおよび関連する例外  
- 単体テストでは、さまざまな種類の Assert のステートメント、例外、属性を使用することで、特定のアプリケーションの動作を確認できます。 詳細については、「[Assert クラスの使用](../test/using-the-assert-classes.md)」を参照してください。  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.Assert 
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.CollectionAssert  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.StringAssert  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AssertFailedException  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AssertInconclusiveException  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.UnitTestAssertException  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.ExpectedExceptionAttribute  
-  
-## <a name="the-testcontext-class"></a>TestContext クラス  
- 次の属性とそれらに割り当てられた値は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で、特定のテスト メソッドの [プロパティ] ウィンドウに表示されます。 これらの属性は、単体テストのコードからアクセスするためのものではありません。 代わりに、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の IDE、または [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] テストエンジンのいずれかによる単体テストの使用法または実行方法に影響します。たとえば、これらの属性には、[テスト マネージャー] ウィンドウや [テスト結果] ウィンドウの列として表示されるものがあり、それらを使用してテストやテスト結果をグループ化したり並べ替えたりできます。 このような属性の 1 つに TestPropertyAttribute があります。この属性を使用して、任意のメタデータを単体テストに追加できます。 たとえば、これを使用し、単体テストを `[TestProperty("TestPass", "Accessibility")]` とマークして、このテストの対象となるテスト パスの名前を格納できます。 または、`[TestProperty("TestKind", "Localization")]` を使用して、テストの種類のインジケーターを格納できます。 この属性を使用して作成するプロパティ、および割り当てるプロパティ値は、どちらも [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の [プロパティ] ウィンドウの **[各テストで特有]** という見出しの下に表示されます。  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.OwnerAttribute  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DeploymentItemAttribute  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DescriptionAttribute  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.HostTypeAttribute  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.IgnoreAttribute  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.PriorityAttribute  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestPropertyAttribute  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.WorkItemAttribute  
-  
-## <a name="test-configuration-classes"></a>テスト構成クラス  
-  
--   Microsoft.TeamFoundation.TestManagement.Client.ObjectTypes  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestConfigurationSection  
-  
-## <a name="attributes-used-for-generating-reports"></a>レポートの生成に使用する属性  
- このセクションの属性は、それらの属性が装飾するテスト メソッドを [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] チーム プロジェクトのプロジェクト階層内のエンティティに関連付けます。  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.CssIterationAttribute  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.CssProjectStructureAttribute  
-  
+すべてのテスト クラスには `TestClass` 属性が必要であり、すべてのテスト メソッドには `TestMethod` 属性が必要です。 詳細については、「[単体テストの構造](http://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144)」を参照してください。
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute>
+
+## <a name="assert-classes-and-related-exceptions"></a>Assert クラスおよび関連する例外
+
+単体テストでは、さまざまな種類のアサーション、例外、および属性を使用して、特定のアプリケーションの動作を確認できます。 詳細については、「[Assert クラスの使用](../test/using-the-assert-classes.md)」を参照してください。
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestAssertException>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute>
+
+## <a name="the-testcontext-class"></a>TestContext クラス
+
+次の属性とそれらに割り当てられた値は、Visual Studio Properties で特定のテスト メソッドの [プロパティ] ウィンドウに表示されます。 これらの属性は、単体テストのコードからアクセスするためのものではありません。 代わりに、Visual Studio の IDE、または Visual Studio テスト エンジンのいずれかによる単体テストの使用法または実行方法に影響します。 たとえば、これらの属性には、**[テスト マネージャー]** ウィンドウや **[テスト結果]** ウィンドウの列として表示されるものがあり、それらを使用してテストやテスト結果をグループ化したり並べ替えたりできます。 このような属性の 1 つに <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> があります。この属性を使用して、任意のメタデータを単体テストに追加できます。 たとえば、これを使用し、単体テストを `[TestProperty("TestPass", "Accessibility")]` とマークして、このテストの対象となるテスト パスの名前を格納できます。 または、`[TestProperty("TestKind", "Localization")]` を使用して、テストの種類のインジケーターを格納できます。 この属性を使用して作成するプロパティ、および割り当てるプロパティ値は、どちらも Visual Studio の **[プロパティ]** ウィンドウの **[各テストで特有]** という見出しの下に表示されます。
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DeploymentItemAttribute>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.IgnoreAttribute>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PriorityAttribute>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.WorkItemAttribute>
+
+## <a name="test-configuration-classes"></a>テスト構成クラス
+
+- <xref:Microsoft.TeamFoundation.TestManagement.Client.ObjectTypes>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection>
+
+## <a name="attributes-used-to-generate-reports"></a>レポートの生成に使用される属性
+
+このセクションの属性は、それらの属性が装飾するテスト メソッドを Team Foundation Server チーム プロジェクトのプロジェクト階層内のエンティティに関連付けます。
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.CssIterationAttribute>
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.CssProjectStructureAttribute>
+
 ## <a name="classes-used-with-private-accessors"></a>プライベート アクセサーと共に使用するクラス
 
-プライベート メソッドの単体テストを生成できます。 生成するとプライベート アクセサー クラスが作成され、このクラスにより、PrivateObject クラスのオブジェクトがインスタンス化されます。 PrivateObject クラスは、プライベート アクセサー プロセスの一部としてリフレクションを使用するラッパー クラスです。 これは PrivateType クラスに似ていますが、PrivateType クラスは、プライベート インスタンス メソッドの呼び出しではなく、プライベート静的メソッドの呼び出しに使用されます。
+プライベート メソッドの単体テストを生成できます。 生成するとプライベート アクセサー クラスが作成され、このクラスにより、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject> クラスのオブジェクトがインスタンス化されます。 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject> クラスは、プライベート アクセサー プロセスの一部としてリフレクションを使用するラッパー クラスです。 これは <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType> クラスに似ていますが、PrivateType クラスは、プライベート インスタンス メソッドの呼び出しではなく、プライベート静的メソッドの呼び出しに使用されます。
 
-- Microsoft.VisualStudio.TestPlatform.UnitTestFramework.PrivateObject
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject>
 
-- Microsoft.VisualStudio.TestPlatform.UnitTestFramework.PrivateType
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType>
+
+## <a name="see-also"></a>関連項目
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting>リファレンス ドキュメント

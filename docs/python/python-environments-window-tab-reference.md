@@ -2,7 +2,7 @@
 title: "[Python 環境] ウィンドウのリファレンス - Visual Studio | Microsoft Docs"
 description: "Visual Studio の [Python 環境] ウィンドウに表示される各タブの詳細について説明します。"
 ms.custom: 
-ms.date: 02/20/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,11 +16,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 92d5014c257cf35e556eca1928e1c5612f4913eb
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 13d84eb160b4ba82d4a03d48fe814cb0d92388b0
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="python-environments-window-tabs-reference"></a>[Python 環境] ウィンドウ タブ リファレンス
 
@@ -80,9 +80,17 @@ ms.lasthandoff: 02/23/2018
 
 *旧バージョンでは "pip" も表示されます。*
 
-環境にインストールされているパッケージを管理します。それにより、ユーザーは新しいパッケージ (すべての依存関係を含む) の検索とインストールもできるようになります。 検索機能は、現在インストールされているパッケージと [PyPI](https://pypi.python.org) をフィルター処理します。 検索ボックスに、`pip install` コマンドと `--user` や `--no-deps` などのフラグを直接入力することもできます。
+環境にインストールされているパッケージを管理します。それにより、ユーザーは新しいパッケージ (すべての依存関係を含む) の検索とインストールもできるようになります。
 
-![[Python 環境] の [パッケージ] タブ](media/environments-pip-tab.png)
+既にインストールされているパッケージには、パッケージを更新するためのコントロール (上向き矢印) とアンインストールするためのコントロール (円内の X) が表示されます。
+
+![[Python 環境] の [パッケージ] タブ](media/environments-pip-tab-controls.png)
+
+検索用語を入力すると、インストール済みのパッケージと PyPI からインストールできるパッケージの一覧がフィルター処理されます。
+
+!["num" で検索を実行中の [Python 環境] の [パッケージ] タブ](media/environments-pip-tab.png)
+
+検索ボックスに、`pip install` コマンドと `--user` や `--no-deps` などのフラグを直接入力することもできます。
 
 パッケージをインストールすると、ファイル システム上の環境の `Lib` フォルダー内にサブフォルダーが作成されます。 たとえば、Python 3.6 を `c:\Python36` にインストールすると、パッケージは `c:\Python36\Lib` にインストールされます。Anaconda3 を `c:\Program Files\Anaconda3` にインストールすると、パッケージは `c:\Program Files\Anaconda3\Lib` にインストールされます。
 
@@ -102,7 +110,9 @@ IntelliSense 入力候補データベースの現在の状態を示します。
 
 ![[Python Environments (Python 環境)] の [IntelliSense] タブ](media/environments-intellisense-tab.png)
 
-データベースには環境内のすべてのライブラリのメタデータが含まれ、IntelliSense の速度が向上しメモリ使用量が減ります。 Visual Studio は新しい環境を検出すると (またはユーザーが追加すると)、ライブラリのソース ファイルを分析することで、データベースのコンパイルを自動的に開始します。 インストールされている内容により、この処理には 1 分から 1 時間以上かかることがあります (たとえば、Anaconda には多くのライブラリが付属しており、データベースのコンパイルに少し時間がかかります)。完了すると、詳細な IntelliSense が提供され、新しいライブラリをインストールするまでデータベースを再度更新する (**[Refresh DB]\(DB の更新\)** ボタンで) 必要はありません。
+**Visual Studio 2017 バージョン 15.5** 以前は、IntelliSense による補完は、そのライブラリ用にコンパイルされているデータベースに依存しています。 データベースの構築はライブラリのインストール時にバックグラウンドで実行されますが、時間がかかる可能性があり、コードの記述の開始時には完了していないことがあります。 **Visual Studio 2017 バージョン 15.6** 以降は、特に有効にすることを選択しない限り、データベースに依存しないで完了する高速な方法が使用されます。
+
+Visual Studio は新しい環境を検出すると (またはユーザーが追加すると)、ライブラリのソース ファイルを分析することで、データベースのコンパイルを自動的に開始します。 インストールされている内容により、この処理には 1 分から 1 時間以上かかることがあります (たとえば、Anaconda には多くのライブラリが付属しており、データベースのコンパイルに少し時間がかかります)。完了すると、詳細な IntelliSense が提供され、新しいライブラリをインストールするまでデータベースを再度更新する (**[Refresh DB]\(DB の更新\)** ボタンで) 必要はありません。
 
 データがコンパイルされていないライブラリには、**!** が表示されます。環境のデータベースが完成していない場合は、**!** も メイン環境リストのライブラリの横に表示されます。
 
@@ -110,5 +120,5 @@ IntelliSense 入力候補データベースの現在の状態を示します。
 
 - [Visual Studio での Python 環境の管理](managing-python-environments-in-visual-studio.md)
 - [プロジェクトのインタープリターの選択](selecting-a-python-environment-for-a-project.md)
-- [依存関係の requirements.txt の使用](managing-required-packages-with-requirements-txt.md) 
+- [依存関係の requirements.txt の使用](managing-required-packages-with-requirements-txt.md)
 - [検索パス](search-paths.md)

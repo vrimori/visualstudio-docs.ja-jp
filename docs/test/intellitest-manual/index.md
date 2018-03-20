@@ -1,11 +1,7 @@
 ---
 title: "IntelliTest リファレンス マニュアル | Microsoft Developer Test Tools | Microsoft Docs"
-ms.custom: 
 ms.date: 05/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-devops-test
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-test
 ms.topic: article
 helpviewer_keywords:
 - IntelliTest Reference Manual, IntelliTest
@@ -14,18 +10,18 @@ manager: ghogen
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 30c23fc51f136d7fc3dcfeca191f5c469fb1e331
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 8216d8b4f27bb1211bc90d829233602edc915e43
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="intellitest-reference-manual"></a>IntelliTest リファレンス マニュアル
 
 ## <a name="contents"></a>目次
 
 * **[IntelliTest の概要](introduction.md)**
-  - [IntelliTest の Hello World](introduction.md#hello-world)
+  - [IntelliTest の Hello World](introduction.md#the-hello-world-of-intellitest)
   - [制限事項](introduction.md#limitations)
     * [非決定論的](introduction.md#nondeterminism)
     * [同時実行](introduction.md#concurrency)
@@ -33,13 +29,13 @@ ms.lasthandoff: 01/09/2018
     * [プラットフォーム](introduction.md#platform)
     * [Language](introduction.md#language)
     * [シンボリック推論](introduction.md#symbolic-reasoning)
-    * [スタック トレースの誤り](introduction.md#incorrect-stack)
+    * [スタック トレースの誤り](introduction.md#incorrect-stack-traces)
   - [関連資料](introduction.md#further-reading)<p>&nbsp;</p>
 
 * **[IntelliTest の使用を開始する](getting-started.md)**
   - [重要な属性](getting-started.md#important-attributes)
   - [重要な静的ヘルパー クラス](getting-started.md#helper-classes)<p>&nbsp;</p>
- 
+
 * **[テスト生成](test-generation.md)**
   - [テスト ジェネレーター](test-generation.md#test-generators)
   - [パラメーター化した単体テスト](test-generation.md#parameterized-unit-testing)

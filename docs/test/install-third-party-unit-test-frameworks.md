@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: 57a33ce473cd82fcb6fb8517d7003c8772c1d4da
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: c0cd7853c65d5501213076cb7ccb533c5134c9f4
+ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="install-third-party-unit-test-frameworks"></a>サードパーティ製の単体テスト フレームワークをインストールする
 Visual Studio テスト エクスプ ローラーは、エクスプ ローラーのアダプター インターフェイスを開発した単体テスト フレームワークを実行できます。 フレームワークのインストール プログラムは、バイナリをインストールし、サポートする言語の Visual Studio プロジェクト テンプレートを追加します。 テンプレートを使用してプロジェクトを作成する際、フレームワークはテスト エクスプ ローラーに登録されます。 Visual Studio ソリューションには異なるフレームワークを使用する単体テスト プロジェクトと、異なる言語を対象とした単体テスト プロジェクトを含めることができます。 テスト エクスプ ローラーはそれらすべてを実行します。  
@@ -56,7 +57,24 @@ Visual Studio テスト エクスプ ローラーは、エクスプ ローラー
   
 3.  **[カテゴリ]** の一覧 (**[表示中]** というラベルが付けられている) で、**[ツール]** ノードを展開してから、**[テスト]** をクリックします。  
   
-4.  結果の一覧でフレームワークを選択してから、ツールの Visual Studio Marketplace ページに移動します。  
-  
-## <a name="see-also"></a>参照  
- [コードの単体テスト](../test/unit-test-your-code.md)
+4.  結果の一覧でフレームワークを選択してから、ツールの Visual Studio Marketplace ページに移動します。 
+
+## <a name="update-to-the-latest-test-adapters"></a>最新のテスト アダプターに更新する
+
+テスト検出と実行のエクスペリエンスを向上させるには、最新の安定したテスト アダプターに更新します。 MSTest、NUnit、および xUnit テスト アダプターへの更新の詳細については、[Visual Studio ブログ](https://blogs.msdn.microsoft.com/visualstudio/2017/11/16/test-experience-improvements/)を参照してください。
+
+### <a name="to-update-to-the-latest-stable-test-adapter-version"></a>最新の安定したテスト アダプター バージョンに更新するには
+
+1. **[ツール] > [NuGet Package Manager] > [Manage NuGet Packages for Solution...]** を選択して、ソリューション用の Nuget Package Manager を開きます。
+
+2. **[更新]** タブをクリックし、インストールされている NUnit または xUnit テスト アダプターを検索します。
+
+3. 各テスト アダプターを選択し、ドロップダウン メニューから最新の安定したバージョンを選択します。
+
+4. **[インストール]** ボタンを選択します。
+
+![テスト アダプターをアップグレードする](media/installadapter-upgrade.png)
+
+## <a name="see-also"></a>関連項目
+
+- [コードの単体テスト](../test/unit-test-your-code.md)
