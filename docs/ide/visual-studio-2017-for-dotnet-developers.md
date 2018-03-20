@@ -11,11 +11,11 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: f15239ed045185449735ec3b5e0bcdc514fa786d
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: be14af66f5aa5389e9e701eb79dc68ee733c6068
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="visual-studio-2017-for-net-developers"></a>.NET 開発者向けの Visual Studio 2017
 
@@ -106,7 +106,7 @@ Visual Studio には必要に応じたインストールや作成が可能な拡
 | **Ctrl + F12** | 実装に移動 | 基本データ型またはメンバーから、さまざまな実装に移動します |
 | **Shift+F12** | [すべての参照の検索] | すべてのシンボルまたはリテラルの参照を表示します |
 | **Ctrl**+**.** (C# Profile では **Alt + Enter** でも可能) | クイック アクションとリファクタリング | そのカーソル位置またはコード選択で、どのコード修正、コード生成アクション、リファクタリング、その他クイック アクションが使用できるかを表示します |
-| **Ctrl** + **E**、**V** | 行の複製 | カーソルのあるコード行を複製します (**Visual Studio 2017 バージョン 15.6 preview 2** 以降で使用可能) |
+| **Ctrl** + **E**、**V** | 行の複製 | カーソルのあるコード行を複製します (**Visual Studio 2017 バージョン 15.6** 以降で使用可能) |
 | **Ctrl + Q** | クイック起動 | すべての Visual Studio の設定を検索します |
 | **F5** | デバッグの開始 | アプリケーションのデバッグを開始します |
 | **Ctrl + F5** | デバッグなしで開始 | デバッグなしでアプリケーションをローカルで実行します |

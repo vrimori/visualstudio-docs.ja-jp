@@ -1,10 +1,11 @@
 ---
 title: "Visual Studio での NET Framework の対象設定 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/18/2018
+ms.date: 02/06/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,12 +17,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: e4b68e5d7b7e63e76a2291eba6d81eb581756845
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.workload:
+- dotnet
+ms.openlocfilehash: e78f77993c510a223056696c0beac27147d18d5a
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="visual-studio-multi-targeting-overview"></a>Visual Studio のマルチ ターゲットの概要
 
@@ -48,7 +50,7 @@ Visual Studio では、プロジェクトの対象となる .NET Framework の�
 
 旧バージョンの [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] を対象とするプロジェクトで作業する場合は、Visual Studio は開発環境で次のような変更を動的に行います。
 
-- **[新しいプロジェクト]**、**[新しい項目の追加]**、**[新しい参照の追加]**、**[サービス参照の追加]** の各ダイアログ ボックスの項目をフィルター処理して、対象のバージョンで使用できない選択肢を除外します。
+- **[新しい項目の追加]**、**[新しい参照の追加]**、**[サービス参照の追加]** の各ダイアログ ボックスの項目をフィルター処理して、対象のバージョンで使用できない選択肢を除外します。
 
 - **ツールボックス**内のカスタム コントロールをフィルター処理し、対象のバージョンで使用できないコントロールを除外したり、複数のコントロールが使用可能である場合に最新のコントロールのみを表示したりします。
 
@@ -65,7 +67,11 @@ Visual Studio では、プロジェクトの対象となる .NET Framework の�
 
 ## <a name="selecting-a-target-framework-version"></a>対象フレームワークのバージョンの選択
 
-プロジェクトを作成するときに、**[新しいプロジェクト]** ダイアログ ボックスで、対象の [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンを選択します。 この選択内容に基づいて、使用できるプロジェクト テンプレートの一覧が抽出されます。 既存のプロジェクトでは、プロジェクトのプロパティ ダイアログ ボックス内で、対象となる [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンを変更できます。 詳細については、「[方法: .NET Framework のバージョンをターゲットにする](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」を参照してください。
+プロジェクトを作成するときに、**[新しいプロジェクト]** ダイアログ ボックスで、対象の .NET Framework バージョンを選択します。 使用できる Framework のリストには、選択したテンプレートの種類に適用されるインストール済みの Framework バージョンが表示されます。 .NET Core テンプレートなどの .NET Framework を必要としないテンプレートの種類の場合、**[Framework]** ドロップダウン リストは表示されません。
+
+![[新しいプロジェクト] ダイアログ ボックスの [Framework] ドロップダウン リスト](media/vside-newproject-framework.png)
+
+既存のプロジェクトでは、プロジェクトのプロパティ ダイアログ ボックス内で、対象となる [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンを変更できます。 詳細については、「[方法: .NET Framework のバージョンをターゲットにする](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」を参照してください。
 
 ## <a name="resolving-system-and-user-assembly-references"></a>システム参照およびユーザー アセンブリ参照の解決
 

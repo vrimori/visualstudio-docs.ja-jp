@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: eb39d8807deb0c08b12b04128365c584d9bd8251
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: ef143862c56f07edc844874bbf71cd916ac9eabc
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="step-6-working-with-git"></a>手順 6: Git の使用
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/09/2018
 
 Visual Studio には、ローカルの Git リポジトリおよび、GitHub や Visual Studio Team Services などのサービス上に存在するものを直接統合できます。 この統合には、リポジトリの複製、変更のコミット、分岐の管理が含まれます。
 
-このトピックでは、既存のプロジェクト用にローカル Git リポジトリを作成する方法について説明します。 リモート Git リポジトリからプロジェクトを作成する方法のチュートリアルについては、「[クイック スタート: Visual Studio で Python コードのリポジトリを複製する](quickstart-03-python-in-visual-studio-project-from-repository.md)」を参照してください。
+この記事では、既存のプロジェクト用にローカル Git リポジトリを作成する方法について説明します。 リモート Git リポジトリからプロジェクトを作成する方法のチュートリアルについては、「[クイック スタート: Visual Studio で Python コードのリポジトリを複製する](quickstart-03-python-in-visual-studio-project-from-repository.md)」を参照してください。
 
 1. [前の手順](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)のプロジェクトなどを Visual Studio で開き、ソリューションを右クリックして、**[Add Solution to Source Control]\(ソリューションをソース管理に追加\)** を選択します。 Visual Studio によってプロジェクト コードを含むローカル Git リポジトリが作成され、Git に関連するコントロールが Visual Studio のウィンドウの下部にも表示されるようになります。 コントロールには、保留中のコミット、変更、リポジトリの名前と分岐が表示されます。 コントロール上にカーソルを置き、追加情報を表します。
 

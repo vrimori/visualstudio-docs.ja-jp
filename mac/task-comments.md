@@ -6,15 +6,15 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 562DCB46-D8FA-4DC4-AAEA-F274448C4CD2
-ms.openlocfilehash: 973e7b627a7b5c121ff388874577fe59c45529d7
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 674bae5b22c5b9ecc5d6fda4a9a4e30e4fcd1660
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="task-comments"></a>タスク コメント
 
-コードを記述する場合、完了していないコード、問題があるコード、警告の簡単な回避策などをコメントで明示的に示すのは標準的な方法です。 Visual Studio for Mac で提供されている既定の指示トークンは TODO、HACK、FIXME、UNDONE ですが、次の図に示すように、**[Visual Studio] > [ユーザー設定] > [環境] > [タスク]** で個人設定のトークンを定義できます。
+コードを記述する場合、完了していないコード、問題があるコード、警告の簡単な回避策などをコメントで明示的に示すのは標準的な方法です。 Visual Studio for Mac に用意されている既定の指示トークンは、TODO、HACK、FIXME、および UNDONE です。 カスタマイズしたトークンを定義するには、次の図のように、**[Visual Studio]、[ユーザー設定]、[環境]、[タスク]** の順に選択します。
 
  ![タスク一覧のユーザー設定](media/source-editor-image10.png)
 

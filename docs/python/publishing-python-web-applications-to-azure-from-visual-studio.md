@@ -18,11 +18,11 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 79036afd66d9c8c23ffb6351d6fd5329004479f9
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 73e82e70733e12116250e47850bbcf1edff13a6d
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publishing-to-azure-app-service"></a>Azure App Service への発行
 
@@ -74,7 +74,7 @@ Azure への発行には、ターゲット App Service が必要です。 この
 
 ## <a name="configure-python-on-azure-app-service"></a>Azure App Service での Python の構成
 
-空の Web アプリを持つ App Service を (サブスクリプションまたは無料サイトのいずれかで) 実行したら、「[Azure App Service での Python の管理](managing-python-on-azure-app-service.md)」の説明に従って、選択した Python のバージョンをインストールします。 Visual Studio 2017 から発行するには、そのトピックの説明に従って、サイトの拡張機能と共にインストールされた Python インタープリターへの正確なパスを記録します。
+空の Web アプリを持つ App Service を (サブスクリプションまたは無料サイトのいずれかで) 実行したら、「[Azure App Service での Python の管理](managing-python-on-azure-app-service.md)」の説明に従って、選択した Python のバージョンをインストールします。 Visual Studio 2017 から発行するには、その記事の説明に従って、サイトの拡張機能と共にインストールされた Python インタープリターへの正確なパスを記録します。
 
 必要に応じて、これらの指示のプロセスを使用して、`bottle` パッケージもインストールできます。これはそのパッケージがこのチュートリアルの他のステップの一部としてインストールされるからです。
 

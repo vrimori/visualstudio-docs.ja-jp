@@ -2,7 +2,7 @@
 title: "Visual Studio での Python のオプションと設定 | Microsoft Docs"
 description: "Visual Studio での Python コードおよびプロジェクトに関連するさまざまな設定のリファレンスです。"
 ms.custom: 
-ms.date: 02/21/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,6 +16,7 @@ f1_keywords:
 - VS.ToolsOptionsPages.Python_Tools.General
 - VS.ToolsOptionsPages.Python_Tools.Debugging
 - VS.ToolsOptionsPages.Python_Tools.Diagnostics
+- VS.ToolsOptionsPages.Python_Tools.Experimental
 - VS.ToolsOptionsPages.Python_Tools.Interactive_Windows
 - VS.ToolsOptionsPages.Text_Editor.Python.Advanced
 author: kraigb
@@ -24,11 +25,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 25e0540c376017bfc3f3a64d23bbc6963942bb5c
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 9bb1316d46f252721230ce4ac1b14f4304693445
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="options-for-python-in-visual-studio"></a>Visual Studio での Python のオプション
 
@@ -36,19 +37,21 @@ Python のオプションを表示するには、**[ツール] > [オプショ�
 
 ![Python オプションのダイアログ、[全般] タブ](media/options-general.png)
 
-追加の Python 固有のオプションも、**[テキスト エディター] > [Python] > [詳細設定]** タブにあります。
+また、**[テキスト エディター] > [Python] > [詳細]** タブ、および [テキスト エディター] グループ内の **[環境] > [フォントと色]** タブにも Python 固有のその他のオプションがあります。
 
 > [!Note]
 > **試験的**グループには現在開発中の機能のオプションが含まれていますが、これらについてはここでは説明しません。 これらは通常、[Microsoft ブログの Python エンジニアリング](https://blogs.msdn.microsoft.com/pythonengineering/)の投稿で取り上げられます。
 
 ## <a name="general-options"></a>全般オプション
 
+(**[ツール] > [オプション] > [Python]** タブ)
+
 | オプション | 既定値 | 説明 |
 | --- | --- | --- |
 | 仮想環境の作成時に出力ウィンドウを表示する| オン | 出力ウィンドウが表示されないようにするには、オフにします。 |
 | パッケージのインストールまたは削除時に出力ウィンドウを表示する | オン | 出力ウィンドウが表示されないようにするには、オフにします。 |
 | 常に管理者として pip を実行する | オフ | すべての環境で、`pip install` 操作を常に昇格します。 パッケージのインストール時に、環境が `c:\Program Files` などのファイル システムの保護領域にある場合、Visual Studio で管理者特権を求めるメッセージが表示されます。 メッセージでは、その環境のみに対して `pip install` を常に昇格するように選択できます。 [[パッケージ] タブ](python-environments-window-tab-reference.md#packages-tab)を参照してください。 |
-| 初回使用時に完了 DB を自動的に生成する | オン | [IntelliSense 入力候補](editing-python-code-in-visual-studio.md#intellisense)がライブラリで機能するには、Visual Studio がそのライブラリの入力候補データベースを生成する必要があります。 ライブラリがインストールされるとデータベースの構築がバックグラウンドで完了しますが、コードの記述の開始時には完了していない可能性があります。 このオプションが選択されていると、ライブラリのデータベースの入力候補が、これを使用するコードを記述する際に Visual Studio によって優先されます。 |
+| 初回使用時に完了 DB を自動的に生成する | オン | *Visual Studio 2017 バージョン 15.5 以前、IntelliSense データベースを使用している場合はそれより後のバージョンに適用されます。* このオプションを使用するコードを記述すると、ライブラリのデータベースの入力候補が優先されます。 詳細については、[[環境] ウィンドウ リファレンスの [IntelliSense] タブ](python-environments-window-tab-reference.md)に関するページを参照してください。 |
 | システム全体の PYTHONPATH 変数を無視する | オン | 既定では PYTHONPATH は無視されます。これは、Visual Studio では環境とプロジェクトに検索パスを指定するためのより直接的な手段が提供されるためです。 詳細については、「[検索パス](search-paths.md)」を参照してください。 |
 | リンクされたファイルの追加時に検索パスを更新する | オン | 設定時に[リンクされたファイル](managing-python-projects-in-visual-studio.md#linked-files)をプロジェクト更新ファイルの[検索パス](search-paths.md)に追加することで、IntelliSense にその入力候補データベースのリンクされたファイルのフォルダーの内容が含まれるようになります。 そのような内容を入力候補データベースから除外するには、このオプションをオフにします。 |
 | インポートしたモジュールが見つからない場合に警告する | オン | インポートしたモジュールを現在使用できないが、コードの操作に影響がないことがわかっている場合は、このオプションをオフにして警告を非表示にしてください。 |
@@ -59,6 +62,8 @@ Python のオプションを表示するには、**[ツール] > [オプショ�
 ![Python オプションのダイアログ、[全般] タブ](media/options-general.png)
 
 ## <a name="debugging-options"></a>デバッグ オプション
+
+(**[ツール] > [オプション] > [Python] > [デバッグ]** タブ)
 
 | オプション | 既定値 | 説明 |
 | --- | --- | --- |
@@ -72,6 +77,8 @@ Python のオプションを表示するには、**[ツール] > [オプショ�
 
 ## <a name="diagnostics-options"></a>診断オプション
 
+(**[ツール] > [オプション] > [Python] > [診断]** タブ)
+
 | オプション | 既定値 | 説明 |
 | --- | --- | --- |
 | 分析ログを含める | オン | 診断をファイルに保存するとき、またはボタンを使用して診断をクリップボードにコピーするときに、インストールされている Python 環境の分析に関連する詳細なログが含まれます。 このオプションを使用すると、生成されるファイルのサイズが非常に大きくなる可能性がありますが、IntelliSense の問題を診断するために必要になる場合がよくあります。 |
@@ -81,6 +88,8 @@ Python のオプションを表示するには、**[ツール] > [オプショ�
 ![Python オプションのダイアログ、[診断] タブ](media/options-diagnostics.png)
 
 ## <a name="interactive-windows-options"></a>対話型ウィンドウ オプション
+
+(**[ツール] > [オプション] > [Python] > [対話型ウィンドウ]** タブ)
 
 | オプション | 既定値 | 説明 |
 | --- | --- | --- |
@@ -92,6 +101,8 @@ Python のオプションを表示するには、**[ツール] > [オプショ�
 ![Python オプションのダイアログ、[対話型ウィンドウ] タブ](media/options-interactive-windows.png)
 
 ## <a name="advanced-python-editor-options"></a>高度な Python エディター オプション
+
+(**[ツール] > [オプション] > [テキスト エディター] > [Python] > [詳細]** タブ)
 
 ### <a name="completion-results"></a>入力候補の結果
 
@@ -105,7 +116,7 @@ Python のオプションを表示するには、**[ツール] > [オプショ�
 
 | オプション | 既定値 | 説明 |
 | --- | --- | --- |
-| 次の文字の入力によって確定する | {}[]().,:;+-*/%&&#124;^~=<>#@\ | 通常、入力候補一覧から選択できる識別子の後にはこれらの文字が続きます。そのため、こうした文字を入力するだけで入力候補を確定すると便利です。 必要に応じて、特定の文字を一覧から削除したり、一覧に追加したりできます。  |
+| 次の文字の入力によって確定する | `{}[]().,:;+-*/%&&#124;^~=<>#@\` | 通常、入力候補一覧から選択できる識別子の後にはこれらの文字が続きます。そのため、こうした文字を入力するだけで入力候補を確定すると便利です。 必要に応じて、特定の文字を一覧から削除したり、一覧に追加したりできます。  |
 | Enter キーを押して現在の入力候補を確定する | オン | 設定すると、上記の文字と同様、Enter キーによって現在選択されている入力候補が選択され、適用されます (もちろん、文字が直接入力されるわけではないので、上の一覧に Enter は含まれていません)。 |
 | 単語を完全に入力した後 Enter キーで新しい行を追加する | オフ | 既定では、入力候補のポップアップに表示される単語をすべて入力して Enter キーを押すと、その入力候補が確定します。 このオプションを設定することで、識別子の入力を終えると Enter キーによって新しい行が挿入されるため、効率よく入力候補を確定することができます。 |
 
@@ -118,3 +129,11 @@ Python のオプションを表示するには、**[ツール] > [オプショ�
 | 種類に基づいた色名 | オン | Python コードの構文を色分け表示することができます。 |
 
 ![Python エディター オプションのダイアログ、[詳細設定] タブ](media/options-editor-advanced.png)
+
+## <a name="fonts-and-colors-options"></a>[フォントおよび色] のオプション
+
+(**[環境] > [テキスト エディター] グループ内の [フォントと色] タブ**)
+
+[Python] オプションの名前には "Python" が先頭に付いているのですぐにわかります。 すべての Visual Studio の配色テーマの既定のフォントは10pt Consolas 標準 (太字ではありません) です。 既定の色はテーマによって異なります。 通常、既定の設定でテキストを読みにくい場合はフォントや色を変更します。
+
+![Python の [フォントと色] オプション](media/options-fonts-and-colors.png)

@@ -6,23 +6,23 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: E4CFD03C-03AF-48CA-B409-6DB1CA45E991
-ms.openlocfilehash: c97e2216c8101c03c999b4f658dcd4b6e1dc4619
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 5fa5a2479b7b04cd8ad9ec84287a30d801ff90ca
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="signing-in-to-visual-studio-for-mac"></a>Visual Studio for Mac にサインインする
 
-初めて Visual Studio for Mac を起動すると、Microsoft アカウントを使ってログインするように求められます。 使うライセンスに接続されている Microsoft アカウントを使う必要があります。 Microsoft アカウントがない場合は、「[Microsoft アカウントを新規登録する](https://support.microsoft.com/instantanswers/d18cc497-d839-cf50-dea8-f99c95f2bd16/sign-up-for-a-microsoft-account)」をご覧ください。 
+初めて Visual Studio for Mac を起動すると、Microsoft アカウントを使ってログインするように求められます。 使用するライセンスに接続されている Microsoft アカウントを使用します。 Microsoft アカウントがない場合は、「[Microsoft アカウントを新規登録する](https://support.microsoft.com/instantanswers/d18cc497-d839-cf50-dea8-f99c95f2bd16/sign-up-for-a-microsoft-account)」をご覧ください。 
 
 すぐにログインしない場合は、評価版コピーを 30 日間使うことができます。 30 日が経過した後で Visual Studio for Mac を使い続けるには、サインインする必要があります。 
 
 ## <a name="how-to-sign-in-to-visual-studio-for-mac"></a>Visual Studio for Mac にサインインする方法
 
-Visual Studio for Mac にサインインする前に、インターネットに接続していることを確認します。 サブスクリプションは、オンラインでのみアクティブ化できます。
+インターネットに接続していることを確認してから Visual Studio for Mac にサインインします。 サブスクリプションは、オンラインでのみアクティブ化できます。
  
-Visual Studio for Mac にサインインするには、次のようにします。
+Visual Studio for Mac にサインインするには、次の手順を実行します。
 
 1. ウェルカム ページの [サインイン] リンクをクリックして [アカウント] ダイアログを表示し、**[サインイン]** ボタンをクリックします。
 
@@ -32,9 +32,9 @@ Visual Studio for Mac にサインインするには、次のようにします�
 
     ![](media/signing-in-image13.png)
 
-    Xamarin の資格情報を使って Visual Studio for Mac にログインすることはできないことに注意してください。
+    Xamarin の資格情報を使って Visual Studio for Mac にログインすることはできません。
 
-3. 1.   正常にログインすると、ライセンスの種類が表示されます。 このダイアログからは、使う可能性がある他の Microsoft アカウントを追加できます。
+3.  正常にログインすると、ライセンスの種類が表示されます。 このダイアログからは、使う可能性がある他の Microsoft アカウントを追加できます。
 
     ![](media/signing-in-image14.png)
 
