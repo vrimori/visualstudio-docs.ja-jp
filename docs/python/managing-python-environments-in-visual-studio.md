@@ -2,7 +2,7 @@
 title: "Visual Studio で Python 環境とインタープリターを管理する方法 | Microsoft Docs"
 description: "Visual Studio の [Python 環境] ウィンドウを使って、グローバル環境と仮想環境を管理する方法や、カスタム環境の設定方法、Python インタープリターのインストール、パッケージのインストール、検索パスの設定、Visual Studio プロジェクトの環境の管理について説明します。"
 ms.custom: 
-ms.date: 02/20/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,11 +16,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 570ce6beccf14c9f04fcd3e21b86a8d00a3d607f
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 558ce58461b27bc9a86906278602d00d96377c63
+ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="managing-python-environments-in-visual-studio"></a>Visual Studio での Python 環境の管理
 
@@ -70,9 +70,9 @@ Visual Studio が認識した環境が **[Python 環境]** ウィンドウに表
 
 上の図は、Visual Studio が、Anaconda 5.0.0 と併せて Python 3.6 (32 ビット) という 2 つのインストールを検出したことを示しています。
 
-太字で表示されている既定の環境は Python 3.6 (この場合は Anaconda インストールの一部) であり、Visual Studio はすべての新しいプロジェクトでこれを使用します。 ウィンドウの下部に表示されるコマンドは、選択された Python 3.6 インタープリターに適用されます。これは `C:\Python36-32` の固有のインストールです。 想定した環境が見つからない場合は、「[既存のインタープリターを手動で識別する](#manually-identifying-an-existing-interpreter)」を参照してください。
+太字で表示されている既定の環境は Python 3.6 (この場合は Anaconda インストールの一部) であり、Visual Studio はすべての新しいプロジェクトでこれを使用します。 ウィンドウの下部に表示されるコマンドは、選択された Python 3.6 インタープリターに適用されます。これは `C:\Python36-32` の固有のインストールです。 想定した環境が見つからない場合は、「[既存の環境を手動で識別する](#manually-identifying-an-existing-environment)」を参照してください。
 
-表示されている各環境の右側に、その環境の対話型のウィンドウを開くコントロールがあります。 環境の IntelliSense データベースを更新する別のコントロールが表示されることもあります。
+表示されている各環境の右側に、その環境の対話型のウィンドウを開くコントロールがあります。 その環境用の IntelliSense データベースを更新するための別のコントロールが表示される場合があります (データベースの詳細については、[環境ウィンドウ リファレンス](python-environments-window-tab-reference.md#intellisense-tab)を参照してください)。
 
 環境の一覧の下には、[[Python 環境] ウィンドウ タブ リファレンス](python-environments-window-tab-reference.md)に説明がある **[概要]**、**[パッケージ]**、および **[IntelliSense]** の各オプション用のドロップダウン セレクターが表示されます。 また、**[Python 環境]** ウィンドウを大きく広げると、これらのオプションがタブとして表示され、より操作しやすくなります。
 

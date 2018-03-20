@@ -1,70 +1,69 @@
 ---
-title: "方法: .NET Framework のバージョンをターゲットにする | Microsoft Docs"
+title: "Visual Studio で .NET Framework のターゲット バージョンを指定する | Microsoft Docs"
 ms.custom: 
-ms.date: 12/08/2017
+ms.date: 02/06/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
-- targeting .NET Framework version [Visual Studio]
-- versions [Visual Studio], targeting .NET Framework version
+- targeting .NET Framework [Visual Studio]
+- .NET Framework version [Visual Studio]
 author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload:
 - dotnet
-ms.openlocfilehash: da2e236c39cce72670a47212aedabb87afa4d217
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 03d8b734833fad5a47f0d5517b21a7851d9258a6
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="how-to-target-a-version-of-the-net-framework"></a>方法: .NET Framework のバージョンをターゲットにする
+# <a name="how-to-target-a-version-of-the-net-framework"></a>方法: .NET Framework のターゲット バージョンを指定する
 
 このドキュメントでは、プロジェクトを作成するときに特定のバージョンの .NET Framework を対象とする方法と、既存の Visual Basic、C#、または Visual F# プロジェクトの中で対象のバージョンを変更する方法を説明します。
 
 > [!IMPORTANT]
 > C++ プロジェクトのターゲット バージョンを変更する方法については、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)」を参照してください。
 
-## <a name="targeting-a-version-when-you-create-a-project"></a>プロジェクト作成時にバージョンを対象として設定
+## <a name="to-target-a-version-when-you-create-a-project"></a>プロジェクト作成時にバージョンを対象として設定するには
 
-プロジェクト作成時に対象として設定する .NET Framework のバージョンによって、使用できるテンプレートが決まります。
+プロジェクトを作成したときに使用できる .NET Framework のバージョンは、インストールされているバージョンと **[新しいプロジェクト]** ダイアログ ボックスで選択したテンプレートによって変わります。
 
-### <a name="to-target-a-version-when-you-create-a-project"></a>プロジェクト作成時にバージョンを対象として設定するには
+1. メニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** を選択します。
 
-1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。
+1. インストールされているテンプレートの一覧で、作成するプロジェクトの種類を選択し、プロジェクトの名前を入力します。
 
-2.  **[新しいプロジェクト]** ダイアログ ボックスの上部にある一覧で、プロジェクトの対象とする .NET Framework のバージョンを選択します。
+1. **[新しいプロジェクト]** ダイアログ ボックスの下部にある **[Framework]** ドロップダウン リストから、プロジェクトでターゲットとする .NET Framework のバージョンを選択します。
 
-3.  インストール済みテンプレートのリストで、作成しようとするプロジェクトの種類を選択し、プロジェクトに名前を付けて **[OK]** をクリックします。
+    [Framework] リストには、選択したテンプレートに適用できるバージョンのみが表示されます。 .NET Core など、プロジェクトの種類によっては、.NET Framework が必要ありません。 このような場合、**[Framework]** ドロップダウン リストは非表示になります。
 
-    テンプレートの一覧には、選択した .NET Framework のバージョンによってサポートされるプロジェクトのみが表示されます。
+    ![[新しいプロジェクト] ダイアログ ボックスの [Framework] ドロップダウン リスト](media/vside-newproject-framework.png)
 
-## <a name="changing-the-target-version"></a>ターゲット バージョンの変更
+1. **[OK]** を選択します。
+
+## <a name="to-change-the-targeted-version"></a>対象とするバージョンを変更するには
 
 次の手順で、Visual Basic、C#、または Visual F# プロジェクトの対象とする .NET Framework バージョンを変更できます。
 
 C++ プロジェクトのターゲット バージョンを変更する方法については、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)」を参照してください。
 
-### <a name="to-change-the-targeted-version"></a>対象とするバージョンを変更するには
-
-1.  **ソリューション エクスプローラー**で、変更するプロジェクトのショートカット メニューを開き、**[プロパティ]** を選択します。
+1. **ソリューション エクスプローラー**で、変更するプロジェクトのショートカット メニューを開き、**[プロパティ]** を選択します。
 
     ![Visual Studio のソリューション エクスプローラーのプロパティ](../ide/media/vs_slnexplorer_properties.png "vs_slnExplorer_Properties")
 
-2. プロパティ ウィンドウの左側の列で、**[アプリケーション]** タブを選択します。
+1. プロパティ ウィンドウの左側の列で、**[アプリケーション]** タブを選択します。
 
     ![Visual Studio のアプリのプロパティの [アプリケーション] タブ](../ide/media/vs_slnexplorer_properties_applicationtab.png "vs_slnExplorer_Properties_ApplicationTab")
 
     > [!NOTE]
     > UWP アプリを作成した後は、Windows または .NET Framework のターゲット バージョンを変更することはできません。
 
-3.  **[ターゲット フレームワーク]** 一覧で、目的のバージョンを選択します。
+1. **[ターゲット フレームワーク]** 一覧で、目的のバージョンを選択します。
 
-4.  表示される検証ダイアログ ボックスで **[はい]** ボタンを選択します。
+1. 表示される検証ダイアログ ボックスで **[はい]** ボタンを選択します。
 
     プロジェクトがアンロードされます。 プロジェクトを再読み込みすると、上で選択した .NET Framework のバージョンが対象になります。
 

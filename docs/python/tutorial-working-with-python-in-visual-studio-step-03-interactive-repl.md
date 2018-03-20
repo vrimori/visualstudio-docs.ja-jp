@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 60b960a4a8f81f14bbbc2035670e6b9fd80b5312
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 598aa6332d69f7818f9f67134c3207a9bd365757
+ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="step-3-using-the-interactive-repl-window"></a>手順 3: 対話型 REPL ウィンドウを使用する
 
@@ -31,7 +31,7 @@ Visual Studio の Python 用の *対話型ウィンドウ*は、機能豊富な 
 
 1. ソリューション エクスプローラーで、(前の図で示した "Python 3.6 (32-bit)" などのような) プロジェクトの Python 環境を右クリックして、**[対話型ウィンドウを開く]** を選択して対話型ウィンドウを開きます。 Visual Studio のメイン メニューで、**[表示] > [その他のウィンドウ] > [Python Interactive Windows (Python Interactive ウィンドウ)]** を選択することも可能です。
 
-1. 対話型ウィンドウが、エディターの下で通常の `>>>` Python REPL プロンプトとして開きます。 対話型ウィンドウのサイズを大きくする必要がある場合があります。その場合には、2 つのウィンドウ間の区切りをドラッグします。
+1. 対話型ウィンドウが、エディターの下で標準の `>>>` Python REPL プロンプトとして開きます。 **[環境]** ドロップダウン リストを使用して、操作する特定のインタープリターを選択できます。 対話型ウィンドウのサイズを大きくすることもできます。その場合には、2 つのウィンドウ間の区切りをドラッグします。
 
     ![Python の対話型ウィンドウとサイズ変更のためのそれのドラッグ](media/vs-getting-started-python-11-interactive1b.png)
 
@@ -100,7 +100,7 @@ Visual Studio の Python 用の *対話型ウィンドウ*は、機能豊富な 
 > [!div class="nextstepaction"]
 > [デバッガーでコードを実行する](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
 
-### <a name="going-deeper"></a>詳しい説明
+## <a name="going-deeper"></a>詳しい説明
 
 - [対話型ウィンドウの使用](python-interactive-repl-in-visual-studio.md)
 - [IPython REPL の使用](interactive-repl-ipython.md)

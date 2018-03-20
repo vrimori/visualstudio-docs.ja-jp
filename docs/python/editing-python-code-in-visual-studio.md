@@ -2,7 +2,7 @@
 title: "Visual Studio での Python コードの編集 | Microsoft Docs"
 description: "Visual Studio での Python の編集では、IntelliSense、コード スニペット、ナビゲーション機能、書式設定、lint、リファクタリングの機能が提供されます。"
 ms.custom: 
-ms.date: 02/15/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e1e592d6fdb8fd7deb1e702513a932297a60e6ac
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: aae28ff5634dc59f2481140918b7ee19c29c4e1e
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="editing-python-code"></a>Python コードの編集
 
@@ -39,7 +39,11 @@ Visual Studio でのコードの編集に関する全般的な説明について
 
 ## <a name="intellisense"></a>IntelliSense
 
-IntelliSense により、[入力候補](#completions)、[シグネチャ ヘルプ](#signature-help)、[クイック ヒント](#quick-info)、[コードの色分け表示](#code-coloring)が提供されます。 パフォーマンスを向上するために、IntelliSense はプロジェクト内の各 Python 環境に対して生成される入力候補データベースを使用します。 パッケージを追加、削除、更新した場合はデータベースの更新が必要になる可能性があります。 データベースの状態は、**[IntelliSense]** タブの **[Python 環境]** ウィンドウ (ソリューション エクスプローラーの兄弟ウィンドウ) に表示されます (「[[Python 環境] ウィンドウ リファレンス](python-environments-window-tab-reference.md#intellisense-tab)」 を参照してください)。
+IntelliSense により、[入力候補](#completions)、[シグネチャ ヘルプ](#signature-help)、[クイック ヒント](#quick-info)、[コードの色分け表示](#code-coloring)が提供されます。
+
+パフォーマンスを向上するために、**Visual Studio 2017 version 15.5** 以前の IntelliSense は、プロジェクト内の各 Python 環境用に生成される入力候補データベースに依存しています。 パッケージを追加、削除、更新した場合はデータベースの更新が必要になる可能性があります。 データベースの状態は、**[IntelliSense]** タブの **[Python 環境]** ウィンドウ (ソリューション エクスプローラーの兄弟ウィンドウ) に表示されます ([環境ウィンドウ リファレンス](python-environments-window-tab-reference.md#intellisense-tab)を参照してください)。
+
+**Visual Studio 2017 バージョン 15.6** 以降では、別の手段を使用して、データベースに依存しない IntelliSense 入力候補が提供されています。
 
 ### <a name="completions"></a>入力候補
 
@@ -110,15 +114,41 @@ IntelliSense により、[入力候補](#completions)、[シグネチャ ヘル�
 
 ## <a name="code-snippets"></a>コード スニペット
 
-コード スニペットは、ショートカットを入力して Tab キーを押すか、**[編集] > [IntelliSense] > [コード スニペットの挿入]** **[ブロックの挿入]** コマンドを使用することでファイルに挿入できるコード フラグメントです。 たとえば、`class` を入力した後で Tab キーを押すと、クラスの残りの部分が生成されます。 強調表示されたフィールド間を Tab キーで移動して名前と基底クラスのリストを上書きし、Enter キーを押して本文の入力を開始できます。
+コード スニペットはファイルに挿入できるコード フラグメントであり、ショートカットを入力して Tab キーを押すか、**[編集] > [IntelliSense] > [コード スニペットの挿入]** と **[ブロックの挿入]** コマンドを使用して **[Python]** を選択し、目的のスニペットを選択することで、ファイルに挿入できます。
 
-![コード スニペット](media/code-editing-code-snippets.png)
+たとえば、`class` は、クラス定義を挿入するコード スニペットのショートカットです。 `class` を入力すると、そのスニペットが自動入力候補一覧に表示されます。
 
-利用可能なコード スニペットは、コード スニペット マネージャーで確認できます (**[ツール] > [コード スニペット マネージャー]**) を選択し、言語として **[Python]** を選択します。
+![class ショートカットに対応するコード スニペット](media/code-editing-code-snippet-class.png)
+
+Tab キーを押すと、クラスの残りの部分が生成されます。 強調表示されたフィールド間を Tab キーで移動して名前と基底クラスのリストを上書きし、Enter キーを押して本文の入力を開始できます。
+
+![補完するコード スニペットの領域の強調表示](media/code-editing-code-snippets.png)
+
+### <a name="menu-commands"></a>メニュー コマンド
+
+**[編集] > [IntelliSense] > [コード スニペットの挿入]** メニュー コマンドを使用する場合は、まず [Python] を選択し、次にスニペットを選択します。
+
+![[コード スニペットの挿入] コマンドによるコード スニペットの選択](media/code-editing-code-snippet-insert.png)
+
+**[編集] > [IntelliSense] > [ブロックの挿入]** コマンドも、テキスト エディター内の現在の選択範囲を、選択済みの構造体の要素内に配置します。 たとえば、次のようなコードがあるとします。
+
+```python
+sum = 0
+for x in range(1, 100):
+    sum = sum + x
+```
+
+このコードを選択し、**[ブロックの挿入]** コマンドを選択すると、使用可能なスニペットの一覧が表示されます。 一覧から `def` を選択すると、選択済みのコードが関数定義内に配置され、強調表示されている関数の名前と引数の間を Tab キーを使用して移動できます。
+
+![コード スニペットに対する [ブロックの挿入] コマンドの使用](media/code-editing-code-snippet-surround-with.png)
+
+### <a name="examine-available-snippets"></a>利用可能なスニペットを調べる
+
+利用可能なコード スニペットは、コード スニペット マネージャーで確認できます。これを開くには、**[ツール] > [コード スニペット マネージャー]** メニュー コマンドを選択し、言語として **[Python]** を選択します。
 
 ![コード スニペット マネージャー](media/code-editing-code-snippets-manager.png)
 
-独自のスニペットの作成方法については、「[チュートリアル: コード スニペットを作成する](../ide/walkthrough-creating-a-code-snippet.md)」をご覧ください。 
+独自のスニペットの作成方法については、「[チュートリアル: コード スニペットを作成する](../ide/walkthrough-creating-a-code-snippet.md)」をご覧ください。
 
 便利なコード スニペットを作成したので共有したいとお考えの場合は、ぜひ gist に投稿して[マイクロソフトまでお知らせください](https://github.com/Microsoft/PTVS/issues)。 Visual Studio の将来のリリースに含めさせていただく可能性があります。
 
@@ -126,7 +156,7 @@ IntelliSense により、[入力候補](#completions)、[シグネチャ ヘル�
 
 Visual Studio の Python のサポートとして、ソース コードが提供されているライブラリ、[ナビゲーション バー](#navigation-bar)、[[定義へ移動]](#go-to-definition)、[[移動]](#navigate-to)、[[すべての参照の検索]](#find-all-references) など、コード内のナビゲーションを迅速にするためのさまざまな手段が用意されています。 また、Visual Studio の[オブジェクト ブラウザー](../ide/viewing-the-structure-of-code.md#BKMK_ObjectBrowser)も使用できます。
 
-### <a name="navigation-bar"></a>[ナビゲーション バー]
+### <a name="navigation-bar"></a>ナビゲーション バー
 
 ナビゲーション バーは各エディター ウィンドウの上部に表示され、2 つのレベルの定義リストを含みます。 左側のドロップダウン リストには、現在のファイル内の最上位のクラスと関数の定義が表示されます。右側のドロップダウン リストには、左側に表示されているスコープ内の定義のリストが表示されます。 エディター内を移動するとこれらのリストが現在のコンテキストを示すように更新され、リストからエントリを選択してそのエントリに直接ジャンプすることもできます。
 
@@ -141,13 +171,13 @@ Visual Studio の Python のサポートとして、ソース コードが提供
 
 ![[定義へ移動]](media/code-editing-go-to-definition.png)
 
-### <a name="navigate-to"></a>移動
+### <a name="navigate-to"></a>[移動]
 
 **[編集] > [移動]** コマンド (Ctrl + コンマ キー) を実行すると、エディター内に検索ボックスが表示されます。ボックスに任意の文字列を入力すると、その文字列を含む関数、クラス、変数を定義しているコード内の箇所が表示されます。 この機能は **[定義へ移動]** の機能と似ていますが、識別子の使用場所を探す必要がありません。
 
 任意の名前をダブルクリックするか、方向キーで選択して Enter キーを押すと、その識別子の定義に移動します。
 
-![移動](media/code-editing-navigate-to.png)
+![[移動]](media/code-editing-navigate-to.png)
 
 ### <a name="find-all-references"></a>[すべての参照の検索]
 

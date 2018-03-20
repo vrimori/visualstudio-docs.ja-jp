@@ -6,19 +6,19 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 61EAAB8F-3C32-4574-924F-CFC616604089
-ms.openlocfilehash: 46338778813b73dbc87458f90cfe0548bd8ccb8a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 95aa6abeb5a64158fe0ef0ed2b64392108248523
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="managing-app-resources"></a>アプリ リソースの管理
 
-画像、テキスト ファイル、オーディオ ファイルなどのアプリ リソース ファイルは、アプリケーションと共にコンパイルはされませんが、アプリケーションに不可欠な要素です。 Visual Studio for Mac でサポートされている各プラットフォームでは、さまざまな方法でこのようなファイルを処理しています。 Visual Studio for Mac のアプリ リソースを処理する方法については、以下のガイドを参照してください。
+アプリケーションには、画像、テキスト ファイル、オーディオ ファイルなどのアプリ リソース ファイルが必要ですが、これらはアプリケーションと共にコンパイルされません。 Visual Studio for Mac でサポートされる各プラットフォームでは、これらのリソースは、以下のガイドで説明するように、異なる方法で処理されます。
 
 ## <a name="xamarinforms"></a>Xamarin.Forms
 
-Xamarin.Forms コードは複数のプラットフォームで実行されますが、各プラットフォームには独自のファイルシステムがあります。 つまり、ファイルの読み取りと書き込みには、各プラットフォームでネイティブ ファイル API を使用するか、埋め込みリソースとしてファイルを追加します。
+Xamarin.Forms コードは複数のプラットフォームで実行されます。各プラットフォームには独自のファイル システムがあり、ファイルへの読み書き方法は各ファイル システムによって指示されます。 Xamarin.Forms では、各プラットフォームでネイティブのファイル API を使用するか、埋め込みリソースとしてファイルを追加することによって、アプリ リソースを管理できます。
 
 * [イメージの処理](https://developer.xamarin.com/guides/xamarin-forms/user-interface/images/)
 * [ファイルの処理]( https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/files/)
