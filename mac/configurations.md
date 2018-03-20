@@ -6,28 +6,28 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 78107CFA-9308-4293-A92A-9B552A259E15
-ms.openlocfilehash: e435418c0c77f1577e9db8ab35d76d6bd54f8447
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: bf27e89b6a1a606b2a7430fc7d4394b8c5ab22bc
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="understanding-build-configurations"></a>ビルド構成について
 
 ## <a name="project-build-configurations"></a>プロジェクトのビルド構成 
 
-プロジェクトは複数の構成からなることがあります。構成を切り替えることで、ビルド時に異なる出力が可能になります。 たとえば、デバッグ構成を使用すると、出力にはデバッグ シンボルが含まれます。それにより、デバッガーは関数名、パラメーター、変数をクラッシュしたアプリケーションのスタック トレースから解決できます。 ただし、デバッグ構成を使用する場合、ファイル サイズが膨張するので、配賦を意図しているアプリケーションには不向きです。
+多くの場合、プロジェクトには複数の構成があり、ビルド時に構成を切り替えてさまざまな出力を実行できます。 たとえば、デバッグ構成を選択すると、デバッグ シンボルが出力されるので、デバッガーは関数名、パラメーター、変数をクラッシュしたアプリケーションのスタック トレースから解決できます。 開発時にはこのような追加情報が役に立ちますが、ファイル サイズが膨大になるため、配布には適していません。
 
-各プラットフォームには、そのビルドに特定の構成が与えられます。 Xamarin.Android の開発では、常にリリースまたはデバッグ構成のみが与えられます。 Xamarin.iOS の場合、複数の構成が与えられます。 新しい iOS プロジェクトにはデバッグまたはリリース構成のみが与えられますが、デバイスとインストールされている何らかのシミュレーターのいずれかに設定できます。
+各プラットフォームには、そのビルドに固有の構成があります。 
 
 ## <a name="solution-configurations"></a>ソリューション構成
 
-プロジェクト構成のように、ソリューション構成も、プロジェクト全体に対してカスタム構成を作成するために使用されます。 下の画像のように、**[ビルド]、[構成]**、**[構成マッピング]** タブの順に選択し、各ソリューション項目のターゲット構成を割り当てることができます。
+プロジェクト構成のように、ソリューション構成も、プロジェクト全体に対してカスタム構成を作成するために使用されます。 次の画像のように、**[ビルド]、[構成]**、**[構成マッピング]** タブの順に選択し、各ソリューション項目のターゲット構成を割り当てることができます。
 
 
  ![構成マッピング オプション](media/projects-and-solutions-image3.png)
 
-詳細については、James Montemagno の [Configuration Manager](https://www.youtube.com/watch?v=tjSdkqYh5Vg) の動画をご覧ください。
+構成の詳細については、James Montemagno の [Configuration Manager](https://www.youtube.com/watch?v=tjSdkqYh5Vg) の動画をご覧ください。
 
 ## <a name="run-configuration"></a>構成の実行
 
@@ -49,7 +49,7 @@ Android プロジェクトの実行構成では、プロジェクトの実行時
 
 ## <a name="examples-of-data-that-might-be-included-in-run-configurations"></a>実行構成に含まれるデータの例
 
-下の一覧では、実行構成に含まれることがあるデータ例を提供します。
+次の一覧は、実行構成に含まれることがあるデータ例です。
 
 * 通常の .NET プロジェクト
     * 代替スタートアップ アプリ

@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e68fff14ea51816ae45a29410d09cb6633689534
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 95ef8e1c5be39119574f838df93d067a7404f7f5
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="formatting-python-code"></a>Python コードの書式設定
 
@@ -30,7 +30,11 @@ Visual Studio を使用すると、事前に構成した書式設定オプショ
 - 選択範囲の書式を設定するには、**[編集] > [詳細設定] > [選択範囲のフォーマット]** を選択するか、Ctrl + E、F キーを押します。
 - ファイル全体の書式を設定するには、**[編集] > [詳細設定] > [ドキュメントのフォーマット]** を選択するか、Ctrl + E、D キーを押します。
 
-オプションは **[ツール] > [オプション] > [テキスト エディター] > [Python] > [書式設定]** とその入れ子になったタブで設定しますが、既定値は [PEP 8 スタイル ガイド](http://www.python.org/dev/peps/pep-0008/)のスーパーセットに従って設定されます。 **[全般]** タブでは、どのような場合に書式設定を適用するかを指定します。このトピックでは、他の 3 つのタブについて説明します。
+オプションを設定するには、**[ツール]、[オプション]、[テキスト エディター]、[Python] の順に選択し、[書式設定]** とその入れ子のタブで設定します。 これらのオプションを表示するには、**[すべての設定を表示]** を選択する必要があります。
+
+![Visual Studio の Python の [書式設定] オプション](media/options-editor-formatting.png)
+
+[書式設定] オプションは、既定で [PEP 8 スタイル ガイド](http://www.python.org/dev/peps/pep-0008/)のスーパーセットと一致するように設定されています。 **[全般]** タブでは、どのような場合に書式設定を適用するかを指定します。この記事では、他の 3 つのタブについて説明します。
 
 [Visual Studio の Python のサポート](installing-python-support-in-visual-studio.md)で、**[編集] > [詳細設定]** には、[[コメントを段落幅に合わせる]](#fill-comment-paragraph-command) という便利なコマンドも追加されています。これについても後で説明します。
 

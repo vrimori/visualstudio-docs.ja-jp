@@ -6,11 +6,11 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 6958B102-8527-4B40-BC65-3505DB63F9D3
-ms.openlocfilehash: 2d17a952c58e5ef7e593ee7aeb1980e09a376800
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 6ef9084e5cd571c0f3f2b60e2c08d8d7bb0b8518
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="customizing-the-build-system"></a>ビルド システムのカスタマイズ
 
@@ -18,7 +18,7 @@ MSbuild は Microsoft が開発したビルド エンジンです。主に .NET 
 
 **MSbuild** は、Visual Studio for Mac のビルド システムとして主に使用されます。 
 
-MSBuild は、ソース ファイルなど、一連の入力を受け取ることで動作し、入力を実行可能ファイルなどの出力に変換し、コンパイラのようなツールを呼び出すことでその出力を実行します。 
+MSBuild は、ソース ファイルなど、一連の入力を受け取ることで動作し、入力を実行可能ファイルなどの出力に変換します。 この出力は、コンパイラのようなツールを呼び出して行われます。 
 
 
 ## <a name="msbuild-file"></a>MSBuild ファイル
@@ -26,17 +26,18 @@ MSBuild は、ソース ファイルなど、一連の入力を受け取るこ�
 MSBuild は、プロジェクト ファイルと呼ばれる XML ファイルを使用します。このファイルはプロジェクトの一部である*アイテム* (イメージ リソースなど) とプロジェクトのビルドに必要な*プロパティ*を定義します。 このプロジェクト ファイルのファイル拡張子は常に `proj` で終わります。たとえば、C# プロジェクトの場合、`.csproj` になります。 
 
 ### <a name="viewing-the-msbuild-file"></a>MSBuild ファイルを表示する
-このファイルを見つけるには、プロジェクト名を右クリックし、**[Finder に表示]** を選択します。 下の画像のように、プロジェクトに関連するすべてのファイルとフォルダーが表示されます。`.csproj` ファイルも表示されます。
+
+MSBuild ファイルを見つけるには、プロジェクト名を右クリックし、**[Finder に表示]** を選択します。 次の図のように、この Finder ウィンドウには、`.csproj` ファイルなど、プロジェクトに関連するすべてのファイルとフォルダーが表示されます。
 
 ![](media/customizing-build-system-image1.png)
 
-Visual Studio for Mac では、新しいタブに `.csproj` を表示することもできます。プロジェクト名を右クリックし、**[ツール]、[ファイルの編集]** の順に選択します。
+Visual Studio for Mac で新しいタブに `.csproj` を表示するには、プロジェクト名を右クリックし、**[ツール]、[ファイルの編集]** の順に選択します。
 
 ![](media/customizing-build-system-image2.png)
 
 ### <a name="composition-of-the-msbuild-file"></a>MSBuild ファイルの構成
 
-すべての MSBuild ファイルに、下の画像のように、必須のルート `Project` 要素が含まれています。
+すべての MSBuild ファイルに、次のように必須のルート `Project` 要素が含まれています。
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -44,7 +45,7 @@ Visual Studio for Mac では、新しいタブに `.csproj` を表示するこ�
 </Project>
 ```
 
-通常、プロジェクトは `.targets` ファイルもインポートします。このファイルには、さまざまなファイルを処理し、ビルドする方法を説明したルールがたくさん含まれています。 これは通常、`proj` ファイルの下のほうに表示されます。C# プロジェクトの場合、次の画像のようになります。
+通常、プロジェクトは `.targets` ファイルもインポートします。 このファイルには、さまざまなファイルを処理し、ビルドする方法を説明したルールがたくさん含まれています。 通常、このインポートは `proj` ファイルの下のほうに表示されます。C# プロジェクトの場合、次の画像のようになります。
 
 ```
 <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -54,7 +55,7 @@ Visual Studio for Mac では、新しいタブに `.csproj` を表示するこ�
 
 ### <a name="items-and-properties"></a>項目とプロパティ
 
-MSBuild には、*項目*と*プロパティ*という 2 つの基本データ型があります。これについて以下で説明します。
+MSBuild には、*項目*と*プロパティ*という 2 つの基本データ型があります。詳細については後述します。
 
 #### <a name="properties"></a>プロパティ
 
@@ -62,7 +63,7 @@ MSBuild には、*項目*と*プロパティ*という 2 つの基本データ�
 
 プロパティは PropertyGroup を利用して設定されます。また、プロパティには、任意の数の PropertiesGroups を追加できます (PropertiesGroups にはさらに任意の数のプロパティを追加できます)。 
 
-たとえば、簡単なコンソール アプリケーションの PropertyGroup は次のようになります。
+たとえば、簡単なコンソール アプリケーションの PropertyGroup は次の XML のようになります。
 
 ```
 <PropertyGroup>
@@ -84,7 +85,7 @@ MSBuild には、*項目*と*プロパティ*という 2 つの基本データ�
 
 項目は、`ItemGroup` を宣言することで作成されます。 任意の数の項目を含めた ItemGroups をさらに任意の数だけ作成できます。 
 
-たとえば、下のコード スニペットでは、iOS の起動画面が作成されます。 これは `BundleResource` 型です。画像へのパスとして仕様が指定されています。
+たとえば、次のコード スニペットでは、iOS の起動画面が作成されます。 起動画面には、ビルドの種類 `BundleResource` と、イメージのパスの指定が表示されます。
 
 ```
  <ItemGroup>

@@ -17,15 +17,15 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7ee982a1068f2ea89299b75ca825f7a7c1c4e6b0
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 1f18ba5e7ce44766262851f68c829c887bfc9581
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="using-ipython-in-the-interactive-window"></a>対話型ウィンドウでの IPython の使用
 
-Visual Studio の IPython モードの対話型ウィンドウは、対話型の並列コンピューティング機能を備えた高度で使いやすい対話形式の開発環境です。 このトピックでは、Visual Studio の対話型ウィンドウで IPython を使用する手順について説明します。IPython でも、通常の[対話型ウィンドウ](python-interactive-repl-in-visual-studio.md)機能をすべて使用できます。
+Visual Studio の IPython モードの対話型ウィンドウは、対話型の並列コンピューティング機能を備えた高度で使いやすい対話形式の開発環境です。 この記事では、Visual Studio の対話型ウィンドウで IPython を使用する手順について説明します。IPython でも、通常の[対話型ウィンドウ](python-interactive-repl-in-visual-studio.md)機能をすべて使用できます。
 
 このチュートリアルでは、IPython と必要なライブラリが含まれている [Anaconda](https://www.continuum.io) 環境をインストールする必要があります。
 
@@ -83,7 +83,7 @@ Visual Studio の IPython モードの対話型ウィンドウは、対話型の
 
 IPython には、システム シェルのエスケープ、変数の代入、出力のキャプチャなどの便利な機能が多数あります。詳細については、[IPython のドキュメント](http://ipython.org/documentation.html)を参照してください。
 
-## <a name="related-topics"></a>関連トピック
+## <a name="related-articles"></a>関連記事
 
 - Jupyter をインストールせずに簡単に使用するには、無料の [Azure Notebooks ホスト サービス](https://notebooks.azure.com/)を試してください。ノートブックを保存し、他のユーザーと共有することができます。
 

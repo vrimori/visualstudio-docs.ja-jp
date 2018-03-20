@@ -1,26 +1,26 @@
 ---
 title: "Visual Studio のキーボード ショートカット | Microsoft Docs"
-ms.custom: 
 ms.date: 06/21/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
 ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 779867243bc30c26e1fce9260ddf497a9fcf193e
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 81c4c0957642b97b3d6e88107d98b293a5d09328
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="keyboard-tips-for-visual-studio"></a>Visual Studio のキーボードに関するヒント
 
-Visual Studio では、このトピックのキーボード ショートカットを使用してより簡単に移動できます。 このトピックは、使用できるキーボード ショートカットの一部にすぎません。 詳しくは、「[Visual Studio の既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)」を参照してください。 ユーザー補助について Visual Studio を最適化する方法の詳細については、「[アクセシビリティのヒントとテクニック](../ide/reference/accessibility-tips-and-tricks.md)」を参照してください。
+Visual Studio では、この記事のキーボード ショートカットを使用してより簡単に移動できます。
+
+ここでは、使用できるキーボード ショートカットの一部を紹介しています。 詳しくは、「[Visual Studio の既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)」を参照してください。
+
+ユーザー補助について Visual Studio を最適化する方法の詳細については、「[アクセシビリティのヒントとテクニック](../ide/reference/accessibility-tips-and-tricks.md)」を参照してください。
 
 ## <a name="window-management"></a>ウィンドウの管理
 
@@ -83,7 +83,7 @@ Visual Studio では、このトピックのキーボード ショートカッ�
 |エディターのズーム|Ctrl + Shift + > (イン)、Ctrl + Shift + < (アウト)||
 |ブロック選択|Alt を押したままマウスをドラッグ、Shift + Alt + 方向キー||
 |行を上下に移動|Alt + Up / Alt + Down||
-|行の複製|Ctrl + E、V|Visual Studio 2017 バージョン 15.6 preview 2|
+|行の複製|Ctrl + E、V|Visual Studio 2017 バージョン 15.6|
 |選択範囲の展開|**Shift** + **Alt** + **=**|Visual Studio 2017 バージョン 15.5|
 |選択範囲の縮小|**Shift** + **Alt** + **-**|Visual Studio 2017 バージョン 15.5|
 |[定義へ移動]|F12||

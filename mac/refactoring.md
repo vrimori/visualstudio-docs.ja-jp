@@ -6,19 +6,19 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: C7782BF3-016F-4B41-8A81-85FC540A1A8F
-ms.openlocfilehash: ba92cd9a0e9ca28d132116f65fd41758bce1a1f0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 925c928e171b76af76304074e736fd8962158564
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="refactoring"></a>リファクタリング
 
 コードのリファクタリングは、既存のコードの再配置、再構築、および明確化を行うための方法です。コードの動作全体が変わることはありません。
 
-より正常なコード ベースを生成し、自分またはコードを参照する可能性のある他の開発者やユーザーがより使いやすく、読みやすく、また保守しやすくします。
+リファクタリングすると、より健全なコード ベースが生成されるので、自分またはコードを参照する可能性のある他の開発者やユーザーがより使いやすく、読みやすく、また保守しやすくなります。
 
-Visual Studio for Mac と、Roslyn (Microsoft のオープンソースの .NET コンパイラ プラットフォーム) との統合により、より多くのリファクタリング操作が可能になり、最新の C# バージョンを完全にサポートできるようになります。
+Visual Studio for Mac と、Roslyn (Microsoft のオープンソースの .NET コンパイラ プラットフォーム) との統合により、より多くのリファクタリング操作が可能になります。
 
 ## <a name="renaming"></a>名前の変更 
 

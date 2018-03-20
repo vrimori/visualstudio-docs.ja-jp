@@ -18,20 +18,20 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: e5d5cbc856a6af44941d690119f2a15a8acc3d41
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 0f0910459fecb01573b7282137949acbfd5dcb32
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="managing-python-on-azure-app-service"></a>Azure App Service での Python の管理
 
 [Azure App Service](https://azure.microsoft.com/services/app-service/) は、Web アプリに提供するサービスとしてのプラットフォームです。Web アプリがブラウザーでアクセスされるサイト、自身のクライアントで使用される REST API、またはイベント トリガーされる処理かどうかは関係ありません。 App Service は、Python を使用してアプリの実装を完全にサポートします。
 
-Azure App Service でのカスタマイズ可能な Python のサポートは、App Service *サイトの拡張機能*のセットとして提供されます。拡張機能にはそれぞれ Python ランタイムの特定のバージョンが含まれています。 その後、このトピックの説明に従って、希望のパッケージを直接環境にインストールすることができます。 App Service 自体で環境をカスタマイズすることにより、Web アプリ プロジェクトでパッケージを管理したり、アプリ コードと一緒にアップロードする必要はありません。
+Azure App Service でのカスタマイズ可能な Python のサポートは、App Service *サイトの拡張機能*のセットとして提供されます。拡張機能にはそれぞれ Python ランタイムの特定のバージョンが含まれています。 その後、この記事の説明に従って、希望のパッケージを直接環境にインストールすることができます。 App Service 自体で環境をカスタマイズすることにより、Web アプリ プロジェクトでパッケージを管理したり、アプリ コードと一緒にアップロードする必要はありません。
 
 > [!Tip]
-> 既定で App Service には、サーバーのルート フォルダーに Python 2.7 と Python 3.4 がインストールされていますが、これらの環境は、カスタマイズしたり、パッケージをインストールすることはできません。また、その存在に依存することもできません。 代わりに、このトピックの説明どおりに、制御しているサイトの拡張機能に依存する必要があります。
+> 既定で App Service には、サーバーのルート フォルダーに Python 2.7 と Python 3.4 がインストールされていますが、これらの環境は、カスタマイズしたり、パッケージをインストールすることはできません。また、その存在に依存することもできません。 代わりに、この記事の説明どおりに、制御しているサイトの拡張機能に依存する必要があります。
 
 > [!Important]
 > ここで説明するプロセスは、特に改善のために変更される可能性があります。 変更は、[Python Engineering at Microsoft のブログ](https://blogs.msdn.microsoft.com/pythonengineering/)で発表されます。
