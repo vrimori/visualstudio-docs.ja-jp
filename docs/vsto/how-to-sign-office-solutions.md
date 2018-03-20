@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,7 +18,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 2883f75c6ca75e1875621f9c6779db09722d6945
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
- アプリケーションを手動で編集すると、配置マニフェストの生成および編集ツール (mage.exe および mageui.exe) を使用してマニフェストに、使用できるようにマニフェストに再署名する必要があります。 詳細については、「 [How to: Re-sign Application and Deployment Manifests](/visualstudio/deployment/how-to-re-sign-application-and-deployment-manifests)」を参照してください。  
+ アプリケーションを手動で編集すると、配置マニフェストの生成および編集ツール (mage.exe および mageui.exe) を使用してマニフェストに、使用できるようにマニフェストに再署名する必要があります。 詳細については、「 [方法: アプリケーション マニフェストおよび配置マニフェストに再署名する](/visualstudio/deployment/how-to-re-sign-application-and-deployment-manifests)」を参照してください。  
   
 ## <a name="signing-by-using-a-certificate"></a>証明書を使用して署名  
  証明書は、一意のキーとソリューションの発行元の id を含むファイルです。 証明機関から証明書を購入または独自の証明書を作成し、証明機関の署名があることがことができます。  
