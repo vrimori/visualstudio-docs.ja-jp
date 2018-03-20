@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,7 +20,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: a8abb77978731a9fa5cd43acdcb4928944c605b1
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -96,7 +98,7 @@ ms.lasthandoff: 01/10/2018
   
 9. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は、VSTO アドインの <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> メソッドを呼び出します (このメソッドがオーバーライドされている場合)。  
   
-     必要に応じて、このメソッドをオーバーライドして、VSTO アドイン内のオブジェクトを他の Microsoft Office ソリューションに公開できます。 詳細については、「 [Calling Code in VSTO Add-ins from Other Office Solutions](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)」を参照してください。  
+     必要に応じて、このメソッドをオーバーライドして、VSTO アドイン内のオブジェクトを他の Microsoft Office ソリューションに公開できます。 詳細については、「 [その他の Office ソリューションから VSTO アドインのコードを呼び出す](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)」を参照してください。  
   
 10. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は、VSTO アドインの <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> メソッドを呼び出します (このメソッドがオーバーライドされている場合)。  
   
