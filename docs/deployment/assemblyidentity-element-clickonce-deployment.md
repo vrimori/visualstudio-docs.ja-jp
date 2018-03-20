@@ -30,13 +30,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltassemblyidentitygt-element-clickonce-deployment"></a>&lt;assemblyIdentity&gt;要素 (ClickOnce 配置)
-プライマリ アセンブリを識別、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。  
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションのプライマリ アセンブリを識別します。
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      <assemblyIdentity    
+```
+<assemblyIdentity    
    name   
    version  
    publicKeyToken  
@@ -46,11 +45,11 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
- `assemblyIdentity`要素が必要です。 これは、子要素が含まれていない、次の属性です。  
+`assemblyIdentity` 要素が必要です。 これは、子要素を含まず、かつ、次の属性を持ちます。
   
 |属性|説明|  
 |---------------|-----------------|  
-|`name`|必須。 情報提供を目的の配置の人間が判読できる名前を指定します。<br /><br /> 場合`name`の特殊文字が含まれています、一重引用符または二重引用符など、アプリケーションがアクティブ化に失敗可能性があります。|  
+|`name`|必須。 情報提供を目的として、人間が判読できる配置の名前を指定します。<br /><br /> `name`に、一重引用符または二重引用符のような特殊文字が含まれている場合、アプリケーションはアクティブ化に失敗することがあります。|
 |`version`|必須。 次の形式で、アセンブリのバージョン番号を指定します:`major.minor.build.revision`です。<br /><br /> この値は、アプリケーションの更新をトリガーする、更新したマニフェストの増加する必要があります。|  
 |`publicKeyToken`|必須。 配置マニフェストに署名する公開キーの sha-1 ハッシュ値の最後の 8 バイトを表す 16 文字の 16 進文字列を指定します。 署名に使用する公開キーは 2048 ビットである必要がありますか値を超えています。<br /><br /> アセンブリに署名する推奨であり、省略可能なこの属性が必要です。 アセンブリが署名付きでない場合は、自己署名されたアセンブリから値をコピーするか、「ダミー」値がすべてゼロを使用する必要があります。|  
 |`processorArchitecture`|必須。 プロセッサを指定します。 有効な値は`msil`すべてのプロセッサに対して`x86`32 ビット Windows の`IA64`64 ビット windows の場合と`Itanium`Intel 64 ビット Itanium プロセッサ用です。|  
