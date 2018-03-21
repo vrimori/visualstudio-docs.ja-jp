@@ -11,11 +11,11 @@ manager: ghogen
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 2a65f2237b3fb28569a872c2e3926a2b88e11473
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: ab83ba64ff8b34c19e7f10aada74ca3eec1441f6
+ms.sourcegitcommit: a80e7ef2f0a0f6d906a44f4d696aeb208bc1ad70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="embedding-a-diagram-in-a-windows-form"></a>Windows フォームでのダイアグラムの埋め込み
 表示されます、Windows のコントロールに DSL 図を埋め込むことができます、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ウィンドウです。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/09/2018
       panel1.Controls.Add(content);  
       this.docView = docView;  
     }  
-    private MyDSLDSLDocView docView;  
+    private MyDSLDocView docView;  
   
     ```  
   
@@ -152,6 +152,6 @@ ms.lasthandoff: 02/09/2018
   
      リスト ボックスでは、モデルでは、要素の一覧が表示およびが正しいことおよび元に戻す/やり直しの任意の追加または削除後に注意してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [移動して、プログラム コードでモデルを更新します。](../modeling/navigating-and-updating-a-model-in-program-code.md)   
  [ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)
