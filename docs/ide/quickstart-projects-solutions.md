@@ -12,11 +12,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 284c99c9e9c1ed2e84b05070bbf6d9991c025f94
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: f8845ab2de127b511b9180bebbe201b777c23455
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="quickstart-projects-and-solutions"></a>クイック スタート: プロジェクトとソリューション
 
@@ -185,10 +185,10 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 ## <a name="see-also"></a>関連項目
 
-[クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)  
-[クイックスタート: Visual Studio IDE とエディターのカスタマイズ](../ide/quickstart-personalize-the-ide.md)  
-[クイックスタート: エディター内のコーディング](../ide/quickstart-editor.md)  
-[プロジェクトおよびソリューションのプロパティの管理](../ide/managing-project-and-solution-properties.md)  
-[プロジェクト内の参照の管理](../ide/managing-references-in-a-project.md)  
-[プロジェクトまたはソリューションを使用せずに Visual Studio でコードを開発する](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)  
-[Visual Studio IDE の概要](../ide/visual-studio-ide.md)
+- [クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)
+- [クイックスタート: Visual Studio IDE とエディターのカスタマイズ](../ide/quickstart-personalize-the-ide.md)
+- [クイックスタート: エディター内のコーディング](../ide/quickstart-editor.md)
+- [プロジェクトおよびソリューションのプロパティの管理](../ide/managing-project-and-solution-properties.md)
+- [プロジェクト内の参照の管理](../ide/managing-references-in-a-project.md)
+- [プロジェクトまたはソリューションを使用せずに Visual Studio でコードを開発する](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
+- [Visual Studio IDE の概要](../ide/visual-studio-ide.md)
