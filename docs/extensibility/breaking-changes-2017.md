@@ -4,15 +4,17 @@ ms.custom:
 ms.date: 11/09/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54d5af60-0b44-4ae1-aa57-45aa03f89f3d
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
+ms.workload:
+- vssdk
 ms.openlocfilehash: 068b71a78149bb1c52e28bc47245d0dc888496bc
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
@@ -21,24 +23,24 @@ ms.lasthandoff: 12/22/2017
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 機能拡張の変更
 
-Visual Studio 2017 では、Visual Studio のユーザーシステムへの影響を軽減させる [高速で軽量な Visual Studio インストール エクスペリエンス](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer) を提供するとともに、インストールされるワークロードと機能をユーザーが幅広く選択することを可能にしています。 これらの機能強化をサポートするため、機能拡張モデルに変更を加え、Visual Studio の拡張性にいくつかの重大な変更を行いました。 このドキュメントでは、これらの変更に関する技術的な詳細とその対処方法について説明します。 一部の情報は特定の時点の実装の詳細であり、後に変更される可能性がありますのでご注意ください。
+Visual Studio 2017 とを提供して、[高速、軽量の Visual Studio インストール エクスペリエンス](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer)ワークロードと機能をより多くの選択肢をユーザーに提供中に Visual Studio のユーザーのシステムへの影響を減らすインストールされています。 これらの機能強化をサポートするには、機能拡張モデルに変更が加えられましたし、Visual Studio 拡張機能をいくつかの重大な変更を行ったです。 このドキュメントでは、これらの変更と対処できる新機能の技術的な詳細を説明します。 一部の情報が特定の時点の実装の詳細についてし、後で変更することがありますに注意してください。
 
 ## <a name="changes-affecting-vsix-format-and-installation"></a>VSIX 形式とインストールに影響する変更
 
-VSIX v3 導入軽量インストール エクスペリエンスをサポートするために (バージョン 3) の形式です。
+軽量インストール エクスペリエンスをサポートするために VSIX v3 (バージョン 3) 形式を導入しています。
 
-VSIX 形式の変更は次のとおりです。
+VSIX 形式における変更は次のとおりです:
 
-* セットアップの前提条件の宣言。 今すぐインストーラーはを軽量な Visual Studio での高速インストールの約束を実現するには、ユーザーに他の構成オプションを提供します。 その結果、機能と拡張機能に必要なコンポーネントがインストールされていることを確認してくださいには、拡張機能はその依存関係を宣言する必要があります。
-  * Visual Studio 2017 インストーラーは、取得拡張機能のインストールの一部として、ユーザーに必要なコンポーネントをインストールして自動的に提供されます。
-  * 構築されませんでした、新しい VSIX v3 形式を使用して 15.0 のバージョンを対象とすると、マニフェストでマークされている場合でも拡張機能をインストールしようとするとき、ユーザーは警告も。
+* セットアップの前提条件の宣言。 Visual Studio の軽量で、高速なインストールを実現するため、 インストーラーはより多くの構成オプションをユーザーへ提供するようになりました。 その結果、拡張機能によって必要とされる機能とコンポーネントがインストールされていることを確かめるために、拡張機能はその依存関係を宣言する必要があります。
+  * Visual Studio 2017 インストーラーは、拡張機能のインストールの過程で、必要なコンポーネントを取得し、自動的なインストールをユーザーに提供します。
+  * 新しい VSIX v3 形式を使用せずに構築された拡張機能をインストールしようとするとき、ユーザーは警告を受けるようになります。例え、拡張機能のマニフェストで 15.0 のバージョンを対象とするとマークされている場合でも同様です。
 * VSIX 形式の機能を強化します。 提供する、[影響の少ないインストール](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install)サイド バイ サイド インストールをサポートする Visual Studio でのお不要になったほとんどの構成データをシステム レジストリに保存、移動、GAC からアセンブリを Visual Studio に固有です。 増えました VSIX 形式と、VSIX のインストールのエンジンの機能または使用することではなく MSI EXE をいくつかのインストールの種類の拡張機能をインストールすることができます。
 
   新しい機能は次のとおりです。
 
-  * 指定した Visual Studio インスタンスに登録します。
+  * 指定した Visual Studio インスタンスへの登録。
   * 外部のインストール、[拡張機能フォルダー](set-install-root.md)です。
-  * プロセッサ アーキテクチャを検出します。
+  * プロセッサ アーキテクチャの検出。
   * 言語で区切られた言語パックに依存します。
   * 使用したインストール[NGEN サポート](ngen-support.md)です。
 
