@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 6.0 のサポートに関する声明 | Microsoft Docs"
+title: Visual Basic 6.0 のサポートに関する声明 | Microsoft Docs
 ms.date: 08/28/2017
 ms.technology: devlang-vb
 ms.topic: article
