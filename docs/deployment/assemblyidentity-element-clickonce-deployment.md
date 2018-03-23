@@ -59,7 +59,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>コメント  
   
 ## <a name="example"></a>例  
-次のコード例は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置マニフェスト の`assemblyIdentity`内の要素を示しています。 このコード例は、[ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)トピックに示されている例の一部です。
+次のコード例は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置マニフェスト の`assemblyIdentity`要素を示しています。 このコード例は、[ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)トピックに示されている例の一部です。
   
 ```  
 <!-- Identify the deployment. -->  
