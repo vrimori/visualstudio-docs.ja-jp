@@ -25,9 +25,9 @@ ms.lasthandoff: 01/10/2018
 ---
 # <a name="publish-an-aspnet-or-aspnet-core-app-to-azure-app-service-using-visual-studio"></a>Visual Studio を使用して Azure App Service に ASP.NET または ASP.NET Core アプリケーションを公開します。
 
-使用することができます、**発行**ツールを Azure App Service に ASP.NET、ASP.NET Core、Python、Node.js、および .NET Core のアプリを発行します。
+**発行**ツールを使用して、ASP.NET、ASP.NET Core、Python、Node.js、および .NET Core のアプリを Azure App Service に発行することができます。
 
-Azure アカウントがない場合は[サインアップ](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio)です。
+Azure アカウントをもっていない場合は、ここから [サインアップ](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio) することができます。
 
 ## <a name="create-a-new-project"></a>新しいプロジェクトを作成する 
 
@@ -35,13 +35,13 @@ Azure アカウントがない場合は[サインアップ](https://azure.micros
 
 1. **Visual c#**または**Visual Basic**、選択**Web**、し、中央のペインで  **ASP.NET Web アプリケーション (.NET Framework)**(C# の場合のみ)、または**ASP.NET Core Web アプリケーション**、クリックして**OK**です。
 
-1. 選択**MVC**、ことを確認して**認証なし**を選択して、をクリックして**OK**です。
+1. **MVC** を選択し、**認証なし** が選択されていることを確認して、**OK**をクリックします。
 
-1. ような名前を入力**MyWebApp**  をクリック**OK**です。
+1. **MyWebApp** のような名前を入力して**OK**をクリックします。
 
     Visual Studio によってプロジェクトが作成されます。
 
-1. 選択**ビルド > ソリューションのビルド**プロジェクトをビルドします。
+1. **ビルド > ソリューションのビルド** を選択して、プロジェクトをビルドします。
 
 ## <a name="publish-to-azure-app-service"></a>Azure App Service に発行する
 
@@ -49,7 +49,7 @@ Azure アカウントがない場合は[サインアップ](https://azure.micros
 
     ![選択発行](../deployment/media/quickstart-publish-aspnet.png "選択発行")
 
-1. **発行** ウィンドウで、選択**Microsoft Azure App Service**です。
+1. **発行** ウィンドウで、**Microsoft Azure App Service** を選択します。
 
     ![Azure App Service の選択](../deployment/media/quickstart-publish-azure.png "Azure App Service の選択")
 
@@ -71,7 +71,7 @@ Azure アカウントがない場合は[サインアップ](https://azure.micros
 
     Visual Studio が、Azure App Service にアプリを展開し、web アプリがお使いのブラウザーで読み込まれます。
 
-    概要、**発行** ウィンドウで、新しい Azure App Service のサイトの URL を参照してください。
+    **発行** ウィンドウの概要から、新しい Azure App Service のサイトの URL を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 
