@@ -1,6 +1,5 @@
 # [Visual Studio ドキュメント](ide/index.md)
 # [概要](ide/visual-studio-ide.md)
-## [新機能](ide/whats-new-in-visual-studio.md)
 # インストール
 ## [Visual Studio のインストール](install/install-visual-studio.md)
 ## [Visual Studio へのサインイン](ide/signing-in-to-visual-studio.md)
@@ -449,6 +448,17 @@
 ### [Dotfuscator CE のインストール](ide/dotfuscator/install.md)
 ### [Dotfuscator CE のアップグレード](ide/dotfuscator/upgrades.md)
 # リソース
+## [新機能](ide/whats-new-in-visual-studio.md)
+## リリース ノートとシステム要件
+### [最新のリリース ノート](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default)
+### [リリース ノートのプレビュー](/visualstudio/releasenotes/vs2017-preview-relnotes?context=visualstudio/default)
+### [リリース ノート履歴](/visualstudio/releasenotes/vs2017-relnotes-history?context=visualstudio/default)
+### [リリースのタイミング](/visualstudio/productinfo/vs2017-release-rhythm?context=visualstudio/default)
+### [システム要件](/visualstudio/productinfo/vs2017-system-requirements-vs?context=visualstudio/default)
+### [プラットフォームの互換性](/visualstudio/productinfo/vs2017-compatibility-vs?context=visualstudio/default)
+### [ライセンス](https://www.visualstudio.com/license-terms/)
+### [再頒布可能コード](/visualstudio/productinfo/2017-redistribution-vs?context=visualstudio/default)
+### [サポート ライフサイクルとサービス](/visualstudio/productinfo/vs-servicing-vs?context=visualstudio/default)
 ## [Visual Studio に関する問題を報告する方法](ide/how-to-report-a-problem-with-visual-studio-2017.md)
 ## [IDE に関するエラーのトラブルシューティング情報](ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md)
 ## [ご意見](ide/talk-to-us.md)
