@@ -1,21 +1,23 @@
 ---
-title: "Visual Studio のメニュー バーにメニューを追加する |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio のメニュー バーにメニューを追加する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - menus, creating top level
 - top-level menus
 ms.assetid: 58fc1a31-2aeb-441c-8e48-c7d5cbcfe501
-caps.latest.revision: "51"
+caps.latest.revision: ''
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
+ms.workload:
+- vssdk
 ms.openlocfilehash: 7e334a148a205338a872e9581bce1c3c1a70b7df
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
@@ -23,7 +25,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-a-menu-to-the-visual-studio-menu-bar"></a>Visual Studio のメニュー バーにメニューを追加します。
-このチュートリアルでは、Visual Studio 統合開発環境 (IDE) のメニュー バーにメニューを追加する方法を示します。 よう IDE のメニュー バーにメニュー項目が含まれています**ファイル**、**編集**、**ビュー**、**ウィンドウ**、および**ヘルプ**.  
+このチュートリアルでは、Visual Studio 統合開発環境 (IDE) のメニュー バーにメニューを追加する方法を示します。 IDE のメニュー バーには、**ファイル**、**編集**、**ビュー**、**ウィンドウ**、および**ヘルプ**のようなメニュー項目が含まれています。  
   
  Visual Studio のメニュー バーに新規メニューを追加する前に、コマンドは、既存のメニュー内に配置する必要があるかどうかを検討してください。 コマンド配置の詳細については、次を参照してください。[メニューと Visual Studio のコマンド](../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md)です。  
   

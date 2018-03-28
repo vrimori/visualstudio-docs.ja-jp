@@ -1,11 +1,12 @@
 ---
-title: "アプリケーション展開の前提条件 |Microsoft ドキュメント"
-ms.custom: 
+title: アプリケーション展開の前提条件 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-deployment
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - FSharp
@@ -19,11 +20,12 @@ helpviewer_keywords:
 - prerequisites, ClickOnce
 - dependencies, ClickOnce
 ms.assetid: fc6e047e-ad94-44e8-8ff5-b6d1f4ca7735
-caps.latest.revision: "51"
+caps.latest.revision: ''
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: 4060933a904a5cb842a7c319b3ef5da645e4119e
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
@@ -76,8 +78,8 @@ ms.lasthandoff: 12/22/2017
   
 |コマンド ライン引数|説明|  
 |---------------------------|-----------------|  
-|**-?、-h、- ヘルプ**|[ヘルプ] ダイアログ ボックスを表示します。|  
-|**-- componentsurl の url**|このセットアップ用に保存されている URL とコンポーネントの URL を表示します。|  
+|**-?, -h, -help**|[ヘルプ] ダイアログ ボックスを表示します。|  
+|**-url, -componentsurl**|このセットアップ用に保存されている URL とコンポーネントの URL を表示します。|  
 |**-url =**`location`|Setup.exe が [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを検索する URL を設定します。|  
 |**-componentsurl =**`location`|Setup.exe が [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] などの依存関係を検索する URL を設定します。 |  
 |**homesite-=** `true` **&#124;**`false`|ときに`true`、仕入先のサイトに適切な場所からの依存関係をダウンロードします。 これよりも優先、 **- componentsurl**設定します。 ときに`false`で指定された URL から依存関係がダウンロード**- componentsurl**です。|  

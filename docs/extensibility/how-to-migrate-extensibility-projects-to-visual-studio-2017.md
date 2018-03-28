@@ -1,18 +1,20 @@
 ---
-title: "方法: Visual Studio 2017 を機能拡張プロジェクトの移行 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: Visual Studio 2017 を機能拡張プロジェクトの移行 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/09/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8ca07b00-a3ff-40ab-b647-c0a93b55e86a
-caps.latest.revision: "1"
+caps.latest.revision: ''
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
+ms.workload:
+- vssdk
 ms.openlocfilehash: 8d49ff89f38b0279c60f49ee7d5856d21fd5fc4a
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
@@ -82,7 +84,7 @@ Visual Studio のユーザーのインストールは、拡張機能を実行す
 
 ### <a name="option-use-the-designer-to-make-changes-to-the-vsix-extension-manifest"></a>オプション: デザイナーを使用して VSIX 拡張機能マニフェストを変更します。
 
-マニフェストの XML を直接編集するには、代わりに使用できます、新しい**の前提条件**のマニフェスト デザイナーの前提条件を選択して、XML タブが更新されます。
+マニフェストの XML を直接編集する代わりに、マニフェスト デザイナーにある**新しい前提条件**を使用して、前提条件を選択し、XML を更新することができます。
 
 >**注:**マニフェスト デザイナーはのみを許可すると、現在の Visual Studio インスタンスにインストールされているコンポーネント (ワークロードやパッケージ) を選択します。 ワークロード、パッケージ、または現在インストールされていないコンポーネントの前提条件を追加する必要がある場合は、マニフェスト XML を直接編集します。
 
@@ -91,18 +93,18 @@ Visual Studio のユーザーのインストールは、拡張機能を実行す
 
   ![VSIX マニフェスト デザイナー](media/vsix-manifest-designer.png)
 
-* **追加新しい前提条件となる** ウィンドウが開きます。
+* **新しい前提条件の追加**ウィンドウが開きます。
 
   ![vsix の前提条件を追加します。](media/add-vsix-prerequisite.png)
 
-* ドロップダウンをクリックして**名前**し、必要な前提条件を選択します。
+* **[名前]** のドロップダウンをクリックして、必要な前提条件を選択します。
 * 必要な場合は、バージョンを更新します。
 
   >注: バージョン フィールドがあらかじめ設定されます、範囲の最大またがりメモリ割り当て (は含まれません) を持つ、現在インストールされているコンポーネントのバージョンとコンポーネントの次のメジャー バージョン。
 
   ![roslyn 前提条件を追加します。](media/add-roslyn-prerequisite.png)
 
-* Press **OK**.
+* **[OK]** を押します。
 
 ## <a name="update-debug-settings-for-project"></a>プロジェクトのデバッグの設定を更新します。
 
