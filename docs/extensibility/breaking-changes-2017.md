@@ -1,15 +1,15 @@
 ---
-title: "Visual Studio 2017 拡張機能における重大な変更 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio 2017 拡張機能における重大な変更 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/09/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 54d5af60-0b44-4ae1-aa57-45aa03f89f3d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
@@ -25,7 +25,7 @@ ms.lasthandoff: 12/22/2017
 
 Visual Studio 2017 とを提供して、[高速、軽量の Visual Studio インストール エクスペリエンス](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer)ワークロードと機能をより多くの選択肢をユーザーに提供中に Visual Studio のユーザーのシステムへの影響を減らすインストールされています。 これらの機能強化をサポートするには、機能拡張モデルに変更が加えられましたし、Visual Studio 拡張機能をいくつかの重大な変更を行ったです。 このドキュメントでは、これらの変更と対処できる新機能の技術的な詳細を説明します。 一部の情報が特定の時点の実装の詳細についてし、後で変更することがありますに注意してください。
 
-## <a name="changes-affecting-vsix-format-and-installation"></a>VSIX 形式とインストールに影響する変更
+## <a name="changes-affecting-vsix-format-and-installation"></a>VSIX 形式とインストールに影響のある変更
 
 軽量インストール エクスペリエンスをサポートするために VSIX v3 (バージョン 3) 形式を導入しています。
 
@@ -34,25 +34,25 @@ VSIX 形式における変更は次のとおりです:
 * セットアップの前提条件の宣言。 Visual Studio の軽量で、高速なインストールを実現するため、 インストーラーはより多くの構成オプションをユーザーへ提供するようになりました。 その結果、拡張機能によって必要とされる機能とコンポーネントがインストールされていることを確かめるために、拡張機能はその依存関係を宣言する必要があります。
   * Visual Studio 2017 インストーラーは、拡張機能のインストールの過程で、必要なコンポーネントを取得し、自動的なインストールをユーザーに提供します。
   * 新しい VSIX v3 形式を使用せずに構築された拡張機能をインストールしようとするとき、ユーザーは警告を受けるようになります。例え、拡張機能のマニフェストで 15.0 のバージョンを対象とするとマークされている場合でも同様です。
-* VSIX 形式の機能を強化します。 提供する、[影響の少ないインストール](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install)サイド バイ サイド インストールをサポートする Visual Studio でのお不要になったほとんどの構成データをシステム レジストリに保存、移動、GAC からアセンブリを Visual Studio に固有です。 増えました VSIX 形式と、VSIX のインストールのエンジンの機能または使用することではなく MSI EXE をいくつかのインストールの種類の拡張機能をインストールすることができます。
+* VSIX 形式の機能を強化します。 サイド バイ サイド インストールをもサポートする Visual Studio の[影響の少ないインストール](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install)で提供するため、ほとんどの構成データはシステム レジストリに保存されなくなり、Visual Studio 固有のアセンブリが GAC から取り除かれました。 また VSIX 形式と VSIX インストールエンジンの機能が強化されたため、一部のインストールの種類においては、MSI や EXE の代わりにそれらの機能を使用して拡張機能をインストールできるようになりました。
 
   新しい機能は次のとおりです。
 
   * 指定した Visual Studio インスタンスへの登録。
-  * 外部のインストール、[拡張機能フォルダー](set-install-root.md)です。
+  * [拡張フォルダー](set-install-root.md)外部でのインストール。
   * プロセッサ アーキテクチャの検出。
-  * 言語で区切られた言語パックに依存します。
-  * 使用したインストール[NGEN サポート](ngen-support.md)です。
+  * 言語で区切られた言語パックの依存関係。
+  * [NGEN サポート](ngen-support.md)を使用したインストール。
 
 ## <a name="building-an-extension-for-visual-studio-2017"></a>Visual Studio 2017 用拡張機能の構築
 
-新しいの作成を行うためのツールをデザイナー VSIX v3 マニフェスト形式は、現在 Visual Studio 2017 で使用できます。 付属のドキュメントを参照してください[する方法: Visual Studio 2017 を機能拡張プロジェクトを移行](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)詳細については、デザイナーのツールを使用する、プロジェクトを手動で更新したことでと VSIX v3 の拡張機能を開発するマニフェスト。
+新しい VSIX v3 マニフェスト形式を作成するためのデザイナー ツールは、現在 Visual Studio 2017 で使用できます。 デザイナー ツールの使用に関する詳細や、 VSIX v3 拡張機能を開発するためのプロジェクトおよびマニフェストの手動アップデートに関する詳細については、関連ドキュメント [How to: Migrate Extensibility Projects to Visual Studio 2017](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)(方法: 機能拡張プロジェクトを Visual Studio 2017 に移行する) を参照してください。
 
-## <a name="change-visual-studio-user-data-path"></a>Visual Studio のユーザー データ パスを変更します。
+## <a name="change-visual-studio-user-data-path"></a>変更: Visual Studio ユーザー データ パス
 
-以前は、Visual Studio の各メジャー リリースの 1 つだけインストールは、各コンピューターに存在可能性があります。 Visual Studio 2017 のサイド バイ サイド インストールをサポートするために、ユーザーのコンピューターで Visual Studio の複数のユーザー データ パスがあります。
+これまで Visual Studio の各メジャー リリースは 1 つのコンピューターにつき 1 つまでしかインストールすることができませんでした。 Visual Studio 2017 ではサイド バイ サイド インストールをサポートするために、複数の Visual Studio ユーザー データ パスをユーザーのコンピューターに存在させることができます。
 
-Visual Studio の設定マネージャーを使用して、Visual Studio プロセス内で実行中のコードを更新する必要があります。 Visual Studio プロセスの外部で実行されているコードは、特定の Visual Studio のインストールのユーザーのパスを検索できます[ここガイダンスに従って](locating-visual-studio.md)です。
+Visual Studio の設定マネージャーを使用して、Visual Studio プロセス内で実行中のコードを更新する必要があります。 Visual Studio プロセスの外部で実行されているコードは[このガイダンスに従って](locating-visual-studio.md)特定の Visual Studio インストールのユーザー パスを検索することができます。
 
 ## <a name="change-global-assembly-cache-gac"></a>変更: グローバル アセンブリ キャッシュ (GAC)
 
