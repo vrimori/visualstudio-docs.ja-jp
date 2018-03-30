@@ -1,0 +1,110 @@
+- name: 概要
+  href: overview-of-python-tools-for-visual-studio.md
+- name: インストール
+  href: installing-python-support-in-visual-studio.md
+  items:
+    - name: Python インタープリターのインストール
+      href: installing-python-interpreters.md
+- name: クイックスタート
+  items:
+    - name: Flask での Web アプリの作成
+      href: ../ide/quickstart-python.md?context=visualstudio/python/default
+    - name: テンプレートからプロジェクトを作成する
+      href: quickstart-02-python-in-visual-studio-project-from-template.md
+    - name: 既存のコードからプロジェクトを作成する
+      href: quickstart-01-project-from-existing.md
+    - name: リポジトリからプロジェクトを作成する
+      href: quickstart-03-python-in-visual-studio-project-from-repository.md
+    - name: Cookiecutter テンプレートからプロジェクトを作成する
+      href: quickstart-04-python-in-visual-studio-project-from-cookiecutter.md
+- name: チュートリアル
+  items:
+    - name: 0 - Python サポートをインストールする
+      href: tutorial-working-with-python-in-visual-studio-step-00-installation.md
+    - name: 1 - 新しい Python プロジェクトを作成する
+      href: tutorial-working-with-python-in-visual-studio-step-01-create-project.md
+    - name: 2 - コードを記述して実行する
+      href: tutorial-working-with-python-in-visual-studio-step-02-writing-code.md
+    - name: 3 - 対話型 REPL ウィンドウを使用する
+      href: tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md
+    - name: 4 - デバッガーでコードを実行する
+      href: tutorial-working-with-python-in-visual-studio-step-04-debugging.md
+    - name: 5 - パッケージのインストールと Python 環境の管理
+      href: tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md
+    - name: 6 - Git の使用
+      href: tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md
+- name: 概念
+  items:
+    - name: Python プロジェクト
+      href: managing-python-projects-in-visual-studio.md
+      items:
+        - name: Web プロジェクト テンプレート
+          href: python-web-application-project-templates.md
+        - name: Django Web プロジェクト テンプレート
+          href: python-django-web-application-project-template.md
+        - name: Azure クラウド サービス テンプレート
+          href: python-azure-cloud-service-project-template.md
+    - name: Azure SDK for Python
+      href: azure-sdk-for-python.md
+- name: 使い方ガイド
+  items:
+    - name: 環境の管理
+      href: managing-python-environments-in-visual-studio.md
+      items:
+        - name: プロジェクトのインタープリターの選択
+          href: selecting-a-python-environment-for-a-project.md
+        - name: 依存関係の requirements.txt の使用
+          href: managing-required-packages-with-requirements-txt.md
+        - name: 検索パス
+          href: search-paths.md
+        - name: 環境ウィンドウ リファレンス
+          href: python-environments-window-tab-reference.md
+    - name: コードの編集
+      href: editing-python-code-in-visual-studio.md
+      items:
+        - name: コードの書式設定
+          href: formatting-python-code.md
+        - name: コードのリファクタリング
+          href: refactoring-python-code.md
+        - name: PyLint の使用
+          href: linting-python-code.md
+    - name: カスタム メニュー コマンドの定義
+      href: defining-custom-python-project-commands.md
+    - name: 対話型 Python (REPL)
+      href: python-interactive-repl-in-visual-studio.md
+      items:
+        - name: IPython REPL の使用
+          href: interactive-repl-ipython.md
+    - name: デバッグ
+      href: debugging-python-in-visual-studio.md
+      items:
+        - name: リモートの Linux コンピューターでのコードのデバッグ
+          href: debugging-python-code-on-remote-linux-machines.md
+    - name: Azure App Service の使用
+      items:
+        - name: Azure App Service での Python の管理
+          href: managing-python-on-azure-app-service.md
+        - name: Azure App Service への発行
+          href: publishing-python-web-applications-to-azure-from-visual-studio.md
+        - name: Azure リモート デバッグ
+          href: debugging-remote-python-code-on-azure.md
+        - name: Azure リモート デバッグのトラブルシューティング
+          href: debugging-remote-python-code-on-azure-troubleshooting.md
+    - name: C++ の操作
+      items:
+        - name: Python 用 C++ 拡張機能の作成
+          href: working-with-c-cpp-python-in-visual-studio.md
+        - name: Python と C++ の混合モード デバッグ
+          href: debugging-mixed-mode-c-cpp-python-in-visual-studio.md
+        - name: 混合モード デバッグのシンボル
+          href: debugging-symbols-for-mixed-mode-c-cpp-python.md
+    - name: プロファイル
+      href: profiling-python-code-in-visual-studio.md
+    - name: 単体テスト
+      href: unit-testing-python-in-visual-studio.md
+    - name: Cookiecutter 拡張機能の使用
+      href: using-python-cookiecutter-templates.md
+- name: 参照
+  items:
+    - name: オプション
+      href: python-support-options-and-settings-in-visual-studio.md
