@@ -1,29 +1,30 @@
 ---
-title: "デバッガーの機能のツアー |Microsoft ドキュメント"
-ms.custom: H1HackMay2017
-ms.date: 05/19/2017
-ms.reviewer: 
-ms.suite: 
+title: デバッガーの機能のツアー、Visual Studio |Microsoft ドキュメント
+description: Visual Studio デバッガーをツアーします。
+ms.custom: mvc
+ms.date: 03/27/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: quickstart
 helpviewer_keywords:
 - debugger
 ms.assetid: c763d706-3213-494f-b4d2-990b6e1ec456
-caps.latest.revision: 
+caps.latest.revision: 1
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 91b7ff9ea0b5caae46715894016469fadecaa098
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.openlocfilehash: 2e031716c68d44a9d08a4b074c5dcb58d5553041
+ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/30/2018
 ---
-# <a name="feature-tour-of-the-visual-studio-debugger"></a>Visual Studio デバッガーの機能のツアー
+# <a name="quickstart-first-look-at-the-visual-studio-debugger"></a>クイック スタート: 最初に見て、Visual Studio デバッガー
 
 このトピックでは、Visual Studio デバッガーの機能を紹介します。 またはの場合を進めるために Visual Studio で独自のアプリを開くことによって、ことを行うことができます、サンプル アプリを使用して行うことができる、[ビギナーズ ガイド](../debugger/getting-started-with-the-debugger.md)です。
 
@@ -233,5 +234,5 @@ Shift キーを押しながら F11 キーを押します (または**デバッ�
 
 -   [Debug Interface Access SDK](../debugger/debug-interface-access/debug-interface-access-sdk.md) Microsoft デバッグ インターフェイス アクセス ソフトウェア開発キット (DIA SDK) について説明します。 DIA SDK は、Microsoft ポストコンパイラ ツールで生成されたプログラム データベース (.pdb) ファイルに保存されているデバッグ情報へのアクセスを提供します。  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio でのデバッグ](../debugger/index.md)

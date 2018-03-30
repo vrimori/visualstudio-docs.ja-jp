@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: tutorial
 ms.assetid: 7c60d929-d993-49dc-9db3-43b30be9912b
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f9f0c65110ef1003c58c0a4002f90ec7e7e08e3
-ms.sourcegitcommit: fb1fede41d8c5e459dd222755b0497b9d361bc51
+ms.openlocfilehash: 6634a72b7bbed51e3ae250289696511d67c70041
+ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="view-snapshots-using-intellitrace-step-back-in-visual-studio"></a>Visual Studio で IntelliTrace を使用してスナップショットの表示手順ライトバック
 
@@ -39,11 +39,11 @@ IntelliTrace ステップ ライトバックは Visual Studio Enterprise 2017 15
 
 1. Visual Studio Enterprise では、プロジェクトを開きます。
 
-1. 移動して**ツール > オプション > IntelliTrace**設定、およびオプションを選択する**IntelliTrace イベントとスナップショット**です。 
+1. 開いている**ツール** > **オプション** > **IntelliTrace**設定、およびオプションを選択する**IntelliTrace イベントとスナップショット**. 
 
     ![IntelliTrace イベントとスナップショット モードを有効にする](../debugger/media/intellitrace-enable-snapshots.png "IntelliTrace イベントを有効にしてスナップショット モード")
 
-1. プロジェクトに 1 つまたは複数のブレークポイントを設定し、デバッグを開始 (キーを押します**f5 キーを押して**)、コードをステップ実行してデバッグを開始または (**F10**または**F11**)。
+1. プロジェクトで、1 つまたは複数のブレークポイントを設定し、デバッグを開始 (キーを押します**f5 キーを押して**)、コードをステップ実行してデバッグを開始または (**F10**または**F11**)。
 
     IntelliTrace は、手順とブレークポイントのイベント、各デバッガーでアプリケーションのプロセスのスナップショットを取得します。 これらのイベントが記録されて、**イベント** タブで、**診断ツール**ウィンドウで、その他の IntelliTrace イベントと共にします。 このウィンドウを開くには、選択**デバッグ** > **Windows** > **診断ツールを表示する**です。
 

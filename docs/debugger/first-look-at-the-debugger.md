@@ -1,32 +1,32 @@
 ---
-title: "デバッガーでは、Visual Studio で作業を開始 |Microsoft ドキュメント"
+title: デバッガーでは、Visual Studio で作業を開始 |Microsoft ドキュメント
 ms.custom: H1Hack27Feb2017
 ms.date: 02/07/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: 0b3138c4-b840-446a-a15c-10ed8e2dd050
-caps.latest.revision: 
+caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: 171b07d453c81883354848f70458bab39daa313e
-ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="get-started-with-the-visual-studio-debugger"></a>Visual Studio デバッガーを概要します。
 Visual Studio デバッガーは、どの言語でも簡単に使用できます。 ここでは、単純な c# プログラムをデバッグする方法を説明しますが、C++、JavaScript などの他の言語のコードを同じ手順を適用することができます。
 
 同様の機能を示すビデオを見るには、次を参照してください。[デバッガーの使用を開始する](https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6)です。
   
-##  <a name="BKMK_Start_debugging_a_VS_project"></a>基本的な c# プロジェクトをデバッグします。  
+##  <a name="BKMK_Start_debugging_a_VS_project"></a> 基本的な c# プロジェクトをデバッグします。  
  簡単な c# コンソール アプリケーションから始めましょう (**ファイル > 新規 > プロジェクト**選択してから、 **Visual c#**し**コンソール アプリケーション**)。 初めて作業する前に Visual Studio で、表示[チュートリアル: 簡単なアプリケーションを作成する](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)です。 **Main**だけメソッドは整数変数を 10 回に 1 が加算し、コンソールに結果を出力します。  
   
 ```csharp  
@@ -51,7 +51,7 @@ static void Main(string[] args)
   
  ブレークポイントの詳細については、次を参照してください。[を使用してブレークポイント](../debugger/using-breakpoints.md)です。  
   
-##  <a name="BKMK_Inspect_Variables"></a>変数を検査します。  
+##  <a name="BKMK_Inspect_Variables"></a> 変数を検査します。  
  多くの場合、デバッグするには、特定の時点で必要な値が含まれていない変数を検索するが含まれます。 いくつかの変数を検査することができます、方法を示します。  
   
  デバッグを再度開始します。 `Console.WriteLine` のコードが実行される前に実行が停止します。 事前ステップで実行するようになります (をクリックして**デバッグ > ステップ オーバー**または**F10**)。 ここで選択した可能性があります**ステップ イン**(**F11**) 同じ結果を取得し、違いを後で説明しています。 メソッドの最後の中かっこの行が黄色に変わっているはずです。 コンソール ウィンドウを見てください。 表示されるはず**10**です。  

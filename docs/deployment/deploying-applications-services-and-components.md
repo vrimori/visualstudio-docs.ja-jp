@@ -1,12 +1,13 @@
 ---
-title: "展開の概要 - Visual Studio |Microsoft ドキュメント"
-ms.custom: 
+title: 展開の概要 - Visual Studio |Microsoft ドキュメント
+ms.custom: mvc
 ms.date: 11/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-deployment
+ms.tgt_pltfrm: ''
+ms.topic: quickstart
 dev_langs:
 - FSharp
 - VB
@@ -21,18 +22,19 @@ helpviewer_keywords:
 - deploying applications [Visual Studio], about deploying applications
 - components [.NET Framework], deploying
 ms.assetid: 63fcdd5b-2e54-4210-9038-65bc23167725
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e05bf361515b45f3ebc7683fa0c83ec6116d9419
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.workload:
+- multiple
+ms.openlocfilehash: d07129bc373cf74c8ba373b3c51847016d585ade
+ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 03/30/2018
 ---
-# <a name="deployment-overview-in-visual-studio"></a>Visual Studio での配置の概要
+# <a name="quickstart-first-look-at-deployment-in-visual-studio"></a>クイック スタート: まず、Visual Studio での展開
 
 アプリケーション、サービス、またはコンポーネントを配置すると、他のコンピューターのデバイス、サーバー、またはクラウドに対してインストールするために、それらを配布することになります。 必要な配置の種類に合わせて、Visual Studio で適切な手法を選択します。 (多くの種類のアプリは、ここで説明されていない他の展開ツール コマンド ライン デプロイ NuGet などをサポートします)。
 
@@ -40,7 +42,7 @@ ms.lasthandoff: 01/10/2018
 
 ### <a name="deploy-to-local-folder"></a>ローカル フォルダーに配置します。
 
-- **ASP.NET**、 **ASP.NET Core**、 **Node.js**、 **Python**、および**.NET Core**: 発行ツールを使用してローカルに展開するにはフォルダーです。 利用可能なオプションは、アプリの種類によって異なります。 ソリューション エクスプ ローラーでプロジェクトを右クリックして選択**発行**を選択し**フォルダー**です。 詳細については、次を参照してください。[をローカル フォルダーに配置](quickstart-deploy-to-local-folder.md)です。
+- **ASP.NET**、 **ASP.NET Core**、 **Node.js**、 **Python**、および**.NET Core**: 発行ツールを使用して、ローカル フォルダーに配置します。 利用可能なオプションは、アプリの種類によって異なります。 ソリューション エクスプ ローラーでプロジェクトを右クリックして選択**発行**を選択し**フォルダー**です。 詳細については、次を参照してください。[をローカル フォルダーに配置](quickstart-deploy-to-local-folder.md)です。
 
     ![選択を発行](../deployment/media/quickstart-publish.png)
 
