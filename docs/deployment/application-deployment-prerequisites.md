@@ -76,12 +76,12 @@ ms.lasthandoff: 12/22/2017
   
 |コマンド ライン引数|説明|  
 |---------------------------|-----------------|  
-|**-?、-h、- ヘルプ**|[ヘルプ] ダイアログ ボックスを表示します。|  
-|**-- componentsurl の url**|このセットアップ用に保存されている URL とコンポーネントの URL を表示します。|  
+|**-?, -h, -help**|[ヘルプ] ダイアログ ボックスを表示します。|
+|**-url, -componentsurl**|このセットアップ用に保存されている URL とコンポーネントの URL を表示します。|
 |**-url =**`location`|Setup.exe が [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを検索する URL を設定します。|  
 |**-componentsurl =**`location`|Setup.exe が [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] などの依存関係を検索する URL を設定します。 |  
-|**homesite-=** `true` **&#124;**`false`|ときに`true`、仕入先のサイトに適切な場所からの依存関係をダウンロードします。 これよりも優先、 **- componentsurl**設定します。 ときに`false`で指定された URL から依存関係がダウンロード**- componentsurl**です。|  
-  
+|**-homesite=** `true` **&#124;**`false`|`true` であるとき、ベンダーサイトの適切な場所から依存関係をダウンロードします。これは**- componentsurl**の設定よりも優先されます。`false` であるとき、**-componentsurl** で指定された URL から依存関係をダウンロードします。|
+
 ## <a name="operating-system-support"></a>オペレーティング システムのサポート  
  Visual Studio ブートストラップは、Windows Server 2008 Server Core ではサポートされていません。また、機能が限定された、メンテナンスの容易なサーバー環境を提供する Windows Server 2008 R2 Server Core でもサポートされていません。 たとえば、Server Core のインストール オプションでは、.NET Framework 3.5 Server Core プロファイルのみがサポートされています。そのため、完全な .NET Framework を必要とする Visual Studio の機能は実行できません。  
   
