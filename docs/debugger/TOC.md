@@ -1,7 +1,7 @@
 # [デバッガー向けドキュメント](index.md)
-# 概要
-## [デバッガー機能ツアー](debugger-feature-tour.md)
+# [概要](debugger-overview.md)
 # クイックスタート
+## [デバッガーでのはじめに](debugger-feature-tour.md)
 ## [管理対象アプリをデバッグする](quickstart-debug-with-managed.md)
 ## [ネイティブ アプリをデバッグする](quickstart-debug-with-cplusplus.md)
 ## [ASP.NET アプリをデバッグする](quickstart-debug-aspnet.md)
@@ -26,9 +26,6 @@
 ### [ビジュアライザーでの文字列値の表示](string-visualizer-dialog-box.md)
 ### [逆アセンブリ コードの表示](how-to-use-the-disassembly-window.md)
 #### [方法 : [メモリ] ウィンドウの上下スクロール](how-to-page-up-or-down-in-memory.md)
-### [呼び出し履歴の表示](how-to-use-the-call-stack-window.md)
-#### [[呼び出し履歴] ウィンドウの混合コードと不足情報](mixed-code-and-missing-information-in-the-call-stack-window.md)
-#### [方法 : ネイティブ フレームが [呼び出し履歴] ウィンドウに見つからないときにマネージ コードからステップ アウトする](how-to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-window.md)
 ### [レジスタ値の表示](how-to-use-the-registers-window.md)
 #### [[レジスタ] ウィンドウの概要](debugging-basics-registers-window.md)
 #### [方法 : レジスタ グループの表示と非表示を切り替える](how-to-display-and-hide-register-groups.md)

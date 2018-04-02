@@ -1,8 +1,8 @@
 
 # [プロファイリング ドキュメント](index.md)
 # 概要
-## [プロファイリング機能ツアー](profiling-feature-tour.md)
 # クイックスタート
+## [プロファイリングでのはじめに](profiling-feature-tour.md)
 ## [CPU 使用率の分析 (管理対象)](quickstart-cpu-usage-managed.md)
 ## [CPU 使用率の分析 (ネイティブ)](quickstart-cpu-usage-native.md)
 ## [CPU 使用率の分析 (ASP.NET)](quickstart-cpu-usage-aspnet.md)
