@@ -1,11 +1,11 @@
 ---
-title: "セキュリティ参考文献 | Microsoft Docs"
-ms.custom: 
+title: セキュリティ参考文献 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - security [Visual Studio], additional information
@@ -15,22 +15,16 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 2186630e5c93254f38bfb4bcd05fc74d73ba67e2
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 8d3db09285e0a7bb76a38e03a1fee467a9891843
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="security-bibliography"></a>セキュリティ参考文献
 
-アプリケーション開発および環境構成のセキュリティに関する内容を扱っている Web サイトと書籍を以下にいくつか紹介します。  
-  
-## <a name="microsoft-web-sites"></a>Microsoft Web サイト  
- [Microsoft セキュリティ](http://go.microsoft.com/fwlink/?LinkId=55529)  
- デスクトップ レベルからネットワーク レベルまでのシステムを対象に、アプリケーションやシステムを安全な状態に保つための Microsoft の取り組みについて紹介しています。IT 専門家、開発者、およびホーム ユーザー向けのセキュリティ リソースへのリンクも用意されています。  
-  
- [MSDN のセキュリティ リソース](http://go.microsoft.com/fwlink/?LinkID=25440)  
- 安全なアプリケーションを開発するための開発者向けドキュメント、コード サンプル、技術文書などのリソースが紹介されています。  
-  
- [Microsoft TechNet セキュリティ](http://go.microsoft.com/fwlink/?LinkId=67991)  
- IT 専門家やパワー ユーザーを対象とした、セキュリティ関連の最も重要な技術情報へのリンクがあります。
+アプリケーション開発および環境構成のセキュリティに関する内容を扱っているリソースを以下にいくつか紹介します。
+
+[マイクロソフト セキュリティ](https://www.microsoft.com/security/default.aspx)&mdash;デスクトップ レベルからネットワーク レベルまでのシステムを対象に、アプリケーションやシステムを安全な状態に保つための Microsoft の取り組みについて紹介しています。IT 専門家、開発者、ホーム ユーザー向けのセキュリティ リソースへのリンクも用意されています。
+
+[MSDN のセキュリティに関するリソース](https://technet.microsoft.com/security/)&mdash;安全なアプリケーションを開発するための開発者向けドキュメント、コード サンプル、技術文書などのリソースが紹介されています。

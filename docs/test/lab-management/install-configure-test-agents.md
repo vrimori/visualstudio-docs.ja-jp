@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio でのテスト エージェントのインストールと構成 | Microsoft Docs"
+title: Visual Studio でテスト コントローラーとテスト エージェントをインストールする | Microsoft Docs
 ms.date: 03/02/2018
-ms.technology: vs-devops-test
+ms.technology: vs-ide-test
 ms.topic: article
 helpviewer_keywords:
 - configure test agents, test lab
@@ -10,13 +10,13 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 16e29676ec67bc3fd22313debe70ba8dbcd7fd76
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 4eaba4be128042776382d63d1b0198a48cecef94
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/19/2018
 ---
-# <a name="install-and-configure-test-agents"></a>テスト エージェントをインストールして構成する
+# <a name="install-test-agents-and-test-controllers"></a>テスト エージェントとテスト コントローラーのインストール
 
 Visual Studio と Visual Studio Team Services (VSTS) または Team Foundation Server (TFS) を使用するテスト シナリオでは、テスト コントローラーは必要ありません。 Agents for Visual Studio は、VSTS または TFS と通信してオーケストレーションを処理します。 VSTS または TFS のビルド ワークフローおよびリリース ワークフローのために継続的なテストを実行するシナリオが考えられます。
 
@@ -32,7 +32,9 @@ Visual Studio と Visual Studio Team Services (VSTS) または Team Foundation S
 
 ## <a name="install-the-test-controller-and-test-agents"></a>テスト コントローラーとテスト エージェントのインストール
 
-Agents for Visual Studio 2017 は [visualstudio.com](https://www.visualstudio.com/downloads/?q=agents) からダウンロードできます。*Agents for Visual Studio 2017* を探し、*[エージェント]* または *[コントローラー]* を選択します。 Visual Studio 2015 および Visual Studio 2013 用のエージェントは、[以前のバージョンのダウンロード](https://www.visualstudio.com/vs/older-downloads/) ページからダウンロードできます。
+Agents for Visual Studio 2017 は [visualstudio.com](https://www.visualstudio.com/downloads/?q=agents) からダウンロードできます。ページの一番下までスクロールし、*Agents for Visual Studio 2017* を探します。 *[エージェント]* または *[コントローラー]* を選択し、*[ダウンロード]* を選択します。 ダウンロードした実行可能ファイルを実行し、テスト エージェントまたはテスト コントローラーをインストールします。
+
+Visual Studio 2015 および Visual Studio 2013 用のエージェントは、[以前のバージョンのダウンロード](https://www.visualstudio.com/vs/older-downloads/) ページからダウンロードできます。
 
 ISO ファイル形式のインストーラーを入手できるので、仮想マシンに簡単にインストールできます。
 
@@ -59,10 +61,6 @@ ISO ファイル形式のインストーラーを入手できるので、仮想�
 | Agents for Visual Studio 2013 でサポートされるシナリオ | TFS および VSTS での代替シナリオ |
 | --- | --- |
 | Visual Studio でのビルド-配置-テスト ワークフロー | ユーザーは、TFS でのビルド、配置、およびテスト シナリオで[ビルド定義](/vsts/build-release/) (XAML ビルドではない) を使用できます。 |
-| オンプレミス リモート コンピューターを使用するロード テスト (パフォーマンス テスト) | Test Controller と Test Agents 2013 Update 5 を使用して、オンプレミスでロード テストを実行します。 詳細については、「[チュートリアル: ロード テストでのテスト コントローラーとテスト エージェントの使用](https://msdn.microsoft.com/library/ff400223.aspx)」を参照してください。 |
+| オンプレミス リモート コンピューターを使用するロード テスト (パフォーマンス テスト) | Test Controller と Test Agents 2013 Update 5 を使用して、オンプレミスでロード テストを実行します。 |
 | ラボ環境を使用する Microsoft Test Manager からの自動テストのリモート実行 | 現在、このシナリオに代わるものはありません。 ビルドおよびリリース定義 (XAML ビルドではない) で機能テストの実行タスクを使用して、テストをリモートで実行することをお勧めします。 |
 | 開発者による Visual Studio でのリモート テストの実行 | サポート対象から除外されました。 |
-
-## <a name="see-also"></a>関連項目
-
-* [コンピューターの設定およびテストの設定を使用した診断情報の収集](https://msdn.microsoft.com/library/dd286743%28v=vs.140%29.aspx)

@@ -1,12 +1,12 @@
 ---
-title: "クイックスタート: Visual Studio で Visual Basic を使用して初めてコンソール アプリを作成する | Microsoft Docs"
-ms.custom: 
+title: 'クイックスタート: Visual Studio で Visual Basic を使用して初めてコンソール アプリを作成する | Microsoft Docs'
+ms.custom: ''
 ms.date: 12/10/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 ms.devlang: vb
 author: TerryGLee
@@ -16,11 +16,11 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 2573e1a2344b858b721fb234d6b228b421a36550
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: a531582b2474305d7c286f936e29a7bc9804d7bf
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>クイックスタート: Visual Studio で Visual Basic を使用して初めてコンソール アプリを作成する
 ここでは 5 分から 10 分で Visual Studio 統合開発環境 (IDE) の概要を示し、コンソールで実行される簡単な Visual Basic アプリケーションを作成します。
@@ -81,9 +81,8 @@ IDE で **[Hello World]** ボタンをクリックした場合、デバッグ �
 
    !["Hello World! Press any key to continue" と表示されているコンソール ウィンドウ](../ide/media/vb-console-hello-world-press-any-key.png)
 
-このクイック スタートは完了しました。 Visual Basic と Visual Studio IDE について少しはご理解いただけたかと思います。 さらに深く理解したい場合は、目次の**チュートリアル** セクションに示されているチュートリアルを続行してください。
+## <a name="next-steps"></a>次の手順
+このクイック スタートは完了しました。 Visual Basic と Visual Studio IDE について少しはご理解いただけたかと思います。 詳細については、引き続き以下のチュートリアルをご覧ください。
 
-## <a name="see-also"></a>関連項目
-* [クイックスタート: Visual Studio で Visual Basic を使用して "Hello World" Windows フォーム アプリを作成する](quickstart-visual-basic-winforms.md)
-* [チュートリアル: Visual Studio の Visual Basic の概要](tutorial-visual-basic-console.md)
-* [Visual Basic コード ファイルの IntelliSense](visual-basic-specific-intellisense.md)
+> [!div class="nextstepaction"]
+> [Visual Studio の Visual Basic の概要](tutorial-visual-basic-console.md)

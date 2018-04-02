@@ -1,27 +1,27 @@
 ---
-title: "プロファイリング機能ツアー | Microsoft Docs"
+title: プロファイリング機能ツアー | Microsoft Docs
 ms.custom: H1HackMay2017
 ms.date: 05/18/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - debugger
 ms.assetid: d2ee0301-ea78-43d8-851a-71b7b2043d73
-caps.latest.revision: 
+caps.latest.revision: 1
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 43955eedc5d7149396b3ad6dc7c380298b631d9e
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+ms.openlocfilehash: b4662b1e498303bd7a4e09acd78db43519c142b1
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="profiling-feature-tour"></a>プロファイリング機能ツアー
 
@@ -154,18 +154,21 @@ CPU 使用量ツールやメモリ使用量ツールに現在入っていない�
 
 次の表では、Visual Studio のさまざまなツールとそれらを使用できる各種プロジェクトをまとめています。
   
-|パフォーマンス ツール|Windows デスクトップ|UWP|ASP.NET/ASP.NET Core|  
-|----------------------|---------------------|------------------------------|-------------|  
-|[メモリ使用量](../profiling/memory-usage.md)|可|可|可|  
-|[CPU 使用率](../profiling/cpu-usage.md)|可|可|可 (.NET Core/ASP.NET Core の場合は no)|  
-|[GPU 使用率](../debugger/gpu-usage.md)|可|可|Ｘ|  
-|[アプリケーションのタイムライン](../profiling/application-timeline.md)|可|可|Ｘ|  
-|[パフォーマンスのヒント](../profiling/perftips.md)|可|XAML の場合は可、HTML の場合は不可|可|  
-|[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)|可|Ｘ|可 (ASP.NET Core の場合は no)|  
-|[IntelliTrace](../debugger/intellitrace.md)|.NET および Visual Studio Enterprise のみ|.NET および Visual Studio Enterprise のみ|.NET および Visual Studio Enterprise のみ|
-|[ネットワーク使用率](../profiling/network-usage.md)|Ｘ|可|Ｘ| 
-|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|Ｘ|HTML の場合は可、XAML の場合は不可|Ｘ|  
-|[JavaScript メモリ](../profiling/javascript-memory.md)|Ｘ|HTML の場合は可、XAML の場合は不可|Ｘ|  
+|パフォーマンス ツール|Windows デスクトップ|UWP|ASP.NET/ASP.NET Core| 
+|----------------------|---------------------|-------------|-------------|  
+|[メモリ使用量](../profiling/memory-usage.md)|可|可|可| 
+|[CPU 使用率](../profiling/cpu-usage.md)|可 (メモを参照)|可|可 (メモを参照)|
+|[GPU 使用率](../debugger/gpu-usage.md)|可|可|Ｘ| 
+|[アプリケーションのタイムライン](../profiling/application-timeline.md)|可|可|Ｘ|
+|[パフォーマンスのヒント](../profiling/perftips.md)|可|XAML の場合は可、HTML の場合は不可|可|
+|[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)|可|Ｘ|可|
+|[IntelliTrace](../debugger/intellitrace.md)|Visual Studio Enterprise を使用した .NET のみ|Visual Studio Enterprise を使用した .NET のみ|Visual Studio Enterprise を使用した .NET のみ|
+|[ネットワーク使用率](../profiling/network-usage.md)|Ｘ|可|Ｘ|
+|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|Ｘ|HTML の場合は可、XAML の場合は不可|Ｘ| 
+|[JavaScript メモリ](../profiling/javascript-memory.md)|Ｘ|HTML の場合は可、XAML の場合は不可|Ｘ|
+
+> [!NOTE]
+> .NET Core と ASP.NET Core では現在、CPU 使用率ツールでポータブル PDB による正確な結果を得ることができません。 代わりにフル PDB を使用してください。
 
 ## <a name="see-also"></a>参照  
  [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)

@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio でテストの自動化にビルドまたはリリース管理を使用する | Microsoft Docs"
+title: Visual Studio でテストの自動化にビルドまたはリリース管理を使用する | Microsoft Docs
 ms.date: 03/02/2018
-ms.technology: vs-devops-test
+ms.technology: vs-ide-test
 ms.topic: article
 helpviewer_keywords:
 - automated testing, lab management, test lab
@@ -10,11 +10,11 @@ manager: ghogen
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: b12bffb6f2e5df0209fd3dfe3ea5fd005897d58d
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 5596dbbe65dc57dcb1862b74ed6379d1e2c080cf
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="use-build-and-release-management-instead-of-lab-management-for-automated-testing"></a>テストの自動化に、Lab Management ではなくビルドとリリース管理を使用します。
 
@@ -43,7 +43,7 @@ MTM と Lab Management は、アプリケーションのビルド、配置、テ
 
 ## <a name="self-service-management-of-scvmm-environments"></a>SCVMM 環境のセルフ サービスの管理
 
-[Microsoft Test Manager のラボ センター](https://msdn.microsoft.com/library/dd997438.aspx)では、環境テンプレートのライブラリを管理する機能をサポートしたり、[SCVMM サーバー](/system-center/vmm/overview?view=sc-vmm-1801)を使用したオンデマンドでの環境のプロビジョニングをサポートしています。
+[Microsoft Test Manager のテスト センター](/vsts/manual-test/mtm/guidance-mtm-usage)では、環境テンプレートのライブラリを管理する機能をサポートしたり、[SCVMM サーバー](/system-center/vmm/overview?view=sc-vmm-1801)を使用したオンデマンドでの環境のプロビジョニングをサポートしたりしています。
 
 ラボ センターのセルフ サービス プロビジョニング機能には、次の 2 つの明確な目標があります。
 

@@ -1,13 +1,13 @@
 ---
-title: "R Tools for Visual Studio のインストール | Microsoft Docs"
-description: "オフライン インストールなど、Visual Studio 2017 および Visual Studio 2015 に R Tools for Visual Studio をインストールする方法について説明します。"
-ms.custom: 
+title: R Tools for Visual Studio のインストール | Microsoft Docs
+description: オフライン インストールなど、Visual Studio 2017 および Visual Studio 2015 に R Tools for Visual Studio をインストールする方法について説明します。
+ms.custom: ''
 ms.date: 01/24/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-r
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 dev_langs:
 - R
 ms.topic: article
@@ -16,11 +16,11 @@ ms.author: kraigb
 manager: ghogen
 ms.workload:
 - data-science
-ms.openlocfilehash: 76dc2623edebed6cca48c40c0ad0bc96f783e39d
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: bb8f380ce17242f7ac9953226db7ad683c17a2de
+ms.sourcegitcommit: 236c250bb97abdab99d00c6525d106fc0035d7d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="how-to-install-r-tools-for-visual-studio"></a>R Tools for Visual Studio のインストール方法
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/21/2018
 
 ## <a name="supported-versions-of-visual-studio"></a>サポートされている Visual Studio のバージョン
 
-Windows では R Tools for Visual Studio (RTVS) は、[Visual Studio 2017](https://www.visualstudio.com/downloads/) および [Visual Studio 2015 Update 3 (以降)](http://go.microsoft.com/fwlink/?LinkId=691129) (直接ダウンロード) の両方の Community (無料)、Professional、Enterprise の各エディションでサポートされています。
+Windows では R Tools for Visual Studio (RTVS) は、[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) および [Visual Studio 2015 Update 3 (以降)](http://go.microsoft.com/fwlink/?LinkId=691129) (直接ダウンロード) の両方の Community (無料)、Professional、Enterprise の各エディションでサポートされています。
 
 現在、Visual Studio for Mac では RTVS はサポートされていません。
 
@@ -44,7 +44,7 @@ Visual Studio Test Professional や SQL Server Management Studio などの製品
 
 ## <a name="installing-rtvs-in-visual-studio-2017"></a>Visual Studio 2017 での RTVS のインストール
 
-1. Visual Studio インストーラーを実行します。 (Visual Studio がまだインストールされていない場合は、「[ダウンロード](https://www.visualstudio.com/downloads/)」を参照してください)。Windows 7 の場合、Visual Studio 2017 バージョン *15.2 ビルド 26430.12* 以降を表示するには、インストーラーを更新する必要があります。
+1. Visual Studio インストーラーを実行して、**[変更]** オプションを選びます (詳しくは、[Visual Studio の変更](../install/modify-visual-studio.md)に関するページをご覧ください)。 Visual Studio をまだインストールしていない場合は、[Visual Studio のインストール](../install/install-visual-studio.md)に関するページをご覧ください。 Windows 7 の場合、Visual Studio 2017 バージョン *15.2 ビルド 26430.12* 以降を表示するには、インストーラーを更新する必要があります。
 
 1. **[データ サイエンスと分析のアプリケーション]** ワークロードを選択します。
 
@@ -70,7 +70,7 @@ Microsoft R Open と CRAN R はどちらも複数の side-by-side バージョ�
 
 ### <a name="install-the-r-tools"></a>R Tools のインストール
 
-[https://aka.ms/rtvs-current](https://aka.ms/rtvs-current) から最新の RTVS for Visual Studio 2015 をダウンロードします。 RTVS は Visual Studio の適切なバージョンを確認し、R インタープリターがまだインストールされていない場合は、インストールの支援も行います。
+[https://aka.ms/rtvs-current](https://aka.ms/rtvs-current) から最新の R Tools for Visual Studio 2015 をダウンロードします。 RTVS は Visual Studio の適切なバージョンを確認し、R インタープリターがまだインストールされていない場合は、インストールの支援も行います。
 
 > [!Note]
 > スタンドアロンの RTVS インストーラーは Visual Studio 2015 でのみ機能します。Visual Studio 2017 の場合は、既に説明した、「[データ サイエンスと分析のアプリケーション ワークロード](#installing-rtvs-in-visual-studio-2017)」の手順で R のサポートをインストールします。
@@ -86,7 +86,7 @@ RTVS for Visual Studio 2015 は、`%ProgramFiles(x86)%\Microsoft Visual Studio 1
     - [Visual Studio 2017](../install/create-an-offline-installation-of-visual-studio.md)
     - [Visual Studio 2015](https://msdn.microsoft.com/library/mt706497.aspx)
 
-1. Visual Studio 2015 では、オフラインの RTVS インストーラーは、[https://aka.ms/rtvs-current-zip](https://aka.ms/rtvs-current-zip) と [https://aka.ms/rtvs-remote-zip](https://aka.ms/rtvs-remote-zip) からダウンロードします。
+1. Visual Studio 2015 の場合は、R Tools for Visual Studio のオフライン インストーラーを [https://aka.ms/rtvs-current-zip](https://aka.ms/rtvs-current-zip) および [https://aka.ms/rtvs-remote-zip](https://aka.ms/rtvs-remote-zip) からダウンロードします。
 
 1. オフライン インストーラーから Visual Studio と RTVS をインストールします。
 

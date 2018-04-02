@@ -1,12 +1,12 @@
 ---
-title: "Visual Studio での C# および ASP.NET Core の概要 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio での C# および ASP.NET Core の概要 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/11/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 ms.devlang: CSharp
 author: TerryGLee
@@ -17,11 +17,11 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: c4d67a57063854f859a766068084d63902ba038e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 9a24ccbcecc2d5bd4d5799ada048fee0004514f7
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="getting-started-with-c-and-aspnet-in-visual-studio"></a>Visual Studio での C# および ASP.NET の概要
 Visual Studio を使用する ASP.NET Core での C# 開発に関するこのチュートリアルでは、C# ASP.NET Core Web アプリを作成し、それにコードを追加し、IDE の一部の機能を検討してアプリを実行します。
@@ -167,12 +167,9 @@ MVC パターンは、従来のモノリシック アプリよりテストと更
 
  ![ツール バーで [デバッグの停止] ボタンをクリックする](../ide/media/csharp-aspnet-stop-debugging.png)
 
+## <a name="next-steps"></a>次の手順
 
-これでこのチュートリアルは完了です。
+これでこのチュートリアルは完了です。 C#、ASP.NET Core、Visual Studio IDE について少しはご理解いただけたかと思います。 さらに詳しく理解するには、引き続き以下のチュートリアルをご覧ください。
 
-## <a name="see-also"></a>関連項目
-* [ASP.NET Core MVC と Visual Studio の概要](/aspnet/core/tutorials/first-mvc-app/start-mvc?tabs=aspnetcore2x)
-* [ASP.NET Core の Razor ページの概要](/aspnet/core/tutorials/razor-pages/razor-pages-start)
-* [C# の新機能](/dotnet/csharp/whats-new)
-* [C# 言語リファレンス](/dotnet/csharp/language-reference/index)
-* [超初心者向けの C# の基本](https://mva.microsoft.com/en-US/training-courses/c-fundamentals-for-absolute-beginners-16169)ビデオ コース
+ > [!div class="nextstepaction"]
+ > [ASP.NET Core MVC と Visual Studio の概要](/aspnet/core/tutorials/first-mvc-app/start-mvc?tabs=aspnetcore2x)
