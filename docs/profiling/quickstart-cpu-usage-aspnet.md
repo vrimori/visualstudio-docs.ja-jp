@@ -1,31 +1,36 @@
 ---
-title: "CPU 使用率データの分析 (ASP.NET) | Microsoft Docs"
-ms.custom: 
+title: CPU 使用率データの分析 (ASP.NET) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/05/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 helpviewer_keywords:
 - Profiling Tools, quick start
 - Diagnostics Tools, CPU Usage
-caps.latest.revision: "1"
+caps.latest.revision: 1
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: aspnet
-ms.openlocfilehash: 2d92c4fcdbc3c4af3269876836602025a4403463
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- aspnet
+ms.openlocfilehash: 16bdbcbc66673f872215a7b3812c4c6f7f1724b3
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="analyze-cpu-usage-data-in-visual-studio-aspnet"></a>Visual Studio での CPU 使用率データの分析 (ASP.NET)
 
 Visual Studio は、アプリケーションのパフォーマンス問題の分析に役立つ高性能な機能をたくさん備えています。 このトピックでは、基本的な機能のいくつかを簡単に紹介します。 今回、高い CPU 使用率に起因するパフォーマンス上のボトルネックを特定するツールを紹介します。 診断ツールは Visual Studio の .NET 開発 (ASP.NET を含む) とネイティブ/C++ 開発で利用できます。
 
 診断ハブでは、診断セッションの実行と管理のために他の多くのオプションを提供しています。 ここで説明する **CPU 使用率**ツールでは必要なデータを得ることができない場合、[他のプロファイリング ツール](../profiling/Profiling-Tools.md)で得られる別の種類の情報が役に立つことがあります。 多くの場合、アプリケーションのパフォーマンス上の問題は CPU 以外の何かが原因になります。メモリ、UI のレンダリング、ネットワークの要求時間などです。
+
+> [!NOTE]
+> .NET Core と ASP.NET Core では現在、CPU 使用率ツールでポータブル PDB による正確な結果を得ることができません。 代わりにフル PDB を使用してください。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
