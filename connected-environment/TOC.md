@@ -30,6 +30,7 @@
 
 # 方法
 ##[開発環境の共有](how-to/share-dev-environment.md)
+##[カスタム NuGet フィードの使用](how-to/use-a-custom-nuget-feed.md)
 ##[Visual Studio Connected Environment での kubectl の使用](how-to/use-kubectl-with-vsce.md)
 
 # [トラブルシューティング](troubleshooting.md)

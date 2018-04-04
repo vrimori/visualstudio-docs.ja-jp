@@ -17,11 +17,11 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 05e10e6016c4a6791b5bc80ba6a05616c1edb0f6
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 1ababcbc0903d474c2992b68e3571a71c4e88d99
+ms.sourcegitcommit: fb1fede41d8c5e459dd222755b0497b9d361bc51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>チュートリアル: Visual Studio で Node.js と Express のアプリを作成する
 このチュートリアルでは、Node.js と Express を使用して Visual Studio を開発します。単純な Node.js Web アプリを作成し、いくつかのコードを追加し、IDE の一部の機能を試し、アプリを実行します。 まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。  
@@ -45,6 +45,8 @@ ms.lasthandoff: 03/15/2018
 * Node.js ランタイムをインストールしている必要があります。
 
     インストールされていない場合は、LTS バージョンを [Node.js](https://nodejs.org/en/download/) Web サイトからインストールしてください。 一般に、Visual Studio はインストール済みの Node.js ランタイムを自動的に検出します。 インストールされているランタイムが検出されない場合は、プロパティ ページで、インストールされているランタイムを参照するプロジェクトを構成することができます (プロジェクトを作成した後、プロジェクト ノードを右クリックして、**[プロパティ]** を選択します)。
+
+    このチュートリアルは、Node.js 8.10.0 でテストされました。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 まず、Node.js Web アプリケーション プロジェクトを作成します。
@@ -119,6 +121,8 @@ ms.lasthandoff: 03/15/2018
         res.render('index', { title: 'Express', "data" });
     });
     ```
+
+    `res.render` が含まれるコードの行にエラーがあります。 アプリを実行するには、アプリを修正する必要があります。 次のセクションでは、エラーを修正します。
 
 ## <a name="use-intellisense"></a>IntelliSense を使用する
 

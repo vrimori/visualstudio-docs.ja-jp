@@ -20,6 +20,7 @@
 #### [アクセシビリティ製品およびサービス (Blend)](accessibility-products-and-services-blend.md)
 ### [XAML デザイナーのキーボード ショートカット](keyboard-shortcuts-for-xaml-designer.md)
 ### [XAML デザイナーでプロジェクト コードをデバッグまたは無効化する](debugging-or-disabling-project-code-in-xaml-designer.md)
+### [XAML のエラーと警告](xaml-errors-warnings.md)
 ## [Windows Presentation Foundation での最新のデスクトップ アプリケーションの作成](create-modern-desktop-applications-with-windows-presentation-foundation.md)
 ### [WPF の概要](getting-started-with-wpf.md)
 #### [WPF の概要](introduction-to-wpf.md)

@@ -5,7 +5,7 @@ keywords: ''
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 03/19/2018
+ms.date: 03/22/2018
 ms.topic: article
 helpviewer_keywords: ''
 ms.technology:
@@ -13,11 +13,11 @@ ms.technology:
 ms.service: ''
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fb2238d8a0afb8334a05585bf040931da81d66a
-ms.sourcegitcommit: a80e7ef2f0a0f6d906a44f4d696aeb208bc1ad70
+ms.openlocfilehash: bd209ce81800bd289a36e469fb23e6eec0dd008e
+ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="visual-studio-2017-build-numbers-and-release-dates"></a>Visual Studio 2017 のビルド番号とリリース日
 
@@ -25,6 +25,8 @@ ms.lasthandoff: 03/21/2018
 
 | **Version**| **チャネル** | **リリース日** | **ビルド バージョン** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.6.4 | Release | 2018 年 3 月 22 日 | 15.6.27428.2015 |
+| 15.7.0 Preview 2.0 | [プレビュー] | 2018 年 3 月 21 日 | 15.7.27520.0 |
 | 15.6.3 | Release | 2018 年 3 月 19 日 | 15.6.27428.2011 |
 | 15.7.0 Preview 1.0 | [プレビュー] | 2018 年 3 月 13 日 | 15.7.27512.0 |
 | 15.6.2 | Release | 2018 年 3 月 13 日 | 15.6.27428.2005 |
@@ -124,7 +126,7 @@ ms.lasthandoff: 03/21/2018
 * [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。
 * [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。 (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 * [Visual Studio 2017 管理者ガイド](visual-studio-administrator-guide.md)
 * [コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする](use-command-line-parameters-to-install-visual-studio.md)
