@@ -1,11 +1,11 @@
 ---
-title: "MSBuild の予約済みおよび既知のプロパティ | Microsoft Docs"
-ms.custom: 
+title: MSBuild の予約済みおよび既知のプロパティ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - VB
@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild, reserved properties
 ms.assetid: 99333e61-83c9-4804-84e3-eda297c2478d
-caps.latest.revision: 
+caps.latest.revision: 29
 author: Mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 89610426b944c3b3948c23c246337fd7aa9c1af8
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 9eafd9de132e2fa71ddfb4016115d84ef222db26
+ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="msbuild-reserved-and-well-known-properties"></a>MSBuild の予約済みおよび既知のプロパティ
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] には、プロジェクト ファイルに関する情報と [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] のバイナリに関する情報を格納する一連の定義済みのプロパティが用意されています。 これらのプロパティは、他の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロパティと同じように評価されます。 たとえば、`MSBuildProjectFile` プロパティを使用するには、「`$(MSBuildProjectFile)`」と入力します。  
   
- MSBuild は、次の表の値を使用して予約済みおよび既知のプロパティを事前に定義します。 予約されたプロパティはオーバーライドできませんが、既知のプロパティは同じ名前を持つ環境プロパティ、グローバル プロパティ、またはプロジェクト ファイルで宣言されたプロパティでオーバーライドできます。  
+ MSBuild は、次の表の値を使用して予約済みおよび既知のプロパティを事前に定義します。 予約されたプロパティはオーバーライドできませんが、既知のプロパティは同じ名前を持つ環境プロパティ、グローバル プロパティ、またはプロジェクト ファイルで宣言されたプロパティでオーバーライドできます。
   
 ## <a name="reserved-and-well-known-properties"></a>予約済みのプロパティと既知のプロパティ  
  次の表では、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 予約済みプロパティについて説明します。  
@@ -61,6 +61,23 @@ ms.lasthandoff: 02/09/2018
 |`MSBuildThisFileName`|`MSBuildThisFileFullPath` のファイル名の部分 (ファイル名拡張子を除く)。|予約されています。|  
 |`MSBuildToolsPath`|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] の値に関連付けられている `MSBuildToolsVersion` のバージョンのインストール パス。<br /><br /> パスに最後の円記号を含めません。<br /><br /> このプロパティはオーバーライドできません。|予約されています。|  
 |`MSBuildToolsVersion`|プロジェクトのビルドに使用する [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ツールセットのバージョン。<br /><br /> メモ：[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ツールセットは、アプリケーションのビルドで使用するタスク、ターゲット、およびツールで構成されます。 ツールには、csc.exe や vbc.exe などのコンパイラが含まれます。 詳細については、「[MSBuild ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」と「[標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)」をご覧ください。|予約されています。|  
-  
+
+## <a name="names-that-conflict-with-msbuild-elements"></a>MSBuild の要素と競合する名前
+
+上記に加え、MSBuild 言語の要素に対応する名前を、ユーザー定義のプロパティ、項目、または項目メタデータに使うことはできません。
+
+* VisualStudioProject
+* ターゲット
+* PropertyGroup
+* 出力
+* ItemGroup
+* UsingTask
+* ProjectExtensions
+* OnError
+* ImportGroup
+* [保存]
+* 目的
+* Otherwise
+
 ## <a name="see-also"></a>参照  
  [MSBuild リファレンス](../msbuild/msbuild-reference.md) [MSBuild プロパティ](../msbuild/msbuild-properties.md)
