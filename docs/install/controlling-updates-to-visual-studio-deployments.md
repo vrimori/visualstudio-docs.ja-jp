@@ -1,25 +1,27 @@
 ---
-title: "Visual Studio 配置の更新プログラムを制御する | Microsoft Docs"
-description: "{{プレースホルダー}}"
+title: Visual Studio 配置の更新プログラムを制御する | Microsoft Docs
+description: '{{プレースホルダー}}'
 ms.date: 08/14/2017
 ms.reviewer: tims
-ms.suite: 
-ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.suite: ''
+ms.technology:
+- vs-acquisition
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 35C7AB05-07D5-4B38-BCAC-AB88444E7368
-author: timsneath
+author: tglee
 ms.author: tglee
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e923e4b8ec3a505dc3df7b51d9776629fa08faad
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 53e2058d78e0dbbe6c74e65267e777d42d85adb7
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="control-updates-to-network-based-visual-studio-deployments"></a>ネットワーク ベースの Visual Studio 配置の更新プログラムを制御する
 

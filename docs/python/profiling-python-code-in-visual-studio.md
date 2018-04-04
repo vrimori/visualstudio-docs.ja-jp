@@ -1,27 +1,27 @@
 ---
-title: "Visual Studio で Python コードのパフォーマンスを測定する | Microsoft Docs"
-description: "CPython ベースのインタープリターを使っているときに、Visual Studio プロファイラーを使って Python コードのパフォーマンスを調べる方法を説明します。"
-ms.custom: 
+title: Visual Studio で Python コードのパフォーマンスを測定する | Microsoft Docs
+description: CPython ベースのインタープリターを使っているときに、Visual Studio プロファイラーを使って Python コードのパフォーマンスを調べる方法を説明します。
+ms.custom: ''
 ms.date: 01/09/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c946f9d0fea5192f75d2fd0a9865827b6027ef50
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 4faa050056296b7dde625268c7ff1112b2c0c6c0
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="profiling-python-code"></a>Python コードのプロファイリング
 
