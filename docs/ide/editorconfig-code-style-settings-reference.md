@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio での EditorConfig の .NET コーディング規則の設定 | Microsoft Docs"
+title: Visual Studio での EditorConfig の .NET コーディング規則の設定 | Microsoft Docs
 ms.date: 02/28/2018
 ms.topic: article
 dev_langs:
@@ -17,11 +17,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 53345fa849715a8065b0bf569977393033608caa
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: e69d7e291d1b13a5205aa4798c78c6a4e337db50
+ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig の .NET コーディング規則の設定
 
@@ -77,10 +77,11 @@ none または silent | このルールに違反した場合、ユーザーに�
         - dotnet\_style\_object_initializer
         - dotnet\_style\_collection_initializer
         - dotnet\_style\_explicit\_tuple_names
-        - dotnet\_style\_coalesce_expression
-        - dotnet\_style\_null_propagation
         - dotnet\_prefer\_inferred\_tuple_names
         - dotnet\_prefer\_inferred\_anonymous\_type\_member_names
+    - ["null" チェック設定](#null_checking)
+        - dotnet\_style\_coalesce_expression
+        - dotnet\_style\_null_propagation
 - C# コード スタイルの設定
     - [暗黙的な型と明示的な型](#var)
         - csharp\_style\_var\_for\_built\_in_types
@@ -102,7 +103,7 @@ none または silent | このルールに違反した場合、ユーザーに�
         - csharp\_prefer\_simple\_default_expression
         - csharp\_style\_deconstructed\_variable_declaration
         - csharp\_style\_pattern\_local\_over\_anonymous_function
-    - ["null" チェック設定](#null_checking)
+    - ["null" チェック設定](#null_checking_csharp)
         - csharp\_style\_throw_expression
         - csharp\_style\_conditional\_delegate_call
     - [コード ブロック基本設定](#code_block)
@@ -380,7 +381,7 @@ visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public
 
 #### <a name="expression_level">式レベル基本設定</a>
 
-このセクションのスタイル ルールは式レベル基本設定に関するものです。これには、オブジェクト初期化子、コレクション初期化子、明示的なタプル名、null 結合式と三項演算子、および null 条件演算子の使用が含まれます。
+このセクションのスタイル ルールは式レベル基本設定に関するものです。これには、オブジェクト初期化子、コレクション初期化子、明示的または推論されたタプル名、推定された匿名型が含まれます。
 
 次の表には、ルール名、ルール ID、適用可能なプログラミング言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
@@ -389,10 +390,8 @@ visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public
 | dotnet_style_object_initializer | IDE0017 | C# および Visual Basic | true:提案 | 最初のリリース |
 | dotnet_style_collection_initializer | IDE0028 | C# および Visual Basic | true:提案 | 最初のリリース |
 | dotnet_style_explicit_tuple_names | IDE0033 | C# 7.0+ および Visual Basic 15+ | true:提案 | 最初のリリース |
-| dotnet_style_coalesce_expression | IDE0029 | C# および Visual Basic | true:提案 | 最初のリリース |
-| dotnet_style_null_propagation | IDE0031 | C# 6.0+ および Visual Basic 14+ | true:提案 | 最初のリリース |
-| dotnet_prefer_inferred_tuple_names | IDE0037 | C# 7.1+ および Visual Basic 15+ | true:提案 | 15.6 |
-| dotnet_prefer_inferred_anonymous_type_member_names | IDE0037 | C# および Visual Basic | true:提案 | 15.6 |
+| dotnet_style_prefer_inferred_tuple_names | IDE0037 | C# 7.1+ および Visual Basic 15+ | true:提案 | 15.6 |
+| dotnet_style_prefer_inferred_anonymous_type_member_names | IDE0037 | C# および Visual Basic | true:提案 | 15.6 |
 
 **dotnet\_style\_object_initializer**
 
@@ -475,6 +474,60 @@ Dim customer As (name As String, age As Integer) = GetCustomer()
 Dim name = customer.Item1
 ```
 
+**dotnet\_style\_prefer\_inferred\_tuple_names**
+
+- このルールが **true** に設定されている場合、推論されたタプル要素名が優先されます。
+- このルールが **false** に設定されている場合、明示的なタプル要素名が優先されます。
+
+コード例:
+
+```csharp
+// dotnet_style_prefer_inferred_tuple_names = true
+var tuple = (age, name);
+
+// dotnet_style_prefer_inferred_tuple_names = false
+var tuple = (age: age, name: name);
+```
+
+**dotnet\_style\_prefer\_inferred\_anonymous\_type\_member_names**
+
+- このルールが **true** に設定されている場合、推論された匿名型のメンバー名が優先されます。
+- このルールが **false** に設定されている場合、明示的な匿名型のメンバー名が優先されます。
+
+コード例:
+
+```csharp
+// dotnet_style_prefer_inferred_anonymous_type_member_names = true
+var anon = new { age, name };
+
+// dotnet_style_prefer_inferred_anonymous_type_member_names = false
+var anon = new { age = age, name = name };
+
+```
+
+これらのルールは、次のように .editorconfig ファイルに表示されます。
+
+```EditorConfig
+# CSharp and Visual Basic code style settings:
+[*.{cs,vb}]
+dotnet_style_object_initializer = true:suggestion
+dotnet_style_collection_initializer = true:suggestion
+dotnet_style_explicit_tuple_names = true:suggestion
+dotnet_style_prefer_inferred_tuple_names = true:suggestion
+dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion
+```
+
+#### <a name="null_checking">"Null" 検査設定</a>
+
+このセクションのスタイル ルールは、null 検査設定が関係します。
+
+次の表には、ルール名、ルール ID、適用可能なプログラミング言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
+
+| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
+| --------- | ------- | -------------------- | ----------------------| ---- |
+| dotnet_style_coalesce_expression | IDE0029 | C# および Visual Basic | true:提案 | 最初のリリース |
+| dotnet_style_null_propagation | IDE0031 | C# 6.0+ および Visual Basic 14+ | true:提案 | 最初のリリース |
+
 **dotnet\_style\_coalesce_expression**
 
 - このルールが **true** に設定されている場合は、三項演算子チェックではなく null 結合式を使用します。
@@ -525,49 +578,13 @@ Dim v = If(o Is Nothing, Nothing, o.ToString()) ' or
 Dim v = If(o IsNot Nothing, o.ToString(), Nothing)
 ```
 
-**dotnet\_prefer\_inferred\_tuple_names**
-
-- このルールが **true** に設定されている場合、推論されたタプル要素名が優先されます。
-- このルールが **false** に設定されている場合、明示的なタプル要素名が優先されます。
-
-コード例:
-
-```csharp
-// dotnet_style_prefer_inferred_tuple_names = true
-var tuple = (age, name);
-
-// dotnet_style_prefer_inferred_tuple_names = false
-var tuple = (age: age, name: name);
-```
-
-**dotnet\_style\_prefer\_inferred\_anonymous\_type\_member_names**
-
-- このルールが **true** に設定されている場合、推論された匿名型のメンバー名が優先されます。
-- このルールが **false** に設定されている場合、明示的な匿名型のメンバー名が優先されます。
-
-コード例:
-
-```csharp
-// dotnet_style_prefer_inferred_anonymous_type_member_names = true
-var anon = new { age, name };
-
-// dotnet_style_prefer_inferred_anonymous_type_member_names = false
-var anon = new { age = age, name = name };
-
-```
-
 これらのルールは、次のように .editorconfig ファイルに表示されます。
 
 ```EditorConfig
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
-dotnet_style_object_initializer = true:suggestion
-dotnet_style_collection_initializer = true:suggestion
-dotnet_style_explicit_tuple_names = true:suggestion
 dotnet_style_coalesce_expression = true:suggestion
 dotnet_style_null_propagation = true:suggestion
-dotnet_style_prefer_inferred_tuple_names = true:suggestion
-dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion
 ```
 
 ### <a name="c-code-style-settings"></a>C# コード スタイルの設定
@@ -960,7 +977,7 @@ csharp_style_deconstructed_variable_declaration = true:suggestion
 csharp_style_pattern_local_over_anonymous_function = true:suggestion
 ```
 
-#### <a name="null_checking">"null" チェック設定</a>
+#### <a name="null_checking_csharp">"null" チェック設定</a>
 
 これらのスタイル ルールは、`throw` 式または `throw` ステートメントの使用や、null チェックを実行するか、[ラムダ式](/dotnet/csharp/lambda-expressions)の呼び出し時に条件付き合体演算子 (`?.`) を使用するかなどの、`null` チェックの構文に関するものです。
 
@@ -1545,7 +1562,7 @@ MyMethod(argument);
 
 **csharp_space_between_parentheses**
 
-このルールでは **true** や **false** の値は受け入れません。代わりに、以下の表の値を受け入れます。
+このルールでは、以下の表の 1 つ以上の値を受け入れます。
 
 | [値] | 説明 |
 | ----- |:------------|
@@ -1553,14 +1570,16 @@ MyMethod(argument);
 | 式 | 式のかっこの間にスペースを配置します。 |
 | type_casts | 型キャストのかっこの間にスペースを配置します。 |
 
+このルールを省略するか、`control_flow_statements`、`expressions`、または `type_casts` 以外の値を使用する場合、設定は適用されません。
+
 コード例:
 
 ```csharp
 // csharp_space_between_parentheses = control_flow_statements
-for( int i;i<x;i++ ) { ... }
+for ( int i = 0; i < 10; i++ ) { }
 
 // csharp_space_between_parentheses = expressions
-var z = ( x * y ) - ( ( y - x ) * 3);
+var z = ( x * y ) - ( ( y - x ) * 3 );
 
 // csharp_space_between_parentheses = type_casts
 int y = ( int )x;
