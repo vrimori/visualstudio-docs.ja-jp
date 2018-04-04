@@ -17,11 +17,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 992bd55fdc83757f9edacb00f31580f7efaab8cb
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 4424db170240714ad3a74c84107e7a794a9dad54
+ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="use-ui-automation-to-test-your-code"></a>UI オートメーションを使用してコードをテストする
 
@@ -45,26 +45,29 @@ ms.lasthandoff: 03/19/2018
 
 ## <a name="create-coded-ui-tests"></a>コード化された UI テストを作成する
 
+1. **コード化された UI テスト**のコンポーネントをインストールします。
+
+   まだの場合は、Visual Studio の**コード化された UI テスト**のコンポーネントをインストールします。 **[ツール]** > **[ツールと機能を取得]** を選択して **Visual Studio インストーラー**を起動します。 **Visual Studio インストーラー**で **[個々のコンポーネント]** タブを選択し、下にスクロールして **[デバッグとテスト]** セクションを表示します。 **コード化された UI テスト**のコンポーネントを選択し、**[変更]** を選択します。
+
+   ![コード化された UI テストのコンポーネント](media/coded-ui-test-component.png)
+
 1. コード化された UI テストを作成します。
 
-   コード化された UI テストは、コード化された UI テスト プロジェクトに含まれている必要があります。 コード化された UI テスト プロジェクトをまだ作成していない場合は、プロジェクトを作成します。 ソリューションのショートカット メニューの **[ソリューション エクスプローラー]** で、**[追加]**、**[新しいプロジェクト]** の順に選択し、**[Visual Basic]** または **[Visual C#]** を選択します。 次に、**[テスト]** > **[コード化された UI テスト]** の順に選択します。
+   コード化された UI テストは、コード化された UI テスト プロジェクトに含まれている必要があります。 コード化された UI テスト プロジェクトをまだ作成していない場合は、プロジェクトを作成します。 **[ファイル]** > **[新規]** > **[プロジェクト]** の順に選んで、**[新しいプロジェクト]** ダイアログ ボックスを開きます。 左側のカテゴリ ウィンドウで **[インストール済み]** > **Visual Basic** *または* **[Visual C#]**  > **[テスト]** の順に展開します。 **[コード化された UI テスト プロジェクト]** テンプレートを選択し、**[OK]** を選択します。
 
-   > [!TIP]
-   > **[コード化された UI テスト]** プロジェクト テンプレートが表示されない場合、コード化された UI テストをサポートしないバージョンの Visual Studio を使用している可能性があります。 コード化された UI テストを作成するには、Visual Studio Enterprise Edition を使用する必要があります。
+   ![[新しいプロジェクト] ダイアログのコード化された UI テスト プロジェクトのテンプレート](media/coded-ui-test-project-template.png)
 
 2. コード化された UI テスト ファイルを追加します。
 
-     コード化された UI プロジェクトを作成した場合は、最初の CUIT ファイルが自動的に追加されます。 別のテスト ファイルを追加するには、コード化された UI テスト プロジェクトのショートカット メニューを開き、**[追加]** をポイントし、**[コード化された UI テスト]** を選択します。
-
-     ![ コード化された UI テストを作成します](../test/media/codedui_create.png "CodedUI_Create")
+     コード化された UI プロジェクトを作成した場合は、最初の CUIT ファイルが自動的に追加されます。 別のテスト ファイルを追加するには、**ソリューション エクスプローラー**でコード化された UI テスト プロジェクトのショートカット メニューを開き、**[追加]** > **[コード化された UI テスト]** の順に選択します。
 
      **[コード化された UI テストのコードの生成]** ダイアログ ボックスで、**[操作の記録、UI マップの編集、またはアサーションの追加]** を選択します。
 
-     ![操作の記録を選択します](../test/media/codedui_codegendialogb.png "CodedUI_CodeGenDialogB")
+     ![[コード化された UI テストのコードの生成] ダイアログ ボックス](media/generate-code-for-coded-ui-test.png)
 
-     コード化された UI テスト ビルダーが表示され、Visual Studio は最小化されます。
+     コード化された UI テスト ビルダーが表示されます。
 
-     ![コード化された UI テスト ビルダー](../test/media/codedui_testbuilder.png "CodedUI_TestBuilder")
+     ![コード化された UI テスト ビルダー](../test/media/codedui_testbuilder.png)
 
 3. 操作のシーケンスを記録します。
 
@@ -168,7 +171,7 @@ UI コントロールのアサーションを生成するには、コード化�
 
 アサーションのコードを生成し、コントロールを UI マップに追加するために、**[コードの生成]** アイコンを選択します。 コード化された UI テスト メソッドの名前と説明を入力します。これらはメソッドのコメントとして追加されます。 **[追加と生成]** を選択します。 次に、**[閉じる]** アイコンをクリックして、**[コード化された UI テスト ビルダー]** を閉じます。 これで、次のようなコードが生成されます。 たとえば、入力した名前が `AssertForAddTwoNumbers` の場合、コードは次の例のようになります。
 
--   コード化された UI テスト ファイルのテスト メソッドに、AssertForAddTwoNumbers という Assert メソッドの呼び出しを追加します。
+- コード化された UI テスト ファイルのテスト メソッドに、AssertForAddTwoNumbers という Assert メソッドの呼び出しを追加します。
 
     ```csharp
     [TestMethod]
@@ -181,7 +184,7 @@ UI コントロールのアサーションを生成するには、コード化�
 
      このファイルを編集して、ステップとアサーションの順序を変更するか、新しいテスト メソッドを作成することができます。 さらにコードを追加するには、テスト メソッドにカーソルを置き、ショートカット メニューの **[コード化された UI テストのコードの生成]** を選択します。
 
--   UI マップ (UIMap.uitest) に `AssertForAddTwoNumbers` という名前のメソッドを追加します。 このファイルはコード化された UI テスト エディターで開かれ、そこでアサーションを編集できます。
+- UI マップ (UIMap.uitest) に `AssertForAddTwoNumbers` という名前のメソッドを追加します。 このファイルはコード化された UI テスト エディターで開かれ、そこでアサーションを編集できます。
 
      ![コード化された UI テスト エディターを使用したアサートの編集](../test/media/cuit_editor_assert.png "CUIT_Editor_assert")
 
@@ -226,7 +229,7 @@ UI コントロールのアサーションを生成するには、コード化�
 Mouse.Hover(uIItem1Text, new Point(87, 9));
 ```
 
-#### <a name="configuring-mouse-hover-keyboard-assignments"></a>マウス ホバーのキーボード割り当てを構成する
+#### <a name="configure-mouse-hover-keyboard-assignments"></a>マウス ホバーのキーボード割り当てを構成する
 
 マウス ホバー イベントをキャプチャするキーの割り当てが自分の環境内の他の場所で使用されている場合:
 
@@ -269,35 +272,35 @@ Web ブラウザーで暗黙のホバーの記録を有効にするには、構�
 
 コード化された UI テストの作成後、Visual Studio で次のいずれかのツールを使用してテストを編集できます。
 
--   **コード化された UI テスト ビルダー:** コード化された UI テスト ビルダーを使用して、テストにコントロールや検証を追加します。 このトピックの「[コントロールを追加し、プロパティを検証する](#VerifyingCodeUsingCUITGenerateAssertions)」セクションをご覧ください。
+- **コード化された UI テスト ビルダー:** コード化された UI テスト ビルダーを使用して、テストにコントロールや検証を追加します。 このトピックの「[コントロールを追加し、プロパティを検証する](#VerifyingCodeUsingCUITGenerateAssertions)」セクションをご覧ください。
 
--   **コード化された UI テスト エディター:** コード化された UI テスト エディターを使用すると、コード化された UI テストを簡単に変更できます。 Coded UI Test Editor (コード化された UI テスト エディター) を使用すると、テスト メソッドを検索、表示、および編集できます。 また、UI コントロール マップ内の UI 操作および関連コントロールを編集することもできます。 詳細については、「[コード化された UI テスト エディターを使用したコード化された UI テストの編集](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)」をご覧ください。
+- **コード化された UI テスト エディター:** コード化された UI テスト エディターを使用すると、コード化された UI テストを簡単に変更できます。 Coded UI Test Editor (コード化された UI テスト エディター) を使用すると、テスト メソッドを検索、表示、および編集できます。 また、UI コントロール マップ内の UI 操作および関連コントロールを編集することもできます。 詳細については、「[コード化された UI テスト エディターを使用したコード化された UI テストの編集](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)」をご覧ください。
 
--   **コード エディター:**
+- **コード エディター:**
 
-    -   このトピックの「[UI コントロールの操作とプロパティのコーディング](#VerifyingCodeCUITActionsandProperties)」セクションで説明しているように、テストのコントロールのコードを手動で追加します。
+    - このトピックの「[UI コントロールの操作とプロパティのコーディング](#VerifyingCodeCUITActionsandProperties)」セクションで説明しているように、テストのコントロールのコードを手動で追加します。
 
-    -   コード化された UI テストを作成した後、データ ドリブンになるようにテストを変更できます。 詳細については、「[データ ドリブンのコード化された UI テストの作成](../test/creating-a-data-driven-coded-ui-test.md)」をご覧ください。
+    - コード化された UI テストを作成した後、データ ドリブンになるようにテストを変更できます。 詳細については、「[データ ドリブンのコード化された UI テストの作成](../test/creating-a-data-driven-coded-ui-test.md)」をご覧ください。
 
-    -   コード化された UI テストの再生では、テストに対して指示することで、ウィンドウの表示やプログレス バーの非表示などの特定のイベントが発生するまで待機することができます。 これを行うには、適切な UITestControl.WaitForControlXXX() メソッドを追加します。 使用できるメソッドの完全な一覧については、「[再生中に特定のイベントを待機するようにコード化された UI テストを設定](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)」をご覧ください。 WaitForControlEnabled メソッドを使用して、コントロールが有効になるまで待機するコード化された UI テストの例については、「[チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)」をご覧ください。
+    - コード化された UI テストの再生では、テストに対して指示することで、ウィンドウの表示やプログレス バーの非表示などの特定のイベントが発生するまで待機することができます。 これを行うには、適切な UITestControl.WaitForControlXXX() メソッドを追加します。 使用できるメソッドの完全な一覧については、「[再生中に特定のイベントを待機するようにコード化された UI テストを設定](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)」をご覧ください。 WaitForControlEnabled メソッドを使用して、コントロールが有効になるまで待機するコード化された UI テストの例については、「[チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)」をご覧ください。
 
-    -   コード化された UI テストには、Internet Explorer 9 と Internet Explorer 10 に含まれる HTML5 コントロールの一部のサポートが含まれます。 詳細については、「[コード化された UI テストでの HTML5 コントロールの使用](../test/using-html5-controls-in-coded-ui-tests.md)」をご覧ください。
+    - コード化された UI テストには、Internet Explorer 9 と Internet Explorer 10 に含まれる HTML5 コントロールの一部のサポートが含まれます。 詳細については、「[コード化された UI テストでの HTML5 コントロールの使用](../test/using-html5-controls-in-coded-ui-tests.md)」をご覧ください。
 
-    -   **コード化された UI テストのコーディング ガイダンス:**
+    - コード化された UI テストのコーディング ガイダンス:
 
-        -   [コード化された UI テストの構造](../test/anatomy-of-a-coded-ui-test.md)
+       - [コード化された UI テストの構造](../test/anatomy-of-a-coded-ui-test.md)
 
-        -   [コード化された UI テストのベスト プラクティス](../test/best-practices-for-coded-ui-tests.md)
+       - [コード化された UI テストのベスト プラクティス](../test/best-practices-for-coded-ui-tests.md)
 
-        -   [複数の UI マップでの大規模アプリケーションのテスト](../test/testing-a-large-application-with-multiple-ui-maps.md)
+       - [複数の UI マップでの大規模アプリケーションのテスト](../test/testing-a-large-application-with-multiple-ui-maps.md)
 
-        -   [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+       - [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
 
 ### <a name="the-generated-code"></a>生成されたコード
 
 **[コードの生成]** を選択すると、いくつかのコードが作成されます。
 
--   **テスト メソッド内の行。**
+- **テスト メソッド内の行。**
 
     ```csharp
     [CodedUITest]
@@ -316,7 +319,7 @@ Web ブラウザーで暗黙のホバーの記録を有効にするには、構�
 
      また、新しいテスト メソッドを追加し、同様にそれらにコードを追加できます。 各テスト メソッドは、`[TestMethod]` 属性を持っている必要があります。
 
--   **UIMap.uitest 内のメソッド**
+- **UIMap.uitest 内のメソッド**
 
      このメソッドには、記録した操作または検証した値の詳細が含まれます。 UIMap.uitest を開いて、このコードを編集できます。 これは特殊なエディターで開かれ、記録された操作を削除またはリファクタリングできます。
 
@@ -335,9 +338,9 @@ Web ブラウザーで暗黙のホバーの記録を有効にするには、構�
     ```
 
     > [!WARNING]
-    >このファイルはさらにテストを作成すると再生成されるため、ファイルを編集しないでください。
+    > このファイルはさらにテストを作成すると再生成されるため、ファイルを編集しないでください。
 
-     これらのメソッドを UIMap.cs にコピーして、メソッドの適合させたバージョンを作成できます。 たとえば、テスト メソッドから呼び出すことができるパラメーター化されたバージョンを作成できます。
+     これらのメソッドを *UIMap.cs* にコピーして、メソッドの適合させたバージョンを作成できます。 たとえば、テスト メソッドから呼び出すことができるパラメーター化されたバージョンを作成できます。
 
     ```csharp
     // File: UIMap.cs
@@ -352,33 +355,33 @@ Web ブラウザーで暗黙のホバーの記録を有効にするには、構�
     }
     ```
 
--   **UIMap.uitest 内の宣言**
+- **UIMap.uitest 内の宣言**
 
-     これらの宣言は、テストで使用されるアプリケーションの UI コントロールを表します。 これらは、コントロールを操作し、プロパティにアクセスするために、生成されたコードによって使用されます。
+    これらの宣言は、テストで使用されるアプリケーションの UI コントロールを表します。 これらは、コントロールを操作し、プロパティにアクセスするために、生成されたコードによって使用されます。
 
-     独自のコードを記述する場合も、これらを使用できます。 たとえば、テスト メソッドで Web アプリケーションのハイパーリンクの選択やテキスト ボックスへの値の入力を実行したり、フィールドの値に基づいて分岐して別のテスト操作を行ったりすることができます。
+    独自のコードを記述する場合も、これらを使用できます。 たとえば、テスト メソッドで Web アプリケーションのハイパーリンクの選択やテキスト ボックスへの値の入力を実行したり、フィールドの値に基づいて分岐して別のテスト操作を行ったりすることができます。
 
-     大規模なアプリケーションのテストを容易にするために、複数のコード化された UI テストと複数の UI マップ オブジェクトおよびファイルを追加できます。 詳細については、「[複数の UI マップでの大規模アプリケーションのテスト](../test/testing-a-large-application-with-multiple-ui-maps.md)」をご覧ください。
+    大規模なアプリケーションのテストを容易にするために、複数のコード化された UI テストと複数の UI マップ オブジェクトおよびファイルを追加できます。 詳細については、「[複数の UI マップでの大規模アプリケーションのテスト](../test/testing-a-large-application-with-multiple-ui-maps.md)」をご覧ください。
 
- 生成されるコードの詳細については、「[コード化された UI テストの構造](../test/anatomy-of-a-coded-ui-test.md)」をご覧ください。
+生成されるコードの詳細については、「[コード化された UI テストの構造](../test/anatomy-of-a-coded-ui-test.md)」をご覧ください。
 
 ### <a name="code-ui-control-actions-and-properties"></a>UI コントロールの操作とプロパティのコード化
 
 コード化された UI テストで UI テストのコントロールを使用する場合、コントロールは操作とプロパティの 2 つに分類されます。
 
--   最初の部分は、UI テストのコントロールで実行できる操作で構成されます。 たとえば、コード化された UI テストでは、UI テストのコントロールでのマウス クリックをシミュレートしたり、UI テストのコントロールに影響を与えるキーボードでのキー入力をシミュレートしたりすることができます。
+- 最初の部分は、UI テストのコントロールで実行できる操作で構成されます。 たとえば、コード化された UI テストでは、UI テストのコントロールでのマウス クリックをシミュレートしたり、UI テストのコントロールに影響を与えるキーボードでのキー入力をシミュレートしたりすることができます。
 
--   2 番目の部分では、UI テストのコントロールのプロパティの取得や設定を行うことができます。 たとえば、コード化された UI テストでは、`ListBox` 内の項目数を取得したり、`CheckBox` をオンの状態に設定したりできます。
+- 2 番目の部分では、UI テストのコントロールのプロパティの取得や設定を行うことができます。 たとえば、コード化された UI テストでは、`ListBox` 内の項目数を取得したり、`CheckBox` をオンの状態に設定したりできます。
 
 **UI テストのコントロールの操作へのアクセス**
 
 UI テストのコントロールにマウス クリックやキー操作などの操作を実行するには、<xref:Microsoft.VisualStudio.TestTools.UITesting.Mouse> クラスおよび <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard> クラスのメソッドを使用します。
 
--   マウスのクリックなど、マウスを使用した操作を実行するには、<xref:Microsoft.VisualStudio.TestTools.UITesting.Mouse.Click%2A> を使用します。
+- マウスのクリックなど、マウスを使用した操作を実行するには、<xref:Microsoft.VisualStudio.TestTools.UITesting.Mouse.Click%2A> を使用します。
 
      `Mouse.Click(buttonCancel);`
 
--   エディット コントロールへの入力など、キーボードを使用した操作を実行するには、<xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A> を使用します。
+- エディット コントロールへの入力など、キーボードを使用した操作を実行するには、<xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A> を使用します。
 
      `Keyboard.SendKeys(textBoxDestination, @"C:\Temp\Output.txt");`
 
@@ -390,7 +393,7 @@ UI コントロールの特定のプロパティ値を取得および設定す�
 
 #### <a name="to-get-or-set-properties-from-ui-test-controls-directly"></a>UI テストのコントロールからプロパティを直接取得または設定するには
 
-T:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlList や T:Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinComboBox など、T:Microsoft.VisualStudio.TestTools.UITesting.UITestControl から派生するコントロールの場合は、次のように、プロパティ値を直接取得または設定できます。
+[HtmlList](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.uitesting.htmlcontrols.htmllist.aspx) や [WinComboBox](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.uitesting.wincontrols.wincombobox.aspx) などの、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl>から派生するコントロールを使用して、プロパティ値を直接取得したり設定したりできます。 次のコードは、いくつかの例を示しています。
 
  ```csharp
  int i = myHtmlList.ItemCount;
@@ -399,11 +402,11 @@ T:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlList や T:Microso
 
 #### <a name="to-get-properties-from-ui-test-controls"></a>UI テストのコントロールからプロパティを取得するには
 
--   コントロールからプロパティ値を取得するには、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A> を使用します。
+- コントロールからプロパティ値を取得するには、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A> を使用します。
 
--   取得するコントロールのプロパティを指定するには、`PropertyNames` に対し、パラメーターとして各コントロールの <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A> クラスからの適切な文字列を使用します。
+- 取得するコントロールのプロパティを指定するには、`PropertyNames` に対し、パラメーターとして各コントロールの <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A> クラスからの適切な文字列を使用します。
 
--   <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A> は適切なデータ型を返しますが、この戻り値は <xref:System.Object> としてキャストされます。 戻り値 <xref:System.Object> は適切な型としてキャストされる必要があります。
+- <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A> は適切なデータ型を返しますが、この戻り値は <xref:System.Object> としてキャストされます。 戻り値 <xref:System.Object> は適切な型としてキャストされる必要があります。
 
      例:
 
@@ -411,9 +414,9 @@ T:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlList や T:Microso
 
 #### <a name="to-set-properties-for-ui-test-controls"></a>UI テストのコントロールのプロパティを設定するには
 
--   コントロールのプロパティを設定するには、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A> を使用します。
+- コントロールのプロパティを設定するには、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A> を使用します。
 
--   設定するコントロールのプロパティを指定するには、`PropertyNames` に対し、最初のパラメーターとして <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A> クラスからの適切な文字列を使用します。2 番目のパラメーターにはプロパティ値を指定します。
+- 設定するコントロールのプロパティを指定するには、`PropertyNames` に対し、最初のパラメーターとして <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A> クラスからの適切な文字列を使用します。2 番目のパラメーターにはプロパティ値を指定します。
 
      例:
 
@@ -427,17 +430,17 @@ T:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlList や T:Microso
 
 **コード化された UI テストの実行の追加オプション:** このトピックで既に説明したように、コード化された UI テストを Visual Studio から直接実行できます。 さらに、Microsoft Test Manager または Team Foundation ビルドから自動化された UI テストを実行できます。 コード化された UI テストを自動化すると、テストは他の自動テストとは異なって実行時にデスクトップと対話する必要があります。
 
--   [テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)
+- [テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)
 
--   [ビルド プロセスでのテストの実行](/vsts/build-release/test/getting-started-with-continuous-testing)
+- [ビルド プロセスでのテストの実行](/vsts/build-release/test/getting-started-with-continuous-testing)
 
--   [方法: テスト エージェントを設定して、デスクトップと対話するテストを実行する](http://msdn.microsoft.com/Library/3a94dd07-6d17-402c-ae8f-7947143755c9)
+- [方法: テスト エージェントを設定して、デスクトップと対話するテストを実行する](http://msdn.microsoft.com/Library/3a94dd07-6d17-402c-ae8f-7947143755c9)
 
 **カスタム コントロールに対するサポートを追加する:** コード化された UI テスト フレームワークは使用可能な UI すべてをサポートしているわけではなく、テスト対象の UI をサポートしない場合もあります。 たとえば、Microsoft Excel の UI について、コード化された UI テストはすぐに作成できません。 しかし、コード化された UI テスト フレームワークの拡張性を活用すると、カスタム コントロールをサポートするようにすることができます。
 
--   [コントロールのコード化された UI テストの有効化](../test/enable-coded-ui-testing-of-your-controls.md)
+- [コントロールのコード化された UI テストの有効化](../test/enable-coded-ui-testing-of-your-controls.md)
 
--   [コード化された UI テストと操作の記録を拡張して Microsoft Excel をサポート](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
+- [コード化された UI テストと操作の記録を拡張して Microsoft Excel をサポート](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
 
 コード化された UI テストは、手動テストを自動化するためによく使用されます。 手動テストの詳細については、「[Microsoft Test Manager での手動テストの実行](/vsts/manual-test/mtm/run-manual-tests-with-microsoft-test-manager)」を参照してください。 自動テストの詳細については、「[Visual Studio のテスト ツール](../test/improve-code-quality.md)」を参照してください。
 
