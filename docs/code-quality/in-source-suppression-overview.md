@@ -1,9 +1,6 @@
 ---
-title: "Visual Studio でコード分析の警告を抑制する |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio でコード分析の警告を抑制する |Microsoft ドキュメント
 ms.date: 01/29/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-code-analysis
 ms.topic: article
 helpviewer_keywords:
@@ -18,13 +15,13 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 5862b164c72c8f07c78db8948face95edfde357c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: ef69462dc9b51fbd92da11bc5adb1bfa61e8a792
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="suppressing-code-analysis-warnings"></a>コード分析警告の抑制
+# <a name="suppress-code-analysis-warnings"></a>コード分析の警告を抑制します。
 
 警告が適用可能でないことを示すために便利です。 これは、チーム メンバーのコードをレビューしたこと、および警告を抑制することを示します。 ソース内抑制 (ISS) 使用して、<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>警告を抑制する属性。 属性は、警告を生成したコード セグメントの近くに配置できます。 追加することができます、<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>入力して、その属性をソース ファイルで警告のショートカット メニューを使用することも、**エラー一覧**に自動的に追加します。
 
@@ -84,17 +81,17 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 レベルでコード分析の警告が抑制されている、<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>属性を適用します。 たとえば、属性は、アセンブリ、モジュール、型、メンバー、またはパラメーターのレベルで適用できます。 これの目的は、違反が発生するコードに抑制情報を密に結合します。
 
-抑制の一般的な形式には、規則のカテゴリと、ルール名の省略可能な人間が判読できる形式を含む、ルールの識別子が含まれています。 例:
+抑制の一般的な形式には、規則のカテゴリと、ルール名の省略可能な人間が判読できる形式を含む、ルールの識別子が含まれています。 例えば:
 
 `[SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]`
 
-ソース内抑制のメタデータを最小限に抑えるための厳密なパフォーマンス上の理由がある場合は、ルール名を省略できます。 規則のカテゴリとそのルール ID 一緒に規則を十分に一意の識別子を構成します。 例:
+ソース内抑制のメタデータを最小限に抑えるための厳密なパフォーマンス上の理由がある場合は、ルール名を省略できます。 規則のカテゴリとそのルール ID 一緒に規則を十分に一意の識別子を構成します。 例えば:
 
 `[SuppressMessage("Microsoft.Design", "CA1039")]`
 
 保守容易性の理由から、ルール名を省略することは推奨されません。
 
-## <a name="suppressing-selective-violations-within-a-method-body"></a>メソッド本体内の選択的な違反を抑制します。
+## <a name="suppress-selective-violations-within-a-method-body"></a>メソッド本体内の選択的な違反を抑制します。
 
 抑制属性は、メソッドに適用できますが、メソッド本体に埋め込むことはできません。 これを追加する場合に特定のルールのすべての違反を抑制することを意味、<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>属性をメソッドにします。
 
@@ -160,7 +157,7 @@ public class Animal
 `[module: SuppressMessage("Microsoft.Design", "CA1055:AbstractTypesDoNotHavePublicConstructors", Scope="member", Target="Microsoft.Tools.FxCop.Type..ctor()")]`
 
 > [!NOTE]
-> `Target`アイテムの完全修飾名を常に含まれています。
+> `Target` アイテムの完全修飾名を常に含まれています。
 
 ## <a name="global-suppression-file"></a>グローバル抑制ファイル
 
@@ -168,4 +165,5 @@ public class Animal
 
 ## <a name="see-also"></a>関連項目
 
-<xref:System.Diagnostics.CodeAnalysis>
+- <xref:System.Diagnostics.CodeAnalysis>
+- [Roslyn アナライザーを使用します。](../code-quality/use-roslyn-analyzers.md)

@@ -1,25 +1,25 @@
 ---
-title: "ルールを使用して実行するように C++ 規則を指定するセット |Microsoft ドキュメント"
-ms.custom: 
+title: ルールを使用して実行するように C++ 規則を指定するセット |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 803af4716a62411d01683d2dcb8155f8f4b80384
-ms.sourcegitcommit: bfa26fd7426af0d065cb2eef3d6827b5d6f7986c
+ms.openlocfilehash: 400b3228c1039ff7b859f769949c0c82c1939954
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="using-rule-sets-to-specify-the-c-rules-to-run"></a>規則セットを使用した実行対象の C++ 規則の指定
+# <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>規則セットを使用して実行するように C++ の規則を指定
 
 Visual Studio で作成および変更できますカスタム*ルール セット*コード分析に関連付けられている特定のプロジェクトのニーズにします。 C++、カスタム規則を作成するのには、C と C++ プロジェクトが Visual Studio IDE で開く必要があります。 規則セット エディターで、標準の規則セットを開くと追加し、または特定の規則を削除してコード分析ルールに違反していることを決定するときに発生するアクションを必要に応じて変更します。
 

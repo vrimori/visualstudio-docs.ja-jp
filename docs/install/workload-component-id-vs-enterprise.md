@@ -1,27 +1,27 @@
 ---
-title: "Visual Studio Enterprise 2017 のワークロードとコンポーネント ID | Microsoft Docs"
-description: "ワークロード ID とコンポーネント ID を使用して、コマンドラインを使用して Visual Studio をインストールするか、VSIX マニフェストで依存関係として指定します。"
-keywords: 
+title: Visual Studio Enterprise 2017 のワークロードとコンポーネント ID | Microsoft Docs
+description: ワークロード ID とコンポーネント ID を使用して、コマンドラインを使用して Visual Studio をインストールするか、VSIX マニフェストで依存関係として指定します。
+keywords: ''
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.date: 03/05/2018
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
 - component ID, Visual Studio
 - install Visual Studio, administrator guide
-ms.service: 
+ms.service: ''
 ms.technology:
 - vs-acquisition
 ms.assetid: be73e3af-d87b-4d14-bd08-2e4bda074fb3
 ms.workload:
 - multiple
-ms.openlocfilehash: e8ac85cd7a19270692e7b997144f6235fd480bef
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: 771a5484d59289dbdd0692385b3f8c3efac818fc
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="visual-studio-enterprise-2017-component-directory"></a>Visual Studio Enterprise 2017 のコンポーネント ディレクトリ
 
@@ -46,7 +46,7 @@ VSIX マニフェストで依存関係を設定するときは、コンポーネ
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.VisualStudio.Component.CoreEditor | Visual Studio のコア エディター | 15.6.27309.0 | 必須
 Microsoft.VisualStudio.Component.StartPageExperiment.Cpp | C++ ユーザー用 Visual Studio スタート ページ | 15.0.27128.1 | Optional
@@ -59,7 +59,7 @@ Microsoft.VisualStudio.Component.StartPageExperiment.Cpp | C++ ユーザー用 V
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.Microsoft.VisualStudio.RazorExtension | Razor 言語サービス | 15.0.26720.2 | 必須
 Component.Microsoft.VisualStudio.Web.AzureFunctions | Microsoft Azure WebJobs ツール | 15.6.27309.0 | 必須
@@ -147,7 +147,7 @@ Microsoft.VisualStudio.Component.Wcf.Tooling | Windows Communication Foundation 
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.Microsoft.VisualStudio.RazorExtension | Razor 言語サービス | 15.0.26720.2 | 推奨
 Component.Redgate.ReadyRoll | Redgate ReadyRoll Core | 1.14.17.5347 | 推奨
@@ -209,7 +209,7 @@ Microsoft.VisualStudio.Component.FSharp.Desktop | F# デスクトップ言語の
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.Anaconda3.x64 | Anaconda3 64 ビット (5.0.0) | 5.0.0 | 推奨
 Microsoft.Component.CookiecutterTools | cookiecutter テンプレートのサポート | 15.0.26621.2 | 推奨
@@ -256,7 +256,7 @@ Microsoft.VisualStudio.Component.Windows81SDK | Windows 8.1 SDK | 15.6.27406.0 |
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.Component.ClickOnce | ClickOnce Publishing | 15.0.27205.0 | 必須
 Microsoft.Component.MSBuild | MSBuild | 15.6.27309.0 | 必須
@@ -319,7 +319,7 @@ Microsoft.VisualStudio.ComponentGroup.ArchitectureTools.Managed | アーキテ�
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.Net.Component.3.5.DeveloperTools | .NET Framework 3.5 開発ツール | 15.6.27406.0 | 必須
 Microsoft.VisualStudio.Component.NuGet | NuGet パッケージ マネージャー | 15.6.27309.0 | 必須
@@ -338,7 +338,7 @@ Component.UnityEngine.x86 | Unity 5.6 32 ビット エディター | 15.6.27406.
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.MDD.Linux | Visual C++ for Linux Development | 15.6.27406.0 | 必須
 Microsoft.VisualStudio.Component.VC.CoreIde | Visual Studio C++ コア機能 | 15.6.27406.0 | 必須
@@ -360,7 +360,7 @@ Component.MDD.Linux.GCC.arm | Embedded 開発と IoT 開発 | 15.6.27309.0 | Opt
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.Component.MSBuild | MSBuild | 15.6.27309.0 | 必須
 Microsoft.VisualStudio.Component.ClassDesigner | クラス デザイナー | 15.0.26208.0 | 必須
@@ -418,7 +418,7 @@ Microsoft.VisualStudio.ComponentGroup.NativeDesktop.WinXP | C++ に関する Win
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.VisualStudio.Component.Static.Analysis.Tools | スタティック分析ツール | 15.0.26208.0 | 必須
 Microsoft.VisualStudio.Component.VC.CoreIde | Visual Studio C++ コア機能 | 15.6.27406.0 | 必須
@@ -470,7 +470,7 @@ Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Win81 | Windows 8.1 SDK と 
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.VisualStudio.Component.VC.CoreIde | Visual Studio C++ コア機能 | 15.6.27406.0 | 必須
 Component.Android.NDK.R15C | Android NDK (R15C) | 15.2 | 推奨
@@ -500,7 +500,7 @@ Component.MDD.IOS | C++ iOS 開発ツール | 15.0.26621.2 | Optional
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.Microsoft.VisualStudio.RazorExtension | Razor 言語サービス | 15.0.26720.2 | 必須
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | 必須
@@ -565,7 +565,7 @@ Microsoft.VisualStudio.ComponentGroup.IISDevelopment | 開発時の IIS サポ�
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.Android.SDK25 | Android SDK セットアップ (API レベル 25) | 15.6.27413.0 | 必須
 Component.Google.Android.Emulator.API25 | Google Android Emulator (API レベル 25) | 15.6.27413.0 | 必須
@@ -635,7 +635,7 @@ Microsoft.VisualStudio.ComponentGroup.UWP.Xamarin | Xamarin 用ユニバーサ�
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.Microsoft.VisualStudio.RazorExtension | Razor 言語サービス | 15.0.26720.2 | 必須
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | 必須
@@ -719,11 +719,11 @@ Microsoft.VisualStudio.Web.Mvc4.ComponentGroup | ASP.NET MVC 4 | 15.6.27406.0 | 
 
 **ID:** Microsoft.VisualStudio.Workload.Node
 
-**説明:** Node.js (非同期イベント ドリブン JavaScript ランタイム) を使用してスケーラブルなネットワーク アプリケーションをビルドします。 
+**説明:** Node.js (非同期イベント ドリブン JavaScript ランタイム) を使用してスケーラブルなネットワーク アプリケーションをビルドします。
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | 必須
 Microsoft.VisualStudio.Component.JavaScript.Diagnostics | JavaScript 診断 | 15.0.26606.0 | 必須
@@ -747,7 +747,7 @@ Microsoft.VisualStudio.Component.VC.Tools.x86.x64 | VC++ 2017 v141 ツールセ�
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.Microsoft.VisualStudio.RazorExtension | Razor 言語サービス | 15.0.26720.2 | 必須
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | 必須
@@ -801,7 +801,7 @@ Microsoft.VisualStudio.Component.IntelliTrace.FrontEnd | [IntelliTrace] | 15.6.2
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.Component.PythonTools | Python 言語サポート | 15.0.26823.1 | 必須
 Component.CPython3.x64 | Python 3 64 ビット (3.6.3) | 3.6.3.2 | 推奨
@@ -887,7 +887,7 @@ Microsoft.VisualStudio.ComponentGroup.Web | ASP.NET と Web の開発ツール�
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | 必須
 Microsoft.Component.ClickOnce | ClickOnce Publishing | 15.0.27205.0 | 必須
@@ -946,7 +946,7 @@ Microsoft.VisualStudio.ComponentGroup.UWP.VC | C++ ユニバーサル Windows �
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.Component.ClickOnce | ClickOnce Publishing | 15.0.27205.0 | 必須
 Microsoft.Component.MSBuild | MSBuild | 15.6.27309.0 | 必須
@@ -990,7 +990,7 @@ Microsoft.VisualStudio.ComponentGroup.ArchitectureTools.Managed | アーキテ�
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | バージョン | 依存関係の種類
+コンポーネント ID | name | Version | 依存関係の種類
 --- | --- | --- | ---
 Component.CordovaToolset.6.3.1 | Cordova 6.3.1 ツールセット | 15.6.27406.0 | 必須
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | 必須
@@ -1021,7 +1021,7 @@ Microsoft.VisualStudio.ComponentGroup.UWP.Cordova | Cordova 用ユニバーサ�
 
 以下のコンポーネントはどのワークロードにも含まれていませんが、個別のコンポーネントとして選択できます。
 
-コンポーネント ID | 名前 | バージョン
+コンポーネント ID | name | Version
 --- | --- | ---
 Component.Android.Emulator | Visual Studio Emulator for Android | 15.6.27413.0
 Component.Android.NDK.R11C | Android NDK (R11C) | 11.3.13

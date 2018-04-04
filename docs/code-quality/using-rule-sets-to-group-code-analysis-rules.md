@@ -1,12 +1,7 @@
 ---
-title: "コード分析規則のグループ設定ルールを使用して |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-code-analysis
-ms.tgt_pltfrm: 
+title: Visual Studio でコード分析ルールの設定 |Microsoft ドキュメント
+ms.date: 04/02/2018
+ms.technology: vs-ide-code-analysis
 ms.topic: article
 f1_keywords:
 - vs.codeanalysis.rulesets.learnmore
@@ -17,24 +12,19 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 265ca57904cb47c52ecaf6ba260e726da9b8a063
-ms.sourcegitcommit: bfa26fd7426af0d065cb2eef3d6827b5d6f7986c
+ms.openlocfilehash: 837ba95fc50ac32855889c4eca9010712906e646
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="using-rule-sets-to-group-code-analysis-rules"></a>規則セットを使用したコード分析規則のグループ化
+# <a name="use-rule-sets-to-group-code-analysis-rules"></a>コード分析規則のグループに規則を使用を設定します。
 
-Visual Studio でコード分析を構成するときに、Microsoft の組み込みの一覧から選択できます*ルール セット*です。 規則セットは、対象の問題および特定の条件を識別するコード分析規則の論理的なグループです。 パブリックに公開されている Api のコードをスキャンするように設計された規則セットを適用するを最小推奨規則のみを含む規則セットを適用することができます。 すべてのルールを含んだ規則セットを適用することもできます。
+Visual Studio でコード分析を構成するときに、組み込みの一覧から選択できます*ルール セット*です。 規則セットは、対象の問題および特定の条件を識別するコード分析規則の論理的なグループです。 パブリックに公開されている Api のコードをスキャンするように設計された規則セットを適用するを最小推奨規則のみを含む規則セットを適用することができます。 すべてのルールを含んだ規則セットを適用することもできます。
 
-ルール セットを追加または削除の規則または規則を変更することでの表示をカスタマイズすることができます、**エラー一覧**ウィンドウに、警告またはエラーとして。 カスタマイズした規則セットで、特定の開発環境の要件を満たすことができます。 規則セットをカスタマイズする場合、処理に役立つ検索ツールおよびフィルター処理ツールが規則セットのページに表示されます。
+ルール セットを追加または削除、ルールまたはルールの重大度を変更することで警告やエラーのいずれかとして表示をカスタマイズすることができます、**エラー一覧**です。 カスタマイズした規則セットで、特定の開発環境の要件を満たすことができます。 規則セットをカスタマイズする場合、処理に役立つ検索ツールおよびフィルター処理ツールが規則セットのページに表示されます。
 
-## <a name="common-tasks"></a>一般的なタスク
+## <a name="see-also"></a>関連項目
 
-|タスク|関連するコンテンツ|
-|----------|---------------------|
-|**実践的な経験を取得します。**を見つけて、単純な .NET Framework アプリケーションでの問題を修正するカスタム ルールを指定するコード分析ツールのセットを使用します。|- [チュートリアル: 構成とカスタム規則セットの使用](../code-quality/walkthrough-configuring-and-using-a-custom-rule-set.md)|
-|**プロジェクトのコード分析を構成する:**プロジェクト、Web サイト、またはソリューションを設定、既存のルールを選択します。|- [方法: マネージ コード プロジェクトのコード分析を構成します。](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)<br />- [規則セットを使用して実行するように C++ の規則を指定するには](../code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run.md)<br />- [方法: ASP.NET Web アプリケーションのコード分析を構成します。](../code-quality/how-to-configure-code-analysis-for-an-aspnet-web-application.md)<br />- [方法: ソリューション内の複数のプロジェクトに対して規則セットを指定します。](../code-quality/how-to-specify-managed-code-rule-sets-for-multiple-projects-in-a-solution.md)|
-|**規則セットをカスタマイズ:**プロジェクトに適用する規則を指定します。|- [カスタム規則セットの作成](../code-quality/creating-custom-code-analysis-rule-sets.md)|
-|**組み込みの規則セットを理解する:**組み込みの規則セットを構成するコード分析規則を表示します。|- [コード分析規則セットの参照](../code-quality/code-analysis-rule-set-reference.md)|
-|**コード分析を Team Foundation Server と統合:** [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]チェックイン ポリシーにより、開発チームをすべてコード チェックインがコード分析の標準の共通セットを満たしているかどうかを確認します。|- [方法: コード プロジェクト規則セットをチーム プロジェクト チェックイン ポリシーと同期](../code-quality/how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy.md)|
+- [チュートリアル: カスタム規則セットを構成します。](../code-quality/walkthrough-configuring-and-using-a-custom-rule-set.md)
+- [コード分析規則セットの参照](../code-quality/managed-minimun-rules-rule-set-for-managed-code.md)
