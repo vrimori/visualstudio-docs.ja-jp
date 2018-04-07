@@ -50,6 +50,8 @@
 
 # [ワークロード](workloads.md)
 ## [ASP.NET Core](asp-net-core.md)
+## [Azure](azure-workload.md)
+### [接続済みサービス](connected-services.md)
 ## [Unity によるゲーム開発](unity-tools.md)
 ### [セットアップ](setup-vsmac-tools-unity.md)
 ### [Unity ツールの使用](using-vsmac-tools-unity.md)
