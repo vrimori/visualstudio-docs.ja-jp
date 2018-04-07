@@ -2,7 +2,7 @@
 title: Visual Studio でコード分析ルールの設定 |Microsoft ドキュメント
 ms.date: 04/02/2018
 ms.technology: vs-ide-code-analysis
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.learnmore
 helpviewer_keywords:
@@ -12,19 +12,54 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 837ba95fc50ac32855889c4eca9010712906e646
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: 3d6ac4a771efc34fcee8cdf46d21bf7a265da17b
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="use-rule-sets-to-group-code-analysis-rules"></a>コード分析規則のグループに規則を使用を設定します。
 
-Visual Studio でコード分析を構成するときに、組み込みの一覧から選択できます*ルール セット*です。 規則セットは、対象の問題および特定の条件を識別するコード分析規則の論理的なグループです。 パブリックに公開されている Api のコードをスキャンするように設計された規則セットを適用するを最小推奨規則のみを含む規則セットを適用することができます。 すべてのルールを含んだ規則セットを適用することもできます。
+Visual Studio でコード分析を構成するときに、組み込みの一覧から選択できます*ルール セット*です。 規則セットは、プロジェクトに適用され、コードのグループを対象となる問題とそのプロジェクトで特定の条件を識別する分析ルールです。 パブリックに公開されている Api のコードをスキャンするように設計された規則セットを適用するなど、だけの最小推奨規則です。 すべてのルールを含んだ規則セットを適用することもできます。
 
-ルール セットを追加または削除、ルールまたはルールの重大度を変更することで警告やエラーのいずれかとして表示をカスタマイズすることができます、**エラー一覧**です。 カスタマイズした規則セットで、特定の開発環境の要件を満たすことができます。 規則セットをカスタマイズする場合、処理に役立つ検索ツールおよびフィルター処理ツールが規則セットのページに表示されます。
+ルール セットを追加または削除、ルールまたはルールの重大度を変更することで警告やエラーのいずれかとして表示をカスタマイズすることができます、**エラー一覧**です。 カスタマイズした規則セットで、特定の開発環境の要件を満たすことができます。 規則セットをカスタマイズするときに、規則セット エディターは、検索とフィルター処理に役立つツールを提供します。
+
+## <a name="rule-set-format"></a>ルール セットの形式
+
+XML 形式で指定したルール セット、 *.ruleset*ファイル。 ID で構成された規則と*アクション*、アナライザー ID および名前空間、ファイル内でグループ化します。
+
+XML の内容、 *.ruleset*ファイルは次のようになります。
+
+```xml
+<RuleSet Name="Rules for Hello World project" Description="These rules focus on critical issues for the Hello World app." ToolsVersion="10.0">
+  <Localization ResourceAssembly="Microsoft.VisualStudio.CodeAnalysis.RuleSets.Strings.dll" ResourceBaseName="Microsoft.VisualStudio.CodeAnalysis.RuleSets.Strings.Localized">
+    <Name Resource="HelloWorldRules_Name" />
+    <Description Resource="HelloWorldRules_Description" />
+  </Localization>
+  <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
+    <Rule Id="CA1001" Action="Warning" />
+    <Rule Id="CA1009" Action="Warning" />
+    <Rule Id="CA1016" Action="Warning" />
+    <Rule Id="CA1033" Action="Warning" />
+  </Rules>
+  <Rules AnalyzerId="Microsoft.CodeQuality.Analyzers" RuleNamespace="Microsoft.CodeQuality.Analyzers">
+    <Rule Id="CA1802" Action="Error" />
+    <Rule Id="CA1814" Action="Info" />
+    <Rule Id="CA1823" Action="None" />
+    <Rule Id="CA2217" Action="Warning" />
+  </Rules>
+</RuleSet>
+```
+
+> [!TIP]
+> 容易になります[ルール セットの編集](../code-quality/working-in-the-code-analysis-rule-set-editor.md)グラフィック**ルール セット エディター**より手動でします。
+
+規則セットによって、プロジェクトを指定、 `CodeAnalysisRuleSet` Visual Studio プロジェクト ファイルのプロパティです。 例えば:
+
+```xml
+<CodeAnalysisRuleSet>HelloWorld.ruleset</CodeAnalysisRuleSet>
+```
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: カスタム規則セットを構成します。](../code-quality/walkthrough-configuring-and-using-a-custom-rule-set.md)
-- [コード分析規則セットの参照](../code-quality/managed-minimun-rules-rule-set-for-managed-code.md)
+- [コード分析規則セットの参照](../code-quality/rule-set-reference.md)

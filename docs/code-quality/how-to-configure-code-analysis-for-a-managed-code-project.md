@@ -1,10 +1,11 @@
 ---
-title: '方法: マネージ コード プロジェクトのコード分析を構成する |Microsoft ドキュメント'
-ms.date: 11/04/2016
+title: Visual Studio でコード分析を構成する |Microsoft ドキュメント
+ms.date: 04/04/2018
 ms.technology: vs-ide-code-analysis
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.propertypages.csvb
+- vs.codeanalysis.propertypages.solution
 helpviewer_keywords:
 - code analysis, selecting rule sets
 - code analysis, rule sets
@@ -13,11 +14,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - dotnet
-ms.openlocfilehash: 46d41b09f0f6639195613c8a4d9a08f952c79525
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: daac3af3a6d5d5fba4d6e8dbb652821583769762
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="how-to-configure-code-analysis-for-a-managed-code-project"></a>方法: マネージ コード プロジェクトのコード分析を構成する
 
@@ -49,9 +50,28 @@ Visual Studio では、コード分析の一覧から選択できる*ルール �
 
     - 選択 **\<[参照...] >**既存のカスタム規則セットを見つけるには一覧にします。
 
-    - カスタム規則セットを定義します。 詳細については、次を参照してください。[カスタム規則セットの作成](../code-quality/creating-custom-code-analysis-rule-sets.md)です。
+    - 定義、[カスタム規則セット](../code-quality/how-to-create-a-custom-rule-set.md)です。
+
+## <a name="specify-rule-sets-for-multiple-projects-in-a-solution"></a>ソリューション内の複数のプロジェクトに対して規則セットを指定します。
+
+既定では、ソリューションのすべてのマネージ プロジェクトが割り当てられている、 *Microsoft 最小推奨規則*コード分析規則セットです。 ソリューションのプロジェクトに割り当てられている規則セットを変更することができます、**プロパティ**ソリューションのダイアログ ボックス。
+
+1. Visual Studio でソリューションを開きます。
+
+2. **分析**メニューの **ソリューションのコード分析を構成する**です。
+
+3. 必要に応じて、展開**共通プロパティ**、し、**コード分析設定**です。
+
+4. 1 つまたは複数のプロジェクトに対して規則セットを指定できます。
+
+    - 個々 のプロジェクトに対して規則セットを指定するには、プロジェクト名を選択します。
+
+    - 押しながら複数のプロジェクトに対して規則セットを指定する**Ctrl**プロジェクト名を選択します。
+
+    - ソリューション内のすべてのプロジェクトを指定するにを押しながら**shift キーを押し**プロジェクトの一覧でをクリックします。
+
+5. 選択、**ルール セットの**プロジェクトのフィールドと ルールのセットの名前を適用することです。
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: カスタム規則セットの構成と使用](../code-quality/walkthrough-configuring-and-using-a-custom-rule-set.md)
 - [方法: ASP.NET Web アプリケーション用にコード分析を構成する](../code-quality/how-to-configure-code-analysis-for-an-aspnet-web-application.md)

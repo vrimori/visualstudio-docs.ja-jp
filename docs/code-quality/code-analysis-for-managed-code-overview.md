@@ -13,11 +13,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8209e17985ef7f9924fc677b91b5cfe539977cb9
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: 6d654cb3a7f0d0e952b447337603718c20eaee3e
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="overview-of-code-analysis-for-managed-code"></a>マネージ コードに対するコード分析の概要
 
@@ -33,11 +33,11 @@ Visual Studio 2017 が 2 つの方法でマネージ コードを分析して: l
 
 分析を実行するコード プロジェクトをビルドするたびに、**ビルドに対するコード分析を有効にする**プロジェクトのプロパティ ページ。 詳細については、次を参照してください。[する方法: 有効化と自動コード分析の無効にする](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)です。
 
-プロジェクトを手動でコード分析を実行するメニュー バーから選択**分析** > **コード分析を実行** > **でコード分析を実行<project>** . 詳細については、次を参照してください。[する方法: 有効化と自動コード分析の無効にする](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)です。
+プロジェクトを手動でコード分析を実行するメニュー バーから選択**分析** > **コード分析を実行** > **でコード分析を実行\<プロジェクト>**です。
 
 ## <a name="rule-sets"></a>規則セット
 
-マネージ コードのコード分析規則がまとめられて*ルール セット*です。 Microsoft の標準の規則セットのいずれかを使用するか、特定のニーズを満たす独自の規則セットを作成することができます。 詳細については、次を参照してください。[ルール セットのコード分析規則のグループを使用して](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)です。
+マネージ コードのコード分析規則がまとめられて[ルール セット](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)です。 Microsoft の標準規則セットのいずれかを使用することもできます[カスタム規則セットを作成する](../code-quality/how-to-create-a-custom-rule-set.md)特定のニーズを満たすためにします。
 
 ## <a name="suppress-warnings"></a>[警告の表示なし]
 
@@ -56,7 +56,7 @@ Public class MyClass
 詳細については、次を参照してください。[警告を抑制する](../code-quality/in-source-suppression-overview.md)です。
 
 > [!NOTE]
-> Visual Studio 2017 にプロジェクトを移行する場合に、コード分析の警告の手に負えないものの数が直面突然可能性があります。 警告を修正し、コード分析を一時的にオフにする準備ができていない場合は、プロジェクトのプロパティ ページを開きます (**プロジェクト** > ***プロジェクト*プロパティ...**) に移動し、**コード分析**タブです。選択を解除**ビルドに対するコード分析を有効にする**、プロジェクトをリビルドします。 または、設定をコードに対して実行する別、小規模なルールを選択することができます。 警告を解決する準備ができたらにコード分析を有効にしてください。
+> Visual Studio 2017 にプロジェクトを移行する場合に、コード分析の警告の数が多いが直面突然可能性があります。 場合は、警告を修正し、すぐに生産性を向上する場合ができていない、*基準*プロジェクトの分析の状態。 **分析**メニューの **コード分析を実行し、アクティブな懸案事項の抑制**です。
 
 ## <a name="run-code-analysis-as-part-of-check-in-policy"></a>チェックイン ポリシーの一部としてのコード分析の実行
 
