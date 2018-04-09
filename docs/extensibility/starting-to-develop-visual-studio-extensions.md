@@ -1,21 +1,23 @@
 ---
-title: "Visual Studio 拡張機能の開発を始めました |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio 拡張機能の開発を始めました |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 09/18/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - getting started, Visual Studio integration
 - Visual Studio, integration
 ms.assetid: 8fe5e2ab-a424-4173-9d39-dd082c4d58d0
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
+ms.workload:
+- vssdk
 ms.openlocfilehash: 7bc03568465efa022981ade059b0de68019a5978
 ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
@@ -23,10 +25,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/05/2018
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Visual Studio 拡張機能の開発を開始
-初めて作成する前に Visual Studio 拡張機能をいくつかの質問可能性があります。 ここで、最も一般的な原因の一部を示しています。 探している情報が表示されない場合は、フィードバック ボタンを使用して (**このページは役に立ちましたか?**画面の下部にある) にする情報を確認してください。  
+Visual Studio 拡張機能を初めて作成する場合に、いくつかの疑問をもたれるかもしれません。 ここでは、最も一般的なものの一部を一覧にしています。 探している情報が見つからない場合は、フィードバック ボタンを使用して (画面の下部にある **このページは役に立ちましたか?** ) お探しの情報を問い合わせてください。  
   
-## <a name="what-software-do-i-need-to-develop-visual-studio-extensions"></a>Visual Studio 拡張機能を開発する必要があるソフトウェアをしますか。  
- Visual Studio 拡張機能を開発するために Visual Studio だけでなく、Visual Studio SDK をインストールする必要があります。 通常のセットアップの一部として、Visual Studio SDK をインストールすることができますか、後でインストールできます。 Visual Studio SDK をインストールする方法の詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
+## <a name="what-software-do-i-need-to-develop-visual-studio-extensions"></a>Visual Studio 拡張機能を開発するために必要なソフトウェアはなんですか。  
+ Visual Studio 拡張機能を開発するために Visual Studio だけでなく、Visual Studio SDK をインストールする必要があります。 通常のセットアップの一部として、Visual Studio SDK をインストールすることができますし、または後からインストールすることもできます。 Visual Studio SDK のインストールに関する詳細は、次の [Visual Studio SDK](../extensibility/visual-studio-sdk.md) を参照してください。  
   
 ## <a name="what-kinds-of-things-can-i-do-with-visual-studio-extensions"></a>Visual Studio 拡張機能で実行できるどのようなさまざまな原因ですか。  
  Visual Studio 拡張機能のさまざまな仮定するとする際に無限の制限。 もちろん、ほとんどの拡張機能をコードの記述を行うには何かが、大文字である必要はありません。 ビルドできる拡張機能の種類のいくつかの例を次に示します。  
