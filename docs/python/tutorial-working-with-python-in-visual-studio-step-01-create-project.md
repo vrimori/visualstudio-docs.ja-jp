@@ -1,7 +1,7 @@
 ---
-title: Visual Studio での Python の使用、手順 1、プロジェクトの作成 | Microsoft Docs
+title: Python の使用、手順 1、プロジェクトの作成 | Microsoft Docs
 description: Visual Studio 内での Python の使用に関する中心的なチュートリアルの手順 1 では、チュートリアル全体の概要を示し、前提条件について説明し、新規 Python プロジェクトの作成プロセスを段階的にたどります。
-ms.custom: ''
+ms.custom: mvc
 ms.date: 01/16/2018
 ms.reviewer: ''
 ms.suite: ''
@@ -17,8 +17,8 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 22588c1e8221375f05b9fb62870662d9aa3d2f5e
-ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
+ms.openlocfilehash: c97af84d02b1dcf6fb60f8dad06bf3bd6975a4e3
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/28/2018

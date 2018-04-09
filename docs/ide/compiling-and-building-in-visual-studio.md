@@ -1,26 +1,28 @@
 ---
-title: "Visual Studio でのコンパイルとビルド | Microsoft Docs"
-ms.custom: 
+title: Visual Studio でのコンパイルとビルド | Microsoft Docs
+ms.custom: ''
 ms.date: 07/14/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - builds [Visual Studio], about building in Visual Studio
 - custom build steps, types of builds
 ms.assetid: c7958821-285f-4e28-9e7a-b5d8b40336a1
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 29101e8e82fa9babf553be17414f1330cd6f7e18
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: d8ae644ee96bdad6520661414d101eede86cf180
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="compiling-and-building-in-visual-studio"></a>Visual Studio でのコンパイルとビルド
 
@@ -36,7 +38,7 @@ Visual Studio 製品ファミリの中では、アプリケーションのビル
 | --- |--- | --- |  
 | IDE |- ビルドを即座に作成してデバッガーでテストできます。<br />- マルチプロセッサ ビルドを実行します (C++ や C# のプロジェクトの場合)。<br />- ビルド システムのさまざまな面をカスタマイズできます。 |
 | MSBuild コマンドライン| - Visual Studio をインストールせずにプロジェクトをビルドできます。<br />- すべてのプロジェクト タイプでマルチ プロセッサ ビルドを実行できます。<br />- ビルド システムのほとんどの部分をカスタマイズできます。|
-| Team Foundation ビルド | - ビルド プロセスを継続的インテグレーション/継続的配信パイプラインの一部として自動化できます。<br />- 自動テストをすべてのビルドに適用します。<br />- クラウド ベースのリソースをほぼ無制限にビルド プロセスに使用できます。<br />- ビルド ワークフローの変更やビルド アクティビティの作成が可能です。実行するタスクを大幅にカスタマイズできます。|  
+| Team Foundation ビルド | - ビルド プロセスを継続的インテグレーション/継続的デリバリー パイプラインの一部として自動化できます。<br />- 自動テストをすべてのビルドに適用します。<br />- クラウド ベースのリソースをほぼ無制限にビルド プロセスに使用できます。<br />- ビルド ワークフローの変更やビルド アクティビティの作成が可能です。実行するタスクを大幅にカスタマイズできます。|  
 
 このセクションでは、IDE ベースのビルド プロセスを詳しく解説します。 他の方法の詳細については、「[MSBuild](../msbuild/msbuild.md)」と「[Continuous integration and deployment](https://www.visualstudio.com/docs/build/overview)」 (継続的なインテグレーションと配置) を参照してください。
 
@@ -56,6 +58,6 @@ IDE の中でのビルド方法の入門資料については、「[チュート
 - [ビルド オプションの設定](reference/options-dialog-box-projects-and-solutions-build-and-run.md)
 - [複数プロジェクトの並行ビルド](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
 - [Web サイト プロジェクトのビルド (コンパイル)](http://msdn.microsoft.com/Library/a9cbb88c-8fff-4c67-848b-98fbfd823193)   

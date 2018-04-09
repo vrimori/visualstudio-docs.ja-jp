@@ -1,12 +1,13 @@
 ---
-title: "変数 (JavaScript) | Microsoft Docs"
-ms.custom: 
+title: 変数 (JavaScript) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - JavaScript
@@ -16,15 +17,15 @@ helpviewer_keywords:
 - coercion
 - case sensitivity, JavaScript variable name
 ms.assetid: 12a450e5-4818-4a09-9878-cd7c6cd2a248
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f30946899ad35286dfb1e786cf903d58f5c98cb6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: c1d09f634bd4901e4015766bf55f272926a0a31c
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="variables-javascript"></a>変数 (JavaScript)
 [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] では、変数に "hello" や 5 などの値が含まれています。 変数を使用して、`NumberOfDaysLeft = EndDate - TodaysDate` など、それが表すデータを参照します。  
@@ -48,7 +49,7 @@ var count = 0, amount = 100;
 ## <a name="naming-variables"></a>変数の名前付け  
  [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] は大文字と小文字が区別される言語です。 つまり、**myCounter** などの変数名は、**MYCounter** という変数名とは異なります。 変数名は任意の長さにすることができます。 有効な変数名を作成するための規則は次のとおりです。  
   
--   先頭文字は、ASCII 文字 (大文字でも小文字でもかまいません)、またはアンダースコア (_) 文字にする必要があります。 先頭文字として数字を使用できないことに注意してください。  
+-   最初の文字は、ASCII 文字 (大文字または小文字)、Unicode の変数の名前付け規則に準拠している文字、またはアンダースコア (_) 文字である必要があります。 先頭文字として数字を使用できないことに注意してください。  
   
 -   2 文字目以降は、文字、数字、またはアンダースコア (_) にする必要があります。  
   

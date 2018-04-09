@@ -1,26 +1,26 @@
 ---
-title: "Python インタープリターの選択とインストール | Microsoft Docs"
-description: "Visual Studio でサポートされている Python インタープリターの詳細な一覧です。インストーラーを入手できる場所についても簡単に説明します。"
-ms.custom: 
+title: Python インタープリターの選択とインストール | Microsoft Docs
+description: Visual Studio でサポートされている Python インタープリターの詳細な一覧です。インストーラーを入手できる場所についても簡単に説明します。
+ms.custom: ''
 ms.date: 02/20/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 ms.devlang: python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1bdec69c45cbd6ebb7943ce38853fd2207000a0f
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 3b8d1bf4f0ac6c66222f86e73b7c18cfdceb3354
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="installing-python-interpreters"></a>Python インタープリターのインストール
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/23/2018
 
 以下の表のインタープリターは、Visual Studio インストーラーを使用せずに手動でインストールすることもできます。 たとえば、Visual Studio をインストールする前に Anaconda 3 がインストールされている場合、Visual Studio インストーラーでそれを再度インストールする必要はありません。
 
-Visual Studio 2015 以前では、いずれかのインタープリターを手動でインストールする必要があります。
+**Visual Studio 2015 以前**では、いずれかのインタープリターを手動でインストールする必要があります。
 
 Visual Studio (すべてのバージョン) でレジストリ (「[PEP 514 - Python registration in the Windows registry](https://www.python.org/dev/peps/pep-0514/)」(PEP 514 - Windows レジストリでの Python の登録) に従って) が確認され、インストールされている各 Python インタープリターとその環境が自動的に検出されます。
 

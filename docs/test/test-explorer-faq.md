@@ -15,11 +15,11 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: ghogen
-ms.openlocfilehash: 1ca63ce299cb95546100e7f7ce7f98eb1c1616c2
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 9e64528b6b0669a0403188b540a90e9b921bfb34
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio テスト エクスプローラーに関する FAQ
 
@@ -70,6 +70,10 @@ ms.lasthandoff: 03/19/2018
   プロジェクト、名前空間、およびクラス グループの横にあるアイコンは、そのグループ内のテストの状態を反映します。 次の表を参照してください。
 
   ![テスト エクスプローラーの階層のアイコン](media/testex-hierarchyicons.png)
+  
+### <a name="10-there-is-no-longer-a-file-path-filter-in-the-test-explorer-search-box"></a>10.テスト エクスプローラーの検索ボックスの "ファイル パス" フィルターはもう存在しません。
+
+**テスト エクスプローラー**の検索ボックスのファイル パス フィルターは、Visual Studio 2017 バージョン 15.7 プレビュー 3 で削除されました。 この機能は使用頻度が低く、この機能を除外することで、テスト エクスプローラーはテスト メソッドを高速で取得できます。 この変更によって開発フローが中断される場合は、[開発者コミュニティ](https://developercommunity.visualstudio.com/)でフィードバックを送信してその旨をお知らせください。
 
 ## <a name="features"></a>フィーチャー
 
