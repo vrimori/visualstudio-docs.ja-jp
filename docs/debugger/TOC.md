@@ -7,7 +7,7 @@
 ## [ASP.NET アプリをデバッグする](quickstart-debug-aspnet.md)
 # チュートリアル
 ## [Visual Studio を使用したデバッグについて理解する](getting-started-with-the-debugger.md)
-## [デバッガーで Python コードを実行する...](../python/vs-tutorial-01-04.md)
+## [デバッガーで Python コードを実行する...](../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
 ## [ライブ Azure アプリをデバッグする](debug-live-azure-applications.md)
 ## [IntelliTrace ステップ バックを使用してスナップショットを表示する](how-to-use-intellitrace-step-back.md)
 # 使い方ガイド

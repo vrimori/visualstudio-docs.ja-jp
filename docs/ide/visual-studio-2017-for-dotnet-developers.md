@@ -11,11 +11,11 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2dac5f48f69ce00ae914929638f08cf35f5a96ac
-ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
+ms.openlocfilehash: cc37a3185224a66fbe0533c615737de7e0124dcf
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="visual-studio-2017-productivity-guide-for-net-developers"></a>.NET 開発者のための Visual Studio 2017 生産性ガイド
 
@@ -31,12 +31,7 @@ ms.lasthandoff: 03/28/2018
 - [Visual Studio のホット キー (ReSharper/IntelliJ)](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.HotKeys)
 - [VSVim](https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim)
 
-![Visual Studio 拡張機能ギャラリー](../ide/media/VSIDE_Productivity_Extensibility.png)
-
 よく使用される Visual Studio のショートカットを以下に示します。 
-
-> [!NOTE]
-> 一部の拡張機能では既定の Visual Studio キー バインドが解除されるため、以下のコマンドを使用するにはキー バインドを復元する必要があります。 キー バインドを Visual Studio の既定値に復元するには、**[ツール] > [設定のインポートとエクスポート] > [すべての設定をリセット]** または **[ツール] > [オプション] > [キーボード] > [リセット]** を使います。
 
 | ショートカット (すべてのプロファイル) | コマンド | 説明 |
 |-|-|-|
@@ -52,6 +47,9 @@ ms.lasthandoff: 03/28/2018
 | **Ctrl + F5** | デバッグなしで開始 | デバッグなしでアプリケーションをローカルで実行します |
 | **Ctrl + K、D** (既定のプロファイル) または **Ctrl + E、D** (C# Profile) | ドキュメントのフォーマット | 改行文字、間隔、およびインデント設定に基づき、ファイルの書式設定の違反をクリーンアップします |
 | **Ctrl + \\、E** (既定のプロファイル) または **Ctrl + W、E** (C# Profile) | エラー一覧の表示 | ドキュメント、プロジェクト、またはソリューション内のすべてのエラーを表示します |
+
+> [!NOTE]
+> 一部の拡張機能によって、既定の Visual Studio キー バインドがバインド解除されます。 次のコマンドを使用するには、**[ツール]、[設定のインポートとエクスポート]、[すべての設定をリセット]** または **[ツール]、[オプション]、[キーボード]、[リセット]** の順に進み、キー バインドを Visual Studio の既定値に復元します。
 
 ## <a name="i-need-a-way-to-quickly-navigate-to-files-or-types"></a>ファイルまたは型にすばやく移動する方法が必要です。
 Visual Studio 2017 には、"_すべてに移動_" という機能があります (**Ctrl + T**)。 [すべてに移動] を使うと、ファイル、型、メンバー、またはシンボルの宣言にすばやく移動できます。

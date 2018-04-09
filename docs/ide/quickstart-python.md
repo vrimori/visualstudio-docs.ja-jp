@@ -1,8 +1,8 @@
 ---
 title: 'クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成する | Microsoft Docs'
-description: Falcon フレームワークを使用して単純な Web アプリをビルドする、Visual Studio での Python の使用方法についての概要です。
-ms.custom: ''
-ms.date: 03/14/2018
+description: このクイック スタートでは、Visual Studio を使用し、Flask フレームワークで簡単な Python Web アプリを作成します。
+ms.custom: mvc
+ms.date: 03/21/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -13,29 +13,31 @@ dev_langs:
 - python
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2b1880d95fcb4aae04d98171c8ee7df7373aaceb
-ms.sourcegitcommit: 236c250bb97abdab99d00c6525d106fc0035d7d0
+ms.openlocfilehash: 71501e113bc744f430c6935dbf20bfd2ec533758
+ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-python-web-app"></a>クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成する
 
-ここでは 5 分から 10 分で Visual Studio 統合開発環境 (IDE) の概要を示し、簡単な Python Web アプリケーションを作成します。 Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ページに移動し、無料試用版をインストールしてください。 インストーラーでは、必ず **[Python 開発]** ワークロードを選択します。
+Python IDE としての Visual Studio を紹介する、この 5 ～ 10 分のクイック スタートでは、Flask フレームワークに基づいて Python Web アプリを作成します。 別個の部分からなる手順を通してプロジェクトを作成することが、Visual Studio の基本機能の学習に役立ちます。
+
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)に移動し、無料試用版をインストールしてください。 インストーラーでは、必ず **[Python 開発]** ワークロードを選択します。
 
 ## <a name="create-the-project"></a>プロジェクトの作成
+
+以降の手順では、アプリケーションのコンテナーとして機能する空の*プロジェクト*を作成します。
 
 1. Visual Studio 2017 を開きます。
 
 1. 上部のメニュー バーから、**[ファイル] > [新規作成] > [プロジェクト]** の順に選びます。
 
-1. **[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウで、**[インストール済み]** を展開し、**[Python]** を選びます。
-
-1. 中央のウィンドウで **[Web プロジェクト]** を選び、"HelloPython" のようなプロジェクト名を指定して、**[OK]** を選びます。
+1. **[新しいプロジェクト]** ダイアログ ボックスの右上にある検索ボックスに "Python Web Project" と入力し、真ん中の一覧にある **[Web プロジェクト]** を選択し、"HelloPython" のような名前をプロジェクトに付け、**[OK]** を選択します。
 
     ![Python Web プロジェクトが選択されている [新しいプロジェクト] ダイアログ](media/quickstart-python-00-web-project.png)
 
@@ -49,29 +51,38 @@ ms.lasthandoff: 03/17/2018
 
 **質問: Visual Studio で Python アプリケーション用のプロジェクトを作成する利点は何ですか。**
 
-回答: 通常、Python アプリケーションはフォルダーとファイルのみを使って定義されますが、アプリケーションが大きくなり、おそらく自動生成されたファイル、Web アプリケーション用 JavaScript などが含まれるようになると、この構造は複雑になる可能性があります。 Visual Studio のプロジェクトは、このような複雑さを管理するのに役立ちます。 プロジェクト (`.pyproj` ファイル) には、プロジェクトに関連付けられたすべてのソース ファイルとコンテンツ ファイルの識別、各ファイルのビルド情報の格納、ソース管理システムと統合するための情報の保持、論理コンポーネントへのアプリケーションの整理の補助などの機能があります。
+**回答**: 通常、Python アプリケーションはフォルダーとファイルのみを使って定義されますが、アプリケーションが大きくなり、おそらく自動生成されたファイル、Web アプリケーション用 JavaScript などが含まれるようになると、この単純な構造が面倒になる可能性があります。 Visual Studio のプロジェクトは、このような複雑さを管理するのに役立ちます。 プロジェクト (`.pyproj` ファイル) には、プロジェクトに関連付けられたすべてのソース ファイルとコンテンツ ファイルの識別、各ファイルのビルド情報の格納、ソース管理システムと統合するための情報の保持、論理コンポーネントへのアプリケーションの整理の補助などの機能があります。
 
-## <a name="install-the-falcon-library"></a>Falcon ライブラリをインストールする
+**質問: ソリューション エクスプローラーに表示される "ソリューション" とは何ですか。**
 
-Python の Web アプリは、ほぼ常に、Web 要求のルーティングや応答の整形といった低レベルの詳細を処理するために、多くの使用可能な Python ライブラリのいずれかを使います。 Visual Studio ではこの目的のために、Bottle、Flask、および Django のフレームワークを使用する Web アプリ用の各種テンプレートを提供します。
+**回答**: Visual Studio の*ソリューション*とは、1 つまたは複数の関連プロジェクトを 1 つのグループとして管理できるコンテナーであり、プロジェクトに固有ではない構成設定が格納されます。 ソリューションの中のプロジェクトは互いに参照できます。プロジェクトを 1 つ (Python アプリ) 実行すると、2 つ目のプロジェクト (Python アプリで使用される C++ 拡張など) が自動的に作成されたりします。
 
-ただし、このクイック スタートでは、Falcon ライブラリを使って、パッケージをインストールして Web アプリを最初から作成するプロセスを見ていきます  (Visual Studio には現時点で Falcon 固有のテンプレートが含まれていません)。わかりやすくするため、以下の手順では既定のグローバル環境に Falcon をインストールします。
+## <a name="install-the-flask-library"></a>Flask ライブラリをインストールする
+
+Python の Web アプリは、ほぼ常に、Web 要求のルーティングや応答の整形といった低レベルの詳細を処理するために、多くの使用可能な Python ライブラリのいずれかを使います。 Visual Studio ではこの目的のために、Web アプリ用にさまざまな*テンプレート*を用意しています。このクイック スタートではそのうちの 1 つを後で使用します。
+
+ここでは、次の手順で、Visual Studio によってこのプロジェクトに使用される既定の "グローバル環境" に Flask ライブラリをインストールします。
 
 1. プロジェクトの **[Python 環境]** ノードを展開して、プロジェクトの既定の環境を表示します。
 
     ![既定の環境が表示されているソリューション エクスプローラー](media/quickstart-python-02-default-environment.png)
 
-1. 環境を右クリックして、**[Python パッケージのインストール]** を選びます。このコマンドを選ぶと、**[Python 環境]** ウィンドウの **[パッケージ]** タブが開きます。検索フィールドに「falcon」と入力し、**["pip install falcon" from PyPI]\(PyPI から "falcon の pip インストール"\)** を選びます。 管理者特権に関するすべてのプロンプトに同意し、Visual Studio の **[出力]** ウィンドウで進行状況を確認します。 (グローバル環境のパッケージ フォルダーが `c:\program files` のように保護された領域内にある場合は、昇格のプロンプトが表示されます)。
+1. 環境を右クリックして、**[Python パッケージのインストール]** を選びます。このコマンドを選ぶと、**[Python 環境]** ウィンドウの **[パッケージ]** タブが開きます。
 
-    ![Falcon ライブラリのインストール](media/quickstart-python-03-install-package.png)
+1. 検索フィールドに "flask" と入力し、**[pip install flask from PyPI]\(PyPI から flask の pip インストール\)** を選択します。 管理者特権に関するすべてのプロンプトに同意し、Visual Studio の **[出力]** ウィンドウで進行状況を確認します。 (グローバル環境のパッケージ フォルダーが `c:\program files` のように保護された領域内にある場合は、昇格のプロンプトが表示されます)。
+
+    ![Flask ライブラリをインストールする](media/quickstart-python-03-install-package.png)
 
 1. インストールが済むと、**ソリューション エクスプローラー**の環境にライブラリが表示されます。これは、Python コードでライブラリを使用できることを意味します。
 
-    ![インストールされた Falcon ライブラリ](media/quickstart-python-04-package-installed.png)
+    ![Flask ライブラリがインストールされました](media/quickstart-python-04-package-installed.png)
 
-Falcon の詳細情報は、[falconframework.org](https://falconframework.org/) をご覧ください。
+> [!Note]
+> 開発者は通常、グローバル環境にライブラリをインストールするのではなく、特定のプロジェクトのライブラリをインストールする "仮想環境" を作成します。 Visual Studio のテンプレートによって通常、このオプションが与えられます。それについては、「[クイック スタート - Visual Studio のテンプレートから Python プロジェクトを作成する](../python/quickstart-02-python-in-visual-studio-project-from-template.md)」に説明があります。
 
-開発者は通常、グローバル環境にライブラリをインストールするのではなく、特定のプロジェクトのライブラリをインストールする "仮想環境" を作成することに注意してください。 Visual Studio の多くの Python プロジェクト テンプレートには、テンプレートが依存するライブラリの一覧が列記されている `requirements.txt` ファイルが含まれます。 これらのテンプレートの 1 つからプロジェクトを作成すると、ライブラリがインストールされる仮想環境の作成がトリガーされます。 詳細については、[仮想環境の使用](../python/selecting-a-python-environment-for-a-project.md#using-virtual-environments)に関するページをご覧ください。
+**質問: 利用できる他の Python パッケージの詳細はどこで確認できますか。**
+
+**回答**: [Python Package Index](https://pypi.python.org/pypi) (pypi.python.org) を参照してください。
 
 ## <a name="add-a-code-file"></a>コード ファイルの追加
 
@@ -79,74 +90,79 @@ Falcon の詳細情報は、[falconframework.org](https://falconframework.org/) 
 
 1. **ソリューション エクスプローラー**でプロジェクトを右クリックして、**[追加] > [新しい項目]** を選びます。
 
-1. 表示されるダイアログ ボックスで、**[空の Python ファイル]** を選び、「`hello.py`」という名前を付けて、**[追加]** を選びます。 エディター ウィンドウでファイルが自動的に開きます  (項目テンプレートは多くの場合に役立つ定型コードを提供するので、一般に、**[追加] > [新しい項目]** コマンドは異なる種類のファイルをプロジェクトに追加する優れた方法です)。
+1. 表示されるダイアログ ボックスで、**[空の Python ファイル]** を選び、「`app.py`」という名前を付けて、**[追加]** を選びます。 エディター ウィンドウでファイルが自動的に開きます 
 
-1. 次のコードをコピーして、`hello.py` に貼り付けます。
+1. 次のコードをコピーして、`app.py` に貼り付けます。
 
     ```python
-    import falcon
+    from flask import Flask
 
-    # In Falcon, define a class for each resource and define on_* methods
-    # where * is any standard HTTP methods in lowercase, such as on_get.
+    # Create an instance of the Flask class that is the WSGI application.
+    # The first argument is the name of the application module or package,
+    # typically __name__ when using a single module.
+    app = Flask(__name__)
 
-    class HelloResource:
-        # In this application, the single HelloResource responds to only GET
-        # requests, so it has only an on_get method.
+    # Flask route decorators map / and /hello to the hello function.
+    # To add other resources, create functions that generate the page contents
+    # and add decorators to define the appropriate resource locators for them.
 
-        def on_get(self, req, resp):
-            resp.status = falcon.HTTP_200  # 200 is the default
-            resp.body = "Hello, Python!"
+    @app.route('/')
+    @app.route('/hello')
+    def hello():
+        # Render the page
+        return "Hello Python!"
 
-    # Resources are represented by long-lived class instances
-    hello = HelloResource()
-
-    # Instruct Falcon to route / and /hello to HelloResource. If you add
-    # other resources, use api.add_route to define the desired
-    # resource locators for them.
-    api = falcon.API()
-    api.add_route('/', hello)
-    api.add_route('/hello', hello)
-
-    if __name__ == "__main__":
-        # Use Python's built-in WSGI reference implementation to run
-        # a web server for the application.
-        from wsgiref.simple_server import make_server
-
-        # Run the web server on localhost:8080
-        print("Starting web app server")
-        srv = make_server('localhost', 8080, api)
-        srv.serve_forever()
+    if __name__ == '__main__':
+        # Run the app server on localhost:4449
+        app.run('localhost', 4449)
     ```
 
-1. このコードを貼り付けると、Visual Studio で最初の行の `falcon` と 20 行目の `wsgiref.simple.server` の下に、ジグザグ矢印が表示されることがあります。 このようなインジケーターが表示されるのは、Visual Studio がこれらのモジュールの IntelliSense データベースを作成中の場合です。
+1. お気付きかもしれませんが、**[追加]、[新しい項目]** ダイアログ ボックスの順に選択すると、Python プロジェクトに追加できる他の種類のファイルがたくさん表示されます。Python クラス、Python パッケージ、Python 単体テスト、web.config ファイルなどです。 一般的に、*項目テンプレート*と呼ばれているこのようなテンプレートは、便利なボイラープレート コードで簡単にファイルを作成する優れた方法です。
 
-Falcon について詳しくは、[Falcon のクイック スタート](https://falcon.readthedocs.io/en/stable/user/quickstart.html) (falcon.readthedocs.io) をご覧ください。
+**質問: Flask の詳細はどこで確認できますか。**
+
+**回答**: Flask 文書を参照してください。まずは [Flask クイック スタート](https://flask.pocoo.org/docs/0.12/quickstart/)からお読みください (flask.pocoo.org)。
 
 ## <a name="run-the-application"></a>アプリケーションの実行
 
-1. **ソリューション エクスプローラー**で `hello.py` を右クリックし、**[スタートアップ ファイルとして設定]** を選びます。 コマンドは、アプリの実行時に Python で起動するコード ファイルを識別します。
+1. **ソリューション エクスプローラー**で `app.py` を右クリックし、**[スタートアップ ファイルとして設定]** を選びます。 このコマンドによって、アプリの実行時、Python で起動するコード ファイルが特定されます。
 
     ![ソリューション エクスプローラーでプロジェクトのスタートアップ ファイルを設定](media/quickstart-python-05-set-as-startup-file.png)
 
-1. **ソリューション エクスプローラー**で "Hello Python" プロジェクトを右クリックして、**[プロパティ]** を選びます。 次に、**[デバッグ]** タブを選び、**[ポート番号]** プロパティを `8080` に設定します。 これにより、Visual Studio はランダムなポートを使うのではなく、`localhost:8080` でブラウザーを起動するようになります。
+1. **ソリューション エクスプローラー**でプロジェクトを右クリックして、**[プロパティ]** を選択します。 次に、**[デバッグ]** タブを選び、**[ポート番号]** プロパティを `4449` に設定します。 この手順によって、Visual Studio では、コードの `app.run` 引数に合わせ、`localhost:4449` でブラウザーが起動します。
 
-1. **[デバッグ] > [デバッグなしで開始]** (Ctrl + F5) を選び、変更をファイルに保存して、アプリを実行します。
+1. **[デバッグ]、[デバッグなしで開始]** (Ctrl + F5) の順に選択し、変更をファイルに保存し、アプリを実行します。
 
-1. コマンド ウィンドウに "Starting web app server" というメッセージが表示された後、`localhost:8080` でブラウザー ウィンドウが開いて、"Hello, Python!" というメッセージが表示されます。 コマンド ウィンドウには GET 要求も表示されます 
+1. コマンド ウィンドウに "* Running in https://localhost:4449/" というメッセージが表示された後、`localhost:4449` でブラウザー ウィンドウが開き、"Hello, Python!" というメッセージが表示されます。 コマンド ウィンドウにステータス 200 で GET 要求も表示されます。
 
-    ブラウザーが自動的に開かない場合は、任意のブラウザーを起動して `localhost:8080` に移動します。
+    ブラウザーが自動的に開かない場合は、任意のブラウザーを起動して `localhost:4449` に移動します。
 
-    コマンド ウィンドウに Python 対話型シェルのみが表示される場合、または画面でそのウィンドウが短時間点滅する場合は、上記の手順 1 でスタートアップ ファイルとして `hello.py` を設定してあるかどうかを確認してください。
+    コマンド ウィンドウに Python 対話型シェルのみが表示される場合、または画面でそのウィンドウが短時間点滅する場合は、上記の手順 1 でスタートアップ ファイルとして `app.py` を設定してあるかどうかを確認してください。
+
+1. `localhost:4449/hello` に移動し、`/hello` リソースのデコレーターも機能することをテストします。 再び、コマンド ウィンドウには GET 要求が表示されます。ステータスは 200 です。 他の URL も試し、コマンド ウィンドウにステータス コード 404 が表示されることを確認してください。
 
 1. コマンド ウィンドウを閉じてアプリを停止してから、ブラウザー ウィンドウを閉じます。
 
+**質問: デバッグなしで開始コマンドとデバッグの開始の違いとは何ですか。**
+
+**回答**: **デバッグの開始**を使用し、[Visual Studio デバッガー](../python/debugging-python-in-visual-studio.md)に関連してアプリを実行します。ブレークポイントを設定したり、変数を調べたり、コードを行ごとにステップ実行したりできます。 さまざまなフックがデバッグを可能にするため、デバッガーではアプリの実行が遅くなることがあります。 対照的に、**デバッグなしで開始**では、デバックという文脈なしで、コマンド ラインから実行したかのように、アプリが直接実行されます。また、ブラウザーが自動的に起動し、プロジェクト プロパティの **[デバッグ]** タブに指定されている URL に移動します。
+
 ## <a name="next-steps"></a>次の手順
 
-Visual Studio IDE と Python について簡単に学習するこのクイック スタートは以上で完了です。 対話型ウィンドウの使用、デバッグ、データの視覚化、Git の操作など、Visual Studio での Python についての詳細なチュートリアルを続行するには、下のボタンを選んでください。
+Visual Studio から初めての Python アプリを実行できました。おめでとうございます。Python IDE として Visual Studio を使用することについて少しばかり学習しました。
+
+このクイック スタートで実行した手順はかなり汎用的です。これは自動化できるし、自動化すべきであると思ったことでしょう。 そのような自動化は、Visual Studio *プロジェクト テンプレート*の役目です。 下のボタンを選択し、デモをご覧ください。この記事で作成したものと似た Web アプリが作成されます。ただし、手順は少なくなっています。
 
 > [!div class="nextstepaction"]
-> [チュートリアル: Visual Studio での Python の概要](../python/tutorial-working-with-python-in-visual-studio-step-01-create-project.md)。
+> [クイック スタート - テンプレートを使用して Python プロジェクトを作成する](../python/quickstart-02-python-in-visual-studio-project-from-template.md)
+
+対話型ウィンドウの使用、デバッグ、データの視覚化、Git の操作など、Visual Studio での Python についての詳細なチュートリアルを続行するには、下のボタンを選んでください。
+
+> [!div class="nextstepaction"]
+> [チュートリアル: Visual Studio での Python の概要](../python/tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
+
+Visual Studio のその他の機能は下のリンクからご覧いただけます。
 
 - [Visual Studio での Python Web アプリ テンプレート](../python/python-web-application-project-templates.md)について学習する
 - [Python のデバッグ](../python/debugging-python-in-visual-studio.md)について学習する
-- [Visual Studio の IDE](../ide/visual-studio-ide.md) についてさらに学習する
+- 全般的な [Visual Studio の IDE](../ide/visual-studio-ide.md) について学習する

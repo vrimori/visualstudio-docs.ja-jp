@@ -1,90 +1,77 @@
 ---
-title: "クイック スタート - Visual Studio でテンプレートを使用して Python プロジェクトを作成する | Microsoft Docs"
-description: "組み込みテンプレートを使って Visual Studio プロジェクトを作成することにより、Python を迅速に使い始めることができます。"
-ms.custom: 
-ms.date: 03/08/2018
-ms.reviewer: 
-ms.suite: 
+title: クイック スタート - テンプレートを使用して Python プロジェクトを作成する | Microsoft Docs
+description: このクイック スタートでは、基本的な Flask アプリ用の組み込みテンプレートを使用し、Python 向けの Visual Studio プロジェクトを作成します。
+ms.custom: mvc
+ms.date: 03/22/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 4ab0f91022240d1fcf60bd6889ea9b2ec39f2db3
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 2d4d81676d9f63751455f4f51ae5993c46dd0f04
+ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>クイック スタート: Visual Studio のテンプレートから Python プロジェクトを作成する
 
-[Visual Studio 2017 に Python のサポートをインストール](installing-python-support-in-visual-studio.md)すると、さまざまなテンプレートを使用して新しい Python プロジェクトを簡単に作成できます。
+[Visual Studio 2017 に Python のサポートをインストール](installing-python-support-in-visual-studio.md)すると、さまざまなテンプレートを使用して新しい Python プロジェクトを簡単に作成できます。 このクイック スタートでは、テンプレートを利用し、簡単な Flask アプリを作成します。 結果的に生成されるプロジェクトは、「[クイック スタート - Flask での Web アプリの作成](../ide/quickstart-python.md)」で手動で作成するプロジェクトに似ています。
 
-1. Visual Studio を起動します。
+1. Visual Studio 2017 を起動します。
 
-1. **[ファイル]、[新規]、[プロジェクト]** (Ctrl + Shift + N) の順に選択します。 **[新しいプロジェクト]** ダイアログで、"Python" を検索し、希望のテンプレートを選択します。 テンプレートを選択すると、テンプレートの簡単な説明が表示されます。 (「[Python プロジェクト](managing-python-projects-in-visual-studio.md#project-templates)」も参照してください。)
+1. 一番上にあるメニュー バーから、**[ファイル]、[新規]、[プロジェクト]** の順に選択し、**[新しいプロジェクト]** ダイアログで "blank flask" を検索し、真ん中の一覧にある "Blank Flask Web Project" テンプレートを選択します。プロジェクトに名前を付け、**[OK]** を選択します。
 
-    ![VS2017 Python テンプレートの [新しいプロジェクト] ダイアログ](media/projects-new-project-dialog2.png)
+    ![Blank Flask Web Project テンプレートで新しいプロジェクトを作成する](media/quickstart-python-06-blank-flask-template.png)
 
-1. このクイック スタートでは、"Python アプリケーション" テンプレートを選択し、("MakePI" などの) プロジェクト名を付け、場所を指定し、**[OK]** を選択します。
+1. Visual Studio に "このプロジェクトには外部パッケージが必要です" というダイアログが表示されます。 このダイアログは、Flask に対する依存性を指定する `requirements.txt` ファイルがテンプレートに含まれているために表示されます。 Visual Studio では、パッケージを自動的にインストールできます。また、*仮想環境*にインストールすることを選択できます。 仮想環境の利用はグローバル環境にインストールすることよりも推奨されます。**[Install into a virtual environment]\(仮想環境にインストールする\)** を選択して続行してください。
 
-1. Visual Studio によってプロジェクト ファイル (ディスク上に 1 つの `.pyproj` ファイル) と、テンプレートに記述されているその他のファイルが作成されます。 "Python アプリケーション" テンプレートでは、プロジェクトと同じ名前の空のファイルのみがプロジェクトに含まれます。 このファイルは、既定で Visual Studio エディタで開きます。
+    ![仮想環境に Flask をインストールする](media/quickstart-python-07-install-into-virtual-environment.png)
 
-    ![Python アプリケーション テンプレートを使用した結果のプロジェクト](media/projects-new-structure.png)
+1. Visual Studio に **[仮想環境の追加]** ダイアログが表示されます。 既定値をそのままにして **[作成]** を選択します。昇格要求があればそれに同意します。
 
-1. 1000 桁の PI を計算し表示する、次のコードを、開いているファイルに追加します。
+    > [!Tip]
+    > プロジェクトを開始するとき、すぐに仮想環境を作成することを強くお勧めします。ほとんどの Visual Studio テンプレートでそのように勧められます。 仮想環境では、時間の経過と共にライブラリを追加したり、削除したりしても、プロジェクトの厳密な要件が維持されます。 そのため、`requirements.txt` ファイルを簡単に生成できます。このファイルを利用し、(ソース管理を利用するとき) 他の開発コンピューターにそれらの依存関係を再インストールします。また、運用サーバーにプロジェクトを展開するときに再インストールします。 仮想環境とその長所については、「[仮想環境を使用する](../python/selecting-a-python-environment-for-a-project.md#using-virtual-environments)」と「[requirements.txt での必要なパッケージの管理](../python/managing-required-packages-with-requirements-txt.md)」を参照してください。
+
+1. Visual Studio によってその環境が作成されたら、**ソリューション エクスプローラー**を見て、`requirements.txt` と共に `app.py` ファイルが指定されていることを確認します。 `app.py` を開き、「[クイック スタート - Flask での Web アプリの作成](../ide/quickstart-python.md)」のものと似たコードがテンプレートによって指定されていること、さらに 2 つのセクションが追加されていることを確認します。
+
+    1 つ目のセクションは行 `wsgi_app = app.wsgi_app` です。これは、アプリを Web ホストに展開するときに便利です。
+
+    2 つ目のセクションはスタートアップ コードです。ハードコーディングするのではなく、環境変数によってホストとポートを設定できます。 このようなコードによって、コードを変更することなく、開発コンピューターと運用コンピューターの両方で構成を簡単に制御できます。
 
     ```python
-    """ Print digits of PI; code adapted from the second, shorter solution
-    at http://www.codecodex.com/wiki/Calculate_digits_of_pi#Python
-    """
-
-    from time import perf_counter
-
-    def pi_digits_Python(digits):
-        scale = 10000
-        maxarr = int((digits / 4) * 14)
-        arrinit = 2000
-        carry = 0
-        arr = [arrinit] * (maxarr + 1)
-        output = ""
-
-        for i in range(maxarr, 1, -14):
-            total = 0
-            for j in range(i, 0, -1):
-                total = (total * j) + (scale * arr[j])
-                arr[j] = total % ((j * 2) - 1)
-                total = total / ((j * 2) - 1)
-
-            output += "%04d" % (carry + (total / scale))
-            carry = total % scale
-
-        return output
-
-    def test_py():
-        digits = 1000
-
-        start = perf_counter()
-        output = pi_digits_Python(digits)
-        elapsed = perf_counter() - start
-
-        print("PI to " + str(digits) + " digits in " + str(int(elapsed * 10000)/10000) + " seconds:")
-
-        ## replace inserts the decimal point
-        print(output.replace("3", "3.", 1))
-
-    if __name__ == "__main__":
-        test_py()
+    if __name__ == '__main__':
+        import os
+        HOST = os.environ.get('SERVER_HOST', 'localhost')
+        try:
+            PORT = int(os.environ.get('SERVER_PORT', '5555'))
+        except ValueError:
+            PORT = 5555
+        app.run(HOST, PORT)
     ```
 
-1. Ctrl + F5 キーを押すか、メニューを **[デバッグ]、[デバッグなしで開始]** の順に選択して、プログラムを実行します。 結果は、コンソール ウィンドウに表示されます。
+1. **[デバッグ]、[デバッグなしで開始]** を選択し、アプリを実行してブラウザーで `localhost:5555` を開きます。
+
+**質問: Visual Studio には他にどのような Python テンプレートがありますか。**
+
+**回答**: Python ワークロードをインストールすると、Visual Studio にはさまざまなプロジェクト テンプレートが用意されます。[Flask、Bottle、Django Web フレームワーク](../python/python-web-application-project-templates.md)、Azure クラウド サービス、さまざまな機械学習シナリオのためのテンプレートなどがあります。Python アプリを含む既存のフォルダー構造からプロジェクトを作成するテンプレートまであります。 テンプレートには、**Python** 言語ノードとその子ノードを選択することで、**[ファイル]、[新規]、[プロジェクト]** ダイアログからアクセスできます。
+
+Visual Studio は、Python クラス、Python パッケージ、Python 単体テスト、web.config ファイルなどを簡単に作成するためのさまざまなファイルや*項目テンプレート*も備えています。 Python プロジェクトを開いているとき、**[プロジェクト]、[新しい項目の追加]** メニュー コマンドから項目テンプレートにアクセスできます。
+
+プロジェクトを開始するときやファイルを作成するとき、テンプレートを使用すると時間が大幅に節約されます。さまざまなアプリの種類やコードの構造について学習するための優れた方法でもあります。 さまざまなテンプレートからプロジェクトや項目を数分で作成できるということは、そのように作成したものでできることを知る上で便利なことです。
+
+**質問: Cookiecutter テンプレートも使用できますか。**
+
+**回答:** はい。 実際のところ、Visual Studio は Cookiecutter と直接統合できます。これについては、「[クイック スタート: Cookiecutter テンプレートからプロジェクトを作成する](../python/quickstart-04-python-in-visual-studio-project-from-cookiecutter.md)」で学習できます。
 
 ## <a name="next-steps"></a>次の手順
 

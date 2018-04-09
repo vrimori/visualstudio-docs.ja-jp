@@ -1,11 +1,11 @@
 ---
-title: "コード スニペットを使用するためのベスト プラクティス | Microsoft Docs"
-ms.custom: 
+title: コード スニペットを使用するためのベスト プラクティス | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - code snippets, best practices
@@ -15,11 +15,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 31951001512578446c4a3ab05efe3ade99223068
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 6d5ac19f3caa795fc309b77d0845db0d412e1ccb
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="best-practices-for-using-code-snippets"></a>コード スニペットを使用するためのベスト プラクティス
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/09/2018
 
 ファイルの位置をアプリケーションに採用する場合、次の点を考慮する必要があります。
 
-- アクセス可能な場所を見つけます。 ユーザーはコンピューターの Program Files フォルダーにアクセスできない可能性があるので、アプリケーションのファイルと共にファイルを保存してもうまくいかないことがあります。
+- アクセス可能な場所を見つけます。 ユーザーはコンピューターの *Program Files* フォルダーにアクセスできない可能性があるので、アプリケーションのファイルと共にファイルを保存してもうまくいかないことがあります。
 
 - セキュリティで保護された場所を見つけます。 ルート フォルダー (*C:\\*) にファイルを保存するのは安全ではありません。 アプリケーション データの場合は、*Application Data* フォルダーをお勧めします。 個々のユーザー データの場合は、アプリケーションで *Documents* フォルダーに各ユーザーのファイルを作成できます。
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/09/2018
 
 - データをスクリプティング テクノロジに渡す
 
-詳細については、「[Securing Applications](../ide/securing-applications.md)」(アプリケーションのセキュリティ保護) を参照してください。
+詳細については、「[Securing Applications](../ide/securing-applications.md)」 (アプリケーションのセキュリティ保護) を参照してください。
 
 ## <a name="downloaded-code-snippets"></a>ダウンロードしたコード スニペット
 
