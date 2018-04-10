@@ -1,9 +1,9 @@
 ---
-title: "テキスト テンプレートからモデルにアクセスする |Microsoft ドキュメント"
-ms.custom: 
+title: テキスト テンプレートからモデルにアクセスする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 helpviewer_keywords:
 - text templates, accessing models
@@ -14,10 +14,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 3162350a9afbe7972c4e593049141f533517bdc3
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="accessing-models-from-text-templates"></a>テキスト テンプレートからモデルへのアクセス
 テキスト テンプレートを使用すると、レポート ファイル、ソース コード ファイル、およびその他のドメイン固有言語モデルに基づいたテキスト ファイルを作成することができます。 テキスト テンプレートの基本については、次を参照してください。[コードの生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)です。 テキスト テンプレートは、DSL をデバッグするときは、実験用のモードで動作し、DSL が配置されているコンピューターではでも機能します。  
@@ -64,7 +64,7 @@ Here is a list of elements in the model:
   
 -   コード フラグメントを記述する言語が必要な場合は、c# を使用して、任意の種類のテキストを生成できます。 コードを記述することができますまた[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]プロパティを追加することによって`language="VB"`を`template`ディレクティブです。  
   
--   テンプレートをデバッグするには、追加`debug="true"`を`template`ディレクティブです。 別のインスタンスで、テンプレートが開きます[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]場合は、例外が発生します。 特定の時点のコードにデバッガーを中断する場合は、ステートメントを挿入します`System.Diagnostics.Debugger.Break();`  
+-   テンプレートをデバッグするには、追加`debug="true"`を`template`ディレクティブです。 別のインスタンスで、テンプレートが開きます[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]場合は、例外が発生します。 特定の時点のコードにデバッガーを中断する場合は、ステートメントを挿入します `System.Diagnostics.Debugger.Break();`  
   
      詳細については、次を参照してください。 [T4 テキスト テンプレートのデバッグ](../modeling/debugging-a-t4-text-template.md)です。  
   
@@ -95,11 +95,11 @@ Here is a list of elements in the model:
   
 1.  `filename`と`validation`パラメーターはセミコロン「;」-h-1 他の区切り記号またはスペースとします。  
   
-2.  検証のカテゴリの一覧は、どの検証メソッドは実行を決定します。 複数のカテゴリを区切る必要があります"&#124;"があってはなりません他の区切り記号またはスペースとします。  
+2.  検証のカテゴリの一覧は、どの検証メソッドは実行を決定します。 複数のカテゴリで区切る必要があります"&#124;"-h-1 他の区切り記号またはスペースとします。  
   
  エラーが見つかった場合は、エラー ウィンドウに報告され、エラー メッセージを結果ファイルが含まれます。  
   
-##  <a name="Multiple"></a>テキスト テンプレートから複数のモデルにアクセスします。  
+##  <a name="Multiple"></a> テキスト テンプレートから複数のモデルにアクセスします。  
   
 > [!NOTE]
 >  このメソッドは、同じテンプレート内の複数のモデルを読み取ることができますが、ModelBus 参照をサポートしません。 ModelBus 参照によって指定されたモデルを参照してください[テキスト テンプレートで Visual Studio ModelBus を使用して](../modeling/using-visual-studio-modelbus-in-a-text-template.md)です。  
@@ -177,7 +177,7 @@ For Each element As ExampleElement In Me.WorkModel.Elements
   
 ```  
   
- `LoopSplitter.tt`呼び出す`LoopTemplate.t4`、し、そのセグメントに生成されたファイルを分割します。 このテンプレートができないにモデル化のテンプレートでは、モデルが読み取らないために注意してください。  
+ `LoopSplitter.tt` 呼び出す`LoopTemplate.t4`、し、そのセグメントに生成されたファイルを分割します。 このテンプレートができないにモデル化のテンプレートでは、モデルが読み取らないために注意してください。  
   
 ```  
 <#@ template hostspecific="true" language="C#" #>  

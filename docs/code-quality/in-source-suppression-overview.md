@@ -16,10 +16,10 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: ef69462dc9b51fbd92da11bc5adb1bfa61e8a792
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="suppress-code-analysis-warnings"></a>コード分析の警告を抑制します。
 
@@ -95,7 +95,7 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 抑制属性は、メソッドに適用できますが、メソッド本体に埋め込むことはできません。 これを追加する場合に特定のルールのすべての違反を抑制することを意味、<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>属性をメソッドにします。
 
-場合によっては、将来のコードが自動的にコード分析規則から除外されていないように例については、違反の特定のインスタンスを抑制する場合があります。 これは、使用することは特定のコード分析規則、`MessageId`のプロパティ、<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>属性。 一般に、従来の規則の違反 (ローカル変数またはパラメーター) の特定のシンボル敬意を`MessageId`プロパティです。 [CA1500:VariableNamesShouldNotMatchFieldNames](../code-quality/ca1500-variable-names-should-not-match-field-names.md) is an example of such a rule. ただし、実行可能コード (非シンボル) に違反のレガシ規則を使用しない、`MessageId`プロパティです。 さらに、.NET コンパイラ プラットフォーム ("Roslyn") アナライザーを使用しない、`MessageId`プロパティです。
+場合によっては、将来のコードが自動的にコード分析規則から除外されていないように例については、違反の特定のインスタンスを抑制する場合があります。 これは、使用することは特定のコード分析規則、`MessageId`のプロパティ、<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>属性。 一般に、従来の規則の違反 (ローカル変数またはパラメーター) の特定のシンボル敬意を`MessageId`プロパティです。 [CA1500:VariableNamesShouldNotMatchFieldNames](../code-quality/ca1500-variable-names-should-not-match-field-names.md)ようなルールの例に示します。 ただし、実行可能コード (非シンボル) に違反のレガシ規則を使用しない、`MessageId`プロパティです。 さらに、.NET コンパイラ プラットフォーム ("Roslyn") アナライザーを使用しない、`MessageId`プロパティです。
 
 規則の特定のシンボルの違反を抑制するのにはシンボルの名前を指定、`MessageId`のプロパティ、<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>属性。 次の例では、コードの 2 つの違反を[CA1500:VariableNamesShouldNotMatchFieldNames](../code-quality/ca1500-variable-names-should-not-match-field-names.md)&mdash;のいずれか、`name`変数と 1 つずつ、`age`変数。 違反のみ、`age`シンボルを非表示にします。
 

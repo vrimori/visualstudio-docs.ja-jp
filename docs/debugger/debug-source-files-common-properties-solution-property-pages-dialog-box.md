@@ -1,12 +1,12 @@
 ---
-title: "ソース ファイル、一般的なプロパティは、ソリューション プロパティ ページ ダイアログ ボックスのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: ソース ファイル、一般的なプロパティは、ソリューション プロパティ ページ ダイアログ ボックスのデバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - vs.debug.options.FindSource
@@ -23,17 +23,17 @@ helpviewer_keywords:
 - source files, specifying in debugger
 - debugger, source files
 ms.assetid: 0af11464-eeb1-4d0b-87a6-0cc96779afb1
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: aa83025b15fe3773220a2b27394890318d60c850
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="debug-source-files-common-properties-solution-property-pages-dialog-box"></a>[デバッグ ソース ファイル] ([ソリューション プロパティ ページ] ダイアログ ボックス - [共通プロパティ])
 このプロパティ ページでは、ソリューションのデバッグ時にデバッガーによってソース ファイルが検索される場所を指定します。  
@@ -46,6 +46,6 @@ ms.lasthandoff: 01/04/2018
  **これらのソース ファイルを探さない**  
  デバッガーによる読み取りから除外するファイルの名前を入力できます。 デバッガーは、上で指定したディレクトリのいずれかでこれらのファイルを見つけた場合、それを無視します。 場合、**ソースの検索** ダイアログ ボックスが表示されたらをデバッグしてをクリックしたときに**キャンセル**、探していたファイルがこの一覧に追加を取得できるように、デバッガーはそのファイルの検索を続行できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)

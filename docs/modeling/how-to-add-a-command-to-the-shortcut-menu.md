@@ -1,9 +1,9 @@
 ---
-title: "方法: ショートカット メニューにコマンドを追加 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ショートカット メニューにコマンドを追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 helpviewer_keywords:
 - Domain-Specific Language Tools, walkthroughs
@@ -15,10 +15,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 4f65964e1d7fd4221746d8ec17a498cf9ee3a354
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>方法: ショートカット メニューにコマンドを追加する
 ドメイン固有言語 (DSL) にメニュー コマンドを追加すると、ユーザーが DSL に固有のタスクを実行できるようになります。 ユーザーが図を右クリックすると、コンテキスト (ショートカット) メニューにコマンドが表示されます。 特定の状況でのみメニューにコマンドが表示されるように、コマンドを定義できます。 たとえば、ユーザーが特定の型の要素または特定の状態の要素をクリックした場合にだけコマンドを表示するようにできます。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/09/2018
   
  上記に該当しない場合は、MEF 手法を使用してコマンドを定義することを検討してください。 詳細については、次を参照してください。 [MEF を使用して、DSL、拡張](../modeling/extend-your-dsl-by-using-mef.md)です。  
   
-##  <a name="VSCT"></a>Commands.Vsct 内のコマンドを宣言します。  
+##  <a name="VSCT"></a> Commands.Vsct 内のコマンドを宣言します。  
  メニュー コマンドは、DslPackage\Commands.vsct で宣言されます。 これらの定義では、メニュー項目のラベルと、メニューでのメニュー項目の表示位置が指定されます。  
   
  ファイルを編集すると、Commands.vsct、ディレクトリに配置されたいくつかの .h ファイルから定義をインポートする*Visual Studio SDK インストール パス*\VisualStudioIntegration\Common\Inc です。また、DSL 定義から生成される GeneratedVsct.vsct をインクルードします。  
@@ -131,7 +131,7 @@ ms.lasthandoff: 02/09/2018
   
     -   `My Context Menu Command`  
   
-##  <a name="version"></a>Package.tt のパッケージ バージョンを更新します。  
+##  <a name="version"></a> Package.tt のパッケージ バージョンを更新します。  
  コマンドを追加または変更するたびに、`version` の <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> パラメーターを更新します。これは、ドメイン固有言語の新しいバージョンをリリースする前にパッケージ クラスに適用されます。  
   
  生成されるファイルでパッケージ クラスが定義されているため、Package.cs ファイルを生成するテキスト テンプレート ファイルで属性を更新します。  
@@ -142,11 +142,11 @@ ms.lasthandoff: 02/09/2018
   
 2.  `ProvideMenuResource` 属性を探します。  
   
-3.  この属性の `version` パラメーター (2 番目のパラメーター) の値を大きくします。 必要に応じて、パラメーターの目的を明確にするためパラメーター名を明示的に記述できます。 例:  
+3.  この属性の `version` パラメーター (2 番目のパラメーター) の値を大きくします。 必要に応じて、パラメーターの目的を明確にするためパラメーター名を明示的に記述できます。 例えば:  
   
      `[VSShell::ProvideMenuResource("1000.ctmenu", version: 2 )]`  
   
-##  <a name="CommandSet"></a>コマンドの動作を定義します。  
+##  <a name="CommandSet"></a> コマンドの動作を定義します。  
  DSL には、DslPackage\GeneratedCode\CommandSet.cs で宣言される一部のクラスで実装されているコマンドが既に存在しています。 新しいコマンドを追加するには、同じクラスの部分的な宣言を含む新しいファイルを作成して、このクラスを拡張する必要があります。 クラスの名前は、通常 *\<YourDslName >*`CommandSet`です。 最初にクラスの名前を検証し、クラスの内容を調べておくと便利です。  
   
  コマンド セット クラスは、<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> から派生しています。  
@@ -161,7 +161,7 @@ ms.lasthandoff: 02/09/2018
   
 2.  **DslPackage**、という名前のフォルダーを作成する**カスタム コード**です。 このフォルダーにという新しいクラス ファイルを作成する`CommandSet.cs`です。  
   
-3.  新しいファイル内に、生成された部分クラスと同じ名前空間および名前を持つ部分宣言を記述します。 例:  
+3.  新しいファイル内に、生成された部分クラスと同じ名前空間および名前を持つ部分宣言を記述します。 例えば:  
   
      `namespace Company.Language1 /* Make sure this is correct */`  
   
@@ -224,7 +224,7 @@ private void OnStatusMyContextMenuCommand(object sender, EventArgs e)
   
 -   `this.CurrentSelection`。 ユーザーが右クリックした図形は常にこのリストに追加されます。 ユーザーが図の空白部分をクリックした場合、このリストのメンバーは図のみになります。  
   
--   `this.IsDiagramSelected()` - `true`ユーザーは、図の空白部分をクリック場合します。  
+-   `this.IsDiagramSelected()` - `true` ユーザーは、図の空白部分をクリック場合します。  
   
 -   `this.IsCurrentDiagramEmpty()`  
   
@@ -358,7 +358,7 @@ protected override IList<MenuCommand> GetMenuCommands()
   
 -   パッケージの古いバージョンがアンインストールされていることを確認します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
  [方法: 標準メニュー コマンドの変更](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)   
  [ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)   

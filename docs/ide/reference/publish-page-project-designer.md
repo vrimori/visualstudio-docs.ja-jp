@@ -1,12 +1,12 @@
 ---
-title: "[発行] ページ (プロジェクト デザイナー) | Microsoft Docs"
-ms.custom: 
+title: '[発行] ページ (プロジェクト デザイナー) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - Microsoft.VisualStudio.Publish.ClickOnceProvider.Dialog.PropertyPage
@@ -19,10 +19,10 @@ manager: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: d9f050662ed38814920e17b36f77bf6795aabfa9
-ms.sourcegitcommit: 238cd48787391aa0ed1eb684f3f04e80f7958705
-ms.translationtype: HT
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="publish-page-project-designer"></a>[発行] ページ (プロジェクト デザイナー)
 **プロジェクト デザイナー** の **[発行]** ページは、ClickOnce 配置用のプロパティを構成する場合に使用します。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 02/12/2018
  **今すぐ発行**  
  現在の設定を使用して、アプリケーションを発行します。 **[発行ウィザード]** の **[完了]** ボタンと同じです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーションの発行](../../deployment/publishing-clickonce-applications.md)   
  [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
  [方法: Visual Studio がファイルをコピーする場所を指定する](../../deployment/how-to-specify-where-visual-studio-copies-the-files.md)   

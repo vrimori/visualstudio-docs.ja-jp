@@ -1,27 +1,27 @@
 ---
-title: "レガシ API を使用してコード ウィンドウをカスタマイズする |Microsoft ドキュメント"
-ms.custom: 
+title: レガシ API を使用してコード ウィンドウをカスタマイズする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - code windows
 ms.assetid: 5328ab2f-55cb-4680-9744-ec79f55acd1b
-caps.latest.revision: 
+caps.latest.revision: 19
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
 ms.openlocfilehash: f0b00c31280b9471da99aea55118e25dd551ad96
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="customizing-code-windows-by-using-the-legacy-api"></a>レガシ API を使用してコード ウィンドウをカスタマイズします。
 コード ウィンドウは、1 つまたは複数のテキスト ビューをサポートするドキュメント ウィンドウ オブジェクトです。 コード ウィンドウの正確な機能は、関連付けられた言語サービスによって異なります。 マルチ ドキュメント インターフェイス (MDI) モードでは、コード ウィンドウは、MDI 子フレームです。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/22/2017
  [方法: エディターがフォーカスを失ったときにイベントを発生させる](../extensibility/how-to-fire-events-when-the-editor-loses-focus.md)  
  ドキュメント データ オブジェクトをドキュメント ビューをアタッチする方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>   

@@ -1,9 +1,9 @@
 ---
-title: "移動し、プログラム コードでレイヤー モデルの更新 |Microsoft ドキュメント"
-ms.custom: 
+title: 移動し、プログラム コードでレイヤー モデルの更新 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 helpviewer_keywords:
 - layer models, navigating in program code
@@ -15,10 +15,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: e79479e97efd953c1366348454eee70773faf07a
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="navigate-and-update-layer-models-in-program-code"></a>プログラム コードでレイヤー モデル内を移動し、レイヤー モデルを更新する
 このトピックでは、プログラム コードを使ってナビゲートおよび更新できるレイヤー モデルの要素と関係について説明します。 見ると、ユーザーの依存関係図についての詳細については、次を参照してください。[依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)と[依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)です。  
@@ -124,7 +124,7 @@ public void ... (...)
   
  <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> および <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram> も UML モデルを表示するのに使用されます。 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [依存関係の図にコマンドおよびジェスチャを追加します。](../modeling/add-commands-and-gestures-to-layer-diagrams.md)   
  [依存関係のダイアグラムにカスタム アーキテクチャ検証を追加します。](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)   
  [カスタム プロパティを依存関係のダイアグラムに追加します。](../modeling/add-custom-properties-to-layer-diagrams.md)   

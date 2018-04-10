@@ -1,12 +1,12 @@
 ---
-title: "書式指定子 (C++)、デバッガーで |Microsoft ドキュメント"
-ms.custom: 
+title: 書式指定子 (C++)、デバッガーで |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vs.debug
@@ -28,17 +28,17 @@ helpviewer_keywords:
 - format specifiers, debugger
 - debugger, format specifiers recognized by
 ms.assetid: 0f6f3b7c-ce2c-4b4d-b14f-7589dbed5444
-caps.latest.revision: 
+caps.latest.revision: 40
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5b7efb90e6f2a2489fffb890c664393252021e6f
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>C++ では、Visual Studio デバッガーでの書式指定子
 書式指定子を使用して、 **ウォッチ** ウィンドウに表示される値の書式設定を変更することができます。  
@@ -83,12 +83,12 @@ int main() {
 |su|(UTF-16 エンコード) Unicode 文字列|\<location> L"hello world"|L"hello world"<br /><br /> u"hello world"|  
 |sub|Unicode (utf-16 エンコーディング) 文字列 (引用符なし)|\<location> L"hello world"|hello world|  
 |bstr|BSTR 文字列|\<location> L"hello world"|L"hello world"|  
-|env|環境ブロック (2 つの null 終了文字列)|\<位置 > L"=:: =::\\\\"|L"=:: =::\\\\\\0 = C: = C:\\\\windows\\\\system32\\0ALLUSERSPROFILE =…|
+|env|環境ブロック (2 つの null 終了文字列)|\<location> L"=::=::\\\\"|L"=::=::\\\\\\0=C:=C:\\\\windows\\\\system32\\0ALLUSERSPROFILE=...|
 |**s32**|UTF-32 文字列|\<location> U"hello world"|u"hello world"|  
 |**s32b**|UTF-32 文字列 (引用符なし)|\<location> U"hello world"|hello world|  
 |**en**|enum|Saturday(6)|土曜日|  
-|**hv**|ポインター型。検査されるポインター値が配列のヒープ割り当ての結果であることを意味します (たとえば、 `new int[3]`)。|\<位置 > {\<最初のメンバー >}|\<位置 > {\<最初のメンバー >、 \<2 番目のメンバー >,…}|  
-|**na**|オブジェクトのポインターのメモリ アドレスを非表示にします。|\<location>, {member=value...}|{member=value...}|  
+|**hv**|ポインター型。検査されるポインター値が配列のヒープ割り当ての結果であることを意味します (たとえば、 `new int[3]`)。|\<location>{\<first member>}|\<位置 > {\<最初のメンバー >、 \<2 番目のメンバー >,…}|  
+|**na**|オブジェクトのポインターのメモリ アドレスを非表示にします。|\<場所 >、{メンバーの値... の =}|{member=value...}|  
 |**nd**|基底クラスの情報だけを表示し、派生クラスは無視します。|`(Shape*) square` には基底クラスおよび派生クラスの情報が含まれます。|基底クラスの情報だけを表示します。|  
 |hr|HRESULT または Win32 エラー コード。 デバッガーが HRESULT を自動的にデコードする場合、この指定子は不要です。|S_OK|S_OK|  
 |wc|Windows クラス フラグ|0x0010|WC_DEFAULTCHAR|  

@@ -1,9 +1,9 @@
 ---
-title: "ドメインのプロパティを |Microsoft ドキュメント"
-ms.custom: 
+title: ドメインのプロパティを |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 helpviewer_keywords:
 - Domain-Specific Language, domain properties
@@ -14,10 +14,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 7d964eb9f0dcabdb8050074121d094245aca9bb7
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="properties-of-domain-properties"></a>ドメイン プロパティのプロパティ
 A*ドメイン プロパティ*値を保持できるモデル要素の機能です。 たとえば、`Person` ドメイン クラスに `Name` プロパティと `BirthDate` プロパティを指定することができます。 DSL 定義で、ドメイン プロパティは図のドメイン クラス ボックスと DSL エクスプローラーのドメイン クラスの下に一覧表示されます。 詳細については、次を参照してください。[ドメイン固有言語の定義方法](../modeling/how-to-define-a-domain-specific-language.md)です。  
@@ -51,5 +51,5 @@ A*ドメイン プロパティ*値を保持できるモデル要素の機能で�
 |**Set アクセス操作子のアクセス修飾子**|Setter 用のアクセス修飾子。 これはプログラム コードがプロパティを設定できる範囲を制御します。|`public`|  
 |**Type**|プロパティの種類。 利用可能な種類の一覧に追加、DSL のエクスプ ローラーでの DSL のルートを右クリックし、クリックして**外部型の追加**です。|`String`|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -1,27 +1,27 @@
 ---
-title: "レガシ API を使用してテキスト バッファーにアクセスする |Microsoft ドキュメント"
-ms.custom: 
+title: レガシ API を使用してテキスト バッファーにアクセスする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - text buffers
 ms.assetid: cd6cf4ae-fff5-4e23-b293-7cbafdb8aed2
-caps.latest.revision: 
+caps.latest.revision: 15
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
 ms.openlocfilehash: 77002e095690da85e73f1a79d405cb5174b96851
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="accessing-the-text-buffer-by-using-the-legacy-api"></a>レガシ API を使用してテキスト バッファーにアクセスします。
 テキストがテキスト ストリームとファイルの永続性の管理を担当します。 バッファーの読み取りまたはその他の形式を書き込み、すべての通常の通信バッファーと Unicode を使用して実行されます。 従来の Api でテキスト バッファーは、バッファー内の文字の位置を識別するのに 1 つのまたは 2 次元座標系を使用できます。  
@@ -43,5 +43,5 @@ ms.lasthandoff: 12/22/2017
  [テキスト マネージャーを使用して、グローバル設定を監視するには](../extensibility/using-the-text-manager-to-monitor-global-settings.md)  
  テキスト マネージャーを使用して、グローバル設定を監視する方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア エディター内](../extensibility/inside-the-core-editor.md)

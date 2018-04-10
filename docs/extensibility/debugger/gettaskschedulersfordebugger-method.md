@@ -1,32 +1,32 @@
 ---
-title: "GetTaskSchedulersForDebugger メソッド |Microsoft ドキュメント"
-ms.custom: 
+title: GetTaskSchedulersForDebugger メソッド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - GetTaskSchedulersForDebugger method, TaskScheduler class [.NET Framework debug engines]
 ms.assetid: 58aa236a-5ab8-4695-b303-89dffdbcd946
-caps.latest.revision: 
+caps.latest.revision: 10
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
 ms.openlocfilehash: a2c657b7cef89871e17af442e41229c2fda0f4b7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="gettaskschedulersfordebugger-method"></a>GetTaskSchedulersForDebugger メソッド
 すべての配列を取得<xref:System.Threading.Tasks.TaskScheduler>現在アクティブなオブジェクトです。  
   
- **Namespace:**<xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
  **アセンブリ:** (mscorlib.dll) の mscorlib  
   
@@ -44,5 +44,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>コメント  
  このメソッドはスレッド セーフであるの他のインスタンスと同時に使用しないで<xref:System.Threading.Tasks.TaskScheduler>です。 デバッガーには、他のすべてのスレッドが中断されている場合にのみ、デバッガーから呼び出すことはできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [TaskScheduler クラス](../../extensibility/debugger/taskscheduler-class-internal-members.md)

@@ -1,29 +1,29 @@
 ---
-title: "IDebugPortNotify2::RemoveProgramNode |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugPortNotify2::RemoveProgramNode | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - IDebugPortNotify2::RemoveProgramNode
 helpviewer_keywords:
 - IDebugPortNotify2::RemoveProgramNode
 ms.assetid: 3668157b-66d2-416e-a359-fc04dcd18a48
-caps.latest.revision: 
+caps.latest.revision: 10
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8bd07eafde56cb9d753aeaf5911daeea9275b6a9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="idebugportnotify2removeprogramnode"></a>IDebugPortNotify2::RemoveProgramNode
 実行されているポートからデバッグできるプログラムの登録を解除します。  
@@ -52,7 +52,7 @@ int RemoveProgramNode(
 ## <a name="remarks"></a>コメント  
  このメソッドを呼び出して追加されたプログラム ノードを削除する、 [AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)メソッドです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)   
  [AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)

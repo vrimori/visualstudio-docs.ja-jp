@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 5ecc5af3c37889bc79dc5978c33caf8249433978
-ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="generate-files-with-the-texttransform-utility"></a>TextTransform ユーティリティを使用してファイルを生成します。
 
@@ -26,11 +26,11 @@ TextTransform.exe は、テキスト テンプレートを変換するのに使�
 
  TextTransform.exe は、次のディレクトリにあります。
 
- **\Program files (x86) \Microsoft Visual Studio\2017\Professional\Common7\IDE**
+ **\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE**
 
 Professional edition、または
 
- **\Program files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE**
+ **\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE**
 
  Enterprise エディションです。
 

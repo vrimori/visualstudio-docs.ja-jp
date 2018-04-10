@@ -1,32 +1,32 @@
 ---
-title: "m_stateFlags フィールド |Microsoft ドキュメント"
-ms.custom: 
+title: m_stateFlags フィールド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - m_stateFlags field, Task class [.NET Framework debug engines]
 ms.assetid: 82b20efc-08f2-4cd2-91f6-4e01e3da906b
-caps.latest.revision: 
+caps.latest.revision: 10
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
 ms.openlocfilehash: 90fd3f602e94379f1f2031cb53a5c9508df1d191
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="mstateflags-field"></a>m_stateFlags フィールド
 現在の状態に関する情報を格納、<xref:System.Threading.Tasks.Task>オブジェクト。  
   
- **Namespace:**<xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
  **アセンブリ:** (mscorlib.dll) の mscorlib  
   
@@ -53,5 +53,5 @@ ms.lasthandoff: 12/22/2017
   
 -   [TASK_STATE_RAN_TO_COMPLETION](../../extensibility/debugger/task-state-ran-to-completion-field.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Task クラス](../../extensibility/debugger/task-class-internal-members.md)

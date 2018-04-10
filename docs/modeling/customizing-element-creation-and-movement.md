@@ -1,9 +1,9 @@
 ---
-title: "要素の作成および移動をカスタマイズする |Microsoft ドキュメント"
-ms.custom: 
+title: 要素の作成および移動をカスタマイズする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 f1_keywords:
 - vs.dsltools.dsldesigner.elementmergedirective
@@ -16,10 +16,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: ac29f7b745c9698f6051bce6a7b54a1476bf8a7c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="customizing-element-creation-and-movement"></a>要素作成処理および要素移動処理のカスタマイズ
 要素にドラッグすること、ツールボックスから、または貼り付けの操作または移動を許可できます。 指定したリレーションシップを使用して移動された要素をターゲット要素にリンクされていることができます。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="defining-an-element-merge-directive"></a>要素のマージ ディレクティブを定義します。  
  ドメイン クラス、ドメインの関係、図形、コネクタ、およびダイアグラムには、要素マージ ディレクティブを追加できます。 追加したり、受信側のドメイン クラスは、DSL のエクスプ ローラーで確認できます。 受信側のクラスは、モデルでは、新規またはコピーした要素をマージするのには、既に要素のドメイン クラス。  
   
- ![DSL&#45;EMD&#95;Details](../modeling/media/dsl-emd_details.png "DSL-EMD_Details")  
+ ![DSL&#45;EMD&#95;詳細](../modeling/media/dsl-emd_details.png "DSL EMD_Details")  
   
  **インデックス クラス**を受け取るクラスのメンバーにマージできる要素のドメイン クラスです。 インデックス作成クラスのサブクラスのインスタンスもマージされますこの EMD で設定する場合を除き、**サブクラスに適用されます**を False にします。  
   
@@ -230,7 +230,7 @@ ms.lasthandoff: 02/09/2018
   
 5.  内容を調べる**Dsl\Generated Files\DomainClasses.cs**です。 という名前のメソッドの検索`MergeRelate`し、その内容を確認します。 これからは、独自のバージョンを記述できます。  
   
-6.  新しいコード ファイルで、受信側のクラスの部分クラスを記述し、上書き、`MergeRelate`メソッドです。 基本メソッドを呼び出すことに注意してください。 例:  
+6.  新しいコード ファイルで、受信側のクラスの部分クラスを記述し、上書き、`MergeRelate`メソッドです。 基本メソッドを呼び出すことに注意してください。 例えば:  
   
     ```csharp  
     partial class ExampleModel  
@@ -316,7 +316,7 @@ ms.lasthandoff: 02/09/2018
   
      利用不可のポインターは表示されませんし、新しいを削除することができます**入力ポート**既存のものにします。 新しい選択**入力ポート**の別のポイントにドラッグして、**コンポーネント**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [移動して、プログラム コードでモデルを更新します。](../modeling/navigating-and-updating-a-model-in-program-code.md)   
  [ツールと、ツールボックスのカスタマイズ](../modeling/customizing-tools-and-the-toolbox.md)   
  [回路図サンプル DSL](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)

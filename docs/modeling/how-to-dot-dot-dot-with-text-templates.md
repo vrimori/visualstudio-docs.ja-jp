@@ -1,9 +1,9 @@
 ---
-title: "テキスト テンプレートを使用する方法 |Microsoft ドキュメント"
-ms.custom: 
+title: テキスト テンプレートを使用する方法 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 47824561813dfc422dfb19460f1c90f7ed78d1ad
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="how-to--with-text-templates"></a>方法: テキスト テンプレートを使用する
 テキスト テンプレートで[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]任意の種類のテキストを生成する便利な方法を提供します。 テキスト テンプレートを使用すると、実行時に、アプリケーションの一部として、プロジェクト コードの一部を生成するのにデザイン時にテキストを生成します。 このトピックの内容をまとめたもの、最も頻繁に寄せられる「操作方法...」 問題があります。  
@@ -73,14 +73,14 @@ ms.lasthandoff: 02/09/2018
   
 ### <a name="generate-files-from-a-complex-model"></a>複雑なモデルからファイルを生成します。  
   
--   ドメイン固有言語 (DSL) を表す、モデルを作成することを検討します。 これはより簡単、テンプレートを記述する型と、モデル内の要素の名前を反映するプロパティを使用するためです。 ファイルを解析するか、XML ノード間を移動する必要はありません。 例:  
+-   ドメイン固有言語 (DSL) を表す、モデルを作成することを検討します。 これはより簡単、テンプレートを記述する型と、モデル内の要素の名前を反映するプロパティを使用するためです。 ファイルを解析するか、XML ノード間を移動する必要はありません。 例えば:  
   
      `foreach (Book book in this.Library) { ... }`  
   
      詳細については、次を参照してください。[ドメイン固有言語の使用を開始する](../modeling/getting-started-with-domain-specific-languages.md)と[ドメイン固有言語から、コードの生成](../modeling/generating-code-from-a-domain-specific-language.md)です。  
   
-### <a name="get-data-from-includevsprvscode-qualityincludesvsprvsmdmd"></a>データを取得します。[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]  
- 提供されるサービスを使用する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、セットで、`hostSpecific`属性と負荷、`EnvDTE`アセンブリ。 例:  
+### <a name="get-data-from-includevsprvscode-qualityincludesvsprvsmdmd"></a>データを取得します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]  
+ 提供されるサービスを使用する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、セットで、`hostSpecific`属性と負荷、`EnvDTE`アセンブリ。 例えば:  
   
 ```csharp  
 <#@ template hostspecific="true" language="C#" #>  
@@ -101,7 +101,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
   
 ## <a name="more-general-questions"></a>一般的な質問  
   
-###  <a name="starting"></a>テキスト テンプレートの作成を開始する最善の方法とは何ですか。  
+###  <a name="starting"></a> テキスト テンプレートの作成を開始する最善の方法とは何ですか。  
   
 1.  生成されたファイルの具体的な例を記述します。  
   

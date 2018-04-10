@@ -1,10 +1,10 @@
 ---
-title: "WPF および Entity Framework 6 の単純なデータ アプリケーションを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: WPF および Entity Framework 6 の単純なデータ アプリケーションを作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/22/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - CSharp
@@ -15,10 +15,10 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: 394dbf9aba422f8fbf16857d6980a53b353e931a
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>WPF と Entity Framework 6 の単純なデータ アプリケーションを作成します。
 
@@ -118,7 +118,7 @@ ms.lasthandoff: 01/23/2018
         </Grid.RowDefinitions>
     ```
 
-5.  デザイナーで表示しているように MainWindow.xaml を開くようになりました。 これにより、Visual Studio ウィンドウの余白にツールボックスの横にある、オプションとして表示するデータ ソース ウィンドウ。 ウィンドウが開き、またはそれ以外の場合キーを押して タブをクリックして**Shift + Alt + D**かを選択して**ビュー &#124;です。その他の Windows &#124;です。データ ソース**です。 独自の個々 のテキスト ボックスに顧客クラス内の各プロパティを表示しようとしています。 最初に顧客のコンボ ボックスの下向き矢印をクリックし、選択**詳細**です。 中間の行に移動すると、デザイナーが認識できるようにデザイン サーフェイスの中央部にノードをドラッグします。  これを紛失した場合は、XAML で後から手動で行を指定できます。 既定では、グリッド要素では、コントロールが垂直方向に配置されますが、この時点でする位置に配置して、フォーム上と同様にします。  たとえば、賢明かもしれませんアドレス上の上部に [名前] ボックスを配置します。 この記事のサンプル アプリケーションは、フィールドの順序を変更し、それら 2 つの列を並べ替えます。  
+5.  デザイナーで表示しているように MainWindow.xaml を開くようになりました。 これにより、Visual Studio ウィンドウの余白にツールボックスの横にある、オプションとして表示するデータ ソース ウィンドウ。 ウィンドウが開き、またはそれ以外の場合キーを押して タブをクリックして**Shift + Alt + D**かを選択して**ビュー&#124;その他のウィンドウ&#124;データソース**です。 独自の個々 のテキスト ボックスに顧客クラス内の各プロパティを表示しようとしています。 最初に顧客のコンボ ボックスの下向き矢印をクリックし、選択**詳細**です。 中間の行に移動すると、デザイナーが認識できるようにデザイン サーフェイスの中央部にノードをドラッグします。  これを紛失した場合は、XAML で後から手動で行を指定できます。 既定では、グリッド要素では、コントロールが垂直方向に配置されますが、この時点でする位置に配置して、フォーム上と同様にします。  たとえば、賢明かもしれませんアドレス上の上部に [名前] ボックスを配置します。 この記事のサンプル アプリケーションは、フィールドの順序を変更し、それら 2 つの列を並べ替えます。  
   
      ![お客様のデータ ソースのバインドを個別のコントロール](../data-tools/media/raddata-customers-data-source-binding-to-individual-controls.png "raddata 顧客のデータ ソース バインドを個別のコントロール")  
   

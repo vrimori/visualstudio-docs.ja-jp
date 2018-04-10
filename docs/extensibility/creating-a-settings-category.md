@@ -1,27 +1,27 @@
 ---
-title: "設定のカテゴリを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 設定のカテゴリを作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - profile settings, creating categories
 ms.assetid: 97c88693-05ff-499e-8c43-352ee073dcb7
-caps.latest.revision: 
+caps.latest.revision: 39
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
 ms.openlocfilehash: 2bdf3231f2df8b3700c7865fa53e60003b814a5f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="creating-a-settings-category"></a>設定のカテゴリを作成します。
 このチュートリアルでは、Visual Studio の設定のカテゴリを作成し、使用して値を保存および設定ファイルから値を復元します。 設定のカテゴリは「カスタム設定ポイント」; として表示される関連するプロパティのグループつまりのチェック ボックスと、**インポートおよびエクスポート設定**ウィザード。 (上で見つけられる、**ツール**メニューです)。設定が保存または復元をカテゴリとして、個々 の設定は、ウィザードでは表示されません。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  このチュートリアルを開始するの最初のセクションを完了する必要がありますまず[オプション ページを作成する](../extensibility/creating-an-options-page.md)です。 結果として得られるオプションのプロパティ グリッドを確認し、カテゴリのプロパティを変更することができます。 プロパティのカテゴリの設定ファイルを保存した後は、プロパティの値を格納する方法を参照してください。 ファイルを確認します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="creating-a-settings-category"></a>設定のカテゴリを作成します。  
  このセクションでは、カスタム設定ポイントを使用するを保存し、[設定] カテゴリの値を復元します。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  VSPackage.resx ファイルを開き、これらの 3 つの文字列リソースを追加します。  
   
-    |name|[値]|  
+    |名前|[値]|  
     |----------|-----------|  
     |106|カテゴリ|  
     |107|自分の設定|  

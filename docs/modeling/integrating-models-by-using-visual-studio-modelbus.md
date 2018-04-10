@@ -1,9 +1,9 @@
 ---
-title: "Visual Studio Modelbus を使用して、モデルの統合 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio Modelbus を使用して、モデルの統合 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 92be17ab117a1c76456180cbb40a9b1d77f9181c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="integrating-models-by-using-visual-studio-modelbus"></a>Visual Studio Modelbus によるモデルの統合
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus は、モデルにモデルの間でおよびその他のツールからのリンクを作成する方法を提供します。 たとえば、ドメイン固有言語 (DSL) モデルおよび UML モデルを関連付けることができます。 DSL の統合セットを作成できます。  
@@ -33,10 +33,10 @@ ms.lasthandoff: 02/09/2018
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
   
-##  <a name="provide"></a>DSL にアクセスするため  
+##  <a name="provide"></a> DSL にアクセスするため  
  モデルまたはその要素への ModelBus 参照を作成するには、DSL の ModelBusAdapter を定義しておく必要があります。 そのための最も簡単な方法は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] モデル バス拡張機能を使用して、コマンドを DSL デザイナーに追加することです。  
   
-###  <a name="expose"></a>DSL 定義を次のモデル バスを公開するには  
+###  <a name="expose"></a> DSL 定義を次のモデル バスを公開するには  
   
 1.  Visual Studio モデル バス拡張機能をまだインストールしていない場合はダウンロードしてインストールします。 詳細については、次を参照してください。 [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=185579)です。  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/09/2018
  フォルダー `ModelBusAdapters\bin\*` には、`Dsl` プロジェクトと `ModelBusAdapters` プロジェクトによりビルドされるアセンブリが含まれます。 この DSL を別の DSL から参照するには、これらのアセンブリをインポートする必要があります。  
   
 ### <a name="making-sure-that-elements-can-be-referenced"></a>要素が参照可能であることの確認  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus アダプターは、既定では、それを識別するのに要素の guid を使用します。 したがって、これらの ID はモデル ファイル内に保持される必要があります。  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus アダプターは、既定では、要素を特定するためにその GUID を使用します。 したがって、これらの ID はモデル ファイル内に保持される必要があります。  
   
 ##### <a name="to-ensure-that-element-ids-are-persisted"></a>要素 ID が保持されることを確認するには  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 02/09/2018
   
 -   `ResolveElementReference` をオーバーライドし、モデル バス参照から正しい要素を特定します。  
   
-##  <a name="editRef"></a>DSL 別 DSL からへのアクセス  
+##  <a name="editRef"></a> DSL 別 DSL からへのアクセス  
  DSL のドメイン プロパティにモデル バス参照を保存し、それらを使用するカスタム コードを作成できます。 ユーザーがモデル ファイルとその中の要素を選択することにより、モデル バス参照を作成可能にすることもできます。  
   
  別の DSL への参照を使用する DSL には、する必要があります最初に、*コンシューマー*のモデル バス参照します。  
@@ -144,7 +144,7 @@ ms.lasthandoff: 02/09/2018
 3.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験インスタンスのデバッグ プロジェクトで、各 DSL のインスタンスであるファイルを追加します。  
   
     > [!NOTE]
-    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus が同じアイテムであるモデルへの参照を解決できるだけ[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューションです。 たとえば、ファイル システムの別の部分にあるモデル ファイルへの参照は作成できません。  
+    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus は、同じ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューション内の項目である、モデルへの参照のみを解決できます。 たとえば、ファイル システムの別の部分にあるモデル ファイルへの参照は作成できません。  
   
 4.  公開される DSL のインスタンス内に要素とリンクを作成し、インスタンスを保存します。  
   
@@ -510,7 +510,7 @@ private const string INVALID_REF_FORMAT =
   
 -   **DslPackage\source.extention.tt**、 `|ModelBusAdapter|` MEF コンポーネントとして追加されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: プログラム コード内のファイルからモデルを開く](../modeling/how-to-open-a-model-from-file-in-program-code.md)   
  [方法: ドラッグ アンド ドロップのハンドラーを追加](../modeling/how-to-add-a-drag-and-drop-handler.md)   
  [テキスト テンプレートでの Visual Studio ModelBus の使用](../modeling/using-visual-studio-modelbus-in-a-text-template.md)

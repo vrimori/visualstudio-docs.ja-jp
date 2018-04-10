@@ -1,29 +1,29 @@
 ---
-title: "IDebugPortEvents2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugPortEvents2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - IDebugPortEvents2
 helpviewer_keywords:
 - IDebugPortEvents2 interface
 ms.assetid: 2c017094-3ba2-4067-83f9-147df1d96bce
-caps.latest.revision: 
+caps.latest.revision: 18
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0a5782f0a50ac37b45c4b7e3402bcdded96b4683
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="idebugportevents2"></a>IDebugPortEvents2
 このインターフェイスは、プロセスとプログラムの作成と破棄、特定のポートでのリスナー (通常、セッション デバッグ マネージャー [SDM] またはデバッグ エンジン) を通知します。 この情報は、プロセスとポートで実行されているプログラムのリアルタイム ビューを表示する使用できます。  
@@ -48,17 +48,17 @@ IDebugPortEvents2 : IUnknown
 |[Event](../../../extensibility/debugger/reference/idebugportevents2-event.md)|作成とプロセスと、ポート上のプログラムの破棄を説明するイベントを送信します。|  
   
 ## <a name="remarks"></a>コメント  
- `IDebugPortEvents2`使用されますが、SDM は既にデバッグ中のプロセスで実行されるプログラムをデバッグします。  
+ `IDebugPortEvents2` 使用されますが、SDM は既にデバッグ中のプロセスで実行されるプログラムをデバッグします。  
   
  ポート イベントは、このインターフェイスで、SDM に渡されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

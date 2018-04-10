@@ -1,32 +1,32 @@
 ---
-title: "m_children フィールド |Microsoft ドキュメント"
-ms.custom: 
+title: m_children フィールド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - m_children field, ContingentProperties class [.NET Framework debug engines]
 ms.assetid: 0a3b5653-7bc0-4a7a-8963-9020bc52b9cb
-caps.latest.revision: 
+caps.latest.revision: 12
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
 ms.openlocfilehash: 59848b177b4bfaccba2d5f2e5771a08ec0bc060a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="mchildren-field"></a>m_children フィールド
 このタスクに登録されている子タスクの一覧。  
   
- **Namespace:**<xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
  **アセンブリ:** (mscorlib.dll) の mscorlib  
   
@@ -43,5 +43,5 @@ ms.lasthandoff: 12/22/2017
   
  タスクが完了した場合、他のスレッドには何も追加または、これからすべてを削除するしないでくださいがない限りこのフィールドにアクセスすることができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ContingentProperties クラス](../../extensibility/debugger/contingentproperties-class-internal-members.md)

@@ -32,10 +32,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: aea44beeb2a8e6380bd9a568acdece79873e3050
-ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="map-dependencies-across-your-solutions"></a>ソリューション間の依存関係をマップする
 
@@ -287,7 +287,7 @@ ms.lasthandoff: 03/28/2018
 ##  <a name="SeeSourceHeader"></a> C および C++ のソース ファイルとヘッダー ファイルの間の依存関係の表示  
  C++ プロジェクトのより完全なマップを作成する場合は、そのプロジェクトに対してブラウザー情報のコンパイラ オプション (**/FR**) を設定します。 設定されていない場合は、メッセージが表示され、このオプションを設定することが求められます。 **[OK]**を選択した場合、このオプションは現在のマップに対してのみ設定されます。 以後のすべてのマップについて、メッセージを非表示にするように選択できます。 このメッセージを非表示にしても、再び表示されるようにできます。 次のレジストリ キーを `0` に設定するか、削除します。  
 
- **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\NativeProvider : AutoEnableSbr**  
+ **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\NativeProvider: AutoEnableSbr**  
 
  Visual C++ のプロジェクトを含むソリューションを開くときは、IntelliSense データベースの更新に時間がかかる場合があります。 この間は、IntelliSense データベースの更新が終了するまで、ヘッダー (.h または `#include`) ファイルのコード マップを生成できない場合があります。 更新の進行状況は、Visual Studio のステータス バーで監視できます。 IntelliSense の特定の設定が無効になっているために表示されるメッセージまたは問題を解決するには、「 [C および C++ コードのマップのトラブルシューティング](#Troubleshooting)」を参照してください。  
 

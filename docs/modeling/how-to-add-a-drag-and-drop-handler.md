@@ -1,9 +1,9 @@
 ---
-title: "方法: ドラッグ アンド ドロップのハンドラーを追加 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ドラッグ アンド ドロップのハンドラーを追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 61eff22f3a666f067f4a1eddd8ecab84429fea21
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>方法: ドラッグ アンド ドロップ ハンドラーを追加する
 ドラッグ アンド ドロップ イベントのハンドラーを DSL に追加し、ユーザーが他の図または [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の他の部分から項目を図の上にドラッグ可能にすることができます。 ダブルクリックなどのイベントのハンドラーを追加することもできます。 、ドラッグ アンド ドロップおよびダブルクリック ハンドラーと呼ばれる*ジェスチャ ハンドラー*です。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [マウス操作の使用: コンパートメントの項目をドラッグする](#mouseActions)です。 このサンプルでは、図形のフィールドでのマウス操作をインターセプトする下位のハンドラーを示します。 この例でユーザーはマウスを使用してドラッグすることで、コンパートメント内の項目を並べ替えることができます。  
   
-##  <a name="overrideShapeElement"></a>ShapeElement メソッドをオーバーライドしてジェスチャ ハンドラーを定義します。  
+##  <a name="overrideShapeElement"></a> ShapeElement メソッドをオーバーライドしてジェスチャ ハンドラーを定義します。  
  新しいコード ファイルを DSL プロジェクトに追加します。 ジェスチャ ハンドラーに対して、通常、少なくとも次の `using` ステートメントを含める必要があります。  
   
 ```csharp  
@@ -64,7 +64,7 @@ using System.Linq;
   
     ```  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A>-このメソッドは、ユーザー、マウス ボタンを離したときに、マウス ポインターがこの図形または図では、上場合場合`OnDragOver(DiagramDragEventArgs e)`以前に設定された`e.Effect`以外の値を`None`です。  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A> -このメソッドは、ユーザー、マウス ボタンを離したときに、マウス ポインターがこの図形または図では、上場合場合`OnDragOver(DiagramDragEventArgs e)`以前に設定された`e.Effect`以外の値を`None`です。  
   
     ```csharp  
     public override void OnDragDrop(DiagramDragEventArgs e)  
@@ -81,13 +81,13 @@ using System.Linq;
   
     ```  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A>-このメソッドは図形または図に、ユーザーがダブルクリックしたときに呼び出されます。  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> -このメソッドは図形または図に、ユーザーがダブルクリックしたときに呼び出されます。  
   
      詳細については、次を参照してください。[する方法: 図形またはデコレーターのクリックをインターセプト](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)です。  
   
  `IsAcceptableDropItem(e)` を定義してドラッグした項目が受け入れられるかどうかを決定し、ProcessDragDropItem(e) を定義して項目がドロップされたときにモデルを更新します。 これらのメソッドは、最初にイベント引数から項目を抽出する必要があります。 実行する方法については、次を参照してください。[ドラッグされた項目への参照を取得する方法](#extracting)です。  
   
-##  <a name="MEF"></a>MEF を使用してジェスチャ ハンドラーを定義します。  
+##  <a name="MEF"></a> MEF を使用してジェスチャ ハンドラーを定義します。  
  MEF (Managed Extensibility Framework) を使用して、最小構成でインストール可能なコンポーネントを定義できます。 詳しくは、「[Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)」を参照してください。  
   
 #### <a name="to-define-a-mef-gesture-handler"></a>MEF ジェスチャ ハンドラーを定義するには  
@@ -130,22 +130,22 @@ using System.Linq;
   
 3.  ターゲットの図形、コネクタ、または図クラスに対して部分クラス定義を追加し、`IsAcceptableDropItem()` メソッドおよび `ProcessDragDropItem()` メソッドを定義します。 これらのメソッドでは、最初にイベント引数からドラッグした項目を抽出する必要があります。 詳細については、次を参照してください。[ドラッグされた項目への参照を取得する方法](#extracting)です。  
   
-##  <a name="extracting"></a>ドラッグしたアイテムをデコードする方法  
+##  <a name="extracting"></a> ドラッグしたアイテムをデコードする方法  
  ユーザーが項目を図にドラッグしたり、図のある部分から別の部分にドラッグしたりするとき、ドラッグしている項目に関する情報は `DiagramDragEventArgs` で使用可能です。 ドラッグ操作は画面上の任意のオブジェクトで始まる可能性があるので、データはさまざまな形式で使用できます。 作成するコードは処理可能な形式を認識する必要があります。  
   
  ドラッグ ソース情報が使用可能な形式を見つけるには、コードをデバッグ モードで実行し、ブレークポイントを `OnDragOver()` または `CanDragDrop()` のエントリに設定します。 `DiagramDragEventArgs` パラメーターの値を確認します。 情報は次の 2 つの形式で提供されます。  
   
--   <xref:System.Windows.Forms.IDataObject>  `Data`-このプロパティは、1 つ以上の形式で通常はソース オブジェクトのシリアル化されたバージョンを実行します。 最も有用な関数は次のとおりです。  
+-   <xref:System.Windows.Forms.IDataObject>  `Data` -このプロパティは、1 つ以上の形式で通常はソース オブジェクトのシリアル化されたバージョンを実行します。 最も有用な関数は次のとおりです。  
   
     -   diagramEventArgs.Data.GetDataFormats() - をドラッグしたオブジェクトをデコードできる形式を示します。 たとえば、ユーザーがデスクトップからファイルをドラッグした場合、使用可能な形式にはファイル名 ("`FileNameW`") が含まれます。  
   
-    -   `diagramEventArgs.Data.GetData(format)`-指定された形式でドラッグされたオブジェクトをデコードします。 オブジェクトを適切な型にキャストします。 次に例を示します。  
+    -   `diagramEventArgs.Data.GetData(format)` -指定された形式でドラッグされたオブジェクトをデコードします。 オブジェクトを適切な型にキャストします。 次に例を示します。  
   
          `string fileName = diagramEventArgs.Data.GetData("FileNameW") as string;`  
   
          ソースからモデル バス参照などのオブジェクトを独自のカスタム形式で転送することもできます。 詳細については、次を参照してください。[ドラッグ アンド ドロップのモデル バス参照を送信する方法](#mbr)です。  
   
--   <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>`Prototype` -ユーザーが、DSL または UML モデルから項目をドラッグする場合は、このプロパティを使用します。 1 つの要素グループ プロトタイプには 1 つ以上のオブジェクト、リンク、およびそれらのプロパティ値が含まれます。 これは貼り付け操作やツールボックスから要素を追加する際にも使用されます。 プロトタイプ内のオブジェクトとそれらの種類は GUID により識別されます。 たとえば、次のコードを使用して、ユーザーはクラス要素を UML 図または UML モデル エクスプローラーからドラッグできます。  
+-   <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> `Prototype` -ユーザーが、DSL または UML モデルから項目をドラッグする場合は、このプロパティを使用します。 1 つの要素グループ プロトタイプには 1 つ以上のオブジェクト、リンク、およびそれらのプロパティ値が含まれます。 これは貼り付け操作やツールボックスから要素を追加する際にも使用されます。 プロトタイプ内のオブジェクトとそれらの種類は GUID により識別されます。 たとえば、次のコードを使用して、ユーザーはクラス要素を UML 図または UML モデル エクスプローラーからドラッグできます。  
   
     ```csharp  
     private bool IsAcceptableDropItem(DiagramDragEventArgs e)  
@@ -162,7 +162,7 @@ using System.Linq;
   
  `DiagramDragEventArgs` には、現在のマウス ポインターの位置およびユーザーが CTRL、ALT、SHIFT のうちどのキーを押したのかを示すプロパティも含まれます。  
   
-##  <a name="getOriginal"></a>ドラッグされた要素の元のファイルを取得する方法  
+##  <a name="getOriginal"></a> ドラッグされた要素の元のファイルを取得する方法  
  イベント引数の `Data` プロパティおよび `Prototype` プロパティはドラッグした図形への参照のみを含みます。 通常、いずれかの方法でプロトタイプから派生するオブジェクトをターゲット DSL で作成する場合、元の項目へのアクセス、たとえば、ファイル内容の読み取りまたは図形により表されるモデル要素への移動などを取得する必要があります。  この処理には Visual Studio モデル バスを使用できます。  
   
 ### <a name="to-prepare-a-dsl-project-for-model-bus"></a>モデル バス用の DSL プロジェクトを準備するには  
@@ -175,7 +175,7 @@ using System.Linq;
   
     3.  をクリックして**すべてのテンプレートの変換**ソリューションをリビルドします。  
   
-###  <a name="mbr"></a>DSL のソースからオブジェクトを送信するには  
+###  <a name="mbr"></a> DSL のソースからオブジェクトを送信するには  
   
 1.  ElementOperations サブクラスで、`Copy()` をオーバーライドし、モデル バス参照 (MBR) を IDataObject にエンコードします。 このメソッドは、ユーザーがソース図からドラッグを開始するときに呼び出されます。 エンコードされた MBR は、ユーザーがターゲット図でドロップしたときに、IDataObject で使用可能になります。  
   
@@ -335,7 +335,7 @@ using System.Linq;
   
     ```  
   
-##  <a name="mouseActions"></a>コンパートメントの項目をドラッグするマウス操作を使用します。  
+##  <a name="mouseActions"></a> コンパートメントの項目をドラッグするマウス操作を使用します。  
  図形のフィールドでのマウス操作を傍受したハンドラーを記述することができます。 次の例でユーザーはマウスを使用してドラッグすることで、コンパートメント内の項目を並べ替えることができます。  
   
  この例をビルドするを使用してソリューションを作成、**クラス ダイアグラム**ソリューション テンプレート。 コード ファイルを追加し、次のコードを追加します。 名前空間を調整して独自の名前空間と同じにします。  
@@ -586,7 +586,7 @@ namespace Company.CompartmentDrag  // EDIT.
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コピーの動作をカスタマイズします。](../modeling/customizing-copy-behavior.md)   
  [ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)
  

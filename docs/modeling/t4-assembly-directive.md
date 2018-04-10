@@ -1,9 +1,9 @@
 ---
-title: "T4 アセンブリ ディレクティブ |Microsoft ドキュメント"
-ms.custom: 
+title: T4 アセンブリ ディレクティブ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 9f586931bd14089beca787c24d92bc2605c4d5de
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="t4-assembly-directive"></a>T4 アセンブリ ディレクティブ
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のデザイン時テキスト テンプレートでは、テンプレート コードでアセンブリの型を使用できるように、`assembly` ディレクティブによってアセンブリが読み込まれます。 結果は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトでアセンブリ参照を追加した場合と同様です。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/09/2018
   
 -   アセンブリの絶対パス。  
   
- `$(variableName)` 構文を使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の変数 (`$(SolutionDir)` など) を参照し、`%VariableName%` を使用して環境変数を参照できます。 例:  
+ `$(variableName)` 構文を使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の変数 (`$(SolutionDir)` など) を参照し、`%VariableName%` を使用して環境変数を参照できます。 例えば:  
   
 ```  
 <#@ assembly name="$(SolutionDir)\MyProject\bin\Debug\SomeLibrary.Dll" #>  
@@ -65,7 +65,7 @@ ms.lasthandoff: 02/09/2018
   
 -   DSL を含むアセンブリ  
   
-##  <a name="msbuild"></a>MSBuild および Visual Studio の両方でのプロジェクト プロパティの使用  
+##  <a name="msbuild"></a> MSBuild および Visual Studio の両方でのプロジェクト プロパティの使用  
  Visual Studio のマクロ $ (solutiondir) などは、MSBuild で動作しません。 ビルド コンピューターでテンプレートを変換する場合、代わりにプロジェクトのプロパティを使用する必要があります。  
   
  .csproj ファイルまたは .vbproj ファイルを編集してプロジェクトのプロパティを定義します。 この例では、`myLibFolder` という名前のプロパティを定義します。  
@@ -91,5 +91,5 @@ ms.lasthandoff: 02/09/2018
 <#@ assembly name="$(myLibFolder)\MyLib.dll" #>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [T4 インクルード ディレクティブ](../modeling/t4-include-directive.md)

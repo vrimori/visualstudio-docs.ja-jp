@@ -1,29 +1,29 @@
 ---
-title: "IDebugPort2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugPort2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - IDebugPort2
 helpviewer_keywords:
 - IDebugPort2 interface
 ms.assetid: 8fd87f05-a950-4d14-b925-98be29d4facc
-caps.latest.revision: 
+caps.latest.revision: 13
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
 ms.openlocfilehash: 91ee83167c681b713ea7d7a51a38d45b05fba4d2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="idebugport2"></a>IDebugPort2
 このインターフェイスは、コンピューター上のデバッグ ポートを表します。  
@@ -57,14 +57,14 @@ IDebugPort2 : IUnknown
 ## <a name="remarks"></a>コメント  
  ローカル ポートは、すべてのプロセスと、ローカル コンピューターで実行中のプログラムへのアクセスを提供します。 Windows CE ベースのデバイスへの接続をシリアル ケーブルまたはネットワーク コンピューターへの接続は DCOM 以外、他のポートを表す場合があります。 `IDebugPort2`名前と識別子、ポートの列挙、ポートで実行されているすべてのプロセスを検索して起動すると、ポート上のプロセスを終了して機能を提供するインターフェイスを使用します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)   
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

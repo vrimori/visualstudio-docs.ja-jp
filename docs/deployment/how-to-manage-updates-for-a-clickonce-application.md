@@ -1,12 +1,12 @@
 ---
-title: "方法: ClickOnce アプリケーションの更新プログラムの管理 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ClickOnce アプリケーションの更新プログラムの管理 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-deployment
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - Microsoft.VisualStudio.Publish.ClickOnceProvider.Dialog.Update
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - updating data, ClickOnce
 - application updates
 ms.assetid: a3f23f05-e7f1-4620-b23c-2d68f9643684
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevehoag
 ms.author: shoag
 manager: wpickett
 ms.workload:
 - multiple
 ms.openlocfilehash: f239f13a7dcefe0ce6f2bf8c12c641e97a48ce26
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="how-to-manage-updates-for-a-clickonce-application"></a>方法 : ClickOnce アプリケーションの更新プログラムを管理する
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは、プログラムによってまたは自動的に更新プログラムを確認できます。 開発者は、多数の更新チェックを実行する時期と方法、更新プログラムを必須かどうか、および更新プログラム、アプリケーションをどこで確認する必要がありますを指定することで柔軟性があります。  
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションは、プログラムによってまたは自動的に更新プログラムを確認できます。 開発者は、多数の更新チェックを実行する時期と方法、更新プログラムを必須かどうか、および更新プログラム、アプリケーションをどこで確認する必要がありますを指定することで柔軟性があります。  
   
  アプリケーションの起動後に自動的に開始する前に、アプリケーション、または、設定された間隔で更新プログラムをチェックするアプリケーションを構成することができます。 さらに、最低限の必要なバージョンを指定できます。つまり、ユーザーのバージョンが必要なバージョンより低い場合、更新プログラムがインストールされます。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  **アプリケーションの更新プログラム** ダイアログ ボックスで、ことを確認して、**アプリケーションの更新プログラムを確認する必要があります** チェック ボックスをオンします。  
   
-5.  **アプリケーションの更新プログラムを確認する必要があります** セクションで、**アプリケーションを開始する前に**です。 これにより、常にネットワークに接続しているユーザーが最新の更新プログラム、アプリケーションを実行します。  
+5.  **アプリケーションの更新プログラムを確認する必要があります **セクションで、**アプリケーションを開始する前に**です。 これにより、常にネットワークに接続しているユーザーが最新の更新プログラム、アプリケーションを実行します。  
   
 ### <a name="to-check-for-updates-in-the-background-after-the-application-starts"></a>アプリケーションの起動後に、バック グラウンドで更新をチェックするには  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  **アプリケーションの更新プログラム** ダイアログ ボックスで、ことを確認して、**アプリケーションの更新プログラムを確認する必要があります** チェック ボックスをオンします。  
   
-5.  **の場所を更新**フィールドに「書式 http://Hostname/ApplicationName または形式を使用して UNC パスを使用して、完全修飾 URL を使用して更新プログラムの場所\\\Server\ApplicationName、クリックして、または**参照**更新プログラムの場所を参照するボタンをクリックします。  
+5.  **の場所を更新**フィールドに、形式を使用して、完全修飾 URL を使用して更新プログラムの場所を入力http://Hostname/ApplicationName、または UNC パスを形式を使用して\\\Server\ApplicationName、またはをクリックして、 **を参照**更新プログラムの場所を参照するボタンをクリックします。  
   
 ### <a name="to-check-for-updates-programmatically"></a>プログラムで更新プログラムを確認するには  
   
@@ -105,13 +105,13 @@ ms.lasthandoff: 12/22/2017
   
 4.  **アプリケーションの更新プログラム** ダイアログ ボックスで、ことを確認して、**アプリケーションの更新プログラムを確認する必要があります** チェック ボックスをオフします。 (必要に応じて、更新プログラムでと、更新プログラムを自動的にチェック ClickOnce ランタイムのチェックには、このチェック ボックスをオンことができます)。  
   
-5.  **の場所を更新**フィールドに「書式 http://Hostname/ApplicationName または形式を使用して UNC パスを使用して、完全修飾 URL を使用して更新プログラムの場所\\\Server\ApplicationName、クリックして、または**参照**更新プログラムの場所を参照するボタンをクリックします。 更新プログラムの場所は、アプリケーション自体の更新バージョンを検索する場所です。  
+5.  **の場所を更新**フィールドに、形式を使用して、完全修飾 URL を使用して更新プログラムの場所を入力http://Hostname/ApplicationName、または UNC パスを形式を使用して\\\Server\ApplicationName、またはをクリックして、 **を参照**更新プログラムの場所を参照するボタンをクリックします。 更新プログラムの場所は、アプリケーション自体の更新バージョンを検索する場所です。  
   
 6.  ユーザーが更新プログラムを確認するには、次のように選択する Windows フォーム上のボタン、メニュー項目、またはその他のユーザー インターフェイス項目を作成します。 その項目のイベント ハンドラーからメソッドを呼び出しての確認し、更新プログラムをインストールします。 このようなメソッド用の Visual Basic および Visual c# のコードの例があります[する方法: ClickOnce 配置 API をアプリケーションの更新プログラムを使用したプログラムの確認](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)です。  
   
 7.  アプリケーションをビルドします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.Deployment.Application.ApplicationDeployment>   
  [アプリケーションの更新 ダイアログ ボックス](http://msdn.microsoft.com/en-us/8eca8743-8e68-4d04-bfd5-4dc0a9b2934f)   
  [ClickOnce の更新方法の選択](../deployment/choosing-a-clickonce-update-strategy.md)   

@@ -1,33 +1,33 @@
 ---
-title: "レガシ API を使用してビューの設定を変更する |Microsoft ドキュメント"
-ms.custom: 
+title: レガシ API を使用してビューの設定を変更する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - changing view settings
 ms.assetid: 12c9b300-0894-4124-96a1-764326176d77
-caps.latest.revision: 
+caps.latest.revision: 18
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
 ms.openlocfilehash: dc68bf5f8a0e61b80200cd5454b78bcdda78cdfe
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="changing-view-settings-by-using-the-legacy-api"></a>レガシ API を使用してビューの設定を変更します。
-ワード ラップ、マージン、および仮想の領域などのコア エディター機能の設定は、のユーザーによって変更できます、**オプション** ダイアログ ボックス。 ただし、これらの設定を変更することはもプログラムでします。  
+ワード ラップ、マージン、および仮想の領域などのコア エディター機能の設定は、のユーザーによって変更できます、**オプション**] ダイアログ ボックス。 ただし、これらの設定を変更することはもプログラムでします。  
   
 ## <a name="changing-settings-by-using-the-legacy-api"></a>レガシ API を使用して設定を変更します。  
- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer>インターフェイスは、一連のテキスト エディターのプロパティを公開します。 テキスト ビューには、テキスト ビューの変更をプログラムで設定のグループを表すプロパティ (GUID_EditPropCategory_View_MasterSettings) のカテゴリが含まれています。 ビューの設定は、この方法で変更されたが後で変更できません、**オプション**リセットされるまで ダイアログ ボックス。  
+ <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer>インターフェイスは、一連のテキスト エディターのプロパティを公開します。 テキスト ビューには、テキスト ビューの変更をプログラムで設定のグループを表すプロパティ (GUID_EditPropCategory_View_MasterSettings) のカテゴリが含まれています。 ビューの設定は、この方法で変更されたが後で変更できません、**オプション**リセットされるまで] ダイアログ ボックス。  
   
  コア エディターのインスタンスの表示設定を変更するための一般的なプロセスを次に示します。  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  呼び出す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer.GetPropertyCategory%2A>の GUID_EditPropCategory_View_MasterSettings の値を指定して、メソッド、`rguidCategory`パラメーター。  
   
-     ポインターを返しますこれを行う、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer>インターフェイスで、ビューの強制のプロパティのセットが含まれています。 このグループ内のすべての設定を完全に求められます。 設定は、このグループに含まれないかどうかで指定されたオプションに従います、**オプション** ダイアログ ボックスまたはユーザーのコマンド。  
+     ポインターを返しますこれを行う、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer>インターフェイスで、ビューの強制のプロパティのセットが含まれています。 このグループ内のすべての設定を完全に求められます。 設定は、このグループに含まれないかどうかで指定されたオプションに従います、**オプション**] ダイアログ ボックスまたはユーザーのコマンド。  
   
 3.  呼び出す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A>で適切な設定値を指定して、メソッド、`idprop`パラメーター。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  コア エディターの設定が変更されたすべてを一度に削除する VSEDITPROPID_ViewComposite_AllCodeWindowDefaults の vt の値を指定、`idprop`パラメーター。 この呼び出しで vt 型 VT_BOOL のバリアント、vt.boolVal VARIANT_TRUE です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア エディター内](../extensibility/inside-the-core-editor.md)   
  [レガシ API を使用してテキスト ビューにアクセスします。](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)   
  [[オプション] ダイアログ ボックス](../ide/reference/options-dialog-box-visual-studio.md)

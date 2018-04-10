@@ -1,9 +1,9 @@
 ---
-title: "コピーの動作をカスタマイズする |Microsoft ドキュメント"
-ms.custom: 
+title: コピーの動作をカスタマイズする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: f8eba726c35b402e93bd1fd1b50048b8dce4bf2b
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="customizing-copy-behavior"></a>コピー動作のカスタマイズ
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK を使用して作成したドメイン固有言語 (DSL) で、ユーザーが要素のコピーと貼り付けを実行する際の動作を変更できます。  
@@ -216,7 +216,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
  **ユーザーがドラッグ アンド ドロップの要素をできるようにします。**  
  参照してください[する方法: ドラッグ アンド ドロップのハンドラーを追加](../modeling/how-to-add-a-drag-and-drop-handler.md)です。  
   
-##  <a name="customizeLinks"></a>リンクのコピー動作をカスタマイズします。  
+##  <a name="customizeLinks"></a> リンクのコピー動作をカスタマイズします。  
  ユーザーが要素をコピーするときの標準動作は埋め込まれたすべての要素もコピーされることです。 このコピー標準動作は変更できます。 DSL 定義でロールを選択、およびプロパティ ウィンドウのセット内のリレーションシップの一方の側で、**伝達コピー**値。  
   
  ![ドメインの役割のコピー プロパティに反映させる](../modeling/media/dslpropagatescopy.png "DslPropagatesCopy")  

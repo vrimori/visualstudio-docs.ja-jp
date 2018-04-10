@@ -1,27 +1,27 @@
 ---
-title: "マネージ コードで COM 定数 |Microsoft ドキュメント"
-ms.custom: 
+title: マネージ コードで COM 定数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - managed VSPackages, COM constants and macros
 ms.assetid: b6663608-b049-44b0-a75b-080fdc5faafc
-caps.latest.revision: 
+caps.latest.revision: 16
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
 ms.openlocfilehash: ca950fb5be94dc75ca038db4c109f5a46c6b2c0c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="com-constants-in-managed-code"></a>マネージ コードで COM 定数
 Managed Package Framework (MPF) 使用可能な標準の COM 定数にマネージ コード。 これらの定数は、参照用に以下に示します。  
@@ -132,5 +132,5 @@ Managed Package Framework (MPF) 使用可能な標準の COM 定数にマネー�
   
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_UNKNOWNNAME>  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラー処理と戻り値](../extensibility/error-handling-and-return-values.md)

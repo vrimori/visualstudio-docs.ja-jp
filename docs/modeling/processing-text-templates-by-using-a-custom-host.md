@@ -1,9 +1,9 @@
 ---
-title: "カスタム ホストを使用してテキスト テンプレートの処理 |Microsoft ドキュメント"
-ms.custom: 
+title: カスタム ホストを使用してテキスト テンプレートの処理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 helpviewer_keywords:
 - text templates, in application or VS extension
@@ -15,10 +15,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: af3e5b50095b30a912f6de7b67ba8a40f99127f8
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="processing-text-templates-by-using-a-custom-host"></a>カスタム ホストを使用したテキスト テンプレートの処理
 *テキスト テンプレート変換*処理では、*テキスト テンプレート*ファイルとして入力し、テキスト ファイルを出力として生成します。 テキスト変換エンジンは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 拡張機能か、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] がインストールされているコンピューターで実行中のスタンドアロン アプリケーションから呼び出すことができます。 ただし、提供する必要があります、*テキスト テンプレート ホスト*です。 このクラスは、テンプレートを環境に接続し、アセンブリやインクルード ファイルなどのリソースの検索と、出力およびエラー メッセージの処理を行います。  
@@ -49,7 +49,7 @@ string output = engine.ProcessTemplate(templateString, host);
   
  ホストは、エラーのログ記録、アセンブリとインクルード ファイルへの参照の解決、テンプレートを実行できるアプリケーション ドメインの指定、各ディレクティブの適切なプロセッサの呼び出しを実行できる必要があります。  
   
- <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>定義された**Microsoft.VisualStudio.TextTemplating。\*です。0 dll**、および<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>で定義された**Microsoft.VisualStudio.TextTemplating.Interfaces。\*です。0 dll**です。  
+ <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName> 定義された**Microsoft.VisualStudio.TextTemplating。\*です。0 dll**、および<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>で定義された**Microsoft.VisualStudio.TextTemplating.Interfaces。\*です。0 dll**です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [チュートリアル: カスタム テキスト テンプレート ホストの作成](../modeling/walkthrough-creating-a-custom-text-template-host.md)  

@@ -1,34 +1,34 @@
 ---
-title: "WPF ツールボックス コントロールの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: WPF ツールボックス コントロールの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - toolbox control
 - toolbox
 - wpf
 ms.assetid: 9cc34db9-b0d1-4951-a02f-7537fbbb51ad
-caps.latest.revision: 
+caps.latest.revision: 16
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
 ms.openlocfilehash: c1a8338f0ebd964e5d039ffa8dff000a441523f8
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="creating-a-wpf-toolbox-control"></a>WPF ツールボックス コントロールの作成
 WPF (Windows Presentation Framework) ツールボックス コントロール テンプレートを使用に自動的に追加されている WPF コントロールを作成する、**ツールボックス**拡張機能がインストールされている場合。 このトピックは、テンプレートを使用して作成する方法を示しています、**ツールボックス**コントロールを他のユーザーに配布することができます。  
   
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="creating-a-wpf-toolbox-control"></a>WPF ツールボックス コントロールの作成  
   
