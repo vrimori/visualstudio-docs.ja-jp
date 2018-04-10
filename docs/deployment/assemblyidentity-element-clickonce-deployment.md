@@ -17,7 +17,7 @@ dev_langs:
 helpviewer_keywords:
 - <assemblyIdentity> element [ClickOnce deployment manifest]
 ms.assetid: f4a3bb83-c800-47d0-9905-9a5ae2486838
-caps.latest.revision: ''
+caps.latest.revision: 23
 author: stevehoag
 ms.author: shoag
 manager: wpickett
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|`name`|必須。 情報提供を目的の配置の人間が判読できる名前を指定します。<br /><br /> 場合`name`の特殊文字が含まれています、一重引用符または二重引用符など、アプリケーションがアクティブ化に失敗可能性があります。|  
+|`name`|必須。 情報提供を目的として、人間が判読できる配置の名前を指定します。<br /><br /> `name`に、一重引用符または二重引用符のような特殊文字が含まれている場合、アプリケーションはアクティブ化に失敗することがあります。|  
 |`version`|必須。 アセンブリのバージョン番号を次の形式で指定します:`major.minor.build.revision`.<br /><br /> この値は、アプリケーションの更新をトリガーするマニフェストが更新されるたび、増加する必要があります。|  
 |`publicKeyToken`|必須。 配置マニフェストに署名する公開キーの sha-1 ハッシュ値の最後の 8 バイトを表す 16 文字の 16 進文字列を指定します。 署名に使用する公開キーは 2048 ビット以上である必要があります。<br /><br /> アセンブリの署名は推奨されていますが、任意であり、署名するかに関わらずこの属性は必要です。 アセンブリが署名付きでない場合は、自己署名されたアセンブリから値をコピーするか、すべてがゼロ値である「ダミー」を使用する必要があります。|  
 |`processorArchitecture`|必須。 プロセッサを指定します。 有効な値は`msil`すべてのプロセッサに対して`x86`32 ビット Windows の`IA64`64 ビット windows 用の`Itanium`そして Intel 64 ビット Itanium プロセッサ用の`Itanium`です。|  
