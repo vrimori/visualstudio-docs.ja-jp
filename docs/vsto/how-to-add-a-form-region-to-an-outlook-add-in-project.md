@@ -1,12 +1,12 @@
 ---
-title: "方法: フォーム領域を Outlook アドイン プロジェクトに追加 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: フォーム領域を Outlook アドイン プロジェクトに追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VSTO.NewFormRegionWizard.Page1
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/10/2018
   
 10. **[次へ]**をクリックします。  
   
-11. **[このフォーム領域を表示するメッセージのクラスを識別します]** ページで、標準の Outlook メッセージ クラスを選択するか、または 1 つ以上のカスタム メッセージ クラスの名前を入力してから、 **[完了]**をクリックします。 詳細については、「 [Associating a Form Region with an Outlook Message Class](../vsto/associating-a-form-region-with-an-outlook-message-class.md)」を参照してください。  
+11. **[このフォーム領域を表示するメッセージのクラスを識別します]** ページで、標準の Outlook メッセージ クラスを選択するか、または 1 つ以上のカスタム メッセージ クラスの名前を入力してから、 **[完了]**をクリックします。 詳細については、「 [フォーム領域の Outlook メッセージ クラスへの関連付け](../vsto/associating-a-form-region-with-an-outlook-message-class.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [実行時にフォーム領域へのアクセス](../vsto/accessing-a-form-region-at-run-time.md)   

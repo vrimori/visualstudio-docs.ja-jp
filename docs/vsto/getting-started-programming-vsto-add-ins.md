@@ -1,12 +1,12 @@
 ---
-title: "はじめに VSTO アドインのプログラミング |Microsoft ドキュメント"
-ms.custom: 
+title: はじめに VSTO アドインのプログラミング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VST.ProjectItem.Outlook
@@ -28,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/10/2018
 ---
 # <a name="getting-started-programming-vsto-add-ins"></a>VSTO アドインのプログラミングについて
-  VSTO アドインを使用することにより、Microsoft Office アプリケーションを自動化し、アプリケーションの機能を拡張できるほか、アプリケーションのユーザー インターフェイス (UI) をカスタマイズすることもできます。 Visual Studio を使用して作成することができます、VSTO アドインと Office ソリューションの他の種類との比較に関する情報を参照してください。 [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md).  
+  VSTO アドインを使用することにより、Microsoft Office アプリケーションを自動化し、アプリケーションの機能を拡張できるほか、アプリケーションのユーザー インターフェイス (UI) をカスタマイズすることもできます。 Visual Studio を使用して作成することができます、VSTO アドインと Office ソリューションの他の種類との比較に関する情報を参照してください。 [Office ソリューション開発の概要 & #40 です。VSTO & #41;](../vsto/office-solutions-development-overview-vsto.md).  
   
  [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="customizing-the-user-interface-of-applications"></a>アプリケーションのユーザー インターフェイスのカスタマイズ  
  VSTO アドインを使用してホスト アプリケーションの UI をカスタマイズするためのさまざまな方法があります。  
   
--   Excel や Word の場合、ドキュメントにマネージ コントロールを追加できます。 詳細については、「 [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)」を参照してください。  
+-   Excel や Word の場合、ドキュメントにマネージ コントロールを追加できます。 詳細については、「 [VSTO アドインにおける実行時の Word 文書と Excel ブックの拡張](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)」を参照してください。  
   
 -   アプリケーションでサポートされている場合は、リボンをカスタマイズできます。 詳細については、次を参照してください。[リボンの概要](../vsto/ribbon-overview.md)です。  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/10/2018
   
 ## <a name="see-also"></a>参照  
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
- [作業の開始 (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/getting-started-office-development-in-visual-studio.md)   
+ [作業の開始 (&) #40 です。 Visual Studio & #41; での Office 開発](../vsto/getting-started-office-development-in-visual-studio.md)   
  [Office ソリューションのコードの記述](../vsto/writing-code-in-office-solutions.md)   
  [VSTO アドインのアーキテクチャ](../vsto/architecture-of-vsto-add-ins.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)  

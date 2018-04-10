@@ -1,12 +1,12 @@
 ---
-title: "リボン XML |Microsoft ドキュメント"
-ms.custom: 
+title: リボン XML |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VSTO.Ribbon.RibbonXMLItem
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]  
 >  Outlook では追加の手順が必要です。 詳細については、次を参照してください。 [Outlook のリボンのカスタマイズ](../vsto/customizing-a-ribbon-for-outlook.md)です。  
   
- リボンからアプリケーションを自動化する方法を示すチュートリアルについては、「 [Walkthrough: Creating a Custom Tab by Using Ribbon XML](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)」をご覧ください。  
+ リボンからアプリケーションを自動化する方法を示すチュートリアルについては、「 [チュートリアル : リボン XML によるカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)」をご覧ください。  
   
 ### <a name="assigning-callback-methods-to-controls"></a>コントロールへのコールバック メソッドの割り当て  
  コールバック メソッドをリボン XML ファイル内のコントロールに割り当てるには、コールバック メソッドの種類とメソッドの名前を指定する属性を追加します。 たとえば、次の要素は **OnToggleButton1** という名前の `OnToggleButton1`」をご覧ください。  

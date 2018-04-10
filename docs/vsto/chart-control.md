@@ -1,12 +1,12 @@
 ---
-title: "グラフ コントロール |Microsoft ドキュメント"
-ms.custom: 
+title: グラフ コントロール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VST.ProjectItem.ExcelChart
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/10/2018
  VSTO アドインでは実行時に <xref:Microsoft.Office.Tools.Excel.Chart> コントロールをワークシートに追加できます。 詳細については、次を参照してください。[する方法: ワークシートに Chart コントロールを追加](../vsto/how-to-add-chart-controls-to-worksheets.md)です。  
   
 > [!NOTE]  
->  動的に作成されたグラフ オブジェクトは、ワークシートを閉じる際に、ホスト コントロールとしてワークシートに残りません。 詳細については、「 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
+>  動的に作成されたグラフ オブジェクトは、ワークシートを閉じる際に、ホスト コントロールとしてワークシートに残りません。 詳細については、「 [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
   
 ## <a name="formatting"></a>書式設定  
  <xref:Microsoft.Office.Interop.Excel.Chart> に適用できるすべての書式設定は、<xref:Microsoft.Office.Tools.Excel.Chart> コントロールにも適用できます。 これには、罫線、フォント、グラフの種類、グリッド線、凡例、およびデータ ラベルが含まれます。  

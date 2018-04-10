@@ -29,7 +29,7 @@ ms.lasthandoff: 03/28/2018
 ソフトウェア システムがユーザーのニーズを確実に満たすようにするには、Visual Studio の視覚化およびモデリング ツールを使用します。
 コード マップ、依存関係図、およびクラス図などのツールを使用します。  
 
- どのバージョンの Visual Studio が各ツールをサポートしているかについては、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
+ どのバージョンの Visual Studio が各ツールをサポートしているかについては、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
 
 -   ユーザーの要求およびビジネス プロセスを明らかにする。  
 
@@ -112,7 +112,7 @@ ms.lasthandoff: 03/28/2018
 -   [依存関係図を使用したコードの検証](../modeling/validate-code-with-layer-diagrams.md)  
 
     > [!NOTE]
-    >  Visual Studio のバージョンによっては、視覚化およびモデリングの依存関係の検証およびコード マップの読み取り専用のバージョンをサポートします。 この機能をサポートする Visual Studio のバージョンを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
+    >  Visual Studio のバージョンによっては、視覚化およびモデリングの依存関係の検証およびコード マップの読み取り専用のバージョンをサポートします。 この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
 
 ##  <a name="UnderstandingCommunicating"></a> システムに関する情報の把握と伝達  
  Visual Studio のモデリング図は、使用する順番は特に決まっていません。したがって、それぞれのニーズや方法に合わせて使用できます。 モデルは通常、プロジェクト全体を通じて繰り返し頻繁に参照されます。 図にはそれぞれ長所があるため、さまざまな図を使用することにより、開発中のシステムのさまざまな側面を把握、記述、および伝達できます。  

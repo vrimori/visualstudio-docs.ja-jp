@@ -1,12 +1,12 @@
 ---
-title: "ListObject コントロール |Microsoft ドキュメント"
-ms.custom: 
+title: ListObject コントロール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VST.Toolbox.List
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/10/2018
  ドキュメント レベルのプロジェクトでは、デザイン時または実行時に、ワークシートに <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールを追加できます。 VSTO アドイン プロジェクトでは、 <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールをワークシートに追加できるのは実行時だけです。 詳細については、「 [How to: Add ListObject Controls to Worksheets](../vsto/how-to-add-listobject-controls-to-worksheets.md)」を参照してください。  
   
 > [!NOTE]  
->  既定では、動的に作成されたリスト オブジェクトは、ワークシートを閉じる際に、ホスト コントロールとしてワークシートに残りません。 詳細については、「 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
+>  既定では、動的に作成されたリスト オブジェクトは、ワークシートを閉じる際に、ホスト コントロールとしてワークシートに残りません。 詳細については、「 [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
   
 ## <a name="binding-data-to-the-control"></a>コントロールへのデータのバインド  
  <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールでは、単純または複雑なデータ バインディングがサポートされます。 <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールは、デザイン時に <xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A> プロパティと <xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A> プロパティを使用して、または実行時に <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> メソッドを使用して、データ ソースにバインドすることができます。  
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/10/2018
  データにバインドされた <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールで実行時に列を手動で追加または削除することはできません。 エンド ユーザーが列を削除しようとすると、その列はすぐに復元されます。また追加した列も削除されます。 そのため、データにバインドされた <xref:Microsoft.Office.Tools.Excel.ListObject> でユーザーがこれらの操作を実行できない理由を説明するコードを記述しておくことは重要です。 Visual Studio では、データ バインディングに関連する <xref:Microsoft.Office.Tools.Excel.ListObject> の複数のイベントが提供されます。 たとえば、 <xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored> イベントを使用すると、ユーザーが削除しようとしたデータは削除できず、復元されたことを示す警告をユーザーに表示できます。  
   
 ## <a name="adding-and-removing-rows-at-run-time"></a>実行時の行の追加と削除  
- データ ソースで新しい行の追加が許可されており、読み取り専用ではない場合、データにバインドされた <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールの行を手動で追加したり削除したりすることができます。 <xref:Microsoft.Office.Tools.Excel.ListObject.BeforeAddDataBoundRow> などのイベントに対してコードを記述してデータを検証することができます。 詳細については、「 [How to: Validate Data When a New Row is Added to a ListObject Control](../vsto/how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control.md)」を参照してください。  
+ データ ソースで新しい行の追加が許可されており、読み取り専用ではない場合、データにバインドされた <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールの行を手動で追加したり削除したりすることができます。 <xref:Microsoft.Office.Tools.Excel.ListObject.BeforeAddDataBoundRow> などのイベントに対してコードを記述してデータを検証することができます。 詳細については、「 [方法 : ListObject コントロールに新規行が追加された場合にデータを検証する](../vsto/how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control.md)」を参照してください。  
   
  リスト オブジェクトのデータ ソースとの関係が原因で、日常的にエラーが発生することがあります。 たとえば、 <xref:Microsoft.Office.Tools.Excel.ListObject>で表示する列をマップできますが、null 値を許容できないフィールドなどの制限がある列を省略する場合、行が作成されるたびにエラーが発生します。 <xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow> イベントのイベント ハンドラーで、失われた値を追加するコードを記述することができます。  
   

@@ -1,12 +1,12 @@
 ---
-title: "Office ソリューションで WPF コントロールの使用 |Microsoft ドキュメント"
-ms.custom: 
+title: Office ソリューションで WPF コントロールの使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - VB
@@ -86,7 +86,7 @@ ms.lasthandoff: 01/10/2018
   
      Windows フォーム ユーザー コントロール内の WPF ユーザー コントロールをホストする <xref:System.Windows.Forms.Integration.ElementHost> オブジェクトが自動的に作成されます。  
   
-8.  Windows フォーム ユーザー コントロールを文書またはブックにプログラムで追加するコードを作成します。 詳細については、「 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
+8.  Windows フォーム ユーザー コントロールを文書またはブックにプログラムで追加するコードを作成します。 詳細については、「 [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
   
     > [!NOTE]  
     >  Windows フォーム ユーザー コントロールをデザイナー上の文書またはワークシートにドラッグすることはできません。  

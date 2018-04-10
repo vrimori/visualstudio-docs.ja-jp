@@ -1,12 +1,12 @@
 ---
-title: "[発行] ページ (プロジェクト デザイナー) (Visual Studio での Office 開発) |Microsoft ドキュメント"
-ms.custom: 
+title: '[発行] ページ (プロジェクト デザイナー) (Visual Studio での Office 開発) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VST.ProjectProperties.Publish.2007System
@@ -102,7 +102,7 @@ ms.lasthandoff: 01/10/2018
  **発行の言語**  
  このオプションにより、マイクロソフト ソフトウェア ライセンス条項の言語が設定され、必須コンポーネントの一覧に言語パックが含められます。 カスタマイズの言語には影響しません。 セットアップ プログラムの言語は、インストールされている Visual Studio の言語によって決まります。  
   
- **[発行の言語]**の変更方法の詳細については、「 [How to: Change the Publish Language for a ClickOnce Application](/visualstudio/deployment/how-to-change-the-publish-language-for-a-clickonce-application)」を参照してください。  
+ **[発行の言語]**の変更方法の詳細については、「 [方法: ClickOnce アプリケーションの発行言語を変更する](/visualstudio/deployment/how-to-change-the-publish-language-for-a-clickonce-application)」を参照してください。  
   
  **バージョンの発行**  
  カスタマイズのバージョン番号を設定します。 バージョン番号を変更すると、アプリケーションが更新プログラムとして発行されます。 ビルド プロセス時に各バージョン用の新しいフォルダーが作成されるため、前に発行されたバージョンは上書きされません。 発行バージョンを構成する各部分 (**[メジャー]**、 **[マイナー]**、 **[ビルド]**、 **[リビジョン]**) には、それぞれ 5 桁までの数値を含めることができます。  
