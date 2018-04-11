@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 755313a85c96c826335d390235477d76d68cd17f
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: a8e7f1f05ba6a93e696ee13e2f28305b8784d7c2
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="defining-custom-commands-for-python-projects"></a>Python プロジェクトのカスタム コマンドを定義する
 
@@ -50,7 +50,7 @@ Visual Studio の特定の Python プロジェクト テンプレートでは、
 
 カスタム コマンドに慣れてもらうため、このセクションでは、直接 python.exe を使ってプロジェクトのスタートアップ ファイルを実行する簡単な例の手順を説明します (このようなコマンドは、実質的に **[デバッグ] > [デバッグなしで開始]** を使うのと同じです)。
 
-1. "Python アプリケーション" テンプレートを使って、"Python-CustomCommands" という名前の新しいプロジェクトを作成します (プロセスにまだ慣れていない場合は、「[クイック スタート: Visual Studio のテンプレートから Python プロジェクトを作成する](quickstart-02-project-from-template.md)」の説明を参照してください)。
+1. "Python アプリケーション" テンプレートを使って、"Python-CustomCommands" という名前の新しいプロジェクトを作成します (プロセスにまだ慣れていない場合は、「[クイック スタート: Visual Studio のテンプレートから Python プロジェクトを作成する](quickstart-02-python-in-visual-studio-project-from-template.md)」の説明を参照してください)。
 
 1. `Python_CustomCommands.py` に、`print("Hello custom commands")` というコードを追加します。
 
@@ -152,7 +152,7 @@ Visual Studio の特定の Python プロジェクト テンプレートでは、
 | TargetType | [はい] | 含まれる Target 属性と、Arguments 属性でのその使い方を指定します。<ul><li>**executable**: Target で指定されている実行可能ファイルを実行します。コマンド ラインで直接入力された場合と同じように、Arguments の値を追加します。 値には、引数なしのプログラム名のみが含まれる必要があります。</li><li>**script**: Target のファイル名とそれに続く Arguments の値で、`python.exe` を実行します。</li><li>**module**: `python -m` の後に Target のモジュール名と Arguments の値を指定して実行します。</li><li>**code**: Target に含まれるインライン コードを実行します。 Arguments の値は無視されます。</li><li>**pip**: Target のコマンドと Arguments の値で `pip` を実行します。ただし、ExecuteIn は "output" に設定され、pip は `install` コマンドを想定し、Target をパッケージ名として使います。</li></ul> |
 | ターゲット | [はい] | TargetType に応じて、使うファイル名、モジュール名、コード、または pip コマンドです。 |
 | 引数 | Optional | ターゲットに渡す引数の文字列を指定します (存在する場合)。 TargetType が `script` の場合は、引数は `python.exe` ではなく Python プログラムに渡されることに注意してください。 TargetType が `code` のときは無視されます。 |
-| ExecuteIn | [はい] | コマンドを実行する環境を指定します。<ul><li>**console**: (既定値) Target と引数を、コマンド ラインで直接入力された場合と同じように実行します。 Target の実行中はコマンド ウィンドウが表示された後、自動的に閉じられます。</li><li>**consolepause**: console と同じですが、キー押下を待ってからウィンドウを閉じます。</li><li>**output**: Target を実行し、Visual Studio の出力ウィンドウに結果を表示します。 TargetType が "pip" の場合、Visual Studio は Target をパッケージ名として使い、Arguments を付加します。</li><li>**repl**: Target を [Python Interactive ウィンドウ](interactive-repl.md)で実行します。ウィンドウのタイトルには、省略可能な表示名が使われます。</li><li>**none**: 動作は console と同じです。</li></ul>|
+| ExecuteIn | [はい] | コマンドを実行する環境を指定します。<ul><li>**console**: (既定値) Target と引数を、コマンド ラインで直接入力された場合と同じように実行します。 Target の実行中はコマンド ウィンドウが表示された後、自動的に閉じられます。</li><li>**consolepause**: console と同じですが、キー押下を待ってからウィンドウを閉じます。</li><li>**output**: Target を実行し、Visual Studio の出力ウィンドウに結果を表示します。 TargetType が "pip" の場合、Visual Studio は Target をパッケージ名として使い、Arguments を付加します。</li><li>**repl**: Target を [Python Interactive ウィンドウ](python-interactive-repl-in-visual-studio.md)で実行します。ウィンドウのタイトルには、省略可能な表示名が使われます。</li><li>**none**: 動作は console と同じです。</li></ul>|
 | WorkingDirectory | Optional | コマンドを実行するフォルダーです。 |
 | ErrorRegex<br>WarningRegEx | Optional | ExecuteIn が `output` の場合にのみ使われます。 どちらの値も、Visual Studio が [エラー一覧] ウィンドウにエラーと警告を表示するためにコマンド出力を解析するときに使う正規表現を指定します。 指定しないと、コマンドは [エラー一覧] ウィンドウに反映されません。 Visual Studio が想定する値の詳細については、「[正規表現の名前付きキャプチャ グループ](#named-capture-groups-for-regular-expressions)」を参照してください。 |
 | RequiredPackages | Optional | コマンドのパッケージ要件の一覧です。[requirements.txt](https://pip.readthedocs.io/en/1.1/requirements.html) (pip.readthedocs.io) と同じ形式を使います。 たとえば、**[PyLint の実行]** コマンドでは、`pylint>=1.0.0` と指定されています。 コマンドを実行する前に、Visual Studio は一覧内のすべてのパッケージがインストールされていることを確認します。 Visual Studio は、pip を使ってすべての足りないパッケージをインストールします。 |

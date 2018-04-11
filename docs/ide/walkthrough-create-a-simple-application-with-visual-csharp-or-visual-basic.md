@@ -14,14 +14,14 @@ ms.assetid: f84339c7-d617-4f56-bfcd-af2215c347ba
 caps.latest.revision: 19
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 36f0bf93b85b3bc9582b7b0c656b0d105b61cecb
-ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
+ms.openlocfilehash: 05397e8dc965b23f0a60b9d7cbfcbb40621821a9
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="walkthrough-create-a-simple-application-with-c-or-visual-basic"></a>チュートリアル: C# または Visual Basic による簡単なアプリケーションの作成
 このチュートリアルを完了すると、Visual Studio を使用してアプリケーションを開発する際に使用できるさまざまなツール、ダイアログ ボックス、およびデザイナーの使用方法を習得できます。 簡単な "Hello, World" アプリケーションの作成、UI の設計、コードの追加、エラーのデバッグを行いながら、統合開発環境 (IDE) での作業方法について学習します。

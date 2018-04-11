@@ -2,17 +2,17 @@
 title: クラウドで Kubernetes と Visual Studio を使用して、コンテナーを含む .NET Core 開発環境を作成する - 手順 1 - ツールをインストールする | Microsoft Docs
 author: johnsta
 ms.author: johnsta
-ms.date: 02/20/2018
+ms.date: 04/05/2018
 ms.topic: get-started-article
 ms.technology: vsce-kubernetes
 description: Azure でのコンテナーおよびマイクロサービスを使用する迅速な Kubernetes 開発
 keywords: Docker、Kubernetes、Azure、AKS、Azure Container Service、コンテナー
 manager: ghogen
-ms.openlocfilehash: 4f25d4ae550f47533628bf073f2f22d9ed158cab
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 64aa0b322c777baa78da5bf86cb1220a47128d93
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="get-started-on-connected-environment-with-net-core-and-visual-studio"></a>Connected Environment で .NET Core と Visual Studio の使用を開始する
 
@@ -28,8 +28,6 @@ ms.lasthandoff: 03/19/2018
 ## <a name="install-the-connected-environment-cli"></a>Connected Environment CLI をインストールする
 Connected Environment には、最小限のローカル コンピューターのセットアップが必要です。 開発環境のほとんどの構成はクラウドに格納され、他のユーザーと共有することができます。
 
-1. [Git for Windows](https://git-scm.com/downloads) をインストールして、既定のインストール オプションを選択します。 
-1. [こちらのリンク](https://storage.googleapis.com/kubernetes-release/release/v1.9.0/bin/windows/amd64/kubectl.exe)から **kubectl.exe** をダウンロードして、パス上の場所に**保存**します。
 1. [Connected Environment CLI インストーラー](https://aka.ms/get-vsce-windows)をダウンロードして、実行します。 
 
 ## <a name="get-kubernetes-debugging-tools"></a>Kubernetes デバッグ ツールを取得する

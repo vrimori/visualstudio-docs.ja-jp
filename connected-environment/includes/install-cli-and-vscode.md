@@ -8,8 +8,6 @@ curl -L https://aka.ms/get-vsce-mac | bash
 ```
 
 ### <a name="install-on-windows"></a>Windows にインストールする
-1. [Git for Windows](https://git-scm.com/downloads) をインストールして、既定のインストール オプションを選択します。 
-1. [こちらのリンク](https://storage.googleapis.com/kubernetes-release/release/v1.9.0/bin/windows/amd64/kubectl.exe)から **kubectl.exe** をダウンロードして、パス上の場所に**保存**します。
 1. [Connected Environment CLI インストーラー](https://aka.ms/get-vsce-windows)をダウンロードして、実行します。 
 
 ### <a name="install-on-linux"></a>Linux にインストールする
@@ -23,5 +21,5 @@ Connected Environment CLI をスタンドアロン ツールとして使用で�
 1. 拡張機能をインストールする: 
 
 ```cmd
-code --install-extension path-to-downloaded-extension/vsce-0.1.0.vsix
+code --install-extension path-to-downloaded-extension/vsce-0.1.1.vsix
 ```

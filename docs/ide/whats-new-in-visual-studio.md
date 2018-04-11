@@ -7,7 +7,7 @@ ms.suite: ''
 ms.technology:
 - vs-acquisition
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.StartPage.WhatsNew
 helpviewer_keywords:
@@ -19,11 +19,11 @@ ms.author: tglee
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 90d6ef6132f8844343388f35a441386c66b838c6
-ms.sourcegitcommit: 6871148ce356977b057febdb4d5a7655e7c295bf
+ms.openlocfilehash: 5bddaec413e1a0b0a9e2096a614d7b5a574e0e7e
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
 #### <a name="updated-for-the-156-releasehttpswwwvisualstudiocomnewsreleasenotesvs2017-relnotes"></a>[15.6 リリース](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)の更新
@@ -111,11 +111,12 @@ Visual Studio Enterprise 2017 では、ライブ単体テストを実行する�
 
 #### <a name="setting-up-a-cicd-pipeline"></a>CI/CD パイプラインの設定
 #### <a name="automated-testing"></a>自動テスト
-自動化されたテストは、DevOps パイプラインの重要な部分です。 短い周期で、一貫性と信頼性のある方法でソリューションをテストし、公開できます。 CI/CD (Continuous Integration and Continuous Delivery/継続的インテグレーションと継続的配信) フローにより、このプロセスがさらに効率的になります。
+自動化されたテストは、DevOps パイプラインの重要な部分です。 短い周期で、一貫性と信頼性のある方法でソリューションをテストし、公開できます。 CI/CD (Continuous Integration and Continuous Delivery/継続的インテグレーションと継続的デリバリー) フローにより、このプロセスがさらに効率的になります。
 
 自動化されたテストの詳細については、[DevOps の 自動化テストの CI/CD パイプライン](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2017/04/20/set-up-a-cicd-pipeline-to-run-automated-tests-efficiently/)に関するブログ投稿をご覧ください。
 
-[Continuous Delivery Tools for Visual Studio (Visual Studio 用の継続的配信ツール)](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) DevLabs 拡張の新機能の詳細については、「[Committing with Confidence: Commit Time Code Quality (自信を持ってコミットする: タイム コードの品質をコミットする)](https://blogs.msdn.microsoft.com/visualstudio/2017/08/21/committing-with-confidence-commit-time-code-quality-information-updated/)」をご覧ください。
+
+  [Continuous Delivery Tools for Visual Studio (Visual Studio 用の継続的デリバリー ツール)](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) DevLabs 拡張の新機能の詳細については、「[Committing with Confidence: Commit Time Code Quality (自信を持ってコミットする: タイム コードの品質をコミットする)](https://blogs.msdn.microsoft.com/visualstudio/2017/08/21/committing-with-confidence-commit-time-code-quality-information-updated/)」をご覧ください。
 
 ### <a name="visual-studio-ide-enhancements"></a>Visual Studio IDE の拡張機能
 #### <a name="use-new-refactorings"></a>新しいリファクタリングの使用
