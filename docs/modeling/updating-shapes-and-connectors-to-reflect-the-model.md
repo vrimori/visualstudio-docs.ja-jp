@@ -1,9 +1,9 @@
 ---
-title: "図形とコネクタ、モデルを反映するように更新 |Microsoft ドキュメント"
-ms.custom: 
+title: 図形とコネクタ、モデルを反映するように更新 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 6d50d0258a44553451deed68a8ccf17c60d88965
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="updating-shapes-and-connectors-to-reflect-the-model"></a>シェイプおよびコネクタの更新とモデルへの反映
 ドメイン固有言語[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、基になるモデルの状態を反映する図形の外観を行うことができます。  
@@ -85,7 +85,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 ```  
   
 ## <a name="use-onchildconfigured-to-initialize-a-shapes-properties"></a>図形のプロパティを初期化するために使用する OnChildConfigured  
- 図形のプロパティは、最初に設定を作成、上書き`OnChildConfigured()`ダイアグラム クラスの部分定義でします。 図のクラスは、DSL 定義で指定し、生成されたコードは、 **Dsl\Generated Code\Diagram.cs**です。 例:  
+ 図形のプロパティは、最初に設定を作成、上書き`OnChildConfigured()`ダイアグラム クラスの部分定義でします。 図のクラスは、DSL 定義で指定し、生成されたコードは、 **Dsl\Generated Code\Diagram.cs**です。 例えば:  
   
 ```csharp  
 partial class MyLanguageDiagram  
@@ -110,7 +110,7 @@ partial class MyLanguageDiagram
   
  このメソッドは、ドメインのプロパティと、図形のサイズなどの非ストア機能の両方に使用できます。  
   
-##  <a name="OnAssociatedProperty"></a>AssociateValueWith() を使用して、図形の他の機能を更新  
+##  <a name="OnAssociatedProperty"></a> AssociateValueWith() を使用して、図形の他の機能を更新  
  一部の機能に影をまたは、コネクタの矢印のスタイルなどの図形のドメインのプロパティとして、機能を公開するための組み込みのメソッドはありません。  このような機能に対する変更は、トランザクション システムの制御下ではありません。 したがって、それらを更新する適切ではありません、ユーザーが元に戻すコマンドを実行するときに、規則が呼び出されないため、規則を使用します。  
   
  使用してこのような機能を更新する代わりに、<xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A>です。 次の例では、コネクタの矢印のスタイルは、コネクタを表示するリレーションシップ内のドメイン プロパティの値によって制御されます。  
@@ -154,6 +154,6 @@ public partial class ArrowConnector // My connector class.
   
 ```  
   
- `AssociateValueWith()`登録するドメインの各プロパティにつき 1 回として呼び出す必要があります。 指定したプロパティへの変更が呼び出すことが呼び出された後`OnAssociatedPropertyChanged()`プロパティのモデル要素を表示するすべての図形にします。  
+ `AssociateValueWith()` 登録するドメインの各プロパティにつき 1 回として呼び出す必要があります。 指定したプロパティへの変更が呼び出すことが呼び出された後`OnAssociatedPropertyChanged()`プロパティのモデル要素を表示するすべての図形にします。  
   
  呼び出す必要はありません`AssociateValueWith()`インスタンスごとにします。 InitializeResources には、インスタンス メソッドが、各図形クラスに対して 1 回だけ呼び出されます。

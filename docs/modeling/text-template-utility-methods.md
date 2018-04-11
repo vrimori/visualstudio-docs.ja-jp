@@ -1,9 +1,9 @@
 ---
-title: "テキスト テンプレートのユーティリティ メソッド |Microsoft ドキュメント"
-ms.custom: 
+title: テキスト テンプレートのユーティリティ メソッド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 helpviewer_keywords:
 - text templates, utility methods
@@ -14,10 +14,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: a5b9b70eb8bbb756c399496acdd6866ff318427b
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="text-template-utility-methods"></a>テキスト テンプレートのユーティリティ メソッド
 
@@ -120,7 +120,7 @@ Hello
   
  `<#@template ... hostspecific="true" #>`  
   
- 型`this.Host`テンプレートを実行しているホストの種類によって異なります。 Visual Studio で実行されているテンプレートでキャストできます`this.Host`に`IServiceProvider`IDE などのサービスにアクセスするためにします。 例:  
+ 型`this.Host`テンプレートを実行しているホストの種類によって異なります。 Visual Studio で実行されているテンプレートでキャストできます`this.Host`に`IServiceProvider`IDE などのサービスにアクセスするためにします。 例えば:  
   
 ```  
 EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)  

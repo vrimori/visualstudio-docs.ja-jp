@@ -1,12 +1,12 @@
 ---
-title: "方法: Visual c# プロジェクト内の vba コードに公開 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: Visual c# プロジェクト内の vba コードに公開 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - VB
@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - office
 ms.openlocfilehash: 1b750137a52d30688f69c825f83f72c7cbeebe45
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="how-to-expose-code-to-vba-in-a-visual-c-project"></a>方法 : Visual C# プロジェクトのコードを VBA に公開する
   相互にやり取りするコードの 2 つの種類の場合は、Visual c# プロジェクトを Visual Basic for Applications (VBA) コード内のコードを公開できます。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="exposing-code-in-a-visual-c-project"></a>Visual c# プロジェクトでコードを公開します。  
  Visual c# プロジェクトのコードを呼び出す VBA コードを有効にするのには、COM から参照できるようにコードを変更し、設定、 **ReferenceAssemblyFromVbaProject**プロパティを**True**デザイナーでします。  
   
- VBA から Visual c# プロジェクトでメソッドを呼び出す方法を説明するチュートリアルでは、次を参照してください[チュートリアル: Visual C &#35; での VBA からのコードを呼び出す。プロジェクト](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)です。  
+ VBA から Visual c# プロジェクトでメソッドを呼び出す方法を説明するチュートリアルでは、次を参照してください。[チュートリアル: Visual C# での VBA からのコードを呼び出す&#35;プロジェクト](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)です。  
   
 #### <a name="to-expose-code-in-a-visual-c-project-to-vba"></a>VBA を Visual c# プロジェクト内のコードを公開するには  
   
@@ -105,11 +105,11 @@ ms.lasthandoff: 02/09/2018
   
 12. プロジェクトをビルドします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
- [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md)   
- [Visual C &#35; での VBA から呼び出すコードをチュートリアル:プロジェクト](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)   
+ [VBA とドキュメント レベルのカスタマイズの結合](../vsto/combining-vba-and-document-level-customizations.md)   
+ [チュートリアル: コード Visual C# での VBA から呼び出す&#35;プロジェクト](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)   
  [方法: Visual Basic プロジェクトのコードを VBA に公開する](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)  
   
   

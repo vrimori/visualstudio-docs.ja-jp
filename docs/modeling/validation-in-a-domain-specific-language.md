@@ -1,9 +1,9 @@
 ---
-title: "ドメイン固有言語での検証 |Microsoft ドキュメント"
-ms.custom: 
+title: ドメイン固有言語での検証 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 helpviewer_keywords:
 - Domain-Specific Language, constraints
@@ -15,10 +15,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 7eb2e734bd94608584ca700223fb75387eb484fb
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="validation-in-a-domain-specific-language"></a>ドメイン固有言語における検証
 ドメイン固有言語 (DSL) の作成者は、検証制約を定義して、ユーザーが作成したモデルが意味を持つことを確認できます。 たとえば、DSL でユーザーが人々とその先祖の家系図を描くことができる場合、子の誕生日が親の誕生日よりも後であることを確認する制約を作成できます。  
@@ -142,7 +142,7 @@ public partial class ParentsHaveChildren
   
  例は次のドメイン モデルに適用されます。 ParentsHaveChildren リレーションシップは Child および Parent という名前のロールを含みます。  
   
- ![DSL 定義ダイアグラム &#45;ファミリ ツリー モデル](../modeling/media/familyt_person.png "FamilyT_Person")  
+ ![DSL 定義ダイアグラム&#45;ファミリ ツリー モデル](../modeling/media/familyt_person.png "FamilyT_Person")  
   
 ## <a name="validation-categories"></a>検証カテゴリ  
  <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> 属性で、検証メソッドをいつ実行するかを指定します。  
@@ -303,7 +303,7 @@ namespace Company.FamilyTree
   
  ハンドラーはリンクまたは要素に影響する、元に戻す操作またはやり直し操作の後でも呼び出されます。  
   
-##  <a name="custom"></a>カスタム検証カテゴリ  
+##  <a name="custom"></a> カスタム検証カテゴリ  
  「メニュー」や「開く」といった標準の検証カテゴリに加えて、独自のカテゴリを定義できます。 これらのカテゴリをプログラム コードから呼び出すことができます。 ユーザーはそれらを直接呼び出すことができません。  
   
  カスタム カテゴリの一般的な使用法は、モデルが特定のツールの事前条件を満たすかどうかをテストするカテゴリを定義することです。  
@@ -331,7 +331,7 @@ validationController.ValidateCustom
    "PreconditionsForGeneratePartsList");  
 ```  
   
-##  <a name="alternatives"></a>検証に代わる方法  
+##  <a name="alternatives"></a> 検証に代わる方法  
  検証制約はエラーを報告しますが、モデルを変更しません。 代わりに、モデルが無効になることを防ぐ場合、他の手法を使用できます。  
   
  ただし、これらの手法は推奨されません。 通常、無効なモデルの修正方法をユーザーに決めてもらう方が適切です。  
@@ -343,6 +343,6 @@ validationController.ValidateCustom
 > [!WARNING]
 >  変更が調整またはロールバックされたことをユーザーが認識できるようにします。 たとえば、`System.Windows.Forms.MessageBox.Show("message").` を使用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [移動して、プログラム コードでモデルを更新します。](../modeling/navigating-and-updating-a-model-in-program-code.md)   
  [イベント ハンドラーによって変更内容がモデル外に反映される](../modeling/event-handlers-propagate-changes-outside-the-model.md)

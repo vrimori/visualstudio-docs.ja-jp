@@ -1,9 +1,9 @@
 ---
-title: "Visual Studio ModelBus を使用して、テキスト テンプレートで |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio ModelBus を使用して、テキスト テンプレートで |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 0184e3b543e509d0e523504c0ea07f6fcc36775f
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="using-visual-studio-modelbus-in-a-text-template"></a>テキスト テンプレートでの Visual Studio ModelBus の使用
 テキスト テンプレートを含むモデルを読み取ることを記述するかどうかは[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ModelBus を参照して、ターゲットのモデルにアクセスする参照を解決することができます。 その場合は、テキスト テンプレートを使用し、参照先のドメイン固有言語 (Dsl) を調整する必要があります。  
@@ -263,7 +263,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
   
 1.  新しい DSL を作成するには、最小限の言語のソリューション テンプレートを使用します。 MBConsumer 言語の名前し、".consume"にファイル名拡張子を設定します。  
   
-2.  DSL プロジェクトでは、MBProvider DSL アセンブリへの参照を追加します。 右クリック`MBConsumer\Dsl\References` をクリックし、**参照の追加**です。 **参照** タブで、検索`MBProvider\Dsl\bin\Debug\Company.MBProvider.Dsl.dll`  
+2.  DSL プロジェクトでは、MBProvider DSL アセンブリへの参照を追加します。 右クリック`MBConsumer\Dsl\References` をクリックし、**参照の追加**です。 **参照** タブで、検索 `MBProvider\Dsl\bin\Debug\Company.MBProvider.Dsl.dll`  
   
      これにより、他の DSL を使用するコードを作成することができます。 いくつかの Dsl への参照を作成する場合も追加します。  
   
@@ -277,7 +277,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
   
      `Provider File|*.provide`  
   
-     後の部分文字列"&#124;"は、ファイルの選択 ダイアログ ボックスのフィルター。 使用してファイルのことを許可するように設定する可能性があります * です。\*  
+     後の部分文字列"&#124;"ファイルの選択 ダイアログ ボックスのフィルターです。 使用してファイルのことを許可するように設定する可能性があります * です。\*  
   
      **モデル要素の型**一覧で、プロバイダー DSL (たとえば、Company.MBProvider.Task) で 1 つ以上のクラスの複数のドメインの名前を入力します。 抽象クラスがあることができます。 一覧を空白のままにする場合、ユーザーは、いずれかの要素への参照を設定できます。  
   
@@ -408,7 +408,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
   
      その要素で MBR を設定する場合は、参照先のモデルが表示されますされ、参照される要素が選択されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio Modelbus を使用してモデルを統合します。](../modeling/integrating-models-by-using-visual-studio-modelbus.md)   
  [コード生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)
  

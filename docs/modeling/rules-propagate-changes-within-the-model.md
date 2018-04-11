@@ -1,9 +1,9 @@
 ---
-title: "ルールは、モデル内の変更を反映 |Microsoft ドキュメント"
-ms.custom: 
+title: ルールは、モデル内の変更を反映 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
@@ -15,10 +15,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: af086275f641e3237f8d22308c960ad30240b647
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="rules-propagate-changes-within-the-model"></a>規則によって変更内容がモデル内に反映される
 別の視覚化およびモデリング SDK (VMSDK) で 1 つの要素から変更を伝達するストア ルールを作成することができます。 変更された場合、ストア内の要素、ルールは、最も外側のトランザクションがコミットされるときに通常は、実行される予定です。 さまざまな種類の要素を追加または削除するなどのイベントのさまざまな種類のルールがあります。 ルールは、特定の種類の要素、図形、またはダイアグラムをアタッチできます。 多くの組み込み機能がルールによって定義されます。 など、ルールでは、モデルが変更されたときに、ダイアグラムが更新されることを確認します。 独自の規則を追加することで、ドメイン固有言語をカスタマイズできます。  
@@ -212,6 +212,6 @@ namespace Company.TaskRuleExample
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [イベント ハンドラーには、モデルの外部で変更が反映されるまでください。](../modeling/event-handlers-propagate-changes-outside-the-model.md)   
  [BoundsRules によってシェイプの位置とサイズが制限される](../modeling/boundsrules-constrain-shape-location-and-size.md)

@@ -1,9 +1,9 @@
 ---
-title: "T4 テンプレート ディレクティブ |Microsoft ドキュメント"
-ms.custom: 
+title: T4 テンプレート ディレクティブ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 3c4e53c4d123a5a5de493059c68ef09685c903a8
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="t4-template-directive"></a>T4 テンプレート ディレクティブ
 通常、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の T4 テキスト テンプレートは、テンプレートの処理方法を指定する `template` ディレクティブで始まります。 テキスト テンプレートおよびそれに含まれるファイルには、template ディレクティブを 1 つしか含めることができません。  
@@ -80,7 +80,7 @@ hostspecific="true"
   
  このプロパティの型はホストの型に依存するため、特定のホストとのみ連携するテキスト テンプレートを作成している場合以外、利用価値はありません。 適用[デザイン時テンプレート](../modeling/design-time-code-generation-by-using-t4-text-templates.md)、ではなく[実行時テンプレート](../modeling/run-time-text-generation-with-t4-text-templates.md)です。  
   
- `hostspecific` が `true` で、なおかつ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を使用している場合は、`this.Host` を IServiceProvider にキャストして、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の機能にアクセスすることができます。 また、`Host.ResolvePath(filename)` を使用して、プロジェクトのファイルの絶対パスを取得することもできます。 例:  
+ `hostspecific` が `true` で、なおかつ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を使用している場合は、`this.Host` を IServiceProvider にキャストして、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の機能にアクセスすることができます。 また、`Host.ResolvePath(filename)` を使用して、プロジェクトのファイルの絶対パスを取得することもできます。 例えば:  
   
 ```csharp  
 <#@ template debug="false" hostspecific="true" language="C#" #>  
@@ -115,7 +115,7 @@ Content of myFile is:
   
  Language 属性が、言語を指定します ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]または[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]) ステートメントと式ブロック内のソース コードを使用します。 出力の生成元である中間コード ファイルでこの言語が使用されます。 この言語はテンプレートで生成される言語とは無関係であり、どのような種類のテキストであってもかまいません。  
   
- 例:  
+ 例えば:  
   
 ```vb  
 <#@ template language="VB" #>  

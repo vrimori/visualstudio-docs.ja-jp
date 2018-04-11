@@ -1,9 +1,9 @@
 ---
-title: "対応し、変更を反映する |Microsoft ドキュメント"
-ms.custom: 
+title: 対応し、変更を反映する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 helpviewer_keywords:
 - Domain-Specific Language, events
@@ -14,10 +14,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: f814cc9ca963b59217dc486539d22f42f487a3db
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="responding-to-and-propagating-changes"></a>変更内容への対応および変更内容の反映
 要素では、作成、削除、または更新は、ときに、モデルの他の部分、またはファイル、データベース、またはその他のコンポーネントなどの外部のリソースへの変更を伝達するコードを記述することができます。  
@@ -52,6 +52,6 @@ ms.lasthandoff: 02/09/2018
   
 -   **ルールとイベントにイベント引数を渡す**両方のイベント ルールが渡されると、`EventArgs`方法に関する情報を持つパラメーター、モデルを変更します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: 図形またはデコレーターのクリックをインターセプト](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)   
  [ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)

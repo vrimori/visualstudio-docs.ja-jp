@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: 995f77fac8e62e963207408a1e127a557906d10e
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
-ms.translationtype: HT
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="getassemblyidentity-task"></a>GetAssemblyIdentity タスク
 指定されたファイルからアセンブリ ID を取得し、その ID を出力します。  
@@ -65,6 +65,6 @@ ms.lasthandoff: 04/03/2018
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
