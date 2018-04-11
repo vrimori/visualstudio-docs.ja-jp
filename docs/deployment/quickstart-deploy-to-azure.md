@@ -27,7 +27,7 @@ ms.lasthandoff: 01/10/2018
 
 **発行**ツールを使用して、ASP.NET、ASP.NET Core、Python、Node.js、および .NET Core のアプリを Azure App Service に発行することができます。
 
-Azure アカウントをもっていない場合は、ここから [サインアップ](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio) することができます。
+Azure アカウントをもっていない場合は、ここからサインアップ(https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio)することができます。
 
 ## <a name="create-a-new-project"></a>新しいプロジェクトを作成する 
 
