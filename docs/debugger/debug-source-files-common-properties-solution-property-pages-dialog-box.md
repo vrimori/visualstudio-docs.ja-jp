@@ -35,7 +35,7 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/10/2018
 ---
-# <a name="debug-source-files-common-properties-solution-property-pages-dialog-box"></a>[デバッグ ソース ファイル] ([ソリューション プロパティ ページ] ダイアログ ボックス - [共通プロパティ])
+# <a name="debug-source-files-common-properties-solution-property-pages-dialog-box"></a>[デバッグ ソース ファイル] \([ソリューション プロパティ ページ] ダイアログ ボックス - [共通プロパティ])
 このプロパティ ページでは、ソリューションのデバッグ時にデバッガーによってソース ファイルが検索される場所を指定します。  
   
  アクセスする、**デバッグ ソース ファイル**プロパティ ページで、ソリューション内で右クリック**ソリューション エクスプ ローラー**選択**プロパティ**ショートカット メニューからです。 展開、**共通プロパティ**フォルダー、およびをクリックして、**デバッグ ソース ファイル**ページ。  
