@@ -13,7 +13,7 @@ ms.workload:
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: de6b219610908503f37658ff977f042363fb8663
 ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/10/2018
 ---
@@ -104,7 +104,7 @@ ms.lasthandoff: 04/10/2018
   
      [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] という名前のファイルが作成されます**CreateMsiSetupProject.vdproj**です。  
   
-6.  Windows エクスプローラで、コピー Dsl\\*.vdproj を新しいフォルダーにセットアップをという名前です。  
+6.  Windows エクスプローラで、コピー Dsl\\\*.vdproj を新しいフォルダーにセットアップをという名前です。  
   
      (する場合は、今すぐから除外できます CreateMsiSetupProject.tt Dsl プロジェクトです。)  
   

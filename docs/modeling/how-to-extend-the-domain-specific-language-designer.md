@@ -13,7 +13,7 @@ ms.workload:
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: efcd1d354705fefcaeb0fbfbec0622ff2f06c331
 ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/10/2018
 ---
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/10/2018
   
  メインに拡張機能を展開する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、他のコンピューターに次の手順に従います。  
   
-1.  VSIX プロジェクトの箱で、VSIX のインストール ファイルを見つける\\*\\\*.vsix  
+1.  VSIX プロジェクトの箱で、VSIX のインストール ファイルを見つける\\*\*\\\*.vsix  
   
 2.  対象のコンピュータにこのファイルをコピーし、Windows エクスプ ローラー (またはファイル エクスプ ローラー) でそれをダブルクリックします。  
   

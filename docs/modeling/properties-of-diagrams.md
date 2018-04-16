@@ -17,7 +17,7 @@ ms.workload:
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: c00ec651510da84594c370e312112c50bc545606
 ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/10/2018
 ---
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/10/2018
 |アクセス修飾子|クラス (パブリックまたは内部) のアクセス修飾子。|Public|  
 |カスタム属性|生成されたコードのクラスに属性を追加するために使用します。|\<なし >|  
 |二重の生成の派生|場合`True`、基底クラスと部分クラス (カスタマイズをサポートする上書きを使用) の両方が生成されます。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)です。|False|  
-|カスタム コンス トラクターを持つ|場合`True`、ソース コードでカスタム コンス トラクターが提供されます。 詳細については、次を参照してください[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md).。|False|  
+|カスタム コンス トラクターを持つ|場合`True`、ソース コードでカスタム コンス トラクターが提供されます。 詳細については、次を参照してください[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)..|False|  
 |継承修飾子|ダイアグラムから生成されるソース コード クラスの継承の種類を記述します (`none`、`abstract`または`sealed`)。|なし|  
 |基本のダイアグラム|この図の基本クラス。|(なし)|  
 |名前|このダイアグラムの名前。|現在の名前|  

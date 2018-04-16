@@ -16,7 +16,7 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: 394dbf9aba422f8fbf16857d6980a53b353e931a
 ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/10/2018
 ---
@@ -48,9 +48,9 @@ ms.lasthandoff: 04/10/2018
   
 ## <a name="configure-the-project"></a>プロジェクトを構成する
   
-1.  Visual Studio で、次のように選択します**ファイル**、**新規**、**プロジェクト.。**し、新しい c# WPF アプリケーションを作成します。  
+1.  Visual Studio で、次のように選択します**ファイル**、**新規**、**プロジェクト...**し、新しい c# WPF アプリケーションを作成します。  
   
-2.  次に Entity Framework 6 の NuGet パッケージを追加します。 ソリューション エクスプ ローラーでプロジェクト ノードを選択します。 メイン メニューで、次のように選択します**プロジェクト**、 **NuGet パッケージを管理しています.。**  
+2.  次に Entity Framework 6 の NuGet パッケージを追加します。 ソリューション エクスプ ローラーでプロジェクト ノードを選択します。 メイン メニューで、次のように選択します**プロジェクト**、 **NuGet パッケージを管理しています...**  
   
      ![NuGet パッケージのメニュー項目を管理](../data-tools/media/raddata_vs2015_manage_nuget_packages.png "raddata_vs2015_manage_nuget_packages")  
   

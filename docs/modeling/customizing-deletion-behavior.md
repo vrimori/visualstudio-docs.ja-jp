@@ -17,7 +17,7 @@ ms.workload:
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 12f2a1690a4d68f6900006b10a699c23c83c8c2a
 ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/10/2018
 ---
@@ -79,7 +79,7 @@ ms.lasthandoff: 04/10/2018
 >  DSL 定義には、プログラム コードを追加するにで個別のコード ファイルを作成、 **Dsl**プロジェクトし、生成されたコード フォルダー内のクラスを拡張するために部分定義を記述します。 詳細については、次を参照してください。[ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)です。  
   
 ##  <a name="closure"></a> Delete クロージャを定義します。  
- 削除操作は、クラスを使用して*YourModel * * * DeleteClosure** 指定の初期選択を削除する要素を確認します。 これは `ShouldVisitRelationship()` および `ShouldVisitRolePlayer()` を繰り返し呼び出し、リレーションシップのグラフを検索します。 これらのメソッドをオーバーライドできます。 ShouldVisitRolePlayer は、リンクおよびリンクのロールのいずれかの位置にある要素の id で提供されます。 次のいずれかの値を返す必要があります。  
+ 削除操作は、クラスを使用して *YourModel***DeleteClosure** 指定の初期選択を削除する要素を確認します。 これは `ShouldVisitRelationship()` および `ShouldVisitRolePlayer()` を繰り返し呼び出し、リレーションシップのグラフを検索します。 これらのメソッドをオーバーライドできます。 ShouldVisitRolePlayer は、リンクおよびリンクのロールのいずれかの位置にある要素の id で提供されます。 次のいずれかの値を返す必要があります。  
   
 -   **VisitorFilterResult.Yes**-、要素を削除する必要がありを試す、ウォーカーを続行する必要があります、要素の他のリンク。  
   
