@@ -1,29 +1,25 @@
 ---
-title: "Idiasession::symsareequiv |Microsoft ドキュメント"
-ms.custom: 
+title: Idiasession::symsareequiv |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSession::symsAreEquiv method
 ms.assetid: 9941d520-e203-46c0-83c3-b3a967f4fc59
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 550218c2d0c2206cdfe417b0e8faff978f9a21e5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 41e9663999639b45995caa28dbc08ce194febdcb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiasessionsymsareequiv"></a>IDiaSession::symsAreEquiv
 2 つのシンボルが等しいかどうかを確認します。  
@@ -47,6 +43,6 @@ HRESULT symsAreEquiv (
 ## <a name="return-value"></a>戻り値  
  シンボルと同じ場合を返します`S_OK`、それ以外を返します`S_FALSE`シンボルが同じではありません。 それ以外の場合、エラー コードを返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

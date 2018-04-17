@@ -1,29 +1,25 @@
 ---
-title: "IDebugExpressionEvaluator::SetLocale |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugExpressionEvaluator::SetLocale |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugExpressionEvaluator::SetLocale
 helpviewer_keywords:
 - IDebugExpressionEvaluator::SetLocale method
 ms.assetid: d3d2027d-74e2-4ae6-bcc7-59d12f873b7c
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fe9dd81fad59c526233a56f1c5bcd1a178ad46f1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c5836069aacb80a3d917a8e272150a477589c3ef
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugexpressionevaluatorsetlocale"></a>IDebugExpressionEvaluator::SetLocale
 このメソッドは、印刷可能な結果の作成に使用する言語を設定します。  
@@ -52,5 +48,5 @@ int SetLocale(
 ## <a name="remarks"></a>コメント  
  EE は、実行時に言語を変更できる必要がありますので、式エバリュエーター (EE) が読み込まれるときににより、このメソッドに何度もを呼び出すことがあります。 EE は、このロケールを使用して適切な言語でエラー メッセージ、および文字列を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

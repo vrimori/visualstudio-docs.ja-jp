@@ -10,14 +10,14 @@ helpviewer_keywords:
 - managed code, code analysis
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6d654cb3a7f0d0e952b447337603718c20eaee3e
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 9a720a1ad65f06ca6810ce0d9f9d9fe29371d539
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overview-of-code-analysis-for-managed-code"></a>マネージ コードに対するコード分析の概要
 
@@ -56,7 +56,7 @@ Public class MyClass
 詳細については、次を参照してください。[警告を抑制する](../code-quality/in-source-suppression-overview.md)です。
 
 > [!NOTE]
-> Visual Studio 2017 にプロジェクトを移行する場合に、コード分析の警告の数が多いが直面突然可能性があります。 場合は、警告を修正し、すぐに生産性を向上する場合ができていない、*基準*プロジェクトの分析の状態。 **分析**メニューの **コード分析を実行し、アクティブな懸案事項の抑制**です。
+> Visual Studio 2017 にプロジェクトを移行する場合に、コード分析の警告の数が多いが直面突然可能性があります。 場合は、警告を修正し、すぐに生産性を向上する場合ができていない、*基準*プロジェクトの分析の状態。 **分析**メニューの [**コード分析を実行し、アクティブな懸案事項の抑制**です。
 
 ## <a name="run-code-analysis-as-part-of-check-in-policy"></a>チェックイン ポリシーの一部としてのコード分析の実行
 

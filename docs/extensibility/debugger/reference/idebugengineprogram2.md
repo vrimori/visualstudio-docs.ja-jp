@@ -1,29 +1,25 @@
 ---
-title: "IDebugEngineProgram2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugEngineProgram2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugEngineProgram2
 helpviewer_keywords:
 - IDebugEngineProgram2 interface
 ms.assetid: 151003a9-2e4d-4acf-9f4d-365dfa6b9596
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 896370d83634580e46f666a8fb9f56f768bf06a0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ff075605371d39f9d3ff04df01c7022c52e809ef
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugengineprogram2"></a>IDebugEngineProgram2
 このインターフェイスは、マルチ スレッドのデバッグのサポートを提供します。  
@@ -52,12 +48,12 @@ IDebugEngineProgram2 : IUnknown
 ## <a name="remarks"></a>コメント  
  Visual Studio はこのインターフェイスへの応答を呼び出して、 [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md)イベントとプログラムの「ウォッチのスレッド ステップ」と「ウォッチの式評価でスレッド」の状態を設定します。 [停止](../../../extensibility/debugger/reference/idebugengineprogram2-stop.md)するたびに呼び出されますが、プログラムが停止する。 このメソッドにより、プログラムをすべてのスレッドを終了する可能性です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

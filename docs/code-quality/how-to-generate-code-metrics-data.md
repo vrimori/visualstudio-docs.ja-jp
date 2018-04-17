@@ -1,26 +1,23 @@
 ---
-title: "Visual Studio のコード メトリックス データを生成する方法 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio のコード メトリックス データを生成する方法 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/12/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code metrics data
 - code metrics results
 - code metrics [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 52726b521d3887dee31b74b0ba110aa8d25350e5
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: b81c8f07295005bd9888dca96bbaa89464990717
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-generate-code-metrics-data"></a>方法: コード メトリックス データを生成します。
 
@@ -30,11 +27,11 @@ ms.lasthandoff: 03/02/2018
 
 - メニュー バーから選択**分析** > **コード メトリックスの計算** > **ソリューションの**します。
 
-   \- または
+   \- または -
 
 - **ソリューション エクスプ ローラー**、ソリューションを右クリックし、**コード メトリックスの計算**です。
 
-   \- または
+   \- または -
 
 - **コード メトリックスの結果**ウィンドウで、選択、**ソリューションのコード メトリックスの計算**ボタンをクリックします。
 

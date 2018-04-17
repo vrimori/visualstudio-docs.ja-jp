@@ -1,29 +1,25 @@
 ---
-title: "IDebugBinder::ResolveRuntimeType |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugBinder::ResolveRuntimeType |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugBinder::ResolveRuntimeType
 helpviewer_keywords:
 - IDebugBinder::ResolveRuntimeType method
 ms.assetid: 6456ab3e-1c03-4f3c-91f9-16797ab7f5e7
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fcaca4e27f7a4e986222e3fa6767a106ef6d90d2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6aa911dba9d56996e048326737c1dd99ca89c49c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugbinderresolveruntimetype"></a>IDebugBinder::ResolveRuntimeType
 このメソッドは、オブジェクトの実行時の型を決定します。  
@@ -57,7 +53,7 @@ int ResolveRuntimeType(
 ## <a name="remarks"></a>コメント  
  オブジェクトの実行時の型はコンパイル時に常には認識されません。 たとえば、多態性を使用して、引数渡せる関数をボタン クラスなど、その基本クラスとしてです。 実際の引数は、ラジオ ボタン クラスなどの派生クラスで可能性があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

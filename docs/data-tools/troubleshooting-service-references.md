@@ -1,11 +1,8 @@
 ---
-title: "サービス参照のトラブルシューティング |Microsoft ドキュメント"
-ms.custom: 
+title: サービス参照のトラブルシューティング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - msvse_wcf.Err.ReferenceGroup_NamespaceConflictsOther
 - msvse_wcf.Err.AddSvcRefDlg_NothingSelectedOnGo
@@ -15,17 +12,17 @@ helpviewer_keywords:
 - service references [Visual Studio], troubleshooting
 - WCF services, troubleshooting
 ms.assetid: 3b531120-1325-4734-90c6-6e6113bd12ac
-caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: b57547aa9a5fa3c036a534c85cb55bb1749a421b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 827533f76f8807cca146b9ea0b7483cb8fb84caf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-service-references"></a>サービス参照のトラブルシューティング
 このトピックの一覧を使用する場合に発生する一般的な問題[!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)]または[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]では、参照[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
@@ -33,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="error-returning-data-from-a-service"></a>サービスからデータを返すときのエラー  
  戻るとき、`DataSet`または`DataTable`サービスから「受信メッセージの最大サイズ クォータを超えました」例外が発生する可能性があります。 既定では、`MaxReceivedMessageSize`一部のバインドのプロパティがサービス拒否攻撃への露出を制限する比較的小さな値に設定します。 例外を防ぐためにこの値を大きくことができます。 詳細については、「<xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A>」を参照してください。  
   
- このエラーを解決するには。  
+ このエラーを修復するには:  
   
 1.  **ソリューション エクスプ ローラー**、app.config ファイルを開くをダブルクリックします。  
   
@@ -42,14 +39,14 @@ ms.lasthandoff: 12/22/2017
 ## <a name="cannot-find-a-service-in-my-solution"></a>ソリューションでサービスを見つけることができません。  
  クリックすると、 **Discover**ボタンをクリックして、**サービス参照の追加**ダイアログ ボックスで、サービスの一覧で、ソリューション内の 1 つまたは複数の WCF サービス ライブラリ プロジェクトは表示されません。 これは、サービス ライブラリは、ソリューションに追加されましたが、まだコンパイルされていない場合に発生することができます。  
   
- このエラーを解決するには。  
+ このエラーを修復するには:  
   
 -   **ソリューション エクスプ ローラー**を WCF サービス ライブラリ プロジェクトを右クリックし、をクリックして**ビルド**です。  
   
 ## <a name="error-accessing-a-service-over-a-remote-desktop"></a>リモート デスクトップ経由でサービスへのアクセス エラー  
  ユーザーがアクセスするときに、Web でホストされる WCF サービス経由でリモート デスクトップ接続と、ユーザーには、管理アクセス許可がありません、NTLM 認証を使用します。 ユーザーが管理者権限を持っていない場合、ユーザーは、次のエラー メッセージを受け取ります可能性があります:"HTTP 要求はクライアントの認証方式 'Anonymous' で承認されていません。 サーバーから受信した認証ヘッダーは NTLM でした。"  
   
- このエラーを解決するには。  
+ このエラーを修復するには:  
   
 1.  Web サイト プロジェクトで開き、**プロパティ**ページ。  
   
@@ -99,5 +96,5 @@ ms.lasthandoff: 12/22/2017
   
 4.  をクリックして**OK**を閉じる、**インターネット オプション** ダイアログ ボックス。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio での Windows Communication Foundation サービスと WCF データ サービス](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

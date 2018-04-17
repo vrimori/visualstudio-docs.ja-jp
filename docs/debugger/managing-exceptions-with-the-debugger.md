@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio デバッガーでの例外の管理 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio デバッガーでの例外の管理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/05/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.exceptions
 - vs.debug.exceptions.find
@@ -33,17 +30,16 @@ helpviewer_keywords:
 - native run-time checks
 - exceptions, debugging
 ms.assetid: 43a77fa8-37d0-4c98-a334-0134dbca4ece
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 978c78ba68460a2f038d85afb92246275acfb9ef
-ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
+ms.openlocfilehash: 063f4581a741325ce34022b731322cf0a4e37e39
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>デバッガーでは、Visual Studio での例外を管理します。
 
@@ -145,7 +141,7 @@ ms.lasthandoff: 01/29/2018
   
  ![例外設定に戻す](../debugger/media/restoredefaultexceptions.png "RestoreDefaultExceptions")  
   
-##  <a name="BKMK_UserUnhandled"></a>ユーザーよって処理されない例外のまま続行するようにデバッガー  
+##  <a name="BKMK_UserUnhandled"></a> ユーザーよって処理されない例外のまま続行するようにデバッガー  
  [ [Just My Code](../debugger/just-my-code.md)] を使用して .NET コードまたは JavaScript コードをデバッグする場合、ユーザー コードで処理されないが他の場所で処理される例外について、中断しないようにデバッガーを設定することができます。  
   
 1.  **[例外設定]** ウィンドウでコンテキスト メニューを開くには、ウィンドウで右クリックし、 **[列の表示]**を選択します ( **[マイ コードのみ]**を選択していない場合、このコマンドは表示されません)。  
@@ -156,7 +152,7 @@ ms.lasthandoff: 01/29/2018
   
  たとえば、ASP.NET Web アプリケーションは、例外を HTTP 500 状態コードに変換して処理します ([ASP.NET API での例外の処理](http://www.asp.net/web-api/overview/error-handling/exception-handling))。この場合、例外の原因を特定できないことがあります。 次の例では、ユーザー コードは、 `String.Format()` をスローする <xref:System.FormatException>を呼び出します。 実行は次のように中断されます。  
   
- ![ユーザー &#45;で中断; 中断例外](../debugger/media/exceptionunhandledbyuser.png "ExceptionUnhandledByUser")  
+ ![ユーザーに設定された改&#45;中断例外](../debugger/media/exceptionunhandledbyuser.png "ExceptionUnhandledByUser")  
   
 ## <a name="add-and-delete-exceptions"></a>追加および削除例外  
  例外は追加および削除することができます。 任意のカテゴリから任意の種類の例外を削除するには、例外を選択し、 **[例外設定]** ツールバーの **[削除]** ボタン (マイナス記号) をクリックするか、または例外を右クリックし、コンテキスト メニューから **[削除]** をクリックします。 例外を削除することは、例外をオフにするのと同じ結果になります。すなわち、該当する例外がスローされたとき、デバッガーは中断されません。  
@@ -190,13 +186,13 @@ public class GenericException<T> : Exception
 例外に条件を設定することができます、**例外設定** ダイアログ ボックス。 現在サポートされている条件には、例外のるまたは除外するには、モジュール名が含まれます。 条件として、モジュール名を設定することにより、特定のコード モジュールでのみ例外を中断することもできます。 または特定のモジュールの互換性に影響を回避できます。
 
 > [!NOTE]
-> 新機能は、例外への条件の追加[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
+> 新機能は、例外への条件の追加 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
 
 条件付きの例外を追加するには、選択、**条件の編集**アイコン [例外設定] ダイアログ ボックスまたは例外を右クリックして選択**条件の編集**です。
 
 ![例外条件](../debugger/media/dbg-conditional-exception.png "DbgConditionalException")
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [例外の後の実行の継続](../debugger/continuing-execution-after-an-exception.md)   
  [方法: 例外の後にシステム コードを調べる](../debugger/how-to-examine-system-code-after-an-exception.md)   
  [方法: ネイティブ ランタイム チェックの使用](../debugger/how-to-use-native-run-time-checks.md)   

@@ -1,13 +1,10 @@
 ---
-title: "レポート用マクロ |Microsoft ドキュメント"
-ms.custom: 
+title: レポート用マクロ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.macros
 dev_langs:
@@ -23,17 +20,16 @@ helpviewer_keywords:
 - debugging [CRT], reporting macros
 - _RPTn macro
 ms.assetid: f2085314-a3a8-4caf-a5a4-2af9ad5aad05
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5af21a708a05bfdc0338ca1c5b2bc038e192eb4b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d6c35a2487e2917f62e35d6e819f899ee2151ffd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="macros-for-reporting"></a>レポート用マクロの使用
 使用することができます、 **_RPTn**、および**_RPTFn** CRTDBG で定義されているマクロです。H の代わりに`printf`デバッグ用のステートメント。 これらのマクロは、リリースでは自動的に消滅ビルド**_DEBUG**が定義されていないためで囲む必要はありません**#ifdef**s。  
@@ -85,5 +81,5 @@ someVar=%d, otherVar=%d.\n", someVar, otherVar );
   
  カスタム マクロは、目的に応じて出力情報の量を増減したり、出力先を変更したりなどの変更を簡単に実現できるため、デバッグ要件が複雑さを増してくる段階で使用すると便利です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CRT のデバッグ技術](../debugger/crt-debugging-techniques.md)

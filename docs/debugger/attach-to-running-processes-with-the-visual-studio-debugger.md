@@ -1,12 +1,10 @@
 ---
-title: "Visual Studio のデバッガーでプロセスを実行するアタッチ |Microsoft ドキュメント"
+title: Visual Studio のデバッガーでプロセスを実行するアタッチ |Microsoft ドキュメント
 ms.custom: H1Hack27Feb2017
 ms.date: 05/18/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.processes.attach
 - vs.debug.process
@@ -27,16 +25,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], attaching to processes
 - debugger, processes
 ms.assetid: 27900e58-090c-4211-a309-b3e1496d5824
-caps.latest.revision: "53"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 28126f9c832f55d63bd1b477599cf83ac8a57d59
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3b726cd5d29093d88e27e7de6bd5a22fcb491d20
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>実行中のプロセスへのアタッチ
 ローカルまたはリモート コンピューターで実行中のプロセスに、Visual Studio デバッガーをアタッチできます。 プロセスを実行した後にをクリックして**デバッグ > プロセスにアタッチする**(またはキーを押して**CTRL + ALT + P**) を開くには、**プロセスにアタッチする** ダイアログ ボックス。
@@ -46,7 +44,7 @@ ms.lasthandoff: 01/10/2018
 > [!TIP]
 > わからない場合は、かどうかを使用する必要が**プロセスにアタッチする**デバッグ シナリオのですか? 参照してください[一般的なデバッグ シナリオ](#BKMK_Scenarios)です。 IIS に配置されているを参照している ASP.NET アプリケーションをデバッグする場合は、[リモート IIS コンピューター上でリモート デバッグの ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)です。
 
-##  <a name="BKMK_Attach_to_a_running_process"></a>ローカル コンピューターで実行中のプロセスにアタッチします。  
+##  <a name="BKMK_Attach_to_a_running_process"></a> ローカル コンピューターで実行中のプロセスにアタッチします。  
  プロセスにアタッチするために、プロセスの名前を知る必要があります (を参照してください[一般的なデバッグ シナリオ](#BKMK_Scenarios)のいくつかの一般的なプロセス名)。
   
 1.  Visual Studio で、次のように選択します。**デバッグ > プロセスにアタッチする**(またはキーを押して**CTRL + ALT + P**)。
@@ -71,7 +69,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  **[アタッチ]**をクリックします。
 
-##  <a name="BKMK_Attach_to_a_process_on_a_remote_computer"></a>リモート コンピューター上のプロセスにアタッチします。  
+##  <a name="BKMK_Attach_to_a_process_on_a_remote_computer"></a> リモート コンピューター上のプロセスにアタッチします。  
  プロセスにアタッチするために、プロセスの名前を知る必要があります (を参照してください[一般的なデバッグ シナリオ](#BKMK_Scenarios)のいくつかの一般的なプロセス名)。 IIS に配置されている ASP.NET アプリのより詳細なガイダンスについては、次を参照してください。[リモート IIS コンピューター上でリモート デバッグの ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)です。 他のアプリについては、タスク マネージャーで、プロセスの名前を検索できる場合があります。
   
  **[プロセスにアタッチ]** ダイアログ ボックスでは、リモート デバッグ用にセットアップした他のコンピューターを選択できます。 詳細については、次を参照してください。[リモート デバッグ](../debugger/remote-debugging.md)です。 リモート コンピューターを選択すると、そのコンピューターで実行されている選択可能なプロセスの一覧を表示して、1 つ以上のプロセスにアタッチしてデバッグを実行できます。
@@ -100,7 +98,7 @@ ms.lasthandoff: 01/10/2018
   
      **[修飾子]** の設定は、その修飾子でデバッグ接続が成功した場合のみ、デバッグ セッション間で保持されます。
      
-4.  をクリックして**更新**です。
+4.  **[更新]**を生成する必要があります。
 
       **[プロセス]** ダイアログ ボックスを開くと、 **[選択可能なプロセス]** ボックスが自動的に表示されます。 このダイアログ ボックスが開いている間に、プロセスをバックグラウンドで開始および停止できます。 このため、内容が常に最新であるとは限りません。 **[更新]**をクリックすると、いつでも一覧の内容を更新して、現在のプロセス一覧を確認できます。 
      
@@ -112,7 +110,7 @@ ms.lasthandoff: 01/10/2018
      
 5.  **[アタッチ]**をクリックします。
 
-## <a name="BKMK_reattach"></a>プロセスを再アタッチします。
+## <a name="BKMK_reattach"></a> プロセスを再アタッチします。
 
 選択してに接続されていたプロセスを簡単に再アタッチできます**デバッグ > プロセスを再アタッチしています.**(**Shift キーを押しながら alt キーを押しながら P**)。 このコマンドを選択すると、デバッガーはすぐにアタッチしようと最後のプロセスを使用してに接続されている、**プロセスにアタッチする** ダイアログ ボックス。
 
@@ -129,7 +127,7 @@ ms.lasthandoff: 01/10/2018
   
 リモート デスクトップ (ターミナル サービス) セッションでのデバッグ時には、 **[選択可能なプロセス]** ボックスに、使用可能なプロセスのすべてが表示されない場合があります。 Visual Studio を、制限付きユーザー アカウントを持つユーザーとして実行している場合、 **[選択可能なプロセス]** ボックスの一覧には、セッション 0 で実行しているプロセスは表示されません。セッション 0 は、サービスおよび w3wp.exe を含むその他のサーバー プロセス用に使用されます。 この問題を解決するには、管理者アカウントで [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を実行するか、ターミナル サービス セッションからではなくサーバー コンソールから [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を実行します。 どちらの方法も実行できない場合、3 つ目の方法として、Windows コマンド ラインから `vsjitdebugger.exe -p` *ProcessId* を実行することによって、プロセスにアタッチできます。 プロセス ID は tlist.exe を使用して確認できます。 tlist.exe を入手するには、「  [WDK と WinDbg のダウンロード](http://go.microsoft.com/fwlink/?LinkId=168279)」で Windows 対応のデバッグ ツールをダウンロードし、インストールします。
 
-## <a name="BKMK_Scenarios"></a>一般的なデバッグ シナリオ
+## <a name="BKMK_Scenarios"></a> 一般的なデバッグ シナリオ
 
 使用する必要があるかどうかを識別するのに役立つ**プロセスにアタッチする**と、アタッチするには、どのようなプロセス、いくつかの一般的なデバッグ シナリオを挙げています (リストは完全ではありません)。 詳細については、使用可能なは、マイクロソフトへのリンクを提供します。
 
@@ -160,7 +158,7 @@ ms.lasthandoff: 01/10/2018
 
 ローカルのデバッグ シナリオでデバッグできます Visual Studio で、ソースへのアクセスなしで適正なシンボル ファイルが、アプリに存在する場合 (既定では、これが必要、デバッグ ビルド)。 詳細については、次を参照してください。[指定シンボルとソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)です。
   
-##  <a name="BKMK_Troubleshoot_attach_errors"></a>トラブルシューティング: アタッチ エラー  
+##  <a name="BKMK_Troubleshoot_attach_errors"></a> トラブルシューティング: アタッチ エラー  
  実行中のプロセスにデバッガーがアタッチすると、このプロセスは、1 種類以上のコードを含むことができます。 デバッガーをアタッチできるコードの種類は **[コードの種類の選択]** ダイアログ ボックスで表示されて選択されています。  
   
  デバッガーは、ある種類のコードに正常にアタッチできても、別の種類にはアタッチできないことがあります。 この問題は、リモート コンピューターで動作しているプロセスにアタッチしようとする場合に発生することがあります。 リモート コンピューターには、一部の種類のコードにしか対応しないリモート デバッグ コンポーネントがインストールされている場合があるためです。 また、ダイレクト データベース デバッグのために複数のプロセスにアタッチしようとした場合にも発生することがあります。 SQL デバッグ機能は、単一プロセスへのアタッチのみをサポートします。  
@@ -189,7 +187,7 @@ ms.lasthandoff: 01/10/2018
   
      このとき、アタッチは完全に失敗し、詳細なエラー メッセージが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [複数のプロセスをデバッグします。](../debugger/debug-multiple-processes.md)   
  [ジャスト イン タイム デバッグ](../debugger/just-in-time-debugging-in-visual-studio.md)   
  [Remote Debugging](../debugger/remote-debugging.md)

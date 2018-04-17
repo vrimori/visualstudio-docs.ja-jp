@@ -1,13 +1,10 @@
 ---
-title: "方法: ActiveX コントロールのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ActiveX コントロールのデバッグ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.controls.debug
 dev_langs:
@@ -25,17 +22,16 @@ helpviewer_keywords:
 - ActiveX controls, debugging
 - testing [Visual Studio], ActiveX controls
 ms.assetid: bbc02cf7-a7e6-44fe-99af-87a43e1d7251
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 11d29d2d8a5ebf4774f3b71ea72a1dd9bc58cbd0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f036809024ff5489c36dbe4ff266d361b96ca294
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-debug-an-activex-control"></a>方法 : ActiveX コントロールをデバッグする
 > [!NOTE]
@@ -61,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
      内のコンテナーを指定しない場合、**プロジェクト プロパティ ページ**ダイアログ ボックスで、デバッグを開始するときに、コンテナーを指定できます。 デバッグを開始する実行コマンドを選択すると、[デバッグ セッション ダイアログ ボックスの実行可能ファイル](../debugger/executable-for-debugging-session-dialog-box.md)が表示されます。 ダイアログ ボックスにコンテナーのパス名を指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveX コントロール](/cpp/mfc/activex-controls)   
  [テスト コンテナーでイベントのプロパティとテスト](/cpp/mfc/testing-properties-and-events-with-test-container)   
  [COM および ActiveX のデバッグ](../debugger/com-and-activex-debugging.md)   

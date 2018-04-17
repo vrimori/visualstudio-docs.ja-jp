@@ -1,29 +1,25 @@
 ---
-title: "IDebugCoreServer3::GetConnectionProtocol |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugCoreServer3::GetConnectionProtocol |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugCoreServer3::GetConnectionProtocol
 helpviewer_keywords:
 - IDebugCoreServer3::GetConnectionProtocol
 ms.assetid: 368ced5b-c5d9-4090-a5b4-26ff400d1a55
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dfa1b8c335d871c83aaf27e3929dd70e981450da
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 127d4c5695c870c570080c79c5f447b6173b1fb8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugcoreserver3getconnectionprotocol"></a>IDebugCoreServer3::GetConnectionProtocol
 サーバーとデバッグのパッケージ間の通信に使用されているプロトコルを示す値を返します。  
@@ -49,6 +45,6 @@ int GetConnectionProtocol(
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)   
  [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md)

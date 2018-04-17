@@ -1,27 +1,23 @@
 ---
-title: "グラフィックスの状態 |Microsoft ドキュメント"
-ms.custom: 
+title: グラフィックスの状態 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.graphics.statewindow
 ms.assetid: 97e7757e-c372-4626-8149-99a81367a0e1
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0de0874a605325f3f61547a202701eeeeb4d5a24
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1f62e38a041d51136ea32bc94270445af7008eb2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="graphics-state"></a>グラフィックスの状態
 Visual Studio のグラフィックス診断の [状態] ウィンドウでは、描画呼び出しなど、現在のイベントの時点でアクティブになっているグラフィックスの状態を理解することができます。  
@@ -56,7 +52,7 @@ Visual Studio のグラフィックス診断の [状態] ウィンドウでは�
   
 |Column|説明|  
 |------------|-----------------|  
-|name|状態の項目の名前。 この項目が状態のバンドルを表している場合は、項目を展開して表示できます。<br /><br /> **API 入力状態ビュー**と**論理状態ビュー**状態、状態間の階層関係を表示する名前がインデントされます。<br /><br /> **固定状態ビュー**状態にある場合、フラット リストで完全修飾名が表示されます。|  
+|名前|状態の項目の名前。 この項目が状態のバンドルを表している場合は、項目を展開して表示できます。<br /><br /> **API 入力状態ビュー**と**論理状態ビュー**状態、状態間の階層関係を表示する名前がインデントされます。<br /><br /> **固定状態ビュー**状態にある場合、フラット リストで完全修飾名が表示されます。|  
 |[値]|状態の項目の値。|  
 |型|状態の項目の種類。|  
   

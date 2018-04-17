@@ -1,29 +1,25 @@
 ---
-title: "IDebugBreakpointUnboundEvent2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugBreakpointUnboundEvent2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugBreakpointUnboundEvent2
 helpviewer_keywords:
 - IDebugBreakpointUnboundEvent2
 ms.assetid: 6b1e1863-0c64-4d85-8ab9-aface522fdea
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 148840222521e85c5cf71991eb5acc3823b74331
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d4e9b08c05fb9f89e0caf3f12be4337bfe3a9827
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugbreakpointunboundevent2"></a>IDebugBreakpointUnboundEvent2
 このインターフェイスは、バインドされたブレークポイントが読み込まれたプログラムからバインドされていることをセッション デバッグ マネージャー (SDM) に指示します。  
@@ -51,14 +47,14 @@ IDebugBreakpointUnboundEvent2 : IUnknown
 ## <a name="remarks"></a>コメント  
  DLL またはクラスのデバッグ エンジンをアンロードするときにそのモジュール内のコードにバインドされているすべてのブレークポイントがデバッグ中のプログラムからバインドいない場合があります。 `IDebugBreakpointUnboundEvent2`がバインドされていない各ブレークポイントの送信。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

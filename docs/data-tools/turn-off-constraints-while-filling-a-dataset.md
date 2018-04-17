@@ -1,11 +1,8 @@
 ---
-title: "データセットの読み込み中に制約をオフに |Microsoft ドキュメント"
-ms.custom: 
+title: データセットの読み込み中に制約をオフに |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - DataRow.BeginEdit
 - DataRow.EndEdit
@@ -19,17 +16,17 @@ helpviewer_keywords:
 - datasets [Visual Basic], constraints
 - constraints [Visual Basic], suspending during dataset update
 ms.assetid: 553f7d0c-2faa-4c17-b226-dd02855bf1dc
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 88c8687511dd600802cc7c6ecdc12f0827fd7f6f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: e32aecbe10c9c02fec62240977b3f4e3a3338791
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="turn-off-constraints-while-filling-a-dataset"></a>データセットの読み込み中に制約をオフにします。
 データセットに制約 (外部キー制約) などが含まれている場合、そのデータセットに対して実行される操作を順序に関連するエラーを発行できます。 たとえば、読み込み前に、子レコードの読み込み関連する親レコードの制約に違反してエラーが発生することができます。 子レコードをロードするとすぐに、制約は、関連する親レコード チェックし、エラーが発生します。  
@@ -52,6 +49,6 @@ ms.lasthandoff: 12/22/2017
   
 2.  **プロパティ**ウィンドウで、設定、<xref:System.Data.DataSet.EnforceConstraints%2A>プロパティを`false`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Tableadapter を使用してデータセットを入力します。](../data-tools/fill-datasets-by-using-tableadapters.md)   
  [データセットのリレーションシップ](../data-tools/relationships-in-datasets.md)

@@ -1,12 +1,10 @@
 ---
-title: "Ca 2233: 操作はオーバーフローできません |Microsoft ドキュメント"
-ms.custom: 
+title: 'Ca 2233: 操作はオーバーフローできません |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - OperationsShouldNotOverflow
 - CA2233
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - OperationsShouldNotOverflow
 - CA2233
 ms.assetid: 3a2b06ba-6d1b-4666-9eaf-e053ef47ffaa
-caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: f5d048476997517a835337b568930367f97c2c92
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 35fafef574f7d72d54e4e9c44b1b1091ccb0de7b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2233-operations-should-not-overflow"></a>CA2233: 操作はオーバーフローできません
 |||  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="example-of-a-violation"></a>違反の例  
   
 ### <a name="description"></a>説明  
- 次の例のメソッドは、この規則に違反する整数を操作します。 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]必要があります、**削除**これ起動を無効にする整数オーバーフローのオプションです。  
+ 次の例のメソッドは、この規則に違反する整数を操作します。 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 必要があります、**削除**これ起動を無効にする整数オーバーフローのオプションです。  
   
 ### <a name="code"></a>コード  
  [!code-vb[FxCop.Usage.OperationOverflow#1](../code-quality/codesnippet/VisualBasic/ca2233-operations-should-not-overflow_1.vb)]
@@ -114,7 +112,7 @@ End Sub
   
 3.  選択**算術オーバーフローおよびアンダー フローのチェック** をクリック**OK**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.OverflowException?displayProperty=fullName>   
  [C# 演算子](/dotnet/csharp/language-reference/operators/index)   
  [Checked と Unchecked](/dotnet/csharp/language-reference/keywords/checked-and-unchecked)

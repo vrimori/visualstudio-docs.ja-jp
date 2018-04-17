@@ -2,22 +2,19 @@
 title: ルールを使用して実行するように C++ 規則を指定するセット |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: mikeblome
 ms.author: mblome
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 400b3228c1039ff7b859f769949c0c82c1939954
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: 9caf8b1d31ed41684e21388cc9b03594d688c40e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>規則セットを使用して実行するように C++ の規則を指定
 
@@ -35,7 +32,7 @@ Visual Studio で作成および変更できますカスタム*ルール セッ�
 
     - カスタマイズする規則セットを選択します。
 
-     \- または
+     \- または -
 
     - 選択 **\<[参照...] >**既存の規則セットを指定ではありません、ボックスの一覧です。
 

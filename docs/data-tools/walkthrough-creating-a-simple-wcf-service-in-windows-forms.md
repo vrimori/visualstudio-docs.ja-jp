@@ -1,11 +1,8 @@
 ---
-title: "チュートリアル: Windows フォームでの簡単な WCF サービスの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: Windows フォームでの簡単な WCF サービスの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +12,17 @@ helpviewer_keywords:
 - WCF services
 - WCF services, walkthrough
 ms.assetid: 5fef1a64-27a4-4f10-aa57-29023e28a2d6
-caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: c45ea549f17d71fd524a96e7d019c2b0d86bc628
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: cacd1e15d2b20c4c24056416df4f9d25ea87474e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-simple-wcf-service-in-windows-forms"></a>チュートリアル: Windows フォームでの簡単な WCF サービスの作成
 このチュートリアルは、単純な [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] サービスを作成し、テストして、Windows フォーム アプリケーションからアクセスする方法を例示しています。  
@@ -79,7 +76,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  **WCF テスト クライアント**フォームをダブルクリックして、 **GetData()**対象メソッドの**IService1**です。 **GetData**タブが表示されます。  
   
-     ![GetData &#40; &#41;メソッド](../data-tools/media/wcf4.png "wcf4")  
+     ![GetData&#40; &#41;メソッド](../data-tools/media/wcf4.png "wcf4")  
   
 3.  **要求**ボックスで、選択、**値**フィールドとタイプ`Hello`です。  
   
@@ -130,5 +127,5 @@ ms.lasthandoff: 12/22/2017
   
      ![結果を表示するフォーム](../data-tools/media/wcf10.png "wcf10")  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio での Windows Communication Foundation サービスと WCF データ サービス](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

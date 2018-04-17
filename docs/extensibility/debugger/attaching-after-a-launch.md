@@ -1,27 +1,23 @@
 ---
-title: "起動後にアタッチ |Microsoft ドキュメント"
-ms.custom: 
+title: 起動後にアタッチ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, attaching to programs
 ms.assetid: 5a3600a1-dc20-4e55-b2a4-809736a6ae65
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 890023b8336f130cf3b8cfcfe640da46af9cf0d1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 69f9f9cde76c5fa66294fd2cdbdc5252169e0183
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="attaching-after-a-launch"></a>起動後にアタッチします。
 プログラムが起動された後に、デバッグ セッションとプログラムをデバッグ エンジン (DE) をアタッチする準備ができてです。  
@@ -49,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
  プログラムにし、スタートアップ イベントを送信する準備ができて、DE はアタッチされています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プログラムに直接接続](../../extensibility/debugger/attaching-directly-to-a-program.md)   
  [ポートを通知します。](../../extensibility/debugger/notifying-the-port.md)   
  [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)   

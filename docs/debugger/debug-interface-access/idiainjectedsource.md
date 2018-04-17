@@ -1,29 +1,25 @@
 ---
-title: "IDiaInjectedSource |Microsoft ドキュメント"
-ms.custom: 
+title: IDiaInjectedSource |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaInjectedSource interface
 ms.assetid: 75192c5c-812d-4675-9dc5-4c2cff3ba503
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cfcb19170221ea7e37a25cb93c7bf77fc769fd1a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2a59c35059cd07936ffa34b43520721244e9d3fe
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiainjectedsource"></a>IDiaInjectedSource
 アクセスは、DIA データ ソースに格納されているソース コードを挿入します。  
@@ -118,14 +114,14 @@ void PrintInjectedSource(IDiaInjectedSource* pSource)
 }  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [Idiaenuminjectedsources::item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md)   
  [Idiaenuminjectedsources::next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md)   

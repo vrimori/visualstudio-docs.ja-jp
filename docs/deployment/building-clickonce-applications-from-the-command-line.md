@@ -1,12 +1,10 @@
 ---
-title: "コマンドラインから ClickOnce アプリケーションをビルド |Microsoft ドキュメント"
-ms.custom: 
+title: コマンドラインから ClickOnce アプリケーションをビルド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - publishing
 - publishing, ClickOnce
 ms.assetid: d9bc6212-c584-4f72-88c9-9a4b998c555e
-caps.latest.revision: "23"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 39a64737c3e34b7e0c4d89824b22f169d60d4fd0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 183cb81798841c6640ea1b17d8db3820e0229769
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-clickonce-applications-from-the-command-line"></a>ClickOnce アプリケーションのコマンド ラインからのビルド
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]、統合開発環境 (IDE) で作成される場合でも、コマンドラインからのプロジェクトをビルドすることができます。 実際で作成されたプロジェクトを再構築する[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]のみを持つ別のコンピューターで、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]インストールします。 これにより、自動プロセスを使用してビルドを再生成するなど、中央のビルド ラボまたはを使用して高度なスクリプティング プロジェクト自体のビルドの対象外の手法です。  
@@ -112,7 +110,7 @@ msbuild /target:publish /property:BootstrapperEnabled=false
   
  公開プロパティで制御[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]から、**発行**、**セキュリティ**、および**署名**のプロパティ ページ、**プロジェクト デザイナー**. 各をアプリケーション デザイナーのさまざまなプロパティ ページを設定する方法を示すと共に、発行のプロパティの説明を次に示します。  
   
--   `AssemblyOriginatorKeyFile`署名に使用されるキー ファイルの決定、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 これと同じキーをアセンブリに厳密な名前を割り当てる使用も可能性があります。 このプロパティが設定されて、**署名**のページ、**プロジェクト デザイナー**です。  
+-   `AssemblyOriginatorKeyFile` 署名に使用されるキー ファイルの決定、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 これと同じキーをアセンブリに厳密な名前を割り当てる使用も可能性があります。 このプロパティが設定されて、**署名**のページ、**プロジェクト デザイナー**です。  
   
  次のプロパティが設定、**セキュリティ**ページ。  
   
@@ -122,41 +120,41 @@ msbuild /target:publish /property:BootstrapperEnabled=false
   
  次のプロパティが設定、**発行**ページ。  
   
--   `PublishUrl`ここで、アプリケーションの発行を IDE の場所です。 挿入される、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]どちらの場合、アプリケーション マニフェスト、`InstallUrl`または`UpdateUrl`プロパティを指定します。  
+-   `PublishUrl` ここで、アプリケーションの発行を IDE の場所です。 挿入される、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]どちらの場合、アプリケーション マニフェスト、`InstallUrl`または`UpdateUrl`プロパティを指定します。  
   
--   `ApplicationVersion`バージョンを指定、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。 これは、4 桁のバージョン番号です。 最後の数字がある場合、"*"を`ApplicationRevision`ビルド時に、マニフェストに挿入された値と置き換えられます。  
+-   `ApplicationVersion` バージョンを指定、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。 これは、4 桁のバージョン番号です。 最後の数字がある場合、"*"を`ApplicationRevision`ビルド時に、マニフェストに挿入された値と置き換えられます。  
   
--   `ApplicationRevision`リビジョンを指定します。 これは、IDE で発行するたびにインクリメントされる整数です。 自動的に増加がないことを確認はビルド コマンドラインで実行します。  
+-   `ApplicationRevision` リビジョンを指定します。 これは、IDE で発行するたびにインクリメントされる整数です。 自動的に増加がないことを確認はビルド コマンドラインで実行します。  
   
--   `Install`アプリケーションがインストールされているアプリケーションまたは Web からの実行アプリケーションかどうかを判断します。  
+-   `Install` アプリケーションがインストールされているアプリケーションまたは Web からの実行アプリケーションかどうかを判断します。  
   
--   `InstallUrl`(非表示) は、ユーザーがからアプリケーションをインストールする場所の場所です。 場合に、この値が setup.exe ブートス トラップに書き込まれる、指定した場合、`IsWebBootstrapper`プロパティを有効にします。 アプリケーション マニフェストの場合にも挿入された、`UpdateUrl`が指定されていません。  
+-   `InstallUrl` (非表示) は、ユーザーがからアプリケーションをインストールする場所の場所です。 場合に、この値が setup.exe ブートス トラップに書き込まれる、指定した場合、`IsWebBootstrapper`プロパティを有効にします。 アプリケーション マニフェストの場合にも挿入された、`UpdateUrl`が指定されていません。  
   
--   `SupportUrl`(非表示) は、場所にリンクされて、**プログラムの追加/削除**インストールされているアプリケーションのダイアログ ボックス。  
+-   `SupportUrl` (非表示) は、場所にリンクされて、**プログラムの追加/削除**インストールされているアプリケーションのダイアログ ボックス。  
   
  次のプロパティが設定されて、**アプリケーションの更新プログラム** ダイアログ ボックスで、**発行**ページ。  
   
--   `UpdateEnabled`更新プログラム、アプリケーションを確認する必要があるかどうかを示します。  
+-   `UpdateEnabled` 更新プログラム、アプリケーションを確認する必要があるかどうかを示します。  
   
--   `UpdateMode`更新プログラムのフォア グラウンドまたはバック グラウンド更新のいずれかを指定します。  
+-   `UpdateMode` 更新プログラムのフォア グラウンドまたはバック グラウンド更新のいずれかを指定します。  
   
--   `UpdateInterval`アプリケーションが更新プログラムを確認する頻度を指定します。  
+-   `UpdateInterval` アプリケーションが更新プログラムを確認する頻度を指定します。  
   
--   `UpdateIntervalUnits`指定するかどうか、`UpdateInterval`時間、日、週単位では、値。  
+-   `UpdateIntervalUnits` 指定するかどうか、`UpdateInterval`時間、日、週単位では、値。  
   
--   `UpdateUrl`(非表示) は、アプリケーションが更新プログラムを受信元となる場所です。 指定した場合、この値は、アプリケーション マニフェストに挿入されます。  
+-   `UpdateUrl` (非表示) は、アプリケーションが更新プログラムを受信元となる場所です。 指定した場合、この値は、アプリケーション マニフェストに挿入されます。  
   
 -   次のプロパティが設定されて、**発行オプション** ダイアログ ボックスで、**発行**ページ。  
   
--   `PublisherName`インストールするか、アプリケーションを実行しているときに表示されるプロンプトに表示されるパブリッシャーの名前を指定します。 インストールされたアプリケーションの場合も使用されますでフォルダー名を指定、**開始**メニュー。  
+-   `PublisherName` インストールするか、アプリケーションを実行しているときに表示されるプロンプトに表示されるパブリッシャーの名前を指定します。 インストールされたアプリケーションの場合も使用されますでフォルダー名を指定、**開始**メニュー。  
   
--   `ProductName`インストールするか、アプリケーションを実行しているときに表示されるプロンプトに表示される製品の名前を指定します。 インストールされたアプリケーションの場合も使用されますでショートカット名を指定、**開始**メニュー。  
+-   `ProductName` インストールするか、アプリケーションを実行しているときに表示されるプロンプトに表示される製品の名前を指定します。 インストールされたアプリケーションの場合も使用されますでショートカット名を指定、**開始**メニュー。  
   
 -   次のプロパティが設定されて、**の前提条件** ダイアログ ボックスで、**発行**ページ。  
   
--   `BootstrapperEnabled`setup.exe ブートス トラップを生成するかどうかを判断します。  
+-   `BootstrapperEnabled` setup.exe ブートス トラップを生成するかどうかを判断します。  
   
--   `IsWebBootstrapper`setup.exe ブートス トラップが Web 経由で、またはディスク ベース モードで動作するかどうかを判断します。  
+-   `IsWebBootstrapper` setup.exe ブートス トラップが Web 経由で、またはディスク ベース モードで動作するかどうかを判断します。  
   
 ## <a name="installurl-supporturl-publishurl-and-updateurl"></a>InstallURL、SupportUrl、PublishURL、および UpdateURL  
  次の表は、ClickOnce 配置の 4 つの URL オプションを示します。  
@@ -168,7 +166,7 @@ msbuild /target:publish /property:BootstrapperEnabled=false
 |`SupportURL`|任意。 サポート サイトと異なる場合は、この URL オプションを設定、`PublishURL`です。 たとえば、設定する、`SupportURL`会社のカスタマー サポート Web サイトにします。|  
 |`UpdateURL`|任意。 更新プログラムの場所が異なる場合は、この URL オプションを設定、`InstallURL`です。 たとえば、設定する、`PublishURL`を FTP パスに設定し、 `UpdateURL` Web URL にします。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.Build.Tasks.GenerateBootstrapper>   
  <xref:Microsoft.Build.Tasks.GenerateApplicationManifest>   
  <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest>   

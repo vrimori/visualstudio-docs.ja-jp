@@ -1,29 +1,25 @@
 ---
-title: "IDebugProgram2::GetDisassemblyStream |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugProgram2::GetDisassemblyStream |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugProgram2::GetDisassemblyStream
 helpviewer_keywords:
 - IDebugProgram2::GetDisassemblyStream
 ms.assetid: beda0da5-267e-4bf3-96c4-b659d29e2254
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: db2f0855ecb22a711fa525a6a85e3f445af28d0c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f5b991a877f91b9324b6535fb3b79b082cd901c2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugprogram2getdisassemblystream"></a>IDebugProgram2::GetDisassemblyStream
 このプログラムまたはこのプログラムの一部の逆アセンブリ ストリームを取得します。  
@@ -62,7 +58,7 @@ int GetDisassemblyStream(
 ## <a name="remarks"></a>コメント  
  場合、`dwScopes`パラメーターには、`DSS_HUGE`のフラグ、 [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md)列挙セットし、逆アセンブルをファイル全体の逆アセンブリ命令の数が多いを返すと予想されます。またはモジュール。 場合、`DSS_HUGE`フラグが設定されていない、し、逆アセンブルを小さな領域に限定すると予想される 1 つの関数の通常のです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)   

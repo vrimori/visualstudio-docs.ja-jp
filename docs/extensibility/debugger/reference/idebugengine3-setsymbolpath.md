@@ -1,29 +1,25 @@
 ---
-title: "IDebugEngine3::SetSymbolPath |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugEngine3::SetSymbolPath |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugEngine3::SetSymbolPath
 helpviewer_keywords:
 - IDebugEngine3::SetSymbolPath
 ms.assetid: 47b48f84-8a96-401f-84df-0baa8a96d26e
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8cc60a266a238ee8d3635637b907ce88933b29a0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d5a79cfd817be1a665f0008a39420e7cb39cc50b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugengine3setsymbolpath"></a>IDebugEngine3::SetSymbolPath
 パスまたはデバッグ シンボルの検索パスを設定します。  
@@ -60,7 +56,7 @@ int SetSymbolPath(
 ## <a name="remarks"></a>コメント  
  文字列`szSymbolSearchPath`シンボルを検索、セミコロンで区切られた 1 つまたは複数のパスの一覧を示します。 これらのパスは、ローカル パス、UNC 形式のパスまたは URL にすることができます。 これらのパスには、さまざまな種類のミックスことができます。 パスが UNC である場合 (たとえば、 \\\Symserver\Symbols)、デバッグ エンジンは、パスがシンボル サーバーがあり、それらによって指定されたパスでのキャッシュ、そのサーバーからシンボルを読み込むことができるようかどうかかを確認する必要がありますして`szSymbolCachePath`です。  
   
- シンボル パスは、1 つ以上のキャッシュの場所を含めることもできます。 キャッシュが最初に、キャッシュとの最も高い優先度の優先度順に表示されで区切られた * 記号。 例:  
+ シンボル パスは、1 つ以上のキャッシュの場所を含めることもできます。 キャッシュが最初に、キャッシュとの最も高い優先度の優先度順に表示されで区切られた * 記号。 例えば:  
   
 ```  
 \\symbols\symbols;\\someotherserver\symbols;c:\symbols\httpsymbols*http://msdl.microsoft.com  
@@ -68,6 +64,6 @@ int SetSymbolPath(
   
  [LoadSymbols](../../../extensibility/debugger/reference/idebugengine3-loadsymbols.md)メソッドは、シンボルの実際の負荷を実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [LoadSymbols](../../../extensibility/debugger/reference/idebugengine3-loadsymbols.md)   
  [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)

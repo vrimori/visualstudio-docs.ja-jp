@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio のデバッガーでブレークポイントを使用して |Microsoft ドキュメント"
+title: Visual Studio のデバッガーでブレークポイントを使用して |Microsoft ドキュメント
 ms.custom: H1Hack27Feb2017
 ms.date: 02/07/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpointswin
 - vs.debug.disassembly.insert
@@ -35,17 +32,16 @@ f1_keywords:
 helpviewer_keywords:
 - breakpoints, about breakpoints
 ms.assetid: 020b2e97-3b3e-4b2c-872d-b5c6025e120e
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 95c6f87e120cd8a62aa3959548f968b70c820d39
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 755b167d49aed33aee30f4a616b7609bf2cd0d6c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでブレークポイントを使用します。
 コードの変数の状態や呼び出し履歴の確認などのために、デバッガーの実行を停止するときにブレークポイントを設定できます。 ブレークポイントは、開発者が利用できる重要なデバッグ手法の 1 つです。  
@@ -261,6 +257,6 @@ ms.lasthandoff: 03/15/2018
 ## <a name="export-and-import-breakpoints"></a>ブレークポイントをエクスポートおよびインポートする  
  XML ファイルにブレークポイントをエクスポートするには、ブレークポイントを右クリックし、 **[エクスポート]**を選択します。 既定で、ファイルはソリューション ディレクティブに保存されます。 ブレークポイントをインポートするには、 **[ブレークポイント]** ウィンドウを開き (**CTRL + ALT + B**キー)、ツールバーの右向き矢印をクリックします (ツールヒントは **[ファイルからブレークポイントをインポートします]**です)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Visual Studio デバッガーでブレークポイントをトラブルシューティングします。](../debugger/troubleshooting-breakpoints.md)  
 [デバッガーでのコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)

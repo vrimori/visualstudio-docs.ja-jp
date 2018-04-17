@@ -1,12 +1,9 @@
 ---
-title: "エラー: web サーバーが正しく構成されていません |Microsoft ドキュメント"
-ms.custom: 
+title: 'エラー: web サーバーが正しく構成されていません |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 09/20/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vs.debug.remote.projnotconfigured
@@ -17,17 +14,16 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - debugger, Web application errors
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bd7ea7deea749831ebf26d3f8a406b1e3ad63fb0
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 1bf614f44ec4fedd0579f3c352e3046fa0c46e9c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="error-the-web-server-is-not-configured-correctly"></a>エラー : Web サーバーは正しく構成されていません。
 
@@ -53,6 +49,6 @@ ms.lasthandoff: 01/29/2018
   
 4. 場合、 `maxConnection` IIS での制限が低すぎると接続が多すぎますがある、する必要があります[接続制限を増やす](/iis/configuration/system.applicationhost/sites/sitedefaults/limits)です。
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ASP.NET の IIS のリモート コンピューター上でリモート デバッグ](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)   
  [Web アプリケーションのデバッグ : エラーおよびトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

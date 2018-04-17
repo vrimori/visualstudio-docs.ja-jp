@@ -1,27 +1,25 @@
 ---
-title: "ローカル値を取得する |Microsoft ドキュメント"
-ms.custom: 
+title: ローカル値を取得する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - expression evaluation, local values
 - debugging [Debugging SDK], local values
 - expression evaluation, getting local values
 ms.assetid: a10b0764-65ac-476f-bf42-b4a9c38e20de
-caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 284821c9c1a31105f865333a45944a23792cd33a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 4b38b346b8429ba04fb3730ea4c5fef0b2b6da1d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-local-values"></a>ローカル値を取得します。
 > [!IMPORTANT]
@@ -40,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 4.  要求されたすべてのプロパティを返します、 [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md)構造体。  
   
 ## <a name="managed-code"></a>マネージ コード  
- この例の実装を示しています。`IDebugProperty2::GetPropertyInfo`メソッドのマネージ コードでローカルにします。 ヘルパー関数も示しています`Field.GetType`、つまり、フィールドの種類を取得するために使用します。 `Field.GetValue`表示される[を評価するローカル](../../extensibility/debugger/evaluating-locals.md)です。 ヘルパー関数`Field.MapModifiersToAttributes`(非表示)、フィールドを変換して[FIELD_MODIFIERS](../../extensibility/debugger/reference/field-modifiers.md)フラグ[DBG_ATTRIB_FLAGS](../../extensibility/debugger/reference/dbg-attrib-flags.md)値。  
+ この例の実装を示しています。`IDebugProperty2::GetPropertyInfo`メソッドのマネージ コードでローカルにします。 ヘルパー関数も示しています`Field.GetType`、つまり、フィールドの種類を取得するために使用します。 `Field.GetValue` 表示される[を評価するローカル](../../extensibility/debugger/evaluating-locals.md)です。 ヘルパー関数`Field.MapModifiersToAttributes`(非表示)、フィールドを変換して[FIELD_MODIFIERS](../../extensibility/debugger/reference/field-modifiers.md)フラグ[DBG_ATTRIB_FLAGS](../../extensibility/debugger/reference/dbg-attrib-flags.md)値。  
   
 ```csharp  
 namespace EEMC  
@@ -442,7 +440,7 @@ HRESULT FieldGetValue( in IDebugField* pfield, out VARIANT* pvarValue )
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ローカルの実装のサンプル](../../extensibility/debugger/sample-implementation-of-locals.md)   
  [ローカル プロパティの取得](../../extensibility/debugger/getting-local-properties.md)   
  [評価コンテキスト](../../extensibility/debugger/evaluation-context.md)

@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio デバッガーでのレジスタの値の表示 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio デバッガーでのレジスタの値の表示 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.registers
 dev_langs:
@@ -24,17 +21,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], Registers window
 - Registers window
 ms.assetid: 2918ffa2-562f-40d6-9053-ef321bbeb767
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7aa89b6e8d36c3eb47168c8672fb7eea1e3507db
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 85fd16ad3cc6dfe7408466bf78ec3085955bea1e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-register-values-and-use-the-registers-window-in-the-visual-studio-debugger"></a>登録値を表示して、Visual Studio デバッガーの [レジスタ] ウィンドウを使用します。
 [レジスタ] ウィンドウがアドレス レベルのデバッグが有効になっている場合にのみ使用できますが、**オプション**ダイアログ ボックスで、**デバッグ**ノード、**全般**カテゴリ。  
@@ -57,7 +53,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  スクリプトまたは SQL アプリケーションのレジスタ情報は表示できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッグの基礎 : [レジスタ] ウィンドウ](../debugger/debugging-basics-registers-window.md)   
  [デバッガーでのデータの表示](../debugger/viewing-data-in-the-debugger.md)   
  [デバッグの基礎 : [レジスタ] ウィンドウ](../debugger/debugging-basics-registers-window.md)

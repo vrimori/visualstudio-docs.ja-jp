@@ -1,24 +1,22 @@
 ---
-title: "コードの不具合のマネージ コードのチュートリアルの分析 |Microsoft ドキュメント"
-ms.custom: 
+title: コードの不具合のマネージ コードのチュートリアルの分析 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/29/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-code-analysis
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code analysis [Visual Studio]
 - managed code, analyzing
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e1c708f31d31dd811017015cd37c7e60d49beef9
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: 3af6d4f1580313457aa553ce11f920be5376641c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-analyzing-managed-code-for-code-defects"></a>チュートリアル: コードの分析のマネージ コードを欠陥します。
 
@@ -30,7 +28,7 @@ ms.lasthandoff: 02/01/2018
 
 ### <a name="to-create-a-class-library"></a>クラス ライブラリを作成するには
 
-1. **ファイル**] メニューの [選択**新規** > **プロジェクト.**.
+1. **[ファイル]** メニューで、**[新規]** > **[プロジェクト]** の順に選択します。
 
 1. **新しいプロジェクト** ダイアログ ボックスで、展開**インストール** > **Visual c#**を選択し**Windows クラシック デスクトップ**です。
 
@@ -112,7 +110,7 @@ ms.lasthandoff: 02/01/2018
 
    1. コードを追加`using System.Runtime.Serialization;`Class1.cs ファイルの先頭にします。
 
-   1. 次に、コンス トラクターを追加します。`protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { } to the class demo.`
+   1. 次に、コンス トラクターを追加します。 `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { } to the class demo.`
 
    [Ca 1032: 標準例外コンス トラクターを実装する](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft.Design: このクラスに次のコンス トラクターを追加しますパブリック demo()。
 

@@ -1,27 +1,23 @@
 ---
-title: "グラフィックス イベント一覧 |Microsoft ドキュメント"
-ms.custom: 
+title: グラフィックス イベント一覧 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.graphics.eventlist
 ms.assetid: a1252e19-b27d-4dc7-a16b-fdac894c1f0e
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 601fc4eb47e89a4035f14722793169a76d73f520
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 244f7dd8c89eb1dcb15b81bcb20c0db9cb6cf617
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="graphics-event-list"></a>グラフィックス イベント一覧
 Visual Studio Graphics Analyzer でグラフィックス イベント一覧を使用して、ゲームまたはアプリのフレームのレンダリング中に記録された Direct3D イベントを調査できます。  
@@ -75,8 +71,8 @@ Visual Studio Graphics Analyzer でグラフィックス イベント一覧を�
 |----------|-----------------------|  
 |(アイコンなし)|一般イベント<br /> ユーザー定義イベント、ユーザー定義イベント グループ、または描画イベント以外のすべてのイベント。|  
 |![描画イベント アイコン](media/vsg_eventlist_icon_draw.png "vsg_eventlist_icon_draw")|描画イベント<br /> キャプチャしたフレームの間に	発生した描画イベントをマークします。|  
-|![ユーザー &#45; 定義済みイベント マーカーのアイコン](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|ユーザー定義イベント グループ<br /> アプリケーションで定義されているとおりに、関連するイベントをグループ化します。|  
-|![ユーザー &#45; 定義済みイベント マーカーのアイコン](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|ユーザー定義イベント マーカー<br /> アプリケーションで定義されているとおりに、特定の場所をマークします。|  
+|![ユーザー&#45;イベント マーカーのアイコンを定義](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|ユーザー定義イベント グループ<br /> アプリケーションで定義されているとおりに、関連するイベントをグループ化します。|  
+|![ユーザー&#45;イベント マーカーのアイコンを定義](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|ユーザー定義イベント マーカー<br /> アプリケーションで定義されているとおりに、特定の場所をマークします。|  
   
 ## <a name="marking-user-defined-events-in-your-app"></a>アプリのユーザー定義イベントのマーク付け  
  ユーザー定義イベントは、ユーザーのアプリケーションに特有のものです。 これを使用して、アプリケーション内で発生する重要なイベントを、グラフィックス イベント一覧のイベントに関連付けることができます。 たとえば、ユーザー定義イベント グループを作成して、関連するイベント (ユーザー インターフェイスをレンダリングするイベントなど) をグループまたは階層にまとめることができます。このようにすると、イベント一覧を簡単に参照したり、特定の種類のオブジェクトが描画されたときにマーカーを作成して、イベント一覧の中でグラフィックス イベントを簡単に見つけたりすることができます。  
@@ -106,7 +102,7 @@ Visual Studio Graphics Analyzer でグラフィックス イベント一覧を�
 
 <!-- VERSIONLESS -->
 <a name="resource-history"></a>
-##リソースの履歴 Visual Studio 2017 および大きい値を含む、**リソース履歴**ウィンドウです。  [ウォッチ] アイコンを選択すると![[ウォッチ] アイコン](media/gfx_watch.png)内のエントリの横にある、**イベント一覧**ウィンドウが表示されます、**リソース履歴**次に示すウィンドウ。
+## リソースの履歴 Visual Studio 2017 および大きい値を含む、**リソース履歴**ウィンドウです。  [ウォッチ] アイコンを選択すると![[ウォッチ] アイコン](media/gfx_watch.png)内のエントリの横にある、**イベント一覧**ウィンドウが表示されます、**リソース履歴**次に示すウィンドウ。
 
 ![リソースの履歴](media/gfx_diag_resource_history.png)
 
@@ -119,5 +115,5 @@ Column|説明
 **Event**| これが発生したメソッドの呼び出しを示しています。 イベントを生成します。  [ウォッチ] アイコンを選択すると、個々 のアイテムに対する追加の履歴を表示できます![[ウォッチ] アイコン](media/gfx_watch.png)適切な行にします。  また、任意の項目などの青のテキストで描画される`m_commandList`上記のスクリーン ショットでは、詳細については選択できます。
 <!-- /VERSIONLESS -->
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: デバイス状態によるオブジェクトの不足](walkthrough-missing-objects-due-to-device-state.md)

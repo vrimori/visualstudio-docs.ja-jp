@@ -2,25 +2,22 @@
 title: Visual Studio の C++ の主要なガイドライン チェッカー リファレンス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/22/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
 author: mikeblome
 ms.author: mblome
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0825ea42ca74b224574299846504dfde7dd6f809
-ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
+ms.openlocfilehash: f0b657781981b6204bda42fcbf18f8945fb59004
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-core-guidelines-checker-reference"></a>C++ の主要なガイドライン チェッカー参照
 
@@ -82,7 +79,7 @@ ms.lasthandoff: 03/22/2018
 
 [C26415 SMART_PTR_NOT_NEEDED](C26415.md)スマート ポインター パラメーター '% シンボル %' が含まれているポインターへのアクセスにのみ使用されます。 T * または T を使用すると、代わりにします。 参照してください[C++ コア ガイドライン R.30](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rr-smartptrparam)です。
 
-## <a name="sharedpointer-group"></a>SHARED_POINTER Group
+## <a name="sharedpointer-group"></a>SHARED_POINTER グループ
 
 [C26414 RESET_LOCAL_SMART_PTR](C26414.md)移動、コピー、再割り当て、またはローカルのスマート ポインター '% シンボル %' をリセットします。 参照してください[C++ コア ガイドライン R.5](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rr-scoped)です。
 
@@ -146,27 +143,27 @@ ms.lasthandoff: 03/22/2018
 
 [C26461 USE_CONST_POINTER_ARGUMENTS](c26461.md): 関数 '% 関数 %' のポインター引数 '% 引数 %' へのポインターとしてマークできる`const`です。 参照してください[C++ コア ガイドライン con.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-ref)です。
 
-[C26462 USE_CONST_POINTER_FOR_VARIABLE](c26462.md) The value pointed to by '%variable%' is assigned only once, mark it as a pointer to `const`. 参照してください[C++ コア ガイドライン con.4](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con4-use-const-to-define-objects-with-values-that-do-not-change-after-construction)です。
+[C26462 USE_CONST_POINTER_FOR_VARIABLE](c26462.md) '% 変数 %' を指す値が 1 回しか割り当てられているへのポインターとしてマーク`const`です。 参照してください[C++ コア ガイドライン con.4](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con4-use-const-to-define-objects-with-values-that-do-not-change-after-construction)です。
 
 [C26463 USE_CONST_FOR_ELEMENTS](c26463.md) '% 配列 %' の配列の要素が 1 回だけマーク要素で割り当てられた`const`です。 参照してください[C++ コア ガイドライン con.4](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con4-use-const-to-define-objects-with-values-that-do-not-change-after-construction)です。
 
-[C26464 USE_CONST_POINTER_FOR_ELEMENTS](c26464.md) The values pointed to by elements of array '%array%' are assigned only once, mark elements as pointer to `const`. 参照してください[C++ コア ガイドライン con.4](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con4-use-const-to-define-objects-with-values-that-do-not-change-after-construction)です。
+[C26464 USE_CONST_POINTER_FOR_ELEMENTS](c26464.md) '% 配列 %' の配列の要素を指す値が 1 回だけへのポインターとしてマーク要素で割り当てられた`const`です。 参照してください[C++ コア ガイドライン con.4](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con4-use-const-to-define-objects-with-values-that-do-not-change-after-construction)です。
 
 [C26496 USE_CONST_FOR_VARIABLE](c26496.md)変数 '% 変数 %' が 1 回しか割り当てられている、としてマーク`const`です。 参照してください[C++ コア ガイドライン con.4](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con4-use-const-to-define-objects-with-values-that-do-not-change-after-construction)です。
 
 [C26497 USE_CONSTEXPR_FOR_FUNCTION](c26497.md)マークを付けるでしたこの関数 % 関数`constexpr`コンパイル時の評価が必要な場合です。 参照してください[C++ コア ガイドライン F.4](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rf-constexpr)です。
 
-[C26498 USE_CONSTEXPR_FOR_FUNCTIONCALL](c26498.md) This function call %function% can use `constexpr` if compile-time evaluation is desired. 参照してください[C++ コア ガイドライン con.5](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-constexpr)です。
+[C26498 USE_CONSTEXPR_FOR_FUNCTIONCALL](c26498.md)この関数の呼び出し関数 % が使用できる`constexpr`コンパイル時の評価が必要な場合です。 参照してください[C++ コア ガイドライン con.5](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-constexpr)です。
 
 ## <a name="type-group"></a>種類のグループ
 
 [C26465 NO_CONST_CAST_UNNECESSARY](c26465.md)を使用しない`const_cast`キャストに`const`です。 `const_cast` 不要です。この変換では、constness または揮発性を削除していますされません。 参照してください[C++ コア ガイドライン Type.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-constcast)です。
 
-[C26466 NO_STATIC_DOWNCAST_POLYMORPHIC](c26466.md) Don't use `static_cast` downcasts. ポリモーフィックな型からキャストには、dynamic_cast を使用する必要があります。 参照してください[C++ コア ガイドライン Type.2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-downcast)です。
+[C26466 NO_STATIC_DOWNCAST_POLYMORPHIC](c26466.md)を使用しない`static_cast`キャストします。 ポリモーフィックな型からキャストには、dynamic_cast を使用する必要があります。 参照してください[C++ コア ガイドライン Type.2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-downcast)です。
 
 [C26471 NO_REINTERPRET_CAST_FROM_VOID_PTR](c26471.md) Don't use `reinterpret_cast`. Void * からのキャストが使用できる`static_cast`です。 参照してください[C++ コア ガイドライン Type.1](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-reinterpretcast)です。
 
-[C26472 NO_CASTS_FOR_ARITHMETIC_CONVERSION](C26472.md) Don't use a `static_cast` for arithmetic conversions. かっこ初期化、gsl::narrow_cast、または gsl::narow を使用します。 参照してください[C++ コア ガイドライン Type.1](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-reinterpretcast)です。
+[C26472 NO_CASTS_FOR_ARITHMETIC_CONVERSION](C26472.md)を使用しない、`static_cast`の算術変換をします。 かっこ初期化、gsl::narrow_cast、または gsl::narow を使用します。 参照してください[C++ コア ガイドライン Type.1](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-reinterpretcast)です。
 
 [C26473 NO_IDENTITY_CAST](C26473.md)ソースの種類とターゲットの種類が同じであるポインター型の間でキャストしません。 参照してください[C++ コア ガイドライン Type.1](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-reinterpretcast)です。
 
@@ -195,9 +192,9 @@ ms.lasthandoff: 03/22/2018
 
 [C26482 NO_DYNAMIC_ARRAY_INDEXING](c26482.md)定数式を使用して配列にのみインデックスを作成します。 参照してください[C++ コア ガイドライン Bounds.2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
 
-[C26483 STATIC_INDEX_OUT_OF_RANGE](c26483.md) Value %value% is outside the bounds (0, %bound%) of variable '%variable%'. 配列の境界内にある定数の式を使用して配列へのインデックスのみ。 参照してください[C++ コア ガイドライン Bounds.2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
+[C26483 STATIC_INDEX_OUT_OF_RANGE](c26483.md)値 % の値が範囲外 (0 の場合、連結 %) の変数 '% 変数 %' です。 配列の境界内にある定数の式を使用して配列へのインデックスのみ。 参照してください[C++ コア ガイドライン Bounds.2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
 
-[C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md) Expression '%expr%': No array to pointer decay. 参照してください[C++ コア ガイドライン Bounds.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
+[C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md)式 '%expr% ': ポインター減衰にない配列。 参照してください[C++ コア ガイドライン Bounds.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
 
 ## <a name="gsl-group"></a>GSL グループ
 

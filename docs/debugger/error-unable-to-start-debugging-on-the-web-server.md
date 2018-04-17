@@ -1,12 +1,9 @@
 ---
-title: "エラー: Web サーバーでデバッグを開始できません |。Microsoft ドキュメント"
-ms.custom: 
+title: 'エラー: Web サーバーでデバッグを開始できません |。Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 05/23/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vs.debug.error.http
@@ -27,17 +24,16 @@ helpviewer_keywords:
 - errors [debugger], unable to start debugging
 - debugging ASP.NET Web applications, unable to start debugging error
 - remote debugging, errors
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d9c4160726f808a2f456bb52390839c34dc308e2
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 459df1ca9ffed246116c71adac8a38039b6602ae
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="error-unable-to-start-debugging-on-the-web-server"></a>エラー ： Web サーバーでデバッグを開始できません
 
@@ -59,32 +55,32 @@ Web サーバーで実行されている ASP.NET アプリケーションをデ�
 - [デバッガーがリモート コンピューターに接続できません。](#cannot_connect)
 - [表示については、一般的な構成エラーです。デバッガーの外で web ページを実行している可能性があります詳細情報を提供します。](#see_help)
 
-## <a name="IISlist"></a>IIS での起動に一致する web サイトが表示されない url
+## <a name="IISlist"></a> IIS での起動に一致する web サイトが表示されない url
 
 - 管理者として Visual Studio を再起動して、デバッグを再試行してください。 (一部 ASP.NET のデバッグ シナリオには、高度な特権が必要があります)。
 
     常に、Visual Studio のショートカット アイコンを右クリックして、管理者として実行する Visual Studio を構成することができますを選択する**プロパティ > [詳細設定]**、し、常に管理者として実行を選択します。
 
-## <a name="web_server_config"></a>Web サーバーが正しく構成されていません
+## <a name="web_server_config"></a> Web サーバーが正しく構成されていません
 
 - 参照してください[エラー: web サーバーが正しく構成されていない](../debugger/error-the-web-server-is-not-configured-correctly.md)です。
 
-## <a name="unabletoconnect"></a>Web サーバーに接続できません。
+## <a name="unabletoconnect"></a> Web サーバーに接続できません。
 
 - Visual Studio と Web サーバーを同じコンピューターで実行されているを使用したデバッグ**f5 キーを押して**(の代わりに**プロセスにアタッチする**)? プロジェクトのプロパティを開きを適切な Web サーバーに接続し、URL を起動して、プロジェクトが構成されていることを確認します。 (開いている**プロパティ > Web > サーバー**または**プロパティ > デバッグ**プロジェクトの種類によって異なります。 Web フォームは、プロジェクトを開く**プロパティ ページ > 開始オプション > サーバー**)。
 
 - それ以外の場合、アプリケーション プールを再起動し、IIS をリセットします。 詳細については、次を参照してください。 [IIS 構成を調べて](#vxtbshttpservererrorsthingstocheck)です。
 
-## <a name="webservertimeout"></a>Web サーバーは、適切なタイミングで反応しませんでした。
+## <a name="webservertimeout"></a> Web サーバーは、適切なタイミングで反応しませんでした。
 
 - IIS をリセットして、デバッグを再試行してください。 デバッガーの複数のインスタンスが接続されて、IIS プロセスです。リセットは終了します。 詳細については、次を参照してください。 [IIS 構成を調べて](#vxtbshttpservererrorsthingstocheck)です。
 
-## <a name="msvsmon"></a>Microsoft visual studio リモート デバッグ monitor(msvsmon.exe) がないが、リモート コンピューターで実行されています。
+## <a name="msvsmon"></a> Microsoft visual studio リモート デバッグ monitor(msvsmon.exe) がないが、リモート コンピューターで実行されています。
 
 - リモート コンピューターでデバッグする場合があることを確認[インストールされ、リモート デバッガーを実行している](../debugger/remote-debugging.md)です。 メッセージには、ファイアウォールが特記しています場合、確認、[ファイアウォールでポートを解決](../debugger/remote-debugger-port-assignments.md)が開いて、サードパーティ製のファイアウォールを使用している場合に特にです。
 - HOSTS ファイルを使用している場合は、正しく構成されていることを確認してください。 たとえばを使用したデバッグ**f5 キーを押して**(の代わりに**プロセスにアタッチする**)、ホスト ファイルをプロジェクトのプロパティと同様に、同じプロジェクト URL を含める必要があります**プロパティ > Web > サーバー**または**プロパティ > デバッグ**プロジェクトの種類によって異なります。
 
-## <a name="server_error"></a>リモート サーバーがエラーを返しました
+## <a name="server_error"></a> リモート サーバーがエラーを返しました
 
 チェック、 [IIS ログ ファイル](https://support.microsoft.com/help/943891/the-http-status-code-in-iis-7-0--iis-7-5--and-iis-8-0)エラー サブコードおよび詳細については、この IIS 7 の[ブログの投稿](https://blogs.iis.net/tomkmvp/troubleshoot-a-403)です。
 
@@ -93,24 +89,24 @@ Web サーバーで実行されている ASP.NET アプリケーションをデ�
 - (503) サーバーは利用できません。 アプリケーション プールを停止して、エラーまたは構成の変更により可能性があります。 アプリケーション プールを再起動します。
 - (404) not Found です。 ASP.NET の正しいバージョンのアプリケーション プールが構成されていることを確認します。
 
-## <a name="aspnet"></a>ASP.NET のデバッグを開始できませんでした。
+## <a name="aspnet"></a> ASP.NET のデバッグを開始できませんでした。
 
 - アプリケーション プールを再起動し、IIS をリセットします。 詳細については、次を参照してください。 [IIS 構成を調べて](#vxtbshttpservererrorsthingstocheck)です。
 - URL 書き換えを行う場合は、基本の web.config でない URL 書き換えをテストします。 参照してください、**注**URL に関する内のモジュールを書き直してください。 [IIS 構成を調べて](#vxtbshttpservererrorsthingstocheck)です。
 
-## <a name="cannot_connect"></a>デバッガーがリモート コンピューターに接続できません。
+## <a name="cannot_connect"></a> デバッガーがリモート コンピューターに接続できません。
 
 ローカルで、デバッグしている場合、Visual Studio は、32 ビット アプリケーションを 64 ビット バージョンのリモート デバッガーを使用して 64 ビット アプリケーションをデバッグするためにこのエラーが発生する可能性があります。 プロジェクトのプロパティを開き、プロジェクトが正しく、Web サーバーと URL への接続に構成されていることを確認してください。 (開いている**プロパティ > Web > サーバー**または**プロパティ > デバッグ**プロジェクトの種類によって異なります)。
 
 また、HOSTS ファイルを使用している場合は、正しく構成されていることを確認してください。 たとえば、ホストがプロジェクトのプロパティと同様に、同じプロジェクト URL を含める必要がありますをファイル**プロパティ > Web > サーバー**または**プロパティ > デバッグ**プロジェクトの種類に応じて、します。
 
-## <a name="see_help"></a>表示については、一般的な構成エラーです。 デバッガーの外で web ページを実行している可能性があります詳細情報を提供します。
+## <a name="see_help"></a> 表示については、一般的な構成エラーです。 デバッガーの外で web ページを実行している可能性があります詳細情報を提供します。
 
 - 実行している Visual Studio と Web サーバー、同じコンピューター上か。 プロジェクトのプロパティを開きを適切な Web サーバーに接続し、URL を起動して、プロジェクトが構成されていることを確認します。 (開いている**プロパティ > Web > サーバー**または**プロパティ > デバッグ**プロジェクトの種類によって異なります)。
 
 - 機能しない、またはリモートでデバッグする、手順に従ってください[IIS 構成を調べて](#vxtbshttpservererrorsthingstocheck)です。
 
-##  <a name="vxtbshttpservererrorsthingstocheck"></a>IIS 構成を確認します。
+##  <a name="vxtbshttpservererrorsthingstocheck"></a> IIS 構成を確認します。
 
 問題を解決するのにはここで詳細な手順を行った後、デバッグを再試行する前に、IIS をリセットする必要もあります。 管理者特権でコマンド プロンプトを開く」と入力しを実行できます`iisreset`です。 
 
@@ -165,5 +161,5 @@ IIS 構成が原因でない、次の手順を試してください。
 
     デバッガーを使用するアプリを入手できない場合は、サーバーで、基本的な ASP.NET アプリケーションをローカルに作成してみてください、基本的なアプリをデバッグしようとします。 (既定の ASP.NET MVC テンプレートを使用する可能性があります)。基本的なアプリをデバッグする場合に役立つ 2 つの構成間で異なるかを確認します。 URL 書き換えルールなどは、web.config ファイルで設定の相違を探します。
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Web アプリケーションのデバッグ : エラーおよびトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

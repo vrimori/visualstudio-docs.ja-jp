@@ -1,26 +1,24 @@
 ---
-title: "式エバリュエーターのインターフェイスのキー |Microsoft ドキュメント"
-ms.custom: 
+title: 式エバリュエーターのインターフェイスのキー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluation, interfaces
 ms.assetid: 1cac9aa3-0867-4e12-a16e-1e90abbc0fb6
-caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 1e0d655f18ec7ec50dffa52e3ac4ce363fb02fd3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: fe0c592c65e2c6ab7429cef44a830325a834ecdc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="key-expression-evaluator-interfaces"></a>キー式エバリュエーター インターフェイス
 > [!IMPORTANT]
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)  
   
-     [バインド](../../extensibility/debugger/reference/idebugbinder-bind.md)メソッドで、シンボルの現在の値が含まれるメモリ領域を取得します。 両方を含む、表されるメソッドで指定された、 [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)オブジェクト、およびシンボル自体によって表される、 [IDebugField](../../extensibility/debugger/reference/idebugfield.md)オブジェクト、`IDebugBinder::Bind`記号の値を返します。 `IDebugBinder`通常、DE によって実装されます。  
+     [バインド](../../extensibility/debugger/reference/idebugbinder-bind.md)メソッドで、シンボルの現在の値が含まれるメモリ領域を取得します。 両方を含む、表されるメソッドで指定された、 [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)オブジェクト、およびシンボル自体によって表される、 [IDebugField](../../extensibility/debugger/reference/idebugfield.md)オブジェクト、`IDebugBinder::Bind`記号の値を返します。 `IDebugBinder` 通常、DE によって実装されます。  
   
 -   [IDebugField](../../extensibility/debugger/reference/idebugfield.md)  
   
@@ -60,5 +58,5 @@ ms.lasthandoff: 12/22/2017
   
      このインターフェイスは、値とその型を表す、式の評価の結果です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [評価コンテキスト](../../extensibility/debugger/evaluation-context.md)

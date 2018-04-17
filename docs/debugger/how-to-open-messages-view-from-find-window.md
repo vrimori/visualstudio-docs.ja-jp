@@ -1,26 +1,24 @@
 ---
-title: "方法: [検索] ウィンドウからメッセージ ビューを開く |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: [検索] ウィンドウからメッセージ ビューを開く |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Messages View in Spy++, opening
 - opening Messages View in Spy++
 ms.assetid: 601a193e-432a-417b-9406-6fec9e401264
-caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: db73b501b93f8905d13a7a17dead19fece383c84
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: c711b7a9e8fd40b2b45e1f2c70c31f35df5b1135
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-open-messages-view-from-find-window"></a>方法: [ウィンドウ検索] からメッセージ ビューを開く
 使用できると便利な場合があります、**ウィンドウ検索**を対象のウィンドウを選択し、そのウィンドウのメッセージ ビューを開く ダイアログ ボックス。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  **表示****メッセージ**です。  
   
-5.  Press **OK**.  
+5.  **[OK]** を押します。  
   
      空白[メッセージ ビュー](../debugger/messages-view.md)ウィンドウが開き、および**メッセージ**spy++ ツールバーにメニューが追加されます。  
   

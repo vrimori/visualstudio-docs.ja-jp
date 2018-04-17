@@ -1,13 +1,10 @@
 ---
-title: "方法: エディット コンティニュを使用 (c#) |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: エディット コンティニュを使用 (c#) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -16,17 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Edit and Continue [C#], about Edit and Continue
 ms.assetid: 40e136d8-a08c-43bd-b313-fb821c55eb3c
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe77428d1d9cfb5ff12554e87ec9afe15d6c86b8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 587ee3bb7221c0fce82048112945ac8581796d23
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-use-edit-and-continue-c"></a>方法 : エディット コンティニュを使用する (C#)
 C# のエディット コンティニュを使用すると、デバッグ中に中断モードでコードに変更を加えることができます。 デバッグ セッションを停止したり再開したりしなくても、変更を適用できます。  
@@ -54,6 +50,6 @@ C# のエディット コンティニュを使用すると、デバッグ中に�
   
      デバッグ セッションを再開すると、この設定が有効になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エディット コンティニュ (Visual c#)](../debugger/edit-and-continue-visual-csharp.md)   
  [サポートされているコード変更 (c# および Visual Basic)](../debugger/supported-code-changes-csharp.md)   

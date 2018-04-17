@@ -1,11 +1,8 @@
 ---
-title: "チュートリアル: N 層データ アプリケーションの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: N 層データ アプリケーションの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 09/08/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -13,17 +10,17 @@ helpviewer_keywords:
 - n-tier applications, creating
 - n-tier applications, walkthroughs
 ms.assetid: d15e4d31-2839-48d9-9e0e-2e73404d82a2
-caps.latest.revision: "48"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 9e513fc346991912dcc91e9a56062e49760d9779
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.workload:
+- data-storage
+ms.openlocfilehash: a22ba174310aa9fc3f7e2676c140d164911d5bf4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-an-n-tier-data-application"></a>チュートリアル : n 層データ アプリケーションの作成
 *N 層*データ アプリケーションは複数の論理レイヤーに分離され、データにアクセスするアプリケーションまたは*階層*です。 アプリケーション コンポーネントをこのように別個の層に分離すると、アプリケーションの保守容易性とスケーラビリティが向上します。 これは、ソリューション全体を再設計しなくても 1 つの層に適用できる、新しい技術を簡単に導入できるようにすることで実現されます。 n 層アーキテクチャには、プレゼンテーション層、中間層、およびデータ層が存在します。 通常、中間層には、データ アクセス層、ビジネス ロジック層、および認証や検証などの共有コンポーネントが含まれます。 データ層には、リレーショナル データベースが含まれます。 通常、n 層アプリケーションでは、機密情報が中間層のデータ アクセス層に格納され、プレゼンテーション層にアクセスするエンド ユーザーから分離されます。 詳細については、次を参照してください。 [N 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)です。  
@@ -154,7 +151,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
   
 4.  **DataSet プロジェクト**一覧で、 **DataEntityTier**です。  
   
-5.  **ビルド**メニューの **ソリューションのビルド**です。  
+5.  **[ビルド]** メニューの **[ソリューションのビルド]** を選択します。  
   
  データセットと TableAdapter が、2 つのクラス ライブラリ プロジェクトに分離されます。 最初にデータセット全体 (DataAccessTier) を含んでいたプロジェクトには、現在は TableAdapter しか含まれません。 指定した、プロジェクト、 **DataSet プロジェクト**プロパティ (DataEntityTier) には、型指定されたデータセットが含まれています。 (NorthwindDataSet.Dataset.Designer.vb または NorthwindDataSet.Dataset.Designer.cs)。  
   
@@ -381,7 +378,7 @@ MaxReceivedMessageSize の既定値は、Customers テーブルと Orders テー
   
 -   サービスへの、データを更新してデータベースに戻す追加メソッドの追加。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [N 層アプリケーションでのデータセットを操作します。](../data-tools/work-with-datasets-in-n-tier-applications.md)   
  [階層更新](../data-tools/hierarchical-update.md)   
  [Visual Studio でのデータへのアクセス](../data-tools/accessing-data-in-visual-studio.md)

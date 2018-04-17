@@ -1,27 +1,23 @@
 ---
-title: "デバッグ エンジンが |Microsoft ドキュメント"
-ms.custom: 
+title: デバッグ エンジンが |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debug engines
 ms.assetid: 148b1efc-ca07-4d8e-bdfc-c723a760c620
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 70e572b73f8474f77a17989c790f2e7336f9d7a5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1816d19425897a2f63fa7e5cbe30771bd5eac3d4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debug-engine"></a>デバッグ エンジン
 デバッグ エンジン (DE) は、実行の制御やブレークポイントなどの式の評価などのデバッグ サービスを提供する、インタープリターまたはオペレーティング システムで動作します。 デはデバッグ中のプログラムの状態を監視します。 これを実現するには、DE は、CPU とは Api からは、ランタイムによって提供されるかどうかは、任意のメソッドはランタイムではサポートされている、使用を使用します。  
@@ -37,13 +33,13 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  TRANSACT-SQL の別個の DE 実装があるときに、 [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)]、VBScript と[!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)]単一 DE を共有します。  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デバッグ デバッグ エンジンを 2 つの方法のいずれかを実行する: と同じプロセスのいずれか、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]シェル、またはターゲット プログラムと同じプロセスはデバッグ中です。 後者の形式は、デバッグ中のプロセスが実際には、インタープリターで実行されているスクリプトと、デバッグ エンジンでは、スクリプトを監視するために、インタープリターの詳細な知識が必要に通常発生します。 この例では、インタープリターは、実際には、実行時です。デバッグ エンジンは、特定のランタイムの実装です。 さらに、(たとえば、リモート デバッグ) プロセスやコンピューターの境界を越えて 1 つ DE の実装を分割できます。  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] デバッグ デバッグ エンジンを 2 つの方法のいずれかを実行する: と同じプロセスのいずれか、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]シェル、またはターゲット プログラムと同じプロセスはデバッグ中です。 後者の形式は、デバッグ中のプロセスが実際には、インタープリターで実行されているスクリプトと、デバッグ エンジンでは、スクリプトを監視するために、インタープリターの詳細な知識が必要に通常発生します。 この例では、インタープリターは、実際には、実行時です。デバッグ エンジンは、特定のランタイムの実装です。 さらに、(たとえば、リモート デバッグ) プロセスやコンピューターの境界を越えて 1 つ DE の実装を分割できます。  
   
  DE 公開、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デバッグのインターフェイスです。 すべての通信は、COM 経由 プロセスで、アウト プロセス、または別のコンピューター上に、DE が読み込まれるかどうかは、コンポーネントの通信は影響しません。  
   
  デは、その特定の実行時の式の構文を理解する DE を有効にする、式エバリュエーターのコンポーネントと連携します。 デは、言語コンパイラによって生成されたシンボリック デバッグ情報にアクセスするシンボル ハンドラー コンポーネントとも連携することができます。 詳細については、次を参照してください。[式エバリュエーター](../../extensibility/debugger/expression-evaluator.md)と[シンボル プロバイダー](../../extensibility/debugger/symbol-provider.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガー コンポーネント](../../extensibility/debugger/debugger-components.md)   
  [式エバリュエーター](../../extensibility/debugger/expression-evaluator.md)   
  [シンボル プロバイダー](../../extensibility/debugger/symbol-provider.md)

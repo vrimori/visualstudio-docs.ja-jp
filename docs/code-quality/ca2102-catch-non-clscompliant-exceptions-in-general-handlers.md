@@ -1,30 +1,26 @@
 ---
-title: "2102: 汎用ハンドラーでの非 CLSCompliant の例外のキャッチ |Microsoft ドキュメント"
-ms.custom: 
+title: '2102: 汎用ハンドラーでの非 CLSCompliant の例外のキャッチ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CA2102
 - CatchNonClsCompliantExceptionsInGeneralHandlers
 helpviewer_keywords:
 - CA2102
 ms.assetid: bf2df68f-d386-4379-ad9e-930a2c2e930d
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 17238e140f8672e9d2d5a67594eb26b415c0b8d8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: cff8d36cd80a31cf05ca461730d51703afc106ee
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2102-catch-non-clscompliant-exceptions-in-general-handlers"></a>CA2102: 汎用ハンドラーの CLSCompliant でない例外をキャッチします
 |||  
@@ -42,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
 -   C#: `catch {}`  
   
--   C++:`catch(...) {}`または`catch(Object^) {}`  
+-   C++:`catch(...) {}`または `catch(Object^) {}`  
   
  未処理の非 CLS 準拠の例外は、catch ブロックで以前に許可されたアクセス許可を削除するとセキュリティの問題になります。 非 CLS に準拠しない例外がキャッチされないので、CLS に準拠している例外をスローする悪意のあるメソッドの管理者特権を持つ実行可能性があります。  
   
@@ -84,7 +80,7 @@ csc /r:ThrowNonClsCompliantException.dll CatchNonClsCompliantException.cs
 ## <a name="related-rules"></a>関連規則  
  [CA1031: 一般的な例外の種類はキャッチしません](../code-quality/ca1031-do-not-catch-general-exception-types.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [例外と例外処理](/dotnet/csharp/programming-guide/exceptions/exceptions-and-exception-handling)   
  [Ilasm.exe (IL アセンブラー)](/dotnet/framework/tools/ilasm-exe-il-assembler)   
  [言語への非依存性、および言語非依存コンポーネント](/dotnet/standard/language-independence-and-language-independent-components)

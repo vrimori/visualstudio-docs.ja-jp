@@ -1,13 +1,10 @@
 ---
-title: "IA64 プロセスの混合モードのデバッグはサポートされていません。 | Microsoft Docs"
-ms.custom: 
+title: IA64 プロセスの混合モードのデバッグはサポートされていません。 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.interop_unsupported_ia64
 dev_langs:
@@ -16,17 +13,16 @@ dev_langs:
 - FSharp
 - C++
 ms.assetid: 20bc1e38-049b-4388-87c4-936815d85b46
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 193d469666d9aaa012187500de063470df77c823
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ab73d41442b97ed00045ba794a04bb2d23bb78cc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mixed-mode-debugging-for-ia64-processes-is-unsupported"></a>IA64 プロセスの混合モードのデバッグはサポートされていません。
 Visual Studio では、IA64 プロセスでマネージ コードとネイティブ コードの混合モードのデバッグはサポートされていません。 つまり、デバッグ中にマネージ コードからネイティブ コードにステップ インすることや、ネイティブ コードからマネージ コードにステップ インすることはできません。  
@@ -55,5 +51,5 @@ Visual Studio では、IA64 プロセスでマネージ コードとネイティ
   
 2.  プロパティ ページで、をクリックして**プラットフォーム**プラットフォームの一覧から [Win32] を選択し、  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [64 ビット アプリケーションをデバッグする](../debugger/debug-64-bit-applications.md)

@@ -1,13 +1,10 @@
 ---
-title: "デバッガーでのスレッドの表示 |Microsoft ドキュメント"
-ms.custom: 
+title: デバッガーでのスレッドの表示 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.threads
 dev_langs:
@@ -24,17 +21,16 @@ helpviewer_keywords:
 - '@TIB'
 - debugging [Visual Studio], threads
 ms.assetid: 590ffd57-0556-43d8-8962-ee27e5b2b7d7
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bde9f1c8aa09f8e5961bd228a5f1947c2fc30f82
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 081d3d2289ff73b3e5ccacfc23fd8a5fe7eb292b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-threads-in-the-debugger-in-visual-studio-using-the-threads-window"></a>[スレッド] ウィンドウを使用して Visual Studio のデバッガーでスレッドの表示
 **スレッド** ウィンドウで確認し、できますデバッグしているアプリケーションのスレッドを使用します。 使用する方法の手順については、**スレッド**ウィンドウを参照してください[チュートリアル: [スレッド] ウィンドウを使用してデバッグ](../debugger/how-to-use-the-threads-window.md)です。
@@ -146,7 +142,7 @@ ms.lasthandoff: 12/22/2017
   
     -   検索文字列を入力し、Enter キーを押します。  
   
-         \- または  
+         \- または -  
   
     -   横にドロップダウン リストをクリックして、**検索**ボックスし、以前の検索から検索文字列を選択します。  
   
@@ -168,6 +164,6 @@ ms.lasthandoff: 12/22/2017
   
 -   上部のツールバーで、**スレッド**ウィンドウで、をクリックして**呼び出し履歴の**または**呼び出し履歴の折りたたみ**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マルチ スレッド アプリケーションをデバッグします。](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [マルチ スレッド アプリケーションのデバッグの開始します。](../debugger/get-started-debugging-multithreaded-apps.md)

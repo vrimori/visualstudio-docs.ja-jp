@@ -1,13 +1,10 @@
 ---
-title: "&lt;InstallChecks&gt;要素 (ブートス トラップ) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;InstallChecks&gt;要素 (ブートス トラップ) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -16,17 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - <InstallChecks> element [bootstrapper]
 ms.assetid: ad329c87-b0ad-4304-84de-ae9496514c42
-caps.latest.revision: 
 author: stevehoag
 ms.author: shoag
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 787134277f27e901c6afe6a8e9c41d224431a122
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: dfd01eb4aa67af9e23a7c8c348bcacb263ccb6f6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltinstallchecksgt-element-bootstrapper"></a>&lt;InstallChecks&gt;要素 (ブートス トラップ)
 `InstallChecks`要素は、さまざまなすべてのアプリケーションの適切な前提条件がインストールされているかどうかを確認するローカル コンピューターに対するテストの開始をサポートします。  
@@ -88,9 +84,9 @@ ms.lasthandoff: 12/22/2017
 |`ProcessorArchitecture`|任意。 このインストールの対象となるコンピューターのプロセッサ。 既定値は `msil` です。|  
   
 ## <a name="externalcheck"></a>ExternalCheck  
- この要素の省略可能な子要素である`InstallChecks`です。 インスタンスごとに`ExternalCheck`、ブートス トラップが別のプロセスで指定された外部プログラムを実行し、その終了コードによって示されるプロパティに格納`Property`です。 `ExternalCheck`複雑な依存関係のチェックを実装するため、またはコンポーネントの有無を確認する唯一の方法はそれをインスタンス化するときに便利です。  
+ この要素の省略可能な子要素である`InstallChecks`です。 インスタンスごとに`ExternalCheck`、ブートス トラップが別のプロセスで指定された外部プログラムを実行し、その終了コードによって示されるプロパティに格納`Property`です。 `ExternalCheck` 複雑な依存関係のチェックを実装するため、またはコンポーネントの有無を確認する唯一の方法はそれをインスタンス化するときに便利です。  
   
- `ExternalCheck`要素が含まれていない、次の属性です。  
+ `ExternalCheck` 要素が含まれていない、次の属性です。  
   
 |属性|説明|  
 |---------------|-----------------|  
@@ -101,7 +97,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="filecheck"></a>チェックイン  
  この要素の省略可能な子要素である`InstallChecks`です。 インスタンスごとに`FileCheck`、ブートス トラップは、名前付きのファイルが存在し、ファイルのバージョン番号を返すかどうかが決まります。 ブートス トラップがで指定したプロパティを設定、ファイルがバージョン番号を持たない場合`Property`を 0 にします。 ファイルが存在しない場合`Property`任意の値に設定されていません。  
   
- `FileCheck`要素が含まれていない、次の属性です。  
+ `FileCheck` 要素が含まれていない、次の属性です。  
   
 |属性|説明|  
 |---------------|-----------------|  
@@ -114,7 +110,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="msiproductcheck"></a>MsiProductCheck  
  この要素の省略可能な子要素である`InstallChecks`です。 インスタンスごとに`MsiProductCheck`、ブートス トラップが完了するまでに指定した Microsoft Windows インストーラーのインストールが実行するかどうかを確認します。 プロパティの値は、製品のインストールの状態に応じて設定されます。 正の値は、製品がインストールされていることを示します 0 または-1 は、インストールされていないことを示します。 (詳細については、Windows インストーラー SDK 関数 MsiQueryFeatureState 参照してください。 してください。). Windows インストーラーが、コンピューターにインストールされていない場合`Property`が設定されていません。  
   
- `MsiProductCheck`要素が含まれていない、次の属性です。  
+ `MsiProductCheck` 要素が含まれていない、次の属性です。  
   
 |属性|説明|  
 |---------------|-----------------|  
@@ -125,24 +121,24 @@ ms.lasthandoff: 12/22/2017
 ## <a name="registrycheck"></a>RegistryCheck  
  この要素の省略可能な子要素である`InstallChecks`です。 インスタンスごとに`RegistryCheck`、ブートス トラップが指定されたレジストリ キーが存在するかどうか、指定された値があるかどうかを確認します。  
   
- `RegistryCheck`要素が含まれていない、次の属性です。  
+ `RegistryCheck` 要素が含まれていない、次の属性です。  
   
 |属性|説明|  
 |---------------|-----------------|  
 |`Property`|必須。 結果を格納するプロパティの名前。 このプロパティは、下にテストから参照できる、`InstallConditions`子である要素の`Command`要素。 詳細については、次を参照してください。 [\<コマンド > 要素](../deployment/commands-element-bootstrapper.md)です。|  
 |`Key`|必須。 レジストリ キーの名前。|  
-|`Value`|任意。 取得するレジストリ値の名前。 既定では、既定値のテキストを返します。 `Value`文字列または DWORD のいずれかにする必要があります。|  
+|`Value`|任意。 取得するレジストリ値の名前。 既定では、既定値のテキストを返します。 `Value` 文字列または DWORD のいずれかにする必要があります。|  
   
 ## <a name="registryfilecheck"></a>RegistryFileCheck  
  この要素の省略可能な子要素である`InstallChecks`です。 インスタンスごとに`RegistryFileCheck`、ブートス トラップは指定されたレジストリ キーからファイルへのパスを取得しようとして最初に、指定されたファイルのバージョンを取得します。 これは、レジストリの値として指定されたディレクトリにファイルを検索する場合に特に便利です。  
   
- `RegistryFileCheck`要素が含まれていない、次の属性です。  
+ `RegistryFileCheck` 要素が含まれていない、次の属性です。  
   
 |属性|説明|  
 |---------------|-----------------|  
 |`Property`|必須。 結果を格納するプロパティの名前。 このプロパティは、下にテストから参照できる、`InstallConditions`子である要素の`Command`要素。 詳細については、次を参照してください。 [\<コマンド > 要素](../deployment/commands-element-bootstrapper.md)です。|  
 |`Key`|必須。 レジストリ キーの名前。 しない限り、その値は、ファイルへのパスとして解釈されます、`File`属性を設定します。 このキーが存在しない場合`Property`が設定されていません。|  
-|`Value`|任意。 取得するレジストリ値の名前。 既定では、既定値のテキストを返します。 `Value`文字列である必要があります。|  
+|`Value`|任意。 取得するレジストリ値の名前。 既定では、既定値のテキストを返します。 `Value` 文字列である必要があります。|  
 |`FileName`|任意。 ファイルの名前。 指定すると、レジストリ キーから得られた値と見なされます、ディレクトリ パスを指定してにこの名前が追加されます。 指定しない場合、レジストリから返される値は、ファイルへの完全パスと見なされます。|  
 |`SearchDepth`|任意。 指定されたファイル用のサブフォルダーを検索する位置の深さです。 検索では、深さ優先します。 既定値は、0 で、レジストリ キーの値で指定された最上位のフォルダーへの検索を制限します。|  
   
@@ -185,6 +181,6 @@ ms.lasthandoff: 12/22/2017
     <FailIf Property="Version9X" Compare="VersionLessThan" Value="4.10" String="InvalidPlatform"/>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [\<コマンド > 要素](../deployment/commands-element-bootstrapper.md)   
  [製品およびパッケージ スキーマ リファレンス](../deployment/product-and-package-schema-reference.md)

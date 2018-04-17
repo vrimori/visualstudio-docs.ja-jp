@@ -1,12 +1,10 @@
 ---
-title: "ロック動作に注釈を付ける |Microsoft ドキュメント"
-ms.custom: 
+title: ロック動作に注釈を付ける |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - _Releases_nonreentrant_lock_
 - _Lock_kind_mutex_
@@ -32,16 +30,16 @@ f1_keywords:
 - _Lock_level_order_
 - _Lock_kind_event_
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
-caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 34364681aeeed7626b10b6714d785fbf861f42d4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 9e42762c77b1ee5fe006a48c4cf7abebea196a0a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="annotating-locking-behavior"></a>ロック動作に注釈を付ける
 常に、マルチ スレッド プログラムでバグを同時実行を避けるためには、以下の適切なロック作業分野と SAL 注釈を使用します。  
@@ -109,7 +107,7 @@ ms.lasthandoff: 12/22/2017
 |`_Interlocked_operand_`|注釈付きの関数パラメーターは、さまざまな Interlocked 関数のいずれかのターゲットのオペランドです。  これらのオペランドは、特定の追加のプロパティが必要です。|  
 |`_Write_guarded_by_(expr)`|変数の注釈し、するたびに、変数を変更、によって指定されるロック オブジェクトのロック カウントを示す`expr`が少なくとも 1 つです。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C/C++ コード障害を減らす SAL 注釈の使用](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [SAL について](../code-quality/understanding-sal.md)   
  [関数パラメーターおよび戻り値の注釈を付ける](../code-quality/annotating-function-parameters-and-return-values.md)   

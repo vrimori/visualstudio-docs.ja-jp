@@ -3,11 +3,8 @@ title: 展開の概要 - Visual Studio |Microsoft ドキュメント
 description: Visual Studio からアプリを展開するためのオプションについて説明します。
 ms.custom: mvc
 ms.date: 11/26/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-deployment
-ms.tgt_pltfrm: ''
 ms.topic: quickstart
 dev_langs:
 - FSharp
@@ -23,17 +20,16 @@ helpviewer_keywords:
 - deploying applications [Visual Studio], about deploying applications
 - components [.NET Framework], deploying
 ms.assetid: 63fcdd5b-2e54-4210-9038-65bc23167725
-caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ca458c0234de89fec814cfa5e639c13db9e6ca9b
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: 5d4367c5daad9c8514f472fe759d1dba9fb7e357
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quickstart-first-look-at-deployment-in-visual-studio"></a>クイック スタート: まず、Visual Studio での展開
 
@@ -74,7 +70,7 @@ ms.lasthandoff: 04/03/2018
     概要については、次を参照してください。 [Publish to Azure](quickstart-deploy-to-azure.md)です。 またを参照してください[ASP.NET Core アプリケーションを Azure に公開](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)です。 Git を使用して展開では、次を参照してください。 [Git を使用した Azure への ASP.NET Core の継続的なデプロイ](/aspnet/core/publishing/azure-continuous-deployment)です。
 
     > [!NOTE]
-    > Azure アカウントがない場合は[サインアップ](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio)です。
+    > Azure アカウントをもっていない場合は、ここから [サインアップ](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio) することができます。
 
 - その他の**Azure サービス**: 固有の仕様を参照してください[Azure サービス](/azure/#pivot=products)Visual Studio によってサポートされる可能性があるさまざまな展開オプションをマニュアルでします。
 

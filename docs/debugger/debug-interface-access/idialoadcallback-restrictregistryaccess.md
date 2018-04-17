@@ -1,29 +1,25 @@
 ---
-title: "Idialoadcallback::restrictregistryaccess |Microsoft ドキュメント"
-ms.custom: 
+title: Idialoadcallback::restrictregistryaccess |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaLoadCallback::RestrictRegistryAccess method
 ms.assetid: de4760c3-a746-4bab-8065-1388fed31b67
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 93c0de729331f4c7b12c55ed3e2a6ded0b4c248b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a72b8001d7db73f0feb1c8b26e0164992f362ac2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idialoadcallbackrestrictregistryaccess"></a>IDiaLoadCallback::RestrictRegistryAccess
 シンボル検索パスを検索するレジストリのクエリを使用できるかどうかを決定します。  
@@ -40,5 +36,5 @@ HRESULT RestrictRegistryAccess();
 ## <a name="remarks"></a>コメント  
  すべてのコード以外のリターン`S_OK`により、シンボル検索パスのレジストリを照会します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

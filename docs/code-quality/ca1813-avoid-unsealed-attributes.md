@@ -1,12 +1,10 @@
 ---
-title: ": Ca 1813 シールされていない属性 |Microsoft ドキュメント"
-ms.custom: 
+title: ': Ca 1813 シールされていない属性 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1813
 - AvoidUnsealedAttributes
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1813
 - AvoidUnsealedAttributes
 ms.assetid: f5e31b4c-9f8b-49e1-a2a8-bb5f1140729a
-caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 9ad548bd51985484ebcb39cb6022e994a5e0534a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 04f557dea4fca796de4e786737f7cef2b59a3896
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1813-avoid-unsealed-attributes"></a>CA1813: シールされていない属性を使用しません
 |||  
@@ -56,5 +54,5 @@ ms.lasthandoff: 12/22/2017
   
  [CA1018: 属性を AttributeUsageAttribute に設定します](../code-quality/ca1018-mark-attributes-with-attributeusageattribute.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [属性](/dotnet/standard/design-guidelines/attributes)

@@ -1,32 +1,28 @@
 ---
-title: "IntelliTrace を使用したイベントの表示 |Microsoft ドキュメント"
-ms.custom: 
+title: IntelliTrace を使用したイベントの表示 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e1c9c91a-0009-4c4e-9b4f-c9ab3a6022a7
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ebc3067ea154c8b9a5f6e180f397c5421f2be470
-ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
+ms.openlocfilehash: bb117eeaf972788118b9b7284bfd2ae6aca44936
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-events-with-intellitrace-in-visual-studio"></a>Visual Studio での IntelliTrace を使用したイベントの表示
 IntelliTrace を使用して、特定のイベントまたはイベントのカテゴリに関する情報、またはイベントだけでなく、個々の関数呼び出しに関する情報を収集することができます。 この操作を実行する手順を次に示します。  
   
  Visual Studio Enterprise edition、Professional または Community edition を除くで IntelliTrace を使用することができます。  
   
-##  <a name="GettingStarted"></a>Intellitrace を構成します。  
+##  <a name="GettingStarted"></a> Intellitrace を構成します。  
  IntelliTrace イベントのみでデバッグを実行することができます。 IntelliTrace イベントは、デバッガー イベント、例外、.NET Framework イベント、およびその他のシステム イベントです。 デバッグを開始する前に、IntelliTrace が記録するイベントを制御するために、特定のイベントをオンまたはオフにする必要があります。 詳細については、次を参照してください。 [IntelliTrace 機能の](../debugger/intellitrace-features.md)します。  
   
  - ファイル アクセスで IntelliTrace イベントをオンにします。 移動して、**ツール > オプション > IntelliTrace > IntelliTrace イベント**ページ、および展開し、**ファイル**カテゴリ。 **[ファイル]** イベント カテゴリをチェックします。 これにより、すべてのファイル イベント (アクセス、閉じる、削除) がチェックされます。
@@ -68,7 +64,7 @@ IntelliTrace を使用して、特定のイベントまたはイベントのカ�
   
      次のスクリーン ショットは Visual Studio 2015 Update 1 のものです。  
   
-     ![IntelliTrace&#45;Update1](../debugger/media/intellitrace-update1.png "IntelliTrace-Update1")  
+     ![IntelliTrace&#45;更新プログラム 1](../debugger/media/intellitrace-update1.png "IntelliTrace-更新プログラム 1")  
   
 3.  イベント選択して詳細を展開します。  
   
@@ -82,7 +78,7 @@ IntelliTrace を使用して、特定のイベントまたはイベントのカ�
   
      次のスクリーン ショットは Visual Studio 2015 Update 1 のものです。  
   
-     ![HistoricalDebugging &#45;更新プログラム 1](../debugger/media/historicaldebugging-update1.png "HistoricalDebugging-更新プログラム 1")  
+     ![HistoricalDebugging&#45;更新プログラム 1](../debugger/media/historicaldebugging-update1.png "HistoricalDebugging-更新プログラム 1")  
   
 4.  バグが見つからない場合は、バグが発生するまでの間に発生した他のイベントを確認します。 また、IntelliTrace で呼び出し情報を記録することで、関数呼び出しをステップ実行することもできます。 
   

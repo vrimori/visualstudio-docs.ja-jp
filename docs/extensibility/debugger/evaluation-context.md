@@ -1,26 +1,24 @@
 ---
-title: "評価コンテキスト |Microsoft ドキュメント"
-ms.custom: 
+title: 評価コンテキスト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluation, context
 ms.assetid: 008a20c7-1b27-4013-bf96-d6a3f510da02
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 9a490ef7c4ea42fe85c291ee913d7ad5e1cda1bb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 266fe85bedeea2c7e3dae7726d113d66a4b2b1e8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="evaluation-context"></a>評価コンテキスト
 > [!IMPORTANT]
@@ -36,9 +34,9 @@ ms.lasthandoff: 12/22/2017
 |`pAddress`|[IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md)実行の現在のポイントを指定するインターフェイスです。 実行対象のコードが含まれるメソッドを検索するために使用できます。|  
 |`pBinder`|[IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)値と指定した名前のシンボルの型を検索するために使用するインターフェイスです。|  
   
- `IDebugParsedExpression::EvaluateSync`返します、 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)結果の値とその型を表すインターフェイス。  
+ `IDebugParsedExpression::EvaluateSync` 返します、 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)結果の値とその型を表すインターフェイス。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キー式エバリュエーター インターフェイス](../../extensibility/debugger/key-expression-evaluator-interfaces.md)   
  [ローカル変数を表示します。](../../extensibility/debugger/displaying-locals.md)   
  [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)   

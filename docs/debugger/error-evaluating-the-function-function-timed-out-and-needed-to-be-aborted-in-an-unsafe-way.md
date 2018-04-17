@@ -1,26 +1,23 @@
 ---
-title: "エラー: 関数 &#39; 機能 &#39; を評価します。タイムアウトしたため、安全でない方法で中止するために必要な |Microsoft ドキュメント"
-ms.custom: 
+title: 'エラー: 関数の評価&#39;関数&#39;タイムアウトしたため、安全でない方法で中止するために必要な |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vs.debug.error.unsafe_func_eval_abort
 ms.technology: vs-ide-debug
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d0d03efbb844c29195eca7c13303a850c168e0f
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 1c230c27c8d1c8dcc01910fa598fb8a97b314845
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>エラー: 関数 &#39; 機能 &#39; を評価します。タイムアウトしたため、安全でない方法で中止するために必要
+# <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>エラー: 関数の評価&#39;関数&#39;タイムアウトしたため、安全でない方法で中止するために必要
 
 メッセージの全文: タイムアウトしたため、安全でない方法で中止するために必要な関数 'function' を評価します。 ターゲット プロセスを破損この可能性があります。 
 

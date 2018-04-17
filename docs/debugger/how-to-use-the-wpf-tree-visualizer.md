@@ -1,12 +1,10 @@
 ---
-title: "方法: WPF ツリー ビジュアライザーを使用して |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: WPF ツリー ビジュアライザーを使用して |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -16,21 +14,21 @@ helpviewer_keywords:
 - WPF, debugging
 - debugging, WPF
 ms.assetid: 2a1bf1cd-90f9-4d06-9fb4-1bfc925afef3
-caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 78806b2ace7872db06ff403bcae28bb6eff21cd2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d25e7c2e6b086bced66df747cd26cc7279e52f96
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-use-the-wpf-tree-visualizer"></a>方法: WPF ツリー ビジュアライザーを使用する
 WPF ツリー ビジュアライザーを使用すると、WPF オプションのビジュアル ツリーを調べたり、ツリーに含まれるオブジェクトの WPF 依存関係プロパティを表示したりすることができます。 ビジュアル ツリーの詳細については、次を参照してください。 [wpf ツリー](/dotnet/framework/wpf/advanced/trees-in-wpf)です。 依存関係プロパティの詳細については、次を参照してください。[依存関係プロパティの概要](/dotnet/framework/wpf/advanced/dependency-properties-overview)です。  
   
- WPF ツリー ビジュアライザーを開くときに、2 つのペインが表示されます。**ビジュアル ツリー**左側、**のプロパティ***名前***:** *型*右側のペインです。 内のオブジェクトを選択して、**ビジュアル ツリー**  ウィンドウで、および**のプロパティ***名前***:***型*ウィンドウがそのオブジェクトのプロパティを表示するのに自動的に更新します。  
+ WPF ツリー ビジュアライザーを開くときに、2 つのペインが表示されます。**ビジュアル ツリー**左側、**のプロパティ***名前***:***型*ペイン右側です。 内のオブジェクトを選択して、**ビジュアル ツリー**  ウィンドウで、および**のプロパティ***名前***:***型*ウィンドウが自動的に更新が表示、そのオブジェクトのプロパティです。  
   
 ### <a name="to-open-the-wpf-tree-visualizer"></a>WPF ツリー ビジュアライザーを開くには  
   
@@ -54,7 +52,7 @@ WPF ツリー ビジュアライザーを使用すると、WPF オプション�
   
 ### <a name="to-search-the-properties-list"></a>プロパティ リストを検索するには  
   
--   **のプロパティ***名前***:***型*ウィンドウ内で検索する文字列を入力、 **をフィルター処理**ボックス。  
+-   **プロパティの***名前***:***型* ウィンドウで、内で検索する文字列を入力、**フィルター**ボックス。  
   
      WPF ツリー ビジュアライザーで、入力した文字列と一致するプロパティが即時に検索され、入力した文字列と一致したこれらのプロパティのみが一覧に表示されます。 より正確に一致する項目を検索するには、次の文字を入力します。  
   
@@ -64,7 +62,7 @@ WPF ツリー ビジュアライザーを使用すると、WPF オプション�
   
 -   クリックして、**閉じる** ダイアログ ボックスの右上隅のアイコン。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム ビジュアライザーを作成します。](../debugger/create-custom-visualizers-of-data.md)   
  [WPF のツリー](/dotnet/framework/wpf/advanced/trees-in-wpf)   
  [依存関係プロパティの概要](/dotnet/framework/wpf/advanced/dependency-properties-overview)

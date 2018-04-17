@@ -1,26 +1,24 @@
 ---
-title: "コード分析チェックイン ポリシーのバージョンの互換性 |Microsoft ドキュメント"
-ms.custom: 
+title: コード分析チェックイン ポリシーのバージョンの互換性 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 helpviewer_keywords:
 - version compatibility, code analysis check-in policy
 - check-in policies, version compatibility for code analysis
 ms.assetid: 1af376e3-3be7-4445-803b-76a858567a5b
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 323024cdb420d48c40b7a676bc4e698af7622b67
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 045352555415aaca6e09c25fb93dc464fd7f43fc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="version-compatibility-for-code-analysis-check-in-policies"></a>コード分析を用いたチェックイン ポリシーに関するバージョンの互換性
 評価し、コード分析チェックイン ポリシーに異なるバージョンの使用を作成する必要がある場合[!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)]、方法の違いを理解する必要があります[!INCLUDE[vstsTfsOrcasLong](../code-quality/includes/vststfsorcaslong_md.md)]と[!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)]チェックイン ポリシーを評価します。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
 -   使用して、コード分析チェックイン ポリシーを作成するかどうか、[!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)]バージョンの[!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)]、使用することはできません、[!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)]バージョンの[!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)]を修正します。 また、および[!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)]ポリシーを評価することはできません。  
   
--   使用して、コード分析チェックイン ポリシーを作成するかどうかは[!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)]で[!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)]、使用することができます[!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)]で[!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)]、およびポリシーを変更することができますもで評価する[!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)]です。 使用して、ポリシーを変更した後[!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)]で[!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)]を使用して、ポリシーを編集できなく[!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)]で[!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)]です。 [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)]厳密な名前の不一致を問題なくポリシーを評価できます。  
+-   使用して、コード分析チェックイン ポリシーを作成するかどうかは[!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)]で[!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)]、使用することができます[!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)]で[!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)]、およびポリシーを変更することができますもで評価する[!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)]です。 使用して、ポリシーを変更した後[!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)]で[!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)]を使用して、ポリシーを編集できなく[!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)]で[!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)]です。 [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] 厳密な名前の不一致を問題なくポリシーを評価できます。  
   
 -   コード分析チェックイン ポリシー設定で作成するルール両方に適用される[!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)]と[!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)]でのポリシーを作成する必要があります[!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)]、必要なすべての変更を行い、ポリシーを保存します。 場合にのみ規則への変更が存在[!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)]、変更してポリシーを保存する[!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)]です。  
   

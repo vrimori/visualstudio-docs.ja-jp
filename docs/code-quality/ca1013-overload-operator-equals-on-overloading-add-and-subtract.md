@@ -1,12 +1,10 @@
 ---
-title: "1013: ca オーバー ロードで、演算子 equals をオーバー ロードを追加および減算 |Microsoft ドキュメント"
-ms.custom: 
+title: '1013: ca オーバー ロードで、演算子 equals をオーバー ロードを追加および減算 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - OverrideOperatorEqualsOnOverridingAddAndSubtract
 - OverrideOperatorEqualsOnOverloadingAddAndSubtract
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - CA1013
 - OverloadOperatorEqualsOnOverloadingAddAndSubtract
 ms.assetid: 5bd28d68-c179-49ff-af47-5250b8b18a10
-caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d668760159af34e8f22a69bed41de185fa4254e4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3117841570e737f981959165892b0ea2d39bd7bd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013: オーバーロードする加算および減算で、演算子 equals をオーバーロードします
 |||  
@@ -82,5 +80,5 @@ return left.Equals(right);
 **適切な型: {3, 3} {3, 3} は、= = しますか? うん**  
 **不適切な型: {2, 2} {9,9} の値が等しいか?違います**  
 **適切な型: {3, 3} {9,9} は、= = しますか? 違います**   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [等値演算子](/dotnet/standard/design-guidelines/equality-operators)

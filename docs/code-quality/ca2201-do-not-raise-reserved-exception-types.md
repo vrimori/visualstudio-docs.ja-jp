@@ -1,12 +1,10 @@
 ---
-title: "Ca 2201: 予約済みの例外の種類を発生させません |Microsoft ドキュメント"
-ms.custom: 
+title: 'Ca 2201: 予約済みの例外の種類を発生させません |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - DoNotRaiseReservedExceptionTypes
 - CA2201
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA2201
 - DoNotRaiseReservedExceptionTypes
 ms.assetid: dd14ef5c-80e6-41a5-834e-eba8e2eae75e
-caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 11e00594c1cf279fb6b07791bb48f2222cc9c79b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: cd95bedc273a14d9b3d455db5fd25eac1cf74aa4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2201-do-not-raise-reserved-exception-types"></a>CA2201: 予約された例外の種類を発生させません
 |||  
@@ -67,19 +65,19 @@ ms.lasthandoff: 12/22/2017
   
 |パラメーターの説明|例外|  
 |---------------------------|---------------|  
-|`null`参照|<xref:System.ArgumentNullException?displayProperty=fullName>|  
+|`null` 参照|<xref:System.ArgumentNullException?displayProperty=fullName>|  
 |(コレクションまたは一覧のインデックス) などの値の許容範囲外|<xref:System.ArgumentOutOfRangeException?displayProperty=fullName>|  
 |無効な`enum`値|<xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=fullName>|  
 |メソッドのパラメーターの仕様を満たしていない形式が含まれています (などの書式指定文字列`ToString(String)`)|<xref:System.FormatException?displayProperty=fullName>|  
 |それ以外の場合が無効です。|<xref:System.ArgumentException?displayProperty=fullName>|  
   
- 操作がオブジェクト throw の現在の状態に対して無効な場合<xref:System.InvalidOperationException?displayProperty=fullName>  
+ 操作がオブジェクト throw の現在の状態に対して無効な場合 <xref:System.InvalidOperationException?displayProperty=fullName>  
   
- 破棄されたオブジェクトで操作が実行されるとスローします。<xref:System.ObjectDisposedException?displayProperty=fullName>  
+ 破棄されたオブジェクトで操作が実行されるとスローします。 <xref:System.ObjectDisposedException?displayProperty=fullName>  
   
- 操作がサポートされていない場合 (など、オーバーライドされた**Stream.Write**読み取り用に開くストリームの) スロー<xref:System.NotSupportedException?displayProperty=fullName>  
+ 操作がサポートされていない場合 (など、オーバーライドされた**Stream.Write**読み取り用に開くストリームの) スロー <xref:System.NotSupportedException?displayProperty=fullName>  
   
- スローする変換を実行すると、オーバーフロー (明示的なキャスト演算子のオーバー ロードなど) があるとき<xref:System.OverflowException?displayProperty=fullName>  
+ スローする変換を実行すると、オーバーフロー (明示的なキャスト演算子のオーバー ロードなど) があるとき <xref:System.OverflowException?displayProperty=fullName>  
   
  その他のすべての状況から派生する独自の型の作成を検討して<xref:System.Exception>をスローします。  
   

@@ -1,12 +1,10 @@
 ---
-title: "Ca 1018: 属性を AttributeUsageAttribute |Microsoft ドキュメント"
-ms.custom: 
+title: 'Ca 1018: 属性を AttributeUsageAttribute |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1018
 - MarkAttributesWithAttributeUsage
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1018
 - MarkAttributesWithAttributeUsage
 ms.assetid: 6ab70ec0-220f-4880-af31-45067703133c
-caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 2b94cb7c11c803e713609036db12c47e2027cb61
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3d40b97ee7637b5f742caee71b23cd9d384a1ecc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1018-mark-attributes-with-attributeusageattribute"></a>CA1018: 属性を AttributeUsageAttribute に設定します
 |||  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/22/2017
  メッセージを除外するのではなく、この規則違反を修正する必要があります。 属性を継承する場合でも<xref:System.AttributeUsageAttribute>属性は、コードの保守を簡単に存在する必要があります。  
   
 ## <a name="example"></a>例  
- 次の例では、2 つの属性を定義します。 `BadCodeMaintainerAttribute`正しくない省略、<xref:System.AttributeUsageAttribute>ステートメント、および`GoodCodeMaintainerAttribute`ここに記載されている属性を正しく実装します。 注意してくださいプロパティ`DeveloperName`設計規則に必要な[ca 1019: 属性引数にアクセサーを定義する](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)完全を期すのために含まれています。  
+ 次の例では、2 つの属性を定義します。 `BadCodeMaintainerAttribute` 正しくない省略、<xref:System.AttributeUsageAttribute>ステートメント、および`GoodCodeMaintainerAttribute`ここに記載されている属性を正しく実装します。 注意してくださいプロパティ`DeveloperName`設計規則に必要な[ca 1019: 属性引数にアクセサーを定義する](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)完全を期すのために含まれています。  
   
  [!code-csharp[FxCop.Design.AttributeUsage#1](../code-quality/codesnippet/CSharp/ca1018-mark-attributes-with-attributeusageattribute_1.cs)]
  [!code-vb[FxCop.Design.AttributeUsage#1](../code-quality/codesnippet/VisualBasic/ca1018-mark-attributes-with-attributeusageattribute_1.vb)]  
@@ -58,5 +56,5 @@ ms.lasthandoff: 12/22/2017
   
  [CA1813: シールされていない属性を使用しません](../code-quality/ca1813-avoid-unsealed-attributes.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [属性](/dotnet/standard/design-guidelines/attributes)

@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio でのマルチ スレッド アプリケーションのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio でのマルチ スレッド アプリケーションのデバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 09/05/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.gputthreads
 dev_langs:
@@ -22,17 +19,16 @@ helpviewer_keywords:
 - multithreaded debugging
 - high-performance debugging
 ms.assetid: 9d175bc2-1d95-4c47-9bc3-9755af968a9c
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b32134abff19965edac150ac5f69db25640ee08
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: 276263f870337031cabbe466711e0a125b42a51c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debug-multithreaded-applications-in-visual-studio"></a>マルチスレッド アプリケーションのデバッグ
 スレッドは、オペレーティング システムでプロセッサ時間を割り当てる命令のシーケンスです。 オペレーティング システムで実行されているプロセスは、いずれも 1 つ以上のスレッドで構成されます。 複数のスレッドで構成されるプロセスをマルチスレッド プロセスといいます。  
@@ -105,6 +101,6 @@ Visual Studio には、強力なブレークポイントとトレースポイン
  [旧形式のコードのためのマルチスレッド サポート (Visual C++)](/cpp/parallel/multithreading/multithreading-support-for-older-code-visual-cpp)  
  MFC を使用する C# プログラマを対象とし、スレッドの概念についてコード例を示しながら説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スレッドとプロセスをデバッグします。](../debugger/debug-threads-and-processes.md)   
  [Remote Debugging](../debugger/remote-debugging.md)

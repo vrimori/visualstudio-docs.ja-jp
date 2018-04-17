@@ -1,11 +1,8 @@
 ---
-title: "データセットにデータを読み取り XML |Microsoft ドキュメント"
-ms.custom: 
+title: データセットにデータを読み取り XML |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,17 +16,17 @@ helpviewer_keywords:
 - XML documents, reading
 - datasets [Visual Basic], reading XML data
 ms.assetid: fae72958-0893-47d6-b3dd-9d42418418e4
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 093dbb5ee8f088a7f2e4ccd1dd063cfeecc2c5e3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 4942d0c60d5219e563057b11e7b13b5ab43307e2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="read-xml-data-into-a-dataset"></a>XML データをデータセットに読み込む
 ADO.NET では、XML データを操作するための簡単な方法を提供します。 このチュートリアルでは、データセットに XML データを読み込む Windows アプリケーションを作成します。 データセットが表示されます、<xref:System.Windows.Forms.DataGridView>コントロール。 最後に、XML ファイルの内容に基づいて XML スキーマは、テキスト ボックスに表示されます。  
@@ -169,7 +166,7 @@ ADO.NET では、XML データを操作するための簡単な方法を提供�
     |コントロール|プロパティ|設定|  
     |-------------|--------------|-------------|  
     |`TextBox1`|**Multiline**|`true`|  
-    ||**スクロール バー**|**垂直方向**|  
+    ||**ScrollBars**|**垂直方向**|  
     |`Button1`|**Name**|`ReadXmlButton`|  
     ||**[テキスト]**|`Read XML`|  
     |`Button2`|**Name**|`ShowSchemaButton`|  
@@ -246,6 +243,6 @@ ADO.NET では、XML データを操作するための簡単な方法を提供�
   
 -   データセットのデータを編集し、データベースに書き込みます。 詳細については、次を参照してください。[データの保存](../data-tools/saving-data.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio でのデータへのアクセス](../data-tools/accessing-data-in-visual-studio.md)       
  [Visual Studio の XML ツール](../xml-tools/xml-tools-in-visual-studio.md)

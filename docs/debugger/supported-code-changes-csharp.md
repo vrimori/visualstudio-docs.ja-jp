@@ -1,12 +1,10 @@
 ---
-title: "サポートされるコード変更 (c# および Visual Basic) |Microsoft ドキュメント"
-ms.custom: 
+title: サポートされるコード変更 (c# および Visual Basic) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 10/11/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - Edit and Continue [C#], supported code changes
 - Edit and Continue [Visual Basic], supported code changes
 ms.assetid: c7a48ea9-5a7f-4328-a9d7-f0e76fac399d
-caps.latest.revision: "27"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 628aad6f1ae097ea040a6043db1ef12f0b60a7a4
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+manager: douge
+ms.workload:
+- dotnet
+ms.openlocfilehash: eba3de7930b650ad7c1fc2d6ad4511ca3ca4c9d1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supported-code-changes-c-and-visual-basic"></a>サポートされているコード変更 (c# および Visual Basic)
 エディット コンティニュでは、メソッドの本体内で行ったほとんどの種類のコード変更を処理できます。 しかし、メソッドの本体外で行った変更の大部分やメソッドの本体内で行った一部の変更は、デバッグ時に適用できません。 このようなサポートされていない変更を適用するには、デバッグを停止し、新しいバージョンのコードを再起動する必要があります。
@@ -108,6 +106,6 @@ ms.lasthandoff: 01/19/2018
   
 -   ビルド エラーによって新しいバージョンのビルドが失敗した後の旧バージョンのデバッグ
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エディット コンティニュ (Visual c#)](../debugger/edit-and-continue-visual-csharp.md)   
  [方法 : エディット コンティニュを使用する (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)

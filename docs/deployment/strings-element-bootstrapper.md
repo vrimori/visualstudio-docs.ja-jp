@@ -1,13 +1,10 @@
 ---
-title: "&lt;文字列&gt;要素 (ブートス トラップ) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;文字列&gt;要素 (ブートス トラップ) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - MSBuild.GenerateBootstrapper.NoStringsForCulture
 - MSBuild.GenerateBootstrapper.ProductCultureNotFound
@@ -19,17 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - <Strings> element [bootstrapper]
 ms.assetid: d5ea3613-5fc9-4a11-bef3-46a01178bf60
-caps.latest.revision: 
 author: stevehoag
 ms.author: shoag
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: bcd950dab8fe00ecdaec83c64a819b58193b1272
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4d6a7d9ec23995fa2ea7114afa9b785c4fd4e6e3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltstringsgt-element-bootstrapper"></a>&lt;文字列&gt;要素 (ブートス トラップ)
 製品名、パッケージ名、およびインストールのエラー メッセージのローカライズされた文字列を定義します。  
@@ -51,7 +47,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="string"></a>String  
  `String`要素の子では、`Strings`要素。 A`Strings`要素が 1 つまたは複数あります`String`要素。  
   
- `String`次の属性があります。  
+ `String` 次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
@@ -79,5 +75,5 @@ ms.lasthandoff: 12/22/2017
 </Strings>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [\<パッケージ > 要素](../deployment/package-element-bootstrapper.md)

@@ -1,12 +1,10 @@
 ---
-title: "CA1506: クラス結合度を避けるため |Microsoft ドキュメント"
-ms.custom: 
+title: 'CA1506: クラス結合度を避けるため |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - AvoidExcessiveClassCoupling
 - CA1506
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - AvoidExcessiveClassCoupling
 - CA1506
 ms.assetid: 9f0943c0-e802-4e3f-8798-2ab8653ddc80
-caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d5303e147ae001d887784aa401d456d23485c453
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 018abf05181be812bcf01fc9cb910745dc085bcf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1506-avoid-excessive-class-coupling"></a>CA1506: クラス結合度を大きくしすぎないでください
 |||  
@@ -47,6 +45,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
  型またはメソッドと見なされます、大量の他の種類の依存関係があるにもかかわらず保守しやすいときに、この警告を除外します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [保守性に関する警告](../code-quality/maintainability-warnings.md)   
  [マネージ コードの複雑さと保守性の測定](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)

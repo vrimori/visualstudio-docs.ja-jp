@@ -1,27 +1,23 @@
 ---
-title: "インターフェイスのコア |Microsoft ドキュメント"
-ms.custom: 
+title: インターフェイスのコア |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], core interfaces
 ms.assetid: 666b9116-8550-4bdd-bc15-55fc57de87df
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 54ecbe034f4fa7054be2725205a013e5899849e7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 45521c0db16ac892d2e0e43e34c4b030075f7be2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="core-interfaces"></a>コア インターフェイス
 次のインターフェイスは、コア インターフェイスを使用してデバッガーを拡張するため、[!INCLUDE[vsipsdk](../../../extensibility/includes/vsipsdk_md.md)]です。  
@@ -71,7 +67,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Visual Studio (VS)  
   
-##  <a name="Breakpoints"></a>ブレークポイント  
+##  <a name="Breakpoints"></a> ブレークポイント  
  これらのインターフェイスが関連する実装およびブレークポイントの追跡にします。  
   
 |Interface|によって実装されます。|説明|  
@@ -92,7 +88,7 @@ ms.lasthandoff: 12/22/2017
 |[IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md)|DE|バインドされたブレークポイントのセットに対して列挙を表します。|  
 |[IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)|DE|メモリ位置へバインドできませんでしたブレークポイントのセットに対して列挙を表します。|  
   
-##  <a name="Contexts"></a>コンテキスト  
+##  <a name="Contexts"></a> コンテキスト  
  これらのインターフェイスは、さまざまな種類のデバッグ中のプログラム内でコンテキストを表します。  
   
 |Interface|によって実装されます。|説明|  
@@ -106,7 +102,7 @@ ms.lasthandoff: 12/22/2017
 |[IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md)|DE|ブレークポイントまたは例外のスタック フレームのコンテキストを表します。|  
 |[IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)|DE|コードのコンテキストのセットに対して列挙を表します。|  
   
-##  <a name="CoreServer"></a>Server core  
+##  <a name="CoreServer"></a> Server core  
  これらのインターフェイスは、プログラムをデバッグ中のコンピューターを表します。 によって実装されて[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]デバッグ エンジンに呼び出すことができますが、します。  
   
 |Interface|によって実装されます。|説明|  
@@ -114,7 +110,7 @@ ms.lasthandoff: 12/22/2017
 |[IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)|VS|ポートとポートの仕入先だけでなく、コンピューターに関する情報へのアクセスを提供します。|  
 |[IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)|VS|表す、 [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)リモート デバッグをサポートします。|  
   
-##  <a name="DebugEngines"></a>デバッグ エンジン  
+##  <a name="DebugEngines"></a> デバッグ エンジン  
  これらのインターフェイスは、デバッグ エンジンと、関連するイベントを表します。  
   
 |Interface|によって実装されます。|説明|  
@@ -126,7 +122,7 @@ ms.lasthandoff: 12/22/2017
 |[IDebugProgramEngines2](../../../extensibility/debugger/reference/idebugprogramengines2.md)|DE、PS|複数のデバッグ エンジンを処理するプログラム ノードを表します。|  
 |[IDebugQueryEngine2](../../../extensibility/debugger/reference/idebugqueryengine2.md)|DE|SDM スレッド、プログラム、またはスタック フレームからデバッグ エンジンにインターフェイスを取得するための手段を提供します。|  
   
-##  <a name="Documents"></a>ドキュメント  
+##  <a name="Documents"></a> ドキュメント  
  これらのインターフェイスは、ドキュメント (ソース ファイル) とそれらに関連付けられている要素を表します。  
   
 |Interface|によって実装されます。|説明|  
@@ -186,7 +182,7 @@ ms.lasthandoff: 12/22/2017
 |[IDebugThreadDestroyEvent2](../../../extensibility/debugger/reference/idebugthreaddestroyevent2.md)|DE|スレッドが破棄されたときに、DE によって送信されます。|  
 |[IDebugThreadNameChangedEvent2](../../../extensibility/debugger/reference/idebugthreadnamechangedevent2.md)|DE|スレッドには、その名前が変更されたときに、デから送信されます。|  
   
-##  <a name="Expressions"></a>式  
+##  <a name="Expressions"></a> 式  
  これらのインターフェイスは、特定のコンテキストで評価される式を表します。  
   
 |Interface|によって実装されます。|説明|  
@@ -195,7 +191,7 @@ ms.lasthandoff: 12/22/2017
 |[IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md)|DE|式が評価されるコンテキストを表します。 取得した、 [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)インターフェイスです。|  
 |[IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)|DE|非同期の式の評価が完了すると、DE によって送信されます。|  
   
-##  <a name="Memory"></a>メモリ  
+##  <a name="Memory"></a> メモリ  
  これらのインターフェイスは、メモリ内のバイトのシーケンスを表します。  
   
 |Interface|によって実装されます。|説明|  
@@ -214,7 +210,7 @@ ms.lasthandoff: 12/22/2017
 |[IDebugSourceServerModule](../../../extensibility/debugger/reference/idebugsourceservermodule.md)|DE|PDB ファイルに含まれているソース サーバー情報を表します。|  
 |[IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md)|DE|認識されているモジュールのセットに対して列挙を表す、 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)です。|  
   
-##  <a name="Ports"></a>ポート  
+##  <a name="Ports"></a> ポート  
  これらのインターフェイスは、ポートとポートのサプライヤーを表します。  
   
 |Interface|によって実装されます。|説明|  
@@ -234,7 +230,7 @@ ms.lasthandoff: 12/22/2017
 |[IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md)|VS、PS|ポートのセットに対して列挙を表します。|  
 |[IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md)|VS|ポートのサプライヤーのセットに対して列挙を表します。|  
   
-##  <a name="Processes"></a>プロセス  
+##  <a name="Processes"></a> プロセス  
  これらのインターフェイスは、プロセス、1 つまたは複数のプログラムを含む単一の実行可能ファイルを表します。  
   
 |Interface|によって実装されます。|説明|  
@@ -246,7 +242,7 @@ ms.lasthandoff: 12/22/2017
 |[IDebugProcessEx2](../../../extensibility/debugger/reference/idebugprocessex2.md)|PS|どのセッションに接続して追跡する必要があるプロセスを表します。|  
 |[IEnumDebugProcesses2](../../../extensibility/debugger/reference/ienumdebugprocesses2.md)|PS|ポート上のプロセスのセットの列挙体を表します。|  
   
-##  <a name="Programs"></a>プログラム  
+##  <a name="Programs"></a> プログラム  
  これらのインターフェイスは、プログラム、必ずしも物理的な実行可能ファイルまたはモジュールに対応していない、実行の論理単位を表します。  
   
 |Interface|によって実装されます。|説明|  
@@ -279,7 +275,7 @@ ms.lasthandoff: 12/22/2017
 |[IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)|DE|セットに対して列挙を表す[DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)変数、レジスタ、パラメーター、および式を記述する構造体。|  
 |[IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)|DE|セットに対して列挙を表す[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)構造体。|  
   
-##  <a name="StackFrames"></a>スタック フレーム  
+##  <a name="StackFrames"></a> スタック フレーム  
  これらのインターフェイスを表すコンテキストのスタック フレームで、ブレークポイントまたは例外が発生しました。  
   
 |Interface|によって実装されます。|説明|  
@@ -300,7 +296,7 @@ ms.lasthandoff: 12/22/2017
 |[IDebugThreadNameChangedEvent2](../../../extensibility/debugger/reference/idebugthreadnamechangedevent2.md)|DE|スレッドには、その名前が変更されたときに、デから送信されます。|  
 |[IEnumDebugThreads2](../../../extensibility/debugger/reference/ienumdebugthreads2.md)|DE|スレッドのセットに対する列挙体を表します。|  
   
-##  <a name="TypeVisualizers"></a>ビジュアライザーの型  
+##  <a name="TypeVisualizers"></a> ビジュアライザーの型  
  これらのインターフェイスは、ビジュアライザーの型のサポートを提供します。 これらのインターフェイスは、通常、式エバリュエーターで実装します。  
   
 |Interface|によって実装されます。|説明|  
@@ -309,6 +305,6 @@ ms.lasthandoff: 12/22/2017
 |[IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)|EE|型のビジュアライザーに渡されるデータへのアクセスを取得するためのメソッドを提供します。|  
 |[IPropertyProxyProvider](../../../extensibility/debugger/reference/ipropertyproxyprovider.md)|EE|アクセスを提供するプロパティを表す[IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)実装します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [API リファレンス](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)   
  [カスタム デバッグ エンジンの作成](../../../extensibility/debugger/creating-a-custom-debug-engine.md)

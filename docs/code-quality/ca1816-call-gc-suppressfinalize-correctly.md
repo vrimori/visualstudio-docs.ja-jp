@@ -1,12 +1,10 @@
 ---
-title: "Ca 1816: では、Gc が発生します。SuppressFinalize 正しく |Microsoft ドキュメント"
-ms.custom: 
+title: 'Ca 1816: では、Gc が発生します。SuppressFinalize 正しく |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1816
 - DisposeMethodsShouldCallSuppressFinalize
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - DisposeMethodsShouldCallSuppressFinalize
 - CA1816
 ms.assetid: 47915fbb-103f-4333-b157-1da16bf49660
-caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8d0287b570ed1ff5393ff0ff04b9e5d2252c29bf
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 9d6d65561e9b902202d4fc69d15d200482880cf4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1816-call-gcsuppressfinalize-correctly"></a>CA1816: GC.SuppressFinalize を正しく呼び出します
 |||  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 -   メソッドを呼び出す<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>し、この (Visual Basic で Me) 以外のものを渡します。  
   
 ## <a name="rule-description"></a>規則の説明  
- <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>メソッドにより、ユーザーはいつでもはガベージ コレクションの対象になるオブジェクトの前にリソースを解放します。 場合、<xref:System.IDisposable.Dispose%2A?displayProperty=fullName>メソッドが呼び出されると、オブジェクトのリソースを解放します。 これにより、終了処理が不要なにします。 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>呼び出す必要があります<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>ガベージ コレクターがオブジェクトのファイナライザーを呼び出さないようにします。  
+ <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>メソッドにより、ユーザーはいつでもはガベージ コレクションの対象になるオブジェクトの前にリソースを解放します。 場合、<xref:System.IDisposable.Dispose%2A?displayProperty=fullName>メソッドが呼び出されると、オブジェクトのリソースを解放します。 これにより、終了処理が不要なにします。 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 呼び出す必要があります<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>ガベージ コレクターがオブジェクトのファイナライザーを呼び出さないようにします。  
   
  派生型にファイナライザーが再実装することがないようにする<xref:System.IDisposable>に呼び出し、ファイナライザーせず unsealed 型は呼び出す必要がありますと<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>です。  
   
@@ -75,5 +73,5 @@ ms.lasthandoff: 12/22/2017
   
  [CA2216: 破棄できる型ではファイナライザーを宣言します](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern)

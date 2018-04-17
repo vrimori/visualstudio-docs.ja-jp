@@ -1,12 +1,10 @@
 ---
-title: "CA2123: オーバーライドのリンク要求をベースと同一にする必要があります |Microsoft ドキュメント"
-ms.custom: 
+title: 'CA2123: オーバーライドのリンク要求をベースと同一にする必要があります |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA2123
 - OverrideLinkDemandsShouldBeIdenticalToBase
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - OverrideLinkDemandsShouldBeIdenticalToBase
 - CA2123
 ms.assetid: 4538ecd5-fc6f-4480-ab00-90b2ce4730db
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 3181e791d95f0268fd60654e8ceedb8fa394f7a0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 9c23bdf9246855fc4a91d5cd5f748f8f8fb17a67
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2123-override-link-demands-should-be-identical-to-base"></a>CA2123: オーバーライドのリンク確認要求は基本と同様にします
 |||  
@@ -52,6 +50,6 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[FxCop.Security.OverridesAndSecurity#1](../code-quality/codesnippet/CSharp/ca2123-override-link-demands-should-be-identical-to-base_1.cs)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)   
  [リンク確認要求](/dotnet/framework/misc/link-demands)

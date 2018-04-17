@@ -1,11 +1,8 @@
 ---
-title: "方法: 追加、更新、または WCF データ サービス参照の削除 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 追加、更新、または WCF データ サービス参照の削除 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - service references [Visual Studio]
 - WCF Data Service reference
@@ -13,17 +10,17 @@ helpviewer_keywords:
 - ADO.NET service references
 - ADO.NET Data Service reference
 ms.assetid: 892ebf37-3af4-472e-8744-92837677d611
-caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: c35fdaabf3de306af0541fb4781a085a3c409ff8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 2e128268a0dd81aead3204436bb8f4ea80b5a048
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>方法: WCF データ サービス参照を追加、更新、または削除する
 A*サービス リファレンス*によって、プロジェクトで 1 つまたは複数のアクセスを[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]です。 使用して、**サービス参照の追加**を検索 ダイアログ ボックス[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]ローカル、ローカル エリア ネットワーク、またはインターネット上の現在のソリューションにします。  
@@ -41,7 +38,7 @@ A*サービス リファレンス*によって、プロジェクトで 1 つま�
 2.  **アドレス**ボックスで、サービスの URL を入力し、をクリックして**移動**サービスを検索します。 サービスは、ユーザー名とパスワードのセキュリティを実装する場合、ユーザー名とパスワードを求めるメッセージが表示します。  
   
     > [!NOTE]
-    >  のみ、信頼されたソースからサービスを参照する必要があります。 信頼できないソースからの参照を追加するには、セキュリティが危険にさらす可能性があります。  
+    >  信頼できるソースのサービスのみを参照してください。 信頼できないソースの参照を追加すると、セキュリティが損なわれる可能性があります。  
   
      URL を選択することも、**アドレス**一覧で、有効なサービスのメタデータを検出する位置を前の 15 の Url を格納します。  
   
@@ -94,5 +91,5 @@ A*サービス リファレンス*によって、プロジェクトで 1 つま�
     > [!NOTE]
     >  サービス参照を参照するすべてのコードは、手動で削除する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio での Windows Communication Foundation サービスと WCF データ サービス](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

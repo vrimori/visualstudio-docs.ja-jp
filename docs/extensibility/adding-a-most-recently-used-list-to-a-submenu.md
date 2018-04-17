@@ -1,27 +1,25 @@
 ---
-title: "最近使用したサブメニューの一覧を追加する |Microsoft ドキュメント"
-ms.custom: 
+title: 最近使用したサブメニューの一覧を追加する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - MRU lists
 - menus, creating MRU list
 - most recently used
 ms.assetid: 27d4bbcf-99b1-498f-8b66-40002e3db0f8
-caps.latest.revision: "46"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 087faaae07c4c240b53830ee238cee4f9065d21f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 67eb08feff5d8edd1251c8fcff09d8f148b51b96
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-a-most-recently-used-list-to-a-submenu"></a>サブメニューの一覧を使用して、ほとんどの最近追加
 このチュートリアルのデモンストレーションに基づいて[メニューにサブメニューを追加](../extensibility/adding-a-submenu-to-a-menu.md)サブメニューに動的な一覧を追加する方法を示しています。 動的な一覧は、最も最近使用した (MRU) のリストの作成の基礎を形成します。  
@@ -207,5 +205,5 @@ ms.lasthandoff: 12/22/2017
   
 4.  サブメニューをもう一度開きます。 注意して**項目 3**一覧の上部にあるようになりましたが、他のアイテムが下の 1 つの位置にプッシュされているとします。 をクリックして**項目 3**再度とメッセージ ボックスに「選択された項目 3」が表示されているテキストが正しくコマンド ラベルと共に新しい位置に移動したことを示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メニュー項目の動的な追加](../extensibility/dynamically-adding-menu-items.md)

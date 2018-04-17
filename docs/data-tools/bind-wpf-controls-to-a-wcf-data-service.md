@@ -1,11 +1,8 @@
 ---
-title: "WCF data service への WPF コントロールのバインド |Microsoft ドキュメント"
-ms.custom: 
+title: WCF data service への WPF コントロールのバインド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +11,17 @@ helpviewer_keywords:
 - WPF data binding [Visual Studio], walkthroughs
 - WPF Designer, data binding
 ms.assetid: 8823537c-82f0-41f7-bf30-705f0e5e59fd
-caps.latest.revision: "40"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: ec13e17aac37a24e92732b9b052147c7d9faa916
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: a10ce63d969f67c12197f13f0ab285bc05e258cb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>WCF data service への WPF コントロールをバインドします。
 このチュートリアルでは、データ バインド コントロールが含まれた WPF アプリケーションを作成します。 コントロールは、[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] でカプセル化された顧客レコードにバインドされます。 また、顧客がレコードを表示および更新するために使用できるボタンも追加します。  
@@ -247,11 +244,11 @@ WPF デザイナーで XAML を変更して、いくつかのボタンをウィ�
      [!code-vb[Data_WPFWCF#2](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_2.vb)]  
   
 ## <a name="navigate-sales-records"></a>販売レコード間を移動します。  
-使用して販売レコード間をスクロールできるようにするコードを追加、  **\<** と **>** ボタン。  
+使用して販売レコード間をスクロールできるようにするコードを追加、 **\<**と**>**ボタン。  
   
 #### <a name="to-enable-users-to-navigate-sales-records"></a>ユーザーが販売レコード間を移動できるようにするには  
   
-1.  デザイナーをダブルクリックして、  **<** ウィンドウ サーフェイスのボタンをクリックします。  
+1.  デザイナーをダブルクリックして、 **<**ウィンドウ サーフェイスのボタンをクリックします。  
   
      Visual Studio は、分離コード ファイルを開くし、新たに作成`backButton_Click`のイベント ハンドラー、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
   
@@ -260,7 +257,7 @@ WPF デザイナーで XAML を変更して、いくつかのボタンをウィ�
      [!code-csharp[Data_WPFWCF#3](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_3.cs)]
      [!code-vb[Data_WPFWCF#3](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_3.vb)]  
   
-3.  デザイナーに戻り、ダブルクリック、  **>** ボタンをクリックします。  
+3.  デザイナーに戻り、ダブルクリック、 **>**ボタンをクリックします。  
   
      Visual Studio は、分離コード ファイルを開くし、新たに作成`nextButton_Click`のイベント ハンドラー、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
   
@@ -302,7 +299,7 @@ WPF デザイナーで XAML を変更して、いくつかのボタンをウィ�
   
     -   データの販売注文 ID を持つ最初の販売レコードからフィールドが表示されるテキスト ボックス**71774**です。  
   
-    -   クリックすることができます、  **>** または **<** 他の販売レコード間を移動するボタンです。  
+    -   クリックすることができます、 **>**または**<**他の販売レコード間を移動するボタンです。  
   
 5.  販売レコードの 1 つは、入力内のテキスト、**コメント**ボックスをクリックして**変更を保存**です。  
   

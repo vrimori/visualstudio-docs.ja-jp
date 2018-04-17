@@ -1,13 +1,10 @@
 ---
-title: "&lt;RelatedProducts&gt;要素 (ブートス トラップ) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;RelatedProducts&gt;要素 (ブートス トラップ) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - MSBuild.GenerateBootstrapper.MissingDependency
 - MSBuild.GenerateBootstrapper.DuplicateItems
@@ -22,17 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - <RelatedProducts> element [bootstrapper]
 ms.assetid: bf152712-4c1e-48bd-9b7f-311cf0fdb832
-caps.latest.revision: 
 author: stevehoag
 ms.author: shoag
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 548c1002eae581dc0e231f8dd2e28ee4a8376e27
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 9fafc77df0bc557952bd5e197f3c950a3d028e3e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltrelatedproductsgt-element-bootstrapper"></a>&lt;RelatedProducts&gt;要素 (ブートス トラップ)
 `RelatedProducts`要素は、現在の製品に含まれるかに依存する他の製品を定義します。  
@@ -61,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="dependsonproduct"></a>DependsOnProduct  
  `DependsOnProduct`要素は、名前付きの製品では、現在の製品が依存することと、現在の 1 つ前に、指定された製品をインストールすることを示します。 子である、`RelatedProducts`要素。 A`RelatedProducts`要素が 1 つまたは複数あります`DependsOnProduct`要素。  
   
- `DependsOnProduct`次の属性があります。  
+ `DependsOnProduct` 次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
@@ -73,7 +69,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="includesproduct"></a>IncludesProduct  
  `IncludesProduct`要素場合、その製品は現在のインストールに付属の独立したインストールは不要です。 子である、`RelatedProducts`要素。 A`RelatedProducts`要素が 1 つまたは複数あります`IncludesProduct`要素。  
   
- `IncludesProduct`次の属性があります。  
+ `IncludesProduct` 次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
@@ -88,5 +84,5 @@ ms.lasthandoff: 12/22/2017
 </RelatedProducts>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [\<Product > 要素](../deployment/product-element-bootstrapper.md)

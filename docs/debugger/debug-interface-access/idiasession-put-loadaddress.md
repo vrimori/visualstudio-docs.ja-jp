@@ -1,29 +1,25 @@
 ---
-title: "Idiasession::put_loadaddress |Microsoft ドキュメント"
-ms.custom: 
+title: Idiasession::put_loadaddress |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSession::put_loadAddress method
 ms.assetid: b157b245-1ea0-4b80-8962-d8b278dbc742
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f4721ee818c4dc75d883c7accd2faa162521de13
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fa8f7c12e07f68d8c3fdd85f0d33d964847abf22
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiasessionputloadaddress"></a>IDiaSession::put_loadAddress
 このシンボル ストアで、シンボルに対応する実行可能ファイルの読み込みアドレスを設定します。  
@@ -46,5 +42,5 @@ HRESULT put_loadAddress (
 > [!NOTE]
 >  取得する場合は、このメソッドを呼び出す必要があります、 [IDiaSession](../../debugger/debug-interface-access/idiasession.md)オブジェクトおよびシンボルで任意の仮想プロパティを使用する必要がある場合、オブジェクトの使用を開始する前にします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

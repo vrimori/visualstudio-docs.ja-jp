@@ -1,30 +1,26 @@
 ---
-title: "Dia2dump サンプル |Microsoft ドキュメント"
-ms.custom: 
+title: Dia2dump サンプル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - sample applications [DIA SDK]
 - Dia2dump sample [DIA SDK]
 ms.assetid: 492c0893-7043-452f-a020-890a47230d20
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bd21806dee94031c6d5486daf1696e1f97e2956f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: acec3fa2def0c478c9d94d71a80b89cda6709897
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dia2dump-sample"></a>Dia2dump サンプル
 Dia2dump サンプルでは、Visual Studio と共にインストールされ、Dia2dump.cpp ソース ファイルが含まれています。 コンパイル済みの実行可能ファイルは、コマンドラインから実行し、全体プログラム データベース (.pdb) ファイルの内容を表示します。  
@@ -39,7 +35,7 @@ Dia2dump サンプルでは、Visual Studio と共にインストールされ、
   
 1.  Visual Studio で Dia2dump.sln ファイルを開きます。 (必要に応じて、Visual Studio を最初に使用して Dia2dump プロジェクトをアップグレードします。)  
   
-2.  プロジェクトのプロパティ ページで、 **C/C++** &#124;**全般**&#124;です。**追加のインクルード ディレクトリ**プロパティの指定、`..\DIA SDK\include`ディレクトリ。 これにより、コンパイラが dia2.h ファイルを見つけることができます。  
+2.  プロジェクト プロパティ ページで、 **C と C++** &#124; **全般** &#124; **追加のインクルード ディレクトリ**プロパティを指定、`..\DIA SDK\include`ディレクトリ。 これにより、コンパイラが dia2.h ファイルを見つけることができます。  
   
 3.  **ビルド** メニューのをクリックして**ソリューションのリビルド**です。  
   
@@ -53,6 +49,6 @@ Dia2dump サンプルでは、Visual Studio と共にインストールされ、
     dia2dump filename  
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Dia2dump.cpp ソース ファイル](../../debugger/debug-interface-access/dia2dump-cpp-source-file.md)   
  [Visual Studio プロジェクトのポート、移行、アップグレード](../../porting/port-migrate-and-upgrade-visual-studio-projects.md)

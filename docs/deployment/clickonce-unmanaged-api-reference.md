@@ -1,12 +1,10 @@
 ---
-title: "ClickOnce アンマネージ API リファレンス |Microsoft ドキュメント"
-ms.custom: 
+title: ClickOnce アンマネージ API リファレンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,19 +16,19 @@ helpviewer_keywords:
 - CleanOnlineAppCacheW interface [ClickOnce unmanaged]
 - GetDeploymentDataFromManifest [ClickOnce unmanaged]
 ms.assetid: ec002138-4054-456d-bcc1-79ac2f4a4fd7
-caps.latest.revision: "6"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: cplusplus
-ms.openlocfilehash: 392ada2288adcc229834f617c2f6284bb2e7ed0f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8463976825d38c5ff5e8cb910df153737da9eeee
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clickonce-unmanaged-api-reference"></a>ClickOnce アンマネージ API リファレンス
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]dfshim.dll からアンマネージのパブリック Api です。  
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dfshim.dll からアンマネージのパブリック Api です。  
   
 ## <a name="cleanonlineappcache"></a>CleanOnlineAppCache  
  消去またはからのすべてのオンライン アプリケーションのアンインストール、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション キャッシュします。  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/22/2017
  成功した場合、S_OK を返します。それ以外の場合、失敗を表す HRESULT を返します。 バッファーが小さすぎる場合は、HRESULTFROMWIN32(ERROR_INSUFFICIENT_BUFFER) を返します。  
   
 ### <a name="remarks"></a>コメント  
- ポインターを null にするにはできません。 `pcwzActivationUrl`および`pcwzPathToDeploymentManifest`空にしないでください。  
+ ポインターを null にするにはできません。 `pcwzActivationUrl` および`pcwzPathToDeploymentManifest`空にしないでください。  
   
  呼び出し元のライセンス認証の URL をクリーンアップします。 たとえば、エスケープを追加する文字が必要な場所またはクエリ文字列を削除します。  
   
@@ -83,5 +81,5 @@ ms.lasthandoff: 12/22/2017
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、失敗を表す HRESULT を返します。 マネージ例外が発生した場合は、0x80020009 (DISP_E_EXCEPTION) を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.Deployment.Application.DeploymentServiceCom.CleanOnlineAppCache%2A>

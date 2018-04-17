@@ -1,11 +1,8 @@
 ---
-title: "階層更新 |Microsoft ドキュメント"
-ms.custom: 
+title: 階層更新 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,17 +17,17 @@ helpviewer_keywords:
 - updated data saving
 - related tables, saving
 ms.assetid: 68bae3f6-ec9b-45ee-a33a-69395029f54c
-caps.latest.revision: "26"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: b02ef945136297287d18c2b29ea2d3afab1b3683
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 1b374ac0b062069e11a5fa9b15822a4146cbaebf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hierarchical-update"></a>階層更新
 *階層更新*参照整合性を維持しながらをデータベースに戻す (2 つ以上の関連するテーブルを含むデータセット) から更新されたデータを保存するプロセスを指します。 *参照整合性*はデータベース内の挿入、更新、および関連するレコードの削除の動作を制御する制約によって定義される一貫性規則を参照します。 たとえば、その顧客の注文を作成できないを許可する前に、顧客レコードの作成を強制する参照整合性を勧めします。  データセットのリレーションシップの詳細については、次を参照してください[データセットのリレーションシップ。](../data-tools/relationships-in-datasets.md)  
@@ -121,5 +118,5 @@ ms.lasthandoff: 12/22/2017
 |*tableName* `TableAdapter`プロパティ|表す、`TableAdapter`です。 生成された`TableAdapterManager`ごとにプロパティを含む`TableAdapter`を管理します。 Customers と Orders テーブルを含むデータセットが生成など、`TableAdapterManager`を格納している`CustomersTableAdapter`と`OrdersTableAdapter`プロパティです。|  
 |`UpdateOrder` プロパティ|個々 の insert、update、および delete コマンドの順序を制御します。 この設定の値のいずれかに、`TableAdapterManager.UpdateOrderOption`列挙します。<br /><br /> 既定では、`UpdateOrder`に設定されている**InsertUpdateDelete**です。 つまり、挿入し、更新、および削除しは、データセット内のすべてのテーブルに対して実行されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)

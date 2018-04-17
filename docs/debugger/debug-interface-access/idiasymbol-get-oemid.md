@@ -1,29 +1,25 @@
 ---
-title: "Idiasymbol::get_oemid |Microsoft ドキュメント"
-ms.custom: 
+title: Idiasymbol::get_oemid |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSymbol::get_oemId method
 ms.assetid: c472830f-c3eb-46ab-9498-cd637763d241
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dc543f23c7f6e4a6cb668c2098258abc1ba18aa7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c1535484b0a921588a37ced9ba94f755310f04e8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiasymbolgetoemid"></a>IDiaSymbol::get_oemId
 シンボルの相手先ブランド供給業者 (OEM) の ID 値を取得します。  
@@ -49,6 +45,6 @@ HRESULT get_oemId (
 ## <a name="remarks"></a>コメント  
  このプロパティのシンボルにのみ適用されます、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)の入力`SymTagCustomType`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)

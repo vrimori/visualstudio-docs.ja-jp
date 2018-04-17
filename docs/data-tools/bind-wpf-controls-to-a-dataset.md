@@ -1,11 +1,8 @@
 ---
-title: "WPF コントロールをデータセットにバインド |Microsoft ドキュメント"
-ms.custom: 
+title: WPF コントロールをデータセットにバインド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +11,17 @@ helpviewer_keywords:
 - WPF data binding [Visual Studio], walkthroughs
 - WPF Designer, data binding
 ms.assetid: 177420b9-568b-4dad-9d16-1b0e98a24d71
-caps.latest.revision: "32"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 072adcf912e5921164647cf77ee561617f844786
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: f4034651b68194906285c6d1911f7f650287074d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>データセットへの WPF コントロールをバインドします。
 このチュートリアルでは、データ バインド コントロールが含まれた WPF アプリケーションを作成します。 コントロールは、データセットでカプセル化された製品レコードにバインドされます。 また、製品を参照するためのボタンの追加と、製品レコードへの変更の保存も行います。  
@@ -183,11 +180,11 @@ ms.lasthandoff: 12/22/2017
 7.  **プロパティ**ウィンドウで、横にあるチェック ボックスを選択、 **IsReadOnly**プロパティです。  
   
 ## <a name="navigating-product-records"></a>製品レコード間の移動  
- 使用して製品レコード間をスクロールできるようにするコードを追加、  **\<** と **>** ボタン。  
+ 使用して製品レコード間をスクロールできるようにするコードを追加、 **\<**と**>**ボタン。  
   
 #### <a name="to-enable-users-to-navigate-product-records"></a>ユーザーが製品レコード間を移動できるようにするには  
   
-1.  デザイナーをダブルクリックして、  **<** ウィンドウ サーフェイスのボタンをクリックします。  
+1.  デザイナーをダブルクリックして、 **<**ウィンドウ サーフェイスのボタンをクリックします。  
   
      Visual Studio は、分離コード ファイルを開くし、新たに作成`backButton_Click`のイベント ハンドラー、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
   
@@ -201,7 +198,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[Data_WPFDATASET#2](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_2.cs)]
      [!code-vb[Data_WPFDATASET#2](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_2.vb)]  
   
-4.  ダブルクリックして、デザイナーに戻り、  **>** ボタンをクリックします。  
+4.  ダブルクリックして、デザイナーに戻り、 **>**ボタンをクリックします。  
   
 5.  `nextButton_Click` イベント ハンドラーに次のコードを追加します。  
   
@@ -236,7 +233,7 @@ ms.lasthandoff: 12/22/2017
   
     -   テキスト ボックスに、写真付きの製品の先頭のレコードのデータが表示されること。 この製品は、製品 ID は 713 でと、名前を持つ**Long-sleeve Logo Jersey, S**です。  
   
-    -   クリックすることができます、  **>** または **<** 他の製品レコード間を移動するボタンです。  
+    -   クリックすることができます、 **>**または**<**他の製品レコード間を移動するボタンです。  
   
 2.  製品レコードの 1 つは、変更、**サイズ**値に設定して、をクリックして**変更を保存**です。  
   

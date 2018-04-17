@@ -1,13 +1,10 @@
 ---
-title: "CRT デバッグ ライブラリの使用 |Microsoft ドキュメント"
-ms.custom: 
+title: CRT デバッグ ライブラリの使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.debug.runtime
 dev_langs:
@@ -29,17 +26,16 @@ helpviewer_keywords:
 - DEBUG linker option [C++]
 - /LDd compiler function [C++]
 ms.assetid: 464de16b-4215-4787-9bfa-921aaff9d9f4
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 420dcc98aad4f4ca2ad76d16b7f4c6c7c51d2beb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f3dba4e434384900affb5474c5dd9741bf8b71c1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="crt-debug-library-use"></a>CRT デバッグ ライブラリの使用方法
 C ランタイム ライブラリには、広範なデバッグ支援機能が用意されています。 CRT デバッグ ライブラリのいずれかを使用するのとリンクする必要があります[/debug](/cpp/build/reference/debug-generate-debug-info)してコンパイル**/MDd**、 **/MTd**、または**/LDd**です。  
@@ -53,6 +49,6 @@ C ランタイム ライブラリには、広範なデバッグ支援機能が�
   
  使用できるさまざまなランタイム ライブラリの詳細については、次を参照してください。 [C ランタイム ライブラリ](/cpp/c-runtime-library/crt-library-features)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CRT のデバッグ技術](../debugger/crt-debugging-techniques.md)   
  [/MD、/MT、/LD (ランタイム ライブラリの使用)](/cpp/build/reference/md-mt-ld-use-run-time-library)

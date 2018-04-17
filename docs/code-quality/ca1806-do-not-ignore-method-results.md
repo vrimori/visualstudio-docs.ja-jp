@@ -1,12 +1,10 @@
 ---
-title: "Ca 1806: メソッドの結果を無視しない |Microsoft ドキュメント"
-ms.custom: 
+title: 'Ca 1806: メソッドの結果を無視しない |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1806
 - DoNotIgnoreMethodResults
@@ -14,15 +12,14 @@ helpviewer_keywords:
 - CA1806
 - DoNotIgnoreMethodResults
 ms.assetid: fd805687-0817-481e-804e-b62cfb3b1076
-caps.latest.revision: "27"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 58da9a40f8cbbf8a506feb35dcba8a8e9f405899
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+manager: douge
+ms.openlocfilehash: 90908bb85d88d939e2886f60083c0499cde2823c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1806-do-not-ignore-method-results"></a>CA1806: メソッドの結果を無視しない
 |||  
@@ -52,7 +49,7 @@ ms.lasthandoff: 10/31/2017
   
  メソッド A が B のメソッドを呼び出しますが、メソッド B で返される新しい文字列インスタンスを使用しないかどうか。 インスタンスを引数として別のメソッドに渡して、変数に代入します。 または、必要がない場合は、呼び出しを削除します。  
   
- または  
+ - または -  
   
  またはエラー コードをメソッド A が B のメソッドを呼び出しますが、HRESULT を使用しない場合、メソッドを返します。 条件付きステートメントの結果を使用、結果を変数に代入または別のメソッドに引数として渡します。  
   

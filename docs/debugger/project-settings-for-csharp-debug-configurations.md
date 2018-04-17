@@ -1,12 +1,10 @@
 ---
-title: "プロジェクトの c# デバッグ構成の設定 |Microsoft ドキュメント"
-ms.custom: 
+title: プロジェクトの c# デバッグ構成の設定 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - project configurations, debug
 - debugging [C#], debugger settings
 ms.assetid: e30ca810-66e9-4d6e-9cf6-9f285cd0b100
-caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 054a015c5fcd6a70696ed6945faa5cbd01547168
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+manager: douge
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7f51964a303641e8e430417d63d0241603d7f360
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-settings-for--c-debug-configurations"></a>C# デバッグ構成のプロジェクト設定
 C# デバッグ構成のプロジェクト設定を変更することができます、**プロパティ ページ**ウィンドウで説明したよう[デバッグ構成とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)です。 次の表は、デバッガー関連の設定を検索する場所を示して、**プロパティ ページ**ウィンドウです。  
@@ -37,7 +35,7 @@ C# デバッグ構成のプロジェクト設定を変更することができ�
 > [!WARNING]
 >  このトピックは UWP アプリには適用されません。 参照してください[(VB、c#、C++ および XAML) は、デバッグ セッションを開始](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)  
   
-##  <a name="BKMK_Debug_tab"></a>[デバッグ] タブ  
+##  <a name="BKMK_Debug_tab"></a> [デバッグ] タブ  
   
 |**設定**|**説明**|  
 |-----------------|---------------------|  
@@ -49,7 +47,7 @@ C# デバッグ構成のプロジェクト設定を変更することができ�
 |**アンマネージ コード デバッグを有効にする**|マネージ アプリケーションからネイティブ (アンマネージ) Win32 コードの呼び出しをデバッグできます。|  
 |**SQL Server デバッグを有効にする**|SQL Server データベース オブジェクトのデバッグを許可します。|  
   
-##  <a name="BKMK_Build_tab"></a>[ビルド] タブ  
+##  <a name="BKMK_Build_tab"></a> [ビルド] タブ  
   
 |設定|説明|  
 |-------------|-----------------|  
@@ -60,5 +58,5 @@ C# デバッグ構成のプロジェクト設定を変更することができ�
 > [!NOTE]
 > 検索するデバッグ オプションの詳細についての**詳細**ボタンをクリックしを参照してください[ビルドの詳細設定 ダイアログ ボックス (c#)](../ide/reference/advanced-build-settings-dialog-box-csharp.md)です。 シンボル (.pdb) ファイルをポータブル形式は、.NET Core の最新のクロスプラット フォーム形式です。 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)
