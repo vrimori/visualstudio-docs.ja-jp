@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: コード Visual c# プロジェクト内の VBA から呼び出す |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: コード Visual c# プロジェクト内の VBA から呼び出す |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,13 +19,14 @@ helpviewer_keywords:
 - document-level customizations [Office development in Visual Studio], calling code
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 109ae2e89cf30078c910ff313ea203c576906037
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 8fa0edceac7ca98e958419efe4a70acf278857da
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-calling-code-from-vba-in-a-visual-c-project"></a>チュートリアル : VBA から Visual C# プロジェクトのコードを呼び出す
   このチュートリアルでは、ブック内の Visual Basic for Applications (VBA) コードから Microsoft Office Excel 用のドキュメント レベルのカスタマイズ内のメソッドを呼び出す方法を示します。 このプロシージャには次の 3 つの基本的な手順が含まれます。 `Sheet1` ホスト項目クラスにメソッドを追加する、ブックの VBA コードにメソッドを公開する、および、ブック内の VBA コードからメソッドを呼び出す、の 3 つです。  
@@ -74,7 +73,7 @@ ms.lasthandoff: 01/10/2018
 3.  リボンの **[開発]** タブをクリックします。  
   
     > [!NOTE]  
-    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、「 [How to: Show the Developer Tab on the Ribbon](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)」を参照してください。  
+    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、「 [方法 : [開発] タブをリボンに表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)」を参照してください。  
   
 4.  **[コード]** グループの **[Visual Basic]**をクリックします。  
   
@@ -249,10 +248,10 @@ ms.lasthandoff: 01/10/2018
   
 -   VBA から VSTO アドインのコードを呼び出します。 詳細については、次を参照してください。[チュートリアル: VBA から VSTO アドインでのコードを呼び出す](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)です。  
   
-## <a name="see-also"></a>参照  
- [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md)   
+## <a name="see-also"></a>関連項目  
+ [VBA とドキュメント レベルのカスタマイズの結合](../vsto/combining-vba-and-document-level-customizations.md)   
  [ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)   
  [How to: Expose Code to VBA in a Visual Basic Project](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)   
- [方法: Visual C &#35; での vba コードに公開プロジェクト](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)   
+ [方法: Visual C# での vba コードに公開&#35;プロジェクト](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)   
  [チュートリアル: VBA から Visual Basic プロジェクトのコードを呼び出す](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)  
   

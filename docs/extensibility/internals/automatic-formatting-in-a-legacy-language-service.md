@@ -1,27 +1,23 @@
 ---
-title: "従来の言語サービスで自動書式 |Microsoft ドキュメント"
-ms.custom: 
+title: 従来の言語サービスで自動書式 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - language services, automatic formatting
 ms.assetid: c210fc94-77bd-4694-b312-045087d8a549
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 43d9c59beaddfc6992e7b9e16e0e778be2a6d30f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e052c62afcf9551cc54373da15071fb3903fe950
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-formatting-in-a-legacy-language-service"></a>自動レガシ言語サービスで書式設定
 自動書式を使用する言語サービスでは、ユーザーは、既知のコード構成体の入力を開始するとコード スニペットが自動的に挿入します。  
@@ -31,5 +27,5 @@ ms.lasthandoff: 12/22/2017
   
  言語サービスの残りの部分に使用されるコマンドのフィルターは、オート フォーマットも使用できます。 呼び出すことによって、対応する中かっこを強調することも<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.HighlightMatchingBrace%2A>します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [従来の言語サービスの開発](../../extensibility/internals/developing-a-legacy-language-service.md)

@@ -1,12 +1,10 @@
 ---
-title: "ソリューション ユーザー オプション (です。Suo) ファイル |Microsoft ドキュメント"
-ms.custom: 
+title: ソリューション ユーザー オプション (です。Suo) ファイル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - .suo files, VSPackages
 - suo files, VSPackages
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - solutions, user options
 - solution user options (.suo) file
 ms.assetid: 75258e0d-600d-4a3d-94f4-3d7ac12cb47c
-caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 0bca2eef930b871d5728ff1c85742a28f4b51a7e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 0b96e3ad2ec29402dddc7354df46293b99bac3ec
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="solution-user-options-suo-file"></a>ソリューション ユーザー オプション (です。Suo) ファイル
 ソリューション ユーザー オプション (.suo) ファイルには、ユーザーごとにソリューションのオプションが含まれています。 このファイルは、ソース コード管理いないチェックする必要があります。  
@@ -40,6 +38,6 @@ ms.lasthandoff: 12/22/2017
   
  これら 2 つの方法では、`SaveUserOptions`と`WriteUserOptions`へのポインターを渡して、.suo ファイルに保存する情報の各ストリームに対して再帰的に呼び出される`IVsSolutionPersistence`です。 .Suo ファイルに複数のストリームの書き込みを許可するには、再帰的に、呼び出されます。 その方法でユーザー情報は、ソリューションに保存されてし、に存在する、次回ソリューションを開くことが保証します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts>   
  [ソリューション](../../extensibility/internals/solutions.md)

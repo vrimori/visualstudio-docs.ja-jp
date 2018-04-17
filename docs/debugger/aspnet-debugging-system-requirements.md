@@ -1,13 +1,10 @@
 ---
-title: "ASP.NET のデバッグ: システムの要件 |Microsoft ドキュメント"
-ms.custom: 
+title: 'ASP.NET のデバッグ: システムの要件 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - debugging ASP.NET Web applications, system requirements
 - debugging ASP.NET Web applications, security requirements
 ms.assetid: 7810b9b2-debf-4271-8fc7-1df031123255
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 9cf9517775b5729507252a259485ad8d6cc276ff
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: d928b290a4156df07baa2a1bb88009853a7916cb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="aspnet-debugging-system-requirements"></a>ASP.NET のデバッグ : システム要件
 ここでは、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] のデバッグ シナリオに必要なソフトウェアとセキュリティの要件について説明します。  
@@ -57,6 +53,6 @@ ms.lasthandoff: 01/05/2018
 > [!CAUTION]
 >  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセスを別のアカウントで実行するように変更する場合は、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセスがそのアカウントで実行中にハックされた場合の影響を考慮する必要があります。 ASPNET および NETWORK SERVICE の各ユーザー アカウントは最小限のアクセス許可で実行されるので、プロセスがハックされた場合の損害が少なくなります。 高い権限のアクセス許可を持つアカウントで [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセスを実行する必要がある場合、損害が大きくなる可能性があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ASP.NET アプリケーションをデバッグします。](../debugger/how-to-enable-debugging-for-aspnet-applications.md)   
  [方法 : ユーザー アカウントでワーカー プロセスを実行する](../debugger/how-to-run-the-worker-process-under-a-user-account.md)

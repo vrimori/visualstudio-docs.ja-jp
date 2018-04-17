@@ -1,27 +1,25 @@
 ---
-title: "ユーザー設定のサポート |Microsoft ドキュメント"
-ms.custom: 
+title: ユーザー設定のサポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Custom Settings Points
 - user settings [Visual Studio SDK], registering persistence support
 - persistence, registering settings
 ms.assetid: ad9beac3-4f8d-4093-ad0e-6fb00444a709
-caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: de3fc9b6edb3b916162a1beb34fb716d5c2adaa4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: cf2ba79cc8bff57de1fd410f8a2780825d693181
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="support-for-user-settings"></a>ユーザー設定のサポート
 VSPackage は、ユーザーが選択したときに永続化状態変数のグループ、1 つまたは複数の設定カテゴリの定義可能性があります、**設定のインポート/エクスポート**コマンドを**ツール**メニュー。 この永続化を有効にする設定を使用して Api で、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]です。  
@@ -54,7 +52,7 @@ VSPackage は、ユーザーが選択したときに永続化状態変数のグ�
   
  AlternateParent CategoryName を =  
   
-|name|型|データ|説明|  
+|名前|型|データ|説明|  
 |----------|----------|----------|-----------------|  
 |(既定)|REG_SZ|カスタム設定ポイントの名前|キーの名前、 `<CSPName`>、カスタム設定ポイントのローカライズされていない名前を指定します。<br /><br /> MPF に基づいて実装では、キーの名前を取得組み合わせることによって、`categoryName`と`objectName`の引数、<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>にコンス トラクター`categoryName_objectName`です。<br /><br /> キーを空にすることや、サテライト DLL にローカライズされた文字列に参照 ID を含めることができます。 この値は、`objectNameResourceID`への引数、<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>コンス トラクターです。|  
 |Package|REG_SZ|GUID|カスタム設定ポイントを実装する VSPackage の GUID です。<br /><br /> 実装が MPF を使用してに基づいて、<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>クラス、コンス トラクターの使用`objectType`VSPackage を含む引数<xref:System.Type>し、この値を取得するためにリフレクションします。|  

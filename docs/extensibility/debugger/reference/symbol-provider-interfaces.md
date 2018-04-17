@@ -1,27 +1,25 @@
 ---
-title: "プロバイダーのインターフェイスをシンボル |Microsoft ドキュメント"
-ms.custom: 
+title: プロバイダーのインターフェイスをシンボル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - interfaces, symbol handler
 - symbol handler, interfaces
 - symbol handler, evaluating variables
 ms.assetid: 4201f10e-c9f7-4b38-bb45-40fe0082d5bf
-caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: f2b3ec92ce76a3218c646c51ccb28d99322baf93
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 798334058a89199e1e40e023e0b7f46d13c36997
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="symbol-provider-interfaces"></a>シンボル プロバイダー インターフェイス
 シンボル処理インターフェイスは、次のとおり、[!INCLUDE[vsipsdk](../../../extensibility/includes/vsipsdk_md.md)]です。  
@@ -62,5 +60,5 @@ ms.lasthandoff: 12/22/2017
 |[IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)|SP|コレクションを表します[IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)オブジェクト。|  
 |[IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)|SP|コレクションを表します[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [API リファレンス](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

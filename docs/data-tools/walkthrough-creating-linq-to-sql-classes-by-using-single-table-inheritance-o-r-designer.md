@@ -1,26 +1,23 @@
 ---
-title: "チュートリアル: 単一テーブル継承 (O R デザイナー) を使用して LINQ to SQL クラスを作成する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: 単一テーブル継承 (O R デザイナー) を使用して LINQ to SQL クラスを作成する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
 ms.assetid: 63bc6328-e0df-4655-9ce3-5ff74dbf69a4
-caps.latest.revision: "4"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: b6e255492f0859689b41723657338140ffee5931
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 8a0c6702a965ae2733d2461cf30f5fd91f27dba3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>チュートリアル : 単一テーブル継承を使用した LINQ to SQL クラスの作成 (O/R デザイナー)
 [LINQ to Visual Studio での SQL ツール](../data-tools/linq-to-sql-tools-in-visual-studio2.md)通常リレーショナル システムで実装されている単一テーブル継承をサポートしています。 このチュートリアルで提供される汎用的な手順、[する方法: O/R デザイナーを使用して継承を構成する](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md)トピックによって実際のデータでの継承の使用をデモを提供し、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]です。  
@@ -57,8 +54,8 @@ ms.lasthandoff: 12/22/2017
     |-----------------|---------------|-----------------|  
     |**ID**|**int**|**False**|  
     |**Type**|**int**|**True**|  
-    |**FirstName**|**nvarchar (200)**|**False**|  
-    |**[氏名]**|**nvarchar (200)**|**False**|  
+    |**FirstName**|**nvarchar(200)**|**False**|  
+    |**LastName**|**nvarchar(200)**|**False**|  
     |**マネージャー**|**int**|**True**|  
   
 3.  ID 列を主キーとして設定します。  
@@ -76,7 +73,7 @@ ms.lasthandoff: 12/22/2017
   
     ||||||  
     |-|-|-|-|-|  
-    |**ID**|**Type**|**FirstName**|**[氏名]**|**マネージャー**|  
+    |**ID**|**Type**|**FirstName**|**LastName**|**マネージャー**|  
     |**1**|**1**|**Anne**|**ウォーレス**|**NULL**|  
     |**2**|**1**|**Carlos**|**Grilo**|**NULL**|  
     |**3**|**1**|**Yael**|**Peled**|**NULL**|  
@@ -189,7 +186,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  フォームを閉じます  (上、**デバッグ** メニューのをクリックして**デバッグの停止**)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [LINQ to Visual Studio での SQL ツール](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
  [チュートリアル: LINQ to SQL クラス (O R デザイナー) を作成します。](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   
  [方法: 更新、挿入、および削除 (O/R デザイナー) を実行するストアド プロシージャを割り当てる](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)   

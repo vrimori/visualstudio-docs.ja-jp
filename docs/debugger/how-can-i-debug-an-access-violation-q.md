@@ -1,13 +1,10 @@
 ---
-title: "C++ アクセス違反をデバッグする方法は? | Microsoft Docs"
-ms.custom: 
+title: C++ アクセス違反をデバッグする方法は? | Microsoft Docs
+ms.custom: ''
 ms.date: 05/23/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.access
 dev_langs:
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - access violation debugging
 - debugging [Visual Studio], access violations
 ms.assetid: 9311d754-0ce9-4145-b147-88b6ca77ba63
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24d3eed91a659dc8f0d114369bdba45dd2973375
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a28de01a6284c7b0c382b73b9f1842fe2e24afc5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-can-i-debug-a-c-access-violation"></a>C++ アクセス違反をデバッグする方法は?
 ## <a name="problem-description"></a>問題の説明  
@@ -75,5 +71,5 @@ int main() {
   
  ポインターがアクセス違反を引き起こした理由を特定できない場合、コードをトレースして、問題の原因となったポインターが正しく割り当てられているかどうかを確認します。  場合は、パラメーターとして渡される、正しく、渡され、誤ってを作成していないことを確認する、[コピーの浅い](http://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy)です。 値が変更されないことされている意図せずどこかに、プログラムでは、プログラムで別の場所で変更されていないかどうかを確認する対象のポインターに対してデータ ブレークポイントを作成して、確認します。 データ ブレークポイントの詳細については、 [Using Breakpoints](../debugger/using-breakpoints.md)のデータ ブレークポイントのセクションを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ネイティブ コードのデバッグに関する FAQ](../debugger/debugging-native-code-faqs.md)

@@ -1,13 +1,10 @@
 ---
-title: "デザイン時に Visual Studio デバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: デザイン時に Visual Studio デバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/21/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,17 +13,16 @@ helpviewer_keywords:
 - Immediate window, design-time debugging
 - design-time debugging
 ms.assetid: 35bfdd2c-6f60-4be1-ba9d-55fce70ee4d8
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 33e0210023de05047957e7fbf55a8f970fda19d9
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: a2e907cff461852d09e7b5b00482d2bdf42c0340
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debug-at-design-time-in-visual-studio"></a>Visual Studio では、デザイン時デバッグします。
 
@@ -105,6 +101,6 @@ Visual basic では、次の例ですが、**イミディ エイト**c# およ�
     ```
    ページが読み込まれると、ブレークポイントにヒットします。
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [デバッガーの基本事項](../debugger/debugger-basics.md)

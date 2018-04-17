@@ -1,26 +1,24 @@
 ---
-title: "プロジェクトのモデルのコア コンポーネント |Microsoft ドキュメント"
-ms.custom: 
+title: プロジェクトのモデルのコア コンポーネント |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project models, objects and interfaces
 - project models, services
 ms.assetid: b2f572d3-b26d-4846-92d1-84055fac141a
-caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: d2de7b73238589786c1e8a4ba42389201123c2b1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2cfb9db9c354eb4c10ece0f5a8259f3d4a104e28
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-model-core-components"></a>プロジェクト モデルのコア コンポーネント
 次の表は、プロジェクトのモデルに展開されます。 テーブルは、インターフェイスと、モデルとインターフェイス、および特定のオブジェクトに関連付けられているサービスで識別されるサービスの簡単な説明を表示します。 さらに、テーブルには、プロジェクトの作成と、特定のプロジェクトの種類の要件に応じて保守に省略可能な他のインターフェイスが詳しく説明します。  
@@ -101,9 +99,9 @@ ms.lasthandoff: 12/22/2017
 |<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>|作成し、ツール ウィンドウまたはドキュメント ウィンドウを列挙する機能や、ユーザーにエラーを報告する機能などの IDE の UI 関連の基本的な機能を提供します。|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.SVsStatusbar>|IDE のステータス バーへのアクセスを提供します。|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibility3>|オートメーション モデルを実装するために使用します。 モデルでは、プロジェクト、戻りますできるようにするプロパティ オブジェクトは、そのオブジェクトのインスタンスを作成します。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIHierWinClipboardHelper>|階層内のプロジェクト オブジェクトにクリップボードのイベントを実装するために使用します。 `SVsUIHierWinClipboardHelper`できます正しくハンドルの切り取り、コピー、および貼り付け操作。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIHierWinClipboardHelper>|階層内のプロジェクト オブジェクトにクリップボードのイベントを実装するために使用します。 `SVsUIHierWinClipboardHelper` できます正しくハンドルの切り取り、コピー、および貼り付け操作。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>   
  [チェックリスト: 新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)   
  [ビルド内にありません: HierUtil7 プロジェクト クラスを使用して、プロジェクトの種類 (C++) を実装するには](http://msdn.microsoft.com/en-us/a5c16a09-94a2-46ef-87b5-35b815e2f346)   

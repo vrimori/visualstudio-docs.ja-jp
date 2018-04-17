@@ -1,26 +1,24 @@
 ---
-title: "Visual Studio デバッガーの用語集 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio デバッガーの用語集 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - glossary [Debugging SDK]
 - debugging [Debugging SDK], glossary
 ms.assetid: 4a2cfaab-1fbd-4a23-bd00-9ac4cc50d7fd
-caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 9cc1e668f1d78bc6a1db66b6fd4dfebf77b0f6ff
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 088f5d5a6b1edfc218b5dbe291d957d903f79702
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-debugger-glossary"></a>Visual Studio デバッガーの用語集
 使用される用語は、次のとおり、 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] SDK のデバッグします。  
@@ -88,5 +86,5 @@ ms.lasthandoff: 12/22/2017
  警告ブレークポイント  
  保留中のブレークポイントで警告を記述するための抽象化です。 警告ブレークポイントは、なぜ保留中のブレークポイントがまだバインドされていないコードの場所に理由を説明します。 あるコードがまだ読み込まの保留中のブレークポイントが示す場所またはその他の何らかの理由が考えられます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio デバッガーの拡張性](../../../extensibility/debugger/visual-studio-debugger-extensibility.md)

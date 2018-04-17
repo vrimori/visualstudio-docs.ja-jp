@@ -1,13 +1,10 @@
 ---
-title: "保存された IntelliTrace データを使用して |Microsoft ドキュメント"
-ms.custom: 
+title: 保存された IntelliTrace データを使用して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.historicaldebug.norepro
 helpviewer_keywords:
@@ -16,17 +13,16 @@ helpviewer_keywords:
 - IntelliTrace log files
 - .iTrace files
 ms.assetid: 9f2cce86-345a-4e22-84ba-91542d81e67a
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 37c4c82dc3edb1abcad9dc212040864155deb1a6
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 2a39531134d4c2f041c170d328c79d157fd74a0d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-saved-intellitrace-data"></a>保存された IntelliTrace データの使用
 IntelliTrace ログ (.iTrace) ファイルからデバッグを開始するときに、アプリケーションの実行においての特定のポイントに移動します。 このファイルには、アプリの実行中に IntelliTrace によって記録された、パフォーマンス イベント、例外、スレッド、テスト ステップ、モジュール、およびその他のシステム情報が格納されています。  
@@ -58,13 +54,13 @@ IntelliTrace ログ (.iTrace) ファイルからデバッグを開始すると�
   
 -   Visual Studio の外部で .iTrace ファイルをダブルクリックするか、Visual Studio 内からファイルを開きます。  
   
-     \- または  
+     \- または -  
   
 -   .iTrace ファイルが Team Foundation Server の作業項目にアタッチされている場合は、作業項目の次の手順に従います。  
   
     -   **[すべてのリンク]**の下で .iTrace ファイルを見つけます。 そのファイルを開きます。  
   
-         \- または  
+         \- または -  
   
     -   **[ステップの再現]**の **[IntelliTrace]** リンクを選択します。  
   
@@ -165,13 +161,13 @@ IntelliTrace ログ (.iTrace) ファイルからデバッグを開始すると�
   
 1.  SharePoint 相関 ID をソースからコピーします。  
   
-     例:  
+     例えば:  
   
-     ![IntelliTrace &#45;SharePoint エラー &#45;相関 ID](../debugger/media/sharepointerror_intellitrace.png "SharePointError_IntelliTrace")  
+     ![IntelliTrace &#45; SharePoint エラー&#45;相関 ID](../debugger/media/sharepointerror_intellitrace.png "SharePointError_IntelliTrace")  
   
 2.  .iTrace ファイルを開き、 **[分析]** に移動して、Web 要求と記録されたイベントの一致を確認するために SharePoint 相関 ID を入力します。  
   
-     ![IntelliTrace ログ &#45;SharePoint 相関 ID を入力](../debugger/media/entersharepointcorrelationid.png "EnterSharePointCorrelationID")  
+     ![IntelliTrace ログ&#45;SharePoint 相関 ID の入力](../debugger/media/entersharepointcorrelationid.png "EnterSharePointCorrelationID")  
   
 3.  **[要求イベント]**で、イベントを確認します。 イベントは、発生した順に上から表示されます。  
   
@@ -179,7 +175,7 @@ IntelliTrace ログ (.iTrace) ファイルからデバッグを開始すると�
   
     2.  **[デバッグ開始]** を選択すると、イベントが発生したポイントでデバッグが開始されます。  
   
-     ![IntelliTrace ログ ファイル &#45;Web 要求の表示 &#43;です。イベント](../debugger/media/entersharepointcorrelationid2.png "EnterSharePointCorrelationID2")  
+     ![IntelliTrace ログ ファイル&#45;web 要求の表示&#43;イベント](../debugger/media/entersharepointcorrelationid2.png "EnterSharePointCorrelationID2")  
   
  IntelliTrace イベントと共に、以下の種類の SharePoint イベントが表示されます。  
   
@@ -209,7 +205,7 @@ IntelliTrace ログ (.iTrace) ファイルからデバッグを開始すると�
   
 3.  **[例外のデバッグ]** を選択して、その例外が発生したポイントでデバッグを開始します。  
   
-     ![IntelliTrace ログ &#45;SharePoint 未処理の例外](../debugger/media/sharepointunhandledexceptions_intellitrace.png "SharePointUnhandledExceptions_IntelliTrace")  
+     ![IntelliTrace ログ&#45;SharePoint 未処理の例外](../debugger/media/sharepointunhandledexceptions_intellitrace.png "SharePointUnhandledExceptions_IntelliTrace")  
   
  チュートリアルについては、次を参照してください。[チュートリアル: IntelliTrace を使用した、SharePoint アプリケーションのデバッグ](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md)です。 エージェントのレコードに表示されるデータの種類の[IntelliTrace 機能の](../debugger/intellitrace-features.md)します。  
   

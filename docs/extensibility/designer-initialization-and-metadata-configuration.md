@@ -1,26 +1,24 @@
 ---
-title: "デザイナーの初期化とメタデータの構成 |Microsoft ドキュメント"
-ms.custom: 
+title: デザイナーの初期化とメタデータの構成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - designers [Visual Studio SDK], initializing
 - designers [Visual Studio SDK], configuring metadata
 ms.assetid: f7fe9a7e-f669-4642-ad5d-186b2e6e6ec9
-caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 61624d9926f4d984386f1a8b3fe8a575ce465331
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: a6334f65b942b2eab3543d866ae1b98a186569ea
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="designer-initialization-and-metadata-configuration"></a>デザイナーの初期化とメタデータの構成
 デザイナーまたはデザイナー コンポーネントに関連付けられているメタデータとフィルターの属性の操作は、さまざまな処理を特定のデザイナーで使用されるツールを定義するアプリケーションのメカニズムを備えています<xref:System.Type>オブジェクト (などのデータ構造体。クラス、またはグラフィカルなエンティティ) 場合は、デザイナーが利用可能なおよびデザイナーをサポートするために、Visual Studio IDE を構成する方法 (のインスタンスを**ツールボックス**カテゴリまたはタブを使用)。  
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  現時点では、デザイン画面では、作成するコンポーネントは、のみがサポート、したがってコンポーネントのみがローカルのメタデータを持つことができます。 上記の例ではしようとしていたように、プロパティを変更する、`Color`オブジェクトのプロパティです。 場合`false`グローバル フラグには、渡された`CustomBrowser`デザイナーが実際にはのインスタンスを作成するためには表示されない`Color`です。 グローバル フラグに設定`false`コントロール、タイマー、およびダイアログ ボックスなどのコンポーネントの役に立ちます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>   
  <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtensionAttribute>   
  <xref:System.ComponentModel.ToolboxItemFilterType>   

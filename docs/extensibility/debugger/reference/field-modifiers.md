@@ -1,29 +1,25 @@
 ---
-title: "FIELD_MODIFIERS |Microsoft ドキュメント"
-ms.custom: 
+title: FIELD_MODIFIERS |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - FIELD_MODIFIERS
 helpviewer_keywords:
 - FIELD_MODIFIERS enumeration
 ms.assetid: 1e44681c-1f03-41a9-9c04-b79f231b0822
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 98f6e4d3f187261bcf9c0d1ad3959093d864e222
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0040795564aa1d1d599a55928b888ec7cfcfd97e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fieldmodifiers"></a>FIELD_MODIFIERS
 フィールドの型の修飾子を指定します。  
@@ -191,14 +187,14 @@ public enum enum_FIELD_MODIFIERS {
   
  これらの値が渡されるも、 [EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)を特定のフィールドをフィルター処理するメソッド。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)   
  [EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)

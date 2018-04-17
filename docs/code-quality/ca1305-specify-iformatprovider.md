@@ -1,12 +1,10 @@
 ---
-title: "Ca 1305: IFormatProvider を指定する |Microsoft ドキュメント"
-ms.custom: 
+title: 'Ca 1305: IFormatProvider を指定する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - SpecifyIFormatProvider
 - CA1305
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1305
 - SpecifyIFormatProvider
 ms.assetid: fb34ed9a-4eab-47cc-8eef-3068a4a1397e
-caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8bb3d993cc79ebf683f0a2622628bfc87d7c065a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d54b14c42ae6f656ad3329b8663c37e1dd29b4d0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1305-specify-iformatprovider"></a>CA1305: IFormatProvider を指定します
 |||  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/22/2017
  既定のカルチャまたは書式プロバイダーが正しく選択されていてコードの保守性が重要な開発の優先順位ではないことが確実であるときにこの規則による警告を抑制しても安全です。  
   
 ## <a name="example"></a>例  
- 次の例では、`BadMethod`によりこの規則の 2 つ違反が発生します。 `GoodMethod`インバリアント カルチャを渡すことによって、最初の違反を修正<xref:System.String.Compare%2A>には、現在のカルチャを渡すことによって、2 番目の違反を修正して<xref:System.String.ToLower%2A>ため`string3`がユーザーに表示されます。  
+ 次の例では、`BadMethod`によりこの規則の 2 つ違反が発生します。 `GoodMethod` インバリアント カルチャを渡すことによって、最初の違反を修正<xref:System.String.Compare%2A>には、現在のカルチャを渡すことによって、2 番目の違反を修正して<xref:System.String.ToLower%2A>ため`string3`がユーザーに表示されます。  
   
  [!code-csharp[FxCop.Globalization.CultureInfo#1](../code-quality/codesnippet/CSharp/ca1305-specify-iformatprovider_1.cs)]  
   
@@ -78,5 +76,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="related-rules"></a>関連規則  
  [CA1304: CultureInfo を指定します](../code-quality/ca1304-specify-cultureinfo.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [CultureInfo クラスを使用します。](/dotnet/standard/globalization-localization/globalization#Cultures)  

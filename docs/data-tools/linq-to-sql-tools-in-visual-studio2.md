@@ -1,23 +1,20 @@
 ---
-title: "Visual Studio O/R デザイナーの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio O/R デザイナーの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45e477c0-5c6b-41f9-b2d0-2808fb4f6537
-caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: a160cce25814cd2e110f8896ed6752a18b5dd0da
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 09fe5a8cbec1ba1ab5a45abda4c88864e25a1751
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="linq-to-sql-tools-in-visual-studio"></a>LINQ to Visual Studio での SQL ツール
 LINQ to SQL では、マイクロソフトによってリリースされた最初のオブジェクト リレーショナル マッピング テクノロジをでした。 基本的なシナリオに適していますし、引き続き Visual Studio でサポートされますが、アクティブな開発ではありません。 LINQ to SQL は既に使用して、従来のアプリケーションを保持する場合または SQL Server を使用して複数のテーブルのマッピングを必要としない単純なアプリケーションを使用します。 一般に、新しいアプリケーションは、オブジェクト リレーショナル マッパー レイヤーが必要な場合、Entity Framework を使用する必要があります。  

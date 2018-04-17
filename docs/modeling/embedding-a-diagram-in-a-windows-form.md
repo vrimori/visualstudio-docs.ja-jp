@@ -1,21 +1,19 @@
 ---
-title: "Windows フォームでダイアグラムを埋め込む |Microsoft ドキュメント"
-ms.custom: 
+title: Windows フォームでダイアグラムを埋め込む |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 2a65f2237b3fb28569a872c2e3926a2b88e11473
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: a4db7c943d789ab63c18d14ef2f505e12c902ff9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="embedding-a-diagram-in-a-windows-form"></a>Windows フォームでのダイアグラムの埋め込み
 表示されます、Windows のコントロールに DSL 図を埋め込むことができます、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ウィンドウです。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 02/09/2018
       panel1.Controls.Add(content);  
       this.docView = docView;  
     }  
-    private MyDSLDSLDocView docView;  
+    private MyDSLDocView docView;  
   
     ```  
   
@@ -152,6 +150,6 @@ ms.lasthandoff: 02/09/2018
   
      リスト ボックスでは、モデルでは、要素の一覧が表示およびが正しいことおよび元に戻す/やり直しの任意の追加または削除後に注意してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [移動して、プログラム コードでモデルを更新します。](../modeling/navigating-and-updating-a-model-in-program-code.md)   
  [ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)

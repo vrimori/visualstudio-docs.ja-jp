@@ -1,11 +1,11 @@
 ---
-title: "ResolveManifestFiles タスク | Microsoft Docs"
-ms.custom: 
+title: ResolveManifestFiles タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - VB
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - ResolveManifestFiles task [MSBuild]
 - MSBuild, ResolveManifestFiles task
 ms.assetid: e1e14f67-9b69-433f-94d4-a783a68676b2
-caps.latest.revision: 
+caps.latest.revision: 5
 author: Mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: 088af1d1ef0a83b695b0a36baaa424a4926f3112
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
-ms.translationtype: HT
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="resolvemanifestfiles-task"></a>ResolveManifestFiles タスク
 ビルド処理に含まれる各種のアイテム (ビルド済みアイテム、依存関係、サテライト、コンテンツ、デバッグ シンボル、ドキュメントなど) をマニフェスト生成のためのファイルに解決します。  
@@ -54,6 +54,6 @@ ms.lasthandoff: 02/09/2018
 ## <a name="remarks"></a>コメント  
  表に示されているパラメーターを使用できるだけでなく、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は <xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)

@@ -1,29 +1,25 @@
 ---
-title: "基本的なプロジェクト システムを作成するには、パート 1 |Microsoft ドキュメント"
-ms.custom: 
+title: 基本的なプロジェクト システムを作成するには、パート 1 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - writing a project system
 - project system
 - tutorial
 ms.assetid: 882a10fa-bb1c-4b01-943a-7a3c155286dd
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf0570dd6f58d6a6893be5babdcde530d3a57109
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 9ceb7bb63caf3677c3758d88713308daa0c34fb4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-a-basic-project-system-part-1"></a>基本的なプロジェクト システムを作成するには、パート 1
 Visual Studio では、プロジェクトは、開発者は、ソース コード ファイルおよびその他の資産の分類に使用するコンテナーです。 プロジェクトがソリューション内の子として表示されます、**ソリューション エクスプ ローラー**です。 プロジェクトでは、整理、ビルド、デバッグ、およびソース コードを配置および Web サービス、データベース、およびその他のリソースへの参照を作成できます。  
@@ -62,7 +58,7 @@ Visual Studio では、プロジェクトは、開発者は、ソース コー�
 -   基本的なテンプレート パラメーター置換を実装します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
  ソース コードをダウンロードすることも必要があります、[プロジェクト用 Managed Package Framework](http://mpfproj12.codeplex.com/)です。 作成しようとするソリューションにアクセスできる場所にファイルを抽出します。  
   

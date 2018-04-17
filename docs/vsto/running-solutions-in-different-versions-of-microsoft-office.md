@@ -1,12 +1,10 @@
 ---
-title: "異なるバージョンの Microsoft Office でソリューションを実行している |Microsoft ドキュメント"
-ms.custom: 
+title: 異なるバージョンの Microsoft Office でソリューションを実行している |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,13 +16,14 @@ helpviewer_keywords:
 - multiple Office versions
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 5f39217b456694b7e611e0386cede9fdf3c11baf
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: e228f407edd38e173da78c092c0cca7061a661a9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="running-solutions-in-different-versions-of-microsoft-office"></a>異なるバージョンの Microsoft Office でのソリューションの実行
     
@@ -48,9 +47,9 @@ ms.lasthandoff: 01/10/2018
   
 |ソリューションの作成に使用される Visual Studio のエディション|プロジェクト テンプレートが対象とする Office のバージョン|ソリューションを実行できる Office のバージョン|エンド ユーザーのコンピューターに必要なランタイム|エンド ユーザーのコンピューターに必要な .NET Framework のバージョン|  
 |----------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------|-------------------------------------------|----------------------------------------------------------|  
-|Visual Studio 2008 Professional<br /><br /> または<br /><br /> Visual Studio Team System 2008|2007 Microsoft Office system|[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)]および[!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] <sup>1</sup><br /><br /> 2007 Microsoft Office system|Visual Studio 2010 Tools for Office Runtime<sup>1</sup><br /><br /> または<br /><br /> Visual Studio Tools for the Microsoft Office System (Version 3.0 Runtime)|.NET Framework 3.5|  
-|VSTO 2005 se の Visual Studio 2005 の以下のエディションのいずれかの<sup>2</sup>インストールします。<br /><br /> -Visual Studio 2005 Tools for Office<br />-Visual Studio Team System 2005<br />-Visual Studio 2005 Professional|2007 Microsoft Office system|[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)]および[!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)](32 ビットのみ<sup>3</sup>)<br /><br /> 2007 Microsoft Office system|Visual Studio 2005 Tools for Office Second Edition Runtime|.NET Framework 2.0、.NET Framework 3.0、または .NET Framework 3.5|  
-|次のいずれかのエディションの Visual Studio<br /><br /> -Visual Studio 2008 Professional<br />-Visual Studio Team System 2008<br />-Visual Studio 2005 Tools for Office (VSTO 2005 SE の有無<sup>2</sup>インストール)<br />-Visual Studio Team System 2005 (VSTO 2005 SE の有無<sup>2</sup>インストール)<br />-VSTO 2005 se visual Studio 2005 Professional<sup>2</sup>インストール|Microsoft Office 2003|[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)]および[!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)](32 ビットのみ<sup>3</sup>)<br /><br /> 2007 Microsoft Office system<br /><br /> Microsoft Office 2003|Visual Studio 2005 Tools for Office Second Edition Runtime|.NET Framework 2.0、.NET Framework 3.0、または .NET Framework 3.5|  
+|Visual Studio 2008 Professional<br /><br /> または<br /><br /> Visual Studio Team System 2008|2007 Microsoft Office system|[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] および[!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] <sup>1</sup><br /><br /> 2007 Microsoft Office system|Visual Studio 2010 Tools for Office Runtime<sup>1</sup><br /><br /> または<br /><br /> Visual Studio Tools for the Microsoft Office System (Version 3.0 Runtime)|.NET Framework 3.5|  
+|VSTO 2005 se の Visual Studio 2005 の以下のエディションのいずれかの<sup>2</sup>インストールします。<br /><br /> -Visual Studio 2005 Tools for Office<br />-Visual Studio Team System 2005<br />-Visual Studio 2005 Professional|2007 Microsoft Office system|[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] および[!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)](32 ビットのみ<sup>3</sup>)<br /><br /> 2007 Microsoft Office system|Visual Studio 2005 Tools for Office Second Edition Runtime|.NET Framework 2.0、.NET Framework 3.0、または .NET Framework 3.5|  
+|次のいずれかのエディションの Visual Studio<br /><br /> -Visual Studio 2008 Professional<br />-Visual Studio Team System 2008<br />-Visual Studio 2005 Tools for Office (VSTO 2005 SE の有無<sup>2</sup>インストール)<br />-Visual Studio Team System 2005 (VSTO 2005 SE の有無<sup>2</sup>インストール)<br />-VSTO 2005 se visual Studio 2005 Professional<sup>2</sup>インストール|Microsoft Office 2003|[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] および[!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)](32 ビットのみ<sup>3</sup>)<br /><br /> 2007 Microsoft Office system<br /><br /> Microsoft Office 2003|Visual Studio 2005 Tools for Office Second Edition Runtime|.NET Framework 2.0、.NET Framework 3.0、または .NET Framework 3.5|  
   
  1. [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] アプリケーションおよび [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] アプリケーションには、Visual Studio 2010 Tools for Office Runtime が含まれます。 そのため、このシナリオの場合、これらのアプリケーションでは、Visual Studio Tools for the Microsoft Office system (Version 3.0 Runtime) ではなく、Visual Studio 2010 Tools for Office Runtime を常に使用します。 2007 Microsoft Office system のアプリケーションでは、Visual Studio 2010 Tools for Office Runtime または Visual Studio Tools for the Microsoft Office system (Version 3.0 Runtime) を使用できます。  
   
@@ -58,9 +57,9 @@ ms.lasthandoff: 01/10/2018
   
  3. Visual Studio 2005 Tools for Office Second Edition Runtime を必要とする Office ソリューションは、[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] および [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] の 64 ビット バージョンと互換性がありません。 [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] または [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] の 64 ビット エディションでこれらのソリューションを実行するには、プロジェクトを [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)] または 2007 Microsoft Office system を対象とする Visual Studio 2008 プロジェクトにアップグレードする必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
- [Visual Studio Tools for Office Runtime Overview](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
+ [Visual Studio Tools for Office ランタイム](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [Visual Studio Tools for Office Runtime Installation Scenarios](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md)   
  [Office ソリューションを開発できるようにコンピューターを構成する](../vsto/running-solutions-in-different-versions-of-microsoft-office.md)  

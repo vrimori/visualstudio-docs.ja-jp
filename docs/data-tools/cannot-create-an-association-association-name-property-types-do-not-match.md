@@ -1,23 +1,20 @@
 ---
-title: "関連付けを作成できません&lt;association 名&gt;-プロパティの型が一致しない |Microsoft ドキュメント"
-ms.custom: 
+title: 関連付けを作成できません&lt;association 名&gt;-プロパティの型が一致しない |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 97ec5a04-6e23-45a2-9226-d77ead854392
-caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: be8bbbec67b70576aa3a059dd400d46c92137ab9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: e6075694b9c33f942cdcb40d6bda2dd4a4ce8139
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cannot-create-an-association-ltassociation-namegt---property-types-do-not-match"></a>関連付けを作成できません&lt;association 名&gt;-プロパティの型が一致しません
 関連付けを作成できません\<association 名 > のプロパティの型が一致しません。 プロパティに一致する型がありません:\<プロパティ名 >。  

@@ -1,23 +1,21 @@
 ---
-title: "デバッグ履歴 |Microsoft ドキュメント"
-ms.custom: 
+title: デバッグ履歴 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 7cc5ddf2-2f7c-4f83-b7ca-58e92e9bfdd2
-caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0107109cfa5b15b8db0c84b304e8e1daae5dfbfa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 1f8019d9363b2a599ac4115c3d6d25a465a3bd0a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="historical-debugging"></a>デバッグ履歴
 デバッグ履歴は、IntelliTrace で収集された情報に依存するデバッグのモードです。 アプリケーションの実行内を前後に移動して、実行の状態を調べることができます。  

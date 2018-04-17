@@ -1,21 +1,19 @@
 ---
-title: "方法: ドメイン固有言語デザイナーを拡張 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ドメイン固有言語デザイナーを拡張 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: efcd1d354705fefcaeb0fbfbec0622ff2f06c331
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 8e867e1941484fe347b032ebcbe9025b962d4def
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>方法: ドメイン固有言語デザイナーを拡張する
 拡張機能は、デザイナー DSL 定義を編集するために使用することができます。 作成できるメニュー コマンドの追加のハンドラーがドラッグし、ジェスチャ、および特定の種類の値またはリレーションシップを変更するときにトリガーされるルールをダブルクリックを追加する拡張機能の種類です。 拡張機能は、として、Visual Studio Integration Extension (VSIX) をパッケージ化し、他のユーザーに配布することができます。  
@@ -70,7 +68,7 @@ ms.lasthandoff: 02/09/2018
   
  メインに拡張機能を展開する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、他のコンピューターに次の手順に従います。  
   
-1.  VSIX プロジェクトの箱で、VSIX のインストール ファイルを見つける\\*\\\*.vsix  
+1.  VSIX プロジェクトの箱で、VSIX のインストール ファイルを見つける\\*\*\\\*.vsix  
   
 2.  対象のコンピュータにこのファイルをコピーし、Windows エクスプ ローラー (またはファイル エクスプ ローラー) でそれをダブルクリックします。  
   

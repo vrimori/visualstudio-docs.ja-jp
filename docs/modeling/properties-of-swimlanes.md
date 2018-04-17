@@ -1,25 +1,23 @@
 ---
-title: "スイムレーンのプロパティ |Microsoft ドキュメント"
-ms.custom: 
+title: スイムレーンのプロパティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.dsltools.dsldesigner.swimlane
 helpviewer_keywords:
 - Domain-Specific Language, swimlane
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 39bb6be4146cf7e9e163b6da5ada6f447a930bc8
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 9a9a07549773d9881b3512bdb1b84c0cb6654280
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="properties-of-swimlanes"></a>スイムレーンのプロパティ
 スイムレーンは、ダイアグラムに追加できます。 スイムレーンはダイアグラムを垂直方向または水平方向の領域に分割します。 スイムレーン内に表示される他の図形を定義することができます。 詳細については、次を参照してください。[ドメイン固有言語の定義方法](../modeling/how-to-define-a-domain-specific-language.md)です。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語の拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)です。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 02/09/2018
 |カスタム コンス トラクターを持つ|場合`True`、ソース コードでカスタム コンス トラクターが提供されます。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)です。|False|  
 |継承修飾子|レーンから生成されるソース コードのクラスの継承の種類を表します (`none`、`abstract`または`sealed`)。|none|  
 |基本のレーン|このレーンの基本クラス。|(なし)|  
-|name|このレーンの名前。|現在の名前|  
+|名前|このレーンの名前。|現在の名前|  
 |名前空間|このレーンに関連付けられた名前空間。|現在の名前空間|  
 |ツールヒントの種類|ツールヒントを定義する方法 (`fixed`、 `variable`、または`none`)。 場合`fixed`、次の値、`Fixed Tooltip Text`プロパティを使用します。 場合`variable`、ツールヒントがカスタム コードで定義されます。|\<なし >|  
 |メモ|このレーンに関連付けられている非公式なノートです。|\<なし >|  
@@ -53,5 +51,5 @@ ms.lasthandoff: 02/09/2018
 |固定のツールヒント テキスト|固定のツールヒントに使用されるテキストです。|\<なし >|  
 |ヘルプ キーワード|このレーンの F1 ヘルプをインデックス化に使用されるキーワード。|\<なし >|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

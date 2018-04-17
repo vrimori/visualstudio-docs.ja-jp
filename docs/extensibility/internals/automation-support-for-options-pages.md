@@ -1,26 +1,24 @@
 ---
-title: "オートメーション [オプション] ページのサポート |Microsoft ドキュメント"
-ms.custom: 
+title: オートメーション [オプション] ページのサポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Tools Options pages [Visual Studio SDK], automation support
 - automation [Visual Studio SDK], creating Tools Options pages
 ms.assetid: 0b25b82c-7432-4e0a-9e84-350269ba8260
-caps.latest.revision: "29"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ffc56e4b36814a8bed7a0f93d66cc87c0b6fc466
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d27ad706d4203a3573a734a1cd11b19e3c9df6a1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automation-support-for-options-pages"></a>オートメーション [オプション] ページのサポート
 Vspackage は、ユーザー設定を提供できます**オプション** ダイアログ ボックスを**ツール**メニュー ([ツール オプション] ページ) で[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ようにことができます、オートメーション モデルを使用できます。  
@@ -40,5 +38,5 @@ Vspackage は、ユーザー設定を提供できます**オプション** ダ�
   
  カスタム ツール オプション ページを実装するサンプルについては、次を参照してください。 [VSSDK のサンプル](http://aka.ms/vs2015sdksamples)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクト オブジェクトの公開](../../extensibility/internals/exposing-project-objects.md)

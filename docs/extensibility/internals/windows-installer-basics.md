@@ -1,26 +1,24 @@
 ---
-title: "Windows インストーラーの基本概念 |Microsoft ドキュメント"
-ms.custom: 
+title: Windows インストーラーの基本概念 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows Installer, VSPackages
 - VSPackages, Windows Installer basics
 ms.assetid: 497e479b-add8-4644-870a-917f15306b97
-caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 1a9f895db0d202dd573e7c665b1185f6e3f4b751
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 8fba35aba1e1947ee4eeeb59ca2225253e2aa3a8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="windows-installer-basics"></a>Windows インストーラーの基本操作
 Windows インストーラーは、Windows インストーラー コンポーネント (WICs またはだけコンポーネントとも呼ばれます) と呼ばれる単位でこれらのタスクを実行するアプリケーションやユーザーのコンピューター上のソフトウェア製品をアンインストールします。 インストールと Windows インストーラーを使用して設定に対する参照カウントの基本単位は、各 WIC を識別する GUID。  
@@ -75,5 +73,5 @@ Windows インストーラーは、Windows インストーラー コンポーネ
   
 -   バージョン管理されたリソース必要があります出荷なしで 1 つ以上の WIC です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンポーネントのルールが破損するいるとすると、どうなりますか。](http://msdn.microsoft.com/library/aa372795\(VS.85\).aspx)

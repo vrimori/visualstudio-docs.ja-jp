@@ -1,16 +1,16 @@
 ---
-title: "Visual Studio での Python 用の Azure クラウド サービス プロジェクト テンプレート | Microsoft Docs"
-description: "役割の展開、依存関係、トラブルシューティングなど、Python で記述された Azure クラウド サービス用の Visual Studio テンプレートの概要です。"
-ms.custom: 
+title: Python 用 Azure クラウド サービス プロジェクト テンプレート | Microsoft Docs
+description: 役割の展開、依存関係、トラブルシューティングなど、Python で記述された Azure クラウド サービス用の Visual Studio テンプレートの概要です。
+ms.custom: ''
 ms.date: 07/13/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
@@ -18,17 +18,17 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: e2c2fffddba8746ff2f5696a1eaccf701b83f314
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: b8e12d8823d3246da7c607ca63c056d1927b97d0
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="azure-cloud-service-projects-for-python"></a>Python 用 Azure クラウド サービス プロジェクト
 
 Visual Studio は、Python を使用して Azure Cloud Services の作成に使用できるテンプレートを提供しています。
 
-[クラウド サービス](http://go.microsoft.com/fwlink/?LinkId=306052)は、任意の数の *worker ロール*と *Web ロール*から構成され、それぞれが概念的に独立したタスクを実行しますが、規模拡張の必要に応じてビジュアル マシン間で個別にレプリケートできます。 Web ロールでは、フロントエンド Web アプリケーションのホスティングが提供されます。 Python が接続されている場合、WSGI をサポートする任意の Web フレームワークを使用して、このようなアプリケーションを作成できます ([Web プロジェクト テンプレート](python-web-application-project-templates.md)でサポート)。 worker ロールは、ユーザーと直接対話しない長時間実行されるプロセスを意図しています。 通常、これらは [`pip install azure`](http://pypi.org/project/azure) でインストールできる[データ](http://go.microsoft.com/fwlink/?LinkId=401571) ライブラリと[アプリ サービス](http://go.microsoft.com/fwlink/?LinkId=401572) ライブラリを利用します。
+[クラウド サービス](http://go.microsoft.com/fwlink/?LinkId=306052)は、任意の数の *worker ロール*と *Web ロール*から構成され、それぞれが概念的に独立したタスクを実行しますが、規模拡張の必要に応じて仮想マシン間で個別にレプリケートできます。 Web ロールでは、フロントエンド Web アプリケーションのホスティングが提供されます。 Python が接続されている場合、WSGI をサポートする任意の Web フレームワークを使用して、このようなアプリケーションを作成できます ([Web プロジェクト テンプレート](python-web-application-project-templates.md)でサポート)。 worker ロールは、ユーザーと直接対話しない長時間実行されるプロセスを意図しています。 通常、これらは [`pip install azure`](http://pypi.org/project/azure) でインストールできる[データ](http://go.microsoft.com/fwlink/?LinkId=401571) ライブラリと[アプリ サービス](http://go.microsoft.com/fwlink/?LinkId=401572) ライブラリを利用します。
 
 この記事では、Visual Studio 2017 のプロジェクト テンプレートとその他のサポートについて詳しく説明します (以前のバージョンも同様ですが、いくつかの違いがあります)。 Python からの Azure の操作について詳しくは、[Azure Python デベロッパー センター](http://go.microsoft.com/fwlink/?linkid=254360)をご覧ください。
 

@@ -1,30 +1,26 @@
 ---
-title: "ProjectItem 要素 (Visual Studio プロジェクト テンプレート) |Microsoft ドキュメント"
-ms.custom: 
+title: ProjectItem 要素 (Visual Studio プロジェクト テンプレート) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#ProjectItem
 helpviewer_keywords:
 - ProjectItem element [Visual Studio project templates]
 - <ProjectItem> element [Visual Studio project templates]
 ms.assetid: 82879fbe-7756-42cd-9a07-c10edf5b4673
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca5143a3e5eaff488fee89b643a40adb60473bd8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8a7dfbfd03df24c2968dc9dae141ffc7a300e8be
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="projectitem-element-visual-studio-project-templates"></a>ProjectItem 要素 (Visual Studio プロジェクト テンプレート)
 プロジェクト テンプレートに含まれているファイルを指定します。  
@@ -32,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  `ProjectItem`要素は、テンプレートが、プロジェクトまたは項目があるかによって異なる属性を受け入れます。 このトピックの内容について説明します、`ProjectItem`プロジェクト テンプレートの要素。 詳細について、`ProjectItem`項目テンプレートの要素を参照してください[ProjectItem 要素 (Visual Studio 項目テンプレート)](../extensibility/projectitem-element-visual-studio-item-templates.md)です。  
   
- \<VSTemplate >  
+ \<VSTemplate>  
  \<TemplateContent >  
  \<Project>  
  \<ProjectItem >  
@@ -80,7 +76,7 @@ ms.lasthandoff: 12/22/2017
  A`string`テンプレート .zip ファイル内のファイルに名前またはパスを表すです。  
   
 ## <a name="remarks"></a>コメント  
- `ProjectItem`省略可能な子の`Project`します。  
+ `ProjectItem` 省略可能な子の`Project`します。  
   
  `TargetFileName`属性は、テンプレートの .zip ファイルのディレクトリ構造からさまざまなディレクトリ構造を作成するために使用できます。 たとえば場合、ファイル`MyFile.vb`テンプレート .zip ファイルのルートに存在するファイルをという名前のディレクトリに配置する必要しますが、`CustomFiles`テンプレートから作成されたすべてのプロジェクトでは、次の XML を使用します。  
   
@@ -143,7 +139,7 @@ ms.lasthandoff: 12/22/2017
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
  [テンプレート パラメーター](../ide/template-parameters.md)   

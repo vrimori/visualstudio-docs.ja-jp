@@ -1,12 +1,10 @@
 ---
-title: "方法: C と C++ プロジェクトのコード分析のプロパティを設定 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: C と C++ プロジェクトのコード分析のプロパティを設定 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.propertypages.native
 - VC.Project.VCCLCompilerTool.EnablePrefast
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - code analysis properties
 - C/C++ code analysis properties
 ms.assetid: 7af52097-6d44-4785-9b9f-43b7a7d447d7
-caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 629bc4dc36ade84f6a6e55518775f0d11165da7c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 89671da363d6079ad7a81dc41f1c6f82b713d32d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-set-code-analysis-properties-for-cc-projects"></a>方法: C/C++ プロジェクトのコード分析プロパティを設定する
 コード分析ツールの構成ごとに、プロジェクトのコードを分析に使用する規則を構成することができます。 さらに、生成され、サード パーティ製ツールを使用して、プロジェクトに追加されたコードからの警告を抑制するコード分析を指示することができます。  
@@ -53,6 +51,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="rule-sets"></a>規則セット  
  ルール セットを選択して、コード分析で適用する規則を選択することができます、プロジェクトには、マネージ コードが含まれている場合、**この規則セットを実行** ボックスの一覧です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マネージ コードの品質の分析](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)   
  [C/C++ コードの警告に対応するコードの分析](../code-quality/code-analysis-for-c-cpp-warnings.md)

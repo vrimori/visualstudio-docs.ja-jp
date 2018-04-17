@@ -1,13 +1,13 @@
 ---
-title: "Visual Studio でのアプリケーション パフォーマンスのプロファイリング | Microsoft Docs"
+title: Visual Studio でのアプリケーション パフォーマンスのプロファイリング | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 02/27/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.tgt_pltfrm: ''
+ms.topic: tutorial
 f1_keywords:
 - vs.performance.wizard.intropage
 helpviewer_keywords:
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - CPU Usage
 - Diagnostics Tools
 ms.assetid: da2fbf8a-2d41-4654-a509-dd238532d25a
-caps.latest.revision: 
+caps.latest.revision: 45
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: bacc4e9ebb0b0125b22089ec53a97248e9e1f4e9
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.openlocfilehash: 392bae77ffa2333fa9360dcda7f25b156e1601bc
+ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="profile-application-performance-in-visual-studio"></a>Visual Studio でのアプリケーション パフォーマンスのプロファイリング
 Visual Studio プロファイリング ツールを使用して、アプリケーションでパフォーマンスの問題を分析することができます。 このガイドでは、診断ツールの **[CPU 使用率]** タブを使用し、アプリのパフォーマンス データを取得する方法について説明します。 診断ツールは Visual Studio の .NET 開発 (ASP.NET を含む) とネイティブ/C++ 開発で利用できます。
@@ -40,6 +40,15 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 |  ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る")  |    CPU 使用率の分析方法とメモリ使用率の分析方法については、診断ツールの使用に関する[こちらのビデオ](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Profiling-with-Diagnostics-Tools-in-Visual-Studio-2017-daHnzMD6D_9211787171)をご覧ください。 |
 
 このトピックでは、通常のデバッグ ワークフローで CPU 使用率を分析する方法について説明します。 デバッガーをアタッチせずに、または実行中のアプリをターゲットにすることで、CPU 使用率を分析することもできます。詳細については、「[デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」の「[デバッグなしでプロファイリング データを収集する](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging)」をご覧ください。
+
+> [!NOTE]
+> .NET Core と ASP.NET Core では現在、CPU 使用率ツールでポータブル PDB による正確な結果を得ることができません。 代わりにフル PDB を使用してください。
+
+このチュートリアルでは、次の作業を行います。
+
+> [!div class="checklist"]
+> * CPU 使用率のデータの収集
+> * CPU 使用率データの分析
   
 ##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> 手順 1: プロファイリング データを収集する 
   
@@ -152,9 +161,10 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 
 > [!TIP]
 > Windows 関数を呼び出す外部コードをプロファイリングする場合は、最新の .pdb ファイルを入手しておく必要があります。 これらのファイルがない場合、レポート ビューに暗号のようなわかりにくい Windows 関数名が一覧表示されます。 必要なファイルがあることを確認する方法の詳細については、「[Specify Symbol (.pdb) and Source Files in the Debugger](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)」 (デバッガーにシンボル (.pdb) とソース ファイルを指定する) を参照してください。
-  
-## <a name="see-also"></a>参照  
- [メモリ使用量](../profiling/memory-usage.md)  
- [CPU 使用率](../profiling/cpu-usage.md)  
- [Visual Studio のプロファイル](../profiling/index.md)  
- [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)
+
+## <a name="next-steps"></a>次の手順
+
+このチュートリアルでは、CPU 使用率のデータを収集し、分析する方法について学習しました。 [プロファイラーのツアー](../profiling/profiling-feature-tour.md)を既に完了している場合、自分のアプリのメモリ使用量を分析する方法を一読しておくことをお勧めします。
+
+> [!div class="nextstepaction"]
+> [メモリ使用量の分析](../profiling/memory-usage.md) 

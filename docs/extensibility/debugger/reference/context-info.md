@@ -1,29 +1,25 @@
 ---
-title: "CONTEXT_INFO |Microsoft ドキュメント"
-ms.custom: 
+title: CONTEXT_INFO |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CONTEXT_INFO
 helpviewer_keywords:
 - CONTEXT_INFO structure
 ms.assetid: 6b513f4e-e7b0-4969-adf0-2205ccc1e09b
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 46168fefd491aeeae05c6406bd2b985fc5649bd1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fb634f59a3a7eb3b37e70dd87f48b22a07251d0e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="contextinfo"></a>CONTEXT_INFO
 この構造体は、メモリ コンテキストまたはコードのコンテキストについて説明します。  
@@ -81,14 +77,14 @@ public struct CONTEXT_INFO {
   
  サポートには、この構造体の一般的な使用、**メモリ**デバッグ ウィンドウです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)   
  [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)   

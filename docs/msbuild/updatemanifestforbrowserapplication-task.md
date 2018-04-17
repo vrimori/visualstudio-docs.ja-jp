@@ -1,11 +1,11 @@
 ---
-title: "UpdateManifestForBrowserApplication タスク | Microsoft Docs"
-ms.custom: 
+title: UpdateManifestForBrowserApplication タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - VB
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - building XBAP projects [WPF MSBuild]
 - UpdateManifestForBrowserApplication task [WPF MSBuild], parameters
 ms.assetid: 653339f7-654b-4d64-a26a-5c9f27036895
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: fcc1c9fe8b28b2055c73cad626cc02ef8a56aa98
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
-ms.translationtype: HT
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="updatemanifestforbrowserapplication-task"></a>UpdateManifestForBrowserApplication タスク
 <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> タスクは、[!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)] プロジェクトのビルド時に **\<hostInBrowser />** 要素をアプリケーション マニフェスト (*プロジェクト名*.exe.manifest) に追加するために実行されます。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/09/2018
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [WPF MSBuild リファレンス](../msbuild/wpf-msbuild-reference.md)   
  [Task Reference (タスク リファレンス)](../msbuild/wpf-msbuild-task-reference.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   

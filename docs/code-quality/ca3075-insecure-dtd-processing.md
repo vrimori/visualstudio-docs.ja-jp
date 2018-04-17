@@ -1,23 +1,21 @@
 ---
-title: "Ca 3075: 安全ではない DTD の処理 |Microsoft ドキュメント"
-ms.custom: 
+title: 'Ca 3075: 安全ではない DTD の処理 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 ms.assetid: 65798d66-7a30-4359-b064-61a8660c1eed
-caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 34f3d518e282650f9369aa3af8fe1600b4f28662
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 7b15c358c80a60b4ff91fd9c741fbddf2467ae8c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca3075-insecure-dtd-processing"></a>CA3075: 安全ではない DTD の処理
 |||  
@@ -37,13 +35,13 @@ ms.lasthandoff: 12/22/2017
   
 -   XML で <xref:System.Xml.XmlNode.InnerXml%2A> プロパティが設定されている。  
   
--   <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A>プロパティは、Parse に設定されます。  
+-   <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> プロパティは、Parse に設定されます。  
   
 -   信頼されていない入力は、 <xref:System.Xml.XmlResolver> の代わりに <xref:System.Xml.XmlSecureResolver> を使用して処理される。  
   
--   XmlReader.<xref:System.Xml.XmlReader.Create%2A> メソッドが安全ではない <xref:System.Xml.XmlReaderSettings> インスタンスで呼び出される。またはインスタンスがまったくない。  
+-   XmlReader です。<xref:System.Xml.XmlReader.Create%2A> メソッドが呼び出されると、安全でない<xref:System.Xml.XmlReaderSettings>インスタンスまたはすべてのインスタンスがありません。  
   
--   <xref:System.Xml.XmlReader>安全ではない既定の設定または値が作成されます。  
+-   <xref:System.Xml.XmlReader> 安全ではない既定の設定または値が作成されます。  
   
  これらはどのケースでも、結果は同じになります。XML を処理するマシンが共有するファイル システム、またはネットワークからのコンテンツが攻撃者にさらされ、DoS の媒介として使用される可能性があります。  
   

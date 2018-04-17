@@ -1,29 +1,25 @@
 ---
-title: "IDebugDocumentPosition2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugDocumentPosition2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugDocumentPosition2
 helpviewer_keywords:
 - IDebugDocumentPosition2 interface
 ms.assetid: 0e838ced-12bb-4efc-b811-2b7c034b77b0
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ba9aaf9b0d23aed99397a6c52ca443a9477bc20a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d685a59dd9404f48cfbdf9ae72e1fa07ba0d0625
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugdocumentposition2"></a>IDebugDocumentPosition2
 このインターフェイスは、ソース ファイル内の抽象の位置を表します。  
@@ -50,14 +46,14 @@ IDebugDocumentPosition2 : IUnknown
 |[IsPositionInDocument](../../../extensibility/debugger/reference/idebugdocumentposition2-ispositionindocument.md)|この位置が指定したドキュメントに含まれているかどうかを判断します。|  
 |[GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)|このドキュメントの位置の範囲を取得します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [EnumCodeContexts](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [BP_LOCATION_CODE_FILE_LINE](../../../extensibility/debugger/reference/bp-location-code-file-line.md)

@@ -1,12 +1,10 @@
 ---
-title: "方法: オブジェクトからのデータをドキュメントに読み込む |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: オブジェクトからのデータをドキュメントに読み込む |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - data [Office development in Visual Studio], adding to documents
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 02f2b735ceb473f7ffe55345c1cd45dc084edb80
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: baac72889a34474157bd89e151f6e63c19968fbb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-populate-documents-with-data-from-objects"></a>方法 : オブジェクトのデータをドキュメントに読み込む
   Microsoft Office Word のドキュメント レベルのプロジェクトでは、Windows フォーム プロジェクトと同じ方法でデータ オブジェクトのデータにアクセスできます。 同じツールとコードを使用してオブジェクトからソリューションにデータを読み込むことができ、Windows フォーム コントロールを使用してデータを表示できます。 また、ホスト コントロールを使用してデータを表示することもできます。 ホスト コントロールは、イベントおよびデータ バインディングの機能が強化された Microsoft Office Word のネイティブ オブジェクトです。 詳細については、「 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)」を参照してください。  
@@ -69,7 +68,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  コントロールへのデータ バインディングとしてデータ ソースを追加します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  
  [新しいデータ ソースを追加します。](/visualstudio/data-tools/add-new-data-sources)   
  [Windows フォーム コントロールでデータをバインド Visual Stduio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)

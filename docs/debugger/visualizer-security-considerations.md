@@ -1,12 +1,10 @@
 ---
-title: "ビジュアライザーのセキュリティに関する考慮事項 |Microsoft ドキュメント"
-ms.custom: 
+title: ビジュアライザーのセキュリティに関する考慮事項 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - visualizers, security
 - security [Visual Studio], visualizers
 ms.assetid: cdd86bd5-b729-409b-a7c6-374efa091eb1
-caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d5075e55f1db35f7a588094a7c398c9d4c25483c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 63ae399fdc6b9accdef412d4f4d13fe8db7aed75
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visualizer-security-considerations"></a>ビジュアライザーのセキュリティに関する考慮事項
 ビジュアライザーを作成すると、セキュリティ上の脅威が発生する可能性があります。 今のところ、この脅威が悪用された例はありませんが、開発者はこの脅威を認識し、以下に説明する適切なセキュリティ対策を講じることによって将来の攻略行為に対抗する必要があります。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
  このような脆弱性を軽減するために、ビジュアライザーによって公開されるインターフェイスに注意する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジュアライザーのアーキテクチャ](../debugger/visualizer-architecture.md)   
  [方法: ビジュアライザーを作成](../debugger/how-to-write-a-visualizer.md)   
  [カスタム ビジュアライザーを作成します。](../debugger/create-custom-visualizers-of-data.md)   

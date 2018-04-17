@@ -1,27 +1,25 @@
 ---
-title: "従来の言語サービスでメンバー補完 |Microsoft ドキュメント"
-ms.custom: 
+title: 従来の言語サービスでメンバー補完 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense, Member Completion tool tip
 - Member Completion, supporting in language services [managed package framework]
 - language services [managed package framework], IntelliSense Member Completion
 ms.assetid: 500f718d-9028-49a4-8615-ba95cf47fc52
-caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: e77511bdaaa96dc75f5be75c175b63fcd3cc3253
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 0cc22190c9228d2e166be94ed0d5cc78105e2404
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="member-completion-in-a-legacy-language-service"></a>従来の言語サービスでメンバーの完了
 IntelliSense のメンバーの補完は、クラス、構造体、列挙型、または名前空間などの特定のスコープの可能なメンバーの一覧を表示するツール ヒントです。 たとえば、C# の場合、ユーザーの種類"this"、ピリオドが続く場合クラスまたは現在のスコープで構造体のすべてのメンバーの一覧でが表示されます、ユーザーが選択できるリスト。  

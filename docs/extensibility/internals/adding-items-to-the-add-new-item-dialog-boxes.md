@@ -1,27 +1,23 @@
 ---
-title: "項目を追加する、新しい項目の追加 ダイアログ ボックス |Microsoft ドキュメント"
-ms.custom: 
+title: 項目を追加する、新しい項目の追加 ダイアログ ボックス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Add New Item dialog box, adding items
 ms.assetid: 2f70863b-425b-4e65-86b4-d6a898e29dc7
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f7058d097ab3eb6faeb8acf96b98ae6346887361
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a24a6d531812a170768f8c100f14ad64ab1e68c5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-items-to-the-add-new-item-dialog-boxes"></a>項目を追加する、新しい項目の追加 ダイアログ ボックス
 項目を追加するプロセス、**新しい項目の追加**レジストリ キーを持つ ダイアログ ボックスを起動します。 次のレジストリ エントリのように、AddItemTemplates セクション内で使用できるようにする項目のディレクトリの名前とパスの**新しい項目の追加** ダイアログ ボックスが配置されます。  
@@ -41,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
  "SortPriority"dword:00000064 を =  
   
-|name|型|(.Rgs ファイル) からのデータ|説明|  
+|名前|型|(.Rgs ファイル) からのデータ|説明|  
 |----------|----------|-----------------------------|-----------------|  
 |@ (既定値)|REG_SZ|#% IDS_ADDITEM_TEMPLATES_ENTRY %|リソース ID**項目の追加**テンプレート。|  
 |Val TemplatesDir|REG_SZ|%TEMPLATE_PATH%\SomeProjectItems|ダイアログ ボックスに表示されるプロジェクト アイテムのパス、**新しい項目の追加**ウィザード。|  
@@ -69,7 +65,7 @@ ms.lasthandoff: 12/22/2017
  たとえば、Visual Basic プロジェクトで、Web プロジェクトとクライアント プロジェクトがあります。 Windows フォームは、Web サーバー プロジェクトに追加する役に立つアイテムと web フォームは、クライアント プロジェクトに追加する役に立つアイテムではありません。 したがって、両方の種類のプロジェクトのすべてのファイルを含む 1 つのテンプレートのディレクトリを作成できます。 実装することによって、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>、プロジェクトまたはプロジェクトのプロジェクト設定の種類に基づいたが表示されない項目を非表示にすることができます。  
   
 ## <a name="filtering-project-items"></a>プロジェクト項目をフィルター処理  
- `IVsFilterAddProjectItemDlg2`ツリー (左側) とプロジェクト ファイル (右ペイン) で要素の次の方法でフィルター処理について説明します。  
+ `IVsFilterAddProjectItemDlg2` ツリー (左側) とプロジェクト ファイル (右ペイン) で要素の次の方法でフィルター処理について説明します。  
   
 -   ローカライズされた名前 (.vsdir ファイルに含まれているダイアログ ボックスに表示されるキャプション) によって提供される`IVsFilterAddProjectItemDlg`です。  
   
@@ -81,7 +77,7 @@ ms.lasthandoff: 12/22/2017
   
  このフィルターの機能を実装する場合、非表示にするすべての項目のテーブルにマップするはありません。 単に項目を型に分類し、.vsdir ファイルまたはファイルの分類を配置できます。 インターフェイスを実装することによって、特定の分類している項目のいずれかが非表示できます。 これにより、内の項目を行うことができます、**新しい項目の追加**プロジェクト内の状態に基づいて、ダイアログ ボックス動的です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>   
  [プロジェクトと項目テンプレートの登録](../../extensibility/internals/registering-project-and-item-templates.md)   
  [プロジェクトを拡張する通常使用されるオブジェクトの Catid](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)   

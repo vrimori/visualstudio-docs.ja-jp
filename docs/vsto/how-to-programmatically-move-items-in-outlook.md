@@ -1,13 +1,10 @@
 ---
-title: "方法: プログラムによって Outlook のアイテムを移動 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: プログラムによって Outlook のアイテムを移動 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - Outlook folders [Office development in Visual Studio], moving items
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 72b35bde8775a859ef15c5e18b381615974bccd7
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: a9eca20d533ba429db8b4227d5620c507fd805a7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-move-items-in-outlook"></a>方法: プログラムによって Outlook でアイテムを移動する
   この例から未読メ ッ セージの移動、**受信トレイ**という名前のフォルダーに**テスト**です。 語を含んでいるメッセージを移動のみ**テスト**で、`Subject`フィールドです。  
@@ -39,7 +36,7 @@ ms.lasthandoff: 01/10/2018
   
 -   電子メール メッセージが到着する単語**テスト**で、`Subject`フィールドです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フォルダーの操作](../vsto/working-with-folders.md)   
  [方法: プログラムによって名前のフォルダーを取得します。](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)   
  [方法: プログラムによって特定のフォルダー内を検索](../vsto/how-to-programmatically-search-within-a-specific-folder.md)   

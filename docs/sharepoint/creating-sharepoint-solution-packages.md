@@ -1,12 +1,10 @@
 ---
-title: "SharePoint ソリューション パッケージの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: SharePoint ソリューション パッケージの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - packages [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: ee3da66dd8e683748198992041bec5a8139cb7e9
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: e67073d1a12a9412b153adc0c06471c4d39ff15a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-sharepoint-solution-packages"></a>SharePoint ソリューション パッケージの作成
   配置パッケージを作成したりカスタマイズしたりするには、パッケージ デザイナーを使用します。 たとえば、SharePoint のプロジェクト項目およびフィーチャーの追加、IIS サーバーのリセット、フィーチャーのアクティブ化スコープの設定、フィーチャーの依存関係の特定などを行うことができます。 このデザイナーでは、マニフェスト (個々のパッケージを記述した XML ファイル) を生成することもできます。  
@@ -38,7 +37,7 @@ ms.lasthandoff: 01/10/2018
   
 |パッケージ デザイナーのプロパティ|既定の設定に関する説明|  
 |-------------------------------|------------------------------------|  
-|name|必須。 パッケージの既定の名前に設定されている*ProjectName*です。|  
+|名前|必須。 パッケージの既定の名前に設定されている*ProjectName*です。|  
 |[Web サーバーのリセット]|任意。 SharePoint サーバーに .wsp ファイルがインストールされた後に Web サーバーを再起動する場合に選択します。|  
 |配置サーバーの種類|必須。 既定では、スコープは ApplicationServer に設定されます。<br /><br /> ApplicationServer:、サービスをホストするサーバーがについて説明します。<br /><br /> WebFrontEnd:、Web サイトをホストするサーバーがについて説明します。|  
 |[ソリューション内の項目]|パッケージに追加できるすべての SharePoint プロジェクト項目およびフィーチャーを表します。|  
@@ -74,7 +73,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="package-folder-structure"></a>パッケージ フォルダーの構造  
  SharePoint プロジェクトをパッケージ化するときに .wsp ファイルが作成された、SolutionFolder\bin\\*BuildConfiguration*フォルダーです。 たとえば、ソリューションが*ドライブ*: \Visual Studio 2013\Projects\ListDefinition1 とビルド構成に設定されているリリース、.wsp ファイルにある*ドライブ*: \Visual Studio 2013\Projects\ListDefinition1\bin\Release です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: SharePoint ソリューション パッケージをカスタマイズする](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)  
  [方法: して追加および削除のフィーチャーおよび項目をパッケージにパッケージ デザイナーの使用](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md)   
  [方法: SharePoint パッケージの作成](http://msdn.microsoft.com/en-us/b24be45c-e91d-49bb-afb0-7b265404214b)   

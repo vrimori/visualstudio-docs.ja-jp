@@ -1,22 +1,24 @@
 ---
-title: "Visual Studio 2017 の修復 | Microsoft Docs"
-description: "Visual Studio 2017 のインストールを修復する方法について説明します。"
-keywords: "SEO の専門家に相談せずにキーワードを追加したり編集したりしないでください。"
+title: Visual Studio 2017 の修復 | Microsoft Docs
+description: Visual Studio 2017 のインストールを修復する方法について説明します。
+keywords: SEO の専門家に相談せずにキーワードを追加したり編集したりしないでください。
 author: PoulChapman
-ms.author: pchapman
-manager: ghogen
-ms.reviewer: 
+ms.author: tglee
+manager: douge
+ms.reviewer: ''
 ms.date: 09/28/2017
-ms.topic: article
-ms.suite: 
-ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
-ms.workload: pchapman
-ms.openlocfilehash: 9112042014f89e6e5c7e1293f890e14a882d34fb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.topic: conceptual
+ms.suite: ''
+ms.technology:
+- vs-acquisition
+ms.tgt_pltfrm: ''
+ms.workload:
+- multiple
+ms.openlocfilehash: acc8697b74a45bcf21eb312c9c3d47e6105646a9
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="repair-visual-studio-2017"></a>Visual Studio 2017 の修復
 
@@ -38,7 +40,7 @@ Visual Studio のインストールが損傷したり、破損したりするこ
 * Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
 * [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。
-* [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます   (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
+* [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。  (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
 
 ## <a name="see-also"></a>関連項目
 * [Visual Studio 2017 のインストール](install-visual-studio.md)

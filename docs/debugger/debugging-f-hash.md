@@ -1,12 +1,10 @@
 ---
-title: "F# のデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: F# のデバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - Debugging [F#]
 - F#, debugging
 ms.assetid: 20bcd51c-2d06-4281-9a1e-ef2b91d1a779
-caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: a37d69339a8a6345bbc63f563379c9f87d6cf483
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: a3a2b2651a8fc7f33ec30edc5d080d6d7e66c17e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debugging-f"></a>F# のデバッグ
 F# のデバッグは、他のマネージ言語のデバッグとほとんど同じですが、次の例外があります。  
@@ -36,5 +34,5 @@ F# のデバッグは、他のマネージ言語のデバッグとほとんど�
   
 -   デバッガーは F# 式を認識しません。 F# のデバッグ中にデバッガー ウィンドウまたはダイアログ ボックスに式を入力するには、式を C# の構文に変換する必要があります。 F# の式を C# に変換するときは、C# では等価を示す比較演算子として == を使用しますが、F# では単一の = を使用することに注意してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)

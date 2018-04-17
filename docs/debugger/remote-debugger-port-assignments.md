@@ -1,23 +1,21 @@
 ---
-title: "リモート デバッガーのポート割り当て |Microsoft ドキュメント"
+title: リモート デバッガーのポート割り当て |Microsoft ドキュメント
 ms.custom: H1Hack27Feb2017
 ms.date: 05/18/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 238bb4ec-bb00-4c2b-986e-18ac278f3959
-caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c541922ac18c28e085db37b6ac9fa9349adbeb9b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3872f11dff614e8fae4deeace7cdf301cd9b5e1c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remote-debugger-port-assignments"></a>リモート デバッガーのポートの割り当て
 Visual Studio リモート デバッガーは、アプリケーションまたはバック グラウンド サービスとして実行できます。 アプリケーションとして実行される際には、次のように既定で割り当てられているポートを使用します。  
@@ -61,5 +59,5 @@ Visual Studio リモート デバッガーは、アプリケーションまた�
 |Microsoft.WindowsAzure.Plugins.RemoteDebugger.Forwarder|31400|31398|  
 |Microsoft.WindowsAzure.Plugins.RemoteDebugger.FileUpload|32400|32398|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Remote Debugging](../debugger/remote-debugging.md)

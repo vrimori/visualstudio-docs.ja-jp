@@ -1,5 +1,5 @@
 ---
-title: "アクティビティ デザイナーの使用 |Microsoft ドキュメント"
+title: アクティビティ デザイナーの使用 |Microsoft ドキュメント
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 3c2725c3-091b-49ab-81e7-d4c7028d47a2
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a2a2cb19e2849b68eb74d70d0e2a8c6d9952f137
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: d246c7d88df588cfc47950bab20011d697c7175f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-activity-designers"></a>アクティビティ デザイナーの使用
 Windows ワークフロー デザイナーには、さまざまなアクティビティとワークフローを構築するときに使用できるシステム標準アクティビティが含まれます。 このセクションでは、システムによって提供されるアクティビティとその利用可能なデザイナーの分類について説明します。 それぞれの分類に属する個々のアクティビティとそのデザイナーに関するトピックでは、アクティビティの機能とその使用方法を説明しています。

@@ -1,27 +1,25 @@
 ---
-title: "Visual Studio 相互運用機能アセンブリを使用して |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio 相互運用機能アセンブリを使用して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio, interop assemblies
 - interop assemblies, Visual Studio
 - managed VSPackages, interop assemblies
 ms.assetid: 1043eb95-4f0d-4861-be21-2a25395b3b3c
-caps.latest.revision: "33"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 98d579755190eaf51448ef2b1b855c087bcad358
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: ca0ff9a75d72bc723b767a43f12123094a520644
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-visual-studio-interop-assemblies"></a>Visual Studio 相互運用機能アセンブリを使用します。
 Visual Studio 相互運用機能アセンブリでは、マネージ アプリケーションの Visual Studio 拡張機能を提供する COM インターフェイスにアクセスできるようにします。 直線の COM インターフェイスとの相互運用機能のバージョンに違いがあります。 たとえば、Hresult int 値として表される一般的に、例外と同じ方法で処理する必要があり、(特に out パラメーター) のパラメーターが異なる方法で扱われます。  
@@ -32,7 +30,7 @@ Visual Studio 相互運用機能アセンブリでは、マネージ アプリ�
  既定では、<xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>を 0 より小さい値を持つ HRESULT を渡される場合は例外をスローします。 ここでこのような Hresult が許容される値と例外をスローするなしの場合、追加 HRESULT の値に渡す必要があります<xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>値がテストした後です。 明示的に渡す HRESULT 値をテスト対象の HRESULT が一致するかどうかは<xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>例外はスローされません。  
   
 > [!NOTE]
->  <xref:Microsoft.VisualStudio.VSConstants>クラスに含まれる定数共通 hresult は、たとえば、<xref:Microsoft.VisualStudio.VSConstants.S_OK>と<xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL>、および[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]HRESULT、たとえば、<xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA>と<xref:Microsoft.VisualStudio.VSConstants.VS_E_UNSUPPORTEDFORMAT>です。 <xref:Microsoft.VisualStudio.VSConstants>用意されています、<xref:Microsoft.VisualStudio.ErrorHandler.Succeeded%2A>と<xref:Microsoft.VisualStudio.ErrorHandler.Failed%2A>COM の SUCCEEDED および FAILED マクロに対応するメソッド  
+>  <xref:Microsoft.VisualStudio.VSConstants>クラスに含まれる定数共通 hresult は、たとえば、<xref:Microsoft.VisualStudio.VSConstants.S_OK>と<xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL>、および[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]HRESULT、たとえば、<xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA>と<xref:Microsoft.VisualStudio.VSConstants.VS_E_UNSUPPORTEDFORMAT>です。 <xref:Microsoft.VisualStudio.VSConstants> 用意されています、<xref:Microsoft.VisualStudio.ErrorHandler.Succeeded%2A>と<xref:Microsoft.VisualStudio.ErrorHandler.Failed%2A>COM の SUCCEEDED および FAILED マクロに対応するメソッド  
   
  たとえば、次の関数呼び出しの順番<xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL>は他の HRESULT が許容可能な戻り値、エラーを表す 0 未満です。  
   
@@ -47,7 +45,7 @@ Visual Studio 相互運用機能アセンブリでは、マネージ アプリ�
 ## <a name="returning-hresults-to-com-from-managed-code"></a>マネージ コードから COM に HRESULT を返す  
  例外が発生しない場合は、マネージ コードを返します<xref:Microsoft.VisualStudio.VSConstants.S_OK>その呼び出し元の COM 関数にします。 COM 相互運用では、マネージ コードで厳密に型指定される一般的な例外がサポートされます。 たとえば、受け入れられないを受け取るメソッド`null`引数がスローされます、<xref:System.ArgumentNullException>です。  
   
- 使用することができます、COM に戻したいが不明をスローする例外が HRESULT がわかって、<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>適切な例外をスローするメソッド。 たとえば、非標準のエラーでも動作<xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA>です。 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>HRESULT をマップしようは、厳密に型指定例外に渡されます。 できない場合は、代わりに一般的な COM 例外をスローします。 最終的には、HRESULT を渡すことを<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>その呼び出し元の COM 関数をマネージ コードからが返されます。  
+ 使用することができます、COM に戻したいが不明をスローする例外が HRESULT がわかって、<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>適切な例外をスローするメソッド。 たとえば、非標準のエラーでも動作<xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA>です。 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> HRESULT をマップしようは、厳密に型指定例外に渡されます。 できない場合は、代わりに一般的な COM 例外をスローします。 最終的には、HRESULT を渡すことを<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>その呼び出し元の COM 関数をマネージ コードからが返されます。  
   
 > [!NOTE]
 >  例外によって、パフォーマンスが低下します。例外は、異常なプログラムの条件を示すことを目的としています。 頻繁に発生する条件は、スローされた例外ではなく、インラインで処理をする必要があります。  
@@ -134,5 +132,5 @@ else
   
  この型のインターフェイスを呼び出すマネージ メソッドには、[out] 配列外の最初の要素をプルする必要があります。 この要素は、場合と同様に扱うことができます、`retval`対応する COM インターフェイスから値を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アンマネージ コードとの相互運用](/dotnet/framework/interop/index)

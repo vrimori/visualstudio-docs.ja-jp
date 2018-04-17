@@ -1,27 +1,23 @@
 ---
-title: "ソース管理プラグイン API 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: ソース管理プラグイン API 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, functions
 ms.assetid: 4b0536dd-4f92-4ef2-9031-4548281f37aa
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: beaab13c76b3d50f97662e66c1f72dc83161e96d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a834c4352ea2444c2669a57f760ed373999b07dd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="source-control-plug-in-api-functions"></a>ソース管理プラグイン API 関数
 ソース コントロールのプラグイン API は、次の関数は、ソース管理プラグインに従ってこの API によって実装する必要がありますを提供します。 ビット フラグに関連付けられている各関数とセマンティクスのシグネチャとその他のパラメーターは、このリファレンスで詳しく説明します。  
@@ -86,11 +82,11 @@ ms.lasthandoff: 12/22/2017
 |[SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)|ディレクトリと、プロジェクトまたはソース管理下にあるプロジェクト内のファイルの一覧を調べます。 検出された各ディレクトリとファイル名は、コールバック関数に渡されます。|  
 |[SccQueryChanges](../extensibility/sccquerychanges-function.md)|ファイルの一覧に加えられた名前の変更を調べます。 各ファイル名は、その状態の変更とコールバック関数に渡されます。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: scc.h  
   
  (環境 SDK で提供される共通のフォルダーに含まれて、既定では*[ドライブ]*\Program Files\VSIP 8.0\EnvSDK\common\inc; MSSCCI サンプルを使用して、VSIP フォルダーの中でも提供*[ドライブ]*\ProgramFiles\VSIP 8.0\MSSCCI)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)   
  [ソース管理プラグインの作成](../extensibility/internals/creating-a-source-control-plug-in.md)

@@ -1,11 +1,11 @@
 ---
-title: "FileClassifier タスク | Microsoft Docs"
-ms.custom: 
+title: FileClassifier タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - VB
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - non-localizable resources [WPF MSBuild], classifying to embed in an assembly
 - FileClassifier task [WPF MSBuild]
 ms.assetid: 14e03310-fcc0-4bb2-a84d-cda12be66367
-caps.latest.revision: 
+caps.latest.revision: 7
 author: Mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: 5f9eaf8655bba29fc0b56108c2ad62db6e3b6d48
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
-ms.translationtype: HT
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="fileclassifier-task"></a>FileClassifier タスク
 <xref:Microsoft.Build.Tasks.Windows.FileClassifier> タスクは、ソース リソースのセットをアセンブリに埋め込まれるリソースとして分類します。 ローカライズできないリソースは、メイン アプリケーション アセンブリに埋め込まれます。ローカライズ可能なリソースは、サテライト アセンブリに埋め込まれます。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/09/2018
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [WPF MSBuild リファレンス](../msbuild/wpf-msbuild-reference.md)   
  [Task Reference (タスク リファレンス)](../msbuild/wpf-msbuild-task-reference.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   

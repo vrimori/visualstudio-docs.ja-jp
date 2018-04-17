@@ -1,27 +1,25 @@
 ---
-title: "ウィザード (です。Vsz) ファイル |Microsoft ドキュメント"
-ms.custom: 
+title: ウィザード (です。Vsz) ファイル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - .vsz files
 - vsz files
 - wizards, files
 ms.assetid: 72e1d0f3-eef1-455e-b803-96827f030f50
-caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: f70d41b353640a3b2b108a55f14b8737a7fe1f8d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 15c07da8c41bcf5fc65e35e1347095b2e8d8415e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wizard-vsz-file"></a>ウィザード (です。Vsz) ファイル
 統合開発環境 (IDE) では、.vsz ファイルを使用して、ウィザードを起動します。 これらの .vsz ファイルには、IDE を使用して呼び出すウィザードを決定する情報と、ウィザードに渡すには、どのような情報が含まれます。  
@@ -49,7 +47,7 @@ Param="WIZARDUI = FALSE"
   
  .Vsz ファイルに既定のロケール ID を追加するには、指定`FALLBACK_LCID`xxxx、ここで xxxx は、ロケール ID を英語の場合は 1033 などを = です。 ときに`FALLBACK_LCID`パラメーターが定義されている場合、ウィザードは、現在の ID が見つからない場合に、フォールバック ロケールの指定された ID を使用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム パラメーター](../../extensibility/internals/custom-parameters.md)   
  [ウィザード](../../extensibility/internals/wizards.md)   
  [テンプレート ディレクトリの説明 (.Vsdir) ファイル](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)

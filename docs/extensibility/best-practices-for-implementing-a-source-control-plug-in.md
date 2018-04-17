@@ -1,27 +1,25 @@
 ---
-title: "ソース管理プラグインを実装するためのベスト プラクティス |Microsoft ドキュメント"
-ms.custom: 
+title: ソース管理プラグインを実装するためのベスト プラクティス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, best practices
 - best practices, source control plug-ins
 - source control [Visual Studio SDK], plug-ins
 ms.assetid: 85e73b73-29dc-464f-8734-ed308742c435
-caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: e406bc0cd5d7e4cb082e1f5e34fa6645538d02ca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d5e9972b28d435f5cba360b2328ecdd6d18eb52e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="best-practices-for-implementing-a-source-control-plug-in"></a>ソース管理プラグインを実装するためのベスト プラクティス
 次の技術的な詳細を使用して、ソース管理のプラグインを確実に実装できる[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
@@ -61,6 +59,6 @@ ms.lasthandoff: 12/22/2017
   
  最もユーザー構成可能なオプションの設定は、ソース管理プラグインの間で大きく異なるため、この方法で定義されていません。そのため、推奨される機構、**詳細**ボタンをクリックします。 インスタンスで、**取得**ダイアログ ボックスで、IDE を表示情報のみを認識するが、表示することも、 **[詳細設定]**プラグインがこのコマンドのオプション ボタンをクリックします。 ユーザーがクリックしたとき、 **[詳細設定]**  ボタン、IDE の呼び出し、 [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md)ビットフラグまたは日付/時刻などの情報をユーザーに確認するプラグインのソース管理を有効にします。 プラグインに戻る時に渡される構造体でこの情報を返します、`SccGet`コマンド。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)   
  [ソース管理プラグインの作成](../extensibility/internals/creating-a-source-control-plug-in.md)

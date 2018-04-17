@@ -1,31 +1,29 @@
 ---
-title: "TaskScheduler クラスの内部メンバー |Microsoft ドキュメント"
-ms.custom: 
+title: TaskScheduler クラスの内部メンバー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - TaskScheduler class [.NET Framework debug engines]
 - debug engines, TaskScheduler class [.NET Framework]
 ms.assetid: 87f1c969-0217-4464-8907-7609c1bf61d3
-caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 049521213437e2d28e1e26b61859685158cebc08
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 18cd3ec809df921d6baefbf8018fefc77db238d3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="taskscheduler-class---internal-members"></a>TaskScheduler クラスの内部メンバー
 このトピックの内容の内部のメンバーの説明、<xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName>役立つクラスがカスタムのデバッガーを実装します。 このクラスの概要については、次を参照してください。、<xref:System.Threading.Tasks.TaskScheduler>リファレンス トピックを参照します。  
   
- **Namespace:**<xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
  **アセンブリ:** (mscorlib.dll) の mscorlib  
   
@@ -49,6 +47,6 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName>   
  [.NET Framework の並列拡張機能の内部](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

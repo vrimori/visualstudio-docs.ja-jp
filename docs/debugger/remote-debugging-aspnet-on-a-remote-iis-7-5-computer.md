@@ -1,25 +1,21 @@
 ---
-title: "リモートの IIS のリモート コンピューター上の ASP.NET のデバッグ |Microsoft ドキュメント"
+title: リモートの IIS のリモート コンピューター上の ASP.NET のデバッグ |Microsoft ドキュメント
 ms.custom: remotedebugging
 ms.date: 07/26/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cb339b5-3caf-4755-aad1-4a5da54b2a23
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 6f11ec81c740a6930ce4eaef16d4e4e389aaca47
-ms.sourcegitcommit: 65f85389047c5a1938b6d5243ccba8d4f14362ba
+ms.openlocfilehash: 1c8d2cfb57d3e96b845bc243575eb63af88720c0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>IIS: リモート コンピューター上の ASP.NET のリモート デバッグ
 IIS に配置されている ASP.NET アプリケーションをデバッグするには、インストールし、アプリが展開されているコンピューターでリモート ツールを実行して Visual Studio から、実行中のアプリにアタッチし、します。
@@ -31,7 +27,7 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 これらの手順は、これらのサーバー構成でテストされています。
 * Windows Server 2012 R2 と IIS 8 (Windows Server 2008 R2 のサーバーの手順が異なる)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 リモート デバッガーは、Windows Server の Windows Server 2008 Service Pack 2 以降ではサポートします。 要件の一覧については、次を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)です。
 
@@ -44,7 +40,7 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 
 2. HomeController.cs ファイルを開き、 `About()` メソッドにブレークポイントを設定します。
 
-## <a name="bkmk_configureIIS"></a>インストールして Windows Server で IIS を構成します。
+## <a name="bkmk_configureIIS"></a> インストールして Windows Server で IIS を構成します。
 
 [!INCLUDE [remote-debugger-install-iis-role](../debugger/includes/remote-debugger-install-iis-role.md)]
 
@@ -61,7 +57,7 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
 
 ソフトウェアをダウンロードするときに、さまざまな web サイトのスクリプトおよびリソースを読み込むための権限を許可する要求を取得することがあります。 これらの追加リソースは、ほとんどの場合、ソフトウェアをインストールする必要はありません。
 
-## <a name="BKMK_deploy_asp_net"></a>Windows Server に ASP.NET 4.5 をインストールします。
+## <a name="BKMK_deploy_asp_net"></a> Windows Server に ASP.NET 4.5 をインストールします。
 
 詳細な情報を IIS で ASP.NET をインストールする場合は、「 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。
 
@@ -76,11 +72,11 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
 
 2. システムを再起動 (実行または**net stop が/y**続く**net 開始 w3svc**システム パスへの変更を取得するコマンド プロンプトから)。
 
-## <a name="BKMK_install_webdeploy"></a>(省略可能)インストール Web 3.6 Windows Server での展開します。
+## <a name="BKMK_install_webdeploy"></a> (省略可能)インストール Web 3.6 Windows Server での展開します。
 
 [!INCLUDE [remote-debugger-install-web-deploy](../debugger/includes/remote-debugger-install-web-deploy.md)]
 
-## <a name="BKMK_deploy_asp_net"></a>Windows Server コンピューターで ASP.NET Web サイトを構成します。
+## <a name="BKMK_deploy_asp_net"></a> Windows Server コンピューターで ASP.NET Web サイトを構成します。
 
 1. Windows エクスプ ローラーを開き、新しいフォルダーを作成**C:\Publish**、ASP.NET プロジェクトを後で配置されます。
 
@@ -98,7 +94,7 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
 
 8. IIS マネージャーで選択されているサイトで次のように選択します。**アクセス許可の編集**、その IUSR、IIS_IUSRS、または読み取りと実行権限を持つ承認済みユーザーにアプリケーション プールが構成されているユーザーを確認します。 これらのユーザーが存在しない場合、読み取りと実行権限を持つユーザーとして IUSR を追加します。
 
-## <a name="bkmk_webdeploy"></a>(省略可能)発行し、Visual Studio からの Web デプロイを使用してアプリを配置
+## <a name="bkmk_webdeploy"></a> (省略可能)発行し、Visual Studio からの Web デプロイを使用してアプリを配置
 
 [!INCLUDE [remote-debugger-deploy-app-web-deploy](../debugger/includes/remote-debugger-deploy-app-web-deploy.md)]
 
@@ -125,7 +121,7 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
 
 [!INCLUDE [remote-debugger-deploy-app-local](../debugger/includes/remote-debugger-deploy-app-local.md)]
 
-## <a name="BKMK_msvsmon"></a>ダウンロードして、Windows Server のリモート ツールのインストール
+## <a name="BKMK_msvsmon"></a> ダウンロードして、Windows Server のリモート ツールのインストール
 
 このチュートリアルでは、Visual Studio 2017 を使用します。
 
@@ -134,7 +130,7 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
 > [!TIP]
 > 一部のシナリオでは、ファイル共有から、リモート デバッガーを実行する最も効率的なができます。 詳細については、次を参照してください。[ファイル共有からのリモート デバッガーの実行](../debugger/remote-debugging.md#fileshare_msvsmon)です。
   
-## <a name="BKMK_setup"></a>Windows Server のリモート デバッガーを設定します。
+## <a name="BKMK_setup"></a> Windows Server のリモート デバッガーを設定します。
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
@@ -152,7 +148,7 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
     > Visual Studio 2017 を使用して、以前にアタッチした同じプロセスを再アタッチできます**デバッグ > プロセスを再アタッチしています.**(Shift + Alt + P)。 
 
 3. 修飾子のフィールドに設定**\<リモート コンピューター名 >: 4022**です。
-4. をクリックして**更新**です。
+4. **[更新]**を生成する必要があります。
     **[選択可能なプロセス]** ウィンドウにプロセスがいくつか表示されます。
 
     すべてのプロセスが見つからない場合は、(ポートが必要です) リモート コンピューター名の代わりに IP アドレスを使用して再試行してください。 使用することができます`ipconfig`IPv4 アドレスを取得するコマンド ラインでします。
@@ -171,7 +167,7 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
 
     Visual Studio で、ブレークポイントにヒットするはずです。
 
-## <a name="bkmk_openports"></a>Windows Server で必要なポートを開くのトラブルシューティング。
+## <a name="bkmk_openports"></a> Windows Server で必要なポートを開くのトラブルシューティング。
 
 ほとんどの設定では、ASP.NET とリモート デバッガーのインストールに必要なポートが開かれます。 ただし、ポートが開いていることを確認する必要があります。
 

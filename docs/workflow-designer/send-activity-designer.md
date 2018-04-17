@@ -1,5 +1,5 @@
 ---
-title: "Send アクティビティ デザイナー |Microsoft ドキュメント"
+title: Send アクティビティ デザイナー |Microsoft ドキュメント
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: b514f2e4-767c-4b94-ac61-dd3a54d4b96d
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 22ad913623480599f8d299cba438b108a4511ae7
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 13cc79a498ca25e6aada15e4efd20c1928b4379a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="send-activity-designer"></a>Send アクティビティ デザイナー
 
@@ -46,8 +46,8 @@ ms.lasthandoff: 03/12/2018
 |<xref:System.ServiceModel.Activities.Send.KnownTypes%2A>|False|この <xref:System.ServiceModel.Activities.Send> アクティビティによって呼び出されるサービス操作の既知の型のコレクション。 このプロパティは、<xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> に設定された <xref:System.Runtime.Serialization.DataContractSerializer> プロパティと共に使用する必要があります。 <xref:System.Xml.Serialization.XmlSerializer> が使用されている場合は無視されます。<br /><br /> 横にある省略記号ボタンをクリックして、 **KnownTypes**フィールドを表示するプロパティ グリッドで、**型コレクション エディター**ダイアログを使用するには、関連する型を追加することができます。<br /><br /> 横にある省略記号ボタンをクリックして、 **KnownTypes**フィールドを表示するプロパティ グリッドで、**型コレクション エディター**  ダイアログ ボックスを使用するには、関連する型を追加することができます。 詳細については、このボックスを使用して、次を参照してください。、[型コレクション エディター ダイアログ ボックス](../workflow-designer/type-collection-editor-dialog-box.md)トピックです。|
 |<xref:System.ServiceModel.Activities.Send.ProtectionLevel%2A>|True|メッセージの <xref:System.Net.Security.ProtectionLevel> を指定します。<br /><br /> 1。<xref:System.Net.Security.ProtectionLevel>認証のみを意味します。<br />2。<xref:System.Net.Security.ProtectionLevel>署名データ送信されるデータの整合性を確保することを意味します。<br />3。<xref:System.Net.Security.ProtectionLevel>手段の暗号化と署名データを送信されるデータの整合性と機密性を確保します。|
 |<xref:System.ServiceModel.Activities.Send.SerializerOption%2A>|True|<xref:System.ServiceModel.Activities.Send> アクティビティによって呼び出されるサービス操作に使用するシリアライザー。 既定値は <xref:System.Runtime.Serialization.DataContractSerializer> です。このシリアライザーは、ある型のインスタンスを、提供されたデータ コントラクトを使用する XML ストリームまたはドキュメントへとシリアル化または逆シリアル化します。|
-|<xref:System.ServiceModel.Activities.Send.Action%2A>|False|メッセージのアクション ヘッダーを指定します。 これが明示的に設定されていない場合、既定値: https://tempuri.org/{サービス コントラクトの名前空間}/{サービス コントラクト名}/{操作名}。 <xref:System.ServiceModel.Activities.Send> アクティビティで指定した場合は、メッセージを正しく配信するために、メッセージを受信する <xref:System.ServiceModel.Activities.Receive> アクティビティに同じ値を設定する必要があります。|
-|<xref:System.ServiceModel.Activities.Send.TokenImpersonationLevel%2A>||メッセージの受信側に許可される <xref:System.Security.Principal.TokenImpersonationLevel>。 サーバー プロセスがクライアント プロセスの代理として動作できる程度を制御するセキュリティ偽装レベルを定義します。<xref:System.Security.Principal.TokenImpersonationLevel>偽装レベルが割り当てられていないことを示します。 <xref:System.Security.Principal.TokenImpersonationLevel> は、サーバー プロセスがクライアントの識別情報を取得することも、クライアントを偽装することもできないことを示します。 <xref:System.Security.Principal.TokenImpersonationLevel> は、サーバー プロセスがセキュリティ ID や特権などのクライアント情報を取得できるが、クライアントを偽装できないことを示します。 これは、テーブルとビューをエクスポートするデータベース製品など、独自のオブジェクトをエクスポートするサーバーで役立ちます。 サーバーは、このクライアントのセキュリティ コンテキストを使用する他のサービスを使用できなくても、取得したクライアントのセキュリティ情報を使用してアクセス検証に関する決定を行うことができます。 <xref:System.Security.Principal.TokenImpersonationLevel> は、サーバー プロセスがローカル システム上にあるクライアントのセキュリティ コンテキストを偽装できることを示します。 サーバーは、リモート システムにあるクライアントを偽装できません。 <xref:System.Security.Principal.TokenImpersonationLevel> は、サーバー プロセスがリモート システム上にあるクライアントのセキュリティ コンテキストを偽装できることを示します。|
+|<xref:System.ServiceModel.Activities.Send.Action%2A>|False|メッセージのアクション ヘッダーを指定します。 これが明示的に設定されていない場合、既定値を:https://tempuri.org/{serviceコントラクトの名前空間}/{サービス コントラクト名}/{操作名}。 <xref:System.ServiceModel.Activities.Send> アクティビティで指定した場合は、メッセージを正しく配信するために、メッセージを受信する <xref:System.ServiceModel.Activities.Receive> アクティビティに同じ値を設定する必要があります。|
+|<xref:System.ServiceModel.Activities.Send.TokenImpersonationLevel%2A>||メッセージの受信側に許可される <xref:System.Security.Principal.TokenImpersonationLevel>。 サーバー プロセスがクライアント プロセスの代理として動作できる程度を制御するセキュリティ偽装レベルを定義します。<xref:System.Security.Principal.TokenImpersonationLevel> 権限借用レベルが割り当てられていないことを示します。 <xref:System.Security.Principal.TokenImpersonationLevel> は、サーバー プロセスがクライアントの識別情報を取得することも、クライアントを偽装することもできないことを示します。 <xref:System.Security.Principal.TokenImpersonationLevel> は、サーバー プロセスがセキュリティ ID や特権などのクライアント情報を取得できるが、クライアントを偽装できないことを示します。 これは、テーブルとビューをエクスポートするデータベース製品など、独自のオブジェクトをエクスポートするサーバーで役立ちます。 サーバーは、このクライアントのセキュリティ コンテキストを使用する他のサービスを使用できなくても、取得したクライアントのセキュリティ情報を使用してアクセス検証に関する決定を行うことができます。 <xref:System.Security.Principal.TokenImpersonationLevel> は、サーバー プロセスがローカル システム上にあるクライアントのセキュリティ コンテキストを偽装できることを示します。 サーバーは、リモート システムにあるクライアントを偽装できません。 <xref:System.Security.Principal.TokenImpersonationLevel> は、サーバー プロセスがリモート システム上にあるクライアントのセキュリティ コンテキストを偽装できることを示します。|
 |<xref:System.ServiceModel.Activities.Send.Endpoint%2A>||<xref:System.ServiceModel.Endpoint> アクティビティによるメッセージの送信先の <xref:System.ServiceModel.Activities.Send>。 このプロパティが設定されている場合、<xref:System.ServiceModel.Activities.Send.EndpointConfigurationName%2A>プロパティにする必要があります**null**です。|
 |<xref:System.ServiceModel.Activities.Send.EndpointAddress%2A>||メッセージの送信先となる <xref:System.ServiceModel.EndpointAddress>。|
 |<xref:System.ServiceModel.Activities.Send.EndpointConfigurationName%2A>||エンドポイント構成の名前。 このプロパティは、エンドポイントを構成ファイルで構成している場合に設定します。 このプロパティで指定された名前に設定する必要があります、 **\<エンドポイント >**構成ファイル内の要素。 このプロパティが設定されている場合、<xref:System.ServiceModel.Activities.Send.Endpoint%2A>プロパティにする必要があります**null**です。|

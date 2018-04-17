@@ -1,24 +1,22 @@
 ---
-title: "方法: ドメイン固有言語の標準のメニュー コマンドの変更 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ドメイン固有言語の標準のメニュー コマンドの変更 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - .vsct files, adding commands to a domain-specific language
 - Domain-Specific Language, adding custom commands
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: c11a559fb8ef3cc6eb951950d8779691ad20c3b5
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 19d555f770802044b88e6a446932596176baa9fb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>方法: ドメイン固有言語における標準のメニュー コマンドを修正する
 DSL で自動的に定義される標準コマンドのいくつかの動作を変更できます。 たとえば、変更する可能性があります**切り取り**機密情報は除外されるようにします。 そのためには、コマンド セット クラス内でメソッドをオーバーライドします。 これらのクラスは DslPackage プロジェクト内の CommandSet.cs ファイルで定義され、<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> から派生します。  
@@ -36,7 +34,7 @@ DSL で自動的に定義される標準コマンドのいくつかの動作を�
 > [!NOTE]
 >  メニュー コマンドを作成する場合を参照してください。[する方法: ショートカット メニューにコマンドを追加](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)です。  
   
-##  <a name="what"></a>どのようなコマンドを変更することができますか。  
+##  <a name="what"></a> どのようなコマンドを変更することができますか。  
   
 #### <a name="to-discover-what-commands-you-can-modify"></a>変更可能なコマンドを見つけるには  
   
@@ -53,7 +51,7 @@ DSL で自動的に定義される標準コマンドのいくつかの動作を�
     > [!NOTE]
     >  通常、生成されたファイルを編集できません。 次回ファイルが生成されたときに編集内容は失われます。  
   
-##  <a name="extend"></a>適切なコマンド セット クラスを拡張します。  
+##  <a name="extend"></a> 適切なコマンド セット クラスを拡張します。  
  コマンド セット クラスの部分宣言を含む新しいファイルを作成します。  
   
 #### <a name="to-extend-the-command-set-class"></a>コマンド セット クラスを拡張するには  
@@ -66,7 +64,7 @@ DSL で自動的に定義される標準コマンドのいくつかの動作を�
   
 2.  **DslPackage**、という名前のフォルダーを作成する**カスタム コード**です。 このフォルダーにという新しいクラス ファイルを作成する`CommandSet.cs`です。  
   
-3.  新しいファイル内に、生成された部分クラスと同じ名前空間および名前を持つ部分宣言を記述します。 例:  
+3.  新しいファイル内に、生成された部分クラスと同じ名前空間および名前を持つ部分宣言を記述します。 例えば:  
   
     ```  
     using System;  
@@ -78,7 +76,7 @@ DSL で自動的に定義される標準コマンドのいくつかの動作を�
   
      **注**クラス ファイルのテンプレートを使用する新しいファイルを作成する場合は、名前空間とクラス名の両方を修正する必要があります。  
   
-##  <a name="override"></a>コマンドのメソッドをオーバーライドします。  
+##  <a name="override"></a> コマンドのメソッドをオーバーライドします。  
  ほとんどのコマンドは、2 つの関連付けられているメソッドを持つ: 名前を持つメソッドと同様に`ProcessOnStatus`... コマンドを表示して有効にするかどうかを決定します。 このメソッドはユーザーが図を右クリックするたびに呼び出され、すばやく実行し、何の変更も生じません。 `ProcessOnMenu`... ユーザーは、コマンドをクリックし、コマンドの機能を実行する必要があるときに呼び出されます。 これらのメソッドの一方または両方をオーバーライドする場合があります。  
   
 ### <a name="to-change-when-the-command-appears-on-a-menu"></a>メニュー上にコマンドが表示されるタイミングを変更するには  
@@ -137,7 +135,7 @@ protected override void ProcessOnMenuDeleteCommand()
   
 -   `this.CurrentSelection`。 ユーザーが右クリックした図形は常にこの図形およびコネクタの一覧に含まれます。 ユーザーが図の空白部分をクリックした場合、このリストのメンバーは図のみになります。  
   
--   `this.IsDiagramSelected()` - `true`ユーザーは、図の空白部分をクリック場合します。  
+-   `this.IsDiagramSelected()` - `true` ユーザーは、図の空白部分をクリック場合します。  
   
 -   `this.IsCurrentDiagramEmpty()`  
   
@@ -149,7 +147,7 @@ protected override void ProcessOnMenuDeleteCommand()
   
  要素間を移動する方法およびオブジェクトとリンクを作成する方法についての詳細については、次を参照してください。[を移動すると、プログラム コードでモデルを更新する](../modeling/navigating-and-updating-a-model-in-program-code.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.ComponentModel.Design.MenuCommand>   
  [ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
  [方法: ショートカット メニューにコマンドを追加](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)   

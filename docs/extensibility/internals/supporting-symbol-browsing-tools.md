@@ -1,12 +1,10 @@
 ---
-title: "シンボル参照のツールのサポート |Microsoft ドキュメント"
-ms.custom: 
+title: シンボル参照のツールのサポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - symbols, symbol-browsing tools
 - browsers, symbol browsers
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - symbols
 - libraries, symbol-browsing tools
 ms.assetid: 70d8c9e5-4b0b-4a69-b3b3-90f36debe880
-caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 78a4e910dbd2c6063f4bdf7b0dff3f27f79b218e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 08185f64310da610253dc35e69323b17ab0177fd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supporting-symbol-browsing-tools"></a>シンボル参照のツールのサポート
 **オブジェクト ブラウザー**、**クラス ビュー**、**呼び出しブラウザー**と**シンボルの検索結果**ツールは、シンボル参照 Visual Studio での機能を提供します。 これらのツールは、シンボルの階層ツリー ビューを表示し、ツリー内のシンボルの関係を表示します。 シンボルには、名前空間、オブジェクト、クラス、クラス メンバー、およびさまざまなコンポーネントに含まれるその他の言語要素を表すことがあります。 コンポーネントは、Visual Studio プロジェクトは、外部[!INCLUDE[dnprdnshort](../../code-quality/includes/dnprdnshort_md.md)]コンポーネントおよび (.tlb) のタイプ ライブラリ。 詳細については、「[コードの構造の表示](../../ide/viewing-the-structure-of-code.md)」を参照してください。  
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  ネイティブ コードのシンボル プロバイダーを実装するには、使用、<xref:Microsoft.VisualStudio.Shell.Interop.IVsLibrary2>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectList2>インターフェイスです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: オブジェクト マネージャーにライブラリを登録](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)   
  [方法: オブジェクト マネージャーにライブラリによって提供されるシンボルのリストを公開](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)   
  [方法: ライブラリでのシンボルの識別](../../extensibility/internals/how-to-identify-symbols-in-a-library.md)

@@ -1,12 +1,10 @@
 ---
-title: "2215: ca Dispose メソッドを呼び出します基底クラス dispose |Microsoft ドキュメント"
-ms.custom: 
+title: '2215: ca Dispose メソッドを呼び出します基底クラス dispose |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA2215
 - DisposeMethodsShouldCallBaseClassDispose
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - DisposeMethodsShouldCallBaseClassDispose
 - CA2215
 ms.assetid: c772e7a6-a87e-425c-a70e-912664ae9042
-caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 791de4f70113df3759e920591ec94da5108eec9a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d8eb5c56ab3affe6322a858dfcd34c3b138f26d7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2215-dispose-methods-should-call-base-class-dispose"></a>CA2215: Dispose メソッドから基本クラスの破棄を呼び出します
 |||  
@@ -41,10 +39,10 @@ ms.lasthandoff: 12/22/2017
  呼び出す必要がありますが、型は、破棄可能な型から継承している場合、<xref:System.IDisposable.Dispose%2A>独自内から基本型のメソッド<xref:System.IDisposable.Dispose%2A>メソッドです。 Dispose 基本データ型メソッドを呼び出すと、基本型で作成されたすべてのリソースが解放されるようにします。  
   
 ## <a name="how-to-fix-violations"></a>違反の修正方法  
- この規則違反を修正するには、呼び出す`base`.<xref:System.IDisposable.Dispose%2A>で、<xref:System.IDisposable.Dispose%2A>メソッドです。  
+ この規則違反を修正するには、呼び出す`base`です。<xref:System.IDisposable.Dispose%2A> <xref:System.IDisposable.Dispose%2A>メソッドです。  
   
 ## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
- 場合、この規則による警告を抑制するのには安全ではへの呼び出し`base`.<xref:System.IDisposable.Dispose%2A>ルール チェックよりも深い呼び出しレベルで発生します。  
+ 場合、この規則による警告を抑制するのには安全では、呼び出し`base`です。<xref:System.IDisposable.Dispose%2A> ルール チェックよりも深い呼び出しレベルで発生します。  
   
 ## <a name="example"></a>例  
  次の例は、型を示しています。`TypeA`を実装する<xref:System.IDisposable>です。  
@@ -56,6 +54,6 @@ ms.lasthandoff: 12/22/2017
   
  [!code-vb[FxCop.Usage.IDisposableBaseCalled#1](../code-quality/codesnippet/VisualBasic/ca2215-dispose-methods-should-call-base-class-dispose_2.vb)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.IDisposable?displayProperty=fullName>   
  [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern)

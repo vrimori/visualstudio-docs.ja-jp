@@ -1,28 +1,26 @@
 ---
-title: "Visual Studio のレイアウト |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio のレイアウト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: c19e3022-047c-43b6-a046-a82717efed4f
-caps.latest.revision: "2"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ef3c590a82fc3a7b89d21684ffe2e4b0f216ca98
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2e26caa6e47f0f2ee2a20611cf12e166832e007b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="layout-for-visual-studio"></a>Visual Studio のレイアウト
 Visual Studio のダイアログ ボックスの大半は[ユーティリティ ダイアログのレイアウト](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_UtilityDialogLayout)、ダイアログ ボックスに従ってその標準は、unthemed [Windows デスクトップ ダイアログのレイアウトの基本原則](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742499\(v=vs.85\).aspx)です。 移動に伴い Visual Studio に UI を更新するより高いのダイアログ ボックスのある新しいデザイン エクスペリエンスの製品を定義するように確立します。 これら[テーマが適用されたダイアログのレイアウト](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_ThemedDialogLayout)テーマの外観にする場合します。  
   
-##  <a name="BKMK_UtilityDialogLayout"></a>ユーティリティのダイアログのレイアウト  
+##  <a name="BKMK_UtilityDialogLayout"></a> ユーティリティのダイアログのレイアウト  
   
 -   ユーティリティ ダイアログ内のすべてのコントロールを左上から開始し、下方向にフローします。  
   
@@ -104,7 +102,7 @@ Visual Studio のダイアログ ボックスの大半は[ユーティリティ 
   
 -   行の長さは、解析を読み取るユーザー向けに快適な幅にする必要があります。 中規模のダイアログは、個 550 ピクセルにする必要があります。  
   
-####  <a name="BKMK_InteriorCommandButtons"></a>内部コマンド ボタン  
+####  <a name="BKMK_InteriorCommandButtons"></a> 内部コマンド ボタン  
  複雑なダイアログは、内部のコントロールはダイアログのコミットのボタンがある場所に影響を与える可能性があります独自関連のボタンがあります。  
   
 -   使用するときに内部の垂直方向の配置 (列) の各ボタン**[ok]**/**キャンセル**右下隅の水平方向に並びます。  
@@ -124,7 +122,7 @@ Visual Studio のダイアログ ボックスの大半は[ユーティリティ 
 #### <a name="browse-button"></a>[参照...]ボタン  
  **[参照...]**ボタンのテキスト ボックスに続く必要があります「参照...」省略記号を含む、完全に略さずです。 容量が厳しいかが複数ある場合**[参照...]**ボタン、画面上のボタンは、省略記号に短縮できます。  
   
-##  <a name="BKMK_ThemedDialogLayout"></a>テーマが適用されたダイアログのレイアウト  
+##  <a name="BKMK_ThemedDialogLayout"></a> テーマが適用されたダイアログのレイアウト  
  Visual Studio でテーマが適用されたダイアログでは、外観が明るいと、複数の空白を提供します。 文字体裁エンファシスとより多くの行間隔やフォント サイズ、および重みのバリエーションが提供して、目的の詳細を提供します。 可能であれば、chrome とタイトル バー削減されたり削除します。 これらのダイアログ ボックスのレイアウトは、この基本的なパターンに従う必要があります。  
   
 1.  ダイアログ ボックスの背景が白いです。  
@@ -158,7 +156,7 @@ Visual Studio のダイアログ ボックスの大半は[ユーティリティ 
   
  **図の 08.01 k: テーマが適用されたダイアログの色**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio のアプリケーション パターン](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md)   
  [コントロール (Windows)](https://msdn.microsoft.com/library/windows/desktop/dn742399.aspx)   
  [ダイアログ ボックス (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742499\(v=vs.85\).aspx)

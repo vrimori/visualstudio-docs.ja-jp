@@ -1,23 +1,21 @@
 ---
-title: "ドメイン固有言語ツールの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: ドメイン固有言語ツールの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 89ff0565bf33936f15c18c0964fc9fb2f64ab9b8
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: cd105ae8553d39a6fe1a1bd23136d5027da17ec3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>ドメイン固有言語ツールの概要
 ホストされるドメイン固有言語ツール (DSL ツール)[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]では、ドメイン固有言語の設計および言語に基づくモデルを作成するためのユーザーが必要なすべてのものを生成します。  
@@ -77,6 +75,6 @@ ms.lasthandoff: 02/09/2018
   
  ビルドおよび DSL ツールのソリューションを実行するときに[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、2 番目のインスタンスの[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ドメイン固有言語が言語のユーザーに表示する方法を示しています。 すべてが正常に動作することを確認する後に割り当てることができます、`.vsix`ファイル DslPackage プロジェクトのビルド フォルダーに表示されます。 このファイルを使用して、インストールとして DSL、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]他のコンピューター上の拡張機能です。  詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [実験用インスタンス](../extensibility/the-experimental-instance.md)   
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

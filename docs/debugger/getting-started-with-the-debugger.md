@@ -1,28 +1,24 @@
 ---
-title: "Visual Studio をデバッグする方法を学習 |Microsoft ドキュメント"
+title: Visual Studio をデバッグする方法を学習 |Microsoft ドキュメント
 ms.description: Learn how to start the Visual Studio debugger, step through code, and inspect data
 ms.custom: mvc
 ms.date: 03/16/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: tutorial
 helpviewer_keywords:
 - debugger
 ms.assetid: 62734c0d-a75a-4576-8f73-0e97c19280e1
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e0686a4138fc2489c8a63b207e98cf7780477782
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 92194e403e5a8fe6c7075ea7cd449442f281a7e8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="learn-to-debug-using-visual-studio"></a>Visual Studio を使用してデバッグする方法を学習します。
 
@@ -36,7 +32,7 @@ ms.lasthandoff: 03/19/2018
 
 デモ アプリが必要な場合は、c# を使用しての機能は、C++、Visual Basic、JavaScript、および (場合を除き) Visual Studio でサポートされるその他の言語に適用されます。
 
-このチュートリアルでは説明します。
+このチュートリアルでは、次の作業を行います。
 
 > [!div class="checklist"]
 > * デバッガーを起動し、ブレークポイントにヒットします。

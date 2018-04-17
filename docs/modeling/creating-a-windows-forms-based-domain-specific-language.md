@@ -1,26 +1,24 @@
 ---
-title: "Windows フォーム ベースのドメイン固有言語の作成 |Microsoft ドキュメント"
-ms.custom: 
+title: Windows フォーム ベースのドメイン固有言語の作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 7eb6bc6542350439250ace3dbaa7f2ba920e93ed
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 23fe0d582f92d5025049974ccd64357203e4845a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-a-windows-forms-based-domain-specific-language"></a>Windows フォームに基づくドメイン固有言語の作成
 Windows フォームを使用すると、DSL 図を使用する代わりに、ドメイン固有言語 (DSL) モデルの状態を表示します。 このトピックを紹介 DSL への Windows フォームのバインドを使用して、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK。  
   
- ![DSL &#45;Wpf &#45; 2.](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
+ ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
 Windows フォーム UI とモデル エクスプ ローラーを示す DSL インスタンス。  
   
 ## <a name="creating-a-windows-forms-dsl"></a>Windows フォーム DSL を作成します。  
@@ -53,9 +51,9 @@ Windows フォーム UI とモデル エクスプ ローラーを示す DSL イ�
   
  メイン インスタンスで[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、DSL ソリューションについて、次の点に注意してください。  
   
--   `DslDefinition.dsl`図の要素は含まれません。 DSL 図この DSL のインスタンス モデルを表示する使用しないためにです。 Windows フォームは、モデルにバインドして、モデルをフォーム上の要素が表示されます。  
+-   `DslDefinition.dsl` 図の要素は含まれません。 DSL 図この DSL のインスタンス モデルを表示する使用しないためにです。 Windows フォームは、モデルにバインドして、モデルをフォーム上の要素が表示されます。  
   
--   加え、`Dsl`と`DslPackage`プロジェクト、ソリューションに含まれるという名前の 3 つ目のプロジェクト`UI.` **UI**プロジェクトには、Windows フォーム コントロールの定義が含まれています。 `DslPackage`異なります`UI`、および`UI`異なります`Dsl`です。  
+-   加え、`Dsl`と`DslPackage`プロジェクト、ソリューションに含まれるという名前の 3 つ目のプロジェクト`UI.` **UI**プロジェクトには、Windows フォーム コントロールの定義が含まれています。 `DslPackage` 異なります`UI`、および`UI`異なります`Dsl`です。  
   
 -   `DslPackage`プロジェクト、`UI\DocView.cs`で定義されている Windows フォーム コントロールを表示するコードが含まれています、`UI`プロジェクト。  
   
@@ -71,7 +69,7 @@ Windows フォーム UI とモデル エクスプ ローラーを示す DSL イ�
 ## <a name="updating-the-dsl-definition"></a>DSL 定義の更新  
  DSL 定義は、このチュートリアルで使用します。  
   
- ![DSL &#45;Wpf &#45; 1](../modeling/media/dsl-wpf-1.png "DSL-Wpf-1")  
+ ![DSL&#45;Wpf&#45;1](../modeling/media/dsl-wpf-1.png "DSL-Wpf-1")  
   
 #### <a name="to-update-the-dsl-definition"></a>DSL 定義を更新するには  
   
@@ -88,9 +86,9 @@ Windows フォーム UI とモデル エクスプ ローラーを示す DSL イ�
   
 4.  使用して、**という名前のドメイン クラス**次のドメイン クラスを作成するツール。  
   
-    -   `Field`-付与このという追加のドメイン プロパティ`Size`です。  
+    -   `Field` -付与このという追加のドメイン プロパティ`Size`です。  
   
-    -   `Animal`[プロパティ] ウィンドウで次のように設定します。**継承修飾子**に**抽象**です。  
+    -   `Animal` [プロパティ] ウィンドウで次のように設定します。**継承修飾子**に**抽象**です。  
   
 5.  使用して、**ドメイン クラス**次のクラスを作成するツール。  
   
@@ -223,7 +221,7 @@ Windows フォーム UI とモデル エクスプ ローラーを示す DSL イ�
   
 3.  **FarmApp エクスプ ローラー**のショートカット メニューを開き、**ファーム**ルート ノード、および選択**追加新しい Goat**です。  
   
-     `Goat1`表示されます、**動物**ビュー。  
+     `Goat1` 表示されます、**動物**ビュー。  
   
     > [!WARNING]
     >  ショートカット メニューを使用する必要があります、**ファーム**ノード、されません、**動物**ノード。  
@@ -305,7 +303,7 @@ Windows フォーム UI とモデル エクスプ ローラーを示す DSL イ�
   
      データ グリッド ビュー内の要素の名前を編集することができます。 そこから削除することもできます。  
   
- ![DSL &#45;Wpf &#45; 2.](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
+ ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
   
 ### <a name="about-the-code-to-add-an-element"></a>要素を追加するコードについて  
  新しい要素ボタンでは、次の代替コードは少し簡単なです。  
@@ -326,7 +324,7 @@ private void NewSheepButton_Click(object sender, EventArgs e)
   
  そのためことをお勧めを使用すること<xref:Microsoft.VisualStudio.Modeling.ElementOperations>新しい要素を作成します。 詳細については、次を参照してください。[をカスタマイズする要素の作成および移動](../modeling/customizing-element-creation-and-movement.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)   
  [ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
  [Modeling SDK for Visual Studio - ドメイン固有言語](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)

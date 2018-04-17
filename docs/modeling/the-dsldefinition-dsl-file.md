@@ -1,23 +1,21 @@
 ---
-title: "DslDefinition.dsl ファイル |Microsoft ドキュメント"
-ms.custom: 
+title: DslDefinition.dsl ファイル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, definition file
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 92bd27f1590aae455c0d5bba540720421338b63c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 361f723997f898091b05a80cfb55c9cc5680ceb3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="the-dsldefinitiondsl-file"></a>DslDefinition.dsl ファイル
 このトピックは、プロジェクト内の Dsl の DslDefinition.dsl ファイルの構造を記述、[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]を定義するには、ソリューション、*ドメイン固有言語*します。 DslDefinition.dsl ファイルは、クラスとドメイン固有言語、ダイアグラム、図形、コネクタ、シリアル化形式との関係について説明しますと**ツールボックス**ドメイン固有言語のおよび編集ツールです。 ドメイン固有言語ソリューションでは、これらのツールを定義するコードは DslDefinition.dsl ファイルの情報に基づいて生成されます。  
@@ -192,7 +190,7 @@ ms.lasthandoff: 02/09/2018
   
 -   **IsBrowsable**です。 この属性でこのプロパティを表示するかどうかを決定する、**プロパティ**ユーザーには、親クラスのオブジェクトがクリックしたときにウィンドウです。  
   
--   **IsUIReadOnly**. この属性は、ユーザーが内のプロパティを変更できるかどうかを判断、**プロパティ**ウィンドウまたはプロパティが示されているデコレータを使用します。  
+-   **IsUIReadOnly**です。 この属性は、ユーザーが内のプロパティを変更できるかどうかを判断、**プロパティ**ウィンドウまたはプロパティが示されているデコレータを使用します。  
   
 -   **種類**です。 この属性は、Normal、Calculated、CustomStorage のいずれかに設定できます。 この属性を Calculated に設定する場合は、値を決定するカスタム コードを記述する必要があります。また、このプロパティは読み取り専用になります。 この属性を CustomStorage に設定する場合は、値の取得と設定の両方を行うコードを記述する必要があります。  
   
@@ -441,7 +439,7 @@ ms.lasthandoff: 02/09/2018
   
  (Connection リレーションシップには、要素と属性の名前を指定する独自の XML クラス データがあります。)  
   
- 場合、 **OmitElement**属性が設定されているリレーションシップを true にロール名を省略するでは、シリアル化されたファイルを省略してが明確なは、2 つのクラスは、2 つ以上のリレーションシップを持つ場合です。 例:  
+ 場合、 **OmitElement**属性が設定されているリレーションシップを true にロール名を省略するでは、シリアル化されたファイルを省略してが明確なは、2 つのクラスは、2 つ以上のリレーションシップを持つ場合です。 例えば:  
   
 ```  
 <component name="Component3">  
@@ -547,7 +545,7 @@ ComponentHasPorts . Component / ! Component /    ComponentModelHasComponents . C
   
  コネクタ マップにはデコレータ マップを含めることもできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)   
  [ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)   
  [モデル、クラス、およびリレーションシップについて](../modeling/understanding-models-classes-and-relationships.md)

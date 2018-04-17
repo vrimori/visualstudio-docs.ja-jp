@@ -1,12 +1,9 @@
 ---
-title: "エラー: IIS 管理サービスが応答しなかったために、セキュリティ チェックが失敗しました |。Microsoft ドキュメント"
-ms.custom: 
+title: 'エラー: IIS 管理サービスが応答しなかったために、セキュリティ チェックが失敗しました |。Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vs.debug.error.iis_not_responding
@@ -17,17 +14,16 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - debugger, Web application errors
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 85b96d9e1396933519da71e93bac075ee51af001
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 87a0379848f17ebe875e8680e95948e9d15e0671
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="error-a-security-check-failed-because-the-iis-admin-service-did-not-respond"></a>エラー ： IIS 管理サービスが応答しないため、セキュリティ チェックに失敗しました。
 このエラーは、IIS Admin サービスが応答しないときに発生します。 これは通常、IIS のインストールに問題があることを意味します。 最初に、を使用して、サービスが実行されていることを確認、 **Services**ツールから**管理ツール**です。  
@@ -52,5 +48,5 @@ ms.lasthandoff: 12/22/2017
   
      詳細については、IIS のドキュメントを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Web アプリケーションのデバッグ : エラーおよびトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

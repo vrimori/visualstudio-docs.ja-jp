@@ -1,12 +1,10 @@
 ---
-title: "Office プロジェクトのプロパティ |Microsoft ドキュメント"
-ms.custom: 
+title: Office プロジェクトのプロパティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,13 +18,14 @@ helpviewer_keywords:
 - Value2 property
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 7925cc9b6988a79a855d6aa8d9cd91d1a4589559
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 47af1dae914528a3a338503989e53f081dfffde5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="properties-in-office-projects"></a>Office プロジェクトのプロパティ
   Visual Studio で Office プロジェクトに使用できる重要なプロパティがいくつかあります。 これらのプロパティには **[プロパティ]** ウィンドウでアクセスできます。  
@@ -54,7 +53,7 @@ ms.lasthandoff: 01/10/2018
   
  **の** プロパティをデータ ソースのフィールドにバインドするには、**[プロパティ]** ウィンドウの <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> Value2 <xref:Microsoft.Office.Tools.Excel.NamedRange> プロパティを使用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [Office プロジェクト テンプレートの概要](../vsto/office-project-templates-overview.md)   
  [Office プロジェクトのイベント](../vsto/events-in-office-projects.md)  

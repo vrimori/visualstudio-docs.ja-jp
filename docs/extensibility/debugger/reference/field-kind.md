@@ -1,29 +1,25 @@
 ---
-title: "FIELD_KIND |Microsoft ドキュメント"
-ms.custom: 
+title: FIELD_KIND |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - FIELD_KIND
 helpviewer_keywords:
 - FIELD_KIND enumeration
 ms.assetid: fd522b9c-52e2-42fa-939d-343347d5c3b1
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 095a02edb0a462e2fdbdca0f7f92018861b3d6bf
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 35a603310986f42141a04f38c7ce26db0d7326fe
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fieldkind"></a>FIELD_KIND
 含まれるフィールドの種類を指定します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。  
@@ -232,14 +228,14 @@ public enum enum_FIELD_KIND {
   
  フィールドの種類に応じて[QueryInterface](/cpp/atl/queryinterface)で呼び出すことができます、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイスの複数の特定のフォームのインターフェイスです。 たとえば場合、 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)を返します`FIELD_TYPE_METHOD`、し、呼び出すことができます`QueryInterface`i`DebugField`を取得する、 [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)インターフェイスです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)   
  [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)   

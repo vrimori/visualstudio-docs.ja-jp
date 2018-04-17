@@ -1,27 +1,23 @@
 ---
-title: "IDiaSession::findInlineeLinesByLinenum |Microsoft ドキュメント"
-ms.custom: 
+title: IDiaSession::findInlineeLinesByLinenum |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: cf32ae7c-a0c8-4800-bc8f-d64fdd15fb06
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a47197653b8bcbe81ff961e3b82f7578b104e0b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 907b65816b663a63e1bc31acecd7c5aa6e5e466e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiasessionfindinlineelinesbylinenum"></a>IDiaSession::findInlineeLinesByLinenum
 すべての関数のインライン展開され、直接または間接的に含まれていない、指定されたソース ファイルと行番号の行番号情報を反復処理するクライアントを許可する列挙体を取得します。  
@@ -60,7 +56,7 @@ HRESULT findInlineeLinesByVA (
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

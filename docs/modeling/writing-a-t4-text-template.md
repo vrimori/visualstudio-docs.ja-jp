@@ -1,25 +1,23 @@
 ---
-title: "T4 テキスト テンプレートの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: T4 テキスト テンプレートの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, syntax
 - text templates, guide
 - text templates, functions that generate text
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: e640583f42154497ffe5bd25d3c6860fb9d20ca8
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 140e49af62b2ea1a9bb43b7cf3fb95ccc7b257e5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="writing-a-t4-text-template"></a>T4 テキスト テンプレートの作成
 テキスト テンプレートには、そのテンプレートから生成されるテキストが含まれます。 たとえば、web ページを作成するテンプレートが含まれて"\<html >…」および HTML ページの他のすべての標準的な部分です。 テンプレートに挿入が*コントロール ブロック*、プログラム コードのフラグメントがあります。 コントロール ブロックはさまざまな値を提供すると共に、テキストの一部を条件付きにしたり、繰り返したりできるようにします。  
@@ -190,7 +188,7 @@ private void WriteSquareLine(int i)
 <#@ assembly name="System.Xml" #>  
 ```  
   
- 絶対パス名を使用するか、パス名で標準マクロ名を使用する必要があります。 例:  
+ 絶対パス名を使用するか、パス名で標準マクロ名を使用する必要があります。 例えば:  
   
 ```  
 <#@ assembly name="$(SolutionDir)library\MyAssembly.dll" #>  
@@ -211,7 +209,7 @@ private void WriteSquareLine(int i)
   
  詳細については、次を参照してください。 [T4 インポート ディレクティブ](../modeling/t4-import-directive.md)です。  
   
-###  <a name="Include"></a>コードとテキストを含む  
+###  <a name="Include"></a> コードとテキストを含む  
  `include` ディレクティブを使用すると、別のテンプレート ファイルのテキストを挿入できます。 たとえば、次のディレクティブでは、`test.txt` のコンテンツが挿入されます。  
   
  `<#@ include file="c:\test.txt" #>`  
@@ -241,7 +239,7 @@ private void WriteSquareLine(int i)
   
  **ナビゲートできるモデルとしてファイルを読み込む**します。 より効果的な方法は、テキスト テンプレート コードでナビゲートできるモデルとしてデータを読み取ることです。 たとえば、XML ファイルを読み込み、XPath 式でそのファイル内をナビゲートできます。 使用することも[xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765) XML データを読み取ることが可能クラスのセットを作成します。  
   
- **図またはフォームで、モデル ファイルを編集します。** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]ダイアグラムまたは Windows フォームとしてモデルを編集するためのツールを提供します。 このため、生成されたアプリケーションのユーザーと、モデルについて効率的に話し合うことができます。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]では、モデルの構造を反映した、厳密に型指定されたクラスのセットも作成できます。 詳細については、次を参照してください。[ドメイン固有言語から、コードの生成](../modeling/generating-code-from-a-domain-specific-language.md)です。  
+ **図またはフォームで、モデル ファイルを編集します。** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] ダイアグラムまたは Windows フォームとしてモデルを編集するためのツールを提供します。 このため、生成されたアプリケーションのユーザーと、モデルについて効率的に話し合うことができます。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]では、モデルの構造を反映した、厳密に型指定されたクラスのセットも作成できます。 詳細については、次を参照してください。[ドメイン固有言語から、コードの生成](../modeling/generating-code-from-a-domain-specific-language.md)です。  
   
 ### <a name="relative-file-paths-in-design-time-templates"></a>デザイン時テンプレートの相対ファイル パス  
  [デザイン時テキスト テンプレート](../modeling/design-time-code-generation-by-using-t4-text-templates.md)テキスト テンプレートを使用する基準とする場所にファイルを参照する場合、`this.Host.ResolvePath()`です。 また、`hostspecific="true"` ディレクティブで `template` を設定する必要もあります。  

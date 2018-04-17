@@ -1,12 +1,9 @@
 ---
-title: "Microsoft Visual Studio デバッガー (例外がスローされました) ダイアログ ボックス |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft Visual Studio デバッガー (例外がスローされました) ダイアログ ボックス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vs.debug.exceptions.thrown
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - debugger, exceptions
 - throwing exceptions, during debugging
 ms.assetid: 1fe98d10-c8f9-4b39-a920-99169bfd542e
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1020711c21fb7171a8f7f8b87296d300f53b78b1
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.openlocfilehash: 952e2796b9d09398acffc25365dcdb3dcbc72303
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-visual-studio-debugger-exception-thrown-dialog-box"></a>[Microsoft Visual Studio デバッガー (例外がスローされました)] ダイアログ ボックス
 プログラムに例外が発生しました。 このダイアログ ボックスには、スローされた例外の種類が報告されます。 コードでは、この例外を処理する必要があります。 この例外を処理するには、次のオプションから選択できます。  
@@ -48,7 +44,7 @@ ms.lasthandoff: 01/04/2018
  **無視します。**  
  実行が継続されますが、例外ハンドラーは起動されません。 例外ハンドラーが起動されないため、例外やエラーなどが続けて発生することがあります。 このオプションは、特定の種類の例外に対しては使用できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーでの例外を管理します。](../debugger/managing-exceptions-with-the-debugger.md)   
  [例外の推奨事項](/dotnet/standard/exceptions/best-practices-for-exceptions)   
  [例外処理](/cpp/windows/exception-handling-cpp-component-extensions)

@@ -1,11 +1,8 @@
 ---
-title: "TableAdapter の機能を拡張 |Microsoft ドキュメント"
-ms.custom: 
+title: TableAdapter の機能を拡張 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +11,17 @@ helpviewer_keywords:
 - data [Visual Studio], extending TableAdapters
 - TableAdapters, adding functionality
 ms.assetid: 418249c8-c7f3-47ef-a94c-744cb6fe6aaf
-caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: a8c7bb5c33597d18242da188f54ea7bfa87e380a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: d163461f559432752815d2f1e1fec103d93a84ec
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extend-the-functionality-of-a-tableadapter"></a>TableAdapter の機能を拡張します。
 TableAdapter の機能を拡張するには、TableAdapter の部分クラス ファイルにコードを追加します。  
@@ -51,5 +48,5 @@ TableAdapter の機能を拡張するには、TableAdapter の部分クラス �
      [!code-csharp[VbRaddataTableAdapters#2](../data-tools/codesnippet/CSharp/extend-the-functionality-of-a-tableadapter_1.cs)]
      [!code-vb[VbRaddataTableAdapters#2](../data-tools/codesnippet/VisualBasic/extend-the-functionality-of-a-tableadapter_1.vb)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [TableAdapters を使用してデータセットを入力する](../data-tools/fill-datasets-by-using-tableadapters.md)

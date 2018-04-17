@@ -1,23 +1,21 @@
 ---
-title: "チュートリアル: コード スニペットの実装 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: コード スニペットの実装 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: adbc5382-d170-441c-9fd0-80faa1816478
-caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 2a9ef9fcce1a02820b2855b6e39c5da2d3a7cc48
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: ae260951160bc3d4ed3bb1535f47eb1f33649957
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-implementing-code-snippets"></a>チュートリアル: コード スニペットの実装
 コード スニペットを作成し、エディターの拡張機能に含める拡張機能のユーザーが独自のコードを追加できるようにできます。  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  このチュートリアルに基づいて[チュートリアル: ステートメント入力候補を表示する](../extensibility/walkthrough-displaying-statement-completion.md)です。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="creating-and-registering-code-snippets"></a>作成して、コード スニペットを登録します。  
  通常、コード スニペットは、登録されている言語サービスに関連付けられます。 ただし、実装する必要はありません、<xref:Microsoft.VisualStudio.Package.LanguageService>コード スニペットを登録します。 代わりに、スニペット インデックス ファイルの GUID を指定するだけとで同じ GUID を使用して、<xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute>プロジェクトに追加します。  

@@ -1,13 +1,10 @@
 ---
-title: "フォーム領域を Outlook メッセージ クラスに関連付ける |Microsoft ドキュメント"
-ms.custom: 
+title: フォーム領域を Outlook メッセージ クラスに関連付ける |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VSTO.NewFormRegionWizard.InvalidMessageClassName
 dev_langs:
@@ -18,14 +15,14 @@ helpviewer_keywords:
 - form regions [Office development in Visual Studio], message classes
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2c09622189b335e58dc9cad15d415eb75385955f
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 27797a6b7ec2a415daa525d8eb90c5bbfbe1f859
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="associating-a-form-region-with-an-outlook-message-class"></a>フォーム領域の Outlook メッセージ クラスへの関連付け
   Microsoft Office Outlook アイテムは、各アイテムのメッセージ クラスとフォーム領域を関連付けることによって、フォーム領域を表示を指定することができます。 たとえば、メール アイテムの下部にフォーム領域を追加する場合、ipm フォーム領域を関連付けることができます。メッセージ クラスに注意してください。  
@@ -108,7 +105,7 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]  
 >  Visual Studio では、提供するメッセージ クラス名が正しいか、有効なことは検証されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [実行時にフォーム領域へのアクセス](../vsto/accessing-a-form-region-at-run-time.md)   
  [Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)   
  [チュートリアル: Outlook フォーム領域のデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)   

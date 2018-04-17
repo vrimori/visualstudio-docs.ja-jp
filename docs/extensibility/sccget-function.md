@@ -1,29 +1,25 @@
 ---
-title: "SccGet 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: SccGet 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccGet
 helpviewer_keywords:
 - SccGet function
 ms.assetid: 09a18bd2-b788-411a-9da6-067d806e46f6
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 73f5c55b39d855eb084206ef27e2254d50377b86
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fb793eb5c35c4ca9ee22a58496ebe175b83c68e4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccget-function"></a>SccGet 関数
 この関数は、1 つまたは複数のファイルを表示およびコンパイルするためはなく、編集、コピーを取得します。 ほとんどのシステムでは、ファイルが読み取り専用としてタグ付けされます。  
@@ -81,7 +77,7 @@ SCCRTN SccGet(
  `SCC_GET_ALL`フラグと組み合わせることができます、`SCC_GET_RECURSIVE`フラグを指定したディレクトリ内のすべてのファイルと同様のすべてのサブディレクトリを取得します。  
   
 > [!NOTE]
->  `SCC_GET_RECURSIVE`せずに渡す必要がありますは決して`SCC_GET_ALL`です。 また、C:\A および C:\A\B ディレクトリが再帰的に渡された両方の取得が場合 C:\A\B とそのすべてのサブディレクトリが実際に取得すること 2 回に注意してください。 IDE の責任 — およびプラグインのソースではなくが制御 — 配列外このなどの重複部分を保持することを確認します。  
+>  `SCC_GET_RECURSIVE` せずに渡す必要がありますは決して`SCC_GET_ALL`です。 また、C:\A および C:\A\B ディレクトリが再帰的に渡された両方の取得が場合 C:\A\B とそのすべてのサブディレクトリが実際に取得すること 2 回に注意してください。 IDE の責任 — およびプラグインのソースではなくが制御 — 配列外このなどの重複部分を保持することを確認します。  
   
  最後に、場合でも、ソース管理プラグインが指定された、`SCC_CAP_GET_NOUI`の初期化、Get コマンドのユーザー インターフェイスがない、この関数は、ファイルを取得する IDE によっても呼び出されることを示すフラグ。 フラグは、こと、IDE で Get メニュー項目が表示されませんし、UI を提供する予定のプラグインがないことを意味します。  
   
@@ -106,6 +102,6 @@ SCCRTN SccGet(
   
     6.  更新された b.txt: ファイルをチェックインにようになりましたことができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [特定のコマンドで使用されるビットフラグ](../extensibility/bitflags-used-by-specific-commands.md)

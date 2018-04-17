@@ -1,12 +1,10 @@
 ---
-title: "CA2147: 透過的メソッドに次のセキュリティを使用してはいないアサート |Microsoft ドキュメント"
-ms.custom: 
+title: 'CA2147: 透過的メソッドに次のセキュリティを使用してはいないアサート |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - SecurityTransparentCodeShouldNotAssert
 - CA2147
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - CA2128
 - SecurityTransparentCodeShouldNotAssert
 ms.assetid: 5d31e940-e599-4b23-9b28-1c336f8d910e
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 38ac5492c987515c7c6504c91d2e035f8b8645ff
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 75d841da0c738ff7504e95b372ecd4e06f9c77f2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2147-transparent-methods-may-not-use-security-asserts"></a>CA2147: 透過コードは、セキュリティ アサートを使用してはならない
 |||  
@@ -64,5 +62,5 @@ ms.lasthandoff: 12/22/2017
   
  コードからアサートを削除して、その後、ファイル方法以外の I/O のアクセス許可要求フロー、呼び出し元にすることもできます。 これにより、セキュリティ チェックできます。 この場合、セキュリティ監査は通常不要、アクセス許可要求は、呼び出し元や、アプリケーション ドメインにフローするためです。 アクセス許可の要求は、環境、およびソース コードのアクセス許可の付与をホストしているセキュリティ ポリシーによって厳密に制御されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティの警告](../code-quality/security-warnings.md)

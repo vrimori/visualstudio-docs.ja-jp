@@ -1,24 +1,24 @@
 ---
-title: "Visual Studio のインストールに使用するコマンド ライン パラメーターの例 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio のインストールに使用するコマンド ライン パラメーターの例 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/06/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 837F31AA-F121-46e9-9996-F8BCE768E579
-author: timsneath
+author: tglee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f91810f53a27cc988c44e6c283364bb2d29e39e0
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: ddb6afe950c2563f7ded04efbdd2b441a8c72e30
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="command-line-parameter-examples-for-visual-studio-2017-installation"></a>Visual Studio 2017 のインストールに使用するコマンド ライン パラメーターの例
 [コマンド ライン パラメーターを使用して Visual Studio をインストールする](use-command-line-parameters-to-install-visual-studio.md)方法を説明するため、いくつかの例を以下に示します。例は必要に応じてカスタマイズできます。
@@ -45,7 +45,7 @@ vs_enterprise.exe update --wait --passive --norestart --installPath "C:\installP
 ```
 
 > [!NOTE]
-> 両方のコマンドが必要です。 最初のコマンドにより Visual Studio インストーラーが更新されます。 2 つめのコマンドにより Visual Studio インスタンスが更新されます。 ユーザー アカウント制御ダイアログが表示されないようにするには、管理者としてコマンド プロンプトを実行します。 
+> 両方のコマンドが必要です。 最初のコマンドにより Visual Studio インストーラーが更新されます。 2 つめのコマンドにより Visual Studio インスタンスが更新されます。 ユーザー アカウント制御ダイアログが表示されないようにするには、管理者としてコマンド プロンプトを実行します。
 
 * フランス語の言語パックを使用する Visual Studio のデスクトップ インスタンスをサイレント モードでインストールする例です。製品のインストールが終わるまでダイアログは表示されません。
 ```

@@ -1,12 +1,10 @@
 ---
-title: "&lt;formRegions&gt;要素 (Visual Studio での Office 開発) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;formRegions&gt;要素 (Visual Studio での Office 開発) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - application manifests [Office development in Visual Studio], <formRegions> element
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: eb7008f86dd552eac2b8a6ba9b227884270c8694
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: c51b626c104d5342c00dbd45a2c565315c9c2225
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltformregionsgt-element-office-development-in-visual-studio"></a>&lt;formRegions&gt;要素 (Visual Studio での Office 開発)
   `formRegions` 名前空間の `vstov4` 要素には、VSTO アドインに関連付けられている Microsoft Office Outlook フォーム領域が含まれています。  
@@ -46,7 +45,7 @@ ms.lasthandoff: 01/10/2018
  `formRegions` 要素には次の要素があります。  
   
 ### <a name="formregion"></a>formRegion  
- フォーム領域のある Outlook VSTO アドインに必要です。 `formRegion`で要素が定義されている[&#60; formRegion &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/formregion-element-office-development-in-visual-studio.md).  
+ フォーム領域のある Outlook VSTO アドインに必要です。 `formRegion`で要素が定義されている[ &#60;formRegion&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/formregion-element-office-development-in-visual-studio.md)です。  
   
 ## <a name="vsto-add-in-example"></a>VSTO アドインの例  
   
@@ -66,7 +65,7 @@ ms.lasthandoff: 01/10/2018
 </vstov4:formRegions>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
  [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)  

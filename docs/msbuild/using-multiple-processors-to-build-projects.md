@@ -1,27 +1,27 @@
 ---
-title: "複数のプロセッサを使用したプロジェクトのビルド | Microsoft Docs"
-ms.custom: 
+title: 複数のプロセッサを使用したプロジェクトのビルド | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - multiple processors
 - MSBuild, multiple processor systems
 ms.assetid: 49fa36c9-8e14-44f5-8a2b-34146cf6807b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: f8bf385b6ee34c532e70557c0f04754ba0c56bb9
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
-ms.translationtype: HT
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="using-multiple-processors-to-build-projects"></a>複数のプロセッサを使用したプロジェクトのビルド
 MSBuild では、複数のプロセッサまたはマルチコア プロセッサを搭載したシステムを使用できます。 プロセッサごとに個別のビルド プロセスが作成されます。 たとえば、4 つのプロセッサを搭載したシステムでは、4 つのビルド プロセスが作成されます。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、これらのビルドを同時に処理できるため、全体的なビルド時間が短縮されます。 ただし、並行ビルドでは、ビルド処理が行われる方法がいくつかの点で通常とは異なります。 このトピックでは、それらの相違点について説明します。  
@@ -43,6 +43,6 @@ MSBuild では、複数のプロセッサまたはマルチコア プロセッ�
   
  この問題を回避し、マルチプロセッサによるビルドを可能にするために、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では "プロセス分離" が使用されます。 プロセス分離によって、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は最大 `n` のプロセスを作成できます。`n` はシステムで利用可能なプロセッサの数です。 たとえば、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] が 2 つのプロセッサを搭載したシステムでソリューションをビルドする場合は、2 つのビルド プロセスのみ作成されます。 これらのプロセスは、ソリューションに含まれるすべてのプロジェクトのビルドに再利用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSBuild での複数のプロジェクトの並行ビルド](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)   
  [タスク](../msbuild/msbuild-tasks.md)

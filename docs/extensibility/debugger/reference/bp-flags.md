@@ -1,29 +1,25 @@
 ---
-title: "BP_FLAGS |Microsoft ドキュメント"
-ms.custom: 
+title: BP_FLAGS |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - BP_FLAGS
 helpviewer_keywords:
 - BP_FLAGS enumeration
 ms.assetid: c45dfc74-5e7f-4f1e-a147-ab2a55dccbd0
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3c4818cca16ffb23429006267829b076d52069c0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 481dd21287ba3ca68c2abc61412785fc0151788d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bpflags"></a>BP_FLAGS
 ブレークポイントを設定するときに、追加情報を指定するために使用する省略可能なフラグを提供します。  
@@ -62,14 +58,14 @@ public enum enum_BP_FLAGS {
   
  これらの値は、ビットごとと組み合わせること`OR`です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)   
  [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)   

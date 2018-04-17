@@ -1,27 +1,23 @@
 ---
-title: "オプション ページを作成する |Microsoft ドキュメント"
-ms.custom: 
+title: オプション ページを作成する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Tools Options pages [Visual Studio SDK], creating
 ms.assetid: 9f4e210c-4b47-4daa-91fa-1c301c4587f9
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d0888a584e31c26c9f64cdcff70cc2f5dc8a1453
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a9fe021816b990a068bbd74d2fba62e073ff3136
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-an-options-page"></a>オプション ページを作成します。
 このチュートリアルでは、プロパティ グリッドを使用して確認し、プロパティを設定する単純なツール/オプション ページを作成します。  
@@ -31,7 +27,7 @@ ms.lasthandoff: 12/22/2017
  MPF ツール オプション ページを作成するために 2 つのクラスを提供する、<xref:Microsoft.VisualStudio.Shell.Package>クラスおよび<xref:Microsoft.VisualStudio.Shell.DialogPage>クラスです。 パッケージ クラスをサブクラス化して、これらのページのコンテナーを提供する VSPackage を作成します。 各ツール オプション ページを作成するには、DialogPage クラスから派生します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="creating-a-tools-options-grid-page"></a>ツール オプションのグリッド ページを作成します。  
  このセクションでは、単純なツールのオプションのプロパティ グリッドを作成します。 このグリッドを使用して、表示し、プロパティの値を変更します。  
@@ -192,7 +188,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-     `optionsPage`フィールドは、親への参照を保持`OptionPageCustom`インスタンス。 `Initialize`メソッドが表示されます`OptionString`で、 **TextBox**です。 イベント ハンドラーの現在の値を書き込みます、  **テキスト ボックス**を`OptionString`リーフを集中すると、  **テキスト ボックス**です。  
+     `optionsPage`フィールドは、親への参照を保持`OptionPageCustom`インスタンス。 `Initialize`メソッドが表示されます`OptionString`で、 **TextBox**です。 イベント ハンドラーの現在の値を書き込みます、 **テキスト ボックス**を`OptionString`リーフを集中すると、 **テキスト ボックス**です。  
   
 9. パッケージのコード ファイル内の上書きを追加、`OptionPageCustom.Window`プロパティを作成、初期化、およびのインスタンスを返す OptionPageCustom クラスを`MyUserControl`です。 クラスは、次のようになります。  
   
@@ -246,7 +242,7 @@ ms.lasthandoff: 12/22/2017
   
     ```  
   
-     このコードを呼び出す<xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A>作成または取得する、`OptionPageGrid`インスタンス。 `OptionPageGrid`呼び出し<xref:Microsoft.VisualStudio.Shell.DialogPage.LoadSettingsFromStorage%2A>オプションでは、パブリック プロパティを読み込めません。  
+     このコードを呼び出す<xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A>作成または取得する、`OptionPageGrid`インスタンス。 `OptionPageGrid` 呼び出し<xref:Microsoft.VisualStudio.Shell.DialogPage.LoadSettingsFromStorage%2A>オプションでは、パブリック プロパティを読み込めません。  
   
 2.  という名前のカスタム コマンド項目テンプレートを追加するようになりました**MyToolsOptionsCommand**値を表示します。 **新しい項目の追加**ダイアログ ボックスに移動して**Visual c#/機能拡張**選択と**にカスタム コマンド**です。 **名前**ウィンドウの下部にあるフィールドに、コマンド ファイルの名前を変更する**MyToolsOptionsCommand.cs**です。  
   
@@ -267,5 +263,5 @@ ms.lasthandoff: 12/22/2017
   
      メッセージ ボックスには、現在の値が表示されます。`OptionInteger`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オプションとオプション ページ](../extensibility/internals/options-and-options-pages.md)

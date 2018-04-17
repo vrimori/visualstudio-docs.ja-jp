@@ -1,29 +1,25 @@
 ---
-title: "BP_LOCATION_DATA_STRING |Microsoft ドキュメント"
-ms.custom: 
+title: BP_LOCATION_DATA_STRING |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - BP_LOCATION_DATA_STRING
 helpviewer_keywords:
 - BP_LOCATION_DATA_STRING structure
 ms.assetid: 445d6f3f-95b0-47ac-85e2-51b778240687
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 98be0e0eec66d1829569f88b38f710ddc616be85
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ae83bf4d0f8ba6435a962f5c1477e460d69ae27f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bplocationdatastring"></a>BP_LOCATION_DATA_STRING
 統合開発環境 (IDE) から、ユーザーが入力できる文字列に基づくデータ ブレークポイントを設定するために使用します。  
@@ -55,14 +51,14 @@ typedef struct _BP_LOCATION_DATA_STRING {
 ## <a name="remarks"></a>コメント  
  この構造体のメンバーである、 [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)構造体、共用体の一部として。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

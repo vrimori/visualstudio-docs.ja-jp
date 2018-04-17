@@ -1,16 +1,16 @@
 ---
-title: "Visual Studio for Mac での Git リポジトリのセットアップ | Microsoft Docs"
-description: "Visual Studio for Mac で Git および Subversion を使用します。"
+title: Visual Studio for Mac での Git リポジトリのセットアップ | Microsoft Docs
+description: Visual Studio for Mac で Git および Subversion を使用します。
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
-ms.openlocfilehash: a8e32df2248f53a2b46a971b025b1138abba5101
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 3eb3e0874cfc46fc98209113cf60a32cdb92787d
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="setting-up-a-git-repository"></a>Git リポジトリのセットアップ
 
@@ -43,11 +43,15 @@ Git リポジトリをセットアップするには、次の手順を実行し�
 
 ## <a name="publishing-an-existing-project"></a>既存のプロジェクトの発行
 
-4. Visual Studio for Mac で開いたプロジェクトに戻ります。 
+バージョン管理にまだ_含まれていない_既存のプロジェクトがある場合は、Git のセットアップで次の手順を使用します。
+
+4.  Visual Studio for Mac でソリューション パッドからソリューション名を選択します。 
 
 5. メニュー バーで、**[バージョン コントロール]、[バージョン コントロールで発行]** の順に選択します。 これで、**[リポジトリの選択]** ダイアログが表示されます。
 
     ![Visual Studio for Mac でチェックアウトを開始する](media/version-control-git4-sml.png)
+
+    このメニュー項目がメニューで灰色表示されている場合は、ソリューション名が選択されていることを確認してください。  
 
 6. 次のように、**[登録済みリポジトリ]** タブを選択し、**[追加]** ボタンを押します。
 

@@ -1,25 +1,25 @@
 ---
-title: "Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する | Microsoft Docs
+ms.custom: ''
 ms.date: 10/10/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: ba3c6655401501edf1f71e04f2aa249a6a001dda
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: e8e7838d48f974caeb67ed09c193aaee4633d781
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>クイック スタート: Visual Studio を使用して初めての ASP.NET Core Web アプリを作成する
 
@@ -86,7 +86,8 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 このクイック スタートは完了しました。 Visual Studio IDE について少しはご理解いただけたかと思います。 機能についてさらに深く理解したい場合は、目次の**チュートリアル** セクションに示されているチュートリアルを続行してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="next-steps"></a>次の手順
+このクイック スタートは完了しました。 C#、ASP.NET Core、Visual Studio IDE について少しはご理解いただけたかと思います。 詳細については、引き続き以下のチュートリアルをご覧ください。
 
-* [Visual Studio での C# および ASP.NET の概要](tutorial-csharp-aspnet-core.md)
-* [ASP.NET Core の Razor ページの概要](/aspnet/core/tutorials/razor-pages/razor-pages-start)
+> [!div class="nextstepaction"]
+> [Visual Studio での C# および ASP.NET の概要](tutorial-csharp-aspnet-core.md)

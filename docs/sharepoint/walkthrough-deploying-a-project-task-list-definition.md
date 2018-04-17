@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: プロジェクト タスク リスト定義を展開する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: プロジェクト タスク リスト定義を展開する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: cae6b4590c2bb0382b1ff46af51e9c79dfdd9c0e
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: fb7f8445cf43209ffed47140b1d8d204c68eaa4f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-deploying-a-project-task-list-definition"></a>チュートリアル: プロジェクト タスク リスト定義の配置
 
@@ -181,6 +178,6 @@ Visual Studio で、IIS アプリケーション プールがリサイクルさ�
 
 - [SharePoint Server 2010 用の Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=217684)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

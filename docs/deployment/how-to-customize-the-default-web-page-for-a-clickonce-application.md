@@ -1,12 +1,10 @@
 ---
-title: "方法: ClickOnce アプリケーションの既定の Web ページをカスタマイズする |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ClickOnce アプリケーションの既定の Web ページをカスタマイズする |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - deploying applications [ClickOnce], publishing
 - publishing, ClickOnce
 ms.assetid: 418de18c-bee9-4f24-9cd9-0252d175070d
-caps.latest.revision: "14"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 4927a5909ba4b09e796d52d81cc9821a5a9c4820
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: b4cfbe5ac94f2c740b1424f9bdc5a215ee571ef5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-customize-the-default-web-page-for-a-clickonce-application"></a>方法 : ClickOnce アプリケーションの既定の Web ページをカスタマイズする
 Web への ClickOnce アプリケーションを発行するときに、Web ページが自動的に生成され、アプリケーションと共に発行します。 既定のページには、アプリケーションと、アプリケーションのインストール、インストールの前提条件、または MSDN のヘルプにアクセスするリンクの名前が含まれています。  
@@ -51,7 +49,7 @@ Web への ClickOnce アプリケーションを発行するときに、Web ペ�
   
 4.  任意。 Visual Studio のカスタマイズした発行 Web ページの上書きを防ぐためにオフにして**後に配置された web ページを自動的に生成すべて発行**発行オプション ダイアログ ボックス。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)   
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
  [方法: ClickOnce アプリケーションと共に必須コンポーネントをインストールする](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   

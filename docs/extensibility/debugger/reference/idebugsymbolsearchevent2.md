@@ -1,29 +1,25 @@
 ---
-title: "IDebugSymbolSearchEvent2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugSymbolSearchEvent2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugSymbolSearchEvent2
 helpviewer_keywords:
 - IDebugSymbolSearchEvent2
 ms.assetid: 9b946d55-ff85-44eb-b40a-efbf8282eafd
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a931768dd13f2ced30f329b54c1fe6eb9333eb9c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 179e63caff93510e052e5ef2e4e648b9436f821a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugsymbolsearchevent2"></a>IDebugSymbolSearchEvent2
 このインターフェイスは、デバッグ中のモジュールのデバッグ シンボルが読み込まれたことを示すために、デバッグ エンジン (DE) によって送信されます。  
@@ -52,14 +48,14 @@ IDebugSymbolSearchEvent2 : IUnknown
   
  Visual Studio が通常このイベントを使用で読み込まれているシンボルの状態を更新して、**モジュール**ウィンドウです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

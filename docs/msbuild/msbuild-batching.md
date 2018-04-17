@@ -1,27 +1,27 @@
 ---
-title: "MSBuild バッチ | Microsoft Docs"
-ms.custom: 
+title: MSBuild バッチ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - batching [MSBuild]
 - MSBuild, batching
 ms.assetid: d35c085b-27b8-49d7-b6f8-8f2f3a0eec38
-caps.latest.revision: 
+caps.latest.revision: 9
 author: Mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: 4411b82fc5a86e4f3eeae965fefd65e2c38d207e
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
-ms.translationtype: HT
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="msbuild-batching"></a>MSBuild バッチ
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] には、項目メタデータに基づき、項目一覧をさまざまなカテゴリまたはバッチに分割し、各バッチで一度に 1 つのターゲットまたはタスクを実行する機能があります。  
@@ -104,7 +104,7 @@ ms.lasthandoff: 02/09/2018
   
  プロパティ関数の詳細については、「[プロパティ関数](../msbuild/property-functions.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ItemMetadata 要素 (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)   
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   

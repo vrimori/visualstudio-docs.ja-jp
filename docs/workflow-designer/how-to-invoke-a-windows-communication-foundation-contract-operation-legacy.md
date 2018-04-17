@@ -1,18 +1,18 @@
 ---
-title: "方法: Windows Communication Foundation コントラクト操作 (レガシ) を呼び出す |Microsoft ドキュメント"
+title: '方法: Windows Communication Foundation コントラクト操作 (レガシ) を呼び出す |Microsoft ドキュメント'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: a9058345-708f-4fcf-8739-2a43e5285b7a
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 522db4f46486470333393ca99f384f258898e09a
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: c97b62f7ddfbe46ac5ede4aefba53e50020f3b65
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-invoke-a-windows-communication-foundation-contract-operation-legacy"></a>方法: Windows Communication Foundation コントラクト操作を呼び出す (レガシ)
 このトピックを呼び出す方法について説明、[!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)]コントラクト操作を対象とする従来の Windows ワークフロー デザイナーを使用して、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)]または[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]です。

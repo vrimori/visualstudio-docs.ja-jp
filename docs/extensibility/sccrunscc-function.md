@@ -1,29 +1,25 @@
 ---
-title: "SccRunScc 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: SccRunScc 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccRunScc
 helpviewer_keywords:
 - SccRunScc function
 ms.assetid: bbe7c931-b17a-4779-9cf6-59e5f9f0c172
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4ad179325c4f34cd206a3c5e6b0840a69dd46037
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 322ebe148144260106fb895273b66e1b9f5696f8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccrunscc-function"></a>SccRunScc 関数
 この関数は、ソース管理の管理ツールを起動します。  
@@ -72,7 +68,7 @@ SCCRTN SccRunScc(
   
  ユーザーを選択すると、この関数は通常呼び出されます、**起動\<ソース管理サーバー >**から、**ファイル** -> **ソース管理**メニューです。 これは、**起動**メニュー オプションを常に無効になっているやレジストリ エントリを設定しても非表示にします。 参照してください[する方法: ソース管理プラグインをインストール](../extensibility/internals/how-to-install-a-source-control-plug-in.md)詳細についてはします。 場合にのみ、この関数が呼び出されます[SccInitialize](../extensibility/sccinitialize-function.md)を返します、`SCC_CAP_RUNSCC`機能ビット (を参照してください[機能フラグ](../extensibility/capability-flags.md)の詳細については、これとその他の機能ビット)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [方法: ソース管理プラグインのインストール](../extensibility/internals/how-to-install-a-source-control-plug-in.md)   
  [機能フラグ](../extensibility/capability-flags.md)   

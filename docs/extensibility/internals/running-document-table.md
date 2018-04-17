@@ -1,12 +1,10 @@
 ---
-title: "Document テーブルを実行している |Microsoft ドキュメント"
-ms.custom: 
+title: Document テーブルを実行している |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - read locks
 - running document table (RDT), IVsDocumentLockHolder interface
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - running document table (RDT), edit locks
 - document data objects, running document table
 ms.assetid: bbec74f3-dd8e-48ad-99c1-2df503c15f5a
-caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 41a9fc5a2b364ecc0c9037980c3ef2804a6808d8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 4a49a5267fcccbde60e194e3fc58b0f6b6ea7552
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="running-document-table"></a>実行中のドキュメント テーブル
 IDE では、実行中のドキュメント テーブル (RDT) と呼ばれる内部構造内のすべての現在開いているドキュメントの一覧を保持します。 この一覧には、これらドキュメントの現在編集されているかどうかにかかわらず、メモリ内のすべての開いているドキュメントが含まれます。 ドキュメントは、ファイル、プロジェクトまたはメイン プロジェクト ファイル (.vcxproj ファイルなど) を含めて、保存されている任意の項目です。  
@@ -36,7 +34,7 @@ IDE では、実行中のドキュメント テーブル (RDT) と呼ばれる�
 |ドキュメント モニカー|ドキュメント データ オブジェクトを一意に識別する文字列。 ファイル (たとえば、C:\MyProject\MyFile) を管理するプロジェクト システムのファイルの絶対パスになります。 この文字列は、データベース内のストアド プロシージャなどのファイル システム以外のストアに保存されたプロジェクトにも使用されます。 この場合、プロジェクト システムが認識してドキュメントを格納する方法を決定する可能性のある解析できる一意の文字列の在庫のことができます。|  
 |階層の所有者|階層オブジェクトによって表されるように、ドキュメントを所有している、<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>インターフェイスです。|  
 |項目 ID|階層内で特定の項目の項目の識別子です。 この値は、このドキュメントを所有している階層内のすべてのドキュメント間で一意では、この値は、異なる階層全体で一意であることは保証されません。|  
-|ドキュメント データ オブジェクト|これには、少なくとも、`IUnknown`<br /><br /> オブジェクト。 IDE では、特定のインターフェイス以外は必要ありません、`IUnknown`カスタム エディターのドキュメント データ オブジェクトのインターフェイスです。 ただし、標準のエディターについてのエディターの実装、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>プロジェクトからファイルの永続性の呼び出しを処理するインターフェイスが必要です。 詳細については、次を参照してください。[標準ドキュメントの保存](../../extensibility/internals/saving-a-standard-document.md)です。|  
+|ドキュメント データ オブジェクト|これには、少なくとも、 `IUnknown`<br /><br /> オブジェクト。 IDE では、特定のインターフェイス以外は必要ありません、`IUnknown`カスタム エディターのドキュメント データ オブジェクトのインターフェイスです。 ただし、標準のエディターについてのエディターの実装、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>プロジェクトからファイルの永続性の呼び出しを処理するインターフェイスが必要です。 詳細については、次を参照してください。[標準ドキュメントの保存](../../extensibility/internals/saving-a-standard-document.md)です。|  
 |フラグ|読み取りまたは編集のロックが適用されるかどうか、ドキュメントの保存されているかどうかを制御するフラグというようは、RDT にエントリを追加指定できます。 詳細については、<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS> 列挙型のページをご覧ください。|  
 |ロック カウントを編集します。|編集のロックの数。 編集ロックでは、いくつかのエディターがドキュメントを開いて編集することを示します。 遷移したときの編集のロックの数を 0 に、ユーザーは、ドキュメントを保存するように求めが変更された場合。 たとえばを使用して、エディターでドキュメントを開くたびに、**新しいウィンドウ**コマンドを編集ロックは、RDT でそのドキュメントに追加します。 編集ロックを設定するためには、ドキュメントか必要がありますの階層を持つ項目の id。|  
 |読み取りロック数|読み取りロックを数します。 読み取りロックは、ウィザードなどのメカニズムによって、ドキュメントが読み取られていることを示します。 読み取りロックでは、ドキュメントを編集できないことを示すときに、RDT 内で有効で、ドキュメントを保持します。 ドキュメントが階層または項目の id。 していない場合でも、読み取りロックを設定することができます。 この機能を使用すると、メモリ内のドキュメントを開き、任意の階層によって所有されているドキュメントなし、RDT に入力できます。 この機能はほとんど使用されません。|  
@@ -60,6 +58,6 @@ IDE では、実行中のドキュメント テーブル (RDT) と呼ばれる�
   
 -   ドキュメントの完全パスが、プロジェクト システムを確認し、項目を RDT 内を検索して、階層、または項目の ID を使用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RDT_ReadLock の使用方法](../../extensibility/internals/rdt-readlock-usage.md)   
  [ドキュメント テーブルの保存と実行](../../extensibility/internals/persistence-and-the-running-document-table.md)

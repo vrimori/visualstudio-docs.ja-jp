@@ -1,13 +1,10 @@
 ---
-title: "SharePoint のパッケージ化と配置を拡張 |Microsoft ドキュメント"
-ms.custom: 
+title: SharePoint のパッケージ化と配置を拡張 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending deployment
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2fa807472a0787f0f1ae4c61f074fd8bb3ad5055
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: c91c78e6ab78ac39eb5c53c32a70ead895129df0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extending-sharepoint-packaging-and-deployment"></a>SharePoint のパッケージ化と配置の拡張
   SharePoint プロジェクトのパッケージ化と配置のプロセスを拡張できます。
@@ -33,7 +30,7 @@ ms.lasthandoff: 01/10/2018
  配置手順を作成する方法について説明するチュートリアルでは、次を参照してください。[チュートリアル: SharePoint プロジェクトのカスタム配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)です。  
   
 ##  <a name="creating-deployment-configurations"></a>配置構成を作成する  
- 配置構成は、特定のプロジェクトについて実行される一連の配置手順ですが、すべての SharePoint プロジェクト項目に影響を与えることがあります。 すべての配置構成には、プロジェクトが配置されるときに実行される手順と、プロジェクトが取り消されるときに実行される手順が含まれています。 [!INCLUDE[vs_current_short](../sharepoint/includes/vs-current-short-md.md)]2 つの組み込みの配置構成が含まれていますが、独自に作成することもできます。 配置構成を自分で作成する場合、組み込みの配置手順と独自に作成した配置手順とを混在させることができます。  
+ 配置構成は、特定のプロジェクトについて実行される一連の配置手順ですが、すべての SharePoint プロジェクト項目に影響を与えることがあります。 すべての配置構成には、プロジェクトが配置されるときに実行される手順と、プロジェクトが取り消されるときに実行される手順が含まれています。 [!INCLUDE[vs_current_short](../sharepoint/includes/vs-current-short-md.md)] 2 つの組み込みの配置構成が含まれていますが、独自に作成することもできます。 配置構成を自分で作成する場合、組み込みの配置手順と独自に作成した配置手順とを混在させることができます。  
   
  配置構成を作成する方法について説明するチュートリアルでは、次を参照してください。[チュートリアル: SharePoint プロジェクトのカスタム配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)です。  
   
@@ -57,7 +54,7 @@ ms.lasthandoff: 01/10/2018
 ##  <a name="customizing-validation-rules"></a>検証規則のカスタマイズ  
  ソリューション パッケージ (.wsp) を配置する前に、フィーチャーまたはパッケージが有効であることを検証するために、カスタムのフィーチャー検証規則およびパッケージ検証規則を作成できます。 たとえば、検証に関する問題の修正に役立つように、情報、警告、またはエラーを開発者に報告できます。 詳細については、次を参照してください。[する方法: カスタム機能の作成と SharePoint ソリューションのパッケージ検証規則](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: 実行時に配置手順のコードが実行されます](../sharepoint/how-to-run-code-when-deployment-steps-are-executed.md)   
  [チュートリアル: SharePoint プロジェクトに対するカスタムの配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)   
  [方法: SharePoint ソリューションのカスタムのフィーチャーとパッケージ検証規則を作成します。](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)   

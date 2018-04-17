@@ -1,21 +1,19 @@
 ---
-title: "MEF を使用して、DSL を拡張 |Microsoft ドキュメント"
-ms.custom: 
+title: MEF を使用して、DSL を拡張 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 735de60d18bc5cbca7dc2ba509372d81622038be
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 66fb2c371f67d0da13ac88fee22225970557216f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>MEF による DSL の拡張
 Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語 (DSL) を拡張することができます。 か、他の開発者は、DSL 定義とプログラム コードを変更することがなく、DSL の拡張機能を記述することができます。 このような拡張機能には、メニュー コマンド、ドラッグ アンド ドロップ ハンドラー、および検証が含まれます。 ユーザーは、DSL をインストールして、その拡張機能を必要に応じてインストールを可能になります。  
@@ -28,7 +26,7 @@ Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語
   
 1.  という名前の新しいフォルダーを作成する**MefExtension**内、 **DslPackage**プロジェクト。 次のファイルを追加します。  
   
-     ファイル名:`CommandExtensionVSCT.tt`  
+     ファイル名: `CommandExtensionVSCT.tt`  
   
     > [!IMPORTANT]
     >  DslPackage\GeneratedCode\Constants.tt で定義されている GUID CommandSetId と同じにするには、このファイルで、GUID を設定します。  
@@ -44,21 +42,21 @@ Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語
     <#@ include file="DslPackage\CommandExtensionVSCT.tt" #>  
     ```  
   
-     ファイル名:`CommandExtensionRegistrar.tt`  
+     ファイル名: `CommandExtensionRegistrar.tt`  
   
     ```  
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
     <#@ include file="DslPackage\CommandExtensionRegistrar.tt" #>  
     ```  
   
-     ファイル名:`ValidationExtensionEnablement.tt`  
+     ファイル名: `ValidationExtensionEnablement.tt`  
   
     ```  
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
     <#@ include file="DslPackage\ValidationExtensionEnablement.tt" #>  
     ```  
   
-     ファイル名:`ValidationExtensionRegistrar.tt`  
+     ファイル名: `ValidationExtensionRegistrar.tt`  
   
      このファイルを追加すると、必要があります有効にした場合の検証、DSL のスイッチの少なくとも 1 つを使用して**EditorValidation** DSL のエクスプ ローラーでします。  
   
@@ -67,7 +65,7 @@ Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語
     <#@ include file="DslPackage\ValidationExtensionRegistrar.tt" #>  
     ```  
   
-     ファイル名:`PackageExtensionEnablement.tt`  
+     ファイル名: `PackageExtensionEnablement.tt`  
   
     ```  
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
@@ -76,21 +74,21 @@ Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語
   
 2.  という名前の新しいフォルダーを作成する**MefExtension**内、 **Dsl**プロジェクト。 次のファイルを追加します。  
   
-     ファイル名:`DesignerExtensionMetaDataAttribute.tt`  
+     ファイル名: `DesignerExtensionMetaDataAttribute.tt`  
   
     ```  
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
     <#@ include file="Dsl\DesignerExtensionMetadataAttribute.tt" #>  
     ```  
   
-     ファイル名:`GestureExtensionEnablement.tt`  
+     ファイル名: `GestureExtensionEnablement.tt`  
   
     ```  
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
     <#@ include file="Dsl\GestureExtensionEnablement.tt" #>  
     ```  
   
-     ファイル名:`GestureExtensionController.tt`  
+     ファイル名: `GestureExtensionController.tt`  
   
     ```  
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
@@ -176,7 +174,7 @@ Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語
 ### <a name="menu-commands"></a>メニュー コマンド  
  記述するには、メニュー コマンドを実装するクラスを定義する<xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension>、DSL、という名前で定義されている属性を持つクラスをプレフィックスと*YourDsl*`CommandExtension`です。 1 つ以上のメニュー コマンド クラスを記述することができます。  
   
- `QueryStatus()`ユーザーは、ダイアグラムを右クリックしたときに呼び出されます。 現在の選択範囲を検査し、設定か`command.Enabled`コマンドが適用可能なことを示すです。  
+ `QueryStatus()` ユーザーは、ダイアグラムを右クリックしたときに呼び出されます。 現在の選択範囲を検査し、設定か`command.Enabled`コマンドが適用可能なことを示すです。  
   
 ```  
 using System.ComponentModel.Composition;  
@@ -373,7 +371,7 @@ namespace MefExtension
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio 拡張機能の配布](../extensibility/shipping-visual-studio-extensions.md)   
  [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)   
  [方法: ドラッグ アンド ドロップのハンドラーを追加](../modeling/how-to-add-a-drag-and-drop-handler.md)   

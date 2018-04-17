@@ -1,35 +1,31 @@
 ---
-title: "TemplateData 要素 (Visual Studio テンプレート) |Microsoft ドキュメント"
-ms.custom: 
+title: TemplateData 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#TemplateData
 helpviewer_keywords:
 - TemplateData element [Visual Studio project templates]
 ms.assetid: db17ec9b-bfdf-46b1-bbe7-5ccc140056e2
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 85dba252eedaeafbffdc58eadac91386ff6cac98
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: bbf5b4c26b46c0be6038651a41c751afc39e4da5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="templatedata-element-visual-studio-templates"></a>TemplateData 要素 (Visual Studio テンプレート)
 テンプレートをカテゴリに分類し、 **[新しいプロジェクト]** ダイアログ ボックス、または **[新しい項目の追加]** ダイアログ ボックスでどのように表示させるかを定義します。  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
   
 ## <a name="syntax"></a>構文  
   
@@ -83,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 |[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|必須の要素です。<br /><br /> プロジェクト テンプレート、項目テンプレート、またはスタート キットのすべてのメタデータが含まれています。|  
   
 ## <a name="remarks"></a>コメント  
- `TemplateData`必要な要素です。  
+ `TemplateData` 必要な要素です。  
   
  省略可能な要素を指定しない場合は、その要素の既定値が使用されます。  
   
@@ -114,6 +110,6 @@ ms.lasthandoff: 12/22/2017
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

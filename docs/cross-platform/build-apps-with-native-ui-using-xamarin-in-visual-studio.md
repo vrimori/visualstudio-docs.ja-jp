@@ -1,24 +1,24 @@
 ---
-title: "Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: vs-ide-mobile
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 30f137e6-595d-4ce7-b8f5-415b07c1caa2
-caps.latest.revision: 
-author: ghogen
-ms.author: ghogen
-manager: ghogen
+caps.latest.revision: 31
+author: conceptdev
+ms.author: crdun
+manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: d9d9ecfd180ce3d4bbd54eb091e6c0e3153bd7cd
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 71004088d421bcc2e0809fc4004cd7af887b95af
+ms.sourcegitcommit: fb1fede41d8c5e459dd222755b0497b9d361bc51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する
 「[セットアップとインストール](../cross-platform/setup-and-install.md)」と「[Xamarin 環境を検証する](../cross-platform/verify-your-xamarin-environment.md)」の手順を完了しましたが、このチュートリアルでは、ネイティブ UI レイヤーを備えた基本的な Xamarin アプリ (下図) を作成する方法を示します。 ネイティブ UI を使用すると、共有コードはポータブル クラス ライブラリ (PCL) に存在し、個別のプラットフォーム プロジェクトに UI 定義が含まれます。  
@@ -101,7 +101,7 @@ ms.lasthandoff: 02/09/2018
   
  次の手順では、PCL にコードを追加して、気象サービスからのデータにアクセスし、データを格納します。  
   
-1.  このサンプルを実行するには、まず [http://openweathermap.org/appid](http://openweathermap.org/appid)で無料 API キーを申し込む必要があります。  
+1.  このサンプルを実行するには、最初に [http://openweathermap.org/appid](http://openweathermap.org/appid) で新規登録し、無料の API キーを申し込む必要があります。  
   
 2.  **WeatherApp** プロジェクトを右クリックし、**[追加]、[クラス...]** の順に選択します。**[新しい項目の追加]** ダイアログで、ファイルに **Weather.cs**という名前を指定します。 このクラスは、気象データ サービスからのデータを保存するときに使用します。  
   
@@ -261,7 +261,7 @@ ms.lasthandoff: 02/09/2018
     > [!TIP]
     >  選択可能な値のドロップダウン リストが表示されないプロパティが多いことに注意してください。  特定のプロパティにどのような文字列値を使用すべきなのか、推測しにくい場合があります。 情報が必要な場合は、 [R.attr](http://developer.android.com/reference/android/R.attr.html) クラスのページでプロパティの名前を検索してみてください。  
     >   
-    >  また、クイック Web 検索を実行すると、他のユーザーが同じプロパティを使ったページ「 [http://stackoverflow.com/](http://stackoverflow.com/) 」が表示されることもよくあります。  
+    >  また、クイック Web 検索を実行すると、他のユーザーが同じプロパティを使った、[http://stackoverflow.com/](http://stackoverflow.com/) のページが表示されることもよくあります。  
   
      参考として、**[ソース]** ビューに切り替えると、この要素のコードが次のように表示されます。  
   

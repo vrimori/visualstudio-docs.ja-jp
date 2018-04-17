@@ -1,21 +1,19 @@
 ---
-title: "Visual Studio のモデリング SDK の API リファレンス |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio のモデリング SDK の API リファレンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 043ed310c3b0958a407246a4789d089096bb811d
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: e8b1b913a925877715d8fa603df5ad9e3a4ff175
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="api-reference-for-modeling-sdk-for-visual-studio"></a>Modeling SDK for Visual Studio の API リファレンス
 Visual Studio の視覚化およびモデリング SDK は、ドメイン固有言語 (DSL) ツールは、基になるプラットフォームを提供します。  
@@ -44,5 +42,5 @@ Visual Studio の視覚化およびモデリング SDK は、ドメイン固有�
 |<xref:Microsoft.VisualStudio.Modeling.Shell.ExtensionEnablement?displayProperty=fullName>|ショートカット (コンテキスト) メニューのコマンドを定義できます。|  
 |<xref:Microsoft.VisualStudio.Modeling.Validation?displayProperty=fullName>|検証制約を定義することができます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [T4 テキスト変換のカスタマイズ](../modeling/customizing-t4-text-transformation.md)

@@ -1,12 +1,10 @@
 ---
-title: "方法: 混合モードでデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 混合モードでデバッグ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 06/19/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], mixed-mode
 - mixed-mode debugging
 ms.assetid: 2859067d-7fcc-46b0-a4df-8c2101500977
-caps.latest.revision: "29"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 797724287439631b9398af43616116a1635381ff
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: b39191422eeb4c808faf858fc1ef8abb9a0a41e2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-debug-in-mixed-mode"></a>方法 : 混合モードでデバッグする
 ここでは、マネージ コードとネイティブ コードの両方をデバッグする方法について説明します。これは、混合モード デバッグとも呼ばれます。 DLL またはアプリケーションがネイティブ コードで記述されているかどうかによって、2 つのデバッグ シナリオがあります。  
@@ -62,5 +60,5 @@ ms.lasthandoff: 12/22/2017
 
     ![ネイティブ コードのデバッグを有効にする](../debugger/media/dbg-mixed-mode-from-csharp.png "ネイティブ コードのデバッグを有効にします。")
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法 : DLL プロジェクトからデバッグする](../debugger/how-to-debug-from-a-dll-project.md)

@@ -1,34 +1,32 @@
----
-title: "メニュー コマンドを使用して、拡張機能の作成 |Microsoft ドキュメント"
-ms.custom: 
+﻿---
+title: メニュー コマンドを使用して、拡張機能の作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - write a vspackage
 - vspackage
 - tutorials
 - visual studio package
 ms.assetid: f97104c8-2bcb-45c7-a3c9-85abeda8df98
-caps.latest.revision: "56"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 3d4e1be21a7471d318a3429dae60f484227a4f26
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 00c80692929ac19b55f68b8aa20306f39ddceae6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-an-extension-with-a-menu-command"></a>メニュー コマンドを使用して、拡張機能の作成
 このチュートリアルでは、メモ帳を起動するメニュー コマンド拡張機能を作成する方法を示します。 
   
 ## <a name="prerequisites"></a>必須コンポーネント  
-Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
 
 ## <a name="creating-a-menu-command"></a>メニュー コマンドの作成  
   

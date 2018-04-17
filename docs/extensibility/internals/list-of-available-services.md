@@ -1,29 +1,27 @@
 ---
-title: "使用可能なサービスのリスト |Microsoft ドキュメント"
-ms.custom: 
+title: 使用可能なサービスのリスト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - services, Visual Studio
 - Visual Studio, services
 ms.assetid: 724eb24b-b87c-4971-a2e7-adee7afc03b2
-caps.latest.revision: "49"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 50016483ea1fa5a04c41e49493eda92b6a270b8c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6f2caeaee433fc0c47d8332c4443d104e26a7ee7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="list-of-available-services"></a>使用可能なサービスの一覧
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Visual Studio SDK は、次のサービスをサポートします。 一部のパッケージは、ここに記載されていない、独自のサービスを提供して — など、言語サービスには 1 つのサービス GUID はありません。 言語の名前を使用して、レジストリに言語サービスの GUID を見つける必要があります。  
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Visual Studio SDK は、次のサービスをサポートします。 一部のパッケージは、ここに記載されていない、独自のサービスを提供して — など、言語サービスには 1 つのサービス GUID はありません。 言語の名前を使用して、レジストリに言語サービスの GUID を見つける必要があります。  
   
  次のとおり、またはその他のソース (たとえば、言語サービス) から取得したサービス Guid を使用すると、プライマリ インターフェイスまたはサービスごとに示されるインターフェイスを取得します。  
   
@@ -161,6 +159,6 @@ ms.lasthandoff: 12/22/2017
 |<xref:Microsoft.VisualStudio.Shell.Interop.SVsWindowFrame>|<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>|[はい]|[はい]|パッケージまたはパッケージの一部を配置する場合がありますをウィンドウ フレームを取得する VSPackage を有効にします。|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.SVsXMLMemberIndexService>|<xref:Microsoft.VisualStudio.Shell.Interop.IVsXMLMemberIndexService>|[はい]|[はい]|特定のメタデータ ファイルに関連付けられている XML 形式のドキュメントのファイルへのアクセスを提供します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [COM および管理サービス](http://msdn.microsoft.com/en-us/6c5808b4-ad87-48d7-ae06-33a81e7052af)   
  [サービスの使用と提供](../../extensibility/using-and-providing-services.md)

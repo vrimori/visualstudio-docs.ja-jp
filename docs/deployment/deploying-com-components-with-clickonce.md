@@ -1,12 +1,10 @@
 ---
-title: "ClickOnce での COM コンポーネントを展開する |Microsoft ドキュメント"
-ms.custom: 
+title: ClickOnce での COM コンポーネントを展開する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,23 +16,23 @@ helpviewer_keywords:
 - deploying applications [ClickOnce], COM components
 - components, deploying
 ms.assetid: 1a4c7f4c-7a41-45f2-9af4-8b1666469b89
-caps.latest.revision: "12"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: a63073e86c3584253e67bf4d77f43006104de075
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: c735eff8e33a8eb8a363e97a9621abc6f06c18e6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploying-com-components-with-clickonce"></a>ClickOnce での COM コンポーネントの配置
 従来の COM コンポーネントの展開には、難しい作業されていましたが。 コンポーネントは、グローバルに登録される必要があるし、したがって重複しているアプリケーション間では、望ましくない副作用が発生することができます。 この状況は通常、.NET Framework アプリケーションに問題があるコンポーネントをアプリケーションに完全に分離されたか、サイド バイ サイド互換であるためです。 Visual Studio では、Windows XP または以上のオペレーティング システムで分離されている COM コンポーネントを展開することができます。  
   
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)].NET アプリケーションを展開するための簡単かつ安全なメカニズムを提供します。 ただし、アプリケーションでは、従来の COM コンポーネントを使用する場合は、それらを展開するための追加の手順を実行する必要があります。 このトピックでは、分離された COM コンポーネントを展開し、(たとえば、Visual Basic 6.0 または Visual C) からネイティブ コンポーネントを参照する方法について説明します。  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .NET アプリケーションを展開するための簡単かつ安全なメカニズムを提供します。 ただし、アプリケーションでは、従来の COM コンポーネントを使用する場合は、それらを展開するための追加の手順を実行する必要があります。 このトピックでは、分離された COM コンポーネントを展開し、(たとえば、Visual Basic 6.0 または Visual C) からネイティブ コンポーネントを参照する方法について説明します。  
   
- 分離された COM コンポーネントを展開する方法の詳細については、次を参照してください。"でアプリの展開を簡略化する[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]と登録を必要としない COM"で[http://msdn.microsoft.com/msdnmag/issues/05/04/RegFreeCOM/default.aspx](http://msdn.microsoft.com/msdnmag/issues/05/04/RegFreeCOM/default.aspx)です。  
+ 分離された COM コンポーネントを展開する方法の詳細については、次を参照してください。"でアプリの展開を簡略化する[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]と登録を必要としない COM"で[ http://msdn.microsoft.com/msdnmag/issues/05/04/RegFreeCOM/default.aspx](http://msdn.microsoft.com/msdnmag/issues/05/04/RegFreeCOM/default.aspx)です。  
   
 ## <a name="registration-free-com"></a>登録を必要としない COM  
  登録を必要としない COM は、展開および分離 COM コンポーネントをアクティブ化するための新しいテクノロジです。 でも、すべてのコンポーネントのタイプ ライブラリと、マニフェストと呼ばれる XML ファイルにシステム レジストリに通常インストールされている登録情報を記述することによって、アプリケーションと同じフォルダーに格納します。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/22/2017
  すべての列挙マニフェスト ジェネレーターには、分離の COM 参照が検出されると、ときに、`CoClass`に対応する登録データ、各エントリに一致して、生成するコンポーネントのタイプ ライブラリ内のエントリのマニフェストのすべての COM の定義タイプ ライブラリ ファイル内のクラス。  
   
 ## <a name="deploying-registration-free-com-components-using-clickonce"></a>ClickOnce を使用して登録を必要としない COM コンポーネントを展開します。  
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置テクノロジは、最適な分離の COM コンポーネントの配置のため両方[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]コンポーネントがある展開するために、マニフェストの登録を必要としない COM を必要とします。  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置テクノロジは、最適な分離の COM コンポーネントの配置のため両方[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]コンポーネントがある展開するために、マニフェストの登録を必要としない COM を必要とします。  
   
  通常、コンポーネントの作成者はマニフェストを提供する必要があります。 それ以外の場合は、ただし、Visual Studio は、COM コンポーネントを自動的にマニフェストを生成できます。 マニフェストの生成の実行中に、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]公開のプロセスです。 詳細については、次を参照してください。 [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)です。 この機能では、Visual Basic 6.0 などの以前の開発環境で作成したレガシ コンポーネントを活用することもできます。  
   
@@ -175,5 +173,5 @@ ms.lasthandoff: 12/22/2017
   
  Com 登録が、開発者のコンピューターに必要ないくつかのシナリオがある場合でも、アプリケーションの配置には、登録は不要です。 `Isolated`プロパティは、ビルド時にマニフェストを自動生成するために、開発者のマシンに COM コンポーネントを登録が必要です。 ビルド時に自己登録を呼び出す登録キャプチャ機能はありません。 また、タイプ ライブラリで明示的に定義されているすべてのクラスは、マニフェストには反映されません。 ネイティブ参照などの既存のマニフェストを伴う、COM コンポーネントを使用して、コンポーネントでは、開発時に登録する必要はありません。 ただし、登録は、必要なコンポーネントは、ActiveX コントロールを含めるようにする場合、**ツールボックス**と Windows フォーム デザイナー。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)

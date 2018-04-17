@@ -1,23 +1,21 @@
 ---
-title: "ルール セットの混合最小規則 |Microsoft ドキュメント"
-ms.custom: 
+title: ルール セットの混合最小規則 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 ms.assetid: bc8df61c-19af-40ab-a871-315807e5f4bf
-caps.latest.revision: "4"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 430984d0f34c7596e78408d4138cd7506fdc7ba3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 783e88e22456f4babffa8d6f1748385c6dac819e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>"混合最小規則" 規則セット
 Microsoft の混合最小規則は、潜在的なセキュリティ ホールやアプリケーションのクラッシュなど、共通言語ランタイムをサポートする C++ プロジェクトの最も重大な問題に注目します。 共通言語ランタイムをサポートする C++ プロジェクトにカスタムの規則セットを作成する場合は、必ずこの規則セットを含める必要があります。  
@@ -154,7 +152,7 @@ Microsoft の混合最小規則は、潜在的なセキュリティ ホールや
 |[C28305](../code-quality/c28305.md)|トークンの解析中にエラーが発生しました。|  
 |[C28350](../code-quality/c28350.md)|注釈には、条件付きで適用できない状況の説明が表示されます。|  
 |[C28351](../code-quality/c28351.md)|注釈には、動的な値 (変数) が使用できない条件が記述されています。|  
-|[CA 1001](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)|破棄可能なフィールドを所有する型は、破棄可能でなければなりません|  
-|[CA 1821](../code-quality/ca1821-remove-empty-finalizers.md)|空のファイナライザーを削除します。|  
-|[CA 2213](../code-quality/ca2213-disposable-fields-should-be-disposed.md)|破棄可能なフィールドは破棄されなければなりません|  
-|[CA 2231](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)|ValueType.Equals のオーバーライドで、演算子 equals をオーバー ロードします。|
+|[CA1001](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)|破棄可能なフィールドを所有する型は、破棄可能でなければなりません|  
+|[CA1821](../code-quality/ca1821-remove-empty-finalizers.md)|空のファイナライザーを削除します。|  
+|[CA2213](../code-quality/ca2213-disposable-fields-should-be-disposed.md)|破棄可能なフィールドは破棄されなければなりません|  
+|[CA2231](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)|ValueType.Equals のオーバーライドで、演算子 equals をオーバー ロードします。|

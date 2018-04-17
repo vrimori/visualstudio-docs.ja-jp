@@ -1,29 +1,25 @@
 ---
-title: "デバッガーでのネイティブ オブジェクトのカスタム ビューを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: デバッガーでのネイティブ オブジェクトのカスタム ビューを作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - natvis
 dev_langs:
 - C++
 ms.assetid: 2d9a177a-e14b-404f-a6af-49498eff0bd7
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 340d0d7366749f402cb76f3075778fb2b7ea215b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 40a78f95ed98b0486b1ffa85eabea3ae8591b823
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-custom-views-of-native-objects-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでのネイティブ オブジェクトのカスタム ビューを作成します。
 Visual Studio の Natvis フレームワークでは、Visual Studio デバッガー変数ウィンドウでのネイティブ型の表示方法をカスタマイズすることができます (たとえば、**ウォッチ**ウィンドウで、**ローカル**ウィンドウで、し、 **データヒント**です。
@@ -222,7 +218,7 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
 ```  
   
 ####  <a name="BKMK_Versioning"></a> Version 要素  
- `Version` 要素を使用して、視覚化の適用範囲を特定のモジュールとそれらのバージョンに制限すると、名前の競合を最小限に抑えることができ、型のバージョンごとに異なる視覚化を使用できます。 例:  
+ `Version` 要素を使用して、視覚化の適用範囲を特定のモジュールとそれらのバージョンに制限すると、名前の競合を最小限に抑えることができ、型のバージョンごとに異なる視覚化を使用できます。 例えば:  
   
 ```xml
 <Type Name="DirectUI::Border">  
@@ -464,7 +460,7 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
 -   `ValueNode` は、空にするか `this` を指定すると、リンク リスト ノード自体を参照できます。  
   
 #### <a name="customlistitems-expansion"></a>CustomListItems 展開  
- `CustomListItems` 展開を使用して、ハッシュ テーブルなどのデータ構造を走査する際にカスタム ロジックを記述することができます。 使用する必要があります`CustomListItems`データを視覚化するものがすべてを評価する必要があります構造体は C++ の式を使用して表現が、にあまり適合しません。 `ArrayItems`、 `TreeItems`、または。`LinkedListItems.`  
+ `CustomListItems` 展開を使用して、ハッシュ テーブルなどのデータ構造を走査する際にカスタム ロジックを記述することができます。 使用する必要があります`CustomListItems`データを視覚化するものがすべてを評価する必要があります構造体は C++ の式を使用して表現が、にあまり適合しません。 `ArrayItems`、 `TreeItems`、または。 `LinkedListItems.`  
   
  CAtlMap のビジュアライザーは、 `CustomListItems` が適している場面を示す良い例です。  
   
@@ -542,7 +538,7 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
 ####  <a name="BKMK_ExpandedItem_expansion"></a> ExpandedItem の展開  
  `ExpandedItem` 要素を使用すると、基底クラスまたはデータ メンバーのプロパティを視覚化された型の子であるかのように表示することで、子の集約ビューを作成できます。 指定した式が評価され、その結果の子ノードが、視覚化された型の子リストに追加されます。 たとえば、スマート ポインター型であるお`auto_ptr<vector<int>>`、通常として表示されます。  
   
- ![自動 &#95; ptr &#60; ベクター &#60; int &#62; &#62;。既定の拡張](../debugger/media/dbg_natvis_expand_expandeditem_default.png "DBG_NATVIS_Expand_ExpandedItem_Default")  
+ ![自動&#95;ptr&#60;ベクター&#60;int&#62; &#62;既定の拡張](../debugger/media/dbg_natvis_expand_expandeditem_default.png "DBG_NATVIS_Expand_ExpandedItem_Default")  
   
  vector の値を表示するには、変数ウィンドウで _Myptr メンバーを通って 2 階層下位にたどる必要があります。 `ExpandedItem` 要素を追加することで、階層から `_Myptr` 変数を排除し、vector の要素を直接表示できます。  
   
@@ -555,7 +551,7 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
 </Type>  
 ```  
   
- ![自動 &#95; ptr &#60; ベクター &#60; int &#62; &#62;。ExpandedItem の展開](../debugger/media/dbg_natvis_expand_expandeditem_visualized.png "DBG_NATVIS_Expand_ExpandedItem_Visualized")  
+ ![自動&#95;ptr&#60;ベクター&#60;int&#62; &#62; ExpandedItem の展開](../debugger/media/dbg_natvis_expand_expandeditem_visualized.png "DBG_NATVIS_Expand_ExpandedItem_Visualized")  
   
  次の例では、派生クラスで基底クラスからプロパティを集計する方法を示します。 `CPanel` クラスが `CFrameworkElement`から派生しているとします。 基底クラス `CFrameworkElement` のプロパティを繰り返す代わりに、 `ExpandedItem` ノードでは、これらのプロパティを `CPanel` クラスの子リストに追加できます。 **Nd**派生クラスの一致する視覚エフェクトをオフに、書式指定子がここで必要です。 それ以外の場合、式`*(CFrameworkElement*)this`により、`CPanel`型の照合ルールの既定の視覚化のためもう一度適用される視覚エフェクトが解釈最も適切な。 使用して、 **nd**書式指定子が基底クラスは、視覚エフェクトを持っていない場合、基本クラスの視覚化または基底クラスの既定の展開を使用するデバッガーに指示します。  
   

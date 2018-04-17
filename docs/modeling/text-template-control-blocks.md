@@ -1,23 +1,21 @@
 ---
-title: "テキスト テンプレートのコントロール ブロック |Microsoft ドキュメント"
-ms.custom: 
+title: テキスト テンプレートのコントロール ブロック |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, template code
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: aea2d274e209c6ea0493da4bd743b008c9a5921f
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: e48193bbd8cde6a4312ddd1dbd9718e131dae524
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="text-template-control-blocks"></a>テキスト テンプレートのコントロール ブロック
 コントロール ブロックを使用すると、出力を変更するためにテキスト テンプレートにコードを記述できます。 コントロール ブロックは 3 種類あり、左山かっこで区別されます。  
@@ -121,7 +119,7 @@ Some text.
 > [!NOTE]
 >  同じテンプレート ファイル内で、クラス機能コントロール ブロックの後に標準コントロール ブロックを配置することはできません。 ただし、この制限は、`<#@include#>` ディレクティブを使用した結果には適用されません。 各インクルード ファイルでは、標準ブロックの後にクラス機能ブロックを配置できます。  
   
- クラス機能コントロール ブロック内にテキスト ブロックと式ブロックを埋め込むことによって、出力を生成する関数を作成できます。 例:  
+ クラス機能コントロール ブロック内にテキスト ブロックと式ブロックを埋め込むことによって、出力を生成する関数を作成できます。 例えば:  
   
 ```  
 <#+  

@@ -1,12 +1,10 @@
 ---
-title: "1309: ordinal StringComparison を使用します |Microsoft ドキュメント"
-ms.custom: 
+title: '1309: ordinal StringComparison を使用します |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - UseOrdinalStringComparison
 - CA1309
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - UseOrdinalStringComparison
 - CA1309
 ms.assetid: 19be0854-cb6e-4efd-a4c8-a5c1fc6f7a71
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: cf913eea3f156595c9b9194b3d8a74e71b848367
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 96718a9402b2bafcf8728004efb3df5e94da8126
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1309-use-ordinal-stringcomparison"></a>CA1309: 順序を示す StringComparison を使用します
 |||  
@@ -47,6 +45,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
  ライブラリまたはアプリケーションは、限定されたローカル ユーザーのまたは現在のカルチャのセマンティクスを使用する必要がある場合は、この規則による警告を抑制しても安全です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [グローバリゼーションに関する警告](../code-quality/globalization-warnings.md)   
  [CA1307: StringComparison の指定](../code-quality/ca1307-specify-stringcomparison.md)

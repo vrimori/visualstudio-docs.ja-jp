@@ -1,12 +1,13 @@
 ---
-title: "Visual Studio の Node.js の概要 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/30/2017
-ms.reviewer: 
-ms.suite: 
+title: Node.js と Express のアプリを作成する - Visual Studio | Microsoft Docs
+description: このチュートリアルでは Visual Studio で Node.js と Express のアプリを作成します
+ms.custom: ''
+ms.date: 03/13/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
-- vs-acquisition
-ms.tgt_pltfrm: 
+- vs-ide-general
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -16,35 +17,65 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 1d91d46b20f82a1700c2d20639b3a8827c92bcb0
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: f7d0774753178c9cb0dbcae1800da6b00ab02a0e
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="getting-started-with-nodejs-in-visual-studio"></a>Visual Studio の Node.js の概要
-このチュートリアルでは、Visual Studio を使用して Node.js を開発します。単純な Node.js Web アプリを作成し、いくつかのコードを追加し、IDE の一部の機能を試し、アプリを実行します。 まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。  
+# <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>チュートリアル: Visual Studio で Node.js と Express のアプリを作成する
+このチュートリアルでは、Node.js と Express を使用して Visual Studio を開発します。単純な Node.js Web アプリを作成し、いくつかのコードを追加し、IDE の一部の機能を試し、アプリを実行します。 まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。  
+
+このチュートリアルでは、次の作業を行う方法について説明します。
+> [!div class="checklist"]
+> * Node.js プロジェクトを作成する
+> * 何らかのコードを追加する
+> * IntelliSense を使用する
+> * アプリを実行する
+> * ブレークポイントに到達する
+
+## <a name="prerequisites"></a>必須コンポーネント
+
+* Visual Studio および Node.js 開発ワークロードをインストールしている必要があります。
+
+    まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。
+
+    ワークロードをインストールする必要があるが、既に Visual Studio を所有している場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが起動します。 **[Node.js 開発]** ワークロードを選択し、**[変更]** を選択します。
+
+* Node.js ランタイムをインストールしている必要があります。
+
+    インストールされていない場合は、LTS バージョンを [Node.js](https://nodejs.org/en/download/) Web サイトからインストールしてください。 一般に、Visual Studio はインストール済みの Node.js ランタイムを自動的に検出します。 インストールされているランタイムが検出されない場合は、プロパティ ページで、インストールされているランタイムを参照するプロジェクトを構成することができます (プロジェクトを作成した後、プロジェクト ノードを右クリックして、**[プロパティ]** を選択します)。
+
+    このチュートリアルは、Node.js 8.10.0 でテストされました。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 まず、Node.js Web アプリケーション プロジェクトを作成します。
 
 1. Visual Studio 2017 を開きます。  
 
-2. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** を選択します。  
+1. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** を選択します。  
 
-3. **[新しいプロジェクト]** ダイアログ ボックスで、左ウィンドウの **[JavaScript]** を展開し、**[Node.js]** を選択します。 真ん中のウィンドウで **[基本の Azure Node.js Express 4 アプリケーション]** を選択し、**[OK]** を選択します。   
+1. **[新しいプロジェクト]** ダイアログ ボックスで、左ウィンドウの **[JavaScript]** を展開し、**[Node.js]** を選択します。 真ん中のウィンドウで **[基本の Azure Node.js Express 4 アプリケーション]** を選択し、**[OK]** を選択します。   
 
-     **[基本の Azure Node.js Express 4 アプリケーション]** プロジェクト テンプレートが表示されない場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが起動します。 **[Node.js 開発]** ワークロードを選択し、**[変更]** を選択します。 
+     **[基本の Azure Node.js Express 4 アプリケーション]** プロジェクト テンプレートが表示されない場合は、最初に **Node.js 開発**ワークロードをインストールする必要があります。 
 
-    Visual Studio は新しいソリューションを作成し、プロジェクトを開きます。 **app.js** プロジェクト ファイルがエディター (左のウィンドウ) で開きます。 Visual Studio のソリューションとプロジェクトについて詳しくない場合、「[Quickstart: Use Visual Studio to create your first Node.js app](../ide/quickstart-nodejs.md)」 (クイックスタート: Visual Studio を使用して最初の Node.js アプリを作成する) を参照してください。
+    Visual Studio は新しいソリューションを作成し、プロジェクトを開きます。 *app.js* プロジェクト ファイルがエディター (左のウィンドウ) で開きます。
 
-4. Node.js ランタイムがまだインストールされていない場合は、[Node.js](https://nodejs.org/en/download/) Web サイトからインストールしてください。
+    - **[新しいプロジェクト]** ダイアログ ボックスに指定した名前が使用され、太字で強調表示されているのがあなたのプロジェクトです。 ファイル システムでは、このプロジェクトは、プロジェクト フォルダーの *.njsproj* ファイルに該当します。 プロジェクトを右クリックし、**[プロパティ]** を選択することで、プロジェクトに関連付けられたプロパティと環境変数を設定することができます。 プロジェクト ファイルでは Node.js プロジェクト ソースへのカスタム変更が行われないため、他の開発ツールを使用してラウンド トリップを行うことができます。
 
-    一般に、Visual Studio はインストール済みの Node.js ランタイムを自動的に検出します。 インストール済みのランタイムが検出されない場合は、インストール済みのランタイムを参照するようにプロジェクトを構成することができます。
+    - 最上位レベルにあるのは、ソリューションです。既定では、名前はプロジェクトと同じです。 ディスク上の *.sln* ファイルで表されるソリューションは、1 つ以上の関連プロジェクトのコンテナーです。
+
+    - npm ノードには、インストールされているすべての npm パッケージが表示されます。 npm ノードを右クリックし、ダイアログ ボックスを使用して npm パッケージを検索し、インストールすることができます。
+
+    - プロジェクト ノードの下に、*app.js* などのプロジェクト ファイルが表示されます。 *app.js* はプロジェクトのスタートアップ ファイルです。
+
+1. **npm** ノードを開き、必要なすべての npm パッケージが存在するかどうかを確認します。
+
+    不足しているパッケージ (感嘆符のアイコン) がある場合は、**npm** ノードを右クリックして、**[不足している npm パッケージをインストールする]** を選択します。
 
 ## <a name="add-some-code"></a>何らかのコードを追加する
 
-1. ソリューション エクスプローラー (右のウィンドウ) で、[views] フォルダーを開き、index.pug を開きます。
+1. ソリューション エクスプローラー (右のウィンドウ) で、[views] フォルダーを開き、*index.pug* を開きます。
 
 1. 内容を次のマークアップで置換します。
 
@@ -68,7 +99,7 @@ ms.lasthandoff: 02/19/2018
       a: img(id='myImage' height='200' width='200' src='')
     ```
 
-1. ルート フォルダーに index.js を開きます。
+1. ルート フォルダーに *index.js* を開きます。
 
 1. `router.get` の呼び出しの前に次のコードを追加します。
 
@@ -91,7 +122,13 @@ ms.lasthandoff: 02/19/2018
     });
     ```
 
-1. `data` の後に「`: get`」と入力します。IntelliSense が getData 関数を表示します。 `getData` を選択します。
+    `res.render` が含まれるコードの行にエラーがあります。 アプリを実行するには、アプリを修正する必要があります。 次のセクションでは、エラーを修正します。
+
+## <a name="use-intellisense"></a>IntelliSense を使用する
+
+1. *index.js* で、`res.render` を含むコードの行に移動します。
+
+1. `data` 文字列の後に「`: get`」と入力します。IntelliSense が `getData` 関数を表示します。 `getData` を選択します。
 
     ![IntelliSense を使用する](../nodejs/media/tutorial-nodejs-intellisense.png) 
 
@@ -111,7 +148,7 @@ ms.lasthandoff: 02/19/2018
 
 ## <a name="set-a-breakpoint"></a>ブレークポイントの設定
 
-1. index.js で、次のコード行の前にある左の余白をクリックし、ブレークポイントを設定します。
+1. *index.js* で、次のコード行の前にある左の余白をクリックし、ブレークポイントを設定します。
 
     `res.render('index', { title: 'Express', "data": getData() });`
 
@@ -143,14 +180,6 @@ ms.lasthandoff: 02/19/2018
 
     ![ブラウザーで実行しているアプリ](../nodejs/media/tutorial-nodejs-running-in-browser.png)  
 
-1. Node.js 対話型ウィンドウを開きます。**[表示]** > **[その他のウィンドウ]** > **[Node.js 対話型ウィンドウ]** の順に選択してください。
-
-   ![Node.js 対話型ウィンドウを開く](../nodejs/media/tutorial-nodejs-interactive-window.png)  
-
-    対話型ウィンドウは、`require()` ステートメントの使用を含めた、コードでできるすべてのことをサポートします。 次のスクリーンショットのコードは変数を定義し、Node.js インタープリターの場所を表示します。
-
-   ![Node.js 対話型ウィンドウ](../nodejs/media/tutorial-nodejs-interactive-window-example.png)  
-
 1. Web ブラウザーを閉じます。  
 
 ## <a name="optional-publish-to-azure-app-service"></a>(省略可能) Azure App Service に発行する
@@ -175,5 +204,7 @@ ms.lasthandoff: 02/19/2018
 
 ## <a name="next-steps"></a>次の手順 
 
-- [Node.js Tools for Visual Studio](https://github.com/Microsoft/nodejstools/wiki) についてさらに学習する  
-- [Visual Studio の IDE](../ide/visual-studio-ide.md) についてさらに学習する  
+このチュートリアルでは、Express を使用して Node.js アプリを作成して実行し、デバッガーを使用してブレークポイントに到達する方法について学びました。
+
+> [!div class="nextstepaction"]
+> [Node.js Tools for Visual Studio](https://github.com/Microsoft/nodejstools)

@@ -1,12 +1,10 @@
 ---
-title: "方法: ClickOnce 配置エラー用のカスタム ログ ファイルの場所の設定 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ClickOnce 配置エラー用のカスタム ログ ファイルの場所の設定 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,19 +14,19 @@ helpviewer_keywords:
 - ClickOnce deployment, troubleshooting
 - ClickOnce deployment, error logging
 ms.assetid: 77424414-7f0e-4b99-94bb-ea130de92d09
-caps.latest.revision: "9"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: fbeaf6655ffc3e05afd9633add0defde9368a419
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: a54946f5750e901c937dd91772eb7d7ecb740e48
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors"></a>方法 : ClickOnce 配置エラー用にカスタム ログ ファイルの場所を設定する
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]すべての展開のログ ファイルのアクティブ化を保持します。 これらのログ記録のインストールと初期化に関連するすべてのエラー、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開します。 既定では、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]各展開のライセンス認証のための 1 つのログ ファイルを作成します。 インターネット一時ファイル フォルダーに、これらのログ ファイルを格納します。 アクティベーション エラーが発生し、ユーザーがクリックしたときに、展開のログ ファイルが、ユーザーに表示される**詳細**結果のエラー ダイアログ ボックス。  
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] すべての展開のログ ファイルのアクティブ化を保持します。 これらのログ記録のインストールと初期化に関連するすべてのエラー、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開します。 既定では、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]各展開のライセンス認証のための 1 つのログ ファイルを作成します。 インターネット一時ファイル フォルダーに、これらのログ ファイルを格納します。 アクティベーション エラーが発生し、ユーザーがクリックしたときに、展開のログ ファイルが、ユーザーに表示される**詳細**結果のエラー ダイアログ ボックス。  
   
  レジストリ エディターを使用して、特定のクライアントのこの動作を変更することができます (**regedit.exe**) をカスタム ログ ファイルのパスを設定します。 この場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]を単一のファイルのすべての展開のライセンス認証の成功と失敗をログに記録します。  
   
@@ -50,5 +48,5 @@ ms.lasthandoff: 12/22/2017
   
      この場所は、ユーザーが書き込みアクセスしているディレクトリにする必要があります。 たとえば、Windows Vista で、次のフォルダー構造を作成し、設定`LogFilePath`C:\Users に\\< ユーザー名\>\Documents\Logs\ClickOnce\installation.log です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce 配置のトラブルシューティング](../deployment/troubleshooting-clickonce-deployments.md)

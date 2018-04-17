@@ -1,12 +1,9 @@
 ---
-title: "エラー: IP アドレスを使用するサイト |Microsoft ドキュメント"
-ms.custom: 
+title: 'エラー: IP アドレスを使用するサイト |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vs.debug.error.webdbg_siteusesipaddress
@@ -17,17 +14,16 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - debugger, Web application errors
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e6073fd88221e307b46a90173526876f2e2186d4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1c97d9eb715711b3315c97a95503489b87f323f0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="error-site-uses-ip-address"></a>エラー : サイトは IP アドレスを使用しています
 このエラーは、IP アドレスを使用している Web アプリケーションに、デバッガーが自動アタッチしようとしたときに発生します。 これを変更する場合に発生**Web サイトの識別**に**特定の IP アドレスを使用して**IIS でします。  
@@ -42,5 +38,5 @@ ms.lasthandoff: 12/22/2017
   
 2.  変更、 **IIS Web サイトの識別**設定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Web アプリケーションのデバッグ : エラーおよびトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

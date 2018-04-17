@@ -1,29 +1,25 @@
 ---
-title: "IDebugEnumField::GetValueFromStringCaseInsensitive |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugEnumField::GetValueFromStringCaseInsensitive |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugEnumField::GetValueFromStringCaseInsensitive
 helpviewer_keywords:
 - IDebugEnumField::GetValueFromStringCaseInsensitive method
 ms.assetid: ef95b38e-d9b2-4fb5-a166-7c2e14641dc7
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b45519721d748b7656ccb593d6d4f3c418a7a292
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 05d838bc91949ea5023fe61c6eb0c1b5c5220e68
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugenumfieldgetvaluefromstringcaseinsensitive"></a>IDebugEnumField::GetValueFromStringCaseInsensitive
 このメソッドは、大文字と小文字の検索を使用して、列挙定数の名前に関連付けられている値を返します。  
@@ -57,6 +53,6 @@ int GetValueFromStringCaseInsensitive(
 ## <a name="remarks"></a>コメント  
  このメソッドは区別されません。 大文字と小文字は (たとえば、名は大文字 C++ などの言語) で必要に応じて、使用[GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)   
  [GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)

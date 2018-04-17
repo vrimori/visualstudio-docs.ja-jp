@@ -1,11 +1,8 @@
 ---
-title: "Visual Studio でのオブジェクトのバインド |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio でのオブジェクトのバインド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +12,17 @@ helpviewer_keywords:
 - object binding
 - binding, to objects
 ms.assetid: ed743ce6-73af-45e5-a8ff-045eddaccc86
-caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 64031303545f293d9274158eeb1527ba26676751
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 71922f3fb6dffb63c1a6c5ed1b12e5cbce402323
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bind-objects-in-visual-studio"></a>Visual Studio でのオブジェクトのバインド
 Visual Studio は、アプリケーションでデータ ソースとして、カスタム オブジェクトを使用するためのデザイン時ツールを提供します。 UI コントロールにバインドされているオブジェクトに、データベースからデータを格納する場合は、Entity Framework を使用して、または複数のクラスを生成することをお勧めします。 Entity Framework は、すべて、定型的な変更の追跡は、コード、DbSet オブジェクトで AcceptChanges を呼び出すときにローカルのオブジェクトへの変更が、データベースに保持自動的を自動で生成します。 詳細については、次を参照してください。 [Entity Framework ドキュメント](https://ef.readthedocs.org/en/latest/)です。  
@@ -142,5 +139,5 @@ Visual Studio は、アプリケーションでデータ ソースとして、�
  [!code-csharp[VbRaddataSaving#23](../data-tools/codesnippet/CSharp/bind-objects-in-visual-studio_6.cs)]
  [!code-vb[VbRaddataSaving#23](../data-tools/codesnippet/VisualBasic/bind-objects-in-visual-studio_6.vb)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)

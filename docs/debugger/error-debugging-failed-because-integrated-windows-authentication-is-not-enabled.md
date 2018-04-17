@@ -1,12 +1,9 @@
 ---
-title: "エラー: デバッグ統合 Windows 認証が有効でないために失敗しました |Microsoft ドキュメント"
-ms.custom: 
+title: 'エラー: デバッグ統合 Windows 認証が有効でないために失敗しました |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vs.debug.error.webdbg_ntlm_authn_not_enabled
@@ -18,17 +15,16 @@ dev_langs:
 - aspx
 helpviewer_keywords:
 - debugger, Web application errors
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d3d66a2892378f04061907e383965c6c02096bf1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7181642b0a1f05a3eae252393e8daeefe5947d05
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>エラー ： Windows 統合認証が無効になっているため、デバッグに失敗しました。
 デバッグを要求したユーザーの認証が認証エラーで失敗しました。 このエラーは、Web アプリケーションまたは XML Web サービスにステップ インしようとするときに発生することがあります。 このエラーの原因の 1 つとして、統合 Windows 認証が有効ではないことが挙げられます。 その機能を有効にする場合は、「統合 Windows 認証を有効にするには」の手順を実行します。  
@@ -41,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  をクリックして**開始**] をクリックし、**コントロール パネルの [**です。  
   
-3.  **コントロール パネルの** をダブルクリックして**管理ツール**です。  
+3.  **コントロール パネルの **をダブルクリックして**管理ツール**です。  
   
 4.  ダブルクリックして**インターネット インフォメーション サービス**です。  
   
@@ -73,7 +69,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  Windows 認証と II6 管理互換の機能を有効にするために、以下の手順をまだ実行していなければ、この手順を実行します。  
   
-    1.  をクリックして**開始**、 をクリックして**コントロール パネルの**   をクリックし、**プログラム**です。  
+    1.  をクリックして**開始**、 をクリックして**コントロール パネルの**をクリックし、**プログラム**です。  
   
     2.  **プログラムと機能**をクリックして**Windows の機能のオンまたはオフ**です。  
   
@@ -119,7 +115,7 @@ ms.lasthandoff: 12/22/2017
   
 10. 閉じる、**インターネット インフォメーション サービス (IIS) マネージャー**ウィンドウです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Web アプリケーションのデバッグ: エラーとトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)   
  [Microsoft のダイジェスト認証](http://go.microsoft.com/fwlink/?LinkId=77938)   
  [IIS 7.0 で Windows Vista で Web アプリケーションと Visual Studio を実行します。](http://msdn.microsoft.com/Library/262a82ac-dd0e-4096-86c6-fb463e88be66)

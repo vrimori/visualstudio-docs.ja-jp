@@ -1,12 +1,10 @@
----
-title: "ClickOnce 配置マニフェスト |Microsoft ドキュメント"
-ms.custom: 
+﻿---
+title: ClickOnce 配置マニフェスト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,32 +13,32 @@ helpviewer_keywords:
 - ClickOnce, deployment manifests
 - deployment manifests [ClickOnce]
 ms.assetid: 8457e615-e3b6-4990-8dcf-11bc590e4e9b
-caps.latest.revision: "23"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 7cca74c6b0b5f1c118bb1360184558fc383c40c3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 5664c3505c44cb519365e7f15344d390eeebac0a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clickonce-deployment-manifest"></a>ClickOnce 配置マニフェスト
-配置マニフェストは、配置する [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションの現在のバージョン情報などを含む、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] の配置に関して記述した XML ファイルです。
+配置マニフェストは、配置する [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションの現在のバージョン情報などを含む、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] の配置に関して記述した XML ファイルです。  
 
  配置マニフェストには、次の要素および属性があります。  
   
 |要素|説明|属性|  
 |-------------|-----------------|----------------|  
-|[\<assembly> 要素](../deployment/assembly-element-clickonce-deployment.md)|必須。 最上位の要素です。|`manifestVersion`|
+|[\<assembly> 要素](../deployment/assembly-element-clickonce-deployment.md)|必須。 最上位の要素です。|`manifestVersion`|  
 |[\<assemblyIdentity > 要素](../deployment/assemblyidentity-element-clickonce-deployment.md)|必須。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションのアプリケーション マニフェストを指定します。|`name`<br /><br /> `version`<br /><br /> `publicKeyToken`<br /><br /> `processorArchitecture`<br /><br /> `culture`|  
-|[\<description> 要素](../deployment/description-element-clickonce-deployment.md)|必須。 シェルに表示を作成するためのアプリケーション情報を識別し、**プログラム追加と削除**コントロール パネル内の項目。|`publisher`<br /><br /> `product`<br /><br /> `supportUrl`|
-|[\<deployment> 要素](../deployment/deployment-element-clickonce-deployment.md)|任意。 更新プログラムの配置とシステムへの公開に使用される属性を指定します。|`install`<br /><br /> `minimumRequiredVersion`<br /><br /> `mapFileExtensions`<br /><br /> `disallowUrlActivation`<br /><br /> `trustUrlParameters`|
+|[\<description> 要素](../deployment/description-element-clickonce-deployment.md)|必須。 シェルに表示を作成するためのアプリケーション情報を識別し、**プログラム追加と削除**コントロール パネル内の項目。|`publisher`<br /><br /> `product`<br /><br /> `supportUrl`|  
+|[\<deployment> 要素](../deployment/deployment-element-clickonce-deployment.md)|任意。 更新プログラムの配置とシステムへの公開に使用される属性を指定します。|`install`<br /><br /> `minimumRequiredVersion`<br /><br /> `mapFileExtensions`<br /><br /> `disallowUrlActivation`<br /><br /> `trustUrlParameters`|  
 |[\<compatibleFrameworks > 要素](../deployment/compatibleframeworks-element-clickonce-deployment.md)|必須。 このアプリケーションをインストールして実行できる .NET Framework のバージョンを指定します。|`SupportUrl`|  
-|[\<dependency> 要素](../deployment/dependency-element-clickonce-deployment.md)|必須。 配置でインストールするアプリケーションのバージョンおよびアプリケーション マニフェストの場所を指定します。|`preRequisite`<br /><br /> `visible`<br /><br /> `dependencyType`<br /><br /> `codebase`<br /><br /> `size`|
+|[\<dependency> 要素](../deployment/dependency-element-clickonce-deployment.md)|必須。 配置でインストールするアプリケーションのバージョンおよびアプリケーション マニフェストの場所を指定します。|`preRequisite`<br /><br /> `visible`<br /><br /> `dependencyType`<br /><br /> `codebase`<br /><br /> `size`|  
 |[\<publisherIdentity > 要素](../deployment/publisheridentity-element-clickonce-deployment.md)|署名されたマニフェストに対しては必ず指定します。 この配置マニフェストに署名した発行元についての情報が含まれます。|`Name`<br /><br /> `issuerKeyHash`|  
-|[\<Signature> 要素](../deployment/signature-element-clickonce-deployment.md)|任意。 この配置マニフェストにデジタル署名するために必要な情報が含まれます。|なし|
+|[\<Signature> 要素](../deployment/signature-element-clickonce-deployment.md)|任意。 この配置マニフェストにデジタル署名するために必要な情報が含まれます。|なし|  
 |[\<customErrorReporting > 要素](../deployment/customerrorreporting-element-clickonce-deployment.md)|任意。 エラー発生時に表示する URI を指定します。|URI|  
   
 ## <a name="remarks"></a>コメント  
@@ -121,5 +119,5 @@ ms.lasthandoff: 12/22/2017
 </Signature></asmv1:assembly>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)

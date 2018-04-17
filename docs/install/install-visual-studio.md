@@ -1,14 +1,14 @@
 ---
-title: "Visual Studio 2017 のインストール | Microsoft Docs"
-description: "Visual Studio をインストールする方法について、ステップ バイ ステップで説明します。"
-ms.custom: 
+title: Visual Studio 2017 のインストール | Microsoft Docs
+description: Visual Studio をインストールする方法について、ステップ バイ ステップで説明します。
+ms.custom: ''
 ms.date: 12/04/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vs.about
 helpviewer_keywords:
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - Visual Studio installer
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b37b998347618ea346c3d4e7993d5192c1c82a8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b3f6acdd338b0ae8d23fba338c8564d2bd95ad45
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 のインストール
 ここでは、Visual Studio の新しいインストール方法について説明します。 最新バージョンでは、必要な機能だけを簡単に選んでインストールできるようになりました。 また、Visual Studio の最小フットプリントも減らしているため、以前よりもシステムへの影響が少なくなり、より迅速にインストールできます。

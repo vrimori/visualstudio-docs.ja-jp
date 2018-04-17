@@ -1,13 +1,10 @@
 ---
-title: "マルチ スレッド アプリケーションのデバッグの開始 |Microsoft ドキュメント"
+title: マルチ スレッド アプリケーションのデバッグの開始 |Microsoft ドキュメント
 ms.custom: H1HackMay2017
 ms.date: 06/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - multithreaded debugging, tutorial
 - tutorials, multithreaded debugging
 ms.assetid: 62df746b-b0f6-4df4-83cf-b1d9d2e72833
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d2766a394c88d2040a8f062c33add4e3f7af019
-ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
+ms.openlocfilehash: cea34a609905ea54b00115ee6d9419eb07c58c0d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-started-debugging-a-multithreaded-application-in-visual-studio"></a>Visual Studio でのマルチ スレッド アプリケーションのデバッグの開始します。
 Visual Studio には、いくつかのツールとマルチ スレッド アプリケーションをデバッグするためのユーザー インターフェイス要素が用意されています。 このチュートリアルでは、スレッド マーカーを使用する方法、**並列スタック** ウィンドウで、**並列ウォッチ**ウィンドウ、条件付きブレークポイントは、およびフィルターのブレークポイント。 このチュートリアルでは、わずか数分が完了することを理解するマルチ スレッド アプリケーションのデバッグの機能とします。
@@ -319,7 +315,7 @@ Visual Studio には、いくつかのツールとマルチ スレッド アプ�
 
 スレッドのフラグ解除、内の 1 つまたは複数のフラグが設定されたスレッドを右クリックして、**並列ウォッチ**ウィンドウを選択して**フラグ解除**です。
 
-## <a name="bkmk_freeze"></a>スレッドの実行を凍結と凍結解除 
+## <a name="bkmk_freeze"></a> スレッドの実行を凍結と凍結解除 
 
 > [!TIP]
 > 凍結および凍結解除することができます (中断および再開) スレッドのスレッドが作業を実行する順序を制御します。 デッドロックなどの同時実行の問題を解決するには、競合状態が役立ちます。
@@ -340,7 +336,7 @@ Visual Studio には、いくつかのツールとマルチ スレッド アプ�
 
     アプリは、いくつかの新しいスレッドをインスタンス化も可能性があります。 すべての新しいスレッドはフラグが設定されたでありが固定されていないことに注意してください。
 
-## <a name="bkmk_follow_a_thread"></a>次の条件付きブレークポイントを使用して、1 つのスレッド
+## <a name="bkmk_follow_a_thread"></a> 次の条件付きブレークポイントを使用して、1 つのスレッド
 
 場合によっては、デバッガーで 1 つのスレッドの実行を追跡すると役立つができます。 固定するは、スレッドは、1 つの方法を行うことができますが、一部のシナリオで (特定のバグの再現) するには、他のスレッドを凍結することがなく 1 つのスレッドを以下にすることです。 スレッドは、他のスレッドを凍結しないでに従う、興味のあるスレッドで以外のコードに分割を回避する必要があります。 これを行うことができます、[条件付きブレークポイント](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)です。
 
@@ -382,6 +378,6 @@ Visual Studio には、いくつかのツールとマルチ スレッド アプ�
 
 - 参照してください[する方法: 並列ウォッチ ウィンドウの使用](../debugger/how-to-use-the-parallel-watch-window.md) 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マルチ スレッド アプリケーションをデバッグします。](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [方法 : デバッグ中に別のスレッドに切り替える](../debugger/how-to-switch-to-another-thread-while-debugging.md)

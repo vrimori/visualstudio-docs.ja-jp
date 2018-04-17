@@ -1,25 +1,21 @@
 ---
-title: "サーバー プロトコルの言語拡張機能を追加する |Microsoft ドキュメント"
-ms.custom: 
+title: サーバー プロトコルの言語拡張機能を追加する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/14/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 52f12785-1c51-4c2c-8228-c8e10316cd83
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ea93ddee9c47f80322db2403aeecc0fb7dddb209
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: bb6c82eab6878e99c9840ed593d9b9993056d391
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-a-language-server-protocol-extension"></a>サーバー プロトコルの言語拡張機能を追加します。
 
@@ -54,17 +50,17 @@ LSP と Visual Studio でのサポートの目的は、Visual Studio 製品の�
 初期化します。 | 可
 初期化済み | 可
 シャットダウン | 可
-exit | 可
+終了 | 可
 $/cancelRequest | 可
 window/showMessage | 可
 window/showMessageRequest | 可
-window/logMessage | 可
+ウィンドウ/logMessage | 可
 製品利用統計情報とイベント |
 client/registerCapability |
 client/unregisterCapability |
 workspace/didChangeConfiguration | 可
 workspace/didChangeWatchedFiles | 可
-workspace/symbol | 可
+ワークスペースおよび記号 | 可
 workspace/executeCommand | 可
 workspace/applyEdit | 可
 textDocument/publishDiagnostics | 可
@@ -74,11 +70,11 @@ textDocument/willSave |
 textDocument/willSaveWaitUntil |
 textDocument/didSave | 可
 textDocument/didClose | 可
-textDocument/completion | 可
+textDocument/完了 | 可
 入力候補および resolve | 可
 textDocument/hover | 可
 textDocument/signatureHelp | 可
-textDocument/references | 可
+textDocument/参照 | 可
 textDocument/documentHighlight |
 textDocument/documentSymbol | 可
 textDocument/書式設定 | 可
@@ -303,7 +299,7 @@ LSP 言語のサーバーのサポートを追加することは必要ありま�
 
 設定のサポート、LSP 言語サービス拡張機能を追加するのには、以下の手順に従います。
 
-1. 設定とその既定値を格納する、プロジェクトでは、JSON ファイル (たとえば、"MockLanguageExtensionSettings.json") を追加します。 例:
+1. 設定とその既定値を格納する、プロジェクトでは、JSON ファイル (たとえば、"MockLanguageExtensionSettings.json") を追加します。 例えば:
 
   ```json
   {
@@ -336,7 +332,7 @@ LSP 言語のサーバーのサポートを追加することは必要ありま�
 
   ![vspackage の資産を編集します。](media/lsp-add-vspackage-asset.png)
 
-  * **Type**: Microsoft.VisualStudio.VsPackage
+  * **型**: Microsoft.VisualStudio.VsPackage
   * **ソース**: ファイルシステム上のファイル
   * **パス**: [pkgdef ファイルのパス]
 
@@ -344,7 +340,7 @@ LSP 言語のサーバーのサポートを追加することは必要ありま�
 
 1. ユーザーは、サーバーを所有するファイルを含むワークスペースを開きます。
 2. ユーザーは、"VSWorkspaceSettings.json"と呼ばれる".vs"フォルダーにファイルを追加します。
-3. ユーザーは、サーバーは、設定の VSWorkspaceSettings.json ファイルに行を追加します。 例:
+3. ユーザーは、サーバーは、設定の VSWorkspaceSettings.json ファイルに行を追加します。 例えば:
 
   ```json
   {

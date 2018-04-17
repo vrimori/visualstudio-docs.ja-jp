@@ -1,13 +1,10 @@
 ---
-title: "引数に不正な値が渡された原因を見つけるには | Microsoft Docs"
-ms.custom: 
+title: 引数に不正な値が渡された原因を見つけるには | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.parameters
 dev_langs:
@@ -22,17 +19,16 @@ helpviewer_keywords:
 - functions [debugger], detecting wrong parameter values
 - parameter values, troubleshooting
 ms.assetid: 1f1ae455-0e25-4e9d-b33f-53908f5bd6ce
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 77c4953840c879a14406003f0bafffe98908cd95
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7c2f73f94695d43cea29c3f23b1c3a0c74e79f01
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-can-i-find-out-who-is-passing-a-wrong-parameter-value"></a>引数に不正な値が渡された原因を見つけるには
 ## <a name="problem-description"></a>問題の説明  
@@ -56,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 7.  次に、[呼び出し履歴] ウィンドウを使用して呼び出し元の関数を見つけ、その関数のソース コードに移動します。 詳細については、次を参照してください。[する方法: 呼び出し履歴 ウィンドウを使用して](../debugger/how-to-use-the-call-stack-window.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ネイティブ コードのデバッグに関する Faq](../debugger/debugging-native-code-faqs.md)   
  [ブレークポイント](http://msdn.microsoft.com/en-us/fe4eedc1-71aa-4928-962f-0912c334d583)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)

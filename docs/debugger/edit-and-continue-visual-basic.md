@@ -1,12 +1,10 @@
 ---
-title: "エディット コンティニュ (Visual Basic) |Microsoft ドキュメント"
-ms.custom: 
+title: エディット コンティニュ (Visual Basic) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 10/11/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - Visual Basic, Edit and Continue
 - 64-bit Edit and Continue
 ms.assetid: 7e90f34f-e699-45ab-a4c9-a4b527c498c8
-caps.latest.revision: "40"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 82ec43b02895c2067b04f52f893184a82dd0f36b
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 91524f16f8c78afcb2f99da4b434a046bdf7e67f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="edit-and-continue-visual-basic"></a>エディット コンティニュ (Visual Basic)
 エディット コンティニュは、中断モードでの実行中にコードを変更できるようにするための、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 用デバッグ機能です。 コードの編集を適用した後で、新しい編集でコードの実行を再開して編集結果を確認できます。  

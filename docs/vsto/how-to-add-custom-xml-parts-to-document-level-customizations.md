@@ -1,12 +1,10 @@
 ---
-title: "方法: ドキュメント レベルのカスタマイズにカスタム XML 部分を追加する |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ドキュメント レベルのカスタマイズにカスタム XML 部分を追加する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +17,14 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], custom XML parts
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 27e50ed67cadd011f3b56c21e5528b870bbcb3c2
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: a5126e5ca6eb83df70ed03a7491fdd5d2a98912e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-custom-xml-parts-to-document-level-customizations"></a>方法 : ドキュメント レベルのカスタマイズにカスタム XML 部分を追加する
   ドキュメント レベルのカスタマイズにカスタム XML 部分を作成すると、Microsoft Office Excel ブックまたは Microsoft Office Word 文書に XML データを格納できます。 詳細については、「 [Custom XML Parts Overview](../vsto/custom-xml-parts-overview.md)」を参照してください。  
@@ -60,7 +59,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  わかりやすくするために、この例では、メソッドでローカル変数として定義されている XML 文字列を使用しています。 通常は、ファイルやデータベースなどの外部ソースから XML を取得する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Custom XML Parts Overview](../vsto/custom-xml-parts-overview.md)   
  [方法: VSTO アドインを使用してドキュメントにカスタム XML 部分を追加する](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)  
   

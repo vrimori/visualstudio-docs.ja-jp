@@ -1,29 +1,25 @@
 ---
-title: "LocationType |Microsoft ドキュメント"
-ms.custom: 
+title: LocationType |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - LocationType enumeration
 ms.assetid: d3e1eedc-bfd3-4c91-881b-d69565138d0f
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f59f33ef51eee099a8dfe5bbc5c822f217f8cd2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 82317d6221a8e32bf098e1d8e8a5fdb96d3b1e42
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="locationtype"></a>LocationType
 シンボルの場所の情報の種類を示します。  
@@ -89,10 +85,10 @@ enum LocationType {
   
  この列挙体の値がへの呼び出しによって返される、 [idiasymbol::get_locationtype](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md)メソッドです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: cvconst.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列挙体と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [Idiasymbol::get_locationtype](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md)   

@@ -1,27 +1,23 @@
 ---
-title: "IDebugDocumentPositionOffset2::GetRange |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugDocumentPositionOffset2::GetRange |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IDebugDocumentPositionOffset2::GetRange
 ms.assetid: 27da7130-0932-4f97-abde-05e6fb018606
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 09b415e01b6c768f471bdf9ad2e595d1a910d582
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 60d7ee73be7ccd421c7f5e0b4861e9cd935fbdb0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugdocumentpositionoffset2getrange"></a>IDebugDocumentPositionOffset2::GetRange
 現在のドキュメントの位置の範囲を取得します。  
@@ -62,6 +58,6 @@ Line 6: x = 1;
   
  5 行目でコードをデバッグするプログラムは使用されません。 5 行目で、ブレークポイントを設定、デバッガーでは、DE、一定量のコードを達成する最初の行を前方に検索する必要がある場合、デバッガーはブレークポイントが正しく配置追加候補行を含む範囲を指定します。 デしで検索してしまいます前方それらの行からブレークポイントを受け入れることができる行が見つかるまでです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugDocumentPositionOffset2](../../../extensibility/debugger/reference/idebugdocumentpositionoffset2.md)   
  [GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)

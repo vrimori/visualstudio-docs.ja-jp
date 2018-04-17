@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: プライバシー プロンプトを表示するためのカスタム ブートス トラップの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: プライバシー プロンプトを表示するためのカスタム ブートス トラップの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - Windows Installer deployment, prerequisites
 - prerequisites [.NET Framework], custom bootstrapper package
 ms.assetid: 2f3edd6a-84d1-4864-a1ae-6a13c5732aae
-caps.latest.revision: "10"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 97b5ba379eb715c63e5432b22999e2c4f12bf50d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 6f20389e0487fd548ac239503faae01adb7dbdf1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt"></a>チュートリアル: プライバシー プロンプトを表示するためのカスタム ブートストラップの作成
 新しいファイルおよびアセンブリのバージョンを持つアセンブリが使用可能になると自動的に更新する ClickOnce アプリケーションを構成することができます。 をお客様がこれに同意することを確認するために、プライバシー プロンプトを表示できます。 次に、自動的に更新するアプリケーションへのアクセス許可を付与するかどうかを選択できます。 アプリケーションが自動的に更新する許可されていない場合はインストールされません。  
@@ -302,7 +300,7 @@ ms.lasthandoff: 12/22/2017
   
 8.  アプリケーションのインストール ダイアログ ボックスが表示されたら、クリックして**インストール**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アプリケーション配置の必要条件](../deployment/application-deployment-prerequisites.md)   
  [ブートス トラップ パッケージを作成します。](../deployment/creating-bootstrapper-packages.md)   
  [方法: 製品マニフェストを作成します。](../deployment/how-to-create-a-product-manifest.md)   

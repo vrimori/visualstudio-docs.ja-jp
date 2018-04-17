@@ -1,12 +1,10 @@
 ---
-title: "方法: リソース ファイルを使用して、ローカライズされた名前、プロパティ、およびアクセス許可 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: リソース ファイルを使用して、ローカライズされた名前、プロパティ、およびアクセス許可 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -23,13 +21,14 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], resource strings
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 144d81b2835479ee8cfdff0657814070cff813db
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 58c8d74e29144a525eb33031fb98e25051d0305f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions"></a>方法: リソース ファイルを使用して、ローカライズした名前、プロパティ、およびアクセス許可を指定する
   リソース ファイルを使用すると、ローカライズされた名前を指定、プロパティを定義でき、ビジネス データ接続 (BDC) モデルで定義されているアクセス許可 tor オブジェクトに適用できます。 この情報を指定するを追加する、**ビジネス データ接続リソース**項目を含むプロジェクトを**ビジネス データ接続モデル**項目。 次のリソース ファイルの XML を編集して名、プロパティ、およびアクセス許可を指定します。  
@@ -52,7 +51,7 @@ ms.lasthandoff: 01/10/2018
   
      これらの要素を定義する方法については、次を参照してください。[モデル ファイルとリソース ファイル](http://go.microsoft.com/fwlink/?LinkID=169283)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: SharePoint プロジェクトに既存の BDC モデル ファイルを追加](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)   
  [ビジネス データ接続モデルを作成します。](../sharepoint/creating-a-business-data-connectivity-model.md)   
  [方法: BDC モデルを作成](../sharepoint/how-to-create-a-bdc-model.md)   

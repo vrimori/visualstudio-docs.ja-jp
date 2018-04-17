@@ -1,27 +1,25 @@
 ---
-title: "ボタンの再利用可能なグループを作成する |Microsoft ドキュメント"
-ms.custom: 
+title: ボタンの再利用可能なグループを作成する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - button groups, creating in VSPackages
 - VSPackages, creating reusable button groups
 - buttons, creating reusable groups
 ms.assetid: 0c561617-fb86-476d-8bd1-c6e5e7464c65
-caps.latest.revision: "44"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: c2ac175d2fd267500f19e9f22cd46d88dcc9f314
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 97ee7cc2ec63a94036472ccce07b1dc9fa736504
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-reusable-groups-of-buttons"></a>ボタンの再利用可能なグループを作成します。
 コマンド グループは、常に一緒にメニューまたはツールバーに表示されるコマンドのコレクションです。 .Vsct ファイルの CommandPlacements セクション内の別の親メニューに代入することで、任意のコマンドのグループを再利用できます。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/22/2017
     </GuidSymbol>  
     ```  
   
-     既定では、コマンドの項目テンプレートがという名前のグループを作成**MyGroup**と各 IDSymbol エントリと共に、指定された名前を持つボタンをクリックします。  
+     既定では、コマンドの項目テンプレートがという名前のグループを作成**MyMenuGroup**と各 IDSymbol エントリと共に、指定された名前を持つボタンをクリックします。  
   
 5.  グループ セクションでは、シンボルで示されているものと同じ GUID と ID の属性を持つグループ要素を作成します。 既存のグループを使用してもまたは次の例のように、コマンド テンプレートによって提供されているエントリを使用できます。 このグループが表示されます、**ツール**メニュー  
   

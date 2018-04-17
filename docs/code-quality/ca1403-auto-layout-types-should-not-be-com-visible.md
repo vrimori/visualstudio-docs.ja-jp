@@ -1,12 +1,10 @@
 ---
-title: "Ca 1403: Auto 配置の型が COM 参照することはできません |Microsoft ドキュメント"
-ms.custom: 
+title: 'Ca 1403: Auto 配置の型が COM 参照することはできません |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - AutoLayoutTypesShouldNotBeComVisible
 - CA1403
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1403
 - AutoLayoutTypesShouldNotBeComVisible
 ms.assetid: a7007714-f9b4-4730-94e0-67d3dc68991f
-caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 7da04d7ecda3e47239bd865812c6fbd05428ac09
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: a0b13ba365383b312b467940641b020d75478c46
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1403-auto-layout-types-should-not-be-com-visible"></a>CA1403: Auto 配置の型を COM 参照可能にすることはできません
 |||  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  コンポーネント オブジェクト モデル (COM) 参照可能な値の型が付いて、<xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=fullName>属性に設定<xref:System.Runtime.InteropServices.LayoutKind?displayProperty=fullName>です。  
   
 ## <a name="rule-description"></a>規則の説明  
- <xref:System.Runtime.InteropServices.LayoutKind>レイアウトのタイプは、共通言語ランタイムによって管理されます。 これらの型のレイアウトは、COM クライアントが特定のレイアウトが予期される動作しなくなる .NET Framework のバージョン間で変更できます。 されている場合、<xref:System.Runtime.InteropServices.StructLayoutAttribute>属性が指定されていない、c#、 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]、C++ コンパイラを指定し、<xref:System.Runtime.InteropServices.LayoutKind>のレイアウトを値型です。  
+ <xref:System.Runtime.InteropServices.LayoutKind> レイアウトのタイプは、共通言語ランタイムによって管理されます。 これらの型のレイアウトは、COM クライアントが特定のレイアウトが予期される動作しなくなる .NET Framework のバージョン間で変更できます。 されている場合、<xref:System.Runtime.InteropServices.StructLayoutAttribute>属性が指定されていない、c#、 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]、C++ コンパイラを指定し、<xref:System.Runtime.InteropServices.LayoutKind>のレイアウトを値型です。  
   
  他のマークがない限り、すべてのパブリックの非ジェネリック型は COM; から参照できます。すべてのパブリックでないとジェネリック型を COM に表示されません。 ただし、偽陽性を減らすためには、この規則が必要、COM 型の可視性、明示的に指定します。格納しているアセンブリをマークする必要があります、 <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> 'éý'`false`で型をマークする必要がありますと、 <xref:System.Runtime.InteropServices.ComVisibleAttribute> 'éý'`true`です。  
   
@@ -56,6 +54,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="related-rules"></a>関連規則  
  [CA1408: AutoDual ClassInterfaceType を使用しないでください](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [要件 (相互運用のための .NET 型の)](/dotnet/framework/interop/qualifying-net-types-for-interoperation)   
  [アンマネージ コードとの相互運用](/dotnet/framework/interop/index)

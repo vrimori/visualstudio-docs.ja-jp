@@ -1,13 +1,10 @@
 ---
-title: "ドキュメント レベルのカスタマイズのプログラミング |Microsoft ドキュメント"
-ms.custom: 
+title: ドキュメント レベルのカスタマイズのプログラミング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sheet3
 - thisWorkbook
@@ -30,14 +27,14 @@ helpviewer_keywords:
 - application development [Office development in Visual Studio], document-level customizations
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a614173fc33547c3512c031b7e0bd8a5575e7cb2
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 5f44b7d5a283d6e2946eb26e5036f47b09729de8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="programming-document-level-customizations"></a>ドキュメント レベルのカスタマイズのプログラミング
   ドキュメント レベルのカスタマイズを使用して、Microsoft Office Word または Microsoft Office Excel を拡張する場合に、次のタスクを実行できます。  
@@ -58,7 +55,7 @@ ms.lasthandoff: 01/10/2018
   
  ドキュメント レベルのプロジェクトのコードの記述には、Visual Studio の他のプロジェクトの種類とは異なる点があります。 相違点の多くは、Office オブジェクト モデルがマネージ コードに公開される方法に起因しています。 詳細については、「 [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)」を参照してください。  
   
- Visual Studio での Office 開発ツールを使用して作成できるドキュメント レベルのカスタマイズとソリューションの他の種類に関する全般については、次を参照してください。 [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md).  
+ Visual Studio での Office 開発ツールを使用して作成できるドキュメント レベルのカスタマイズとソリューションの他の種類に関する全般については、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)です。  
   
 ## <a name="using-the-generated-classes-in-document-level-projects"></a>ドキュメント レベルのプロジェクトで生成されるクラスの使用  
  ドキュメント レベルのプロジェクトを作成するときに、Visual Studio は、コードの記述を開始できるプロジェクト クラスを自動的に生成します。 Visual Studio は、Word と Excel 用のさまざまなクラスを生成します。  
@@ -84,7 +81,7 @@ ms.lasthandoff: 01/10/2018
   
 -   `ThisWorkbook`: <xref:Microsoft.Office.Tools.Excel.WorkbookBase>から派生します。  
   
--   `Sheet` *n*: <xref:Microsoft.Office.Tools.Excel.WorksheetBase>から派生します。  
+-   `Sheet` *n*: から派生した<xref:Microsoft.Office.Tools.Excel.WorksheetBase>です。  
   
  これらの基本クラスは、そのメンバーのすべての呼び出しを [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]の対応するホスト項目インターフェイスの内部実装にリダイレクトします。 たとえば、 <xref:Microsoft.Office.Tools.Word.DocumentBase.Protect%2A> クラスの `ThisDocument` メソッドを呼び出す場合、 <xref:Microsoft.Office.Tools.Word.DocumentBase> クラスはこの呼び出しを <xref:Microsoft.Office.Tools.Word.Document> の [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]インターフェイスの内部実装にリダイレクトします。  
   
@@ -172,9 +169,9 @@ Globals.ThisDocument.Save();
 ## <a name="using-the-getvstoobject-and-hasvstoobject-methods"></a>GetVstoObject メソッドと HasVstoObject メソッドの使用  
  HasVstoObject と GetVstoObject メソッドを呼び出すには、Globals.Factory.GetVstoObject または Globals.Factory.HasVstoObject メソッドを使用し、ネイティブの Word または Excel オブジェクトを渡す (など、<xref:Microsoft.Office.Interop.Word.Document>または<xref:Microsoft.Office.Interop.Excel.Worksheet>) テストを実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
- [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md)   
+ [VBA とドキュメント レベルのカスタマイズの結合](../vsto/combining-vba-and-document-level-customizations.md)   
  [ServerDocument クラスを使用してサーバー上のドキュメントを管理します。](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)   
  [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)  
   

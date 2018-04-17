@@ -1,5 +1,5 @@
 ---
-title: "CancellationScope アクティビティ デザイナー |Microsoft ドキュメント"
+title: CancellationScope アクティビティ デザイナー |Microsoft ドキュメント
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: 2c85d663-b219-4142-9866-7693ffd46379
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 406e46ccc3f8d0fd70b185a0e5f02151592e85d4
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 3231d62d5c961e63fa2a72374d5a1adcf50288f0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cancellationscope-activity-designer"></a>CancellationScope アクティビティ デザイナー
 **CancellationScope**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.CancellationScope>アクティビティ。

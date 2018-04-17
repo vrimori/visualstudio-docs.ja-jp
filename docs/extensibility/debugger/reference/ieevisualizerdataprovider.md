@@ -1,29 +1,25 @@
 ---
-title: "IEEVisualizerDataProvider |Microsoft ドキュメント"
-ms.custom: 
+title: IEEVisualizerDataProvider |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IEEVisualizerDataProvider
 helpviewer_keywords:
 - IEEVisualizerDataProvider interface
 ms.assetid: 5fdfe6e3-b94e-4edb-acc5-41d8773d8ca5
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: edf2cfe689caa58e1c0402a91fa31237cb2c7215
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8e37561957d592ecd9ae855f2816c860f84e7b20
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ieevisualizerdataprovider"></a>IEEVisualizerDataProvider
 > [!IMPORTANT]
@@ -55,14 +51,14 @@ IEEVisualizerDataProvider : IUnknown
 ## <a name="remarks"></a>コメント  
  ビジュアライザー サービス (で表される、 [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)インターフェイスし、によって返される[CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md)) を実装するオブジェクト参照を保持、`IEEVisualizerDataProvider`インターフェイス. その結果、`IEEVisualizerDataProvider`を実装する、同じオブジェクトに対して、インターフェイスを実装しないように、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)そのオブジェクトへの参照を保持する場合、`IEEVisualizerService`オブジェクト: 循環参照の結果とオブジェクトが破棄されるときに、デッドロックが発生します。 実装するのには、推奨されるアプローチ`IEEVisualizerDataProvider`する個別のオブジェクトで、`IDebugProperty2`呼び出さずにデリゲートをオブジェクト`IUnknown::AddRef`にします。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: ee.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [式の評価インターフェイス](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)   

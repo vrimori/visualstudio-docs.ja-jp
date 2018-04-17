@@ -1,27 +1,23 @@
 ---
-title: "コマンド処理 |Microsoft ドキュメント"
-ms.custom: 
+title: コマンド処理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - command handling
 ms.assetid: 78f67d92-77f7-45cb-ad75-6e3346379cc3
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3ecbff62570067b25aae9ad525138687eb281c9f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 542277c5d8ab1b9b130f31bbb06215d8da7bc2ef
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="command-handling"></a>コマンド処理
 エディターには、新しいコマンドを定義できます。 コマンドは通常、ツールバー、またはコンテキスト メニューのメニューに表示されます。  
@@ -53,5 +49,5 @@ ms.lasthandoff: 12/22/2017
   
  .Vsct ファイルで定義する必要はありません定義済みのコマンドを使用することもできます。 たとえば、Visual Studio パッケージ テンプレートによって生成された EditorPane.cs ファイルを確認する場合と考えることが、定義済みのコマンドのセットなど<xref:Microsoft.VisualStudio.VSConstants.VSStd97CmdID>によって定義された<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>、onSelectAll メソッドなどのコマンド ハンドラーで処理されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)

@@ -1,12 +1,10 @@
 ---
-title: "ClickOnce アプリケーションを展開する他のユーザーの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: ClickOnce アプリケーションを展開する他のユーザーの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -24,16 +22,16 @@ helpviewer_keywords:
 - ClickOnce applications, deployed by others
 - ClickOnce applications, previous .NET Framework
 ms.assetid: d20766c7-4ef3-45ab-8aa0-3f15b61eccaa
-caps.latest.revision: "10"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: d3a9762872f74b39d8cef387703488c01647dbcc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: c3cd93353cd20ac52f95d7852c306124561cdf0e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-clickonce-applications-for-others-to-deploy"></a>開発者以外が配置する ClickOnce アプリケーションの作成
 ClickOnce 配置を作成しているすべての開発者は、アプリケーション自体の展開を計画します。 それらの多くは、ClickOnce を使用してアプリケーションをパッケージし、し、ファイルを大規模な企業など、顧客に渡します。 お客様は、そのネットワーク上のアプリケーションをホストする役割の 1 つになります。 このトピックでは、.NET Framework バージョン 3.5 より前のバージョンでは、このような展開に固有の問題について説明します。 .NET Framework 3.5 では、新しい「信頼のマニフェストを使用して」機能を使用して、新しい解決し、について説明します。 最後に、.NET Framework の旧バージョンを使用して引き続きお客様の ClickOnce 配置を作成するための推奨される方針にで終わりです。  
@@ -101,7 +99,7 @@ ClickOnce 配置を作成しているすべての開発者は、アプリケー�
   
  この方法の欠点は、.NET Framework SDK ツールをインストールして、開発者またはシステム管理者には、これらを使用できるスキルを持ったがある顧客を必要とすることです。 一部のお客様は、自身の一部でほとんどまたはまったくの技術的な労力を必要とするソリューションを要求可能性があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーションのテストの配置と再署名なしの実稼働サーバー](../deployment/deploying-clickonce-applications-for-testing-and-production-servers-without-resigning.md)   
  [チュートリアル : ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)   
  [チュートリアル : 再署名が不要で商標を保持する ClickOnce アプリケーションの手動配置](../deployment/walkthrough-manually-deploying-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information.md)

@@ -1,29 +1,25 @@
 ---
-title: "IDebugProcess3::Continue |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugProcess3::Continue |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugProcess3::Continue
 helpviewer_keywords:
 - IDebugProcess3::Continue
 ms.assetid: 57506242-5763-4c08-adb9-8a78ce02cebb
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f666f35a71f65b839073e7d360bc357627fb7c5f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 38bb11237d5016e3747c5a615e61144511c17fad
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugprocess3continue"></a>IDebugProcess3::Continue
 このプロセスを停止状態から実行が続行されます。 (ステップ) など、以前の実行状態が保持されます、しを再度実行して、プロセスを開始します。  
@@ -57,7 +53,7 @@ int Continue(
   
  **警告**停止イベントまたは直接 (同期) イベントを送信しない[イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)です。 この呼び出しを処理中にそれ以外の場合、デバッガーがハングアップします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

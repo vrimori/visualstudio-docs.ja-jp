@@ -1,5 +1,5 @@
 ---
-title: "While アクティビティ デザイナー |Microsoft ドキュメント"
+title: While アクティビティ デザイナー |Microsoft ドキュメント
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: ea008091-2e4c-4f64-bfa5-afb919552446
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 541113e598246cf20f9fe625f57c51f68d7e9ca8
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 2c5b75a2575a7e8d6eeed4f42a269849bc2df899
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="while-activity-designer"></a>While アクティビティ デザイナー
 <xref:System.Activities.Statements.While>に含まれているアクティビティを実行、<xref:System.Activities.Statements.While.Body%2A>中に、指定した<xref:System.Activities.Statements.While.Condition%2A>に評価される**true**です。 場合によっては、含まれているアクティビティが実行されない可能性があります。 含まれているアクティビティを少なくとも 1 回は実行する必要がある場合は、<xref:System.Activities.Statements.DoWhile> アクティビティを代わりに使用します。

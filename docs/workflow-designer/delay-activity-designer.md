@@ -1,5 +1,5 @@
 ---
-title: "アクティビティ デザイナーを遅らせる |Microsoft ドキュメント"
+title: アクティビティ デザイナーを遅らせる |Microsoft ドキュメント
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: f51742a8-2c9a-47d1-8a23-18459d03ae19
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cddf4be42d05ebfc3c2df3e64f011b93673eead6
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 7159330588151d4845184fcb6688b20f8d13afd0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="delay-activity-designer"></a>Delay アクティビティ デザイナー
 **遅延**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.Delay>アクティビティ。

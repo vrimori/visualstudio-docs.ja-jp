@@ -1,12 +1,10 @@
 ---
-title: "方法: プログラムによってワークシートの範囲内のテキストの検索 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: プログラムによってワークシートの範囲内のテキストの検索 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - text searches, worksheets
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 42c95ab26437ad590d457ad926db6e070a7c8de0
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 2749834f459085b8d182b58f12a4c372f7493cba
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-search-for-text-in-worksheet-ranges"></a>方法: プログラムによってワークシートの範囲内のテキストを検索する
   <xref:Microsoft.Office.Interop.Excel.Range.Find%2A>のメソッド、<xref:Microsoft.Office.Interop.Excel.Range>オブジェクトでは、範囲内でテキストを検索することができます。 このテキストがなど、ワークシートのセルに表示される可能性がエラー文字列のいずれかに指定することできますも`#NULL!`または`#VALUE!`です。 エラー文字列の詳細については、次を参照してください。[セルのエラー値](http://msdn.microsoft.com/library/office/ff839168.aspx)です。  
@@ -79,7 +78,7 @@ ms.lasthandoff: 01/10/2018
  [!code-csharp[Trin_VstcoreExcelAutomation#57](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#57)]
  [!code-vb[Trin_VstcoreExcelAutomation#57](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#57)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [範囲の使用](../vsto/working-with-ranges.md)   
  [方法: プログラムによってブック内の範囲にスタイルを適用](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
  [方法: プログラムによってワークシートの範囲をコード内を参照してください](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)   

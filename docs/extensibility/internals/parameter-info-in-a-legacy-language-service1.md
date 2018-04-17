@@ -1,12 +1,10 @@
 ---
-title: "レガシ言語 Service1 のパラメーター ヒント |Microsoft ドキュメント"
-ms.custom: 
+title: レガシ言語 Service1 のパラメーター ヒント |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - language services, method tips
 - method tips
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - IVsMethodData interface
 - Parameter Info (IntelliSense)
 ms.assetid: f367295e-45b6-45d2-9ec8-77481743beef
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 70f6a24a8d5a3d516286efe01cffc6e1d3514e18
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 50450d1968c626e0a5b32dee4c6f03d005d6ede9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="parameter-info-in-a-legacy-language-service"></a>従来の言語サービスでのパラメーター ヒント
 IntelliSense パラメーター ヒントでは、言語コンストラクトにいる場所に関するヒントを使用してユーザーを提供します。  
@@ -40,7 +38,7 @@ IntelliSense パラメーター ヒントでは、言語コンストラクトに
   
  パラメーター ヒントのツールヒントは、コマンド インターセプト言語サービスによって開始されます。 ユーザーの文字を傍受する言語サービス オブジェクトを実装する必要があります、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>インターフェイスし、テキスト ビューへのポインターを渡す、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>実装では、呼び出すことによって、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A>メソッドで、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>インターフェイスです。 コマンドのフィルターは、コード ウィンドウに入力したコマンドを受け取ります。 ユーザーにパラメーター情報を表示するタイミングを調べるコマンド情報を監視します。 ステートメント入力候補、エラー マーカーなどの同じコマンド フィルターを使用することができます。  
   
- 言語サービスがヒントを提供できるキーワードを入力すると、言語サービスを作成、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow>オブジェクトと呼び出し、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A>メソッドで、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>ヒントを表示するための IDE に通知するインターフェイスです。 作成、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow>オブジェクトを使用して`VSLocalCreateInstance`コクラスを指定して`CLSID_VsMethodTipWindow`です。 `VsLocalCreateInstance`呼び出すヘッダー ファイル vsdoc.h で定義された関数は、`QueryService`ローカル レジストリおよび呼び出し`CreateInstance`このオブジェクトに対して、`CLSID_VsMethodTipWindow`です。  
+ 言語サービスがヒントを提供できるキーワードを入力すると、言語サービスを作成、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow>オブジェクトと呼び出し、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A>メソッドで、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>ヒントを表示するための IDE に通知するインターフェイスです。 作成、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow>オブジェクトを使用して`VSLocalCreateInstance`コクラスを指定して`CLSID_VsMethodTipWindow`です。 `VsLocalCreateInstance` 呼び出すヘッダー ファイル vsdoc.h で定義された関数は、`QueryService`ローカル レジストリおよび呼び出し`CreateInstance`このオブジェクトに対して、`CLSID_VsMethodTipWindow`です。  
   
 ## <a name="providing-a-method-tip"></a>メソッドのヒントを提供します。  
  メソッドのヒントを提供するには、呼び出し、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow.SetMethodData%2A>メソッドで、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow>インターフェイスの実装を渡して、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData>インターフェイスです。  

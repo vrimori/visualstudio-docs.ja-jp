@@ -1,12 +1,10 @@
 ---
-title: "Ca 1304: CultureInfo を指定する |Microsoft ドキュメント"
-ms.custom: 
+title: 'Ca 1304: CultureInfo を指定する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - SpecifyCultureInfo
 - CA1304
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - SpecifyCultureInfo
 - CA1304
 ms.assetid: b912d76a-54fd-4c93-b25d-16491e0ae319
-caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 932ac7e8f731974896991cea5ae504e452e9a036
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: ee1a90d2499cc0a22f695cdf0840bd1c9b50b941
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1304-specify-cultureinfo"></a>CA1304: CultureInfo を指定します
 |||  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/22/2017
  コードの保守性が重要な開発の優先順位ではない、既定のカルチャまたは書式プロバイダーが、適切な選択であるが確実であるときにこの規則による警告を抑制しても安全です。  
   
 ## <a name="example"></a>例  
- 次の例では、`BadMethod`によりこの規則の 2 つ違反が発生します。 `GoodMethod`System.String.Compare にインバリアント カルチャを渡すことによって最初の違反を修正し、現在のカルチャを渡すことによって、2 番目の違反を修正<xref:System.String.ToLower%2A>ため`string3`がユーザーに表示されます。  
+ 次の例では、`BadMethod`によりこの規則の 2 つ違反が発生します。 `GoodMethod` System.String.Compare にインバリアント カルチャを渡すことによって最初の違反を修正し、現在のカルチャを渡すことによって、2 番目の違反を修正<xref:System.String.ToLower%2A>ため`string3`がユーザーに表示されます。  
   
  [!code-csharp[FxCop.Globalization.CultureInfo#1](../code-quality/codesnippet/CSharp/ca1304-specify-cultureinfo_1.cs)]  
   
@@ -78,5 +76,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="related-rules"></a>関連規則  
  [CA1305: IFormatProvider を指定します](../code-quality/ca1305-specify-iformatprovider.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [CultureInfo クラスを使用します。](/dotnet/standard/globalization-localization/globalization#Cultures)  

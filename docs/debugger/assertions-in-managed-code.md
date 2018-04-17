@@ -1,13 +1,10 @@
 ---
-title: "マネージ コードでアサーション |Microsoft ドキュメント"
-ms.custom: 
+title: マネージ コードでアサーション |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -23,17 +20,16 @@ helpviewer_keywords:
 - Trace.Listeners property
 - assertions, managed code
 ms.assetid: 70ab2522-6486-4076-a1a9-e0f11cd0f3a1
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90e39956f777ddd79fad080d8bb6d13b30d4ccd0
-ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
+ms.openlocfilehash: f682768aeb3f3a0f3cc22da8a68f8db4a225b375
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assertions-in-managed-code"></a>マネージ コードのアサーション
 アサーション、つまり `Assert` ステートメントは、条件をテストします。この条件は、`Assert` ステートメントへの引数として指定します。 条件が true と評価された場合、アクションは発生しません。 条件が false と評価された場合、アサーションは失敗です。 また、デバッグ ビルドを実行している場合、プログラムは中断モードになります。  
@@ -53,14 +49,14 @@ ms.lasthandoff: 01/29/2018
   
  [構成ファイル内のアサーションの設定](#BKMK_Setting_assertions_in_configuration_files)  
   
-##  <a name="BKMK_Asserts_in_the_System_Diagnostics_Namespace"></a>System.Diagnostics Namespace 内の assert します。  
+##  <a name="BKMK_Asserts_in_the_System_Diagnostics_Namespace"></a> System.Diagnostics Namespace 内の assert します。  
  Visual Basic および Visual C# では、`Assert` 名前空間内の <xref:System.Diagnostics.Debug> または <xref:System.Diagnostics.Trace> から <xref:System.Diagnostics> メソッドを使用できます。 <xref:System.Diagnostics.Debug> クラスのメソッドはプログラムのリリース バージョンには含まれないので、リリース コードのサイズを増加させたり処理速度を低下させることはありません。  
   
  C++ は、<xref:System.Diagnostics.Debug> クラスのメソッドをサポートしません。 使用して同じ効果を得ることができます、<xref:System.Diagnostics.Trace>条件付きコンパイルは、のようにクラス`#ifdef DEBUG`しています.`#endif`.  
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_The_Debug_Assert_method"></a>Debug.Assert メソッド  
+##  <a name="BKMK_The_Debug_Assert_method"></a> Debug.Assert メソッド  
  <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> メソッドを自由に使用して、コードが正しい場合に true になる条件をテストできます。 たとえば、整数の除算関数を記述したとします。 数学の規則により、0 での除算は不可能です。 これはアサーションを使ってテストできます。  
   
 ```VB  
@@ -114,7 +110,7 @@ savingsAccount.Withdraw ( amount );
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_Side_effects_of_Debug_Assert"></a>Debug.Assert の副作用  
+##  <a name="BKMK_Side_effects_of_Debug_Assert"></a> Debug.Assert の副作用  
  <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> を使用する場合は、`Assert` 内のコードを調べて、`Assert` を削除してもプログラムの結果が変わらないようにします。 そうしないと、プログラムのリリース バージョンにのみ現れるバグを誤って導入する可能性があります。 関数やプロシージャの呼び出しを含むアサートについては、特に注意が必要です。  
   
 ```VB  
@@ -143,7 +139,7 @@ Debug.Assert ( temp != 0 );
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_Trace_and_Debug_Requirements"></a>Trace および Debug の必要条件  
+##  <a name="BKMK_Trace_and_Debug_Requirements"></a> Trace および Debug の必要条件  
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ウィザードを使用してプロジェクトを作成すると、既定では、リリース構成とデバッグ構成の両方に TRACE シンボルが定義されます。 DEBUG シンボルは、既定ではデバッグ ビルドにだけ定義されます。  
   
  それ以外の場合は、<xref:System.Diagnostics.Trace> メソッドが動作するように、プログラムのソース ファイルの先頭に次のいずれかを記述する必要があります。  
@@ -162,7 +158,7 @@ Debug.Assert ( temp != 0 );
   
  C++ は、<xref:System.Diagnostics.Debug> クラスのメソッドをサポートしません。 使用して同じ効果を得ることができます、<xref:System.Diagnostics.Trace>条件付きコンパイルは、のようにクラス`#ifdef DEBUG`しています.`#endif`. これらのシンボルを定義することができます、 **\<プロジェクト > プロパティ ページ** ダイアログ ボックス。 詳細については、次を参照してください。 [Visual Basic デバッグ構成のプロジェクトの設定を変更する](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)または[C または C++ デバッグ構成のプロジェクトの設定を変更する](../debugger/project-settings-for-a-cpp-debug-configuration.md)です。  
   
-##  <a name="BKMK_Assert_arguments"></a>Assert の引数  
+##  <a name="BKMK_Assert_arguments"></a> Assert の引数  
  <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> と <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> は、最大で 3 つの引数を受け取ります。 最初の引数は調べる条件です。これは必ず指定します。 呼び出す場合<xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName>または<xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName>、引数の 1 つだけで、`Assert`メソッドは、条件をチェックして、結果が false の場合は、コール スタックの内容を出力、**出力**ウィンドウです。 <xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName> および <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName> の使用例は、次のようになります。  
   
 ```VB  
@@ -202,7 +198,7 @@ Trace.Assert ( stacksize > 0, "Out of stack space", "Failed in inctemp" );
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_Customizing_Assert_behavior"></a>Assert の動作をカスタマイズします。  
+##  <a name="BKMK_Customizing_Assert_behavior"></a> Assert の動作をカスタマイズします。  
  ユーザー インターフェイス モードでアプリケーションを実行する場合、`Assert`メソッドが表示されます、**アサーションが失敗した**ダイアログ ボックスの条件が失敗したとします。 アサーションが失敗したときに発生するアクションはによって制御されます、<xref:System.Diagnostics.Debug.Listeners%2A>または<xref:System.Diagnostics.Trace.Listeners%2A>プロパティです。  
   
  出力動作をカスタマイズするには、<xref:System.Diagnostics.TraceListener> オブジェクトを `Listeners` コレクションに追加するか、<xref:System.Diagnostics.TraceListener> を `Listeners` コレクションから削除します。または、既存の <xref:System.Diagnostics.TraceListener.Fail%2A?displayProperty=fullName> の `TraceListener` メソッドをオーバーライドして動作を変更します。  
@@ -215,10 +211,10 @@ Trace.Assert ( stacksize > 0, "Out of stack space", "Failed in inctemp" );
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_Setting_assertions_in_configuration_files"></a>構成ファイル内のアサーションの設定  
+##  <a name="BKMK_Setting_assertions_in_configuration_files"></a> 構成ファイル内のアサーションの設定  
  アサーションは、コード内だけでなく、プログラム構成ファイル内でも設定できます。 詳細については、<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName><xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>」または」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>   
  <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>   
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   

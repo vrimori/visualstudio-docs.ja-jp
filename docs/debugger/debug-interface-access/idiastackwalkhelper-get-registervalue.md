@@ -1,29 +1,25 @@
 ---
-title: "IDiaStackWalkHelper::get_registerValue |Microsoft ドキュメント"
-ms.custom: 
+title: IDiaStackWalkHelper::get_registerValue |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaStackWalkHelper2::get_registerValue method
 ms.assetid: 46ac5eee-73a3-44a1-8635-6c58ba193cb6
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dac8991fa31aae0ba65b0377e159b20256c4a416
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: bd6aacde400309c6d0f9f78c8ec0fc540fea1428
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiastackwalkhelpergetregistervalue"></a>IDiaStackWalkHelper::get_registerValue
 レジスタの値を取得します。  
@@ -50,6 +46,6 @@ HRESULT get_registerValue (
 ## <a name="remarks"></a>コメント  
  サイズに関係なく、`pRetVal`パラメーター、実装がだけ何レジスタは、通常を保持を格納する必要があります。 たとえば、8 ビット レジスタはだけ、最下位 8 ビットの指定した値を保持します。 この 8 ビット値は、このメソッドから返されるときに 64 ビットに拡張されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   
  [CV_HREG_e 列挙型](../../debugger/debug-interface-access/cv-hreg-e.md)

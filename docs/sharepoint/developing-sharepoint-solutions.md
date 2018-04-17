@@ -1,13 +1,10 @@
 ---
-title: "SharePoint ソリューションの開発 |Microsoft ドキュメント"
-ms.custom: 
+title: SharePoint ソリューションの開発 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.Project.ProjectProperties
 - VS.SharePointTools.Project.ProjectItemProperties
@@ -18,14 +15,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, overview
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 848ddab54dd9e7617cce7758fa06d939700f2c3b
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: cf4e6f10d76b29c5bf70ce01d99a2103672ae213
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="developing-sharepoint-solutions"></a>SharePoint ソリューションの開発
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] には、SharePoint サイトおよびサイト要素を作成するための SharePoint プロジェクトの種類のテンプレートがいくつか用意されています。 使用可能なプロジェクトの種類の一覧は、次を参照してください。 [SharePoint プロジェクトとプロジェクト項目テンプレート](../sharepoint/sharepoint-project-and-project-item-templates.md)です。 次に、SharePoint プロジェクトの要素およびプロパティについて説明します。  
@@ -56,7 +53,7 @@ ms.lasthandoff: 01/10/2018
  SharePoint プロジェクトに追加したフィーチャーは、 **ソリューション エクスプローラー** にノードとして表示され、"Feature*x*.feature" という既定の名前が付けられます ( *x* は一意の番号)。 SharePoint Server にフィーチャーが配置されると、SharePoint 管理者は SharePoint サイト ユーザーが使用できるようにそれをアクティブ化することができます。  
   
 #### <a name="package-node"></a>[Package] ノード  
- **[Package]** ノードには、SharePoint プロジェクトの配布メカニズムとして機能するファイルが 1 つだけ含まれています。 これは *ソリューション**package*と呼ばれ、.WSP という拡張子を持つ .CAB ベースのファイルです。 ソリューション パッケージは、SharePoint サイトに適用される一連のフィーチャー、サイト定義、およびアセンブリを含んでいる配置可能で再利用可能なファイルであり、これは個別に有効または無効にできます。 **パッケージ**ノードがである Package.wspdef というファイルにはも必ず含まれています、[!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]パッケージ定義ファイルです。 SharePoint を実行しているサーバーにパッケージが配置されると、SharePoint 管理者はそのパッケージをインストールしてフィーチャーをアクティブにできます。  
+ **[Package]** ノードには、SharePoint プロジェクトの配布メカニズムとして機能するファイルが 1 つだけ含まれています。 このファイルと呼ばれる、*ソリューション * * パッケージ*はします。CAB に基づくと、します。WSP 拡張します。 ソリューション パッケージは、SharePoint サイトに適用される一連のフィーチャー、サイト定義、およびアセンブリを含んでいる配置可能で再利用可能なファイルであり、これは個別に有効または無効にできます。 **パッケージ**ノードがである Package.wspdef というファイルにはも必ず含まれています、[!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]パッケージ定義ファイルです。 SharePoint を実行しているサーバーにパッケージが配置されると、SharePoint 管理者はそのパッケージをインストールしてフィーチャーをアクティブにできます。  
   
  表示したりを [パッケージ] ノードをダブルクリックするか、ショートカット メニューを開き、選択し、パッケージ デザイナーでパッケージの内容を変更する**開く**です。 詳細については、次を参照してください。 [SharePoint ソリューション パッケージの作成](../sharepoint/creating-sharepoint-solution-packages.md)です。  
   
@@ -132,10 +129,10 @@ ms.lasthandoff: 01/10/2018
 |[方法: マップされたフォルダーを追加および削除する](../sharepoint/how-to-add-and-remove-mapped-folders.md)|SharePoint のリソースに容易にアクセスできるよう、マップされたフォルダーをプロジェクトに追加する方法を説明します。|  
 |[サンドボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)|サンドボックス ソリューションに関連した問題について説明します。|  
 |[SharePoint ソリューションのセキュリティ](../sharepoint/security-for-sharepoint-solutions.md)|[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で SharePoint ソリューションを開発する際のセキュリティ上の考慮事項について説明します。|  
-|[URL ピッカー ダイアログ ボックス &#40;です。Visual Studio &#41; での SharePoint 開発](../sharepoint/url-picker-dialog-box-sharepoint-development-in-visual-studio.md)|プロジェクト内またはローカル SharePoint サーバー上のリソースへのパス参照を追加するために使用できるダイアログ ボックスについて説明します。|  
+|[URL ピッカー ダイアログ ボックス&#40;Visual Studio での SharePoint 開発&#41;](../sharepoint/url-picker-dialog-box-sharepoint-development-in-visual-studio.md)|プロジェクト内またはローカル SharePoint サーバー上のリソースへのパス参照を追加するために使用できるダイアログ ボックスについて説明します。|  
   
-## <a name="see-also"></a>参照  
- [作業の開始 (&) #40 です。Visual Studio &#41; での SharePoint 開発](../sharepoint/getting-started-sharepoint-development-in-visual-studio.md)   
+## <a name="see-also"></a>関連項目  
+ [作業の開始&#40;Visual Studio での SharePoint 開発&#41;](../sharepoint/getting-started-sharepoint-development-in-visual-studio.md)   
  [サーバー エクスプ ローラーを使用して SharePoint 接続の参照](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)   
  [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)   
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  

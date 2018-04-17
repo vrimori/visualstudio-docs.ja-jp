@@ -1,27 +1,23 @@
 ---
-title: "デザイナーには、サポート提供する元に戻す |Microsoft ドキュメント"
-ms.custom: 
+title: デザイナーには、サポート提供する元に戻す |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - designers [Visual Studio SDK], undo support
 ms.assetid: 43eb1f14-b129-404a-8806-5bf9b099b67b
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 98243c15f5f69a9aecba589b966d56a68201ab2a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5fc289426c2560e978819efcd8eaf17e56b224a8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supplying-undo-support-to-designers"></a>デザイナーに元に戻す機能を提供します。
 通常、デザイナー、エディターに対しと同様には、コード要素を変更する場合、ユーザーは、最近の変更を取り消すことができるように、元に戻す操作をサポートする必要があります。  
@@ -30,7 +26,7 @@ ms.lasthandoff: 12/22/2017
   
  元に戻す機能のサポートを提供する必要があるデザイナーの実装。  
   
--   抽象基本クラスを実装することで元に戻す管理を提供します。<xref:System.ComponentModel.Design.UndoEngine>  
+-   抽象基本クラスを実装することで元に戻す管理を提供します。 <xref:System.ComponentModel.Design.UndoEngine>  
   
 -   指定の永続化および CodeDOM を実装することによってサポート、<xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>と<xref:System.ComponentModel.Design.IComponentChangeService>クラスです。  
   
@@ -73,7 +69,7 @@ ms.lasthandoff: 12/22/2017
   
  環境の SDK では、CodeDOM と永続化を指定することによってサポートします。  
   
--   <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService>実装として、<xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>  
+-   <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService> 実装として、 <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>  
   
  A<xref:System.ComponentModel.Design.IComponentChangeService>によって提供される、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]' デザイン ホストします。  
   
@@ -100,13 +96,13 @@ ms.lasthandoff: 12/22/2017
   
 -   プロパティの変更はを通じて行われます、<xref:System.ComponentModel.TypeDescriptor>オブジェクト。  
   
--   <xref:System.ComponentModel.Design.IComponentChangeService>イベントは取り消し可能な変更がコミットされたときに手動で生成されます。  
+-   <xref:System.ComponentModel.Design.IComponentChangeService> イベントは取り消し可能な変更がコミットされたときに手動で生成されます。  
   
 -   コンテキスト内で作成された、デザイナーでの変更、<xref:System.ComponentModel.Design.DesignerTransaction>です。  
   
 -   いずれかを使用して元に戻す単位の実装によって提供される標準の undo ユニットを明示的に作成する、デザイナーで選択<xref:System.ComponentModel.Design.UndoEngine.UndoUnit>または Visual Studio に固有の実装<xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine.UndoUnit>から派生した<xref:System.ComponentModel.Design.UndoEngine.UndoUnit>も提供し、両方の実装<xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit>と<xref:Microsoft.VisualStudio.OLE.Interop.IOleParentUndoUnit>です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.ComponentModel.Design.UndoEngine>   
  <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine>   
  [デザイン時サポートの拡張](http://msdn.microsoft.com/Library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)

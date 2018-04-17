@@ -1,27 +1,25 @@
 ---
-title: "匿名メソッドとコード分析 |Microsoft ドキュメント"
-ms.custom: 
+title: 匿名メソッドとコード分析 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 helpviewer_keywords:
 - methods, anonymous
 - code analysis, anonymous methods
 - anonymous methods, code analysis
 ms.assetid: bf0a1a9b-b954-4d46-9c0b-cee65330ad00
-caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0c7016145d5d34c9077f45f2dbf6c1507aa0e6fb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: ced736f74be4216a069b27aed096989a89cf518d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="anonymous-methods-and-code-analysis"></a>匿名メソッドとコード分析
 *匿名メソッド*メソッド名を持っていないです。 匿名メソッドは、コード ブロックをデリゲートのパラメーターとして渡すを最も頻繁に使用されます。  
@@ -153,5 +151,5 @@ class Class
   
  2 つの方法でこの問題を回避することができます。 宣言すること**anonymousMethod**で共通のコンス トラクターをすべてのコンス トラクター チェーン。 または、すべてのコンス トラクターによって呼び出される初期化メソッドで宣言する可能性があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マネージ コードの品質の分析](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)

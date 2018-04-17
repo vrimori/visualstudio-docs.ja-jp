@@ -1,12 +1,10 @@
 ---
-title: "方法: プログラムによって文書内のテキストを非表示に |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: プログラムによって文書内のテキストを非表示に |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - text [Office development in Visual Studio], hiding in documents
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 252a6356955af9e1529dff046448efbc57d9638f
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: b8e2ea2f5f8af3876fe64d90d5f2d77874ebb252
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-hide-text-in-documents"></a>方法: プログラムによって文書内のテキストを非表示にする
   特定範囲のテキストに対応する <xref:Microsoft.Office.Interop.Word._Font.Hidden%2A> の <xref:Microsoft.Office.Interop.Word.Range.Font%2A> プロパティを設定して、文書内のテキストを非表示にできます。  
@@ -57,7 +56,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  このコード例では、 <xref:Microsoft.Office.Tools.Word.Bookmark> という名前の <xref:Microsoft.Office.Interop.Word.Bookmark> コントロール (ドキュメント レベルのカスタマイズの場合) または `bookmark1`コントロール (VSTO アドインの場合) が文書に含まれていることを前提にしています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: プログラムによって文書を印刷します。](../vsto/how-to-programmatically-print-documents.md)   
  [方法: プログラムによってを定義し、ドキュメントで範囲を選択](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)   
  [方法: プログラムによってリセット Word 文書の範囲](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md)   

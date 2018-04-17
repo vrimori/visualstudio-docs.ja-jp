@@ -1,28 +1,26 @@
 ---
-title: "VSIX Language Pack 2.0 スキーマ参照 |Microsoft ドキュメント"
-ms.custom: 
+title: VSIX Language Pack 2.0 スキーマ参照 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 10/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - language pack
 - localize vsix
 - localize package
 - localize extension
 ms.assetid: 2a2932bc-cdbe-4d32-91fa-a3e0474f9098
-caps.latest.revision: "8"
 ms.author: dagriffe
 author: dgriffen
-manager: ghogen
-ms.workload: dagriffe
-ms.openlocfilehash: b601653e4b2d309d41f32ff71666567ab860e698
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- dagriffe
+ms.openlocfilehash: 571f90f31014dcc4d5686483bfc037e458f4a31e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vsix-language-pack-schema-20-reference"></a>VSIX Language Pack 2.0 スキーマ参照
 
@@ -35,14 +33,14 @@ VSIX Language Pack スキーマでは、VSIX パッケージのローカライ�
 ### <a name="packagelangaugepackmanifest-element"></a>PackageLangaugePackManifest 要素
 
 内で、`<PackageLanguagePackManifest>`要素の次の要素が存在する必要があります。
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |`<Metadata>`| すべてのパッケージのローカライズされたメタデータを含む要素
 
 ### <a name="metadata-element"></a>メタデータ要素
 
 内で、`<Metadata>`要素の次の要素を持つことができます。
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |`<DisplayName>`|インストールする拡張機能のローカライズされた名前|
 |`<Description>`|インストールする拡張機能のローカライズされた説明|
@@ -67,9 +65,9 @@ VSIX Language Pack スキーマでは、VSIX パッケージのローカライ�
 </PackageLanguagePackManifest>
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |[VSIX パッケージのローカライズ](../extensibility/localizing-vsix-packages.md)|VSIX パッケージのローカライズされたインストールのサポートを提供する方法を示します。|
 |[VSIX 拡張機能スキーマ 2.0 リファレンス](../extensibility/vsix-extension-schema-2-0-reference.md)|VSIX マニフェストが Visual Studio の拡張を使用してインストールすることができます、.vsix 展開ファイルの内容を記述、**拡張機能と更新プログラム** ダイアログ ボックス。|

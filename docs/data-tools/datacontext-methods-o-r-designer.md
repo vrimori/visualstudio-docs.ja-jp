@@ -1,26 +1,23 @@
 ---
-title: "DataContext メソッド (O R デザイナー) |Microsoft ドキュメント"
-ms.custom: 
+title: DataContext メソッド (O R デザイナー) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c149f4e5-3b61-4c33-892e-3e26d47f3eeb
-caps.latest.revision: "5"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 5eb37bd3abbf88b04bed0d382e07abe4379eb661
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 9c0eda7461ffe8f90edfb8b9ddaa10a9fa4caf3b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datacontext-methods-or-designer"></a>DataContext メソッド (O/R デザイナー)
-<xref:System.Data.Linq.DataContext>メソッド (のコンテキストで、 [LINQ to SQL ツール Visual Studio で](../data-tools/linq-to-sql-tools-in-visual-studio2.md)) のメソッドは、<xref:System.Data.Linq.DataContext>データベースでストアド プロシージャと関数を実行するクラス。  
+<xref:System.Data.Linq.DataContext> メソッド (のコンテキストで、 [LINQ to SQL ツール Visual Studio で](../data-tools/linq-to-sql-tools-in-visual-studio2.md)) のメソッドは、<xref:System.Data.Linq.DataContext>データベースでストアド プロシージャと関数を実行するクラス。  
   
  <xref:System.Data.Linq.DataContext> クラスは、SQL Server データベースと、そのデータベースにマップされる [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] エンティティ クラスの間のパイプ役として機能する [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] クラスです。 <xref:System.Data.Linq.DataContext>クラスには、接続文字列の情報と、データベースに接続して、データベース内のデータを操作するためのメソッドが含まれています。 既定では、<xref:System.Data.Linq.DataContext>クラスには、いくつかのメソッド呼び出すことができるなどにはが含まれています、<xref:System.Data.Linq.DataContext.SubmitChanges%2A>を送信するメソッドから更新されたデータ[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]データベースへのクラスです。 作成することも追加<xref:System.Data.Linq.DataContext>ストアド プロシージャおよび関数にマップされるメソッド。 つまり、これらのカスタム メソッドを呼び出すと、<xref:System.Data.Linq.DataContext> メソッドのマップ先となっているデータベース内のストアド プロシージャまたは関数が実行されます。 メソッドを追加して任意のクラスを拡張するのと同じように、<xref:System.Data.Linq.DataContext> クラスに新しいメソッドを追加できます。 ただし、に関するディスカッションに<xref:System.Data.Linq.DataContext>メソッドのコンテキストで、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]は、<xref:System.Data.Linq.DataContext>ストアド プロシージャおよびについては説明されている関数にマップされるメソッド。  
   
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
  データベースから O/R デザイナー画面にドラッグしたオブジェクトには、データベース内のオブジェクトの名前に基づいて自動的に名前が付けられます。 同じオブジェクトを複数回ドラッグすると、新しい名前の末尾に名前を区別する番号が付けられます。 データベース オブジェクト名にスペースや Visual Basic または C# でサポートされない文字が含まれている場合、そのスペースまたは無効な文字はアンダースコアに置き換えられます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [LINQ to Visual Studio での SQL ツール](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
  [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)   
  [ストアド プロシージャ](/dotnet/framework/data/adonet/sql/linq/stored-procedures)   

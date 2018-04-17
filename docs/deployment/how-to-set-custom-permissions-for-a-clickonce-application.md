@@ -1,12 +1,10 @@
 ---
-title: "方法: ClickOnce アプリケーションのカスタム アクセス許可を設定 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ClickOnce アプリケーションのカスタム アクセス許可を設定 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - ClickOnce applications, permissions
 - permissions, ClickOnce applications
 ms.assetid: 660459ca-ef73-44a8-b323-610001f63b93
-caps.latest.revision: "17"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: a2a9a3315b58fa0181c004917081362cf60df4c0
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.workload:
+- multiple
+ms.openlocfilehash: 62c9d97b73c1c640f6fbc1ced15936be86f38e29
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-set-custom-permissions-for-a-clickonce-application"></a>方法 : ClickOnce アプリケーションのカスタム アクセス許可を設定する
 インターネット ゾーンまたはローカル イントラネット ゾーンの既定のアクセス許可を使用する [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを配置できます。 または、アプリケーションに必要な特定のアクセス許可用にカスタム ゾーンを作成することもできます。 そのためには、 **プロジェクト デザイナー** の **[セキュリティ]**ページでセキュリティのアクセス許可をカスタマイズします。  
@@ -52,7 +50,7 @@ ms.lasthandoff: 01/22/2018
     > [!NOTE]
     >  アクセス許可セットの `ToXml` メソッドを使用して、アプリケーション マニフェスト用の XML コードを生成できます。 たとえば、 <xref:System.Security.Permissions.EnvironmentPermission> アクセス許可セットの XML を生成するには、 <xref:System.Security.Permissions.EnvironmentPermission.ToXml%2A> メソッドを呼び出します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーションのセキュリティ](../deployment/securing-clickonce-applications.md)   
  [ClickOnce アプリケーションのコード アクセス セキュリティ](../deployment/code-access-security-for-clickonce-applications.md)   
  [ClickOnce アプリケーションのセキュリティ](../deployment/securing-clickonce-applications.md)

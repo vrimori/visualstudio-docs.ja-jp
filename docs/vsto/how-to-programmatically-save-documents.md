@@ -1,12 +1,10 @@
 ---
-title: "方法: プログラムによって文書を保存 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: プログラムによって文書を保存 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - Word [Office development in Visual Studio], saving documents
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 68bf8450906dae3faf5f62acd2d057718938b520
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 89e2a236d8755b764971b7823056edda3e944e65
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-save-documents"></a>方法: プログラムによって文書を保存する
   Microsoft Office Word 文書を保存するいくつかの方法はあります。 ドキュメントを保存するには、ドキュメントの名前を変更することがなくまたは新しい名前を持つドキュメントを保存することができます。  
@@ -88,7 +87,7 @@ ms.lasthandoff: 01/10/2018
   
 -   C ドライブに新しい名前を持つドキュメントを保存するには、テストをという名前のディレクトリが存在する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: プログラムによって文書を閉じる](../vsto/how-to-programmatically-close-documents.md)   
  [方法: プログラムによって既存のドキュメントを開く](../vsto/how-to-programmatically-open-existing-documents.md)   
  [Document ホスト項目](../vsto/document-host-item.md)   

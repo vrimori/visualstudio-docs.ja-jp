@@ -1,29 +1,27 @@
 ---
-title: "方法: 図形またはデコレーターのクリックをインターセプト |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 図形またはデコレーターのクリックをインターセプト |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a4e096209c462452a7956f89560edaa74d8678cc
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: a1eecce61b59016c0fa359f861fc1edb0ebc61a8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>方法: シェイプまたはデコレーターに対するクリック操作を受け取る
 次の手順では、図形、またはアイコン デコレーターのクリックをインターセプトする方法を示します。 クリックをインターセプトできますをダブルクリックしたにドラッグすると、その他のジェスチャ、し応答要素を作成します。  
   
 ## <a name="to-intercept-clicks-on-shapes"></a>図形の上のクリックをインターセプトするには  
- Dsl のプロジェクトでは、生成されたコード ファイルから別のコード ファイルには、shape クラスの部分クラス定義を記述します。 オーバーライド`OnDoubleClick()`または名前の先頭にある他のメソッドの 1 つ`On...`です。 例:  
+ Dsl のプロジェクトでは、生成されたコード ファイルから別のコード ファイルには、shape クラスの部分クラス定義を記述します。 オーバーライド`OnDoubleClick()`または名前の先頭にある他のメソッドの 1 つ`On...`です。 例えば:  
   
 ```  
 public partial class MyShape // change  
@@ -397,6 +395,6 @@ namespace Company.CompartmentDrag
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [対応し、変更を反映します。](../modeling/responding-to-and-propagating-changes.md)   
  [デコレーターのプロパティ](../modeling/properties-of-decorators.md)

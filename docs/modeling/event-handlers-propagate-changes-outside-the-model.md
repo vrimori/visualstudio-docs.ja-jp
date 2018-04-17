@@ -1,24 +1,22 @@
 ---
-title: "イベント ハンドラーには、モデルの外部で変更が反映されるまで |Microsoft ドキュメント"
-ms.custom: 
+title: イベント ハンドラーには、モデルの外部で変更が反映されるまで |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 - Domain-Specific Language, events
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 8b5c957fbc3ae5eb3e71f087c57cbf07188de2ff
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: c91264d459648315fa7ce2c0d58651383ea9edd2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>イベント ハンドラーによって変更内容がモデル外に反映される
 Visualization and Modeling SDK がでは、ストア以外の変数、ファイル、その他のストア、またはその他のモデルなど、ストアの外部リソースへの変更を反映するストアのイベント ハンドラーを定義することができます[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張機能です。 ストアのイベント ハンドラーは、トリガーを起動するイベントが発生したトランザクションの終了後に実行されます。 元に戻す/やり直し操作でも実行されます。 そのため、ストアの規則とは異なりストア イベントは、ストア以外の値を更新するため、最も役に立つです。 クラスにリッスンするように、.NET イベントとは異なりストア イベント ハンドラーが登録されている: インスタンスごとに個別のハンドラーを登録する必要はありません。 間の変更を処理するさまざまな方法を選択する方法の詳細については、次を参照してください。[への応答と変更を反映する](../modeling/responding-to-and-propagating-changes.md)です。  
@@ -29,13 +27,13 @@ Visualization and Modeling SDK がでは、ストア以外の変数、ファイ�
   
 1.  監視するイベントの種類を選択します。 プロパティの完全な一覧を調べて<xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory>です。 各プロパティは、イベントの種類に対応します。 頻繁に使用するイベントの種類は。  
   
-    -   `ElementAdded`モデル要素のときにトリガーされると、関係のリンク、図形またはコネクタを作成します。  
+    -   `ElementAdded` モデル要素のときにトリガーされると、関係のリンク、図形またはコネクタを作成します。  
   
     -   ElementPropertyChanged - がトリガーされたときの値、`Normal`ドメイン プロパティが変更されました。 新旧の値が等しくない場合にのみ、イベントがトリガーされます。 イベントは、計算およびカスタムのストレージ プロパティに適用できません。  
   
          リレーションシップ リンクに対応するロールのプロパティを適用することはできません。 代わりに、`ElementAdded`ドメインの関係を監視します。  
   
-    -   `ElementDeleted`-トリガーされると、モデル要素の後、リレーションシップ、図形またはコネクタが削除されます。 引き続き、要素のプロパティの値にアクセスできますが、その他の要素へのリレーションシップはありません。  
+    -   `ElementDeleted` -トリガーされると、モデル要素の後、リレーションシップ、図形またはコネクタが削除されます。 引き続き、要素のプロパティの値にアクセスできますが、その他の要素へのリレーションシップはありません。  
   
 2.  部分クラス定義を追加*YourDsl * * * DocData** で別のコード ファイルで、 **DslPackage**プロジェクト。  
   
@@ -43,7 +41,7 @@ Visualization and Modeling SDK がでは、ストア以外の変数、ファイ�
   
 4.  オーバーライド`OnDocumentLoaded()`ハンドラーを登録します。 複数のハンドラーを使っている場合は、すべて同じ場所に登録できます。  
   
- 登録コードの場所は重要ではありません。 `DocView.LoadView()`代替の場所です。  
+ 登録コードの場所は重要ではありません。 `DocView.LoadView()` 代替の場所です。  
   
 ```  
 using System;  
@@ -174,7 +172,7 @@ private static void AlbumTitleAdjuster(object sender,
 ## <a name="store-event-types"></a>イベントの種類を保存します。  
  各イベントの種類は、Store.EventManagerDirectory でコレクションに対応します。 追加するか、いつでもイベント ハンドラーを削除ですが、通常、ドキュメントが読み込まれるときに追加します。  
   
-|`EventManagerDirectory`プロパティ名|実行すると実行|  
+|`EventManagerDirectory` プロパティ名|実行すると実行|  
 |-------------------------------------------|-------------------|  
 |ElementAdded|ドメイン クラス、ドメインの関係、図形、コネクタまたはダイアグラムのインスタンスが作成されます。|  
 |ElementDeleted|モデル要素が、ストアの要素のディレクトリから削除された、不要になったソースまたはリレーションシップのターゲット。 要素は、実際には、メモリからは削除されませんが、将来の取り消しが発生した場合に保持されます。|  
@@ -188,7 +186,7 @@ private static void AlbumTitleAdjuster(object sender,
 |TransactionCommitted||  
 |TransactionRolledBack||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [対応し、変更を反映します。](../modeling/responding-to-and-propagating-changes.md)   
  [サンプル コード: 回路図](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
  

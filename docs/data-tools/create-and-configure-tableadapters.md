@@ -1,11 +1,8 @@
 ---
-title: "作成し、Tableadapter を構成する |Microsoft ドキュメント"
-ms.custom: 
+title: 作成し、Tableadapter を構成する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 09/01/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - table adapters, creating
 - creating TableAdapters
@@ -13,17 +10,17 @@ helpviewer_keywords:
 - data [Visual Studio], TableAdapters
 - data [Visual Studio], creating table adapters
 ms.assetid: 08630d69-0d6c-4e8f-b42d-2922f45f8415
-caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 3c9b501b78a82a94b81b2a29c86fd07a7a0d7f98
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 4cfc4815a61a6a15d6a5eef6a8efc3502bef7a73
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-and-configure-tableadapters"></a>作成し、Tableadapter を構成します。
 TableAdapter を使用すると、アプリケーションとデータベース間で通信できます。 データベース、クエリまたはストアド プロシージャに接続して、新しいデータを返すか、テーブルまたは既存の fill<xref:System.Data.DataTable>返されたデータです。 Tableadapter では、データベースに、アプリケーションから更新されたデータを送信することもできます。  

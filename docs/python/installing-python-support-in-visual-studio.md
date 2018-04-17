@@ -1,27 +1,27 @@
 ---
-title: "Visual Studio での Python サポートのインストール | Microsoft Docs"
-description: "Visual Studio 2017、2015、2013、2012、2010 で Python Tools for Visual Studio (PTVS) をインストールする方法の詳細と、オプションやインストールの場所について説明します。"
-ms.custom: 
+title: Python サポートのインストール | Microsoft Docs
+description: Visual Studio 2017、2015、2013、2012、2010 で Python Tools for Visual Studio (PTVS) をインストールする方法の詳細と、オプションやインストールの場所について説明します。
+ms.custom: ''
 ms.date: 02/15/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3cc0b6b99dd76a531ed3e99dcac8ae5d438d7e63
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 33b9a56d88b4f64c4253126dafa5e3515aa498c6
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="installing-python-support-in-visual-studio-on-windows"></a>Windows に Visual Studio の Python サポートをインストールする
 
@@ -43,7 +43,7 @@ Visual Studio 2015 以前では、任意の [Python インタープリターを�
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. 最新の Visual Studio 2017 インストーラーをダウンロードし、実行します。 Visual Studio が既にインストールされている場合は、Visual Studio インストーラーを実行し、手順 2 へ進みます。
+1. 最新の Visual Studio 2017 インストーラーをダウンロードし、実行します。 Visual Studio が既にインストールされている場合は、Visual Studio インストーラーを実行し、**[変更]** オプションを選択して ([Visual Studio の変更](../install/modify-visual-studio.md)に関するページをご覧ください)、手順 2 へ進みます。
 
     > [!div class="nextstepaction"]
     > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_install">Visual Studio 2017 のインストールに関するコミュニティ</a>

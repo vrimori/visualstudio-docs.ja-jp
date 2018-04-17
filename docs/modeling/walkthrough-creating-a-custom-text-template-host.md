@@ -1,27 +1,25 @@
 ---
-title: "チュートリアル: カスタム テキスト テンプレート ホストの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: カスタム テキスト テンプレート ホストの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [text templates], custom host
 - text templates, custom host walkthrough
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ad2bc2a049a0a96a8093289af4648f077f2d1478
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: b5084734e06eb911aa53a6436ba9ee29cb85f702
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-custom-text-template-host"></a>チュートリアル: カスタム テキスト テンプレート ホストの作成
-A*テキスト テンプレート * * ホスト*を有効にする環境を提供、*テキスト テンプレート変換エンジン*を実行します。 ホストは、エンジンとファイル システムとの対話を管理します。 エンジンまたは*ディレクティブ プロセッサ*ファイルが必要なまたはアセンブリは、ホストからリソースを要求することができます。 ホストは、要求されたリソースをディレクトリとグローバル アセンブリ キャッシュ内で探すことができます。 詳細については、次を参照してください。 [、テキスト テンプレート変換プロセス](../modeling/the-text-template-transformation-process.md)です。  
+A *テキスト テンプレート**ホスト* を有効にする環境を提供、*テキスト テンプレート変換エンジン*を実行します。 ホストは、エンジンとファイル システムとの対話を管理します。 エンジンまたは*ディレクティブ プロセッサ*ファイルが必要なまたはアセンブリは、ホストからリソースを要求することができます。 ホストは、要求されたリソースをディレクトリとグローバル アセンブリ キャッシュ内で探すことができます。 詳細については、次を参照してください。 [、テキスト テンプレート変換プロセス](../modeling/the-text-template-transformation-process.md)です。  
   
  使用するかどうか、カスタム ホストを書き込むことができます、*テキスト テンプレート変換*外から機能[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]またはカスタム ツールにその機能を統合する場合。 カスタム ホストを作成するには、<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> を継承するクラスを作成する必要があります。 個々のメソッドの説明については、「<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>」を参照してください。  
   
@@ -52,7 +50,7 @@ A*テキスト テンプレート * * ホスト*を有効にする環境を提�
   
     -   **Microsoft.VisualStudio.TextTemplating.\*.0**  
   
-    -   **Microsoft.VisualStudio.TextTemplating.Interfaces.10.0 and later versions**  
+    -   **Microsoft.visualstudio.texttemplating.interfaces.10.0 以降のバージョン**  
   
 3.  Program.cs ファイルまたは Module1.vb ファイル内のコードを次のコードに置き換えます。  
   
@@ -818,5 +816,5 @@ A*テキスト テンプレート * * ホスト*を有効にする環境を提�
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルでは、基本的な変換機能をサポートするテキスト テンプレート変換ホストを作成しました。 ホストの機能を拡張して、カスタム ディレクティブ プロセッサまたは生成されたディレクティブ プロセッサを呼び出すテキスト テンプレートをサポートすることもできます。 詳細については、次を参照してください。[チュートリアル: 生成されたディレクティブ プロセッサにホストに接続する](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>

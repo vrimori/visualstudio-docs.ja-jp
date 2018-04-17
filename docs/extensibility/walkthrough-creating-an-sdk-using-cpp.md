@@ -1,23 +1,21 @@
 ---
-title: "チュートリアル: C++ を使用して、SDK の作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: C++ を使用して、SDK の作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 36ea793b-3832-41a1-b906-69e680ad5e1d
-caps.latest.revision: "32"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 7a4091506bcd16222ff02600bd924d3526d57c38
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 33880dc3b9c359798c47c666debc3d5564524794
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-an-sdk-using-c"></a>チュートリアル: C++ を使用して SDK を作成します。
 このチュートリアルでは、ネイティブ C++ 数値演算ライブラリ、SDK パッケージとして、Visual Studio Extension (VSIX)、SDK を作成し、それを使用して、アプリを作成する方法を示します。 このチュートリアルは、次の手順に分かれています。  
@@ -31,7 +29,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
   
-##  <a name="createClassLibrary"></a>ネイティブおよび Windows ランタイム ライブラリを作成するには  
+##  <a name="createClassLibrary"></a> ネイティブおよび Windows ランタイム ライブラリを作成するには  
   
 1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 01/09/2018
   
 9. メニュー バーの **[ビルド]**、 **[ソリューションのビルド]**の順にクリックします。  
   
-##  <a name="createVSIX"></a>NativeMathVSIX 拡張機能プロジェクトを作成するには  
+##  <a name="createVSIX"></a> NativeMathVSIX 拡張機能プロジェクトを作成するには  
   
 1.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、**ソリューション 'NativeMath'**を選択し**追加**、**新しいプロジェクト**です。  
   
@@ -143,7 +141,7 @@ ms.lasthandoff: 01/09/2018
   
 18. 選択、**インストール**ボタンをクリックし、インストールが終了するまで待機し、Visual Studio を起動します。  
   
-##  <a name="createSample"></a>クラス ライブラリを使用するサンプル アプリを作成するには  
+##  <a name="createSample"></a> クラス ライブラリを使用するサンプル アプリを作成するには  
   
 1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
   
@@ -171,7 +169,7 @@ ms.lasthandoff: 01/09/2018
   
 9. アプリの実行に F5 キーを押します。  
   
-10. アプリで、任意の 2 つの数値を入力し、操作を選択し、、  **=** ボタンをクリックします。  
+10. アプリで、任意の 2 つの数値を入力し、操作を選択し、、 **=**ボタンをクリックします。  
   
      正しい結果が表示されます。  
   
@@ -179,6 +177,6 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="next-steps"></a>次の手順  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: c# または Visual Basic を使用して、SDK の作成](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md)   
  [ソフトウェア開発キットを作成する](../extensibility/creating-a-software-development-kit.md)

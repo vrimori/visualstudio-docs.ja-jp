@@ -1,23 +1,21 @@
 ---
-title: "TargetPlatformName 要素 (Visual Studio テンプレート) |Microsoft ドキュメント"
-ms.custom: 
+title: TargetPlatformName 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 3a6b1f45-b5d6-418e-add1-87ee8f15033d
-caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 10aa5bca7a71294c7dbe297e9e4befb5da485bb7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 738021c693bf0ea82319c411e3b5832306f05503
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="targetplatformname-element-visual-studio-templates"></a>TargetPlatformName 要素 (Visual Studio テンプレート)
 プロジェクト テンプレートの対象となるプラットフォームを指定します。 この要素は、 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリを作成するためにプロジェクト テンプレートを使用することを指定するために使用されます。  
@@ -67,6 +65,6 @@ ms.lasthandoff: 12/22/2017
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)

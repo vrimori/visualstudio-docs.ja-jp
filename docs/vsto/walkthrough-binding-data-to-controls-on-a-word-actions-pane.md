@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: Word の操作ウィンドウ上のコントロールへのデータのバインド |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: Word の操作ウィンドウ上のコントロールへのデータのバインド |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +17,14 @@ helpviewer_keywords:
 - smart documents [Office development in Visual Studio], data binding
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: c53c8ba65c07f2c488f33835cb045524069e3285
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: d84c42e2b51d55cbbb73a7f26d6d6853ff7a3392
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-binding-data-to-controls-on-a-word-actions-pane"></a>チュートリアル : Word の操作ウィンドウ上のコントロールへのデータ バインディング
   このチュートリアルでは、Word の操作ウィンドウ上のコントロールへのデータ バインディングを示します。 このコントロールは、SQL Server データベースのテーブル間のマスター/詳細の関係を示します。  
@@ -238,7 +237,7 @@ ms.lasthandoff: 01/10/2018
   
 -   プロジェクトを配置します。 詳細については、次を参照してください。 [ClickOnce を使用して Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   
  [方法: Word 文書や Excel ブックに操作ウィンドウを追加](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   
  [Office ソリューションでのコントロールへのデータのバインド](../vsto/binding-data-to-controls-in-office-solutions.md)  

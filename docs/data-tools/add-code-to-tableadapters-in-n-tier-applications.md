@@ -1,11 +1,8 @@
 ---
-title: "N 層アプリケーションの TableAdapters にコードを追加 |Microsoft ドキュメント"
-ms.custom: 
+title: N 層アプリケーションの TableAdapters にコードを追加 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -13,17 +10,17 @@ helpviewer_keywords:
 - TableAdapters, n-tier applications
 - n-tier applications, extending TableAdapters
 ms.assetid: dafac00e-df9d-4d4a-95a6-e34b4d099425
-caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 54df2144511e847988c6f11212e9c9a4941d0b38
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 52c732842f5a98bfb1c78a125830f730aeeb5321
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-code-to-tableadapters-in-n-tier-applications"></a>N 層アプリケーションの TableAdapters にコードを追加します。
 TableAdapter の部分クラス ファイルを作成し、コードを追加して、TableAdapter の機能を拡張することができます (コードを追加するのではなく、 *DatasetName*です。DataSet.Designer ファイル) です。 部分クラスでは、コードを複数の物理ファイルに分割する特定のクラスを有効にします。 詳細については、次を参照してください。[部分](/dotnet/visual-basic/language-reference/modifiers/partial)または[partial (型)](/dotnet/csharp/language-reference/keywords/partial-type)です。  

@@ -1,30 +1,26 @@
 ---
-title: "IDebugMemoryBytes2::ReadAt |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugMemoryBytes2::ReadAt |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugMemoryBytes2::ReadAt
 helpviewer_keywords:
 - IDebugMemoryBytes2::ReadAt method
 - ReadAt method
 ms.assetid: b413684d-4155-4bd4-ae30-ffa512243b5f
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f4c71da3152394442d63c937b77e4f6538fcc1ae
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 612a065286723e3c2b68a9ce5bd31c850d030959
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugmemorybytes2readat"></a>IDebugMemoryBytes2::ReadAt
 指定された位置から始まるバイト シーケンスを読み取ります。  
@@ -79,6 +75,6 @@ int ReadAt(
   
  この場合、ため`*pdwRead + *pdwUnreadable < dwCount`、呼び出し元が呼び出しを要求元の 100 の残りの 30 バイトの読み取りを行う必要があります、 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)に渡されたオブジェクト、`pStartContext`パラメーターの詳細を設定する必要がありますによって 70 です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)   
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

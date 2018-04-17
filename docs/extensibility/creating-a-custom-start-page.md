@@ -1,23 +1,21 @@
 ---
-title: "作成するカスタム スタート ページ |Microsoft ドキュメント"
-ms.custom: 
+title: 作成するカスタム スタート ページ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: d67e0c53-9f5a-45fb-a929-b9d2125c3c82
-caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: f1ce8112adffabcee835d7adf598e73d327ca3b6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 71892262d98b175b111218068a02d03ad3d04caa
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-a-custom-start-page"></a>カスタム スタート ページを作成します。
 このドキュメントでの手順に従って、カスタム スタート ページを作成できます。  
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  XAML ファイル、および、サポート テキスト ファイルやマークアップ ファイルにコピー、 **%USERPROFILE%\My documents \visual Studio 2015 \startpages\\** フォルダーです。  
   
-2.  スタート ページが、コントロールや Visual Studio がインストールされていないアセンブリ内の型を参照する場合、アセンブリをコピーしでそれらを貼り付け*Visual Studio インストール フォルダー***\Common7\IDE\PrivateAssemblies\\**です。  
+2.  スタート ページが、コントロールや Visual Studio がインストールされていないアセンブリ内の型を参照する場合、アセンブリをコピーしでそれらを貼り付け * Visual Studio インストール フォルダー ***\Common7\IDE\PrivateAssemblies\\** .  
   
 3.  Visual Studio コマンド プロンプトで「 **devenv/rootsuffix Exp**を Visual Studio の実験用インスタンスを開きます。  
   
@@ -87,7 +85,7 @@ ms.lasthandoff: 12/22/2017
   
 -   スタート ページをテストし、安定していることを検出された後、使用、**スタート ページのカスタマイズ**オプション、**オプション**Visual Studio のプライマリ インスタンスのスタート ページとして選択するダイアログ ボックス  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: カスタム XAML をスタート ページに追加します。](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)   
  [スタート ページにユーザー コントロールを追加します。](../extensibility/adding-user-control-to-the-start-page.md)   
  [Visual Studio のコマンドをスタート ページに追加します。](../extensibility/adding-visual-studio-commands-to-a-start-page.md)   

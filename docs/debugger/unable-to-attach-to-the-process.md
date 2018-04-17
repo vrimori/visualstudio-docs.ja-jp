@@ -1,12 +1,9 @@
 ---
-title: "プロセスにアタッチできません |Microsoft ドキュメント"
-ms.custom: 
+title: プロセスにアタッチできません |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vs.debug.remote.unable2attach
@@ -17,14 +14,14 @@ dev_langs:
 - C++
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 15acb250c561cb1c7d414784f355a9239ead53ef
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: a7929be0825ec16ba7e3b6d594dfd96ee6a4dfb6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unable-to-attach-to-the-process"></a>[プロセスにアタッチできません] ダイアログ ボックス
 プロセスにアタッチできません。 このマシンに接続中にサーバー上のデバッガー コンポーネントのアクセスが拒否されました。  
@@ -47,7 +44,7 @@ ms.lasthandoff: 02/01/2018
   
 ### <a name="to-solve-scenario-2"></a>シナリオ 2 を解決するには  
   
-1.  **開始** メニューの 選択**コントロール パネルの** です。  
+1.  **開始** メニューの 選択**コントロール パネルの **です。  
   
 2.  コントロール パネルで、ダブルクリック**管理ツール**です。  
   
@@ -64,5 +61,5 @@ ms.lasthandoff: 02/01/2018
   
 7.  すべてのウィンドウを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)

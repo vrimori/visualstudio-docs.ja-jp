@@ -1,27 +1,25 @@
 ---
-title: "方法: Visual Studio の拡張の更新 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: Visual Studio の拡張の更新 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - update package
 - update extension
 - new package version
 ms.assetid: 93f79774-7b79-4dd6-94ad-13698f72c257
-caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 46b540f1c5ba5b345464948170287d2b354b7a0e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: c37f26ed8215bb7eac360c978ba902c8e95975ba
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-update-a-visual-studio-extension"></a>方法: Visual Studio の拡張の更新
 使用して、システムに Visual Studio 拡張機能を更新することができます**拡張機能と更新プログラム**更新されたバージョンをインストールします。 拡張機能の更新バージョンを作成する場合は、することを示します VSIX マニフェストのバージョン番号のインクリメントで更新します。  
@@ -64,6 +62,6 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  Visual Studio 2015 更新プログラム 2 より、ユーザー単位の拡張機能を自動更新するか、すべてのユーザー拡張機能を更新するか、両方を行うか (初期設定) 指定できます (**[ツール]、[オプション]、[環境]、[拡張機能と更新プログラム]**)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [VSIX パッケージの構造](../extensibility/anatomy-of-a-vsix-package.md)   
  [Visual Studio 拡張機能の検索と使用](../ide/finding-and-using-visual-studio-extensions.md)

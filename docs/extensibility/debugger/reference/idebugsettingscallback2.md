@@ -1,27 +1,23 @@
 ---
-title: "IDebugSettingsCallback2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugSettingsCallback2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IDebugSettingsCallback2 interface
 ms.assetid: 7e525d0b-7d7a-4d1c-8b78-e1398fa922f2
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 779550509dd6d30b16f30a47c1b9a2879d5034ab
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 54724d3e7652df6f7b5b61099136286257fca954
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugsettingscallback2"></a>IDebugSettingsCallback2
 デバッグを有効にメトリックの設定を読み取るエンジンでのリモートです。  
@@ -50,7 +46,7 @@ IDebugSettingsCallback2D : IUnknown
 |[GetMetricGuid](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricguid.md)|指定した名前、メトリックの一意の識別子を取得します。|  
 |[GetMetricString](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricstring.md)|指定した名前、メトリックの値の文字列を取得します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: Msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

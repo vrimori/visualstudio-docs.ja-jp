@@ -1,12 +1,10 @@
 ---
-title: "構造体とクラスに注釈を付ける |Microsoft ドキュメント"
-ms.custom: 
+title: 構造体とクラスに注釈を付ける |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - _Field_size_bytes_part_
 - _Field_size_bytes_full_opt_
@@ -23,16 +21,16 @@ f1_keywords:
 - _Field_size_full_
 - _Field_size_full_opt_
 ms.assetid: b8278a4a-c86e-4845-aa2a-70da21a1dd52
-caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8aafad0da7581f1fa07f1e0134df0032655d679a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 2735ae7ba6763a3006edce146df1b19cbaed2f2c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="annotating-structs-and-classes"></a>構造体とクラスに注釈を付ける
 不変式のように動作する注釈を使用して、構造体とクラスのメンバーに注釈を付けることができます: これらは任意の関数呼び出しまたは関数の開始/終了パラメーターまたは結果の値として、囲み構造を含むで true であると見なされます。  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
      Readable と writable の両方のサイズ要素 (またはバイト数) としてによって指定された単位を持つフィールドを`size`です。  
   
-     構造体またはクラス宣言に適用されます。  指定されているバイト数とその型の有効なオブジェクトを宣言された型よりも大きいする可能性があることを示します`size`です。  例:  
+     構造体またはクラス宣言に適用されます。  指定されているバイト数とその型の有効なオブジェクトを宣言された型よりも大きいする可能性があることを示します`size`です。  例えば:  
   
     ```cpp  
   
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/22/2017
     min(pM->nSize, sizeof(MyStruct))  
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C/C++ コード障害を減らす SAL 注釈の使用](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [SAL について](../code-quality/understanding-sal.md)   
  [関数パラメーターおよび戻り値の注釈を付ける](../code-quality/annotating-function-parameters-and-return-values.md)   

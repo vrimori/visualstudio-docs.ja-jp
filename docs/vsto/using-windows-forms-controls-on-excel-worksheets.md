@@ -1,12 +1,10 @@
 ---
-title: "Windows フォームの使用上の Excel ワークシートのコントロール |Microsoft ドキュメント"
-ms.custom: 
+title: Windows フォームの使用上の Excel ワークシートのコントロール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - controls [Office development in Visual Studio], Window Forms controls
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 2d4f783fd8e6746bed9f90e0fd59d8eb587bbc39
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: d4c754c0fff7f7a0f5c3bf31293696e3ec57961f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-windows-forms-controls-on-excel-worksheets"></a>Excel ワークシート上での Windows フォーム コントロールの使用
   Windows フォームにコントロールを追加することと同様に、Microsoft Office Excel ブックに Windows フォーム コントロールを追加できます。 ドキュメントのコントロールを使用した作業の概要については、次を参照してください。 [Office ドキュメントの概要での Windows フォーム コントロール](../vsto/windows-forms-controls-on-office-documents-overview.md)です。  
@@ -41,7 +40,7 @@ ms.lasthandoff: 01/10/2018
 ### <a name="formula-for-embedding-controls"></a>コントロールを埋め込むための数式  
  Excel 内でコントロールを選択すると、 **数式バー** に  " **=EMBED("WinForms.Control.Host","")**" と表示されます。 このテキストは必要なので、削除しないでください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: ワークシートのセル内のコントロールのサイズを変更します。](../vsto/how-to-resize-controls-within-worksheet-cells.md)   
  [方法: 印刷時にワークシートのコントロールを非表示にします。](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)   
  [チュートリアル: CheckBox コントロールを使用してワークシートの書式設定の変更](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md)   

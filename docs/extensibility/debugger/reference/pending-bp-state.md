@@ -1,29 +1,25 @@
 ---
-title: "PENDING_BP_STATE |Microsoft ドキュメント"
-ms.custom: 
+title: PENDING_BP_STATE |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - PENDING_BP_STATE
 helpviewer_keywords:
 - PENDING_BP_STATE enumeration
 ms.assetid: ac04ad72-fa92-4a15-ade2-0d0bbbadfc7f
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f98396b7ed1066cacce91ebd08d3cd414042f84e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ae632ab67a21d795a0594d37301c162c1c4ba753
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pendingbpstate"></a>PENDING_BP_STATE
 保留中のブレークポイント (バインドされていないブレークポイント) の状態を指定します。  
@@ -65,13 +61,13 @@ public enum enum_PENDING_BP_STATE {
 ## <a name="remarks"></a>コメント  
  として使用して、`state`のメンバー、 [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)構造体。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)

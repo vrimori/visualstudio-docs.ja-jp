@@ -1,26 +1,24 @@
 ---
-title: "Visual Studio シェル |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio シェル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - shell, Visual Studio
 - Visual Studio, shell
 ms.assetid: cb124ef4-1a6b-4bfe-bfbf-295ef9c07f36
-caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 9240df0a4f551ab4fa47fc2ceacaf0654dc562e4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 71b624cee0e55f95f90a86eac943828bbc26ac97
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-shell"></a>Visual Studio Shell
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]シェルは、プライマリのエージェントでの統合の[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。 シェルでは、一般的なサービスを共有する Vspackage を有効にするために必要な機能を提供します。 のアーキテクチャの目標[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Vspackage で主要な機能を権利発生権利には、シェルは、基本的な機能を提供し、Vspackage のコンポーネント間の相互通信をサポートするためのフレームワークです。  
@@ -44,9 +42,9 @@ ms.lasthandoff: 12/22/2017
   
     -   現在のプロジェクト  
   
-    -   現在のプロジェクト アイテムまたは ItemID 現在<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>  
+    -   現在のプロジェクト アイテムまたは ItemID 現在 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>  
   
-    -   現在の選択、**プロパティ**ウィンドウまたは`SelectionContainer`  
+    -   現在の選択、**プロパティ**ウィンドウまたは `SelectionContainer`  
   
     -   UI コンテキスト Id または CmdUIGuids コマンド、メニューのおよびツールバーの表示を制御します。  
   
@@ -82,7 +80,7 @@ ms.lasthandoff: 12/22/2017
   
 -   **ツールボックス**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>   
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>   

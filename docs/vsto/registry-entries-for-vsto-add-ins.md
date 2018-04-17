@@ -1,13 +1,10 @@
 ---
-title: "VSTO アドインのレジストリ エントリ |Microsoft ドキュメント"
-ms.custom: 
+title: VSTO アドインのレジストリ エントリ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,14 +16,14 @@ helpviewer_keywords:
 - registry entries [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4be05e4fb1b4fc74467f1607acaa3e84a6bdef95
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 5e4c410a6f934c7b4fe4c6239bdfe07364af3152
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registry-entries-for-vsto-add-ins"></a>VSTO アドインのレジストリ エントリ
   Visual Studio で作成した VSTO アドインを配置するときには、一連のレジストリ エントリを作成する必要があります。 それらのレジストリ エントリで指定する情報によって、Microsoft Office アプリケーションは VSTO アドインを検出し、読み込むことができます。  
@@ -52,7 +49,7 @@ ms.lasthandoff: 01/10/2018
 ### <a name="microsoft-office-version"></a>Microsoft Office のバージョン  
  Office アプリケーションは、HKEY_LOCAL_MACHINE または HKEY_CURRENT_USER に登録されている VSTO アドインを読み込むことができます。  
   
- HKEY_LOCAL_MACHINE に登録された VSTO アドインを読み込むには、コンピューターに更新パッケージ 976477 がインストールされている必要があります。 詳細については、 [http://go.microsoft.com/fwlink/?LinkId=184923](http://go.microsoft.com/fwlink/?LinkId=184923)を参照してください。  
+ HKEY_LOCAL_MACHINE に登録された VSTO アドインを読み込むには、コンピューターに更新パッケージ 976477 がインストールされている必要があります。 詳細については、「[http://go.microsoft.com/fwlink/?LinkId=184923](http://go.microsoft.com/fwlink/?LinkId=184923)」を参照してください。  
   
 ### <a name="deployment-type"></a>配置タイプ  
  ClickOnce を使用して VSTO アドインを配置する場合は、現在のユーザー用にのみ VSTO アドインを登録できます。 これは、ClickOnce が HKEY_CURRENT_USER の下へのキーの作成のみをサポートしているためです。 VSTO アドインをコンピューター上のすべてのユーザー用に登録する場合は、Windows インストーラーを使用して VSTO アドインを配置する必要があります。 これらの展開の種類の詳細については、次を参照してください。 [ClickOnce を使用して Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)と[Windows インストーラーを使用した Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-windows-installer.md)です。  
@@ -81,7 +78,7 @@ ms.lasthandoff: 01/10/2018
 |**説明**|REG_SZ|必須。 VSTO アドインの簡単な説明。<br /><br /> この説明は、ユーザーが Microsoft Office アプリケーションの **[オプション]** ダイアログ ボックスの **[アドイン]** ペインで VSTO アドインを選択したときに表示されます。|  
 |**FriendlyName**|REG_SZ|必須。 Microsoft Office アプリケーションの **[COM アドイン]** ダイアログ ボックスに表示される、VSTO アドインの説明的な名前。 既定値は VSTO アドイン ID です。|  
 |**LoadBehavior**|REG_DWORD|必須。 アプリケーションが VSTO アドインを読み込みを試行した時点と、VSTO アドインの現在の状態 (読み込まれているかアンロードされているか) を示す値。<br /><br /> このエントリの既定値は 3 です。これは、VSTO アドインが起動時に読み込まれたことを示します。 詳細については、「 [LoadBehavior の値](#LoadBehavior)」を参照してください。 **注:** VSTO アドインでユーザーを無効に、その操作によって**LoadBehavior** HKEY_CURRENT_USER レジストリ ハイブの値。 各ユーザーに対して、HKEY_CURRENT_USER ハイブの **LoadBehavior** の値によって、HKEY_LOCAL_MACHINE ハイブで定義された既定の **LoadBehavior** が上書きされます。|  
-|**Manifest**|REG_SZ|必須。 VSTO アドインの配置マニフェストの完全なパス。 ローカル コンピューター上の場所、ネットワーク共有 (UNC)、Web サーバー (HTTP) のいずれかを指定できます。<br /><br /> Windows インストーラーを使用してソリューションを配置する場合、 **マニフェスト** パスにプレフィックス " **file:///** " を追加する必要があります。 文字列を追加することも必要があります**(& a) #124; vstolocal** (つまり、パイプ文字**&#124;**続く**vstolocal**) このパスの末尾にします。 これにより、ClickOnce キャッシュではなく、インストール フォルダーからソリューションが読み込まれます。 詳細については、「 [Windows インストーラーを使用した Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-windows-installer.md)」を参照してください。 **注:**開発用コンピューターで VSTO アドインをビルドすると、Visual Studio は自動的に追加、 **(& a) #124; vstolocal**このレジストリ エントリへの文字列。|  
+|**Manifest**|REG_SZ|必須。 VSTO アドインの配置マニフェストの完全なパス。 ローカル コンピューター上の場所、ネットワーク共有 (UNC)、Web サーバー (HTTP) のいずれかを指定できます。<br /><br /> Windows インストーラーを使用してソリューションを配置する場合、 **マニフェスト** パスにプレフィックス " **file:///** " を追加する必要があります。 文字列を追加することも必要があります **&#124;vstolocal** (つまり、パイプ文字**&#124;**続く**vstolocal**) をこのパスの末尾にします。 これにより、ClickOnce キャッシュではなく、インストール フォルダーからソリューションが読み込まれます。 詳細については、「 [Windows インストーラーを使用した Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-windows-installer.md)」を参照してください。 **注:**開発用コンピューターで VSTO アドインをビルドすると、Visual Studio は自動的に追加、  **&#124;vstolocal**このレジストリ エントリへの文字列。|  
   
 ###  <a name="OutlookEntries"></a> Outlook フォーム領域のレジストリ エントリ  
  Outlook 用 VSTO アドインにカスタム フォーム領域を作成する場合は、フォーム領域を Outlook に登録するために追加のレジストリ エントリが使用されます。 これらのエントリは、フォーム領域がサポートするメッセージ クラスごとに異なるレジストリ キーの下に作成されます。 これらのレジストリ キーは次の場所にあります。 *Root* は HKEY_CURRENT_USER または HKEY_LOCAL_MACHINE です。  
@@ -109,7 +106,7 @@ ms.lasthandoff: 01/10/2018
 |9|読み込み|必要に応じて読み込む|VSTO アドインの機能を使用する UI 要素 (たとえば、リボンのカスタム ボタン) をユーザーがクリックしたときなど、アプリケーションで要求されたときにのみ VSTO アドインが読み込まれます。<br /><br /> VSTO アドインの読み込みが成功した場合、 **LoadBehavior** の値は 9 のままですが、 **[COM アドイン]** ダイアログ ボックスの VSTO アドインの状態は更新されて、VSTO アドインが現在読み込み済みであることが示されます。 VSTO アドインの読み込み中にエラーが発生した場合は、 **LoadBehavior** の値が 8 に変更されます。|  
 |16|読み込み|初回に読み込み、その後必要に応じて読み込む|VSTO アドインを必要に応じて読み込む場合は、この値を設定します。 ユーザーが最初にアプリケーションを起動したときに、アプリケーションが VSTO アドインを読み込みます。 ユーザーが次にアプリケーションを実行したときには、VSTO アドインによって定義された UI 要素が読み込まれますが、VSTO アドインはユーザーが VSTO アドインに関連付けられた UI 要素をクリックするまで読み込まれません。<br /><br /> VSTO アドインの最初の読み込みが成功した場合、VSTO アドインが読み込まれている間 **LoadBehavior** の値は 16 のままです。 アプリケーションの終了後、 **LoadBehavior** の値は 9 に変更されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio での Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)   
  [VSTO アドインのアーキテクチャ](../vsto/architecture-of-vsto-add-ins.md)   
  [Office ソリューションのビルド](../vsto/building-office-solutions.md)   

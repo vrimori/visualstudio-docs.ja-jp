@@ -1,13 +1,10 @@
 ---
-title: "全般リファレンス (Visual Studio での Office 開発) |Microsoft ドキュメント"
-ms.custom: 
+title: 全般リファレンス (Visual Studio での Office 開発) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - Office development in Visual Studio, reference
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: bb41929716fe89e6723f55ce7b87c8dcc7a78bcc
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: a1bc2816f696d72fd8d574c452701698cc6b655d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="general-reference-office-development-in-visual-studio"></a>全般リファレンス (Visual Studio での Office 開発)
   このセクションには、Visual Studio での Microsoft Office プロジェクトに関する技術的な詳細が含まれています。  
@@ -40,14 +37,14 @@ ms.lasthandoff: 01/10/2018
  [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)  
  配置マニフェストは、Office ソリューションの使用方法について説明します。  
   
- [ユーザー インターフェイス リファレンス (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/user-interface-reference-office-development-in-visual-studio.md)  
+ [ユーザー インターフェイス リファレンス&#40;Visual Studio での Office 開発&#41;](../vsto/user-interface-reference-office-development-in-visual-studio.md)  
  さまざまなダイアログ ボックス、windows、およびその他のユーザー インターフェイスに表示されるオプションを説明するトピックを一覧表示します。  
   
- [エラー メッセージ (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/error-messages-office-development-in-visual-studio.md)  
+ [エラー メッセージ&#40;Visual Studio での Office 開発&#41;](../vsto/error-messages-office-development-in-visual-studio.md)  
  Office プロジェクトのエラー メッセージを説明するトピックを一覧表示します。  
   
 ## <a name="related-sections"></a>関連項目  
- [作業の開始 (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/getting-started-office-development-in-visual-studio.md)  
+ [作業の開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)  
  セットアップ、プロジェクト テンプレート、Office プライマリ相互運用機能アセンブリ、および Office 開発の新機能に関する情報へのリンクを提供します。  
   
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)  

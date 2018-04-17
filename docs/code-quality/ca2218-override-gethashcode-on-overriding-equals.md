@@ -1,12 +1,10 @@
 ---
-title: "CA2218: 上書き GetHashCode を Equals をオーバーライドします |Microsoft ドキュメント"
-ms.custom: 
+title: 'CA2218: 上書き GetHashCode を Equals をオーバーライドします |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA2218
 - OverrideGetHashCodeOnOverridingEquals
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - OverrideGetHashCodeOnOverridingEquals
 - CA2218
 ms.assetid: 69b020cd-29e8-45a6-952e-32cf3ce2e21d
-caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: eed9ae032a89eb30785acb71feac47d6c4f8cdc3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: a7844f4bc10acabeef81001a0c0890c603410ec5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2218-override-gethashcode-on-overriding-equals"></a>CA2218: オーバーライドする Equals で GetHashCode をオーバーライドします
 |||  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  パブリック型が上書き<xref:System.Object.Equals%2A?displayProperty=fullName>がオーバーライドしません<xref:System.Object.GetHashCode%2A?displayProperty=fullName>です。  
   
 ## <a name="rule-description"></a>規則の説明  
- <xref:System.Object.GetHashCode%2A>ハッシュ アルゴリズムとハッシュ テーブルなどのデータ構造に適したは現在のインスタンスに基づいて、値を返します。 同じ種類し、が等しい 2 つのオブジェクトには、次の型のインスタンスが正常に動作することを確認する同じハッシュ コードを返す必要があります。  
+ <xref:System.Object.GetHashCode%2A> ハッシュ アルゴリズムとハッシュ テーブルなどのデータ構造に適したは現在のインスタンスに基づいて、値を返します。 同じ種類し、が等しい 2 つのオブジェクトには、次の型のインスタンスが正常に動作することを確認する同じハッシュ コードを返す必要があります。  
   
 -   <xref:System.Collections.Hashtable?displayProperty=fullName>  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Collections.Specialized.OrderedDictionary?displayProperty=fullName>  
   
--   実装する型<xref:System.Collections.Generic.IEqualityComparer%601?displayProperty=fullName>  
+-   実装する型 <xref:System.Collections.Generic.IEqualityComparer%601?displayProperty=fullName>  
   
 ## <a name="how-to-fix-violations"></a>違反の修正方法  
  この規則違反を修正するには、実装を提供<xref:System.Object.GetHashCode%2A>です。 同じ型のオブジェクトのペアの場合、実装が同じ値を返すことを確認する必要がありますの実装<xref:System.Object.Equals%2A>返します`true`ペアを指定します。  
@@ -102,7 +100,7 @@ ms.lasthandoff: 12/22/2017
   
  [CA2231: ValueType.Equals のオーバーライドで、演算子 equals をオーバーロードします](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.Object.Equals%2A?displayProperty=fullName>   
  <xref:System.Object.GetHashCode%2A?displayProperty=fullName>   
  <xref:System.Collections.Hashtable?displayProperty=fullName>   

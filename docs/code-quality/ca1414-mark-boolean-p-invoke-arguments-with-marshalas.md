@@ -1,12 +1,10 @@
 ---
-title: ": Ca 1414 ブール型の P 呼び出す引数を marshalas に設定します |Microsoft ドキュメント"
-ms.custom: 
+title: ': Ca 1414 ブール型の P 呼び出す引数を marshalas に設定します |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1414
 - MarkBooleanPInvokeArgumentsWithMarshalAs
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1414
 - MarkBooleanPInvokeArgumentsWithMarshalAs
 ms.assetid: c0c84cf5-7701-4897-9114-66fc4b895699
-caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 3ce70291bd59ef3211c9fea871c8155f1a3e7fed
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 16e561e04444fba7200c00f299cc775978829100
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1414-mark-boolean-pinvoke-arguments-with-marshalas"></a>CA1414: ブール型の P/Invoke 引数を MarshalAs に設定します
 |||  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  プラットフォーム呼び出しメソッド宣言に含まれる、<xref:System.Boolean?displayProperty=fullName>パラメーターまたは戻り値が、<xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=fullName>属性は、パラメーターまたは戻り値には適用されません。  
   
 ## <a name="rule-description"></a>規則の説明  
- プラットフォームがメソッドへのアクセスのアンマネージ コードを呼び出すし、によって定義されている、`Declare`キーワード[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]または<xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>です。 <xref:System.Runtime.InteropServices.MarshalAsAttribute>マネージ コードとアンマネージ コード間のデータ型の変換に使用される、マーシャ リング動作を指定します。 などの多くの単純なデータ型<xref:System.Byte?displayProperty=fullName>と<xref:System.Int32?displayProperty=fullName>、1 つ表現がアンマネージ コードであり、マーシャ リングの動作の仕様を必要としない以外の場合は、共通言語ランタイムが自動的に正しい動作を提供します。  
+ プラットフォームがメソッドへのアクセスのアンマネージ コードを呼び出すし、によって定義されている、`Declare`キーワード[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]または<xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>です。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> マネージ コードとアンマネージ コード間のデータ型の変換に使用される、マーシャ リング動作を指定します。 などの多くの単純なデータ型<xref:System.Byte?displayProperty=fullName>と<xref:System.Int32?displayProperty=fullName>、1 つ表現がアンマネージ コードであり、マーシャ リングの動作の仕様を必要としない以外の場合は、共通言語ランタイムが自動的に正しい動作を提供します。  
   
  <xref:System.Boolean>データ型が、アンマネージ コードの複数の表現。 ときに、<xref:System.Runtime.InteropServices.MarshalAsAttribute>が指定されていない、既定のマーシャ リングの動作、<xref:System.Boolean>データ型は<xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName>します。 これは、すべての状況では、32 ビットの整数です。 アンマネージ メソッドで必要とされるブール型の表現を決定して適切な一致、<xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName>です。 UnmanagedType.Bool とは、これは常に 4 バイト Win32 BOOL 型です。 C++ の UnmanagedType.U1 を使用する必要があります`bool`またはその他の 1 バイトの種類。  
   
@@ -59,6 +57,6 @@ ms.lasthandoff: 12/22/2017
   
  [Ca 2101: P/invoke 文字列引数に対してマーシャ リングを指定します。](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName>   
  [アンマネージ コードとの相互運用](/dotnet/framework/interop/index)

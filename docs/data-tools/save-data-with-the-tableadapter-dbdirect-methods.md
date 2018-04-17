@@ -1,11 +1,8 @@
 ---
-title: "TableAdapter DBDirect メソッドを使ってデータを保存 |Microsoft ドキュメント"
-ms.custom: 
+title: TableAdapter DBDirect メソッドを使ってデータを保存 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +12,17 @@ helpviewer_keywords:
 - saving data, walkthroughs
 - data [Visual Studio], TableAdapter
 ms.assetid: 74a6773b-37e1-4d96-a39c-63ee0abf49b1
-caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 628a3cfc75f786ceb989145ada6e2f2579f349cd
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.workload:
+- data-storage
+ms.openlocfilehash: 687ba719b74be8daf0a4fb5e52bfa41d431df8a9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>TableAdapter DBDirect メソッドを使ってデータを保存します。
 このチュートリアルでは、TableAdapter の DBDirect メソッドを使用して、データベースに対して直接 SQL ステートメントを実行する詳細な手順を提供します。 TableAdapter の DBDirect メソッドは、細かいレベル、データベースの更新で制御を提供します。 それらを使用して、個別に呼び出すことによって、特定の SQL ステートメントおよびストアド プロシージャを実行することができます`Insert`、 `Update`、および`Delete`アプリケーションで必要に応じてメソッド (オーバー ロードされたのではなく`Update`更新プログラムを実行するメソッド、INSERT、および DELETE のステートメントすべて 1 つの呼び出しで)。  
@@ -118,7 +115,7 @@ ms.lasthandoff: 01/23/2018
   
 2.  以下の設定を**名前**と**テキスト**各ボタンのプロパティです。  
   
-    |name|テキスト|  
+    |名前|テキスト|  
     |----------|----------|  
     |`InsertButton`|**[挿入]**|  
     |`UpdateButton`|**更新**|  
@@ -170,5 +167,5 @@ ms.lasthandoff: 01/23/2018
   
 -   選択して、データセットにテーブルを追加**構成ウィザードで DataSet を**内から、**データソース**ウィンドウです。 関連するコードをフォームにドラッグすることによって、関連するデータを表示するコントロールを追加できます。 詳細については、次を参照してください。[データセットのリレーションシップ](relationships-in-datasets.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)

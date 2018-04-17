@@ -17,11 +17,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d97e1f37c1e60c3ec5bb122a6b3f26c2fb086f9
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 2ea735e5e300d2b2cde301a4cf52424cabbba934
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="prerequisites-dialog-box"></a>Prerequisites Dialog Box
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/29/2018
 |**.NET Framework 3.5 SP1**|このパッケージは、次のコンポーネントをインストールします。<br /><br /> -  .NET Framework バージョン 2.0、3.0、および 3.5。<br />-   32 ビット (x86) オペレーティング システムおよび 64 ビット (x64) オペレーティング システム上の .NET Framework のすべてのバージョンに対するサポート。<br />-   パッケージと共にインストールされる各 .NET Framework バージョン用の Language Pack。<br />-   .NET Framework 2.0 および 3.0 用の Service Pack。<br /><br /> .NET Framework 3.0 は Windows Vista に含まれており、.NET Framework 3.5 は [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] に含まれています。 .NET Framework 3.5 は、32 ビット オペレーティング システム用にコンパイルされる、ターゲット フレームワークが **.NET Framework 3.5** に設定された、すべての Visual Basic プロジェクトおよび C# プロジェクト、および、64 ビット オペレーティング システム用にコンパイルされる Visual Basic プロジェクトおよび C# プロジェクトに必要です。 IA64 はサポートされません。Visual Basic プロジェクトおよび C# プロジェクトは、既定ではどの CPU アーキテクチャにも対応するようにコンパイルされます。 詳細については、「[Visual Studio のマルチ ターゲットの概要](../../ide/visual-studio-multi-targeting-overview.md)」、および「[64 ビット アプリケーションの配置のための必要条件](../../deployment/deploying-prerequisites-for-64-bit-applications.md)」を参照してください。<br /><br /> この項目は既定で選択されます。|
 |**Microsoft .NET Framework 4.x**|このパッケージは、.NET Framework 4.x (x86 プラットフォームおよび x64 プラットフォーム用) をインストールします。|
 |**Microsoft System CLR Types for SQL Server 2014 (x64 および x86)**|このパッケージは、Microsoft System CLR Types for SQL Server 2014 (x64 または x86 用) をインストールします。|
-|**SQL Server 2008 R2 Express**|このパッケージは、Microsoft SQL Server 2008 R2 Express をインストールします。Microsoft SQL Server 2008 R2 Express は、Microsoft SQL Server 2008 R2 の無償のエディションであり、小規模な Web アプリケーション、サーバー アプリケーション、またはデスクトップ アプリケーションに最適なデータベースです。 Microsoft SQL Server 2008 Express は、開発環境および運用環境で無償で使用できます。 アプリケーションと共に SQL Server 2008 R2 Express を配布するには、無償の[登録](http://go.microsoft.com/fwlink/?LinkId=130380)が必要です。|
+|**SQL Server 2008 R2 Express**|このパッケージは、Microsoft SQL Server 2008 R2 Express をインストールします。Microsoft SQL Server 2008 R2 Express は、Microsoft SQL Server 2008 R2 の無償のエディションであり、小規模な Web アプリケーション、サーバー アプリケーション、またはデスクトップ アプリケーションに最適なデータベースです。 Microsoft SQL Server 2008 Express は、開発環境および運用環境で無償で使用できます。|
 |**SQL Server 2012 Express**|このパッケージは、Microsoft SQL Server 2012 Express をインストールします。|
 |**SQL Server 2012 Express LocalDB**|このパッケージは、Microsoft SQL Server 2012 Express LocalDB をインストールします。|
 |**Visual C++ "14" ランタイム ライブラリ (ARM)**|Itanium アーキテクチャに対応する Visual C++ ランタイム ライブラリをインストールします。これらのライブラリは、Microsoft Windows オペレーティング システム用のプログラミング ルーチンを提供します。 これらのルーチンにより、C および C++ 言語では提供されない共通プログラミング タスクの多くを自動化できます。<br /><br /> 詳細については、「[C ランタイム ライブラリ リファレンス](/cpp/c-runtime-library/c-run-time-library-reference)」を参照してください。|
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/29/2018
 
 ## <a name="see-also"></a>関連項目
 
-[[発行] ページ (プロジェクト デザイナー)](../../ide/reference/publish-page-project-designer.md)  
-[アプリケーション配置の必要条件](../../deployment/application-deployment-prerequisites.md)  
-[64 ビット アプリケーションの配置のための必要条件](../../deployment/deploying-prerequisites-for-64-bit-applications.md)  
-[Visual Studio のマルチ ターゲットの概要](../../ide/visual-studio-multi-targeting-overview.md)
+- [[発行] ページ (プロジェクト デザイナー)](../../ide/reference/publish-page-project-designer.md)
+- [アプリケーション配置の必要条件](../../deployment/application-deployment-prerequisites.md)
+- [64 ビット アプリケーションの配置のための必要条件](../../deployment/deploying-prerequisites-for-64-bit-applications.md)
+- [Visual Studio のマルチ ターゲットの概要](../../ide/visual-studio-multi-targeting-overview.md)

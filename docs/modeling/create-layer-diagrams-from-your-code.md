@@ -1,10 +1,8 @@
 ---
-title: "コードから依存関係のダイアグラムを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: コードから依存関係のダイアグラムを作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - architecture, dependency diagrams
 - dependency diagrams
@@ -12,19 +10,19 @@ helpviewer_keywords:
 - constraints, architectural
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 18477479255ff7af8216d093830c6c0d60fa50dc
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 9acc63c676463743ad598736f1d095f0ced0b388
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-dependency-diagrams-from-your-code"></a>コードから依存関係のダイアグラムを作成します。
 
-ソフトウェア システムの高レベルで論理アーキテクチャを視覚化するには、作成、*依存関係ダイアグラム*Visual Studio でします。 コードがこの設計と一致することを確認するには、依存関係ダイアグラムとコードを検証します。 Visual c# および Visual Basic プロジェクトの依存関係図を作成することができます。 この機能をサポートする Visual Studio のバージョンを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+ソフトウェア システムの高レベルで論理アーキテクチャを視覚化するには、作成、*依存関係ダイアグラム*Visual Studio でします。 コードがこの設計と一致することを確認するには、依存関係ダイアグラムとコードを検証します。 Visual c# および Visual Basic プロジェクトの依存関係図を作成することができます。 この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
 
 ![依存関係図を作成する](../modeling/media/layerdiagramvisualizecode.png "LayerDiagramVisualizeCode")
 
@@ -32,7 +30,7 @@ ms.lasthandoff: 02/09/2018
 
 [ビデオ: リアルタイムで、アーキテクチャの依存関係を検証します。](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4) 
 
-##  <a name="CreateDiagram"></a>依存関係図を作成します。
+##  <a name="CreateDiagram"></a> 依存関係図を作成します。
 
 依存関係ダイアグラムを作成する前に、ソリューションにモデリング プロジェクトを確認します。
 
@@ -78,7 +76,7 @@ ms.lasthandoff: 02/09/2018
 
 ![コード マップから生成された依存関係図](media/dependency-validation-01.png)
   
-##  <a name="CreateLayers"></a>成果物からレイヤーを作成します。  
+##  <a name="CreateLayers"></a> 成果物からレイヤーを作成します。  
  レイヤーは、プロジェクト、コード ファイル、名前空間、クラス、メソッドなど、Visual Studio ソリューションの項目から生成できます。 これにより、レイヤーと項目の間のリンクが自動的に作成され、レイヤー検証プロセスに含まれます。  
   
  Word 文書や PowerPoint プレゼンテーションなどの検証をサポートしない項目にレイヤーをリンクすることもできます。こうすると、仕様や計画にレイヤーを関連付けることができます。 複数のアプリが共有するプロジェクトのファイルにレイヤーをリンクすることもできます。ただし、これらのレイヤーは検証プロセスには含まれず、"レイヤー 1"、"レイヤー 2" などの汎用名で表示されます。  
@@ -107,7 +105,7 @@ ms.lasthandoff: 02/09/2018
   
 -   1 つのレイヤーに成果物にリンクされた他のレイヤーが含まれている場合は、そのコンテナー レイヤーの数字にそれらの成果物が含まれていなくても、コンテナー レイヤーはそれらの成果物にリンクされます。  
   
-##  <a name="Managing"></a>レイヤーと成果物の間のリンクを管理します。  
+##  <a name="Managing"></a> レイヤーと成果物の間のリンクを管理します。  
   
 1.  図上の依存関係、レイヤーのショートカット メニューを開いてにして**ビュー リンク**です。  
   
@@ -123,7 +121,7 @@ ms.lasthandoff: 02/09/2018
 |既存の成果物のリンクから新しいレイヤーを生成する|成果物のリンクを図上の空白領域にドラッグします。|  
 |リンクされた成果物が依存関係図に対する検証をサポートしていることを確認します。|見て、**検証をサポート**成果物のリンクの列です。|  
   
-##  <a name="Discovering"></a>既存の依存関係をリバース エンジニア リング  
+##  <a name="Discovering"></a> 既存の依存関係をリバース エンジニア リング  
  依存関係が存在するのは、あるレイヤーに関連付けられている成果物が、別のレイヤーに関連付けられている成果物を参照している場合です。 たとえば、あるレイヤー内のクラスが、別のレイヤー内のクラスを保持する変数を宣言する場合などです。 図のレイヤーにリンクされている成果物の既存の依存関係はリバース エンジニアリングできます。  
   
 > [!NOTE]
@@ -133,7 +131,7 @@ ms.lasthandoff: 02/09/2018
   
  通常は、不要な依存関係がいくつか見つかります。 これらの依存関係を編集して、目的の設計に準拠するようアラインできます。  
   
-##  <a name="EditDependencies"></a>レイヤーと依存関係を表示して目的の設計を編集します。  
+##  <a name="EditDependencies"></a> レイヤーと依存関係を表示して目的の設計を編集します。  
  システムまたは対象とするアーキテクチャを対象となる変更を記述するには、依存関係ダイアグラムを編集します。  
   
 |**目的**|**次の手順を実行します。**|  
@@ -144,10 +142,10 @@ ms.lasthandoff: 02/09/2018
 |レイヤーに関連付けられている成果物を、指定した名前空間に所属させることができないように指定する|レイヤーの名前空間を入力**禁止された名前空間**プロパティです。 セミコロンで区切ります (**;**) 名前空間を分離します。|  
 |レイヤーに関連付けられている成果物を、指定した名前空間のいずれかに必ず所属させるように指定する|レイヤーの名前空間を入力**名前空間のために必要な**プロパティです。 セミコロンで区切ります (**;**) 名前空間を分離します。|  
   
-##  <a name="EditLayout"></a>図上の要素を表示する方法を変更します。  
+##  <a name="EditLayout"></a> 図上の要素を表示する方法を変更します。  
  プロパティを編集して、レイヤーのサイズ、形状、色、位置、または依存関係の色を変更できます。  
   
-##  <a name="Codemaps"></a>パターンと、コード マップ上の依存関係を検出します。  
+##  <a name="Codemaps"></a> パターンと、コード マップ上の依存関係を検出します。  
  依存関係のダイアグラムを作成するときに作成することも**コード マップの**します。 これらの図を利用することで、コードを検証するときに、パターンと依存関係を見つけやすくなります。 ソリューション エクスプローラー、クラス ビュー、またはオブジェクト ブラウザーを使用して、アセンブリ、名前空間、およびクラスを調べることができます。これらは、通常は既存のレイヤーに対応しています。 コード マップについての詳細は、次を参照してください。  
   
 -   [ソリューション間の依存関係をマップする](../modeling/map-dependencies-across-your-solutions.md)  
@@ -156,7 +154,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [コード マップ アナライザーを使用して潜在的な問題を検索する](../modeling/find-potential-problems-using-code-map-analyzers.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビデオ: リアルタイムで、アーキテクチャの依存関係を検証します。](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)   
  [依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)   
  [依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)   

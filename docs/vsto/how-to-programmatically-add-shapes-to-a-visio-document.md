@@ -1,12 +1,10 @@
 ---
-title: "方法: プログラムによって Visio 図面に図形を追加 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: プログラムによって Visio 図面に図形を追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - shapes [Office development in Visual Studio], adding Visio shapes
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 4d73c59ac9ba89a5814a264bb8e8fe3c83b9789e
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 1cc4369977e1989960fe9448d4dd7d56e67ed7a9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-add-shapes-to-a-visio-document"></a>方法: プログラムによって Visio 図面に図形を追加する
   ステンシルからマスターを取得し、図形をアクティブ ページにドロップすると、Microsoft Office Visio 図面に図形を追加できます。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 01/10/2018
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#13](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#13)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#13](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#13)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visio ソリューション](../vsto/visio-solutions.md)   
  [Visio オブジェクト モデルの概要](../vsto/visio-object-model-overview.md)   
  [Visio 図形の操作](../vsto/working-with-visio-shapes.md)   

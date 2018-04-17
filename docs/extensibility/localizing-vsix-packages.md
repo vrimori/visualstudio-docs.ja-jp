@@ -1,27 +1,25 @@
 ---
-title: "VSIX パッケージのローカライズ |Microsoft ドキュメント"
-ms.custom: 
+title: VSIX パッケージのローカライズ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 10/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - localize package
 - localize extension
 - localized deployment
 ms.assetid: 10e80b13-b39e-466c-a7c8-774a862355af
-caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 6b95047348f549073a05060b81874f65d7781918
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d94e390374ca2eb77b4332b3a5c253acce69f051
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="localizing-vsix-packages"></a>VSIX パッケージのローカライズ
 
@@ -103,9 +101,9 @@ Extension.vsixlangpack ファイルは次の[VSIX Language Pack スキーマ 2.0
 </PackageLanguagePackManifest>
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |[VSIX LanguagePack スキーマ 2.0 リファレンス](../extensibility/vsixlanguagepack-element-vsix-language-pack-schema.md)|VSIX の言語パックでは、.vsix 展開ファイルのローカライズ情報について説明します。|
 |[VSIX パッケージの構造](../extensibility/anatomy-of-a-vsix-package.md)|構造と、vsix パッケージの内容について説明します。|

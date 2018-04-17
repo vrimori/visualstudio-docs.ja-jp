@@ -1,12 +1,9 @@
 ---
-title: "エラー: Web サーバーはロックダウンされているし、DEBUG の動詞がブロックされて |Microsoft ドキュメント"
-ms.custom: 
+title: 'エラー: Web サーバーはロックダウンされているし、DEBUG の動詞がブロックされて |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vs.debug.error.webdbg_debug_verb_blocked
@@ -17,17 +14,16 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - debugger, Web application errors
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d8d16d8fed99696cbefdb81e761d31d2427a20a7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2a2cace159a0020d5b65cd8e5a3063ccf38b72f6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb"></a>エラー ： Web サーバーが制限され、デバッグの有効化に必要な DEBUG 動詞をブロックしています。
 IIS Lockdown ツールが実行され、URLScan がインストールされてアクティブになっているため、Web アプリケーションまたは XML Web サービスのステップ インに失敗しました。 この条件によって、IIS は DEBUG の動詞を受け取ることができません。  
@@ -54,6 +50,6 @@ IIS Lockdown ツールが実行され、URLScan がインストールされて�
   
 7.  サーバーまたは IIS を再起動します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Web アプリケーションのデバッグ: エラーとトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)   
  [エラー : Web サーバーでは要求されたリソースを見つけられませんでした](../debugger/error-the-web-server-could-not-find-the-requested-resource.md)

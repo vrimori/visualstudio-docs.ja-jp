@@ -1,12 +1,10 @@
 ---
-title: "信頼されたアプリケーションの配置の概要 |Microsoft ドキュメント"
-ms.custom: 
+title: 信頼されたアプリケーションの配置の概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - ClickOnce deployment, security
 - trusted application deployment
 ms.assetid: b24a1702-8fbe-45b1-87a0-9618a0708f1d
-caps.latest.revision: "31"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 34e83d6b035ba6ea91190fa89b9e1a63366e7907
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 46a43a372a8a8c4de407d4063ea2a625ede38b14
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="trusted-application-deployment-overview"></a>信頼されたアプリケーションの配置の概要
 このトピックでは、信頼されたアプリケーションの配置テクノロジを使用して、昇格されたアクセス許可を持つ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを配置する方法の概要を示します。  
@@ -105,6 +103,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="limitations-of-trusted-application-deployment"></a>信頼されたアプリケーションの配置に関する制限事項  
  信頼されたアプリケーションの配置は、Web 経由または会社のファイル共有から配置される [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションに昇格された信頼を与えるために使用できます。 CD で配布される [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションには既定で完全信頼が付与されるため、信頼されたアプリケーションの配置を使用する必要はありません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Mage.exe (マニフェストの生成および編集ツール)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)   
  [チュートリアル : ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)

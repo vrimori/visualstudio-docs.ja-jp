@@ -1,12 +1,10 @@
 ---
-title: "Ca 2232: Windows フォームのエントリ ポイントを stathread に設定しますが |Microsoft ドキュメント"
-ms.custom: 
+title: 'Ca 2232: Windows フォームのエントリ ポイントを stathread に設定しますが |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - MarkWindowsFormsEntryPointsWithStaThread
 - CA2232
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA2232
 - MarkWindowsFormsEntryPointsWithStaThread
 ms.assetid: a3c95130-8e7f-4419-9fcd-b67d077e8efb
-caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: fe12ce5947a22414aaf07c59945fd667b106101f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 2d28300d33d02fa4ca11ee1b7110a10a677b64bf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2232-mark-windows-forms-entry-points-with-stathread"></a>CA2232: Windows フォームのエントリ ポイントを STAThread に設定します
 |||  
@@ -37,10 +35,10 @@ ms.lasthandoff: 12/22/2017
  アセンブリが参照、<xref:System.Windows.Forms>名前空間、およびそのエントリ ポイントでマークされていない、<xref:System.STAThreadAttribute?displayProperty=fullName>属性。  
   
 ## <a name="rule-description"></a>規則の説明  
- <xref:System.STAThreadAttribute>COM アプリケーションのモデルのスレッドがシングル スレッド アパートメントであることを示します。 この属性は、Windows フォームを使用するすべてのアプリケーションのエントリ ポイントに指定する必要があります。省略すると、Windows コンポーネントが正常に機能しないことがあります。 属性が存在しない場合、アプリケーションは、Windows フォームではサポートされていない、マルチ スレッド アパートメント モデルを使用します。  
+ <xref:System.STAThreadAttribute> COM アプリケーションのモデルのスレッドがシングル スレッド アパートメントであることを示します。 この属性は、Windows フォームを使用するすべてのアプリケーションのエントリ ポイントに指定する必要があります。省略すると、Windows コンポーネントが正常に機能しないことがあります。 属性が存在しない場合、アプリケーションは、Windows フォームではサポートされていない、マルチ スレッド アパートメント モデルを使用します。  
   
 > [!NOTE]
->  [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]アプリケーション フレームワークを使用するプロジェクトは、マークする必要はありません、 **Main**メソッドを stathread に設定します。 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]コンパイラでは、自動的にします。  
+>  [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] アプリケーション フレームワークを使用するプロジェクトは、マークする必要はありません、 **Main**メソッドを stathread に設定します。 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]コンパイラでは、自動的にします。  
   
 ## <a name="how-to-fix-violations"></a>違反の修正方法  
  この規則違反を修正するには追加、<xref:System.STAThreadAttribute>属性のエントリ ポイントにします。 場合、<xref:System.MTAThreadAttribute?displayProperty=fullName>属性が、これを削除します。  

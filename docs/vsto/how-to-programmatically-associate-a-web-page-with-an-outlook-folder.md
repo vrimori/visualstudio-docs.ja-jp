@@ -1,12 +1,10 @@
 ---
-title: "方法: プログラムによって Web ページを Outlook のフォルダーに関連付ける |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: プログラムによって Web ページを Outlook のフォルダーに関連付ける |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - Web pages [Office development in Visual Studio], Outlook folders
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 0fa0ccb3035bc4be8e316c96bd5da8c166dcb4b8
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 5495066b05ded6fc49dfe92ed489932d8c75b24d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-associate-a-web-page-with-an-outlook-folder"></a>方法: プログラムによって Web ページを Outlook のフォルダーに関連付ける
   この例は、という名前のフォルダーの`HtmlView`Microsoft Office Outlook でします。 フォルダーが存在しない場合、コードは、フォルダーを作成し、Web ページを代入します。 フォルダーが存在する場合、コードは、フォルダーの内容を表示します。  
@@ -32,7 +31,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="example"></a>例  
  [!code-csharp[Trin_OL_HTMLFolder#1](../vsto/codesnippet/CSharp/Trin_OL_HTMLFolder/thisaddin.cs#1)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フォルダーの操作](../vsto/working-with-folders.md)   
  [方法: プログラムによって名前のフォルダーを取得します。](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)   
  [方法: プログラムによってカスタム フォルダーのアイテムを作成する](../vsto/how-to-programmatically-create-custom-folder-items.md)  

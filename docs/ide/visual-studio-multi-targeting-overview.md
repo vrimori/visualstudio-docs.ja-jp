@@ -19,11 +19,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - dotnet
-ms.openlocfilehash: e78f77993c510a223056696c0beac27147d18d5a
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 7f84329923251b7239f7be67bc68e2f02e8dee4e
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="visual-studio-multi-targeting-overview"></a>Visual Studio のマルチ ターゲットの概要
 
@@ -87,6 +87,5 @@ Visual Studio では、プロジェクトの対象となる .NET Framework の�
 
 ## <a name="see-also"></a>関連項目
 
-[マルチ ターゲット (MSBuild)](../msbuild/msbuild-multitargeting-overview.md)  
-[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する (C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)  
-[プラットフォームの互換性とシステム要件](http://www.microsoft.com/visualstudio/eng/products/compatibility)
+- [マルチ ターゲット (MSBuild)](../msbuild/msbuild-multitargeting-overview.md)
+- [方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する (C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)

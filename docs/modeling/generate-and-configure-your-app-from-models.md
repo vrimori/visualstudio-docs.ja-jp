@@ -1,21 +1,19 @@
 ---
-title: "生成し、モデルからアプリの構成 |Microsoft ドキュメント"
-ms.custom: 
+title: 生成し、モデルからアプリの構成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 51760d1bcd2673ac391ea96ba3b715470ff64c66
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 46f21c0940ccfc020d2f6015bc71d6ee26f0c214
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>モデルからアプリを生成し構成する
 モデルからアプリケーションのパーツを生成または構成できます。
@@ -73,7 +71,7 @@ ms.lasthandoff: 02/09/2018
   
      たとえば、UML クラス図は一連のボックスと矢印で構成されていて、この表記法を使用すると、理論的には何でも定義できます。 一連の型を実際に記述する場合を除き、クラス図を使用することはお勧めしません。 たとえば、クラス図を適用して、さまざまな種類の Web ページを記述できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドメイン固有言語からコードを生成します。](../modeling/generating-code-from-a-domain-specific-language.md)   
  [方法: プログラム コード内のファイルからモデルを開く](../modeling/how-to-open-a-model-from-file-in-program-code.md)   
  [T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)

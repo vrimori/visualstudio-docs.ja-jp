@@ -1,35 +1,31 @@
 ---
-title: "プロジェクトの要素 (Visual Studio テンプレート) |Microsoft ドキュメント"
-ms.custom: 
+title: プロジェクトの要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#Project
 helpviewer_keywords:
 - Project element [Visual Studio Templates]
 - <Project> element [Visual Studio Templates]
 ms.assetid: 1da15ea6-26e2-462b-a03e-584ef4996579
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e6fd8881d484f35a0183d83d1b540fc2249e9c4f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 3ef09516237ad30a18f9790ddae40260d834af21
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-element-visual-studio-templates"></a>Project 要素 (Visual Studio テンプレート)
 ファイルまたはプロジェクトに追加するディレクトリを指定します。  
   
- \<VSTemplate >  
+ \<VSTemplate>  
  \<TemplateContent >  
  \<Project>  
   
@@ -75,9 +71,9 @@ ms.lasthandoff: 12/22/2017
   
  `Project`要素は、プロジェクトを指定するために使用し、そのため、のみが有効ではプロジェクトのテンプレートです。  
   
- `Project`要素を持つことができます[フォルダー](../extensibility/folder-element-visual-studio-project-templates.md)子要素または[ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md) 、子要素が、両方の混在させないように`Folder`と`ProjectItem`子要素です。  
+ `Project` 要素を持つことができます[フォルダー](../extensibility/folder-element-visual-studio-project-templates.md)子要素または[ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md) 、子要素が、両方の混在させないように`Folder`と`ProjectItem`子要素です。  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ユーザーが入力した名前に基づいてプロジェクト ファイルの名前が自動的に変更、**新しいプロジェクト** ダイアログ ボックス。 使用して、`TargetFileName`属性の場合は、テンプレートで作成したプロジェクト ファイルの別のファイル名を指定する場合します。  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ユーザーが入力した名前に基づいてプロジェクト ファイルの名前が自動的に変更、**新しいプロジェクト** ダイアログ ボックス。 使用して、`TargetFileName`属性の場合は、テンプレートで作成したプロジェクト ファイルの別のファイル名を指定する場合します。  
   
 ## <a name="example"></a>例  
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] アプリケーションでのプロジェクト テンプレートのメタデータの例を次に示します。  
@@ -106,7 +102,7 @@ ms.lasthandoff: 12/22/2017
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
  [ProjectItem 要素 (Visual Studio プロジェクト テンプレート)](../extensibility/projectitem-element-visual-studio-project-templates.md)   

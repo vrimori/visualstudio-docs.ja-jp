@@ -1,29 +1,25 @@
 ---
-title: "NameSearchOptions |Microsoft ドキュメント"
-ms.custom: 
+title: NameSearchOptions |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - NameSearchOptions enumeration
 ms.assetid: 67dfbede-2678-47df-b664-5c49841d0b9b
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a6a4237e806a6906ef984cd942e027fe7d9227d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 32a5858d52f7d5ee2adfce48084fd096c4dae0a4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="namesearchoptions"></a>NameSearchOptions
 シンボルとファイル名の検索オプションを指定します。  
@@ -76,10 +72,10 @@ enum NameSearchOptions {
   
 -   [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: dia2.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列挙体と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [Idiasession::findchildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
  [Idiasession::findfile](../../debugger/debug-interface-access/idiasession-findfile.md)   

@@ -1,29 +1,25 @@
 ---
-title: "SccInitialize 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: SccInitialize 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccInitialize
 helpviewer_keywords:
 - SccInitialize function
 ms.assetid: 5bc0d28b-2c68-4d43-9e51-541506a8f76e
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6bf217218dcc1830cc2acf2833aa7e31e85745d9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1146573f3d969ffc5cd56576ba92faa4e6ffdce0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccinitialize-function"></a>SccInitialize 関数
 この関数は、ソース管理プラグインを初期化し、機能および統合開発環境 (IDE) に制限を提供します。  
@@ -85,11 +81,11 @@ SCCRTN SccInitialize (
   
  `lpCallerName`と`lpSccName`パラメーター名を交換するには、IDE とソース管理プラグインを有効にします。 複数のインスタンスを区別するために単にこれらの名前を使用することがありますか、実際には、メニューまたはダイアログ ボックスに表示される可能性があります。  
   
- `lpAuxPathLabel`パラメーターは、ソリューション ファイルに格納されへの呼び出しでプラグインをソース管理に渡されるを補助プロジェクト パスを識別するコメントとして使用する文字列、 [SccOpenProject](../extensibility/sccopenproject-function.md)です。 [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)]文字列を使用して"Sourcesafe:"です。他のソース管理プラグインをこの特定の文字列を使用しないで必要があります。  
+ `lpAuxPathLabel`パラメーターは、ソリューション ファイルに格納されへの呼び出しでプラグインをソース管理に渡されるを補助プロジェクト パスを識別するコメントとして使用する文字列、 [SccOpenProject](../extensibility/sccopenproject-function.md)です。 [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] 文字列を使用して"Sourcesafe:"です。他のソース管理プラグインをこの特定の文字列を使用しないで必要があります。  
   
  `lpSccCaps`パラメーターは、ソース管理プラグインのプラグインの機能を示すビットフラグを格納する場所です。 (機能ビットフラグの一覧については、次を参照してください。[機能フラグ](../extensibility/capability-flags.md))。 インスタンスのかどうか、プラグインは、機能の設定に呼び出し元に用意されているコールバック関数の場合、結果を書き込むプラグイン プラン ビット SCC_CAP_TEXTOUT です。 IDE にバージョン管理の結果に対するウィンドウ作成この通知はします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccUninitialize](../extensibility/sccuninitialize-function.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)   

@@ -1,21 +1,19 @@
 ---
-title: "読み取り専用のセグメントを作成するロックのポリシーを定義する |Microsoft ドキュメント"
-ms.custom: 
+title: 読み取り専用のセグメントを作成するロックのポリシーを定義する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: dc7e620c04e31a063bbe8fada68527d391f0a903
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 75fe3205f1b43cb21fa78976ac2547ef3bd2fdfc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>ロック ポリシーの定義と読み取り専用セグメントの作成
 不変性 API、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK により、ドメイン固有言語 (DSL) モデルのロックの一部またはすべてのプログラムの読み取りが変更されていないことができるようにします。 この読み取り専用のオプションでしたするなど、使用できるように、ユーザーが仕事仲間に注釈を付け、DSL モデルの確認を求めることができますが、変更、元の変更を禁止することができます。  
@@ -70,7 +68,7 @@ partition.SetLocks(Locks.Delete);
 -   加算して、要素の削除、および特定のクラスの関係を許可しないが、プロパティの変更を許可します。 これにより、固定フォームのプロパティを埋めることができます。  
   
 ## <a name="lock-values"></a>ロックの値  
- ロックは、ストア、パーティション、または個々 のモデル要素に設定できます。 ロックは、`Flags`列挙: を使用してその値を組み合わせることができます ' &#124;'。  
+ ロックは、ストア、パーティション、または個々 のモデル要素に設定できます。 ロックは、`Flags`列挙: を使用してその値を組み合わせることができます '&#124;' です。  
   
 -   ModelElement のロックには、そのパーティションのロックが常に含まれています。  
   
@@ -103,7 +101,7 @@ partition.SetLocks(Locks.Delete);
 -   このクラスを DSL の DocData から使用可能なサービスに追加します。  
   
 ### <a name="to-define-a-locking-policy"></a>ロックのポリシーを定義するには  
- <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy>次の定義があります。  
+ <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy> 次の定義があります。  
   
 ```  
 public interface ILockingPolicy  
@@ -116,7 +114,7 @@ public interface ILockingPolicy
   
  呼び出しが行われたときにこれらのメソッドが呼び出されます`SetLocks()`ストア、パーティション、または ModelElement でします。 各メソッドでは、ロックの提案されたセットで提供されます。 提案のセットを返すことができます、または追加してロックを減算します。  
   
- 例:  
+ 例えば:  
   
 ```  
 using Microsoft.VisualStudio.Modeling;  
@@ -146,7 +144,7 @@ namespace Company.YourDsl.DslPackage // Change
   
 ```  
   
- 他の場合でも、要素をユーザーがいつでも削除できるかどうかを確認するには、コードの呼び出し`SetLocks(Lock.Delete):`  
+ 他の場合でも、要素をユーザーがいつでも削除できるかどうかを確認するには、コードの呼び出し `SetLocks(Lock.Delete):`  
   
  `return proposedLocks & (Locks.All ^ Locks.Delete);`  
   

@@ -1,22 +1,24 @@
 ---
-title: "コンテナーの高度な例 | Microsoft Docs"
-ms.custom: 
+title: コンテナーの高度な例 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/18/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-acquisition
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e03835db-a616-41e6-b339-92b41d0cfc70
 author: heaths
-ms.author: heaths
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 6009114d16871f4582aae298b25de9a3b9fe5888
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.author: tglee
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 469b8933d5bd7f60a611161e5a871e8cfa4536f7
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="advanced-example-for-containers"></a>コンテナーの高度な例
 
@@ -27,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 > コンテナーのインストーラーの起動に既知の問題がある、microsoft/windowsservercore:10.0.14393.1593 に Visual Studio をインストールすることはできません。 詳細については、[既知の問題](build-tools-container-issues.md)に関するページを参照してください。
 
-この例では、ブートストラップと同時に構築された特定バージョンをインストールする、Build Tools 2017 ブートストラップも使用します。 製品はリリース チャネル経由で更新される可能性がありますが、通常、リビルドするコンテナーで実用的なシナリオではありません。 特定のチャネルの URL を取得する場合は、https://aka.ms/vs/15/release/channel からチャネルをダウンロ―ドして JSON ファイルを開き、ブートストラップの URL を確認します。 詳細については、「[Create a network installation of Visual Studio](create-a-network-installation-of-visual-studio.md)」(Visual Studio 2017 のネットワーク インストールを作成する) をご覧ください。
+この例では、ブートストラップと同時に構築された特定バージョンをインストールする、Build Tools 2017 ブートストラップも使用します。 製品はリリース チャネル経由で更新される可能性がありますが、通常、リビルドするコンテナーで実用的なシナリオではありません。 特定のチャネルの URL を取得する場合は、https://aka.ms/vs/15/release/channel からチャネルをダウンロードして JSON ファイルを開き、ブートストラップの URL を確認します。 詳細については、「[Create a network installation of Visual Studio](create-a-network-installation-of-visual-studio.md)」(Visual Studio 2017 のネットワーク インストールを作成する) をご覧ください。
 
 ```dockerfile
 # Use a specific tagged image. Tags can be changed, though that is unlikely for most images.

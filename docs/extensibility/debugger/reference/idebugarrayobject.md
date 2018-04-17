@@ -1,29 +1,25 @@
 ---
-title: "IDebugArrayObject |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugArrayObject |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugArrayObject
 helpviewer_keywords:
 - IDebugArrayObject method
 ms.assetid: a1c8e77e-dee1-4748-a516-6ab032a8f54f
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7a447a54fa0fcbc686cee0229c4c8dc6e80eeb20
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8cac7730296d2a4f95563c3d6ff4c60fdd294dc6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugarrayobject"></a>IDebugArrayObject
 > [!IMPORTANT]
@@ -57,12 +53,12 @@ IDebugArrayObject : IDebugObject
 ## <a name="remarks"></a>コメント  
  式エバリュエーターでは、このインターフェイスを使用して、解析ツリー内の配列を表します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: ee.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

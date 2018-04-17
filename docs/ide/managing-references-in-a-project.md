@@ -1,12 +1,12 @@
 ---
-title: "プロジェクト内の参照の管理 | Microsoft Docs"
-ms.custom: 
+title: プロジェクト内の参照の管理 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/26/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vs.ProjectPropertiesReferencePaths
@@ -27,11 +27,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: b7fbb9ddfd53210f460b5035f1f83159e46b5aa1
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 6ede31cadef7048b2f75ca652efea9b01716351e
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="managing-references-in-a-project"></a>プロジェクト内の参照の管理
 
@@ -108,7 +108,7 @@ GAC に登録されているカスタム コンポーネントへの参照を含
 
 異なるバージョンの .NET Framework を対象にしたプロジェクトまたはアセンブリを参照するアプリケーションを作成できます。 たとえば、[!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)] を対象とするアプリケーションを作成し、そのアプリケーションで [!INCLUDE[dnprdnext](../ide/includes/dnprdnext_md.md)] を対象とするアセンブリを参照できます。 旧バージョンの [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] を対象とするプロジェクトを作成した場合は、そのプロジェクト内で、それより新しいバージョンを対象とするプロジェクトまたはアセンブリを参照することはできません。
 
-詳細については、「[対象となる特定の .NET Framework のバージョンの指定](../ide/targeting-a-specific-dotnet-framework-version.md)」を参照してください。
+詳細については、[マルチ ターゲットの概要](../ide/visual-studio-multi-targeting-overview.md)に関するページを参照してください。
 
 ## <a name="project-to-project-references"></a>プロジェクト間参照
 
@@ -125,5 +125,5 @@ GAC に登録されているカスタム コンポーネントへの参照を含
 
 ## <a name="see-also"></a>関連項目
 
-[壊れた参照のトラブルシューティング](../ide/troubleshooting-broken-references.md)  
+[壊れた参照のトラブルシューティング](../ide/troubleshooting-broken-references.md)
 [方法: 参照マネージャーを使用して参照を追加または削除する](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)

@@ -1,5 +1,5 @@
 ---
-title: "ExistsInCollection&lt;T&gt;アクティビティ デザイナー |Microsoft ドキュメント"
+title: ExistsInCollection&lt;T&gt;アクティビティ デザイナー |Microsoft ドキュメント
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: 0acf9a13-caf5-4bb4-ba22-ec37d2b7267a
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 98aed1488f8549624c50ce96c088440616217b58
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: a6175fdc9c0af417acb8bcfe9d4297172b31a2e3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="existsincollectionlttgt-activity-designer"></a>ExistsInCollection&lt;T&gt;アクティビティ デザイナー
 **ExistsInCollection\<T >**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.ExistsInCollection%601>アクティビティ。

@@ -1,27 +1,23 @@
 ---
-title: "作成して、モーダル ダイアログ ボックスを管理する |Microsoft ドキュメント"
-ms.custom: 
+title: 作成して、モーダル ダイアログ ボックスを管理する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dialog boxes, managing in Visual Studio
 ms.assetid: 491bc0de-7dba-478c-a76b-923440e090f3
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc53145a52d6b902ef1b8d15195df37ee6de0d62
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 14b1e39e4479b0b6b909c625e1e8b6ad19955d30
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-and-managing-modal-dialog-boxes"></a>作成して、モーダル ダイアログ ボックスを管理します。
 Visual Studio 内のモーダル ダイアログ ボックスを作成するときに、ダイアログ ボックスが表示されている間、ダイアログ ボックスの親ウィンドウが無効になっていることを確認し、ダイアログ ボックスを閉じた後に、親ウィンドウを再度有効にする必要があります。 これを行わないと、エラーが表示される可能性があります:"Microsoft Visual Studio をシャット ダウンできないモーダル ダイアログ ボックスがアクティブであるためです。 アクティブなダイアログを閉じてもう一度やり直してください。"  

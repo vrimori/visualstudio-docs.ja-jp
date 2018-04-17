@@ -1,27 +1,23 @@
 ---
-title: "Visual Studio の web サイトへの公開 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio の web サイトへの公開 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/22/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-deployment
-ms.tgt_pltfrm: 
 ms.topic: quickstart
 helpviewer_keywords:
 - deployment, website
 ms.assetid: fc82b1f1-d342-4b82-9a44-590479f0a895
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e324869eb90cd60cba68d9ed7b2e3fdb1ebb588d
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 43b6bacc45d78d1d246f6a91d13549ccc96b276a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="publish-a-web-app-or-a-net-core-app-to-a-web-site-using-the-visual-studio-publish-tool"></a>Visual Studio 発行ツールを使用して web サイトに web アプリまたは .NET Core アプリを発行します。
 
@@ -35,13 +31,13 @@ ms.lasthandoff: 01/10/2018
 
 1. **Visual c#**または**Visual Basic**、選択**Web**、し、中央のペインで  **ASP.NET Web アプリケーション (.NET Framework)**(C# の場合のみ)、または**ASP.NET Core Web アプリケーション**、クリックして**OK**です。
 
-1. 選択**MVC**、ことを確認して**認証なし**を選択して、をクリックして**OK**です。
+1. **MVC** を選択し、**認証なし** が選択されていることを確認して、**OK**をクリックします。
 
-1. ような名前を入力**MyWebApp**  をクリック**OK**です。
+1. **MyWebApp** のような名前を入力して**OK**をクリックします。
 
     Visual Studio によってプロジェクトが作成されます。
 
-1. 選択**ビルド > ソリューションのビルド**プロジェクトをビルドします。
+1. **ビルド > ソリューションのビルド** を選択して、プロジェクトをビルドします。
 
 ## <a name="publish-to-a-web-site"></a>Web サイトに発行します。
 

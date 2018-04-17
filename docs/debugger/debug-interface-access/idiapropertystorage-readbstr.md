@@ -1,29 +1,25 @@
 ---
-title: "IDiaPropertyStorage::ReadBSTR |Microsoft ドキュメント"
-ms.custom: 
+title: IDiaPropertyStorage::ReadBSTR |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaPropertyStorage::ReadBSTR
 ms.assetid: 7214643b-3286-48ed-90aa-0fe95b4cae5b
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c8fc8520791228158ad336a7bb709cdbf83a5dc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2cbfc78be415bb1ffd786b49b433e2e64cd826c2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiapropertystoragereadbstr"></a>IDiaPropertyStorage::ReadBSTR
 読み取り`BSTR`プロパティ セット内の値。  
@@ -50,5 +46,5 @@ HRESULT ReadBSTR (
 ## <a name="remarks"></a>コメント  
  A `BSTR` 0 で終わるワイド文字列としての Windows によって定義されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

@@ -1,5 +1,5 @@
 ---
-title: "TransactionScope アクティビティ デザイナー |Microsoft ドキュメント"
+title: TransactionScope アクティビティ デザイナー |Microsoft ドキュメント
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: 8d7ebfc6-7478-4888-b3b0-b14f296096af
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e2b2e5400aa231f51c75ff1bfd364ae34d9c1a7a
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 0d09d025c8fd312ffa28f7ea2b991b9f1bae91b1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transactionscope-activity-designer"></a>TransactionScope アクティビティ デザイナー
 **TransactionScope**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.TransactionScope>アクティビティ。

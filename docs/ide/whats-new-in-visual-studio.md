@@ -1,13 +1,13 @@
 ---
-title: "Visual Studio 2017 の新機能 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 2017 の新機能 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/04/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - VS.StartPage.WhatsNew
 helpviewer_keywords:
@@ -19,14 +19,14 @@ ms.author: tglee
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: a41d683701b4d8e0ca9cb973486a1e07216ea894
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 5bddaec413e1a0b0a9e2096a614d7b5a574e0e7e
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
-#### <a name="updated-for-the-155-releasehttpswwwvisualstudiocomnewsreleasenotesvs2017-relnotes"></a>[15.5 リリース](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)の更新
+#### <a name="updated-for-the-156-releasehttpswwwvisualstudiocomnewsreleasenotesvs2017-relnotes"></a>[15.6 リリース](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)の更新
 以前のバージョンの Visual Studio からのアップグレードを検討していますか。 Visual Studio 2017 にはすべての開発、すべてのアプリ、すべてのプラットフォームにおいて、他に類を見ない生産性があります。 Visual Studio 2017 を利用し、Android、iOS、Windows、Linux、Web、クラウド向けのアプリを開発します。 短期間でプログラミングできて、デバッグや診断も簡単に行えます。テストを頻繁に行うことで、自信をもってリリースできます。 独自の拡張機能を開発することで Visual Studio を拡張し、カスタマイズすることもできます。 今回のリリースでは、バージョン管理を使用した、迅速で、効率的な共同作業が可能になりました。
 
 以前のバージョンである Visual Studio 2015 以降に行われた主な変更点の要約を示します。
@@ -111,11 +111,12 @@ Visual Studio Enterprise 2017 では、ライブ単体テストを実行する�
 
 #### <a name="setting-up-a-cicd-pipeline"></a>CI/CD パイプラインの設定
 #### <a name="automated-testing"></a>自動テスト
-自動化されたテストは、DevOps パイプラインの重要な部分です。 短い周期で、一貫性と信頼性のある方法でソリューションをテストし、公開できます。 CI/CD (Continuous Integration and Continuous Delivery/継続的インテグレーションと継続的配信) フローにより、このプロセスがさらに効率的になります。
+自動化されたテストは、DevOps パイプラインの重要な部分です。 短い周期で、一貫性と信頼性のある方法でソリューションをテストし、公開できます。 CI/CD (Continuous Integration and Continuous Delivery/継続的インテグレーションと継続的デリバリー) フローにより、このプロセスがさらに効率的になります。
 
 自動化されたテストの詳細については、[DevOps の 自動化テストの CI/CD パイプライン](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2017/04/20/set-up-a-cicd-pipeline-to-run-automated-tests-efficiently/)に関するブログ投稿をご覧ください。
 
-[Continuous Delivery Tools for Visual Studio (Visual Studio 用の継続的配信ツール)](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) DevLabs 拡張の新機能の詳細については、「[Committing with Confidence: Commit Time Code Quality (自信を持ってコミットする: タイム コードの品質をコミットする)](https://blogs.msdn.microsoft.com/visualstudio/2017/08/21/committing-with-confidence-commit-time-code-quality-information-updated/)」をご覧ください。
+
+  [Continuous Delivery Tools for Visual Studio (Visual Studio 用の継続的デリバリー ツール)](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) DevLabs 拡張の新機能の詳細については、「[Committing with Confidence: Commit Time Code Quality (自信を持ってコミットする: タイム コードの品質をコミットする)](https://blogs.msdn.microsoft.com/visualstudio/2017/08/21/committing-with-confidence-commit-time-code-quality-information-updated/)」をご覧ください。
 
 ### <a name="visual-studio-ide-enhancements"></a>Visual Studio IDE の拡張機能
 #### <a name="use-new-refactorings"></a>新しいリファクタリングの使用

@@ -1,12 +1,10 @@
 ---
-title: "方法: デバッガー設定の指定 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: デバッガー設定の指定 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], debugger settings
 - options, debugging
 ms.assetid: ea172841-7fef-47bf-bd02-e7da4c3c7109
-caps.latest.revision: "23"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d6cc67f446c2b7f6ee428184395ef0230864dc7e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: cc539404d91976d639f23bdf3d810a45ebeba141
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-specify-debugger-settings"></a>方法 : デバッガー設定を指定する
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、変数の表示方法、特定の警告を表示するかどうか、ブレークポイントの設定方法、実行中のプログラムを中断した場合の影響など、デバッガーの動作のさまざまな設定を指定できます。 [デバッガーの設定を指定する、**オプション**] ダイアログ ボックス。  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  目的のオプションをオンまたはオフにします。 F1 キーを押すとオプションについてのヘルプが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[全般] ([オプション] ダイアログ ボックス - [デバッグ])](../debugger/general-debugging-options-dialog-box.md)   
  [[エディット コンティニュ] ([オプション] ダイアログ ボックス - [デバッグ])](http://msdn.microsoft.com/Library/009d225f-ef65-463f-a146-e4c518f86103)   
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)   

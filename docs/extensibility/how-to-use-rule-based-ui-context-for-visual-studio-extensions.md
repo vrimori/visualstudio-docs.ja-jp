@@ -1,21 +1,18 @@
 ---
-title: "方法: Visual Studio 拡張機能の規則ベースの UI コンテキストを使用して |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: Visual Studio 拡張機能の規則ベースの UI コンテキストを使用して |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8dd2cd1d-d8ba-49b9-870a-45acf3a3259d
-caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
-ms.workload: vssdk
-ms.openlocfilehash: 92166106c1470aaf1af7198a133495dba333c121
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- vssdk
+ms.openlocfilehash: 8597c413c899b54e61e848649c3c524cbdb20724
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>方法: Visual Studio 拡張機能の規則ベースの UI コンテキストを使用
 Visual Studio により、読み込み時に特定の Vspackage のよく知られた<xref:Microsoft.VisualStudio.Shell.UIContext>s がアクティブにします。 しかし、これらの UI コンテキストが非常に細かい設定が可能な拡張機能の作成者を選択しないまま、ポイントの前にアクティブに使用できる UI コンテキストを取得する本当にありました、VSPackage を読み込みます。 よく知られている UI コンテキストの一覧は、次を参照してください。<xref:Microsoft.VisualStudio.Shell.KnownUIContexts>です。  
@@ -137,7 +134,7 @@ Visual Studio により、読み込み時に特定の Vspackage のよく知ら�
 |ConfigSettingsStoreQuery:\<クエリ >|「クエリ」は、0 以外の値に評価される必要があります構成設定ストアに、完全なパスを表します。 クエリは、"collection"および"propertyName"最後のスラッシュでに分割されます。|  
 |ActiveProjectFlavor:\<projectTypeGuid >|現在選択されているプロジェクトのフレーバーされるたびに、用語が true になります (集計) が、指定したプロジェクトの種類の GUID と一致するフレーバーとします。|  
 |ActiveEditorContentType:\<contentType >|という用語は、選択したドキュメントが指定されたコンテンツの種類とテキスト エディターの場合、true になります。|  
-|ActiveProjectCapability:\<式 >|という用語は、アクティブなプロジェクトの機能が提供されている式に一致する場合に当てはまります。 式を VB &#124; のように何か設定することができます。CSharp|  
+|ActiveProjectCapability:\<式 >|という用語は、アクティブなプロジェクトの機能が提供されている式に一致する場合に当てはまります。 式には、VB のようなものを指定できる&#124;CSharp|  
 |SolutionHasProjectCapability:\<式 >|上記に似ていますが、という用語はソリューションには、式に一致するすべての読み込まれたプロジェクト場合に当てはまります。|  
 |SolutionHasProjectFlavor:\<projectTypeGuid >|ソリューション (集計) プロジェクト フレーバーがあり、指定したプロジェクトの種類の GUID と一致するフレーバーされるたびに、用語が true になります。|
 

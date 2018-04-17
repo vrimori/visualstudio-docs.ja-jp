@@ -1,13 +1,10 @@
 ---
-title: "方法: コンテンツ コントロールを使用してドキュメントの一部を保護する |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: コンテンツ コントロールを使用してドキュメントの一部を保護する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,14 +18,14 @@ helpviewer_keywords:
 - GroupContentControl
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 444fd63ecfe1fc74161920b17a3c7caead5a434a
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 0a72603f71395bbbf8e167b6a2361f7d8b2a30a6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-protect-parts-of-documents-by-using-content-controls"></a>方法 : コンテンツ コントロールを使用して文書を保護する
   ドキュメントの一部を保護することにより、ユーザーがドキュメントのその部分を変更したり削除したりできないようにします。 コンテンツ コントロールを使用して Microsoft Office Word ドキュメントの一部を保護する方法は、いくつかあります。  
@@ -39,7 +36,7 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-##  <a name="EditDeleteControl"></a>コンテンツ コントロールを保護します。  
+##  <a name="EditDeleteControl"></a> コンテンツ コントロールを保護します。  
  デザイン時または実行時に文書レベルのプロジェクト内のコントロールのプロパティを設定することにより、ユーザーがコンテンツ コントロールを編集したり削除したりしないようにすることができます。  
   
  VSTO アドイン プロジェクトを使用して、実行時にドキュメントに追加したコンテンツ コントロールを保護することもできます。 詳細については、次を参照してください。[する方法: Word 文書にコンテンツ コントロールを追加](../vsto/how-to-add-content-controls-to-word-documents.md)です。  
@@ -107,11 +104,11 @@ ms.lasthandoff: 01/10/2018
      [!code-vb[Trin_WordAddInDynamicControls#15](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#15)]
      [!code-csharp[Trin_WordAddInDynamicControls#15](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#15)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
  [コンテンツ コントロール](../vsto/content-controls.md)   
  [方法: Word 文書にコンテンツ コントロールを追加](../vsto/how-to-add-content-controls-to-word-documents.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
- [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)  
+ [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
+ [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)  
    

@@ -1,10 +1,8 @@
 ---
-title: "依存関係のダイアグラムのコードの検証 |Microsoft ドキュメント"
-ms.custom: 
+title: 依存関係のダイアグラムのコードの検証 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, validating
 - validation, dependency diagrams
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - MSBuild, validating code
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 484afcd70717162719e9eaf8ace294cb1f71cbcd
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: cd799e5114c64b075592ddbe35670907fc81fa9c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>依存関係のダイアグラムのコードを検証します。
 
@@ -57,7 +55,7 @@ ms.lasthandoff: 02/09/2018
   
 -   依存関係ダイアグラムを含むモデリング プロジェクトのソリューションです。 この依存関係ダイアグラムは、検証する c# または Visual Basic のプロジェクトの成果物にリンクする必要があります。 参照してください[コードから依存関係のダイアグラムを作成](../modeling/create-layer-diagrams-from-your-code.md)です。  
   
- この機能をサポートする Visual Studio のバージョンを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
+ この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
  Visual Studio で開いている依存関係図から手動でまたはコマンド プロンプトからコードを検証することができます。 ローカル ビルドまたは Team Foundation ビルドの実行時に、コードを自動的に検証することもできます。 参照してください[Channel 9 ビデオ: デザインし、依存関係のダイアグラムを使用して、アーキテクチャの検証](http://go.microsoft.com/fwlink/?LinkID=252073)です。  
   
@@ -92,21 +90,21 @@ Visual Studio のこのリリースで、リアルタイムで依存関係の検
 
 * プロジェクトの更新に新しい依存関係検証プロジェクト トリガーを追加します。 
   
-##  <a name="SupportsValidation"></a>項目が検証をサポートしているかを参照してください。  
+##  <a name="SupportsValidation"></a> 項目が検証をサポートしているかを参照してください。  
  複数のアプリ間で共有される Web サイト、Office ドキュメント、プレーン テキスト ファイル、プロジェクトのファイルにレイヤーをリンクできますが、そのレイヤーは検証プロセスは含まれません。 個々のレイヤー間に依存関係が表示されない場合、これらのレイヤーにリンクされているプロジェクトやアセンブリへの参照については、検証エラーは表示されません。 このような参照は、コードがこれらの参照を使用している場合を除き、依存関係と見なされません。  
   
 1.  図上の依存関係、1 つまたは複数のレイヤーを選択してを選択するを右クリックし、をクリックして**ビュー リンク**です。  
   
 2.  **レイヤー エクスプ ローラー**を見て、**検証をサポート**列です。 値が false の場合、この項目では検証がサポートされません。  
   
-##  <a name="IncludeReferences"></a>その他の .NET アセンブリおよび検証用のプロジェクトを含める  
+##  <a name="IncludeReferences"></a> その他の .NET アセンブリおよび検証用のプロジェクトを含める  
  対応する .NET アセンブリまたはプロジェクトへの参照が自動的に追加された依存関係の図に項目をドラッグすると、**レイヤー参照**モデリング プロジェクト内のフォルダーです。 このフォルダーには、検証時に分析されたアセンブリおよびプロジェクトへの参照が格納されます。 手動で依存関係のダイアグラムにドラッグせず、他の .NET アセンブリおよび検証用のプロジェクトを含めることができます。  
   
 1.  **ソリューション エクスプ ローラー**、モデリング プロジェクトを右クリックしてまたは**レイヤー参照**フォルダー、およびクリック**参照の追加**です。  
   
 2.  **参照の追加**ダイアログ ボックスで、アセンブリまたはプロジェクトを選択し、をクリックして**OK**です。  
   
-##  <a name="ValidateManually"></a>コードを手動で検証します。  
+##  <a name="ValidateManually"></a> コードを手動で検証します。  
  ソリューション項目にリンクされている依存関係が開いている図がある場合は、実行、**検証**ダイアグラムからのショートカット コマンドです。 実行するコマンド プロンプトを使用することもできます、 **msbuild**コマンドと、 **/p:ValidateArchitecture**カスタム プロパティに設定する**True**です。 たとえば、コードの変更を行う場合、依存関係の競合を早期にキャッチできるようにレイヤー検証を定期的に実行します。  
   
 #### <a name="to-validate-code-from-an-open-dependency-diagram"></a>開いている依存関係ダイアグラムからコードを検証するには   
@@ -121,7 +119,7 @@ Visual Studio のこのリリースで、リアルタイムで依存関係の検
 2.  表示するには各エラーの発生元でエラーをダブルクリック、**エラー一覧**ウィンドウです。  
   
     > [!NOTE]
-    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] エラーのソースではなく、コード マップを表示する場合があります。 これは、コードで依存関係の図に指定されていないアセンブリに依存しているか、コードの依存関係ダイアグラムで指定された依存関係がない場合に発生します。 コード マップまたはコードをレビューし、依存関係が必要であるかどうかを検証してください。 コード マップの詳細については、次を参照してください。[ソリューション間の依存関係をマップする](../modeling/map-dependencies-across-your-solutions.md)です。  
+    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、エラーのソースの代わりにコード マップが表示されることがあります。 これは、コードで依存関係の図に指定されていないアセンブリに依存しているか、コードの依存関係ダイアグラムで指定された依存関係がない場合に発生します。 コード マップまたはコードをレビューし、依存関係が必要であるかどうかを検証してください。 コード マップの詳細については、次を参照してください。[ソリューション間の依存関係をマップする](../modeling/map-dependencies-across-your-solutions.md)です。  
   
 3.  エラーを管理する、次を参照してください。[検証エラーを管理する](#ManageErrors)です。  
   
@@ -163,7 +161,7 @@ Visual Studio のこのリリースで、リアルタイムで依存関係の検
   
  検証エラーの詳細については、次を参照してください。[把握して解決するレイヤーの検証エラー](#UnderstandingValidationErrors)です。  
   
-###  <a name="ManageErrors"></a>検証エラーを管理します。  
+###  <a name="ManageErrors"></a> 検証エラーを管理します。  
  開発プロセスの実行中は、検証時に報告される一部の競合を抑制できます。 たとえば、既に解決したエラーや特定のシナリオに関連しないエラーを抑制できます。 エラーを抑制した場合は、[!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] で作業項目をログに記録することをお勧めします。  
   
 > [!WARNING]
@@ -182,7 +180,7 @@ Visual Studio のこのリリースで、リアルタイムで依存関係の検
 |復元のすべての抑制されたエラー、**エラー一覧**ウィンドウ|内を右クリック、**エラー一覧**ウィンドウをポイント**検証エラーの管理**、クリックして**抑制されたエラーの表示**です。|  
 |すべての抑制されたエラーを非表示に、**エラー一覧**ウィンドウ|内を右クリック、**エラー一覧**ウィンドウをポイント**検証エラーの管理**、クリックして**抑制されたエラーの非表示に**です。|  
   
-##  <a name="ValidateAuto"></a>コードを自動的に検証します。  
+##  <a name="ValidateAuto"></a> コードを自動的に検証します。  
  ローカル ビルドを実行するたびにレイヤー検証を実行できます。 チームで Team Foundation ビルドを使用する場合、ゲート チェックインを使用してレイヤー検証を実行できます。これは、カスタム MSBuild タスクを作成することで指定できます。また、ビルド レポートを使用して検証エラーを収集することもできます。 ゲート チェックイン ビルドを作成するを参照してください。[ゲート チェックイン ビルド処理を使用して変更を検証する](http://msdn.microsoft.com/Library/9cfc8b9c-1023-40fd-8ab5-1b1bd9c172ec)です。  
   
 #### <a name="to-validate-code-automatically-during-a-local-build"></a>ローカル ビルド時にコードを自動的に検証するには  
@@ -193,7 +191,7 @@ Visual Studio のこのリリースで、リアルタイムで依存関係の検
 <ValidateArchitecture>true</ValidateArchitecture>  
 ```  
   
- \- または  
+ \- または -  
   
 1.  **ソリューション エクスプ ローラー**依存関係ダイアグラムまたはダイアグラムを含むモデリング プロジェクトを右クリックし、クリックして**プロパティ**です。  
   
@@ -229,14 +227,14 @@ Visual Studio のこのリリースで、リアルタイムで依存関係の検
   
 -   [実行中のビルドの進行状況の監視](http://msdn.microsoft.com/Library/e51e3bad-2d1d-4b7b-bfcc-c43439c6c8ef)  
   
-##  <a name="TroubleshootingValidation"></a>レイヤー検証に関する問題をトラブルシューティングします。  
+##  <a name="TroubleshootingValidation"></a> レイヤー検証に関する問題をトラブルシューティングします。  
  レイヤー検証に関する問題とその解決方法について、次の表で説明します。 これらの問題は、コードと設計の間の競合によって発生するエラーとは異なります。 これらのエラーの詳細については、次を参照してください。[把握して解決するレイヤーの検証エラー](#UnderstandingValidationErrors)です。  
   
 |**問題点**|**考えられる原因**|**解決策**|  
 |---------------|------------------------|--------------------|  
 |検証エラーが予期したとおりに発生しない。|検証は、ソリューション エクスプ ローラーで他の依存関係図からコピーされたおよび同じモデリング プロジェクト内にある依存関係図では機能しません。 この方法でコピーされる依存関係ダイアグラムには、元の依存関係ダイアグラムと同じ参照が含まれています。|依存関係は、新しい図をモデリング プロジェクトに追加します。<br /><br /> 元の依存関係図から新しい図に要素をコピーします。|  
   
-##  <a name="UnderstandingValidationErrors"></a>理解とレイヤー検証エラーの解決  
+##  <a name="UnderstandingValidationErrors"></a> 理解とレイヤー検証エラーの解決  
  依存関係図と照らし合わせてコードを検証する場合、コードが設計と競合する場合に、検証エラーが発生します。 たとえば、次の条件のとき、検証エラーが発生する場合があります。  
   
 -   成果物が不適切なレイヤーに割り当てられている。 この場合、成果物を移動します。  
@@ -264,6 +262,6 @@ Visual Studio のこのリリースで、リアルタイムで依存関係の検
 |DV9001:**アーキテクチャの分析には、内部エラーが検出されました。**|結果が不完全である可能性があります。 詳細については、ビルド イベント ログの詳細または出力ウィンドウを参照してください。|詳細については、ビルド イベント ログまたは出力ウィンドウを参照してください。|  
 
  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [開発時に、システムを検証します。](../modeling/validate-your-system-during-development.md)   
  [ビデオ: リアルタイムで、アーキテクチャの依存関係を検証します。](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)   

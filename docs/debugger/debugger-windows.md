@@ -1,25 +1,21 @@
 ---
-title: "デバッガーの Visual Studio での Windows |Microsoft ドキュメント"
+title: デバッガーの Visual Studio での Windows |Microsoft ドキュメント
 ms.custom: H1Hack27Feb2017
 ms.date: 04/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4c6fe8f1-b015-4989-bb31-72ebac390026
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ff4b731f703d8237b338dbce821fa7e00c39e3d
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 779dcc39a18495d1022aaea5e14c8b82432efd53
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="learn-about-debugger-windows-in-visual-studio"></a>Visual Studio のデバッガー ウィンドウについてください。
 
@@ -43,7 +39,7 @@ ms.lasthandoff: 02/09/2018
 |モジュール|Ctrl + Alt + U|[方法 : [モジュール] ウィンドウを使用する](../debugger/how-to-use-the-modules-window.md)|
 |GPU スレッド|-|[方法: GPU スレッド ウィンドウを使用する](../debugger/how-to-use-the-gpu-threads-window.md)|
 |[タスク]|Ctrl + Shift + D、K|[[タスク] ウィンドウの使用](../debugger/using-the-tasks-window.md)|
-|Python 対話形式デバッグ|Shift + Alt + I|[Python 対話型 REPL](../python/interactive-repl.md)|
+|Python 対話形式デバッグ|Shift + Alt + I|[Python 対話型 REPL](../python/python-interactive-repl-in-visual-studio.md)|
 |JavaScript コンソール|Ctrl + Alt + V、C|[クイック スタート: JavaScript をデバッグします。](../debugger/quickstart-debug-javascript-using-the-console.md)|
 |DOM Explorer|Ctrl + Alt + V、D|[DOM Explorer を使用したレイアウトのデバッグ](../debugger/debug-layout-using-dom-explorer.md)|
 |ライブ ビジュアル ツリー|-|[デバッグ中にXAML のプロパティを調べる](../debugger/inspect-xaml-properties-while-debugging.md)|
@@ -53,6 +49,6 @@ ms.lasthandoff: 02/09/2018
 |逆アセンブリ|Ctrl + Alt + D|[方法 : [逆アセンブル] ウィンドウを使用する](../debugger/how-to-use-the-disassembly-window.md)|
 |レジスタ|Ctrl + Alt + G|[方法: [レジスタ] ウィンドウを使用する](../debugger/how-to-use-the-registers-window.md)|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [デバッガーの基本事項](../debugger/debugger-basics.md)

@@ -1,27 +1,23 @@
 ---
-title: "コントロールの VSPackage のアーキテクチャをソース |Microsoft ドキュメント"
-ms.custom: 
+title: コントロールの VSPackage のアーキテクチャをソース |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source control packages, architecture
 ms.assetid: 453125fc-23dc-49b1-8476-94581f05e6c7
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 002dea54b63a78975d56464319614d369a9b2318
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a423b270eb8a26e9573f957da48915db37bf6851
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="source-control-vspackage-architecture"></a>ソース コントロールの VSPackage のアーキテクチャ
 ソース管理パッケージは、サービスを使用して、VSPackage、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE を提供します。 代わりに、ソース管理パッケージは、ソース管理サービスとしての機能を提供します。 さらに、ソース管理パッケージは、ソース管理プラグインにソース管理を統合するためのよりも柔軟性の高い代替[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
@@ -53,6 +49,6 @@ ms.lasthandoff: 12/22/2017
   
  ソース管理プラグイン API ベースを作成するよりもより高度なプログラミングの専門知識を必要とソース コントロールを VSPackage に基づくパッケージの書き込みプラグインします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>   
  [はじめに](../../extensibility/internals/getting-started-with-source-control-vspackages.md)

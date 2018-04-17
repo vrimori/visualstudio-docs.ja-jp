@@ -1,29 +1,25 @@
 ---
-title: "IEEVisualizerServiceProvider::CreateVisualizerService |Microsoft ドキュメント"
-ms.custom: 
+title: IEEVisualizerServiceProvider::CreateVisualizerService |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IEEVisualizerServiceProvider::CreateVisualizerService
 helpviewer_keywords:
 - IEEVisualizerServiceProvider::CreateVisualizerService method
 ms.assetid: f366f7c9-358d-46c8-993f-32ff86539833
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b9c34f5b11aed9ed51ca10f662ea161d792e54b6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f59d86e94be5c0295786b747f6b57753aa087b07
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ieevisualizerserviceprovidercreatevisualizerservice"></a>IEEVisualizerServiceProvider::CreateVisualizerService
 このメソッドは、ビジュアライザー サービスを作成します。  
@@ -70,9 +66,9 @@ int CreateVisualizerService(
  成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="remarks"></a>コメント  
- `binder`、 `pSymProv`、および`pAddress`すべてに渡すパラメーター、`IDebugParsedExpression::EvaluateSync`メソッドです。 `CreateVisualizerService`のみ呼び出される`IDebugParsedExpression::EvaluateSync`ビジュアライザーの型の式エバリュエーターのサポートの一部として。  
+ `binder`、 `pSymProv`、および`pAddress`すべてに渡すパラメーター、`IDebugParsedExpression::EvaluateSync`メソッドです。 `CreateVisualizerService` のみ呼び出される`IDebugParsedExpression::EvaluateSync`ビジュアライザーの型の式エバリュエーターのサポートの一部として。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)   
  [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)   
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   

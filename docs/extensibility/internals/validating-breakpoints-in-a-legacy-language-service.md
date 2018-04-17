@@ -1,26 +1,24 @@
 ---
-title: "従来の言語サービス内のブレークポイントの検証 |Microsoft ドキュメント"
-ms.custom: 
+title: 従来の言語サービス内のブレークポイントの検証 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - breakpoint validation
 - language services [managed package framework], breakpoint validation
 ms.assetid: a7e873cd-dfe1-474f-bda5-fd7532774b15
-caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 85d9add1e66fdde2fcdbfd5c83bf99b6180a4642
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 03bf1534789ba24e1bbf597874ea427057073b61
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="validating-breakpoints-in-a-legacy-language-service"></a>従来の言語サービス内のブレークポイントを検証します。
 ブレークポイントは、デバッガーで実行されている間に特定の時点でプログラムの実行を停止することを示します。 ユーザーは、エディターには、ブレークポイントの有効な場所の構成に関する知識があるないために、ソース ファイル内の任意の行にブレークポイントを配置できます。 デバッガーを起動するときは、実行中のプログラム内の適切な場所にバインドのすべてのマークされたブレークポイント (保留中のブレークポイントと呼ばれます) されます。 ブレークポイントが検証されていることを確認が同時は、有効なコードの場所をマークします。 たとえば、ソース コード内の場所にコードがないため、コメントのブレークポイントが、正しくありません。 デバッガーは、無効なブレークポイントを無効にします。  
@@ -102,5 +100,5 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レガシ言語サービス機能](../../extensibility/internals/legacy-language-service-features1.md)

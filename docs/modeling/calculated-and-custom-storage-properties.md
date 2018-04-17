@@ -1,23 +1,21 @@
 ---
-title: "計算およびカスタムのストレージ プロパティ |Microsoft ドキュメント"
-ms.custom: 
+title: 計算およびカスタムのストレージ プロパティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain properties
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 1b5d89a621c0f325fd20dbff47c30975f760a6f8
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 153ff58e5ace618fbf9e6f0e3bb25614d21fc98a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="calculated-and-custom-storage-properties"></a>計算プロパティおよびカスタム格納プロパティ
 ドメイン固有言語 (DSL) ですべてのドメインのプロパティは、ダイアグラムでし、言語エクスプ ローラーで、ユーザーに表示することができ、プログラム コードによってアクセスできます。 ただし、プロパティは、その値が格納されるように異なります。  
@@ -69,7 +67,7 @@ ms.lasthandoff: 02/09/2018
     }  }  
     ```  
   
-8.  設定した場合**種類**に**カスタム ストレージ**、提供する必要があります、`Set`メソッドです。 例:  
+8.  設定した場合**種類**に**カスタム ストレージ**、提供する必要があります、`Set`メソッドです。 例えば:  
   
     ```  
     void SetAgeValue(int value)  
@@ -84,7 +82,7 @@ ms.lasthandoff: 02/09/2018
   
 10. プロパティをテストします。 試してみることを確認してください**を元に戻す**と**やり直し**です。  
   
-##  <a name="setters"></a>トランザクションとカスタムの Setter  
+##  <a name="setters"></a> トランザクションとカスタムの Setter  
  カスタム ストレージ プロパティの Set メソッドにするため必要はありませんを開くには、トランザクション、メソッドは通常、アクティブなトランザクションの内部と呼ばれます。  
   
  ただし、Set メソッドは、ユーザーが元に戻したり、やり直したりを呼び出した場合、またはトランザクションがロールバックされている場合にも呼び出す可能性があります。 ときに<xref:Microsoft.VisualStudio.Modeling.Store.InUndoRedoOrRollback%2A>が true の場合、Set メソッドに次のように動作する必要があります。  
@@ -93,7 +91,7 @@ ms.lasthandoff: 02/09/2018
   
 -   ただし、これデータベースまたはファイルの内容、または外部のストア オブジェクトなど、任意の外部リソースに更新する必要があります。 これにより、それらに格納されている synchronism ストアに値を持つことを確認します。  
   
- 例:  
+ 例えば:  
   
 ```  
 void SetAgeValue(int value)  
@@ -110,7 +108,7 @@ void SetAgeValue(int value)
   
  トランザクションの詳細については、次を参照してください。[を移動すると、プログラム コードでモデルを更新する](../modeling/navigating-and-updating-a-model-in-program-code.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [移動して、プログラム コードでモデルを更新します。](../modeling/navigating-and-updating-a-model-in-program-code.md)   
  [ドメインのプロパティのプロパティ](../modeling/properties-of-domain-properties.md)   
  [方法: ドメイン固有言語を定義する](../modeling/how-to-define-a-domain-specific-language.md)

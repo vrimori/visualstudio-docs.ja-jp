@@ -1,8 +1,8 @@
 ---
-title: "Visual Basic 6.0 のサポートに関する声明 | Microsoft Docs"
+title: Visual Basic 6.0 のサポートに関する声明 | Microsoft Docs
 ms.date: 08/28/2017
 ms.technology: devlang-vb
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -13,11 +13,11 @@ author: paulyuk
 ms.author: paulyuk
 ms.workload:
 - paulyuk
-ms.openlocfilehash: cb25f85be6c77dfbef6969435d14f2cae61debf2
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: cc55dec5960717e3807602bc76031f7502ec90c9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="support-statement-for-visual-basic-60-on-windows"></a>Windows 版 Visual Basic 6.0 のサポートに関する声明
 
@@ -33,7 +33,7 @@ Visual Basic チームは、次のサポート対象の Windows オペレーテ�
 - Windows Server 2012 (R2 を含む)
 - Windows Server 2008 (R2 を含む)
 
-Visual Basic チームの目標は、Visual Basic 6.0 アプリケーションがサポート対象の Windows バージョンで継続的に実行されるようにすることです。 このドキュメントで説明されているように、Visual Basic 6.0 コア ランタイムはサポート対象の Windows バージョンの全有効期間にわたってサポートされます。つまり、5 年間のメインストリーム サポートと 5 年間の延長サポートが提供されます (http://support.microsoft.com/gp/lifepolicy)。 サポート バーは、既存のアプリケーションに関する深刻な機能後退や致命的なセキュリティの問題に限定されます。
+Visual Basic チームの目標は、Visual Basic 6.0 アプリケーションがサポート対象の Windows バージョンで継続的に実行されるようにすることです。 フルの有効期間のサポートされている Windows バージョンでは、5 年間の延長サポートの 5 年後にメイン ストリーム サポートは、このドキュメントで詳しいとしてコア Visual Basic 6.0 のランタイムがサポートされます (http://support.microsoft.com/gp/lifepolicy)です。 サポート バーは、既存のアプリケーションに関する深刻な機能後退や致命的なセキュリティの問題に限定されます。
 
 ## <a name="technical-summary"></a>技術概要
 
@@ -61,7 +61,7 @@ Visual Basic 6.0 ランタイムは、もともとは Visual Basic 6.0 の再頒
 
 - サポート対象のランタイム ファイル: アプリケーションで配布する拡張ファイル
 
-   この拡張リストは、IDE メディアまたは Microsoft.com から開発者のマシンにインストールされた、主なコントロール、ライブラリ、ツールで構成されます。 通常、これらのコントロールは VB6 IDE によって開発者のコンピューターに既定でインストールされます。 開発者は引き続きアプリケーションでこれらのファイルを再配布する必要があります。 サポート対象のバージョンのファイルは、Microsoft ダウンロード センター (http://go.microsoft.com/fwlink/?LinkID=142927) からオンラインで入手できます。
+   この拡張リストは、IDE メディアまたは Microsoft.com から開発者のマシンにインストールされた、主なコントロール、ライブラリ、ツールで構成されます。 通常、これらのコントロールは VB6 IDE によって開発者のコンピューターに既定でインストールされます。 開発者は引き続きアプリケーションでこれらのファイルを再配布する必要があります。 サポートされているバージョンのファイルは使用可能なオンラインには、Microsoft ダウンロード センター (http://go.microsoft.com/fwlink/?LinkID=142927)です。
 
 - サポート対象外のランタイム ファイル
 
@@ -73,8 +73,8 @@ Visual Basic 6.0 ランタイムは、もともとは Visual Basic 6.0 の再頒
 
 Visual Basic 6.0 ランタイム バイナリがサポート対象の Windows バージョンでサポートされるまたは付属することにより、Visual Basic 6.0 IDE や Visual Studio 6.0 IDE 全体としてのサポート ポリシーが変わることはありません。 これらの製品の拡張サポートは、2008 年 4 月 8 日をもって終了しています。
 
-マイクロソフト製品のサポート有効期間の詳細については、http://support.microsoft.com/gp/lifepolicy で確認してください。 サポート有効期間の一部として、マイクロソフトはサポート対象の Windows バージョン上の Visual Basic 6.0 ランタイムについて、そのオペレーティング システムのサポート有効期間にわたって、引き続きサポートします。 つまり、たとえば Windows Server 2003 上のVisual Basic 6.0 ランタイムについては、メインストリーム サポートは 2008 年 6 月まで、拡張サポートについては 2013 年 6 月まで提供します。
-サポート期間やその他のサポート オプションの詳細については、マイクロソフトのサポート ページ (http://www.microsoft.com/support) を参照してください。
+Microsoft 製品のサポート ライフ サイクルの詳細についてはありますhttp://support.microsoft.com/gp/lifepolicyです。 サポート有効期間の一部として、マイクロソフトはサポート対象の Windows バージョン上の Visual Basic 6.0 ランタイムについて、そのオペレーティング システムのサポート有効期間にわたって、引き続きサポートします。 つまり、たとえば Windows Server 2003 上のVisual Basic 6.0 ランタイムについては、メインストリーム サポートは 2008 年 6 月まで、拡張サポートについては 2013 年 6 月まで提供します。
+サポート ライフ サイクルまたはその他のサポート オプションについての詳細がサポート ページをご参照くださいhttp://www.microsoft.com/supportです。
 
 ## <a name="64-bit-windows"></a>64 ビット版 Windows
 

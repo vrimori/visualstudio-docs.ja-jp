@@ -1,12 +1,13 @@
 ---
-title: "Visual Studio のエンタープライズ展開に既定値を設定する | Microsoft Docs"
-description: "Visual Studio のエンタープライズ展開で使用するドメイン ポリシーとその他の構成操作。"
+title: Visual Studio のエンタープライズ展開に既定値を設定する | Microsoft Docs
+description: Visual Studio のエンタープライズ展開で使用するドメイン ポリシーとその他の構成操作。
 ms.date: 05/05/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-acquisition
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - gpo
 - policy
@@ -15,14 +16,15 @@ helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 ms.assetid: 9B7B4608-7A3F-4FF4-BDCE-42D9F7CE6DBA
 author: heaths
-ms.author: heaths
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: f269e9c719ee685567161fbf8d5edb05b17ea9cd
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.author: tglee
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 942d8993cc23df3cec6dc4aa81d36a75aed8b704
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="set-defaults-for-enterprise-deployments-of-visual-studio"></a>Visual Studio のエンタープライズ展開に既定値を設定する
 

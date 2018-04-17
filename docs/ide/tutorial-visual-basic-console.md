@@ -1,26 +1,26 @@
 ---
-title: "Visual Studio の Visual Basic の概要 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio の Visual Basic の概要 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/08/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 ms.devlang: vb
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: b1de10c76d6a974280bfe016490a7567d0807675
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: e1818c12090737511b6460145b994bf58e6ad9ab
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="getting-started-with-visual-basic-in-visual-studio"></a>Visual Studio の Visual Basic の概要
 この Visual Basic (VB) に関するチュートリアルでは、Visual Studio を使用して、いくつかの異なるコンソール アプリを作成して実行しながら、Visual Studio の[統合開発環境 (IDE)](visual-studio-ide.md) の一部の機能を検討します。
@@ -125,9 +125,9 @@ Visual Studio は、開発者向け生産性向上ツールの統合開発スイ
 
     ![実行するアクションに対するプロンプトを含む、CaluculateThis アプリが表示されているコンソール ウィンドウ](../ide/media/vb-console-calculate-this.png)
 
-これでこのチュートリアルは完了です。
+## <a name="next-steps"></a>次の手順
+これでこのチュートリアルは完了です。 Visual Basic および Visual Studio IDE をさらに詳しく理解するには、次のページを参照してください。
 
-## <a name="see-also"></a>関連項目
 * [Visual Basic のガイド](/dotnet/visual-basic/index)
 * [Visual Basic の新機能](/dotnet/visual-basic/getting-started/whats-new)
 * [Visual Basic コード ファイルの IntelliSense](visual-basic-specific-intellisense.md)

@@ -1,13 +1,10 @@
 ---
-title: "リモート Visual C プロジェクトのデバッグ |Microsoft ドキュメント"
+title: リモート Visual C プロジェクトのデバッグ |Microsoft ドキュメント
 ms.custom: remotedebugging
 ms.date: 08/14/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 - FSharp
@@ -17,17 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - remote debugging, setup
 ms.assetid: 8b8eca0d-122f-4eda-848a-cf0945f207d0
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fb8230c2a70cf98a20993db930ddc1d494e989d
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: df0caacf8d3d99117208ce197e075f20f6df8b5a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remote-debugging-a-visual-c-project-in-visual-studio"></a>リモート Visual Studio での Visual C プロジェクトのデバッグ
 別のコンピューターに Visual Studio アプリケーションをデバッグ、インストールして、アプリを展開するコンピューターでリモート ツールを実行、Visual Studio からリモート コンピューターに接続しと展開、アプリを実行するプロジェクトを構成します。
@@ -36,7 +32,7 @@ ms.lasthandoff: 01/10/2018
 
 リモート ユニバーサル Windows アプリ (UWP) をデバッグする方法については、次を参照してください。[インストール済みのアプリ パッケージをデバッグ](debug-installed-app-package.md)です。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 リモート デバッガーは、Windows 7 でサポートされていると新しい (phone ではない) と Windows Server の Windows Server 2008 Service Pack 2 以降のバージョン。 要件の一覧については、次を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)です。
 
@@ -50,14 +46,14 @@ ms.lasthandoff: 01/10/2018
 > [!TIP]
 > 一部のシナリオでは、ファイル共有から、リモート デバッガーを実行する最も効率的なができます。 詳細については、次を参照してください。[ファイル共有からのリモート デバッガーの実行](../debugger/remote-debugging.md#fileshare_msvsmon)です。
   
-## <a name="BKMK_setup"></a>リモート デバッガーを設定します。
+## <a name="BKMK_setup"></a> リモート デバッガーを設定します。
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
 > [!NOTE]
 > 必要があるその他のユーザーのアクセス許可を追加または変更した場合、認証モード リモート デバッガーのポート番号を参照してください。[リモート デバッガーを構成する](../debugger/remote-debugging.md#configure_msvsmon)です。
 
-## <a name="remote_cplusplus"></a>リモート デバッグ、Visual C プロジェクト  
+## <a name="remote_cplusplus"></a> リモート デバッグ、Visual C プロジェクト  
  次の手順で名前とプロジェクトのパスは C:\remotetemp\MyMfc、およびリモート コンピューターの名前は**MJO DL**です。  
   
 1.  という名前の MFC アプリケーションを作成する**mymfc です。**  
@@ -96,7 +92,7 @@ ms.lasthandoff: 01/10/2018
   
 10. メッセージが表示されたら、リモート コンピューターに接続するネットワーク資格情報を入力します。  
   
-     必要な資格情報は、ネットワークのセキュリティの構成に固有です。 たとえば、ドメインのコンピューターにセキュリティ証明書を選択または、ドメイン名とパスワードを入力します。 非ドメイン コンピューターでは、可能性がありますを入力するマシン名と有効なユーザー アカウント名では、like  **MJO-DL\name@something.com** 、正しいパスワードとします。  
+     必要な資格情報は、ネットワークのセキュリティの構成に固有です。 たとえば、ドメインのコンピューターにセキュリティ証明書を選択または、ドメイン名とパスワードを入力します。 非ドメイン コンピューターでは、可能性がありますを入力するマシン名と有効なユーザー アカウント名では、like **MJO-DL\name@something.com**、正しいパスワードとします。  
   
 11. Visual Studio コンピューターで、実行がブレークポイントで停止したことを確認できるはずです。  
   
@@ -109,7 +105,7 @@ ms.lasthandoff: 01/10/2018
 
 [!INCLUDE [remote-debugger-symbols](../debugger/includes/remote-debugger-symbols.md)] 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)   
  [リモート デバッグ用に Windows ファイアウォールを構成します。](../debugger/configure-the-windows-firewall-for-remote-debugging.md)   

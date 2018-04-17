@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: コンテンツ コントロールによるテンプレートの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: コンテンツ コントロールによるテンプレートの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - content controls [Office development in Visual Studio], adding to documents
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6d221b9374bf71df3d66400289c50310263c2e9e
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 8c7f5026d4cbe8b7c38b8163ce00d893e1e406f2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-template-by-using-content-controls"></a>チュートリアル : コンテンツ コントロールによるテンプレートの作成
   このチュートリアルでは、コンテンツ コントロールを使用して、Microsoft Office Word テンプレートで構造化された再利用可能なコンテンツを作成するための、ドキュメント レベルのカスタマイズを作成する方法について説明します。  
@@ -63,7 +60,7 @@ ms.lasthandoff: 01/10/2018
   
 1.  名前の Word テンプレート プロジェクトを作成**MyBuildingBlockTemplate**です。 ウィザードで、ソリューション内に新しいドキュメントを作成します。 詳細については、「 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]デザイナーで新しい Word テンプレートを開き、追加、 **MyBuildingBlockTemplate**プロジェクトを**ソリューション エクスプ ローラー**です。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] デザイナーで新しい Word テンプレートを開き、追加、 **MyBuildingBlockTemplate**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
 ## <a name="creating-the-employee-table"></a>従業員表を作成する  
  ユーザーが従業員に関する情報を入力できる 4 種類のコンテンツ コントロールが含まれる表を作成します。  
@@ -239,13 +236,13 @@ ms.lasthandoff: 01/10/2018
   
 -   コンテンツ コントロールを、文書に埋め込まれている XML の一部 (「カスタム XML 部分」とも呼ばれます) にバインドします。 詳細については、次を参照してください。[チュートリアル: カスタム XML 部分へのコンテンツ コントロールのバインド](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
  [コンテンツ コントロール](../vsto/content-controls.md)   
  [方法: Word 文書にコンテンツ コントロールを追加](../vsto/how-to-add-content-controls-to-word-documents.md)   
  [方法: コンテンツ コントロールを使用してドキュメントを保護する.](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
- [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)  
+ [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
+ [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)  
   
   

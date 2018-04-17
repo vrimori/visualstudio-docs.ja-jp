@@ -1,12 +1,10 @@
 ---
-title: "方法: パッケージ マニフェストを作成する |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: パッケージ マニフェストを作成する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - prerequisites, custom bootstrapper package
 - dependencies, custom bootstrapper packages
 ms.assetid: 5aecc507-2764-42f2-ae6f-c227971cf0af
-caps.latest.revision: "12"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 463286eb8360b728b3b7e3ce9396c9f4b7e11305
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: d36d6c1d4589fa24e4c3e7c53e041d07f359092b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-package-manifest"></a>方法: パッケージ マニフェストを作成する
 アプリケーションの前提条件を展開するには、ブートス トラップ パッケージを使用できます。 ブートス トラップ パッケージには、ロケールごとに、パッケージ マニフェストが 1 つの製品マニフェスト ファイルが含まれています。 別のローカライズされたバージョン間で共有機能は、製品マニフェストに変わります必要があります。  
@@ -102,5 +100,5 @@ installing this package.</String>
 </Package>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [製品およびパッケージ スキーマ リファレンス](../deployment/product-and-package-schema-reference.md)

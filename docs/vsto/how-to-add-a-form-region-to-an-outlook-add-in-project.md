@@ -1,13 +1,10 @@
 ---
-title: "方法: フォーム領域を Outlook アドイン プロジェクトに追加 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: フォーム領域を Outlook アドイン プロジェクトに追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VSTO.NewFormRegionWizard.Page1
 - VSTO.NewFormRegionWizard.Page3
@@ -20,14 +17,14 @@ helpviewer_keywords:
 - form regions [Office development in Visual Studio], adding
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2029b154ca97f2e856a9e6af8ef58b82f4438df6
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: b8a02070bf76a1c4220c56afc397abb3b7fd3e1b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-a-form-region-to-an-outlook-add-in-project"></a>方法 : フォーム領域を Outlook アドイン プロジェクトに追加する
   **新しい Outlook フォーム領域** ウィザードを使用して、標準またはカスタムの Microsoft Office Outlook フォームを拡張するフォーム領域を作成します。 新しいフォーム領域を作成して Visual Studio でユーザー インターフェイスをデザインするか、または Outlook でデザインしたフォーム領域をインポートして Visual Basic または C# コードを追加することができます。  
@@ -67,9 +64,9 @@ ms.lasthandoff: 01/10/2018
   
 10. **[次へ]**をクリックします。  
   
-11. **[このフォーム領域を表示するメッセージのクラスを識別します]** ページで、標準の Outlook メッセージ クラスを選択するか、または 1 つ以上のカスタム メッセージ クラスの名前を入力してから、 **[完了]**をクリックします。 詳細については、「 [Associating a Form Region with an Outlook Message Class](../vsto/associating-a-form-region-with-an-outlook-message-class.md)」を参照してください。  
+11. **[このフォーム領域を表示するメッセージのクラスを識別します]** ページで、標準の Outlook メッセージ クラスを選択するか、または 1 つ以上のカスタム メッセージ クラスの名前を入力してから、 **[完了]**をクリックします。 詳細については、「 [フォーム領域の Outlook メッセージ クラスへの関連付け](../vsto/associating-a-form-region-with-an-outlook-message-class.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [実行時にフォーム領域へのアクセス](../vsto/accessing-a-form-region-at-run-time.md)   
  [Outlook ソリューション](../vsto/outlook-solutions.md)   
  [Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)   

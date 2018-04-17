@@ -1,30 +1,26 @@
 ---
-title: "チュートリアル: ビジュアライザーを記述する (C#) |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: ビジュアライザーを記述する (C#) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 helpviewer_keywords:
 - visualizers, writing
 - walkthroughs [Visual Studio], visualizers
 ms.assetid: 53467461-8e0f-45ee-9bc4-374bbaeaf00f
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6e161b3c914d0a87a720f1217b52a571b85f5ff9
-ms.sourcegitcommit: 03a74d29a1e0584ff4808ce6c9e812b51e774905
+ms.openlocfilehash: 7520072d719d7941acff57b871b8b1d1c69d0d7d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>チュートリアル : C# でビジュアライザーを記述する #
 このチュートリアルでは、C# を使用して簡単なビジュアライザーを作成する方法を説明します。 このチュートリアルで作成するビジュアライザーは、Windows フォーム メッセージ ボックスを使用して文字列の内容を表示します。 この簡単な文字列ビジュアライザーは、それ自体ではそれほど役に立ちませんが、他のデータ型を表示する、より役に立つビジュアライザーを作成するために必要な基本手順として使用できます。  
@@ -257,11 +253,11 @@ ms.lasthandoff: 01/02/2018
   
 4.  **名前**ボックス SecondVisualizer.cs などの適切な名前を入力します。  
   
-5.  **[追加]**をクリックします。  
+5.  **[追加]** をクリックします。  
   
  これで作業は完了です。 SecondVisualizer.cs ファイルを参照し、テンプレートによって追加されたコードを確認します。 さらにコードを実行してみてください。 以上で基礎的な項目を習得しました。これで、より複雑で有効な独自のビジュアライザーを作成できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジュアライザーのアーキテクチャ](../debugger/visualizer-architecture.md)   
  [方法: ビジュアライザーをインストール](../debugger/how-to-install-a-visualizer.md)   
  [カスタム ビジュアライザーを作成する](../debugger/create-custom-visualizers-of-data.md)

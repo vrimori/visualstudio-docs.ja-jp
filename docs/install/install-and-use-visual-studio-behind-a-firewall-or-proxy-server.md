@@ -1,35 +1,35 @@
 ---
-title: "ファイアウォールまたはプロキシ サーバーの内側に Visual Studio および Azure Services をインストールして使用する | Microsoft Docs"
-description: 
-ms.custom: 
+title: ファイアウォールまたはプロキシ サーバーの内側に Visual Studio および Azure Services をインストールして使用する | Microsoft Docs
+description: ''
+ms.custom: ''
 ms.date: 02/12/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - network installation, Visual Studio
 - administrator guide, Visual Studio
 - installing Visual Studio, administrator guide
 - list of domains, locations, URLs
-ms.assetid: 
+ms.assetid: ''
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 320b2492d73e0c15d806dac9aac3802bf957f83c
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 13f9f83c89e09e07d6024b779a89b9a6c4374112
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>ファイアウォールまたはプロキシ サーバーの内側に Visual Studio および Azure Services をインストールして使用する
 ユーザーまたはユーザーの組織でファイアウォールやプロキシ サーバーなどのセキュリティ対策を取っている場合は、Visual Studio および Azure Services をインストールして使用するときに最適なエクスペリエンスを得るために、"ホワイトリスト" への登録をお勧めするドメイン URL および開くことをお勧めするポートおよびプロトコルがあります。
 
-* **[Visual Studio のインストール](#install-visual-studio)**: これらの表には、目的とするすべてのコンポーネントおよびワークロードにアクセスできるようにするために、ホワイトリストに登録すべきドメイン URL を示します。    
+* **[Visual Studio のインストール](#install-visual-studio)**: これらの表には、目的とするすべてのコンポーネントおよびワークロードにアクセスできるようにするために、ホワイトリストに登録すべきドメイン URL を示します。
 
 * **[Visual Studio および Azure Services の使用](#use-visual-studio-and-azure-services)**: この表には、目的とするすべての機能とサービスにアクセスできるようにするために、ホワイトリストに登録すべきドメイン URL と、開くべきポートおよびプロトコルを示します。
 
@@ -87,7 +87,7 @@ Visual Studio インストーラーによって、さまざまなドメインや
 | 識別情報 “バッジ” <br>(ユーザー名とアバター)<br>と、呼び出し <br>ローミング設定 | app.vssps.visualstudio.com <br><br>app.vsspsext.visualstudio.com<br><br>app.vssps.visualstudio.com<br><br> ns-sb2-prod-ch1-002.cloudapp.net <br><br>az700632.vo.msecnd.net  | |443 | IDE でユーザーの名前とアバターを表示するために使用されます。 <br><br> あるコンピューターから別のコンピューターに設定の変更が確実にローミングするように使用されます。 |
 | リモート設定 | az700632.vo.msecnd.net | | 443| Visual Studio で問題を引き起こすことがわかっている拡張機能をオフにするために使用されます。   |
 | Windows ツール | developer.microsoft.com <br><br>dev.windows.com  <br><br>appdev.microsoft.com |https |443 | Windows アプリ ストアのシナリオで使用されます。  |
-| JSON スキーマ <br>探索 <br><br>JSON スキーマ <br>定義<br><br>Azure リソース向けの JSON スキーマ サポート <br>Support for <br>Azure Resources| json.schemastore.org <br>schemastoreorg.azurewebsites.net<br><br>json-schema.org<br><br>schema.management.azure.com| http<br>https<br><br>http<br><br>https |80<br>443 <br><br> 443<br><br>443 | JSON ドキュメントの編集時にユーザーによって使用される可能性のある JSON スキーマを検出およびダウンロードするために使用されます。 <br><br>Json 用のメタ検証スキーマを取得するために使用されます。<br><br>Azure Resource Manager 展開テンプレート用の現在のスキーマを取得するために使用されます。|
+| JSON スキーマ <br>探索 <br><br>JSON スキーマ <br>定義<br><br>JSON スキーマ <br>サポート <br>Azure リソース| json.schemastore.org <br>schemastoreorg.azurewebsites.net<br><br>json-schema.org<br><br>schema.management.azure.com| http<br>https<br><br>http<br><br>https |80<br>443 <br><br> 443<br><br>443 | JSON ドキュメントの編集時にユーザーによって使用される可能性のある JSON スキーマを検出およびダウンロードするために使用されます。 <br><br>Json 用のメタ検証スキーマを取得するために使用されます。<br><br>Azure Resource Manager 展開テンプレート用の現在のスキーマを取得するために使用されます。|
 | NPM パッケージ <br>探索  |Skimdb.npmjs.com <br><br>Registry.npmjs.org <br><br>Api.npms.io  | https<br><br>http/s<br><br>https | 443<br><br>80/443<br><br>443| NPM パッケージを検索する場合に必要であり、Web プロジェクトでのクライアント側スクリプト パッケージのインストールに使用されます。 |
 |Bower パッケージ<br> アイコン<br><br>Bower パッケージ <br>search  |Bower.io <br><br>bowercache.azurewebsites.net <br>go.microsoft.com <br>Registry.bower.io | http<br><br>https<br>http<br>https|80<br><br>443<br>80<br>443 |既定の Bower パッケージ アイコンを指定します。  <br><br>Bower パッケージを検索する機能を提供します。 |
 |NuGet<br><br>NuGet パッケージ<br> 探索 | Api.nuget.org <br>www.nuget.org <br>Nuget.org<br><br>crl3.digicert.com <br>crl4.digicert.com <br>ocsp.digicert.com <br>cacerts.digicert.com  | https<br><br>http/s |443<br><br>80/443<br> |署名された NuGet パッケージを確認するために使用されます。<br><br>NuGet パッケージおよびバージョンを検索するために必要です。 |
@@ -113,6 +113,7 @@ Visual Studio インストーラーによって、さまざまなドメインや
 | スナップショット <br>デバッガー | 1. go.microsoft.com <br>2. management.azure.com <br> 3. &#42;azurewebsites.net <br> 4. &#42;scm.azurewebsites.net<br>5. api.nuget.org/v3/index.json <br>6. msvsmon | 1. https <br>2. https  <br>3. http <br>4. https <br>5. https <br>6.Concord <br> | 1. 443<br> 2. 443<br>3. 80  <br>4. 443<br> 5. 443<br> 6. 4022 (Visual Studio バージョン依存) | 1..json ファイルに対してクエリを実行して、アプリ サービス SKU サイズを取得します <br>2.さまざまな Azure RM 呼び出し <br>3.サイト ウォーム アップ呼び出し  <br>4.顧客の対象 App Service Kudu エンドポイント <br>5.nuget.org で発行されたサイト拡張機能バージョンに対してクエリを実行します <br>6.リモート デバッグ チャンネル |
 |Azure Stream Analytics <br><br>HDInsight | Management.azure.com |https|443 |ASA ジョブの表示、送信、実行、管理で使用されます <br><br> HDI クラスターを参照し、HDI ジョブを送信、診断、およびデバッグするために使用されます |
 | Azure Data Lake | &#42;.azuredatalakestore.net <br>&#42;.azuredatalakeanalytics.net | https | 443 | ジョブのコンパイル、送信、表示、診断、およびデバッグのために使用されます。ADLS ファイルを参照するために使用されます。ファイルをアップロードおよびダウンロードするために使用されます。 |
+|パッケージ サービス | [アカウント].visualstudio.com <br/> [アカウント].*.visualstudio.com <br/> *.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https | 443 | 特定のビルド タスク (NuGet Tool インストーラー、Node Tool インストーラーなど) にのみ、またはフィードで公共のアップストリームを使用する場合にのみ、*.npmjs.org、*.nuget.org、*.nodejs.org が必要です。  パッケージ サービスの中心的機能には、他の 3 つのドメインが必要です。 |
 |||||||
 
 

@@ -1,23 +1,21 @@
 ---
-title: "ドメイン パス構文 |Microsoft ドキュメント"
-ms.custom: 
+title: ドメイン パス構文 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, domain path
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: fb2b1dfa13bf00c29452798253198b2ad0e72e97
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 3bac81f79b2639a7b1b4f93055855981d4c30786
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="domain-path-syntax"></a>ドメイン パス構文
 DSL 定義は XPath に似た構文を使用して、モデル内の特定の要素を見つけます。  
@@ -38,5 +36,5 @@ DSL 定義は XPath に似た構文を使用して、モデル内の特定の要
   
  要素からリンクへのホップに対して使用する名前はロールの `Property Name` の値です。 リンクから要素へのホップに対して使用する名前はターゲットのロール名です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデル、クラス、およびリレーションシップについて](../modeling/understanding-models-classes-and-relationships.md)

@@ -1,8 +1,8 @@
 ---
 layout: HubPage
-hide_bc: 
-title: "Visual Studio のドキュメント | Microsoft Docs"
-description: "Visual Studio 2017 を使って、アプリケーション、サービス、ツールを、任意の言語で、特定のプラットフォームやデバイス向けに開発する方法について説明します。"
+hide_bc: true
+title: Visual Studio のドキュメント | Microsoft Docs
+description: Visual Studio 2017 を使って、アプリケーション、サービス、ツールを、任意の言語で、特定のプラットフォームやデバイス向けに開発する方法について説明します。
 ms.topic: hub-page
 ms.openlocfilehash: dfd72526fc24ae3b0a33014b8b8ac23e350fb6cf
 ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3

@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: CheckBox コントロールを使用したドキュメント書式の変更 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: CheckBox コントロールを使用したドキュメント書式の変更 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,13 +16,14 @@ helpviewer_keywords:
 - controls [Office development in Visual Studio], adding to documents
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 5b99f1a5d05d1eac173c40e7cc0c3b989f7c0cd3
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: ecbb0036fc74cf5d0d27ea61283ec5b733dca1a5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-changing-document-formatting-using-checkbox-controls"></a>チュートリアル : CheckBox コントロールを使用したドキュメント書式の変更
   このチュートリアルでは、Microsoft Office Word のドキュメント レベルのカスタマイズでの Windows フォーム コントロールを使用して、テキストの書式設定を変更する方法を示します。  
@@ -161,7 +160,7 @@ ms.lasthandoff: 01/10/2018
   
 -  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアルを使用して Word](../vsto/walkthroughs-using-word.md)   
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
  [NamedRange コントロール](../vsto/namedrange-control.md)   

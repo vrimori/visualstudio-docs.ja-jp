@@ -1,12 +1,10 @@
 ---
-title: "Visual Studio 環境における office プロジェクト |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio 環境における office プロジェクト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VST.ProjectItem.WordDocument
 - VST.ProjectItem.ExcelWorkbook
@@ -43,13 +41,14 @@ helpviewer_keywords:
 - VST.Designer.ExcelVST.Designer.Word
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: a937f98a11ab9c8cb9723637be902808dce86563
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 80a8f866cb43eb6279cca45bebc94c54af898eab
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="office-projects-in-the-visual-studio-environment"></a>Visual Studio 環境における Office プロジェクト
   Microsoft Office プロジェクトの開発環境は、Visual Studio の他の種類のプロジェクト (Windows フォーム プロジェクトなど) に似ています。 Office プロジェクトを作成したり、開いたりすると、 **ソリューション エクスプローラー**にプロジェクト項目が表示されます。 ドキュメント レベルのプロジェクトの場合は、ドキュメント (つまり、Word 文書または Excel ブック) が Visual Studio で開かれ、ビジュアルなデザイナーとして動作します。  
@@ -98,7 +97,7 @@ ms.lasthandoff: 01/10/2018
   
  ブックをデザイナーで開いても、デザイン サーフェイスは表示されません。 ブックのデザイン ビューは、デザイナーの領域を占めている大きなコンポーネント トレイです。  
   
- ブックやブック内の各シートには、関連付けられたコード ファイルがあります。 各コード ファイルには、生成された *ホスト項目* クラスがあり、ブックまたはシートを表します。 詳細については、「 [Automating Excel by Using Extended Objects](../vsto/automating-excel-by-using-extended-objects.md)」を参照してください。  
+ ブックやブック内の各シートには、関連付けられたコード ファイルがあります。 各コード ファイルには、生成された *ホスト項目* クラスがあり、ブックまたはシートを表します。 詳細については、「 [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)」を参照してください。  
   
 ### <a name="word-documents-in-the-designer"></a>デザイナーでの Word 文書  
  文書をデザイナーで開くと、Word で直接開く場合と同じ方法で文書を変更できます。 文書内の単語をダブルクリックすると、その単語が選択されます。 ただし、単語がホスト コントロールの内部にある場合は、コード エディターが開かれ、そのコントロールの既定のイベント ハンドラーが生成されます。  
@@ -121,7 +120,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="data-sources-window"></a>データ ソース ウィンドウ  
  ドキュメント レベルの Office プロジェクトで **データ ソース** ウィンドウを使用すると、データ ソースをドキュメントにドラッグし、そのデータ ソースにバインドされているコントロールを作成できます。 詳細については、次を参照してください。 [Visual Studio でのデータにコントロールをバインド](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [Office プロジェクト テンプレートの概要](../vsto/office-project-templates-overview.md)   
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   

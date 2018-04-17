@@ -1,32 +1,30 @@
 ---
-title: "プロジェクトのサブタイプ |Microsoft ドキュメント"
-ms.custom: 
+title: プロジェクトのサブタイプ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], subtypes
 - project subtypes [Visual Studio SDK]
 ms.assetid: d235b47b-cf11-4d47-a63f-e33d9d16105d
-caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 21d7f013989607f7f5416a57829bc9b2b29b61d2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: e91a16ad11f7089230138919519922d58f3cc472
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-subtypes"></a>プロジェクトのサブタイプ
 プロジェクトのサブタイプでは、カスタマイズしたりのプロジェクト システムの動作を flavor[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 カスタマイズには、プロジェクト ファイルを追加または内の項目をフィルター処理で追加のデータを保存、**新しい項目の追加**ダイアログ ボックスで、アセンブリのデバッグし、配置方法を制御して、プロジェクトの拡張**プロパティページ** ダイアログ ボックス。 Vspackage では、COM の集計を使用してプロジェクトのサブタイプを実装します。  
   
 > [!NOTE]
->  Visual C プロジェクト システムは、プロジェクトのサブタイプをサポートしていません。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]自体は、プロジェクトのサブタイプを使用して、SQL Server およびスマート デバイス プロジェクトを実装します。  
+>  Visual C プロジェクト システムは、プロジェクトのサブタイプをサポートしていません。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 自体は、プロジェクトのサブタイプを使用して、SQL Server およびスマート デバイス プロジェクトを実装します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [プロジェクト サブタイプのデザイン](../../extensibility/internals/project-subtypes-design.md)  

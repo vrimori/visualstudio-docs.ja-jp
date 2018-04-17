@@ -1,27 +1,23 @@
 ---
-title: "チュートリアル: クイック ツールヒントの表示 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: クイック ツールヒントの表示 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - QuickInfo
 ms.assetid: 23fb8384-4f12-446f-977f-ce7910347947
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9cd3e9d5e10e6946b4cae8ce02a5a39511e4baaf
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 81974967094d238f12141ad7cd31bcc8015b9633
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-displaying-quickinfo-tooltips"></a>チュートリアル: クイック ツールヒントの表示
 QuickInfo はメソッドのシグネチャを表示する IntelliSense 機能である場合、ユーザーの説明が、ポインターをメソッド名の上に移動します。 QuickInfo の説明を提供する識別子を定義して、コンテンツを表示するツールヒントを作成して QuickInfo などの機能の言語に基づくを実装できます。 QuickInfo を定義するには、言語サービスのコンテキストで独自ファイル名拡張子とコンテンツの種類を定義してその種類のクィック ヒントを表示またはクイック ヒントを表示するには、既存のコンテンツの種類 ("text") などの。 このチュートリアルでは、"text"コンテンツ タイプのクィック ヒントを表示する方法を示します。  
@@ -41,7 +37,7 @@ QuickInfo はメソッドのシグネチャを表示する IntelliSense 機能�
  この例では QuickInfo ソース リストを使用するハード コーディングされたメソッドの名前と説明については、が、完全な実装で、言語サービスと言語のドキュメントがそのコンテンツを提供することを担当します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="creating-a-mef-project"></a>MEF プロジェクトを作成します。  
   
@@ -180,5 +176,5 @@ QuickInfo はメソッドのシグネチャを表示する IntelliSense 機能�
   
 4.  ポインターは、「追加」の出現回数は、のいずれかの上に移動します。 署名との説明、`add`メソッドを表示する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: コンテンツの種類とファイル名拡張子とをリンクさせる](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

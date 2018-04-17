@@ -1,30 +1,26 @@
 ---
-title: "ProjectItem 要素 (Visual Studio 項目テンプレート) |Microsoft ドキュメント"
-ms.custom: 
+title: ProjectItem 要素 (Visual Studio 項目テンプレート) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#ProjectItem
 helpviewer_keywords:
 - <ProjectItem> element [Visual Studio item templates]
 - ProjectItem element [Visual Studio item templates]
 ms.assetid: 9ed94112-0c38-49df-b728-0dd2d0d1eb47
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2fe9abece45efdc206e775bc8f5e79666e334001
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 886fc57258b4ccafaa4ab8d522fad632de455e17
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="projectitem-element-visual-studio-item-templates"></a>ProjectItem 要素 (Visual Studio 項目テンプレート)
 項目テンプレートに含まれているファイルを指定します。  
@@ -32,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  `ProjectItem`要素は、テンプレートが、プロジェクトまたは項目があるかによって異なる属性を受け入れます。 このトピックの内容について説明します、`ProjectItem`項目の要素。 詳細について、`ProjectItem`プロジェクト テンプレートの要素を参照してください[ProjectItem 要素 (Visual Studio プロジェクト テンプレート)](../extensibility/projectitem-element-visual-studio-project-templates.md)です。  
   
- \<VSTemplate >  
+ \<VSTemplate>  
  \<TemplateContent >  
  \<ProjectItem >  
   
@@ -77,7 +73,7 @@ ms.lasthandoff: 12/22/2017
  A`string`テンプレート .zip ファイル内のファイルの名前を表します。  
   
 ## <a name="remarks"></a>コメント  
- `ProjectItem`省略可能な子の`TemplateContent`します。  
+ `ProjectItem` 省略可能な子の`TemplateContent`します。  
   
  `TargetFileName`パラメーターを持つファイルの名前を変更する属性を使用できます。 たとえば場合、ファイル`MyFile.vb`する名前を指定するファイル名を基に、ファイル内のユーザーによって提供されるテンプレート .zip ファイルのルート ディレクトリに存在する、**新しい項目の追加**ダイアログ ボックスで、次の XML を使用すると。  
   
@@ -106,7 +102,7 @@ ms.lasthandoff: 12/22/2017
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
  [方法 : 複数ファイルの項目テンプレートを作成する](../ide/how-to-create-multi-file-item-templates.md)   

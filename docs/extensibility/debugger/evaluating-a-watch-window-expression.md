@@ -1,27 +1,25 @@
 ---
-title: "[ウォッチ] ウィンドウの式を評価する |Microsoft ドキュメント"
-ms.custom: 
+title: '[ウォッチ] ウィンドウの式を評価する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Watch window expressions
 - Watch window, expressions
 - expression evaluation, Watch window expressions
 ms.assetid: b07e72c7-60d3-4b30-8e3f-6db83454c348
-caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: fb109fd91e4c295bf372b14e26bc2a75c3be6b1d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: beb632b484659c3bc901142b35ab52d25b8067fe
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="evaluating-a-watch-window-expression"></a>[ウォッチ] ウィンドウの式を評価します。
 > [!IMPORTANT]
@@ -35,13 +33,13 @@ ms.lasthandoff: 12/22/2017
   
 2.  Visual Studio を呼び出し、ウォッチ式のリスト内の各式[ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)式のテキストを解析された式に変換します。  
   
-3.  `IDebugExpressionContext2::ParseText`呼び出し[解析](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)を実際の生成とテキストの解析中の作業を行うには、 [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md)オブジェクト。  
+3.  `IDebugExpressionContext2::ParseText` 呼び出し[解析](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)を実際の生成とテキストの解析中の作業を行うには、 [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md)オブジェクト。  
   
-4.  `IDebugExpressionContext2::ParseText`作成、 [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md)オブジェクトと配置、`IDebugParsedExpression`にオブジェクト。 このすれば`DebugExpression2`オブジェクトは Visual Studio に返されます。  
+4.  `IDebugExpressionContext2::ParseText` 作成、 [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md)オブジェクトと配置、`IDebugParsedExpression`にオブジェクト。 このすれば`DebugExpression2`オブジェクトは Visual Studio に返されます。  
   
 5.  Visual Studio 呼び出し[EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)解析された式を評価します。  
   
-6.  `IDebugExpression2::EvaluateSync`呼び出しを渡す[EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)を実際の評価を行い、生成、 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) Visual Studio に返されるオブジェクト。  
+6.  `IDebugExpression2::EvaluateSync` 呼び出しを渡す[EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)を実際の評価を行い、生成、 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) Visual Studio に返されるオブジェクト。  
   
 7.  Visual Studio 呼び出し[GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)ウォッチ式の一覧に表示される、式の値を取得します。  
   
@@ -62,5 +60,5 @@ ms.lasthandoff: 12/22/2017
  [評価コンテキスト](../../extensibility/debugger/evaluation-context.md)  
  デバッグ エンジン (DE) は、式エバリュエーター (EE) を呼び出すときに渡される引数を提供します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR 式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

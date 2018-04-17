@@ -1,18 +1,18 @@
 ---
-title: "方法: ワークフロー デザイナーで検索を使用して |Microsoft ドキュメント"
+title: '方法: ワークフロー デザイナーで検索を使用して |Microsoft ドキュメント'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: f42d3115-2ed2-4941-8f1e-92dac41c30fa
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 0ab8fe2ca639dd4660dfbabc8c5497f4ab0b3487
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 91d401f4061c142a739e4fa4215a401922b9e362
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-use-search-in-the-workflow-designer"></a>ワークフロー デザイナーで検索を使用する方法
 より大規模で複雑なワーク フローの作成を容易にするために、ワークフロー デザイナー内で検索を使用して、キーワードで項目を検索できます。 デザイナーでは、置換はサポートされないことに注意してください。 検索では、デザイナーで次の項目が検索されます。  

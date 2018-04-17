@@ -1,23 +1,23 @@
 ---
-title: "Visual Studio 2017 で問題を報告する方法 | Microsoft Docs"
-ms.custom: 
-ms.date: 02/26/2018
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: Visual Studio 2017 で問題を報告する方法 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/11/2018
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: bee01179-cde5-4419-9095-190ee0ba5902
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.technology: vs-acquisition
 ms.workload:
 - multiple
-ms.openlocfilehash: f3e5e01abeb45e7cfdefebb7d6fd3d63320e1e31
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 809f9121be867785e6d92966ccf92b012740daab
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-2017"></a>Visual Studio 2017 で問題を報告する方法
 
@@ -69,7 +69,7 @@ Visual Studio に問題が発生した場合は、Microsoft にお知らせく�
 
  **[送信]** ボタンを選択して、イメージ、トレースやダンプ ファイルと共にレポートを送信します  (**[送信]** ボタンが灰色表示の場合、レポートのタイトルと説明が記載されていることを確認します)。
 
-## 代替レポート<a name="alternate_reporting"></a>
+## 代替レポート <a name="alternate_reporting"></a>
 
 ### <a name="report-a-problem-by-using-the-visual-studio-installer"></a>Visual Studio インストーラーを使用して問題をレポートする
 
@@ -77,9 +77,9 @@ Visual Studio のインストールを完了できない場合、または Visua
 
  ![Visual Studio インストーラーの [フィードバックの送信] ボタンからフィードバック ツールを開くことができます](../install/media/report-a-problem.png)
 
-### <a name="report-a-problem-directly-to-the-visual-studio-developer-community"></a>Visual Studio 開発者コミュニティに問題を直接報告する
+### <a name="search-for-problems-and-solutions-by-using-the-visual-studio-developer-community"></a>Visual Studio 開発者コミュニティを使用して問題と解決策を検索する
 
-問題を報告する際に Visual Studio を使用したくない場合または使用できない場合は、Visual Studio 開発者コミュニティに問題を直接報告することができます。 詳細については、「[Visual Studio 開発者コミュニティ ポータル](https://developercommunity.visualstudio.com/)」ページを参照してください。
+Visual Studio を使って問題を報告することが望ましくない場合、またはできない場合は、Visual Studio の開発者コミュニティで既に問題が報告され、解決策が投稿されている可能性があります。 詳細については、「[Visual Studio 開発者コミュニティ ポータル](https://developercommunity.visualstudio.com/)」ページを参照してください。
 
 #### <a name="provide-product-feedback-or-a-suggestion"></a>製品に関するフィードバックや提案を提供する
 

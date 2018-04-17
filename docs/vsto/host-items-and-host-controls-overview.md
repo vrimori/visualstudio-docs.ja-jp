@@ -1,13 +1,10 @@
 ---
-title: "ホスト項目とホスト コントロールの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: ホスト項目とホスト コントロールの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -39,14 +36,14 @@ helpviewer_keywords:
 - host controls [Office development in Visual Studio], deleting
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1512b4774efea9639f01135932ad076f6630ea12
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 84e0b2cf74eb8c0d3faca8d1c28d3bea91c87f76
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="host-items-and-host-controls-overview"></a>ホスト項目とホスト コントロールの概要
   ホスト項目とホスト コントロールは、Visual Studio の Office 開発ツールを使用して作成される Office ソリューションのプログラミング モデルを提供する助けとなる型です。 ホスト項目とホスト コントロールは、Microsoft Office Word および Microsoft Office Excel の COM ベースのオブジェクト モデルとの対話を、Windows フォーム コントロールなどのマネージ オブジェクトとの対話と似たものにします。  
@@ -168,12 +165,12 @@ ms.lasthandoff: 01/10/2018
 >  文書やワークシートの `Shutdown` イベント ハンドラーでは、コントロールをプログラムで削除しないでください。 `Shutdown` イベントが発生すると、UI 要素は使用できなくなります。 アプリケーションが終了する前にコントロールを削除する場合は、 `BeforeClose` や `BeforeSave`などの別のイベント ハンドラーにコードを追加してください。  
   
 ### <a name="programming-against-host-control-events"></a>ホスト コントロール イベントに対するプログラミング  
- ホスト コントロールが Office オブジェクトを拡張する方法の 1 つに、イベントの追加が挙げられます。 たとえば、Excel の <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトと Word の <xref:Microsoft.Office.Interop.Word.Bookmark> オブジェクトはイベントを持ちませんが、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] では、プログラミング可能なイベントを追加することによってこれらのオブジェクトを拡張します。 Windows フォームのコントロールのイベントにアクセスするのと同じ方法で、これらのイベントにアクセスし、コーディングすることができます。Visual Basic ではイベント ドロップダウン リストを使用し、C# ではイベント プロパティ ページを使用します。 詳細については、「 [Walkthrough: Programming Against Events of a NamedRange Control](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)」を参照してください。  
+ ホスト コントロールが Office オブジェクトを拡張する方法の 1 つに、イベントの追加が挙げられます。 たとえば、Excel の <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトと Word の <xref:Microsoft.Office.Interop.Word.Bookmark> オブジェクトはイベントを持ちませんが、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] では、プログラミング可能なイベントを追加することによってこれらのオブジェクトを拡張します。 Windows フォームのコントロールのイベントにアクセスするのと同じ方法で、これらのイベントにアクセスし、コーディングすることができます。Visual Basic ではイベント ドロップダウン リストを使用し、C# ではイベント プロパティ ページを使用します。 詳細については、「 [チュートリアル : NamedRange コントロールのイベントのプログラミング](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)」を参照してください。  
   
 > [!NOTE]  
 >  Excel の <xref:Microsoft.Office.Interop.Excel._Application.EnableEvents%2A> オブジェクトの <xref:Microsoft.Office.Interop.Excel.Application> プロパティを **false**と呼ばれるオブジェクトを拡張します。 このプロパティを **false** に設定すると、ホスト コントロールのイベントを含む、すべてのイベントが Excel で発生しなくなります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
  [ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)   

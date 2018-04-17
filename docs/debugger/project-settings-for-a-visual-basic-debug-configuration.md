@@ -1,13 +1,10 @@
 ---
-title: "プロジェクトの Visual Basic デバッグ構成の設定 |Microsoft ドキュメント"
-ms.custom: 
+title: プロジェクトの Visual Basic デバッグ構成の設定 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vbProjectPropertiesDebug
 dev_langs:
@@ -23,17 +20,16 @@ helpviewer_keywords:
 - project configurations, debug
 - debug configurations, Visual Basic
 ms.assetid: 72a8483a-af0b-4403-8b0d-ee9ad71ee435
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a9d9b9c5cee3dc69698320af77a7cc909b344a2d
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 727e36da37c38d57013071d1d5013c27b8a95b87
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-settings-for-a-visual-basic-debug-configuration"></a>Visual Basic デバッグ構成のプロジェクト設定
 プロジェクト設定を変更することができます、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]のデバッグ構成、**プロパティ ページ**ウィンドウで説明したよう[デバッグ構成とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)です。 次の表は、デバッガー関連の設定を検索する場所を示して、**プロパティ ページ**ウィンドウです。  
@@ -62,5 +58,5 @@ ms.lasthandoff: 01/22/2018
 |**定数 DEBUG を定義します。**|出力関数の条件付きコンパイルを有効にこのシンボルを定義する、 [Debug クラス](/dotnet/api/system.diagnostics.debug)です。 このシンボルを定義すると、クラスのメソッドをデバッグ出力を生成、[出力ウィンドウ](../ide/reference/output-window.md)します。 このシンボルを定義しない場合、Debug クラスのメソッドはコンパイルされず、出力も生成されません。 このシンボルは、デバッグ バージョンに定義します。リリース バージョンには定義しません。 リリース バージョンにこのシンボルを定義すると、不要なコードのためにプログラムの実行速度が低下します。|  
 |**定数 TRACE を定義します。**|出力関数の条件付きコンパイルを有効にこのシンボルを定義する、 [Trace クラス](/dotnet/api/system.diagnostics.trace.aspx)です。 このシンボルを定義すると、Trace クラスのメソッド出力を生成、[出力ウィンドウ](../ide/reference/output-window.md)します。 このシンボルを定義しない場合、Trace クラスのメソッドはコンパイルされず、出力も生成されません。 このシンボルは、既定で、デバッグ バージョンとリリース バージョンの両方に定義されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)

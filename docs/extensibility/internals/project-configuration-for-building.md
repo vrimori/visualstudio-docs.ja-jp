@@ -1,26 +1,24 @@
 ---
-title: "プロジェクトのビルドの構成 |Microsoft ドキュメント"
-ms.custom: 
+title: プロジェクトのビルドの構成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], configuration for building
 - project configurations, building
 ms.assetid: 2c83615d-fa4d-4b9f-b315-7a69b3000da0
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 2d8f37068d197d133ba8798703c8f82093261aca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 4d78ac1cabc356db162639d3eb19d0bff71e295e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-configuration-for-building"></a>構築するためのプロジェクトの構成
 特定のソリューションのソリューション構成の一覧は、ソリューション構成 ダイアログ ボックスによって管理されます。  
@@ -51,9 +49,9 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  一覧のプロジェクトに、そのチェック ボックスをオンだが淡色表示で指定された明示的な依存関係により、環境によって追加された、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency>または<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency>インターフェイス、および変更することはできません。 たとえばからプロジェクトの参照を追加、[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]プロジェクトから別のプロジェクトへの参照を削除することによってのみ削除可能なビルドの依存関係を自動的に追加されます。 なるため、これにより、依存関係のループは、チェック ボックスがクリアされ、淡色表示のプロジェクトを選択することはできません (たとえば、Project1 に Project2 に依存して Project2 は Project1 に依存)、ビルドを停止するとします。  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ビルド プロセスには、標準的なコンパイルとは、1 つのビルド コマンドで起動するリンク操作が含まれます。 その他の 2 つのビルド プロセスもサポートされていることができます。 以前のビルドと構成の出力項目が変更された場合を決定する、最新の状態チェックからすべての出力項目を削除するクリーン操作します。  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ビルド プロセスには、標準的なコンパイルとは、1 つのビルド コマンドで起動するリンク操作が含まれます。 その他の 2 つのビルド プロセスもサポートされていることができます。 以前のビルドと構成の出力項目が変更された場合を決定する、最新の状態チェックからすべての出力項目を削除するクリーン操作します。  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2>対応するオブジェクトを返す<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg>(から返された<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2.get_CfgType%2A>)、ビルド プロセスを管理します。 呼び出しを作成する構成の実行中に、ビルド操作のステータスをレポートする<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildStatusCallback>、環境によって実装されるインターフェイスおよびビルドの状態のイベントに関心のあるその他のオブジェクト。  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> 対応するオブジェクトを返す<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg>(から返された<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2.get_CfgType%2A>)、ビルド プロセスを管理します。 呼び出しを作成する構成の実行中に、ビルド操作のステータスをレポートする<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildStatusCallback>、環境によって実装されるインターフェイスおよびビルドの状態のイベントに関心のあるその他のオブジェクト。  
   
  作成されると、デバッガーの制御下で実行できるかどうかを決定する構成設定を使用できます。 構成を実装<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg>デバッグをサポートします。  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
  さらに、プロジェクトの依存関係ウィンドウ内のグリッドを指定できます。 詳細については、次を参照してください。[プロパティ グリッドの表示](../../extensibility/internals/properties-display-grid.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)   
  [展開を管理するためのプロジェクトの構成](../../extensibility/internals/project-configuration-for-managing-deployment.md)   
  [出力のためのプロジェクト構成](../../extensibility/internals/project-configuration-for-output.md)

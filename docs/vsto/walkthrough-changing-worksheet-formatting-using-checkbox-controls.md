@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: CheckBox コントロールを使用してワークシートの書式設定の変更 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: CheckBox コントロールを使用してワークシートの書式設定の変更 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - controls [Office development in Visual Studio], adding to worksheets
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 196fb88af44d12338416bc2f00f5dc955d5046e8
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 35394b5f45e3c1e456dfcfae8f4b6db50af12147
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-changing-worksheet-formatting-using-checkbox-controls"></a>チュートリアル : CheckBox コントロールを使用したワークシート書式の変更
   このチュートリアルでは、Microsoft Office Excel ワークシートの書式を変更する チェック ボックスを使用する基礎を説明します。 Visual Studio での Office 開発ツールを使用して、作成し、プロジェクトにコードが追加されます。 完成したサンプルの結果を参照してくださいで Excel コントロールのサンプルを参照してください。 [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)です。  
@@ -164,7 +163,7 @@ ms.lasthandoff: 01/10/2018
   
 -   ボタンを使用してテキスト ボックスへデータを挿入する。 詳細については、次を参照してください。[チュートリアル: ボタンを使用してワークシート内のテキスト ボックスに表示するテキスト](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [使用して Excel のチュートリアル](../vsto/walkthroughs-using-excel.md)   
  [NamedRange コントロール](../vsto/namedrange-control.md)   
  [Office ドキュメントでの Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  

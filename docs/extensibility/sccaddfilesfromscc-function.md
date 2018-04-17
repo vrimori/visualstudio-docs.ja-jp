@@ -1,29 +1,25 @@
 ---
-title: "SccAddFilesFromSCC 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: SccAddFilesFromSCC 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccAddFilesFromSCC
 helpviewer_keywords:
 - SccAddFilesFromSCC function
 ms.assetid: f21a3500-ade8-4dd8-8647-10e2179be9c1
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5bd53307323b1db4d5fa9e5407c3a0516f1187f4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: dc42a7be878ce52f4d951171c6b5cb08e195d564
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccaddfilesfromscc-function"></a>SccAddFilesFromSCC 関数
 この関数は、ソース管理からファイルの一覧を現在開いているプロジェクトに追加します。  
@@ -78,10 +74,10 @@ SCCRTN SccAddFilesFromSCC(
 |[値]|説明|  
 |-----------|-----------------|  
 |SCC_E_PROJNOTOPEN|プロジェクトが開かれていません。|  
-|SCC_E_OPNOTPERFORMED|接続では、同じプロジェクトで指定したとおりにありません。`lpAuxProjPath.`|  
+|SCC_E_OPNOTPERFORMED|接続では、同じプロジェクトで指定したとおりにありません。 `lpAuxProjPath.`|  
 |SCC_E_NOTAUTHORIZED|ユーザーは、データベースを更新する権限がありません。|  
 |SCC_E_NONSPECIFICERROR|不明なエラーがあります。|  
 |SCC_I_RELOADFILE|ファイルまたはプロジェクトは、再読み込みする必要があります。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

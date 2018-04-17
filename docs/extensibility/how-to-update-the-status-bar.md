@@ -1,27 +1,23 @@
 ---
-title: "方法: ステータス バーの更新 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ステータス バーの更新 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - update status bar
 ms.assetid: 7500c8a7-4913-4818-a88b-bfd1b9887cb6
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 76801810aafa3bd4048776ca38385ad1cf508d94
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1b5f7e6849736f0fc226c51f69a1526aca8e971a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-update-the-status-bar"></a>方法: ステータス バーの更新
 **ステータス バー**ステータス テキスト行またはインジケーターの 1 つ以上含まれている多くのアプリケーション ウィンドウの下部にあるコントロール バーがあります。  
@@ -52,5 +48,5 @@ ms.lasthandoff: 12/22/2017
   
  VSPackage 実装者は、ステータス バーにステータス テキストを更新します。 状態テキスト フィールドが空のテキストに設定されている場合、IDE が「準備完了」には、この文字列をリセット ("") のアイドル時間にします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ステータス バー](/cpp/mfc/status-bars)

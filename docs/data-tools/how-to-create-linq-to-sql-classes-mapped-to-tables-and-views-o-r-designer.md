@@ -1,26 +1,23 @@
 ---
-title: "方法: LINQ to SQL クラス テーブルとビュー (O R デザイナー) にマップを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: LINQ to SQL クラス テーブルとビュー (O R デザイナー) にマップを作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0fb78bbc-7a78-4ab4-b32f-85ece912e660
-caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 3d295cc9527aae2f566f5ec4d1ba92a2b129fbd4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: cc3c70ca70170de630dc28a10ff5d1352a610bfb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-or-designer"></a>方法: LINQ to SQL クラス テーブルとビュー (O/R デザイナー) にマップを作成
-[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]データベースのテーブルとビューにマップされているクラスと呼ばれます*エンティティ クラス*です。 エンティティ クラスはレコードにマップされますが、エンティティ クラスの個々のプロパティはレコードを構成する個々の列にマップされます。 テーブルまたはビューをドラッグすることによりデータベース テーブルまたはビューに基づくエンティティ クラスを作成する**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**上に、 [LINQ to SQL ツールVisual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)です。 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]クラスを生成し、固有の仕様を適用[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]を有効にする属性[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]機能 (データ通信編集および編集の機能、 <xref:System.Data.Linq.DataContext>)。 詳細については[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]クラスを参照してください[LINQ to SQL オブジェクト モデル](/dotnet/framework/data/adonet/sql/linq/the-linq-to-sql-object-model)です。  
+[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] データベースのテーブルとビューにマップされているクラスと呼ばれます*エンティティ クラス*です。 エンティティ クラスはレコードにマップされますが、エンティティ クラスの個々のプロパティはレコードを構成する個々の列にマップされます。 テーブルまたはビューをドラッグすることによりデータベース テーブルまたはビューに基づくエンティティ クラスを作成する**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**上に、 [LINQ to SQL ツールVisual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)です。 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]クラスを生成し、固有の仕様を適用[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]を有効にする属性[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]機能 (データ通信編集および編集の機能、 <xref:System.Data.Linq.DataContext>)。 詳細については[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]クラスを参照してください[LINQ to SQL オブジェクト モデル](/dotnet/framework/data/adonet/sql/linq/the-linq-to-sql-object-model)です。  
   
 > [!NOTE]
 >  [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]単純なオブジェクト リレーショナル マッパーでは 1:1 のマッピング関係のみをサポートします。 つまり、エンティティ クラスには、データベース テーブルまたはビューとの 1:1 のマッピング関係しか持たせることができません。 1 つのエンティティ クラスを複数のテーブルにマップするなど、複雑なマッピングはサポートされていません。 ただし、複数の関連テーブルを結合するビューにエンティティ クラスをマップすることはできます。  
@@ -62,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
 7.  項目をドラッグ、**データソース**ウィンドウからフォームにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [LINQ to Visual Studio での SQL ツール](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
  [チュートリアル: LINQ to SQL クラス (O R デザイナー) を作成します。](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   
  [DataContext メソッド (O/R デザイナー)](../data-tools/datacontext-methods-o-r-designer.md)   

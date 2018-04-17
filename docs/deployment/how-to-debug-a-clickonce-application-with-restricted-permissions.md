@@ -1,12 +1,10 @@
 ---
-title: "方法: アクセス許可が制限された ClickOnce アプリケーションをデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: アクセス許可が制限された ClickOnce アプリケーションをデバッグ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - ClickOnce deployment, debugging
 - ClickOnce applications, debugging
 ms.assetid: 6991ea91-5253-451b-923d-22273a3d38b1
-caps.latest.revision: "10"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 4ce173268be43cde12ecec4dd859623123a0bee5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: adb1b3cff76cb22e54ddb5e89c714983afa3a167
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-debug-a-clickonce-application-with-restricted-permissions"></a>方法 : アクセス許可が制限された ClickOnce アプリケーションをデバッグする
 通常、開発用コンピューターは完全信頼アクセス許可で実行するので、ClickOnce アプリケーションのデバッグ時には、エンド ユーザーが制限されたアクセス許可でアプリケーションを実行したときと同じセキュリティ例外は発生しません。  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  **[このアプリケーションが次の URL からダウンロードされたと仮定してデバッグする]** テキスト ボックスに、URL またはネットワーク パスを入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法 : ClickOnce アプリケーションのカスタム アクセス許可を設定する](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
  [ClickOnce アプリケーションのセキュリティ](../deployment/securing-clickonce-applications.md)   
  [ClickOnce アプリケーションのコード アクセス セキュリティ](../deployment/code-access-security-for-clickonce-applications.md)   

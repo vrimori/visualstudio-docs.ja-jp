@@ -1,27 +1,25 @@
 ---
-title: "ヒントし、コツについて、Visual Studio デバッガーで |Microsoft ドキュメント"
-ms.custom: 
+title: ヒントし、コツについて、Visual Studio デバッガーで |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/15/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - stepping
 - debugging [Visual Studio], execution control
 - execution, controlling in debugger
 ms.assetid: 5262d8b1-2648-429e-85d5-90fcaadfb362
-caps.latest.revision: "2"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: dacce06dc59724b7f8feba8f84d2b781ba56ed9e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3d5a748541aa9c50b698eda441f38c88f1e791c7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>Visual Studio のデバッガー用の生産性に関するヒントと秘訣を理解します。
 
@@ -167,5 +165,5 @@ UWP アプリでは、ネットワーク操作を使用して実行を分析す�
 - [Visual Studio でデバッグするために 7 のいずれか小さいほう既知ハッキング](https://blogs.msdn.microsoft.com/visualstudio/2017/06/26/7-lesser-known-hacks-for-debugging-in-visual-studio/)
 - [Visual Studio での 7 の非表示 gems](https://blogs.msdn.microsoft.com/visualstudio/2017/10/05/7-hidden-gems-in-visual-studio-2017/)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [キーボード ショートカット](../ide/tips-and-tricks-for-visual-studio.md)

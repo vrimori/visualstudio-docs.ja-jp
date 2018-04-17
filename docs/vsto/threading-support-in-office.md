@@ -1,12 +1,10 @@
 ---
-title: "スレッド処理の Office でサポート |Microsoft ドキュメント"
-ms.custom: 
+title: スレッド処理の Office でサポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - object models [Office development in Visual Studio], threading support
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 3383e3767c97efad9177f0e361524137ea5d66a8
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 473287ed42fb2e4978a0f92717a01fdf31e28ad4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="threading-support-in-office"></a>Office でのスレッドのサポート
   このトピックでは、Microsoft Office オブジェクト モデルのスレッド処理のサポートについての情報を提供します。 Office オブジェクト モデルは、スレッド セーフではありませんが、Office ソリューションで複数のスレッドを使用することです。 Office アプリケーションは、コンポーネント オブジェクト モデル (COM) サーバーです。 COM には、クライアントは任意のスレッドの COM サーバーを呼び出すことができます。 COM サーバーのスレッド セーフではない場合は、COM は、1 つだけの論理スレッドがいつでも、サーバーで実行されるように、同時呼び出し数をシリアル化するためのメカニズムを提供します。 このメカニズムは、シングル スレッド アパートメント (STA) モデルと呼ばれます。 呼び出しは、シリアル化されるための呼び出し元がブロックされている期間、サーバーがビジー状態か、バック グラウンド スレッドでその他の呼び出しが処理中にします。  
@@ -74,7 +73,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="modeless-forms"></a>モードレスのフォーム  
  モードレスのフォームでは、フォームが表示されている間に何らかの種類のアプリケーションとの対話ができます。 フォームをユーザーが操作して、フォームは閉じずに、アプリケーションによって対話します。 Office オブジェクト モデルがマネージ モードレス フォーム; をサポートしていますただし、これら指定しないでバック グラウンド スレッドでします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マネージ スレッド処理](/dotnet/standard/threading/)  
  [スレッド処理 (c#)](/dotnet/csharp/programming-guide/concepts/threading/index) [スレッド処理 (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/threading/index)   
  [スレッドの使用とスレッド処理](/dotnet/standard/threading/using-threads-and-threading)   

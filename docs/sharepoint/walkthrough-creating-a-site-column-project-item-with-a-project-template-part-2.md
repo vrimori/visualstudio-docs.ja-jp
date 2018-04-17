@@ -1,25 +1,24 @@
 ---
-title: "チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成、パート 2 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成、パート 2 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 helpviewer_keywords:
 - project items [SharePoint development in Visual Studio], creating template wizards
 - SharePoint project items, creating template wizards
 - SharePoint development in Visual Studio, defining new project item types
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: f0472688f9f36d2b14c89cc904bf6ce4badd6ca6
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: e080c981715e746b8d24e2b2959fa1d5bd97029b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2"></a>チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 (パート 2)
   SharePoint プロジェクト項目のカスタム種類を定義し、Visual Studio でその種類をプロジェクト テンプレートと関連付けてから、テンプレート用のウィザードを用意することもできます。 ウィザードを使用すると、ユーザーがテンプレートを使用してプロジェクト項目を含む新しいプロジェクトを作成するときに、ユーザーから情報を収集できます。 収集した情報を使用して、プロジェクト項目を初期化できます。  
@@ -41,7 +40,7 @@ ms.lasthandoff: 01/10/2018
 -   ウィザードをデバッグおよびテストします。  
   
 > [!NOTE]  
->  完成したプロジェクト、コード、およびこのチュートリアルでは、次の場所から他のファイルを含むサンプルをダウンロードすることができます: [http://go.microsoft.com/fwlink/?LinkId=191369](http://go.microsoft.com/fwlink/?LinkId=191369)です。  
+>  完成したプロジェクト、コード、およびこのチュートリアルでは、次の場所から他のファイルを含むサンプルをダウンロードすることができます: [ http://go.microsoft.com/fwlink/?LinkId=191369](http://go.microsoft.com/fwlink/?LinkId=191369)です。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行する必要があります最初に作成する、SiteColumnProjectItem ソリューションを完了して[チュートリアル: プロジェクト テンプレート、第 1 部に基づくサイト列プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)です。  
@@ -58,7 +57,7 @@ ms.lasthandoff: 01/10/2018
   
 -   SharePoint のサイト内の列。 詳細については、次を参照してください。[列](http://go.microsoft.com/fwlink/?LinkId=183547)です。  
   
-##  <a name="wizardcomponents"></a>ウィザードのコンポーネントをについてください。  
+##  <a name="wizardcomponents"></a> ウィザードのコンポーネントをについてください。  
  このチュートリアルで説明されているウィザードには、いくつかのコンポーネントが含まれています。 次の表は、これらのコンポーネントについての説明です。  
   
 |コンポーネント|説明|  
@@ -90,7 +89,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  プロジェクト テンプレートの一覧で選択**WPF ユーザー コントロール ライブラリ**、プロジェクトに名前を**ProjectTemplateWizard**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **ProjectTemplateWizard**プロジェクトがソリューションにし、既定の UserControl1.xaml ファイルを開きます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **ProjectTemplateWizard**プロジェクトがソリューションにし、既定の UserControl1.xaml ファイルを開きます。  
   
 6.  UserControl1.xaml ファイルをプロジェクトから削除します。  
   
@@ -104,7 +103,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  選択、**クラス ライブラリ**プロジェクト テンプレートをプロジェクトに名前を**SharePointCommands**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **SharePointCommands**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **SharePointCommands**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
   
 5.  Class1 コード ファイルをプロジェクトから削除します。  
   
@@ -163,7 +162,7 @@ ms.lasthandoff: 01/10/2018
   
 13. Visual Basic プロジェクトを開発している場合、ProjectTemplateWizard 名前空間、プロジェクトにインポートを使用して、**プロジェクト デザイナー**です。  
   
-     詳細については、次を参照してください[する方法: 追加またはインポートされた名前空間 &#40; を削除する。Visual Basic &#41;](../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md).  
+     詳細については、次を参照してください。[する方法: 追加またはインポートされた名前空間を削除する&#40;Visual Basic&#41;](../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md)です。  
   
 #### <a name="to-configure-the-sharepointcommands-project"></a>SharePointCommands プロジェクトを構成するには  
   
@@ -175,7 +174,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  横の矢印を選択、**追加**ボタンをクリックしを選択し、**リンクとして追加**表示されたメニューのオプションです。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]コード ファイルを追加、 **SharePointCommands**リンクとしてのプロジェクトです。 コード ファイルがある、 **ProjectTemplateWizard**ファイルにコードでは、プロジェクトでもコンパイル、 **SharePointCommands**プロジェクト。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] コード ファイルを追加、 **SharePointCommands**リンクとしてのプロジェクトです。 コード ファイルがある、 **ProjectTemplateWizard**ファイルにコードでは、プロジェクトでもコンパイル、 **SharePointCommands**プロジェクト。  
   
 5.  **SharePointCommands**プロジェクト、Commands という別のコード ファイルを追加します。  
   
@@ -406,7 +405,7 @@ ms.lasthandoff: 01/10/2018
     </WizardExtension>  
     ```  
   
-     詳細については、`WizardExtension`要素を参照してください[WizardExtension 要素 &#40;です。Visual Studio テンプレート&#41;](/visualstudio/extensibility/wizardextension-element-visual-studio-templates).  
+     詳細については、`WizardExtension`要素を参照してください[WizardExtension 要素&#40;Visual Studio のテンプレート&#41;](/visualstudio/extensibility/wizardextension-element-visual-studio-templates)です。  
   
 3.  ファイルを保存して閉じます。  
   
@@ -541,7 +540,7 @@ ms.lasthandoff: 01/10/2018
   
      展開する方法については[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]拡張機能を参照してください[Visual Studio 拡張機能の配布](/visualstudio/extensibility/shipping-visual-studio-extensions)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: プロジェクト テンプレート、第 1 部に基づくサイト列プロジェクト項目の作成](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)   
  [カスタム SharePoint プロジェクト項目の種類を定義します。](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [SharePoint プロジェクト項目の項目テンプレートとプロジェクト テンプレートを作成します。](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   

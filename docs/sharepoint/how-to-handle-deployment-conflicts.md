@@ -1,25 +1,22 @@
 ---
-title: "方法: 配置競合の処理 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 配置競合の処理 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint development in Visual Studio, extending deployment
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c3bbd5bc7d69fbc48d2c754151a3ec6b5fcb612c
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 061fb380863ae450e3eda7612f0ebf5b348c77f2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-handle-deployment-conflicts"></a>方法: 配置競合を処理する
   SharePoint プロジェクト項目の展開の競合を処理するコードを提供できます。 たとえば、現在のプロジェクト アイテム内のファイルが配置場所に既に存在し、現在のプロジェクト項目を展開する前に配置されたファイルを削除するかどうかが判断する場合もあります。 配置競合の詳細については、次を参照してください。[を拡張する SharePoint のパッケージ化と配置](../sharepoint/extending-sharepoint-packaging-and-deployment.md)です。  
@@ -60,7 +57,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="deploying-the-extension"></a>拡張機能の配置  
  拡張機能を展開するには、作成、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]アセンブリおよびその他の拡張機能を配布するファイルの拡張機能 (VSIX) にパッケージ化します。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールの拡張機能の配置](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint の拡張のパッケージ化と配置](../sharepoint/extending-sharepoint-packaging-and-deployment.md)   
  [SharePoint プロジェクト項目の拡張](../sharepoint/extending-sharepoint-project-items.md)   
  [方法: 実行時に配置手順のコードが実行されます](../sharepoint/how-to-run-code-when-deployment-steps-are-executed.md)   

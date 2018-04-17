@@ -1,29 +1,25 @@
 ---
-title: "IEnumDebugErrorBreakpoints2 |Microsoft ドキュメント"
-ms.custom: 
+title: IEnumDebugErrorBreakpoints2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IEnumDebugErrorBreakpoints2
 helpviewer_keywords:
 - IEnumDebugErrorBreakpoints2
 ms.assetid: ffdad73d-969a-45ef-9ad1-7f5d3b814018
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 072068a252214fdf9a2542b88bba94a1b12bcffa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1860b1baf5f5c42b5cf27d4521b29230d447ceae
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ienumdebugerrorbreakpoints2"></a>IEnumDebugErrorBreakpoints2
 このインターフェイスは、保留中のブレークポイントに関連付けられているエラーのブレークポイントを列挙します。  
@@ -54,14 +50,14 @@ IEnumDebugErrorBreakpoints2 : IUnknown
 ## <a name="remarks"></a>コメント  
  このインターフェイスのリストを保持する[IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)インターフェイス、ブレークポイントをバインドできませんでしたし、理由にバインドできませんでしたそれぞれについて説明します。 Visual Studio を使用して、 `IEnumDebugErrorBreakpoint2` IDE に示すようにブレークポイントを更新するインターフェイスです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [CanBind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)   
  [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)   

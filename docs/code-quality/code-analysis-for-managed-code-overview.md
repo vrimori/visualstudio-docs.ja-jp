@@ -1,12 +1,8 @@
 ---
-title: "コード分析の概要についてはマネージ コード |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: コードの Visual Studio 内のマネージ コード分析 |Microsoft ドキュメント
+ms.date: 03/26/2018
 ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.projectpropertypages.codeanalysis
 helpviewer_keywords:
@@ -14,16 +10,18 @@ helpviewer_keywords:
 - managed code, code analysis
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d30f84194ef7a48de106698c9ad4569e947923c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 9a720a1ad65f06ca6810ce0d9f9d9fe29371d539
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="code-analysis-for-managed-code-overview"></a>マネージ コードの概要のコード分析
+# <a name="overview-of-code-analysis-for-managed-code"></a>マネージ コードに対するコード分析の概要
+
+Visual Studio 2017 が 2 つの方法でマネージ コードを分析して: legacy *FxCop* .NET コンパイラ プラットフォームと、マネージ アセンブリの静的分析*アナライザー*です。 このトピックでは、FxCop の静的コード分析について説明します。 .NET コンパイラ プラットフォーム アナライザーを使用して、コードの分析の詳細については、次を参照してください。[概要 Roslyn のアナライザー](../code-quality/roslyn-analyzers-overview.md)です。
 
 マネージ コードのコード分析を使用すると、マネージ アセンブリを分析し、Microsoft .NET Framework デザイン ガイドラインに規定されたプログラミングやデザインに関する規則違反など、アセンブリに関する情報をレポートとして得ることができます。
 
@@ -35,11 +33,11 @@ ms.lasthandoff: 02/09/2018
 
 分析を実行するコード プロジェクトをビルドするたびに、**ビルドに対するコード分析を有効にする**プロジェクトのプロパティ ページ。 詳細については、次を参照してください。[する方法: 有効化と自動コード分析の無効にする](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)です。
 
-プロジェクトを手動でコード分析を実行するメニュー バーから選択**分析** > **コード分析を実行** > **でコード分析を実行<project>** . 詳細については、次を参照してください。[する方法: 有効化と自動コード分析の無効にする](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)です。
+プロジェクトを手動でコード分析を実行するメニュー バーから選択**分析** > **コード分析を実行** > **でコード分析を実行\<プロジェクト>**です。
 
 ## <a name="rule-sets"></a>規則セット
 
-マネージ コードのコード分析規則がまとめられて*ルール セット*です。 Microsoft の標準の規則セットのいずれかを使用するか、特定のニーズを満たす独自の規則セットを作成することができます。 詳細については、次を参照してください。[ルール セットのコード分析規則のグループを使用して](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)です。
+マネージ コードのコード分析規則がまとめられて[ルール セット](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)です。 Microsoft の標準規則セットのいずれかを使用することもできます[カスタム規則セットを作成する](../code-quality/how-to-create-a-custom-rule-set.md)特定のニーズを満たすためにします。
 
 ## <a name="suppress-warnings"></a>[警告の表示なし]
 
@@ -58,7 +56,7 @@ Public class MyClass
 詳細については、次を参照してください。[警告を抑制する](../code-quality/in-source-suppression-overview.md)です。
 
 > [!NOTE]
-> Visual Studio 2017 にプロジェクトを移行する場合に、コード分析の警告の手に負えないものの数が直面突然可能性があります。 警告を修正し、コード分析を一時的にオフにする準備ができていない場合は、プロジェクトのプロパティ ページを開きます (**プロジェクト** > ***プロジェクト*プロパティ...**) に移動し、**コード分析**タブです。選択を解除**ビルドに対するコード分析を有効にする**、プロジェクトをリビルドします。 または、設定をコードに対して実行する別、小規模なルールを選択することができます。 警告を解決する準備ができたらにコード分析を有効にしてください。
+> Visual Studio 2017 にプロジェクトを移行する場合に、コード分析の警告の数が多いが直面突然可能性があります。 場合は、警告を修正し、すぐに生産性を向上する場合ができていない、*基準*プロジェクトの分析の状態。 **分析**メニューの**コード分析を実行し、アクティブな懸案事項の抑制**です。
 
 ## <a name="run-code-analysis-as-part-of-check-in-policy"></a>チェックイン ポリシーの一部としてのコード分析の実行
 
@@ -76,5 +74,6 @@ Public class MyClass
 
 ## <a name="see-also"></a>関連項目
 
-[コード分析規則のグループ設定ルールを使用して](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)   
-[方法: を有効にして、自動コード分析を無効にします。](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)
+- [Roslyn アナライザーの概要](../code-quality/roslyn-analyzers-overview.md)
+- [規則セットを使用したコード分析規則のグループ化](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)
+- [方法: を有効にして、自動コード分析を無効にします。](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)

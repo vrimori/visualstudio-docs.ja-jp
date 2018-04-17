@@ -1,29 +1,25 @@
 ---
-title: "ライブ ASP.NET Azure アプリの Visual Studio のデバッグ |Microsoft ドキュメント"
+title: ライブ ASP.NET Azure アプリの Visual Studio のデバッグ |Microsoft ドキュメント
 ms.description: Learn how to set snappoints and view snapshots with the Snapshot Debugger
 ms.custom: mvc
 ms.date: 03/16/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 helpviewer_keywords:
 - debugger
 ms.assetid: adb22512-4d4d-40e5-9564-1af421b7087e
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: d313dea17700d4e64d3156ee72ee15521111329b
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 3d6173c62b359508819db26ff9dcdceb90644202
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>スナップショットのデバッガーを使用してライブの ASP.NET Azure アプリをデバッグします。
 
@@ -38,7 +34,7 @@ Snappoints と logpoints は、ブレークポイントに似ていますが、s
 
 さらに、スナップショットのデバッガーは、Visual Studio 2017 Enterprise 15.5 またはそれ以降のバージョンと基本的な以上の App Service プランのできるだけです。 
 
-このチュートリアルでは説明します。
+このチュートリアルでは、次の作業を行います。
 
 > [!div class="checklist"]
 > * スナップショットのデバッガーを起動します。

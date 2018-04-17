@@ -1,29 +1,25 @@
 ---
-title: "BasicType |Microsoft ドキュメント"
-ms.custom: 
+title: BasicType |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - BasicType enumeration
 ms.assetid: 19ae53ba-cd6e-47b6-9f94-27ae663ce955
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 302e935c1b9f772735612e731503f84ccc3e468f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: df12ce7ff026215e7051142c2cbba47cb82ffc25
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="basictype"></a>BasicType
 シンボルの基本的な型を指定します。  
@@ -111,10 +107,10 @@ enum BasicType {
 ## <a name="remarks"></a>コメント  
  この列挙体の値が返された、 [idiasymbol::get_basetype](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)メソッドです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: cvconst.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列挙体と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [Idiasymbol::get_basetype](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)   
  [IDiaSymbol::get_length](../../debugger/debug-interface-access/idiasymbol-get-length.md)

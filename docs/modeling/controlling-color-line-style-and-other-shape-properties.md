@@ -1,21 +1,19 @@
 ---
-title: "色、線のスタイル、およびその他の図形のプロパティを制御する |Microsoft ドキュメント"
-ms.custom: 
+title: 色、線のスタイル、およびその他の図形のプロパティを制御する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5903c6cc79e637514b75c9e44cb4cbe5c0342ee7
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: e49e6cbc6ecfba85e2c2684b0a7e71e05757ab59
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="controlling-color-line-style-and-other-shape-properties"></a>色、線のスタイル、およびその他のシェイプのプロパティの管理
 一部の図形のプロパティ色 '公開できる' - などは、リンクされている図形のドメイン プロパティにします。 他のユーザーは、直接制御する必要があります。  
@@ -28,7 +26,7 @@ ms.lasthandoff: 02/09/2018
  図形には、今すぐプログラム コードやユーザーとして設定できるドメイン プロパティがあります。  
   
 ## <a name="dynamically-updating-an-exposed-property"></a>公開されたプロパティを動的に更新  
- 通常、公開されているプロパティを別のプロパティに依存するようにします。 たとえば、ことができますが赤色に特定のドメインのプロパティは使用されるたびにするための図形が 0 未満です。 この依存関係を作成、[ルール](../modeling/rules-propagate-changes-within-the-model.md)です。 例:  
+ 通常、公開されているプロパティを別のプロパティに依存するようにします。 たとえば、ことができますが赤色に特定のドメインのプロパティは使用されるたびにするための図形が 0 未満です。 この依存関係を作成、[ルール](../modeling/rules-propagate-changes-within-the-model.md)です。 例えば:  
   
 ```csharp  
 using System;  

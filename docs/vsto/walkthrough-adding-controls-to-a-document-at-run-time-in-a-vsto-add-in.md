@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: VSTO アドインの実行時にドキュメントにコントロールを追加する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: VSTO アドインの実行時にドキュメントにコントロールを追加する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,14 +15,14 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], adding controls at run time
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: dcf309bbfdd608a4ca93809804c51006ce7c2dd7
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 1f26a60bdbd0db2464a8ac479b7534fb63f18cea
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-adding-controls-to-a-document-at-run-time-in-a-vsto-add-in"></a>チュートリアル: 実行時における VSTO アドインの文書へのコントロールの追加
   VSTO アドインを使用して、開いている Microsoft Office の Word 文書にコントロールを追加できます。 このチュートリアルでは、リボンを使用してユーザーがドキュメントに <xref:Microsoft.Office.Tools.Word.Controls.Button> または <xref:Microsoft.Office.Tools.Word.RichTextContentControl> を追加できるようにする方法を説明します。  
@@ -187,7 +184,7 @@ ms.lasthandoff: 01/10/2018
   
 -   Excel 用 VSTO アドインを使用してワークシートにコントロールを追加する方法について説明するチュートリアルでは、次を参照してください。[チュートリアル: 実行時における VSTO ワークシートにコントロールの追加のアドイン プロジェクト](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Word ソリューション](../vsto/word-solutions.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   
  [Office 文書で動的コントロールの永続化](../vsto/persisting-dynamic-controls-in-office-documents.md)   

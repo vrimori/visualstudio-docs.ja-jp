@@ -1,34 +1,30 @@
 ---
-title: "サービスの Essentials |Microsoft ドキュメント"
-ms.custom: 
+title: サービスの Essentials |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - services, essentials
 ms.assetid: fbe84ad9-efe1-48b1-aba3-b50b90424d47
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4db5404ed4cb307064d9d913c240b16051c25977
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c5a9858109c9fe0d8af0d00621b717417a0c0e53
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="service-essentials"></a>サービスの基礎
-サービスは、次の 2 つの Vspackage の間のコントラクトです。 1 つの VSPackage では、別の VSPackage を使用するためのインターフェイスの特定のセットを提供します。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]自体は、その他の Vspackage にサービスを提供する Vspackage のコレクションです。  
+サービスは、次の 2 つの Vspackage の間のコントラクトです。 1 つの VSPackage では、別の VSPackage を使用するためのインターフェイスの特定のセットを提供します。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 自体は、その他の Vspackage にサービスを提供する Vspackage のコレクションです。  
   
  たとえば、SVsActivityLog サービスを使用すると、アクティビティ ログへの書き込みに使用できる、IVsActivityLog インターフェイスを取得します。 詳細については、次を参照してください。[する方法: アクティビティ ログを使用して](../../extensibility/how-to-use-the-activity-log.md)です。  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]登録されていないいくつかの組み込みサービスも用意されています。 Vspackage では、サービス オーバーライドを提供することにより、組み込みまたはその他のサービスを置き換えることができます。 任意のサービスには、1 つのサービスの上書きが許可します。  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 登録されていないいくつかの組み込みサービスも用意されています。 Vspackage では、サービス オーバーライドを提供することにより、組み込みまたはその他のサービスを置き換えることができます。 任意のサービスには、1 つのサービスの上書きが許可します。  
   
  サービス探索可能性があるありません。 したがってを使用するサービスのサービス識別子 (SID) を知る必要があります、提供するインターフェイスを知る必要があります。 サービスに関するリファレンス ドキュメントは、この情報を提供します。  
   
@@ -70,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
 ほとんどの Visual Studio サービスを取得するには、静的なを呼び出すことによって<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>メソッドです。  
   
-<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>依存しているキャッシュされたサービスに初めてパッケージから派生した任意の VSPackage が初期化されているプロバイダーが配置されています。 この条件を満たすには、か、または null のサービスの準備をするを保証する必要があります。  
+<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> 依存しているキャッシュされたサービスに初めてパッケージから派生した任意の VSPackage が初期化されているプロバイダーが配置されています。 この条件を満たすには、か、または null のサービスの準備をするを保証する必要があります。  
   
 さいわい、<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>ほとんどの時間が正常に動作します。  
   
@@ -97,7 +93,7 @@ ms.lasthandoff: 12/22/2017
     
     このコードは、SVsActivityLog サービスを取得し、アクティビティ ログへの書き込みに使用できる IVsActivityLog インターフェイスにキャストします。 例については、次を参照してください。[する方法: アクティビティ ログを使用して](../../extensibility/how-to-use-the-activity-log.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [使用可能なサービスの一覧](../../extensibility/internals/list-of-available-services.md)   
  [使用して、サービスを提供します。](../../extensibility/using-and-providing-services.md)   
  [キャストと型変換](/dotnet/csharp/programming-guide/types/casting-and-type-conversions)   

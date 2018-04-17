@@ -1,33 +1,29 @@
 ---
-title: "チュートリアル: テキストを強調表示 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: テキストを強調表示 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - highlight text
 ms.assetid: 64b772ad-4392-42e9-a237-5137f0384bf0
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b54dabbe00b0df920655b595cab32ed21126415b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 90bf22bfe65b1120f5cc149d95eea25357b8ffa4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-highlighting-text"></a>チュートリアル: テキストを強調表示
 エディターにさまざまな視覚効果を追加するには、Managed Extensibility Framework (MEF) コンポーネント パーツを作成します。 このチュートリアルでは、テキスト ファイルの現在の単語のすべての出現箇所を強調表示する方法を示します。 Word では、テキスト ファイルの 1 つ以上の時間が 1 つにキャレットを配置する場合は、すべての出現箇所が強調表示されます。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="creating-a-mef-project"></a>MEF プロジェクトを作成します。  
   
@@ -411,5 +407,5 @@ ms.lasthandoff: 12/22/2017
   
 4.  「こんにちは」の出現回数は、のいずれかでカーソルを置きます。 すべての出現箇所は、青で強調表示する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: コンテンツの種類とファイル名拡張子とをリンクさせる](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

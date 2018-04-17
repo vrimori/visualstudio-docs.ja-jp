@@ -1,23 +1,20 @@
 ---
-title: "Visual Studio での entity Framework ツール |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio での entity Framework ツール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1b06b573-84aa-4458-b3f5-e238df47bf45
-caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: f288d794040c533f2d00e95d628f7d04e55e96e4
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.workload:
+- data-storage
+ms.openlocfilehash: c9335e5d5bba077a2fd517e80398fa452718fed3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Visual Studio での entity Framework ツール
 Entity Framework は、.NET 開発者は、ドメイン固有のオブジェクトを使用してリレーショナル データを操作するオブジェクト リレーショナル マッピング テクノロジです。 開発者が通常記述しなければならないデータアクセス コードの多くが不要になります。 Entity Framework は、新しい .NET アプリケーションのテクノロジをモデリング推奨オブジェクト リレーショナル マッピング (ORM) です。  
@@ -54,5 +51,5 @@ Visual Studio での Entity Framework ツールを構成する特定のツール
 |[Entity Framework (EF) ドキュメント)](https://msdn.microsoft.com/library/ee712907(v=vs.113).aspx)|ビデオ、チュートリアル、および Entity Framework を最大限に活用するための高度なドキュメントのインデックスを提供します。|  
 |[ASP.NET 5 アプリケーションを新しいデータベース](https://docs.efproject.net/en/latest/platforms/aspnetcore/new-db.html)|Entity Framework 7 を使用して、新しい ASP.NET 5 アプリケーションを作成する方法について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [.NET 用の Visual Studio データ ツール](../data-tools/visual-studio-data-tools-for-dotnet.md)

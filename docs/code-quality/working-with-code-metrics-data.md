@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio のコード メトリックスの結果ウィンドウ |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio のコード メトリックスの結果ウィンドウ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/12/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.codemetrics.output
 helpviewer_keywords:
@@ -16,14 +13,14 @@ helpviewer_keywords:
 - results window, code metrics
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 772533e74b214d48583e5d2dc1d64278416933df
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 8663b2c8d0fe4de4fa4b2073827175e7bc65a91a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-code-metrics-results-window"></a>コード メトリックスの結果 ウィンドウの使用
 
@@ -37,7 +34,7 @@ ms.lasthandoff: 03/02/2018
 
 - **分析**] メニューの [選択**Windows** > **コード メトリックスの結果**です。
 
-   \- または
+   \- または -
 
 - **ビュー** ] メニューの [選択**その他のウィンドウ** > **コード メトリックスの結果**です。
 
@@ -81,7 +78,7 @@ ms.lasthandoff: 03/02/2018
 
 1. クリックして、**列の追加/削除**ボタンをクリックします。
 
-     \- または
+     \- または -
 
      任意の列見出しを右クリックし、をクリックして**列の追加/削除**です。
 
@@ -91,7 +88,7 @@ ms.lasthandoff: 03/02/2018
 
 1. クリックして、**列の追加/削除**ボタンをクリックします。
 
-     \- または
+     \- または -
 
      任意の列見出しを右クリックし、をクリックして**列の追加/削除**です。
 

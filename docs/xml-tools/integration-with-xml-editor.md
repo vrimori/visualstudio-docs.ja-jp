@@ -1,23 +1,21 @@
 ---
-title: "XML エディターとの統合 |Microsoft ドキュメント"
-ms.custom: 
+title: XML エディターとの統合 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 43d7a8e6-bd94-4407-a800-15a145c74223
-caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 5fef7ed581ad39488bc35d9cc46ac211008f5962
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 864c00b26cd4b11e040d93318602ada92464463f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="integration-with-xml-editor"></a>XML エディターとの統合
 XML スキーマ デザイナーは、XML エディターと統合されています。 変更が反映されますが、XML エディターの XSD ファイルを変更する場合、 [XML スキーマ エクスプ ローラー](../xml-tools/xml-schema-explorer.md)です。 ある場合、[グラフ ビュー](../xml-tools/graph-view.md)または[コンテンツ モデル ビュー](../xml-tools/content-model-view.md)開く、変更にも反映されますがあります。 次の方法を使用して XML スキーマ デザイナーと XML エディターの間を移動できます。  
@@ -34,5 +32,5 @@ XML スキーマ デザイナーは、XML エディターと統合されてい�
   
 ![XSDDesignerWithXMLEditorAndCMV](../xml-tools/media/xsddesignerwithxmleditorandcmv.gif "XSDDesignerWithXMLEditorAndCMV")  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML スキーマ エクスプローラー](../xml-tools/xml-schema-explorer.md)

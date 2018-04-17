@@ -1,12 +1,10 @@
 ---
-title: "Ca 1004: ジェネリック メソッドは型パラメーターを指定する必要があります |Microsoft ドキュメント"
-ms.custom: 
+title: 'Ca 1004: ジェネリック メソッドは型パラメーターを指定する必要があります |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1004
 - GenericMethodsShouldProvideTypeParameter
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - GenericMethodsShouldProvideTypeParameter
 - CA1004
 ms.assetid: 38755f6a-fb45-4bf2-932e-0354ad826499
-caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 4ca506d827c954a9863a6a37efd0980ecf4d8452
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: f386530082f6bc44597dc33e5a034c71cbc17de9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1004-generic-methods-should-provide-type-parameter"></a>CA1004: ジェネリック メソッドは型パラメーターを指定しなければなりません
 |||  
@@ -66,5 +64,5 @@ ms.lasthandoff: 12/22/2017
   
  [CA1007: 適切な場所にジェネリックを使用します](../code-quality/ca1007-use-generics-where-appropriate.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ジェネリック](/dotnet/csharp/programming-guide/generics/index)

@@ -1,23 +1,21 @@
 ---
-title: "[プロパティ] ウィンドウをカスタマイズする |Microsoft ドキュメント"
-ms.custom: 
+title: '[プロパティ] ウィンドウをカスタマイズする |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, Properties window
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 545c8181cdaa3f13d2de04f13101d2678f9fd0ab
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 6ccd6e64b33bd83a7a67b0d04270d8a6802311c6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customizing-the-properties-window"></a>プロパティ ウィンドウのカスタマイズ
 カスタマイズできますプロパティ ウィンドウの動作と外観、ドメイン固有言語 (DSL) で[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 DSL 定義では、各ドメイン クラスにドメインのプロパティを定義します。 既定では、図に、またはモデル エクスプ ローラーで、クラスのインスタンスを選択するすべてのドメイン プロパティは [プロパティ] ウィンドウで表示されます。 これにより確認し、ドメインのプロパティの値を編集する場合でも、ダイアグラムで図形のフィールドをマップしているされません。  
@@ -183,7 +181,7 @@ ms.lasthandoff: 02/09/2018
 > [!NOTE]
 >  個別のコード ファイル内でコードを追加、 **Dsl**プロジェクト。  
   
- 例:  
+ 例えば:  
   
 ```  
 internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor  
@@ -223,7 +221,7 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
   
 ```  
   
- <xref:System.ComponentModel.TypeConverter> から派生するクラスを定義します。 別のファイルにコードを追加、 **Dsl**プロジェクト。 例:  
+ <xref:System.ComponentModel.TypeConverter> から派生するクラスを定義します。 別のファイルにコードを追加、 **Dsl**プロジェクト。 例えば:  
   
 ```csharp  
 /// <summary>  
@@ -317,5 +315,5 @@ public class MyTypeConverter : System.ComponentModel.TypeConverter
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プログラム コードにおけるモデル内の移動およびモデルの更新](../modeling/navigating-and-updating-a-model-in-program-code.md)

@@ -1,24 +1,24 @@
 ---
-title: "MSBuild ターゲット フレームワークおよびターゲット プラットフォーム | Microsoft Docs"
-ms.custom: 
+title: MSBuild ターゲット フレームワークおよびターゲット プラットフォーム | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: df6517c5-edd6-4cc4-97ad-b3cdfc78e799
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: e175a534cb35333b1f57c188c62a781f2fd68627
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: d8ee86a969279c3bdb8b09a0a0d2c9160d7691e0
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="msbuild-target-framework-and-target-platform"></a>MSBuild ターゲット フレームワークおよびターゲット プラットフォーム
 プロジェクトは*ターゲット フレームワーク*とターゲット プラットフォームで動作するようにビルドできます。ターゲット フレームワークとは .NET Framework の特定のバージョンを表し、*ターゲット プラットフォーム*とは特定のソフトウェア アーキテクチャを表します。  たとえば、802x86 プロセッサ ファミリ ("x86") と互換性のある 32 ビット プラットフォーム上の .NET Framework 2.0 で動作するアプリケーションを対象とすることができます。 ターゲット フレームワークとターゲット プラットフォームの組み合わせは*ターゲット コンテキスト*と呼ばれます。  
@@ -67,14 +67,16 @@ ms.lasthandoff: 02/28/2018
  *プラットフォーム*は、特定のランタイム環境を定義するハードウェアとソフトウェアの組み合わせです。 たとえば、オブジェクトに適用された  
   
 -   `x86` は、Intel 80x86 プロセッサまたはそれに相当するプロセッサで実行されている 32 ビット Windows オペレーティング システムを示しています。  
+
+-   `x64` は、Intel x64 プロセッサまたはそれに相当するプロセッサで実行されている 64 ビット Windows オペレーティング システムを示しています。
   
 -   `Xbox` は、Microsoft Xbox 360 プラットフォームを示しています。  
   
- *ターゲット プラットフォーム*は、ビルドするプロジェクトの実行対象となる特定のプラットフォームです。 ターゲット プラットフォームは、プロジェクト ファイルの `Platform` ビルド プロパティで指定されます。 ターゲット プラットフォームを変更するには、IDE でプロジェクトのプロパティ ページまたは **[構成マネージャー]** を使用します。  
+ *ターゲット プラットフォーム*は、ビルドするプロジェクトの実行対象となる特定のプラットフォームです。 ターゲット プラットフォームは、プロジェクト ファイルの `PlatformTarget` ビルド プロパティで指定されます。 ターゲット プラットフォームを変更するには、IDE でプロジェクトのプロパティ ページまたは **[構成マネージャー]** を使用します。  
   
 ```xml  
 <PropertyGroup>  
-   <Platform>x86</Platform>  
+   <PlatformTarget>x86</PlatformTarget>  
 </PropertyGroup>  
   
 ```  
@@ -83,7 +85,7 @@ ms.lasthandoff: 02/28/2018
   
 ```xml  
 <PropertyGroup>  
-   <Platform>x86</Platform>  
+   <PlatformTarget>x86</PlatformTarget>  
    <Configuration>Debug</Configuration>  
 <PropertyGroup>  
   

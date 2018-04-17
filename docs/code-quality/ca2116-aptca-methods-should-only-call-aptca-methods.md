@@ -1,12 +1,10 @@
 ---
-title: "CA2116: APTCA メソッドは APTCA メソッドを呼び出すだけ |Microsoft ドキュメント"
-ms.custom: 
+title: 'CA2116: APTCA メソッドは APTCA メソッドを呼び出すだけ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - AptcaMethodsShouldOnlyCallAptcaMethods
 - CA2116
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - AptcaMethodsShouldOnlyCallAptcaMethods
 - CA2116
 ms.assetid: 8b91637e-891f-4dde-857b-bf8012270ec4
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: a3a7818c3d758e8e92724af37dfe955f9a466746
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 52e757e2e83974a532a4dc16ce7075105606b1ae
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2116-aptca-methods-should-only-call-aptca-methods"></a>CA2116: APTCA メソッドは APTCA メソッドのみを呼び出すことができます
 |||  
@@ -41,9 +39,9 @@ ms.lasthandoff: 12/22/2017
   
  APTCA 属性が完全に信頼されたアセンブリでは、上に存在し、アセンブリが部分的に信頼された呼び出し元は許可されていない別のアセンブリ内のコードの実行、セキュリティ上の弱点が可能性があります。 場合は 2 つのメソッド`M1`と`M2`、次の条件を満たしている、悪意のある呼び出し元がメソッドを使用できる`M1`を保護する暗黙的な完全信頼リンク確認要求をバイパスする`M2`:  
   
--   `M1`APTCA 属性を持つ完全に信頼されたアセンブリでは、パブリック メソッドが宣言されます。  
+-   `M1` APTCA 属性を持つ完全に信頼されたアセンブリでは、パブリック メソッドが宣言されます。  
   
--   `M1`メソッドを呼び出す`M2`外`M1`のアセンブリ。  
+-   `M1` メソッドを呼び出す`M2`外`M1`のアセンブリ。  
   
 -   `M2`アセンブリは APTCA 属性がないと、そのため、実行してはならない、または部分的に信頼されている呼び出し元の代わり。  
   
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="related-rules"></a>関連規則  
  [CA2117: APTCA 型は APTCA 基本型のみを拡張することができます](../code-quality/ca2117-aptca-types-should-only-extend-aptca-base-types.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)   
  [部分信頼コードからのライブラリの使用](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)   
  [リンク確認要求](/dotnet/framework/misc/link-demands)   

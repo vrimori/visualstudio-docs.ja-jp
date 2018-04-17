@@ -1,23 +1,21 @@
 ---
-title: "BoundsRules 図形の位置とサイズを制限する |Microsoft ドキュメント"
-ms.custom: 
+title: BoundsRules 図形の位置とサイズを制限する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, events
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: c672cbc25c28bf4d74f01160212584875b51ba1a
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 2474040edc439aad8a9dd75826d4918e6773e186
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="boundsrules-constrain-shape-location-and-size"></a>BoundsRules によってシェイプの位置とサイズが制限される
 A*境界ルール*図形の位置とサイズの制限を定義するクラスです。 図形または角また図形のユーザーがドラッグするときに繰り返し呼び出されるメソッドを提供します。  
@@ -66,6 +64,6 @@ public class BarBoundsRule: BoundsRules
   
  場所とサイズ制約でく場合に注意してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules>   
  [変更内容への対応および変更内容の反映](../modeling/responding-to-and-propagating-changes.md)

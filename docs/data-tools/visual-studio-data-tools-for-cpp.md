@@ -1,25 +1,22 @@
 ---
-title: "C++ 用の visual Studio data tools |Microsoft ドキュメント"
-ms.custom: 
+title: C++ 用の visual Studio data tools |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CPP
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 - cplusplus
-ms.openlocfilehash: 0b7f49708c00bd02fb8c74bc3ed6258d41729bf2
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.openlocfilehash: a853edf80cd11400b2e54c17dfe95f1ccfb1c822
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-data-tools-for-c"></a>C++ 用の visual Studio data tools
 
@@ -68,7 +65,7 @@ SQL Server 2005 でのカスタム機能を利用し、後で、使用して、 
     DRIVER="SQL Server Native Client 11.0"  
     ```  
   
-8.  F5 キーを押してアプリケーションをビルドし、実行します。 データベースを入力するように要求する、ドライバーからダイアログ ボックスを表示する必要があります。 入力`(localdb)\MSSQLLocalDB`、し確認**信頼された接続を使用する**です。 Press **OK**. コンソールを接続に成功を示すメッセージが表示されます。 表示されます、コマンド プロンプトの SQL ステートメントで入力することができます。 次の画面は、クエリの例と、結果を示しています。  
+8.  F5 キーを押してアプリケーションをビルドし、実行します。 データベースを入力するように要求する、ドライバーからダイアログ ボックスを表示する必要があります。 入力`(localdb)\MSSQLLocalDB`、し確認**信頼された接続を使用する**です。 **[OK]** を押します。 コンソールを接続に成功を示すメッセージが表示されます。 表示されます、コマンド プロンプトの SQL ステートメントで入力することができます。 次の画面は、クエリの例と、結果を示しています。  
   
      ![ODBC のサンプル クエリ出力](../data-tools/media/raddata-odbc-sample-query-output.png "raddata ODBC サンプル クエリの出力")  
   

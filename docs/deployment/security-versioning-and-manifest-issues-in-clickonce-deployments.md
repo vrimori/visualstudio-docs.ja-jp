@@ -1,13 +1,10 @@
 ---
-title: "セキュリティ、バージョン管理、および ClickOnce の配置マニフェストの問題 |Microsoft ドキュメント"
-ms.custom: 
+title: セキュリティ、バージョン管理、および ClickOnce の配置マニフェストの問題 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -28,11 +25,11 @@ ms.author: shoag
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 2dd693a35725d41b2b8ced99d78bd4a62d8d9e3a
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: ec828d555748dbd31a7746d18170d733d4668c9a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="security-versioning-and-manifest-issues-in-clickonce-deployments"></a>ClickOnce 配置でのセキュリティ、バージョン管理、およびマニフェストの問題
 
@@ -99,7 +96,7 @@ ms.lasthandoff: 02/28/2018
 > [!NOTE]
 > マニフェストを更新するたびにする必要がありますも再度署名します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ClickOnce 配置のトラブルシューティング](../deployment/troubleshooting-clickonce-deployments.md)  
 [ClickOnce アプリケーションのセキュリティ](../deployment/securing-clickonce-applications.md)  

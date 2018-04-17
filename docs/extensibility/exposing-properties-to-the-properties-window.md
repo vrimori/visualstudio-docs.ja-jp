@@ -1,33 +1,31 @@
 ---
-title: "[プロパティ] ウィンドウにプロパティを公開する |Microsoft ドキュメント"
-ms.custom: 
+title: '[プロパティ] ウィンドウにプロパティを公開する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [Visual Studio SDK], exposing in Property Browser
 - properties [Visual Studio SDK]
 - Property Browser, exposing properties
 ms.assetid: 47f295b5-1ca5-4e7b-bb52-7b926b136622
-caps.latest.revision: "36"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 7aed43ac4248c9bfd1e43d5e6c732a4fef3af529
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 12dcb30374250ca7aa917cf19b3a01ba57862c6d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exposing-properties-to-the-properties-window"></a>[プロパティ] ウィンドウにプロパティを公開します。
 このチュートリアルは、オブジェクトのパブリック プロパティを公開、**プロパティ**ウィンドウです。 これらのプロパティに加えた変更に反映されます、**プロパティ**ウィンドウです。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="exposing-properties-to-the-properties-window"></a>[プロパティ] ウィンドウにプロパティを公開します。  
  このセクションでカスタム ツール ウィンドウを作成し、関連付けられたウィンドウ ペイン内のオブジェクトのパブリック プロパティを表示、**プロパティ**ウィンドウです。  
@@ -270,5 +268,5 @@ ms.lasthandoff: 12/22/2017
   
  Visual Studio のツール ウィンドウは、Visual Studio セッション間で保持されます。 ツール ウィンドウの状態を永続化の詳細については、次を参照してください。<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロパティとプロパティ ウィンドウの拡張](../extensibility/extending-properties-and-the-property-window.md)

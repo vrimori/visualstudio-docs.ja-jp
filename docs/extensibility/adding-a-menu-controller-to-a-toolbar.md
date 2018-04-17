@@ -1,27 +1,25 @@
 ---
-title: "ツールバーにメニュー コント ローラーの追加 |Microsoft ドキュメント"
-ms.custom: 
+title: ツールバーにメニュー コント ローラーの追加 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - toolbars [Visual Studio], adding menu controllers
 - menus, adding menu controllers to toolbars
 - menu controllers, adding to toolbars
 ms.assetid: 6af9b0b4-037f-404c-bb40-aaa1970768ea
-caps.latest.revision: "38"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 720aeb5670127d64e7b3fc9b016a032c0526c083
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 63db98df400333216f5e753f8b6f82a61e785cd5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-a-menu-controller-to-a-toolbar"></a>ツールバーにメニュー コント ローラーを追加します。
 このチュートリアルの[ツール ウィンドウにツールバーを追加する](../extensibility/adding-a-toolbar-to-a-tool-window.md)チュートリアルし、ツール ウィンドウのツールバーにメニュー コント ローラーを追加する方法を示しています。 次に示す手順もに適用できますで作成される、ツールバー、[ツールバーを追加する](../extensibility/adding-a-toolbar.md)チュートリアルです。  
@@ -31,7 +29,7 @@ ms.lasthandoff: 12/22/2017
  メニュー コント ローラーがメニューに表示できますが、ツールバーによく使用されます。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="creating-a-menu-controller"></a>メニュー コント ローラーの作成  
   
@@ -228,6 +226,6 @@ ms.lasthandoff: 12/22/2017
   
      ダイアログ ボックスが、メッセージが表示されます**メニュー コント ローラーのアイテム 3 を選択した**です。 メニュー コント ローラー ボタンのテキストにメッセージが対応していることを確認します。 メニュー コント ローラー ボタンを表示するようになりました**MC 項目 3**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ツール ウィンドウにツールバーを追加します。](../extensibility/adding-a-toolbar-to-a-tool-window.md)   
  [ツール バーの追加](../extensibility/adding-a-toolbar.md)

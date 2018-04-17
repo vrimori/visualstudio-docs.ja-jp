@@ -1,13 +1,10 @@
 ---
-title: "Office ソリューション開発の概要 (VSTO) |Microsoft ドキュメント"
-ms.custom: 
+title: Office ソリューション開発の概要 (VSTO) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,14 +13,14 @@ helpviewer_keywords:
 - Office development in Visual Studio, about developing solutions
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 53ff49eb204eda28174344b44d58e236bde24c64
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: f36b75b8c8c3cde4441520819ab566696d1d9066
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="office-solutions-development-overview-vsto"></a>Office ソリューションの開発の概要 (VSTO)
   ソリューションのフロント エンドとして Microsoft Office を使用すると、Word のワープロ機能、Excel のデータの分析機能、および Outlook の電子メール管理機能などの使い慣れた Microsoft Office のユーザー インターフェイスとツールを活用することができます。 Office アプリケーションのカスタマイズおよびビジネス プロセスに必要な特定の機能の追加を行うために、Visual Studio でソリューションを開発することができます。 たとえば、Word を既存のパーツからコントラクトを組み合わせるコントラクト ジェネレーターにすることができます。既存のパーツは編集可能または編集可能でない場合があります。 Excel では、さまざまなプロジェクト用にカスタマイズされた自動予算のワークシートを作成できます。 ユーザーはオフラインで Office ソリューションを取得することもできます。これは、Web ベースのアーキテクチャを使用する場合に、複雑なソリューションをより実用的なものにします。  
@@ -90,8 +87,8 @@ ms.lasthandoff: 01/10/2018
 ### <a name="security"></a>セキュリティ  
  VSTO Office ソリューションのセキュリティは、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] がソリューションのインストールおよび読み込み時に作成する一連のチェックによって強制されます。 これらのチェックには、配置マニフェストの場所が信頼されているかどうか、または配置マニフェストの署名に使用される証明書が信頼されているかどうかの検証が含まれます。 詳細については、「 [Securing Office Solutions](../vsto/securing-office-solutions.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [作業の開始 (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/getting-started-office-development-in-visual-studio.md)   
+## <a name="see-also"></a>関連項目  
+ [作業の開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
  [ドキュメント レベルのカスタマイズのアーキテクチャ](../vsto/architecture-of-document-level-customizations.md)   
  [VSTO アドインのアーキテクチャ](../vsto/architecture-of-vsto-add-ins.md)   
  [Excel 用ドキュメント レベル カスタマイズのプログラミング](../vsto/getting-started-programming-document-level-customizations-for-excel.md)   

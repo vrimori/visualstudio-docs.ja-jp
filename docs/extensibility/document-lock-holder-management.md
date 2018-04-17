@@ -1,27 +1,23 @@
 ---
-title: "ドキュメントのロック所有者の管理 |Microsoft ドキュメント"
-ms.custom: 
+title: ドキュメントのロック所有者の管理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - document locking
 ms.assetid: fa1ce513-eb7d-42bc-b6e8-cb2433d051d5
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: df782cd974adcd589824e8a47cd0249842bd8d48
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 65f5a38f5d4da0986b7f95c9287a94e657efa9c5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="document-lock-holder-management"></a>ドキュメントのロック所有者の管理
 実行しているドキュメント テーブル (RDT) は、開いているドキュメントとがあるすべての編集ロックの数を保持します。 編集しているときにプログラムでバック グラウンドでユーザーがドキュメント ウィンドウで開いているドキュメントが表示されることがなく、RDT 内のドキュメントに対する編集ロックを配置できます。 この機能はグラフィカル ユーザー インターフェイスからの複数のファイルを変更するデザイナーでよく使用されます。  
@@ -45,6 +41,6 @@ ms.lasthandoff: 12/22/2017
   
  何度も UI デザイナー コード ファイルをプログラムで変更するは、1 つ以上のファイルに変更を加えます。 このような場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell2.SaveItemsViaDlg%2A>メソッドの 1 つまたは複数のドキュメントの保存を処理する、**を次の項目への変更を保存するか。**  ダイアログ ボックス。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [実行中のドキュメント テーブル](../extensibility/internals/running-document-table.md)   
  [ドキュメント テーブルの保存と実行](../extensibility/internals/persistence-and-the-running-document-table.md)

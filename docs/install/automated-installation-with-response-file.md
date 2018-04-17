@@ -1,26 +1,28 @@
 ---
-title: "応答ファイルで Visual Studio インストールを自動化する | Microsoft Docs"
-description: "Visual Studio のインストールの自動化に役立つ JSON 応答ファイルを作成する方法について説明します"
+title: 応答ファイルで Visual Studio インストールを自動化する | Microsoft Docs
+description: Visual Studio のインストールの自動化に役立つ JSON 応答ファイルを作成する方法について説明します
 ms.date: 08/14/2017
 ms.reviewer: tims
-ms.suite: 
-ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.suite: ''
+ms.technology:
+- vs-acquisition
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - response file
 - automate
 - installation
 - command-line
-author: timsneath
+author: tglee
 ms.author: tglee
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8bb0cfca6efe913b38a94daf0ed846699f0266cd
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 2bbfff39dce34bfa8595f4e34222e3e61ac67fb5
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="how-to-define-settings-in-a-response-file"></a>応答ファイルの設定を定義する方法
 Visual Studio を展開する管理者は、次の例のように `--in` パラメーターを使用して応答ファイルを指定できます。

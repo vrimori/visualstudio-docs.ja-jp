@@ -1,13 +1,13 @@
 ---
-title: "Visual Studio で Visual Basic を使用して Windows フォーム アプリを作成する | Microsoft Docs"
-description: "Visual Studio で Visual Basic を使用して Windows フォーム アプリを作成する方法の詳細な手順を説明します。"
-ms.custom: 
+title: Visual Studio で Visual Basic を使用して Windows フォーム アプリを作成する | Microsoft Docs
+description: Visual Studio で Visual Basic を使用して Windows フォーム アプリを作成する方法の詳細な手順を説明します。
+ms.custom: ''
 ms.date: 12/04/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.devlang: vb
 author: TerryGLee
@@ -17,11 +17,11 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 592ad202ca41792c6a73a77b7c01bab71fdbcdc7
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: d3a6593a6e459b16541358a0e89dc5bc21fde982
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>Visual Studio で Visual Basic を使用して Windows フォーム アプリを作成する
 ここでは、Visual Studio 統合開発環境 (IDE) の概要を示し、Windows ベースのユーザー インターフェイス (UI) を備えた簡単な Visual Basic アプリケーションを作成します。
@@ -50,31 +50,31 @@ Visual Basic プロジェクト テンプレートを選択し、ファイルに
 
      ![[ツールボックス] をクリックして [ツールボックス] ウィンドウを開く](../ide/media/vb-toolbox-toolwindow.png)  
 
-     (ツールボックスのスライド アウト オプションが表示されない場合は、メニュー バーから開くことができます。 そのためには、**[ビュー]** > **[ツールボックス]** をクリックします。 または、**Ctrl**+**Alt**+**X** キーを押します)。
+     (**ツールボックス**のスライド アウト オプションが表示されない場合は、メニュー バーから開くことができます。 そのためには、**[ビュー]** > **[ツールボックス]** をクリックします。 または、**Ctrl**+**Alt**+**X** キーを押します)。
 
-2. **[ピン設定]** アイコンをクリックして、[ツールボックス] ウィンドウをドッキングします。
+2. **[ピン設定]** アイコンをクリックして、**[ツールボックス]** ウィンドウをドッキングします。
 
      ![[ツールボックス] ウィンドウを IDE にピン留めする [ピン設定] アイコンをクリックします。](../ide/media/vb-pin-the-toolbox-window.png)  
 3. **[ボタン]** コントロールをクリックし、フォームまでドラッグします。
 
      ![フォームにボタンを追加する](../ide/media/vb-add-a-button-to-form1.png)
 
-4. **[プロパティ]** ウィンドウの **[外観]** セクションで、「**Click this**」と入力し、Enter キーを押します 
+4. **[プロパティ]** ウィンドウの **[外観]** セクションで、`Click this` と入力し、**Enter** キーを押します。
 
      ![フォーム上のボタンにテキストを追加する](../ide/media/vb-button-control-text.png)  
 
-     ([プロパティ] ウィンドウが表示されない場合は、メニュー バーから開くことができます。 そのためには、**[表示]** > **[プロパティ ウィンドウ]** をクリックします。 または **F4** キーを押します)。
+     (**[プロパティ]** ウィンドウが表示されない場合は、メニュー バーから開くことができます。 そのためには、**[表示]** > **[プロパティ ウィンドウ]** をクリックします。 または **F4** キーを押します)。
 
-5. **[プロパティ]** ウィンドウの **[デザイン]** セクションで、名前を "Button1" から "btnClickThis" に変更して、**Enter** キーを押します。
+5. **[プロパティ]** ウィンドウの **[デザイン]** セクションで、名前を **Button1** から `btnClickThis` に変更し、**Enter** キーを押します。
 
      ![フォーム上のボタンに関数を追加する](../ide/media/vb-button-control-function.png)
 
 ### <a name="add-a-label-to-the-form"></a>フォームにラベルを追加する
 アクションを作成するボタン コントロールが追加されましたので、次にテキストが送信されるラベル コントロールを追加してみましょう。
 
-1. [ツールボックス] ウィンドウから **[ラベル]** コントロールを選択し、そのラベルをフォームにドラッグし、**[Click this]** ボタンの下にドロップします。
+1. **[ツールボックス]** ウィンドウから **[ラベル]** コントロールを選択し、そのラベルをフォームにドラッグし、**[Click this]** ボタンの下にドロップします。
 
-2. **[プロパティ]** ウィンドウの **[デザイン]** セクションで、名前を "Label1" から "lblHelloWorld" に変更して、**Enter** キーを押します。
+2. **[プロパティ]** ウィンドウの **[デザイン]** セクションで、名前を **Label1** から `lblHelloWorld` に変更し、**Enter** キーを押します。
 
 ### <a name="add-code-to-the-form"></a>フォームにコードを追加する
 
@@ -91,9 +91,9 @@ Visual Basic プロジェクト テンプレートを選択し、ファイルに
 
      ![[開始] をクリックして、アプリをデバッグして実行する](../ide/media/vb-click-start-hello-world.png)
 
-   いくつかの処理が行われます。 Visual Studio IDE 内では、[Diagnostics Tools]\(診断ツール\) ウィンドウが開き、[出力] ウィンドウも開きます。 ただし、IDE の外部では、[Form1] ダイアログ ボックスが表示されます。 このダイアログ ボックスには、**[Click this]** ボタンと "Label1" というテキストが表示されます。
+   いくつかの処理が行われます。 Visual Studio IDE 内では、**[診断ツール]** ウィンドウが開き、**[出力]** ウィンドウも開きます。 ただし、IDE の外部では、**[Form1]** ダイアログ ボックスが表示されます。 このダイアログ ボックスには、**[Click this]** ボタンと **Label1** というテキストが表示されます。
 
-2. **[Form1]** ダイアログ ボックスの **[Click this]** ボタンをクリックします。 テキスト "Label1" が "Hello World!" に変更されることがわかります。
+2. **[Form1]** ダイアログ ボックスの **[Click this]** ボタンをクリックします。 テキスト **Label1** が **Hello World!** に変更されることがわかります。
 
     ![テキスト Label1 を含む [Form1] ダイアログ ボックス ](../ide/media/vb-form1-dialog-hello-world.png)
 

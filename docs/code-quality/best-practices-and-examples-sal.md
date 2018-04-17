@@ -1,23 +1,20 @@
 ---
-title: "ベスト プラクティスと例 (SAL) |Microsoft ドキュメント"
-ms.custom: 
+title: ベスト プラクティスと例 (SAL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: mikeblome
 ms.author: mblome
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b4c6f505d5e44aec47f88a7955b5b5d98b2699e4
-ms.sourcegitcommit: bfa26fd7426af0d065cb2eef3d6827b5d6f7986c
+ms.openlocfilehash: d8910c9b5d36cecec82bf0e386e294759113c76e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="best-practices-and-examples-sal"></a>ベスト プラクティスと例 (SAL)
 最も不足、ソース コード注釈言語 (SAL) を取得し、一般的な問題を回避する方法を示します。
@@ -122,7 +119,7 @@ void Func2(_Out_writes_(n) PSTR wszFileName, size_t n);
 
 注釈と同様に`_In_ PCSTR`は、一般的で便利です。 あるために、NULL で終わるを入力文字列を指すの precondition`_In_`により、NULL で終わる文字列を認識します。
 
-## <a name="in-wchar-p"></a>\_In\_ WCHAR* p
+## <a name="in-wchar-p"></a>\_\_ WCHAR * p
 
 `_In_ WCHAR* p` 入力ポインターがあることを示す`p`1 文字を指しています。 ただし、ほとんどの場合、これはおそらくないものでは、仕様です。 代わりに、NULL で終わる配列; の仕様は、おそらく目的としていますそのために使用`_In_ PWSTR`です。
 

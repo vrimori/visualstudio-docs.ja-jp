@@ -1,27 +1,25 @@
 ---
-title: "Visual Studio SDK 内 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio SDK 内 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - roadmap, Visual Studio integration SDK
 - Visual Studio integration SDK roadmap
 - integration roadmap, Visual Studio SDK
 ms.assetid: 9118eaa4-0453-4dc5-9e16-c7062d254869
-caps.latest.revision: "30"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: e8b1374b6934e09bbf3ce1012d551dab2831292c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: fff6b720c11f3342a5894489186f57d397dd91b5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="inside-the-visual-studio-sdk"></a>Visual Studio SDK の内部
 このセクションでは、Visual Studio アーキテクチャ、コンポーネント、サービス、スキーマ、ユーティリティ、および、like をなど、Visual Studio 拡張機能に関する詳細情報を提供します。  
@@ -94,7 +92,7 @@ Visual Studio アーキテクチャの汎用化されたビュー
   
  詳細については、次を参照してください。[プロジェクト](../../extensibility/internals/projects.md)と[ソリューション](../../extensibility/internals/solutions.md)です。  
   
-## <a name="project-and-item-templates"></a>プロジェクトと項目テンプレート  
+## <a name="project-and-item-templates"></a>プロジェクト テンプレートと項目テンプレート  
  Visual Studio には、定義済みのプロジェクト テンプレートとプロジェクト項目テンプレートが含まれています。 また、独自のテンプレートを作成または、コミュニティからのテンプレートを取得し、Visual Studio に統合できます。 [MSDN コード ギャラリー](http://code.msdn.microsoft.com/Project/ProjectDirectory.aspx?ProjectSearchText=visual%20studio)テンプレートおよび拡張機能にアクセスする場所がします。  
   
  テンプレートには、プロジェクトの構造とアプリケーション、コントロール、ライブラリ、またはクラスの特定の種類を構築するために必要な基本的なファイルが含まれます。 テンプレートのいずれかのようなソフトウェアを開発する場合は、テンプレートに基づいているプロジェクトを作成し、そのプロジェクト内のファイルを変更します。  

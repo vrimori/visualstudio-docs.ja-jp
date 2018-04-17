@@ -1,27 +1,23 @@
 ---
-title: "プロセス |Microsoft ドキュメント"
-ms.custom: 
+title: プロセス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], processes
 ms.assetid: a6a1efdc-b243-40c8-a778-6f69f6b018be
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e69270c5d90c26cf653ee31b81bcb9f453b814e1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 75230740e84bb6660629b38e84df56fa8e5c1856
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="processes"></a>プロセス
 デバッガーのアーキテクチャの観点から、**プロセス**:  
@@ -40,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
  デバッグ パッケージがデバッグ エンジン (DE) プロセスにアタッチするを呼び出して[アタッチ](../../extensibility/debugger/reference/idebugprocess2-attach.md)です。 これは、デに処理可能なプロセスで実行されているすべての可能なプログラムにアタッチすることを意味します。 たとえば、DE、共通言語ランタイムは、プロセスにアタッチする場合、マネージ コードを実行しているプログラムにのみアタッチします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プログラム](../../extensibility/debugger/programs.md)   
  [スレッド](../../extensibility/debugger/threads.md)   
  [デバッガーの概念](../../extensibility/debugger/debugger-concepts.md)   

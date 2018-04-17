@@ -1,23 +1,21 @@
 ---
-title: "チュートリアル: c# または Visual Basic を使用して、SDK の作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: c# または Visual Basic を使用して、SDK の作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: ef96a249-5eef-402a-a8d5-d74cb49239bd
-caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: a8b0b8452fb20b9b6da4e8ad58c221010f23c9ed
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2106c26e8320e64a641197528c6b91223ef20342
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-an-sdk-using-c-or-visual-basic"></a>チュートリアル: c# または Visual Basic を使用して、SDK の作成
 このチュートリアルでは、Visual c# を使用して単純な数値演算ライブラリ SDK を作成し、SDK と Visual Studio Extension (VSIX) パッケージ化する方法を学習します。 次の手順を完了します。  
@@ -31,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
   
-##  <a name="createClassLibrary"></a>SimpleMath Windows ランタイム コンポーネントを作成するには  
+##  <a name="createClassLibrary"></a> SimpleMath Windows ランタイム コンポーネントを作成するには  
   
 1.  メニュー バーで、次のように選択します。**ファイル**、**新規**、**新しいプロジェクト**です。  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
 9. **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **SimpleMath**プロジェクト ノードをクリックして**ビルド**です。  
   
-##  <a name="createVSIX"></a>SimpleMathVSIX 拡張機能プロジェクトを作成するには  
+##  <a name="createVSIX"></a> SimpleMathVSIX 拡張機能プロジェクトを作成するには  
   
 1.  ショートカット メニューで、**ソリューション 'SimpleMath'**  ノードを選択して**追加**、**新しいプロジェクト**です。  
   
@@ -154,7 +152,7 @@ ms.lasthandoff: 12/22/2017
   
 30. 選択、**インストール**ボタンをクリックし、インストールが終了するまで待機し、Visual Studio を再起動します。  
   
-##  <a name="createSample"></a>クラス ライブラリを使用するサンプル アプリを作成するには  
+##  <a name="createSample"></a> クラス ライブラリを使用するサンプル アプリを作成するには  
   
 1.  メニュー バーで、次のように選択します。**ファイル**、**新規**、**新しいプロジェクト**です。  
   
@@ -168,7 +166,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  詳細ウィンドウで、選択、**単純な数値演算 SDK**拡張機能です。  
   
-     SDK に関する追加情報が表示されます。 できます、**詳細**このチュートリアルで先ほど SDKManifest.xml ファイルで指定したとおり、http://www.msdn.microsoft.com を開くためのリンク。  
+     SDK に関する追加情報が表示されます。 できます、**詳細**を開くリンクhttp://www.msdn.microsoft.comように、このチュートリアルで先ほど SDKManifest.xml ファイルで指定しました。  
   
 7.  **参照マネージャー**ダイアログ ボックスで、**単純な数値演算 SDK**チェック ボックスをオンにして、 **OK**ボタンをクリックします。  
   
@@ -237,13 +235,13 @@ ms.lasthandoff: 12/22/2017
   
 12. アプリの実行に F5 キーを押します。  
   
-13. アプリで、任意の 2 つの数値を入力してください。、、の操作を選択し、、  **=** ボタンをクリックします。  
+13. アプリで、任意の 2 つの数値を入力してください。、、の操作を選択し、、 **=**ボタンをクリックします。  
   
      正しい結果が表示されます。  
   
  正常に作成し、拡張機能 SDK を使用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: C++ を使用して SDK を作成します。](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)   
  [チュートリアル: JavaScript を使用して SDK を作成します。](http://msdn.microsoft.com/en-us/6195ff56-4a27-45fc-bd29-4b0451225f4b)   
  [ソフトウェア開発キットを作成する](../extensibility/creating-a-software-development-kit.md)

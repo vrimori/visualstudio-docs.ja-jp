@@ -1,12 +1,11 @@
 ---
-title: "展開の概要 - Visual Studio |Microsoft ドキュメント"
-ms.custom: 
+title: 展開の概要 - Visual Studio |Microsoft ドキュメント
+description: Visual Studio からアプリを展開するためのオプションについて説明します。
+ms.custom: mvc
 ms.date: 11/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.technology:
+- vs-ide-deployment
+ms.topic: quickstart
 dev_langs:
 - FSharp
 - VB
@@ -21,18 +20,18 @@ helpviewer_keywords:
 - deploying applications [Visual Studio], about deploying applications
 - components [.NET Framework], deploying
 ms.assetid: 63fcdd5b-2e54-4210-9038-65bc23167725
-caps.latest.revision: "33"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e05bf361515b45f3ebc7683fa0c83ec6116d9419
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 5d4367c5daad9c8514f472fe759d1dba9fb7e357
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="deployment-overview-in-visual-studio"></a>Visual Studio での配置の概要
+# <a name="quickstart-first-look-at-deployment-in-visual-studio"></a>クイック スタート: まず、Visual Studio での展開
 
 アプリケーション、サービス、またはコンポーネントを配置すると、他のコンピューターのデバイス、サーバー、またはクラウドに対してインストールするために、それらを配布することになります。 必要な配置の種類に合わせて、Visual Studio で適切な手法を選択します。 (多くの種類のアプリは、ここで説明されていない他の展開ツール コマンド ライン デプロイ NuGet などをサポートします)。
 
@@ -40,7 +39,7 @@ ms.lasthandoff: 01/10/2018
 
 ### <a name="deploy-to-local-folder"></a>ローカル フォルダーに配置します。
 
-- **ASP.NET**、 **ASP.NET Core**、 **Node.js**、 **Python**、および**.NET Core**: 発行ツールを使用してローカルに展開するにはフォルダーです。 利用可能なオプションは、アプリの種類によって異なります。 ソリューション エクスプ ローラーでプロジェクトを右クリックして選択**発行**を選択し**フォルダー**です。 詳細については、次を参照してください。[をローカル フォルダーに配置](quickstart-deploy-to-local-folder.md)です。
+- **ASP.NET**、 **ASP.NET Core**、 **Node.js**、 **Python**、および**.NET Core**: 発行ツールを使用して、ローカル フォルダーに配置します。 利用可能なオプションは、アプリの種類によって異なります。 ソリューション エクスプ ローラーでプロジェクトを右クリックして選択**発行**を選択し**フォルダー**です。 詳細については、次を参照してください。[をローカル フォルダーに配置](quickstart-deploy-to-local-folder.md)です。
 
     ![選択を発行](../deployment/media/quickstart-publish.png)
 
@@ -71,7 +70,7 @@ ms.lasthandoff: 01/10/2018
     概要については、次を参照してください。 [Publish to Azure](quickstart-deploy-to-azure.md)です。 またを参照してください[ASP.NET Core アプリケーションを Azure に公開](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)です。 Git を使用して展開では、次を参照してください。 [Git を使用した Azure への ASP.NET Core の継続的なデプロイ](/aspnet/core/publishing/azure-continuous-deployment)です。
 
     > [!NOTE]
-    > Azure アカウントがない場合は[サインアップ](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio)です。
+    > Azure アカウントをもっていない場合は、ここから [サインアップ](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio) することができます。
 
 - その他の**Azure サービス**: 固有の仕様を参照してください[Azure サービス](/azure/#pivot=products)Visual Studio によってサポートされる可能性があるさまざまな展開オプションをマニュアルでします。
 

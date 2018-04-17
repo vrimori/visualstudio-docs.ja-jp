@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: 初めての Excel 用ドキュメント レベルのカスタマイズの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: 初めての Excel 用ドキュメント レベルのカスタマイズの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - document-level customizations [Office development in Visual Studio], creating your first project
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 656486b691c030839fbb2f0d0ebb568d72ca36e0
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: f1a8335c301d8eba2ec170c9b1b462d09364904f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-your-first-document-level-customization-for-excel"></a>チュートリアル : 初めての Excel 用ドキュメント レベルのカスタマイズの作成
   この入門編のチュートリアルでは、Microsoft Office Excel 用のドキュメント レベルのカスタマイズを作成する方法について説明します。 この種のソリューションで作成した機能は、特定のブックが開いている場合にのみ使用可能です。 ドキュメント レベルのカスタマイズでは、ブックが開いたときに新しいリボン タブを表示するなどの、アプリケーション全体の変更を行うことはできません。  
@@ -72,7 +71,7 @@ ms.lasthandoff: 01/10/2018
   
 8.  選択**新しいドキュメントを作成する**、 をクリック**OK**です。  
   
-    -   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]作成、 **FirstWorkbookCustomization**プロジェクト、および、次のファイルをプロジェクトに追加します。  
+    -   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 作成、 **FirstWorkbookCustomization**プロジェクト、および、次のファイルをプロジェクトに追加します。  
   
     -   *FirstWorkbookCustomization*.xlsx は、プロジェクト内の Excel ブックを表します。 すべてのワークシートとグラフが含まれます。  
   
@@ -95,7 +94,7 @@ ms.lasthandoff: 01/10/2018
   
 2.  **ソリューション エクスプ ローラー**を右クリックし、 **Sheet1**コード ファイル、およびクリックして**ビュー デザイナー**です。  
   
-     \- または  
+     \- または -  
   
      **ソリューション エクスプ ローラー**をダブルクリックして、 **Sheet1**コード ファイル。  
   
@@ -169,8 +168,8 @@ ms.lasthandoff: 01/10/2018
   
 -   Excel 用ドキュメント レベル カスタマイズの配置: [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)です。  
   
-## <a name="see-also"></a>参照  
- [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)   
+## <a name="see-also"></a>関連項目  
+ [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
  [Excel ソリューション](../vsto/excel-solutions.md)   
  [ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)   
  [Excel オブジェクト モデルの概要](../vsto/excel-object-model-overview.md)   

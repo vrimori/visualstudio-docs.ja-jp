@@ -1,11 +1,8 @@
 ---
-title: "TableAdapter を使用してデータ更新 |Microsoft ドキュメント"
-ms.custom: 
+title: TableAdapter を使用してデータ更新 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,17 +14,17 @@ helpviewer_keywords:
 - data [Visual Studio], updating
 - saving data
 ms.assetid: 5e32e10e-9bac-4969-9bdd-b8f6919d3516
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 4968eab5e1d355543a8658e72540bc66fa2543b9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: c5188f56e440f7ec00f7537602aff10723441c3a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="update-data-by-using-a-tableadapter"></a>TableAdapter を使用してデータを更新します。
 データセット内のデータを変更して検証後に送信できます、更新されたデータをデータベースに戻すを呼び出して、`Update`のメソッド、 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)です。 `Update`メソッドを 1 つのデータ テーブルを更新して、に基づいて正しいコマンド (INSERT、UPDATE、または DELETE) を実行、<xref:System.Data.DataRow.RowState%2A>テーブル内の各データ行のです。 データセット関連テーブルがあるときに、Visual Studio は、更新プログラムを実行するために使用 TableAdapterManager クラスを生成します。 TableAdapterManager クラスにより、更新プログラムがデータベースで定義されている外部キー制約に基づく正しい順序で行われること。 データ バインド コントロールを使用する場合、データ バインディング アーキテクチャは、tableAdapterManager と呼ばれる TableAdapterManager クラスのメンバー変数を作成します。 
@@ -53,5 +50,5 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[VbRaddataSaving#9](../data-tools/codesnippet/CSharp/update-data-by-using-a-tableadapter_1.cs)]
      [!code-vb[VbRaddataSaving#9](../data-tools/codesnippet/VisualBasic/update-data-by-using-a-tableadapter_1.vb)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)

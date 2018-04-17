@@ -1,31 +1,29 @@
 ---
-title: "プロジェクトの展開を管理するための構成 |Microsoft ドキュメント"
-ms.custom: 
+title: プロジェクトの展開を管理するための構成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project configurations, managing deployment
 - projects [Visual Studio SDK], configuration for managing deployment
 ms.assetid: bd5940d9-d94d-4944-beda-4ec1ab2bbde5
-caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 4859e47f8a7ade34a920e4d8e2fac3be58508de3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 723edd078636eb324fc2d5dfca2ae81ef3249a43
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-configuration-for-managing-deployment"></a>展開を管理するためのプロジェクトの構成
 展開は、動作は、デバッグおよびインストールの予期される場所に、ビルド プロセスからの出力項目を物理的に移動します。 たとえば、Web アプリケーションをローカル コンピューター上に構築され、サーバー上に配置しする可能性があります。  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]プロジェクトを配置に影響すること、2 つの方法をサポートします。  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] プロジェクトを配置に影響すること、2 つの方法をサポートします。  
   
 -   として、展開プロセスの件名です。  
   
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
  構成は、ビルドまたは配置の動作に影響する依存関係を指定できます。 ビルドまたは配置の依存関係が必要がありますか、ビルドまたは自体の構成をビルドまたは配置される後または前に配置するプロジェクトです。 プロジェクト間でのビルドの依存関係がで説明されている、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency>インターフェイスし、の依存関係を配置、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency>インターフェイスです。 詳細については、次を参照してください。[構築するためのプロジェクト構成](../../extensibility/internals/project-configuration-for-building.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)   
  [構築するためのプロジェクトの構成](../../extensibility/internals/project-configuration-for-building.md)   
  [出力のためのプロジェクト構成](../../extensibility/internals/project-configuration-for-output.md)

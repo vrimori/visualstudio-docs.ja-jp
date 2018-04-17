@@ -1,13 +1,14 @@
 ---
-title: "Visual Studio 2017 の削除 | Microsoft Docs"
-description: "Visual Studio を削除する方法について、ステップ バイ ステップで説明します。"
-ms.custom: 
+title: Visual Studio 2017 の削除 | Microsoft Docs
+description: Visual Studio を削除する方法について、ステップ バイ ステップで説明します。
+ms.custom: ''
 ms.date: 09/12/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-acquisition
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - uninstall
 - uninstall Visual Studio
@@ -19,14 +20,15 @@ f1_keywords:
 - clean up Visual Studio
 ms.assetid: 9c81a777-9c95-4934-b517-c60c6dc78799
 author: heaths
-ms.author: heaths
-manager: erickn
-ms.workload: multiple
-ms.openlocfilehash: a08a24be4f3f9e915a93c9beac7cf5e5c28eb7ca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.author: tglee
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3234dad8a68e4a6ac5560122a971f26e90158ce4
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="remove-visual-studio"></a>Visual Studio の削除
 

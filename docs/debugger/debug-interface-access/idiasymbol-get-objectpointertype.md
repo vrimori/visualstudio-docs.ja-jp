@@ -1,29 +1,25 @@
 ---
-title: "Idiasymbol::get_objectpointertype |Microsoft ドキュメント"
-ms.custom: 
+title: Idiasymbol::get_objectpointertype |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSymbol::get_objectPointerType method
 ms.assetid: bce193b9-67b0-4c35-96e5-6a664937322e
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ec35165dabe8db7a324d5099d9d90607e6c65793
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 96cb800ead3a9588a25b0fabf24865fa909e20e6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiasymbolgetobjectpointertype"></a>IDiaSymbol::get_objectPointerType
 クラスのメソッドのオブジェクトへのポインターの種類を取得します。  
@@ -49,6 +45,6 @@ HRESULT get_objectPointerType (
 ## <a name="remarks"></a>コメント  
  このプロパティのシンボルにのみ適用されます、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)の入力`SymTagFunctionType`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)

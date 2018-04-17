@@ -1,12 +1,10 @@
 ---
-title: "Office アプリケーションおよびプロジェクト タイプで使用可能な機能 |Microsoft ドキュメント"
-ms.custom: 
+title: Office アプリケーションおよびプロジェクト タイプで使用可能な機能 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,13 +19,14 @@ helpviewer_keywords:
 - form regions [Office development in Visual Studio], features available
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: b79c7a913e8ce06b1d833f78aad9e8565d54aff2
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: ff8128f9c142193d9fcde2f139e29a3fb4f3326e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="features-available-by-office-application-and-project-type"></a>Office アプリケーションおよびプロジェクト タイプ別の使用可能な機能
   Visual Studio には、次のように、Microsoft Office アプリケーションのさまざまなビジネス シナリオをサポートするプロジェクト テンプレートがいくつか用意されています。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 01/10/2018
   
 -   VSTO アドイン。  
   
- すべてのプロジェクトの種類を使用できないアプリケーションもあります。 たとえば、ドキュメントレベルのプロジェクトは、Microsoft Office Word と Microsoft Office Excel でのみ使用できます。 同様に、一部の機能は、特定の種類のプロジェクトまたはアプリケーションでのみ使用できます。 たとえば、操作ウィンドウは、ドキュメントレベルのプロジェクトでのみ使用できます。また、リボンの拡張機能は、一部のアプリケーションでのみ使用できます。 別のプロジェクトの種類の詳細については、次を参照してください。 [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md).  
+ すべてのプロジェクトの種類を使用できないアプリケーションもあります。 たとえば、ドキュメントレベルのプロジェクトは、Microsoft Office Word と Microsoft Office Excel でのみ使用できます。 同様に、一部の機能は、特定の種類のプロジェクトまたはアプリケーションでのみ使用できます。 たとえば、操作ウィンドウは、ドキュメントレベルのプロジェクトでのみ使用できます。また、リボンの拡張機能は、一部のアプリケーションでのみ使用できます。 別のプロジェクトの種類の詳細については、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)です。  
   
 > [!NOTE]  
 >  Office プロジェクト テンプレートは、一部のエディションの [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] でのみ使用できます。 詳細については、「 [Configuring a Computer to Develop Office Solutions](../vsto/configuring-a-computer-to-develop-office-solutions.md)」を参照してください。  
@@ -68,13 +67,13 @@ ms.lasthandoff: 01/10/2018
 |リボンのカスタマイズ。|ドキュメントレベルのプロジェクト。<br /><br /> 次のアプリケーション用の VSTO アドイン プロジェクト:<br /><br /> -Excel<br />-InfoPath (InfoPath 2013 と InfoPath 2010 のみ)<br />Outlook を使用して<br />-PowerPoint<br />プロジェクト<br />Visio<br />ワード|[リボンの概要](../vsto/ribbon-overview.md)|  
 |視覚的なドキュメント デザイナー。|ドキュメントレベルのプロジェクト。|[Visual Studio 環境における Office プロジェクト](../vsto/office-projects-in-the-visual-studio-environment.md)|  
   
-## <a name="see-also"></a>参照  
- [作業の開始 (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/getting-started-office-development-in-visual-studio.md)   
- [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)   
+## <a name="see-also"></a>関連項目  
+ [作業の開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
+ [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
  [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   
  [リボンの概要](../vsto/ribbon-overview.md)   
  [Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [ドキュメント レベルのカスタマイズでキャッシュされたデータ](../vsto/cached-data-in-document-level-customizations.md)   
  [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)  
   

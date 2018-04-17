@@ -1,29 +1,25 @@
 ---
-title: "LAUNCH_FLAGS |Microsoft ドキュメント"
-ms.custom: 
+title: LAUNCH_FLAGS |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - LAUNCH_FLAGS
 helpviewer_keywords:
 - LAUNCH_FLAGS enumeration
 ms.assetid: f51aab02-d257-4302-bb79-b7d8ba9ac4e5
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0c31f857fdcb7596b11266ce7a2d2d67200ef5a7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 44d7396388d0bac1539a597fa5b72e0bedaba8c7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="launchflags"></a>LAUNCH_FLAGS
 デバッグ起動フラグを指定します。  
@@ -67,13 +63,13 @@ public enum enum_LAUNCH_FLAGS {
   
  これらのフラグは、ビットごとと組み合わせること`OR`です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)

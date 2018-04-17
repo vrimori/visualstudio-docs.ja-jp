@@ -1,31 +1,29 @@
 ---
-title: "Task クラスの内部メンバー |Microsoft ドキュメント"
-ms.custom: 
+title: Task クラスの内部メンバー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, Task class [.NET Framework]
 - Task class [.NET Framework debug engines]
 ms.assetid: 28e47c3b-9323-424a-80ac-6cc3bf19e09b
-caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: b92a622b6b898c917710ac748b9205079d71ea5e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 161572ece44f3a9f07c9eb40638ca98170e3a86c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="task-class---internal-members"></a>Task クラスの内部メンバー
 このトピックの内容の内部のメンバーの説明、<xref:System.Threading.Tasks.Task?displayProperty=fullName>役立つクラスがカスタムのデバッガーを実装します。 このクラスの概要については、次を参照してください。、<xref:System.Threading.Tasks.Task>リファレンス トピックを参照します。  
   
- **Namespace:**<xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
  **アセンブリ:** (mscorlib.dll) の mscorlib  
   
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="fields"></a>フィールド  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[m_action](../../extensibility/debugger/m-action-field.md)|実行するコードを表すデリゲート、<xref:System.Threading.Tasks.Task>オブジェクト。|  
 |[m_contingentProperties](../../extensibility/debugger/m-contingentproperties-field.md)|その他のプロパティを格納、<xref:System.Threading.Tasks.Task>オブジェクト。|  
@@ -83,6 +81,6 @@ ms.lasthandoff: 12/22/2017
   
 -   `InternalWait`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.Threading.Tasks.Task?displayProperty=fullName>   
  [.NET Framework の並列拡張機能の内部](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

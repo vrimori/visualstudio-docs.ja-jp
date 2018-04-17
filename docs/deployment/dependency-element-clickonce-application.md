@@ -1,12 +1,10 @@
 ---
-title: "&lt;依存関係&gt;要素 (ClickOnce アプリケーション) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;依存関係&gt;要素 (ClickOnce アプリケーション) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 f1_keywords:
 - urn:schemas-microsoft-com:asm.v2#osVersionInfo
 - urn:schemas-microsoft-com:asm.v2#os
@@ -26,16 +24,16 @@ helpviewer_keywords:
 - manifests [ClickOnce], dependency element
 - <dependency> element [ClickOnce application manifest]
 ms.assetid: 09d6a1e0-60f8-4fbd-843b-8e49ee3115a3
-caps.latest.revision: "34"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 7c3319661a4c0df298cd844c4d71c6855cad818c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: be31fafb64b44d6d98917edb11f82a69fbc41c76
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltdependencygt-element-clickonce-application"></a>&lt;依存関係&gt;要素 (ClickOnce アプリケーション)
 アプリケーションに必要なプラットフォームやアセンブリ依存関係を識別します。  
@@ -98,7 +96,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="dependentos"></a>dependentOS  
  任意。 含まれています、`osVersionInfo`要素。 `dependentOS`と`dependentAssembly`要素が相互に排他的な: のどちらか一方に存在する必要があります、`dependency`要素が、両方は使用できません。  
   
- `dependentOS`次の属性をサポートしています。  
+ `dependentOS` 次の属性をサポートしています。  
   
 |属性|説明|  
 |---------------|-----------------|  
@@ -124,7 +122,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="dependentassembly"></a>dependentAssembly  
  任意。 含まれています、`assemblyIdentity`要素。 `dependentOS`と`dependentAssembly`要素が相互に排他的な: のどちらか一方に存在する必要があります、`dependency`要素が、両方は使用できません。  
   
- `dependentAssembly`次の属性があります。  
+ `dependentAssembly` 次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
@@ -140,7 +138,7 @@ ms.lasthandoff: 12/22/2017
 |属性|説明|  
 |---------------|-----------------|  
 |`name`|必須。 アプリケーションの名前を識別します。|  
-|`version`|必須。 次の形式で、アプリケーションのバージョン番号を指定します。`major.minor.build.revision`|  
+|`version`|必須。 次の形式で、アプリケーションのバージョン番号を指定します。 `major.minor.build.revision`|  
 |`publicKeyToken`|任意。 最後の 8 バイトを表す 16 文字の 16 進文字列を指定、`SHA-1`アプリケーションまたはアセンブリが署名に使用された公開キーのハッシュ値。 カタログに署名するために使用する公開キーは、2048 ビット以上にする必要があります。|  
 |`processorArchitecture`|任意。 プロセッサを指定します。 有効な値は`x86`32 ビット Windows 用と`I64`64 ビット Windows 用です。|  
 |`language`|任意。 アセンブリの EN-US など、2 部構成の言語コードを識別します。|  
@@ -148,7 +146,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="hash"></a>hash  
  `hash`要素の省略可能な子では、`assemblyIdentity`要素。 `hash`要素に属性がありません。  
   
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開後に変更されたファイルがないことを確認するのには、セキュリティ チェックとして、アプリケーション内のすべてのファイルのアルゴリズムのハッシュを使用します。 場合、`hash`要素が含まれていない、このチェックは実行されません。 そのため、省略すると、`hash`要素はお勧めしません。  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 展開後に変更されたファイルがないことを確認するのには、セキュリティ チェックとして、アプリケーション内のすべてのファイルのアルゴリズムのハッシュを使用します。 場合、`hash`要素が含まれていない、このチェックは実行されません。 そのため、省略すると、`hash`要素はお勧めしません。  
   
 ### <a name="dsigtransforms"></a>dsig:Transforms  
  `dsig:Transforms`要素の必須の子では、`hash`要素。 `dsig:Transforms`要素に属性がありません。  
@@ -220,6 +218,6 @@ ms.lasthandoff: 12/22/2017
 </dependency>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)   
- [\<依存関係 > 要素](../deployment/dependency-element-clickonce-deployment.md)
+ [\<dependency> 要素](../deployment/dependency-element-clickonce-deployment.md)

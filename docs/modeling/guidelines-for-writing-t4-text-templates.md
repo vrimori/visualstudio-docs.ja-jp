@@ -1,21 +1,19 @@
 ---
-title: "T4 テキスト テンプレートの記述に関するガイドライン |Microsoft ドキュメント"
-ms.custom: 
+title: T4 テキスト テンプレートの記述に関するガイドライン |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: accf32ad313cbbfe11c2e85fdfe3101ab428c4a4
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 4438bacd59eb0552521024de712b6d6989af8b19
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>T4 テキスト テンプレートの記述に関するガイドライン
 これらの一般的なガイドラインは、プログラム コードまたはその他のアプリケーションのリソースを生成している場合に役立つ可能性があります[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 ルール問題を解決できません。  
@@ -136,7 +134,7 @@ class FabrikamTemplate : MyStandardRunTimeTemplate
  生成して、これが正しいことを確認する、コードまたはテキストの例を記述します。 次にその拡張子を .tt に変更し、段階的モデルを読み取ることによって、コンテンツを変更するコードを挿入します。  
   
  型指定されたモデルの使用を検討してください。  
- XML またはデータベースのスキーマを作成するには、モデルの場合、ドメイン固有言語 (DSL) を作成すると便利ですがあります。 DSL には、スキーマ、および属性を表すプロパティ内の各ノードを表すクラスが生成される利点があります。 これは、ビジネス モデルの観点からプログラミング可能なことを意味します。 例:  
+ XML またはデータベースのスキーマを作成するには、モデルの場合、ドメイン固有言語 (DSL) を作成すると便利ですがあります。 DSL には、スキーマ、および属性を表すプロパティ内の各ノードを表すクラスが生成される利点があります。 これは、ビジネス モデルの観点からプログラミング可能なことを意味します。 例えば:  
   
 ```  
 Team Members:  
@@ -153,6 +151,6 @@ Team Members:
   
  ドメイン固有言語 (DSL) として、ダイアグラムの種類を設計することもできます。 コードは、UML および Dsl の両方から生成できます。 詳細については、次を参照してください。[分析およびモデリング アーキテクチャ](../modeling/analyze-and-model-your-architecture.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)   
  [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)

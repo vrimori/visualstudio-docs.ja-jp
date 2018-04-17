@@ -1,11 +1,8 @@
 ---
-title: "チュートリアル: WPF および Entity Framework と WCF データ サービスを作成する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: WPF および Entity Framework と WCF データ サービスを作成する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +12,17 @@ helpviewer_keywords:
 - ADO.NET Data Services, Visual Studio
 - WCF data services in Visual Studio
 ms.assetid: da66ad1b-a25d-485c-af13-2d18f0422e3d
-caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: c4db93f300c47bf3a09dac2fbf9d5b1f4bc17108
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.workload:
+- data-storage
+ms.openlocfilehash: 17c53bcf3b0e2b06ed76319ee2e97b61a76da177
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>チュートリアル: WPF および Entity Framework と WCF データ サービスを作成します。
 このチュートリアルは、単純なを作成する方法を示します[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]でホストされている、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションとして、Windows フォーム アプリケーションからアクセスします。  
@@ -289,6 +286,6 @@ ms.lasthandoff: 01/23/2018
   
 6.  テキスト ボックスに入力**ロンドン**、ボタンをクリックしています。 ロンドンの顧客だけが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Windows Communication Foundation サービスと Visual Studio での WCF Data Services](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)   
  [方法: WCF データ サービス参照を追加、更新、または削除する](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md)

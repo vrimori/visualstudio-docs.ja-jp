@@ -1,12 +1,10 @@
 ---
-title: "方法: ClickOnce アプリケーションにデータ ファイルを含める |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ClickOnce アプリケーションにデータ ファイルを含める |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - deploying applications [ClickOnce], data files
 - data access, ClickOnce applications
 ms.assetid: 89ee46ef-bc8c-4ab0-a2ac-1220f9da06fc
-caps.latest.revision: "15"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: a7ddfdb0518a8e3154d966fdea884bf7f2e3ea37
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: db35de0320e1f75d37cea3ad0c9e32536184305f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-include-a-data-file-in-a-clickonce-application"></a>方法 : ClickOnce アプリケーションにデータ ファイルを含める
 各[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションをインストールするには、アプリケーションが、独自のデータを管理できます先のコンピューターのローカル ディスク上のデータ ディレクトリが割り当てられます。 データ ファイルは、任意の種類のファイルを含めることができます。 テキスト ファイル、XML ファイル、または Microsoft Access データベース (.mdb) ファイルのであってもです。 以下の手順は、任意の種類のデータ ファイルを追加する方法を示して、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。  
@@ -88,5 +86,5 @@ ms.lasthandoff: 12/22/2017
   
      アプリケーション マニフェストのハッシュが変更されたため、配置マニフェストを再署名する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーションにおけるローカル データおよびリモート データへのアクセス](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)

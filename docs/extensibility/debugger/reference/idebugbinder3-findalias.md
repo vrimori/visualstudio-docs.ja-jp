@@ -1,29 +1,25 @@
 ---
-title: "IDebugBinder3::FindAlias |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugBinder3::FindAlias |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugBinder3::FindAlias
 helpviewer_keywords:
 - IDebugBinder3::FindAlias method
 ms.assetid: b8333701-2718-4983-8513-0875fb7cb730
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b88ae0da5f90da45d33ec56169665e9c8430846c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e68038f6e00c2a04f4c96f5f9d93fc4919d2fd09
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugbinder3findalias"></a>IDebugBinder3::FindAlias
 このメソッドは、名前を指定、別名を検索します。 これは、プログラムのすべてのエイリアスを検索します。  
@@ -57,6 +53,6 @@ int FindAlias(
 ## <a name="remarks"></a>コメント  
  このメソッドを呼び出す; 前に null に変換先オブジェクトを初期化します。エイリアスが見つかりましたかどうかを決定した後に null 値をテストします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)   
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

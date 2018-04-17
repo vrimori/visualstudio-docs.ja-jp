@@ -1,29 +1,25 @@
 ---
-title: "IDebugProcess2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugProcess2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugProcess2
 helpviewer_keywords:
 - IDebugProcess2 interface
 ms.assetid: 99f6cd06-4076-45ee-b2ae-fa2ad627fd18
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 896448526f41514fb74b385f8605839908708305
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 77adecb0f3aef5a9c9d0fc8a05e6b44016dd9ae6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugprocess2"></a>IDebugProcess2
 このインターフェイスは、ポートで実行中のプロセスを表します。 ポートの場合、ローカル ポートし`IDebugProcess2`通常、ローカル コンピューター上の物理プロセスを表します。  
@@ -51,7 +47,7 @@ IDebugProcess2 : IUnknown
 |------------|-----------------|  
 |[GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)|プロセスの説明を取得します。|  
 |[EnumPrograms](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)|このプロセスに含まれているプログラムを列挙します。|  
-|[GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)|タイトル、フレンドリ名、または、プロセスのファイル名を取得します。|  
+|[getName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)|タイトル、フレンドリ名、または、プロセスのファイル名を取得します。|  
 |[GetServer](../../../extensibility/debugger/reference/idebugprocess2-getserver.md)|このプロセスが実行されるマシン server のインスタンスを取得します。|  
 |[終了](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)|プロセスを終了します。|  
 |[添付](../../../extensibility/debugger/reference/idebugprocess2-attach.md)|プロセスにアタッチします。|  
@@ -67,14 +63,14 @@ IDebugProcess2 : IUnknown
 ## <a name="remarks"></a>コメント  
  `IDebugProcess2` 1 つ以上含む[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)インターフェイスです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: Msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)   
  [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)   

@@ -1,27 +1,23 @@
 ---
-title: "Web プロジェクト |Microsoft ドキュメント"
-ms.custom: 
+title: Web プロジェクト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - web projects
 ms.assetid: d9c0329f-4b0b-4fda-8061-cce69f2f502d
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 91201eb42d711a09caadad3ef6bf663b23d6c099
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 761ad53669d45bc95769c8d81632068101a6e04c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="web-projects"></a>Web プロジェクト
 Web プロジェクト システムは、Web プロジェクトを作成するプロジェクト システムです。 Web プロジェクトは、Web アプリケーションを作成します。 ユーザーが Web ページなどの従来のプログラミング言語を使用して、プログラム[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]または[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]収集プロセスのユーザーから情報をデータベースに格納しに、します。 関連付けられているコードを含む web ページは、スマートの Web ページと呼ばれます。  

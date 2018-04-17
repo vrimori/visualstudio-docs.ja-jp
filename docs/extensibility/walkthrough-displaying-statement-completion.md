@@ -1,27 +1,23 @@
 ---
-title: "チュートリアル: ステートメント入力候補の表示 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: ステートメント入力候補の表示 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - statement completion
 ms.assetid: f3152c4e-7673-4047-a079-2326941d1c83
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d9c3b44bd46c34a864896cbf1002505085be5143
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: bbdc79275dd99c502533c82665741b84620be928
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-displaying-statement-completion"></a>チュートリアル: ステートメント入力候補を表示します。
 入力候補を提供する識別子を定義して、入力候補のセッションをトリガーして、言語に対応したステートメント入力候補を実装できます。 言語サービスのコンテキストでステートメントの完了を定義、独自のファイル名拡張子とコンテンツの種類を定義してその種類の入力候補を表示したり、既存のコンテンツの種類の完了をトリガーすることができます: たとえば、「プレーン テキスト」です。 このチュートリアルでは、「プレーン テキスト」コンテンツ タイプ、テキスト ファイルのコンテンツの種類の入力候補をトリガーする方法を示します。 「テキスト」コンテンツの種類は、すべての他のコンテンツの種類、コードや XML ファイルなどの先祖です。  
@@ -31,7 +27,7 @@ ms.lasthandoff: 12/22/2017
  このチュートリアルでは、識別子のハードコーディング セットの入力候補を実装する方法を示します。 完全な実装に、言語サービスと言語のドキュメントはそのコンテンツを提供する担当します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="creating-a-mef-project"></a>MEF プロジェクトを作成します。  
   
@@ -207,5 +203,5 @@ ms.lasthandoff: 12/22/2017
   
 4.  入力と最初に"a"とし、"d"、"addition"と「対応」を含む一覧が表示されます。 加算が選択されていることに注意してください。 別の"d"を入力すると、一覧は、のみ"addition"、現在選択されているを含める必要があります。 Space キーを押し、タブ、または Enter キーを押す"addition"をコミットまたは esc キーまたはその他の任意のキーを入力して一覧を消去できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: コンテンツの種類とファイル名拡張子とをリンクさせる](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

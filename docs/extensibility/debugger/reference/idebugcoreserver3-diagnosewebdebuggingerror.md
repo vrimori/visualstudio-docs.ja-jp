@@ -1,29 +1,25 @@
 ---
-title: "IDebugCoreServer3::DiagnoseWebDebuggingError |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugCoreServer3::DiagnoseWebDebuggingError |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugCoreServer3::DiagnoseWebDebuggingError
 helpviewer_keywords:
 - IDebugCoreServer3::DiagnoseWebDebuggingError
 ms.assetid: 8c4570ca-ae55-42f2-bbaa-8d8e75d2fa19
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4b93a82bfd79abe6400e8e1bb213b00154fbbf16
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d0facdbd5da7d17061039e0a9e7faed2be3bbe4b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugcoreserver3diagnosewebdebuggingerror"></a>IDebugCoreServer3::DiagnoseWebDebuggingError
 Auto-attach 理由を特定する試みが失敗しました。  
@@ -55,5 +51,5 @@ int DiagnoseWebDebuggingError(
 |`S_WEBDBG_DEBUG_VERB_BLOCKED`|アクセス許可が不十分などによって、リモート サーバー上でデバッグできませんか、DEBUG の動詞が有効になっていないためです。|  
 |`E_WEBDBG_DEBUG_VERB_BLOCKED`|Web サーバーでは、ロックダウンされているし、デバッグを有効にする必要がある DEBUG の動詞がブロックしています。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

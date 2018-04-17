@@ -1,27 +1,23 @@
 ---
-title: "方法: サービスの取得 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: サービスの取得 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - services, consuming
 ms.assetid: 1f000020-8fb7-4e39-8e1e-2e38c7fec3d4
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dd51497bb73981ca81623ad495edc9561e85d3da
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: cdf5bd925a034a64d8605c675704a0e894308ea3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-get-a-service"></a>方法: サービスを取得
 多くの場合、さまざまな機能にアクセスする Visual Studio サービスを取得する必要があります。 一般に、Visual Studio サービスは、使用できる 1 つまたは複数のインターフェイスを提供します。 ほとんどのサービスは、VSPackage から取得できます。  
@@ -88,7 +84,7 @@ if (sp != null)
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: サービスを提供](../extensibility/how-to-provide-a-service.md)   
  [使用して、サービスを提供します。](../extensibility/using-and-providing-services.md)   
  [サービスの基本情報](../extensibility/internals/service-essentials.md)

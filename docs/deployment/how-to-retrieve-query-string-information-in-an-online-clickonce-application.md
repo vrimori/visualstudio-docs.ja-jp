@@ -1,12 +1,10 @@
 ---
-title: "方法: オンライン ClickOnce アプリケーションでクエリ文字列情報の取得 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: オンライン ClickOnce アプリケーションでクエリ文字列情報の取得 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - ClickOnce deployment, query strings
 - query strings, retrieving information
 ms.assetid: 48ce098a-a075-481b-a5f5-c8ba11f63120
-caps.latest.revision: "19"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: e0fb359dba89a3eef6f257b0cfe560a3f3ab5738
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: ae316f8ed84658c96d78f25f2aaf9c64a800d42c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-retrieve-query-string-information-in-an-online-clickonce-application"></a>方法 : オンライン ClickOnce アプリケーションでクエリ文字列を取得する
 *クエリ文字列* とは、URL のうちの疑問符 (?) で始まる部分であり、 *name=value*の形式で任意の情報を記述します。 たとえば、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] でホストされている `WindowsApp1` という `servername`アプリケーションがあり、このアプリケーションを起動するときに、 `username` という変数に値を渡すとします。 URL は次のようになります。  
@@ -82,5 +80,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  悪意のある文字の入力を使用前に削除する予定である場合にのみ、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションに URL パラメーターを渡すことができるようにしてください。 たとえば、引用符、スラッシュ、またはセミコロンが埋め込まれた文字列を、フィルターしないままデータベースに対する SQL クエリに使用すると、任意のデータ操作が行われる可能性があります。 クエリ文字列のセキュリティの詳細については、「 [Script Exploits Overview](http://msdn.microsoft.com/Library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーションのセキュリティ](../deployment/securing-clickonce-applications.md)

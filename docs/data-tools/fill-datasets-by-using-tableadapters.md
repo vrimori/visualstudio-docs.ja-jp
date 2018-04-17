@@ -1,11 +1,8 @@
 ---
-title: "Tableadapter を使用してデータセットを入力 |Microsoft ドキュメント"
-ms.custom: 
+title: Tableadapter を使用してデータセットを入力 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,17 +15,17 @@ helpviewer_keywords:
 - data [Visual Studio], retrieving
 - data [Visual Studio], datasets
 ms.assetid: 55f3bfbe-db78-4486-add3-c62f49e6b9a0
-caps.latest.revision: "32"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: e338335263a9c0757bbf6305a42fd092d4f90c04
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: efd40aa9e702ce855438e29f65e5bcd221bae9a5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>Tableadapter を使用してデータセットを入力します。
 TableAdapter のコンポーネントは、クエリまたは指定したストアド プロシージャの 1 つまたは複数に基づいて、データベースからデータを含むデータセットを格納します。 Tableadapter を行うことができますも追加、更新、およびデータセットに対して行った変更を保持するデータベースを削除します。 特定のテーブルに関連しないグローバル コマンドを発行することもできます。  
@@ -54,7 +51,7 @@ TableAdapter のコンポーネントは、クエリまたは指定したスト�
   
  ![クライアント アプリケーション内のデータ フロー](../data-tools/media/clientdatadiagram.gif "ClientDataDiagram")  
   
- Tableadapter がでデザインされます、**データセット デザイナー**、TableAdapter のクラスが入れ子になったクラスとして生成されません<xref:System.Data.DataSet>です。 各データセットに固有の個別の名前空間内にあります。 たとえば、という名前のデータセットがある場合`NorthwindDataSet`、Tableadapter に関連付けられている<xref:System.Data.DataTable>内、`NorthwindDataSet`ようになります。、`NorthwindDataSetTableAdapters`名前空間。 プログラムで特定の TableAdapter にアクセスするには、TableAdapter の新しいインスタンスを宣言する必要があります。 例:  
+ Tableadapter がでデザインされます、**データセット デザイナー**、TableAdapter のクラスが入れ子になったクラスとして生成されません<xref:System.Data.DataSet>です。 各データセットに固有の個別の名前空間内にあります。 たとえば、という名前のデータセットがある場合`NorthwindDataSet`、Tableadapter に関連付けられている<xref:System.Data.DataTable>内、`NorthwindDataSet`ようになります。、`NorthwindDataSetTableAdapters`名前空間。 プログラムで特定の TableAdapter にアクセスするには、TableAdapter の新しいインスタンスを宣言する必要があります。 例えば:  
   
  [!code-csharp[VbRaddataTableAdapters#7](../data-tools/codesnippet/CSharp/fill-datasets-by-using-tableadapters_1.cs)]
  [!code-vb[VbRaddataTableAdapters#7](../data-tools/codesnippet/VisualBasic/fill-datasets-by-using-tableadapters_1.vb)]  

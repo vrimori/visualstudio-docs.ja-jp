@@ -1,27 +1,23 @@
 ---
-title: "方法: 検索の実装とメカニズムを置換 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 検索の実装とメカニズムを置換 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - find and replace
 ms.assetid: bbd348db-3d19-42eb-99a2-3e808528c0ca
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c971d4565c95cab23e683a1a4f20c75ebea81b8f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 26d1866d9b816dfca3f82f98db372865f9d27a68
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-implement-the-find-and-replace-mechanism"></a>方法: 検索の実装とメカニズムを置換
 Visual Studio には、検索と置換を実装する 2 つの方法が用意されています。 1 つの方法では、テキスト、イメージをシェルに渡すし、検索、強調表示、および置換テキストを処理できます。 これにより、ユーザーが複数のテキスト範囲を指定できます。 また、VSPackage では、この機能自体を制御できます。 どちらの場合も、現在のターゲットとすべての開いているドキュメントのターゲットについて、シェルに通知する必要があります。  
@@ -38,7 +34,7 @@ Visual Studio には、検索と置換を実装する 2 つの方法が用意さ
   
 3.  実装する場合、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Find%2A>と<xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Replace%2A>メソッドを呼び出すことによって、検索タスクを簡略化できます、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindHelper>インターフェイスです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindHelper>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Find%2A>   

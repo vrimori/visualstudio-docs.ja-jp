@@ -1,27 +1,25 @@
 ---
-title: "基本的なプロジェクト システムを作成するには、パート 2 |Microsoft ドキュメント"
-ms.custom: 
+title: 基本的なプロジェクト システムを作成するには、パート 2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - writing a project system
 - project system
 - tutorial
 ms.assetid: aee48fc6-a15f-4fd5-8420-7f18824de220
-caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 699f9176fd39cacaf2bb4f433cd9d2ceb8e326b5
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: f39150f02481e18997035a8027518648fa410f48
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-a-basic-project-system-part-2"></a>基本的なプロジェクト システムを作成するには、パート 2
 このシリーズの最初のチュートリアル[基本プロジェクト システムでは、第 1 部を作成する](../extensibility/creating-a-basic-project-system-part-1.md)、基本的なプロジェクト システムを作成する方法を示します。 このチュートリアルでは、Visual Studio のテンプレート、プロパティ ページ、およびその他の機能を追加することで、基本的なプロジェクト システムに基づいています。 この 1 つを開始する前に、最初のチュートリアルを完了する必要があります。  

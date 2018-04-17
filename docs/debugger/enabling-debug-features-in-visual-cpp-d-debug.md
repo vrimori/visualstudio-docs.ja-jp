@@ -1,13 +1,10 @@
 ---
-title: "Visual C でのデバッグ機能 (-/d_debug) |Microsoft ドキュメント"
-ms.custom: 
+title: Visual C でのデバッグ機能 (-/d_debug) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug
 dev_langs:
@@ -25,17 +22,16 @@ helpviewer_keywords:
 - debug builds, MFC
 - _DEBUG macro
 ms.assetid: 276e2254-7274-435e-ba4d-67fcef4f33bc
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f1067ee5b60b8a8a402c9612357f2d83b6da138
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b0e652eaf28bb66bdd1ac87e14b1cb2e3fa96169
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enabling-debug-features-in-visual-c-ddebug"></a>Visual C++ でのデバッグ機能の使用 (/D_DEBUG)
 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]、シンボルを使用してプログラムをコンパイルするときに、アサーションが有効になっているなどの機能をデバッグ**_DEBUG**定義します。 定義できます**_DEBUG** 2 つの方法のいずれかで。  
@@ -48,6 +44,6 @@ ms.lasthandoff: 12/22/2017
   
  MFC プログラムのデバッグ構成は、MFC ライブラリのデバッグ バージョンとリンクする必要があります。 MFC ヘッダー ファイルによって決定など、定義済みのシンボルに基づいて正しいバージョンにリンクする MFC ライブラリの**_DEBUG**と**_UNICODE**です。 詳細については、「 [MFC ライブラリのバージョン](/cpp/mfc/mfc-library-versions)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)   
  [C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)

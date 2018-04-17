@@ -1,33 +1,29 @@
 ---
-title: "エディター項目テンプレートに、拡張機能の作成 |Microsoft ドキュメント"
-ms.custom: 
+title: エディター項目テンプレートに、拡張機能の作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - extensions
 ms.assetid: fa3b993b-ab95-47fa-a38b-b788f3a5b2d8
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fb66dfffaf8fa8339ce9060c912dc358fb454a7e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 60f10479e0ce6fa08e888d92556ff47b5d82af66
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-an-extension-with-an-editor-item-template"></a>エディター項目テンプレートに、拡張機能の作成
 エディターに分類子、修飾、および余白を追加する基本的なエディター拡張機能を作成する Visual Studio SDK に含まれている項目テンプレートを使用することができます。 エディターの項目テンプレートは、Visual c# または Visual Basic の VSIX プロジェクトで使用可能です。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="creating-a-classifier-extension"></a>分類器の拡張機能の作成  
  エディター分類子のアイテム テンプレート エディターの分類器を該当するテキストの色を作成する (このケースでは、すべてのもの) 任意のテキスト ファイルにします。  
@@ -102,5 +98,5 @@ ms.lasthandoff: 12/22/2017
   
 4.  このプロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。 テキスト ファイルを開くと、水平スクロール バーの下を"こんにちは EditorMargin1"という語を持つ緑色の余白が表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [言語サービスとエディターの拡張ポイント](../extensibility/language-service-and-editor-extension-points.md)

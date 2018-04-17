@@ -1,12 +1,9 @@
 ---
-title: "リモート デバッグ エラーとトラブルシューティング |Microsoft ドキュメント"
-ms.custom: 
+title: リモート デバッグ エラーとトラブルシューティング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - CSharp
@@ -23,14 +20,14 @@ helpviewer_keywords:
 - remote debugging, errors
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 771a5018aed5c2f85c155b504a5935fd72e5e2ff
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: 67c06fe656f4937ac0b9b6117abe080618a7c1af
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remote-debugging-errors-and-troubleshooting"></a>リモート デバッグ エラーとトラブルシューティング
 デバッグをリモートで試行した場合に、次のエラーが発生することがあります。  
@@ -43,5 +40,5 @@ ms.lasthandoff: 02/01/2018
   
 -   [エラー: リモート コンピューターが [リモート接続] ダイアログに表示されません](../debugger/error-remote-machine-does-not-appear-in-a-remote-connections-dialog.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Remote Debugging](../debugger/remote-debugging.md)

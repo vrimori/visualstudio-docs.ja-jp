@@ -1,12 +1,13 @@
 ---
-title: "パッケージ キャッシュの無効化または移動 | Microsoft Docs"
-description: "Visual Studio 展開のパッケージ キャッシュを無効化、有効化、移動します。"
+title: パッケージ キャッシュの無効化または移動 | Microsoft Docs
+description: Visual Studio 展開のパッケージ キャッシュを無効化、有効化、移動します。
 ms.date: 04/14/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-acquisition
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - cache
 - nocache
@@ -15,14 +16,15 @@ helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 ms.assetid: 2429993A-3F0E-41C5-9562-FEA6AE994440
 author: heaths
-ms.author: heaths
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 639c6e52f522bbdb2868d610f0b002abb9dda082
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.author: tglee
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 7027413936cc7f907b4ec70304317c71c5ceb2da
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="disable-or-move-the-package-cache"></a>パッケージ キャッシュの無効化または移動
 

@@ -1,12 +1,10 @@
 ---
-title: "SharePoint ソリューションのセキュリティ |Microsoft ドキュメント"
-ms.custom: 
+title: SharePoint ソリューションのセキュリティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,16 +15,17 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, security
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 6e9aff74a49f738f4a0ed0df68ffe2e9a5b33525
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 471de3ab69a969f5153723658c628d659038c3a0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="security-for-sharepoint-solutions"></a>SharePoint ソリューションのセキュリティ
-  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint アプリケーションのセキュリティを強化するために、次の機能が組み込まれています。  
+  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint アプリケーションのセキュリティを強化するために、次の機能が組み込まれています。  
   
 ## <a name="safe-control-entries"></a>安全なコントロール エントリ  
  作成されたすべての SharePoint プロジェクト項目[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]が、**安全なコントロール エントリ**を安全な場所を表すプロパティは、コレクションを制御します。 その**セーフ**サブプロパティでは、セキュリティで保護されたと見なされるコントロールを指定することができます。 詳細については、次を参照してください。[を提供するパッケージとプロジェクト項目での展開情報](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)と[セーフである Web パーツを指定する](http://go.microsoft.com/fwlink/?LinkId=177521)です。  
@@ -40,7 +39,7 @@ ms.lasthandoff: 01/10/2018
  *スクリプト インジェクション*は、コントロールや Web ページに悪意のあるコードを挿入します。 スクリプト インジェクションを SharePoint 2010 サイトを保護するため、共同作成者が表示または、既定の Web パーツまたはそれらのプロパティを編集できません。 この動作は、SafeAgainstScript という SafeControl 属性によって制御されます。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、プロジェクト項目にこの属性を設定**安全なコントロール エントリ**サブプロパティ**スクリプトに対して安全**です。 詳細については、次を参照してください。[を提供するパッケージとプロジェクト項目での展開情報](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)と[する方法: 安全なコントロールとしてマーク コントロール](../sharepoint/how-to-mark-controls-as-safe-controls.md)です。  
   
 ## <a name="vista-and-windows-7-user-account-control"></a>Vista および Windows 7 のユーザー アカウント制御  
- [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)]および[!INCLUDE[win7](../sharepoint/includes/win7-md.md)]ユーザー アカウント制御 (UAC) と呼ばれるセキュリティ機能を組み込みます。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] および [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] のシステム上の [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] で SharePoint ソリューションを開発する場合は、UAC により、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] をシステム管理者として実行することが求められます。 **開始**メニュー、ショートカット メニューを開き、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]を選択し**管理者として実行**です。  
+ [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] および[!INCLUDE[win7](../sharepoint/includes/win7-md.md)]ユーザー アカウント制御 (UAC) と呼ばれるセキュリティ機能を組み込みます。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] および [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] のシステム上の [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] で SharePoint ソリューションを開発する場合は、UAC により、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] をシステム管理者として実行することが求められます。 **開始**メニュー、ショートカット メニューを開き、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]を選択し**管理者として実行**です。  
   
  構成する、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]を常に管理者として実行、そのショートカット メニューを開き、選択ショートカット**プロパティ**、選択、 **[詳細設定]**ボタンをクリックして、**プロパティ**クリックしてダイアログ ボックスで、**管理者として実行**チェック ボックスをオンします。  
   
@@ -86,7 +85,7 @@ ms.lasthandoff: 01/10/2018
   
 -   [セキュリティで保護された ASP.NET アプリケーションの構築: 認証、承認、およびセキュリティで保護された通信](http://go.microsoft.com/fwlink/?LinkId=177494)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   
  [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)  
   

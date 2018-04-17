@@ -1,26 +1,24 @@
 ---
-title: "Just-In-Time デバッガーを使用してデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: Just-In-Time デバッガーを使用してデバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/06/17
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Visual Studio], Just-In-Time
 - Just-In-Time debugging
 ms.assetid: ee4d79a5-a1d2-4418-a93f-dd57a53e1836
-caps.latest.revision: "48"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 4bcdd28247b767321d3d5fed9681082538ba2b12
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 1bfaed6a788d61f239fb8fb69095549fe5c20d6d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Visual studio Just-In-Time デバッガーを使用してデバッグします。
 ジャスト イン タイム デバッグ Visual Studio が自動的に起動 Visual Studio の外部で実行されるアプリケーション例外またはクラッシュが発生した場合。 これにより、Visual Studio が実行されていない場合、アプリケーションをテストし、問題が発生したときに、Visual Studio でデバッグを開始することができます。
@@ -30,7 +28,7 @@ Windows デスクトップ アプリの Just-in-time デバッグは機能しま
 > [!TIP] 
 > 場合は、ジャスト イン タイムに応答する方法を理解するデバッガー ダイアログ ボックスを参照してください[ここ](../debugger/just-in-time-debugging-in-visual-studio.md)です。
 
-##  <a name="BKMK_Enabling"></a>有効化または無効にジャスト イン タイムのデバッグ  
+##  <a name="BKMK_Enabling"></a> 有効化または無効にジャスト イン タイムのデバッグ  
 有効にするにまたは時にのみ、Visual Studio からのデバッグを無効にすることができます**ツール > オプション** ダイアログ ボックス。
   
 #### <a name="to-enable-or-disable-just-in-time-debugging"></a>Just-In-Time デバッグの有効/無効を切り替えるには  
@@ -55,7 +53,7 @@ Visual Studio がコンピューターからアンインストールされた後
   
 #### <a name="to-disable-just-in-time-debugging-by-editing-the-registry"></a>レジストリを編集して Just-In-Time デバッグを無効にするには  
   
-1.  **開始**メニューを検索および実行`regedit.exe`  
+1.  **開始**メニューを検索および実行 `regedit.exe`  
   
 2.  **レジストリ エディター**  ウィンドウを見つけて、次のレジストリ エントリを削除します。  
   
@@ -177,7 +175,7 @@ static void Main(string[] args)
   
      この問題を解決するには、セットアップ ディスクを使って Visual Studio を再インストールするか、既存のインストールを修復します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [デバッガーの基本事項](../debugger/debugger-basics.md)   
  [Just-in-time、デバッグ オプション ダイアログ ボックス](../debugger/just-in-time-debugging-options-dialog-box.md)   

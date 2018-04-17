@@ -1,29 +1,25 @@
 ---
-title: "IEnumDebugFields::Skip |Microsoft ドキュメント"
-ms.custom: 
+title: IEnumDebugFields::Skip |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IEnumDebugFields::Skip
 helpviewer_keywords:
 - IEnumDebugFields::Skip method
 ms.assetid: b3bc51c4-21ae-4913-800c-c2ca9dc18443
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dbe41f3624e744084f7d3e9d51ee57f737d2bec8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6c2a87f0f03bca4e52e40a7f6a79273f06683aae
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ienumdebugfieldsskip"></a>IEnumDebugFields::Skip
 このメソッドは、指定した要素数をスキップします。  
@@ -52,5 +48,5 @@ int Skip(
 ## <a name="remarks"></a>コメント  
  場合`celt`数より大きい値を指定して残りの要素の列挙体が最後に設定し、`S_FALSE`が返されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

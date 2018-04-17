@@ -1,29 +1,25 @@
 ---
-title: "Idiastackwalkframe::readmemory |Microsoft ドキュメント"
-ms.custom: 
+title: Idiastackwalkframe::readmemory |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaStackWalkFrame::readMemory method
 ms.assetid: 7ab0b525-a5a7-4692-acad-e8c00fa9ab9a
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cb4680b84ed3507316d628e8323b71e98cf2ccd3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 9874972bd5d6ec72ecd36e32d4487343fa4c231e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiastackwalkframereadmemory"></a>IDiaStackWalkFrame::readMemory
 イメージからメモリを読み取ります。  
@@ -48,7 +44,7 @@ HRESULT readMemory (
  [in]読み取りを開始するイメージ内の仮想アドレスの位置。  
   
  `cbData`  
- [in](バイト単位)、データ バッファーのサイズ。  
+ [in]データバッファのサイズ（バイト単位）。  
   
  `pcbData`  
  [out]返されるバイト数を返します。 場合`data`は`NULL`、し`pcbData`使用可能なデータのバイト数合計にはが含まれています。  
@@ -59,5 +55,5 @@ HRESULT readMemory (
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

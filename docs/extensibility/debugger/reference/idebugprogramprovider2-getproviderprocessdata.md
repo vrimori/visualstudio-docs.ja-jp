@@ -1,29 +1,25 @@
 ---
-title: "IDebugProgramProvider2::GetProviderProcessData |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugProgramProvider2::GetProviderProcessData |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugProgramProvider2::GetProviderProcessData
 helpviewer_keywords:
 - IDebugProgramProvider2::GetProviderProcessData
 ms.assetid: 90cf7b7f-53d2-487e-b793-94501a6e24dd
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e94e0606256eda3fb8cdcade90979342d078e125
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 77a6da58083feb8699c6db24207c265bf50c0f0e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugprogramprovider2getproviderprocessdata"></a>IDebugProgramProvider2::GetProviderProcessData
 指定されたプロセスから実行しているプログラムの一覧を取得します。  
@@ -79,7 +75,7 @@ int GetProviderProcessData(
 ## <a name="remarks"></a>コメント  
  このメソッドは通常、そのプロセスで実行するプログラムの一覧を取得するプロセスによって呼び出されます。 返される情報の一覧は、 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)オブジェクト。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)   
  [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)   
  [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)   

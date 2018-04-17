@@ -1,29 +1,25 @@
 ---
-title: "UNMANAGED_ADDRESS_THIS_RELATIVE |Microsoft ドキュメント"
-ms.custom: 
+title: UNMANAGED_ADDRESS_THIS_RELATIVE |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - UNMANAGED_ADDRESS_THIS_RELATIVE
 helpviewer_keywords:
 - UNMANAGED_ADDRESS_THIS_RELATIVE structure
 ms.assetid: e6a91ace-2d47-4ff9-aefb-8d8b68eab0b2
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2b8c3088b4bfabb3eec00357d6bc1e9306bd42ca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e0a488c06f009636f7905000529ac7803fb0d6de
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unmanagedaddressthisrelative"></a>UNMANAGED_ADDRESS_THIS_RELATIVE
 この構造体が基準にあるアドレスを表す、`this`ポインター (`Me` Visual Basic で)。  
@@ -59,13 +55,13 @@ public struct UNMANAGED_THIS_RELATIVE {
 ## <a name="remarks"></a>コメント  
  この構造体の共用体の一部である、 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)ときに構造体、`dwKind`のフィールド、`DEBUG_ADDRESS_UNION`構造に設定されている`ADDRESS_KIND_UNMANAGED_THIS_RELATIVE`(から値、 [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)列挙体)。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)

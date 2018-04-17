@@ -1,11 +1,11 @@
 ---
-title: "Error タスク | Microsoft ドキュメント"
-ms.custom: 
+title: Error タスク | Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#Error
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - Error task [MSBuild]
 - MSBuild, Error task
 ms.assetid: e96a90ee-a8ae-4e5b-8ef2-b5cf5fedd8b2
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: 1452fc4ba26b9d6483bbdfe296f22cbb9a7f6cea
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
-ms.translationtype: HT
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="error-task"></a>Error タスク
 ビルドを停止し、条件付きステートメントの評価に基づいてエラーをログに記録します。  
@@ -67,6 +67,6 @@ ms.lasthandoff: 02/09/2018
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
  [ビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)

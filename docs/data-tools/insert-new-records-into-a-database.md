@@ -1,11 +1,8 @@
 ---
-title: "データベースに新しいレコードを挿入 |Microsoft ドキュメント"
-ms.custom: 
+title: データベースに新しいレコードを挿入 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,17 +13,17 @@ helpviewer_keywords:
 - records, inserting
 - saving data
 ms.assetid: ea118fff-69b1-4675-b79a-e33374377f04
-caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 1ebb2621aa8da474c08d12e187feadef85840663
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: ec7676022d6eefb07ab2d818bc28a772df433297
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="insert-new-records-into-a-database"></a>データベースに新しいレコードを挿入します。
 データベースに新しいレコードを挿入するに使用することができます、`TableAdapter.Update`メソッド、または、TableAdapter の DBDirect メソッドのいずれか (具体的には、`TableAdapter.Insert`メソッド)。 詳細については、次を参照してください。 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)です。  
@@ -83,5 +80,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  データベースに接続しようとするいると、目的のテーブルに挿入を実行する権限へのアクセスが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)

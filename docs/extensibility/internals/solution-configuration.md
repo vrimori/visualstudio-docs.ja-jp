@@ -1,27 +1,23 @@
 ---
-title: "ソリューションの構成 |Microsoft ドキュメント"
-ms.custom: 
+title: ソリューションの構成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - solution configurations
 ms.assetid: f22cfc75-3e31-4e0d-88a9-3ca99539203b
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 129f86fae5de5501d72b0cdbe5e261717e60e780
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f7b2a453d4ea4e8b92b40ee126f9441e6f353606
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="solution-configuration"></a>ソリューション構成
 ソリューション構成では、ソリューション レベルのプロパティを格納します。 動作を指示する、**開始**(F5) キーと**ビルド**コマンド。 既定では、これらのコマンドは、ビルドし、デバッグ構成を開始します。 どちらのコマンドは、ソリューション構成のコンテキストで実行します。 これは、ユーザーがどのようなアクティブなソリューションが、設定で構成されているビルドの開始、f5 キーを予測できることを意味します。 環境が構築および実行する際に、プロジェクトではなく、ソリューションを最適化するために設計されています。  
@@ -61,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
  新しいソリューション構成が追加されると、ユーザーを選択できますが、ソリューション構成がドロップダウン リスト ボックスから [標準] ツールバーを構築したり、その構成を開始したりします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)   
  [構築するためのプロジェクトの構成](../../extensibility/internals/project-configuration-for-building.md)   
  [プロジェクト構成オブジェクト](../../extensibility/internals/project-configuration-object.md)

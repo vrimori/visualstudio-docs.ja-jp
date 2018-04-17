@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio SDK |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio SDK |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VSSDK.v90.StartPage
 helpviewer_keywords:
@@ -15,17 +12,16 @@ helpviewer_keywords:
 - VS SDK (see Visual Studio SDK)
 - Visual Studio, SDK
 ms.assetid: 1f7c348a-114c-4243-b392-3531e9c9c6fd
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf8c558d01538d477aee3670b3c119d72a83878d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 3b6b75deb576e5cb4e23975e80428433fbbc143a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 Visual Studio SDK を使用して、Visual Studio の機能を拡張したり、新機能を Visual Studio に統合するのに役立ちます。 Visual Studio Marketplace だけでなく、他のユーザーに、拡張機能を配布することができます。 Visual Studio を拡張する方法の一部を次に示します。  
@@ -47,7 +43,7 @@ Visual Studio SDK を使用して、Visual Studio の機能を拡張したり、
  初めて作成する前に Visual Studio 拡張機能、およびこれらの機能に関する詳細がわかる必要があります[Visual Studio 拡張機能の開発を開始して](../extensibility/starting-to-develop-visual-studio-extensions.md)です。  
   
 ## <a name="installing-the-visual-studio-sdk"></a>Visual Studio SDK をインストールします。  
- Visual Studio SDK は、Visual Studio セットアップで省略可能な機能です。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio SDK は、Visual Studio セットアップで省略可能な機能です。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="whats-new-in-the-visual-studio-2017-sdk"></a>Visual Studio 2017 SDK の新機能  
  Visual Studio SDK には、VSIX v3 形式だけでなく、拡張機能を更新する必要がある変更の重大ななど一部の新機能があります。 詳細については、次を参照してください。 [、Visual Studio 2017 SDK の新](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md)です。  
@@ -79,7 +75,7 @@ Visual Studio SDK を使用して、Visual Studio の機能を拡張したり、
   
 -   [Visual Studio の拡張](http://blog.slaks.net/2013-10-18/extending-visual-studio-part-1-getting-started/)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メニュー コマンドを使用して、拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)   
  [方法: Visual Studio 2017 を機能拡張プロジェクトの移行](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)   
  [よく寄せられる質問: VSPackage 拡張機能のアドインに変換します。](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)   

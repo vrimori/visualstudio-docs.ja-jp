@@ -1,11 +1,8 @@
 ---
-title: "データベース (複数のテーブル) にデータを保存 |Microsoft ドキュメント"
-ms.custom: 
+title: データベース (複数のテーブル) にデータを保存 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +12,17 @@ helpviewer_keywords:
 - saving data, walkthroughs
 - data [Visual Studio], updating
 ms.assetid: 7ebe03da-ce8c-4cbc-bac0-a2fde4ae4d07
-caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: e3841a0052081700be899576e1adc0a0740fecec
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.workload:
+- data-storage
+ms.openlocfilehash: 2d47bd0bf619294aa577fdb2e42bed4e912907fc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="save-data-to-a-database-multiple-tables"></a>データベース (複数のテーブル) にデータを保存します。
 アプリケーション開発における最も一般的なシナリオの 1 つに、Windows アプリケーションのフォームにデータを表示して編集し、更新したデータをデータベースに返送する操作があります。 このチュートリアルでは、2 つの関連するテーブルのデータを表示するフォームを作成し、レコードを編集して変更内容をデータベースに保存する方法を示します。 この例では、Northwind サンプル データベースの `Customers` テーブルと `Orders` テーブルを使用します。  
@@ -163,5 +160,5 @@ ms.lasthandoff: 01/23/2018
 4.  データベースの値をチェックし、変更が保存されたことを確認します。  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)

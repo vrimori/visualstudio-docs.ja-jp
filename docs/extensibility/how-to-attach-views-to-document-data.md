@@ -1,27 +1,23 @@
 ---
-title: "方法: 添付データを文書化するビュー |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 添付データを文書化するビュー |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - attach views to document data
 ms.assetid: f92c0838-45be-42b8-9c55-713e9bb8df07
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bcbb3e6b475a9dcd22d012073d3197013da337c8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e3dfe0163bc4a47ec51e5c2dea832f6adda42ff7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-attach-views-to-document-data"></a>方法: 添付ドキュメント データへのビュー
 新しいドキュメント ビューを使っている場合は、既存のドキュメント データ オブジェクトにアタッチすることができます。  
@@ -48,6 +44,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  Visual Studio での実装を呼び出すと、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>メソッド、戻るのポインターに渡すには、既存のドキュメント データ オブジェクト、`punkDocDataExisting`パラメーターを 1 つが存在する場合。 返されるドキュメント データ オブジェクトを調べる`punkDocDataExisting`ドキュメント データ オブジェクトが、このトピックの手順の手順 4 で注で説明したように、エディターの該当するかを判断します。 これは、適切なかどうかは、エディター ファクトリで説明したように、データの 2 つ目のビューを提供する必要があります[複数ドキュメントのビューをサポートする](../extensibility/supporting-multiple-document-views.md)です。 それ以外の場合は、適切なエラー メッセージが表示にする必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [複数のドキュメント ビューをサポートします。](../extensibility/supporting-multiple-document-views.md)   
  [カスタム エディターでのドキュメント データとドキュメント ビュー](../extensibility/document-data-and-document-view-in-custom-editors.md)

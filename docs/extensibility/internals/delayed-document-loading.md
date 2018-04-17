@@ -1,23 +1,21 @@
 ---
-title: "ドキュメントの読み込みを遅延 |Microsoft ドキュメント"
-ms.custom: 
+title: ドキュメントの読み込みを遅延 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: fb07b8e2-a4e3-4cb0-b04f-8eb11c491f35
-caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: e69ee994f434e122894989d82b97ea79e4bd995c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: dc10d7807633433b38fa8587d41c2ac3c0273ebe
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="delayed-document-loading"></a>ドキュメントの読み込みの遅延
 ユーザーは、Visual Studio ソリューションを再度、ときに関連付けられているドキュメントのほとんどはすぐに読み込まれません。 ドキュメント ウィンドウ フレームが初期化保留中の状態で作成され、(スタブ フレームと呼ばれます) のプレース ホルダーのドキュメントを実行しているドキュメント テーブル (RDT) では配置されます。  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
  関連するプロパティを要求する前に、次のメソッドのいずれかを呼び出すことによって、不要なドキュメントの読み込みを回避できます。 その他のプロパティを要求する前にします。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>使用して<xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID6>です。  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> 使用して<xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID6>です。  
   
 -   <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentFlags%2A>。 このメソッドが戻る、<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4>オブジェクトの値を含む<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4>ドキュメントが初期化されていない場合。  
   

@@ -1,12 +1,10 @@
 ---
-title: "カスタム XML 部分の概要 |Microsoft ドキュメント"
-ms.custom: 
+title: カスタム XML 部分の概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -25,20 +23,21 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], custom XML parts
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 8dc3e4b1abc5f60f9ca63e374ab8870df6bb0d41
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 672be641d34f524f1be1972542e89d1e97a1b3d8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-xml-parts-overview"></a>Custom XML Parts Overview
   一部の Microsoft Office アプリケーションのドキュメントに XML データを埋め込むことができます。 データがという名前のドキュメントに XML データを埋め込む場合、*カスタム XML 部分*です。  
   
  Visual Studio で VSTO アドインまたはドキュメント レベルのソリューションを使用して、ドキュメントのカスタム XML 部分を作成または変更できます。 カスタム XML 部分を作成または変更するために Microsoft Office アプリケーションを開始する必要はありません。  
   
- **適用されます:** Excel、PowerPoint、および Word のドキュメント レベルのプロジェクトおよび VSTO アドイン プロジェクトに、このトピックの情報が適用されます。 詳細については、「 [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md)」を参照してください。  
+ **適用されます:** Excel、PowerPoint、および Word のドキュメント レベルのプロジェクトおよび VSTO アドイン プロジェクトに、このトピックの情報が適用されます。 詳細については、「[Office アプリケーションおよびプロジェクトの種類別の使用可能な機能](../vsto/features-available-by-office-application-and-project-type.md)」を参照してください。  
   
 > [!NOTE]  
 >  Visual Studio では、ドキュメント レベルのカスタマイズ内のデータ オブジェクトをキャッシュすることもできます。 いくつかの類似点はありますが、この機能はカスタム XML 部分とは異なります。 詳細については、次を参照してください。[ドキュメント レベルのカスタマイズでキャッシュ データ](../vsto/cached-data-in-document-level-customizations.md)です。  
@@ -81,7 +80,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="binding-custom-xml-parts-to-word-content-controls"></a>Word のコンテンツ コントロールへのカスタム XML 部分のバインディング  
  Word ソリューションのコンテンツ コントロールをカスタム XML 部分の要素にバインドできます。 カスタム XML 部分にコンテンツ コントロールがバインドされると、カスタム XML 部分のデータがコンテンツ コントロールのユーザー インターフェイス (UI) に表示されます。 ユーザーがコントロール内のテキストを編集すると、対応する XML 要素が自動的に更新されます。 同様に、カスタム XML 部分の要素の値が変更されると、その XML 要素にバインドされているコンテンツ コントロールに新しいデータが表示されます。 詳細については、「 [Content Controls](../vsto/content-controls.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML スキーマとドキュメント レベルのカスタマイズ内のデータ](../vsto/xml-schemas-and-data-in-document-level-customizations.md)   
  [方法: ドキュメント レベルのカスタマイズにカスタム XML 部分を追加します。](../vsto/how-to-add-custom-xml-parts-to-document-level-customizations.md)   
  [方法: VSTO アドインを使用してドキュメントにカスタム XML 部分を追加](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)   

@@ -1,26 +1,24 @@
 ---
-title: "チェックリスト: 新しいプロジェクトの種類を作成する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チェックリスト: 新しいプロジェクトの種類を作成する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], creating new types
 - project types, checklist for creating
 ms.assetid: 29eb9c3b-1933-4741-aa85-65a33f0825ba
-caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ea9c2ebd295fe463192c50da402240e0b1df1304
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 11707e62e99dd6a7920ad627d02e6e418c002e80
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="checklist-creating-new-project-types"></a>チェックリスト: 新しいプロジェクトの種類を作成します。
 新しいプロジェクトの種類を作成するいくつかのタスクを完了する必要があります。 次のチェックリストでは、それらのタスクにガイドを提供します。  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
 8.  Vspackage をインストールするための Microsoft インストーラー (.msi) ファイルを作成します。 詳細については、次を参照してください。 [Windows インストーラーで Vspackage をインストールする](../../extensibility/internals/installing-vspackages-with-windows-installer.md)、 [、プロジェクトの種類を登録する](../../extensibility/internals/registering-a-project-type.md)、および[Vspackage](../../extensibility/internals/vspackages.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio での階層](../../extensibility/internals/hierarchies-in-visual-studio.md)   
  [プロジェクトの種類を作成する場合](../../extensibility/internals/when-to-create-project-types.md)   
  [プロジェクト タイプの作成](../../extensibility/internals/creating-project-types.md)

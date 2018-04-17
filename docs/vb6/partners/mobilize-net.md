@@ -1,11 +1,10 @@
 ---
-title: ".Net で Visual Basic のアップグレード ガイド 』 (VBUC) を動員 |Microsoft ドキュメント"
-description: "Visual Basic .NET および C# の場合に、Visual Basic 6 から移行するために、.Net のツールを動員します。"
+title: .Net で Visual Basic のアップグレード ガイド 』 (VBUC) を動員 |Microsoft ドキュメント
+description: Visual Basic .NET および C# の場合に、Visual Basic 6 から移行するために、.Net のツールを動員します。
 ms.date: 09/05/2017
 ms.technology:
 - devlang-vb
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - visual-basic
 author: rpetrusha
@@ -13,11 +12,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7fa2a16143368b829f29f43a4c8f60536b55c52
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d80fa0e2f00ec9ea834483e8dd2c5c262a5eea0c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mobilizenets-visual-basic-upgrade-companion-vbuc"></a>.Net で Visual Basic のアップグレード ガイド 』 (VBUC) を動員します。
 
@@ -87,7 +86,7 @@ Visual Basic のアップグレード ガイド 』 の一意の特性のいく�
 一覧については、更新されたより詳細な機能を参照してください、 [VBUC の技術的なサイト](http://www.vbtonet.com/?msdn)です。
 
 ## <a name="learn-more-and-try-it-for-yourself"></a>詳細については、自分で試す
-詳細、VBUC について、読み取り顧客証拠、アクセス ホワイト ペーパー、ビデオとウェブ キャスト、または http://www.mobilize.net/solution/msdn で無料試用版をダウンロードします。
+VBUC の詳細について、顧客の証拠を読み取り、アクセス ホワイト ペーパー、ビデオとウェブ キャスト、またはで無料試用版をダウンロードhttp://www.mobilize.net/solution/msdnです。
 
 ## <a name="additional-resources"></a>その他のリソース
 

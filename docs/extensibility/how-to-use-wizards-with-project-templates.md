@@ -1,12 +1,10 @@
 ---
-title: "方法: プロジェクト テンプレートを使用してウィザードを使用して |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: プロジェクト テンプレートを使用してウィザードを使用して |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - project templates [Visual Studio], wizards
 - Visual Studio templates, wizards
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - templates [Visual Studio], wizards
 - IWizard interface
 ms.assetid: 47ee26cf-67b7-4ff1-8a9d-ab11a725405c
-caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 8eef98d11f98e3db8216c69dcfacf478c676a837
-ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d29d2a1313bdb4e8a5e8654068984893578af4a0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-use-wizards-with-project-templates"></a>方法 : プロジェクト テンプレートを組み合わせたウィザードを使用する
 Visual Studio には、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスが用意されています。このインターフェイスを実装すると、ユーザーがテンプレートからプロジェクトを作成する際にカスタム コードを実行できるようになります。  
@@ -38,7 +36,7 @@ Visual Studio には、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> イ�
 1.  C# プロジェクト テンプレート プロジェクトを作成する (Visual Studio で、**ファイル > 新規 > プロジェクト > Visual c# > Extensibility > c# プロジェクト テンプレート**)。 名前を付けます**MyProjectTemplate**です。  
   
     > [!NOTE]
-    >  Visual Studio SDK をインストールする要求があります。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+    >  Visual Studio SDK をインストールする要求があります。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 2.  新しい VSIX プロジェクトの追加 (**ファイル > 新規 > プロジェクト > Visual c# > Extensibility > VSIX プロジェクト**) プロジェクト テンプレートと同じソリューションで (で、**ソリューション エクスプ ローラー**を選択、ソリューション ノードを右クリックし、**追加 > 新しいプロジェクト**)。 名前を付けます**MyProjectWizard です。**  
   
@@ -242,7 +240,7 @@ Visual Studio には、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> イ�
   
      引用符をもう一度、忘れないでください。 次のような出力に行を表示する必要があります。  
   
-     **公開キー トークンは、します。<token>**  
+     **公開キー トークンは、します。 <token>**  
   
      この値をメモしてをおきます。  
   
@@ -311,7 +309,7 @@ namespace $safeprojectname$
   
      `$custommessage$` は、ウィザードのユーザー入力フォームに入力されたテキストで置き換えられています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>   
 [テンプレートのカスタマイズ](../ide/customizing-project-and-item-templates.md)  

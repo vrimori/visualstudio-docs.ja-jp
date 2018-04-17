@@ -1,29 +1,25 @@
 ---
-title: "FRAMEINFO |Microsoft ドキュメント"
-ms.custom: 
+title: FRAMEINFO |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - FRAMEINFO
 helpviewer_keywords:
 - FRAMEINFO structure
 ms.assetid: 95001b89-dddb-45bb-889d-8327994e38a5
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5b3fd52fb80cd2bd588951b6a921ca157935a3a2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4080a0d868f154136b11058abdf29948a353b0ba
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="frameinfo"></a>FRAMEINFO
 スタック フレームを説明します。  
@@ -109,14 +105,14 @@ public struct FRAMEINFO {
 ## <a name="remarks"></a>コメント  
  この構造体に渡される、 [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md)格納するメソッド。 この構造体が一覧に含まれているにも含まれている、 [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)インターフェイス、さらへの呼び出しから返される、 [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)メソッドです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)   
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   

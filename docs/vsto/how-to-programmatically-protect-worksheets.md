@@ -1,12 +1,10 @@
 ---
-title: "方法: プログラムによってワークシートを保護する |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: プログラムによってワークシートを保護する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - worksheets, protecting
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 94293b90add3cbb4034278b8566ecfb1d138c09e
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 23e0706f7436355e2308fbde8d945968da5348c8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-protect-worksheets"></a>方法: プログラムによってワークシートを保護する
   Microsoft Office Excel の保護機能を使用すると、ユーザーやコードがワークシート内のオブジェクトを編集できないようにすることができます。 既定では、保護を有効にすると、すべてのセルがロックされます。  
@@ -68,12 +67,12 @@ ms.lasthandoff: 01/10/2018
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#17](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#17)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#17](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#17)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ワークシートの操作](../vsto/working-with-worksheets.md)   
  [方法: プログラムによってワークシートの保護を解除](../vsto/how-to-programmatically-remove-protection-from-worksheets.md)   
  [方法: プログラムによってブックを保護します。](../vsto/how-to-programmatically-protect-workbooks.md)   
  [方法: プログラムによってワークシートを非表示](../vsto/how-to-programmatically-hide-worksheets.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [Worksheet ホスト項目](../vsto/worksheet-host-item.md)   
  [Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  

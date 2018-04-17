@@ -1,29 +1,25 @@
 ---
-title: "IDebugBreakpointErrorEvent2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugBreakpointErrorEvent2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugBreakpointErrorEvent2
 helpviewer_keywords:
 - IDebugBreakpointErrorEvent2
 ms.assetid: adee79df-8db5-4510-a7df-c50f4dbf5e35
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 244a3d2c522d96983cf976b37ab206f2721d4e0c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6f7cd8bdb5e8a36539807970958efda8f152e5c1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugbreakpointerrorevent2"></a>IDebugBreakpointErrorEvent2
 このインターフェイスは、保留中のブレークポイントが、警告またはエラーのため、読み込まれたプログラムをバインドできませんでした (SDM) セッション デバッグ マネージャーに指示します。  
@@ -52,14 +48,14 @@ IDebugBreakpointErrorEvent2 : IUnknown
   
  たとえば、保留中のブレークポイントに関連付けられている条件は、解析または評価のため失敗すると、警告が送信されるこの時点で保留中のブレークポイントをバインドすることはできません。 これは、ブレークポイントをコードがまだ読み込まれていない場合に発生する可能性があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   
  [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)   
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   

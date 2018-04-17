@@ -1,26 +1,24 @@
 ---
-title: "CommandPlacement 要素 |Microsoft ドキュメント"
-ms.custom: 
+title: CommandPlacement 要素 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - CommandPlacements element (VSCT XML schema)
 - VSCT XML schema elements, CommandPlacements
 ms.assetid: 2cbd7ac8-c55a-43d8-a26d-713b3d790016
-caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: a6a5c8d9220b0cd2c0dddfee283d222f4efb9ab8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 14f28c8e2758d2dde9cf38db268abc9fa9b4f863
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="commandplacement-element"></a>CommandPlacement 要素
 CommandPlacement 要素は、1 つ以上のグループまたはメニューに含まれるには、ボタン、グループ、およびメニューを使用します。 CommandPlacement 要素を使用すると、ユーザー インターフェイスの外観を変更するのには、これらの項目を完全に再定義するはありません。  
@@ -70,6 +68,6 @@ CommandPlacement 要素は、1 つ以上のグループまたはメニューに�
 </CommandPlacements>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CommandPlacements 要素](../extensibility/commandplacements-element.md)   
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

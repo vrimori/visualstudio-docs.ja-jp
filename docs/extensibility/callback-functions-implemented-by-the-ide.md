@@ -1,26 +1,24 @@
 ---
-title: "IDE によって実装されているコールバック関数 |Microsoft ドキュメント"
-ms.custom: 
+title: IDE によって実装されているコールバック関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, callback functions
 - callback functions, source control plug-ins
 ms.assetid: 4a8833f0-6ac0-4ea7-9400-8275aa991468
-caps.latest.revision: "24"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 3c1845a82947286800145ff898f8f49f8c3c2477
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: ffdcc7d92770f486f9a345acf14e12e14214a2b1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="callback-functions-implemented-by-the-ide"></a>IDE によって実装されているコールバック関数
 統合してには、、統合されたエンド ユーザー エクスペリエンスを提供できるだけシームレスな統合開発環境 (IDE) ソース管理プラグイン使用できますは IDE によって実装されるコールバック関数。 プラグインを呼び出せるこれらの関数、IDE に情報を渡すのソース管理操作中に適切なタイミングでIDE では、ネイティブ UI に埋め込まれた要素として、この情報を表示できます。 ユーザーは、プラグイン採用独自の UI 場合よりも、このシナリオでは、断片化のエクスペリエンスを持ちます。  

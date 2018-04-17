@@ -1,12 +1,10 @@
 ---
-title: "Office ソリューションのエラーについての追加サポート |Microsoft ドキュメント"
-ms.custom: 
+title: Office ソリューションのエラーについての追加サポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VST.MSBuild.errAppInfoTaskInsertCtlFailed
 - VST.MSBuild.errAppInfoTaskDeleteCtlFailed
@@ -58,13 +56,14 @@ helpviewer_keywords:
 - Office development in Visual Studio, errors
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 225595120af920dc7cb89015024d88ed7bf20580
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 9a9a4c0d4df2e97d151b6a6a310848812b02d77d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="additional-support-for-errors-in-office-solutions"></a>Office ソリューションのエラーについての追加サポート
   次のリソースを使用すると、Visual Studio で Office ソリューションを作成する際に発生する問題に対する回答を検索できます。  
@@ -91,7 +90,7 @@ ms.lasthandoff: 01/10/2018
  [Office ソリューション開発用のその他のリソース](../vsto/additional-resources-for-developing-office-solutions.md)  
  Office ソリューションと Visual Studio での Office 開発の開発について学習するためには、その他のリソースへのリンクを提供します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションのエラーのトラブルシューティング](../vsto/troubleshooting-errors-in-office-solutions.md)   
  [Office ソリューションのセキュリティのトラブルシューティング](../vsto/troubleshooting-office-solution-security.md)   
  [Office ソリューションの配置のトラブルシューティング](../vsto/troubleshooting-office-solution-deployment.md)   

@@ -1,26 +1,24 @@
 ---
-title: "プロジェクトのファクトリを使用してプロジェクトのインスタンスを作成する |Microsoft ドキュメント"
-ms.custom: 
+title: プロジェクトのファクトリを使用してプロジェクトのインスタンスを作成する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project factories
 - projects [Visual Studio SDK], project factories
 ms.assetid: 94c90012-8669-459c-af8e-307ac242c8c4
-caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 8a331c131eaf48eb7be8bc3709599412aa01b1ca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: b3a59eee6701caf0b4d3b56df273b280f8bf6ece
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-project-instances-by-using-project-factories"></a>プロジェクトのファクトリを使用してプロジェクトのインスタンスを作成します。
 プロジェクトの種類に[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を使用して、*プロジェクト ファクトリ*プロジェクトのオブジェクトのインスタンスを作成します。 プロジェクト ファクトリは、cocreatable の COM オブジェクトの標準のクラス ファクトリに似ています。 ただし、プロジェクトのオブジェクトは、cocreatable: プロジェクト ファクトリを使用してのみ作成します。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  プロジェクトは、ファイルも使用しないでき、代わりに、データベースや Web サーバーなど、ファイル システム以外のストレージ メカニズムにそのプロジェクトの状態を格納できます。 この例では、ファイル名のパラメーターが渡される、`CreateProject`メソッドではありませんが、ファイル システム パスを実際には、一意の文字列-URL: プロジェクト データを識別します。 渡されるテンプレート ファイルをコピーする必要はありません`CreateProject`を実行する適切な構築シーケンスをトリガーします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsOwnedProjectFactory>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterProjectTypes>   

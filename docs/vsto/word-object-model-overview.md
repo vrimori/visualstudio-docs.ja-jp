@@ -1,13 +1,10 @@
 ---
-title: "Word オブジェクト モデルの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: Word オブジェクト モデルの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,14 +17,14 @@ helpviewer_keywords:
 - Office object models
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a6f9163543272d784b0f8347acf275f74023ccf8
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: aae1d5648b2db72a4e5ddd6b792f2b3aed846e76
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="word-object-model-overview"></a>Word オブジェクト モデルの概要
   Visual Studio で Word ソリューションを開発するときは、Word オブジェクト モデルと対話します。 このオブジェクト モデルは、Word のプライマリ相互運用機能アセンブリで提供されるクラスとインターフェイスで構成されています。これらのクラスとインターフェイスは <xref:Microsoft.Office.Interop.Word> 名前空間に定義されています。  
@@ -133,14 +130,14 @@ ms.lasthandoff: 01/10/2018
   
  VBA オブジェクト モデルのリファレンス内のオブジェクトとメンバーはすべて、Word PIA の型とメンバーに対応します。 たとえば、VBA オブジェクト モデルのリファレンス内のドキュメント オブジェクトに対応しています。、 <xref:Microsoft.Office.Interop.Word.Document> 、Word pia のオブジェクト。 VBA オブジェクト モデルのリファレンスでは、ほとんどのプロパティ、メソッド、およびイベントのコード例を紹介しています。ただし、Visual Studio を使用して作成した Word プロジェクトでこのリファレンス内の VBA コードを使用するには、それらを Visual Basic または Visual C# に変換する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office プライマリ相互運用機能アセンブリ](../vsto/office-primary-interop-assemblies.md)   
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
  [ドキュメントの操作](../vsto/working-with-documents.md)   
  [ドキュメント内のテキストの操作](../vsto/working-with-text-in-documents.md)   
  [テーブルの操作](../vsto/working-with-tables.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
- [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
+ [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
   
   

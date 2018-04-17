@@ -1,26 +1,24 @@
 ---
-title: "方法: 組み込みの装飾が可能な項目を使用して |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 組み込みの装飾が可能な項目を使用して |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - colorable items
 - language services, built-in colorable items
 ms.assetid: 5e5f3436-6bad-4fd2-8823-6a30353ba648
-caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 545d5fa19182678ec1610fa7b689332e272f9962
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: a6cf51516677aeca71dba269bcdd132e0830b6b4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-use-built-in-colorable-items"></a>方法: 組み込みの装飾が可能な項目を使用して
 組み込みの装飾が可能な項目を使用する前にする必要がありますまずシグナルを送信、統合開発環境 (IDE) 独自カスタム装飾が可能な項目をこの例で提供していない<xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems>オブジェクト。 これを行う言語サービスのレジストリ エントリを設定します。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  カスタムの装飾が可能な項目を指定する場合は、このレジストリ エントリを設定しないでください。 詳細については、次を参照してください。[カスタムの装飾が可能なアイテム](../../extensibility/internals/custom-colorable-items.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム エディターの構文の色分け](../../extensibility/syntax-coloring-in-custom-editors.md)   
  [従来の言語サービスの構文の色分け](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)   
  [構文の色分けを実装します。](../../extensibility/internals/implementing-syntax-coloring.md)   

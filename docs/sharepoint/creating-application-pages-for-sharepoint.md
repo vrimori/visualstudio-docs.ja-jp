@@ -1,12 +1,10 @@
 ---
-title: "For SharePoint アプリケーション ページの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: For SharePoint アプリケーション ページの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,13 +18,14 @@ helpviewer_keywords:
 - application pages [SharePoint development in Visual Studio], creating
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 0ae0580ed4f684f888175ae83afe21dbcd9bf42c
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 68731e2a0c933f3f48f3a2211a9d17ca21e50242
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-application-pages-for-sharepoint"></a>SharePoint のアプリケーション ページの作成
   *アプリケーション ページ*が SharePoint Web サイトで使用するよう設計された ASP.NET Web ページです。 アプリケーション ページとは、ASP.NET ページの特化された型です。 アプリケーション ページと標準の ASP.NET ページの主な違いは、アプリケーション ページには、SharePoint のマスター ページとマージされるコンテンツが含まれているです。 マスター ページには、サイト上の他のページと同じ外観と動作を共有するアプリケーション ページができるようにします。  
@@ -76,7 +75,7 @@ ms.lasthandoff: 01/10/2018
   
  設定して、アプリケーション ページで使用されるマスター ページを明示的に変更できます、`MasterPageFile`アプリケーションの属性`Page`要素。 (例: `MasterPageFile="~/_layouts/applicationv4.master"`)。 実際には、動的なマスター ページは、SharePoint サーバーで有効でない場合は、この属性を設定する必要があります。 SharePoint のマスター ページの詳細については、次を参照してください。[マスター ページ](http://go.microsoft.com/fwlink/?LinkID=169281)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多層 SharePoint Foundation 開発](http://go.microsoft.com/fwlink/?LinkID=182103)   
  [ASP.NET の概要](/aspnet/overview)   
  [ASP.NET Web ページ](/aspnet/web-pages/index)   

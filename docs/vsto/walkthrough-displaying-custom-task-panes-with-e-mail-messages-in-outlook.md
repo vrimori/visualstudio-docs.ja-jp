@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: Outlook で電子メール メッセージと共にカスタム作業ウィンドウを表示する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: Outlook で電子メール メッセージと共にカスタム作業ウィンドウを表示する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,14 +16,14 @@ helpviewer_keywords:
 - custom task panes [Office development in Visual Studio], displaying with e-mail messages
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ad77a685f3100533f790ec6ae82cd11201128902
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: e1fd5acf3ea2c4c6d12931b04f6360ada697378f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook"></a>チュートリアル : Outlook で電子メール メッセージと共にカスタム作業ウィンドウを表示する
   このチュートリアルでは、作成した、または開いた電子メール メッセージごとに固有のカスタム作業ウィンドウのインスタンスを表示する方法を示します。 ユーザーは、各電子メール メッセージのリボンにあるボタンを使用して、カスタム作業ウィンドウを表示または非表示にすることができます。  
@@ -273,7 +270,7 @@ ms.lasthandoff: 01/10/2018
   
 -   Excel にリボン ボタンを作成して、カスタム作業ウィンドウの非表示または表示に使用できるようにします。 詳細については、「 [チュートリアル : カスタム作業ウィンドウとリボン ボタンの同期](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム作業ウィンドウ](../vsto/custom-task-panes.md)   
  [方法: カスタム作業ウィンドウをアプリケーションに追加します。](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)   
  [チュートリアル: カスタム作業ウィンドウからアプリケーションの自動化](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)   

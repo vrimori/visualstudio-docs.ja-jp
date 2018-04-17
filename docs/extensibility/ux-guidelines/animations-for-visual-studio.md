@@ -1,23 +1,21 @@
 ---
-title: "Visual Studio のアニメーション |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio のアニメーション |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 446773a9-e6f7-4c0c-8dbc-9e303bf32eb1
-caps.latest.revision: "2"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: a45fd22cce46cb9e43a649fb969980f42b395db2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 3f28e4d6f9ae1a0af060723047621b3e205d012c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="animations-for-visual-studio"></a>Visual Studio のアニメーション
 ## <a name="animation-fundamentals"></a>アニメーションの基礎  
@@ -197,7 +195,7 @@ Visual Studio の UI では、アニメーションは、コミュニケーシ�
   
 -   不確定インジケーター感終了に近い方を取得するだけでなく、アクションにどの程度の意味の進行状況をユーザーに与えます。  
   
-##  <a name="BKMK_AnimationPatterns"></a>アニメーションのパターン  
+##  <a name="BKMK_AnimationPatterns"></a> アニメーションのパターン  
   
 ### <a name="overview"></a>概要  
 Visual Studio でのアニメーションは、ユーザーの生産性を低下させてせず、特定の関数を提供するものです。 一般に、Visual Studio でのアニメーションがあります。  

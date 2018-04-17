@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio での SharePoint ツールの拡張機能の配置 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio での SharePoint ツールの拡張機能の配置 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying extensions
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 80cc884e45d9db10f6552fa44e611e87b7b4f801
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 7c49e12b7357cc8f3aa6ce9f7cbdcd02294cc253
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploying-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Visual Studio での SharePoint ツールの拡張機能の配置
   SharePoint ツール拡張機能を展開するには、作成、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]拡張機能のアセンブリおよび拡張機能を配布するその他のファイルを含む拡張機能 (VSIX) パッケージ。 VSIX パッケージは、Open Packaging Conventions (OPC) 標準に準拠した圧縮ファイルです。 VSIX パッケージでは、.vsix 拡張子が付いています。  
@@ -132,7 +129,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  **ソリューション エクスプ ローラー**プロジェクト テンプレートや項目テンプレート プロジェクトのショートカット メニューを開きを選択し、**プロジェクトのアンロード**です。  
   
-7.  クリックして、もう一度、プロジェクト ノードのショートカット メニューを開き**編集***YourTemplateProjectName***.csproj**または**編集***YourTemplateProjectName***.vbproj**です。  
+7.  クリックして、もう一度、プロジェクト ノードのショートカット メニューを開き**編集***YourTemplateProjectName***.csproj**または**編集***YourTemplateProjectName***です。vbproj**です。  
   
 8.  プロジェクト ファイルで次の `VSTemplate` 要素を見つけます。  
   
@@ -263,7 +260,7 @@ ms.lasthandoff: 01/10/2018
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint プロジェクト システムの拡張](../sharepoint/extending-the-sharepoint-project-system.md)   
  [サーバー エクスプ ローラーで SharePoint 接続 ノードを拡張します。](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
  [SharePoint オブジェクト モデルの呼び出し](../sharepoint/calling-into-the-sharepoint-object-models.md)   

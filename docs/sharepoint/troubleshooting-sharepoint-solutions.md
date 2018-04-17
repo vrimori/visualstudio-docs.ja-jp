@@ -1,13 +1,10 @@
 ---
-title: "SharePoint ソリューションのトラブルシューティング |Microsoft ドキュメント"
-ms.custom: 
+title: SharePoint ソリューションのトラブルシューティング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/22/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Tools.SharePoint.Errors.Debugging
 dev_langs:
@@ -19,14 +16,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, troubleshooting
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6f03f8fd1fd5609f93d4fae22a7a694e61b1c80c
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: ba8f84db31cbe41e8bd3f62a7806de0a6d2ea58e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-sharepoint-solutions"></a>SharePoint ソリューションのトラブルシューティング
   以下の問題または警告は、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] デバッガーを使用して SharePoint ソリューションをデバッグするときに発生することがあります。 詳細については、次を参照してください。 [SharePoint 2007 ワークフロー ソリューションのデバッグ](http://msdn.microsoft.com/en-us/3a5392f3-66f3-48be-956e-02de23fa6247)です。
@@ -217,7 +214,7 @@ ms.lasthandoff: 01/10/2018
  この問題は、インポートしたリスト インスタンスの名前を変更した後、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で実行した場合に発生します。  
   
 ### <a name="error-message"></a>エラー メッセージ  
- ビルド エラー: 配置手順"機能のアクティブ化でエラーが発生しました: ファイル Template\Features\\[*プロジェクトのインポート**機能**名前*] \Files\Lists\\[*古い**リスト名*] \Schema.xml が存在しません。  
+ ビルド エラー: 配置手順"機能のアクティブ化でエラーが発生しました: ファイル Template\Features\\[*プロジェクトのインポート**機能**名前*] \Files\Lists\\[*古い * * リスト名*] \Schema.xml が存在しません。  
   
 ### <a name="resolution"></a>解像度  
  リスト インスタンスをインポートすると、CustomSchema という名前の属性がリスト インスタンスの Elements.xml ファイルに追加されます。 Elements.xml には、リスト インスタンス用のカスタム schema.xml のパスが含まれます。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] でリスト インスタンスの名前を変更すると、カスタム schema.xml の配置パスは変更されますが、CustomSchema 属性のパス値は更新されません。 この結果、機能がアクティブ化されるときに、リスト インスタンスは、CustomSchema 属性に指定された古いパスでは schema.xml ファイルを検出できません。  
@@ -282,7 +279,7 @@ ms.lasthandoff: 01/10/2018
 ### <a name="resolution"></a>解像度  
  この問題を解決するには、Visual Studio 内の SharePoint プロジェクトの [サイト URL] プロパティの値が、Web アプリケーションの代替アクセス マッピング用の既定のゾーンに割り当てられた URL と一致することを確認します。 URL でイントラネットなどの他のゾーンを使用すると、エラーは解消されません。 プロジェクトのサイト URL と既定のゾーンの URL は一致している必要があります。 代替アクセス マッピングにアクセスするには、SharePoint 2010 サーバーの全体管理ユーティリティを開きを選択、**アプリケーション管理**リンクし、 **Web アプリケーション**、選択、 **代替アクセス マッピングを構成する**リンクします。 詳細については、次を参照してください。 [Web アプリケーションのゾーンを作成する](http://go.microsoft.com/fwlink/?LinkId=192274)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint のパッケージ化と配置のトラブルシューティング](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)   
  [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)   
  [Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio)  

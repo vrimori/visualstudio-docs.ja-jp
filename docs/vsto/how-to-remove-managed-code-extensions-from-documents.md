@@ -1,12 +1,10 @@
 ---
-title: "方法: ドキュメントからのマネージ コード拡張機能の削除 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ドキュメントからのマネージ コード拡張機能の削除 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], managed code extensions
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: c83f9794cdce71db9f51a6adca69fbeabc8c7a8e
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 7a5e70db36c0cd1b99a670e13a353e15f7558e7e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-remove-managed-code-extensions-from-documents"></a>方法: マネージ コード拡張をドキュメントから削除する
   プログラムによって、ドキュメントまたは Microsoft Office Word または Microsoft Office Excel 用ドキュメント レベルのカスタマイズの一部であるブックから、カスタマイズ アセンブリを削除することができます。 ユーザーのドキュメントを開くし、内容を表示することができますしは、ドキュメントに追加する、カスタム ユーザー インターフェイス (UI) は表示されませんが、され、コードは実行できません。  
@@ -56,7 +55,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  プロジェクトをビルドし、カスタマイズを削除するコンピューターでアプリケーションを実行します。 コンピューターによっては、for Office Runtime がインストールされている Visual Studio 2010 Tools が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ServerDocument クラスを使用してサーバー上のドキュメントを管理します。](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)   
  [方法: マネージ コード拡張機能をドキュメントにアタッチする](../vsto/how-to-attach-managed-code-extensions-to-documents.md)  
   

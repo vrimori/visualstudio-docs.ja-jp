@@ -1,5 +1,5 @@
 ---
-title: "方法: 式エディターを使用して |Microsoft ドキュメント"
+title: '方法: 式エディターを使用して |Microsoft ドキュメント'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: b5f961dd-6dda-41a9-9cae-0383d479ef3d
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: be43ad439c8868064fc7e0bab79e051abb991e0d
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: f9873d341238f3278779277d70da6df56f29f721
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-use-the-expression-editor"></a>式エディターを使用する方法
 式エディターは、入力して、これらの式を評価するための手段として、多くのワークフロー活動で使用されている Windows ワークフロー デザイナー コントロールです。 式エディターには、IntelliSense、色付け、パラメーター情報、エラーを示す波線などの、本格的な IDE 編集機能が用意されています。 入力した式はコンパイラによって検証されます。 式が無効な場合は、エラー アイコンが表示されます。 エディターを開くことも、**式エディター**  ダイアログ ボックス。

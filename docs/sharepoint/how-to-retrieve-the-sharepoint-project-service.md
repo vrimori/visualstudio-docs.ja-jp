@@ -1,13 +1,10 @@
 ---
-title: "方法: SharePoint プロジェクト サービスの取得 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: SharePoint プロジェクト サービスの取得 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - SharePoint project service
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b1abdf4a48d05285a7394469dd391caf48981f9f
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: f1e8cdcc863cfd363b1a73f11ed05ffb5a5ff12e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-retrieve-the-sharepoint-project-service"></a>方法: SharePoint プロジェクト サービスを取得する
   次の種類のソリューションで SharePoint プロジェクト サービスにアクセスすることができます。  
@@ -104,7 +101,7 @@ ms.lasthandoff: 01/10/2018
   
  アクセス権を持つ Visual Studio 拡張機能で、<xref:EnvDTE80.DTE2>オブジェクトを要求できます、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService>オブジェクトを使用して、<xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A>のメソッド、<xref:Microsoft.VisualStudio.Shell.ServiceProvider>オブジェクト。 詳細については、次を参照してください。 [DTE オブジェクトからサービスを取得する](../extensibility/how-to-get-a-service.md#getting-a-service-from-the-dte-object)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint プロジェクト サービスの使用](../sharepoint/using-the-sharepoint-project-service.md)   
  [方法: サービスを取得](../extensibility/how-to-get-a-service.md)   
  [方法: プロジェクト テンプレートでウィザードを使用する](../extensibility/how-to-use-wizards-with-project-templates.md)  

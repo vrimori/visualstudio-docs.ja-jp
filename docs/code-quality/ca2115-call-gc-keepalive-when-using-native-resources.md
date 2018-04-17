@@ -1,12 +1,10 @@
 ---
-title: "Ca 2115: では、Gc が発生します。ネイティブ リソースを使用するときにキープア ライブ |Microsoft ドキュメント"
-ms.custom: 
+title: 'Ca 2115: では、Gc が発生します。ネイティブ リソースを使用するときにキープア ライブ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CallGCKeepAliveWhenUsingNativeResources
 - CA2115
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA2115
 - CallGCKeepAliveWhenUsingNativeResources
 ms.assetid: f00a59a7-2c6a-4bbe-a1b3-7bf77d366f34
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f767c923d319a0accce655eea84a6fff22dc5069
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ea82194eced9caed52e75216091060ff9350379
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2115-call-gckeepalive-when-using-native-resources"></a>CA2115: ネイティブ リソースを使用しているときには GC.KeepAlive を呼び出します
 |||  
@@ -54,14 +52,14 @@ ms.lasthandoff: 12/22/2017
  慎重に除外する前に他のメッセージを確認します。 このルールは、再生やデバッグが困難なエラーを検出します。  
   
 ## <a name="example"></a>例  
- 次の例では、`BadMethod`への呼び出しを含まない`GC.KeepAlive`し、そのため、規則に違反します。 `GoodMethod`修正後のコードが含まれています。  
+ 次の例では、`BadMethod`への呼び出しを含まない`GC.KeepAlive`し、そのため、規則に違反します。 `GoodMethod` 修正後のコードが含まれています。  
   
 > [!NOTE]
 >  この例では、コードをコンパイルして実行、擬似コード、アンマネージ リソースの作成または解放されていないために、この警告は発生しません。  
   
  [!code-csharp[FxCop.Security.IntptrAndFinalize#1](../code-quality/codesnippet/CSharp/ca2115-call-gc-keepalive-when-using-native-resources_1.cs)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.GC.KeepAlive%2A?displayProperty=fullName>   
  <xref:System.IntPtr?displayProperty=fullName>   
  <xref:System.Object.Finalize%2A?displayProperty=fullName>   

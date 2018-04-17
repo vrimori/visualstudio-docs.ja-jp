@@ -1,12 +1,10 @@
 ---
-title: "Visual Studio での SharePoint ツール拡張 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio での SharePoint ツール拡張 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending tools
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: db0afa41641cd9d5ae04cfe6d391dbf0fe814f0f
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 7d5ad6f27574fcb7bd8a859bcd21ac65e159596e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extending-the-sharepoint-tools-in-visual-studio"></a>Visual Studio の SharePoint ツールの拡張
   Visual Studio での SharePoint ツールでは、多くのアプリケーション開発シナ リオの要件を満たしています。 ただし、ここでは提供されませんか、他の開発者が必要とする機能の場合を検出できます。 このような場合は、必要な機能を作成する SharePoint ツールを拡張できます。  
@@ -51,12 +50,12 @@ ms.lasthandoff: 01/10/2018
   
  Visual Studio SDK をインストールするを参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。 Visual Studio 拡張機能の詳細については、次を参照してください。 [Visual Studio 拡張機能の開発を開始して](../extensibility/starting-to-develop-visual-studio-extensions.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ツールの拡張機能を SharePoint のプログラミング モデルの概要](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)   
  [SharePoint プロジェクト システムの拡張](../sharepoint/extending-the-sharepoint-project-system.md)   
  [サーバー エクスプ ローラーで SharePoint 接続 ノードを拡張します。](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
  [プログラミングに関する概念との SharePoint ツール拡張機能](../sharepoint/programming-concepts-and-features-for-sharepoint-tools-extensions.md)   
- [リファレンス &#40;です。SharePoint ツールの機能拡張 &#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)   
+ [参照&#40;SharePoint ツールの拡張性&#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)   
  [Visual Studio での SharePoint ツールの拡張機能のデバッグ](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)   
  [Visual Studio での SharePoint ツールの拡張機能の配置](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)  
   

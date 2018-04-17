@@ -1,26 +1,24 @@
 ---
-title: "式エバリュエーターを登録する |Microsoft ドキュメント"
-ms.custom: 
+title: 式エバリュエーターを登録する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluators, registering
 ms.assetid: 236be234-e05f-4ad8-9200-24ce51768ecf
-caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 9a8aa71d6c529aa4d06acf1d887f10a58cd8367e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: a34278ecca071c31e62ff4e405e9d7ada112d425
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registering-an-expression-evaluator"></a>式エバリュエーターを登録します。
 > [!IMPORTANT]
@@ -117,7 +115,7 @@ namespace EEMC
   
     |メトリック|説明|  
     |------------|-----------------|  
-    |`metricCLSID`|`CLSID`EE クラス ファクトリ|  
+    |`metricCLSID`|`CLSID` EE クラス ファクトリ|  
     |`metricName`|表示可能な文字列として EE の名前|  
     |`metricLanguage`|EE は、言語の名前は、評価するよう設計されています|  
     |`metricEngine`|`GUID`この EE で動作するデバッグ エンジン (DE)|  
@@ -214,6 +212,6 @@ static HRESULT RegisterMetric( bool registerIt )
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR 式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   
  [デバッグ用の SDK ヘルパー](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)

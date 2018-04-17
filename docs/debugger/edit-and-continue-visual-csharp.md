@@ -1,12 +1,10 @@
 ---
-title: "エディット コンティニュ (Visual C# の場合) |Microsoft ドキュメント"
-ms.custom: 
+title: エディット コンティニュ (Visual C# の場合) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 10/11/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - Edit and Continue [C#]
 - debugging [C#], Edit and Continue
 ms.assetid: 591bd1b7-ef10-4d10-817b-3f92ca4be006
-caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: c9b820dceefbb84dc9c0b9b9efff75afdb38b30f
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+manager: douge
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9d7dc8058763e7538606d0aeaa7e11f029bc145c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="edit-and-continue-visual-c"></a>エディット コンティニュ (Visual C#)
  C# のエディット コンティニュを使用すると、デバッグ中に中断モードでコードに変更を加えることができます。 デバッグ セッションを停止したり再開したりしなくても、変更を適用できます。 実行モードでは、ソース エディターは読み取り専用です。  
@@ -42,6 +40,6 @@ ms.lasthandoff: 01/19/2018
   
  詳細については、次を参照してください。[する方法: エディット コンティニュ (c#)](../debugger/how-to-use-edit-and-continue-csharp.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: エディット コンティニュを使用 (c#)](../debugger/how-to-use-edit-and-continue-csharp.md)   
  [サポートされているコード変更 (c# および Visual Basic)](../debugger/supported-code-changes-csharp.md)

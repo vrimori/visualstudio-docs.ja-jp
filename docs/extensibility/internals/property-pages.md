@@ -1,27 +1,25 @@
 ---
-title: "プロパティ ページ |Microsoft ドキュメント"
-ms.custom: 
+title: プロパティ ページ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - configuration options, changing properties
 - property pages
 - property pages, changing configuration options
 ms.assetid: b9b3e6e8-1e30-4c89-9862-330265dcf38c
-caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: cedf021321b66c47690450823a7da92cd19888eb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 1b08e210a57388d77859600c02c0e6a30a404884
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="property-pages"></a>プロパティ ページ
 ユーザーは、表示し、プロパティ ページを使用して、プロジェクトの構成に依存して、独立系のプロパティを変更できます。 A**プロパティ ページ**でボタンが有効になっている、**プロパティ**ウィンドウまたは 選択されたオブジェクトのプロパティ ページ ビューを提供するオブジェクトのソリューション エクスプ ローラー ツールバー。 プロパティ ページでは、環境によって作成され、ソリューションおよびプロジェクトに使用できます。 することができます、ただし、構成するプロジェクト項目を構成に依存するプロパティの使用の使用可能です。 プロジェクト内のファイルが別のコンパイラ スイッチの設定を正しくビルドする必要がある場合は、この機能を使用する場合があります。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  最上位のカテゴリの下に表示される各カテゴリは、個別のプロパティ ページを表します。 Category と subcategory 使用できるエントリ ダイアログ ボックスでは、実装によって決まります`ISpecifyPropertyPages`と`IVsPropertyPage`です。  
   
- `IDispatch`オブジェクトのプロパティ ページの実装に表示されるプロパティを持つ項目が選択コンテナーに`ISpecifyPropertyPages`クラス Id の一覧を列挙します。 変数として渡されるクラス Id`ISpecifyPropertyPages`プロパティ ページをインスタンス化に使用されます。 クラス Id のリストに渡されます`IVsPropertyPage` ダイアログ ボックスの左側のツリー構造を作成します。 バックアップを作成し、プロパティ ページ、パス情報、`IDispatch`を実装するオブジェクト`ISpecifyPropertyPages`し、各ページの情報を格納します。  
+ `IDispatch` オブジェクトのプロパティ ページの実装に表示されるプロパティを持つ項目が選択コンテナーに`ISpecifyPropertyPages`クラス Id の一覧を列挙します。 変数として渡されるクラス Id`ISpecifyPropertyPages`プロパティ ページをインスタンス化に使用されます。 クラス Id のリストに渡されます`IVsPropertyPage` ダイアログ ボックスの左側のツリー構造を作成します。 バックアップを作成し、プロパティ ページ、パス情報、`IDispatch`を実装するオブジェクト`ISpecifyPropertyPages`し、各ページの情報を格納します。  
   
  使用して参照オブジェクトのプロパティを取得`IDispatch`選択コンテナー内の各オブジェクトです。  
   
@@ -73,17 +71,17 @@ ms.lasthandoff: 12/22/2017
   
      以上のユーザーは、f5 キーを押すか、[ビルド] メニューから実行を選択したときに開始されるソリューションのプロパティ ページからプロジェクトを指定することができます。 これは、その名前が太字のフォントを持つソリューション エクスプ ローラーに表示されるという意味で古いアクティブなプロジェクトと同様の方法で機能します。  
   
-     オートメーション モデルのプロパティとして、スタートアップ プロジェクトを取得するには呼び出すことによって`DTE.Solution.SolutionBuild.StartupProjects`です。 VSPackage でを呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2.get_StartupProject%2A>または<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2.get_StartupProject%2A>メソッドです。 `IVsSolutionBuildManager`サービスとして利用できます`QueryService`SID_SVsSolutionBuildManager にします。 詳細については、次を参照してください。[プロジェクト構成オブジェクト](../../extensibility/internals/project-configuration-object.md)と[ソリューション構成](../../extensibility/internals/solution-configuration.md)です。  
+     オートメーション モデルのプロパティとして、スタートアップ プロジェクトを取得するには呼び出すことによって`DTE.Solution.SolutionBuild.StartupProjects`です。 VSPackage でを呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2.get_StartupProject%2A>または<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2.get_StartupProject%2A>メソッドです。 `IVsSolutionBuildManager` サービスとして利用できます`QueryService`SID_SVsSolutionBuildManager にします。 詳細については、次を参照してください。[プロジェクト構成オブジェクト](../../extensibility/internals/project-configuration-object.md)と[ソリューション構成](../../extensibility/internals/solution-configuration.md)です。  
   
 -   アクティブなソリューションのビルド構成  
   
-     [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]実装することで、オートメーション モデルで使用できるアクティブなソリューション構成を持つ`DTE.Solution.SolutionBuild.ActiveConfiguration`します。 ソリューション構成は、(各プロジェクトは複数の構成を複数の異なる名前を持つ、複数のプラットフォームでに持つことができます)、ソリューション内の各プロジェクトの 1 つのプロジェクト構成を含むコレクションです。 詳細については、ソリューションのプロパティ ページに関連する、次を参照してください。[ソリューション構成](../../extensibility/internals/solution-configuration.md)です。  
+     [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 実装することで、オートメーション モデルで使用できるアクティブなソリューション構成を持つ`DTE.Solution.SolutionBuild.ActiveConfiguration`します。 ソリューション構成は、(各プロジェクトは複数の構成を複数の異なる名前を持つ、複数のプラットフォームでに持つことができます)、ソリューション内の各プロジェクトの 1 つのプロジェクト構成を含むコレクションです。 詳細については、ソリューションのプロパティ ページに関連する、次を参照してください。[ソリューション構成](../../extensibility/internals/solution-configuration.md)です。  
   
 -   現在選択されているプロジェクト  
   
      実装、<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.GetCurrentSelection%2A>プロジェクト階層やプロジェクト項目、選択された項目を取得します。 使用する DTE から、`SelectedItems.SelectedItem.Project`と`SelectedItems.SelectedItem.ProjectItem`メソッドです。 コアにそれらの見出しの下のサンプル コードがある[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ドキュメント。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPropertyPage>   
  [構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)   
  [プロジェクト構成オブジェクト](../../extensibility/internals/project-configuration-object.md)   

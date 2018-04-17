@@ -1,26 +1,24 @@
 ---
-title: "列挙体 (Visual Studio のデバッグ) |Microsoft ドキュメント"
-ms.custom: 
+title: 列挙体 (Visual Studio のデバッグ) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - enumerations [Visual Studio SDK]
 - debugging [Debugging SDK], enumerations
 ms.assetid: 557065bf-081f-4d57-8744-bae02b8a5a6e
-caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: f1c2b7f20c0094bf901ed7cf67a75e412bb2e25e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 84319a9f88b898094f40d266440da996ef33cb91
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enumerations-visual-studio-debugging"></a>列挙体 (Visual Studio のデバッグ)
 列挙体は次のとおり、 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] SDK のデバッグします。  
@@ -247,12 +245,12 @@ ms.lasthandoff: 12/22/2017
  [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md)  
  スレッドの状態を指定します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h、sh.h、または ee.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [API リファレンス](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

@@ -1,12 +1,10 @@
 ---
-title: "Ca 2231: ValueType.Equals のオーバーライドで equals をオーバー ロードされた演算子 |Microsoft ドキュメント"
-ms.custom: 
+title: 'Ca 2231: ValueType.Equals のオーバーライドで equals をオーバー ロードされた演算子 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - OverloadOperatorEqualsOnOverridingValueTypeEquals
 - CA2231
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - OverloadOperatorEqualsOnOverridingValueTypeEquals
 - CA2231
 ms.assetid: 114c0161-261a-40ad-8b2c-0932d6909d2a
-caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 9ee207eb3e5c4babb5bcb9f7d88f9afd3908a3c7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 881b3d9761f19b4e8364f585480d8b055d076a38
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2231-overload-operator-equals-on-overriding-valuetypeequals"></a>CA2231: ValueType.Equals のオーバーライドで、演算子 equals をオーバーロードします
 |||  
@@ -40,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="rule-description"></a>規則の説明  
  ほとんどのプログラミング言語では、値型の等値演算子 (= =) の既定の実装はありません。 使用するプログラミング言語では、演算子のオーバー ロードをサポートする場合は、等値演算子を実装することを検討してください。 その動作をするのと同じにする必要があります<xref:System.Object.Equals%2A>です。  
   
- 等値演算子のオーバー ロードされた実装では、既定の等値演算子を使用できません。 こうと、スタック オーバーフローが発生します。 等値演算子を実装するのには、実装で、Object.Equals メソッドを使用します。 例:  
+ 等値演算子のオーバー ロードされた実装では、既定の等値演算子を使用できません。 こうと、スタック オーバーフローが発生します。 等値演算子を実装するのには、実装で、Object.Equals メソッドを使用します。 例えば:  
   
 ```vb  
 If (Object.ReferenceEquals(left, Nothing)) Then  
@@ -78,5 +76,5 @@ return left.Equals(right);
   
  [CA2218: オーバーライドする Equals で GetHashCode をオーバーライドします](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.Object.Equals%2A?displayProperty=fullName>

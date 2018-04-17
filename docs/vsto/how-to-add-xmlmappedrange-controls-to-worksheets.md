@@ -1,12 +1,10 @@
 ---
-title: "方法: ワークシートに XMLMappedRange コントロールを追加する |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ワークシートに XMLMappedRange コントロールを追加する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - controls [Office development in Visual Studio], adding to worksheets
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 90050da5f5105ab3be4c42bedb1751d9f1664958
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: fa0e6d6249ea9b7da3fb0ab57640b61fb38e7fe5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-xmlmappedrange-controls-to-worksheets"></a>方法 : ワークシートに XMLMappedRange コントロールを追加する
   Microsoft Office Excel のセルに XML 要素をマップすると、Visual Studio は自動的に追加、<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>をワークシートにコントロールできます。  
@@ -40,7 +39,7 @@ ms.lasthandoff: 01/10/2018
 3.  **開発者** タブで、をクリックして**ソース**です。  
   
     > [!NOTE]  
-    >  場合、**開発者** タブがリボンに表示されていない、有効にする必要があります。 詳細については、「 [How to: Show the Developer Tab on the Ribbon](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)」を参照してください。  
+    >  場合、**開発者** タブがリボンに表示されていない、有効にする必要があります。 詳細については、「 [方法 : [開発] タブをリボンに表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)」を参照してください。  
   
      **XML ソース**タスク ウィンドウが表示されます。  
   
@@ -63,11 +62,11 @@ ms.lasthandoff: 01/10/2018
     > [!NOTE]  
     >  親要素をドラッグする場合、 **XML ソース**タスク ウィンドウで、<xref:Microsoft.Office.Tools.Excel.ListObject>コントロールを作成します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XmlMappedRange コントロール](../vsto/xmlmappedrange-control.md)   
  [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
- [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
+ [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
  [方法: Visual Studio 内でワークシートにスキーマを割り当てる](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)  
   
   

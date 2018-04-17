@@ -1,12 +1,10 @@
 ---
-title: "ブックの操作 |Microsoft ドキュメント"
-ms.custom: 
+title: ブックの操作 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - Excel [Office development in Visual Studio], workbooks
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 774d22be5cf7ef65d7c323d151400a2ea2b33cc5
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 77072b01ffc09fd1b876e1daa3e3fd7e7c837d86
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-workbooks"></a>ブックの操作
   <xref:Microsoft.Office.Tools.Excel.Workbook> クラスと <xref:Microsoft.Office.Interop.Excel.Workbooks> クラスには、ブック関連のタスクを実行するときに使用するメソッドとプロパティが含まれています。  
@@ -41,7 +40,7 @@ ms.lasthandoff: 01/10/2018
   
  以下のタスクは、VSTO アドインとドキュメント レベルのカスタマイズとで実行方法が異なる場合があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)   
  [ワークシートの操作](../vsto/working-with-worksheets.md)   
  [範囲の使用](../vsto/working-with-ranges.md)   

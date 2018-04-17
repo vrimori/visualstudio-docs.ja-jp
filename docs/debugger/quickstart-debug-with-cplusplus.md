@@ -1,27 +1,23 @@
 ---
-title: "Visual Studio デバッガーを使用して C++ を使用してデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio デバッガーを使用して C++ を使用してデバッグ |Microsoft ドキュメント
+ms.custom: mvc
 ms.date: 03/18/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
 ms.topic: quickstart
 helpviewer_keywords:
 - debugger
 ms.assetid: 639e430b-6d2d-46bd-b738-8c60dfb384f1
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fce20f8c17b52b109b469bd439905e0edd66c9d3
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 1d73549fb556a52acb0e086ab8bcbfe9fb88c7b0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debug-with-c-using-the-visual-studio-debugger"></a>Visual Studio デバッガーを使用して C++ でのデバッグします。
 

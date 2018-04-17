@@ -1,26 +1,24 @@
 ---
-title: "テスト範囲 1: ソース管理から開くを追加する |Microsoft ドキュメント"
-ms.custom: 
+title: 'テスト範囲 1: ソース管理から開くを追加する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], adding and opening solutions
 - source control plug-ins, adding and opening solutions
 ms.assetid: 5b3b5b08-5e9b-41be-ac72-c63957faed22
-caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 1891e0242463f3673d22d22e0f9a2d000b01ae60
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6e95ef13a3d8f7a61c53c9938564479adf362a2c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="test-area-1-add-toopen-from-source-control"></a>テスト範囲 1: ソース管理からに/開いてを追加します。
 このソース管理プラグインをテスト ソリューションまたはプロジェクトをソース管理下に配置して、ソース管理から取得して、領域について説明します。  
@@ -87,5 +85,5 @@ ms.lasthandoff: 12/22/2017
 |1 つのプロジェクトをソリューションに追加-1 つのプロジェクト|1.1 つのプロジェクト含むソリューションを作成します。<br />2.ソリューションをソース管理に追加します。<br />3.ソリューションを閉じます。<br />4.2 つ目の空のソリューションを作成します。<br />5.ソース管理から、以前のコントロールのソリューションに追加 (**ファイル**、**ソース管理**、**ソース管理からプロジェクトの追加**)。|追加したプロジェクトが表示されます**ソリューション エクスプ ローラー**でチェックします。|  
 |ソリューションに追加-ソリューションを選択してソース管理に追加|1.プロジェクト、ソリューションを作成します。<br />2.選択項目としてソース管理にソリューションのみを追加します。 このステップが成功した場合は、次の手順に進みます。<br />3.ソリューションを閉じます。<br />4.新しいソリューションを作成します。<br />5.ソース管理から、以前のコントロールのソリューションに追加 (**ファイル**、**ソース管理**、**ソース管理からプロジェクトの追加**)。|`Result from Step 2:`<br /><br /> プロジェクトはソース管理されていません。<br /><br /> `Result from Step 5:`<br /><br /> 最初のソリューションにソリューション項目がある場合、表示されないようにするは、ソース管理から追加できません。<br /><br /> 最初のソリューションからプロジェクトが使用不可の状態が表示されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン向けのテスト ガイド](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

@@ -1,29 +1,25 @@
 ---
-title: "BP_REQUEST_INFO |Microsoft ドキュメント"
-ms.custom: 
+title: BP_REQUEST_INFO |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - BP_REQUEST_INFO
 helpviewer_keywords:
 - BP_REQUEST_INFO structure
 ms.assetid: 42a31412-5b6b-47fe-a762-0c2bc769e1cc
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 87239c69d4d23f321dba4549f39724d48422a49f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2e317f360eaa796eb8bdbea2a58950c8b72a3fef
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bprequestinfo"></a>BP_REQUEST_INFO
 ブレークポイントの実装に必要な情報が含まれています。  
@@ -96,14 +92,14 @@ public struct BP_REQUEST_INFO {
   
  ブレークポイント制約またはトレース ポイントを参照して、デバッグ エンジン ベンダー GUID を取得する必要がある場合、 [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)構造体。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md)   
  [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)   

@@ -1,13 +1,10 @@
 ---
-title: "Microsoft Office Word キーボード、Microsoft Office Keyboard 設定オプション ダイアログ ボックス |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft Office Word キーボード、Microsoft Office Keyboard 設定オプション ダイアログ ボックス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Microsoft_Office_Tools.Microsoft_Office_Word.Keyboard
 - VS.ToolsOptionsPages.Microsoft_Office_Keyboard_Settings.Microsoft_Office_Word_Keyboard
@@ -19,14 +16,14 @@ helpviewer_keywords:
 - keyboard shortcuts, Office development in Visual Studio
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7fc2f6ea9f9f404efae6ca85c8e6a4b0f70be129
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: d8747485ced6309bf9e63ecf864c67a111ce6c47
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-office-word-keyboard-microsoft-office-keyboard-settings-options-dialog-box"></a>[Microsoft Office Word Keyboard] ([オプション] ダイアログ ボックス - [Microsoft Office Keyboard 設定])
   Microsoft Office Word および Visual Studio 両方のショートカット キーを処理します。 同じショートカット キーの組み合わせは、Word では Visual Studio での異なるコマンドのスタンバイことができます。 Word で開いている場合、ドキュメント レベルのプロジェクトを Visual Studio で、一度に 1 つだけのアプリケーションは、ショートカット キーのコマンドを受信します。 既定では、Visual Studio はすべてのショートカット キー コマンドを受け取りますが、Word のドキュメントにフォーカスがある場合を選択して受信を行うことができます**ダイナミック キーボード スキーム**です。  
@@ -42,7 +39,7 @@ ms.lasthandoff: 01/10/2018
  **動的なキーボード スキーム**  
  Visual Studio は、フォーカスがあるときにのみ、ショートカット キーのコマンドを受信します。 Word 文書にフォーカスがある場合は、Word がショートカット キーのすべてのコマンドを受信します。 たとえば、Word 文書にフォーカスがあるときに、F5 キーを押すと、開かれます、**検索し、置換** ダイアログ ボックスで、**ジャンプ**タブを選択します。 Visual Studio にフォーカスがあるときに、f5 キーを押して、Visual Studio は、ソリューションのデバッグを開始します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[Microsoft Office Excel Keyboard] ([オプション] ダイアログ ボックス - [Microsoft Office Keyboard 設定])](../vsto/microsoft-office-excel-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md)  
   
   

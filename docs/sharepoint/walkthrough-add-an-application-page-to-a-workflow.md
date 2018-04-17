@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: アプリケーション ページをワークフローに追加する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: アプリケーション ページをワークフローに追加する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - application page [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 86b402e1f8b8be3adf477d67eb11387fa3091afd
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 97c720ded65e46e85f8d9f20f9f509b31f2cebbb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-add-an-application-page-to-a-workflow"></a>チュートリアル: ワークフローへのアプリケーション ページの追加
   このチュートリアルでは、ワークフロー プロジェクトへワークフローから派生したデータを表示するためのアプリケーション ページを追加する方法を示します。 トピックで説明されているプロジェクトを基に、[チュートリアル: アソシエーションと開始フォームを使用するワークフローを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)です。  
@@ -337,7 +336,7 @@ ms.lasthandoff: 01/10/2018
   
 14. 共有ドキュメント の一覧内の他のドキュメントの手順 11 ~ 13 を繰り返します。 (ドキュメントの正確な数重要ではありません。)  
   
-15. Web ブラウザーで次の URL を開くことで、経費明細書概要アプリケーション ページを表示: **http://***SystemName***/_layouts/ExpenseReport/ApplicationPage1.aspx**.  
+15. Web ブラウザーで次の URL を開くことで、経費明細書概要アプリケーション ページを表示: **http://***SystemName***/_layouts/ExpenseReport/ApplicationPage1.aspx**です。  
   
      経費明細書概要ページには、すべての割り当て済みの容量を超えている支出、量を超過していたことによって、すべてのレポートの合計金額が一覧表示します。  
   
@@ -350,7 +349,7 @@ ms.lasthandoff: 01/10/2018
   
 -   [Web パーツまたはアプリケーション ページの再利用可能なコントロールの作成](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: アソシエーションと開始フォーム、ワークフローを作成します。](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)   
  [方法: アプリケーション ページを作成します。](../sharepoint/how-to-create-an-application-page.md)   
  [For SharePoint アプリケーション ページの作成](../sharepoint/creating-application-pages-for-sharepoint.md)   

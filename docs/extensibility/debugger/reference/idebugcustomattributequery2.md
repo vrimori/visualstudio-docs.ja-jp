@@ -1,30 +1,26 @@
 ---
-title: "IDebugCustomAttributeQuery2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugCustomAttributeQuery2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugCustomAttributeQuery2
 helpviewer_keywords:
 - IDebugCustomAttributeQuery interface
 - IDebugCustomAttributeQuery2 interface
 ms.assetid: 7cfa23e4-a05a-47a3-af6c-bd40c655014b
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 31df907fe13cd171da8e443d3b8af876adaf3c3f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7efc14b3d2bad9111e12328c29960ef991e8a4f9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugcustomattributequery2"></a>IDebugCustomAttributeQuery2
 このフィールドのカスタム属性の存在を定義し、存在する場合は、属性情報を返します。  
@@ -58,14 +54,14 @@ IDebugCustomAttributeQuery2 : IDebugCustomAttributeQuery
 ## <a name="remarks"></a>コメント  
  [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)メソッドは、このフィールドに対して定義されているすべてのカスタム属性の列挙子を返すことができます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [シンボル プロバイダー インターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

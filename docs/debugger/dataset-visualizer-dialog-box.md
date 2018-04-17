@@ -1,13 +1,10 @@
 ---
-title: "[Dataset ビジュアライザー] ダイアログ ボックス |Microsoft ドキュメント"
-ms.custom: 
+title: '[Dataset ビジュアライザー] ダイアログ ボックス |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.dataviewer
 dev_langs:
@@ -22,17 +19,16 @@ helpviewer_keywords:
 - visualizers, Dataset Visualizer dialog box
 - Dataset Visualizer dialog box
 ms.assetid: dfbede03-805b-4f88-a645-b479450e6cb0
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 56cfc8dfdcb3c61b5f1eb1b0f14f3ad1af5fb89e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d57b12ee11eebf942e70d00ddbeb591dd90e0e4a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dataset-visualizer-dialog-box"></a>[DataSet ビジュアライザー] ダイアログ ボックス
 DataSet ビジュアライザーを使用すると、DataSet、DataTable、DataView、または DataViewManager オブジェクトの内容を表示できます。 このビジュアライザーにアクセスするには、デバッガー変数ウィンドウまたは DataTip 内の各オブジェクトに対応する [値] の隣に表示される、虫眼鏡アイコンをクリックします。  
@@ -43,7 +39,7 @@ DataSet ビジュアライザーを使用すると、DataSet、DataTable、DataV
  テーブル  
  このドロップダウン リスト ボックスを使用して、視覚化するデータセット内のテーブルを選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [カスタム ビジュアライザーを作成します。](../debugger/create-custom-visualizers-of-data.md)   
  [デバッガー ウィンドウ](../debugger/debugger-windows.md)   

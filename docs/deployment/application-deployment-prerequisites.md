@@ -1,12 +1,10 @@
----
-title: "アプリケーション展開の前提条件 |Microsoft ドキュメント"
-ms.custom: 
+﻿---
+title: アプリケーション展開の前提条件 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - prerequisites, ClickOnce
 - dependencies, ClickOnce
 ms.assetid: fc6e047e-ad94-44e8-8ff5-b6d1f4ca7735
-caps.latest.revision: "51"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 4060933a904a5cb842a7c319b3ef5da645e4119e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 5fdeb1d5e543216e0cbb9cab72ecd98001caff3c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="application-deployment-prerequisites"></a>アプリケーション配置の必要条件
 アプリケーションが正常にインストールされ、実行されるようにするには、アプリケーションが依存しているすべてのコンポーネントがターゲット コンピューターに既にインストールされていることを最初に確認する必要があります。 たとえば、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を使用して作成されたほとんどのアプリケーションは、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] に依存します。アプリケーションをインストールする前に、共通言語ランタイムの適切なバージョンが、ターゲット コンピューター上に存在している必要があります。  
@@ -48,10 +46,10 @@ ms.lasthandoff: 12/22/2017
   
 -   グローバル アセンブリ キャッシュ (GAC) にプレインストールされる必要があるすべてのアセンブリの最小バージョン。これは、アセンブリ マニフェストでアセンブリ依存関係の宣言によって指定されます。  
   
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]不足している前提条件を検出できるし、ブートス トラップを使用して、前提条件をインストールすることができます。 詳細については、次を参照してください。[する方法: ClickOnce アプリケーションと共に必須コンポーネントをインストール](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)です。  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 不足している前提条件を検出できるし、ブートス トラップを使用して、前提条件をインストールすることができます。 詳細については、次を参照してください。[する方法: ClickOnce アプリケーションと共に必須コンポーネントをインストール](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)です。  
   
 > [!NOTE]
->  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] や MageUI.exe などのツールによって生成されたマニフェスト内の値を変更するには、アプリケーション マニフェストをテキスト エディターで編集した後に、アプリケーション マニフェストと配置マニフェストの両方に再署名する必要があります。 詳細については、次を参照してください。[する方法: 再署名アプリケーション マニフェストと配置マニフェスト](../deployment/how-to-re-sign-application-and-deployment-manifests.md)です。  
+>  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] や MageUI.exe などのツールによって生成されたマニフェスト内の値を変更するには、アプリケーション マニフェストをテキスト エディターで編集した後に、アプリケーション マニフェストと配置マニフェストの両方に再署名する必要があります。 詳細については、「 [方法: アプリケーション マニフェストおよび配置マニフェストに再署名する](../deployment/how-to-re-sign-application-and-deployment-manifests.md)」を参照してください。  
   
  Visual Studio と ClickOnce を使用してアプリケーションを配置する場合、既定で選択されるブートストラップ パッケージは、ソリューション内の .NET Framework のバージョンによって異なります。 ただし、対象の .NET Framework バージョンを変更する場合は、オプションを更新する必要があります、**の前提条件 ダイアログ ボックス**手動でします。  
   
@@ -76,15 +74,15 @@ ms.lasthandoff: 12/22/2017
   
 |コマンド ライン引数|説明|  
 |---------------------------|-----------------|  
-|**-?, -h, -help**|[ヘルプ] ダイアログ ボックスを表示します。|
-|**-url, -componentsurl**|このセットアップ用に保存されている URL とコンポーネントの URL を表示します。|
-|**-url =**`location`|Setup.exe が [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを検索する URL を設定します。|  
-|**-componentsurl =**`location`|Setup.exe が [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] などの依存関係を検索する URL を設定します。 |  
-|**-homesite=** `true` **&#124;**`false`|`true` であるとき、ベンダーサイトの適切な場所から依存関係をダウンロードします。これは**- componentsurl**の設定よりも優先されます。`false` であるとき、**-componentsurl** で指定された URL から依存関係をダウンロードします。|
+|**-?, -h, -help**|[ヘルプ] ダイアログ ボックスを表示します。|  
+|**-url, -componentsurl**|このセットアップ用に保存されている URL とコンポーネントの URL を表示します。|  
+|**-url =** `location`|Setup.exe が [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを検索する URL を設定します。|  
+|**-componentsurl =** `location`|Setup.exe が [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] などの依存関係を検索する URL を設定します。 |  
+|**homesite-=** `true`**&#124;** `false`|`true`の場合、ベンダーサイトの適切な場所から依存関係がダウンロードされます。 これによって **- componentsurl** の設定が上書きされます。 `false` の場合は、**-componentsurl** で指定された URL から依存関係がダウンロードされます。|  
 
 ## <a name="operating-system-support"></a>オペレーティング システムのサポート  
  Visual Studio ブートストラップは、Windows Server 2008 Server Core ではサポートされていません。また、機能が限定された、メンテナンスの容易なサーバー環境を提供する Windows Server 2008 R2 Server Core でもサポートされていません。 たとえば、Server Core のインストール オプションでは、.NET Framework 3.5 Server Core プロファイルのみがサポートされています。そのため、完全な .NET Framework を必要とする Visual Studio の機能は実行できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce 配置ストラテジの選択](../deployment/choosing-a-clickonce-deployment-strategy.md)   
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)

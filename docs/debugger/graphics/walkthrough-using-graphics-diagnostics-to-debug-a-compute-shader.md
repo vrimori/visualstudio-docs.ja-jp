@@ -1,23 +1,21 @@
 ---
-title: "チュートリアル: グラフィックス診断を使用した計算シェーダーのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: グラフィックス診断を使用した計算シェーダーのデバッグ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 69287456-644b-4aff-bd03-b1bbb2abb82a
-caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: ef73c45b39c638b2dfc1f88be3323d083efa8493
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 4498f819dae42c1f010fa97891511253624d7b97
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader"></a>Walkthrough: Using Graphics Diagnostics to Debug a Compute Shader (チュートリアル: 計算シェーダーをデバッグするためのグラフィックス診断の使用)
 このチュートリアルでは、Visual Studio のグラフィックス診断ツールを使用して、正しくない結果を生成する計算シェーダーを調査する方法を説明します。  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  検査、**グラフィックス イベント一覧**のデータセットをレンダリングする描画イベント。 やすくにするには、次のように入力します。`Draw`で、**検索**ボックスの右上隅に、**グラフィックス イベント一覧**ウィンドウです。 これによって一覧がフィルター処理され、タイトルに "Draw" を含むイベントのみが一覧に表示されます。 このシナリオでは、これらの描画イベントが発生したことがわかります。  
   
-     ![イベントの一覧 &#40;EL&#41;表示は、イベントを描画します。] (media/gfx_diag_demo_compute_shader_fluid_step_2.png "gfx_diag_demo_compute_shader_fluid_step_2")  
+     ![イベント一覧&#40;EL&#41;描画イベントを示しています。] (media/gfx_diag_demo_compute_shader_fluid_step_2.png "gfx_diag_demo_compute_shader_fluid_step_2")  
   
 3.  グラフィックス ログのドキュメント タブでレンダー ターゲットを観察しながら、各描画イベント間を移動します。  
   
@@ -102,11 +100,11 @@ ms.lasthandoff: 12/22/2017
   
 6.  フォース計算ステップの計算シェーダー ソース コードを調べます。 このシナリオでは、エラーの原因がここにあることを確認します。  
   
-     ![デバッグ、ForceCS &#95;です。単純な計算シェーダーします。] (media/gfx_diag_demo_compute_shader_fluid_step_9.png "gfx_diag_demo_compute_shader_fluid_step_9")  
+     ![デバッグ、ForceCS&#95;単純計算シェーダーします。] (media/gfx_diag_demo_compute_shader_fluid_step_9.png "gfx_diag_demo_compute_shader_fluid_step_9")  
   
  エラーが発生した場所を確認した後、デバッグを停止して、計算シェーダー ソース コードを変更すると、相互作用するパーティクル間の距離を正しく計算できます。 このシナリオでは、行 `float2 diff = N_position + P_position;` を `float2 diff = N_position - P_position;` に変更するだけです。  
   
- ![修正された計算 &#45; シェーダー コード。] (media/gfx_diag_demo_compute_shader_fluid_step_10.png "gfx_diag_demo_compute_shader_fluid_step_10")  
+ ![修正された計算&#45;シェーダー コード。] (media/gfx_diag_demo_compute_shader_fluid_step_10.png "gfx_diag_demo_compute_shader_fluid_step_10")  
   
  このシナリオでは、計算シェーダーが実行時にコンパイルされるため、変更を加えた後、アプリを再起動するだけで、変更がシミュレーションに及ぼす影響を確認できます。 アプリをリビルドする必要はありません。 アプリを実行すると、シミュレーションが正しく動作していることが確認できます。  
   

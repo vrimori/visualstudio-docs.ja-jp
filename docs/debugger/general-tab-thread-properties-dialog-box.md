@@ -1,26 +1,24 @@
 ---
-title: "スレッドのプロパティ ダイアログ ボックスの 全般 タブ |Microsoft ドキュメント"
-ms.custom: 
+title: スレッドのプロパティ ダイアログ ボックスの 全般 タブ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
+ms.technology:
+- vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - threading [Visual Studio], thread properties
 - thread properties
 ms.assetid: 46b6c668-6786-456e-97dc-337bcac0d812
-caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d8d53c373c58e31f2a2719df8afa6dd0da9cd3c6
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 11163da022c14eccd0ed886155bba5228cc01658
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="general-tab-thread-properties-dialog-box"></a>[全般] タブ ([スレッド プロパティ] ダイアログ ボックス)
 特定のスレッドの詳細を確認するには、このダイアログ ボックスを使用します。 このダイアログ ボックスを表示するには、フォーカスを移動、[スレッド ビュー](../debugger/threads-view.md)ウィンドウ、または開く[メッセージ ビュー](../debugger/messages-view.md)メッセージに展開します。 ツリーで、スレッドの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  

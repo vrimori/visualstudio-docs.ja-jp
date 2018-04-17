@@ -1,27 +1,23 @@
 ---
-title: "IDebugProgram3::ExecuteOnThread |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugProgram3::ExecuteOnThread |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IDebugProgram3::ExecuteOnThread
 ms.assetid: 2f5211e3-7a3f-47bf-9595-dfc8b4895d0d
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 649b16c1b57b2f66772c2117b776e6b79ad862be
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8aff643014da16ed9644573a77cb8444836d713d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugprogram3executeonthread"></a>IDebugProgram3::ExecuteOnThread
 デバッガーのプログラムを実行します。 どのスレッドで、ユーザーが表示プログラムを実行するときにデバッガーの情報を提供し、スレッドが返されます。  
@@ -57,6 +53,6 @@ int ExecuteOnThread(
   
  渡されるスレッド`ExecuteOnThread`をキャンセルする手順を決定する場合に便利です。 実行している実行スレッドがわからない場合は、すべてのステップをキャンセルします。 スレッドの知識さえあれば、のみ、アクティブなスレッドでの手順をキャンセルする必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [実行します。](../../../extensibility/debugger/reference/idebugprogram2-execute.md)   
  [IDebugProgram3](../../../extensibility/debugger/reference/idebugprogram3.md)

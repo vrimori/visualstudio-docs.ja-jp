@@ -1,26 +1,26 @@
 ---
-title: "Visual Studio で Python 環境とインタープリターを管理する方法 | Microsoft Docs"
-description: "Visual Studio の [Python 環境] ウィンドウを使って、グローバル環境と仮想環境を管理する方法や、カスタム環境の設定方法、Python インタープリターのインストール、パッケージのインストール、検索パスの設定、Visual Studio プロジェクトの環境の管理について説明します。"
-ms.custom: 
-ms.date: 03/05/2018
-ms.reviewer: 
-ms.suite: 
+title: Python 環境とインタープリターを管理する方法 | Microsoft Docs
+description: Visual Studio の [Python 環境] ウィンドウを使って、グローバル環境と仮想環境を管理する方法や、カスタム環境の設定方法、Python インタープリターのインストール、パッケージのインストール、検索パスの設定、Visual Studio プロジェクトの環境の管理について説明します。
+ms.custom: ''
+ms.date: 03/21/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 ms.devlang: python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 558ce58461b27bc9a86906278602d00d96377c63
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: a1bf9c9c016a71c816ed8cc40b675c520e9c9397
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="managing-python-environments-in-visual-studio"></a>Visual Studio での Python 環境の管理
 
@@ -35,6 +35,8 @@ Windows の Visual Studio では、この記事で説明する [[Python 環境]]
 
 **[ファイル] > [開く] > [フォルダー]** コマンドを使用してフォルダーとしてのみ開かれた Python コードの環境は管理できないことにも注意してください。 Visual Studio の環境機能を使用するには、[既存のコードから Python プロジェクトを作成](quickstart-01-python-in-visual-studio-project-from-existing-code.md)します。
 
+環境にパッケージをインストールする場合は、[[パッケージ] タブ](python-environments-window-tab-reference.md#packages-tab)を参照してください。
+
 ## <a name="types-of-environments"></a>環境の種類
 
 ### <a name="global-environments"></a>グローバル環境
@@ -47,7 +49,7 @@ Windows の Visual Studio では、この記事で説明する [[Python 環境]]
 
 グローバル環境にインストールされたパッケージは、グローバル環境を使うすべてのプロジェクトで使用できるため、2 つのプロジェクトで、互換性のないパッケージや同じパッケージの異なるバージョンが必要な場合、競合が発生する可能性があります。 仮想環境では、このような競合を避けるために、グローバル環境のインタープリターと標準ライブラリを使用しながら、分離フォルダーで独自のパッケージ ストアを保持します。
 
-Visual Studio では、特定のプロジェクト用の仮想環境を作成可能で、これはプロジェクトのサブフォルダーに格納されます (「[仮想環境の作成](selecting-a-python-environment-for-a-project.md#creating-a-virtual-environment)」を参照)。 プロジェクト ファイルもこの仮想環境を識別します。 また、Visual Studio では、その仮想環境にインストールしたすべてのパッケージがプロジェクトの `requirements.txt` ファイルに記録されます。 プロジェクトを共有していて、他の開発者が各自のコンピューターでプロジェクトを開く場合、Visual Studio では、仮想環境を再作成するためのオプションを使用できます。
+Visual Studio では、特定のプロジェクト用の仮想環境を作成可能で、これはプロジェクトのサブフォルダーに格納されます。 Visual Studio には、仮想環境から `requirements.txt` ファイルを生成し、他のコンピューターで環境を簡単に再作成するためのコマンドが用意されています。 詳細については、[仮想環境の使用](selecting-a-python-environment-for-a-project.md#using-virtual-environments)に関するページをご覧ください。
 
 ### <a name="conda-environments"></a>conda 環境
 
@@ -87,7 +89,7 @@ Visual Studio が認識した環境が **[Python 環境]** ウィンドウに表
 
 ### <a name="what-if-no-environments-appear"></a>環境が表示されない場合
 
-環境が表示されない場合は、Visual Studio が標準的な場所で Python インストールを検出できなかったことを意味します。 たとえば、Visual Studio 2017 をインストールしたが、Python ワークロードのインストーラー オプションですべてのインタープリター オプションを選択解除している場合があります。 同様に、Visual Studio 2015 以前をインストールしているが、インタープリターを手動でインストールしなかった場合があります ([Python インタープリターの選択とインストール](installing-python-interpreters.md)に関する記事を参照してください)。
+環境が表示されない場合は、Visual Studio が標準的な場所で Python インストールを検出できなかったことを意味します。 たとえば、Visual Studio 2017 をインストールしたが、Python ワークロードのインストーラー オプションですべてのインタープリター オプションを選択解除している場合があります。 同様に、Visual Studio 2015 以前をインストールしているが、インタープリターを手動でインストールしなかった場合があります ([Python インタープリターのインストール](installing-python-interpreters.md)に関する記事を参照してください)。
 
 コンピューターに Python インタープリターがあることがわかっているが、Visual Studio で検出されない場合は、**[+ カスタム]** コマンドを使用して、その場所を手動で指定します。 次のセクション「[既存の環境を手動で識別する](#manually-identifying-an-existing-environment)」を参照してください。
 

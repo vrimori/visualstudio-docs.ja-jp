@@ -1,15 +1,15 @@
 ---
-title: "Visual Studio での Python の使用、手順 6、Git との連携 | Microsoft Docs"
-description: "Visual Studio で Python を使用するための基礎となるチュートリアルの手順 6 では、Visual Studio の Git 関連の機能について説明します。"
-ms.custom: 
+title: Python の使用、手順 6、Git との連携 | Microsoft Docs
+description: Visual Studio で Python を使用するための基礎となるチュートリアルの手順 6 では、Visual Studio の Git 関連の機能について説明します。
+ms.custom: mvc
 ms.date: 01/16/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
@@ -17,41 +17,51 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ef143862c56f07edc844874bbf71cd916ac9eabc
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: ec8534e7fd3121510a05e201e8bdea2e9a7fce1c
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-6-working-with-git"></a>手順 6: Git の使用
 
 **前の手順: [パッケージのインストールと Python 環境の管理](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)**
 
-Visual Studio には、ローカルの Git リポジトリおよび、GitHub や Visual Studio Team Services などのサービス上に存在するものを直接統合できます。 この統合には、リポジトリの複製、変更のコミット、分岐の管理が含まれます。
+Visual Studio には、ローカルの Git リポジトリと、GitHub や Visual Studio Team Services などのサービス上のリモート リポジトリを直接統合できます。 この統合には、リポジトリの複製、変更のコミット、分岐の管理が含まれます。
 
-この記事では、既存のプロジェクト用にローカル Git リポジトリを作成する方法について説明します。 リモート Git リポジトリからプロジェクトを作成する方法のチュートリアルについては、「[クイック スタート: Visual Studio で Python コードのリポジトリを複製する](quickstart-03-python-in-visual-studio-project-from-repository.md)」を参照してください。
+この記事では、既存のプロジェクト向けのローカルの Git リポジトリを作成することの概要について説明し、Visual Studio の Git に関連するいくつかの機能を理解できるようにします。
 
-1. [前の手順](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)のプロジェクトなどを Visual Studio で開き、ソリューションを右クリックして、**[Add Solution to Source Control]\(ソリューションをソース管理に追加\)** を選択します。 Visual Studio によってプロジェクト コードを含むローカル Git リポジトリが作成され、Git に関連するコントロールが Visual Studio のウィンドウの下部にも表示されるようになります。 コントロールには、保留中のコミット、変更、リポジトリの名前と分岐が表示されます。 コントロール上にカーソルを置き、追加情報を表します。
+1. [前の手順](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)のプロジェクトなどを Visual Studio で開き、ソリューションを右クリックして、**[Add Solution to Source Control]\(ソリューションをソース管理に追加\)** を選択します。 Visual Studio によって、プロジェクト コードを含むローカルの Git リポジトリが作成されます。
 
-  ![Visual Studio ウィンドウの Git コントロールの上にカーソルを置くと表示される追加情報](media/working-with-git-01.png)
+1. プロジェクトが Git リポジトリで管理されていることを Visual Studio が検出すると、Git に関連するコントロールが Visual Studio ウィンドウの右下に表示されます。 コントロールには、保留中のコミット、変更、リポジトリの名前と分岐が表示されます。 コントロール上にカーソルを置き、追加情報を表します。
 
-1. **[チーム エクスプローラー]** ウィンドウも表示され、リポジトリ ヘッダーを選択すると、さまざまな Git オプションが表示されます。 **[同期]** ウィンドウで次のように **[プッシュ]** 見出しを選ぶと、リモート リポジトリに公開するためのオプションが表示されます。
+    ![Visual Studio ウィンドウの Git コントロールの上にカーソルを置くと表示される追加情報](media/working-with-git-01.png)
 
-  ![ローカル リポジトリの作成後の Visual Studio のチーム エクスプローラー](media/working-with-git-02.png)
+1. 新しいリポジトリを作成するか Git コントロールのいずれかを選択すると、Visual Studio によって**[チーム エクスプローラー]** ウィンドウが開きます  (このウィンドウは、**[表示] > [チーム エクスプローラー]** メニュー コマンドを使用していつでも開くことができます)。ウィンドウには 3 つのメイン ウィンドウがあります。ウィンドウを切り替えるには、**チーム エクスプローラー**のヘッダーのドロップダウンを使用します。 発行操作を行う **[同期]** ウィンドウは、[プッシュ] コントロール (上矢印アイコン) を選択したときにも表示されます。
 
-1. **[変更]** を選択し、コミットされていない変更を確認し、必要に応じてそれらをコミットします。
+    ![ローカル リポジトリの作成後の Visual Studio のチーム エクスプローラー](media/working-with-git-02.png)
 
-  ![コミットされていない変更を示す Visual Studio のチーム エクスプローラー](media/working-with-git-03.png)
+1. **[変更]** (または鉛筆アイコンの Git コントロール) を選択し、コミットされていない変更を確認し、必要に応じてそれらをコミットします。
 
-1. **[分岐]** を選択し、分岐を調査して、マージとリベース操作を実行します。
+    ![コミットされていない変更を示す Visual Studio のチーム エクスプローラー](media/working-with-git-03.png)
 
-  ![分岐を示す Visual Studio のチーム エクスプローラー](media/working-with-git-04.png)
+    **[変更]** の一覧でファイルをダブルクリックして、そのファイルの差分ビューを開きます。
 
-1. ローカル リポジトリを使用する場合、変更をコミットすると、リポジトリでも直接変更されます。 リモート リポジトリに接続している場合、見出しを選び、**[同期]** を選んで **[同期]** セクションに切り替えて、そこに表示されるコマンドを使います。
+    ![ファイルに対する変更の差分ビュー](media/working-with-git-05.png)
+
+1. **[分岐]** (または分岐名の Git コントロール) を選択し、分岐を調査して、マージとリベース操作を実行します。
+
+    ![分岐を示す Visual Studio のチーム エクスプローラー](media/working-with-git-04.png)
+
+1. リポジトリ名の Git コントロール (前の図の "CosineWave") を選択します。**チーム エクスプローラー**に、別のリポジトリに完全にすばやく切り替えることができる**接続**インターフェイスが表示されます。
+
+1. ローカル リポジトリを使用する場合、変更をコミットすると、リポジトリでも直接変更されます。 リモート リポジトリに接続している場合は、**チーム エクスプローラー**でドロップダウン ヘッダーを選択し、**[同期]** を選択して **[同期]** セクションに切り替えて、そこに表示されるプル コマンドとフェッチ コマンドを使用します。
 
 ## <a name="going-deeper"></a>詳しい説明
 
-Git の操作の詳細なチュートリアルについては、「[Share your code with Visual Studio 2017 and VSTS Git](/vsts/git/share-your-code-in-git-vs-2017)」 (コードを Visual Studio 2017 および VSTS Git で共有する) を参照してください。
+リモート Git リポジトリからプロジェクトを作成する方法のチュートリアルについては、「[クイック スタート: Visual Studio で Python コードのリポジトリを複製する](quickstart-03-python-in-visual-studio-project-from-repository.md)」を参照してください。
+
+マージの競合、プル要求があるコードのレビュー、リベース、分岐間のチェリー ピック変更などの包括的なチュートリアルについては、[Git と VSTS の使用開始](/vsts/git/gitquickstart?toc=/visualstudio/version-control/toc.json&bc=/vsts/git/breadcrumb/vc/toc.json&view=vsts&tabs=visual-studio)に関する記事を参照してください。
 
 ## <a name="tutorial-review"></a>チュートリアルのレビュー
 
@@ -64,7 +74,7 @@ Git の操作の詳細なチュートリアルについては、「[Share your c
 - パッケージのインストールと、Python 環境の管理。
 - Git リポジトリでのコードの操作。
 
-以下では、概念および使い方ガイドをご確認ください。
+この後は、概念と使い方に関するガイドをご確認ください。以下のような記事があります。
 
 - [Python 向け C++ 拡張機能の作成](working-with-c-cpp-python-in-visual-studio.md)
 - [Azure App Service への発行](publishing-python-web-applications-to-azure-from-visual-studio.md)

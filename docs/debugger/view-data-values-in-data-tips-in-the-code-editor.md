@@ -1,12 +1,10 @@
 ---
-title: "データヒントのコード エディターでのデータ値の表示 |Microsoft ドキュメント"
-ms.custom: 
+title: データヒントのコード エディターでのデータ値の表示 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/14/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], DataTips
 - DataTips tool
 ms.assetid: ffa7bd18-439b-4685-a9b3-c7884b5de41f
-caps.latest.revision: "38"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 178bd1768474eaaaf760e2ef4feecfe0e1519bee
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 0c098e4b4ae94c5145a193e1903aa04a0eb757b4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-data-values-in-datatips-in-the-code-editor"></a>コード エディターでデータヒントのデータ値の表示
 DataTips は、デバッグ中にプログラムの変数に関する情報を確認するときに便利です。 データヒントは、中断モードのときにのみ機能します。また、実行の現在のスコープ内にある変数に対してだけ使用できます。
@@ -75,7 +73,7 @@ DataTips は、デバッグ中にプログラムの変数に関する情報を�
   
 #### <a name="to-expand-a-variable-to-see-its-elements"></a>変数を展開して要素を表示するには  
   
--   データヒントで、経由でマウス ポインターを置き、  **+** 変数名の前に来る記号。  
+-   データヒントで、経由でマウス ポインターを置き、 **+**変数名の前に来る記号。  
   
     変数が展開され、ツリー形式で要素が表示されます。
 
@@ -139,7 +137,7 @@ DataTips は、デバッグ中にプログラムの変数に関する情報を�
   
 2.  開き、をクリックする XML ファイルを検索 ダイアログ ボックスを使用して**OK**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーでのデータの表示](../debugger/viewing-data-in-the-debugger.md)   
  [ウォッチと [クイック ウォッチ] ウィンドウ](../debugger/watch-and-quickwatch-windows.md)   
  [カスタム ビジュアライザーを作成する](../debugger/create-custom-visualizers-of-data.md)   

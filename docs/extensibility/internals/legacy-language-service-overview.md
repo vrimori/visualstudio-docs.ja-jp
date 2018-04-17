@@ -1,27 +1,23 @@
 ---
-title: "レガシ言語サービスの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: レガシ言語サービスの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - language services [managed package framework], about language services
 ms.assetid: bb44e27b-d228-463c-b2cf-cd5c24c7c1b5
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 05805e5cf4b21f4c7d233cab7dd8421ee76f626f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e8641a3e009cb5a7b61d8334b6dcb2440d186f4f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="legacy-language-service-overview"></a>レガシ言語サービスの概要
 言語サービスが特定の実装できるエディターのサポートを提供[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]機能します。 Managed Package Framework (MPF) 言語のサービス クラスは、頻繁に使用される機能とその他の機能の部分的なサポートを完全にサポートを提供します。  
@@ -95,6 +91,6 @@ ms.lasthandoff: 12/22/2017
   
 -   [従来の言語サービスでのブレークポイントの検証](../../extensibility/internals/validating-breakpoints-in-a-legacy-language-service.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レガシ言語サービスを実装します。](../../extensibility/internals/implementing-a-legacy-language-service1.md)   
  [従来の言語サービスの機能拡張](../../extensibility/internals/legacy-language-service-extensibility.md)

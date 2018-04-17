@@ -1,23 +1,24 @@
 ---
-title: "Visual Studio のロックを解除する方法 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio のロックを解除する方法 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/20/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-acquisition
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ffb580a1-8b5d-48f5-b811-87f8036f50ea
-caps.latest.revision: "8"
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 87d937c456b875afa5234b61b57edb21ba32baf6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: TerryGLee
+ms.author: tglee
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 8e08831347c09d80427d1fba38c926f7d1b227f4
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="how-to-unlock-visual-studio"></a>Visual Studio のロックを解除する方法
 
@@ -74,4 +75,3 @@ Microsoft アカウントか、職場または学校のアカウントに関連�
 ## <a name="see-also"></a>関連項目
 
 * [Visual Studio へのサインイン](../ide/signing-in-to-visual-studio.md)
- 

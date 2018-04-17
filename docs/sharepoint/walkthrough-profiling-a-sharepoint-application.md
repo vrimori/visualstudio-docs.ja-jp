@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: SharePoint アプリケーションのプロファイリング |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: SharePoint アプリケーションのプロファイリング |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - profiling [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 91952e2f10f025568d356149f63bff63e0c0b1fc
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: f6eb4e9f78a9defaafb774551e301d6101cc40d0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-profiling-a-sharepoint-application"></a>チュートリアル: SharePoint アプリケーションのプロファイリング
   このチュートリアルでは、Visual Studio のプロファイル ツールを使用し、SharePoint アプリケーションのパフォーマンスを最適化する方法について説明します。 アプリケーション例は SharePoint フィーチャー イベント レシーバーで、これにはフィーチャー イベント レシーバーのパフォーマンスを低下させるアイドル ループが含まれています。 Visual Studio プロファイラーでは、見つけてとも呼ばれる、プロジェクトの最も負荷の高い (最も遅い) 部分を排除することができます、*ホット パス*です。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   サポート対象エディションの Microsoft Windows および SharePoint。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)][SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)です。  
+-   サポート対象エディションの Microsoft Windows および SharePoint。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)です。  
   
 -   [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]。  
   
@@ -70,7 +69,7 @@ ms.lasthandoff: 01/10/2018
   
 7.  選択、**完了**ボタンをクリックします。 プロジェクトが表示されます**ソリューション エクスプ ローラー**です。  
   
-##  <a name="BKMK_AddFtrandFtrEvntReceiver"></a>機能とフィーチャー イベント レシーバーの追加  
+##  <a name="BKMK_AddFtrandFtrEvntReceiver"></a> 機能とフィーチャー イベント レシーバーの追加  
  次に、フィーチャーを、そのイベント レシーバーと共にプロジェクトに追加します。 このイベント レシーバーには、プロファイル対象のコードが含まれます。  
   
 #### <a name="to-add-a-feature-and-feature-event-receiver"></a>機能とフィーチャー イベント レシーバーを追加するには  
@@ -191,7 +190,7 @@ ms.lasthandoff: 01/10/2018
   
 9. プロジェクトを保存します。  
   
-##  <a name="BKMK_ConfigSharePointApp"></a>構成および SharePoint アプリケーションを展開します。  
+##  <a name="BKMK_ConfigSharePointApp"></a> 構成および SharePoint アプリケーションを展開します。  
  SharePoint プロジェクトの準備ができたので、それを構成し、SharePoint サーバーに配置します。  
   
 #### <a name="to-configure-and-deploy-the-sharepoint-application"></a>SharePoint アプリケーションを構成し、配置するには  
@@ -214,7 +213,7 @@ ms.lasthandoff: 01/10/2018
   
      ウィザードがサーバーでアプリケーションのプロファイリングを有効に、表示、**パフォーマンス エクスプ ローラー**ウィンドウ、およびビルド、配置、および SharePoint アプリケーションを実行します。  
   
-##  <a name="BKMK_RunSPApp"></a>SharePoint アプリケーションの実行  
+##  <a name="BKMK_RunSPApp"></a> SharePoint アプリケーションの実行  
  `FeatureActivation` イベント コードの実行をトリガーし、SharePoint 内の機能をアクティブ化します。  
   
 #### <a name="to-run-the-sharepoint-application"></a>SharePoint アプリケーションを実行するには  
@@ -235,7 +234,7 @@ ms.lasthandoff: 01/10/2018
   
      SharePoint を閉じると、プロファイラーによって作成およびサンプル プロファイル レポートを表示され、.vsp ファイルとして保存、 **ProfileTest**プロジェクトのフォルダーです。  
   
-##  <a name="BKMK_ViewResults"></a>表示とプロファイルの結果の解釈  
+##  <a name="BKMK_ViewResults"></a> 表示とプロファイルの結果の解釈  
  SharePoint アプリケーションを実行してプロファイルを行ったので、次はテスト結果を表示します。  
   
 #### <a name="to-view-and-interpret-the-profiling-results"></a>プロファイル結果を表示し、解釈するには  
@@ -275,7 +274,7 @@ ms.lasthandoff: 01/10/2018
   
      これで、アイドル ループへの呼び出しが削除されたため、機能のアクティブ化がより高速になりました。 このことは、サンプル プロファイル レポートに反映されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パフォーマンス エクスプローラー](/visualstudio/profiling/performance-explorer)   
  [パフォーマンス セッションの概要](/visualstudio/profiling/performance-session-overview)   
  [パフォーマンス プロファイリングのビギナーズ ガイド](/visualstudio/profiling/beginners-guide-to-performance-profiling)   

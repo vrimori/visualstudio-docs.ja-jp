@@ -1,23 +1,21 @@
 ---
-title: "チュートリアル: XML エディター機能の使用 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: XML エディター機能の使用 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: ea8dc357-2e66-455a-aec2-7ccaccfc9adf
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: f7460071cc45c8e4994ad0a72d5f26dcce40c853
-ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: bb7fee9546ecebfed2f5f95fb430f8d2026175c8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-using-xml-editor-features"></a>チュートリアル: XML エディター機能の使用
 このチュートリアルの手順では、新しい XML ドキュメントを作成する方法を示します。 ここでは、XML の作成に役立つ XML エディターの機能もいくつか使用します。  
@@ -37,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   
      **XSD スキーマ** ダイアログ ボックスが表示されます。  
   
-4.  **[追加]**をクリックします。  
+4.  **[追加]** をクリックします。  
   
      **XSD スキーマを開く** ダイアログ ボックスが表示されます。  
   
@@ -130,5 +128,5 @@ ms.lasthandoff: 01/08/2018
 </xs:schema>  
 ```
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML エディター](../xml-tools/xml-editor.md)

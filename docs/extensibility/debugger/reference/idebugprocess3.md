@@ -1,29 +1,25 @@
 ---
-title: "IDebugProcess3 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugProcess3 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugProcess3
 helpviewer_keywords:
 - IDebugProcess3 interface
 ms.assetid: 7bd6b952-cf34-4e66-b8f6-d472dac3748f
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 89fc02ecec75d229b4cb743b9d1f4b2b0857ddc2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 21c4dfffe02d2550bccf5b23f264ab8283524aa2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugprocess3"></a>IDebugProcess3
 このインターフェイスは、実行中のプロセスとそのプログラムを表します。 このインターフェイスがいくつかのメソッドを代わりに存在する、 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)インターフェイスです。 プロセス内のすべてのプログラムに制御を提供します。  
@@ -60,14 +56,14 @@ IDebugProcess3 : IDebugProcess2
 |[GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md)|このプロセスの ENC の状態を取得します。<br /><br /> カスタム ポートのサプライヤーは、このメソッドを実装しない (常に返すか`E_NOTIMPL`)。|  
 |[GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md)|使用可能なデバッグ エンジンの一意の識別子の配列を取得します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: Msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

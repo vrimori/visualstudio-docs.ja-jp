@@ -1,26 +1,24 @@
 ---
-title: "要素のボタンをクリックして |Microsoft ドキュメント"
-ms.custom: 
+title: 要素のボタンをクリックして |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Buttons element (VSCT XML schema)
 - VSCT XML schema elements, Buttons
 ms.assetid: 96dccf51-2b00-4700-9d28-924b34c21ecd
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 5af5dce3edf1ac2910af5f8d593ed8e316cff721
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 78b5abd8762669db4e225a68817f2c9823a49267
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="button-element"></a>Button 要素
 ユーザーが対話する要素を定義します。 さまざまな種類のボタンを指定できます: ボタン、メニュー ボタン、および SplitDropDown です。  
@@ -80,5 +78,5 @@ ms.lasthandoff: 12/22/2017
 </Button>
  ```
  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

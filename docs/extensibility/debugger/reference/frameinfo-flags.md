@@ -1,29 +1,25 @@
 ---
-title: "FRAMEINFO_FLAGS |Microsoft ドキュメント"
-ms.custom: 
+title: FRAMEINFO_FLAGS |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - FRAMEINFO_FLAGS
 helpviewer_keywords:
 - FRAMEINFO_FLAGS enumeration
 ms.assetid: 41578062-8455-412a-9d8b-1e1e9dc8d52e
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9efeaee3ab2a2f7762c1ae3b95ae7548091dfe0b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ca63b23e9f87e807b3eec0e3ad35ea5414ac8dc6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="frameinfoflags"></a>FRAMEINFO_FLAGS
 スタック フレーム オブジェクトは取得する情報を指定します。  
@@ -202,14 +198,14 @@ public enum enum_FRAMEINFO_FLAGS {
   
  これらのフラグはのどのフィールドを示すためにも使用、 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)構造が返されるときに構造体が使用される、有効です。 これらの値は、ビットごとと組み合わせること`OR`です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)   
  [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)   

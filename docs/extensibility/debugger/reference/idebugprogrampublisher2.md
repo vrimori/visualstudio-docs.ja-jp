@@ -1,29 +1,25 @@
 ---
-title: "IDebugProgramPublisher2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugProgramPublisher2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugProgramPublisher2
 helpviewer_keywords:
 - IDebugProgramPublisher2 interface
 ms.assetid: b1d17f63-7146-4076-a588-034cfc6858b9
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 20f5fe710cc05425263245c9a78ff804aca2ac20
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 3f927a3215a415745c2e9004573810101c229ab5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugprogrampublisher2"></a>IDebugProgramPublisher2
 このインターフェイスは、デバッグ エンジン (DE) またはデバッグするためのプログラムを登録するカスタム ポート納入業者を使用します。  
@@ -54,7 +50,7 @@ IDebugProgramPublisher2 : IUnknown
 ## <a name="remarks"></a>コメント  
  このインターフェイスを使用可能プログラムとプログラムのノード (つまり、「パブリッシュ」して) DEs およびセッション デバッグ マネージャー (SDM) で使用します。 公開されたプログラムとプログラムのノードにアクセスするには、使用、 [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)インターフェイスです。 これは、Visual Studio は、プログラムをデバッグすることを認識できる唯一の方法です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
@@ -95,6 +91,6 @@ void CProgram::Start(IDebugEngine2 * pEngine)
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)

@@ -1,30 +1,26 @@
 ---
-title: "はじめに (Debug Interface Access SDK) |Microsoft ドキュメント"
-ms.custom: 
+title: はじめに (Debug Interface Access SDK) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - .dbg files
 - DBG files
 ms.assetid: cb3d040a-2846-40d7-bdbc-8a5beb5dd2f6
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d37843917be3a2668e9a2887f046eaee00600dc8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d0c3c6df3fc92370d939771a7e94334db7f2cfc4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-debug-interface-access-sdk"></a>はじめに (Debug Interface Access SDK)
 デバッグ インターフェイス アクセス (DIA) SDK では、説明のドキュメントと DIA API を使用する方法を示すサンプルを提供します。 .Pdb ファイルと .dbg ファイルを開き、そのコンテンツのシンボル、値、属性、アドレス、およびその他のデバッグ情報を検索するカスタム アプリケーションを開発するのに DIA SDK のインターフェイスとメソッドを使用します。 この SDK では、C++ アプリケーションで見られる記号に関連するプロパティの参照テーブルも提供します。  
@@ -54,5 +50,5 @@ ms.lasthandoff: 12/22/2017
  [.Pdb ファイルの照会](../../debugger/debug-interface-access/querying-the-dot-pdb-file.md)  
  DIA API を使用して、.pdb ファイルを照会する方法の手順を説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Debug Interface Access SDK](../../debugger/debug-interface-access/debug-interface-access-sdk.md)

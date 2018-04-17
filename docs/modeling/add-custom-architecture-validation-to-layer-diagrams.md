@@ -1,23 +1,21 @@
 ---
-title: "依存関係のダイアグラムにカスタム アーキテクチャ検証を追加する |Microsoft ドキュメント"
-ms.custom: 
+title: 依存関係のダイアグラムにカスタム アーキテクチャ検証を追加する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, adding custom validation
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 7679398e5acfc2f23d51ea7f943e35d0d82e500e
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 4ede78d8866a33e69f9859ff3616d59e8d807ea4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>依存関係のダイアグラムにカスタム アーキテクチャ検証を追加します。
 Visual Studio で、ユーザーは、ソース コードが依存関係ダイアグラムへの依存関係に準拠していることを確認できるようにレイヤー モデルに対するプロジェクト内のソース コードを検証できます。 標準の検証アルゴリズムがありますが、独自の検証拡張機能を定義できます。  
@@ -32,7 +30,7 @@ Visual Studio で、ユーザーは、ソース コードが依存関係ダイ�
 > [!WARNING]
 >  検証プロジェクトを作成したら、このトピックの最後にある [コード例](#example) をコピーし、各自のニーズに合わせて編集してください。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  「 [要件](../modeling/extend-layer-diagrams.md#prereqs)」を参照してください。  
   
 ## <a name="defining-a-layer-validator-in-a-new-vsix"></a>新しい VSIX でレイヤー検証コントロールを定義する  
@@ -277,5 +275,5 @@ namespace Validator3
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [依存関係図の拡張](../modeling/extend-layer-diagrams.md)

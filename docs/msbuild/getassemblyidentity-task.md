@@ -1,11 +1,11 @@
 ---
-title: "GetAssemblyIdentity タスク | Microsoft Docs"
-ms.custom: 
+title: GetAssemblyIdentity タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#GetAssemblyIdentity
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - MSBuild, GetAssemblyIdentity task
 - GetAssemblyIdentity task [MSBuild]
 ms.assetid: a977e072-37ad-4941-84a6-32a4483be55d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e2316fcc11915b707c4634cc8ef109e840e3950
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
-ms.translationtype: HT
+ms.openlocfilehash: 995f77fac8e62e963207408a1e127a557906d10e
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="getassemblyidentity-task"></a>GetAssemblyIdentity タスク
 指定されたファイルからアセンブリ ID を取得し、その ID を出力します。  
@@ -55,18 +55,16 @@ ms.lasthandoff: 02/09/2018
     <ItemGroup>  
         <MyAssemblies Include="File1.dll;File2.dll" />  
     </ItemGroup>  
-  
-    <Target Name="RetrieveIdentities>  
+    <Target Name="RetrieveIdentities">  
         <GetAssemblyIdentity  
             AssemblyFiles="@(MyAssemblies)"  
             <Output  
                 TaskParameter="Assemblies"  
                 ItemName="MyAssemblyIdentities"  
     </Target>  
-  
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)

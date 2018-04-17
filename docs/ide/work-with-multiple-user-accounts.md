@@ -1,22 +1,22 @@
 ---
-title: "複数のユーザー アカウントを使って作業する | Microsoft Docs"
-ms.custom: 
+title: 複数のユーザー アカウントを使って作業する | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-author: gewarren
-ms.author: gewarren
-manager: ghogen
+ms.reviewer: ''
+ms.suite: ''
+ms.technology: vs-acquisition
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+author: TerryGLee
+ms.author: tglee
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: def8b9347ec5c74cf369972602416c992dff39c7
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 73b3ae67cc4396a7fc9041cb5074c84ffa2aa73a
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="work-with-multiple-user-accounts"></a>複数のユーザー アカウントを使って作業する
 

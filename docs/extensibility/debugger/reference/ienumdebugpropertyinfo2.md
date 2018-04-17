@@ -1,29 +1,25 @@
 ---
-title: "IEnumDebugPropertyInfo2 |Microsoft ドキュメント"
-ms.custom: 
+title: IEnumDebugPropertyInfo2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IEnumDebugPropertyInfo2
 helpviewer_keywords:
 - IEnumDebugPropertyInfo2
 ms.assetid: fdea8262-40b8-473e-88ba-639e4c4648e6
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 578418c1afa831120cf77fd5a1da48d84126ec8f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2cd2e15aa02004f6fe22f08894a7f3eec4c1ea22
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ienumdebugpropertyinfo2"></a>IEnumDebugPropertyInfo2
 このインターフェイスの列挙[DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)構造体。  
@@ -54,14 +50,14 @@ IEnumDebugPropertyInfo2 : IUnknown
 ## <a name="remarks"></a>コメント  
  一般に、プロパティは、関連付けられているプロパティ オブジェクトまたはスタック フレームに適したその他の情報だけでなく、名前、値、アドレス、および種類を含めることができる情報の階層です。 参照してください[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)詳細についてはします。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   

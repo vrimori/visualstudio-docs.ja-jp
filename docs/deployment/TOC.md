@@ -1,7 +1,8 @@
 # [配置に関するドキュメント](index.md)
 # 概要
-## [配置の概要](deploying-applications-services-and-components.md)
+## [配置の概要](deploying-applications-services-and-components-resources.md)
 # クイックスタート
+## [配置でのはじめに](deploying-applications-services-and-components.md)
 ## [ローカル フォルダーに配置する](quickstart-deploy-to-local-folder.md)
 ## [Web サイトに配置する](quickstart-deploy-to-a-web-site.md)
 ## [Azure に配置する](quickstart-deploy-to-azure.md)
@@ -131,6 +132,4 @@
 #### [<Signature> 要素 (ClickOnce 配置)](signature-element-clickonce-deployment.md)
 #### [<customErrorReporting> 要素 (ClickOnce 配置)](customerrorreporting-element-clickonce-deployment.md)
 ### [ClickOnce アンマネージ API リファレンス](clickonce-unmanaged-api-reference.md)
-# リソース
-## [アプリケーション、サービス、およびコンポーネントの配置](deploying-applications-services-and-components-resources.md)
 

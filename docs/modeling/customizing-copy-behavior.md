@@ -1,21 +1,19 @@
 ---
-title: "コピーの動作をカスタマイズする |Microsoft ドキュメント"
-ms.custom: 
+title: コピーの動作をカスタマイズする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: f8eba726c35b402e93bd1fd1b50048b8dce4bf2b
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: c46291a2827a673eaf597a8bb9fa738c3ab79b0b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customizing-copy-behavior"></a>コピー動作のカスタマイズ
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK を使用して作成したドメイン固有言語 (DSL) で、ユーザーが要素のコピーと貼り付けを実行する際の動作を変更できます。  
@@ -54,7 +52,7 @@ ms.lasthandoff: 02/09/2018
  **迅速に重複する要素をコピーして貼り付けします。** 通常、コピーしたばかりの項目はまだ選択されており、そこに同じ種類の要素を貼り付けることはできません。  
  ドメイン クラスに要素マージ ディレクティブを追加し、マージを親クラスに転送するように設定します。 これはドラッグ操作に同じ効果を持ちます。 詳細については、次を参照してください。[をカスタマイズする要素の作成および移動](../modeling/customizing-element-creation-and-movement.md)です。  
   
- \- または  
+ \- または -  
   
  `ClipboardCommandSet.ProcessOnPasteCommand()` をオーバーライドすることにより、要素を貼り付ける前に図を選択します。 DslPackage プロジェクト内のカスタム ファイルに次のコードを追加します。  
   
@@ -79,7 +77,7 @@ partial class MyDslClipboardCommandSet
  **ユーザーが選択されている対象に貼り付ける場合は、その他のリンクを作成します。** たとえば、要素にコメント ボックスが貼り付けられると、それらの間にリンクが作成されます。  
  ターゲット ドメイン クラスに要素マージ ディレクティブを追加し、リンクを追加することでマージを処理するように設定します。 これはドラッグ操作に同じ効果を持ちます。 詳細については、次を参照してください。[をカスタマイズする要素の作成および移動](../modeling/customizing-element-creation-and-movement.md)です。  
   
- \- または  
+ \- または -  
   
  `ClipboardCommandSet.ProcessOnPasteCommand()` をオーバーライドし、基本のメソッドを呼び出した後で、追加のリンクを作成します。  
   
@@ -216,7 +214,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
  **ユーザーがドラッグ アンド ドロップの要素をできるようにします。**  
  参照してください[する方法: ドラッグ アンド ドロップのハンドラーを追加](../modeling/how-to-add-a-drag-and-drop-handler.md)です。  
   
-##  <a name="customizeLinks"></a>リンクのコピー動作をカスタマイズします。  
+##  <a name="customizeLinks"></a> リンクのコピー動作をカスタマイズします。  
  ユーザーが要素をコピーするときの標準動作は埋め込まれたすべての要素もコピーされることです。 このコピー標準動作は変更できます。 DSL 定義でロールを選択、およびプロパティ ウィンドウのセット内のリレーションシップの一方の側で、**伝達コピー**値。  
   
  ![ドメインの役割のコピー プロパティに反映させる](../modeling/media/dslpropagatescopy.png "DslPropagatesCopy")  

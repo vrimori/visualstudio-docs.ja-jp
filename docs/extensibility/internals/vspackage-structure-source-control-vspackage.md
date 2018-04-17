@@ -1,26 +1,24 @@
 ---
-title: "VSPackage の構造 (ソース コントロール VSPackage) |Microsoft ドキュメント"
-ms.custom: 
+title: VSPackage の構造 (ソース コントロール VSPackage) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSPackages, structure
 - source control packages, VSPackage overview
 ms.assetid: 92722be7-b397-48c3-a7a7-0b931a341961
-caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 168aa0f7b93d20afaa30924dc17f05e0cac465bb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 13b811b504259bf10440419b3cb4029a4c239c5e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vspackage-structure-source-control-vspackage"></a>VSPackage の構造 (ソース コントロール VSPackage)
 ソース コントロールのパッケージの SDK を提供する VSPackage を作成するためのガイドラインと自分のソース管理機能を統合するソース コントロールの実行者を許可する、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]環境。 VSPackage は、COM コンポーネントによって、要求時に読み込まれた通常、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) は、そのレジストリ エントリで、パッケージによって提供されているサービスに基づいています。 すべての VSPackage を実装する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>です。 VSPackage によって提供されるサービスを通常使用する、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE proffers、独自のいくつかのサービスとします。  
@@ -76,6 +74,6 @@ ms.lasthandoff: 12/22/2017
   
  ソース管理 VSPackage に考慮する必要がありますのあるインターフェイスの一覧については、次を参照してください。[関連サービスとインターフェイス](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デザイン要素](../../extensibility/internals/source-control-vspackage-design-elements.md)   
  [関連するサービスとインターフェイス](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)

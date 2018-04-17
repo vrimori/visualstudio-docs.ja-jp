@@ -1,29 +1,25 @@
 ---
-title: "コード分析ポリシー エラー |Microsoft ドキュメント"
-ms.custom: 
+title: コード分析ポリシー エラー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.policyfailures
 helpviewer_keywords:
 - policy errors, code analysis
 ms.assetid: d1f221cd-68c0-4277-9397-b76ad0dbae77
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 268940f39d3d74e7dd701f9c458d7dd08ff6c1f7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8f9c46dae012a35dcb616366682aeffd584da70a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="code-analysis-policy-errors"></a>コード分析ポリシー エラー
 以下のエラーは、チェックインにおいてコード分析ポリシーに適合しない場合に発生します。  
@@ -78,5 +74,5 @@ ms.lasthandoff: 12/22/2017
   
  このエラーは、アンマネージ プロジェクトで発生します。 コード分析ポリシーでは、C/C++ のコード分析の実行を要求していますが、クライアント上の現在のプロジェクトでは有効になっていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コード分析のアプリケーション エラー](../code-quality/code-analysis-application-errors.md)

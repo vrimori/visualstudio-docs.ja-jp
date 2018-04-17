@@ -1,12 +1,10 @@
 ---
-title: "デバッグ用の SDK ヘルパー |Microsoft ドキュメント"
-ms.custom: 
+title: デバッグ用の SDK ヘルパー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - dbgmetric.lib
 - registry, Debugging SDK
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - dbgmetric.h
 - metrics [Debugging SDK]
 ms.assetid: 80a52e93-4a04-4ab2-8adc-a7847c2dc20b
-caps.latest.revision: "28"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: b87756f52cb1506be30014331d63eec5d15beff4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: e80344b8cec1bc013e044be39638879b049c8d0a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sdk-helpers-for-debugging"></a>デバッグ用の SDK ヘルパー
 これらの関数と宣言は、C++ でのデバッグ エンジン、式の評価者、およびシンボル プロバイダーを実装するためのグローバルなヘルパー関数です。  
@@ -276,7 +274,7 @@ HRESULT EnumMetricSections(
 >  すべての Guid の形式で格納`{GUID}`です。 たとえば、`{123D150B-FA18-461C-B218-45B3E4589F9B}` のようにします。  
   
 ### <a name="debug-engines"></a>デバッグ エンジン  
- レジストリのデバッグ エンジンのメトリックの構成を次に示します。 `Engine`デバッグ エンジンのメトリックの種類の名前に対応する*[メトリックの種類]*上記のレジストリ サブツリーでします。  
+ レジストリのデバッグ エンジンのメトリックの構成を次に示します。 `Engine` デバッグ エンジンのメトリックの種類の名前に対応する*[メトリックの種類]*上記のレジストリ サブツリーでします。  
   
  `Engine`\  
   
@@ -303,7 +301,7 @@ HRESULT EnumMetricSections(
 |*[ポートのサプライヤーの guid]*|存在する場合、ポート サプライヤーの GUID です。 多くのデバッグ エンジンは、既定ポート業者を使用し、独自の仕入先を指定しません。 この場合、サブキー`PortSupplier`は出力されません。|  
   
 ### <a name="port-suppliers"></a>ポートの仕入先  
- レジストリで、ポート供給業者のメトリックの組織を次に示します。 `PortSupplier`ポートのサプライヤーのメトリックの種類の名前に対応する*[メトリックの種類]*です。  
+ レジストリで、ポート供給業者のメトリックの組織を次に示します。 `PortSupplier` ポートのサプライヤーのメトリックの種類の名前に対応する*[メトリックの種類]*です。  
   
  `PortSupplier`\  
   
@@ -321,7 +319,7 @@ HRESULT EnumMetricSections(
 |*[クラス guid]*|このポート業者を実装するクラスの GUID|  
   
 ### <a name="symbol-providers"></a>プロバイダーのシンボル  
- レジストリでシンボル供給業者のメトリックの構成を次に示します。 `SymbolProvider`シンボルのプロバイダーのメトリックの種類の名前に対応する*[メトリックの種類]*です。  
+ レジストリでシンボル供給業者のメトリックの構成を次に示します。 `SymbolProvider` シンボルのプロバイダーのメトリックの種類の名前に対応する*[メトリックの種類]*です。  
   
  `SymbolProvider`\  
   
@@ -349,7 +347,7 @@ HRESULT EnumMetricSections(
 |*[クラス guid]*|このシンボル プロバイダーを実装するクラスの GUID|  
   
 ### <a name="expression-evaluators"></a>式エバリュエーター  
- レジストリで、式エバリュエーターのメトリックの組織を次に示します。 `ExpressionEvaluator`式エバリュエーターのメトリックの種類の名前に対応する*[メトリックの種類]*です。  
+ レジストリで、式エバリュエーターのメトリックの組織を次に示します。 `ExpressionEvaluator` 式エバリュエーターのメトリックの種類の名前に対応する*[メトリックの種類]*です。  
   
 > [!NOTE]
 >  指標の種類の`ExpressionEvaluator`式エバリュエーターのメトリックの変更がすべてが適切な式エバリュエーターのメトリック関数を介して送られることが前提として、dbgmetric.h で定義されていない (のレイアウト、`ExpressionEvaluator`サブキーがある程度複雑になり、dbgmetric.lib 内部に詳細が隠されたように) します。  
@@ -380,7 +378,7 @@ HRESULT EnumMetricSections(
 |*[デバッグ エンジン guid]*|この式エバリュエーターで動作するデバッグ エンジンの GUID|  
   
 ### <a name="expression-evaluator-extensions"></a>式エバリュエーターの拡張機能  
- 式エバリュエーター拡張子メトリックは、レジストリ内の組織を次に示します。 `EEExtensions`指標の種類名、式エバリュエーターの拡張機能ありに対応しています*[メトリックの種類]*です。  
+ 式エバリュエーター拡張子メトリックは、レジストリ内の組織を次に示します。 `EEExtensions` 指標の種類名、式エバリュエーターの拡張機能ありに対応しています*[メトリックの種類]*です。  
   
  `EEExtensions`\  
   
@@ -395,7 +393,7 @@ HRESULT EnumMetricSections(
 |*[拡張機能の guid]*|式エバリュエーターの拡張機能の GUID|  
   
 ### <a name="exceptions"></a>例外  
- レジストリの例外のメトリックの構成を次に示します。 `Exception`例外のメトリックの種類の名前に対応する*[メトリックの種類]*です。  
+ レジストリの例外のメトリックの構成を次に示します。 `Exception` 例外のメトリックの種類の名前に対応する*[メトリックの種類]*です。  
   
  `Exception`\  
   
@@ -421,12 +419,12 @@ HRESULT EnumMetricSections(
 |*[例外の種類]*|処理できる例外のクラスを識別するサブキーの一般的なタイトルです。 一般的な名前は**C++ 例外**、 **Win32 例外**、 **Common Language Runtime Exceptions**、および**ネイティブ ランタイム チェック**です。 これらの名前は、ユーザーには例外の特定のクラスにも使われます。|  
 |*[例外]*|例外の名前。 たとえば、 **_com_error**または**コントロール ブレーク**です。 これらの名前は、ユーザーに特定の例外を識別するも使われます。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  これらのファイルにある、 [!INCLUDE[vs_dev10_ext](../../../extensibility/debugger/reference/includes/vs_dev10_ext_md.md)] SDK のインストール ディレクトリ (既定では、 *[ドライブ]*\Program Files\Microsoft Visual Studio 2010 SDK\\)。  
   
  ヘッダー: includes\dbgmetric.h  
   
  ライブラリ: libs\ad2de.lib、libs\dbgmetric.lib  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [API リファレンス](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

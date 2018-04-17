@@ -1,28 +1,26 @@
 ---
-title: "GPU コードのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: GPU コードのデバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
 ms.assetid: c7e77a5a-cb57-4b11-9187-ecc89acc8775
-caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0699df7890528a200648ad10975b3cf272a3534f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 9e873eb89f1f5b22307b4a2be960d7b04121c222
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debugging-gpu-code"></a>GPU コードのデバッグ
 グラフィックス処理装置 (GPU) で実行されている C++ コードをデバッグできます。 Visual Studio での GPU デバッグのサポートには、競合の検出、プロセスの開始、プロセスへのアタッチ、デバッグ ウィンドウへの統合が含まれます。  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="error-timeout-detection-and-recovery-tdr-must-be-disabled-at-the-remote-site"></a>エラー: リモート サイトでタイムアウト検出と復旧 (TDR) を無効にする必要があります。  
  Windows のタイムアウト検出と復旧 (TDR) で設定されている既定の時間間隔より、C++ AMP の計算が長くかかっている可能性があります。 その場合、計算は取り消され、データは失われます。 詳細については、次を参照してください。 [C++ AMP で処理 TDRs](http://go.microsoft.com/fwlink/p/?LinkId=249154)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: C++ AMP アプリケーションのデバッグ](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)   
  [C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
  [Visual Studio での GPU デバッグを開始します。](http://go.microsoft.com/fwlink/p/?LinkId=255381)

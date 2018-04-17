@@ -1,12 +1,10 @@
 ---
-title: "方法: ワークシートのコメント プログラムで追加および削除 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ワークシートのコメント プログラムで追加および削除 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - comments, worksheets
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 9351dd018c2db4832db20a4abbdaa050f060793e
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0891524a9172c3c7adf0ca0ce55173dffb0ad19b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-add-and-delete-worksheet-comments"></a>方法: ワークシートのコメントをプログラムによって追加および削除する
   Microsoft Office Excel ワークシート内のコメントは、プログラムを使用して追加、削除できます。 コメントは、1 つのセルにのみ追加でき、複数のセル範囲には追加できません。  
@@ -63,7 +62,7 @@ ms.lasthandoff: 01/10/2018
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#19](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#19)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#19](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#19)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ワークシートの操作](../vsto/working-with-worksheets.md)   
  [方法: プログラムによってワークシートのコメントを表示](../vsto/how-to-programmatically-display-worksheet-comments.md)   
  [NamedRange コントロール](../vsto/namedrange-control.md)  

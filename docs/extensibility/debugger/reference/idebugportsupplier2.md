@@ -1,29 +1,25 @@
 ---
-title: "IDebugPortSupplier2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugPortSupplier2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugPortSupplier2
 helpviewer_keywords:
 - IDebugPortSupplier2 interface
 ms.assetid: 37067324-2ea6-4a01-8829-a6e9c7a70068
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 257bbf334adbdfd3a93cf172de0b15bf63cb3217
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e4aa26aa37b40c0e483342e6eb93cbac15bbbfc2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugportsupplier2"></a>IDebugPortSupplier2
 このインターフェイスは、セッションのデバッグ マネージャー (SDM) にポートを指定します。  
@@ -38,7 +34,7 @@ IDebugPortSupplier2 : IUnknown
  カスタム ポート仕入先では、ポートのサプライヤーを表すためには、このインターフェイスを実装します。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- 呼び出し`CoCreateInstance`ポート業者と`GUID`(これはこのインターフェイスを取得する一般的な方法です)、このインターフェイスを返します。 例:  
+ 呼び出し`CoCreateInstance`ポート業者と`GUID`(これはこのインターフェイスを取得する一般的な方法です)、このインターフェイスを返します。 例えば:  
   
 ```cpp  
 IDebugPortSupplier2 *GetPortSupplier(GUID *pPortSupplierGuid)  
@@ -79,14 +75,14 @@ IDebugPortSupplier2 *GetPortSupplier(GUID *pPortSupplierGuid)
 ## <a name="remarks"></a>コメント  
  ポート サプライヤーできます名および ID によって識別される、および追加および削除ポート、ポート サプライヤーを提供するすべてのポートを列挙します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [GetPortSupplier](../../../extensibility/debugger/reference/idebugport2-getportsupplier.md)   
  [GetPortSupplier](../../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md)   

@@ -1,5 +1,5 @@
 ---
-title: "参照して .NET の種類 ダイアログ ボックスの選択 |Microsoft ドキュメント"
+title: 参照して .NET の種類 ダイアログ ボックスの選択 |Microsoft ドキュメント
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,14 +8,14 @@ f1_keywords:
 ms.assetid: 864b60b6-a070-4e5c-aa5b-a25341b57ea6
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 33e2ba5ff213c2bdd2684d72f411b172c0437c99
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 04aba24d3dffc96fb8e5288d74322258fa77ce19
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>[.NET 型の参照と選択] ダイアログ ボックス
 
@@ -60,7 +60,7 @@ ms.lasthandoff: 03/12/2018
 ## <a name="filtering-search-results-in-the-type-browser"></a>型ブラウザーでの検索結果のフィルター処理
  内の型の一覧、**型名**ボックスが一致するものを検索する文字を入力するように短くを取得します。 フィルター処理された一覧には、入力した文字列で完全修飾名が始まる型、または、入力した文字列で始まる短い名前を持つ型のみが表示されます。
 
- 例:
+ 例えば:
 
 1.  入力**操作**と一致する<xref:System.OperationCanceledException>ではなく<xref:System.InvalidOperationException>です。 <xref:System.InvalidOperationException> と一致するためには、「System.I」または「Invalid」と入力します。
 

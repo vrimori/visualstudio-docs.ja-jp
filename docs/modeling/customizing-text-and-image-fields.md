@@ -1,21 +1,19 @@
 ---
-title: "テキストおよび画像フィールドをカスタマイズする |Microsoft ドキュメント"
-ms.custom: 
+title: テキストおよび画像フィールドをカスタマイズする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: f577669c685d6f42b73c80f947e8edad0c7b9088
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 4e84e6d7294a20d576352ef98afc6b691177da18
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customizing-text-and-image-fields"></a>テキストおよびイメージ フィールドのカスタマイズ
 図形のテキスト デコレータを定義するときは、テキスト フィールドで表されます。 テキスト フィールドとその他の ShapeFields の初期化の例については、DSL ソリューションで Dsl\GeneratedCode\Shapes.cs を検査します。  
@@ -268,7 +266,7 @@ partial class ExampleShape
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [図形とコネクタを定義します。](../modeling/defining-shapes-and-connectors.md)   
  [図の背景画像の設定](../modeling/setting-a-background-image-on-a-diagram.md)   
  [移動して、プログラム コードでモデルを更新します。](../modeling/navigating-and-updating-a-model-in-program-code.md)   

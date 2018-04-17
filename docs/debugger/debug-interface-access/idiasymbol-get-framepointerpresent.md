@@ -1,29 +1,25 @@
 ---
-title: "Idiasymbol::get_framepointerpresent |Microsoft ドキュメント"
-ms.custom: 
+title: Idiasymbol::get_framepointerpresent |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSymbol::get_framePointerPresent method
 ms.assetid: d036090a-1651-454d-9130-b798f58ba053
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f6deaaabfcc4befca3079f4ef177c35f6b684e99
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 28c3201cc8580159fcf30ea364adb8a4f1837a37
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiasymbolgetframepointerpresent"></a>IDiaSymbol::get_framePointerPresent
 フレーム ポインターが存在するかどうかを指定するフラグを取得します。 使用する場合、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)に設定されている`SymTagFunction`です。  
@@ -48,12 +44,12 @@ HRESULT get_framePointerPresent(
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia100.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

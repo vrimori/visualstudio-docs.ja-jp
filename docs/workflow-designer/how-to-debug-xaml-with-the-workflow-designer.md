@@ -1,18 +1,18 @@
 ---
-title: "方法: ワークフロー デザイナーで XAML をデバッグ |Microsoft ドキュメント"
+title: '方法: ワークフロー デザイナーで XAML をデバッグ |Microsoft ドキュメント'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: d9305dbc-af62-4bdd-b03f-c54e3fe9ecc7
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 4d17d0a92bf3760e723bfa4ba26b45952634e7e2
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: c0ac923de3c5381add6f0a33612258e8b9d64824
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-debug-xaml-with-the-workflow-designer"></a>ワークフロー デザイナーを使用して XAML をデバッグする方法
 ワークフローは XAML で定義されます。 ワークフローの UI 表現は、ワークフローを定義する XAML ツリーに基づいて構築されます。 デバッグの機能は、Windows ワークフロー デザイナーでワークフローのデバッグと似ています。 たとえば、XAML のデバッグ中に、ローカル、ウォッチ、およびスレッドの各ウィンドウは、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]でのデバッグ時と同様に機能します。 また、XAML のデバッグ中に使用される呼び出し履歴ビューは、ワークフローの実行フローの行ベースの階層ビューです。

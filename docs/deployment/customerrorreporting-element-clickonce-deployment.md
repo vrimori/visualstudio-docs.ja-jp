@@ -1,13 +1,10 @@
 ---
-title: "&lt;customErrorReporting&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;customErrorReporting&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - <customErrorReporting> element [ClickOnce deployment manifest]
 ms.assetid: 7d31816e-c692-46b5-9cc9-753284b3bcda
-caps.latest.revision: 
 author: stevehoag
 ms.author: shoag
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: b6b6726ebf45522834d916897f456952b66a3605
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 44094a76472679598c42f7a38ef44838502a51ba
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltcustomerrorreportinggt-element-clickonce-deployment"></a>&lt;customErrorReporting&gt;要素 (ClickOnce 配置)
 エラー発生時に表示する URI を指定します。  
@@ -53,5 +49,5 @@ Example Generated Error:
 http://www.contoso.com/applications/error.asp? outer=System.Deployment.Application.InvalidDeploymentException&&inner=System.Deployment.Application.InvalidDeploymentException&&msg=The%20application%20manifest%20is%20signed,%20but%20the%20deployment%20manifest%20is%20unsigned.%20Both%20manifests%20must%20be%20either%20signed%20or%20unsigned.  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce 配置マニフェス](../deployment/clickonce-deployment-manifest.md)

@@ -1,12 +1,10 @@
 ---
-title: "方法: アクション ペイン上のコントロールのレイアウトの管理 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: アクション ペイン上のコントロールのレイアウトの管理 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - smart documents [Office development in Visual Studio], control layout
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 7b70bf12ee608b28e462f022fae15b3be6336545
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0831740c612e4e9d4eddd47a0648302e9460f060
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-manage-control-layout-on-actions-panes"></a>方法 : アクション ペイン上のコントロールのレイアウトを管理する
   既定では、[操作] ウィンドウが文書またはワークシートの右側にドッキングされています。ただし、左、上、または下部にドッキングできます。 複数のユーザー コントロールを使用している場合は、[操作] ウィンドウにユーザー コントロールを正しく積み重ねるコードを記述できます。 詳細については、「 [Actions Pane Overview](../vsto/actions-pane-overview.md)」を参照してください。  
@@ -68,7 +67,7 @@ ms.lasthandoff: 01/10/2018
   
 -   Word ドキュメント レベルのプロジェクトで複数のユーザー コントロールが含まれる操作ウィンドウまたは入れ子になった [操作] ウィンドウを制御します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   
  [方法: Word 文書や Excel ブックに操作ウィンドウを追加](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   
  [方法: Word 文書や Excel ブックに操作ウィンドウを追加](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   

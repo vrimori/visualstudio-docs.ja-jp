@@ -1,26 +1,24 @@
 ---
-title: "カスタム パラメーター |Microsoft ドキュメント"
-ms.custom: 
+title: カスタム パラメーター |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - wizards, custom parameters
 - custom parameters
 ms.assetid: ba5c364b-66e6-47ea-9760-a0b70de8f0a0
-caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 17a629c2d93bb5e91fb301d4da9dca825e5b8917
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2fb61109a05b84eeb83b887ba0fc1a9f9fef299f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-parameters"></a>カスタム パラメーター
 カスタム パラメーターは、ウィザードが開始した後に、ウィザードの操作を制御します。 関連の .vsz ファイルは、統合開発環境 (IDE) でパッケージ化され、ウィザードが開始されたときに、文字列の配列として、ウィザードに渡されるをユーザー定義のパラメーターの配列を提供します。 ウィザードは、文字列の配列を解析し、情報を使用して、ウィザードの実際の操作を制御します。 この方法では、ウィザードが .vsz ファイルの内容によって機能をカスタマイズできます。  
@@ -45,7 +43,7 @@ Param="PROJECT_TYPE = CSPROJ"
   
  詳細については、次を参照してください。[ウィザード (です。Vsz) ファイル](../../extensibility/internals/wizard-dot-vsz-file.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>   
  [コンテキスト パラメーター](../../extensibility/internals/context-parameters.md)   
  [ウィザード](../../extensibility/internals/wizards.md)   

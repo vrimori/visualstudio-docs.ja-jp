@@ -1,13 +1,10 @@
 ---
-title: "ブートス トラップ パッケージの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: ブートス トラップ パッケージの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - custom prerequisites
 - redistributables list
 ms.assetid: ba1a785b-693d-446b-bcae-b88cadee73d1
-caps.latest.revision: 
 author: stevehoag
 ms.author: shoag
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f269369084df3d81d323e75730fad27713831ca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 569b3834685b119ebb8a539d1c2fa79e9bb51161
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-bootstrapper-packages"></a>ブートストラップ パッケージの作成
 セットアップ プログラムは、Windows インストーラー (.msi) ファイルや実行可能プログラムなどの再頒布可能コンポーネントを検出およびインストールするように構成できる汎用的なインストーラーです。 インストーラーはブートストラップとも呼ばれます。 ブートストラップは、コンポーネントのインストールを管理するためのメタデータを指定する、一連の XML マニフェストによってプログラミングされます。  
@@ -127,7 +123,7 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
 </FileList>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: ClickOnce アプリケーションと共に必須コンポーネントをインストールする](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
  [前提条件 ダイアログ ボックス](../ide/reference/prerequisites-dialog-box.md)   
  [製品およびパッケージ スキーマ リファレンス](../deployment/product-and-package-schema-reference.md)   

@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: カスタム サイト ワークフロー アクティビティの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: カスタム サイト ワークフロー アクティビティの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,13 +18,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, site workflows
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: b723635b1baecfec4bddb2339414d57803c76d5d
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 14eaa5f23af978ae603c4f8b94d3c3d18953943f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-create-a-custom-site-workflow-activity"></a>チュートリアル: サイトのカスタム ワークフロー アクティビティの作成
   このチュートリアルは、カスタム アクティビティを使用して、サイト レベルのワークフローを作成する方法を示します[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 (サイト レベルのワークフローは、サイトの一覧だけでなく、サイト全体に適用)。カスタム アクティビティは、バックアップお知らせリストを作成し、そこにお知らせリストの内容をコピーします。  
@@ -127,7 +126,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  クイック起動バーで、選択、**お知らせバックアップ**リンクします。 注意してお知らせに含まれるのすべて、**お知らせ**一覧は、この新しいリストにコピーされています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: イベント レシーバーを作成します。](../sharepoint/how-to-create-an-event-receiver.md)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   

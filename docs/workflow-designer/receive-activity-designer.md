@@ -1,5 +1,5 @@
 ---
-title: "Receive アクティビティ デザイナー |Microsoft ドキュメント"
+title: Receive アクティビティ デザイナー |Microsoft ドキュメント
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: f58d3c70-944d-4bb4-90a7-e68c103caddc
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d8058b13dd488ddca2237056048673529c379256
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 900cf704dd29c78a1ddc8de7dce4940d8ba09fae
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="receive-activity-designer"></a>Receive アクティビティ デザイナー
 **受信**アクティビティ デザイナーを使用して作成し、構成、<xref:System.ServiceModel.Activities.Receive>アクティビティ。 <xref:System.ServiceModel.Activities.Receive> アクティビティは、メッセージ (<xref:System.ServiceModel.Channels.Message>、<xref:System.IO.Stream>、<xref:System.Xml.Linq.XElement> などの組み込みの型、アプリケーション定義のデータ コントラクト、メッセージ コントラクト、またはシリアル化可能な XML クラス) を受信するアクティビティです。
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/12/2018
 |<xref:System.ServiceModel.Activities.Receive.KnownTypes%2A>|False|この <xref:System.ServiceModel.Activities.Receive> アクティビティによって実装されるサービス操作の既知の型のコレクションを指定します。 このプロパティは、<xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> に設定された <xref:System.Runtime.Serialization.DataContractSerializer> プロパティと共に使用する必要があり、 <xref:System.Xml.Serialization.XmlSerializer> が使用されている場合は無視されます。<br /><br /> 横にある省略記号ボタンをクリックして、 **KnownTypes**フィールドを表示するプロパティ グリッドで、**型コレクション エディター**  ダイアログ ボックスを使用するには、関連する型を追加することができます。 詳細については、このボックスを使用して、次を参照してください。、[型コレクション エディター ダイアログ ボックス](../workflow-designer/type-collection-editor-dialog-box.md)トピックです。|
 |<xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A>|False|メッセージの <xref:System.Net.Security.ProtectionLevel> を指定します。<br /><br /> 1。<xref:System.Net.Security.ProtectionLevel>認証のみを意味します。<br />2。<xref:System.Net.Security.ProtectionLevel>署名データ送信されるデータの整合性を確保することを意味します。<br />3。<xref:System.Net.Security.ProtectionLevel>手段の暗号化と署名データを送信されるデータの整合性と機密性を確保します。|
 |<xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>|False|<xref:System.ServiceModel.Activities.Receive> アクティビティによって実装されるサービス操作に使用するシリアライザーの型を指定します。 既定値は <xref:System.Runtime.Serialization.DataContractSerializer> です。この場合、ある型のインスタンスが、提供されたデータ コントラクトを使用する XML ストリームまたはドキュメントへとシリアル化または逆シリアル化されます。 XML をより厳密に制御する必要がある場合は、<xref:System.Xml.Serialization.XmlSerializer> も使用できます。|
-|<xref:System.ServiceModel.Activities.Receive.Action%2A>|False|メッセージのアクション ヘッダーを指定します。 これが明示的に設定されていない場合、既定値: https://tempuri.org/{サービス コントラクトの名前空間}/{サービス コントラクト名}/{操作名}。|
+|<xref:System.ServiceModel.Activities.Receive.Action%2A>|False|メッセージのアクション ヘッダーを指定します。 これが明示的に設定されていない場合、既定値を:https://tempuri.org/{serviceコントラクトの名前空間}/{サービス コントラクト名}/{操作名}。|
 
 ## <a name="see-also"></a>関連項目
 

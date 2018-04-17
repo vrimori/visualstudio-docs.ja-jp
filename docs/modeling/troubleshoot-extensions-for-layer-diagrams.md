@@ -1,29 +1,27 @@
 ---
-title: "依存関係図の拡張機能のトラブルシューティング |Microsoft ドキュメント"
-ms.custom: 
+title: 依存関係図の拡張機能のトラブルシューティング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, extension errors
 - dependency diagrams, troubleshooting extensions
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 21a14ed32bb1b63e2363736e438139479ff5bf60
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: b546fa6a858ed959d93d4ec388c7bb8fb913864f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-extensions-for-dependency-diagrams"></a>依存関係図の拡張機能をトラブルシューティングします。
 このトピックでは、レイヤー モデル拡張機能を作成するときに発生する可能性のある問題について説明します。  
   
-#### <a name="when-i-press-f5-to-debug-my-extension-my-commands-gesture-handlers-validation-extensions-or-custom-properties-do-not-appear-on-dependency-diagrams-in-the-experimental-instance-of-includevsprvscode-qualityincludesvsprvsmdmd"></a>My の拡張機能をデバッグする場合は F5 を押すと、コマンド、ジェスチャ ハンドラー、検証拡張機能、またはカスタム プロパティがない図に表示依存関係の実験用インスタンスで[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]  
+#### <a name="when-i-press-f5-to-debug-my-extension-my-commands-gesture-handlers-validation-extensions-or-custom-properties-do-not-appear-on-dependency-diagrams-in-the-experimental-instance-of-includevsprvscode-qualityincludesvsprvsmdmd"></a>My の拡張機能をデバッグする場合は F5 を押すと、コマンド、ジェスチャ ハンドラー、検証拡張機能、またはカスタム プロパティがない図に表示依存関係の実験用インスタンスで [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]  
   
 1.  実験用インスタンスで拡張機能ソリューションを開きます[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、および、**ビルド** メニューのをクリックして**ソリューションのリビルド**です。  
   
@@ -52,5 +50,5 @@ ms.lasthandoff: 02/09/2018
   
 4.  **Source.extension.vsixmanifest** 、レイヤー検証プロジェクトの両方が追加したことを確認します、 **MEF コンポーネント**項目と**カスタム拡張機能の種類**項目**コンテンツ**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [依存関係図の拡張](../modeling/extend-layer-diagrams.md)

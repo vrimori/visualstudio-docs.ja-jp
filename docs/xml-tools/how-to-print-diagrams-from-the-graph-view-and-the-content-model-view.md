@@ -1,23 +1,21 @@
 ---
-title: "方法: グラフ ビューおよびコンテンツ モデル ビューからダイアグラムを印刷 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: グラフ ビューおよびコンテンツ モデル ビューからダイアグラムを印刷 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 7e1785e4-4aaf-4c66-8735-51e7ca035565
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0c88f2efd3e7494fdec5d0cfaee8ecb492c43603
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 86f36e09e691acd0a94a27f1cc7d4b510e2b1dbf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-print-diagrams-from-the-graph-view-and-the-content-model-view"></a>方法: グラフ ビューおよびコンテンツ モデル ビューからダイアグラムを出力する
 このトピックでは、グラフ ビューまたはコンテンツ モデル ビューからダイアグラムを出力する方法について説明します。  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  XPS ビューアーを使用して XPS ファイルに保存されたイメージを出力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [グラフ ビュー](../xml-tools/graph-view.md)   
  [コンテンツ モデル ビュー](../xml-tools/content-model-view.md)   
  [XML スキーマ デザイナーのワークスペース](../xml-tools/xml-schema-designer-workspace.md)

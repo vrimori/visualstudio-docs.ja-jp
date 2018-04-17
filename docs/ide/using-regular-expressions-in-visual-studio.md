@@ -1,12 +1,8 @@
 ---
-title: "Visual Studio での正規表現の使用 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Visual Studio での正規表現の使用 | Microsoft Docs
+ms.date: 03/26/2018
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vsregularexpressionhelp
 - vs.regularexpressionhelp
@@ -21,11 +17,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 43d566472a71b19ba9588a4564724d1ec8f5d933
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 37d8dca622fd5af546971b1c8d3451b27c183584
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-regular-expressions-in-visual-studio"></a>Visual Studio での正規表現の使用
 
@@ -33,7 +29,9 @@ Visual Studio は、テキストの検索と置換をするときに、[.NET Fra
 
 ## <a name="replacement-patterns"></a>置換パターン
 
-置換パターンでよく使われる正規表現については、「[正規表現での置換](/dotnet/standard/base-types/substitutions-in-regular-expressions)」(.NET ガイド) を参照してください。 番号付きのキャプチャ グループを使用する場合の構文は、番号付きグループを指定する `$1` と、該当のグループを指定する `(x)` です。 たとえば、グループ化正規表現 `(\d)([a-z])` を使用すると、"**1a 3c 2b 4d**" という文字列の中で、4 つの一致が見つかります。 置換文字列 `z$1` を使用すると、この文字列は "**z1 z2 z3 z4**" に変換されます。
+番号付きキャプチャ グループを使うには、正規表現パターンにおいてグループをかっこで囲みます。 置換パターンで特定の番号付きグループを指定するには、`$number` を使います。`number` は、1 から始まる整数です。 たとえば、グループ化された正規表現 `(\d)([a-z])` では、2 つのグループが定義されています。1 番目のグループには 1 つの 10 進数字が含まれ、2 番目のグループには **a** から **z** の 1 つの文字が含まれます。 この式では、**1a 3c 2b 4d** という文字列の中で、4 つの一致が見つかります。 置換文字列 `z$1` は最初のグループのみを参照し、この文字列を **z1 z2 z3 z4** に変換します。
+
+置換パターンでよく使われる正規表現については、「[正規表現での置換](/dotnet/standard/base-types/substitutions-in-regular-expressions)」(.NET ガイド) を参照してください。
 
 ## <a name="regular-expression-examples"></a>正規表現の例
 
@@ -52,7 +50,7 @@ Visual Studio は、テキストの検索と置換をするときに、[.NET Fra
 |一致文字列を、行末に固定します。|\r?$|`End\r?$` は、"end" が行末に登場する場合のみ、その単語に一致します。|
 |セット内の任意の 1 文字と一致します。|[abc]|`b[abc]` は、"ba"、"bb"、および "bc" に一致します。|
 |範囲内の任意の文字に一致します|[a-f]|`be[n-t]` は、"between" の中の "bet"、"beneath" の中の "ben"、および "beside" の中の "bes" には一致しますが、"below" の中の "bel" には一致しません。|
-|かっこで囲まれた表現を 1 つのまとまりとして扱い、その表現に対して暗黙的に番号を付けます。|()|`([a-z])X\1` は、"aXa" および "bXb" に一致しますが、"aXb" には一致しません。 ". "\1"は、最初の表現グループ "[a-z]" を指します。|
+|かっこで囲まれた表現を 1 つのまとまりとして扱い、その表現に対して暗黙的に番号を付けます。|()|`([a-z])X\1` は、"aXa" および "bXb" に一致しますが、"aXb" には一致しません。 "\1"は、最初の表現グループ "[a-z]" を指します。|
 |一致を否定します。|(?!abc)|`real (?!ity)` は、"realty" や "really" の中の "real" に一致しますが、"reality" の中の "real" には一致しません。 また、"realityreal" の中の 2 番目の "real" に一致します (一方、最初の "real" には一致しません)。|
 |指定された一連の文字の中に含まれていない任意の文字と一致します。|[^abc]|`be[^n-t]` は、"before" の中の "bef"、"behind" の中の "beh"、および "below" の中の "bel" に一致しますが、"beneath" の中の "ben" には一致しません。|
 |記号の前にある表現、または後にある表現のいずれかに一致します。|&#124;|`(sponge&#124;mud) bath` は "sponge bath" および "mud bath" に一致します。|

@@ -1,26 +1,24 @@
 ---
-title: "VSPackage の登録 |Microsoft ドキュメント"
-ms.custom: 
+title: VSPackage の登録 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - registration, VSPackages
 - VSPackages, registering
 ms.assetid: ecd20da8-b04b-4141-a8f4-a2ef91dd597a
-caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 1405fbeba34f3e3aa9c645f6eaffe90fe6ac9036
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 348010982b015eaf19ba4de559eca66bb24930a3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vspackage-registration"></a>VSPackage の登録
 Vspackage をアドバイスする必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]読み込めますがインストールされ、必要があります。 このプロセスは、レジストリで情報を記述して実行します。 インストーラーの一般的なジョブです。  
@@ -59,6 +57,6 @@ Vspackage をアドバイスする必要があります[!INCLUDE[vsprvs](../../c
   
 -   タイプ ライブラリなどのネットワーク リソースへのアクセス コンポーネントがある場合両方実行元として指定および SelfReg 表に記載されて、自己登録コードを拒否できます。 これにより、管理者用インストール中に失敗するコンポーネントのインストールが発生することができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Windows インストーラー](http://msdn.microsoft.com/library/cc185688\(VS.85\).aspx)   
  [マネージ パッケージの登録](http://msdn.microsoft.com/en-us/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)

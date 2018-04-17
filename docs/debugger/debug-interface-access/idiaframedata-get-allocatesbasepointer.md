@@ -1,29 +1,25 @@
 ---
-title: "Idiaframedata::get_allocatesbasepointer |Microsoft ドキュメント"
-ms.custom: 
+title: Idiaframedata::get_allocatesbasepointer |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaFrameData::get_allocatesBasePointer method
 ms.assetid: 8a33db5d-008c-4fe5-b64f-210c9b77f686
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e577a5a9723f388d829a70f51cd0a917abf157a1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fdeab20ee39dc62688f7cf4604e00117d9eb676f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiaframedatagetallocatesbasepointer"></a>IDiaFrameData::get_allocatesBasePointer
 このアドレスの範囲内のコード ベースのポインターが割り当てられているかどうかを示すフラグを取得します。 このメソッドは推奨されません。  
@@ -46,6 +42,6 @@ HRESULT get_allocatesBasePointer (
 ## <a name="remarks"></a>コメント  
  このプロパティは FPO_DATA にアクセスしていたこと、またはプログラム文字列がによって返されるときにコードでのみ使用する必要があります、 [idiaframedata::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md)メソッドは`NULL`します。 それ以外の場合、プログラムの文字列には、以前の登録値を計算するために必要なすべての情報が含まれています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)   
  [IDiaFrameData::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md)

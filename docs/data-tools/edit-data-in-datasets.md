@@ -1,11 +1,8 @@
 ---
-title: "データセット内のデータを編集 |Microsoft ドキュメント"
-ms.custom: 
+title: データセット内のデータを編集 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -13,17 +10,17 @@ helpviewer_keywords:
 - datasets [Visual Basic], editing data
 - data [Visual Studio], editing in datasets
 ms.assetid: 50d5c580-fbf7-408f-be70-e63ac4f4d0eb
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: afb484c1d3bfdd705c5a28f150e4631048ead49d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: a72949ad06b9140faa3e5013a8fd07e98b4db172
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="edit-data-in-datasets"></a>データセット内のデータを編集します。
 任意のデータベース内のテーブル内のデータを編集するのと同様に、データ テーブル内のデータを編集します。 挿入、更新、およびテーブル内のレコードを削除すると、プロセスを含めることができます。 データ バインド フォームでは、どのフィールドがユーザーが編集できるを指定できます。 このような場合では、データ バインド インフラストラクチャは、すべての変更の追跡、変更を後で、データベースに送信できるようにを処理します。 プログラムによって、データへの編集を行うし、それらの変更をデータベースに送信する場合、オブジェクトや変更の追跡を自動的に行うメソッドを使用する必要があります。  

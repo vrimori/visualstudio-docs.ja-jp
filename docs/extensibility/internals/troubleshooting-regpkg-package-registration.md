@@ -1,27 +1,23 @@
 ---
-title: "RegPkg パッケージ登録のトラブルシューティング |Microsoft ドキュメント"
-ms.custom: 
+title: RegPkg パッケージ登録のトラブルシューティング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RegPkg
 ms.assetid: f33f822f-697a-4bad-9c10-554b4c8f6246
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5651e7c00abe91ec8e4cae7b720b6534318051f7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4857e41888962a92dced87d63fa2b63161ecac55
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-regpkg-package-registration"></a>RegPkg パッケージ登録のトラブルシューティング
 > [!NOTE]
@@ -42,5 +38,5 @@ ms.lasthandoff: 12/22/2017
   
  RegPkg の以前のバージョンでは、Microsoft.VisualStudio.Shell.dll assembly を使用してビルドされているパッケージを登録できます。 ただし、そのアセンブリのそれ以降のバージョンを使用して構築されたパッケージに登録できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [VSPackage](../../extensibility/internals/vspackages.md)

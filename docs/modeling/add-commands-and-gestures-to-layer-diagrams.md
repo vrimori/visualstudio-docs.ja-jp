@@ -1,24 +1,22 @@
 ---
-title: "依存関係の図にコマンドおよびジェスチャを追加する |Microsoft ドキュメント"
-ms.custom: 
+title: 依存関係の図にコマンドおよびジェスチャを追加する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, adding custom commands
 - dependency diagrams, adding custom gestures
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5a8f1a2ff8e5ffc95d885b847a17e6cc16965837
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 276098a2c288f98441e8a111ed8807e22d5cfda2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-commands-and-gestures-to-dependency-diagrams"></a>依存関係の図にコマンドおよびジェスチャを追加します。
 コンテキスト メニューのコマンドを定義し、ジェスチャ ハンドラーを Visual Studio での依存関係図できます。 これらの拡張機能を Visual Studio Integration Extension (VSIX) にパッケージ化し、他の Visual Studio ユーザーに配布できます。  
@@ -28,7 +26,7 @@ ms.lasthandoff: 02/09/2018
 > [!NOTE]
 >  依存関係のダイアグラムのどのユーザーのソース コードと比較して、アーキテクチャの検証をカスタマイズすることもできます。 アーキテクチャの検証は、別の Visual Studio プロジェクトで定義する必要があります。 それを他の拡張機能と同じ VSIX に追加できます。 詳細については、次を参照してください。[カスタム アーキテクチャ検証を図に追加の依存関係](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  「 [要件](../modeling/extend-layer-diagrams.md#prereqs)」を参照してください。  
   
 ## <a name="defining-a-command-or-gesture-in-a-new-vsix"></a>新しい VSIX でコマンドまたはジェスチャを定義する  
@@ -262,6 +260,6 @@ namespace MyLayerExtensions // change to your preference
 -   ドラッグされるアイテムの種類によっては、ハンドラーが既に定義されています。 たとえば、ユーザーは、依存関係の図に、ソリューション エクスプ ローラーからアイテムをドラッグできます。 このような種類のアイテムに対しては、ドラッグ ハンドラーを定義できません。 その場合、 `DragDrop` メソッドは呼び出されません。  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [移動し、プログラム コードでレイヤー モデルを更新](../modeling/navigate-and-update-layer-models-in-program-code.md)   
  [カスタム アーキテクチャ検証を依存関係図に追加する](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)   

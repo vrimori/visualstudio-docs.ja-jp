@@ -1,12 +1,10 @@
 ---
-title: "Ca 1700: いない名前列挙型値 &#39;予約済み (& m); #39 |Microsoft ドキュメント"
-ms.custom: 
+title: '1700 ca: いない名前列挙型値&#39;占有&#39;|Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1700
 - DoNotNameEnumValuesReserved
@@ -14,18 +12,18 @@ helpviewer_keywords:
 - DoNotNameEnumValuesReserved
 - CA1700
 ms.assetid: 7a7e01c3-ae7d-4c82-a646-91b58864a749
-caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e97c2da18531584128c48c9aac36ebb16ae86cc4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: c9a779915bc086b11b461acebd9fe4d0117f4b40
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="ca1700-do-not-name-enum-values-39reserved39"></a>Ca 1700: いない名前列挙型値 &#39;予約済み (& a) #39 です。
+# <a name="ca1700-do-not-name-enum-values-39reserved39"></a>1700 ca: いない名前列挙型値&#39;予約済み&#39;
 |||  
 |-|-|  
 |TypeName|DoNotNameEnumValuesReserved|  

@@ -1,26 +1,24 @@
 ---
-title: "MSI と、DSL の VSIX 配置 |Microsoft ドキュメント"
-ms.custom: 
+title: MSI と、DSL の VSIX 配置 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: de6b219610908503f37658ff977f042363fb8663
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: b66c2e2a61ebe046ab04006e1f7ce345151224c7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL の MSI および VSIX 配置
-自分のコンピューター上またはその他のコンピューター上、ドメイン固有言語をインストールすることができます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ターゲット コンピューターに既にインストールする必要があります。  
+自分のコンピューター上またはその他のコンピューター上、ドメイン固有言語をインストールすることができます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ターゲット コンピューターに既にインストールする必要があります。  
   
-##  <a name="which"></a>VSIX および MSI の展開の使い分け  
+##  <a name="which"></a> VSIX および MSI の展開の使い分け  
  ドメイン固有言語を展開する次の 2 つの方法はあります。  
   
 |メソッド|利点|  
@@ -28,7 +26,7 @@ ms.lasthandoff: 02/09/2018
 |VSX ([!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張機能)|非常に簡単に展開: コピーし、実行、 **.vsix** DslPackage プロジェクトからのファイルです。<br /><br /> 詳細については、次を参照してください。[をインストールすると、VSX を使用して、DSL をアンインストール](#Installing)です。|  
 |MSI (インストーラー ファイル)|-を開くには、ユーザーは、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] DSL ファイルをダブルクリックします。<br />-対象のコンピューターでの DSL ファイルの種類のアイコンに関連付けます。<br />-DSL ファイルの種類 XSD (XML スキーマ) に関連付けます。 ファイルが読み込まれるときに警告を回避できますこの[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。<br /><br /> セットアップ プロジェクトは、MSI を作成するようにソリューションを追加する必要があります。<br /><br /> 詳細については、次を参照してください。 [DSL を展開する MSI ファイルを使用して](#msi)です。|  
   
-##  <a name="Installing"></a>インストールして、VSX を使用して、DSL のアンインストール  
+##  <a name="Installing"></a> インストールして、VSX を使用して、DSL のアンインストール  
  ユーザーが内から DSL ファイルを開くことができます、DSL は、インストールすると、このメソッドによって[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]は Windows エクスプ ローラーからファイルを開くことはできません。  
   
 #### <a name="to-install-a-dsl-by-using-the-vsx"></a>DSL を VSX を使用してインストールするには  
@@ -65,7 +63,7 @@ ms.lasthandoff: 02/09/2018
   
  *LocalAppData* **\Microsoft\VisualStudio\10.0\Extensions**  
   
-##  <a name="msi"></a>MSI の DSL の展開  
+##  <a name="msi"></a> MSI の DSL の展開  
  MSI (Windows インストーラー) ファイルを定義すると、dsl には、ユーザーが Windows エクスプ ローラーから DSL ファイルを開くことができます。 アイコンと短い説明も、ファイル名拡張子を持つ関連付けることができます。 さらに、MSI は、DSL ファイルの検証に使用できる XSD をインストールできます。 する場合は、同時にインストールされる MSI に他のコンポーネントを追加できます。  
   
  MSI ファイルとその他の展開オプションの詳細については、次を参照してください。[アプリケーション、サービス、および配置コンポーネント](../deployment/deploying-applications-services-and-components.md)です。  
@@ -76,7 +74,7 @@ ms.lasthandoff: 02/09/2018
   
 1.  設定`InstalledByMsi`拡張機能マニフェストでします。 これにより、VSX 防止インストールされ、を除き、MSI をアンインストールできます。 これは、msi ファイル内の他のコンポーネントを含める場合に重要です。  
   
-    1.  Open DslPackage\source.extension.tt  
+    1.  DslPackage\source.extension.tt を開く  
   
     2.  前に、次の行を挿入`<SupportedProducts>`:  
   
@@ -104,7 +102,7 @@ ms.lasthandoff: 02/09/2018
   
      [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] という名前のファイルが作成されます**CreateMsiSetupProject.vdproj**です。  
   
-6.  Windows エクスプローラで、コピー Dsl\\*.vdproj を新しいフォルダーにセットアップをという名前です。  
+6.  Windows エクスプローラで、コピー Dsl\\\*.vdproj を新しいフォルダーにセットアップをという名前です。  
   
      (する場合は、今すぐから除外できます CreateMsiSetupProject.tt Dsl プロジェクトです。)  
   

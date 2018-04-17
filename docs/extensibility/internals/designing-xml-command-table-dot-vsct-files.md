@@ -1,27 +1,23 @@
 ---
-title: "XML コマンド テーブルのデザイン (です。Vsct) ファイル |Microsoft ドキュメント"
-ms.custom: 
+title: XML コマンド テーブルのデザイン (です。Vsct) ファイル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VSCT files, designing
 ms.assetid: bb87a322-bac4-4258-92bc-9a876f05d653
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fcb8533dda001d447fd10fcb69b3cccd6d2d91a1
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 865baa3f7b4b0fe4cbbaf2cdf34e9e8041d5c121
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="designing-xml-command-table-vsct-files"></a>XML コマンド テーブルのデザイン (です。Vsct) ファイル
 XML コマンド テーブル (.vsct) ファイルは、VSPackage のコマンドのアイテムの外観とレイアウトを説明します。 コマンドの項目には、ボタン、コンボ ボックス、メニューのツールバー、およびコマンドのアイテムのグループが含まれます。 このトピックでは、XML コマンド テーブルのファイルへの影響についてコマンド項目、メニューのおよびそれらを作成する方法について説明します。
@@ -127,5 +123,5 @@ XML コマンド テーブル (.vsct) ファイルは、VSPackage のコマン�
 
  コマンドラインを使用してツールを実行**CreateExpInstance/Reset**です。 このツールから削除する、実験用ハイブでは、通常インストールされているすべての登録済み Vspackage に注意してください[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [メニューとコマンドの拡張](../../extensibility/extending-menus-and-commands.md)

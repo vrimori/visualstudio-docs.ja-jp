@@ -1,12 +1,10 @@
 ---
-title: "Ca 2119: プライベート インターフェイスを満たすメソッドをシールします |Microsoft ドキュメント"
-ms.custom: 
+title: 'Ca 2119: プライベート インターフェイスを満たすメソッドをシールします |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - SealMethodsThatSatisfyPrivateInterfaces
 - CA2119
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA2119
 - SealMethodsThatSatisfyPrivateInterfaces
 ms.assetid: 483d02e1-cfaf-4754-a98f-4116df0f3509
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b61a3e81ff7be1ff868f2dd9ce42dd5cb10522cb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 8f54b6c58e30145759881a8a612ad6f7edfd044d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2119-seal-methods-that-satisfy-private-interfaces"></a>CA2119: プライベート インターフェイスを満たすメソッドをシールします
 |||  
@@ -69,6 +67,6 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[FxCop.Security.SealMethods2#1](../code-quality/codesnippet/CSharp/ca2119-seal-methods-that-satisfy-private-interfaces_2.cs)]
  [!code-vb[FxCop.Security.SealMethods2#1](../code-quality/codesnippet/VisualBasic/ca2119-seal-methods-that-satisfy-private-interfaces_2.vb)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インターフェイス](/dotnet/csharp/programming-guide/interfaces/index)   
  [インターフェイス](/dotnet/visual-basic/programming-guide/language-features/interfaces/index)

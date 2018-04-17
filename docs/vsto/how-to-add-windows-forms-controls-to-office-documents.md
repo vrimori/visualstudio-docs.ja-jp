@@ -1,12 +1,10 @@
 ---
-title: "方法: Windows フォーム コントロールの Office ドキュメントへの追加 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: Windows フォーム コントロールの Office ドキュメントへの追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], Windows Forms controls
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 937c64f8fadf8763d4e5b3ad32489262cddafdfd
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: ebd26c78e30e522b3d961d42226fc42825eb2a2d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-windows-forms-controls-to-office-documents"></a>方法 : Office ドキュメントに Windows フォーム コントロールを追加する
   Windows フォーム コントロールは、デザイン時にドキュメント レベルのプロジェクトの Microsoft Office Excel および Microsoft Office Word のドキュメントに追加できます。 実行時には、ドキュメント レベルのカスタマイズと VSTO アドインにコントロールを追加できます。たとえば、ユーザーがオプションの一覧から選択できるように、<xref:Microsoft.Office.Tools.Excel.Controls.ComboBox> コントロールをワークシートに追加できます。  
@@ -40,7 +39,7 @@ ms.lasthandoff: 01/10/2018
   
  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[方法は i: コントロールの追加を実行時にドキュメントの画面に?](http://go.microsoft.com/fwlink/?LinkId=132782)です。  
   
-##  <a name="designtime"></a>デザイン時にコントロールを追加します。  
+##  <a name="designtime"></a> デザイン時にコントロールを追加します。  
  デザイン時にドキュメント レベルのプロジェクトの文書に Windows フォーム コントロールを追加する方法はいくつかあります。  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
@@ -102,10 +101,10 @@ ms.lasthandoff: 01/10/2018
     > [!NOTE]  
     >  Excel 内でコントロールを選択すると、 **数式バー** に  " **=EMBED("WinForms.Control.Host","")**" と表示されます。 このテキストは必要なので、削除しないでください。  
   
-##  <a name="runtimedoclevel"></a>ドキュメント レベルのプロジェクトでの実行時にコントロールを追加します。  
- Windows フォーム コントロールは、実行時にプログラムを使用してドキュメントに追加できます。 Word では、`ThisDocument` クラスの <xref:Microsoft.Office.Tools.Word.DocumentBase.Controls%2A> プロパティのメソッドを使用します。 Excel でのメソッドを使用して、<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A>のプロパティ、 `Sheet`  *n* クラスです。 各メソッドにはいくつかのオーバーロードがあり、それらを使用してさまざまな方法でコントロールの場所を指定できます。  
+##  <a name="runtimedoclevel"></a> ドキュメント レベルのプロジェクトでの実行時にコントロールを追加します。  
+ Windows フォーム コントロールは、実行時にプログラムを使用してドキュメントに追加できます。 Word では、`ThisDocument` クラスの <xref:Microsoft.Office.Tools.Word.DocumentBase.Controls%2A> プロパティのメソッドを使用します。 Excel でのメソッドを使用して、<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A>のプロパティ、 `Sheet` *n*クラスです。 各メソッドにはいくつかのオーバーロードがあり、それらを使用してさまざまな方法でコントロールの場所を指定できます。  
   
- 実行時にドキュメントに Windows フォーム コントロールを追加した場合、ドキュメントが閉じられると、コントロールはドキュメント内に保持されません。 次にドキュメントを開くときに、コントロールを再作成できます。 詳細については、「 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
+ 実行時にドキュメントに Windows フォーム コントロールを追加した場合、ドキュメントが閉じられると、コントロールはドキュメント内に保持されません。 次にドキュメントを開くときに、コントロールを再作成できます。 詳細については、「 [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
   
 #### <a name="to-add-a-windows-forms-control-at-run-time"></a>実行時に Windows フォーム コントロールを追加するには  
   
@@ -116,10 +115,10 @@ ms.lasthandoff: 01/10/2018
      [!code-vb[Trin_VstcoreProgrammingControlsExcel#4](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#4)]
      [!code-csharp[Trin_VstcoreProgrammingControlsExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#4)]  
   
-##  <a name="runtimeaddin"></a>VSTO アドインで実行時にコントロールを追加します。  
+##  <a name="runtimeaddin"></a> VSTO アドインで実行時にコントロールを追加します。  
  Windows フォーム コントロールは、実行時にプログラムを使用して任意の開いているドキュメントに追加できます。 まず、開いているドキュメントかワークシートに基づいたホスト項目を生成します。 次に、Word では、新しいホスト項目の <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> プロパティのメソッドを使用します。 Excel では、新しいホスト項目の <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> プロパティのメソッドを使用します。 各メソッドにはいくつかのオーバーロードがあり、それらを使用してさまざまな方法でコントロールの場所を指定できます。  
   
- 実行時にドキュメントに Windows フォーム コントロールを追加した場合、ドキュメントが閉じられると、コントロールはドキュメント内に保持されません。 次にドキュメントを開くときに、コントロールを再作成できます。 詳細については、「 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
+ 実行時にドキュメントに Windows フォーム コントロールを追加した場合、ドキュメントが閉じられると、コントロールはドキュメント内に保持されません。 次にドキュメントを開くときに、コントロールを再作成できます。 詳細については、「 [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
   
  VSTO アドイン プロジェクトでホスト項目の生成の詳細については、次を参照してください。 [Word 文書や拡張を実行時に VSTO アドイン内の Excel ブック](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)です。  
   
@@ -135,10 +134,10 @@ ms.lasthandoff: 01/10/2018
      [!code-vb[Trin_WordAddInDynamicControls#7](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#7)]
      [!code-csharp[Trin_WordAddInDynamicControls#7](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#7)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Windows フォームでコントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   
  [方法: ワークシートのセル内のコントロールのサイズを変更します。](../vsto/how-to-resize-controls-within-worksheet-cells.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
   

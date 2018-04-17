@@ -1,27 +1,23 @@
 ---
-title: "方法: を作成します。Vsct ファイル |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: を作成します。Vsct ファイル |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VSCT files, creating
 ms.assetid: b955f51c-f9f9-49c3-a8e4-63b6eb0e0341
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b64d9b35030a18a6258de52ed0f12f9796044ba5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c6456b0b866f08956862fa197719354bedf0ecf6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-vsct-file"></a>方法: を作成します。Vsct ファイル  
   
@@ -102,9 +98,9 @@ Visual Studio コマンド テーブルの XML ベースの構成 (.vsct) ファ
   
 3.  Visual Studio コマンド プロンプトで、.cto ファイルと .ctsym ファイルが保存されているディレクトリに移動します。  
   
-4.  「 **vsct.exe** *ctofilename***.cto** *vsctfilename***.vsct -S***symfilename***.ctsym**」と入力します。  
+4.  型**vsct.exe** *ctofilename * * * .cto** * vsctfilename***.vsct-s***symfilename ***.ctsym**です。  
   
-     `ctofilename`.cto ファイルの名前を指定`vsctfilename`を作成する vsct ファイルの名前を指定し、 `symfilename` .ctsym ファイルの名前を指定します。  
+     `ctofilename` .cto ファイルの名前を指定`vsctfilename`を作成する vsct ファイルの名前を指定し、 `symfilename` .ctsym ファイルの名前を指定します。  
   
      このプロセスによって、新しい .vsct XML コマンド テーブル コンパイラ ファイルが作成されます。 他の .vsct ファイルと同様に、vsct.exe (vsct コンパイラ) を使用して、ファイルを編集およびコンパイルできます。  
   
@@ -150,7 +146,7 @@ Visual Studio コマンド テーブルの XML ベースの構成 (.vsct) ファ
   
      最初のパラメーター値は、プロジェクト ファイルで定義されている ResourceName 属性の値に一致する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [作成します。Vsct ファイル](../../extensibility/internals/authoring-dot-vsct-files.md)   
  [Visual Studio コマンド テーブル (です。Vsct) ファイル](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
  [VSCT XML スキーマ リファレンス](../../extensibility/vsct-xml-schema-reference.md)

@@ -1,13 +1,10 @@
 ---
-title: "IManagedAddin::Unload |Microsoft ドキュメント"
-ms.custom: 
+title: IManagedAddin::Unload |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - Unload method
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: aadf5235eb64c14b14f7241b4fd2b89b0a9887da
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 76070f520e4e9d1f331cf6799c5d751774c37b16
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="imanagedaddinunload"></a>IManagedAddin::Unload
   管理対象の VSTO アドインがアンロードされる直前に呼び出されます。  
@@ -39,7 +36,7 @@ HRESULT Unload();
 ## <a name="remarks"></a>コメント  
  このメソッドは、Microsoft Office の現在のバージョンでは呼び出されません。 このメソッドは将来使用するために予約されています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IManagedAddin Interface](../vsto/imanagedaddin-interface.md)   
  [IManagedAddin::Load](../vsto/imanagedaddin-load.md)  
   

@@ -1,12 +1,10 @@
 ---
-title: "ドキュメントの操作 |Microsoft ドキュメント"
-ms.custom: 
+title: ドキュメントの操作 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - Word [Office development in Visual Studio], document common tasks
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: a83d5649520a4fec61fa8a7f40bd337923908c78
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 1e043c847a13051cd4475bdd04e9448ba4d45e07
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-documents"></a>文書の操作
   このセクションのトピックでは、Microsoft Office Word のオブジェクト モデルを使用して Office プロジェクト内の文書を操作する手順とコード例を示します。  
@@ -45,8 +44,8 @@ ms.lasthandoff: 01/10/2018
 |文書にヘッダーまたはフッターを追加します。|[方法: プログラムによって文書にヘッダーおよびフッターを追加する](../vsto/how-to-programmatically-add-headers-and-footers-to-documents.md)|  
 |文書からすべてのコメントを削除します。|[方法: プログラムによって文書からすべてのコメントを削除する](../vsto/how-to-programmatically-remove-all-comments-from-documents.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)   
- [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)  
+ [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)  
   
   

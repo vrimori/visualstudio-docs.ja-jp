@@ -1,23 +1,21 @@
 ---
-title: "カスタマイズとドメイン固有言語を拡張 |Microsoft ドキュメント"
-ms.custom: 
+title: カスタマイズとドメイン固有言語を拡張 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, creating solutions
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 7617deb73ecaec835b0100d243b75bc26fd54a17
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 4c1c0301f48997e834e9a707f660db42580ae203
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customizing-and-extending-a-domain-specific-language"></a>ドメイン固有言語のカスタマイズおよび拡張
 Visual Studio のモデリングと視覚エフェクト SDK (VMSDK) は、いくつかのレベルをモデリング ツールを定義することができますを提供します。  
@@ -33,7 +31,7 @@ Visual Studio のモデリングと視覚エフェクト SDK (VMSDK) は、い�
 > [!NOTE]
 >  DSL 定義ファイルを更新したら、忘れずにをクリックして**すべてのテンプレートの変換**ソリューションを再構築する前にソリューション エクスプ ローラーのツールバーにします。  
   
-##  <a name="customShapes"></a>このセクションの内容  
+##  <a name="customShapes"></a> このセクションの内容  
   
 |この特殊効果を実現するために|このトピックを参照してください。|  
 |----------------------------|-------------------------|  
@@ -55,9 +53,9 @@ Visual Studio のモデリングと視覚エフェクト SDK (VMSDK) は、い�
 |コピー、切り取りと貼り付けを有効にします。|設定、**コピーの貼り付けを有効にする**のプロパティ、**エディター** DSL のエクスプ ローラーでノード。|  
 |要素がコピーされるたびに、参照先のリンクとターゲットをコピーします。 たとえば、項目に添付されたコメントをコピーします。|設定、**伝達コピー** (DSL 定義ダイアグラム内のドメイン リレーションシップの一方の側にある行で表される)、ソース ロールのプロパティです。<br /><br /> 複雑な効果を実現する ProcessOnCopy をオーバーライドするコードを記述します。<br /><br /> 参照してください[コピー動作をカスタマイズする](../modeling/customizing-copy-behavior.md)です。|  
 |削除、親の変更、または要素が削除されたときに、関連する要素をリンクし直します。|設定、**削除伝達**リレーションシップ ロールの値。 複雑な効果は、オーバーライド`ShouldVisitRelationship`と`ShouldVisitRolePlayer`内のメソッド、`MyDslDeleteClosure`で定義されたクラス**DomainModel.cs**<br /><br /> 参照してください[削除動作をカスタマイズします。](../modeling/customizing-deletion-behavior.md)|  
-|図形のレイアウトと外観にコピーし、ドラッグ アンド ドロップを保持します。|コピーする図形とコネクタを追加`ElementGroupPrototype`です。 オーバーライドする最も便利な方法します。`ElementOperations.CreateElementGroupPrototype()`<br /><br /> 参照してください[コピー動作をカスタマイズする](../modeling/customizing-copy-behavior.md)です。|  
+|図形のレイアウトと外観にコピーし、ドラッグ アンド ドロップを保持します。|コピーする図形とコネクタを追加`ElementGroupPrototype`です。 オーバーライドする最も便利な方法します。 `ElementOperations.CreateElementGroupPrototype()`<br /><br /> 参照してください[コピー動作をカスタマイズする](../modeling/customizing-copy-behavior.md)です。|  
 |現在のカーソル位置など、選択した場所に図形を貼り付けます。|オーバーライド`ClipboardCommandSet.ProcessOnCopy()`の場所に固有のバージョンを使用する`ElementOperations.Merge().`を参照してください[コピー動作のカスタマイズ](../modeling/customizing-copy-behavior.md)です。|  
-|貼り付け時にその他のリンクを作成します。|ClipboardCommandSet.ProcessOnPasteCommand() をオーバーライドします。|  
+|貼り付け時にその他のリンクを作成します。|Override ClipboardCommandSet.ProcessOnPasteCommand()|  
 |ドラッグを有効にして、この図は、他の Dsl や Windows から要素を削除します。|参照してください[する方法: ドラッグ アンド ドロップのハンドラーを追加](../modeling/how-to-add-a-drag-and-drop-handler.md)|  
 |親をドラッグした場合と、図形やポートなどの子の図形にドラッグすることをツールを許可します。|ターゲット オブジェクト クラスの親にドロップされたオブジェクトを転送するには、要素のマージ ディレクティブを定義します。 参照してください[要素の作成および移動をカスタマイズする](../modeling/customizing-element-creation-and-movement.md)です。|  
 |図形やツールを図形にドラッグし、その他のリンクがあるを許可するか、作成されたオブジェクト。 たとえば、リンクされているあるアイテムの上にドロップされるコメントを許可するには、です。|クラスを定義する要素のマージ ディレクティブ、ターゲット ドメイン、およびを生成するリンクを定義します。 複雑な場合は、カスタム コードを追加することができます。 参照してください[要素の作成および移動をカスタマイズする](../modeling/customizing-element-creation-and-movement.md)です。|  

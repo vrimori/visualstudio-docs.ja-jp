@@ -1,12 +1,10 @@
 ---
-title: "関数パラメーターおよび戻り値の注釈を付ける |Microsoft ドキュメント"
-ms.custom: 
+title: 関数パラメーターおよび戻り値の注釈を付ける |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - _Outptr_opt_result_bytebuffer_to_
 - _Inout_updates_all_opt_
@@ -125,16 +123,16 @@ f1_keywords:
 - _Result_nullonfailure_
 - _Ret_null_
 ms.assetid: 82826a3d-0c81-421c-8ffe-4072555dca3a
-caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: ac25f8bbda4431850f613f2b41b1d9ed4908c118
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: daeed5dd92116af4346cd8aa2086e6a3dd3af216
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>関数パラメーターおよび戻り値の注釈設定
 単純な関数のパラメーターの注釈の典型的な使用方法を説明 — スカラー、および構造体とクラスへのポインター- とほとんどの種類のバッファー。  注釈の一般的な使用パターンについても説明します。 関数に関連付けられている注釈を追加している、次を参照してください[に注釈を付ける関数の動作。](../code-quality/annotating-function-behavior.md)  
@@ -188,7 +186,7 @@ ms.lasthandoff: 12/22/2017
   
      `typedef _Null_terminated_ wchar_t *PWSTR; void MyStringCopy(_Out_writes_ (size) PWSTR p1,    _In_ size_t size,    _In_ PWSTR p2);`  
   
-     この例では、呼び出し元がのバッファーを提供`size`要素`p1`です。  `MyStringCopy`有効なにより、それらの要素の一部です。 さらに、`_Null_terminated_`注釈で`PWSTR`ことを意味`p1`後の状態では、null で終わる。  この方法で有効な要素の数が引き続き適切に定義されたが、特定の要素の数は必要ありません。  
+     この例では、呼び出し元がのバッファーを提供`size`要素`p1`です。  `MyStringCopy` 有効なにより、それらの要素の一部です。 さらに、`_Null_terminated_`注釈で`PWSTR`ことを意味`p1`後の状態では、null で終わる。  この方法で有効な要素の数が引き続き適切に定義されたが、特定の要素の数は必要ありません。  
   
      `_bytes_`バリアントは要素ではなくバイトで、サイズを示します。 サイズは要素として表現できない場合にのみに使用します。  たとえば、`char`の文字列、`_bytes_`バリアントが類似関数の場合にのみ使用`wchar_t`はします。  
   
@@ -220,7 +218,7 @@ ms.lasthandoff: 12/22/2017
   
      `_Out_writes_to_(_Old_(s), _Old_(s))    _Out_writes_bytes_to_(_Old_(s), _Old_(s))`  
   
-     つまり、すべての要素まで、バッファー内に存在する`s`前の状態が有効な後の状態にします。  例:  
+     つまり、すべての要素まで、バッファー内に存在する`s`前の状態が有効な後の状態にします。  例えば:  
   
      `void *memcpy(_Out_writes_bytes_all_(s) char *p1,    _In_reads_bytes_(s) char *p2,    _In_ int s); void * wordcpy(_Out_writes_all_(s) DWORD *p1,     _In_reads_(s) DWORD *p2,    _In_ int s);`  
   
@@ -248,7 +246,7 @@ ms.lasthandoff: 12/22/2017
   
      `_Out_writes_to_(_Old_(s), _Old_(s))    _Out_writes_bytes_to_(_Old_(s), _Old_(s))`  
   
-     つまり、すべての要素まで、バッファー内に存在する`s`前の状態が有効な後の状態にします。  例:  
+     つまり、すべての要素まで、バッファー内に存在する`s`前の状態が有効な後の状態にします。  例えば:  
   
      `void *memcpy(_Out_writes_bytes_all_(s) char *p1,    _In_reads_bytes_(s) char *p2,    _In_ int s); void * wordcpy(_Out_writes_all_(s) DWORD *p1,     _In_reads_(s) DWORD *p2,    _In_ int s);`  
   
@@ -485,7 +483,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `_Struct_size_bytes_(size)`  
   
-     構造体またはクラス宣言に適用されます。  その型の有効なオブジェクトをバイト数で指定されていると、宣言された型よりも大きいする可能性があることを示します`size`です。  例:  
+     構造体またはクラス宣言に適用されます。  その型の有効なオブジェクトをバイト数で指定されていると、宣言された型よりも大きいする可能性があることを示します`size`です。  例えば:  
   
      `typedef _Struct_size_bytes_(nSize) struct MyStruct {    size_t nSize;    ... };`  
   
@@ -496,7 +494,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="related-resources"></a>関連資料  
  [コード分析チームのブログ](http://go.microsoft.com/fwlink/?LinkId=251197)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C/C++ コード障害を減らす SAL 注釈の使用](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [SAL について](../code-quality/understanding-sal.md)   
  [関数の動作に注釈を付ける](../code-quality/annotating-function-behavior.md)   

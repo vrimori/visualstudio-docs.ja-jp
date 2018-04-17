@@ -1,35 +1,31 @@
 ---
-title: "IDebugReference2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugReference2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugReference2
 helpviewer_keywords:
 - IDebugReference2 interface
 ms.assetid: 3cfed312-f532-4bce-84a5-1677c14567d7
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 30f3b8351789adbb52651909cf9ff3b669934d66
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fb5d5d8b3ab6e608a2454847fc9ec27e384777bc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugreference2"></a>IDebugReference2
 このインターフェイスは、スタック フレームのプロパティまたはその他のいくつかのプロパティへの参照を表します。  
   
 > [!NOTE]
->  `IDebugReference2`将来使用して、そのメソッドが返す必要がありますすべてに予約されている`E_NOTIMPL`です。  
+>  `IDebugReference2` 将来使用して、そのメソッドが返す必要がありますすべてに予約されている`E_NOTIMPL`です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -71,14 +67,14 @@ IDebugReference2 : IUnknown
   
  `IDebugProperty2`名前、型、およびアドレスの値としてのインターフェイスを考えることができます。 `IDebugReference2`、別のに対して、型、およびアドレスと見なすことができます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   

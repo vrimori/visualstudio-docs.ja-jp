@@ -1,11 +1,8 @@
 ---
-title: "データを保存する前にデータ バインド コントロールでの中の編集をコミット |Microsoft ドキュメント"
-ms.custom: 
+title: データを保存する前にデータ バインド コントロールでの中の編集をコミット |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,17 +14,17 @@ helpviewer_keywords:
 - BindingSource class, commiting edited records
 - EndEdit method
 ms.assetid: 61af4798-eef7-468c-b229-5e1497febb2f
-caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 38d50f1e3da0004869ae66df8e486affa1b68c2d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: ffc192d5afc8540c60712192dc6d1af6135a2d66
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="commit-in-process-edits-on-data-bound-controls-before-saving-data"></a>データを保存する前にデータ バインド コントロールでの中の編集をコミットします。
 データ バインド コントロール内の値を編集するには、ユーザーが更新された値に、コントロールがバインドされている、基になるデータ ソースにコミットする現在のレコードに移動する必要があります。 項目をドラッグすると、[データ ソース ウィンドウ](add-new-data-sources.md)、フォームに最初の項目を削除するにのコードを生成、**保存**ボタン クリックしてイベントの<xref:System.Windows.Forms.BindingNavigator>です。 このコードを呼び出す、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>のメソッド、<xref:System.Windows.Forms.BindingSource>です。 呼び出し、そのため、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>メソッドは、最初にのみ生成<xref:System.Windows.Forms.BindingSource>ですが、フォームに追加します。  
@@ -53,6 +50,6 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[VSProDataOrcasEndEditOnAll#2](../data-tools/codesnippet/CSharp/commit-in-process-edits-on-data-bound-controls-before-saving-data_2.cs)]
      [!code-vb[VSProDataOrcasEndEditOnAll#2](../data-tools/codesnippet/VisualBasic/commit-in-process-edits-on-data-bound-controls-before-saving-data_2.vb)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
  [階層更新](../data-tools/hierarchical-update.md)

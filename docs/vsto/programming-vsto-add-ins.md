@@ -1,13 +1,10 @@
 ---
-title: "VSTO アドインのプログラミング |Microsoft ドキュメント"
-ms.custom: 
+title: VSTO アドインのプログラミング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VST.ProjectItem.Addin
 - VST.ProjectItem.AddinProject
@@ -35,14 +32,14 @@ helpviewer_keywords:
 - ThisAddIn_Shutdown
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 58b6d40e2da962587b44e4b73c8331b3fba5590f
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 192b366b4d41fed0baf0cca4af8e57fa00dc249a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="programming-vsto-add-ins"></a>VSTO アドインのプログラミング
   VSTO アドインを作成して Microsoft Office アプリケーションを拡張するときは、プロジェクトの `ThisAddIn` クラスに対して直接コードを記述します。 このクラスを使用し、Microsoft Office ホスト アプリケーションのオブジェクト モデルにアクセスする、アプリケーションのユーザー インターフェイス (UI) をカスタマイズする、その他の Office ソリューションに VSTO アドインのオブジェクトを公開するなどの作業を実行できます。  
@@ -51,7 +48,7 @@ ms.lasthandoff: 01/10/2018
   
  VSTO アドイン プロジェクトのコードの記述には、Visual Studio の他のプロジェクトの種類とは異なる点があります。 相違点の多くは、Office オブジェクト モデルがマネージ コードに公開される方法に起因しています。 詳細については、「 [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)」を参照してください。  
   
- Visual Studio での Office 開発ツールを使用して作成できる VSTO アドインと他の種類のソリューションに関する全般については、次を参照してください。 [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md).  
+ Visual Studio での Office 開発ツールを使用して作成できる VSTO アドインと他の種類のソリューションに関する全般については、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)です。  
   
 ## <a name="using-the-thisaddin-class"></a>ThisAddIn クラスを使用する  
  VSTO アドイン コードの記述は `ThisAddIn` クラスから開始することができます。 Visual Studio は、VSTO アドイン プロジェクトの ThisAddIn.vb ( [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]の場合) または ThisAddIn.cs (C# の場合) でこのクラスを自動生成します。 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は、Microsoft Office アプリケーションが VSTO アドインを読み込むと、このクラスを自動的にインスタンス化します。  
@@ -148,7 +145,7 @@ Excel.Workbook newWorkbook = Globals.ThisAddIn.Application.Workbooks.Add(System.
   
  詳細については、「 [その他の Office ソリューションから VSTO アドインのコードを呼び出す](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションの開発](../vsto/developing-office-solutions.md)   
  [実行時の Word 文書と VSTO アドイン内の Excel ブックの拡張](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
  [他の Office ソリューションから VSTO アドインのコードを呼び出す](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)   

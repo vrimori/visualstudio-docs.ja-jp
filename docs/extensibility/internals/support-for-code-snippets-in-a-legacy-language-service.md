@@ -1,27 +1,25 @@
 ---
-title: "従来の言語サービスでのコード スニペットのサポート |Microsoft ドキュメント"
-ms.custom: 
+title: 従来の言語サービスでのコード スニペットのサポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - snippets, supporting in language services
 - code snippets, supporting in language services [managed package framework]
 - language services [managed package framework], supporting code snippets
 ms.assetid: 7490325b-acee-4c2d-ac56-1cd5db1a1083
-caps.latest.revision: "28"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 6102a5bb6298cd6403285e3d36842424b0be3412
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: eb62481b9ba2c42ed067275480ba137b151a483b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="support-for-code-snippets-in-a-legacy-language-service"></a>従来の言語サービスでのコード スニペットのサポート
 コード スニペットは、ソース ファイルに挿入するコードの一部です。 自体は、一連のフィールドに XML ベースのテンプレートです。 これらのフィールドは、スニペットが挿入され、スニペットを挿入するコンテキストに応じて異なる値を持つことができますに強調表示されます。 スニペットの挿入後にすぐに、言語サービスは、スニペットを書式設定できます。  
@@ -392,7 +390,7 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レガシ言語サービス機能](../../extensibility/internals/legacy-language-service-features1.md)   
  [レガシ言語サービスを登録します。](../../extensibility/internals/registering-a-legacy-language-service1.md)   
  [コード スニペット](../../ide/code-snippets.md)   

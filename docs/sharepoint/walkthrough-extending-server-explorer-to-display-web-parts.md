@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: サーバー エクスプ ローラー Web パーツ表示するための拡張 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: サーバー エクスプ ローラー Web パーツ表示するための拡張 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - SharePoint Connections [SharePoint development in Visual Studio], creating a new node type
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: e8b613f19a23bdb60452b50cf927af08b399d180
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 34975f93b719c759707110907a3c19dabbd661c1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-extending-server-explorer-to-display-web-parts"></a>チュートリアル: サーバー エクスプローラーを拡張して Web パーツを表示する
   Visual Studio で、使用することができます、 **SharePoint 接続**のノード**サーバー エクスプ ローラー**を SharePoint サイト上のコンポーネントを表示します。 ただし、**サーバー エクスプ ローラー**既定では一部のコンポーネントが表示されません。 このチュートリアルで拡張する**サーバー エクスプ ローラー** SharePoint サイトが接続されている各 Web パーツ ギャラリーで表示するようです。  
@@ -84,7 +83,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  選択、 **VSIX プロジェクト**名では、プロジェクト テンプレートは、 **WebPartNode**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **WebPartNode**プロジェクトを**ソリューション エクスプ ローラー**です。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **WebPartNode**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
 #### <a name="to-create-the-extension-project"></a>拡張機能プロジェクトを作成するには  
   
@@ -96,7 +95,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  プロジェクト テンプレートの一覧で選択**クラス ライブラリ**、プロジェクトに名前を**WebPartNodeExtension**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **WebPartNodeExtension**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **WebPartNodeExtension**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
   
 5.  Class1 コード ファイルをプロジェクトから削除します。  
   
@@ -112,7 +111,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  プロジェクト テンプレートの一覧で選択**クラス ライブラリ**、プロジェクトに名前を**WebPartCommands**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **WebPartCommands**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **WebPartCommands**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
   
 6.  Class1 コード ファイルをプロジェクトから削除します。  
   
@@ -159,7 +158,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  横の矢印を選択、**追加**ボタンをクリックし、**リンクとして追加**表示されるメニュー。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]WebPartCommands プロジェクトへのリンクとしてコード ファイルを追加します。 この結果、WebPartNodeExtension プロジェクト内のコード ファイルにあるが、ファイル内のコードは WebPartCommands プロジェクトでもコンパイルします。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] WebPartCommands プロジェクトへのリンクとしてコード ファイルを追加します。 この結果、WebPartNodeExtension プロジェクト内のコード ファイルにあるが、ファイル内のコードは WebPartCommands プロジェクトでもコンパイルします。  
   
 5.  ショートカット メニューを開き、 **WebPartCommands**プロジェクトをもう一度、**参照の追加**です。  
   
@@ -188,7 +187,7 @@ ms.lasthandoff: 01/10/2018
   
 3.  選択、**リソース** タブをクリックして、**このプロジェクトに既定のリソース ファイルが含まれていません。作成するのにはここをクリックして**リンクします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]リソース ファイルを作成し、デザイナーで開かれます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] リソース ファイルを作成し、デザイナーで開かれます。  
   
 4.  デザイナーの上部にあるに横に矢印をクリックして、**リソースの追加**メニュー コマンドを使用し、**新しいアイコンの追加**表示されるメニュー。  
   
@@ -343,7 +342,7 @@ ms.lasthandoff: 01/10/2018
   
     2.  **[SharePoint 接続の追加**] ダイアログ ボックスで、接続し、順に選択する SharePoint サイトの URL を入力、 **OK**ボタンをクリックします。  
   
-         開発用コンピューター上には、SharePoint サイトを指定するには、入力**http://localhost**です。  
+         開発用コンピューター上には、SharePoint サイトを指定するには、入力 **http://localhost**です。  
   
 3.  サイト接続ノード (サイトの URL が表示されます) を展開し、サイトの子ノードを展開 (たとえば、**チーム サイト**)。  
   
@@ -374,10 +373,10 @@ ms.lasthandoff: 01/10/2018
   
 4.  Visual Studio (実験用インスタンスおよび WebPartNode ソリューションが開いている Visual Studio のインスタンス) の両方のインスタンスを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバー エクスプ ローラーで SharePoint 接続 ノードを拡張します。](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
  [チュートリアル: サーバー エクスプ ローラー拡張機能に SharePoint クライアント オブジェクト モデルを呼び出す](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)   
  [アイコン用イメージ エディター](/cpp/windows/image-editor-for-icons)   
- [アイコン &#41; のアイコンまたはその他のイメージ (&) #40 です。 イメージ エディターを作成します。](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
+ [アイコンまたはその他のイメージの作成&#40;アイコン用イメージ エディター&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
   
   

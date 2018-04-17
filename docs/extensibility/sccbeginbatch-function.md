@@ -1,29 +1,25 @@
 ---
-title: "SccBeginBatch 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: SccBeginBatch 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccBeginBatch
 helpviewer_keywords:
 - SccBeginBatch function
 ms.assetid: 33968183-2e15-4e0d-955b-ca12212d1c25
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d6415953a350321cb13f2705fa2bb182c278faa3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5350484294d02356301839e38b97bea1d40ec27c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccbeginbatch-function"></a>SccBeginBatch 関数
 この関数は、ソース管理操作のバッチ シーケンスを開始します。 [SccEndBatch](../extensibility/sccendbatch-function.md)バッチを終了するのには、呼び出されます。 これらのバッチは、入れ子にできません。  
@@ -46,10 +42,10 @@ SCCRTN SccBeginBatch(void);
 |SCC_E_UNKNOWNERROR|不特定のエラーです。|  
   
 ## <a name="remarks"></a>コメント  
- ソース コントロールのバッチを使用して、複数のプロジェクトまたは複数のコンテキストで同じ操作を実行できます。 バッチ操作中に、ユーザー エクスペリエンスから冗長なプロジェクトごとのダイアログ ボックスを回避するのには、バッチを使用できます。 `SccBeginBatch`関数および[SccEndBatch](../extensibility/sccendbatch-function.md)の先頭と末尾の操作を示すために関数のペアとして使用されます。 入れ子にできません。 `SccBeginBatch`バッチ操作が進行中であることを示すフラグを設定します。  
+ ソース コントロールのバッチを使用して、複数のプロジェクトまたは複数のコンテキストで同じ操作を実行できます。 バッチ操作中に、ユーザー エクスペリエンスから冗長なプロジェクトごとのダイアログ ボックスを回避するのには、バッチを使用できます。 `SccBeginBatch`関数および[SccEndBatch](../extensibility/sccendbatch-function.md)の先頭と末尾の操作を示すために関数のペアとして使用されます。 入れ子にできません。 `SccBeginBatch` バッチ操作が進行中であることを示すフラグを設定します。  
   
  バッチ操作の実行中に、ソース管理プラグインをユーザーに最大で質問については、1 つのダイアログ ボックスを表示し、すべての後続の演算でこのダイアログ ボックスからの応答を適用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccEndBatch](../extensibility/sccendbatch-function.md)

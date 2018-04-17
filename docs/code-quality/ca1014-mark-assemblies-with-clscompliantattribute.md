@@ -1,12 +1,10 @@
 ---
-title: "Ca 1014: アセンブリに CLSCompliantAttribute をマーク |Microsoft ドキュメント"
-ms.custom: 
+title: 'Ca 1014: アセンブリに CLSCompliantAttribute をマーク |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1014
 - MarkAssembliesWithClsCompliant
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1014
 - MarkAssembliesWithClsCompliant
 ms.assetid: 4fe57449-cf45-4745-bcd2-6345f1ed266d
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d68fa549775b3e3a4a6831e3fb82188367725d0b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: a0cd4c7927dea9ae876cb1cb53d44ddc7f9c6bba
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1014-mark-assemblies-with-clscompliantattribute"></a>CA1014: アセンブリに CLSCompliantAttribute を設定します
 |||  
@@ -54,6 +52,6 @@ ms.lasthandoff: 12/22/2017
  [!code-cpp[FxCop.Design.AssembliesCls#1](../code-quality/codesnippet/CPP/ca1014-mark-assemblies-with-clscompliantattribute_1.cpp)]
  [!code-vb[FxCop.Design.AssembliesCls#1](../code-quality/codesnippet/VisualBasic/ca1014-mark-assemblies-with-clscompliantattribute_1.vb)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.CLSCompliantAttribute?displayProperty=fullName>   
  [言語への非依存性、および言語非依存コンポーネント](/dotnet/standard/language-independence-and-language-independent-components)

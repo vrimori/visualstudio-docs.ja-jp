@@ -1,10 +1,8 @@
 ---
-title: "DGML ファイルを編集してコード マップをカスタマイズする |Microsoft ドキュメント"
-ms.custom: 
+title: DGML ファイルを編集してコード マップをカスタマイズする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dependency graphs, creating path aliases
 - dependency graphs, linking items to nodes
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - dependency graphs, assigning categories and properties
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a0000482b34ea3c98ac6467cbebccc83bd8b5a74
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 2a23bc9b82941fda5a771f49a2aaf5c944a210bf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customize-code-maps-by-editing-the-dgml-files"></a>DGML ファイルを編集してコード マップをカスタマイズする
 コード マップをカスタマイズするには、マップの Directed Graph Markup Language (.dgml) ファイルを編集できます。 たとえば、要素を編集してカスタム スタイルを指定したり、コード要素とリンクにプロパティおよびカテゴリを割り当てたり、コード要素やリンクにドキュメントや URL をリンクしたりすることができます。 DGML 要素の詳細については、次を参照してください。[向け Graph Markup Language (DGML) リファレンス](../modeling/directed-graph-markup-language-dgml-reference.md)です。  
@@ -38,14 +36,14 @@ ms.lasthandoff: 02/09/2018
 > [!NOTE]
 >  コード マップを作成するには、Visual Studio Enterprise が必要です。 Visual Studio でコード マップを編集する場合、.dgml ファイルを保存すると、未使用の DGML 要素および属性が削除されクリーンアップされます。 また、新しいリンクを手動で追加すると、コード要素が自動的に作成されます。 .dgml ファイルを保存すると、要素に追加した属性によって、自身がアルファベット順に並べ替えられる場合があります。  
   
-##  <a name="OrganizeNodes"></a>コード要素をグループ化  
+##  <a name="OrganizeNodes"></a> コード要素をグループ化  
  新しいグループを追加したり、既存のノードをグループに変換したりすることができます。  
   
 1.  テキスト エディターまたは XML エディターで、.dgml ファイルを開きます。  
   
 2.  コード要素をグループに変換するには、そのコード要素の `<Node/>` 要素を見つけます。  
   
-     \- または  
+     \- または -  
   
      新しいグループを追加するには、`<Nodes>` セクションを見つけます。 新しい `<Node/>` 要素を追加します。  
   
@@ -66,7 +64,7 @@ ms.lasthandoff: 02/09/2018
   
     -   グループ コード要素とその子コード要素との間の `Category` リレーションシップを指定する `Contains` 属性  
   
-     例:  
+     例えば:  
   
     ```xml  
     <Links>  
@@ -79,7 +77,7 @@ ms.lasthandoff: 02/09/2018
   
      詳細については、`Category`属性は、「[コード要素とリンク カテゴリを割り当てる](#AssignCategories)です。  
   
-##  <a name="ChangeGraphStyle"></a>マップのスタイルを変更します。  
+##  <a name="ChangeGraphStyle"></a> マップのスタイルを変更します。  
  マップの .dgml ファイルを編集することで、マップの背景色および境界線の色を変更できます。 コード要素とのリンクのスタイルを変更するを参照してください。[コード要素とのリンクのスタイルを変更](#Highlight)です。  
   
 1.  テキスト エディターまたは XML エディターで、.dgml ファイルを開きます。  
@@ -98,7 +96,7 @@ ms.lasthandoff: 02/09/2018
     Stroke="StrokeValue"  
     ```  
   
-     例:  
+     例えば:  
   
     ```xml  
     <DirectedGraph Background="Green" xmlns="http://schemas.microsoft.com/vs/2009/dgml" >  
@@ -107,7 +105,7 @@ ms.lasthandoff: 02/09/2018
     </DirectedGraph>  
     ```  
   
-##  <a name="Highlight"></a>コード要素とリンクのスタイルを変更します。  
+##  <a name="Highlight"></a> コード要素とリンクのスタイルを変更します。  
   
 ###  <a name="CreateCustomStyles"></a>   
  次のコード要素にカスタム スタイルを適用できます。  
@@ -268,7 +266,7 @@ ms.lasthandoff: 02/09/2018
   
 2.  `<Style/>` 要素に、`<Condition/>` 属性を含む `Expression` 要素を追加して、ブール値を返す式を指定します。  
   
-     例:  
+     例えば:  
   
     ```xml  
     <Condition Expression="MyCategory"/>  
@@ -302,15 +300,15 @@ ms.lasthandoff: 02/09/2018
   
      <MethodCall> ::= <Identifier> "(" <MethodArgs> ")"  
   
-     <PropertyGet>: = 識別子  
+     <PropertyGet> : = 識別子  
   
      <MethodArgs> ::= <Expression> &#124; <Expression> "," <MethodArgs> &#124; <empty>  
   
      <Identifier> ::= [^. ]*  
   
-     <Literal>: = 一重引用符または二重引用符で囲まれた文字列リテラル  
+     <Literal> : = 一重引用符または二重引用符で囲まれた文字列リテラル  
   
-     <Number>: = オプションで小数点と桁の文字列  
+     <Number> : = オプションで小数点と桁の文字列  
   
      複数を指定することができます`<Condition/>`要素で、すべて必要があります、スタイルを適用する場合は true です。  
   
@@ -437,7 +435,7 @@ ms.lasthandoff: 02/09/2018
 </DirectedGraph>  
 ```  
   
-##  <a name="AssignProperties"></a>コード要素とのリンクにプロパティを割り当てる  
+##  <a name="AssignProperties"></a> コード要素とのリンクにプロパティを割り当てる  
  コード要素およびリンクにプロパティを割り当てることで、コード要素およびリンクを編成できます。 たとえば、特定のプロパティを持つコード要素を選択して、それらのグループ化、スタイルの変更、または非表示化を実行できます。  
   
 #### <a name="to-assign-a-property-to-a-code-element"></a>コード要素にプロパティを割り当てるには  
@@ -482,7 +480,7 @@ ms.lasthandoff: 02/09/2018
     </Properties>  
     ```  
   
-##  <a name="AssignCategories"></a>コード要素とのリンクにカテゴリを割り当てる  
+##  <a name="AssignCategories"></a> コード要素とのリンクにカテゴリを割り当てる  
  次のセクションでは、コード要素にカテゴリを割り当てることでコード要素を整理する方法と、コード要素を編成したり子カテゴリに属性を追加したりするのに役立つ階層カテゴリを継承を使用して作成する方法について説明します。  
   
 #### <a name="to-assign-a-category-to-a-code-element"></a>コード要素にカテゴリを割り当てるには  
@@ -553,7 +551,7 @@ ms.lasthandoff: 02/09/2018
   
      この例では、`MyFirstNode` の背景は緑色になります。これは、その `Category` 属性が `Background` の `MyParentCategory` 属性を継承するためです。  
   
-##  <a name="AddReferences"></a>ドキュメントのリンクまたはコード要素とリンクする Url  
+##  <a name="AddReferences"></a> ドキュメントのリンクまたはコード要素とリンクする Url  
  マップの .dgml ファイルを編集したり `Reference` 属性をコード要素の `<Node/>` 要素またはリンクの `<Link/>` 要素に追加することで、ドキュメントまたは URL をコード要素またはリンクに対してリンク付けできます。 これで、そのコンテンツをコード要素またはリンクから開いて参照できるようになります。 `Reference` 属性では、そのコンテンツのパスを指定します。 これには、.dgml ファイルの場所に対する相対パス、または絶対パスを使用できます。  
   
 > [!CAUTION]
@@ -609,7 +607,7 @@ ms.lasthandoff: 02/09/2018
   
         4.  使用して、`Label`コード要素の上の表示テキストを指定する属性**参照へジャンプ**ショートカット メニュー。  
   
-     例:  
+     例えば:  
   
     ```xml  
     <Nodes>  
@@ -640,7 +638,7 @@ ms.lasthandoff: 02/09/2018
   
 5.  マップから参照先のコード要素を表示するには、コード要素またはリンクのショートカット メニューを開きます。 選択**参照へジャンプ**とし、コード要素です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソリューション間の依存関係をマップします。](../modeling/map-dependencies-across-your-solutions.md)   
  [コード マップを使用してアプリケーションをデバッグするには](../modeling/use-code-maps-to-debug-your-applications.md)   
  [コード マップ アナライザーを使用して潜在的な問題を検索します。](../modeling/find-potential-problems-using-code-map-analyzers.md)   

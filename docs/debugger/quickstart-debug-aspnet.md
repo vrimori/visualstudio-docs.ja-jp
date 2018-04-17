@@ -1,27 +1,23 @@
 ---
-title: "ASP.NET の Visual Studio のデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: ASP.NET の Visual Studio のデバッグ |Microsoft ドキュメント
+ms.custom: mvc
 ms.date: 03/16/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
 ms.topic: quickstart
 helpviewer_keywords:
 - debugger
 ms.assetid: f4cea2e1-08dc-47ac-aba2-3b8c338e607f
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 0c6f3b0d074957ba8fabd93707e9a76f0dcd46e1
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 27072fda7535db5cd7307523c7e1732fef79c9e2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debug-aspnet-with-the-visual-studio-debugger"></a>Visual Studio デバッガーでの ASP.NET をデバッグします。
 

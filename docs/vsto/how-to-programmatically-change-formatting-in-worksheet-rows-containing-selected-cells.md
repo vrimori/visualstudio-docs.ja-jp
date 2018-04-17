@@ -1,12 +1,10 @@
 ---
-title: "方法: 選択したセルを含むワークシートの行で書式設定をプログラムで変更 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 選択したセルを含むワークシートの行で書式設定をプログラムで変更 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - worksheets, changing formatting
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 441adcf3b8f803d1473cd36a6d73474b06cf6efe
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 35f0475a15b41b63b99c08a90ebbf724b0adaed8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-change-formatting-in-worksheet-rows-containing-selected-cells"></a>方法: 選択されたセルを含むワークシートの行の書式をプログラムによって変更する
   選択したセルを含むテキストが太字の行全体のフォントを変更することができます。  
@@ -72,7 +71,7 @@ ms.lasthandoff: 01/10/2018
  [!code-csharp[Trin_VstcoreExcelAutomation#36](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#36)]
  [!code-vb[Trin_VstcoreExcelAutomation#36](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#36)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ワークシートの操作](../vsto/working-with-worksheets.md)   
  [方法: プログラムによってブック内の範囲にスタイルを適用](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
  [方法: プログラムによってデータと複数のワークシートの書式設定をコピー](../vsto/how-to-programmatically-copy-data-and-formatting-across-worksheets.md)   

@@ -1,29 +1,25 @@
 ---
-title: "新しいデータ ソースの追加 |Microsoft ドキュメント"
-ms.custom: 
+title: 新しいデータ ソースの追加 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.datasource.datasourcefieldspicker
 helpviewer_keywords:
 - data [Visual Studio], data sources
 - data sources
 ms.assetid: ed28c625-bb89-4037-bfde-cfa435d182a2
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 865f575aefedb5813a72d7a0bb2024bc85313db0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7dae171cb5f620d9dac09edb966ac1291a127d65
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-new-data-sources"></a>新しいデータ ソースを追加します。
 Visual Studio での .NET data tools のコンテキストで用語*データ ソース*データ ストアに接続し、.NET アプリケーションにデータを公開する .NET オブジェクトを参照します。 Visual Studio のデザイナーにドラッグしてから、データベース オブジェクトをドロップすると、フォームにデータをバインドする定型コードを生成するデータ ソースの出力を使用できる、**データソース**ウィンドウです。 この種類のデータ ソースを指定できます。  
@@ -68,7 +64,7 @@ Visual Studio での .NET data tools のコンテキストで用語*データ �
  ![エンティティ クラスとデータ ソース構成ウィザード](../data-tools/media/raddata-data-source-configuration-wizard-with-entity-classes.png "raddata エンティティ クラスとデータ ソース構成ウィザード")  
   
 ## <a name="data-source-for-a-service"></a>サービスのデータ ソース  
- サービスからデータ ソースを作成するには、実行、**データ ソース構成ウィザード**を選択し、**サービス**データ ソースの種類。 これへのショートカットを実際には、**サービス参照の追加** ダイアログ ボックスで、プロジェクトを右クリックしてアクセスすることもできます**ソリューション エクスプ ローラー**を選択すると**サービス参照の追加。**.  
+ サービスからデータ ソースを作成するには、実行、**データ ソース構成ウィザード**を選択し、**サービス**データ ソースの種類。 これへのショートカットを実際には、**サービス参照の追加** ダイアログ ボックスで、プロジェクトを右クリックしてアクセスすることもできます**ソリューション エクスプ ローラー**を選択すると**サービス参照の追加**。  
   
  サービスからデータ ソースを作成すると、Visual Studio によりサービス参照がプロジェクトに追加されます。 Visual Studio では、サービスで返されるオブジェクトに対応するプロキシ オブジェクトも作成します。 たとえば、データセットを返すサービスは、プロジェクト内でデータセットとして表現され、特定の型を返すサービスは、プロジェクト内で、返される型として表現されます。  
   
@@ -99,5 +95,5 @@ Visual Studio での .NET data tools のコンテキストで用語*データ �
 ## <a name="data-source-for-a-sharepoint-list"></a>SharePoint リストのデータ ソース  
  実行して、SharePoint リストから、データ ソースを作成することができます、**データ ソース構成ウィザード**を選択して、 **SharePoint**データ ソースの種類。 SharePoint を使用してデータを公開する[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]では、サービスからデータ ソースの作成と同じ SharePoint データ ソースを作成するため、します。 選択すると、 **SharePoint**内の項目、**データ ソース構成ウィザード**開きます、**サービス参照の追加**ダイアログ ボックスで、SharePoint データ サービスに接続します。SharePoint サーバーをポイントします。  これには、SharePoint SDK が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [.NET 用の Visual Studio データ ツール](../data-tools/visual-studio-data-tools-for-dotnet.md)

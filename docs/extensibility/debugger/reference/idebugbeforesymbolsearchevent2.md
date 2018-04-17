@@ -1,27 +1,23 @@
 ---
-title: "IDebugBeforeSymbolSearchEvent2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugBeforeSymbolSearchEvent2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IDebugBeforeSymbolSearchEvent2 interface
 ms.assetid: 679fd7b1-765a-41a8-a046-63240c09a499
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4ec023384ab95e72d0341fb728eb0fd6a4f58480
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 790aa358a40c79c7d517935192fd0155150063a5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugbeforesymbolsearchevent2"></a>IDebugBeforeSymbolSearchEvent2
 デバッグ エンジン (DE) は、シンボルの読み込み中にバーのメッセージをセッション デバッグ マネージャーの状態を設定するには、(SDM) のこのインターフェイスを送信します。  
@@ -45,7 +41,7 @@ IDebugBeforeSymbolSearchEvent2 : IUnknown
 |------------|-----------------|  
 |[GetModuleName](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2-getmodulename.md)|現在デバッグ中のモジュールの名前を取得します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: Msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

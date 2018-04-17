@@ -1,26 +1,24 @@
 ---
-title: "方法: ソース管理プラグインのインストール |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ソース管理プラグインのインストール |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - installation [Visual Studio SDK], source control plug-ins
 - source control plug-ins, installing
 ms.assetid: 9e2e01d9-7beb-42b2-99b2-86995578afda
-caps.latest.revision: "32"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: dab9270b55f5980d36256db78db89b5e4ac186f0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 4ffabd7adf35956163c8744eae6539e96990f38a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-install-a-source-control-plug-in"></a>方法: ソース管理プラグインのインストール
 ソース管理プラグインを作成するには、3 つの手順が含まれます。  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 3.  適切なレジストリ エントリを作成する、DLL を登録します。  
   
 ## <a name="integration-with-visual-studio"></a>Visual Studio との統合  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ソース管理プラグイン API に準拠するソース管理プラグインをサポートしています。  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ソース管理プラグイン API に準拠するソース管理プラグインをサポートしています。  
   
 ### <a name="registering-the-source-control-plug-in"></a>ソース管理プラグインを登録します。  
  ソースが見つける必要がありますまず実行中の統合開発環境 (IDE) は、ソース管理システムに呼び出すことができます、前に、API をエクスポートするプラグインの DLL を制御します。  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/22/2017
   
      このエントリの名前が (同じ SCCServerName エントリに指定された値)、プロバイダーのユーザーが判読できる名前と値が、もう一度、手順 1. で作成されたサブキー。 パターンは、HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\InstalledSCCProviders\\*[表示名]*ソフトウェアを =\\*[会社名]* \\ *[製品名]*です。  
   
-     例:  
+     例えば:  
   
     |レジストリ エントリの例|サンプル値|  
     |---------------------------|------------------|  
@@ -120,5 +118,5 @@ ms.lasthandoff: 12/22/2017
   
  2 つの条件が満たされた場合は、1.2 および 1.3 のバージョンでサポートされる新しい関数が呼び出すことができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [はじめに](../../extensibility/internals/getting-started-with-source-control-plug-ins.md)

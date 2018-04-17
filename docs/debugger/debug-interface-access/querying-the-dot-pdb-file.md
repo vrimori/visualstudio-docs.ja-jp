@@ -1,30 +1,26 @@
 ---
-title: "クエリを実行します。Pdb ファイル |Microsoft ドキュメント"
-ms.custom: 
+title: クエリを実行します。Pdb ファイル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - PDB files
 - .pdb files, querying
 ms.assetid: 8da07d1c-2712-45f9-8fbf-f34040408a8a
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: da12d0cde9e8dae0d291985bc8bf88931ab35ec5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b2f4e6c153cb7f2729e95137c07198858dd4bfa7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="querying-the-pdb-file"></a>.Pdb ファイルの照会
 プログラム データベース ファイル (拡張子 .pdb) とは、型とコンパイルとリンク、プロジェクトの過程で収集されたシンボリック デバッグ情報を含むバイナリ ファイルです。 C と C++ プログラムをコンパイルするときに PDB ファイルが作成された**/ZI**または**/Zi**または[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]、 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]、または[!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)]使用したプログラミング、 **/debug**オプション。 オブジェクト ファイルには、デバッグ情報の .pdb ファイルへの参照が含まれます。 Pdb ファイルの詳細については、次を参照してください。 [PDB ファイル](http://msdn.microsoft.com/en-us/1761c84e-8c2c-4632-9649-b5f99964ed3f)です。 DIA アプリケーションは、さまざまなシンボル、オブジェクト、および実行可能イメージ内のデータ要素の詳細を取得するのに、次の手順を使用できます。  
@@ -96,5 +92,5 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)

@@ -1,29 +1,25 @@
 ---
-title: "IDebugProviderProgramNode2::UnmarshalDebuggeeInterface |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugProviderProgramNode2::UnmarshalDebuggeeInterface |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
 helpviewer_keywords:
 - IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
 ms.assetid: 2e4653c5-10f1-493c-9973-f31d266c5d48
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c0f09d5b5fb1d420eef6b91ea596adbcab665ded
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b9ebadbc35ee8752e9f3b985a99155444caff5f8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugproviderprogramnode2unmarshaldebuggeeinterface"></a>IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
 プロセスの境界を越えて、指定されたインターフェイスを取得します。  
@@ -57,5 +53,5 @@ int UnmarshalDebuggeeInterface(
 ## <a name="remarks"></a>コメント  
  デバッグ エンジンを実行する場合、このメソッドを使用、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]プロセス空間とデバッグ中のプログラムが、独自のプロセス領域で実行されています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProviderProgramNode2](../../../extensibility/debugger/reference/idebugproviderprogramnode2.md)

@@ -1,27 +1,23 @@
 ---
-title: "ソース管理プラグイン アーキテクチャ |Microsoft ドキュメント"
-ms.custom: 
+title: ソース管理プラグイン アーキテクチャ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, architecture
 ms.assetid: 35351d4c-9414-409b-98fc-f2023e2426b7
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 22929c34d656fb4f163076ca0b5dfb498d44c884
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 498f3aeb87855a0dac5afacc1baa7e2e816375f2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="source-control-plug-in-architecture"></a>ソース管理プラグイン アーキテクチャ
 ソース コントロールのサポートを追加することができます、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) で実装して、ソース管理プラグインをアタッチします。 IDE は、適切に定義されたソース管理プラグイン API を使用してプラグイン ソース管理に接続します。 IDE では、ツールバーとメニュー コマンドで構成されるユーザー インターフェイス (UI) を提供することにより、ソース管理システムのバージョン コントロール機能を公開します。 ソース管理プラグインでは、ソース管理機能を実装します。  
@@ -43,7 +39,7 @@ VS およびソース管理の間の相互作用をプラグインを示すア�
   
  ソース管理プラグインに変更を加えることはできません、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]シェルし、その結果、ソース管理アダプター パッケージまたはソースのいずれかを制御する、IDE によって提供される UI。 これにより、エンドユーザーの統合された環境に影響する、さまざまなソース管理プラグイン API 関数の実装で提供される柔軟性を最大限に使用する必要があるためです。 ソース管理プラグイン API のドキュメントのリファレンスのセクションには、高度なソース管理プラグイン機能の情報が含まれます。 これらの機能を利用するには、ソース管理プラグインは、初期化中に、その高度な機能を IDE を宣言する必要があり、各機能の特定の高度な関数を実装する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン](../../extensibility/source-control-plug-ins.md)   
  [用語集](../../extensibility/source-control-plug-in-glossary.md)   
  [ソース管理プラグインの作成](../../extensibility/internals/creating-a-source-control-plug-in.md)

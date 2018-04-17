@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成、パート 1 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成、パート 1 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, defining new project item types
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 2266fc715322c024625e5f52f83805d0d582416b
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 535d5d32771a7be2eacca575f0735548ff2926ae
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1"></a>チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 (パート 1)
   SharePoint プロジェクトは、1 つ以上の SharePoint プロジェクト項目のコンテナーです。 独自の SharePoint プロジェクト項目の種類を作成し、それらをプロジェクト テンプレートと関連付けることで、Visual Studio で SharePoint プロジェクト システムを拡張できます。 このチュートリアルでは、サイト内の列を作成するためのプロジェクト項目の種類を定義し、サイト内の列プロジェクト項目が含まれる新しいプロジェクトの作成に使用できるプロジェクト テンプレートを作成します。  
@@ -41,7 +40,7 @@ ms.lasthandoff: 01/10/2018
  これは、独立したチュートリアルです。 このチュートリアルを完了すると、プロジェクト テンプレートにウィザードを追加してプロジェクト項目を拡張できるようになります。 詳細については、次を参照してください。[チュートリアル: プロジェクト テンプレート、第 2 部に基づくサイト列プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)です。  
   
 > [!NOTE]  
->  完成したプロジェクト、コード、およびこのチュートリアルでは、次の場所から他のファイルを含むサンプルをダウンロードすることができます: [http://go.microsoft.com/fwlink/?LinkId=191369](http://go.microsoft.com/fwlink/?LinkId=191369)です。  
+>  完成したプロジェクト、コード、およびこのチュートリアルでは、次の場所から他のファイルを含むサンプルをダウンロードすることができます: [ http://go.microsoft.com/fwlink/?LinkId=191369](http://go.microsoft.com/fwlink/?LinkId=191369)です。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
@@ -84,7 +83,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  **名前**ボックスに、入力**SiteColumnProjectItem**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **SiteColumnProjectItem**プロジェクトを**ソリューション エクスプ ローラー**です。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **SiteColumnProjectItem**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
 #### <a name="to-create-the-project-template-project"></a>プロジェクト テンプレート プロジェクトを作成するには  
   
@@ -98,7 +97,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  **名前**ボックスに、入力**SiteColumnProjectTemplate**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **SiteColumnProjectTemplate**プロジェクトがソリューションにします。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **SiteColumnProjectTemplate**プロジェクトがソリューションにします。  
   
 6.  Class1 コード ファイルをプロジェクトから削除します。  
   
@@ -126,7 +125,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  **名前**ボックスに、入力**ProjectItemTypeDefinition**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **ProjectItemTypeDefinition**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **ProjectItemTypeDefinition**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
   
 5.  Class1 コード ファイルをプロジェクトから削除します。  
   
@@ -434,7 +433,7 @@ ms.lasthandoff: 01/10/2018
   
     -   各プロジェクト インスタンスに含まれているファイルごとに、`ProjectItem` 要素が追加されます。  
   
-    -   名前空間"http://schemas.microsoft.com/developer/vstemplate/2005"を使用します。 このソリューションでは、他のプロジェクト ファイルでは、"http://schemas.microsoft.com/developer/msbuild/2003"名前空間を使用します。 このため、XML スキーマ警告メッセージが生成されますが、このチュートリアルでは、これらを無視できます。  
+    -   名前空間を使用"http://schemas.microsoft.com/developer/vstemplate/2005"です。 他のプロジェクト ファイルでこのソリューションを使用して、"http://schemas.microsoft.com/developer/msbuild/2003"名前空間。 このため、XML スキーマ警告メッセージが生成されますが、このチュートリアルでは、これらを無視できます。  
   
      .Vstemplate ファイルの内容に関する詳細については、次を参照してください。 [Visual Studio テンプレート スキーマ参照](/visualstudio/extensibility/visual-studio-template-schema-reference)です。  
   
@@ -715,7 +714,7 @@ ms.lasthandoff: 01/10/2018
   
 1.  **ソリューション エクスプ ローラー**、選択、 **SiteColumnTest**ノード。  
   
-2.  **プロパティ**ウィンドウの横にあるテキスト ボックスで、**サイト URL**プロパティ、入力**http://localhost**です。  
+2.  **プロパティ**ウィンドウの横にあるテキスト ボックスで、**サイト URL**プロパティ、入力 **http://localhost**です。  
   
      この手順により、デバッグに使用する開発用コンピューター上のローカル SharePoint サイトが指定されます。  
   
@@ -757,7 +756,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルを完了すると、プロジェクト テンプレートにウィザードを追加できるようになります。 ユーザーが Site Column プロジェクトを作成するときに、ウィザードが、デバッグに使用するサイトの URL と、新しいソリューションがサンドボックス ソリューションかどうかをユーザーに尋ね、この情報を使用して新しいプロジェクトを構成します。 また、ウィザードは、列に関する情報 (基本型や、サイト内の列ギャラリーで列が表示されるグループなど) を収集し、この情報を新しいプロジェクトの Elements.xml ファイルに追加します。 詳細については、次を参照してください。[チュートリアル: プロジェクト テンプレート、第 2 部に基づくサイト列プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: プロジェクト テンプレート、第 2 部に基づくサイト列プロジェクト項目の作成](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)   
  [カスタム SharePoint プロジェクト項目の種類を定義します。](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [SharePoint プロジェクト項目の項目テンプレートとプロジェクト テンプレートを作成します。](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   

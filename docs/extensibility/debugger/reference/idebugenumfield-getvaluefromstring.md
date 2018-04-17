@@ -1,29 +1,25 @@
 ---
-title: "IDebugEnumField::GetValueFromString |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugEnumField::GetValueFromString |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugEnumField::GetValueFromString
 helpviewer_keywords:
 - IDebugEnumField::GetValueFromString method
 ms.assetid: 1ef8ac5e-a3e0-4078-b876-7f5615aedcbb
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e98b8c8d812bfc77351b88aa85bcf9c94cd92e0c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 31e7985491833be8243a30bd3134db2d1af1d2cf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugenumfieldgetvaluefromstring"></a>IDebugEnumField::GetValueFromString
 このメソッドは、列挙定数の名前に関連付けられている値を返します。  
@@ -57,6 +53,6 @@ int GetValueFromString(
 ## <a name="remarks"></a>コメント  
  このメソッドは、大文字小文字を区別します。 (たとえば、名は大文字小文字を区別できません Visual Basic などの言語) で、大文字と小文字が必要な場合を使用して[GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)   
  [GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)

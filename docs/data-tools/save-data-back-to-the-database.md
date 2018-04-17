@@ -1,11 +1,8 @@
 ---
-title: "データをデータベースに保存 |Microsoft ドキュメント"
-ms.custom: 
+title: データをデータベースに保存 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - datasets [Visual Basic], validating data
 - data validation, datasets
@@ -19,17 +16,17 @@ helpviewer_keywords:
 - datasets [Visual Basic], constraints
 - TableAdapters
 ms.assetid: afe6cb8a-dc6a-428b-b07b-903ac02c890b
-caps.latest.revision: "27"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 733a495c7f6865e9973f5288c9c324baef7f1d8e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 1e7d2b27f0d90677d99d3f0fbc434493fdc7da83
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="save-data-back-to-the-database"></a>データをデータベースに保存します。
 データセットは、データのメモリ内のコピーです。 そのデータを変更する場合は、これらの変更をデータベースに保存することをお勧めします。 これには 3 つの方法のいずれかの操作を行います。  
@@ -158,7 +155,7 @@ Tableadapter に慣れている場合は、次のトピックのいずれかに�
   
  データ テーブルの `GetChanges` メソッド (<xref:System.Data.DataTable.GetChanges%2A>) またはデータセットの <xref:System.Data.DataSet.GetChanges%2A> メソッド () を使って、変更されたレコードのサブセットを作成できます。 データ テーブルのメソッドを呼び出すと、変更されたレコードだけを含むテーブルのコピーが返されます。 同様に、データセットのメソッドを呼び出すと、変更されたレコードだけを含む新しいデータセットを取得できます。  
   
- `GetChanges`それ自体では、変更されたすべてのレコードを返します。 目的を渡すことによってこれに対し、<xref:System.Data.DataRowState>へのパラメーターとして、`GetChanges`メソッド、か変更されたレコードのサブセットを指定することができます。 新たにデタッチされた、レコードのレコード、削除対象としてマークされているレコードを追加または変更されたレコード。  
+ `GetChanges` それ自体では、変更されたすべてのレコードを返します。 目的を渡すことによってこれに対し、<xref:System.Data.DataRowState>へのパラメーターとして、`GetChanges`メソッド、か変更されたレコードのサブセットを指定することができます。 新たにデタッチされた、レコードのレコード、削除対象としてマークされているレコードを追加または変更されたレコード。  
   
  レコードを処理するための別のコンポーネントに送信する場合は、変更されたレコードのサブセットを取得すると便利です。 データセット全体を送信する代わりに、コンポーネントが必要としているレコードだけを取得することにより、ほかのコンポーネントとの通信によるオーバーヘッドを小さくできます。   
   
