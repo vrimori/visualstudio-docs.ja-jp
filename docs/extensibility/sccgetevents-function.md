@@ -1,29 +1,25 @@
 ---
-title: "SccGetEvents 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: SccGetEvents 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccGetEvents
 helpviewer_keywords:
 - SccGetEvents function
 ms.assetid: 32f8147d-6dcc-465e-b07b-42da5824f9b0
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e2e9a22d0340774087fab8dd7dc564f415d9d9aa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 79e517d87acd61eafcd2eb0a12f5a8978912db81
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccgetevents-function"></a>SccGetEvents 関数
 この関数は、キューに置かれた状態のイベントを取得します。  
@@ -66,6 +62,6 @@ SCCRTN SccGetEvents (
   
  レポートへのステータスの更新がない場合は、ソース管理プラグインは、空の文字列を指すバッファーに格納`lpFileName`です。 それ以外の場合、プラグインを格納、ファイルの完全なパス名のステータス情報が変更され、適切なステータス コードを返します (で詳細に説明値の 1 つ[ファイル ステータス コード](../extensibility/file-status-code-enumerator.md))。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [ファイルの状態コード](../extensibility/file-status-code-enumerator.md)

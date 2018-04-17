@@ -1,28 +1,26 @@
 ---
-title: "テストの領域 3: チェック アウトを元に戻すチェック アウト |Microsoft ドキュメント"
-ms.custom: 
+title: 'テストの領域 3: チェック アウトを元に戻すチェック アウト |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, checkout
 - source control plug-ins, undo checkout
 - source control [Visual Studio SDK], checking out
 - source control [Visual Studio SDK], undo checkout
 ms.assetid: ce00c5a5-d472-4f45-8776-d77a1fbe9d37
-caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 8835f1f8c312b3aba72353625a1d97b514dc21b8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 5d769fdc52ac92053c258a3f82fa53cec5c56fa7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="test-area-3-check-outundo-checkout"></a>テストの領域 3: チェック アウト/チェック アウトを元に戻す
 このソース管理プラグインのテストの領域の説明を使用して、バージョン ストアから項目を編集し、元に戻す、**チェック アウト**と**チェック アウトの取り消し**コマンド。  
@@ -137,5 +135,5 @@ ms.lasthandoff: 12/22/2017
 |ファイルをプロジェクトに追加した後、プロジェクトのチェック アウトを元に戻す|1.新しいプロジェクトを作成し、ソース管理に追加します。<br />2.プロジェクトをチェック アウトします。<br />3.ファイルをプロジェクトに追加します。<br />4.プロジェクトのチェック アウトを元に戻します。|追加されたファイルは、ソリューション エクスプ ローラーでプロジェクトから削除されます。<br /><br /> プロジェクトが不要になったチェック アウトします。|  
 |プロジェクトからファイルを削除した後、プロジェクトのチェック アウトを元に戻す|1.新しいプロジェクトを作成し、ソース管理に追加します。<br />2.プロジェクトをチェック アウトします。<br />3.プロジェクトからファイルを削除します。<br />4.プロジェクトのチェック アウトを元に戻します。|ソリューション エクスプ ローラーでプロジェクトの下で削除したファイルが表示されます。<br /><br /> プロジェクトが不要になったチェック アウトします。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン向けのテスト ガイド](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

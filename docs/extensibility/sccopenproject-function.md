@@ -1,29 +1,25 @@
 ---
-title: "SccOpenProject 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: SccOpenProject 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccOpenProject
 helpviewer_keywords:
 - SccOpenProject function
 ms.assetid: d609510b-660a-46d7-b93d-2406df20434d
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 10afe84716153b67c419f4ddbd1a7b838b68cbf9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 15d9cf6d5fa4533b5ee0ff65f8aeae86df3d571a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccopenproject-function"></a>SccOpenProject 関数
 この関数は、既存のソース管理プロジェクトを開くか、新規に作成します。  
@@ -70,7 +66,7 @@ SCCRTN SccOpenProject (
  [in]ソース管理プラグインからの出力テキストを表示するオプションのコールバック関数。  
   
  dwFlags  
- [in]信号をプロジェクトがソースに不明な場合に作成する新しいプロジェクトが必要かどうかを制御プラグインします。 値の組み合わせを指定できます`SCC_OP_CREATEIFNEW`と`SCC_OP_SILENTOPEN.`  
+ [in]信号をプロジェクトがソースに不明な場合に作成する新しいプロジェクトが必要かどうかを制御プラグインします。 値の組み合わせを指定できます`SCC_OP_CREATEIFNEW`と `SCC_OP_SILENTOPEN.`  
   
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
@@ -94,9 +90,9 @@ SCCRTN SccOpenProject (
 > [!NOTE]
 >  最初のアクションを実行する必要があります、IDE への呼び出しがあります、`SccOpenProject`関数または[SccGetProjPath](../extensibility/sccgetprojpath-function.md)です。 このため、これらの両方がある同じ`lpUser`パラメーター。  
   
- `lpAuxProjPath`および`lpProjName`ソリューション ファイルから読み取るへの呼び出しから返されるか、`SccGetProjPath`関数。 これらのパラメーターは、ソース管理プラグインをプロジェクトに関連付ける文字列が含まれてし、プラグインにのみ意味があるものです。 ソリューション ファイルでこのような文字列がないと、ユーザーが参照するように要求されていない場合 (と、文字列を返すと、`SccGetProjPath`関数)、IDE は、両方の空の文字列を渡す`lpAuxProjPath`と`lpProjName`、更新するこれらの値が必要ですが、プラグインするときにこの関数を返します。  
+ `lpAuxProjPath` および`lpProjName`ソリューション ファイルから読み取るへの呼び出しから返されるか、`SccGetProjPath`関数。 これらのパラメーターは、ソース管理プラグインをプロジェクトに関連付ける文字列が含まれてし、プラグインにのみ意味があるものです。 ソリューション ファイルでこのような文字列がないと、ユーザーが参照するように要求されていない場合 (と、文字列を返すと、`SccGetProjPath`関数)、IDE は、両方の空の文字列を渡す`lpAuxProjPath`と`lpProjName`、更新するこれらの値が必要ですが、プラグインするときにこの関数を返します。  
   
- `lpTextOutProc`ソース管理コマンドの結果の出力を表示するためにプラグインするための IDE によって提供されるコールバック関数へのポインターです。 このコールバック関数がで詳しく説明されている[LPTEXTOUTPROC](../extensibility/lptextoutproc.md)です。  
+ `lpTextOutProc` ソース管理コマンドの結果の出力を表示するためにプラグインするための IDE によって提供されるコールバック関数へのポインターです。 このコールバック関数がで詳しく説明されている[LPTEXTOUTPROC](../extensibility/lptextoutproc.md)です。  
   
 > [!NOTE]
 >  場合は、ソース管理プラグインでは、これを利用しようとして、設定がありますが、`SCC_CAP_TEXTOUT`フラグ、 [SccInitialize](../extensibility/sccinitialize-function.md)です。 このフラグが設定されていない場合、または IDE では、この機能をサポートしていない場合`lpTextOutProc`なります`NULL`です。  
@@ -111,7 +107,7 @@ SCCRTN SccOpenProject (
 > [!NOTE]
 >  `SCC_CAP_REENTRANT`ビットは、ソース管理プラグイン API のバージョン 1.1 で導入されました。 設定されていないか、バージョン 1.0 では無視され、すべてのバージョン 1.0 ソース管理プラグインは nonreentrant と見なされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccCloseProject](../extensibility/scccloseproject-function.md)   
  [SccGetProjPath](../extensibility/sccgetprojpath-function.md)   

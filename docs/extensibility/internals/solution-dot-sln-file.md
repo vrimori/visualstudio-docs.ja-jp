@@ -1,27 +1,25 @@
 ---
-title: "ソリューション (です。Sln) ファイル |Microsoft ドキュメント"
-ms.custom: 
+title: ソリューション (です。Sln) ファイル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - sln files, VSPackages
 - solutions, .sln files
 - .sln files, VSPackages
 ms.assetid: 7d7ef539-2e4b-4637-b853-8ec7626609df
-caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ad918b72d38e61fb1670adda8ff1f730987c2aa3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 73d6f7fb83e9420f59122135761ce44ea641fe57
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="solution-sln-file"></a>ソリューション (です。Sln) ファイル
 ソリューションは、Visual Studio でプロジェクトを整理するための構造体です。 ソリューションでは、(テキスト ベース、共有) .sln および .suo (バイナリ、ユーザー固有のソリューションのオプション) ファイル内のプロジェクトの状態情報を保持します。 .Suo ファイルについては、次を参照してください。[ソリューション ユーザー オプション (です。Suo) ファイル](../../extensibility/internals/solution-user-options-dot-suo-file.md)です。  
@@ -96,13 +94,13 @@ EndGlobal
   
  保存する情報がある場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence>インターフェイスがへのポインターと呼ばれる、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.SaveSolutionProps%2A>メソッドです。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.WriteSolutionProps%2A>から名前/値ペアを取得するための環境でメソッドが呼び出されます`IPropertyBag`インターフェイスし、.sln ファイルに情報を書き込みます。  
   
- `SaveSolutionProps`および`WriteSolutionProps`再帰的にオブジェクトがから保存する情報を取得するための環境によって呼び出されます、`IPropertyBag`インターフェイスのすべての変更が、.sln ファイルに入力されるまでです。 この方法で、ソリューションと使用可能なソリューションを次回開いたときに、情報を保存することを確認できます。  
+ `SaveSolutionProps` および`WriteSolutionProps`再帰的にオブジェクトがから保存する情報を取得するための環境によって呼び出されます、`IPropertyBag`インターフェイスのすべての変更が、.sln ファイルに入力されるまでです。 この方法で、ソリューションと使用可能なソリューションを次回開いたときに、情報を保存することを確認できます。  
   
  .Sln ファイルを保存するものがあるかどうかをすべて読み込む VSPackage が列挙されます。 これは、レジストリ キーがクエリの読み込み時にのみです。 環境は、ソリューションが保存時にメモリにいるため、すべての読み込まれたパッケージについて認識しています。  
   
  だけ、.sln ファイル内のエントリが含まれる、`preSolution`と`postSolution`セクションです。 含まれないと同様のセクションでは .suo ファイル ソリューションには、正常に読み込むには、この情報が必要があるためです。 .Suo ファイルには、プライベート ノートについては、共有またはソース コード管理下に配置するのには意図されていないなど、ユーザー固有のオプションが含まれています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps>   
  [ソリューション ユーザー オプション (です。Suo) ファイル](../../extensibility/internals/solution-user-options-dot-suo-file.md)   
  [ソリューション](../../extensibility/internals/solutions.md)

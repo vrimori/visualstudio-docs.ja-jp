@@ -1,34 +1,30 @@
 ---
-title: "Folder 要素 (Visual Studio プロジェクト テンプレート) |Microsoft ドキュメント"
-ms.custom: 
+title: Folder 要素 (Visual Studio プロジェクト テンプレート) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#Folder
 helpviewer_keywords:
 - Folder element [Visual Studio project templates]
 ms.assetid: 558e3d41-0db5-4c44-82bb-6bb87892b093
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2c561564f75d4e5557c64f94adfb9caed6abce83
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c2ecf9c2973a5fb09cf1a217bd700882dce41626
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="folder-element-visual-studio-project-templates"></a>Folder 要素 (Visual Studio テンプレート)
 プロジェクトに追加されるフォルダーを指定します。  
   
- \<VSTemplate >  
+ \<VSTemplate>  
  \<TemplateContent >  
  \<Project>  
  \<フォルダー >  
@@ -56,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 |要素|説明|  
 |-------------|-----------------|  
-|`Folder`|プロジェクトに追加するフォルダーを指定します。 `Folder`要素は子を含めることができる`Folder`要素。|  
+|`Folder`|プロジェクトに追加するフォルダーを指定します。 `Folder` 要素は子を含めることができる`Folder`要素。|  
 |[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|プロジェクトに追加するファイルを指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
@@ -66,11 +62,11 @@ ms.lasthandoff: 12/22/2017
 |[Project](../extensibility/project-element-visual-studio-templates.md)|省略可能な子要素の[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)です。|  
   
 ## <a name="remarks"></a>コメント  
- `Folder`省略可能な子の`Project`します。  
+ `Folder` 省略可能な子の`Project`します。  
   
  テンプレート内のフォルダーにプロジェクト項目を整理するには、以下の方法のいずれかを使用できます。  
   
--   テンプレートの .zip ファイル、フォルダーに含めるし、でファイルへのパスを指定することで、.vstemplate ファイルでプロジェクトに追加、`ProjectItem`せず、要素`Folder`要素。 これは、推奨される方法です。 例:  
+-   テンプレートの .zip ファイル、フォルダーに含めるし、でファイルへのパスを指定することで、.vstemplate ファイルでプロジェクトに追加、`ProjectItem`せず、要素`Folder`要素。 これは、推奨される方法です。 例えば:  
   
      `...`  
   
@@ -80,7 +76,7 @@ ms.lasthandoff: 12/22/2017
   
      `...`  
   
--   テンプレートの .zip ファイル、フォルダーに含めるしで .vstemplate ファイルでプロジェクトに追加`Folder`要素。 例:  
+-   テンプレートの .zip ファイル、フォルダーに含めるしで .vstemplate ファイルでプロジェクトに追加`Folder`要素。 例えば:  
   
      `...`  
   
@@ -94,7 +90,7 @@ ms.lasthandoff: 12/22/2017
   
      `...`  
   
--   テンプレート .zip ファイルにフォルダーを含めないでくださいを使用してフォルダーを追加、`TargetFileName`の属性、`ProjectItem`要素。 例:  
+-   テンプレート .zip ファイルにフォルダーを含めないでくださいを使用してフォルダーを追加、`TargetFileName`の属性、`ProjectItem`要素。 例えば:  
   
      `...`  
   
@@ -133,7 +129,7 @@ ms.lasthandoff: 12/22/2017
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
  [ProjectItem 要素 (Visual Studio 項目テンプレート)](../extensibility/projectitem-element-visual-studio-item-templates.md)

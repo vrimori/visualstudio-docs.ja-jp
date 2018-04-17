@@ -1,26 +1,24 @@
 ---
-title: "構成オプションの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: 構成オプションの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project configurations
 - configuration options, about configuration options
 ms.assetid: f4ad4dd3-b39e-42df-ad89-d403cdf24a2b
-caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 0edfe84e26a9331b8c40ec24b00387768bdbba82
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 85ee328b278ef9eb1d81acfc5a8299920a221e59
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuration-options-overview"></a>オプションの構成の概要
 プロジェクトで[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]構築できますが、デバッグ、実行、および展開された複数の構成をサポートできます。 構成では、コンパイラ スイッチとファイルの場所では通常、プロパティの名前付きセットで説明されているビルドの種類です。 既定では、新しいソリューションには、2 つの構成、デバッグとリリースが含まれます。 既定の設定を使用するか、特定のソリューションやプロジェクトの要件を満たすように変更は、これらの構成を適用できます。 一部のパッケージは、2 つの方法でビルドできます。 ActiveX エディター、またはインプレース コンポーネントとして。 ただし、複数の構成をサポートするためには、プロジェクトは必要はありません。 構成が 1 つが利用可能な場合は、すべてのソリューション構成にその構成が割り当てられます。  
@@ -57,15 +55,15 @@ ms.lasthandoff: 12/22/2017
   
  前の図に関連するいくつかの注意:  
   
--   `IDispatch`構成オブジェクトに省略可能としてマークされます。 具体的には、これは参照オブジェクトの構成インターフェイスを持つことはオプションです。  
+-   `IDispatch` 構成オブジェクトに省略可能としてマークされます。 具体的には、これは参照オブジェクトの構成インターフェイスを持つことはオプションです。  
   
--   `IVsDebuggableProjectCfg`構成オブジェクトにオプションとしてマークされてはデバッグのサポート必要です。  
+-   `IVsDebuggableProjectCfg` 構成オブジェクトにオプションとしてマークされてはデバッグのサポート必要です。  
   
--   `IVsProjectCfg2`構成オブジェクトでは省略可能にマークされていますが、サポートをグループ化の出力が必要です。  
+-   `IVsProjectCfg2` 構成オブジェクトでは省略可能にマークされていますが、サポートをグループ化の出力が必要です。  
   
 -   `Config Provider`オブジェクトが、省略可能なオブジェクトとしてマークされていますが、このオプションはそれを実装する場所です。 プロジェクト オブジェクトまたはオブジェクトを別のオブジェクトを実装することができます。  
   
--   `IVsCfgProvider2`プラットフォームのサポートと構成の編集に必要です。 `IVsCfgProvider`その機能を実装しない場合は十分です。  
+-   `IVsCfgProvider2` プラットフォームのサポートと構成の編集に必要です。 `IVsCfgProvider` その機能を実装しない場合は十分です。  
   
 -   可能であれば、個別のオブジェクトが同じクラスに結合できるように、図に示されたオブジェクトの一部は、特定の設計要件に基づいています。 このセクションの他のトピックでただし、オブジェクトとそれらのオブジェクトに関連付けられているインターフェイスについては説明に従って、ダイアグラム内のシナリオです。  
   
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
  構成オブジェクトのインターフェイスと、前の図での構成プロバイダー オブジェクト インターフェイスの詳細については、次を参照してください。[プロジェクト構成オブジェクト](../../extensibility/internals/project-configuration-object.md)です。 さらに、[構築するためのプロジェクト構成](../../extensibility/internals/project-configuration-for-building.md)構成ビルダーとビルドの依存関係オブジェクトのインターフェイスについて詳しく説明し、[プロジェクトのデプロイ構成を管理する](../../extensibility/internals/project-configuration-for-managing-deployment.md)さらに、構成を配置するユーザーと展開の依存関係オブジェクトにアタッチされているインターフェイスについて説明します。 最後に、[出力用のプロジェクト構成](../../extensibility/internals/project-configuration-for-output.md)出力グループと出力オブジェクトのインターフェイスと、表示および構成に依存するプロパティを設定するプロパティ ページの使用について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>   
  [構築するためのプロジェクトの構成](../../extensibility/internals/project-configuration-for-building.md)   
  [ソリューション構成](../../extensibility/internals/solution-configuration.md)

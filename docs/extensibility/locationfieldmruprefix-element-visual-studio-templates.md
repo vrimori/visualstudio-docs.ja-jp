@@ -1,30 +1,26 @@
 ---
-title: "LocationFieldMRUPrefix 要素 (Visual Studio テンプレート) |Microsoft ドキュメント"
-ms.custom: 
+title: LocationFieldMRUPrefix 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#LocationFieldMRUPrefix
 helpviewer_keywords:
 - <LocationFieldMRUPrefix> element [Visual Studio Templates]
 - LocationFieldMRUPrefix element [Visual Studio Templates]
 ms.assetid: 03443691-9eb5-46f4-9169-cc2552a04bcb
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7ae186d9fdab2b02e20d564e57de8a78e07f6e95
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: cef7e1e09d81c4ff0fb28198ff9a4d68f1e9c501
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="locationfieldmruprefix-element-visual-studio-templates"></a>LocationFieldMRUPrefix 要素 (Visual Studio テンプレート)
 最近使用した (MRU) のパスを指定します、**新しいプロジェクト**と**新しい項目の追加** ダイアログ ボックス。  
@@ -53,6 +49,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>コメント  
  この要素で生成されるテンプレートにのみ使用する必要があります、[!INCLUDE[vsipprvsip](../extensibility/includes/vsipprvsip_md.md)]です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

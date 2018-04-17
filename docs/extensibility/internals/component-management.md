@@ -1,26 +1,24 @@
 ---
-title: "コンポーネントの管理 |Microsoft ドキュメント"
-ms.custom: 
+title: コンポーネントの管理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - installation [Visual Studio SDK], components
 - installation [Visual Studio SDK], file management
 ms.assetid: 029bffa2-6841-4caa-a41a-442467e1aedc
-caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 398986499732a36819808b07f05f7d6b46787a94
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2798d820249f0a1c4310569d22d8510710ca13ee
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="component-management"></a>コンポーネントの管理
 Windows インストーラーのタスクの単位は、Windows インストーラー コンポーネント (WICs またはだけコンポーネントとも呼ばれます) と呼ばれます。 インストールと Windows インストーラーを使用する設定に対する参照カウントの基本単位は、各 WIC を識別する GUID。  
@@ -51,6 +49,6 @@ Windows インストーラーのタスクの単位は、Windows インストー�
   
      作成する場合は、別のバージョン管理された VSPackage をインストールすると、共有キーは上書きされます。 2 番目のバージョンを削除した後、キーが指してするファイルは失われます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [共有とバージョン管理された Vspackage の使い分け](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)   
  [VSPackage のセットアップ シナリオ](../../extensibility/internals/vspackage-setup-scenarios.md)

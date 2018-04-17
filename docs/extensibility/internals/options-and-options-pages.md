@@ -1,12 +1,10 @@
 ---
-title: "オプションと [オプション] ページ |Microsoft ドキュメント"
-ms.custom: 
+title: オプションと [オプション] ページ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Tools Options pages [Visual Studio SDK], managed package framework support
 - managed package framework, Tools Options pages support
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - Tools Options pages [Visual Studio SDK], layouts
 - Tools Options pages [Visual Studio SDK], attributes
 ms.assetid: e6c0e636-5ec3-450e-b395-fc4bb9d75918
-caps.latest.revision: "34"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 1177a9a4df1f07c93540fa039117c5fa81289e17
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d85b900779a5df8af077b292b2e2f70b0592e35c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="options-and-options-pages"></a>オプションと [オプション] ページ
 クリックすると**オプション**上、**ツール** メニューが開きます、**オプション** ダイアログ ボックス。 このダイアログ ボックスでオプションとして [オプション] ページと総称します。 すべてのカテゴリが [オプション] ページと、ナビゲーション ウィンドウのツリー コントロールにオプションのカテゴリが含まれます。 ページを選択すると、右側のウィンドウでそのオプションが表示されます。 これらのページを使用して、VSPackage の状態を決定するオプションの値を変更できます。  
@@ -56,11 +54,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="option-attributes-and-layout"></a>オプションの属性およびレイアウト  
  ページでは、ユーザー インターフェイス (UI) では、カスタム オプション ページのオプションの外観を決定します。 次の属性では、レイアウト、ラベル付け、および汎用オプション ページのオプションの説明が決定されます。  
   
--   <xref:System.ComponentModel.CategoryAttribute>オプションのカテゴリを決定します。  
+-   <xref:System.ComponentModel.CategoryAttribute> オプションのカテゴリを決定します。  
   
--   <xref:System.ComponentModel.DisplayNameAttribute>オプションの表示名を決定します。  
+-   <xref:System.ComponentModel.DisplayNameAttribute> オプションの表示名を決定します。  
   
--   <xref:System.ComponentModel.DescriptionAttribute>オプションの説明を指定します。  
+-   <xref:System.ComponentModel.DescriptionAttribute> オプションの説明を指定します。  
   
     > [!NOTE]
     >  同等の属性、SRCategory、LocDisplayName、SRDescription、文字列リソースのローカライズ用と使用で定義されて、[マネージ プロジェクト サンプル](http://go.microsoft.com/fwlink/?LinkId=122774)です。  

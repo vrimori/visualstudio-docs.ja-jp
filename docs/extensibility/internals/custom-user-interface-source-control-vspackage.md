@@ -1,26 +1,24 @@
 ---
-title: "カスタム ユーザー インターフェイス (ソース コントロール VSPackage) |Microsoft ドキュメント"
-ms.custom: 
+title: カスタム ユーザー インターフェイス (ソース コントロール VSPackage) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - user interface, source control packages
 - source control packages, user interface
 ms.assetid: f35ddb24-53bf-461e-b34f-7414f657c082
-caps.latest.revision: "28"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 3d3c223b45d0228781779a73f057ef3518374344
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: ebd2361e94e9b1430f5bac99f2e71dc53a02ebf1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-user-interface-source-control-vspackage"></a>カスタム ユーザー インターフェイス (ソース コントロール VSPackage)
 VSPackage は、Visual Studio コマンド テーブル (.vsct) ファイルをそのメニュー項目とその既定の状態を宣言します。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) では、VSPackage が読み込まれるまでその既定の状態でメニュー項目を表示します。 その後、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>有効にするにまたはメニュー項目を無効にするメソッドが呼び出されます。  
@@ -49,7 +47,7 @@ VSPackage は、Visual Studio コマンド テーブル (.vsct) ファイルを�
   
  必要な<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>、およびソース管理 VSPackage がアクティブでないときも、ソース管理に関連付けられている省略可能なインターフェイスは呼び出されません。  
   
- ときに、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE を起動[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]コマンド UI コンテキストの現在の既定のソース管理 VSPackage の id ID を設定。 これにより、アクティブなソース管理に実際には、VSPackage を読み込むことがなく、IDE で表示される VSPackage の静的な UI です。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]登録する VSPackage の一時停止[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を通じて、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterScciProvider> VSPackage に任意の呼び出しがなされる前にします。  
+ ときに、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE を起動[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]コマンド UI コンテキストの現在の既定のソース管理 VSPackage の id ID を設定。 これにより、アクティブなソース管理に実際には、VSPackage を読み込むことがなく、IDE で表示される VSPackage の静的な UI です。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 登録する VSPackage の一時停止[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を通じて、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterScciProvider> VSPackage に任意の呼び出しがなされる前にします。  
   
  次の表では、特定の詳細を説明する方法について[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]IDE は、さまざまな UI アイテムを非表示にします。  
   
@@ -59,7 +57,7 @@ VSPackage は、Visual Studio コマンド テーブル (.vsct) ファイルを�
 |ツール ウィンドウ|VSPackage のソース管理には、非アクティブなが行われたときを所有している任意のツール ウィンドウが非表示にします。|  
 |ソース管理 VSPackage に固有のオプション ページ|HKLM\SOFTWARE\Microsoft\VisualStudio\X.Y\ToolsOptionsPages\VisibilityCmdUIContexts のレジストリ キーには、VSPackage のオプション ページを表示する必要とするコンテキストを設定することができます。 このキーの下のレジストリ エントリは、サービスのソース管理サービスの ID (SID) を使用し、1 の DWORD 値を割り当てることによって作成する必要があります。 UI イベントは、VSPackage に登録されているソース管理のコンテキストで発生するたびにアクティブである場合、VSPackage が呼び出されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>   

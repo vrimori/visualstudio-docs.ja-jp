@@ -2,24 +2,20 @@
 title: '方法: Visual Studio 2017 を機能拡張プロジェクトの移行 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/09/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8ca07b00-a3ff-40ab-b647-c0a93b55e86a
-caps.latest.revision: ''
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8d49ff89f38b0279c60f49ee7d5856d21fd5fc4a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 93f5d663a31d43dc7a52cbd11261ca78134c682a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>方法: Visual Studio 2017 を機能拡張プロジェクトの移行
 
@@ -49,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 
 Microsoft.VSSDK.BuildTools へ NuGet の参照を更新するには。
 
-* ソリューションを右クリックし、選択**Manage NuGet Packages for Solution しています.**
+* ソリューションを右クリックし、**[ソリューションの NuGet パッケージの管理...]** を選択します。
 * 移動し、**更新**タブです。
 * Microsoft.VSSDK.BuildTools (最新バージョン) を選択します。
 * キーを押して**更新**です。

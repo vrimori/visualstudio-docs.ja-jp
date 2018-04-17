@@ -1,26 +1,24 @@
 ---
-title: "プライベート ギャラリー |Microsoft ドキュメント"
-ms.custom: 
+title: プライベート ギャラリー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSIX galleries, private
 - private galleries, VSIX
 ms.assetid: b6b3dee7-91c5-4556-9f69-0d56b675e83b
-caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 5226ff7a4ed77333d2a6f9287f129c6a6d754cac
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: baf810f644ed45433d77ddff75bf8aec93f76f1e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="private-galleries"></a>Private Galleries
 コントロール、テンプレート、および投稿することにで開発したツールを共有することができます、*プライベート ギャラリー*次のように、組織のイントラネット上。  
@@ -46,9 +44,9 @@ ms.lasthandoff: 12/22/2017
   
 5.  **URL**フィールドに、Atom フィードまたはプライベート ギャラリーをホストしている SharePoint サイトの URL を入力します。  
   
-    1.  プライベート ギャラリーに接続するホストが Atom フィードである場合は、この URL のようになります: http://www.mywebsite/mygallery/atom.xml です。  この URL は、ファイルまたはネットワーク パスを参照できます。  
+    1.  プライベート ギャラリーに接続するホストが Atom フィードである場合は、この URL のようになります:http://www.mywebsite/mygallery/atom.xmlです。  この URL は、ファイルまたはネットワーク パスを参照できます。  
   
-    2.  ホストが、SharePoint サイトの場合は、URL はのようにこのいずれか: http://mysharepoint/sites/mygallery/forms/AllItems.aspx です。  
+    2.  ホストが、SharePoint サイトの場合は、URL はのようにこのいずれか:http://mysharepoint/sites/mygallery/forms/AllItems.aspxです。  
   
 ### <a name="managing-private-galleries"></a>プライベート ギャラリーの管理  
  管理者ことができますをプライベート ギャラリーを使用できるように複数のコンピューター、同時に各コンピューターでシステム レジストリを変更します。 これを実現するには、新しいレジストリ キーとその値を記述する .pkgdef ファイルを作成します。  このファイルの形式は次のとおりです。  
@@ -93,6 +91,6 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
   
 3.  右側のウィンドウで、拡張機能を選択し、、**更新**ボタンをクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [検索と Visual Studio 拡張機能の使用](../ide/finding-and-using-visual-studio-extensions.md)   
  [Visual Studio 拡張機能の配布](../extensibility/shipping-visual-studio-extensions.md)

@@ -1,26 +1,24 @@
 ---
-title: "言語の重要なコマンド サービス フィルター |Microsoft ドキュメント"
-ms.custom: 
+title: 言語の重要なコマンド サービス フィルター |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - language services, filters
 - language services, commands to support
 ms.assetid: 4948c494-3d4d-4f50-b3f9-959e73f90e4d
-caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ee6c746874e7e00643f1b840185969a6dabadfe5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 1e7affdbcad2b935a05420a2817c5d8bda5cd9cf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="important-commands-for-language-service-filters"></a>言語サービスのフィルターの重要なコマンド
 全機能を備えた言語サービスのフィルターを作成する場合は、次のコマンドの処理を検討してください。 コマンド識別子の完全な一覧が定義されている、<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>アンマネージ列挙体のマネージ コードと Stdidcmd.h ヘッダー ファイル[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]コード。 Stdidcmd.h ファイルを検索する*Visual Studio SDK インストール パス*\VisualStudioIntegration\Common\Inc です。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|メニューまたはショートカット キーから送信されます。 呼び出す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A>メソッドを<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>とパラメーター情報、ヒント ウィンドウを更新します。|  
 |<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|ユーザーが変数上に置いたまたは変数にカーソルを位置付けます選択して、送信される**クイック ヒント**から**IntelliSense**で、**編集**メニュー。 呼び出して、ヒントで変数の型を返す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A>メソッドを<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>です。 デバッグが有効な場合は、ヒントはまた変数の値を表示する必要があります。|  
 |<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|通常、ユーザーは、ctrl キーを押しながら space キーを入力したときに送信します。 このコマンドは、言語サービスを呼び出すを示します、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A>メソッドを<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>です。|  
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID><br /><br /> <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|通常、メニューから送信**選択範囲のコメント**または**選択範囲のコメントを解除**から**詳細**で、**編集**メニュー。 <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>ユーザーが選択したテキストをコメントにすることを示します<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>ユーザーが選択されているテキストのコメントを解除することを示します。 これらのコマンドは、言語サービスによってのみ実装できます。|  
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID><br /><br /> <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|通常、メニューから送信**選択範囲のコメント**または**選択範囲のコメントを解除**から**詳細**で、**編集**メニュー。 <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> ユーザーが選択したテキストをコメントにすることを示します<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>ユーザーが選択されているテキストのコメントを解除することを示します。 これらのコマンドは、言語サービスによってのみ実装できます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [従来の言語サービスの開発](../../extensibility/internals/developing-a-legacy-language-service.md)

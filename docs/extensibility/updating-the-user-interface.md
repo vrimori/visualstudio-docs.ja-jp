@@ -1,26 +1,24 @@
 ---
-title: "ユーザー インターフェイスの更新 |Microsoft ドキュメント"
-ms.custom: 
+title: ユーザー インターフェイスの更新 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - user interfaces, updating
 - commands, updating UI
 ms.assetid: 376e2f56-e7bf-4e62-89f5-3dada84a404b
-caps.latest.revision: "41"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: bea4f89d2894344069b8aa5b3037bd00b973a40e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6b3bc8c4b87aefe62cbd27e64fc426ddb7abf96e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-the-user-interface"></a>ユーザー インターフェイスの更新
 コマンドを実装した後は、新しいコマンドの状態で、ユーザー インターフェイスを更新するコードを追加できます。  
@@ -54,6 +52,6 @@ ms.lasthandoff: 12/22/2017
   
          取得することに注意してください、<xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager>インターフェイスを呼び出して、`QueryInterface`メソッドを<xref:Microsoft.VisualStudio.Shell.Interop.IOleComponentUIManager>からインターフェイスを取得して、オブジェクト、または、<xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager>サービス。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Vspackage がユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [実装](../extensibility/internals/command-implementation.md)

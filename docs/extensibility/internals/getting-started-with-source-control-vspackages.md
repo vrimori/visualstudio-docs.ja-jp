@@ -1,26 +1,24 @@
 ---
-title: "ソース コントロールの Vspackage の概要 |Microsoft ドキュメント"
-ms.custom: 
+title: ソース コントロールの Vspackage の概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control packages, getting started
 - getting started, source control packages
 ms.assetid: 049c68f4-a041-4f24-8575-4837e7f5cf3f
-caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ec256103aa9329c752029a7139eb2c5c533ae67b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: a3b1eed41a96285acc5436bf5e0c37fcb7ae2ff0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-source-control-vspackages"></a>ソース コントロールの Vspackage の概要
 ソース管理 VSPackage は、ソース管理プラグインをより高度な代替です。 (を参照してください[ソース管理プラグインを作成する](../../extensibility/internals/creating-a-source-control-plug-in.md)ソースの詳細についてプラグインを制御します)。ソース管理 VSPackage がソース コントロールのモデル、機能、およびユーザー インターフェイス (UI) を完全に制御を有効にしに統合されるため、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] VSPackage として環境。  

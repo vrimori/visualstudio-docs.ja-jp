@@ -1,26 +1,24 @@
 ---
-title: "テスト領域 5: ソース管理の変更 |Microsoft ドキュメント"
-ms.custom: 
+title: 'テスト領域 5: ソース管理の変更 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], changing
 - source control plug-ins, changing source control
 ms.assetid: fdf09e00-108c-4d51-bbd5-72452d52a490
-caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ffe029ecf5839f03732a1e5162dd22da4fe0a18e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: e7fd014bf520ee2f0515e284f2fb5430961cd407
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="test-area-5-change-source-control"></a>テスト領域 5: ソース管理の変更
 このソース管理プラグインのテストの領域は、によるソース管理の変更について説明、**ソース管理の変更**コマンド。  
@@ -76,5 +74,5 @@ ms.lasthandoff: 12/22/2017
 |閉じずにだけソリューションを再バインド**ソース管理の変更** ダイアログ ボックス|1.プロジェクトを作成します。<br />2.ソース コントロールを使用する唯一のソリューションを追加 (**ファイル**、**ソース管理**、 **選択されたプロジェクトをソース管理に追加**です。<br />3.開く、**ソース管理の変更** ダイアログ ボックス。<br />4.唯一のソリューションをバインド解除 (終了しない**ソース管理の変更** ダイアログ ボックス)。<br />5.唯一のソリューションをバインドします。<br />6.**[OK]** をクリックしてダイアログ ボックスを閉じます。<br />7.(存在する場合) をチェック アウト ソリューションおよびソリューション項目|ソリューションは、制御されたままです。<br /><br /> プロジェクトは、管理対象外です。|  
 |同じディレクトリにある場合にだけソリューション/プロジェクトを再バインドします。|1.プロジェクトを作成します。<br />2.プロジェクトのみを使用してソース コントロールを追加する (**ファイル**、**ソース管理**、 **選択されたプロジェクトをソース管理に追加**です。<br />3.ソリューションを閉じます。<br />4.少なくとも 2 つのプロジェクトに新しいソリューションを作成します。<br />5.ソリューションをソース管理に追加します。<br />6.ソース管理から手順 1. で作成されたプロジェクトを追加します。<br />7.求められた場合は、ソリューションのチェック アウトをそのまま使用します。<br />8.ソリューション全体で確認してください。<br />9.開く、**ソース管理の変更** ダイアログ ボックス。<br />10.(手順 6) から追加したプロジェクトを選択し、クリックして**バインド解除**です。<br />11.**[OK]** をクリックしてダイアログ ボックスを閉じます。<br />12.指示された場合は、チェック アウトをそのまま使用します。<br />13.再度開く**ソース管理の変更** ダイアログ ボックス。<br />14.(手順 6) から追加したプロジェクトを選択し、クリックして**バインド**です。<br />15.元の場所を選択します。|ソリューションとプロジェクトは、コントロールのままになります。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン向けのテスト ガイド](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

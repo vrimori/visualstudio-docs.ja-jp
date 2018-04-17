@@ -1,23 +1,21 @@
 ---
-title: "ドメイン固有言語に関する |Microsoft ドキュメント"
-ms.custom: 
+title: ドメイン固有言語に関する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 9357c55b204d521eb5cd77af328636485c490ff4
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 89293e0b684881767b6357b88469dc69ddc71902
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="about-domain-specific-languages"></a>ドメイン固有言語について
 
@@ -81,7 +79,7 @@ DSL を定義したときに、自分のコンピューターにインストー�
   
 ### <a name="domain-model"></a>ドメイン モデル
 
-ドメイン固有言語には、要素と一貫性のある文法にそれらの関係のセットを結合する必要があります。 要素および関係の組み合わせが有効かどうかにも定義する必要があります。 たとえば、プログラミング言語には、循環継承、1 つのクラスは、2 番目のクラスから派生し、2 番目のクラスが最初のクラスから派生した通常ようにします。 制約は、ビジネス ロジックを高速にも使用できます、たとえば、1 人のユーザーが自分自身の依存関係をすることはできません。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]ほとんどのドメイン固有言語を必要とする制限の種類を表現するのにには、制約を使用します。  
+ドメイン固有言語には、要素と一貫性のある文法にそれらの関係のセットを結合する必要があります。 要素および関係の組み合わせが有効かどうかにも定義する必要があります。 たとえば、プログラミング言語には、循環継承、1 つのクラスは、2 番目のクラスから派生し、2 番目のクラスが最初のクラスから派生した通常ようにします。 制約は、ビジネス ロジックを高速にも使用できます、たとえば、1 人のユーザーが自分自身の依存関係をすることはできません。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] ほとんどのドメイン固有言語を必要とする制限の種類を表現するのにには、制約を使用します。  
   
 ### <a name="artifact-generation"></a>成果物の生成
 
@@ -89,7 +87,7 @@ DSL を定義したときに、自分のコンピューターにインストー�
   
 ### <a name="serialization"></a>シリアル化
 
-ドメイン固有言語は、編集、保存、終了、およびできる再読み込み何らかの形で永続化する必要があります。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]定義し、ドメイン固有言語のシリアル化または永続化の方法をカスタマイズできる XML 形式を使用します。  
+ドメイン固有言語は、編集、保存、終了、およびできる再読み込み何らかの形で永続化する必要があります。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 定義し、ドメイン固有言語のシリアル化または永続化の方法をカスタマイズできる XML 形式を使用します。  
   
 ### <a name="integration-with-visual-studio"></a>Visual Studio との統合
 

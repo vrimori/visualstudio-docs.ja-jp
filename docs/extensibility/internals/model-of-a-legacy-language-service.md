@@ -1,27 +1,23 @@
 ---
-title: "従来の言語サービスのモデル |Microsoft ドキュメント"
-ms.custom: 
+title: 従来の言語サービスのモデル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - language services, model
 ms.assetid: d8ae1c0c-ee3d-4937-a581-ee78d0499793
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc652f9eb4428e1d4d7297ed8b588c7f81a07b2d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 943f0f013045e3082af3069ed4d45aaed1096869
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="model-of-a-legacy-language-service"></a>従来の言語サービスのモデル
 言語サービスは、要素と、特定の言語の機能を定義し、その言語に固有の情報に、エディターを提供するために使用します。 たとえば、エディターは、構文の色分けをサポートするために、要素と言語のキーワードを知っている必要があります。  
@@ -52,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 |コード ウィンドウ|<xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>|1 つまたは複数のテキスト ビューを含むドキュメント ウィンドウです。 ときに[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]がマルチ ドキュメント インターフェイス (MDI) モードでは、コード ウィンドウの MDI 子。|  
 |テキスト ビュー|<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>|ユーザーが移動し、キーボードとマウスを使用してテキストを表示できるウィンドウです。 テキスト ビューは、エディターとしてユーザーに表示されます。 通常のエディター ウィンドウ、出力ウィンドウおよびイミディ エイト ウィンドウでテキスト ビューを使用することができます。 さらに、コード ウィンドウ内の 1 つ以上のテキスト ビューを構成することができます。|  
 |テキスト マネージャー|によって管理される、<xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>から取得する、サービス、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager>ポインター|前に説明したすべてのコンポーネントで共有される共通の情報を保持するためのコンポーネント。|  
-|言語サービス|実装に依存します。実装します。<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>|構文の強調表示、ステートメント入力候補、かっこの照合などの言語に固有の情報と、エディターを提供するオブジェクト。|  
+|言語サービス|実装に依存します。実装します。 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>|構文の強調表示、ステートメント入力候補、かっこの照合などの言語に固有の情報と、エディターを提供するオブジェクト。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム エディターでのドキュメント データとドキュメント ビュー](../../extensibility/document-data-and-document-view-in-custom-editors.md)

@@ -1,26 +1,24 @@
 ---
-title: "ソリューションの親コンテナーのフォルダーを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: ソリューションの親コンテナーのフォルダーを作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - solutions, creating parent containers
 - source control plug-ins, creating parent containers
 ms.assetid: 961e68ed-2603-4479-a306-330eda2b2efa
-caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: b2aa63a0c55ad196edf6c209475a816c0c3c027c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2104c0c109db0d410cbd08683ce227c62982fd65
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-parent-container-folders-for-solutions"></a>ソリューションの親コンテナーのフォルダーを作成します。
 API では、ソース管理プラグイン バージョン 1.2、ユーザーは、ソリューション内のすべての Web プロジェクトの 1 つのルート ソース コントロール変換先を指定できます。 この単一のルートには、スーパー Unified ルート (SUR) が呼び出されます。  
@@ -64,9 +62,9 @@ API では、ソース管理プラグイン バージョン 1.2、ユーザー�
   
  かどうか、操作キャンセルまたは失敗がエラーのために関係なく、SUR フォルダーとサブフォルダーが作成されます。 キャンセルまたはエラー条件に自動的に削除されません。  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]バージョン 1.1 の動作に既定値は、ソース管理プラグインが返されない場合は`SCC_CAP_CREATESUBPROJECT`と`SCC_CAP_GETPARENTPROJECT`機能フラグ。 さらに、ユーザーの[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]バージョン 1.1 の動作に戻すには、次のキーの値を dword:00000001 に設定することもできます。  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] バージョン 1.1 の動作に既定値は、ソース管理プラグインが返されない場合は`SCC_CAP_CREATESUBPROJECT`と`SCC_CAP_GETPARENTPROJECT`機能フラグ。 さらに、ユーザーの[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]バージョン 1.1 の動作に戻すには、次のキーの値を dword:00000001 に設定することもできます。  
   
  [HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl]"DoNotCreateSolutionRootFolderInSourceControl"= dword:00000001  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API バージョン 1.2 の新機能](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

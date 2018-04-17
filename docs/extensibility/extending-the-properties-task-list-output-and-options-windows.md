@@ -1,12 +1,10 @@
 ---
-title: "プロパティ、タスク一覧、出力、およびオプションの Windows を拡張 |Microsoft ドキュメント"
-ms.custom: 
+title: プロパティ、タスク一覧、出力、およびオプションの Windows を拡張 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - properties pane
 - task list
@@ -15,22 +13,22 @@ helpviewer_keywords:
 - tutorials
 - tool windows
 ms.assetid: 06990510-5424-44b8-9fd9-6481acec5c76
-caps.latest.revision: "37"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 631c336d0350fdf8a43d747eb6bda7b01e9d1eba
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 4db9bb9101bd06921814132856fab0335a4a2530
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extending-the-properties-task-list-output-and-options-windows"></a>プロパティ、タスク一覧、出力、およびオプションの Windows の拡張
 Visual Studio での任意のツール ウィンドウにアクセスすることができます。 このチュートリアルは、新しいツール ウィンドウに関する情報を統合する方法を示す**オプション**ページと、新しい設定で、**プロパティ**に書き込む方法と ページで、**タスク一覧**と**出力**windows です。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="create-an-extension-with-a-tool-window"></a>ツール ウィンドウと拡張機能を作成します。  
   
@@ -150,7 +148,7 @@ Visual Studio での任意のツール ウィンドウにアクセスするこ�
   
      ツール ウィンドウは、ユーザーが利用できるが、リスト ボックス内の項目は TodoItems で表されます。 ユーザーがこれらの項目のいずれか、ボックスの一覧に選択したときに、**プロパティ**項目に関する情報がウィンドウに表示されます。  
   
-     データで利用できるようにする、**プロパティ**ウィンドウで、2 つの特殊な属性を持つパブリック プロパティにデータを変換する`Description`と`Category`です。 `Description`下部に表示されるテキスト、**プロパティ**ウィンドウです。 `Category`ときに、プロパティが表示される場所を決定、**プロパティ**でウィンドウが表示されます、 **Categorized**ビュー。 次の図に、**プロパティ**ウィンドウが**Categorized**ビュー、**名前**プロパティに、 **ToDo フィールド**カテゴリが選択すると、およびの説明、**名前**プロパティは、ウィンドウの下部に表示されます。  
+     データで利用できるようにする、**プロパティ**ウィンドウで、2 つの特殊な属性を持つパブリック プロパティにデータを変換する`Description`と`Category`です。 `Description` 下部に表示されるテキスト、**プロパティ**ウィンドウです。 `Category` ときに、プロパティが表示される場所を決定、**プロパティ**でウィンドウが表示されます、 **Categorized**ビュー。 次の図に、**プロパティ**ウィンドウが**Categorized**ビュー、**名前**プロパティに、 **ToDo フィールド**カテゴリが選択すると、およびの説明、**名前**プロパティは、ウィンドウの下部に表示されます。  
   
      ![[プロパティ] ウィンドウ](../extensibility/media/t5properties.png "T5Properties")  
   

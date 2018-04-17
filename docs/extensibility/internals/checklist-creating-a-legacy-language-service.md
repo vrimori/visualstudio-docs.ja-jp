@@ -1,26 +1,24 @@
 ---
-title: "チェックリスト: 従来の言語サービスを作成する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チェックリスト: 従来の言語サービスを作成する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - language services
 - language services, native code
 ms.assetid: 8b73b341-a33a-4ab5-9390-178c9e563d2d
-caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: b09176efca3a8839d5e6a741a1e161ff61cdc7ca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: ad407d85213bf640b8631e9fbcb12b681ac87406
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="checklist-creating-a-legacy-language-service"></a>チェックリスト: 従来の言語サービスを作成します。
 次のチェックリストは、言語サービスを作成するために行う必要がありますの基本的な手順をまとめたもの、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]コア エディターです。 言語サービスに統合する[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デバッグの式エバリュエーターを作成する必要があります。 詳細については、次を参照してください。 [CLR 式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)で、 [Visual Studio デバッガーの機能拡張](../../extensibility/debugger/visual-studio-debugger-extensibility.md)です。  
@@ -127,6 +125,6 @@ ms.lasthandoff: 12/22/2017
   
  すべてのユーザー コンテキストを提供するを実装、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider>インターフェイスです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レガシ言語サービスの開発](../../extensibility/internals/developing-a-legacy-language-service.md)   
  [CLR 式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

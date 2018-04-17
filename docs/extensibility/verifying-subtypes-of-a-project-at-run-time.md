@@ -1,26 +1,24 @@
 ---
-title: "実行時に、プロジェクトのサブタイプを確認しています |Microsoft ドキュメント"
-ms.custom: 
+title: 実行時に、プロジェクトのサブタイプを確認しています |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project subtypes
 - check subtypes
 ms.assetid: b87780ec-36a3-4e9a-9ee2-7abdc26db739
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 18049c034286c33247aec11aba77071daa93ef5c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: b8898da6850c01c1a248b57b0fbc5f46be2a8ff4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="verifying-subtypes-of-a-project-at-run-time"></a>実行時に、プロジェクトのサブタイプを確認しています
 カスタム プロジェクトのサブタイプに依存する VSPackage は、サブタイプのサブタイプが存在しない場合に正常に失敗できるようにするロジックを探してを含める必要があります。 次の手順では、指定されたサブタイプの存在を確認する方法を示します。  
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクトのサブタイプ](../extensibility/internals/project-subtypes.md)   
  [プロジェクトのサブタイプの設計](../extensibility/internals/project-subtypes-design.md)   
  [プロジェクト サブタイプによって拡張されるプロパティとメソッド](../extensibility/internals/properties-and-methods-extended-by-project-subtypes.md)

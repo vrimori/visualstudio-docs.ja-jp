@@ -1,27 +1,25 @@
 ---
-title: "プロジェクト モデルの要素 |Microsoft ドキュメント"
-ms.custom: 
+title: プロジェクト モデルの要素 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], implementation considerations
 - project models
 - projects [Visual Studio SDK], elements
 ms.assetid: a1dbe0dc-68da-45d7-8704-5b43ff7e4fc4
-caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: c5f230da41efa8dd2fa522a5f86ae1402991b2cc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 4933e73df93c1f8a3bcf62e03b6883c0096f1d8f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="elements-of-a-project-model"></a>プロジェクト モデルの要素
 インターフェイスおよび実装内のすべてのプロジェクトの[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]基本的な構造を共有: プロジェクトの種類のプロジェクトのモデル。 VSPackage を開発するには、プロジェクト モデルでは、IDE によって提供されるグローバルの機能と共に動作および設計に関する決定に準拠したオブジェクトを作成します。 プロジェクト項目を保存する方法を制御するなどが制御できない通知ファイルを永続化する必要があります。 ユーザーが開いているプロジェクト アイテムにフォーカスが移ります、選択**を保存**で、**ファイル**メニューで、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]メニュー バーで、プロジェクトの種類のコードする必要があります IDE からコマンドを途中受信、ファイルを保持してとファイルが不要になった変更されたことを IDE に戻るには、通知を送信します。  
@@ -45,7 +43,7 @@ Project モデル
   
  プロジェクトは、コマンドをサポートし、したがってを実装する必要があります、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>コマンドがコマンド コンテキストの Guid をルーティングに参加するインターフェイスです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チェックリスト: 新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)   
  [ビルド内にありません: HierUtil7 プロジェクト クラスを使用して、プロジェクトの種類 (C++) を実装するには](http://msdn.microsoft.com/en-us/a5c16a09-94a2-46ef-87b5-35b815e2f346)   
  [プロジェクト モデルのコア コンポーネント](../../extensibility/internals/project-model-core-components.md)   

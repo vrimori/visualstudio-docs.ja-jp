@@ -1,28 +1,26 @@
 ---
-title: "Vspackage の管理 |Microsoft ドキュメント"
-ms.custom: 
+title: Vspackage の管理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSPackages, autoloading
 - VSPackages, delayed loading
 - delay loading
 - VSPackages, loading
 ms.assetid: 386e0ce5-4107-4164-b0cd-1cf43eb5e7cf
-caps.latest.revision: "35"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 3c3201c032d0cae645460e614b6d4138297e4a93
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 9e3241bae84b89b53e30c3d0949e4f8551110e7d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-vspackages"></a>Vspackage の管理
 ほとんどの場合、Vspackage を管理するプロジェクトと項目テンプレートが登録し、自動的にパッケージを読み込むためについて心配する必要はありません。 ただし、状況によっては、パッケージを管理するために少しを学習する必要があります。  
@@ -48,5 +46,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="troubleshooting-vspackages"></a>Vspackage のトラブルシューティング  
  ロードまたはエラーが発生する Vspackage をトラブルシューティングするためのテクニックを調べる: [Vspackage のトラブルシューティング](../extensibility/troubleshooting-vspackages.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [VSPackage](../extensibility/internals/vspackages.md)

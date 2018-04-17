@@ -1,26 +1,24 @@
 ---
-title: "カスタムの装飾が可能な項目 |Microsoft ドキュメント"
-ms.custom: 
+title: カスタムの装飾が可能な項目 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - colorable items
 - language services, custom colorable items
 ms.assetid: b4d0ddee-c04b-48dc-ba82-f6068570cef0
-caps.latest.revision: "24"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 78c4823e3644dc755cef518dcbbba5f42c7aebc1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: b23ff39abcb9a1354ea28becab3b7df867378ddf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-colorable-items"></a>カスタムの装飾が可能な項目
 言語サービスの一部としてカスタムの装飾が可能な項目を実装することによっての色分け、キーワードやコメントなどの種類の一覧をオーバーライドできます。  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
  実装する方法の例については、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem>と<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem>インターフェイスを参照してください<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem>です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [従来の言語サービスのモデル](../../extensibility/internals/model-of-a-legacy-language-service.md)   
  [カスタム エディターの構文の色分け](../../extensibility/syntax-coloring-in-custom-editors.md)   
  [従来の言語サービスの構文の色分け](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)   

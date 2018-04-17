@@ -1,27 +1,23 @@
 ---
-title: "レガシ API でのテキスト バッファー イベント |Microsoft ドキュメント"
-ms.custom: 
+title: レガシ API でのテキスト バッファー イベント |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - text buffer events
 ms.assetid: 9be49e9f-1864-41c2-8a3c-f66895881341
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e7847cdca2065cadd6adaf0d4b3e6ea10444725
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ab2812d30c0f02063e9ed3672e9b01855c77da22
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="text-buffer-events-in-the-legacy-api"></a>レガシ API でのテキスト バッファー イベント
 テキスト バッファー オブジェクトは、さまざまな状況に対応できるようにするいくつかのイベントを出力します。  
@@ -52,9 +48,9 @@ ms.lasthandoff: 12/22/2017
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStreamEvents>|1 次元の座標で基になるテキスト バッファーへの変更のクライアントに通知します。|  
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLinesEvents>|2 次元座標で基になるテキスト バッファーへの変更のクライアントに通知します。|  
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserDataEvents>|ユーザー データへの変更のクライアントに通知します。|  
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsPreliminaryTextChangeCommitEvents>|イベントをトリガーする最後のコミット ジェスチャのクライアントに通知し、変更されたテキストの範囲を提供します。 `IVsPreliminaryTextChangeCommitEvents`インターフェイスは、元に戻すまたはやり直すコマンドへの応答は発生しません。 イベントは、undo マネージャーのバッファーにのみ発生します。 `IVsPreliminaryTextChangeCommitEvents`変更をコミットする前に他のイベントが、テキストを変更しないことを確認するために再フォーマットの一覧についてなどの他のイベントの前に発生します。 VSPackage は、いずれかを監視する必要があります、`IVsPreliminaryTextChangeCommitEvents`インターフェイスまたは`IVsFinalTextChangeCommitEvents`が、両方は使用できません。|  
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsFinalTextChangeCommitEvents>|イベントをトリガーする最後のコミット ジェスチャのクライアントに通知し、変更されたテキストの範囲を提供します。 `IVsFinalTextChangeCommitEvents`インターフェイスは、元に戻すまたはやり直すコマンドへの応答は発生しません。 イベントは、undo マネージャーのバッファーにのみ発生します。 `IVsFinalTextChangeCommitEvents`向け言語サービスまたは編集を完全に制御があるその他のオブジェクトによってのみです。 VSPackage は、いずれかを監視する必要があります、`IVsPreliminaryTextChangeCommitEvents`インターフェイスまたは`IVsFinalTextChangeCommitEvents`が、両方は使用できません。|  
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsPreliminaryTextChangeCommitEvents>|イベントをトリガーする最後のコミット ジェスチャのクライアントに通知し、変更されたテキストの範囲を提供します。 `IVsPreliminaryTextChangeCommitEvents`インターフェイスは、元に戻すまたはやり直すコマンドへの応答は発生しません。 イベントは、undo マネージャーのバッファーにのみ発生します。 `IVsPreliminaryTextChangeCommitEvents` 変更をコミットする前に他のイベントが、テキストを変更しないことを確認するために再フォーマットの一覧についてなどの他のイベントの前に発生します。 VSPackage は、いずれかを監視する必要があります、`IVsPreliminaryTextChangeCommitEvents`インターフェイスまたは`IVsFinalTextChangeCommitEvents`が、両方は使用できません。|  
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsFinalTextChangeCommitEvents>|イベントをトリガーする最後のコミット ジェスチャのクライアントに通知し、変更されたテキストの範囲を提供します。 `IVsFinalTextChangeCommitEvents`インターフェイスは、元に戻すまたはやり直すコマンドへの応答は発生しません。 イベントは、undo マネージャーのバッファーにのみ発生します。 `IVsFinalTextChangeCommitEvents` 向け言語サービスまたは編集を完全に制御があるその他のオブジェクトによってのみです。 VSPackage は、いずれかを監視する必要があります、`IVsPreliminaryTextChangeCommitEvents`インターフェイスまたは`IVsFinalTextChangeCommitEvents`が、両方は使用できません。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レガシ API を使用してテキスト バッファーにアクセスします。](../extensibility/accessing-the-text-buffer-by-using-the-legacy-api.md)   
  [方法: テキスト バッファー イベント、レガシ API の登録](../extensibility/how-to-register-for-text-buffer-events-with-the-legacy-api.md)

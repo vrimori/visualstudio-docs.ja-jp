@@ -1,23 +1,21 @@
 ---
-title: "よく寄せられる質問: VSPackage 拡張機能のアドインに変換する |Microsoft ドキュメント"
-ms.custom: 
+title: 'よく寄せられる質問: VSPackage 拡張機能のアドインに変換する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 3a01d333-6e31-423f-ae06-5091a4fcb7a9
-caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 43376b304637ffe59d443ee82350d5492133db2f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: daec495ee71bf27bc40174b74cd95a6df47c247f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="faq-converting-add-ins-to-vspackage-extensions"></a>FAQ: アドインを VSPackage 拡張に変換する
 現在、アドインは推奨されていません。 新しい Visual Studio 拡張機能をするためには、VSIX 拡張機能を作成する必要があります。 ここでは、VSIX 拡張機能を Visual Studio アドインを変換する方法についてよく寄せられる質問に対する回答を示します。  
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 >  詳細については、次を参照してください。 [VSPackage でアドインのコードを実行する方法ですか?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_RunAddin)以下です。  
   
 ## <a name="what-software-do-i-need-to-develop-vsix-extensions"></a>VSIX 拡張機能を開発する必要があるソフトウェアをしますか。  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="wheres-the-extension-documentation"></a>拡張機能のドキュメントとは?  
  始まる[Visual Studio 拡張機能の開発を始めました](../extensibility/starting-to-develop-visual-studio-extensions.md)です。 MSDN の VSSDK 拡張機能の開発に関するその他のアーティクルが 1 つのとおりです。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="can-i-convert-my-add-in-project-to-a-vsix-project"></a>VSIX プロジェクトにアドインのプロジェクトを変換できます。  
  アドインのプロジェクトは、VSIX プロジェクトで使用されるメカニズムは、アドイン プロジェクトにあるものと同じではないために、VSIX プロジェクトに直接変換できません。 VSIX プロジェクト テンプレートと適切なプロジェクト項目テンプレートには、多数の比較的を開始する簡単で VSIX 拡張機能として実行するコードがあります。  
   
-##  <a name="BKMK_StartDeveloping"></a>VSIX 拡張機能の開発を開始する方法  
+##  <a name="BKMK_StartDeveloping"></a> VSIX 拡張機能の開発を開始する方法  
  メニュー コマンドを持つ VSIX を行う方法を次に示します。  
   
 #### <a name="to-make-a-vsix-extension-that-has-a-menu-command"></a>メニュー コマンドを持つ VSIX 拡張機能を作成するのには  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
      **ツール**メニュー (、実験用インスタンスで) という名前のボタンを表示する必要があります**マイ コマンド名**です。 このボタンを選択すると、メッセージが表示されます:**内 TestVSPackagePackage.MenuItemCallback()**です。  
   
-##  <a name="BKMK_RunAddin"></a>VSPackage でアドインのコードを実行する方法は?  
+##  <a name="BKMK_RunAddin"></a> VSPackage でアドインのコードを実行する方法は?  
  通常、アドイン コードは次の 2 つの方法のどちらかで実行します。  
   
 -   メニュー コマンドによるトリガー (コードは `IDTCommandTarget.Exec` メソッド内にあります)  

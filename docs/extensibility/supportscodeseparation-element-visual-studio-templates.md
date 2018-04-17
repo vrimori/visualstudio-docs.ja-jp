@@ -1,36 +1,32 @@
 ---
-title: "SupportsCodeSeparation 要素 (Visual Studio テンプレート) |Microsoft ドキュメント"
-ms.custom: 
+title: SupportsCodeSeparation 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#SupportsCodeSeparation
 helpviewer_keywords:
 - SupportsCodeSeparation element [Visual Studio Templates]
 - <SupportsCodeSeparation> element [Visual Studio Templates]
 ms.assetid: 8112aac8-a269-40e5-b92b-9b9a6ff5a542
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: affe4d6c73271bea467e373bd8100b3b7f06c0ea
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: edd8eb9bbabb47444754d3756216fc81d02c7d7d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supportscodeseparation-element-visual-studio-templates"></a>SupportsCodeSeparation 要素 (Visual Studio テンプレート)
 指定するかどうか、**別のファイルにコードを配置**でチェック ボックスをオンになって、**新しい項目の追加** ダイアログ ボックス。  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<SupportsCodeSeparation >  
   
 ## <a name="syntax"></a>構文  
@@ -64,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
  `SupportsCodeSeparation`要素は、Web 項目テンプレートの使用のみ。  
   
- コードの分離、または分離コード ページ モデルを使用すると、1 つのファイルと別のファイルでのプログラミング コードでマークアップを格納できます。 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]他の .NET 言語は、このモデルを使用します。  
+ コードの分離、または分離コード ページ モデルを使用すると、1 つのファイルと別のファイルでのプログラミング コードでマークアップを格納できます。 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 他の .NET 言語は、このモデルを使用します。  
   
 ## <a name="example"></a>例  
  次の例は、表示を指定します、**別のファイルにコードを配置**オプション。  
@@ -91,6 +87,6 @@ ms.lasthandoff: 12/22/2017
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

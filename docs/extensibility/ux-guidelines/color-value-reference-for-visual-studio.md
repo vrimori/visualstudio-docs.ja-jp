@@ -1,24 +1,24 @@
 ---
-title: "Visual Studio の値の参照の色を |Microsoft ドキュメント"
-description: "新しい Visual Studio の色のトークンを作成するためのリファレンス: 16 進コード"
-keywords: "色、16 進コード、色合い、テーマの UI、テーマ"
+title: Visual Studio の値の参照の色を |Microsoft ドキュメント
+description: '新しい Visual Studio の色のトークンを作成するためのリファレンス: 16 進コード'
+keywords: 色、16 進コード、色合い、テーマの UI、テーマ
 author: brickgeorge
 ms.author: v-brickg
 ms.date: 08/04/2017
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 694ffb31-132c-4d63-b930-8254e7c50c25
-ms.custom: 
+ms.custom: ''
 ms.reviewer: Jamie.Young
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-manager: ghogen
-ms.workload: v-brickg
-ms.openlocfilehash: 001e9db65209f8ae60cd070d5d68b9f72ef62672
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.technology:
+- vs-ide-sdk
+manager: douge
+ms.workload:
+- v-brickg
+ms.openlocfilehash: 421fca16db2ed2792a539ead2ab46d325cee3a11
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="color-value-reference-for-visual-studio"></a>Visual Studio のカラー値の参照
 このトピックでは、新しい色のトークンを作成するための参照です。 新しい UI を作成するときは、各主要なテーマの色とハイ コントラスト テーマ用には、その要素のシステムの色の名前を選択するのに既存の UI からのような色を使用できます。 
@@ -162,9 +162,9 @@ ms.lasthandoff: 12/22/2017
 | 背景: 押されました。 | ![#FF007ACC 見本](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 見本")<br />`#FF007ACC` | ![#FF007ACC 見本](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 見本")<br />`#FF007ACC` | ![#FF007ACC 見本](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 見本")<br />`#FF007ACC` | ![見本を強調表示](../../extensibility/ux-guidelines/media/HCHighlight.png "色見本の強調表示")<br />`Highlight` |
 | 前景: 無効になっています | ![#FFA2A4A5 見本](../../extensibility/ux-guidelines/media/A2A4A5.png "#FFA2A4A5 見本")<br />`#FFA2A4A5` | ![#FF656565 見本](../../extensibility/ux-guidelines/media/656565.png "#FF656565 見本")<br />`#FF656565` | ![#FFA2A4A5 見本](../../extensibility/ux-guidelines/media/A2A4A5.png "#FFA2A4A5 見本")<br />`#FFA2A4A5` | ![GrayText 見本](../../extensibility/ux-guidelines/media/HCGrayText.png "GrayText 見本")<br />`GrayText` |
 | 背景: 無効になっています | ![#Fff5f5f5 見本](../../extensibility/ux-guidelines/media/F5F5F5.png "#fff5f5f5 見本")<br />`#FFF5F5F5` | ![#FF252526 見本](../../extensibility/ux-guidelines/media/252526.png "#FF252526 見本")<br />`#FF252526` | ![#FFF6F6F6 見本](../../extensibility/ux-guidelines/media/F6F6F6.png "#FFF6F6F6 見本")<br />`#FFF6F6F6` | ![ウィンドウの見本](../../extensibility/ux-guidelines/media/HCWindow.png "ウィンドウ見本")<br />`Window` |
-| Border: ホバー | ![#FFC9DEF5 見本](../../extensibility/ux-guidelines/media/C9DEF5.png "#FFC9DEF5 見本")<br />`#FFC9DEF5` | ![#FF3E3E40 見本](../../extensibility/ux-guidelines/media/3E3E40.png "#FF3E3E40 見本")<br />`#FF3E3E40` |![#FFFEFEFE 見本](../../extensibility/ux-guidelines/media/FEFEFE.png "#FFFEFEFE 見本")<br /> `#FFFEFEFE` | ![HighlightText 見本](../../extensibility/ux-guidelines/media/HCHighlightText.png "HighlightText 見本")<br />`HighlightText` |
-| Border: 押されました。 | ![#FF007ACC 見本](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 見本")<br />`#FF007ACC` | ![#FF007ACC 見本](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 見本")<br />`#FF007ACC` |![#FF007ACC 見本](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 見本")<br /> `#FF007ACC` | ![HighlightText 見本](../../extensibility/ux-guidelines/media/HCHighlightText.png "HighlightText 見本")<br />`HighlightText` |
-| Border: 無効になっています | ![#FFCCCEDB 見本](../../extensibility/ux-guidelines/media/CCCEDB.png "#FFCCCEDB 見本")<br />`#FFCCCEDB` | ![#FF434346 見本](../../extensibility/ux-guidelines/media/434346.png "#FF434346 見本")<br />`#FF434346` | ![#FFC6C6C6 見本](../../extensibility/ux-guidelines/media/C6C6C6.png "#FFC6C6C6 見本")<br />`#FFC6C6C6` | ![WindowFrame 見本](../../extensibility/ux-guidelines/media/HCWindowFrame.png "WindowFrame 見本")<br />`WindowFrame` |
+| Border: ホバー | ![#FFC9DEF5 見本](../../extensibility/ux-guidelines/media/C9DEF5.png "#FFC9DEF5 見本")<br />`#FFC9DEF5` | ![ #FF3E3E40 見本](../../extensibility/ux-guidelines/media/3E3E40.png "#FF3E3E40 見本")<br />`#FF3E3E40` |![#FFFEFEFE 見本](../../extensibility/ux-guidelines/media/FEFEFE.png "#FFFEFEFE 見本")<br /> `#FFFEFEFE` | ![HighlightText 見本](../../extensibility/ux-guidelines/media/HCHighlightText.png "HighlightText 見本")<br />`HighlightText` |
+| Border: 押されました。 | ![#FF007ACC 見本](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 見本")<br />`#FF007ACC` | ![ #FF007ACC 見本](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 見本")<br />`#FF007ACC` |![#FF007ACC 見本](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 見本")<br /> `#FF007ACC` | ![HighlightText 見本](../../extensibility/ux-guidelines/media/HCHighlightText.png "HighlightText 見本")<br />`HighlightText` |
+| Border: 無効になっています | ![#FFCCCEDB 見本](../../extensibility/ux-guidelines/media/CCCEDB.png "#FFCCCEDB 見本")<br />`#FFCCCEDB` | ![ #FF434346 見本](../../extensibility/ux-guidelines/media/434346.png "#FF434346 見本")<br />`#FF434346` | ![#FFC6C6C6 見本](../../extensibility/ux-guidelines/media/C6C6C6.png "#FFC6C6C6 見本")<br />`#FFC6C6C6` | ![WindowFrame 見本](../../extensibility/ux-guidelines/media/HCWindowFrame.png "WindowFrame 見本")<br />`WindowFrame` |
 
 ## <a name="properties-grid-control-elements"></a>プロパティ グリッド コントロール要素
 
@@ -309,7 +309,7 @@ ms.lasthandoff: 12/22/2017
 | 前景 (テキスト): ホバー | ![#FF1E1E1E 見本](../../extensibility/ux-guidelines/media/1E1E1E.png "#FF1E1E1E 見本")<br />`#FF1E1E1E` | ![#FFFFFFFF 見本](../../extensibility/ux-guidelines/media/FFFFFF.png "#FFFFFFFF 見本")<br />`#FFFFFFFF` | ![#FF1E1E1E 見本](../../extensibility/ux-guidelines/media/1E1E1E.png "#FF1E1E1E 見本")<br />`#FF1E1E1E` | ![HighlightText 見本](../../extensibility/ux-guidelines/media/HCHighlightText.png "HighlightText 見本")<br />`HighlightText` |
 | 背景: ホバー | ![#FFC9DEF5 見本](../../extensibility/ux-guidelines/media/C9DEF5.png "#FFC9DEF5 見本")<br />`#FFC9DEF5` | ![#FF606060 見本](../../extensibility/ux-guidelines/media/606060.png "#FF606060 見本")<br />`#FF606060` | ![#FFFDF4BF 見本](../../extensibility/ux-guidelines/media/FDF4BF.png "#FFFDF4BF 見本")<br />`#FFFDF4BF` | ![見本を強調表示](../../extensibility/ux-guidelines/media/HCHighlight.png "色見本の強調表示")<br />`Highlight` |
 | 前景 (テキスト): 押されました。 | ![#FFFFFFFF 見本](../../extensibility/ux-guidelines/media/FFFFFF.png "#FFFFFFFF 見本")<br />`#FFFFFFFF` | ![#FFFFFFFF 見本](../../extensibility/ux-guidelines/media/FFFFFF.png "#FFFFFFFF 見本")<br />`#FFFFFFFF` | ![#FFFFFFFF 見本](../../extensibility/ux-guidelines/media/FFFFFF.png "#FFFFFFFF 見本")<br />`#FFFFFFFF` | ![HighlightText 見本](../../extensibility/ux-guidelines/media/HCHighlightText.png "HighlightText 見本")<br />`HighlightText` |
-| 背景: 押されました。 | ![#FF3399FF 見本](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 見本")<br />`#FF3399FF` | ![#FF3399FF 見本](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 見本")<br />`#FF3399FF` | ![#FF3399FF 見本](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 見本")<br />`#FF3399FF` | ![見本を強調表示](../../extensibility/ux-guidelines/media/HCHighlight.png "色見本の強調表示")<br />`Highlight` |
+| 背景: 押されました。 | ![#FF3399FF 見本](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 見本")<br />`#FF3399FF` | ![ #FF3399FF 見本](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 見本")<br />`#FF3399FF` | ![#FF3399FF 見本](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 見本")<br />`#FF3399FF` | ![見本を強調表示](../../extensibility/ux-guidelines/media/HCHighlight.png "色見本の強調表示")<br />`Highlight` |
 | 前景 (テキスト): 選択しました。 | ![#FFFFFFFF 見本](../../extensibility/ux-guidelines/media/FFFFFF.png "#FFFFFFFF 見本")<br />`#FFFFFFFF` | ![#FFFFFFFF 見本](../../extensibility/ux-guidelines/media/FFFFFF.png "#FFFFFFFF 見本")<br />`#FFFFFFFF` | ![#FFFFFFFF 見本](../../extensibility/ux-guidelines/media/FFFFFF.png "#FFFFFFFF 見本")<br />`#FFFFFFFF` | ![HighlightText 見本](../../extensibility/ux-guidelines/media/HCHighlightText.png "HighlightText 見本")<br />`HighlightText` |
 | 背景: 選択しました。 | ![#FF3399FF 見本](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 見本")<br />`#FF3399FF` | ![#FF3399FF 見本](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 見本")<br />`#FF3399FF` | ![#FF3399FF 見本](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 見本")<br />`#FF3399FF` | ![見本を強調表示](../../extensibility/ux-guidelines/media/HCHighlight.png "色見本の強調表示")<br />`Highlight` |
 
@@ -398,7 +398,7 @@ ms.lasthandoff: 12/22/2017
 | 背景 | ![#FEFEFE 見本](../../extensibility/ux-guidelines/media/FEFEFE.png "#FEFEFE 見本")<br />`#FEFEFE` | ![#252526 見本](../../extensibility/ux-guidelines/media/252526.png "#252526 見本")<br />`#252526` | ![#FEFEFE 見本](../../extensibility/ux-guidelines/media/FEFEFE.png "#FEFEFE 見本")<br />`#FEFEFE` | ![コントロールの見本](../../extensibility/ux-guidelines/media/HCControl.png "コントロール見本")<br />`Control` |
 | 境界線 | ![#717171 見本](../../extensibility/ux-guidelines/media/717171.png "#717171 見本")<br />`#717171` | ![#999999 見本](../../extensibility/ux-guidelines/media/999999.png "#999999 見本")<br />`#999999` | ![#717171 見本](../../extensibility/ux-guidelines/media/717171.png "#717171 見本")<br />`#717171` | ![プロパティの見本](../../extensibility/ux-guidelines/media/HCControlDark.png "プロパティ見本")<br />`ControlDark` |
 | テキスト | ![#1E1E1E 見本](../../extensibility/ux-guidelines/media/1E1E1E.png "#1E1E1E 見本")<br />`#1E1E1E` | ![#F1F1F1 見本](../../extensibility/ux-guidelines/media/F1F1F1.png "#F1F1F1 見本")<br />`#F1F1F1` | ![#1E1E1E 見本](../../extensibility/ux-guidelines/media/1E1E1E.png "#1E1E1E 見本")<br />`#1E1E1E` | ![ControlText 見本](../../extensibility/ux-guidelines/media/HCControlText.png "ControlText 見本")<br />`ControlText` |
-| グリフ | ![見本](../../extensibility/ux-guidelines/media/1E1E1E.png "#1E1E1E 見本")<br />`#1E1E1E` | ![#F1F1F1 見本](../../extensibility/ux-guidelines/media/F1F1F1.png "#F1F1F1 見本")<br />`#F1F1F1` | ![#1E1E1E 見本](../../extensibility/ux-guidelines/media/1E1E1E.png "#1E1E1E 見本")<br />`#1E1E1E` | ![ControlText 見本](../../extensibility/ux-guidelines/media/HCControlText.png "ControlText 見本")<br />`ControlText` |
+| グリフ | ![ 見本](../../extensibility/ux-guidelines/media/1E1E1E.png "#1E1E1E 見本")<br />`#1E1E1E` | ![#F1F1F1 見本](../../extensibility/ux-guidelines/media/F1F1F1.png "#F1F1F1 見本")<br />`#F1F1F1` | ![#1E1E1E 見本](../../extensibility/ux-guidelines/media/1E1E1E.png "#1E1E1E 見本")<br />`#1E1E1E` | ![ControlText 見本](../../extensibility/ux-guidelines/media/HCControlText.png "ControlText 見本")<br />`ControlText` |
 
 ### <a name="disabled"></a>無効
 

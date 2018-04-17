@@ -1,29 +1,25 @@
 ---
-title: "SccCheckin 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: SccCheckin 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccCheckin
 helpviewer_keywords:
 - SccCheckin function
 ms.assetid: e3f26ac2-6163-42e1-a764-22cfea5a3bc6
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f95377f79d02952c63b673d50569fac058a8573c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: bf8c8d23a89e55b272657dde0c2374c78e63bfaf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scccheckin-function"></a>SccCheckin 関数
 この関数は、ソース管理システムが表示され、変更を保存して、新しいバージョンを作成する以前のチェック アウトしたファイルをチェックインします。 この関数がカウントとにチェックインするファイルの名前の配列と呼ばれます。  
@@ -87,5 +83,5 @@ SCCRTN SccCheckin (
   
  `fOptions`引数がの値を指定することができます、`SCC_KEEP_CHECKEDOUT`でファイルを確認し、再度チェック アウトするユーザーの意図を示すフラグ。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

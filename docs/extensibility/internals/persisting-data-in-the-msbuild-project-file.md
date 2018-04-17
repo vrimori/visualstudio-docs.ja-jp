@@ -1,27 +1,23 @@
 ---
-title: "MSBuild プロジェクト ファイルでデータの永続化 |Microsoft ドキュメント"
-ms.custom: 
+title: MSBuild プロジェクト ファイルでデータの永続化 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - project files, persisting data in
 ms.assetid: 6a920cb7-453d-4ffd-af1c-6f3084bd03f7
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b2bb73602a6cba07fe9cbde4ddae4219f5a2b350
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 324f9dfd4e381e9580e4940f06f652ef64d9d3ec
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="persisting-data-in-the-msbuild-project-file"></a>MSBuild プロジェクト ファイルでデータを保持します。
 プロジェクトのサブタイプは、後で使用できるプロジェクト ファイルにサブタイプに固有のデータを保持する必要があります。 プロジェクトのサブタイプでは、プロジェクト ファイルの永続化を使用して、次の要件を満たします。  
@@ -30,7 +26,7 @@ ms.lasthandoff: 12/22/2017
   
     1.  構成に依存しないデータ。 つまり、空白または不足している条件を持つ MSBuild 要素に格納されているデータ。  
   
-    2.  構成に依存するデータ。 つまり、データを特定のプロジェクト構成には、規定 MSBuild 要素に格納します。 例:  
+    2.  構成に依存するデータ。 つまり、データを特定のプロジェクト構成には、規定 MSBuild 要素に格納します。 例えば:  
   
         ```  
         <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">  
@@ -45,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="persisting-build-related-information"></a>ビルド関連の情報を永続化します。  
  プロジェクトを作成するために役立つデータの永続化は、MSBuild によって処理されます。 MSBuild システムでは、ビルドに関連する情報のマスター テーブルを保持します。 プロジェクトのサブタイプでは、このデータを取得し、プロパティ値の設定にアクセスする担当します。 永続化する他のプロパティを追加することは保存されませんので、プロパティを削除することで、プロジェクトのサブタイプはビルドに関連するデータ テーブルを強化もできます。  
   
- MSBuild のデータを変更するには、プロジェクトのサブタイプは、により、基本プロジェクト システムから MSBuild プロパティ オブジェクトを取得するため<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>です。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>実行してそのコア プロジェクト システムと集計のプロジェクト サブタイプ クエリで実装されるインターフェイスは、`QueryInterface`です。  
+ MSBuild のデータを変更するには、プロジェクトのサブタイプは、により、基本プロジェクト システムから MSBuild プロパティ オブジェクトを取得するため<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>です。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> 実行してそのコア プロジェクト システムと集計のプロジェクト サブタイプ クエリで実装されるインターフェイスは、`QueryInterface`です。  
   
  次の手順を使用してプロパティを削除する手順の概要<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>です。  
   
@@ -82,5 +78,5 @@ ms.lasthandoff: 12/22/2017
       </ProjectExtensions>  
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクト サブタイプ](../../extensibility/internals/project-subtypes.md)

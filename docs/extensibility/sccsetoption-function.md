@@ -1,29 +1,25 @@
 ---
-title: "SccSetOption 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: SccSetOption 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccSetOption
 helpviewer_keywords:
 - SccSetOption function
 ms.assetid: 4b5e6666-c24c-438a-a9df-9c52f58f8175
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 70fe624984adce58191ee7d354185eac0bb527ed
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 916378ea594d14c9493535b3a28e72ea49ed4733
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccsetoption-function"></a>SccSetOption 関数
 この関数は、ソース管理プラグインの動作を制御するオプションを設定します。  
@@ -75,7 +71,7 @@ SCCRTN SccSetOption(
  場合`nOption`は`SCC_OPT_EVENTQUEUE`IDE が無効にすると (または再度有効にする) のバック グラウンド処理します。 インスタンス、コンパイル時に IDE がソース管理プラグインを任意の種類の アイドル処理を停止するを教えることがあります。 コンパイルした後は、プラグインのイベント キューを常に最新の状態に保つにバック グラウンド処理を再度有効になります。 対応する、`SCC_OPT_EVENTQUEUE`の値`nOption`、2 つの可能な値がある`dwVal`、つまり、`SCC_OPT_EQ_ENABLE`と`SCC_OPT_EQ_DISABLE`です。  
   
 ## <a name="sccopthascancelmode"></a>SCC_OPT_HASCANCELMODE  
- 場合の値は、`nOption`は`SCC_OPT_HASCANCELMODE`IDE では、ユーザーを長時間操作をキャンセルします。 設定`dwVal`に`SCC_OPT_HCM_NO`(既定) では、IDE に [キャンセル] モードが含まれていないことを示します。 ユーザーにキャンセルできる必要がある場合、ソース管理プラグインは独自の [キャンセル] ボタンを提供しなければなりません。 `SCC_OPT_HCM_YES`IDE に、SCC プラグインは独自の [キャンセル] ボタンを表示する必要はありませんので、操作をキャンセルする機能が提供されていることを示します。 場合は、IDE 設定`dwVal`に`SCC_OPT_HCM_YES`に応答する準備ができた`SCC_MSG_STATUS`と`DOCANCEL`に送信されたメッセージ、`lpTextOutProc`コールバック関数 (を参照してください[LPTEXTOUTPROC](../extensibility/lptextoutproc.md))。 IDE でこの変数が設定されていない場合、プラグインを送信できませんこれら 2 つのメッセージ。  
+ 場合の値は、`nOption`は`SCC_OPT_HASCANCELMODE`IDE では、ユーザーを長時間操作をキャンセルします。 設定`dwVal`に`SCC_OPT_HCM_NO`(既定) では、IDE に [キャンセル] モードが含まれていないことを示します。 ユーザーにキャンセルできる必要がある場合、ソース管理プラグインは独自の [キャンセル] ボタンを提供しなければなりません。 `SCC_OPT_HCM_YES` IDE に、SCC プラグインは独自の [キャンセル] ボタンを表示する必要はありませんので、操作をキャンセルする機能が提供されていることを示します。 場合は、IDE 設定`dwVal`に`SCC_OPT_HCM_YES`に応答する準備ができた`SCC_MSG_STATUS`と`DOCANCEL`に送信されたメッセージ、`lpTextOutProc`コールバック関数 (を参照してください[LPTEXTOUTPROC](../extensibility/lptextoutproc.md))。 IDE でこの変数が設定されていない場合、プラグインを送信できませんこれら 2 つのメッセージ。  
   
 ## <a name="sccoptnamechangepfn"></a>SCC_OPT_NAMECHANGEPFN  
  NOption に設定されている場合`SCC_OPT_NAMECHANGEPFN`、および両方のソース管理プラグインと、IDE を使用することで、プラグイン実際に名前を変更したりソース管理操作中にファイルを移動します。 `dwVal`型の関数ポインターに設定されます[OPTNAMECHANGEPFN](../extensibility/optnamechangepfn.md)です。 ソース管理操作中にプラグインこの関数を呼び出す、3 つのパラメーターに渡します。 これらは、ファイル、そのファイルと、IDE との関連性のある情報へのポインターの (完全修飾パス) の新しい名前の (完全修飾パス) の古い名前です。 IDE を呼び出すことによってこの最後のポインターで送信`SccSetOption`で`nOption`'éý'`SCC_OPT_USERDATA`で`dwVal`のデータを指すです。 この関数のサポートはオプションです。 VSSCI プラグ-を使用してこの機能する必要があります、関数ポインターとユーザー データ変数を初期化`NULL`に与えられたいずれかの場合を除き、rename 関数を呼び出す必要がありますいないこととします。 これをも準備に指定された値を保持するかに新しい呼び出しに対する応答で変更`SccSetOption`です。 これは、ソース管理コマンドの操作の途中では行われませんが、コマンド間でその可能性があります。  
@@ -86,7 +82,7 @@ SCCRTN SccSetOption(
 ## <a name="sccoptsharesubproj"></a>SCC_OPT_SHARESUBPROJ  
  場合`nOption`に設定されている`SCC_OPT_SHARESUBPROJ`IDE はソース管理からファイルを追加すると、ソース管理プラグインは、指定したローカル フォルダーを使用できるかどうかをテストします。 値、`dwVal`パラメーターはここでは関係ありません。 プラグインでは、IDE でソースからのファイルの追加、ローカルのコピー先フォルダーを指定する場合は、タイミングを制御、 [SccAddFromScc](../extensibility/sccaddfromscc-function.md)が呼び出されたが、プラグインを返す必要があります、`SCC_I_SHARESUBPROJOK`ときに、`SccSetOption`関数は、と呼ばれる。 IDE を使用し、`lplpFileNames`のパラメーター、`SccAddFromScc`関数を対象フォルダーに渡します。 プラグインは、ソース管理から追加されたファイルの配置先のフォルダーを使用します。 プラグインを返さない場合`SCC_I_SHARESUBPROJOK`ときに、`SCC_OPT_SHARESUBPROJ`オプションの設定と、IDE がプラグインの項目が現在のローカル フォルダーでのみファイルを追加できることを想定しています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)   

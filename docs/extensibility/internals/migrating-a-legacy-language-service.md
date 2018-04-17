@@ -1,27 +1,23 @@
 ---
-title: "レガシ言語サービスの移行 |Microsoft ドキュメント"
-ms.custom: 
+title: レガシ言語サービスの移行 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - language services, migrating
 ms.assetid: e0f666a0-92a7-4f9c-ba79-d05b13fb7f11
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4f5f7cff29dd368acbbc3f599ec0cf623343031f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 412b09016a3f889e0d6c5e40ff75895d5ae8ff48
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="migrating-a-legacy-language-service"></a>従来の言語サービスを移行します。
 プロジェクトを更新して、source.extension.vsixmanifest ファイルをプロジェクトに追加することによって、以降のバージョンの Visual Studio にレガシ言語サービスを移行できます。 言語サービス自体は引き続き以前と同様、関数、Visual Studio エディターで適応させるのでします。  
@@ -113,5 +109,5 @@ ms.lasthandoff: 12/22/2017
   
 12. デバッグを開始します。 Visual Studio の 2 番目のインスタンスが開かれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [従来の言語サービスの機能拡張](../../extensibility/internals/legacy-language-service-extensibility.md)

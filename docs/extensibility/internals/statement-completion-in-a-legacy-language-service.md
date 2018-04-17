@@ -1,26 +1,24 @@
 ---
-title: "従来の言語サービスで入力候補 |Microsoft ドキュメント"
-ms.custom: 
+title: 従来の言語サービスで入力候補 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - statement completion
 - language services, statement completion
 ms.assetid: 617439dc-3f0e-4e5f-b346-3e4e7fcf3c1b
-caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 7208d38966e2caa9f9510c48c34952742d06c1b3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d76face8f43bcb428a9c3b997083f8299d332cc8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="statement-completion-in-a-legacy-language-service"></a>従来の言語サービスで入力候補
 ステートメント入力候補は、する言語サービスやすく、言語のキーワードまたはコア エディターに入力が開始されている要素を終了するプロセスです。 このトピックでは、ステートメント入力候補のしくみと、言語サービスに実装する方法について説明します。  
@@ -40,5 +38,5 @@ ms.lasthandoff: 12/22/2017
   
  トリガーがエディターで入力されている場合: テキスト バッファーでは具体的には、-、言語サービスを呼び出します、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A>メソッド。 これにより、ユーザーは、ステートメント入力候補の候補からを選択できるように、UI を表示するエディターです。 このメソッドでは、実装する必要があります<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet>と<xref:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags>パラメーターとしてフラグ。 スクロール ボックスの一覧にコンプリート項目の一覧が表示されます。 ユーザーが入力を続ける、最新の文字に最も近い入力を反映するように、リスト ボックス内の選択項目が更新されます。 コア エディターは、ステートメント入力候補の UI を実装が言語サービスを実装する必要があります、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet>ステートメントの候補コンプリート項目のセットを定義するインターフェイスです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [従来の言語サービスのコマンドの受信](../../extensibility/internals/intercepting-legacy-language-service-commands.md)

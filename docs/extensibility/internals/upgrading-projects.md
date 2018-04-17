@@ -1,27 +1,25 @@
 ---
-title: "プロジェクトのアップグレード |Microsoft ドキュメント"
-ms.custom: 
+title: プロジェクトのアップグレード |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading VSPackages
 - upgrading applications, strategies
 - VSPackages, upgrade support
 ms.assetid: e01cb44a-8105-4cf4-8223-dfae65f8597a
-caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 060823a04127480ef8de387200425a34c6ef1178
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: cb64d71a50cb59a3c981dd87695bbb685f793761
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrading-projects"></a>プロジェクトのアップグレード
 プロジェクトのモデルを 1 つのバージョンから変更[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]へ必要がありますプロジェクトおよびソリューション アップグレードすること、新しいバージョンで実行できるようにします。 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]独自のプロジェクトのアップグレードのサポートを実装するために使用するインターフェイスを提供します。  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
  バックアップして、プロジェクトのアップグレードに関する詳細については、「コメントの IVsProjectUpgrade vsshell2.idl です。  
   
-## <a name="upgrading-custom-projects"></a>カスタム プロジェクトのアップグレード
+## <a name="upgrading-custom-projects"></a> カスタム プロジェクトのアップグレード
 プロジェクト ファイルに永続化されている情報を、ご使用の製品の異なる Visual Studio バージョン間で変更する場合、プロジェクト ファイルの旧バージョンから新しいバージョンへのアップグレードをサポートする必要があります。 アップグレードに参加することをサポートするために、 **Visual Studio 変換ウィザード**、実装、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory>インターフェイスです。 このインターフェイスにはコピーのアップグレードに使用できる機能しか含まれていません。 プロジェクトのアップグレードは、ソリューションを開くことの一部として行われます。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory>インターフェイスはプロジェクト ファクトリによって実装またはプロジェクト ファクトリから取得可能な少なくともする必要があります。  
   
  従来の機能を使用する、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade>インターフェイスは、引き続きサポートされますが、概念的に開いているプロジェクトの一部として、プロジェクト システムをアップグレードします。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade>によってインターフェイスが呼び出されるため、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]環境場合であっても、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory>インターフェイスが呼び出されるかを実装します。 この方法では、使用できます。<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory>コピーを実装し、プロジェクトのアップグレードの一部にしかし、での一括 (通常は新しい場所) を実行する作業の残りの部分を委任する、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade>インターフェイスです。  
@@ -92,7 +90,7 @@ ms.lasthandoff: 12/22/2017
   
 5.  メソッドを使用して<xref:Microsoft.VisualStudio.Shell.Interop.IVsUpgradeLogger>アップグレードを投稿するには、Visual Studio 変換ウィザードを使用してユーザーのメッセージが関連します。  
   
-6.  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFileUpgrade>インターフェイスを使用して、任意の種類のプロジェクトのアップグレードの一部として実行する必要があるファイルのアップグレードを実装します。 このインターフェイスからは呼び出されません<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory>、プロジェクト システムはメイン プロジェクト システムの一部であるファイルをアップグレードするためのメカニズムを直接に認識できない可能性がありますとして提供されます。 たとえば、コンパイラ関連のファイルとプロパティが、プロジェクト システムの残りを扱うのと同じ開発チームによって扱われない場合に、この状況が発生する可能性があります。  
+6.  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFileUpgrade> インターフェイスを使用して、任意の種類のプロジェクトのアップグレードの一部として実行する必要があるファイルのアップグレードを実装します。 このインターフェイスからは呼び出されません<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory>、プロジェクト システムはメイン プロジェクト システムの一部であるファイルをアップグレードするためのメカニズムを直接に認識できない可能性がありますとして提供されます。 たとえば、コンパイラ関連のファイルとプロパティが、プロジェクト システムの残りを扱うのと同じ開発チームによって扱われない場合に、この状況が発生する可能性があります。  
   
 ### <a name="ivsprojectupgrade-implementation"></a>IVsProjectUpgrade の実装  
  プロジェクト システムを実装する場合<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade>のみ、それに参加できません、 **Visual Studio 変換ウィザード**です。 ただし、実装する場合でも、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory>インターフェイス、委任することものファイル アップグレードを<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade>実装します。  
@@ -176,5 +174,5 @@ ms.lasthandoff: 12/22/2017
   
 2.  プロジェクト項目がプロジェクトのアップグレードの通知を取得時に、 **Visual Studio 変換ウィザード**は引き続き表示されます。 そのためのメソッドを使用する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUpgradeLogger>ウィザードの UI にアップグレード メッセージを提供するインターフェイスです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクト](../../extensibility/internals/projects.md)   

@@ -2,26 +2,22 @@
 title: プロジェクトのサブタイプの初期化シーケンス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - project subtypes, initialization sequence
 ms.assetid: f657f8c3-5e68-4308-9971-e81e3099ba29
-caps.latest.revision: ''
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6f34825430d7233d99fc78f18ac7078b94020c2c
-ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
+ms.openlocfilehash: fe7e7a574d04ec9a49252e32e0fbb8b5685778aa
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="initialization-sequence-of-project-subtypes"></a>プロジェクトのサブタイプの初期化シーケンス
 環境の基本プロジェクト ファクトリの実装を呼び出すことによって、プロジェクトを構築する<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>です。 環境では、プロジェクト ファイルの拡張子のプロジェクト型 GUID の一覧が空でないことが判断した場合のプロジェクト サブタイプの構築を開始します。 プロジェクト ファイルの拡張子とプロジェクト GUID を指定するかどうか、プロジェクト、[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]または[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]プロジェクトの種類。 .Vbproj ファイルの拡張機能など、{F184B08F-C81C-45F6-A57F-5ABD9991F28F} を識別し、[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]プロジェクト。

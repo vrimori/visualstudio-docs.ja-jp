@@ -1,23 +1,21 @@
 ---
-title: "チュートリアル: JavaScript を使用して、SDK の作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: JavaScript を使用して、SDK の作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: a8c89d5d-5b78-4435-817f-c5f25ca6d715
-caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 2a53b10f3d9a69c0181a432dad491bebd177f5be
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2132269329c8b6af3ac846596adea7b3462db5bf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-an-sdk-using-javascript"></a>チュートリアル: JavaScript を使用して SDK を作成します。
 このチュートリアルでは、JavaScript を使用して単純な数学 SDK と Visual Studio Extension (VSIX) を作成する方法を説明します。  このチュートリアルは、これらのパートに分かれています。  
@@ -31,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
   
-##  <a name="createSimpleMathVSIX"></a>SimpleMathVSIX 拡張機能 SDK プロジェクトを作成するには  
+##  <a name="createSimpleMathVSIX"></a> SimpleMathVSIX 拡張機能 SDK プロジェクトを作成するには  
   
 1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
   
@@ -142,7 +140,7 @@ ms.lasthandoff: 12/22/2017
   
 21. Visual Studio を再起動します。  
   
-##  <a name="createSampleApp"></a>SDK を使用するサンプル アプリを作成するには  
+##  <a name="createSampleApp"></a> SDK を使用するサンプル アプリを作成するには  
   
 1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
   
@@ -315,7 +313,7 @@ ms.lasthandoff: 12/22/2017
   
 11. F5 キーをアプリをビルドして実行を選択します。  
   
-12. UI のアプリで、2 つの数値を入力してください。、、の操作を選択し、、  **=** ボタンをクリックします。 正しい結果が表示されます。  
+12. UI のアプリで、2 つの数値を入力してください。、、の操作を選択し、、 **=**ボタンをクリックします。 正しい結果が表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソフトウェア開発キットを作成する](../extensibility/creating-a-software-development-kit.md)

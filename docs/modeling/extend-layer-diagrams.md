@@ -1,24 +1,22 @@
 ---
-title: "依存関係図を拡張する |Microsoft ドキュメント"
-ms.custom: 
+title: 依存関係図を拡張する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-modeling
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, creating extensions
 - layer models
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d3358d5e74b121bcf670a0092f3064882d6960b
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: b359507946a68ee457d4840fc8652f7f48e3e11a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extend-dependency-diagrams"></a>依存関係図を拡張します。
 作成し、依存関係の図を更新し、Visual Studio での依存関係図と照らし合わせてプログラム コードの構造を検証するコードを記述することができます。 図のショートカット (コンテキスト) メニューに表示するコマンドを追加し、ドラッグ アンド ドロップ ジェスチャをカスタマイズし、テキスト テンプレートからレイヤー モデルにアクセスすることができます。 これらの拡張機能を VSIX (Visual Studio Integration Extension) にパッケージ化し、他の Visual Studio ユーザーに配布することができます。  
@@ -63,7 +61,7 @@ ms.lasthandoff: 02/09/2018
   
  [依存関係図の拡張機能のトラブルシューティング](../modeling/troubleshoot-extensions-for-layer-diagrams.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)   
  [依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)   
  [コードから依存関係のダイアグラムを作成します。](../modeling/create-layer-diagrams-from-your-code.md)   

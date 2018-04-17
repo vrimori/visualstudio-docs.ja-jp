@@ -1,26 +1,24 @@
 ---
-title: "テスト領域 4: で確認してください |Microsoft ドキュメント"
-ms.custom: 
+title: 'テスト領域 4: で確認してください |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], checking items in
 - source control plug-ins, checking items in
 ms.assetid: d0329fa8-7a8d-4d30-b67b-6f2a97b75a30
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 698b46c7ccb0a3fb13c799349d36de0cadf80af1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: e7f3e8a343823016f391735aae59e58dfefe1a5f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="test-area-4-check-in"></a>チェックイン テスト領域 4:
 このソース管理プラグインのテストの領域の説明を使用して、バージョン ストアに更新された項目を送信する、**チェックイン**コマンド。  
@@ -70,5 +68,5 @@ ms.lasthandoff: 12/22/2017
 |ソース管理下にある空のソリューションにプロジェクトを追加 (**チェックイン** ダイアログ ボックス)|1.空のソリューションを作成します。<br />2.ソリューションをソース管理に追加します。<br />3.新しいプロジェクトを追加します。<br />4.求められた場合は、ソリューションのチェック アウトをそのまま使用します。<br />5.チェックイン、**チェックイン** ダイアログ ボックス。|共通の期待される動作です。|  
 |ソース管理下にある空のソリューションにプロジェクトを追加 (**保留中のチェックイン**ウィンドウ)|1.空のソリューションを作成します。<br />2.ソリューションをソース管理に追加します。<br />3.新しいプロジェクトを追加します。<br />4.求められた場合は、ソリューションのチェック アウトをそのまま使用します。<br />5.ソリューションをチェックイン**保留中のチェックイン**ウィンドウです。|共通の期待される動作です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン向けのテスト ガイド](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

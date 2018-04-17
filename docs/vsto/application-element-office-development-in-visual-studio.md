@@ -1,13 +1,10 @@
 ---
-title: "&lt;アプリケーション&gt;要素 (Visual Studio での Office 開発) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;アプリケーション&gt;要素 (Visual Studio での Office 開発) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - application manifests [Office development in Visual Studio], <application> element
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9f20c4c8e6d44c62282f68173ce980f650da2692
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 8550b5374bde5d18d3f645c08f89902250ae5f2d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltapplicationgt-element-office-development-in-visual-studio"></a>&lt;アプリケーション&gt;要素 (Visual Studio での Office 開発)
   `application` 名前空間の `vstav3` 要素は、Office ソリューションの説明をラップします。 ドキュメント レベルのカスタマイズと VSTO アドインでは、子要素が異なります。  
@@ -65,7 +62,7 @@ ms.lasthandoff: 01/10/2018
  `application` 要素には、次のような要素があります。  
   
 ### <a name="customization"></a>カスタマイズ  
- 役割、`customization`内の要素、`vstov3`で名前空間が定義されている[&#60;以外の場合はカスタマイズ &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/customization-element-office-development-in-visual-studio.md).  
+ 役割、`customization`内の要素、`vstov3`で名前空間が定義されている[&#60;カスタマイズ&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/customization-element-office-development-in-visual-studio.md)です。  
   
 ## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズの例  
   
@@ -123,7 +120,7 @@ ms.lasthandoff: 01/10/2018
 </vstav3:application>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
  [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)  

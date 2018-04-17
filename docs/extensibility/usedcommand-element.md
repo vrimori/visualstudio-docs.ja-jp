@@ -1,26 +1,24 @@
 ---
-title: "UsedCommand 要素 |Microsoft ドキュメント"
-ms.custom: 
+title: UsedCommand 要素 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - UsedCommands element (VSCT XML schema)
 - VSCT XML schema elements, UsedCommands
 ms.assetid: 99cd05d3-644a-42ff-b289-8458cd1b20c0
-caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 06375b45e21e0b83c62f2509d666b786479ff2b4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 4888733abf142f6582706406decbea0bf84ce519
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="usedcommand-element"></a>UsedCommand 要素
 他の .vsct ファイルで定義されているコマンドにアクセスする VSPackage を有効にします。 たとえば、VSPackage は、標準を使用して**コピー**で定義されているコマンド、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]シェル、ことができます、コマンドを追加するメニューまたはツールバー再実装しなくてもします。  
@@ -67,6 +65,6 @@ ms.lasthandoff: 12/22/2017
 </UsedCommands>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [UsedCommands 要素](../extensibility/usedcommands-element.md)   
  [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

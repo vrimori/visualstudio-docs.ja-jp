@@ -1,25 +1,21 @@
 ---
-title: "イメージと Visual Studio のアイコン |Microsoft ドキュメント"
-ms.custom: 
+title: イメージと Visual Studio のアイコン |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/26/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f410325e-9cf2-4f39-b6d7-b672121c2691
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 164a450ca346fe2bd7b267d951ce522d27f14160
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 3fae6a5350d5204219edcb14732c7686984035e4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="images-and-icons-for-visual-studio"></a>イメージと Visual Studio のアイコン
 ##  <a name="BKMK_ImageUseInVisualStudio"></a> Visual Studio でのイメージの使用  
@@ -274,11 +270,11 @@ ms.lasthandoff: 03/13/2018
 ### <a name="base-palette"></a>基本パレット  
  すべての標準的なアイコンには、3 つの基本色が含まれています。 アイコンは、グラデーションを含んでいないか、ドロップ シャドウ、3 D ツール アイコンの 1 つまたは 2 つの例外を許可します。  
   
-|使用法|name|値 (明るいテーマ)|見本|例|  
+|使用法|名前|値 (明るいテーマ)|見本|例|  
 |-----------|----------|---------------------------|------------|-------------|  
 |バック グラウンド/ダークグレー|VS BG|424242 / 66,66,66|![見本 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|![基本パレットの例](../../extensibility/ux-guidelines/media/0405-02_basepaletteexample.png "0405 02_BasePaletteExample")|  
-|フォア グラウンド/低負荷|VS FG|F0EFF1 240,239,241/|![Swatch F0EFF1](../../extensibility/ux-guidelines/media/0405_f0eff1.png "0405_F0EFF1")||  
-|アウトライン|VS アウト|F6F6F6 / 246,246,246|![Swatch F6F6F6](../../extensibility/ux-guidelines/media/0405_f6f6f6.png "0405_F6F6F6")||  
+|フォア グラウンド/低負荷|VS FG|F0EFF1 240,239,241/|![見本f0eff1](../../extensibility/ux-guidelines/media/0405_f0eff1.png "0405_F0EFF1")||  
+|アウトライン|VS アウト|F6F6F6 / 246,246,246|![見本f6f6f6](../../extensibility/ux-guidelines/media/0405_f6f6f6.png "0405_F6F6F6")||  
   
  基本の色に加えて、各アイコンは拡張パレットから 1 つの追加の配色を含めることです。  
   
@@ -287,12 +283,12 @@ ms.lasthandoff: 03/13/2018
 #### <a name="action-modifiers"></a>操作の修飾子  
  次の 4 つの色は、操作の修飾子で必要なアクションの種類を示します。  
   
-|使用法|name|値 (すべてのテーマ)|見本|  
+|使用法|名前|値 (すべてのテーマ)|見本|  
 |-----------|----------|--------------------------|------------|  
 |正|VS アクション緑|388A34 56,138,52/|![見本 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
 |負|VS アクション赤|A1260D 161,38,13/|![見本 A1260D](../../extensibility/ux-guidelines/media/0405_a1260d.png "0405_A1260D")|  
-|ニュートラル|VS アクション青|00539C / 0,83,156|![Swatch 00539C](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
-|/新規作成|VS アクション オレンジ色|C27D1A / 194,156,26|![見本c27d1a](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|  
+|ニュートラル|VS アクション青|00539 C 0,83,156/|![見本 00539c](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
+|/新規作成|VS アクション オレンジ色|C27D1A 194,156,26/|![見本c27d1a](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|  
   
 ##### <a name="examples"></a>使用例  
  緑を「追加」のような正の値の操作の修飾子の使用が「実行」"、"と「検証します」。  
@@ -317,7 +313,7 @@ ms.lasthandoff: 03/13/2018
   
 |||||  
 |-|-|-|-|  
-|![New project icon](../../extensibility/ux-guidelines/media/0405-15_newproject.png "0405-15_NewProject")<br />新しいプロジェクト|![[新しいグラフ] アイコンを作成する](../../extensibility/ux-guidelines/media/0405-16_createnewgraph.png "0405 16_CreateNewGraph")<br />新しいグラフを作成します。|![新しい単体テスト アイコン](../../extensibility/ux-guidelines/media/0405-17_newunittest.png "0405 17_NewUnitTest")<br />新しい単体テスト|![新しいリスト項目のアイコン](../../extensibility/ux-guidelines/media/0405-18_newlistitem.png "0405 18_NewListItem")<br />新しいリスト アイテム|  
+|![新しいプロジェクト アイコン](../../extensibility/ux-guidelines/media/0405-15_newproject.png "0405 15_NewProject")<br />新しいプロジェクト|![[新しいグラフ] アイコンを作成する](../../extensibility/ux-guidelines/media/0405-16_createnewgraph.png "0405 16_CreateNewGraph")<br />新しいグラフを作成します。|![新しい単体テスト アイコン](../../extensibility/ux-guidelines/media/0405-17_newunittest.png "0405 17_NewUnitTest")<br />新しい単体テスト|![新しいリスト項目のアイコン](../../extensibility/ux-guidelines/media/0405-18_newlistitem.png "0405 18_NewListItem")<br />新しいリスト アイテム|  
   
 #### <a name="special-cases"></a>特殊なケース  
  特殊な場合は、色分けされたアクション修飾子可能性があります単独で使用スタンドアロン アイコンとして。 アイコンに使用される色は、アイコンが関連付けられているアクションを反映します。 この使用も含め、アイコンの小さなサブセットに制限されています。  
@@ -330,40 +326,40 @@ ms.lasthandoff: 03/13/2018
   
 #### <a name="folder"></a>フォルダー  
   
-|使用法|name|値 (すべてのテーマ)|見本|例|  
+|使用法|名前|値 (すべてのテーマ)|見本|例|  
 |-----------|----------|--------------------------|------------|-------------|  
-|フォルダー|フォルダー|DCB67A / 220,182,122|![見本 DCB67A](../../extensibility/ux-guidelines/media/0405_dcb67a.png "0405_DCB67A")|![フォルダーの色のアイコン](../../extensibility/ux-guidelines/media/0405-23_foldercolor.png "0405 23_FolderColor")|  
+|フォルダー|フォルダー|DCB67A 220,182,122/|![見本 DCB67A](../../extensibility/ux-guidelines/media/0405_dcb67a.png "0405_DCB67A")|![フォルダーの色のアイコン](../../extensibility/ux-guidelines/media/0405-23_foldercolor.png "0405 23_FolderColor")|  
   
 #### <a name="visual-studio-languages"></a>Visual Studio の言語  
  一般的な言語または Visual Studio で使用可能なプラットフォームには、関連付けられている色があります。 [基本] アイコンまたは複合アイコンの右上隅に表示される言語修飾子で、これらの色が使用されます。  
   
-|使用法|name|値 (すべてのテーマ)|見本|  
+|使用法|名前|値 (すべてのテーマ)|見本|  
 |-----------|----------|--------------------------|------------|  
-|ASP では、HTML、WPF|ASP HTML WPF 青|0095D7 / 0,149,215|![Swatch 0095D7](../../extensibility/ux-guidelines/media/0405_0096d7.png "0405_0096D7")|  
-|C++|CPP 紫|9B4F96 / 155,79,150|![Swatch 9B4F96](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|  
+|ASP では、HTML、WPF|ASP HTML WPF 青|0095D7 / 0,149,215|![見本 0095d7](../../extensibility/ux-guidelines/media/0405_0096d7.png "0405_0096D7")|  
+|C++|CPP 紫|9B4F96 155,79,150/|![見本 9B4F96](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|  
 |C#|CS 緑 (VS アクション緑)|388A34 56,138,52/|![見本 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
-|CSS|CSS 赤|BD1E2D 189,30,45/|![Swatch BD1E2D](../../extensibility/ux-guidelines/media/0405_bd1e2d.png "0405_BD1E2D")|  
+|CSS|CSS 赤|BD1E2D 189,30,45/|![見本bd1e2d](../../extensibility/ux-guidelines/media/0405_bd1e2d.png "0405_BD1E2D")|  
 |F#|FS 紫|672878 / 103,40,120|![見本 672878](../../extensibility/ux-guidelines/media/0405_672878.png "0405_672878")|  
 |JavaScript|JS オレンジ色|F 16421 241,100,33/|![見本 f 16421](../../extensibility/ux-guidelines/media/0405_f16421.png "0405_F16421")|  
-|VB|VB 青 (VS アクション青)|00539C / 0,83,156|![Swatch 00539C](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
+|VB|VB 青 (VS アクション青)|00539 C 0,83,156/|![見本 00539c](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
 |TypeScript|TS オレンジ色|E04C06 224,76,6/|![見本e04c06](../../extensibility/ux-guidelines/media/0405_e04c06.png "0405_E04C06")|  
-|Python|PY 緑|879636 / 135,150,54|![Swatch 879636](../../extensibility/ux-guidelines/media/0405_879636.png "0405_879636")|  
+|Python|PY 緑|879636 / 135,150,54|![見本 879636](../../extensibility/ux-guidelines/media/0405_879636.png "0405_879636")|  
   
 ##### <a name="examples-of-icons-with-language-modifiers"></a>Language 修飾子のアイコンの例  
   
 |||||||  
 |-|-|-|-|-|-|  
 |![Visual Basic アイコン](../../extensibility/ux-guidelines/media/0405-25_vb.png "0405 25_VB")<br />VB|![C&#35;アイコン](../../extensibility/ux-guidelines/media/0405-26_csharp.png "0405 26_CSharp")<br />C#|![C&#43; &#43;アイコン](../../extensibility/ux-guidelines/media/0405-27_cplusplus.png "0405 27_CPlusPlus")<br />C++|![F&#35;アイコン](../../extensibility/ux-guidelines/media/0405-28_fsharp.png "0405 28_FSharp")<br />F#|![JavaScript アイコン](../../extensibility/ux-guidelines/media/0405-29_javascript.png "0405 29_JavaScript")<br />JavaScript|![Python アイコン](../../extensibility/ux-guidelines/media/0405-30_python.png "0405 30_Python")<br />Python|  
-|![HTML アイコン](../../extensibility/ux-guidelines/media/0405-31_html.png "0405 31_HTML")<br />HTML|![WPF アイコン](../../extensibility/ux-guidelines/media/0405-32_wpf.png "0405 32_WPF")<br />WPF|![ASP icon](../../extensibility/ux-guidelines/media/0405-33_asp.png "0405-33_ASP")<br />ASP|![CSS アイコン](../../extensibility/ux-guidelines/media/0405-34_css.png "0405 34_CSS")<br />CSS|![TypeScript アイコン](../../extensibility/ux-guidelines/media/0405-35_typescript.png "0405 35_TypeScript")<br />TypeScript||  
+|![HTML アイコン](../../extensibility/ux-guidelines/media/0405-31_html.png "0405 31_HTML")<br />HTML|![WPF アイコン](../../extensibility/ux-guidelines/media/0405-32_wpf.png "0405 32_WPF")<br />WPF|![ASP アイコン](../../extensibility/ux-guidelines/media/0405-33_asp.png "0405 33_ASP")<br />ASP|![CSS アイコン](../../extensibility/ux-guidelines/media/0405-34_css.png "0405 34_CSS")<br />CSS|![TypeScript アイコン](../../extensibility/ux-guidelines/media/0405-35_typescript.png "0405 35_TypeScript")<br />TypeScript||  
   
 #### <a name="intellisense"></a>IntelliSense  
  IntelliSense アイコンは、排他的なカラー パレットを使用します。 これらの色は、IntelliSense のポップアップ リスト内の別の項目の間で簡単に見分けるやすくために使用されます。  
   
-|使用法|name|値 (すべてのテーマ)|見本|  
+|使用法|名前|値 (すべてのテーマ)|見本|  
 |-----------|----------|--------------------------|------------|  
-|イベント クラス|VS アクション オレンジ色|C27D1A / 194,125,26|![見本c27d1a](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|  
-|拡張メソッド、メソッド、モジュール、デリゲート|VS アクション紫|652D90 / 101,45,144|![見本 652d90](../../extensibility/ux-guidelines/media/0405_652d90.png "0405_652D90")|  
-|インターフェイスのフィールド、列挙型項目、マクロ、構造体、共用体の値の型、演算子、|VS アクション青|00539C / 0,83,156|![Swatch 00539C](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
+|イベント クラス|VS アクション オレンジ色|C27D1A 194,125,26/|![見本c27d1a](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|  
+|拡張メソッド、メソッド、モジュール、デリゲート|VS アクション紫|652 D 90 101,45,144/|![見本 652d90](../../extensibility/ux-guidelines/media/0405_652d90.png "0405_652D90")|  
+|インターフェイスのフィールド、列挙型項目、マクロ、構造体、共用体の値の型、演算子、|VS アクション青|00539 C 0,83,156/|![見本 00539c](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
 |Object|VS アクション緑|388A34 56,138,52/|![見本 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
 |定数、例外、列挙型項目、マップ、マップ項目、Namespace、テンプレート、種類の定義|バック グラウンド (VS BG)|424242 / 66,66,66|![見本 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|  
   
@@ -377,14 +373,14 @@ ms.lasthandoff: 03/13/2018
 ### <a name="notifications"></a>通知  
  Visual Studio での通知は、ステータスを示すために使用されます。 通知パレットは、次の 4 つの色と黒と白の前景の塗りつぶしのオプションを使用して、次の状態レベルでの通知を定義します。  
   
-|使用法|name|値 (すべてのテーマ)|見本|  
+|使用法|名前|値 (すべてのテーマ)|見本|  
 |-----------|----------|--------------------------|------------|  
-|状態: ニュートラル|通知の青 (VS 青)|1BA1E2 / 27,161,226|![見本 1BA1E2](../../extensibility/ux-guidelines/media/0405_1ba1e2.png "0405_1BA1E2")|  
+|状態: ニュートラル|通知の青 (VS 青)|1BA1E2 27,161,226/|![見本 1BA1E2](../../extensibility/ux-guidelines/media/0405_1ba1e2.png "0405_1BA1E2")|  
 |状態: 正の値|通知の緑 (VS 緑)|339933 / 51,153,51|![見本 339933](../../extensibility/ux-guidelines/media/0405_339933.png "0405_339933")|  
-|状態: 負の値|通知の赤 (VS 赤)|E 51400 229,20,0/|![Swatch E51400](../../extensibility/ux-guidelines/media/0405_e51400.png "0405_E51400")|  
+|状態: 負の値|通知の赤 (VS 赤)|E 51400 229,20,0/|![見本 e 51400](../../extensibility/ux-guidelines/media/0405_e51400.png "0405_E51400")|  
 |状態: 警告|通知黄色 (VS オレンジ色)|FFCC00 255,204,0/|![見本 FFCC00](../../extensibility/ux-guidelines/media/0405_ffcc00.png "0405_FFCC00")|  
 |前景の塗りつぶし|通知黒 (黒)|000000 / 0,0,0|![見本&#35;000000](../../extensibility/ux-guidelines/media/0405_000000.png "0405_000000")|  
-|前景の塗りつぶし|通知の空白 (空白)|FFFFFF / 255,255,255|![Swatch FFFFFF](../../extensibility/ux-guidelines/media/0405_ffffff.png "0405_FFFFFF")|  
+|前景の塗りつぶし|通知の空白 (空白)|FFFFFF / 255,255,255|![見本 FFFFFF](../../extensibility/ux-guidelines/media/0405_ffffff.png "0405_FFFFFF")|  
   
 #### <a name="examples-of-notification-icons"></a>通知アイコンの例  
   
@@ -395,24 +391,24 @@ ms.lasthandoff: 03/13/2018
 ### <a name="visual-studio-online"></a>Visual Studio Online  
  一般に、Visual Studio Online の機能で構成ブラウザーでホストします。 色は、さまざまな環境で異なりますが、スタイルは変わりません。  
   
-|グループ化|使用法|name|値 (すべてのテーマ)|見本|  
+|グループ化|使用法|名前|値 (すべてのテーマ)|見本|  
 |-----------|-----------|----------|--------------------------|------------|  
-|TFS|背景|TFSO BG|656565/ 101, 101, 101|![Swatch 656565](../../extensibility/ux-guidelines/media/0405_656565.png "0405_656565")|  
-|TFS|アウトライン|TFSO OUT|FFFFFF/255, 255, 255|![Swatch FFFFFF](../../extensibility/ux-guidelines/media/0405_ffffff.png "0405_FFFFFF")|  
-|Napa|背景|白|FFFFFF/255, 255, 255|![Swatch FFFFFF](../../extensibility/ux-guidelines/media/0405_ffffff.png "0405_FFFFFF")|  
-|モナコ|背景|白|FFFFFF/255, 255, 255|![Swatch FFFFFF](../../extensibility/ux-guidelines/media/0405_ffffff.png "0405_FFFFFF")|  
-|F12|背景|白|FFFFFF/255, 255, 255|![Swatch FFFFFF](../../extensibility/ux-guidelines/media/0405_ffffff.png "0405_FFFFFF")|  
-|F12|標準|F12 Grey_Primary|555555 / 85, 85, 85|![Swatch 555555](../../extensibility/ux-guidelines/media/0405_555555.png "0405_555555")|  
-|F12|ホバー|F12 Blue_Hover|2279BF / 34,121,191|![Swatch 2279BF](../../extensibility/ux-guidelines/media/0405_2279bf.png "0405_2279BF")|  
-|F12|無効|F12 LtGrey_Disabled|ABABAC / 171,171,172|![見本 ABABAC](../../extensibility/ux-guidelines/media/0405_ababac.png "0405_ABABAC")|  
-|F12|ホバー時の背景|Bg のマウス ポインターを移動します。|D9EBF7 / 217,235,247|![Swatch D9EBF7](../../extensibility/ux-guidelines/media/0405_d9ebf7.png "0405_D9EBF7")|  
+|TFS|背景|TFSO BG|656565/ 101, 101, 101|![見本 656565](../../extensibility/ux-guidelines/media/0405_656565.png "0405_656565")|  
+|TFS|アウトライン|OUT TFSO|FFFFFF/255, 255, 255|![見本 FFFFFF](../../extensibility/ux-guidelines/media/0405_ffffff.png "0405_FFFFFF")|  
+|Napa|背景|白|FFFFFF/255, 255, 255|![見本 FFFFFF](../../extensibility/ux-guidelines/media/0405_ffffff.png "0405_FFFFFF")|  
+|モナコ|背景|白|FFFFFF/255, 255, 255|![見本 FFFFFF](../../extensibility/ux-guidelines/media/0405_ffffff.png "0405_FFFFFF")|  
+|F12|背景|白|FFFFFF/255, 255, 255|![見本 FFFFFF](../../extensibility/ux-guidelines/media/0405_ffffff.png "0405_FFFFFF")|  
+|F12|標準|F12 Grey_Primary|555555 / 85, 85, 85|![見本 555555](../../extensibility/ux-guidelines/media/0405_555555.png "0405_555555")|  
+|F12|ホバー|F12 Blue_Hover|2279BF / 34,121,191|![見本 2279 bf](../../extensibility/ux-guidelines/media/0405_2279bf.png "0405_2279BF")|  
+|F12|無効|F12 LtGrey_Disabled|ABABAC 171,171,172/|![見本 ABABAC](../../extensibility/ux-guidelines/media/0405_ababac.png "0405_ABABAC")|  
+|F12|ホバー時の背景|Bg のマウス ポインターを移動します。|D9EBF7 217,235,247/|![見本d9ebf7](../../extensibility/ux-guidelines/media/0405_d9ebf7.png "0405_D9EBF7")|  
 |F12|押されているバック グラウンド|押された bg|B2D7F0 178,215,240/|![見本b2d7f0](../../extensibility/ux-guidelines/media/0405_b2d7f0.png "0405_B2D7F0")|  
-|F12|アウトライン|VS OUT|F6F6F6 / 246,246,246|![Swatch F6F6F6](../../extensibility/ux-guidelines/media/0405_f6f6f6.png "0405_F6F6F6")|  
-|F12|情報|情報|00BCF2 / 0,188,242|![Swatch 00BCF2](../../extensibility/ux-guidelines/media/0405_00bcf2.png "0405_00BCF2")|  
-|F12|警告|警告|F28300 / 242,131,0|![見本 f 28300](../../extensibility/ux-guidelines/media/0405_f28300.png "0405_F28300")|  
-|F12|エラー/負の値|Error_Negative|E 81123 232,17,35/|![Swatch E81123](../../extensibility/ux-guidelines/media/0405_e81123.png "0405_E81123")|  
-|F12|開始/正の値|Start_Positive|009E49 / 0,158,73|![Swatch 009E49](../../extensibility/ux-guidelines/media/0405_009e49.png "0405_009E49")|  
-|F12|中断の種類|中断の種類|9B4F96 / 155,79,150|![Swatch 9B4F96](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|  
+|F12|アウトライン|VS アウト|F6F6F6 / 246,246,246|![見本f6f6f6](../../extensibility/ux-guidelines/media/0405_f6f6f6.png "0405_F6F6F6")|  
+|F12|情報|情報|00BCF2 0,188,242/|![見本 00BCF2](../../extensibility/ux-guidelines/media/0405_00bcf2.png "0405_00BCF2")|  
+|F12|警告|警告|F 28300 242,131,0/|![見本 f 28300](../../extensibility/ux-guidelines/media/0405_f28300.png "0405_F28300")|  
+|F12|エラー/負の値|Error_Negative|E 81123 232,17,35/|![見本 e 81123](../../extensibility/ux-guidelines/media/0405_e81123.png "0405_E81123")|  
+|F12|開始/正の値|Start_Positive|009E49 0,158,73/|![Swatch 009E49](../../extensibility/ux-guidelines/media/0405_009e49.png "0405_009E49")|  
+|F12|中断の種類|中断の種類|9B4F96 155,79,150/|![見本 9B4F96](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|  
 |F12|イベントのマーク|イベントのマーク|A51F00 165,31,0/|![見本 A51F00](../../extensibility/ux-guidelines/media/0405_a51f00.png "0405_A51F00")|  
 |F12|ユーザー マーク|ユーザー マーク|F 16220 241,98,32/|![見本 f 16220](../../extensibility/ux-guidelines/media/0405_f16220.png "0405_F16220")|  
   
@@ -420,7 +416,7 @@ ms.lasthandoff: 03/13/2018
   
 |TFS オンライン||||  
 |----------------|-|-|-|  
-|![TFS オンライン チームのアイコン](../../extensibility/ux-guidelines/media/0405-49_tfsonlineteam.png "0405 49_TFSOnlineTeam")<br />オンラインのチーム|![TFS 情報アイコン](../../extensibility/ux-guidelines/media/0405-50_tfsinformation.png "0405 50_TFSInformation")<br />情報|![TFS history icon](../../extensibility/ux-guidelines/media/0405-51_tfshistory.png "0405-51_TFSHistory")<br />履歴|![TFS 分岐アイコン](../../extensibility/ux-guidelines/media/0405-52_tfsbranch.png "0405 52_TFSBranch")<br />分岐|  
+|![TFS オンライン チームのアイコン](../../extensibility/ux-guidelines/media/0405-49_tfsonlineteam.png "0405 49_TFSOnlineTeam")<br />オンラインのチーム|![TFS 情報アイコン](../../extensibility/ux-guidelines/media/0405-50_tfsinformation.png "0405 50_TFSInformation")<br />情報|![TFS 履歴アイコン](../../extensibility/ux-guidelines/media/0405-51_tfshistory.png "0405 51_TFSHistory")<br />履歴|![TFS 分岐アイコン](../../extensibility/ux-guidelines/media/0405-52_tfsbranch.png "0405 52_TFSBranch")<br />分岐|  
   
 |Napa||||  
 |----------|-|-|-|  

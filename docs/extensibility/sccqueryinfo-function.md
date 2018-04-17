@@ -1,29 +1,25 @@
 ---
-title: "SccQueryInfo 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: SccQueryInfo 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccQueryInfo
 helpviewer_keywords:
 - SccQueryInfo function
 ms.assetid: 3973d336-a9b7-41a2-a4e6-bb8184a96aaf
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7bda59c3bf674354e38fa306abe1fbb673f40e19
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5e2838709d7c2c2ad6e6b1eeef36c2cc0018a1a1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccqueryinfo-function"></a>SccQueryInfo 関数
 この関数は、一連のソース管理下で選択したファイルの状態に関する情報を取得します。  
@@ -69,14 +65,14 @@ SCCRTN SccQueryInfo(
   
  この関数を使用して、ファイルをチェック アウトする、次を注意してください。`MSSCCI`状態の要件。  
   
--   `SCC_STATUS_OUTBYUSER`現在のユーザーがファイルをチェック アウト時に設定されています。  
+-   `SCC_STATUS_OUTBYUSER` 現在のユーザーがファイルをチェック アウト時に設定されています。  
   
--   `SCC_STATUS_CHECKEDOUT`以外は設定できません`SCC_STATUS_OUTBYUSER`が設定されています。  
+-   `SCC_STATUS_CHECKEDOUT` 以外は設定できません`SCC_STATUS_OUTBYUSER`が設定されています。  
   
--   `SCC_STATUS_CHECKEDOUT`ときに、ファイルはチェック アウトされた作業ディレクトリにのみ設定されます。  
+-   `SCC_STATUS_CHECKEDOUT` ときに、ファイルはチェック アウトされた作業ディレクトリにのみ設定されます。  
   
 -   ファイルがチェック アウトされて現在のユーザーが、作業ディレクトリ以外のディレクトリに場合、`SCC_STATUS_OUTBYUSER`設定されているが、`SCC_STATUS_CHECKEDOUT`はありません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [ファイルの状態コード](../extensibility/file-status-code-enumerator.md)

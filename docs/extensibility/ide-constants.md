@@ -3,8 +3,7 @@ title: IDE 定数 |Microsoft ドキュメント
 ms.date: 03/22/2018
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IDE, errors
 - logical views
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - IDE, constants
 - physical views
 ms.assetid: 5030e70a-241d-474a-ba8c-e3b1cf947ff0
-caps.latest.revision: ''
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0184cd4654f07b407a12ca12f0ff9da39c9ec890
-ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
+ms.openlocfilehash: e9c7e870b02dbe5a903ca8195954ffd5a8f63549
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ide-constants"></a>IDE 定数
 
@@ -46,11 +44,11 @@ ms.lasthandoff: 03/28/2018
 |[値]|説明|
 |-----------|-----------------|
 |[CEF.CloneFile](<xref:Microsoft.VisualStudio.VSConstants.CEF#Microsoft_VisualStudio_VSConstants_CEF_CloneFile>)|古いフラグの組み合わせの最初のパラメーターとしてビットごとの<xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A>メソッドです。|
-|[CEF.OpenAsNew](<xref:Microsoft.VisualStudio.VSConstants.CEF#Microsoft_VisualStudio_VSConstants_CEF_OpenAsNew>)|最初のパラメーターとしてビットごとの<xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A>メソッド、これは、かエディター ファクトリに必要な修正を実行する必要があります。|
+|[CEF です。OpenAsNew](<xref:Microsoft.VisualStudio.VSConstants.CEF#Microsoft_VisualStudio_VSConstants_CEF_OpenAsNew>)|最初のパラメーターとしてビットごとの<xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A>メソッド、これは、かエディター ファクトリに必要な修正を実行する必要があります。|
 |[CEF.OpenFile](<xref:Microsoft.VisualStudio.VSConstants.CEF#Microsoft_VisualStudio_VSConstants_CEF_OpenFile>)|最初のパラメーターとしてビットごとの<xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A>メソッドでは、このフラグは相互に exclusive [CEF です。CloneFile](<xref:Microsoft.VisualStudio.VSConstants.CEF#Microsoft_VisualStudio_VSConstants_CEF_CloneFile>)です。|
 |[CEF.Silent](<xref:Microsoft.VisualStudio.VSConstants.CEF#Microsoft_VisualStudio_VSConstants_CEF_Silent>)|最初のパラメーターとしてビットごとの<xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A>メソッド、これは、かエディター ファクトリは、ユーザー インターフェイス (UI) を表示せず、エディターを作成する必要があります。|
 
-## <a name="visual-studio-errors"></a>Visual Studio Errors
+## <a name="visual-studio-errors"></a>Visual Studio のエラー
 
 |[値]|説明|
 |-----------|-----------------|
@@ -76,7 +74,7 @@ ms.lasthandoff: 03/28/2018
 |<xref:Microsoft.VisualStudio.VSConstants.VSM_EXITMODAL>|固有である定数[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]経由で通知メッセージを配信するため、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A>モダリティの末尾を示す方法。|
 |<xref:Microsoft.VisualStudio.VSConstants.VSM_TOOLBARMETRICSCHANGE>|固有である定数[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]経由で通知メッセージを配信するため、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A>コマンド バーのメトリックが変更されたことを示すメソッドです。|
 |<xref:Microsoft.VisualStudio.VSConstants.VSCOOKIE_NIL>|固有である定数[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]cookie が設定されていないことを示すです。|
-|[VSITEMID.Nil](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Nil>)|A[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト項目の休暇を表す項目の識別子。 この値は、現在選択されていないときに使用されます。|
+|[VSITEMID です。Nil](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Nil>)|A[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト項目の休暇を表す項目の識別子。 この値は、現在選択されていないときに使用されます。|
 |[VSITEMID.Root](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Root>)|A[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト階層のルートを表し、1 つの項目ではなく、階層全体の識別に使用される項目の識別子。|
 |[VSITEMID.Selection](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Selection>)|A[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]項目識別子を表す、現在選択されている項目が、階層のルートを含めることができます。|
 

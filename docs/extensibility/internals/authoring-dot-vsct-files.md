@@ -1,27 +1,23 @@
 ---
-title: "作成します。Vsct ファイル |Microsoft ドキュメント"
-ms.custom: 
+title: 作成します。Vsct ファイル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VSCT files, manual authoring
 ms.assetid: e9f715dc-12b7-439b-bdf3-f3dc75e62f1c
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fa274c807aaa1ed212a7b283a35e510615561eb5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 65fc62d5685ca7c81b3ebb7f524db3cdbebe72c7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="authoring-vsct-files"></a>作成します。Vsct ファイル
 このドキュメントでは、Visual Studio 統合開発環境 (IDE) にメニュー項目、ツールバー、およびその他のユーザー インターフェイス (UI) 要素を追加する .vsct ファイルを作成する方法を示します。 UI 要素を既に .vsct ファイルを持たない Visual Studio パッケージ (VSPackage) を追加する場合は、次の手順を使用します。  
@@ -234,12 +230,12 @@ ms.lasthandoff: 12/22/2017
  一部のメニューおよびボタンの種類には、特殊な動作が含まれます。 次の表は、いくつかの特別なメニューおよびボタンの種類について説明します。 その他の種類を参照して、`types`属性の説明を[Menu 要素](../../extensibility/menu-element.md)、[ボタン要素](../../extensibility/button-element.md)、および[コンボ要素](../../extensibility/combo-element.md)です。  
   
  コンボ ボックス  
- コンボ ボックスは、ツールバーの使用できるドロップダウン リストです。 UI にコンボ ボックスを追加するには、作成、[コンボ](../../extensibility/combos-element.md)内の要素、`Commands`要素。 追加し、`Combos`要素、`Combo`を追加するには、各コンボ ボックスの要素。 `Combo`要素と同じである属性として子`Button`要素とも持ちます`DefaultWidth`と`idCommandList`属性。 `DefaultWidth`属性 (ピクセル単位) の幅を設定して、`idCommandList`属性は、コンボ ボックスに入力に使用されるコマンド ID を参照します。 詳細については、次を参照してください。、`Combo`要素のドキュメントです。  
+ コンボ ボックスは、ツールバーの使用できるドロップダウン リストです。 UI にコンボ ボックスを追加するには、作成、[コンボ](../../extensibility/combos-element.md)内の要素、`Commands`要素。 追加し、`Combos`要素、`Combo`を追加するには、各コンボ ボックスの要素。 `Combo` 要素と同じである属性として子`Button`要素とも持ちます`DefaultWidth`と`idCommandList`属性。 `DefaultWidth`属性 (ピクセル単位) の幅を設定して、`idCommandList`属性は、コンボ ボックスに入力に使用されるコマンド ID を参照します。 詳細については、次を参照してください。、`Combo`要素のドキュメントです。  
   
  MenuController  
  メニュー コント ローラーは、その横にある矢印の付いたボタンです。 矢印をクリックすると、一覧が開きます。 UI にメニュー コント ローラーを追加するには、作成、`Menu`要素とその`type`属性を**MenuController**または**MenuControllerLatched**目的の動作に応じて、します。 メニュー コント ローラーを作成するには、親として設定、`Group`要素。 メニュー コント ローラーは、そのグループのすべての子をそのドロップダウン リストに表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張メニューとコマンド](../../extensibility/extending-menus-and-commands.md)   
  [Visual Studio コマンド テーブル (です。Vsct) ファイル](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
  [VSCT XML スキーマ リファレンス](../../extensibility/vsct-xml-schema-reference.md)

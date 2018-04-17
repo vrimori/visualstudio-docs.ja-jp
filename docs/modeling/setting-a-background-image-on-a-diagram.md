@@ -1,21 +1,19 @@
 ---
-title: "図の背景画像の設定 |Microsoft ドキュメント"
-ms.custom: 
+title: 図の背景画像の設定 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 364b918af7e99116879a81d6a96602378ba30896
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 2af674f1ca5b29e44d2574ad935dfd3ef3cc1867
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>ダイアグラムへの背景イメージの設定
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK では、カスタム コードを使用して生成されるデザイナーの背景イメージを設定できます。  
@@ -103,7 +101,7 @@ ms.lasthandoff: 02/09/2018
   
      プログラム コードを使用してモデルをカスタマイズする方法の詳細については、次を参照してください。[を移動すると、プログラム コードでモデルを更新する](../modeling/navigating-and-updating-a-model-in-program-code.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [図形とコネクタを定義します。](../modeling/defining-shapes-and-connectors.md)   
  [テキストおよび画像フィールドをカスタマイズします。](../modeling/customizing-text-and-image-fields.md)   
  [移動して、プログラム コードでモデルを更新します。](../modeling/navigating-and-updating-a-model-in-program-code.md)   

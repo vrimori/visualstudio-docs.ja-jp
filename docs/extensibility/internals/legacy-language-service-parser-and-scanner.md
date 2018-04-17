@@ -1,26 +1,24 @@
 ---
-title: "レガシ言語サービス パーサーとスキャナー |Microsoft ドキュメント"
-ms.custom: 
+title: レガシ言語サービス パーサーとスキャナー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - parsers, language services [managed package framework]
 - language services [managed package framework], Parsers
 ms.assetid: 1ac3de27-a23b-438d-9593-389e45839cfa
-caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 755516fb9d341193005ad39e419e708b6d28867c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: a838b193689d480c7e02053dd67adb6bfbd2314f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>レガシ言語サービス パーサーとスキャナー
 パーサーは、言語サービスの中核です。 Managed Package Framework (MPF) 言語のクラスでは、表示されているコードに関する情報を選択する言語パーサーが必要です。 パーサーは、構文のトークンにテキストを分離し、型と機能を使用してこれらのトークンを識別します。  
@@ -135,7 +133,7 @@ namespace MyNamespace
   
  <xref:Microsoft.VisualStudio.Package.AuthoringSink>オブジェクトは、パーサーの一部として、<xref:Microsoft.VisualStudio.Package.ParseRequest>オブジェクト、および新しい<xref:Microsoft.VisualStudio.Package.AuthoringSink>オブジェクトがするたびに作成される新しい<xref:Microsoft.VisualStudio.Package.ParseRequest>オブジェクトを作成します。 さらに、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッドが返す必要があります、<xref:Microsoft.VisualStudio.Package.AuthoringScope>オブジェクト、IntelliSense、さまざまな操作を処理するために使用します。 <xref:Microsoft.VisualStudio.Package.AuthoringScope>オブジェクトを保持宣言の一覧と、メソッドの一覧かされるは、によって設定されます、解析の理由。 <xref:Microsoft.VisualStudio.Package.AuthoringScope>クラスを実装する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レガシ言語サービスを実装します。](../../extensibility/internals/implementing-a-legacy-language-service1.md)   
  [レガシ言語サービスの概要](../../extensibility/internals/legacy-language-service-overview.md)   
  [従来の言語サービスでの構文の色分け](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)   

@@ -1,27 +1,23 @@
 ---
-title: "方法: カスタム テキスト マーカーを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: カスタム テキスト マーカーを作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - custom text markers
 ms.assetid: 6e32ed81-c604-4a32-9012-8db3bec7c846
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d30ad5b61f59e6183067ddcc789b2fc796c7aef9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f5c44a507cc291b203fc9ba330b248a854f61b81
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-custom-text-markers"></a>方法: カスタム テキスト マーカーを作成します。
 カスタム テキストを強調したり、コードの整理にマーカーを作成する場合は、以下の手順を実行する必要があります。  
@@ -59,13 +55,13 @@ ms.lasthandoff: 12/22/2017
   
     -   Package  
   
-    -   `Default`種類 REG_SZ の省略可能なエントリです。 設定すると、エントリの値は、有用な識別情報、たとえば「カスタム テキスト マーカー」を含む文字列です。  
+    -   `Default` 種類 REG_SZ の省略可能なエントリです。 設定すると、エントリの値は、有用な識別情報、たとえば「カスタム テキスト マーカー」を含む文字列です。  
   
-    -   `Service`種類 REG_SZ のエントリが含まれている proffering によって、カスタム テキスト マーカーを提供するサービスの GUID 文字列<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerTypeProvider>です。 形式は、{XXXXXX XXXX XXXX XXXX XXXXXXXXX} です。  
+    -   `Service` 種類 REG_SZ のエントリが含まれている proffering によって、カスタム テキスト マーカーを提供するサービスの GUID 文字列<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerTypeProvider>です。 形式は、{XXXXXX XXXX XXXX XXXX XXXXXXXXX} です。  
   
-    -   `DisplayName`カスタム テキスト マーカーの名前のリソース ID を種類 REG_SZ のエントリを含むです。 形式は、#YYYY です。  
+    -   `DisplayName` カスタム テキスト マーカーの名前のリソース ID を種類 REG_SZ のエントリを含むです。 形式は、#YYYY です。  
   
-    -   `Package`REG_SZ が含まれる型のエントリ、`GUID`サービスを提供する VSPackage のサービスの下で一覧表示します。 形式は、{XXXXXX XXXX XXXX XXXX XXXXXXXXX} です。  
+    -   `Package` REG_SZ が含まれる型のエントリ、`GUID`サービスを提供する VSPackage のサービスの下で一覧表示します。 形式は、{XXXXXX XXXX XXXX XXXX XXXXXXXXX} です。  
   
 ### <a name="to-create-a-custom-text-marker"></a>カスタム テキスト マーカーを作成するには  
   
@@ -93,7 +89,7 @@ ms.lasthandoff: 12/22/2017
   
      サービスが返されることを識別する一意の cookie。 後を呼び出すことによって、カスタム マーカーの種類のサービスを取り消すこの cookie を使用することができます、<xref:Microsoft.VisualStudio.Shell.Interop.IProfferService.RevokeService%2A>のメソッド、<xref:Microsoft.VisualStudio.Shell.Interop.IProfferService>この cookie の値を指定するインターフェイスです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レガシ API でテキスト マーカーの使用](../extensibility/using-text-markers-with-the-legacy-api.md)   
  [方法: 標準のテキストのマーカーの追加](../extensibility/how-to-add-standard-text-markers.md)   
  [方法: エラー マーカーを実装します。](../extensibility/how-to-implement-error-markers.md)   

@@ -1,27 +1,23 @@
 ---
-title: "エディターおよび言語サービスの拡張機能 |Microsoft ドキュメント"
-ms.custom: 
+title: エディターおよび言語サービスの拡張機能 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK]
 ms.assetid: 5653bac9-724f-4948-a820-68ce6aa96365
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 59de764dfcb976dfac303f44a67340e117ae5e06
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d2fceb0487c23dc34d3f4f4937d7a5998340ae3d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="editor-and-language-service-extensions"></a>エディターと言語サービスの拡張機能
 Visual Studio code エディターのほとんどの機能を拡張することができます。 エディターは Windows Presentation Foundation (WPF) に基づいており、マネージ コードで記述されました。 この設計は、以前のバージョンの Visual Studio でデザインから異なる場合は、同じ機能のほとんどを提供します。 エディターを拡張するには、Managed Extensibility Framework (MEF) を使用します。  

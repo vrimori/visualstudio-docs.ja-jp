@@ -1,28 +1,26 @@
 ---
-title: "どのような &#39; のソース コントロール プラグイン API バージョン 1.2 |Microsoft ドキュメント"
-ms.custom: 
+title: どのような&#39;ソースのプラグイン API バージョン 1.2 を制御する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, what's new in API v1.2
 - what's new [Visual Studio SDK], source control plug-ins
 ms.assetid: 7c5fa471-456e-4f95-8309-5750ec4e5e85
-caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 7f9272f034e8f8679fe832ecd628e64ab64af515
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 409c862244b47970629ab57c6417dfc7f3b10a1d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="what39s-new-in-the-source-control-plug-in-api-version-12"></a>どのような &#39; ソース管理プラグイン API のバージョン 1.2 の
+# <a name="what39s-new-in-the-source-control-plug-in-api-version-12"></a>どのような&#39;ソースのプラグイン API バージョン 1.2 の制御
 このセクションでは、ソース管理プラグイン API バージョン 1.2 の高度なソース コード管理機能を強調表示されます。 バージョン 1.2 の新機能を次に示します。  
   
 ## <a name="changes"></a>変更  
@@ -41,5 +39,5 @@ ms.lasthandoff: 12/22/2017
  [.Proj および .Sln ファイルからのソース管理情報の削除](../../extensibility/internals/removal-of-source-control-information-from-dot-proj-and-dot-sln-files.md)  
  ソース管理プラグイン API バージョン 1.2 がプロジェクトおよびソリューションに関する情報を格納する方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [はじめに](../../extensibility/internals/getting-started-with-source-control-plug-ins.md)

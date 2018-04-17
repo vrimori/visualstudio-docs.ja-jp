@@ -1,32 +1,28 @@
 ---
-title: "ソース管理パッケージのモデル |Microsoft ドキュメント"
-ms.custom: 
+title: ソース管理パッケージのモデル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], model
 ms.assetid: 6164b2d3-a622-4de8-bef3-a6de985e9ebd
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1960b5fe7b7c507b5b3275315ea6ae1715c27f76
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fa0dcdd930412e4e53c59509848f0b7c1503c47b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="model-for-source-control-packages"></a>ソース管理パッケージのモデル
 次のようなモデルでは、ソース コントロールの実装の例を表します。 モデルでは、インターフェイスを実装する必要があり、環境サービスを呼び出してくださいを参照してください。 すべてのサービスと同様には、実際には、サービスを使用して取得する特定のインターフェイスのメソッドを呼び出します。 クラスの名前は、ソース管理の実行方法を表示するが容易に識別されます。  
   
- ![SCC &#95;です。TUP 例](../../extensibility/internals/media/scc_tup.gif "SCC_TUP")  
+ ![SCC&#95;TUP 例](../../extensibility/internals/media/scc_tup.gif "SCC_TUP")  
 ソース管理プロジェクトの例  
   
 ## <a name="interfaces"></a>インターフェイス  
@@ -40,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>|ソース管理パッケージに登録して、ソース管理の状態に関する情報を取得プロジェクトによって呼び出されます。 このインターフェイスを使用してアクセスは、<xref:Microsoft.VisualStudio.Shell.Interop.SVsSccManager>サービス。|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>|プロジェクト ファイルに関する情報のソース コントロールの要求に応答して、設定を取得するソース管理プロジェクト ファイルに必要なによって実装されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>   

@@ -1,29 +1,25 @@
 ---
-title: "SccBackgroundGet 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: SccBackgroundGet 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccBackgroundGet
 helpviewer_keywords:
 - SccBackgroundGet function
 ms.assetid: 69817e52-b9ac-4f4d-820b-2cc9c384f0dc
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b63a7e8c9a6b2a4f2539cd6a8426ba9df365ab76
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 77e70720c9a26710c6d659ebac5b842bef3757eb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccbackgroundget-function"></a>SccBackgroundGet 関数
 この関数は、ソース管理から各指定されたファイルのユーザー操作なしで取得します。  
@@ -73,6 +69,6 @@ SCCRTN SccBackgroundGet(
   
  使用、`dwFlags`と同じ引数が、 [SccGet](../extensibility/sccget-function.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccGet](../extensibility/sccget-function.md)

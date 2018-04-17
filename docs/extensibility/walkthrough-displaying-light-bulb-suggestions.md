@@ -1,23 +1,21 @@
 ---
-title: "チュートリアル: 電球候補の表示 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: 電球候補の表示 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 99e5566d-450e-4660-9bca-454e1c056a02
-caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 97ab32d4bfe0772d7b50ea1ca5a0b0ec143ed536
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 750e3b0915478b4249ce8db1ac294c1f2a3006f5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-displaying-light-bulb-suggestions"></a>チュートリアル: 電球候補を表示します。
 電球マークは、一連のアクションを表示するを展開し、組み込みのコード アナライザーまたはコードのリファクタリングによって特定した問題の修正例を Visual Studio エディターで使用されるアイコン。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/22/2017
  電球を使用すると、推奨される操作を提供します。 たとえば、かっこが新しい行に移動するか、前の行の末尾に移動するアクションを指定できます。 次のチュートリアルでは、現在の単語に表示される電球を作成する方法とは 2 つの推奨アクション:**大文字に変換**と**小文字に変換**です。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="creating-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) プロジェクトの作成  
   

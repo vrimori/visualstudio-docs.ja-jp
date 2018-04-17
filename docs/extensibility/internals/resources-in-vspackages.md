@@ -1,27 +1,25 @@
 ---
-title: "Vspackage のリソース |Microsoft ドキュメント"
-ms.custom: 
+title: Vspackage のリソース |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - managed VSPackages, resources in
 - resources, managed VSPackages
 - VSPackages, managed resources
 ms.assetid: cc8c17a6-b190-4856-b001-0c1104f104b2
-caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ee9d108e7a7a6a5bd971b20c12858edf28ac0cf3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d252f61a9f634f4bb8435626c41c586bbe5cb839
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resources-in-vspackages"></a>Vspackage のリソース
 ネイティブ UI、サテライト Dll マネージ サテライト Dll の場合、または、マネージ VSPackage 自体には、ローカライズされたリソースを埋め込むことができます。  
@@ -85,10 +83,10 @@ type="System.Resources.ResXFileRef,System.Windows.Forms">
 ```  
   
 ## <a name="implementation-notes"></a>実装に関するメモ  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]可能な限り、Vspackage の遅延読み込みします。 VSPackage で CTO ファイルを埋め込みの結果は[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]マージ コマンド テーブルを作成するときに、セットアップ中にメモリ内でこのようなすべての Vspackage を読み込む必要があります。 リソースは、VSPackage でコードを実行しなくても、メタデータを調べることで、VSPackage から抽出できます。 パフォーマンスの低下を最小限に抑えるため、VSPackage ではこの時点で初期化されていません。  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 可能な限り、Vspackage の遅延読み込みします。 VSPackage で CTO ファイルを埋め込みの結果は[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]マージ コマンド テーブルを作成するときに、セットアップ中にメモリ内でこのようなすべての Vspackage を読み込む必要があります。 リソースは、VSPackage でコードを実行しなくても、メタデータを調べることで、VSPackage から抽出できます。 パフォーマンスの低下を最小限に抑えるため、VSPackage ではこの時点で初期化されていません。  
   
  ときに[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]セットアップ後の VSPackage からリソースを要求、パッケージが既に読み込まれ、初期化、可能性の高いパフォーマンスの低下を最小限に抑えるようにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Vspackage の管理](../../extensibility/managing-vspackages.md)   
  [MFC アプリケーションのローカライズされたリソース: サテライト DLL](/cpp/build/localized-resources-in-mfc-applications-satellite-dlls)   

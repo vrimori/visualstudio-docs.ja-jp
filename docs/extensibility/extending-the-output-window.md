@@ -1,27 +1,23 @@
 ---
-title: "出力ウィンドウを拡張 |Microsoft ドキュメント"
-ms.custom: 
+title: 出力ウィンドウを拡張 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Output window, about Output window
 ms.assetid: b02fa88c-f92a-4ff6-ba5f-2eb4d48a643a
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8fa99e2c741d11c79cb41226e3958b04d0265621
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8b9a8b260c1a3cab126d19f0cedc0c1e5362cf81
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extending-the-output-window"></a>出力ウィンドウを拡張します。
 **出力**ウィンドウは、読み取り/書き込みテキスト ペインのセット。 Visual Studio はこれらの組み込みペイン:**ビルド**、プロジェクトのビルドに関するメッセージを通信し、**全般**を[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]IDE に関するメッセージを伝えます。 プロジェクトへの参照を取得する、**ビルド**ペインを使用して自動的に、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg>インターフェイスのメソッド、および Visual Studio に直接アクセスするには、**全般**でウィンドウを<xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane>サービス。 組み込みのペインでは、だけでなくを作成して管理する独自のカスタム ペインです。  
