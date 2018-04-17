@@ -1,12 +1,10 @@
 ---
-title: "SharePoint ソリューションの配置のパッケージ化と |Microsoft ドキュメント"
-ms.custom: 
+title: SharePoint ソリューションの配置のパッケージ化と |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,13 +16,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, packaging and deploying
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: e25d0829305f414712590296b6121d62583736a2
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 8faeb21b7c32f1af91a9149b1b9f6bcadafeed7c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="packaging-and-deploying-sharepoint-solutions"></a>SharePoint ソリューションのパッケージ化と配置
   通常、ソリューション パッケージ (.wsp) ファイルを使用して、SharePoint サーバーに SharePoint ソリューションを展開します。 機能に、SharePoint プロジェクト項目を整理して、SharePoint フィーチャーを配置するパッケージを作成するには、Visual Studio を使用することができます。  
@@ -39,12 +38,12 @@ ms.lasthandoff: 01/10/2018
   
 -   [SharePoint ソリューション内のファイルを展開します。](#DeployingFiles)  
   
-##  <a name="Creating"></a>フィーチャーとパッケージの作成  
+##  <a name="Creating"></a> フィーチャーとパッケージの作成  
  関連する SharePoint 要素をグループ化する Visual Studio を使用することができます、*機能*します。 たとえば、連絡先リスト定義の機能には、リスト インスタンスと、リスト定義があります。 配置用に 1 つの機能には、これら 2 つの要素を結合できます。 機能の詳細については、次を参照してください。[ビルディング ブロック: 機能](http://go.microsoft.com/fwlink/?LinkID=169183)します。  
   
  次に、SharePoint ソリューション パッケージ (.wsp) を 1 つのパッケージに複数の機能、サイト定義、アセンブリ、およびその他のファイルをバンドルするファイルを保存する、SharePoint によって、ファイル サーバーを展開するために必要な形式で作成できます。 詳細については、次を参照してください。[ビルディング ブロック: ソリューション](http://go.microsoft.com/fwlink/?LinkID=169186)です。  
   
-##  <a name="Tools"></a>機能およびツールのサポートをパッケージ化  
+##  <a name="Tools"></a> 機能およびツールのサポートをパッケージ化  
  Visual Studio での SharePoint 開発ツールを使用するにはすばやくファイル化する、SharePoint 機能とソリューションのパッケージを容易に展開します。 次のツールを使用すると、機能とソリューションのパッケージを構成します。  
   
 -   デザイナーとパッケージ デザイナーを機能します。  
@@ -88,12 +87,12 @@ ms.lasthandoff: 01/10/2018
 ### <a name="solution-explorer"></a>ソリューション エクスプローラー  
  ソリューション エクスプ ローラーを使用して、移動し、SharePoint プロジェクトのファイルを開くことができます。 ソリューション エクスプ ローラーでコンテキスト メニューを使用して、フィーチャー イベント レシーバーのフィーチャーに追加し、フィーチャーのリソース。 さらに、機能と展開のパッケージを構成するには、フィーチャー デザイナーとパッケージ デザイナーを開くことができます。  
   
-##  <a name="Deploying"></a>SharePoint ソリューションの配置  
+##  <a name="Deploying"></a> SharePoint ソリューションの配置  
  機能と Visual Studio でパッケージをカスタマイズした後は、SharePoint サーバーを展開する .wsp ファイルを作成することができます。 デバッグし、テスト、開発用コンピューター上の SharePoint サーバーでのみ .wsp を Visual Studio を使用することができます。 リモート SharePoint サーバーに、SharePoint ソリューションを配置する方法の詳細については、次を参照してください。[ソリューションを展開する](http://go.microsoft.com/fwlink/?LinkID=169194)です。  
   
  開発用コンピューターに展開の手順をカスタマイズすることもできます。 詳細については、次を参照してください。[を展開する、発行、および SharePoint ソリューション パッケージのアップグレード](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md)です。  
   
-##  <a name="DeployingFiles"></a>SharePoint ソリューション内のファイルを展開します。  
+##  <a name="DeployingFiles"></a> SharePoint ソリューション内のファイルを展開します。  
  通常は、SharePoint ソリューションを SharePoint プロジェクト項目を追加するときに必要なすべてのファイルが含まれています。 コンパイル済みの (コード ファイル) を使用可能なファイル、ソリューションの出力アセンブリに組み込まれます。 ただし、.xml、.txt、またはリソース ファイル、たとえば、非コンパイル可能なファイルを SharePoint プロジェクトに追加する必要がありますもします。 これらのファイルは、ソリューションに自動的にパッケージ化されません。 パッケージ化されることを確認するには、いずれかのファイルを追加、マップされたフォルダーまたは SharePoint プロジェクト項目。  
   
  マップされたフォルダーに追加されたファイルは、ソリューションを配置するときに自動的に SharePoint ハイブにコピーされます。 SharePoint プロジェクト項目に追加されたファイルで指定されている場所に配置されます、**配置場所**ファイルごとに、部分的に設定されているプロパティに基づいて、**展開の種類**プロパティです。 既定では、**展開の種類**プロパティの値が**NoDeployment**ファイルがソリューションで展開されていないことを意味します。 ファイルを含め、パッケージのプロパティに他の値を設定する必要があります。  
@@ -106,7 +105,7 @@ ms.lasthandoff: 01/10/2018
   
  追加したファイルが適用される場合、ソリューション内の特定のプロジェクトへ、空の SharePoint プロジェクトをソリューションに追加でき、追加のファイルを追加できます。 特に、コンテンツ データベースに、SharePoint にファイルを展開するための別の方法としては、プロジェクトにモジュールを追加し、モジュールにファイルを追加するです。 詳細については、次を参照してください。[ソリューション内のインクルード ファイルを使用してモジュール](../sharepoint/using-modules-to-include-files-in-the-solution.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   
  [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
   

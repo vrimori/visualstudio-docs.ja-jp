@@ -1,12 +1,10 @@
 ---
-title: "方法: パスワードで保護されたドキュメント内のデータをキャッシュ |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: パスワードで保護されたドキュメント内のデータをキャッシュ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - data [Office development in Visual Studio], caching
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 240debad9945c397290375f1931f4bce9ffa1f34
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 71ce65cd253ea6473a07a98542449a1e47ae9d7c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-cache-data-in-a-password-protected-document"></a>方法 : パスワードで保護されたドキュメント内のデータをキャッシュする
   ドキュメントまたはパスワードで保護されているブック内のデータ キャッシュにデータを追加する場合、キャッシュされたデータへの変更は自動的に保存されません。 プロジェクト内の 2 つのメソッドをオーバーライドすることで、キャッシュされたデータに変更を保存できます。  
@@ -57,7 +56,7 @@ ms.lasthandoff: 01/10/2018
   
 #### <a name="to-cache-data-in-an-excel-workbook-that-is-protected-with-a-password"></a>パスワードで保護されている Excel ブックにデータをキャッシュする  
   
-1.  `ThisWorkbook`クラスまたはのいずれか、 `Sheet`  *n* クラス、パブリック フィールドまたはキャッシュするプロパティをマークします。 詳細については、「 [Caching Data](../vsto/caching-data.md)」を参照してください。  
+1.  `ThisWorkbook`クラスまたはのいずれか、 `Sheet` *n*クラス、パブリック フィールドまたはキャッシュするプロパティをマークします。 詳細については、「 [Caching Data](../vsto/caching-data.md)」を参照してください。  
   
 2.  上書き、<xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A>メソッドで、`ThisWorkbook`クラスし、ブックの保護を解除します。  
   
@@ -76,7 +75,7 @@ ms.lasthandoff: 01/10/2018
 ### <a name="compiling-the-code"></a>コードのコンパイル  
  このコードを追加、`ThisWorkbook`プロジェクト内のクラスです。 このコードは、パスワードがという名前のフィールドに格納される前提としています。`securelyStoredPassword`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データのキャッシュ](../vsto/caching-data.md)   
  [方法: オフラインであるか、サーバーで使用するデータをキャッシュ](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)   
  [方法: Office ドキュメント内のデータ ソースをプログラムでキャッシュする](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)  

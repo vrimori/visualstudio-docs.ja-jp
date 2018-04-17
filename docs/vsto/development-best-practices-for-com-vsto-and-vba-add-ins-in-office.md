@@ -1,23 +1,24 @@
 ---
-title: "COM、VSTO、および VBA の office アドインの開発のベスト プラクティス |Microsoft ドキュメント"
-ms.custom: 
+title: COM、VSTO、および VBA の office アドインの開発のベスト プラクティス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/25/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: 
-helpviewer_keywords: 
+ms.technology:
+- office-development
+ms.topic: conceptual
+dev_langs:
+- ''
+helpviewer_keywords:
+- ''
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 2a1b6b9270207b3d0f8d415655231af4456e61b4
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 6da083b12717606233d4c8dd9bc175b42722d53e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="development-best-practices-for-com-vsto-and-vba--add-ins-in-office"></a>COM、VSTO、および VBA のアドインの office 開発のベスト プラクティス
   Office 用に COM、VBA、または VSTO アドインを開発する場合はこの記事で説明する開発のベスト プラクティスに従います。   これによりすることができます。
@@ -62,7 +63,7 @@ VBA コードを記述する場合を使用して 64 ビットの安全がステ
 
 Office クライアント アプリケーション (Word や Excel など) のサポートの説明を提供するには、最初ことを確認、アドイン Office の現在のリリースで実行場合は、将来のリリースで改行を追加では、更新プログラムを提供することにコミットし。 新しいビルドの場合、または Office の更新プログラムをリリースするときに、独自のアドインをテストする必要はありません。 Microsoft Office では、COM、VSTO、および VBA extensibility プラットフォームはめったに変更して、これらの変更は、文書化します。
 
->重要: Microsoft は、サポートされているアドイン準備レポート、および ISV の連絡先情報の一覧を保持します。 アドインを一覧表示を参照してください[https://aka.ms/readyforwindows](https://aka.ms/readyforwindows)です。
+>重要: Microsoft は、サポートされているアドイン準備レポート、および ISV の連絡先情報の一覧を保持します。 アドインを一覧表示を参照してください[ https://aka.ms/readyforwindows](https://aka.ms/readyforwindows)です。
 
 ## <a name="use-process-monitor-to-help-debug-installation-or-loading-issues"></a>プロセス モニターを使用してインストールまたは読み込みの問題をデバッグします。
 アドインをインストールまたは読み込み中に互換性の問題がある場合、は、ファイルまたはレジストリのアクセスに関する問題に関連する可能性があります。 使用して[プロセス モニター](/sysinternals/downloads/procmon)または同様のデバッグ ツールをログに記録して問題を特定するための作業環境に対して動作を比較します。

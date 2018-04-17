@@ -1,12 +1,10 @@
 ---
-title: "パッケージとプロジェクト アイテムの展開情報を提供する |Microsoft ドキュメント"
-ms.custom: 
+title: パッケージとプロジェクト アイテムの展開情報を提供する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.Project.SafeControlEntries
 - VS.SharePointTools.Project.ProjectOutputReference
@@ -28,13 +26,14 @@ helpviewer_keywords:
 - safe controls [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: adc98932391e726e1704ebe88ec0a9120f7bb678
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 078715380bb5ddc570d745d76fabe4d8a264eef0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="providing-packaging-and-deployment-information-in-project-items"></a>プロジェクト項目でのパッケージ化と配置の情報の提供
   すべての SharePoint プロジェクト項目[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]プロジェクトが SharePoint に配置されるときに、追加のデータを指定するのに使用できるプロパティがあります。 選択できるプロパティは次のとおりです。  
@@ -110,7 +109,7 @@ ms.lasthandoff: 01/10/2018
 </Assemblies>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージ化と SharePoint ソリューションの配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)   
  [モジュールを使用して、ソリューション内のファイルのインクルード](../sharepoint/using-modules-to-include-files-in-the-solution.md)   
  [SharePoint のパッケージ化と配置の拡張](../sharepoint/extending-sharepoint-packaging-and-deployment.md)  

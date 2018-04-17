@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: SharePoint の Web パーツを作成する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: SharePoint の Web パーツを作成する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,14 +16,14 @@ helpviewer_keywords:
 - Web Parts [SharePoint development in Visual Studio], designing
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c192fd5843d48114205b36a590a8dbe56aadc879
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: e0659c354980eb302beb903d0107024882c6b160
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-web-part-for-sharepoint"></a>チュートリアル: SharePoint の Web パーツを作成する
 
@@ -221,7 +218,7 @@ Web パーツ動詞メニューに表示される項目をクリックすると�
 
      Web パーツにすべての従業員が表示されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [SharePoint の Web パーツの作成](../sharepoint/creating-web-parts-for-sharepoint.md)  
 [方法: SharePoint Web パーツを作成する](../sharepoint/how-to-create-a-sharepoint-web-part.md)  
