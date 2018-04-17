@@ -1,27 +1,25 @@
 ---
-title: "方法: レガシ言語サービスでのアウトラインがサポート |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: レガシ言語サービスでのアウトラインがサポート |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], collapse to definitions command
 - language services, supporting Collapse to Definitions command
 - hidden text, Collapse to Definitions command
 ms.assetid: bb6e74c3-93e4-4ef7-afc7-1c9b342f083b
-caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: fa57b0d09cb8422a9dde1f70306d2f3808b0384e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: f9880c5c255118478d15f34f9a9245a1c25d97fd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-support-outlining-in-a-legacy-language-service"></a>方法: レガシ言語サービスのアウトライン表示をサポート
 アウトライン表示は、展開または折りたたみのテキストのさまざまな地域に使用されます。 アウトライン方法が使用されるさまざまな言語で定義が異なることができます。 詳細については、「[アウトライン](../../ide/outlining.md)」を参照してください。  
@@ -49,6 +47,6 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  改行文字を非表示の注意します。 非表示テキスト拡張することは、最初の行の先頭から最後のれ、新しい行の最後の文字を表示、セクションの最後の行の文字です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: レガシ言語サービスでの非表示テキストのサポートを提供](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)   
  [方法: 従来の言語サービスでのアウトラインの拡張サポートの提供](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)

@@ -2,27 +2,23 @@
 title: '方法: 入れ子になったプロジェクトを実装して |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - nested projects, implementing
 - projects [Visual Studio SDK], nesting
 ms.assetid: d20b8d6a-f0e0-4115-b3a3-edda893ae678
-caps.latest.revision: ''
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e9e5331ceb1efd9fe26a7d713cd57b735fae2054
-ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
+ms.openlocfilehash: c90434fd8deae2f5f71c150759fc836b9ed43077
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-implement-nested-projects"></a>方法: 入れ子になったプロジェクトを実装します。
 作成する場合は、実装する必要があるいくつか追加の手順は、入れ子になったプロジェクトの種類があります。 親プロジェクトは、入れ子になった (子) プロジェクトのソリューションに含まれている同じ役割の一部で必要です。 親プロジェクトは、プロジェクトをソリューションと同様のコンテナーです。 具体的には、入れ子になったプロジェクトの階層を構築する親プロジェクトとソリューションによって発生する必要がありますをいくつかのイベントがあります。 入れ子になったプロジェクトを作成するための次のプロセスでは、これらのイベントが説明されています。

@@ -1,29 +1,25 @@
 ---
-title: "IDebugProperty2::GetExtendedInfo |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugProperty2::GetExtendedInfo |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugProperty2::GetExtendedInfo
 helpviewer_keywords:
 - IDebugProperty2::GetExtendedInfo
 ms.assetid: 0c9c0b2b-7540-4424-adb5-fce7aa37a026
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2d3dfd2111533896db2a3b298ff294ff180d4a70
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e6865361ac0b518f4fa78a3521973d756e6ab780
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugproperty2getextendedinfo"></a>IDebugProperty2::GetExtendedInfo
 プロパティの情報を拡張を取得します。  
@@ -59,7 +55,7 @@ int GetExtendedInfo (
   
  次の Guid は、(、GUID 値は C# の場合、名前は任意のアセンブリでは使用ではないため)、このメソッドによって通常認識されます。 内部使用のため、追加の Guid を作成できます。  
   
-|name|GUID|説明|  
+|名前|GUID|説明|  
 |----------|----------|-----------------|  
 |guidDocument|{3f98de84-fee9-11d0-b47f-00a0244a1dd2}|返します、`IUnknown`ドキュメントへのインターフェイスです。 通常、 [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)インターフェイスは、これから取得できる`IUnknown`インターフェイスです。|  
 |guidCodeContext|{e2fc65e 56ce-11 d 1-b528-00aax004a8797}|返します、`IUnknown`ドキュメント コンテキストへのインターフェイスです。 通常、 [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)インターフェイスは、これから取得できる`IUnknown`インターフェイスです。|  
@@ -67,7 +63,7 @@ int GetExtendedInfo (
 |guidExtendedInfoSlot|{6df235ad-82c6-4292-9c97-7389770bc42f}|このプロパティは、マネージ コードのローカル アドレスを表す場合は、必要なスロット数を表す 32 ビットの数値を返します。|  
 |guidExtendedInfoSignature|{b5fb6d46-f805-417f-96a3-8ba737073ffd}|プロパティのオブジェクトに関連付けられている変数のシグネチャを含む文字列を返します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)   
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)

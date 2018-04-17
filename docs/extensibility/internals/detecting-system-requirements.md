@@ -1,26 +1,24 @@
 ---
-title: "システム要件の検出 |Microsoft ドキュメント"
-ms.custom: 
+title: システム要件の検出 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - setup, VSPackages
 - launch conditions
 ms.assetid: 0ba94acf-bf0b-4bb3-8cca-aaac1b5d6737
-caps.latest.revision: "50"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: dc16c51b72ced37072c4ddf6d47bf347cf57c0f8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 5e98235bd224876b00714e1f71210ea69cb6faff
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="detecting-system-requirements"></a>システム要件の検出
 Visual Studio がインストールされていない場合、VSPackage は機能できません。 Microsoft Windows インストーラーを使用して、VSPackage のインストールを管理する場合は、Visual Studio がインストールされているかどうかを検出するためにインストーラーを構成できます。 システムを調べ、その他の要件の例に、特定のバージョンの Windows または特定の容量の RAM を構成することもできます。  
@@ -49,5 +47,5 @@ Visual Studio がインストールされていない場合、VSPackage は機�
 ## <a name="detecting-when-visual-studio-is-running"></a>Visual Studio が実行されている場合を検出します。  
  VSPackage は、VSPackage をインストールすると、Visual Studio が実行している場合、正しく登録できません。 インストーラーは、Visual Studio が実行されているときに検出され、プログラムのインストールを拒否する必要があります。 Windows インストーラーを使用するとしないテーブルのエントリを使用して、このような検出を有効にできます。 代わりに、カスタムの動作を次のように作成する必要があります: を使用して、`EnumProcesses`を devenv.exe プロセスを検出し、起動条件または条件付きで使用されるインストーラー プロパティを設定するか、関数が終了するように求めるダイアログ ボックスを表示Visual Studio です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Windows インストーラーによる VSPackage のインストール](../../extensibility/internals/installing-vspackages-with-windows-installer.md)

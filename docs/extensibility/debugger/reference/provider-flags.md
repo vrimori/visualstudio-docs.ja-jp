@@ -1,29 +1,25 @@
 ---
-title: "PROVIDER_FLAGS |Microsoft ドキュメント"
-ms.custom: 
+title: PROVIDER_FLAGS |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - PROVIDER_FLAGS
 helpviewer_keywords:
 - PROVIDER_FLAGS enumeration
 ms.assetid: 8cbd2312-ed2f-4477-b192-c3f25c6098c3
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f6f2a1b57c627425ebf63c6068f358cb8be0d3c1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 340531f9c943052c1abd51203f3937ccd111e314
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="providerflags"></a>PROVIDER_FLAGS
 プログラム プロバイダーから取得するための必要なプロパティを指定します。  
@@ -66,10 +62,10 @@ public enum enum_PROVIDER_FLAGS {
  プロセスのこのインスタンスによって現在デバッグ中[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]です。  
   
  PFLAG_ATTACH_TODEBUGGEE  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]デバッグ中のプログラムにアタッチされていますが、それを起動できませんでした。  
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] デバッグ中のプログラムにアタッチされていますが、それを起動できませんでした。  
   
  PFLAG_REASON_WATCH  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]イベントを監視します。  
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] イベントを監視します。  
   
  PFLAG_GET_PROGRAM_NODES  
  呼び出し元が、`ProgramNodes`のフィールド、 [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)構造体。  
@@ -88,14 +84,14 @@ public enum enum_PROVIDER_FLAGS {
   
  これらの値をビット単位と組み合わせて`OR`です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)   
  [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)   
