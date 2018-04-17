@@ -1,23 +1,21 @@
 ---
-title: "SAL を理解する |Microsoft ドキュメント"
-ms.custom: 
+title: SAL を理解する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
-caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 196bfdbeeda00199861ea2f676553f024fcaf98f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: deb1825bb514afec4db3bf705ac787aadb88cc11
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-sal"></a>SAL について
 Microsoft ソース コード注釈言語 (SAL) は、そのパラメーターとそれが、それらについている前提条件と、それが完了したら、保証の関数の使用について説明するに使用できる注釈のセットを提供します。 注釈はヘッダー ファイルで定義されている`<sal.h>`です。 C++ 用の visual Studio コード分析では、SAL 注釈を使用して、関数の分析を変更します。 SAL 2.0 の Windows のドライバーの開発の詳細については、次を参照してください。 [SAL 2.0 注釈の Windows ドライバー](http://go.microsoft.com/fwlink/?LinkId=250979)です。  
@@ -47,7 +45,7 @@ void * memcpy(
   
  ドキュメントには、いくつかコードがプログラムの精度を確認する特定のプロパティを維持することを示している情報のビットにはが含まれています。  
   
--   `memcpy`コピー、`count`ソース バッファーからコピー先のバッファーにバイトです。  
+-   `memcpy` コピー、`count`ソース バッファーからコピー先のバッファーにバイトです。  
   
 -   コピー先のバッファーは、少なくともソース バッファーと同じサイズである必要があります。  
   
@@ -131,9 +129,9 @@ wchar_t * wmemcpy(
   
 -   呼び出し元は、バッファーを提供し、初期化する必要があります。  
   
--   `_In_`「読み取り専用」を指定します。 よくある間違いは、適用する`_In_`する必要のあるパラメーターに、`_Inout_`注釈代わりにします。  
+-   `_In_` 「読み取り専用」を指定します。 よくある間違いは、適用する`_In_`する必要のあるパラメーターに、`_Inout_`注釈代わりにします。  
   
--   `_In_`非ポインター スカラーにアナライザーによって無視されますが、使用できます。  
+-   `_In_` 非ポインター スカラーにアナライザーによって無視されますが、使用できます。  
   
 ```cpp  
 void InCallee(_In_ int *pInt)  
@@ -161,7 +159,7 @@ void BadInCaller()
  呼び出し元が初期化済みのバッファーに Null 以外のポインターを渡すことを検証でこの例を Visual Studio コード分析を使用する場合`pInt`です。 この場合、`pInt`ポインターが NULL にすることはできません。  
   
 ### <a name="example-the-inopt-annotation"></a>例: _In_opt\_注釈  
- `_In_opt_`同じ`_In_`ただし、入力パラメーターが NULL にできるし、そのため、関数は、このチェックする必要があります。  
+ `_In_opt_` 同じ`_In_`ただし、入力パラメーターが NULL にできるし、そのため、関数は、このチェックする必要があります。  
   
 ```cpp  
   
@@ -189,7 +187,7 @@ void InOptCaller()
  Visual Studio コード分析では、関数は、バッファーにアクセスする前に NULL の確認を検証します。  
   
 ### <a name="example-the-out-annotation"></a>例: _Out\_注釈  
- `_Out_`一般的なシナリオを要素バッファーを指す NULL ポインターが渡され、関数は、要素を初期化をサポートしています。 呼び出し元は呼び出しの前にバッファーを初期化する必要はありません。呼び出された関数は promise を返す前に初期化します。  
+ `_Out_` 一般的なシナリオを要素バッファーを指す NULL ポインターが渡され、関数は、要素を初期化をサポートしています。 呼び出し元は呼び出しの前にバッファーを初期化する必要はありません。呼び出された関数は promise を返す前に初期化します。  
   
 ```cpp  
   
@@ -216,7 +214,7 @@ void OutCaller()
  Visual Studio コード分析ツールは、呼び出し元がのバッファーに NULL 以外のポインターを渡すことを検証`pInt`を返す前に、バッファーが関数によって初期化されているとします。  
   
 ### <a name="example-the-outopt-annotation"></a>例: _Out_opt\_注釈  
- `_Out_opt_`同じ`_Out_`ただし、パラメーターを NULL にできるし、そのため、関数は、このチェックする必要があります。  
+ `_Out_opt_` 同じ`_Out_`ただし、パラメーターを NULL にできるし、そのため、関数は、このチェックする必要があります。  
   
 ```cpp  
   
@@ -244,7 +242,7 @@ void OutOptCaller()
  Visual Studio コード分析では、この関数がより前に NULL を検査するを検証`pInt`が逆参照と if`pInt`を返す前に、関数によって、バッファーが初期化されている NULL でないです。  
   
 ### <a name="example-the-inout-annotation"></a>例: _Inout\_注釈  
- `_Inout_`関数によって変更されるポインター パラメーターの注釈に使用されます。 ポインターは、呼び出しの前に有効な初期化されたデータを指す必要がありますされ場合でも、変更が必要も有効な値に返された場合。 関数からの読み取りし、1 つの要素のバッファーに書き込むことがあります自由に注釈を指定します。 呼び出し元は、バッファーを提供し、初期化する必要があります。  
+ `_Inout_` 関数によって変更されるポインター パラメーターの注釈に使用されます。 ポインターは、呼び出しの前に有効な初期化されたデータを指す必要がありますされ場合でも、変更が必要も有効な値に返された場合。 関数からの読み取りし、1 つの要素のバッファーに書き込むことがあります自由に注釈を指定します。 呼び出し元は、バッファーを提供し、初期化する必要があります。  
   
 > [!NOTE]
 >  同様に`_Out_`、`_Inout_`変更可能な値に適用する必要があります。  
@@ -276,7 +274,7 @@ void BadInOutCaller()
  Visual Studio コード分析では、呼び出し元が初期化済みのバッファーに NULL 以外のポインターを渡すことを検証`pInt`、戻る前に、その`pInt`も null でないバッファーを初期化します。  
   
 ### <a name="example-the-inoutopt-annotation"></a>例: _Inout_opt\_注釈  
- `_Inout_opt_`同じ`_Inout_`ただし、入力パラメーターが NULL にできるし、そのため、関数は、このチェックする必要があります。  
+ `_Inout_opt_` 同じ`_Inout_`ただし、入力パラメーターが NULL にできるし、そのため、関数は、このチェックする必要があります。  
   
 ```cpp  
   
@@ -306,7 +304,7 @@ void InOutOptCaller()
  Visual Studio コード分析では、この関数は、バッファーにアクセスする前に、null チェックを検証`pInt`を返す前に、関数によって、バッファーが初期化されている NULL でないです。  
   
 ### <a name="example-the-outptr-annotation"></a>例: _Outptr\_注釈  
- `_Outptr_`ポインターを返すためのものでは、パラメーターの注釈に使用されます。  自体はパラメーターが NULL の場合、することはできません、呼び出された関数内の NULL ポインターを返し、初期化されたデータを指すポインターです。  
+ `_Outptr_` ポインターを返すためのものでは、パラメーターの注釈に使用されます。  自体はパラメーターが NULL の場合、することはできません、呼び出された関数内の NULL ポインターを返し、初期化されたデータを指すポインターです。  
   
 ```cpp  
   
@@ -337,7 +335,7 @@ void OutPtrCaller()
  Visual Studio コード分析では、呼び出し元が NULL 以外のポインターを渡すことを検証`*pInt`を返す前に、関数によって、バッファーが初期化されているとします。  
   
 ### <a name="example-the-outptropt-annotation"></a>例: _Outptr_opt\_注釈  
- `_Outptr_opt_`同じ`_Outptr_`パラメーターが省略可能なことを除いて、-、呼び出し元が NULL ポインターでパラメーターに渡すことができます。  
+ `_Outptr_opt_` 同じ`_Outptr_`パラメーターが省略可能なことを除いて、-、呼び出し元が NULL ポインターでパラメーターに渡すことができます。  
   
 ```cpp  
   
@@ -412,7 +410,7 @@ bool GetValue(_Out_ int *pInt, bool flag)
 ## <a name="related-resources"></a>関連資料  
  [コード分析チームのブログ](http://go.microsoft.com/fwlink/p/?LinkId=251197)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C/C++ コード障害を減らす SAL 注釈の使用](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [関数パラメーターおよび戻り値の注釈を付ける](../code-quality/annotating-function-parameters-and-return-values.md)   
  [関数の動作に注釈を付ける](../code-quality/annotating-function-behavior.md)   

@@ -1,29 +1,25 @@
 ---
-title: "CONTEXT_COMPARE |Microsoft ドキュメント"
-ms.custom: 
+title: CONTEXT_COMPARE |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CONTEXT_COMPARE
 helpviewer_keywords:
 - CONTEXT_COMPARE enumeration
 ms.assetid: 701ed61c-a320-4c20-a335-0b840024abc0
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: beba9f612024a63f8f302411982442df19e0bbd4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0563f037f77c18cc5e686c1ea6acf429c91ad06d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="contextcompare"></a>CONTEXT_COMPARE
 2 つのメモリ コンテキストを比較するための条件を指定します。  
@@ -92,13 +88,13 @@ public enum enum_CONTEXT_COMPARE {
   
  これらの値は、指定した比較条件を満たすリスト内の最初のメモリ コンテキストの検索に使用されます。 メモリ コンテキストを通じて自体に対して比較するメモリ コンテキストの一覧を指定、`IDebugMemoryContext2::Compare`メソッドです。 比較演算子の一覧の最初のメモリ コンテキスト`true`次が返されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [Compare](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)

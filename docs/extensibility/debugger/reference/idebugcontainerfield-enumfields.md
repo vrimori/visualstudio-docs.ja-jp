@@ -1,29 +1,25 @@
 ---
-title: "IDebugContainerField::EnumFields |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugContainerField::EnumFields |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugContainerField::EnumFields
 helpviewer_keywords:
 - IDebugContainerField::EnumFields method
 ms.assetid: 9e5e681b-ad49-4c62-bd95-4afa11d61a57
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a262d2f4aa90bc9ae638fb6cfbfe8af605f2446a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0af939253de7b592e7c0ec35be9ea2b9bbff2b0f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugcontainerfieldenumfields"></a>IDebugContainerField::EnumFields
 コンテナーのフィールドの列挙子を作成します。  
@@ -72,7 +68,7 @@ int EnumFields(
 ## <a name="remarks"></a>コメント  
  `dwKindFilter`、 `dwModifiersFilter`、および`pszNameFilter`パラメーターを組み合わせて、たとえば、すべてのパブリック仮想メソッドを"MyMethod"という名前を選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)   
  [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md)   

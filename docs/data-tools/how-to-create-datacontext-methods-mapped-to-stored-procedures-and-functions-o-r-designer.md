@@ -1,23 +1,20 @@
 ---
-title: "方法: ストアド プロシージャおよび関数 (O R デザイナー) にマップされる DataContext メソッドを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ストアド プロシージャおよび関数 (O R デザイナー) にマップされる DataContext メソッドを作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e7ca32f1-50b3-48af-ad92-ceafd749296a
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: a56bacfd2d726e2ec7bedf69f6c79ce347e3556e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: d57d467acb279a74f35703ea176e4a726ccbbe96
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-or-designer"></a>方法: ストアド プロシージャおよび関数 (O/R デザイナー) にマップされる DataContext メソッドの作成
 ストアド プロシージャおよび関数を追加することができます、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]として<xref:System.Data.Linq.DataContext>メソッドです。 データベースでストアド プロシージャまたは関数が実行メソッドを呼び出すと、必要なパラメーターを渡すこと、および戻り値の型のデータを返します、<xref:System.Data.Linq.DataContext>メソッドです。 詳細については<xref:System.Data.Linq.DataContext>メソッドを参照してください[DataContext メソッド (O/R デザイナー)](../data-tools/datacontext-methods-o-r-designer.md)です。  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  既存の戻り値の型を変更する方法について<xref:System.Data.Linq.DataContext>メソッドを参照してください[する方法: DataContext メソッド (O/R デザイナー) の戻り値の型を変更する](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [LINQ to Visual Studio での SQL ツール](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
  [DataContext メソッド (O/R デザイナー)](../data-tools/datacontext-methods-o-r-designer.md)   
  [チュートリアル: LINQ to SQL クラスを作成します。](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   

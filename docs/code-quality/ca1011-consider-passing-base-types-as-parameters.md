@@ -1,12 +1,10 @@
 ---
-title: "Ca 1011: 基本型をパラメーターとして渡すことを検討してください |Microsoft ドキュメント"
-ms.custom: 
+title: 'Ca 1011: 基本型をパラメーターとして渡すことを検討してください |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - ConsiderPassingBaseTypesAsParameters
 - CA1011
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1011
 - ConsiderPassingBaseTypesAsParameters
 ms.assetid: ce1e1241-dcf4-419b-9363-1d5bc4989279
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b8107edf5206e86c270c1e7e66d5cd39ea0da145
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 51271f3d6b2ced6fdf0229c18ac2a19ee06de36c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: 基本型をパラメーターとして渡すことを考慮します
 |||  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 -   メソッドは、派生型によって提供される特定の機能が必要な場合  
   
-     \- または  
+     \- または -  
   
 -   派生型のみ、またはより強い派生型を適用するのには、メソッドに渡されます。  
   

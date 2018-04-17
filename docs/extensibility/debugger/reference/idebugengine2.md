@@ -1,29 +1,25 @@
 ---
-title: "IDebugEngine2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugEngine2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugEngine2
 helpviewer_keywords:
 - IDebugEngine2 interface
 ms.assetid: 1f0e9ac0-6dfb-461a-976c-888d82144cdb
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 95a1a8c48bd6eab0f21ccc85a125b5d10f42ef4e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e2cfe7e2f54b45ecfe8fdb34943b87818a13feab
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugengine2"></a>IDebugEngine2
 このインターフェイスは、デバッグ エンジン (DE) を表します。 設定され、例外をクリアするブレークポイントの作成から、デバッグ セッションでのさまざまな側面を管理に使用されます。  
@@ -54,18 +50,18 @@ IDebugEngine2 : IUnknown
 |[GetEngineID](../../../extensibility/debugger/reference/idebugengine2-getengineid.md)|デの GUID を取得します。|  
 |[DestroyProgram](../../../extensibility/debugger/reference/idebugengine2-destroyprogram.md)|指定されたプログラムが正しく終了になっていると、DE がプログラムへのすべての参照をクリーンアップしてプログラムを送信する必要がある、DE 破棄イベントを通知します。|  
 |[ContinueFromSynchronousEvent](../../../extensibility/debugger/reference/idebugengine2-continuefromsynchronousevent.md)|以前に送信した、DE によって、SDM を同期のデバッグ イベントが受信され、処理を示すために SDM によって呼び出されます。|  
-|[Setlocale、_wsetlocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md)|デのロケールを設定します。|  
+|[setlocale、_wsetlocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md)|デのロケールを設定します。|  
 |[SetRegistryRoot](../../../extensibility/debugger/reference/idebugengine2-setregistryroot.md)|現在、DE が使用してレジストリ ルートを設定します。|  
 |[SetMetric](../../../extensibility/debugger/reference/idebugengine2-setmetric.md)|メトリックを設定します。|  
 |[CauseBreak](../../../extensibility/debugger/reference/idebugengine2-causebreak.md)|この DE によってデバッグされているすべてのプログラムが次回の試行を実行するとき、スレッドの 1 つの実行を停止することを要求します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: Msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)   
  [GetEngine](../../../extensibility/debugger/reference/idebugenginecreateevent2-getengine.md)

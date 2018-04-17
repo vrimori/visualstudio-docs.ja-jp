@@ -1,23 +1,20 @@
 ---
-title: "Visual Studio グラフィックス診断の概要 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio グラフィックス診断の概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/09/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fb52530cf5a068081ce3af3325675d2167c57a9
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.openlocfilehash: 9981fe267420a6bc364e23ab5d8e058c87089b98
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Visual Studio グラフィックス診断の概要
 Visual Studio*グラフィックス診断*を記録し、Direct3D アプリのレンダリングとパフォーマンスの問題を分析するためのツールのセットです。 グラフィックス診断は、Windows PC で、またはリモート PC またはデバイス上にローカルで実行されているアプリで使用できます。  
@@ -121,6 +118,6 @@ Visual Studio*グラフィックス診断*を記録し、Direct3D アプリの�
   
  フレーム分析が高速移動されていないあらゆる - について最小限の画質を提供中にできるほとんどのパフォーマンスを得ることがします。 時には、大きなディスプレイで優れた効果を発揮する高負荷の処理が、携帯電話のような小さな画面で見るとそれほど効果を発揮しないことがあります。その場合、バッテリを消費しないように低負荷の処理にしたほうが適切であると考えられます。 自動的な変更とベンチマーク グラフィックス分析を提供することは、範囲のデバイス間で、アプリの適切なバランスを見つけるの向上に役立ちます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コマンド ライン キャプチャ ツール](command-line-capture-tool.md)   
  [HLSL デバッガー](hlsl-shader-debugger.md)

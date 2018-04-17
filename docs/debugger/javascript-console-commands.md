@@ -1,34 +1,31 @@
 ---
-title: "Visual Studio での JavaScript コンソール コマンド |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio での JavaScript コンソール コマンド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/17/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - JavaScript Console commands [UWP apps]
 - JavaScript debugging, console [UWP apps]
 - debugging JavaScript, console [UWP apps]
-caps.latest.revision: "47"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - uwp
 - cordova
-ms.openlocfilehash: 1f2d6f356d4e886488f4b6558c6cfb92d7b9c974
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+ms.openlocfilehash: df4055790cf715b3a521b6ccc09d5c6920a47136
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio での JavaScript コンソール コマンド
   
  Visual Studio では、JavaScript コンソール ウィンドウでコマンドを使用して、メッセージを送信したり他のタスクを実行したりすることができます。 そのウィンドウを使用する方法を示す例については、次を参照してください。[クイック スタート: JavaScript のデバッグ](../debugger/quickstart-debug-javascript-using-the-console.md)です。 このトピックの情報は、UWP アプリと Visual Studio Tools Apache Cordova を使って作成されたアプリに適用されます。 Cordova アプリでサポートされているコンソール コマンドについては、次を参照してください。[アプリのデバッグ](https://taco.visualstudio.com/en-us/docs/debug-using-visual-studio/)です。 Internet Explorer F12 ツールのコンソールの使用については、 [このトピック](http://msdn.microsoft.com/library/ie/dn255006.aspx)を参照してください。  
   
- JavaScript コンソール ウィンドウが閉じている場合を開くことができますを選択して Visual Studio でデバッグしながら**デバッグ** > **Windows** > **JavaScriptコンソール**です。  
+ Visual Studio でデバッグしながら、閉じた JavaScript コンソール ウィンドウを再び開くには、 **[デバッグ]** > **[ウィンドウ]** > **[JavaScript コンソール]**  
   
 > [!NOTE]
 >  デバッグ セッション中にウィンドウが使用できない場合、プロジェクトのデバッグのプロパティで、デバッガーの種類が **Script** であることを確認してください。  
@@ -89,7 +86,7 @@ if (console && console.log) {
 ## <a name="examining-objects-in-the-javascript-console-window"></a>JavaScript コンソール ウィンドウを使ったオブジェクトの検査  
  JavaScript コンソール ウィンドウを使用すると、スコープ内のオブジェクトと対話できます。 コンソール ウィンドウでスコープ外のオブジェクトを検査するには、コードから `console.log` 、 `console.dir`、または他のコマンドを使用します。 または、コードでブレークポイントを設定 (**[ブレークポイント]** > **Insert [ブレークポイント]**の順にクリック) すると、コンソール ウィンドウからスコープ内のオブジェクトと対話できます。  
   
-##  <a name="ConsoleLog"></a>Console.log 出力の書式設定  
+##  <a name="ConsoleLog"></a> Console.log 出力の書式設定  
  複数の引数を `console.log`に渡すと、コンソールはその引数を配列として処理し、出力を連結します。  
   
 ```javascript  
@@ -133,6 +130,6 @@ console.log("%s is %f years old!", user.first, user.age);
 // Fred is 10.01 years old!  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クイック スタート: JavaScript をデバッグします。](../debugger/quickstart-debug-javascript-using-the-console.md)   
  [クイック スタート: HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)

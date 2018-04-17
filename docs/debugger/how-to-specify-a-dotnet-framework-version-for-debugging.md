@@ -1,12 +1,10 @@
 ---
-title: "方法: デバッグ用の .NET Framework のバージョンの指定 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: デバッグ用の .NET Framework のバージョンの指定 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - .NET Framework, specifying version for debugging
 - debugging [Visual Studio], specifying .NET Framework version
 ms.assetid: 7a4893ba-4620-4774-893f-378d4ca28893
-caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 69fa33ac76f39f7f37cc9aa84d61fd3cf7b0fe45
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1d3d94d4243e138d4b8f9753d02bbc184db6e377
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-specify-a-net-framework-version-for-debugging"></a>方法 : デバッグで .NET Framework のバージョンを指定する
 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] デバッガーでは、Microsoft [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] の現在のバージョンだけでなく、古いバージョンのデバッグもサポートしています。 デバッガーが適切なバージョンを常に特定できます Visual Studio からアプリケーションを起動する場合、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]デバッグしているアプリケーションにします。 使用すると、アプリケーションが既に実行されている**にアタッチ**、デバッガー常にできないことがありますの古いバージョンを識別する、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]です。 この場合、次のようなエラー メッセージが出力されます。  
@@ -64,5 +62,5 @@ ms.lasthandoff: 12/22/2017
   
      それでもデバッグの開始時にエラー メッセージが表示される場合は、レジストリに正しいバージョン番号が入力されていることを確認します。 また、Visual Studio でサポートされている [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンを使用していることを確認します。 デバッガーは、現在のバージョンおよび以前のバージョンの .NET Framework と互換性がありますが、将来のバージョンとの上位互換性はない可能性があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)
