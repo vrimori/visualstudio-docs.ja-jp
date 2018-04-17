@@ -1,12 +1,10 @@
 ---
-title: "Office ソリューションのチュートリアルにおけるデータ |Microsoft ドキュメント"
-ms.custom: 
+title: Office ソリューションのチュートリアルにおけるデータ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - walkthroughs [Office development in Visual Studio], data
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: ff2d79e0be978295ab6ad3228f8d576e0bce82cd
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0a30280c2e47a5beac99c52eefb61fcbc7fbbdea
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-in-office-solutions-walkthroughs"></a>Office ソリューションのチュートリアルにおけるデータ
   次のチュートリアルでは、ドキュメント レベルのカスタマイズと、Microsoft Office Word および Microsoft Office Excel 用の VSTO アドインで、データを操作する方法について説明します。  
@@ -61,13 +60,13 @@ ms.lasthandoff: 01/10/2018
  [チュートリアル: サーバー上のブックにキャッシュされたデータの変更](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md)  
  Microsoft Office Excel を起動することなく、Excel ブックにキャッシュされているデータセットを変更する方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアルを使用して Word](../vsto/walkthroughs-using-word.md)   
  [使用して Excel のチュートリアル](../vsto/walkthroughs-using-excel.md)   
  [Office UI のカスタマイズのチュートリアル](../vsto/office-ui-customization-walkthroughs.md)   
  [セキュリティおよび配置に関するチュートリアル](../vsto/security-and-deployment-walkthroughs.md)   
  [Office 開発のサンプル](../vsto/office-development-samples.md)   
- [作業の開始 (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/getting-started-office-development-in-visual-studio.md)   
+ [作業の開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
  [Office プログラミングの共通タスク](../vsto/common-tasks-in-office-programming.md)   
  [Office ソリューションのデザインと作成](../vsto/designing-and-creating-office-solutions.md)  
   

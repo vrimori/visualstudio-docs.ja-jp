@@ -1,12 +1,10 @@
 ---
-title: "方法: プログラムによって既存のドキュメントを開く |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: プログラムによって既存のドキュメントを開く |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - Word [Office development in Visual Studio], opening documents
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 151571ace6790f05c067f8dff641988301bc1b0e
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0c7542b2222839afc75b3b5b1b84fc5afe56f523
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-open-existing-documents"></a>方法: プログラムによって既存文書を開く
   <xref:Microsoft.Office.Interop.Word.Documents.Open%2A>メソッドは、完全修飾パスとファイル名で指定された既存の Microsoft Office Word ドキュメントを開きます。 このメソッドが戻る、<xref:Microsoft.Office.Interop.Word.Document>開かれたドキュメントを表すです。  
@@ -47,7 +46,7 @@ ms.lasthandoff: 01/10/2018
   
 -   NewDocument.doc をという名前のドキュメントが C ドライブにテストをという名前のディレクトリに存在する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: プログラムによって新しいドキュメントを作成します。](../vsto/how-to-programmatically-create-new-documents.md)   
  [方法: プログラムによって文書を閉じる](../vsto/how-to-programmatically-close-documents.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  

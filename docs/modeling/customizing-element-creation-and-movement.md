@@ -2,24 +2,22 @@
 title: 要素の作成および移動をカスタマイズする |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.dsltools.dsldesigner.elementmergedirective
 helpviewer_keywords:
 - Domain-Specific Language, element merge directives
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ac29f7b745c9698f6051bce6a7b54a1476bf8a7c
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 900011925ff92e5994cd3a82ece621386d63c85b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customizing-element-creation-and-movement"></a>要素作成処理および要素移動処理のカスタマイズ
 要素にドラッグすること、ツールボックスから、または貼り付けの操作または移動を許可できます。 指定したリレーションシップを使用して移動された要素をターゲット要素にリンクされていることができます。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 04/10/2018
   
  EMD の責任では、どのオブジェクトまたはオブジェクトのグループにマージするモデルの特定の場所を決定します。 具体的には、マージされたグループをモデルにリンクするどのようなリレーションシップをインスタンス化する必要がありますを決定します。 プロパティを設定して、その他のオブジェクトを作成することをカスタマイズすることもできます。  
   
- ![DSL&#45;EMD&#95;Merge](../modeling/media/dsl-emd_merge.png "DSL-EMD_Merge")  
+ ![DSL&#45;EMD&#95;マージ](../modeling/media/dsl-emd_merge.png "DSL EMD_Merge")  
 要素のマージ ディレクティブの役割  
   
  埋め込みリレーションシップを定義するとき、EMD が自動的に生成されます。 この既定 EMD は、ユーザーが親に子の新しいインスタンスを追加するときに、リレーションシップのインスタンスを作成します。 カスタム コードを追加することによってたとえば既定入力例: でこれらを変更できます。  

@@ -1,5 +1,5 @@
 ---
-title: "DoWhile アクティビティ デザイナー |Microsoft ドキュメント"
+title: DoWhile アクティビティ デザイナー |Microsoft ドキュメント
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: 948deb35-d72f-462b-bea6-4b119c10a148
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 76350c1a24b48e283c245180166806afe86aecd7
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 8d8edec0edcc8461c18d7a90df6a776c96436ae3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dowhile-activity-designer"></a>DoWhile アクティビティ デザイナー
 <xref:System.Activities.Statements.DoWhile>に含まれているアクティビティを実行、<xref:System.Activities.Statements.DoWhile.Body%2A>を少なくとも 1 回に、指定した条件が評価されるまで**false**です。 ループの本体に含まれるアクティビティを 0 回以上実行する必要がある場合は、代わりに、<xref:System.Activities.Statements.While> アクティビティを使用します。

@@ -1,10 +1,8 @@
 ---
-title: "T4 テキスト テンプレートを使用して、デザイン時コード生成 |Microsoft ドキュメント"
-ms.custom: 
+title: T4 テキスト テンプレートを使用して、デザイン時コード生成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, guidelines for code generation
 - text templates, data source model
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - text templates, generating code for your application
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ff7f01274b47b8c7c333aedbbb6dc646e14b89d3
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: fea82e3343016ab4221a482e2c7975a6d39c1afb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>T4 テキスト テンプレートを使用したデザイン時コード生成
 デザイン時 T4 テキスト テンプレートを使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトのプログラム コードや他のファイルを生成できます。 データに応じて生成されるコードが異なるようにするテンプレートを記述する通常、*モデル*です。 モデルは、ファイルまたはアプリケーションの要件に関する重要な情報を含むデータベースです。  
@@ -294,7 +292,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 > [!TIP]
 >  テキスト テンプレートは独自のアプリ ドメインで実行され、サービスはマーシャリングによってアクセスされます。 この状況では、GetCOMService() は GetService() よりも信頼性が高くなります。  
   
-##  <a name="Regenerating"></a>コードを自動的に再生成します。  
+##  <a name="Regenerating"></a> コードを自動的に再生成します。  
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューションには、1 つの入力モデルを使用して複数のファイルを生成するのが一般的です。 各ファイルはそれぞれ対応するテンプレートから生成されますが、すべてのテンプレートは同じモデルを参照します。  
   
  ソース モデルが変更された場合は、ソリューションのすべてのテンプレートを再度実行する必要があります。 これに手動では、次のように選択します。**すべてのテンプレートの変換**上、**ビルド**メニュー。  
@@ -322,7 +320,7 @@ Error("An error message");
 Warning("A warning message");  
 ```  
   
-##  <a name="Converting"></a>既存のファイルをテンプレートに変換します。  
+##  <a name="Converting"></a> 既存のファイルをテンプレートに変換します。  
  テンプレートには、見た目は生成されるファイルとよく似ていて、そこに、プログラム コードが挿入されているという特徴があります。 このことを利用すると、テンプレートを効率的に作成することができます。 まずファイルを作成、通常、プロトタイプとしてなど、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]ファイル、および生成コードを生成されたファイルを段階的に導入します。  
   
 #### <a name="to-convert-an-existing-file-to-a-design-time-template"></a>既存のファイルをデザイン時テンプレートに変換するには  
@@ -372,5 +370,5 @@ Warning("A warning message");
 |ドメイン固有言語の形式でデータを変換する。|[ドメイン固有言語からのコード生成](../modeling/generating-code-from-a-domain-specific-language.md)|  
 |独自のデータ ソースを変換するためのディレクティブ プロセッサを作成する。|[T4 テキスト変換のカスタマイズ](../modeling/customizing-t4-text-transformation.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [T4 テキスト テンプレートの記述に関するガイドライン](../modeling/guidelines-for-writing-t4-text-templates.md)

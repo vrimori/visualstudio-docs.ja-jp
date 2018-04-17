@@ -1,12 +1,10 @@
 ---
-title: "Office プロジェクトのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: Office プロジェクトのデバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +17,14 @@ helpviewer_keywords:
 - Outlook [Office development in Visual Studio], projects
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: c3a3b4d3eebd5b20c4e9eb56b30a8980ceafb8bf
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 8080e1ffacff73592517e5c1b2cb3d06c3654f15
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debugging-office-projects"></a>Office Project のデバッグ
   Office プロジェクトのデバッグは、他の [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] プロジェクトに使用するのと同じ Microsoft [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Tools を使用して実行できます。 Office プロジェクトのデバッグ時には、ブレークポイントの挿入や[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] [ローカル] **ウィンドウでの変数の表示など、** デバッガーの機能も使用できます。 詳細については[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]デバッグ ツールを参照してください[Visual Studio でデバッグ](/visualstudio/debugger/debugging-in-visual-studio)です。  
@@ -101,7 +100,7 @@ ms.lasthandoff: 01/10/2018
   
  エラーをログ ファイルに書き込むには、 `VSTO_LOGALERTS` という環境変数を作成し、1 に設定します。 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] によって、VSTO アドインの配置マニフェストを含むフォルダーまたはカスタマイズに関連付けられている文書またはブックを含むフォルダーにログ ファイルが作成されます。 作成できない場合は、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] によって、ローカルの %TEMP% フォルダーにログ ファイルが作成されます。 アプリケーション レベルの VSTO アドインの場合、既定の名前は *add-in name*.vsto.log です。 ドキュメント レベルのプロジェクトの場合、ログ ファイルの名前は *document name*.*extension*.log です (例: ExcelWorkbook1.xlsx.log)。 エラーのログ記録を停止するには、この環境変数を 0 (ゼロ) に設定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションのビルド](../vsto/building-office-solutions.md)   
  [方法: 無効になっている VSTO アドインで再度有効にします。](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)  

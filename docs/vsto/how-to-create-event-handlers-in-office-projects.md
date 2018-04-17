@@ -1,12 +1,10 @@
 ---
-title: "方法: Office プロジェクトでイベント ハンドラーを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: Office プロジェクトでイベント ハンドラーを作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - events [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: c392d365ca14daeb204f4ee2f331bb1fe86ad304
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 833e41979d1dac9def7e647b396161d0ac5e2b67
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-event-handlers-in-office-projects"></a>方法: Office プロジェクトでイベント ハンドラーを作成する
   Visual Basic および c# でのイベント ハンドラーを作成するいくつかの方法はあります。 デザイン ビューで、コントロールをダブルクリックして既定のコントロールのイベント ハンドラーを作成またはの [イベント] ペインを使用して、**プロパティ**コントロール上の任意のイベントのハンドラーを作成するウィンドウです。 ただし、コード ビューでは、可能性がありますいない場合、イベント ハンドラーを作成する [デザイン] ビューに切り替えるにはします。  
@@ -45,7 +44,7 @@ ms.lasthandoff: 01/10/2018
   
 ### <a name="to-create-an-event-handler-in-c"></a>C# の場合、イベント ハンドラーを作成するには  
   
-1.  イベント デリゲートを作成、**スタートアップ**修飾イベント名の後にスペースを入力し、入力してクラスのイベント **+=** 後にスペースをします。 例:  
+1.  イベント デリゲートを作成、**スタートアップ**修飾イベント名の後にスペースを入力し、入力してクラスのイベント**+=**後にスペースをします。 例えば:  
   
      `this.<object name>.<event name> +=`  
   
@@ -53,7 +52,7 @@ ms.lasthandoff: 01/10/2018
   
      Visual Studio が自動的にコードの行を完了する、イベント ハンドラーを作成および挿入ポイントを新しく作成されたイベント ハンドラーに移動します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションのコードの記述](../vsto/writing-code-in-office-solutions.md)   
  [チュートリアル: NamedRange コントロールのイベントのプログラミング](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)   
  [Office ソリューションのビルド](../vsto/building-office-solutions.md)  

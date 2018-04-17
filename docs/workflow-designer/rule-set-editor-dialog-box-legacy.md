@@ -1,5 +1,5 @@
 ---
-title: "[ルール セット エディター] ダイアログ ボックス (レガシ) |Microsoft ドキュメント"
+title: '[ルール セット エディター] ダイアログ ボックス (レガシ) |Microsoft ドキュメント'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 7cfd5df1-1115-4e5c-9b72-121f39419e83
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 989e0ed3f390513efeb849a71f94d5d61aecc57e
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 7284b4a318f1d6c182f1d7d27e41f6c77092ad00
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rule-set-editor-dialog-box-legacy"></a>[ルール セット エディター] ダイアログ ボックス (レガシ)
 このトピックについて説明する方法を使用して、**ルール セット エディター**従来の Windows ワークフロー デザイナー ダイアログ ボックス。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。
@@ -49,7 +49,7 @@ ms.lasthandoff: 03/12/2018
 |**条件:**|ルールの条件式を入力します。 式の構文の詳細については、このページの「条件式とアクション式の入力」の項を参照してください。|
 |**Then アクション:**|Then アクションの式を入力します。 式の構文の詳細については、このページの「条件式とアクション式の入力」の項を参照してください。|
 |**Else アクション:**|Else アクションの式を入力します。 式の構文の詳細については、このページの「条件式とアクション式の入力」の項を参照してください。|
-|**OK**|これをクリックすると、ルール セットが .rules ファイルに保存されます。|
+|**わかりました**|これをクリックすると、ルール セットが .rules ファイルに保存されます。|
 
  ルール セットの詳細については、次を参照してください。 [PolicyActivity アクティビティの使用](http://go.microsoft.com/fwlink?LinkID=65004)です。
 

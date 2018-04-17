@@ -1,13 +1,10 @@
 ---
-title: "SharePoint ソリューションの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: SharePoint ソリューションの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 84cc2df4bd683315676acaa7e3f0eead1c36e859
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 807fa532961edb4f2723858a47dcf1fe87134338
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-sharepoint-solutions"></a>SharePoint ソリューションの作成
   SharePoint Designer の代わりに Visual Studio で SharePoint アプリケーションを作成できます。 Visual Studio には、高度なデバッグ ツール、IntelliSense、ステートメント入力候補、プロジェクト テンプレートなど、迅速な SharePoint 開発を促進する機能が用意されています。 さらに、Visual Studio では、高度な .NET Framework ベースのツールと言語も活用されています。 SharePoint プロジェクトは Visual Basic または Visual C# を使用して開発できます。また、SharePoint 用アプリのプロジェクトは JavaScript を使用して開発できます。  
@@ -36,7 +33,7 @@ ms.lasthandoff: 01/10/2018
   
 |||  
 |-|-|  
-|![ドキュメント](../sharepoint/media/vs-icon-documentation.gif "ドキュメント")|**ドキュメント**<br /><br /> -   [作業の開始 (&) #40 です。Visual Studio &#41; での SharePoint 開発](../sharepoint/getting-started-sharepoint-development-in-visual-studio.md)<br />-   [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)<br />-   [SharePoint ソリューションのローカライズ](../sharepoint/localizing-sharepoint-solutions.md)<br />-   [ビルドと SharePoint ソリューションのデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)<br />-   [パッケージ化と SharePoint ソリューションの配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)<br />-   [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)|  
+|![ドキュメント](../sharepoint/media/vs-icon-documentation.gif "ドキュメント")|**ドキュメント**<br /><br /> -   [作業の開始&#40;Visual Studio での SharePoint 開発&#41;](../sharepoint/getting-started-sharepoint-development-in-visual-studio.md)<br />-   [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)<br />-   [SharePoint ソリューションのローカライズ](../sharepoint/localizing-sharepoint-solutions.md)<br />-   [ビルドと SharePoint ソリューションのデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)<br />-   [パッケージ化と SharePoint ソリューションの配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)<br />-   [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)|  
 |![ドキュメント](../sharepoint/media/vs-icon-documentation.gif "ドキュメント")|**おすすめのタスク**<br /><br /> -   [チュートリアル: サイト内の列、コンテンツ タイプ、および SharePoint のリストを作成します。](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)<br />-   [方法: イベント レシーバーを作成します。](../sharepoint/how-to-create-an-event-receiver.md)<br />-   [方法: BDC モデルを作成](../sharepoint/how-to-create-a-bdc-model.md)<br />-   [方法: SharePoint Web パーツを作成します。](../sharepoint/how-to-create-a-sharepoint-web-part.md)<br />-   [方法: SharePoint アプリケーション ページのユーザー コントロールを作成または Web パーツ](../sharepoint/how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md)|  
 |![チュートリアル](../sharepoint/media/vs-icon-walkthroughs.gif "チュートリアル")|**チュートリアル**<br /><br /> -   [SharePoint 開発のチュートリアル](../sharepoint/sharepoint-development-walkthroughs.md)|  
 |![コード サンプル](../sharepoint/media/vs-icon-codesamples.gif "コード サンプル")|**コード サンプル**<br /><br /> -   [SharePoint 開発のサンプル](../sharepoint/sharepoint-development-samples.md)<br />-   [SharePoint 開発者向けダウンロード](http://msdn.microsoft.com/sharepoint/aa905690.aspx)|  

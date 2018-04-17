@@ -1,12 +1,10 @@
 ---
-title: "モジュールを使用して、ソリューション内のファイルのインクルード |Microsoft ドキュメント"
-ms.custom: 
+title: モジュールを使用して、ソリューション内のファイルのインクルード |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - modules [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: c7f0fff081215e1bf1a9e2c5320668f2c698b2e6
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 9c11dd4ebd17b1ebef91c3d7752df7c15dd50da4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-modules-to-include-files-in-the-solution"></a>モジュールを使用してソリューションにファイルを追加する
   新しいマスター ページなど、そのファイルの種類に関係なく、SharePoint サーバーにファイルを配置する場合がありますである可能性があります。 これを行うには、使用することができます*モジュール*(と混同しないでください[!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]モジュールのコード)。 モジュールは、SharePoint ソリューションのファイルのコンテナーです。 ソリューションを配置するときに、モジュール内のファイルは、SharePoint サーバーで、指定したフォルダーにコピーされます。  
@@ -59,7 +58,7 @@ ms.lasthandoff: 01/10/2018
   
  展開する各ファイルが個別の必要があります`<File>`Elements.xml 内の要素のエントリ。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: モジュールを使用して、ファイルを含める](../sharepoint/how-to-include-files-by-using-a-module.md)   
  [方法: ファイルを準備](http://go.microsoft.com/fwlink/?LinkID=144271)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   

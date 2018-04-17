@@ -1,13 +1,10 @@
 ---
-title: "方法: SharePoint ソリューション パッケージをカスタマイズ |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: SharePoint ソリューション パッケージをカスタマイズ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.RAD.PackageDesignerAdvanced
 - VS.SharePointTools.RAD.PackageDesigner.Manifest
@@ -22,14 +19,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, packages
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 277ceea1b908c5819608a1bdf1d6be97c2f6ce77
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 9ffe532653abf58e4af6297e69c1049a916144cf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-customize-a-sharepoint-solution-package"></a>方法: SharePoint ソリューション パッケージをカスタマイズする
   パッケージ デザイナーを使用して、作成およびパッケージ (.wsp) をカスタマイズすることができます。 たとえば、SharePoint プロジェクト項目と機能の追加、Web サーバーがソリューションを展開するときのリセットし、配置サーバーの種類を設定するかどうかを指定できます。  
@@ -96,7 +93,7 @@ ms.lasthandoff: 01/10/2018
   
      元のテキストで、テンプレートが更新され、XML に変更は失われます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

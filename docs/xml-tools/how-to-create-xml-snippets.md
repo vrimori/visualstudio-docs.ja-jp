@@ -1,23 +1,21 @@
 ---
-title: "方法: XML スニペットを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: XML スニペットを作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: d8556dd7-1382-4af7-ba80-3e873c9416be
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 376719363bd97970bdfa333d9aab0e57a8484c73
-ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: f98d0cccdbd530ea20c01369860c15186487a234
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-xml-snippets"></a>方法 : XML スニペットを作成する
 XML エディターを使用して、新しい XML スニペットを作成することができます。 エディターには、新しい XML スニペットを作成する際の定型スニペットである、"Snippet" という名前の XML スニペットが含まれています。  
@@ -113,7 +111,7 @@ XML エディターを使用して、新しい XML スニペットを作成す�
   
  この後は、XML スニペット内の任意の場所で $prefix$ 変数を使用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML スニペット](../xml-tools/xml-snippets.md)   
  [方法: XML スニペットを使用します。](../xml-tools/how-to-use-xml-snippets.md)   
  [方法 : XML スキーマから XML スニペットを生成する](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)

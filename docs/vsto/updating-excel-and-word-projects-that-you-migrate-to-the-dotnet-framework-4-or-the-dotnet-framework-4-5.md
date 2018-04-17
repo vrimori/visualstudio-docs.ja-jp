@@ -2,12 +2,9 @@
 title: Excel プロジェクトおよび Word プロジェクトの .NET Framework 4 または .NET Framework 4.5 に移行する更新 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - office-development
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - Office projects [Office development in Visual Studio], migrating to .NET Framework 4
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 974071c68edd685bd23b29d6d37c520f50a78078
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 8a1c7022af6a02a036476e55bdfc57becbd9d7f5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-excel-and-word-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 または .NET Framework 4.5 に移行する Excel プロジェクトおよび Word プロジェクトの更新
   次の機能を使用する Excel プロジェクトまたは Word プロジェクトのターゲット フレームワークを [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降に変更する場合は、コードを変更する必要があります。  
@@ -234,8 +231,8 @@ private void DoSomethingToSheet(Microsoft.Office.Tools.Excel.Worksheet worksheet
   
  [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降をターゲットとするプロジェクトでは、これらのコレクション型はインターフェイスであり、 <xref:System.Collections.CollectionBase>からは派生しません。 <xref:System.Collections.CollectionBase.Capacity%2A>、 <xref:System.Collections.CollectionBase.List%2A>、 <xref:System.Collections.CollectionBase.InnerList%2A>などの一部のメンバーは、これらのコレクション型で使用できなくなりました。  
   
-## <a name="see-also"></a>参照  
- [Migrating Office Solutions to the .NET Framework 4 or later](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   
+## <a name="see-also"></a>関連項目  
+ [.NET Framework 4 以降への Office ソリューションの移行](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   
  [コンテンツ コントロール](../vsto/content-controls.md)   
  [実行時の Word 文書と VSTO アドイン内の Excel ブックの拡張](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   

@@ -1,23 +1,21 @@
 ---
-title: "XML エディターの IntelliSense 機能 |Microsoft ドキュメント"
-ms.custom: 
+title: XML エディターの IntelliSense 機能 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 2b26f214-cc3a-46bf-b260-14eb8e599182
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: f98f11cf9f4aef491951e1968105a30a679e687a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: bc4a0e9cc3da9d2cfad86d1891514a68dd2b87fe
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-editor-intellisense-features"></a>XML エディターの IntelliSense 機能
 XML エディターでは、Visual Studio で提供されている他の言語のエディターに相当する、フル機能の IntelliSense を利用できます。 このセクションでは、XML スキーマ定義言語 (XSD) ドキュメントと XSLT ドキュメントで IntelliSense を使用する方法について説明します。  
@@ -105,7 +103,7 @@ XML エディターは、名前空間で修飾された要素や属性を Intell
   
  **自動挿入**のセクションで、 **[その他]**ページは、次の動作を制御します。  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |終了タグ|新しい要素の終了タグを挿入します。|  
 |属性値の引用符|新しい属性の名前を入力するときに属性値の引用符を挿入します。|  
@@ -119,7 +117,7 @@ XML エディターは、名前空間で修飾された要素や属性を Intell
   
 3.  何も変更、**自動挿入**セクションし、をクリックして**OK**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML エディター](../xml-tools/xml-editor.md)   
  [IntelliSense の使用](../ide/using-intellisense.md)   
  [チュートリアル: XSLT IntelliSense の使用](../xml-tools/walkthrough-using-xslt-intellisense.md)

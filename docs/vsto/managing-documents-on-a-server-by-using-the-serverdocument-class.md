@@ -1,12 +1,10 @@
 ---
-title: "ServerDocument クラスを使用してサーバー上のドキュメントを管理する |Microsoft ドキュメント"
-ms.custom: 
+title: ServerDocument クラスを使用してサーバー上のドキュメントを管理する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - ServerDocument class, managing documents on server
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 2120e7c70abaddd4f51c0214a2c5ae517cf955cc
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: ef676de4ff352a557019f68037203364a97834d1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-documents-on-a-server-by-using-the-serverdocument-class"></a>ServerDocument クラスによるサーバー上のドキュメントの管理
   ServerDocument クラスを使用することができます、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]を Microsoft Office Word および Microsoft Office Excel がインストールされていない場合でも、ドキュメント レベルのカスタマイズのいくつかの側面を管理します。 実行できる管理タスクは以下のとおりです。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]  
 >  Office system 用の Visual Studio Tools で ServerDocument クラスを使用しているレガシ アプリケーションがある場合 (バージョン 3.0 ランタイム)、Visual Studio Tools for Office system (version 3.0 Runtime) アプリケーションを実行するコンピューターにインストールする必要があります。 Visual Studio 2010 Tools for Office Runtime では、そうしたアプリケーションを実行できません。  
   
-##  <a name="CachedData"></a>ドキュメントでキャッシュされたデータの操作  
+##  <a name="CachedData"></a> ドキュメントでキャッシュされたデータの操作  
  ServerDocument クラスは、カスタマイズされたドキュメント内のデータ キャッシュ操作に使用できるメンバーを提供します。 キャッシュされたデータの詳細については、次を参照してください。[データをキャッシュ](../vsto/caching-data.md)と[サーバー上のドキュメントでデータにアクセスする](../vsto/accessing-data-in-documents-on-the-server.md)です。  
   
  次の表は、キャッシュされたデータの操作に使用できるメンバーを示しています。  
@@ -51,9 +50,9 @@ ms.lasthandoff: 01/10/2018
 |タスク|使用するメンバー|  
 |----------|-------------------|  
 |ドキュメントにデータ キャッシュがあるかどうかを確認する。|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.IsCacheEnabled%2A> メソッド。|  
-|ドキュメント内のキャッシュされたデータにアクセスする。<br /><br /> 詳細については、「 [Accessing Data in Documents on the Server](../vsto/accessing-data-in-documents-on-the-server.md)」を参照してください。|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> プロパティ。|  
+|ドキュメント内のキャッシュされたデータにアクセスする。<br /><br /> 詳細については、「 [サーバー上のドキュメント内のデータへのアクセス](../vsto/accessing-data-in-documents-on-the-server.md)」を参照してください。|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> プロパティ。|  
   
-##  <a name="CustomizationInfo"></a>ドキュメントのカスタマイズの管理  
+##  <a name="CustomizationInfo"></a> ドキュメントのカスタマイズの管理  
  ServerDocument クラスのメンバーを使用して、ドキュメントに関連付けられているカスタマイズ アセンブリを管理することができます。 たとえば、ドキュメントのカスタマイズをプログラムによって削除し、そのドキュメントをカスタマイズから除外することもできます。  
   
  次の表は、カスタマイズ アセンブリの管理に使用できるメンバーを示しています。  
@@ -65,9 +64,9 @@ ms.lasthandoff: 01/10/2018
 |プログラムによって実行時にドキュメントからカスタマイズを削除する。<br /><br /> 詳細については、次を参照してください。[する方法: マネージ コードの拡張のドキュメントから削除](../vsto/how-to-remove-managed-code-extensions-from-documents.md)です。|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A> メソッド。|  
 |ドキュメントに関連付けられている配置マニフェストの URL を取得する。|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.DeploymentManifestUrl%2A> プロパティ。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: マネージ コード拡張機能をドキュメントにアタッチします。](../vsto/how-to-attach-managed-code-extensions-to-documents.md)   
  [方法: マネージ コード拡張をドキュメントから削除](../vsto/how-to-remove-managed-code-extensions-from-documents.md)   
- [Visual Studio Tools for Office Runtime Overview](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
+ [Visual Studio Tools for Office ランタイム](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
  [キャッシュされたデータ](../vsto/caching-data.md)  
   

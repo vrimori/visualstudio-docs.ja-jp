@@ -2,23 +2,21 @@
 title: ドメイン固有言語での検証 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, constraints
 - Domain-Specific Language, validation
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 7eb2e734bd94608584ca700223fb75387eb484fb
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 94be1947136d2e118cf4a015e6c962eb45e94eae
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="validation-in-a-domain-specific-language"></a>ドメイン固有言語における検証
 ドメイン固有言語 (DSL) の作成者は、検証制約を定義して、ユーザーが作成したモデルが意味を持つことを確認できます。 たとえば、DSL でユーザーが人々とその先祖の家系図を描くことができる場合、子の誕生日が親の誕生日よりも後であることを確認する制約を作成できます。  

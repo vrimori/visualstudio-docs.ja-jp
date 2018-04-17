@@ -1,13 +1,10 @@
 ---
-title: "Windows フォームでコントロールの Office ドキュメントの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: Windows フォームでコントロールの Office ドキュメントの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -30,14 +27,14 @@ helpviewer_keywords:
 - Office applications [Office development in Visual Studio], Windows Forms
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 898d0325b352f3ea8982dc68cf5a99a07181a31c
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 2693c31d06edc621f355749f76caf04e44fb28e1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="windows-forms-controls-on-office-documents-overview"></a>Office ドキュメントでの Windows フォーム コントロールの概要
   Windows フォーム コントロールは、データを入力または操作するときにユーザーが取り扱うオブジェクトです。 Microsoft Office Excel および Microsoft Office Word のドキュメント レベルのプロジェクトでは、デザイン時に Windows フォーム コントロールをプロジェクトのドキュメントまたはブックに追加したり、実行時にこれらのコントロールをプログラミングで追加したりできます。 Word と Excel 用の VSTO アドインでは、実行時に開いているドキュメントやワークシートにこれらのコントロールをプログラミングで追加できます。  
@@ -150,10 +147,10 @@ ms.lasthandoff: 01/10/2018
 ### <a name="adding-components-at-design-time"></a>デザイン時のコンポーネントの追加  
  特定のコントロールやコンポーネントは、ドキュメントに表示されずに、コンポーネント トレイに表示されます。 Visual Studio では、各ドキュメント ウィンドウに対して 1 つのコンポーネント トレイが提供されます。 コンポーネント トレイは、コンポーネントがドキュメントに存在する場合にのみ画面に表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   
  [Windows フォーム コントロール](/dotnet/framework/winforms/controls/index)   
  [Office ドキュメントでの Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)   

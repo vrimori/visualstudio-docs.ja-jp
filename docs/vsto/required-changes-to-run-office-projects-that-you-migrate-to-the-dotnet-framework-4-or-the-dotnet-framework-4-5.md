@@ -1,13 +1,10 @@
 ---
-title: ".NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトを実行する変更が必要に |Microsoft ドキュメント"
-ms.custom: 
+title: .NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトを実行する変更が必要に |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - Office projects [Office development in Visual Studio], migrating to .NET Framework 4
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ee90d5c205f58736f7ccb6536e29b2fd6d16b152
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 5df72bcf36907dbb556e8d7fffd30cb224bfd41c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="required-changes-to-run-office-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトの実行に必要な変更
   Office プロジェクトのターゲット フレームワークを変更するかどうか、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]後で .NET Framework の以前のバージョンから行う必要があります、開発用コンピューターとエンドユーザーのコンピューターに、ソリューションを実行できることを確認するには、次のタスクまたは。  
@@ -74,7 +71,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="reinstalling-solutions-on-end-user-computers"></a>エンド ユーザーのコンピューターでのソリューションの再インストール  
  ClickOnce を使用して .NET Framework 3.5 を対象とする Office ソリューションを配置してから、プロジェクトの対象を [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降に変更した場合、エンド ユーザーはソリューションをアンインストールし、再発行後のソリューションを再インストールする必要があります。 対象が変更されたソリューションを再発行し、エンド ユーザーのコンピューター上でソリューションが更新された場合は、エンド ユーザーが更新されたソリューションを実行したときに <xref:System.Runtime.InteropServices.COMException> が発生します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [.NET Framework 4 以降への Office ソリューションの移行](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)  
   
   

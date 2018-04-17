@@ -1,12 +1,10 @@
 ---
-title: "実行時に Word 文書と VSTO アドイン内の Excel ブックを拡張 |Microsoft ドキュメント"
-ms.custom: 
+title: 実行時に Word 文書と VSTO アドイン内の Excel ブックを拡張 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,13 +18,14 @@ helpviewer_keywords:
 - HasVstoObject method
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 5cd29d7de596704087eb1326791e4fc9df9921a6
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0f95c7cb0dfa5fb867807e32366157839725db85
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time"></a>VSTO アドインにおける実行時の Word 文書と Excel ブックの拡張
   VSTO アドインを利用すれば、Word 文書と Excel ブックを次のようにカスタマイズできます。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 01/10/2018
   
  この機能を使用するには、文書またはブックを拡張するオブジェクトを実行時に生成します。  
   
- **対象:** このトピックの情報は Excel と Word の VSTO アドインのプロジェクトに適用されます。 詳細については、「 [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md)」を参照してください。  
+ **対象:** このトピックの情報は Excel と Word の VSTO アドインのプロジェクトに適用されます。 詳細については、「[Office アプリケーションおよびプロジェクトの種類別の使用可能な機能](../vsto/features-available-by-office-application-and-project-type.md)」を参照してください。  
   
 ## <a name="generating-extended-objects-in-vsto-add-ins"></a>VSTO アドインで拡張オブジェクトを生成する  
  *拡張オブジェクト* は Word または Excel オブジェクト モデルにネイティブで存在するオブジェクト ( *ネイティブ Office オブジェクト*) に機能を追加する Visual Studio Tools for Office Runtime が提供する種類のインスタンスです。 Word または Excel オブジェクトの拡張オブジェクトを生成するには、GetVstoObject メソッドを使用します。 最初に指定した Word または Excel のオブジェクトの GetVstoObject メソッドを呼び出したとき、指定したオブジェクトを拡張する新しいオブジェクトを返します。 このメソッドを呼び出し、同じ Word または Excel を指定するたびに、同じ拡張オブジェクトが返されます。  
@@ -87,7 +86,7 @@ ms.lasthandoff: 01/10/2018
      [!code-csharp[Trin_ExcelAddInDynamicControls#3](../vsto/codesnippet/CSharp/trin_exceladdindynamiccontrols4/ThisAddIn.cs#3)]  
   
 ##  <a name="AddControls"></a> 文書とワークシートに管理されているコントロールを追加する  
- <xref:Microsoft.Office.Tools.Word.Document> または <xref:Microsoft.Office.Tools.Excel.Worksheet>を生成したら、これらの拡張オブジェクトが表す文書またはワークシートにコントロールを追加できます。 これを行うには、コントロール プロパティを使用して、<xref:Microsoft.Office.Tools.Word.Document>または<xref:Microsoft.Office.Tools.Excel.Worksheet>です。 詳細については、「 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
+ <xref:Microsoft.Office.Tools.Word.Document> または <xref:Microsoft.Office.Tools.Excel.Worksheet>を生成したら、これらの拡張オブジェクトが表す文書またはワークシートにコントロールを追加できます。 これを行うには、コントロール プロパティを使用して、<xref:Microsoft.Office.Tools.Word.Document>または<xref:Microsoft.Office.Tools.Excel.Worksheet>です。 詳細については、「 [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
   
  Windows フォーム コントロールまたは *ホスト コントロール*を追加できます。 ホスト コントロールは [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] により提供されるコントロールであり、Word または Excel プライマリ相互運用機能アセンブリのそれに対応するコントロールをラップします。 ホスト コントロールは基礎となるネイティブ Office オブジェクトのすべての動作を見せますが、さらに、イベントを発生させ、Windows フォーム データ バインディング モデルを利用してデータにバインディングできます。 詳細については、「 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)」を参照してください。  
   
@@ -123,10 +122,10 @@ ms.lasthandoff: 01/10/2018
   
  HasVstoObject メソッドは、指定した Office オブジェクトに拡張オブジェクトがある場合にのみ、コードを実行するときに役立ちます。 処理する Word VSTO アドインがある場合など、<xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave>する前に文書から管理されているコントロールを削除するイベントの保存、HasVstoObject メソッドを使用するを文書が拡張されているかどうかを判断します。 文書が拡張されていない場合、管理されているコントロールを追加できません。そのため、イベント ハンドラーは文書のコントロールを消去せずに戻ります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)  
   
   

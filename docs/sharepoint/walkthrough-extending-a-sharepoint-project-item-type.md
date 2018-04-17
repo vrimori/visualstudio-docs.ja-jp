@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: SharePoint プロジェクト項目の種類の拡張 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: SharePoint プロジェクト項目の種類の拡張 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending project items
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: e2f39fc15d73b2019e739d7695f40cf0e3fd0940
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: ed2c425af4127af443254bfdc269d58c653bb3c9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-extending-a-sharepoint-project-item-type"></a>チュートリアル: SharePoint プロジェクト項目の種類の拡張
   使用することができます、**ビジネス データ接続モデル**プロジェクト アイテムを SharePoint でビジネス データ接続 (BDC) サービスのモデルを作成します。 既定では、このプロジェクト項目を使用してモデルを作成しただけでは、モデル内のデータがユーザーに表示されません。 ユーザーがデータを閲覧できるようにするには、それに加えて、SharePoint に外部リストを作成する必要があります。  
@@ -80,7 +79,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  **名前**ボックスに、入力**GenerateExternalDataLists**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **GenerateExternalDataLists**プロジェクトを**ソリューション エクスプ ローラー**です。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **GenerateExternalDataLists**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
 7.  Source.extension.vsixmanifest ファイルに自動的に表示されない場合で、GenerateExternalDataLists プロジェクトのショートカット メニューを開きし、**を開く**  
   
@@ -98,7 +97,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  **名前**ボックスに、入力**BdcProjectItemExtension**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **BdcProjectItemExtension**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **BdcProjectItemExtension**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
   
 6.  Class1 コード ファイルをプロジェクトから削除します。  
   
@@ -295,7 +294,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  Visual Studio の両方のインスタンス (実験用インスタンスと、GenerateExternalDataLists ソリューションを開いたインスタンス) を閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint プロジェクト システムの拡張](../sharepoint/extending-the-sharepoint-project-system.md)   
  [ビジネス データ接続モデルを作成します。](../sharepoint/creating-a-business-data-connectivity-model.md)   
  [Business Data Connectivity モデルのデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)  

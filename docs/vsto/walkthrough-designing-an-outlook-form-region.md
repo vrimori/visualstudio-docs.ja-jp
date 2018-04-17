@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: Outlook フォーム領域のデザイン |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: Outlook フォーム領域のデザイン |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - form regions [Office development in Visual Studio], creating
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: afe17d19ebe87d34ae4857b1477be6cb3e894bb7
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 22d67ffe14b261911d220dfeb64a0204a6a16032
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-designing-an-outlook-form-region"></a>チュートリアル : Outlook フォーム領域のデザイン
   カスタム フォーム領域は、標準またはカスタムの Microsoft Office Outlook フォームを拡張します。 このチュートリアルでは、連絡先アイテムのインスペクター ウィンドウに新しいページとして表示するカスタム フォーム領域をデザインします。 このフォーム領域では、アドレス情報を Windows Live Local Search の Web サイトに送信することによって、連絡先に設定された個々の住所の地図を表示します。 フォーム領域の詳細については、次を参照してください。 [Outlook フォーム領域を作成する](../vsto/creating-outlook-form-regions.md)です。  
@@ -159,7 +156,7 @@ ms.lasthandoff: 01/10/2018
     |住所の種類|アドレス|  
     |------------------|-------------|  
     |**ビジネス**|**4567 Main st. ツーソン, アリゾナ州**|  
-    |**ホーム**|**1234 北 st. ツーソン, アリゾナ州**|  
+    |**Home**|**1234 北 st. ツーソン, アリゾナ州**|  
     |**その他**|**3456 Main st. シアトル、ワシントン州**|  
   
 4.  連絡先アイテムを保存して閉じます。  
@@ -175,7 +172,7 @@ ms.lasthandoff: 01/10/2018
   
 -   Outlook アイテムのリボンをカスタマイズする方法の詳細については、「 [Customizing a Ribbon for Outlook](../vsto/customizing-a-ribbon-for-outlook.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [実行時にフォーム領域へのアクセス](../vsto/accessing-a-form-region-at-run-time.md)   
  [Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)   
  [Outlook フォーム領域の作成に関するガイドライン](../vsto/guidelines-for-creating-outlook-form-regions.md)   

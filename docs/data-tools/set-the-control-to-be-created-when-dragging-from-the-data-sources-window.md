@@ -1,28 +1,25 @@
 ---
-title: "データ ソース ウィンドウからドラッグしたときに作成するコントロールを設定 |Microsoft ドキュメント"
-ms.custom: 
+title: データ ソース ウィンドウからドラッグしたときに作成するコントロールを設定 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Sources Window, select controls
 - Windows Forms, displaying data
 - data [Visual Studio], displaying on Windows Forms
 - data [Visual Studio], Data Sources window
 ms.assetid: 20597ff8-0c98-43ec-8fb1-05376804ba48
-caps.latest.revision: "31"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 5556a5d9a537684a8d1e73ee363b4c9ac8f6baa8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: b5f8c58ab79a441a6dd588a4da903a9a4c491a50
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>[データ ソース] ウィンドウからドラッグしたときに作成されるコントロールを設定する
 項目をドラッグしてデータ バインド コントロールを作成することができます、**データソース**ウィンドウから WPF デザイナーまたは Windows フォーム デザイナーにします。 内の各項目、**データソース**ウィンドウがデザイナーにドラッグするときに作成される既定のコントロールです。 ただし、別のコントロールが作成されるようにすることもできます。  
@@ -63,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
      使用可能なコントロールのリストは、デザイナーを開いている、.NET Framework のバージョン、プロジェクトのターゲットは依存しており、カスタム コントロールを追加したデータ バインディングをサポートする、**ツールボックス**です。 作成するコントロールが利用できるコントロールのリストに含まれている場合、コントロールをリストに追加できます。 詳細については、次を参照してください。[データ ソース ウィンドウにカスタム コントロールを追加](../data-tools/add-custom-controls-to-the-data-sources-window.md)です。  
   
-     コントロールのデータ列またはプロパティの一覧に追加できるカスタム コントロールを作成する方法について、**データソース**ウィンドウを参照してください[の単純データバインディングをサポートするWindowsフォームユーザーコントロールを作成します。](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md).  
+     コントロールのデータ列またはプロパティの一覧に追加できるカスタム コントロールを作成する方法について、**データソース**ウィンドウを参照してください[の単純データバインディングをサポートするWindowsフォームユーザーコントロールを作成します](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md)。  
   
      列またはプロパティのコントロールを作成しない場合は、選択**None**ドロップダウン メニューにします。 これは、親のテーブルまたはオブジェクトをデザイナーにドラッグする必要があり、かつ特定の列またはプロパティを含める必要がない場合に便利です。  
   

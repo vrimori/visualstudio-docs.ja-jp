@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: リボン デザイナーを使用してカスタム タブの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: リボン デザイナーを使用してカスタム タブの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +17,14 @@ helpviewer_keywords:
 - Custom tab [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: cdbbd7ee286c97a986e89ccdb5bdcfdde4ef7578
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 7fdae2b6a867b6d87c6579fc1d24f9d0ebd07cf9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer"></a>チュートリアル : リボン デザイナーを使用したカスタム タブの作成
   リボン デザイナーでは、カスタム タブを作成し、その後、カスタム タブの中でコントロールを追加して配置することができます。  
@@ -59,7 +58,7 @@ ms.lasthandoff: 01/10/2018
   
      デザイナーで新しいブックを開き、 **MyExcelRibbon**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
-##  <a name="BKMK_CreateActionsPanes"></a>操作ウィンドウの作成  
+##  <a name="BKMK_CreateActionsPanes"></a> 操作ウィンドウの作成  
  プロジェクトに 2 つのカスタム操作ウィンドウを追加します。 後の作業で、これらの操作ウィンドウの表示/非表示を切り替えるボタンをカスタム タブに追加します。  
   
 #### <a name="to-create-actions-panes"></a>操作ウィンドウを作成するには  
@@ -76,7 +75,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  手順 1. ～ 5. を繰り返して、2 つ目の操作ウィンドウとラベルを作成します。 設定、**テキスト**に 2 つ目のラベルのプロパティ**Actions Pane 2**です。  
   
-##  <a name="BKMK_CreateCustomTab"></a>カスタム タブの作成  
+##  <a name="BKMK_CreateCustomTab"></a> カスタム タブの作成  
  Office アプリケーションのデザイン ガイドラインの 1 つとして、ユーザーが常に Office アプリケーションの UI を操作できなければならないことがあります。 操作ウィンドウにこの機能を追加するには、リボンのカスタム タブから操作ウィンドウの表示/非表示を切り替えることができるボタンを追加します。 カスタム タブを作成するには追加、**リボン (ビジュアル デザイナー)**プロジェクト項目です。 デザイナーでは、コントロールの追加と配置、コントロールのプロパティの設定、およびコントロール イベントの処理を行うことができます。  
   
 #### <a name="to-create-a-custom-tab"></a>カスタム タブを作成するには  
@@ -111,7 +110,7 @@ ms.lasthandoff: 01/10/2018
   
 14. 設定、**ラベル**プロパティを**Hide Actions Pane**です。  
   
-##  <a name="BKMK_HideShowActionsPane"></a>カスタム タブのボタンを使用して、操作ウィンドウの表示と非表示  
+##  <a name="BKMK_HideShowActionsPane"></a> カスタム タブのボタンを使用して、操作ウィンドウの表示と非表示  
  最後の手順で、ユーザーに応答するコードを追加します。 2 つのボタンの <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click> イベントと、トグル ボタンの <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> イベントのイベント ハンドラーを追加します。 操作ウィンドウの表示/非表示を有効にするために、イベント ハンドラーにコードを追加します。  
   
 #### <a name="to-hide-and-show-actions-panes-by-using-buttons-in-the-custom-tab"></a>カスタム タブのボタンを使用して操作ウィンドウの表示/非表示を切り替えるには  
@@ -161,7 +160,7 @@ ms.lasthandoff: 01/10/2018
   
 -   標準またはカスタムの Microsoft Office Outlook フォームを拡張する。 詳細については、次を参照してください。[チュートリアル: Outlook フォーム領域のデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
  [リボンの概要](../vsto/ribbon-overview.md)   
  [リボン デザイナー](../vsto/ribbon-designer.md)   

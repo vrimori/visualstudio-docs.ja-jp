@@ -1,21 +1,19 @@
 ---
-title: "ドメイン固有言語の概要 |Microsoft ドキュメント"
-ms.custom: 
+title: ドメイン固有言語の概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 68b750735c8f5d5f6bd7f1497565692c8836914c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 791686b948c5a0541cbe8f8cb420f38ef885c9d3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>ドメイン固有言語の概要
 このトピックを定義すると、Visual Studio for Modeling SDK で作成したドメイン固有言語 (DSL) を使用して基本的な概念について説明します。
@@ -102,7 +100,7 @@ ms.lasthandoff: 02/09/2018
   
 -   **DslPackage プロジェクト**このプロジェクトには開いて Visual Studio で編集したり、DSL のインスタンスをできるようにするコードが含まれています。  
   
-##  <a name="Debugging"></a>DSL を実行しています。  
+##  <a name="Debugging"></a> DSL を実行しています。  
  作成するとすぐに、DSL ソリューションを実行することができます。 後で、定義を変更できます、DSL 徐々 に、各変更後にもう一度ソリューションを実行します。  
   
 #### <a name="to-experiment-with-the-dsl"></a>DSL をテストするには  
@@ -120,7 +118,7 @@ ms.lasthandoff: 02/09/2018
   
 3.  Visual Studio の実験用インスタンスのという名前のモデル ファイルを開く**テスト**から**ソリューション エクスプ ローラー**です。  
   
-     \- または  
+     \- または -  
   
      デバッグ プロジェクトを右クリックし、**追加**、クリックして**項目**です。 **項目の追加**ダイアログ ボックスで、ファイルが、DSL の種類を選択します。  
   
@@ -170,7 +168,7 @@ ms.lasthandoff: 02/09/2018
   
 3.  をクリックして**すべてのテンプレートの変換**のツールバーに**ソリューション エクスプ ローラー**です。  
   
-     \- または  
+     \- または -  
   
      再生成し、をクリックするテンプレートを右クリックして**カスタム ツールの実行**です。  
   
@@ -198,7 +196,7 @@ ms.lasthandoff: 02/09/2018
   
 1.  DslDefinition 図では、名前を変更する**ExampleModel**に**FamilyTreeModel**、 **ExampleElement**に**Person**、 **ターゲット**に**親**、および**ソース**に**子**です。 これを変更するには、各ラベルをクリックすることができます。  
   
-     ![DSL 定義ダイアグラム &#45;ファミリ ツリー モデル](../modeling/media/familyt_person.png "FamilyT_Person")  
+     ![DSL 定義ダイアグラム&#45;ファミリ ツリー モデル](../modeling/media/familyt_person.png "FamilyT_Person")  
   
 2.  要素とコネクタ ツールの名前を変更します。  
   
@@ -391,7 +389,7 @@ ms.lasthandoff: 02/09/2018
   
  詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)です。  
   
-##  <a name="Reset"></a>古い実験的な Dsl を削除します。  
+##  <a name="Reset"></a> 古い実験的な Dsl を削除します。  
  必要がなくなった実験用の Dsl を作成した場合は Visual Studio 実験用インスタンスをリセットすることにより、コンピューターから削除にできます。  
   
  これは、すべての実験用 Dsl およびその他の実験用の Visual Studio 拡張機能、お使いのコンピューターから削除されます。 これらは、デバッグ モードで実行されている拡張機能です。  

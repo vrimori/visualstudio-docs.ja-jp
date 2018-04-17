@@ -1,23 +1,21 @@
 ---
-title: "方法: 使用する XML スキーマの選択 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 使用する XML スキーマの選択 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: d6fda3ef-d465-4788-8514-2f2d528d658c
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 80d0438e7c7dfb7fd346dc5faae6f364279658ef
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 6e7864481975a63745143f5ea8508bd74fffbf7c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-select-the-xml-schemas-to-use"></a>方法: 使用する XML スキーマを選択する
 XML エディターはスキーマ キャッシュを提供します。このキャッシュは %InstallDir%\Xml\Schemas ディレクトリに配置されています。 スキーマ キャッシュには、IntelliSense と XML ドキュメントの検証に使用される既知の XML スキーマが格納されています。  
@@ -53,7 +51,7 @@ XML エディターはスキーマ キャッシュを提供します。このキ
   
 1.  ドキュメントのプロパティ ウィンドウで、ボタンをクリックして、**スキーマ**フィールドです。  
   
-2.  **[追加]**をクリックします。  
+2.  **[追加]** をクリックします。  
   
      開き、 **XSD スキーマを開く**ダイアログ。  
   
@@ -74,7 +72,7 @@ XML エディターはスキーマ キャッシュを提供します。このキ
     > [!NOTE]
     >  使用してスキーマへの参照があるかどうか、`schemaLocation`属性、または一致する`targetNamespace`し**削除**自動的な関連付けによりこの状況では機能しません。 ここではお勧めときにスキーマをマークする**選択されているスキーマを使用しないでください**で、**使用**列です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スキーマ キャッシュ](../xml-tools/schema-cache.md)   
  [XML スキーマ ダイアログ ボックス](../xml-tools/xml-schemas-dialog-box.md)   
  [XML エディター](../xml-tools/xml-editor.md)

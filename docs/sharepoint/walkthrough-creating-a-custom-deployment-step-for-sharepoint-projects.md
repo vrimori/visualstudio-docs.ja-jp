@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: SharePoint プロジェクトに対するカスタムの配置手順の作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: SharePoint プロジェクトに対するカスタムの配置手順の作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending deployment
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 036f8d135e535547e9e5f790135186bf1f5728bc
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 1538e68d29667eb7a1b3f0c976ddc5d77dab825b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects"></a>チュートリアル: SharePoint プロジェクトに対するカスタムの配置手順の作成
   SharePoint プロジェクトを展開するときに、Visual Studio は、特定の順序で一連の展開の手順を実行します。 Visual Studio には、多くの組み込みの配置手順が含まれていますが、独自に作成することもできます。  
@@ -83,7 +82,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  選択、 **VSIX プロジェクト**名では、プロジェクト テンプレートは、 **UpgradeDeploymentStep**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **UpgradeDeploymentStep**プロジェクトを**ソリューション エクスプ ローラー**です。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **UpgradeDeploymentStep**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
 #### <a name="to-create-the-extension-project"></a>拡張機能プロジェクトを作成するには  
   
@@ -95,7 +94,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  選択、**クラス ライブラリ**プロジェクト テンプレートをプロジェクトに名前を**DeploymentStepExtension**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **DeploymentStepExtension**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **DeploymentStepExtension**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
   
 5.  Class1 コード ファイルをプロジェクトから削除します。  
   
@@ -271,7 +270,7 @@ ms.lasthandoff: 01/10/2018
   
 7.  選択、**完了**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]EmployeesListDefinition プロジェクトを作成します。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] EmployeesListDefinition プロジェクトを作成します。  
   
 8.  EmployeesListDefinition プロジェクトのショートカット メニューを開き、選択**追加**を選択し**新しい項目の**します。  
   
@@ -289,7 +288,7 @@ ms.lasthandoff: 01/10/2018
   
     3.  **既定値 (空白)**で選択された、**に基づいてカスタマイズ可能なリストを作成する:**  ボックスの一覧です。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]タイトルの列と 1 つの空のインスタンスで従業員のリスト項目を作成し、リスト デザイナーを開きます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] タイトルの列と 1 つの空のインスタンスで従業員のリスト項目を作成し、リスト デザイナーを開きます。  
   
 12. デザイナーで、一覧で、**列** タブで、選択、**新規または既存の列名を入力**行を次の列を追加して、**列の表示名**一覧。  
   
@@ -433,7 +432,7 @@ ms.lasthandoff: 01/10/2018
   
      プロパティ エディターとデザイナーが開きます。  
   
-4.  **ビュー**  タブで、選択、**電子メール** 列を選択し、  **<** キーから列を移動する、 **の列を選択**の一覧を表示、**使用可能な列** ボックスの一覧です。  
+4.  **ビュー**  タブで、選択、**電子メール** 列を選択し、 **<**キーから列を移動する、 **の列を選択**の一覧を表示、**使用可能な列** ボックスの一覧です。  
   
      この操作の既定のビューからのこれらのフィールドの削除、**従業員**SharePoint サイト上のリスト。  
   
@@ -488,7 +487,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  Visual Studio (実験用インスタンスおよび UpgradeDeploymentStep ソリューションが開いている Visual Studio のインスタンス) の両方のインスタンスを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint のパッケージ化と配置の拡張](../sharepoint/extending-sharepoint-packaging-and-deployment.md)  
   
   

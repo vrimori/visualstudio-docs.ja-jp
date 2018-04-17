@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: ボタンを使用してワークシート内のテキスト ボックスにテキストを表示する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: ボタンを使用してワークシート内のテキスト ボックスにテキストを表示する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - text [Office development in Visual Studio], text boxes
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 7b88940aa1329bc330e5d8bb7d114c21fac3dacb
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: e141618fb5b647f0cdb5341627356588df932fed
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button"></a>チュートリアル : ボタンを使用してワークシート内テキスト ボックスにテキストを表示する方法
   このチュートリアルでは、ボタンやテキスト ボックスを使用して、Microsoft Office Excel ワークシート、および Visual Studio での Office 開発ツールを使用する Excel プロジェクトを作成する方法についての基本を使用します。 完成したサンプルの結果を参照してくださいで Excel コントロールのサンプルを参照してください。 [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)です。  
@@ -113,7 +112,7 @@ ms.lasthandoff: 01/10/2018
   
 -   書式を変更するのにには、チェック ボックスを使用します。 詳細については、次を参照してください。[チュートリアル: 変更ワークシートの書式設定 チェック ボックス コントロールを使用した](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: Windows フォーム コントロールの Office ドキュメントへの追加](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
  [使用して Excel のチュートリアル](../vsto/walkthroughs-using-excel.md)   
  [Office ドキュメントでの Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  

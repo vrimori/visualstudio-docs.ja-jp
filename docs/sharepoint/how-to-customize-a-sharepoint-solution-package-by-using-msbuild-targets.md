@@ -1,13 +1,10 @@
 ---
-title: "方法: MSBuild のターゲットを使用して SharePoint ソリューション パッケージをカスタマイズする |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: MSBuild のターゲットを使用して SharePoint ソリューション パッケージをカスタマイズする |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, packages
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ab9aa26efe3002c28ec031457d2732c828eca445
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: fea1719eb80515a97a1b18336f1653cb535359e9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-customize-a-sharepoint-solution-package-by-using-msbuild-targets"></a>方法: MSBuild ターゲットを使用して SharePoint ソリューション パッケージをカスタマイズする
   MSBuild のターゲットを使用すると、コマンド プロンプトで、Visual Studio で SharePoint パッケージ ファイル (.wsp) を作成する方法をカスタマイズすることができます。 たとえば、パッケージの中間ディレクトリと MSBuild 項目グループを列挙するファイルを指定を変更する MSBuild プロパティをカスタマイズできます。  
@@ -86,7 +83,7 @@ ms.lasthandoff: 01/10/2018
   
  プロジェクトを発行するときに、BeforeLayout メッセージをパッケージ化が開始する前に表示され、パッケージ化が完了したら、AfterLayout メッセージが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

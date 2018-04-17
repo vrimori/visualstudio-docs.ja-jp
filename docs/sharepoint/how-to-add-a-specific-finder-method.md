@@ -1,12 +1,10 @@
 ---
-title: "方法: Specificfinder メソッドを追加する |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: Specificfinder メソッドを追加する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,13 +19,14 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], get an entity
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 6bf2c422efd005c8121ee49fed6dbc7329708b90
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 9d00159a8c944944348e4eec5fb98aaa4d6e9bae
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-a-specific-finder-method"></a>方法: SpecificFinder メソッドを追加する
   作成することで、1 つのエンティティのインスタンスを返すことができます、 *Specific Finder*メソッドです。 ビジネス データ接続 (BDC) サービスは、ユーザーがビジネス データ web パーツまたは外部の一覧でエンティティを選択すると、Specific Finder メソッドを実行します。 詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
@@ -90,7 +89,7 @@ ms.lasthandoff: 01/10/2018
      [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]
      [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
  [方法: Creator メソッドを追加](../sharepoint/how-to-add-a-creator-method.md)   

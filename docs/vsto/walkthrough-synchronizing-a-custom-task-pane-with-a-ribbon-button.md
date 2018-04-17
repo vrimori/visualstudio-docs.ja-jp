@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: リボン ボタンとカスタム作業ウィンドウを同期する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: リボン ボタンとカスタム作業ウィンドウを同期する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -26,14 +23,14 @@ helpviewer_keywords:
 - task panes [Office development in Visual Studio], synchronizing with Ribbon button
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7368c580d2f00d929bdeefd11665e9f579af17f7
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: ff3252a1ae234615cc4d4ed83a07d98a15092bee
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button"></a>チュートリアル : カスタム作業ウィンドウとリボン ボタンの同期
   このチュートリアルでは、ユーザーがリボン上のトグル ボタンをクリックすることで表示/非表示を切り替えることができる、カスタム作業ウィンドウの作成方法を示します。 Microsoft Office アプリケーションには、既定では、カスタム作業ウィンドウの表示/非表示を切り替える機能が用意されていないため、ユーザーのクリックによりカスタム作業ウィンドウの表示/非表示が切り替えられる、ユーザー インターフェイス (UI) 要素 (ボタンなど) を常に作成する必要があります。  
@@ -174,9 +171,9 @@ ms.lasthandoff: 01/10/2018
   
 -   カスタム作業ウィンドウからアプリケーションを自動化する。 詳細については、「 [チュートリアル : カスタム作業ウィンドウからのアプリケーションの自動化](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)」を参照してください。  
   
--   Outlook で開いたそれぞれの電子メール メッセージ用に、カスタム作業ウィンドウを作成する。 詳細については、「 [チュートリアル : Outlook で電子メール メッセージと共にカスタム作業ウィンドウを表示する](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)」を参照してください。  
+-   Outlook で開いたそれぞれの電子メール メッセージ用に、カスタム作業ウィンドウを作成する。 詳細については、「 [チュートリアル: Outlook で電子メール メッセージと共にカスタム作業ウィンドウを表示する](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム作業ウィンドウ](../vsto/custom-task-panes.md)   
  [方法: カスタム作業ウィンドウをアプリケーションに追加します。](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)   
  [チュートリアル: カスタム作業ウィンドウからアプリケーションの自動化](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)   

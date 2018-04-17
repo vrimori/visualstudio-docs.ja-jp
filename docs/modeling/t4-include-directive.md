@@ -1,21 +1,19 @@
 ---
-title: "T4 インクルード ディレクティブ |Microsoft ドキュメント"
-ms.custom: 
+title: T4 インクルード ディレクティブ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 0de398b381cd1e45ff43b3eb1df79c9becd829c4
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 4cfa7742a75b24288ef3617d8195a75e13d8e817
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="t4-include-directive"></a>T4 インクルード ディレクティブ
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のテキスト テンプレートでは、`<#@include#>` ディレクティブを使用することによって、別のファイルのテキストをインクルードできます。 `include` ディレクティブは、テキスト テンプレートに含まれる最初のクラス機能ブロック (`<#+ ... #>`) の前の任意の場所に配置できます。 インクルード ファイルに、`include` ディレクティブや他のディレクティブを含めることもできます。 これにより、テンプレート間でテンプレート コードや定型句を共有できるようになります。  
@@ -32,7 +30,7 @@ ms.lasthandoff: 02/09/2018
   
      追加されるこれらのインクルード フォルダーは、インクルード ファイルの拡張子によって異なります。 たとえば、DSL ツールのインクルード フォルダーは、インクルード ファイルの拡張子が `.tt` の場合にのみ追加されます。  
   
--   `filePath` には、"%" で区切られた環境変数を含めることもできます。 例:  
+-   `filePath` には、"%" で区切られた環境変数を含めることもできます。 例えば:  
   
     ```  
     <#@ include file="%HOMEPATH%\MyIncludeFile.t4" #>  
@@ -111,7 +109,7 @@ Output message 5 (from top template).
   
 ```  
   
-##  <a name="msbuild"></a>MSBuild および Visual Studio でプロジェクト プロパティの使用  
+##  <a name="msbuild"></a> MSBuild および Visual Studio でプロジェクト プロパティの使用  
  Include ディレクティブで $ (solutiondir) などの Visual Studio のマクロを使用できますが、MSBuild では動作しません。 ビルド コンピューターでテンプレートを変換する場合、代わりにプロジェクトのプロパティを使用する必要があります。  
   
  .csproj ファイルまたは .vbproj ファイルを編集してプロジェクトのプロパティを定義します。 この例では、`myIncludeFolder` という名前のプロパティを定義します。  

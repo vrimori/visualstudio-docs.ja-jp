@@ -1,13 +1,10 @@
 ---
-title: "XMLNodes コントロール |Microsoft ドキュメント"
-ms.custom: 
+title: XMLNodes コントロール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,14 +13,14 @@ helpviewer_keywords:
 - XMLNodes control
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1a3759070d406e721a12e01950e0e99cea40d1fc
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 0bb3451f491e4a663a99488f4b2099d58f0018eb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xmlnodes-control"></a>XMLNodes コントロール
   **重要な**Microsoft Word に関するこのトピックに設定された情報が、利点と個人ユーザーおよびユーザーは、米国およびその区域外部にあるまたはを使用しているユーザーは、組織の使用専用に示された、または開発上で実行されるプログラム、Microsoft が特定の機能の実装を削除する場合、2010 年 1 月前に Microsoft によってライセンス供与された Microsoft Word 製品に関連するカスタムの XML から Microsoft Word。 Microsoft Word に関する情報はこの可能性がありますいない読み取りまたは個人または米国またはその区域、2010 年 1 月 10 日後に Microsoft によってライセンス供与された Microsoft Word 製品上で実行されるプログラムの開発を使用して、ユーザーの組織で使用されます。;これらの製品では、その日付の前にライセンスまたは購入し、米国外の利用に対してライセンス供与の製品と同じ動作がしません。  
@@ -84,8 +81,8 @@ ms.lasthandoff: 01/10/2018
   
  同じの違いがあります、<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>イベントおよび<xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>イベント。  
   
-## <a name="see-also"></a>参照  
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+## <a name="see-also"></a>関連項目  
+ [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
  [XMLNode コントロール](../vsto/xmlnode-control.md)   
  [方法: Word 文書に XMLNodes コントロールを追加します。](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md)   

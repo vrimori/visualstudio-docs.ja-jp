@@ -1,12 +1,10 @@
 ---
-title: "方法: プログラムによって予定を削除する |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: プログラムによって予定を削除する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - appointments [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 29847c3a88c04d4d74db88008c97004ab9d648df
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 1924605d3cb52f002dc0bc81e17d723e42ef2e38
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-delete-appointments"></a>方法: プログラムによって予定を削除する
   この例では、定期的な予定の 1 つのインスタンスを削除します。 定期的な予定のインスタンスが 2006 年 6 月 28 日 8:00 に発生することを想定しています。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 01/10/2018
  [!code-vb[Trin_Outlook_RL_DeleteAppointment#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_RL_DeleteAppointment/thisaddin.vb#1)]
  [!code-csharp[Trin_Outlook_RL_DeleteAppointment#1](../vsto/codesnippet/CSharp/Trin_Outlook_RL_DeleteAppointment/thisaddin.cs#1)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [予定表アイテムの操作](../vsto/working-with-calendar-items.md)   
  [Getting Started Programming VSTO Add-ins](../vsto/getting-started-programming-vsto-add-ins.md)   
  [方法: プログラムによって予定を作成します。](../vsto/how-to-programmatically-create-appointments.md)   

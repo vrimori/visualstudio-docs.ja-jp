@@ -1,21 +1,19 @@
 ---
-title: "DSL ライブラリを使用して、Dsl の間でクラスの共有 |Microsoft ドキュメント"
-ms.custom: 
+title: DSL ライブラリを使用して、Dsl の間でクラスの共有 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a58726bdc4e6e139963ae8cca2d12f26e0696246
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: f1164b0a96a10e7fa9cda3f8082bb052a0b445e5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>DSL ライブラリによる DSL 間でのクラスの共有
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK は、別の DSL にインポートすることができます不完全な DSL 定義を作成することができます。 これにより、類似したモデルの共通部分を考慮することができます。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   
 6.  プロジェクトをビルドします。  
   
-7.  DSL を使用するには、他のユーザーを配布するときに、コンパイルされたアセンブリ (DLL) とファイルの両方を指定する必要があります`DslDefinition.dsl`です。 下のフォルダーにコンパイルされたアセンブリを見つけることができます。`Dsl\bin\*`  
+7.  DSL を使用するには、他のユーザーを配布するときに、コンパイルされたアセンブリ (DLL) とファイルの両方を指定する必要があります`DslDefinition.dsl`です。 下のフォルダーにコンパイルされたアセンブリを見つけることができます。 `Dsl\bin\*`  
   
 #### <a name="to-import-a-dsl-library"></a>DSL ライブラリをインポートするには  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 02/09/2018
   
  DSL ライブラリは、その他のライブラリをインポートできます。 ライブラリをインポートすると、そのインポートも自動的に DSL のエクスプ ローラーに表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: ドメイン固有言語を定義する](../modeling/how-to-define-a-domain-specific-language.md)
  
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

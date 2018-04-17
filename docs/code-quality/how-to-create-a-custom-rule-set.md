@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Development Edition, rule sets
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a094b6c59eb4e1d95949dc35a5c0479edb4d5a76
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 57800f36c3a81e021c1fb40bab1c07bbed3e7f9d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-rule-sets"></a>カスタム規則セット
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/06/2018
 
     - カスタマイズする規則セットを選択します。
 
-     \- または
+     \- または -
 
     - 選択 **\<[参照...] >**既存の規則セットを指定ではありません、ボックスの一覧です。
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/06/2018
 
 2. **新しいファイル**ダイアログ ボックスで、**全般**、左側のカテゴリを選択し、**コード分析規則セット**です。
 
-3. [開く] を選択します。 ****
+3. **[開く]** を選択します。
 
    新しい*.ruleset*規則セット エディターでファイルが開きます。
 

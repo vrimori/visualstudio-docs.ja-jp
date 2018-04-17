@@ -1,5 +1,5 @@
 ---
-title: "ルール条件エディター ダイアログ ボックス (レガシ) |Microsoft ドキュメント"
+title: ルール条件エディター ダイアログ ボックス (レガシ) |Microsoft ドキュメント
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: c7ca8be9-de31-4a64-939c-4d53a50d5e29
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e3e4c54dff4bded0bcc07fb5e8891162cc12ea8
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 62b74956dc12e19a5594585e8d356b77ae5549b0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rule-condition-editor-dialog-box-legacy"></a>[ルール条件エディター] ダイアログ ボックス (レガシ)
 
@@ -43,11 +43,11 @@ ms.lasthandoff: 03/12/2018
 |UI 要素|説明|
 |----------------|-----------------|
 |**条件:**|ルールの条件式を入力します。|
-|**OK**|これをクリックすると、ルール条件が保存されます。|
+|**わかりました**|これをクリックすると、ルール条件が保存されます。|
 
 ## <a name="entering-condition-expressions"></a>条件式の入力
 
-条件式は、テキストとして入力します。 入力**これです。** フィールド、プロパティ、およびワークフローで使用される方法を参照するエディターに IntelliSense のようなメニューを使用します。 または、ワークフローのメンバ名を直接入力することもできます。 条件には、AND、OR、NOT といった論理演算子を追加することもできます。 述語も追加できます。 述語は、バイナリ演算子と 2 つのオペランドから成ります。 サポートされているバイナリ演算子は **==** 、  **>** 、  **\<** 、  **>=** 、および **<=**です。 サポートされているオペランドは、定数値、算術関数、スコープ付きパブリック メンバです。
+条件式は、テキストとして入力します。 入力**これです。** フィールド、プロパティ、およびワークフローで使用される方法を参照するエディターに IntelliSense のようなメニューを使用します。 または、ワークフローのメンバ名を直接入力することもできます。 条件には、AND、OR、NOT といった論理演算子を追加することもできます。 述語も追加できます。 述語は、バイナリ演算子と 2 つのオペランドから成ります。 サポートされているバイナリ演算子は**==**、 **>**、 **\<**、 **>=**、および **<=**です。 サポートされているオペランドは、定数値、算術関数、スコープ付きパブリック メンバです。
 
 、比較の種類を指定してを比較できます**null**または空の文字列。 複合型を含む変数でメンバに対する呼び出しをネストすることができます (たとえば `this.Address.State == "WA"`)。
 

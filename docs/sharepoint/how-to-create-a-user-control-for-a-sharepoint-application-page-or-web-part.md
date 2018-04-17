@@ -1,12 +1,10 @@
 ---
-title: "方法: SharePoint アプリケーション ページのユーザー コントロールを作成または Web パーツ |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: SharePoint アプリケーション ページのユーザー コントロールを作成または Web パーツ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - user controls [SharePoint development in Visual Studio], adding
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 7fc51bae65f67a3810c6db208e5f7c6f04183c22
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 26f71486f48379f0f7005107b3df4f9f79960ca1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part"></a>方法: SharePoint アプリケーション ページまたは Web パーツのユーザー コントロールを作成する
   SharePoint ソリューション向けの独自の機能を備えたカスタム ユーザー コントロールを作成し、その機能をプロジェクト内で再利用することができます。 ユーザー コントロールは、Web パーツまたはアプリケーション ページに含めることができます。他の ASP.NET コントロールや SharePoint コントロールを追加し、コントロールのプロパティとメソッドを定義することもできます。 ユーザー コントロールの詳細については、次を参照してください。 [Web パーツまたはアプリケーション ページの再利用可能なコントロールを作成する](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)と[ユーザー コントロールと SharePoint のサーバー コントロール](http://blogs.msdn.com/b/kaevans/archive/2011/04/28/user-controls-and-server-controls-in-sharepoint.aspx)です。  
@@ -57,7 +56,7 @@ ms.lasthandoff: 01/10/2018
   
      このファイルに表示されます**ソリューション エクスプ ローラー**ユーザー コントロール ファイルの下、.cs または .vb 拡張子は、プロジェクトの言語に応じて、します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Web パーツまたはアプリケーション ページの再利用可能なコントロールの作成](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)   
  [For SharePoint アプリケーション ページの作成](../sharepoint/creating-application-pages-for-sharepoint.md)   
  [SharePoint の Web パーツの作成](../sharepoint/creating-web-parts-for-sharepoint.md)  

@@ -1,13 +1,10 @@
 ---
-title: "プログラミングに関する概念および機能を SharePoint ツールの拡張機能の |Microsoft ドキュメント"
-ms.custom: 
+title: プログラミングに関する概念および機能を SharePoint ツールの拡張機能の |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extensibility features
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6f4ebe2b4233cb42822f0614477dbfec006e37a8
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 67aa5bcb83b1ab820286ad70a74cd36c101dbe86
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="programming-concepts-and-features-for-sharepoint-tools-extensions"></a>SharePoint ツール拡張機能におけるプログラミングに関する概念および特徴
   いくつかのプログラミングの重要な概念と Visual Studio での SharePoint ツールに関連する機能があります。 これらの概念と機能は、ほとんどの SharePoint ツール拡張機能で重要な役割を果たします。  
@@ -37,7 +34,7 @@ ms.lasthandoff: 01/10/2018
  [カスタム データの SharePoint ツールの拡張機能への関連付け](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)  
  特定の種類の SharePoint ツール拡張機能内のオブジェクトにカスタム データを関連付ける方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)   
  [SharePoint プロジェクト システムの拡張](../sharepoint/extending-the-sharepoint-project-system.md)   
  [サーバー エクスプ ローラーで SharePoint 接続 ノードを拡張します。](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   

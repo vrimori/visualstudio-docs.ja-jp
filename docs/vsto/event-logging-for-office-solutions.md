@@ -1,12 +1,10 @@
 ---
-title: "Office ソリューションのイベント ログ |Microsoft ドキュメント"
-ms.custom: 
+title: Office ソリューションのイベント ログ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - Office development in Visual Studio, event viewer
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 0c8a304b314fe09536e2659f88bfdbf53c58552c
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 4b1319e906060a1fe4d94fbd2e6bb0a3f9d53eb9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="event-logging-for-office-solutions"></a>Office ソリューションのイベント ログ
   Windows のイベント ビューアーを使用すると、Office ソリューションのインストール時またはアンインストール時に [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] でキャプチャされる例外メッセージを表示できます。 イベント ロガーからのこれらのメッセージを使用して、インストールと配置の問題を解決できます。  
@@ -99,7 +98,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  **[OK]**をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)   
  [Office ソリューション配置のトラブルシューティング](../vsto/troubleshooting-office-solution-deployment.md)  
   

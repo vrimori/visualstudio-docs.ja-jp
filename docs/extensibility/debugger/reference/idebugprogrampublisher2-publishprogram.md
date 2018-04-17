@@ -1,29 +1,25 @@
 ---
-title: "IDebugProgramPublisher2::PublishProgram |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugProgramPublisher2::PublishProgram |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugProgramPublisher2::PublishProgram
 helpviewer_keywords:
 - IDebugProgramPublisher2::PublishProgram
 ms.assetid: 92ff63f0-e869-4040-b3ae-b2c899e708ff
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5a76a8eb0eccad42fdd491a6efa92ad1fd5f83ab
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 67ac5bad37ad5df85022ba6572da44d32de39736
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugprogrampublisher2publishprogram"></a>IDebugProgramPublisher2::PublishProgram
 この方法は、デバッグ エンジン (DEs) の利用可能なプログラムとセッションのデバッグ マネージャーになります。  
@@ -51,7 +47,7 @@ int PublishProgram(
  [in]起動したり、このプログラムにアタッチできる DEs の Guid の配列。  
   
  `szFriendlyName`  
- [in](これはメニューや、ユーザーに対して表示されるダイアログ ボックスに表示されます)、プログラムのフレンドリ名。  
+ [in]プログラムのフレンドリーな名前（これはメニューまたはユーザーに表示されるダイアログに表示されます）。  
   
  `pDebuggeeInterface`  
  [in]`IUnknown`プログラム インターフェイス (この値は、プログラムを一意に識別するクッキーとして使用この同じ値は、プログラムを"取り消す"に使用)。  
@@ -62,6 +58,6 @@ int PublishProgram(
 ## <a name="remarks"></a>コメント  
  プログラムをデバッグするためには使用できなくするを呼び出す[UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)   
  [UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)

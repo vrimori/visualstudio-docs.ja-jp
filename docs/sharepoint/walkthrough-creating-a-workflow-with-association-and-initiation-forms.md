@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: 関連付けフォームと開始フォームをワークフローの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: 関連付けフォームと開始フォームをワークフローの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,13 +19,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, workflow initiation forms
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 4b6eed3807b4031a7ab41c16f532442fb0968601
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 92aefd2292976bd9dcb50603e93b460cdf2bf991
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-workflow-with-association-and-initiation-forms"></a>チュートリアル: 関連付けフォームと開始フォームを持つワークフローの作成
   このチュートリアルでは、関連付けフォームと開始フォームの使用が組み込まれている基本的なシーケンシャル ワークフローを作成する方法を示します。 これらは、最初は SharePoint 管理者 (関連付けフォーム) が関連付けられている場合、およびユーザー (開始フォーム) によって、ワークフローの開始時にワークフローに追加するパラメーターを有効にする ASPX フォームです。  
@@ -450,7 +449,7 @@ ms.lasthandoff: 01/10/2018
   
 -   SharePoint ワークフローの詳細については、次を参照してください。 [Windows SharePoint Services でのワークフロー](http://go.microsoft.com/fwlink/?LinkID=166275)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ワークフロー ソリューションを作成します。](../sharepoint/creating-sharepoint-workflow-solutions.md)   
  [チュートリアル: ワークフローへのアプリケーション ページの追加](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)  
   

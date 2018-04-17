@@ -1,12 +1,10 @@
 ---
-title: "Office ソリューションの省略可能なパラメーター |Microsoft ドキュメント"
-ms.custom: 
+title: Office ソリューションの省略可能なパラメーター |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,20 +18,21 @@ helpviewer_keywords:
 - parameters [Office development in Visual Studio], optional
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: fe40b6bc0af9df294408079c8a27dfac42df97b0
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: d417b5126989736c6126ae7c80bfcbc86f336a09
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="optional-parameters-in-office-solutions"></a>Office ソリューションの省略可能なパラメーター
   Microsoft Office アプリケーションのオブジェクト モデルに含まれるメソッドの多くは、省略可能なパラメーターを受け取ります。 Visual Studio で Visual Basic を使用して Office ソリューションを開発する場合は、省略可能なパラメーターに値を渡す必要はありません。省略したパラメーターに対しては自動的に既定値が使用されます。 ほとんどの場合は、Visual c# プロジェクトで省略可能なパラメーターも省略できます。 ただし、省略することはできませんと省略可能な**ref**のパラメーター、`ThisDocument`ドキュメント レベルの Word プロジェクトのクラスです。  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
- Visual c# および Visual Basic プロジェクトで省略可能なパラメーターの扱いの詳細については、次を参照してください。[名前とオプションの引数 &#40;です。C &#35;です。プログラミング ガイド &#41;](/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments)と[省略可能なパラメーターと #40 です。Visual Basic &#41;](/dotnet/visual-basic/programming-guide/language-features/procedures/optional-parameters).  
+ Visual c# および Visual Basic プロジェクトで省略可能なパラメーターの扱いの詳細については、次を参照してください[名前付き引数と省略可能な引数&#40;C&#35;プログラミング ガイド&#41;](/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments)と[&#40;Visual Basic&#41;](/dotnet/visual-basic/programming-guide/language-features/procedures/optional-parameters)です。  
   
 > [!NOTE]  
 >  旧バージョンの Visual Studio では、Visual C# プロジェクトのすべての省略可能なパラメーターに値を渡す必要があります。 便宜上、これらのプロジェクトには `missing` というグローバル変数が含まれています。パラメーターの既定値を使用する場合に、このグローバル変数を省略可能なパラメーターに渡すことができます。 Visual Studio での Office の visual c# プロジェクトがまだが含まれて、`missing`変数が通常必要はありませんでの Office ソリューションを開発するときに使用する[!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)]、オプションのメソッドを呼び出す場合を除く**ref**内のパラメーター、 `ThisDocument` Word 用ドキュメント レベルのプロジェクト内のクラスです。  
@@ -69,9 +68,9 @@ ms.lasthandoff: 01/10/2018
   
  [!code-csharp[Trin_VstrefGeneralWord#5](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#5)]  
   
- 値と参照型のパラメーターの詳細については、次を参照してください[値とリファレンス &#40; 引数を渡す。Visual Basic &#41;](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (Visual Basic) 用と[パラメーター &#40; を渡すC &#35;です。プログラミング ガイド &#41;](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters).  
+ 値と参照型のパラメーターの詳細については、次を参照してください[値と参照渡しに引数を渡す&#40;Visual Basic&#41; ](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (Visual Basic の場合) 用と[パラメーターの引き渡し&#40;C&#35; 。プログラミング ガイド&#41;](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションの開発](../vsto/developing-office-solutions.md)   
  [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)  
   

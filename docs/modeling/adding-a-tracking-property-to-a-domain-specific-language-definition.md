@@ -1,25 +1,23 @@
 ---
-title: "ドメイン固有言語定義への追跡プロパティの追加 |Microsoft ドキュメント"
-ms.custom: 
+title: ドメイン固有言語定義への追跡プロパティの追加 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tracking properties [Domain-Specific Language Tools], walkthrough
 - Domain-Specific Language Tools, walkthroughs
 - walkthroughs [Domain-Specific Language Tools]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: c0d6231882e8c7412248022abd2e8c578bbfad9f
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: aba86947c9f7e4f34e5175dd3760891e4e6c023f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>ドメイン固有言語の定義への追跡プロパティの追加
 このチュートリアルでは、ドメイン モデルに追跡プロパティを追加する方法を示します。  
@@ -758,7 +756,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="next-steps"></a>次の手順  
  プロパティの 1 つ以上の追跡を使用するか、1 つ以上の DSL の追跡のプロパティを実装する場合は、各追跡プロパティをサポートするための一般的なコードを生成するテキスト テンプレートを作成することができます。 テキスト テンプレートの詳細については、次を参照してください。[コードの生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Modeling.Design.TrackingPropertyDescriptor>   
  <xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>   
  [ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)   

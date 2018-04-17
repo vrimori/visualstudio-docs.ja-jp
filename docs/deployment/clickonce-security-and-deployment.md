@@ -1,12 +1,10 @@
 ---
-title: "ClickOnce のセキュリティと配置 |Microsoft ドキュメント"
-ms.custom: 
+title: ClickOnce のセキュリティと配置 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,21 +15,21 @@ helpviewer_keywords:
 - ClickOnce deployment
 - publishing, ClickOnce
 ms.assetid: abab6d34-c3c2-45c1-a8b6-43c7d3131e7a
-caps.latest.revision: "32"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 1923c39669d50303f907974816fbb54297c477c0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 24ebab9776c6cb0b829e1b79cb089ef6b826f726
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clickonce-security-and-deployment"></a>ClickOnce のセキュリティと配置
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開テクノロジをインストールして最小限のユーザー操作で実行できる自己更新の Windows ベースのアプリケーションを作成することができます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]発行および Visual Basic および Visual c# でプロジェクトを開発している場合は、ClickOnce テクノロジで配置されたアプリケーションを更新するためには、完全にサポートを提供します。 Visual C アプリケーションの展開方法の詳細については、次を参照してください。 [Visual c アプリケーションの ClickOnce 配置](/cpp/ide/clickonce-deployment-for-visual-cpp-applications)です。  
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 展開テクノロジをインストールして最小限のユーザー操作で実行できる自己更新の Windows ベースのアプリケーションを作成することができます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 発行および Visual Basic および Visual c# でプロジェクトを開発している場合は、ClickOnce テクノロジで配置されたアプリケーションを更新するためには、完全にサポートを提供します。 Visual C アプリケーションの展開方法の詳細については、次を参照してください。 [Visual c アプリケーションの ClickOnce 配置](/cpp/ide/clickonce-deployment-for-visual-cpp-applications)です。  
   
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開では、展開で次の 3 つの主な問題点はありません。  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 展開では、展開で次の 3 つの主な問題点はありません。  
   
 -   **アプリケーションを更新中に問題が発生します。** Microsoft Windows インストーラーの展開でアプリケーションが更新されるたびにユーザーが msp ファイルでは、更新プログラムをインストールしてインストールされた製品に適用します。[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開、更新プログラムを自動的に提供することができます。 サイド バイ サイドの新しいフォルダーから、更新されたアプリケーション全体が再インストールしとに変更された、アプリケーションの部分のみがダウンロードされます。  
   
@@ -44,9 +42,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="what-is-a-clickonce-application"></a>ClickOnce アプリケーションとは何ですか。  
  A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは、Windows Presentation Foundation (.xbap)、Windows フォーム (.exe)、コンソール アプリケーション (.exe)、または Office ソリューション (.dll) を使用してパブリッシュ[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]テクノロジです。 発行することができます、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 3 つの方法でアプリケーション。 Web ページから、ネットワーク ファイル共有、または CD-ROM などのメディアからです。 A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションはエンドユーザーのコンピューターにインストールされているし、コンピューターがオフライン、または完全に何も、エンドユーザーのコンピューターにインストールせず、オンラインのみのモードで実行することができる場合でもローカルで実行できます。 詳細については、「[ClickOnce 配置ストラテジの選択](../deployment/choosing-a-clickonce-deployment-strategy.md)」を参照してください。  
   
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは、自己更新することができます。使用可能になり、更新されたファイルを自動的に置き換えると、新しいバージョンのチェックインが可能です。 開発者は、更新動作を指定できます。ネットワーク管理者が制御できますも更新方法、たとえば、更新を必須としてマークします。 更新プログラムことができますもロールバック以前のバージョンに、エンドユーザーまたは管理者です。 詳細については、次を参照してください。 [ClickOnce の更新方法の選択](../deployment/choosing-a-clickonce-update-strategy.md)です。  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションは、自己更新することができます。使用可能になり、更新されたファイルを自動的に置き換えると、新しいバージョンのチェックインが可能です。 開発者は、更新動作を指定できます。ネットワーク管理者が制御できますも更新方法、たとえば、更新を必須としてマークします。 更新プログラムことができますもロールバック以前のバージョンに、エンドユーザーまたは管理者です。 詳細については、次を参照してください。 [ClickOnce の更新方法の選択](../deployment/choosing-a-clickonce-update-strategy.md)です。  
   
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは、分離性、インストールまたは実行されている、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは、既存のアプリケーションを中断できません。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは、自己完結型です。各[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションにインストールされ、セキュリティで保護された、ユーザーごとに、アプリケーションごとのキャッシュから実行します。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは、インターネットまたはイントラネット セキュリティ ゾーンで実行されます。 必要に応じて、アプリケーションは、管理者特権でのセキュリティのアクセス許可を要求できます。 詳細については、「[ClickOnce アプリケーションの発行](../deployment/securing-clickonce-applications.md)」を参照してください。  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは、分離性、インストールまたは実行されている、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは、既存のアプリケーションを中断できません。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションは、自己完結型です。各[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションにインストールされ、セキュリティで保護された、ユーザーごとに、アプリケーションごとのキャッシュから実行します。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションは、インターネットまたはイントラネット セキュリティ ゾーンで実行されます。 必要に応じて、アプリケーションは、管理者特権でのセキュリティのアクセス許可を要求できます。 詳細については、「[ClickOnce アプリケーションの発行](../deployment/securing-clickonce-applications.md)」を参照してください。  
   
 ## <a name="how-clickonce-security-works"></a>ClickOnce のセキュリティのしくみ  
  コア[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]セキュリティ証明書、コード アクセス セキュリティ ポリシー、および ClickOnce 信頼プロンプトに基づきます。  
@@ -76,7 +74,7 @@ ms.lasthandoff: 12/22/2017
   
  証明書信頼できる、コンピューター レベルまたはエンタープライズ レベルで信頼された証明書で署名された ClickOnce アプリケーションをサイレント モードでインストールできるようにします。 信頼された証明書の詳細については、次を参照してください。[信頼されたアプリケーション展開の概要](../deployment/trusted-application-deployment-overview.md)です。  
   
- ユーザーのアプリケーションを追加することができます**開始**メニューおよび、**プログラム追加と削除**グループにおいて、**コントロール パネルの** です。 その他の展開テクノロジとは異なりに何も追加、 **Program Files**フォルダー、レジストリ、管理者権限がありませんがインストールに必要です  
+ ユーザーのアプリケーションを追加することができます**開始**メニューおよび、**プログラム追加と削除**グループにおいて、**コントロール パネルの**です。 その他の展開テクノロジとは異なりに何も追加、 **Program Files**フォルダー、レジストリ、管理者権限がありませんがインストールに必要です  
   
 > [!NOTE]
 >  アプリケーションに追加されるを防止することも、**開始**メニューおよび**プログラム追加と削除**グループ、実質的に Web アプリケーションと同様に動作させます。 詳細については、「[ClickOnce 配置ストラテジの選択](../deployment/choosing-a-clickonce-deployment-strategy.md)」を参照してください。  
@@ -87,7 +85,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  **発行ウィザード**Visual Studio では、次の手順を実行する使用できます。  
   
- 配置場所だけでなく、配置マニフェストには、更新プログラムの場所 (Web ページまたはネットワーク ファイル共有)、アプリケーションが更新されたバージョンのチェックも含まれます。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]**発行**プロパティを使用して、アプリケーションが更新プログラムの確認と、どのくらいの頻度を指定します。 配置マニフェストで更新動作を指定するかをにより、アプリケーションのユーザー インターフェイスでユーザーの選択肢として提示する、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Api です。 さらに、**発行**を以前のバージョンにロールバックするまたは更新を必須にするのには、プロパティを採用されていることができます。 詳細については、次を参照してください。 [ClickOnce の更新方法の選択](../deployment/choosing-a-clickonce-update-strategy.md)です。  
+ 配置場所だけでなく、配置マニフェストには、更新プログラムの場所 (Web ページまたはネットワーク ファイル共有)、アプリケーションが更新されたバージョンのチェックも含まれます。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] **発行**プロパティを使用して、アプリケーションが更新プログラムの確認と、どのくらいの頻度を指定します。 配置マニフェストで更新動作を指定するかをにより、アプリケーションのユーザー インターフェイスでユーザーの選択肢として提示する、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Api です。 さらに、**発行**を以前のバージョンにロールバックするまたは更新を必須にするのには、プロパティを採用されていることができます。 詳細については、次を参照してください。 [ClickOnce の更新方法の選択](../deployment/choosing-a-clickonce-update-strategy.md)です。  
   
 ### <a name="third-party-installers"></a>サード パーティ製のインストーラー  
  ClickOnce インストーラー、アプリケーションと共にサード パーティ コンポーネントをインストールするをカスタマイズすることができます。 再頒布可能パッケージ (.exe または .msi ファイル) があるし、パッケージの言語に依存しない製品マニフェストと言語に固有のパッケージ マニフェストを記述する必要があります。 詳細については、次を参照してください。[ブートス トラップ パッケージを作成する](../deployment/creating-bootstrapper-packages.md)です。  
@@ -113,7 +111,7 @@ ms.lasthandoff: 12/22/2017
 |Internet Explorer|2.0、3.0、3.5、4、3.5 SP1|  
 |Firefox|2.0 SP1、3.5 SP1 は、4|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Windows Vista の ClickOnce 配置](../deployment/clickonce-deployment-on-windows-vista.md)   
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
  [ClickOnce アプリケーションのセキュリティ](../deployment/securing-clickonce-applications.md)   

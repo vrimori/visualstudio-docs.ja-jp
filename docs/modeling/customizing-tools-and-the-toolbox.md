@@ -1,10 +1,8 @@
 ---
-title: "ツールと、ツールボックスのカスタマイズ |Microsoft ドキュメント"
-ms.custom: 
+title: ツールと、ツールボックスのカスタマイズ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.dsltools.dsldesigner.selectiondialog
 - vs.dsltools.dsldesigner.selecticondialog
@@ -13,15 +11,15 @@ helpviewer_keywords:
 - Domain-Specific Language, toolbox
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 160c1c27ab9d01dc76d6a5c76feb07179f7966b9
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 0644aa33d0e091fc3a2ff856109fe9661e2dc805
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>ツールおよびツールボックスのカスタマイズ
 ユーザーがモデルに追加可能な要素についてツールボックス項目を定義する必要があります。 ツールには要素ツールと接続ツールの 2 種類があります。 生成されたデザイナーで、ユーザーは要素ツールを選択して図形を図へドラッグすることができ、接続ツールを選択して図形間のリンクを描画できます。 一般にユーザーは、要素ツールを使用するとドメイン クラスのインスタンスをモデルに追加することができ、接続ツールを使用するとドメイン リレーションシップのインスタンスを追加できます。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [接続ツールをカスタマイズします。](#connections)  
   
-##  <a name="ToolboxDef"></a>ツールボックスを定義する方法  
+##  <a name="ToolboxDef"></a> ツールボックスを定義する方法  
  DSL エクスプローラーで、エディター ノードとその下のノードを展開します。 一般に、次のような階層が表示されます。  
   
 ```  
@@ -93,7 +91,7 @@ Editor
   
      ツールが表示されない場合、実験用の [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を停止します。 Windows**開始**] メニューの [実行**は Microsoft Visual Studio 2010 実験用インスタンスをリセット**です。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]**ビルド** メニューのをクリックして**ソリューションのリビルド**です。 再度 DSL をテストします。  
   
-##  <a name="customizing"></a>要素のツールをカスタマイズします。  
+##  <a name="customizing"></a> 要素のツールをカスタマイズします。  
  既定では、ツールは指定されたクラスの単一インスタンスを作成しますが、次の 2 つの方法で変更できます。  
   
 -   他のクラスで要素マージ ディレクティブを定義し、このクラスの新しいインスタンスが受け入れられ、新しい要素が作成されるときに追加のリンクが作成されるようにします。 たとえば、ユーザーが別の要素にコメントをドロップし、両者の間に参照リンクを作成可能にすることができます。  
@@ -104,7 +102,7 @@ Editor
   
 -   コードを作成して、ツールをカスタマイズし、要素のグループを作成可能にします。 ツールはオーバーライド可能な ToolboxHelper.cs 内のメソッドにより初期化されます。 詳細については、次を参照してください。[グループの要素の作成ツールから](#groups)です。  
   
-##  <a name="groups"></a>ツールからの要素のグループを作成します。  
+##  <a name="groups"></a> ツールからの要素のグループを作成します。  
  各要素ツールは作成する要素のプロトタイプを含みます。 既定では、各要素ツールは単一の要素を作成しますが、1 つのツールで関連するオブジェクトのグループを作成することも可能です。 そのためには、関連項目を含む <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> を使用してツールを初期化します。  
   
  次の例は、型 Transistor がある DSL から取得しています。 各 Transistor には名前の付いた Terminal が 3 つあります。 Transistor の要素ツールは、4 つのモデル要素と 3 つのリレーションシップ リンクを含むプロトタイプを格納します。 ユーザーがツールを図の上にドラッグすると、プロトタイプはインスタンス化され、モデル ルートにリンクされます。  
@@ -154,7 +152,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
   
 ```  
   
-##  <a name="connections"></a>接続ツールをカスタマイズします。  
+##  <a name="connections"></a> 接続ツールをカスタマイズします。  
  通常、新しいコネクタ クラスを作成するときに要素ツールを作成します。 または、両端の種類でリレーションシップの種類を確認可能にすることで、1 つのツールをオーバーロードできます。 たとえば、Person-Person リレーションシップと Person-Town リレーションシップの両方を作成可能な 1 つの接続ツールを定義できます。  
   
  接続ツールは接続ビルダーを呼び出します。 接続ビルダーを使用して、ユーザーが生成されたデザイナー内で要素をリンク可能な方法を指定します。 接続ビルダーは、リンク可能な要素と要素間に作成されるリンクの種類を指定します。  
@@ -247,7 +245,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
   
  'Hard' の制約を適用するカスタム コードを使用するが、ユーザーが一時的に無効な接続を確立できるかどうかを検討してください。 その必要がある場合、制約を変更して、ユーザーが変更内容を保存しようとするまで、接続が検証されないようにすることができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [要素の作成および移動をカスタマイズします。](../modeling/customizing-element-creation-and-movement.md)   
  [コピーの動作をカスタマイズします。](../modeling/customizing-copy-behavior.md)   
  [方法: ドラッグ アンド ドロップのハンドラーを追加](../modeling/how-to-add-a-drag-and-drop-handler.md)   

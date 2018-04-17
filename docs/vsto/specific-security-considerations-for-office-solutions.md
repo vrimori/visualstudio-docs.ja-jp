@@ -1,12 +1,10 @@
 ---
-title: "Office ソリューションの特定のセキュリティに関する考慮事項 |Microsoft ドキュメント"
-ms.custom: 
+title: Office ソリューションの特定のセキュリティに関する考慮事項 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,13 +18,14 @@ helpviewer_keywords:
 - security [Office development in Visual Studio], troubleshooting
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: f7f2e865ccb94a9996e13f7cf3c695784623fded
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: f799a0ef393def5c77249f51a26278bd419ac523
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specific-security-considerations-for-office-solutions"></a>Office ソリューションに固有のセキュリティに関する考慮事項
   Microsoft .NET Framework および Microsoft Office には、Office ソリューションをセキュリティ上の脅威から保護するためのセキュリティ機能が備わっています。 このトピックでは、このような脅威のいくつかについて説明し、脅威対策に関する推奨事項を示します。 また、Microsoft Office のセキュリティ設定が Office ソリューションに及ぼす影響についても説明します。  
@@ -118,7 +117,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  詳細ウィンドウで **[アプリケーション アドインに対し、信頼できる発行元の署名を必須にする]** または **[すべてのアプリケーション アドインを無効にする]**を選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)  
   
   

@@ -1,23 +1,21 @@
 ---
-title: "Visual Studio のパターンが複合 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio のパターンが複合 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: e48ecfb2-f4b5-4d3a-b4a2-7a4d62fa4ec0
-caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: a751bcc54fe53f9c9582dab71e2f393e885d1480
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6515b5aefc0536ea92f09a92b1a17050b820008d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="composite-patterns-for-visual-studio"></a>Visual Studio の複合パターン
 合成パターンは、相互作用と設計の異なる構成要素を結合します。 Visual Studio での整合性に関して最も重要な複合パターンのとおりです。  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [タッチ入力](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_TouchInput)  
   
-##  <a name="BKMK_DataVisualization"></a>データの視覚化  
+##  <a name="BKMK_DataVisualization"></a> データの視覚化  
   
 ### <a name="overview"></a>概要  
  グラフは、ビジュアルを集計し、意思決定を強化するためにデータを視覚化する方法です。 ユーザーが直面しています。 多数のデータがほとんど意味が注目に値する新機能とアクションを参照してくださいで役立ちます。  
@@ -85,7 +83,7 @@ ms.lasthandoff: 12/22/2017
 |![見本 79D7F2](../../extensibility/ux-guidelines/media/0711_79d7f2.png "0711_79D7F2")|# 79D7F2|121,215,242|  
 |![見本 B5B5B5](../../extensibility/ux-guidelines/media/0711_b5b5b5.png "0711_B5B5B5")|# B5B5B5|181,181,181|  
   
-##  <a name="BKMK_OnObjectUI"></a>オブジェクトの UI およびピークする方法  
+##  <a name="BKMK_OnObjectUI"></a> オブジェクトの UI およびピークする方法  
  このセクションでは、ピーク、コードのピーク ビューとも呼ばれるオブジェクトの UI が Visual Studio に一意の型にコンテキストを説明します。  
   
 ### <a name="overview"></a>概要  
@@ -161,7 +159,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  永続化し、コミットのモデル  
   
-    -   一時的なもの  
+    -   一時的  
   
     -   Durable  
   
@@ -251,7 +249,7 @@ ms.lasthandoff: 12/22/2017
   
 -   **決して**編集可能に表示されるか、ユーザーの操作への招待をホバー時のコンテンツを表示します。 この動作がストレスを感じるユーザー ツールヒントの標準動作とカーソルが不要になったマスター経由でこれを生成したコンテンツをすぐに閉じるには、詳細内容にカーソルを移動すると、します。  
   
-##  <a name="BKMK_SelectionModels"></a>モデルの選択  
+##  <a name="BKMK_SelectionModels"></a> モデルの選択  
   
 ### <a name="overview"></a>概要  
  選択モデルが示され、ユーザー インターフェイス内で目的の 1 つまたは複数のオブジェクトに対して操作を確認するために使用するメカニズムです。 Visual Studio ドキュメント エディター内の選択の相互作用のパターンについて説明します。 テキスト エディター、デザイン画面、およびモデリング サーフェスします。  
@@ -309,7 +307,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="region-selection-box-selection"></a>地域の選択 (ボックスの選択)  
  Visual Studio は、テキスト エディターで、地域の選択をサポートし、このボックスの選択と呼びます。 ボックスの選択は、通常のテキスト ストリームに従っていないテキストの領域を選択できます。 標準のテキスト選択範囲と選択範囲が連続している必要があります。 ボックスの選択は、Alt キーを押したままマウスでドラッグすることによって開始されます。 Alt キーと Shift キーを押しながら選択範囲の領域を示すために、方向キーを使用して、ボックスの選択を開始することもできます。 ボックスの選択は、通常の選択の強調表示を使用し、選択範囲の末尾に点滅挿入ポイントのカーソルを示します。  
   
- ![地域 &#40;ボックス&#41;Visual Studio での選択](../../extensibility/ux-guidelines/media/0713-04_boxselection.png "0713 04_BoxSelection")  
+ ![地域&#40;ボックス&#41;Visual Studio での選択](../../extensibility/ux-guidelines/media/0713-04_boxselection.png "0713 04_BoxSelection")  
   
  **Visual Studio での領域 (ボックス) の選択**  
   
@@ -394,19 +392,19 @@ ms.lasthandoff: 12/22/2017
   
  **2 つのセカンダリ選択を使ったプライマリ選択**  
   
-####  <a name="BKMK_GraphicalObjectSelectionAppearance"></a>グラフィック オブジェクトの選択範囲の外観  
+####  <a name="BKMK_GraphicalObjectSelectionAppearance"></a> グラフィック オブジェクトの選択範囲の外観  
  ハンドルは、オブジェクトの境界ボックスの周囲の四角形パターンで描画する四角形です。 次の表は、グラフィカルなオブジェクトがハンドル、サイズ変更、およびインプレース編集の外観を持つことができるさまざまな状態の例を示します。 ハンドルのサイズがウィンドウの境界線とメトリックを使用してエッジに関連付けられている必要がある、**問題**API です。  
   
 |状態|外観|表示の詳細|  
 |-----------|----------------|--------------------|  
 |**選択されていません。**|既定値|![既定のボタンの状態](../../extensibility/ux-guidelines/media/0713-10_defaultstate.png "0713 10_DefaultState")||  
-|**プライマリ選択**|サイズ変更可能です|![サイズ変更ハンドルを使ったプライマリ選択](../../extensibility/ux-guidelines/media/0713-11_primaryresize.png "0713 11_PrimaryResize")|![使ったプライマリ選択は、サイズ変更ハンドル (&) #40 です拡大 &#41;。] (../../extensibility/ux-guidelines/media/0713-12_primaryresizezoom.png "0713 12_PrimaryResizeZoom")|  
-|**プライマリ選択**|サイズを変更しません。|![プライマリ選択せずにサイズ変更ハンドル](../../extensibility/ux-guidelines/media/0713-13_primarynoresize.png "0713 13_PrimaryNoResize")|![プライマリ選択項目でなくサイズ変更ハンドル &#40; 拡大 &#41;] (../../extensibility/ux-guidelines/media/0713-14_primarynoresizezoom.png "0713 14_PrimaryNoResizeZoom")|  
-|**プライマリ選択**|ロックされています|![ロックされたプライマリ選択](../../extensibility/ux-guidelines/media/0713-15_primarylocked.png "0713 15_PrimaryLocked")|![ロックされたプライマリ選択 &#40; 拡大 &#41;] (../../extensibility/ux-guidelines/media/0713-16_primarylockedzoom.png "0713 16_PrimaryLockedZoom")|  
-|**セカンダリ選択**|サイズ変更可能です|![サイズ変更ハンドルを使ったセカンダリ選択](../../extensibility/ux-guidelines/media/0713-17_secondaryresize.png "0713 17_SecondaryResize")|![使ったセカンダリ選択は、サイズ変更ハンドル (&) #40 です拡大 &#41;。] (../../extensibility/ux-guidelines/media/0713-18_secondaryresizezoom.png "0713 18_SecondaryResizeZoom")|  
-|**セカンダリ選択**|サイズを変更しません。|![セカンダリ選択せずにサイズ変更ハンドル](../../extensibility/ux-guidelines/media/0713-19_secondarynoresize.png "0713 19_SecondaryNoResize")|![セカンダリ選択サイズの変更 &#40; せず拡大 &#41;] (../../extensibility/ux-guidelines/media/0713-20_secondarynoresizezoom.png "0713 20_SecondaryNoResizeZoom")|  
-|**セカンダリ選択**|ロックされています|![ロックされたセカンダリ選択](../../extensibility/ux-guidelines/media/0713-21_secondarylocked.png "0713 21_SecondaryLocked")|![ロックされたセカンダリ選択 &#40; 拡大 &#41;] (../../extensibility/ux-guidelines/media/0713-22_secondarylockedzoom.png "0713 22_SecondaryLockedZoom")|  
-|**アクティブな UI**|既定値|![UI のアクティブな状態](../../extensibility/ux-guidelines/media/0713-23_uiactive.png "0713 23_UIActive")|![UI のアクティブな状態 &#40; 拡大 &#41;] (../../extensibility/ux-guidelines/media/0713-24_uiactivezoom.png "0713 24_UIActiveZoom")|  
+|**プライマリ選択**|サイズ変更可能です|![サイズ変更ハンドルを使ったプライマリ選択](../../extensibility/ux-guidelines/media/0713-11_primaryresize.png "0713 11_PrimaryResize")|![サイズ変更ハンドルを使ったプライマリ選択&#40;拡大&#41;](../../extensibility/ux-guidelines/media/0713-12_primaryresizezoom.png "0713 12_PrimaryResizeZoom")|  
+|**プライマリ選択**|サイズを変更しません。|![プライマリ選択せずにサイズ変更ハンドル](../../extensibility/ux-guidelines/media/0713-13_primarynoresize.png "0713 13_PrimaryNoResize")|![プライマリ選択せずにサイズ変更ハンドル&#40;拡大&#41;](../../extensibility/ux-guidelines/media/0713-14_primarynoresizezoom.png "0713 14_PrimaryNoResizeZoom")|  
+|**プライマリ選択**|ロックされています|![ロックされたプライマリ選択](../../extensibility/ux-guidelines/media/0713-15_primarylocked.png "0713 15_PrimaryLocked")|![ロックされたプライマリ選択&#40;拡大&#41;](../../extensibility/ux-guidelines/media/0713-16_primarylockedzoom.png "0713 16_PrimaryLockedZoom")|  
+|**セカンダリ選択**|サイズ変更可能です|![サイズ変更ハンドルを使ったセカンダリ選択](../../extensibility/ux-guidelines/media/0713-17_secondaryresize.png "0713 17_SecondaryResize")|![サイズ変更ハンドルを使ったセカンダリ選択&#40;拡大&#41;](../../extensibility/ux-guidelines/media/0713-18_secondaryresizezoom.png "0713 18_SecondaryResizeZoom")|  
+|**セカンダリ選択**|サイズを変更しません。|![セカンダリ選択せずにサイズ変更ハンドル](../../extensibility/ux-guidelines/media/0713-19_secondarynoresize.png "0713 19_SecondaryNoResize")|![サイズ変更せずセカンダリ選択&#40;拡大&#41;](../../extensibility/ux-guidelines/media/0713-20_secondarynoresizezoom.png "0713 20_SecondaryNoResizeZoom")|  
+|**セカンダリ選択**|ロックされています|![ロックされたセカンダリ選択](../../extensibility/ux-guidelines/media/0713-21_secondarylocked.png "0713 21_SecondaryLocked")|![ロックされたセカンダリ選択&#40;拡大&#41;](../../extensibility/ux-guidelines/media/0713-22_secondarylockedzoom.png "0713 22_SecondaryLockedZoom")|  
+|**アクティブな UI**|既定値|![UI のアクティブな状態](../../extensibility/ux-guidelines/media/0713-23_uiactive.png "0713 23_UIActive")|![UI のアクティブな状態&#40;拡大&#41;](../../extensibility/ux-guidelines/media/0713-24_uiactivezoom.png "0713 24_UIActiveZoom")|  
   
 ### <a name="view-selection-models"></a>選択範囲のモデルの表示  
   
@@ -475,7 +473,7 @@ ms.lasthandoff: 12/22/2017
   
 -   F2 キーは、現在選択されているセルの編集をインプレースでアクティブにします。  
   
-##  <a name="BKMK_PersistenceAndSavingSettings"></a>永続化と設定を保存します。  
+##  <a name="BKMK_PersistenceAndSavingSettings"></a> 永続化と設定を保存します。  
   
 ### <a name="overview"></a>概要  
  Visual Studio 内の各ソフトウェア コンポーネントは通常、独自の状態と永続化を担当するが、Visual Studio に自動的に保存場合によっては、設定など、ウィンドウ サイズと位置を使用します。 次の表は、自動的に保存された設定と実行されるアクションをプログラムや明示的なユーザーを必要とする設定の組み合わせです。  
@@ -510,7 +508,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="profile-specific-layouts"></a>プロファイルに固有のレイアウト  
  各プロファイルには、特定の開発者のペルソナに慣れる状に編成、ツール ウィンドウのレイアウトが含まれています (Visual C 開発者は、表示されるはずの**ソリューション エクスプ ローラー** c# 開発者は、を期待中に、IDEの左側にあります。**ソリューション エクスプ ローラー**右側) です。 プロファイルに固有のウィンドウ レイアウトは、ユーザーが起動時にプロファイルを選択した後に読み込まれます。 パッケージの作成者は、お客様のエクスペリエンスに最も適したウィンドウのレイアウトを決定把握、ユーザーがウィンドウの構成に変更し、永続化する必要があります。  
   
-##  <a name="BKMK_TouchInput"></a>タッチ入力  
+##  <a name="BKMK_TouchInput"></a> タッチ入力  
  ユーザーは、タッチ デバイスで Microsoft の開発製品をますます増えています。 ただし、タッチ デバイスでの開発ツールを使用するが困難障壁があります。 ユーザーが求める当社製品、信頼性があり、正確なタッチのエクスペリエンスを提供します。 これらのガイドラインの目的は、タッチ機能を組み込むと、Visual Studio、関連する製品間で一貫性のあるタッチ エクスペリエンスをお勧めについて意思決定を通知するためにです。  
   
 ### <a name="levels-of-experience"></a>エクスペリエンスのレベル  

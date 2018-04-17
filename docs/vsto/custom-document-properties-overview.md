@@ -1,13 +1,10 @@
 ---
-title: "カスタム ドキュメント プロパティの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: カスタム ドキュメント プロパティの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,14 +17,14 @@ helpviewer_keywords:
 - _AssemblyName property
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 672eaf3ed82a80983b919a37b2aeff4c99621f43
-ms.sourcegitcommit: bfa26fd7426af0d065cb2eef3d6827b5d6f7986c
+ms.openlocfilehash: c5ca93d7a761ca8757f0e43ab88cb6586c203160
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-document-properties-overview"></a>Custom Document Properties Overview
 
@@ -47,7 +44,7 @@ Visual Studio がプロジェクト内のドキュメントを 2 つのカスタ
 
 - _AssemblyLocation プロパティは、の形式でパブリッシュする場合、ソリューションは、Web サイト、UNC パス、または、CD ドライブまたは USB ドライブからインストールする、 *DeploymentManifestPath*|*ソリューション Id*です。 次の文字列は、例を示します。
 
-     file://deployserver/MyShare/ExcelWorkbook1.vsto|74744e4b-e4d6-41eb-84f7-ad20346fe2d9
+     file://deployserver/MyShare/ExcelWorkbook1.vsto | 74744e4b-e4d6-41eb-84f7-ad20346fe2d9
 
 - _AssemblyLocation プロパティが、形式で実行されているまたは、Visual Studio からソリューションをデバッグする場合*DeploymentManifestName*|*ソリューション Id*| vstolocal です。 次の文字列は、例を示します。
 

@@ -1,12 +1,10 @@
 ---
-title: "方法: 印刷時にワークシートのコントロールを非表示にする |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 印刷時にワークシートのコントロールを非表示にする |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - worksheets, hiding controls when printing
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 32a967371cb247139285d5db5d3cf88a2a7cc8f9
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 4d02d823e707054fd17a5f3f892db41258b08081
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-hide-controls-on-worksheets-when-printing"></a>方法 : 印刷時にワークシートのコントロールを非表示にする
   Windows フォーム コントロールを含む Microsoft Office Excel ドキュメントを印刷する場合、コントロールは、印刷するワークシートに表示されます。 ワークシートを印刷する場合は、コントロールを非表示にすることができます。  
@@ -44,7 +43,7 @@ ms.lasthandoff: 01/10/2018
   
 3.  **プロパティ**ウィンドウで、設定、<xref:Microsoft.Office.Tools.Excel.Controls.Button.PrintObject%2A>プロパティを**False**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
  [Windows フォームでコントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)   
  [方法: Windows フォーム コントロールの Office ドキュメントへの追加](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   

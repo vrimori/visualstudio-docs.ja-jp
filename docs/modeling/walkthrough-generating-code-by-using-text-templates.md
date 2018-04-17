@@ -1,24 +1,22 @@
 ---
-title: "チュートリアル: テキスト テンプレートを使用してコードを生成する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: テキスト テンプレートを使用してコードを生成する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [text templates], generating application code
 - walkthroughs [text templates]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 46cbf0c6a28b10434ed364dffd77c4c01620d6ea
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 7099edb08216cd91858a20e65c7bb2fede786977
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-generating-code-by-using-text-templates"></a>チュートリアル: テキスト テンプレートを使用したコード生成
 コード生成を使用すると、厳密に型指定され、ソース モデルが変わった場合でも簡単に変更できるプログラム コードを作成できます。 コード生成とは対照的に、構成ファイルを使用する完全に汎用的なプログラムを作成する他の手法もあります。構成ファイルを使用すると、柔軟ではありますが、読むのも変更するのも容易ではなく、パフォーマンスもそれほどよくありません。 このチュートリアルでは、コード生成の利点について説明します。  
@@ -107,7 +105,7 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
  .  
   
 ### <a name="add-a-test-code-file"></a>テスト コード ファイルを追加する  
- C# ファイルをプロジェクトに追加し、どのような記述方法を実現したいかを踏まえて、そのファイルにコードのサンプルを記述します。 例:  
+ C# ファイルをプロジェクトに追加し、どのような記述方法を実現したいかを踏まえて、そのファイルにコードのサンプルを記述します。 例えば:  
   
 ```  
 using System;  
@@ -419,6 +417,6 @@ namespace MyProject
 ## <a name="troubleshooting-the-text-template"></a>テキスト テンプレートのトラブルシューティング  
  テンプレートの変換エラーやコンパイル エラーが **[エラー一覧]** に表示された場合、または出力ファイルが正しく生成されなかった場合は、「[TextTransform ユーティリティを使用したファイルの生成](../modeling/generating-files-with-the-texttransform-utility.md)」で説明されている方法を使用してテキスト テンプレートをトラブルシューティングできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)   
  [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)

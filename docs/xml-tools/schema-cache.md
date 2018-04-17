@@ -1,23 +1,21 @@
 ---
-title: "スキーマ キャッシュ |Microsoft ドキュメント"
-ms.custom: 
+title: スキーマ キャッシュ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 35a7fcad-f3bf-4a96-9008-4306e7276223
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 9315fdeeb336ac262f59df31b941c05ca3101b3b
-ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3a7a089e799c2480f667eb000d39c3036220d02e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="schema-cache"></a>スキーマ キャッシュ
 XML エディターはスキーマ キャッシュを提供します。このキャッシュは %InstallRoot%\Xml\Schemas ディレクトリに配置されています。 スキーマ キャッシュはコンピューター上のすべてのユーザーに対してグローバルで、IntelliSense と XML ドキュメントの検証に使用される標準的な XML スキーマを格納しています。  
@@ -29,22 +27,22 @@ XML エディターはスキーマ キャッシュを提供します。このキ
 |ファイル名|説明|  
 |--------------|-----------------|  
 |catalog.xsd|XML エディターのスキーマ カタログ ファイル用のスキーマです。 スキーマ カタログの詳細については、下記を参照してください。|  
-|DotNetConfig.xsd|Web.Config ファイル用のスキーマ (http://schemas.microsoft.com/.NETConfiguration/v2.0 (英語)) です。|  
-|msbuild.xsd|MSBuild メイク ファイル用のスキーマ (http://schemas.microsoft.com/developer/msbuild/2003 (英語)) です。|  
+|DotNetConfig.xsd|Web.Config ファイルのスキーマ"http://schemas.microsoft.com/.NETConfiguration/v2.0"です。|  
+|msbuild.xsd|MSBuild メイク ファイル用にスキーマ"http://schemas.microsoft.com/developer/msbuild/2003"です。|  
 |msdata.xsd|<xref:System.Data.DataSet> クラスによって追加される XSD 注釈用のスキーマ (urn:schemas-microsoft-com:xml-msdata) です。|  
 |msxsl.xsd|Microsoft XSLT スクリプト ブロック拡張用のスキーマ (urn:schemas-microsoft-com:xslt) です。|  
 |SnippetFormat.xsd|コード スニペットの XML ファイルのスキーマです。 例については、%InstallDir%\VC#\Expansions を参照してください。|  
-|Soap1.1.xsd|簡易オブジェクト アクセス プロトコル (SOAP) 1.1 のスキーマ (http://schemas.xmlsoap.org/soap/envelope/ (英語)) です。|  
+|Soap1.1.xsd|簡易オブジェクト アクセス プロトコル (SOAP) 1.1 でのスキーマhttp://schemas.xmlsoap.org/soap/envelope/です。|  
 |Soap1.2.xsd|簡易オブジェクト アクセス プロトコル 1.2 のスキーマです。|  
-|SiteMapSchema.xsd|ASP.NET のサイト マップ XML ファイル用のスキーマ (http://schemas.microsoft.com/AspNet/SiteMap-File-1.0 (英語)) です。|  
-|wsdl.xsd|Web サービス記述言語のスキーマ (http://schemas.xmlsoap.org/wsdl/ (英語)) です。|  
-|xenc.xsd|XML 暗号化のスキーマ (http://www.w3.org/2000/09/xmldsig# (英語)) です。|  
-|xhtml.xsd|XHTML のスキーマ (http://www.w3.org/1999/xhtml (英語)) です。|  
-|xlink.xsd|XLink1.0 のスキーマ (http://www.w3.org/1999/xlink (英語)) です。|  
-|xml.xsd|xml:space 属性と xml:lang 属性について説明するスキーマ (http://www.w3.org/XML/1998/namespace (英語)) です。|  
-|xmlsig.xsd|XML デジタル署名のスキーマ (http://www.w3.org/2000/09/xmldsig# (英語)) です。|  
-|xsdschema.xsd|XSD 自体について説明するスキーマ (http://www.w3.org/2001/XMLSchema (英語)) です。|  
-|xslt.xsd|XML 変換のスキーマ (http://www.w3.org/1999/XSL/Transform (英語)) です。|  
+|SiteMapSchema.xsd|ASP.NET サイト マップ XML ファイルのスキーマ"http://schemas.microsoft.com/AspNet/SiteMap-File-1.0"です。|  
+|wsdl.xsd|Web サービス記述言語のスキーマhttp://schemas.xmlsoap.org/wsdl/です。|  
+|xenc.xsd|XML 暗号化のスキーマhttp://www.w3.org/2000/09/xmldsig#です。|  
+|xhtml.xsd|XHTML のスキーマhttp://www.w3.org/1999/xhtmlです。|  
+|xlink.xsd|XLink1.0 のスキーマhttp://www.w3.org/1999/xlinkです。|  
+|xml.xsd|Xml:space と xml:lang の属性を記述するスキーマhttp://www.w3.org/XML/1998/namespaceです。|  
+|xmlsig.xsd|XML デジタル署名用のスキーマhttp://www.w3.org/2000/09/xmldsig#です。|  
+|xsdschema.xsd|XSD 自体を記述するスキーマhttp://www.w3.org/2001/XMLSchemaです。|  
+|xslt.xsd|XML 変換のスキーマ、http://www.w3.org/1999/XSL/Transformです。|  
   
 ## <a name="updating-schemas-in-the-cache"></a>キャッシュ内のスキーマの更新  
  エディターは、XML エディター パッケージが読み込まれるときにスキーマ キャッシュのディレクトリを読み込み、実行中にはすべての変更点を監視します。 スキーマが追加された場合は、そのスキーマがメモリ内にある既知のスキーマのインデックス内に自働的に読み込まれます。 スキーマが削除された場合は、そのスキーマがメモリ内のインデックスから自働的に削除されます。 スキーマが更新された場合は、メモリ内にあるそのスキーマのキャッシュが自動的に無効化されます。  
@@ -128,5 +126,5 @@ XML エディターはスキーマ キャッシュを提供します。このキ
   
      カタログは自動的に再度読み込まれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML エディター](../xml-tools/xml-editor.md)

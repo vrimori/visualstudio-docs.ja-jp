@@ -2,22 +2,20 @@
 title: カスタム T4 テキスト テンプレート ディレクティブ プロセッサを作成 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, custom directive processors
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 305eb97d18e8513a92637cd92b1f28798677f314
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: e55ff7c1c0041e386980b55c9cca7c9263f0b62e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-custom-t4-text-template-directive-processors"></a>カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成
 *テキスト テンプレート変換プロセス*受け取り、*テキスト テンプレート*ファイルとして入力し、テキスト ファイルを出力として生成します。 *テキスト テンプレート変換エンジン*コントロール、プロセスと、エンジンは、テキスト テンプレート変換ホストおよび 1 つまたは複数のテキスト テンプレートと対話する*ディレクティブ プロセッサ*プロセスを完了します。 詳細については、次を参照してください。 [、テキスト テンプレート変換プロセス](../modeling/the-text-template-transformation-process.md)です。  

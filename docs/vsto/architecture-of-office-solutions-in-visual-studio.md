@@ -1,12 +1,10 @@
 ---
-title: "Visual Studio での Office ソリューションのアーキテクチャ |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio での Office ソリューションのアーキテクチャ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - Office applications [Office development in Visual Studio], architecture
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 021d080cd37044f0365b8535f1df99c1669cf092
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 5b62fc532ba2caeaaf07bb4069aaa5a41820f804
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="architecture-of-office-solutions-in-visual-studio"></a>Visual Studio の Office ソリューションのアーキテクチャ
   このセクションのトピックでは、Visual Studio の作業で Office Developer Tools を使用してソリューションを作成する方法について紹介します。  
@@ -47,16 +46,16 @@ ms.lasthandoff: 01/10/2018
  ドキュメントレベル カスタマイズにおけるカスタム ドキュメント プロパティの動作について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)  
+ [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)  
  ビジネス ソリューションの開発で Microsoft Office をプラットフォームとして使用する方法について紹介します。  
   
- [作業の開始 (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/getting-started-office-development-in-visual-studio.md)  
+ [作業の開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)  
  Office ソリューションの作成用に開発コンピューターを構成する方法、Office ソリューションの作成を開始する方法、Visual Studio の Office 開発ツールの初期バージョンからの変更点に関する情報のリンクを提供します。  
   
  [Office ソリューションのデザインと作成](../vsto/designing-and-creating-office-solutions.md)  
  Office ソリューションの作成に関する情報のリンクを提供します。  
   
- [全般リファレンス (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/general-reference-office-development-in-visual-studio.md)  
+ [全般リファレンス&#40;Visual Studio での Office 開発&#41;](../vsto/general-reference-office-development-in-visual-studio.md)  
  Office プロジェクトのユーザー インターフェイス要素、Office プロジェクトのアプリケーション マニフェストと展開マニフェスト、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]の API に関する情報のリンクを提供します。  
   
   

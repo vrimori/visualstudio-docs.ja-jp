@@ -1,13 +1,10 @@
 ---
-title: "Workbook ホスト項目 |Microsoft ドキュメント"
-ms.custom: 
+title: Workbook ホスト項目 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -23,14 +20,14 @@ helpviewer_keywords:
 - events [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1c1e6de8313b3e7b94ac88627ef3cdc463c92906
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: a5cf1281e084a5ffc51f06b35e3b1c68b2745c43
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="workbook-host-item"></a>Workbook ホスト項目
   <xref:Microsoft.Office.Tools.Excel.Workbook> ホスト項目は、Excel のプライマリ相互運用機能アセンブリの <xref:Microsoft.Office.Interop.Excel.Workbook> 型を拡張する型です。 <xref:Microsoft.Office.Tools.Excel.Workbook> ホスト項目は <xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトと同じプロパティ、メソッド、イベントがすべて用意されているだけなく、追加の機能も用意されています。  
@@ -59,10 +56,10 @@ ms.lasthandoff: 01/10/2018
 ## <a name="understanding-workbook-host-items-in-vsto-add-in-projects"></a>VSTO アドイン プロジェクトでのブック ホスト項目について  
  VSTO アドイン プロジェクトでは、Excel で開いている任意のブックの <xref:Microsoft.Office.Tools.Excel.Workbook> ホスト項目を実行時に生成できます。 生成する、<xref:Microsoft.Office.Tools.Excel.Workbook>ホスト項目、GetVstoObject メソッドを使用します。 詳細については、「 [VSTO アドインにおける実行時の Word 文書と Excel ブックの拡張](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
  [実行時の Word 文書と VSTO アドイン内の Excel ブックの拡張](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [Worksheet ホスト項目](../vsto/worksheet-host-item.md)   
  [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)   
  [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  

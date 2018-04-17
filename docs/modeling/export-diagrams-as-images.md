@@ -1,30 +1,28 @@
 ---
-title: "イメージとしてダイアグラムをエクスポート |Microsoft ドキュメント"
-ms.custom: 
+title: イメージとしてダイアグラムをエクスポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modeling diagrams, saving
 - diagrams - modeling, saving modeling diagrams
 - UML diagrams, saving
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5bbe67a270305dfb9f8e73d869963908502348b7
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 2761cc222d4ce8cc15db484d21c17da46eaa400c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="export-diagrams-as-images"></a>イメージとしてダイアグラムをエクスポートする
 Visual Studio で、利害関係者、ユーザー、または同じバージョンの Visual Studio を使用しないプロジェクト チーム メンバーと共有することができるように、読み取り専用の形式で図をモデリングを保存することができます。  
   
- この機能をサポートする Visual Studio のバージョンを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
+ この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
 ### <a name="to-copy-a-diagram-or-part-of-a-diagram-to-another-application"></a>図または図の一部を別のアプリケーションにコピーするには  
   
@@ -44,6 +42,6 @@ Visual Studio で、利害関係者、ユーザー、または同じバージョ
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アプリのモデルを作成します。](../modeling/create-models-for-your-app.md)   
  [モデルおよびエクスポート ダイアグラムの共有](../modeling/share-models-and-exporting-diagrams.md)

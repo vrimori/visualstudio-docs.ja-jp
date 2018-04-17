@@ -1,12 +1,10 @@
 ---
-title: "Office ドキュメントのパスワード保護 |Microsoft ドキュメント"
-ms.custom: 
+title: Office ドキュメントのパスワード保護 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,13 +16,14 @@ helpviewer_keywords:
 - Office documents [Office development in Visual Studio, restricted permissions
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 52cadcec85580a9214da844bf887323227490f22
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 5d85f1dc0aa54da22b02259aea372f2ad6dd42ac
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="password-protection-on-office-documents"></a>Office ドキュメントのパスワード保護
   パスワードを知らない人に開けませんできるように、Microsoft Office Word 文書と Microsoft Office Excel ブックでパスワードを設定することができます。 このオプションの名前は**[パスワード]**です。  
@@ -40,7 +39,7 @@ ms.lasthandoff: 01/10/2018
   
  最初に開く、Word 文書が Visual Studio で**[パスワード]**有効にすると、単語の入力を求め、パスワードです。 正常にパスワードを入力した後**[パスワード]**ドキュメントから削除し、ドキュメントを開いて、パスワードは必要なくなった。 ソリューションでドキュメントをする場合は、前にパスワードを要求するように開くことができる、有効にする必要があります**[パスワード]**最終的なビルドの後に、ソリューションを展開する前にします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドキュメント レベルのソリューションでドキュメントの保護](../vsto/document-protection-in-document-level-solutions.md)   
  [Information Rights Management とマネージ コード拡張機能の概要](../vsto/information-rights-management-and-managed-code-extensions-overview.md)   
  [方法: アクセス許可の制限のドキュメントの背後に実行するようにコードを許可します。](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)   

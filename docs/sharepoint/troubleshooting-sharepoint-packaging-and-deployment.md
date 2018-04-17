@@ -1,13 +1,10 @@
 ---
-title: "SharePoint のパッケージ化と配置のトラブルシューティング |Microsoft ドキュメント"
-ms.custom: 
+title: SharePoint のパッケージ化と配置のトラブルシューティング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/22/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VSTO.WorkflowDeployment.Troubleshooting
 - VS.SharePointTools.Project.PackageRetraction
@@ -26,14 +23,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deployment conflict resolution
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b30c17b9b20c59085fc8a684e3b9735daa0e019c
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 95dfd93433fc70895baa9056ce1b1522845bf497
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-sharepoint-packaging-and-deployment"></a>SharePoint のパッケージ化と配置のトラブルシューティング
   このトピックでは、SharePoint ソリューションをパッケージ化および配置するときに発生する可能性があるさまざまな問題について説明します。
@@ -42,7 +39,7 @@ ms.lasthandoff: 03/02/2018
  Visual Studio、SharePoint、およびその他のレイヤーの間で問題を診断する場合は、EnableDiagnostics レジストリ キーを使用してスタック トレースを表示することができます。 詳細については、次を参照してください。 [SharePoint ソリューションのデバッグ](../sharepoint/debugging-sharepoint-solutions.md)です。
 
 ## <a name="adding-project-output-to-the-solution-package"></a>ソリューション パッケージへのプロジェクト出力の追加
- パッケージ デザイナーを使用してパッケージにプロジェクト出力を追加することができます。 ただし、プロジェクト出力を追加する際には、そのプロジェクトのプラットフォームが SharePoint ソリューションのプラットフォームと一致していることを確認する必要があります。 使用することをお勧め、 **Any CPU** SharePoint サーバーに配置するアセンブリのプラットフォーム ターゲットです。 詳細については、次を参照してください。 [[コンパイル] ページ、プロジェクト デザイナー &#40;です。Visual Basic &#41;](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)と[コンパイラ設定 ダイアログ ボックス &#40; を高度なVisual Basic &#41;](/visualstudio/ide/reference/advanced-compiler-settings-dialog-box-visual-basic).
+ パッケージ デザイナーを使用してパッケージにプロジェクト出力を追加することができます。 ただし、プロジェクト出力を追加する際には、そのプロジェクトのプラットフォームが SharePoint ソリューションのプラットフォームと一致していることを確認する必要があります。 使用することをお勧め、 **Any CPU** SharePoint サーバーに配置するアセンブリのプラットフォーム ターゲットです。 詳細については、次を参照してください。 [[コンパイル] ページ、プロジェクト デザイナー &#40;Visual Basic&#41; ](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)と[コンパイラ設定 ダイアログ ボックスの高度な&#40;Visual Basic&#41;](/visualstudio/ide/reference/advanced-compiler-settings-dialog-box-visual-basic)です。
 
 ## <a name="validation-warnings-and-errors"></a>検証の警告とエラー
  Visual Studio の SharePoint 開発ツールでは、ソリューション パッケージが正しい形式になっていることを確認するために検証ステップが実行されます。 特定のフィーチャーやパッケージのためのカスタム検証ステップを作成することもできます。 詳細については、次を参照してください。[する方法: カスタム機能の作成と SharePoint ソリューションのパッケージ検証規則](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)です。
@@ -115,7 +112,7 @@ ms.lasthandoff: 03/02/2018
 
  この警告を除去するには、プロジェクトをビルドしてからデザイナーを閉じて再度開くか、プロジェクトに対する自動取り消しオプションを無効にします。 これを行うには、クリア、**デバッグ後に自動取り消し**チェック ボックスをオン、 **SharePoint**プロジェクトのプロパティ ダイアログ ボックスのタブです。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
 
 

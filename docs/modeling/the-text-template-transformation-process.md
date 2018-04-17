@@ -1,23 +1,21 @@
 ---
-title: "テキスト テンプレート変換プロセス |Microsoft ドキュメント"
-ms.custom: 
+title: テキスト テンプレート変換プロセス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, transformation process
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: e350b123f1945bdeafa7f3ff2ae3da55037922cf
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 1ef32254764594d66738510c7c455f992d3a7318
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="the-text-template-transformation-process"></a>テキスト テンプレート変換プロセス
 テキスト テンプレート変換プロセスでは、テキスト テンプレート ファイルを入力として受け取りし、新しいテキスト ファイルとして出力を生成します。 テキスト テンプレートを使用するには、Visual Basic または c# のコードを生成するなど、HTML レポートを生成することができます。  
@@ -31,7 +29,7 @@ ms.lasthandoff: 02/09/2018
 |コンポーネント|説明|カスタマイズ可能な (はい/いいえ)|  
 |---------------|-----------------|------------------------------|  
 |エンジン|エンジン コンポーネントは、テキスト テンプレート変換プロセスを制御します。|いいえ。|  
-|ホスト|ホストは、エンジンと、ユーザーの環境間のインターフェイスです。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]テキスト変換プロセスのホストです。|はい。 カスタム ホストを作成することができます。|  
+|ホスト|ホストは、エンジンと、ユーザーの環境間のインターフェイスです。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] テキスト変換プロセスのホストです。|はい。 カスタム ホストを作成することができます。|  
 |ディレクティブ プロセッサ|ディレクティブ プロセッサは、テキスト テンプレートのディレクティブを処理するクラスです。 ディレクティブを使用すると、テキスト テンプレートへの入力ソースからデータを提供します。|はい。 カスタム ディレクティブ プロセッサを記述することができます。|  
   
 ## <a name="the-engine"></a>エンジンは、  

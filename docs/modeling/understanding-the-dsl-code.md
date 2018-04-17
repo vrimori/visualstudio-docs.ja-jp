@@ -2,22 +2,20 @@
 title: DSL コードを理解する |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, generated code
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 41cf1f19e03c1197c6266b5057af993b677c9c53
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 0ad4c72372682669ddcd8246b2830b15db979239
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-the-dsl-code"></a>DSL コードについて
 ドメイン固有言語 (DSL) ソリューションは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 内で DSL のインスタンスの読み取りと更新に使用可能な API を生成します。 この API は、DSL 定義から生成されるコード中に定義されます。 このトピックでは生成される API を説明します。  

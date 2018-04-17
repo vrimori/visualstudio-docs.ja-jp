@@ -2,20 +2,18 @@
 title: MEF を使用して、DSL を拡張 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 735de60d18bc5cbca7dc2ba509372d81622038be
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 66fb2c371f67d0da13ac88fee22225970557216f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>MEF による DSL の拡張
 Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語 (DSL) を拡張することができます。 か、他の開発者は、DSL 定義とプログラム コードを変更することがなく、DSL の拡張機能を記述することができます。 このような拡張機能には、メニュー コマンド、ドラッグ アンド ドロップ ハンドラー、および検証が含まれます。 ユーザーは、DSL をインストールして、その拡張機能を必要に応じてインストールを可能になります。  

@@ -1,23 +1,21 @@
 ---
-title: "方法: XML スキーマ エクスプ ローラーからワークスペースにノードを追加 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: XML スキーマ エクスプ ローラーからワークスペースにノードを追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 3b5a5749-9693-4b29-b0c2-8e07e0e55514
-caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 37da28d4c5db1e008af29c03997943720dcfbada
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d79aa5c10559eb67801ef68ad9b44f441736ccfb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-nodes-to-the-workspace-from-the-xml-schema-explorer"></a>方法: XML スキーマ エクスプローラーからワークスペースにノードを追加する
 このトピックにノードを追加する方法について説明、 [XML スキーマ デザイナーのワークスぺース](../xml-tools/xml-schema-designer-workspace.md)XML スキーマ エクスプ ローラーからです。 これは、XML スキーマ エクスプローラーから XSD デザイナーのビューにノードをドラッグ アンド ドロップするか、XML スキーマ エクスプローラーのコンテキスト メニューを使用することによって行うことができます。 さらに、XML スキーマ エクスプローラーの検索結果で強調表示されたノードを追加することができます。 詳細については、次を参照してください。[する方法: スキーマ セット検索結果ノードを追加、ワークスペース](../xml-tools/how-to-add-schema-set-search-result-nodes-to-the-workspace.md)です。  
@@ -61,5 +59,5 @@ ms.lasthandoff: 12/22/2017
   
      `purchaseOrder`ノードおよび`PurchaseOrderType`ノードがのデザイン サーフェイスに並べて表示されます、[グラフ ビュー](../xml-tools/graph-view.md)です。 2 つのノードは関連があるため (`purchaseOrder` 要素は `PurchaseOrderType` 型)、これらの間に矢印が引かれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML スキーマ エクスプローラー](../xml-tools/xml-schema-explorer.md)

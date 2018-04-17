@@ -1,12 +1,10 @@
 ---
-title: "方法: フィーチャーをローカライズ |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: フィーチャーをローカライズ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, localizing
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 1ddb5e705fd581ce2717539ac6daf3e9a2081f6d
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 08756ce33d97e156d63fd873c63d4d6fc282285b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-localize-a-feature"></a>方法: フィーチャーをローカライズする
   フィーチャーのタイトルと説明は、既定では、ハード コーディングされた文字列値を使用します。 フィーチャーのタイトルと説明をローカライズするには、ローカライズされたリソースを参照する式で、文字列を置き換えます。  
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  ローカライズする、**タイトル**と**説明**機能では、フィールドでは、次の形式を使用して、そのボックスに値を入力します。  
   
-     `$Resources:`*文字列 ID*  
+     `$Resources:` *文字列 ID*  
   
      たとえば、$Resources を入力:**タイトル**で、**フィーチャーのタイトル**ボックス、および $Resources:**説明**で、**機能の説明**ボックス.  
   
@@ -62,7 +61,7 @@ ms.lasthandoff: 01/10/2018
   
      アプリケーションでは、ローカライズされたフィーチャーのタイトルと説明が表示されます。 ローカライズされたリソースを表示するには、リソース ファイルのカルチャに対応する Language Pack が SharePoint サーバーにインストールされている必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションのローカライズ](../sharepoint/localizing-sharepoint-solutions.md)   
  [方法: リソース ファイルを追加](../sharepoint/how-to-add-a-resource-file.md)   
  [方法: ASPX マークアップのローカライズ](../sharepoint/how-to-localize-aspx-markup.md)   

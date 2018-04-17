@@ -2,12 +2,9 @@
 title: '[発行] ページ (プロジェクト デザイナー) (Visual Studio での Office 開発) |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - office-development
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VST.ProjectProperties.Publish.2007System
 dev_langs:
@@ -19,14 +16,14 @@ helpviewer_keywords:
 - Property Pages dialog box, Publish [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d9cc3fa102c0552893c6f7859a256b7df26e3af5
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: ee835542d88fa316eb3aec859e5aaf61d376f624
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="publish-page-project-designer-office-development-in-visual-studio"></a>プロジェクト デザイナーの [発行] ページ (Visual Studio での Office 開発)
   **プロジェクト デザイナー** の **[発行]** ページは、配置用のプロパティを構成する場合に使用します。  
@@ -44,7 +41,7 @@ ms.lasthandoff: 01/10/2018
   
  オプションには、ローカル コンピューター、UNC ファイル共有、または HTTP/HTTPS Web サイトがあります。 このパスはローカルにできます (*c:\foldername\publishfolder*)、相対パス (*発行\\*)、または完全修飾の場所 (*\\\servername\foldername*または http://*servername/foldername*)。  
   
- 既定の発行場所は、IIS をインストールしている場合は *http://localhost/projectname/* 、IIS をインストールしていない場合は、publish\ ディレクトリです。  
+ 発行場所は、既定では、 *http://localhost/projectname/*かどうかがある、IIS をインストールまたは操作を行う場合は、publish \ ディレクトリが IIS インストールされていません。  
   
  **インストール フォルダーの URL**  
  任意。  
@@ -113,7 +110,7 @@ ms.lasthandoff: 01/10/2018
  **今すぐ発行**  
  現在の設定を使用して、アプリケーションを発行します。 **[発行ウィザード]** の **[完了]**ボタンと同じです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)   
  [ClickOnce を使用して Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
  [Office ソリューションの必須コンポーネントの展開](http://msdn.microsoft.com/en-us/9f672809-43a3-40a1-9057-397ce3b5126e)  

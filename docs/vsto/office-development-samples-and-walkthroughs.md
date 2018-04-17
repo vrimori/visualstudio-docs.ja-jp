@@ -1,12 +1,10 @@
 ---
-title: "Office 開発のサンプルとチュートリアル |Microsoft ドキュメント"
-ms.custom: 
+title: Office 開発のサンプルとチュートリアル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -22,13 +20,14 @@ helpviewer_keywords:
 - examples [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: d13c91bebf92632e0c53f4eda9d2b771f37f1949
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: f70b2f786453bf194a6287d7254363d45c41c49b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="office-development-samples-and-walkthroughs"></a>Office 開発のサンプルとチュートリアル
   このセクションには、Microsoft Office ソリューションの構築に使用されるサンプル アプリケーション、コード例、そして、構文、構造、および技法について説明した、詳細なチュートリアルが含まれています。  
@@ -55,7 +54,7 @@ ms.lasthandoff: 01/10/2018
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[作業の開始 (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/getting-started-office-development-in-visual-studio.md)|セットアップ、プロジェクト テンプレート、Office プライマリ相互運用機能アセンブリ、および Office 開発の新機能に関する情報へのリンクが掲載されています。|  
+|[作業の開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)|セットアップ、プロジェクト テンプレート、Office プライマリ相互運用機能アセンブリ、および Office 開発の新機能に関する情報へのリンクが掲載されています。|  
 |[Visual Studio の Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)|マネージ コードを使用する Office ソリューションの動作について開発者とエンド ユーザーの視点から説明し、マネージ コードと Office ドキュメントや Office アプリケーションの連携に関する情報を示します。|  
 |[Office プログラミングの共通タスク](../vsto/common-tasks-in-office-programming.md)|Visual Studio の Office 開発を使用したプログラミングについてよく寄せられる質問の一覧と、一般的な問題の解決に役立つトピックへのリンクを示します。|  
 |[Office ソリューションのデザインと作成](../vsto/designing-and-creating-office-solutions.md)|Microsoft Office ソリューションの作成方法に関する情報、およびソリューション内のアセンブリの役割に関する情報へのリンクを示します。|  

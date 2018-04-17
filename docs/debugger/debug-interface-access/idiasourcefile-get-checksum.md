@@ -1,29 +1,25 @@
 ---
-title: "Idiasourcefile::get_checksum |Microsoft ドキュメント"
-ms.custom: 
+title: Idiasourcefile::get_checksum |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSourceFile::get_checksum method
 ms.assetid: aad63a7e-4e22-44e4-8a5b-81b5174ced1e
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3cc815608c1871de7269a432e02f95acbb3e0d81
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 83670a9319bf6a16fad12f4f8443057144d8d2ca
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiasourcefilegetchecksum"></a>IDiaSourceFile::get_checksum
 チェックサムのバイトを取得します。  
@@ -40,7 +36,7 @@ HRESULT get_checksum (
   
 #### <a name="parameters"></a>パラメーター  
  `cbData`  
- [in](バイト単位)、データ バッファーのサイズ。  
+ [in]データバッファのサイズ（バイト単位）。  
   
  `pcbData`  
  [out]チェックサムのバイト数を返します。 このパラメーターを指定できません`NULL`です。  
@@ -58,6 +54,6 @@ HRESULT get_checksum (
   
  一般的なチェックサムは、32 バイトを超えるサイズではありませんが、チェックサムの最大サイズであると想定されません。 設定、`data`パラメーターを`NULL`チェックサムを取得するために必要なバイト数を取得します。 適切なサイズのバッファーを割り当てし、新しいバッファーでもう一度このメソッドを呼び出します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)   
  [IDiaSourceFile::get_checksumType](../../debugger/debug-interface-access/idiasourcefile-get-checksumtype.md)

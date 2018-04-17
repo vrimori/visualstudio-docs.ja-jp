@@ -1,12 +1,10 @@
 ---
-title: "アンマネージ API リファレンス (Visual Studio での Office 開発) |Microsoft ドキュメント"
-ms.custom: 
+title: アンマネージ API リファレンス (Visual Studio での Office 開発) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - Office development in Visual Studio, unmanaged API reference
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 640e292719f8d466ba21cc449ea624527b50bcf0
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: e06ec998dc4b9c23b38526563ce8b501866769b0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unmanaged-api-reference-office-development-in-visual-studio"></a>アンマネージ API リファレンス (Visual Studio での Office 開発)
   2007 Microsoft Office system 以降では、Office アプリケーションを使用して、 [IManagedAddin インターフェイス](../vsto/imanagedaddin-interface.md)に VSTO アドイン ローダー コンポーネントに含まれている呼び出しへのインターフェイス、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]です。 このコンポーネントは、VSTO マネージ アドインの読み込みに使用されます。このインターフェイスを実装することで、独自の VSTO アドイン ローダー コンポーネントを作成できます。  

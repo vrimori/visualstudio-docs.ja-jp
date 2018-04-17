@@ -1,12 +1,10 @@
 ---
-title: "Office プロジェクト テンプレートの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: Office プロジェクト テンプレートの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -32,13 +30,14 @@ helpviewer_keywords:
 - Outlook [Office development in Visual Studio], project templates
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 634ebd13d214f2d354e150b47f9dd50757bd2817
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: c8b82da48e04e9c38f16af3cdcc504f7c1fd070f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="office-project-templates-overview"></a>Office プロジェクト テンプレートの概要
   Visual Studio の Microsoft Office Developer Tools には、次の種類の Office ソリューションの作成に使用できるプロジェクト テンプレートが含まれています。  
@@ -47,7 +46,7 @@ ms.lasthandoff: 01/10/2018
   
 -   [VSTO アドイン](#AppLevel)  
   
- これらの種類の Office ソリューションの詳細な比較についてを参照してください。 [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md).  
+ これらの種類の Office ソリューションの詳細な比較についてを参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)です。  
   
  Office プロジェクト テンプレートは、 **[新しいプロジェクト]** ダイアログ ボックスの **[Visual C#]** 言語ノードおよび **[Visual Basic]** 言語ノードの下の **[Office]** ノードで使用できます。 各テンプレートでは、アセンブリ参照、デバッグ設定など、対象アプリケーションに適した構成を持つプロジェクトが生成されます。  
   
@@ -169,7 +168,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="excel-add-ins-xla-files"></a>Excel アドイン (.xla ファイル)  
  Excel VSTO アドイン (.xla ファイル) を作成するための Office プロジェクトは存在しません。 ブックを .xla ファイルとして保存できますが、サポートされていない操作であり、推奨できません。 マネージ コード拡張機能として設定されたブックを保存するかどうか、 **Microsoft Office Excel アドイン (\*.xla)**ファイルを選択できるように、**アドイン**別のブックに適用する ダイアログ ボックス。 VSTO アドインの適用後に対象のブックでコードが実行されることもありますが、このような Office ソリューションの使用方法はサポートされていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [Office ソリューションの開発](../vsto/developing-office-solutions.md)   
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   

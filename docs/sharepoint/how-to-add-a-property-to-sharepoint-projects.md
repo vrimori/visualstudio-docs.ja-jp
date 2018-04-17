@@ -1,12 +1,10 @@
 ---
-title: "方法: SharePoint プロジェクトにプロパティを追加 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: SharePoint プロジェクトにプロパティを追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - SharePoint projects, extending
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: a4318550e74d5324195de173659d96abaf952979
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: fe3b94d7f2072565b2adc2ab7c3c9825ca21ad57
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-a-property-to-sharepoint-projects"></a>方法: SharePoint プロジェクトにプロパティを追加する
   プロジェクトの拡張機能を使用すると、任意の SharePoint プロジェクトにプロパティを追加します。 このプロパティを表示、**プロパティ**ウィンドウで、プロジェクトを選択すると**ソリューション エクスプ ローラー**です。  
@@ -48,9 +47,9 @@ ms.lasthandoff: 01/10/2018
   
  プロパティの値に変更を保持する、**設定**プロパティのアクセサーは、次の Api を使用します。  
   
--   `CustomUserFileProperty`使用して、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectUserFileData%2A>プロジェクト ユーザー オプション ファイルにその値を保存するプロパティです。  
+-   `CustomUserFileProperty` 使用して、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectUserFileData%2A>プロジェクト ユーザー オプション ファイルにその値を保存するプロパティです。  
   
--   `CustomProjectFileProperty`使用して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetPropertyValue%2A>プロジェクト ファイルにその値を保存する方法です。  
+-   `CustomProjectFileProperty` 使用して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetPropertyValue%2A>プロジェクト ファイルにその値を保存する方法です。  
   
  これらのファイルでデータの永続化の詳細については、次を参照してください。 [SharePoint プロジェクト システムの拡張機能でのデータの保存](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)です。  
   
@@ -83,7 +82,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="deploying-the-extension"></a>拡張機能の配置  
  拡張機能を展開するには、作成、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]アセンブリおよびその他の拡張機能を配布するファイルの拡張機能 (VSIX) にパッケージ化します。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールの拡張機能の配置](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint プロジェクトの拡張](../sharepoint/extending-sharepoint-projects.md)   
  [方法: SharePoint プロジェクトの拡張機能を作成します。](../sharepoint/how-to-create-a-sharepoint-project-extension.md)   
  [方法: SharePoint プロジェクトへのショートカット メニュー項目の追加](../sharepoint/how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md)   

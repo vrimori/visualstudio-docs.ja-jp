@@ -1,13 +1,10 @@
 ---
-title: "Windows の制限事項が Office ドキュメントのコントロールをフォーム |Microsoft ドキュメント"
-ms.custom: 
+title: Windows の制限事項が Office ドキュメントのコントロールをフォーム |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -23,14 +20,14 @@ helpviewer_keywords:
 - Windows Forms controls [Office development in Visual Studio], Toolbox
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2c8795b643afff2cc02d507a1764871aa0e0e181
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: c3180de49b1ede89e6eb5e66d786247ce2700888
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="limitations-of-windows-forms-controls-on-office-documents"></a>Office ドキュメントでの Windows フォーム コントロールの制限事項
   Microsoft Office Word ドキュメントまたは Microsoft Office Excel ワークシートに追加される Windows フォーム コントロールと Windows フォームに追加される Windows フォーム コントロールの間には、いくつか違いがあります。 たとえば、追加、<xref:Microsoft.Office.Tools.Word.Controls.Button>など、ドキュメントのプロパティを制御<xref:Microsoft.Office.Tools.Word.Controls.Button.Dock%2A>、 <xref:Microsoft.Office.Tools.Word.Controls.Button.Anchor%2A>、および<xref:Microsoft.Office.Tools.Word.Controls.Button.TabIndex%2A>期待どおりに動作しません。  
@@ -194,7 +191,7 @@ ms.lasthandoff: 01/10/2018
 ### <a name="support-for-legacy-activex-controls"></a>従来の ActiveX コントロールのサポート  
  既存の Word 文書または ActiveX コントロールを含む Excel ブックを使用するドキュメント レベルの Office プロジェクトを作成する場合の ActiveX コントロールの機能は失われます。ただし、Visual Studio 内からドキュメントに新しい ActiveX コントロールを追加するためのサポートされていません。 たとえば、Word 文書からボタンがある場合、**コントロール**Visual Basic for Applications (VBA) マクロを実行しているツールボックス、引き続き、ドキュメントを Office プロジェクトで使用した後、マクロを実行します。 ただし、ActiveX コントロールと VBA マクロを削除し、Windows フォーム コントロールに置き換えるをマネージ コードをお勧めはします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
  [Windows フォームでコントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   

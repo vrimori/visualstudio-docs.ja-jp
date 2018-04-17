@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: 項目テンプレートにカスタム動作プロジェクト項目の作成、パート 1 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: 項目テンプレートにカスタム動作プロジェクト項目の作成、パート 1 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, defining new project item types
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: dae92a4c20130425fa93a413856f3d2cb5a37387
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: e690d18bae72b59234f2f90cbcf903b9941df7d6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1"></a>チュートリアル: 項目テンプレート、第 1 部にカスタム動作プロジェクト項目を作成します。
   Visual Studio の SharePoint プロジェクト システムは、プロジェクト項目の種類を独自に作成することによって拡張することができます。 このチュートリアルでは、SharePoint サイトでカスタム アクションを作成する SharePoint プロジェクトに追加できるプロジェクト項目を作成します。 カスタム アクションを追加するメニュー項目、**サイトの操作**SharePoint サイトのメニュー。  
@@ -47,7 +46,7 @@ ms.lasthandoff: 01/10/2018
  これは、独立したチュートリアルです。 このチュートリアルを完了すると、項目テンプレートにウィザードを追加してプロジェクト項目を拡張できるようになります。 詳細については、次を参照してください。[チュートリアル: 項目テンプレート、第 2 部にカスタム動作プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)です。  
   
 > [!NOTE]  
->  完成したプロジェクト、コード、およびこのチュートリアルでは、次の場所から他のファイルを含むサンプルをダウンロードすることができます: [http://go.microsoft.com/fwlink/?LinkId=191369](http://go.microsoft.com/fwlink/?LinkId=191369)です。  
+>  完成したプロジェクト、コード、およびこのチュートリアルでは、次の場所から他のファイルを含むサンプルをダウンロードすることができます: [ http://go.microsoft.com/fwlink/?LinkId=191369](http://go.microsoft.com/fwlink/?LinkId=191369)です。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
@@ -90,7 +89,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  **名前**ボックスに、入力**CustomActionProjectItem**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **CustomActionProjectItem**プロジェクトを**ソリューション エクスプ ローラー**です。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **CustomActionProjectItem**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
 #### <a name="to-create-the-item-template-project"></a>項目テンプレート プロジェクトを作成するには  
   
@@ -104,7 +103,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  **名前**ボックスに、入力**ItemTemplate**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **ItemTemplate**プロジェクトがソリューションにします。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **ItemTemplate**プロジェクトがソリューションにします。  
   
 #### <a name="to-create-the-extension-project"></a>拡張機能プロジェクトを作成するには  
   
@@ -116,7 +115,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  **名前**ボックスに、入力**ProjectItemDefinition**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **ProjectItemDefinition**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **ProjectItemDefinition**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
   
 5.  Class1 コード ファイルをプロジェクトから削除します。  
   
@@ -430,7 +429,7 @@ ms.lasthandoff: 01/10/2018
     > [!NOTE]  
     >  場合、**スクリプト デバッグが無効** ダイアログ ボックスが表示されたら、選択、**はい**プロジェクトのデバッグを続行するにはボタン。  
   
-4.  **サイトの操作**] メニューの [選択**SharePoint デベロッパー センター**ブラウザーで web サイト http://msdn.microsoft.com/sharepoint/default.aspx が開かれことを確認し、web ブラウザーを閉じます。  
+4.  **サイトの操作**] メニューの [選択**SharePoint デベロッパー センター**、ブラウザーが web サイトを開くことを確認してください。 http://msdn.microsoft.com/sharepoint/default.aspx、し、web ブラウザーを閉じます。  
   
 ## <a name="cleaning-up-the-development-computer"></a>開発コンピューターのクリーンアップ  
  プロジェクト項目のテストが終わったら、プロジェクト項目テンプレートを Visual Studio の実験用インスタンスから削除します。  
@@ -452,13 +451,13 @@ ms.lasthandoff: 01/10/2018
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルを完了すると、項目テンプレートにウィザードを追加できるようになります。 ユーザーがカスタム動作プロジェクト項目を SharePoint プロジェクトに追加するときに、このウィザードは動作についての情報 (その動作が選択されたときに移動するための場所と URL など) を収集し、Elements.xml ファイルの新しいプロジェクト項目にこの情報を追加します。 詳細については、次を参照してください。[チュートリアル: 項目テンプレート、第 2 部にカスタム動作プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: 項目テンプレート、第 2 部にカスタム動作プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)   
  [カスタム SharePoint プロジェクト項目の種類を定義します。](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [SharePoint プロジェクト項目の項目テンプレートとプロジェクト テンプレートを作成します。](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   
  [SharePoint プロジェクト サービスの使用](../sharepoint/using-the-sharepoint-project-service.md)   
  [Visual Studio テンプレート スキーマ参照](/visualstudio/extensibility/visual-studio-template-schema-reference)   
  [アイコン用イメージ エディター](/cpp/windows/image-editor-for-icons)   
- [アイコン &#41; のアイコンまたはその他のイメージ (&) #40 です。 イメージ エディターを作成します。](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
+ [アイコンまたはその他のイメージの作成&#40;アイコン用イメージ エディター&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
   
   

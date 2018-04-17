@@ -1,12 +1,10 @@
 ---
-title: "カスタム作業ウィンドウ |Microsoft ドキュメント"
-ms.custom: 
+title: カスタム作業ウィンドウ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -27,13 +25,14 @@ helpviewer_keywords:
 - custom task panes [Office development in Visual Studio], about custom task panes
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 6a99fd7cc89190a8360341684dee91a7cf93f0e0
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: acbe91b0a7150ac3a04f9a0b33c8b95d371caf53
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-task-panes"></a>カスタム作業ウィンドウ
   作業ウィンドウは、通常、Microsoft Office アプリケーションのウィンドウの一辺にドッキングされているユーザー インターフェイス ウィンドウです。 カスタム作業ウィンドウは、独自の作業ウィンドウを作成し、ユーザーがソリューションの各機能にアクセスする際に使い慣れたインターフェイスを利用できるようにするものです。 たとえば、インターフェイスにはドキュメントを変更するコードや、データ ソースのデータを表示するコードを実行するコントロールが含まれます。  
@@ -129,7 +128,7 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は VSTO アドインがアンロードされるときに、カスタム作業ウィンドウで使用されたリソースを自動的にクリーンアップします。 呼び出す必要はありません、<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A>または<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A>内のメソッド、`ThisAddIn_Shutdown`プロジェクト内のイベント ハンドラー。 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は、`ThisAddIn_Shutdown` が呼び出される前に、<xref:Microsoft.Office.Tools.CustomTaskPane> で使用されているリソースをクリーンアップするため、これらのメソッドにより <xref:System.ObjectDisposedException> がスローされます。 詳細については`ThisAddIn_Shutdown`を参照してください[Office プロジェクトのイベント](../vsto/events-in-office-projects.md)  
   
-##  <a name="Managing"></a>複数のアプリケーション ウィンドウ内のカスタム作業ウィンドウの管理  
+##  <a name="Managing"></a> 複数のアプリケーション ウィンドウ内のカスタム作業ウィンドウの管理  
  複数のウィンドウを使用してドキュメントやその他の項目を表示するアプリケーションでカスタム作業ウィンドウを作成する場合、その作業ウィンドウをユーザーが必要とするときに確実に表示させるには、追加の手順を実行する必要があります。  
   
  すべてのアプリケーションのカスタム作業ウィンドウは、ドキュメント フレーム ウィンドウと関連付けられます。このウィンドウは、ドキュメントや項目のビューをユーザーに表示します。 作業ウィンドウは、関連付けられたウィンドウが表示されている場合にのみ表示されます。 ただし、すべてのアプリケーションでドキュメント フレーム ウィンドウが同じ方法で使用されるわけではありません。  
@@ -142,7 +141,7 @@ ms.lasthandoff: 01/10/2018
   
  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[操作方法: 管理タスク ウィンドウ Word VSTO アドインで?](http://go.microsoft.com/fwlink/?LinkId=136781)です。  
   
-##  <a name="Outlook"></a>Outlook  
+##  <a name="Outlook"></a> Outlook  
  Outlook 用のカスタム作業ウィンドウを作成するときには、カスタム作業ウィンドウが特定のエクスプローラーまたはインスペクター ウィンドウに関連付けられます。 エクスプローラーは、フォルダーの内容を表示するウィンドウであり、インスペクターは電子メール メッセージやタスクなどの項目を表示するウィンドウです。  
   
  複数のエクスプ ローラーやインスペクターのウィンドウでカスタム作業ウィンドウを表示する場合は、エクスプ ローラーまたはインスペクター ウィンドウが開いたときに、カスタム作業ウィンドウの新しいインスタンスを作成する必要があります。 そのためには、エクスプ ローラーまたはインスペクター ウィンドウが作成されるときに発生するイベントを処理し、次に、イベント ハンドラーで作業ウィンドウを作成します。 どのウィンドウを表示させるかに応じて、作業ウィンドウを非表示にしたり表示させたりするように、エクスプ ローラーおよびインスペクターのイベントを処理することもできます。  
@@ -177,7 +176,7 @@ ms.lasthandoff: 01/10/2018
   
  カスタム作業ウィンドウを明示的に削除しない場合は、Outlook のウィンドウで、カスタム作業ウィンドウの複数のインスタンスが表示される可能性があります。 Outlook ではウィンドウが再利用されることがありますが、再利用されるウィンドウにアタッチされたカスタム作業ウィンドウがあった場合、その作業ウィンドウへの参照は再利用されるウィンドウに残ります。  
   
-##  <a name="WordAndInfoPath"></a>Word、InfoPath、および PowerPoint  
+##  <a name="WordAndInfoPath"></a> Word、InfoPath、および PowerPoint  
  Word、InfoPath、および PowerPoint ではそれぞれのドキュメントが別々のドキュメント フレーム ウィンドウに表示されます。 これらのアプリケーションのカスタム作業ウィンドウを作成する場合、そのカスタム作業ウィンドウは特定のドキュメントにのみ関連付けられます。 ユーザーが別のドキュメントを開いた場合、前のドキュメントが再度表示されるまで、カスタム作業ウィンドウは非表示です。  
   
  複数のドキュメントでカスタム作業ウィンドウを表示する場合は、ユーザーが新しいドキュメントを作成するか、既存のドキュメントを開くときに、カスタム作業ウィンドウの新しいインスタンスを作成します。 そのためには、ドキュメントが作成または開かれるときに発生するイベントを処理し、次にイベント ハンドラーで作業ウィンドウを作成します。 どのドキュメントを表示させるかに応じて作業ウィンドウを非表示にしたり表示させたりするように、ドキュメント イベントを処理することもできます。  
@@ -225,7 +224,7 @@ ms.lasthandoff: 01/10/2018
   
 -   <xref:Microsoft.Office.Interop.PowerPoint.EApplication_Event.WindowDeactivate>  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: カスタム作業ウィンドウをアプリケーションに追加します。](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)   
  [チュートリアル: カスタム作業ウィンドウからアプリケーションの自動化](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)   
  [チュートリアル: リボン ボタンとカスタム作業ウィンドウを同期します。](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)   

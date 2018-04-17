@@ -1,23 +1,21 @@
 ---
-title: "ドメイン固有言語をカスタマイズするコードの記述 |Microsoft ドキュメント"
-ms.custom: 
+title: ドメイン固有言語をカスタマイズするコードの記述 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 81d0608189d45ed4ef9770a8fecdc61c7ebb118c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: cb058ba2467ae852491339dc64a3fba837249688
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="writing-code-to-customise-a-domain-specific-language"></a>ドメイン固有言語をカスタマイズするコードの記述
 このセクションでは、カスタム コードを使用して、アクセス、変更、またはドメイン固有言語でモデルを作成する方法を示しています。  
@@ -26,7 +24,7 @@ ms.lasthandoff: 02/09/2018
   
 -   **カスタム コマンド。** ダイアグラムを右クリックしてユーザーが呼び出すことができます、モデルを変更するコマンドを作成することができます。 詳細については、次を参照してください。[する方法: ショートカット メニューにコマンドを追加](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)です。  
   
--   **検証します。** モデルが正しい状態であることを検証するコードを記述することができます。 詳細については、次を参照してください。[ドメイン固有言語で検証](../modeling/validation-in-a-domain-specific-language.md)です。  
+-   **検証。** モデルが正しい状態であることを検証するコードを記述することができます。 詳細については、次を参照してください。[ドメイン固有言語で検証](../modeling/validation-in-a-domain-specific-language.md)です。  
   
 -   **既定の動作をオーバーライドします。** DslDefinition.dsl から生成されるコードの多くの側面を変更することができます。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)です。  
   
@@ -74,5 +72,5 @@ ms.lasthandoff: 02/09/2018
   
 -   **シリアル化**です。 ストアは、標準的なファイルが含まれているオブジェクトをシリアル化する方法を提供します。 シリアル化と逆シリアル化のルールをカスタマイズすることができます。 詳細については、次を参照してください。[ファイル記憶域のカスタマイズと XML シリアル化](../modeling/customizing-file-storage-and-xml-serialization.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドメイン固有言語のカスタマイズおよび拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)

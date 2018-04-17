@@ -1,12 +1,10 @@
 ---
-title: "方法: 安全なコントロールとしてマークが制御 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 安全なコントロールとしてマークが制御 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,13 +16,14 @@ helpviewer_keywords:
 - safe controls [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 9d34722f7dc9b9975429fac64311dd0b63c30fbe
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: d703beb24821663b08ed69238fcf27e2a752d64b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-mark-controls-as-safe-controls"></a>方法: コントロールを安全なコントロールとしてマークする
   セキュリティを SharePoint と区別するスクリプト インジェクションから保護されている Web コントロールがない Web コントロールです。 コントロールを保護または*安全なコントロール*、信頼されていないユーザーによってアクセスされることができます。 SharePoint プロジェクト項目のまたは安全なコントロール エントリ プロパティでも安全だとコントロールをマークすることができます、**パッケージ デザイナー**パッケージにアセンブリを追加するとします。 詳細については、次のトピックを参照してください。  
@@ -117,7 +116,7 @@ ms.lasthandoff: 01/10/2018
   
 16. Tab キーを選択し、[、 **OK** ] ダイアログ ボックスを閉じるボタンをクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージとプロジェクト アイテムの展開情報を提供します。](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)   
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   

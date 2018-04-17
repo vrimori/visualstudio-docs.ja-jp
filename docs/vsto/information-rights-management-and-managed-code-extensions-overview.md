@@ -1,12 +1,10 @@
 ---
-title: "Information Rights Management とマネージ コード拡張機能の概要 |Microsoft ドキュメント"
-ms.custom: 
+title: Information Rights Management とマネージ コード拡張機能の概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +17,14 @@ helpviewer_keywords:
 - Office documents [Office development in Visual Studio, restricted permissions
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 561f17acd17cb34892d3f2d4f0eefa05dfced0e4
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: c70f5667cf7b2d795083589db9d9e4d5ca92193d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="information-rights-management-and-managed-code-extensions-overview"></a>Information Rights Management とマネージ コード拡張機能の概要
   Microsoft Office Word および Microsoft Office Excel は、Information Rights Management (IRM)、承認されていないユーザーを表示したり、機密情報を変更することを防止するのに役立つ機能を提供します。 詳細については、Information Rights Management のしくみ、特定の Office アプリケーションのヘルプを参照してください。  
@@ -42,7 +41,7 @@ ms.lasthandoff: 01/10/2018
   
  オブジェクト モデルへのプログラムによるアクセスを許可する既定のアクセス許可の設定を変更すると、問題を解決するには、文書またはブックにフル コントロール アクセス権を持つユーザーが必要があります。 詳細については、次を参照してください。[する方法: コード実行ドキュメントの背後で制限されたアクセス許可を許可](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドキュメント レベルのソリューションでドキュメントの保護](../vsto/document-protection-in-document-level-solutions.md)   
  [Office ドキュメントのパスワード保護](../vsto/password-protection-on-office-documents.md)   
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)   

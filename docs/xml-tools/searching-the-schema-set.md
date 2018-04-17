@@ -1,23 +1,21 @@
 ---
-title: "スキーマ セットの検索 |Microsoft ドキュメント"
-ms.custom: 
+title: スキーマ セットの検索 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: ec1395e0-d03c-4130-810d-f2db656937bd
-caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: a61221f8349064305bbd925016121da01d52515b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 6328e3febf8d7279ad0a4bcac3ca4be54eb42c20
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="searching-the-schema-set"></a>スキーマ セットの検索
 XML スキーマ エクスプローラーでは、次の方法でスキーマ セットを検索できます。  
@@ -52,5 +50,5 @@ XML スキーマ エクスプローラーでは、次の方法でスキーマ �
 ## <a name="clearing-search-results"></a>検索結果のクリア  
  検索結果をクリアする] をクリックして、 **x** XML スキーマ エクスプ ローラー検索ツールバーの [概要結果ペインでボタンをクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML スキーマ エクスプローラー](../xml-tools/xml-schema-explorer.md)

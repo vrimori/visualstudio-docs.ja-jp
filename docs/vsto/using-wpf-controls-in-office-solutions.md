@@ -2,12 +2,9 @@
 title: Office ソリューションで WPF コントロールの使用 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - office-development
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - WPF [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 74ee8c574f6f654aca166844d85a30f2d3d9d4c3
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: d4aa0fce1700f6608d36231a3ab38db97e5ce826
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-wpf-controls-in-office-solutions"></a>Office ソリューションでの WPF コントロールの使用
   Visual Studio の Office 開発ツールを使用して作成されたソリューションは、Windows フォーム コントロールを使用して直接操作することを前提としていますが、ソリューションで WPF コントロールを使用することもできます。 Windows Presentation Foundation (WPF) は、ユーザー インターフェイスをデザインするときに Windows フォームの代わりとして使用できます。 WPF では、UI、メディア、および文書を取り込むための新しい手法として、Extensible Application Markup Language (XAML) というマークアップ言語を使用します。 詳細については、次を参照してください。 [Visual Studio 2015 での WPF の概要](/dotnet/framework/wpf/getting-started/introduction-to-wpf-in-vs)です。  
@@ -117,7 +114,7 @@ ms.lasthandoff: 01/10/2018
   
 -   [チュートリアル: WPF コンテンツへのスタイルの適用](/dotnet/framework/winforms/advanced/walkthrough-styling-wpf-content)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office UI のカスタマイズ](../vsto/office-ui-customization.md)   
  [Windows フォームでコントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)   
  [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   

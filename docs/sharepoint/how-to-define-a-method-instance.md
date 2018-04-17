@@ -1,12 +1,10 @@
 ---
-title: "方法: メソッド インスタンスの定義 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: メソッド インスタンスの定義 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +17,14 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], method
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: aa5f1adcaacacd2b9e08d4c12cdcafbd5f561200
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 44a31af455b09db5fb359339cee8da7b3ca0c77e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-define-a-method-instance"></a>方法: メソッド インスタンスを定義する
   モデルでは、すべてのメソッドの少なくとも 1 つのメソッドのインスタンスを定義する必要があります。  
@@ -44,7 +43,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  **プロパティ**ウィンドウ、メソッドのインスタンスのプロパティを設定します。 各プロパティの詳細については、次を参照してください。 [MethodInstance](http://go.microsoft.com/fwlink/?LinkID=169282)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   
  [方法: エンティティをモデルに追加します。](../sharepoint/how-to-add-an-entity-to-a-model.md)   
  [方法: メソッドにパラメーターを追加](../sharepoint/how-to-add-a-parameter-to-a-method.md)   

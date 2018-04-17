@@ -1,12 +1,10 @@
 ---
-title: "方法: 検索後にプログラムで復元を選択した |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 検索後にプログラムで復元を選択した |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - selections, restoring after a search
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: adbc31968b74dd6cb47f06e6feb2cd7d2848f7e7
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 7d1f4181a1ce9431ecbdb69a4b4f00a70f8259d0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-restore-selections-after-searches"></a>方法: プログラムによって検索後に選択範囲を復元する
   検索および、ドキュメント内のテキストを置換する場合は、検索が完了した後、ユーザーの元の選択範囲を復元することができます。  
@@ -54,7 +53,7 @@ ms.lasthandoff: 01/10/2018
  [!code-vb[Trin_VstcoreWordAutomation#82](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#82)]
  [!code-csharp[Trin_VstcoreWordAutomation#82](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#82)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: プログラムによって検索し、文書内のテキストを置換](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)   
  [方法: プログラムによって Word の検索オプションを設定](../vsto/how-to-programmatically-set-search-options-in-word.md)   
  [方法: 文書で見つかった項目をプログラムによってループ](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)   

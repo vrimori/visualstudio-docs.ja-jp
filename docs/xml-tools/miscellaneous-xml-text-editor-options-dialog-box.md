@@ -1,23 +1,21 @@
 ---
-title: "[その他の XML、テキスト エディター オプション] ダイアログ ボックス |Microsoft ドキュメント"
-ms.custom: 
+title: '[その他の XML、テキスト エディター オプション] ダイアログ ボックス |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: fd3fff31-cddc-422d-a2f0-a5a1ef492afd
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 4773bf87e89bd504b477d9a1a31dfe961a3f29ff
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: ccbdfae65792fb6816a0604db6339a9d63fa2ccb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="miscellaneous-xml-text-editor-options-dialog-box"></a>[その他] ([オプション] ダイアログ ボックス - [テキスト エディター] - [XML])
 このダイアログ ボックスでは、XML エディターのオートコンプリートとスキーマの設定を変更することができます。 アクセスすることができます、**オプション**からダイアログ ボックス、**ツール**メニュー。  
@@ -62,6 +60,6 @@ ms.lasthandoff: 12/22/2017
  **スキーマ**  
  スキーマ キャッシュの場所を指定します。 参照ボタン (**.**) が表示されます、**ディレクトリの参照** ダイアログ ボックスで、現在のスキーマ キャッシュの場所。 別のディレクトリを選択またはダイアログ ボックスで、フォルダーを選択することができます右クリックしを選択し、**開く**ディレクトリに参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML ドキュメントのプロパティと [プロパティ] ウィンドウ](../xml-tools/xml-document-properties-properties-window.md)   
  [XML エディターのコンポーネント](../xml-tools/xml-editor-components.md)

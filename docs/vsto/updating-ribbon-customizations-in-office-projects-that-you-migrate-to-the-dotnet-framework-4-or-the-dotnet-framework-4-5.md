@@ -1,13 +1,10 @@
 ---
-title: ".NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトのリボンのカスタマイズの更新 |Microsoft ドキュメント"
-ms.custom: 
+title: .NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトのリボンのカスタマイズの更新 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - Office projects [Office development in Visual Studio], migrating to .NET Framework 4
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4d3c2e834b3a618bf033ef7f37ca8bbac7d0efcf
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 98c5dee34fd40506289cf4a9f31488c3acc710ba
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-ribbon-customizations-in-office-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトのリボンのカスタマイズの更新
   リボンのカスタマイズを使用して作成されたが、プロジェクトに含まれているかどうか、**リボン (ビジュアル デザイナー)**プロジェクト項目、ターゲット フレームワークに変更する場合、プロジェクト コードに、次の変更を行う必要があります、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]またはあとで。  
@@ -116,7 +113,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  Visual Basic プロジェクトでは、ファイルの最後にある `ThisRibbonCollection` クラスを検索します。 このクラスの宣言を変更して、Microsoft.Office.Tools.Ribbon.RibbonReadOnlyCollection から継承されないようにします。  
   
-##  <a name="ribboncontrols"></a>リボン コントロールをインスタンス化します。  
+##  <a name="ribboncontrols"></a> リボン コントロールをインスタンス化します。  
  リボン コントロールを動的にインスタンス化するすべてのコードを変更する必要があります。 .NET Framework 3.5 を対象とするプロジェクトでは、リボン コントロールは特定のシナリオで直接インスタンス化できるクラスです。 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とするプロジェクトでは、これらのコントロールはインターフェイスであるため、直接インスタンス化できません。 コントロールを作成するには、<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> オブジェクトが提供するメソッドを使用する必要があります。  
   
  <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> オブジェクトにアクセスするには、次の 2 つの方法があります。  
@@ -151,7 +148,7 @@ ms.lasthandoff: 01/10/2018
 |<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonTab%2A>|  
 |<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonToggleButton%2A>|  
   
-##  <a name="ribbonevents"></a>リボン イベントの処理  
+##  <a name="ribbonevents"></a> リボン イベントの処理  
  リボン コントロールのイベントを処理するすべてのコードを変更する必要があります。 .NET Framework 3.5 を対象とするプロジェクトでは、これらのイベントは汎用の <xref:System.EventHandler%601> デリゲートによって処理されます。 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とするプロジェクトでは、これらのイベントは他のデリゲートによって処理されるようになりました。  
   
  次の表は、リボンのイベントと、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とするプロジェクトでこれらのイベントに関連付けられているデリゲートを示しています。  
@@ -191,8 +188,8 @@ Me.tab1.Position = Me.Factory.RibbonPosition.AfterOfficeId("TabHome")
 this.tab1.Position = this.Factory.RibbonPosition.AfterOfficeId("TabHome");  
 ```  
   
-## <a name="see-also"></a>参照  
- [Migrating Office Solutions to the .NET Framework 4 or later](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   
+## <a name="see-also"></a>関連項目  
+ [.NET Framework 4 以降への Office ソリューションの移行](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   
  [リボン デザイナー](../vsto/ribbon-designer.md)  
   
   

@@ -1,12 +1,10 @@
 ---
-title: "方法: IIS のプロパティ設定を確認してください |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: IIS のプロパティ設定を確認してください |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - Web applications, setting properties
 - properties [debugger], setting with IIS administration tool
 ms.assetid: 9efc50bf-02fb-4750-9b3e-f03c38f10d8b
-caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 5a9bda1bdf3fadffedc71873ddec6733b68651a1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 2b351f45d8e45116894d08f4a813e7c427f4cb5c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-verify-iis-property-settings"></a>方法 : IIS のプロパティ設定を確認する
 IIS 管理ツールで、Web アプリケーションのプロパティを設定できます。 これらのプロパティは、実行するアプリケーションに合わせて正しく設定する必要があります。そのため、トラブルシューティングのときに、多くの場合、設定を確認することが必要になります。  
@@ -38,7 +36,7 @@ IIS 管理ツールで、Web アプリケーションのプロパティを設定
   
 ### <a name="to-check-iis-settings-for-the-web-application"></a>Web アプリケーションの IIS 設定をチェックするには  
   
-1.  開く、**管理ツール**ウィンドウ: に、**開始** メニューのをポイント**プログラム**、順にクリック**管理ツール**です。 場合**管理ツール**に表示されない、**プログラム**メニューから、[検索対象] で、**コントロール パネルの** です。  
+1.  開く、**管理ツール**ウィンドウ: に、**開始** メニューのをポイント**プログラム**、順にクリック**管理ツール**です。 場合**管理ツール**に表示されない、**プログラム**メニューから、[検索対象] で、**コントロール パネルの**です。  
   
     -   Windows 2000 では、選択**インターネット サービス マネージャー**です。  
   
@@ -66,7 +64,7 @@ IIS 管理ツールで、Web アプリケーションのプロパティを設定
   
 6.  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]アプリケーションでは、必ず仮想フォルダーに、アプリケーションで設定されたアプリケーション名には、**インターネット インフォメーション サービス (IIS) マネージャー**、**インターネット サービス マネージャー**または**インターネット インフォメーション サービス**です。  
   
-    1.  Web アプリケーションで**プロパティ**ウィンドウで、**ディレクトリ** タブの [仮想ディレクトリがアプリケーションの場合、または**ホーム ディレクトリ**] タブの場合は、アプリケーションがWeb サイトです。  
+    1.  Web アプリケーションで**プロパティ**ウィンドウで、**ディレクトリ** タブの 仮想ディレクトリがアプリケーションの場合、または**ホーム ディレクトリ** タブの場合は、アプリケーションがWeb サイトです。  
   
     2.  いることを確認の名前、**ローカル パス**がアプリケーションを実際に配置したディレクトリの名前に一致します。  
   
@@ -80,5 +78,5 @@ IIS 管理ツールで、Web アプリケーションのプロパティを設定
   
 9. をクリックして**OK**を閉じる、**インターネット インフォメーション サービス (IIS) マネージャー**、**インターネット サービス マネージャー**、または**インターネット インフォメーション サービス** ダイアログ ボックス。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トラブルシューティング](../debugger/debugging-web-applications-troubleshooting.md)

@@ -1,23 +1,21 @@
 ---
-title: "XML ドキュメントのプロパティ、プロパティ ウィンドウ |Microsoft ドキュメント"
-ms.custom: 
+title: XML ドキュメントのプロパティ、プロパティ ウィンドウ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 9dbb34d9-02ea-4201-b445-c98a0eb0d6db
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: ceabc30399871c7bbe7fef737e7ecbd87187257d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 4d6529d936515c23c193a38861f1f13b71002566
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-document-properties-properties-window"></a>XML ドキュメント プロパティと [プロパティ] ウィンドウ
 **プロパティ**ウィンドウは、XML エディターでアクティブになっているドキュメントに関する基本的な情報を提供します。 使用可能なプロパティは、現在アクティブになっている XML ドキュメントの種類によって異なります。  
@@ -48,6 +46,6 @@ ms.lasthandoff: 12/22/2017
   
  異なるスタイル シートがであることを指定するこのプロパティを使用する XSLT ファイルを編集するには、際に使用される、 **Show XSLT Output**または**XSLT のデバッグ**コマンドを選択します。 たとえば、親のスタイル シートにインクルードされるスタイル シートを編集しているときに、そのように指定することができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML エディター](../xml-tools/xml-editor.md)   
  [XML エディターのコンポーネント](../xml-tools/xml-editor-components.md)

@@ -1,12 +1,10 @@
 ---
-title: "フォルダーの操作 |Microsoft ドキュメント"
-ms.custom: 
+title: フォルダーの操作 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,13 +16,14 @@ helpviewer_keywords:
 - Outlook [Office development in Visual Studio], folders
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 5d80d70809d0f60f8531d3ead43060f2a32bbe07
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 73ad9fdcfff1b0df68b39e566ac4723e0e743edd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-folders"></a>フォルダーの操作
   <xref:Microsoft.Office.Interop.Outlook.MAPIFolder> クラスには、フォルダーへのアクセス、フォルダーの作成およびカスタマイズに使用するメソッドとプロパティが含まれています。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 01/10/2018
   
  Outlook タスクと Outlook オブジェクト モデルについて詳しくは、「 [Outlook Object Model Overview](../vsto/outlook-object-model-overview.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [連絡先アイテムの操作](../vsto/working-with-contact-items.md)   
  [メール アイテムの操作](../vsto/working-with-mail-items.md)   
  [予定表アイテムの操作](../vsto/working-with-calendar-items.md)   

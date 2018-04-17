@@ -1,23 +1,21 @@
 ---
-title: "チュートリアル: XSLT プロファイラー |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: XSLT プロファイラー |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 87387c9a-2e89-4801-ad51-83740cd6ea25
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: be03e554bbdf55c447437116373cc60b15df391e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: c3338360e0acbcd9d4caea256074b892575c7bc6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-xslt-profiler"></a>チュートリアル: XSLT プロファイラー
 XSLT プロファイラーは、詳細な XSLT パフォーマンス レポートを作成することにより、XSLT コード内のパフォーマンス関連の問題を計測、評価、および特定できるようにします。 XSLT プロファイラーには、XSL および XSLT のスタイル シートの最適化に役立つヒントが含まれています。 最高のパフォーマンスが必要になる XSLT アプリケーションには、このツールが不可欠です。  
@@ -109,5 +107,5 @@ XSLT プロファイラーは、詳細な XSLT パフォーマンス レポー�
   
 4.  [プロセス] ビューが含まれるテーブルが表示されます、**プロセス ID**、**プロセス名**、**開始時間**、および**終了時刻**です。 データを並べ替えるには、列名をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [チュートリアル: XSLT 階層の使用](../xml-tools/walkthrough-using-xslt-hierarchy.md)

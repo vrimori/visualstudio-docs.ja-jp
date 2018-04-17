@@ -1,23 +1,21 @@
 ---
-title: "Visual Studio の色を共有 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio の色を共有 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 8d11b9a0-6175-4f2e-8e7f-79daee1bfd41
-caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 45bbff985a45ba4d04945ec95587c4c6c9cc448c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: b9093eef6166c86eb6e1ffdf602b4fb75841834d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="shared-colors-for-visual-studio"></a>Visual Studio 用の共有の色
 共通の Visual Studio シェル要素を使用する UI を設計するまたはインターフェイス要素に同様の機能と一致するか場合、は、パッケージ定義ファイルに既存のトークン名を使用して、選択し、色を割り当てます。 これにより、UI が Visual Studio 環境全体で一貫性を保ち、テーマが追加された場合や更新された場合に自動的に更新されるようになります。  
@@ -858,7 +856,7 @@ ms.lasthandoff: 12/22/2017
 | リンクの背景 | `SearchControl.PopupButtonMouseDownBackgroundGradientBegin`<br />(グラデーション境界は、このトークンのテーマの UI では使用されません。) |
 | 前景 (リンク テキスト) | `SearchControl.PopupButtonMouseDownText` |
 
-###  <a name="BKMK_TreeView"></a>ツリー ビュー  
+###  <a name="BKMK_TreeView"></a> ツリー ビュー  
 ソリューション エクスプ ローラー、サーバー エクスプ ローラー、クラス ビューなど、いくつかのツール ウィンドウの色が色の名前によって制御される階層組織スキームを実装する、`TreeView`カテゴリ。 ツリー ビューのすべての項目に背景色とテキスト色があります。 入れ子にされた子要素がある項目には、項目が展開されているか折りたたまれているかを示すグリフもあります。  
 
 ![ツリー ビュー (赤線)](../../extensibility/ux-guidelines/media/0303-147_treeviewredline.png "0303 147_TreeViewRedline")<br />ツリー ビュー (赤線)
@@ -1041,7 +1039,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="command-structures"></a>コマンドの構造  
 
-###  <a name="BKMK_CommandMenus"></a>メニュー  
+###  <a name="BKMK_CommandMenus"></a> メニュー  
 メニューは、Visual Studio 内で複数の場所で発生することができます。 埋め込まれたドキュメントまたはツール ウィンドウ、または IDE 全体のさまざまな場所で右クリックして、メイン メニュー バーです。 他の UI 要素に関連付けられたメニューの実装については、それぞれの要素のセクションで説明します。 Visual Studio 環境で提供される標準のメニュー実装を常に使用してください。 ただし、まれに、標準の Visual Studio メニューにアクセスできないことがあります。 このような場合は、次のトークン名を使用して、UI が Visual Studio の他のメニューと一貫性を保つようにします。  
 
 ![Visual Studio のメニュー (赤線)](../../extensibility/ux-guidelines/media/0303-000_menuredline.png "0303 000_MenuRedline")<br />Visual Studio のメニュー (赤線)
@@ -1282,7 +1280,7 @@ ms.lasthandoff: 12/22/2017
 | 前景 (テキスト) | `Environment.CommandBarTextInactive` |
 | 境界線 | N/A |
 
-####  <a name="BKMK_CommandComboBox"></a>コマンド バー コンボ ボックス
+####  <a name="BKMK_CommandComboBox"></a> コマンド バー コンボ ボックス
 
 > [!IMPORTANT]
 > コンボ ボックスはドロップダウンに似ていますが、編集可能なテキスト領域が含まれます。 ドロップダウンに編集可能なテキスト領域が含まれていない場合は、色のトークンを使用して[コマンド バーのドロップダウンで](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandDropDown)です。  
@@ -1307,7 +1305,7 @@ ms.lasthandoff: 12/22/2017
 
 **コマンド バーのドロップダウン ボタン: 既定の状態**  
 
-![コンボ ボックス ドロップ &#45; 下矢印ボタン](../../extensibility/ux-guidelines/media/0303-031_comboboxdropdownbutton.png "0303 031_ComboBoxDropdownButton")<br />コマンド バーのドロップダウン ボタン
+![コンボ ボックス ドロップ&#45;下向きボタン](../../extensibility/ux-guidelines/media/0303-031_comboboxdropdownbutton.png "0303 031_ComboBoxDropdownButton")<br />コマンド バーのドロップダウン ボタン
 
 | 要素 | トークン名: Category.color |
 | --- | --- |
@@ -1414,7 +1412,7 @@ ms.lasthandoff: 12/22/2017
 | 背景 | なし |
 | 前景 (グリフ) | `Environment.ComboBoxDisabledGlyph` |
 
-####  <a name="BKMK_CommandDropDown"></a>コマンド バーのドロップダウン
+####  <a name="BKMK_CommandDropDown"></a> コマンド バーのドロップダウン
 
 > [!IMPORTANT]
 >  ドロップダウンはコンボ ボックスに似ていますが、編集可能なテキスト領域がありません。 ドロップダウンに編集可能なテキスト領域が含まれている場合は、色のトークンを使用して[コマンド バー コンボ ボックス](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandComboBox)です。  
@@ -1489,7 +1487,7 @@ ms.lasthandoff: 12/22/2017
 
  **コマンド バーのドロップダウンの選択フィールド: 押された状態**  
 
-![ドロップ &#45; 押された選択フィールド ダウン](../../extensibility/ux-guidelines/media/0303-049_dropdownselectionfieldpressed.png "0303 049_DropdownSelectionFieldPressed")<br />コマンドを押されたドロップダウンの選択フィールド バー
+![Drop&#45;押された選択フィールド ダウン](../../extensibility/ux-guidelines/media/0303-049_dropdownselectionfieldpressed.png "0303 049_DropdownSelectionFieldPressed")<br />コマンドを押されたドロップダウンの選択フィールド バー
 
 | 要素 | トークン名: Category.color |
 | --- | --- |

@@ -1,26 +1,24 @@
 ---
-title: "方法: - Just-in-time デバッガーに応答 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: - Just-in-time デバッガーに応答 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 05/23/17
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Visual Studio], Just-In-Time
 - Just-In-Time debugging
 ms.assetid: 14972d5f-69bc-479b-9529-03b8787b118f
-caps.latest.revision: "48"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8c954cd95da7b6dd2ba0c2938852b939ae396525
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 4da0cad183aa39e26c39f48bca401194c9eab2f9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-respond-to-the-just-in-time-debugger"></a>方法: - Just-in-time デバッガーへの応答
 
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 
 1. (Web アプリ)Web アプリを実行しようとする場合は、スクリプトのデバッグを無効にできます。
 
-    Internet Explorer またはエッジでは、[インターネット オプション] ダイアログ ボックスでスクリプトのデバッグを無効にします。 これらの設定にアクセスすることができます、**コントロール パネルの**  > **ネットワークとインターネット** > **インターネット オプション**(正確な手順が異なります、Windows のバージョンおよびお使いのブラウザー)。
+    Internet Explorer またはエッジでは、[インターネット オプション] ダイアログ ボックスでスクリプトのデバッグを無効にします。 これらの設定にアクセスすることができます、**コントロール パネルの** > **ネットワークとインターネット** > **インターネット オプション**(正確な手順が異なります、Windows のバージョンおよびお使いのブラウザー)。
 
     ![JITInternetOptions](../debugger/media/jitinternetoptions.png "JITInternetOptions")
 
@@ -51,5 +49,5 @@ ms.lasthandoff: 12/22/2017
 
     IIS マネージャーでは、サーバー ノードを右クリックして、選択**機能ビューに切り替える**です。 [ASP.NET] セクションで選択**.NET コンパイル**を選択するかどうかを確認し、 **False** (手順は、IIS の旧バージョンでは異なります) のデバッグ動作として。
   
-## <a name="see-also"></a>参照    
+## <a name="see-also"></a>関連項目    
  [デバッガーの基本事項](../debugger/debugger-basics.md)   

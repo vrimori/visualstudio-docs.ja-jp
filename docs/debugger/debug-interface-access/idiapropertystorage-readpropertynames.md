@@ -1,29 +1,25 @@
 ---
-title: "IDiaPropertyStorage::ReadPropertyNames |Microsoft ドキュメント"
-ms.custom: 
+title: IDiaPropertyStorage::ReadPropertyNames |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaPropertyStorage::ReadPropertyNames
 ms.assetid: f8bcab77-afca-4a8f-8710-697842f8a518
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 95f535bd314ec998c83ec9c02aab2190646f3c53
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c1624e3577128556a098f96fd41c9ba1dc1eb84e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiapropertystoragereadpropertynames"></a>IDiaPropertyStorage::ReadPropertyNames
 対応する文字列名を取得では、プロパティの識別子を指定します。  
@@ -54,5 +50,5 @@ HRESULT ReadPropertyNames (
 ## <a name="remarks"></a>コメント  
  返されるプロパティの名前を解放する必要があります (を呼び出して、`SysFreeString`関数) が不要になったときにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

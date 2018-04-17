@@ -1,26 +1,24 @@
 ---
-title: "テストの領域 8: プラグインの切り替え |Microsoft ドキュメント"
-ms.custom: 
+title: 'テストの領域 8: プラグインの切り替え |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], switching plug-ins
 - source control plug-ins, switching
 ms.assetid: 01370792-b5da-4e46-9ce2-7dd326587141
-caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 9f6a518d618b3a98ec85cbbe015d3b2c5fc7a710
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 534bd9338181c5b682779b62a9c118a5ccaf8cda
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="test-area-8-plug-in-switching"></a>テストの領域 8: プラグインの切り替え
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) では、ユーザー インターフェイス (UI) を持つ、現在のソース管理プラグインを変更します。 このテストの領域は、ソリューションのソース管理を使用するプラグインを選定するプロセスのテスト_ケースを提供します。  
@@ -56,5 +54,5 @@ ms.lasthandoff: 12/22/2017
 |------------|----------------|--------------------------------|  
 |ソリューションのプラグインの変更|1.最新のテスト プラグインの選択 (**ツール** -> **オプション** -> **ソース管理** -> **プラグイン選択範囲**)。<br />2.新しいプロジェクトとソリューションを作成します。<br />3.ソリューションをソース管理に追加します。<br />4.ソース管理からソリューションをバインド解除 (を使用して、**ソース管理の変更** ダイアログ ボックス)。<br />5.別のプラグインを選択 (たとえば、 [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)])。<br />6.アンロードされた場合は、ディスクからソリューションを再読み込みされます。<br />7.ソリューションをソース管理に追加します。<br />8.ソース管理からソリューションをバインド解除 (を使用して**ソース管理の変更** ダイアログ ボックス)。<br />9.もう一度テスト プラグインを選択します。<br />10.アンロードされた場合は、ディスクからソリューションを再読み込みされます。<br />11.元の場所に、ソリューションをバインド (を使用して、**ソース管理の変更** ダイアログ ボックス)。|ソリューションをソース管理に使用して追加された、選択したプラグインします。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン向けのテスト ガイド](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

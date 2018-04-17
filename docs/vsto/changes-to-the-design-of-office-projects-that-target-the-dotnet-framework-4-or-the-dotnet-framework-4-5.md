@@ -1,13 +1,10 @@
 ---
-title: ".NET Framework 4 または .NET Framework 4.5 を対象とする Office プロジェクトのデザインの変更 |Microsoft ドキュメント"
-ms.custom: 
+title: .NET Framework 4 または .NET Framework 4.5 を対象とする Office プロジェクトのデザインの変更 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,14 +13,14 @@ helpviewer_keywords:
 - what's new [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 059d259b669e63c26759782010be7ff78691ffc3
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 2c6f050e98665d55c7a64261131cef7ba31c684f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changes-to-the-design-of-office-projects-that-target-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 または .NET Framework 4.5 を対象とする Office プロジェクトのデザインの変更
   [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)]以降の Visual Studio では、 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とする Office プロジェクトのデザインに対していくつかの変更が導入されました。 以前のバージョンの Visual Studio の Office プロジェクトに慣れている場合は、これらの変更内容を確認してから、.NET Framework 4.0 以降のこれらのバージョンを対象とする Office プロジェクトを開発してください。 既定では、Visual Studio 2013 以降を使用して作成したすべてのプロジェクトは、.NET Framework 4.0 以降が対象になります。  
@@ -59,9 +56,9 @@ ms.lasthandoff: 01/10/2018
 |Getvstoobject メソッドと HasVstoObject メソッドの構文が変更されました|プライマリ相互運用機能アセンブリ (Pia) からのネイティブ オブジェクトにアクセスすると、プロジェクト内の Globals.Factory プロパティによって返されるオブジェクトでこれらのメソッドにアクセスすることができます、これらのメソッドに Globals.Factory オブジェクトを渡す必要があります。 詳細については、次を参照してください。[更新の Excel および Word プロジェクトの .NET Framework 4 または .NET Framework 4.5 に移行する](../vsto/updating-excel-and-word-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)です。|  
 |Word コンテンツ コントロールのイベントが新しいデリゲートに関連付けられています。|Word コンテンツ コントロールのイベントを処理するすべてのコードを変更し、新しいデリゲートを指定する必要があります。 詳細については、次を参照してください。[更新の Excel および Word プロジェクトの .NET Framework 4 または .NET Framework 4.5 に移行する](../vsto/updating-excel-and-word-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)です。|  
 |OLEObject クラスと OLEControl クラスを名前変更されています。|これらのクラスのインスタンスを使用するすべてのコードを変更し、代わりに <xref:Microsoft.Office.Tools.Excel.ControlSite> オブジェクトまたは <xref:Microsoft.Office.Tools.Word.ControlSite> オブジェクトを使用する必要があります。 詳細については、次を参照してください。[更新の Excel および Word プロジェクトの .NET Framework 4 または .NET Framework 4.5 に移行する](../vsto/updating-excel-and-word-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)です。|  
-|ホスト項目クラスをなど`ThisWorkbook`、 `Sheet`  *n* 、 `ThisDocument`、および`ThisAddIn`、提供されなくなります Dispose メソッドをオーバーライドすることができます。|必要がありますに移動するすべてのコード Dispose メソッドのオーバーライドで、ホスト項目クラス内にシャット ダウン イベント ハンドラーなど、 `ThisAddIn_Shutdown`、し、ホスト項目クラスから Dispose メソッドのオーバーライドを削除します。|  
+|ホスト項目クラスをなど`ThisWorkbook`、 `Sheet` *n*、 `ThisDocument`、および`ThisAddIn`、提供されなくなります Dispose メソッドをオーバーライドすることができます。|必要がありますに移動するすべてのコード Dispose メソッドのオーバーライドで、ホスト項目クラス内にシャット ダウン イベント ハンドラーなど、 `ThisAddIn_Shutdown`、し、ホスト項目クラスから Dispose メソッドのオーバーライドを削除します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [.NET Framework 4 以降への Office ソリューションの移行](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   
  [Office 開発の新機能](http://msdn.microsoft.com/en-us/bf054af2-c896-4723-aa15-6381145b14bb)   
  [Visual Studio Tools for Office Runtime の概要](../vsto/visual-studio-tools-for-office-runtime-overview.md)  

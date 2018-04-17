@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio ワークフロー ウィンドウ (レガシ) |Microsoft ドキュメント"
+title: Visual Studio ワークフロー ウィンドウ (レガシ) |Microsoft ドキュメント
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 78526446-d165-4367-982c-b2cf269fa22b
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 865b8adf9316851a29e6cf76d0fc308021e63a4c
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 524b589e7da8da02b2fafcaed5b10f4b754d2b58
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-workflow-windows-legacy"></a>Visual Studio ワークフローのウィンドウ (レガシ)
 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] が備えている従来の[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]を使用すると、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] または [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] を対象とすることができます。 従来のデザイナーは、ワークフローの作成に使用できるビジュアルなデザイナーです。 アクティビティをドラッグすることができます、**ツールボックス**のデザイン画面し構成することがあります。 このデザイン サーフェイスは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] エディター ウィンドウとして、他の [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] エディター ウィンドウが使用するのと同じメイン ウィンドウ領域を占有します。 ワークフローの名前が [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ウィンドウのタイトル バーに表示されます。

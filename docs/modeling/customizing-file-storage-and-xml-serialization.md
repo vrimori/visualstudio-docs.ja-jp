@@ -1,25 +1,23 @@
 ---
-title: "ファイル記憶域および XML シリアル化をカスタマイズする |Microsoft ドキュメント"
-ms.custom: 
+title: ファイル記憶域および XML シリアル化をカスタマイズする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.dsltools.dsldesigner.xmlbehavior
 helpviewer_keywords:
 - Domain-Specific Language, serialization
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a15a331d465c2450f0f1e6230eac3415106e860b
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 2ca1b9f8e6261ae04217b0d74e13073a3683915c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customizing-file-storage-and-xml-serialization"></a>ファイル格納処理および XML シリアル化処理のカスタマイズ
 ユーザーが、インスタンスを保存するときに、または*モデル*でドメイン固有言語 (DSL) の[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、XML ファイルを作成または更新します。 ファイルは、ストア内のモデルを再作成を再読み込みすることができます。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="the-default-serialization-scheme"></a>既定のシリアル化スキーム  
  このトピックの例を作成するには、次の DSL 定義が使用されました。  
   
- ![DSL 定義ダイアグラム &#45;ファミリ ツリー モデル](../modeling/media/familyt_person.png "FamilyT_Person")  
+ ![DSL 定義ダイアグラム&#45;ファミリ ツリー モデル](../modeling/media/familyt_person.png "FamilyT_Person")  
   
  この DSL は、次の外観を備えた、画面のモデルの作成に使用されました。  
   
@@ -101,7 +99,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="understanding-monikers"></a>Understanding モニカー  
  モニカーが使用され、モデルと図のファイルのさまざまな部分との間の相互参照を表します。 使用されることも、`.diagram`ファイルをモデル ファイル内のノードを参照してください。 これには 2 つのモニカーの形式があります。  
   
--   *Id モニカー*引用符で囲むターゲット要素の GUID。 例:  
+-   *Id モニカー*引用符で囲むターゲット要素の GUID。 例えば:  
   
     ```  
     <personShapeMoniker Id="f79734c0-3da1-4d72-9514-848fa9e75157" />  
@@ -144,13 +142,13 @@ ms.lasthandoff: 02/09/2018
   
     2.  [プロパティ] ウィンドウで次のように設定します。**モニカー キーである**に`true`です。  
   
--   \- または  
+-   \- または -  
   
      新しいドメインを使用するクラスを作成、**という名前のドメイン クラス**ツールです。  
   
      このツールは、名前と呼ばれるドメイン プロパティを持つ新しいクラスを作成します。 **は要素名**と**モニカー キーである**にこのドメインのプロパティのプロパティが初期化されます`true`です。  
   
--   \- または  
+-   \- または -  
   
      ドメイン クラスからモニカー キー プロパティを持つ別のクラスに継承関係を作成します。  
   
@@ -275,7 +273,7 @@ ms.lasthandoff: 02/09/2018
 |カスタムします。|これを設定して**True**このドメイン クラスの独自のシリアル化および逆シリアル化コードを記述するかどうか。<br /><br /> ソリューションをビルドし、詳細な手順を検出するエラーを調査します。|  
 |ドメイン クラス|ドメイン クラスがこのクラスのデータ ノードが適用されます。 読み取り専用です。|  
 |要素名|このクラスの要素の Xml ノードの名前。 既定値は、ドメイン クラス名の小文字版です。|  
-|モニカーの属性名|参照を格納するモニカー要素で使用される属性の名前です。 空白の場合は、キー プロパティまたは id の名前が使用されます。<br /><br /> この例では、"name"することをお勧めします。`<personMoniker name="/Mike Nash"/>`|  
+|モニカーの属性名|参照を格納するモニカー要素で使用される属性の名前です。 空白の場合は、キー プロパティまたは id の名前が使用されます。<br /><br /> この例では、"name"することをお勧めします。  `<personMoniker name="/Mike Nash"/>`|  
 |モニカー要素名|このクラスの要素を参照するモニカーを使用する xml 要素の名前です。<br /><br /> 既定値は、"Moniker"が付けられたクラス名の小文字版です。 たとえば、`personMoniker` のようにします。|  
 |モニカーの型名|このクラスの要素にモニカーに対して生成された xsd 型の名前です。 XSD **Dsl\Generated コード\\\*Schema.xsd**|  
 |Id をシリアル化します。|True の場合は、ファイルに要素 GUID にはが含まれています。 マークされているプロパティが存在しない場合は true でなければなりません**モニカー キーである**し、DSL は、このクラスに参照リレーションシップを定義します。|  
@@ -306,6 +304,6 @@ ms.lasthandoff: 02/09/2018
 |ロール要素名|ソース ロールから派生する XML 要素の名前を指定します。 既定値は、ロールのプロパティ名です。|  
 |完全な形式を使用します。|True の場合、各ターゲット要素またはモニカーは、リレーションシップを表す XML ノードで囲みます。 これは、このリレーションシップは、独自のドメインのプロパティを true に設定する必要があります。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [移動して、プログラム コードでモデルを更新します。](../modeling/navigating-and-updating-a-model-in-program-code.md)   
  [ドメイン固有言語からのコード生成](../modeling/generating-code-from-a-domain-specific-language.md)

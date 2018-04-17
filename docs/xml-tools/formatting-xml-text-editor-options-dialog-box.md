@@ -1,23 +1,21 @@
 ---
-title: "XML、テキスト エディター オプション ダイアログ ボックスを書式設定、|Microsoft ドキュメント"
-ms.custom: 
+title: XML、テキスト エディター オプション ダイアログ ボックスを書式設定、|Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: bb539b3a-027c-4b2f-906e-403e0e22ba8d
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 9a4d6de24a75b5a08820878bc74633c02ab4118f
-ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 95fdc563b288c965dbbff7a6201e9b1ef8ec4ae9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="formatting-xml-text-editor-options-dialog-box"></a>[書式設定] ([オプション] ダイアログ ボックス - [テキスト エディター] - [XML])
 このダイアログ ボックスでは、XML エディターの書式設定を指定することができます。 アクセスすることができます、**オプション**からダイアログ ボックス、**ツール**メニュー。  
@@ -62,6 +60,6 @@ ms.lasthandoff: 01/08/2018
 </dir>  
 ```
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML ドキュメントのプロパティと [プロパティ] ウィンドウ](../xml-tools/xml-document-properties-properties-window.md)   
  [XML エディターのコンポーネント](../xml-tools/xml-editor-components.md)

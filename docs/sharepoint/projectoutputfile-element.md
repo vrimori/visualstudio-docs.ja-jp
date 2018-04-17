@@ -1,13 +1,10 @@
 ---
-title: "ProjectOutputFile 要素 |Microsoft ドキュメント"
-ms.custom: 
+title: ProjectOutputFile 要素 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - ProjectOutputFile element
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5b57f00960629d65f264f22532a16202d6ae5d7a
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 52898168eb0debf047613a03702647195ab7d3cd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="projectoutputfile-element"></a>ProjectOutputFile 要素
   SharePoint に配置されるときに、プロジェクト項目に含める別のプロジェクトの出力を表します。  
@@ -46,7 +43,7 @@ ms.lasthandoff: 01/10/2018
   
 |属性|説明|  
 |---------------|-----------------|  
-|**ProjectId**|必要な**xs:string**属性。<br /><br /> 追加する出力を持つ依存プロジェクトの GUID です。 これに対応して、 **ProjectGuid**依存プロジェクト ファイル内の要素。|  
+|**projectId**|必要な**xs:string**属性。<br /><br /> 追加する出力を持つ依存プロジェクトの GUID です。 これに対応して、 **ProjectGuid**依存プロジェクト ファイル内の要素。|  
 |**ProjectPath**|必要な**xs:string**属性。<br /><br /> 相対パスをプロジェクト ファイル名を含めて、依存プロジェクトに含める出力を持ちます。 このパスを SharePoint プロジェクト項目を含む SharePoint プロジェクトのルート フォルダーに対する相対パスです。|  
 |**Target**|省略可能な**xs:string**属性。<br /><br /> 依存プロジェクトの出力が配置ルート フォルダーを基準とした、SharePoint サーバーに配置するパス。 配置ルート フォルダーがで指定された展開の種類によって決まりますが、**型**属性。<br /><br /> 詳細については、の説明を参照してください、**配置パス**と**配置ルート**SharePoint のプロパティ内の項目をプロジェクト[SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md).|  
 |**Type**|必要な**xs:string**属性。<br /><br /> 依存プロジェクトの出力に使用する展開の種類。 使用可能な値の詳細については、の説明を参照して、**展開の種類**の SharePoint プロジェクト項目のプロパティ[SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)です。|  
@@ -72,7 +69,7 @@ ms.lasthandoff: 01/10/2018
 |**検証ファイル**|ProjectItemModelSchema.xsd|  
 |**空にすることができます。**|×|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint プロジェクト項目のスキーマ リファレンス](../sharepoint/sharepoint-project-item-schema-reference.md)   
  [パッケージとプロジェクト アイテムの展開情報を提供します。](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  

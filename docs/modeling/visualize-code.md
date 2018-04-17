@@ -1,25 +1,23 @@
 ---
-title: "コードの視覚化 |Microsoft ドキュメント"
-ms.custom: 
+title: コードの視覚化 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-modeling
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code, understanding
 - code, visualizing
 - code, exploring
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bb4b7729cb0541c6ef3feb007e99b9e532c6c361
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 229979e608198f6eeb3f68f6e9f31d4e3391dbc2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visualize-code"></a>コードの視覚化
 Visual Studio の視覚化ツールとモデリング ツールを使って、既存のコードを理解し、アプリケーションを記述することができます。 これにより、自分が実行した変更がコードにどのような影響を与えるかを理解し、その変更に起因する作業とリスクを評価することができます。 例:  
@@ -50,7 +48,7 @@ Visual Studio の視覚化ツールとモデリング ツールを使って、�
 |**ブログ**|[Visual Studio ALM + Team Foundation Server のブログ](http://go.microsoft.com/fwlink/?LinkID=201340)|  
 |**技術記事とジャーナル**|[MSDN アーキテクチャ フォーラム](http://go.microsoft.com/fwlink/?LinkId=201343)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [シナリオ: 視覚化を使用して、モデリング、設計を変更します。](../modeling/scenario-change-your-design-using-visualization-and-modeling.md)   
  [分析するアーキテクチャおよびモデリング](../modeling/analyze-and-model-your-architecture.md)   
  [モデルのアプリのアーキテクチャ](../modeling/model-your-app-s-architecture.md)   

@@ -1,13 +1,10 @@
 ---
-title: "方法: 増分するデータを自動的にプログラムで塗りつぶし範囲 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 増分するデータを自動的にプログラムで塗りつぶし範囲 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,14 +15,14 @@ helpviewer_keywords:
 - workbooks, filling ranges
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d6634fea629358368d3b61c5b505e5eec7ec0186
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: e358869dea101d0c0ca012acd46b7822e6cf5873
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data"></a>方法: 増分するデータを範囲内にプログラムによって自動的に入力する
   <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A>のメソッド、<xref:Microsoft.Office.Interop.Excel.Range>オブジェクトでは、値を含むワークシートの範囲を自動的に入力することができます。 ほとんどの場合、<xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A>増分を増減させる範囲内の値を格納するメソッドを使用します。 省略可能な定数を指定することによって、動作を指定することができます、<xref:Microsoft.Office.Interop.Excel.XlAutoFillType>列挙します。  
@@ -56,12 +53,12 @@ ms.lasthandoff: 01/10/2018
   
 -   列 D では、一連の数字、行ごとに 2 つずつ増分されます。 初期値として、入力**4**セル D1 と**6**セル D2 にします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [範囲の使用](../vsto/working-with-ranges.md)   
  [方法: プログラムによってワークシートの範囲をコード内を参照してください](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)   
  [方法: プログラムによってブック内の範囲にスタイルを適用](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
  [方法: プログラムによって Excel の計算を実行](../vsto/how-to-programmatically-run-excel-calculations-programmatically.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
   
   

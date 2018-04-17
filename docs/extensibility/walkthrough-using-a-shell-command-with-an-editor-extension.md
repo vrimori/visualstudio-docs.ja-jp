@@ -1,27 +1,23 @@
 ---
-title: "チュートリアル: シェル コマンドを使用したエディターの拡張子を持つ |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: シェル コマンドを使用したエディターの拡張子を持つ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - add a menu command
 ms.assetid: 08526848-a442-4cd4-afa1-b2eac2005adb
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5a7f9426297ef28bdf4b829bd6697543f5aab55f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 112e78e6143d0a3bd67ff2a65814f2d77b85cdc1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-using-a-shell-command-with-an-editor-extension"></a>チュートリアル: シェル コマンドを使用したエディターの拡張子を持つ
 VSPackage からには、エディターにメニュー コマンドなどの機能を追加できます。 このチュートリアルでは、メニュー コマンドを呼び出すことによって、エディターでテキスト ビューに表示要素を追加する方法を示します。  
@@ -29,7 +25,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
  このチュートリアルでは、Managed Extensibility Framework (MEF) コンポーネント パーツと共に VSPackage の使用を示します。 Visual Studio シェルを使用して、メニュー コマンドを登録する VSPackage を使用する必要があり、MEF コンポーネント パーツにアクセスするコマンドを使用することができます。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="creating-an-extension-with-a-menu-command"></a>メニュー コマンドを使用して、拡張機能の作成  
  という名前のメニュー コマンドを格納する VSPackage を作成**表示要素の追加**上、**ツール**メニュー。  
@@ -727,5 +723,5 @@ VSPackage からには、エディターにメニュー コマンドなどの機
   
      Fourscore しています.  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: コンテンツの種類とファイル名拡張子とをリンクさせる](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

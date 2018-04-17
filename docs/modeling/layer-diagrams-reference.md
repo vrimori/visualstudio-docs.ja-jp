@@ -1,10 +1,8 @@
 ---
-title: "依存関係ダイアグラム: を参照 |Microsoft ドキュメント"
-ms.custom: 
+title: '依存関係ダイアグラム: を参照 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.teamarch.layerdiagram.layerexplorer.artifactlink
 - vs.teamarch.layerdiagram.layerexplorer.artifactlink.properties
@@ -20,20 +18,20 @@ helpviewer_keywords:
 - constraints, architectural
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5185b391d0374754675999bff02438efd8de83e4
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 1a4ca32a85db34fa03a2ec5e52446707938b0304
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dependency-diagrams-reference"></a>依存関係図: リファレンス
 Visual Studio で、使用することができます、*依存関係ダイアグラム*をシステムの高レベルで論理アーキテクチャを視覚化します。 依存関係ダイアグラム、システム内と呼ばれる論理的、抽象的なグループに物理的な成果物を整理する*レイヤー*です。 これらのレイヤーは成果物が実行する主要タスクまたはシステムの主要コンポーネントについて説明します。 各レイヤーには、より詳細なタスクを示す入れ子になったレイヤーを含めることもできます。  
   
- この機能をサポートする Visual Studio のバージョンを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
+ この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
  レイヤー間の必要とされる依存関係、または既存の依存関係を指定できます。 矢印で表されるこれらの依存関係は、どのレイヤーが、他のレイヤーが表す機能を使用できるか、または現在使用しているかを示します。 システムを個別のロールと機能を記述するレイヤーに編成、理解、再利用、およびコードの保守を容易にできるように、依存関係図を使用します。  
   
@@ -62,7 +60,7 @@ Visual Studio で、使用することができます、*依存関係ダイア�
 |4|**コメント**|全般的なノートを図または図の要素に追加するために使用します。|  
 |5|**コメント リンク**|コメントを図の要素にリンクするために使用します。|  
   
-##  <a name="Explorer"></a>レイヤー エクスプ ローラー  
+##  <a name="Explorer"></a> レイヤー エクスプ ローラー  
  各レイヤーをソリューション内の成果物 (たとえば、プロジェクト、クラス、名前空間、プロジェクト ファイル、またはソフトウェアのその他のパート) にリンクすることができます。 レイヤーの数字は、レイヤーにリンクされている成果物の数を示します。 ただし、レイヤーの成果物の数を読み取るときには、次の点に注意してください。  
   
 -   1 つのレイヤーが他の成果物を含む 1 つの成果物にリンクされているが、他の成果物に直接リンクされていない場合、その数字にはリンクされた成果物のみが含まれます。 ただし、レイヤー検証時の分析にはそれらの他の成果物も含まれます。  
@@ -93,5 +91,5 @@ Visual Studio で、使用することができます、*依存関係ダイア�
     |**検証をサポートしています**|場合**True**、レイヤー検証プロセスでは、プロジェクトがこの要素の間の依存関係に準拠していることを確認できます。<br /><br /> 場合**False**、次のリンクは、レイヤー検証プロセスに関与しません。<br /><br /> 詳細については、次を参照してください。[依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)です。|  
     |**識別子**|リンクされた成果物への参照|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アプリのモデルを生成する](../modeling/create-models-for-your-app.md)

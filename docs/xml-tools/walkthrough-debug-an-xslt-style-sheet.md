@@ -1,23 +1,21 @@
 ---
-title: "チュートリアル: XSLT スタイル シートのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: XSLT スタイル シートのデバッグ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 3db9fa5a-f619-4cb6-86e7-64b364e58e5d
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: fa4604ae256fdd4a3f935cc05ff7aec0fda4e842
-ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: abf12dc5f290cdabad2b9b7a6f650d488978cf22
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-debug-an-xslt-style-sheet"></a>チュートリアル : XSLT スタイル シートのデバッグ
 このチュートリアルの手順では、XSLT デバッガーを使用する方法を示します。 変数の表示、ブレークポイントの設定、コードのステップ実行などの手順が含まれます。 このスタイル シートでは、平均書籍価格を下回るすべての書籍が検索されます。  
@@ -81,19 +79,19 @@ ms.lasthandoff: 01/08/2018
   
 #### <a name="to-step-through-the-code"></a>コードをステップ実行するには  
   
-1.  キーを押して**f5 キーを押して**を続行します。  
+1.  **F5** キーを押して続行します。  
   
      最初の book ノードは `xsl:if` 条件を満たしたため、この book ノードは [XSL Output] ウィンドウに追加されます。 デバッガーは、再度スタイル シートの `xsl:if` 要素に到達するまで、引き続き実行されます。 今度は、デバッガーが、books.xml ファイルの 2 番目の book ノードに到達して中断します。  
   
      [ウォッチ 1] ウィンドウでは、`self::node()` の値が 2 番目の book ノードに変化します。 price 要素の値を調べることで、価格が平均値より高いことを判断できるため、`xsl:if` 条件は失敗します。  
   
-2.  キーを押して**f5 キーを押して**を続行します。  
+2.  **F5** キーを押して続行します。  
   
      2 番目の book ノードは `xsl:if` 条件を満たしていないため、この book ノードは [XSL Output] ウィンドウに追加されません。 デバッガーは、再度スタイル シートの `xsl:if` 要素に到達するまで、引き続き実行されます。 今度は、デバッガーが、books.xml ファイルの 3 番目の `book` ノードに到達して中断します。  
   
      [ウォッチ 1] ウィンドウでは、`self::node()` の値が 3 番目の book ノードに変化します。 `price` 要素の値を調べると、価格が平均値未満、つまり、`xsl:if` 条件が満たされていると判断できます。  
   
-3.  キーを押して**f5 キーを押して**を続行します。  
+3.  **F5** キーを押して続行します。  
   
      `xsl:if` 条件が満たされたため、3 番目の book ノードは [XSL Output (XSL 出力)] ウィンドウに追加されます。 XML ドキュメント内の書籍がすべて処理され、デバッガーが停止します。  
   
@@ -155,5 +153,5 @@ ms.lasthandoff: 01/08/2018
 </bookstore>  
 ```
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XSLT のデバッグ](../xml-tools/debugging-xslt.md)

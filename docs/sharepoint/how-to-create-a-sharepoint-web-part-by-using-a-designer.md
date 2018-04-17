@@ -1,12 +1,10 @@
 ---
-title: "方法: デザイナーを使用して SharePoint Web パーツを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: デザイナーを使用して SharePoint Web パーツを作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,13 +16,14 @@ helpviewer_keywords:
 - Web Parts [SharePoint development in Visual Studio], creating
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 63a75ad6ccfbe28cd5f719749e187ec1c2229b66
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: afbc3bc7b50b30ed651921d09d0fe766810992d3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-sharepoint-web-part-by-using-a-designer"></a>方法: デザイナーを使用して SharePoint Web パーツを作成する
   追加することで、web パーツを作成することができます、**視覚的 Web パーツ**を SharePoint プロジェクト項目です。 これを行うと、Visual Studio で Visual Web Developer デザイナーが開きます。このデザイナーでは、コントロールとコードを Web パーツに追加できます。 視覚的 Web パーツは Web パーツと同じように機能します。 唯一の違いは、視覚的 Web パーツのデザインは Visual Web Developer デザイナーで行うことです。  
@@ -55,7 +54,7 @@ ms.lasthandoff: 01/10/2018
   
      **ソリューション エクスプ ローラー**、web パーツが表示されます。 Visual Web Developer デザイナーでは、web パーツをデザインした後に、指定したサイトでテストします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint の Web パーツの作成](../sharepoint/creating-web-parts-for-sharepoint.md)   
  [方法: SharePoint Web パーツを作成します。](../sharepoint/how-to-create-a-sharepoint-web-part.md)   
  [チュートリアル: SharePoint の Web パーツを作成します。](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)   

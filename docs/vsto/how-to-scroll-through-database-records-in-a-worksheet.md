@@ -1,12 +1,10 @@
 ---
-title: "方法: ワークシート内のデータベース レコードをスクロール |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ワークシート内のデータベース レコードをスクロール |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - worksheets [Office development in Visual Studio], scrolling records
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: f7e6ea8269401a8b026da2562eff96e50820e0a0
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: a092cec68e59914b498ab3b935f58b6ef0c37f05
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-scroll-through-database-records-in-a-worksheet"></a>方法 : ワークシート内でデータベースのレコードをスクロールする
   次の手順では、デザイナーを使用して、エンドユーザーが、すべてのレコードをスクロールできるようにするコントロールでの Microsoft Office Excel ワークシートに、データベース テーブルから単一のフィールドを表示する方法を示します。  
@@ -44,9 +43,9 @@ ms.lasthandoff: 01/10/2018
   
 5.  ドラッグ、<xref:Microsoft.Office.Tools.Excel.NamedRange>コントロールをデータを表示するセルにします。  
   
-6.  **Windows フォーム**のタブ、**ツールボックス**、追加、<xref:System.Windows.Forms.BindingNavigator>ワークシートに制御し、使用するコントロールを設定します。 詳細については、次を参照してください。 [BindingNavigator コントロールの概要 &#40;です。Windows フォーム &#41;](/dotnet/framework/winforms/controls/bindingnavigator-control-overview-windows-forms).  
+6.  **Windows フォーム**のタブ、**ツールボックス**、追加、<xref:System.Windows.Forms.BindingNavigator>ワークシートに制御し、使用するコントロールを設定します。 詳細については、次を参照してください。 [BindingNavigator コントロールの概要&#40;Windows フォーム&#41;](/dotnet/framework/winforms/controls/bindingnavigator-control-overview-windows-forms)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションでのコントロールへのデータのバインド](../vsto/binding-data-to-controls-in-office-solutions.md)  
   
   

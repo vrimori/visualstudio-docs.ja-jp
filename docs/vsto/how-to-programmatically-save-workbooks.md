@@ -1,12 +1,10 @@
 ---
-title: "方法: プログラムによってブックを保存 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: プログラムによってブックを保存 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - workbooks, saving backup copies
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 4d184d7122459b85b3ad20fbf8338a53f28bd6c8
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 4f3421c5a00d062fb49cc73b8a7f2ba592dc5d74
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-save-workbooks"></a>方法: プログラムによってブックを保存する
   ブックを保存する方法はいくつかあります。 パスを変更しないでブックを保存できます。 以前にブックが保存されていない場合は、パスを指定してブックを保存する必要があります。 明示的なパスがない場合、Microsoft Office Excel は、ファイルが作成されたときに付けられた名前で現在のフォルダーにファイルを保存します。 メモリ内の開いているブックを変更しないで、ブックのコピーを保存することもできます。  
@@ -85,11 +84,11 @@ ms.lasthandoff: 01/10/2018
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  ブックを保存またはコピーするメソッドのいずれかを対話的にキャンセルすると、コード内で実行時エラーが発生します。 プロシージャを呼び出す場合など、<xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A>メソッドは無効にしなかったが、Excel からメッセージが表示されますと、ユーザーがクリックした**キャンセル**メッセージが表示されたら、Excel に実行時エラーが発生します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ブックの操作](../vsto/working-with-workbooks.md)   
  [Workbook ホスト項目](../vsto/workbook-host-item.md)   
  [方法: プログラムによってブックを閉じる](../vsto/how-to-programmatically-close-workbooks.md)   
- [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)   
  [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)  
   

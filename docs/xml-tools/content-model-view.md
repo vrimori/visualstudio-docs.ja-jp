@@ -1,23 +1,21 @@
 ---
-title: "コンテンツ モデル ビュー |Microsoft ドキュメント"
-ms.custom: 
+title: コンテンツ モデル ビュー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: e8db7c7d-31cf-479e-9dcc-299759891795
-caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 582082504b713988039af609d59150715f75ecfe
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 1ee6860702fe672df5bebca38002ff7a8388cddd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="content-model-view"></a>コンテンツ モデル ビュー
 コンテンツ モデル ビューには、単純型、複合型、要素、モデル グループ、属性、属性グループなど、ローカル スキーマ ノードとグローバル スキーマ ノード、およびそのコンポーネントがグラフィック表示されます。 XML のコメントおよび処理命令は、コンテンツ モデル ビューには表示できません。 コンテンツ モデル ビューには、2 つのパネルが含まれています。**ワークスペース**パネル内のノードの一覧を含む、 [XML スキーマ デザイナーのワークスぺース](../xml-tools/xml-schema-designer-workspace.md)、およびスキーマのコンテンツ モデルの参照先をデザイン サーフェイスノードで選択されている、**ワークスペース**パネルです。 さらにコンテンツ モデル ビューには、XML スキーマ デザイナーのツール バーおよび階層リンク バーがあります。  
@@ -116,5 +114,5 @@ ms.lasthandoff: 12/22/2017
   
  XML エディターでスキーマ セットを変更すると、コンテンツ モデル ビューにもその変更が同期されます。 詳細については、次を参照してください。 [XML エディターでの統合](../xml-tools/integration-with-xml-editor.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML スキーマ デザイナーのワークスペース](../xml-tools/xml-schema-designer-workspace.md)

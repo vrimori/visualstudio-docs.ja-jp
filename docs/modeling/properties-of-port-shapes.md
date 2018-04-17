@@ -1,25 +1,23 @@
 ---
-title: "ポート図形のプロパティ |Microsoft ドキュメント"
-ms.custom: 
+title: ポート図形のプロパティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.dsltools.dsldesigner.port
 helpviewer_keywords:
 - Domain-Specific Language, port shape
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 799a4d84a338f870a80ce1c3fe19581a775fa5dd
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 5e00c77bc3abcef57bfd2ef5b047ee5e3f63bf37
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="properties-of-port-shapes"></a>ポート シェイプのプロパティ
 ポート図形を使用すると、生成されたデザイナーでのドメイン クラスを表します。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 02/09/2018
 |カスタム コンス トラクターを持つ|場合`True`、ソース コードでカスタム コンス トラクターが提供されます。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)です。|False|  
 |継承修飾子|ポートから生成されるソース コード クラスの継承の種類を記述します (`none`、`abstract`または`sealed`)。|none|  
 |ベース ポート|この図形の基本クラス。|(なし)|  
-|name|この図形の名前。|現在の名前|  
+|名前|この図形の名前。|現在の名前|  
 |名前空間|この図形に関連付けられた名前空間。|現在の名前空間|  
 |ツール ヒントの種類|(固定、変数、またはなし)、ツールヒントを定義する方法です。 固定されている場合、次の値、`Fixed Tooltip Text`プロパティは、ツールヒントとして使用以外の場合は、変数、ツール ヒントがカスタム コードで定義します。|none|  
 |メモ|この図形に関連付けられている非公式なノートです。|\<なし >|  
@@ -56,5 +54,5 @@ ms.lasthandoff: 02/09/2018
 |固定ツールヒントのテキスト|固定のツールヒントに使用されるテキストです。|\<なし >|  
 |ヘルプ キーワード|この図形の F1 ヘルプをインデックス化に使用されるキーワード。|\<なし >|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

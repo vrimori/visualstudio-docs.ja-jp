@@ -1,21 +1,21 @@
 ---
 title: TextTransform ユーティリティを使用してファイルを生成する Visual Studio で |Microsoft ドキュメント
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, TextTransform utility
 - TextTransform.exe
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5ecc5af3c37889bc79dc5978c33caf8249433978
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 930d8982f8d34bae2870276623ae2d71a24372d1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="generate-files-with-the-texttransform-utility"></a>TextTransform ユーティリティを使用してファイルを生成します。
 
@@ -26,11 +26,11 @@ TextTransform.exe は、テキスト テンプレートを変換するのに使�
 
  TextTransform.exe は、次のディレクトリにあります。
 
- **\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE**
+ **\Program files (x86) \Microsoft Visual Studio\2017\Professional\Common7\IDE**
 
 Professional edition、または
 
- **\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE**
+ **\Program files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE**
 
  Enterprise エディションです。
 
@@ -60,7 +60,7 @@ TextTransform [<options>] <templateName>
 |**-I** \<includedirectory>|指定されたテキスト テンプレートに含まれるテキスト テンプレートを格納するディレクトリ。|
 |**-P** \<referencepath>|またはを使用してテキスト テンプレート内で指定されたアセンブリを検索するディレクトリを**-r**オプション。<br /><br /> たとえば、Visual Studio API を使用するアセンブリは、次のように使用します。<br /><br /> `-P "%VSSHELLFOLDER%\Common7\IDE\PublicAssemblies"`|
 |**-dp** \<processorName>!\<className>!\<assemblyName&#124;codeBase>|名前、完全な型名と、テキスト テンプレート内のカスタム ディレクティブの処理に使用できるディレクティブ プロセッサのアセンブリ。|
-|**-a** [processorName]![directiveName]!\<parameterName>!\<parameterValue>|ディレクティブ プロセッサのパラメーターの値を指定します。 パラメーター名と値のみを指定する場合、パラメーターはすべてのディレクティブ プロセッサを使用可能になります。 ディレクティブ プロセッサを指定する場合はこのパラメーターは指定したプロセッサでのみ使用できます。 ディレクティブ名を指定する場合、パラメーターの値は指定されたディレクティブが処理されている場合にのみ使用できます。<br /><br /> ディレクティブ プロセッサまたはテキスト テンプレートからパラメーター値にアクセスする[ITextTemplatingEngineHost.ResolveParameterValue](https://msdn.microsoft.com/library/microsoft.visualstudio.texttemplating.itexttemplatingenginehost.resolveparametervalue.aspx)です。 テキスト テンプレートで、含める`hostspecific`、template ディレクティブのに対して、メッセージを呼び出すと`this.Host`です。 例えば:<br /><br /> `<#@template language="c#" hostspecific="true"#> [<#= this.Host.ResolveParameterValue("", "", "parameterName") #>]`。<br /><br /> 常に入力、'!' の省略可能なプロセッサとディレクティブの名前を省略した場合でもをマークします。 例えば:<br /><br /> `-a !!param!value`|
+|**-** [processorName] です [。directiveName] です。\<parameterName >!\<parameterValue >|ディレクティブ プロセッサのパラメーターの値を指定します。 パラメーター名と値のみを指定する場合、パラメーターはすべてのディレクティブ プロセッサを使用可能になります。 ディレクティブ プロセッサを指定する場合はこのパラメーターは指定したプロセッサでのみ使用できます。 ディレクティブ名を指定する場合、パラメーターの値は指定されたディレクティブが処理されている場合にのみ使用できます。<br /><br /> ディレクティブ プロセッサまたはテキスト テンプレートからパラメーター値にアクセスする[ITextTemplatingEngineHost.ResolveParameterValue](https://msdn.microsoft.com/library/microsoft.visualstudio.texttemplating.itexttemplatingenginehost.resolveparametervalue.aspx)です。 テキスト テンプレートで、含める`hostspecific`、template ディレクティブのに対して、メッセージを呼び出すと`this.Host`です。 例えば:<br /><br /> `<#@template language="c#" hostspecific="true"#> [<#= this.Host.ResolveParameterValue("", "", "parameterName") #>]`。<br /><br /> 常に入力、'!' の省略可能なプロセッサとディレクティブの名前を省略した場合でもをマークします。 例えば:<br /><br /> `-a !!param!value`|
 |**-h**|ヘルプを提供します。|
 
 ## <a name="related-topics"></a>関連トピック

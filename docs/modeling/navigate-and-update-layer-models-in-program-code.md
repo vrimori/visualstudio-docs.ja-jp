@@ -2,23 +2,21 @@
 title: 移動し、プログラム コードでレイヤー モデルの更新 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - layer models, navigating in program code
 - layer models, updating in program code
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: e79479e97efd953c1366348454eee70773faf07a
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 8d827a77608efac4d08f2698d8c9b6519b0ec632
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="navigate-and-update-layer-models-in-program-code"></a>プログラム コードでレイヤー モデル内を移動し、レイヤー モデルを更新する
 このトピックでは、プログラム コードを使ってナビゲートおよび更新できるレイヤー モデルの要素と関係について説明します。 見ると、ユーザーの依存関係図についての詳細については、次を参照してください。[依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)と[依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)です。  

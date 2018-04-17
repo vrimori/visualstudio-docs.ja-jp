@@ -1,10 +1,8 @@
 ---
-title: "方法: ドメイン固有言語ソリューションを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ドメイン固有言語ソリューションを作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.dsltools.designerwizard
 helpviewer_keywords:
@@ -13,15 +11,15 @@ helpviewer_keywords:
 - Domain-Specific Language Tools, creating solutions
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5adfe90d88f46f4a3c31c1ddb6eb860403d57fe4
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: c2b14b407a6274e444ff50a6693b20b7ec763e72
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>方法: ドメイン固有言語ソリューションを作成する
 ドメイン固有言語 (DSL) を使用して作成する特殊な[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューションです。  
@@ -81,7 +79,7 @@ ms.lasthandoff: 02/09/2018
     > [!NOTE]
     >  信頼されていないソースからのテキスト テンプレートの実行をクリックしてできませんを通知するメッセージが表示する場合**OK**です。 このメッセージを再び表示されないように設定できます。  
   
-##  <a name="settings"></a>DSL デザイナーのウィザード ページ  
+##  <a name="settings"></a> DSL デザイナーのウィザード ページ  
  いくつかの既定値から変更されていないフィールドをおくことができます。 ただし、ファイル拡張子 フィールドを設定することを確認します。  
   
 ### <a name="solution-settings-page"></a>ソリューションの設定 ページ  
@@ -103,11 +101,11 @@ ms.lasthandoff: 02/09/2018
   
 -   別のファイル拡張子を入力します。  
   
-     \- または  
+     \- または -  
   
 -   リセット、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]実験用インスタンス。 これは、すべて以前作成した Dsl の登録解除します。 **開始** メニューのをクリックして**すべてのプログラム**、 **Microsoft Visual Studio 2010 SDK**、**ツール**、し**リセット、Microsoft Visual Studio 2010 実験用インスタンス**です。 再利用する他の Dsl を再構築することができます。  
   
-     \- または  
+     \- または -  
   
 -   場合、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コンピューターに、このファイル拡張子を使用する拡張機能を完全にインストールされたが、これをアンインストールします。 **ツール** メニューのをクリックして**拡張機能マネージャー**です。  
   

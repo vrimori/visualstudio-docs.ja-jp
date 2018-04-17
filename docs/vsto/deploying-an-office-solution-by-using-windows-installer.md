@@ -1,13 +1,10 @@
 ---
-title: "Windows インストーラーを使用した Office ソリューションの配置 |Microsoft ドキュメント"
-ms.custom: 
+title: Windows インストーラーを使用した Office ソリューションの配置 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,14 +18,14 @@ helpviewer_keywords:
 - Office applications [Office development in Visual Studio], MSI
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 68ec55b1096f9e4244213cf4faeef5b904dd8fed
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: f2c51b101b890a2aaf2ea63edfd1f55d05abe18e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploying-an-office-solution-by-using-windows-installer"></a>Windows インストーラーを使用した Office ソリューションの配置
 [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)]を使用して Office ソリューション用の Windows インストーラーを作成する方法について説明します。  
@@ -239,7 +236,7 @@ Office プロジェクトの出力を含めるように、 **OfficeAddInSetup** 
   
 6. **[名前を付けて保存]** ダイアログ ボックスで、 **[デスクトップ]** フォルダーを参照します。  
   
-7. **型として保存**一覧で、選択**すべてのファイル (&#42;。&#42;)**です。  
+7. **型として保存**一覧で、選択**すべてのファイル (&#42;.&#42;)**.  
   
 8. **[ファイル名]** ボックスに、「 **Visual Studio 2010 Tools for Office Runtime.prq**」と入力し、 **[保存]** をクリックします。  
   
@@ -533,10 +530,10 @@ Office プロジェクトの出力を含めるように、 **OfficeAddInSetup** 
   
 9. メニュー バーの **[ビルド]**、 **[OfficeAddInSetup のビルド]**の順にクリックします。  
   
-   Setup.exe ファイルを検索することができます、ビルドが完了した後、 **OfficeAddInSetup**次の場所にプロジェクト: *OfficeAddInSetupProjectRoot***\OfficeAddInSetup\Express\SingleImage\DiskImages\DISK1\**  
+   Setup.exe ファイルを検索することができます、ビルドが完了した後、 **OfficeAddInSetup**次の場所にプロジェクト: *OfficeAddInSetupProjectRoot * * * \OfficeAddInSetup\Express\SingleImage\DiskImages\ディスク 1\**  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Office ソリューションを配置するための必須コンポーネント](http://msdn.microsoft.com/en-us/library/9f672809-43a3-40a1-9057-397ce3b5126e)  
 [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)  
 [Registry Entries for VSTO Add-ins](../vsto/registry-entries-for-vsto-add-ins.md)  

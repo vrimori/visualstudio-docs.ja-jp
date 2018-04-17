@@ -1,5 +1,5 @@
 ---
-title: "方法: ワークフロー (レガシ) 内のブレークポイントを設定 |Microsoft ドキュメント"
+title: '方法: ワークフロー (レガシ) 内のブレークポイントを設定 |Microsoft ドキュメント'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 78e0be39-3e99-487c-bfef-19db0daf6f42
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e3da1fc5d16591140e59c30422e7ad087b5c7bd
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 71d62395a4b719827cf33eacad46a650bd057c43
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-set-breakpoints-in-workflows-legacy"></a>方法: ワークフロー内にブレークポイントを設定する (レガシ)
 このトピックにブレークポイントを設定する方法について説明[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]従来の Windows ワークフロー デザイナーを使用してアプリケーションを構築します。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] アプリケーションが [!INCLUDE[wf2](../workflow-designer/includes/wf2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。

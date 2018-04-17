@@ -1,12 +1,10 @@
 ---
-title: "方法: コードを実行せずに Office ソリューションを開く |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: コードを実行せずに Office ソリューションを開く |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,13 +18,14 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], opening without running code
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: bd7a401ab96cbb196d97b2e210b3ede0a624deb8
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 86a44d2a6c82f65d91c558c76743a8fbbd2fa1e8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-open-office-solutions-without-running-code"></a>方法 : コードを実行せずに Office ソリューションを開く
   マネージ コード拡張機能で作成された Microsoft Office ソリューションでは、エンドユーザーの Office アプリケーションのセキュリティ設定が高に設定されている場合でも実行されます。 これは、.NET アセンブリのコードのセキュリティが Microsoft Office ではなく、Microsoft .NET Framework によって管理されているためです。  
@@ -52,7 +51,7 @@ ms.lasthandoff: 01/10/2018
   
      複数のユーザーで、ソリューションを使用する場合、このメソッドは、それらのすべての実行から、ソリューションを防ぎます。 これはする、コードまたは参照先のサーバーで問題が検出され、すべてのユーザーから実行を停止する場合に役立ちます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)   
  [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)   
  [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   

@@ -2,20 +2,18 @@
 title: Visual Studio Modelbus を使用して、モデルの統合 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 92be17ab117a1c76456180cbb40a9b1d77f9181c
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: be0aaa9a5eed5dea28a993318afaf0630471c3c2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="integrating-models-by-using-visual-studio-modelbus"></a>Visual Studio Modelbus によるモデルの統合
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus は、モデルにモデルの間でおよびその他のツールからのリンクを作成する方法を提供します。 たとえば、ドメイン固有言語 (DSL) モデルおよび UML モデルを関連付けることができます。 DSL の統合セットを作成できます。  

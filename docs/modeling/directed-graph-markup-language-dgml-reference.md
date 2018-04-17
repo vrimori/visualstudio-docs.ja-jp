@@ -1,21 +1,19 @@
 ---
-title: "Graph Markup Language (DGML) リファレンスを向け |Microsoft ドキュメント"
-ms.custom: 
+title: Graph Markup Language (DGML) リファレンスを向け |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: cfa143669f757a3a71ddb89ea731ffbfc5059d24
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 49ae2e854908afa6b7decb7ea94cca63b4203fbe
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>Directed Graph Markup Language (DGML) リファレンス
 Directed Graph Markup Language (DGML) は、視覚化と、複雑性の分析を実行するために使用する情報を記述する、Visual Studio でコード マップを保持するために使用される形式です。 DGML では、単純な XML を使用して、循環と非循環の両方の有向グラフを記述します。 有向グラフは、リンク (エッジ) によって接続されている一連のノードです。 ノードとリンクを使用すると、ネットワーク構造 (ソフトウェア プロジェクトの要素など) を表すことができます。  
@@ -25,7 +23,7 @@ Directed Graph Markup Language (DGML) は、視覚化と、複雑性の分析を
 > [!NOTE]
 >  .dgml ファイルを編集するときは、各要素とその値に使用できる属性が IntelliSense によって識別されます。 属性で色を指定するには、一般的な色の名前 ("Blue" など) または ARGB 16 進値 ("#ffa0b1c3" など) を使用してください。 DGML では、WPF (Windows Presentation Foundation) 色定義形式の小さいサブセットを使用します。 詳細については、次を参照してください。[色クラス](http://go.microsoft.com/fwlink/?LinkId=182345)です。  
   
-##  <a name="DGML"></a>DGML 構文  
+##  <a name="DGML"></a> DGML 構文  
  次の表は、DGML で使用される要素の種類について説明しています。  
   
 -   `<DirectedGraph></DirectedGraph>`  
@@ -95,7 +93,7 @@ Directed Graph Markup Language (DGML) は、視覚化と、複雑性の分析を
   
      追加できる属性 (省略可能) の一部を次に示します。  
   
-     `Label`-ノードの表示名。  
+     `Label` -ノードの表示名。  
   
      スタイル属性。 「 [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)」を参照してください。  
   
@@ -301,7 +299,7 @@ Directed Graph Markup Language (DGML) は、視覚化と、複雑性の分析を
     </DirectedGraph>  
     ```  
   
-###  <a name="AddAlias"></a>一般的に使用されるパスのエイリアス  
+###  <a name="AddAlias"></a> 一般的に使用されるパスのエイリアス  
  よく使用されるパスをエイリアスに置き換えると、.dgml ファイルのサイズを小さくして、ファイルの読み込みまたは保存に必要な時間を短縮することができます。 エイリアスを作成するには、.dgml ファイルの末尾に `<Paths></Paths>` セクションを追加します。 このセクションには、パスのエイリアスを定義する `<Path/>` 要素を追加します。  
   
 ```xml  
@@ -321,7 +319,7 @@ Directed Graph Markup Language (DGML) は、視覚化と、複雑性の分析を
 </Properties>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソリューション間の依存関係をマップします。](../modeling/map-dependencies-across-your-solutions.md)   
  [コード マップを使用してアプリケーションをデバッグするには](../modeling/use-code-maps-to-debug-your-applications.md)   
  [コード マップ アナライザーを使用して潜在的な問題を検索する](../modeling/find-potential-problems-using-code-map-analyzers.md)

@@ -1,23 +1,21 @@
 ---
-title: "ドメイン クラスのプロパティ |Microsoft ドキュメント"
-ms.custom: 
+title: ドメイン クラスのプロパティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, domain class
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: b858aaea48643ead5ffca5c089c6c6f370f67835
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 419315e5d8ec44f8065b704612bc50c1788974e3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="properties-of-domain-classes"></a>ドメイン クラスのプロパティ
 ドメイン クラスでは、次の表に、プロパティがあります。 ドメイン クラスについては、次を参照してください。[についてモデル、クラスとリレーションシップ](../modeling/understanding-models-classes-and-relationships.md)です。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語の拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)です。  
@@ -30,12 +28,12 @@ ms.lasthandoff: 02/09/2018
 |カスタム コンス トラクターを持つ|場合`True`、ソース コードでカスタム コンス トラクターが提供されます。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)です。|`False`|  
 |継承修飾子|ドメイン クラスから生成されるソース コード クラスの継承の種類を記述します (`none`、`abstract`または`sealed`)。|`none`|  
 |基本クラス|このドメイン クラスを派生している場合、基本クラスの名前。|\<なし >|  
-|name|このドメイン クラスの名前。|現在の名前|  
+|名前|このドメイン クラスの名前。|現在の名前|  
 |名前空間|このドメイン クラスの名前空間。|現在の名前空間|  
 |メモ|このドメイン クラスに関連付けられている非公式なノートです。|\<なし >|  
 |説明|生成された、デザイナーの UI を文書化に使用される説明です。|\<なし >|  
 |表示名|このドメイン クラスの生成されたデザイナーで表示される名前です。|\<なし >|  
 |ヘルプ キーワード|このドメイン クラスの F1 ヘルプをインデックス化に使用される省略可能なキーワードです。|\<なし >|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

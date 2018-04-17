@@ -1,12 +1,10 @@
 ---
-title: "方法: プログラムによってブックとしてテキスト ファイルを開く |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: プログラムによってブックとしてテキスト ファイルを開く |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - text files, opening as workbooks
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 45d2b85ea8c005d56ddc076d0b758a0c9e4a2d67
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: cafe64ce693972bd9c254a6bdfc1dcbf70f004c9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-open-text-files-as-workbooks"></a>方法: プログラムによってテキスト ファイルをブックとして開く
   ブックとしてテキスト ファイルを開くことができます。 開きたいテキスト ファイルの名前を渡す必要があります。 ファイル内のデータの列の形式、解析を開始する行番号など、いくつかの省略可能なパラメーターを指定することができます。  
@@ -40,7 +39,7 @@ ms.lasthandoff: 01/10/2018
   
 -   テキスト ファイル`Test.txt`C ドライブに保存します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ブックの操作](../vsto/working-with-workbooks.md)   
  [方法: プログラムによってブックを開く](../vsto/how-to-programmatically-open-workbooks.md)   
  [方法: プログラムによって新しいブックを作成します。](../vsto/how-to-programmatically-create-new-workbooks.md)   

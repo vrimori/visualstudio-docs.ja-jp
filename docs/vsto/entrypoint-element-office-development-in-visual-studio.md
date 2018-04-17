@@ -1,12 +1,10 @@
 ---
-title: "&lt;entryPoint&gt;要素 (Visual Studio での Office 開発) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;entryPoint&gt;要素 (Visual Studio での Office 開発) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - entryPoint element
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 2416a50707d36295a6ddb1c2388f6ee9ef37b113
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: f4bd7a9a119a5e604461f44bb166f19e063ab4af
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltentrypointgt-element-office-development-in-visual-studio"></a>&lt;entryPoint&gt;要素 (Visual Studio での Office 開発)
   `entryPoint` 名前空間の各 `vstav3` 要素によって、この [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] アプリケーションのインストール時に実行する必要のあるカスタマイズ アセンブリを指定します。  
@@ -51,7 +50,7 @@ ms.lasthandoff: 01/10/2018
 ### <a name="assemblyidentity"></a>assemblyIdentity  
  必須。 `assemblyIdentity` 名前空間の `vstav3` 要素は、 `assemblyIdentity` アプリケーション マニフェストで定義された既存の [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 要素を参照します。  
   
- 役割`assemblyIdentity`でその属性が定義されていると[&#60; assemblyIdentity &#62;。要素 &#40;です。ClickOnce アプリケーション &#41;](/visualstudio/deployment/assemblyidentity-element-clickonce-application).  
+ 役割`assemblyIdentity`でその属性が定義されていると[ &#60;assemblyIdentity&#62;要素&#40;ClickOnce アプリケーション&#41;](/visualstudio/deployment/assemblyidentity-element-clickonce-application)です。  
   
 ## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズの例  
   
@@ -113,7 +112,7 @@ ms.lasthandoff: 01/10/2018
 </vstav3:entryPoint>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
  [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)  

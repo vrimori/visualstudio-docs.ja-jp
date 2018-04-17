@@ -2,12 +2,9 @@
 title: ListObject コントロール |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - office-development
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VST.Toolbox.List
 dev_langs:
@@ -21,14 +18,14 @@ helpviewer_keywords:
 - ListObject control, improving performance when bound to data
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2100a1c30fda5981d3d7e58f2f5077e0cdf87a2d
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: ed8a11a62487e47cd86ae86b9f4126cb99b37159
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="listobject-control"></a>ListObject コントロール
   <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールは、イベントを公開するリストであり、データにバインドすることができます。 ワークシートにリストを追加すると、ユーザーが Microsoft Office Excel オブジェクト モデルを走査する必要なく、直接、プログラムできる <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールが Visual Studio により作成されます。  
@@ -112,7 +109,7 @@ ms.lasthandoff: 01/10/2018
   
 -   <xref:Microsoft.Office.Tools.Excel.ListObject.SelectionChange>  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)   
  [方法: ワークシートに ListObject コントロールを追加します。](../vsto/how-to-add-listobject-controls-to-worksheets.md)   
  [方法: ListObject コントロールのサイズを変更します。](../vsto/how-to-resize-listobject-controls.md)   
