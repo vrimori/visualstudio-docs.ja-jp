@@ -1,23 +1,22 @@
 ---
 title: Microsoft Partner Network (MPN) で提供されている Visual Studio サブスクリプションの管理 | Microsoft Docs
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 12/11/2017
-Ms.topic: Get-Started-Article
-Description: How to assign Visual Studio subscriptions to your end users, for MPN partners.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 308b682215556c645eeaf0257292e40fba35a9c1
-ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 12/11/2017
+ms.topic: Get-Started-Article
+description: MPN パートナーのために Visual Studio サブスクリプションをエンド ユーザーに割り当てる方法。
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: a81cf891a58a8c6bf206b057b883d133d92b0a85
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="managing-visual-studio-subscriptions-offered-through-the-microsoft-partner-network-mpn"></a>Microsoft Partner Network (MPN) で提供されている Visual Studio サブスクリプションの管理
 
-## <a name="overview"></a>概要
 MPN でコンピテンシーを取得するか、Action Pack を購入したパートナーは、Visual Studio サブスクリプションを使用できます。 これらのサブスクリプションは、ユーザーごとにライセンスされ、パートナー企業で働く特定の名前付きユーザーに割り当てられている場合にのみ有効です。
 
 詳細については、「[Microsoft Partner Network (MPN) でパートナーに提供される Visual Studio サブスクリプション](program-mpn.md)」を参照してください。

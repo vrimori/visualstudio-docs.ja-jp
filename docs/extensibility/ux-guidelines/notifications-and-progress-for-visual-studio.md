@@ -1,28 +1,24 @@
 ---
-title: "通知および Visual Studio の進行状況を |Microsoft ドキュメント"
-ms.custom: 
+title: 通知および Visual Studio の進行状況を |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f0ef65e9-0f1f-45f4-9f25-6e2398691168
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 00ab0622820777f556eff667e6de5f769196e6b0
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: 237ed5c382a6ac880b0be59165a33ad338370976
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="notifications-and-progress-for-visual-studio"></a>通知および Visual Studio の進行状況
-##  <a name="BKMK_NotificationSystems"></a>通知システム  
+##  <a name="BKMK_NotificationSystems"></a> 通知システム  
   
 ### <a name="overview"></a>概要  
  何が起こっているか Visual Studio でのソフトウェアの開発タスクに関するをユーザーに通知するためにいくつかの方法はあります。  
@@ -61,14 +57,14 @@ ms.lasthandoff: 02/01/2018
   
 ### <a name="notification-methods"></a>通知方法  
   
-####  <a name="BKMK_ModalErrorMessageDialogs"></a>モーダル エラー メッセージ ダイアログ ボックス  
+####  <a name="BKMK_ModalErrorMessageDialogs"></a> モーダル エラー メッセージ ダイアログ ボックス  
  モーダル エラー メッセージ ダイアログ ボックスを使用して、ユーザーの確認/アクションが必要なエラー メッセージを表示します。  
   
  ![モーダル エラー メッセージ](../../extensibility/ux-guidelines/media/0901-01_modalerrormessage.png "0901 01_ModalErrorMessage")  
   
  **データベースへの無効な接続文字列のユーザーに警告モーダル エラー メッセージ ダイアログ ボックス**  
   
-####  <a name="BKMK_IDEStatusBar"></a>IDE ステータス バー  
+####  <a name="BKMK_IDEStatusBar"></a> IDE ステータス バー  
  ユーザーがステータス バーのテキストを確認する可能性、オールラウンドのコンピューターのエクスペリエンスと Windows プラットフォームの特定の経験を相互に関連付けます。 Visual Studio のお客様は、でも知識豊富な Windows ユーザーは、ステータス バーに変更を見落とす可能性がありますが、両方の領域で発生する傾向があります。 そのため、ステータス バーは最適な情報提供を目的のまたは使用冗長なキューの他の場所の情報が表示されます。 ダイアログ ボックスで、または通知ツール ウィンドウで、あらゆる種類のユーザーがすぐに解決する必要がある重要な情報を指定する必要があります。  
   
  Visual Studio のステータス バーは、いくつかの種類の情報を表示する許可するように設計されています。 フィードバック、デザイナー、進行状況バー、アニメーション、およびクライアントの領域に分かれています。  
@@ -81,24 +77,24 @@ ms.lasthandoff: 02/01/2018
   
  **IDE ステータス バーの色**  
   
-####  <a name="BKMK_EmbeddedInfobar"></a>埋め込まれた情報バー  
+####  <a name="BKMK_EmbeddedInfobar"></a> 埋め込まれた情報バー  
  情報バーは、ドキュメント ウィンドウまたはツール ウィンドウの上部にある状態または条件をユーザーに通知を使用できます。 ユーザーが簡単に操作を実行できるようにできるようにコマンドも提示できます。 情報バーは、標準のシェル コントロールです。 動作させ、IDE の他のユーザーと一貫性がないが、独自に作成しないでください。 参照してください[情報バー](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars)実装の詳細および使用ガイダンスについてはします。  
   
  ![情報バーを埋め込み](../../extensibility/ux-guidelines/media/0901-03_embeddedinfobar.png "0901 03_EmbeddedInfobar")  
   
  **デバッグ履歴モードでは、IDE と同じ方法では、標準的なデバッグ モードで行われるように、エディターが応答しないをユーザーに警告に、情報バーは、ドキュメント ウィンドウに埋め込まれます。**  
   
-####  <a name="BKMK_MouseCursorChanges"></a>マウス カーソルが変化  
+####  <a name="BKMK_MouseCursorChanges"></a> マウス カーソルが変化  
  マウス カーソルを変更する場合は、VSColor サービスに関連付けられていますが、既に、カーソルに関連付けられている色を使用します。 カーソルが変化進行中の操作を示すために使用するだけでなく、ユーザーがドラッグ、ドロップ、またはオブジェクトを選択するために使用できるターゲットを合わせるゾーンにヒットします。  
   
  操作の場合、ユーザーが、これ以上の入力を表現することを妨げて使用可能なすべての CPU 時間を確保する必要がある場合にのみ、ビジー状態/待機カーソルを使用します。 マルチ スレッドを使用して適切に記述されたアプリケーションとほとんどの場合、ユーザーがその他の操作を実行できなくと時間をまれにする必要があります。  
   
  他の場所に表示された情報を要求する冗長カーソル変更が便利でことに注意してください。 は、ユーザーを解決する必要がありますが重要に何かを伝えるためしようとしているときに特に、ユーザーとの通信の唯一の方法として、カーソル変更しないでください。  
   
-####  <a name="BKMK_NotSysProgressIndicators"></a>進行状況インジケーター  
+####  <a name="BKMK_NotSysProgressIndicators"></a> 進行状況インジケーター  
  進行状況インジケーターは、完了するまで複数の数秒かかるプロセス中にユーザーにフィードバックを与えるため重要です。 進行状況インジケータを表示する、インプレース (近く起点の進行中の操作)、表示される埋め込みステータス バー、モーダル ダイアログ ボックス、または Visual Studio のステータス バーにします。 ガイダンスに従って[進行状況のインジケーター](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_ProgressIndicators)これらの使用と実装に関連します。  
   
-####  <a name="BKMK_VSNotificationsToolWindow"></a>Visual Studio の通知ウィンドウ  
+####  <a name="BKMK_VSNotificationsToolWindow"></a> Visual Studio の通知ウィンドウ  
  Visual Studio の通知ウィンドウでは、ライセンス、環境 (Visual Studio)、拡張、および更新プログラムに関する開発者に通知します。 ユーザーは、個々 の通知を閉じることができます。 または特定の種類の通知を無視することもできます。 無視される通知の一覧を管理する、**ツール > オプション**ページ。  
   
  通知ウィンドウは、現在の拡張ではありません。  
@@ -107,33 +103,33 @@ ms.lasthandoff: 02/01/2018
   
  **Visual Studio の通知ツール ウィンドウ**  
   
-####  <a name="BKMK_ErrorList"></a>エラー一覧  
+####  <a name="BKMK_ErrorList"></a> エラー一覧  
  エラー一覧内での通知は、エラーと警告をコンパイル中に発生し、ビルド プロセス、やその特定のコード エラーをコード内を移動することができますを示します。  
   
  ![エラー一覧](../../extensibility/ux-guidelines/media/0901-08_errorlist.png "0901 08_ErrorList")  
   
  **Visual Studio でのエラー一覧**  
   
-####  <a name="BKMK_EmbeddedStatusBars"></a>埋め込まれたステータス バー  
+####  <a name="BKMK_EmbeddedStatusBars"></a> 埋め込まれたステータス バー  
  IDE ステータス バー動的であるためと、クライアントの地域コンテキストをアクティブなドキュメント ウィンドウと、ユーザーのコンテキストやシステムの応答での更新情報に設定することは困難情報の継続的な表示を維持または長期的な上の状態を指定非同期プロセスです。 たとえば、IDE ステータス バーは複数の実行やすぐに対応可能な項目の選択のテストの実行結果の通知を適切なではありません。 ユーザーが、選択を行うか、プロセスを開始するドキュメントまたはツール ウィンドウのコンテキストでこのようなステータス情報を保持する重要です。  
   
  ![埋め込まれたステータス バー](../../extensibility/ux-guidelines/media/0901-09_embeddedstatusbar.png "0901 09_EmbeddedStatusBar")  
   
  **Visual Studio で埋め込みステータス バー**  
   
-####  <a name="BKMK_WindowsTray"></a>Windows トレイ通知  
+####  <a name="BKMK_WindowsTray"></a> Windows トレイ通知  
  システムの横にある通知領域は、Windows は、Windows タスク バーのクロックします。 多くのユーティリティとソフトウェア コンポーネントは、ユーザーが画面の解像度を変更したり、ソフトウェア更新プログラムを取得するように、システム全体のタスクのコンテキスト メニューを取得できるように、この領域にアイコンを提供します。  
   
  環境レベル通知は、Windows 通知領域ではなく、Visual Studio の通知ハブに表示される必要があります。  
   
-####  <a name="BKMK_NotificationBubbles"></a>通知バブル  
+####  <a name="BKMK_NotificationBubbles"></a> 通知バブル  
  エディターまたはデザイナー内で情報提供を目的として、または Windows 通知領域の一部として、通知バブルを表示できます。 ユーザーは、重要でない通知の利点は、後で解決できる問題としてこれらのバブルを認識します。 バブルは、ユーザーがすぐに解決する必要がありますのある重要な情報に適さないものです。 通知バブルを使用すると、Visual Studio では、場合、[通知バブルの Windows デスクトップ ガイダンス](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742472\(v=vs.85\).aspx)です。  
   
  ![通知バブル](../../extensibility/ux-guidelines/media/0901-07_notificationbubbles.png "0901 07_NotificationBubbles")  
   
  **Visual Studio の使用、Windows 通知領域に通知バブル**  
   
-##  <a name="BKMK_ProgressIndicators"></a>進行状況インジケーター  
+##  <a name="BKMK_ProgressIndicators"></a> 進行状況インジケーター  
   
 ### <a name="overview"></a>概要  
  進行状況インジケーターは、ユーザー フィードバックの提供の通知システムの重要な部分です。 プロセスおよび操作は完了時にユーザーを教えてくれるとします。 使い慣れたインジケーターの種類には、進行状況バー、スピン カーソル、およびアニメーションのアイコンが含まれます。 進行状況インジケーターの配置と型は、何が表示されているを含む、コンテキストとどのくらいの時間プロセスまたは操作の完了に要するに依存します。  
@@ -287,7 +283,7 @@ ms.lasthandoff: 02/01/2018
   
  **継続的なプロセスの状態と出力ウィンドウ、メッセージを待ちます**  
   
-##  <a name="BKMK_Infobars"></a>情報バー  
+##  <a name="BKMK_Infobars"></a> 情報バー  
   
 ### <a name="overview"></a>概要  
  情報バーのアテンションのポイントの近くにインジケーターをユーザーに付与し、視覚的な外観との相互作用の一貫性を確保共有情報バー コントロールを使用します。  
@@ -476,19 +472,19 @@ public interface IVsInfoBarUIEvents
   
 ```  
   
-##  <a name="BKMK_ErrorValidation"></a>エラーの検証  
+##  <a name="BKMK_ErrorValidation"></a> エラーの検証  
  入力すると、ユーザー情報は、必須フィールドをスキップする場合など、または不適切な形式でデータを入力するときに使用できませんが、使用するコントロールの検証またはブロックしているポップアップ エラー ダイアログ ボックスを使用する代わりに、コントロールの近くのフィードバックをことをお勧めします。  
   
 ### <a name="field-validation"></a>フィールドの検証  
  フォームとフィールドの検証は、3 つのコンポーネントで構成されています: コントロール、アイコン、およびツールヒント。 いくつかの種類のコントロールには、これを使用できる、テキスト ボックスは、例として使用されます。  
   
- ![フィールドの検証 &#40;空白&#41;] (../../extensibility/ux-guidelines/media/0905-01_fieldvalidation.png "0905 01_FieldValidation")  
+ ![検証フィールド&#40;空白&#41;](../../extensibility/ux-guidelines/media/0905-01_fieldvalidation.png "0905 01_FieldValidation")  
   
  フィールドが必要な場合がありますを示すテキストが透かし**\<必要 >**フィールド背景が薄いをする必要があります黄色 (VSColor: `Environment.ControlEditRequiredBackground`)、フォア グラウンドがグレー表示にする必要があります (VSColor: `Environment.ControlEditRequiredHintText`)。  
   
  ![「必須」のラベルを持つ検証をフィールド](../../extensibility/ux-guidelines/media/0905-02_fieldvalidationrequired.png "0905 02_FieldValidationRequired")  
   
- プログラムでは、コントロールの状態を判断できます*に入力された無効なコンテンツ*か別のコントロールにフォーカスを移動した場合、ユーザーが [OK] のコミットボタンをクリックしたときか、ユーザーが文書またはフォームを保存するときにします。  
+ プログラムでは、コントロールの状態を判断できます*に入力された無効なコンテンツ*か別のコントロールにフォーカスを移動した場合、ユーザーが [OK] のコミット ボタンをクリックしたときか、ユーザーが文書またはフォームを保存するときにします。  
   
  無効なコンテンツの状態が確認された場合、コントロールの内部、または同様の横にアイコンが表示されます。 アイコンまたはコントロールのいずれかのホバー時のエラーを説明するツールヒントが表示されます。 さらに、無効な状態を作成しているコントロールの周囲に 1 ピクセルの境界線を表示します。  
   
@@ -515,7 +511,7 @@ public interface IVsInfoBarUIEvents
 #### <a name="in-place-warning-text"></a>インプレース警告テキスト  
  エラーの状態で、コントロールの近くに、エラー メッセージを配置に使用できる空きスペースがある場合は、単独でツールヒントを使用してこれをお勧めします。  
   
- ![&#45; 場所警告](../../extensibility/ux-guidelines/media/0905-06_inplacewarning.png "0905 06_InPlaceWarning")  
+ ![&#45;配置警告](../../extensibility/ux-guidelines/media/0905-06_inplacewarning.png "0905 06_InPlaceWarning")  
   
  **インプレース警告テキスト**  
   

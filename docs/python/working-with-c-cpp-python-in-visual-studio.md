@@ -2,7 +2,7 @@
 title: C++ と Python の使用 | Microsoft Docs
 description: Visual Studio で Python 用に C++ の拡張機能またはモジュールを記述するプロセスと手順について説明します
 ms.custom: ''
-ms.date: 01/16/2018
+ms.date: 04/03/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,36 +14,39 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 12309747949e9f541c69fad64584e86627252907
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 3f81a9f14d64e014fd2b40b0628d7d71884810a3
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="creating-a-c-extension-for-python"></a>Python 用 C++ 拡張機能の作成
 
 Python インタープリターの機能を拡張するため、およびオペレーティング システムの低レベル機能にアクセスするためには、C++ (または C) で記述されたモジュールがよく使われます。 モジュールの主要な種類は次の 3 つです。
 
-- アクセラレータ モジュール: Python はインタープリター言語であるため、コードの特定の部分を C++ で書くことによってパフォーマンスを向上させることができます。 
-- ラッパー モジュール: ラッパーは、既存の C/C++ インターフェイスを Python コードに公開します。また、Python から使いやすい、より "Python らしい" API を公開します。
+- アクセラレータ モジュール: Python はインタープリター言語であるため、コードの特定の部分を C++ で書くことによってパフォーマンスを向上させることができます。
+- ラッパー モジュール: 既存の C/C++ インターフェイスを Python コードに公開します。または、Python から使いやすい、より "Python らしい" API を公開します。
 - 低レベル システム アクセス モジュール: CPython ランタイム、オペレーティング システム、または基盤ハードウェアの低レベル機能にアクセスするために作成します。
 
 この記事では、双曲正接を計算する CPython 用の C++ 拡張モジュールを作成し、Python コードからそれを呼び出す手順について説明します。 Python では最初にルーチンを実装して、C++ で同じルーチンを実装した場合の相対的なパフォーマンス向上を示します。
 
 ここでは、[Python のドキュメント](https://docs.python.org/3/c-api/)で説明されている CPython の標準拡張機能のためのアプローチを使います。 この方法と他の方法の比較については、この記事の最後にある「[別の方法](#alternative-approaches)」で説明します。
 
+このチュートリアルで使われているサンプルの完全版は [python-samples-vs-cpp-extension](https://github.com/Microsoft/python-sample-vs-cpp-extension) (GitHub) にあります。
+
 ## <a name="prerequisites"></a>必須コンポーネント
 
 - **C++ によるデスクトップ開発**と **Python 開発**ワークロードの両方を備えた Visual Studio 2017 が既定のオプションでインストールされます。
 - **Python 開発**ワークロードでは、**[Python ネイティブ開発ツール]** の横のボックスもオンにします。 このオプションによって、この記事で説明するほとんどの構成が設定されます。 (このオプションには、C++ のワークロードも自動的に含まれます)。
 
-![[Python ネイティブ開発ツール] オプションの選択](media/cpp-install-native.png)
+    ![[Python ネイティブ開発ツール] オプションの選択](media/cpp-install-native.png)
 
-- **データ サイエンスと分析アプリケーション** ワークロードをインストールすることでも、Python と **Python ネイティブ開発ツール** オプションが既定で含まれます。
+    > [!Tip]
+    > **データ サイエンスと分析アプリケーション** ワークロードをインストールすることでも、Python と **Python ネイティブ開発ツール** オプションが既定で含まれます。
 
 他のバージョンの Visual Studio の使用など、詳細については「[Visual Studio 用の Python サポートのインストール](installing-python-support-in-visual-studio.md)」を参照してください。 Python を別にインストールする場合は、インストーラーで **[詳細オプション]** の **[Download debugging symbols (デバッグ シンボルのダウンロード)]** と **[Download debug binaries (デバッグ バイナリのダウンロード)]** を必ず選んでください。 このオプションを選択すると、デバッグ ビルドを行う場合に、必要なデバッグ ライブラリを確実に使用できます。
 
@@ -91,10 +94,11 @@ Python インタープリターの機能を拡張するため、およびオペ�
         print('{} took {:.3f} seconds\n\n'.format(name, duration))
 
         for d in result:
-            assert -1 <= d <=1, " incorrect values"
+            assert -1 <= d <= 1, " incorrect values"
 
     if __name__ == "__main__":
         print('Running benchmarks with COUNT = {}'.format(COUNT))
+
         test(sequence_tanh, 'sequence_tanh')
 
         test(lambda d: [tanh(x) for x in d], '[tanh(x) for x in d]')
@@ -104,11 +108,17 @@ Python インタープリターの機能を拡張するため、およびオペ�
 
 ## <a name="create-the-core-c-project"></a>C++ のコア プロジェクトを作成する
 
-1. ソリューション エクスプローラーでソリューション名を右クリックし、**[追加] > [新しいプロジェクト...]** を選びます。同じ Visual Studio ソリューションに、Python と C++ 両方のプロジェクトを含めることができます。
+1. ソリューション エクスプローラーでソリューション名を右クリックし、**[追加] > [新しいプロジェクト...]** を選びます。Visual Studio ソリューションには、Python プロジェクトと C++ プロジェクトの両方を含めることができます (これは Visual Studio for Python 使用の利点の 1 つです)。
 
-1. "C++" を検索し、**[空のプロジェクト]** を選び、名前 (この記事では "superfastcode" を使用) を指定して、**[OK]** を選びます。 注: Visual Studio 2017 で **Python ネイティブ開発ツール**をインストールした場合は、**Python 拡張モジュール**から始めることができます。このテンプレートには、ここで説明するものの多くが既に配置されています。 ただし、このチュートリアルでは、拡張モジュールの作成手順を実際に示すため、空のプロジェクトから始めます。
+1. "C++" を検索し、**[空のプロジェクト]** を選び、名前 (この記事では "superfastcode" を使用) を指定して、**[OK]** を選びます。
 
-1. **[ソース ファイル]** ノードを右クリックし、**[追加] > [新しい項目...]** を選び、**[C++ ファイル]** を選んで名前 (`module.cpp` など) を指定してから **[OK]** を選び、新しいプロジェクトに C++ ファイルを作成します。 このステップは、次のステップで C++ のプロパティ ページを有効にするために必要です。
+    > [!Tip]
+    > Visual Studio 2017 で **Python ネイティブ開発ツール**をインストールしたので、代わりに **Python 拡張モジュール**から始めることができます。このテンプレートには、以下で説明するものの多くが既に配置されています。 ただし、このチュートリアルでは、拡張モジュールの作成手順を実際に示すため、空のプロジェクトから始めます。 プロセスを理解したら、独自の拡張を記述するとき、テンプレートで時間が節約されます。
+
+1. **[ソース ファイル]** ノードを右クリックして **[追加]、[新しい項目]** の順に選択し、**[C++ ファイル]** を選択して `module.cpp` という名前を付け、**[OK]** を選択し、新しいプロジェクトに C++ ファイルを作成します。
+
+    > [!Important]
+    > 後続の手順で C++ プロパティ ページを有効にするには、`.cpp` 拡張子を持つファイルが必要です。
 
 1. ソリューションで C++ プロジェクトを右クリックして、**[プロパティ]** を選択します。
 
@@ -136,7 +146,7 @@ Python インタープリターの機能を拡張するため、およびオペ�
 
 1. C++ プロジェクトを右クリックし、**[ビルド]** を選んで構成をテストします (デバッグとリリースの両方)。 `.pyd` ファイルは、C++ のプロジェクト フォルダー自体ではなく、**Debug** および **Release** の下の *solution* フォルダーにあります。
 
-1. C++ プロジェクトのメインの `.cpp` ファイルに、次のコードを追加します。
+1. C++ プロジェクトの `module.cpp` ファイルに、次のコードを追加します。
 
     ```cpp
     #include <Windows.h>
@@ -161,19 +171,17 @@ Python インタープリターの機能を拡張するため、およびオペ�
 
 ## <a name="convert-the-c-project-to-an-extension-for-python"></a>C++ プロジェクトを Python の拡張機能に変換する
 
-C++ DLL を Python の拡張機能にするには、まず Python の型と対話するようにエクスポートしたメソッドを変更します。 その後、モジュールのメソッドの定義と共に、モジュールをエクスポートする関数を追加します。 これらの背景については、python.org で「[Python/C API Reference Manual](https://docs.python.org/3/c-api/index.html)」(Python/C API リファレンス マニュアル) および特に「[Module Objects](https://docs.python.org/3/c-api/module.html)」(モジュールのオブジェクト) をご覧ください(右上のドロップダウン コントロールで Python のバージョンを選んでください)。
+C++ DLL を Python の拡張機能にするには、まず Python の型と対話するようにエクスポートしたメソッドを変更します。 その後、モジュールのメソッドの定義と共に、モジュールをエクスポートする関数を追加します。
 
-> [!Note]
-> 次の手順は、Python 3.x に適用されます。 Python 2.7 を使用している場合は、「[Extending Python 2.7 with C or C++ (C や C++ による Python 2.7 の拡張)](https://docs.python.org/2.7/extending/extending.html)」や「[Python 3 への拡張モジュール移植](https://docs.python.org/2.7/howto/cporting.html)」(python.org) をご覧ください。
+このセクションに登場する Python 3.x の機能の背景については、python.org の「[Python/C API リファレンスマニュアル](https://docs.python.org/3/c-api/index.html)」を参照してください。特に、「[モジュールオブジェクト](https://docs.python.org/3/c-api/module.html)」を参照してください。右上にあるドロップダウン コントロールから必ずお使いのバージョンの Python を選択すると該当文書が表示されます。
+
+Python 2.7 を使用している場合は、代わりに python.org で [C や C++ による Python 2.7 の拡張](https://docs.python.org/2.7/extending/extending.html)に関するページや「[Python 3 への拡張モジュール移植](https://docs.python.org/2.7/howto/cporting.html)」を参照してください。
 
 1. C++ ファイルの先頭に `Python.h` を含めます。
 
     ```cpp
     #include <Python.h>
     ```
-
-    > [!Tip]
-    > "*E1696: ソース ファイル "Python.h" を開けません*" や "*C1083: インクルード ファイルを開けません: "Python.h": このようなファイルまたはディレクトリはありません*" というメッセージが表示される場合は、プロジェクトのプロパティの **[C/C++] > [全般] > [追加のインクルード ディレクトリ]** の設定が、「[C++ のコア プロジェクトを作成する](#create-the-core-c-project)」の手順 6 で説明されている通りに、Python インストールの `include` フォルダーに設定されていることを確認してください。
 
 1. Python の型 (つまり `PyOjbect*`) を受け付けて戻すように、`tanh_impl` メソッドを変更します。
 
@@ -219,8 +227,8 @@ C++ DLL を Python の拡張機能にするには、まず Python の型と対�
     ```
 
 1. ターゲットの構成を "リリース" に設定し、もう一度 C++ プロジェクトをビルドして、コードを検証します。 エラーが発生した場合は、次のケースを確認します。
-    - Python.h が見つかりません: プロジェクトのプロパティの **[C/C++] > [全般] > [追加のインクルード ディレクトリ]** のパスが、Python インストールの `include` フォルダーを指していることを確認します。
-    - Python ライブラリが見つかりません: プロジェクトのプロパティの **[リンカー] > [全般] > [追加のライブラリ ディレクトリ]** のパスが、Python インストールの `libs` フォルダーを指していることを確認します。
+    - Python.h が見つからない (*E1696: ソース ファイル "Python.h" を開けません* や *C1083: インクルード ファイルを開けません: "Python.h": このようなファイルまたはディレクトリはありません*): プロジェクトのプロパティの **[C/C++]、[全般]、[追加のインクルード ディレクトリ]** のパスが Python インストールの `include` フォルダーに設定されていることを確認してください。 「[C++ のコア プロジェクトを作成する](#create-the-core-c-project)」の手順 6 をご覧ください。
+    - Python ライブラリが見つかりません: プロジェクトのプロパティの **[リンカー] > [全般] > [追加のライブラリ ディレクトリ]** のパスが、Python インストールの `libs` フォルダーを指していることを確認します。 「[C++ のコア プロジェクトを作成する](#create-the-core-c-project)」の手順 6 をご覧ください。
     - ターゲット アーキテクチャに関連するリンカー エラー: C++ プロジェクトのターゲット アーキテクチャを、Python インストールのアーキテクチャと一致するように変更します。 たとえば、C++ プロジェクトで x64 をターゲットとするが、Python インストールが x86 の場合は、C++ プロジェクトを x86 をターゲットとするように変更します。
 
 ## <a name="test-the-code-and-compare-the-results"></a>コードをテストして結果を比較する
@@ -232,6 +240,8 @@ Python 拡張機能の構造の DLL ができたので、Python プロジェク�
 Python で DLL を使えるようにするには 2 つの方法があります。
 
 Python プロジェクトと C++ プロジェクトが同じソリューション内にある場合は、1 つ目の方法を使用します。 ソリューション エクスプローラーに移動し、Python プロジェクト内の **[参照設定]** ノードを右クリックし、**[参照の追加]** をクリックします。 表示されるダイアログの **[プロジェクト]** タブで、**superfastcode** プロジェクト (または使用している名前) を選択し、**[OK]** を選択します。
+
+![superfastcode プロジェクトに参照を追加する](media/cpp-add-reference.png)
 
 次の手順で説明する別の方法では、グローバル Python 環境にモジュールをインストールし、他の Python プロジェクトでも使えるようにします  (そのためには、通常、その環境に合わせて Visual Studio 2017 バージョン 15.5 以前で IntelliSense 入力候補データベースを更新する必要があります。 環境からモジュールを削除するときも、更新する必要があります)。
 
@@ -269,7 +279,18 @@ Python プロジェクトと C++ プロジェクトが同じソリューショ�
     test(lambda d: [fast_tanh(x) for x in d], '[fast_tanh(x) for x in d]')
     ```
 
-1. Python プログラムを実行 (**[デバッグ] > [デバッグなしで開始]** または Ctrl+F5 キー) し、Python の実装よりも 5 - 20 倍高速で C++ のルーチンが実行されることを確認します。 違いがより顕著になるように、もう一度、`COUNT` 変数を増やしてみます。 また、C++ モジュールのデバッグ ビルドの実行は、リリース ビルドよりも低速になることに注意してください。これは、デバッグ ビルドが十分に最適化されず、さまざまなエラー チェックが含まれるためです。 これらの構成間を自由に切り替えて比較することができます。
+1. Python プログラムを実行 (**[デバッグ] > [デバッグなしで開始]** または Ctrl+F5 キー) し、Python の実装よりも 5 - 20 倍高速で C++ のルーチンが実行されることを確認します。 通常、次のような出力が表示されます。
+
+    ```output
+    Running benchmarks with COUNT = 500000
+    sequence_tanh took 1.542 seconds
+
+    [tanh(x) for x in d] took 1.087 seconds
+
+    [fast_tanh(x) for x in d] took 0.158 seconds
+    ```
+
+1. 違いがより顕著になるように `COUNT` 変数を増やしてみてください。 また、C++ モジュールのデバッグ ビルドの実行は、リリース ビルドよりも低速になります。これは、デバッグ ビルドが十分に最適化されず、さまざまなエラー チェックが含まれるためです。 これらの構成間を自由に切り替えて比較することができます。
 
 ## <a name="debug-the-c-code"></a>C++ コードをデバッグする
 
@@ -301,7 +322,13 @@ Visual Studio では、Python と C++ コードを一緒にデバッグするこ
 | 方法 | 時期 | 代表的ユーザー | 長所 | 短所 |
 | --- | --- | --- | --- | --- |
 | CPython 用の C/C++ 拡張モジュール | 1991 | 標準ライブラリ | [広範なドキュメントとチュートリアル](https://docs.python.org/3/c-api/)。 総合的な制御。 | コンパイル、移植性、参照の管理。 C についての深い知識。 |
-| SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | 多くの言語のバインドを一度に生成。 | Python が唯一のターゲットである場合、過剰なオーバーヘッド。 |
+| [pybind11](https://github.com/pybind/pybind11) (C++ に推奨) | 2015 |  | 既存の C++ コードの Python バインディングを作成するためのヘッダーのみの軽量ライブラリ。 依存関係はわずか。 PyPy 互換性。 | 新しく、未完成な部分あり。 C++ 11 の機能を多用。 対応しているコンパイラが少ない (Visual Studio は含まれる)。 |
+| Cython (C に推奨) | 2007 | [gevent](http://www.gevent.org/)、[kivy](https://kivy.org/) | Python に似ている。 非常に完成されている。 高パフォーマンス。 | コンパイル、新しい構文、新しいツールチェーン。 |
+| [Boost.Python](https://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html) | 2002 | | ほぼすべての C++ コンパイラで動作。 | ライブラリ スイートが大きくて複雑。使用していないコンパイラの回避策が多く含まれる。 |
 | ctypes | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | コンパイルがなく、広く利用可能。 | C 構造体のアクセスや変更が煩雑で、エラーを起こしやすい。 |
-| Cython | 2007 | [gevent](http://www.gevent.org/)、[kivy](https://kivy.org/) | Python に似ている。 非常に完成されている。 高パフォーマンス。 | コンパイル、新しい構文、新しいツールチェーン。 |
-| cffi | 2013 | [cryptography](https://cryptography.io/en/latest/)、[pypy](http://pypy.org/) | 容易な統合、PyPy との互換性。 | 新しく、未完成な部分がある。 |
+| SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | 多くの言語のバインドを一度に生成。 | Python が唯一のターゲットである場合、過剰なオーバーヘッド。 |
+| cffi | 2013 | [cryptography](https://cryptography.io/en/latest/)、[pypy](http://pypy.org/) | 容易な統合、PyPy との互換性。 | 新しく、未完成な部分あり。 |
+
+## <a name="see-also"></a>関連項目
+
+このチュートリアルで使われているサンプルの完全版は [python-samples-vs-cpp-extension](https://github.com/Microsoft/python-sample-vs-cpp-extension) (GitHub) にあります。

@@ -1,27 +1,29 @@
 ---
-title: "管理者の責任 | Visual Studio Marketplace"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 10/3/2017
-Ms.topic: Get-Started-Article
-Description: Learn about responsibilities of subscriptions administrators.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 92dcfe8b975596fc2f137630f6acfead6b935508
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+title: 管理者の責任 | Visual Studio Marketplace
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 03/13/2018
+ms.topic: Get-Started-Article
+description: サブスクリプション管理者の責任について説明します。
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 1eb8dc3cf47241632085e86f589ba377343aa4f1
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="administrator-overview"></a>管理者の概要
+# <a name="overview-of-administrator-responsibilities"></a>管理者責任の概要
+管理者には、組織のサブスクリプションを管理する役割が与えられます。  この役割には、ライセンス条項に基づいてサブスクリプションを管理するという責任も伴います。 この記事では、管理者の役割に伴う責任、特権、制限について説明します。
+
 ## <a name="roles--responsibilities"></a>役割と責任
-Microsoft 製品とサービスの割引料金と引き換えに、組織は Visual Studio サブスクリプションに関する特定の責任と制限事項に合意します。 Visual Studio 管理者には、次の 4 つの主な責任があります。
+Visual Studio 管理者には、次の 4 つの主な責任があります。
 1.  **Visual Studio サブスクリプションの特典と制限を理解する。** 特典を正しく理解することで、クラウド サービスによりハードウェアのコストを削減したり、実稼働前環境のユーザーごとのライセンスを使用してソフトウェア コストを削減することができます。 
 2.  **Visual Studio サブスクリプションを特定の指定した個人に割り当て、使用を促す。** コントラクトでは、Visual Studio サブスクリプションを特定の指定した個人に割り当てることを求めています。 割り当てた個人をフォローして、彼らが Visual Studio サブスクリプションに含まれる特典にアクセスしてフル活用できるようにします。
 3.  **実稼働前環境の正確なインベントリ。** これは、Visual Studio のライセンス済みソフトウェアと対話するすべてのユーザーが、自身の Visual Studio サブスクリプションで適切にライセンス付与されていることを確認するために不可欠です。 
-4.  **ユーザーの割り当ての変更を追跡し、スケジュールどおりに追加のライセンスを取得する。** Microsoft ボリューム ライセンス (VL) 契約により、Visual Studio サブスクリプションの柔軟な使用と割り当てが可能になります。 代わりに、ソフトウェア使用状況とユーザー割り当てへの変更を追跡し、契約書に記載されているスケジュールに従って追加のライセンスの注文を処理することが求められます。
+4.  **ユーザーの割り当ての変更を追跡し、スケジュールどおりに追加のライセンスを取得する。** Microsoft ボリューム ライセンス (VL) 契約や MPSA により、Visual Studio サブスクリプションの柔軟な使用と割り当てが可能になります。 代わりに、ソフトウェア使用状況とユーザー割り当てへの変更を追跡し、契約書に記載されているスケジュールに従って追加のライセンスの注文を処理することが求められます。
 
 ## <a name="benefits-and-limitations"></a>特典と制限
 Visual Studio サブスクリプションでは、開発チーム メンバーがソフトウェアをインストールして、他のソフトウェアの設計、開発、テスト、評価、デモに使用することができます。 Visual Studio サブスクリプション ソフトウェアは、実稼働環境にはライセンス付与されません。 
@@ -31,7 +33,7 @@ Visual Studio サブスクリプションでは、開発チーム メンバー�
 | ユーザー ベースのライセンス                     | MSDN Platforms と Visual Studio サブスクリプションのすべてのレベルは、ユーザーごとにライセンスが付与されます。 これらの製品やサービスに含まれているソフトウェアと対話 (インストール、構成、またはアクセス) する各開発チームのメンバーには、独自の Visual Studio サブスクリプションが必要です。                                                                                                                                                                                                                                                                                                                                  |
 | 無制限のインストール                  | ライセンス付与された各ユーザーは、任意の数のデバイスにソフトウェアをインストールして、ソフトウェアの設計、開発、テスト、評価、デモに使用できます。 1 つのデスクトップに対してライセンス付与される Microsoft Office は例外です。 Visual Studio でライセンス付与されたソフトウェアは、職場、自宅、学校、および顧客のオフィスにあるデバイス、またはサード パーティでホストされている専用ハードウェアにインストールして使用することができます。                                                                                                                                                                                                                                  |
 | 運用環境向けではない | Visual Studio サブスクリプションのソフトウェアは、運用環境にはライセンス付与されません。運用環境には、受け入れテストやフィードバック以外にエンド ユーザーによってアクセスされる環境、実稼働データベースに接続している環境、ディザスター リカバリーまたは実稼働バックアップをサポートしている環境、またはアクティビティのピーク時に運用に使用される環境が含まれます。 この例外には、[Visual Studio ライセンスのホワイト ペーパー](http://aka.ms/vslicensing)に記載されている特定のサブスクリプション レベルの特定の特典が含まれます。                                                                                            |
-| ライセンスの再割り当て                     | ユーザーがチームを離れ、ライセンスの必要がなくなった場合は、90 日が経過した後にそのライセンスを再割り当てすることができます。 ライセンスを再割り当てするときに、既に使用されているプロダクト キーが置き換えられることはありません。 これは、既存のボリューム ライセンス サービス センター (VLSC) にあった機能とは異なります。 Pluralsight トレーニングなど、元のユーザーによって使用されていたすべての特典がリセットされます。                                                                                                                                                                                                                                                 |
+| ライセンスの再割り当て                     | ユーザーがチームを離れ、ライセンスの必要がなくなった場合は、90 日が経過した後にそのライセンスを再割り当てすることができます。 ライセンスを再割り当てするときに、既に使用されているプロダクト キーは引き続き利用できるとしても置き換えられることはありません。 エンタープライズ契約 (EA) を締結している組織の場合、Pluralsight トレーニングなど、元のユーザーによって使用されていたすべての特典がリセットされます。                                                                                                                                                                                                                                                 |
 | エンド ユーザーの例外                  | ソフトウェア開発プロジェクトの最後に、エンド ユーザーは通常、アプリケーションを確認し、リリースに必要な条件を満たしているかどうかを判断します。 このプロセスは、ユーザー受け入れテスト (UAT) と呼ばれます。 ビジネス スポンサーや製品マネージャーなどのチーム メンバーは、エンド ユーザーの代理としての役割を果たすことができます。 Visual Studio サブスクリプションがないエンド ユーザーは、ソフトウェアの使用が Visual Studio のすべてのライセンス条項に準拠していれば、UAT のためにソフトウェアにアクセスできます。 プライマリ ロールがソフトウェアの設計、開発、またはテストのユーザーが、"エンド ユーザー" にも該当する場合はほとんどありません。 |
 
 ## <a name="inventory-of-pre-production-environment"></a>運用前環境のインベントリ
@@ -47,6 +49,7 @@ Visual Studio の管理者は、Visual Studio サブスクリプションを**�
 
 ## <a name="large-teams-and-external-contractors"></a>大規模なチームおよび外部請負業者
 Visual Studio サブスクリプションの管理者は責任を持って、Visual Studio でライセンス付与されたソフトウェアと対話する各ユーザーが、自身の Visual Studio サブスクリプションで適切にライセンス付与されていることを確認します。
+
 ### <a name="internal-teams"></a>内部チーム
 最近のソフトウェア組織には、通常、複数のグループの利害関係者が含まれています。 ユーザー インベントリと変更の追跡に役立つ連絡先を各グループから識別します。 組織によって異なりますが、開発に関与するチームの典型的なリストには、以下が含まれます。
 - ソフトウェア エンジニアリング チーム 
@@ -70,7 +73,8 @@ Visual Studio サブスクリプションの管理者は、Visual Studio の使�
 2.  Visual Studio サブスクリプション管理者は、元の割り当て時から 90 日間が経過している場合は、あるサブスクライバーから別のサブスクライバーにサブスクリプションを再割り当てすることができます。 人為的に高い基準値を回避するため、これを行う場合は常に既存のサブスクリプションをまず削除してから新しいサブスクリプションを追加します。
 3.  Visual Studio サブスクリプション管理者は、個人に割り当てられたサブスクリプション レベルを変更できます。これは 1 つの割り当てを減らして別の割り当てを増やすことになります。 あるサブスクライバーの割り当てられたサブスクリプション レベルを下げた場合は、そのサブスクライバーは直ちに使用を停止し、上位レベルのサブスクリプションでのみ許可されているすべてのものをアンインストールする必要があります。 
 
-### <a name="open-license-and-open-value"></a>Open License と Open Value
-Microsoft Open License や Open Value のような別の Microsoft ボリューム ライセンス プログラムを介してサブスクリプションを割り当てることができます。 その場合は、ユーザー (従業員または外部請負業者) が Visual Studio のライセンス付与されたソフトウェアと対話を開始する月の間に、追加ユーザーの注文を処理する必要があります。
-### <a name="enterprise-agreements"></a>Enterprise Agreement
+### <a name="cloud-subscriptions-open-license-or-open-value"></a>Cloud サブスクリプション、Open License、Open Value
+Microsoft Cloud サブスクリプション、Open License、Open Value のようなプログラムを介してサブスクリプションを割り当てることができます。 その場合は、ユーザー (従業員または外部請負業者) が Visual Studio のライセンス付与されたソフトウェアと対話を開始する月の間に、追加ユーザーの注文を処理する必要があります。
+
+### <a name="enterprise-mpsa-and-select-agreements"></a>Enterprise、MPSA、Select 契約
 Microsoft Enterprise Agreements (EA)、MPSA および Select Plus 契約では、長期にわたる Visual Studio ソフトウェアの使用とライセンスの柔軟性が得られます。 Visual Studio 管理者は、ソフトウェア ライセンスが契約期間中に定められた使用率の高基準値になるように年間の調整注文を行う必要があります。

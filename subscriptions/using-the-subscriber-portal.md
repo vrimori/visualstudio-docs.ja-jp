@@ -1,19 +1,19 @@
 ---
-title: "サブスクライバー ポータルの使用 - http://my.visualstudio.com | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 1/4/2018
-Ms.topic: Get-Started-Article
-Description: Learn about the full range of benefits available to you on the Visual Studio subscriptions portal
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 2c2939ff8b4d20f2db7dd736c6a0dee28785645c
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: http://my.visualstudio.com のサブスクライバー ポータルの使用 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 01/04/2018
+ms.topic: Get-Started-Article
+description: Visual Studio サブスクリプション ポータルを使用するさまざまな利点について
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: cb6e33e442a5b4d63f4c1950df382da9a439643f
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-the-subscriber-portal---myspanspanvisualstudiospanspancom"></a>サブスクライバー ポータルの使用 - my.<span></span>visualstudio<span></span>.com
 

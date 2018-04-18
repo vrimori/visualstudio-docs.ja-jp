@@ -1,27 +1,25 @@
 ---
-title: "Vspackage がユーザー インターフェイス要素を追加する方法 |Microsoft ドキュメント"
-ms.custom: 
+title: Vspackage がユーザー インターフェイス要素を追加する方法 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - user interfaces, adding elements
 - UI element design [Visual Studio SDK], VSPackages
 - VSPackages, contributing UI elements
 ms.assetid: abc5d9d9-b267-48a1-92ad-75fbf2f4c1b9
-caps.latest.revision: "60"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 142e2a24f866db7e3ae20217b60b1ea0c201c749
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 930ab9e741b2fd5bbc0ca2954192fe5e2c4313d4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-vspackages-add-user-interface-elements"></a>Vspackage がユーザー インターフェイス要素を追加する方法
 VSPackage では、ユーザー インターフェイス (UI) 要素、たとえば、メニューのツールバーを追加でき、ツール ウィンドウ、.vsct ファイルを使用して Visual Studio をすることができます。  
@@ -64,7 +62,7 @@ VSPackage では、ユーザー インターフェイス (UI) 要素、たとえ
 </Symbols>  
 ```  
   
- 最上位要素、`Symbols`セクションは、 [GuidSymbol 要素](../../extensibility/guidsymbol-element.md)です。 `GuidSymbol`要素では、名前がパッケージとその構成要素を識別する、IDE で使用される Guid にマップします。  
+ 最上位要素、`Symbols`セクションは、 [GuidSymbol 要素](../../extensibility/guidsymbol-element.md)です。 `GuidSymbol` 要素では、名前がパッケージとその構成要素を識別する、IDE で使用される Guid にマップします。  
   
 > [!NOTE]
 >  Guid は、Visual Studio パッケージ テンプレートによって自動的に生成されます。 クリックして、一意の GUID を作成することも**GUID の作成**上、**ツール**メニュー。  
@@ -195,11 +193,11 @@ priority="0x0100" type="Menu">
 |要素|コマンド テーブルのこのセクションで定義されています。|含まれる場合があります (親、または内の配置によって、 `CommandPlacements`  セクションで、またはその両方)|含めることができます (親と呼ばれる)|  
 |-------------|--------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------|  
 |グループ化|[Groups 要素](../../extensibility/groups-element.md)IDE、その他の Vspackage|メニュー、グループ、アイテム自体|メニューのグループ、およびコマンド|  
-|メニュー|[メニュー要素](../../extensibility/menus-element.md)IDE、その他の Vspackage|1 ~  *n* グループ|0 ~  *n* グループ|  
-|ツール バー|[メニュー要素](../../extensibility/menus-element.md)IDE、その他の Vspackage|項目自体|0 ~  *n* グループ|  
-|メニュー項目|[要素の各ボタン](../../extensibility/buttons-element.md)IDE、その他の Vspackage|1 ~  *n* 項目自体をグループ化|-0 ~  *n* グループ|  
-|ボタン|[要素の各ボタン](../../extensibility/buttons-element.md)IDE、その他の Vspackage|1 ~  *n* 項目自体をグループ化||  
-|コンボ|[コンボ要素](../../extensibility/combos-element.md)IDE、その他の Vspackage|1 ~  *n* 項目自体をグループ化||  
+|メニュー|[メニュー要素](../../extensibility/menus-element.md)IDE、その他の Vspackage|1 ~ *n*グループ|0 ~ *n*グループ|  
+|ツール バー|[メニュー要素](../../extensibility/menus-element.md)IDE、その他の Vspackage|項目自体|0 ~ *n*グループ|  
+|メニュー項目|[要素の各ボタン](../../extensibility/buttons-element.md)IDE、その他の Vspackage|1 ~ *n*項目自体をグループ化|-0 ~ *n*グループ|  
+|ボタン|[要素の各ボタン](../../extensibility/buttons-element.md)IDE、その他の Vspackage|1 ~ *n*項目自体をグループ化||  
+|コンボ|[コンボ要素](../../extensibility/combos-element.md)IDE、その他の Vspackage|1 ~ *n*項目自体をグループ化||  
   
 ### <a name="menu-command-and-group-placement"></a>メニューのコマンド、およびグループの配置  
  メニューのグループ、またはコマンドは、IDE で 2 つ以上の場所に表示できます。 複数の場所に表示されるアイテムに追加する必要があります、`CommandPlacements`としてセクション、 [CommandPlacement 要素](../../extensibility/commandplacement-element.md)です。 コマンド配置としては、任意のメニューのグループ、またはコマンドを追加することができます。 ただし、状況依存の複数の場所に表示されることはできませんので、この方法でツールバーを配置することはできません。  
@@ -214,7 +212,7 @@ priority="0x0100" type="Menu">
 ##### <a name="visibility-constraints"></a>可視性の制約  
  可視性の制約として設定されて、 [VisibilityItem 要素](../../extensibility/visibilityitem-element.md)で、`VisibilityConstraints`セクションです。 可視性制約では、ターゲット項目が表示されている特定の UI コンテキストを定義します。 メニューまたはこのセクションに含まれているコマンドは、定義済みのコンテキストのいずれかがアクティブな場合にのみ表示されます。 場合は、メニューやコマンドは、このセクションで参照されていません、既定では常にします。 このセクションでは、グループには適用されません。  
   
- `VisibilityItem`要素は 3 つの属性を次のようにいる必要があります。`guid`と`id`ターゲット UI 要素のおよび`context`です。 `context`属性は、ターゲット項目が表示されます、その値として任意の有効な UI コンテキストを受け取るを指定します。 Visual Studio の UI コンテキストの定数のメンバーである、<xref:Microsoft.VisualStudio.VSConstants>クラスです。 各`VisibilityItem`要素が 1 つのみのコンテキストの値を取ることができます。 2 つ目のコンテキストを適用するには、2 つ目を作成`VisibilityItem`次の例で示すように、同じ項目をポイントする要素。  
+ `VisibilityItem` 要素は 3 つの属性を次のようにいる必要があります。`guid`と`id`ターゲット UI 要素のおよび`context`です。 `context`属性は、ターゲット項目が表示されます、その値として任意の有効な UI コンテキストを受け取るを指定します。 Visual Studio の UI コンテキストの定数のメンバーである、<xref:Microsoft.VisualStudio.VSConstants>クラスです。 各`VisibilityItem`要素が 1 つのみのコンテキストの値を取ることができます。 2 つ目のコンテキストを適用するには、2 つ目を作成`VisibilityItem`次の例で示すように、同じ項目をポイントする要素。  
   
 ```xml  
 <VisibilityConstraints>  
@@ -233,24 +231,24 @@ priority="0x0100" type="Menu">
  通常  
  グループやボタンれていない場合でも、メニューが作成されます。  
   
- に対して有効です。`Menu`  
+ に対して有効です。 `Menu`  
   
  CommandWellOnly  
  フラグを適用このコマンドがトップレベルのメニューに表示されない場合、その他のシェルのカスタマイズに使用できるようにするなど、キーにバインドします。 ユーザーが開くことによってこれらのコマンドをカスタマイズできます、VSPackage をインストールした後、**オプション**] ダイアログ ボックスと [コマンドの配置を編集し、**キーボード環境**カテゴリ。 ショートカット メニューのツールバー、メニュー コント ローラー、またはサブメニューの配置には影響しません。  
   
- 無効: `Button`、`Combo`  
+ 無効: `Button`、 `Combo`  
   
  DefaultDisabled  
  既定では、コマンドを実装する VSPackage が読み込まれていないか、QueryStatus メソッドが呼び出されていない場合、コマンドが無効になります。  
   
- 無効: `Button`、`Combo`  
+ 無効: `Button`、 `Combo`  
   
  DefaultInvisible  
  既定では、コマンドを実装する VSPackage が読み込まれていないか、QueryStatus メソッドが呼び出されていない場合、コマンドは表示されません。  
   
  組み合わせる必要があります、`DynamicVisibility`フラグ。  
   
- 無効: `Button`、 `Combo`、`Menu`  
+ 無効: `Button`、 `Combo`、 `Menu`  
   
  DynamicVisibility  
  QueryStatus メソッドまたはコンテキストに含まれている GUID を使用して、コマンドの可視性を変更することができます、`VisibilityConstraints`セクションです。  
@@ -261,12 +259,12 @@ priority="0x0100" type="Menu">
   
  組み合わせる必要があります、`DefaultInvisible`フラグ。  
   
- 無効: `Button`、 `Combo`、`Menu`  
+ 無効: `Button`、 `Combo`、 `Menu`  
   
  NoShowOnMenuController  
  このフラグが付いているコマンドがメニュー コント ローラーに配置されている場合、コマンドはドロップダウン リストでは表示されません。  
   
- に対して有効です。`Button`  
+ に対して有効です。 `Button`  
   
  コマンドのフラグの詳細については、次を参照してください。、[コマンド フラグ要素](../../extensibility/command-flag-element.md)ドキュメント。  
   
@@ -291,7 +289,7 @@ priority="0x0100" type="Menu">
 ## <a name="interface-element-appearance"></a>インターフェイス要素の外観  
  選択して、コマンド要素の配置に関する注意点は次のとおりです。  
   
--   [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]配置に応じて異なる方法で表示される多くの UI 要素を提供します。  
+-   [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 配置に応じて異なる方法で表示される多くの UI 要素を提供します。  
   
 -   UI 要素を使用して定義されている、`DefaultInvisible`の VSPackage 実装によって表示されるいずれかである場合を除き、フラグを IDE に表示されませんが、<xref:EnvDTE.IDTCommandTarget.QueryStatus%2A>メソッド、特定の UI コンテキストに関連付けられているか、`VisibilityConstraints`セクションです。  
   
@@ -303,5 +301,5 @@ priority="0x0100" type="Menu">
   
 -   IDE に表示される特定の UI 要素には、1 つまたは複数のインターフェイスを実装するか、コードを記述する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メニューとコマンドの拡張](../../extensibility/extending-menus-and-commands.md)

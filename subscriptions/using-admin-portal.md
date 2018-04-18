@@ -1,19 +1,19 @@
 ---
-title: "管理者ポータルを使用する | Visual Studio Marketplace"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 10/3/2017
-Ms.topic: Get-Started-Article
-Description: Learn how to manage your organization's Visual Studio subscriptions with the Administrator Portal.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: cf44f74b32bd830c613adcc1ee35a95b97636772
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+title: 管理者ポータルを使用する | Visual Studio Marketplace
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 10/03/2017
+ms.topic: Get-Started-Article
+mescription: Learn how to manage your organization's Visual Studio subscriptions with the Administrator Portal.
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 22351b94923777d5eb1fe40cd2e43e9dc20f2449
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/06/2018
 ---
 #  <a name="using-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio サブスクリプション管理者ポータルを使用する
 
@@ -25,6 +25,7 @@ Visual Studio サブスクリプションを使用して管理ポータルを管
 - **サブスクリプション会員間でサブスクリプションを共有しないでください。** サブスクリプション特典 (開発およびテスト用ソフトウェア、Microsoft Azure、e ラーニングなど) のすべてまたは一部使用するユーザーにサブスクリプションを割り当てる必要があります。 
 
 ## <a name="adminstrator-roles"></a>管理者の役割
+
 新しい Visual Studio サブスクリプションの管理ポータル内には、ボリューム ライセンスのお客様用の 2 つの異なるロールがあります。 これらのロールは、現在の VLSC の主要/通知連絡先ロールとサブスクリプション マネージャーに似ています。 
 
 **スーパー管理者:** 最初に組織を設定したときには、主要または通知連絡先が既定でスーパー管理者になります。 主要または通知連絡先は、追加のスーパー管理者または管理者を割り当てることを選択できます。 スーパー管理者では、他の管理者だけでなくサブスクライバーを追加および削除することができます。 システムに 2 人以上のスーパー管理者がいる場合、スーパー管理者はセキュリティのために最後の 2 人を除くすべての管理者を削除できます。 
@@ -32,7 +33,11 @@ Visual Studio サブスクリプションを使用して管理ポータルを管
 **管理者:** スーパー管理者のみが管理者を設定できます。管理者は、スーパー管理者に割り当てられた契約のサブスクライバーを管理できます。 
 
 ## <a name="getting-started"></a>作業の開始
+
+管理者ポータルを利用して組織のサブスクリプションを管理するには、最初に組織をポータルにオンボードする必要があります。  オンボードが完了したら、[サブスクライバー] ページや [詳細] ページの使い方を覚えることをお勧めします。ここにはサブスクリプション管理作業に必要なツールや情報があります。  
+
 ### <a name="onboarding"></a>オンボード
+
 組織を Visual Studio サブスクリプション管理ポータルにオンボードする準備が完了すると、オンボーディング プロセスを完了するように依頼する電子メールが主要ご担当者様および連絡先ご担当者様に送信されます。 以下に新しいポータルにオンボードするために実行する必要がある手順について詳しく説明します。 プロセスのチュートリアルを希望する場合は、[管理者オンボーディング ビデ](https://channel9.msdn.com/Series/Visual-Studio-Subscriptions-Administration/Onboarding-your-organization-to-the-new-Visual-Studio-Subscription-Administration-Portal-and-setting)またはこの[サポートの記事]「(https://support.microsoft.com/help/4013931/visual-studio-subscriptions-administrator-migration-process "Visual Studio のサブスクリプション: 管理者のマイグレーション プロセス")」を参照してください。   
 1.  **PCN を検索してサインインする:**
     - 電子メールでは、主要ご担当者様および連絡先ご担当者様に、専用のリンク、パブリック カスタマー番号 (PCN) の最後の 3 桁が提供されます。 * 
@@ -42,12 +47,13 @@ Visual Studio サブスクリプションを使用して管理ポータルを管
 2.  **管理者を設定します。** PCN を入力した後で、新しいシステムでスーパー管理者として登録され、他のスーパー管理者や管理者 (以前はサブスクリプション管理者と呼ばれていました) を追加できるようになります。 このアクセスを失わないようにするには、組織の移行の日付の前にこれを完了する必要があります。 
 3.  **新しいサブスクリプション管理ポータルにアクセスする**  組織が移行した後に、新しく追加されたスーパー管理者と管理者に、新しいポータルにアクセスして、サブスクリプションの管理を開始するように招待する電子メールが送信されます。  
 
-* *注: 主要ご担当者様および連絡先ご担当者様が、複数の電子メールを受信した場合、複数の PCN があることを意味しています。管理者は、各電子メールで参照されている PCN の一意のリンクを使用してプロセスを完了する必要があります。*
+> [!NOTE]
+> 主要ご担当者様および連絡先ご担当者様が、複数の電子メールを受信した場合、複数の PCN があることを意味しています。 管理者は、各電子メールで参照されている PCN の一意のリンクを使用してプロセスを完了する必要があります。*
 
-新しい Visual Studio サブスクリプションの管理ポータルに追加される必要があるときに、主要/通知連絡先が誰かわからない場合は、[VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) にサインインした後にこの情報を見つけることができます。 VLSC で主要/通知連絡先を見つける手順については、[この資料]「(https://www.visualstudio.com/subscriptions/support/locate-primary-contact/ "主要連絡先を確認する方法")」を参照してください。
+新しい Visual Studio サブスクリプションの管理ポータルに追加される必要があるときに、主要/通知連絡先が誰かわからない場合は、[VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) にサインインした後にこの情報を見つけることができます。 VLSC で主要/通知連絡先を見つける手順については、「[主要連絡先を確認する方法](/find-primary-contact/)」トピックを参照してください。
 管理者として既に設定されている場合は、[Visual Studio サブスクリプション管理ポータル](https://manage.visualstudio.com)に直接進むことができます。
 
-### <a name="understanding-the-subscribers-page"></a>サブスクライバー ページを理解する
+### <a name="understanding-the-subscribers-page"></a>[サブスクライバー] ページを理解する
 サブスクリプションを割り当てた後は、[サブスクライバー] タブに、次のようなサブスクライバーの詳細情報が表示されます。
 - 各サブスクライバーの名と姓。
 - このユーザーの電子メール アドレス。
@@ -62,10 +68,10 @@ Visual Studio サブスクリプションを使用して管理ポータルを管
 
 このページの左側には、購入済みかつ割り当て済みで組織が各契約でまだ使用できるサブスクリプション ライセンスの数に関する追加情報が表示されます。
 
-![Visual Studio サブスクリプションの管理ポータルのサブスクライバー ページ](_img/using-admin-portal/subscribers-page.png)
+   ![Visual Studio サブスクリプションの管理ポータルのサブスクライバー ページ](_img/using-admin-portal/subscribers-page.png)
 
-### <a name="understanding-the-details-page"></a>[詳細] ページについて
+### <a name="understanding-the-details-page"></a>[詳細] ページを理解する
 表示されている契約の詳細を参照するには、[詳細] タブを選択します。契約の状態、購入アカウント、組織の詳細、主要連絡先 (VLSC )、スーパー管理者 (使用可能な場合)、および他の関連情報が表示されます。
 
-![Visual Studio サブスクリプションの管理ポータルの [詳細] ページ](_img/using-admin-portal/details-page.png)
+   ![Visual Studio サブスクリプションの管理ポータルの [詳細] ページ](_img/using-admin-portal/details-page.png)
 

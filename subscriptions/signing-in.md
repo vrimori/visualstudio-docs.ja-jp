@@ -1,19 +1,19 @@
 ---
-title: "Visual Studio サブスクリプションにサインインする | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 12/11/2017
-Ms.topic: Get-Started-Article
-Description: How to Sign In to Your Visual Studio Subscription
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: bb6313e06525967f7ac8dd0aa6dd74bb4417ffef
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: Visual Studio サブスクリプションにサインインする | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 12/11/2017
+ms.topic: Get-Started-Article
+description: Visual Studio サブスクリプションにサインインする方法
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: a6a29a67882e36a23f5c61757b80cf9558b93be1
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="signing-in-to-your-visual-studio-subscription"></a>Visual Studio サブスクリプションにサインインする
 
@@ -25,7 +25,7 @@ Visual Studio サブスクリプションにサインインする手順は、ご
 3. [Microsoft アカウント (MSA) を使用して職場または学校アカウントにサインインする](#using-your-microsoft-account-to-sign-in-to-a-work-or-school-account)
 
 ## <a name="signing-in-with-your-microsoft-account-msa"></a>Microsoft アカウント (MSA) でサインインする
-1. [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) にアクセスしてください。
+1. [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) を参照してください。
 2. Visual Studio サブスクリプションを購入するときに設定または指定した電子メール アドレスを入力します。
     
    > [!NOTE] 
@@ -39,7 +39,7 @@ Visual Studio サブスクリプションにサインインする手順は、ご
 初めて Visual Studio Dev Essentials のサブスクリプションにアクセスすると、ウェルカム ダイアログが表示されます。  **[確認]** をクリックして、プログラムの使用条件に同意します。
 
 ## <a name="signing-in-with-your-work-or-school-account"></a>職場または学校アカウントでサインインする 
-1. [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) にアクセスしてください。
+1. [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) を参照してください。
 2. 新しい Visual Studio サブスクリプションを割り当てたメール アドレスを入力します。
     
    > [!NOTE]
@@ -57,7 +57,7 @@ Visual Studio サブスクリプションにサインインする手順は、ご
 
 ## <a name="using-your-microsoft-account-to-sign-in-to-a-work-or-school-account"></a>Microsoft アカウント (MSA) を使用して職場または学校アカウントにサインインする
 
-1. [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) にアクセスします。
+1. [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) に移動します。
 2. 新しい Visual Studio サブスクリプションを割り当てたメール アドレスを入力します。 
 
    > [!NOTE]

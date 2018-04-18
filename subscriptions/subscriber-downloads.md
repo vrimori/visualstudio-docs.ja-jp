@@ -1,21 +1,21 @@
 ---
-title: "サブスクライバーを使用してビジュアル Studio サブスクリプションのダウンロード | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 10/3/2017
-Ms.topic: Get-Started-Article
-Description: Learn how to locate and download Microsoft products included with your Visual Studio subscription.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 4c49ae8b6c51f261abc6ea95d27d200706da18ce
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: サブスクライバーを使用してビジュアル Studio サブスクリプションのダウンロード | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 10/03/2017
+ms.topic: Get-Started-Article
+description: Visual Studio サブスクリプションに含まれている Microsoft 製品を見つけてダウンロードする方法を説明します。
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 708a33c35739acc6f0742d778a51e635a35d9567
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="using-subscriber-downloads-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションでのサブスクライバー ダウンロードの使用
+# <a name="using-subscriber-downloads-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションでサブスクライバー ダウンロードを使用します。
 サブスクライバー特典の一環として、広い範囲のソフトウェアのダウンロードにアクセスできます。  
 [[ダウンロード]](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs) タブにアクセスするにはサブスクリプションにサインインする必要があります。 
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/29/2018
 ## <a name="what-do-i-get"></a>何を取得できますか。
 ダウンロードの種類と数は、サブスクリプション レベルとプログラムのメンバーシップによって異なります。  Visual Studio Enterprise Standard のサブスクリプションを持つサブスクライバーは、Microsoft Partner Network または BizSpark プログラム サブスクリプションを介してサブスクリプションを取得したサブスクライバーと使用できるダウンロードが異なる場合があります。  各サブスクリプション レベルで利用できるダウンロードの詳細については、「[Products By Benefit Level](https://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Products_by_Benefit_Level.xlsx)」(特典レベル別の製品) の一覧をダウンロードしてください。
 
-どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、電子メール アドレスに割り当てられているすべてのサブスクリプションを表示します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
+どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
 
 ## <a name="how-do-i-find-downloads-in-the-subscriber-portal"></a>サブスクライバー ポータルでダウンロードを見つける方法 
 [[ダウンロード]](https://my.visualstudio.com/downloads/featured) ページには、サブスクリプションに含まれるダウンロードのみが表示されます。  複数のサブスクリプションまたはプログラムのメンバーシップがある場合は、所有している**最高サブスクリプション**のダウンロードが表示されます。現在、別のサブスクリプションを表示している場合でも同じです。  たとえば、Visual Studio Professional サブスクリプションと、Visual Studio Dev Essentials メンバーシップがどちらも同じサインイン ID に関連付けられている場合、現在 Dev Essentials 特典を表示している場合でも、Professional レベルのサブスクリプションに含まれるダウンロードが表示されます。  

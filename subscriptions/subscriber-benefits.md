@@ -1,19 +1,19 @@
 ---
-title: "Visual Studio サブスクリプション - サブスクライバーの利点"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 2/12/2018
-Ms.topic: Get-Started-Article
-Description: Learn about the benefits included in your Visual Studio subscription
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: b42d4f826d6bc589ecf16db2d1d4eddb98d81ff9
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+title: Visual Studio サブスクリプション - サブスクライバーの利点
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 02/12/2018
+ms.topic: Get-Started-Article
+description: Visual Studio サブスクリプションに含まれる利点について
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 7e174253601de47de50f8abe17758d18466b236d
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="benefits-included-in-your-visual-studio-subscription"></a>Visual Studio サブスクリプションに含まれる利点
 
@@ -22,7 +22,7 @@ Visual Studio サブスクリプションは、Windows、iOS、Android、Linux �
 利点は次の 3 つのカテゴリに分類されます。
 
 ## <a name="tools"></a>ツール
-これらのツール カテゴリでは、多様な利点を活用することができます ([Visual Studio IDE](/vs-ide-benefit)、[Visual Studio Team Services](/vs-vsts)、[Azure](/vs-azure) などの主要な利点を含む)。  サブスクリプション レベルによっては、Windows および Office 365 の開発者アカウントおよび Visual Studio App Center に加えて、WhiteSource Bolt や ModernRequirements などのパートナーからもたらされる利点も表示されます。
+これらのツール カテゴリでは、多様な利点を活用することができます ([Visual Studio IDE](/vs-ide-benefit/)、[Visual Studio Team Services](/vs-vsts/)、[Azure](/vs-azure/) などの主要な利点を含む)。  サブスクリプション レベルによっては、Windows および Office 365 の開発者アカウントおよび Visual Studio App Center に加えて、WhiteSource Bolt や ModernRequirements などのパートナーからもたらされる利点も表示されます。
 
 ## <a name="professional-development"></a>プロフェッショナルな開発
 お客様がスキル セットを継続的に強化し、最新のテクノロジに対応できるように、Microsoft では業界のリーダーから提供されている最適なオンライン トレーニングへのアクセスを提供しています。 たとえば、次のような優れたコンテンツを利用できます。
