@@ -1,4 +1,4 @@
----
+﻿---
 title: メニュー コマンドを使用して、拡張機能の作成 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
@@ -23,11 +23,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-an-extension-with-a-menu-command"></a>メニュー コマンドを使用して、拡張機能の作成
-このチュートリアルでは、メモ帳を起動するメニュー コマンド拡張機能を作成する方法を示します。  
+このチュートリアルでは、メモ帳を起動するメニュー コマンド拡張機能を作成する方法を示します。 
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
-  
+
 ## <a name="creating-a-menu-command"></a>メニュー コマンドの作成  
   
 1.  という名前の VSIX プロジェクトを作成する**FirstMenuCommand**です。 VSIX プロジェクトのテンプレートを見つけることができます、**新しいプロジェクト**] ダイアログ ボックス [ **Visual c#/機能拡張**です。  

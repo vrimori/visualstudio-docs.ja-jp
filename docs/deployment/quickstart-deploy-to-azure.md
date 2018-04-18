@@ -1,4 +1,4 @@
----
+﻿---
 title: Azure App Service の Visual Studio への公開 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/22/2017

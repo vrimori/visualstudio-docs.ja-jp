@@ -1,4 +1,4 @@
----
+﻿---
 title: ClickOnce アプリケーション マニフェスト |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
@@ -26,9 +26,9 @@ ms.lasthandoff: 04/16/2018
 ---
 # <a name="clickonce-application-manifest"></a>ClickOnce Application Manifest
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェストは、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] を使用して配置されるアプリケーションについて記述されている XML ファイルです。  
-  
+
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェストは、次の要素と属性があります。  
-  
+
 |要素|説明|属性|  
 |-------------|-----------------|----------------|  
 |[\<assembly> 要素](../deployment/assembly-element-clickonce-application.md)|必須。 最上位の要素です。|`manifestVersion`|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="example"></a>例  
  次のコード例は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションのアプリケーション マニフェストを示しています。  
-  
+
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">  

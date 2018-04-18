@@ -1,4 +1,4 @@
----
+﻿---
 title: '方法: Visual Studio 2017 を機能拡張プロジェクトの移行 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/09/2016

@@ -1,4 +1,4 @@
----
+﻿---
 title: アプリケーション展開の前提条件 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
@@ -79,7 +79,7 @@ ms.lasthandoff: 04/16/2018
 |**-url =** `location`|Setup.exe が [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを検索する URL を設定します。|  
 |**-componentsurl =** `location`|Setup.exe が [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] などの依存関係を検索する URL を設定します。 |  
 |**homesite-=** `true`**&#124;** `false`|`true`の場合、ベンダーサイトの適切な場所から依存関係がダウンロードされます。 これによって **- componentsurl** の設定が上書きされます。 `false` の場合は、**-componentsurl** で指定された URL から依存関係がダウンロードされます。|  
-  
+
 ## <a name="operating-system-support"></a>オペレーティング システムのサポート  
  Visual Studio ブートストラップは、Windows Server 2008 Server Core ではサポートされていません。また、機能が限定された、メンテナンスの容易なサーバー環境を提供する Windows Server 2008 R2 Server Core でもサポートされていません。 たとえば、Server Core のインストール オプションでは、.NET Framework 3.5 Server Core プロファイルのみがサポートされています。そのため、完全な .NET Framework を必要とする Visual Studio の機能は実行できません。  
   

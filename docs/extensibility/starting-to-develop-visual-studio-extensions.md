@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio 拡張機能の開発を始めました |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 09/18/2017
@@ -25,7 +25,7 @@ Visual Studio 拡張機能を初めて作成する場合に、いくつかの疑
   
 ## <a name="what-software-do-i-need-to-develop-visual-studio-extensions"></a>Visual Studio 拡張機能を開発するために必要なソフトウェアはなんですか。  
  Visual Studio 拡張機能を開発するために Visual Studio だけでなく、Visual Studio SDK をインストールする必要があります。 通常のセットアップの一部として、Visual Studio SDK をインストールすることができますし、または後からインストールすることもできます。 Visual Studio SDK のインストールに関する詳細は、次の [Visual Studio SDK](../extensibility/visual-studio-sdk.md) を参照してください。  
-  
+  
 ## <a name="what-kinds-of-things-can-i-do-with-visual-studio-extensions"></a>Visual Studio 拡張機能で実行できるどのようなさまざまな原因ですか。  
  Visual Studio 拡張機能のさまざまな仮定するとする際に無限の制限。 もちろん、ほとんどの拡張機能をコードの記述を行うには何かが、大文字である必要はありません。 ビルドできる拡張機能の種類のいくつかの例を次に示します。  
   
