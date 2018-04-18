@@ -1,12 +1,10 @@
 ---
-title: "Visio オブジェクト モデルの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: Visio オブジェクト モデルの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +17,14 @@ helpviewer_keywords:
 - Visio object model
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: e829842f4e530b014a19f69c567a91dc49bd78e6
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0e77256d800cb23b61a6680cdf59e60a39c7b57e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visio-object-model-overview"></a>Visio オブジェクト モデルの概要
   Visio オブジェクト モデルと対話することにより、Microsoft Office Visio 用の Office ソリューションを開発できます。 このオブジェクト モデルは、visio では、プライマリ相互運用機能アセンブリで提供されで定義するクラスとインターフェイスから成ります。  
@@ -55,7 +54,7 @@ ms.lasthandoff: 01/10/2018
  VSTO アドイン プロジェクトで使用して、Microsoft.Office.Interop.Visio.Application オブジェクトにアクセスすることができます、`Application`のフィールド、`ThisAddIn`クラスです。 詳細については、「 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)。  
   
 ### <a name="document-object"></a>Document オブジェクト  
- Microsoft.Office.Interop.Visio.Document オブジェクトは、Visio プログラミングの中心です。 これは、図面、ステンシル、またはテンプレート ファイルを表します。 Visio 図面を開いたり、新しいドキュメントを作成したりすると、オブジェクトを生成する、新しい Microsoft.Office.Interop.Visio.Document Microsoft.Office.Interop.Visio.Application オブジェクトの Microsoft.Office.Interop.Visio.Documents コレクションに追加されています.  
+ Microsoft.Office.Interop.Visio.Document オブジェクトは、Visio プログラミングの中心です。 これは、図面、ステンシル、またはテンプレート ファイルを表します。 Visio 図面を開いたり、新しいドキュメントを作成したりすると、オブジェクトを生成する、新しい Microsoft.Office.Interop.Visio.Document Microsoft.Office.Interop.Visio.Application オブジェクトの Microsoft.Office.Interop.Visio.Documents コレクションに追加されています。  
   
  フォーカスがある文書は、作業中の文書と呼ばれます。 Microsoft.Office.Interop.Visio.Application オブジェクトの Microsoft.Office.Interop.Visio.Application.ActiveDocument プロパティによって表されます。  
   
@@ -79,7 +78,7 @@ ms.lasthandoff: 01/10/2018
   
  詳細については、「 [Overview of Classes and Interfaces in the Office Primary Interop Assemblies (Office プライマリ相互運用機能アセンブリのクラスとインターフェイスの概要)](http://go.microsoft.com/fwlink/?LinkId=189592) オブジェクトと [Office Primary Interop Assemblies](../vsto/office-primary-interop-assemblies.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visio ソリューション](../vsto/visio-solutions.md)   
  [Visio 図面の操作](../vsto/working-with-visio-documents.md)   
  [Visio の図形の操作](../vsto/working-with-visio-shapes.md)  

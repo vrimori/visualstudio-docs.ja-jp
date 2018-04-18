@@ -184,7 +184,7 @@ ms.lasthandoff: 04/16/2018
 
 -   [コード マップの参照および再配置](../modeling/browse-and-rearrange-code-maps.md)  
 
--   [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)  
+-   [DGML ファイルを編集してコード マップをカスタマイズする](../modeling/customize-code-maps-by-editing-the-dgml-files.md)  
 
 -   [アナライザーを実行](../modeling/find-potential-problems-using-code-map-analyzers.md)して、コード内の潜在的な問題を見つけます。  
 
@@ -328,7 +328,7 @@ ms.lasthandoff: 04/16/2018
 
 -   コード マップ ツールバーの **[親を含める]** ボタンを使用して、親項目の自動追加をオフにする。  
 
--   コード マップ ファイルを直接編集し、不要なノードとリンクを削除する。 マップを変更しても、基のコードには影響しません。 「 [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)」を参照してください。  
+-   コード マップ ファイルを直接編集し、不要なノードとリンクを削除する。 マップを変更しても、基のコードには影響しません。 「 [DGML ファイルを編集してコード マップをカスタマイズする](../modeling/customize-code-maps-by-editing-the-dgml-files.md)」を参照してください。  
 
  ![ビルドのスキップし、親を含めるボタン](../modeling/media/codemapsfilterskipbuildicons.png "CodeMapsFilterSkipBuildIcons")  
 
@@ -384,4 +384,4 @@ ms.lasthandoff: 04/16/2018
 
 -   [コード マップの参照および再配置](../modeling/browse-and-rearrange-code-maps.md)  
 
--   [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)
+-   [DGML ファイルを編集してコード マップをカスタマイズする](../modeling/customize-code-maps-by-editing-the-dgml-files.md)

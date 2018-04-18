@@ -1,12 +1,10 @@
 ---
-title: "SharePoint オブジェクト モデルの呼び出し |Microsoft ドキュメント"
-ms.custom: 
+title: SharePoint オブジェクト モデルの呼び出し |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,18 +15,19 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extensibility features
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: cbb1b8f573c6dd28280e30fd5602dff2dc30ae02
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 3795b7c920415ee733e08132234de381cf610aba
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="calling-into-the-sharepoint-object-models"></a>SharePoint オブジェクト モデルの呼び出し
   Visual Studio で SharePoint ツールの拡張機能を作成するときに、特定のタスクを実行する SharePoint Api を呼び出す必要があります。 たとえば、SharePoint プロジェクト用のカスタム配置手順を作成する場合はいくつかのソリューションを展開するタスクを実行する SharePoint Api を呼び出す必要があります。  
   
- [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)]および[!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]SharePoint ツール拡張機能で使用できる 2 つの別のオブジェクト モデルを提供します。 サーバー オブジェクト モデルとクライアント オブジェクト モデルです。 オブジェクトが各モデルに利点と欠点があります SharePoint ツール拡張機能のコンテキストでします。  
+ [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] および[!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]SharePoint ツール拡張機能で使用できる 2 つの別のオブジェクト モデルを提供します。 サーバー オブジェクト モデルとクライアント オブジェクト モデルです。 オブジェクトが各モデルに利点と欠点があります SharePoint ツール拡張機能のコンテキストでします。  
   
  SharePoint オブジェクト モデルの概要については、次を参照してください。[プログラミング モデルの SharePoint ツール拡張機能の概要](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)です。  
   
@@ -57,7 +56,7 @@ ms.lasthandoff: 01/10/2018
 ### <a name="understanding-how-sharepoint-commands-are-executed"></a>Understanding のどの SharePoint コマンドを実行します。  
  SharePoint コマンドを定義するアセンブリは vssphost4.exe をという名前の 64 ビット ホスト プロセスに読み込まれます。 SharePoint ツール拡張機能での SharePoint コマンドを呼び出すと、コマンドは、32 ビット Visual Studio プロセス (devenv.exe) ではなく vssphost4.exe によって実行されます。 レジストリ内の値を設定して SharePoint コマンドを実行する方法の一部の側面を制御できます。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールの拡張機能のデバッグ](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: SharePoint コマンドを作成します。](../sharepoint/how-to-create-a-sharepoint-command.md)   
  [方法: SharePoint コマンドを実行](../sharepoint/how-to-execute-a-sharepoint-command.md)   
  [SharePoint ツール拡張機能のプログラミング モデルの概要](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)  

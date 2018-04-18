@@ -2,12 +2,9 @@
 title: Office ソリューションでコードを記述 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - office-development
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VST.Project.RefactoringCancelled
 dev_langs:
@@ -36,14 +33,14 @@ helpviewer_keywords:
 - managed code extensions [Office development in Visual Studio], writing code
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e9670bb35023b2a2cf4147d3d30008243203c9c8
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: c6119db86fdd67079b63434a6bb494cb04cd31d6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="writing-code-in-office-solutions"></a>Office ソリューションのコードの記述
   Office プロジェクトのコードの記述には、Visual Studio の他のプロジェクトの種類とは異なる点があります。 相違点の多くは、Office オブジェクト モデルがマネージ コードに公開される方法に関連しています。 Office プロジェクトのデザインに関連する相違点もあります。  
@@ -88,7 +85,7 @@ ms.lasthandoff: 01/10/2018
  詳細については、次を参照してください。 [Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)です。  
   
 ### <a name="namespace-considerations-in-office-solutions"></a>Office ソリューションの名前空間に関する考慮事項  
- Office プロジェクトを作成した後で、プロジェクトの *既定の名前空間* (Visual Basic では *ルート名前空間* ) を変更することはできません。 既定の名前空間は、プロジェクトの作成時に指定したプロジェクト名と常に一致します。 プロジェクト名を変更しても、既定の名前空間は変更されません。 プロジェクトで既定の名前空間の詳細については、次を参照してください。[アプリケーション ページで、プロジェクト デザイナー & #40 です。C# 35; & #41;](/visualstudio/ide/reference/application-page-project-designer-csharp)と[アプリケーション ページで、プロジェクト デザイナー & #40 です。Visual Basic & #41;](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Office プロジェクトを作成した後で、プロジェクトの *既定の名前空間* (Visual Basic では *ルート名前空間* ) を変更することはできません。 既定の名前空間は、プロジェクトの作成時に指定したプロジェクト名と常に一致します。 プロジェクト名を変更しても、既定の名前空間は変更されません。 プロジェクトで既定の名前空間の詳細については、次を参照してください[アプリケーション ページで、プロジェクト デザイナー &#40;C&#35; &#41; ](/visualstudio/ide/reference/application-page-project-designer-csharp)と[アプリケーション ページで、プロジェクト デザイナー &#40;Visual Basic&#41;](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
 ### <a name="changing-the-namespace-of-host-item-classes-in-c-projects"></a>C# プロジェクトのホスト項目クラスの名前空間の変更  
  Visual C# Office プロジェクトの場合、ホスト項目クラス ( `ThisAddIn`、 `ThisWorkbook`、 `ThisDocument` などのクラス) は独自の名前空間を持ちます。 既定では、プロジェクトのホスト項目の名前空間は、プロジェクトの作成時に指定したプロジェクト名と一致します。  
@@ -110,7 +107,7 @@ ms.lasthandoff: 01/10/2018
 |機能|説明|Visual Basic のサポート|Visual C# のサポート|  
 |-------------|-----------------|--------------------------|------------------------|  
 |省略可能なパラメーター|Microsoft Office のメソッドには、呼び出すときに指定する必要のないパラメーターを持つメソッドが多数あります。 パラメーターの値を渡さない場合は、既定の値が使用されます。|Visual Basic では、省略可能なパラメーターをサポートしています。|Visual C# では、ほとんどの場合に省略可能なパラメーターをサポートしています。 詳細については、次を参照してください。 [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)です。|  
-|パラメーターの参照渡し|大部分の Microsoft Office プライマリ相互運用機能アセンブリにある省略可能なパラメーターは、値によって引き渡すこと (値渡し) ができます。 ただし、一部のプライマリ相互運用機能アセンブリでは、参照型を受け取る省略可能なパラメーターに対して参照渡しを行わなくてはなりません。<br /><br /> 値と参照型のパラメーターの詳細については、次を参照してください[値とリファレンス & #40; 引数を渡す。Visual Basic & #41;](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (Visual Basic) 用と[パラメーター & #40; を渡すC & #35 です。プログラミング ガイド & #41;](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters).|参照渡しでパラメーターを渡すのに、特別な処理は必要ありません。 Visual Basic コンパイラでは、必要に応じて自動的にパラメーターが参照渡しされます。|ほとんどの場合、Visual C# コンパイラでは、必要に応じて自動的にパラメーターが参照渡しされます。 詳細については、次を参照してください。 [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)です。|  
+|パラメーターの参照渡し|大部分の Microsoft Office プライマリ相互運用機能アセンブリにある省略可能なパラメーターは、値によって引き渡すこと (値渡し) ができます。 ただし、一部のプライマリ相互運用機能アセンブリでは、参照型を受け取る省略可能なパラメーターに対して参照渡しを行わなくてはなりません。<br /><br /> 値と参照型のパラメーターの詳細については、次を参照してください[値と参照渡しに引数を渡す&#40;Visual Basic&#41; ](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (Visual Basic の場合) 用と[パラメーターの引き渡し&#40;C&#35; 。プログラミング ガイド&#41;](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters)です。|参照渡しでパラメーターを渡すのに、特別な処理は必要ありません。 Visual Basic コンパイラでは、必要に応じて自動的にパラメーターが参照渡しされます。|ほとんどの場合、Visual C# コンパイラでは、必要に応じて自動的にパラメーターが参照渡しされます。 詳細については、次を参照してください。 [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)です。|  
 |パラメーター化したプロパティ|プロパティの中には、パラメーターを受け取り、読み取り専用関数として動作するものがあります。|Visual Basic では、パラメーターを受け取るプロパティをサポートしています。|Visual C# では、パラメーターを受け取るプロパティをサポートしています。|  
 |遅延バインディング|遅延バインディングでは、デザイン時にオブジェクトの型に変数をキャストするのではなく、実行時にオブジェクトのプロパティを決定します。|Visual Basic では、 **Option Strict** がオフの場合に遅延バインディングが実行されます。 ときに**Option Strict**オブジェクトとの使用の種類を明示的に変換する必要がありますが、上、<xref:System.Reflection>遅延バインディング メンバーにアクセスする名前空間。 詳細については、「 [Late Binding in Office Solutions](../vsto/late-binding-in-office-solutions.md)」を参照してください。|Visual C# では、 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]を対象とするプロジェクトで遅延バインディングが実行されます。 詳細については、「 [Late Binding in Office Solutions](../vsto/late-binding-in-office-solutions.md)」を参照してください。|  
   
@@ -119,9 +116,9 @@ ms.lasthandoff: 01/10/2018
   
 |機能|説明|Visual Basic および Visual C# のサポート|  
 |-------------|-----------------|-----------------------------------------|  
-|配列のインデックス|Microsoft Office アプリケーションでは、コレクションの配列の下限のインデックスは 1 から始まります。 Visual Basic や Visual C# では、インデックス番号が 0 から始まる配列が使用されます。 詳細については、次を参照してください。[配列 & #40 です。C & #35 です。プログラミング ガイド & #41;](/dotnet/csharp/programming-guide/arrays/index)と[Visual Basic における配列](/dotnet/visual-basic/programming-guide/language-features/arrays/index)です。|Microsoft Office アプリケーションのオブジェクト モデルのコレクションの 1 番目のアイテムにアクセスするには、インデックス 0 ではなく 1 を使用します。|  
+|配列のインデックス|Microsoft Office アプリケーションでは、コレクションの配列の下限のインデックスは 1 から始まります。 Visual Basic や Visual C# では、インデックス番号が 0 から始まる配列が使用されます。 詳細については、次を参照してください。[配列&#40;C&#35;プログラミング ガイド&#41;](/dotnet/csharp/programming-guide/arrays/index)と[Visual Basic における配列](/dotnet/visual-basic/programming-guide/language-features/arrays/index)です。|Microsoft Office アプリケーションのオブジェクト モデルのコレクションの 1 番目のアイテムにアクセスするには、インデックス 0 ではなく 1 を使用します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)   
  [Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)   
  [Office プロジェクトのイベント](../vsto/events-in-office-projects.md)   
