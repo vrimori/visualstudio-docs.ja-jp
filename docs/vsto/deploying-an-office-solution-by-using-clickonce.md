@@ -1,12 +1,10 @@
 ---
-title: "ClickOnce を使用して Office ソリューションの配置 |Microsoft ドキュメント"
-ms.custom: 
+title: ClickOnce を使用して Office ソリューションの配置 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - ClickOnce deployment [Office development in Visual Studio], deploying solutions
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: a989fe2bc88d25ad81238b65bf8ecd775c39bc35
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0b5e1b9437412f343874b8cca6513a551d9900d0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploying-an-office-solution-by-using-clickonce"></a>ClickOnce を使用した Office ソリューションの配置
   ClickOnce を使用する場合は、少しの手順で Office ソリューションを配置できます。 更新プログラムを発行する場合は、ソリューションはそれらを自動的に検出してインストールします。 ただし、ClickOnce を使用する場合は、コンピューターのユーザーごとに、ソリューションを個別にインストールする必要があります。 したがって、複数のユーザーが同じコンピューターでソリューションを実行する場合は、Windows インストーラー (.msi) の使用を検討する必要があります。  
@@ -48,8 +47,8 @@ ms.lasthandoff: 01/10/2018
   
  Windows インストーラー ファイルを作成して Office ソリューションを配置する方法の詳細については、次を参照してください。 [Windows インストーラーを使用した Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-windows-installer.md)です。  
   
-##  <a name="Publish"></a>ソリューションを発行します。  
- 使用してソリューションを発行することができます、**発行ウィザード**または**プロジェクト デザイナー**です。 この手順で使用する、**プロジェクト デザイナー**パブリッシング オプションの完全なセットを提供するためです。 参照してください[ウィザード &#40; の Office 開発を Visual Studio &#41; の発行](../vsto/publish-wizard-office-development-in-visual-studio.md)です。  
+##  <a name="Publish"></a> ソリューションを発行します。  
+ 使用してソリューションを発行することができます、**発行ウィザード**または**プロジェクト デザイナー**です。 この手順で使用する、**プロジェクト デザイナー**パブリッシング オプションの完全なセットを提供するためです。 参照してください[発行ウィザード&#40;Visual Studio での Office 開発&#41;](../vsto/publish-wizard-office-development-in-visual-studio.md)です。  
   
 #### <a name="to-publish-the-solution"></a>ソリューションを発行するには  
   
@@ -136,12 +135,12 @@ ms.lasthandoff: 01/10/2018
   
 14. この手順で既に指定したインストール場所に、ソリューション ファイルをコピーします。  
   
-##  <a name="Trust"></a>ソリューションに信頼を付与する方法を決定します。  
+##  <a name="Trust"></a> ソリューションに信頼を付与する方法を決定します。  
  ユーザーのコンピューターでソリューションを実行する前に、次のいずれかの方法で信頼を付与する必要があります。そうしない場合は、ユーザーはソリューションをインストールするときに、信頼プロンプトに応答する必要が生じます。 ソリューションに信頼を付与するには、既知の信頼される発行者を特定する証明書を使用してマニフェストに署名します。 参照してください[マニフェスト署名アプリケーションおよび展開して、ソリューションを信頼する](../vsto/granting-trust-to-office-solutions.md#Signing)です。  
   
  ドキュメント レベルのカスタマイズを配置して、ユーザーのコンピューター上のフォルダーにドキュメントを配置または SharePoint サイトでドキュメントを使用できるようにするの場合は、ドキュメントの場所を Office が信頼することを確認します。 参照してください[ドキュメントへの信頼の付与](../vsto/granting-trust-to-documents.md)です。  
   
-##  <a name="Helping"></a>ユーザーがソリューションをインストールできます。  
+##  <a name="Helping"></a> ユーザーがソリューションをインストールできます。  
  ユーザーはソリューションをインストールするために、セットアップ プログラムを実行して配置マニフェストを開くか、またはドキュメント レベルのカスタマイズの場合はドキュメントを直接開くことができます。 ベスト プラクティスとして、ユーザーはセットアップ プログラムを使用してソリューションをインストールする必要があります。 その他の 2 つの方法は、前提条件のソフトウェアがインストールされていることを確認しません。 ユーザーがインストール場所からドキュメントを開こうとする場合は、Office アプリケーションのセキュリティ センターにある信頼できる場所の一覧に、そのインストール場所を追加する必要があります。  
   
 ### <a name="opening-the-document-of-a-document-level-customization"></a>ドキュメント レベルのカスタマイズに対応するドキュメントを開く  
@@ -154,7 +153,7 @@ ms.lasthandoff: 01/10/2018
   
 ##### <a name="to-add-the-vsto-mime-type-to-iis-60"></a>IIS 6.0 に MIME の種類 (.vsto) を追加するには  
   
-1.  IIS 6.0 を実行するサーバーで次のように選択します**開始**、**すべてのプログラム**、**管理ツール**、**インターネット インフォメーション サービス (IIS) マネージャー。**.  
+1.  IIS 6.0 を実行するサーバーで次のように選択します**開始**、**すべてのプログラム**、**管理ツール**、**インターネット インフォメーション サービス (IIS) マネージャー**。  
   
 2.  コンピューター名を選択して、 **Websites**フォルダー、または web サイトを構成しています。  
   
@@ -190,7 +189,7 @@ ms.lasthandoff: 01/10/2018
     > [!NOTE]  
     >  変更を有効にするために、World Wide Web Publishing Service を再起動するか、ワーカー プロセスがリサイクルされるまで待つ必要があります。 その後、ブラウザーのディスク キャッシュをフラッシュし、.vsto ファイルを再度開く必要があります。  
   
-##  <a name="Put"></a>ソリューションのドキュメントをエンドユーザーのコンピューター (ドキュメント レベルのカスタマイズのみ) に配置します。  
+##  <a name="Put"></a> ソリューションのドキュメントをエンドユーザーのコンピューター (ドキュメント レベルのカスタマイズのみ) に配置します。  
  それらのエンドユーザーのコンピューター上に、ソリューションのドキュメントをコピーするには、配置後アクションを作成します。 このように、ソリューションのインストール後に自分のコンピューターにインストール場所からドキュメントを手動でコピーする、ユーザーが持っていません。 配置後アクションを定義するクラスを作成、ビルド、ソリューションを発行し、アプリケーション マニフェストを変更、および、アプリケーション マニフェストと配置マニフェストに再署名する必要があります。  
   
  次の手順があると、プロジェクト名**ExcelWorkbook**ソリューションを発行して、 **C:\publish**ディレクトリお使いのコンピューターにします。  
@@ -309,7 +308,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  ExcelWorkbook.vsto ファイルをコピー、 **c:\publish\Application \excelworkbook**\__MostRecentVersionNumber_ディレクトリ。  
   
-##  <a name="SharePoint"></a>ソリューションのドキュメント (ドキュメント レベルのカスタマイズのみ) SharePoint を実行しているサーバーに配置します。  
+##  <a name="SharePoint"></a> ソリューションのドキュメント (ドキュメント レベルのカスタマイズのみ) SharePoint を実行しているサーバーに配置します。  
  SharePoint を使用して、エンド ユーザーに対してドキュメント レベルのカスタマイズを発行できます。 ユーザーが SharePoint サイトにアクセスし、ドキュメントを開くと、ランタイムが自動的に共有ネットワーク フォルダーからユーザーのローカル コンピューターにソリューションをインストールします。 ソリューションをローカル インストールした後、ドキュメントをデスクトップなど別の場所にコピーした場合でも、カスタマイズは引き続き機能します。  
   
 #### <a name="to-put-the-document-on-a-server-thats-running-sharepoint"></a>SharePoint を実行しているサーバーにドキュメントを配置するには  
@@ -330,7 +329,7 @@ ms.lasthandoff: 01/10/2018
   
         3.  選択、 **(推奨しません) ネットワークで信頼されている場所を許可する**チェック ボックスをオンにして、**新しい場所の追加**ボタンをクリックします。  
   
-        4.  **パス**ボックスで、アップロードしたドキュメントを含む SharePoint ドキュメント ライブラリの URL を入力してください (たとえば、 *http://SharePointServerName/TeamName/ProjectName/DocumentLibraryName*).  
+        4.  **パス**ボックスで、アップロードしたドキュメントを含む SharePoint ドキュメント ライブラリの URL を入力してください (たとえば、 *http://SharePointServerName/TeamName/ProjectName/DocumentLibraryName*)。  
   
              既定の Web ページで、default.aspx や AllItems.aspx などの名前を追加しないでください。  
   
@@ -338,7 +337,7 @@ ms.lasthandoff: 01/10/2018
   
              ユーザーが SharePoint サイトからドキュメントを開いた時点で、そのドキュメントが開かれ、カスタマイズがインストールされます。 ユーザーは、ドキュメントを自分のデスクトップにコピーすることができます。 ドキュメント内のプロパティは、ドキュメントが存在しているネットワークの場所を指しているので、カスタマイズは引き続き実行されます。  
   
-##  <a name="Custom"></a>カスタム インストーラーを作成します。  
+##  <a name="Custom"></a> カスタム インストーラーを作成します。  
  ソリューションを発行するときに作成するセットアップ プログラムを使用する代わりに、Office ソリューションのカスタム インストーラーを作成することができます。 たとえば、ログイン スクリプトを使用してインストールを開始したり、バッチ ファイルを使用して、ユーザーの操作なしにソリューションをインストールすることもできます。 このようなシナリオは、エンド ユーザーのコンピューターに必須コンポーネントがインストール済みの場合に最適です。  
   
  カスタム インストール プロセスの一環として、Office ソリューション用のインストーラー ツール (VSTOInstaller.exe) を呼び出します。既定では、このツールは次の場所にインストールされます。  
@@ -372,12 +371,12 @@ ms.lasthandoff: 01/10/2018
 |-401|ソリューションをアンインストールできませんでした。|  
 |-500|ソリューションをインストールまたはアンインストールできなかったこと、または配置マニフェストをダウンロードできなかったことが原因で、操作は取り消されました。|  
   
-##  <a name="Update"></a>更新プログラムを発行します。  
+##  <a name="Update"></a> 更新プログラムを発行します。  
  更新するには、ソリューションを再度発行し、使用して、**プロジェクト デザイナー**または**発行ウィザード**、し、インストール場所に更新されたソリューションをコピーします。 インストール場所にファイルをコピーするときに、前のファイルを確実に上書きしてください。  
   
  次回ソリューションをチェックする、更新プログラムのおよび記されて、新しいバージョンを自動的に読み込みます。  
   
-##  <a name="Location"></a>ソリューションのインストール場所を変更します。  
+##  <a name="Location"></a> ソリューションのインストール場所を変更します。  
  ソリューションを発行した後、インストール パスの追加または変更を行うことができます。 次の理由の 1 つ以上により、インストール パスを変更する可能性があります:  
   
 -   インストール パスが既知になる前に、セットアップ プログラムをコンパイルした。  
@@ -435,7 +434,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  セットアップ プログラムを実行します。このとき、指定の場所にあるソリューションをインストールするための /url パラメーターは指定しません。  
   
-##  <a name="Roll"></a>ソリューションを以前のバージョンにロールバックします。  
+##  <a name="Roll"></a> ソリューションを以前のバージョンにロールバックします。  
  開発者がソリューションをロールバックすると、ユーザーはそのソリューションの以前のバージョンに戻されることになります。  
   
 #### <a name="to-roll-back-a-solution"></a>ソリューションをロールバックするには  
@@ -459,7 +458,7 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]  
 >  ローカル データは、ソリューションの 1 つ前のバージョンについてのみ保存されます。 2 つのバージョンをロールバックする場合は、ローカル データは保持されません。 ローカル データの詳細については、次を参照してください。[ローカルへのアクセスと ClickOnce アプリケーションでのリモート データ](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)   
  [Office ソリューションの発行](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
  [方法: ClickOnce を使用して Office ソリューションの発行](http://msdn.microsoft.com/en-us/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)   
