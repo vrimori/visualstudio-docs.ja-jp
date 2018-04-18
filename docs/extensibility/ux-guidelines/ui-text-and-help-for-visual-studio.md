@@ -1,26 +1,24 @@
 ---
-title: "UI テキストと Visual Studio のヘルプ |Microsoft ドキュメント"
-ms.custom: 
+title: UI テキストと Visual Studio のヘルプ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: e8747d07-6c90-46cc-b425-55b589f7e9e4
-caps.latest.revision: "2"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 555fd622f5655a69ba77f3905a39635e01831c76
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 697c794d17f3004b0f37e668ff67afb703490e18
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ui-text-and-help-for-visual-studio"></a>UI テキストと Visual Studio のヘルプ
-##  <a name="BKMK_UITextAndTerminology"></a>UI テキストと用語  
+##  <a name="BKMK_UITextAndTerminology"></a> UI テキストと用語  
  わかりやすくテキストは、効果的な UI にとって不可欠です。 ソフトウェアのユーザーから傾向の読み取りにラベルを最初に、つまり、前のタスクを完了するために最も関連します。 静的なテキストが少ない頻度で読み取られます。 このおおよその順序で、UI の読み取り後に、ウィンドウ全体のクイック スキャンでの作業セッションを開始するユーザーを計画します。  
   
 1.  中央の対話型コントロール  
@@ -125,7 +123,7 @@ ms.lasthandoff: 12/22/2017
      そうです：  
      "な価格オプションの Windows Azure モバイル サービスで利用できるか。"  
   
--   使用しないで *をクリックしています.*リンク テキスト。  
+-   使用しないで*をクリックしています.*リンク テキスト。  
   
 -   リンクの単語のみ"here"ことはありません。 これで、ハイパーリンク付きの単語のみを音声がスクリーン リーダーによって問題が発生します。  
   
@@ -428,7 +426,7 @@ public class HelpForm : Form
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio のフォントと書式](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md)   
  [Visual Studio のレイアウト](../../extensibility/ux-guidelines/layout-for-visual-studio.md)   
  [Visual Studio の通知と進行状況](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md)

@@ -1,23 +1,21 @@
 ---
-title: "Visual Studio の UX Essentials |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio の UX Essentials |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: a793cf7a-f230-43ce-88d0-fa5d6f1aa9c7
-caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: f9d04da421b3b59609269b4f91a487d22adc80e3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 52081c5a7f88a39ab25cf868164bd0258dd37885
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ux-essentials-for-visual-studio"></a>Visual Studio の UX Essentials
 ## <a name="best-practices"></a>ベスト プラクティス  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="2-use-the-environment-service-for-fonts-and-colors"></a>2.フォントと色の環境のサービスを使用します。  
   
--   UI は、現在を考慮する必要があります[環境フォント](fonts-and-formatting-for-visual-studio.md)カスタマイズのオプションダイアログ ボックスに、[フォントおよび色] ページでは、公開される場合を除きを設定します。  
+-   UI は、現在を考慮する必要があります[環境フォント](fonts-and-formatting-for-visual-studio.md)カスタマイズのオプション ダイアログ ボックスに、[フォントおよび色] ページでは、公開される場合を除きを設定します。  
   
 -   UI 要素を使用する必要があります、 [VSColor サービス](colors-and-styling-for-visual-studio.md)環境のトークンや機能に固有のトークンを使用して共有します。  
   
@@ -108,7 +106,7 @@ ms.lasthandoff: 12/22/2017
 Visual Studio 内でのアンチ パターンは、UI を消去する前に説明文を読み取るユーザーを強制します。 正しくデザインされた、ビデオへのリンクをクリックしてのホバー時追加情報を含むツールヒントを表示する必要があります、"&times;"さらに操作することがなく、メッセージを破棄する必要があります。
 
 
- ![説明テキストをアンチ &#45; パターン &#45;正しくない](../../extensibility/ux-guidelines/media/incorrectuseofmultipleclicks.png "Incorrectuseofmultipleclicks")<br />ビデオの正しくないリンク パターン
+ ![説明のテキストをアンチ&#45;パターン&#45;誤った](../../extensibility/ux-guidelines/media/incorrectuseofmultipleclicks.png "Incorrectuseofmultipleclicks")<br />ビデオの正しくないリンク パターン
   
 #### <a name="result"></a>結果  
  閉じるボタン (1 回のクリック) 単純なのではなくを 2 回のクリックを使用して、単にビデオへのリンクが表示されるすべての場所に UI を消去する求められます。  
@@ -116,7 +114,7 @@ Visual Studio 内でのアンチ パターンは、UI を消去する前に説�
 #### <a name="alternatives"></a>代替手段  
  このような状況に対応する正しい設計に Internet Explorer、Office、および Visual Studio に共通のパターンに従うになります: ホバー時、ユーザーはツールヒントの説明を確認し、1 回のクリックは、UI を非表示にします。  
   
- ![説明テキストをアンチ &#45; パターン &#45;正しい](../../extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Explanatorytextanti パターン解決")<br />ビデオの適切なリンクのパターン
+ ![説明のテキストをアンチ&#45;パターン&#45;正しい](../../extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Explanatorytextanti パターン解決")<br />ビデオの適切なリンクのパターン
   
 ### <a name="using-command-bars-for-settings"></a>コマンド バーを使用して、設定  
  **図 A**このアンチ パターンを表します。 コマンドは、単に適用されるコマンド ボタンの下に設定します。 このスケッチの場合は、デバッグの開始だけでなくコマンド — などのブラウザーで、デバッグなしで、ステップ イン ビュー-選択した設定を尊重します。  

@@ -2,24 +2,20 @@
 title: Visual Studio 2017 拡張機能における重大な変更 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/09/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 54d5af60-0b44-4ae1-aa57-45aa03f89f3d
-caps.latest.revision: ''
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 068b71a78149bb1c52e28bc47245d0dc888496bc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: bff9c97b052f359f3d03e12093b1cdae86d5dfbd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 機能拡張の変更
 
@@ -67,7 +63,7 @@ Visual Studio の設定マネージャーを使用して、Visual Studio プロ�
   * GAC 内のコピーは、セットアップから削除されました。
   * アセンブリのコードの基本エントリを指定する .pkgdef ファイルが追加されました。
 
-    例:
+    例えば:
     
     ```xml
     [$RootKey$\RuntimeConfiguration\dependentAssembly\codeBase\{UniqueGUID}]
@@ -76,7 +72,7 @@ Visual Studio の設定マネージャーを使用して、Visual Studio プロ�
     "culture"="neutral"
     "version"=15.0.0.0
     ```
-    実行時に、Visual Studio pkgdef サブシステムがマージされます ([VSAPPDATA]\devenv.exe.config) Visual Studio プロセスのランタイム構成ファイルにこれらのエントリとして[`<codeBase>`](https://msdn.microsoft.com/en-us/library/efs781xb(v=vs.110).aspx)要素。 これは、パスがプローブによる検索しないため、Visual Studio プロセスが、アセンブリを検索することをお勧めします。
+    実行時に、Visual Studio pkgdef サブシステムがマージされます ([VSAPPDATA]\devenv.exe.config) Visual Studio プロセスのランタイム構成ファイルにこれらのエントリとして[ `<codeBase>` ](https://msdn.microsoft.com/en-us/library/efs781xb(v=vs.110).aspx)要素。 これは、パスがプローブによる検索しないため、Visual Studio プロセスが、アセンブリを検索することをお勧めします。
 
 ### <a name="reacting-to-this-breaking-change"></a>この重要な変更に反応します。
 
