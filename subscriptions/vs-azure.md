@@ -1,19 +1,19 @@
 ---
-title: "Microsoft Azure 特典 | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 10/3/2017
-Ms.topic: Get-Started-Article
-Description: Learn how to activate the Azure benefit included in your Visual Studio subscription.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: a0587e063aa73666a0e97460b8d92f4614b3b116
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+title: Microsoft Azure 特典 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 10/3/2017
+ms.topic: Get-Started-Article
+description: Visual Studio サブスクリプションに含まれる Azure の特典をアクティブ化する方法を説明します。
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: c6cf951186072d973867df5f5c346062eee62938
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションで Microsoft Azure を使用する
 
@@ -44,7 +44,7 @@ Visual Studio サブスクライバーは、追加料金なしで Microsoft Azur
 | Visual Studio Enterprise – MCT Software & Services Developer | 150 ドルのクレジット/月         |   [はい]                                                        |
 *Not for Resale (NFR)、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP) が含まれます。  
 
-どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、電子メール アドレスに割り当てられているすべてのサブスクリプションを表示します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
+どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
 
 ## <a name="activation-steps"></a>アクティブ化の手順
 
@@ -52,15 +52,15 @@ Visual Studio サブスクライバーは、追加料金なしで Microsoft Azur
 
 2.  [特典] ページの [ツール] セクションで、Azure のタイルを見つけて、特典タイルの下部にある **[ライセンス認証]** リンクをクリックします。   
 
-![Azure タイル](_img\vs-azure\vs-azure-tile.png)
+    ![Azure タイル](_img\vs-azure\vs-azure-tile.png)
 
 3.  Azure サブスクリプションの作成に必要な情報を入力して、ご利用条件に同意するチェック ボックスをオンにしてから、**[サインアップ]** をクリックします。 
 
-![Azure のサインアップ](_img\vs-azure\vs-azure-sign-up-cropped.png)
+    ![Azure のサインアップ](_img\vs-azure\vs-azure-sign-up-cropped.png)
 
 4.  アカウントの準備ができると、Azure サポート プラン (別売り) を選ぶか、Azure サブスクリプションで始めることができます。  
 
-![Azure 準備作業](_img\vs-azure\vs-azure-getting-ready-cropped.png)
+    ![Azure 準備作業](_img\vs-azure\vs-azure-getting-ready-cropped.png)
     
 5.  Azure ダッシュボードが読み込まれ、初めて使うときはツアーを見ることができます。  ツアーは、さまざまなタスクを実行したり関連情報を検索したりする方法を示す一連の画面ヒントで構成されます。  ツアーを最後まで見るか閉じると、Azure のダッシュボードが表示されます。 
 
@@ -75,9 +75,36 @@ A: Azure Portal からサポート インシデントを送信するには、3 �
 3. サポート インシデントを送信します。
 詳細については、[テクニカル サポート](/visualstudio/subscriptions/vs-tech-support)のドキュメントを参照してください。 
 
+### <a name="q-ive-received-a-message-stating-that-my-access-to-azure-will-end-soon--what-can-i-do-to-continue-using-azure"></a>Q: 間もなく Azure にアクセスできなくなるというメッセージが届きました。  Azure の使用を続けるにはどうすればよいですか。
+
+A: Visual Studio サブスクリプションに関連付けられている Azure 特典を使用しているとき、サブスクリプションが失効するか、取り除かれるとこのメールが届きます。  Azure の使用を続ける場合、いくつかの選択肢があります。
+
+**推奨アクション:**
+
+Visual Studio の Azure クレジットと割引の使用を続けるには、次のいずれかの手順を行います。 
+
+チームまたは組織の誰かが代理でサブスクリプションを購入する場合、組織の Visual Studio 管理者に連絡し、Azure クレジットに必要な月額を与える Visual Studio サブスクリプションを依頼します。   前のサブスクリプションが割り当てられたものと同じユーザー ID に新しいサブスクリプションを割り当てるように管理者に依頼してください。Azure サブスクリプションを転送する必要がなくなります。
+
+
+サブスクリプションを直接購入できる場合、次のいずれかを行ってください。 
+1.  Visual Studio Marketplace から Visual Studio [Enterprise](https://marketplace.visualstudio.com/items?itemName=ms.vs-enterprise-annual) または Visual Studio [Professional](https://marketplace.visualstudio.com/items?itemName=ms.vs-professional-annual) のクラウド年間サブスクリプションを購入します。 
+2.  [Microsoft Store](https://www.microsoft.com/en-us/search/result.aspx?q=visual+studio+subscription) で現在のサブスクリプションを更新すれば、50% 以上の割引が受けられます。
+
+すべての[サブスクリプションとその特典](https://www.visualstudio.com/vs/pricing/)を比較してみてください。
+
+Microsoft アカウントに**同じ**サブスクリプション レベルで別の Visual Studio サブスクリプションがアクティブになっている場合、Visual Studio サブスクリプション ポータルで[代替アカウント](/manage-vs-subscriptions#linking-my-subscription-to-existing-vsts-or-azure-subscriptions/)を追加することで、そのアクティブ サブスクリプションをこの Azure 特典にリンクできます。 それがうまくいかない場合、Visual Studio のアクティブ サブスクリプションに [Azure 特典を転送](/azure/billing/billing-subscription-transfer/)してみることができます。
+
+Microsoft アカウントに**異なる**サブスクリプション レベルで別の Visual Studio サブスクリプションがアクティブになっている場合、[Azure サポート](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade)にサポートを要請してください。
+
+ご利用のサブスクリプションに使用制限があり、失効前に何の措置もとらない場合、Azure サブスクリプションは無効になります。 従量課金制プランに変更して使用を続けるには、支払い方法を追加して[使用制限を解除](/azure/billing/billing-spending-limit/)してください。
+
+この Visual Studio Azure サブスクリプションを続けない場合、仮想マシンやデータベースなどのリソースを別の Azure サブスクリプションに転送し、続けないサブスクリプションをいつでも[キャンセル](http://azure.microsoft.com/support/cancel-account/)できます。 
+
+このメールが間違いで配信された場合、[Azure カスタマー サポート](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade)にお問い合わせください。 
+
 ## <a name="support-resources"></a>サポート リソース
 -  Azure に関するヘルプが必要ですか。  以下のリソースを確認してください。
     - テクニカル サポート: [https://azure.microsoft.com/support/options/](https://azure.microsoft.com/support/options/)
-    - [Azure ドキュメント](/visualstudio/azure/)
+    - [Azure ドキュメント](/azure/)
 -  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)にお問い合わせください。
 -  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://www.visualstudio.com/support/)にアクセスしてください。 

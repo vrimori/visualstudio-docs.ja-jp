@@ -1,19 +1,19 @@
 ---
 title: Microsoft Partner Network (MPN) でパートナーに提供される Visual Studio サブスクリプション
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 3/16/2018
-Ms.topic: Get-Started-Article
-Description: Details on what subscriptions are offered, what rules apply, and how many subscriptions are offered in MPN.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: f63185ac2a83557b3de5234c847f75f714829322
-ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 03/16/2018
+ms.topic: Get-Started-Article
+description: 提供されているサブスクリプションの種類、該当する規則、および MPN で提供しているサブスクリプション数の詳細について説明します。
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 9593614b58f8f4c77ec24891cdb9ada33eac3e60
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Microsoft Partner Network (MPN) でパートナーに提供される Visual Studio サブスクリプション
 MPN でコンピテンシーを取得するか、Action Pack を購入したパートナーは、Visual Studio サブスクリプションを使用できます。 これらのサブスクリプションは、ユーザーごとにライセンスされ、パートナー企業で働く特定の名前付きユーザーに割り当てられている場合にのみ有効です。 

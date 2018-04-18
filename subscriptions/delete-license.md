@@ -1,24 +1,25 @@
 ---
-title: "割り当てを削除する | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 10/3/2017
-Ms.topic: Get-Started-Article
-Description: Learn how administrators can delete subscription assignments
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: e774eb24037275e87f9549d419804d12ab67dd39
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: 割り当てを削除する | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 10/03/2017
+ms.topic: Get-Started-Article
+description: 管理者がサブスクリプションの割り当てを削除する方法を説明します。
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 15f657a33c7c852c816d13e3d373a2b40035001d
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="deleting-assignments-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの割り当てを削除する
 
 サブスクライバーが会社を退職したり、プロジェクトを完了したり、新しい仕事の役割に切り替わったりして、Visual Studio サブスクリプションが不要になった場合に、それらのサブスクリプションを削除して、他のユーザーに割り当てることができます。 サブスクリプションを再割り当てすると、プロダクト キーを除くサブスクリプション会員の特典がリセットされることに注意してください。  新しいユーザーは要求されていない任意のキーを要求し、以前に要求されたキーを表示できるようになりますが、要求の上限はリセット**されません**。 
 1.  削除するサブスクライバーの名前をクリックします。 削除する複数のサブスクライバーを選択するには、**Ctrl** キーを押しながら削除する各サブスクライバーをクリックするか、**Ctrl + A** キーを押してすべてのサブスクライバーを選択して削除します。 次の図は、選択された 3 つのサブスクライバーを示しています。
-2.  選択したサブスクライバーを削除するには、**[削除]** をクリックします。 削除の確認を求めるメッセージが表示されたら、**[OK]** をクリックします。 
+2.  選択したサブスクライバーを削除するには、**[削除]** をクリックします。 
+3.  削除の確認を求めるメッセージが表示されたら、**[OK]** をクリックします。 
 
 ![サブスクライバーの削除](_img\delete-license\delete-subscribers.png)

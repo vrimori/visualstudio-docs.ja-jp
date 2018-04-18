@@ -1,29 +1,29 @@
 ---
-title: "Visual Studio サブスクリプションの Pluralsight 特典 | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 1/4/2018
-Ms.topic: Get-Started-Article
-Description: Learn about the Pluralsight training subscription included with your Visual Studio subscription.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 118fa74608bc0a36c8ce0a6941915fec535aad84
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: Visual Studio サブスクリプションの Pluralsight 特典 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 1/4/2018
+ms.topic: Get-Started-Article
+description: Visual Studio サブスクリプションに含まれる Pluralsight トレーニング サブスクリプションについて説明します。
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 973909a6ebc2730bfa7f4b9a0c576960175a8b7e
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Pluralsight トレーニング特典
-## <a name="overview"></a>概要
+
 エキスパートが作成したコース、ラーニング パス、適応スキルの測定方法などを利用してスキルを向上させましょう。  どの Visual Studio サブスクリプションまたはプログラムのメンバーシップがあるかに応じて、最大 6 か月間無料で無制限に Pluralsight カタログ全体にアクセスする権利が得られる場合があります。 
 
 次の表では、Visual Studio サブスクリプションの種類ごとにどのような Pluralsight サブスクリプションの特典を利用できるかについて詳しく説明します。  一部のサブスクライバーは、全カタログへのアクセス サブスクリプションの有効期限が切れた後、制限されたコースを利用することもできます。 Pluralsight は、全カタログのサブスクリプションの有効期限が切れた場合のそのプロセスをガイドします。 
 
  所有しているサブスクリプションの種類によっては、以前に Visual Studio サブスクリプションを通じて提供された Pluralsight サブスクリプションを使用していたすべてのサブスクライバーが新しい Pluralsight 特典プランを利用できるわけではありません。 追加の Pluralsight トレーニング特典を引き換える権利がない場合、Pluralsight web サイトで特典をアクティブ化しようとしたときに通知が表示されます。  
 
-### <a name="eligibility"></a>特典を受ける条件
+## <a name="eligibility"></a>特典を受ける条件
 | サブスクリプション レベル/プログラム                                 | 特長               | 更新可能かどうか                                                         |
 |--------------------------------------------------------------|-----------------------|--------------------------------------------------------------------|
 | Visual Studio Enterprise Standard                            | 6 か月間のサブスクリプション | いいえ。  期限切れ後 12 か月間の制限されたカタログ使用。 |
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/29/2018
 | Visual Studio Enterprise – MCT Software & Services Developer | 使用できません         |                                                                    |
 <sup>1</sup>  *Not for Resale (NFR)、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP) が含まれます。*  
 
-どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、電子メール アドレスに割り当てられているすべてのサブスクリプションを表示します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
+どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
  
 
 
@@ -103,8 +103,8 @@ A: すべての Visual Studio Enterprise サブスクリプションに Pluralsi
 
 ### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>Q: Pluralsight サブスクリプションがなくなるとどうなりますか。  
 A: 無料の Pluralsight サブスクリプションの終了時には、2 つのオプションがあります。
-1. 使用している Visual Studio サブスクリプションに応じて、その後 12 か月間制限されたコースを利用できる場合があります。  [サブスクリプションの表](#eligibility)で、サブスクリプションが対象であるかどうかを参照してください。
-2. Pluralsight から直接サブスクリプションを購入することを選択できます。  詳細については、[Pluralsight](http://www.pluralsight.com) にお問い合わせください。  
+1. クラウドでのアプリ開発、AI、機械学習およびデータ、クラウドでの DevOps の 3 つの主要領域の、50 の制限付きのコース セットに、12 か月間無料でアクセスできます (お持ちのサブスクリプションが対象かどうかを確認するには、[特典を受ける条件についての表](#eligibility)をご確認ください)。 有効期限後に無料アクセスしたい場合については、Pluralsight からの電子メールを確認してください。 それぞれの部分的なライブラリの下で[コース一覧](https://help.pluralsight.com/help/which-courses-are-included-with-the-visual-studio-benefit)をご確認いただけます。
+2. Pluralsight から直接 10% 割引でサブスクリプションを購入した場合、全カタログを使用することが可能です。  詳細については、[Pluralsight](http://www.pluralsight.com) にお問い合わせください。  
 
 ## <a name="support-resources"></a>サポート リソース
 -  [Pluralsight ヘルプ センター](https://help.pluralsight.com/help)は、Pluralsight コースの取得や Pluralsight Web サイトの使用をサポートします。 

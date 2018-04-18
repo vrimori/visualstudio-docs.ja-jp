@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio サブスクリプション管理者ポータルで管理者権限を管理する"
+title: Visual Studio サブスクリプション管理者ポータルで管理者権限を管理する
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
@@ -10,15 +10,15 @@ Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
 ms.openlocfilehash: 83bf27d5aaa99c2095ad8a1fafd7541df90f316b
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="managing-administrator-rights-in-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio サブスクリプション管理者ポータルで管理者権限を管理する
 
 ## <a name="overview"></a>概要 
-Visual Studio サブスクリプション管理者ポータル (https://manage.visualstudio.com) には、2 つの管理ロールがあります。
+Visual Studio サブスクリプション管理者ポータル (https://manage.visualstudio.com)) には、2 つの管理ロールがあります。
 
 **スーパー管理者:** 最初に組織を設定したときには、主要または通知連絡先が既定でスーパー管理者になります。 主要または通知連絡先は、追加のスーパー管理者または管理者を割り当てることを選択できます。 スーパー管理者は、個々のサブスクライバーのサブスクリプションを管理するだけでなく、他の管理者やスーパー管理者を追加または削除することもできます。 システムに 3 人以上のスーパー管理者がいる場合、セキュリティのために、スーパー管理者は最後の 2 人を除くすべての管理者を削除できます。 
 
