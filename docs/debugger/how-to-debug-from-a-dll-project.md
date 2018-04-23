@@ -2,8 +2,7 @@
 title: '方法: DLL プロジェクトからデバッグ |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 05/24/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -21,11 +20,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 903723616b55467a49c43986ccd6df63dea71491
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 63581cee8816e72492a67a0981a9077b9fec2935
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-debug-from-a-dll-project-in-visual-studio"></a>方法: Visual Studio で、DLL プロジェクトからデバッグ
 DLL プロジェクトをデバッグする方法の 1 つは、DLL プロジェクトのプロジェクト プロパティで呼び出し元のアプリケーションを指定して、DLL プロジェクトからデバッグを開始する、します。 このメソッドを使用するには、アプリケーションが DLL を呼び出す必要があります、DLL は、アプリケーションがそれを検索する場所にする必要があります (それ以外の場合、アプリケーションを別のバージョンの DLL を検索して代わりに、読み込む可能性があり、、ブレークポイントをヒットしません)。 他の Dll のデバッグの方法では、次を参照してください。 [DLL プロジェクトのデバッグ](../debugger/debugging-dll-projects.md)です。

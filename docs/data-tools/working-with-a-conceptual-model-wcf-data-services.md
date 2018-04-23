@@ -1,6 +1,5 @@
 ---
-title: 概念モデル (WCF Data Services) の操作 |Microsoft ドキュメント
-ms.custom: ''
+title: 概念モデル (WCF Data Services) の操作
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,37 +13,39 @@ manager: douge
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: aef81f949d52c3aba9fadf3871fe1b6cd624d536
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0e88ed4efac24df11f00d18b6235ee58ff0fae21
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="working-with-a-conceptual-model-wcf-data-services"></a>概念モデル (WCF Data Services) の操作
-概念モデルを使用してデータベースのデータを記述すると、データベース スキーマとオブジェクト モデル間で双方向の変換を行うのではなく、オブジェクトを使用してデータを照会できます。  
-  
- 概念モデルは、WCF Data Services アプリケーションで使用できます。 以下のトピックでは、概念モデルを使用してデータを照会する方法について説明します。  
-  
-|トピック|説明|  
-|-----------|-----------------|  
-|[方法: データ サービス クエリを実行する](/dotnet/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services)|[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] アプリケーションからデータ サービスを照会する方法について説明します。|  
-|[方法: クエリ結果を射影する](/dotnet/framework/data/wcf/how-to-project-query-results-wcf-data-services)|データ サービス クエリによって返されるデータの量を削減する方法について説明します。|  
-  
- 概念モデルを使用すると、ドメインに対応する言語で有効なデータの種類を定義できます。 モデルの有効なデータを定義したり、エンティティまたはデータ サービスで実行する操作に検証を追加したりできます。  
-  
- 以下のトピックでは、WCF Data Services アプリケーションに検証を追加する方法について説明します。  
-  
-|トピック|説明|  
-|-----------|-----------------|  
-|[方法: データ サービス メッセージを先に取得する](/dotnet/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services)|データ サービスの操作に検証を追加する方法について説明します。|  
-  
- 以下のトピックでは、エンティティに対して操作を実行して、データを作成、更新、および削除する方法について説明します。  
-  
-|トピック|説明|  
-|-----------|-----------------|  
-|[方法: エンティティを追加、変更、および削除する](/dotnet/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services)|データ サービスでエンティティ データを作成、更新、および削除する方法について説明します。|  
-|[方法: エンティティ リレーションシップを定義する](/dotnet/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services)|データ サービスでリレーションシップを作成または変更する方法について説明します。|  
-  
-## <a name="see-also"></a>関連項目  
- [Windows Communication Foundation サービスと Visual Studio での WCF Data Services](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)   
- [データ サービスに対するクエリ](/dotnet/framework/data/wcf/querying-the-data-service-wcf-data-services)
+
+概念モデルを使用してデータベースのデータを記述すると、データベース スキーマとオブジェクト モデル間で双方向の変換を行うのではなく、オブジェクトを使用してデータを照会できます。
+
+ 概念モデルは、WCF Data Services アプリケーションで使用できます。 以下のトピックでは、概念モデルを使用してデータを照会する方法について説明します。
+
+|トピック|説明|
+|-----------|-----------------|
+|[方法: データ サービス クエリを実行する](/dotnet/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services)|[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] アプリケーションからデータ サービスを照会する方法について説明します。|
+|[方法: クエリ結果を射影する](/dotnet/framework/data/wcf/how-to-project-query-results-wcf-data-services)|データ サービス クエリによって返されるデータの量を削減する方法について説明します。|
+
+ 概念モデルを使用すると、ドメインに対応する言語で有効なデータの種類を定義できます。 モデルの有効なデータを定義したり、エンティティまたはデータ サービスで実行する操作に検証を追加したりできます。
+
+ 以下のトピックでは、WCF Data Services アプリケーションに検証を追加する方法について説明します。
+
+|トピック|説明|
+|-----------|-----------------|
+|[方法: データ サービス メッセージを先に取得する](/dotnet/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services)|データ サービスの操作に検証を追加する方法について説明します。|
+
+ 以下のトピックでは、エンティティに対して操作を実行して、データを作成、更新、および削除する方法について説明します。
+
+|トピック|説明|
+|-----------|-----------------|
+|[方法: エンティティを追加、変更、および削除する](/dotnet/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services)|データ サービスでエンティティ データを作成、更新、および削除する方法について説明します。|
+|[方法: エンティティ リレーションシップを定義する](/dotnet/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services)|データ サービスでリレーションシップを作成または変更する方法について説明します。|
+
+## <a name="see-also"></a>関連項目
+
+- [Visual Studio での Windows Communication Foundation サービスと WCF データ サービス](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
+- [データ サービスに対するクエリ](/dotnet/framework/data/wcf/querying-the-data-service-wcf-data-services)

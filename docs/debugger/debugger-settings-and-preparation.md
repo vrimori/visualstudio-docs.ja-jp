@@ -2,8 +2,7 @@
 title: デバッガーの設定と準備 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug
@@ -21,11 +20,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eb28ee7e64d0e7281ded2443579c5e9be39400af
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f74cbb0f03f9b944f4ad1bfb00ffb58b56b2817f
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debugger-settings-and-preparation"></a>デバッガーの設定と準備
 ここでは、デバッグに関連するプロパティ設定と、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッガーを使用してプログラムをデバッグするために必要な準備について説明します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でプロジェクト テンプレートを使ってプログラムを作成する場合、これらの設定はデバッグ構成で正しく設定されます。  

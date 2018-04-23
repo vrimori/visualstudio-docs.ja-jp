@@ -1,10 +1,8 @@
 ---
-title: 'Ca 2226: 演算子は対称型オーバー ロードを含まなければなりません |Microsoft ドキュメント'
-ms.custom: ''
+title: 'CA2226: 演算子は対称型オーバーロードを含まなければなりません'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - OperatorsShouldHaveSymmetricalOverloads
 - CA2226
@@ -17,41 +15,41 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 17ce9653f5763788b8a6988994c379fc885152ad
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 98f5653d326c257e46becd2d7f8ad1091dfcf0c7
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca2226-operators-should-have-symmetrical-overloads"></a>CA2226: 演算子は対称型オーバーロードを含まなければなりません
-|||  
-|-|-|  
-|TypeName|OperatorsShouldHaveSymmetricalOverloads|  
-|CheckId|CA2226|  
-|カテゴリ|Microsoft.Usage|  
-|互換性に影響する変更点|中断なし|  
-  
-## <a name="cause"></a>原因  
- 型で等値演算子または非等値演算子を実装し、逆の働きをする演算子を実装していません。  
-  
-## <a name="rule-description"></a>規則の説明  
- ここで等値または非等値のいずれかは、型のインスタンスに適用され、反対側の演算子が定義されていない状況はありません。 種類は、通常、等値演算子の負数化された値を返すことによって、非等値演算子を実装します。  
-  
- C# コンパイラでは、この規則違反のエラーを発行します。  
-  
-## <a name="how-to-fix-violations"></a>違反の修正方法  
- この規則違反を修正するには、等しいかどうかと、非等値演算子の両方を実装または存在するものを削除します。  
-  
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
- この規則による警告は抑制しないでください。 種類と一貫性のある方法で動作しません、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]です。  
-  
-## <a name="related-rules"></a>関連規則  
- [CA1046: 参照型で、演算子 equals をオーバーロードしないでください](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)  
-  
- [CA2225: 演算子オーバーロードには名前付けされた代替が存在します](../code-quality/ca2225-operator-overloads-have-named-alternates.md)  
-  
- [CA2224: オーバーロードする演算子 equals で Equals をオーバーライドします](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)  
-  
- [CA2218: オーバーライドする Equals で GetHashCode をオーバーライドします](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)  
-  
+|||
+|-|-|
+|TypeName|OperatorsShouldHaveSymmetricalOverloads|
+|CheckId|CA2226|
+|カテゴリ|Microsoft.Usage|
+|互換性に影響する変更点|中断なし|
+
+## <a name="cause"></a>原因
+ 型で等値演算子または非等値演算子を実装し、逆の働きをする演算子を実装していません。
+
+## <a name="rule-description"></a>規則の説明
+ ここで等値または非等値のいずれかは、型のインスタンスに適用され、反対側の演算子が定義されていない状況はありません。 種類は、通常、等値演算子の負数化された値を返すことによって、非等値演算子を実装します。
+
+ C# コンパイラでは、この規則違反のエラーを発行します。
+
+## <a name="how-to-fix-violations"></a>違反の修正方法
+ この規則違反を修正するには、等しいかどうかと、非等値演算子の両方を実装または存在するものを削除します。
+
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+ この規則による警告は抑制しないでください。 種類と一貫性のある方法で動作しません、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]です。
+
+## <a name="related-rules"></a>関連規則
+ [CA1046: 参照型で、演算子 equals をオーバーロードしないでください](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
+
+ [CA2225: 演算子オーバーロードには名前付けされた代替が存在します](../code-quality/ca2225-operator-overloads-have-named-alternates.md)
+
+ [CA2224: オーバーロードする演算子 equals で Equals をオーバーライドします](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
+
+ [CA2218: オーバーライドする Equals で GetHashCode をオーバーライドします](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)
+
  [CA2231: ValueType.Equals のオーバーライドで、演算子 equals をオーバーロードします](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)

@@ -1,20 +1,18 @@
 ---
-title: ルール セットの混合推奨規則 |Microsoft ドキュメント
-ms.custom: ''
+title: "\"混合推奨規則\" 規則セット"
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dfecf4019244e02816686783171cb34cd0c0c1d5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b84c218ad6a369cfc5d9f06a5f5833fb277692ee
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="mixed-recommended-rules-rule-set"></a>"混合推奨規則" 規則セット
 
@@ -215,7 +213,7 @@ Microsoft 混合推奨規則は、潜在的なセキュリティ ホール、ア
 |[C28253](../code-quality/c28253.md)|関数に対する一貫性のない注釈: パラメーターは、このインスタンスについて他の注釈を含みます。|
 |[C28254](../code-quality/c28254.md)|dynamic_cast<>() は、注釈ではサポートされません|
 |[C28262](../code-quality/c28262.md)|注釈での構文エラーが関数の注釈で見つかりました|
-|[C28263](../code-quality/c28263.md)|条件付き注釈での構文エラーが、組み込みの注釈で見つかりました| 
+|[C28263](../code-quality/c28263.md)|条件付き注釈での構文エラーが、組み込みの注釈で見つかりました|
 |[C28267](../code-quality/c28267.md)|注釈での構文エラーが、関数の注釈で見つかりました。|
 |[C28272](../code-quality/c28272.md)|検査中の関数とパラメーターに対する注釈に関数宣言との一貫性がありません|
 |[C28273](../code-quality/c28273.md)|関数について、手がかりには関数宣言との一貫性がありません。|

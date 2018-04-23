@@ -2,8 +2,7 @@
 title: '方法: ファインダー ツールを使用して |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Window Finder Tool
@@ -13,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8feed3e948c6dba91edccb36162656589539a0a8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f358adbd8721a55d278c392018463d49e5a8a60e
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-use-the-finder-tool"></a>方法: ファインダー ツールを使用する
 は、ファインダー ツールを使用することができます、**ウィンドウ検索**ウィンドウのプロパティまたはメッセージを表示する ダイアログ ボックス。 ファインダー ツールは、無効な子ウィンドウを検索し、場合を強調表示するには、どのウィンドウには、子ウィンドウが重なっているが無効になっているを識別できます。  

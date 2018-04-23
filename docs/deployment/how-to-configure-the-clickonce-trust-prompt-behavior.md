@@ -2,8 +2,7 @@
 title: '方法: ClickOnce 信頼プロンプトの動作の構成 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - ClickOnce applications, trust prompt
 - ClickOnce deployment, trust prompt
 ms.assetid: cc04fa75-012b-47c9-9347-f4216be23cf2
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e3a399a9f075249f2457c431385132476b173191
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d37e5fa465a5e19b1bfb7577f6ab06c61782f775
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-configure-the-clickonce-trust-prompt-behavior"></a>方法: ClickOnce 信頼プロンプトの動作を構成する
 コントロールに ClickOnce 信頼プロンプトを構成するには、エンドユーザーには、Windows フォーム アプリケーション、Windows Presentation Foundation アプリケーション、コンソール アプリケーション、WPF ブラウザーなどの ClickOnce アプリケーションをインストールするオプションが指定されたかどうかアプリケーション、および Office ソリューションです。 信頼プロンプトを構成するには、各エンドユーザーのコンピューターでレジストリ キーを設定します。  

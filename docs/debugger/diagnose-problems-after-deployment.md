@@ -2,8 +2,7 @@
 title: 配置後の問題の診断 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 04/10/2018
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: a3463eab-a352-4d17-8551-adbaad526db0
 author: mikejo5000
@@ -11,11 +10,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dc5ffb60e10f28fc33654a78f3f8486e42a2ed85
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 54a29e25c19d3dae18efd967a4fb26e1cd4f576a
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="diagnose-problems-after-deployment"></a>配置後の問題の診断
 IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診断するには、リリースについてのビルド情報を含めます。こうすることで、Visual Studio が、IntelliTrace ログをデバッグするために必要な正しいソース ファイルとシンボル ファイルを自動的に検索できるようになります。  

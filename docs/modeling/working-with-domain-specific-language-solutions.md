@@ -1,6 +1,5 @@
 ---
-title: ドメイン固有言語ソリューションの操作 |Microsoft ドキュメント
-ms.custom: ''
+title: ドメイン固有言語ソリューションの使用
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
@@ -9,42 +8,32 @@ manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: e5b7335fb7f57f05dcccd6eeeed84050a42ac57c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b601d348f01334377e765285fbf8b37e0f7089fb
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="working-with-domain-specific-language-solutions"></a>ドメイン固有言語ソリューションの使用
-使用してドメイン固有言語 (DSL) を作成、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューションです。 このセクションでを設定し、ソリューションをカスタマイズする方法について説明します。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- [ドメイン固有言語について](../modeling/about-domain-specific-languages.md)  
- Dsl を開発する方法と、それらを適用する方法について説明します。  
-  
- [ドメイン固有言語ツールの概要](../modeling/overview-of-domain-specific-language-tools.md)  
- 開発と、DSL の配布の主なタスクをについて説明します。  
-  
- [ドメイン固有言語ツールのユーザー インターフェイスの概要](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md)  
- Dsl に関連付けられている windows をについて説明します。  
-  
- [ドメイン固有言語ソリューション テンプレートの選択](../modeling/choosing-a-domain-specific-language-solution-template.md)  
- DSL プロジェクトを開始するためのテンプレートを選択する方法について説明します。  
-  
- [方法: ドメイン固有言語ソリューションを作成する](../modeling/how-to-create-a-domain-specific-language-solution.md)  
- DSL を設定する手順について説明します。  
-  
- [DSL 定義図の使用](../modeling/working-with-the-dsl-definition-diagram.md)  
- ダイアグラムの各部について説明します。  
-  
- [ドメイン固有言語エクスプローラーの使用](../modeling/working-with-the-domain-specific-language-explorer.md)  
- エクスプ ローラーのコンテンツについて説明します  
-  
- [方法: ドメイン固有言語の名前空間を変更する](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md)  
- DSL から生成するコードは、ソリューションを開始するときに設定した名前空間を持つが、その後で変更できます。  
-  
- [方法: ドメイン固有言語デザイナーを拡張する](../modeling/how-to-extend-the-domain-specific-language-designer.md)  
- メニュー コマンドを含む DSL デザイナーをカスタマイズすることができます。  
-  
- [変換を自動化する方法のすべてのテンプレート](http://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a)  
- すべてのテンプレートの変換をクリックするとを避けるためには、することができますが、ビルドの自動の一部です。
+使用してドメイン固有言語 (DSL) を作成、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューションです。 このセクションでを設定し、ソリューションをカスタマイズする方法について説明します。
+
+## <a name="in-this-section"></a>このセクションの内容
+ [ドメイン固有言語に関する](../modeling/about-domain-specific-languages.md)Dsl を開発する方法と、それらを適用する方法について説明します。
+
+ [ドメイン固有言語ツールの概要](../modeling/overview-of-domain-specific-language-tools.md)の開発と、DSL の配布の主要なタスクについて説明します。
+
+ [ドメイン固有言語ツールのユーザー インターフェイスの概要](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md)Dsl に関連付けられているウィンドウについて説明します。
+
+ [ドメイン固有言語ソリューション テンプレートを選択する](../modeling/choosing-a-domain-specific-language-solution-template.md)DSL プロジェクトを開始するためのテンプレートを選択する方法について説明します。
+
+ [方法: ドメイン固有言語ソリューションを作成する](../modeling/how-to-create-a-domain-specific-language-solution.md)DSL を設定する手順について説明します。
+
+ [DSL 定義ダイアグラムの操作](../modeling/working-with-the-dsl-definition-diagram.md)ダイアグラムの各部について説明します。
+
+ [ドメイン固有言語のエクスプ ローラーで作業](../modeling/working-with-the-domain-specific-language-explorer.md)エクスプ ローラーのコンテンツについて説明します
+
+ [方法: ドメイン固有言語の Namespace を変更する](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md)DSL から生成するコードは、ソリューションを開始するときに設定した名前空間を持つが、その後で変更できます。
+
+ [方法: ドメイン固有言語デザイナーの拡張](../modeling/how-to-extend-the-domain-specific-language-designer.md) メニューのコマンドを含む DSL デザイナーをカスタマイズすることができます。
+
+ [すべてのテンプレートの変換を自動化する方法](http://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a)を避けるためすべてのテンプレートの変換をクリックすると、することができますが、ビルドの自動の一部です。

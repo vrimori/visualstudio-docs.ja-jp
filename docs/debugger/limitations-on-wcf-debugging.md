@@ -2,8 +2,7 @@
 title: WCF のデバッグに関する制限事項 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -19,11 +18,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7696afd789753b85facf44dfeadf1f3f30c1596b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a865a9852b8a6700e250225244546567967257de
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="limitations-on-wcf-debugging"></a>WCF デバッグの制約
 WCF サービスのデバッグを開始するには、次の 3 つの方法があります。  
@@ -79,7 +78,7 @@ WCF サービスのデバッグを開始するには、次の 3 つの方法が�
  A*セルフホストされているサービス*する WCF サービスを IIS で WCF サービス ホスト内で実行されないのは、または[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]開発サーバーです。 自己ホスト型サービスをデバッグする方法については、次を参照してください。[する方法: 自己ホスト型 WCF サービスをデバッグ](../debugger/how-to-debug-a-self-hosted-wcf-service.md)です。  
   
 ## <a name="self-hosting"></a>セルフホスト  
- デバッグを有効にする[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]3.0 または 3.5 アプリケーション、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 または 3.5 をインストールする前にする必要がある[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]がインストールされています。 場合[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]する前にインストールされている[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]をデバッグするときにエラーが発生した 3.0 または 3.5 を[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]3.0 または 3.5 アプリケーションです。 エラー メッセージは、「サーバーに自動的にステップ インできません。」です。 この問題を解決するには、Windows を使用して**コントロール パネルの**  > **プログラムと機能**を修復、[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]インストールします。  
+ デバッグを有効にする[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]3.0 または 3.5 アプリケーション、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 または 3.5 をインストールする前にする必要がある[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]がインストールされています。 場合[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]する前にインストールされている[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]をデバッグするときにエラーが発生した 3.0 または 3.5 を[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]3.0 または 3.5 アプリケーションです。 エラー メッセージは、「サーバーに自動的にステップ インできません。」です。 この問題を解決するには、Windows を使用して**コントロール パネルの ** > **プログラムと機能**を修復、[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]インストールします。  
   
 ## <a name="see-also"></a>関連項目  
  [WCF サービスのデバッグ](../debugger/debugging-wcf-services.md)   

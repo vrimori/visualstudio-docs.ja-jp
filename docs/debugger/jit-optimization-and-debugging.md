@@ -2,8 +2,7 @@
 title: JIT の最適化とデバッグ |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -19,11 +18,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 31bbad33da65450375c5f3d6fba9b47b9eb55c8a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9a9b18ab38c7c19fa5208d34439bd3133099e8bc
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="jit-optimization-and-debugging"></a>JIT の最適化とデバッグ
 **.NET での最適化の作業:**場合コードをデバッグしようとしてが容易とそのコードが**いない**最適化します。 これは、コードの最適化時に、コンパイラとランタイム変更を行うので、出力の CPU コードをできるように、高速で実行されますが、元のソース コードに直接マップされています。 つまり、デバッガーは、ローカル変数の値を指定して、コードのステップ実行することが頻繁にはブレークポイントが期待どおりに機能しません。

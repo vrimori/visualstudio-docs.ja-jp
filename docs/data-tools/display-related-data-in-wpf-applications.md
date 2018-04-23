@@ -1,6 +1,5 @@
 ---
-title: WPF アプリケーションでの関連するデータの表示 |Microsoft ドキュメント
-ms.custom: ''
+title: WPF アプリケーションで関連するデータを表示します。
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +17,11 @@ manager: douge
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5258f12a7ede6727736225e1e8308773db3c91c8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b293656a0eeffeba304ef4692f9c021ae9639d22
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="display-related-data-in-wpf-applications"></a>WPF アプリケーションで関連するデータを表示します。
 一部のアプリケーションでは、複数のテーブルまたは親と子の関係で相互に関連付けられているエンティティから取得したデータを使用することができます。 顧客を表示するグリッドを表示するなど、`Customers`テーブル。 別のグリッドに、関連するその顧客の注文が表示されます、ユーザーは、特定の顧客を選択するときに`Orders`テーブル。
@@ -56,5 +55,6 @@ ms.lasthandoff: 04/16/2018
      ![データ ソース ウィンドウの関係を示す](../data-tools/media/datasources2.gif "DataSources2")
 
 ## <a name="see-also"></a>関連項目
-[Visual Studio でのデータに WPF コントロールをバインドします。](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)   
-[WPF アプリケーションでルックアップ テーブルを作成する](../data-tools/create-lookup-tables-in-wpf-applications.md)
+
+- [Visual Studio でデータに WPF コントロールをバインドする](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
+- [WPF アプリケーションでルックアップ テーブルを作成する](../data-tools/create-lookup-tables-in-wpf-applications.md)

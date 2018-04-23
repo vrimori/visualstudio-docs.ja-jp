@@ -2,8 +2,7 @@
 title: 並列スタック ウィンドウを使用するスレッドの表示 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 04/25/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.parallelstacks
@@ -20,11 +19,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d0217cd245f619264f1dc0a051d0083ea2fb9f3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d19e39ef16bddce9910a65c6833e79d9263fba97
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="view-threads-and-tasks-using-the-parallel-stacks-window"></a>スレッドと並列スタック ウィンドウを使用してタスクを表示します。
 **並列スタック**ウィンドウは、マルチ スレッド アプリケーションをデバッグする場合に役立ちます。 その**スレッド ビュー**アプリケーション内のすべてのスレッドの呼び出し履歴情報を表示します。 これを使用して、スレッドとそれらのスレッドのスタック フレームの間を移動できます。 マネージ コードで、**タスク ビュー**呼び出し履歴の表示<xref:System.Threading.Tasks.Task?displayProperty=fullName>オブジェクト。 ネイティブ コードで、**タスク ビュー**呼び出し履歴の表示[タスク グループ](/cpp/parallel/concrt/task-parallelism-concurrency-runtime)、[並列アルゴリズム](/cpp/parallel/concrt/parallel-algorithms)、[非同期エージェント](/cpp/parallel/concrt/asynchronous-agents)、および[軽量タスク](/cpp/parallel/concrt/task-scheduler-concurrency-runtime)です。  

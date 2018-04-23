@@ -2,8 +2,7 @@
 title: 使用可能なソースがありません |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.nosource
@@ -20,11 +19,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 022b629076e79dea679541ed301b0a7ff0c7d876
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: aae4b2428470e3e33477cfdb36699c2c1da20c1f
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="no-source-available"></a>使用できるソースはありません
 表示しようとしているコードのソース コードがプロジェクトに含まれていません。 一般的な原因が内にソース コードがないモジュールをダブルクリックすると、**呼び出し履歴 ウィンドウ**または**スレッド ウィンドウ**します。 デバッグは継続できますが、ソース ウィンドウを使ってブレークポイントを設定したり、この場所で他のアクションを実行したりすることはできません。 ブレークポイントを設定する必要がある場合、**逆アセンブル ウィンドウ**代わりにします。  

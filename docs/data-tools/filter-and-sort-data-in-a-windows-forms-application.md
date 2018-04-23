@@ -1,6 +1,5 @@
 ---
-title: Windows フォーム アプリケーションでデータのフィルターと並べ替え |Microsoft ドキュメント
-ms.custom: ''
+title: Windows フォーム アプリケーションでデータのフィルターと並べ替え
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -21,33 +20,34 @@ manager: douge
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: a2703a075a2083f960ad644784671a1af033aaee
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ff5c31b14f13252fbcad0f42762627a14e610591
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="filter-and-sort-data-in-a-windows-forms-application"></a>Windows フォーム アプリケーションでデータのフィルターと並べ替え
-データをフィルター処理するには、<xref:System.Windows.Forms.BindingSource.Filter%2A> プロパティに目的のレコードを返す文字列式を設定します。  
-  
- データを並べ替えるには、<xref:System.Windows.Forms.BindingSource.Sort%2A> プロパティに並べ替える列の名前を設定し、降順の場合は末尾に `DESC` を、昇順の場合は末尾に `ASC` を付けます。  
-  
+データをフィルター処理するには、<xref:System.Windows.Forms.BindingSource.Filter%2A> プロパティに目的のレコードを返す文字列式を設定します。
+
+ データを並べ替えるには、<xref:System.Windows.Forms.BindingSource.Sort%2A> プロパティに並べ替える列の名前を設定し、降順の場合は末尾に `DESC` を、昇順の場合は末尾に `ASC` を付けます。
+
 > [!NOTE]
->  アプリケーションを使用しない場合<xref:System.Windows.Forms.BindingSource>コンポーネントをフィルター処理できますを使用してデータを並べ替えると<xref:System.Data.DataView>オブジェクト。 詳細については、次を参照してください。 [Dataview](/dotnet/framework/data/adonet/dataset-datatable-dataview/dataviews)です。  
-  
-## <a name="to-filter-data-by-using-a-bindingsource-component"></a>BindingSource コンポーネントを使用してデータをフィルター処理するには  
-  
--   <xref:System.Windows.Forms.BindingSource.Filter%2A> プロパティに取得する式を設定します。 たとえば、以下のコードは、`CompanyName` が "B" で始まる顧客を返します。  
-  
+>  アプリケーションを使用しない場合<xref:System.Windows.Forms.BindingSource>コンポーネントをフィルター処理できますを使用してデータを並べ替えると<xref:System.Data.DataView>オブジェクト。 詳細については、次を参照してください。 [Dataview](/dotnet/framework/data/adonet/dataset-datatable-dataview/dataviews)です。
+
+## <a name="to-filter-data-by-using-a-bindingsource-component"></a>BindingSource コンポーネントを使用してデータをフィルター処理するには
+
+-   <xref:System.Windows.Forms.BindingSource.Filter%2A> プロパティに取得する式を設定します。 たとえば、以下のコードは、`CompanyName` が "B" で始まる顧客を返します。
+
      [!code-csharp[VbRaddataDisplaying#6](../data-tools/codesnippet/CSharp/filter-and-sort-data-in-a-windows-forms-application_1.cs)]
-     [!code-vb[VbRaddataDisplaying#6](../data-tools/codesnippet/VisualBasic/filter-and-sort-data-in-a-windows-forms-application_1.vb)]  
-  
-## <a name="to-sort-data-by-using-a-bindingsource-component"></a>BindingSource コンポーネントを使用してデータを並べ替える  
-  
--   <xref:System.Windows.Forms.BindingSource.Sort%2A> プロパティに並べ替える列を設定します。 たとえば、以下のコードは、`CompanyName` 列に基づいて降順に顧客を並べ替えます。  
-  
+     [!code-vb[VbRaddataDisplaying#6](../data-tools/codesnippet/VisualBasic/filter-and-sort-data-in-a-windows-forms-application_1.vb)]
+
+## <a name="to-sort-data-by-using-a-bindingsource-component"></a>BindingSource コンポーネントを使用してデータを並べ替える
+
+-   <xref:System.Windows.Forms.BindingSource.Sort%2A> プロパティに並べ替える列を設定します。 たとえば、以下のコードは、`CompanyName` 列に基づいて降順に顧客を並べ替えます。
+
      [!code-csharp[VbRaddataDisplaying#7](../data-tools/codesnippet/CSharp/filter-and-sort-data-in-a-windows-forms-application_2.cs)]
-     [!code-vb[VbRaddataDisplaying#7](../data-tools/codesnippet/VisualBasic/filter-and-sort-data-in-a-windows-forms-application_2.vb)]  
-  
-## <a name="see-also"></a>関連項目  
- [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)
+     [!code-vb[VbRaddataDisplaying#7](../data-tools/codesnippet/VisualBasic/filter-and-sort-data-in-a-windows-forms-application_2.vb)]
+
+## <a name="see-also"></a>関連項目
+
+- [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)
