@@ -2,8 +2,7 @@
 title: 'Web アプリケーションのデバッグ: トラブルシューティング |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -20,11 +19,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dce5fedefc5e99ad0951f10f72777cadfadae8c0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 3720dccfd6118aaacd122ea254618d0ce226cf8d
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debugging-web-applications-troubleshooting"></a>Web アプリケーションのデバッグ : トラブルシューティング
 ここでは、エラーを解決するための一般的な手順について説明します。  

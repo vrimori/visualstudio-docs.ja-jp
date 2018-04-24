@@ -2,8 +2,7 @@
 title: デバッガーでのネイティブ オブジェクトのカスタム ビューを作成 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 06/27/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - natvis
@@ -15,11 +14,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40a78f95ed98b0486b1ffa85eabea3ae8591b823
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 38656b9c5ce4165f2a04b5e6d76411ce7f005855
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-custom-views-of-native-objects-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでのネイティブ オブジェクトのカスタム ビューを作成します。
 Visual Studio の Natvis フレームワークでは、Visual Studio デバッガー変数ウィンドウでのネイティブ型の表示方法をカスタマイズすることができます (たとえば、**ウォッチ**ウィンドウで、**ローカル**ウィンドウで、し、 **データヒント**です。
@@ -29,7 +28,7 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
 > [!NOTE]
 >  Natvis フレームワークは次の場合には視覚化に使用されません。  
 >   
->  -  [デバッガーのタイプ] を **[混合]**に設定して、C++  Windows のデスクトップ プロジェクトをデバッグしている。  
+>  -  [デバッガーのタイプ] を **[混合]** に設定して、C++  Windows のデスクトップ プロジェクトをデバッグしている。  
 > -   マネージ互換モードでの Windows デスクトップ アプリケーションで混合モードのデバッグを行う (**ツール > オプション > デバッグ > [全般] > を使用してマネージ互換モード**)。  
 > -   ネイティブ互換モードでの Windows デスクトップ アプリケーションでのデバッグ (**ツール > オプション > デバッグ > [全般] > を使用してネイティブ互換モード**)。  
   
@@ -71,7 +70,7 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
 ## <a name="adding-natvis-files-to-your-projects"></a>プロジェクトへの .natvis ファイルの追加  
  .natvis ファイルはすべての C++ プロジェクトに追加できます。  
   
- C++ プロジェクトが開かれて、新しい .natvis ファイルを追加するでプロジェクト ノードを選択、**ソリューション エクスプ ローラー**、 をクリック**追加 > 新しい項目の追加 > Visual C > ユーティリティ > デバッガー視覚化ファイル (.natvis)**です。 デバッガーは Natvis ファイルを C++ プロジェクトから自動的に読み込みます。 既定では、プロジェクトの Natvis ファイルは、プロジェクトによってビルドされた .pdb ファイルにも挿入されます。 つまり、このプロジェクトでビルドされたバイナリをデバッグする場合、たとえプロジェクトを開かなくても、デバッガーが Natvis ファイルを .pdb から読み込みます。 .natvis ファイルが .pdb に含まれないようにするには、 **[ソリューション エクスプローラー]**で .natvis ファイルを右クリックして、 **[構成プロパティ]** ウィンドウで **[ビルドから除外]** を **[はい]**に設定します。  
+ C++ プロジェクトが開かれて、新しい .natvis ファイルを追加するでプロジェクト ノードを選択、**ソリューション エクスプ ローラー**、 をクリック**追加 > 新しい項目の追加 > Visual C > ユーティリティ > デバッガー視覚化ファイル (.natvis)** です。 デバッガーは Natvis ファイルを C++ プロジェクトから自動的に読み込みます。 既定では、プロジェクトの Natvis ファイルは、プロジェクトによってビルドされた .pdb ファイルにも挿入されます。 つまり、このプロジェクトでビルドされたバイナリをデバッグする場合、たとえプロジェクトを開かなくても、デバッガーが Natvis ファイルを .pdb から読み込みます。 .natvis ファイルが .pdb に含まれないようにするには、 **[ソリューション エクスプローラー]** で .natvis ファイルを右クリックして、 **[構成プロパティ]** ウィンドウで **[ビルドから除外]** を **[はい]** に設定します。  
   
  Visual Studio を使用して Natvis ファイルを編集することをお勧めします。Visual Studio を使用すると、ファイルを保存時に、デバッグ中に行ったすべての変更が自動的に有効になります。 Intellisense から強化された編集エクスペリエンスを取得できます。  
   
@@ -86,7 +85,7 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
   
 2.  読み込まれた C++ プロジェクトまたはトップレベル ソリューション項目の一部である .natvis ファイル。 このグループには、すべての読み込まれた C++ プロジェクト、クラス ライブラリなどが含まれていますが、他の言語のプロジェクトは含まれません (たとえば、することはできません .natvis ファイルを読み込む c# プロジェクトから)。 実行可能プロジェクトで .pdb に既に存在しない .natvis ファイルをホストする場合は、使用可能な C++ プロジェクトがないため、ソリューション項目を使用する必要があります。  
   
-3.  ユーザー固有の natvis ディレクトリ (たとえば、 **%USERPROFILE%\Documents\Visual Studio 2017\Visualizers**または**%USERPROFILE%\My documents \visual Studio 2015\Visualizers**)。  
+3.  ユーザー固有の natvis ディレクトリ (たとえば、 **%USERPROFILE%\Documents\Visual Studio 2017\Visualizers**または **%USERPROFILE%\My documents \visual Studio 2015\Visualizers**)。  
   
 4.  システム全体の Natvis ディレクトリ (**%VSINSTALLDIR%\Common7\Packages\Debugger\Visualizers**)。 このディレクトリは、Visual Studio と共にインストールされる .natvis ファイルがコピーされる場所です。 管理者権限を付与する場合もこのディレクトリに他のファイルを追加できます。  
   
@@ -125,12 +124,12 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
 </Type>  
 ```  
   
- `DisplayString` および `ArrayItems` の要素は、既定ビューと簡易ビューで使用されます。一方、 `[size]` および `[capacity]` の項目は簡易ビューから除外されます。 **,view** 書式指定子を使用して、別のビューを指定できます。 **[ウォッチ]** ウィンドウで、 **vec,view(simple)**として簡易ビューを指定します。  
+ `DisplayString` および `ArrayItems` の要素は、既定ビューと簡易ビューで使用されます。一方、 `[size]` および `[capacity]` の項目は簡易ビューから除外されます。 **,view** 書式指定子を使用して、別のビューを指定できます。 **[ウォッチ]** ウィンドウで、 **vec,view(simple)** として簡易ビューを指定します。  
   
  ![単純なビューとウォッチ ウィンドウ](../debugger/media/watch-simpleview.png "ウォッチ SimpleView")  
   
 ##  <a name="BKMK_Diagnosing_Natvis_errors"></a> Natvis エラーの診断  
- Natvis 診断を使用すると、構文のトラブルシューティングおよび解析エラーの検出が行えます。 デバッガーに視覚化エントリのエラーが発生すると、デバッガーはエラーを無視し、未加工の形式で型を表示するか、別の該当する視覚化を選択します。 特定の視覚化エントリが無視される理由を理解し、基になるエラーを確認するには、Natvis 診断を有効にできます**ツール > オプション > デバッグ > [出力] ウィンドウ > Natvis 診断メッセージ (C++ のみ)**オプション。 エラーは **[出力]** ウィンドウに表示されます。  
+ Natvis 診断を使用すると、構文のトラブルシューティングおよび解析エラーの検出が行えます。 デバッガーに視覚化エントリのエラーが発生すると、デバッガーはエラーを無視し、未加工の形式で型を表示するか、別の該当する視覚化を選択します。 特定の視覚化エントリが無視される理由を理解し、基になるエラーを確認するには、Natvis 診断を有効にできます**ツール > オプション > デバッグ > [出力] ウィンドウ > Natvis 診断メッセージ (C++ のみ)** オプション。 エラーは **[出力]** ウィンドウに表示されます。  
   
 ##  <a name="BKMK_Syntax_reference"></a> Natvis 構文のリファレンス  
   

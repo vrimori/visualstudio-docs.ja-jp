@@ -2,8 +2,7 @@
 title: DebugBreak と _ _debugbreak |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - DebugBreak
@@ -22,11 +21,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d76b4a08c90b3ae37832da97e0615282c0f11d67
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a5eda428410733bf72174676f5a2303a7f625aa7
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debugbreak-and-debugbreak"></a>DebugBreak と __debugbreak
 DebugBreak Win32 関数を呼び出すことができます、または[_ _debugbreak](/cpp/intrinsics/debugbreak)コード内の任意の時点で組み込みです。 `DebugBreak` および `__debugbreak` を呼び出した場合の動作は、その位置にブレークポイントを設定した場合と同様です。  

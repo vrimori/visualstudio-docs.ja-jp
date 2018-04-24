@@ -2,8 +2,7 @@
 title: フレンド (Debug Interface Access SDK) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -17,11 +16,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c496b2b653bc1243a122f2025aa9d08b47fef7b1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 75cdf9b4239b02e9f07077a6bf574c3b9e5b47a3
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="friend-debug-interface-access-sdk"></a>フレンド (Debug Interface Access SDK)
 フレンド クラスとフレンド関数がで識別される`SymTagFriend`シンボル。 ユーザー定義型 (Udt) を親の子にされており、 [idiasymbol::get_classparent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md)プロパティです。  

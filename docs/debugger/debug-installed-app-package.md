@@ -2,8 +2,7 @@
 title: インストールされているアプリ パッケージ (UWP) をデバッグ |Microsoft ドキュメント
 ms.custom: H1Hack27Feb2017
 ms.date: 07/17/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.installedapppackagelauncher
@@ -22,11 +21,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 9c1406637b6d1dce312b0574cfba3c9a4f7356e8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: ffddb3f49f4603c6f09bb12ef81d4c45bf0210c7
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debug-an-installed-app-package-in-visual-studio-uwp"></a>Visual Studio (UWP) にインストールされているアプリ パッケージをデバッグします。
 
@@ -80,7 +79,7 @@ ms.lasthandoff: 04/16/2018
 
 5. オプションを選択して認証する方法を選択して**認証モード**です。
 
-    ほとんどのアプリの既定値の保持、**ユニバーサル (暗号化されていないプロトコル)**です。
+    ほとんどのアプリの既定値の保持、**ユニバーサル (暗号化されていないプロトコル)** です。
 
 6. デバッグするアプリの名前を選択**を実行している**または**が実行されていない**を選択し、**開始**または (アプリの実行)**アタッチ**です。
 
