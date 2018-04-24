@@ -1,21 +1,21 @@
 ---
 title: Visual Studio でロード テストのために遅延のペースに分布を適用する | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, test mix model
 ms.assetid: ae8b35f9-d465-4d72-8d7d-7b56ae6ffd22
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 047a8fd8dea60ca86c39922f8cd0aed6e65ec6d3
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 5140a3ca9cb8274a9b6d9f74260adadfed6201ad
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="how-to-apply-distribution-to-pacing-delay-when-using-a-user-pace-test-mix-model"></a>方法: ユーザー ペースのテスト ミックス モデルを使用する場合に遅延のペースに分布を適用する
+# <a name="how-to-apply-distribution-to-pacing-delay-when-using-a-user-pace-test-mix-model"></a>方法: 配分を適用してユーザー ペースのテスト ミックス モデルを使用するときの遅延をペース配分する
 
 新しいロード テスト ウィザードでロード テストを作成した後、ロード テスト エディターを使用して、テストのニーズや目標に合わせてシナリオのプロパティを変更できます。
 

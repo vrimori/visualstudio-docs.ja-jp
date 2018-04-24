@@ -1,21 +1,19 @@
 ---
-title: "Visual Studio でコンストラクターを生成する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio でコンストラクターを生成する | Microsoft Docs
+ms.custom: ''
 ms.date: 01/26/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 author: kuhlenh
 ms.author: kaseyu
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0767b47fcf4456e1ac198674ece6c9de31850279
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 8ab26fd6ccc8359c2699154ae6fa5821040ce9ec
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="generate-a-constructor-in-visual-studio"></a>Visual Studio でコンストラクターを生成する
 
@@ -59,7 +57,7 @@ ms.lasthandoff: 02/28/2018
 
    **[Pick memebers]\(メンバーの選択\)** ダイアログ ボックスが開きます。
 
-1. コンストラクターのパラメーターとして含めるメンバーを選択します。 上下の矢印を使って順序を変更できます。 **[OK]**をクリックします。
+1. コンストラクターのパラメーターとして含めるメンバーを選択します。 上下の矢印を使って順序を変更できます。 **[OK]** をクリックします。
 
    ![[メンバーの選択] ダイアログ](media/constructor1-dialog-cs.png)
 

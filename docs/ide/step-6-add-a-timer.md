@@ -1,30 +1,28 @@
 ---
-title: "手順 6: タイマーの追加 |Microsoft Docs"
-ms.custom: 
+title: '手順 6: タイマーの追加 |Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-acquisition
+ms.topic: conceptual
 ms.assetid: 09e7930b-cab6-4a22-9a6f-72e23f489585
-caps.latest.revision: "21"
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 530b57b0f8a39990d37dc8cd25ac4c7bacba5a6e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: ce3f89c653672a7e4003d058f8dd07dff7248b85
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-6-add-a-timer"></a>手順 6: タイマーの追加
 次に、絵合わせゲームに **Timer** コントロールを追加します。 タイマーは、指定されたミリ秒間待機してから、*ティック*と呼ばれるイベントを発生させます。 タイマーは、アクションを開始したり定期的に繰り返したりする場合に便利です。 ここではタイマーの使用例として、プレーヤーが 2 つのアイコンを選択し、アイコンが一致しない場合は、短時間の経過後にその 2 つのアイコンが再び非表示になるようにします。  
   
 ### <a name="to-add-a-timer"></a>タイマーを追加するには  
   
-1.  Windows フォーム デザイナーのツール ボックスから、**[タイマー]**\(**[コンポーネント]** カテゴリ内) を選択して Enter キーを押すか、タイマーをダブルクリックして、タイマー コントロールをフォームに追加します。 次の図に示しているように、タイマーのアイコンが **[Timer1]** という名前で、フォームの下の領域に表示されます。  
+1.  Windows フォーム デザイナーのツール ボックスから、**[タイマー]** \(**[コンポーネント]** カテゴリ内) を選択して Enter キーを押すか、タイマーをダブルクリックして、タイマー コントロールをフォームに追加します。 次の図に示しているように、タイマーのアイコンが **[Timer1]** という名前で、フォームの下の領域に表示されます。  
   
      ![タイマー](../ide/media/express_timer.png "Express_Timer")  
 タイマー  

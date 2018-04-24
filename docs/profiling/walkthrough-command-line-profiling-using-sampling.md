@@ -1,27 +1,23 @@
 ---
-title: "チュートリアル: サンプリングを使ったコマンドライン プロファイリング | Microsoft Docs"
-ms.custom: 
+title: 'チュートリアル: サンプリングを使ったコマンドライン プロファイリング | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - profiling tools, walkthroughs
 - performance tools, walkthroughs
 - performance tools, command-line tools
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 692aa3778a3c1cfe61ab1de57061a594fe13b02c
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 941597abd21d62501546860cf9cc8adc8fc6de2d
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="walkthrough-command-line-profiling-using-sampling"></a>チュートリアル: サンプリングを使ったコマンド ライン プロファイリング
 
@@ -36,7 +32,7 @@ ms.lasthandoff: 02/21/2018
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- についての中級レベルの知識 [!INCLUDE[csharp_current_short](../misc/includes/csharp_current_short_md.md)]
+- [!INCLUDE[csharp_current_short](../misc/includes/csharp_current_short_md.md)] についての中級レベルの知識
 - コマンド ライン ツールの操作についての中級レベルの知識
 - [PeopleTrax サンプル](../profiling/peopletrax-sample-profiling-tools.md)のコピー
 - プロファイリングによって得られた情報を操作するには、デバッグ シンボル情報を使用できるようにしておくことをお勧めします。

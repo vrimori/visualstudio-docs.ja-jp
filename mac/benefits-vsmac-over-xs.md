@@ -1,18 +1,19 @@
 ---
-title: "Xamarin Studio 上の Visual Studio for Mac の利点 | Microsoft Docs"
+title: Xamarin Studio 上の Visual Studio for Mac の利点
+description: ''
+ms.topic: overview
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
-ms.topic: article
 ms.assetid: 6ACF5FD4-D5C1-4050-95E3-467C753F25F1
-ms.openlocfilehash: 08e693e92d6d07da21f8230f9c1de49f071c05e5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: db4a328bceb79c1b99fdea95da89cc6cc7451523
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="benefits-of-visual-studio-for-mac-over-xamarin-studio"></a>Xamarin Studio 上の Visual Studio for Mac の利点 
- 
+
 Mac の全機能搭載 IDE として Xamarin Studio に取って代わったのが Visual Studio for Mac です。 Web アプリケーションとサービス、プラットフォームに依存しないモバイル/デスクトップ アプリ、ゲームの開発するための機能を提供します。 また、Azure と簡単に統合できます。Azure に発行するのも、Azure Functions を作成するのも簡単です。 現代の IDE に求められるすべてが備わっています。全機能搭載のソース エディター、強力なデバッガー、カスタマイズ可能なワークスペース、Git 統合、豊富な機能を持つ拡張システムなどです。すべてが Mac ネイティブとして設計されています。 
 
 その他の機能: 

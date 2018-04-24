@@ -1,19 +1,19 @@
 ---
 title: Visual Studio のロード テストの実行設定 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, run settings
 ms.assetid: de10dabb-02ed-403b-9e6f-0b735524988c
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: d278323bd816a801d94d2d1c18755111afa43eed
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 498c581d1918fbd4565f821bf516a5301534d733
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="load-test-run-settings-properties"></a>ロード テストの実行設定のプロパティ
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 03/19/2018
 |プロパティ|定義|
 |--------------|----------------|
 |**ストレージの種類**|ロード テストで取得したパフォーマンス カウンターを格納する方法。 次のようなオプションがあります。<br /><br /> -   **[データベース]** - **ロード テストの結果ストア**を持つ SQL データベースが必要です。<br />-   **[None]**。|
-|**タイミングの詳細ストレージ**|**ロード テストの結果ストア**に格納される詳細を決定するために使用されます。 次の 3 つの値を使用できます。<br /><br /> -   **[AllIndividualDetails]** - ロード テストで実行または発行された各テスト、トランザクション、およびページについて、個々のタイミング値を収集し、**ロード テストの結果ストア**に格納します。 ロード テスト アナライザーで仮想ユーザー アクティビティ チャートを使用する場合は、必須です。<br />     詳細については、「[詳細ビューでの仮想ユーザー アクティビティの分析](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)」を参照してください。<br />-   **[None]** - 個々のタイミング値は収集しません。 これは、Visual Studio 2013 Update 4 およびそれ以降のリリースの既定値です。<br />-   **[StatisticsOnly]** - ロード テストで実行または発行された各テスト、トランザクション、およびページについて、個々のタイミング値を格納する代わりに、統計情報のみを収集して**ロード テストの結果ストア**に格納します。<br /><br /> 詳細については、「[方法: [タイミングの詳細ストレージ] プロパティを指定する](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md)」を参照してください。|
+|**タイミングの詳細ストレージ**|**ロード テストの結果ストア**に格納される詳細を決定するために使用されます。 次の 3 つの値を使用できます。<br /><br /> -   **[AllIndividualDetails]** - ロード テストで実行または発行された各テスト、トランザクション、およびページについて、個々のタイミング値を収集し、**ロード テストの結果ストア**に格納します。 ロード テスト アナライザーで仮想ユーザー アクティビティ チャートを使用する場合は、必須です。<br />     詳細については、[詳細ビューでの仮想ユーザー アクティビティの分析](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)に関するページを参照してください。<br />-   **[None]** - 個々のタイミング値は収集しません。 これは、Visual Studio 2013 Update 4 およびそれ以降のリリースの既定値です。<br />-   **[StatisticsOnly]** - ロード テストで実行または発行された各テスト、トランザクション、およびページについて、個々のタイミング値を格納する代わりに、統計情報のみを収集して**ロード テストの結果ストア**に格納します。<br /><br /> 詳細については、[[タイミングの詳細ストレージ] プロパティを指定する方法](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md)に関するページを参照してください。|
 
 ## <a name="sql-tracing-properties"></a>SQL トレースのプロパティ
 
@@ -76,7 +76,7 @@ ms.lasthandoff: 03/19/2018
 |--------------|----------------|
 |**クールダウン継続時間**|テストのクールダウンの継続時間です。値を hh:mm:ss 形式で入力します。 ロード テスト内の個別のテストがロード テストの完了後も実行を続ける場合があります。 そうしたテストは、完了するかクールダウン継続時間が終了するまで動作し続けます。 既定では、クールダウン継続時間は設定されず、実行継続時間の設定に基づいてロード テストが完了すると同時に、ロード テスト内の個々のテストも終了します。|
 |**実行継続時間**|テストの長さ。形式は hh:mm:ss です。|
-|**サンプル速度**|パフォーマンス カウンター値を取り込む間隔。形式は hh:mm:ss です。<br /><br /> 詳細については、「[方法: サンプル速度を指定する](../test/how-to-specify-the-sample-rate-for-a-load-test.md)」を参照してください。|
+|**サンプル速度**|パフォーマンス カウンター値を取り込む間隔。形式は hh:mm:ss です。<br /><br /> 詳細については、[サンプル速度を指定する方法](../test/how-to-specify-the-sample-rate-for-a-load-test.md)に関するページを参照してください。|
 |**ウォームアップ継続時間**|テストを開始してから、データ サンプルの記録が開始されるまでの時間。形式は hh:mm:ss です。 これは、サンプル値を記録する前に、仮想ユーザーに対するロードを一定のレベルまで段階的に引き上げるためによく使用されます。 ウォームアップ期間が終了するまでにキャプチャされたサンプル値は、**ロード テスト アナライザー**に表示されます。|
 
 ## <a name="webtest-connections-properties"></a>WebTest 接続のプロパティ

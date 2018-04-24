@@ -1,22 +1,19 @@
 ---
-title: "Visual Studio でメモリ使用量を分析する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio でメモリ使用量を分析する | Microsoft Docs
+ms.custom: ''
 ms.date: 01/02/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-caps.latest.revision: "13"
+ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: aac1c901f98d63b8cf77b41a165548cccede4f21
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: f29251a7b8f5e38e5b74a6aabd17ae0ccfec7651
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="analyze-memory-usage"></a>メモリ使用量の分析
 デバッガーに統合された**メモリ使用量**診断ツールを使って、メモリ リークおよび非効率的なメモリ使用を見つけます。 メモリ使用量ツールを使用すると、マネージ メモリ ヒープ、およびネイティブ メモリ ヒープの 1 つまたは複数の *スナップショット* を取得できます。 .NET アプリ、ネイティブ アプリ、または混在モード (.NET とネイティブ) アプリのスナップショットを収集できます。  

@@ -1,26 +1,21 @@
 ---
-title: プロジェクトの環境を選択する | Microsoft Docs
+title: プロジェクト用の環境の選択
 description: Visual Studio のソリューション エクスプローラーでは、既定の環境を無視して、指定されたプロジェクトに常に使用する特定の Python インタープリター (環境) を割り当てることができます。 また、仮想環境を作成し、管理することもできます。
-ms.custom: ''
 ms.date: 03/21/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-ms.devlang: python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 28070c9864162c7af5c68644dedb296107af81d0
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 72f07115aa323db15dd5680575871b8d4c4b20b4
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="selecting-a-python-interpreter-and-environment-for-use-in-a-project"></a>プロジェクトで使用する Python インタープリターと環境を選択する
 
@@ -74,7 +69,7 @@ Visual Studio では、**ソリューション エクスプローラー**の.**[
 
 1. **[仮想環境の場所]** フィールドで仮想環境のパスを指定します。 名前のみを指定した場合、現在のプロジェクト内の指定された名前のサブフォルダーに仮想環境が作成されます。
 
-1. ベース インタープリターとして環境を選択し**[作成]** を選択します。 環境の構成と必要なパッケージのダウンロード中は進行状況バーが表示されます。 この時点で、仮想環境が含まれるプロジェクトの **[Python 環境]** ウィンドウに仮想環境が表示されます。
+1. ベース インタープリターとして環境を選択し **[作成]** を選択します。 環境の構成と必要なパッケージのダウンロード中は進行状況バーが表示されます。 この時点で、仮想環境が含まれるプロジェクトの **[Python 環境]** ウィンドウに仮想環境が表示されます。
 
 1. 既定では、仮想環境はアクティブ化されません。 プロジェクトで仮想環境をアクティブ化するには、プロジェクトを右クリックし、**[環境をアクティブ化する]** を選択します。
 
@@ -111,7 +106,7 @@ Visual Studio では、**ソリューション エクスプローラー**の.**[
 
 新しいパッケージをインストールするには、環境を右クリックし、**[Python パッケージのインストール]**  を選択して **[Python 環境]** ウィンドウの **[パッケージ]** タブに切り替えます。 検索用語 (通常はパッケージ名) を入力すると、一致するパッケージが Visual Studio に表示されます。
 
-Visual Studio 内で、パッケージ (および依存関係) は [Python Package Index (PyPI)](https://pypi.python.org/pypi) からダウンロードされます。ここでパッケージを検索することもできます。 Visual Studio のステータス バーと出力ウィンドウには、インストールに関する情報が表示されます。 パッケージをアンインストールするには、パッケージを右クリックして **[Remove (削除)]** を選びます。
+Visual Studio 内で、パッケージ (および依存関係) は [Python Package Index (PyPI)](https://pypi.org) からダウンロードされます。ここでパッケージを検索することもできます。 Visual Studio のステータス バーと出力ウィンドウには、インストールに関する情報が表示されます。 パッケージをアンインストールするには、パッケージを右クリックして **[Remove (削除)]** を選びます。
 
 表示されるエントリは常に正確であるとは限らず、インストールとアンインストールが信頼できない場合、または使用できない場合がある点に注意してください。 Visual Studio は、使用可能な場合は pip パッケージ マネージャーを使い、必要な場合はダウンロードしてインストールします。 Visual Studio は、easy_install パッケージ マネージャーを使うこともできます。 コマンド ラインから `pip` または `easy_install` を使ってインストールされたパッケージも表示されます。
 

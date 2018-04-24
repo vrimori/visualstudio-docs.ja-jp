@@ -1,19 +1,19 @@
 ---
 title: Visual Studio でのロード テストのしきい値違反| Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, threshold violations
 ms.assetid: 0126d7b7-0538-4ea9-9046-6556654b3b9d
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 9c511bb3edf8ad8277b367733f85108d9587898e
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 6acb9eec16107134dc03765da82008a01b599e4b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-analyze-threshold-violations-using-the-counters-panel-in-load-test-analyzer"></a>方法: ロード テスト アナライザーのカウンター パネルを使用して、しきい値違反を分析する
 
@@ -39,11 +39,11 @@ ms.lasthandoff: 03/19/2018
 
 ## <a name="to-analyze-threshold-violations-in-the-counters-panel"></a>[カウンター] パネルのしきい値違反を分析するには
 
-1.  ロード テストの完了後、またはテスト結果の読み込み後に、ロード テスト アナライザーのツール バーの **[グラフ]** または **[テーブル]** を選択します。
+1.  ロード テストの完了後またはテスト結果の読み込み後、ロード テスト アナライザーのツール バーの **[グラフ]** または **[テーブル]** を選択します。
 
      [カウンター] パネルがグラフ ビューまたはテーブル ビューで表示されます。
 
-2.  [カウンター] パネルが表示されない場合は、ツール バーの **[カウンター パネルの表示]** を選択します。
+2.  [カウンター] パネルが表示されない場合、ツール バーの **[カウンター パネルの表示]** を選択します。
 
      しきい値違反が発生しているすべてのノードで、上記のいずれかのアイコンが表示されます。
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 03/19/2018
 
     3.  (省略可能) パフォーマンス カウンターを再度右クリックし、**[グラフにカウンターを表示]** を選択します。
 
-         詳細については、「[方法: カスタム グラフを作成する](../test/how-to-create-custom-graphs-in-load-test-results.md)」を参照してください。
+         詳細については、[カスタム グラフを作成する方法](../test/how-to-create-custom-graphs-in-load-test-results.md)に関するページを参照してください。
 
 5.  (省略可能) 完了したロード テスト結果のしきい値違反を分析する場合、グラフ ビューのズーム機能の使用を検討してください。 詳細については、「[方法: グラフの領域にズーム インする](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)」を参照してください。
 

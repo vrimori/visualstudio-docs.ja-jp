@@ -1,23 +1,20 @@
 ---
-title: ".NET Framework の使用に関するパフォーマンス規則 | Microsoft Docs"
-ms.custom: 
+title: .NET Framework の使用に関するパフォーマンス規則 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab573755-6370-48aa-853d-a7321c424c79
-caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: ffc5a37378248e331e9a8b594f6d39f842fa3e78
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 0ddfe3d7bdc4cb274a7b70dca48e45794d5f1cac
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="net-framework-usage-performance-rules"></a>.NET Framework の使用に関するパフォーマンス規則
 .NET Framework の使用カテゴリのパフォーマンス規則では、最適化できる具体的なメソッド、およびパフォーマンスに問題があるときに調査できる一般的な使用パターン (ガベージ コレクションやロックの競合など) が示されています。  

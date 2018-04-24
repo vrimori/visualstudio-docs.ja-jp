@@ -1,10 +1,11 @@
 ---
-title: "Dotfuscator Community Edition (CE) をインストールする | Microsoft Docs"
+title: Dotfuscator Community Edition (CE) をインストールする | Microsoft Docs
 ms.date: 2017-06-22
 ms.devlang: dotnet
-ms.technology: vs-ide-general
-ms.topic: article
-keywords: "Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, protection, community edition, 難読化, .NET, 無料, Visual Studio 2017, インストール"
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
+keywords: Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, protection, community edition, 難読化, .NET, 無料, Visual Studio 2017, インストール
 helpviewer_keywords:
 - PreEmptive Protection Dotfuscator
 - Dotfuscator Community Edition
@@ -17,15 +18,15 @@ helpviewer_keywords:
 - install Dotfuscator
 - installing Dotfuscator
 - set up Dotfuscator
-description: "Visual Studio 2017 に含まれる無料の Dotfuscator Community Edition をインストールする方法について説明します。"
+description: Visual Studio 2017 に含まれる無料の Dotfuscator Community Edition をインストールする方法について説明します。
 ms.assetid: f2146651-e24a-4e24-ade8-8ddee8ff4e43
 author: Joe-Sewell-PreEmptive
-manager: ghogen
-ms.openlocfilehash: 6e3151a7ce26fcc998df7fbce1cefda54249a384
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+manager: douge
+ms.openlocfilehash: 871ec8c98bac4477ef95c85688484011027e2d20
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-dotfuscator-community-edition-ce"></a>Dotfuscator Community Edition (CE) をインストールする
 
@@ -68,7 +69,7 @@ Visual Studio 2017 をまだインストールしていない場合は、[Visual
 
 インストールが完了したら、Dotfuscator CE の使用を開始できます。 詳細については、[Dotfuscator CE の完全なユーザー ガイドの概要ページ][get-started]を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Dotfuscator CE の完全なユーザー ガイドのこのトピック][full]
 

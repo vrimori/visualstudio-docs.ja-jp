@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でロード テスト プラグインを作成する | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.test.load.loadtestplugin
 helpviewer_keywords:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 27806972-1b15-4388-833d-6d0632816f1f
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 2de6da0a38bd8ff7568dc102514ac24d4217bbb7
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 6e585fe66bde573f8bb133b0c8cda0900b0d6d16
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-load-test-plug-in"></a>方法 : ロード テスト プラグインを作成する
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 03/19/2018
 
 6.  **[名前]** ボックスに、クラスの名前を入力します。
 
-7.  **[OK]**をクリックします。
+7.  **[OK]** をクリックします。
 
 8.  新しいクラス ライブラリ プロジェクトがソリューション エクスプローラーに追加され、新しいクラスがコード エディターに表示されます。
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 03/19/2018
 
 11. **[.NET]** タブを選択します。スクロール ダウンし、**[Microsoft.VisualStudio.QualityTools.LoadTestFramework]** を選択します。
 
-12. **[OK]**をクリックします。
+12. **[OK]** をクリックします。
 
      **Microsoft.VisualStudio.QualityTools.LoadTestFramework** への参照がソリューション エクスプローラーの **[参照設定]** フォルダーに追加されます。
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 03/19/2018
 
 15. **[プロジェクト]** タブをクリックし、[クラス ライブラリ プロジェクト] を選択します。
 
-16. **[OK]**をクリックします。
+16. **[OK]** をクリックします。
 
 17. コード エディターで、`using` 名前空間について <xref:Microsoft.VisualStudio.TestTools.LoadTesting> ステートメントを追加します。
 
@@ -83,7 +83,7 @@ ms.lasthandoff: 03/19/2018
     > [!NOTE]
     > プラグインのプロパティをパブリック、設定可能、および基本型 (整数型、ブール型、文字列型など) として設定して、任意の数だけ公開できます。 Web パフォーマンス テスト プラグインのプロパティは、後で [プロパティ] ウィンドウを使用して変更することもできます。
 
-23. **[OK]**をクリックします。
+23. **[OK]** をクリックします。
 
      **[ロード テスト プラグイン]** フォルダーにプラグインが追加されます。
 

@@ -1,26 +1,22 @@
 ---
-title: "Android および iOS での OpenGL ES アプリケーションのビルド | Microsoft Docs"
-ms.custom: 
+title: Android および iOS での OpenGL ES アプリケーションのビルド | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-mobile
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 76a67886-df57-4a81-accb-2e3c2eaf607b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
+manager: douge
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: af4a0a340589fcedd7121e164ffcd6ec2ed43e70
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 41d1a3a88230ed38d4d9688c2f07cdf099e2464b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Android および iOS での OpenGL ES アプリケーションのビルド
 Visual C++ for Cross-Platform Mobile Development オプションをインストールすると、一般的なコードを共有する iOS アプリおよび Android アプリ用の Visual Studio ソリューションとプロジェクトを作成できます。 このトピックでは、簡単な iOS アプリと Android Native Activity アプリの両方を作成するソリューション テンプレートについて説明します。 これらのアプリには、OpenGL ES を使用して各プラットフォームで同じアニメーション回転キューブを表示する共通の C++ コードがあります。 OpenGL ES (OpenGL for Embedded Systems または GLES) は、多くのモバイル デバイスでサポートされている 2D および 3D グラフィックス API です。  
@@ -39,9 +35,9 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
 #### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
-1.  Visual Studio を開きます。 メニュー バーで **[ファイル]**、 **[新規]**、 **[プロジェクト]**の順にクリックします。  
+1.  Visual Studio を開きます。 メニュー バーで **[ファイル]**、 **[新規]**、 **[プロジェクト]** の順にクリックします。  
   
-2.  **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]**で **[Visual C++]**、 **[クロス プラットフォーム]**の順に選択し、 **[OpenGLES アプリケーション (Android、iOS)]** テンプレートを選択します。  
+2.  **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]** で **[Visual C++]**、 **[クロス プラットフォーム]** の順に選択し、 **[OpenGLES アプリケーション (Android、iOS)]** テンプレートを選択します。  
   
 3.  アプリに `MyOpenGLESApp`などの名前を付け、 **[OK]**」を参照してください。  
   
@@ -76,7 +72,7 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
      x86 を使用して Android Emulator for Windows を対象にします。 デバイスを対象とする場合は、デバイス プロセッサに基づいてソリューション プラットフォームを選択します。 **[ソリューション プラットフォーム]** リストが表示されない場合は、**[ボタンの追加と削除]** リストから **[ソリューション プラットフォーム]** を選択してから、使用するプラットフォームを選択します。  
   
-2.  **ソリューション エクスプローラー**で、MyOpenGLESApp.Android.Packaging プロジェクトのショートカット メニューを開き、 **[ビルド]**を選択します。  
+2.  **ソリューション エクスプローラー**で、MyOpenGLESApp.Android.Packaging プロジェクトのショートカット メニューを開き、 **[ビルド]** を選択します。  
   
      ![Android パッケージ化プロジェクトのビルド](../cross-platform/media/cppmdd_opengles_andbuild.png "CPPMDD_OpenGLES_AndBuild")  
   
@@ -121,7 +117,7 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
      x86 を使用して iOS シミュレーターを対象とします。 iOS デバイスを対象とする場合は、デバイス プロセッサ (通常、ARM プロセッサ) に基づいてソリューション プラットフォームを選択します。 **[ソリューション プラットフォーム]** リストが表示されない場合は、**[ボタンの追加と削除]** リストから **[ソリューション プラットフォーム]** を選択してから、使用するプラットフォームを選択します。  
   
-3.  ソリューション エクスプローラーで、MyOpenGLESApp.iOS.Application プロジェクトのショートカット メニューを開き、 **[ビルド]**をクリックします。  
+3.  ソリューション エクスプローラーで、MyOpenGLESApp.iOS.Application プロジェクトのショートカット メニューを開き、 **[ビルド]** をクリックします。  
   
      ![iOS アプリケーション プロジェクトのビルド](../cross-platform/media/cppmdd_opengles_iosbuild.png "CPPMDD_OpenGLES_iOSBuild")  
   

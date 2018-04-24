@@ -1,23 +1,20 @@
 ---
-title: "プロファイラーのコマンド ラインを使用した .NET Framework サービスからのメモリ データの収集 | Microsoft Docs"
-ms.custom: 
+title: プロファイラーのコマンド ラインを使用した .NET Framework サービスからのメモリ データの収集 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b1361333-8a09-4a65-87a9-4ac94ceb2d9f
-caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: a20c3cff1ee86e0dc0a9530e9ac75aabe881bacb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5857f0e64014ff6570bfddd087d7c3aafe33b713
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="collecting-memory-data-from-net-framework-services-by-using-the-profiler-command-line"></a>プロファイラーのコマンド ラインを使用した .NET Framework サービスからのメモリ データの収集
 このセクションでは、コマンド ラインからサンプリング メソッドを使用して、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] サービスのメモリ割り当てとオブジェクト有効期間データを収集する手順とオプションについて説明します。  

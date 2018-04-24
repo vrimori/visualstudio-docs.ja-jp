@@ -1,29 +1,24 @@
 ---
-title: "ブロック時間のプロファイル レポート | Microsoft Docs"
-ms.custom: 
+title: ブロック時間のプロファイル レポート | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.report.blocking
 helpviewer_keywords:
 - Concurrency Visualizer, Blocking Time Profile Report
 ms.assetid: 3bc45af0-3ba6-4fa3-a336-be8e9ae95107
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 748b547cda2a3c07ed84337d37f2a7e096ee112d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 860449ea4bd4d8aa3ea6c36ab7ff3572c2679488
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="blocking-time-profile-report"></a>ブロック時間のプロファイル レポート
 プロファイル レポートは、ブロック カテゴリ別 ("I/O" や "Synchronization" など) の呼び出し履歴を対象に、ブロック時間の集計データを提供します。 優先レポートには、現在のプロセスに取って代わったプロセスと優先インスタンスの数が一覧表示されます。 ブロック プロファイル レポートを作成するために、このツールはブロック API 呼び出しを収集し、呼び出し履歴のツリーを作成します。 これらのレポートに表示されるデータは、現在の時間の範囲、非表示のスレッド、適用される場合がある次の 2 つのフィルターによって変わります。  

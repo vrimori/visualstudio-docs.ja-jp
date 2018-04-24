@@ -1,16 +1,15 @@
 ---
-title: "プロジェクト項目の追加と削除 | Microsoft Docs"
-description: "この文書では、Visual Studio for Mac でプロジェクト項目を追加する方法と削除する方法について説明します"
+title: プロジェクト項目の追加と削除
+description: この文書では、Visual Studio for Mac でプロジェクト項目を追加する方法と削除する方法について説明します
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
-ms.topic: article
 ms.assetid: 4071689D-1C21-42D7-8963-550E7BCB4B67
-ms.openlocfilehash: 2a7211fe6989bd51e59a22a0905e29300c64503e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: f3fb3d133fb87d7d101018006433e5e75a5b0ec4
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="adding-and-removing-project-items"></a>プロジェクト項目の追加と削除
 

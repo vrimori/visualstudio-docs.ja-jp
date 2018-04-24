@@ -1,26 +1,22 @@
 ---
-title: "iOS を使用してビルドするためのツールのインストールおよび構成 | Microsoft Docs"
-ms.custom: 
+title: iOS を使用してビルドするためのツールのインストールおよび構成 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-mobile
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: d0c311c9-9eb9-42c5-ba07-25604362cd28
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
+manager: douge
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: d015b927f8ba0fa62244a6cd09ff19efcb46451d
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 5374001e63f83f13e0956314e9af88808d624dae
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-and-configure-tools-to-build-using-ios"></a>Install and Configure Tools to Build using iOS
 Visual C++ for Cross-Platform Mobile Development を使用して、iOS コードを編集およびデバッグし、iOS シミュレーターまたは iOS デバイスに配置することができます。ただし、ライセンスの制限により、コードのビルドと実行は、リモートの Mac 上で行わなければなりません。 Visual Studio を使用して iOS アプリをビルドおよび実行するには、Mac 上にリモート エージェント [vcremote](http://go.microsoft.com/fwlink/p/?LinkId=534988)をセットアップして構成する必要があります。 このリモート エージェントが、Visual Studio からのビルド要求を処理し、Mac に接続された iOS デバイスまたは Mac 上の iOS シミュレーターでアプリを実行します。  
@@ -65,7 +61,7 @@ Visual C++ for Cross-Platform Mobile Development を使用して、iOS コード
   
 -   Xcode で構成されている iOS 署名 ID  
   
-     iOS 署名 ID を取得する方法の詳細については、iOS Developer Library の「 [Maintaining Your Signing Identities and Certificates (署名 ID と証明書の管理)](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) 」を参照してください。 Xcode で署名 ID を表示または設定するには、 **[Xcode]** メニューを開き、 **[環境設定]**を選択します。 **[アカウント]** を選択し、自分の Apple ID を選択してから、 **[詳細の表示]** ボタンを選択します。  
+     iOS 署名 ID を取得する方法の詳細については、iOS Developer Library の「 [Maintaining Your Signing Identities and Certificates (署名 ID と証明書の管理)](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) 」を参照してください。 Xcode で署名 ID を表示または設定するには、 **[Xcode]** メニューを開き、 **[環境設定]** を選択します。 **[アカウント]** を選択し、自分の Apple ID を選択してから、 **[詳細の表示]** ボタンを選択します。  
   
 -   開発用の iOS デバイスを使用している場合、デバイスのプロビジョニング プロファイルを Xcode で構成します。  
   
@@ -149,9 +145,9 @@ Visual C++ for Cross-Platform Mobile Development を使用して、iOS コード
   
      IP アドレスを取得するには、ターミナル ウィンドウで **ifconfig** コマンドを使用します。 アクティブなネットワーク インターフェイスの下に表示される inet アドレスを使用します。  
   
-3.  Visual Studio のメニュー バーで、 **[ツール]**、 **[オプション]**の順に選択します。  
+3.  Visual Studio のメニュー バーで、 **[ツール]**、 **[オプション]** の順に選択します。  
   
-4.  **[オプション]** ダイアログ ボックスで、 **[クロス プラットフォーム]**、 **[C++]**、 **[iOS]**の順に展開します。  
+4.  **[オプション]** ダイアログ ボックスで、 **[クロス プラットフォーム]**、 **[C++]**、 **[iOS]** の順に展開します。  
   
 5.  **[ホスト名]** フィールドと **[ポート]** フィールドに、リモート エージェントの起動時に示された値を入力します。 ホスト名には、Mac の DNS 名または IP アドレスを使用できます。 既定のポートは 3030 です。  
   

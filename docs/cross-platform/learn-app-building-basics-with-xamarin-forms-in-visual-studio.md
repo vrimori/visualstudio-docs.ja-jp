@@ -2,10 +2,7 @@
 title: Visual Studio での Xamarin Froms を使用したアプリ作成の基本事項 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d22b5186-9e03-4e85-afc9-7cbe28522a6d
 ms.technology: vs-ide-mobile
 author: charlespetzold
@@ -13,11 +10,11 @@ ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: 6982768950ffe0e4afb664f1cfeb7423e65bbbc4
-ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
+ms.openlocfilehash: 608eebc113c9df7a8978299cc69907e28d81a16f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="learn-app-building-basics-with-xamarinforms-in-visual-studio"></a>Visual Studio での Xamarin Froms を使用したアプリ作成の基本事項
 
@@ -83,7 +80,7 @@ ms.lasthandoff: 04/05/2018
   
     -   **[バージョン]** フィールドを利用可能な **最新の安定した** バージョンに更新します。  
   
-    -   **[インストール]**をクリックします。  
+    -   **[インストール]** をクリックします。  
   
          ![Xamarin.Forms NuGet パッケージの更新](../cross-platform/media/crossplat-xamarin-formsguide-4.png "CrossPlat Xamarin FormsGuide 4")  
 
@@ -99,7 +96,7 @@ ms.lasthandoff: 04/05/2018
   
     -   **[バージョン]** フィールドが **最新の安定した** バージョンに設定されていることを確認してください。  
   
-    -   **[インストール]**をクリックします。  
+    -   **[インストール]** をクリックします。  
   
     ![Newtonsoft.Json NuGet パッケージの検索とインストール](../cross-platform/media/crossplat-xamarin-formsguide-5.png "CrossPlat Xamarin FormsGuide 5")  
   

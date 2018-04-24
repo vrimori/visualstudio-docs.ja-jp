@@ -1,22 +1,22 @@
 ---
-title: "AI Tools for Visual Studio でプロジェクトを作成する"
-description: "Azure Machine Learning ギャラリーのサンプルを使ってプロジェクトを作成します"
+title: AI Tools for Visual Studio でプロジェクトを作成する
+description: Azure Machine Learning ギャラリーのサンプルを使ってプロジェクトを作成します
 keywords: AI, Visual Studio, Azure Machine Learning
 author: lisawong19
 ms.author: liwong
 manager: routlaw
 ms.date: 11/13/2017
-ms.topic: how to article
+ms.topic: conceptual
 ms.devlang: multiple
 ms.service: multiple
 ms.technology: vs-ai-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 1221459107a807c267583e46b6449dc63be094c1
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 495c0d256fc6c8f36ded67166f7d12aace7a9202
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 ## <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>Visual Studio で Azure Machine Learning ギャラリーから AI プロジェクトを作成する
 

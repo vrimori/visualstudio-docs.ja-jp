@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でのロード テスト用のカウンター セットとしきい値規則 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - counters, counter sets
 - load tests, thresholds
@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9e14d955-f3a4-4717-bbfe-7f08cdda5678
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: a573e883a4d5557a4812e6f38ae63fc1b1d71425
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: d2b80ab1aaed9f5f59399a02026c9334f38701c7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-counter-sets-and-threshold-rules-for-computers-in-a-load-test"></a>ロード テストでのコンピューターのカウンター セットとしきい値規則を指定する
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 03/19/2018
 
 ## <a name="use-counter-sets"></a>カウンター セットの使用
 
-ロード テスト ツールは、カウンターを使用して長期間パフォーマンス データを収集およびグラフ化します。 カウンター データは、ロード テストの実行中に、ユーザーが指定した間隔で収集されます。 詳細については、「[方法: サンプル速度を指定する](../test/how-to-specify-the-sample-rate-for-a-load-test.md)」を参照してください。 カウンターは実行時に表示することも、*ロード テスト アナライザー*を使用してロード テストを実行した後で表示することもできます。
+ロード テスト ツールは、カウンターを使用して長期間パフォーマンス データを収集およびグラフ化します。 カウンター データは、ロード テストの実行中に、ユーザーが指定した間隔で収集されます。 詳細については、[サンプル速度を指定する方法](../test/how-to-specify-the-sample-rate-for-a-load-test.md)に関するページを参照してください。 カウンターは実行時に表示することも、*ロード テスト アナライザー*を使用してロード テストを実行した後で表示することもできます。
 
 カウンター データは、サーバーおよびテストを実行するコンピューターで収集されます。 テストを実行する一連のエージェント コンピューターを設定した場合、カウンターはそれらのコンピューターでも収集されます。
 
@@ -60,7 +60,7 @@ Web サーバーでパフォーマンス データを簡単に収集するため
 
 ### <a name="performance-counter-sampling-interval-considerations"></a>パフォーマンス カウンターのサンプリング間隔に関する考慮事項
 
-ロード テストの長さに基づいて、ロード テストの実行設定の **[サンプル速度]** プロパティについて適切な値を選択します。 既定値 (5 秒) のようにサンプル速度が小さいと、ロード テスト結果のデータベースに必要な容量が増えます。 長いロード テストでは、サンプル速度を増加すると、収集するデータ量を減らすことができます。 詳細については、「[方法: サンプル速度を指定する](../test/how-to-specify-the-sample-rate-for-a-load-test.md)」を参照してください。
+ロード テストの長さに基づいて、ロード テストの実行設定の **[サンプル速度]** プロパティについて適切な値を選択します。 既定値 (5 秒) のようにサンプル速度が小さいと、ロード テスト結果のデータベースに必要な容量が増えます。 長いロード テストでは、サンプル速度を増加すると、収集するデータ量を減らすことができます。 詳細については、[サンプル速度を指定する方法](../test/how-to-specify-the-sample-rate-for-a-load-test.md)に関するページを参照してください。
 
 次にサンプル速度のガイドラインを示します。
 

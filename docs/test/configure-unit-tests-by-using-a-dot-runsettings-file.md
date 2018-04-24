@@ -2,17 +2,17 @@
 title: .runsettings ファイルを使用して Visual Studio で単体テストを構成する | Microsoft Docs
 ms.date: 02/28/2018
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 813a2c003923159b6805280ab3a7f5c3c0559f13
-ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
+ms.openlocfilehash: 3a446c3223197058401e07a5aef2cb13bde46f3c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>*.runsettings ファイルを使用して単体テストを構成する*
 
@@ -170,7 +170,7 @@ TestContext を使用するには、プライベートの [TestContext](https://
 |-------------------|-------------|------------|
 |ForcedLegacyMode|False|Visual Studio 2012 で、MSTest アダプターは処理速度を向上させ、よりスケーラブルになるように最適化されました。 テストが実行される順序などの一部の動作は、Visual Studio の以前のエディションでの動作と完全に同じではない場合もあります。 以前のテスト アダプターを使用するには、この値を `true` に設定します。<br /><br /> たとえば、単体テスト用に指定された *app.config* ファイルがある場合は、この設定を使用することがあります。<br /><br /> より新しいアダプターを使用できるように、テストのリファクタリングを検討することをお勧めします。|
 |IgnoreTestImpact|False|テストの影響機能は、MSTest で実行したとき、または Microsoft Test Manager から実行したときに最近の変更の影響を受けるテストの優先順位を付けます。 この設定は機能を非アクティブ化します。 詳細については、「[方法: コードの変更後に実行するテストをチェックするためのデータを収集する](http://msdn.microsoft.com/Library/2f921ea1-9bb0-4870-a30f-0521fc22cb47)」を参照してください。|
-|SettingsFile||ここで、MSTest アダプターで使用するテスト設定ファイルを指定できます。 **[テスト]**メニューの **[テストの設定]**、 **[テスト設定ファイルの選択]**を使用してテスト設定ファイルを指定することもできます。<br /><br /> この値を指定する場合は、 **ForcedlegacyMode** も **true**に設定する必要があります。<br /><br /> `<RunSettings>   <MSTest>     <SettingsFile>my.testsettings</SettingsFile>      <ForcedLegacyMode>true</ForcedLegacyMode>    </MSTest> </RunSettings>`|
+|SettingsFile||ここで、MSTest アダプターで使用するテスト設定ファイルを指定できます。 **[テスト]** メニューの **[テストの設定]**、 **[テスト設定ファイルの選択]** を使用してテスト設定ファイルを指定することもできます。<br /><br /> この値を指定する場合は、 **ForcedlegacyMode** も **true**に設定する必要があります。<br /><br /> `<RunSettings>   <MSTest>     <SettingsFile>my.testsettings</SettingsFile>      <ForcedLegacyMode>true</ForcedLegacyMode>    </MSTest> </RunSettings>`|
 |KeepExecutorAliveAfterLegacyRun|False|テストの実行が完了した後、MSTest がシャットダウンされます。 テストの一部として起動されたプロセスも中止されています。 テスト実行プログラムを中止しない場合は、この構成を true に切り替えます。<br /><br /> たとえば、コード化された UI テストの間にブラウザーの実行を維持するために、この設定を使用できます。|
 |DeploymentEnabled|true|値を false に設定すると、テスト メソッドで指定した配置項目が配置ディレクトリにコピーされません。|
 |CaptureTraceOutput|true|Trace.WriteLine を使用して、テスト メソッドからデバッグ トレースに書き込むことができます。 この構成を使用して、これらのデバッグ トレースをオフにできます。|

@@ -2,22 +2,22 @@
 title: Visual Studio での UWP アプリ用の単体テストの作成および実行 | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unit tests, creating
 - unit tests
 - unit tests, UWP apps
 - unit tests, running
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: ec857cb2bf0aa8e5453180249ddeccf47236dcf1
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: bbb1da5474dcb36e9b102f85f21c4945b3ebb33c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-uwp-apps"></a>チュートリアル: UWP アプリ用の単体テストの作成および実行
 
@@ -30,7 +30,7 @@ Visual Studio には、ユニバーサル Windows プラットフォーム (UWP)
 
 ## <a name="create-a-unit-test-project-for-a-uwp-app"></a>UWP アプリの単体テスト プロジェクトを作成する
 
-1.  **[ファイル]** メニューの **[新しいプロジェクト]**をクリックします。
+1.  **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。
 
      [新しいプロジェクト] ダイアログ ボックスが表示されます。
 
@@ -58,7 +58,7 @@ Visual Studio には、ユニバーサル Windows プラットフォーム (UWP)
 
 2.  マニフェスト デザイナーで、 **[機能]** タブをクリックします。
 
-3.  **[機能]**リストで、単体テストを必要とする機能とコードを選択します。 たとえば、単体テストが必要で、テストするコードにインターネットにアクセスする機能が必要な場合は、 **[インターネット]** チェック ボックスをオンにします。
+3.  **[機能]** リストで、単体テストを必要とする機能とコードを選択します。 たとえば、単体テストが必要で、テストするコードにインターネットにアクセスする機能が必要な場合は、 **[インターネット]** チェック ボックスをオンにします。
 
     > [!NOTE]
     > 選択する機能には、単体テストが正しく機能するために必要な機能だけが含まれる必要があります。
@@ -73,11 +73,11 @@ Visual Studio には、ユニバーサル Windows プラットフォーム (UWP)
 
 ### <a name="to-build-the-solution-and-run-the-unit-test-using-test-explorer"></a>ソリューションをビルドしテスト エクスプローラーを使用して単体テストを実行するには
 
-1.  **[テスト]** メニューで **[Windows]**を選択し、 **[テスト エクスプローラー]**を選択します。
+1.  **[テスト]** メニューで **[Windows]** を選択し、 **[テスト エクスプローラー]** を選択します。
 
      テスト エクスプローラーが表示されます。テストは表示されません。
 
-2.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。
+2.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
      これで、単体テストが一覧に含まれます。
 
@@ -87,16 +87,16 @@ Visual Studio には、ユニバーサル Windows プラットフォーム (UWP)
 3.  テスト エクスプローラーで、作成した単体テストを選択します。
 
     > [!TIP]
-    > テスト エクスプローラーでは、 **[ソース]**の横のソース コードへのリンクが表示されます。
+    > テスト エクスプローラーでは、 **[ソース]** の横のソース コードへのリンクが表示されます。
 
-4.  **[すべて実行]**をクリックします。
+4.  **[すべて実行]** をクリックします。
 
      ![単体テスト エクスプローラー &#45; 単体テストの実行](../test/media/unit_test_win8_unittestexplorer_contextmenurun.png)
 
     > [!TIP]
-    > エクスプローラーに一覧表示された 1 つ以上の単体テストを選択し、 **[選択したテストの実行]**を右クリックして選択します。
+    > エクスプローラーに一覧表示された 1 つ以上の単体テストを選択し、 **[選択したテストの実行]** を右クリックして選択します。
     >
-    > また、 **[選択されたテストをデバッグ]**、 **[テストを開く]**をクリックし、 **[プロパティ]** オプションを使用できます。
+    > また、 **[選択されたテストをデバッグ]**、 **[テストを開く]** をクリックし、 **[プロパティ]** オプションを使用できます。
     >
     > ![単体テスト エクスプローラー &#45; 単体テストのコンテキスト メニュー](../test/media/unit_test_win8_unittestexplorer_contextmenu.png "Unit_Test_Win8_UnitTestExplorer_ContextMenu")
 

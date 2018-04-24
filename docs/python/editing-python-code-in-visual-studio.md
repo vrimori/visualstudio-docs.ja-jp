@@ -1,27 +1,21 @@
 ---
-title: Python コードの編集 | Microsoft Docs
+title: Python コードの編集
 description: Visual Studio での Python の編集では、IntelliSense、コード スニペット、ナビゲーション機能、書式設定、lint、リファクタリングの機能が提供されます。
-ms.custom: ''
 ms.date: 03/05/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8e9d5a3b18e7193786ea2b6d0bf2dfb038828e78
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 97890a84b7b44af818c91f28b486be2d54567213
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="editing-python-code"></a>Python コードの編集
 
@@ -181,7 +175,7 @@ Visual Studio の Python のサポートとして、ソース コードが提供
 
 ### <a name="find-all-references"></a>[すべての参照の検索]
 
-**[すべての参照の検索]**は、特定の識別子の定義場所と使用場所の両方 (インポートと代入を含む) を見つけるのに便利な方法です。 これは、識別子を右クリックして **[すべての参照の検索]** を選択するか、識別子にキャレットを置いて Shift + F12 キーを押すと起動されます。 一覧内の項目をダブルクリックすると、その場所に移動します。
+**[すべての参照の検索]** は、特定の識別子の定義場所と使用場所の両方 (インポートと代入を含む) を見つけるのに便利な方法です。 これは、識別子を右クリックして **[すべての参照の検索]** を選択するか、識別子にキャレットを置いて Shift + F12 キーを押すと起動されます。 一覧内の項目をダブルクリックすると、その場所に移動します。
 
 ![[すべての参照の検索] の結果](media/code-editing-find-all-references.png)
 

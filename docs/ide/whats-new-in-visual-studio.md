@@ -2,11 +2,8 @@
 title: Visual Studio 2017 の新機能 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.StartPage.WhatsNew
@@ -16,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 7307e180-ba28-4774-8a43-cbb980085a71
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bddaec413e1a0b0a9e2096a614d7b5a574e0e7e
-ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
+ms.openlocfilehash: c7c2ce39143bbc4be2e7dc2e077d93ee7a1fff52
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
 #### <a name="updated-for-the-156-releasehttpswwwvisualstudiocomnewsreleasenotesvs2017-relnotes"></a>[15.6 リリース](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)の更新
@@ -194,7 +191,7 @@ Visual Studio には、C++ Core ガイドラインの配信、C++11 および C+
 #### <a name="docker-container-tooling"></a>Docker コンテナーのツール
 **15.5 の新機能**
 * Visual Studio には Docker コンテナー用のツールが含まれており、最適化されたコンテナー イメージの作成を効率化するマルチステージの Dockerfile がサポートされるようになりました。
-* 既定では、Docker サポートが含まれるプロジェクトを開くと、Visual Studio が必要なコンテナー イメージをバックグラウンドで自動的にプル、ビルド、および実行します。 これは Visual Studio の **[コンテナーをバックグラウンドで自動的に開始する]**設定で無効にすることができます。
+* 既定では、Docker サポートが含まれるプロジェクトを開くと、Visual Studio が必要なコンテナー イメージをバックグラウンドで自動的にプル、ビルド、および実行します。 これは Visual Studio の **[コンテナーをバックグラウンドで自動的に開始する]** 設定で無効にすることができます。
 
 ## <a name="cloud-app-development-with-azure"></a>Azure によるクラウド アプリの開発
 ### <a name="azure-functions-tools"></a>Azure Functions ツール

@@ -2,8 +2,7 @@
 title: ClickOnce とアプリケーションの設定 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -12,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - ClickOnce deployment, application settings
 ms.assetid: 891caba6-faef-4a3c-8f71-60e6fadb60eb
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 69563869fe6518d112273da13889fc04db96d09f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e325ed1d66729eaed18c577c27f09a3db45d98f6
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="clickonce-and-application-settings"></a>ClickOnce とアプリケーション設定
 Windows フォームのアプリケーション設定を簡単を作成、格納、およびカスタム アプリケーションと、クライアント上のユーザー設定を管理できます。 次のドキュメントでは、ClickOnce アプリケーションにおけるアプリケーション設定ファイルのしくみし、ユーザーは、次のバージョンにアップグレードしたときに、ClickOnce が設定を移行する方法について説明します。  

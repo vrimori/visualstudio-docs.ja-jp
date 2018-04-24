@@ -1,20 +1,20 @@
 ---
 title: Visual Studio で Web パフォーマンス テストの要求レベル プラグインを作成する | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - request-level plug-in, creating
 - Web performance tests, requests
 ms.assetid: d0b5b23c-7e94-4637-be6c-2620a5442d46
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 59ca0964b72631b8ad5620f351cd57c85099a4ff
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: ea574f2f0c9b4d3f0f6da029433b5b600a400702
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-request-level-plug-in"></a>方法 : 要求レベルのプラグインを作成する
 
@@ -73,7 +73,7 @@ ms.lasthandoff: 03/19/2018
     > [!NOTE]
     > プラグインのプロパティをパブリック、設定可能、および基本型 (整数型、ブール型、文字列型など) として設定して、任意の数だけ公開できます。 Web パフォーマンス テスト プラグインのプロパティは、後で [プロパティ] ウィンドウを使用して変更することもできます。
 
-16. **[OK]**をクリックします。
+16. **[OK]** をクリックします。
 
      プラグインは、HTTP 要求の子フォルダーである **[要求プラグイン]** フォルダーに追加されます。
 

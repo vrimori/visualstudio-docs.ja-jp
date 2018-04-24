@@ -2,11 +2,8 @@
 title: MSBuild タスク | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#MSBuild
 dev_langs:
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - MSBuild task [MSBuild]
 - MSBuild, MSBuild task
 ms.assetid: 76577f6c-7669-44ad-a840-363e37a04d34
-caps.latest.revision: 32
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a5ecaef8f384a9597243fbe2026290e65295da8d
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.openlocfilehash: 04b76df9a174bcbc03269e42ce37b1103c3bfd2f
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="msbuild-task"></a>MSBuild タスク
 別の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトから [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトをビルドします。  
@@ -40,7 +36,7 @@ ms.lasthandoff: 04/10/2018
 |---------------|-----------------|  
 |`BuildInParallel`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、`Projects` パラメーターに指定されたプロジェクトが同時にビルドされます (可能な場合)。 既定値は `false` です。|  
 |`Projects`|必須の <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> ビルドするプロジェクト ファイルを指定します。|  
-|`Properties`|省略可能な `String` 型のパラメーターです。<br /><br /> 子プロジェクトに対してグローバル プロパティとして適用するプロパティの名前/値ペアのセミコロンで区切られたリスト。 このパラメーターを指定することは、[MSBuild.exe](../msbuild/msbuild-command-line-reference.md) でビルドするときに **/property** スイッチを持つプロパティを設定することと同じ意味になります。 例えば:<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> `Properties` パラメーター経由でプロジェクトにプロパティを渡すと、プロジェクト ファイルが既に読み込まれている場合でも、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はプロジェクトの新しいインスタンスを作成します。 プロジェクトの新しいインスタンスが作成されると、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はそのインスタンスを、異なるグローバル プロパティを持ち、プロジェクトの他のインスタンスと同時にビルド可能な別のプロジェクトとして扱います。 たとえば、リリース構成をデバッグ構成と同時にビルドできます。|  
+|`Properties`|省略可能な `String` 型のパラメーターです。<br /><br /> 子プロジェクトに対してグローバル プロパティとして適用するプロパティの名前/値ペアのセミコロンで区切られたリスト。 このパラメーターを指定することは、[MSBuild.exe](../msbuild/msbuild-command-line-reference.md) でビルドするときに **/property** スイッチを持つプロパティを設定することと同じ意味になります。 例:<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> `Properties` パラメーター経由でプロジェクトにプロパティを渡すと、プロジェクト ファイルが既に読み込まれている場合でも、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はプロジェクトの新しいインスタンスを作成します。 プロジェクトの新しいインスタンスが作成されると、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はそのインスタンスを、異なるグローバル プロパティを持ち、プロジェクトの他のインスタンスと同時にビルド可能な別のプロジェクトとして扱います。 たとえば、リリース構成をデバッグ構成と同時にビルドできます。|  
 |`RebaseOutputs`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、ビルド プロジェクトからのターゲットの出力項目の相対パスを、呼び出し元プロジェクトからの相対パスに合わせます。 既定値は `false` です。|  
 |`RemoveProperties`|省略可能な `String` 型のパラメーターです。<br /><br /> 削除するグローバル プロパティのセットを指定します。|  
 |`RunEachTargetSeparately`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクは [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に渡される一覧内の各ターゲットを同時ではなく、一度に 1 つずつ呼び出します。 このパラメーターを `true` に設定すると、前に呼び出したターゲットが失敗しても、後に続くターゲットは呼び出されることが保証されます。 それ以外の場合は、ビルド エラーが発生すると、以降のすべてのターゲットの呼び出しは停止されます。 既定値は `false` です。|  
@@ -191,6 +187,6 @@ ms.lasthandoff: 04/10/2018
 </Project>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [タスク](../msbuild/msbuild-tasks.md)   
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
