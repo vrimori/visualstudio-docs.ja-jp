@@ -1,13 +1,9 @@
 ---
-title: "UWP アプリの HTML UI の応答性を分析する | Microsoft Docs"
+title: UWP アプリの HTML UI の応答性を分析する | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - JavaScript
 helpviewer_keywords:
@@ -16,17 +12,16 @@ helpviewer_keywords:
 - UI Responsiveness Profiler [JavaScript]
 - profiler, UI responsiveness [JavaScript]
 - profiler, JavaScript [UWP apps]
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 71e8c18401b341ef1e1b24c35dc39e80758c31d2
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+ms.openlocfilehash: 7dd31d94552895d42c803df81e1e66cd9a3947f0
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>ユニバーサル Windows アプリの HTML UI の応答性を分析する
 このトピックでは、アプリのパフォーマンス問題を UI 応答性プロファイラーを使って切り分ける方法を説明します。UI 応答性プロファイラーは、ユニバーサル Windows アプリで利用できるパフォーマンス ツールです。  
@@ -44,9 +39,9 @@ ms.lasthandoff: 01/19/2018
   
 1.  アプリを Visual Studio から実行している場合は、**[標準]** ツール バーの **[デバッグの開始]** の一覧から、**[ローカル コンピューター]** または **[デバイス]** などの配置ターゲットを選択します。  
   
-2.  **[デバッグ]** メニューの **[パフォーマンス プロファイラー...]**をクリックします。  
+2.  **[デバッグ]** メニューの **[パフォーマンス プロファイラー...]** をクリックします。  
   
-     プロファイラーの分析ターゲットを変更する場合は、**[ターゲットの変更]**を選択します。  
+     プロファイラーの分析ターゲットを変更する場合は、**[ターゲットの変更]** を選択します。  
   
      ![分析ターゲットを変更する](../profiling/media/js_tools_target.png "JS_Tools_Target")  
   
@@ -63,15 +58,15 @@ ms.lasthandoff: 01/19/2018
          このオプションを使用すると、ソース コードにアクセスできないときに、コンピューターにインストールされているアプリのパフォーマンスを分析できます。 このオプションは、自分が開発に携わっていないアプリのパフォーマンスを分析する場合にも便利です。  
   
 3.  
-                **[使用可能なツール]**で **[HTML UI の応答性]**を選択し、 **[開始]**をクリックします。  
+                **[使用可能なツール]** で **[HTML UI の応答性]** を選択し、 **[開始]** をクリックします。  
   
-4.  UI 応答性プロファイラーの開始時に、Visual Studio ETW Collector.exe を実行するためのアクセス許可を要求するユーザー アカウント制御ウィンドウが表示される場合があります。 **[はい]**をクリックします。  
+4.  UI 応答性プロファイラーの開始時に、Visual Studio ETW Collector.exe を実行するためのアクセス許可を要求するユーザー アカウント制御ウィンドウが表示される場合があります。 **[はい]** をクリックします。  
   
      アプリを操作して、関連するパフォーマンス シナリオをテストします。 ワークフローの詳細については、以下を参照してください。 [UI の応答性の問題の特定](#Workflow) および [Isolate a visual throughput problem](#IsolateVisualThroughput)など)。  
   
 5.  Alt キーを押しながら Tab キーを押して Visual Studio に切り替えます。  
   
-6.  アプリのプロファイリングを停止し、プロファイラーによって収集されたデータを表示するには、 **[コレクションの停止]**をクリックします。  
+6.  アプリのプロファイリングを停止し、プロファイラーによって収集されたデータを表示するには、 **[コレクションの停止]** をクリックします。  
   
 ##  <a name="IsolateAnIssue"></a> 問題の特定  
  次のセクションでは、パフォーマンス上の問題を特定するのに役立つ方法を示します。 サンプル パフォーマンス テスト アプリを使用してパフォーマンスの問題を識別し、修正する方法の詳しい手順については、「[チュートリアル: UI の応答性の向上 (HTML)](../profiling/walkthrough-improving-ui-responsiveness-html.md)」を参照してください。  
@@ -193,7 +188,7 @@ if (performance.mark && performance.measure) {
 -   ナビゲーション イベント。 別のページに移動するときに発生します。 イベントのツールヒントには、移動先ページの URL が表示されます。  
   
 ###  <a name="CPUUtilization"></a> CPU 使用率の表示  
- CPU 使用状況グラフにより、過剰な CPU アクティビティがある期間を特定できます。 一定期間内でのアプリの平均 CPU 使用量に関する情報を示します。 情報は、特定のカテゴリを表すように色分けされています。 カテゴリには、 **[読み込み中]**、 **[スクリプティング]**、ガベージ コレクション (**[GC]**)、 **[スタイル]**、 **[レンダリング]**、 **[イメージ デコード中]**があります。 これらのカテゴリの詳細については、このトピックで後述する「 [Profiler event reference](#ProfilerEvents) 」を参照してください。  
+ CPU 使用状況グラフにより、過剰な CPU アクティビティがある期間を特定できます。 一定期間内でのアプリの平均 CPU 使用量に関する情報を示します。 情報は、特定のカテゴリを表すように色分けされています。 カテゴリには、 **[読み込み中]**、 **[スクリプティング]**、ガベージ コレクション (**[GC]**)、 **[スタイル]**、 **[レンダリング]**、 **[イメージ デコード中]** があります。 これらのカテゴリの詳細については、このトピックで後述する「 [Profiler event reference](#ProfilerEvents) 」を参照してください。  
   
  CPU 使用状況グラフは、1 つまたは複数の CPU の使用率値を 1 つのパーセント値にまとめて、すべてのアプリ スレッドに費やされた時間を示します。 CPU 使用率値は、複数の CPU を使用している場合、100% を超えることがあります。  
   
@@ -298,7 +293,7 @@ if (performance.mark && performance.measure) {
  ユーザー測定をフィルターで除去するには、 **[ユーザー測定]** オプションの選択を解除します。 ユーザー測定は、子イベントがないトップレベル イベントです。  
   
 ###  <a name="GroupFrames"></a> フレームごとのグループ イベント  
- [タイムラインの詳細] ビューに表示されるイベントをグループ化して個々のフレームにすることができます。 これらのフレーム イベントは、ツールで生成されたイベントで、描画イベント間で発生するすべての UI スレッドの作業におけるトップレベルのイベント コンテナーを表しています。 このビューを有効にするには、 **[トップレベル イベントをフレームごとにグループ化する]**を選択します。  
+ [タイムラインの詳細] ビューに表示されるイベントをグループ化して個々のフレームにすることができます。 これらのフレーム イベントは、ツールで生成されたイベントで、描画イベント間で発生するすべての UI スレッドの作業におけるトップレベルのイベント コンテナーを表しています。 このビューを有効にするには、 **[トップレベル イベントをフレームごとにグループ化する]** を選択します。  
   
  ![トップレベル イベントをフレーム別にグループ化](../profiling/media/js_htmlvizprofiler_frame_grouping_button.png "JS_HTMLVizProfiler_Frame_Grouping_Button")  
   

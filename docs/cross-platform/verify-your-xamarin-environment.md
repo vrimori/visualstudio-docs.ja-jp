@@ -2,10 +2,7 @@
 title: Xamarin 環境を検証する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fd39882e-06d1-4b39-80d2-4d07b6e4f8f5
 ms.technology: vs-ide-mobile
 author: charlespetzold
@@ -13,11 +10,11 @@ ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: 401aabd0567aa48a956c1424ca48562decaa96d6
-ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
+ms.openlocfilehash: 862af0d8912811aee8e0110b48fa8cc3e8f1c06b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="verify-your-xamarin-environment"></a>Xamarin 環境を検証する
 
@@ -45,7 +42,7 @@ Visual Studio で、まず、**[ツール]、[拡張機能と更新プログラ�
   
 2.  デバイスまたはエミュレーターでビルドとデバッグを検証します。  
   
-    -   ソリューション エクスプローラーで Android プロジェクトを右クリックして **[スタートアップ プロジェクトに設定]**をクリックします。  
+    -   ソリューション エクスプローラーで Android プロジェクトを右クリックして **[スタートアップ プロジェクトに設定]** をクリックします。  
   
     -   ツール バーには、利用できる Android デバイスとエミュレーターの一覧が含まれるドロップダウンが表示されるはずです。 
     
@@ -71,7 +68,7 @@ Visual Studio で、まず、**[ツール]、[拡張機能と更新プログラ�
   
 1.  「[Mac への接続](/xamarin/ios/get-started/installation/windows/connecting-to-mac/)」で説明されているように、ネットワーク上で Mac が利用でき、Visual Studio とペアになっていることを確認してください。  
   
-2.  ソリューション エクスプローラーで iOS プロジェクトを右クリックして **[スタートアップ プロジェクトに設定]**を選択します。  
+2.  ソリューション エクスプローラーで iOS プロジェクトを右クリックして **[スタートアップ プロジェクトに設定]** を選択します。  
   
 3.  次に示すように、Visual Studio のビルド ドロップダウン リストでターゲットに **[iPhoneSimulator]** を選択するか、Mac にテザリングされたデバイスがある場合、ターゲットに **[iPhone]** を選択します。   
   

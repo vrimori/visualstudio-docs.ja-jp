@@ -2,8 +2,7 @@
 title: Spy++ ビュー用のツールの検索 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - searching, Spy++
@@ -14,11 +13,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fd3b7f1d9d9d1ad7b5c148781550988690e24e5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c83a2a0970a8d209a4e445a595722d9a2651519f
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="search-tools-for-spy-views"></a>Spy++ ビュー用の検索ツール
 Spy++ ビュー ウィンドウには表示データを指定するのにには、これらのダイアログ ボックスを使用します。  

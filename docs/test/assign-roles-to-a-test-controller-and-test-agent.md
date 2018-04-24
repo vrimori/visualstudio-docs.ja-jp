@@ -1,7 +1,7 @@
 ---
 title: Visual Studio での自動テストのための Test Controller および Test Agent に対するロールの割り当て | Microsoft Docs
 ms.date: 10/20/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing, walkthroughs, test controller and test agents
 - test agent, walkthrough
@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 57ed43ae-4e67-4139-8aec-3e9fceb0a745
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: b078d5ea1adcc0d40d9f0d570febf6592c090669
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 932a6fe470812fc647cad653fb95ba7ca8997ab0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assign-roles-to-a-test-controller-and-test-agent"></a>ロールをテスト コントローラーとテスト エージェントに割り当てる
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/19/2018
 
      **[新しい項目の追加]** ダイアログ ボックスが表示されます。
 
-2.  **[インストールされたテンプレート]** ウィンドウで、**[テストの設定]** をクリックします。
+2.  **[インストールされたテンプレート]** ペインで、**[テストの設定]** を選択します。
 
 3.  **[名前]** ボックスに、「**TestSettingDistributedTestWalkthrough**」と入力します。
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 03/19/2018
 
 ## <a name="to-assign-roles-to-a-test-controller-and-test-agents"></a>ロールをテスト コントローラーとテスト エージェントに割り当てるには
 
-1.  **[ロール]** をクリックします。
+1.  **[ロール]** を選択します。
 
      **[ロール]** ページが表示されます。
 
@@ -83,7 +83,7 @@ ms.lasthandoff: 03/19/2018
 
 ## <a name="to-assign-a-diagnostic-and-data-adapter-to-your-test-setting"></a>診断およびデータ アダプターをテスト設定に割り当てるには
 
-1.  **[データと診断]** をクリックします。
+1.  **[データと診断]** を選択します。
 
      **[データと診断]** ページが表示されます。
 

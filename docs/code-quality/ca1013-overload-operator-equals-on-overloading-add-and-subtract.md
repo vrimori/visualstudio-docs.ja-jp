@@ -1,10 +1,8 @@
 ---
-title: '1013: ca オーバー ロードで、演算子 equals をオーバー ロードを追加および減算 |Microsoft ドキュメント'
-ms.custom: ''
+title: 'CA1013: オーバーロードする加算および減算で、演算子 equals をオーバーロードします'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - OverrideOperatorEqualsOnOverridingAddAndSubtract
 - OverrideOperatorEqualsOnOverloadingAddAndSubtract
@@ -21,64 +19,64 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3117841570e737f981959165892b0ea2d39bd7bd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7fd43cc3077c037b70eaa8107563bd8f40b6a096
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013: オーバーロードする加算および減算で、演算子 equals をオーバーロードします
-|||  
-|-|-|  
-|TypeName|OverloadOperatorEqualsOnOverloadingAddAndSubtract|  
-|CheckId|CA1013|  
-|カテゴリ|Microsoft.Design|  
-|互換性に影響する変更点|なし|  
-  
-## <a name="cause"></a>原因  
- パブリック型またはプロテクト型で、等値演算子を実装しないまま、加算演算子または減算演算子を実装しています。  
-  
-## <a name="rule-description"></a>規則の説明  
- 等しいかどうかを返す必要がありますほとんどの場合を定義する型のインスタンスは、加算や減算などの操作を使用して組み合わせることができます、`true`同じ構成値を持つ 2 つのインスタンス。  
-  
- 等値演算子のオーバー ロードされた実装では、既定の等値演算子を使用できません。 こうと、スタック オーバーフローが発生します。 等値演算子を実装するのには、実装で、Object.Equals メソッドを使用します。 次の例を参照してください。  
-  
-```vb  
-If (Object.ReferenceEquals(left, Nothing)) Then  
-    Return Object.ReferenceEquals(right, Nothing)  
-Else  
-    Return left.Equals(right)  
-End If  
-```  
-  
-```csharp  
-if (Object.ReferenceEquals(left, null))   
-    return Object.ReferenceEquals(right, null);  
-return left.Equals(right);  
-```  
-  
-## <a name="how-to-fix-violations"></a>違反の修正方法  
- この規則違反を修正するには、加算と減算演算子と数学的に一貫したように、等値演算子を実装します。  
-  
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
- 等値演算子の既定の実装が正常に動作の型を提供する場合は、この規則による警告を抑制しても安全です。  
-  
-## <a name="example"></a>例  
- 次の例は、型を定義 (`BadAddableType`) この規則に違反します。 この型は、テスト同じフィールドの値を持つ 2 つのインスタンスに等値演算子を実装する必要があります`true`等しいかどうか。 型`GoodAddableType`修正の実装を示しています。 この型も非等値演算子を実装して上書き<xref:System.Object.Equals%2A>を他のルールを満たすためにします。 完全な実装に使用する場合<xref:System.Object.GetHashCode%2A>です。  
-  
- [!code-csharp[FxCop.Design.AddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_1.cs)]  
-  
-## <a name="example"></a>例  
- 次の例は、等値演算子の既定値と正しい動作を説明するためには、このトピックで以前に定義されている型のインスタンスを使用して、等しいかどうかテストします。  
-  
- [!code-csharp[FxCop.Design.TestAddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_2.cs)]  
-  
- この例を実行すると、次の出力が生成されます。  
-  
- **不適切な型: {2, 2} {2, 2} の値が等しいか?違います**  
-**適切な型: {3, 3} {3, 3} の値が等しいか?うん**  
-**適切な型: {3, 3} {3, 3} は、= = しますか? うん**  
-**不適切な型: {2, 2} {9,9} の値が等しいか?違います**  
-**適切な型: {3, 3} {9,9} は、= = しますか? 違います**   
-## <a name="see-also"></a>関連項目  
+|||
+|-|-|
+|TypeName|OverloadOperatorEqualsOnOverloadingAddAndSubtract|
+|CheckId|CA1013|
+|カテゴリ|Microsoft.Design|
+|互換性に影響する変更点|なし|
+
+## <a name="cause"></a>原因
+ パブリック型またはプロテクト型で、等値演算子を実装しないまま、加算演算子または減算演算子を実装しています。
+
+## <a name="rule-description"></a>規則の説明
+ 等しいかどうかを返す必要がありますほとんどの場合を定義する型のインスタンスは、加算や減算などの操作を使用して組み合わせることができます、`true`同じ構成値を持つ 2 つのインスタンス。
+
+ 等値演算子のオーバー ロードされた実装では、既定の等値演算子を使用できません。 こうと、スタック オーバーフローが発生します。 等値演算子を実装するのには、実装で、Object.Equals メソッドを使用します。 次の例を参照してください。
+
+```vb
+If (Object.ReferenceEquals(left, Nothing)) Then
+    Return Object.ReferenceEquals(right, Nothing)
+Else
+    Return left.Equals(right)
+End If
+```
+
+```csharp
+if (Object.ReferenceEquals(left, null))
+    return Object.ReferenceEquals(right, null);
+return left.Equals(right);
+```
+
+## <a name="how-to-fix-violations"></a>違反の修正方法
+ この規則違反を修正するには、加算と減算演算子と数学的に一貫したように、等値演算子を実装します。
+
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+ 等値演算子の既定の実装が正常に動作の型を提供する場合は、この規則による警告を抑制しても安全です。
+
+## <a name="example"></a>例
+ 次の例は、型を定義 (`BadAddableType`) この規則に違反します。 この型は、テスト同じフィールドの値を持つ 2 つのインスタンスに等値演算子を実装する必要があります`true`等しいかどうか。 型`GoodAddableType`修正の実装を示しています。 この型も非等値演算子を実装して上書き<xref:System.Object.Equals%2A>を他のルールを満たすためにします。 完全な実装に使用する場合<xref:System.Object.GetHashCode%2A>です。
+
+ [!code-csharp[FxCop.Design.AddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_1.cs)]
+
+## <a name="example"></a>例
+ 次の例は、等値演算子の既定値と正しい動作を説明するためには、このトピックで以前に定義されている型のインスタンスを使用して、等しいかどうかテストします。
+
+ [!code-csharp[FxCop.Design.TestAddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_2.cs)]
+
+ この例を実行すると、次の出力が生成されます。
+
+ **不適切な型: {2, 2} {2, 2} の値が等しいか?いいえ**
+**適切な型: {3, 3} {3, 3} の値が等しいか?[はい]**
+**適切な型: {3, 3} {3, 3} は、= = しますか? [はい]**
+**不適切な型: {2, 2} {9,9} の値が等しいか?いいえ**
+**適切な型: {3, 3} {9,9} は、= = しますか? 違います**
+## <a name="see-also"></a>関連項目
  [等値演算子](/dotnet/standard/design-guidelines/equality-operators)

@@ -1,20 +1,20 @@
 ---
 title: Web パフォーマンス テスト結果ビューアー用に Visual Studio アドインを作成する | Microsoft Docs
 ms.date: 10/20/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Web performance tests, Visual Studio Add-in
 - Visual Studio Add-in, Web performance tests
 ms.assetid: 1118c604-4b1b-4b21-a04e-45995b676fa8
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 8bf0e6b4869ade2b7fc1853f75dfd83f624348a1
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: aa163381415060d189899e7defd64a8935c4ea94
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-visual-studio-add-in-for-the-web-performance-test-results-viewer"></a>方法: Web パフォーマンス テスト結果ビューアー用に Visual Studio アドインを作成する
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 03/19/2018
 
 4.  [名前] にアドインの名前を入力します。 例: **WebPerfTestResultsViewerAddin**。
 
-5.  **[OK]**をクリックします。
+5.  **[OK]** をクリックします。
 
      Visual Studio アドイン ウィザードが起動します。
 
@@ -128,7 +128,7 @@ ms.lasthandoff: 03/19/2018
 
 4.  **[名前]** にアドインの名前を入力します。 例: **WebPerfTestResultsViewerControl**。
 
-5.  **[OK]**をクリックします。
+5.  **[OK]** をクリックします。
 
      Windows フォーム コントロール ライブラリ プロジェクト WebPerfTestResultsViewerControl がソリューション エクスプローラーに追加され、UserControl1.cs がデザイン モードで表示されます。
 
@@ -185,7 +185,7 @@ ms.lasthandoff: 03/19/2018
 
 3.  下にスクロールして、**[Microsoft.VisualStudio.QualityTools.WebTestFramework]** を選択し、**[System.Windows.Forms]** を選択します。
 
-4.  **[OK]**をクリックします。
+4.  **[OK]** をクリックします。
 
 5.  再度 **[参照設定]** ノードを右クリックして、**[参照の追加]** を選択します。
 
@@ -193,7 +193,7 @@ ms.lasthandoff: 03/19/2018
 
 7.  **[検索対象]** のドロップダウンを選んで、%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies に移動し、Microsoft.VisualStudio.QualityTools.LoadTestPackage.dll ファイルを選択します。
 
-8.  **[OK]**をクリックします。
+8.  **[OK]** をクリックします。
 
 9. WebPerfTestResultsViewerAddin プロジェクト ノードを右クリックして、**[参照の追加]** を選択します。
 
@@ -289,7 +289,7 @@ ms.lasthandoff: 03/19/2018
 
 5.  下にスクロールして、**[Microsoft.VisualStudio.QualityTools.WebTestFramework]** を選択します。
 
-6.  **[OK]**をクリックします。
+6.  **[OK]** をクリックします。
 
 7.  UserControl1.cs ファイルに、次の Using ステートメントを追加します。
 
@@ -339,7 +339,7 @@ ms.lasthandoff: 03/19/2018
 
 3.  **[使用可能なアドイン]** 列の WebPerfTestResultsViewerAddin アドイン向けのチェック ボックスをオンにして、**[スタートアップ]** および **[コマンド ライン]** 列の下のチェック ボックスをオフにします。
 
-4.  **[OK]**をクリックします。
+4.  **[OK]** をクリックします。
 
 ## <a name="run-the-web-performance-test-using-the-build-the-webperftestresultsvieweraddin-add-in"></a>WebPerfTestResultsViewerAddin アドインのビルドを使用した Web パフォーマンス テストの実行
 

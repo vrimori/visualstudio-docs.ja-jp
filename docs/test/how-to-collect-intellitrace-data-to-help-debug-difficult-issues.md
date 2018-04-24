@@ -1,7 +1,7 @@
 ---
 title: Visual Studio での Intellitrace データ | Microsoft Docs
 ms.date: 10/13/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTrace, configuring test settings
 - Diagnostic Data Adapter, InteliTrace
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 02b6716f-569e-4961-938a-e790a0c74b5c
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 04c4c1cd4429228ffa90e06ac9675901602c3cd0
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: e1f36aefaad2e43d8875c9c0164ac938b004999d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-collect-intellitrace-data-to-help-debug-difficult-issues"></a>方法: 困難な問題をデバッグするのに役立つ IntelliTrace データを収集する
 
@@ -41,7 +41,7 @@ IntelliTrace データは、拡張子が .iTrace のファイルに保存され�
  次の手順では、収集する IntelliTrace データを構成する方法を説明します。 これらの手順は Microsoft Test Manager の構成エディターと Visual Studio の [テストの設定] ダイアログ ボックスの両方に当てはまります。
 
 > [!NOTE]
-> IntelliTrace データの収集に使用されるテスト エージェントのユーザー アカウントは、Administrators グループのメンバーである必要があります。 詳細については、「[テスト エージェントをインストールして構成する](../test/lab-management/install-configure-test-agents.md)」を参照してください。
+> IntelliTrace データの収集に使用されるテスト エージェントのユーザー アカウントは、Administrators グループのメンバーである必要があります。 詳細については、[テスト エージェントのインストールと構成](../test/lab-management/install-configure-test-agents.md)に関するページを参照してください。
 
 ## <a name="configure-the-data-to-collect-with-the-intellitrace-diagnostic-data-adapter"></a>IntelliTrace 診断データ アダプターで収集するデータの構成
 
@@ -71,7 +71,7 @@ IntelliTrace データは、拡張子が .iTrace のファイルに保存され�
 
 5.  **[全般]** タブを選択します。重要な診断イベントを記録する場合に **[IntelliTrace イベントのみ]** を選択すると、テスト時のパフォーマンスへの影響を最小限に抑えられます。
 
-     **-**または
+     **-** または
 
      診断イベントと、呼び出し情報を示すメソッド レベルのトレースを記録する場合は、**[IntelliTrace イベントと呼び出し情報]** を選択します。 このレベルのトレースは、テストの実行時のパフォーマンスに影響を与えます。
 

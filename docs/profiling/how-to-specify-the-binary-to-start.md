@@ -1,13 +1,9 @@
 ---
-title: "方法: 開始するバイナリを指定する | Microsoft Docs"
-ms.custom: 
+title: '方法: 開始するバイナリを指定する | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.property.itemlaunch
 helpviewer_keywords:
@@ -16,14 +12,14 @@ helpviewer_keywords:
 - performance sessions, launching
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 94dbedfaa008b83ac45cea9afaa6bac2a254e77e
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: ac87c771cf6d9515f3eae8d82f7d0d40fa6590a8
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-specify-the-binary-to-start"></a>方法 : 開始するバイナリを指定する
 
@@ -41,7 +37,7 @@ DLL などのバイナリをプロファイルするには、**[\<Target> プロ
 
 6. **[作業ディレクトリ]** テキスト ボックスで、ディレクトリの場所を指定します。
 
-7. **[OK]**をクリックします。
+7. **[OK]** をクリックします。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,23 +1,20 @@
 ---
-title: "XCode と Visual Studio 間の変更の同期 | Microsoft Docs"
-ms.custom: 
+title: XCode と Visual Studio 間の変更の同期 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c71a4d7c-120e-4559-a114-3a99c4b860a9
 ms.technology: vs-ide-mobile
 author: corob-msft
 ms.author: corob
-manager: ghogen
+manager: douge
 ms.workload:
 - xamarin
-ms.openlocfilehash: 8c18767c6fb711c6ccdc35caab57518d26f0188d
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 09067c881e717f5e3e2ed6295e0f550adf29f511
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sync-changes-between-xcode-and-visual-studio"></a>XCode と Visual Studio 間の変更の同期
 Microsoft Visual C++ for Mobile Development コンポーネントには、PC と Mac 間で作業を同期するリモート機能が含まれます。 Visual Studio と Mac コンピューターがペアになっている場合、Visual Studio の iOS Application プロジェクトで新しいオプションを使用して、プロジェクトを XCode で開いたり、XCode と Visual Studio 間でコードを移動したり、一時 XCode プロジェクト ディレクトリを消去したりできます。  
@@ -32,7 +29,7 @@ Microsoft Visual C++ for Mobile Development コンポーネントには、PC と
  これらのコマンドを使用すると、プロジェクトを XCode で開いたり、Visual Studio と XCode 間でローカルの変更やプロジェクト全体を移動したり、リモート コンピューターの一時ファイルを消去したりできます。  
   
 ### <a name="open-in-xcode"></a>XCode で開く  
- Visual Studio から XCode でプロジェクトを開くには、**[リモート コンピューター]** サブメニューで、**[XCode で開く]** を選択して、ペアになっているリモート コンピューターで、選択したプロジェクトを開きます。 vcremote サーバーを使用すると、XCode をお使いの Mac で開いて、プロジェクトのコピーを含む Mac で作成した一時ディレクトリに移動できます。 Visual Studio では、プロジェクトで使用した一時ディレクトリを表示するダイアログが表示されます。 リモート コンピューターで実行されるアクションも Visual Studio の**出力**ウィンドウに表示されます。 これを表示するため、**出力**ウィンドウの上部にある**[出力元の表示]** ドロップダウンで **[Visual C++ リモート コンピューター]** を選択する必要がある場合があります。  
+ Visual Studio から XCode でプロジェクトを開くには、**[リモート コンピューター]** サブメニューで、**[XCode で開く]** を選択して、ペアになっているリモート コンピューターで、選択したプロジェクトを開きます。 vcremote サーバーを使用すると、XCode をお使いの Mac で開いて、プロジェクトのコピーを含む Mac で作成した一時ディレクトリに移動できます。 Visual Studio では、プロジェクトで使用した一時ディレクトリを表示するダイアログが表示されます。 リモート コンピューターで実行されるアクションも Visual Studio の**出力**ウィンドウに表示されます。 これを表示するため、**出力**ウィンドウの上部にある **[出力元の表示]** ドロップダウンで **[Visual C++ リモート コンピューター]** を選択する必要がある場合があります。  
   
  ![出力ウィンドウには、リモート コンピューターのアクションが表示されます。](../cross-platform/media/cppmdd_u2_remotemachine_output.png "CPPMDD_U2_RemoteMachine_Output")  
   

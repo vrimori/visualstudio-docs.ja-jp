@@ -1,12 +1,9 @@
 ---
-title: "Visual Studio の統合 (MSBuild) | Microsoft Docs"
-ms.custom: 
+title: Visual Studio の統合 (MSBuild) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, reference resolution
 - MSBuild, well-known target names
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - MSBuild, in-process compilers
 - MSBuild, design-time target execution
 ms.assetid: 06cd6d7f-8dc1-4e49-8a72-cc9e331d7bca
-caps.latest.revision: 
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f1495fa1ae7408874f2c1cfcede2ed495fea3f5
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: dd9dd101508fc55ff6287af534ee57e53e95d4e8
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="visual-studio-integration-msbuild"></a>Visual Studio の統合 (MSBuild)
 Visual Studio は、マネージ プロジェクトの読み込みとビルドを行う [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] をホストしています。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はプロジェクトに対応しているため、そのプロジェクトが他のツールで作成されていたり、ビルド処理がカスタマイズされていたりしても、 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 形式のほとんどすべてのプロジェクトを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]で問題なく使用できます。  
@@ -57,7 +53,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] はこの目的のために、 `PropertyGroup`、 `ItemGroup`、 `Import`、プロパティ、および項目要素の条件を確認します。  
   
 ## <a name="additional-build-actions"></a>その他のビルド アクション  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、[[ファイルのプロパティ]](http://msdn.microsoft.com/en-us/013c4aed-08d6-4dce-a124-ca807ca08959) ウィンドウの **[ビルド アクション]** プロパティを使って、プロジェクト内のファイルの項目の種類名を変更できます。 `Compile`、 `EmbeddedResource`、 `Content`、および `None` の各項目の種類名は、プロジェクト内に既に存在する他の項目の種類名と共に、常にこのメニューに表示されます。 このメニューにカスタムの項目の種類名すべてが常に表示されるようにするには、 `AvailableItemName`という項目の種類に名前を追加します。 たとえば、プロジェクト ファイルに次の内容を追加すると、このファイルをインポートするすべてのプロジェクトの当該メニューに、カスタム型 `JScript` が追加されます。  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、 **[ファイルのプロパティ]** ウィンドウの [[ビルド アクション]](http://msdn.microsoft.com/en-us/013c4aed-08d6-4dce-a124-ca807ca08959) プロパティを使用して、プロジェクト内のファイルの項目の種類名を変更できます。 `Compile`、 `EmbeddedResource`、 `Content`、および `None` の各項目の種類名は、プロジェクト内に既に存在する他の項目の種類名と共に、常にこのメニューに表示されます。 このメニューにカスタムの項目の種類名すべてが常に表示されるようにするには、 `AvailableItemName`という項目の種類に名前を追加します。 たとえば、プロジェクト ファイルに次の内容を追加すると、このファイルをインポートするすべてのプロジェクトの当該メニューに、カスタム型 `JScript` が追加されます。  
   
 ```xml  
 <ItemGroup>  
@@ -134,9 +130,9 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
   
 #### <a name="to-unload-and-edit-a-project-file-in-visual-studio"></a>Visual Studio でプロジェクト ファイルをアンロードして編集するには  
   
-1.  **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、 **[プロジェクトのアンロード]**をクリックします。  
+1.  **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、 **[プロジェクトのアンロード]** をクリックします。  
   
-     プロジェクトに **(利用不可)**のマークが付きます。  
+     プロジェクトに **(利用不可)** のマークが付きます。  
   
 2.  **ソリューション エクスプローラー**で、利用不可のプロジェクトのショートカット メニューを開き、**[\<プロジェクト ファイル> の編集]** をクリックします。  
   
@@ -144,10 +140,10 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
   
 3.  プロジェクト ファイルを編集し、保存して閉じます。  
   
-4.  **ソリューション エクスプローラー**で、利用不可のプロジェクトのショートカット メニューを開き、 **[プロジェクトの再読み込み]**をクリックします。  
+4.  **ソリューション エクスプローラー**で、利用不可のプロジェクトのショートカット メニューを開き、 **[プロジェクトの再読み込み]** をクリックします。  
   
 ## <a name="intellisense-and-validation"></a>IntelliSense と検証  
- XML エディターを使用してプロジェクト ファイルを編集する際、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] のスキーマ ファイルによって IntelliSense と検証が実行されます。 これらは、*\<Visual Studio のインストール ディレクトリ>*\Xml\Schemas\1033\MSBuild にあるスキーマ キャッシュにインストールされます。  
+ XML エディターを使用してプロジェクト ファイルを編集する際、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] のスキーマ ファイルによって IntelliSense と検証が実行されます。 これらは、*\<Visual Studio のインストール ディレクトリ>* \Xml\Schemas\1033\MSBuild にあるスキーマ キャッシュにインストールされます。  
   
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] の中心となる型は Microsoft.Build.Core.xsd で定義され、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] が使用する共通の型は Microsoft.Build.CommonTypes.xsd で定義されます。 カスタムの項目の種類名、プロパティ、およびタスク用に IntelliSense と検証を使用できるようにスキーマをカスタマイズするには、Microsoft.Build.xsd を編集するか、CommonTypes スキーマまたは Core スキーマを含む独自のスキーマを作成します。 独自のスキーマを作成する場合は、 **[プロパティ]** ウィンドウを使用してこのスキーマを見つけるように XML エディターに指示する必要があります。  
   

@@ -2,8 +2,7 @@
 title: レポート用マクロ |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.macros
@@ -25,11 +24,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d6c35a2487e2917f62e35d6e819f899ee2151ffd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dd2dbb0651aa35243090fb554fa9142573e04e04
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="macros-for-reporting"></a>レポート用マクロの使用
 使用することができます、 **_RPTn**、および**_RPTFn** CRTDBG で定義されているマクロです。H の代わりに`printf`デバッグ用のステートメント。 これらのマクロは、リリースでは自動的に消滅ビルド**_DEBUG**が定義されていないためで囲む必要はありません**#ifdef**s。  

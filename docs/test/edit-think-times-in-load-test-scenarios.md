@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でのロード テストの待ち時間 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, think times
 - load tests, adding delays
@@ -9,13 +9,13 @@ helpviewer_keywords:
 ms.assetid: 8e03bee5-ab7b-4b40-9497-9dbe91ccb90e
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: cccf2961ceb5abecb33396433e344015143503bf
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: e67e514b3b977e50be553704ec1997ce7476f045
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="edit-think-times-to-simulate-website-human-interaction-delays-in-load-tests-scenarios"></a>待ち時間を編集してロード テスト シナリオにおける Web サイトでの対話操作の遅延をシミュレートする
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/19/2018
 待ち時間は使用されますが、正規曲線上でのばらつきが追加されます。 要求から次の要求までの待ち時間をわずかに変化させることで、仮想ユーザーについてより現実的なシミュレーションを実行できます。
 
 > [!NOTE]
-> ロード テスト シナリオの各プロパティとその説明の完全なリストについては、「[ロード テスト シナリオのプロパティ](../test/load-test-scenario-properties.md)」を参照してください。
+> ロード テスト シナリオの各プロパティとその説明の完全な一覧については、「[Load Test Scenario Properties](../test/load-test-scenario-properties.md)」(ロード テスト シナリオのプロパティ) を参照してください。
 
 ## <a name="changing-the-think-profile"></a>待ち動作のプロファイルの変更
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 03/19/2018
 
 3.  [プロパティ] ウィンドウで **[待ち動作のプロファイル]** プロパティを変更します。
 
-4.  プロパティの変更が終了したら、**[ファイル]** メニューの **[保存]** を選択します。 新しい待ち動作のプロファイルでロード テストを実行できるようになります。
+4.  プロパティを変更したら、**[ファイル]** メニューの **[保存]** を選択します。 新しい待ち動作のプロファイルでロード テストを実行できるようになります。
 
 ## <a name="see-also"></a>関連項目
 

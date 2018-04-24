@@ -1,19 +1,19 @@
 ---
 title: Visual Studio で診断データ アダプター用のカスタム データ エディターを作成する | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Diagnostic Data Adapter, creating custom editor
 ms.assetid: 24970227-d1ea-4f6d-9839-e911478848ba
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: d1426d6e51ac132ee766913e69827df1d9558fba
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 58c0a4e764edd27e2059175e170a9e542c285a89
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-custom-editor-for-data-for-your-diagnostic-data-adapter"></a>方法: 診断データ アダプター用のデータのカスタム エディターを作成する
 
@@ -174,7 +174,7 @@ ms.lasthandoff: 03/19/2018
 
 12. 必要に応じてカスタム エディターでフィールドを編集し、**[保存]** をクリックします。
 
-13. Microsoft Test Manager からテストを実行する場合は、テストを実行する前にこれらのテストの設定をテスト計画に割り当てるか、**[オプションを指定して実行]** コマンドを使用して、テストの設定の割り当ておよびオーバーライドを行います。 テスト設定の詳細については、「[テスト設定を使用して診断情報を収集する](../test/collect-diagnostic-information-using-test-settings.md)」を参照してください。
+13. Microsoft Test Manager からテストを実行する場合は、テストを実行する前にこれらのテストの設定をテスト計画に割り当てるか、**[オプションを指定して実行]** コマンドを使用して、テストの設定の割り当ておよびオーバーライドを行います。 テスト設定の詳細については、「[Collect Diagnostic Information Using Test Settings](../test/collect-diagnostic-information-using-test-settings.md)」(テスト設定を使用して診断情報を収集する) を参照してください。
 
 14. 診断データ アダプターで新しい構成エディターを使用する前に、エディターを使用する各診断データ アダプター クラスに <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorAttribute> を適用し、クライアント コンピューターでそれらを再コンパイルおよび再インストールする必要があります。 診断データ アダプターおよび構成エディターのインストール方法の詳細については、「[方法: カスタム診断データ アダプターをインストールする](../test/how-to-install-a-custom-diagnostic-data-adapter.md)」を参照してください。
 

@@ -1,27 +1,24 @@
 ---
-title: "アプリケーションの設定の管理 (.NET) | Microsoft Docs"
-ms.custom: 
+title: アプリケーションの設定の管理 (.NET) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - msvse_settingsdesigner.err.nameblank
 helpviewer_keywords:
 - application settings [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fdd95f1890033e90b2679a2c992f3a49ad474851
-ms.sourcegitcommit: 65f85389047c5a1938b6d5243ccba8d4f14362ba
+ms.openlocfilehash: fe0daf11aa2cb6b8eb4d0e07bfd079f531831f29
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-application-settings-net"></a>アプリケーションの設定の管理 (.NET)
 
@@ -55,7 +52,7 @@ ms.lasthandoff: 01/23/2018
 
 ## <a name="creating-application-settings-at-design-time"></a>デザイン時のアプリケーション設定の作成
 
-デザイン時にアプリケーションの設定を作成するには、 **プロジェクト デザイナー** の **[設定]**ページを使用するか、フォームやコントロールの **[プロパティ]** ウィンドウを使用します。後者では、プロパティに設定を直接関連付けることができます。
+デザイン時にアプリケーションの設定を作成するには、 **プロジェクト デザイナー** の **[設定]** ページを使用するか、フォームやコントロールの **[プロパティ]** ウィンドウを使用します。後者では、プロパティに設定を直接関連付けることができます。
 
 アプリケーション スコープ設定 (データベース接続文字列やサーバー リソースへの参照など) を作成した場合、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、 `<applicationSettings>` タグを使用して app.config に設定を保存します。 接続文字列は、 `<connectionStrings>` タグの下に保存されます。
 

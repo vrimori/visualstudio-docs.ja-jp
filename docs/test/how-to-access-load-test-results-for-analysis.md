@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でのロード テスト結果の分析 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - results, load test
 - load test results, accessing
@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: b0a3e694-2894-479b-b270-7e61e9fafacd
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 2e44b6818d30c3452259b4249c047b40bd70bf43
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: d3a1e3f54544215ed89f07a64d440ae3844c996f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-access-load-test-results-for-analysis"></a>方法 : ロード テストの結果にアクセスして分析する
 
 ロード テスト エディターからロード テストを実行すると、ロード テストの結果が自動的に開き、実行中のロード テストがロード テスト アナライザーに表示されます。 コマンド ラインからロード テストを実行するとき、ロード テストの結果に手動でアクセスする必要があります。
 
-完了したロード テストの結果には、テスト対象コンピューターから定期的に収集されたパフォーマンス カウンター サンプルとエラー情報が含まれています。 パフォーマンス カウンター サンプルの多くは、ロード テストの実行中に収集されます。 収集されるパフォーマンス データの量は、テストの実行の長さ、サンプリング間隔、テスト対象コンピューターの数、収集されるカウンターの数、構成されているデータ コレクター、およびログ レベルによって異なります。 大規模なロード テストでは、収集されるパフォーマンス データ量が数ギガバイトになることも珍しくありません。 詳細については、[テスト コントローラーとテスト エージェント](configure-test-agents-and-controllers-for-load-tests.md)に関するページを参照してください。
+完了したロード テストの結果には、テスト対象コンピューターから定期的に収集されたパフォーマンス カウンター サンプルとエラー情報が含まれています。 パフォーマンス カウンター サンプルの多くは、ロード テストの実行中に収集されます。 収集されるパフォーマンス データの量は、テストの実行の長さ、サンプリング間隔、テスト対象コンピューターの数、収集されるカウンターの数、構成されているデータ コレクター、およびログ レベルによって異なります。 大規模なロード テストでは、収集されるパフォーマンス データ量が数ギガバイトになることも珍しくありません。 詳細については、「[テスト コントローラーとテスト エージェント](configure-test-agents-and-controllers-for-load-tests.md)」を参照してください。
 
 ## <a name="to-access-a-load-test-result"></a>ロード テストの結果にアクセスするには
 

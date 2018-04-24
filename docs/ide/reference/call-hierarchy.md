@@ -1,26 +1,23 @@
 ---
-title: "Visual Studio での呼び出し階層の表示 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio での呼び出し階層の表示 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/10/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.CallHierarchy
 helpviewer_keywords:
 - Call Hierarchy
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 15323f5e70d56cc6bdd30afee3671443d039f95f
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: d18af9f159c663cb061a32a61343eaa0a14d7503
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-call-hierarchy"></a>呼び出し階層の表示
 
@@ -48,7 +45,7 @@ Visual Studio では、設計時に呼び出し階層を表示できます。 �
 
 ツールバーの **[検索範囲]** ボックスには、**[マイ ソリューション]**、**[現在のプロジェクト]**、および **[現在のドキュメント]** の選択肢が含まれています。
 
-**[呼び出し階層]**ツリー ビュー ペインで子メンバーを選択した場合:
+**[呼び出し階層]** ツリー ビュー ペインで子メンバーを選択した場合:
 
 - **[呼び出し階層]** 詳細ウィンドウに、その子メンバーが親メンバーから呼び出されるすべてのコード行が表示されます。
 

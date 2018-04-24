@@ -1,13 +1,9 @@
 ---
-title: "方法: アクセス許可を設定する | Microsoft Docs"
-ms.custom: 
+title: '方法: アクセス許可を設定する | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - profiling, setting permissions
 - security [Visual Studio ALM], setting permissions
@@ -16,14 +12,14 @@ helpviewer_keywords:
 - performance tools, setting profiling permissions
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b9058ecf8f69a757eea33a57c028b488731628c
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: b1f3cf4ca3cb79a6b58d4f3549d05d355764148f
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-set-permissions"></a>方法: アクセス許可を設定する
 
@@ -76,7 +72,7 @@ Users グループのメンバーの場合は、チームの他のメンバー�
 
 5. **[\<ユーザー名> のアクセス許可]** ボックスで、**[フル コントロール]** のチェック ボックスを選択します。
 
-6. **[OK]**をクリックします。
+6. **[OK]** をクリックします。
 
      これにより、手順 5 で選択されたフォルダーで始まる共有フォルダー ツリーに対するアクセス許可がユーザーに付与されます。
 

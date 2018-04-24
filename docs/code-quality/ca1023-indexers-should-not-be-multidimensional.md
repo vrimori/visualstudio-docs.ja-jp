@@ -1,10 +1,8 @@
 ---
-title: 'Ca 1023: インデクサーしないで多次元 |Microsoft ドキュメント'
-ms.custom: ''
+title: 'CA1023: インデクサーを多次元にすることはできません'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - IndexersShouldNotBeMultidimensional
 - CA1023
@@ -17,40 +15,40 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e6d729c6aae9f328af5268bd6e03cb56c40b1b54
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 876eb79237b843721b71a1879cfbb83e7a9918db
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca1023-indexers-should-not-be-multidimensional"></a>CA1023: インデクサーを多次元にすることはできません
-|||  
-|-|-|  
-|TypeName|IndexersShouldNotBeMultidimensional|  
-|CheckId|CA1023|  
-|カテゴリ|Microsoft.Design|  
-|互換性に影響する変更点|あり|  
-  
-## <a name="cause"></a>原因  
- パブリックまたはプロテクト型には、1 つ以上のインデックスを使用して、パブリックまたはプロテクトのインデクサーが含まれています。  
-  
-## <a name="rule-description"></a>規則の説明  
- インデクサー、つまり、インデックス付きプロパティには、1 つのインデックスを使用する必要があります。 多次元のインデクサーでは、ライブラリの操作性を大幅に削減できます。 設計には、複数のインデックスが必要とする場合は、型の論理データ ストアを表しているかどうかを再確認します。 それ以外の場合は、メソッドを使用します。  
-  
-## <a name="how-to-fix-violations"></a>違反の修正方法  
- この規則違反を修正するには、整数型または文字列型のインデックスを使用してデザインを変更またはインデクサーではなく、メソッドを使用します。  
-  
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
- 非標準のインデクサーの必要性を慎重に検討した後にのみこの規則による警告は抑制されます。  
-  
-## <a name="example"></a>例  
- 次の例は、型`DayOfWeek03`規則に違反する多次元のインデクサーとします。 インデクサーは、変換の種類として見なすことができ、そのため、メソッドとして公開されるより適切です。 型がで再設計されました`RedesignedDayOfWeek03`ルールを満たすためにします。  
-  
+|||
+|-|-|
+|TypeName|IndexersShouldNotBeMultidimensional|
+|CheckId|CA1023|
+|カテゴリ|Microsoft.Design|
+|互換性に影響する変更点|あり|
+
+## <a name="cause"></a>原因
+ パブリックまたはプロテクト型には、1 つ以上のインデックスを使用して、パブリックまたはプロテクトのインデクサーが含まれています。
+
+## <a name="rule-description"></a>規則の説明
+ インデクサー、つまり、インデックス付きプロパティには、1 つのインデックスを使用する必要があります。 多次元のインデクサーでは、ライブラリの操作性を大幅に削減できます。 設計には、複数のインデックスが必要とする場合は、型の論理データ ストアを表しているかどうかを再確認します。 それ以外の場合は、メソッドを使用します。
+
+## <a name="how-to-fix-violations"></a>違反の修正方法
+ この規則違反を修正するには、整数型または文字列型のインデックスを使用してデザインを変更またはインデクサーではなく、メソッドを使用します。
+
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+ 非標準のインデクサーの必要性を慎重に検討した後にのみこの規則による警告は抑制されます。
+
+## <a name="example"></a>例
+ 次の例は、型`DayOfWeek03`規則に違反する多次元のインデクサーとします。 インデクサーは、変換の種類として見なすことができ、そのため、メソッドとして公開されるより適切です。 型がで再設計されました`RedesignedDayOfWeek03`ルールを満たすためにします。
+
  [!code-vb[FxCop.Design.OneDimensionForIndexer#1](../code-quality/codesnippet/VisualBasic/ca1023-indexers-should-not-be-multidimensional_1.vb)]
  [!code-cpp[FxCop.Design.OneDimensionForIndexer#1](../code-quality/codesnippet/CPP/ca1023-indexers-should-not-be-multidimensional_1.cpp)]
- [!code-csharp[FxCop.Design.OneDimensionForIndexer#1](../code-quality/codesnippet/CSharp/ca1023-indexers-should-not-be-multidimensional_1.cs)]  
-  
-## <a name="related-rules"></a>関連規則  
- [CA1043: インデクサーには整数または文字列引数を使用します](../code-quality/ca1043-use-integral-or-string-argument-for-indexers.md)  
-  
+ [!code-csharp[FxCop.Design.OneDimensionForIndexer#1](../code-quality/codesnippet/CSharp/ca1023-indexers-should-not-be-multidimensional_1.cs)]
+
+## <a name="related-rules"></a>関連規則
+ [CA1043: インデクサーには整数または文字列引数を使用します](../code-quality/ca1043-use-integral-or-string-argument-for-indexers.md)
+
  [CA1024: 適切な場所にプロパティを使用します](../code-quality/ca1024-use-properties-where-appropriate.md)

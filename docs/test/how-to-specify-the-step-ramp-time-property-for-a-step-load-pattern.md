@@ -1,23 +1,23 @@
 ---
 title: Visual Studio でのロード テストのステップ ロード パターンの [ステップごとの傾斜増加時間] | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, load patterns
 ms.assetid: 4a69e857-f93b-4907-9a01-fd1b66291205
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: fdf692057fdd99ee201b38c14454ccd29109d765
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 0ed9a9ec360072c45ea2f59483e031dfe856b8e5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern"></a>方法: ステップ ロード パターンの "ステップごとの傾斜増加時間" プロパティを指定する
 
-**新しいロード テスト ウィザード**でロード テストを作成した後で、**ロード テスト エディター**を使用して、テストのニーズや目標に合わせてシナリオのプロパティを変更できます。 詳細については、「[チュートリアル: ロード テストの作成および実行](../test/walkthrough-create-and-run-a-load-test.md)」を参照してください。
+**新しいロード テスト** ウィザードでロード テストを作成した後で、**ロード テスト エディター**を使用して、テストのニーズや目標に合わせてシナリオのプロパティを変更できます。 詳細については、「[チュートリアル: ロード テストの作成および実行](../test/walkthrough-create-and-run-a-load-test.md)」を参照してください。
 
 > [!NOTE]
 > ロード テスト シナリオの各プロパティとその説明の完全なリストについては、「[ロード テスト シナリオのプロパティ](../test/load-test-scenario-properties.md)」を参照してください。
@@ -58,7 +58,7 @@ ms.lasthandoff: 03/19/2018
     > [!NOTE]
     > シナリオのロード パターンは、ステップ ロード パターンである必要があります。 そうでない場合は、ロード パターンにより現在シナリオに関連付けられているロード パターンのタイプが表示されます。 詳細については、「[ロード パターンを編集して仮想ユーザー アクティビティをモデル化](../test/edit-load-patterns-to-model-virtual-user-activities.md)」を参照してください。
 
-4.  **[表示]** メニューの **[プロパティ ウィンドウ]** を選択します。
+4.  **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックします。
 
      [プロパティ] ウィンドウに、シナリオのカテゴリおよびプロパティが表示されます。
 

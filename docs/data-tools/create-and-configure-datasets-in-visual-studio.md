@@ -1,6 +1,5 @@
 ---
-title: 作成し、Visual Studio でのデータセットの構成 |Microsoft ドキュメント
-ms.custom: ''
+title: 作成し、Visual Studio でのデータセットを構成します。
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,11 +12,11 @@ manager: douge
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1e71f7dcde2e1232f15b6c455f01ee30272b8f28
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d7aac502f32941d825fda77c43ae07e82c4e9db3
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="create-and-configure-datasets-in-visual-studio"></a>作成し、Visual Studio でのデータセットを構成します。
 
@@ -91,4 +90,4 @@ A*データセット*をデータベースからデータをメモリに格納�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio のデータセット ツール](../data-tools/dataset-tools-in-visual-studio.md)
+- [Visual Studio のデータセット ツール](../data-tools/dataset-tools-in-visual-studio.md)

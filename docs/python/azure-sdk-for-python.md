@@ -1,28 +1,22 @@
 ---
-title: Azure SDK for Python | Microsoft Docs
+title: Azure SDK for Python
 description: Azure SDK for Python を使うと、任意のプラットフォームで実行している Python アプリケーションから Microsoft Azure サービスを簡単に利用できるようになります。
-ms.custom: ''
 ms.date: 01/22/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 3f03ca08dddb90f6eb86a439f7f92307df3b4335
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 91f51f91008552e602991505f28ef4f076692f52
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="azure-sdk-for-python"></a>Azure SDK for Python
 
@@ -42,7 +36,7 @@ Azure ドキュメントの「[Python と SDK のインストール](https://doc
 
 ## <a name="documentation"></a>ドキュメント
 
-ドキュメントは [azure-sdk-for-python.readthedocs.org](http://azure-sdk-for-python.readthedocs.org/en/latest/index.html) にあります。
+ドキュメントは [azure-sdk-for-python.readthedocs.org](https://docs.microsoft.com/en-us/python/azure/?view=azure-python) にあります。
 
 「[Python デベロッパー センター](http://azure.microsoft.com/develop/python/)」にも、さまざまなチュートリアルを含む有用なリソースが数多く用意されています。
 

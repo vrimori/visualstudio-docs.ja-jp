@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でのロード テストのロード パターン | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, load patterns
 - load tests, scenarios
@@ -9,13 +9,13 @@ helpviewer_keywords:
 ms.assetid: 0ba0363b-7f50-4bde-a919-0e3bce7bc115
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 986b2e263a5beedf7f40ed36526365735b3ba17f
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 7a6d9054bb12290d29247c09263a3854f2ea0dad
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="edit-load-patterns-to-model-virtual-user-activities"></a>ロード パターンを編集して仮想ユーザー アクティビティをモデル化する
 
@@ -117,7 +117,7 @@ ms.lasthandoff: 03/19/2018
  最初に、**新しいロード テスト ウィザード**を使用してロード テストを作成した後で、**ロード テスト エディター**を使用し、シナリオに関連付けられたロード パターン プロパティをテストの目標にあったレベルに変更します。
 
 > [!NOTE]
->  ロード テスト シナリオの各プロパティとその説明の一覧については、「[ロード テスト シナリオのプロパティ](../test/load-test-scenario-properties.md)」を参照してください。
+>  ロード テスト シナリオの各プロパティとその説明の一覧については、「[Load Test Scenario Properties](../test/load-test-scenario-properties.md)」(ロード テスト シナリオのプロパティ) を参照してください。
 
  ロード パターンは、ロード テスト中にアクティブである仮想ユーザーの数、および新しいユーザーが追加される割合を指定します。 ステップ パターン、持続、およびゴール志向という使用可能な 3 つのパターンから選択できます。 詳細については、「[ロード テスト シナリオでロード パターンを使用して仮想ユーザーの数を指定する](../test/edit-load-patterns-to-model-virtual-user-activities.md)」を参照してください。
 

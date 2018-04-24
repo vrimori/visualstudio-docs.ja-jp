@@ -1,10 +1,11 @@
 ---
-title: "Dotfuscator の機能 | Microsoft Docs"
+title: Dotfuscator の機能 | Microsoft Docs
 ms.date: 2017-10-10
 ms.devlang: dotnet
-ms.technology: vs-ide-general
-ms.topic: article
-keywords: "Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, 保護, community edition, 難読化, .NET, 無料, Visual Studio 2017"
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
+keywords: Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, 保護, community edition, 難読化, .NET, 無料, Visual Studio 2017
 helpviewer_keywords:
 - PreEmptive Protection Dotfuscator
 - Dotfuscator Community Edition
@@ -12,15 +13,15 @@ helpviewer_keywords:
 - Dotfuscator
 - obfuscation
 - protection
-description: "Visual Studio 2017 に含まれる無料の Dotfuscator Community Edition の機能について説明します。"
+description: Visual Studio 2017 に含まれる無料の Dotfuscator Community Edition の機能について説明します。
 ms.assetid: 0ee89c58-c900-48fc-a6a2-65ace00e8bab
 author: Joe-Sewell-PreEmptive
-manager: ghogen
-ms.openlocfilehash: 2c2c7decf192f11c12b52b64374719c8ef5edece
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+manager: douge
+ms.openlocfilehash: 91d2e379c37567a88e29eb504ad7bc09723d3fc6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="capabilities-of-dotfuscator"></a>Dotfuscator の機能
 
@@ -64,7 +65,7 @@ Dotfuscator CE は、[改ざん防止][tamper]や、[デバッグ防止][debug]�
 Dotfuscator CE では、アプリケーションに [exception-tracking][exceptions] コード、[session-tracking][sessions] コード、[feature-tracking][features] コードを挿入できます。
 実行すると、処理対象のアプリケーションから分析データが構成済みの [PreEmptive Analytics エンドポイント][endpoints]に送信されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Dotfuscator CE の完全なユーザー ガイドのこのトピック][full]
 
