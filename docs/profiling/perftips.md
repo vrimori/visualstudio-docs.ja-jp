@@ -1,23 +1,20 @@
 ---
 title: PerfTips | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 509d2d4f-48a5-4cdf-acad-6f7b75421303
-caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: cfcb4fdf488233a2be7ea55b57d041641f2ea882
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 81e5f0696db8f8e29204f9fbed49cc347a4afb74
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="perftips"></a>パフォーマンスのヒント
 Visual Studio デバッガーの *PerfTips* 、および統合デバッガー **診断ツール** は、デバッグ中のアプリのパフォーマンス監視と分析に役立ちます。  
@@ -47,16 +44,16 @@ Visual Studio デバッガーの *PerfTips* 、および統合デバッガー **
 ## <a name="turn-perftips-on-or-off"></a>PerfTips をオンまたはオフにする  
  PerfTips を有効または無効にするには:  
   
-1.  **[デバッグ]** メニューの **[オプション]**をクリックします。  
+1.  **[デバッグ]** メニューの **[オプション]** をクリックします。  
   
-2.  **[デバッグ中に経過時間の PerfTip を表示する]**チェック ボックスをオンまたはオフにします。  
+2.  **[デバッグ中に経過時間の PerfTip を表示する]** チェック ボックスをオンまたはオフにします。  
   
 ## <a name="turn-the-diagnostic-tools-window-on-or-off"></a>[診断ツール] ウィンドウをオンまたはオフにする  
  [診断ツール] ウィンドウを有効または無効にするには:  
   
-1.  **[デバッグ]** メニューの **[オプション]**をクリックします。  
+1.  **[デバッグ]** メニューの **[オプション]** をクリックします。  
   
-2.  **[デバッグ中に診断ツールを有効にする]**チェック ボックスをオンまたはオフにします。
+2.  **[デバッグ中に診断ツールを有効にする]** チェック ボックスをオンまたはオフにします。
 
 ## <a name="see-also"></a>参照
  [Visual Studio のプロファイル](../profiling/index.md)  

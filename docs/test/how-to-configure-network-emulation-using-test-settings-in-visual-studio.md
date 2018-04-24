@@ -1,19 +1,19 @@
 ---
 title: Visual Studio でテストの設定を使用してネットワーク エミュレーションを構成する | Microsoft Docs
 ms.date: 10/03/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - test settings, network emulation
 ms.assetid: ff275cfb-5df9-4710-9a91-9caabaaad34f
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 5fd9fb0f91ee38293c29db78529062a8fd217f01
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 137f1980c53d457ef166008a438fca0effacbf44
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-network-emulation-using-test-settings-in-visual-studio"></a>方法: Visual Studio でテストの設定を使用してネットワーク エミュレーションを構成する
 
@@ -25,7 +25,7 @@ Visual Studio から、さまざまなネットワーク環境でアプリケー
  次の手順では、ネットワーク エミュレーションを構成エディターから構成する方法を説明します。 これらの手順は、Microsoft Test Manager および Visual Studio の両方の構成エディターに当てはまります。
 
 > [!NOTE]
-> ネットワーク エミュレーション診断データ アダプターは、Visual Studio のテスト設定のみに適用できます。 Microsoft Test Manager のテストの設定には使用されません。
+> ネットワーク エミュレーション診断データ アダプターは、Visual Studio のテスト設定のみに適用できます。 Microsoft Test Manager のテスト設定には使用されません。
 
 ネットワーク エミュレーションを使用するには、管理者特権を持つアカウントを使用する必要があります。 手動テストを実行するローカル ロールに対してネットワーク エミュレーションを選択した場合は、管理者特権で Microsoft Test Manager を起動する必要があります。 それ以外のロールに対してネットワーク エミュレーションを選択した場合は、そのロールのコンピューター上にあるテスト エージェントによって使用されるユーザー アカウントが Administrators グループのメンバーであることを確認する必要があります。 テスト エージェントのアカウントの設定方法の詳細については、[テスト エージェントのインストールと構成](../test/lab-management/install-configure-test-agents.md)に関するページを参照してください。
 

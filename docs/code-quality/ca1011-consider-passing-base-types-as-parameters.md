@@ -1,10 +1,8 @@
 ---
-title: 'Ca 1011: 基本型をパラメーターとして渡すことを検討してください |Microsoft ドキュメント'
-ms.custom: ''
+title: 'CA1011: 基本型をパラメーターとして渡すことを考慮します'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - ConsiderPassingBaseTypesAsParameters
 - CA1011
@@ -17,46 +15,46 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 51271f3d6b2ced6fdf0229c18ac2a19ee06de36c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ac73d2be980791d41b172ba0669387fd68a331fb
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: 基本型をパラメーターとして渡すことを考慮します
-|||  
-|-|-|  
-|TypeName|ConsiderPassingBaseTypesAsParameters|  
-|CheckId|CA1011|  
-|カテゴリ|Microsoft.Design|  
-|互換性に影響する変更点|あり|  
-  
-## <a name="cause"></a>原因  
- メソッド宣言には、派生型である仮パラメーターが含まれ、メソッドを呼び出して、パラメーターの基本型のメンバーだけです。  
-  
-## <a name="rule-description"></a>規則の説明  
- メソッドの宣言で基本型をパラメーターとして指定すると、その基本型から派生した型は、メソッドに対応する引数として渡すことができます。 メソッドの本体内の引数を使用する場合に実行される特定のメソッドは、引数の型によって異なります。 派生型によって提供される追加機能が不要で、基本型を使用するメソッドのより広範囲に利用が許可されます。  
-  
-## <a name="how-to-fix-violations"></a>違反の修正方法  
- この規則違反を修正するには、その基本型にパラメーターの型を変更します。  
-  
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
- この規則による警告を抑制しても安全です。  
-  
--   メソッドは、派生型によって提供される特定の機能が必要な場合  
-  
-     \- または -  
-  
--   派生型のみ、またはより強い派生型を適用するのには、メソッドに渡されます。  
-  
- このような場合は、コードするより堅牢なため、コンパイラとランタイムによって提供される厳密な型チェックします。  
-  
-## <a name="example"></a>例  
- 次の例では、メソッド、`ManipulateFileStream`でのみ使用できる、<xref:System.IO.FileStream>オブジェクトで、この規則に違反します。 2 番目のメソッド`ManipulateAnyStream`、置き換えることで、ルールを満たす、<xref:System.IO.FileStream>パラメーターを使用して、<xref:System.IO.Stream>です。  
-  
+|||
+|-|-|
+|TypeName|ConsiderPassingBaseTypesAsParameters|
+|CheckId|CA1011|
+|カテゴリ|Microsoft.Design|
+|互換性に影響する変更点|あり|
+
+## <a name="cause"></a>原因
+ メソッド宣言には、派生型である仮パラメーターが含まれ、メソッドを呼び出して、パラメーターの基本型のメンバーだけです。
+
+## <a name="rule-description"></a>規則の説明
+ メソッドの宣言で基本型をパラメーターとして指定すると、その基本型から派生した型は、メソッドに対応する引数として渡すことができます。 メソッドの本体内の引数を使用する場合に実行される特定のメソッドは、引数の型によって異なります。 派生型によって提供される追加機能が不要で、基本型を使用するメソッドのより広範囲に利用が許可されます。
+
+## <a name="how-to-fix-violations"></a>違反の修正方法
+ この規則違反を修正するには、その基本型にパラメーターの型を変更します。
+
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+ この規則による警告を抑制しても安全です。
+
+-   メソッドは、派生型によって提供される特定の機能が必要な場合
+
+     \- または -
+
+-   派生型のみ、またはより強い派生型を適用するのには、メソッドに渡されます。
+
+ このような場合は、コードするより堅牢なため、コンパイラとランタイムによって提供される厳密な型チェックします。
+
+## <a name="example"></a>例
+ 次の例では、メソッド、`ManipulateFileStream`でのみ使用できる、<xref:System.IO.FileStream>オブジェクトで、この規則に違反します。 2 番目のメソッド`ManipulateAnyStream`、置き換えることで、ルールを満たす、<xref:System.IO.FileStream>パラメーターを使用して、<xref:System.IO.Stream>です。
+
  [!code-csharp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CSharp/ca1011-consider-passing-base-types-as-parameters_1.cs)]
  [!code-cpp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CPP/ca1011-consider-passing-base-types-as-parameters_1.cpp)]
- [!code-vb[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/VisualBasic/ca1011-consider-passing-base-types-as-parameters_1.vb)]  
-  
-## <a name="related-rules"></a>関連規則  
+ [!code-vb[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/VisualBasic/ca1011-consider-passing-base-types-as-parameters_1.vb)]
+
+## <a name="related-rules"></a>関連規則
  [CA1059: メンバーは特定の具象型を公開できません](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)

@@ -1,10 +1,11 @@
 ---
-title: "Dotfuscator Community Edition (CE) をアップグレードする | Microsoft Docs"
+title: Dotfuscator Community Edition (CE) をアップグレードする | Microsoft Docs
 ms.date: 2017-02-08
 ms.devlang: dotnet
-ms.technology: vs-ide-general
-ms.topic: article
-keywords: "Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, protection, community edition, 難読化, .NET, 無料, Visual Studio 2017, アップグレード, コマンド ライン"
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
+keywords: Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, protection, community edition, 難読化, .NET, 無料, Visual Studio 2017, アップグレード, コマンド ライン
 helpviewer_keywords:
 - PreEmptive Protection Dotfuscator
 - Dotfuscator Community Edition
@@ -19,15 +20,15 @@ helpviewer_keywords:
 - registering Dotfuscator
 - Dotfuscator command line
 - Dotfuscator Professional
-description: "Visual Studio 2017 に含まれる無料の Dotfuscator Community Edition をアップグレードする方法について説明します。"
+description: Visual Studio 2017 に含まれる無料の Dotfuscator Community Edition をアップグレードする方法について説明します。
 ms.assetid: c7c60904-27f9-4f1f-b79b-ddf65041b810
 author: Joe-Sewell-PreEmptive
-manager: ghogen
-ms.openlocfilehash: 261fc98312914f5a80d2302a90e360dfde2ca17f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+manager: douge
+ms.openlocfilehash: 03fdaae7a152db2af4ca042d14748e6508185b78
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-dotfuscator-community-edition-ce"></a>Dotfuscator Community Edition (CE) をアップグレードする
 
@@ -74,7 +75,7 @@ Dotfuscator Professional は業界標準の [.NET 難読化ツール][net-obfusc
 Dotfuscator Professional の高度なアプリケーション保護機能の詳細については、PreEmptive Solutions の「[Dotfuscator Overview][product-about]」(Dotfuscator の概要) ページと、[Community Edition との比較][product-compare]のページを参照してください。
 [preemptive.com では、完全にサポートされている評価版をリクエストして入手できます][eval]。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Dotfuscator CE の完全なユーザー ガイドのこのトピック][full]
 

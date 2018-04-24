@@ -1,10 +1,8 @@
 ---
-title: ': 1505 メンテナンスできないコード |Microsoft ドキュメント'
-ms.custom: ''
+title: 'CA1505: メンテナンスできないコードを使用しないでください'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - AvoidUnmaintainableCode
 - CA1505
@@ -17,34 +15,33 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4338b73aab38b1d63f4d4015c3a1fe1e1d292932
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b65e6c8c7826887e411b2210b613633c1e963aaf
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca1505-avoid-unmaintainable-code"></a>CA1505: メンテナンスできないコードを使用しないでください
-|||  
-|-|-|  
-|TypeName|AvoidUnmantainableCode|  
-|CheckId|CA1505|  
-|カテゴリ|Microsoft.Maintainability|  
-|互換性に影響する変更点|なし|  
-  
-## <a name="cause"></a>原因  
- 型またはメソッドの保守容易性指数が低い値です。  
-  
-## <a name="rule-description"></a>規則の説明  
- 保守容易性指数は、次のメトリックを使用して計算されます。 コードの行数、プログラムのボリューム、サイクロマティック複雑度。 プログラムのボリュームは、型またはメソッドのコードにオペランドと演算子の数に基づいている理解の難易度の尺度です。 サイクロマティック複雑度は、型またはメソッドの構造上の複雑さの尺度です。 コード メトリックに関する詳細については、[複雑性の測定とマネージ コードの保守容易性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)です。  
-  
- 保守性の低いインデックスがあること示し型またはメソッド保守が困難な可能性がありますを再設計に適した候補になります。  
-  
-## <a name="how-to-fix-violations"></a>違反の修正方法  
- この違反を修正するには、型またはメソッドを設計し直す小さくより対象を絞った型またはメソッドに分割しようとします。  
-  
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
- 型またはメソッドと見なされます、大きなサイズに関係なく、または型またはメソッドを分割することはできません、保守性の高いときに、この警告を除外します。  
-  
-## <a name="see-also"></a>関連項目  
- [保守性に関する警告](../code-quality/maintainability-warnings.md)   
- [マネージ コードの複雑さと保守性の測定](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)
+|||
+|-|-|
+|TypeName|AvoidUnmantainableCode|
+|CheckId|CA1505|
+|カテゴリ|Microsoft.Maintainability|
+|互換性に影響する変更点|なし|
+
+## <a name="cause"></a>原因
+ 型またはメソッドの保守容易性指数が低い値です。
+
+## <a name="rule-description"></a>規則の説明
+ 保守容易性指数は、次のメトリックを使用して計算されます。 コードの行数、プログラムのボリューム、サイクロマティック複雑度。 プログラムのボリュームは、型またはメソッドのコードにオペランドと演算子の数に基づいている理解の難易度の尺度です。 サイクロマティック複雑度は、型またはメソッドの構造上の複雑さの尺度です。 コード メトリックに関する詳細については、[複雑性の測定とマネージ コードの保守容易性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)です。
+
+ 保守性の低いインデックスがあること示し型またはメソッド保守が困難な可能性がありますを再設計に適した候補になります。
+
+## <a name="how-to-fix-violations"></a>違反の修正方法
+ この違反を修正するには、型またはメソッドを設計し直す小さくより対象を絞った型またはメソッドに分割しようとします。
+
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+ 型またはメソッドと見なされます、大きなサイズに関係なく、または型またはメソッドを分割することはできません、保守性の高いときに、この警告を除外します。
+
+## <a name="see-also"></a>関連項目
+ [保守性に関する警告](../code-quality/maintainability-warnings.md)[複雑さとマネージ コードの保守容易性の測定](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)

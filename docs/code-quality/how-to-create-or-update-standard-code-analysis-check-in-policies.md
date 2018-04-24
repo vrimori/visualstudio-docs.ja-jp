@@ -1,6 +1,5 @@
 ---
-title: '方法: を作成または標準のコード分析を用いたチェックイン ポリシーの更新 |Microsoft ドキュメント'
-ms.custom: ''
+title: '方法: 標準のコード分析チェックイン ポリシーを作成または更新する'
 ms.date: 11/04/2016
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
@@ -13,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c9d6a28c5dd0ae8d72f11c76d33ff15268d4dda4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: eb0642828daa96d7904d4e4bb967afc5f1c563d9
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>方法: 標準のコード分析チェックイン ポリシーを作成または更新する
 
@@ -50,10 +49,10 @@ ms.lasthandoff: 04/16/2018
 
 選択するか、次のオプションをオフにします。
 
-    |オプション|説明|  
-    |------------|-----------------|  
-    |**チェックインを強制のみファイルを格納する現在のソリューションの一部であります。**|コード分析は、ソリューションおよびプロジェクトの構成ファイルで指定されたファイルでのみ実行できます。 このポリシーは、ソリューションの一部であるすべてのコードを分析することを保証します。|  
-    |**C/C++ コード分析を強制 (/analyze)**|すべての C または C++ プロジェクトを作成できる必要があります、/analyze コンパイラ オプションをそれらをチェックインする前に、コード分析を実行します。|  
+    |オプション|説明|
+    |------------|-----------------|
+    |**チェックインを強制のみファイルを格納する現在のソリューションの一部であります。**|コード分析は、ソリューションおよびプロジェクトの構成ファイルで指定されたファイルでのみ実行できます。 このポリシーは、ソリューションの一部であるすべてのコードを分析することを保証します。|
+    |**C/C++ コード分析を強制 (/analyze)**|すべての C または C++ プロジェクトを作成できる必要があります、/analyze コンパイラ オプションをそれらをチェックインする前に、コード分析を実行します。|
     |**マネージ コードのコード分析を強制します。**|すべてのマネージ プロジェクトがコード分析を実行し、それらをチェックインする前に、ビルドが必要です。|
 
 ### <a name="to-specify-a-managed-rule-set"></a>管理されている規則セットを指定するには

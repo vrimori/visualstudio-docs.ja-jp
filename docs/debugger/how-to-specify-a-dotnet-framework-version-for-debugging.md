@@ -2,8 +2,7 @@
 title: '方法: デバッグ用の .NET Framework のバージョンの指定 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -19,11 +18,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1d3d94d4243e138d4b8f9753d02bbc184db6e377
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2cb8da54b53814e7f044c67855e8071c627cf2e1
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-specify-a-net-framework-version-for-debugging"></a>方法 : デバッグで .NET Framework のバージョンを指定する
 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] デバッガーでは、Microsoft [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] の現在のバージョンだけでなく、古いバージョンのデバッグもサポートしています。 デバッガーが適切なバージョンを常に特定できます Visual Studio からアプリケーションを起動する場合、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]デバッグしているアプリケーションにします。 使用すると、アプリケーションが既に実行されている**にアタッチ**、デバッガー常にできないことがありますの古いバージョンを識別する、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]です。 この場合、次のようなエラー メッセージが出力されます。  

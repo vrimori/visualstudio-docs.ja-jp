@@ -1,6 +1,5 @@
 ---
 title: コードの不具合のマネージ コードのチュートリアルの分析 |Microsoft ドキュメント
-ms.custom: ''
 ms.date: 01/29/2018
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
@@ -12,11 +11,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3af6d4f1580313457aa553ce11f920be5376641c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 98d1bbd347870bd704a0d17d7ae559da00e9adb5
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="walkthrough-analyzing-managed-code-for-code-defects"></a>チュートリアル: コードの分析のマネージ コードを欠陥します。
 
@@ -61,21 +60,21 @@ ms.lasthandoff: 04/16/2018
 ### <a name="to-analyze-a-managed-project-for-code-defects"></a>マネージ プロジェクトのコードの不具合を分析するには
 
 1. CodeAnalysisManagedDemo プロジェクトを選択**ソリューション エクスプ ローラー**です。
-  
+
 1. **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
-  
+
      CodeAnalysisManagedDemo プロパティ ページが表示されます。
-  
+
 1. 選択、**コード分析**タブです。
-  
+
 1. 確認して**ビルドに対するコード分析を有効にする**がオンになっています。
-  
+
 1. **この規則セットを実行**ドロップダウン リストで、 **Microsoft すべてルール**です。
-  
+
 1. **ファイル** メニューのをクリックして**選択した項目の保存**、プロパティ ページを閉じます。
-  
+
 1. **ビルド** メニューのをクリックして**ビルド CodeAnalysisManagedDemo**です。
-  
+
     CodeAnalysisManagedDemo プロジェクトのビルド警告が表示されます、**エラー一覧**と**出力**windows です。
 
 ## <a name="correct-the-code-analysis-issues"></a>コード分析の問題を修正します。

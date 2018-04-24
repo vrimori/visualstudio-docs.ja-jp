@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でのロード テストのカウンター セット | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.test.load.dialog.countersetmapping
 helpviewer_keywords:
@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 64315c2f-a0b2-4378-be16-0774b99beef5
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 21f093187fa1c2405253cc60713a0dfbea384d53
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: b2ff43592819e5834f1e5f7b5088c00f61d8b1c4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-manage-counter-sets-using-the-load-test-editor"></a>方法: ロード テスト エディターを使用してカスタム カウンター セットを管理する
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 03/19/2018
 
      このタグは、ロード テスト エディターのツリーの **[カウンター セットの割り当て]** ノードに表示されます。 また、このタグは Excel のレポートにも表示されるため、関係者がロード テストでコンピューターのロールを確認する際に役立ちます。 たとえば、"ラボ 2 の Web サーバー 1" や "Phoenix オフィスの SQL Server 2" のようなタグを使用できます。 詳細については、「[テストの比較または傾向分析に備えたロード テストの結果レポートの作成](../test/compare-load-test-results.md)」を参照してください。
 
-6.  **[OK]**をクリックします。
+6.  **[OK]** をクリックします。
 
 ## <a name="see-also"></a>関連項目
 

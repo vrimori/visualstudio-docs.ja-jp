@@ -1,13 +1,9 @@
 ---
-title: "方法 : インストルメントされたバイナリを再配置する | Microsoft Docs"
-ms.custom: 
+title: '方法 : インストルメントされたバイナリを再配置する | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.property.binaries
 helpviewer_keywords:
@@ -17,14 +13,14 @@ helpviewer_keywords:
 - profiling tools, instrumented binaries
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 364d6695738cb646397895cead518d640497652f
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 1c138e8b823977d95f2630040a0690628396503d
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-relocate-instrumented-binaries"></a>方法 : インストルメントされたバイナリを再配置する
 
@@ -32,9 +28,9 @@ ms.lasthandoff: 02/21/2018
 
 ## <a name="to-relocate-instrumented-binary"></a>インストルメント化されたバイナリを再配置するには
 
-1. **パフォーマンス エクスプローラー**で、パフォーマンス セッションを右クリックして、 **[プロパティ]**をクリックします。
+1. **パフォーマンス エクスプローラー**で、パフォーマンス セッションを右クリックして、 **[プロパティ]** をクリックします。
 
-2. **[プロパティ ページ]**で、 **[バイナリ]** プロパティをクリックします。
+2. **[プロパティ ページ]** で、 **[バイナリ]** プロパティをクリックします。
 
 3. **[インストルメントされたバイナリを再配置]** チェック ボックスを選びます。
 

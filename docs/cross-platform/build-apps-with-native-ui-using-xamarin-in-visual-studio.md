@@ -2,23 +2,19 @@
 title: Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-mobile
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 30f137e6-595d-4ce7-b8f5-415b07c1caa2
-caps.latest.revision: 31
 author: charlespetzold
 ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: 0ec6529e6a9c41d1b9a4fa99a79d756754df1f45
-ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
+ms.openlocfilehash: a8602915827c442fa2fc4cbddf4db2a25ef21749
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する
 
@@ -97,7 +93,7 @@ Visual Studio には、.NET Standard ライブラリを共有するネイティ�
   
     -   **[バージョン]** フィールドが **最新の安定した** バージョンに設定されていることを確認してください。  
   
-    -   **[インストール]**をクリックします。  
+    -   **[インストール]** をクリックします。  
   
 7.  手順 7 を繰り返し、**Microsoft.CSharp** パッケージを見つけ、.NET Standard プロジェクトにインストールします。 このライブラリは、.NET Standard ライブラリの C# `dynamic` データ型を使用するために必要です。
   
@@ -237,16 +233,16 @@ Visual Studio には、.NET Standard ライブラリを共有するネイティ�
     > [!TIP]
     >  このプロジェクトには、他にも多くのファイルがあります。 それらの説明はこの記事の範囲を超えていますが、Android プロジェクトの構造をもう少し詳しく知りたい場合は、Hello Android という二部構成記事の第 2 部に相当する「[Hello Android: 詳細説明](/xamarin/android/get-started/hello-android/hello-android-deepdive/)」を参照してください。  
   
-2.  **[表示] > [その他のウィンドウ] > [ツールボックス]**を選択してツールボックスを開きます。  
+2.  **[表示] > [その他のウィンドウ] > [ツールボックス]** を選択してツールボックスを開きます。  
   
-3.  **[ツールボックス]**から、 **[相対レイアウト]** コントロールをデザイナーにドラッグします。 このコントロールは、他のコントロールの親コンテナーとして使用します。  
+3.  **[ツールボックス]** から、 **[相対レイアウト]** コントロールをデザイナーにドラッグします。 このコントロールは、他のコントロールの親コンテナーとして使用します。  
   
     > [!TIP]
     >  レイアウトが正しく表示されない場合は、ファイルを保存し、**[デザイン]** タブと **[ソース]** タブを切り替えて表示を更新します。  
   
 4.  **[プロパティ]** ウィンドウで、**background** プロパティ (スタイルのグループ) を `#545454` に設定します。  **[プロパティ]** ウィンドウの見出しを見て、**RelativeLayout** の背景を設定していることを確認してください。
   
-5.  **[ツールボックス]**から、 **[TextView]** コントロールを **[相対レイアウト]** コントロールにドラッグします。  
+5.  **[ツールボックス]** から、 **[TextView]** コントロールを **[相対レイアウト]** コントロールにドラッグします。  
   
 6.  **[プロパティ]** ウィンドウで、次のプロパティを設定します。 ([プロパティ] ウィンドウのツール バーにある並べ替えボタンを使用して一覧をアルファベット順に並べ替えるとわかりやすくなります。)  
   

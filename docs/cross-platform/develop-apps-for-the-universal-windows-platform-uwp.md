@@ -1,23 +1,21 @@
 ---
-title: "ユニバーサル Windows プラットフォーム (UWP) 向けアプリの開発 | Microsoft Docs"
-ms.custom: 
+title: ユニバーサル Windows プラットフォーム (UWP) 向けアプリの開発 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/24/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: tgt-pltfrm-cross-plat
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- tgt-pltfrm-cross-plat
+ms.topic: conceptual
 ms.assetid: eac59cb6-f12e-4a77-9953-6d62b164a643
-caps.latest.revision: "48"
 author: stevehoag
 ms.author: shoag
-manager: ghogen
-ms.workload: uwp
-ms.openlocfilehash: a696a0b827cc8fe367390efbba01c2a18ff178bb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- uwp
+ms.openlocfilehash: eb180dfa5550cf6237697c4e214a3742b195b065
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>ユニバーサル Windows プラットフォーム (UWP) 向けアプリの開発
 ユニバーサル Windows プラットフォームと 1 つの Windows コアを使用することで、電話やデスクトップなどの Windows 10 デバイスで同じアプリを実行できます。 これらのユニバーサル Windows アプリは、Visual Studio とユニバーサル Windows アプリ開発ツールを使用して作成します。  

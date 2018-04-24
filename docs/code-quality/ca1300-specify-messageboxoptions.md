@@ -1,10 +1,8 @@
 ---
-title: 'CA1300: MessageBoxOptions を指定 |Microsoft ドキュメント'
-ms.custom: ''
+title: 'CA1300: MessageBoxOption を指定します'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - SpecifyMessageBoxOptions
 - CA1300
@@ -17,38 +15,37 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 914654c5e2eee601ee2b314f15f5dfadb686c047
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d2d0b28d804dc6932e66de9dcd758fd05fc888f7
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca1300-specify-messageboxoptions"></a>CA1300: MessageBoxOption を指定します
-|||  
-|-|-|  
-|TypeName|SpecifyMessageBoxOptions|  
-|CheckId|CA1300|  
-|カテゴリ|Microsoft.Globalization|  
-|互換性に影響する変更点|なし|  
-  
-## <a name="cause"></a>原因  
- メソッドのオーバー ロードを呼び出して、<xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName>を受け取らないメソッド、<xref:System.Windows.Forms.MessageBoxOptions?displayProperty=fullName>引数。  
-  
-## <a name="rule-description"></a>規則の説明  
- 右から左への読み取り順序を使用するカルチャで正しくメッセージ ボックスを表示する、<xref:System.Windows.Forms.MessageBoxOptions>と<xref:System.Windows.Forms.MessageBoxOptions>のメンバー、<xref:System.Windows.Forms.MessageBoxOptions>に列挙体を渡す必要があります、<xref:System.Windows.Forms.MessageBox.Show%2A>メソッドです。 確認、<xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=fullName>右から左への読み取り順序を使用するかどうかを決定するコンテナー コントロールのプロパティです。  
-  
-## <a name="how-to-fix-violations"></a>違反の修正方法  
- この規則違反を修正するには、オーバー ロードを呼び出し、<xref:System.Windows.Forms.MessageBox.Show%2A>を受け取るメソッド、<xref:System.Windows.Forms.MessageBoxOptions>引数。  
-  
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
- コード ライブラリを右から左への読み取り順序を使用するカルチャのローカライズしないときにこの規則による警告を抑制しても安全です。  
-  
-## <a name="example"></a>例  
- 次の例では、カルチャの読み取り順序に対応するオプションがメッセージ ボックスを表示する方法を示します。 例をビルドするには、示されていませんが、リソース ファイルが必要です。 リソース ファイルなしの例をビルドし、右から左への機能をテストする例のコメントに従います。  
-  
+|||
+|-|-|
+|TypeName|SpecifyMessageBoxOptions|
+|CheckId|CA1300|
+|カテゴリ|Microsoft.Globalization|
+|互換性に影響する変更点|なし|
+
+## <a name="cause"></a>原因
+ メソッドのオーバー ロードを呼び出して、<xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName>を受け取らないメソッド、<xref:System.Windows.Forms.MessageBoxOptions?displayProperty=fullName>引数。
+
+## <a name="rule-description"></a>規則の説明
+ 右から左への読み取り順序を使用するカルチャで正しくメッセージ ボックスを表示する、<xref:System.Windows.Forms.MessageBoxOptions>と<xref:System.Windows.Forms.MessageBoxOptions>のメンバー、<xref:System.Windows.Forms.MessageBoxOptions>に列挙体を渡す必要があります、<xref:System.Windows.Forms.MessageBox.Show%2A>メソッドです。 確認、<xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=fullName>右から左への読み取り順序を使用するかどうかを決定するコンテナー コントロールのプロパティです。
+
+## <a name="how-to-fix-violations"></a>違反の修正方法
+ この規則違反を修正するには、オーバー ロードを呼び出し、<xref:System.Windows.Forms.MessageBox.Show%2A>を受け取るメソッド、<xref:System.Windows.Forms.MessageBoxOptions>引数。
+
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+ コード ライブラリを右から左への読み取り順序を使用するカルチャのローカライズしないときにこの規則による警告を抑制しても安全です。
+
+## <a name="example"></a>例
+ 次の例では、カルチャの読み取り順序に対応するオプションがメッセージ ボックスを表示する方法を示します。 例をビルドするには、示されていませんが、リソース ファイルが必要です。 リソース ファイルなしの例をビルドし、右から左への機能をテストする例のコメントに従います。
+
  [!code-vb[FxCop.Globalization.SpecifyMBOptions#1](../code-quality/codesnippet/VisualBasic/ca1300-specify-messageboxoptions_1.vb)]
- [!code-csharp[FxCop.Globalization.SpecifyMBOptions#1](../code-quality/codesnippet/CSharp/ca1300-specify-messageboxoptions_1.cs)]  
-  
-## <a name="see-also"></a>関連項目  
- <xref:System.Resources.ResourceManager?displayProperty=fullName>   
- [デスクトップ アプリケーションのリソース](/dotnet/framework/resources/index)
+ [!code-csharp[FxCop.Globalization.SpecifyMBOptions#1](../code-quality/codesnippet/CSharp/ca1300-specify-messageboxoptions_1.cs)]
+
+## <a name="see-also"></a>関連項目
+ <xref:System.Resources.ResourceManager?displayProperty=fullName> [デスクトップ アプリでのリソース](/dotnet/framework/resources/index)

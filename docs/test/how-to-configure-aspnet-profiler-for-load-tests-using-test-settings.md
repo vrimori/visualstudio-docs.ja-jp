@@ -1,19 +1,19 @@
 ---
 title: Visual Studio でロード テスト用の ASP.NET プロファイラーを構成する | Microsoft Docs
 ms.date: 10/13/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - test settings, ASP.NET
 ms.assetid: 6832fe39-04d5-4d94-8a18-3e2730bad423
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: b647b032ced1d0d8faf6d5fd5fd293c42cfbfad9
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 68bc1c8b21a2f14ba319792afae0d77f233c5d94
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-aspnet-profiler-for-load-tests-using-test-settings-in-visual-studio"></a>方法: Visual Studio でテストの設定を使用して、ロード テスト用の ASP.NET プロファイラーを構成する
 
@@ -25,7 +25,7 @@ ASP.NET プロファイラー診断データ アダプターを使用して、AS
 ASP.NET プロファイラー診断データ アダプターを使用すると、ロード テストの実行時に、アプリケーション層から ASP.NET プロファイラー データを収集できます。 プロファイラーは、実行時間が 1 時間以上になるような長時間のロード テストなどでは実行しないでください。 その理由は、プロファイラー ファイルが数百メガバイトの大きさになる可能性があるためです。 代わりに、ASP.NET プロファイラーを使用して、実行時間の短いロード テストを実行してください。その場合でも、パフォーマンスの問題を詳細に診断することができます。
 
 > [!NOTE]
-> ASP.NET プロファイラー診断データ アダプターは、インターネット インフォメーション サービス (IIS) プロセスをプロファイルします。 そのため、開発用 Web サーバーに対しては機能しません。 ロード テスト内で Web サイトをプロファイルするには、IIS が実行されているコンピューターにテスト エージェントをインストールする必要があります。 テスト エージェントはロードを生成しませんが、収集のみを目的としたエージェントとなります。 詳細については、「[テスト エージェントをインストールして構成する](../test/lab-management/install-configure-test-agents.md)」を参照してください。
+> ASP.NET プロファイラー診断データ アダプターは、インターネット インフォメーション サービス (IIS) プロセスをプロファイルします。 そのため、開発用 Web サーバーに対しては機能しません。 ロード テスト内で Web サイトをプロファイルするには、IIS が実行されているコンピューターにテスト エージェントをインストールする必要があります。 テスト エージェントはロードを生成しませんが、収集のみを目的としたエージェントとなります。 詳細については、[テスト エージェントのインストールと構成](../test/lab-management/install-configure-test-agents.md)に関するページを参照してください。
 
 詳細については、「[方法: 分散ロード テスト用のテスト設定の作成](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md)」を参照してください。
 

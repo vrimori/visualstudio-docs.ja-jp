@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でのテスト コントローラーとテスト エージェントのトラブルシューティング | Microsoft Docs
 ms.date: 10/20/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, test controllers
 - load tests, troubleshooting
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 77329348-3a5d-43de-b6cb-90f93296a081
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 37ff6e82c61e55dc162287ce944008cc09e37204
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 3d785a559ff59a96861798a7c96bfdcb4147b7ec
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="strategies-for-troubleshooting-test-controllers-and-test-agents-in-load-tests"></a>ロード テストにおけるテスト コントローラーとテスト エージェントのトラブルシューティングの方法
 
@@ -82,7 +82,7 @@ ms.lasthandoff: 03/19/2018
 ## <a name="binding-a-test-controller-to-a-network-adapter"></a>テスト コントローラーのネットワーク アダプターへのバインド
  テスト エージェントをセットアップするときに、次のエラーが表示されることがあります。
 
- **エラー 8110。Can not connect to the specified controller computer or access the controller object.\(指定したコントローラー コンピューターに接続したり、コントローラー オブジェクトにアクセスできません。\)**
+ **エラー 8110: Can not connect to the specified controller computer or access the controller object.\(指定したコントローラー コンピューターに接続したり、コントローラー オブジェクトにアクセスできません。\)**
 
  このエラーは、ネットワーク アダプターが複数あるコンピューターにテスト コントローラーをインストールしたことが原因で発生する場合があります。
 

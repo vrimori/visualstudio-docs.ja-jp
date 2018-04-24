@@ -1,16 +1,15 @@
 ---
-title: "チュートリアル - プロジェクトに NuGet パッケージを含める | Microsoft Docs"
-description: "このドキュメントでは、Xamarin プロジェクトに NuGet パッケージを含める方法について説明します。 パッケージの検索およびダウンロードの手順を説明し、IDE 統合機能の概要を示します。"
+title: チュートリアル - プロジェクトに NuGet パッケージを含める
+description: このドキュメントでは、Xamarin プロジェクトに NuGet パッケージを含める方法について説明します。 パッケージの検索およびダウンロードの手順を説明し、IDE 統合機能の概要を示します。
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
-ms.topic: article
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
-ms.openlocfilehash: cb927b14e3637edd7e16c78fbed01fa4e9522652
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 05762df8b06a69647c6c7a628db54ac499248374
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="including-a-nuget-package-in-your-project"></a>プロジェクトに NuGet パッケージを含める
 
@@ -109,7 +108,7 @@ Visual Studio for Mac で、**[Visual Studio]、[基本設定...]、[NuGet]、[�
 
 ![パッケージ ソースを追加する](media/nuget-walkthrough-PackageSource3.png)
 
-## <a name="version-control"></a>バージョン管理
+## <a name="version-control"></a>バージョン コントロール
 
 NuGet のドキュメントでは、[ソース管理にパッケージをコミットせずに NuGet を使用する方法](https://docs.microsoft.com/nuget/consume-packages/packages-and-source-control)について説明しています。 ソース管理でバイナリおよび未使用の情報を格納しない場合は、自動的にサーバーからパッケージを復元するように Visual Studio for Mac を構成することができます。 これは、開発者が初めてソース管理からプロジェクトを取得するときに、Visual Studio for Mac が自動的に必要なパッケージをダウンロードしてインストールすることを意味します。
 

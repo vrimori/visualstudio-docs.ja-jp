@@ -2,26 +2,22 @@
 title: 'チュートリアル: C# または Visual Basic による簡単なアプリケーションの作成 | Microsoft Docs'
 ms.custom: ''
 ms.date: 10/03/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-acquisition
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
 ms.assetid: f84339c7-d617-4f56-bfcd-af2215c347ba
-caps.latest.revision: 19
 author: TerryGLee
 ms.author: tglee
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 05397e8dc965b23f0a60b9d7cbfcbb40621821a9
-ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
+ms.openlocfilehash: 369b94cb19344bc3a58545f26643ec7d5d78a246
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-create-a-simple-application-with-c-or-visual-basic"></a>チュートリアル: C# または Visual Basic による簡単なアプリケーションの作成
 このチュートリアルを完了すると、Visual Studio を使用してアプリケーションを開発する際に使用できるさまざまなツール、ダイアログ ボックス、およびデザイナーの使用方法を習得できます。 簡単な "Hello, World" アプリケーションの作成、UI の設計、コードの追加、エラーのデバッグを行いながら、統合開発環境 (IDE) での作業方法について学習します。
@@ -140,7 +136,7 @@ IsChecked="True"
 
 #### <a name="to-add-the-button-control"></a>Button コントロールを追加するには  
 
-1.  **[ツールボックス]**で、 **Button** コントロールを探し、デザイン サーフェイスの RadioButton コントロールの下に追加します。デザイン ビュー内のフォームにドラッグすると追加されます。  
+1.  **[ツールボックス]** で、 **Button** コントロールを探し、デザイン サーフェイスの RadioButton コントロールの下に追加します。デザイン ビュー内のフォームにドラッグすると追加されます。  
 
 2.  XAML ビューで、Button コントロールの **[Content]** の値を `Content="Button"` から `Content="Display"`に変更し、変更を保存します。  
 
@@ -202,7 +198,7 @@ IsChecked="True"
 
 #### <a name="to-start-debugging-and-find-the-error"></a>デバッグを開始し、エラーを見つけるには  
 
-1.  **[デバッグ]**、 **[デバッグの開始]**の順に選択して、デバッガーを起動します。  
+1.  **[デバッグ]**、 **[デバッグの開始]** の順に選択して、デバッガーを起動します。  
 
      ![[デバッグ] メニューの [デバッグの開始] コマンド](../ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
 
@@ -229,7 +225,7 @@ IsChecked="True"
 
 1.  Greetings.xaml.vb または Greetings.xaml.cs を開き、`MessageBox.Show("Hello.")` という行を選択します。  
 
-2.  **[デバッグ]**、 **[ブレークポイントの設定/解除]**の順に選択して、メニューからブレークポイントを追加します。  
+2.  **[デバッグ]**、 **[ブレークポイントの設定/解除]** の順に選択して、メニューからブレークポイントを追加します。  
 
      ![[デバッグ] メニューの [ブレークポイントの設定/解除] コマンド](../ide/media/exploreide-togglebreakpoint.png "ExploreIDE-ToggleBreakpoint")  
 
@@ -243,7 +239,7 @@ IsChecked="True"
 
      `MessageBox.Show("Hello.")` という行が黄色で強調表示されます。 IDE の下部では、[自動変数]、[ローカル]、 [ウォッチ] の各ウィンドウが左側にまとめてドッキングされ、[呼び出し履歴]、[ブレークポイント]、[コマンド]、[イミディエイト]、 [出力] の各ウィンドウが右側にまとめてドッキングされます。  
 
-6.  メニュー バーで **[デバッグ]**、 **[ステップ アウト]**の順に選択します。  
+6.  メニュー バーで **[デバッグ]**、 **[ステップ アウト]** の順に選択します。  
 
      アプリケーションの実行が再開され、メッセージ ボックスに "Hello" と表示されます。  
 
@@ -257,7 +253,7 @@ IsChecked="True"
 
 10. アプリケーション ウィンドウを閉じ、デバッグを停止します。  
 
-11. メニュー バーで、 **[デバッグ]**、 **[すべてのブレークポイントを無効にする]**の順に選択します。  
+11. メニュー バーで、 **[デバッグ]**、 **[すべてのブレークポイントを無効にする]** の順に選択します。  
 
 ### <a name="build-a-release-version-of-the-application"></a>アプリケーションのリリース バージョンのビルド  
  すべてが機能することを確認したら、アプリケーションのリリース ビルドを準備できます。  

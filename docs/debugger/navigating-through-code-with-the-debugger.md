@@ -2,8 +2,7 @@
 title: デバッガーでは、Visual Studio でのコード内を移動 |Microsoft ドキュメント
 ms.custom: H1Hack27Feb2017
 ms.date: 02/07/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.execution
@@ -17,11 +16,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e39c343531b7ce81c202e979117d3d2c7196cd7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ae96b360620a58fa323d080e6262c7f2966fa160
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="navigate-code-with-the-visual-studio-debugger"></a>Visual Studio デバッガーでコード内を移動します。
 デバッガーでコードを移動するには、コマンドおよびショートカットについて理解し、使用することでより高速で簡単に見つけ、アプリケーションの問題を解決します。 デバッガーでコードを移動するときに、アプリの状態を検査またはの詳細については、その実行フローできます。  

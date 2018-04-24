@@ -2,17 +2,17 @@
 title: Visual Studio でコード化された UI テストを作成する | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: e667f21f7c543ea0ada32d060ee27e6723d96d18
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 1861915f50961bb3b07513d69d9799717694e1be
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>チュートリアル: コード化された UI テストの作成、編集、および保守
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/19/2018
 
 6.  プロジェクトの保存先のフォルダーを選択します。 **[場所]** テキスト ボックスにフォルダーの名前を入力します。
 
-7.  **[OK]**をクリックします。
+7.  **[OK]** をクリックします。
 
      Visual Studio の WPF デザイナーが開き、プロジェクトの MainWindow が表示されます。
 
@@ -124,7 +124,7 @@ ms.lasthandoff: 03/19/2018
 
 5.  中央のペインで、**[コード化された UI テスト プロジェクト]** テンプレートを選択します。
 
-6.  **[OK]**をクリックします。
+6.  **[OK]** をクリックします。
 
      ソリューション エクスプローラーで、**CodedUITestProject1** という名前の新しいコード化された UI テスト プロジェクトがソリューションに追加されます。
 
@@ -173,7 +173,7 @@ ms.lasthandoff: 03/19/2018
 
 1.  **[テスト]** メニューの **[ウィンドウ]** を選択し、**[テスト エクスプローラー]** を選択します。
 
-2.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。
+2.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
 3.  CodedUITest1.cs ファイルで、**CodedUITestMethod** メソッドを見つけて右クリックし、**[テストの実行]** を選択します。または、テスト エクスプローラーでテストを実行します。
 
@@ -205,7 +205,7 @@ ms.lasthandoff: 03/19/2018
 
 7.  コード化された UI テスト エディターのツール バーにある **[コードの移動]** ボタンを選択します。
 
-8.  Microsoft Visual Studio のダイアログ ボックスが表示されます。 警告で、メソッドが UIMap.uitest ファイルから UIMap.cs ファイルへ移動すること、およびコード化された UI テスト エディターを使用してメソッドを編集できなくなることが表示されます。 **[はい]**をクリックします。
+8.  Microsoft Visual Studio のダイアログ ボックスが表示されます。 警告で、メソッドが UIMap.uitest ファイルから UIMap.cs ファイルへ移動すること、およびコード化された UI テスト エディターを使用してメソッドを編集できなくなることが表示されます。 **[はい]** をクリックします。
 
      テスト メソッドが UIMap.uitest ファイルから削除され、[UI Actions]\(UI 操作) ペインに表示されなくなります。 移動したテスト ファイルを編集するには、ソリューション エクスプローラーから UIMap.cs ファイルを開きます。
 
@@ -246,7 +246,7 @@ ms.lasthandoff: 03/19/2018
             }
     ```
 
-14. **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。
+14. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
 15. **CodedUITestMethod** メソッドを右クリックし、**[テストの実行]** を選択します。
 
@@ -258,7 +258,7 @@ ms.lasthandoff: 03/19/2018
 
 2.  [プロパティ] ウィンドウの上部にある **[名前]** プロパティの値を button1 から buttonA に変更します。
 
-3.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。
+3.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
 4.  テスト エクスプローラーで、**CodedUITestMethod1** を実行します。
 
@@ -340,7 +340,7 @@ ms.lasthandoff: 03/19/2018
             }
     ```
 
-13. **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。
+13. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
 14. テスト エクスプローラーで、CodedUITestMethod1 を実行します。
 

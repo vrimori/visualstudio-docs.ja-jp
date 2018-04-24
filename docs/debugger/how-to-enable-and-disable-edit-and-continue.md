@@ -2,8 +2,7 @@
 title: '方法: を有効にし、編集を無効にし、続行 (c#、VB、C++) |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -28,11 +27,11 @@ manager: douge
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: c63f629bd0ba67156395b7bf1f1e142355ae9981
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9070913d1106eb5e2ca04160ad95c6a6fd46f752
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>方法: を有効にし、編集を無効にし、続行 (c#、VB、C++)
 無効にするかでエディット コンティニュを有効にすることができます、**オプション**デザイン時にダイアログ ボックス。 デバッグの最中にこの設定を変更することはできません。  
@@ -62,7 +61,7 @@ ms.lasthandoff: 04/16/2018
     - **古いコード (ネイティブのみ) に関する警告します。**  
         古いコードに関する警告を取得します。 
   
-7.  **[OK]**をクリックします。    
+7.  **[OK]** をクリックします。    
   
 ## <a name="see-also"></a>関連項目  
  [エディット コンティニュ](../debugger/edit-and-continue.md)

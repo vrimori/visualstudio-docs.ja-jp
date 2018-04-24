@@ -1,6 +1,5 @@
 ---
-title: データ バインディングを使用する Windows フォーム ユーザー コントロールを作成 |Microsoft ドキュメント
-ms.custom: ''
+title: データ バインディングを使用する Windows フォーム ユーザー コントロールを作成します。
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,11 +15,11 @@ manager: douge
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f7dac1b763e444349f741f72dae8c41fa8087a26
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0b7431ca6f0d4ac73a07a51893fd0c17c4fada57
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-complex-data-binding"></a>複合データ バインディングをサポートする Windows フォーム ユーザー コントロールを作成します。
 
@@ -111,7 +110,7 @@ Windows アプリケーションでフォームにデータを表示する場合
 ## <a name="add-the-required-data-binding-attribute"></a>必要なデータ バインディング属性を追加します。
 
 データ バインディングをサポートする複合コントロールには、<xref:System.ComponentModel.ComplexBindingPropertiesAttribute> を実装できます。
-  
+
 ### <a name="to-implement-the-complexbindingproperties-attribute"></a>ComplexBindingProperties 属性を実装するには
 
 1. スイッチ、 **ComplexDataGridView**コントロールをコード ビューにします。 (上、**ビュー**メニューの **コード**)。
@@ -173,7 +172,7 @@ Windows アプリケーションでフォームにデータを表示する場合
 
 ### <a name="to-create-data-bound-controls-on-the-form"></a>フォームにデータ バインド コントロールを作成するには
 
-メインのドラッグ**顧客**ノードから、**データ ソース**ウィンドウからフォームにします。いることを確認、 **ComplexDataGridView**テーブルのデータを表示するコントロールを使用します。  
+メインのドラッグ**顧客**ノードから、**データ ソース**ウィンドウからフォームにします。いることを確認、 **ComplexDataGridView**テーブルのデータを表示するコントロールを使用します。
 
 ## <a name="running-the-application"></a>アプリケーションの実行
 
@@ -191,6 +190,6 @@ F5 キーを押してアプリケーションを実行します。
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)  
-[[データ ソース] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)  
-[Windows フォーム コントロール](/dotnet/framework/winforms/controls/index)
+- [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
+- [[データ ソース] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)
+- [Windows フォーム コントロール](/dotnet/framework/winforms/controls/index)

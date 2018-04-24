@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でのロード テスト シナリオのテスト ミックス | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, adding tests
 - test mix
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 303e1d70-5d98-424a-b51e-e0898e16d3f8
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 20437bf88d62943d6f0dbf3d9df320836c5e9e36
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 9c7f0cb4c25c99c7ab68400d63e1ec52253a5f61
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="edit-the-test-mix-to-specify-which-web-performance-unit-and-coded-ui-tests-to-include-in-a-load-test-scenario"></a>テスト ミックスを編集して、ロード テスト シナリオに含める Web パフォーマンス テスト、単体テスト、コード化された UI テストを指定
 
@@ -79,10 +79,10 @@ ms.lasthandoff: 03/19/2018
 > [!WARNING]
 >  **[均等化]** ボタンは、ロックされているあらゆる項目をオーバーライドします。
 
- また、スライダーを使用する代わりに、割合の値を **%** 列に直接入力することもできます。 割合の値を直接入力した場合、他の項目は自動的には調整されません。
+ また、スライダーを使用する代わりに、割合の値を **[%]** 列に直接入力することもできます。 割合の値を直接入力した場合、他の項目は自動的には調整されません。
 
 > [!NOTE]
->  合計が 100% にならない場合、または **%** 列に入力された割合の値が小数値の場合、スライダーは無効になります。
+>  合計が 100% にならない場合、または **[%]** 列に入力された割合の値が小数値の場合、スライダーは無効になります。
 
  割合の値を手動で入力する場合は、すべての項目の合計が 100% になるようにしてください。 ミックスを保存するとき、合計が 100% ではない場合、割合の値をそのままで受け入れるか、または戻って調整するかのどちらかを選択するよう要求されます。 そのままで受け入れることを選択した場合は、100% になるよう比例配分されます。  たとえば、項目が 2 つあって、手動でそれぞれ 80% と 40% に設定されている場合、最初の項目は 66.67% (80/120) に、2 番目の項目は 33.33% (40/120) に、それぞれ設定されます。
 

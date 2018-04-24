@@ -2,9 +2,6 @@
 title: ご意見 | Microsoft ドキュメント
 ms.custom: ''
 ms.date: 02/19/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - product support [Visual Studio]
@@ -17,11 +14,11 @@ ms.technology:
 - vs-acquisition
 ms.workload:
 - multiple
-ms.openlocfilehash: addc6e929a1a72f385189f0a0408ea26e2a3d829
-ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
+ms.openlocfilehash: 12f6e61a967d7d551013926dbd580c706192bf3a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="talk-to-us"></a>Talk to Us
 製品およびドキュメントをより良いものにするために、皆様のご意見をお寄せください。 いつも個別に回答できるとは限りませんが、お寄せいただいたフィードバックは、適切な担当者または担当チームに届けられます。  

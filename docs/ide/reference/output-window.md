@@ -1,12 +1,10 @@
 ---
-title: "[出力] ウィンドウ | Microsoft Docs"
-ms.custom: 
+title: '[出力] ウィンドウ | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.build.output
 - vs.debug.output
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - Output window
 - Toolbox, removing controls
 ms.assetid: d8931d88-250e-4db4-963f-2c5b3e99b45f
-caps.latest.revision: "30"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 1e886e88ad7ab4e943908e003ffe56719bd13211
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 4a8a075f977746a769fb19bec6eb196e0d338b12
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="output-window"></a>[出力] ウィンドウ
 **[出力]** ウィンドウには、統合開発環境 (IDE: Integrated Development Environment) のさまざまな機能のステータス メッセージが表示されます。 **[出力]** ウィンドウを開くには、メニュー バーで、**[表示]、[出力]** の順にクリックします (または、Ctrl キーと Alt キーを押しながら O キーを押します)。  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/22/2017
  **[出力元の表示]** の一覧で選択された**出力**ペインは、このボックスで選択された項目の出力結果を表示します。  
   
 ## <a name="routing-messages-to-the-output-window"></a>[出力] ウィンドウにメッセージを出力する  
- プロジェクトをビルドしたときに必ず **[出力]** ウィンドウが表示されるようにするには、**[全般]**\(オプション ダイアログ ボックス - プロジェクトおよびソリューション) で **[ビルド開始時に出力ウィンドウを表示]** をオンにします。 次に、編集のためにコード ファイルを開けた状態で、**[出力]** ペインのエントリを選択するために **[出力]** ウィンドウのツール バーの **[次のメッセージに移動]** および **[前のメッセージに移動]** をクリックします。 この動作を続けると、コード エディターのカーソル位置が、選択した問題が発生したコード行へ移動します。  
+ プロジェクトをビルドしたときに必ず **[出力]** ウィンドウが表示されるようにするには、**[全般]** \(オプション ダイアログ ボックス - プロジェクトおよびソリューション) で **[ビルド開始時に出力ウィンドウを表示]** をオンにします。 次に、編集のためにコード ファイルを開けた状態で、**[出力]** ペインのエントリを選択するために **[出力]** ウィンドウのツール バーの **[次のメッセージに移動]** および **[前のメッセージに移動]** をクリックします。 この動作を続けると、コード エディターのカーソル位置が、選択した問題が発生したコード行へ移動します。  
   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)で実行できる一部の IDE 機能およびコマンドでは、**[出力]** ウィンドウへ出力結果が送られます。 .bat ファイルや .com ファイルなどの外部ツールからの出力は、通常コマンド プロンプト ウィンドウで表示されますが、「[Visual Studio の外部ツール](../../ide/managing-external-tools.md)」の **[出力ウィンドウを使用]** オプションをオンにすると **[出力]** ペインに送られます。 他の種類のメッセージの多くも **[出力]** ペインで表示できます。 たとえば、ストアド プロシージャの Transact-SQL 構文を対象のデータベースに対してチェックすると、その結果が **[出力]** ウィンドウに表示されます。  
   

@@ -2,8 +2,7 @@
 title: 文字列のビジュアライザーに文字列を表示 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 07/11/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.stringviewer
@@ -23,11 +22,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 637e046ff99bfaee01ec2484c784d69734ff5118
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a3a0575b02422bf83dd560d3eae5724b0a50d3f3
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="view-strings-in-a-string-visualizer-in-visual-studio"></a>Visual Studio での文字列のビジュアライザーで文字列を表示します。
 デバッグしている間がデータ ヒントまたはデバッガー ウィンドウに表示するのには長すぎる文字列を表示する文字列のビジュアライザーを開くことができます。 多くのシナリオでビジュアライザーに役立つことが正しくない形式の文字列を識別します。

@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でのロード テスト結果とエラーの分析 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.test.load.monitor.pageresult
 - vs.test.load.dialog.column
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0a84bda3-6051-45eb-9c7f-d57419e1f97d
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: f2757f5a09e3abbcc924f94ccdcb008f671a3a8d
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 1ef22fcdfeb1b3ccf0005940ca2f7201545482f8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="analyze-load-test-results-and-errors-in-the-tables-view-of-the-load-test-analyzer"></a>ロード テスト アナライザーのテーブル ビューでのロード テスト結果とエラーの分析
 
@@ -163,7 +163,7 @@ ms.lasthandoff: 03/19/2018
 |Column|説明|
 |------------|-----------------|
 |**時刻**|ロード テスト中にエラーが発生した時刻。|
-|**エージェント**|エラーが発生したエージェント コンピューター名。 これは、テスト コントローラーおよびテスト エージェントを使用してロード テストを実行するときに重要です。 詳細については、「[テスト エージェントをインストールして構成する](../test/lab-management/install-configure-test-agents.md)」を参照してください。|
+|**エージェント**|エラーが発生したエージェント コンピューター名。 これは、テスト コントローラーおよびテスト エージェントを使用してロード テストを実行するときに重要です。 詳細については、[テスト エージェントのインストールと構成](../test/lab-management/install-configure-test-agents.md)に関するページを参照してください。|
 |**テスト**|エラーが発生した Web パフォーマンス テスト名。|
 |**シナリオ**|エラーが発生したシナリオ名。|
 |**要求**|エラーが発生した要求の URL。|

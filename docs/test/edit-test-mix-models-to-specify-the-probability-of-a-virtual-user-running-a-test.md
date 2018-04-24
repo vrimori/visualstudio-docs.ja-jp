@@ -1,20 +1,20 @@
 ---
 title: Visual Studio でのテキスト ミックス モデルの編集 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, scenarios
 - load tests, virtual users
 ms.assetid: e3b7d952-9012-400a-8131-3444390a6066
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 9a95b42dac07fd74e1b2cc8f8e0c4018b4bf4560
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: ebcb58ea848bbb04dd4fdb132a87c66707bc4af8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="edit-text-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test"></a>テキスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定
 
@@ -70,7 +70,7 @@ ms.lasthandoff: 03/19/2018
 
 7.  (省略可能) チェック ボックスで目的のテストを選択して、初期化または終了する Web パフォーマンス テストおよび単体テストを指定します。 詳細については、[Web サイトまたはアプリケーションの実際の使用状況のエミュレーション](../test/emulate-real-world-usage-of-a-web-site-in-a-load-test-using-test-mix-models.md)に関するページを参照してください。
 
-8.  **[OK]**をクリックします。
+8.  **[OK]** をクリックします。
 
      **[プロパティ]** ウィンドウに、**[テスト ミックスの種類]** プロパティに対応する新しいテスト ミックス モデルが表示されます。
 

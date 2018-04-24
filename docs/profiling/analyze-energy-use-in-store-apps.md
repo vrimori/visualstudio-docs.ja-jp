@@ -1,30 +1,25 @@
 ---
-title: "UWP アプリでのエネルギー使用の分析 | Microsoft Docs"
-ms.custom: 
+title: UWP アプリでのエネルギー使用の分析 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
 ms.assetid: 96d06843-b97e-45a8-8126-07478a40bfc4
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: f6728f940b1d8613587b6b879324bd37a2a35e2d
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+ms.openlocfilehash: 05b5b87afda20990f122597520b0e2cf7e9b7ac1
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>UWP アプリでのエネルギー使用の分析
 Visual Studio の **エネルギー消費** プロファイラーは、常時または一時的に内蔵バッテリで動作する低電力のタブレット デバイス上で、UWP アプリによる電力とエネルギーの消費量を分析するのに役立ちます。 バッテリ電源デバイスでは、エネルギー消費量が多すぎるアプリはユーザーに嫌われ、最終的にアンインストールされる場合もあります。 エネルギー使用を最適化することで、ユーザーがそのアプリを選択する可能性が高まり、使用頻度も向上します。  
@@ -43,7 +38,7 @@ Visual Studio の **エネルギー消費** プロファイラーは、常時ま
   
      電力は割合であるため、方向 (一定時間内で仕事が増加または減少) と速度 (仕事が増加または減少する量) があることに注意してください。  
   
--   *エネルギー* は、バッテリの電力容量のような能力または潜在力として、または一定の時間内に消費された総電力量として、電力の総量を表します。 エネルギーの単位はワット時です。これは、1 ワットの電力を 1 時間にわたって常時加えた場合の電力量です。 **[Energy Summary]\(エネルギー使用の概要)**では、単位はミリワット時間 **(mW-h)**で表示されます。  
+-   *エネルギー* は、バッテリの電力容量のような能力または潜在力として、または一定の時間内に消費された総電力量として、電力の総量を表します。 エネルギーの単位はワット時です。これは、1 ワットの電力を 1 時間にわたって常時加えた場合の電力量です。 **[Energy Summary]\(エネルギー使用の概要)** では、単位はミリワット時間 **(mW-h)** で表示されます。  
   
  ![エネルギー キャパシティ、使用電力、総使用エネルギー](../profiling/media/energyprof_capcitypowerused.png "ENERGYPROF_CapcityPowerUsed")  
   
@@ -94,10 +89,10 @@ if (performance && performance.mark) {
   
      ![[診断ハブ] でエネルギー消費を選択](../profiling/media/energyprof_diagnosticshub.png "ENERGYPROF_DiagnosticsHub")  
   
-2.  **[エネルギー消費]** チェック ボックスをオンにし、 **[開始]**をクリックします。  
+2.  **[エネルギー消費]** チェック ボックスをオンにし、 **[開始]** をクリックします。  
   
     > [!NOTE]
-    >  **エネルギー消費** プロファイラーを開始すると、VsEtwCollector.exe を実行するアクセス許可を要求する **[ユーザー アカウント制御]** ウィンドウが表示される場合があります。 **[はい]**をクリックします。  
+    >  **エネルギー消費** プロファイラーを開始すると、VsEtwCollector.exe を実行するアクセス許可を要求する **[ユーザー アカウント制御]** ウィンドウが表示される場合があります。 **[はい]** をクリックします。  
   
 3.  アプリケーションを実行して、データを収集します。  
   
@@ -108,9 +103,9 @@ if (performance && performance.mark) {
      Visual Studio が、収集したデータを分析し、結果を表示します。  
   
 ##  <a name="BKMK_Collect_energy_profile_data_for_an_installed_app"></a> インストール済みアプリのエネルギー プロファイル データの収集  
- エネルギー消費プロファイラーは、Visual Studio ソリューションから開始された UWP アプリまたは Microsoft Store からインストールされた UWP アプリに対してのみ実行できます。 ソリューションを Visual Studio で開いている場合、既定のターゲットは **[スタートアップ プロジェクト]**です。 インストール済みアプリを対象とするには、以下の手順に従います。  
+ エネルギー消費プロファイラーは、Visual Studio ソリューションから開始された UWP アプリまたは Microsoft Store からインストールされた UWP アプリに対してのみ実行できます。 ソリューションを Visual Studio で開いている場合、既定のターゲットは **[スタートアップ プロジェクト]** です。 インストール済みアプリを対象とするには、以下の手順に従います。  
   
-1.  **[ターゲットの変更]** をクリックし、 **[インストール済みのアプリ]**をクリックします。  
+1.  **[ターゲットの変更]** をクリックし、 **[インストール済みのアプリ]** をクリックします。  
   
 2.  **[インストール済みアプリ パッケージの選択]** の一覧で、ターゲットをクリックします。  
   

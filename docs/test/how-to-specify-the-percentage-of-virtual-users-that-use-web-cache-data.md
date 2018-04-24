@@ -1,19 +1,19 @@
 ---
 title: Visual Studio でロード テストで Web キャッシュ データを使用する仮想ユーザーの割合を指定する | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, virtual users
 ms.assetid: f66d5d43-4121-4487-b27f-d0a0baaf7601
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: c1aa64c0ecee9f214d1bd892c62ba79090d2ce15
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 76d611af76877a9638ed2815a7d8dc5f77e45c8c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data"></a>方法: Web キャッシュ データを使用する仮想ユーザーの割合を指定する
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 03/19/2018
 
 2.  ロード テスト ツリーの **[シナリオ]** フォルダーで、使用するエージェントを指定するシナリオのノードを選択します。
 
-3.  **[表示]** メニューの **[プロパティ ウィンドウ]** を選択します。
+3.  **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックします。
 
      [プロパティ] ウィンドウに、シナリオのカテゴリおよびプロパティが表示されます。
 

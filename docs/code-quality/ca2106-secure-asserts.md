@@ -1,10 +1,8 @@
 ---
-title: 'Ca 2106: セキュリティで保護されたアサート |Microsoft ドキュメント'
-ms.custom: ''
+title: 'CA2106: アサートをセキュリティで保護します'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA2106
 - SecureAsserts
@@ -17,32 +15,31 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c2b49ab6d6cd99dc2865be21a2ed68579922bbb1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 40d497efd766fa5716b92e16ad513df85a41d2cf
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca2106-secure-asserts"></a>CA2106: アサートをセキュリティで保護します
-|||  
-|-|-|  
-|TypeName|SecureAsserts|  
-|CheckId|CA2106|  
-|カテゴリ|Microsoft.Security|  
-|互換性に影響する変更点|あり|  
-  
-## <a name="cause"></a>原因  
- メソッドによってアクセス許可がアサートされますが、呼び出し元に対してセキュリティ チェックが実行されていません。  
-  
-## <a name="rule-description"></a>規則の説明  
- セキュリティ チェックを実行せずにセキュリティ アクセス許可をアサートすると、悪用される可能性があるセキュリティの弱点がコード内に残る場合があります。 セキュリティ アクセス許可がアサートされたときに、セキュリティのスタック ウォークが停止します。 呼び出し元に対してセキュリティ チェックを実行せずに、アクセス許可をアサートする場合、呼び出し元直接コードを実行されません、アクセス許可を使用します。 セキュリティ チェックは有害な方法で、アサートを使用できないことがわかっている場合のみで許容せずにアサートします。 呼び出すコードは、無害である場合は影響を与えません。 アサートを使用するか、ユーザーが任意の情報を呼び出すコードに渡すことはできません。  
-  
-## <a name="how-to-fix-violations"></a>違反の修正方法  
- この規則違反を修正するには、メソッド、またはその宣言型セキュリティの要求を追加します。  
-  
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
- セキュリティを慎重確認した後のみ、この規則による警告を抑制します。  
-  
-## <a name="see-also"></a>関連項目  
- <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>   
- [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)
+|||
+|-|-|
+|TypeName|SecureAsserts|
+|CheckId|CA2106|
+|カテゴリ|Microsoft.Security|
+|互換性に影響する変更点|あり|
+
+## <a name="cause"></a>原因
+ メソッドによってアクセス許可がアサートされますが、呼び出し元に対してセキュリティ チェックが実行されていません。
+
+## <a name="rule-description"></a>規則の説明
+ セキュリティ チェックを実行せずにセキュリティ アクセス許可をアサートすると、悪用される可能性があるセキュリティの弱点がコード内に残る場合があります。 セキュリティ アクセス許可がアサートされたときに、セキュリティのスタック ウォークが停止します。 呼び出し元に対してセキュリティ チェックを実行せずに、アクセス許可をアサートする場合、呼び出し元直接コードを実行されません、アクセス許可を使用します。 セキュリティ チェックは有害な方法で、アサートを使用できないことがわかっている場合のみで許容せずにアサートします。 呼び出すコードは、無害である場合は影響を与えません。 アサートを使用するか、ユーザーが任意の情報を呼び出すコードに渡すことはできません。
+
+## <a name="how-to-fix-violations"></a>違反の修正方法
+ この規則違反を修正するには、メソッド、またはその宣言型セキュリティの要求を追加します。
+
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+ セキュリティを慎重確認した後のみ、この規則による警告を抑制します。
+
+## <a name="see-also"></a>関連項目
+ <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)
