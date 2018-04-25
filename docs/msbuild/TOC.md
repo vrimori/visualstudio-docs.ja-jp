@@ -194,4 +194,6 @@
 ##### [UidManager タスク](uidmanager-task.md)
 ##### [UpdateManifestForBrowserApplication タスク](updatemanifestforbrowserapplication-task.md)
 ### [Special Characters to Escape (エスケープする特殊文字)](special-characters-to-escape.md)
+## [MSBuild のプログラムでの使用](msbuild-api.md)
+### [MSBuild 15 への更新](updating-an-existing-application.md)
 ## [MSBuild 用語集](msbuild-glossary.md)
