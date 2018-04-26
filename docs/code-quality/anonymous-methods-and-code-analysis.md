@@ -1,6 +1,7 @@
 ---
 title: 匿名メソッドとコード分析
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,11 +14,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c219bbd3f674d564fe1341057de213b451f755f3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9e069976badeffbce04b2f245277426441d3df2f
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="anonymous-methods-and-code-analysis"></a>匿名メソッドとコード分析
 *匿名メソッド*メソッド名を持っていないです。 匿名メソッドは、コード ブロックをデリゲートのパラメーターとして渡すを最も頻繁に使用されます。
@@ -105,7 +106,7 @@ class Class
 
  クラスには、複数のコンス トラクターを持つフィールドに値を代入するインラインの匿名メソッドが含まれます。 この場合、警告とメトリックが関連付けられますコンス トラクターをすべて同じクラス内の別のコンス トラクターがコンス トラクターのチェーンしない限り、します。
 
- たとえば、次のクラスの宣言内にあるすべての警告で**anonymousMethod**に対して発生する必要がある**Class(int)**と**class (string)**が、に対してではなく**Class()**です。
+ たとえば、次のクラスの宣言内にあるすべての警告で**anonymousMethod**に対して発生する必要がある**Class(int)** と**class (string)** が、に対してではなく**Class()** です。
 
 ```vb
 
@@ -145,7 +146,7 @@ class Class
 }
 ```
 
- これは、予期しない見える可能性があります、これは、コンパイラは別のコンス トラクターをチェーンしていないすべてのコンス トラクターに一意のメソッドを出力です。 この動作のための違反で発生**anonymousMethod**とは別に抑制する必要があります。 つまり場合は、新しいコンス トラクターは、導入された、警告を抑制していたを**Class(int)**と**class (string)**新しいコンス トラクターに対しても抑制する必要があります。
+ これは、予期しない見える可能性があります、これは、コンパイラは別のコンス トラクターをチェーンしていないすべてのコンス トラクターに一意のメソッドを出力です。 この動作のための違反で発生**anonymousMethod**とは別に抑制する必要があります。 つまり場合は、新しいコンス トラクターは、導入された、警告を抑制していたを**Class(int)** と**class (string)** 新しいコンス トラクターに対しても抑制する必要があります。
 
  2 つの方法でこの問題を回避することができます。 宣言すること**anonymousMethod**で共通のコンス トラクターをすべてのコンス トラクター チェーン。 または、すべてのコンス トラクターによって呼び出される初期化メソッドで宣言する可能性があります。
 
