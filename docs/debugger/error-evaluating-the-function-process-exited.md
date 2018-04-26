@@ -1,25 +1,25 @@
 ---
-title: 'エラー: 関数の評価中にターゲット プロセスが終了して&#39;関数&#39;|Microsoft ドキュメント'
+title: 'エラー: コードでターゲット プロセスが終了しました&#39;コード&#39;関数の評価中に&#39;関数&#39;|Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 4/06/2018
 ms.topic: troubleshooting
 f1_keywords:
-- vs.debug.error.process_exit_func_eval_abort
+- vs.debug.error.process_exit_during_func_eval
 ms.technology: vs-ide-debug
 author: mikejo5000
 ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 620ff03ef364c21e20151547effe8bfbf5935fe7
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d5e9221ccf162180a89cc88b1ceebcf55be39eef
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="error-the-target-process-exited-while-evaluating-the-function-39function39"></a>エラー: 関数の評価中にターゲット プロセスが終了して&#39;関数&#39;
+# <a name="error-the-target-process-exited-with-code-39code39-while-evaluating-the-function-39function39"></a>エラー: コードでターゲット プロセスが終了しました&#39;コード&#39;関数の評価中に&#39;関数&#39;
 
-メッセージの全文: 関数 'function' を評価中にターゲット プロセスが終了しました。 ターゲット プロセスの終了コードは、出力ウィンドウを参照してください。
+メッセージの全文: 関数 'function' を評価中に、ターゲット プロセスがコード 'code' で終了しました。
 
 .NET オブジェクトの状態を検査しやすいように、デバッガーが自動的に強制する追加のコードを実行するデバッグ対象のプロセス (通常はプロパティ get アクセス操作子メソッドおよび`ToString`関数)。 ほとんどのシナリオでこれらの関数は正常に完了またはデバッガーでキャッチできる例外をスローします。 ただし、状況によってはカーネルの境界を越える、ユーザー メッセージ ポンプを必要とまたは回復することはないため、例外をキャッチすることはできませんがあります。 結果、プロパティ get アクセス操作子またはコードを実行する ToString メソッドとしてどちらかが明示的にプロセスを終了します (たとえば、呼び出し`ExitProcess()`) またはキャッチできませんした未処理の例外をスローした (たとえば、 `StackOverflowException`) が終了されます、デバッグ対象のプロセスと、デバッグ セッションを終了します。 このエラー メッセージが発生すると、これが発生しました。
  

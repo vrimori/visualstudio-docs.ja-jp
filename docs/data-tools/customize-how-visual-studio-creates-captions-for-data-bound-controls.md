@@ -11,14 +11,15 @@ ms.assetid: 6d4d15f8-4d78-42fd-af64-779ae98d62c8
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 35bcc2ed38a8330e7eb4ab38416c91a5c51ec2d4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f6c2dffe793928532d36b539ba73914ecf0c24dc
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Visual Studio でのデータ バインド コントロールのキャプションを作成する方法をカスタマイズします。
 項目をドラッグすると、[データ ソース ウィンドウ](add-new-data-sources.md)デザイナーでは、上に、特別な配慮: いるキャプション ラベルの列名は 2 つより読みやすい文字列に再設定または複数の単語として検出されました。連結されます。 設定によって、これらのラベルを作成、方法をカスタマイズすることができます、 **SmartCaptionExpression**、 **SmartCaptionReplacement**、および**SmartCaptionSuffix**値**HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Data デザイナー**レジストリ キー。

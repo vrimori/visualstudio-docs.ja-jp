@@ -12,14 +12,15 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0b7431ca6f0d4ac73a07a51893fd0c17c4fada57
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4a1922c3b79a718b3a239280561bf954165332e6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-complex-data-binding"></a>複合データ バインディングをサポートする Windows フォーム ユーザー コントロールを作成します。
 
@@ -79,7 +80,7 @@ Windows アプリケーションでフォームにデータを表示する場合
 
 1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
 
-1. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
+1. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
 
 1. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。
 
@@ -120,7 +121,7 @@ Windows アプリケーションでフォームにデータを表示する場合
     [!code-csharp[VbRaddataDisplaying#4](../data-tools/codesnippet/CSharp/create-a-windows-forms-user-control-that-supports-complex-data-binding_1.cs)]
     [!code-vb[VbRaddataDisplaying#4](../data-tools/codesnippet/VisualBasic/create-a-windows-forms-user-control-that-supports-complex-data-binding_1.vb)]
 
-1. **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。
+1. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
 ## <a name="creating-a-data-source-from-your-database"></a>データベースからデータ ソースの作成
 
@@ -128,11 +129,11 @@ Windows アプリケーションでフォームにデータを表示する場合
 
 ### <a name="to-create-the-data-source"></a>データ ソースを作成するには
 
-1.  **[データ]** メニューの **[データ ソースの表示]**をクリックします。
+1.  **[データ]** メニューの **[データ ソースの表示]** をクリックします。
 
 2.  **データソース**ウィンドウで、**新しいデータ ソースの追加**を開始する、**データ ソース構成**ウィザード。
 
-3.  **[データソースの種類を選択]** ページで、 **[データベース]** をクリックし、 **[次へ]**をクリックします。
+3.  **[データソースの種類を選択]** ページで、 **[データベース]** をクリックし、 **[次へ]** をクリックします。
 
 4.  **データ接続の選択**ページは、次のいずれか。
 

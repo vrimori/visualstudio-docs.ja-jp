@@ -9,14 +9,15 @@ ms.assetid: 03ff1146-706e-4780-91cb-56a83df63eea
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f535f1d26120769ba2f321bff3ae41d78005d66f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 356f15d3d7f332f87b445c66c89f79d099031a1b
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes"></a>チュートリアル: のカスタマイズ、挿入、更新、およびエンティティ クラスの動作を削除
 
@@ -73,7 +74,7 @@ ms.lasthandoff: 04/19/2018
 
 1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
 
-2. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
+2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
 
 3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。
 
@@ -81,7 +82,7 @@ ms.lasthandoff: 04/19/2018
 
      **UpdatingWithSProcsWalkthrough**プロジェクトが作成され、追加する**ソリューション エクスプ ローラー**です。
 
-4.  **[プロジェクト]** メニューの **[新しい項目の追加]**をクリックします。
+4.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。
 
 5.  クリックして、 **LINQ to SQL クラス**テンプレートと型**Northwind.dbml**で、**名前**ボックス。
 
@@ -106,11 +107,11 @@ ms.lasthandoff: 04/19/2018
 
 3.  **ビルド** メニューのをクリックして**updatingwithsprocswalkthrough のビルド**プロジェクトをビルドします。
 
-4.  **[データ]** メニューの **[データ ソースの表示]**をクリックします。
+4.  **[データ]** メニューの **[データ ソースの表示]** をクリックします。
 
-5.  **[データ ソース]** ウィンドウで、 **[新しいデータ ソースの追加]**をクリックします。
+5.  **[データ ソース]** ウィンドウで、 **[新しいデータ ソースの追加]** をクリックします。
 
-6.  をクリックして**オブジェクト**上、**データ ソースの種類を選択**ページし、をクリックして**[次へ]**です。
+6.  をクリックして**オブジェクト**上、**データ ソースの種類を選択**ページし、をクリックして **[次へ]** です。
 
 7.  展開、 **UpdatingwithSProcsWalkthrough**ノード検索して選択し、**顧客**クラスです。
 
@@ -214,10 +215,10 @@ ms.lasthandoff: 04/19/2018
 
      一覧を調べる**メソッド引数**と**クラス プロパティ**が含まれている 2 つと**メソッドの引数**と 2 つ**クラス プロパティ**一部の列、テーブルにします。 これにより、変更を追跡したり、同時実行違反をチェックするステートメントを作成したりすることが簡単になります。
 
-13. マップ、 **Original_CustomerID**メソッド引数を**CustomerID (オリジナル)**クラスのプロパティです。
+13. マップ、 **Original_CustomerID**メソッド引数を**CustomerID (オリジナル)** クラスのプロパティです。
 
     > [!NOTE]
-    >  既定では、メソッド引数は名前が一致した場合にクラス プロパティにマップされます。 プロパティ名が変更され、テーブルとエンティティ クラス間で一致しなくなったために、O/R デザイナーが正しいマッピングを判断できないときは、マップ先となる同等のクラス プロパティを選択することが必要になる場合があります。 さらに、メソッドの引数があるない有効なクラス プロパティにマップする場合を設定できます、**クラス プロパティ**値**(なし)**です。
+    >  既定では、メソッド引数は名前が一致した場合にクラス プロパティにマップされます。 プロパティ名が変更され、テーブルとエンティティ クラス間で一致しなくなったために、O/R デザイナーが正しいマッピングを判断できないときは、マップ先となる同等のクラス プロパティを選択することが必要になる場合があります。 さらに、メソッドの引数があるない有効なクラス プロパティにマップする場合を設定できます、**クラス プロパティ**値 **(なし)** です。
 
 14. をクリックして**適用**選択したクラスと動作の構成を保存します。
 
@@ -227,9 +228,9 @@ ms.lasthandoff: 04/19/2018
 
 17. 選択、 **DeleteCustomers**メソッドで、**カスタマイズ** ボックスの一覧です。
 
-18. マップ、 **Original_CustomerID**メソッド引数を**CustomerID (オリジナル)**クラスのプロパティです。
+18. マップ、 **Original_CustomerID**メソッド引数を**CustomerID (オリジナル)** クラスのプロパティです。
 
-19. **[OK]**をクリックします。
+19. **[OK]** をクリックします。
 
 > [!NOTE]
 > この特定のチュートリアルに限った問題ではありませんが、[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] は、ID 列 (自動インクリメント)、rowguidcol 列 (データベースが生成した GUID)、およびタイムスタンプ列であれば、データベースによって生成された値を、挿入時および更新時に自動的に処理します。 その他の列型のデータベースが生成した値は、予想に反して null 値になります。 データベースが生成した値を返すには、手動で <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> を `true` に設定し、<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> を <xref:System.Data.Linq.Mapping.AutoSync>、<xref:System.Data.Linq.Mapping.AutoSync>、または <xref:System.Data.Linq.Mapping.AutoSync> のいずれかに設定する必要があります。

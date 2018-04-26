@@ -2,11 +2,8 @@
 title: GenerateResource タスク | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#GenerateResource
 dev_langs:
@@ -18,20 +15,19 @@ helpviewer_keywords:
 - MSBuild, GenerateResource task
 - GenerateResource task [MSBuild]
 ms.assetid: c0aff32f-f2cc-46f6-9c3e-a5c9f8f912b1
-caps.latest.revision: 15
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 37aacbfd2095cf4edae78393569702fe4fea6c7e
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.openlocfilehash: e26aae610407ceb1ebe050081f5b555d82badc92
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="generateresource-task"></a>GenerateResource タスク
-.txt ファイルおよび .resx (XML ベースのリソース形式) ファイルと共通言語ランタイムの .resources バイナリ ファイルとの間の変換を行います.resources ファイルは、ランタイム バイナリ実行可能ファイルに埋め込んだり、サテライト アセンブリにコンパイルしたりできます。 このタスクは通常、.txt ファイルまたは .resx ファイルを .resource ファイルに変換するために使用します。 `GenerateResource` タスクの機能は [resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) の機能に似ています。  
+.txt ファイルおよび .resx (XML ベースのリソース形式) ファイルと共通言語ランタイムの .resources バイナリ ファイルとの間の変換を行います。.resources ファイルは、ランタイム バイナリ実行可能ファイルに埋め込んだり、サテライト アセンブリにコンパイルしたりできます。 このタスクは通常、.txt ファイルまたは .resx ファイルを .resource ファイルに変換するために使用します。 `GenerateResource` タスクの機能は [resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) の機能に似ています。  
   
 ## <a name="parameters"></a>パラメーター  
  `GenerateResource` タスクのパラメーターの説明を次の表に示します。  
@@ -95,6 +91,6 @@ ms.lasthandoff: 04/10/2018
   
  \<LogicalName> メタデータがない場合、リソースは myAssembly.myResource.resources という名前になります。  この例は、Visual Basic と Visual C# のビルド処理にのみ適用されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [タスク](../msbuild/msbuild-tasks.md)   
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)

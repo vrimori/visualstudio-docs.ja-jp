@@ -11,14 +11,15 @@ ms.assetid: ed28c625-bb89-4037-bfde-cfa435d182a2
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: efcc167ba42469aa8e32198161612db7521d22ba
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1c7df62a0801534f8a23f7b5cde984c75742406a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-new-data-sources"></a>新しいデータ ソースを追加します。
 Visual Studio での .NET data tools のコンテキストで用語*データ ソース*データ ストアに接続し、.NET アプリケーションにデータを公開する .NET オブジェクトを参照します。 Visual Studio のデザイナーにドラッグしてから、データベース オブジェクトをドロップすると、フォームにデータをバインドする定型コードを生成するデータ ソースの出力を使用できる、**データソース**ウィンドウです。 この種類のデータ ソースを指定できます。

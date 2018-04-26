@@ -12,14 +12,15 @@ ms.assetid: 65ca79a9-7458-466c-af55-978cd24c549e
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: d868002d2749dba2be378723a51560fc3c42c354
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4e04b0e4ef2f77381e305b992c5457bc46dc8261
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-windows-form-to-search-data"></a>データを検索する Windows フォームを作成します。
 一般的なアプリケーションのシナリオでは、選択したデータをフォーム上に表示します。 たとえば、特定の顧客の注文、特定の注文の明細などを表示する場合があります。 このシナリオでは、ユーザーがフォームに情報を入力した後、ユーザーの入力をパラメーターとして使用してクエリが実行されます。つまり、パラメーター クエリに基づいてデータが選択されます。 クエリは、ユーザーが入力した条件を満たすデータのみを返します。 ここでは、特定の都市にいる顧客を返すクエリを作成する方法、およびユーザー インターフェイスを変更して、ユーザーが都市の名前を入力してクエリを実行するボタンを押すことができるようにする方法について説明します。
@@ -69,7 +70,7 @@ ms.lasthandoff: 04/19/2018
 
 1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
 
-2. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
+2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
 
 3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。
 
@@ -82,11 +83,11 @@ ms.lasthandoff: 04/19/2018
 
 #### <a name="to-create-the-data-source"></a>データ ソースを作成するには
 
-1.  **[データ]** メニューの **[データ ソースの表示]**をクリックします。
+1.  **[データ]** メニューの **[データ ソースの表示]** をクリックします。
 
 2.  **データソース**ウィンドウで、**新しいデータ ソースの追加**を開始する、**データ ソース構成**ウィザード。
 
-3.  **[データソースの種類を選択]** ページで、 **[データベース]** をクリックし、 **[次へ]**をクリックします。
+3.  **[データソースの種類を選択]** ページで、 **[データベース]** をクリックし、 **[次へ]** をクリックします。
 
 4.  **データ接続の選択**ページは、次のいずれか。
 

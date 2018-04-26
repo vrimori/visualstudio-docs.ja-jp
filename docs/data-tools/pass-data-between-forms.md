@@ -15,14 +15,15 @@ ms.assetid: 78bf038b-9296-4fbf-b0e8-d881d1aff0df
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0c308169ef8a0f75821c669fb2cf6876d2b91b06
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4b8a1865dc6fce56f11faa453a4786ae799af7e3
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pass-data-between-forms"></a>フォーム間でデータを渡す
 このチュートリアルでは、フォーム間でデータを渡す手順について説明します。 顧客と Northwind の orders テーブルを使用して、1 つの形式により、ユーザー、顧客を選択して、2 番目のフォームには、選択した顧客の注文が表示されます。 このチュートリアルでは、最初のフォームからデータを受信する 2 番目のフォームにメソッドを作成する方法を示します。
@@ -69,7 +70,7 @@ ms.lasthandoff: 04/19/2018
 
 1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
 
-2. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
+2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
 
 3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。
 
@@ -81,11 +82,11 @@ ms.lasthandoff: 04/19/2018
 
 #### <a name="to-create-the-data-source"></a>データ ソースを作成するには
 
-1.  **[データ]** メニューの **[データ ソースの表示]**をクリックします。
+1.  **[データ]** メニューの **[データ ソースの表示]** をクリックします。
 
 2.  **データソース**ウィンドウで、**新しいデータ ソースの追加**を開始する、**データ ソース構成**ウィザード。
 
-3.  **[データソースの種類を選択]** ページで、 **[データベース]** をクリックし、 **[次へ]**をクリックします。
+3.  **[データソースの種類を選択]** ページで、 **[データベース]** をクリックし、 **[次へ]** をクリックします。
 
 4.  **データベース モデルの選択**ことを確認 ページで、**データセット**が指定され、をクリックして**次**です。
 
@@ -153,13 +154,13 @@ ms.lasthandoff: 04/19/2018
     > [!NOTE]
     >  データベースに対してパラメーターの構文が正しいことを確認します。 たとえば、Microsoft Access では、WHERE 句は `WHERE CustomerID = ?` のようになります。
 
-6.  **[次へ]**をクリックします。
+6.  **[次へ]** をクリックします。
 
 7.  **DataTableMethod 名を入力**、型`FillByCustomerID`です。
 
 8.  クリア、 **DataTable を返す**オプションをクリックして**次**です。
 
-9. **[完了]**をクリックします。
+9. **[完了]** をクリックします。
 
 ## <a name="create-a-method-on-form2-to-pass-data-to"></a>データの渡し先となる Form2 のメソッドを作成します。
 

@@ -1,28 +1,24 @@
 ---
-title: "[環境] ノード プロパティ ([オプション] ページ) | Microsoft Docs"
-ms.custom: 
+title: '[環境] ノード プロパティ ([オプション] ページ) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automation [Visual Studio], controlling Tools Options
 - Tools Options settings, Environment node properties
 ms.assetid: 26dca41f-91fc-4ca7-9103-3da402baa1d5
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ddc53a84ca6cc09c5682bc874503849eee98eae8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 3cd05ebf4c0161611789214295003eced4ca0d4f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="options-page-environment-node-properties"></a>[環境] ノード プロパティ ([オプション] ページ)
 このドキュメントでは、**[オプション]** ダイアログ ボックスの **[環境]** カテゴリ (`DTE.Properties("Environment", <Property Page>)`) に関連付けられているページ (またはプロパティ コレクション) について説明します。 各サブセクションの見出しは、Properties コレクションにアクセスするための呼び出しです。その下の表では、コレクションのプロパティを示します。  
@@ -108,7 +104,7 @@ ms.lasthandoff: 12/22/2017
   
 |プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
-|Scheme|Get/Set (String)|組み込みスキームを含む文字列、または読み込まれた .vsk ファイルの完全パスを含む文字列を返します.vsk ファイルが読み込まれていない場合は "(既定)" を返します。|  
+|Scheme|Get/Set (String)|組み込みスキームを含む文字列、または読み込まれた .vsk ファイルの完全パスを含む文字列を返します。.vsk ファイルが読み込まれていない場合は "(既定)" を返します。|  
   
 ## <a name="projects-and-solution"></a>プロジェクトおよびソリューション  
  `DTE.Properties("Environment", "ProjectsAndSolution")`  

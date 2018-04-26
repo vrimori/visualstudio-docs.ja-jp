@@ -7,15 +7,16 @@ dev_langs:
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 - cplusplus
-ms.openlocfilehash: 4b258db15ddf879e8ef64e442082936d0d37e732
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fa732c8b2fbf55b1cb2c8b80a06cf1ab18d6b50c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-studio-data-tools-for-c"></a>C++ 用の visual Studio data tools
 
@@ -39,7 +40,7 @@ SQL Server 2005 でのカスタム機能を利用し、後で、使用して、 
 
      ![データベースの SSMS アタッチ](../data-tools/media/raddata-ssms-attach-database.png "raddata SSMS アタッチ データベース")
 
-4.  ODBC の Windows SDK サンプルをダウンロードして、新しい場所に解凍します。 このサンプルでは、データベースと問題のクエリとコマンドへの接続に使用される ODBC の基本的なコマンドを示します。 これらの関数について詳しく知ることができます、 [Microsoft オープン データベース コネクティビティ)](/sql/odbc/microsoft-open-database-connectivity-odbc)です。 (C++ フォルダーには) ソリューションを最初に読み込むときに、ソリューションを Visual Studio の現在のバージョンにアップグレードする Visual Studio が提供されます。 **[はい]**をクリックします。
+4.  ODBC の Windows SDK サンプルをダウンロードして、新しい場所に解凍します。 このサンプルでは、データベースと問題のクエリとコマンドへの接続に使用される ODBC の基本的なコマンドを示します。 これらの関数について詳しく知ることができます、 [Microsoft オープン データベース コネクティビティ)](/sql/odbc/microsoft-open-database-connectivity-odbc)です。 (C++ フォルダーには) ソリューションを最初に読み込むときに、ソリューションを Visual Studio の現在のバージョンにアップグレードする Visual Studio が提供されます。 **[はい]** をクリックします。
 
 5.  ネイティブのクライアントを使用して、そのヘッダー ファイルとライブラリ ファイルが必要です。 これらのファイルには、関数および sql.h で定義された ODBC 関数を超える SQL Server に固有の定義が含まれます。 **プロジェクト** > **プロパティ** > **vc++ ディレクトリ**、インクルード ディレクトリを次を追加します。
 

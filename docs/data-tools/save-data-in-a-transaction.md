@@ -15,14 +15,15 @@ ms.assetid: 80260118-08bc-4b37-bfe5-9422ee7a1e4e
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6fd36ace8949774c755a7a192e201b6d9011ff8b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ec2ff00c4d355b2683c888fcdb6a333bf15e1b99
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-save-data-in-a-transaction"></a>チュートリアル: トランザクション内のデータを保存します。
 このチュートリアルを使用して、トランザクションでデータを保存する方法を示します、<xref:System.Transactions>名前空間。 このチュートリアルでは、Windows フォーム アプリケーションを作成します。 データ ソース構成ウィザードを使用して、Northwind サンプル データベース内のデータセットを 2 つのテーブルを作成します。 Windows フォームにデータ バインド コントロールと BindingNavigator の保存ボタン TransactionScope は、内部データベースを更新するためのコードを変更してみますを追加します。
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/19/2018
 
 1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
 
-2. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
+2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
 
 3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。
 

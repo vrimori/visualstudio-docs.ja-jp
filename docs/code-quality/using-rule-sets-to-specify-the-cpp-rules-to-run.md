@@ -1,6 +1,7 @@
 ---
 title: 規則セットを使用した実行対象の C++ 規則の指定
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 author: mikeblome
@@ -8,11 +9,11 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad464b11538dd8a3faf2bdf26cd7e3b2bc9650dd
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 571d54bb6bdf3673da8e40d6075c5b961d248fe5
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>規則セットを使用して実行するように C++ の規則を指定
 
@@ -32,7 +33,7 @@ Visual Studio で作成および変更できますカスタム*ルール セッ�
 
      \- または -
 
-    - 選択 **\<[参照...] >**既存の規則セットを指定ではありません、ボックスの一覧です。
+    - 選択 **\<[参照...] >** 既存の規則セットを指定ではありません、ボックスの一覧です。
 
 4. 選択**開く**規則セット エディターで規則を表示します。
 
@@ -58,7 +59,7 @@ Visual Studio で作成および変更できますカスタム*ルール セッ�
 
 - すべてのグループの規則を折りたたむには、次のように選択します。**すべて折りたたみ**です。
 
-- ルールは別にグループ化フィールドを変更するからフィールドを選択して、 **Group By**  ボックスの一覧です。 グループ化を解除する規則を表示するには、 **\<なし >**です。
+- ルールは別にグループ化フィールドを変更するからフィールドを選択して、 **Group By**  ボックスの一覧です。 グループ化を解除する規則を表示するには、 **\<なし >** です。
 
 - を追加またはルールの列にフィールドを削除する選択**列オプション**です。
 

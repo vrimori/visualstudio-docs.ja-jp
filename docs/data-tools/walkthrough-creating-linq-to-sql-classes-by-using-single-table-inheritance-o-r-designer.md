@@ -9,14 +9,15 @@ ms.assetid: 63bc6328-e0df-4655-9ce3-5ff74dbf69a4
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: d634032daae58c72dd1c24a89db5bd2eb353149a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 33da9618fa469961edddb685c4cc5b00ccd71a73
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>チュートリアル : 単一テーブル継承を使用した LINQ to SQL クラスの作成 (O/R デザイナー)
 [LINQ to Visual Studio での SQL ツール](../data-tools/linq-to-sql-tools-in-visual-studio2.md)通常リレーショナル システムで実装されている単一テーブル継承をサポートしています。 このチュートリアルで提供される汎用的な手順、[する方法: O/R デザイナーを使用して継承を構成する](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md)トピックによって実際のデータでの継承の使用をデモを提供し、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]です。
@@ -93,7 +94,7 @@ ms.lasthandoff: 04/19/2018
 
 1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
 
-2. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
+2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
 
 3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。
 
@@ -105,7 +106,7 @@ ms.lasthandoff: 04/19/2018
 
 #### <a name="to-add-a-linq-to-sql-file-to-the-project"></a>LINQ to SQL ファイルをプロジェクトに追加するには
 
-1.  **[プロジェクト]** メニューの **[新しい項目の追加]**をクリックします。
+1.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。
 
 2.  クリックして、 **LINQ to SQL クラス**テンプレートをクリックして**追加**です。
 

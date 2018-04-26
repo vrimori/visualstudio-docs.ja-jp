@@ -1,6 +1,7 @@
 ---
 title: '方法: マネージ コードについて手動でコード分析を実行する'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2690ff071b217fb95388dde7c4b2eda28189f5f3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b2a9fa4af1737b59af67388ba12cf79eca0b7563
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-run-code-analysis-manually-for-managed-code"></a>方法: マネージ コードについて手動でコード分析を実行する
 コード分析ツールに、ソース コードの障害に関する情報を提供します。 コード分析は、コード プロジェクトをビルドするたびに自動的に実行することができ、手動でコード分析を実行することもできます。 します。 コード分析の実行時にオンになっているルールは、プロジェクトのプロパティ ページの [コード分析] ページで指定されます。 詳細については、次を参照してください[する方法: マネージ コード プロジェクトのコード分析を構成する。](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)

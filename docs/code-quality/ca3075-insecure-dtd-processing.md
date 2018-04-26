@@ -1,6 +1,7 @@
 ---
 title: 'CA3075: 安全ではない DTD の処理'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: 65798d66-7a30-4359-b064-61a8660c1eed
@@ -9,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b288ba61a4e5ee1d8df60d9ac4c250f2ec7081d2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 821a2a3f50f94808482d50a8e1e36feefb184173
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ca3075-insecure-dtd-processing"></a>CA3075: 安全ではない DTD の処理
 |||
@@ -27,7 +28,7 @@ ms.lasthandoff: 04/19/2018
  安全ではない <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> インスタンスを使用する場合、または外部エンティティ ソースを参照する場合、パーサーは信頼されていない入力を受け入れ、攻撃者に機密情報を漏えいしてしまう可能性があります。
 
 ## <a name="rule-description"></a>規則の説明
- A*ドキュメント型定義 (DTD)*で定義されている 2 つの方法、XML パーサーは、ドキュメントの有効性を確認できますが、 [World Wide Web Consortium (W3C) Extensible Markup Language (XML) 1.0](http://www.w3.org/TR/2008/REC-xml-20081126/)です。 このルールは、信頼されていないデータを受け入れてしまうプロパティとインスタンスを検索し、 [サービス拒否 (DoS)](/dotnet/framework/wcf/feature-details/information-disclosure) 攻撃につながる可能性がある潜在的な [Information Disclosure](/dotnet/framework/wcf/feature-details/denial-of-service) の脅威について開発者に警告します。 このルールは、次の場合にトリガーされます。
+ A*ドキュメント型定義 (DTD)* で定義されている 2 つの方法、XML パーサーは、ドキュメントの有効性を確認できますが、 [World Wide Web Consortium (W3C) Extensible Markup Language (XML) 1.0](http://www.w3.org/TR/2008/REC-xml-20081126/)です。 このルールは、信頼されていないデータを受け入れてしまうプロパティとインスタンスを検索し、 [サービス拒否 (DoS)](/dotnet/framework/wcf/feature-details/information-disclosure) 攻撃につながる可能性がある潜在的な [Information Disclosure](/dotnet/framework/wcf/feature-details/denial-of-service) の脅威について開発者に警告します。 このルールは、次の場合にトリガーされます。
 
 -   <xref:System.Xml.XmlReader> を使用して外部 XML エンティティを解決する <xref:System.Xml.XmlUrlResolver>インスタンスで、DtdProcessing が有効になっている。
 

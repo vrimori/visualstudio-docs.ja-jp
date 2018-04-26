@@ -2,11 +2,8 @@
 title: MSBuild の予約済みおよび既知のプロパティ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild, reserved properties
 ms.assetid: 99333e61-83c9-4804-84e3-eda297c2478d
-caps.latest.revision: 29
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9eafd9de132e2fa71ddfb4016115d84ef222db26
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.openlocfilehash: 4d8979877a8cd1fbf60c617e9c03316a46a47879
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="msbuild-reserved-and-well-known-properties"></a>MSBuild の予約済みおよび既知のプロパティ
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] には、プロジェクト ファイルに関する情報と [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] のバイナリに関する情報を格納する一連の定義済みのプロパティが用意されています。 これらのプロパティは、他の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロパティと同じように評価されます。 たとえば、`MSBuildProjectFile` プロパティを使用するには、「`$(MSBuildProjectFile)`」と入力します。  
@@ -47,7 +43,7 @@ ms.lasthandoff: 04/10/2018
 |`MSBuildProjectDefaultTargets`|`DefaultTargets` 要素の `Project` 属性で指定されるターゲットの完全な一覧。 たとえば、次の `Project` 要素の `MSBuildDefaultTargets` プロパティの値は `A;B;C` となります。<br /><br /> `<Project DefaultTargets="A;B;C" >`|予約されています。|  
 |`MSBuildProjectDirectory`|プロジェクト ファイルがあるディレクトリの絶対パス。`C:\MyCompany\MyProduct` のようになります。<br /><br /> このプロパティに最後の円記号を含めないでください。|予約されています。|  
 |`MSBuildProjectDirectoryNoRoot`|ルート ドライブを除く `MSBuildProjectDirectory` のプロパティの値。<br /><br /> このプロパティに最後の円記号を含めないでください。|予約されています。|  
-|`MSBuildProjectExtension`|ピリオドを含むプロジェクト ファイルの名前の拡張子.proj のようになります。|予約されています。|  
+|`MSBuildProjectExtension`|ピリオドを含むプロジェクト ファイルの名前の拡張子。.proj のようになります。|予約されています。|  
 |`MSBuildProjectFile`|ファイル名の拡張子を含むプロジェクト ファイルの完全なファイル名。MyApp.proj のようになります。|予約されています。|  
 |`MSBuildProjectFullPath`|ファイル名の拡張子を含む、プロジェクト ファイルの絶対パスと完全なファイル名。C:\MyCompany\MyProduct\MyApp.proj のようになります。|予約されています。|  
 |`MSBuildProjectName`|ファイル名の拡張子のないプロジェクト ファイルの名前。MyApp のようになります。|予約されています。|  
@@ -79,5 +75,5 @@ ms.lasthandoff: 04/10/2018
 * 目的
 * Otherwise
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSBuild リファレンス](../msbuild/msbuild-reference.md) [MSBuild プロパティ](../msbuild/msbuild-properties.md)

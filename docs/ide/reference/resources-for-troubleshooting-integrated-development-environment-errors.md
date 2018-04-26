@@ -1,10 +1,9 @@
 ---
-title: 統合開発環境に関するエラーのトラブルシューティング情報 | Microsoft Docs
-ms.custom: ''
+title: 統合開発環境に関するエラーのトラブルシューティング情報
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: troubleshooting
 f1_keywords:
 - VS.Message.0x00005A89
 - VS.Message.0x00005A8E
@@ -96,11 +95,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 48516bd598719112a3a94216b3510b628579f032
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a87d0b6aeec41071fd1e1018155b0a7898ed4a6c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>統合開発環境に関するエラーのトラブルシューティング情報
 
@@ -120,6 +119,6 @@ ms.lasthandoff: 04/16/2018
 
 他のリソースを参照しても問題が解決しない場合は、[Microsoft サポート](http://go.microsoft.com/fwlink/?linkid=1782) Web サイトにアクセスして、Microsoft サポート サービスに問い合わせることができます。 お住まいの地域で利用できる製品サポートについては、「[ご意見](../../ide/talk-to-us.md)」をご覧ください。
 
- ## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
 * [プロキシ エラーのトラブルシューティング](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server#troubleshooting-proxy-errors)

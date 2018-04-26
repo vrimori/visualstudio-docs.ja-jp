@@ -6,14 +6,15 @@ ms.assetid: 0fb78bbc-7a78-4ab4-b32f-85ece912e660
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 58acdbba70ca60f5b48f1748ca9ea4ca3ad09f3e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0b81d67d6897826ab2f6de1e3b48663b18bffdb1
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-or-designer"></a>方法: LINQ to SQL クラス テーブルとビュー (O/R デザイナー) にマップを作成
 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] データベースのテーブルとビューにマップされているクラスと呼ばれます*エンティティ クラス*です。 エンティティ クラスはレコードにマップされますが、エンティティ クラスの個々のプロパティはレコードを構成する個々の列にマップされます。 テーブルまたはビューをドラッグすることによりデータベース テーブルまたはビューに基づくエンティティ クラスを作成する**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**上に、 [LINQ to SQL ツールVisual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)です。 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]クラスを生成し、固有の仕様を適用[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]を有効にする属性[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]機能 (データ通信編集および編集の機能、 <xref:System.Data.Linq.DataContext>)。 詳細については[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]クラスを参照してください[LINQ to SQL オブジェクト モデル](/dotnet/framework/data/adonet/sql/linq/the-linq-to-sql-object-model)です。
@@ -43,11 +44,11 @@ ms.lasthandoff: 04/19/2018
 
 1.  **ビルド** メニューのをクリックして**ソリューションのビルド**プロジェクトをビルドします。
 
-2.  **[データ]** メニューの **[データ ソースの表示]**をクリックします。
+2.  **[データ]** メニューの **[データ ソースの表示]** をクリックします。
 
-3.  **[データ ソース]** ウィンドウで、 **[新しいデータ ソースの追加]**をクリックします。
+3.  **[データ ソース]** ウィンドウで、 **[新しいデータ ソースの追加]** をクリックします。
 
-4.  をクリックして**オブジェクト**上、**データ ソースの種類を選択**ページし、をクリックして**[次へ]**です。
+4.  をクリックして**オブジェクト**上、**データ ソースの種類を選択**ページし、をクリックして **[次へ]** です。
 
 5.  ノードを展開し、クラスを探して選択します。
 

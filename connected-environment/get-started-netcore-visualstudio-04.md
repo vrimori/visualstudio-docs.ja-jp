@@ -1,18 +1,19 @@
 ---
 title: クラウドで Kubernetes と Visual Studio を使用して、コンテナーを含む .NET Core 開発環境を作成する - 手順 4 - Kubernetes でコンテナーをデバッグする | Microsoft Docs
-author: johnsta
-ms.author: johnsta
+author: ghogen
+ms.author: ghogen
 ms.date: 02/20/2018
-ms.topic: get-started-article
-ms.technology: vsce-kubernetes
+ms.topic: tutorial
+ms.prod: visual-studio-dev15
+ms.technology: vs-azure
 description: Azure でのコンテナーおよびマイクロサービスを使用する迅速な Kubernetes 開発
 keywords: Docker、Kubernetes、Azure、AKS、Azure Container Service、コンテナー
-manager: ghogen
-ms.openlocfilehash: 9b3aa6b0f710707800ea9a1f0533b0c37681ea05
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+manager: douge
+ms.openlocfilehash: 75588fcabbba739c4670da42e24665428ff89130
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-on-connected-environment-with-net-core-and-visual-studio"></a>Connected Environment で .NET Core と Visual Studio の使用を開始する
 

@@ -1,6 +1,7 @@
 ---
 title: Visual Studio のコード メトリックス データを生成する方法
 ms.date: 12/12/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,11 +13,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c412c90d77534a3359eb2ae640ba3a83cfddbc8b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 535c831ecaa08ff0eee2c6380d1c3d4045bca89a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-generate-code-metrics-data"></a>方法: コード メトリックス データを生成します。
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/19/2018
 
 1. **ソリューション エクスプ ローラー**、1 つまたは複数のプロジェクトを選択します。
 
-1. メニュー バーから選択**分析** > **コード メトリックスの計算** > **の < プロジェクト\>**です。
+1. メニュー バーから選択**分析** > **コード メトリックスの計算** > **の < プロジェクト\>** です。
 
    結果が生成され、**コード メトリックスの結果**ウィンドウが表示されます。
 

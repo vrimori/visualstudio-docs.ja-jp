@@ -1,5 +1,6 @@
 ---
-title: Visual Studio デバッガーを使用してマネージ コードを使用してデバッグ |Microsoft ドキュメント
+title: マネージ コードのデバッグ |Microsoft ドキュメント
+description: C# または Visual Studio デバッガーを使用して Visual Basic をデバッグします。
 ms.custom: mvc
 ms.date: 03/18/2018
 ms.technology: vs-ide-debug
@@ -12,13 +13,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e209ef4385466be1009b19dde850751695344afe
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0e895fe9844740fbb3fdd670ff53dfe0b72dbdfb
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="debug-with-managed-code-using-the-visual-studio-debugger"></a>Visual Studio デバッガーを使用してマネージ コードでデバッグします。
+# <a name="quickstart-debug-with-managed-code-using-the-visual-studio-debugger"></a>Visual Studio デバッガーを使用してマネージ コードを使用してクイック スタート: デバッグします。
 
 Visual Studio デバッガーでは、アプリのデバッグに役立つ多くの強力な機能を提供します。 このトピックでは、基本的な機能のいくつかを簡単に紹介します。
 
@@ -26,9 +27,9 @@ Visual Studio デバッガーでは、アプリのデバッグに役立つ多く
 
 1. Visual Studio で、**[ファイル]、[新しいプロジェクト]** の順に選択します。
 
-2. **Visual c#**または**Visual Basic**、選択**.NET Core**、中央のペインの **コンソール アプリケーション (.NET Core)**です。
+2. **Visual c#** または**Visual Basic**、選択 **.NET Core**、中央のペインの **コンソール アプリケーション (.NET Core)** です。
 
-     **[Console App (.NET Core)]** プロジェクト テンプレートが表示されない場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが起動します。 選択、 **.NET デスクトップ開発**と**.NET Core**ワークロード、順に選択**変更**です。
+     **[Console App (.NET Core)]** プロジェクト テンプレートが表示されない場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが起動します。 選択、 **.NET デスクトップ開発**と **.NET Core**ワークロード、順に選択**変更**です。
 
 3. ような名前を入力**MyDbgApp**  をクリック**OK**です。
 

@@ -16,14 +16,15 @@ ms.assetid: 73ee9759-0a90-48a9-bf7b-9d6fc17bff93
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 26a52b082d447a2a4f14d0d09036c6b5df63656a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 24338b2a6bc49a9a1a2a77e6395f60013c4465b7
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="handle-a-concurrency-exception"></a>同時実行例外を処理します。
 2 人のユーザーが同じデータベースの同じデータを同時に変更しようとすると、同時実行例外 (<xref:System.Data.DBConcurrencyException>) が発生します。 このチュートリアルをキャッチする方法を示しています。 Windows アプリケーションを作成、 <xref:System.Data.DBConcurrencyException>、エラーが発生した行を見つけて、その処理方法の戦略について説明します。
@@ -71,7 +72,7 @@ ms.lasthandoff: 04/19/2018
 
 1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
 
-2. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
+2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
 
 3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。
 
@@ -125,7 +126,7 @@ ms.lasthandoff: 04/19/2018
 
      フォームに表示される、<xref:System.Windows.Forms.DataGridView>からのデータで塗りつぶされているコントロール、`Customers`テーブル。
 
-2.  **デバッグ**メニューの [**デバッグの停止]**です。
+2.  **デバッグ**メニューの [**デバッグの停止]** です。
 
 ## <a name="handle-concurrency-errors"></a>同時実行エラーを処理します。
  エラーを処理する方法は、アプリケーションを制御する特定のビジネス ルールによって異なります。 このチュートリアルで、次の戦略を使用して、同時実行エラーを処理する方法の例とします。

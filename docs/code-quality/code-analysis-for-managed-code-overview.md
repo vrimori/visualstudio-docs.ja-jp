@@ -1,6 +1,7 @@
 ---
 title: Visual Studio でマネージ コードのコード分析
 ms.date: 03/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
@@ -13,11 +14,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 727a63d122871ff452365eea66e9a6e63a7c67b0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b7b992dadb703cf1c4f73830324e9934d7525645
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="overview-of-code-analysis-for-managed-code"></a>マネージ コードに対するコード分析の概要
 
@@ -33,7 +34,7 @@ Visual Studio 2017 が 2 つの方法でマネージ コードを分析して: l
 
 分析を実行するコード プロジェクトをビルドするたびに、**ビルドに対するコード分析を有効にする**プロジェクトのプロパティ ページ。 詳細については、次を参照してください。[する方法: 有効化と自動コード分析の無効にする](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)です。
 
-プロジェクトを手動でコード分析を実行するメニュー バーから選択**分析** > **コード分析を実行** > **でコード分析を実行\<プロジェクト>**です。
+プロジェクトを手動でコード分析を実行するメニュー バーから選択**分析** > **コード分析を実行** > **でコード分析を実行\<プロジェクト>** です。
 
 ## <a name="rule-sets"></a>規則セット
 

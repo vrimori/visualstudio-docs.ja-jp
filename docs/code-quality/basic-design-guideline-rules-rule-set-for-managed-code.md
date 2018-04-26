@@ -1,6 +1,7 @@
 ---
 title: マネージ コードの "基本デザイン ガイドライン規則" 規則セット
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: 7eb384f5-f961-400b-b151-115d92addc6a
@@ -9,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7f89418c140005e8449755eab7b217ac1c149d57
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 66c67c9c1a395c0684567acfed78c207422b59ba
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="basic-design-guideline-rules-rule-set-for-managed-code"></a>マネージ コードの "基本デザイン ガイドライン規則" 規則セット
 Microsoft 基本デザイン ガイドライン規則規則を理解し、使用するコードを容易に重点を置くセットを使用できます。 この規則セットを保守が容易なコードのベスト プラクティスを適用する場合や、プロジェクトにライブラリ コードが含まれている場合を含める必要があります。

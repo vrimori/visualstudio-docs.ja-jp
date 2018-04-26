@@ -1,6 +1,7 @@
 ---
 title: 'CA1013: オーバーロードする加算および減算で、演算子 equals をオーバーロードします'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -19,11 +20,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7fd43cc3077c037b70eaa8107563bd8f40b6a096
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 11841248192bc9b726076641e1219f54ab526447
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013: オーバーロードする加算および減算で、演算子 equals をオーバーロードします
 |||
@@ -73,10 +74,10 @@ return left.Equals(right);
 
  この例を実行すると、次の出力が生成されます。
 
- **不適切な型: {2, 2} {2, 2} の値が等しいか?いいえ**
-**適切な型: {3, 3} {3, 3} の値が等しいか?[はい]**
-**適切な型: {3, 3} {3, 3} は、= = しますか? [はい]**
-**不適切な型: {2, 2} {9,9} の値が等しいか?いいえ**
-**適切な型: {3, 3} {9,9} は、= = しますか? 違います**
+ **不適切な型: {2,2} {2,2}が等しいか?いいえ**
+**適切な型: {3,3} {3,3}が等しいか?[はい]**
+**適切な型: {3,3} {3,3}は、= = しますか? [はい]**
+**不適切な型: {2,2} {9,9}が等しいか?いいえ**
+**適切な型: {3,3} {9,9}は、= = しますか? 違います**
 ## <a name="see-also"></a>関連項目
  [等値演算子](/dotnet/standard/design-guidelines/equality-operators)

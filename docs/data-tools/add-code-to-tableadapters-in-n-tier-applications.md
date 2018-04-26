@@ -12,14 +12,15 @@ ms.assetid: dafac00e-df9d-4d4a-95a6-e34b4d099425
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 165d0e76eb030d8a173761733245c993115ed315
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 70c889f6cccd5605758dce05b2a0c4d405aa6714
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-code-to-tableadapters-in-n-tier-applications"></a>N 層アプリケーションの TableAdapters にコードを追加します。
 TableAdapter の部分クラス ファイルを作成し、コードを追加して、TableAdapter の機能を拡張することができます (コードを追加するのではなく、 *DatasetName*です。DataSet.Designer ファイル) です。 部分クラスでは、コードを複数の物理ファイルに分割する特定のクラスを有効にします。 詳細については、次を参照してください。[部分](/dotnet/visual-basic/language-reference/modifiers/partial)または[partial (型)](/dotnet/csharp/language-reference/keywords/partial-type)です。

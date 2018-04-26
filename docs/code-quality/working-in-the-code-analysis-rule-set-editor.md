@@ -1,6 +1,7 @@
 ---
 title: Visual Studio でのコード分析規則セット エディターを使用します。
 ms.date: 04/-4/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
@@ -11,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bd9f02142b803cc9a09fce79cb687ea521dea9e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0791cc3d4dadf132dc2da7ad591eaaca27a3a1dc
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>コード分析規則セット エディターを使用します。
 
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/19/2018
 |---------------------|-----------------|
 |**すべて展開します。**|すべてのグループに規則を示します。|
 |**すべて折りたたむ**|すべてのグループ内のルールを非表示にします。|
-|**Group By**|規則はグループ化するフィールドを指定します。 をクリックして**\<なし >**グループがない場合、ルールが表示されます。|
+|**Group By**|規則はグループ化するフィールドを指定します。 をクリックして**\<なし >** グループがない場合、ルールが表示されます。|
 |**列のオプション**|表示する規則のフィールドを指定します。|
 |**現在のソリューションには適用されませんを非表示にするルール**|れないソリューションと同じターゲットの種類のルールの表示と非表示を切り替えます。|
 |**コード分析エラーを生成できる規則を表示**|エラー アクションが割り当てられている規則の表示と非表示を切り替えます。|

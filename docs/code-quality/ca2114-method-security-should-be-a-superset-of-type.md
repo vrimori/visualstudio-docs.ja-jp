@@ -1,6 +1,7 @@
 ---
 title: 'CA2114: メソッドのセキュリティは型のスーパーセットにします'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,11 +16,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 915104e26f16005b8e0b8c4fa092be7c40d1ff7f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5d2fc6fb60dd837dd93de1db2758ee0e2c216850
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ca2114-method-security-should-be-a-superset-of-type"></a>CA2114: メソッドのセキュリティは型のスーパーセットにします
 |||
@@ -56,7 +57,7 @@ ms.lasthandoff: 04/19/2018
  この例を実行すると、次の出力が生成されます。
 
  **[すべてのアクセス許可]個人情報: 6/16/1964 12時 00分: 00 AM**
-**[書き込みアクセス許可がありません (の型によって要求)] の個人情報: 6/16/1964 12時 00分: 00 AM**
-**[いいえ読み取りアクセス許可 (によって要求されるメソッド)] の個人情報にアクセスできませんでした。 要求が失敗しました。**
+ **[書き込みアクセス許可がありません (の型によって要求)] の個人情報: 6/16/1964 12時 00分: 00 AM**
+ **[いいえ読み取りアクセス許可 (によって要求されるメソッド)] の個人情報にアクセスできませんでした。 要求が失敗しました。**
 ## <a name="see-also"></a>関連項目
  [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)[リンク確認要求](/dotnet/framework/misc/link-demands)[データとモデリング](/dotnet/framework/data/index)

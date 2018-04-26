@@ -1,6 +1,7 @@
 ---
 title: "\"ネイティブ最小規則\" 規則セット"
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: 2d898bc4-fba5-472e-8f09-b0c6b511c5a3
@@ -9,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d09b9e1486442177251c330b0281c9555006430
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1d037c06be1f0eb7acb3bad1c995679edab03730
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="native-minimum-rules-rule-set"></a>"ネイティブ最小規則" 規則セット
 Microsoft ネイティブ最小規則は、潜在的なセキュリティ ホールやアプリケーションのクラッシュなど、ネイティブ コードの最も重大な問題に注目します。 ネイティブ プロジェクトにカスタムの規則セットを作成する場合は、必ずこの規則セットを含める必要があります。

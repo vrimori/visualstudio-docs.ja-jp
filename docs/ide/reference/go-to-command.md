@@ -1,10 +1,9 @@
 ---
-title: GoTo コマンド | Microsoft Docs
-ms.custom: ''
+title: GoTo コマンド
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - edit.goto
 helpviewer_keywords:
@@ -16,40 +15,42 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b817fd11d2a731ad2c6347949f03906328c741f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b55e399dab41065fb96f9f3ac8e80484860f5187
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="go-to-command"></a>GoTo コマンド
-指定した行にカーソルを移動します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-Edit.GoTo [linenumber]  
-```  
-  
-## <a name="arguments"></a>引数  
- `linenumber`  
- 任意。 移動先の行番号を表す整数。  
-  
-## <a name="remarks"></a>コメント  
- 行番号は 1 から始まります。 `linenumber` の値が 1 未満の場合は、最初の行が表示されます。 `linenumber` の値が最終行の値より大きい場合は、最後の行が表示されます。  
-  
- `linenumber` の値が指定されていない場合は、**[指定行へ移動]** ダイアログ ボックスが表示されます。  
-  
- このコマンドのエイリアスは GoToLn です。  
-  
-## <a name="example"></a>例  
-  
-```  
->Edit.GoTo 125  
-```  
-  
-## <a name="see-also"></a>参照  
- [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
- [コマンド ウィンドウ](../../ide/reference/command-window.md)   
- [[検索/コマンド] ボックス](../../ide/find-command-box.md)   
- [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+指定した行にカーソルを移動します。
+
+## <a name="syntax"></a>構文
+
+```
+Edit.GoTo [linenumber]
+```
+
+## <a name="arguments"></a>引数
+ `linenumber`
+
+ 任意。 移動先の行番号を表す整数。
+
+## <a name="remarks"></a>コメント
+ 行番号は 1 から始まります。 `linenumber` の値が 1 未満の場合は、最初の行が表示されます。 `linenumber` の値が最終行の値より大きい場合は、最後の行が表示されます。
+
+ `linenumber` の値が指定されていない場合は、**[指定行へ移動]** ダイアログ ボックスが表示されます。
+
+ このコマンドのエイリアスは GoToLn です。
+
+## <a name="example"></a>例
+
+```
+>Edit.GoTo 125
+```
+
+## <a name="see-also"></a>参照
+
+- [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
+- [コマンド ウィンドウ](../../ide/reference/command-window.md)
+- [検索コマンド ボックス](../../ide/find-command-box.md)
+- [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)

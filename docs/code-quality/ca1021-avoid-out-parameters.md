@@ -1,6 +1,7 @@
 ---
 title: 'CA1021: out パラメーターを使用しません'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,11 +16,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 86503ae5abb994b5b1d687744371a57ff6086e43
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f62a88d8b3462d50b92cf2c7bcdf577ff736d19b
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ca1021-avoid-out-parameters"></a>CA1021: out パラメーターを使用しません
 |||
@@ -82,7 +83,7 @@ ms.lasthandoff: 04/19/2018
 ## <a name="try-pattern-methods"></a>パターンのメソッドを実行してください。
 
 ### <a name="description"></a>説明
- 実装するメソッド、**再試行\<もの >**パターンなど<xref:System.Int32.TryParse%2A?displayProperty=fullName>、この違反を発生させません。 次の例は、構造体 (値型) を実装する、<xref:System.Int32.TryParse%2A?displayProperty=fullName>メソッドです。
+ 実装するメソッド、**再試行\<もの >** パターンなど<xref:System.Int32.TryParse%2A?displayProperty=fullName>、この違反を発生させません。 次の例は、構造体 (値型) を実装する、<xref:System.Int32.TryParse%2A?displayProperty=fullName>メソッドです。
 
 ### <a name="code"></a>コード
  [!code-csharp[FxCop.Design.TryPattern#1](../code-quality/codesnippet/CSharp/ca1021-avoid-out-parameters_5.cs)]

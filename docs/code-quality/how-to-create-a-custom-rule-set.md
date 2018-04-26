@@ -1,6 +1,7 @@
 ---
 title: Visual Studio でカスタム コード分析ルールを作成します。
 ms.date: 04/04/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
@@ -12,11 +13,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f9297d862b0fa47ecc4f5b7b08f6b754e1b5dfc3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a3b1d9b436c3e3be4f241d18791744085be4ece9
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="custom-rule-sets"></a>カスタム規則セット
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/19/2018
 
      \- または -
 
-    - 選択 **\<[参照...] >**既存の規則セットを指定ではありません、ボックスの一覧です。
+    - 選択 **\<[参照...] >** 既存の規則セットを指定ではありません、ボックスの一覧です。
 
 4. 選択**開く**規則セット エディターで規則を表示します。
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/19/2018
 
 3. **[開く]** を選択します。
 
-   新しい*.ruleset*規則セット エディターでファイルが開きます。
+   新しい *.ruleset*規則セット エディターでファイルが開きます。
 
 ### <a name="create-a-custom-rule-set-from-multiple-rule-sets"></a>複数の規則セットから設定するカスタム ルールを作成します。
 
@@ -56,7 +57,7 @@ ms.lasthandoff: 04/19/2018
 
 2. **プロパティ**ページ、select、**コード分析**タブです。
 
-3. 選択**\<複数ルールの設定... を選択 >**から**この規則セットを実行**です。
+3. 選択**\<複数ルールの設定... を選択 >** から**この規則セットを実行**です。
 
 4. **の追加と削除規則セット**を新しいルール セットに含めるダイアログ ボックスで、ルール セットを選択します。
 

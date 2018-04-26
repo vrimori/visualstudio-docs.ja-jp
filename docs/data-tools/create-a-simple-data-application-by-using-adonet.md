@@ -9,14 +9,15 @@ ms.assetid: 2222841f-e443-4a3d-8c70-4506aa905193
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9501b9f33290f3b2116d6b84371675682e8deb05
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3d0b60bb4e7048e2dc49774ec69d3eea4fc0ce6c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET を使用して単純なデータ アプリケーションを作成します。
 
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/19/2018
 
 2. 右クリックして**データ接続**を選択して * * 新しい SQL Server データベースの作成..."です。
 
-3. **サーバー名**テキスト ボックスに、入力**(localdb) \mssqllocaldb**です。
+3. **サーバー名**テキスト ボックスに、入力 **(localdb) \mssqllocaldb**です。
 
 4. **新しいデータベース名**テキスト ボックスに、入力**Sales**、順に選択**OK**です。
 
@@ -125,11 +126,11 @@ ms.lasthandoff: 04/19/2018
  右クリックして、接続文字列を見つけることができます、 **Sales**内のデータ接続**サーバー エクスプ ローラー**を選択して**プロパティ**です。 検索、 **ConnectionString**プロパティ、しを使用して、CTRL + A Ctrl + C を選択し、文字列をクリップボードにコピーします。
 
 1.  C# の場合、使用している場合**ソリューション エクスプ ローラー**、展開、**プロパティ**ノード、プロジェクトの下で開き、 **Settings.settings**ファイル。
-    Visual Basic を使用している場合**ソリューション エクスプ ローラー**、] をクリックして**[すべてのファイル**、展開、 **My Project**ノードを開き、 **Settings.settings**ファイル。
+    Visual Basic を使用している場合**ソリューション エクスプ ローラー**、] をクリックして **[すべてのファイル**、展開、 **My Project**ノードを開き、 **Settings.settings**ファイル。
 
 2.  **名前**列、入力`connString`です。
 
-3.  **型**一覧で、 **(接続文字列)**です。
+3.  **型**一覧で、 **(接続文字列)** です。
 
 4.  **スコープ**一覧で、**アプリケーション**です。
 

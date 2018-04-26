@@ -6,14 +6,15 @@ ms.assetid: f8ef3a2c-029c-423b-9d9e-a4f1add4f640
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 820808a79c8ed18c08c6c54ba416c0993aac06d5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a1c0a7bc0659ecee5a65ca254f16eaa2d747ca76
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-save-and-edit-connection-strings"></a>方法: 接続文字列を保存および編集する
 Visual Studio アプリケーションで接続文字列 (アプリケーション設定とも呼ばれます)、アプリケーション構成ファイルに保存したり、アプリケーションに直接ハードコーディングできます。 接続文字列をアプリケーション構成ファイルに保存すると、アプリケーションの保守タスクが簡単になります。 接続文字列を変更する必要がある場合は、アプリケーション設定ファイルで接続文字列を更新できます (ソース コードで変更してアプリケーションをコンパイルし直す必要はありません)。

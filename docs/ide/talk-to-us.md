@@ -1,7 +1,9 @@
 ---
-title: ご意見 | Microsoft ドキュメント
+title: ご意見
 ms.custom: ''
 ms.date: 02/19/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-acquisition
 ms.topic: conceptual
 helpviewer_keywords:
 - product support [Visual Studio]
@@ -10,17 +12,15 @@ ms.assetid: e0846d4d-2ce1-48e3-b219-674ff070bf4e
 author: TerryGLee
 ms.author: tglee
 manager: douge
-ms.technology:
-- vs-acquisition
 ms.workload:
 - multiple
-ms.openlocfilehash: 12f6e61a967d7d551013926dbd580c706192bf3a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4fa70cac665c5673416b62aed6aa6ae0a9ebd805
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="talk-to-us"></a>Talk to Us
+# <a name="talk-to-us"></a>ご意見
 製品およびドキュメントをより良いものにするために、皆様のご意見をお寄せください。 いつも個別に回答できるとは限りませんが、お寄せいただいたフィードバックは、適切な担当者または担当チームに届けられます。  
 
 ## <a name="i-want-to-report-a-problem-with-visual-studio"></a>Visual Studio に関する問題を報告する方法
@@ -52,5 +52,5 @@ Microsoft サポート サービスは、当時最新だった価格、条項、
 ## <a name="i-want-to-help-improve-the-visual-studio-documentation"></a>Visual Studio ドキュメントの品質向上にご協力ください
 ページの下部にある **[このページは役に立ちましたか]** フィードバック ボタンをお使いください。 このボタンは、すべてのドキュメント ページに表示されます。 同じようにページの下部にある **[Sign in to give documentation feedback]\(サインインしてドキュメントのフィードバックを送る\)** ボタンを使用して、[docs.microsoft.com](https://docs.microsoft.com/visualstudio/) の任意の Visual Studio ページにフィードバックを追加することもできます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [Visual Studio に関する問題を報告する方法](how-to-report-a-problem-with-visual-studio-2017.md)

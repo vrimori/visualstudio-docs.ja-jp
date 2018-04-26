@@ -1,9 +1,9 @@
 ---
-title: コード スニペット ピッカー | Microsoft Docs
-ms.custom: ''
+title: コード スニペット ピッカー
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.expansionpicker
 helpviewer_keywords:
@@ -15,11 +15,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fb01cfc51591264b258518f4c90276a7ece11250
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 774ee47f02fe146caade0540be5ee2fb7f59904e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-snippet-picker"></a>コード スニペット ピッカー
 
@@ -47,15 +47,17 @@ Visual Studio コード エディターでは、**コード スニペット ピ�
 
 ## <a name="uielement-list"></a>UIElement の一覧
 
-項目名  
+項目名
+
 **[項目一覧]** で選択した項目の名前を表示する編集可能なテキスト フィールドです。 目的の項目のインクリメンタル検索を実行するには、このフィールドで名前の入力を開始します。 **[項目一覧]** で目的の項目が選択されるまで、文字の追加を続けます。
 
-項目一覧  
+項目一覧
+
 挿入に使用できるコード スニペットの一覧、またはコード スニペットを含むフォルダーの一覧です。 スニペットを挿入またはフォルダーを展開するには、目的の項目を選択して Enter キーを押します。
 
 ## <a name="see-also"></a>関連項目
 
-[コード スニペットを使用するためのベスト プラクティス](../../ide/best-practices-for-using-code-snippets.md)  
-[Visual Basic の IntelliSense コード スニペット](/dotnet/visual-basic/developing-apps/using-ide/intellisense-code-snippets)  
-[コードへのブックマークの設定](../../ide/setting-bookmarks-in-code.md)  
-[方法 : surround-with コード スニペットを使用する](../../ide/how-to-use-surround-with-code-snippets.md)
+- [コード スニペットを使用するためのベスト プラクティス](../../ide/best-practices-for-using-code-snippets.md)
+- [Visual Basic の IntelliSense コード スニペット](/dotnet/visual-basic/developing-apps/using-ide/intellisense-code-snippets)
+- [コードへのブックマークの設定](../../ide/setting-bookmarks-in-code.md)
+- [方法 : surround-with コード スニペットを使用する](../../ide/how-to-use-surround-with-code-snippets.md)

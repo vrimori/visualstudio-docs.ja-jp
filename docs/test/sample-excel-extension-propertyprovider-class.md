@@ -1,18 +1,19 @@
 ---
-title: 'Excel 拡張機能のサンプル: PropertyProvider クラス | Microsoft Docs'
+title: 'Excel 拡張子のサンプル: PropertyProvider クラス'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.topic: conceptual
+ms.topic: sample
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: a3da33b0c99c84f3680f323b483cebf31448ba62
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e4a1e96fc666275d83cf0f32edf00f0fc2f6c03c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sample-excel-extension-propertyprovider-class"></a>Excel 拡張子のサンプル: PropertyProvider クラス
 この内部クラスによって <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider> クラスが拡張されます。また、この内部クラスは、ユーザー インターフェイス (UI) テストの記録と再生に使用する [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)] 要素のプロパティ サービスを提供します。

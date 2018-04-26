@@ -1,9 +1,8 @@
 ---
-title: タスク一覧の使用 | Microsoft Docs
-ms.custom: ''
+title: タスク一覧の使用
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - TaskListWindow
@@ -17,11 +16,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ef9b3904ce06c498518d55b0d62b8e9393c75239
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3a0fb071186d816e852c695ffe1cceed29d23ff8
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-the-task-list"></a>タスク一覧の使用
 
@@ -115,4 +114,4 @@ Visual Studio 2015 以降、ユーザー タスク機能が削除されていま
 
 ## <a name="see-also"></a>関連項目
 
-[[タスク一覧] ([オプション] ダイアログ ボックス - [環境])](../ide/reference/task-list-environment-options-dialog-box.md)
+- [[タスク一覧] ([オプション] ダイアログ ボックス - [環境])](../ide/reference/task-list-environment-options-dialog-box.md)

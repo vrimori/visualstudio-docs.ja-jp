@@ -1,6 +1,7 @@
 ---
 title: コード分析のアプリケーション エラー
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 helpviewer_keywords:
@@ -14,11 +15,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b058612095bbb18d8e596beaecc1998be2e805a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3a9efc0ddb207bfc027f0eee0ae0cbb5bbbca330
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-analysis-application-errors"></a>コード分析のアプリケーション エラー
 このセクションでは、マネージ コード分析ツールによって生成されるエラー メッセージの参照です。 に特定のエラー メッセージのヘルプを取得するにはエラー番号を入力、**探します**ボックス インデックスにします。
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/19/2018
 |[CA0065](ca0065.md)|サポートされていないメタデータ構造: 型 '*TypeName*プロパティと同じ名前のフィールドの両方を含む'*PropertyFieldName*'|
 |[CA0066](ca0066.md)|値 '*VersionID*' に提供される、 **/targetframeworkversion**認識されているバージョンではありません。|
 |[CA0067](ca0067.md)|ディレクトリが見つかりません。|
-|[CA0068](ca0068.md)|デバッグ ターゲット アセンブリの情報が見つかりませんでした*'AssemblyName'*です。|
+|[CA0068](ca0068.md)|デバッグ ターゲット アセンブリの情報が見つかりませんでした *'AssemblyName'* です。|
 |[CA0069](ca0069.md)|別のプラットフォームを使用します。 *FrameworkVersion1*で見つかりませんでした。 使用して*FrameworkVersion2*代わりにします。 最良の分析結果は、正しい .NET Framework がインストールされていることを確認してください。|
 |[CA0070](ca0070.md)|アセンブリまたはセキュリティのアクセス許可のための型を読み込むことができません。|
 |[CA0501](ca0501.md)|出力レポートを読み取れません。|

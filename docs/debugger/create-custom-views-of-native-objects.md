@@ -1,5 +1,6 @@
 ---
-title: デバッガーでのネイティブ オブジェクトのカスタム ビューを作成 |Microsoft ドキュメント
+title: ネイティブ オブジェクトのカスタム ビューの作成
+description: Natvis フレームワークを使用して、Visual Studio が、デバッガーにネイティブ型を表示する方法をカスタマイズするには
 ms.custom: ''
 ms.date: 06/27/2017
 ms.technology: vs-ide-debug
@@ -14,11 +15,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38656b9c5ce4165f2a04b5e6d76411ce7f005855
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 01f051faa03e80caa672aee25a6d4abe3104faad
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-custom-views-of-native-objects-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでのネイティブ オブジェクトのカスタム ビューを作成します。
 Visual Studio の Natvis フレームワークでは、Visual Studio デバッガー変数ウィンドウでのネイティブ型の表示方法をカスタマイズすることができます (たとえば、**ウォッチ**ウィンドウで、**ローカル**ウィンドウで、し、 **データヒント**です。
