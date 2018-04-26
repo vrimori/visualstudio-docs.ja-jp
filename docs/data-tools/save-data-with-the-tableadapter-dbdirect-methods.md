@@ -14,14 +14,15 @@ ms.assetid: 74a6773b-37e1-4d96-a39c-63ee0abf49b1
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: aae296898bfcddfa451875fe78b29f2ae95fc9df
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 51f855cca05d2f9f7e6a86524da6bcf866eb0856
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>TableAdapter DBDirect メソッドを使ってデータを保存します。
 このチュートリアルでは、TableAdapter の DBDirect メソッドを使用して、データベースに対して直接 SQL ステートメントを実行する詳細な手順を提供します。 TableAdapter の DBDirect メソッドは、細かいレベル、データベースの更新で制御を提供します。 それらを使用して、個別に呼び出すことによって、特定の SQL ステートメントおよびストアド プロシージャを実行することができます`Insert`、 `Update`、および`Delete`アプリケーションで必要に応じてメソッド (オーバー ロードされたのではなく`Update`更新プログラムを実行するメソッド、INSERT、および DELETE のステートメントすべて 1 つの呼び出しで)。
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/19/2018
 
 1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
 
-2. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
+2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
 
 3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。
 

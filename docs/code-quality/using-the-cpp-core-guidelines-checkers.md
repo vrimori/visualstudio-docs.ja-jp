@@ -7,12 +7,13 @@ ms.author: mblome
 manager: wpickett
 dev_langs:
 - CPP
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
-ms.openlocfilehash: 7f1ec5df06cbe24008f0506b838c3743a572ea5b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 607b4f2d96e809f9c8b5aedf8362c5d5f54e097d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>C++ の主要なガイドライン チェッカーを使用します。
 C++ の主要なガイドラインは、ポータブル ガイドライン、ルール、および C++ の専門家とデザイナーで作成された C++ で記述に関するベスト プラクティスのセットです。 現在、visual Studio は、c++ のコード分析ツールの一部としてこれらの規則のサブセットをサポートします。 コア ガイドライン チェッカーが Visual Studio 2017 で既定でインストールされ[Visual Studio 2015 用の NuGet パッケージとして入手できます](#vs2015_corecheck)です。
@@ -29,7 +30,7 @@ C++ の主要なガイドラインは、ポータブル ガイドライン、ル
 
  ![コード分析の拡張機能設定のプロパティ ページ](../code-quality/media/cppcorecheck_codeanalysis_extensions.png "CPPCoreCheck_CodeAnalysis_Extensions")
 
- 有効にするにまたは C++ コアの確認規則セットを無効にする、開く、**プロパティ ページ**プロジェクトのダイアログ。 **構成プロパティ**、展開**コード分析**、**拡張**です。 横にドロップダウン リストで制御**を有効にする C++ Core のチェック (リリース済み)**または**を有効にする C++ コアを確認 (します試験段階)**を選択**はい**または**いいえ**です。 選択**OK**または**適用**して変更を保存します。
+ 有効にするにまたは C++ コアの確認規則セットを無効にする、開く、**プロパティ ページ**プロジェクトのダイアログ。 **構成プロパティ**、展開**コード分析**、**拡張**です。 横にドロップダウン リストで制御**を有効にする C++ Core のチェック (リリース済み)** または**を有効にする C++ コアを確認 (します試験段階)** を選択**はい**または**いいえ**です。 選択**OK**または**適用**して変更を保存します。
 
 ## <a name="examples"></a>使用例
  C++ コア チェックの規則を検索する問題のいくつかの例を次に示します。

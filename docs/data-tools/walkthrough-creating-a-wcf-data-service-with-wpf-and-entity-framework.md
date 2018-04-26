@@ -14,14 +14,15 @@ ms.assetid: da66ad1b-a25d-485c-af13-2d18f0422e3d
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1433620303c8bf300645681eeabcd12c4a9c36d7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d4ee4d9a1c64d39e6ef05f9c01b26686f13c6dea
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>チュートリアル: WPF および Entity Framework と WCF データ サービスを作成します。
 このチュートリアルは、単純なを作成する方法を示します[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]でホストされている、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションとして、Windows フォーム アプリケーションからアクセスします。
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/19/2018
 
 1.  メニュー バーで、次のように選択します。**ファイル**、**新規**、**プロジェクト**です。
 
-2.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual Basic**または**Visual c#**と**Web** 、ノードを選択し、 **ASP です。NET Web アプリケーション**テンプレート。
+2.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual Basic**または**Visual c#** と**Web** 、ノードを選択し、 **ASP です。NET Web アプリケーション**テンプレート。
 
 3.  **名前**テキスト ボックスに、入力**「NorthwindWeb**、を選択し、 **OK**ボタンをクリックします。
 
@@ -154,7 +155,7 @@ ms.lasthandoff: 04/19/2018
 
 1.  メニュー バーで、[ファイル] を選択**追加**、**新しいプロジェクト**です。
 
-2.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual Basic**または**Visual c#**ノードを選択し、 **Windows**ノード、をクリックして**Windows フォーム アプリケーション**です。
+2.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual Basic**または**Visual c#** ノードを選択し、 **Windows**ノード、をクリックして**Windows フォーム アプリケーション**です。
 
 3.  **[名前]** ボックスに「`NorthwindClient`」と入力して、**[OK]** を選択します。
 

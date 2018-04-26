@@ -7,12 +7,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 832cd34b2461a07e895272816324e41508fdbbd5
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 53858b110cb16509cd9067368cbd035d7ef40c88
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>方法: プログラム コード内のファイルからモデルを開く
 任意のアプリケーションでは、DSL モデルを開くことができます。
@@ -20,7 +21,7 @@ ms.lasthandoff: 04/20/2018
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張機能では、この目的で ModelBus を使用することができます。 ModelBus は、モデルまたはモデルでは、要素を参照しているとは移動された場合、モデルを検索するための標準のメカニズムを提供します。 詳細については、次を参照してください。 [Visual Studio Modelbus を使用してモデルを統合する](../modeling/integrating-models-by-using-visual-studio-modelbus.md)です。
 
 ## <a name="target-framework"></a>[対象とする Framework]
- 設定、**ターゲット フレームワーク**アプリケーション プロジェクトの**.NET Framework 4**です。
+ 設定、**ターゲット フレームワーク**アプリケーション プロジェクトの **.NET Framework 4**です。
 
 #### <a name="to-set-the-target-framework"></a>ターゲット フレームワークを設定するには
 
@@ -28,10 +29,10 @@ ms.lasthandoff: 04/20/2018
 
 2.  **ソリューション エクスプ ローラー**プロジェクトを右クリックし、クリックして**プロパティ**です。
 
-3.  プロジェクトのプロパティ ウィンドウで 、**アプリケーション** タブで、設定、**ターゲット フレームワーク**フィールドを**.NET Framework 4**です。
+3.  プロジェクトのプロパティ ウィンドウで 、**アプリケーション** タブで、設定、**ターゲット フレームワーク**フィールドを **.NET Framework 4**です。
 
 > [!NOTE]
->  これを行う場合でもを選択する必要があります**.NET Framework 4**プロジェクトの作成 ダイアログ ボックス。 ターゲット フレームワークにはなりません**.NET Framework 4 Client Profile**です。
+>  これを行う場合でもを選択する必要があります **.NET Framework 4**プロジェクトの作成 ダイアログ ボックス。 ターゲット フレームワークにはなりません **.NET Framework 4 Client Profile**です。
 
 ## <a name="references"></a>参照
  これらの参照を追加する必要がある、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]アプリケーション プロジェクト。

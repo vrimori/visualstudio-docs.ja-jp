@@ -1,6 +1,7 @@
 ---
 title: '方法 : コード分析辞書をカスタマイズする'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,11 +14,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 544343a701909957ff0c16a49beeaf081cf256b8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f1a0ecc19d5648d6ee9454a53c9b0a1ebcb5a2e1
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>方法 : コード分析辞書をカスタマイズする
 コード分析のスペル チェック、文法的な場合も、およびその他の名前付け規則のエラー コード内の識別子を確認する組み込みの辞書を使用して、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]ガイドラインです。 追加、削除、または条項、省略形、および組み込みの辞書に頭字語を変更するカスタム辞書 Xml ファイルを作成することができます。

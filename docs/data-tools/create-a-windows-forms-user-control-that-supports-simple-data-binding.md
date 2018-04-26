@@ -12,14 +12,15 @@ ms.assetid: b1488366-6dfb-454e-9751-f42fd3f3ddfb
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1088a20181d9af5072d5335c63f3cb3ace47f4db
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a484388223b7dae62f165e13b2fc75368b0e642f
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-simple-data-binding"></a>単純データ バインディングをサポートする Windows フォーム ユーザー コントロールを作成します。
 Windows アプリケーションでフォームにデータを表示する場合から既存のコントロールを選択できます、**ツールボックス**、またはアプリケーションが標準コントロールで利用できない機能に必要な場合は、カスタム コントロールを作成することができます。 このチュートリアルでは、<xref:System.ComponentModel.DefaultBindingPropertyAttribute> を実装するコントロールを作成する方法を示します。 <xref:System.ComponentModel.DefaultBindingPropertyAttribute> を実装するコントロールには、データにバインドできるプロパティを 1 つ含めることができます。 このようなコントロールは、<xref:System.Windows.Forms.TextBox> や <xref:System.Windows.Forms.CheckBox> に似ています。
@@ -76,7 +77,7 @@ Windows アプリケーションでフォームにデータを表示する場合
 
 1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
 
-2. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
+2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
 
 3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。
 
@@ -118,14 +119,14 @@ Windows アプリケーションでフォームにデータを表示する場合
      [!code-csharp[VbRaddataDisplaying#3](../data-tools/codesnippet/CSharp/create-a-windows-forms-user-control-that-supports-simple-data-binding_1.cs)]
      [!code-vb[VbRaddataDisplaying#3](../data-tools/codesnippet/VisualBasic/create-a-windows-forms-user-control-that-supports-simple-data-binding_1.vb)]
 
-3.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。
+3.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
 ## <a name="create-a-data-source-from-your-database"></a>データベースからデータ ソースを作成します。
  このステップでは、**データ ソース構成**データ ソースを作成するウィザードがに基づいて、 `Customers` Northwind サンプル データベース内のテーブルです。 接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。 Northwind サンプル データベースをセットアップする方法については、次を参照してください。[する方法: サンプル データベースをインストール](../data-tools/installing-database-systems-tools-and-samples.md)です。
 
 #### <a name="to-create-the-data-source"></a>データ ソースを作成するには
 
-1.  **[データ]** メニューの **[データ ソースの表示]**をクリックします。
+1.  **[データ]** メニューの **[データ ソースの表示]** をクリックします。
 
 2.  **データソース**ウィンドウで、**新しいデータ ソースの追加**を開始する、**データ ソース構成**ウィザード。
 

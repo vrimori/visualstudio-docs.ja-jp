@@ -1,9 +1,8 @@
 ---
-title: Visual Studio での設定の同期 |Microsoft ドキュメント
-ms.custom: ''
+title: Visual Studio での設定の同期
 ms.date: 01/23/2017
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.RoamingSettings
@@ -13,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d0f289fb10cfdbd79a639247a3d14a5a8ced6c10
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d642f580413020d62471b8b5f3ea030da4e39a12
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="synchronize-your-settings-in-visual-studio"></a>Visual Studio での設定の同期
 
@@ -69,4 +68,4 @@ Visual Studio 15.3 およびそれ以降では、`%userprofile%\Documents\Visual
 
 ## <a name="see-also"></a>関連項目
 
-[IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)
+- [IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)

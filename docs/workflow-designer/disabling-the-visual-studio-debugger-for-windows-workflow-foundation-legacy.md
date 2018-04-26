@@ -1,7 +1,9 @@
 ---
-title: Windows Workflow Foundation (レガシ) 用の Visual Studio デバッガーの無効化 |Microsoft ドキュメント
+title: ワークフロー デザイナーで Windows Workflow Foundation (レガシ) 用の Visual Studio デバッガーを無効にします。
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - workflows, disabling debugger
 - debugging workflows, disabling debugger
@@ -12,17 +14,17 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a609062f3f84538f7c1655cd5ca82971fc608f62
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 473ee507e35f5ec5df902df64ee34326dcf90a2b
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="disabling-the-visual-studio-debugger-for-windows-workflow-foundation-legacy"></a>Visual Studio Debugger for Windows Workflow Foundation の無効化 (レガシ)
 
-このトピックの内容が無効にする方法について説明します、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を構築する際に、構成ファイルを使用してデバッガー[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]従来の Windows ワークフロー デザイナー内のアプリケーションです。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。
+このトピックでは、従来の Windows ワークフロー デザイナーでの Windows Workflow Foundation (WF) アプリケーションの構築時に、構成ファイルを使用して Visual Studio デバッガーを無効にする方法について説明します。 .NET Framework version 3.5、または、WinFX を対象とする必要がある場合は、従来のワークフロー デザイナーを使用します。
 
- 既定では、[!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)] Debugger for [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] はホスト プロセスに対して有効です。 ワークフローのデバッグを無効にする必要があります明示的にオフにする"disableworkflowdebugging という"エントリを追加して**\<スイッチ >**内の要素、  **\<system.diagnostics >**ホスト構成ファイルのセクションです。
+ 既定では、ホスト プロセスに対して、Visual Studio デバッガーの Windows Workflow Foundation (WF) が有効にします。 ワークフローのデバッグを無効にする必要があります明示的にオフにする"disableworkflowdebugging という"エントリを追加して**\<スイッチ >** 内の要素、  **\<system.diagnostics >** ホスト構成ファイルのセクションです。
 
  次の例は、ワークフローのデバッグを無効化するためにホスト構成ファイルを変更する方法を示します。
 

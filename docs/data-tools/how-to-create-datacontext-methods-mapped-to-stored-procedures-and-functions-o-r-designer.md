@@ -6,14 +6,15 @@ ms.assetid: e7ca32f1-50b3-48af-ad92-ceafd749296a
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6d086157761bbade92e7b79973876d18bc52f2fd
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ffec139089f77a1d5c3ffd855e16f12b31e35c17
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-or-designer"></a>方法: ストアド プロシージャおよび関数 (O/R デザイナー) にマップされる DataContext メソッドの作成
 ストアド プロシージャおよび関数を追加することができます、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]として<xref:System.Data.Linq.DataContext>メソッドです。 データベースでストアド プロシージャまたは関数が実行メソッドを呼び出すと、必要なパラメーターを渡すこと、および戻り値の型のデータを返します、<xref:System.Data.Linq.DataContext>メソッドです。 詳細については<xref:System.Data.Linq.DataContext>メソッドを参照してください[DataContext メソッド (O/R デザイナー)](../data-tools/datacontext-methods-o-r-designer.md)です。

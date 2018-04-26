@@ -1,7 +1,9 @@
 ---
-title: 従来のステート マシン ワークフロー デザイナーの使用 |Microsoft ドキュメント
+title: ワークフロー デザイナーの従来のステート マシン ワークフロー デザイナーの使用
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - StateFinalizationActivity activity
 - StateActivity activity
@@ -17,16 +19,17 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 16178d2f83ef9cc45ef7007350e30d2b36d6993a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d6ad09c2e999d9432b3c4e1062cb3031eb20ff56
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-the-legacy-state-machine-workflow-designer"></a>従来のステート マシン ワークフロー デザイナーの使用
-新しいステート マシン ワークフロー プロジェクトを作成する場合[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]をターゲットとするか、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)]または[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]、いずれかを使用することもできます、**ステート マシン ワークフロー コンソール アプリケーション**または、 **ステート マシン ワークフロー ライブラリ**レガシ プロジェクト テンプレート。 これらのいずれかのステート マシン プロジェクト テンプレートを選択した場合、ステート マシン デザイナーが従来のワークフロー デザイナーのユーザー インターフェイスとして表示されます。 従来のステート マシン プロジェクト テンプレートの概要については、次を参照してください[する方法: 作成状態マシン ワークフロー コンソール アプリケーション (レガシ)](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md)と[する方法: ステート マシン ワークフロー ライブラリ (レガシ)作成](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md)。
 
- ステート マシン ワークフローは、ステート (状態) のセットで構成されます。 1 つのステートが初期状態として設定されます。 各ステートは特定のイベント セットを受信できます。 イベントに基づいて、別のステートへの移行を実行できます。 ステート マシン ワークフローには最終ステートを定義できます。 最終ステートに移行すると、ワークフローは完了します。
+新しいステート マシン ワークフロー プロジェクトを作成する、.NET Framework version 3.5、または、WinFX を対象とする Visual Studio 2010 では、ときに、いずれかを使用することもできます、**ステート マシン ワークフロー コンソール アプリケーション**または、 **ステート マシン ワークフロー ライブラリ**レガシ プロジェクト テンプレート。 これらのいずれかのステート マシン プロジェクト テンプレートを選択した場合、ステート マシン デザイナーが従来のワークフロー デザイナーのユーザー インターフェイスとして表示されます。 従来のステート マシン プロジェクト テンプレートの概要については、次を参照してください[する方法: 作成状態マシン ワークフロー コンソール アプリケーション (レガシ)](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md)と[する方法: ステート マシン ワークフロー ライブラリ (レガシ)作成](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md).
+
+ステート マシン ワークフローは、ステート (状態) のセットで構成されます。 1 つのステートが初期状態として設定されます。 各ステートは特定のイベント セットを受信できます。 イベントに基づいて、別のステートへの移行を実行できます。 ステート マシン ワークフローには最終ステートを定義できます。 最終ステートに移行すると、ワークフローは完了します。
 
 ## <a name="state-machine-designer-views"></a>ステート マシン デザイナーのビュー
  ステート マシン デザイナーは自由度の高いデザイナーです。デザイン サーフェイス上でアクティビティを自由に移動することができます。 ステート マシン デザイナーが 2 つのビュー:*状態*ビューと*イベント ドリブン*ビュー。

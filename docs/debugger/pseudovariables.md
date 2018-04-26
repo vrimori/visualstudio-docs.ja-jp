@@ -19,11 +19,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 256dd9ae424ffbfab08ec7e8a405528188bb756f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: e1a674e854aaf587aca28f096883839ebd82e1e8
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pseudovariables-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでの擬似変数
 擬似変数は変数ウィンドウで特定の情報を表示に使用される用語または**クイック ウォッチ**  ダイアログ ボックス。 通常の変数を入力するときと同様に、擬似変数を入力できます。 ただし、擬似変数は変数ではなく、プログラム内の変数名に対応しません。  
@@ -49,7 +49,7 @@ $handles
 |`$` *registername*<br /><br /> または<br /><br /> `@` *registername*|レジスタの内容を表示*registername*です。<br /><br /> 通常は、レジスタ名を入力するだけでレジスタの内容を表示できます。 この構文を使用する必要があるのは、レジスタ名で変数名をオーバーロードしている場合だけです。 レジスタ名が現在のスコープ内での変数名と同じであると、デバッガーは、その名前を変数名と解釈します。 これは、ような場合`$` *registername*または`@` *registername*に便利です。|  
 |`$clk`|クロック周期の時間を表示します。|  
 |`$user`|アプリケーションを実行しているアカウントのアカウント情報と共に、構造体を表示します。 セキュリティ上の理由から、パスワード情報は表示されません。|  
-|`$exceptionstack`|現在の Windows ランタイムの例外のスタック トレースを表示します。 `$ exceptionstack` UWP アプリでのみ機能します。 `$ exceptionstack` は、C++ および SHE の例外ではサポートされません。|  
+|`$exceptionstack`|現在の Windows ランタイムの例外のスタック トレースを表示します。 `$ exceptionstack` UWP アプリでのみ機能します。 `$ exceptionstack` C++ と SEH の例外はサポートされていません|  
 |`$ReturnValue`|.NET Framework メソッドの戻り値を表示します。|  
   
  C# と Visual Basic では、次の表に示す擬似変数を使用できます。  

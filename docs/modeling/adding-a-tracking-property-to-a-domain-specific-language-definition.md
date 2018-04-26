@@ -11,12 +11,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: c7adc5408ff1269196e5093fb3ff0a1c6d4e2ef8
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: aec41a7ad2c93d9ad5762f8e4c7e67ea93704f1f
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-a-tracking-property-to-a-domain-specific-language-definition"></a>ドメイン固有言語の定義に追跡プロパティを追加します。
 
@@ -123,7 +124,7 @@ A*ドメインを追跡*プロパティは、ユーザーが更新できるが�
 
 3.  **DSL のエクスプ ローラー**、展開、**ドメイン クラス**フォルダーを右クリックし、 **ExampleElement**ノードをクリックして**新しいドメインの型記述子の追加**.
 
-    1.  展開して、 **ExampleElement**ノード、および選択、**カスタム型記述子 (ドメインの型記述子)**ノード。
+    1.  展開して、 **ExampleElement**ノード、および選択、**カスタム型記述子 (ドメインの型記述子)** ノード。
 
     2.  **プロパティ**ウィンドウで、ドメインの型記述子の設定**カスタム コード化された**に**True**です。
 
@@ -149,7 +150,7 @@ A*ドメインを追跡*プロパティは、ユーザーが更新できるが�
 
 2.  新しいを右クリックし**CustomCode**フォルダーを指す**追加**、順にクリック**新しい項目の**です。
 
-3.  選択、**コード ファイル**テンプレートの設定、**名前**に`NamespaceTrackingProperty.cs`、順にクリック**[ok]**です。
+3.  選択、**コード ファイル**テンプレートの設定、**名前**に`NamespaceTrackingProperty.cs`、順にクリック **[ok]** です。
 
      NamespaceTrackingProperty.cs ファイルが作成され、編集用に開きます。
 

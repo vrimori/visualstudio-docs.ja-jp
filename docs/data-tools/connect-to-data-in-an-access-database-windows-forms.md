@@ -12,14 +12,15 @@ ms.assetid: 4159e815-d430-4ad0-a234-e4125fcbef18
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: da00528f7c5e2332f4aa599674f6dcb0929be125
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d15cf1d8e2d7a7178b6ffc423319fcadd8e00cad
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-data-in-an-access-database-windows-forms"></a>Access データベース (Windows フォーム) にデータへの接続します。
 Visual Studio を使用して、Access データベース (.mdf ファイルまたは .accdb ファイル) に接続することができます。 接続の定義後に表示される、データ、**データソース**ウィンドウです。 ここから、テーブルまたはビューをフォームにドラッグできます。
@@ -38,7 +39,7 @@ Visual Studio を使用して、Access データベース (.mdf ファイルま�
 
      ![その他の Windows のデータ ソースの表示](../data-tools/media/viewdatasources.png "ViewDataSources")
 
-3.  **[データ ソース]** ウィンドウで、 **[新しいデータ ソースの追加]**をクリックします。
+3.  **[データ ソース]** ウィンドウで、 **[新しいデータ ソースの追加]** をクリックします。
 
      **データ ソース構成ウィザード**が開きます。
 
@@ -54,7 +55,7 @@ Visual Studio を使用して、Access データベース (.mdf ファイルま�
 
      **データ ソースの変更** ダイアログ ボックスが表示されます。
 
-8.  データ ソースの一覧で選択**\<他\>**です。 **データ プロバイダー**ドロップダウン リストで、 **.NET Framework Data Provider for OLE DB**、順に選択**OK**です。
+8.  データ ソースの一覧で選択**\<他\>** です。 **データ プロバイダー**ドロップダウン リストで、 **.NET Framework Data Provider for OLE DB**、順に選択**OK**です。
 
 9. 戻り、**接続の追加**ダイアログ ボックスで、 **Microsoft Office 12.0 Access Database Engine OLE DB Provider**から、 **OLE DB プロバイダー**ドロップダウンします。
 
@@ -67,7 +68,7 @@ Visual Studio を使用して、Access データベース (.mdf ファイルま�
 
 10. 選択**次**上、**データ接続の選択**ページ。
 
-     データ ファイルは、現在のプロジェクトではありませんを示すダイアログ ボックスが表示する可能性があります。 **[はい]** または **[いいえ]**をクリックします。
+     データ ファイルは、現在のプロジェクトではありませんを示すダイアログ ボックスが表示する可能性があります。 **[はい]** または **[いいえ]** をクリックします。
 
 11. 選択**次**上、**接続文字列をアプリケーション構成ファイルに保存**ページ。
 
@@ -88,7 +89,7 @@ Visual Studio を使用して、Access データベース (.mdf ファイルま�
 
      ![その他の Windows のデータ ソースの表示](../data-tools/media/viewdatasources.png "ViewDataSources")
 
-3.  **[データ ソース]** ウィンドウで、 **[新しいデータ ソースの追加]**をクリックします。
+3.  **[データ ソース]** ウィンドウで、 **[新しいデータ ソースの追加]** をクリックします。
 
      **データ ソース構成ウィザード**が開きます。
 

@@ -6,14 +6,15 @@ ms.assetid: 97ec5a04-6e23-45a2-9226-d77ead854392
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0926100c4050f2cb792539b23320f727aa306a57
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7f0ef5829c89a10dcf985d0815ae8144b6cb791b
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cannot-create-an-association-ltassociation-namegt---property-types-do-not-match"></a>関連付けを作成できません&lt;association 名&gt;-プロパティの型が一致しません
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/19/2018
 
 3. 検査、**関連付けのプロパティ**同じデータ型のプロパティ を選択します。
 
-4. **[OK]**をクリックします。
+4. **[OK]** をクリックします。
 
 ## <a name="see-also"></a>関連項目
 

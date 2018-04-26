@@ -19,14 +19,15 @@ ms.assetid: 68bae3f6-ec9b-45ee-a33a-69395029f54c
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: bed7096fc35f9dd1439a0b15afb9761ab56fbe3c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 31bee5d824b612ddaeb264fe2f944746cdda68fa
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hierarchical-update"></a>階層更新
 *階層更新*参照整合性を維持しながらをデータベースに戻す (2 つ以上の関連するテーブルを含むデータセット) から更新されたデータを保存するプロセスを指します。 *参照整合性*はデータベース内の挿入、更新、および関連するレコードの削除の動作を制御する制約によって定義される一貫性規則を参照します。 たとえば、その顧客の注文を作成できないを許可する前に、顧客レコードの作成を強制する参照整合性を勧めします。  データセットのリレーションシップの詳細については、次を参照してください[データセットのリレーションシップ。](../data-tools/relationships-in-datasets.md)

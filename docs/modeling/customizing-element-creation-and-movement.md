@@ -11,12 +11,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 4747d41377d3f7cccce9142d0659251d3199714a
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 7d86dd961a5192d63cee9501eb16aaf51b3fd629
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customizing-element-creation-and-movement"></a>要素作成処理および要素移動処理のカスタマイズ
 要素にドラッグすること、ツールボックスから、または貼り付けの操作または移動を許可できます。 指定したリレーションシップを使用して移動された要素をターゲット要素にリンクされていることができます。
@@ -106,7 +107,7 @@ ms.lasthandoff: 04/20/2018
 
      パスのナビゲーション ツールを使用して、それぞれのパスを作成することができます。
 
-    1.  [**パスにあるリンクを作成することでプロセス マージ**、] をクリックして**\<のパスを追加 >**です。
+    1.  [**パスにあるリンクを作成することでプロセス マージ**、] をクリックして**\<のパスを追加 >** です。
 
     2.  リスト アイテムの右側にドロップダウン矢印をクリックします。 ツリー ビューが表示されます。
 

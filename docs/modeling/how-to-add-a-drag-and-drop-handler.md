@@ -7,12 +7,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 8b8d77f973ef58f7273ff5390828707f1d05c46c
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: a777c837b6bf33c44ac27e7307f3e0354e3a9c3a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>方法: ドラッグ アンド ドロップ ハンドラーを追加する
 ドラッグ アンド ドロップ イベントのハンドラーを DSL に追加し、ユーザーが他の図または [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の他の部分から項目を図の上にドラッグ可能にすることができます。 ダブルクリックなどのイベントのハンドラーを追加することもできます。 、ドラッグ アンド ドロップおよびダブルクリック ハンドラーと呼ばれる*ジェスチャ ハンドラー*です。
@@ -168,7 +169,7 @@ using System.Linq;
 
     1.  Visual Studio モデル バス拡張機能をまだインストールしていない場合はダウンロードしてインストールします。 詳細については、次を参照してください。 [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=185579)です。
 
-    2.  DSL デザイナーでソース DSL の DSL 定義ファイルを開きます。 デザイン サーフェイスを右クリックし、をクリックして**を有効にする Modelbus**です。 ダイアログ ボックスで、オプションの片方または両方を選択します。  **[OK]**をクリックします。 新しいプロジェクト "ModelBus" が DSL ソリューションに追加されます。
+    2.  DSL デザイナーでソース DSL の DSL 定義ファイルを開きます。 デザイン サーフェイスを右クリックし、をクリックして**を有効にする Modelbus**です。 ダイアログ ボックスで、オプションの片方または両方を選択します。  **[OK]** をクリックします。 新しいプロジェクト "ModelBus" が DSL ソリューションに追加されます。
 
     3.  をクリックして**すべてのテンプレートの変換**ソリューションをリビルドします。
 

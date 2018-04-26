@@ -1,7 +1,9 @@
 ---
-title: アクティビティにバインド&#39;s プロパティ ダイアログ ボックス (レガシ) |Microsoft ドキュメント
+title: ワークフロー デザイナーでは、アクティビティにバインド&#39;s プロパティ ダイアログ ボックス (レガシ)
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Workflow.ComponentModel.Design.ActivityBindForm.UI
 helpviewer_keywords:
@@ -12,18 +14,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a799b57169116343f5d83e54ce5bd87dedfd801
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8922864a32c08d8feaed11e530314176557a785f
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="bind-to-an-activity39s-property-dialog-box-legacy"></a>アクティビティにバインド&#39;s プロパティ ダイアログ ボックス (レガシ)
-このトピックについて説明する方法を使用して、**アクティビティのプロパティにバインド**従来の Windows ワークフロー デザイナー ダイアログ ボックス。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。
+# <a name="bind-to-an-activitys-property-dialog-box-legacy"></a>[アクティビティのプロパティへのバインド] ダイアログ ボックス (レガシ)
+
+このトピックについて説明する方法を使用して、**アクティビティのプロパティにバインド**従来の Windows ワークフロー デザイナー ダイアログ ボックス。 .NET Framework version 3.5、または、WinFX を対象とする必要がある場合は、従来のワークフロー デザイナーを使用します。
 
  依存関係プロパティのインスタンス型は、別のアクティビティのパブリック プロパティまたはイベントにバインドすることができます。 アクティビティのバインドの詳細については、次を参照してください。[依存関係プロパティの使用](http://go.microsoft.com/fwlink?LinkID=65007)です。
 
- 使用してバインドするプロパティを選択する、**アクティビティのプロパティにバインド** ダイアログ ボックス。 省略記号ボタンをクリックしてこのダイアログ ボックスを開く**[...]**で選択したプロパティのテキスト ボックスの最後に、**プロパティ**ウィンドウか、プロパティ ブラウザでプロパティ名の横に表示される青い感嘆符アイコンをクリックします。
+ 使用してバインドするプロパティを選択する、**アクティビティのプロパティにバインド** ダイアログ ボックス。 省略記号ボタンをクリックしてこのダイアログ ボックスを開く **[...]** で選択したプロパティのテキスト ボックスの最後に、**プロパティ**ウィンドウか、プロパティ ブラウザでプロパティ名の横に表示される青い感嘆符アイコンをクリックします。
 
  次の表は、ユーザー インターフェイス (UI) 要素の**アクティビティのプロパティにバインド** ダイアログ ボックス。
 

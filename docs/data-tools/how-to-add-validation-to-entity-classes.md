@@ -9,14 +9,15 @@ ms.assetid: 61107da9-7fa3-4dba-b101-ae46536f52c4
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6adcdd2d1bead72c1ff615731aa26be664f1f455
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 46eb04100f455bbd1d8dc26ad2b7c1a67e2da50d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-validation-to-entity-classes"></a>方法: エンティティ クラスに検証を追加
 *検証*エンティティ クラスは、データ オブジェクトに入力された値がオブジェクトのスキーマ、およびアプリケーションに対して設定された規則に制約に準拠していることを確認するプロセスです。 基になるデータベースに更新を送信する前にデータを検証すると、エラーを減らすことができます。 アプリケーションとデータベースの間で生じる可能性のあるラウンド トリップの回数も減ります。

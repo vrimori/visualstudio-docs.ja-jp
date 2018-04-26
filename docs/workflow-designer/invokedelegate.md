@@ -1,7 +1,9 @@
 ---
-title: InvokeDelegate |Microsoft ドキュメント
+title: ワークフロー デザイナー - InvokeDelegate
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - InvokeDelegate Designer
 - System.Activities.Statements.InvokeDelegate.UI
@@ -11,25 +13,29 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 93e41d98b156b6314158a1cc99e368092b0cf494
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3d68fa1b777663ff8975f8ce99100d8eddc5f05d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="invokedelegate"></a>InvokeDelegate
+
 **InvokeDelegate**デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.InvokeDelegate>アクティビティ。
 
 ## <a name="the-invokedelegate-activity"></a>InvokeDelegate アクティビティ
- <xref:System.Activities.Statements.InvokeDelegate> はパブリック デリゲートを呼び出します。
+
+<xref:System.Activities.Statements.InvokeDelegate> はパブリック デリゲートを呼び出します。
 
 ### <a name="using-the-invokedelegate-activity-designer"></a>InvokeDelegate アクティビティ デザイナーの使用
- **InvokeDelegate**アクティビティ デザイナーは含まれて、**プリミティブ**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**タブ[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)](または、選択**ツールバー**から、**ビュー**  メニューまたは CRTL + ALT + X です)。
 
- **InvokeDelegate**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**に、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]画面でアクティビティを通常配置など内、<xref:System.Activities.Statements.Sequence>です。 この操作により、InvokeDelegate という既定の <xref:System.Activities.Statements.InvokeDelegate> を持つ <xref:System.Activities.Activity.DisplayName%2A> アクティビティが作成されます。 <xref:System.Activities.Activity.DisplayName%2A>のヘッダーで編集できる、 **InvokeDelegate**アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。
+**InvokeDelegate**アクティビティ デザイナーは含まれて、**プリミティブ**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**ワークフロー デザイナーのタブ (または、選択**ツールバー**から、**ビュー**  メニューまたは CRTL + ALT + X です)。
+
+**InvokeDelegate**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**、ずっとアクティビティを通常配置しているような内に、ワークフロー デザイナー画面にドロップし、<xref:System.Activities.Statements.Sequence>です。 この操作により、InvokeDelegate という既定の <xref:System.Activities.Statements.InvokeDelegate> を持つ <xref:System.Activities.Activity.DisplayName%2A> アクティビティが作成されます。 <xref:System.Activities.Activity.DisplayName%2A>のヘッダーで編集できる、 **InvokeDelegate**アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。
 
 ### <a name="the-invokedelegate-properties"></a>InvokeDelegate プロパティ
- 次の表に、<xref:System.Activities.Statements.InvokeDelegate> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドで編集できます。また、その一部は[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]のデザイナー画面で編集できます。
+
+次の表に、<xref:System.Activities.Statements.InvokeDelegate> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドで編集することができ、一部は、ワークフロー Designerdesigner 画面で編集することができます。
 
 |プロパティ名|必須|使用方法|
 |-------------------|--------------|-----------|

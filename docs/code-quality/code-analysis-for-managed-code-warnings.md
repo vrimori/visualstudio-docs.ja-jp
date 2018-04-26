@@ -1,6 +1,7 @@
 ---
 title: マネージ コードの警告に対応するコードの解析
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -16,11 +17,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 201bc04e2a5d030d40a060feda2a9e3e9ad6d45e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a8c092543dc24be8ac84f683196f73c8fb264f9a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-analysis-for-managed-code-warnings"></a>マネージ コードの警告に対応するコードの解析
 マネージ コード分析ツールには、マネージ コード ライブラリの規則違反を示す警告機能があります。 警告は、デザイン、ローカリゼーション、パフォーマンス、セキュリティなどの規則の区分に分類されています。 個々の警告によって、マネージ コード分析規則の違反がわかります。 ここでは、マネージ コード分析の各警告について、詳細な説明と例を紹介します。

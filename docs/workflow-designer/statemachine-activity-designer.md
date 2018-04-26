@@ -1,7 +1,9 @@
 ---
-title: StateMachine アクティビティ デザイナー |Microsoft ドキュメント
+title: ワークフロー デザイナーの StateMachine アクティビティ デザイナー
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - StateMachine Designer
 - System.Activities.Statements.StateMachine.UI
@@ -11,20 +13,23 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 2e036c1921f5c6219947de9109f3a94092fa5395
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6a9860d4c6025e6d77a869573b133c6a034aff96
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="statemachine-activity-designer"></a>StateMachine アクティビティ デザイナー
+
 <xref:System.Activities.Statements.StateMachine> アクティビティには状態のコレクションが含まれており、一般的なステート マシン パラダイムを使用してワーク フローをモデル化します。
 
 ## <a name="using-the-statemachine-activity-designer"></a>StateMachine アクティビティ デザイナーの使用
- 追加する、<xref:System.Activities.Statements.StateMachine>アクティビティをドラッグ、 **StateMachine**からアクティビティ デザイナー、**ステート マシン**のセクションで、**ツールボックス**し、Windows ワークフローにドロップデザイナー画面。 この子の状態を追加する<xref:System.Activities.Statements.StateMachine>アクティビティをドラッグ、<xref:System.Activities.Statements.State>または<xref:System.Activities.Core.Presentation.FinalState>から、**ツールボックス**上にドロップし、 **StateMachine**です。
+
+追加する、<xref:System.Activities.Statements.StateMachine>アクティビティをドラッグ、 **StateMachine**からアクティビティ デザイナー、**ステート マシン**のセクションで、**ツールボックス**し、Windows ワークフローにドロップデザイナー画面。 この子の状態を追加する<xref:System.Activities.Statements.StateMachine>アクティビティをドラッグ、<xref:System.Activities.Statements.State>または<xref:System.Activities.Core.Presentation.FinalState>から、**ツールボックス**上にドロップし、 **StateMachine**です。
 
 ### <a name="statemachine-activity-properties-in-the-workflow-designer"></a>ワークフロー デザイナーでの StateMachine アクティビティのプロパティ
- 次の表に、ワークフロー デザイナーを使用して設定できる <xref:System.Activities.Statements.StateMachine> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドで編集できます。また、その一部はデザイナー画面で編集できます。
+
+次の表に、ワークフロー デザイナーを使用して設定できる <xref:System.Activities.Statements.StateMachine> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドで編集できます。また、その一部はデザイナー画面で編集できます。
 
 |プロパティ名|必須|使用方法|
 |-------------------|--------------|-----------|

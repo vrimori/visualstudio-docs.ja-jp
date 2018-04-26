@@ -12,14 +12,15 @@ ms.assetid: d15e4d31-2839-48d9-9e0e-2e73404d82a2
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: b62c39ea1c261612568cb0d228c9082fa2d19070
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 35733a737f10fccab7d9fd6cab350478182b2259
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-an-n-tier-data-application"></a>チュートリアル : n 層データ アプリケーションの作成
 *N 層*データ アプリケーションは複数の論理レイヤーに分離され、データにアクセスするアプリケーションまたは*階層*です。 アプリケーション コンポーネントをこのように別個の層に分離すると、アプリケーションの保守容易性とスケーラビリティが向上します。 これは、ソリューション全体を再設計しなくても 1 つの層に適用できる、新しい技術を簡単に導入できるようにすることで実現されます。 n 層アーキテクチャには、プレゼンテーション層、中間層、およびデータ層が存在します。 通常、中間層には、データ アクセス層、ビジネス ロジック層、および認証や検証などの共有コンポーネントが含まれます。 データ層には、リレーショナル データベースが含まれます。 通常、n 層アプリケーションでは、機密情報が中間層のデータ アクセス層に格納され、プレゼンテーション層にアクセスするエンド ユーザーから分離されます。 詳細については、次を参照してください。 [N 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)です。
@@ -77,7 +78,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
 
 1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
 
-2. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
+2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
 
 3. 中央のペインで、**クラス ライブラリ**プロジェクトの種類。
 
@@ -187,7 +188,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
 
 6.  **生成するメソッドの選択** ページで、入力**GetCustomers**の**メソッド名**で、 **DataTable を返す**セクションです。
 
-7.  **[完了]**をクリックします。
+7.  **[完了]** をクリックします。
 
 #### <a name="to-create-a-method-in-the-data-access-tier-that-returns-the-orders-table"></a>Orders テーブルを返すメソッドをデータ アクセス層に作成するには
 
@@ -201,9 +202,9 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
 
 5.  **生成するメソッドの選択** ページで、入力**GetOrders**の**メソッド名**で、 **DataTable を返す**セクションです。
 
-6.  **[完了]**をクリックします。
+6.  **[完了]** をクリックします。
 
-7.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。
+7.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
 ## <a name="adding-a-reference-to-the-data-entity-and-data-access-tiers-to-the-data-service"></a>データ サービスへの、データ エンティティ層およびデータ アクセス層への参照の追加
  データ サービスはデータセットと TableAdapter の情報を必要とするため、DataEntityTier プロジェクトおよび DataAccessTier プロジェクトへの参照を追加します。
@@ -216,7 +217,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
 
 3.  両方を選択、 **DataAccessTier**と**DataEntityTier**プロジェクト。
 
-4.  **[OK]**をクリックします。
+4.  **[OK]** をクリックします。
 
 ## <a name="adding-functions-to-the-service-to-call-the-getcustomers-and-getorders-methods-in-the-data-access-tier"></a>データ アクセス層の GetCustomers メソッドおよび GetOrders メソッドを呼び出す関数のサービスへの追加
  これで、データを返すメソッドをデータ アクセス層に含めることができました。次に、データ サービスにメソッドを作成して、データ アクセス層のメソッドを呼び出します。
@@ -279,7 +280,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
     }
     ```
 
-5.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。
+5.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
 ## <a name="creating-a-presentation-tier-to-display-data-from-the-data-service"></a>データ サービスのデータを表示するプレゼンテーション層の作成
  これで、データ アクセス層を呼び出すメソッドを持つデータ サービスをソリューションに含めることができました。次に、データ サービスを呼び出してデータをユーザーに表示する別のプロジェクトを作成します。 このチュートリアルでは、Windows フォーム アプリケーションを作成します。これは n 層アプリケーションのプレゼンテーション層です。

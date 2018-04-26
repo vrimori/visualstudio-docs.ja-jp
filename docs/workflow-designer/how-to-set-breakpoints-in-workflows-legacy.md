@@ -1,7 +1,9 @@
 ---
-title: '方法: ワークフロー (レガシ) 内のブレークポイントを設定 |Microsoft ドキュメント'
+title: 'ワークフロー デザイナー - 方法: ワークフロー (レガシ) 内のブレークポイントを設定'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - breakpoints, setting in workflows
 - debugging, setting breakpoints in workflows
@@ -13,16 +15,17 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 71d62395a4b719827cf33eacad46a650bd057c43
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c0c70b630404830fa8c733a7310e4700da8f08b3
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-set-breakpoints-in-workflows-legacy"></a>方法: ワークフロー内にブレークポイントを設定する (レガシ)
-このトピックにブレークポイントを設定する方法について説明[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]従来の Windows ワークフロー デザイナーを使用してアプリケーションを構築します。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] アプリケーションが [!INCLUDE[wf2](../workflow-designer/includes/wf2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。
 
- [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] の従来の[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]を使用して [!INCLUDE[wf2](../workflow-designer/includes/wf2_md.md)] アプリケーションを作成した場合、Visual Studio と同様に、ブレークポイントを C# および Visual Basic コードで設定できます。 設定したそれぞれのブレークポイントで、ワークフローの実行が停止します。
+このトピックで Windows Workflow Foundation (WF) アプリケーション、従来の Windows ワークフロー デザイナーを使用して、ビルドのブレークポイントを設定する方法について説明します。 Windows Workflow Foundation アプリケーションは、.NET Framework version 3.5、または、WinFX を対象とする必要がある場合は、従来のワークフロー デザイナーを使用します。
+
+ Windows Workflow Foundation アプリケーションをビルドする Visual Studio 2010 で、従来のワークフロー デザイナーを使用する場合は、Visual Studio の場合と、c# および Visual Basic コードでブレークポイントを設定できます。 設定したそれぞれのブレークポイントで、ワークフローの実行が停止します。
 
  ブレークポイントが 3 つの状態:*保留*、*バインド*、および*エラー*です。 ブレークポイントは設定時には「保留」になり、穴の空いた赤いアイコンで表示されます。 特定の種類のワークフローがランタイムによって読み込まれると、「バインド」になり、穴のない赤いアイコンで表示されます。 不適切な形式のブレークポイントを指定した場合 (たとえばアクティビティ名が無効など)、エラー ウィンドウが表示されます。 ブレークポイントはブレークポイント ウィンドウに追加されますが、小さな x 印が付きます。
 
@@ -50,7 +53,7 @@ ms.lasthandoff: 04/16/2018
 3.  内のアクティビティの名前を指定、**関数**この構文を使用してテキスト ボックス:`QualifiedActivityId[:[FullClassName][:InstanceId]]`です。
 
     > [!NOTE]
-    > アクティビティ名を使用する代わりに、必要に応じて、**関数**テキスト ボックスで、ワークフロー アクティビティの絶対パスを指定してブレークポイントを設定することができます。 たとえば、という名前のワークフロー ソリューション**WorkflowConsoleApplication1**という名前のソリューション内のワークフローと**Workflow1**アクティビティを使用すると呼ばれる**Delay1**. アクティビティ名を使用する**Delay1**とパスを指定または**delay1:workflowconsoleapplication1.workflow1:**または**delay1:workflowconsoleapplication1.workflow1:: {6614886A-608E-412B-BF98-99FF1559DDDF}**です。
+    > アクティビティ名を使用する代わりに、必要に応じて、**関数**テキスト ボックスで、ワークフロー アクティビティの絶対パスを指定してブレークポイントを設定することができます。 たとえば、という名前のワークフロー ソリューション**WorkflowConsoleApplication1**という名前のソリューション内のワークフローと**Workflow1**アクティビティを使用すると呼ばれる**Delay1**. アクティビティ名を使用する**Delay1**とパスを指定または**delay1:workflowconsoleapplication1.workflow1:** または**delay1:workflowconsoleapplication1.workflow1:: {6614886A-608E-412B-BF98-99FF1559DDDF}** です。
 
 4.  選択、 **IntelliSense を使用する**関数名を検証する チェック ボックスです。
 
@@ -58,7 +61,7 @@ ms.lasthandoff: 04/16/2018
 
 5.  選択**ワークフロー**から、**言語** ボックスの一覧です。
 
-6.  **[OK]**をクリックします。
+6.  **[OK]** をクリックします。
 
 ## <a name="see-also"></a>関連項目
 

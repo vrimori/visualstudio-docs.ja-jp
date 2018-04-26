@@ -1,6 +1,7 @@
 ---
 title: Visual Studio でマネージ コード用のカスタム コード分析チェックイン ポリシーの実装
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
@@ -13,11 +14,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c50daf82a5dc5774cae75ecab54f1455c1a1c251
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c60c682fe4613495a90b78c47189dc6b84b38399
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="implement-custom-code-analysis-check-in-policies-for-managed-code"></a>マネージ コード用のカスタム コード分析チェックイン ポリシーを実装します。
 
@@ -79,7 +80,7 @@ ms.lasthandoff: 04/19/2018
 
 3. **チェックイン ポリシーによって**リストで、ダブルクリック**コード分析**、ことを確認し、**マネージ コードのコード分析を強制** チェック ボックスをオンします。
 
-4. **この規則セットを実行**一覧で、クリックして**\<ソース管理からのルール セットの選択 >**です。
+4. **この規則セットを実行**一覧で、クリックして**\<ソース管理からのルール セットの選択 >** です。
 
 5. バージョン管理にチェックイン ポリシーの規則セット ファイルのパスを入力します。
 
@@ -110,10 +111,10 @@ ms.lasthandoff: 04/19/2018
 
 4. 必要に応じてで適切なオプションをクリックして、**構成**と**プラットフォーム**を一覧表示します。
 
-5. 指定した構成を使用してコード プロジェクトをビルドするたびにコード分析を実行するには選択、**を有効にするビルドに対するコード分析 (定数 CODE_ANALYSIS を定義)**チェック ボックスをオンします。
+5. 指定した構成を使用してコード プロジェクトをビルドするたびにコード分析を実行するには選択、**を有効にするビルドに対するコード分析 (定数 CODE_ANALYSIS を定義)** チェック ボックスをオンします。
 
 6. 他社製のコンポーネントのコードを無視するのには、選択、**生成されたコードから結果を表示しない**チェック ボックスをオンします。
 
-7. **この規則セットを実行**一覧で、クリックして **\<[参照...] >**です。
+7. **この規則セットを実行**一覧で、クリックして **\<[参照...] >** です。
 
 8. チェックイン ポリシーの規則セット ファイルのローカル バージョンを指定します。

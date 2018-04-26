@@ -1,6 +1,7 @@
 ---
 title: '方法: コード プロジェクト規則セットをチーム プロジェクトのチェックイン ポリシーと同期させる'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
@@ -11,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bb6f97495eec73e52751f79d92e2f078bd13b24
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: bcc6fe17d9f5e7666531086549eae6ad26741a22
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy"></a>方法: コード プロジェクト規則セットをチーム プロジェクトのチェックイン ポリシーと同期させる
 
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/19/2018
 
 3.  をクリックして**コード分析**です。
 
-4.  **この規則セットを実行**一覧で、クリックして **\<[参照...] >**です。
+4.  **この規則セットを実行**一覧で、クリックして **\<[参照...] >** です。
 
 5.  **開く** ダイアログ ボックスで、チェックイン ポリシーの規則セット ファイルを指定します。
 
@@ -61,6 +62,6 @@ ms.lasthandoff: 04/19/2018
 
 5.  コード プロジェクトのプロパティ ダイアログ ボックスを開き、表示、**コード分析**ページ。
 
-6.  **この規則セットを実行**一覧で、クリックして **\<[参照...] >**です。
+6.  **この規則セットを実行**一覧で、クリックして **\<[参照...] >** です。
 
 7.  **開く** ダイアログ ボックスで、規則セット ファイルを指定します。

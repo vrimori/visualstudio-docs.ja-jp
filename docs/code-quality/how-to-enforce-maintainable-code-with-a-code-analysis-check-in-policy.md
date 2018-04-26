@@ -1,6 +1,7 @@
 ---
 title: '方法: コード分析のチェックイン ポリシーを使用して保守が容易なコードを適用する'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 339308675350bb6e4445b1dd068eb07d66f34164
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6269b4839c552fa6a1e982226bbb311cb7d5e9d9
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>方法: コード分析チェックイン ポリシーの保守が容易なコードを適用します。
 
@@ -55,7 +56,7 @@ Team foundation バージョン管理の管理者は、チェックイン ポリ
 
     さらに、ビルドの成功を防ぐために規則違反する場合は、選択、**警告をエラーとして扱う**規則の説明の横にあるチェック ボックスです。
 
-3. **[OK]**をクリックします。 新しいチェックイン ポリシーは、将来のチェックインを今すぐに適用されます。
+3. **[OK]** をクリックします。 新しいチェックイン ポリシーは、将来のチェックインを今すぐに適用されます。
 
 ## <a name="see-also"></a>関連項目
 

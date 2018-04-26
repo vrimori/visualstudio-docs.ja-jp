@@ -1,7 +1,9 @@
 ---
-title: ワークフロー デザイナーの使用 |Microsoft ドキュメント
+title: ワークフロー デザイナーの使用
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - Workflow Designer [WFD], using
 - Visual Studio 2010 Workflow Designer [WFD], using
@@ -11,33 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b02fd7dad1b467b3b1690d0fc1f21afbe7c8da72
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e9e2211b48d3ed65a2487896d7820b5e62054e28
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="using-the-workflow-designer"></a>ワークフロー デザイナーの使用
-このセクションでは、組み込みのデザイナーと、複数のアクティビティ デザイナーによってホストされる式エディターを使用して、新しいアクティビティおよびワークフロー プロジェクトを作成する方法について詳しく説明します。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- [ワークフロー プロジェクトの作成](../workflow-designer/creating-a-workflow-project.md)  
- これらのテンプレートを使用してライブラリを作成する方法について説明します。  
-  
- [方法 : ツール ボックスにアクティビティを追加する](../workflow-designer/how-to-add-activities-to-the-toolbox.md)  
- ツールボックスにアクティビティを追加するさまざな方法を示します。  
-  
- [方法: 引数デザイナーを使用する](../workflow-designer/how-to-use-the-argument-designer.md)  
- 引数デザイナーを使用して、アクティビティとの間のデータの受け渡しを簡単に行う方法を示します。  
-  
- [変数デザイナーを使用する方法](../workflow-designer/how-to-use-the-variable-designer.md)  
- データ バインディング用途や条件ステートメントで使用する変数を作成する方法を示します。  
-  
- [方法: 式エディターを使用する](../workflow-designer/how-to-use-the-expression-editor.md)  
- 式エディターを使用して、式を入力および評価する方法を示します。  
-  
- [インポート デザイナーを使用する方法](../workflow-designer/how-to-use-the-imports-designer.md)  
- 式で使用する型の名前空間を入力する方法を示します。  
-  
- [階層リンク バーを使用する方法](../workflow-designer/how-to-use-breadcrumb-navigation.md)  
- アクティビティ間を移動する方法を示します。
+# <a name="use-the-workflow-designer"></a>ワークフロー デザイナーを使用する
+
+このセクションでは、組み込みのデザイナーと、複数のアクティビティ デザイナーによってホストされる式エディターを使用して、新しいアクティビティおよびワークフロー プロジェクトを作成する方法について詳しく説明します。

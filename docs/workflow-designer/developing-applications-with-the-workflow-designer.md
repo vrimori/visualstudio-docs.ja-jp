@@ -1,7 +1,9 @@
 ---
-title: ワークフロー デザイナーでアプリケーションの開発 |Microsoft ドキュメント
+title: ワークフロー デザイナーを使用したアプリケーションの開発
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - DefaultWorkflowDesigner
 - DefaultWorkflowDesigner.UI
@@ -16,34 +18,34 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c48e7b43b23e7bfe8887f437cc17e6db077c0e4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ecc9e42146bfa7de259551ff1c90d27201db5725
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="developing-applications-with-the-workflow-designer"></a>ワークフロー デザイナーを使用したアプリケーションの開発
 
-Windows ワークフロー デザイナーは、ビジュアル デザイナーとグラフィカルに作成してデバッグ用のデバッガー[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]内のアプリケーション、[!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)]でホストされている、[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]開発環境です。 テンプレートおよびアクティビティ デザイナーを使用して、複合ワークフロー アプリケーション、アクティビティ ライブラリ、または [!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] サービスを作成できます。 ワークフローの詳細については、次を参照してください。、 [Windows Workflow Foundation &#91;.NET Framework 4&#93;](http://msdn.microsoft.com/Library/9a23ea6b-d600-483e-89cd-8889cfec5f66)です。
+Windows ワークフロー デザイナーは、ビジュアル デザイナーでグラフィカルに作成して、Visual Studio 2010 の開発環境でホストされている .NET Framework 4 で Windows Workflow Foundation (WF) アプリケーションのデバッグ用のデバッガー。 複合ワークフロー アプリケーション、アクティビティ ライブラリ、またはテンプレートおよびアクティビティ デザイナーを使用して Windows Communication Foundation (WCF) サービスを作成することができます。 ワークフローの詳細については、次を参照してください。、 [Windows Workflow Foundation &#91;.NET Framework 4&#93;](http://msdn.microsoft.com/Library/9a23ea6b-d600-483e-89cd-8889cfec5f66)です。
 
- 以前のバージョンの[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]に追加された、この新バージョンの[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]のデザイン機能を次に示します。
+ ワークフロー デザイナーの古いバージョンとは別に、ワークフロー デザイナーのこの新しいバージョンを設定するいくつかの新しいデザイン機能を次に示します。
 
--   [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]は、[!INCLUDE[avalon1](../workflow-designer/includes/avalon1_md.md)] を使用して構築されています。 これにより、アクティビティ デザイナーのエクスペリエンスが向上し、大規模で複雑なワークフローに対するパフォーマンスが改善されます。
+-   ワークフロー デザイナーは、Windows Presentation Foundation (WPF) を使用して作成されています。 これにより、アクティビティ デザイナーのエクスペリエンスが向上し、大規模で複雑なワークフローに対するパフォーマンスが改善されます。
 
 -   カスタム アクティビティを、[!INCLUDE[avalon2](../workflow-designer/includes/avalon2_md.md)] で XAML を使用してデザインできます。また、アクティビティ デザイナーを作成するためのプログラミング モデルが単純化されています。
 
 -   Flowchart アクティビティの実装により、一般的なフローチャート モデル化スタイルを使用して、プログラム フローを視覚的に表現できます。
 
--   [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]の新しい変数デザイナーにより、ワークフロー内の変数を宣言してスコープを設定し、アクティビティにバインドできます。
+-   ワークフロー デザイナーは、新しい変数デザイナーを宣言し、ワークフロー内の変数のスコープをアクティビティにバインドします。
 
--   [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] では、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] ワークフロー内で Visual Basic 式を作成するときに、[!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)]で IntelliSense の機能をすべて利用できます。
+-   Visual Studio 2010 では、ワークフロー デザイナーは、.NET Framework 4 ワークフロー内の Visual Basic 式を作成するときにすべての IntelliSense 機能を提供します。
 
 -   デバッグ用の機能が XAML にも拡張されているため、XAML ワークフロー定義にブレークポイントを設定して、実行時に XAML コードにステップ インすることができます。ここでは、マネージ コードを扱う場合と同じように操作できます。
 
--   [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] の外側での[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]の再ホストが、以前のバージョンに比べて大幅に簡略化され、数行のコードのみになりました。
+-   Visual Studio の外部でワークフロー デザイナーを再ホストが大幅に簡略化と比較して以前のバージョンでのみ、数行のコードを必要とするようになりました。
 
 -   新しい<xref:System.Activities.Statements.Flowchart>アクティビティとその[フローチャート](../workflow-designer/flowchart-activity-designer.md)使い慣れたフローチャートをモデル化スタイルを使用して、プログラム フローを視覚化することです。
 
--   メッセージング アクティビティが強化されているため、完全な宣言型の (コードなし) [!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] サービスを記述できます。
+-   メッセージング アクティビティが強化された、許可を記述する完全な宣言型コードではなく Windows Communication Foundation (WCF) サービス。
 
--   **サービス参照を追加しています.**機能では、自動的に Web サービスにアクセスするアクティビティを生成することができます。
+-   **サービス参照を追加しています.** 機能では、自動的に Web サービスにアクセスするアクティビティを生成することができます。

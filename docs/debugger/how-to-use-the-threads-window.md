@@ -1,6 +1,7 @@
 ---
-title: '[スレッド] ウィンドウを使用するマルチ スレッド アプリケーションのデバッグ |Microsoft ドキュメント'
-ms.custom: H1HackMay2017
+title: マルチ スレッド アプリケーションをデバッグします。
+description: スレッド ウィンドウとデバッグの場所 ツールバーを使用して、Visual Studio でデバッグします。
+ms.custom: ''
 ms.date: 05/18/2017
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -18,11 +19,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 09fccc98f52c80a00c2c6a215742ae25b2fc7a4d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 37a9161011031c53ed16a9ab0918eb498f5fa270
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-debug-a-multithreaded-application-in-visual-studio-using-the-threads-window"></a>チュートリアル: [スレッド] ウィンドウを使用して Visual Studio でのマルチ スレッド アプリケーションをデバッグします。
 Visual Studio では、**スレッド**ウィンドウとその他のユーザー インターフェイスのマルチ スレッド アプリケーションのデバッグに役立つ要素です。 このチュートリアルで使用する方法、**スレッド**ウィンドウおよび**デバッグの場所**ツールバー。 その他のツールについては、次を参照してください。[マルチ スレッド アプリケーションのデバッグの開始](../debugger/get-started-debugging-multithreaded-apps.md)です。 このチュートリアルでは、わずか数分が完了することを理解するマルチ スレッド アプリケーションのデバッグの機能とします。   
@@ -41,7 +42,7 @@ Visual Studio では、**スレッド**ウィンドウとその他のユーザ�
   
 4.  **名前**ボックス名前 を入力します。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
      新しいコンソール プロジェクトが表示されます。 プロジェクトが作成されると、ソース ファイルが表示されます。 選択した言語に応じて、ソース ファイル名はそれぞれ Module1.vb、Program.cs、MyThreadWalkthroughApp.cpp などとなります。  
   

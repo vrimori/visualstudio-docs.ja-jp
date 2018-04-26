@@ -1,9 +1,9 @@
 ---
-title: '手順 2: Random オブジェクトおよびアイコンのリストの追加 | Microsoft Docs'
+title: '手順 2: Random オブジェクトおよびアイコンのリストの追加'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-acquisition
+ms.prod: visual-studio-dev15
+ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: 95faea28-eddc-4cfa-95fb-3b34b5a976d7
 author: TerryGLee
@@ -11,11 +11,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a4f6cf0b5b12c93de788e83c181c445a5fc6a50
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 51b4dd40c1467f954f46888c3582d98c6ace1a0c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="step-2-add-a-random-object-and-a-list-of-icons"></a>手順 2: Random オブジェクトおよびアイコンのリストの追加
 このステップでは、絵合わせゲームに使用する一連のアイコンを作成します。 各アイコンは、フォーム上の TableLayoutPanel 内の 2 つのランダムなセルに追加されます。 そのために、2 つの `new` ステートメントを使用して 2 つのオブジェクトを作成します。 1 つ目は、計算クイズ ゲームで使用したオブジェクトに似た `Random` オブジェクトです。 このコードでは、TableLayoutPanel 内のセルをランダムに選択するために使用します。 2 つ目は、初めての使用になるかもしれませんが、`List` オブジェクトです。ランダムに選択されたアイコンを格納するために使用します。

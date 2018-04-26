@@ -1,6 +1,7 @@
 ---
 title: マネージ コードの "拡張デザイン ガイドライン規則" 規則セット
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: a338caf2-b75d-4f23-a0f9-3024fa0bceac
@@ -9,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: d03dfd0dce846bd18d35e05e30e32502f38d030b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2842db460d0a8e3a31921d80cf4a0c3ea0bbc847
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extended-design-guidelines-rules-rule-set-for-managed-code"></a>マネージ コードの "拡張デザイン ガイドライン規則" 規則セット
 Microsoft 拡張デザイン ガイドライン規則規則セットは、報告される、使いやすさと保守容易性の問題を最大化する基本デザイン ガイドライン規則を展開します。 特に、命名に関するガイドラインに重点が置かれています。 この規則セットを保守が容易なコードを記述する最高レベルの基準を適用するか、プロジェクトにライブラリ コードが含まれている場合を検討する必要があります。

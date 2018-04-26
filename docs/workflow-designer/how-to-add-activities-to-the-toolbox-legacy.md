@@ -1,7 +1,9 @@
 ---
-title: '方法: 活動ツールボックスに追加 (レガシ) |Microsoft ドキュメント'
+title: 'ワークフロー デザイナー - 方法: 活動ツールボックスに追加 (レガシ)'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - Toolbox, adding activities
 - activities, adding to Toolbox
@@ -11,16 +13,17 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 779735cb1d163db9e7b05e2892d01a991a4a4c2c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 99a8e1cef2ff5ddd526133355c608fa5218573d1
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-activities-to-the-toolbox-legacy"></a>方法: ツールボックスにアクティビティを追加する (レガシ)
-対象とする従来の Windows ワークフロー デザイナーでワークフロー ソリューションを構築するときに、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)]または[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]ワークフロー プロジェクトにカスタム活動項目を追加することができます、およびそのデザイナーに配置している、**ツールボックス**の簡単にアクセスできます。 アクティビティを直接追加することも、**ツールボックス**ダイナミック リンク ライブラリ (DLL) からです。
 
-### <a name="to-add-an-activity-to-the-toolbox-from-a-dll"></a>DLL からツールボックスにアクティビティを追加するには
+ワークフロー プロジェクトにカスタム活動項目を追加することができます、.NET Framework version 3.5、または、WinFX を対象とする従来の Windows ワークフロー デザイナーでワークフロー ソリューションをビルドするときにられ、そのデザイナーで、**ツールボックス**の簡単にアクセスできます。 アクティビティを直接追加することも、**ツールボックス**ダイナミック リンク ライブラリ (DLL) からです。
+
+## <a name="to-add-an-activity-to-the-toolbox-from-a-dll"></a>DLL からツールボックスにアクティビティを追加するには
 
 1.  [ツールボックス] ウィンドウの画面を右クリックして**Windows ワークフロー**、順にクリック**アイテムの選択**です。
 

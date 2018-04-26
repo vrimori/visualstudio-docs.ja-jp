@@ -1,18 +1,20 @@
 ---
-title: '方法: ツールボックスにアクティビティを追加 |Microsoft ドキュメント'
+title: 'ワークフロー デザイナー - 方法: ツールボックスにアクティビティを追加'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: b3a8a785-5928-457a-8a50-30267e29503d
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: acb101f5dff84f7e8d586ce33c63adbe30fa0dbf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4edb752ca64afd899ac9b3e463b9d29e4b3b68a1
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-activities-to-the-toolbox"></a>方法 : ツール ボックスにアクティビティを追加する
 
@@ -27,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 3.  プロジェクトをビルドします。 ビルドが成功した場合の新しいカテゴリ、**ツールボックス**という"\<*プロジェクト名*>"をそのカテゴリに含まれるカスタム アクティビティが表示されます。
 
     > [!NOTE]
-    > ツールボックスがリセットされると、ソリューションを再構築しても、カスタム アクティビティは削除されます。 ツールボックスがリセットされた後、カスタム アクティビティを使用して再び読み込むには、[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] を再起動します。
+    > ツールボックスがリセットされると、ソリューションを再構築しても、カスタム アクティビティは削除されます。 リセットされた後に、カスタム アクティビティを使用して、ツールボックスを再作成するには、Visual Studio 2010 を再起動します。
 
     > [!NOTE]
     > ツールボックスには指定された名前の 1 つのアクティビティのみが表示できます。 異なるアセンブリからの 2 つのアクティビティのクラス名が同じ場合、1 つのみが表示されます。
@@ -47,7 +49,7 @@ ms.lasthandoff: 04/16/2018
 
 2.  **ツール**メニューの **ツールボックス アイテムの選択.**.
 
-3.  **ツールボックス アイテムの選択**ダイアログ ボックスで、 **System.Activities コンポーネント** タブの **を参照しています.**追加するカスタム アクティビティを含むアセンブリに移動します。
+3.  **ツールボックス アイテムの選択**ダイアログ ボックスで、 **System.Activities コンポーネント** タブの **を参照しています.** 追加するカスタム アクティビティを含むアセンブリに移動します。
 
 4.  アセンブリを選択し、をクリックして**OK**です。 カスタム アクティビティ コンポーネントがコンポーネントの一覧に追加され、自動的に選択されます。
 

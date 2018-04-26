@@ -1,7 +1,9 @@
 ---
-title: ExistsInCollection&lt;T&gt;アクティビティ デザイナー |Microsoft ドキュメント
+title: ワークフロー デザイナー - ExistsInCollection&lt;T&gt;アクティビティ デザイナー
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Activities.Statements.ExistsInCollection`1.UI
 ms.assetid: 0acf9a13-caf5-4bb4-ba22-ec37d2b7267a
@@ -10,24 +12,25 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a6175fdc9c0af417acb8bcfe9d4297172b31a2e3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4c5625f42489752647da57fad9956cff8c64b8f5
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="existsincollectionlttgt-activity-designer"></a>ExistsInCollection&lt;T&gt;アクティビティ デザイナー
-**ExistsInCollection\<T >**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.ExistsInCollection%601>アクティビティ。
+# <a name="existsincollectiont-activity-designer"></a>ExistsInCollection\<T > アクティビティ デザイナー
 
-## <a name="the-existsincollectiont-activity"></a>ExistsInCollection < T\>アクティビティ
+**ExistsInCollection\<T >** アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.ExistsInCollection%601>アクティビティ。
+
+## <a name="the-existsincollectiont-activity"></a>ExistsInCollection\<T > アクティビティ
  <xref:System.Activities.Statements.ExistsInCollection%601> アクティビティでは、指定した項目が特定のコレクションに存在するかどうかを確認します。
 
 ### <a name="using-the-existsincollectiont-activity-designer"></a>使用して、ExistsInCollection\<T > アクティビティ デザイナー
- **ExistsInCollection\<T >**アクティビティ デザイナーは含まれて、**コレクション**のカテゴリ、**ツールボックス**、 をクリックしてアクセスします。**ツールボックス**のタブ[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)](または、選択**ツールバー**から、**ビュー**メニューまたは CTRL + ALT + X です)。
+ **ExistsInCollection\<T >** アクティビティ デザイナーは含まれて、**コレクション**のカテゴリ、**ツールボックス**、 をクリックしてアクセスします。**ツールボックス**ワークフロー デザイナーのタブ (または、選択**ツールバー**から、**ビュー**メニューまたは CTRL + ALT + X です)。
 
- **ExistsInCollection\<T >**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**に、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]サーフェス任意の場所、アクティビティを通常配置など内部、<xref:System.Activities.Statements.Sequence>です。 これを作成、 <xref:System.Activities.Statements.ExistsInCollection%601> 、既定値を持つアクティビティ<xref:System.Activities.Activity.DisplayName%2A>の ExistsInCollection < Int32\>です。 (既定では、 *TypeArgument*は**Int32**です。 プロパティ グリッドで変更できます)。<xref:System.Activities.Activity.DisplayName%2A>ヘッダーの値を編集できます、 **ExistsInCollection < T\>** アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。 他のプロパティは、プロパティ グリッドで編集する必要があります。
+ **ExistsInCollection\<T >** からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**アクティビティを通常配置しているような内の場所に、ワークフロー デザイナー画面にドロップし、<xref:System.Activities.Statements.Sequence>です。 これを作成、 <xref:System.Activities.Statements.ExistsInCollection%601> 、既定値を持つアクティビティ<xref:System.Activities.Activity.DisplayName%2A>の ExistsInCollection < Int32\>です。 (既定では、 *TypeArgument*は**Int32**です。 プロパティ グリッドで変更できます)。<xref:System.Activities.Activity.DisplayName%2A>ヘッダーの値を編集できます、 **ExistsInCollection < T\>** アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。 他のプロパティは、プロパティ グリッドで編集する必要があります。
 
-### <a name="the-existsincollectiont-properties"></a>ExistsInCollection < T\>プロパティ
+### <a name="the-existsincollectiont-properties"></a>ExistsInCollection\<T > のプロパティ
  次の表に、<xref:System.Activities.Statements.ExistsInCollection%601> のプロパティと、デザイナーでのその使用方法を示します。
 
 |プロパティ名|必須|使用方法|

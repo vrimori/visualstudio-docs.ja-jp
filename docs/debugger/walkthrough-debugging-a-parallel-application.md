@@ -1,6 +1,7 @@
 ---
-title: 'チュートリアル: 並行アプリケーションのデバッグ |Microsoft ドキュメント'
-ms.custom: H1HackMay2017
+title: 並行アプリケーションをデバッグ |Microsoft ドキュメント
+description: Visual Studio で [並列タスクと並列スタック] ウィンドウを使用したデバッグします。
+ms.custom: ''
 ms.date: 03/22/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -23,11 +24,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aceeb00f81bb858b1cebe19168b7366f08562745
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 055abb1f1c21dd570df954c80ff78a7d926ba23f
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-debugging-a-parallel-application-in-visual-studio"></a>チュートリアル: Visual Studio での並行アプリケーションのデバッグ
 このチュートリアルで使用する方法、**並列タスク**と**並列スタック**並列アプリケーションをデバッグする windows です。 これらの windows のヘルプを把握し、使用するコードの実行時の動作を確認する、[タスク並列ライブラリ (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)または[同時実行ランタイム](/cpp/parallel/concrt/concurrency-runtime)です。 このチュートリアルには、ブレークポイントが組み込まれたサンプル コードが用意されています。 コードが中断されたら、チュートリアルで使用する方法、**並列タスク**と**並列スタック**を調査する windows です。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/18/2018
 -   グループ化やズームなどの機能を使用してウィンドウの表示を調整する方法  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルの前提条件を**マイ コードのみ**が有効になっている (これはより新しいバージョンの Visual Studio で既定で有効) です。 **ツール**] メニューのをクリックして**オプション**、展開、**デバッグ**ノード、[**全般**、し、[**を有効にします。マイ コードのみ] (マネージのみ)**です。 この機能が設定されていなくてもこのチュートリアルを使用できますが、図と異なる結果になる可能性があります。  
+ このチュートリアルの前提条件を**マイ コードのみ**が有効になっている (これはより新しいバージョンの Visual Studio で既定で有効) です。 **ツール**] メニューのをクリックして**オプション**、展開、**デバッグ**ノード、[**全般**、し、[**を有効にします。マイ コードのみ] (マネージのみ)** です。 この機能が設定されていなくてもこのチュートリアルを使用できますが、図と異なる結果になる可能性があります。  
   
 ## <a name="c-sample"></a>C# のサンプル  
  C# のサンプルを使用する場合は、外部コードが非表示になっていることも前提になります。 外部コードが表示されるかどうかを切り替えるを右クリックして、**名前**のテーブルのヘッダー、**呼び出し履歴** ウィンドウで、オンまたはオフ**外部コードの表示**です。 この機能が設定されていなくてもこのチュートリアルを使用できますが、図と異なる結果になる可能性があります。  

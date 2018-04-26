@@ -9,12 +9,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: cd78d2c1e04ac37361d1e35c0f65b2e1c6637aea
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 4eb1b80eaa5b0af600fa45ba0cbe4786043f1580
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="read-models-and-diagrams-in-other-visual-studio-editions"></a>Visual Studio の他のエディションでモデルおよびダイアグラムを読み取る
 モデルの作成をサポートしていないバージョンの Visual Studio でモデルを開くと、モデルは読み取り専用モードで開きます。 このモードでは、ダイアグラムのレイアウトは変更できますが、モデルは変更できません。
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/20/2018
 
 -   図形を展開および折りたたむ。
 
- これらの変更は保存できます。 変更内容を他のユーザーに表示されるようにする場合は、する必要がありますには、少なくとも送信する、更新された**.layout**ファイル。
+ これらの変更は保存できます。 変更内容を他のユーザーに表示されるようにする場合は、する必要がありますには、少なくとも送信する、更新された **.layout**ファイル。
 
 ##  <a name="RelatedTopics"></a> 関連トピック
 

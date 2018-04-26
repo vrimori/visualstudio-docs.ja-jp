@@ -1,7 +1,9 @@
 ---
-title: テーマ構成ダイアログ ボックス (レガシ) |Microsoft ドキュメント
+title: ワークフロー デザイナーのテーマ構成ダイアログ ボックス (レガシ)
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Workflow.ComponentModel.Design.ThemeConfigurationDialog.UI
 helpviewer_keywords:
@@ -13,20 +15,21 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 46ec33bbce8ee8ac770607d77918547fdbd705ec
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 07ae376a09afd73c5744f7d1587c637a4b55410d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="theme-configuration-dialog-box-legacy"></a>[テーマの構成] ダイアログ ボックス (レガシ)
-このトピックについて説明する方法を使用して、**テーマの構成**従来の Windows ワークフロー デザイナー ダイアログ ボックス。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。
 
- テーマは、ワークフローの背景色、前景色、スタイル、アイコン、その他のビジュアル要素を定義します。 テーマを保存し、他のワークフローで再利用できます。
+このトピックについて説明する方法を使用して、**テーマの構成**従来の Windows ワークフロー デザイナー ダイアログ ボックス。 .NET Framework version 3.5、または、WinFX を対象とする必要がある場合は、従来のワークフロー デザイナーを使用します。
 
- 作成してテーマを使用して、編集、**テーマの構成** ダイアログ ボックス。 ダイアログ ボックスを開くには、次のように選択します。**新しいテーマの作成**上、**ワークフロー**  メニューまたはワークフローのデザイン画面を選択して右クリック**新しいテーマの作成**です。
+テーマは、ワークフローの背景色、前景色、スタイル、アイコン、その他のビジュアル要素を定義します。 テーマを保存し、他のワークフローで再利用できます。
 
- 次の表は、ユーザー インターフェイス (UI) 要素の**テーマの構成** ダイアログ ボックス。
+作成してテーマを使用して、編集、**テーマの構成** ダイアログ ボックス。 ダイアログ ボックスを開くには、次のように選択します。**新しいテーマの作成**上、**ワークフロー**  メニューまたはワークフローのデザイン画面を選択して右クリック**新しいテーマの作成**です。
+
+次の表は、ユーザー インターフェイス (UI) 要素の**テーマの構成** ダイアログ ボックス。
 
 |UI 要素|説明|
 |----------------|-----------------|

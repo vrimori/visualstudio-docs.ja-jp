@@ -1,6 +1,7 @@
 ---
 title: コードの不具合のマネージ コードのチュートリアルの分析 |Microsoft ドキュメント
 ms.date: 01/29/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 98d1bbd347870bd704a0d17d7ae559da00e9adb5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: bb13e88e07741327088e8d138dfcf8b92a9075a6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-analyzing-managed-code-for-code-defects"></a>チュートリアル: コードの分析のマネージ コードを欠陥します。
 
@@ -29,9 +30,9 @@ ms.lasthandoff: 04/19/2018
 
 1. **[ファイル]** メニューで、**[新規]** > **[プロジェクト]** の順に選択します。
 
-1. **新しいプロジェクト** ダイアログ ボックスで、展開**インストール** > **Visual c#**を選択し**Windows クラシック デスクトップ**です。
+1. **新しいプロジェクト** ダイアログ ボックスで、展開**インストール** > **Visual c#** を選択し**Windows クラシック デスクトップ**です。
 
-1. 選択、**クラス ライブラリ (.NET Framework)**テンプレート。
+1. 選択、**クラス ライブラリ (.NET Framework)** テンプレート。
 
 1. **名前**テキスト ボックスで、「 **CodeAnalysisManagedDemo**順にクリック**OK**です。
 
@@ -141,7 +142,7 @@ ms.lasthandoff: 04/19/2018
 
    1. 選択、**アセンブリに署名**チェック ボックスをオンします。
 
-   1. **厳密な名前キー ファイルを選択**一覧で、 **\<新規… >**です。
+   1. **厳密な名前キー ファイルを選択**一覧で、 **\<新規… >** です。
 
       **厳密な名前キーの作成** ダイアログ ボックスが表示されます。
 

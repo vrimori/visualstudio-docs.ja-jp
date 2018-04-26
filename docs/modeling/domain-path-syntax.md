@@ -9,12 +9,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a5b1cc36ba82d0713bc8a03fc8b0760af4f65164
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: de364760b5d7446b050cd8931ea2e95867b88e81
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="domain-path-syntax"></a>ドメイン パス構文
 DSL 定義は XPath に似た構文を使用して、モデル内の特定の要素を見つけます。
@@ -27,7 +28,7 @@ DSL 定義は XPath に似た構文を使用して、モデル内の特定の要
 
  ![CommentReferencesSubjects 参照リレーションシップ](../modeling/media/dsl_reference.png "dsl_reference")
 
- 構文はモデルのツリーを走査します。 たとえば、ドメイン リレーションシップ**CommentReferencesSubjects**上の図では、**サブジェクト**ロール。 パス セグメント**/!Subjectt**を介してアクセスされる要素のパスが終了するを指定します、**サブジェクト**ロール。
+ 構文はモデルのツリーを走査します。 たとえば、ドメイン リレーションシップ**CommentReferencesSubjects**上の図では、**サブジェクト**ロール。 パス セグメント **/!Subjectt**を介してアクセスされる要素のパスが終了するを指定します、**サブジェクト**ロール。
 
  各セグメントの先頭はドメイン リレーションシップの名前になっています。 パスのセグメントとして表示されますが場合は、走査の各要素からリレーションシップを*Relationship.PropertyName*です。 ホップは、要素へのリンクからは、パスのセグメントとして表示されます*リレーションシップ/!RoleName*です。
 

@@ -18,14 +18,15 @@ ms.assetid: fae72958-0893-47d6-b3dd-9d42418418e4
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: c6c2ea2b46fcd05360e079dc84da9bfe807ff489
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d54811f2fe46733d256a473c5fcb1c523a15a71e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="read-xml-data-into-a-dataset"></a>XML データをデータセットに読み込む
 ADO.NET では、XML データを操作するための簡単な方法を提供します。 このチュートリアルでは、データセットに XML データを読み込む Windows アプリケーションを作成します。 データセットが表示されます、<xref:System.Windows.Forms.DataGridView>コントロール。 最後に、XML ファイルの内容に基づいて XML スキーマは、テキスト ボックスに表示されます。
@@ -52,7 +53,7 @@ ADO.NET では、XML データを操作するための簡単な方法を提供�
 
 1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
 
-2. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
+2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
 
 3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。
 

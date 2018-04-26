@@ -1,7 +1,9 @@
 ---
-title: '方法: ワークフロー プロジェクト (レガシ) に新しい項目を追加 |Microsoft ドキュメント'
+title: 'ワークフロー デザイナー - 方法: ワークフロー プロジェクト (レガシ) に新しい項目を追加'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - sequential workflows, adding to workflow projects
 - workflows, adding new items
@@ -13,16 +15,17 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1699b3f2d16bb481a7efb744eed58d395dbc8773
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6d6e9607f4924057568849fd7eabd4567130dc2f
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-a-new-item-to-a-workflow-project-legacy"></a>方法: ワークフロー プロジェクトに新しい項目を追加する (レガシ)
-によって提供される従来の Windows ワークフロー デザイナーを使用して、ワークフロー プロジェクトを作成した後[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]をターゲットとするか、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)]または[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]、追加することができます[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]項目やその他の一般的な[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]アイテムをプロジェクトです。
 
- 次の表は、ワークフロー プロジェクトに追加できる [!INCLUDE[wf2](../workflow-designer/includes/wf2_md.md)] 項目の一覧です。
+従来の Windows ワークフロー デザイナーが Visual Studio 2010 で提供されるをターゲットと .NET Framework バージョン 3.5 または、WinFX のいずれかを使用して、ワークフロー プロジェクトを作成した後は、Windows Workflow Foundation (WF) の項目とその他の使い慣れた Visual Studio を追加することができます。項目をプロジェクト。
+
+次の表は、ワークフロー プロジェクトに追加できる Windows Workflow Foundation 項目の一覧です。
 
 |アイテム|説明|
 |----------|-----------------|
@@ -33,7 +36,7 @@ ms.lasthandoff: 04/16/2018
 |ステート マシンのワークフロー (コード)|デザイナー コード ファイル内にワークフロー定義が含まれ、別のコード ファイル内にユーザー コードが含まれるステート マシン ワークフロー。|
 |ステート マシンのワークフロー (コード分離付き)|ワークフロー定義がワークフロー マークアップとして表記され、別のコード ファイル内にユーザー コードが含まれるステート マシン ワークフロー。|
 
-### <a name="to-add-a-new-item-to-a-workflow-project"></a>ワークフロー プロジェクトに新しい項目を追加するには
+## <a name="to-add-a-new-item-to-a-workflow-project"></a>ワークフロー プロジェクトに新しい項目を追加するには
 
 1.  **プロジェクト** メニューのをクリックして**新しい項目の追加**です。
 

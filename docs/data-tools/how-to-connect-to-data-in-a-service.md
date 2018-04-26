@@ -14,14 +14,15 @@ ms.assetid: a6b54353-05fe-4e5c-8631-90231fc95504
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: d82e84c8f71b42f5cbe4f6386ed2ceb87b32ffbd
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3975d7f0bcfc9b80c944c892cde52f2b625e0bbf
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-connect-to-data-in-a-service"></a>方法: サービスのデータに接続する
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/19/2018
 
 ## <a name="to-connect-your-application-to-a-service"></a>アプリケーションをサービスに接続するには
 
-1.  **[データ]** メニューの **[新しいデータ ソースの追加]**をクリックします。
+1.  **[データ]** メニューの **[新しいデータ ソースの追加]** をクリックします。
 
 2.  選択**サービス**上、**データ ソースの種類を選択** ページで、クリックして**次へ**です。
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/19/2018
 
 5.  をクリックして**OK**サービス参照をプロジェクトに追加します。
 
-6.  **[完了]**をクリックします。
+6.  **[完了]** をクリックします。
 
      データ ソースを追加、**データソース**ウィンドウです。
 

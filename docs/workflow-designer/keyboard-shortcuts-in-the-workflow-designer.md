@@ -1,7 +1,9 @@
 ---
-title: ショートカット キーを押して、ワークフロー デザイナーで |Microsoft ドキュメント
+title: ワークフロー デザイナーで、ワークフロー デザイナーでのキーボード ショートカット
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - WFDKeyboardShortcuts.UI
 ms.assetid: 9be75438-a4a3-4781-94e5-45b7ec082358
@@ -10,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 29d96eb6d738fbf23749bec601743002a451ad06
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 83664d6402c23da89adf332bc9cd34eac89384bb
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="keyboard-shortcuts-in-the-workflow-designer"></a>ワークフロー デザイナーのキーボード ショートカット
 
@@ -22,11 +24,11 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="navigating-the-workflow-designer-using-the-keyboard"></a>キーボードを使用したワークフロー デザイナー内での移動
 
-[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] 内では、グローバル ショートカットおよびデバッグ ショートカットが[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]に適用されます。 また、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]に固有のキーボード ショートカットもいくつか作成されています。 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] では、すべてのキーボード ショートカットを再マップできます。 ただし、再ホストされたアプリケーションでは、これらのキーボード ショートカットがハードコーディングされています。
+Visual Studio 2010 内グローバル ショートカットおよびデバッグ ショートカットが、ワークフロー デザイナーに適用されます。 また、ワークフロー デザイナー固有のキーボード ショートカットの数が作成されています。 Visual Studio 2010 ですべてのキーボード ショートカットを再割り当てされることができます。 ただし、再ホストされたアプリケーションでは、これらのキーボード ショートカットがハードコーディングされています。
 
 ### <a name="workflow-designer-keyboard-shortcuts"></a>ワークフロー デザイナーのキーボード ショートカット
 
-次の表に、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]のコマンドに割り当てられている既定のキーボード ショートカットを示します。
+次の表は、ワークフロー デザイナーのコマンドに割り当てられている既定のキーボード ショートカットをまとめたものです。
 
 |ショートカット|目的|
 |--------------|-------------|
@@ -46,7 +48,7 @@ ms.lasthandoff: 04/16/2018
 
 ### <a name="flowchart"></a>フローチャート
 
-キーボードでフローチャートを構築するために使用するジェスチャを次の一覧に示します。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]の他の操作と同様に、アクティビティをデザイナー画面に追加するには、[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] に用意されているツールボックスのグローバル ショートカットを使用します。
+キーボードでフローチャートを構築するために使用するジェスチャを次の一覧に示します。 ワークフロー デザイナーの残りの部分と同様に、アクティビティは、Visual Studio 2010 で提供されるグローバル ツールボックスのショートカットを使用して、デザイナー画面に追加されます。
 
 - アクティビティを移動するには、アクティビティを選択し、方向キーを使用して位置を変更します。
 
@@ -74,7 +76,7 @@ ms.lasthandoff: 04/16/2018
 
 ### <a name="expression-editing"></a>式の編集
 
-既定では、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] のテキスト編集用の既定のキーボード ショートカットが、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]の式エディター内に適用されます。だたし、次の制限があります。
+既定では、Visual Basic によるテキスト編集の既定のキーボード ショートカットはワークフロー デザイナーで、次の制限付きの式エディター内に適用されます。
 
 - 次のコマンドのキーボード ショートカットの再マップは無効です。 既定のキーボード ショートカットは、式の編集時にこれらのコマンドにアクセスするためにのみ使用できます。
 
@@ -85,4 +87,4 @@ ms.lasthandoff: 04/16/2018
    - [元に戻す]
    - やり直し
 
-- [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] で、[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]内の式の編集コマンドのキーボード ショートカットを再マップするには、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] スコープでショートカットを編集します。 テキスト エディター スコープで行った変更は、自動的には[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]に適用されません。 両方の場所でショートカットを再マップするには、変更を 2 回 (スコープごとに 1 回ずつ) 適用する必要があります。
+- Visual Studio 2010 ワークフロー デザイナー内の式の編集コマンドのキーボード ショートカットを再マップするには、ワークフロー デザイナーのスコープでショートカットを編集します。 テキスト エディター スコープで行った変更は、ワークフロー デザイナーに自動的に適用されません。 両方の場所でショートカットを再マップするには、変更を 2 回 (スコープごとに 1 回ずつ) 適用する必要があります。

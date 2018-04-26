@@ -1,6 +1,7 @@
 ---
 title: マネージ コードの "基本正確性規則" 規則セット
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: 631f0daf-1d42-4c90-a7dc-1a6a9de64c93
@@ -9,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6523c532d46329f3453744caab9bc9f0935702f6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5bbd43b47e104dc775629e0e517ba8c47c2a49ea
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="basic-correctness-rules-rule-set-for-managed-code"></a>マネージ コードの "基本正確性規則" 規則セット
 基本正確性規則の規則セットは、論理エラーやフレームワーク Api の使用の一般的なミスについて説明します。 基本正確性規則には、最小推奨規則規則セット内の規則が含まれます。 詳細については、次を参照してください。[マネージ推奨規則ルール セットのマネージ コードの](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)このルールの最小推奨規則で報告する警告の一覧でを展開する設定を含める必要があります。

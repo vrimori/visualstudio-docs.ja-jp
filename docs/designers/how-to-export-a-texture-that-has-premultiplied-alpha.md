@@ -1,6 +1,7 @@
 ---
 title: '方法: 前乗算されたアルファを持つテクスチャをエクスポートする'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 05348afa-f079-4f53-a05b-ecd91d13adab
@@ -9,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 91da0e1a08cc75bfce86a5d14985c371e17bcded
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3e72a64559953e5e111d270f259ed66e10c97e54
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-export-a-texture-that-has-premultiplied-alpha"></a>方法: 前乗算されたアルファを持つテクスチャをエクスポートする
 イメージ コンテンツ パイプラインを使用すると、前乗算されたアルファを含むテクスチャをソース イメージから生成できます。 これらのテクスチャは、前乗算されたアルファを含まないテクスチャよりも簡単に使用でき、堅牢です。

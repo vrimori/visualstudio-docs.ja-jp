@@ -1,9 +1,10 @@
 ---
-title: .NET 開発者向けの Visual Studio 2017 | Microsoft Docs
+title: .NET 開発者向けの Visual Studio 2017
 description: .NET コードをより速く記述するための Visual Studio 2017 の機能の概要。
 author: kuhlenh
 ms.author: kaseyu
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.date: 01/16/2018
 ms.topic: conceptual
@@ -11,15 +12,15 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 31291814c2158c9aeb8d48b1b7b3073a4ccbcaf9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4b7625a074732949e9fb876627dbff1abf005982
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-studio-2017-productivity-guide-for-net-developers"></a>.NET 開発者のための Visual Studio 2017 生産性ガイド
 
-[Visual Studio 2017](https://www.visualstudio.com/downloads/) を使うと開発者の生産性が向上します。 ソリューションの起動と読み込み、テスト検出、入力待機時間のパフォーマンスと信頼性が向上しました。 よりよいコードをより早く作成するのに役立つ機能も追加および強化されました。 たとえば、逆コンパイルされたアセンブリへの移動、入力時の変数名の提案、テスト エクスプローラーの階層ビュー、ファイル/型/メンバー/シンボルの宣言に移動するための [すべてに移動] (**Ctrl + T**)、インテリジェントな例外ヘルパー、コード スタイルの構成と適用、多くのリファクタリングとコード修正などがあります。 
+[Visual Studio 2017](https://www.visualstudio.com/downloads/) を使うと開発者の生産性が向上します。 ソリューションの起動と読み込み、テスト検出、入力待機時間のパフォーマンスと信頼性が向上しました。 よりよいコードをより早く作成するのに役立つ機能も追加および強化されました。 たとえば、逆コンパイルされたアセンブリへの移動、入力時の変数名の提案、テスト エクスプローラーの階層ビュー、ファイル/型/メンバー/シンボルの宣言に移動するための [すべてに移動] (**Ctrl + T**)、インテリジェントな例外ヘルパー、コード スタイルの構成と適用、多くのリファクタリングとコード修正などがあります。
 
 このガイドに従って、生産性を最適化してください。
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 - [Visual Studio のホット キー (ReSharper/IntelliJ)](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.HotKeys)
 - [VSVim](https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim)
 
-よく使用される Visual Studio のショートカットを以下に示します。 
+よく使用される Visual Studio のショートカットを以下に示します。
 
 | ショートカット (すべてのプロファイル) | コマンド | 説明 |
 |-|-|-|
@@ -61,7 +62,7 @@ Visual Studio 2017 には、"_すべてに移動_" という機能がありま�
 
 ## <a name="my-team-enforces-code-style-rules-on-our-codebase"></a>チームにはコードベースに適用されるコード スタイル ルールがあります。
 .editorconfig ファイルを使って、コーディング規則を体系化し、ソースとともに移動させることができます。
-- Visual Studio の .editorconfig ファイルの追加および編集用に、[EditorConfig 言語サービス拡張機能](https://aka.ms/editorconfig)をインストールすることをお勧めします。 
+- Visual Studio の .editorconfig ファイルの追加および編集用に、[EditorConfig 言語サービス拡張機能](https://aka.ms/editorconfig)をインストールすることをお勧めします。
 - すべての .NET コーディング規則オプションに関する[ドキュメント](https://aka.ms/editorconfigDocs)を確認してください。
 - .editorconfig の例については[こちら](https://gist.github.com/kuhlenh/5471666a7a2c57fea427e81cf0a41da8)をご覧ください。
 
@@ -70,10 +71,10 @@ Visual Studio 2017 には、"_すべてに移動_" という機能がありま�
 ## <a name="i-need-more-refactorings-and-code-fixes"></a>さらに多くのリファクタリングとコード修正が必要です。
 Visual Studio 2017 には、多くのリファクタリング、コード生成アクション、コード修正が含まれます。 赤の波線はエラー、緑の波線は警告、3 つのグレーの点はコード提案をそれぞれ表します。 電球/ドライバーのアイコンをクリックするか、**Ctrl + .**  または **Alt + Enter** キーを押すことによって、コード修正にアクセスできます。 各修正にはプレビュー ウィンドウが付属しており、修正の効果によるライブ コードの相違が示されます。
 
-- 一般的なクイック修正とリファクタリングには、次の内容が含まれます。 
+- 一般的なクイック修正とリファクタリングには、次の内容が含まれます。
   - *名前の変更*
   - *メソッドの抽出*
-  - *メソッド シグネチャの変更* 
+  - *メソッド シグネチャの変更*
   - *コンストラクターの生成*
   - *メソッドの生成*
   - *ファイルへの型の移動*
@@ -81,8 +82,8 @@ Visual Studio 2017 には、多くのリファクタリング、コード生成�
   - *パラメーターの追加*
   - *不要な using の削除*
   - [ドキュメント](https://aka.ms/refactorings)で詳細を確認してください
-- 独自のリファクタリングまたはコード修正は [Roslyn アナライザー](https://github.com/dotnet/roslyn/wiki/Getting-Started-Writing-a-Custom-Analyzer-&-Code-Fix)を使用して記述します。 
-- 何人かのコミュニティ メンバーが、コードの検査を追加する、次のような*無料の*拡張機能を作成しています。 
+- 独自のリファクタリングまたはコード修正は [Roslyn アナライザー](https://github.com/dotnet/roslyn/wiki/Getting-Started-Writing-a-Custom-Analyzer-&-Code-Fix)を使用して記述します。
+- 何人かのコミュニティ メンバーが、コードの検査を追加する、次のような*無料の*拡張機能を作成しています。
   - [Roslynator](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2017)
   - [SonarLint for Visual Studio](https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2017)
   - [StyleCopAnalyzers](https://www.nuget.org/packages/stylecop.analyzers/)
@@ -93,10 +94,10 @@ Visual Studio 2017 には、多くのリファクタリング、コード生成�
 Visual Studio 2017 には、コードベースの検索と移動に役立つ多くの機能があります。 [コード ナビゲーションの機能](../ide/navigating-code.md)の詳細を確認してください
 
 | 機能 | ショートカット | 詳細/機能強化 |
-|- | - | -| 
+|- | - | -|
 | [すべての参照の検索] | **Shift+F12**| 結果はプロジェクト、定義などによって、色分け表示してグループ化できます。結果を 'ロックする' こともできます。 |
 | 実装に移動 | **Ctrl + F12** | オーバーライドされたメンバーに移動するには、`override` キーワードの [定義へ移動] を使用します |
-| [定義へ移動] | **F12** または **Ctrl キーを押しながらクリック**| **Ctrl** キーを押しながらクリックして定義へ移動することができます | 
+| [定義へ移動] | **F12** または **Ctrl キーを押しながらクリック**| **Ctrl** キーを押しながらクリックして定義へ移動することができます |
 | 定義をここに表示 | **Alt+F12** | 定義のインライン ビュー |
 | 構造ビジュアライザー | 中かっこの間の灰色の点線 | マウス ポインターを合わせると、コードの構造を参照できます |
 | 逆コンパイルされたアセンブリへの移動 | **F12** または **Ctrl キーを押しながらクリック** | **[ツール]、[オプション]、[テキスト エディター]、[C#]、[詳細設定]、[Enable navigation to decompiled sources]\(逆コンパイルされたソースへの移動を有効にする\)** で機能を有効にして、外部ソース (ILSpy によって逆コンパイル済み) に移動します。 |
@@ -112,8 +113,8 @@ Visual Studio 2017 ではテストの操作性に多数の機能強化を行い�
 ![Visual Studio のテスト エクスプローラーの階層ビュー](../ide/media/VSGuide_Testing.png)
 
 ## <a name="i-want-to-debug-my-code"></a>コードをデバッグする必要があります。
-Visual Studio 2017 では多数の新しいデバッグ機能が追加されました。 
-- *[Run to click]\(クリックして実行\)* では、コードの行の隣にマウス ポインターを移動し、表示された緑色の [再生] をクリックして、該当する行に達するまでプログラムを実行することができます。 
+Visual Studio 2017 では多数の新しいデバッグ機能が追加されました。
+- *[Run to click]\(クリックして実行\)* では、コードの行の隣にマウス ポインターを移動し、表示された緑色の [再生] をクリックして、該当する行に達するまでプログラムを実行することができます。
 - 新しい*例外ヘルパー*のダイアログの最上位には、NullReferenceException のどの変数が 'null' になるかといった特に重要な情報があります。
 - [[Step Back]\(前に戻る\)](../debugger/how-to-use-intellitrace-step-back.md) のデバッグにより、前のブレークポイントまたは手順に戻り、過去の時点でのアプリケーションの状態を確認できるようになります。
 - [[スナップショットのデバッグ]](/azure/application-insights/app-insights-snapshot-debugger) では、例外がスローされた (Azure にスローされる必要があります) 時点での、ライブ Web アプリケーションの状態を調査することができます。
@@ -121,8 +122,8 @@ Visual Studio 2017 では多数の新しいデバッグ機能が追加されま�
 ![VS2017 の新しい例外ヘルパー](../ide/media/VSGuide_Debugging.png "VSGuide_Debugging")
 
 ## <a name="i-want-to-use-version-control-with-my-projects"></a>自分のプロジェクトでバージョン管理を使用する必要があります。
-Git または TFVC を使用して Visual Studio でコードを格納して更新することができます。 
-- *チーム エクスプローラー*を使用してローカルの変更を整理し、ステータス バーで保留中のコミットと変更を追跡します。 
+Git または TFVC を使用して Visual Studio でコードを格納して更新することができます。
+- *チーム エクスプローラー*を使用してローカルの変更を整理し、ステータス バーで保留中のコミットと変更を追跡します。
 - [Continuous Delivery Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) 拡張機能を使用して Visual Studio 内のプロジェクトの継続的インテグレーションと継続的デリバリーを設定し、アジャイル開発者のワークフローを採用します。
 
 ![Visual Studio におけるソース管理](../ide/media/VSIDE_Productivity_SourceControl.png)

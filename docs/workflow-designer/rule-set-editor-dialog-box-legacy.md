@@ -1,7 +1,9 @@
 ---
-title: '[ルール セット エディター] ダイアログ ボックス (レガシ) |Microsoft ドキュメント'
+title: ワークフロー デザイナーの [ルール セット エディター] ダイアログ ボックス (レガシ)
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Workflow.Activities.Rules.Design.RuleSetDialog.UI
 helpviewer_keywords:
@@ -12,26 +14,27 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7284b4a318f1d6c182f1d7d27e41f6c77092ad00
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 77bb10e5237b33c60b0cd309c2d3c6c634182bc6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="rule-set-editor-dialog-box-legacy"></a>[ルール セット エディター] ダイアログ ボックス (レガシ)
-このトピックについて説明する方法を使用して、**ルール セット エディター**従来の Windows ワークフロー デザイナー ダイアログ ボックス。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。
 
- **ルール セット エディター**  ダイアログ ボックスを使用して作成および変更を[PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)ルール セットで、.rules ファイルにシリアル化されます。
+このトピックについて説明する方法を使用して、**ルール セット エディター**従来の Windows ワークフロー デザイナー ダイアログ ボックス。 .NET Framework version 3.5、または、WinFX を対象とする必要がある場合は、従来のワークフロー デザイナーを使用します。
+
+**ルール セット エディター**  ダイアログ ボックスを使用して作成および変更を[PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)ルール セットで、.rules ファイルにシリアル化されます。
 
 > [!NOTE]
 > 使って .rules ファイルを開きたい場合、**エンコード付き XML エディタ**、ワークフローまたはアクティビティに関連付けられたデザイナー ウィンドウをまず閉じる必要があります。
 
- アクセスする方法については、**ルール セット エディター**ダイアログ ボックスを参照してください[する方法: PolicyActivity ルール セット (レガシ) を作成する](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md)です。
+アクセスする方法については、**ルール セット エディター**ダイアログ ボックスを参照してください[する方法: PolicyActivity ルール セット (レガシ) を作成する](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md)です。
 
 > [!WARNING]
-> [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする場合に使用される、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]のルール エディターは、複数バージョン対応機能をサポートしていません。
+> .NET Framework version 3.5、または、WinFX をターゲットに使用される従来のワークフロー デザイナーのルール エディターは、複数バージョン対応機能をサポートしません。
 
- 次の表は、ユーザー インターフェイス (UI) 要素の**ルール セット エディター**  ダイアログ ボックス。
+次の表は、ユーザー インターフェイス (UI) 要素の**ルール セット エディター**  ダイアログ ボックス。
 
 |UI 要素|説明|
 |----------------|-----------------|
@@ -77,7 +80,7 @@ ms.lasthandoff: 04/16/2018
  条件の詳細については、次を参照してください。[ワークフローでの条件の使用](http://msdn.microsoft.com/en-us/541211f5-d382-4810-894f-71f00b34fa77)です。
 
 ### <a name="halt-and-update-functions"></a>Halt 関数と Update 関数
- **Then アクション:**と**Else アクション:**式は、サポート**停止**と**更新**関数。 使用する、**停止**関数、入力**停止**に、**し、アクション:**または**Else アクション:**テキスト ボックス。 **停止**操作によって、ルール セットの実行をすぐに停止して、呼び出し元のコードに制御が戻ります。 使用する、**更新**フォワード チェーンを持つ関数です。
+ **Then アクション:** と**Else アクション:** 式は、サポート**停止**と**更新**関数。 使用する、**停止**関数、入力**停止**に、**し、アクション:** または**Else アクション:** テキスト ボックス。 **停止**操作によって、ルール セットの実行をすぐに停止して、呼び出し元のコードに制御が戻ります。 使用する、**更新**フォワード チェーンを持つ関数です。
 
  **更新**ステートメントは、エディターの 2 つの形式で表すことができます。 両方の形式は次の例で表示されます。
 

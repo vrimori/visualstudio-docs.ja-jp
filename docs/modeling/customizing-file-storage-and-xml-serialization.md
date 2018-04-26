@@ -11,12 +11,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a5e51eaded4d42d5ca0aafe33ec8e72807afb748
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: d9722bed4bcf20fbdba322bea7cd3aab4328fa7e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customize-file-storage-and-xml-serialization"></a>ファイルの保存と XML シリアル化をカスタマイズします。
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/20/2018
 
 通常、各モデルは、2 つのファイルで保存します。
 
--   モデル ファイルなど、名前があります**Model1.mydsl**です。 モデル要素とのリレーションシップとそのプロパティを格納します。 などのファイル拡張子**.mydsl**によって決定されます、 **FileExtension**のプロパティ、**エディター** DSL 定義内のノードです。
+-   モデル ファイルなど、名前があります**Model1.mydsl**です。 モデル要素とのリレーションシップとそのプロパティを格納します。 などのファイル拡張子 **.mydsl**によって決定されます、 **FileExtension**のプロパティ、**エディター** DSL 定義内のノードです。
 
 -   ダイアグラム ファイルなど、名前があります**Model1.mydsl.diagram**です。 図形、コネクタ、およびそれらの位置、色、線の太さ、およびダイアグラムの外観の他の詳細を格納します。 ユーザーを削除した場合、 **.diagram**ファイル、モデルの重要な情報は失われます。 ダイアグラムのレイアウトだけでは、失われます。 モデル ファイルを開いたときに、既定値は、図形のセットし、コネクタが作成されます。
 
@@ -162,7 +163,7 @@ ms.lasthandoff: 04/20/2018
 
      ユーザーは、クラスの新しいインスタンスを作成するとき、この値は、別の値を自動的に割り当てられるにドメインのプロパティとします。 既定の動作は、クラス名の末尾に数値を追加します。 これは防止しません、ユーザーに、重複する名前を変更するが、ユーザーが、モデルを保存する前に、値を設定しない場合の場合、できます。
 
--   DSL の検証を有効にします。 DSL のエクスプ ローラーで Editor\Validation を選択し、設定、**を使用しています.**プロパティ`true`です。
+-   DSL の検証を有効にします。 DSL のエクスプ ローラーで Editor\Validation を選択し、設定、**を使用しています.** プロパティ`true`です。
 
      あいまいさのチェックを自動的に生成された検証メソッドが存在します。 メソッドが、`Load`検証カテゴリ。 これにより、あるユーザー警告が表示されますができないことがある、ファイルを再度開くことです。
 

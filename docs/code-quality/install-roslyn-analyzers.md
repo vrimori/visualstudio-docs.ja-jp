@@ -1,6 +1,7 @@
 ---
 title: Visual Studio での Roslyn アナライザーをインストールします。
 ms.date: 03/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,11 +13,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8a3b40b3b471e6bb57da561ac51f23086a0f01bd
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fb2f681de16a53c97954c8c37b8dd28b163998ee
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-net-compiler-platform-analyzers"></a>.NET コンパイラ プラットフォーム アナライザーをインストールします。
 
@@ -56,7 +57,7 @@ Visual Studio 2017 には .NET コンパイラ プラットフォームのコア
 
    拡張機能をダウンロードします。
 
-1. 選択**[ok]**にダイアログ ボックスを閉じを起動する Visual Studio のすべてのインスタンスを閉じて、 **VSIX インストーラー**です。
+1. 選択 **[ok]** にダイアログ ボックスを閉じを起動する Visual Studio のすべてのインスタンスを閉じて、 **VSIX インストーラー**です。
 
    **VSIX インストーラー**  ダイアログ ボックスが表示されます。
 

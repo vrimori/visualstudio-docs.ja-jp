@@ -1,7 +1,9 @@
 ---
-title: ツールボックス項目 ダイアログ ボックスの選択 System.Activities タブ |Microsoft ドキュメント
+title: ワークフロー デザイナーのツールボックス項目 ダイアログ ボックスの選択 System.Activities タブ
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - VS.CHOOSEITEMS.SYSTEM.ACTIVITIES_COMPONENTS
 - VS.CHOOSEITEMS.SYSTEM.ACTIVITIES COMPONENTS
@@ -11,14 +13,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2da5aafcc684c9af71aebc094d817c64f579d0ea
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 82303d173a3d5a066919f8597e4636d63a005f02
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="systemactivities-tab-choose-toolbox-items-dialog-box"></a>[ツールボックス アイテムの選択] ダイアログ ボックスの [System.Activities] タブ
-このタブ、**ツールボックス アイテムの選択** ダイアログ ボックスの一覧を表示する[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]アクティビティ、テンプレートおよび項目に使用できます。 この一覧を表示するには選択**ツールボックス アイテムの選択**から、**ツール**メニューを右クリックして、または、**ツールボックス**を選択して**アイテムの選択**を表示する、**ツールボックス アイテムの選択**クリックしてダイアログ ボックスで、その**System.Activities**タブです。既定では、System.Activities、System.ServiceModel.Activities、および System.Activities.Core.Presentation アセンブリ; からワークフロー アクティビティが一覧に含まれますただし、のみ、システム標準アクティビティおよびアクティビティに表示されるその他のアセンブリから追加された、**ツールボックス**が既定でオンです。 最近追加アクティビティが自動的にオンおよびに表示されます、**ツールボックス**をクリックすると**OK**  ダイアログ ボックス。 またでこれらの項目が表示されます、**ツールボックス**アクティビティ、アイテム、テンプレートが存在する名前空間に対応する新しいカテゴリの下。
+
+このタブの**ツールボックス アイテムの選択** ダイアログ ボックスでは、Windows Workflow Foundation (WF) 活動、テンプレート、および利用可能なアイテムの一覧を表示します。 この一覧を表示するには選択**ツールボックス アイテムの選択**から、**ツール**メニューを右クリックして、または、**ツールボックス**を選択して**アイテムの選択**を表示する、**ツールボックス アイテムの選択**クリックしてダイアログ ボックスで、その**System.Activities**タブです。既定では、System.Activities、System.ServiceModel.Activities、および System.Activities.Core.Presentation アセンブリ; からワークフロー アクティビティが一覧に含まれますただし、のみ、システム標準アクティビティおよびアクティビティに表示されるその他のアセンブリから追加された、**ツールボックス**が既定でオンです。 最近追加アクティビティが自動的にオンおよびに表示されます、**ツールボックス**をクリックすると**OK**  ダイアログ ボックス。 またでこれらの項目が表示されます、**ツールボックス**アクティビティ、アイテム、テンプレートが存在する名前空間に対応する新しいカテゴリの下。
 
 > [!WARNING]
 > ワークフロー アクティビティが含まれていないアセンブリを追加しようとすると、エラー ダイアログが表示され、アセンブリにアクティビティが含まれていないことが示されます。
@@ -35,12 +38,20 @@ ms.lasthandoff: 04/16/2018
 
  このダイアログ ボックスの列には、次の情報が表示されます。
 
- 名前リスト ワークフロー アクティビティの名前は、ローカル コンピューターに現在登録されています。
+ 名前
 
- Namespace には、アクティビティの構造を定義する .NET Framework クラス ライブラリ名前空間の階層が表示されます。
+ 現在ローカル コンピューターに登録されているワークフロー アクティビティの名前が一覧表示されます。
 
- アセンブリ名には、名前と、アクティビティが含まれている .NET Framework アセンブリのバージョンが表示されます。
+ Namespace
 
- ディレクトリには、ワークフロー アクティビティが含まれている .NET Framework アセンブリの場所が表示されます。 アセンブリはすべて、既定では、グローバル アセンブリ キャッシュにあります。
+ アクティビティの構造を定義している .NET Framework クラス ライブラリ名前空間の階層構造が表示されます。
+
+ アセンブリ名
+
+ アクティビティが含まれている .NET Framework アセンブリの名前とバージョンが表示されます。
+
+ ディレクトリ
+
+ ワークフロー アクティビティが含まれている .NET Framework アセンブリの場所が表示されます。 アセンブリはすべて、既定では、グローバル アセンブリ キャッシュにあります。
 
  コンポーネントの一覧を並べ替えるには、列ヘッダーをクリックします。

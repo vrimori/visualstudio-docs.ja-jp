@@ -1,9 +1,9 @@
 ---
-title: 'チュートリアル 1: ピクチャ ビューアーの作成 | Microsoft Docs'
+title: 'チュートリアル 1: ピクチャ ビューアーの作成'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-acquisition
+ms.prod: visual-studio-dev15
+ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: 3071d6df-2b2f-4e95-ab68-bef727323136
 author: TerryGLee
@@ -11,47 +11,47 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0061ca517fd75fbfe76fbb4c47431e3438a7f614
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5be14bf68f88bc058adf3685cc30e3ab545a6354
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>チュートリアル 1: ピクチャ ビューアーの作成
 このチュートリアルでは、ピクチャをファイルから読み込んでウィンドウに表示するプログラムを作成します。 ボタンやピクチャ ボックスなどのコントロールをフォームにドラッグする方法、それらのプロパティを設定する方法、およびコンテナーを使用してフォームのサイズを滑らかに変更する方法を習得できます。 また、コードの記述の基本事項についても学習します。 以下の方法について説明します。  
-  
+
 -   新しいプロジェクトを作成します。  
-  
+
 -   アプリケーションをテスト (デバッグ) します。  
-  
+
 -   チェック ボックスやボタンなどの基本的なコントロールをフォームに追加します。  
-  
+
 -   レイアウトを使用してフォーム上のコントロールの位置を設定します。  
-  
+
 -   **[ファイルを開く]** ダイアログ ボックスと **[色]** ダイアログ ボックスをフォームに追加します。  
-  
+
 -   IntelliSense とコード スニペットを使用してコードを記述します。  
-  
+
 -   イベント ハンドラー メソッドを記述します。  
-  
+
  完成すると、プログラムは次の図のようになります。  
-  
+
  ![このチュートリアルで作成する画像](../ide/media/express_pictureviewerdone.png "Express_PictureViewerDone")  
 このチュートリアルで作成する画像  
-  
+
  サンプルの完全バージョンをダウンロードするには、「[Complete Picture Viewer tutorial sample](http://code.msdn.microsoft.com/Complete-Picture-Viewer-7d91d3a8)」 (画像ビューアーのチュートリアルの完全なサンプル) を参照してください。  
-  
+
  ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[How Do I: Create a Picture Viewer in Visual Basic?](http://go.microsoft.com/fwlink/?LinkId=205207)」(操作方法: Visual Basic によるピクチャ ビューアーの作成) または「[How Do I: Create a Picture Viewer in C#?](http://go.microsoft.com/fwlink/?LinkId=205198)」(操作方法: C# によるピクチャ ビューアーの作成) を参照してください。  
-  
+
 > [!NOTE]
 >  これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。 このチュートリアルでは、Visual C# と Visual Basic の両方が取り上げられているため、使用しているプログラミング言語固有の情報に注意してください。  
 >   
 >  Visual Basic のコードを確認するには、コード ブロックの上部にある **[VB]** タブをクリックし、Visual C# のコードについては、**[C#]** タブをクリックします。Visual C++ の学習に関心がある場合は、「[Visual Studio 内の C++ の概要](../ide/getting-started-with-cpp-in-visual-studio.md)」および「[C++ Language Tutorial](http://www.cplusplus.com/doc/tutorial/)」(C++ 言語のチュートリアル) を参照してください。  
 >   
 >  Visual C# アプリまたは Visual Basic UWP アプリの記述方法に興味がございましたら、「[UWP アプリの構築](https://developer.microsoft.com/windows/apps)」を参照してください。
-  
+
 ## <a name="related-topics"></a>関連トピック  
-  
+
 |Title|説明|  
 |-----------|-----------------|  
 |[手順 1: Windows フォーム アプリケーション プロジェクトの作成](../ide/step-1-create-a-windows-forms-application-project.md)|最初に Windows フォーム アプリケーション プロジェクトを作成します。|  

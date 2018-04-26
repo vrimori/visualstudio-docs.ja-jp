@@ -9,12 +9,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 2f7da241dc6090339bd5d9d9e6f731041a27fe84
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: b1df5d53bacaaeb06a4475ab3c5da6b1ce181b8d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="model-your-app39s-architecture"></a>アプリのモデル&#39;s アーキテクチャ
 ソフトウェア システムまたはアプリケーションがユーザーを満たしていることを確認する必要があります、全体的な構造の説明と、ソフトウェア システムまたはアプリケーションの動作の一部として Visual Studio でモデルを作成することができます。 モデルを使用して、設計全体で使用するパターンを記述することもできます。 これらのモデルは、既存のアーキテクチャの理解、変更についての話し合い、開発者の意図の伝達に役立ちます。

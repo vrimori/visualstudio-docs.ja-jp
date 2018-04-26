@@ -10,12 +10,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: b7046a7c5af51d1d6c7190525b776ee46b1e41f4
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: ad7f424f9c44623a2112680757598f8076358f36
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-generating-code-by-using-text-templates"></a>チュートリアル: テキスト テンプレートを使用したコード生成
 コード生成を使用すると、厳密に型指定され、ソース モデルが変わった場合でも簡単に変更できるプログラム コードを作成できます。 コード生成とは対照的に、構成ファイルを使用する完全に汎用的なプログラムを作成する他の手法もあります。構成ファイルを使用すると、柔軟ではありますが、読むのも変更するのも容易ではなく、パフォーマンスもそれほどよくありません。 このチュートリアルでは、コード生成の利点について説明します。

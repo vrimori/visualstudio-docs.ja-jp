@@ -19,14 +19,15 @@ ms.assetid: 79500596-1e4d-478e-a991-a636fd73a622
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 71d651d2e2d6c84b5858bb4687bf74aa503d014c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c8986ce9e2ee1ff171a524b0a402a1e44b70ca06
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="validate-data-in-datasets"></a>データセット内のデータを検証します。
 データの検証は、データ オブジェクトに入力されている値がデータセットのスキーマ内の制約に従っていることを確認するプロセスです。 検証プロセスはまた、これらの値がアプリケーション用に設定されている規則に従っていることを確認します。 更新プログラムを基になるデータベースに送信する前にデータを検証することをお勧めします。 これにより、エラーだけでなく、アプリケーションとデータベース間のラウンド トリップの潜在的な数が減少します。

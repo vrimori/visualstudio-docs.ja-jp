@@ -13,14 +13,15 @@ ms.assetid: cfe274f0-71fe-40f6-994e-7c7f6273c9ba
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 2f3bfdbf8bff8bf5c0d563ed93b473cc33ef42b5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b3b101d251167a646b66568f7aacc005d7c792d7
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-relationships-between-datasets"></a>データセット間のリレーションシップを作成します。
 関連データを含むデータセット テーブルを使用して<xref:System.Data.DataRelation>をいずれかの別の関連するレコードを返すと、テーブル間の親/子リレーションシップを表すオブジェクト。 使用してデータセットの関連テーブルの追加、**データ ソース構成ウィザード**、または**データセット デザイナー**が作成され、構成、<xref:System.Data.DataRelation>オブジェクト。
@@ -58,7 +59,7 @@ Foreign key 制約の一部として、3 つの点で適用されている参照
 |外部キー制約の規則|アクション|
 |----------------------------------|------------|
 |<xref:System.Data.Rule.Cascade>|親レコードに加えられた変更 (更新または削除) が子テーブルの関連レコードも作成されます。|
-|<xref:System.Data.Rule.SetNull>|子レコードは削除されませんが、子レコード内の外部キーに設定されている<xref:System.DBNull>です。 この設定では、子レコードにしておく「孤立したもの」として、つまりがあるない親レコードとの関係。 **注:**子テーブル内の無効なデータになりますこの規則を使用します。|
+|<xref:System.Data.Rule.SetNull>|子レコードは削除されませんが、子レコード内の外部キーに設定されている<xref:System.DBNull>です。 この設定では、子レコードにしておく「孤立したもの」として、つまりがあるない親レコードとの関係。 **注:** 子テーブル内の無効なデータになりますこの規則を使用します。|
 |<xref:System.Data.Rule.SetDefault>|既定値に関連する子レコードの外部キーを設定 (列のによって設定される<xref:System.Data.DataColumn.DefaultValue%2A>プロパティ)。|
 |<xref:System.Data.Rule.None>|関連する子レコードは変更されません。 この設定は、子レコードは無効な親レコードへの参照を含めることができます。|
 

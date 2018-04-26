@@ -1,6 +1,7 @@
 ---
 title: マネージ コードの "拡張正確性規則" 規則セット
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: 5b181f5b-6c7a-4e46-a783-360e1da427a0
@@ -9,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: ccee4f6e139ef502a90a13a231c65f7e87141c78
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5bb373879bf4dd9c31ed7d8a7d832a270a158279
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extended-correctness-rules-rule-set-for-managed-code"></a>マネージ コードの "拡張正確性規則" 規則セット
 Microsoft 拡張正確性規則の規則セットは、ロジック エラーやフレームワーク使用エラー コード分析によって報告されるを最大化します。 COM 相互運用性とモバイル アプリケーションなどの特定のシナリオに重点が置かれています。 この規則セットは、プロジェクトまたはプロジェクトで他の問題を検索するこれらのシナリオのいずれかが適用される場合を含むを検討する必要があります。

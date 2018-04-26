@@ -1,6 +1,7 @@
 ---
 title: SAL について
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
@@ -9,11 +10,11 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 928ecfc2ebe652ae307d506d0747746d02c7c269
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 82d6719ee57000ebec8ad88a90543031e0d3eeb8
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="understanding-sal"></a>SAL について
 Microsoft ソース コード注釈言語 (SAL) は、そのパラメーターとそれが、それらについている前提条件と、それが完了したら、保証の関数の使用について説明するに使用できる注釈のセットを提供します。 注釈はヘッダー ファイルで定義されている`<sal.h>`です。 C++ 用の visual Studio コード分析では、SAL 注釈を使用して、関数の分析を変更します。 SAL 2.0 の Windows のドライバーの開発の詳細については、次を参照してください。 [SAL 2.0 注釈の Windows ドライバー](http://go.microsoft.com/fwlink/?LinkId=250979)です。
@@ -39,7 +40,7 @@ void * memcpy(
  この関数が何を指定することができますか。 関数が実装されているかと呼ばれる、プログラムの精度を確認する特定のプロパティを保持する必要があります。 例などの宣言を見るだけとは何かがわかりません。 SAL 注釈のないドキュメントやコードのコメントに依存する必要があります。 ここでは、MSDN のドキュメント`memcpy`といいます。
 
 > "コピーは、src を追加先のバイト数をカウントします。 ソースと変換先が重なり合う場合 memcpy の動作は定義されません。 Memmove を使用して、重なり合う領域を処理します。
-> **セキュリティに関する注意:**サイズ以上コピー元のバッファーにコピー先のバッファーが同じであることを確認してください。 詳細についてを参照してバッファー オーバーランの回避します。"
+> **セキュリティに関する注意:** サイズ以上コピー元のバッファーにコピー先のバッファーが同じであることを確認してください。 詳細についてを参照してバッファー オーバーランの回避します。"
 
  ドキュメントには、いくつかコードがプログラムの精度を確認する特定のプロパティを維持することを示している情報のビットにはが含まれています。
 
