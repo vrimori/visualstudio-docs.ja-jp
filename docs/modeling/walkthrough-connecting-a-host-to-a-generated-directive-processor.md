@@ -10,12 +10,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 13573fa6026b11566589a128c35be27fe4719a52
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 994a1b0677930128d36c4a3218f0231879b7a43e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>チュートリアル: 生成済みディレクティブ プロセッサへのホストの接続
 テキスト テンプレートを処理する、独自のホストを記述することができます。 基本的なカスタム ホストはではデモンストレーション[チュートリアル: カスタム テキスト テンプレート ホストの作成](../modeling/walkthrough-creating-a-custom-text-template-host.md)です。 複数の出力ファイルを生成するなどの機能を追加するには、そのホストを拡張できます。
@@ -63,7 +64,7 @@ ms.lasthandoff: 04/20/2018
 
      ドメイン固有言語ソリューションを作成の詳細については、次を参照してください。[する方法: ドメイン固有言語ソリューションを作成する](../modeling/how-to-create-a-domain-specific-language-solution.md)です。
 
-2.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。
+2.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
     > [!IMPORTANT]
     >  この手順では、ディレクティブ プロセッサを生成し、そのキーをレジストリに追加します。
@@ -227,7 +228,7 @@ ms.lasthandoff: 04/20/2018
 
 7.  **ファイル** メニューのをクリックして**すべて保存**です。
 
-8.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。
+8.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
 ## <a name="testing-the-custom-host-with-the-directive-processor"></a>カスタム ディレクティブ プロセッサを搭載したホストのテスト
  最初にカスタム テキスト テンプレート ホストをテストするを生成されたディレクティブ プロセッサを呼び出すテキスト テンプレートを記述する必要があります。 カスタム ホストを実行する、テキスト テンプレートの名前を渡すし、ディレクティブが正しく処理されることを確認します。

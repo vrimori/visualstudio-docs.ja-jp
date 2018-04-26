@@ -1,7 +1,9 @@
 ---
-title: シーケンシャル ワークフロー ビュー (レガシ) |Microsoft ドキュメント
+title: ワークフロー デザイナーのシーケンシャル ワークフロー ビュー (レガシ)
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - sequential workflow views
 - sequential workflows, views
@@ -11,20 +13,21 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a6b42ba9c1c9f7dbe2beb4a741501967e4968508
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ce1217ea629ae0301b72b444161d61db4fe448b1
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sequential-workflow-views-legacy"></a>シーケンシャル ワークフロー ビュー (レガシ)
-[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] 使用できる従来の Windows ワークフロー デザイナーは、ターゲットに、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)]または[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]です。
 
- [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] では、使い慣れた [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] ユーザー インターフェイスを使用して [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] アプリケーションをグラフィカルに作成できます。 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] アプリケーションは、アクティビティと呼ばれるワークフロー プロセス ステップで構成されます。 ワークフローを作成するには、デザイン サーフェイス上にアクティビティを作成、それぞれのアクティビティ デザイナーをドラッグすることで**ツールボックス**デザイン サーフェイスにします。
+Visual Studio 2010 では、.NET Framework version 3.5、または、WinFX をターゲットに使用できる従来の Windows ワークフロー デザイナーを提供します。
 
- これは、シーケンシャル ワークフローを作成する場合、 [SequentialWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65040)ワークフローの 3 つのビューを利用できます。 これらのビューからアクセス可能な**ワークフロー**メニューおよびデザイン サーフェイスのコンテキスト メニューからです。
+ワークフロー デザイナーでは、Windows Workflow Foundation (WF) を使い慣れた Visual Studio ユーザー インターフェイスを使用してアプリケーションをグラフィカルに作成する方法を提供します。 Windows Workflow Foundation (WF) アプリケーションは、アクティビティと呼ばれるワークフロー プロセスの手順で構成されます。 ワークフローを作成するには、デザイン サーフェイス上にアクティビティを作成、それぞれのアクティビティ デザイナーをドラッグすることで**ツールボックス**デザイン サーフェイスにします。
 
- 各ビューの名前と説明の一覧を次の表に示します。
+これは、シーケンシャル ワークフローを作成する場合、 [SequentialWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65040)ワークフローの 3 つのビューを利用できます。 これらのビューからアクセス可能な**ワークフロー**メニューおよびデザイン サーフェイスのコンテキスト メニューからです。
+
+各ビューの名前と説明の一覧を次の表に示します。
 
 |メニュー/タブ オプション|説明|
 |----------------------|-----------------|

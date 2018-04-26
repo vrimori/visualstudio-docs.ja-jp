@@ -1,13 +1,13 @@
 ---
-title: "JavaScript コードの記述 | Microsoft Docs"
-ms.custom: 
+title: JavaScript コードの記述 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vs.htmldesigner.html
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - comments, JavaScript code
 - JavaScript code
 ms.assetid: dde28266-0d0f-4460-a819-f931cf0911ad
-caps.latest.revision: 
+caps.latest.revision: 19
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -75,7 +75,7 @@ document.write("the value in meters is " + meters);
 var aGoodIdea = "Comment your code thoroughly."; // This is a single-line comment.  
 ```  
   
- [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] の複数行コメントは、スラッシュとアスタリスク (/*) で始まり、この 2 つを逆に組み合わせた記号 (\*/) で終わります。  
+ [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] の複数行コメントは、スラッシュとアスタリスク (/\*) で始まり、この 2 つを逆に組み合わせた記号 (\*/) で終わります。  
   
 ```JavaScript  
 /*  

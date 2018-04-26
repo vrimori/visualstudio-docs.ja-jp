@@ -1,7 +1,9 @@
 ---
-title: ルール条件エディター ダイアログ ボックス (レガシ) |Microsoft ドキュメント
+title: ワークフロー デザイナーの [ルール条件エディター] ダイアログ ボックス (レガシ)
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Workflow.Activities.Rules.Design.RuleConditionDialog.UI
 helpviewer_keywords:
@@ -12,15 +14,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 62b74956dc12e19a5594585e8d356b77ae5549b0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2f723894f175cbf031c3a2ac61ed9eaec8e1c94f
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="rule-condition-editor-dialog-box-legacy"></a>[ルール条件エディター] ダイアログ ボックス (レガシ)
 
-このトピックについて説明する方法を使用して、**ルール条件エディター**従来の Windows ワークフロー デザイナー ダイアログ ボックス。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。
+このトピックについて説明する方法を使用して、**ルール条件エディター**従来の Windows ワークフロー デザイナー ダイアログ ボックス。 .NET Framework version 3.5、または、WinFX を対象とする必要がある場合は、従来のワークフロー デザイナーを使用します。
 
 作成および使用して、宣言的ルール条件を変更する、**ルール条件エディター**  ダイアログ ボックス。 これらのルール条件は、Windows Workflow Foundation の事前定義アクティビティにプロパティとして公開されています。
 
@@ -47,7 +49,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="entering-condition-expressions"></a>条件式の入力
 
-条件式は、テキストとして入力します。 入力**これです。** フィールド、プロパティ、およびワークフローで使用される方法を参照するエディターに IntelliSense のようなメニューを使用します。 または、ワークフローのメンバ名を直接入力することもできます。 条件には、AND、OR、NOT といった論理演算子を追加することもできます。 述語も追加できます。 述語は、バイナリ演算子と 2 つのオペランドから成ります。 サポートされているバイナリ演算子は**==**、 **>**、 **\<**、 **>=**、および **<=**です。 サポートされているオペランドは、定数値、算術関数、スコープ付きパブリック メンバです。
+条件式は、テキストとして入力します。 入力**これです。** フィールド、プロパティ、およびワークフローで使用される方法を参照するエディターに IntelliSense のようなメニューを使用します。 または、ワークフローのメンバ名を直接入力することもできます。 条件には、AND、OR、NOT といった論理演算子を追加することもできます。 述語も追加できます。 述語は、バイナリ演算子と 2 つのオペランドから成ります。 サポートされているバイナリ演算子は**==**、 **>**、 **\<**、 **>=**、および **<=** です。 サポートされているオペランドは、定数値、算術関数、スコープ付きパブリック メンバです。
 
 、比較の種類を指定してを比較できます**null**または空の文字列。 複合型を含む変数でメンバに対する呼び出しをネストすることができます (たとえば `this.Address.State == "WA"`)。
 

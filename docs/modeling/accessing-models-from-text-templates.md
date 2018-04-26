@@ -9,12 +9,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 397e60225740c34d1d70555ccd8294522550a3e1
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 54bd5c4989f23b1de64a17bdf8d88ccebeb65a38
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-models-from-text-templates"></a>テキスト テンプレートからモデルへのアクセス
 テキスト テンプレートを使用すると、レポート ファイル、ソース コード ファイル、およびその他のドメイン固有言語モデルに基づいたテキスト ファイルを作成することができます。 テキスト テンプレートの基本については、次を参照してください。[コードの生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)です。 テキスト テンプレートは、DSL をデバッグするときは、実験用のモードで動作し、DSL が配置されているコンピューターではでも機能します。
@@ -139,7 +140,7 @@ For Each element As ExampleElement In Me.WorkModel.Elements
 ## <a name="loading-models-dynamically"></a>モデルを動的に読み込む
  どのモデルを読み込む実行時に確認するには、モデル ファイルを DSL 固有のディレクティブを使用する代わりに、プログラム コードで動的に読み込むことができます。
 
- ただし、DSL 固有ディレクティブの関数の 1 つは、DSL の名前空間をインポートするテンプレート コードがその DSL で定義されているドメイン クラスを使用できるように。 追加する必要があります、ディレクティブを使用していないため**\<アセンブリ >**と**\<インポート >**ディレクティブをすべてのモデルを読み込むことがあります。 これは、さまざまなモデルを読み込むことがありますが同じ DSL のすべてのインスタンスである場合は簡単です。
+ ただし、DSL 固有ディレクティブの関数の 1 つは、DSL の名前空間をインポートするテンプレート コードがその DSL で定義されているドメイン クラスを使用できるように。 追加する必要があります、ディレクティブを使用していないため**\<アセンブリ >** と**\<インポート >** ディレクティブをすべてのモデルを読み込むことがあります。 これは、さまざまなモデルを読み込むことがありますが同じ DSL のすべてのインスタンスである場合は簡単です。
 
  使用して、ファイルを読み込むには、最も効果的な方法は、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus です。 一般的なシナリオで、テキスト テンプレートは、通常の方法で、最初のモデルを読み込む、DSL 固有ディレクティブを使用します。 そのモデルには、別のモデルに ModelBus 参照が含まれます。 ModelBus を使用して、参照先のモデルを開くし、特定の要素にアクセスすることができます。 詳細については、次を参照してください。[テキスト テンプレートで Visual Studio ModelBus を使用して](../modeling/using-visual-studio-modelbus-in-a-text-template.md)です。
 

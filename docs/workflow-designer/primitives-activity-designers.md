@@ -1,22 +1,24 @@
 ---
-title: プリミティブ アクティビティ デザイナー |Microsoft ドキュメント
+title: ワークフロー デザイナーのプリミティブ アクティビティ デザイナー
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: 0a2b613e-dc04-49a1-a787-caec2ec63b90
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aba571ebb30b04cc1b7aab4bc46b0e8f5ff8493c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6a92a9a6f09ac576d8ed69c4bf94d9983545ccf4
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="primitives-activity-designers"></a>プリミティブ アクティビティ デザイナー
 
-プリミティブ アクティビティ デザイナーは、Assign アクティビティや Delay アクティビティなどの、<xref:System.Activities.Statements> 名前空間の各種アクティビティを作成および構成するために使用します。 このセクションに含まれているトピックでは、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]のアクティビティ デザイナーおよびテンプレート デザイナーの使用方法についてのガイドラインを示します。
+プリミティブ アクティビティ デザイナーは、Assign アクティビティや Delay アクティビティなどの、<xref:System.Activities.Statements> 名前空間の各種アクティビティを作成および構成するために使用します。 このセクションに含まれるトピックでは、アクティビティをワークフロー デザイナーおよびテンプレート デザイナーを使用する方法についてガイダンスを提供します。
 
 ## <a name="related-sections"></a>関連項目
  [制御フロー](../workflow-designer/control-flow-activity-designers.md)

@@ -1,27 +1,32 @@
 ---
-title: FinalState アクティビティ デザイナー |Microsoft ドキュメント
+title: ワークフロー デザイナー - FinalState アクティビティ デザイナー
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: aa186893-8775-40dd-981f-8593ead831d0
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 6360be9522fd8a3640780407cb5252da41515536
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d89e9f81bb7dc8237069a79784eadc0e5d375d6e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="finalstate-activity-designer"></a>FinalState アクティビティ デザイナー
+
 <xref:System.Activities.Core.Presentation.FinalState> デザイナーは、ステート マシンのインスタンスを終了する <xref:System.Activities.Statements.State> を作成するために使用されます。
 
 ## <a name="using-the-finalstate-activity-designer"></a>FinalState アクティビティ デザイナーの使用
- **FinalState**デザイナーを使用して、作成、<xref:System.Activities.Statements.State>ステート マシン内の最終状態として事前に構成されています。 A<xref:System.Activities.Statements.State>を使用して作成された、<xref:System.Activities.Core.Presentation.FinalState>アクティビティ デザイナーがその<xref:System.Activities.Statements.State.IsFinal%2A>プロパティに設定**true**、持たない<xref:System.Activities.Statements.State.Exit%2A>アクティビティとそこから元の遷移はありません。 使用する、<xref:System.Activities.Core.Presentation.FinalState>を追加するアクティビティ デザイナー、<xref:System.Activities.Statements.State>ステート マシン内の最終状態として事前構成済みであるアクティビティをドラッグ、 **FinalState**からアクティビティ デザイナー、**ステート マシン**のセクションで、**ツールボックス**し、ワークフロー デザイナーにドロップします。 <xref:System.Activities.Core.Presentation.FinalState> アクティビティ デザイナーは、<xref:System.Activities.Statements.StateMachine> にドロップして遷移を後で追加できます。または遷移は、<xref:System.Activities.Core.Presentation.FinalState> アクティビティ デザイナーをドロップしたときに作成できます。 遷移を作成する方法の詳細については、次を参照してください。[遷移](../workflow-designer/transition-activity-designer.md)です。
+
+**FinalState**デザイナーを使用して、作成、<xref:System.Activities.Statements.State>ステート マシン内の最終状態として事前に構成されています。 A<xref:System.Activities.Statements.State>を使用して作成された、<xref:System.Activities.Core.Presentation.FinalState>アクティビティ デザイナーがその<xref:System.Activities.Statements.State.IsFinal%2A>プロパティに設定**true**、持たない<xref:System.Activities.Statements.State.Exit%2A>アクティビティとそこから元の遷移はありません。 使用する、<xref:System.Activities.Core.Presentation.FinalState>を追加するアクティビティ デザイナー、<xref:System.Activities.Statements.State>ステート マシン内の最終状態として事前構成済みであるアクティビティをドラッグ、 **FinalState**からアクティビティ デザイナー、**ステート マシン**のセクションで、**ツールボックス**し、ワークフロー デザイナーにドロップします。 <xref:System.Activities.Core.Presentation.FinalState> アクティビティ デザイナーは、<xref:System.Activities.Statements.StateMachine> にドロップして遷移を後で追加できます。または遷移は、<xref:System.Activities.Core.Presentation.FinalState> アクティビティ デザイナーをドロップしたときに作成できます。 遷移を作成する方法の詳細については、次を参照してください。[遷移](../workflow-designer/transition-activity-designer.md)です。
 
 ### <a name="state-activity-properties-in-the-workflow-designer"></a>ワークフロー デザイナーでの State アクティビティのプロパティ
- 次の表に、<xref:System.Activities.Core.Presentation.FinalState> デザイナーを使用して設定できるプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティの中には、プロパティ グリッドで編集できるものがあります。また、その一部はデザイナー画面で編集できます。
+
+次の表に、<xref:System.Activities.Core.Presentation.FinalState> デザイナーを使用して設定できるプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティの中には、プロパティ グリッドで編集できるものがあります。また、その一部はデザイナー画面で編集できます。
 
 |プロパティ名|必須|使用方法|
 |-------------------|--------------|-----------|

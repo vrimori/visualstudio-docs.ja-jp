@@ -11,12 +11,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 003318b8c8e26112ee83dceb9cdc3c453dc6956f
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 6d51b660235a793182cd968423522ade35ce1a56
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="export-diagrams-as-images"></a>イメージとしてダイアグラムをエクスポートする
 Visual Studio で、利害関係者、ユーザー、または同じバージョンの Visual Studio を使用しないプロジェクト チーム メンバーと共有することができるように、読み取り専用の形式で図をモデリングを保存することができます。
@@ -37,7 +38,7 @@ Visual Studio で、利害関係者、ユーザー、または同じバージョ
 
 2.  **名前**一覧で、 **Microsoft XPS Document Writer**、順にクリック**OK**です。
 
-3.  **としてファイルを保存**ファイルとして保存 ダイアログ ボックス、 **XPS ドキュメント (\*.xps)**ファイル。
+3.  **としてファイルを保存**ファイルとして保存 ダイアログ ボックス、 **XPS ドキュメント (\*.xps)** ファイル。
 
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ
 

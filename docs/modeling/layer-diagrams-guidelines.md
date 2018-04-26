@@ -12,12 +12,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 79c13cc878ee97968b82f86e3ba01c7eecd10b0c
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 9ce90746d89dd41c1f53d7150d83afaa2e2bad46
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dependency-diagrams-guidelines"></a>依存関係図: ガイドライン
 作成することで、高レベルのアプリのアーキテクチャの記述*依存関係図*Visual Studio でします。 依存関係ダイアグラムとコードを検証することによって、コードのこの設計で一貫性が保たことを確認します。 レイヤーの検証をビルド プロセスに含めることもできます。 参照してください[Channel 9 ビデオ: デザインし、依存関係のダイアグラムを使用して、アーキテクチャの検証](http://go.microsoft.com/fwlink/?LinkID=252073)です。

@@ -7,12 +7,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 3b68345961e2209506b0c759d7197c1115083446
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: fc41a768b54ba3253b7dad6648b77aa8c03b0f49
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>方法: ドメイン固有言語デザイナーを拡張する
 拡張機能は、デザイナー DSL 定義を編集するために使用することができます。 作成できるメニュー コマンドの追加のハンドラーがドラッグし、ジェスチャ、および特定の種類の値またはリレーションシップを変更するときにトリガーされるルールをダブルクリックを追加する拡張機能の種類です。 拡張機能は、として、Visual Studio Integration Extension (VSIX) をパッケージ化し、他のユーザーに配布することができます。
@@ -24,11 +25,11 @@ ms.lasthandoff: 04/20/2018
 
 #### <a name="to-create-a-dsl-designer-extension-solution"></a>DSL デザイナー拡張機能ソリューションを作成するには
 
-1.  クラス ライブラリ プロジェクト テンプレートを使用して新しいプロジェクトを作成します。 **新しいプロジェクト**ダイアログ ボックスで、をクリックして**Visual c#**し、中央のウィンドウでをクリックして**クラス ライブラリ**です。
+1.  クラス ライブラリ プロジェクト テンプレートを使用して新しいプロジェクトを作成します。 **新しいプロジェクト**ダイアログ ボックスで、をクリックして**Visual c#** し、中央のウィンドウでをクリックして**クラス ライブラリ**です。
 
      このプロジェクトには、拡張機能のコードが含まれます。
 
-2.  VSIX プロジェクト テンプレートを使用して新しいプロジェクトを作成します。 **新しいプロジェクト**] ダイアログ ボックスで、展開**Visual c#**をクリックして**機能拡張**、中央のウィンドウを選択し、[ **VSIX プロジェクト**です。
+2.  VSIX プロジェクト テンプレートを使用して新しいプロジェクトを作成します。 **新しいプロジェクト**] ダイアログ ボックスで、展開**Visual c#** をクリックして**機能拡張**、中央のウィンドウを選択し、[ **VSIX プロジェクト**です。
 
      選択**ソリューションに追加**です。
 

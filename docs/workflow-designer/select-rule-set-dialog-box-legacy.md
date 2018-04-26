@@ -1,7 +1,9 @@
 ---
-title: 選択ルール セット ダイアログ ボックス (レガシ) |Microsoft ドキュメント
+title: ワークフロー デザイナーで選択ルールの設定 ダイアログ ボックス (レガシ)
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Workflow.Activities.Rules.Design.RuleSetBrowserDialog.UI
 helpviewer_keywords:
@@ -12,18 +14,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 376b76e93849e58ac2d26f5c9360dc7673f2a3f0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b199f5cd0ee71d9b4a5ce0991e84660ee031fa59
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="select-rule-set-dialog-box-legacy"></a>[ルール セットの選択] ダイアログ ボックス (レガシ)
-このトピックについて説明する方法を使用して、**ルール セットの選択**従来の Windows ワークフロー デザイナー ダイアログ ボックス。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。
 
- **ルール セットの選択**とともに使用できるルール セットを選択するダイアログ ボックスを使用して、 [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)アクティビティ。 アクセスする方法については、**ルール セットの選択**ダイアログ ボックスを参照してください[する方法: PolicyActivity ルール セット (レガシ) を作成する](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md)です。
+このトピックについて説明する方法を使用して、**ルール セットの選択**従来の Windows ワークフロー デザイナー ダイアログ ボックス。 .NET Framework version 3.5、または、WinFX を対象とする必要がある場合は、従来のワークフロー デザイナーを使用します。
 
- 次の表は、ユーザー インターフェイス (UI) 要素の**ルール セットの選択** ダイアログ ボックス。
+**ルール セットの選択**とともに使用できるルール セットを選択するダイアログ ボックスを使用して、 [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)アクティビティ。 アクセスする方法については、**ルール セットの選択**ダイアログ ボックスを参照してください[する方法: PolicyActivity ルール セット (レガシ) を作成する](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md)です。
+
+次の表は、ユーザー インターフェイス (UI) 要素の**ルール セットの選択** ダイアログ ボックス。
 
 |UI 要素|説明|
 |----------------|-----------------|
@@ -37,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  作成し、ルール セットを編集する方法の詳細については、次を参照してください。[ルール セット エディター ダイアログ ボックス (レガシ)](../workflow-designer/rule-set-editor-dialog-box-legacy.md)です。
 
 > [!WARNING]
-> [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする場合に使用される、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]のルール エディターは、複数バージョン対応機能をサポートしていません。
+> .NET Framework version 3.5、または、WinFX をターゲットに使用される従来のワークフロー デザイナーのルール エディターは、複数バージョン対応機能をサポートしません。
 
  条件の詳細については、次を参照してください。[ワークフローでの条件の使用](http://go.microsoft.com/fwlink?LinkID=65009)です。
 

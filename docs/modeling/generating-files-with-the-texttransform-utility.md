@@ -10,12 +10,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 065d9e23a8ae8b5e328786bb195d191df1388abb
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 152f8d656bf83a6ad46770e695cd64c508dcc3bb
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generate-files-with-the-texttransform-utility"></a>TextTransform ユーティリティを使用してファイルを生成します。
 
@@ -58,7 +59,7 @@ TextTransform [<options>] <templateName>
 |**-r** \<assembly>|アセンブリをコンパイルすると、テキスト テンプレートを実行するために使用します。|
 |**-u** \<namespace>|テンプレートのコンパイルに使用される名前空間です。|
 |**-I** \<includedirectory>|指定されたテキスト テンプレートに含まれるテキスト テンプレートを格納するディレクトリ。|
-|**-P** \<referencepath>|またはを使用してテキスト テンプレート内で指定されたアセンブリを検索するディレクトリを**-r**オプション。<br /><br /> たとえば、Visual Studio API を使用するアセンブリは、次のように使用します。<br /><br /> `-P "%VSSHELLFOLDER%\Common7\IDE\PublicAssemblies"`|
+|**-P** \<referencepath>|またはを使用してテキスト テンプレート内で指定されたアセンブリを検索するディレクトリを **-r**オプション。<br /><br /> たとえば、Visual Studio API を使用するアセンブリは、次のように使用します。<br /><br /> `-P "%VSSHELLFOLDER%\Common7\IDE\PublicAssemblies"`|
 |**-dp** \<processorName>!\<className>!\<assemblyName&#124;codeBase>|名前、完全な型名と、テキスト テンプレート内のカスタム ディレクティブの処理に使用できるディレクティブ プロセッサのアセンブリ。|
 |**-** [processorName] です [。directiveName] です。\<parameterName >!\<parameterValue >|ディレクティブ プロセッサのパラメーターの値を指定します。 パラメーター名と値のみを指定する場合、パラメーターはすべてのディレクティブ プロセッサを使用可能になります。 ディレクティブ プロセッサを指定する場合はこのパラメーターは指定したプロセッサでのみ使用できます。 ディレクティブ名を指定する場合、パラメーターの値は指定されたディレクティブが処理されている場合にのみ使用できます。<br /><br /> ディレクティブ プロセッサまたはテキスト テンプレートからパラメーター値にアクセスする[ITextTemplatingEngineHost.ResolveParameterValue](https://msdn.microsoft.com/library/microsoft.visualstudio.texttemplating.itexttemplatingenginehost.resolveparametervalue.aspx)です。 テキスト テンプレートで、含める`hostspecific`、template ディレクティブのに対して、メッセージを呼び出すと`this.Host`です。 例えば:<br /><br /> `<#@template language="c#" hostspecific="true"#> [<#= this.Host.ResolveParameterValue("", "", "parameterName") #>]`。<br /><br /> 常に入力、'!' の省略可能なプロセッサとディレクティブの名前を省略した場合でもをマークします。 例えば:<br /><br /> `-a !!param!value`|
 |**-h**|ヘルプを提供します。|

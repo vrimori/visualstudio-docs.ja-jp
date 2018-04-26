@@ -7,12 +7,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 83f80e9fe0bf68f5d10d8f3b76840b55de025f33
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 2f4051f0771d4343ee09593a2e9674fa904a5f85
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>方法: ドメイン固有言語を新バージョンに移行する
 定義し、ドメイン固有言語を使用するプロジェクトを移行する[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]のバージョンから[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]をと共に配布された[!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)]です。
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/20/2018
 
 #### <a name="to-prepare-projects-for-migration"></a>プロジェクト移行の準備をします。
 
--   確認、 **.csproj**と**.sln**ファイルを書き込むことができます。 ソース管理下にある場合は、それらがチェック アウトされることを確認します。
+-   確認、 **.csproj**と **.sln**ファイルを書き込むことができます。 ソース管理下にある場合は、それらがチェック アウトされることを確認します。
 
 -   移行するフォルダーのコピーを作成します。
 

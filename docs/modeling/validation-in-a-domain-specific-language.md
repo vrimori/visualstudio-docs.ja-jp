@@ -10,12 +10,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 7a196bd384a047328680a140232267b04bcb8f54
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 63d3153bfcc38b28ace3db5ad976a2c2a6a650fd
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="validation-in-a-domain-specific-language"></a>ドメイン固有言語における検証
 ドメイン固有言語 (DSL) の作成者は、検証制約を定義して、ユーザーが作成したモデルが意味を持つことを確認できます。 たとえば、DSL でユーザーが人々とその先祖の家系図を描くことができる場合、子の誕生日が親の誕生日よりも後であることを確認する制約を作成できます。
@@ -195,7 +196,7 @@ if (erroneousLinks.Count < 5) { context.LogError( ... ); }
 
  ドメイン リレーションシップのロールの多重度を 1..* または 1..1 に設定し、ユーザーがこのリレーションシップのリンクを作成しない場合、検証エラー メッセージが表示されます。
 
- たとえば、DSL がある場合クラスの人と町、およびリレーションシップを持つリレーションシップ PersonLivesInTown **1..\***町ロールにすると、町を持たないユーザーごとに、エラー メッセージが表示されます。
+ たとえば、DSL がある場合クラスの人と町、およびリレーションシップを持つリレーションシップ PersonLivesInTown **1..\*** 町ロールにすると、町を持たないユーザーごとに、エラー メッセージが表示されます。
 
 ## <a name="running-validation-from-program-code"></a>プログラム コードからの検証の実行
  ValidationController をアクセスまたは作成することにより検証を実行できます。 エラー、エラー ウィンドウにユーザーに表示する場合は、ダイアグラムの DocData に関連付けられている ValidationController を使用します。 たとえば、メニュー コマンドを作成する場合、コマンド セット クラスで `CurrentDocData.ValidationController` を使用できます。

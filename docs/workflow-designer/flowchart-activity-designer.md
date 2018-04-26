@@ -1,7 +1,9 @@
 ---
-title: フローチャート アクティビティ デザイナー |Microsoft ドキュメント
+title: ワークフロー デザイナーにフローチャート アクティビティ デザイナー
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Activities.Statements.Flowchart.UI
 - System.Activities.Statements.FlowStep.UI
@@ -12,27 +14,31 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f7db449f538f09a247bc3c67ee26f487a6c81eb0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 81af4a51da2bb15bafd17fc7ba98d676f7b0decc
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="flowchart-activity-designer"></a>フローチャート アクティビティ デザイナー
-<xref:System.Activities.Statements.Flowchart> アクティビティは、複雑なフロー制御を定義および管理するワークフローを作成するために使用します。 <xref:System.Activities.Statements.Flowchart> は、コードで、または[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]を使用して作成できます。 ここでは、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]を使用する方法を説明します。 Windows ワークフロー デザイナーのワークフロー アクティビティ デザイナーでは、自然な形で作成者ワークフロー開発者が使用できます。
+
+<xref:System.Activities.Statements.Flowchart> アクティビティは、複雑なフロー制御を定義および管理するワークフローを作成するために使用します。 A<xref:System.Activities.Statements.Flowchart>コード内、またはワークフロー デザイナーを使用して作成できます。 このトピックでは、ワークフロー デザイナー エクスペリエンスを説明します。 Windows ワークフロー デザイナーのワークフロー アクティビティ デザイナーでは、自然な形で作成者ワークフロー開発者が使用できます。
 
 ## <a name="the-flowchart-activity"></a>Flowchart アクティビティ
- <xref:System.Activities.Statements.Flowchart> では、ワークフローの開始時に実行される一意の <xref:System.Activities.Statements.Flowchart.StartNode%2A> を指定します。また、リンクされた <xref:System.Activities.Statements.Flowchart.Nodes%2A> のネットワークを使用して、任意のループを作成したり、特定の時点で実行フローの経路をワークフロー内の任意のポイントへ移動したりします。
+
+<xref:System.Activities.Statements.Flowchart> では、ワークフローの開始時に実行される一意の <xref:System.Activities.Statements.Flowchart.StartNode%2A> を指定します。また、リンクされた <xref:System.Activities.Statements.Flowchart.Nodes%2A> のネットワークを使用して、任意のループを作成したり、特定の時点で実行フローの経路をワークフロー内の任意のポイントへ移動したりします。
 
 ### <a name="using-the-flowchart-activity-designer"></a>Flowchart アクティビティ デザイナーの使用
- **フローチャート**アクティビティ デザイナーは含まれて、**フローチャート**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**タブで、 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] (または、選択**ツールバー**から、**ビュー**メニューまたは CTRL + ALT + X です)。
 
- **フローチャート**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**に、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]サーフェス任意の場所のアクティビティ デザイナーを通常配置しているルート アクティビティとして、または子として他の制御フロー アクティビティです。 場合、**フローチャート**アクティビティ デザイナーが空のボックスにドロップされる[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]画面で、作成、<xref:System.Activities.Statements.Flowchart>を既定では、実行を開始する開始ノードの展開ビューでアクティビティを緑色の丸で表されます。 場合、**フローチャート**を別の制御フロー アクティビティにアクティビティ デザイナーを削除すると、それ自体をダブルクリックして展開できる最小化されたビューに表示、**フローチャート**アクティビティ デザイナー。 任意の動作、**ツールボックス**に直接ドラッグすることができます、**フローチャート**他の制御フロー アクティビティを含むアクティビティ デザイナー。
+**フローチャート**アクティビティ デザイナーは含まれて、**フローチャート**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**ワークフロー デザイナーのタブ (または、選択**ツールバー**から、**ビュー**メニューまたは CTRL + ALT + X です)。
 
- さまざまなアクティビティ デザイナーを[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]のキャンバスにドラッグしたら、それらが表す <xref:System.Activities.Activity> オブジェクトを互いにリンクさせて、実行の順序を指定できます。 接続元アクティビティと接続先アクティビティの間のリンクを作成するには、接続元アクティビティのデザイナー上にマウス ポインターを置きます。これで、その両側に正方形のハンドルが表示されます。 そのハンドルのどちらかをクリックし、マウス ボタンを押したまま、接続先アクティビティをマウスでポイントしたときにその周りに同様に表示されるハンドルのどちらかにドラッグします。 マウス ボタンを放すと、この 2 つのアクティビティの間にリンクが作成されます。このリンクは、接続元デザイナーから接続先デザイナーへの矢印で表されます。
+**フローチャート**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**アクティビティ デザイナーを通常配置しているルート アクティビティとしてとしてもあれば、ワークフロー デザイナー画面にドロップし、他の制御フロー アクティビティの子です。 場合、**フローチャート**を空白のワークフロー デザイナー画面にアクティビティ デザイナーを削除すると、作成、<xref:System.Activities.Statements.Flowchart>を既定では、実行を開始する開始ノードの展開ビューでアクティビティを緑色の丸で表されます。 場合、**フローチャート**を別の制御フロー アクティビティにアクティビティ デザイナーを削除すると、それ自体をダブルクリックして展開できる最小化されたビューに表示、**フローチャート**アクティビティ デザイナー。 任意の動作、**ツールボックス**に直接ドラッグすることができます、**フローチャート**他の制御フロー アクティビティを含むアクティビティ デザイナー。
+
+ワークフロー デザイナーのキャンバス、さまざまなアクティビティ デザイナーをドラッグした後、<xref:System.Activities.Activity>それらが表すオブジェクトをリンクする実行の順序を指定するためにします。 接続元アクティビティと接続先アクティビティの間のリンクを作成するには、接続元アクティビティのデザイナー上にマウス ポインターを置きます。これで、その両側に正方形のハンドルが表示されます。 そのハンドルのどちらかをクリックし、マウス ボタンを押したまま、接続先アクティビティをマウスでポイントしたときにその周りに同様に表示されるハンドルのどちらかにドラッグします。 マウス ボタンを放すと、この 2 つのアクティビティの間にリンクが作成されます。このリンクは、接続元デザイナーから接続先デザイナーへの矢印で表されます。
 
 ### <a name="flowchart-activity-properties"></a>Flowchart アクティビティのプロパティ
- 次の表に、<xref:System.Activities.Statements.Flowchart> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドまたはデザイナー画面で編集できます。
+
+次の表に、<xref:System.Activities.Statements.Flowchart> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドまたはデザイナー画面で編集できます。
 
 |プロパティ名|必須|使用方法|
 |-------------------|--------------|-----------|

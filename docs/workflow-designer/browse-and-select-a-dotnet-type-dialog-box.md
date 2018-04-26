@@ -1,7 +1,9 @@
 ---
-title: 参照して .NET の種類 ダイアログ ボックスの選択 |Microsoft ドキュメント
+title: ワークフロー デザイナーを参照して .NET の種類 ダイアログ ボックスを選択
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - TypeBrowser.UI
 - ActivityTypeResolver.UI
@@ -11,15 +13,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 04aba24d3dffc96fb8e5288d74322258fa77ce19
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4d136c98acd2719abd07f8feb2f9def48ec6b2ec
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>[.NET 型の参照と選択] ダイアログ ボックス
 
-**プロパティ**ウィンドウ、ダイアログ ボックス、またはを選択すると、変数デザイナーなどのデザイナー**型を参照しています.**データ型の一覧からは、**を参照して .NET 型を選択** ダイアログ ボックス (「型ブラウザー」と省略形で呼ばれます)。 このダイアログ ボックスでは、アセンブリとプロジェクトのツリー表示から型を選択できます。
+**プロパティ**ウィンドウ、ダイアログ ボックス、またはを選択すると、変数デザイナーなどのデザイナー**型を参照しています.** データ型の一覧からは、**を参照して .NET 型を選択** ダイアログ ボックス (「型ブラウザー」と省略形で呼ばれます)。 このダイアログ ボックスでは、アセンブリとプロジェクトのツリー表示から型を選択できます。
 
  このダイアログ ボックスは、次のようなさまざなユーザー シナリオで使用されます。
 
@@ -34,7 +36,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="selecting-a-value-or-reference-type-from-the-type-browser"></a>型ブラウザーでの値型または参照型の選択
 
-#### <a name="to-select-a-value-or-reference-type-from-the-type-browser"></a>型ブラウザーで値型または参照型を選択するには
+### <a name="to-select-a-value-or-reference-type-from-the-type-browser"></a>型ブラウザーで値型または参照型を選択するには
 
 1.  **型名**ボックスを使用する型の名前を入力します。
 
@@ -44,7 +46,7 @@ ms.lasthandoff: 04/16/2018
 
     -   ための十分な文字を入力して、**型名**ボックスを使用して、enter キーを押し、種類を選択する型を一意に識別するには
 
-#### <a name="to-select-a-generic-type-from-the-type-browser"></a>型ブラウザーでジェネリック型を選択するには
+### <a name="to-select-a-generic-type-from-the-type-browser"></a>型ブラウザーでジェネリック型を選択するには
 
 1.  **型名**ボックスで使用する型の名前を入力します。
 

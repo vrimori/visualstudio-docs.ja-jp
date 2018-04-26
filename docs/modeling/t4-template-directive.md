@@ -7,12 +7,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 0ff77d259601fbc1688691c36424b99416fa7df2
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: b26f0a6b58a1851e7e348ff367fe81f31eec4a56
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="t4-template-directive"></a>T4 テンプレート ディレクティブ
 
@@ -56,7 +57,7 @@ debug="true"
 
  `debug` 属性が `true` の場合、デバッガーでテンプレート内の中断または例外の発生位置を正確に特定できるようにする情報が中間コード ファイルに出力されるようになります。
 
- デザイン時テンプレートに、中間コード ファイルが書き込まれます、 **%temp%**ディレクトリ。
+ デザイン時テンプレートに、中間コード ファイルが書き込まれます、 **%temp%** ディレクトリ。
 
  でデバッガーをデザイン時テンプレートを実行するテキスト テンプレートを保存し、ソリューション エクスプ ローラーで、テキスト テンプレートのショートカット メニューを開きし、選択**T4 テンプレートのデバッグ**です。
 

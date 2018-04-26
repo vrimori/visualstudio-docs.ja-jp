@@ -1,7 +1,9 @@
 ---
-title: '方法: デバッグのステップ実行オプション (レガシ) の変更 |Microsoft ドキュメント'
+title: 'ワークフロー デザイナー - 方法: デバッグのステップ実行オプション (レガシ) を変更します。'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - branch stepping
 - debugging, stepping options
@@ -14,28 +16,29 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aedb8e738dc2e6ca2b066dd9a2cd42e332bbd8be
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 31047cedd4e8772b9ebab4ef238a8fe32bc07663
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-change-the-debug-stepping-option-legacy"></a>方法: デバッグのステップ実行オプションを変更する (レガシ)
-このトピックのデバッグのステップ実行オプションを変更する方法について説明[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]を同時実行アクションを持つ従来の Windows ワークフロー デザイナーでのアプリケーションです。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。
 
- などを持つ同時実行は、従来のアクティビティをデバッグする際に**ParallelActivity**または**ConditionedActivityGroup**、2 つのオプションのいずれかを使用して、コードをステップ実行することができます。
+このトピックでは、デバッグのステップ実行を同時実行アクションを持つ従来の Windows ワークフロー デザイナーでの Windows Workflow Foundation (WF) アプリケーション用のオプションを変更する方法について説明します。 .NET Framework version 3.5、または、WinFX を対象とする必要がある場合は、従来のワークフロー デザイナーを使用します。
 
- 従来のワークフロー プロジェクトでデバッグのステップ実行オプションを変更するには、次の手順に従います。
+などを持つ同時実行は、従来のアクティビティをデバッグする際に**ParallelActivity**または**ConditionedActivityGroup**、2 つのオプションのいずれかを使用して、コードをステップ実行することができます。
+
+従来のワークフロー プロジェクトでデバッグのステップ実行オプションを変更するには、次の手順に従います。
 
 ## <a name="procedures"></a>手順
 
-#### <a name="to-change-the-debug-stepping-option"></a>デバッグのステップ実行オプションを変更するには
+### <a name="to-change-the-debug-stepping-option"></a>デバッグのステップ実行オプションを変更するには
 
 1.  Visual Studio を起動します。
 
-2.  既存の従来のワークフロー プロジェクトを開くか、同時アクティビティを使用し、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] または [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] を対象とする新しいプロジェクトを作成します。
+2.  既存の従来のワークフロー プロジェクトを開くか、.NET Framework version 3.5、または、WinFX は、同時アクティビティとそのターゲットを使用する新しいプロジェクトを作成します。
 
-3.  **ワークフロー**では、従来のメニュー [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]、 をポイント**デバッグ**、順にポイントして**ステップ実行オプション**です。
+3.  **ワークフロー**メニュー をポイントする、従来のワークフロー デザイナーで**デバッグ**、順にポイントして**ステップ実行オプション**です。
 
 4.  いずれかを選択**インスタンス**または**ブランチ**です。
 

@@ -1,6 +1,7 @@
 ---
 title: Visual Studio でデバッグを行うときの呼び出し履歴に対するメソッドのマップ
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +30,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f626dfbab7e97159a0dca2b0ab87a2fb29271244
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 83ee400201ff76745612e7fe7ce36020ba5234a8
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Visual Studio でデバッグを行うときの呼び出し履歴に対するメソッドのマップ
 コード マップをデバッグしながら呼び出し履歴を視覚的にトレースを作成します。 コメントをマップに追加することでバグの発見に重点を置いてコードの動作を追跡できます。
@@ -163,7 +164,7 @@ ms.lasthandoff: 04/20/2018
 
 -   **新しい呼び出し履歴を自動的に追加したマップを停止する方法は?**
 
-     選択![ボタン&#45;ショー呼び出し履歴コード マップには自動的に](../debugger/media/debuggermap_automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon")マップ ツールバーでします。 マップを現在の呼び出し履歴を手動で追加するには、キーを押して**Ctrl** + **shift キーを押し** + **`**です。
+     選択![ボタン&#45;ショー呼び出し履歴コード マップには自動的に](../debugger/media/debuggermap_automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon")マップ ツールバーでします。 マップを現在の呼び出し履歴を手動で追加するには、キーを押して**Ctrl** + **shift キーを押し** + **`** です。
 
      デバッグ中に、マップ上の既存の呼び出し履歴を強調表示、マップが続行されます。
 

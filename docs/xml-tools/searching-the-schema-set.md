@@ -1,9 +1,8 @@
 ---
-title: スキーマ セットの検索 |Microsoft ドキュメント
-ms.custom: ''
+title: XML スキーマ エクスプ ローラーでスキーマ セットの検索
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: ec1395e0-d03c-4130-810d-f2db656937bd
 author: gewarren
@@ -11,44 +10,50 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6328e3febf8d7279ad0a4bcac3ca4be54eb42c20
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8b3aa631ab673f7b6d679cbe39459ecb9a5fbbaf
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="searching-the-schema-set"></a>スキーマ セットの検索
-XML スキーマ エクスプローラーでは、次の方法でスキーマ セットを検索できます。  
-  
--   キーワード検索  
-  
--   スキーマ固有の検索  
-  
-## <a name="keyword-search"></a>キーワード検索  
- 内の部分文字列を入力してキーワード検索を実行する、**検索 SchemaSet** XML スキーマ エクスプ ローラーのツールバーのテキスト ボックス。  
-  
- ![XML スキーマ エクスプ ローラー キーワード検索](../xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")  
-  
- XML スキーマ エクスプローラーは、次のようにスキーマ セットを検索します。  
-  
--   指定したキーワードに一致する `name` 属性または `ref` 属性。 これを使用すると、要素、属性、型などを名前で検索することができます。  
-  
--   include ステートメントの `schemaLocation` 属性。  
-  
--   import ステートメントの `namespace` 属性。  
-  
-## <a name="schema-specific-search"></a>スキーマ固有の検索  
- XML スキーマ エクスプローラーには、XML スキーマ エクスプローラーのコンテキスト メニューを使用してアクセスできる組み込みの検索機能もあります。 使用できるコンテキスト メニューの詳細については、次を参照してください。[コンテキスト メニュー](../xml-tools/context-menus-xml-schema-explorer.md)です。 スタート ビューからスキーマに固有の検索を実行することもできます。詳細については、「スキーマ セットの詳細」セクションを参照してください、[スタート ビュー](../xml-tools/start-view.md)トピックです。  
-  
-## <a name="displaying-and-navigating-search-results"></a>検索結果の表示および移動  
- 検索が終了すると、ツール バーに概要結果ペインが追加され、検索結果が表示されます。 検索結果は XML スキーマ エクスプローラーでも強調表示され、垂直スクロール バーの目盛りでマークされます。 使用して、検索結果を移動することができます、**次の検索結果に移動**と**前の検索結果に移動**; XML スキーマ エクスプ ローラーのツールバーのキーボード キーを使用して、概要結果ペイン上のボタンF3 キーおよび shift + f3 です。または、スクロール バーの目盛りをクリックします。  
-  
- をクリックして、ワークスペースに検索結果を追加することができます、**強調表示されたノードをワークスペースに追加**概要結果ペインでボタンをクリックします。  
-  
- ![XML スキーマ エクスプ ローラー検索結果](../xml-tools/media/schemaexplorersearchresult.gif "SchemaExplorerSearchResult")  
-  
-## <a name="clearing-search-results"></a>検索結果のクリア  
- 検索結果をクリアする] をクリックして、 **x** XML スキーマ エクスプ ローラー検索ツールバーの [概要結果ペインでボタンをクリックします。  
-  
-## <a name="see-also"></a>関連項目  
- [XML スキーマ エクスプローラー](../xml-tools/xml-schema-explorer.md)
+
+XML スキーマ エクスプローラーでは、次の方法でスキーマ セットを検索できます。
+
+-   キーワード検索
+
+-   スキーマ固有の検索
+
+## <a name="keyword-search"></a>キーワード検索
+
+ 内の部分文字列を入力してキーワード検索を実行する、**検索 SchemaSet** XML スキーマ エクスプ ローラーのツールバーのテキスト ボックス。
+
+ ![XML スキーマ エクスプ ローラー キーワード検索](../xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")
+
+ XML スキーマ エクスプ ローラーでは、スキーマ セットに、次の属性を検索します。
+
+-   指定したキーワードに一致する `name` 属性または `ref` 属性。 これにより、要素、属性、型、および、名前で検索できます。
+
+-   include ステートメントの `schemaLocation` 属性。
+
+-   import ステートメントの `namespace` 属性。
+
+## <a name="schema-specific-search"></a>スキーマ固有の検索
+
+ XML スキーマ エクスプローラーには、XML スキーマ エクスプローラーのコンテキスト メニューを使用してアクセスできる組み込みの検索機能もあります。 使用できるコンテキスト メニューの詳細については、次を参照してください。[コンテキスト メニュー](../xml-tools/context-menus-xml-schema-explorer.md)です。 スタート ビューからスキーマに固有の検索を実行することもできます。詳細については、「スキーマ セットの詳細」セクションを参照してください、[スタート ビュー](../xml-tools/start-view.md)トピックです。
+
+## <a name="displaying-and-navigating-search-results"></a>検索結果の表示および移動
+
+ 検索が終了すると、ツール バーに概要結果ペインが追加され、検索結果が表示されます。 検索結果は XML スキーマ エクスプローラーでも強調表示され、垂直スクロール バーの目盛りでマークされます。 使用して、検索結果を移動することができます、**次の検索結果に移動**と**前の検索結果に移動**; XML スキーマ エクスプ ローラーのツールバーのキーボード キーを使用して、概要結果ペイン上のボタンF3 キーおよび shift + f3 です。または、スクロール バーの目盛りをクリックします。
+
+ をクリックして、ワークスペースに検索結果を追加することができます、**強調表示されたノードをワークスペースに追加**概要結果ペインでボタンをクリックします。
+
+ ![XML スキーマ エクスプ ローラー検索結果](../xml-tools/media/schemaexplorersearchresult.gif "SchemaExplorerSearchResult")
+
+## <a name="clearing-search-results"></a>検索結果のクリア
+
+ 検索結果をクリアする] をクリックして、 **x** XML スキーマ エクスプ ローラー検索ツールバーの [概要結果ペインでボタンをクリックします。
+
+## <a name="see-also"></a>関連項目
+
+- [XML スキーマ エクスプローラー](../xml-tools/xml-schema-explorer.md)
