@@ -295,6 +295,7 @@
 #### [[プロセスにアタッチできません] ダイアログ ボックス](unable-to-attach-to-the-process.md)
 #### [[エディット コンティニュ エラー メッセージ] ダイアログ ボックス](edit-and-continue-error-message-dialog-box.md)
 #### [エラー: 関数 'function' の評価がタイムアウトし、安全でない方法で中止される必要がありました](error-evaluating-the-function-function-timed-out-and-needed-to-be-aborted-in-an-unsafe-way.md)
+#### [エラー: 関数 'function' の評価中にターゲット プロセスがコード 'code' で終了しました](error-evaluating-the-function-process-exited.md)
 #### [エラー : リモート コンピューター上の SQL Server に接続できません](error-unable-to-connect-to-sql-server-on-remote-machine.md)
 #### [エラー: SQL Server デバッグ インターフェイスにアクセスできません](error-unable-to-access-the-sql-server-debugging-interface.md)
 #### [エラー :SQL が SSDEBUGPS を見つけることができません](error-sql-can-t-find-ssdebugps.md)
