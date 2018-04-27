@@ -96,7 +96,7 @@ VsLocalCreateInstance(CLSID_VsTextBuffer, NULL, CLSCTX_INPROC_SERVER, IID_IVsTex
   
 #### <a name="to-get-an-ivxtextbuffer"></a>IVxTextBuffer を取得するには  
   
-1.  IVx のインターフェイスの定義が VSEditor.h ファイルには.Visual Studio SDK のインストールの \VisualStudioIntegration\Common\Inc\ フォルダーです。  
+1.  IVx* のインターフェイスの定義が VSEditor.h ファイルには.Visual Studio SDK のインストールの \VisualStudioIntegration\Common\Inc\ フォルダーです。  
   
 2.  次のコードを使用してテキスト バッファーをインスタンス化、`IVsUserData->GetData()`メソッドです。 次のコードに`pData`へのポインター、`IVsUserData`オブジェクト。  
   

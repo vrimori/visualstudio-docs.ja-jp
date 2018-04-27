@@ -1,6 +1,6 @@
 ---
 title: 規則セットを使用した実行対象の C++ 規則の指定
-ms.date: 11/04/2016
+ms.date: 04/28/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
@@ -9,15 +9,19 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 571d54bb6bdf3673da8e40d6075c5b961d248fe5
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ccb64fba6a646de0974c9de6e35beb98738b7300
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>規則セットを使用して実行するように C++ の規則を指定
 
-Visual Studio で作成および変更できますカスタム*ルール セット*コード分析に関連付けられている特定のプロジェクトのニーズにします。 C++、カスタム規則を作成するのには、C と C++ プロジェクトが Visual Studio IDE で開く必要があります。 規則セット エディターで、標準の規則セットを開くと追加し、または特定の規則を削除してコード分析ルールに違反していることを決定するときに発生するアクションを必要に応じて変更します。
+Visual Studio で作成および変更できますカスタム*ルール セット*コード分析に関連付けられている特定のプロジェクトのニーズにします。 既定の規則セットが格納されている`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`です。
+
+**Visual Studio 2017 バージョン 15.7**任意のテキストを使用してカスタム規則セット エディターを作成して新機能のビルドを使用しているシステムに関係なく、コマンド ライン ビルドでは、それらを適用します。 詳細については、次を参照してください。 [/analyze: ruleset](/cpp/build/reference/analyze-code-quality)です。
+
+Visual Studio の設定、カスタム C++ 規則を作成するには、C と C++ プロジェクトを Visual Studio IDE で開いていなければなりません。 規則セット エディターで、標準の規則セットを開くと追加し、または特定の規則を削除してコード分析ルールに違反していることを決定するときに発生するアクションを必要に応じて変更します。
 
 新規のカスタム規則セットを作成する場合は、新しいファイル名を使用して保存します。 作成したカスタム規則セットは、自動的にプロジェクトに割り当てられます。
 
@@ -72,3 +76,20 @@ Visual Studio で作成および変更できますカスタム*ルール セッ�
 - 表示と割り当てられている規則を非表示を切り替える、**なし**アクション、選択**有効になっていないルールが表示**です。
 
 - を追加またはマイクロソフトの現在のルール セットの既定の規則セットを削除する選択**子規則セットの追加または削除する**です。
+
+## <a name="to-create-a-rule-set-in-a-text-editor"></a>テキスト エディターでルール セットを作成するには
+
+作成できます。 カスタム規則セットのテキスト エディターで任意の場所に保存して、`.ruleset`拡張子で適用し、 [/analyze: ruleset](/cpp/build/reference/analyze-code-quality)コンパイラ オプション。
+
+次の例では、基本的な規則セットを開始点として使用できるファイルを示しています。
+
+```xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="New Rule Set" Description=" " ToolsVersion="15.0">
+  <Rules AnalyzerId="Microsoft.Analyzers.NativeCodeAnalysis" RuleNamespace="Microsoft.Rules.Native">
+    <Rule Id="C6001" Action="Warning" />
+    <Rule Id="C26494" Action="Warning" />
+  </Rules>
+</RuleSet>
+```
