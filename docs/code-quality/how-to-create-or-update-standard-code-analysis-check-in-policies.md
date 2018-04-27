@@ -13,11 +13,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ecda4cc1ab237bed9e377f977295e19c74893673
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 4897ec080bf5d268db6ac229785ac0b642753bc0
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>方法: 標準のコード分析チェックイン ポリシーを作成または更新する
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 
 - マネージ コードの場合を指定して、チェックイン ポリシーを設定する、*ルール セット*コード分析規則のサブセットを格納しています。
 
-- C/C++ コードのチェックイン ポリシーでは、すべてのコード分析規則が実行されることが必要です。 チーム プロジェクト内の個々 のコード プロジェクトの特定のルールを無効にするプリプロセッサ ディレクティブを追加できます。
+- Visual Studio 2017 15.6 と、以前のバージョンでの C/C++ コードのチェックイン ポリシーでは、すべてのコード分析規則が実行されることが必要です。 チーム プロジェクト内の個々 のコード プロジェクトの特定のルールを無効にするプリプロセッサ ディレクティブを追加できます。 15.7 以降では、使用 **/analyze: ruleset**を実行するには、どのルールを指定します。 詳細については、次を参照してください。[ルール セットを実行するように C++ 規則の指定を使用して](using-rule-sets-to-specify-the-cpp-rules-to-run.md)です。
 
 マネージ コードのチェックイン ポリシーを指定すると後、チーム メンバーは、チーム プロジェクトのポリシー設定をコード プロジェクトに対して、コード分析設定を同期できます。
 
