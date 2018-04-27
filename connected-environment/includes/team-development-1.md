@@ -1,3 +1,11 @@
+---
+ms.topic: include
+ms.openlocfilehash: 30d3f9da291feb52674937d4b2f1b86f3efd0386
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/27/2018
+---
 ここまでは、アプリケーションを扱う唯一の開発者であるかのようにアプリケーションのコードを実行しました。 このセクションでは、Connected Environment がチーム開発をどのように効率化するかについて説明します。
 * 開発者チームが同じ開発環境で作業できるようにします。
 * 各開発者が他の開発者の邪魔してしまうことを心配せずに、隔離された状態でコードを反復処理できるようにします。

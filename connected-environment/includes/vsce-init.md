@@ -1,3 +1,11 @@
+---
+ms.topic: include
+ms.openlocfilehash: 394e31bf0660557c1eba571006cacf213263c07e
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/27/2018
+---
 ## <a name="initialize-code-for-docker-and-kubernetes-development"></a>Docker と Kubernetes 開発でコードを初期化する
 ここまでで、ローカルで実行できる基本的な Web アプリが用意されました。 次にこれをコンテナー化します。アプリのコンテナーとそれを Kubernetes に展開する方法を定義するアセットを作成します。 Connected Environment を利用することでこの作業は簡単になります。 
 
