@@ -1,3 +1,11 @@
+---
+ms.topic: include
+ms.openlocfilehash: 9da28d29dc431f2f6ec92a01c397244147042f12
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/27/2018
+---
 2. F5 を押し (あるいは端末ウィンドウに「`vsce up`」と入力し)、サービスを実行します。 これで、新しく選択したスペース `scott` で自動的にサービスが実行されます。 
 1. `vsce list` をもう一度実行し、これを確定できます。 最初に、`mywebapi` のインスタンスが `scott` スペースで実行中であることを確認できます (`mainline` で実行されているバージョンは引き続き実行されていますが、一覧にはありません)。 次に、`webfrontend` のアクセス ポイント URL の先頭に "scott-" というテキストが付けられます。 この URL は `scott` スペースに固有です。"scott URL" に送信された要求は最初に `scott` スペースに進もうとして失敗し、`mainline` スペースのサービスにフォールバックします。
 
