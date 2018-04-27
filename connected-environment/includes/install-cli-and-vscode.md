@@ -1,3 +1,11 @@
+---
+ms.topic: include
+ms.openlocfilehash: 78de57178350d4317896c41a455efbeeb553c58d
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/27/2018
+---
 ## <a name="install-the-connected-environment-cli"></a>Connected Environment CLI をインストールする
 Connected Environment には、最小限のローカル コンピューターのセットアップが必要です。 開発環境のほとんどの構成はクラウドに格納され、他のユーザーと共有することができます。
 
