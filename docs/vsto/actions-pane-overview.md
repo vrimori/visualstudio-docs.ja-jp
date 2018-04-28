@@ -18,14 +18,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0fa20f8be093ae064daba731833709fd8f54f551
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 50f39b6fc292bba2081d8eb5c3bc87d6f9041b49
+ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="actions-pane-overview"></a>操作ウィンドウの概要
-  操作ウィンドウは、カスタマイズ可能な**ドキュメント アクション**特定の Microsoft Office Word ドキュメントまたは Microsoft Office Excel ブックに関連付けられている作業ウィンドウ。 ホストされているその他の組み込み作業ウィンドウと、Office 作業ウィンドウの内側など、 **XML ソース**Excel で作業ウィンドウ、または**スタイルと書式**Word 作業ウィンドウ。 操作ウィンドウのユーザー インターフェイスは、Windows フォーム コントロールまたは WPF コントロールを使用してデザインできます。  
+  操作ウィンドウは、カスタマイズ可能な**ドキュメント アクション**特定の Microsoft Office Word ドキュメントまたは Microsoft Office Excel ブックに関連付けられている作業ウィンドウ。 [操作] ウィンドウ内でホストされる他の組み込み作業ウィンドウと、Office 作業ウィンドウなど、 **XML ソース**Excel で作業ウィンドウ、または**スタイルと書式**Word 作業ウィンドウ。 操作ウィンドウのユーザー インターフェイスは、Windows フォーム コントロールまたは WPF コントロールを使用してデザインできます。
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/27/2018
 > [!NOTE]  
 >  カスタム作業ウィンドウは、操作ウィンドウとは異なります。 カスタム作業ウィンドウは、特定のドキュメントではなく、アプリケーションに関連付けられます。 カスタム作業ウィンドウは、一部の Microsoft Office アプリケーション向けの VSTO アドインで作成できます。 詳細については、次を参照してください。[カスタム作業ウィンドウの](../vsto/custom-task-panes.md)します。  
 
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[方法は i: を使用して WPF コントロールの内部 Excel 操作ウィンドウ?](http://go.microsoft.com/fwlink/?LinkId=132763)です。  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[方法は i: を使用して WPF コントロールの内部 Excel 操作ウィンドウ?](http://go.microsoft.com/fwlink/?LinkId=132763)です。
 
 ## <a name="displaying-the-actions-pane"></a>操作ウィンドウの表示  
  操作ウィンドウは、<xref:Microsoft.Office.Tools.ActionsPane> クラスによって表されます。 ドキュメント レベルのプロジェクトを作成するとき、`ThisWorkbook` クラス (Excel の場合) または `ThisDocument` クラス (Word の場合) の `ActionsPane` フィールドをプロジェクトで使用することで、このクラスのインスタンスをコードで使用できます。 操作ウィンドウを表示するには、`ActionsPane` フィールドの <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> プロパティに Windows フォーム コントロールを追加します。 `actions` という名前のコントロールを操作ウィンドウに追加するコード例を次に示します。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 04/27/2018
  操作ウィンドウは、実行時にコントロールを明示的に追加するとすぐに表示されます。 操作ウィンドウが表示された後は、ユーザーの操作に応じてコントロールを動的に追加または削除できます。 通常は、ユーザーが初めてドキュメントを開くときに操作ウィンドウが表示されるように、操作ウィンドウを表示するコードを `ThisDocument` または `ThisWorkbook` の `Startup` イベント ハンドラーに追加します。 しかし、ドキュメント内でのユーザーの操作に応じてのみ操作ウィンドウを表示することもできます。 たとえば、ドキュメント上のコントロールの `Click` イベントにコードを追加できます。  
 
 ### <a name="adding-multiple-controls-to-the-actions-pane"></a>操作ウィンドウへの複数のコントロールの追加  
- 操作ウィンドウに複数のコントロールを追加する場合、通常は、対象のコントロールを 1 つのユーザー コントロールにグループ化し、このユーザー コントロールを <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> プロパティに追加します。 このプロセスには、次の手順が含まれます。  
+ ユーザー コントロールでコントロールをグループ化し、ユーザー コントロールを追加する必要があります [操作] ウィンドウに複数のコントロールを追加すると、<xref:Microsoft.Office.Tools.ActionsPane.Controls%2A>プロパティです。 このプロセスには、次の手順が含まれます。  
 
 1.  追加することで、[操作] ウィンドウのユーザー インターフェイス (UI) を作成、**操作ウィンドウ コントロール**または**ユーザー コントロール**をプロジェクトに項目。 これらのアイテムのどちらにも、カスタム Windows フォーム <xref:System.Windows.Forms.UserControl> クラスが含まれています。 **操作ウィンドウ コントロール**と**ユーザー コントロール**項目は等価です。 唯一の違いは、名前。  
 
@@ -79,12 +79,12 @@ ms.lasthandoff: 04/27/2018
      [!code-vb[Trin_VstcoreActionsPaneExcel#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#9)]  
 
 ### <a name="clearing-the-actions-pane-when-the-document-is-opened"></a>ドキュメントが開かれた時点では操作ウィンドウを消去する  
- 操作ウィンドウが表示された状態でユーザーがドキュメントを保存すると、操作ウィンドウにコントロールが含まれているかどうかに関係なく、そのドキュメントを開くたびに操作ウィンドウが表示されます。 それをいつ表示するかを制御するには、`ThisDocument` または `ThisWorkbook` の `Startup` イベント ハンドラーで `ActionsPane` フィールドの <xref:Microsoft.Office.Tools.ActionsPane.Clear%2A> メソッドを呼び出し、ドキュメントを開いた時点で操作ウィンドウが表示されないようにします。  
+ ユーザーが、ドキュメントを保存するは、[操作] ウィンドウが表示されている間、ときに、操作ウィンドウが表示、ドキュメントが開かれるたびに [操作] ウィンドウは、任意のコントロールを含むかどうか。 それをいつ表示するかを制御するには、`ThisDocument` または `ThisWorkbook` の `Startup` イベント ハンドラーで `ActionsPane` フィールドの <xref:Microsoft.Office.Tools.ActionsPane.Clear%2A> メソッドを呼び出し、ドキュメントを開いた時点で操作ウィンドウが表示されないようにします。  
 
 ### <a name="determining-when-the-actions-pane-is-closed"></a>いつ操作ウィンドウが閉じられたかの判定  
  操作ウィンドウが閉じられたときに発生するイベントはありません。 <xref:Microsoft.Office.Tools.ActionsPane> クラスには <xref:Microsoft.Office.Tools.ActionsPane.VisibleChanged> イベントがありますが、このイベントは、エンド ユーザーによって操作ウィンドウが閉じられたときには発生しません。 代わりに、このイベントは、操作ウィンドウ上のコントロールが呼び出すことによって非表示の場合、<xref:Microsoft.Office.Tools.ActionsPane.Hide%2A>メソッドかを設定して、<xref:Microsoft.Office.Tools.ActionsPane.Visible%2A>プロパティを**false**です。  
 
- エンド ユーザーが操作ウィンドウを閉じた場合、エンド ユーザーは、アプリケーションのユーザー インターフェイス (UI) で次のいずれかの手順を実行することにより、操作ウィンドウを再び表示できます。  
+ ユーザーは、[操作] ウィンドウを終了するとき、ユーザー再び表示できます、アプリケーションのユーザー インターフェイス (UI) で、次の手順のいずれかを実行します。  
 
 ##### <a name="to-display-the-actions-pane-by-using-the-ui-of-word-or-excel"></a>Word または Excel の UI を使用して操作ウィンドウを表示するには  
 
@@ -95,7 +95,7 @@ ms.lasthandoff: 04/27/2018
 ## <a name="programming-actions-pane-events"></a>操作ウィンドウのイベントのプログラミング  
  操作ウィンドウに複数のユーザー コントロールを追加し、ドキュメント上のイベントに応答するコードを作成して、ユーザー コントロールを表示したり非表示にしたりすることができます。 XML スキーマ要素をドキュメントにマップした場合は、XML 要素の 1 つにカーソルが置かれた時点で、操作ウィンドウに特定のユーザー コントロールを表示するようにできます。 詳細については、次を参照してください。[する方法: Visual Studio の内部 Word ドキュメントにスキーマをマップ](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)と[する方法: Visual Studio 内のワークシートへのスキーマのマップ](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)です。  
 
- また、ホスト コントロール、アプリケーション、またはドキュメント イベントなど、任意のオブジェクトのイベントに応答するコードを作成することもできます。 詳細については、次を参照してください。[チュートリアル: NamedRange コントロールのイベントのプログラミング](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)です。  
+ また、ホスト コントロール、アプリケーション、またはドキュメント イベントなど、任意のオブジェクトのイベントに応答するコードを作成することもできます。 詳細については、「 [チュートリアル : NamedRange コントロールのイベントのプログラミング](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)」を参照してください。  
 
 ## <a name="binding-data-to-controls-on-the-actions-pane"></a>操作ウィンドウ上のコントロールへのデータ バインディング  
  操作ウィンドウのコントロールは、Windows フォームのコントロールと同じデータ バインディング機能を備えています。 データセット、型指定されたデータセット、XML などのデータ ソースに、コントロールをバインドできます。 詳細については、「 [Data Binding and Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms)」を参照してください。  
@@ -129,7 +129,7 @@ ms.lasthandoff: 04/27/2018
 ## <a name="resizing-the-actions-pane"></a>操作ウィンドウのサイズ変更  
  <xref:Microsoft.Office.Tools.ActionsPane> は作業ウィンドウに埋め込まれているため、<xref:Microsoft.Office.Tools.ActionsPane> のサイズを直接変更することはできません。 ただし、作業ウィンドウを表す <xref:Microsoft.Office.Core.CommandBar> の <xref:Microsoft.Office.Core.CommandBar.Width%2A> プロパティを設定すると、プログラムによって作業ウィンドウの幅を変更できます。 作業ウィンドウの高さは、作業ウィンドウが水平にドッキングされている場合、または浮動している場合に変更できます。  
 
- 通常、プログラムによる作業ウィンドウのサイズ変更はお勧めしません。ユーザーが、必要に応じて、作業ウィンドウのサイズを選択できるようにする必要があるためです。 ただし、作業ウィンドウの幅を変更する必要がある場合には、次のコードを使用してこのタスクを実現できます。  
+ プログラムによって作業ウィンドウのサイズを変更しても、ユーザーはニーズに最適な作業ウィンドウのサイズを選択する必要がありますは推奨されません。 ただし、作業ウィンドウの幅を変更する必要がある場合には、次のコードを使用してこのタスクを実現できます。  
 
  [!code-csharp[Trin_VstcoreActionsPaneWord#102](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#102)]
  [!code-vb[Trin_VstcoreActionsPaneWord#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#102)]  
@@ -145,7 +145,7 @@ ms.lasthandoff: 04/27/2018
 > [!NOTE]  
 >  エンド ユーザーは、作業ウィンドウの位置を手動でいつでも変更できます。 プログラムで指定した位置に作業ウィンドウを常にドッキングしておくことはできません。 ただし、向きの変更を確認し、操作ウィンドウ上のコントロールが正しい方向で積み重ねられるようにすることは可能です。 詳細については、次を参照してください。[する方法: アクション ペイン上の管理コントロールのレイアウト](../vsto/how-to-manage-control-layout-on-actions-panes.md)です。  
 
- <xref:Microsoft.Office.Tools.ActionsPane> の <xref:Microsoft.Office.Tools.ActionsPane.Top%2A> プロパティと <xref:Microsoft.Office.Tools.ActionsPane.Left%2A> プロパティを設定しても、その位置は変更されません。これは、<xref:Microsoft.Office.Tools.ActionsPane> オブジェクトが作業ウィンドウに埋め込まれているためです。  
+ 設定、<xref:Microsoft.Office.Tools.ActionsPane.Top%2A>と<xref:Microsoft.Office.Tools.ActionsPane.Left%2A>のプロパティ、<xref:Microsoft.Office.Tools.ActionsPane>ために、その位置を変更しない、<xref:Microsoft.Office.Tools.ActionsPane>オブジェクトが作業ウィンドウに埋め込まれています。  
 
  作業ウィンドウがドッキングされていない場合、作業ウィンドウを表す <xref:Microsoft.Office.Core.CommandBar> の <xref:Microsoft.Office.Core.CommandBar.Top%2A> プロパティと <xref:Microsoft.Office.Core.CommandBar.Left%2A> プロパティを設定できます。 次のコードでは、ドッキングが解除された作業ウィンドウをドキュメントの左上隅に移動します。  
 
