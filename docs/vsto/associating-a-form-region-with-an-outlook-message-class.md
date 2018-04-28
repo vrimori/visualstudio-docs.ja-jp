@@ -2,8 +2,8 @@
 title: フォーム領域を Outlook メッセージ クラスに関連付ける |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
+ms.technology: office-development
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - VSTO.NewFormRegionWizard.InvalidMessageClassName
@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 27797a6b7ec2a415daa525d8eb90c5bbfbe1f859
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e3e3deeb55fb93b1a393d0489213f1d0e7acd85b
+ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="associating-a-form-region-with-an-outlook-message-class"></a>フォーム領域の Outlook メッセージ クラスへの関連付け
   Microsoft Office Outlook アイテムは、各アイテムのメッセージ クラスとフォーム領域を関連付けることによって、フォーム領域を表示を指定することができます。 たとえば、メール アイテムの下部にフォーム領域を追加する場合、ipm フォーム領域を関連付けることができます。メッセージ クラスに注意してください。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 04/16/2018
   
  標準のメッセージ クラスは、フォーム領域を全体のフォームまたはフォームの既定のページを置換する場合はご利用いただけません。 フォームをフォームに新しいページを追加するか、フォームの下部に追加されるは標準のメッセージ クラス名を指定できます。 詳細については、次を参照してください。[する方法: フォーム領域を Outlook アドイン プロジェクトに追加](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)です。  
   
- 1 つまたは複数のカスタム メッセージ クラスを含めるには、その名前を入力、**このフォーム領域を表示するカスタム メッセージ クラス?**ボックス。  
+ 1 つまたは複数のカスタム メッセージ クラスを含めるには、その名前を入力、**このフォーム領域を表示するカスタム メッセージ クラス?** ボックス。  
   
  入力した名前は、以下のガイドラインに従う必要があります。  
   
